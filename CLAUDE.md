@@ -9,6 +9,7 @@ This is a SvelteKit 2.0 application configured for deployment to Cloudflare. The
 ## Development Commands
 
 ### Core Development
+
 ```bash
 # Start development server
 npm run dev
@@ -21,6 +22,7 @@ npm run preview
 ```
 
 ### Code Quality
+
 ```bash
 # Run linting and formatting checks
 npm run lint
@@ -36,6 +38,7 @@ npm run check:watch
 ```
 
 ### Testing
+
 ```bash
 # Run all tests (unit and e2e)
 npm run test
@@ -56,6 +59,7 @@ npm run test:e2e
 ## Architecture
 
 ### Tech Stack
+
 - **Framework**: SvelteKit 2.22 with Svelte 5
 - **Language**: TypeScript
 - **Build Tool**: Vite 7
@@ -64,6 +68,7 @@ npm run test:e2e
 - **Markdown Processing**: MDsveX for `.svx` files
 
 ### Project Structure
+
 - `src/routes/` - SvelteKit file-based routing
   - `+page.svelte` - Route pages
   - `+layout.svelte` - Layout components
@@ -73,12 +78,14 @@ npm run test:e2e
 - `static/` - Static assets served directly
 
 ### Key Configurations
+
 - **Svelte 5 Runes**: Using new syntax with `$props()` and `$state()`
 - **Testing Split**: Vitest configured with separate browser and server environments
 - **MDsveX**: Enabled for mixing Markdown with Svelte components
 - **Cloudflare Deployment**: Configured via `@sveltejs/adapter-cloudflare`
 
 ### Testing Strategy
+
 - Component tests run in real browser environment via Playwright
 - Server-side tests run in Node environment
 - E2e tests build and preview the app before running
