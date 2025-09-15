@@ -19,7 +19,7 @@
 			icon: Wallet,
 			title: t('tools.wallet_collection.title'),
 			description: t('tools.wallet_collection.description'),
-			link: '/tools/wallet-collection',
+			link: '/apps/drain-balance',
 			status: 'active',
 			color: '#3B82F6',
 			features: [
