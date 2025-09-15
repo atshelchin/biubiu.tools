@@ -17,7 +17,7 @@
 
 	<!-- Twitter/X | 推特/X -->
 	<a
-		href="https://x.com/atshelchin"
+		href="https://x.com/atshelchin/biubiu.tools"
 		target="_blank"
 		rel="noopener noreferrer"
 		class="social-link"
