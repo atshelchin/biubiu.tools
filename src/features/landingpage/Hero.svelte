@@ -1,19 +1,14 @@
 <script lang="ts">
 	import { t } from '@/i18n/create-i18n.svelte';
-	// import EmailCollector from './EmailCollector.svelte';
-
-	// 暂时移除邮件收集器，直接跳转到预售页面
-	// Temporarily remove email collector, redirect to presale page
-	// let showEmailCollector = $state(false);
 
 	// Handle CTA click | 处理 CTA 点击
-	function handleCtaClick(e: Event) {
-		e.preventDefault();
-		// // 根据语言跳转到预售页面 / Redirect to presale page based on language
-		// const locale = getLocale();
-		// const presaleUrl = locale === 'zh' ? '/presale.html' : '/presale.html?lang=en';
-		// window.location.href = presaleUrl;
-	}
+	// function handleCtaClick(e: Event) {
+	// 	e.preventDefault();
+	// 	// // 根据语言跳转到预售页面 / Redirect to presale page based on language
+	// 	// const locale = getLocale();
+	// 	// const presaleUrl = locale === 'zh' ? '/presale.html' : '/presale.html?lang=en';
+	// 	// window.location.href = presaleUrl;
+	// }
 
 	// Scroll to features section | 滚动到功能介绍部分
 	function scrollToFeatures() {
