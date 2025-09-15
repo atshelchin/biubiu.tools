@@ -13,8 +13,8 @@
 		highlight?: boolean;
 	}
 
-	// Tools data with full i18n
-	const tools: Tool[] = [
+	// Tools data with full i18n - reactive to language changes
+	const tools = $derived<Tool[]>([
 		{
 			icon: Wallet,
 			title: t('tools.wallet_collection.title'),
@@ -53,7 +53,7 @@
 		// 		t('tools.security_scanner.feature_3')
 		// 	]
 		// }
-	];
+	]);
 
 	// Telegram group link
 	const telegramGroupLink = 'https://t.me/+ABMpMG1islA4NTVl';
@@ -92,6 +92,7 @@
 		<!-- Premium cards grid -->
 		<div class="tools-grid">
 			{#each tools as tool, index (index)}
+				{@const Icon = tool.icon}
 				<article
 					class="tool-card {tool.highlight ? 'highlighted' : ''} {tool.status === 'coming-soon'
 						? 'coming-soon'
@@ -119,7 +120,7 @@
 					<div class="icon-wrapper">
 						<div class="icon-glow"></div>
 						<div class="icon-box">
-							<svelte:component this={tool.icon} class="tool-icon" />
+							<Icon class="tool-icon" />
 						</div>
 					</div>
 
@@ -181,6 +182,10 @@
 			var(--color-background)
 		);
 		opacity: 0.3;
+	}
+
+	:global(.light) .tools-section {
+		background: var(--color-panel-1);
 	}
 
 	.container {
@@ -311,7 +316,19 @@
 		background: var(--color-panel-1);
 		border: 1px solid var(--color-panel-border-2);
 		z-index: 1;
-		box-shadow: var(--shadow-sm);
+		box-shadow:
+			0 4px 6px -1px rgb(0 0 0 / 0.05),
+			0 2px 4px -2px rgb(0 0 0 / 0.05);
+		transition: all 200ms ease;
+	}
+
+	/* Light mode specific enhancements */
+	:global(.light) .card-bg {
+		background: var(--color-panel-2);
+		border: 1px solid var(--color-panel-border-2);
+		box-shadow:
+			0 10px 15px -3px rgb(0 0 0 / 0.08),
+			0 4px 6px -4px rgb(0 0 0 / 0.05);
 	}
 
 	.card-glow {
@@ -337,11 +354,27 @@
 		box-shadow: var(--shadow-lg);
 	}
 
+	:global(.light) .tool-card:hover .card-bg {
+		background: var(--color-panel-3);
+		border-color: var(--color-panel-border-3);
+		box-shadow:
+			0 20px 25px -5px rgb(0 0 0 / 0.1),
+			0 8px 10px -6px rgb(0 0 0 / 0.05);
+	}
+
 	/* Highlighted card with subtle accent */
 	.tool-card.highlighted .card-bg {
 		background: var(--color-panel-2);
 		border: 1px solid var(--color-panel-border-3);
 		box-shadow: var(--shadow-md);
+	}
+
+	:global(.light) .tool-card.highlighted .card-bg {
+		background: var(--color-panel-3);
+		border: 2px solid var(--color-primary);
+		box-shadow:
+			0 10px 40px -10px color-mix(in srgb, var(--color-primary) 20%, transparent),
+			0 4px 6px -4px rgb(0 0 0 / 0.1);
 	}
 
 	.highlight-badge {
@@ -357,6 +390,12 @@
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 		z-index: 10;
+	}
+
+	:global(.light) .highlight-badge {
+		background: var(--color-success);
+		color: white;
+		box-shadow: 0 2px 8px -2px color-mix(in srgb, var(--color-success) 50%, transparent);
 	}
 
 	/* Coming soon ribbon */
@@ -425,6 +464,13 @@
 		transition: all 200ms ease;
 	}
 
+	:global(.light) .icon-box {
+		box-shadow:
+			0 4px 14px 0 color-mix(in srgb, var(--tool-color) 30%, transparent),
+			0 2px 4px 0 color-mix(in srgb, var(--tool-color) 20%, transparent),
+			inset 0 1px 0 0 rgb(255 255 255 / 0.2);
+	}
+
 	.tool-card:hover .icon-box {
 		transform: translateY(-2px) scale(1.05);
 		box-shadow: var(--shadow-lg);
@@ -448,7 +494,7 @@
 		margin-bottom: var(--space-4);
 		font-size: var(--text-xl);
 		font-weight: var(--font-semibold);
-		color: var(--color-heading-2);
+		color: var(--color-heading-1);
 		line-height: 1.3;
 	}
 
@@ -456,7 +502,7 @@
 		margin-bottom: var(--space-8);
 		font-size: var(--text-base);
 		line-height: 1.7;
-		color: var(--color-description-2);
+		color: var(--color-description-3);
 	}
 
 	/* Feature pills with subtle styling */
@@ -473,13 +519,19 @@
 		align-items: center;
 		gap: var(--space-2);
 		padding: var(--space-2) var(--space-3);
-		background: var(--color-panel-3);
-		border: 1px solid var(--color-panel-border-3);
+		background: var(--color-panel-1);
+		border: 1px solid var(--color-panel-border-1);
 		border-radius: var(--radius-full);
 		font-size: var(--text-xs);
 		font-weight: var(--font-medium);
-		color: var(--color-description-4);
+		color: var(--color-description-2);
 		transition: all 150ms ease;
+	}
+
+	:global(.light) .feature-pill {
+		background: var(--color-background);
+		border: 1px solid var(--color-panel-border-2);
+		color: var(--color-description-2);
 	}
 
 	.pill-dot {
@@ -493,7 +545,13 @@
 	.tool-card:hover .feature-pill {
 		background: var(--color-panel-2);
 		border-color: var(--color-panel-border-2);
-		color: var(--color-description-2);
+		color: var(--color-description-1);
+	}
+
+	:global(.light) .tool-card:hover .feature-pill {
+		background: var(--color-panel-1);
+		border-color: var(--color-panel-border-3);
+		color: var(--color-heading-3);
 	}
 
 	/* Action button with clean design */
@@ -501,6 +559,10 @@
 		padding-top: var(--space-6);
 		border-top: 1px solid var(--color-panel-border-1);
 		z-index: 2;
+	}
+
+	:global(.light) .action-wrapper {
+		border-top: 1px solid var(--color-panel-border-2);
 	}
 
 	.action-btn {
@@ -526,12 +588,30 @@
 		font-weight: var(--font-semibold);
 	}
 
+	:global(.light) .action-btn.primary {
+		background: var(--color-primary);
+		color: white;
+		border: 1px solid var(--color-primary);
+		box-shadow:
+			0 1px 3px 0 rgb(0 0 0 / 0.1),
+			0 1px 2px -1px rgb(0 0 0 / 0.1);
+	}
+
 	.action-btn.primary:hover {
 		background: var(--color-panel-4);
 		border-color: var(--color-primary);
 		color: var(--color-primary);
 		transform: translateY(-1px);
 		box-shadow: 0 0 0 1px var(--color-primary);
+	}
+
+	:global(.light) .action-btn.primary:hover {
+		background: var(--brand-700);
+		border-color: var(--brand-700);
+		color: white;
+		box-shadow:
+			0 4px 6px -1px rgb(0 0 0 / 0.1),
+			0 2px 4px -2px rgb(0 0 0 / 0.1);
 	}
 
 	:global(.btn-arrow) {
