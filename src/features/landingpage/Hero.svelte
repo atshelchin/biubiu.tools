@@ -15,6 +15,14 @@
 		// window.location.href = presaleUrl;
 	}
 
+	// Scroll to features section | 滚动到功能介绍部分
+	function scrollToFeatures() {
+		const featuresSection = document.getElementById('tools');
+		if (featuresSection) {
+			featuresSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		}
+	}
+
 	const bgSvg = `'data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M 60 0 L 0 0 0 60" fill="none" stroke="%23a855f7" stroke-width="0.5" opacity="0.3"/><circle cx="30" cy="30" r="1.5" fill="%23a855f7" opacity="0.4"/><polygon points="15,10 25,10 20,20" fill="%23eab308" opacity="0.2"/><polygon points="35,40 45,40 40,50" fill="%23a855f7" opacity="0.2"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>'`;
 </script>
 
@@ -65,14 +73,16 @@
 		<!-- CTA buttons with premium styling | 高端风格的行动按钮 -->
 		<div class="cta-buttons animate-fade-in-delayed-more">
 			<!-- Primary CTA button | 主要行动按钮 -->
-			<button onclick={handleCtaClick} class="btn-primary">
+			<!-- <button onclick={handleCtaClick} class="btn-primary">
 				<span class="btn-text">{t('cta_get_started')}</span>
 				<div class="btn-glow"></div>
-			</button>
+			</button> -->
 
 			<!-- Secondary CTA button | 次要行动按钮 -->
 
-			<button class="button-secondary"> {t('cta_learn_more')}</button>
+			<button class="button-secondary" onclick={scrollToFeatures}>
+				{t('cta_learn_more')}
+			</button>
 		</div>
 
 		<!-- Platform compatibility | 平台兼容性 -->
@@ -262,23 +272,7 @@
 		padding: 0 var(--space-4);
 	}
 
-	/* Primary Button */
-	.btn-primary {
-		position: relative;
-		width: 100%;
-		padding: var(--space-4) var(--space-10);
-		border-radius: var(--radius-lg);
-		background: linear-gradient(135deg, var(--color-primary), var(--brand-700));
-		color: var(--color-primary-foreground);
-		font-size: var(--text-lg);
-		font-weight: var(--font-semibold);
-		border: none;
-		cursor: pointer;
-		box-shadow: var(--shadow-lg);
-		transition: all 300ms ease;
-		letter-spacing: 0.025em;
-	}
-
+	/* Secondary Button */
 	.button-secondary {
 		position: relative;
 		width: 100%;
@@ -295,41 +289,11 @@
 		letter-spacing: 0.025em;
 	}
 
-	.btn-primary:hover {
-		background: linear-gradient(135deg, var(--brand-700), var(--color-primary));
-		box-shadow: var(--shadow-xl);
-		transform: translateY(-2px) scale(1.02);
-	}
-
 	.button-secondary:hover {
 		border-color: var(--color-primary);
 		color: var(--color-primary);
 		background: hsla(var(--brand-hue), var(--brand-saturation), 50%, 0.05);
 		transform: translateY(-1px);
-	}
-
-	.btn-text {
-		position: relative;
-		z-index: 10;
-	}
-
-	.btn-glow {
-		position: absolute;
-		inset: 0;
-		border-radius: var(--radius-lg);
-		background: linear-gradient(
-			90deg,
-			hsla(var(--brand-hue), var(--brand-saturation), 50%, 0.5),
-			hsla(var(--brand-hue), var(--brand-saturation), 40%, 0.5)
-		);
-		opacity: 0;
-		filter: blur(1rem);
-		transition: opacity 300ms ease;
-		pointer-events: none;
-	}
-
-	.btn-primary:hover .btn-glow {
-		opacity: 1;
 	}
 
 	/* Platform Section */
@@ -410,7 +374,6 @@
 			gap: var(--space-4);
 		}
 
-		.btn-primary,
 		.button-secondary {
 			width: auto;
 			padding: var(--space-5) var(--space-12);
@@ -452,7 +415,6 @@
 			max-width: 60rem;
 		}
 
-		.btn-primary,
 		.button-secondary {
 			padding: var(--space-6) var(--space-14);
 			font-size: 1.25rem;
