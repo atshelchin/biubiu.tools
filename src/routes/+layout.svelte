@@ -23,7 +23,7 @@
 <style>
 	:global(:root) {
 		--brand-hue: 154; /* 主色调 Primary Hue (0-360) */
-		--brand-saturation: 92%; /* 饱和度 Saturation (0-100%) */
+		--brand-saturation: 82%; /* 饱和度 Saturation (0-100%) */
 		--radius-scale: 1; /* 圆角缩放 Radius Scale */
 		--spacing-scale: 1; /* 间距缩放 Spacing Scale */
 

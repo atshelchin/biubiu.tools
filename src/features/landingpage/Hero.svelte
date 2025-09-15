@@ -72,7 +72,7 @@
 
 			<!-- Secondary CTA button | 次要行动按钮 -->
 
-			<!-- <button class="button-secondary"> {t('cta_learn_more')}</button> -->
+			<button class="button-secondary"> {t('cta_learn_more')}</button>
 		</div>
 
 		<!-- Platform compatibility | 平台兼容性 -->
@@ -88,7 +88,7 @@
 	</div>
 
 	<!-- Scroll indicator | 滚动指示器 -->
-	<!-- <div class="scroll-indicator">
+	<div class="scroll-indicator">
 		<svg class="scroll-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 			<path
 				stroke-linecap="round"
@@ -97,15 +97,8 @@
 				d="M19 14l-7 7m0 0l-7-7m7 7V3"
 			></path>
 		</svg>
-	</div> -->
-</section>
-
-<!-- 邮件收集器暂时屏蔽 / Email collector temporarily disabled -->
-<!-- {#if showEmailCollector}
-	<div id="email-collector" class="animate-fade-in">
-		<EmailCollector />
 	</div>
-{/if} -->
+</section>
 
 <style>
 	/* Design tokens are imported globally in +layout.svelte */
@@ -225,7 +218,6 @@
 		margin: 0 auto;
 		border-radius: var(--radius-full);
 		box-shadow: var(--shadow-2xl);
-		border: 1px solid hsla(var(--brand-hue), var(--brand-saturation), 50%, 0.2);
 	}
 
 	/* Title Styles */

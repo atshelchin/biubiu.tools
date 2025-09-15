@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Hero from './Hero.svelte';
-	// import Features from './Features.svelte';
+	import Features from './Features.svelte';
 	// import Stats from './Stats.svelte';
 	// import Pricing from './/Pricing.svelte';
 	// import FAQs from './FAQs.svelte';
@@ -13,7 +13,7 @@
 	<Hero />
 
 	<!-- Features section | 功能特性区 -->
-	<!-- <Features /> -->
+	<Features />
 
 	<!-- Stats section | 统计数据区 -->
 	<!-- <Stats /> -->

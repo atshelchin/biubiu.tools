@@ -9,5 +9,137 @@
 	"hero_title": "BiuBiu",
 	"hero_subtitle": "Web3 discovering made easy & secure for you",
 	"cta_get_started": "Get Started",
-	"cta_learn_more": "Learn More"
+	"cta_learn_more": "Learn More",
+	"tools": {
+		"section_title": "Powerful Tools",
+		"section_subtitle": "Professional Web3 batch operation tools to improve your efficiency",
+		"badge": "Professional Web3 Tools",
+		"wallet_collection": {
+			"title": "Batch Wallet Collection",
+			"description": "Efficiently collect balances from multiple wallets to a single address. Support multiple tokens and chains.",
+			"feature_1": "Multi-chain Support",
+			"feature_2": "Batch Processing",
+			"feature_3": "Gas Optimized"
+		},
+		"batch_transfer": {
+			"title": "Batch Transfer",
+			"description": "Send tokens to multiple addresses in one transaction.",
+			"feature_1": "CSV Import",
+			"feature_2": "Smart Routing",
+			"feature_3": "Fee Estimation"
+		},
+		"security_scanner": {
+			"title": "Security Scanner",
+			"description": "Scan and verify smart contracts before interaction.",
+			"feature_1": "Contract Audit",
+			"feature_2": "Risk Analysis",
+			"feature_3": "Real-time Monitor"
+		},
+		"try_now": "Try Now",
+		"launch_app": "Launch App",
+		"notify_me": "Notify Me",
+		"coming_soon": "Coming Soon",
+		"available_now": "Available Now",
+		"join_telegram": "Join Telegram",
+		"notify_modal": {
+			"title": "Get Notified",
+			"description": "Enter your email to get notified when this tool is available.",
+			"email_placeholder": "your@email.com",
+			"subscribe": "Subscribe",
+			"cancel": "Cancel",
+			"success": "Thanks! We'll notify you when it's ready.",
+			"error": "Please enter a valid email address."
+		}
+	},
+	"cta": {
+		"title": "Ready to Get Started?",
+		"subtitle": "Join thousands of users who are already using biubiu.tools to streamline their Web3 operations",
+		"button_text": "Start Now - It's Free"
+	},
+	"stats": {
+		"title": "Trusted by Web3 Users",
+		"registered_users": "Active Users",
+		"transactions": "Transactions",
+		"total_volume": "Total Volume",
+		"chains_supported": "Chains Supported",
+		"last_updated": "Live Statistics"
+	},
+	"pricing": {
+		"title": "Simple, Transparent Pricing",
+		"subtitle": "Choose the plan that works best for you",
+		"free": {
+			"name": "Free",
+			"price": "$0",
+			"period": "forever",
+			"description": "Perfect for getting started",
+			"features": [
+				"Up to 10 wallets",
+				"Basic batch operations",
+				"Community support",
+				"Standard speed"
+			],
+			"cta": "Get Started"
+		},
+		"pro": {
+			"name": "Pro",
+			"price": "$19",
+			"period": "month",
+			"description": "For power users",
+			"features": [
+				"Unlimited wallets",
+				"Advanced batch operations",
+				"Priority support",
+				"High-speed processing",
+				"API access"
+			],
+			"cta": "Start Free Trial"
+		},
+		"enterprise": {
+			"name": "Enterprise",
+			"price": "Custom",
+			"period": "month",
+			"description": "For teams and organizations",
+			"features": [
+				"Everything in Pro",
+				"Dedicated support",
+				"Custom integrations",
+				"SLA guarantee",
+				"Team management"
+			],
+			"cta": "Contact Sales"
+		},
+		"note": "All plans include basic features and security",
+		"custom_plan": "Need a custom plan?",
+		"contact_us": "Contact us"
+	},
+	"faqs": {
+		"title": "Frequently Asked Questions",
+		"subtitle": "Everything you need to know about biubiu.tools",
+		"items": [
+			{
+				"question": "What is biubiu.tools?",
+				"answer": "biubiu.tools is a comprehensive Web3 toolkit that provides batch operations and multi-wallet management features for the Ethereum ecosystem."
+			},
+			{
+				"question": "Is it safe to use?",
+				"answer": "Yes! We never store your private keys. All operations are performed locally in your browser using secure Web3 protocols."
+			},
+			{
+				"question": "Which chains are supported?",
+				"answer": "We support Ethereum mainnet and major EVM-compatible chains including Polygon, BSC, Arbitrum, and Optimism."
+			},
+			{
+				"question": "How does batch wallet collection work?",
+				"answer": "Our tool allows you to collect tokens from multiple wallets to a single address in one transaction, saving time and gas fees."
+			},
+			{
+				"question": "Can I try it for free?",
+				"answer": "Absolutely! Our free plan includes basic features with up to 10 wallets. You can upgrade anytime for more advanced features."
+			}
+		],
+		"still_questions": "Still have questions?",
+		"contact_text": "We're here to help. Reach out to our support team anytime.",
+		"join_discord": "Join Discord",
+		"email_support": "Email Support"
+	}
 }
