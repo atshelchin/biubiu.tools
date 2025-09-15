@@ -2,7 +2,7 @@
 <div class="socials-container">
 	<!-- GitHub | GitHub -->
 	<a
-		href="https://github.com/atshelchin"
+		href="https://github.com/atshelchin/biubiu.tools"
 		target="_blank"
 		rel="noopener noreferrer"
 		class="social-link"
@@ -17,7 +17,7 @@
 
 	<!-- Twitter/X | 推特/X -->
 	<a
-		href="https://x.com/atshelchin/biubiu.tools"
+		href="https://x.com/atshelchin"
 		target="_blank"
 		rel="noopener noreferrer"
 		class="social-link"
