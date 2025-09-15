@@ -4,7 +4,7 @@
 	import '../design-tokens.css';
 	import '../global.css';
 	import type { LayoutData } from './$types.js';
-	import Footer from '@/lib/components/ui/footer.svelte';
+	import Footer from '@/lib/components/ui/Footer.svelte';
 
 	let { children, data } = $props<{ children: import('svelte').Snippet; data: LayoutData }>();
 
