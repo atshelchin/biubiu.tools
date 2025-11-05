@@ -5,6 +5,8 @@
 	import ToggleSwitch from './toggle-switch.svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
 	import { useI18n } from '@shelchin/i18n/svelte';
+	import { fade } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
 
 	interface Props {
 		open: boolean;
@@ -27,6 +29,7 @@
 	let isSubmitting = $state(false);
 	let searchQuery = $state('');
 	let filterStatus = $state<'all' | 'enabled' | 'disabled'>('all');
+	let toggleVersion = $state(0); // Used to trigger reactivity when toggle changes
 
 	// Edit/Add form state
 	let formData = $state({
@@ -44,8 +47,11 @@
 	});
 
 	// Filter networks based on search query and status
-	const filteredNetworks = $derived(
-		networks.filter((network) => {
+	const filteredNetworks = $derived.by(() => {
+		// Force recomputation when toggleVersion changes
+		toggleVersion;
+
+		return networks.filter((network) => {
 			// Search filter
 			const matchesSearch =
 				network.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -60,8 +66,8 @@
 				(filterStatus === 'disabled' && !enabled);
 
 			return matchesSearch && matchesStatus;
-		})
-	);
+		});
+	});
 
 	// RPC latency testing
 	async function testRpcLatency(rpcUrl: string): Promise<number> {
@@ -191,6 +197,9 @@
 		const success = onToggleNetwork(network.chainId, enabled);
 		if (!success) {
 			console.error('Failed to toggle network:', network.chainId);
+		} else {
+			// Trigger reactivity to update filtered list immediately
+			toggleVersion++;
 		}
 	}
 </script>
@@ -259,7 +268,11 @@
 
 				<div class="network-cards">
 					{#each filteredNetworks as network (network.chainId)}
-						<div class="network-card" class:active={network.chainId === currentChainId}>
+						<div
+							class="network-card"
+							class:active={network.chainId === currentChainId}
+							transition:fade={{ duration: 300, easing: quintOut }}
+						>
 							<div class="card-header">
 								<NetworkIcon chainId={network.chainId} size={48} />
 								<div class="network-info">
