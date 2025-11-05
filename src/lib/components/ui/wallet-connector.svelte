@@ -6,6 +6,7 @@
 		type ConnectionState
 	} from '@shelchin/ethereum-connectors';
 	import { mainnet } from 'viem/chains';
+	import type { Chain } from 'viem';
 	import { onMount, onDestroy } from 'svelte';
 	import { LogOut } from '@lucide/svelte';
 	import CopyButton from './copy-button.svelte';
@@ -17,6 +18,12 @@
 	import GradientButton from './gradient-button.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import { createWalletManager } from '$lib/utils/wallet-manager';
+
+	interface Props {
+		chains: Chain[];
+	}
+
+	let { chains }: Props = $props();
 
 	const i18n = useI18n();
 	const t = i18n.t;
@@ -33,7 +40,8 @@
 		projectId: 'e68249e217c8793807b7bb961a2f4297',
 		appName: 'BiuBiu Tools',
 		appUrl: 'https://biubiu.tools',
-		appLogoUrl: 'https://biubiu.tools/logo.svg'
+		appLogoUrl: 'https://biubiu.tools/logo.svg',
+		chains
 	});
 
 	const walletManager = manager.getWalletManager();
@@ -148,12 +156,23 @@
 			connectionState = state;
 		});
 
+		// 获取实际使用的 chains (从 manager 获取)
+		const networkManager = manager.getNetworkManager();
+		const supportedChains =
+			chains ||
+			(networkManager.getNetworks().map((network) => ({
+				id: network.chainId,
+				name: network.name,
+				nativeCurrency: { name: network.symbol, symbol: network.symbol, decimals: 18 },
+				rpcUrls: { default: { http: [network.rpcEndpoints[0]?.url || ''] } }
+			})) as Chain[]);
+
 		// 监听 EIP6963 钱包
 		unwatchEIP6963 = watchEIP6963Wallets((wallets) => {
 			const newConnectors = wallets.map(
 				(wallet) =>
 					new EIP6963Connector({
-						chains,
+						chains: supportedChains,
 						shimDisconnect: true,
 						providerDetail: wallet
 					})
