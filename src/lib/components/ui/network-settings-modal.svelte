@@ -18,7 +18,6 @@
 
 	type ViewMode = 'list' | 'edit' | 'add';
 	let viewMode = $state<ViewMode>('list');
-	let editingNetwork = $state<NetworkConfig | null>(null);
 	let newRpcUrl = $state('');
 	let isSubmitting = $state(false);
 	let searchQuery = $state('');
@@ -106,7 +105,7 @@
 
 	function handleEditNetwork(network: NetworkConfig) {
 		viewMode = 'edit';
-		editingNetwork = network;
+
 		formData = {
 			chainId: network.chainId,
 			name: network.name,
@@ -125,7 +124,7 @@
 
 	function handleBackToList() {
 		viewMode = 'list';
-		editingNetwork = null;
+
 		newRpcUrl = '';
 	}
 

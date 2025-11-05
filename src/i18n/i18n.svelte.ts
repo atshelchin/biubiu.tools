@@ -6,4 +6,4 @@ export const PACKAGE_NAME = '__default__';
 export const locales = {
 	en,
 	zh
-} as PackageLocales;
+} as unknown as PackageLocales;
