@@ -1,15 +1,19 @@
 <script lang="ts">
-	import { setupI18n } from '../i18n/create-i18n.svelte.js';
+	import { createI18nStore, setI18nContext } from '@shelchin/i18n/svelte';
+
 	import { createThemeStore } from '$lib/stores/theme.svelte.js';
 	import '../design-tokens.css';
 	import '../global.css';
 	import type { LayoutData } from './$types.js';
 	import Footer from '@/lib/components/ui/Footer.svelte';
-
+	import { PACKAGE_NAME, locales } from '../i18n/i18n.svelte';
 	let { children, data } = $props<{ children: import('svelte').Snippet; data: LayoutData }>();
 
-	// Setup i18n
-	setupI18n(data.locale);
+	console.log({ data });
+	const i18nStore = createI18nStore({ initialLocale: data.locale });
+
+	i18nStore.register(PACKAGE_NAME, locales);
+	setI18nContext(i18nStore);
 
 	// Setup theme with initial value from server
 	createThemeStore(data.theme);

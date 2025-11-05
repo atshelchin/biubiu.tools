@@ -1,6 +1,7 @@
 import type { LayoutServerLoad } from './$types.js';
-import { extractLocaleFromPathname, extractLocaleFromCookie } from '../utils/common.js';
-import { supportedLocales } from '../i18n/create-i18n.svelte.js';
+
+import { extractLocaleFromPathname, extractLocaleFromCookie } from '@shelchin/i18n/utils';
+const supportedLocales = ['en', 'ja', 'zh', 'fr'];
 
 export const load: LayoutServerLoad = async ({ cookies, url }) => {
 	const locale =

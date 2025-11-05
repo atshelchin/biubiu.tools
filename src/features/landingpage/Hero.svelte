@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { t } from '@/i18n/create-i18n.svelte';
+	import { useI18n } from '@shelchin/i18n/svelte';
+
+	const i18n = useI18n();
+	const t = i18n.t;
 
 	// Handle CTA click | 处理 CTA 点击
 	// function handleCtaClick(e: Event) {

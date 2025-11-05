@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { getI18n } from '@/i18n/create-i18n.svelte';
-	const i18n = getI18n();
+	import { useI18n } from '@shelchin/i18n/svelte';
+
+	const i18n = useI18n();
 
 	let isOpen = $state(false);
 	let selectedLang = $state(i18n.locale);
