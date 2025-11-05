@@ -1,12 +1,4 @@
 <script lang="ts">
-	import {
-		EIP6963Connector,
-		watchEIP6963Wallets,
-		type Connector,
-		type ConnectionState
-	} from '@shelchin/ethereum-connectors';
-	import { mainnet } from 'viem/chains';
-	import type { Chain } from 'viem';
 	import { onMount, onDestroy } from 'svelte';
 	import { LogOut } from '@lucide/svelte';
 	import CopyButton from './copy-button.svelte';
@@ -17,16 +9,13 @@
 	import InstructionList from './instruction-list.svelte';
 	import GradientButton from './gradient-button.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
-	import { createWalletManager } from '$lib/utils/wallet-manager';
-
-	interface Props {
-		chains: Chain[];
-	}
-
-	let { chains }: Props = $props();
+	import { useConnectStore } from '$lib/stores/connect.svelte';
 
 	const i18n = useI18n();
 	const t = i18n.t;
+
+	// 从 context 获取 connect store
+	const connectStore = useConnectStore();
 
 	// WalletConnect 说明步骤
 	const walletConnectSteps = $derived([
@@ -35,168 +24,31 @@
 		t('wallet.walletconnect.step_3')
 	]);
 
-	// 初始化 IntegratedManager
-	const manager = createWalletManager({
-		projectId: 'e68249e217c8793807b7bb961a2f4297',
-		appName: 'BiuBiu Tools',
-		appUrl: 'https://biubiu.tools',
-		appLogoUrl: 'https://biubiu.tools/logo.svg',
-		chains
-	});
-
-	const walletManager = manager.getWalletManager();
-
-	// 钱包连接状态
-	let connectionState = $state<ConnectionState>(walletManager.getState());
-	let showConnectorModal = $state(false);
-	let walletConnectUri = $state<string | undefined>();
-	let showWalletConnectModal = $state(false);
-	let currentConnector: Connector | undefined;
-
-	// 从状态派生的响应式变量
-	const isConnected = $derived(connectionState.isConnected);
-	const isConnecting = $derived(connectionState.isConnecting);
-	const address = $derived(connectionState.address);
-	const connectorIcon = $derived(connectionState.connector?.icon);
-
 	// 格式化地址显示
 	function formatAddress(addr: string): string {
 		return `${addr.slice(0, 6)}...${addr.slice(-4)}`;
 	}
 
-	// 连接钱包
-	async function connectWallet(connector: Connector) {
-		try {
-			showConnectorModal = false;
-			currentConnector = connector;
-
-			// 如果是 WalletConnect，显示自定义 QR 码模态框
-			if (connector.id === 'walletconnect') {
-				showWalletConnectModal = true;
-
-				// 监听 display_uri 事件获取 URI
-				connector.on('display_uri', (uri: string) => {
-					walletConnectUri = uri;
-				});
-			}
-
-			const networkManager = manager.getNetworkManager();
-			const currentChainId = networkManager.getCurrentChainId('biubiu-tools') || mainnet.id;
-			await walletManager.connect(connector, currentChainId);
-
-			// 连接成功后关闭模态框
-			showWalletConnectModal = false;
-			walletConnectUri = undefined;
-			currentConnector = undefined;
-		} catch (error) {
-			console.error('Failed to connect wallet:', error);
-			showWalletConnectModal = false;
-			walletConnectUri = undefined;
-			currentConnector = undefined;
-		}
-	}
-
-	// 取消连接 - 用于重置连接状态
-	async function cancelConnection() {
-		if (currentConnector && isConnecting) {
-			try {
-				await currentConnector.disconnect();
-			} catch (error) {
-				console.error('Failed to cancel connection:', error);
-			}
-			currentConnector = undefined;
-		}
-	}
-
-	// 断开连接
-	async function disconnect() {
-		try {
-			await walletManager.disconnect();
-			currentConnector = undefined;
-		} catch (error) {
-			console.error('Failed to disconnect wallet:', error);
-		}
-	}
-
-	// 打开连接器选择模态框
-	function openConnectorModal() {
-		showConnectorModal = true;
-	}
-
-	// 关闭模态框
-	function closeModal() {
-		showConnectorModal = false;
-	}
-
-	// 关闭 WalletConnect 模态框
-	async function closeWalletConnectModal() {
-		showWalletConnectModal = false;
-		walletConnectUri = undefined;
-
-		// 如果正在连接中，取消连接
-		if (currentConnector && !isConnected) {
-			try {
-				await currentConnector.disconnect();
-			} catch (error) {
-				console.error('Failed to cancel connection:', error);
-			}
-			currentConnector = undefined;
-		}
-	}
-
-	// 获取所有可用连接器
-	const availableConnectors = $derived(walletManager.getConnectors());
-
-	let unsubscribe: (() => void) | undefined;
-	let unwatchEIP6963: (() => void) | undefined;
-
 	onMount(async () => {
-		// 订阅钱包状态变化
-		unsubscribe = walletManager.subscribe((state) => {
-			connectionState = state;
-		});
-
-		// 获取实际使用的 chains (从 manager 获取)
-		const networkManager = manager.getNetworkManager();
-		const supportedChains =
-			chains ||
-			(networkManager.getNetworks().map((network) => ({
-				id: network.chainId,
-				name: network.name,
-				nativeCurrency: { name: network.symbol, symbol: network.symbol, decimals: 18 },
-				rpcUrls: { default: { http: [network.rpcEndpoints[0]?.url || ''] } }
-			})) as Chain[]);
-
-		// 监听 EIP6963 钱包
-		unwatchEIP6963 = watchEIP6963Wallets((wallets) => {
-			const newConnectors = wallets.map(
-				(wallet) =>
-					new EIP6963Connector({
-						chains: supportedChains,
-						shimDisconnect: true,
-						providerDetail: wallet
-					})
-			);
-			newConnectors.forEach((connector) => walletManager.registerConnector(connector));
-		});
-
-		// 自动连接
-		await walletManager.autoConnect();
+		await connectStore.initialize();
 	});
 
 	onDestroy(() => {
-		unsubscribe?.();
-		unwatchEIP6963?.();
+		connectStore.cleanup();
 	});
 </script>
 
-{#if isConnected && address}
+{#if connectStore.isConnected && connectStore.address}
 	<div class="wallet-connected-group">
-		<WalletInfo {address} {formatAddress} {connectorIcon} />
-		<CopyButton value={address} />
+		<WalletInfo
+			address={connectStore.address}
+			{formatAddress}
+			connectorIcon={connectStore.connectorIcon}
+		/>
+		<CopyButton value={connectStore.address} />
 		<button
 			class="icon-button disconnect-button"
-			onclick={disconnect}
+			onclick={connectStore.disconnect}
 			type="button"
 			title={i18n.t('wallet.disconnect')}
 		>
@@ -204,16 +56,24 @@
 		</button>
 	</div>
 {:else}
-	<GradientButton onclick={isConnecting ? cancelConnection : openConnectorModal}>
-		{isConnecting ? i18n.t('wallet.connecting') : i18n.t('wallet.connect')}
+	<GradientButton
+		onclick={connectStore.isConnecting
+			? connectStore.cancelConnection
+			: connectStore.openConnectorModal}
+	>
+		{connectStore.isConnecting ? i18n.t('wallet.connecting') : i18n.t('wallet.connect')}
 	</GradientButton>
 {/if}
 
 <!-- 连接器选择模态框 -->
-<Modal open={showConnectorModal} onClose={closeModal} title={i18n.t('wallet.select_wallet')}>
+<Modal
+	open={connectStore.showConnectorModal}
+	onClose={connectStore.closeModal}
+	title={i18n.t('wallet.select_wallet')}
+>
 	<div class="connector-list">
-		{#each availableConnectors as connector (connector.id)}
-			<button class="connector-item" onclick={() => connectWallet(connector)}>
+		{#each connectStore.availableConnectors as connector (connector.id)}
+			<button class="connector-item" onclick={() => connectStore.connectWallet(connector)}>
 				{#if connector.icon}
 					<img src={connector.icon} alt={connector.name} class="connector-icon" />
 				{/if}
@@ -228,21 +88,21 @@
 
 <!-- WalletConnect QR 码模态框 -->
 <Modal
-	open={showWalletConnectModal}
-	onClose={closeWalletConnectModal}
+	open={connectStore.showWalletConnectModal}
+	onClose={connectStore.closeWalletConnectModal}
 	title={i18n.t('wallet.scan_qr')}
 	maxWidth="420px"
 >
 	<div class="walletconnect-content">
-		{#if walletConnectUri}
+		{#if connectStore.walletConnectUri}
 			<div class="qr-code-container">
-				<QRCode data={walletConnectUri} />
+				<QRCode data={connectStore.walletConnectUri} />
 			</div>
 
 			<InstructionList title={i18n.t('wallet.walletconnect.title')} items={walletConnectSteps} />
 
 			<CopyButtonWithText
-				value={walletConnectUri}
+				value={connectStore.walletConnectUri}
 				text={i18n.t('wallet.walletconnect.copy_link')}
 				copiedText={i18n.t('wallet.walletconnect.link_copied')}
 			/>
