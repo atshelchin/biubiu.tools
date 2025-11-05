@@ -41,34 +41,59 @@
 		display: flex;
 		align-items: center;
 		gap: var(--space-2);
-		padding: var(--space-2) var(--space-5);
-		border: none;
-		border-radius: var(--radius-full);
+		padding: var(--space-2-5) var(--space-5);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-md);
 		font-size: var(--text-sm);
-		font-weight: var(--font-semibold);
+		font-weight: var(--font-medium);
 		cursor: pointer;
-		transition: all 0.2s;
-		background: linear-gradient(135deg, var(--brand-500) 0%, var(--brand-600) 100%);
-		color: var(--color-primary-foreground);
+		transition: all 0.3s ease;
+		background: var(--gray-100);
+		color: var(--color-foreground);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.gradient-button::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(135deg, var(--brand-500) 0%, var(--brand-600) 50%, var(--brand-700) 100%);
+		opacity: 0;
+		transition: opacity 0.3s ease;
+		z-index: -1;
 	}
 
 	.gradient-button:hover:not(:disabled) {
-		background: linear-gradient(135deg, var(--brand-600) 0%, var(--brand-700) 100%);
-		transform: translateY(-1px);
-		box-shadow: var(--shadow-md);
+		border-color: transparent;
+		color: white;
+		transform: translateY(-2px);
+		box-shadow: 0 8px 16px var(--color-ring);
+	}
+
+	.gradient-button:hover:not(:disabled)::before {
+		opacity: 1;
 	}
 
 	.gradient-button:active:not(:disabled) {
-		transform: translateY(0);
+		transform: translateY(-1px);
+		box-shadow: 0 4px 8px var(--color-ring);
 	}
 
 	.gradient-button:disabled {
-		opacity: 0.6;
+		opacity: 0.5;
 		cursor: not-allowed;
 	}
 
 	.gradient-button.full-width {
 		width: 100%;
 		justify-content: center;
+	}
+
+	@media (max-width: 768px) {
+		.gradient-button {
+			width: 100%;
+			justify-content: center;
+		}
 	}
 </style>

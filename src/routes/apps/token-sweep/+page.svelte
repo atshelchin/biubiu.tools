@@ -5,7 +5,7 @@
 	import AppTitle from '$lib/components/ui/app-title.svelte';
 	import IconButton from '$lib/components/ui/icon-button.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
-	import { FileDown, FileUp, Trash2, Share2 } from 'lucide-svelte';
+	import { Share2 } from 'lucide-svelte';
 
 	const i18n = useI18n();
 
@@ -29,18 +29,6 @@
 		navigator.clipboard.writeText(url);
 		// TODO: Show success toast
 	}
-
-	function handleImportCSV() {
-		// TODO: Implement CSV import
-	}
-
-	function handleExportResults() {
-		// TODO: Implement export
-	}
-
-	function handleClearAll() {
-		// TODO: Implement clear all
-	}
 </script>
 
 <PageLayout>
@@ -51,12 +39,13 @@
 				description={i18n.t('tools.token_sweep.description')}
 			/>
 			<div class="toolbar-actions">
-				 
 				<IconButton
 					icon={Share2}
 					label={i18n.t('tools.actions.share_link')}
 					tooltip={i18n.t('tools.actions.share_tooltip')}
-					variant="primary"
+					variant="ghost"
+					size="sm"
+					showSuccessIcon={true}
 					onclick={handleShareLink}
 				/>
 			</div>

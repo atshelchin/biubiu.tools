@@ -166,7 +166,8 @@
 		align-items: center;
 		gap: var(--space-3);
 		padding: var(--space-3) var(--space-4);
-		background: var(--color-secondary);
+
+		background: var(--color-muted);
 		border: 1px solid var(--color-border);
 		border-radius: var(--radius-md);
 		cursor: pointer;
@@ -177,7 +178,7 @@
 	}
 
 	.connector-item:hover {
-		background: var(--color-muted);
+		background: var(--color-secondary);
 		transform: translateY(-1px);
 		box-shadow: var(--shadow-sm);
 	}
