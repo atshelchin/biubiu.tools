@@ -111,6 +111,7 @@
 	let walletConnectUri = $state<string | undefined>();
 	let showWalletConnectModal = $state(false);
 	let qrCodeElement: HTMLDivElement | undefined;
+	let currentConnector: Connector | undefined;
 
 	// 从状态派生的响应式变量
 	const isConnected = $derived(connectionState.isConnected);
@@ -126,6 +127,7 @@
 	async function connectWallet(connector: Connector) {
 		try {
 			showConnectorModal = false;
+			currentConnector = connector;
 
 			// 如果是 WalletConnect，显示自定义 QR 码模态框
 			if (connector.id === 'walletconnect') {
@@ -148,6 +150,7 @@
 			console.error('Failed to connect wallet:', error);
 			showWalletConnectModal = false;
 			walletConnectUri = undefined;
+			currentConnector = undefined;
 		}
 	}
 
@@ -155,6 +158,7 @@
 	async function disconnect() {
 		try {
 			await walletManager.disconnect();
+			currentConnector = undefined;
 		} catch (error) {
 			console.error('Failed to disconnect wallet:', error);
 		}
@@ -171,9 +175,19 @@
 	}
 
 	// 关闭 WalletConnect 模态框
-	function closeWalletConnectModal() {
+	async function closeWalletConnectModal() {
 		showWalletConnectModal = false;
 		walletConnectUri = undefined;
+
+		// 如果正在连接中，取消连接
+		if (currentConnector && !isConnected) {
+			try {
+				await currentConnector.disconnect();
+			} catch (error) {
+				console.error('Failed to cancel connection:', error);
+			}
+			currentConnector = undefined;
+		}
 	}
 
 	// 复制 URI 到剪贴板
@@ -186,6 +200,41 @@
 				console.error('Failed to copy URI:', error);
 			}
 		}
+	}
+
+	// 复制钱包地址
+	let showCopySuccess = $state(false);
+
+	async function copyAddress() {
+		if (address) {
+			try {
+				await navigator.clipboard.writeText(address);
+				showCopySuccess = true;
+				setTimeout(() => {
+					showCopySuccess = false;
+				}, 2000);
+			} catch (error) {
+				console.error('Failed to copy address:', error);
+			}
+		}
+	}
+
+	// Svelte action: 复制成功动画
+	function copySuccessAction(node: HTMLElement) {
+		let timeout: ReturnType<typeof setTimeout>;
+
+		function showSuccess() {
+			node.classList.add('copy-success');
+			timeout = setTimeout(() => {
+				node.classList.remove('copy-success');
+			}, 2000);
+		}
+
+		return {
+			destroy() {
+				if (timeout) clearTimeout(timeout);
+			}
+		};
 	}
 
 	// 获取 CSS 变量值
@@ -269,10 +318,54 @@
 </script>
 
 {#if isConnected && address}
-	<button class="wallet-button connected" onclick={disconnect} type="button">
-		<span class="wallet-indicator"></span>
-		<span class="wallet-address">{formatAddress(address)}</span>
-	</button>
+	<div class="wallet-connected-group">
+		<div class="wallet-info">
+			<span class="wallet-indicator"></span>
+			<span class="wallet-address">{formatAddress(address)}</span>
+		</div>
+		<button
+			class="icon-button copy-button"
+			onclick={copyAddress}
+			type="button"
+			title="复制地址"
+			use:copySuccessAction
+		>
+			{#if showCopySuccess}
+				<span class="copy-success-icon">✓</span>
+			{:else}
+				<svg
+					width="16"
+					height="16"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+				>
+					<rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+					<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+				</svg>
+			{/if}
+		</button>
+		<button
+			class="icon-button disconnect-button"
+			onclick={disconnect}
+			type="button"
+			title="断开连接"
+		>
+			<svg
+				width="16"
+				height="16"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+			>
+				<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+				<polyline points="16 17 21 12 16 7"></polyline>
+				<line x1="21" y1="12" x2="9" y2="12"></line>
+			</svg>
+		</button>
+	</div>
 {:else}
 	<button
 		class="wallet-button connect"
@@ -400,16 +493,22 @@
 		transform: translateY(0);
 	}
 
-	.wallet-button.connected {
+	/* Connected Wallet Group */
+	.wallet-connected-group {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+	}
+
+	.wallet-info {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		padding: var(--space-2) var(--space-4);
 		background: var(--color-secondary);
 		color: var(--color-secondary-foreground);
 		border: 1px solid var(--color-border);
-	}
-
-	.wallet-button.connected:hover {
-		background: var(--color-muted);
-		transform: translateY(-1px);
-		box-shadow: var(--shadow-sm);
+		border-radius: var(--radius-full);
 	}
 
 	.wallet-indicator {
@@ -433,6 +532,60 @@
 	.wallet-address {
 		font-family: var(--font-family-mono);
 		font-size: var(--text-sm);
+	}
+
+	/* Icon Buttons */
+	.icon-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: var(--space-8);
+		height: var(--space-8);
+		padding: 0;
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-md);
+		background: var(--color-secondary);
+		color: var(--color-foreground);
+		cursor: pointer;
+		transition: all 0.2s;
+	}
+
+	.icon-button:hover {
+		background: var(--color-muted);
+		transform: translateY(-1px);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.icon-button:active {
+		transform: translateY(0);
+	}
+
+	.copy-button:hover {
+		color: var(--brand-600);
+	}
+
+	.copy-success-icon {
+		font-size: var(--text-lg);
+		color: var(--color-success);
+		font-weight: var(--font-bold);
+		animation: successPop 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	}
+
+	@keyframes successPop {
+		0% {
+			transform: scale(0);
+		}
+		50% {
+			transform: scale(1.2);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+
+	.disconnect-button:hover {
+		color: var(--color-danger);
+		border-color: var(--color-danger);
 	}
 
 	/* Modal styles */
@@ -647,6 +800,15 @@
 	@media (max-width: 768px) {
 		.wallet-button {
 			width: 100%;
+			justify-content: center;
+		}
+
+		.wallet-connected-group {
+			width: 100%;
+		}
+
+		.wallet-info {
+			flex: 1;
 			justify-content: center;
 		}
 
