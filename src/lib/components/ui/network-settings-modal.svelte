@@ -2,6 +2,7 @@
 	import Modal from './modal.svelte';
 	import { Check, Plus, Trash2, Edit2, ArrowLeft, ExternalLink } from 'lucide-svelte';
 	import NetworkIcon from './network-icon.svelte';
+	import ToggleSwitch from './toggle-switch.svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
 	import { useI18n } from '@shelchin/i18n/svelte';
 
@@ -276,14 +277,10 @@
 											{t('wallet.network_settings.active')}
 										</div>
 									{/if}
-									<label class="toggle-switch">
-										<input
-											type="checkbox"
-											checked={isNetworkEnabled(network.chainId)}
-											onchange={(e) => handleToggleNetwork(network, e.currentTarget.checked)}
-										/>
-										<span class="toggle-slider"></span>
-									</label>
+									<ToggleSwitch
+										checked={isNetworkEnabled(network.chainId)}
+										onchange={(checked) => handleToggleNetwork(network, checked)}
+									/>
 								</div>
 							</div>
 
@@ -440,6 +437,7 @@
 
 <style>
 	.network-settings {
+		padding: 10px;
 		min-height: 400px;
 		max-height: 70vh;
 		overflow-y: auto;
@@ -634,61 +632,6 @@
 		border-radius: var(--radius-md);
 		font-size: var(--text-xs);
 		font-weight: var(--font-medium);
-	}
-
-	/* Toggle Switch */
-	.toggle-switch {
-		position: relative;
-		display: inline-block;
-		width: 44px;
-		height: 24px;
-		cursor: pointer;
-	}
-
-	.toggle-switch input {
-		opacity: 0;
-		width: 0;
-		height: 0;
-	}
-
-	.toggle-slider {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: var(--color-secondary);
-		border: 1px solid var(--color-border);
-		border-radius: 24px;
-		transition: all 0.3s;
-	}
-
-	.toggle-slider::before {
-		content: '';
-		position: absolute;
-		height: 18px;
-		width: 18px;
-		left: 3px;
-		bottom: 2px;
-		background: var(--color-foreground);
-		border-radius: 50%;
-		transition: all 0.3s;
-		opacity: 0.7;
-	}
-
-	.toggle-switch input:checked + .toggle-slider {
-		background: var(--color-muted);
-		border-color: var(--color-border);
-	}
-
-	.toggle-switch input:checked + .toggle-slider::before {
-		transform: translateX(20px);
-		background: var(--color-foreground);
-		opacity: 1;
-	}
-
-	.toggle-switch:hover .toggle-slider {
-		border-color: var(--color-border);
 	}
 
 	.card-body {
