@@ -188,20 +188,31 @@
 		}
 	}
 
+	// 获取 CSS 变量值
+	function getCssVariable(variable: string): string {
+		return getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
+	}
+
 	// 渲染 QR 码
 	$effect(() => {
 		if (walletConnectUri && qrCodeElement) {
+			// 获取主题颜色
+			const foregroundColor = getCssVariable('--color-foreground');
+			const backgroundColor = getCssVariable('--color-card');
+			const primaryColor = getCssVariable('--brand-600');
+			const accentColor = getCssVariable('--brand-500');
+
 			const qrCode = new QRCodeStyling({
 				width: 280,
 				height: 280,
 				data: walletConnectUri,
 				image: '/logo.svg',
 				dotsOptions: {
-					color: '#1a1a1a',
+					color: foregroundColor || '#1a1a1a',
 					type: 'rounded'
 				},
 				backgroundOptions: {
-					color: '#ffffff'
+					color: backgroundColor || '#ffffff'
 				},
 				imageOptions: {
 					crossOrigin: 'anonymous',
@@ -209,11 +220,11 @@
 					imageSize: 0.4
 				},
 				cornersSquareOptions: {
-					color: '#2563eb',
+					color: primaryColor || '#2563eb',
 					type: 'extra-rounded'
 				},
 				cornersDotOptions: {
-					color: '#3b82f6',
+					color: accentColor || '#3b82f6',
 					type: 'dot'
 				}
 			});
