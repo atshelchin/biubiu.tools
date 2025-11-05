@@ -8,6 +8,7 @@
 
 	let { children, data } = $props<{ children: import('svelte').Snippet; data: LayoutData }>();
 
+
 	// Setup i18n
 	setupI18n(data.locale);
 

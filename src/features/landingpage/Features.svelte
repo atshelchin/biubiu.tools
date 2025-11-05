@@ -31,28 +31,30 @@
 		},
 		{
 			icon: Zap,
+			title: t('tools.call_master.title'),
+			description: t('tools.call_master.description'),
+			link: '/apps/call-master',
+			status: 'active',
+			color: '#8B5CF6',
+			features: [
+				t('tools.call_master.feature_1'),
+				t('tools.call_master.feature_2'),
+				t('tools.call_master.feature_3')
+			],
+			highlight: false
+		},
+		{
+			icon: Zap,
 			title: t('tools.batch_transfer.title'),
 			description: t('tools.batch_transfer.description'),
 			status: 'coming-soon',
-			color: '#8B5CF6',
+			color: '#10B981',
 			features: [
 				t('tools.batch_transfer.feature_1'),
 				t('tools.batch_transfer.feature_2'),
 				t('tools.batch_transfer.feature_3')
 			]
 		}
-		// {
-		// 	icon: Shield,
-		// 	title: t('tools.security_scanner.title'),
-		// 	description: t('tools.security_scanner.description'),
-		// 	status: 'coming-soon',
-		// 	color: '#10B981',
-		// 	features: [
-		// 		t('tools.security_scanner.feature_1'),
-		// 		t('tools.security_scanner.feature_2'),
-		// 		t('tools.security_scanner.feature_3')
-		// 	]
-		// }
 	]);
 
 	// Telegram group link

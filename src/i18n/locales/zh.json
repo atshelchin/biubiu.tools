@@ -28,6 +28,13 @@
 			"feature_2": "智能路由",
 			"feature_3": "费用估算"
 		},
+		"call_master": {
+			"title": "调用大师",
+			"description": "执行智能合约调用，支持高级功能和批量操作。",
+			"feature_1": "多重调用支持",
+			"feature_2": "ABI 管理",
+			"feature_3": "交易构建器"
+		},
 		"security_scanner": {
 			"title": "安全扫描器",
 			"description": "在交互前扫描并验证智能合约。",

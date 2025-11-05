@@ -28,6 +28,13 @@
 			"feature_2": "Smart Routing",
 			"feature_3": "Fee Estimation"
 		},
+		"call_master": {
+			"title": "Call Master",
+			"description": "Execute smart contract calls with advanced features and batch operations.",
+			"feature_1": "Multi-call Support",
+			"feature_2": "ABI Management",
+			"feature_3": "Transaction Builder"
+		},
 		"security_scanner": {
 			"title": "Security Scanner",
 			"description": "Scan and verify smart contracts before interaction.",

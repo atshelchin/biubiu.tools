@@ -1,7 +1,10 @@
 {
-	"permissions": {
-		"allow": ["Bash(git add:*)"],
-		"deny": [],
-		"ask": []
-	}
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(bun add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
 }
