@@ -128,7 +128,6 @@
 		editingNetwork = null;
 		newRpcUrl = '';
 	}
-	console.log({ editingNetwork });
 
 	async function handleAddRpcToForm() {
 		if (!newRpcUrl.trim()) return;
@@ -417,15 +416,6 @@
 								Add
 							</button>
 						</div>
-					</div>
-
-					<div class="form-actions">
-						<button class="save-btn" onclick={handleSaveNetwork} disabled={isSubmitting}>
-							{isSubmitting ? 'Saving...' : 'Save Network'}
-						</button>
-						<button class="cancel-btn" onclick={handleBackToList} disabled={isSubmitting}>
-							Cancel
-						</button>
 					</div>
 				</div>
 			</div>
@@ -999,10 +989,10 @@
 		background: var(--brand-600);
 	}
 
-	.form-actions {
+	.form-actions-footer {
 		display: flex;
 		gap: var(--space-3);
-		padding-top: var(--space-2);
+		width: 100%;
 	}
 
 	.save-btn,
