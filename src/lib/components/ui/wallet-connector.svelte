@@ -3,6 +3,8 @@
 		IntegratedManager,
 		WalletConnectConnector,
 		EIP6963Connector,
+		CoinbaseSmartWalletConnector,
+		InjectedConnector,
 		watchEIP6963Wallets,
 		type Connector,
 		type ConnectionState,
@@ -11,6 +13,7 @@
 	import { mainnet, polygon, arbitrum, optimism, base } from 'viem/chains';
 	import type { Chain } from 'viem';
 	import { onMount, onDestroy } from 'svelte';
+	import QRCodeStyling from 'qr-code-styling';
 
 	// 内置网络配置
 	const builtInNetworks: NetworkConfig[] = [
@@ -61,12 +64,14 @@
 		}
 	];
 
-	// 初始化连接器
+	// 初始化连接器列表
+	const chains = [mainnet, polygon, arbitrum, optimism, base] as Chain[];
+
 	const walletConnectConnector = new WalletConnectConnector({
-		chains: [mainnet, polygon, arbitrum, optimism, base] as Chain[],
+		chains,
 		shimDisconnect: true,
-		projectId: import.meta.env.VITE_WALLETCONNECT_PROJECT_ID || 'demo-project-id',
-		showQrModal: true,
+		projectId: 'e68249e217c8793807b7bb961a2f4297',
+		showQrModal: false, // 使用自定义 UI
 		metadata: {
 			name: 'BiuBiu Tools',
 			description: 'Blockchain utilities and tools',
@@ -75,15 +80,37 @@
 		}
 	});
 
+	const coinbaseConnector = new CoinbaseSmartWalletConnector({
+		chains,
+		shimDisconnect: true,
+		appName: 'BiuBiu Tools',
+		appLogoUrl: 'https://biubiu.tools/logo.svg',
+		preference: 'all'
+	});
+
+	const injectedConnector = new InjectedConnector({
+		chains,
+		shimDisconnect: true,
+		id: 'injected',
+		name: 'Browser Wallet',
+		target: 'ethereum'
+	});
+
 	// 初始化 IntegratedManager
-	const manager = new IntegratedManager([walletConnectConnector], builtInNetworks, 'biubiu-tools');
+	const manager = new IntegratedManager(
+		[walletConnectConnector, coinbaseConnector, injectedConnector],
+		builtInNetworks,
+		'biubiu-tools'
+	);
 
 	const walletManager = manager.getWalletManager();
 
 	// 钱包连接状态
 	let connectionState = $state<ConnectionState>(walletManager.getState());
-	let eip6963Connectors = $state<Connector[]>([]);
 	let showConnectorModal = $state(false);
+	let walletConnectUri = $state<string | undefined>();
+	let showWalletConnectModal = $state(false);
+	let qrCodeElement: HTMLDivElement | undefined;
 
 	// 从状态派生的响应式变量
 	const isConnected = $derived(connectionState.isConnected);
@@ -99,11 +126,28 @@
 	async function connectWallet(connector: Connector) {
 		try {
 			showConnectorModal = false;
+
+			// 如果是 WalletConnect，显示自定义 QR 码模态框
+			if (connector.id === 'walletconnect') {
+				showWalletConnectModal = true;
+
+				// 监听 display_uri 事件获取 URI
+				connector.on('display_uri', (uri: string) => {
+					walletConnectUri = uri;
+				});
+			}
+
 			const networkManager = manager.getNetworkManager();
 			const currentChainId = networkManager.getCurrentChainId('biubiu-tools') || mainnet.id;
 			await walletManager.connect(connector, currentChainId);
+
+			// 连接成功后关闭模态框
+			showWalletConnectModal = false;
+			walletConnectUri = undefined;
 		} catch (error) {
 			console.error('Failed to connect wallet:', error);
+			showWalletConnectModal = false;
+			walletConnectUri = undefined;
 		}
 	}
 
@@ -126,6 +170,58 @@
 		showConnectorModal = false;
 	}
 
+	// 关闭 WalletConnect 模态框
+	function closeWalletConnectModal() {
+		showWalletConnectModal = false;
+		walletConnectUri = undefined;
+	}
+
+	// 复制 URI 到剪贴板
+	async function copyUri() {
+		if (walletConnectUri) {
+			try {
+				await navigator.clipboard.writeText(walletConnectUri);
+				alert('已复制到剪贴板');
+			} catch (error) {
+				console.error('Failed to copy URI:', error);
+			}
+		}
+	}
+
+	// 渲染 QR 码
+	$effect(() => {
+		if (walletConnectUri && qrCodeElement) {
+			const qrCode = new QRCodeStyling({
+				width: 280,
+				height: 280,
+				data: walletConnectUri,
+				image: '/logo.svg',
+				dotsOptions: {
+					color: '#1a1a1a',
+					type: 'rounded'
+				},
+				backgroundOptions: {
+					color: '#ffffff'
+				},
+				imageOptions: {
+					crossOrigin: 'anonymous',
+					margin: 8,
+					imageSize: 0.4
+				},
+				cornersSquareOptions: {
+					color: '#2563eb',
+					type: 'extra-rounded'
+				},
+				cornersDotOptions: {
+					color: '#3b82f6',
+					type: 'dot'
+				}
+			});
+
+			qrCode.append(qrCodeElement);
+		}
+	});
+
 	// 获取所有可用连接器
 	const availableConnectors = $derived(walletManager.getConnectors());
 
@@ -143,12 +239,11 @@
 			const newConnectors = wallets.map(
 				(wallet) =>
 					new EIP6963Connector({
-						chains: [mainnet, polygon, arbitrum, optimism, base] as Chain[],
+						chains,
 						shimDisconnect: true,
 						providerDetail: wallet
 					})
 			);
-			eip6963Connectors = newConnectors;
 			newConnectors.forEach((connector) => walletManager.registerConnector(connector));
 		});
 
@@ -202,6 +297,59 @@
 						{/if}
 					</button>
 				{/each}
+			</div>
+		</div>
+	</div>
+{/if}
+
+<!-- WalletConnect QR 码模态框 -->
+{#if showWalletConnectModal}
+	<!-- svelte-ignore a11y_click_events_have_key_events -->
+	<!-- svelte-ignore a11y_no_static_element_interactions -->
+	<div class="modal-overlay" onclick={closeWalletConnectModal}>
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
+		<!-- svelte-ignore a11y_no_static_element_interactions -->
+		<div class="modal-content walletconnect-modal" onclick={(e) => e.stopPropagation()}>
+			<div class="modal-header">
+				<h3>扫描二维码</h3>
+				<button class="close-button" onclick={closeWalletConnectModal}>✕</button>
+			</div>
+
+			<div class="walletconnect-content">
+				{#if walletConnectUri}
+					<div class="qr-code-container">
+						<div bind:this={qrCodeElement} class="qr-code"></div>
+					</div>
+
+					<div class="walletconnect-instructions">
+						<p class="instruction-title">使用 WalletConnect 连接钱包</p>
+						<ol class="instruction-list">
+							<li>打开支持 WalletConnect 的钱包应用</li>
+							<li>扫描上方二维码</li>
+							<li>在钱包中确认连接</li>
+						</ol>
+					</div>
+
+					<button class="copy-uri-button" onclick={copyUri}>
+						<svg
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+							<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+						</svg>
+						复制连接链接
+					</button>
+				{:else}
+					<div class="loading-container">
+						<div class="loading-spinner"></div>
+						<p>生成二维码中...</p>
+					</div>
+				{/if}
 			</div>
 		</div>
 	</div>
@@ -381,6 +529,110 @@
 		border-radius: var(--radius);
 	}
 
+	/* WalletConnect Modal Styles */
+	.walletconnect-modal {
+		max-width: 420px;
+	}
+
+	.walletconnect-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--space-6);
+	}
+
+	.qr-code-container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		padding: var(--space-4);
+		background: var(--color-background);
+		border-radius: var(--radius-lg);
+		border: 1px solid var(--color-border);
+	}
+
+	.qr-code {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.walletconnect-instructions {
+		width: 100%;
+		text-align: left;
+	}
+
+	.instruction-title {
+		font-size: var(--text-base);
+		font-weight: var(--font-semibold);
+		color: var(--color-foreground);
+		margin: 0 0 var(--space-3) 0;
+	}
+
+	.instruction-list {
+		margin: 0;
+		padding-left: var(--space-5);
+		color: var(--color-muted-foreground);
+		font-size: var(--text-sm);
+		line-height: 1.6;
+	}
+
+	.instruction-list li {
+		margin-bottom: var(--space-2);
+	}
+
+	.copy-uri-button {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: var(--space-2);
+		padding: var(--space-3) var(--space-4);
+		background: var(--color-secondary);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-md);
+		cursor: pointer;
+		transition: all 0.2s;
+		font-size: var(--text-sm);
+		font-weight: var(--font-medium);
+		color: var(--color-foreground);
+	}
+
+	.copy-uri-button:hover {
+		background: var(--color-muted);
+		transform: translateY(-1px);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.loading-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--space-4);
+		padding: var(--space-8);
+	}
+
+	.loading-spinner {
+		width: var(--space-12);
+		height: var(--space-12);
+		border: 3px solid var(--color-border);
+		border-top-color: var(--brand-600);
+		border-radius: var(--radius-full);
+		animation: spin 1s linear infinite;
+	}
+
+	@keyframes spin {
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.loading-container p {
+		margin: 0;
+		color: var(--color-muted-foreground);
+		font-size: var(--text-sm);
+	}
+
 	@media (max-width: 768px) {
 		.wallet-button {
 			width: 100%;
@@ -390,6 +642,14 @@
 		.modal-content {
 			width: 95%;
 			padding: var(--space-4);
+		}
+
+		.walletconnect-modal {
+			max-width: 95%;
+		}
+
+		.qr-code-container {
+			padding: var(--space-2);
 		}
 	}
 </style>
