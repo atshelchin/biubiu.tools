@@ -1518,7 +1518,10 @@
 								type="button"
 								class="btn-danger"
 								onclick={() => {
-									if (editingNetwork && confirm('Are you sure you want to delete this custom network?')) {
+									if (
+										editingNetwork &&
+										confirm('Are you sure you want to delete this custom network?')
+									) {
 										const networkToDelete = editingNetwork;
 										StorageManager.removeCustomNetwork(networkToDelete.chainId);
 										customNetworks = customNetworks.filter(
@@ -1914,10 +1917,11 @@
 				<div class="stat-item">
 					<span class="stat-label">Collected:</span>
 					<span class="stat-value">
-						{(executionResults
-							.filter((r) => r.success && r.totalValue)
-							.reduce((sum, r) => sum + Number(r.totalValue || BigInt(0)), 0) / 10000)
-							.toFixed(4)} ETH
+						{(
+							executionResults
+								.filter((r) => r.success && r.totalValue)
+								.reduce((sum, r) => sum + Number(r.totalValue || BigInt(0)), 0) / 10000
+						).toFixed(4)} ETH
 					</span>
 				</div>
 				<div class="stat-item">
