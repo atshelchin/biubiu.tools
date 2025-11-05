@@ -73,6 +73,10 @@
 		border-radius: var(--radius-lg);
 		border: 1px solid var(--color-border);
 		height: fit-content;
+		position: sticky;
+		top: var(--space-4);
+		max-height: calc(100vh - var(--space-8));
+		overflow-y: auto;
 	}
 
 	.main-content {
