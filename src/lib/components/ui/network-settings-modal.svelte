@@ -469,7 +469,7 @@
 	h3 {
 		font-size: var(--text-lg);
 		font-weight: var(--font-semibold);
-		color: var(--color-foreground);
+		color: var(--color-muted-foreground);
 	}
 
 	/* List View */
@@ -492,40 +492,19 @@
 		gap: var(--space-2);
 		padding: var(--space-3) var(--space-4);
 		background: var(--color-secondary);
-		color: var(--color-foreground);
+		color: var(--color-muted-foreground);
 		border: 1px solid var(--color-border);
 		border-radius: var(--radius-md);
-		font-size: var(--text-base);
-		font-weight: var(--font-semibold);
+		font-size: var(--text-sm);
+		font-weight: var(--font-medium);
 		cursor: pointer;
-		transition: all 0.3s ease;
+		transition: all 0.2s ease;
 		width: 100%;
-		position: relative;
-		overflow: hidden;
-	}
-
-	.add-network-btn::before {
-		content: '';
-		position: absolute;
-		inset: 0;
-		background: linear-gradient(135deg, var(--brand-500), var(--brand-600));
-		opacity: 0;
-		transition: opacity 0.3s ease;
-		z-index: -1;
-	}
-
-	.add-network-btn:hover::before {
-		opacity: 1;
 	}
 
 	.add-network-btn:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 4px 16px color-mix(in srgb, var(--brand-500) 40%, transparent);
-		color: var(--color-card);
-	}
-
-	.add-network-btn:active {
-		transform: translateY(0);
+		background: var(--color-muted);
+		color: var(--color-foreground);
 	}
 
 	.filter-group {
@@ -579,9 +558,9 @@
 	}
 
 	.filter-btn.active {
-		background: var(--brand-500);
-		color: white;
-		border-color: var(--brand-500);
+		background: var(--color-muted);
+		color: var(--color-foreground);
+		border-color: var(--color-foreground);
 	}
 
 	.network-cards {
@@ -599,8 +578,7 @@
 	}
 
 	.network-card:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 4px 12px var(--color-ring);
+		border-color: var(--color-muted-foreground);
 	}
 
 	.network-card.active {
@@ -650,12 +628,12 @@
 		align-items: center;
 		gap: var(--space-1);
 		padding: var(--space-1) var(--space-2);
-		background: var(--color-success, #10b981);
-		color: var(--color-card);
+		background: transparent;
+		color: var(--color-muted-foreground);
+		border: 1px solid var(--color-border);
 		border-radius: var(--radius-md);
 		font-size: var(--text-xs);
 		font-weight: var(--font-medium);
-		animation: check-in 0.3s ease;
 	}
 
 	/* Toggle Switch */
@@ -699,8 +677,8 @@
 	}
 
 	.toggle-switch input:checked + .toggle-slider {
-		background: var(--color-success, #10b981);
-		border-color: var(--color-success, #10b981);
+		background: var(--color-muted);
+		border-color: var(--color-foreground);
 	}
 
 	.toggle-switch input:checked + .toggle-slider::before {
@@ -710,7 +688,7 @@
 	}
 
 	.toggle-switch:hover .toggle-slider {
-		box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand-500) 10%, transparent);
+		border-color: var(--color-muted-foreground);
 	}
 
 	.card-body {
@@ -733,13 +711,13 @@
 		display: flex;
 		align-items: center;
 		gap: var(--space-1);
-		color: var(--brand-600);
+		color: var(--color-muted-foreground);
 		text-decoration: none;
 		transition: color 0.2s;
 	}
 
 	.explorer-link:hover {
-		color: var(--brand-700);
+		color: var(--color-foreground);
 		text-decoration: underline;
 	}
 
@@ -763,12 +741,12 @@
 		cursor: pointer;
 		transition: all 0.2s;
 		width: 100%;
-		color: var(--color-foreground);
+		color: var(--color-muted-foreground);
 	}
 
 	.action-btn:hover:not(:disabled) {
-		background: var(--color-secondary);
-		transform: translateY(-1px);
+		background: var(--color-muted);
+		color: var(--color-foreground);
 	}
 
 	.action-btn:disabled {
@@ -941,8 +919,9 @@
 
 	.primary-badge-small {
 		padding: var(--space-1) var(--space-2);
-		background: var(--brand-500);
-		color: var(--color-card);
+		background: transparent;
+		color: var(--color-muted-foreground);
+		border: 1px solid var(--color-border);
 		border-radius: var(--radius-sm);
 		font-size: var(--text-xs);
 		font-weight: var(--font-medium);
@@ -957,16 +936,17 @@
 		cursor: pointer;
 		transition: all 0.2s;
 		white-space: nowrap;
-		color: var(--color-foreground);
+		color: var(--color-muted-foreground);
 	}
 
 	.rpc-action-btn-small:hover {
-		background: var(--color-secondary);
+		background: var(--color-muted);
+		color: var(--color-foreground);
 	}
 
 	.rpc-action-btn-small.danger:hover {
-		background: var(--color-danger);
-		color: var(--color-card);
+		background: var(--color-muted);
+		color: var(--color-danger);
 		border-color: var(--color-danger);
 	}
 
@@ -989,9 +969,9 @@
 		align-items: center;
 		gap: var(--space-1);
 		padding: var(--space-2) var(--space-3);
-		background: var(--brand-500);
-		color: var(--color-card);
-		border: none;
+		background: var(--color-secondary);
+		color: var(--color-muted-foreground);
+		border: 1px solid var(--color-border);
 		border-radius: var(--radius-md);
 		font-size: var(--text-sm);
 		font-weight: var(--font-medium);
@@ -1001,7 +981,8 @@
 	}
 
 	.add-btn-small:hover {
-		background: var(--brand-600);
+		background: var(--color-muted);
+		color: var(--color-foreground);
 	}
 
 	.form-actions-footer {
@@ -1022,14 +1003,14 @@
 	}
 
 	.save-btn {
-		background: linear-gradient(135deg, var(--brand-500), var(--brand-600));
+		background: var(--color-foreground);
 		color: var(--color-card);
-		border: none;
+		border: 1px solid var(--color-foreground);
 	}
 
 	.save-btn:hover:not(:disabled) {
-		transform: translateY(-2px);
-		box-shadow: 0 4px 12px color-mix(in srgb, var(--brand-500) 30%, transparent);
+		background: var(--color-muted-foreground);
+		border-color: var(--color-muted-foreground);
 	}
 
 	.save-btn:disabled {
@@ -1039,12 +1020,13 @@
 
 	.cancel-btn {
 		background: var(--color-secondary);
-		color: var(--color-foreground);
+		color: var(--color-muted-foreground);
 		border: 1px solid var(--color-border);
 	}
 
 	.cancel-btn:hover:not(:disabled) {
-		background: var(--color-secondary);
+		background: var(--color-muted);
+		color: var(--color-foreground);
 	}
 
 	@keyframes check-in {

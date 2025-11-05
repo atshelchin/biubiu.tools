@@ -51,8 +51,8 @@
 			<div class="toolbar-actions">
 				<IconButton
 					icon={Settings}
-					label="Settings"
-					tooltip="Network settings"
+					label={i18n.t('tools.actions.settings')}
+					tooltip={i18n.t('tools.actions.settings_tooltip')}
 					variant="ghost"
 					size="sm"
 					onclick={handleOpenSettings}
