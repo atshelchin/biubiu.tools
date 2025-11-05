@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { cva, type VariantProps } from 'class-variance-authority';
+	import type { Snippet } from 'svelte';
 
 	const cardVariants = cva('card', {
 		variants: {
@@ -16,13 +17,14 @@
 
 	type $$Props = VariantProps<typeof cardVariants> & {
 		class?: string;
+		children: Snippet;
 	};
 
-	let { variant = 'default', class: className = '' }: $$Props = $props();
+	let { variant = 'default', class: className = '', children }: $$Props = $props();
 </script>
 
 <div class="{cardVariants({ variant })} {className}">
-	<slot />
+	{@render children()}
 </div>
 
 <style>

@@ -81,9 +81,21 @@
 
 {#if isOpen}
 	<!-- Modal backdrop -->
-	<div class="modal-backdrop" onclick={handleClose}>
+	<div
+		class="modal-backdrop"
+		role="button"
+		tabindex="0"
+		onclick={handleClose}
+		onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && handleClose()}
+	>
 		<!-- Modal content -->
-		<div class="modal-content" onclick={(e) => e.stopPropagation()}>
+		<div
+			class="modal-content"
+			role="dialog"
+			tabindex="-1"
+			onclick={(e) => e.stopPropagation()}
+			onkeydown={(e) => e.stopPropagation()}
+		>
 			<!-- Close button -->
 			<button class="close-btn" onclick={handleClose} aria-label="Close">
 				<X />

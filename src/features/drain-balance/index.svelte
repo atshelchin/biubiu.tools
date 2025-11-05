@@ -29,7 +29,7 @@
 
 	// Custom items
 	let customNetworks = $state<Network[]>([]);
-	let customTokens = new SvelteMap<number, Token[]>();
+	let customTokens = $state(new SvelteMap<number, Token[]>());
 	let networkOverrides = $state<Record<number, Partial<Network>>>({});
 	let allNetworks = $derived(
 		(() => {
@@ -306,9 +306,9 @@
 
 				// Update local state to immediately show the new token
 				const currentTokens = customTokens.get(selectedNetwork.chainId) || [];
-				customTokens.set(selectedNetwork.chainId, [...currentTokens, result.token]);
-				// Trigger reactivity
-				customTokens = new SvelteMap(customTokens);
+				const newTokensMap = new SvelteMap(customTokens);
+				newTokensMap.set(selectedNetwork.chainId, [...currentTokens, result.token]);
+				customTokens = newTokensMap;
 
 				// Show success and close dialog after a short delay
 				setTimeout(() => {
@@ -471,7 +471,7 @@
 		itemsPerPage: 50,
 		totalItems: 0
 	});
-	let selectedResults = new SvelteSet<number>();
+	let selectedResults = $state(new SvelteSet<number>());
 	let totalBatches = $state(0);
 	let currentBatch = $state(0);
 
@@ -1236,8 +1236,20 @@
 
 	<!-- Add Network Dialog -->
 	{#if showAddNetworkDialog}
-		<div class="dialog-overlay" onclick={() => (showAddNetworkDialog = false)}>
-			<div class="dialog" onclick={(e) => e.stopPropagation()}>
+		<div
+			class="dialog-overlay"
+			role="button"
+			tabindex="0"
+			onclick={() => (showAddNetworkDialog = false)}
+			onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && (showAddNetworkDialog = false)}
+		>
+			<div
+				class="dialog"
+				role="dialog"
+				tabindex="-1"
+				onclick={(e) => e.stopPropagation()}
+				onkeydown={(e) => e.stopPropagation()}
+			>
 				<h2>Add Custom Network</h2>
 				<form
 					onsubmit={(e) => {
@@ -1349,8 +1361,20 @@
 
 	<!-- Add Token Dialog -->
 	{#if showAddTokenDialog}
-		<div class="dialog-overlay" onclick={() => (showAddTokenDialog = false)}>
-			<div class="dialog" onclick={(e) => e.stopPropagation()}>
+		<div
+			class="dialog-overlay"
+			role="button"
+			tabindex="0"
+			onclick={() => (showAddTokenDialog = false)}
+			onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && (showAddTokenDialog = false)}
+		>
+			<div
+				class="dialog"
+				role="dialog"
+				tabindex="-1"
+				onclick={(e) => e.stopPropagation()}
+				onkeydown={(e) => e.stopPropagation()}
+			>
 				<h2>Add Custom Token</h2>
 				{#if selectedNetwork}
 					<p class="dialog-subtitle">Adding token to: {selectedNetwork.name}</p>
@@ -1403,8 +1427,20 @@
 
 	<!-- Edit Network Dialog -->
 	{#if showEditNetworkDialog && editingNetwork}
-		<div class="dialog-overlay" onclick={() => (showEditNetworkDialog = false)}>
-			<div class="dialog" onclick={(e) => e.stopPropagation()}>
+		<div
+			class="dialog-overlay"
+			role="button"
+			tabindex="0"
+			onclick={() => (showEditNetworkDialog = false)}
+			onkeydown={(e) => (e.key === 'Enter' || e.key === ' ') && (showEditNetworkDialog = false)}
+		>
+			<div
+				class="dialog"
+				role="dialog"
+				tabindex="-1"
+				onclick={(e) => e.stopPropagation()}
+				onkeydown={(e) => e.stopPropagation()}
+			>
 				<h2>Edit Network</h2>
 				<p class="dialog-subtitle">Editing: {editingNetwork.name}</p>
 				<form
@@ -1561,12 +1597,18 @@
 			class="dialog-overlay"
 			onclick={() => (showResultsDialog = false)}
 			role="dialog"
+			tabindex="0"
 			aria-modal="true"
 			onkeydown={(e) => {
 				if (e.key === 'Escape') showResultsDialog = false;
 			}}
 		>
-			<div class="dialog results-dialog" onclick={(e) => e.stopPropagation()} role="document">
+			<div
+				class="dialog results-dialog"
+				role="presentation"
+				onclick={(e) => e.stopPropagation()}
+				onkeydown={(e) => e.stopPropagation()}
+			>
 				<h2>Execution Results</h2>
 				<p class="dialog-subtitle">Transaction batch results for {wallets.length} wallets</p>
 
@@ -1726,11 +1768,12 @@
 										getPaginatedResults().length > 0}
 									onchange={(e) => {
 										if (e.currentTarget.checked) {
-											getPaginatedResults().forEach((r) => selectedResults.add(r.batchId));
+											const newSet = new SvelteSet(selectedResults);
+											getPaginatedResults().forEach((r) => newSet.add(r.batchId));
+											selectedResults = newSet;
 										} else {
-											selectedResults.clear();
+											selectedResults = new SvelteSet();
 										}
-										selectedResults = new SvelteSet(selectedResults);
 									}}
 								/>
 							</th>
@@ -1753,12 +1796,13 @@
 										type="checkbox"
 										checked={selectedResults.has(result.batchId)}
 										onchange={(e) => {
+											const newSet = new SvelteSet(selectedResults);
 											if (e.currentTarget.checked) {
-												selectedResults.add(result.batchId);
+												newSet.add(result.batchId);
 											} else {
-												selectedResults.delete(result.batchId);
+												newSet.delete(result.batchId);
 											}
-											selectedResults = new SvelteSet(selectedResults);
+											selectedResults = newSet;
 										}}
 									/>
 								</td>
@@ -2270,10 +2314,10 @@
 		letter-spacing: 0.5px;
 	}
 
-	.feature-badge.eip7702 {
+	/* .feature-badge.eip7702 {
 		background: var(--color-success);
 		color: white;
-	}
+	} */
 
 	.feature-badge.more {
 		background: var(--color-panel-4);
@@ -2290,9 +2334,9 @@
 		color: white;
 	}
 
-	.network-card.selected .feature-badge.eip7702 {
+	/* .network-card.selected .feature-badge.eip7702 {
 		background: rgba(255, 255, 255, 0.3);
-	}
+	} */
 
 	.token-card {
 		display: flex;
@@ -2531,9 +2575,9 @@
 		cursor: not-allowed;
 	}
 
-	.btn-edit-keys {
-		/* background: var(--color-panel-accent); */
-	}
+	/* .btn-edit-keys {
+		background: var(--color-panel-accent);
+	} */
 
 	.revalidation-warning {
 		color: var(--color-warning);
@@ -3272,9 +3316,9 @@
 			padding: var(--space-3) !important;
 		}
 
-		.network-card h3 {
+		/* .network-card h3 {
 			font-size: var(--text-base) !important;
-		}
+		} */
 
 		/* Mobile: Buttons */
 		.btn-next,
@@ -3296,8 +3340,8 @@
 		input[type='text'],
 		input[type='url'],
 		input[type='number'],
-		select,
-		textarea {
+		select /* ,
+		textarea */ {
 			width: 100% !important;
 			min-height: var(--touch-target) !important;
 			font-size: 16px !important; /* Prevents zoom on iOS */
@@ -3485,16 +3529,16 @@
 	@media (hover: none) and (pointer: coarse) {
 		/* Increase all touch targets */
 		button,
-		.btn,
-		input[type='checkbox'],
-		input[type='radio'] {
+		/* .btn, */
+		input[type='checkbox'] /* ,
+		input[type='radio'] */ {
 			min-height: var(--touch-target) !important;
 			min-width: var(--touch-target) !important;
 		}
 
 		/* Add active states for better feedback */
-		button:active,
-		.btn:active {
+		button:active /* ,
+		.btn:active */ {
 			transform: scale(0.98);
 			opacity: 0.9;
 		}
@@ -3537,17 +3581,17 @@
 
 	/* High Contrast Mode Support */
 	@media (prefers-contrast: high) {
-		.network-card.selected,
-		.token-card.selected {
+		.network-card.selected /* ,
+		.token-card.selected */ {
 			outline: 3px solid var(--color-primary);
 			outline-offset: 2px;
 		}
 
 		button:focus,
-		.btn:focus,
+		/* .btn:focus, */
 		input:focus,
-		select:focus,
-		textarea:focus {
+		select:focus /* ,
+		textarea:focus */ {
 			outline: 3px solid var(--color-primary);
 			outline-offset: 2px;
 		}

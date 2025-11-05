@@ -1,9 +1,11 @@
 <script lang="ts">
-	let { class: className = '' } = $props<{ class?: string }>();
+	import type { Snippet } from 'svelte';
+
+	let { class: className = '', children } = $props<{ class?: string; children: Snippet }>();
 </script>
 
 <div class="card-header {className}">
-	<slot />
+	{@render children()}
 </div>
 
 <style>

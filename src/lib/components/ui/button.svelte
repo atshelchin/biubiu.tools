@@ -1,10 +1,12 @@
 <script lang="ts">
 	import type { HTMLButtonAttributes } from 'svelte/elements';
+	import type { Snippet } from 'svelte';
 
 	type $$Props = HTMLButtonAttributes & {
 		variant?: 'default' | 'outline' | 'ghost' | 'destructive';
 		size?: 'sm' | 'md' | 'lg';
 		class?: string;
+		children: Snippet;
 	};
 
 	let {
@@ -12,12 +14,13 @@
 		size = 'md',
 		class: className = '',
 		disabled = false,
+		children,
 		...restProps
 	}: $$Props = $props();
 </script>
 
 <button class="btn btn-{variant} btn-{size} {className}" {disabled} {...restProps}>
-	<slot />
+	{@render children()}
 </button>
 
 <style>

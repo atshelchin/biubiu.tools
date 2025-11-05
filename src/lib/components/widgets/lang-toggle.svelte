@@ -244,8 +244,8 @@
 	}
 
 	/* Add a subtle left border on hover */
-	.dropdown-item::before {
-		/* content: '';
+	/* .dropdown-item::before {
+		content: '';
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -254,12 +254,12 @@
 		background: var(--color-primary);
 		transform: scaleX(0);
 		transform-origin: left;
-		transition: transform 0.2s ease; */
+		transition: transform 0.2s ease;
 	}
 
 	.dropdown-item:hover::before {
 		transform: scaleX(1);
-	}
+	} */
 
 	.dropdown-item .label {
 		flex: 1;
