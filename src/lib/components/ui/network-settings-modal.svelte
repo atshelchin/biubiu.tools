@@ -3,6 +3,7 @@
 	import { Check, Plus, Trash2, Edit2, ArrowLeft, ExternalLink } from 'lucide-svelte';
 	import NetworkIcon from './network-icon.svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
+	import { useI18n } from '@shelchin/i18n/svelte';
 
 	interface Props {
 		open: boolean;
@@ -15,6 +16,9 @@
 
 	let { open, networks, currentChainId, onClose, onToggleNetwork, isNetworkEnabled }: Props =
 		$props();
+
+	const i18n = useI18n();
+	const t = i18n.t;
 
 	type ViewMode = 'list' | 'edit' | 'add';
 	let viewMode = $state<ViewMode>('list');
@@ -190,21 +194,23 @@
 	}
 </script>
 
-<Modal {open} {onClose} title="Network Settings">
+<Modal {open} {onClose} title={t('wallet.network_settings.title')}>
 	{#snippet footer()}
 		{#if viewMode === 'list'}
 			<button class="add-network-btn" onclick={handleAddNetwork}>
 				<Plus size={18} />
-				Add Network
+				{t('wallet.network_settings.add_network')}
 			</button>
 		{:else}
 			<!-- Edit/Add mode footer buttons -->
 			<div class="form-actions-footer">
 				<button class="cancel-btn" onclick={handleBackToList} disabled={isSubmitting}>
-					Cancel
+					{t('wallet.network_settings.cancel')}
 				</button>
 				<button class="save-btn" onclick={handleSaveNetwork} disabled={isSubmitting}>
-					{isSubmitting ? 'Saving...' : 'Save Network'}
+					{isSubmitting
+						? t('wallet.network_settings.saving')
+						: t('wallet.network_settings.save_network')}
 				</button>
 			</div>
 		{/if}
@@ -215,12 +221,12 @@
 			<!-- List View -->
 			<div class="list-view">
 				<div class="list-header">
-					<h3>Available Networks</h3>
+					<h3>{t('wallet.network_settings.available_networks')}</h3>
 
 					<div class="filter-group">
 						<input
 							type="text"
-							placeholder="Search networks by name, symbol, or chain ID..."
+							placeholder={t('wallet.network_settings.search_placeholder')}
 							bind:value={searchQuery}
 							class="search-input"
 						/>
@@ -230,21 +236,21 @@
 								class:active={filterStatus === 'all'}
 								onclick={() => (filterStatus = 'all')}
 							>
-								All
+								{t('wallet.network_settings.filter_all')}
 							</button>
 							<button
 								class="filter-btn"
 								class:active={filterStatus === 'enabled'}
 								onclick={() => (filterStatus = 'enabled')}
 							>
-								Enabled
+								{t('wallet.network_settings.filter_enabled')}
 							</button>
 							<button
 								class="filter-btn"
 								class:active={filterStatus === 'disabled'}
 								onclick={() => (filterStatus = 'disabled')}
 							>
-								Disabled
+								{t('wallet.network_settings.filter_disabled')}
 							</button>
 						</div>
 					</div>
@@ -267,7 +273,7 @@
 									{#if network.chainId === currentChainId}
 										<div class="active-badge">
 											<Check size={14} />
-											Active
+											{t('wallet.network_settings.active')}
 										</div>
 									{/if}
 									<label class="toggle-switch">
@@ -283,8 +289,11 @@
 
 							<div class="card-body">
 								<div class="rpc-count">
-									{network.rpcEndpoints.length} RPC
-									{network.rpcEndpoints.length === 1 ? 'endpoint' : 'endpoints'}
+									{network.rpcEndpoints.length}
+									{t('wallet.network_settings.rpc_endpoints')}
+									{network.rpcEndpoints.length === 1
+										? t('wallet.network_settings.rpc_endpoint')
+										: t('wallet.network_settings.rpc_endpoints_plural')}
 								</div>
 								{#if network.blockExplorer}
 									<a
@@ -294,7 +303,7 @@
 										class="explorer-link"
 									>
 										<ExternalLink size={12} />
-										Block Explorer
+										{t('wallet.network_settings.block_explorer')}
 									</a>
 								{/if}
 							</div>
@@ -302,7 +311,7 @@
 							<div class="card-actions">
 								<button class="action-btn edit" onclick={() => handleEditNetwork(network)}>
 									<Edit2 size={14} />
-									Edit RPC
+									{t('wallet.network_settings.edit_rpc')}
 								</button>
 							</div>
 						</div>
@@ -315,14 +324,18 @@
 				<div class="form-header">
 					<button class="back-btn" onclick={handleBackToList}>
 						<ArrowLeft size={18} />
-						Back
+						{t('wallet.network_settings.back')}
 					</button>
-					<h3>{viewMode === 'edit' ? 'Edit Network' : 'Add Network'}</h3>
+					<h3>
+						{viewMode === 'edit'
+							? t('wallet.network_settings.edit_network')
+							: t('wallet.network_settings.add_network')}
+					</h3>
 				</div>
 
 				<div class="form-content">
 					<div class="form-group">
-						<label for="chainId">Chain ID</label>
+						<label for="chainId">{t('wallet.network_settings.chain_id')}</label>
 						<input
 							id="chainId"
 							type="number"
@@ -333,7 +346,7 @@
 					</div>
 
 					<div class="form-group">
-						<label for="name">Network Name</label>
+						<label for="name">{t('wallet.network_settings.network_name')}</label>
 						<input
 							id="name"
 							type="text"
@@ -343,12 +356,12 @@
 					</div>
 
 					<div class="form-group">
-						<label for="symbol">Currency Symbol</label>
+						<label for="symbol">{t('wallet.network_settings.currency_symbol')}</label>
 						<input id="symbol" type="text" bind:value={formData.symbol} placeholder="ETH" />
 					</div>
 
 					<div class="form-group">
-						<label for="explorer">Block Explorer (Optional)</label>
+						<label for="explorer">{t('wallet.network_settings.block_explorer_optional')}</label>
 						<input
 							id="explorer"
 							type="text"
@@ -360,35 +373,38 @@
 					<div class="form-group">
 						<label class="checkbox-label">
 							<input type="checkbox" bind:checked={formData.enabled} />
-							<span>Enable this network</span>
+							<span>{t('wallet.network_settings.enable_network')}</span>
 						</label>
 					</div>
 
 					<div class="form-group rpc-group">
-						<div class="rpc-label">RPC Endpoints</div>
+						<div class="rpc-label">{t('wallet.network_settings.rpc_endpoints_label')}</div>
 						<div class="rpc-list-form">
 							{#each formData.rpcEndpoints as rpc, index (index)}
 								<div class="rpc-item-form" class:primary={rpc.isPrimary}>
 									<div class="rpc-info-wrapper">
 										<div class="rpc-url-display">{rpc.url}</div>
 										{#if rpc.testing}
-											<div class="rpc-latency testing">Testing...</div>
+											<div class="rpc-latency testing">{t('wallet.network_settings.testing')}</div>
 										{:else if rpc.latency !== undefined}
 											<div class="rpc-latency" class:failed={rpc.latency === -1}>
-												{rpc.latency === -1 ? 'Failed' : `${rpc.latency}ms`}
+												{rpc.latency === -1
+													? t('wallet.network_settings.failed')
+													: `${rpc.latency}ms`}
 											</div>
 										{/if}
 									</div>
 									<div class="rpc-actions-form">
 										{#if rpc.isPrimary}
-											<span class="primary-badge-small">Primary</span>
+											<span class="primary-badge-small">{t('wallet.network_settings.primary')}</span
+											>
 										{:else}
 											<button
 												type="button"
 												class="rpc-action-btn-small"
 												onclick={() => handleSetPrimaryInForm(index)}
 											>
-												Set Primary
+												{t('wallet.network_settings.set_primary')}
 											</button>
 										{/if}
 										<button
@@ -406,13 +422,13 @@
 						<div class="add-rpc-input">
 							<input
 								type="text"
-								placeholder="https://your-rpc-endpoint.com"
+								placeholder={t('wallet.network_settings.add_rpc_placeholder')}
 								bind:value={newRpcUrl}
 								onkeydown={(e) => e.key === 'Enter' && handleAddRpcToForm()}
 							/>
 							<button type="button" class="add-btn-small" onclick={handleAddRpcToForm}>
 								<Plus size={14} />
-								Add
+								{t('wallet.network_settings.add')}
 							</button>
 						</div>
 					</div>

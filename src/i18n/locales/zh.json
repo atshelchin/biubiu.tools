@@ -160,6 +160,38 @@
 			"copy_link": "复制连接链接",
 			"link_copied": "已复制",
 			"generating": "生成二维码中..."
+		},
+		"network_settings": {
+			"title": "网络设置",
+			"available_networks": "可用网络",
+			"search_placeholder": "按名称、符号或链 ID 搜索网络...",
+			"filter_all": "全部",
+			"filter_enabled": "已启用",
+			"filter_disabled": "已禁用",
+			"active": "当前",
+			"rpc_endpoints": "RPC 端点",
+			"rpc_endpoint": "个端点",
+			"rpc_endpoints_plural": "个端点",
+			"block_explorer": "区块浏览器",
+			"edit_rpc": "编辑 RPC",
+			"add_network": "添加网络",
+			"edit_network": "编辑网络",
+			"back": "返回",
+			"chain_id": "链 ID",
+			"network_name": "网络名称",
+			"currency_symbol": "货币符号",
+			"block_explorer_optional": "区块浏览器（可选）",
+			"enable_network": "启用此网络",
+			"rpc_endpoints_label": "RPC 端点",
+			"primary": "主节点",
+			"set_primary": "设为主节点",
+			"add_rpc_placeholder": "https://your-rpc-endpoint.com",
+			"add": "添加",
+			"save_network": "保存网络",
+			"saving": "保存中...",
+			"cancel": "取消",
+			"testing": "测试中...",
+			"failed": "失败"
 		}
 	}
 }

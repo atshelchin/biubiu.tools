@@ -177,6 +177,38 @@
 			"copy_link": "Copy Connection Link",
 			"link_copied": "Copied",
 			"generating": "Generating QR code..."
+		},
+		"network_settings": {
+			"title": "Network Settings",
+			"available_networks": "Available Networks",
+			"search_placeholder": "Search networks by name, symbol, or chain ID...",
+			"filter_all": "All",
+			"filter_enabled": "Enabled",
+			"filter_disabled": "Disabled",
+			"active": "Active",
+			"rpc_endpoints": "RPC Endpoints",
+			"rpc_endpoint": "endpoint",
+			"rpc_endpoints_plural": "endpoints",
+			"block_explorer": "Block Explorer",
+			"edit_rpc": "Edit RPC",
+			"add_network": "Add Network",
+			"edit_network": "Edit Network",
+			"back": "Back",
+			"chain_id": "Chain ID",
+			"network_name": "Network Name",
+			"currency_symbol": "Currency Symbol",
+			"block_explorer_optional": "Block Explorer (Optional)",
+			"enable_network": "Enable this network",
+			"rpc_endpoints_label": "RPC Endpoints",
+			"primary": "Primary",
+			"set_primary": "Set Primary",
+			"add_rpc_placeholder": "https://your-rpc-endpoint.com",
+			"add": "Add",
+			"save_network": "Save Network",
+			"saving": "Saving...",
+			"cancel": "Cancel",
+			"testing": "Testing...",
+			"failed": "Failed"
 		}
 	}
 }
