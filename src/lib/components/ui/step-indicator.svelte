@@ -116,7 +116,7 @@
 		height: 40px;
 		border-radius: 50%;
 		background: var(--gray-50);
-		border: 2px solid var(--gray-200);
+		border: 1px solid var(--gray-200);
 		color: var(--gray-400);
 		font-weight: var(--font-medium);
 		font-size: var(--text-sm);
@@ -134,7 +134,7 @@
 
 	.step-circle.active {
 		background: linear-gradient(135deg, #60a5fa, #3b82f6);
-		border: 2px solid #2563eb;
+		border: 1px solid #2563eb;
 		color: white;
 		box-shadow:
 			0 0 0 4px rgba(59, 130, 246, 0.1),
@@ -150,7 +150,7 @@
 
 	.step-circle.completed {
 		background: #10b981;
-		border: 2px solid #059669;
+		border: 1px solid #059669;
 		color: white;
 		box-shadow: 0 1px 3px rgba(5, 150, 105, 0.2);
 	}
