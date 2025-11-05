@@ -128,6 +128,7 @@
 		editingNetwork = null;
 		newRpcUrl = '';
 	}
+	console.log({ editingNetwork });
 
 	async function handleAddRpcToForm() {
 		if (!newRpcUrl.trim()) return;
@@ -198,6 +199,16 @@
 				<Plus size={18} />
 				Add Network
 			</button>
+		{:else}
+			<!-- Edit/Add mode footer buttons -->
+			<div class="form-actions-footer">
+				<button class="cancel-btn" onclick={handleBackToList} disabled={isSubmitting}>
+					Cancel
+				</button>
+				<button class="save-btn" onclick={handleSaveNetwork} disabled={isSubmitting}>
+					{isSubmitting ? 'Saving...' : 'Save Network'}
+				</button>
+			</div>
 		{/if}
 	{/snippet}
 
