@@ -122,20 +122,43 @@ npm run test:e2e
    - Keep type definitions centralized
    - Export all interfaces that are used across files
    - Import types where needed, don't duplicate definitions
+   - **IMPORTANT**: Ensure interface properties match actual usage in code
+   - Add all properties that are being accessed, including optional ones
 
-6. **Handle null/undefined checks**
+6. **Handle null/undefined checks properly**
+   - ❌ `if (result.isValid) { editingNetwork.name = ... }` (editingNetwork possibly null)
+   - ✅ `if (result.isValid && editingNetwork) { const network = editingNetwork; network.name = ... }`
    - Use optional chaining: `obj?.property`
    - Use nullish coalescing: `value ?? defaultValue`
-   - Add proper null checks before accessing properties
+   - Create local constants to preserve non-null references in scope
 
-7. **Type external library imports**
+7. **Type external library imports correctly**
+   - ❌ `targetAddress` (string) where `Address` type expected
+   - ✅ `import type { Address } from 'viem'` then `targetAddress as Address`
    - Import types from libraries: `import type { Address } from 'viem'`
-   - Don't assume type inference for complex library types
+   - Cast strings to library types when needed: `value as LibraryType`
 
 8. **Use proper TypeScript utility types**
    - `Record<K, V>` for object maps with known key/value types
    - `Partial<T>` for optional properties
    - `Pick<T, K>` and `Omit<T, K>` for type transformations
+
+9. **Handle bigint conversions**
+   - ❌ `gasUsed: '0.001'` (string where bigint expected)
+   - ✅ `gasUsed: BigInt(1000000000000000)` or `BigInt(Math.floor(...))`
+   - Convert bigint to number for display: `Number(bigintValue)`
+   - Use BigInt() constructor for string/number to bigint conversion
+
+10. **Remove unused imports and variables**
+    - ESLint will catch these - don't ignore them
+    - Remove unused variables immediately
+    - Remove unused imports to keep code clean
+    - This includes functions, components, and types that aren't referenced
+
+11. **Fix array type mismatches**
+    - ❌ `invalidKeys: items.map(k => k.key)` when expecting `{ key: string }[]`
+    - ✅ `invalidKeys: items` (keep original array structure if it matches type)
+    - Ensure mapped arrays match the expected interface structure
 
 ### Pre-Commit Checklist
 

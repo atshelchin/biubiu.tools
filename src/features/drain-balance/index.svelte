@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte';
 	import { SvelteMap, SvelteSet } from 'svelte/reactivity';
+	import type { Address } from 'viem';
 	import CodeEditor from '@/lib/components/widgets/CodeEditor.svelte';
 	import { validatePrivateKey, getAddressFromPrivateKey } from './utils/wallet';
 	import { SUPPORTED_NETWORKS, COMMON_TOKENS } from './constants/networks';
@@ -174,7 +175,8 @@
 		try {
 			const result = await validateNetwork(network);
 
-			if (result.isValid) {
+			if (result.isValid && editingNetwork) {
+				const currentEditingNetwork = editingNetwork;
 				const updatedNetwork: Network = {
 					...network,
 					nativeCurrency: {
@@ -182,15 +184,15 @@
 						symbol: editNetworkForm.nativeCurrencySymbol,
 						decimals: parseInt(editNetworkForm.nativeCurrencyDecimals)
 					},
-					isCustom: editingNetwork.isCustom,
+					isCustom: currentEditingNetwork.isCustom,
 					features: result.features || []
 				};
 
 				// Update in storage if it's a custom network
-				if (editingNetwork.isCustom) {
-					StorageManager.updateCustomNetwork(editingNetwork.chainId, updatedNetwork);
+				if (currentEditingNetwork.isCustom) {
+					StorageManager.updateCustomNetwork(currentEditingNetwork.chainId, updatedNetwork);
 					customNetworks = customNetworks.map((n) =>
-						n.chainId === editingNetwork.chainId ? updatedNetwork : n
+						n.chainId === currentEditingNetwork.chainId ? updatedNetwork : n
 					);
 				} else {
 					// For built-in networks, save as override in storage
@@ -198,12 +200,12 @@
 					// Update the overrides in the current session
 					networkOverrides = {
 						...networkOverrides,
-						[editingNetwork.chainId]: updatedNetwork
+						[currentEditingNetwork.chainId]: updatedNetwork
 					};
 				}
 
 				// Update selected network if it's the one being edited
-				if (selectedNetwork?.chainId === editingNetwork.chainId) {
+				if (selectedNetwork?.chainId === currentEditingNetwork.chainId) {
 					selectedNetwork = updatedNetwork;
 				}
 
@@ -520,7 +522,9 @@
 				walletCount: batch.length,
 				wallets: batch.map((pk) => ({
 					privateKey: pk,
-					address: '' // Will be filled when executing
+					address: '', // Will be filled when executing
+					balances: {},
+					isValid: true
 				})),
 				addresses: [],
 				privateKeys: batch,
@@ -562,7 +566,7 @@
 			// Construct the transaction for this batch
 			const batch = await constructBatchTransaction(
 				result.batchData.privateKeys,
-				result.batchData.targetAddress,
+				result.batchData.targetAddress as Address,
 				result.batchData.tokens,
 				result.batchData.network,
 				batchId
@@ -580,8 +584,8 @@
 				result.success = true;
 				result.transactionHash = `0x${Math.random().toString(16).slice(2, 66).padEnd(64, '0')}`;
 				result.addresses = batch.addresses;
-				result.gasUsed = `${(estimatedGas / BigInt(10 ** 18)).toString()} ETH`;
-				result.totalValue = `${(Math.random() * 10).toFixed(4)}`;
+				result.gasUsed = estimatedGas / BigInt(10 ** 18);
+				result.totalValue = BigInt(Math.floor(Math.random() * 10 * 10000));
 			} else {
 				result.status = 'failed';
 				result.success = false;
@@ -761,16 +765,19 @@
 			const walletCount = Math.floor(Math.random() * 100) + 1;
 
 			// Generate mock wallets for this batch
-			const mockWallets = [];
+			const mockWallets: WalletInfo[] = [];
 			for (let w = 0; w < walletCount; w++) {
 				mockWallets.push({
 					privateKey: `0x${Math.random().toString(16).slice(2, 66).padEnd(64, '0')}`,
-					address: `0x${Math.random().toString(16).slice(2, 42).padEnd(40, '0')}`
+					address: `0x${Math.random().toString(16).slice(2, 42).padEnd(40, '0')}`,
+					balances: {},
+					isValid: true
 				});
 			}
 
 			mockResults.push({
 				batchId: i,
+				status: isSuccess ? 'success' : 'failed',
 				success: isSuccess,
 				transactionHash: isSuccess
 					? `0x${Math.random().toString(16).slice(2, 66).padEnd(64, '0')}`
@@ -781,8 +788,8 @@
 				wallets: mockWallets,
 				addresses: mockWallets.map((w) => w.address as Address),
 				privateKeys: mockWallets.map((w) => w.privateKey),
-				gasUsed: isSuccess ? `${(Math.random() * 0.1).toFixed(6)}` : undefined,
-				totalValue: isSuccess ? `${(Math.random() * 10).toFixed(4)}` : '0'
+				gasUsed: isSuccess ? BigInt(Math.floor(Math.random() * 0.1 * 1e18)) : undefined,
+				totalValue: isSuccess ? BigInt(Math.floor(Math.random() * 10 * 10000)) : BigInt(0)
 			});
 		}
 
@@ -1019,12 +1026,6 @@
 					})()}
 					onBlur={() => {
 						updateLineCount();
-					}}
-					onChange={() => {
-						// If user edits after validation, mark as needs revalidation
-						if (wallets.length > 0 && !isValidating) {
-							needsRevalidation = true;
-						}
 					}}
 					useMinimalSetup={shouldUseMinimalSetup}
 					maxLines={2000000}
@@ -1512,17 +1513,18 @@
 						>
 							Cancel
 						</button>
-						{#if editingNetwork.isCustom}
+						{#if editingNetwork?.isCustom}
 							<button
 								type="button"
 								class="btn-danger"
 								onclick={() => {
-									if (confirm('Are you sure you want to delete this custom network?')) {
-										StorageManager.removeCustomNetwork(editingNetwork.chainId);
+									if (editingNetwork && confirm('Are you sure you want to delete this custom network?')) {
+										const networkToDelete = editingNetwork;
+										StorageManager.removeCustomNetwork(networkToDelete.chainId);
 										customNetworks = customNetworks.filter(
-											(n) => n.chainId !== editingNetwork.chainId
+											(n) => n.chainId !== networkToDelete.chainId
 										);
-										if (selectedNetwork?.chainId === editingNetwork.chainId) {
+										if (selectedNetwork?.chainId === networkToDelete.chainId) {
 											selectedNetwork = null;
 										}
 										showEditNetworkDialog = false;
@@ -1587,10 +1589,8 @@
 						readonly={true}
 						height="400px"
 						theme={themeStore.theme}
-						language="text"
 						useMinimalSetup={executionResults.length > 50}
 						maxLines={2000000}
-						lineNumbers={true}
 					/>
 				</div>
 
@@ -1907,16 +1907,16 @@
 					<span class="stat-value">
 						{executionResults
 							.filter((r) => r.success && r.gasUsed)
-							.reduce((sum, r) => sum + parseFloat(r.gasUsed || '0'), 0)
+							.reduce((sum, r) => sum + Number(r.gasUsed || BigInt(0)), 0)
 							.toFixed(6)} ETH
 					</span>
 				</div>
 				<div class="stat-item">
 					<span class="stat-label">Collected:</span>
 					<span class="stat-value">
-						{executionResults
+						{(executionResults
 							.filter((r) => r.success && r.totalValue)
-							.reduce((sum, r) => sum + parseFloat(r.totalValue || '0'), 0)
+							.reduce((sum, r) => sum + Number(r.totalValue || BigInt(0)), 0) / 10000)
 							.toFixed(4)} ETH
 					</span>
 				</div>

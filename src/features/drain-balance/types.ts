@@ -50,6 +50,8 @@ export interface ExecutionResult {
 	error?: string;
 	gasUsed?: bigint;
 	totalValue?: bigint;
+	walletCount?: number;
+	wallets?: WalletInfo[];
 	addresses?: string[];
 	privateKeys?: string[];
 	batchData?: {

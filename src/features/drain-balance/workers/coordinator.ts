@@ -271,7 +271,7 @@ class ValidationCoordinator {
 					privateKey: w.privateKey,
 					address: w.address
 				})),
-				invalidKeys: this.results.invalidKeys.map((k) => k.key)
+				invalidKeys: this.results.invalidKeys
 			};
 
 			this.resolveCallback(finalResults);
