@@ -14,6 +14,8 @@
 	import type { Chain } from 'viem';
 	import { onMount, onDestroy } from 'svelte';
 	import QRCodeStyling from 'qr-code-styling';
+	import { LogOut, X, Copy } from '@lucide/svelte';
+	import CopyButton from './copy-button.svelte';
 
 	// 内置网络配置
 	const builtInNetworks: NetworkConfig[] = [
@@ -202,41 +204,6 @@
 		}
 	}
 
-	// 复制钱包地址
-	let showCopySuccess = $state(false);
-
-	async function copyAddress() {
-		if (address) {
-			try {
-				await navigator.clipboard.writeText(address);
-				showCopySuccess = true;
-				setTimeout(() => {
-					showCopySuccess = false;
-				}, 2000);
-			} catch (error) {
-				console.error('Failed to copy address:', error);
-			}
-		}
-	}
-
-	// Svelte action: 复制成功动画
-	function copySuccessAction(node: HTMLElement) {
-		let timeout: ReturnType<typeof setTimeout>;
-
-		function showSuccess() {
-			node.classList.add('copy-success');
-			timeout = setTimeout(() => {
-				node.classList.remove('copy-success');
-			}, 2000);
-		}
-
-		return {
-			destroy() {
-				if (timeout) clearTimeout(timeout);
-			}
-		};
-	}
-
 	// 获取 CSS 变量值
 	function getCssVariable(variable: string): string {
 		return getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
@@ -323,47 +290,14 @@
 			<span class="wallet-indicator"></span>
 			<span class="wallet-address">{formatAddress(address)}</span>
 		</div>
-		<button
-			class="icon-button copy-button"
-			onclick={copyAddress}
-			type="button"
-			title="复制地址"
-			use:copySuccessAction
-		>
-			{#if showCopySuccess}
-				<span class="copy-success-icon">✓</span>
-			{:else}
-				<svg
-					width="16"
-					height="16"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-				>
-					<rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-					<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-				</svg>
-			{/if}
-		</button>
+		<CopyButton value={address} />
 		<button
 			class="icon-button disconnect-button"
 			onclick={disconnect}
 			type="button"
 			title="断开连接"
 		>
-			<svg
-				width="16"
-				height="16"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-			>
-				<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-				<polyline points="16 17 21 12 16 7"></polyline>
-				<line x1="21" y1="12" x2="9" y2="12"></line>
-			</svg>
+			<LogOut size={16} />
 		</button>
 	</div>
 {:else}
@@ -387,7 +321,9 @@
 		<div class="modal-content" onclick={(e) => e.stopPropagation()}>
 			<div class="modal-header">
 				<h3>选择钱包</h3>
-				<button class="close-button" onclick={closeModal}>✕</button>
+				<button class="close-button" onclick={closeModal}>
+					<X size={20} />
+				</button>
 			</div>
 			<div class="connector-list">
 				{#each availableConnectors as connector (connector.id)}
@@ -416,7 +352,9 @@
 		<div class="modal-content walletconnect-modal" onclick={(e) => e.stopPropagation()}>
 			<div class="modal-header">
 				<h3>扫描二维码</h3>
-				<button class="close-button" onclick={closeWalletConnectModal}>✕</button>
+				<button class="close-button" onclick={closeWalletConnectModal}>
+					<X size={20} />
+				</button>
 			</div>
 
 			<div class="walletconnect-content">
@@ -435,17 +373,7 @@
 					</div>
 
 					<button class="copy-uri-button" onclick={copyUri}>
-						<svg
-							width="16"
-							height="16"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-						>
-							<rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-							<path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-						</svg>
+						<Copy size={16} />
 						复制连接链接
 					</button>
 				{:else}
@@ -558,29 +486,6 @@
 
 	.icon-button:active {
 		transform: translateY(0);
-	}
-
-	.copy-button:hover {
-		color: var(--brand-600);
-	}
-
-	.copy-success-icon {
-		font-size: var(--text-lg);
-		color: var(--color-success);
-		font-weight: var(--font-bold);
-		animation: successPop 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	}
-
-	@keyframes successPop {
-		0% {
-			transform: scale(0);
-		}
-		50% {
-			transform: scale(1.2);
-		}
-		100% {
-			transform: scale(1);
-		}
 	}
 
 	.disconnect-button:hover {
