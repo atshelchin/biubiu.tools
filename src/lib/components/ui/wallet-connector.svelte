@@ -14,8 +14,9 @@
 	import type { Chain } from 'viem';
 	import { onMount, onDestroy } from 'svelte';
 	import QRCodeStyling from 'qr-code-styling';
-	import { LogOut, X, Copy } from '@lucide/svelte';
+	import { LogOut, X } from '@lucide/svelte';
 	import CopyButton from './copy-button.svelte';
+	import CopyButtonWithText from './copy-button-with-text.svelte';
 
 	// 内置网络配置
 	const builtInNetworks: NetworkConfig[] = [
@@ -192,18 +193,6 @@
 		}
 	}
 
-	// 复制 URI 到剪贴板
-	async function copyUri() {
-		if (walletConnectUri) {
-			try {
-				await navigator.clipboard.writeText(walletConnectUri);
-				alert('已复制到剪贴板');
-			} catch (error) {
-				console.error('Failed to copy URI:', error);
-			}
-		}
-	}
-
 	// 获取 CSS 变量值
 	function getCssVariable(variable: string): string {
 		return getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
@@ -372,10 +361,7 @@
 						</ol>
 					</div>
 
-					<button class="copy-uri-button" onclick={copyUri}>
-						<Copy size={16} />
-						复制连接链接
-					</button>
+					<CopyButtonWithText value={walletConnectUri} text="复制连接链接" />
 				{:else}
 					<div class="loading-container">
 						<div class="loading-spinner"></div>
@@ -648,29 +634,6 @@
 
 	.instruction-list li {
 		margin-bottom: var(--space-2);
-	}
-
-	.copy-uri-button {
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: var(--space-2);
-		padding: var(--space-3) var(--space-4);
-		background: var(--color-secondary);
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-md);
-		cursor: pointer;
-		transition: all 0.2s;
-		font-size: var(--text-sm);
-		font-weight: var(--font-medium);
-		color: var(--color-foreground);
-	}
-
-	.copy-uri-button:hover {
-		background: var(--color-muted);
-		transform: translateY(-1px);
-		box-shadow: var(--shadow-sm);
 	}
 
 	.loading-container {
