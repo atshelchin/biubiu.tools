@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { t } from '@/i18n/create-i18n.svelte';
-
 	// Call Master - Smart Contract Interaction Tool
 </script>
 

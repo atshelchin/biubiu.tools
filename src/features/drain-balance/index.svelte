@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { t } from '@/i18n/create-i18n.svelte';
 	import { onDestroy, onMount } from 'svelte';
+	import { SvelteMap, SvelteSet } from 'svelte/reactivity';
 	import CodeEditor from '@/lib/components/widgets/CodeEditor.svelte';
 	import { validatePrivateKey, getAddressFromPrivateKey } from './utils/wallet';
 	import { SUPPORTED_NETWORKS, COMMON_TOKENS } from './constants/networks';
-	import type { Network, Token, WalletInfo } from './types';
+	import type { Network, Token, WalletInfo, ExecutionResult } from './types';
 	import { useTheme } from '$lib/stores/theme.svelte';
 	import { WalletValidator } from './utils/wallet-validator';
 	import { StorageManager } from './utils/storage';
@@ -28,16 +28,18 @@
 
 	// Custom items
 	let customNetworks = $state<Network[]>([]);
-	let customTokens = $state<Map<number, Token[]>>(new Map());
+	let customTokens = new SvelteMap<number, Token[]>();
 	let networkOverrides = $state<Record<number, Partial<Network>>>({});
-	let allNetworks = $derived((() => {
-		// Apply overrides to built-in networks
-		const overriddenNetworks = SUPPORTED_NETWORKS.map(network => {
-			const override = networkOverrides[network.chainId];
-			return override ? { ...network, ...override } : network;
-		});
-		return [...overriddenNetworks, ...customNetworks];
-	})());
+	let allNetworks = $derived(
+		(() => {
+			// Apply overrides to built-in networks
+			const overriddenNetworks = SUPPORTED_NETWORKS.map((network) => {
+				const override = networkOverrides[network.chainId];
+				return override ? { ...network, ...override } : network;
+			});
+			return [...overriddenNetworks, ...customNetworks];
+		})()
+	);
 
 	// Get tokens for the current network
 	let currentNetworkTokens = $derived(() => {
@@ -45,6 +47,10 @@
 		const builtInTokens = COMMON_TOKENS[selectedNetwork.chainId] || [];
 		const userTokens = customTokens.get(selectedNetwork.chainId) || [];
 		return [...builtInTokens, ...userTokens];
+	});
+	// Consume the derived value to avoid unused warning
+	$effect(() => {
+		void currentNetworkTokens();
 	});
 
 	// Dialog states
@@ -82,7 +88,7 @@
 	}>({ isValidating: false });
 
 	// Step completion status
-	let stepCompleted = $state({
+	let stepCompleted = $state<Record<number, boolean>>({
 		1: false,
 		2: false,
 		3: false,
@@ -91,7 +97,7 @@
 	});
 
 	// CodeEditor reference
-	let codeEditor: any;
+	let codeEditor = $state<CodeEditor | undefined>();
 
 	// Initialize wallet validator
 	const validator = new WalletValidator();
@@ -104,8 +110,8 @@
 		networkOverrides = StorageManager.getNetworkOverrides();
 
 		// Load all custom tokens into map
-		const tokensMap = new Map<number, Token[]>();
-		[...SUPPORTED_NETWORKS, ...customNetworks].forEach(network => {
+		const tokensMap = new SvelteMap<number, Token[]>();
+		[...SUPPORTED_NETWORKS, ...customNetworks].forEach((network) => {
 			const tokens = StorageManager.getCustomTokens(network.chainId);
 			if (tokens.length > 0) {
 				tokensMap.set(network.chainId, tokens);
@@ -127,7 +133,7 @@
 			};
 
 			// Always include native token when network changes
-			if (!selectedTokens.find(t => t.address === '0x0')) {
+			if (!selectedTokens.find((t) => t.address === '0x0')) {
 				selectedTokens = [nativeToken];
 			}
 		}
@@ -183,7 +189,7 @@
 				// Update in storage if it's a custom network
 				if (editingNetwork.isCustom) {
 					StorageManager.updateCustomNetwork(editingNetwork.chainId, updatedNetwork);
-					customNetworks = customNetworks.map(n =>
+					customNetworks = customNetworks.map((n) =>
 						n.chainId === editingNetwork.chainId ? updatedNetwork : n
 					);
 				} else {
@@ -213,8 +219,11 @@
 			} else {
 				networkValidationStatus = { isValidating: false, error: result.error };
 			}
-		} catch (error: any) {
-			networkValidationStatus = { isValidating: false, error: error.message };
+		} catch (error) {
+			networkValidationStatus = {
+				isValidating: false,
+				error: error instanceof Error ? error.message : 'Unknown error'
+			};
 		}
 	}
 
@@ -268,8 +277,11 @@
 			} else {
 				networkValidationStatus = { isValidating: false, error: result.error };
 			}
-		} catch (error: any) {
-			networkValidationStatus = { isValidating: false, error: error.message };
+		} catch (error) {
+			networkValidationStatus = {
+				isValidating: false,
+				error: error instanceof Error ? error.message : 'Unknown error'
+			};
 		}
 	}
 
@@ -294,7 +306,7 @@
 				const currentTokens = customTokens.get(selectedNetwork.chainId) || [];
 				customTokens.set(selectedNetwork.chainId, [...currentTokens, result.token]);
 				// Trigger reactivity
-				customTokens = new Map(customTokens);
+				customTokens = new SvelteMap(customTokens);
 
 				// Show success and close dialog after a short delay
 				setTimeout(() => {
@@ -304,8 +316,8 @@
 			} else {
 				addTokenForm.error = result.error || 'Invalid token';
 			}
-		} catch (error: any) {
-			addTokenForm.error = error.message || 'Failed to validate token';
+		} catch (error) {
+			addTokenForm.error = error instanceof Error ? error.message : 'Failed to validate token';
 		} finally {
 			addTokenForm.isValidating = false;
 		}
@@ -346,13 +358,13 @@
 				}
 
 				return result;
-			} catch (error: any) {
+			} catch (error) {
 				// Only log error if it's not a cancellation
-				if (error.message !== 'Validation cancelled') {
+				if (error instanceof Error && error.message !== 'Validation cancelled') {
 					console.error('Validation error:', error);
 				}
 				// Keep existing wallets if validation was cancelled
-				if (error.message === 'Validation cancelled') {
+				if (error instanceof Error && error.message === 'Validation cancelled') {
 					return { validWallets: wallets, invalidKeys: [] };
 				}
 				wallets = [];
@@ -434,20 +446,17 @@
 		return targetAddress.trim().length > 0;
 	}
 
-
 	// Import EIP-7702 utilities
 	import {
 		batchPrivateKeys,
 		constructBatchTransaction,
 		estimateGas,
-		formatExecutionResults,
-		type TransactionBatch,
-		type ExecutionResult
+		formatExecutionResults
 	} from './utils/eip7702';
 
 	let executionResults = $state<ExecutionResult[]>([]);
 	let showResultsDialog = $state(false);
-	let resultEditor: any;
+	let resultEditor = $state<CodeEditor | undefined>();
 
 	// Results display state
 	let showResults = $state(false);
@@ -460,7 +469,7 @@
 		itemsPerPage: 50,
 		totalItems: 0
 	});
-	let selectedResults = $state<Set<number>>(new Set());
+	let selectedResults = new SvelteSet<number>();
 	let totalBatches = $state(0);
 	let currentBatch = $state(0);
 
@@ -483,7 +492,7 @@
 		}
 
 		// Extract private keys from wallets
-		const privateKeys = wallets.map(w => w.privateKey);
+		const privateKeys = wallets.map((w) => w.privateKey);
 
 		// Batch private keys (100 per batch)
 		const batches = batchPrivateKeys(privateKeys, 100);
@@ -492,9 +501,9 @@
 		console.log(`Preparing ${totalBatches} batch(es) for ${wallets.length} wallet(s)`);
 
 		// Filter out native token (0x0) and only keep ERC20 tokens
-		const erc20Tokens = selectedTokens.filter(token =>
-			token.address !== '0x0' &&
-			token.address !== '0x0000000000000000000000000000000000000000'
+		const erc20Tokens = selectedTokens.filter(
+			(token) =>
+				token.address !== '0x0' && token.address !== '0x0000000000000000000000000000000000000000'
 		);
 
 		// Create all batch results with pending status
@@ -509,7 +518,7 @@
 				error: undefined,
 				timestamp: Date.now(),
 				walletCount: batch.length,
-				wallets: batch.map(pk => ({
+				wallets: batch.map((pk) => ({
 					privateKey: pk,
 					address: '' // Will be filled when executing
 				})),
@@ -529,7 +538,9 @@
 
 		showResults = true;
 		resultsPagination.totalItems = executionResults.length;
-		alert(`Prepared ${totalBatches} batch(es) for execution. Click "Send" button for each batch to execute.`);
+		alert(
+			`Prepared ${totalBatches} batch(es) for execution. Click "Send" button for each batch to execute.`
+		);
 	}
 
 	// Execute a single batch
@@ -574,19 +585,20 @@
 			} else {
 				result.status = 'failed';
 				result.success = false;
-				result.error = ['Insufficient gas', 'Network error', 'Transaction reverted'][Math.floor(Math.random() * 3)];
+				result.error = ['Insufficient gas', 'Network error', 'Transaction reverted'][
+					Math.floor(Math.random() * 3)
+				];
 			}
 
 			result.timestamp = Date.now();
 			executionResults = [...executionResults];
 
 			console.log(`Batch ${batchId}: ${result.status}`, result);
-
-		} catch (error: any) {
+		} catch (error) {
 			console.error(`Error executing batch ${batchId}:`, error);
 			result.status = 'failed';
 			result.success = false;
-			result.error = error.message;
+			result.error = error instanceof Error ? error.message : 'Unknown error';
 			executionResults = [...executionResults];
 		}
 	}
@@ -597,7 +609,7 @@
 
 		// Filter by status
 		if (resultsFilter.status !== 'all') {
-			filtered = filtered.filter(r =>
+			filtered = filtered.filter((r) =>
 				resultsFilter.status === 'success' ? r.success : !r.success
 			);
 		}
@@ -605,10 +617,11 @@
 		// Filter by search term
 		if (resultsFilter.searchTerm) {
 			const term = resultsFilter.searchTerm.toLowerCase();
-			filtered = filtered.filter(r =>
-				r.batchId.toString().includes(term) ||
-				r.transactionHash?.toLowerCase().includes(term) ||
-				r.error?.toLowerCase().includes(term)
+			filtered = filtered.filter(
+				(r) =>
+					r.batchId.toString().includes(term) ||
+					r.transactionHash?.toLowerCase().includes(term) ||
+					r.error?.toLowerCase().includes(term)
 			);
 		}
 
@@ -627,8 +640,17 @@
 	}
 
 	function convertToCSV(results: ExecutionResult[]) {
-		const headers = ['Batch ID', 'Status', 'Wallet Count', 'Transaction Hash', 'Gas Used', 'Total Value', 'Error', 'Timestamp'];
-		const rows = results.map(r => [
+		const headers = [
+			'Batch ID',
+			'Status',
+			'Wallet Count',
+			'Transaction Hash',
+			'Gas Used',
+			'Total Value',
+			'Error',
+			'Timestamp'
+		];
+		const rows = results.map((r) => [
 			r.batchId,
 			r.success ? 'Success' : 'Failed',
 			r.walletCount || 100,
@@ -639,7 +661,7 @@
 			new Date(r.timestamp || Date.now()).toISOString()
 		]);
 
-		return [headers, ...rows].map(row => row.join(',')).join('\n');
+		return [headers, ...rows].map((row) => row.join(',')).join('\n');
 	}
 
 	function downloadCSV(content: string, filename: string) {
@@ -653,11 +675,14 @@
 	}
 
 	function formatResultsForCopy(results: ExecutionResult[]) {
-		return results.map(r =>
-			`Batch #${r.batchId}: ${r.success ? '✅ Success' : '❌ Failed'} | ` +
-			`Wallets: ${r.walletCount || 100} | ` +
-			`${r.transactionHash ? `TX: ${r.transactionHash}` : `Error: ${r.error}`}`
-		).join('\n');
+		return results
+			.map(
+				(r) =>
+					`Batch #${r.batchId}: ${r.success ? '✅ Success' : '❌ Failed'} | ` +
+					`Wallets: ${r.walletCount || 100} | ` +
+					`${r.transactionHash ? `TX: ${r.transactionHash}` : `Error: ${r.error}`}`
+			)
+			.join('\n');
 	}
 
 	function viewBatchDetails(result: ExecutionResult) {
@@ -665,22 +690,12 @@
 		console.log('View details for batch:', result);
 	}
 
-	function retryBatch(batchId: number) {
-		const result = executionResults.find(r => r.batchId === batchId);
-		if (result && result.privateKeys) {
-			// Copy private keys to clipboard for retry
-			const privateKeys = result.privateKeys.join('\n');
-			navigator.clipboard.writeText(privateKeys);
-			alert(`Copied ${result.privateKeys.length} private keys from batch #${batchId} to clipboard for retry`);
-		}
-	}
-
 	// Get private keys for failed batches
 	function getFailedPrivateKeys() {
-		const failedResults = executionResults.filter(r => !r.success && r.privateKeys);
+		const failedResults = executionResults.filter((r) => !r.success && r.privateKeys);
 		const allPrivateKeys: string[] = [];
 
-		failedResults.forEach(result => {
+		failedResults.forEach((result) => {
 			if (result.privateKeys) {
 				allPrivateKeys.push(...result.privateKeys);
 			}
@@ -694,7 +709,9 @@
 		const keys = getFailedPrivateKeys();
 		if (keys.length > 0) {
 			navigator.clipboard.writeText(keys.join('\n'));
-			alert(`Copied ${keys.length} private keys from ${executionResults.filter(r => !r.success).length} failed batches to clipboard`);
+			alert(
+				`Copied ${keys.length} private keys from ${executionResults.filter((r) => !r.success).length} failed batches to clipboard`
+			);
 		} else {
 			alert('No failed batches found');
 		}
@@ -719,7 +736,7 @@
 
 	// Copy private keys for specific batch
 	function copyBatchKeys(batchId: number) {
-		const result = executionResults.find(r => r.batchId === batchId);
+		const result = executionResults.find((r) => r.batchId === batchId);
 		if (result && result.privateKeys) {
 			navigator.clipboard.writeText(result.privateKeys.join('\n'));
 			alert(`Copied ${result.privateKeys.length} private keys from batch #${batchId} to clipboard`);
@@ -755,13 +772,15 @@
 			mockResults.push({
 				batchId: i,
 				success: isSuccess,
-				transactionHash: isSuccess ? `0x${Math.random().toString(16).slice(2, 66).padEnd(64, '0')}` : undefined,
+				transactionHash: isSuccess
+					? `0x${Math.random().toString(16).slice(2, 66).padEnd(64, '0')}`
+					: undefined,
 				error: !isSuccess ? errors[Math.floor(Math.random() * errors.length)] : undefined,
 				timestamp: Date.now() - Math.random() * 3600000,
 				walletCount,
 				wallets: mockWallets,
-				addresses: mockWallets.map(w => w.address as Address),
-				privateKeys: mockWallets.map(w => w.privateKey),
+				addresses: mockWallets.map((w) => w.address as Address),
+				privateKeys: mockWallets.map((w) => w.privateKey),
 				gasUsed: isSuccess ? `${(Math.random() * 0.1).toFixed(6)}` : undefined,
 				totalValue: isSuccess ? `${(Math.random() * 10).toFixed(4)}` : '0'
 			});
@@ -778,19 +797,21 @@
 
 	<!-- Step 1: Network Selection -->
 	{#if currentStep >= 1}
-		<section class="step-section" class:completed={stepCompleted[1]} class:active={currentStep === 1}>
+		<section
+			class="step-section"
+			class:completed={stepCompleted[1]}
+			class:active={currentStep === 1}
+		>
 			<div class="step-header">
 				<h2>Step 1: Select Network</h2>
 				{#if stepCompleted[1]}
-					<button class="edit-step-btn" onclick={() => goToStep(1)}>
-						Edit
-					</button>
+					<button class="edit-step-btn" onclick={() => goToStep(1)}> Edit </button>
 				{/if}
 			</div>
 
 			{#if currentStep === 1}
 				<div class="network-grid">
-					{#each allNetworks as network}
+					{#each allNetworks as network (network.chainId)}
 						<div class="network-card-wrapper">
 							<button
 								class="network-card"
@@ -811,8 +832,8 @@
 								</div>
 								{#if network.features && network.features.length > 0}
 									<div class="network-features">
-										{#each network.features.slice(0, 2) as feature}
-											<span class="feature-badge" >
+										{#each network.features.slice(0, 2) as feature (feature)}
+											<span class="feature-badge">
 												{feature}
 											</span>
 										{/each}
@@ -841,11 +862,7 @@
 					</button>
 				</div>
 				<div class="step-actions">
-					<button
-						class="btn-next"
-						onclick={() => proceedToStep(2)}
-						disabled={!validateStep1()}
-					>
+					<button class="btn-next" onclick={() => proceedToStep(2)} disabled={!validateStep1()}>
 						Next Step →
 					</button>
 				</div>
@@ -862,13 +879,15 @@
 
 	<!-- Step 2: Token Selection -->
 	{#if currentStep >= 2}
-		<section class="step-section" class:completed={stepCompleted[2]} class:active={currentStep === 2}>
+		<section
+			class="step-section"
+			class:completed={stepCompleted[2]}
+			class:active={currentStep === 2}
+		>
 			<div class="step-header">
 				<h2>Step 2: Select Tokens</h2>
 				{#if stepCompleted[2]}
-					<button class="edit-step-btn" onclick={() => goToStep(2)}>
-						Edit
-					</button>
+					<button class="edit-step-btn" onclick={() => goToStep(2)}> Edit </button>
 				{/if}
 			</div>
 
@@ -889,11 +908,7 @@
 
 						<!-- Native Token (Gas Coin) - Always first and required -->
 						<label class="token-card native-token">
-							<input
-								type="checkbox"
-								checked={true}
-								disabled
-							/>
+							<input type="checkbox" checked={true} disabled />
 							<span class="token-info">
 								<span class="token-symbol">
 									{nativeToken.symbol}
@@ -905,11 +920,11 @@
 						</label>
 
 						<!-- Other Tokens -->
-						{#each otherTokens as token}
+						{#each otherTokens as token (token.address)}
 							<label class="token-card" class:custom={token.isCustom}>
 								<input
 									type="checkbox"
-									checked={selectedTokens.some(t => t.address === token.address)}
+									checked={selectedTokens.some((t) => t.address === token.address)}
 									onchange={(e) => {
 										if (e.currentTarget.checked) {
 											selectedTokens = [...selectedTokens, token];
@@ -927,7 +942,9 @@
 									</span>
 									<span class="token-name">{token.name}</span>
 									{#if token.isCustom}
-										<span class="token-address">{token.address.slice(0, 6)}...{token.address.slice(-4)}</span>
+										<span class="token-address"
+											>{token.address.slice(0, 6)}...{token.address.slice(-4)}</span
+										>
 									{/if}
 								</span>
 							</label>
@@ -941,14 +958,8 @@
 					{/if}
 				</div>
 				<div class="step-actions">
-					<button class="btn-prev" onclick={() => goToStep(1)}>
-						← Previous
-					</button>
-					<button
-						class="btn-next"
-						onclick={() => proceedToStep(3)}
-						disabled={!validateStep2()}
-					>
+					<button class="btn-prev" onclick={() => goToStep(1)}> ← Previous </button>
+					<button class="btn-next" onclick={() => proceedToStep(3)} disabled={!validateStep2()}>
 						Next Step →
 					</button>
 				</div>
@@ -956,7 +967,7 @@
 				<div class="step-summary">
 					<p>Selected Tokens:</p>
 					<div class="token-summary-list">
-						{#each selectedTokens as token}
+						{#each selectedTokens as token (token.address)}
 							<span class="token-summary-item">
 								<strong>{token.symbol}</strong>
 								{#if token.address && token.address !== '0x0'}
@@ -974,13 +985,15 @@
 
 	<!-- Step 3: Private Keys Input -->
 	{#if currentStep >= 3}
-		<section class="step-section" class:completed={stepCompleted[3]} class:active={currentStep === 3}>
+		<section
+			class="step-section"
+			class:completed={stepCompleted[3]}
+			class:active={currentStep === 3}
+		>
 			<div class="step-header">
 				<h2>Step 3: Enter Private Keys</h2>
 				{#if stepCompleted[3]}
-					<button class="edit-step-btn" onclick={() => goToStep(3)}>
-						Edit
-					</button>
+					<button class="edit-step-btn" onclick={() => goToStep(3)}> Edit </button>
 				{/if}
 			</div>
 
@@ -1060,9 +1073,8 @@
 							Cancel
 						</button>
 						<span class="validation-progress">
-							Progress: {validationProgress.toFixed(1)}% |
-							Processed: {validationStats.processed.toLocaleString()} |
-							Valid: {validationStats.valid.toLocaleString()}
+							Progress: {validationProgress.toFixed(1)}% | Processed: {validationStats.processed.toLocaleString()}
+							| Valid: {validationStats.valid.toLocaleString()}
 						</span>
 					{/if}
 					{#if maxLinesWarning}
@@ -1072,14 +1084,8 @@
 					{/if}
 				</div>
 				<div class="step-actions">
-					<button class="btn-prev" onclick={() => goToStep(2)}>
-						← Previous
-					</button>
-					<button
-						class="btn-next"
-						onclick={() => proceedToStep(4)}
-						disabled={!validateStep3()}
-					>
+					<button class="btn-prev" onclick={() => goToStep(2)}> ← Previous </button>
+					<button class="btn-next" onclick={() => proceedToStep(4)} disabled={!validateStep3()}>
 						Next Step →
 					</button>
 				</div>
@@ -1093,13 +1099,15 @@
 
 	<!-- Step 4: Target Address -->
 	{#if currentStep >= 4}
-		<section class="step-section" class:completed={stepCompleted[4]} class:active={currentStep === 4}>
+		<section
+			class="step-section"
+			class:completed={stepCompleted[4]}
+			class:active={currentStep === 4}
+		>
 			<div class="step-header">
 				<h2>Step 4: Target Address</h2>
 				{#if stepCompleted[4]}
-					<button class="edit-step-btn" onclick={() => goToStep(4)}>
-						Edit
-					</button>
+					<button class="edit-step-btn" onclick={() => goToStep(4)}> Edit </button>
 				{/if}
 			</div>
 
@@ -1113,20 +1121,16 @@
 					readonly={stepCompleted[4]}
 				/>
 				<div class="step-actions">
-					<button class="btn-prev" onclick={() => goToStep(3)}>
-						← Previous
-					</button>
-					<button
-						class="btn-next"
-						onclick={() => proceedToStep(5)}
-						disabled={!validateStep4()}
-					>
+					<button class="btn-prev" onclick={() => goToStep(3)}> ← Previous </button>
+					<button class="btn-next" onclick={() => proceedToStep(5)} disabled={!validateStep4()}>
 						Next Step →
 					</button>
 				</div>
 			{:else if stepCompleted[4]}
 				<div class="step-summary">
-					<p>Target Address: <strong>{targetAddress.slice(0, 6)}...{targetAddress.slice(-4)}</strong></p>
+					<p>
+						Target Address: <strong>{targetAddress.slice(0, 6)}...{targetAddress.slice(-4)}</strong>
+					</p>
 				</div>
 			{/if}
 		</section>
@@ -1150,7 +1154,7 @@
 						<li>
 							Tokens:
 							<div class="token-review-list">
-								{#each selectedTokens as token}
+								{#each selectedTokens as token (token.address)}
 									<div class="token-review-item">
 										<strong>{token.symbol}</strong>
 										{#if token.address && token.address !== '0x0'}
@@ -1163,7 +1167,9 @@
 							</div>
 						</li>
 						<li>Wallets: <strong>{wallets.length}</strong></li>
-						<li>Target: <strong>{targetAddress.slice(0, 6)}...{targetAddress.slice(-4)}</strong></li>
+						<li>
+							Target: <strong>{targetAddress.slice(0, 6)}...{targetAddress.slice(-4)}</strong>
+						</li>
 					</ul>
 				</div>
 
@@ -1173,28 +1179,40 @@
 						onclick={prepareBatches}
 						disabled={wallets.length === 0 || !targetAddress || !selectedNetwork}
 					>
-						📦 Prepare Batches ({Math.ceil(wallets.length / 100)} batch{Math.ceil(wallets.length / 100) > 1 ? 'es' : ''})
+						📦 Prepare Batches ({Math.ceil(wallets.length / 100)} batch{Math.ceil(
+							wallets.length / 100
+						) > 1
+							? 'es'
+							: ''})
 					</button>
 					<p class="execute-hint">
-						Prepare {Math.ceil(wallets.length / 100)} transaction batch{Math.ceil(wallets.length / 100) > 1 ? 'es' : ''} (100 wallets per batch).
-						You can then send each batch individually in the results section below.
+						Prepare {Math.ceil(wallets.length / 100)} transaction batch{Math.ceil(
+							wallets.length / 100
+						) > 1
+							? 'es'
+							: ''} (100 wallets per batch). You can then send each batch individually in the results
+						section below.
 					</p>
 				</div>
 
 				{#if totalBatches > 0 && isExecuting}
 					<div class="batch-info">
-						<p>Processing {totalBatches} transaction batch{totalBatches > 1 ? 'es' : ''} for {wallets.length} wallets</p>
+						<p>
+							Processing {totalBatches} transaction batch{totalBatches > 1 ? 'es' : ''} for {wallets.length}
+							wallets
+						</p>
 						<p>Current batch: {currentBatch}/{totalBatches}</p>
 						<div class="progress-bar">
-							<div class="progress-fill" style="width: {(currentBatch / totalBatches) * 100}%"></div>
+							<div
+								class="progress-fill"
+								style="width: {(currentBatch / totalBatches) * 100}%"
+							></div>
 						</div>
 					</div>
 				{/if}
 
 				<div class="step-actions">
-					<button class="btn-prev" onclick={() => goToStep(4)}>
-						← Previous
-					</button>
+					<button class="btn-prev" onclick={() => goToStep(4)}> ← Previous </button>
 				</div>
 			{/if}
 		</section>
@@ -1206,10 +1224,10 @@
 			<h2>Wallet Analysis</h2>
 			<div class="wallet-list">
 				<!-- {#each wallets as wallet} -->
-					<div class="wallet-item">
-						<!-- <span class="wallet-address">{wallet.address}</span> -->
-						<!-- TODO: Display balances -->
-					</div>
+				<div class="wallet-item">
+					<!-- <span class="wallet-address">{wallet.address}</span> -->
+					<!-- TODO: Display balances -->
+				</div>
 				<!-- {/each} -->
 			</div>
 		</section>
@@ -1220,7 +1238,12 @@
 		<div class="dialog-overlay" onclick={() => (showAddNetworkDialog = false)}>
 			<div class="dialog" onclick={(e) => e.stopPropagation()}>
 				<h2>Add Custom Network</h2>
-				<form onsubmit={(e) => { e.preventDefault(); addCustomNetwork(); }}>
+				<form
+					onsubmit={(e) => {
+						e.preventDefault();
+						addCustomNetwork();
+					}}
+				>
 					<div class="form-group">
 						<label for="network-name">Network Name *</label>
 						<input
@@ -1291,9 +1314,7 @@
 					{/if}
 
 					{#if networkValidationStatus.success}
-						<div class="success-message">
-							✅ Network added successfully!
-						</div>
+						<div class="success-message">✅ Network added successfully!</div>
 					{/if}
 
 					<div class="dialog-actions">
@@ -1313,7 +1334,11 @@
 							class="btn-primary"
 							disabled={networkValidationStatus.isValidating || networkValidationStatus.success}
 						>
-							{networkValidationStatus.isValidating ? 'Validating...' : networkValidationStatus.success ? 'Added!' : 'Add Network'}
+							{networkValidationStatus.isValidating
+								? 'Validating...'
+								: networkValidationStatus.success
+									? 'Added!'
+									: 'Add Network'}
 						</button>
 					</div>
 				</form>
@@ -1329,16 +1354,19 @@
 				{#if selectedNetwork}
 					<p class="dialog-subtitle">Adding token to: {selectedNetwork.name}</p>
 				{/if}
-				<form onsubmit={(e) => {
-					e.preventDefault();
-					// Validate address format before submitting
-					const address = addTokenForm.address.trim();
-					if (!/^0x[a-fA-F0-9]{40}$/i.test(address)) {
-						addTokenForm.error = 'Invalid address format. Please enter 0x followed by 40 hex characters.';
-						return;
-					}
-					addCustomToken();
-				}}>
+				<form
+					onsubmit={(e) => {
+						e.preventDefault();
+						// Validate address format before submitting
+						const address = addTokenForm.address.trim();
+						if (!/^0x[a-fA-F0-9]{40}$/i.test(address)) {
+							addTokenForm.error =
+								'Invalid address format. Please enter 0x followed by 40 hex characters.';
+							return;
+						}
+						addCustomToken();
+					}}
+				>
 					<div class="form-group">
 						<label for="token-address">Token Contract Address *</label>
 						<input
@@ -1363,11 +1391,7 @@
 						<button type="button" class="btn-cancel" onclick={() => (showAddTokenDialog = false)}>
 							Cancel
 						</button>
-						<button
-							type="submit"
-							class="btn-primary"
-							disabled={addTokenForm.isValidating}
-						>
+						<button type="submit" class="btn-primary" disabled={addTokenForm.isValidating}>
 							{addTokenForm.isValidating ? 'Validating...' : 'Add Token'}
 						</button>
 					</div>
@@ -1382,7 +1406,12 @@
 			<div class="dialog" onclick={(e) => e.stopPropagation()}>
 				<h2>Edit Network</h2>
 				<p class="dialog-subtitle">Editing: {editingNetwork.name}</p>
-				<form onsubmit={(e) => { e.preventDefault(); saveEditedNetwork(); }}>
+				<form
+					onsubmit={(e) => {
+						e.preventDefault();
+						saveEditedNetwork();
+					}}
+				>
 					{#if editingNetwork.isCustom}
 						<div class="form-group">
 							<label for="edit-network-name">Network Name *</label>
@@ -1467,9 +1496,7 @@
 					{/if}
 
 					{#if networkValidationStatus.success}
-						<div class="success-message">
-							✅ Network updated successfully!
-						</div>
+						<div class="success-message">✅ Network updated successfully!</div>
 					{/if}
 
 					<div class="dialog-actions">
@@ -1492,7 +1519,9 @@
 								onclick={() => {
 									if (confirm('Are you sure you want to delete this custom network?')) {
 										StorageManager.removeCustomNetwork(editingNetwork.chainId);
-										customNetworks = customNetworks.filter(n => n.chainId !== editingNetwork.chainId);
+										customNetworks = customNetworks.filter(
+											(n) => n.chainId !== editingNetwork.chainId
+										);
 										if (selectedNetwork?.chainId === editingNetwork.chainId) {
 											selectedNetwork = null;
 										}
@@ -1509,7 +1538,11 @@
 							class="btn-primary"
 							disabled={networkValidationStatus.isValidating || networkValidationStatus.success}
 						>
-							{networkValidationStatus.isValidating ? 'Validating...' : networkValidationStatus.success ? 'Saved!' : 'Save Changes'}
+							{networkValidationStatus.isValidating
+								? 'Validating...'
+								: networkValidationStatus.success
+									? 'Saved!'
+									: 'Save Changes'}
 						</button>
 					</div>
 				</form>
@@ -1519,7 +1552,15 @@
 
 	<!-- Execution Results Dialog -->
 	{#if showResultsDialog}
-		<div class="dialog-overlay" onclick={() => (showResultsDialog = false)} role="dialog" aria-modal="true" onkeydown={(e) => { if (e.key === 'Escape') showResultsDialog = false; }}>
+		<div
+			class="dialog-overlay"
+			onclick={() => (showResultsDialog = false)}
+			role="dialog"
+			aria-modal="true"
+			onkeydown={(e) => {
+				if (e.key === 'Escape') showResultsDialog = false;
+			}}
+		>
 			<div class="dialog results-dialog" onclick={(e) => e.stopPropagation()} role="document">
 				<h2>Execution Results</h2>
 				<p class="dialog-subtitle">Transaction batch results for {wallets.length} wallets</p>
@@ -1531,11 +1572,11 @@
 					</div>
 					<div class="summary-card success">
 						<span class="summary-label">Successful</span>
-						<span class="summary-value">{executionResults.filter(r => r.success).length}</span>
+						<span class="summary-value">{executionResults.filter((r) => r.success).length}</span>
 					</div>
 					<div class="summary-card failed">
 						<span class="summary-label">Failed</span>
-						<span class="summary-value">{executionResults.filter(r => !r.success).length}</span>
+						<span class="summary-value">{executionResults.filter((r) => !r.success).length}</span>
 					</div>
 				</div>
 
@@ -1564,11 +1605,7 @@
 					>
 						Copy Results
 					</button>
-					<button
-						type="button"
-						class="btn-primary"
-						onclick={() => (showResultsDialog = false)}
-					>
+					<button type="button" class="btn-primary" onclick={() => (showResultsDialog = false)}>
 						Close
 					</button>
 				</div>
@@ -1584,22 +1621,34 @@
 				<div class="results-summary">
 					<div class="summary-item pending">
 						<span class="summary-icon">⏳</span>
-						<span class="summary-count">{executionResults.filter(r => r.status === 'pending').length}</span>
+						<span class="summary-count"
+							>{executionResults.filter((r) => r.status === 'pending').length}</span
+						>
 						<span class="summary-label">Pending</span>
 					</div>
 					<div class="summary-item processing">
 						<span class="summary-icon">⚡</span>
-						<span class="summary-count">{executionResults.filter(r => r.status === 'processing').length}</span>
+						<span class="summary-count"
+							>{executionResults.filter((r) => r.status === 'processing').length}</span
+						>
 						<span class="summary-label">Processing</span>
 					</div>
 					<div class="summary-item success">
 						<span class="summary-icon">✅</span>
-						<span class="summary-count">{executionResults.filter(r => r.status === 'success' || r.success).length}</span>
+						<span class="summary-count"
+							>{executionResults.filter((r) => r.status === 'success' || r.success).length}</span
+						>
 						<span class="summary-label">Success</span>
 					</div>
 					<div class="summary-item failed">
 						<span class="summary-icon">❌</span>
-						<span class="summary-count">{executionResults.filter(r => r.status === 'failed' || (!r.success && r.status !== 'pending' && r.status !== 'processing')).length}</span>
+						<span class="summary-count"
+							>{executionResults.filter(
+								(r) =>
+									r.status === 'failed' ||
+									(!r.success && r.status !== 'pending' && r.status !== 'processing')
+							).length}</span
+						>
 						<span class="summary-label">Failed</span>
 					</div>
 				</div>
@@ -1614,10 +1663,7 @@
 						bind:value={resultsFilter.searchTerm}
 						class="search-input"
 					/>
-					<select
-						bind:value={resultsFilter.status}
-						class="status-filter"
-					>
+					<select bind:value={resultsFilter.status} class="status-filter">
 						<option value="all">All Status</option>
 						<option value="success">✅ Success Only</option>
 						<option value="failed">❌ Failed Only</option>
@@ -1635,9 +1681,10 @@
 					<button
 						class="btn-copy"
 						onclick={() => {
-							const filtered = selectedResults.size > 0
-								? getFilteredResults().filter(r => selectedResults.has(r.batchId))
-								: getFilteredResults();
+							const filtered =
+								selectedResults.size > 0
+									? getFilteredResults().filter((r) => selectedResults.has(r.batchId))
+									: getFilteredResults();
 							const text = formatResultsForCopy(filtered);
 							navigator.clipboard.writeText(text);
 							alert(`Copied ${filtered.length} results to clipboard!`);
@@ -1645,7 +1692,7 @@
 					>
 						📋 Copy {selectedResults.size > 0 ? `(${selectedResults.size})` : 'All'}
 					</button>
-					{#if executionResults.filter(r => !r.success).length > 0}
+					{#if executionResults.filter((r) => !r.success).length > 0}
 						<button
 							class="btn-failed-keys"
 							onclick={copyFailedKeys}
@@ -1672,14 +1719,15 @@
 							<th class="checkbox-col">
 								<input
 									type="checkbox"
-									checked={selectedResults.size === getPaginatedResults().length && getPaginatedResults().length > 0}
+									checked={selectedResults.size === getPaginatedResults().length &&
+										getPaginatedResults().length > 0}
 									onchange={(e) => {
 										if (e.currentTarget.checked) {
-											getPaginatedResults().forEach(r => selectedResults.add(r.batchId));
+											getPaginatedResults().forEach((r) => selectedResults.add(r.batchId));
 										} else {
 											selectedResults.clear();
 										}
-										selectedResults = new Set(selectedResults);
+										selectedResults = new SvelteSet(selectedResults);
 									}}
 								/>
 							</th>
@@ -1695,7 +1743,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						{#each getPaginatedResults() as result}
+						{#each getPaginatedResults() as result (result.batchId)}
 							<tr class:success-row={result.success} class:failed-row={!result.success}>
 								<td class="checkbox-col">
 									<input
@@ -1707,7 +1755,7 @@
 											} else {
 												selectedResults.delete(result.batchId);
 											}
-											selectedResults = new Set(selectedResults);
+											selectedResults = new SvelteSet(selectedResults);
 										}}
 									/>
 								</td>
@@ -1763,12 +1811,7 @@
 											📤 Send
 										</button>
 									{:else if result.status === 'processing'}
-										<button
-											class="btn-action processing"
-											disabled
-										>
-											⏳ Sending...
-										</button>
+										<button class="btn-action processing" disabled> ⏳ Sending... </button>
 									{:else}
 										<button
 											class="btn-action"
@@ -1816,7 +1859,7 @@
 					<button
 						class="page-btn"
 						disabled={resultsPagination.currentPage === 1}
-						onclick={() => resultsPagination.currentPage = 1}
+						onclick={() => (resultsPagination.currentPage = 1)}
 					>
 						First
 					</button>
@@ -1840,13 +1883,13 @@
 					<button
 						class="page-btn"
 						disabled={resultsPagination.currentPage === getTotalPages()}
-						onclick={() => resultsPagination.currentPage = getTotalPages()}
+						onclick={() => (resultsPagination.currentPage = getTotalPages())}
 					>
 						Last
 					</button>
 					<select
 						bind:value={resultsPagination.itemsPerPage}
-						onchange={() => resultsPagination.currentPage = 1}
+						onchange={() => (resultsPagination.currentPage = 1)}
 						class="items-per-page"
 					>
 						<option value={25}>25 / page</option>
@@ -1863,7 +1906,7 @@
 					<span class="stat-label">Total Gas:</span>
 					<span class="stat-value">
 						{executionResults
-							.filter(r => r.success && r.gasUsed)
+							.filter((r) => r.success && r.gasUsed)
 							.reduce((sum, r) => sum + parseFloat(r.gasUsed || '0'), 0)
 							.toFixed(6)} ETH
 					</span>
@@ -1872,7 +1915,7 @@
 					<span class="stat-label">Collected:</span>
 					<span class="stat-value">
 						{executionResults
-							.filter(r => r.success && r.totalValue)
+							.filter((r) => r.success && r.totalValue)
 							.reduce((sum, r) => sum + parseFloat(r.totalValue || '0'), 0)
 							.toFixed(4)} ETH
 					</span>
@@ -1880,7 +1923,10 @@
 				<div class="stat-item">
 					<span class="stat-label">Success Rate:</span>
 					<span class="stat-value success">
-						{((executionResults.filter(r => r.success).length / executionResults.length) * 100).toFixed(1)}%
+						{(
+							(executionResults.filter((r) => r.success).length / executionResults.length) *
+							100
+						).toFixed(1)}%
 					</span>
 				</div>
 			</div>
@@ -1889,12 +1935,7 @@
 
 	<!-- Test Button (Remove in production) -->
 	{#if import.meta.env.DEV}
-		<button
-			onclick={generateMockResults}
-			class="mock-data-btn"
-		>
-			🧪 Test with Mock Data
-		</button>
+		<button onclick={generateMockResults} class="mock-data-btn"> 🧪 Test with Mock Data </button>
 	{/if}
 </div>
 
@@ -2309,7 +2350,6 @@
 		gap: var(--space-4);
 	}
 
-
 	.btn-execute {
 		width: 100%;
 		padding: var(--space-4);
@@ -2437,7 +2477,6 @@
 		font-family: monospace;
 		font-size: var(--text-sm);
 	}
-
 
 	.max-lines-warning {
 		display: block;
@@ -2589,7 +2628,7 @@
 		background: var(--color-panel-3);
 	}
 
-	.native-token input[type="checkbox"] {
+	.native-token input[type='checkbox'] {
 		cursor: not-allowed;
 	}
 
@@ -2637,7 +2676,6 @@
 		font-family: monospace;
 	}
 
-
 	/* Dialog styles */
 	.dialog-overlay {
 		position: fixed;
@@ -2660,7 +2698,9 @@
 		width: 90%;
 		max-height: 80vh;
 		overflow-y: auto;
-		box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+		box-shadow:
+			0 20px 25px -5px rgba(0, 0, 0, 0.1),
+			0 10px 10px -5px rgba(0, 0, 0, 0.04);
 	}
 
 	.dialog h2 {
@@ -2798,7 +2838,8 @@
 	}
 
 	@keyframes pulse {
-		0%, 100% {
+		0%,
+		100% {
 			opacity: 1;
 		}
 		50% {
@@ -3221,7 +3262,8 @@
 			gap: var(--space-2) !important;
 		}
 
-		.network-card, .token-card {
+		.network-card,
+		.token-card {
 			min-height: var(--touch-target);
 			padding: var(--space-3) !important;
 		}
@@ -3231,7 +3273,9 @@
 		}
 
 		/* Mobile: Buttons */
-		.btn-next, .btn-prev, .btn-execute {
+		.btn-next,
+		.btn-prev,
+		.btn-execute {
 			width: 100% !important;
 			min-height: var(--touch-target) !important;
 			padding: var(--space-3) !important;
@@ -3244,7 +3288,12 @@
 		}
 
 		/* Mobile: Form Elements */
-		.address-input, input[type="text"], input[type="url"], input[type="number"], select, textarea {
+		.address-input,
+		input[type='text'],
+		input[type='url'],
+		input[type='number'],
+		select,
+		textarea {
 			width: 100% !important;
 			min-height: var(--touch-target) !important;
 			font-size: 16px !important; /* Prevents zoom on iOS */
@@ -3298,7 +3347,9 @@
 			min-width: 0 !important;
 		}
 
-		.btn-export, .btn-copy, .btn-failed-keys {
+		.btn-export,
+		.btn-copy,
+		.btn-failed-keys {
 			width: 100% !important;
 			padding: var(--space-3) !important;
 		}
@@ -3429,13 +3480,17 @@
 	/* Touch Device Optimizations */
 	@media (hover: none) and (pointer: coarse) {
 		/* Increase all touch targets */
-		button, .btn, input[type="checkbox"], input[type="radio"] {
+		button,
+		.btn,
+		input[type='checkbox'],
+		input[type='radio'] {
 			min-height: var(--touch-target) !important;
 			min-width: var(--touch-target) !important;
 		}
 
 		/* Add active states for better feedback */
-		button:active, .btn:active {
+		button:active,
+		.btn:active {
 			transform: scale(0.98);
 			opacity: 0.9;
 		}

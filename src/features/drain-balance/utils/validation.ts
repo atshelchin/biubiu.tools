@@ -1,6 +1,6 @@
 // Validation utilities for custom networks and tokens
-import { createPublicClient, http, type Address, type Hex } from 'viem';
-import type { Network, Token } from '../types';
+import { createPublicClient, http, type Address } from 'viem';
+import type { Token } from '../types';
 
 // ERC20 ABI for token info
 const ERC20_ABI = [
@@ -79,11 +79,13 @@ export async function validateNetwork(network: {
 				// This is a more realistic check - chains that support EIP-7702
 				// will have the necessary opcodes and transaction types
 				const testAddress = '0x0000000000000000000000000000000000000000';
-				const gasEstimate = await client.estimateGas({
-					to: testAddress as `0x${string}`,
-					data: '0x' as `0x${string}`,
-					type: 'eip7702' as any // Type 0x04 transaction
-				}).catch(() => null);
+				const gasEstimate = await client
+					.estimateGas({
+						to: testAddress as `0x${string}`,
+						data: '0x' as `0x${string}`,
+						type: 'eip7702' as unknown as 'legacy' // Type 0x04 transaction
+					})
+					.catch(() => null);
 
 				if (gasEstimate !== null) {
 					features.push('EIP-7702');
@@ -105,10 +107,10 @@ export async function validateNetwork(network: {
 			isValid: true,
 			features
 		};
-	} catch (error: any) {
+	} catch (error) {
 		return {
 			isValid: false,
-			error: error.message || 'Failed to connect to RPC'
+			error: error instanceof Error ? error.message : 'Failed to connect to RPC'
 		};
 	}
 }
@@ -174,16 +176,16 @@ export async function validateToken(
 					isCustom: true
 				}
 			};
-		} catch (error) {
+		} catch {
 			return {
 				isValid: false,
 				error: 'Contract exists but does not appear to be a standard ERC20 token'
 			};
 		}
-	} catch (error: any) {
+	} catch (error) {
 		return {
 			isValid: false,
-			error: error.message || 'Failed to validate token'
+			error: error instanceof Error ? error.message : 'Failed to validate token'
 		};
 	}
 }

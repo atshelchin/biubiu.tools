@@ -26,7 +26,7 @@
 		theme?: 'light' | 'dark';
 		height?: string;
 		onBlur?: (value: string) => void; // Only trigger on blur
-		extensions?: any[];
+		extensions?: Array<import('@codemirror/state').Extension>;
 		useMinimalSetup?: boolean; // For better performance with large files
 		maxLines?: number; // Maximum allowed lines
 		onMaxLinesExceeded?: (lineCount: number) => void;

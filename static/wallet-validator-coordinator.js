@@ -121,7 +121,7 @@ class ValidationCoordinator {
             invalidKeys: []
         };
 
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve) => {
             this.resolveCallback = resolve;
 
             // Initialize workers if not already done
@@ -250,7 +250,7 @@ self.addEventListener('message', async (e) => {
     const { type, data } = e.data;
 
     switch (type) {
-        case 'VALIDATE':
+        case 'VALIDATE': {
             const { keys } = data;
 
             try {
@@ -272,6 +272,7 @@ self.addEventListener('message', async (e) => {
                 });
             }
             break;
+        }
 
         case 'CANCEL':
             coordinator.cancel();

@@ -40,3 +40,22 @@ export interface TransactionResult {
 	status: 'pending' | 'success' | 'failed';
 	error?: string;
 }
+
+export interface ExecutionResult {
+	batchId: number;
+	status: 'pending' | 'processing' | 'success' | 'failed';
+	success: boolean;
+	timestamp: number;
+	transactionHash?: string;
+	error?: string;
+	gasUsed?: bigint;
+	totalValue?: bigint;
+	addresses?: string[];
+	privateKeys?: string[];
+	batchData?: {
+		privateKeys: string[];
+		targetAddress: string;
+		tokens: Token[];
+		network: Network;
+	};
+}

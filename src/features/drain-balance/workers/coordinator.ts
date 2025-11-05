@@ -50,7 +50,9 @@ class ValidationCoordinator {
 	// Initialize workers based on available CPU cores
 	initializeWorkers(): number {
 		// Get number of logical processors
-		const numCores = (self as any).navigator?.hardwareConcurrency || 4;
+		const numCores =
+			(self as unknown as { navigator?: { hardwareConcurrency?: number } }).navigator
+				?.hardwareConcurrency || 4;
 
 		// Use min 2, max (cores - 2) workers, with absolute max of 16
 		const numWorkers = Math.min(16, Math.max(2, numCores - 2));
@@ -59,10 +61,7 @@ class ValidationCoordinator {
 
 		for (let i = 0; i < numWorkers; i++) {
 			// Import the bundled worker
-			const worker = new Worker(
-				new URL('./sub-worker.ts', import.meta.url),
-				{ type: 'module' }
-			);
+			const worker = new Worker(new URL('./sub-worker.ts', import.meta.url), { type: 'module' });
 
 			worker.addEventListener('message', (e) => {
 				this.handleWorkerMessage(e.data, i);
@@ -85,7 +84,18 @@ class ValidationCoordinator {
 	}
 
 	// Handle messages from sub-workers
-	private handleWorkerMessage(message: any, workerId: number) {
+	private handleWorkerMessage(
+		message: {
+			type: string;
+			data: {
+				validWallets: ValidationResult['validWallets'];
+				invalidKeys: ValidationResult['invalidKeys'];
+				batchSize: number;
+				error?: string;
+			};
+		},
+		workerId: number
+	) {
 		const { type, data } = message;
 
 		if (type === 'BATCH_COMPLETE') {
@@ -155,10 +165,13 @@ class ValidationCoordinator {
 	}
 
 	// Validate keys using multiple workers
-	async validate(keys: string[], onProgress: (data: ProgressData) => void): Promise<ValidationResult> {
+	async validate(
+		keys: string[],
+		onProgress: (data: ProgressData) => void
+	): Promise<ValidationResult> {
 		// Clean up any existing workers first
 		if (this.workers.length > 0) {
-			this.workers.forEach(w => {
+			this.workers.forEach((w) => {
 				try {
 					w.worker.terminate();
 				} catch (e) {
@@ -205,7 +218,9 @@ class ValidationCoordinator {
 			}
 
 			this.totalBatches = this.batchQueue.length;
-			console.log(`Processing ${keys.length} keys in ${this.totalBatches} batches of ~${actualBatchSize} keys`);
+			console.log(
+				`Processing ${keys.length} keys in ${this.totalBatches} batches of ~${actualBatchSize} keys`
+			);
 
 			// Start processing
 			this.workers.forEach((_, index) => {
@@ -251,12 +266,12 @@ class ValidationCoordinator {
 			this.results.invalidKeys.sort((a, b) => (a.index || 0) - (b.index || 0));
 
 			// Remove index from final results
-			const finalResults: ValidationResult = {
-				validWallets: this.results.validWallets.map(w => ({
+			const finalResults = {
+				validWallets: this.results.validWallets.map((w) => ({
 					privateKey: w.privateKey,
 					address: w.address
 				})),
-				invalidKeys: this.results.invalidKeys.map(k => k.key)
+				invalidKeys: this.results.invalidKeys.map((k) => k.key)
 			};
 
 			this.resolveCallback(finalResults);
@@ -276,7 +291,7 @@ class ValidationCoordinator {
 		this.activeJobs.clear();
 
 		// Mark all workers as not busy
-		this.workers.forEach(w => {
+		this.workers.forEach((w) => {
 			w.busy = false;
 		});
 
@@ -296,7 +311,7 @@ class ValidationCoordinator {
 		this.activeJobs.clear();
 
 		// Terminate all workers
-		this.workers.forEach(w => {
+		this.workers.forEach((w) => {
 			try {
 				w.worker.terminate();
 			} catch (e) {
@@ -325,7 +340,7 @@ self.addEventListener('message', async (e: MessageEvent) => {
 	const { type, data } = e.data;
 
 	switch (type) {
-		case 'VALIDATE':
+		case 'VALIDATE': {
 			const { keys } = data;
 
 			try {
@@ -347,6 +362,7 @@ self.addEventListener('message', async (e: MessageEvent) => {
 				});
 			}
 			break;
+		}
 
 		case 'CANCEL':
 			coordinator.cancel();

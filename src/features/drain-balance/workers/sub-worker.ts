@@ -24,7 +24,10 @@ interface InvalidKey {
 }
 
 // Validate a batch of private keys
-function validateBatch(keys: string[], startIndex: number): {
+function validateBatch(
+	keys: string[],
+	startIndex: number
+): {
 	validWallets: WalletResult[];
 	invalidKeys: InvalidKey[];
 } {

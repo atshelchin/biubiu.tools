@@ -1,10 +1,13 @@
 {
-  "permissions": {
-    "allow": [
-      "Bash(git add:*)",
-      "Bash(bun add:*)"
-    ],
-    "deny": [],
-    "ask": []
-  }
+	"permissions": {
+		"allow": [
+			"Bash(git add:*)",
+			"Bash(bun add:*)",
+			"Bash(bun run lint:*)",
+			"Bash(npx eslint:*)",
+			"Bash(bun run:*)"
+		],
+		"deny": [],
+		"ask": []
+	}
 }

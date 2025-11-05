@@ -3,8 +3,13 @@ export class WalletValidator {
 	private coordinatorWorker: Worker | null = null;
 	private validationInProgress = false;
 	private currentValidationId = 0;
-	private currentResolve: ((value: any) => void) | null = null;
-	private currentReject: ((reason: any) => void) | null = null;
+	private currentResolve:
+		| ((value: {
+				validWallets: Array<{ privateKey: string; address: string }>;
+				invalidKeys: string[];
+		  }) => void)
+		| null = null;
+	private currentReject: ((reason: Error) => void) | null = null;
 
 	constructor() {
 		this.initWorker();
@@ -14,10 +19,9 @@ export class WalletValidator {
 		if (typeof Worker !== 'undefined') {
 			try {
 				// Use the coordinator worker for multi-threading with proper module loading
-				this.coordinatorWorker = new Worker(
-					new URL('../workers/coordinator.ts', import.meta.url),
-					{ type: 'module' }
-				);
+				this.coordinatorWorker = new Worker(new URL('../workers/coordinator.ts', import.meta.url), {
+					type: 'module'
+				});
 
 				// Log hardware info
 				const cores = navigator.hardwareConcurrency || 4;
@@ -61,7 +65,7 @@ export class WalletValidator {
 		if (this.validationInProgress) {
 			this.cancel();
 			// Wait a bit for cancellation to complete
-			await new Promise(resolve => setTimeout(resolve, 100));
+			await new Promise((resolve) => setTimeout(resolve, 100));
 		}
 
 		return new Promise((resolve, reject) => {

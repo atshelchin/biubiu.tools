@@ -33,7 +33,7 @@ export class StorageManager {
 	static addCustomNetwork(network: Network): void {
 		const networks = this.getCustomNetworks();
 		// Check if network already exists
-		const exists = networks.some(n => n.chainId === network.chainId);
+		const exists = networks.some((n) => n.chainId === network.chainId);
 		if (!exists) {
 			networks.push({ ...network, isCustom: true });
 			this.saveCustomNetworks(networks);
@@ -42,13 +42,13 @@ export class StorageManager {
 
 	static removeCustomNetwork(chainId: number): void {
 		const networks = this.getCustomNetworks();
-		const filtered = networks.filter(n => n.chainId !== chainId);
+		const filtered = networks.filter((n) => n.chainId !== chainId);
 		this.saveCustomNetworks(filtered);
 	}
 
 	static updateCustomNetwork(oldChainId: number, updatedNetwork: Network): void {
 		const networks = this.getCustomNetworks();
-		const index = networks.findIndex(n => n.chainId === oldChainId);
+		const index = networks.findIndex((n) => n.chainId === oldChainId);
 		if (index !== -1) {
 			networks[index] = { ...updatedNetwork, isCustom: true };
 			this.saveCustomNetworks(networks);
@@ -118,7 +118,7 @@ export class StorageManager {
 	static addCustomToken(chainId: number, token: Token): void {
 		const tokens = this.getCustomTokens(chainId);
 		// Check if token already exists
-		const exists = tokens.some(t => t.address.toLowerCase() === token.address.toLowerCase());
+		const exists = tokens.some((t) => t.address.toLowerCase() === token.address.toLowerCase());
 		if (!exists) {
 			tokens.push({ ...token, isCustom: true });
 			this.saveCustomTokens(chainId, tokens);
@@ -127,7 +127,7 @@ export class StorageManager {
 
 	static removeCustomToken(chainId: number, address: string): void {
 		const tokens = this.getCustomTokens(chainId);
-		const filtered = tokens.filter(t => t.address.toLowerCase() !== address.toLowerCase());
+		const filtered = tokens.filter((t) => t.address.toLowerCase() !== address.toLowerCase());
 		this.saveCustomTokens(chainId, filtered);
 	}
 }
