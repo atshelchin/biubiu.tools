@@ -560,7 +560,7 @@
 	.filter-btn.active {
 		background: var(--color-muted);
 		color: var(--color-foreground);
-		border-color: var(--color-foreground);
+		border-color: var(--color-border);
 	}
 
 	.network-cards {
@@ -578,7 +578,7 @@
 	}
 
 	.network-card:hover {
-		border-color: var(--color-muted-foreground);
+		border-color: var(--color-border);
 	}
 
 	.network-card.active {
@@ -678,17 +678,17 @@
 
 	.toggle-switch input:checked + .toggle-slider {
 		background: var(--color-muted);
-		border-color: var(--color-foreground);
+		border-color: var(--color-border);
 	}
 
 	.toggle-switch input:checked + .toggle-slider::before {
 		transform: translateX(20px);
-		background: var(--color-card);
+		background: var(--color-foreground);
 		opacity: 1;
 	}
 
 	.toggle-switch:hover .toggle-slider {
-		border-color: var(--color-muted-foreground);
+		border-color: var(--color-border);
 	}
 
 	.card-body {
