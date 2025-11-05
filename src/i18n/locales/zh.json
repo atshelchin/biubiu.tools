@@ -131,5 +131,24 @@
 		"contact_text": "我们随时为您提供帮助。请随时联系我们的支持团队。",
 		"join_discord": "加入 Discord",
 		"email_support": "邮件支持"
+	},
+	"wallet": {
+		"connect": "连接钱包",
+		"connecting": "连接中...",
+		"disconnect": "断开连接",
+		"copy_address": "复制地址",
+		"address_copied": "地址已复制",
+		"select_wallet": "选择钱包",
+		"scan_qr": "扫描二维码",
+		"not_installed": "未安装",
+		"walletconnect": {
+			"title": "使用 WalletConnect 连接钱包",
+			"step_1": "打开支持 WalletConnect 的钱包应用",
+			"step_2": "扫描上方二维码",
+			"step_3": "在钱包中确认连接",
+			"copy_link": "复制连接链接",
+			"link_copied": "已复制",
+			"generating": "生成二维码中..."
+		}
 	}
 }

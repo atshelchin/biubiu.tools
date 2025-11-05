@@ -148,5 +148,24 @@
 		"contact_text": "We're here to help. Reach out to our support team anytime.",
 		"join_discord": "Join Discord",
 		"email_support": "Email Support"
+	},
+	"wallet": {
+		"connect": "Connect Wallet",
+		"connecting": "Connecting...",
+		"disconnect": "Disconnect",
+		"copy_address": "Copy Address",
+		"address_copied": "Address Copied",
+		"select_wallet": "Select Wallet",
+		"scan_qr": "Scan QR Code",
+		"not_installed": "Not Installed",
+		"walletconnect": {
+			"title": "Connect with WalletConnect",
+			"step_1": "Open a WalletConnect-compatible wallet app",
+			"step_2": "Scan the QR code above",
+			"step_3": "Confirm the connection in your wallet",
+			"copy_link": "Copy Connection Link",
+			"link_copied": "Copied",
+			"generating": "Generating QR code..."
+		}
 	}
 }

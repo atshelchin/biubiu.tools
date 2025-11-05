@@ -4,6 +4,7 @@
 	interface Props {
 		value: string;
 		text: string;
+		copiedText?: string;
 		size?: number;
 		successDuration?: number;
 		onCopy?: () => void;
@@ -13,6 +14,7 @@
 	let {
 		value,
 		text,
+		copiedText = '已复制',
 		size = 16,
 		successDuration = 2000,
 		onCopy,
@@ -43,11 +45,11 @@
 	class="copy-button-with-text {className}"
 	onclick={handleCopy}
 	type="button"
-	title={copied ? '已复制' : text}
+	title={copied ? copiedText : text}
 >
 	{#if copied}
 		<Check {size} class="copy-success-icon" />
-		<span>已复制</span>
+		<span>{copiedText}</span>
 	{:else}
 		<Copy {size} />
 		<span>{text}</span>
