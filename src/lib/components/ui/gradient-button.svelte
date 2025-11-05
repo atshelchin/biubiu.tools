@@ -48,7 +48,7 @@
 		font-weight: var(--font-medium);
 		cursor: pointer;
 		transition: all 0.3s ease;
-		background: var(--gray-100);
+		background: var(--color-secondary);
 		color: var(--color-foreground);
 		position: relative;
 		overflow: hidden;
@@ -58,7 +58,12 @@
 		content: '';
 		position: absolute;
 		inset: 0;
-		background: linear-gradient(135deg, var(--brand-500) 0%, var(--brand-600) 50%, var(--brand-700) 100%);
+		background: linear-gradient(
+			135deg,
+			var(--brand-500) 0%,
+			var(--brand-600) 50%,
+			var(--brand-700) 100%
+		);
 		opacity: 0;
 		transition: opacity 0.3s ease;
 		z-index: -1;

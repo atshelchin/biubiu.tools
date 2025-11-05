@@ -7,9 +7,10 @@
 		title?: string;
 		maxWidth?: string;
 		children?: import('svelte').Snippet;
+		footer?: import('svelte').Snippet;
 	}
 
-	let { open = false, onClose, title, maxWidth = '400px', children }: Props = $props();
+	let { open = false, onClose, title, maxWidth = '400px', children, footer }: Props = $props();
 </script>
 
 {#if open}
@@ -30,6 +31,11 @@
 			<div class="modal-body">
 				{@render children?.()}
 			</div>
+			{#if footer}
+				<div class="modal-footer">
+					{@render footer?.()}
+				</div>
+			{/if}
 		</div>
 	</div>
 {/if}
@@ -94,6 +100,12 @@
 
 	.modal-body {
 		width: 100%;
+	}
+
+	.modal-footer {
+		margin-top: var(--space-4);
+		padding-top: var(--space-4);
+		border-top: 1px solid var(--color-border);
 	}
 
 	@media (max-width: 768px) {

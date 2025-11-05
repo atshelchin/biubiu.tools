@@ -4,9 +4,11 @@
 	import PageLayout from '$lib/components/page-layout.svelte';
 	import AppTitle from '$lib/components/ui/app-title.svelte';
 	import IconButton from '$lib/components/ui/icon-button.svelte';
+	import NetworkSettingsModal from '$lib/components/ui/network-settings-modal.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
-	import { Share2 } from 'lucide-svelte';
+	import { Share2, Settings } from 'lucide-svelte';
 
+	import StepIndicatorExample from '@/lib/components/ui/step-indicator.example.svelte';
 	const i18n = useI18n();
 
 	// 初始化 wallet connect store，配置此 app 需要的 chains
@@ -23,11 +25,19 @@
 
 	let addressCount = $state(0);
 	let totalValue = $state(0);
+	let showNetworkSettings = $state(false);
 
 	function handleShareLink() {
 		const url = window.location.href;
 		navigator.clipboard.writeText(url);
-		// TODO: Show success toast
+	}
+
+	function handleOpenSettings() {
+		showNetworkSettings = true;
+	}
+
+	function handleCloseSettings() {
+		showNetworkSettings = false;
 	}
 </script>
 
@@ -39,6 +49,14 @@
 				description={i18n.t('tools.token_sweep.description')}
 			/>
 			<div class="toolbar-actions">
+				<IconButton
+					icon={Settings}
+					label="Settings"
+					tooltip="Network settings"
+					variant="ghost"
+					size="sm"
+					onclick={handleOpenSettings}
+				/>
 				<IconButton
 					icon={Share2}
 					label={i18n.t('tools.actions.share_link')}
@@ -88,6 +106,7 @@
 
 	<!-- 主要内容 -->
 	<div class="page-content">
+		<StepIndicatorExample />
 		<h1>Token Sweep</h1>
 		<p>Sweep tokens from multiple addresses to a single destination address.</p>
 
@@ -106,6 +125,16 @@
 			<p>Configure your token sweep settings here.</p>
 		</div>
 	</div>
+
+	<!-- Network Settings Modal -->
+	<NetworkSettingsModal
+		open={showNetworkSettings}
+		networks={connectStore.networks}
+		currentChainId={connectStore.currentChainId}
+		onClose={handleCloseSettings}
+		onToggleNetwork={connectStore.toggleNetwork}
+		isNetworkEnabled={connectStore.isNetworkEnabled}
+	/>
 </PageLayout>
 
 <style>

@@ -49,6 +49,8 @@ export function createConnectStore(config: ConnectStoreConfig) {
 	const address = $derived(connectionState.address);
 	const connectorIcon = $derived(connectionState.connector?.icon);
 	const availableConnectors = $derived(walletManager.getConnectors());
+	const currentChainId = $derived(connectionState.chainId);
+	const networks = $derived(networkManager.getAllNetworks());
 
 	// 初始化
 	async function initialize() {
@@ -163,6 +165,21 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		}
 	}
 
+	// 网络管理方法
+	async function switchNetwork(chainId: number) {
+		await walletManager.switchChain(chainId);
+	}
+
+	function toggleNetwork(chainId: number, enabled: boolean) {
+		const namespace = config.storageKey || 'default';
+		return networkManager.toggleNetwork(namespace, chainId, enabled);
+	}
+
+	function isNetworkEnabled(chainId: number): boolean {
+		const namespace = config.storageKey || 'default';
+		return networkManager.isNetworkEnabled(namespace, chainId);
+	}
+
 	const store = {
 		// Reactive state
 		get isConnected() {
@@ -189,6 +206,12 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		get showWalletConnectModal() {
 			return showWalletConnectModal;
 		},
+		get currentChainId() {
+			return currentChainId;
+		},
+		get networks() {
+			return networks;
+		},
 		// Methods
 		initialize,
 		cleanup,
@@ -197,7 +220,11 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		disconnect,
 		openConnectorModal,
 		closeModal,
-		closeWalletConnectModal
+		closeWalletConnectModal,
+		// Network management
+		switchNetwork,
+		toggleNetwork,
+		isNetworkEnabled
 	};
 
 	setContext(CONNECT_STORE_KEY, store);
