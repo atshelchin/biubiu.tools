@@ -14,6 +14,10 @@
 		"section_title": "Powerful Tools",
 		"section_subtitle": "Professional Web3 batch operation tools to improve your efficiency",
 		"badge": "Professional Web3 Tools",
+		"token_sweep": {
+			"title": "Token Sweep",
+			"description": "Sweep tokens from multiple addresses to a single destination address"
+		},
 		"wallet_collection": {
 			"title": "Drain balance",
 			"description": "Efficiently collect balances from multiple wallets to a single address. Support multiple tokens and chains.",
@@ -48,6 +52,13 @@
 		"coming_soon": "Coming Soon",
 		"available_now": "Available Now",
 		"join_telegram": "Join Telegram",
+		"actions": {
+			"import_csv": "Import CSV",
+			"export_results": "Export Results",
+			"clear_all": "Clear All",
+			"share_link": "Share Link",
+			"share_tooltip": "Copy shareable link"
+		},
 		"notify_modal": {
 			"title": "Get Notified",
 			"description": "Enter your email to get notified when this tool is available.",

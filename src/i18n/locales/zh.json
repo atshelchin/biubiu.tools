@@ -14,6 +14,10 @@
 		"section_title": "强大工具",
 		"section_subtitle": "专业的 Web3 批量操作工具，提升您的效率",
 		"badge": "专业 Web3 工具",
+		"token_sweep": {
+			"title": "归币器",
+			"description": "将多个地址的代币归集到单一目标地址"
+		},
 		"wallet_collection": {
 			"title": "余额归集",
 			"description": "高效地将多个钱包的余额归集到单一地址。支持多种代币和多条链。",
@@ -48,6 +52,13 @@
 		"coming_soon": "即将推出",
 		"available_now": "现已推出",
 		"join_telegram": "加入 Telegram",
+		"actions": {
+			"import_csv": "导入 CSV",
+			"export_results": "导出结果",
+			"clear_all": "清空全部",
+			"share_link": "分享链接",
+			"share_tooltip": "复制分享链接"
+		},
 		"notify_modal": {
 			"title": "获取通知",
 			"description": "输入您的邮箱，工具上线时我们会通知您。",

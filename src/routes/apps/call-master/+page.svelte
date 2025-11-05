@@ -2,6 +2,7 @@
 	import CallMaster from '@/features/call-master/index.svelte';
 	import { createConnectStore } from '$lib/stores/connect.svelte';
 	import { mainnet, polygon, arbitrum, optimism, base, bsc } from 'viem/chains';
+	import PageLayout from '$lib/components/page-layout.svelte';
 
 	// 初始化 wallet connect store
 	createConnectStore({
@@ -14,4 +15,6 @@
 	});
 </script>
 
-<CallMaster />
+<PageLayout>
+	<CallMaster />
+</PageLayout>

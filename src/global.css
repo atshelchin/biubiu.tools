@@ -1,3 +1,18 @@
+/* Text wrapping utilities */
+* {
+	/* 防止文本溢出容器 */
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+/* 针对长 URL 和代码的断行 */
+a,
+code,
+p,
+pre {
+	word-break: break-all;
+}
+
 button {
 	padding: var(--space-2-5) var(--space-5);
 	border-radius: var(--radius-md);
