@@ -49,7 +49,7 @@
 	// Filter networks based on search query and status
 	const filteredNetworks = $derived.by(() => {
 		// Force recomputation when toggleVersion changes
-		toggleVersion;
+		void toggleVersion;
 
 		return networks.filter((network) => {
 			// Search filter

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { X } from '@lucide/svelte';
-	import { onMount } from 'svelte';
 
 	interface Props {
 		open: boolean;

@@ -69,25 +69,28 @@
 		height: 18px;
 		width: 18px;
 		left: 3px;
-		background: var(--color-foreground);
+		background: var(--color-muted-foreground);
 		border-radius: 50%;
 		transition: all 0.3s;
-		opacity: 0.7;
 	}
 
 	.toggle-switch input:checked + .toggle-slider {
-		background: var(--color-muted);
-		border-color: var(--color-border);
+		background: var(--brand-500);
+		border-color: var(--brand-500);
 	}
 
 	.toggle-switch input:checked + .toggle-slider::before {
 		transform: translateX(20px);
-		background: var(--color-foreground);
-		opacity: 1;
+		background: var(--color-card);
 	}
 
 	.toggle-switch:hover:not(.disabled) .toggle-slider {
-		border-color: var(--color-border);
+		border-color: var(--color-muted-foreground);
+	}
+
+	.toggle-switch input:checked:hover + .toggle-slider {
+		background: var(--brand-600);
+		border-color: var(--brand-600);
 	}
 
 	.check-icon {
@@ -96,12 +99,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		color: var(--color-foreground);
-		opacity: 0.7;
+		color: var(--color-card);
 		transition: all 0.3s;
-	}
-
-	.toggle-switch input:checked + .toggle-slider .check-icon {
-		opacity: 1;
 	}
 </style>
