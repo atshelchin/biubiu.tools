@@ -210,7 +210,11 @@
 			"saving": "Saving...",
 			"cancel": "Cancel",
 			"testing": "Testing...",
-			"failed": "Failed"
+			"failed": "Failed",
+			"error_chainid_required": "Chain ID is required",
+			"error_name_required": "Network name is required",
+			"error_symbol_required": "Currency symbol is required",
+			"error_rpc_required": "At least one RPC endpoint is required"
 		}
 	}
 }

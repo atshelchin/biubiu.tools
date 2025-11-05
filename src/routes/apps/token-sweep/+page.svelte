@@ -134,6 +134,8 @@
 		onClose={handleCloseSettings}
 		onToggleNetwork={connectStore.toggleNetwork}
 		isNetworkEnabled={connectStore.isNetworkEnabled}
+		onSaveNetwork={connectStore.updateNetworkRpc}
+		onAddOrUpdateNetwork={connectStore.addOrUpdateNetwork}
 	/>
 </PageLayout>
 

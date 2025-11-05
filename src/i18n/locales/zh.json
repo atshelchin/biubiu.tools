@@ -193,7 +193,11 @@
 			"saving": "保存中...",
 			"cancel": "取消",
 			"testing": "测试中...",
-			"failed": "失败"
+			"failed": "失败",
+			"error_chainid_required": "链 ID 不能为空",
+			"error_name_required": "网络名称不能为空",
+			"error_symbol_required": "货币符号不能为空",
+			"error_rpc_required": "至少需要一个 RPC 端点"
 		}
 	}
 }

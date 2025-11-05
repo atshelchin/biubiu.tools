@@ -50,13 +50,24 @@ export function createConnectStore(config: ConnectStoreConfig) {
 	const connectorIcon = $derived(connectionState.connector?.icon);
 	const availableConnectors = $derived(walletManager.getConnectors());
 	const currentChainId = $derived(connectionState.chainId);
-	const networks = $derived(networkManager.getAllNetworks());
+	let networks = $state(networkManager.getAllNetworks());
 
 	// 初始化
 	async function initialize() {
 		// 订阅钱包状态变化
 		unsubscribe = walletManager.subscribe((state) => {
 			connectionState = state;
+		});
+
+		// 监听网络变化事件
+		networkManager.on('networkAdded', () => {
+			networks = networkManager.getAllNetworks();
+		});
+		networkManager.on('networkUpdated', () => {
+			networks = networkManager.getAllNetworks();
+		});
+		networkManager.on('networkRemoved', () => {
+			networks = networkManager.getAllNetworks();
 		});
 
 		// 监听 EIP6963 钱包
@@ -180,6 +191,24 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		return networkManager.isNetworkEnabled(namespace, chainId);
 	}
 
+	function updateNetworkRpc(
+		chainId: number,
+		rpcEndpoints: Array<{ url: string; isPrimary: boolean }>,
+		blockExplorer?: string
+	) {
+		networkManager.updateNetworkRpc(chainId, rpcEndpoints, blockExplorer);
+	}
+
+	function addOrUpdateNetwork(network: {
+		chainId: number;
+		name: string;
+		symbol: string;
+		rpcEndpoints: Array<{ url: string; isPrimary: boolean }>;
+		blockExplorer?: string;
+	}) {
+		networkManager.addOrUpdateCustomNetwork(network);
+	}
+
 	const store = {
 		// Reactive state
 		get isConnected() {
@@ -224,7 +253,9 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		// Network management
 		switchNetwork,
 		toggleNetwork,
-		isNetworkEnabled
+		isNetworkEnabled,
+		updateNetworkRpc,
+		addOrUpdateNetwork
 	};
 
 	setContext(CONNECT_STORE_KEY, store);

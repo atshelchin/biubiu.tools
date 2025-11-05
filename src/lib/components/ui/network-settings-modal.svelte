@@ -15,10 +15,30 @@
 		onClose: () => void;
 		onToggleNetwork: (chainId: number, enabled: boolean) => boolean;
 		isNetworkEnabled: (chainId: number) => boolean;
+		onSaveNetwork: (
+			chainId: number,
+			rpcEndpoints: Array<{ url: string; isPrimary: boolean }>,
+			blockExplorer?: string
+		) => void;
+		onAddOrUpdateNetwork: (network: {
+			chainId: number;
+			name: string;
+			symbol: string;
+			rpcEndpoints: Array<{ url: string; isPrimary: boolean }>;
+			blockExplorer?: string;
+		}) => void;
 	}
 
-	let { open, networks, currentChainId, onClose, onToggleNetwork, isNetworkEnabled }: Props =
-		$props();
+	let {
+		open,
+		networks,
+		currentChainId,
+		onClose,
+		onToggleNetwork,
+		isNetworkEnabled,
+		onSaveNetwork,
+		onAddOrUpdateNetwork
+	}: Props = $props();
 
 	const i18n = useI18n();
 	const t = i18n.t;
@@ -141,6 +161,13 @@
 
 	async function handleAddRpcToForm() {
 		if (!newRpcUrl.trim()) return;
+
+		// Validate chainId when adding RPC
+		if (viewMode === 'add' && (!formData.chainId || formData.chainId === 0)) {
+			alert(t('wallet.network_settings.error_chainid_required'));
+			return;
+		}
+
 		const isPrimary = formData.rpcEndpoints.length === 0;
 		const url = newRpcUrl.trim();
 		const newRpc: {
@@ -180,11 +207,76 @@
 	async function handleSaveNetwork() {
 		if (isSubmitting) return;
 
+		// Validate required fields
+		if (!formData.chainId || formData.chainId === 0) {
+			alert(t('wallet.network_settings.error_chainid_required'));
+			return;
+		}
+		if (!formData.name.trim()) {
+			alert(t('wallet.network_settings.error_name_required'));
+			return;
+		}
+		if (!formData.symbol.trim()) {
+			alert(t('wallet.network_settings.error_symbol_required'));
+			return;
+		}
+		if (formData.rpcEndpoints.length === 0) {
+			alert(t('wallet.network_settings.error_rpc_required'));
+			return;
+		}
+
 		isSubmitting = true;
 		try {
-			// Here you would call the appropriate API to save the network
-			// For now, just close the modal
-			console.log('Saving network:', formData);
+			// Prepare RPC endpoints without testing/latency fields
+			const rpcEndpoints = formData.rpcEndpoints.map((rpc) => ({
+				url: rpc.url,
+				isPrimary: rpc.isPrimary
+			}));
+
+			if (viewMode === 'add') {
+				// Adding new network - need all fields including name and symbol
+				onAddOrUpdateNetwork({
+					chainId: formData.chainId,
+					name: formData.name,
+					symbol: formData.symbol,
+					rpcEndpoints,
+					blockExplorer: formData.blockExplorer || undefined
+				});
+
+				// If enabled, toggle it on
+				if (formData.enabled) {
+					onToggleNetwork(formData.chainId, true);
+				}
+			} else {
+				// Editing existing network
+				const existingNetwork = networks.find((n) => n.chainId === formData.chainId);
+				if (existingNetwork) {
+					// Check if name or symbol changed
+					if (
+						formData.name !== existingNetwork.name ||
+						formData.symbol !== existingNetwork.symbol
+					) {
+						// Need to update full network info
+						onAddOrUpdateNetwork({
+							chainId: formData.chainId,
+							name: formData.name,
+							symbol: formData.symbol,
+							rpcEndpoints,
+							blockExplorer: formData.blockExplorer || undefined
+						});
+					} else {
+						// Only updating RPC endpoints and block explorer
+						onSaveNetwork(formData.chainId, rpcEndpoints, formData.blockExplorer || undefined);
+					}
+				}
+
+				// Handle enable/disable toggle
+				const currentlyEnabled = isNetworkEnabled(formData.chainId);
+				if (formData.enabled !== currentlyEnabled) {
+					onToggleNetwork(formData.chainId, formData.enabled);
+				}
+			}
+
 			handleBackToList();
 		} catch (error) {
 			console.error('Failed to save network:', error);
@@ -300,7 +392,7 @@
 							<div class="card-body">
 								<div class="rpc-count">
 									{network.rpcEndpoints.length}
-									{t('wallet.network_settings.rpc_endpoints')}
+
 									{network.rpcEndpoints.length === 1
 										? t('wallet.network_settings.rpc_endpoint')
 										: t('wallet.network_settings.rpc_endpoints_plural')}
