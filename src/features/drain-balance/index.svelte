@@ -29,7 +29,7 @@
 
 	// Custom items
 	let customNetworks = $state<Network[]>([]);
-	let customTokens = $state(new SvelteMap<number, Token[]>());
+	let customTokens = new SvelteMap<number, Token[]>();
 	let networkOverrides = $state<Record<number, Partial<Network>>>({});
 	let allNetworks = $derived(
 		(() => {
@@ -111,14 +111,13 @@
 		networkOverrides = StorageManager.getNetworkOverrides();
 
 		// Load all custom tokens into map
-		const tokensMap = new SvelteMap<number, Token[]>();
+		customTokens.clear();
 		[...SUPPORTED_NETWORKS, ...customNetworks].forEach((network) => {
 			const tokens = StorageManager.getCustomTokens(network.chainId);
 			if (tokens.length > 0) {
-				tokensMap.set(network.chainId, tokens);
+				customTokens.set(network.chainId, tokens);
 			}
 		});
-		customTokens = tokensMap;
 	});
 
 	// Watch for network changes to auto-select native token
@@ -306,9 +305,7 @@
 
 				// Update local state to immediately show the new token
 				const currentTokens = customTokens.get(selectedNetwork.chainId) || [];
-				const newTokensMap = new SvelteMap(customTokens);
-				newTokensMap.set(selectedNetwork.chainId, [...currentTokens, result.token]);
-				customTokens = newTokensMap;
+				customTokens.set(selectedNetwork.chainId, [...currentTokens, result.token]);
 
 				// Show success and close dialog after a short delay
 				setTimeout(() => {
@@ -471,7 +468,7 @@
 		itemsPerPage: 50,
 		totalItems: 0
 	});
-	let selectedResults = $state(new SvelteSet<number>());
+	let selectedResults = new SvelteSet<number>();
 	let totalBatches = $state(0);
 	let currentBatch = $state(0);
 
@@ -1768,11 +1765,9 @@
 										getPaginatedResults().length > 0}
 									onchange={(e) => {
 										if (e.currentTarget.checked) {
-											const newSet = new SvelteSet(selectedResults);
-											getPaginatedResults().forEach((r) => newSet.add(r.batchId));
-											selectedResults = newSet;
+											getPaginatedResults().forEach((r) => selectedResults.add(r.batchId));
 										} else {
-											selectedResults = new SvelteSet();
+											selectedResults.clear();
 										}
 									}}
 								/>
@@ -1802,7 +1797,7 @@
 											} else {
 												newSet.delete(result.batchId);
 											}
-											selectedResults = newSet;
+											// Direct mutation instead
 										}}
 									/>
 								</td>
