@@ -1,6 +1,7 @@
 <script lang="ts">
 	import AppsHeader from '@/lib/components/ui/apps-header.svelte';
 	import type { LayoutData } from './$types.js';
+
 	let { children, data } = $props<{ children: import('svelte').Snippet; data: LayoutData }>();
 	console.log({ data });
 </script>
