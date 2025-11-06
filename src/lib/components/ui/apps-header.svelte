@@ -14,7 +14,7 @@
 	.header {
 		background: var(--color-card);
 		border-radius: var(--radius-xl);
-		padding: var(--space-5) var(--space-7);
+		padding: var(--space-4) var(--space-4);
 		margin-bottom: var(--space-5);
 		box-shadow: var(--shadow-sm);
 		border: 1px solid var(--color-border);
@@ -44,7 +44,7 @@
 
 	@media (max-width: 768px) {
 		.header {
-			padding: var(--space-3-5) var(--space-5);
+			padding: var(--space-4) var(--space-4);
 			flex-direction: column;
 			gap: var(--space-3);
 			text-align: center;

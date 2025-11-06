@@ -71,6 +71,7 @@
 		manager: StepManager;
 	}
 
+	// eslint-disable-next-line svelte/no-unused-props
 	let { manager }: Props = $props();
 
 	const isVertical = $derived(manager.steps.length > 3);

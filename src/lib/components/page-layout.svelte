@@ -51,7 +51,7 @@
 
 	.toolbar-section {
 		background: var(--color-card);
-		padding: var(--space-3) var(--space-4);
+		padding: var(--space-4) var(--space-4);
 		border-radius: var(--radius-lg);
 		border: 1px solid var(--color-border);
 	}
@@ -81,14 +81,14 @@
 
 	.main-content {
 		background: var(--color-card);
-		padding: var(--space-6);
+		padding: var(--space-4);
 		border-radius: var(--radius-lg);
 		border: 1px solid var(--color-border);
 	}
 
 	.footer-section {
 		background: var(--color-card);
-		padding: var(--space-3) var(--space-4);
+		padding: var(--space-4) var(--space-4);
 		border-radius: var(--radius-lg);
 		border: 1px solid var(--color-border);
 		display: flex;
