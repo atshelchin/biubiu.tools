@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount, onDestroy } from 'svelte';
-	import { LogOut } from '@lucide/svelte';
+	import { LogOut, ChevronDown, Check } from '@lucide/svelte';
 	import CopyButton from './copy-button.svelte';
 	import CopyButtonWithText from './copy-button-with-text.svelte';
 	import WalletInfo from './wallet-info.svelte';
@@ -8,6 +8,7 @@
 	import QRCode from './qr-code.svelte';
 	import InstructionList from './instruction-list.svelte';
 	import GradientButton from './gradient-button.svelte';
+	import Dropdown from './dropdown.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 
@@ -16,6 +17,11 @@
 
 	// 从 context 获取 connect store
 	const connectStore = useConnectStore();
+
+	// 账户切换相关状态
+	let showAccountDropdown = $state(false);
+	let accounts = $state<string[]>([]);
+	let walletInfoElement: HTMLElement | undefined = $state();
 
 	// WalletConnect 说明步骤
 	const walletConnectSteps = $derived([
@@ -29,22 +35,87 @@
 		return `${addr.slice(0, 6)}...${addr.slice(-4)}`;
 	}
 
+	// 加载账户列表并恢复之前选择的账户
+	async function loadAccounts() {
+		const accs = await connectStore.getAccounts();
+		accounts = accs || [];
+
+		// 如果有多个账户，检查是否需要恢复之前选择的账户
+		if (accounts.length > 1 && connectStore.address) {
+			// 获取持久化的连接信息
+			const storageKey = 'biubiu-tools-wallet-connection';
+			const savedData = localStorage.getItem(storageKey);
+			if (savedData) {
+				try {
+					const { address: savedAddress } = JSON.parse(savedData);
+					// 如果保存的地址在账户列表中，且不是当前地址，则切换
+					if (
+						savedAddress &&
+						accounts.some((acc) => acc.toLowerCase() === savedAddress.toLowerCase()) &&
+						savedAddress.toLowerCase() !== connectStore.address.toLowerCase()
+					) {
+						await connectStore.switchAccount(savedAddress);
+					}
+				} catch (e) {
+					// Ignore parse errors
+				}
+			}
+		}
+	}
+
+	// 切换账户
+	async function handleSwitchAccount(address: string) {
+		await connectStore.switchAccount(address);
+		showAccountDropdown = false;
+	}
+
+	// 切换账户下拉框
+	function toggleAccountDropdown() {
+		if (accounts.length > 1) {
+			showAccountDropdown = !showAccountDropdown;
+		}
+	}
+
 	onMount(async () => {
 		await connectStore.initialize();
+		if (connectStore.isConnected) {
+			await loadAccounts();
+		}
 	});
 
 	onDestroy(() => {
 		connectStore.cleanup();
 	});
+
+	// 当连接状态变化时重新加载账户
+	$effect(() => {
+		if (connectStore.isConnected) {
+			loadAccounts();
+		} else {
+			accounts = [];
+		}
+	});
 </script>
 
 {#if connectStore.isConnected && connectStore.address}
 	<div class="wallet-connected-group">
-		<WalletInfo
-			address={connectStore.address}
-			{formatAddress}
-			connectorIcon={connectStore.connectorIcon}
-		/>
+		<div bind:this={walletInfoElement} class="wallet-info-wrapper">
+			<button
+				class="wallet-info-button"
+				class:clickable={accounts.length > 1}
+				onclick={toggleAccountDropdown}
+				type="button"
+			>
+				<WalletInfo
+					address={connectStore.address}
+					{formatAddress}
+					connectorIcon={connectStore.connectorIcon}
+				/>
+				{#if accounts.length > 1}
+					<ChevronDown size={16} class="chevron-icon" />
+				{/if}
+			</button>
+		</div>
 		<CopyButton value={connectStore.address} />
 		<button
 			class="icon-button disconnect-button"
@@ -55,6 +126,26 @@
 			<LogOut size={16} />
 		</button>
 	</div>
+
+	<!-- 账户切换下拉框 -->
+	<Dropdown
+		bind:open={showAccountDropdown}
+		onClose={() => (showAccountDropdown = false)}
+		trigger={walletInfoElement}
+		align="left"
+	>
+		{#each accounts as account (account)}
+			<button class="account-item" onclick={() => handleSwitchAccount(account)}>
+				<div class="account-address">
+					<div class="address-text">{formatAddress(account)}</div>
+					<div class="address-full">{account}</div>
+				</div>
+				{#if account.toLowerCase() === connectStore.address?.toLowerCase()}
+					<Check size={16} class="check-icon" />
+				{/if}
+			</button>
+		{/each}
+	</Dropdown>
 {:else}
 	<GradientButton
 		onclick={connectStore.isConnecting
@@ -122,6 +213,82 @@
 		align-items: center;
 		gap: var(--space-2);
 		flex-wrap: wrap;
+	}
+
+	.wallet-info-wrapper {
+		position: relative;
+	}
+
+	.wallet-info-button {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		padding: 0;
+		background: transparent;
+		border: none;
+		cursor: default;
+		transition: all 0.2s;
+	}
+
+	.wallet-info-button.clickable {
+		cursor: pointer;
+		padding: var(--space-2);
+		border-radius: var(--radius-md);
+	}
+
+	.wallet-info-button.clickable:hover {
+		background: var(--color-secondary);
+	}
+
+	.wallet-info-button :global(.chevron-icon) {
+		color: var(--color-muted-foreground);
+		transition: transform 0.2s;
+	}
+
+	/* Account Dropdown Items */
+	.account-item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--space-3);
+		padding: var(--space-3) var(--space-4);
+		background: transparent;
+		border: none;
+		border-radius: var(--radius-md);
+		cursor: pointer;
+		transition: all 0.2s;
+		width: 100%;
+		text-align: left;
+	}
+
+	.account-item:hover {
+		background: var(--color-muted);
+	}
+
+	.account-address {
+		flex: 1;
+		min-width: 0;
+	}
+
+	.address-text {
+		font-size: var(--text-sm);
+		font-weight: var(--font-medium);
+		color: var(--color-foreground);
+		margin-bottom: var(--space-1);
+	}
+
+	.address-full {
+		font-size: var(--text-xs);
+		color: var(--color-muted-foreground);
+		font-family: var(--font-mono, monospace);
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.account-item :global(.check-icon) {
+		color: var(--brand-500);
+		flex-shrink: 0;
 	}
 
 	/* Icon Buttons */

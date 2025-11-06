@@ -209,6 +209,24 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		networkManager.addOrUpdateCustomNetwork(network);
 	}
 
+	// 账户管理方法
+	async function getAccounts() {
+		try {
+			return await walletManager.getState().connector?.getAccounts();
+		} catch (error) {
+			console.error('Failed to get accounts:', error);
+			return [];
+		}
+	}
+
+	async function switchAccount(address: string) {
+		try {
+			await walletManager.switchAccount(address as `0x${string}`);
+		} catch (error) {
+			console.error('Failed to switch account:', error);
+		}
+	}
+
 	const store = {
 		// Reactive state
 		get isConnected() {
@@ -255,7 +273,10 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		toggleNetwork,
 		isNetworkEnabled,
 		updateNetworkRpc,
-		addOrUpdateNetwork
+		addOrUpdateNetwork,
+		// Account management
+		getAccounts,
+		switchAccount
 	};
 
 	setContext(CONNECT_STORE_KEY, store);
