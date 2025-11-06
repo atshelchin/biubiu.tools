@@ -150,10 +150,11 @@
 			console.log('[Deployment] Deployment successful!');
 			status = 'success';
 
-			// Notify parent component
+			// Notify parent component after brief success display
 			setTimeout(() => {
+				console.log('[Deployment] Calling onSuccess callback');
 				onSuccess();
-			}, 2000);
+			}, 1500);
 		} catch (error) {
 			console.error('[Deployment] Deployment failed:', error);
 			status = 'error';

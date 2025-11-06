@@ -38,8 +38,12 @@
 
 	// Run dependency checks
 	async function runDependencyChecks() {
-		if (!currentNetwork || !connectStore.isConnected) return;
+		if (!currentNetwork || !connectStore.isConnected) {
+			console.log('[Step2] Cannot run checks - network or wallet not ready');
+			return;
+		}
 
+		console.log('[Step2] Starting dependency checks for', currentNetwork.name);
 		isChecking = true;
 		hasChecked = false;
 
@@ -57,11 +61,13 @@
 				sweepContract
 			);
 
+			console.log('[Step2] Dependency check results:', results);
 			checks = results;
 			summary = calculateCheckSummary(results);
+			console.log('[Step2] Calculated summary:', summary);
 			hasChecked = true;
 		} catch (error) {
-			console.error('Failed to run dependency checks:', error);
+			console.error('[Step2] Failed to run dependency checks:', error);
 		} finally {
 			isChecking = false;
 		}
@@ -416,10 +422,14 @@
 			deploymentConfig = null;
 		}}
 		onSuccess={() => {
+			console.log('[Step2] Deployment successful, closing modal and re-checking dependencies');
 			showDeploymentModal = false;
 			deploymentConfig = null;
 			// Re-run dependency checks after successful deployment
-			runDependencyChecks();
+			setTimeout(() => {
+				console.log('[Step2] Re-running dependency checks after deployment');
+				runDependencyChecks();
+			}, 500);
 		}}
 	/>
 {/if}
