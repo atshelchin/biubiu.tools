@@ -11,6 +11,7 @@
 	import Dropdown from './dropdown.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
+	import { longPress } from '$lib/utils/long-press';
 
 	const i18n = useI18n();
 	const t = i18n.t;
@@ -58,6 +59,7 @@
 					}
 				} catch (e) {
 					// Ignore parse errors
+					console.error('loadAccounts=>', e);
 				}
 			}
 		}
@@ -74,6 +76,19 @@
 		if (accounts.length > 1) {
 			showAccountDropdown = !showAccountDropdown;
 		}
+	}
+
+	// 长按重置连接状态
+	let longPressProgress = $state(0);
+	let isPressing = $state(false);
+
+	async function forceResetConnection() {
+		console.log('forceResetConnection');
+		await connectStore.cancelConnection();
+		// 强制清理状态
+		connectStore.closeModal();
+		connectStore.closeWalletConnectModal();
+		isPressing = false;
 	}
 
 	onMount(async () => {
@@ -147,13 +162,41 @@
 		{/each}
 	</Dropdown>
 {:else}
-	<GradientButton
-		onclick={connectStore.isConnecting
-			? connectStore.cancelConnection
-			: connectStore.openConnectorModal}
-	>
-		{connectStore.isConnecting ? i18n.t('wallet.connecting') : i18n.t('wallet.connect')}
-	</GradientButton>
+	<div class="connect-button-wrapper">
+		<div
+			use:longPress={{
+				duration: 3000,
+				onProgress: (progress) => {
+					if (progress > 0) {
+						isPressing = true;
+						longPressProgress = progress;
+					} else {
+						isPressing = false;
+						longPressProgress = 0;
+					}
+				},
+				onComplete: forceResetConnection
+			}}
+		>
+			<GradientButton
+				onclick={connectStore.isConnecting
+					? connectStore.cancelConnection
+					: connectStore.openConnectorModal}
+			>
+				{connectStore.isConnecting ? i18n.t('wallet.connecting') : i18n.t('wallet.connect')}
+			</GradientButton>
+		</div>
+		{#if connectStore.isConnecting}
+			{#if isPressing && longPressProgress > 0}
+				<div class="long-press-indicator">
+					<div class="progress-bar" style:width="{longPressProgress}%"></div>
+				</div>
+			{/if}
+			<div class="reset-hint">
+				{t('wallet.long_press_hint')}
+			</div>
+		{/if}
+	</div>
 {/if}
 
 <!-- 连接器选择模态框 -->
@@ -320,6 +363,50 @@
 	.disconnect-button:hover {
 		color: var(--color-danger);
 		border-color: var(--color-danger);
+	}
+
+	/* Long Press Reset */
+	.connect-button-wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--space-2);
+	}
+
+	.long-press-indicator {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 3px;
+		background: var(--color-muted);
+		border-radius: 0 0 var(--radius-md) var(--radius-md);
+		overflow: hidden;
+	}
+
+	.progress-bar {
+		height: 100%;
+		background: linear-gradient(90deg, var(--brand-500), var(--color-danger));
+		transition: width 0.05s linear;
+	}
+
+	.reset-hint {
+		font-size: var(--text-xs);
+		color: var(--color-muted-foreground);
+		text-align: center;
+		animation: fadeIn 0.3s ease-out;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(-4px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 
 	.connector-list {

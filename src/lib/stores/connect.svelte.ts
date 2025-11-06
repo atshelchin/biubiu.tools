@@ -39,7 +39,6 @@ export function createConnectStore(config: ConnectStoreConfig) {
 	let showConnectorModal = $state(false);
 	let walletConnectUri = $state<string | undefined>();
 	let showWalletConnectModal = $state(false);
-	let currentConnector: Connector | undefined;
 	let unsubscribe: (() => void) | undefined;
 	let unwatchEIP6963: (() => void) | undefined;
 
@@ -100,7 +99,6 @@ export function createConnectStore(config: ConnectStoreConfig) {
 	async function connectWallet(connector: Connector) {
 		try {
 			showConnectorModal = false;
-			currentConnector = connector;
 
 			// 如果是 WalletConnect，显示自定义 QR 码模态框
 			if (connector.id === 'walletconnect') {
@@ -119,24 +117,21 @@ export function createConnectStore(config: ConnectStoreConfig) {
 			// 连接成功后关闭模态框
 			showWalletConnectModal = false;
 			walletConnectUri = undefined;
-			currentConnector = undefined;
 		} catch (error) {
 			console.error('Failed to connect wallet:', error);
 			showWalletConnectModal = false;
 			walletConnectUri = undefined;
-			currentConnector = undefined;
 		}
 	}
 
 	// 取消连接
 	async function cancelConnection() {
-		if (currentConnector && isConnecting) {
+		if (isConnecting) {
 			try {
-				await currentConnector.disconnect();
+				await walletManager.cancelConnect();
 			} catch (error) {
 				console.error('Failed to cancel connection:', error);
 			}
-			currentConnector = undefined;
 		}
 	}
 
@@ -144,7 +139,6 @@ export function createConnectStore(config: ConnectStoreConfig) {
 	async function disconnect() {
 		try {
 			await walletManager.disconnect();
-			currentConnector = undefined;
 		} catch (error) {
 			console.error('Failed to disconnect wallet:', error);
 		}
@@ -166,13 +160,12 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		walletConnectUri = undefined;
 
 		// 如果正在连接中，取消连接
-		if (currentConnector && !isConnected) {
+		if (isConnecting) {
 			try {
-				await currentConnector.disconnect();
+				await walletManager.cancelConnect();
 			} catch (error) {
 				console.error('Failed to cancel connection:', error);
 			}
-			currentConnector = undefined;
 		}
 	}
 
