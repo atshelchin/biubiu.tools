@@ -287,7 +287,13 @@
 					<div class="deploying-section">
 						<Loader2 size={48} class="spinning" />
 						<h3>Deploying Contract...</h3>
-						<p>Please confirm transactions in your wallet</p>
+						{#if steps.some((s) => s.inProgress)}
+							<p>Processing transaction on blockchain...</p>
+						{:else if steps.every((s) => s.completed)}
+							<p>Finalizing deployment...</p>
+						{:else}
+							<p>Please confirm transactions in your wallet</p>
+						{/if}
 
 						{#if steps.length > 0}
 							<div class="step-progress">
