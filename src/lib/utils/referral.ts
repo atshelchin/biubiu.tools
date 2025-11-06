@@ -3,6 +3,11 @@ import { get, set } from 'idb-keyval';
 const REFERRAL_KEY = 'biubiu-referral';
 const REFERRAL_EXPIRY_DAYS = 90;
 
+/**
+ * Ethereum zero address - used to mark direct visits (no referrer)
+ */
+export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000' as const;
+
 export interface ReferralData {
 	address: string;
 	timestamp: number;
@@ -124,10 +129,29 @@ export function getReferralFromUrl(): string | null {
 /**
  * Initialize referral system - check URL and store if needed
  * Should be called on app load
+ * If no referral exists, sets ZERO_ADDRESS to lock the slot and prevent future referrals
  */
 export async function initializeReferral(): Promise<void> {
-	const refFromUrl = getReferralFromUrl();
-	if (refFromUrl) {
-		await setReferralAddress(refFromUrl);
+	// Check if referral already exists
+	const existing = await getReferralAddress();
+	if (existing !== null) {
+		// Already has a referral (or zero address), do nothing
+		return;
 	}
+
+	// First visit: set referral from URL or zero address
+	const refFromUrl = getReferralFromUrl();
+	await setReferralAddress(refFromUrl || ZERO_ADDRESS);
+}
+
+/**
+ * Check if user has a valid referrer (not zero address)
+ * Use this when processing payments to determine commission
+ */
+export async function getValidReferrer(): Promise<string | null> {
+	const address = await getReferralAddress();
+	if (!address || address === ZERO_ADDRESS) {
+		return null; // No referrer, platform gets 100%
+	}
+	return address; // Has referrer, pay 50% commission
 }
