@@ -5,7 +5,7 @@
 	import { CheckCircle2, XCircle, AlertCircle, RefreshCw, ExternalLink } from 'lucide-svelte';
 	import { fade, slide } from 'svelte/transition';
 	import { checkAllDependencies, calculateCheckSummary } from '../utils/dependency-checker';
-	import type { DependencyCheck, DependencyCheckSummary } from '../types/dependencies';
+	// import type { DependencyCheck, DependencyCheckSummary } from '../types/dependencies';
 	import ContractDeploymentModal from './contract-deployment-modal.svelte';
 	import { getDeploymentConfig } from '../config/deployment-configs';
 	import type { ContractDeploymentConfig } from '../types/deployment-config';

@@ -42,6 +42,7 @@
 
 	let status = $state<DeploymentStatus>('idle');
 	let isProcessing = $state(false);
+	let isWaitingForSignature = $state(false); // Waiting for user to sign in wallet
 	let errorMessage = $state<string | null>(null);
 	let steps = $state<
 		Array<{ title: string; description: string; completed: boolean; inProgress: boolean }>
@@ -53,6 +54,7 @@
 		if (show) {
 			status = 'idle';
 			isProcessing = false;
+			isWaitingForSignature = false;
 			errorMessage = null;
 			steps = [];
 			showClearCacheSteps = false;
@@ -121,12 +123,16 @@
 						step.title
 					);
 
-					// Mark step as in progress
+					// Mark step as in progress and waiting for user signature
+					isWaitingForSignature = true;
 					steps = steps.map((s, idx) =>
 						idx === i ? { ...s, inProgress: true, completed: false } : s
 					);
 
 					await step.action();
+
+					// Transaction sent, no longer waiting for signature
+					isWaitingForSignature = false;
 
 					console.log(`[Deployment] Step ${i + 1} completed:`, step.title);
 
@@ -157,6 +163,7 @@
 			}, 1500);
 		} catch (error) {
 			console.error('[Deployment] Deployment failed:', error);
+			isWaitingForSignature = false;
 			status = 'error';
 
 			// Handle different error types
@@ -287,7 +294,9 @@
 					<div class="deploying-section">
 						<Loader2 size={48} class="spinning" />
 						<h3>Deploying Contract...</h3>
-						{#if steps.some((s) => s.inProgress)}
+						{#if isWaitingForSignature}
+							<p>Please confirm transaction in your wallet...</p>
+						{:else if steps.some((s) => s.inProgress)}
 							<p>Processing transaction on blockchain...</p>
 						{:else if steps.every((s) => s.completed)}
 							<p>Finalizing deployment...</p>

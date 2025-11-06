@@ -45,6 +45,7 @@
 
 	let currentStep = $state<DeploymentStep>('funding');
 	let isProcessing = $state(false);
+	let isWaitingForSignature = $state(false); // Waiting for user to sign in wallet
 	let errorMessage = $state<string | null>(null);
 	let fundingTxHash = $state<string | null>(null);
 	let deploymentTxHash = $state<string | null>(null);
@@ -57,6 +58,7 @@
 		if (show) {
 			currentStep = 'funding';
 			isProcessing = false;
+			isWaitingForSignature = false;
 			errorMessage = null;
 			fundingTxHash = null;
 			deploymentTxHash = null;
@@ -99,6 +101,7 @@
 		}
 
 		isProcessing = true;
+		isWaitingForSignature = true;
 		errorMessage = null;
 
 		try {
@@ -109,6 +112,8 @@
 				data: '0x'
 			});
 
+			// User signed, transaction sent
+			isWaitingForSignature = false;
 			fundingTxHash = hash;
 
 			// Wait for transaction confirmation
@@ -118,6 +123,7 @@
 			currentStep = 'deploying';
 		} catch (error) {
 			console.error('Funding failed:', error);
+			isWaitingForSignature = false;
 			currentStep = 'error';
 
 			// Provide user-friendly error messages
@@ -317,14 +323,16 @@
 					<div class="step-content">
 						<div class="info-card">
 							<h3>Step 1: Fund the Deployer</h3>
-							{#if isProcessing}
+							{#if isWaitingForSignature}
+								<p>Please confirm the transaction in your wallet...</p>
+							{:else if isProcessing}
 								<p>Processing transaction on blockchain...</p>
 							{:else if fundingTxHash}
 								<p>Funding transaction confirmed! Proceeding to deployment...</p>
 							{:else}
 								<p>
-									To deploy the CREATE2 Proxy, we need to send <strong>{FUNDING_AMOUNT} ETH</strong> to
-									the deployer address.
+									To deploy the CREATE2 Proxy, we need to send <strong>{FUNDING_AMOUNT} ETH</strong>
+									to the deployer address.
 								</p>
 							{/if}
 
@@ -397,11 +405,11 @@
 						<div class="info-card">
 							<h3>Step 2: Deploy the Contract</h3>
 							{#if isProcessing}
-								<p>Processing transaction on blockchain...</p>
+								<p>Sending deployment transaction to blockchain...</p>
 							{:else if deploymentTxHash}
 								<p>Deployment transaction confirmed! Finalizing...</p>
 							{:else}
-								<p>Now we'll deploy the CREATE2 Proxy contract using a pre-signed transaction.</p>
+								<p>Ready to deploy the CREATE2 Proxy contract using a pre-signed transaction.</p>
 							{/if}
 
 							<div class="detail-row">
