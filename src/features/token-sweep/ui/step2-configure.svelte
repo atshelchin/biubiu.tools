@@ -19,11 +19,14 @@
 
 	const connectStore = useConnectStore();
 
-	// Dependency check state
-	let checks = $state<DependencyCheck[]>([]);
-	let summary = $state<DependencyCheckSummary | null>(null);
-	let isChecking = $state(false);
-	let hasChecked = $state(false);
+	// Import shared module-level state - all component instances automatically share this
+	import { step2State } from '../stores/step2-state.svelte';
+
+	// Use $derived for easier access in template
+	let checks = $derived(step2State.checks);
+	let summary = $derived(step2State.summary);
+	let isChecking = $derived(step2State.isChecking);
+	let hasChecked = $derived(step2State.hasChecked);
 
 	// Contract deployment modal state
 	let showDeploymentModal = $state(false);
@@ -44,8 +47,8 @@
 		}
 
 		console.log('[Step2] Starting dependency checks for', currentNetwork.name);
-		isChecking = true;
-		hasChecked = false;
+		step2State.isChecking = true;
+		step2State.hasChecked = false;
 
 		try {
 			// For now, we'll use hardcoded contract addresses
@@ -62,14 +65,20 @@
 			);
 
 			console.log('[Step2] Dependency check results:', results);
-			checks = results;
-			summary = calculateCheckSummary(results);
-			console.log('[Step2] Calculated summary:', summary);
-			hasChecked = true;
+
+			// Update shared state - force new references for Svelte reactivity
+			step2State.checks = [...results];
+
+			// Force new object reference for summary
+			const newSummary = calculateCheckSummary(results);
+			step2State.summary = { ...newSummary };
+
+			console.log('[Step2] Calculated summary:', step2State.summary);
+			step2State.hasChecked = true;
 		} catch (error) {
 			console.error('[Step2] Failed to run dependency checks:', error);
 		} finally {
-			isChecking = false;
+			step2State.isChecking = false;
 		}
 	}
 
@@ -83,9 +92,9 @@
 	// Reset checks when network changes
 	$effect(() => {
 		if (connectStore.currentChainId) {
-			hasChecked = false;
-			checks = [];
-			summary = null;
+			step2State.hasChecked = false;
+			step2State.checks = [];
+			step2State.summary = null;
 		}
 	});
 
