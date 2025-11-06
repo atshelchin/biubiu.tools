@@ -110,7 +110,7 @@
 	// 创建步骤管理器
 	const stepManager = createStepManager([
 		{ label: 'Connect Wallet', description: 'Link your Web3 wallet' },
-		{ label: 'Configure', description: 'Set up your preferences' },
+		{ label: 'Check Dependencies', description: 'Verify network and contracts' },
 		{ label: 'Complete', description: 'Finish setup' }
 	]);
 

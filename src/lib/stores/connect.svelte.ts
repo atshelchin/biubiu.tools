@@ -7,6 +7,8 @@ import {
 } from '@shelchin/ethereum-connectors';
 import { mainnet } from 'viem/chains';
 import type { Chain } from 'viem';
+import { createPublicClient, createWalletClient, custom, http } from 'viem';
+import type { Address, Hash, TransactionReceipt } from 'viem';
 import { createWalletManager } from '$lib/utils/wallet-manager';
 import { getContext, setContext } from 'svelte';
 
@@ -54,9 +56,19 @@ export function createConnectStore(config: ConnectStoreConfig) {
 	const isConnecting = $derived(connectionState.isConnecting);
 	const address = $derived(connectionState.address);
 	const connectorIcon = $derived(connectionState.connector?.icon);
+	const connectorId = $derived(connectionState.connector?.id);
+	const connectorName = $derived(connectionState.connector?.name);
 	const availableConnectors = $derived(walletManager.getConnectors());
 	const currentChainId = $derived(connectionState.chainId);
 	let networks = $state(networkManager.getAllNetworks());
+
+	// Get enabled networks
+	const enabledNetworks = $derived(() => {
+		const namespace = config.storageKey || 'default';
+		return networks.filter((network) =>
+			networkManager.isNetworkEnabled(namespace, network.chainId)
+		);
+	});
 
 	// Get enabled networks as viem chains
 	function getEnabledChains() {
@@ -363,6 +375,206 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		}
 	}
 
+	// Update wallet's network RPC configuration
+	async function updateWalletNetwork(chainId: number) {
+		if (!isConnected || !connectionState.connector) {
+			throw new Error('Wallet not connected');
+		}
+
+		const network = enabledNetworks().find((n) => n.chainId === chainId);
+		if (!network) {
+			throw new Error('Network not found or not enabled');
+		}
+
+		const provider = await connectionState.connector.getProvider();
+		if (!provider || !provider.request) {
+			throw new Error('Provider not available');
+		}
+
+		// Build wallet_addEthereumChain parameters
+		const chainIdHex = `0x${chainId.toString(16)}`;
+		const params = {
+			chainId: chainIdHex,
+			chainName: network.name,
+			nativeCurrency: {
+				name: network.symbol,
+				symbol: network.symbol,
+				decimals: 18
+			},
+			rpcUrls: network.rpcEndpoints.map((rpc) => rpc.url),
+			blockExplorerUrls: network.blockExplorer ? [network.blockExplorer] : undefined
+		};
+
+		try {
+			// Try to add/update the network in wallet
+			await provider.request({
+				method: 'wallet_addEthereumChain',
+				params: [params]
+			});
+			return true;
+		} catch (error) {
+			console.error('Failed to update wallet network:', error);
+			throw error;
+		}
+	}
+
+	// Transaction methods
+	async function sendTransaction(params: {
+		to: Address;
+		value: bigint;
+		data: `0x${string}`;
+		gas?: bigint;
+	}): Promise<Hash> {
+		if (!isConnected || !connectionState.connector) {
+			throw new Error('Wallet not connected');
+		}
+		console.log('send', params.to, params.value, params.data);
+
+		if (!currentChainId) {
+			throw new Error('No chain connected');
+		}
+
+		const connector = connectionState.connector;
+		const provider = await connector.getProvider();
+
+		if (!provider) {
+			throw new Error('Provider not available');
+		}
+
+		// Get current network from enabled networks
+		const network = enabledNetworks().find((n) => n.chainId === currentChainId);
+		if (!network) {
+			throw new Error('Current network not found or not enabled');
+		}
+
+		console.log({ network });
+		// Build chain object from network
+		const chain = {
+			id: network.chainId,
+			name: network.name,
+			nativeCurrency: {
+				name: network.symbol,
+				symbol: network.symbol,
+				decimals: 18
+			},
+			rpcUrls: {
+				default: {
+					http: [network.rpcEndpoints[0].url]
+				}
+			}
+		} as const;
+		console.log({ chain });
+		// Create wallet client using the provider
+		// Note: Using custom transport with MetaMask provider
+		// MetaMask may cache block/nonce data, so errors like "BlockOutOfRangeError"
+		// may occur if the network was reset
+		const walletClient = createWalletClient({
+			chain,
+			transport: custom(provider),
+			// Disable caching to always get fresh data
+			cacheTime: 0
+		});
+
+		console.log({ walletClient, provider, address });
+
+		// Send transaction with explicit gas limit if gas estimation fails
+		const hash = await walletClient.sendTransaction({
+			account: address as Address,
+			to: params.to,
+			value: params.value,
+			data: params.data,
+			gas: params.gas || BigInt(21000) // Default to basic transfer gas limit
+		});
+
+		return hash;
+	}
+
+	async function waitForTransaction(hash: Hash): Promise<TransactionReceipt> {
+		if (!currentChainId) {
+			throw new Error('No chain connected');
+		}
+
+		// Get current network from enabled networks
+		const network = enabledNetworks().find((n) => n.chainId === currentChainId);
+		if (!network || network.rpcEndpoints.length === 0) {
+			throw new Error('Current network not found, not enabled, or no RPC endpoint available');
+		}
+
+		const rpcUrl = network.rpcEndpoints[0].url;
+
+		// Build chain object from network
+		const chain = {
+			id: network.chainId,
+			name: network.name,
+			nativeCurrency: {
+				name: network.symbol,
+				symbol: network.symbol,
+				decimals: 18
+			},
+			rpcUrls: {
+				default: {
+					http: [rpcUrl]
+				}
+			}
+		} as const;
+
+		// Create public client
+		const publicClient = createPublicClient({
+			chain,
+			transport: http(rpcUrl)
+		});
+
+		// Wait for transaction receipt
+		const receipt = await publicClient.waitForTransactionReceipt({
+			hash
+		});
+
+		return receipt;
+	}
+
+	async function sendRawTransaction(signedTx: `0x${string}`): Promise<Hash> {
+		if (!currentChainId) {
+			throw new Error('No chain connected');
+		}
+
+		// Get current network from enabled networks
+		const network = enabledNetworks().find((n) => n.chainId === currentChainId);
+		if (!network || network.rpcEndpoints.length === 0) {
+			throw new Error('Current network not found, not enabled, or no RPC endpoint available');
+		}
+
+		const rpcUrl = network.rpcEndpoints[0].url;
+
+		// Build chain object from network
+		const chain = {
+			id: network.chainId,
+			name: network.name,
+			nativeCurrency: {
+				name: network.symbol,
+				symbol: network.symbol,
+				decimals: 18
+			},
+			rpcUrls: {
+				default: {
+					http: [rpcUrl]
+				}
+			}
+		} as const;
+
+		// Create public client for sending raw transaction
+		const publicClient = createPublicClient({
+			chain,
+			transport: http(rpcUrl)
+		});
+
+		// Send raw transaction
+		const hash = await publicClient.sendRawTransaction({
+			serializedTransaction: signedTx
+		});
+
+		return hash;
+	}
+
 	const store = {
 		// Reactive state
 		get isConnected() {
@@ -376,6 +588,12 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		},
 		get connectorIcon() {
 			return connectorIcon;
+		},
+		get connectorId() {
+			return connectorId;
+		},
+		get connectorName() {
+			return connectorName;
 		},
 		get availableConnectors() {
 			return availableConnectors;
@@ -420,7 +638,13 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		setCurrentNetwork,
 		// Account management
 		getAccounts,
-		switchAccount
+		switchAccount,
+		// Network update
+		updateWalletNetwork,
+		// Transaction methods
+		sendTransaction,
+		waitForTransaction,
+		sendRawTransaction
 	};
 
 	setContext(CONNECT_STORE_KEY, store);
