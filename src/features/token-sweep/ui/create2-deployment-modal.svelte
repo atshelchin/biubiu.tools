@@ -317,10 +317,16 @@
 					<div class="step-content">
 						<div class="info-card">
 							<h3>Step 1: Fund the Deployer</h3>
-							<p>
-								To deploy the CREATE2 Proxy, we need to send <strong>{FUNDING_AMOUNT} ETH</strong> to
-								the deployer address.
-							</p>
+							{#if isProcessing}
+								<p>Processing transaction on blockchain...</p>
+							{:else if fundingTxHash}
+								<p>Funding transaction confirmed! Proceeding to deployment...</p>
+							{:else}
+								<p>
+									To deploy the CREATE2 Proxy, we need to send <strong>{FUNDING_AMOUNT} ETH</strong> to
+									the deployer address.
+								</p>
+							{/if}
 
 							<div class="detail-row">
 								<span class="label">Network:</span>
@@ -390,7 +396,13 @@
 					<div class="step-content">
 						<div class="info-card">
 							<h3>Step 2: Deploy the Contract</h3>
-							<p>Now we'll deploy the CREATE2 Proxy contract using a pre-signed transaction.</p>
+							{#if isProcessing}
+								<p>Processing transaction on blockchain...</p>
+							{:else if deploymentTxHash}
+								<p>Deployment transaction confirmed! Finalizing...</p>
+							{:else}
+								<p>Now we'll deploy the CREATE2 Proxy contract using a pre-signed transaction.</p>
+							{/if}
 
 							<div class="detail-row">
 								<span class="label">Contract Address:</span>
