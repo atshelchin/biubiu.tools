@@ -168,9 +168,9 @@
 
 	{#snippet footer()}
 		{#if stepManager.currentStep === 1}
-			<Step1Connect section="footer" />
+			<Step1Connect section="footer" {stepManager} />
 		{:else if stepManager.currentStep === 2}
-			<Step2Configure section="footer" />
+			<Step2Configure section="footer" {stepManager} />
 		{:else if stepManager.currentStep === 3}
 			<Step3Complete section="footer" />
 		{/if}
