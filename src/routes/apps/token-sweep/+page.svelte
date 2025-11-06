@@ -18,8 +18,8 @@
 
 	const i18n = useI18n();
 
-	// Structured data for Google rich snippets
-	const structuredData = {
+	// Structured data for Google rich snippets - WebApplication
+	const webAppData = {
 		'@context': 'https://schema.org',
 		'@type': 'WebApplication',
 		name: 'Token Sweep',
@@ -51,6 +51,61 @@
 			'Real-time transaction tracking'
 		]
 	};
+
+	// HowTo Schema - Shows step-by-step guide in Google search results
+	const howToData = {
+		'@context': 'https://schema.org',
+		'@type': 'HowTo',
+		name: 'How to Batch Transfer ERC20 Tokens with Token Sweep',
+		description:
+			'Step-by-step guide to sweep and consolidate multiple ERC20 tokens across wallets using BiuBiu Token Sweep tool.',
+		image: data.meta.image,
+		totalTime: 'PT5M', // ISO 8601 duration (5 minutes)
+		estimatedCost: {
+			'@type': 'MonetaryAmount',
+			currency: 'USD',
+			value: '0'
+		},
+		tool: [
+			{
+				'@type': 'HowToTool',
+				name: 'Web3 Wallet (MetaMask, WalletConnect, etc.)'
+			},
+			{
+				'@type': 'HowToTool',
+				name: 'ERC20 Tokens to transfer'
+			}
+		],
+		step: [
+			{
+				'@type': 'HowToStep',
+				position: 1,
+				name: 'Connect Your Wallet',
+				text: 'Click the "Connect Wallet" button and select your preferred Web3 wallet provider (MetaMask, WalletConnect, Coinbase Wallet, etc.). Approve the connection request in your wallet.',
+				url: data.meta.canonical + '#step-1',
+				image: data.meta.image
+			},
+			{
+				'@type': 'HowToStep',
+				position: 2,
+				name: 'Configure Token Transfer',
+				text: 'Select the blockchain network (Ethereum, Polygon, BSC, Arbitrum, Optimism, or Base). Choose which ERC20 tokens to transfer and enter the destination wallet address. Review gas estimates and approve the transaction settings.',
+				url: data.meta.canonical + '#step-2',
+				image: data.meta.image
+			},
+			{
+				'@type': 'HowToStep',
+				position: 3,
+				name: 'Complete Transfer',
+				text: 'Review the transaction summary including total tokens, gas fees, and destination address. Click "Execute Transfer" and confirm the transaction in your wallet. Wait for blockchain confirmation and view the transaction receipt.',
+				url: data.meta.canonical + '#step-3',
+				image: data.meta.image
+			}
+		]
+	};
+
+	// Combine both schemas
+	const structuredData = [webAppData, howToData];
 
 	// 创建步骤管理器
 	const stepManager = createStepManager([

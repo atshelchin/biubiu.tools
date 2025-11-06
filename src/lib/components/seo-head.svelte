@@ -7,7 +7,7 @@
 		type?: 'website' | 'article';
 		image?: string;
 		locale?: string;
-		structuredData?: Record<string, unknown>;
+		structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
 	}
 
 	let {
