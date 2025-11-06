@@ -179,9 +179,7 @@
 			}}
 		>
 			<GradientButton
-				onclick={connectStore.isConnecting
-					? connectStore.cancelConnection
-					: connectStore.openConnectorModal}
+				onclick={connectStore.isConnecting ? undefined : connectStore.openConnectorModal}
 			>
 				{connectStore.isConnecting ? i18n.t('wallet.connecting') : i18n.t('wallet.connect')}
 			</GradientButton>
