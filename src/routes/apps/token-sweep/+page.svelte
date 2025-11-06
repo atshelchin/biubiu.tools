@@ -1,15 +1,17 @@
 <script lang="ts">
-	import { createConnectStore, useConnectStore } from '$lib/stores/connect.svelte';
+	import { createConnectStore } from '$lib/stores/connect.svelte';
 	import { mainnet, polygon, arbitrum, optimism, base, bsc } from 'viem/chains';
 	import PageLayout from '$lib/components/page-layout.svelte';
 	import AppTitle from '$lib/components/ui/app-title.svelte';
-	import IconButton from '$lib/components/ui/icon-button.svelte';
-	import NetworkSettingsModal from '$lib/components/ui/network-settings-modal.svelte';
+	import NetworkSettingsButton from '$lib/components/ui/network-settings-button.svelte';
+	import ReferralButton from '$lib/components/ui/referral-button.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
-	import { Share2, Settings } from 'lucide-svelte';
 	import StepIndicator, { createStepManager } from '$lib/components/ui/step-indicator.svelte';
 	import StepControls from '$lib/components/ui/step-controls.svelte';
 	import { Step1Connect, Step2Configure, Step3Complete } from '@/features/token-sweep/ui';
+	import { initializeReferral } from '$lib/utils/referral';
+	import { onMount } from 'svelte';
+
 	const i18n = useI18n();
 
 	// 创建步骤管理器
@@ -29,22 +31,10 @@
 		storageKey: 'biubiu-tools-token-sweep'
 	});
 
-	const connectStore = useConnectStore();
-
-	let showNetworkSettings = $state(false);
-
-	function handleShareLink() {
-		const url = window.location.href;
-		navigator.clipboard.writeText(url);
-	}
-
-	function handleOpenSettings() {
-		showNetworkSettings = true;
-	}
-
-	function handleCloseSettings() {
-		showNetworkSettings = false;
-	}
+	// 初始化推荐系统
+	onMount(() => {
+		initializeReferral();
+	});
 </script>
 
 <PageLayout>
@@ -55,23 +45,8 @@
 				description={i18n.t('tools.token_sweep.description')}
 			/>
 			<div class="toolbar-actions">
-				<IconButton
-					icon={Settings}
-					label={i18n.t('tools.actions.settings')}
-					tooltip={i18n.t('tools.actions.settings_tooltip')}
-					variant="ghost"
-					size="sm"
-					onclick={handleOpenSettings}
-				/>
-				<IconButton
-					icon={Share2}
-					label={i18n.t('tools.actions.share_link')}
-					tooltip={i18n.t('tools.actions.share_tooltip')}
-					variant="ghost"
-					size="sm"
-					showSuccessIcon={true}
-					onclick={handleShareLink}
-				/>
+				<NetworkSettingsButton variant="ghost" size="sm" />
+				<ReferralButton variant="ghost" size="sm" />
 			</div>
 		</div>
 	{/snippet}
@@ -109,18 +84,6 @@
 			<Step3Complete section="content" />
 		{/if}
 	</div>
-
-	<!-- Network Settings Modal -->
-	<NetworkSettingsModal
-		open={showNetworkSettings}
-		networks={connectStore.networks}
-		currentChainId={connectStore.currentChainId}
-		onClose={handleCloseSettings}
-		onToggleNetwork={connectStore.toggleNetwork}
-		isNetworkEnabled={connectStore.isNetworkEnabled}
-		onSaveNetwork={connectStore.updateNetworkRpc}
-		onAddOrUpdateNetwork={connectStore.addOrUpdateNetwork}
-	/>
 </PageLayout>
 
 <style>

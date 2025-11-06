@@ -217,5 +217,17 @@
 			"error_symbol_required": "Currency symbol is required",
 			"error_rpc_required": "At least one RPC endpoint is required"
 		}
+	},
+	"referral": {
+		"title": "Referral Rewards",
+		"connect_first": "Connect Your Wallet First",
+		"connect_description": "Connect your wallet to generate your unique referral link and start earning 50% commission!",
+		"commission": "Commission",
+		"how_it_works": "How It Works",
+		"benefit_1": "Share your unique referral link with friends",
+		"benefit_2": "When they pay using BiuBiu Tools, you earn 50% commission",
+		"benefit_3": "Your referral link is valid for 90 days",
+		"your_link": "Your Referral Link",
+		"note": "Note: Once someone uses your referral link, their referral association lasts for 90 days. You'll earn 50% of all their payments during this period."
 	}
 }

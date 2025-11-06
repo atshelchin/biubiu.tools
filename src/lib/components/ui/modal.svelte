@@ -1,3 +1,13 @@
+<script lang="ts" module>
+	let baseZIndex = 1000;
+	let currentZIndex = baseZIndex;
+
+	export function getNextZIndex(): number {
+		currentZIndex += 10;
+		return currentZIndex;
+	}
+</script>
+
 <script lang="ts">
 	import { X } from '@lucide/svelte';
 
@@ -12,9 +22,14 @@
 
 	let { open = false, onClose, title, maxWidth = '400px', children, footer }: Props = $props();
 
+	let zIndex = $state(baseZIndex);
+
 	// Prevent body scroll when modal is open
 	$effect(() => {
 		if (open) {
+			// Get next z-index when modal opens to ensure it's on top
+			zIndex = getNextZIndex();
+
 			const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 			document.body.style.overflow = 'hidden';
 			document.body.style.paddingRight = `${scrollbarWidth}px`;
@@ -33,7 +48,7 @@
 {#if open}
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
-	<div class="modal-overlay" onclick={onClose}>
+	<div class="modal-overlay" style="z-index: {zIndex}" onclick={onClose}>
 		<!-- svelte-ignore a11y_click_events_have_key_events -->
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div class="modal-content" style="max-width: {maxWidth}" onclick={(e) => e.stopPropagation()}>
@@ -68,7 +83,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		z-index: 1000;
 		backdrop-filter: blur(4px);
 	}
 

@@ -200,5 +200,17 @@
 			"error_symbol_required": "货币符号不能为空",
 			"error_rpc_required": "至少需要一个 RPC 端点"
 		}
+	},
+	"referral": {
+		"title": "推荐奖励",
+		"connect_first": "请先连接钱包",
+		"connect_description": "连接钱包后即可生成您的专属推荐链接，开始赚取 50% 佣金！",
+		"commission": "佣金",
+		"how_it_works": "如何运作",
+		"benefit_1": "分享您的专属推荐链接给好友",
+		"benefit_2": "当他们使用 BiuBiu 工具付费时，您将获得 50% 佣金",
+		"benefit_3": "您的推荐链接有效期为 90 天",
+		"your_link": "您的推荐链接",
+		"note": "注意：一旦有人使用了您的推荐链接，他们的推荐关联将持续 90 天。在此期间，您将获得他们所有付款的 50% 佣金。"
 	}
 }
