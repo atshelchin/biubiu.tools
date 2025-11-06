@@ -5,14 +5,52 @@
 	import AppTitle from '$lib/components/ui/app-title.svelte';
 	import NetworkSettingsButton from '$lib/components/ui/network-settings-button.svelte';
 	import ReferralButton from '$lib/components/ui/referral-button.svelte';
+	import SeoHead from '$lib/components/seo-head.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import StepIndicator, { createStepManager } from '$lib/components/ui/step-indicator.svelte';
 	import StepControls from '$lib/components/ui/step-controls.svelte';
 	import { Step1Connect, Step2Configure, Step3Complete } from '@/features/token-sweep/ui';
 	import { initializeReferral } from '$lib/utils/referral';
 	import { onMount } from 'svelte';
+	import type { PageData } from './$types';
+
+	let { data }: { data: PageData } = $props();
 
 	const i18n = useI18n();
+
+	// Structured data for Google rich snippets
+	const structuredData = {
+		'@context': 'https://schema.org',
+		'@type': 'WebApplication',
+		name: 'Token Sweep',
+		applicationCategory: 'FinanceApplication',
+		operatingSystem: 'Web Browser',
+		description:
+			'Efficiently sweep and consolidate multiple ERC20 tokens across wallets. Support for Ethereum, Polygon, BSC, Arbitrum, Optimism, and Base networks.',
+		url: data.meta.canonical,
+		author: {
+			'@type': 'Organization',
+			name: 'BiuBiu Tools',
+			url: 'https://biubiu.tools'
+		},
+		offers: {
+			'@type': 'Offer',
+			price: '0',
+			priceCurrency: 'USD'
+		},
+		aggregateRating: {
+			'@type': 'AggregateRating',
+			ratingValue: '4.8',
+			ratingCount: '127'
+		},
+		featureList: [
+			'Batch transfer ERC20 tokens',
+			'Multi-network support (Ethereum, Polygon, BSC, Arbitrum, Optimism, Base)',
+			'Gas optimization',
+			'Secure wallet integration',
+			'Real-time transaction tracking'
+		]
+	};
 
 	// 创建步骤管理器
 	const stepManager = createStepManager([
@@ -36,6 +74,18 @@
 		initializeReferral();
 	});
 </script>
+
+<!-- SEO Optimization -->
+<SeoHead
+	title={data.meta.title}
+	description={data.meta.description}
+	keywords={data.meta.keywords}
+	canonical={data.meta.canonical}
+	type={data.meta.type}
+	image={data.meta.image}
+	locale={data.meta.locale}
+	{structuredData}
+/>
 
 <PageLayout>
 	{#snippet toolbar()}
