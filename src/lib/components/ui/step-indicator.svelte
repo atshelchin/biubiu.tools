@@ -1,28 +1,90 @@
-<script lang="ts">
-	interface Step {
+<script lang="ts" module>
+	export interface Step {
 		label: string;
 		description?: string;
 	}
 
-	interface Props {
+	export interface StepManager {
 		steps: Step[];
-		currentStep: number; // 1-based index
+		currentStep: number;
+		next: () => void;
+		prev: () => void;
+		goTo: (step: number) => void;
+		reset: () => void;
+		isFirst: boolean;
+		isLast: boolean;
+		canGoNext: boolean;
+		canGoPrev: boolean;
 	}
 
-	let { steps, currentStep }: Props = $props();
+	/**
+	 * Create a step manager for StepIndicator
+	 * @param steps - Array of step definitions
+	 * @param initialStep - Initial step (1-based, defaults to 1)
+	 */
+	export function createStepManager(steps: Step[], initialStep: number = 1): StepManager {
+		let currentStep = $state(initialStep);
 
-	const isVertical = $derived(steps.length > 3);
+		return {
+			get steps() {
+				return steps;
+			},
+			get currentStep() {
+				return currentStep;
+			},
+			next() {
+				if (currentStep < steps.length) {
+					currentStep++;
+				}
+			},
+			prev() {
+				if (currentStep > 1) {
+					currentStep--;
+				}
+			},
+			goTo(step: number) {
+				if (step >= 1 && step <= steps.length) {
+					currentStep = step;
+				}
+			},
+			reset() {
+				currentStep = 1;
+			},
+			get isFirst() {
+				return currentStep === 1;
+			},
+			get isLast() {
+				return currentStep === steps.length;
+			},
+			get canGoNext() {
+				return currentStep < steps.length;
+			},
+			get canGoPrev() {
+				return currentStep > 1;
+			}
+		};
+	}
+</script>
+
+<script lang="ts">
+	interface Props {
+		manager: StepManager;
+	}
+
+	let { manager }: Props = $props();
+
+	const isVertical = $derived(manager.steps.length > 3);
 
 	function getStepStatus(index: number) {
 		const stepNumber = index + 1;
-		if (stepNumber < currentStep) return 'completed';
-		if (stepNumber === currentStep) return 'active';
+		if (stepNumber < manager.currentStep) return 'completed';
+		if (stepNumber === manager.currentStep) return 'active';
 		return 'pending';
 	}
 </script>
 
 <div class="step-indicator" class:vertical={isVertical}>
-	{#each steps as step, index (index)}
+	{#each manager.steps as step, index (index)}
 		{@const status = getStepStatus(index)}
 		{@const stepNumber = index + 1}
 
@@ -63,7 +125,7 @@
 			</div>
 
 			<!-- 连接线 -->
-			{#if index < steps.length - 1}
+			{#if index < manager.steps.length - 1}
 				<div class="step-connector" class:completed={status === 'completed'}></div>
 			{/if}
 		</div>

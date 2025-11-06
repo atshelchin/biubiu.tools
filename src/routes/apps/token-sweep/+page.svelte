@@ -7,9 +7,17 @@
 	import NetworkSettingsModal from '$lib/components/ui/network-settings-modal.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import { Share2, Settings } from 'lucide-svelte';
-
+	import StepIndicator, { createStepManager } from '$lib/components/ui/step-indicator.svelte';
+	import StepControls from '$lib/components/ui/step-controls.svelte';
 	import StepIndicatorExample from '@/lib/components/ui/step-indicator.example.svelte';
 	const i18n = useI18n();
+
+	// 创建步骤管理器
+	const stepManager = createStepManager([
+		{ label: 'Connect Wallet', description: 'Link your Web3 wallet' },
+		{ label: 'Configure', description: 'Set up your preferences' },
+		{ label: 'Complete', description: 'Finish setup' }
+	]);
 
 	// 初始化 wallet connect store，配置此 app 需要的 chains
 	createConnectStore({
@@ -106,7 +114,9 @@
 
 	<!-- 主要内容 -->
 	<div class="page-content">
-		<StepIndicatorExample />
+		<StepIndicator manager={stepManager} />
+		<StepControls manager={stepManager} />
+
 		<h1>Token Sweep</h1>
 		<p>Sweep tokens from multiple addresses to a single destination address.</p>
 
@@ -142,6 +152,10 @@
 <style>
 	.page-content {
 		padding: var(--space-4);
+	}
+
+	.page-content :global(.step-controls) {
+		margin: var(--space-6) 0;
 	}
 
 	.page-content h1 {
