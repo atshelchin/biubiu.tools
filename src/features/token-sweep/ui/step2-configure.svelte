@@ -104,16 +104,26 @@
 	// Check if ready to continue
 	const isReadyToContinue = $derived(summary?.allPassed === true);
 
+	// Debug logging
+	$effect(() => {
+		console.log('[Step2] Dependency check summary:', {
+			summary,
+			checks: checks.map((c) => ({ name: c.name, status: c.status })),
+			isReadyToContinue
+		});
+	});
+
 	// Handle continue to next step
 	function handleContinue() {
-		console.log('handleContinue called', { stepManager, isReadyToContinue });
+		console.log('handleContinue called', { stepManager, isReadyToContinue, summary });
 		if (stepManager && isReadyToContinue) {
 			console.log('Calling stepManager.next()');
 			stepManager.next();
 		} else {
 			console.log('Cannot continue:', {
 				hasStepManager: !!stepManager,
-				isReady: isReadyToContinue
+				isReady: isReadyToContinue,
+				summary
 			});
 		}
 	}

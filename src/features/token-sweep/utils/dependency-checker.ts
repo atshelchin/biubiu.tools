@@ -370,11 +370,12 @@ export function calculateCheckSummary(checks: DependencyCheck[]): DependencyChec
 	const warnings = checks.filter((c) => c.status === 'warning').length;
 	const failed = checks.filter((c) => c.status === 'error').length;
 
+	// Allow warnings, only block on failures
 	return {
 		total,
 		passed,
 		warnings,
 		failed,
-		allPassed: failed === 0 && warnings === 0
+		allPassed: failed === 0
 	};
 }
