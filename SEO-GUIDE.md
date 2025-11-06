@@ -19,6 +19,7 @@
 **文件**: `/src/routes/sitemap.xml/+server.ts`
 
 **功能**:
+
 - 自动扫描所有 `+page.svelte` 文件
 - 支持多语言 (en, zh, ja, fr)
 - 添加 hreflang 标签（Google 国际化最佳实践）
@@ -27,6 +28,7 @@
 **访问**: https://biubiu.tools/sitemap.xml
 
 **示例输出**:
+
 ```xml
 <url>
   <loc>https://biubiu.tools/apps/token-sweep</loc>
@@ -46,6 +48,7 @@
 **文件**: `/src/routes/robots.txt/+server.ts`
 
 **功能**:
+
 - 允许所有搜索引擎爬虫
 - 引用 sitemap.xml
 - 缓存优化
@@ -59,11 +62,13 @@
 **文件**: `/src/lib/components/widgets/lang-toggle.svelte`
 
 **功能**:
+
 - 切换语言时自动更新 URL
 - 使用 `history.replaceState`（无刷新）
 - 保留查询参数（如推荐链接 `?ref=`）
 
 **示例**:
+
 ```
 https://biubiu.tools/apps/token-sweep
 → 切换到中文
@@ -77,22 +82,24 @@ https://biubiu.tools/zh/apps/token-sweep
 **组件**: `/src/lib/components/seo-head.svelte`
 
 **包含**:
+
 - Primary Meta: title, description, keywords, canonical
 - Open Graph (Facebook/LinkedIn 分享)
 - Twitter Card (Twitter 分享)
 - 其他 SEO 标签: robots, googlebot, language
 
 **示例使用**:
+
 ```svelte
 <SeoHead
-  title="Page Title | BiuBiu Tools"
-  description="Page description..."
-  keywords="keyword1, keyword2"
-  canonical="https://biubiu.tools/page"
-  type="website"
-  image="/og-image.png"
-  locale="en_US"
-  structuredData={schemaData}
+	title="Page Title | BiuBiu Tools"
+	description="Page description..."
+	keywords="keyword1, keyword2"
+	canonical="https://biubiu.tools/page"
+	type="website"
+	image="/og-image.png"
+	locale="en_US"
+	structuredData={schemaData}
 />
 ```
 
@@ -103,32 +110,36 @@ https://biubiu.tools/zh/apps/token-sweep
 **文件**: `/src/routes/apps/token-sweep/+page.svelte`
 
 #### 5.1 WebApplication Schema
+
 告诉 Google 这是一个 Web 应用：
+
 ```json
 {
-  "@type": "WebApplication",
-  "name": "Token Sweep",
-  "applicationCategory": "FinanceApplication",
-  "offers": { "price": "0", "priceCurrency": "USD" },
-  "aggregateRating": { "ratingValue": "4.8", "ratingCount": "127" }
+	"@type": "WebApplication",
+	"name": "Token Sweep",
+	"applicationCategory": "FinanceApplication",
+	"offers": { "price": "0", "priceCurrency": "USD" },
+	"aggregateRating": { "ratingValue": "4.8", "ratingCount": "127" }
 }
 ```
 
 #### 5.2 HowTo Schema（步骤式展示）⭐ NEW
+
 在 Google 搜索结果中显示步骤卡片：
+
 ```json
 {
-  "@type": "HowTo",
-  "name": "How to Batch Transfer ERC20 Tokens",
-  "totalTime": "PT5M",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "position": 1,
-      "name": "Connect Your Wallet",
-      "text": "Click the Connect Wallet button..."
-    }
-  ]
+	"@type": "HowTo",
+	"name": "How to Batch Transfer ERC20 Tokens",
+	"totalTime": "PT5M",
+	"step": [
+		{
+			"@type": "HowToStep",
+			"position": 1,
+			"name": "Connect Your Wallet",
+			"text": "Click the Connect Wallet button..."
+		}
+	]
 }
 ```
 
@@ -159,6 +170,7 @@ How to Batch Transfer ERC20 Tokens
 ### 什么是 Rich Snippets？
 
 Rich Snippets（丰富片段）是 Google 在搜索结果中显示的增强信息，包括：
+
 - 评分星级 ⭐⭐⭐⭐⭐
 - 价格信息 💰
 - 步骤式指南 📝
@@ -176,10 +188,12 @@ Rich Snippets（丰富片段）是 Google 在搜索结果中显示的增强信�
 ### 支持的 Schema 类型
 
 我们已实现:
+
 - ✅ **WebApplication**: 工具/应用信息
 - ✅ **HowTo**: 步骤式教程
 
 其他推荐 Schema:
+
 - **FAQPage**: 常见问题（适合帮助页面）
 - **VideoObject**: 视频教程
 - **Article**: 博客文章
@@ -199,12 +213,14 @@ Rich Snippets（丰富片段）是 Google 在搜索结果中显示的增强信�
 ```
 
 **步骤**:
+
 1. 输入 URL: `https://biubiu.tools/apps/token-sweep`
 2. 点击"Test URL"
 3. 查看检测到的 Schema 类型
 4. 查看预览效果
 
 **预期结果**:
+
 - ✅ Detected: WebApplication
 - ✅ Detected: HowTo
 - ✅ 0 Errors
@@ -221,6 +237,7 @@ Rich Snippets（丰富片段）是 Google 在搜索结果中显示的增强信�
 ```
 
 **步骤**:
+
 1. 访问页面
 2. 右键查看源代码
 3. 复制 `<script type="application/ld+json">` 中的 JSON
@@ -238,6 +255,7 @@ Rich Snippets（丰富片段）是 Google 在搜索结果中显示的增强信�
 ```
 
 **步骤**:
+
 1. 添加网站: `biubiu.tools`
 2. 验证所有权（DNS/HTML 文件）
 3. 提交 Sitemap: `https://biubiu.tools/sitemap.xml`
@@ -255,6 +273,7 @@ Rich Snippets（丰富片段）是 Google 在搜索结果中显示的增强信�
 ```
 
 **步骤**:
+
 1. 输入 URL
 2. 点击"Debug"
 3. 查看预览
@@ -280,25 +299,25 @@ Rich Snippets（丰富片段）是 Google 在搜索结果中显示的增强信�
 
 ```typescript
 const faqSchema = {
-  '@type': 'FAQPage',
-  'mainEntity': [
-    {
-      '@type': 'Question',
-      'name': 'What is Token Sweep?',
-      'acceptedAnswer': {
-        '@type': 'Answer',
-        'text': 'Token Sweep is a tool that...'
-      }
-    },
-    {
-      '@type': 'Question',
-      'name': 'How much does it cost?',
-      'acceptedAnswer': {
-        '@type': 'Answer',
-        'text': 'Token Sweep is completely free...'
-      }
-    }
-  ]
+	'@type': 'FAQPage',
+	mainEntity: [
+		{
+			'@type': 'Question',
+			name: 'What is Token Sweep?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Token Sweep is a tool that...'
+			}
+		},
+		{
+			'@type': 'Question',
+			name: 'How much does it cost?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Token Sweep is completely free...'
+			}
+		}
+	]
 };
 ```
 
@@ -312,26 +331,26 @@ const faqSchema = {
 
 ```typescript
 const breadcrumbSchema = {
-  '@type': 'BreadcrumbList',
-  'itemListElement': [
-    {
-      '@type': 'ListItem',
-      'position': 1,
-      'name': 'Home',
-      'item': 'https://biubiu.tools'
-    },
-    {
-      '@type': 'ListItem',
-      'position': 2,
-      'name': 'Apps',
-      'item': 'https://biubiu.tools/apps'
-    },
-    {
-      '@type': 'ListItem',
-      'position': 3,
-      'name': 'Token Sweep'
-    }
-  ]
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{
+			'@type': 'ListItem',
+			position: 1,
+			name: 'Home',
+			item: 'https://biubiu.tools'
+		},
+		{
+			'@type': 'ListItem',
+			position: 2,
+			name: 'Apps',
+			item: 'https://biubiu.tools/apps'
+		},
+		{
+			'@type': 'ListItem',
+			position: 3,
+			name: 'Token Sweep'
+		}
+	]
 };
 ```
 
@@ -343,14 +362,14 @@ const breadcrumbSchema = {
 
 ```typescript
 const videoSchema = {
-  '@type': 'VideoObject',
-  'name': 'How to Use Token Sweep',
-  'description': 'Tutorial video...',
-  'thumbnailUrl': 'https://biubiu.tools/video-thumb.jpg',
-  'uploadDate': '2025-11-06',
-  'duration': 'PT3M45S', // 3 minutes 45 seconds
-  'contentUrl': 'https://youtube.com/watch?v=...',
-  'embedUrl': 'https://youtube.com/embed/...'
+	'@type': 'VideoObject',
+	name: 'How to Use Token Sweep',
+	description: 'Tutorial video...',
+	thumbnailUrl: 'https://biubiu.tools/video-thumb.jpg',
+	uploadDate: '2025-11-06',
+	duration: 'PT3M45S', // 3 minutes 45 seconds
+	contentUrl: 'https://youtube.com/watch?v=...',
+	embedUrl: 'https://youtube.com/embed/...'
 };
 ```
 
@@ -361,16 +380,19 @@ const videoSchema = {
 Google 将页面速度作为排名因素：
 
 **测试工具**:
+
 ```
 🔗 https://pagespeed.web.dev/
 ```
 
 **优化目标**:
+
 - ✅ LCP (Largest Contentful Paint) < 2.5s
 - ✅ FID (First Input Delay) < 100ms
 - ✅ CLS (Cumulative Layout Shift) < 0.1
 
 **优化建议**:
+
 - 使用 WebP 图片格式
 - 延迟加载图片 (`loading="lazy"`)
 - 压缩 JavaScript/CSS
@@ -381,11 +403,13 @@ Google 将页面速度作为排名因素：
 ### 5. 内部链接优化
 
 **最佳实践**:
+
 - 使用描述性锚文本（不要用"点击这里"）
 - 链接相关页面
 - 创建 sitemap 页面
 
 **示例**:
+
 ```html
 <!-- ❌ 不好 -->
 <a href="/apps/token-sweep">点击这里</a>
@@ -399,17 +423,19 @@ Google 将页面速度作为排名因素：
 ### 6. 图片 SEO
 
 **最佳实践**:
+
 ```html
 <img
-  src="/token-sweep.webp"
-  alt="Token Sweep - Batch transfer ERC20 tokens"
-  width="1200"
-  height="630"
-  loading="lazy"
+	src="/token-sweep.webp"
+	alt="Token Sweep - Batch transfer ERC20 tokens"
+	width="1200"
+	height="630"
+	loading="lazy"
 />
 ```
 
 **要点**:
+
 - ✅ 使用描述性文件名
 - ✅ 添加 alt 属性
 - ✅ 指定宽高（防止 CLS）
@@ -424,17 +450,20 @@ Google 将页面速度作为排名因素：
 **位置**: `/static/og-token-sweep.png`
 
 **尺寸**:
+
 - 推荐: 1200x630 像素
 - 最小: 600x315 像素
 - 比例: 1.91:1
 
 **内容**:
+
 - 工具名称
 - 简短描述
 - 视觉元素
 - BiuBiu Tools logo
 
 **工具**:
+
 - Figma (设计)
 - Canva (在线设计)
 - OG Image Generator (自动生成)
@@ -450,17 +479,17 @@ Google 将页面速度作为排名因素：
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = ({ url }) => {
-  return {
-    meta: {
-      title: 'Your Page Title | BiuBiu Tools',
-      description: 'Detailed description (150-160 chars)...',
-      keywords: 'keyword1, keyword2, keyword3',
-      canonical: url.origin + url.pathname,
-      type: 'website' as const,
-      image: `${url.origin}/og-your-page.png`,
-      locale: 'en_US'
-    }
-  };
+	return {
+		meta: {
+			title: 'Your Page Title | BiuBiu Tools',
+			description: 'Detailed description (150-160 chars)...',
+			keywords: 'keyword1, keyword2, keyword3',
+			canonical: url.origin + url.pathname,
+			type: 'website' as const,
+			image: `${url.origin}/og-your-page.png`,
+			locale: 'en_US'
+		}
+	};
 };
 ```
 
@@ -470,29 +499,29 @@ export const load: PageLoad = ({ url }) => {
 
 ```svelte
 <script lang="ts">
-  import SeoHead from '$lib/components/seo-head.svelte';
-  import type { PageData } from './$types';
+	import SeoHead from '$lib/components/seo-head.svelte';
+	import type { PageData } from './$types';
 
-  let { data }: { data: PageData } = $props();
+	let { data }: { data: PageData } = $props();
 
-  // Optional: Add structured data
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'WebApplication',
-    'name': 'Your Tool Name',
-    // ... more fields
-  };
+	// Optional: Add structured data
+	const structuredData = {
+		'@context': 'https://schema.org',
+		'@type': 'WebApplication',
+		name: 'Your Tool Name'
+		// ... more fields
+	};
 </script>
 
 <SeoHead
-  title={data.meta.title}
-  description={data.meta.description}
-  keywords={data.meta.keywords}
-  canonical={data.meta.canonical}
-  type={data.meta.type}
-  image={data.meta.image}
-  locale={data.meta.locale}
-  {structuredData}
+	title={data.meta.title}
+	description={data.meta.description}
+	keywords={data.meta.keywords}
+	canonical={data.meta.canonical}
+	type={data.meta.type}
+	image={data.meta.image}
+	locale={data.meta.locale}
+	{structuredData}
 />
 
 <!-- Your page content -->
@@ -523,6 +552,7 @@ static/og-your-page.png  # 1200x630 pixels
 ### Google Search Console
 
 定期检查：
+
 - **Coverage**: 哪些页面被索引
 - **Performance**: 点击率、展示次数、排名
 - **Enhancements**: Structured Data 错误
@@ -531,6 +561,7 @@ static/og-your-page.png  # 1200x630 pixels
 ### Analytics
 
 使用 Google Analytics 4 追踪：
+
 - 访问来源（搜索、直接、推荐）
 - 关键词排名
 - 跳出率
@@ -541,6 +572,7 @@ static/og-your-page.png  # 1200x630 pixels
 ## 总结
 
 ✅ **已实现的 SEO 功能**:
+
 1. 自动 sitemap.xml（多语言 + hreflang）
 2. Robots.txt
 3. 语言切换 URL 更新
@@ -549,6 +581,7 @@ static/og-your-page.png  # 1200x630 pixels
 6. HowTo Schema（步骤式展示）
 
 ✅ **推荐额外实践**:
+
 1. FAQPage Schema（常见问题）
 2. BreadcrumbList（面包屑）
 3. VideoObject（视频教程）

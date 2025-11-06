@@ -69,12 +69,6 @@
 {/if}
 
 <style>
-	.step-sidebar,
-	.step-footer,
-	.step-content {
-		padding: var(--space-4);
-	}
-
 	h2 {
 		font-size: var(--text-2xl);
 		font-weight: var(--font-bold);

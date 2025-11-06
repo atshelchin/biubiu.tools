@@ -11,7 +11,7 @@
         "@codemirror/theme-one-dark": "^6.1.3",
         "@codemirror/view": "^6.38.2",
         "@lucide/svelte": "^0.552.0",
-        "@shelchin/ethereum-connectors": "0.0.1-dev.20251106005858.1e904cb",
+        "@shelchin/ethereum-connectors": "0.0.1-dev.20251106040039.5fa58a7",
         "@shelchin/i18n": "0.0.3-dev.20251016115159.4e313f3",
         "class-variance-authority": "^0.7.1",
         "codemirror": "^6.0.2",
@@ -330,7 +330,7 @@
 
     "@scure/bip39": ["@scure/bip39@1.6.0", "", { "dependencies": { "@noble/hashes": "~1.8.0", "@scure/base": "~1.2.5" } }, "sha512-+lF0BbLiJNwVlev4eKelw1WWLaiKXw7sSl8T6FvBlWkdX+94aGJ4o8XjUdlyhTCjd8c+B3KT3JfS8P0bLRNU6A=="],
 
-    "@shelchin/ethereum-connectors": ["@shelchin/ethereum-connectors@0.0.1-dev.20251106005858.1e904cb", "", { "dependencies": { "@base-org/account": "^2.4.0", "@noble/curves": "^2.0.1", "@scure/bip32": "^2.0.1", "@walletconnect/ethereum-provider": "^2.22.4", "qr-code-styling": "^1.9.2", "viem": "^2.38.4" } }, "sha512-/BQraIZQWRF8gQHlLZWVkBj59+YHwq/+2QVKJN63Kr2llOQSLHj3T2m/y+W4IOV0briV4rAHOOn0P+ocR7Yx9A=="],
+    "@shelchin/ethereum-connectors": ["@shelchin/ethereum-connectors@0.0.1-dev.20251106040039.5fa58a7", "", { "dependencies": { "@base-org/account": "^2.4.0", "@noble/curves": "^2.0.1", "@scure/bip32": "^2.0.1", "@walletconnect/ethereum-provider": "^2.22.4", "qr-code-styling": "^1.9.2", "viem": "^2.38.4" } }, "sha512-LZHwUktO/sEQO+xjh5ZesvjNEQKYgsh8+GLXGXO+A9pkcZNLbpxUcB/Bl63fhBfg7i/AzNoliq4N0jbJl15dbg=="],
 
     "@shelchin/i18n": ["@shelchin/i18n@0.0.3-dev.20251016115159.4e313f3", "", { "peerDependencies": { "svelte": "^5.0.0" } }, "sha512-6b3uYV9p21/KVY40Fco9OuWBN88hEI0gGN0LLxG5ZpaJwoQT5WxoXe8qKLvBDv8iX/8rIkad+olMqf4uog5tdw=="],
 

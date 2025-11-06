@@ -27,6 +27,16 @@ export function createWalletManager(config: WalletManagerConfig) {
 		storageKey = 'biubiu-tools'
 	} = config;
 
+	// Chain icon URLs mapping
+	const chainIcons: Record<number, string> = {
+		1: 'https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg', // Ethereum
+		137: 'https://icons.llamao.fi/icons/chains/rsz_polygon.jpg', // Polygon
+		8453: 'https://icons.llamao.fi/icons/chains/rsz_base.jpg', // Base
+		56: 'https://icons.llamao.fi/icons/chains/rsz_binance.jpg', // BSC
+		42161: 'https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg', // Arbitrum
+		10: 'https://icons.llamao.fi/icons/chains/rsz_optimism.jpg' // Optimism
+	};
+
 	// 转换为 NetworkConfig
 	const builtInNetworks: NetworkConfig[] = chains.map((chain) => ({
 		chainId: chain.id,
@@ -39,6 +49,7 @@ export function createWalletManager(config: WalletManagerConfig) {
 			}
 		],
 		blockExplorer: chain.blockExplorers?.default.url,
+		iconUrl: chainIcons[chain.id],
 		isCustom: false,
 		isBuiltIn: true
 	}));

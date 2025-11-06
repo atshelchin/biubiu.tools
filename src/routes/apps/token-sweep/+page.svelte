@@ -158,9 +158,9 @@
 
 	{#snippet sidebar()}
 		{#if stepManager.currentStep === 1}
-			<Step1Connect section="sidebar" />
+			<Step1Connect section="sidebar" {stepManager} />
 		{:else if stepManager.currentStep === 2}
-			<Step2Configure section="sidebar" />
+			<Step2Configure section="sidebar" {stepManager} />
 		{:else if stepManager.currentStep === 3}
 			<Step3Complete section="sidebar" />
 		{/if}
@@ -179,12 +179,14 @@
 	<!-- 主要内容 -->
 	<div class="page-content">
 		<StepIndicator manager={stepManager} />
-		<StepControls manager={stepManager} />
+		{#if typeof window !== 'undefined' && window.location.hostname === 'localhost'}
+			<StepControls manager={stepManager} />
+		{/if}
 
 		{#if stepManager.currentStep === 1}
-			<Step1Connect section="content" />
+			<Step1Connect section="content" {stepManager} />
 		{:else if stepManager.currentStep === 2}
-			<Step2Configure section="content" />
+			<Step2Configure section="content" {stepManager} />
 		{:else if stepManager.currentStep === 3}
 			<Step3Complete section="content" />
 		{/if}

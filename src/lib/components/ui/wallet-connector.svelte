@@ -203,6 +203,32 @@
 	onClose={connectStore.closeModal}
 	title={i18n.t('wallet.select_wallet')}
 >
+	<!-- Connection Error Display -->
+	{#if connectStore.connectionError}
+		<div class="connection-error-banner">
+			<div class="error-header">
+				<div class="error-icon">⚠️</div>
+				<h4>{connectStore.connectionError.message}</h4>
+				<button class="error-close" onclick={connectStore.clearConnectionError} type="button">
+					×
+				</button>
+			</div>
+			{#if connectStore.connectionError.details}
+				<p class="error-details">{connectStore.connectionError.details}</p>
+			{/if}
+			{#if connectStore.connectionError.solutions}
+				<div class="error-solutions">
+					<strong>Solutions:</strong>
+					<ul>
+						{#each connectStore.connectionError.solutions as solution, index (index)}
+							<li>{solution}</li>
+						{/each}
+					</ul>
+				</div>
+			{/if}
+		</div>
+	{/if}
+
 	<div class="connector-list">
 		{#each connectStore.availableConnectors as connector (connector.id)}
 			<button class="connector-item" onclick={() => connectStore.connectWallet(connector)}>
@@ -405,6 +431,113 @@
 			opacity: 1;
 			transform: translateY(0);
 		}
+	}
+
+	/* Connection Error Banner */
+	.connection-error-banner {
+		margin-bottom: var(--space-4);
+		padding: var(--space-4);
+		background: hsla(0, 80%, 50%, 0.08);
+		border: 2px solid hsl(0, 80%, 50%);
+		border-radius: var(--radius-lg);
+	}
+
+	:global([data-theme='dark']) .connection-error-banner {
+		background: hsla(0, 80%, 60%, 0.12);
+		border-color: hsl(0, 80%, 60%);
+	}
+
+	.error-header {
+		display: flex;
+		align-items: flex-start;
+		gap: var(--space-2);
+		margin-bottom: var(--space-2);
+	}
+
+	.error-icon {
+		font-size: 1.5rem;
+		flex-shrink: 0;
+	}
+
+	.error-header h4 {
+		flex: 1;
+		font-size: var(--text-base);
+		font-weight: var(--font-semibold);
+		color: hsl(0, 80%, 40%);
+		margin: 0;
+	}
+
+	:global([data-theme='dark']) .error-header h4 {
+		color: hsl(0, 80%, 65%);
+	}
+
+	.error-close {
+		width: 24px;
+		height: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+		background: transparent;
+		border: none;
+		color: var(--gray-500);
+		font-size: 1.5rem;
+		line-height: 1;
+		cursor: pointer;
+		flex-shrink: 0;
+		transition: color 0.2s;
+	}
+
+	.error-close:hover {
+		color: hsl(0, 80%, 50%);
+	}
+
+	.error-details {
+		margin: 0 0 var(--space-3) 0;
+		padding-left: calc(1.5rem + var(--space-2));
+		font-size: var(--text-sm);
+		color: var(--gray-700);
+		line-height: 1.5;
+	}
+
+	:global([data-theme='dark']) .error-details {
+		color: var(--gray-300);
+	}
+
+	.error-solutions {
+		padding-left: calc(1.5rem + var(--space-2));
+		font-size: var(--text-sm);
+		color: var(--gray-700);
+	}
+
+	:global([data-theme='dark']) .error-solutions {
+		color: var(--gray-300);
+	}
+
+	.error-solutions strong {
+		display: block;
+		margin-bottom: var(--space-2);
+		color: hsl(0, 80%, 40%);
+		font-weight: var(--font-semibold);
+	}
+
+	:global([data-theme='dark']) .error-solutions strong {
+		color: hsl(0, 80%, 65%);
+	}
+
+	.error-solutions ul {
+		margin: 0;
+		padding-left: var(--space-5);
+		list-style-type: disc;
+	}
+
+	.error-solutions li {
+		margin-bottom: var(--space-1);
+		line-height: 1.5;
+	}
+
+	.error-solutions li:last-child {
+		margin-bottom: 0;
 	}
 
 	.connector-list {

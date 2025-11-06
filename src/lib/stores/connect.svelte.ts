@@ -2,7 +2,8 @@ import {
 	watchEIP6963Wallets,
 	EIP6963Connector,
 	type ConnectionState,
-	type Connector
+	type Connector,
+	type EIP6963ProviderDetail
 } from '@shelchin/ethereum-connectors';
 import { mainnet } from 'viem/chains';
 import type { Chain } from 'viem';
@@ -39,6 +40,12 @@ export function createConnectStore(config: ConnectStoreConfig) {
 	let showConnectorModal = $state(false);
 	let walletConnectUri = $state<string | undefined>();
 	let showWalletConnectModal = $state(false);
+	let isInitialized = $state(false);
+	let connectionError = $state<{
+		message: string;
+		details?: string;
+		solutions?: string[];
+	} | null>(null);
 	let unsubscribe: (() => void) | undefined;
 	let unwatchEIP6963: (() => void) | undefined;
 
@@ -51,6 +58,65 @@ export function createConnectStore(config: ConnectStoreConfig) {
 	const currentChainId = $derived(connectionState.chainId);
 	let networks = $state(networkManager.getAllNetworks());
 
+	// Get enabled networks as viem chains
+	function getEnabledChains() {
+		const namespace = config.storageKey || 'default';
+		return networks
+			.filter((network) => networkManager.isNetworkEnabled(namespace, network.chainId))
+			.map((network) => ({
+				id: network.chainId,
+				name: network.name,
+				nativeCurrency: {
+					name: network.symbol,
+					symbol: network.symbol,
+					decimals: 18
+				},
+				rpcUrls: {
+					default: {
+						http: network.rpcEndpoints
+							.filter((rpc) => rpc.isPrimary)
+							.map((rpc) => rpc.url)
+							.concat(network.rpcEndpoints.filter((rpc) => !rpc.isPrimary).map((rpc) => rpc.url))
+					}
+				},
+				blockExplorers: network.blockExplorer
+					? {
+							default: {
+								name: 'Explorer',
+								url: network.blockExplorer
+							}
+						}
+					: undefined
+			}));
+	}
+
+	// Store detected wallets for re-registration when networks change
+	let detectedWallets: EIP6963ProviderDetail[] = [];
+
+	// Register EIP6963 connectors with enabled networks
+	function registerEIP6963Connectors() {
+		if (detectedWallets.length === 0) return;
+
+		const enabledChains = getEnabledChains();
+
+		// Only register if there are enabled networks
+		if (enabledChains.length === 0) return;
+
+		const newConnectors = detectedWallets.map(
+			(wallet) =>
+				new EIP6963Connector({
+					chains: enabledChains as unknown as ConstructorParameters<
+						typeof EIP6963Connector
+					>[0]['chains'],
+					shimDisconnect: true,
+					providerDetail: wallet
+				})
+		);
+
+		// Clear existing connectors and register new ones
+		newConnectors.forEach((connector) => walletManager.registerConnector(connector));
+	}
+
 	// 初始化
 	async function initialize() {
 		// 订阅钱包状态变化
@@ -58,35 +124,31 @@ export function createConnectStore(config: ConnectStoreConfig) {
 			connectionState = state;
 		});
 
-		// 监听网络变化事件
+		// 监听网络变化事件 - 当网络启用状态改变时，重新注册连接器
 		networkManager.on('networkAdded', () => {
 			networks = networkManager.getAllNetworks();
+			registerEIP6963Connectors();
 		});
 		networkManager.on('networkUpdated', () => {
 			networks = networkManager.getAllNetworks();
+			registerEIP6963Connectors();
 		});
 		networkManager.on('networkRemoved', () => {
 			networks = networkManager.getAllNetworks();
+			registerEIP6963Connectors();
 		});
 
 		// 监听 EIP6963 钱包
-		// Note: Using unknown as intermediate type to handle viem version mismatch
 		unwatchEIP6963 = watchEIP6963Wallets((wallets) => {
-			const newConnectors = wallets.map(
-				(wallet) =>
-					new EIP6963Connector({
-						chains: config.chains as unknown as ConstructorParameters<
-							typeof EIP6963Connector
-						>[0]['chains'],
-						shimDisconnect: true,
-						providerDetail: wallet
-					})
-			);
-			newConnectors.forEach((connector) => walletManager.registerConnector(connector));
+			detectedWallets = wallets;
+			registerEIP6963Connectors();
 		});
 
 		// 自动连接
 		await walletManager.autoConnect();
+
+		// Mark as initialized after loading network preferences
+		isInitialized = true;
 	}
 
 	// 清理
@@ -95,9 +157,65 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		unwatchEIP6963?.();
 	}
 
+	// Parse connection error and create friendly message
+	function parseConnectionError(error: unknown, connector: Connector, chainId: number) {
+		console.error('Failed to connect wallet:', error);
+
+		if (error instanceof Error) {
+			const errorMessage = error.message;
+
+			// Chain not supported by connector
+			if (errorMessage.includes('is not supported by this connector')) {
+				const chainIdMatch = errorMessage.match(/Chain \[(\d+)\]/);
+				const connectorMatch = errorMessage.match(/connector \[(.*?)\]/);
+
+				const unsupportedChainId = chainIdMatch ? chainIdMatch[1] : chainId.toString();
+				const connectorName = connectorMatch ? connectorMatch[1] : connector.name;
+				const network = networks.find((n) => n.chainId === chainId);
+
+				connectionError = {
+					message: `${connectorName} doesn't support ${network?.name || `Chain ${unsupportedChainId}`}`,
+					details: `The wallet you selected cannot connect to ${network?.name || 'this network'}. Different wallets support different blockchain networks.`,
+					solutions: [
+						`Select a different network that ${connectorName} supports`,
+						'Try connecting with a different wallet that supports this network',
+						'Check the wallet documentation for supported networks'
+					]
+				};
+			}
+			// User rejected request
+			else if (errorMessage.includes('User rejected') || errorMessage.includes('rejected')) {
+				connectionError = {
+					message: 'Connection request was rejected',
+					details: 'You declined the wallet connection request.',
+					solutions: ['Click "Connect Wallet" again when you are ready to connect']
+				};
+			}
+			// Generic error
+			else {
+				connectionError = {
+					message: 'Failed to connect wallet',
+					details: errorMessage,
+					solutions: [
+						'Make sure your wallet extension is installed and unlocked',
+						'Try refreshing the page',
+						'Try a different wallet'
+					]
+				};
+			}
+		} else {
+			connectionError = {
+				message: 'An unexpected error occurred',
+				solutions: ['Please try again', 'Try refreshing the page']
+			};
+		}
+	}
+
 	// 连接钱包
 	async function connectWallet(connector: Connector) {
 		try {
+			// Clear any previous errors
+			connectionError = null;
 			showConnectorModal = false;
 
 			// 如果是 WalletConnect，显示自定义 QR 码模态框
@@ -118,9 +236,18 @@ export function createConnectStore(config: ConnectStoreConfig) {
 			showWalletConnectModal = false;
 			walletConnectUri = undefined;
 		} catch (error) {
-			console.error('Failed to connect wallet:', error);
 			showWalletConnectModal = false;
 			walletConnectUri = undefined;
+
+			// Get current chain ID for error message
+			const currentChainId =
+				networkManager.getCurrentChainId(config.storageKey || 'biubiu-tools') || mainnet.id;
+
+			// Parse error and show friendly message
+			parseConnectionError(error, connector, currentChainId);
+
+			// Re-open connector modal so user can try another wallet
+			showConnectorModal = true;
 		}
 	}
 
@@ -152,6 +279,12 @@ export function createConnectStore(config: ConnectStoreConfig) {
 	// 关闭模态框
 	function closeModal() {
 		showConnectorModal = false;
+		connectionError = null; // Clear error when closing modal
+	}
+
+	// 清除连接错误
+	function clearConnectionError() {
+		connectionError = null;
 	}
 
 	// 关闭 WalletConnect 模态框
@@ -176,7 +309,12 @@ export function createConnectStore(config: ConnectStoreConfig) {
 
 	function toggleNetwork(chainId: number, enabled: boolean) {
 		const namespace = config.storageKey || 'default';
-		return networkManager.toggleNetwork(namespace, chainId, enabled);
+		const result = networkManager.toggleNetwork(namespace, chainId, enabled);
+		// Trigger update to refresh networks state
+		networks = networkManager.getAllNetworks();
+		// Re-register connectors with updated enabled networks
+		registerEIP6963Connectors();
+		return result;
 	}
 
 	function isNetworkEnabled(chainId: number): boolean {
@@ -200,6 +338,11 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		blockExplorer?: string;
 	}) {
 		networkManager.addOrUpdateCustomNetwork(network);
+	}
+
+	function setCurrentNetwork(chainId: number) {
+		const namespace = config.storageKey || 'default';
+		networkManager.setCurrentNetwork(namespace, chainId);
 	}
 
 	// 账户管理方法
@@ -252,6 +395,12 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		get networks() {
 			return networks;
 		},
+		get isInitialized() {
+			return isInitialized;
+		},
+		get connectionError() {
+			return connectionError;
+		},
 		// Methods
 		initialize,
 		cleanup,
@@ -261,12 +410,14 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		openConnectorModal,
 		closeModal,
 		closeWalletConnectModal,
+		clearConnectionError,
 		// Network management
 		switchNetwork,
 		toggleNetwork,
 		isNetworkEnabled,
 		updateNetworkRpc,
 		addOrUpdateNetwork,
+		setCurrentNetwork,
 		// Account management
 		getAccounts,
 		switchAccount

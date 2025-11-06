@@ -1,15 +1,34 @@
 <script lang="ts">
+	import WalletConnectionStatus from '@/lib/components/ui/wallet-connection-status.svelte';
+	import type { StepManager } from '@/lib/components/ui/step-indicator.svelte';
+
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
+		stepManager?: StepManager;
 	}
 
-	let { section }: Props = $props();
+	let { section, stepManager }: Props = $props();
+
+	// Go back to step 1 to change wallet/network
+	function goBackToStep1() {
+		if (stepManager) {
+			stepManager.goTo(1);
+		}
+	}
 </script>
 
 {#if section === 'sidebar'}
 	<div class="step-sidebar">
 		<h3>Step 2: Configure</h3>
 		<p>Set up your sweep preferences</p>
+
+		<WalletConnectionStatus
+			showChangeButton={true}
+			onChangeWallet={goBackToStep1}
+			class="wallet-status-section"
+		/>
+
+		<!-- Config Options -->
 		<div class="config-options">
 			<div class="option-item">
 				<span class="option-label">Addresses:</span>
@@ -44,12 +63,6 @@
 {/if}
 
 <style>
-	.step-sidebar,
-	.step-footer,
-	.step-content {
-		padding: var(--space-4);
-	}
-
 	h2 {
 		font-size: var(--text-2xl);
 		font-weight: var(--font-bold);
@@ -80,6 +93,11 @@
 
 	:global([data-theme='dark']) p {
 		color: var(--gray-400);
+	}
+
+	/* Wallet Status Section */
+	:global(.wallet-status-section) {
+		margin: var(--space-4) 0;
 	}
 
 	.config-options {
