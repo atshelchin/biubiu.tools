@@ -86,13 +86,9 @@
 		// Save selected network to localStorage (via NetworkManager)
 		connectStore.setCurrentNetwork(chainId);
 
-		// If wallet is connected, try to switch network
+		// If wallet is connected and network changed, disconnect to require reconnection
 		if (connectStore.isConnected && connectStore.currentChainId !== chainId) {
-			try {
-				await connectStore.switchNetwork(chainId);
-			} catch (error) {
-				console.error('Failed to switch network:', error);
-			}
+			await connectStore.disconnect();
 		}
 	}
 
