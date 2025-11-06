@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { useI18n } from '@shelchin/i18n/svelte';
+	import { page } from '$app/stores';
 
 	const i18n = useI18n();
 
@@ -59,6 +60,28 @@
 		selectedLang = code;
 		i18n.setLocale(code);
 		isOpen = false;
+
+		// Update URL bar with new locale without navigation
+		const currentUrl = new URL($page.url);
+		const pathname = currentUrl.pathname;
+		const segments = pathname.split('/').filter(Boolean);
+
+		// Check if first segment is a locale code
+		const supportedLocales = ['en', 'ja', 'zh', 'fr'];
+		let newPathname: string;
+
+		if (segments.length > 0 && supportedLocales.includes(segments[0])) {
+			// Replace existing locale
+			segments[0] = code;
+			newPathname = '/' + segments.join('/');
+		} else {
+			// Add locale prefix
+			newPathname = '/' + code + pathname;
+		}
+
+		// Update address bar without reloading
+		const newUrl = newPathname + currentUrl.search + currentUrl.hash;
+		window.history.replaceState(window.history.state, '', newUrl);
 	};
 
 	// Close dropdown when clicking outside
