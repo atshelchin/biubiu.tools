@@ -20,6 +20,15 @@
 	import WalletList from '$lib/components/ui/wallet-list.svelte';
 	import SimpleCodeEditor from '$lib/components/widgets/SimpleCodeEditor.svelte';
 	import ConfirmDialog from '$lib/components/ui/confirm-dialog.svelte';
+	import { spawn, spawnPool, getOptimalWorkerCount } from '$lib/utils/worker-pool';
+	import type {
+		WalletGenerationRequest,
+		WalletGenerationResult
+	} from '$lib/workers/wallet-import.worker';
+	import type {
+		PrivateKeyImportRequest,
+		PrivateKeyImportResult
+	} from '$lib/workers/private-key-import.worker';
 
 	const connectStore = useConnectStore();
 
@@ -36,6 +45,7 @@
 	let useLeadingZeros = $state(true);
 	let privateKeysText = $state('');
 	let isGenerating = $state(false);
+	let generationProgress = $state(0);
 	let errorMessage = $state('');
 
 	// Confirm dialog state
@@ -75,31 +85,37 @@
 		step4State.clearWallets();
 
 		isGenerating = true;
+		generationProgress = 0;
 		errorMessage = '';
 
 		try {
-			let result;
+			// Prepare request data
+			let requestData: WalletGenerationRequest;
+			let totalAddresses = 0;
 
 			if (pathType === 'sequential') {
-				// Sequential mode
+				// Sequential mode validation
 				if (startIndex < 0 || endIndex < startIndex) {
 					errorMessage = 'Invalid address range';
 					isGenerating = false;
 					return;
 				}
 
-				if (endIndex - startIndex + 1 > 10000) {
+				totalAddresses = endIndex - startIndex + 1;
+
+				if (totalAddresses > 10000) {
 					errorMessage = 'Range too large (max 10000 addresses at once)';
 					isGenerating = false;
 					return;
 				}
 
-				result = await deriveAddressesFromMnemonic({
+				requestData = {
 					mnemonic: mnemonicText.trim(),
-					pathType: 'sequential',
+					pathType: 'sequential' as const,
 					startIndex,
-					endIndex
-				});
+					endIndex,
+					batchSize: 50
+				};
 			} else {
 				// Date mode
 				const startDate = `${startYear}-01-01`;
@@ -115,30 +131,82 @@
 					dateFormat = useLeadingZeros ? 'yyyymmdd' : 'yyyymdd';
 				}
 
-				result = await deriveAddressesFromMnemonic({
+				requestData = {
 					mnemonic: mnemonicText.trim(),
-					pathType: 'date',
+					pathType: 'date' as const,
 					startDate,
 					endDate,
-					dateFormat
-				});
+					dateFormat,
+					batchSize: 50
+				};
 			}
 
-			if (result.success) {
-				step4State.addWallets(result.wallets);
-				// Don't clear mnemonic - user might want to generate more addresses with different ranges
+			// Use parallel workers for large batches (>500 addresses)
+			const useParallel = totalAddresses > 500;
+
+			if (useParallel && pathType === 'sequential') {
+				// Parallel execution with multiple workers
+				const result = await spawnPool<
+					WalletGenerationRequest,
+					WalletGenerationResult,
+					WalletGenerationResult
+				>('$lib/workers/wallet-import.worker.ts', {
+					data: requestData,
+					workerCount: 'auto', // Auto-detect optimal worker count
+					splitTask: (data, workerIndex, totalWorkers) => {
+						// Split the index range across workers
+						const range = data.endIndex! - data.startIndex!;
+						const rangePerWorker = Math.ceil(range / totalWorkers);
+						const workerStart = data.startIndex! + workerIndex * rangePerWorker;
+						const workerEnd = Math.min(workerStart + rangePerWorker, data.endIndex!);
+
+						return {
+							...data,
+							startIndex: workerStart,
+							endIndex: workerEnd
+						};
+					},
+					mergeResults: (results) => {
+						// Merge all wallet results
+						const allWallets = results.flatMap((r) => r.wallets);
+						return {
+							wallets: allWallets,
+							progress: 100,
+							done: true
+						};
+					},
+					onProgress: (p) => (generationProgress = p)
+				});
+
+				if (result.error) {
+					errorMessage = result.error;
+				} else {
+					step4State.addWallets(result.wallets);
+				}
 			} else {
-				errorMessage = result.error || 'Failed to generate addresses';
+				// Single worker execution
+				const result = await spawn<WalletGenerationRequest, WalletGenerationResult>(
+					'$lib/workers/wallet-import.worker.ts'
+				).execute(requestData, {
+					onProgress: (p) => (generationProgress = p)
+				});
+
+				if (result.error) {
+					errorMessage = result.error;
+				} else {
+					step4State.addWallets(result.wallets);
+				}
 			}
 		} catch (error) {
 			console.error('Generate addresses error:', error);
 			errorMessage = error instanceof Error ? error.message : 'Failed to generate addresses';
 		} finally {
 			isGenerating = false;
+			generationProgress = 0;
 		}
 	}
 
-	function handleImportPrivateKeys() {
+	async function handleImportPrivateKeys() {
 		if (!privateKeysText.trim()) {
 			errorMessage = 'Please enter private keys';
 			return;
@@ -154,18 +222,87 @@
 			return;
 		}
 
+		isGenerating = true;
+		generationProgress = 0;
 		errorMessage = '';
 
-		const result = importFromPrivateKeys(lines);
+		try {
+			// Use parallel workers for large batches (>200 keys)
+			const useParallel = lines.length > 200;
 
-		if (result.success) {
-			step4State.addWallets(result.wallets);
-			// Don't clear private keys - user might want to add more wallets
-			if (result.error) {
-				errorMessage = `Imported ${result.wallets.length} wallets. Some errors: ${result.error}`;
+			if (useParallel) {
+				// Parallel execution with multiple workers
+				const result = await spawnPool<
+					PrivateKeyImportRequest,
+					PrivateKeyImportResult,
+					PrivateKeyImportResult
+				>('$lib/workers/private-key-import.worker.ts', {
+					data: { keys: lines, batchSize: 100 },
+					workerCount: 'auto', // Auto-detect optimal worker count
+					splitTask: (data, workerIndex, totalWorkers) => {
+						// Split the keys array across workers
+						const keysPerWorker = Math.ceil(data.keys.length / totalWorkers);
+						const startIdx = workerIndex * keysPerWorker;
+						const endIdx = Math.min(startIdx + keysPerWorker, data.keys.length);
+						const workerKeys = data.keys.slice(startIdx, endIdx);
+
+						return {
+							keys: workerKeys,
+							batchSize: data.batchSize
+						};
+					},
+					mergeResults: (results) => {
+						// Merge all wallet results
+						const allWallets = results.flatMap((r) => r.wallets);
+						const allInvalidKeys = results.flatMap((r) => r.invalidKeys);
+
+						return {
+							wallets: allWallets,
+							invalidKeys: allInvalidKeys,
+							progress: 100,
+							done: true
+						};
+					},
+					onProgress: (p) => (generationProgress = p)
+				});
+
+				if (result.error) {
+					errorMessage = result.error;
+				} else {
+					step4State.addWallets(result.wallets);
+					if (result.invalidKeys.length > 0) {
+						errorMessage = `Imported ${result.wallets.length} wallets. ${result.invalidKeys.length} invalid keys skipped.`;
+					}
+				}
+			} else {
+				// Single worker execution
+				const result = await spawn<PrivateKeyImportRequest, PrivateKeyImportResult>(
+					'$lib/workers/private-key-import.worker.ts'
+				).execute(
+					{
+						keys: lines,
+						batchSize: 100
+					},
+					{
+						onProgress: (p) => (generationProgress = p)
+					}
+				);
+
+				if (result.error) {
+					errorMessage = result.error;
+				} else {
+					step4State.addWallets(result.wallets);
+					if (result.invalidKeys.length > 0) {
+						errorMessage = `Imported ${result.wallets.length} wallets. ${result.invalidKeys.length} invalid keys skipped.`;
+					}
+				}
 			}
-		} else {
-			errorMessage = result.error || 'Failed to import private keys';
+		} catch (error) {
+			console.error('Import private keys error:', error);
+			errorMessage = error instanceof Error ? error.message : 'Failed to import private keys';
+		} finally {
+			isGenerating = false;
+			generationProgress = 0;
 		}
 	}
 
@@ -362,14 +499,15 @@
 			</div>
 
 			<button
-				class="btn-primary"
+				class="btn-primary btn-with-progress"
 				onclick={handleGenerateAddresses}
 				disabled={isGenerating}
 				style="width: 100%; margin-top: var(--space-3);"
 			>
 				{#if isGenerating}
 					<Loader2 size={18} class="spinning" />
-					Generating...
+					Generating... ({Math.round(generationProgress)}%)
+					<div class="btn-progress-bar" style="width: {generationProgress}%"></div>
 				{:else}
 					🔍 Generate Address List
 				{/if}
@@ -387,11 +525,18 @@
 				rows={20}
 			/>
 			<button
-				class="btn-primary"
+				class="btn-primary btn-with-progress"
 				onclick={handleImportPrivateKeys}
+				disabled={isGenerating}
 				style="width: 100%; margin-top: var(--space-2);"
 			>
-				➕ Batch Add Wallets
+				{#if isGenerating}
+					<Loader2 size={18} class="spinning" />
+					Importing... ({Math.round(generationProgress)}%)
+					<div class="btn-progress-bar" style="width: {generationProgress}%"></div>
+				{:else}
+					➕ Batch Add Wallets
+				{/if}
 			</button>
 		</div>
 	{/if}
@@ -498,67 +643,7 @@
 		color: var(--gray-300);
 	}
 
-	.form-textarea,
-	.form-input {
-		width: 100%;
-		padding: var(--space-3);
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-sm);
-		font-size: var(--text-base);
-		font-family: 'Courier New', monospace;
-		background: var(--white);
-		color: var(--gray-900);
-		transition: all 0.2s;
-	}
-
-	.form-textarea {
-		resize: none;
-	}
-
-	:global([data-theme='dark']) .form-textarea,
-	:global([data-theme='dark']) .form-input {
-		background: var(--gray-700);
-		color: var(--gray-100);
-		border-color: var(--gray-600);
-	}
-	.form-textarea:focus,
-	.form-input:focus {
-		outline: none;
-		border-color: var(--color-primary);
-		box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-	}
-
-	/* Scrollbar styling for textarea */
-	.form-textarea::-webkit-scrollbar {
-		width: 8px;
-	}
-
-	.form-textarea::-webkit-scrollbar-track {
-		background: var(--gray-200);
-		border-radius: var(--radius-md);
-	}
-
-	.form-textarea::-webkit-scrollbar-thumb {
-		background: var(--gray-400);
-		border-radius: var(--radius-md);
-		transition: background 0.2s;
-	}
-
-	.form-textarea::-webkit-scrollbar-thumb:hover {
-		background: var(--gray-500);
-	}
-
-	:global([data-theme='dark']) .form-textarea::-webkit-scrollbar-track {
-		background: var(--gray-800);
-	}
-
-	:global([data-theme='dark']) .form-textarea::-webkit-scrollbar-thumb {
-		background: var(--gray-600);
-	}
-
-	:global([data-theme='dark']) .form-textarea::-webkit-scrollbar-thumb:hover {
-		background: var(--gray-500);
-	}
+	/* Removed unused textarea styles - now using SimpleCodeEditor component */
 
 	.error-banner {
 		display: flex;
@@ -635,6 +720,27 @@
 	}
 	.btn-text-danger:hover {
 		color: hsl(0, 80%, 40%);
+	}
+
+	/* Button with progress bar */
+	.btn-with-progress {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.btn-progress-bar {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		background: rgba(255, 255, 255, 0.2);
+		transition: width 0.3s ease;
+		z-index: 0;
+	}
+
+	.btn-with-progress > * {
+		position: relative;
+		z-index: 1;
 	}
 
 	:global(.spinning) {
