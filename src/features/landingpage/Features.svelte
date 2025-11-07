@@ -24,6 +24,7 @@
 		color: string;
 		features?: string[];
 		highlight?: boolean;
+		alpha?: boolean;
 	}
 
 	// Tools data with full i18n - reactive to language changes
@@ -36,7 +37,8 @@
 			status: 'active',
 			color: '#10B981',
 			features: ['Multi-chain Support', 'Batch Processing', 'Gas Optimized'],
-			highlight: true
+			highlight: true,
+			alpha: true
 		},
 		{
 			icon: SendHorizontal,
@@ -46,7 +48,8 @@
 			status: 'active',
 			color: '#F59E0B',
 			features: ['Equal or Custom Amounts', 'CSV Import Ready', 'Real-time Preview'],
-			highlight: false
+			highlight: false,
+			alpha: true
 		},
 		{
 			icon: ScanSearch,
@@ -56,7 +59,8 @@
 			status: 'active',
 			color: '#3B82F6',
 			features: ['Multi-Wallet Scanning', 'CSV/JSON Export', 'Read-only Operations'],
-			highlight: false
+			highlight: false,
+			alpha: true
 		},
 		{
 			icon: Zap,
@@ -70,7 +74,8 @@
 				t('tools.call_master.feature_2'),
 				t('tools.call_master.feature_3')
 			],
-			highlight: false
+			highlight: false,
+			alpha: false
 		}
 	]);
 
@@ -133,6 +138,10 @@
 
 					{#if tool.highlight}
 						<div class="highlight-badge">{t('tools.available_now')}</div>
+					{/if}
+
+					{#if tool.alpha}
+						<div class="alpha-badge">Alpha</div>
 					{/if}
 
 					<!-- Premium icon with animation -->
@@ -415,6 +424,27 @@
 		background: var(--color-success);
 		color: white;
 		box-shadow: 0 2px 8px -2px color-mix(in srgb, var(--color-success) 50%, transparent);
+	}
+
+	/* Alpha badge */
+	.alpha-badge {
+		position: absolute;
+		top: var(--space-3);
+		left: var(--space-3);
+		padding: var(--space-1) var(--space-3);
+		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		color: white;
+		font-size: 10px;
+		font-weight: var(--font-bold);
+		border-radius: var(--radius-md);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		z-index: 10;
+		box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+	}
+
+	:global(.light) .alpha-badge {
+		box-shadow: 0 2px 8px rgba(102, 126, 234, 0.5);
 	}
 
 	/* Coming soon ribbon */
