@@ -21,7 +21,7 @@
 		step3State.selectedTokenIds = newSelection;
 	}
 
-	function handleRemoveCustomToken(tokenId: string, _chainId: number) {
+	function handleRemoveCustomToken(tokenId: string) {
 		// Remove from selection if it was selected
 		if (step3State.selectedTokenIds.has(tokenId)) {
 			const newSelection = new SvelteSet(step3State.selectedTokenIds);

@@ -14,7 +14,9 @@
 		const tokens: (NativeToken | ERC20Token)[] = [];
 
 		// Add native token
-		const currentNetwork = connectStore.networks.find((n) => n.chainId === connectStore.currentChainId);
+		const currentNetwork = connectStore.networks.find(
+			(n) => n.chainId === connectStore.currentChainId
+		);
 		if (currentNetwork) {
 			const nativeToken: NativeToken = {
 				id: `${connectStore.currentChainId}:native`,

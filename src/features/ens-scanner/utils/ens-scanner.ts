@@ -103,7 +103,7 @@ export async function scanENSName(name: string, rpcUrl: string): Promise<ENSName
 				functionName: 'ownerOf',
 				args: [tokenId]
 			});
-		} catch (error) {
+		} catch {
 			// If ownerOf fails, the name might be in grace period or expired
 			owner = undefined;
 		}
@@ -146,7 +146,7 @@ export async function scanENSName(name: string, rpcUrl: string): Promise<ENSName
 				functionName: 'resolver',
 				args: [node as `0x${string}`]
 			});
-		} catch (error) {
+		} catch {
 			resolver = undefined;
 		}
 

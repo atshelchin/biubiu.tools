@@ -7,18 +7,16 @@ import { wordlist } from '@scure/bip39/wordlists/english.js';
 import { HDKey } from '@scure/bip32';
 import { privateKeyToAccount } from 'viem/accounts';
 import type { InputSourceType, GeneratedWallet, WalletGeneratorConfig } from '../types/wallet';
-
+import { Buffer } from 'buffer';
 /**
  * Generate seed from secret text using SHA-256
  */
 async function generateSeedFromSecret(secret: string): Promise<Uint8Array> {
 	const encoder = new TextEncoder();
 	const data = encoder.encode(secret);
-	const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+	await crypto.subtle.digest('SHA-256', data);
 	// Generate mnemonic from hash
-	const hashArray = new Uint8Array(hashBuffer);
 	// Use first 16 bytes (128 bits) for 12-word mnemonic
-	// const entropy = hashArray.slice(0, 16);
 	const mnemonic = generateMnemonic(wordlist, 128);
 	return mnemonicToSeed(mnemonic);
 }

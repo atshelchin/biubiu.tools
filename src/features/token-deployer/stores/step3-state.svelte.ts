@@ -1,9 +1,7 @@
 import type { TokenAdvancedParams } from '../types/token';
 import type { Address } from 'viem';
 
-interface Step3State extends TokenAdvancedParams {
-	// All properties from TokenAdvancedParams
-}
+type Step3State = TokenAdvancedParams;
 
 function createStep3State(): Step3State {
 	// Supply management

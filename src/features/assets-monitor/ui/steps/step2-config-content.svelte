@@ -4,6 +4,7 @@
 	import { monitorState } from '../../stores/monitor-state.svelte';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import { isAddress } from 'viem';
+	import { SvelteSet } from 'svelte/reactivity';
 	import type { AssetType } from '../../types/assets';
 
 	const connectStore = useConnectStore();
@@ -13,7 +14,7 @@
 	let walletAddress = $state('');
 	let startBlock = $state('');
 	let endBlock = $state('');
-	let selectedAssetTypes = $state<Set<AssetType>>(new Set(['native', 'erc20']));
+	let selectedAssetTypes = new SvelteSet<AssetType>(['native', 'erc20']);
 	let includeIncoming = $state(true);
 	let includeOutgoing = $state(true);
 
@@ -53,7 +54,6 @@
 		} else {
 			selectedAssetTypes.add(type);
 		}
-		selectedAssetTypes = new Set(selectedAssetTypes);
 	}
 
 	// Update step validity whenever form changes
@@ -86,7 +86,10 @@
 		startBlock = '';
 		endBlock = '';
 		// Store the "recent" preference
-		(monitorState as any).recentBlockCount = count;
+		interface MonitorStateWithRecentBlock {
+			recentBlockCount?: number;
+		}
+		(monitorState as MonitorStateWithRecentBlock).recentBlockCount = count;
 	}
 </script>
 

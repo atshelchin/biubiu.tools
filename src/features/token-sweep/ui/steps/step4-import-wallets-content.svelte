@@ -3,16 +3,12 @@
 	import { step3State } from '@/features/token-sweep/stores/step3-state.svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte.js';
 	import ImportMethodSelector from '@/features/token-sweep/ui/components/import-method-selector.svelte';
-	import {
-		deriveAddressesFromMnemonic,
-		importFromPrivateKeys,
-		validateMnemonicPhrase
-	} from '@/features/token-sweep/utils/wallet-import';
+	import { validateMnemonicPhrase } from '@/features/token-sweep/utils/wallet-import';
 	import { scanMultipleWallets } from '@/features/token-sweep/utils/balance-scanner';
 	import type { ImportMethod, DerivationPathType } from '@/features/token-sweep/types/wallet';
 	import type { ERC20Token } from '$lib/types/token';
 	import { createPublicClient, http } from 'viem';
-	import { SvelteMap } from 'svelte/reactivity';
+	import { SvelteMap, SvelteDate } from 'svelte/reactivity';
 	import { Loader2, AlertCircle } from 'lucide-svelte';
 	import { slide } from 'svelte/transition';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
@@ -20,7 +16,7 @@
 	import WalletList from '$lib/components/ui/wallet-list.svelte';
 	import SimpleCodeEditor from '$lib/components/widgets/SimpleCodeEditor.svelte';
 	import ConfirmDialog from '$lib/components/ui/confirm-dialog.svelte';
-	import { spawn, spawnPool, getOptimalWorkerCount } from '$lib/utils/worker-pool';
+	import { spawn, spawnPool } from '$lib/utils/worker-pool';
 	import type {
 		WalletGenerationRequest,
 		WalletGenerationResult
@@ -190,8 +186,8 @@
 							};
 						} else {
 							// Split date range across workers
-							const startDate = new Date(data.startDate!);
-							const endDate = new Date(data.endDate!);
+							const startDate = new SvelteDate(data.startDate!);
+							const endDate = new SvelteDate(data.endDate!);
 							const totalDays = Math.ceil(
 								(endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)
 							);
@@ -202,10 +198,10 @@
 							const workerDays = daysPerWorker + (workerIndex < remainder ? 1 : 0);
 							const startOffset = workerIndex * daysPerWorker + Math.min(workerIndex, remainder);
 
-							const workerStartDate = new Date(startDate);
+							const workerStartDate = new SvelteDate(startDate);
 							workerStartDate.setDate(startDate.getDate() + startOffset);
 
-							const workerEndDate = new Date(workerStartDate);
+							const workerEndDate = new SvelteDate(workerStartDate);
 							workerEndDate.setDate(workerStartDate.getDate() + workerDays - 1);
 
 							// Don't exceed original end date

@@ -131,7 +131,12 @@
 		class?: string;
 	}
 
-	let { value = $bindable(''), placeholder = '', rows = 8, class: className = '' }: Props = $props();
+	let {
+		value = $bindable(''),
+		placeholder = '',
+		rows = 8,
+		class: className = ''
+	}: Props = $props();
 
 	const themeStore = useTheme();
 </script>

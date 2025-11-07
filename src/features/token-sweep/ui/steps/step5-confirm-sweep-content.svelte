@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { step3State } from '@/features/token-sweep/stores/step3-state.svelte';
 	import { step4State } from '@/features/token-sweep/stores/step4-state.svelte';
-	import { getTokensForChain } from '$lib/config/tokens';
-	import { loadCustomTokens } from '@/features/token-sweep/utils/token-storage';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import TokenListDisplay from '@/features/token-sweep/ui/components/token-list-display.svelte';
 	import {

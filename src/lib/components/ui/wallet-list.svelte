@@ -123,6 +123,7 @@
 					<div class="page-numbers">
 						{#if totalPages <= 7}
 							<!-- Show all pages if total is 7 or less -->
+							<!-- eslint-disable-next-line @typescript-eslint/no-unused-vars -->
 							{#each { length: totalPages } as _, i (i)}
 								<button
 									class="page-btn"
@@ -143,6 +144,7 @@
 							{/if}
 
 							<!-- Show pages around current page -->
+							<!-- eslint-disable-next-line @typescript-eslint/no-unused-vars -->
 							{#each { length: 5 } as _, i (i)}
 								{@const pageNum = Math.max(2, Math.min(currentPage - 2 + i, totalPages - 1))}
 								{#if pageNum > 1 && pageNum < totalPages && (i === 0 || pageNum !== Math.max(2, Math.min(currentPage - 2 + i - 1, totalPages - 1)))}

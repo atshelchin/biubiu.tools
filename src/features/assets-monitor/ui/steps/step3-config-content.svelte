@@ -5,8 +5,10 @@
 	import { monitorState } from '../../stores/monitor-state.svelte';
 	import { scanAssetMovements } from '../../utils/asset-scanner';
 	import { assetsDB } from '../../db/assets-db';
+	import { SvelteMap } from 'svelte/reactivity';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import { Loader2, CheckCircle2, AlertCircle, Activity } from 'lucide-svelte';
+	import type { AssetMovement } from '../../types/assets';
 
 	const connectStore = useConnectStore();
 	const stepManager = useStepManager();
@@ -91,8 +93,17 @@
 		}
 	}
 
-	async function calculateBalancesFromMovements(movements: any[]) {
-		const balanceMap = new Map();
+	async function calculateBalancesFromMovements(movements: AssetMovement[]) {
+		const balanceMap = new SvelteMap<
+			string,
+			{
+				symbol: string;
+				totalIn: bigint;
+				totalOut: bigint;
+				netChange: bigint;
+				movementCount: number;
+			}
+		>();
 
 		for (const movement of movements) {
 			const key =

@@ -1,15 +1,7 @@
 <script lang="ts">
 	import { monitorState } from '../../stores/monitor-state.svelte';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
-	import {
-		Download,
-		Filter,
-		ArrowUpDown,
-		ExternalLink,
-		TrendingUp,
-		TrendingDown,
-		Activity
-	} from 'lucide-svelte';
+	import { Download, ExternalLink, TrendingUp, TrendingDown, Activity } from 'lucide-svelte';
 	import { formatUnits } from 'viem';
 
 	// Tab state

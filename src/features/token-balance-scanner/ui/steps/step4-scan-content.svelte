@@ -12,11 +12,33 @@
 	// Get selected tokens
 	const selectedTokens = $derived(() => {
 		if (!connectStore.currentChainId) return [];
-		const chainTokens = PREDEFINED_TOKENS[connectStore.currentChainId];
-		if (!chainTokens) return [];
 
-		const allTokens: (NativeToken | ERC20Token)[] = [chainTokens.native, ...chainTokens.erc20];
-		return allTokens.filter((token) => scannerState.selectedTokens.has(token.id));
+		const tokens: (NativeToken | ERC20Token)[] = [];
+
+		// Add native token
+		const currentNetwork = connectStore.networks.find(
+			(n) => n.chainId === connectStore.currentChainId
+		);
+		if (currentNetwork) {
+			const nativeToken: NativeToken = {
+				id: `${connectStore.currentChainId}:native`,
+				type: 'native',
+				symbol: currentNetwork.symbol,
+				name: currentNetwork.name,
+				decimals: 18,
+				chainId: connectStore.currentChainId,
+				logoUrl: ''
+			};
+			tokens.push(nativeToken);
+		}
+
+		// Add ERC20 tokens
+		const erc20Tokens = PREDEFINED_TOKENS[connectStore.currentChainId];
+		if (erc20Tokens && erc20Tokens.length > 0) {
+			tokens.push(...erc20Tokens);
+		}
+
+		return tokens.filter((token) => scannerState.selectedTokens.has(token.id));
 	});
 
 	// Get current network
@@ -59,7 +81,7 @@
 			const results = await scanMultipleWallets(
 				scannerState.wallets,
 				tokens,
-				currentNetwork.rpcUrls[0],
+				currentNetwork.rpcEndpoints[0].url,
 				(prog) => {
 					scannerState.setProgress(prog);
 				}

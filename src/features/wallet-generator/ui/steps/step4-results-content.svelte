@@ -64,11 +64,11 @@
 	}
 
 	function selectAll() {
-		selectedWallets = new Set(generatorState.generatedWallets.map((w) => w.index));
+		selectedWallets = new SvelteSet(generatorState.generatedWallets.map((w) => w.index));
 	}
 
 	function deselectAll() {
-		selectedWallets = new Set();
+		selectedWallets = new SvelteSet();
 	}
 
 	function downloadCSV() {

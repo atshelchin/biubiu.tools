@@ -1,11 +1,10 @@
 <script lang="ts">
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import { ensState } from '../../stores/ens-state.svelte';
-	import { generateNames, normalizeENSName } from '../../utils/name-generator';
+	import { generateNames } from '../../utils/name-generator';
 	import type { NameGenerationPattern } from '../../types/ens';
 
 	let selectedPattern = $state<NameGenerationPattern>('triple');
-	let customNamesText = $state('');
 
 	// Pattern-specific options
 	let startYear = $state(2000);
@@ -29,14 +28,6 @@
 
 		const names = generateNames(config);
 		ensState.setGeneratedNames(names.slice(0, 1000)); // Limit to 1000
-	}
-
-	function handleImport() {
-		const names = customNamesText
-			.split('\n')
-			.map((n) => normalizeENSName(n))
-			.filter((n) => n.length >= 3);
-		ensState.setCustomNames(names);
 	}
 
 	const hasNames = $derived(ensState.allNames.length > 0);
@@ -68,7 +59,7 @@
 		<div class="names-preview">
 			<h4>Generated Names ({ensState.allNames.length})</h4>
 			<div class="names-list">
-				{#each ensState.allNames.slice(0, 20) as name}
+				{#each ensState.allNames.slice(0, 20) as name (name)}
 					<span class="name-tag">{name}.eth</span>
 				{/each}
 				{#if ensState.allNames.length > 20}

@@ -4,7 +4,7 @@
  * with support for parallel execution across multiple workers
  */
 
-export interface WorkerTask<TRequest, TResult> {
+export interface WorkerTask<TResult> {
 	workerUrl: string;
 	onProgress?: (progress: number) => void;
 	onComplete: (result: TResult) => void;
@@ -215,9 +215,7 @@ export function runWorker<TRequest = unknown, TResult = unknown>(
 				worker?.terminate();
 				worker = null;
 				if (errorHandler) {
-					errorHandler(
-						error instanceof Error ? error : new Error(error.message || 'Worker error')
-					);
+					errorHandler(error instanceof Error ? error : new Error(error.message || 'Worker error'));
 				}
 			};
 
@@ -270,8 +268,7 @@ export function spawnPool<TRequest = unknown, TResult = unknown, TMerged = TResu
 		// Update overall progress
 		const updateProgress = () => {
 			if (onProgress) {
-				const totalProgress =
-					progressByWorker.reduce((sum, p) => sum + p, 0) / numWorkers;
+				const totalProgress = progressByWorker.reduce((sum, p) => sum + p, 0) / numWorkers;
 				onProgress(totalProgress);
 			}
 		};
@@ -342,9 +339,7 @@ export function spawnPool<TRequest = unknown, TResult = unknown, TMerged = TResu
 					if (!hasError) {
 						hasError = true;
 						cleanup();
-						reject(
-							new Error(`Worker ${workerIndex} error: ${error.message || 'Unknown error'}`)
-						);
+						reject(new Error(`Worker ${workerIndex} error: ${error.message || 'Unknown error'}`));
 					}
 				};
 

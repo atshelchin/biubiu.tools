@@ -93,7 +93,16 @@ function generateDateIndices(startDate: string, endDate: string, format: DateFor
 
 // Process wallet generation in batches
 self.addEventListener('message', async (event: MessageEvent<WalletGenerationRequest>) => {
-	const { mnemonic, pathType, startIndex, endIndex, startDate, endDate, dateFormat, batchSize = 100 } = event.data;
+	const {
+		mnemonic,
+		pathType,
+		startIndex,
+		endIndex,
+		startDate,
+		endDate,
+		dateFormat,
+		batchSize = 100
+	} = event.data;
 
 	try {
 		// Generate seed

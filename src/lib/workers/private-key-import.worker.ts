@@ -21,7 +21,10 @@ export interface PrivateKeyImportResult {
 /**
  * Validate and convert a single private key to wallet
  */
-function processPrivateKey(key: string): { wallet?: { id: string; address: Address }; isValid: boolean } {
+function processPrivateKey(key: string): {
+	wallet?: { id: string; address: Address };
+	isValid: boolean;
+} {
 	try {
 		const cleanKey = key.startsWith('0x') ? key : `0x${key}`;
 

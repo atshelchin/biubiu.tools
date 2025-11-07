@@ -6,7 +6,6 @@ import type {
 	FilterOptions,
 	ScanSummary
 } from '../types/ens';
-import { SvelteSet } from 'svelte/reactivity';
 
 /**
  * Module-level state for ENS Scanner

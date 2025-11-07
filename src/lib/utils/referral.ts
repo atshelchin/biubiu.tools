@@ -1,5 +1,4 @@
 import { get, set } from 'idb-keyval';
-
 const REFERRAL_KEY = 'biubiu-referral';
 const REFERRAL_EXPIRY_DAYS = 90;
 
