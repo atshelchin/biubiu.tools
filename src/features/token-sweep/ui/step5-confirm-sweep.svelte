@@ -21,6 +21,7 @@
 	import type { StepManager } from '$lib/components/ui/step-indicator.svelte';
 	import StepSidebar from './components/step-sidebar.svelte';
 	import StepContentHeader from './components/step-content-header.svelte';
+	import StepFooter from './components/step-footer.svelte';
 
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
@@ -272,12 +273,14 @@
 		</div>
 	</StepSidebar>
 {:else if section === 'footer'}
-	<div class="step-footer">
-		<button class="btn-secondary" onclick={goBack}>← Back</button>
-		<button class="btn-execute" onclick={handleExecuteSweep} disabled={!isValid}>
-			Execute Sweep 🚀
-		</button>
-	</div>
+	<StepFooter
+		showBack={true}
+		onBack={goBack}
+		canContinue={isValid}
+		continueText="Execute Sweep 🚀"
+		onContinue={handleExecuteSweep}
+		continueButtonClass="btn-execute"
+	/>
 {:else if section === 'content'}
 	<div class="step-content">
 		<StepContentHeader

@@ -6,6 +6,7 @@
 	import type { StepManager } from '@/lib/components/ui/step-indicator.svelte';
 	import StepSidebar from './components/step-sidebar.svelte';
 	import StepContentHeader from './components/step-content-header.svelte';
+	import StepFooter from './components/step-footer.svelte';
 
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
@@ -69,25 +70,13 @@
 		</div>
 	</StepSidebar>
 {:else if section === 'footer'}
-	<div class="step-footer">
-		{#if isReadyToContinue}
-			<button class="footer-continue-btn" onclick={handleContinue}>
-				Continue to Configuration
-				<svg
-					width="18"
-					height="18"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-				>
-					<path d="M5 12h14M12 5l7 7-7 7" />
-				</svg>
-			</button>
-		{:else}
-			<p class="footer-hint">Connect your wallet to continue</p>
-		{/if}
-	</div>
+	<StepFooter
+		canContinue={isReadyToContinue}
+		continueText="Continue to Configuration"
+		onContinue={handleContinue}
+		hint="Connect your wallet to continue"
+		continueButtonClass="footer-continue-btn"
+	/>
 {:else if section === 'content'}
 	<div class="step-content">
 		<StepContentHeader

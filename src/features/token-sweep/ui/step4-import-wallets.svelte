@@ -19,6 +19,7 @@
 	import type { StepManager } from '$lib/components/ui/step-indicator.svelte';
 	import StepSidebar from './components/step-sidebar.svelte';
 	import StepContentHeader from './components/step-content-header.svelte';
+	import StepFooter from './components/step-footer.svelte';
 
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
@@ -320,26 +321,14 @@
 		{/if}
 	</StepSidebar>
 {:else if section === 'footer'}
-	<div class="step-footer">
-		<button class="btn-secondary" onclick={goBack}>← Back</button>
-		{#if canContinue}
-			<button class="continue-btn" onclick={handleContinue}>
-				Continue to Confirm
-				<svg
-					width="18"
-					height="18"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-				>
-					<path d="M5 12h14M12 5l7 7-7 7" />
-				</svg>
-			</button>
-		{:else}
-			<p class="footer-hint">Please import at least one wallet to continue</p>
-		{/if}
-	</div>
+	<StepFooter
+		showBack={true}
+		onBack={goBack}
+		{canContinue}
+		continueText="Continue to Confirm"
+		onContinue={handleContinue}
+		hint="Please import at least one wallet to continue"
+	/>
 {:else if section === 'content'}
 	<div class="step-content">
 		<StepContentHeader

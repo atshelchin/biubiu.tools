@@ -12,6 +12,7 @@
 	import StepSidebar from './components/step-sidebar.svelte';
 	import StepContentHeader from './components/step-content-header.svelte';
 	import EmptyState from './components/empty-state.svelte';
+	import StepFooter from './components/step-footer.svelte';
 
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
@@ -122,6 +123,13 @@
 	// Check if ready to continue
 	const isReadyToContinue = $derived(summary?.allPassed === true);
 
+	// Dynamic footer hint based on state
+	const footerHint = $derived.by(() => {
+		if (isChecking) return 'Checking dependencies...';
+		if (summary && !summary.allPassed) return 'Please resolve all dependency issues to continue';
+		return 'Waiting for dependency checks...';
+	});
+
 	// Debug logging
 	$effect(() => {
 		console.log('[Step2] Dependency check summary:', {
@@ -218,29 +226,7 @@
 		{/if}
 	</StepSidebar>
 {:else if section === 'footer'}
-	<div class="step-footer">
-		{#if isReadyToContinue}
-			<button class="continue-btn" onclick={handleContinue}>
-				Continue to Next Step
-				<svg
-					width="18"
-					height="18"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-				>
-					<path d="M5 12h14M12 5l7 7-7 7" />
-				</svg>
-			</button>
-		{:else if isChecking}
-			<p class="footer-hint">Checking dependencies...</p>
-		{:else if summary && !summary.allPassed}
-			<p class="footer-hint">Please resolve all dependency issues to continue</p>
-		{:else}
-			<p class="footer-hint">Waiting for dependency checks...</p>
-		{/if}
-	</div>
+	<StepFooter canContinue={isReadyToContinue} onContinue={handleContinue} hint={footerHint} />
 {:else if section === 'content'}
 	<div class="step-content">
 		<StepContentHeader

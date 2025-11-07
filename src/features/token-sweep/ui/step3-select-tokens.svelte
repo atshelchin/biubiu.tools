@@ -10,6 +10,7 @@
 	import StepContentHeader from './components/step-content-header.svelte';
 	import EmptyState from './components/empty-state.svelte';
 	import TokenManager from './components/token-manager.svelte';
+	import StepFooter from './components/step-footer.svelte';
 
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
@@ -88,25 +89,11 @@
 		{/if}
 	</StepSidebar>
 {:else if section === 'footer'}
-	<div class="step-footer">
-		{#if canContinue}
-			<button class="continue-btn" onclick={handleContinue}>
-				Continue to Next Step
-				<svg
-					width="18"
-					height="18"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-				>
-					<path d="M5 12h14M12 5l7 7-7 7" />
-				</svg>
-			</button>
-		{:else}
-			<p class="footer-hint">Please select at least one token to continue</p>
-		{/if}
-	</div>
+	<StepFooter
+		{canContinue}
+		onContinue={handleContinue}
+		hint="Please select at least one token to continue"
+	/>
 {:else if section === 'content'}
 	<div class="step-content">
 		<StepContentHeader
