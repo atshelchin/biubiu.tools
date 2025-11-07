@@ -154,7 +154,7 @@
 
 		if (result.success) {
 			step4State.addWallets(result.wallets);
-			privateKeysText = '';
+			// Don't clear private keys - user might want to add more wallets
 			if (result.error) {
 				errorMessage = `Imported ${result.wallets.length} wallets. Some errors: ${result.error}`;
 			}
@@ -326,9 +326,8 @@
 			<label class="form-label">Enter Mnemonic Phrase</label>
 			<SimpleCodeEditor
 				bind:value={mnemonicText}
-				placeholder="Enter 12 or 24 words separated by spaces
-Example: word1 word2 word3 ..."
-				rows={3}
+				placeholder="Enter 12 or 24 words separated by spaces"
+				rows={6}
 			/>
 			<p class="form-hint">⚠️ Your mnemonic is never uploaded to any server</p>
 
@@ -370,9 +369,7 @@ Example: word1 word2 word3 ..."
 			<label class="form-label">Batch Import Private Keys</label>
 			<SimpleCodeEditor
 				bind:value={privateKeysText}
-				placeholder="One private key per line (starting with 0x)
-0x1234...
-0x5678..."
+				placeholder="One private key per line (starting with 0x)"
 				rows={8}
 			/>
 			<button
