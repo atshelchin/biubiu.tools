@@ -14,10 +14,6 @@
 		return connectStore.networks.find((n) => n.chainId === connectStore.currentChainId);
 	});
 
-	function handleSelectionChange(newSelection: typeof step3State.selectedTokenIds) {
-		step3State.selectedTokenIds = newSelection;
-	}
-
 	function handleTokenAdded(tokenId: string) {
 		// Auto-select the newly added token
 		const newSelection = new SvelteSet(step3State.selectedTokenIds);
@@ -60,7 +56,6 @@
 					blockExplorer: currentNetwork.blockExplorer
 				}}
 				bind:selectedTokenIds={step3State.selectedTokenIds}
-				onSelectionChange={handleSelectionChange}
 				onTokenAdded={handleTokenAdded}
 				onRemoveCustomToken={handleRemoveCustomToken}
 				emptyMessage="No tokens available. Add a custom token to get started."
