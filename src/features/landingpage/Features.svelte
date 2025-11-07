@@ -11,7 +11,8 @@
 		Lock,
 		MessageCircle,
 		ArrowRightLeft,
-		SendHorizontal
+		SendHorizontal,
+		ScanSearch
 	} from '@lucide/svelte';
 
 	interface Tool {
@@ -45,6 +46,16 @@
 			status: 'active',
 			color: '#F59E0B',
 			features: ['Equal or Custom Amounts', 'CSV Import Ready', 'Real-time Preview'],
+			highlight: false
+		},
+		{
+			icon: ScanSearch,
+			title: t('tools.token_balance_scanner.title'),
+			description: t('tools.token_balance_scanner.description'),
+			link: '/apps/token-balance-scanner',
+			status: 'active',
+			color: '#3B82F6',
+			features: ['Multi-Wallet Scanning', 'CSV/JSON Export', 'Read-only Operations'],
 			highlight: false
 		},
 		{

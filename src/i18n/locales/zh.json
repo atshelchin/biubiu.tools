@@ -22,6 +22,10 @@
 			"title": "代币批量分散",
 			"description": "从一个钱包批量分发代币到多个收款地址"
 		},
+		"token_balance_scanner": {
+			"title": "代币余额批量查询",
+			"description": "扫描并统计多个钱包的代币余额"
+		},
 		"wallet_collection": {
 			"title": "余额归集",
 			"description": "高效地将多个钱包的余额归集到单一地址。支持多种代币和多条链。",
@@ -158,7 +162,7 @@
 		"select_wallet": "选择钱包",
 		"scan_qr": "扫描二维码",
 		"not_installed": "未安装",
-		"long_press_hint": "长按按钮3秒可重置连接",
+		"long_press_hint": "长按按钮 3 秒可重置连接",
 		"walletconnect": {
 			"title": "使用 WalletConnect 连接钱包",
 			"step_1": "打开支持 WalletConnect 的钱包应用",
