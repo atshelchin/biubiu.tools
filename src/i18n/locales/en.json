@@ -26,6 +26,10 @@
 			"title": "Token Balance Scanner",
 			"description": "Scan and aggregate token balances across multiple wallets"
 		},
+		"ens_scanner": {
+			"title": "ENS Scanner",
+			"description": "Batch scan ENS domain availability and expiry status"
+		},
 		"wallet_collection": {
 			"title": "Drain balance",
 			"description": "Efficiently collect balances from multiple wallets to a single address. Support multiple tokens and chains.",

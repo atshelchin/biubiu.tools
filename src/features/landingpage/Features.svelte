@@ -12,7 +12,8 @@
 		MessageCircle,
 		ArrowRightLeft,
 		SendHorizontal,
-		ScanSearch
+		ScanSearch,
+		Globe
 	} from '@lucide/svelte';
 
 	interface Tool {
@@ -59,6 +60,17 @@
 			status: 'active',
 			color: '#3B82F6',
 			features: ['Multi-Wallet Scanning', 'CSV/JSON Export', 'Read-only Operations'],
+			highlight: false,
+			alpha: true
+		},
+		{
+			icon: Globe,
+			title: t('tools.ens_scanner.title'),
+			description: t('tools.ens_scanner.description'),
+			link: '/apps/ens-scanner',
+			status: 'active',
+			color: '#EC4899',
+			features: ['Pattern Generation', 'Expiry Tracking', 'Batch Scanning'],
 			highlight: false,
 			alpha: true
 		},

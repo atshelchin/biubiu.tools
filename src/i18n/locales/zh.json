@@ -23,8 +23,12 @@
 			"description": "从一个钱包批量分发代币到多个收款地址"
 		},
 		"token_balance_scanner": {
-			"title": "代币余额批量查询",
+			"title": "批量余额查询",
 			"description": "扫描并统计多个钱包的代币余额"
+		},
+		"ens_scanner": {
+			"title": "ENS域名扫描",
+			"description": "批量扫描 ENS 域名可用性和到期状态"
 		},
 		"wallet_collection": {
 			"title": "余额归集",
