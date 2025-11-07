@@ -45,14 +45,6 @@
 		step3State.toggleToken(tokenId);
 	}
 
-	function selectAllTokens() {
-		step3State.selectAll(availableTokens.map((t) => t.id));
-	}
-
-	function deselectAllTokens() {
-		step3State.deselectAll();
-	}
-
 	function handleContinue() {
 		if (canContinue && stepManager) {
 			console.log('Selected tokens:', step3State.getSelectedTokens());
@@ -102,8 +94,6 @@
 				'this network'}"
 		>
 			{#snippet actions()}
-				<button class="btn-secondary" onclick={selectAllTokens}>Select All</button>
-				<button class="btn-secondary" onclick={deselectAllTokens}>Deselect All</button>
 				<TokenManager
 					chainId={connectStore.currentChainId || 0}
 					onTokenAdded={handleTokenAdded}
@@ -123,6 +113,8 @@
 				tokens={availableTokens}
 				{selectedTokenIds}
 				onToggle={toggleToken}
+				onSelectAll={() => step3State.selectAll(availableTokens.map((t) => t.id))}
+				onDeselectAll={() => step3State.deselectAll()}
 				onRemoveCustomToken={handleRemoveCustomToken}
 				blockExplorer={currentNetwork?.blockExplorer}
 				emptyMessage="No tokens available. Add a custom token to get started."

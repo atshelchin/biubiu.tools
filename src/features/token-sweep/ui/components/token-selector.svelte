@@ -8,22 +8,36 @@
 		tokens: Token[];
 		selectedTokenIds?: SvelteSet<string>;
 		onToggle?: (tokenId: string) => void;
+		onSelectAll?: () => void;
+		onDeselectAll?: () => void;
 		onRemoveCustomToken?: (tokenId: string) => void;
 		blockExplorer?: string;
 		emptyMessage?: string;
+		showBulkActions?: boolean;
 	}
 
 	let {
 		tokens,
 		selectedTokenIds = new SvelteSet<string>(),
 		onToggle,
+		onSelectAll,
+		onDeselectAll,
 		onRemoveCustomToken,
 		blockExplorer,
-		emptyMessage = 'No tokens available'
+		emptyMessage = 'No tokens available',
+		showBulkActions = true
 	}: Props = $props();
 
 	function handleToggle(tokenId: string) {
 		onToggle?.(tokenId);
+	}
+
+	function handleSelectAll() {
+		onSelectAll?.();
+	}
+
+	function handleDeselectAll() {
+		onDeselectAll?.();
 	}
 
 	function handleRemove(tokenId: string) {
@@ -45,6 +59,12 @@
 		<p>{emptyMessage}</p>
 	</div>
 {:else}
+	{#if showBulkActions && tokens.length > 0}
+		<div class="bulk-actions">
+			<button class="btn-secondary" onclick={handleSelectAll}>Select All</button>
+			<button class="btn-secondary" onclick={handleDeselectAll}>Deselect All</button>
+		</div>
+	{/if}
 	<div class="tokens-grid">
 		{#each tokens as token (token.id)}
 			<div
@@ -103,6 +123,12 @@
 {/if}
 
 <style>
+	.bulk-actions {
+		display: flex;
+		gap: var(--space-2);
+		margin-bottom: var(--space-4);
+	}
+
 	.empty-state {
 		display: flex;
 		flex-direction: column;
