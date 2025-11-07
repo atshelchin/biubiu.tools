@@ -94,43 +94,38 @@
 	}
 
 	function handleToggle(tokenId: string) {
-		// Create new Set to ensure reactivity
-		const newSelection = new SvelteSet(selectedTokenIds);
-
 		if (multiSelect) {
 			// Multi-select mode: toggle selection
-			if (newSelection.has(tokenId)) {
-				newSelection.delete(tokenId);
+			if (selectedTokenIds.has(tokenId)) {
+				selectedTokenIds.delete(tokenId);
 			} else {
-				newSelection.add(tokenId);
+				selectedTokenIds.add(tokenId);
 			}
 		} else {
 			// Single-select mode: replace selection
-			newSelection.clear();
-			newSelection.add(tokenId);
+			selectedTokenIds.clear();
+			selectedTokenIds.add(tokenId);
 		}
 
-		// Update and trigger callback
-		selectedTokenIds = newSelection;
 		onSelectionChange?.(selectedTokenIds);
 	}
 
 	function handleSelectAll() {
-		// Create new Set with all tokens
-		const newSelection = new SvelteSet<string>();
-		displayTokens().forEach((token) => {
-			newSelection.add(token.id);
+		const tokens = displayTokens();
+
+		// Clear and add all
+		selectedTokenIds.clear();
+		tokens.forEach((token) => {
+			selectedTokenIds.add(token.id);
 		});
 
-		selectedTokenIds = newSelection;
 		onSelectionChange?.(selectedTokenIds);
 	}
 
 	function handleDeselectAll() {
-		// Create new empty Set
-		const newSelection = new SvelteSet<string>();
+		// Clear all selections
+		selectedTokenIds.clear();
 
-		selectedTokenIds = newSelection;
 		onSelectionChange?.(selectedTokenIds);
 	}
 

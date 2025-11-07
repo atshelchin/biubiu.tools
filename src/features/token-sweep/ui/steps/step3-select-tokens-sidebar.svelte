@@ -4,17 +4,17 @@
 	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
 	import StepSummary from '@/features/token-sweep/ui/components/step-summary.svelte';
 
-	// Use shared state from step3State
-	let selectedTokenIds = $derived(step3State.selectedTokenIds);
+	// Use shared state from step3State - create reactive count
+	let selectedCount = $derived(step3State.selectedTokenIds.size);
 </script>
 
 <StepSidebar stepNumber={3} title="Select Tokens" description="Choose which tokens to sweep">
-	{#if selectedTokenIds.size > 0}
+	{#if selectedCount > 0}
 		<div transition:fade>
 			<StepSummary title="Selected Tokens">
 				<div class="summary-item">
 					<span>Count:</span>
-					<strong>{selectedTokenIds.size}</strong>
+					<strong>{selectedCount}</strong>
 				</div>
 			</StepSummary>
 		</div>
