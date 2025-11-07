@@ -60,18 +60,6 @@
 				t('tools.call_master.feature_3')
 			],
 			highlight: false
-		},
-		{
-			icon: Zap,
-			title: t('tools.batch_transfer.title'),
-			description: t('tools.batch_transfer.description'),
-			status: 'coming-soon',
-			color: '#EF4444',
-			features: [
-				t('tools.batch_transfer.feature_1'),
-				t('tools.batch_transfer.feature_2'),
-				t('tools.batch_transfer.feature_3')
-			]
 		}
 	]);
 
