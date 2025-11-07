@@ -5,6 +5,7 @@
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
 	import type { StepManager } from '@/lib/components/ui/step-indicator.svelte';
 	import StepSidebar from './components/step-sidebar.svelte';
+	import StepContentHeader from './components/step-content-header.svelte';
 
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
@@ -89,8 +90,10 @@
 	</div>
 {:else if section === 'content'}
 	<div class="step-content">
-		<h2>Select Network</h2>
-		<p class="description">Choose the blockchain network for token sweeping</p>
+		<StepContentHeader
+			title="Select Network"
+			description="Choose the blockchain network for token sweeping"
+		/>
 
 		{#if isLoading}
 			<!-- Loading State -->
@@ -135,27 +138,6 @@
 {/if}
 
 <style>
-	h2 {
-		font-size: var(--text-2xl);
-		font-weight: var(--font-bold);
-		margin-bottom: var(--space-2);
-		color: var(--gray-900);
-	}
-
-	:global([data-theme='dark']) h2 {
-		color: var(--gray-100);
-	}
-
-	.description {
-		color: var(--gray-600);
-		line-height: 1.6;
-		margin-bottom: var(--space-6);
-	}
-
-	:global([data-theme='dark']) .description {
-		color: var(--gray-400);
-	}
-
 	/* Wallet Section */
 	:global(.wallet-section) {
 		margin-top: var(--space-8);
