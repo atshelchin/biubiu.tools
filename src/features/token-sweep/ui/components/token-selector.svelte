@@ -85,8 +85,9 @@
 					<div class="token-meta">
 						<span class="token-type">{token.type === 'native' ? 'Native' : 'ERC20'}</span>
 						{#if token.type === 'erc20' && blockExplorer}
+							{@const erc20Token = token as import('@/features/token-sweep/types/token').ERC20Token}
 							<a
-								href="{blockExplorer}/address/{token.address}"
+								href="{blockExplorer}/address/{erc20Token.address}"
 								target="_blank"
 								rel="noopener noreferrer"
 								class="explorer-link"

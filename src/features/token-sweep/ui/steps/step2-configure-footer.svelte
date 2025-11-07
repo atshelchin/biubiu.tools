@@ -10,7 +10,7 @@
 	let isChecking = $derived(step2State.isChecking);
 
 	// Check if ready to continue
-	const isReadyToContinue = $derived(summary?.allPassed === true);
+	const isReadyToContinue = $derived(Boolean(summary?.allPassed));
 
 	// Dynamic footer hint based on state
 	const footerHint = $derived.by(() => {

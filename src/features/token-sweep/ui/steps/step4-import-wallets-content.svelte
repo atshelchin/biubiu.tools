@@ -452,7 +452,6 @@
 		margin-top: var(--space-2);
 	}
 
-	.btn-secondary,
 	.btn-primary {
 		padding: var(--space-2) var(--space-4);
 		border: none;
@@ -464,9 +463,6 @@
 		display: inline-flex;
 		align-items: center;
 		gap: var(--space-2);
-	}
-
-	.btn-primary {
 		background: var(--color-primary);
 		color: white;
 	}
@@ -477,15 +473,6 @@
 	.btn-primary:disabled {
 		opacity: 0.5;
 		cursor: not-allowed;
-	}
-
-	.btn-secondary {
-		background: var(--gray-200);
-		color: var(--gray-700);
-	}
-	:global([data-theme='dark']) .btn-secondary {
-		background: var(--gray-700);
-		color: var(--gray-200);
 	}
 
 	.form-section {

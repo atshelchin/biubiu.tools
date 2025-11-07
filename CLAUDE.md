@@ -160,6 +160,19 @@ npm run test:e2e
     - ✅ `invalidKeys: items` (keep original array structure if it matches type)
     - Ensure mapped arrays match the expected interface structure
 
+12. **Always use Boolean() for nullable expressions in boolean props**
+    - ❌ `canContinue={value && otherValue}` (returns value type, not boolean)
+    - ❌ `canContinue={summary?.allPassed}` (returns boolean | undefined)
+    - ✅ `canContinue={Boolean(value && otherValue)}`
+    - ✅ `canContinue={Boolean(summary?.allPassed)}`
+    - Props typed as `boolean` must receive actual boolean, not truthy/falsy values
+
+13. **Use type narrowing for union types**
+    - ❌ `token.address` when `Token` is union of `NativeToken | ERC20Token`
+    - ✅ Check type first: `if (token.type === 'erc20') { const erc20 = token as ERC20Token; erc20.address }`
+    - ✅ Or use `@const`: `{@const erc20Token = token as ERC20Token}` in templates
+    - TypeScript needs explicit narrowing to access properties of specific union members
+
 ### Pre-Commit Checklist
 
 Before committing any code changes:
