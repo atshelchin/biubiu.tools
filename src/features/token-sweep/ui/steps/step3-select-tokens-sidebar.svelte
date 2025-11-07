@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
-	import { step3State } from '../stores/step3-state.svelte';
-	import StepSidebar from './components/step-sidebar.svelte';
-	import StepSummary from './components/step-summary.svelte';
+	import { step3State } from '@/features/token-sweep/stores/step3-state.svelte';
+	import StepSidebar from '@/features/token-sweep/ui/components/step-sidebar.svelte';
+	import StepSummary from '@/features/token-sweep/ui/components/step-summary.svelte';
 
 	// Use shared state from step3State
 	let selectedTokenIds = $derived(step3State.selectedTokenIds);

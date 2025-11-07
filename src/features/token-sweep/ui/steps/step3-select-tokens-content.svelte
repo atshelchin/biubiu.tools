@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { useConnectStore } from '$lib/stores/connect.svelte';
-	import { getAllTokensForChain } from '../config/tokens';
-	import { loadCustomTokens, removeCustomToken } from '../utils/token-storage';
-	import { step3State } from '../stores/step3-state.svelte';
-	import TokenSelector from './components/token-selector.svelte';
-	import StepContentHeader from './components/step-content-header.svelte';
-	import EmptyState from './components/empty-state.svelte';
-	import TokenManager from './components/token-manager.svelte';
+	import { getAllTokensForChain } from '@/features/token-sweep/config/tokens';
+	import { loadCustomTokens, removeCustomToken } from '@/features/token-sweep/utils/token-storage';
+	import { step3State } from '@/features/token-sweep/stores/step3-state.svelte';
+	import TokenSelector from '@/features/token-sweep/ui/components/token-selector.svelte';
+	import StepContentHeader from '@/features/token-sweep/ui/components/step-content-header.svelte';
+	import EmptyState from '@/features/token-sweep/ui/components/empty-state.svelte';
+	import TokenManager from '@/features/token-sweep/ui/components/token-manager.svelte';
 
 	const connectStore = useConnectStore();
 

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { StepManager } from '@/lib/components/ui/step-indicator.svelte';
-	import StepFooter from './components/step-footer.svelte';
-	import { step2State } from '../stores/step2-state.svelte';
+	import StepFooter from '@/features/token-sweep/ui/components/step-footer.svelte';
+	import { step2State } from '@/features/token-sweep/stores/step2-state.svelte';
 
 	interface Props {
 		stepManager?: StepManager;

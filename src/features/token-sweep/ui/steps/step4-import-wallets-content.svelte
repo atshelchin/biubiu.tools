@@ -1,22 +1,22 @@
 <script lang="ts">
-	import { step4State } from '../stores/step4-state.svelte';
-	import { step3State } from '../stores/step3-state.svelte';
+	import { step4State } from '@/features/token-sweep/stores/step4-state.svelte';
+	import { step3State } from '@/features/token-sweep/stores/step3-state.svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte.js';
-	import ImportMethodSelector from './components/import-method-selector.svelte';
+	import ImportMethodSelector from '@/features/token-sweep/ui/components/import-method-selector.svelte';
 	import {
 		deriveAddressesFromMnemonic,
 		importFromPrivateKeys,
 		validateMnemonicPhrase
-	} from '../utils/wallet-import';
-	import { scanMultipleWallets } from '../utils/balance-scanner';
-	import { getAllTokensForChain } from '../config/tokens';
-	import type { ImportMethod, DerivationPathType } from '../types/wallet';
-	import type { ERC20Token } from '../types/token';
+	} from '@/features/token-sweep/utils/wallet-import';
+	import { scanMultipleWallets } from '@/features/token-sweep/utils/balance-scanner';
+	import { getAllTokensForChain } from '@/features/token-sweep/config/tokens';
+	import type { ImportMethod, DerivationPathType } from '@/features/token-sweep/types/wallet';
+	import type { ERC20Token } from '@/features/token-sweep/types/token';
 	import { createPublicClient, http } from 'viem';
 	import { SvelteMap } from 'svelte/reactivity';
 	import { Loader2, Trash2, AlertCircle } from 'lucide-svelte';
 	import { slide } from 'svelte/transition';
-	import StepContentHeader from '../components/step-content-header.svelte';
+	import StepContentHeader from '@/features/token-sweep/ui/components/step-content-header.svelte';
 
 	const connectStore = useConnectStore();
 

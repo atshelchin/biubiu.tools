@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
-	import { step4State } from '../stores/step4-state.svelte';
-	import StepSidebar from './components/step-sidebar.svelte';
-	import StepSummary from './components/step-summary.svelte';
+	import { step4State } from '@/features/token-sweep/stores/step4-state.svelte';
+	import StepSidebar from '@/features/token-sweep/ui/components/step-sidebar.svelte';
+	import StepSummary from '@/features/token-sweep/ui/components/step-summary.svelte';
 
 	// Derived state
 	let importedWallets = $derived(step4State.importedWallets);

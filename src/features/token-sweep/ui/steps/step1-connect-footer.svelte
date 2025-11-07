@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { useConnectStore } from '$lib/stores/connect.svelte.js';
 	import type { StepManager } from '@/lib/components/ui/step-indicator.svelte';
-	import StepFooter from './components/step-footer.svelte';
+	import StepFooter from '@/features/token-sweep/ui/components/step-footer.svelte';
 
 	interface Props {
 		stepManager?: StepManager;

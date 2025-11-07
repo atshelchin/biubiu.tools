@@ -3,13 +3,16 @@
 	import type { StepManager } from '@/lib/components/ui/step-indicator.svelte';
 	import { CheckCircle2, XCircle, AlertCircle, RefreshCw, ExternalLink } from 'lucide-svelte';
 	import { fade, slide } from 'svelte/transition';
-	import { checkAllDependencies, calculateCheckSummary } from '../utils/dependency-checker';
-	import ContractDeploymentModal from './contract-deployment-modal.svelte';
-	import { getDeploymentConfig } from '../config/deployment-configs';
-	import type { ContractDeploymentConfig } from '../types/deployment-config';
-	import StepContentHeader from './components/step-content-header.svelte';
-	import EmptyState from './components/empty-state.svelte';
-	import { step2State } from '../stores/step2-state.svelte';
+	import {
+		checkAllDependencies,
+		calculateCheckSummary
+	} from '@/features/token-sweep/utils/dependency-checker';
+	import ContractDeploymentModal from '@/features/token-sweep/ui/contract-deployment-modal.svelte';
+	import { getDeploymentConfig } from '@/features/token-sweep/config/deployment-configs';
+	import type { ContractDeploymentConfig } from '@/features/token-sweep/types/deployment-config';
+	import StepContentHeader from '@/features/token-sweep/ui/components/step-content-header.svelte';
+	import EmptyState from '@/features/token-sweep/ui/components/empty-state.svelte';
+	import { step2State } from '@/features/token-sweep/stores/step2-state.svelte';
 
 	interface Props {
 		stepManager?: StepManager;

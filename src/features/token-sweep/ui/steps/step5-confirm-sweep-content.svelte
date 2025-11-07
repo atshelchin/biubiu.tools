@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { step3State } from '../stores/step3-state.svelte';
-	import { step4State } from '../stores/step4-state.svelte';
-	import { getAllTokensForChain } from '../config/tokens';
-	import { loadCustomTokens } from '../utils/token-storage';
+	import { step3State } from '@/features/token-sweep/stores/step3-state.svelte';
+	import { step4State } from '@/features/token-sweep/stores/step4-state.svelte';
+	import { getAllTokensForChain } from '@/features/token-sweep/config/tokens';
+	import { loadCustomTokens } from '@/features/token-sweep/utils/token-storage';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
-	import TokenListDisplay from './components/token-list-display.svelte';
+	import TokenListDisplay from '@/features/token-sweep/ui/components/token-list-display.svelte';
 	import {
 		executeSweep,
 		estimateSweep,
@@ -12,13 +12,13 @@
 		calculateSweepStats,
 		type SweepConfig,
 		type SweepProgress
-	} from '../utils/sweep-executor';
+	} from '@/features/token-sweep/utils/sweep-executor';
 	import { createPublicClient, http } from 'viem';
 	import type { Address } from 'viem';
 	import { AlertCircle, CheckCircle2, Loader2 } from 'lucide-svelte';
 	import { fade, slide } from 'svelte/transition';
-	import type { Token, NativeToken, ERC20Token } from '../types/token';
-	import StepContentHeader from './components/step-content-header.svelte';
+	import type { Token, NativeToken, ERC20Token } from '@/features/token-sweep/types/token';
+	import StepContentHeader from '@/features/token-sweep/ui/components/step-content-header.svelte';
 
 	// State
 	let targetAddress = $state('');

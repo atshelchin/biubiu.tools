@@ -1,5 +1,5 @@
 <script lang="ts">
-	import StepSidebar from './components/step-sidebar.svelte';
+	import StepSidebar from '@/features/token-sweep/ui/components/step-sidebar.svelte';
 </script>
 
 <StepSidebar

@@ -4,7 +4,7 @@
 	import WalletConnectButton from '@/lib/components/ui/wallet-connect-button.svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
 	import type { StepManager } from '@/lib/components/ui/step-indicator.svelte';
-	import StepContentHeader from './components/step-content-header.svelte';
+	import StepContentHeader from '@/features/token-sweep/ui/components/step-content-header.svelte';
 
 	interface Props {
 		stepManager?: StepManager;

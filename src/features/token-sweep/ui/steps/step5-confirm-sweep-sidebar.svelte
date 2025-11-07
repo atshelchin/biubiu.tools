@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { step3State } from '../stores/step3-state.svelte';
-	import { step4State } from '../stores/step4-state.svelte';
-	import StepSidebar from './components/step-sidebar.svelte';
-	import StepSummary from './components/step-summary.svelte';
+	import { step3State } from '@/features/token-sweep/stores/step3-state.svelte';
+	import { step4State } from '@/features/token-sweep/stores/step4-state.svelte';
+	import StepSidebar from '@/features/token-sweep/ui/components/step-sidebar.svelte';
+	import StepSummary from '@/features/token-sweep/ui/components/step-summary.svelte';
 
 	// Derived from Step 3 (selected tokens)
 	let selectedTokenCount = $derived(step3State.getSelectedCount());
