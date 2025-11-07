@@ -1,6 +1,6 @@
 import { HDKey } from '@scure/bip32';
 import { mnemonicToSeed, validateMnemonic } from '@scure/bip39';
-import { wordlist } from '@scure/bip39/wordlists/english';
+import { wordlist } from '@scure/bip39/wordlists/english.js';
 import { privateKeyToAccount } from 'viem/accounts';
 import type {
 	ImportedWallet,

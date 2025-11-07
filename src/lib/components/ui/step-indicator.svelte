@@ -1,4 +1,5 @@
 <script lang="ts" module>
+	import { setStepManager } from './step-context.svelte';
 	export interface Step {
 		label: string;
 		description?: string;
@@ -25,7 +26,7 @@
 	export function createStepManager(steps: Step[], initialStep: number = 1): StepManager {
 		let currentStep = $state(initialStep);
 
-		return {
+		const manager = {
 			get steps() {
 				return steps;
 			},
@@ -63,6 +64,10 @@
 				return currentStep > 1;
 			}
 		};
+
+		setStepManager(manager);
+
+		return manager;
 	}
 </script>
 

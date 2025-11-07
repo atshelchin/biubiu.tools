@@ -3,16 +3,11 @@
 	import NetworkSelector from '@/lib/components/ui/network-selector.svelte';
 	import WalletConnectButton from '@/lib/components/ui/wallet-connect-button.svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
-	import type { StepManager } from '@/lib/components/ui/step-indicator.svelte';
+	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 	import StepContentHeader from '@/features/token-sweep/ui/components/step-content-header.svelte';
 
-	interface Props {
-		stepManager?: StepManager;
-	}
-
-	let { stepManager }: Props = $props();
-
 	const connectStore = useConnectStore();
+	const stepManager = useStepManager();
 
 	// Loading state
 	const isLoading = $derived(!connectStore.isInitialized);
@@ -32,7 +27,7 @@
 
 	// Handle continue to next step
 	function handleContinue() {
-		if (stepManager && isReadyToContinue) {
+		if (isReadyToContinue) {
 			stepManager.next();
 		}
 	}

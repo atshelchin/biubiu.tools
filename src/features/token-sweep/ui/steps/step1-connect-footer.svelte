@@ -1,15 +1,10 @@
 <script lang="ts">
 	import { useConnectStore } from '$lib/stores/connect.svelte.js';
-	import type { StepManager } from '@/lib/components/ui/step-indicator.svelte';
+	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 	import StepFooter from '@/features/token-sweep/ui/components/step-footer.svelte';
 
-	interface Props {
-		stepManager?: StepManager;
-	}
-
-	let { stepManager }: Props = $props();
-
 	const connectStore = useConnectStore();
+	const stepManager = useStepManager();
 
 	// This needs to track the same selectedChainId as content
 	// We'll use connectStore.currentChainId which is set after connection
@@ -19,7 +14,7 @@
 
 	// Handle continue to next step
 	function handleContinue() {
-		if (stepManager && isReadyToContinue) {
+		if (isReadyToContinue) {
 			stepManager.next();
 		}
 	}

@@ -1,13 +1,9 @@
 <script lang="ts">
-	import type { StepManager } from '$lib/components/ui/step-indicator.svelte';
+	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 	import { step4State } from '@/features/token-sweep/stores/step4-state.svelte';
 	import StepFooter from '@/features/token-sweep/ui/components/step-footer.svelte';
 
-	interface Props {
-		stepManager?: StepManager;
-	}
-
-	let { stepManager }: Props = $props();
+	const stepManager = useStepManager();
 
 	// Derived state
 	let importedWallets = $derived(step4State.importedWallets);
@@ -15,15 +11,13 @@
 	let canContinue = $derived(walletCount > 0);
 
 	function handleContinue() {
-		if (canContinue && stepManager) {
+		if (canContinue) {
 			stepManager.goTo(5);
 		}
 	}
 
 	function goBack() {
-		if (stepManager) {
-			stepManager.goTo(3);
-		}
+		stepManager.goTo(3);
 	}
 </script>
 

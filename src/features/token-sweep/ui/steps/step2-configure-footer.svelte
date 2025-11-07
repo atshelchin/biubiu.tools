@@ -1,13 +1,9 @@
 <script lang="ts">
-	import type { StepManager } from '@/lib/components/ui/step-indicator.svelte';
+	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 	import StepFooter from '@/features/token-sweep/ui/components/step-footer.svelte';
 	import { step2State } from '@/features/token-sweep/stores/step2-state.svelte';
 
-	interface Props {
-		stepManager?: StepManager;
-	}
-
-	let { stepManager }: Props = $props();
+	const stepManager = useStepManager();
 
 	// Use $derived for easier access in template
 	let summary = $derived(step2State.summary);
@@ -25,13 +21,12 @@
 
 	// Handle continue to next step
 	function handleContinue() {
-		console.log('handleContinue called', { stepManager, isReadyToContinue, summary });
-		if (stepManager && isReadyToContinue) {
+		console.log('handleContinue called', { isReadyToContinue, summary });
+		if (isReadyToContinue) {
 			console.log('Calling stepManager.next()');
 			stepManager.next();
 		} else {
 			console.log('Cannot continue:', {
-				hasStepManager: !!stepManager,
 				isReady: isReadyToContinue,
 				summary
 			});

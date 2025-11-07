@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { createI18nStore, setI18nContext } from '@shelchin/i18n/svelte';
-
+	import { onMount } from 'svelte';
 	import { createThemeStore } from '$lib/stores/theme.svelte.js';
+	import { initializeReferral } from '$lib/utils/referral';
 	import '../design-tokens.css';
 	import '../global.css';
 	import type { LayoutData } from './$types.js';
@@ -17,6 +18,11 @@
 
 	// Setup theme with initial value from server
 	createThemeStore(data.theme);
+
+	// Initialize referral system once for the entire app
+	onMount(() => {
+		initializeReferral();
+	});
 </script>
 
 <div class="app">

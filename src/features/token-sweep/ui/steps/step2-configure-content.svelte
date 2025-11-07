@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { useConnectStore } from '$lib/stores/connect.svelte';
-	import type { StepManager } from '@/lib/components/ui/step-indicator.svelte';
+	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 	import { CheckCircle2, XCircle, AlertCircle, RefreshCw, ExternalLink } from 'lucide-svelte';
 	import { fade, slide } from 'svelte/transition';
 	import {
@@ -14,13 +14,8 @@
 	import EmptyState from '@/features/token-sweep/ui/components/empty-state.svelte';
 	import { step2State } from '@/features/token-sweep/stores/step2-state.svelte';
 
-	interface Props {
-		stepManager?: StepManager;
-	}
-
-	let { stepManager }: Props = $props();
-
 	const connectStore = useConnectStore();
+	const stepManager = useStepManager();
 
 	// Use $derived for easier access in template
 	let checks = $derived(step2State.checks);
@@ -100,9 +95,7 @@
 
 	// Go back to step 1
 	function goBackToStep1() {
-		if (stepManager) {
-			stepManager.goTo(1);
-		}
+		stepManager.goTo(1);
 	}
 
 	// Find the first failed check index

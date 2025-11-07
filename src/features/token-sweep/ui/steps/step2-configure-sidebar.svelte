@@ -2,22 +2,16 @@
 	import WalletConnectionStatus from '@/lib/components/ui/wallet-connection-status.svelte';
 	import StepSidebar from '@/features/token-sweep/ui/components/step-sidebar.svelte';
 	import { step2State } from '@/features/token-sweep/stores/step2-state.svelte';
-	import type { StepManager } from '@/lib/components/ui/step-indicator.svelte';
+	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 
-	interface Props {
-		stepManager?: StepManager;
-	}
-
-	let { stepManager }: Props = $props();
+	const stepManager = useStepManager();
 
 	// Use $derived for easier access in template
 	let summary = $derived(step2State.summary);
 
 	// Go back to step 1
 	function goBackToStep1() {
-		if (stepManager) {
-			stepManager.goTo(1);
-		}
+		stepManager.goTo(1);
 	}
 </script>
 
