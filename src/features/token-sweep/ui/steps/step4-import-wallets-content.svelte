@@ -158,10 +158,19 @@
 					workerCount: 'auto', // Auto-detect optimal worker count
 					splitTask: (data, workerIndex, totalWorkers) => {
 						// Split the index range across workers
-						const range = data.endIndex! - data.startIndex!;
-						const rangePerWorker = Math.ceil(range / totalWorkers);
-						const workerStart = data.startIndex! + workerIndex * rangePerWorker;
-						const workerEnd = Math.min(workerStart + rangePerWorker, data.endIndex!);
+						// Total addresses = endIndex - startIndex + 1 (inclusive range)
+						const totalAddresses = data.endIndex! - data.startIndex! + 1;
+						const addressesPerWorker = Math.floor(totalAddresses / totalWorkers);
+						const remainder = totalAddresses % totalWorkers;
+
+						// Calculate this worker's start index
+						const workerStart = data.startIndex! + workerIndex * addressesPerWorker + Math.min(workerIndex, remainder);
+
+						// Calculate this worker's count (distribute remainder to first workers)
+						const workerCount = addressesPerWorker + (workerIndex < remainder ? 1 : 0);
+						const workerEnd = workerStart + workerCount - 1;
+
+						console.log(`[splitTask] Worker ${workerIndex}: ${workerStart} -> ${workerEnd} (${workerCount} addresses)`);
 
 						return {
 							...data,
@@ -243,11 +252,21 @@
 					data: { keys: lines, batchSize: 100 },
 					workerCount: 'auto', // Auto-detect optimal worker count
 					splitTask: (data, workerIndex, totalWorkers) => {
-						// Split the keys array across workers
-						const keysPerWorker = Math.ceil(data.keys.length / totalWorkers);
-						const startIdx = workerIndex * keysPerWorker;
-						const endIdx = Math.min(startIdx + keysPerWorker, data.keys.length);
+						// Split the keys array across workers evenly
+						const totalKeys = data.keys.length;
+						const keysPerWorker = Math.floor(totalKeys / totalWorkers);
+						const remainder = totalKeys % totalWorkers;
+
+						// Calculate start index for this worker
+						const startIdx = workerIndex * keysPerWorker + Math.min(workerIndex, remainder);
+
+						// Calculate count for this worker (distribute remainder to first workers)
+						const count = keysPerWorker + (workerIndex < remainder ? 1 : 0);
+						const endIdx = startIdx + count;
+
 						const workerKeys = data.keys.slice(startIdx, endIdx);
+
+						console.log(`[splitTask] Worker ${workerIndex}: keys ${startIdx} -> ${endIdx - 1} (${count} keys)`);
 
 						return {
 							keys: workerKeys,
