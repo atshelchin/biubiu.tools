@@ -29,6 +29,9 @@
 		PrivateKeyImportRequest,
 		PrivateKeyImportResult
 	} from '$lib/workers/private-key-import.worker';
+	// Import worker URLs using Vite's ?worker&url syntax
+	import WalletImportWorkerUrl from '$lib/workers/wallet-import.worker?worker&url';
+	import PrivateKeyImportWorkerUrl from '$lib/workers/private-key-import.worker?worker&url';
 
 	const connectStore = useConnectStore();
 
@@ -150,7 +153,7 @@
 					WalletGenerationRequest,
 					WalletGenerationResult,
 					WalletGenerationResult
-				>('$lib/workers/wallet-import.worker.ts', {
+				>(WalletImportWorkerUrl, {
 					data: requestData,
 					workerCount: 'auto', // Auto-detect optimal worker count
 					splitTask: (data, workerIndex, totalWorkers) => {
@@ -186,7 +189,7 @@
 			} else {
 				// Single worker execution
 				const result = await spawn<WalletGenerationRequest, WalletGenerationResult>(
-					'$lib/workers/wallet-import.worker.ts'
+					WalletImportWorkerUrl
 				).execute(requestData, {
 					onProgress: (p) => (generationProgress = p)
 				});
@@ -236,7 +239,7 @@
 					PrivateKeyImportRequest,
 					PrivateKeyImportResult,
 					PrivateKeyImportResult
-				>('$lib/workers/private-key-import.worker.ts', {
+				>(PrivateKeyImportWorkerUrl, {
 					data: { keys: lines, batchSize: 100 },
 					workerCount: 'auto', // Auto-detect optimal worker count
 					splitTask: (data, workerIndex, totalWorkers) => {
@@ -277,7 +280,7 @@
 			} else {
 				// Single worker execution
 				const result = await spawn<PrivateKeyImportRequest, PrivateKeyImportResult>(
-					'$lib/workers/private-key-import.worker.ts'
+					PrivateKeyImportWorkerUrl
 				).execute(
 					{
 						keys: lines,

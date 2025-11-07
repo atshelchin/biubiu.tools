@@ -48,7 +48,10 @@ export function spawn<TRequest = unknown, TResult = unknown>(workerPath: string)
 
 				try {
 					// Create worker
-					worker = new Worker(new URL(workerPath, import.meta.url), {
+					// workerPath is already a URL string from ?worker&url import
+					console.log('[spawn] Creating worker:', workerPath);
+
+					worker = new Worker(workerPath, {
 						type: 'module'
 					});
 
@@ -57,6 +60,12 @@ export function spawn<TRequest = unknown, TResult = unknown>(workerPath: string)
 					// Message handler
 					worker.onmessage = (event) => {
 						const result = event.data;
+						console.log('[spawn] Worker message:', {
+							done: result.done,
+							progress: result.progress,
+							hasError: !!result.error,
+							hasWallets: !!result.wallets
+						});
 
 						// Report progress
 						if (!result.done && result.progress !== undefined && options?.onProgress) {
@@ -68,10 +77,12 @@ export function spawn<TRequest = unknown, TResult = unknown>(workerPath: string)
 							isRunning = false;
 
 							if (result.error) {
+								console.error('[spawn] Worker returned error:', result.error);
 								worker?.terminate();
 								worker = null;
 								reject(new Error(result.error));
 							} else {
+								console.log('[spawn] Worker completed successfully');
 								worker?.terminate();
 								worker = null;
 								resolve(result as TResult);
@@ -81,15 +92,24 @@ export function spawn<TRequest = unknown, TResult = unknown>(workerPath: string)
 
 					// Error handler
 					worker.onerror = (error) => {
+						console.error('[spawn] Worker onerror:', {
+							message: error.message,
+							filename: error.filename,
+							lineno: error.lineno,
+							colno: error.colno,
+							error: error
+						});
 						isRunning = false;
 						worker?.terminate();
 						worker = null;
-						reject(error);
+						reject(new Error(`Worker error: ${error.message || 'Unknown error'}`));
 					};
 
 					// Start task
+					console.log('[spawn] Posting message to worker:', data);
 					worker.postMessage(data);
 				} catch (error) {
+					console.error('[spawn] Exception creating worker:', error);
 					isRunning = false;
 					reject(error);
 				}
@@ -160,7 +180,8 @@ export function runWorker<TRequest = unknown, TResult = unknown>(
 
 	function startWorker() {
 		try {
-			worker = new Worker(new URL(workerPath, import.meta.url), {
+			// workerPath is already a URL string from ?worker&url import
+			worker = new Worker(workerPath, {
 				type: 'module'
 			});
 
@@ -237,6 +258,7 @@ export function spawnPool<TRequest = unknown, TResult = unknown, TMerged = TResu
 
 	// Determine worker count
 	const numWorkers = workerCount === 'auto' ? getOptimalWorkerCount() : workerCount;
+	console.log('[spawnPool] Starting pool with', numWorkers, 'workers');
 
 	return new Promise((resolve, reject) => {
 		const workers: Worker[] = [];
@@ -256,6 +278,7 @@ export function spawnPool<TRequest = unknown, TResult = unknown, TMerged = TResu
 
 		// Cleanup all workers
 		const cleanup = () => {
+			console.log('[spawnPool] Cleaning up', workers.length, 'workers');
 			workers.forEach((w) => w.terminate());
 			workers.length = 0;
 		};
@@ -265,12 +288,20 @@ export function spawnPool<TRequest = unknown, TResult = unknown, TMerged = TResu
 			const workerIndex = i;
 
 			try {
-				const worker = new Worker(new URL(workerPath, import.meta.url), {
+				// workerPath is already a URL string from ?worker&url import
+				console.log(`[spawnPool] Creating worker ${workerIndex}:`, workerPath);
+
+				const worker = new Worker(workerPath, {
 					type: 'module'
 				});
 
 				worker.onmessage = (event) => {
 					const result = event.data;
+					console.log(`[spawnPool] Worker ${workerIndex} message:`, {
+						done: result.done,
+						progress: result.progress,
+						hasError: !!result.error
+					});
 
 					// Progress update
 					if (!result.done && result.progress !== undefined) {
@@ -281,15 +312,18 @@ export function spawnPool<TRequest = unknown, TResult = unknown, TMerged = TResu
 					// Task complete
 					if (result.done && !hasError) {
 						if (result.error) {
+							console.error(`[spawnPool] Worker ${workerIndex} returned error:`, result.error);
 							hasError = true;
 							cleanup();
 							reject(new Error(result.error));
 						} else {
+							console.log(`[spawnPool] Worker ${workerIndex} completed`);
 							results[workerIndex] = result as TResult;
 							completedWorkers++;
 
 							// All workers finished
 							if (completedWorkers === numWorkers) {
+								console.log('[spawnPool] All workers completed, merging results');
 								cleanup();
 								const merged = mergeResults(results.filter((r) => r !== null) as TResult[]);
 								resolve(merged);
@@ -299,21 +333,29 @@ export function spawnPool<TRequest = unknown, TResult = unknown, TMerged = TResu
 				};
 
 				worker.onerror = (error) => {
+					console.error(`[spawnPool] Worker ${workerIndex} onerror:`, {
+						message: error.message,
+						filename: error.filename,
+						lineno: error.lineno,
+						colno: error.colno
+					});
 					if (!hasError) {
 						hasError = true;
 						cleanup();
 						reject(
-							error instanceof Error ? error : new Error(error.message || 'Worker error')
+							new Error(`Worker ${workerIndex} error: ${error.message || 'Unknown error'}`)
 						);
 					}
 				};
 
 				// Split the task for this worker
 				const partialTask = splitTask(data, workerIndex, numWorkers);
+				console.log(`[spawnPool] Worker ${workerIndex} task:`, partialTask);
 				worker.postMessage(partialTask);
 
 				workers.push(worker);
 			} catch (error) {
+				console.error(`[spawnPool] Exception creating worker ${workerIndex}:`, error);
 				hasError = true;
 				cleanup();
 				reject(error);
