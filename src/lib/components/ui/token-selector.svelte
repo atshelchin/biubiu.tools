@@ -2,43 +2,44 @@
 	import type { Token, NativeToken } from '$lib/types/token';
 	import { SvelteSet } from 'svelte/reactivity';
 	import { PREDEFINED_TOKENS } from '$lib/config/tokens';
-	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { loadCustomTokens, removeCustomToken } from '$lib/utils/token-storage';
 	import AddTokenButton from '$lib/components/ui/add-token-button.svelte';
 	import TokenCard from '$lib/components/ui/token-card.svelte';
 	import { onMount } from 'svelte';
 
+	interface NetworkInfo {
+		chainId: number;
+		name: string;
+		symbol: string; // Native token symbol
+		rpcUrl: string; // Primary RPC URL
+		blockExplorer?: string;
+	}
+
 	interface Props {
-		chainId?: number; // If provided, auto-load tokens for this chain
-		tokens?: Token[]; // Manual token list (overrides chainId)
+		network?: NetworkInfo; // Network info for auto-loading tokens
+		tokens?: Token[]; // Manual token list (overrides network)
 		selectedTokenIds?: SvelteSet<string>; // Bindable - external selection state
 		onSelectionChange?: (selectedIds: SvelteSet<string>) => void; // Callback when selection changes
 		onTokenAdded?: (tokenId: string) => void; // Callback when token is added
 		onRemoveCustomToken?: (tokenId: string, chainId: number) => void;
-		blockExplorer?: string;
 		emptyMessage?: string;
 		showBulkActions?: boolean;
 		showAddButton?: boolean; // Show dashed "Add Token" card
-		storageKey?: string; // LocalStorage key for custom tokens
 		multiSelect?: boolean; // Allow multiple selection
 	}
 
 	let {
-		chainId,
+		network,
 		tokens = [],
 		selectedTokenIds = $bindable(new SvelteSet<string>()),
 		onSelectionChange,
 		onTokenAdded,
 		onRemoveCustomToken,
-		blockExplorer,
 		emptyMessage = 'No tokens available',
 		showBulkActions = true,
 		showAddButton = true,
-		storageKey,
 		multiSelect = true
 	}: Props = $props();
-
-	const connectStore = useConnectStore();
 
 	// Force refresh when custom tokens change
 	let refreshTrigger = $state(0);
@@ -61,41 +62,35 @@
 	let displayTokens = $derived(() => {
 		// Watch refresh trigger to force re-evaluation
 		void refreshTrigger;
+
 		// If manual tokens provided, use them
 		if (tokens.length > 0) return tokens;
 
-		console.log({ tokens });
-		// Otherwise, load from chain config + custom tokens
-		const currentChainId = chainId ?? connectStore.currentChainId;
-		if (!currentChainId) return [];
+		// Otherwise, need network info to auto-load tokens
+		if (!network) return [];
 
 		const allTokens: Token[] = [];
 
-		// Step 1: Auto-generate native token from network config
-		// This works for ALL networks (predefined + custom networks)
-		const currentNetwork = connectStore.networks.find((n) => n.chainId === currentChainId);
-		if (currentNetwork) {
-			const nativeToken: NativeToken = {
-				id: `${currentChainId}:native`,
-				type: 'native',
-				symbol: currentNetwork.symbol,
-				name: currentNetwork.name,
-				decimals: 18,
-				chainId: currentChainId,
-				logoUrl: '' // Will be handled by getTokenLogo fallback
-			};
-			allTokens.push(nativeToken);
-		}
+		// Step 1: Auto-generate native token from network info
+		const nativeToken: NativeToken = {
+			id: `${network.chainId}:native`,
+			type: 'native',
+			symbol: network.symbol,
+			name: network.name,
+			decimals: 18,
+			chainId: network.chainId,
+			logoUrl: ''
+		};
+		allTokens.push(nativeToken);
 
 		// Step 2: Add predefined ERC20 tokens from config (if any)
-		const erc20Tokens = PREDEFINED_TOKENS[currentChainId];
+		const erc20Tokens = PREDEFINED_TOKENS[network.chainId];
 		if (erc20Tokens && erc20Tokens.length > 0) {
 			allTokens.push(...erc20Tokens);
 		}
 
-		// Step 3: Load custom tokens from localStorage using unified storage
-		const customTokens = loadCustomTokens(currentChainId);
-		console.log({ customTokens });
+		// Step 3: Load custom tokens from localStorage
+		const customTokens = loadCustomTokens(network.chainId);
 		allTokens.push(...customTokens);
 
 		return allTokens;
@@ -167,19 +162,14 @@
 			<TokenCard
 				{token}
 				isSelected={selectedTokenIds.has(token.id)}
-				{blockExplorer}
+				blockExplorer={network?.blockExplorer}
 				onToggle={handleToggle}
 				onRemove={onRemoveCustomToken ? handleRemove : undefined}
 			/>
 		{/each}
 
-		{#if showAddButton && storageKey}
-			{@const currentChainId = chainId ?? connectStore.currentChainId ?? 1}
-			{@const currentNetwork = connectStore.networks.find((n) => n.chainId === currentChainId)}
-			{@const rpcUrl = currentNetwork?.rpcEndpoints?.[0]?.url || ''}
-			{#if rpcUrl}
-				<AddTokenButton chainId={currentChainId} {rpcUrl} {onTokenAdded} />
-			{/if}
+		{#if showAddButton && network}
+			<AddTokenButton chainId={network.chainId} rpcUrl={network.rpcUrl} {onTokenAdded} />
 		{/if}
 	</div>
 {/if}

@@ -48,18 +48,25 @@
 			title="Wallet Not Connected"
 			message="Please go back to Step 1 and connect your wallet"
 		/>
-	{:else}
-		<TokenSelector
-			chainId={connectStore.currentChainId}
-			bind:selectedTokenIds={step3State.selectedTokenIds}
-			onSelectionChange={handleSelectionChange}
-			onTokenAdded={handleTokenAdded}
-			onRemoveCustomToken={handleRemoveCustomToken}
-			blockExplorer={currentNetwork?.blockExplorer}
-			emptyMessage="No tokens available. Add a custom token to get started."
-			storageKey="custom-tokens"
-			multiSelect={true}
-		/>
+	{:else if currentNetwork && connectStore.currentChainId}
+		{@const rpcUrl = currentNetwork.rpcEndpoints?.[0]?.url || ''}
+		{#if rpcUrl}
+			<TokenSelector
+				network={{
+					chainId: connectStore.currentChainId,
+					name: currentNetwork.name,
+					symbol: currentNetwork.symbol,
+					rpcUrl,
+					blockExplorer: currentNetwork.blockExplorer
+				}}
+				bind:selectedTokenIds={step3State.selectedTokenIds}
+				onSelectionChange={handleSelectionChange}
+				onTokenAdded={handleTokenAdded}
+				onRemoveCustomToken={handleRemoveCustomToken}
+				emptyMessage="No tokens available. Add a custom token to get started."
+				multiSelect={true}
+			/>
+		{/if}
 	{/if}
 </div>
 
