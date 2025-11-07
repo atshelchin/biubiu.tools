@@ -19,6 +19,7 @@
 	import AddressPathSelector from '$lib/components/ui/address-path-selector.svelte';
 	import WalletList from '$lib/components/ui/wallet-list.svelte';
 	import SimpleCodeEditor from '$lib/components/widgets/SimpleCodeEditor.svelte';
+	import ConfirmDialog from '$lib/components/ui/confirm-dialog.svelte';
 
 	const connectStore = useConnectStore();
 
@@ -36,6 +37,11 @@
 	let privateKeysText = $state('');
 	let isGenerating = $state(false);
 	let errorMessage = $state('');
+
+	// Confirm dialog state
+	let showRemoveDialog = $state(false);
+	let showClearAllDialog = $state(false);
+	let walletToRemove = $state<string>('');
 
 	// Derived state
 	let importedWallets = $derived(step4State.importedWallets);
@@ -164,15 +170,23 @@
 	}
 
 	function handleRemoveWallet(address: string) {
-		if (confirm('Remove this wallet?')) {
-			step4State.removeWallet(address);
+		walletToRemove = address;
+		showRemoveDialog = true;
+	}
+
+	function confirmRemoveWallet() {
+		if (walletToRemove) {
+			step4State.removeWallet(walletToRemove);
+			walletToRemove = '';
 		}
 	}
 
 	function handleClearAll() {
-		if (confirm(`Remove all ${walletCount} wallets?`)) {
-			step4State.clearWallets();
-		}
+		showClearAllDialog = true;
+	}
+
+	function confirmClearAll() {
+		step4State.clearWallets();
 	}
 
 	async function handleScanBalances() {
@@ -370,7 +384,7 @@
 			<SimpleCodeEditor
 				bind:value={privateKeysText}
 				placeholder="One private key per line (starting with 0x)"
-				rows={8}
+				rows={20}
 			/>
 			<button
 				class="btn-primary"
@@ -632,3 +646,31 @@
 		}
 	}
 </style>
+
+<!-- Confirm Dialogs -->
+<ConfirmDialog
+	bind:open={showRemoveDialog}
+	title="Remove Wallet"
+	message="Are you sure you want to remove this wallet from the import list?"
+	confirmText="Remove"
+	cancelText="Cancel"
+	variant="danger"
+	requireLongPress={false}
+	onConfirm={confirmRemoveWallet}
+	onCancel={() => {
+		walletToRemove = '';
+	}}
+/>
+
+<ConfirmDialog
+	bind:open={showClearAllDialog}
+	title="Clear All Wallets"
+	message={`Are you sure you want to remove all ${walletCount.toLocaleString()} wallets from the import list? This action cannot be undone.`}
+	confirmText="Clear All"
+	cancelText="Cancel"
+	variant="danger"
+	requireLongPress={true}
+	longPressDuration={3000}
+	onConfirm={confirmClearAll}
+	onCancel={() => {}}
+/>
