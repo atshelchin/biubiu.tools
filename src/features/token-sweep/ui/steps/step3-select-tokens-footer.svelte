@@ -5,11 +5,8 @@
 
 	const stepManager = useStepManager();
 
-	// Use shared state from step3State
-	let selectedTokenIds = $derived(step3State.selectedTokenIds);
-
-	// Check if can continue
-	let canContinue = $derived(selectedTokenIds.size > 0);
+	// Check if can continue - derive from size property
+	let canContinue = $derived(step3State.selectedTokenIds.size > 0);
 
 	function handleContinue() {
 		if (canContinue) {
