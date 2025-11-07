@@ -9,6 +9,7 @@ import type {
 	DateFormat
 } from '../types/wallet';
 import type { Address } from 'viem';
+import { Buffer } from 'buffer';
 
 /**
  * Validate mnemonic phrase
@@ -40,20 +41,54 @@ function generateDateIndices(startDate: string, endDate: string, format: DateFor
 	const end = new Date(endDate);
 	const indices: number[] = [];
 
-	for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
-		const year = d.getFullYear();
-		const month = d.getMonth() + 1;
-		const day = d.getDate();
+	// Determine granularity based on format
+	const isYearOnly = format === 'yyyy';
+	const isMonthGranular = format === 'yyyymm' || format === 'yyyym';
 
-		let index: number;
-		if (format === 'yyyymmdd') {
-			// Format: 20240919
-			index = year * 10000 + month * 100 + day;
-		} else {
-			// Format: 2024919 (no leading zeros)
-			index = year * 10000 + month * 100 + day;
+	if (isYearOnly) {
+		// Generate one index per year
+		for (let year = start.getFullYear(); year <= end.getFullYear(); year++) {
+			indices.push(year);
 		}
-		indices.push(index);
+	} else if (isMonthGranular) {
+		// Generate one index per month
+		const currentDate = new Date(start);
+		while (currentDate <= end) {
+			const year = currentDate.getFullYear();
+			const month = currentDate.getMonth() + 1;
+
+			let index: number;
+			if (format === 'yyyymm') {
+				// Format: 202401 (with leading zeros) - always 2-digit month
+				index = year * 100 + month;
+			} else {
+				// Format: 20241 (no leading zeros) - parse as number without padding
+				const dateStr = `${year}${month}`;
+				index = parseInt(dateStr, 10);
+			}
+			indices.push(index);
+
+			// Move to next month
+			currentDate.setMonth(currentDate.getMonth() + 1);
+		}
+	} else {
+		// Generate one index per day
+		for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
+			const year = d.getFullYear();
+			const month = d.getMonth() + 1;
+			const day = d.getDate();
+
+			let index: number;
+			if (format === 'yyyymmdd') {
+				// Format: 20240919 (with leading zeros) - always 2-digit month/day
+				index = year * 10000 + month * 100 + day;
+			} else {
+				// Format: 2024919 (no leading zeros) - parse as number without padding
+				const dateStr = `${year}${month}${day}`;
+				index = parseInt(dateStr, 10);
+			}
+			indices.push(index);
+		}
 	}
 
 	return indices;

@@ -13,7 +13,7 @@ export type DerivationPathType = 'sequential' | 'date';
 /**
  * Date format for date-based derivation
  */
-export type DateFormat = 'yyyymmdd' | 'yyyymdd';
+export type DateFormat = 'yyyy' | 'yyyymm' | 'yyyym' | 'yyyymmdd' | 'yyyymdd';
 
 /**
  * Imported wallet information
@@ -27,6 +27,7 @@ export interface ImportedWallet {
 		native?: string;
 		tokens?: Record<string, string>; // tokenAddress -> balance
 	};
+	[key: string]: unknown; // Allow additional properties
 }
 
 /**

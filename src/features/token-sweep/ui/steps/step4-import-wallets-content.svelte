@@ -13,9 +13,11 @@
 	import type { ERC20Token } from '$lib/types/token';
 	import { createPublicClient, http } from 'viem';
 	import { SvelteMap } from 'svelte/reactivity';
-	import { Loader2, Trash2, AlertCircle } from 'lucide-svelte';
+	import { Loader2, AlertCircle } from 'lucide-svelte';
 	import { slide } from 'svelte/transition';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
+	import AddressPathSelector from '$lib/components/ui/address-path-selector.svelte';
+	import WalletList from '$lib/components/ui/wallet-list.svelte';
 
 	const connectStore = useConnectStore();
 
@@ -23,8 +25,13 @@
 	let importMethod = $state<ImportMethod>('mnemonic');
 	let pathType = $state<DerivationPathType>('sequential');
 	let mnemonicText = $state('');
-	let startIndex = $state('0');
-	let endIndex = $state('99');
+	let startIndex = $state(0);
+	let endIndex = $state(99);
+	let startYear = $state(new Date().getFullYear() - 10);
+	let endYear = $state(new Date().getFullYear());
+	let includeMonth = $state(false);
+	let includeDay = $state(false);
+	let useLeadingZeros = $state(true);
 	let privateKeysText = $state('');
 	let isGenerating = $state(false);
 	let errorMessage = $state('');
@@ -57,34 +64,62 @@
 			return;
 		}
 
-		const start = parseInt(startIndex);
-		const end = parseInt(endIndex);
-
-		if (isNaN(start) || isNaN(end) || start < 0 || end < start) {
-			errorMessage = 'Invalid address range';
-			return;
-		}
-
-		if (end - start > 1000) {
-			errorMessage = 'Range too large (max 1000 addresses at once)';
-			return;
-		}
+		// Clear existing wallets before generating new ones
+		step4State.clearWallets();
 
 		isGenerating = true;
 		errorMessage = '';
 
 		try {
-			const result = await deriveAddressesFromMnemonic({
-				mnemonic: mnemonicText.trim(),
-				pathType,
-				startIndex: start,
-				endIndex: end
-			});
+			let result;
+
+			if (pathType === 'sequential') {
+				// Sequential mode
+				if (startIndex < 0 || endIndex < startIndex) {
+					errorMessage = 'Invalid address range';
+					isGenerating = false;
+					return;
+				}
+
+				if (endIndex - startIndex + 1 > 10000) {
+					errorMessage = 'Range too large (max 10000 addresses at once)';
+					isGenerating = false;
+					return;
+				}
+
+				result = await deriveAddressesFromMnemonic({
+					mnemonic: mnemonicText.trim(),
+					pathType: 'sequential',
+					startIndex,
+					endIndex
+				});
+			} else {
+				// Date mode
+				const startDate = `${startYear}-01-01`;
+				const endDate = `${endYear}-12-31`;
+
+				// Determine date format based on granularity
+				let dateFormat: 'yyyy' | 'yyyymm' | 'yyyym' | 'yyyymmdd' | 'yyyymdd';
+				if (!includeMonth && !includeDay) {
+					dateFormat = 'yyyy';
+				} else if (includeMonth && !includeDay) {
+					dateFormat = useLeadingZeros ? 'yyyymm' : 'yyyym';
+				} else {
+					dateFormat = useLeadingZeros ? 'yyyymmdd' : 'yyyymdd';
+				}
+
+				result = await deriveAddressesFromMnemonic({
+					mnemonic: mnemonicText.trim(),
+					pathType: 'date',
+					startDate,
+					endDate,
+					dateFormat
+				});
+			}
 
 			if (result.success) {
 				step4State.addWallets(result.wallets);
-				// Clear mnemonic for security
-				mnemonicText = '';
+				// Don't clear mnemonic - user might want to generate more addresses with different ranges
 			} else {
 				errorMessage = result.error || 'Failed to generate addresses';
 			}
@@ -296,47 +331,21 @@
 			></textarea>
 			<p class="form-hint">⚠️ Your mnemonic is never uploaded to any server</p>
 
-			<label class="form-label" style="margin-top: var(--space-4);">Derivation Path Type</label>
-			<div class="path-type-selector">
-				<button
-					class="path-option"
-					class:selected={pathType === 'sequential'}
-					onclick={() => handlePathTypeChange('sequential')}
-				>
-					<div class="path-icon">📊</div>
-					<div class="path-label">Sequential</div>
-					<div class="path-desc">0, 1, 2, 3...</div>
-				</button>
-				<button
-					class="path-option"
-					class:selected={pathType === 'date'}
-					onclick={() => handlePathTypeChange('date')}
-					disabled
-					title="Coming soon"
-				>
-					<div class="path-icon">📅</div>
-					<div class="path-label">Date-based</div>
-					<div class="path-desc">20240919...</div>
-				</button>
+			<div style="margin-top: var(--space-4);">
+				<label class="form-label">Derivation Path Configuration</label>
+				<AddressPathSelector
+					bind:pathType
+					bind:startIndex
+					bind:endIndex
+					bind:startYear
+					bind:endYear
+					bind:includeMonth
+					bind:includeDay
+					bind:useLeadingZeros
+					maxAddresses={10000}
+					onPathTypeChange={handlePathTypeChange}
+				/>
 			</div>
-
-			{#if pathType === 'sequential'}
-				<div class="range-inputs" transition:slide>
-					<label class="form-label">Address Range</label>
-					<div class="range-row">
-						<input
-							type="number"
-							class="form-input"
-							bind:value={startIndex}
-							placeholder="Start"
-							min="0"
-						/>
-						<span class="range-separator">to</span>
-						<input type="number" class="form-input" bind:value={endIndex} placeholder="End" />
-					</div>
-					<p class="form-hint">💡 Example: 0-99 will generate 100 addresses</p>
-				</div>
-			{/if}
 
 			<button
 				class="btn-primary"
@@ -412,32 +421,15 @@
 			</div>
 		</div>
 
-		{#if walletCount === 0}
-			<div class="empty-state-small">
-				<p>No wallets imported yet</p>
-				<small>Use the methods above to import wallets</small>
-			</div>
-		{:else}
-			<div class="wallet-list">
-				{#each importedWallets as wallet (wallet.id)}
-					<div class="wallet-item" transition:slide>
-						<div class="wallet-info">
-							<code class="wallet-address">{wallet.address}</code>
-							{#if wallet.derivationPath}
-								<small class="wallet-path">{wallet.derivationPath}</small>
-							{/if}
-						</div>
-						<button
-							class="btn-icon-danger"
-							onclick={() => handleRemoveWallet(wallet.address)}
-							title="Remove wallet"
-						>
-							<Trash2 size={16} />
-						</button>
-					</div>
-				{/each}
-			</div>
-		{/if}
+		<WalletList
+			wallets={importedWallets}
+			pageSize={20}
+			showPagination={true}
+			canRemove={true}
+			onRemove={handleRemoveWallet}
+			emptyMessage="No wallets imported yet. Use the methods above to import wallets."
+			showDerivationPath={true}
+		/>
 	</div>
 </div>
 
@@ -501,7 +493,20 @@
 		border-radius: var(--radius-sm);
 		font-size: var(--text-base);
 		font-family: 'Courier New', monospace;
+		background: var(--white);
+		color: var(--gray-900);
 		transition: all 0.2s;
+	}
+
+	.form-textarea {
+		resize: none;
+	}
+
+	:global([data-theme='dark']) .form-textarea,
+	:global([data-theme='dark']) .form-input {
+		background: var(--gray-700);
+		color: var(--gray-100);
+		border-color: var(--gray-600);
 	}
 	.form-textarea:focus,
 	.form-input:focus {
@@ -510,53 +515,36 @@
 		box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 	}
 
-	.path-type-selector {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-		gap: var(--space-3);
-		margin-bottom: var(--space-4);
+	/* Scrollbar styling for textarea */
+	.form-textarea::-webkit-scrollbar {
+		width: 8px;
 	}
 
-	.path-option {
-		padding: var(--space-3);
-		background: var(--color-panel-1);
-		border: 2px solid var(--color-border);
+	.form-textarea::-webkit-scrollbar-track {
+		background: var(--gray-200);
 		border-radius: var(--radius-md);
-		cursor: pointer;
-		transition: all 0.2s;
-		text-align: center;
-	}
-	.path-option:hover:not(:disabled) {
-		border-color: var(--color-primary);
-	}
-	.path-option.selected {
-		border-color: var(--color-primary);
-		background: rgba(59, 130, 246, 0.05);
-	}
-	.path-option:disabled {
-		opacity: 0.5;
-		cursor: not-allowed;
 	}
 
-	.path-icon {
-		font-size: 1.5rem;
-		margin-bottom: var(--space-1);
-	}
-	.path-label {
-		font-weight: var(--font-semibold);
-	}
-	.path-desc {
-		font-size: var(--text-xs);
-		color: var(--gray-500);
+	.form-textarea::-webkit-scrollbar-thumb {
+		background: var(--gray-400);
+		border-radius: var(--radius-md);
+		transition: background 0.2s;
 	}
 
-	.range-row {
-		display: flex;
-		align-items: center;
-		gap: var(--space-2);
+	.form-textarea::-webkit-scrollbar-thumb:hover {
+		background: var(--gray-500);
 	}
-	.range-separator {
-		color: var(--gray-600);
+
+	:global([data-theme='dark']) .form-textarea::-webkit-scrollbar-track {
+		background: var(--gray-800);
+	}
+
+	:global([data-theme='dark']) .form-textarea::-webkit-scrollbar-thumb {
+		background: var(--gray-600);
+	}
+
+	:global([data-theme='dark']) .form-textarea::-webkit-scrollbar-thumb:hover {
+		background: var(--gray-500);
 	}
 
 	.error-banner {
@@ -633,66 +621,6 @@
 		font-size: var(--text-sm);
 	}
 	.btn-text-danger:hover {
-		color: hsl(0, 80%, 40%);
-	}
-
-	.empty-state-small {
-		text-align: center;
-		padding: var(--space-6);
-		color: var(--gray-500);
-	}
-
-	.wallet-list {
-		max-height: 300px;
-		overflow-y: auto;
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-md);
-	}
-
-	.wallet-item {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: var(--space-3);
-		border-bottom: 1px solid var(--color-border);
-	}
-	.wallet-item:last-child {
-		border-bottom: none;
-	}
-
-	.wallet-info {
-		flex: 1;
-		min-width: 0;
-	}
-
-	.wallet-address {
-		display: block;
-		font-size: var(--text-sm);
-		color: var(--gray-900);
-		word-break: break-all;
-	}
-	:global([data-theme='dark']) .wallet-address {
-		color: var(--gray-100);
-	}
-
-	.wallet-path {
-		display: block;
-		font-size: var(--text-xs);
-		color: var(--gray-500);
-		margin-top: var(--space-1);
-	}
-
-	.btn-icon-danger {
-		background: none;
-		border: none;
-		color: hsl(0, 70%, 50%);
-		cursor: pointer;
-		padding: var(--space-2);
-		border-radius: var(--radius-sm);
-		transition: all 0.2s;
-	}
-	.btn-icon-danger:hover {
-		background: hsla(0, 70%, 50%, 0.1);
 		color: hsl(0, 80%, 40%);
 	}
 
