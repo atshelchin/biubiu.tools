@@ -10,6 +10,7 @@
 	import TokenSelector from './components/token-selector.svelte';
 	import StepSidebar from './components/step-sidebar.svelte';
 	import StepContentHeader from './components/step-content-header.svelte';
+	import EmptyState from './components/empty-state.svelte';
 
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
@@ -136,11 +137,11 @@
 		</StepContentHeader>
 
 		{#if !connectStore.isConnected}
-			<div class="empty-state">
-				<div class="empty-icon">🔌</div>
-				<h3>Wallet Not Connected</h3>
-				<p>Please go back to Step 1 and connect your wallet</p>
-			</div>
+			<EmptyState
+				icon="🔌"
+				title="Wallet Not Connected"
+				message="Please go back to Step 1 and connect your wallet"
+			/>
 		{:else}
 			<TokenSelector
 				tokens={availableTokens}
@@ -324,30 +325,5 @@
 
 	:global([data-theme='dark']) .btn-secondary:hover {
 		background: var(--gray-600);
-	}
-
-	/* Empty State (for wallet not connected) */
-	.empty-state {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: var(--space-3);
-		padding: var(--space-8);
-		text-align: center;
-	}
-
-	.empty-icon {
-		font-size: 4rem;
-	}
-
-	.empty-state h3 {
-		font-size: var(--text-xl);
-		margin: 0;
-	}
-
-	.empty-state p {
-		max-width: 400px;
 	}
 </style>

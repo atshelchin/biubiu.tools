@@ -11,6 +11,7 @@
 	import type { ContractDeploymentConfig } from '../types/deployment-config';
 	import StepSidebar from './components/step-sidebar.svelte';
 	import StepContentHeader from './components/step-content-header.svelte';
+	import EmptyState from './components/empty-state.svelte';
 
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
@@ -255,12 +256,15 @@
 			</div>
 		{:else if !connectStore.isConnected}
 			<!-- Not Connected State -->
-			<div class="empty-state">
-				<div class="empty-icon">🔌</div>
-				<h3>Wallet Not Connected</h3>
-				<p>Please go back to Step 1 and connect your wallet</p>
-				<button class="back-button" onclick={goBackToStep1}> Go to Step 1 </button>
-			</div>
+			<EmptyState
+				icon="🔌"
+				title="Wallet Not Connected"
+				message="Please go back to Step 1 and connect your wallet"
+			>
+				{#snippet action()}
+					<button class="back-button" onclick={goBackToStep1}> Go to Step 1 </button>
+				{/snippet}
+			</EmptyState>
 		{:else if hasChecked && checks.length > 0}
 			<!-- Check Results -->
 			<div class="checks-container" in:fade={{ duration: 300 }}>
@@ -641,24 +645,6 @@
 	}
 
 	/* Empty State */
-	.empty-state {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		padding: var(--space-12) var(--space-6);
-		background: var(--color-panel-1);
-		border-radius: var(--radius-lg);
-		border: 2px dashed var(--color-border);
-		min-height: 300px;
-		text-align: center;
-	}
-
-	.empty-icon {
-		font-size: 64px;
-		margin-bottom: var(--space-4);
-	}
-
 	.back-button {
 		margin-top: var(--space-4);
 		padding: var(--space-2) var(--space-4);
