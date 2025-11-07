@@ -42,6 +42,156 @@
 			"title": "Wallet Factory",
 			"description": "Generate multiple wallets from mnemonic, xpub, or secret text with HD path support"
 		},
+		"dex_moonshot_trader": {
+			"title": "DEX Moonshot Trader",
+			"description": "Buy and sell tokens from DEXScreener Moonshot with easy web interface"
+		},
+		"token_deployer": {
+			"title": "Token Deployer",
+			"description": "Create and deploy ERC20 tokens with custom parameters in minutes"
+		},
+		"nft_deployer": {
+			"title": "NFT Deployer",
+			"description": "Deploy NFT smart contracts with ERC-721, ERC-721A, and ERC-1155 standards",
+			"step1": {
+				"sidebar": {
+					"title": "Connect Wallet",
+					"description": "Connect your Web3 wallet to deploy NFT contracts on your chosen blockchain network.",
+					"requirements": "Requirements",
+					"requirement1": "Web3 wallet (MetaMask, WalletConnect, etc.)",
+					"requirement2": "Sufficient native tokens for gas fees",
+					"requirement3": "Select target blockchain network",
+					"supported_chains": "Supported Networks"
+				},
+				"content": {
+					"title": "Select Network & Connect Wallet",
+					"description": "Choose the blockchain network for your NFT contract deployment",
+					"ready_hint": "Your wallet is connected and ready to proceed"
+				}
+			},
+			"step2": {
+				"sidebar": {
+					"title": "Choose Standard",
+					"description": "Select the NFT standard that best fits your project requirements.",
+					"selected": "Selected Standard",
+					"comparison": "Quick Comparison",
+					"tips": "Selection Tips",
+					"tip1": "ERC-721 for standard NFT collections",
+					"tip2": "ERC-721A for gas-efficient batch minting",
+					"tip3": "ERC-1155 for multi-token support"
+				},
+				"content": {
+					"title": "Select NFT Standard",
+					"description": "Choose the standard that best suits your NFT collection needs",
+					"selected_confirmation": "Standard selected, ready to continue"
+				}
+			},
+			"step3": {
+				"sidebar": {
+					"title": "Basic Info",
+					"description": "Enter essential information about your NFT collection.",
+					"progress": "Progress",
+					"field_name": "Collection Name",
+					"field_symbol": "Symbol",
+					"field_description": "Description",
+					"field_base_uri": "Base URI (Optional)",
+					"all_required_complete": "All required fields completed!",
+					"tips": "Best Practices",
+					"tip1": "Choose a unique and memorable collection name",
+					"tip2": "Symbol should be 3-10 characters",
+					"tip3": "Provide clear description for marketplaces"
+				},
+				"content": {
+					"title": "Configure NFT Basics",
+					"description": "Set up the fundamental properties of your NFT collection",
+					"name_label": "Collection Name",
+					"name_placeholder": "My Awesome NFT Collection",
+					"name_hint": "The name of your NFT collection",
+					"symbol_label": "Symbol",
+					"symbol_placeholder": "AWESOME",
+					"symbol_hint": "Short identifier for your collection (e.g., BAYC, PUNK)",
+					"description_label": "Description",
+					"description_placeholder": "Describe your NFT collection...",
+					"description_hint": "Tell collectors about your NFT collection",
+					"base_uri_label": "Base URI",
+					"base_uri_placeholder": "ipfs://...",
+					"base_uri_hint": "Base URL for token metadata (can be set later)",
+					"preview": "Preview"
+				}
+			},
+			"step4": {
+				"sidebar": {
+					"title": "Advanced Settings",
+					"description": "Configure advanced features for your NFT collection.",
+					"configured": "Configured Settings",
+					"supply_limit": "Supply Limit",
+					"mint_price": "Mint Price",
+					"royalties": "Royalties",
+					"special_features": "Special Features",
+					"recommendations": "Recommendations",
+					"rec1": "Set max supply to create scarcity",
+					"rec2": "Enable royalties to earn from resales",
+					"rec3": "Use pausable for emergency controls"
+				},
+				"content": {
+					"title": "Configure Advanced Settings",
+					"description": "Set up pricing, royalties, and special features for your NFT",
+					"supply_pricing": "Supply & Pricing",
+					"max_supply_label": "Max Supply",
+					"max_supply_hint": "Maximum number of tokens (0 = unlimited)",
+					"mint_price_label": "Mint Price",
+					"mint_price_hint": "Price per mint in native token (ETH, MATIC, etc.)",
+					"max_per_wallet_label": "Max Per Wallet",
+					"max_per_wallet_hint": "Maximum tokens per wallet (0 = unlimited)",
+					"royalties": "Royalties (EIP-2981)",
+					"enable_royalties": "Enable Royalties",
+					"royalty_recipient_label": "Royalty Recipient",
+					"royalty_recipient_hint": "Address to receive royalty payments",
+					"royalty_percentage_label": "Royalty Percentage",
+					"royalty_percentage_hint": "Percentage of secondary sales (0-100%)",
+					"access_control": "Access Control",
+					"owner_only": "Owner Mint Only",
+					"public_mint": "Public Mint Enabled",
+					"whitelist": "Whitelist Enabled",
+					"features": "Special Features",
+					"pausable": "Pausable",
+					"pausable_hint": "Allow owner to pause transfers",
+					"burnable": "Burnable",
+					"burnable_hint": "Allow tokens to be burned",
+					"revealable": "Revealable",
+					"revealable_hint": "Support delayed reveal mechanism",
+					"fungible": "Fungible (ERC-1155)",
+					"fungible_hint": "Make tokens fungible within same ID"
+				}
+			},
+			"step5": {
+				"sidebar": {
+					"title": "Review & Deploy",
+					"description": "Review your configuration and deploy your NFT contract to the blockchain.",
+					"deployment_status": "Deployment Status",
+					"status_ready": "Ready to Deploy",
+					"status_preparing": "Preparing",
+					"status_deploying": "Deploying",
+					"status_completed": "Completed",
+					"status_error": "Error",
+					"checklist": "Pre-Deployment Checklist",
+					"check1": "Verify all configuration is correct",
+					"check2": "Ensure sufficient gas fees in wallet",
+					"check3": "Confirm deployment network",
+					"check4": "Save contract address after deployment"
+				},
+				"content": {
+					"title": "Review & Deploy",
+					"description": "Final review before deploying your NFT contract",
+					"nft_standard": "NFT Standard",
+					"basic_config": "Basic Configuration",
+					"advanced_settings": "Advanced Settings",
+					"deploy_button": "Deploy Contract",
+					"success_title": "Contract Deployed Successfully!",
+					"success_message": "Your NFT contract has been deployed to the blockchain"
+				}
+			}
+		},
 		"wallet_collection": {
 			"title": "Drain balance",
 			"description": "Efficiently collect balances from multiple wallets to a single address. Support multiple tokens and chains.",
@@ -253,5 +403,26 @@
 		"benefit_3": "Your referral link is valid for 90 days",
 		"your_link": "Your Referral Link",
 		"note": "Note: Once someone uses your referral link, their referral association lasts for 90 days. You'll earn 50% of all their payments during this period."
+	},
+	"common": {
+		"loading": "Loading...",
+		"continue": "Continue",
+		"back": "Back",
+		"next": "Next",
+		"finish": "Finish",
+		"done": "Done",
+		"optional": "Optional",
+		"chars_left": "characters left",
+		"name": "Name",
+		"symbol": "Symbol",
+		"description": "Description",
+		"standard": "Standard",
+		"contract_address": "Contract Address",
+		"transaction_hash": "Transaction Hash",
+		"gas_used": "Gas Used",
+		"deployment_cost": "Deployment Cost",
+		"max_supply": "Max Supply",
+		"mint_price": "Mint Price",
+		"royalty": "Royalty"
 	}
 }

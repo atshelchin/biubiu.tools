@@ -13,7 +13,9 @@
 		ArrowRightLeft,
 		SendHorizontal,
 		ScanSearch,
-		Globe
+		Globe,
+		TrendingUp,
+		KeyRound
 	} from '@lucide/svelte';
 
 	interface Tool {
@@ -71,6 +73,39 @@
 			status: 'active',
 			color: '#EC4899',
 			features: ['Pattern Generation', 'Expiry Tracking', 'Batch Scanning'],
+			highlight: false,
+			alpha: true
+		},
+		{
+			icon: KeyRound,
+			title: t('tools.wallet_generator.title'),
+			description: t('tools.wallet_generator.description'),
+			link: '/apps/wallet-generator',
+			status: 'active',
+			color: '#8B5CF6',
+			features: ['HD Path Support', 'Multiple Chains', 'Export to CSV/JSON'],
+			highlight: false,
+			alpha: true
+		},
+		{
+			icon: TrendingUp,
+			title: t('tools.dex_moonshot_trader.title'),
+			description: t('tools.dex_moonshot_trader.description'),
+			link: '/apps/dex-moonshot-trader',
+			status: 'active',
+			color: '#EF4444',
+			features: ['Buy & Sell Tokens', 'Adjustable Slippage', 'Multi-Chain Support'],
+			highlight: false,
+			alpha: true
+		},
+		{
+			icon: Sparkles,
+			title: t('tools.token_deployer.title'),
+			description: t('tools.token_deployer.description'),
+			link: '/apps/token-deployer',
+			status: 'active',
+			color: '#10B981',
+			features: ['Advanced Features', 'Tax & Anti-Bot', 'Instant Deploy'],
 			highlight: false,
 			alpha: true
 		},

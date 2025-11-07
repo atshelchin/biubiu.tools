@@ -42,6 +42,156 @@
 			"title": "钱包工厂",
 			"description": "从助记词、xpub或秘密文本生成多个钱包，支持HD路径"
 		},
+		"dex_moonshot_trader": {
+			"title": "操DEXScreener Moonshot",
+			"description": "为DEXScreener Moonshot代币提供简单的买卖交易界面"
+		},
+		"token_deployer": {
+			"title": "代币部署器",
+			"description": "快速创建和部署自定义参数的 ERC20 代币"
+		},
+		"nft_deployer": {
+			"title": "NFT部署器",
+			"description": "部署 NFT 智能合约，支持 ERC-721、ERC-721A 和 ERC-1155 标准",
+			"step1": {
+				"sidebar": {
+					"title": "连接钱包",
+					"description": "连接您的 Web3 钱包，在您选择的区块链网络上部署 NFT 合约。",
+					"requirements": "要求",
+					"requirement1": "Web3 钱包（MetaMask、WalletConnect 等）",
+					"requirement2": "足够的原生代币支付 Gas 费用",
+					"requirement3": "选择目标区块链网络",
+					"supported_chains": "支持的网络"
+				},
+				"content": {
+					"title": "选择网络并连接钱包",
+					"description": "选择您的 NFT 合约部署目标区块链网络",
+					"ready_hint": "您的钱包已连接，可以继续操作"
+				}
+			},
+			"step2": {
+				"sidebar": {
+					"title": "选择标准",
+					"description": "选择最适合您项目需求的 NFT 标准。",
+					"selected": "已选标准",
+					"comparison": "快速对比",
+					"tips": "选择建议",
+					"tip1": "标准 NFT 集合选择 ERC-721",
+					"tip2": "批量铸造省 Gas 选择 ERC-721A",
+					"tip3": "多代币支持选择 ERC-1155"
+				},
+				"content": {
+					"title": "选择 NFT 标准",
+					"description": "选择最适合您 NFT 集合需求的标准",
+					"selected_confirmation": "标准已选择，可以继续"
+				}
+			},
+			"step3": {
+				"sidebar": {
+					"title": "基本信息",
+					"description": "输入您的 NFT 集合的基本信息。",
+					"progress": "进度",
+					"field_name": "集合名称",
+					"field_symbol": "符号",
+					"field_description": "描述",
+					"field_base_uri": "基础 URI（可选）",
+					"all_required_complete": "所有必填项已完成！",
+					"tips": "最佳实践",
+					"tip1": "选择一个独特且易记的集合名称",
+					"tip2": "符号应为 3-10 个字符",
+					"tip3": "为市场提供清晰的描述"
+				},
+				"content": {
+					"title": "配置 NFT 基本信息",
+					"description": "设置您的 NFT 集合的基本属性",
+					"name_label": "集合名称",
+					"name_placeholder": "我的超棒 NFT 集合",
+					"name_hint": "您的 NFT 集合名称",
+					"symbol_label": "符号",
+					"symbol_placeholder": "AWESOME",
+					"symbol_hint": "您的集合的简短标识符（例如 BAYC、PUNK）",
+					"description_label": "描述",
+					"description_placeholder": "描述您的 NFT 集合...",
+					"description_hint": "告诉收藏者关于您的 NFT 集合",
+					"base_uri_label": "基础 URI",
+					"base_uri_placeholder": "ipfs://...",
+					"base_uri_hint": "代币元数据的基础 URL（可以稍后设置）",
+					"preview": "预览"
+				}
+			},
+			"step4": {
+				"sidebar": {
+					"title": "高级设置",
+					"description": "为您的 NFT 集合配置高级功能。",
+					"configured": "已配置的设置",
+					"supply_limit": "供应限制",
+					"mint_price": "铸造价格",
+					"royalties": "版税",
+					"special_features": "特殊功能",
+					"recommendations": "建议",
+					"rec1": "设置最大供应量以创造稀缺性",
+					"rec2": "启用版税以从二次销售中获利",
+					"rec3": "使用可暂停功能进行紧急控制"
+				},
+				"content": {
+					"title": "配置高级设置",
+					"description": "为您的 NFT 设置定价、版税和特殊功能",
+					"supply_pricing": "供应与定价",
+					"max_supply_label": "最大供应量",
+					"max_supply_hint": "代币的最大数量（0 = 无限）",
+					"mint_price_label": "铸造价格",
+					"mint_price_hint": "每次铸造的价格，以原生代币计算（ETH、MATIC 等）",
+					"max_per_wallet_label": "每个钱包最大数量",
+					"max_per_wallet_hint": "每个钱包的最大代币数量（0 = 无限）",
+					"royalties": "版税（EIP-2981）",
+					"enable_royalties": "启用版税",
+					"royalty_recipient_label": "版税接收地址",
+					"royalty_recipient_hint": "接收版税支付的地址",
+					"royalty_percentage_label": "版税百分比",
+					"royalty_percentage_hint": "二次销售的百分比（0-100%）",
+					"access_control": "访问控制",
+					"owner_only": "仅所有者可铸造",
+					"public_mint": "启用公开铸造",
+					"whitelist": "启用白名单",
+					"features": "特殊功能",
+					"pausable": "可暂停",
+					"pausable_hint": "允许所有者暂停转账",
+					"burnable": "可销毁",
+					"burnable_hint": "允许代币被销毁",
+					"revealable": "可揭示",
+					"revealable_hint": "支持延迟揭示机制",
+					"fungible": "同质化（ERC-1155）",
+					"fungible_hint": "使相同 ID 的代币可互换"
+				}
+			},
+			"step5": {
+				"sidebar": {
+					"title": "审核并部署",
+					"description": "审核您的配置并将您的 NFT 合约部署到区块链。",
+					"deployment_status": "部署状态",
+					"status_ready": "准备部署",
+					"status_preparing": "准备中",
+					"status_deploying": "部署中",
+					"status_completed": "已完成",
+					"status_error": "错误",
+					"checklist": "部署前检查清单",
+					"check1": "验证所有配置是否正确",
+					"check2": "确保钱包中有足够的 Gas 费用",
+					"check3": "确认部署网络",
+					"check4": "部署后保存合约地址"
+				},
+				"content": {
+					"title": "审核并部署",
+					"description": "部署您的 NFT 合约前的最终审核",
+					"nft_standard": "NFT 标准",
+					"basic_config": "基本配置",
+					"advanced_settings": "高级设置",
+					"deploy_button": "部署合约",
+					"success_title": "合约部署成功！",
+					"success_message": "您的 NFT 合约已成功部署到区块链"
+				}
+			}
+		},
 		"wallet_collection": {
 			"title": "余额归集",
 			"description": "高效地将多个钱包的余额归集到单一地址。支持多种代币和多条链。",
@@ -236,5 +386,26 @@
 		"benefit_3": "您的推荐链接有效期为 90 天",
 		"your_link": "您的推荐链接",
 		"note": "注意：一旦有人使用了您的推荐链接，他们的推荐关联将持续 90 天。在此期间，您将获得他们所有付款的 50% 佣金。"
+	},
+	"common": {
+		"loading": "加载中...",
+		"continue": "继续",
+		"back": "返回",
+		"next": "下一步",
+		"finish": "完成",
+		"done": "完成",
+		"optional": "可选",
+		"chars_left": "个字符",
+		"name": "名称",
+		"symbol": "符号",
+		"description": "描述",
+		"standard": "标准",
+		"contract_address": "合约地址",
+		"transaction_hash": "交易哈希",
+		"gas_used": "Gas 消耗",
+		"deployment_cost": "部署成本",
+		"max_supply": "最大供应量",
+		"mint_price": "铸造价格",
+		"royalty": "版税"
 	}
 }
