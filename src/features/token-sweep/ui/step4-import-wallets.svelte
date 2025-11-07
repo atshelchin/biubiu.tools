@@ -20,6 +20,7 @@
 	import StepSidebar from './components/step-sidebar.svelte';
 	import StepContentHeader from './components/step-content-header.svelte';
 	import StepFooter from './components/step-footer.svelte';
+	import StepSummary from './components/step-summary.svelte';
 
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
@@ -297,24 +298,25 @@
 {#if section === 'sidebar'}
 	<StepSidebar stepNumber={4} title="Import Wallets" description="Add source addresses">
 		{#if walletCount > 0}
-			<div class="summary" transition:fade>
-				<h4>Imported Wallets</h4>
-				<div class="summary-item">
-					<span>Total:</span>
-					<strong>{walletCount}</strong>
-				</div>
-				{#if hasScanned}
+			<div transition:fade>
+				<StepSummary title="Imported Wallets">
 					<div class="summary-item">
-						<span>With Balance:</span>
-						<strong class="balance-count">{walletsWithBalance}</strong>
+						<span>Total:</span>
+						<strong>{walletCount}</strong>
 					</div>
-				{/if}
-				{#if isScanning}
-					<div class="summary-item">
-						<span>Scanning:</span>
-						<strong>{scanProgress}%</strong>
-					</div>
-				{/if}
+					{#if hasScanned}
+						<div class="summary-item">
+							<span>With Balance:</span>
+							<strong class="balance-count">{walletsWithBalance}</strong>
+						</div>
+					{/if}
+					{#if isScanning}
+						<div class="summary-item">
+							<span>Scanning:</span>
+							<strong>{scanProgress}%</strong>
+						</div>
+					{/if}
+				</StepSummary>
 			</div>
 		{:else}
 			<p class="empty-hint">No wallets imported</p>
@@ -512,24 +514,6 @@
 
 	.form-hint {
 		margin-top: var(--space-2);
-	}
-
-	.summary {
-		margin-top: var(--space-4);
-		padding: var(--space-3);
-		background: var(--gray-50);
-		border-radius: var(--radius-md);
-		border: 1px solid var(--gray-200);
-	}
-	:global([data-theme='dark']) .summary {
-		background: var(--gray-800);
-		border-color: var(--gray-700);
-	}
-
-	.summary-item {
-		display: flex;
-		justify-content: space-between;
-		padding: var(--space-2) 0;
 	}
 
 	.empty-hint {

@@ -11,6 +11,7 @@
 	import EmptyState from './components/empty-state.svelte';
 	import TokenManager from './components/token-manager.svelte';
 	import StepFooter from './components/step-footer.svelte';
+	import StepSummary from './components/step-summary.svelte';
 
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
@@ -69,12 +70,13 @@
 {#if section === 'sidebar'}
 	<StepSidebar stepNumber={3} title="Select Tokens" description="Choose which tokens to sweep">
 		{#if selectedTokenIds.size > 0}
-			<div class="summary" transition:fade>
-				<h4>Selected Tokens</h4>
-				<div class="summary-item">
-					<span>Count:</span>
-					<strong>{selectedTokenIds.size}</strong>
-				</div>
+			<div transition:fade>
+				<StepSummary title="Selected Tokens">
+					<div class="summary-item">
+						<span>Count:</span>
+						<strong>{selectedTokenIds.size}</strong>
+					</div>
+				</StepSummary>
 			</div>
 		{:else}
 			<p class="empty-hint">No tokens selected</p>
@@ -124,57 +126,6 @@
 {/if}
 
 <style>
-	/* Sidebar Summary */
-	h4 {
-		font-size: var(--text-base);
-		font-weight: var(--font-semibold);
-		margin: 0;
-		color: var(--gray-900);
-	}
-
-	:global([data-theme='dark']) h4 {
-		color: var(--gray-100);
-	}
-
-	/* Sidebar Summary */
-	.summary {
-		margin-top: var(--space-4);
-		padding: var(--space-3);
-		background: var(--gray-50);
-		border-radius: var(--radius-md);
-		border: 1px solid var(--gray-200);
-	}
-
-	:global([data-theme='dark']) .summary {
-		background: var(--gray-800);
-		border-color: var(--gray-700);
-	}
-
-	.summary-item {
-		display: flex;
-		justify-content: space-between;
-		padding: var(--space-2) 0;
-	}
-
-	.summary-item span {
-		font-size: var(--text-sm);
-		color: var(--gray-600);
-	}
-
-	:global([data-theme='dark']) .summary-item span {
-		color: var(--gray-400);
-	}
-
-	.summary-item strong {
-		font-size: var(--text-sm);
-		color: var(--gray-900);
-		font-weight: var(--font-semibold);
-	}
-
-	:global([data-theme='dark']) .summary-item strong {
-		color: var(--gray-100);
-	}
-
 	.empty-hint {
 		margin-top: var(--space-4);
 		padding: var(--space-3);

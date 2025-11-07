@@ -22,6 +22,7 @@
 	import StepSidebar from './components/step-sidebar.svelte';
 	import StepContentHeader from './components/step-content-header.svelte';
 	import StepFooter from './components/step-footer.svelte';
+	import StepSummary from './components/step-summary.svelte';
 
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
@@ -250,8 +251,7 @@
 
 {#if section === 'sidebar'}
 	<StepSidebar stepNumber={5} title="Confirm Sweep" description="Review and execute">
-		<div class="summary">
-			<h4>Summary</h4>
+		<StepSummary title="Summary">
 			<div class="summary-item">
 				<span>Selected Tokens:</span>
 				<strong>{selectedTokenCount}</strong>
@@ -270,7 +270,7 @@
 				<span>Batches:</span>
 				<strong>{batchCount}</strong>
 			</div>
-		</div>
+		</StepSummary>
 	</StepSidebar>
 {:else if section === 'footer'}
 	<StepFooter
@@ -473,12 +473,6 @@
 {/if}
 
 <style>
-	h4 {
-		font-size: var(--text-base);
-		font-weight: var(--font-semibold);
-		margin: 0;
-	}
-
 	.form-hint {
 		font-size: var(--text-sm);
 		color: var(--gray-600);
@@ -486,28 +480,6 @@
 	}
 	:global([data-theme='dark']) .form-hint {
 		color: var(--gray-400);
-	}
-
-	.summary {
-		margin-top: var(--space-4);
-		padding: var(--space-3);
-		background: var(--gray-50);
-		border-radius: var(--radius-md);
-		border: 1px solid var(--gray-200);
-	}
-	:global([data-theme='dark']) .summary {
-		background: var(--gray-800);
-		border-color: var(--gray-700);
-	}
-
-	.summary-item {
-		display: flex;
-		justify-content: space-between;
-		padding: var(--space-2) 0;
-	}
-
-	.balance-highlight {
-		color: #10b981;
 	}
 
 	.checkbox-label {
