@@ -651,7 +651,7 @@
 <ConfirmDialog
 	bind:open={showRemoveDialog}
 	title="Remove Wallet"
-	message="Are you sure you want to remove this wallet from the import list?"
+	message={`Are you sure you want to remove this wallet from the import list?\n\nAddress: ${walletToRemove}`}
 	confirmText="Remove"
 	cancelText="Cancel"
 	variant="danger"
