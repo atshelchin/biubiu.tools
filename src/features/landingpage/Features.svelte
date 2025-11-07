@@ -28,20 +28,6 @@
 	// Tools data with full i18n - reactive to language changes
 	const tools = $derived<Tool[]>([
 		{
-			icon: Wallet,
-			title: t('tools.wallet_collection.title'),
-			description: t('tools.wallet_collection.description'),
-			link: '/apps/drain-balance',
-			status: 'active',
-			color: '#3B82F6',
-			features: [
-				t('tools.wallet_collection.feature_1'),
-				t('tools.wallet_collection.feature_2'),
-				t('tools.wallet_collection.feature_3')
-			],
-			highlight: true
-		},
-		{
 			icon: ArrowRightLeft,
 			title: t('tools.token_sweep.title'),
 			description: t('tools.token_sweep.description'),
@@ -49,7 +35,7 @@
 			status: 'active',
 			color: '#10B981',
 			features: ['Multi-chain Support', 'Batch Processing', 'Gas Optimized'],
-			highlight: false
+			highlight: true
 		},
 		{
 			icon: SendHorizontal,
