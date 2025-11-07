@@ -9,7 +9,13 @@
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import StepIndicator, { createStepManager } from '$lib/components/ui/step-indicator.svelte';
 	import StepControls from '$lib/components/ui/step-controls.svelte';
-	import { Step1Connect, Step2Configure, Step3Complete } from '@/features/token-sweep/ui';
+	import {
+		Step1Connect,
+		Step2Configure,
+		Step3SelectTokens,
+		Step4ImportWallets,
+		Step5ConfirmSweep
+	} from '@/features/token-sweep/ui';
 	import { initializeReferral } from '$lib/utils/referral';
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
@@ -111,7 +117,9 @@
 	const stepManager = createStepManager([
 		{ label: 'Connect Wallet', description: 'Link your Web3 wallet' },
 		{ label: 'Check Dependencies', description: 'Verify network and contracts' },
-		{ label: 'Complete', description: 'Finish setup' }
+		{ label: 'Select Tokens', description: 'Choose tokens to sweep' },
+		{ label: 'Import Wallets', description: 'Add source addresses' },
+		{ label: 'Confirm Sweep', description: 'Review and execute' }
 	]);
 
 	// 初始化 wallet connect store，配置此 app 需要的 chains
@@ -162,7 +170,11 @@
 		{:else if stepManager.currentStep === 2}
 			<Step2Configure section="sidebar" {stepManager} />
 		{:else if stepManager.currentStep === 3}
-			<Step3Complete section="sidebar" />
+			<Step3SelectTokens section="sidebar" {stepManager} />
+		{:else if stepManager.currentStep === 4}
+			<Step4ImportWallets section="sidebar" {stepManager} />
+		{:else if stepManager.currentStep === 5}
+			<Step5ConfirmSweep section="sidebar" {stepManager} />
 		{/if}
 	{/snippet}
 
@@ -172,7 +184,11 @@
 		{:else if stepManager.currentStep === 2}
 			<Step2Configure section="footer" {stepManager} />
 		{:else if stepManager.currentStep === 3}
-			<Step3Complete section="footer" />
+			<Step3SelectTokens section="footer" {stepManager} />
+		{:else if stepManager.currentStep === 4}
+			<Step4ImportWallets section="footer" {stepManager} />
+		{:else if stepManager.currentStep === 5}
+			<Step5ConfirmSweep section="footer" {stepManager} />
 		{/if}
 	{/snippet}
 
@@ -188,7 +204,11 @@
 		{:else if stepManager.currentStep === 2}
 			<Step2Configure section="content" {stepManager} />
 		{:else if stepManager.currentStep === 3}
-			<Step3Complete section="content" />
+			<Step3SelectTokens section="content" {stepManager} />
+		{:else if stepManager.currentStep === 4}
+			<Step4ImportWallets section="content" {stepManager} />
+		{:else if stepManager.currentStep === 5}
+			<Step5ConfirmSweep section="content" {stepManager} />
 		{/if}
 	</div>
 </PageLayout>

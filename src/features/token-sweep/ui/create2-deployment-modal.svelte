@@ -324,7 +324,9 @@
 						<div class="info-card">
 							<h3>Step 1: Fund the Deployer</h3>
 							{#if isWaitingForSignature}
-								<p class="status-message waiting">⏳ Please confirm the transaction in your wallet...</p>
+								<p class="status-message waiting">
+									⏳ Please confirm the transaction in your wallet...
+								</p>
 							{:else if fundingTxHash && isProcessing}
 								<p class="status-message processing">
 									⚡ Transaction sent! Waiting for blockchain confirmation...
