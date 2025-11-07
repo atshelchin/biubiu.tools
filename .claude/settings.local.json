@@ -10,7 +10,10 @@
 			"Bash(curl -s http://localhost:5174/sitemap.xml)",
 			"Bash(curl:*)",
 			"Bash(xargs sed:*)",
-			"Bash(find:*)"
+			"Bash(find:*)",
+			"Bash(mkdir:*)",
+			"Bash(npx prettier:*)",
+			"Bash(bun x prettier:*)"
 		],
 		"deny": [],
 		"ask": []

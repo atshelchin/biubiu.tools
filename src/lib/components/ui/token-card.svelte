@@ -1,48 +1,34 @@
 <script lang="ts">
-	import type { Token } from '$lib/types/token';
-	import { CheckCircle2, Trash2, ExternalLink } from 'lucide-svelte';
+	import type { Token, ERC20Token } from '$lib/types/token';
+	import { CheckCircle2, Trash2, ExternalLink } from '@lucide/svelte';
 	import { slide } from 'svelte/transition';
-	import { SvelteSet } from 'svelte/reactivity';
 
 	interface Props {
-		tokens: Token[];
-		selectedTokenIds?: SvelteSet<string>;
-		onToggle?: (tokenId: string) => void;
-		onSelectAll?: () => void;
-		onDeselectAll?: () => void;
-		onRemoveCustomToken?: (tokenId: string) => void;
+		token: Token;
+		isSelected?: boolean;
 		blockExplorer?: string;
-		emptyMessage?: string;
-		showBulkActions?: boolean;
+		onToggle?: (tokenId: string) => void;
+		onRemove?: (tokenId: string, chainId: number) => void;
+		showCheckmark?: boolean;
 	}
 
 	let {
-		tokens,
-		selectedTokenIds = new SvelteSet<string>(),
-		onToggle,
-		onSelectAll,
-		onDeselectAll,
-		onRemoveCustomToken,
+		token,
+		isSelected = false,
 		blockExplorer,
-		emptyMessage = 'No tokens available',
-		showBulkActions = true
+		onToggle,
+		onRemove,
+		showCheckmark = true
 	}: Props = $props();
 
-	function handleToggle(tokenId: string) {
-		onToggle?.(tokenId);
+	function handleToggle() {
+		onToggle?.(token.id);
 	}
 
-	function handleSelectAll() {
-		onSelectAll?.();
-	}
-
-	function handleDeselectAll() {
-		onDeselectAll?.();
-	}
-
-	function handleRemove(tokenId: string) {
+	function handleRemove(e: Event) {
+		e.stopPropagation();
 		if (confirm('Are you sure you want to remove this custom token?')) {
-			onRemoveCustomToken?.(tokenId);
+			onRemove?.(token.id, token.chainId);
 		}
 	}
 
@@ -53,113 +39,63 @@
 	}
 </script>
 
-{#if tokens.length === 0}
-	<div class="empty-state">
-		<div class="empty-icon">🪙</div>
-		<p>{emptyMessage}</p>
+<div
+	class="token-card"
+	class:selected={isSelected}
+	onclick={handleToggle}
+	onkeydown={(e) => {
+		if (e.key === 'Enter' || e.key === ' ') {
+			e.preventDefault();
+			handleToggle();
+		}
+	}}
+	role="button"
+	tabindex="0"
+	transition:slide={{ duration: 200 }}
+>
+	<div class="token-card-content">
+		<div class="token-header">
+			<img src={getTokenLogo(token)} alt={token.symbol} class="token-logo" />
+			<div class="token-info">
+				<h4>{token.symbol}</h4>
+				<p class="token-name">{token.name}</p>
+			</div>
+		</div>
+
+		<div class="token-meta">
+			<span class="token-type">{token.type === 'native' ? 'Native' : 'ERC20'}</span>
+			{#if token.type === 'erc20' && blockExplorer}
+				{@const erc20Token = token as ERC20Token}
+				<a
+					href="{blockExplorer}/address/{erc20Token.address}"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="explorer-link"
+					onclick={(e) => e.stopPropagation()}
+				>
+					<ExternalLink size={14} />
+				</a>
+			{/if}
+			{#if token.isCustom && onRemove}
+				<button class="remove-btn" onclick={handleRemove} title="Remove custom token">
+					<Trash2 size={14} />
+				</button>
+			{/if}
+		</div>
 	</div>
-{:else}
-	{#if showBulkActions && tokens.length > 0}
-		<div class="bulk-actions">
-			<button class="btn-secondary" onclick={handleSelectAll}>Select All</button>
-			<button class="btn-secondary" onclick={handleDeselectAll}>Deselect All</button>
+
+	{#if showCheckmark}
+		<div class="token-checkmark">
+			{#if isSelected}
+				<CheckCircle2 size={24} />
+			{:else}
+				<div class="checkmark-placeholder"></div>
+			{/if}
 		</div>
 	{/if}
-	<div class="tokens-grid">
-		{#each tokens as token (token.id)}
-			<div
-				class="token-card"
-				class:selected={selectedTokenIds.has(token.id)}
-				onclick={() => handleToggle(token.id)}
-				transition:slide={{ duration: 200 }}
-			>
-				<div class="token-card-content">
-					<div class="token-header">
-						<img src={getTokenLogo(token)} alt={token.symbol} class="token-logo" />
-						<div class="token-info">
-							<h4>{token.symbol}</h4>
-							<p class="token-name">{token.name}</p>
-						</div>
-					</div>
-
-					<div class="token-meta">
-						<span class="token-type">{token.type === 'native' ? 'Native' : 'ERC20'}</span>
-						{#if token.type === 'erc20' && blockExplorer}
-							{@const erc20Token = token as import('$lib/types/token').ERC20Token}
-							<a
-								href="{blockExplorer}/address/{erc20Token.address}"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="explorer-link"
-								onclick={(e) => e.stopPropagation()}
-							>
-								<ExternalLink size={14} />
-							</a>
-						{/if}
-						{#if token.isCustom && onRemoveCustomToken}
-							<button
-								class="remove-btn"
-								onclick={(e) => {
-									e.stopPropagation();
-									handleRemove(token.id);
-								}}
-								title="Remove custom token"
-							>
-								<Trash2 size={14} />
-							</button>
-						{/if}
-					</div>
-				</div>
-
-				<div class="token-checkmark">
-					{#if selectedTokenIds.has(token.id)}
-						<CheckCircle2 size={24} />
-					{:else}
-						<div class="checkmark-placeholder"></div>
-					{/if}
-				</div>
-			</div>
-		{/each}
-	</div>
-{/if}
+</div>
 
 <style>
-	.bulk-actions {
-		display: flex;
-		gap: var(--space-2);
-		margin-bottom: var(--space-4);
-	}
-
-	.empty-state {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: var(--space-3);
-		padding: var(--space-8);
-		text-align: center;
-	}
-
-	.empty-icon {
-		font-size: 4rem;
-	}
-
-	.empty-state p {
-		color: var(--gray-600);
-		max-width: 400px;
-	}
-
-	:global([data-theme='dark']) .empty-state p {
-		color: var(--gray-400);
-	}
-
-	.tokens-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-		gap: var(--space-4);
-		padding: var(--space-2);
-	}
-
 	.token-card {
 		position: relative;
 		padding: var(--space-4);
@@ -171,6 +107,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-3);
+		text-align: left;
 	}
 
 	:global([data-theme='dark']) .token-card {
@@ -319,11 +256,5 @@
 
 	:global([data-theme='dark']) .checkmark-placeholder {
 		border-color: var(--gray-600);
-	}
-
-	@media (max-width: 768px) {
-		.tokens-grid {
-			grid-template-columns: 1fr;
-		}
 	}
 </style>

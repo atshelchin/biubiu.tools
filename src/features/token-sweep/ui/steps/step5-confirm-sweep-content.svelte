@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { step3State } from '@/features/token-sweep/stores/step3-state.svelte';
 	import { step4State } from '@/features/token-sweep/stores/step4-state.svelte';
-	import { getAllTokensForChain } from '$lib/config/tokens';
+	import { getTokensForChain } from '$lib/config/tokens';
 	import { loadCustomTokens } from '@/features/token-sweep/utils/token-storage';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import TokenListDisplay from '@/features/token-sweep/ui/components/token-list-display.svelte';
@@ -40,11 +40,11 @@
 
 	// Get full token objects from token IDs
 	let selectedTokenObjects: Token[] = $derived.by(() => {
-		if (!connectStore.currentChainId) return [];
-		const allTokens = [
-			...getAllTokensForChain(connectStore.currentChainId),
-			...loadCustomTokens(connectStore.currentChainId)
-		];
+		const chainId = connectStore.currentChainId;
+		if (!chainId) return [];
+
+		const network = connectStore.networks.find((n) => n.chainId === chainId);
+		const allTokens = step3State.getAvailableTokens(chainId, network?.symbol, network?.name);
 		return allTokens.filter((token) => selectedTokenIds.includes(token.id));
 	});
 

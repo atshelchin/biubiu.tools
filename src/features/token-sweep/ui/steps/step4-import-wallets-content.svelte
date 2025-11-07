@@ -9,7 +9,6 @@
 		validateMnemonicPhrase
 	} from '@/features/token-sweep/utils/wallet-import';
 	import { scanMultipleWallets } from '@/features/token-sweep/utils/balance-scanner';
-	import { getAllTokensForChain } from '$lib/config/tokens';
 	import type { ImportMethod, DerivationPathType } from '@/features/token-sweep/types/wallet';
 	import type { ERC20Token } from '$lib/types/token';
 	import { createPublicClient, http } from 'viem';
@@ -159,19 +158,23 @@
 			return;
 		}
 
+		// Get current network configuration
+		const currentNetwork = connectStore.networks.find(
+			(n) => n.chainId === connectStore.currentChainId
+		);
+
 		// Get all tokens for current chain
-		const allTokens = getAllTokensForChain(connectStore.currentChainId);
+		const allTokens = step3State.getAvailableTokens(
+			connectStore.currentChainId,
+			currentNetwork?.symbol,
+			currentNetwork?.name
+		);
 		const selectedTokens = allTokens.filter((token) => selectedTokenIds.includes(token.id));
 
 		if (selectedTokens.length === 0) {
 			errorMessage = 'No valid tokens selected for current network';
 			return;
 		}
-
-		// Get current network configuration
-		const currentNetwork = connectStore.networks.find(
-			(n) => n.chainId === connectStore.currentChainId
-		);
 		if (!currentNetwork || currentNetwork.rpcEndpoints.length === 0) {
 			errorMessage = 'No RPC endpoint available for current network';
 			return;

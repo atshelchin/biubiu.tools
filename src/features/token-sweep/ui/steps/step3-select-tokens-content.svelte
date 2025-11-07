@@ -1,25 +1,16 @@
 <script lang="ts">
+	import type { ERC20Token } from '$lib/types/token';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
-	import { getAllTokensForChain } from '$lib/config/tokens';
-	import { loadCustomTokens, removeCustomToken } from '@/features/token-sweep/utils/token-storage';
+	// import { removeCustomToken } from '@/features/token-sweep/utils/token-storage';
 	import { step3State } from '@/features/token-sweep/stores/step3-state.svelte';
-	import TokenSelector from '@/features/token-sweep/ui/components/token-selector.svelte';
+	import TokenSelector from '$lib/components/ui/token-selector.svelte';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import EmptyState from '@/features/token-sweep/ui/components/empty-state.svelte';
-	import TokenManager from '@/features/token-sweep/ui/components/token-manager.svelte';
 
 	const connectStore = useConnectStore();
 
 	// Use shared state from step3State
 	let selectedTokenIds = $derived(step3State.selectedTokenIds);
-
-	// All available tokens for current chain
-	let availableTokens = $derived.by(() => {
-		if (!connectStore.currentChainId) return [];
-		const predefined = getAllTokensForChain(connectStore.currentChainId);
-		const custom = loadCustomTokens(connectStore.currentChainId);
-		return [...predefined, ...custom];
-	});
 
 	// Get current network info
 	let currentNetwork = $derived.by(() => {
@@ -36,8 +27,40 @@
 		step3State.toggleToken(tokenId);
 	}
 
-	function handleRemoveCustomToken(tokenId: string) {
-		removeCustomToken(tokenId);
+	function saveCustomTokens(tokens: ERC20Token[], chainId: number): void {
+		try {
+			localStorage.setItem(`custom-tokens:${chainId}`, JSON.stringify(tokens));
+		} catch (error) {
+			console.error('Failed to save custom tokens:', error);
+		}
+	}
+
+	function loadCustomTokens(chainId: number): ERC20Token[] {
+		try {
+			const stored = localStorage.getItem(`custom-tokens:${chainId}`);
+			if (!stored) return [];
+
+			const data: ERC20Token[] = JSON.parse(stored);
+
+			const tokens = data || [];
+
+			return tokens;
+		} catch (error) {
+			console.error('Failed to load custom tokens:', error);
+			return [];
+		}
+	}
+	/**
+	 * Remove a custom token
+	 */
+	function removeCustomToken(tokenId: string, chainId: number): void {
+		const tokens = loadCustomTokens(chainId);
+		const filtered = tokens.filter((t) => t.id !== tokenId);
+		saveCustomTokens(filtered, chainId);
+	}
+
+	function handleRemoveCustomToken(tokenId: string, chainId: number) {
+		removeCustomToken(tokenId, chainId);
 		// Remove from selection if it was selected
 		if (selectedTokenIds.has(tokenId)) {
 			step3State.toggleToken(tokenId);
@@ -50,15 +73,7 @@
 		title="Select Tokens"
 		description="Choose which tokens you want to sweep from your addresses on {currentNetwork?.name ||
 			'this network'}"
-	>
-		{#snippet actions()}
-			<TokenManager
-				chainId={connectStore.currentChainId || 0}
-				onTokenAdded={handleTokenAdded}
-				buttonClass="btn-primary"
-			/>
-		{/snippet}
-	</StepContentHeader>
+	></StepContentHeader>
 
 	{#if !connectStore.isConnected}
 		<EmptyState
@@ -68,14 +83,23 @@
 		/>
 	{:else}
 		<TokenSelector
-			tokens={availableTokens}
+			chainId={connectStore.currentChainId}
 			{selectedTokenIds}
 			onToggle={toggleToken}
-			onSelectAll={() => step3State.selectAll(availableTokens.map((t) => t.id))}
+			onSelectAll={() => {
+				// Select all currently displayed tokens
+				const chainId = connectStore.currentChainId || 1;
+				const allTokenIds = step3State
+					.getAvailableTokens(chainId, currentNetwork?.symbol, currentNetwork?.name)
+					.map((t) => t.id);
+				step3State.selectAll(allTokenIds);
+			}}
 			onDeselectAll={() => step3State.deselectAll()}
+			onTokenAdded={handleTokenAdded}
 			onRemoveCustomToken={handleRemoveCustomToken}
 			blockExplorer={currentNetwork?.blockExplorer}
 			emptyMessage="No tokens available. Add a custom token to get started."
+			storageKey="custom-tokens"
 		/>
 	{/if}
 </div>
