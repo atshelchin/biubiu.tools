@@ -10,11 +10,21 @@
 	import StepIndicator, { createStepManager } from '$lib/components/ui/step-indicator.svelte';
 	import StepControls from '$lib/components/ui/step-controls.svelte';
 	import {
-		Step1Connect,
-		Step2Configure,
-		Step3SelectTokens,
-		Step4ImportWallets,
-		Step5ConfirmSweep
+		Step1ConnectSidebar,
+		Step1ConnectContent,
+		Step1ConnectFooter,
+		Step2ConfigureSidebar,
+		Step2ConfigureContent,
+		Step2ConfigureFooter,
+		Step3SelectTokensSidebar,
+		Step3SelectTokensContent,
+		Step3SelectTokensFooter,
+		Step4ImportWalletsSidebar,
+		Step4ImportWalletsContent,
+		Step4ImportWalletsFooter,
+		Step5ConfirmSweepSidebar,
+		Step5ConfirmSweepContent,
+		Step5ConfirmSweepFooter
 	} from '@/features/token-sweep/ui';
 	import { initializeReferral } from '$lib/utils/referral';
 	import { onMount } from 'svelte';
@@ -166,29 +176,29 @@
 
 	{#snippet sidebar()}
 		{#if stepManager.currentStep === 1}
-			<Step1Connect section="sidebar" {stepManager} />
+			<Step1ConnectSidebar {stepManager} />
 		{:else if stepManager.currentStep === 2}
-			<Step2Configure section="sidebar" {stepManager} />
+			<Step2ConfigureSidebar {stepManager} />
 		{:else if stepManager.currentStep === 3}
-			<Step3SelectTokens section="sidebar" {stepManager} />
+			<Step3SelectTokensSidebar {stepManager} />
 		{:else if stepManager.currentStep === 4}
-			<Step4ImportWallets section="sidebar" {stepManager} />
+			<Step4ImportWalletsSidebar {stepManager} />
 		{:else if stepManager.currentStep === 5}
-			<Step5ConfirmSweep section="sidebar" {stepManager} />
+			<Step5ConfirmSweepSidebar {stepManager} />
 		{/if}
 	{/snippet}
 
 	{#snippet footer()}
 		{#if stepManager.currentStep === 1}
-			<Step1Connect section="footer" {stepManager} />
+			<Step1ConnectFooter {stepManager} />
 		{:else if stepManager.currentStep === 2}
-			<Step2Configure section="footer" {stepManager} />
+			<Step2ConfigureFooter {stepManager} />
 		{:else if stepManager.currentStep === 3}
-			<Step3SelectTokens section="footer" {stepManager} />
+			<Step3SelectTokensFooter {stepManager} />
 		{:else if stepManager.currentStep === 4}
-			<Step4ImportWallets section="footer" {stepManager} />
+			<Step4ImportWalletsFooter {stepManager} />
 		{:else if stepManager.currentStep === 5}
-			<Step5ConfirmSweep section="footer" {stepManager} />
+			<Step5ConfirmSweepFooter {stepManager} />
 		{/if}
 	{/snippet}
 
@@ -200,15 +210,15 @@
 		{/if}
 
 		{#if stepManager.currentStep === 1}
-			<Step1Connect section="content" {stepManager} />
+			<Step1ConnectContent {stepManager} />
 		{:else if stepManager.currentStep === 2}
-			<Step2Configure section="content" {stepManager} />
+			<Step2ConfigureContent {stepManager} />
 		{:else if stepManager.currentStep === 3}
-			<Step3SelectTokens section="content" {stepManager} />
+			<Step3SelectTokensContent {stepManager} />
 		{:else if stepManager.currentStep === 4}
-			<Step4ImportWallets section="content" {stepManager} />
+			<Step4ImportWalletsContent {stepManager} />
 		{:else if stepManager.currentStep === 5}
-			<Step5ConfirmSweep section="content" {stepManager} />
+			<Step5ConfirmSweepContent {stepManager} />
 		{/if}
 	</div>
 </PageLayout>
