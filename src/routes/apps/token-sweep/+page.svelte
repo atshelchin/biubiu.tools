@@ -9,23 +9,7 @@
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import StepIndicator, { createStepManager } from '$lib/components/ui/step-indicator.svelte';
 	import StepControls from '$lib/components/ui/step-controls.svelte';
-	import {
-		Step1ConnectSidebar,
-		Step1ConnectContent,
-		Step1ConnectFooter,
-		Step2ConfigureSidebar,
-		Step2ConfigureContent,
-		Step2ConfigureFooter,
-		Step3SelectTokensSidebar,
-		Step3SelectTokensContent,
-		Step3SelectTokensFooter,
-		Step4ImportWalletsSidebar,
-		Step4ImportWalletsContent,
-		Step4ImportWalletsFooter,
-		Step5ConfirmSweepSidebar,
-		Step5ConfirmSweepContent,
-		Step5ConfirmSweepFooter
-	} from '@/features/token-sweep/ui';
+	import { stepComponents } from '@/features/token-sweep/ui/steps';
 	import { initializeReferral } from '$lib/utils/referral';
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
@@ -131,31 +115,6 @@
 		{ label: 'Import Wallets', description: 'Add source addresses' },
 		{ label: 'Confirm Sweep', description: 'Review and execute' }
 	]);
-
-	// 动态组件映射
-	const stepComponents = {
-		sidebar: [
-			Step1ConnectSidebar,
-			Step2ConfigureSidebar,
-			Step3SelectTokensSidebar,
-			Step4ImportWalletsSidebar,
-			Step5ConfirmSweepSidebar
-		],
-		content: [
-			Step1ConnectContent,
-			Step2ConfigureContent,
-			Step3SelectTokensContent,
-			Step4ImportWalletsContent,
-			Step5ConfirmSweepContent
-		],
-		footer: [
-			Step1ConnectFooter,
-			Step2ConfigureFooter,
-			Step3SelectTokensFooter,
-			Step4ImportWalletsFooter,
-			Step5ConfirmSweepFooter
-		]
-	};
 
 	// 获取当前步骤的组件
 	const currentSidebarComponent = $derived(stepComponents.sidebar[stepManager.currentStep - 1]);
