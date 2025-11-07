@@ -132,6 +132,36 @@
 		{ label: 'Confirm Sweep', description: 'Review and execute' }
 	]);
 
+	// 动态组件映射
+	const stepComponents = {
+		sidebar: [
+			Step1ConnectSidebar,
+			Step2ConfigureSidebar,
+			Step3SelectTokensSidebar,
+			Step4ImportWalletsSidebar,
+			Step5ConfirmSweepSidebar
+		],
+		content: [
+			Step1ConnectContent,
+			Step2ConfigureContent,
+			Step3SelectTokensContent,
+			Step4ImportWalletsContent,
+			Step5ConfirmSweepContent
+		],
+		footer: [
+			Step1ConnectFooter,
+			Step2ConfigureFooter,
+			Step3SelectTokensFooter,
+			Step4ImportWalletsFooter,
+			Step5ConfirmSweepFooter
+		]
+	};
+
+	// 获取当前步骤的组件
+	const currentSidebarComponent = $derived(stepComponents.sidebar[stepManager.currentStep - 1]);
+	const currentContentComponent = $derived(stepComponents.content[stepManager.currentStep - 1]);
+	const currentFooterComponent = $derived(stepComponents.footer[stepManager.currentStep - 1]);
+
 	// 初始化 wallet connect store，配置此 app 需要的 chains
 	createConnectStore({
 		projectId: 'e68249e217c8793807b7bb961a2f4297',
@@ -175,31 +205,13 @@
 	{/snippet}
 
 	{#snippet sidebar()}
-		{#if stepManager.currentStep === 1}
-			<Step1ConnectSidebar {stepManager} />
-		{:else if stepManager.currentStep === 2}
-			<Step2ConfigureSidebar {stepManager} />
-		{:else if stepManager.currentStep === 3}
-			<Step3SelectTokensSidebar {stepManager} />
-		{:else if stepManager.currentStep === 4}
-			<Step4ImportWalletsSidebar {stepManager} />
-		{:else if stepManager.currentStep === 5}
-			<Step5ConfirmSweepSidebar {stepManager} />
-		{/if}
+		{@const Component = currentSidebarComponent}
+		<Component {stepManager} />
 	{/snippet}
 
 	{#snippet footer()}
-		{#if stepManager.currentStep === 1}
-			<Step1ConnectFooter {stepManager} />
-		{:else if stepManager.currentStep === 2}
-			<Step2ConfigureFooter {stepManager} />
-		{:else if stepManager.currentStep === 3}
-			<Step3SelectTokensFooter {stepManager} />
-		{:else if stepManager.currentStep === 4}
-			<Step4ImportWalletsFooter {stepManager} />
-		{:else if stepManager.currentStep === 5}
-			<Step5ConfirmSweepFooter {stepManager} />
-		{/if}
+		{@const Component = currentFooterComponent}
+		<Component {stepManager} />
 	{/snippet}
 
 	<!-- 主要内容 -->
@@ -209,17 +221,8 @@
 			<StepControls manager={stepManager} />
 		{/if}
 
-		{#if stepManager.currentStep === 1}
-			<Step1ConnectContent {stepManager} />
-		{:else if stepManager.currentStep === 2}
-			<Step2ConfigureContent {stepManager} />
-		{:else if stepManager.currentStep === 3}
-			<Step3SelectTokensContent {stepManager} />
-		{:else if stepManager.currentStep === 4}
-			<Step4ImportWalletsContent {stepManager} />
-		{:else if stepManager.currentStep === 5}
-			<Step5ConfirmSweepContent {stepManager} />
-		{/if}
+		{@const Component = currentContentComponent}
+		<Component {stepManager} />
 	</div>
 </PageLayout>
 
