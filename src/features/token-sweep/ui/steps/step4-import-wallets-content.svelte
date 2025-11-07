@@ -18,6 +18,7 @@
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import AddressPathSelector from '$lib/components/ui/address-path-selector.svelte';
 	import WalletList from '$lib/components/ui/wallet-list.svelte';
+	import SimpleCodeEditor from '$lib/components/widgets/SimpleCodeEditor.svelte';
 
 	const connectStore = useConnectStore();
 
@@ -323,12 +324,12 @@
 	{#if importMethod === 'mnemonic'}
 		<div class="form-section" transition:slide>
 			<label class="form-label">Enter Mnemonic Phrase</label>
-			<textarea
-				class="form-textarea"
+			<SimpleCodeEditor
 				bind:value={mnemonicText}
-				placeholder="Enter 12 or 24 words separated by spaces&#10;Example: word1 word2 word3 ..."
-				rows="3"
-			></textarea>
+				placeholder="Enter 12 or 24 words separated by spaces
+Example: word1 word2 word3 ..."
+				rows={3}
+			/>
 			<p class="form-hint">⚠️ Your mnemonic is never uploaded to any server</p>
 
 			<div style="margin-top: var(--space-4);">
@@ -367,12 +368,13 @@
 	{#if importMethod === 'privateKey'}
 		<div class="form-section" transition:slide>
 			<label class="form-label">Batch Import Private Keys</label>
-			<textarea
-				class="form-textarea"
+			<SimpleCodeEditor
 				bind:value={privateKeysText}
-				placeholder="One private key per line (starting with 0x)&#10;0x1234...&#10;0x5678..."
-				rows="8"
-			></textarea>
+				placeholder="One private key per line (starting with 0x)
+0x1234...
+0x5678..."
+				rows={8}
+			/>
 			<button
 				class="btn-primary"
 				onclick={handleImportPrivateKeys}
