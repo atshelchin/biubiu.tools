@@ -1,5 +1,5 @@
-import type { PublicClient, Address, Hex } from 'viem';
-import { decodeEventLog, getAbiItem } from 'viem';
+import type { PublicClient, Hex } from 'viem';
+import { decodeEventLog } from 'viem';
 import type { ScanConfig, ScannedEventLog, ScanProgress, ContractEvent } from '../types/scanner';
 
 /**

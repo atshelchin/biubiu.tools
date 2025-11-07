@@ -26,9 +26,21 @@
 			"title": "Token Balance Scanner",
 			"description": "Scan and aggregate token balances across multiple wallets"
 		},
+		"contract_events_scanner": {
+			"title": "Contract Events Scanner",
+			"description": "Scan, analyze and export smart contract events from blockchain"
+		},
 		"ens_scanner": {
 			"title": "ENS Scanner",
 			"description": "Batch scan ENS domain availability and expiry status"
+		},
+		"assets_monitor": {
+			"title": "Assets Monitor",
+			"description": "Track and analyze wallet asset movements across multiple chains"
+		},
+		"wallet_generator": {
+			"title": "Wallet Factory",
+			"description": "Generate multiple wallets from mnemonic, xpub, or secret text with HD path support"
 		},
 		"wallet_collection": {
 			"title": "Drain balance",

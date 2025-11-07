@@ -26,9 +26,21 @@
 			"title": "批量余额查询",
 			"description": "扫描并统计多个钱包的代币余额"
 		},
+		"contract_events_scanner": {
+			"title": "智能合约事件扫描",
+			"description": "扫描、分析和导出区块链智能合约事件"
+		},
 		"ens_scanner": {
 			"title": "ENS域名扫描",
 			"description": "批量扫描 ENS 域名可用性和到期状态"
+		},
+		"assets_monitor": {
+			"title": "资产雷达",
+			"description": "追踪和分析多链钱包资产变动"
+		},
+		"wallet_generator": {
+			"title": "钱包工厂",
+			"description": "从助记词、xpub或秘密文本生成多个钱包，支持HD路径"
 		},
 		"wallet_collection": {
 			"title": "余额归集",
