@@ -10,6 +10,7 @@
 	import { getDeploymentConfig } from '../config/deployment-configs';
 	import type { ContractDeploymentConfig } from '../types/deployment-config';
 	import StepSidebar from './components/step-sidebar.svelte';
+	import StepContentHeader from './components/step-content-header.svelte';
 
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
@@ -241,8 +242,10 @@
 	</div>
 {:else if section === 'content'}
 	<div class="step-content">
-		<h2>Dependency Check</h2>
-		<p class="description">Verifying network services and required contracts are deployed</p>
+		<StepContentHeader
+			title="Dependency Check"
+			description="Verifying network services and required contracts are deployed"
+		/>
 
 		{#if isChecking}
 			<!-- Checking State -->

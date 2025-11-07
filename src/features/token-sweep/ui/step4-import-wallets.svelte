@@ -18,6 +18,7 @@
 	import { fade, slide } from 'svelte/transition';
 	import type { StepManager } from '$lib/components/ui/step-indicator.svelte';
 	import StepSidebar from './components/step-sidebar.svelte';
+	import StepContentHeader from './components/step-content-header.svelte';
 
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
@@ -341,12 +342,10 @@
 	</div>
 {:else if section === 'content'}
 	<div class="step-content">
-		<div class="content-header">
-			<div>
-				<h2>Import Wallets</h2>
-				<p class="description">Add source wallets that you want to sweep assets from</p>
-			</div>
-		</div>
+		<StepContentHeader
+			title="Import Wallets"
+			description="Add source wallets that you want to sweep assets from"
+		/>
 
 		<!-- Import Method Selector -->
 		<div class="form-section">

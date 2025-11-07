@@ -9,6 +9,7 @@
 	import AddTokenModal from './add-token-modal.svelte';
 	import TokenSelector from './components/token-selector.svelte';
 	import StepSidebar from './components/step-sidebar.svelte';
+	import StepContentHeader from './components/step-content-header.svelte';
 
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
@@ -119,24 +120,20 @@
 	</div>
 {:else if section === 'content'}
 	<div class="step-content">
-		<div class="content-header">
-			<div>
-				<h2>Select Tokens</h2>
-				<p class="description">
-					Choose which tokens you want to sweep from your addresses on {currentNetwork?.name ||
-						'this network'}
-				</p>
-			</div>
-
-			<div class="header-actions">
+		<StepContentHeader
+			title="Select Tokens"
+			description="Choose which tokens you want to sweep from your addresses on {currentNetwork?.name ||
+				'this network'}"
+		>
+			{#snippet actions()}
 				<button class="btn-secondary" onclick={selectAllTokens}>Select All</button>
 				<button class="btn-secondary" onclick={deselectAllTokens}>Deselect All</button>
 				<button class="btn-primary" onclick={openAddTokenModal}>
 					<Plus size={18} />
 					Add Custom Token
 				</button>
-			</div>
-		</div>
+			{/snippet}
+		</StepContentHeader>
 
 		{#if !connectStore.isConnected}
 			<div class="empty-state">
@@ -167,28 +164,6 @@
 
 <style>
 	/* Common Styles */
-	h2 {
-		font-size: var(--text-2xl);
-		font-weight: var(--font-bold);
-		margin: 0 0 var(--space-2) 0;
-		color: var(--gray-900);
-	}
-
-	:global([data-theme='dark']) h2 {
-		color: var(--gray-100);
-	}
-
-	h3 {
-		font-size: var(--text-lg);
-		font-weight: var(--font-semibold);
-		margin: 0;
-		color: var(--gray-800);
-	}
-
-	:global([data-theme='dark']) h3 {
-		color: var(--gray-200);
-	}
-
 	h4 {
 		font-size: var(--text-base);
 		font-weight: var(--font-semibold);
@@ -208,11 +183,6 @@
 
 	:global([data-theme='dark']) p {
 		color: var(--gray-400);
-	}
-
-	.description {
-		font-size: var(--text-sm);
-		margin-bottom: var(--space-4);
 	}
 
 	/* Sidebar Summary */
@@ -308,20 +278,6 @@
 		flex-direction: column;
 	}
 
-	.content-header {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-		gap: var(--space-4);
-		margin-bottom: var(--space-6);
-	}
-
-	.header-actions {
-		display: flex;
-		gap: var(--space-2);
-		flex-wrap: wrap;
-	}
-
 	.btn-primary,
 	.btn-secondary {
 		display: inline-flex;
@@ -393,17 +349,5 @@
 
 	.empty-state p {
 		max-width: 400px;
-	}
-
-	/* Responsive */
-	@media (max-width: 768px) {
-		.content-header {
-			flex-direction: column;
-		}
-
-		.header-actions {
-			width: 100%;
-			justify-content: flex-start;
-		}
 	}
 </style>

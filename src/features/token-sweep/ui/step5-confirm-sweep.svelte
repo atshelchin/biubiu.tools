@@ -20,6 +20,7 @@
 	import type { Token, NativeToken, ERC20Token } from '../types/token';
 	import type { StepManager } from '$lib/components/ui/step-indicator.svelte';
 	import StepSidebar from './components/step-sidebar.svelte';
+	import StepContentHeader from './components/step-content-header.svelte';
 
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
@@ -279,8 +280,10 @@
 	</div>
 {:else if section === 'content'}
 	<div class="step-content">
-		<h2>Confirm Sweep</h2>
-		<p class="description">Review your configuration and execute the asset sweep</p>
+		<StepContentHeader
+			title="Confirm Sweep"
+			description="Review your configuration and execute the asset sweep"
+		/>
 
 		<!-- Target Address -->
 		<div class="form-section">
