@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Modal from '$lib/components/ui/modal.svelte';
 	import { AlertTriangle } from '@lucide/svelte';
+	import { longPress } from '$lib/utils/long-press';
 
 	interface Props {
 		open: boolean;
@@ -28,60 +29,17 @@
 		onCancel
 	}: Props = $props();
 
-	let isHolding = $state(false);
 	let holdProgress = $state(0);
-	let holdTimer: ReturnType<typeof setInterval> | null = null;
-	let holdStartTime = $state(0);
-
-	function startHold() {
-		if (!requireLongPress) {
-			handleConfirm();
-			return;
-		}
-
-		isHolding = true;
-		holdProgress = 0;
-		holdStartTime = Date.now();
-
-		holdTimer = setInterval(() => {
-			const elapsed = Date.now() - holdStartTime;
-			holdProgress = Math.min((elapsed / longPressDuration) * 100, 100);
-
-			if (holdProgress >= 100) {
-				handleConfirm();
-			}
-		}, 16); // ~60fps
-	}
-
-	function stopHold() {
-		if (holdTimer) {
-			clearInterval(holdTimer);
-			holdTimer = null;
-		}
-		isHolding = false;
-		holdProgress = 0;
-	}
 
 	function handleConfirm() {
-		stopHold();
 		onConfirm();
 		open = false;
 	}
 
 	function handleCancel() {
-		stopHold();
 		onCancel();
 		open = false;
 	}
-
-	// Cleanup on unmount
-	$effect(() => {
-		return () => {
-			if (holdTimer) {
-				clearInterval(holdTimer);
-			}
-		};
-	});
 </script>
 
 <Modal {open} onClose={handleCancel} {title} maxWidth="450px">
@@ -106,23 +64,23 @@
 
 	{#snippet footer()}
 		<div class="footer-actions">
-			<button class="btn-secondary" onclick={handleCancel} disabled={isHolding}>
+			<button class="btn-secondary" onclick={handleCancel} disabled={holdProgress > 0}>
 				{cancelText}
 			</button>
 
 			<button
 				class="btn-confirm"
-				class:holding={isHolding}
+				class:holding={holdProgress > 0}
 				class:danger={variant === 'danger'}
 				class:warning={variant === 'warning'}
 				class:info={variant === 'info'}
-				onpointerdown={startHold}
-				onpointerup={stopHold}
-				onpointerleave={stopHold}
-				onpointercancel={stopHold}
-				ontouchstart={startHold}
-				ontouchend={stopHold}
-				ontouchcancel={stopHold}
+				use:longPress={{
+					duration: requireLongPress ? longPressDuration : 0,
+					onProgress: (progress) => {
+						holdProgress = progress;
+					},
+					onComplete: handleConfirm
+				}}
 			>
 				<span class="btn-text">{confirmText}</span>
 				{#if requireLongPress && holdProgress > 0}

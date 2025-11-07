@@ -11,10 +11,8 @@
 	interface Props {
 		chainId?: number; // If provided, auto-load tokens for this chain
 		tokens?: Token[]; // Manual token list (overrides chainId)
-		selectedTokenIds?: SvelteSet<string>;
-		onToggle?: (tokenId: string) => void;
-		onSelectAll?: () => void;
-		onDeselectAll?: () => void;
+		selectedTokenIds?: SvelteSet<string>; // Bindable - external selection state
+		onSelectionChange?: (selectedIds: SvelteSet<string>) => void; // Callback when selection changes
 		onTokenAdded?: (tokenId: string) => void; // Callback when token is added
 		onRemoveCustomToken?: (tokenId: string, chainId: number) => void;
 		blockExplorer?: string;
@@ -22,22 +20,22 @@
 		showBulkActions?: boolean;
 		showAddButton?: boolean; // Show dashed "Add Token" card
 		storageKey?: string; // LocalStorage key for custom tokens
+		multiSelect?: boolean; // Allow multiple selection
 	}
 
 	let {
 		chainId,
 		tokens = [],
-		selectedTokenIds = new SvelteSet<string>(),
-		onToggle,
-		onSelectAll,
-		onDeselectAll,
+		selectedTokenIds = $bindable(new SvelteSet<string>()),
+		onSelectionChange,
 		onTokenAdded,
 		onRemoveCustomToken,
 		blockExplorer,
 		emptyMessage = 'No tokens available',
 		showBulkActions = true,
 		showAddButton = true,
-		storageKey
+		storageKey,
+		multiSelect = true
 	}: Props = $props();
 
 	const connectStore = useConnectStore();
@@ -104,15 +102,37 @@
 	});
 
 	function handleToggle(tokenId: string) {
-		onToggle?.(tokenId);
+		if (multiSelect) {
+			// Multi-select mode: toggle selection
+			if (selectedTokenIds.has(tokenId)) {
+				selectedTokenIds.delete(tokenId);
+			} else {
+				selectedTokenIds.add(tokenId);
+			}
+		} else {
+			// Single-select mode: replace selection
+			selectedTokenIds.clear();
+			selectedTokenIds.add(tokenId);
+		}
+
+		// Trigger reactivity and callback
+		selectedTokenIds = new SvelteSet(selectedTokenIds);
+		onSelectionChange?.(selectedTokenIds);
 	}
 
 	function handleSelectAll() {
-		onSelectAll?.();
+		selectedTokenIds.clear();
+		displayTokens().forEach((token) => {
+			selectedTokenIds.add(token.id);
+		});
+		selectedTokenIds = new SvelteSet(selectedTokenIds);
+		onSelectionChange?.(selectedTokenIds);
 	}
 
 	function handleDeselectAll() {
-		onDeselectAll?.();
+		selectedTokenIds.clear();
+		selectedTokenIds = new SvelteSet(selectedTokenIds);
+		onSelectionChange?.(selectedTokenIds);
 	}
 
 	function handleRemove(tokenId: string, chainId: number) {

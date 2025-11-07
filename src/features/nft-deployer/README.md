@@ -98,33 +98,26 @@ src/features/nft-deployer/
 
 ```typescript
 // 导入工具函数
-import { buildNFTConfig, validateNFTConfig, deployNFTContract } from '@/features/nft-deployer/utils';
+import {
+	buildNFTConfig,
+	validateNFTConfig,
+	deployNFTContract
+} from '@/features/nft-deployer/utils';
 
 // 构建配置
-const config = buildNFTConfig(
-  deployerAddress,
-  chainId,
-  'erc721a',
-  basicInfo,
-  advancedSettings
-);
+const config = buildNFTConfig(deployerAddress, chainId, 'erc721a', basicInfo, advancedSettings);
 
 // 验证配置
 const validation = validateNFTConfig(config);
 if (!validation.isValid) {
-  console.error(validation.errors);
-  return;
+	console.error(validation.errors);
+	return;
 }
 
 // 部署合约
-const result = await deployNFTContract(
-  config,
-  walletClient,
-  publicClient,
-  (progress, message) => {
-    console.log(`${progress}%: ${message}`);
-  }
-);
+const result = await deployNFTContract(config, walletClient, publicClient, (progress, message) => {
+	console.log(`${progress}%: ${message}`);
+});
 ```
 
 ## 技术栈

@@ -10,9 +10,31 @@
 	// Get available tokens for current network
 	const availableTokens = $derived(() => {
 		if (!connectStore.currentChainId) return [];
-		const chainTokens = PREDEFINED_TOKENS[connectStore.currentChainId];
-		if (!chainTokens) return [];
-		return [chainTokens.native, ...chainTokens.erc20];
+
+		const tokens: (NativeToken | ERC20Token)[] = [];
+
+		// Add native token
+		const currentNetwork = connectStore.networks.find((n) => n.chainId === connectStore.currentChainId);
+		if (currentNetwork) {
+			const nativeToken: NativeToken = {
+				id: `${connectStore.currentChainId}:native`,
+				type: 'native',
+				symbol: currentNetwork.symbol,
+				name: currentNetwork.name,
+				decimals: 18,
+				chainId: connectStore.currentChainId,
+				logoUrl: ''
+			};
+			tokens.push(nativeToken);
+		}
+
+		// Add ERC20 tokens
+		const erc20Tokens = PREDEFINED_TOKENS[connectStore.currentChainId];
+		if (erc20Tokens && erc20Tokens.length > 0) {
+			tokens.push(...erc20Tokens);
+		}
+
+		return tokens;
 	});
 
 	// Handle token selection

@@ -20,6 +20,12 @@ export function longPress(
 		// Prevent default to avoid text selection
 		event.preventDefault();
 
+		// If duration is 0 or negative, trigger immediately
+		if (duration <= 0) {
+			onComplete?.();
+			return;
+		}
+
 		startTime = Date.now();
 
 		timer = setInterval(() => {
