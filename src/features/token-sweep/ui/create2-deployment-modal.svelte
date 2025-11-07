@@ -324,11 +324,17 @@
 						<div class="info-card">
 							<h3>Step 1: Fund the Deployer</h3>
 							{#if isWaitingForSignature}
-								<p>Please confirm the transaction in your wallet...</p>
+								<p class="status-message waiting">⏳ Please confirm the transaction in your wallet...</p>
+							{:else if fundingTxHash && isProcessing}
+								<p class="status-message processing">
+									⚡ Transaction sent! Waiting for blockchain confirmation...
+								</p>
+							{:else if fundingTxHash && !isProcessing}
+								<p class="status-message success">
+									✅ Funding transaction confirmed! Proceeding to deployment...
+								</p>
 							{:else if isProcessing}
-								<p>Processing transaction on blockchain...</p>
-							{:else if fundingTxHash}
-								<p>Funding transaction confirmed! Proceeding to deployment...</p>
+								<p class="status-message processing">🔄 Processing transaction...</p>
 							{:else}
 								<p>
 									To deploy the CREATE2 Proxy, we need to send <strong>{FUNDING_AMOUNT} ETH</strong>
@@ -404,10 +410,16 @@
 					<div class="step-content">
 						<div class="info-card">
 							<h3>Step 2: Deploy the Contract</h3>
-							{#if isProcessing}
-								<p>Sending deployment transaction to blockchain...</p>
-							{:else if deploymentTxHash}
-								<p>Deployment transaction confirmed! Finalizing...</p>
+							{#if deploymentTxHash && isProcessing}
+								<p class="status-message processing">
+									⚡ Transaction sent! Waiting for blockchain confirmation...
+								</p>
+							{:else if deploymentTxHash && !isProcessing}
+								<p class="status-message success">
+									✅ Deployment transaction confirmed! Finalizing...
+								</p>
+							{:else if isProcessing}
+								<p class="status-message processing">🔄 Sending deployment transaction...</p>
 							{:else}
 								<p>Ready to deploy the CREATE2 Proxy contract using a pre-signed transaction.</p>
 							{/if}
@@ -795,6 +807,50 @@
 
 	:global([data-theme='dark']) .info-card p {
 		color: var(--gray-400);
+	}
+
+	.status-message {
+		font-weight: var(--font-medium);
+		padding: var(--space-2) var(--space-3);
+		border-radius: var(--radius-sm);
+		margin: 0 0 var(--space-3) 0;
+		font-size: var(--text-base);
+	}
+
+	.status-message.waiting {
+		background: hsla(45, 100%, 95%, 1);
+		color: hsl(45, 100%, 35%);
+		border: 1px solid hsl(45, 100%, 60%);
+	}
+
+	:global([data-theme='dark']) .status-message.waiting {
+		background: hsla(45, 100%, 15%, 0.3);
+		color: hsl(45, 100%, 75%);
+		border-color: hsl(45, 100%, 40%);
+	}
+
+	.status-message.processing {
+		background: hsla(210, 100%, 95%, 1);
+		color: hsl(210, 100%, 35%);
+		border: 1px solid hsl(210, 100%, 60%);
+	}
+
+	:global([data-theme='dark']) .status-message.processing {
+		background: hsla(210, 100%, 15%, 0.3);
+		color: hsl(210, 100%, 75%);
+		border-color: hsl(210, 100%, 40%);
+	}
+
+	.status-message.success {
+		background: hsla(120, 60%, 95%, 1);
+		color: hsl(120, 60%, 35%);
+		border: 1px solid hsl(120, 60%, 60%);
+	}
+
+	:global([data-theme='dark']) .status-message.success {
+		background: hsla(120, 60%, 15%, 0.3);
+		color: hsl(120, 60%, 75%);
+		border-color: hsl(120, 60%, 40%);
 	}
 
 	.detail-row {

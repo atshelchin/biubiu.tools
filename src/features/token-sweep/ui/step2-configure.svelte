@@ -355,7 +355,7 @@
 										<span>Please resolve the previous issue first</span>
 									</div>
 								{:else if check.type === 'contract' && check.address}
-									{@const config = getDeploymentConfig(check.address)}
+									{@const config = getDeploymentConfig(check.address as `0x${string}`)}
 									{#if config && config.deployFunction}
 										<button
 											class="deploy-button"

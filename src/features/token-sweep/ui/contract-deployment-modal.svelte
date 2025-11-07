@@ -295,13 +295,15 @@
 						<Loader2 size={48} class="spinning" />
 						<h3>Deploying Contract...</h3>
 						{#if isWaitingForSignature}
-							<p>Please confirm transaction in your wallet...</p>
+							<p class="status-text waiting">⏳ Please confirm transaction in your wallet...</p>
 						{:else if steps.some((s) => s.inProgress)}
-							<p>Processing transaction on blockchain...</p>
+							<p class="status-text processing">
+								⚡ Transaction sent! Waiting for blockchain confirmation...
+							</p>
 						{:else if steps.every((s) => s.completed)}
-							<p>Finalizing deployment...</p>
+							<p class="status-text success">✅ Finalizing deployment...</p>
 						{:else}
-							<p>Please confirm transactions in your wallet</p>
+							<p class="status-text">Please confirm transactions in your wallet</p>
 						{/if}
 
 						{#if steps.length > 0}
@@ -667,6 +669,38 @@
 
 	:global([data-theme='dark']) .contract-description {
 		color: var(--gray-400);
+	}
+
+	.status-text {
+		margin: var(--space-2) 0;
+		line-height: 1.6;
+	}
+
+	.status-text.waiting {
+		color: hsl(45, 100%, 40%);
+		font-weight: var(--font-medium);
+	}
+
+	:global([data-theme='dark']) .status-text.waiting {
+		color: hsl(45, 100%, 70%);
+	}
+
+	.status-text.processing {
+		color: hsl(210, 100%, 45%);
+		font-weight: var(--font-medium);
+	}
+
+	:global([data-theme='dark']) .status-text.processing {
+		color: hsl(210, 100%, 70%);
+	}
+
+	.status-text.success {
+		color: hsl(120, 60%, 40%);
+		font-weight: var(--font-medium);
+	}
+
+	:global([data-theme='dark']) .status-text.success {
+		color: hsl(120, 60%, 65%);
 	}
 
 	.contract-details {
