@@ -473,39 +473,17 @@
 {/if}
 
 <style>
-	h2 {
-		font-size: var(--text-2xl);
-		font-weight: var(--font-bold);
-		margin: 0 0 var(--space-2) 0;
-		color: var(--gray-900);
-	}
-	:global([data-theme='dark']) h2 {
-		color: var(--gray-100);
-	}
-
-	h3 {
-		font-size: var(--text-lg);
-		font-weight: var(--font-semibold);
-		margin: 0;
-		color: var(--gray-800);
-	}
-	:global([data-theme='dark']) h3 {
-		color: var(--gray-200);
-	}
-
 	h4 {
 		font-size: var(--text-base);
 		font-weight: var(--font-semibold);
 		margin: 0;
 	}
 
-	.description,
 	.form-hint {
 		font-size: var(--text-sm);
 		color: var(--gray-600);
 		margin: 0;
 	}
-	:global([data-theme='dark']) .description,
 	:global([data-theme='dark']) .form-hint {
 		color: var(--gray-400);
 	}
@@ -552,12 +530,6 @@
 
 	.checkbox-label span {
 		user-select: none;
-	}
-
-	.step-footer {
-		display: flex;
-		justify-content: space-between;
-		gap: var(--space-3);
 	}
 
 	.btn-secondary,

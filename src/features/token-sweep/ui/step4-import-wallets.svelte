@@ -501,34 +501,11 @@
 {/if}
 
 <style>
-	/* Reuse common styles from step3 */
-	h2 {
-		font-size: var(--text-2xl);
-		font-weight: var(--font-bold);
-		margin: 0 0 var(--space-2) 0;
-		color: var(--gray-900);
-	}
-	:global([data-theme='dark']) h2 {
-		color: var(--gray-100);
-	}
-
-	h3 {
-		font-size: var(--text-lg);
-		font-weight: var(--font-semibold);
-		margin: 0;
-		color: var(--gray-800);
-	}
-	:global([data-theme='dark']) h3 {
-		color: var(--gray-200);
-	}
-
-	.description,
 	.form-hint {
 		font-size: var(--text-sm);
 		color: var(--gray-600);
 		margin: 0;
 	}
-	:global([data-theme='dark']) .description,
 	:global([data-theme='dark']) .form-hint {
 		color: var(--gray-400);
 	}
@@ -561,32 +538,6 @@
 		font-size: var(--text-sm);
 		color: var(--gray-500);
 		font-style: italic;
-	}
-
-	.step-footer {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: var(--space-3);
-	}
-
-	.continue-btn {
-		display: inline-flex;
-		align-items: center;
-		gap: var(--space-2);
-		padding: var(--space-3) var(--space-6);
-		background: linear-gradient(135deg, #3b82f6, #2563eb);
-		color: white;
-		border: none;
-		border-radius: var(--radius-md);
-		font-weight: var(--font-semibold);
-		cursor: pointer;
-		transition: all 0.2s;
-		box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
-	}
-	.continue-btn:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
 	}
 
 	.btn-secondary,

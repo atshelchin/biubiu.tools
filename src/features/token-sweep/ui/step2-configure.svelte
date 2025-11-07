@@ -439,47 +439,6 @@
 {/if}
 
 <style>
-	h2 {
-		font-size: var(--text-2xl);
-		font-weight: var(--font-bold);
-		margin-bottom: var(--space-2);
-		color: var(--gray-900);
-	}
-
-	:global([data-theme='dark']) h2 {
-		color: var(--gray-100);
-	}
-
-	h3 {
-		font-size: var(--text-lg);
-		font-weight: var(--font-semibold);
-		margin-bottom: var(--space-2);
-		color: var(--gray-800);
-	}
-
-	:global([data-theme='dark']) h3 {
-		color: var(--gray-200);
-	}
-
-	.description {
-		color: var(--gray-600);
-		line-height: 1.6;
-		margin-bottom: var(--space-6);
-	}
-
-	:global([data-theme='dark']) .description {
-		color: var(--gray-400);
-	}
-
-	p {
-		color: var(--gray-600);
-		line-height: 1.6;
-	}
-
-	:global([data-theme='dark']) p {
-		color: var(--gray-400);
-	}
-
 	/* Wallet Status Section */
 	:global(.wallet-status-section) {
 		margin: var(--space-4) 0;
@@ -548,48 +507,6 @@
 
 	:global([data-theme='dark']) .summary-value {
 		color: var(--gray-100);
-	}
-
-	/* Footer */
-	.step-footer {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-3);
-		align-items: stretch;
-	}
-
-	.continue-btn {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: var(--space-2);
-		width: 100%;
-		padding: var(--space-3) var(--space-4);
-		background: linear-gradient(135deg, hsl(120, 60%, 50%), hsl(120, 60%, 40%));
-		color: white;
-		border: none;
-		border-radius: var(--radius-md);
-		font-size: var(--text-base);
-		font-weight: var(--font-semibold);
-		cursor: pointer;
-		transition: all 0.2s ease;
-	}
-
-	.continue-btn:hover {
-		background: hsl(120, 60%, 45%);
-		transform: translateY(-1px);
-		box-shadow: 0 4px 12px hsla(120, 60%, 50%, 0.3);
-	}
-
-	.footer-hint {
-		margin: 0;
-		text-align: center;
-		font-size: var(--text-sm);
-		color: var(--gray-600);
-	}
-
-	:global([data-theme='dark']) .footer-hint {
-		color: var(--gray-400);
 	}
 
 	/* Checking State */

@@ -124,7 +124,7 @@
 {/if}
 
 <style>
-	/* Common Styles */
+	/* Sidebar Summary */
 	h4 {
 		font-size: var(--text-base);
 		font-weight: var(--font-semibold);
@@ -134,16 +134,6 @@
 
 	:global([data-theme='dark']) h4 {
 		color: var(--gray-100);
-	}
-
-	p {
-		color: var(--gray-600);
-		line-height: 1.6;
-		margin: 0;
-	}
-
-	:global([data-theme='dark']) p {
-		color: var(--gray-400);
 	}
 
 	/* Sidebar Summary */
@@ -189,44 +179,6 @@
 		margin-top: var(--space-4);
 		padding: var(--space-3);
 		text-align: center;
-		font-size: var(--text-sm);
-		color: var(--gray-500);
-		font-style: italic;
-	}
-
-	/* Footer */
-	.step-footer {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.continue-btn {
-		display: inline-flex;
-		align-items: center;
-		gap: var(--space-2);
-		padding: var(--space-3) var(--space-6);
-		background: linear-gradient(135deg, #3b82f6, #2563eb);
-		color: white;
-		border: none;
-		border-radius: var(--radius-md);
-		font-weight: var(--font-semibold);
-		font-size: var(--text-base);
-		cursor: pointer;
-		transition: all 0.2s;
-		box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
-	}
-
-	.continue-btn:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4);
-	}
-
-	.continue-btn:active {
-		transform: translateY(0);
-	}
-
-	.footer-hint {
 		font-size: var(--text-sm);
 		color: var(--gray-500);
 		font-style: italic;
