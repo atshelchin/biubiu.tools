@@ -128,10 +128,16 @@
 				let dateFormat: 'yyyy' | 'yyyymm' | 'yyyym' | 'yyyymmdd' | 'yyyymdd';
 				if (!includeMonth && !includeDay) {
 					dateFormat = 'yyyy';
+					totalAddresses = endYear - startYear + 1;
 				} else if (includeMonth && !includeDay) {
 					dateFormat = useLeadingZeros ? 'yyyymm' : 'yyyym';
+					totalAddresses = (endYear - startYear + 1) * 12;
 				} else {
 					dateFormat = useLeadingZeros ? 'yyyymmdd' : 'yyyymdd';
+					// Estimate days (rough calculation)
+					const start = new Date(startDate);
+					const end = new Date(endDate);
+					totalAddresses = Math.ceil((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24)) + 1;
 				}
 
 				requestData = {
@@ -147,7 +153,7 @@
 			// Use parallel workers for large batches (>500 addresses)
 			const useParallel = totalAddresses > 500;
 
-			if (useParallel && pathType === 'sequential') {
+			if (useParallel) {
 				// Parallel execution with multiple workers
 				const result = await spawnPool<
 					WalletGenerationRequest,
@@ -157,31 +163,66 @@
 					data: requestData,
 					workerCount: 'auto', // Auto-detect optimal worker count
 					splitTask: (data, workerIndex, totalWorkers) => {
-						// Split the index range across workers
-						// Total addresses = endIndex - startIndex + 1 (inclusive range)
-						const totalAddresses = data.endIndex! - data.startIndex! + 1;
-						const addressesPerWorker = Math.floor(totalAddresses / totalWorkers);
-						const remainder = totalAddresses % totalWorkers;
+						if (data.pathType === 'sequential') {
+							// Split sequential index range across workers
+							const totalAddresses = data.endIndex! - data.startIndex! + 1;
+							const addressesPerWorker = Math.floor(totalAddresses / totalWorkers);
+							const remainder = totalAddresses % totalWorkers;
 
-						// Calculate this worker's start index
-						const workerStart =
-							data.startIndex! +
-							workerIndex * addressesPerWorker +
-							Math.min(workerIndex, remainder);
+							// Calculate this worker's start index
+							const workerStart =
+								data.startIndex! +
+								workerIndex * addressesPerWorker +
+								Math.min(workerIndex, remainder);
 
-						// Calculate this worker's count (distribute remainder to first workers)
-						const workerCount = addressesPerWorker + (workerIndex < remainder ? 1 : 0);
-						const workerEnd = workerStart + workerCount - 1;
+							// Calculate this worker's count (distribute remainder to first workers)
+							const workerCount = addressesPerWorker + (workerIndex < remainder ? 1 : 0);
+							const workerEnd = workerStart + workerCount - 1;
 
-						console.log(
-							`[splitTask] Worker ${workerIndex}: ${workerStart} -> ${workerEnd} (${workerCount} addresses)`
-						);
+							console.log(
+								`[splitTask] Worker ${workerIndex}: sequential ${workerStart} -> ${workerEnd} (${workerCount} addresses)`
+							);
 
-						return {
-							...data,
-							startIndex: workerStart,
-							endIndex: workerEnd
-						};
+							return {
+								...data,
+								startIndex: workerStart,
+								endIndex: workerEnd
+							};
+						} else {
+							// Split date range across workers
+							const startDate = new Date(data.startDate!);
+							const endDate = new Date(data.endDate!);
+							const totalDays = Math.ceil(
+								(endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)
+							);
+							const daysPerWorker = Math.floor(totalDays / totalWorkers);
+							const remainder = totalDays % totalWorkers;
+
+							// Calculate date range for this worker
+							const workerDays = daysPerWorker + (workerIndex < remainder ? 1 : 0);
+							const startOffset = workerIndex * daysPerWorker + Math.min(workerIndex, remainder);
+
+							const workerStartDate = new Date(startDate);
+							workerStartDate.setDate(startDate.getDate() + startOffset);
+
+							const workerEndDate = new Date(workerStartDate);
+							workerEndDate.setDate(workerStartDate.getDate() + workerDays - 1);
+
+							// Don't exceed original end date
+							if (workerEndDate > endDate) {
+								workerEndDate.setTime(endDate.getTime());
+							}
+
+							console.log(
+								`[splitTask] Worker ${workerIndex}: date ${workerStartDate.toISOString().split('T')[0]} -> ${workerEndDate.toISOString().split('T')[0]} (${workerDays} days)`
+							);
+
+							return {
+								...data,
+								startDate: workerStartDate.toISOString().split('T')[0],
+								endDate: workerEndDate.toISOString().split('T')[0]
+							};
+						}
 					},
 					mergeResults: (results) => {
 						// Merge all wallet results
