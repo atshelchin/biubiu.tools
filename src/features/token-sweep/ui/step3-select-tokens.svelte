@@ -2,15 +2,14 @@
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { getAllTokensForChain } from '../config/tokens';
 	import { loadCustomTokens, removeCustomToken } from '../utils/token-storage';
-	import { Plus } from 'lucide-svelte';
 	import { fade } from 'svelte/transition';
 	import type { StepManager } from '$lib/components/ui/step-indicator.svelte';
 	import { step3State } from '../stores/step3-state.svelte';
-	import AddTokenModal from './add-token-modal.svelte';
 	import TokenSelector from './components/token-selector.svelte';
 	import StepSidebar from './components/step-sidebar.svelte';
 	import StepContentHeader from './components/step-content-header.svelte';
 	import EmptyState from './components/empty-state.svelte';
+	import TokenManager from './components/token-manager.svelte';
 
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
@@ -31,9 +30,6 @@
 		const custom = loadCustomTokens(connectStore.currentChainId);
 		return [...predefined, ...custom];
 	});
-
-	// Modal state for adding custom token
-	let showAddTokenModal = $state(false);
 
 	// Get current network info
 	let currentNetwork = $derived.by(() => {
@@ -61,14 +57,6 @@
 			console.log('Selected tokens:', step3State.getSelectedTokens());
 			stepManager.goTo(4);
 		}
-	}
-
-	function openAddTokenModal() {
-		showAddTokenModal = true;
-	}
-
-	function closeAddTokenModal() {
-		showAddTokenModal = false;
 	}
 
 	function handleTokenAdded(tokenId: string) {
@@ -129,10 +117,11 @@
 			{#snippet actions()}
 				<button class="btn-secondary" onclick={selectAllTokens}>Select All</button>
 				<button class="btn-secondary" onclick={deselectAllTokens}>Deselect All</button>
-				<button class="btn-primary" onclick={openAddTokenModal}>
-					<Plus size={18} />
-					Add Custom Token
-				</button>
+				<TokenManager
+					chainId={connectStore.currentChainId || 0}
+					onTokenAdded={handleTokenAdded}
+					buttonClass="btn-primary"
+				/>
 			{/snippet}
 		</StepContentHeader>
 
@@ -154,14 +143,6 @@
 		{/if}
 	</div>
 {/if}
-
-<!-- Add Token Modal -->
-<AddTokenModal
-	bind:open={showAddTokenModal}
-	chainId={connectStore.currentChainId || 0}
-	onClose={closeAddTokenModal}
-	onTokenAdded={handleTokenAdded}
-/>
 
 <style>
 	/* Common Styles */
