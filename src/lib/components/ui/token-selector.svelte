@@ -3,8 +3,10 @@
 	import { SvelteSet } from 'svelte/reactivity';
 	import { PREDEFINED_TOKENS } from '$lib/config/tokens';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
+	import { loadCustomTokens, removeCustomToken } from '$lib/utils/token-storage';
 	import AddTokenButton from '$lib/components/ui/add-token-button.svelte';
 	import TokenCard from '$lib/components/ui/token-card.svelte';
+	import { onMount } from 'svelte';
 
 	interface Props {
 		chainId?: number; // If provided, auto-load tokens for this chain
@@ -40,8 +42,27 @@
 
 	const connectStore = useConnectStore();
 
+	// Force refresh when custom tokens change
+	let refreshTrigger = $state(0);
+
+	// Listen for custom token events
+	onMount(() => {
+		const handleTokenChange = () => {
+			refreshTrigger++;
+		};
+		window.addEventListener('custom-token-added', handleTokenChange);
+		window.addEventListener('custom-token-removed', handleTokenChange);
+
+		return () => {
+			window.removeEventListener('custom-token-added', handleTokenChange);
+			window.removeEventListener('custom-token-removed', handleTokenChange);
+		};
+	});
+
 	// Load tokens from network config or localStorage
 	let displayTokens = $derived(() => {
+		// Watch refresh trigger to force re-evaluation
+		void refreshTrigger;
 		// If manual tokens provided, use them
 		if (tokens.length > 0) return tokens;
 
@@ -74,26 +95,13 @@
 			allTokens.push(...erc20Tokens);
 		}
 
-		// Step 3: Load custom tokens from localStorage
-		if (storageKey) {
-			const customTokens = loadCustomTokens(currentChainId);
-			console.log({ customTokens });
-			allTokens.push(...customTokens);
-		}
+		// Step 3: Load custom tokens from localStorage using unified storage
+		const customTokens = loadCustomTokens(currentChainId);
+		console.log({ customTokens });
+		allTokens.push(...customTokens);
 
 		return allTokens;
 	});
-
-	function loadCustomTokens(currentChainId: number): Token[] {
-		if (!storageKey) return [];
-		try {
-			const stored = localStorage.getItem(`${storageKey}:${currentChainId}`);
-
-			return stored ? JSON.parse(stored) : [];
-		} catch {
-			return [];
-		}
-	}
 
 	function handleToggle(tokenId: string) {
 		onToggle?.(tokenId);
@@ -110,15 +118,8 @@
 	function handleRemove(tokenId: string, chainId: number) {
 		onRemoveCustomToken?.(tokenId, chainId);
 
-		// Remove from localStorage
-		if (storageKey) {
-			const currentChainId = chainId ?? connectStore.currentChainId;
-			if (currentChainId) {
-				const customTokens = loadCustomTokens(currentChainId);
-				const filtered = customTokens.filter((t) => t.id !== tokenId);
-				localStorage.setItem(`${storageKey}-${currentChainId}`, JSON.stringify(filtered));
-			}
-		}
+		// Remove from unified localStorage
+		removeCustomToken(tokenId);
 	}
 </script>
 

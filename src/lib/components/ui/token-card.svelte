@@ -2,6 +2,7 @@
 	import type { Token, ERC20Token } from '$lib/types/token';
 	import { CheckCircle2, Trash2, ExternalLink } from '@lucide/svelte';
 	import { slide } from 'svelte/transition';
+	import ConfirmDialog from '$lib/components/ui/confirm-dialog.svelte';
 
 	interface Props {
 		token: Token;
@@ -21,15 +22,23 @@
 		showCheckmark = true
 	}: Props = $props();
 
+	let showConfirmDialog = $state(false);
+
 	function handleToggle() {
 		onToggle?.(token.id);
 	}
 
 	function handleRemove(e: Event) {
 		e.stopPropagation();
-		if (confirm('Are you sure you want to remove this custom token?')) {
-			onRemove?.(token.id, token.chainId);
-		}
+		showConfirmDialog = true;
+	}
+
+	function confirmRemove() {
+		onRemove?.(token.id, token.chainId);
+	}
+
+	function cancelRemove() {
+		// Just close the dialog
 	}
 
 	function getTokenLogo(token: Token): string {
@@ -94,6 +103,18 @@
 		</div>
 	{/if}
 </div>
+
+<ConfirmDialog
+	bind:open={showConfirmDialog}
+	title="Remove Custom Token"
+	message="Are you sure you want to remove {token.symbol} ({token.name})? This action cannot be undone."
+	confirmText="Remove Token"
+	variant="danger"
+	requireLongPress={true}
+	longPressDuration={3000}
+	onConfirm={confirmRemove}
+	onCancel={cancelRemove}
+/>
 
 <style>
 	.token-card {

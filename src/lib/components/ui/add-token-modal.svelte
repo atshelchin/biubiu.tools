@@ -1,13 +1,12 @@
 <script lang="ts">
 	import type { ERC20Token } from '$lib/types/token';
-
 	import Modal from '$lib/components/ui/modal.svelte';
-	// import { addCustomToken } from '@/features/token-sweep/utils/token-storage';
-
+	import { addCustomToken } from '$lib/utils/token-storage';
 	import type { Address } from 'viem';
-	import { createPublicClient, http } from 'viem';
+	import { createPublicClient, http, getAddress } from 'viem';
 	import { scale, fade } from 'svelte/transition';
 	import { Loader2, CheckCircle2, AlertCircle } from '@lucide/svelte';
+	import { SvelteSet } from 'svelte/reactivity';
 
 	interface Props {
 		open: boolean;
@@ -30,61 +29,7 @@
 	let isAddingToken = $state(false);
 	let fetchStatus = $state<'idle' | 'loading' | 'success' | 'error'>('idle');
 	let errorMessage = $state('');
-	let fetchedFields = $state<Set<string>>(new Set());
-
-	function saveCustomTokens(tokens: ERC20Token[], chainId: number): void {
-		try {
-			localStorage.setItem(`custom-tokens:${chainId}`, JSON.stringify(tokens));
-		} catch (error) {
-			console.error('Failed to save custom tokens:', error);
-		}
-	}
-	/**
-	 * Remove a custom token
-	 */
-	function removeCustomToken(tokenId: string, chainId: number): void {
-		const tokens = loadCustomTokens(chainId);
-		const filtered = tokens.filter((t) => t.id !== tokenId);
-		saveCustomTokens(filtered, chainId);
-	}
-
-	/**
-	 * Check if a token is custom (user-added)
-	 */
-	function isCustomToken(tokenId: string): boolean {
-		const tokens = loadCustomTokens(chainId);
-		return tokens.some((t) => t.id === tokenId);
-	}
-
-	function loadCustomTokens(chainId: number): ERC20Token[] {
-		try {
-			const stored = localStorage.getItem(`custom-tokens:${chainId}`);
-			if (!stored) return [];
-
-			const data: ERC20Token[] = JSON.parse(stored);
-
-			const tokens = data || [];
-
-			return tokens;
-		} catch (error) {
-			console.error('Failed to load custom tokens:', error);
-			return [];
-		}
-	}
-
-	function addCustomToken(token: ERC20Token, chainId: number): void {
-		const tokens = loadCustomTokens(chainId);
-
-		// Check if token already exists
-		const exists = tokens.some((t) => t.id === token.id);
-		if (exists) {
-			console.warn('Token already exists:', token.id);
-			return;
-		}
-
-		tokens.push({ ...token, isCustom: true });
-		saveCustomTokens(tokens, chainId);
-	}
+	let fetchedFields = $state<SvelteSet<string>>(new SvelteSet());
 	// ERC20 ABI for fetching token info
 	const ERC20_ABI = [
 		{
@@ -121,7 +66,7 @@
 			fetchStatus = 'idle';
 			isFetchingInfo = false;
 			isAddingToken = false;
-			fetchedFields = new Set();
+			fetchedFields = new SvelteSet();
 		}
 	});
 
@@ -152,7 +97,7 @@
 		isFetchingInfo = true;
 		fetchStatus = 'loading';
 		errorMessage = '';
-		fetchedFields = new Set();
+		fetchedFields = new SvelteSet();
 
 		try {
 			const publicClient = createPublicClient({
@@ -180,25 +125,22 @@
 
 			// Smooth fill animation - delay each field slightly
 			fetchStatus = 'success';
-			fetchedFields = new Set();
+			fetchedFields = new SvelteSet();
 
 			// Fill symbol
 			await new Promise((resolve) => setTimeout(resolve, 100));
 			newTokenSymbol = symbol as string;
 			fetchedFields.add('symbol');
-			fetchedFields = new Set(fetchedFields); // Trigger reactivity
 
 			// Fill name
 			await new Promise((resolve) => setTimeout(resolve, 100));
 			newTokenName = name as string;
 			fetchedFields.add('name');
-			fetchedFields = new Set(fetchedFields);
 
 			// Fill decimals
 			await new Promise((resolve) => setTimeout(resolve, 100));
 			newTokenDecimals = String(decimals);
 			fetchedFields.add('decimals');
-			fetchedFields = new Set(fetchedFields);
 
 			// Clear success state after a moment
 			setTimeout(() => {
@@ -231,7 +173,7 @@
 
 	async function handleAddToken() {
 		// Validate inputs
-		if (!newTokenAddress.match(/^0x[a-fA-F0-9]{40}$/)) {
+		if (!newTokenAddress.match(/^0x[a-fA-F0-9]{40}$/i)) {
 			errorMessage = 'Invalid token address. Please enter a valid Ethereum address (0x...).';
 			return;
 		}
@@ -258,12 +200,21 @@
 		errorMessage = '';
 
 		try {
-			const tokenId = `${chainId}:${newTokenAddress.toLowerCase()}`;
+			// Convert to checksum address
+			let checksumAddress: Address;
+			try {
+				checksumAddress = getAddress(newTokenAddress);
+			} catch {
+				errorMessage = 'Invalid Ethereum address format.';
+				return;
+			}
+
+			const tokenId = `${chainId}:${checksumAddress.toLowerCase()}`;
 
 			const customToken: ERC20Token = {
 				id: tokenId,
 				type: 'erc20',
-				address: newTokenAddress as Address,
+				address: checksumAddress,
 				symbol: newTokenSymbol.toUpperCase(),
 				name: newTokenName,
 				decimals,
@@ -271,7 +222,7 @@
 				isCustom: true
 			};
 
-			addCustomToken(customToken, chainId);
+			addCustomToken(customToken);
 
 			// Notify parent and close
 			onTokenAdded?.(tokenId);
