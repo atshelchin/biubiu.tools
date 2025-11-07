@@ -164,13 +164,18 @@
 						const remainder = totalAddresses % totalWorkers;
 
 						// Calculate this worker's start index
-						const workerStart = data.startIndex! + workerIndex * addressesPerWorker + Math.min(workerIndex, remainder);
+						const workerStart =
+							data.startIndex! +
+							workerIndex * addressesPerWorker +
+							Math.min(workerIndex, remainder);
 
 						// Calculate this worker's count (distribute remainder to first workers)
 						const workerCount = addressesPerWorker + (workerIndex < remainder ? 1 : 0);
 						const workerEnd = workerStart + workerCount - 1;
 
-						console.log(`[splitTask] Worker ${workerIndex}: ${workerStart} -> ${workerEnd} (${workerCount} addresses)`);
+						console.log(
+							`[splitTask] Worker ${workerIndex}: ${workerStart} -> ${workerEnd} (${workerCount} addresses)`
+						);
 
 						return {
 							...data,
@@ -234,6 +239,9 @@
 			return;
 		}
 
+		// Clear existing wallets before importing new ones
+		step4State.clearWallets();
+
 		isGenerating = true;
 		generationProgress = 0;
 		errorMessage = '';
@@ -266,7 +274,9 @@
 
 						const workerKeys = data.keys.slice(startIdx, endIdx);
 
-						console.log(`[splitTask] Worker ${workerIndex}: keys ${startIdx} -> ${endIdx - 1} (${count} keys)`);
+						console.log(
+							`[splitTask] Worker ${workerIndex}: keys ${startIdx} -> ${endIdx - 1} (${count} keys)`
+						);
 
 						return {
 							keys: workerKeys,
@@ -613,6 +623,34 @@
 	</div>
 </div>
 
+<!-- Confirm Dialogs -->
+<ConfirmDialog
+	bind:open={showRemoveDialog}
+	title="Remove Wallet"
+	message={`Are you sure you want to remove this wallet from the import list?\n\nAddress: ${walletToRemove}`}
+	confirmText="Remove"
+	cancelText="Cancel"
+	variant="danger"
+	requireLongPress={false}
+	onConfirm={confirmRemoveWallet}
+	onCancel={() => {
+		walletToRemove = '';
+	}}
+/>
+
+<ConfirmDialog
+	bind:open={showClearAllDialog}
+	title="Clear All Wallets"
+	message={`Are you sure you want to remove all ${walletCount.toLocaleString()} wallets from the import list? This action cannot be undone.`}
+	confirmText="Clear All"
+	cancelText="Cancel"
+	variant="danger"
+	requireLongPress={true}
+	longPressDuration={3000}
+	onConfirm={confirmClearAll}
+	onCancel={() => {}}
+/>
+
 <style>
 	.form-hint {
 		font-size: var(--text-sm);
@@ -774,31 +812,3 @@
 		}
 	}
 </style>
-
-<!-- Confirm Dialogs -->
-<ConfirmDialog
-	bind:open={showRemoveDialog}
-	title="Remove Wallet"
-	message={`Are you sure you want to remove this wallet from the import list?\n\nAddress: ${walletToRemove}`}
-	confirmText="Remove"
-	cancelText="Cancel"
-	variant="danger"
-	requireLongPress={false}
-	onConfirm={confirmRemoveWallet}
-	onCancel={() => {
-		walletToRemove = '';
-	}}
-/>
-
-<ConfirmDialog
-	bind:open={showClearAllDialog}
-	title="Clear All Wallets"
-	message={`Are you sure you want to remove all ${walletCount.toLocaleString()} wallets from the import list? This action cannot be undone.`}
-	confirmText="Clear All"
-	cancelText="Cancel"
-	variant="danger"
-	requireLongPress={true}
-	longPressDuration={3000}
-	onConfirm={confirmClearAll}
-	onCancel={() => {}}
-/>
