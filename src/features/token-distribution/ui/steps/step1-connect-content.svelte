@@ -36,7 +36,7 @@
 <div class="step-content">
 	<StepContentHeader
 		title="Select Network"
-		description="Choose the blockchain network for token sweeping"
+		description="Choose the blockchain network for token distribution"
 	/>
 
 	{#if isLoading}
@@ -101,7 +101,7 @@
 		max-width: 400px;
 		min-height: 56px;
 		padding: var(--space-4) var(--space-6);
-		background: linear-gradient(135deg, hsl(120, 60%, 50%), hsl(120, 60%, 40%));
+		background: linear-gradient(135deg, hsl(210, 100%, 50%), hsl(210, 100%, 40%));
 		color: white;
 		border: none;
 		border-radius: var(--radius-lg);
@@ -109,12 +109,12 @@
 		font-weight: var(--font-semibold);
 		cursor: pointer;
 		transition: all 0.3s ease;
-		box-shadow: 0 4px 12px hsla(120, 60%, 50%, 0.3);
+		box-shadow: 0 4px 12px hsla(210, 100%, 50%, 0.3);
 	}
 
 	.continue-button:hover {
 		transform: translateY(-2px);
-		box-shadow: 0 8px 24px hsla(120, 60%, 50%, 0.4);
+		box-shadow: 0 8px 24px hsla(210, 100%, 50%, 0.4);
 	}
 
 	.continue-button:active {

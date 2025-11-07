@@ -1,6 +1,6 @@
 <script lang="ts">
 	import WalletConnectionStatus from '@/lib/components/ui/wallet-connection-status.svelte';
-	import StepSidebar from '@/features/token-sweep/ui/components/step-sidebar.svelte';
+	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
 	import { step2State } from '@/features/token-sweep/stores/step2-state.svelte';
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 

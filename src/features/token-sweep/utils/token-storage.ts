@@ -1,4 +1,4 @@
-import type { ERC20Token, CustomTokenStorage } from '../types/token';
+import type { ERC20Token, CustomTokenStorage } from '$lib/types/token';
 
 const STORAGE_KEY = 'token-sweep:custom-tokens';
 const STORAGE_VERSION = 1;

@@ -1,9 +1,5 @@
 import type { PageLoad } from './$types';
-import {
-	createWebAppData,
-	createHowToData,
-	type HowToStepData
-} from '@/features/token-sweep/utils/structured-data';
+import { createWebAppData, createHowToData, type HowToStepData } from '$lib/utils/structured-data';
 
 export const load: PageLoad = ({ url }) => {
 	const canonical = url.origin + url.pathname;

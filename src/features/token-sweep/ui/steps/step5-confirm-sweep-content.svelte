@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { step3State } from '@/features/token-sweep/stores/step3-state.svelte';
 	import { step4State } from '@/features/token-sweep/stores/step4-state.svelte';
-	import { getAllTokensForChain } from '@/features/token-sweep/config/tokens';
+	import { getAllTokensForChain } from '$lib/config/tokens';
 	import { loadCustomTokens } from '@/features/token-sweep/utils/token-storage';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import TokenListDisplay from '@/features/token-sweep/ui/components/token-list-display.svelte';
@@ -17,8 +17,8 @@
 	import type { Address } from 'viem';
 	import { AlertCircle, CheckCircle2, Loader2 } from 'lucide-svelte';
 	import { fade, slide } from 'svelte/transition';
-	import type { Token, NativeToken, ERC20Token } from '@/features/token-sweep/types/token';
-	import StepContentHeader from '@/features/token-sweep/ui/components/step-content-header.svelte';
+	import type { Token, NativeToken, ERC20Token } from '$lib/types/token';
+	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 
 	// State
 	let targetAddress = $state('');

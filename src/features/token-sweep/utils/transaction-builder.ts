@@ -4,7 +4,7 @@
 import type { Address, PublicClient, WalletClient, Hash } from 'viem';
 import { encodeFunctionData } from 'viem';
 import type { ImportedWallet } from '../types/wallet';
-import type { ERC20Token } from '../types/token';
+import type { ERC20Token } from '$lib/types/token';
 
 // ERC20 transfer ABI
 const ERC20_TRANSFER_ABI = [

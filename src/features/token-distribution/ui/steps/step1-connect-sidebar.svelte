@@ -5,17 +5,17 @@
 <StepSidebar
 	stepNumber={1}
 	title="Connect Wallet"
-	description="Connect your Web3 wallet to start sweeping tokens"
+	description="Connect your Web3 wallet to start distributing tokens"
 >
 	<div class="feature-highlights">
 		<ul class="feature-list">
 			<li>
-				<span class="feature-icon">⚡</span>
-				<span>Batch transfer ERC20 tokens efficiently</span>
+				<span class="feature-icon">📤</span>
+				<span>Batch distribute tokens to multiple recipients</span>
 			</li>
 			<li>
 				<span class="feature-icon">🌐</span>
-				<span>Support any EVM-compatible network with EIP-7702</span>
+				<span>Support any EVM-compatible network</span>
 			</li>
 			<li>
 				<span class="feature-icon">🔒</span>

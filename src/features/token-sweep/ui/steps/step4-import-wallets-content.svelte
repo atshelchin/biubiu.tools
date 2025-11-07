@@ -9,14 +9,14 @@
 		validateMnemonicPhrase
 	} from '@/features/token-sweep/utils/wallet-import';
 	import { scanMultipleWallets } from '@/features/token-sweep/utils/balance-scanner';
-	import { getAllTokensForChain } from '@/features/token-sweep/config/tokens';
+	import { getAllTokensForChain } from '$lib/config/tokens';
 	import type { ImportMethod, DerivationPathType } from '@/features/token-sweep/types/wallet';
-	import type { ERC20Token } from '@/features/token-sweep/types/token';
+	import type { ERC20Token } from '$lib/types/token';
 	import { createPublicClient, http } from 'viem';
 	import { SvelteMap } from 'svelte/reactivity';
 	import { Loader2, Trash2, AlertCircle } from 'lucide-svelte';
 	import { slide } from 'svelte/transition';
-	import StepContentHeader from '@/features/token-sweep/ui/components/step-content-header.svelte';
+	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 
 	const connectStore = useConnectStore();
 

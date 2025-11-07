@@ -1,4 +1,4 @@
-import type { NativeToken, ERC20Token } from '../types/token';
+import type { NativeToken, ERC20Token } from '$lib/types/token';
 import type { Address } from 'viem';
 
 /**

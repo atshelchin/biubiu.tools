@@ -8,7 +8,9 @@
 			"Bash(bun run:*)",
 			"Bash(bun pm ls:*)",
 			"Bash(curl -s http://localhost:5174/sitemap.xml)",
-			"Bash(curl:*)"
+			"Bash(curl:*)",
+			"Bash(xargs sed:*)",
+			"Bash(find:*)"
 		],
 		"deny": [],
 		"ask": []

@@ -3,7 +3,7 @@
  */
 import type { Address, PublicClient } from 'viem';
 import type { ImportedWallet } from '../types/wallet';
-import type { ERC20Token, NativeToken } from '../types/token';
+import type { ERC20Token, NativeToken } from '$lib/types/token';
 import {
 	buildWalletSweepTransactions,
 	type SweepResult,

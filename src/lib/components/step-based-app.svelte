@@ -1,7 +1,7 @@
 <script lang="ts" module>
 	import type { Snippet, Component } from 'svelte';
 	import type { Chain } from 'viem';
-	import type { HowToStepData } from '@/features/token-sweep/utils/structured-data';
+	import type { HowToStepData } from '$lib/utils/structured-data';
 
 	// Generic component type for step components
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any

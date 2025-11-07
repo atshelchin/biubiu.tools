@@ -3,7 +3,16 @@
 
 	const i18n = useI18n();
 	const t = i18n.t;
-	import { Wallet, Zap, Sparkles, ArrowRight, Lock, MessageCircle } from '@lucide/svelte';
+	import {
+		Wallet,
+		Zap,
+		Sparkles,
+		ArrowRight,
+		Lock,
+		MessageCircle,
+		ArrowRightLeft,
+		SendHorizontal
+	} from '@lucide/svelte';
 
 	interface Tool {
 		icon: typeof Wallet;
@@ -33,6 +42,26 @@
 			highlight: true
 		},
 		{
+			icon: ArrowRightLeft,
+			title: t('tools.token_sweep.title'),
+			description: t('tools.token_sweep.description'),
+			link: '/apps/token-sweep',
+			status: 'active',
+			color: '#10B981',
+			features: ['Multi-chain Support', 'Batch Processing', 'Gas Optimized'],
+			highlight: false
+		},
+		{
+			icon: SendHorizontal,
+			title: t('tools.token_distribution.title'),
+			description: t('tools.token_distribution.description'),
+			link: '/apps/token-distribution',
+			status: 'active',
+			color: '#F59E0B',
+			features: ['Equal or Custom Amounts', 'CSV Import Ready', 'Real-time Preview'],
+			highlight: false
+		},
+		{
 			icon: Zap,
 			title: t('tools.call_master.title'),
 			description: t('tools.call_master.description'),
@@ -51,7 +80,7 @@
 			title: t('tools.batch_transfer.title'),
 			description: t('tools.batch_transfer.description'),
 			status: 'coming-soon',
-			color: '#10B981',
+			color: '#EF4444',
 			features: [
 				t('tools.batch_transfer.feature_1'),
 				t('tools.batch_transfer.feature_2'),

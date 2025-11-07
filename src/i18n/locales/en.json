@@ -18,6 +18,10 @@
 			"title": "Token Sweep",
 			"description": "Sweep tokens from multiple addresses to a single destination address"
 		},
+		"token_distribution": {
+			"title": "Token Distribution",
+			"description": "Distribute tokens from one wallet to multiple recipient addresses"
+		},
 		"wallet_collection": {
 			"title": "Drain balance",
 			"description": "Efficiently collect balances from multiple wallets to a single address. Support multiple tokens and chains.",

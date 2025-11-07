@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Token } from '../../types/token';
+	import type { Token } from '$lib/types/token';
 	import { CheckCircle2, Trash2, ExternalLink } from 'lucide-svelte';
 	import { slide } from 'svelte/transition';
 	import { SvelteSet } from 'svelte/reactivity';
@@ -85,7 +85,7 @@
 					<div class="token-meta">
 						<span class="token-type">{token.type === 'native' ? 'Native' : 'ERC20'}</span>
 						{#if token.type === 'erc20' && blockExplorer}
-							{@const erc20Token = token as import('@/features/token-sweep/types/token').ERC20Token}
+							{@const erc20Token = token as import('$lib/types/token').ERC20Token}
 							<a
 								href="{blockExplorer}/address/{erc20Token.address}"
 								target="_blank"

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Modal from '$lib/components/ui/modal.svelte';
 	import { addCustomToken } from '../utils/token-storage';
-	import type { ERC20Token } from '../types/token';
+	import type { ERC20Token } from '$lib/types/token';
 	import type { Address } from 'viem';
 	import { slide } from 'svelte/transition';
 

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
-	import StepFooter from '@/features/token-sweep/ui/components/step-footer.svelte';
+	import StepFooter from '$lib/components/step/step-footer.svelte';
 
 	const stepManager = useStepManager();
 

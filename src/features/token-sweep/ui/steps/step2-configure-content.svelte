@@ -10,7 +10,7 @@
 	import ContractDeploymentModal from '@/features/token-sweep/ui/contract-deployment-modal.svelte';
 	import { getDeploymentConfig } from '@/features/token-sweep/config/deployment-configs';
 	import type { ContractDeploymentConfig } from '@/features/token-sweep/types/deployment-config';
-	import StepContentHeader from '@/features/token-sweep/ui/components/step-content-header.svelte';
+	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import EmptyState from '@/features/token-sweep/ui/components/empty-state.svelte';
 	import { step2State } from '@/features/token-sweep/stores/step2-state.svelte';
 

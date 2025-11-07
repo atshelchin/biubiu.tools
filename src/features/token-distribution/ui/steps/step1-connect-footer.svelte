@@ -6,13 +6,10 @@
 	const connectStore = useConnectStore();
 	const stepManager = useStepManager();
 
-	// This needs to track the same selectedChainId as content
-	// We'll use connectStore.currentChainId which is set after connection
 	const isReadyToContinue = $derived(
 		Boolean(connectStore.isConnected && connectStore.currentChainId !== null)
 	);
 
-	// Handle continue to next step
 	function handleContinue() {
 		if (isReadyToContinue) {
 			stepManager.next();
