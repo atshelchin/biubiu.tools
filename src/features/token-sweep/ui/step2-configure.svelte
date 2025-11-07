@@ -9,6 +9,7 @@
 	import ContractDeploymentModal from './contract-deployment-modal.svelte';
 	import { getDeploymentConfig } from '../config/deployment-configs';
 	import type { ContractDeploymentConfig } from '../types/deployment-config';
+	import StepSidebar from './components/step-sidebar.svelte';
 
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
@@ -184,10 +185,11 @@
 </script>
 
 {#if section === 'sidebar'}
-	<div class="step-sidebar">
-		<h3>Step 2: Check Dependencies</h3>
-		<p>Verify network services and contracts</p>
-
+	<StepSidebar
+		stepNumber={2}
+		title="Check Dependencies"
+		description="Verify network services and contracts"
+	>
 		<WalletConnectionStatus
 			showChangeButton={true}
 			onChangeWallet={goBackToStep1}
@@ -212,7 +214,7 @@
 				{/if}
 			</div>
 		{/if}
-	</div>
+	</StepSidebar>
 {:else if section === 'footer'}
 	<div class="step-footer">
 		{#if isReadyToContinue}

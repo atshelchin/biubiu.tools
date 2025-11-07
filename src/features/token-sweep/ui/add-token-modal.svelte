@@ -90,61 +90,61 @@
 
 <Modal {open} onClose={handleCancel} title="Add Custom Token" maxWidth="500px">
 	<div class="form-container">
-			<div class="form-group">
-				<label for="token-address">Token Address</label>
-				<input
-					id="token-address"
-					type="text"
-					placeholder="0x..."
-					bind:value={newTokenAddress}
-					class="form-input"
-					disabled={isAddingToken}
-				/>
-			</div>
-
-			<div class="form-group">
-				<label for="token-symbol">Token Symbol</label>
-				<input
-					id="token-symbol"
-					type="text"
-					placeholder="e.g. USDT"
-					bind:value={newTokenSymbol}
-					class="form-input"
-					disabled={isAddingToken}
-				/>
-			</div>
-
-			<div class="form-group">
-				<label for="token-name">Token Name</label>
-				<input
-					id="token-name"
-					type="text"
-					placeholder="e.g. Tether USD"
-					bind:value={newTokenName}
-					class="form-input"
-					disabled={isAddingToken}
-				/>
-			</div>
-
-			<div class="form-group">
-				<label for="token-decimals">Decimals</label>
-				<input
-					id="token-decimals"
-					type="number"
-					min="0"
-					max="18"
-					bind:value={newTokenDecimals}
-					class="form-input"
-					disabled={isAddingToken}
-				/>
-			</div>
-
-			{#if addTokenError}
-				<div class="error-message" transition:slide>
-					{addTokenError}
-				</div>
-			{/if}
+		<div class="form-group">
+			<label for="token-address">Token Address</label>
+			<input
+				id="token-address"
+				type="text"
+				placeholder="0x..."
+				bind:value={newTokenAddress}
+				class="form-input"
+				disabled={isAddingToken}
+			/>
 		</div>
+
+		<div class="form-group">
+			<label for="token-symbol">Token Symbol</label>
+			<input
+				id="token-symbol"
+				type="text"
+				placeholder="e.g. USDT"
+				bind:value={newTokenSymbol}
+				class="form-input"
+				disabled={isAddingToken}
+			/>
+		</div>
+
+		<div class="form-group">
+			<label for="token-name">Token Name</label>
+			<input
+				id="token-name"
+				type="text"
+				placeholder="e.g. Tether USD"
+				bind:value={newTokenName}
+				class="form-input"
+				disabled={isAddingToken}
+			/>
+		</div>
+
+		<div class="form-group">
+			<label for="token-decimals">Decimals</label>
+			<input
+				id="token-decimals"
+				type="number"
+				min="0"
+				max="18"
+				bind:value={newTokenDecimals}
+				class="form-input"
+				disabled={isAddingToken}
+			/>
+		</div>
+
+		{#if addTokenError}
+			<div class="error-message" transition:slide>
+				{addTokenError}
+			</div>
+		{/if}
+	</div>
 
 	{#snippet footer()}
 		<div class="footer-actions">

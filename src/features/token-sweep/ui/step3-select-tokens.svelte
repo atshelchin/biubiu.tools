@@ -2,12 +2,13 @@
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { getAllTokensForChain } from '../config/tokens';
 	import { loadCustomTokens, removeCustomToken } from '../utils/token-storage';
-	import type { Token } from '../types/token';
-	import { CheckCircle2, Plus, Trash2, ExternalLink } from 'lucide-svelte';
-	import { fade, slide } from 'svelte/transition';
+	import { Plus } from 'lucide-svelte';
+	import { fade } from 'svelte/transition';
 	import type { StepManager } from '$lib/components/ui/step-indicator.svelte';
 	import { step3State } from '../stores/step3-state.svelte';
 	import AddTokenModal from './add-token-modal.svelte';
+	import TokenSelector from './components/token-selector.svelte';
+	import StepSidebar from './components/step-sidebar.svelte';
 
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
@@ -74,27 +75,16 @@
 	}
 
 	function handleRemoveCustomToken(tokenId: string) {
-		if (confirm('Are you sure you want to remove this custom token?')) {
-			removeCustomToken(tokenId);
-			// Remove from selection if it was selected
-			if (selectedTokenIds.has(tokenId)) {
-				step3State.toggleToken(tokenId);
-			}
+		removeCustomToken(tokenId);
+		// Remove from selection if it was selected
+		if (selectedTokenIds.has(tokenId)) {
+			step3State.toggleToken(tokenId);
 		}
-	}
-
-	function getTokenLogo(token: Token): string {
-		if (token.logoUrl) return token.logoUrl;
-		// Fallback to generic icon
-		return `https://ui-avatars.com/api/?name=${token.symbol}&background=random`;
 	}
 </script>
 
 {#if section === 'sidebar'}
-	<div class="step-sidebar">
-		<h3>Step 3: Select Tokens</h3>
-		<p>Choose which tokens to sweep</p>
-
+	<StepSidebar stepNumber={3} title="Select Tokens" description="Choose which tokens to sweep">
 		{#if selectedTokenIds.size > 0}
 			<div class="summary" transition:fade>
 				<h4>Selected Tokens</h4>
@@ -106,7 +96,7 @@
 		{:else}
 			<p class="empty-hint">No tokens selected</p>
 		{/if}
-	</div>
+	</StepSidebar>
 {:else if section === 'footer'}
 	<div class="step-footer">
 		{#if canContinue}
@@ -154,72 +144,15 @@
 				<h3>Wallet Not Connected</h3>
 				<p>Please go back to Step 1 and connect your wallet</p>
 			</div>
-		{:else if availableTokens.length === 0}
-			<div class="empty-state">
-				<div class="empty-icon">🪙</div>
-				<h3>No Tokens Available</h3>
-				<p>Add a custom token to get started</p>
-				<button class="btn-primary" onclick={openAddTokenModal}>
-					<Plus size={18} />
-					Add Custom Token
-				</button>
-			</div>
 		{:else}
-			<div class="tokens-grid">
-				{#each availableTokens as token (token.id)}
-					<div
-						class="token-card"
-						class:selected={selectedTokenIds.has(token.id)}
-						onclick={() => toggleToken(token.id)}
-						transition:slide={{ duration: 200 }}
-					>
-						<div class="token-card-content">
-							<div class="token-header">
-								<img src={getTokenLogo(token)} alt={token.symbol} class="token-logo" />
-								<div class="token-info">
-									<h4>{token.symbol}</h4>
-									<p class="token-name">{token.name}</p>
-								</div>
-							</div>
-
-							<div class="token-meta">
-								<span class="token-type">{token.type === 'native' ? 'Native' : 'ERC20'}</span>
-								{#if token.type === 'erc20'}
-									<a
-										href="{currentNetwork?.blockExplorer}/address/{token.address}"
-										target="_blank"
-										rel="noopener noreferrer"
-										class="explorer-link"
-										onclick={(e) => e.stopPropagation()}
-									>
-										<ExternalLink size={14} />
-									</a>
-								{/if}
-								{#if token.isCustom}
-									<button
-										class="remove-btn"
-										onclick={(e) => {
-											e.stopPropagation();
-											handleRemoveCustomToken(token.id);
-										}}
-										title="Remove custom token"
-									>
-										<Trash2 size={14} />
-									</button>
-								{/if}
-							</div>
-						</div>
-
-						<div class="token-checkmark">
-							{#if selectedTokenIds.has(token.id)}
-								<CheckCircle2 size={24} />
-							{:else}
-								<div class="checkmark-placeholder"></div>
-							{/if}
-						</div>
-					</div>
-				{/each}
-			</div>
+			<TokenSelector
+				tokens={availableTokens}
+				{selectedTokenIds}
+				onToggle={toggleToken}
+				onRemoveCustomToken={handleRemoveCustomToken}
+				blockExplorer={currentNetwork?.blockExplorer}
+				emptyMessage="No tokens available. Add a custom token to get started."
+			/>
 		{/if}
 	</div>
 {/if}
@@ -282,11 +215,7 @@
 		margin-bottom: var(--space-4);
 	}
 
-	/* Sidebar */
-	.step-sidebar {
-		height: 100%;
-	}
-
+	/* Sidebar Summary */
 	.summary {
 		margin-top: var(--space-4);
 		padding: var(--space-3);
@@ -441,7 +370,7 @@
 		background: var(--gray-600);
 	}
 
-	/* Empty State */
+	/* Empty State (for wallet not connected) */
 	.empty-state {
 		flex: 1;
 		display: flex;
@@ -466,166 +395,6 @@
 		max-width: 400px;
 	}
 
-	/* Tokens Grid */
-	.tokens-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-		gap: var(--space-4);
-		flex: 1;
-		overflow-y: auto;
-		padding: var(--space-2);
-	}
-
-	/* Token Card */
-	.token-card {
-		position: relative;
-		padding: var(--space-4);
-		background: var(--color-panel-1);
-		border: 2px solid var(--color-border);
-		border-radius: var(--radius-lg);
-		cursor: pointer;
-		transition: all 0.2s;
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-3);
-	}
-
-	:global([data-theme='dark']) .token-card {
-		background: var(--gray-800);
-		border-color: var(--gray-700);
-	}
-
-	.token-card:hover {
-		border-color: var(--color-primary);
-		transform: translateY(-2px);
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	}
-
-	:global([data-theme='dark']) .token-card:hover {
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-	}
-
-	.token-card.selected {
-		border-color: var(--color-primary);
-		background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(37, 99, 235, 0.05) 100%);
-		box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-	}
-
-	:global([data-theme='dark']) .token-card.selected {
-		background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%);
-	}
-
-	.token-card-content {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-3);
-	}
-
-	.token-header {
-		display: flex;
-		align-items: center;
-		gap: var(--space-3);
-	}
-
-	.token-logo {
-		width: 48px;
-		height: 48px;
-		border-radius: 50%;
-		object-fit: cover;
-		background: var(--gray-100);
-	}
-
-	:global([data-theme='dark']) .token-logo {
-		background: var(--gray-700);
-	}
-
-	.token-info {
-		flex: 1;
-		min-width: 0;
-	}
-
-	.token-name {
-		font-size: var(--text-sm);
-		color: var(--gray-500);
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
-
-	.token-meta {
-		display: flex;
-		align-items: center;
-		gap: var(--space-2);
-		flex-wrap: wrap;
-	}
-
-	.token-type {
-		display: inline-block;
-		padding: 2px 8px;
-		background: var(--gray-200);
-		color: var(--gray-700);
-		font-size: var(--text-xs);
-		font-weight: var(--font-medium);
-		border-radius: var(--radius-sm);
-	}
-
-	:global([data-theme='dark']) .token-type {
-		background: var(--gray-700);
-		color: var(--gray-300);
-	}
-
-	.explorer-link {
-		display: inline-flex;
-		align-items: center;
-		padding: 4px;
-		color: var(--color-primary);
-		background: var(--color-panel-1);
-		border-radius: var(--radius-sm);
-		transition: all 0.2s;
-		text-decoration: none;
-	}
-
-	.explorer-link:hover {
-		background: var(--color-primary);
-		color: white;
-	}
-
-	.remove-btn {
-		display: inline-flex;
-		align-items: center;
-		padding: 4px;
-		background: transparent;
-		border: none;
-		color: hsl(0, 70%, 50%);
-		cursor: pointer;
-		border-radius: var(--radius-sm);
-		transition: all 0.2s;
-	}
-
-	.remove-btn:hover {
-		background: hsla(0, 70%, 50%, 0.1);
-		color: hsl(0, 80%, 40%);
-	}
-
-	.token-checkmark {
-		position: absolute;
-		top: var(--space-3);
-		right: var(--space-3);
-		color: var(--color-primary);
-	}
-
-	.checkmark-placeholder {
-		width: 24px;
-		height: 24px;
-		border: 2px solid var(--gray-300);
-		border-radius: 50%;
-	}
-
-	:global([data-theme='dark']) .checkmark-placeholder {
-		border-color: var(--gray-600);
-	}
-
 	/* Responsive */
 	@media (max-width: 768px) {
 		.content-header {
@@ -635,10 +404,6 @@
 		.header-actions {
 			width: 100%;
 			justify-content: flex-start;
-		}
-
-		.tokens-grid {
-			grid-template-columns: 1fr;
 		}
 	}
 </style>

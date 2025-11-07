@@ -17,6 +17,7 @@
 	import { Loader2, Trash2, AlertCircle } from 'lucide-svelte';
 	import { fade, slide } from 'svelte/transition';
 	import type { StepManager } from '$lib/components/ui/step-indicator.svelte';
+	import StepSidebar from './components/step-sidebar.svelte';
 
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
@@ -292,10 +293,7 @@
 </script>
 
 {#if section === 'sidebar'}
-	<div class="step-sidebar">
-		<h3>Step 4: Import Wallets</h3>
-		<p>Add source addresses</p>
-
+	<StepSidebar stepNumber={4} title="Import Wallets" description="Add source addresses">
 		{#if walletCount > 0}
 			<div class="summary" transition:fade>
 				<h4>Imported Wallets</h4>
@@ -319,7 +317,7 @@
 		{:else}
 			<p class="empty-hint">No wallets imported</p>
 		{/if}
-	</div>
+	</StepSidebar>
 {:else if section === 'footer'}
 	<div class="step-footer">
 		<button class="btn-secondary" onclick={goBack}>← Back</button>

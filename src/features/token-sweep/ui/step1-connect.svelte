@@ -4,6 +4,7 @@
 	import WalletConnectButton from '@/lib/components/ui/wallet-connect-button.svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
 	import type { StepManager } from '@/lib/components/ui/step-indicator.svelte';
+	import StepSidebar from './components/step-sidebar.svelte';
 
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
@@ -39,10 +40,11 @@
 </script>
 
 {#if section === 'sidebar'}
-	<div class="step-sidebar">
-		<h3>Step 1: Connect Wallet</h3>
-		<p>Connect your Web3 wallet to start sweeping tokens</p>
-
+	<StepSidebar
+		stepNumber={1}
+		title="Connect Wallet"
+		description="Connect your Web3 wallet to start sweeping tokens"
+	>
 		<div class="feature-highlights">
 			<ul class="feature-list">
 				<li>
@@ -64,7 +66,7 @@
 			<span class="security-icon">🛡️</span>
 			<p>Your private keys never leave your wallet. All transactions are signed locally.</p>
 		</div>
-	</div>
+	</StepSidebar>
 {:else if section === 'footer'}
 	<div class="step-footer">
 		{#if isReadyToContinue}

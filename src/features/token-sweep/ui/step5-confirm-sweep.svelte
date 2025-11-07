@@ -19,6 +19,7 @@
 	import { fade, slide } from 'svelte/transition';
 	import type { Token, NativeToken, ERC20Token } from '../types/token';
 	import type { StepManager } from '$lib/components/ui/step-indicator.svelte';
+	import StepSidebar from './components/step-sidebar.svelte';
 
 	interface Props {
 		section: 'sidebar' | 'footer' | 'content';
@@ -246,10 +247,7 @@
 </script>
 
 {#if section === 'sidebar'}
-	<div class="step-sidebar">
-		<h3>Step 5: Confirm Sweep</h3>
-		<p>Review and execute</p>
-
+	<StepSidebar stepNumber={5} title="Confirm Sweep" description="Review and execute">
 		<div class="summary">
 			<h4>Summary</h4>
 			<div class="summary-item">
@@ -271,7 +269,7 @@
 				<strong>{batchCount}</strong>
 			</div>
 		</div>
-	</div>
+	</StepSidebar>
 {:else if section === 'footer'}
 	<div class="step-footer">
 		<button class="btn-secondary" onclick={goBack}>← Back</button>
