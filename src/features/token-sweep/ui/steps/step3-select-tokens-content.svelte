@@ -4,6 +4,7 @@
 	import TokenSelector from '$lib/components/ui/token-selector.svelte';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import EmptyState from '@/features/token-sweep/ui/components/empty-state.svelte';
+	import { SvelteSet } from 'svelte/reactivity';
 
 	const connectStore = useConnectStore();
 
@@ -19,13 +20,17 @@
 
 	function handleTokenAdded(tokenId: string) {
 		// Auto-select the newly added token
-		step3State.toggleToken(tokenId);
+		const newSelection = new SvelteSet(step3State.selectedTokenIds);
+		newSelection.add(tokenId);
+		step3State.selectedTokenIds = newSelection;
 	}
 
 	function handleRemoveCustomToken(tokenId: string, _chainId: number) {
 		// Remove from selection if it was selected
 		if (step3State.selectedTokenIds.has(tokenId)) {
-			step3State.toggleToken(tokenId);
+			const newSelection = new SvelteSet(step3State.selectedTokenIds);
+			newSelection.delete(tokenId);
+			step3State.selectedTokenIds = newSelection;
 		}
 	}
 </script>
