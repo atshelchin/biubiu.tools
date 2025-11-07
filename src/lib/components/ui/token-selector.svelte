@@ -16,8 +16,7 @@
 	}
 
 	interface Props {
-		network?: NetworkInfo; // Network info for auto-loading tokens
-		tokens?: Token[]; // Manual token list (overrides network)
+		network: NetworkInfo; // Network info (required)
 		selectedTokenIds?: SvelteSet<string>; // Bindable - external selection state
 		onSelectionChange?: (selectedIds: SvelteSet<string>) => void; // Callback when selection changes
 		onTokenAdded?: (tokenId: string) => void; // Callback when token is added
@@ -30,7 +29,6 @@
 
 	let {
 		network,
-		tokens = [],
 		selectedTokenIds = $bindable(new SvelteSet<string>()),
 		onSelectionChange,
 		onTokenAdded,
@@ -58,16 +56,10 @@
 		};
 	});
 
-	// Load tokens from network config or localStorage
+	// Load tokens from network config and localStorage
 	let displayTokens = $derived(() => {
 		// Watch refresh trigger to force re-evaluation
 		void refreshTrigger;
-
-		// If manual tokens provided, use them
-		if (tokens.length > 0) return tokens;
-
-		// Otherwise, need network info to auto-load tokens
-		if (!network) return [];
 
 		const allTokens: Token[] = [];
 
@@ -151,7 +143,7 @@
 		<p>{emptyMessage}</p>
 	</div>
 {:else}
-	{#if showBulkActions && displayTokens().length > 0}
+	{#if showBulkActions}
 		<div class="bulk-actions">
 			<button class="btn-secondary" onclick={handleSelectAll}>Select All</button>
 			<button class="btn-secondary" onclick={handleDeselectAll}>Deselect All</button>
@@ -162,13 +154,13 @@
 			<TokenCard
 				{token}
 				isSelected={selectedTokenIds.has(token.id)}
-				blockExplorer={network?.blockExplorer}
+				blockExplorer={network.blockExplorer}
 				onToggle={handleToggle}
 				onRemove={onRemoveCustomToken ? handleRemove : undefined}
 			/>
 		{/each}
 
-		{#if showAddButton && network}
+		{#if showAddButton}
 			<AddTokenButton chainId={network.chainId} rpcUrl={network.rpcUrl} {onTokenAdded} />
 		{/if}
 	</div>
