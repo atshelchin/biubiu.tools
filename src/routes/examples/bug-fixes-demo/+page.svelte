@@ -22,6 +22,8 @@
 
 	// Bug 4 测试：依赖字段验证
 	const dependencyForm = useFormState({
+		validateOnChange: false, // ⚠️ 禁用自动验证，避免无限循环
+		validateOnBlur: true, // 使用 blur 验证更安全
 		fields: {
 			minValue: {
 				defaultValue: 10,
@@ -29,13 +31,15 @@
 			},
 			maxValue: {
 				defaultValue: 20,
-				validator: (value, values) => {
-					const min = values.minValue as number;
-					const max = value as number;
-					if (max <= min) {
-						return 'Max must be greater than min';
+				validator: {
+					validate: (value, values) => {
+						const min = values.minValue as number;
+						const max = value as number;
+						if (max <= min) {
+							return 'Max must be greater than min';
+						}
+						return null;
 					}
-					return null;
 				},
 				dependencies: ['minValue']
 			}
