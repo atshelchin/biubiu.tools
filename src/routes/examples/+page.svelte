@@ -15,6 +15,13 @@
 
 	const examples: Example[] = [
 		{
+			title: 'P0 Bug 修复验证',
+			description: '⚠️ 验证5个致命Bug的修复：reset清理、依赖验证、路径设置、批量通知、并行验证',
+			path: `${base}/examples/p0-bugfixes`,
+			difficulty: 'advanced',
+			tags: ['致命Bug', 'P0修复', '质量保证', '回归测试']
+		},
+		{
 			title: 'Performance Test',
 			description: '性能测试：批量更新、路径优化、循环依赖、异步验证竞态条件',
 			path: `${base}/examples/performance-test`,
