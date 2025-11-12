@@ -86,21 +86,25 @@
 		fields: {
 			startDate: {
 				defaultValue: '2024-01-01',
-				validator: (value, values) => {
-					if (value >= (values.endDate as string)) {
-						return 'Start must be before end';
+				validator: {
+					validate: (value, values) => {
+						if (value >= (values.endDate as string)) {
+							return 'Start must be before end';
+						}
+						return null;
 					}
-					return null;
 				},
 				dependencies: ['endDate']
 			},
 			endDate: {
 				defaultValue: '2024-12-31',
-				validator: (value, values) => {
-					if (value <= (values.startDate as string)) {
-						return 'End must be after start';
+				validator: {
+					validate: (value, values) => {
+						if (value <= (values.startDate as string)) {
+							return 'End must be after start';
+						}
+						return null;
 					}
-					return null;
 				},
 				dependencies: ['startDate']
 			}
@@ -128,13 +132,15 @@
 			minPrice: { defaultValue: 100 },
 			maxPrice: {
 				defaultValue: 200,
-				validator: async (value, allValues) => {
-					// 模拟慢速验证
-					await new Promise((r) => setTimeout(r, 500));
-					if ((value as number) <= (allValues.minPrice as number)) {
-						return `Max (${value}) must > Min (${allValues.minPrice})`;
+				validator: {
+					validate: async (value, allValues) => {
+						// 模拟慢速验证
+						await new Promise((r) => setTimeout(r, 500));
+						if ((value as number) <= (allValues.minPrice as number)) {
+							return `Max (${value}) must > Min (${allValues.minPrice})`;
+						}
+						return null;
 					}
-					return null;
 				}
 			}
 		}

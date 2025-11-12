@@ -6,6 +6,7 @@
 import { produce, setAutoFreeze } from 'immer';
 import { PathUtils } from '../utils/PathUtils';
 import { debug } from '../utils/debug';
+import { safeStringify, safeParse } from '../utils/serialize';
 import type {
 	IFormStateManager,
 	IFieldState,
@@ -60,10 +61,7 @@ export class FormStateManager implements IFormStateManager {
 		} else {
 			debug.log('[FormStateManager.constructor] NO FIELDS TO REGISTER!');
 		}
-		debug.log(
-			'[FormStateManager.constructor] Final this.values:',
-			JSON.stringify(this.values, null, 2)
-		);
+		debug.log('[FormStateManager.constructor] Final this.values:', safeStringify(this.values, 2));
 	}
 
 	// ========== 字段注册 ==========
@@ -156,7 +154,7 @@ export class FormStateManager implements IFormStateManager {
 		} else {
 			// 复杂路径：使用 Immer 确保不可变性和深层嵌套的正确更新
 			debug.log('[setValue] BEFORE produce, path:', path);
-			debug.log('[setValue] this.values:', JSON.stringify(this.values, null, 2));
+			debug.log('[setValue] this.values:', safeStringify(this.values, 2));
 			newValues = produce(this.values, (draft) => {
 				debug.log('[setValue] IN produce draft keys:', Object.keys(draft));
 				PathUtils.setMutable(draft, path, transformedValue);
@@ -441,11 +439,7 @@ export class FormStateManager implements IFormStateManager {
 			if (!abortController.signal.aborted) {
 				// ⚠️ 保留错误详情，不要丢失原始错误信息
 				const error =
-					err instanceof Error
-						? err.message
-						: typeof err === 'string'
-							? err
-							: 'Validation error';
+					err instanceof Error ? err.message : typeof err === 'string' ? err : 'Validation error';
 				debug.error('[validateField] Validation threw error:', err);
 				this.fieldStates.set(path, {
 					...this.getFieldState(path),
@@ -602,16 +596,26 @@ export class FormStateManager implements IFormStateManager {
 	}
 
 	// ========== 持久化 ==========
+	/**
+	 * 序列化表单状态（支持 BigInt、Date、Map、Set 等特殊类型）
+	 */
 	serialize(): string {
-		return JSON.stringify({
+		return safeStringify({
 			values: this.values,
 			initialValues: this.initialValues,
 			fieldStates: Array.from(this.fieldStates.entries())
 		});
 	}
 
+	/**
+	 * 反序列化表单状态
+	 */
 	static deserialize(json: string, config: IFormConfig): FormStateManager {
-		const data = JSON.parse(json);
+		const data = safeParse<{
+			values: Record<string, FieldValue>;
+			initialValues: Record<string, FieldValue>;
+			fieldStates: [FieldPath, IFieldState][];
+		}>(json);
 		const manager = new FormStateManager(config);
 
 		manager.values = data.values;

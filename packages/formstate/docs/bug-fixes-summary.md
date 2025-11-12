@@ -31,10 +31,12 @@
 import { onDestroy } from 'svelte';
 import { useFormState } from '@biubiu/formstate';
 
-const form = useFormState({ /* config */ });
+const form = useFormState({
+	/* config */
+});
 
 onDestroy(() => {
-  form.destroy(); // 防止内存泄漏
+	form.destroy(); // 防止内存泄漏
 });
 ```
 
@@ -69,7 +71,7 @@ onDestroy(() => {
 ```svelte
 <!-- 动态字段 - 会自动注销 -->
 {#if showOptional}
-  <FormField name="optional" />
+	<FormField name="optional" />
 {/if}
 
 <!-- 持久字段 - 不会自动注销 -->
@@ -116,18 +118,18 @@ onDestroy(() => {
 ```typescript
 // remove 操作
 function remapAfterRemove(removedIndex: number) {
-  // items[0] -> items[0] (不变)
-  // items[1] -> 删除
-  // items[2] -> items[1]
-  // items[3] -> items[2]
+	// items[0] -> items[0] (不变)
+	// items[1] -> 删除
+	// items[2] -> items[1]
+	// items[3] -> items[2]
 }
 
 // move 操作
 function remapAfterMove(from: number, to: number) {
-  // 示例: move(1, 3)
-  // items[1] -> items[3]
-  // items[2] -> items[1]
-  // items[3] -> items[2]
+	// 示例: move(1, 3)
+	// items[1] -> items[3]
+	// items[2] -> items[1]
+	// items[3] -> items[2]
 }
 ```
 
@@ -141,17 +143,17 @@ function remapAfterMove(from: number, to: number) {
 
 ```typescript
 const form = useFormState({
-  fields: {
-    minValue: { defaultValue: 10 },
-    maxValue: {
-      defaultValue: 20,
-      validator: (value, values) => {
-        if (value <= values.minValue) return 'Max must > min';
-        return null;
-      },
-      dependencies: ['minValue']
-    }
-  }
+	fields: {
+		minValue: { defaultValue: 10 },
+		maxValue: {
+			defaultValue: 20,
+			validator: (value, values) => {
+				if (value <= values.minValue) return 'Max must > min';
+				return null;
+			},
+			dependencies: ['minValue']
+		}
+	}
 });
 
 // 用户修改 minValue 为 25
@@ -281,7 +283,7 @@ bun run dev
 
    ```typescript
    {
-     persistent: true // 不会在组件销毁时自动注销
+   	persistent: true; // 不会在组件销毁时自动注销
    }
    ```
 

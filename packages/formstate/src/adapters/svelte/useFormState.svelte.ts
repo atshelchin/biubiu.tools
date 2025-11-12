@@ -7,6 +7,7 @@ import { FormStateManager } from '../../core/FormStateManager';
 import type { IFormConfig, IFieldConfig, FieldPath, FieldValue } from '../../core/interfaces';
 import { PathUtils } from '../../utils/PathUtils';
 import { debug } from '../../utils/debug';
+import { safeStringify } from '../../utils/serialize';
 
 let instanceCounter = 0;
 
@@ -20,10 +21,7 @@ export function useFormState(config: IFormConfig = {}) {
 
 	// 直接使用 $state 维护响应式状态副本
 	const initialValues = manager.getValues() as Record<string, FieldValue>;
-	debug.log(
-		`[useFormState #${instanceId}] Initial values:`,
-		JSON.stringify(initialValues, null, 2)
-	);
+	debug.log(`[useFormState #${instanceId}] Initial values:`, safeStringify(initialValues, 2));
 
 	// 创建一个响应式容器对象，而不是直接暴露值
 	const state = $state({
@@ -37,7 +35,7 @@ export function useFormState(config: IFormConfig = {}) {
 
 	debug.log(
 		`[useFormState #${instanceId}] state.values after creation:`,
-		JSON.stringify(state.values, null, 2)
+		safeStringify(state.values, 2)
 	);
 
 	// 订阅管理器变化，直接更新 $state
@@ -47,10 +45,7 @@ export function useFormState(config: IFormConfig = {}) {
 			// 更新 state 对象的属性
 			const newValues = manager.getValues() as Record<string, FieldValue>;
 			debug.log(`[useFormState #${instanceId}] Field changed:`, path);
-			debug.log(
-				`[useFormState #${instanceId}] New values (JSON):`,
-				JSON.stringify(newValues, null, 2)
-			);
+			debug.log(`[useFormState #${instanceId}] New values (JSON):`, safeStringify(newValues, 2));
 			state.values = newValues;
 			state.isDirty = manager.isDirty();
 			state.isValid = manager.isValid();

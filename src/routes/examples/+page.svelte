@@ -22,6 +22,13 @@
 			tags: ['性能', '优化', 'Bug修复', '测试']
 		},
 		{
+			title: 'BigInt 序列化',
+			description: '安全序列化：支持 BigInt、Date、Map、Set 等特殊类型的 JSON 序列化',
+			path: `${base}/examples/bigint-serialization`,
+			difficulty: 'intermediate',
+			tags: ['序列化', 'BigInt', 'Web3', '类型安全']
+		},
+		{
 			title: 'Bug Fixes Demo',
 			description: '验证关键bug修复：FieldArray路径重映射、依赖字段onChange、动态字段注销',
 			path: `${base}/examples/bug-fixes-demo`,
