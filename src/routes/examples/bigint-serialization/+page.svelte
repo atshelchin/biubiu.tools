@@ -84,7 +84,7 @@
 			id: 123n,
 			name: 'Alice',
 			balance: 1000000000000000000n, // 1 ETH in wei
-			createdAt: new Date(),
+			createdAt: new Date('2024-01-01'),
 			tags: new Set(['verified', 'premium']),
 			metadata: new Map([
 				['country', 'US'],

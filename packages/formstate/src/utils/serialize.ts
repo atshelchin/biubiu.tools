@@ -9,35 +9,39 @@
 function createReplacer() {
 	const seen = new WeakSet();
 
-	return function replacer(key: string, value: unknown): unknown {
+	return function replacer(this: unknown, key: string, value: unknown): unknown {
+		// ⚠️ 关键：使用 this[key] 获取原始值，因为 JSON.stringify 会自动转换某些类型
+		// 例如 Date 会被自动调用 .toJSON() 转成字符串
+		const originalValue = (this as Record<string, unknown>)[key];
+
 		// 处理 BigInt
-		if (typeof value === 'bigint') {
-			return { __type: 'bigint', value: value.toString() };
+		if (typeof originalValue === 'bigint') {
+			return { __type: 'bigint', value: originalValue.toString() };
 		}
 
-		// 处理 Date
-		if (value instanceof Date) {
-			return { __type: 'date', value: value.toISOString() };
+		// 处理 Date（必须检查原始值，因为 value 已经是字符串了）
+		if (originalValue instanceof Date) {
+			return { __type: 'date', value: originalValue.toISOString() };
 		}
 
 		// 处理 undefined
-		if (value === undefined) {
+		if (originalValue === undefined) {
 			return { __type: 'undefined' };
 		}
 
 		// 处理 Map
-		if (value instanceof Map) {
+		if (originalValue instanceof Map) {
 			return {
 				__type: 'map',
-				value: Array.from(value.entries())
+				value: Array.from(originalValue.entries())
 			};
 		}
 
 		// 处理 Set
-		if (value instanceof Set) {
+		if (originalValue instanceof Set) {
 			return {
 				__type: 'set',
-				value: Array.from(value.values())
+				value: Array.from(originalValue.values())
 			};
 		}
 
