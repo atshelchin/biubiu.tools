@@ -231,12 +231,11 @@ export class FormStateManager implements IFormStateManager {
 				this.validateDependentFields(path);
 			});
 
-			// 触发一次观察者通知（使用第一个变化的字段）
+			// ✅ Bug 11 修复：通知全局变更，让 UI 一次性刷新所有字段
 			if (this.batchedChanges.size > 0) {
-				const firstPath = Array.from(this.batchedChanges)[0];
-				const value = this.getValue(firstPath);
 				this.observers.forEach((observer) => {
-					observer.onFieldChange?.(firstPath, value);
+					// 使用空字符串表示批量变更（多个字段）
+					observer.onFieldChange?.('', this.values);
 				});
 			}
 		}
@@ -299,6 +298,9 @@ export class FormStateManager implements IFormStateManager {
 	}
 
 	setValues(values: Record<string, FieldValue>, shouldValidate = false): void {
+		// 记录哪些字段的值改变了（用于触发依赖验证）
+		const changedPaths: FieldPath[] = [];
+
 		// 使用 Immer 确保深层不可变性，与 setValue 保持一致
 		this.values = produce({}, (draft) => {
 			Object.assign(draft, values);
@@ -308,6 +310,11 @@ export class FormStateManager implements IFormStateManager {
 		this.fieldStates.forEach((state, path) => {
 			const value = PathUtils.get(values, path);
 			const initialValue = PathUtils.get(this.initialValues, path);
+
+			// 检查值是否改变
+			if (value !== state.value) {
+				changedPaths.push(path);
+			}
 
 			this.fieldStates.set(path, {
 				...state,
@@ -323,6 +330,11 @@ export class FormStateManager implements IFormStateManager {
 
 		if (shouldValidate) {
 			this.validateForm();
+
+			// ✅ Bug 8 修复：触发依赖字段验证
+			changedPaths.forEach((path) => {
+				this.validateDependentFields(path);
+			});
 		}
 	}
 
@@ -550,11 +562,12 @@ export class FormStateManager implements IFormStateManager {
 	// 获取变更的值（相对于初始值）
 	getDirtyValues(): Partial<Record<string, FieldValue>> {
 		const dirtyFields = this.getDirtyFields();
-		const dirtyValues: Record<string, FieldValue> = {};
+		let dirtyValues: Record<string, FieldValue> = {};
 
 		dirtyFields.forEach((path) => {
 			const value = this.getValue(path);
-			PathUtils.set(dirtyValues, path, value);
+			// ✅ Bug 10 修复：使用 PathUtils.set 的返回值（不可变操作）
+			dirtyValues = PathUtils.set(dirtyValues, path, value) as Record<string, FieldValue>;
 		});
 
 		return dirtyValues;
