@@ -116,7 +116,7 @@
 
 			// 反序列化
 			const restored = safeParse(complexSerialized);
-			complexDeserialized = JSON.stringify(restored, null, 2);
+			complexDeserialized = safeStringify(restored, 2);
 
 			// 验证
 			const checks = [
