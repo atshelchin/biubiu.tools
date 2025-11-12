@@ -7,3 +7,7 @@ bun.lockb
 
 # Miscellaneous
 /static/
+
+# Documentation with pseudo-code that Prettier can't parse
+packages/formstate/docs/Quick-Maintainer-Guide.md
+packages/formstate/docs/ultra-deep-analysis-v2.md
