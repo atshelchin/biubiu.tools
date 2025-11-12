@@ -35,18 +35,28 @@
 		throw new Error('Field must be used within a Form component');
 	}
 
+	// 标记字段是否由此组件注册（用于决定是否注销）
+	let registeredByComponent = false;
+
 	// 注册字段（只在字段尚未注册时注册）
 	onMount(() => {
 		// 检查字段是否已经注册（通过 useFormState 配置）
-		const existingState = formState._manager['fieldConfigs'].get(name);
-		if (!existingState) {
+		const existingConfig = formState._manager['fieldConfigs'].get(name);
+		if (!existingConfig) {
 			// 字段未注册，使用传入的 config 注册
 			formState.registerField(name, config);
+			registeredByComponent = true;
 		}
 	});
 
 	onDestroy(() => {
-		// 不自动注销字段，保留配置
+		// 只有动态字段（非 persistent）且由此组件注册的才自动注销
+		if (registeredByComponent) {
+			const fieldConfig = formState._manager['fieldConfigs'].get(name);
+			if (!fieldConfig?.persistent) {
+				formState.unregisterField(name);
+			}
+		}
 	});
 
 	// 响应式字段状态

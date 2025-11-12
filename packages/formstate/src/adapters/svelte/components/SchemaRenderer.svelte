@@ -121,7 +121,7 @@
 					{#snippet children({ value, onInput, onBlur })}
 						{#if field.type === 'textarea'}
 							<textarea
-								{value}
+								value={String(value ?? '')}
 								placeholder={field.placeholder}
 								disabled={field.disabled}
 								readonly={field.readOnly}
@@ -130,7 +130,7 @@
 							></textarea>
 						{:else if field.type === 'select'}
 							<select
-								{value}
+								value={String(value ?? '')}
 								disabled={field.disabled}
 								onchange={(e) => onInput(e.currentTarget.value)}
 								onblur={onBlur}
@@ -147,7 +147,7 @@
 						{:else if field.type === 'checkbox'}
 							<input
 								type="checkbox"
-								checked={value}
+								checked={Boolean(value)}
 								disabled={field.disabled}
 								onchange={(e) => onInput(e.currentTarget.checked)}
 								onblur={onBlur}

@@ -15,6 +15,13 @@
 
 	const examples: Example[] = [
 		{
+			title: 'Bug Fixes Demo',
+			description: '验证关键bug修复：FieldArray路径重映射、依赖字段onChange、动态字段注销',
+			path: `${base}/examples/bug-fixes-demo`,
+			difficulty: 'advanced',
+			tags: ['Bug修复', '测试', 'FieldArray', '内存管理']
+		},
+		{
 			title: '基础表单',
 			description: '简单的登录表单，演示表单字段、验证和提交',
 			path: `${base}/examples/basic-form`,
@@ -27,6 +34,41 @@
 			path: `${base}/examples/dynamic-arrays`,
 			difficulty: 'intermediate',
 			tags: ['FieldArray', '动态字段', '拖拽排序']
+		},
+		{
+			title: '字段依赖',
+			description: '密码确认、折扣码验证等依赖其他字段的验证场景',
+			path: `${base}/examples/field-dependencies`,
+			difficulty: 'intermediate',
+			tags: ['依赖', '级联验证', 'dependencies']
+		},
+		{
+			title: '输入完成验证',
+			description: '对比 validateOnComplete vs onChange vs onBlur 三种验证模式',
+			path: `${base}/examples/complete-validation`,
+			difficulty: 'intermediate',
+			tags: ['验证时机', '防抖', 'UX']
+		},
+		{
+			title: '表单持久化',
+			description: '使用 localStorage 实现自动保存、恢复、导出/导入',
+			path: `${base}/examples/form-persistence`,
+			difficulty: 'intermediate',
+			tags: ['localStorage', 'serialize', '自动保存']
+		},
+		{
+			title: '值转换器',
+			description: '使用内置和自定义 Transformers 格式化用户输入',
+			path: `${base}/examples/transformers`,
+			difficulty: 'beginner',
+			tags: ['格式化', '转换器', 'Transformers']
+		},
+		{
+			title: '多步表单',
+			description: '分步验证、进度跟踪、步骤导航的注册表单',
+			path: `${base}/examples/multi-step-form`,
+			difficulty: 'advanced',
+			tags: ['多步骤', 'validateFields', '向导']
 		},
 		{
 			title: 'Solidity ABI 表单',

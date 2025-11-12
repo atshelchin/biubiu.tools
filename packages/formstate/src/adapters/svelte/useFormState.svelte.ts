@@ -41,7 +41,8 @@ export function useFormState(config: IFormConfig = {}) {
 	);
 
 	// 订阅管理器变化，直接更新 $state
-	manager.subscribe({
+	// ⚠️ CRITICAL: 保存 unsubscribe 函数以防止内存泄漏
+	const unsubscribe = manager.subscribe({
 		onFieldChange: (path, value) => {
 			// 更新 state 对象的属性
 			const newValues = manager.getValues() as Record<string, FieldValue>;
@@ -116,6 +117,12 @@ export function useFormState(config: IFormConfig = {}) {
 		setInitialValues: manager.setInitialValues.bind(manager),
 		getDirtyFields: manager.getDirtyFields.bind(manager),
 		getDirtyValues: manager.getDirtyValues.bind(manager),
+
+		// 资源清理（防止内存泄漏）
+		destroy: () => {
+			debug.log(`[useFormState #${instanceId}] Destroying form state`);
+			unsubscribe();
+		},
 
 		// 原始 manager 暴露（高级用法）
 		_manager: manager

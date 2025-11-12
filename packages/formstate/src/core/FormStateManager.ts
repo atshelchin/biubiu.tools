@@ -419,6 +419,13 @@ export class FormStateManager implements IFormStateManager {
 		this.fieldConfigs.forEach((config, path) => {
 			if (config.dependencies?.includes(changedPath)) {
 				this.validateField(path);
+
+				// ⚠️ 修复 Bug 4: 触发依赖字段的 onFieldChange 事件
+				// 即使值没变，验证状态可能已经改变，需要通知 UI 更新
+				const value = this.getValue(path);
+				this.observers.forEach((observer) => {
+					observer.onFieldChange?.(path, value);
+				});
 			}
 		});
 	}

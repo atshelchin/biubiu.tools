@@ -73,7 +73,7 @@
 				<label class="checkbox-label">
 					<input
 						type="checkbox"
-						checked={value}
+						checked={Boolean(value)}
 						onchange={(e) => onInput(e.currentTarget.checked)}
 					/>
 					Remember me

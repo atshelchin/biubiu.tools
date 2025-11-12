@@ -6,10 +6,11 @@
 const isDebugEnabled = (): boolean => {
 	// Check environment variable (for Node.js/SSR)
 	try {
-		// @ts-ignore - process might not be defined in browser
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		const globalWithProcess = globalThis as any;
 		if (
-			typeof globalThis.process !== 'undefined' &&
-			globalThis.process?.env?.FORMSTATE_DEBUG === 'true'
+			typeof globalWithProcess.process !== 'undefined' &&
+			globalWithProcess.process?.env?.FORMSTATE_DEBUG === 'true'
 		) {
 			return true;
 		}

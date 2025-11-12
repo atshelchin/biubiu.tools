@@ -3,7 +3,13 @@
 	 * 输入完成验证示例 - Validate on Complete
 	 * 展示 validateOnComplete 功能：智能检测输入完成，自动触发验证
 	 */
-	import { useFormState, Form, FormField, Validators, createCustomValidator } from '@packages/formstate/src';
+	import {
+		useFormState,
+		Form,
+		FormField,
+		Validators,
+		createCustomValidator
+	} from '@packages/formstate/src';
 	import type { FormState } from '@packages/formstate/src';
 
 	// 模拟异步验证：检查用户名是否可用
@@ -11,7 +17,7 @@
 		const username = value as string;
 
 		// 模拟 API 调用延迟
-		await new Promise(resolve => setTimeout(resolve, 800));
+		await new Promise((resolve) => setTimeout(resolve, 800));
 
 		// 模拟已占用的用户名
 		const takenUsernames = ['admin', 'user', 'test', 'demo'];
@@ -22,7 +28,7 @@
 	const emailAvailableValidator = createCustomValidator(async (value: unknown) => {
 		const email = value as string;
 
-		await new Promise(resolve => setTimeout(resolve, 1000));
+		await new Promise((resolve) => setTimeout(resolve, 1000));
 
 		const registeredEmails = ['test@example.com', 'admin@example.com'];
 		return !registeredEmails.includes(email.toLowerCase());
@@ -167,7 +173,8 @@
 	<div class="header">
 		<h1>输入完成验证示例</h1>
 		<p class="description">
-			对比三种验证模式：validateOnComplete (智能) vs validateOnChange (频繁) vs validateOnBlur (延迟)
+			对比三种验证模式：validateOnComplete (智能) vs validateOnChange (频繁) vs validateOnBlur
+			(延迟)
 		</p>
 	</div>
 
@@ -178,9 +185,7 @@
 				<h2>✨ validateOnComplete</h2>
 				<span class="badge">推荐</span>
 			</div>
-			<p class="card-desc">
-				智能检测输入完成，用户体验最佳
-			</p>
+			<p class="card-desc">智能检测输入完成，用户体验最佳</p>
 
 			<div class="stats">
 				<span class="stat-label">验证次数:</span>
@@ -193,7 +198,7 @@
 						<div class="input-wrapper">
 							<input
 								type="text"
-								value={value}
+								{value}
 								oninput={(e) => onInput(e.currentTarget.value)}
 								onblur={onBlur}
 								placeholder="至少3位"
@@ -202,9 +207,7 @@
 								<span class="spinner"></span>
 							{/if}
 						</div>
-						<div class="hint">
-							💡 输入3个字符后，停止500ms自动验证
-						</div>
+						<div class="hint">💡 输入3个字符后，停止500ms自动验证</div>
 					{/snippet}
 				</FormField>
 
@@ -213,7 +216,7 @@
 						<div class="input-wrapper">
 							<input
 								type="email"
-								value={value}
+								{value}
 								oninput={(e) => onInput(e.currentTarget.value)}
 								onblur={onBlur}
 								placeholder="your@email.com"
@@ -222,9 +225,7 @@
 								<span class="spinner"></span>
 							{/if}
 						</div>
-						<div class="hint">
-							💡 输入@和.后，停止600ms自动验证
-						</div>
+						<div class="hint">💡 输入@和.后，停止600ms自动验证</div>
 					{/snippet}
 				</FormField>
 
@@ -232,21 +233,17 @@
 					{#snippet children({ value, onInput, onBlur })}
 						<input
 							type="tel"
-							value={value}
+							{value}
 							oninput={(e) => onInput(e.currentTarget.value)}
 							onblur={onBlur}
 							placeholder="11位手机号"
 							maxlength="11"
 						/>
-						<div class="hint">
-							💡 输入满11位后，停止200ms自动验证
-						</div>
+						<div class="hint">💡 输入满11位后，停止200ms自动验证</div>
 					{/snippet}
 				</FormField>
 
-				<button type="submit" disabled={!form1.isValid}>
-					提交
-				</button>
+				<button type="submit" disabled={!form1.isValid}> 提交 </button>
 			</Form>
 
 			<div class="pros-cons">
@@ -267,9 +264,7 @@
 			<div class="card-header">
 				<h2>⚡ validateOnChange</h2>
 			</div>
-			<p class="card-desc">
-				每次输入都验证，可能过于频繁
-			</p>
+			<p class="card-desc">每次输入都验证，可能过于频繁</p>
 
 			<div class="stats warning">
 				<span class="stat-label">验证次数:</span>
@@ -281,14 +276,12 @@
 					{#snippet children({ value, onInput, onBlur })}
 						<input
 							type="text"
-							value={value}
+							{value}
 							oninput={(e) => onInput(e.currentTarget.value)}
 							onblur={onBlur}
 							placeholder="至少3位"
 						/>
-						<div class="hint warning">
-							⚠️ 每次按键都验证，可能干扰用户
-						</div>
+						<div class="hint warning">⚠️ 每次按键都验证，可能干扰用户</div>
 					{/snippet}
 				</FormField>
 
@@ -296,14 +289,12 @@
 					{#snippet children({ value, onInput, onBlur })}
 						<input
 							type="email"
-							value={value}
+							{value}
 							oninput={(e) => onInput(e.currentTarget.value)}
 							onblur={onBlur}
 							placeholder="your@email.com"
 						/>
-						<div class="hint warning">
-							⚠️ 输入"t"就提示错误
-						</div>
+						<div class="hint warning">⚠️ 输入"t"就提示错误</div>
 					{/snippet}
 				</FormField>
 
@@ -311,21 +302,17 @@
 					{#snippet children({ value, onInput, onBlur })}
 						<input
 							type="tel"
-							value={value}
+							{value}
 							oninput={(e) => onInput(e.currentTarget.value)}
 							onblur={onBlur}
 							placeholder="11位手机号"
 							maxlength="11"
 						/>
-						<div class="hint warning">
-							⚠️ 输入"1"就提示格式错误
-						</div>
+						<div class="hint warning">⚠️ 输入"1"就提示格式错误</div>
 					{/snippet}
 				</FormField>
 
-				<button type="submit" disabled={!form2.isValid}>
-					提交
-				</button>
+				<button type="submit" disabled={!form2.isValid}> 提交 </button>
 			</Form>
 
 			<div class="pros-cons">
@@ -345,9 +332,7 @@
 			<div class="card-header">
 				<h2>👀 validateOnBlur</h2>
 			</div>
-			<p class="card-desc">
-				失去焦点时验证，反馈较慢
-			</p>
+			<p class="card-desc">失去焦点时验证，反馈较慢</p>
 
 			<div class="stats">
 				<span class="stat-label">验证次数:</span>
@@ -359,14 +344,12 @@
 					{#snippet children({ value, onInput, onBlur })}
 						<input
 							type="text"
-							value={value}
+							{value}
 							oninput={(e) => onInput(e.currentTarget.value)}
 							onblur={onBlur}
 							placeholder="至少3位"
 						/>
-						<div class="hint info">
-							ℹ️ 点击其他地方才验证
-						</div>
+						<div class="hint info">ℹ️ 点击其他地方才验证</div>
 					{/snippet}
 				</FormField>
 
@@ -374,14 +357,12 @@
 					{#snippet children({ value, onInput, onBlur })}
 						<input
 							type="email"
-							value={value}
+							{value}
 							oninput={(e) => onInput(e.currentTarget.value)}
 							onblur={onBlur}
 							placeholder="your@email.com"
 						/>
-						<div class="hint info">
-							ℹ️ 失去焦点才验证
-						</div>
+						<div class="hint info">ℹ️ 失去焦点才验证</div>
 					{/snippet}
 				</FormField>
 
@@ -389,21 +370,17 @@
 					{#snippet children({ value, onInput, onBlur })}
 						<input
 							type="tel"
-							value={value}
+							{value}
 							oninput={(e) => onInput(e.currentTarget.value)}
 							onblur={onBlur}
 							placeholder="11位手机号"
 							maxlength="11"
 						/>
-						<div class="hint info">
-							ℹ️ Blur后才验证
-						</div>
+						<div class="hint info">ℹ️ Blur后才验证</div>
 					{/snippet}
 				</FormField>
 
-				<button type="submit" disabled={!form3.isValid}>
-					提交
-				</button>
+				<button type="submit" disabled={!form3.isValid}> 提交 </button>
 			</Form>
 
 			<div class="pros-cons">
@@ -425,7 +402,8 @@
 
 		<div class="code-example">
 			<h3>validateOnComplete 配置</h3>
-			<pre><code>{`const form = useFormState({
+			<pre><code
+					>{`const form = useFormState({
   fields: {
     username: {
       validator: Validators.compose(
@@ -463,7 +441,8 @@
       debounceMs: 200
     }
   }
-});`}</code></pre>
+});`}</code
+				></pre>
 		</div>
 
 		<div class="default-conditions">
@@ -511,7 +490,7 @@
 	.form-card {
 		background: white;
 		border-radius: 8px;
-		box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 		overflow: hidden;
 	}
 
@@ -601,8 +580,12 @@
 	}
 
 	@keyframes spin {
-		0% { transform: translateY(-50%) rotate(0deg); }
-		100% { transform: translateY(-50%) rotate(360deg); }
+		0% {
+			transform: translateY(-50%) rotate(0deg);
+		}
+		100% {
+			transform: translateY(-50%) rotate(360deg);
+		}
 	}
 
 	.hint {
@@ -645,7 +628,7 @@
 		margin-bottom: 0.25rem;
 	}
 
-	button[type="submit"] {
+	button[type='submit'] {
 		padding: 0.75rem 1.5rem;
 		background: #2196f3;
 		color: white;
@@ -656,11 +639,11 @@
 		transition: background 0.2s;
 	}
 
-	button[type="submit"]:hover:not(:disabled) {
+	button[type='submit']:hover:not(:disabled) {
 		background: #1976d2;
 	}
 
-	button[type="submit"]:disabled {
+	button[type='submit']:disabled {
 		background: #ccc;
 		cursor: not-allowed;
 	}
@@ -669,7 +652,7 @@
 		background: white;
 		padding: 2rem;
 		border-radius: 8px;
-		box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 	}
 
 	.code-section h2 {

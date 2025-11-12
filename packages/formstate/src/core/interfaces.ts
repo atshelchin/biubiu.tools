@@ -51,6 +51,8 @@ export interface IFieldConfig<T = FieldValue> {
 	validateOnComplete?: boolean; // 输入完成时验证
 	completeCondition?: (value: T) => boolean; // 自定义输入完成条件
 	debounceMs?: number; // 防抖延迟（默认 300ms）
+	// 字段生命周期配置
+	persistent?: boolean; // 是否持久字段（默认 false，动态字段会在组件销毁时自动注销）
 }
 
 // ========== 表单配置接口 ==========

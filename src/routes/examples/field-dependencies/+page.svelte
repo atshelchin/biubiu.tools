@@ -3,55 +3,67 @@
 	 * 字段依赖示例 - Field Dependencies
 	 * 展示如何在一个字段变化时自动重新验证依赖它的其他字段
 	 */
-	import { useFormState, Form, FormField, Validators, createValidator } from '@packages/formstate/src';
+	import {
+		useFormState,
+		Form,
+		FormField,
+		Validators,
+		createValidator
+	} from '@packages/formstate/src';
 	import type { FormState } from '@packages/formstate/src';
 
 	// 自定义验证器：密码确认
-	const passwordMatchValidator = createValidator((value: unknown, allValues: Record<string, unknown>) => {
-		if (value !== allValues.password) {
-			return '两次密码不一致';
-		}
-		return null;
-	});
-
-	// 自定义验证器：折扣码（依赖订单金额）
-	const discountCodeValidator = createValidator(async (value: unknown, allValues: Record<string, unknown>) => {
-		const code = value as string;
-		const total = allValues.orderTotal as number;
-
-		// 订单金额小于100时不验证折扣码
-		if (!total || total < 100) {
+	const passwordMatchValidator = createValidator(
+		(value: unknown, allValues: Record<string, unknown>) => {
+			if (value !== allValues.password) {
+				return '两次密码不一致';
+			}
 			return null;
 		}
+	);
 
-		// 模拟异步验证
-		await new Promise(resolve => setTimeout(resolve, 500));
+	// 自定义验证器：折扣码（依赖订单金额）
+	const discountCodeValidator = createValidator(
+		async (value: unknown, allValues: Record<string, unknown>) => {
+			const code = value as string;
+			const total = allValues.orderTotal as number;
 
-		// 验证折扣码格式和有效性
-		if (!code || code.trim() === '') {
-			return '订单金额超过100元时，必须输入折扣码';
+			// 订单金额小于100时不验证折扣码
+			if (!total || total < 100) {
+				return null;
+			}
+
+			// 模拟异步验证
+			await new Promise((resolve) => setTimeout(resolve, 500));
+
+			// 验证折扣码格式和有效性
+			if (!code || code.trim() === '') {
+				return '订单金额超过100元时，必须输入折扣码';
+			}
+
+			if (code.length < 6) {
+				return '折扣码至少6位';
+			}
+
+			// 模拟检查折扣码是否有效
+			const validCodes = ['SAVE10', 'SAVE20', 'WELCOME'];
+			if (!validCodes.includes(code.toUpperCase())) {
+				return `无效的折扣码。有效代码: ${validCodes.join(', ')}`;
+			}
+
+			return null;
 		}
-
-		if (code.length < 6) {
-			return '折扣码至少6位';
-		}
-
-		// 模拟检查折扣码是否有效
-		const validCodes = ['SAVE10', 'SAVE20', 'WELCOME'];
-		if (!validCodes.includes(code.toUpperCase())) {
-			return `无效的折扣码。有效代码: ${validCodes.join(', ')}`;
-		}
-
-		return null;
-	});
+	);
 
 	// 自定义验证器：确认电子邮件（依赖邮箱）
-	const emailMatchValidator = createValidator((value: unknown, allValues: Record<string, unknown>) => {
-		if (value !== allValues.email) {
-			return '两次邮箱地址不一致';
+	const emailMatchValidator = createValidator(
+		(value: unknown, allValues: Record<string, unknown>) => {
+			if (value !== allValues.email) {
+				return '两次邮箱地址不一致';
+			}
+			return null;
 		}
-		return null;
-	});
+	);
 
 	// 创建表单
 	const form: FormState = useFormState({
@@ -65,10 +77,7 @@
 			},
 			confirmEmail: {
 				defaultValue: '',
-				validator: Validators.compose(
-					Validators.required('请确认邮箱'),
-					emailMatchValidator
-				),
+				validator: Validators.compose(Validators.required('请确认邮箱'), emailMatchValidator),
 				// 当 email 字段变化时，重新验证 confirmEmail
 				dependencies: ['email']
 			},
@@ -81,10 +90,7 @@
 			},
 			confirmPassword: {
 				defaultValue: '',
-				validator: Validators.compose(
-					Validators.required('请确认密码'),
-					passwordMatchValidator
-				),
+				validator: Validators.compose(Validators.required('请确认密码'), passwordMatchValidator),
 				// 当 password 字段变化时，重新验证 confirmPassword
 				dependencies: ['password']
 			},
@@ -104,9 +110,9 @@
 	});
 
 	// 派生计算
-	const orderTotal = $derived(form.getValue('orderTotal') as number || 0);
+	const orderTotal = $derived((form.getValue('orderTotal') as number) || 0);
 	const discountRequired = $derived(orderTotal >= 100);
-	const discountCode = $derived(form.getValue('discountCode') as string || '');
+	const discountCode = $derived((form.getValue('discountCode') as string) || '');
 
 	// 计算折扣金额
 	const discountAmount = $derived(() => {
@@ -148,7 +154,7 @@
 						{#snippet children({ value, onInput, onBlur })}
 							<input
 								type="email"
-								value={value}
+								{value}
 								oninput={(e) => onInput(e.currentTarget.value)}
 								onblur={onBlur}
 								placeholder="your@email.com"
@@ -160,7 +166,7 @@
 						{#snippet children({ value, onInput, onBlur })}
 							<input
 								type="email"
-								value={value}
+								{value}
 								oninput={(e) => onInput(e.currentTarget.value)}
 								onblur={onBlur}
 								placeholder="再次输入邮箱"
@@ -180,7 +186,7 @@
 						{#snippet children({ value, onInput, onBlur })}
 							<input
 								type="password"
-								value={value}
+								{value}
 								oninput={(e) => onInput(e.currentTarget.value)}
 								onblur={onBlur}
 								placeholder="至少8位"
@@ -192,7 +198,7 @@
 						{#snippet children({ value, onInput, onBlur })}
 							<input
 								type="password"
-								value={value}
+								{value}
 								oninput={(e) => onInput(e.currentTarget.value)}
 								onblur={onBlur}
 								placeholder="再次输入密码"
@@ -212,16 +218,14 @@
 						{#snippet children({ value, onInput, onBlur })}
 							<input
 								type="number"
-								value={value}
+								{value}
 								oninput={(e) => onInput(parseFloat(e.currentTarget.value) || 0)}
 								onblur={onBlur}
 								min="0"
 								step="0.01"
 								placeholder="0.00"
 							/>
-							<div class="field-hint">
-								💡 订单金额 ≥ ¥100 时，必须输入折扣码
-							</div>
+							<div class="field-hint">💡 订单金额 ≥ ¥100 时，必须输入折扣码</div>
 						{/snippet}
 					</FormField>
 
@@ -230,7 +234,7 @@
 							<div class="discount-input">
 								<input
 									type="text"
-									value={value}
+									{value}
 									oninput={(e) => onInput(e.currentTarget.value)}
 									onblur={onBlur}
 									placeholder={discountRequired ? '请输入折扣码' : '可选'}
@@ -241,7 +245,7 @@
 								{/if}
 							</div>
 							<div class="field-hint">
-								<strong>依赖关系:</strong> 当"订单金额"改变时，此字段会自动重新验证<br>
+								<strong>依赖关系:</strong> 当"订单金额"改变时，此字段会自动重新验证<br />
 								<strong>有效代码:</strong> SAVE10 (9折), SAVE20 (8折), WELCOME (85折)
 							</div>
 						{/snippet}
@@ -265,9 +269,7 @@
 					{/if}
 				</div>
 
-				<button type="submit" class="submit-btn" disabled={!form.isValid}>
-					提交注册
-				</button>
+				<button type="submit" class="submit-btn" disabled={!form.isValid}> 提交注册 </button>
 			</Form>
 		</div>
 
@@ -277,7 +279,8 @@
 
 			<div class="code-example">
 				<h3>1. 定义依赖关系</h3>
-				<pre><code>{`const form = useFormState({
+				<pre><code
+						>{`const form = useFormState({
   fields: {
     password: {
       validator: Validators.minLength(8)
@@ -296,12 +299,14 @@
       dependencies: ['orderTotal']
     }
   }
-});`}</code></pre>
+});`}</code
+					></pre>
 			</div>
 
 			<div class="code-example">
 				<h3>2. 编写依赖验证器</h3>
-				<pre><code>{`// 密码确认验证器
+				<pre><code
+						>{`// 密码确认验证器
 const passwordMatchValidator = createValidator(
   (value, allValues) => {
     if (value !== allValues.password) {
@@ -328,7 +333,8 @@ const discountCodeValidator = createValidator(
     const isValid = await checkDiscountCode(value);
     return isValid ? null : '无效的折扣码';
   }
-);`}</code></pre>
+);`}</code
+					></pre>
 			</div>
 
 			<div class="feature-list">
@@ -388,7 +394,7 @@ const discountCodeValidator = createValidator(
 		background: white;
 		padding: 2rem;
 		border-radius: 8px;
-		box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 	}
 
 	.demo-section h2 {
@@ -451,8 +457,13 @@ const discountCodeValidator = createValidator(
 	}
 
 	@keyframes pulse {
-		0%, 100% { opacity: 1; }
-		50% { opacity: 0.5; }
+		0%,
+		100% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0.5;
+		}
 	}
 
 	.discount-summary {
@@ -517,7 +528,7 @@ const discountCodeValidator = createValidator(
 		background: white;
 		padding: 1.5rem;
 		border-radius: 8px;
-		box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 	}
 
 	.code-example h3 {
@@ -546,7 +557,7 @@ const discountCodeValidator = createValidator(
 		background: white;
 		padding: 1.5rem;
 		border-radius: 8px;
-		box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 	}
 
 	.feature-list h3,
