@@ -47,6 +47,7 @@
 
 	// ========== Bug 8: setValues() 依赖验证 ==========
 	const form2 = useFormState({
+		validateOnChange: false, // ⚠️ 禁用自动验证，避免循环依赖无限循环
 		fields: {
 			minPrice: {
 				defaultValue: 0,
@@ -82,6 +83,9 @@
 
 		// 批量设置值（导致冲突）
 		form2._manager.setValues({ minPrice: 200, maxPrice: 50 }, true);
+
+		// 手动触发验证（避免无限循环）
+		await form2._manager.validateForm();
 
 		// 等待验证完成
 		await new Promise((r) => setTimeout(r, 100));
