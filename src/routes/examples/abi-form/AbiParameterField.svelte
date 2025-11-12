@@ -71,11 +71,18 @@
 		const obj: Record<string, unknown> = {};
 		for (const component of param.components) {
 			if (component.type.endsWith('[]')) {
-				// 嵌套数组，初始化为空数组
-				obj[component.name] = [];
+				// 嵌套数组，需要包含一个默认元素
+				const elementType = component.type.slice(0, -2); // 移除 []
+				if (component.components) {
+					// tuple[] - 包含一个默认tuple
+					obj[component.name] = [createDefaultFromComponents(component.components)];
+				} else {
+					// 基础类型[] - 包含一个默认值
+					obj[component.name] = [getDefaultValue(elementType)];
+				}
 			} else if (component.components) {
 				// 嵌套tuple，递归创建
-				obj[component.name] = createNestedTupleDefault(component.components);
+				obj[component.name] = createDefaultFromComponents(component.components);
 			} else {
 				// 基础类型，使用默认值
 				obj[component.name] = getDefaultValue(component.type);
@@ -84,15 +91,25 @@
 		return obj;
 	}
 
-	// 递归创建嵌套tuple的默认值
-	function createNestedTupleDefault(components: any[]): Record<string, unknown> {
+	// 通用函数：从 components 创建默认对象
+	function createDefaultFromComponents(components: any[]): Record<string, unknown> {
 		const obj: Record<string, unknown> = {};
 		for (const comp of components) {
 			if (comp.type.endsWith('[]')) {
-				obj[comp.name] = [comp.components ? createNestedTupleDefault(comp.components) : getDefaultValue(comp.type.replace('[]', ''))];
+				// 数组类型 - 包含一个默认元素
+				const elementType = comp.type.slice(0, -2);
+				if (comp.components) {
+					// tuple[] - 递归创建
+					obj[comp.name] = [createDefaultFromComponents(comp.components)];
+				} else {
+					// 基础类型[] - 默认值
+					obj[comp.name] = [getDefaultValue(elementType)];
+				}
 			} else if (comp.components) {
-				obj[comp.name] = createNestedTupleDefault(comp.components);
+				// tuple - 递归创建
+				obj[comp.name] = createDefaultFromComponents(comp.components);
 			} else {
+				// 基础类型
 				obj[comp.name] = getDefaultValue(comp.type);
 			}
 		}
