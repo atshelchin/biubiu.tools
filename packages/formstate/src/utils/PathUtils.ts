@@ -4,6 +4,7 @@
  */
 
 import type { IPathUtils, FieldPath, FieldValue } from '../core/interfaces';
+import { debug } from './debug';
 
 /**
  * 解析路径为标准化的键数组
@@ -95,7 +96,7 @@ class PathUtilsImpl implements IPathUtils {
 		const lastKey = keys[keys.length - 1];
 		current[lastKey] = value;
 
-		console.log(
+		debug.log(
 			'[PathUtils.setMutable] path:',
 			path,
 			'keys:',

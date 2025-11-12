@@ -5,6 +5,7 @@
 
 import { produce } from 'immer';
 import { PathUtils } from '../utils/PathUtils';
+import { debug } from '../utils/debug';
 import type {
 	IFormStateManager,
 	IFieldState,
@@ -24,10 +25,10 @@ export class FormStateManager implements IFormStateManager {
 	private observers: Set<IFormObserver> = new Set();
 	private config: IFormConfig;
 	private validationAbortControllers: Map<FieldPath, AbortController> = new Map();
-	private debounceTimers: Map<FieldPath, NodeJS.Timeout> = new Map();
+	private debounceTimers: Map<FieldPath, ReturnType<typeof setTimeout>> = new Map();
 
 	constructor(config: IFormConfig = {}) {
-		console.log(
+		debug.log(
 			'[FormStateManager.constructor] config.fields:',
 			config.fields ? Object.keys(config.fields) : 'undefined'
 		);
@@ -40,7 +41,7 @@ export class FormStateManager implements IFormStateManager {
 
 		// 注册字段配置
 		if (config.fields) {
-			console.log(
+			debug.log(
 				'[FormStateManager.constructor] Registering',
 				Object.keys(config.fields).length,
 				'fields'
@@ -49,9 +50,9 @@ export class FormStateManager implements IFormStateManager {
 				this.registerField(path, fieldConfig);
 			});
 		} else {
-			console.log('[FormStateManager.constructor] NO FIELDS TO REGISTER!');
+			debug.log('[FormStateManager.constructor] NO FIELDS TO REGISTER!');
 		}
-		console.log(
+		debug.log(
 			'[FormStateManager.constructor] Final this.values:',
 			JSON.stringify(this.values, null, 2)
 		);
@@ -86,7 +87,7 @@ export class FormStateManager implements IFormStateManager {
 
 			// 设置初始值
 			if (defaultValue !== undefined) {
-				this.values = PathUtils.set(this.values, path, defaultValue);
+				this.values = PathUtils.set(this.values, path, defaultValue) as Record<string, FieldValue>;
 				this.initialValues = PathUtils.set(this.initialValues, path, defaultValue) as Record<
 					string,
 					FieldValue
@@ -101,6 +102,21 @@ export class FormStateManager implements IFormStateManager {
 	}
 
 	unregisterField(path: FieldPath): void {
+		// 清理防抖计时器
+		const timer = this.debounceTimers.get(path);
+		if (timer) {
+			clearTimeout(timer);
+			this.debounceTimers.delete(path);
+		}
+
+		// 取消进行中的验证
+		const abortController = this.validationAbortControllers.get(path);
+		if (abortController) {
+			abortController.abort();
+			this.validationAbortControllers.delete(path);
+		}
+
+		// 清理配置和状态
 		this.fieldConfigs.delete(path);
 		this.fieldStates.delete(path);
 		this.values = PathUtils.delete(this.values, path) as Record<string, FieldValue>;
@@ -114,14 +130,14 @@ export class FormStateManager implements IFormStateManager {
 		const transformedValue = config?.transformer ? config.transformer.transform(value) : value;
 
 		// 使用 Immer 更新值，确保不可变性和深层嵌套的正确更新
-		console.log('[setValue] BEFORE produce, path:', path);
-		console.log('[setValue] this.values:', JSON.stringify(this.values, null, 2));
+		debug.log('[setValue] BEFORE produce, path:', path);
+		debug.log('[setValue] this.values:', JSON.stringify(this.values, null, 2));
 		const newValues = produce(this.values, (draft) => {
-			console.log('[setValue] IN produce draft keys:', Object.keys(draft));
+			debug.log('[setValue] IN produce draft keys:', Object.keys(draft));
 			PathUtils.setMutable(draft, path, transformedValue);
-			console.log('[setValue] AFTER setMutable, draft keys:', Object.keys(draft));
+			debug.log('[setValue] AFTER setMutable, draft keys:', Object.keys(draft));
 		});
-		console.log('[setValue] AFTER produce, newValues keys:', Object.keys(newValues));
+		debug.log('[setValue] AFTER produce, newValues keys:', Object.keys(newValues));
 		this.values = newValues as Record<string, FieldValue>;
 
 		// 更新字段状态
@@ -210,7 +226,10 @@ export class FormStateManager implements IFormStateManager {
 	}
 
 	setValues(values: Record<string, FieldValue>, shouldValidate = false): void {
-		this.values = { ...values };
+		// 使用 Immer 确保深层不可变性，与 setValue 保持一致
+		this.values = produce({}, (draft) => {
+			Object.assign(draft, values);
+		}) as Record<string, FieldValue>;
 
 		// 更新所有字段状态
 		this.fieldStates.forEach((state, path) => {
@@ -237,10 +256,12 @@ export class FormStateManager implements IFormStateManager {
 	// 重置到初始值
 	reset(newInitialValues?: Record<string, FieldValue>): void {
 		if (newInitialValues) {
-			this.initialValues = { ...newInitialValues };
+			// 使用 structuredClone 进行深拷贝，避免共享嵌套引用
+			this.initialValues = structuredClone(newInitialValues);
 		}
 
-		this.values = { ...this.initialValues };
+		// 深拷贝初始值以确保不可变性
+		this.values = structuredClone(this.initialValues);
 
 		this.fieldStates.forEach((state, path) => {
 			const value = PathUtils.get(this.initialValues, path);
@@ -261,7 +282,8 @@ export class FormStateManager implements IFormStateManager {
 
 	// 设置初始值（用于表单加载后填充数据）
 	setInitialValues(values: Record<string, FieldValue>, shouldReset = false): void {
-		this.initialValues = { ...values };
+		// 深拷贝以避免外部修改影响内部状态
+		this.initialValues = structuredClone(values);
 
 		if (shouldReset) {
 			this.reset();

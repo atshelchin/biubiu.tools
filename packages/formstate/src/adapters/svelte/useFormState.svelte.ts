@@ -6,12 +6,13 @@
 import { FormStateManager } from '../../core/FormStateManager';
 import type { IFormConfig, IFieldConfig, FieldPath, FieldValue } from '../../core/interfaces';
 import { PathUtils } from '../../utils/PathUtils';
+import { debug } from '../../utils/debug';
 
 let instanceCounter = 0;
 
 export function useFormState(config: IFormConfig = {}) {
 	const instanceId = ++instanceCounter;
-	console.log(
+	debug.log(
 		`[useFormState #${instanceId}] Called with ${Object.keys(config.fields || {}).length} fields`
 	);
 
@@ -19,7 +20,7 @@ export function useFormState(config: IFormConfig = {}) {
 
 	// 直接使用 $state 维护响应式状态副本
 	const initialValues = manager.getValues() as Record<string, FieldValue>;
-	console.log(
+	debug.log(
 		`[useFormState #${instanceId}] Initial values:`,
 		JSON.stringify(initialValues, null, 2)
 	);
@@ -34,7 +35,7 @@ export function useFormState(config: IFormConfig = {}) {
 		fieldStatesVersion: 0
 	});
 
-	console.log(
+	debug.log(
 		`[useFormState #${instanceId}] state.values after creation:`,
 		JSON.stringify(state.values, null, 2)
 	);
@@ -44,8 +45,8 @@ export function useFormState(config: IFormConfig = {}) {
 		onFieldChange: (path, value) => {
 			// 更新 state 对象的属性
 			const newValues = manager.getValues() as Record<string, FieldValue>;
-			console.log(`[useFormState #${instanceId}] Field changed:`, path);
-			console.log(
+			debug.log(`[useFormState #${instanceId}] Field changed:`, path);
+			debug.log(
 				`[useFormState #${instanceId}] New values (JSON):`,
 				JSON.stringify(newValues, null, 2)
 			);

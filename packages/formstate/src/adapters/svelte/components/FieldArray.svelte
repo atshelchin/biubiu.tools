@@ -7,6 +7,7 @@
 	import type { FormState } from '../useFormState.svelte';
 	import type { FieldPath } from '../../../core/interfaces';
 	import { PathUtils } from '../../../utils/PathUtils';
+	import { debug } from '../../../utils/debug';
 
 	interface Props {
 		name: FieldPath;
@@ -37,10 +38,10 @@
 	const arrayValue = $derived.by(() => {
 		const values = formState.values;
 		const value = PathUtils.get(values, name);
-		console.log('[FieldArray]', name, 'arrayValue derived');
-		console.log('  formState.values keys:', Object.keys(values));
-		console.log('  PathUtils.get result:', value);
-		console.log('  Is array?', Array.isArray(value));
+		debug.log('[FieldArray]', name, 'arrayValue derived');
+		debug.log('  formState.values keys:', Object.keys(values));
+		debug.log('  PathUtils.get result:', value);
+		debug.log('  Is array?', Array.isArray(value));
 		return Array.isArray(value) ? value : [];
 	});
 
@@ -55,11 +56,11 @@
 
 	// 操作方法
 	function append(value: unknown) {
-		console.log('[FieldArray.append] name:', name);
-		console.log('[FieldArray.append] current arrayValue:', JSON.stringify(arrayValue, null, 2));
-		console.log('[FieldArray.append] value to append:', JSON.stringify(value, null, 2));
+		debug.log('[FieldArray.append] name:', name);
+		debug.log('[FieldArray.append] current arrayValue:', JSON.stringify(arrayValue, null, 2));
+		debug.log('[FieldArray.append] value to append:', JSON.stringify(value, null, 2));
 		const newArray = [...arrayValue, value];
-		console.log('[FieldArray.append] newArray:', JSON.stringify(newArray, null, 2));
+		debug.log('[FieldArray.append] newArray:', JSON.stringify(newArray, null, 2));
 		formState.setValue(name, newArray);
 	}
 
@@ -69,21 +70,22 @@
 	}
 
 	function insert(index: number, value: unknown) {
-		const values = formState.values;
-		const newValues = PathUtils.insertAt(values, name, index, value);
-		formState.setValues(newValues as Record<string, unknown>);
+		const newArray = [...arrayValue];
+		newArray.splice(index, 0, value);
+		formState.setValue(name, newArray);
 	}
 
 	function remove(index: number) {
-		const values = formState.values;
-		const newValues = PathUtils.removeAt(values, name, index);
-		formState.setValues(newValues as Record<string, unknown>);
+		const newArray = [...arrayValue];
+		newArray.splice(index, 1);
+		formState.setValue(name, newArray);
 	}
 
 	function move(from: number, to: number) {
-		const values = formState.values;
-		const newValues = PathUtils.move(values, name, from, to);
-		formState.setValues(newValues as Record<string, unknown>);
+		const newArray = [...arrayValue];
+		const [item] = newArray.splice(from, 1);
+		newArray.splice(to, 0, item);
+		formState.setValue(name, newArray);
 	}
 
 	function replace(index: number, value: unknown) {
