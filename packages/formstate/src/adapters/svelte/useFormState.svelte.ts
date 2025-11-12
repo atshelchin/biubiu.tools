@@ -118,6 +118,9 @@ export function useFormState(config: IFormConfig = {}) {
 		getDirtyFields: manager.getDirtyFields.bind(manager),
 		getDirtyValues: manager.getDirtyValues.bind(manager),
 
+		// 性能优化
+		batchUpdate: manager.batchUpdate.bind(manager),
+
 		// 资源清理（防止内存泄漏）
 		destroy: () => {
 			debug.log(`[useFormState #${instanceId}] Destroying form state`);

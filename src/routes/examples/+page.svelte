@@ -15,6 +15,13 @@
 
 	const examples: Example[] = [
 		{
+			title: 'Performance Test',
+			description: '性能测试：批量更新、路径优化、循环依赖、异步验证竞态条件',
+			path: `${base}/examples/performance-test`,
+			difficulty: 'advanced',
+			tags: ['性能', '优化', 'Bug修复', '测试']
+		},
+		{
 			title: 'Bug Fixes Demo',
 			description: '验证关键bug修复：FieldArray路径重映射、依赖字段onChange、动态字段注销',
 			path: `${base}/examples/bug-fixes-demo`,

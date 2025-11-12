@@ -115,6 +115,9 @@ export interface IFormStateManager {
 
 	// 持久化
 	serialize(): string;
+
+	// 批量更新（性能优化）
+	batchUpdate(fn: () => void): void;
 }
 
 // ========== 路径工具接口 ==========
