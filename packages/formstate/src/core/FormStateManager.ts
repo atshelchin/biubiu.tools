@@ -130,8 +130,17 @@ export class FormStateManager implements IFormStateManager {
 	setValue(path: FieldPath, value: FieldValue, shouldValidate = true): void {
 		const config = this.fieldConfigs.get(path);
 
-		// 应用转换
-		const transformedValue = config?.transformer ? config.transformer.transform(value) : value;
+		// 应用转换（支持函数和 ITransformer 对象）
+		let transformedValue = value;
+		if (config?.transformer) {
+			if (typeof config.transformer === 'function') {
+				// 直接是函数
+				transformedValue = (config.transformer as (value: FieldValue) => FieldValue)(value);
+			} else if (typeof config.transformer.transform === 'function') {
+				// ITransformer 对象
+				transformedValue = config.transformer.transform(value);
+			}
+		}
 
 		// 使用 Immer 更新值，确保不可变性和深层嵌套的正确更新
 		debug.log('[setValue] BEFORE produce, path:', path);

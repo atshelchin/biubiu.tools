@@ -42,7 +42,7 @@ export interface ITransformer<TInput = FieldValue, TOutput = FieldValue> {
 export interface IFieldConfig<T = FieldValue> {
 	defaultValue?: T;
 	validator?: IValidator<T>;
-	transformer?: ITransformer<T, T>;
+	transformer?: ITransformer<T, T> | ((value: T) => T); // 支持函数或 ITransformer 对象
 	dependencies?: FieldPath[];
 	validateOnChange?: boolean;
 	validateOnBlur?: boolean;

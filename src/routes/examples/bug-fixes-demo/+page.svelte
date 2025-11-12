@@ -5,7 +5,7 @@
 	 * 2. 依赖字段 onChange 触发（Bug 4）
 	 * 3. 动态字段自动注销（Bug 2）
 	 */
-	import { useFormState, Form, FormField, FieldArray, Validators } from '@biubiu/formstate';
+	import { useFormState, Form, FormField, FieldArray, Validators } from '@packages/formstate/src';
 
 	// Bug 3 测试：FieldArray 删除中间项后路径正确性
 	const arrayForm = useFormState({
