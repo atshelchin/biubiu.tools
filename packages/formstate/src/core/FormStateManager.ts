@@ -513,12 +513,9 @@ export class FormStateManager implements IFormStateManager {
 			if (config.dependencies?.includes(changedPath)) {
 				this.validateField(path);
 
-				// ⚠️ 修复 Bug 4: 触发依赖字段的 onFieldChange 事件
-				// 即使值没变，验证状态可能已经改变，需要通知 UI 更新
-				const value = this.getValue(path);
-				this.observers.forEach((observer) => {
-					observer.onFieldChange?.(path, value);
-				});
+				// ⚠️ 修复 Bug 13: 移除 onFieldChange 调用，避免 Svelte 5 无限更新
+				// 验证完成后，onFieldValidation 会自动触发，无需额外的 onFieldChange
+				// 之前的 Bug 4 修复引入了新问题：在 Svelte 5 中触发无限 effect 更新
 
 				// 递归验证依赖链（带循环检测）
 				this.validateDependentFields(path, visitedPaths);
