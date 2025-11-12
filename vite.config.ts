@@ -3,6 +3,11 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
 	plugins: [sveltekit()],
+	server: {
+		fs: {
+			allow: ['packages', 'src', 'static']
+		}
+	},
 	test: {
 		expect: { requireAssertions: true },
 		projects: [

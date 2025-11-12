@@ -10,7 +10,8 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
-			'@': 'src'
+			'@': 'src',
+			'@packages': 'packages'
 		}
 	},
 	extensions: ['.svelte', '.svx']
