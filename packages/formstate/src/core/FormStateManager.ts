@@ -439,7 +439,14 @@ export class FormStateManager implements IFormStateManager {
 			return error;
 		} catch (err) {
 			if (!abortController.signal.aborted) {
-				const error = 'Validation error';
+				// ⚠️ 保留错误详情，不要丢失原始错误信息
+				const error =
+					err instanceof Error
+						? err.message
+						: typeof err === 'string'
+							? err
+							: 'Validation error';
+				debug.error('[validateField] Validation threw error:', err);
 				this.fieldStates.set(path, {
 					...this.getFieldState(path),
 					error,
