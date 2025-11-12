@@ -45,10 +45,10 @@ FormState 管家帮你：
 type FieldPath = string;
 
 // 示例：
-'email'                    // 简单字段
-'user.profile.name'       // 嵌套对象
-'items[0].title'          // 数组元素
-'users[0].addresses[1]'   // 多层嵌套
+('email'); // 简单字段
+('user.profile.name'); // 嵌套对象
+('items[0].title'); // 数组元素
+('users[0].addresses[1]'); // 多层嵌套
 ```
 
 **为什么需要**: 表单可以有复杂结构，用路径字符串定位任意字段。
@@ -62,11 +62,11 @@ type FieldValue = unknown;
 
 // 可以是任何值：
 const values = {
-    email: 'test@example.com',      // 字符串
-    age: 25,                         // 数字
-    isActive: true,                  // 布尔值
-    tags: ['foo', 'bar'],           // 数组
-    user: { name: 'Alice' }         // 对象
+	email: 'test@example.com', // 字符串
+	age: 25, // 数字
+	isActive: true, // 布尔值
+	tags: ['foo', 'bar'], // 数组
+	user: { name: 'Alice' } // 对象
 };
 ```
 
@@ -78,24 +78,25 @@ const values = {
 
 ```typescript
 interface IFieldState<T = FieldValue> {
-    value: T;           // 当前值
-    error: string | null;  // 错误消息（null = 没有错误）
-    touched: boolean;    // 用户是否访问过（点击/聚焦）
-    dirty: boolean;      // 值是否改变了（与初始值对比）
-    validating: boolean; // 是否正在验证中
+	value: T; // 当前值
+	error: string | null; // 错误消息（null = 没有错误）
+	touched: boolean; // 用户是否访问过（点击/聚焦）
+	dirty: boolean; // 值是否改变了（与初始值对比）
+	validating: boolean; // 是否正在验证中
 }
 
 // 示例：
 const emailState: IFieldState = {
-    value: 'test@example.com',
-    error: null,          // ✅ 没有错误
-    touched: true,        // 用户点击过
-    dirty: true,          // 已修改
-    validating: false     // 验证完成
+	value: 'test@example.com',
+	error: null, // ✅ 没有错误
+	touched: true, // 用户点击过
+	dirty: true, // 已修改
+	validating: false // 验证完成
 };
 ```
 
 **5个状态的含义**:
+
 - **value**: 用户输入了什么
 - **error**: 验证器发现的问题（例如 "Email格式不正确"）
 - **touched**: 用户是否"碰过"这个字段（用于显示错误提示）
@@ -110,27 +111,27 @@ const emailState: IFieldState = {
 
 ```typescript
 interface IFieldConfig<T = FieldValue> {
-    defaultValue?: T;                // 初始值
-    validator?: IValidator<T>;       // 验证器
-    transformer?: ITransformer<T>;   // 值转换器（格式化）
-    dependencies?: FieldPath[];      // 依赖哪些字段
-    validateOnChange?: boolean;      // 输入时立即验证？
-    validateOnBlur?: boolean;        // 失焦时验证？
-    validateOnComplete?: boolean;    // 输入完成时验证？（防抖）
-    debounceMs?: number;            // 防抖延迟
+	defaultValue?: T; // 初始值
+	validator?: IValidator<T>; // 验证器
+	transformer?: ITransformer<T>; // 值转换器（格式化）
+	dependencies?: FieldPath[]; // 依赖哪些字段
+	validateOnChange?: boolean; // 输入时立即验证？
+	validateOnBlur?: boolean; // 失焦时验证？
+	validateOnComplete?: boolean; // 输入完成时验证？（防抖）
+	debounceMs?: number; // 防抖延迟
 }
 
 // 示例：
 const emailConfig: IFieldConfig = {
-    defaultValue: '',
-    validator: Validators.email(),   // 验证邮箱格式
-    validateOnBlur: true            // 用户输入完后验证
+	defaultValue: '',
+	validator: Validators.email(), // 验证邮箱格式
+	validateOnBlur: true // 用户输入完后验证
 };
 
 const passwordConfig: IFieldConfig = {
-    defaultValue: '',
-    transformer: Transformers.trim(), // 自动去空格
-    dependencies: ['confirmPassword'] // 依赖确认密码字段
+	defaultValue: '',
+	transformer: Transformers.trim(), // 自动去空格
+	dependencies: ['confirmPassword'] // 依赖确认密码字段
 };
 ```
 
@@ -142,34 +143,31 @@ const passwordConfig: IFieldConfig = {
 
 ```typescript
 interface IValidator<T = FieldValue> {
-    validate(
-        value: T,
-        allValues: Record<string, FieldValue>
-    ): string | null | Promise<string | null>;
-    //  ↑ 返回错误消息（null = 通过）
+	validate(value: T, allValues: Record<string, FieldValue>): string | null | Promise<string | null>;
+	//  ↑ 返回错误消息（null = 通过）
 }
 
 // 示例：必填验证器
 const requiredValidator: IValidator = {
-    validate(value) {
-        if (!value) {
-            return 'This field is required'; // ❌ 错误
-        }
-        return null; // ✅ 通过
-    }
+	validate(value) {
+		if (!value) {
+			return 'This field is required'; // ❌ 错误
+		}
+		return null; // ✅ 通过
+	}
 };
 
 // 示例：异步验证（检查用户名是否可用）
 const usernameValidator: IValidator = {
-    async validate(value) {
-        const response = await fetch(`/api/check-username?name=${value}`);
-        const data = await response.json();
+	async validate(value) {
+		const response = await fetch(`/api/check-username?name=${value}`);
+		const data = await response.json();
 
-        if (data.taken) {
-            return 'Username already taken'; // ❌
-        }
-        return null; // ✅
-    }
+		if (data.taken) {
+			return 'Username already taken'; // ❌
+		}
+		return null; // ✅
+	}
 };
 ```
 
@@ -394,6 +392,7 @@ packages/formstate/
 ```
 
 **关键点**:
+
 1. **AbortController**: 用户快速输入时，取消旧请求
 2. **structuredClone**: 保存值的快照，防止异步期间值被修改
 3. **validating 状态**: 让 UI 显示加载动画
@@ -410,51 +409,61 @@ packages/formstate/
 
 ```typescript
 export class FormStateManager {
-    // 1️⃣ 值存储：扁平化的键值对
-    private values: Record<string, FieldValue> = {
-        email: 'test@example.com',
-        'user.name': 'Alice',
-        'items[0]': { title: 'Item 1' }
-    };
+	// 1️⃣ 值存储：扁平化的键值对
+	private values: Record<string, FieldValue> = {
+		email: 'test@example.com',
+		'user.name': 'Alice',
+		'items[0]': { title: 'Item 1' }
+	};
 
-    // 2️⃣ 初始值：用于计算 dirty 状态
-    private initialValues: Record<string, FieldValue> = {
-        email: '',
-        'user.name': '',
-        // ...
-    };
+	// 2️⃣ 初始值：用于计算 dirty 状态
+	private initialValues: Record<string, FieldValue> = {
+		email: '',
+		'user.name': ''
+		// ...
+	};
 
-    // 3️⃣ 字段状态：Map 结构，key 是路径
-    private fieldStates: Map<FieldPath, IFieldState> = new Map([
-        ['email', {
-            value: 'test@example.com',
-            error: null,
-            touched: true,
-            dirty: true,
-            validating: false
-        }],
-        // ...
-    ]);
+	// 3️⃣ 字段状态：Map 结构，key 是路径
+	private fieldStates: Map<FieldPath, IFieldState> = new Map([
+		[
+			'email',
+			{
+				value: 'test@example.com',
+				error: null,
+				touched: true,
+				dirty: true,
+				validating: false
+			}
+		]
+		// ...
+	]);
 
-    // 4️⃣ 字段配置：每个字段的验证、转换等规则
-    private fieldConfigs: Map<FieldPath, IFieldConfig> = new Map([
-        ['email', {
-            validator: Validators.email(),
-            validateOnBlur: true
-        }],
-        // ...
-    ]);
+	// 4️⃣ 字段配置：每个字段的验证、转换等规则
+	private fieldConfigs: Map<FieldPath, IFieldConfig> = new Map([
+		[
+			'email',
+			{
+				validator: Validators.email(),
+				validateOnBlur: true
+			}
+		]
+		// ...
+	]);
 
-    // 5️⃣ 观察者列表：订阅变化的组件/函数
-    private observers: Set<IFormObserver> = new Set([
-        { onFieldChange: (path, value) => { /* Svelte Adapter */ } }
-    ]);
+	// 5️⃣ 观察者列表：订阅变化的组件/函数
+	private observers: Set<IFormObserver> = new Set([
+		{
+			onFieldChange: (path, value) => {
+				/* Svelte Adapter */
+			}
+		}
+	]);
 
-    // 6️⃣ 验证控制器：管理异步验证的取消
-    private validationAbortControllers: Map<FieldPath, AbortController> = new Map();
+	// 6️⃣ 验证控制器：管理异步验证的取消
+	private validationAbortControllers: Map<FieldPath, AbortController> = new Map();
 
-    // 7️⃣ 防抖定时器：输入完成验证
-    private debounceTimers: Map<FieldPath, ReturnType<typeof setTimeout>> = new Map();
+	// 7️⃣ 防抖定时器：输入完成验证
+	private debounceTimers: Map<FieldPath, ReturnType<typeof setTimeout>> = new Map();
 }
 ```
 
@@ -650,21 +659,18 @@ async validateField(path: FieldPath): Promise<FieldError> {
 
 ```typescript
 const data = {
-    user: {
-        profile: {
-            name: 'Alice'
-        }
-    },
-    items: [
-        { title: 'Item 1' },
-        { title: 'Item 2' }
-    ]
+	user: {
+		profile: {
+			name: 'Alice'
+		}
+	},
+	items: [{ title: 'Item 1' }, { title: 'Item 2' }]
 };
 
-PathUtils.get(data, 'user.profile.name');  // → 'Alice'
-PathUtils.get(data, 'items[0].title');     // → 'Item 1'
-PathUtils.get(data, 'items[1]');           // → { title: 'Item 2' }
-PathUtils.get(data, 'nonexistent');        // → undefined
+PathUtils.get(data, 'user.profile.name'); // → 'Alice'
+PathUtils.get(data, 'items[0].title'); // → 'Item 1'
+PathUtils.get(data, 'items[1]'); // → { title: 'Item 2' }
+PathUtils.get(data, 'nonexistent'); // → undefined
 ```
 
 #### 示例 2: set() - 设置值
@@ -696,35 +702,36 @@ const newData3 = PathUtils.set({ items: [] }, 'items[0]', 'First');
 ```typescript
 // 接口定义
 interface IFormObserver {
-    onFieldChange?(path: FieldPath, value: FieldValue): void;
-    onFieldBlur?(path: FieldPath): void;
-    onFieldValidation?(path: FieldPath, error: FieldError): void;
-    onFormValidation?(errors: Record<FieldPath, FieldError>): void;
-    onSubmit?(values: Record<string, FieldValue>): void;
+	onFieldChange?(path: FieldPath, value: FieldValue): void;
+	onFieldBlur?(path: FieldPath): void;
+	onFieldValidation?(path: FieldPath, error: FieldError): void;
+	onFormValidation?(errors: Record<FieldPath, FieldError>): void;
+	onSubmit?(values: Record<string, FieldValue>): void;
 }
 
 // 订阅示例（Svelte Adapter）
 const unsubscribe = manager.subscribe({
-    onFieldChange: (path, value) => {
-        console.log(`字段 ${path} 改变了，新值:`, value);
-        // 更新 Svelte $state
-        state.values = manager.getValues();
-    },
+	onFieldChange: (path, value) => {
+		console.log(`字段 ${path} 改变了，新值:`, value);
+		// 更新 Svelte $state
+		state.values = manager.getValues();
+	},
 
-    onFieldValidation: (path, error) => {
-        console.log(`字段 ${path} 验证完成，错误:`, error);
-        // 更新错误显示
-        state.errors = manager.getErrors();
-    }
+	onFieldValidation: (path, error) => {
+		console.log(`字段 ${path} 验证完成，错误:`, error);
+		// 更新错误显示
+		state.errors = manager.getErrors();
+	}
 });
 
 // 使用完毕后取消订阅（防止内存泄漏）
 onDestroy(() => {
-    unsubscribe();
+	unsubscribe();
 });
 ```
 
 **工作原理**:
+
 1. 组件调用 `subscribe()` 注册观察者
 2. FormStateManager 保存观察者到 `Set<IFormObserver>`
 3. 状态改变时，遍历所有观察者，调用对应方法
@@ -739,19 +746,19 @@ onDestroy(() => {
 ```typescript
 // 步骤 1: 创建表单
 const form = useFormState({
-    fields: {
-        email: {
-            defaultValue: '',
-            validator: Validators.compose(
-                Validators.required('Email is required'),
-                Validators.email('Invalid email format')
-            )
-        },
-        password: {
-            defaultValue: '',
-            validator: Validators.required('Password is required')
-        }
-    }
+	fields: {
+		email: {
+			defaultValue: '',
+			validator: Validators.compose(
+				Validators.required('Email is required'),
+				Validators.email('Invalid email format')
+			)
+		},
+		password: {
+			defaultValue: '',
+			validator: Validators.required('Password is required')
+		}
+	}
 });
 
 // 步骤 2: 用户输入 email
@@ -765,17 +772,17 @@ form.setValue('email', 'test@example.com');
 
 // 步骤 3: 提交表单
 const success = await form.submit(async (values) => {
-    // values = { email: '...', password: '...' }
-    await fetch('/api/login', {
-        method: 'POST',
-        body: JSON.stringify(values)
-    });
+	// values = { email: '...', password: '...' }
+	await fetch('/api/login', {
+		method: 'POST',
+		body: JSON.stringify(values)
+	});
 });
 
 if (success) {
-    alert('Login successful!');
+	alert('Login successful!');
 } else {
-    // 表单有错误，自动显示错误消息
+	// 表单有错误，自动显示错误消息
 }
 ```
 
@@ -785,32 +792,32 @@ if (success) {
 
 ```typescript
 const form = useFormState({
-    fields: {
-        minPrice: {
-            defaultValue: 0,
-            validator: {
-                validate: (value, allValues) => {
-                    if (value >= allValues.maxPrice) {
-                        return 'Min price must be less than max price';
-                    }
-                    return null;
-                }
-            },
-            dependencies: ['maxPrice']  // ← 依赖 maxPrice
-        },
-        maxPrice: {
-            defaultValue: 100,
-            validator: {
-                validate: (value, allValues) => {
-                    if (value <= allValues.minPrice) {
-                        return 'Max price must be greater than min price';
-                    }
-                    return null;
-                }
-            },
-            dependencies: ['minPrice']  // ← 依赖 minPrice
-        }
-    }
+	fields: {
+		minPrice: {
+			defaultValue: 0,
+			validator: {
+				validate: (value, allValues) => {
+					if (value >= allValues.maxPrice) {
+						return 'Min price must be less than max price';
+					}
+					return null;
+				}
+			},
+			dependencies: ['maxPrice'] // ← 依赖 maxPrice
+		},
+		maxPrice: {
+			defaultValue: 100,
+			validator: {
+				validate: (value, allValues) => {
+					if (value <= allValues.minPrice) {
+						return 'Max price must be greater than min price';
+					}
+					return null;
+				}
+			},
+			dependencies: ['minPrice'] // ← 依赖 minPrice
+		}
+	}
 });
 
 // 用户修改 minPrice
@@ -829,25 +836,25 @@ form.setValue('minPrice', 50);
 
 ```typescript
 const form = useFormState({
-    fields: {
-        'team[0].name': { defaultValue: '' },
-        'team[0].email': { defaultValue: '' }
-    }
+	fields: {
+		'team[0].name': { defaultValue: '' },
+		'team[0].email': { defaultValue: '' }
+	}
 });
 
 // 添加新成员
 function addMember() {
-    const index = getCurrentTeamLength();
+	const index = getCurrentTeamLength();
 
-    // 动态注册新字段
-    form.registerField(`team[${index}].name`, { defaultValue: '' });
-    form.registerField(`team[${index}].email`, { defaultValue: '' });
+	// 动态注册新字段
+	form.registerField(`team[${index}].name`, { defaultValue: '' });
+	form.registerField(`team[${index}].email`, { defaultValue: '' });
 }
 
 // 删除成员
 function removeMember(index: number) {
-    form.unregisterField(`team[${index}].name`);
-    form.unregisterField(`team[${index}].email`);
+	form.unregisterField(`team[${index}].name`);
+	form.unregisterField(`team[${index}].email`);
 }
 ```
 
@@ -860,17 +867,18 @@ function removeMember(index: number) {
 ```typescript
 // src/utils/debug.ts
 export const debug = {
-    enabled: true,  // ← 设置为 true
+	enabled: true, // ← 设置为 true
 
-    log(...args: unknown[]) {
-        if (this.enabled) {
-            console.log('[FormState]', ...args);
-        }
-    }
+	log(...args: unknown[]) {
+		if (this.enabled) {
+			console.log('[FormState]', ...args);
+		}
+	}
 };
 ```
 
 **输出示例**:
+
 ```
 [FormState] [setValue] path: email
 [FormState] [setValue] transformed value: test@example.com
@@ -907,13 +915,14 @@ console.log('dirty fields:', form._manager.getDirtyFields());
 **原因**: 观察者没有订阅或订阅被取消
 
 **排查**:
+
 ```typescript
 // 检查观察者数量
 console.log('observers count:', form._manager.observers.size);
 
 // 确保 destroy() 没有被过早调用
 onDestroy(() => {
-    form.destroy();  // ← 只在组件销毁时调用
+	form.destroy(); // ← 只在组件销毁时调用
 });
 ```
 
@@ -924,6 +933,7 @@ onDestroy(() => {
 **原因**: 可能是配置问题
 
 **排查**:
+
 ```typescript
 // 检查字段配置
 console.log('config:', form._manager.fieldConfigs.get('email'));
@@ -939,6 +949,7 @@ console.log('validateOnChange:', form._manager.config.validateOnChange);
 **原因**: AbortController 没有正确清理
 
 **排查**:
+
 ```typescript
 // 检查验证控制器
 console.log('validation controllers:', form._manager.validationAbortControllers.size);

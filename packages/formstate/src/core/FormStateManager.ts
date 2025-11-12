@@ -66,22 +66,28 @@ export class FormStateManager implements IFormStateManager {
 
 	// ========== 字段注册 ==========
 	registerField(path: FieldPath, config: IFieldConfig = {}): void {
+		debug.log(`[registerField] START: ${path}`);
+
 		// 如果字段已注册，合并配置而不是覆盖
 		const existingConfig = this.fieldConfigs.get(path);
+
 		if (existingConfig) {
 			// 已存在配置，只更新非空字段
+			debug.log(`[registerField] Field already exists: ${path}, merging config`);
 			this.fieldConfigs.set(path, {
 				...existingConfig,
 				...Object.fromEntries(Object.entries(config).filter(([_, v]) => v !== undefined))
 			});
 		} else {
 			// 新字段，直接设置
+			debug.log(`[registerField] New field: ${path}`);
 			this.fieldConfigs.set(path, config);
 		}
 
 		// 初始化字段状态
 		if (!this.fieldStates.has(path)) {
 			const defaultValue = config.defaultValue ?? PathUtils.get(this.initialValues, path);
+			debug.log(`[registerField] Initializing field state with defaultValue:`, defaultValue);
 
 			this.fieldStates.set(path, {
 				value: defaultValue,
@@ -91,20 +97,35 @@ export class FormStateManager implements IFormStateManager {
 				validating: false
 			});
 
-			// 设置初始值
+			// 设置初始值（使用 Immer 保证不可变性）
 			if (defaultValue !== undefined) {
-				this.values = PathUtils.set(this.values, path, defaultValue) as Record<string, FieldValue>;
-				this.initialValues = PathUtils.set(this.initialValues, path, defaultValue) as Record<
-					string,
-					FieldValue
-				>;
+				// ⚠️ Bug 14 修复：动态字段注册时使用 produce 保证不可变性
+				// 直接修改 this.values 而不通过 setValue，避免触发观察者和验证链
+				debug.log(`[registerField] Setting this.values for ${path}`);
+				this.values = produce(this.values, (draft) => {
+					PathUtils.setMutable(draft, path, defaultValue);
+				}) as Record<string, FieldValue>;
+
+				this.initialValues = produce(this.initialValues, (draft) => {
+					PathUtils.setMutable(draft, path, defaultValue);
+				}) as Record<string, FieldValue>;
+				debug.log(`[registerField] this.values updated`);
 			}
+
+			// ⚠️ Bug 14 修复：不在注册时通知观察者，避免触发 fieldStatesVersion++
+			// 导致所有 FormField 的 $derived 重新计算，进而可能触发依赖验证的无限循环
+			// FormField 的 $derived(formState.values) 会自动检测到新字段，无需主动通知
+		} else {
+			debug.log(`[registerField] Field state already exists: ${path}`);
 		}
 
 		// 如果配置了立即验证
 		if (this.config.validateOnMount && config.validator) {
+			debug.log(`[registerField] Validating on mount: ${path}`);
 			this.validateField(path);
 		}
+
+		debug.log(`[registerField] END: ${path}`);
 	}
 
 	unregisterField(path: FieldPath): void {

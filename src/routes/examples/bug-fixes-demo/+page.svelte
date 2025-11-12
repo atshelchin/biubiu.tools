@@ -1,6 +1,6 @@
 <script lang="ts">
 	/**
-	 * Bug Fixes Demo - 验证关键bug修复
+	 * Bug Fixes Demo - 验证关键 bug 修复
 	 * 1. FieldArray 路径重映射（Bug 3）
 	 * 2. 依赖字段 onChange 触发（Bug 4）
 	 * 3. 动态字段自动注销（Bug 2）
@@ -74,21 +74,29 @@
 	}
 
 	// Bug 2 测试：计数器
+	// ⚠️ 修复：使用 untrack 避免在条件判断中读取 mountCount 建立响应式依赖
+	// 原问题：else if (mountCount > 0) 会读取 mountCount，导致无限循环
 	let mountCount = $state(0);
 	let unmountCount = $state(0);
+	let lastShowState = showOptionalField;
 
 	$effect(() => {
-		if (showOptionalField) {
+		const currentShowState = showOptionalField;
+
+		// 只有当状态真正改变时才更新计数器
+		if (currentShowState && !lastShowState) {
 			mountCount++;
-		} else if (mountCount > 0) {
+		} else if (!currentShowState && lastShowState) {
 			unmountCount++;
 		}
+
+		lastShowState = currentShowState;
 	});
 </script>
 
 <div class="demo-page">
 	<h1>Bug Fixes Demo</h1>
-	<p class="subtitle">验证关键bug修复效果</p>
+	<p class="subtitle">验证关键 bug 修复效果</p>
 
 	<!-- Bug 3: FieldArray 路径重映射 -->
 	<section class="demo-section">
@@ -146,11 +154,11 @@
 				<h4>Field States 对比</h4>
 				<div class="state-comparison">
 					<div>
-						<strong>删除前:</strong>
+						<strong>删除前：</strong>
 						<pre>{fieldStatesBefore || 'Click "Remove Item B" to test'}</pre>
 					</div>
 					<div>
-						<strong>删除后:</strong>
+						<strong>删除后：</strong>
 						<pre>{fieldStatesAfter || 'Waiting...'}</pre>
 					</div>
 				</div>

@@ -26,7 +26,10 @@ const isDebugEnabled = (): boolean => {
 	return false;
 };
 
-const debugEnabled = isDebugEnabled();
+// 临时强制启用调试（用于追踪 Bug 14）
+const FORCE_DEBUG = true;
+
+const debugEnabled = FORCE_DEBUG || isDebugEnabled();
 
 export const debug = {
 	log: (...args: unknown[]) => {

@@ -26,6 +26,7 @@
 **位置**: `FormStateManager.ts:321-327`
 
 **问题描述**:
+
 ```typescript
 reset(newInitialValues?: Record<string, FieldValue>): void {
     if (newInitialValues) {
@@ -37,18 +38,21 @@ reset(newInitialValues?: Record<string, FieldValue>): void {
 ```
 
 **影响**:
+
 - 用户点击 Reset 后，错误消息仍然显示
 - touched 状态保留，UI 高亮不消失
 - dirty 状态不清除
 - validating 状态可能卡住
 
 **复现步骤**:
+
 ```typescript
 form.setValue('email', 'invalid'); // dirty=true, error="Invalid email"
 form.reset(); // ❌ error 仍然是 "Invalid email"
 ```
 
 **修复方案**:
+
 ```typescript
 reset(newInitialValues?: Record<string, FieldValue>): void {
     if (newInitialValues) {
@@ -82,6 +86,7 @@ reset(newInitialValues?: Record<string, FieldValue>): void {
 **位置**: `FormStateManager.ts:301-309`
 
 **问题描述**:
+
 ```typescript
 setValues(values: Record<string, FieldValue>, shouldValidate = true): void {
     this.values = { ...values };
@@ -94,10 +99,12 @@ setValues(values: Record<string, FieldValue>, shouldValidate = true): void {
 ```
 
 **影响**:
+
 - 批量设置值时，依赖字段的验证不触发
 - 例如：setValues({ minPrice: 100, maxPrice: 50 })，maxPrice 的依赖验证不执行
 
 **修复方案**:
+
 ```typescript
 setValues(values: Record<string, FieldValue>, shouldValidate = true): void {
     const changedPaths: FieldPath[] = [];
@@ -133,6 +140,7 @@ setValues(values: Record<string, FieldValue>, shouldValidate = true): void {
 **位置**: `FormStateManager.ts:383-403`
 
 **问题描述**:
+
 ```typescript
 async validateForm(): Promise<Record<FieldPath, FieldError>> {
     const errors: Record<FieldPath, FieldError> = {};
@@ -148,10 +156,12 @@ async validateForm(): Promise<Record<FieldPath, FieldError>> {
 ```
 
 **影响**:
+
 - 10个字段，每个异步验证100ms，总耗时 **1000ms**！
 - 应该并行验证，总耗时只需 100ms
 
 **修复方案**:
+
 ```typescript
 async validateForm(): Promise<Record<FieldPath, FieldError>> {
     // ✅ 并行验证所有字段
@@ -184,6 +194,7 @@ async validateForm(): Promise<Record<FieldPath, FieldError>> {
 **位置**: `FormStateManager.ts:551-561`
 
 **问题描述**:
+
 ```typescript
 getDirtyValues(): Partial<Record<string, FieldValue>> {
     const dirtyFields = this.getDirtyFields();
@@ -199,10 +210,12 @@ getDirtyValues(): Partial<Record<string, FieldValue>> {
 ```
 
 **影响**:
+
 - 嵌套字段的 dirty 值不会被正确收集
 - 例如：`user.profile.name` 的变更丢失
 
 **修复方案**:
+
 ```typescript
 getDirtyValues(): Partial<Record<string, FieldValue>> {
     const dirtyFields = this.getDirtyFields();
@@ -224,6 +237,7 @@ getDirtyValues(): Partial<Record<string, FieldValue>> {
 **位置**: `FormStateManager.ts:234-241`
 
 **问题描述**:
+
 ```typescript
 batchUpdate(fn: () => void): void {
     // ...批量更新逻辑...
@@ -240,10 +254,12 @@ batchUpdate(fn: () => void): void {
 ```
 
 **影响**:
+
 - UI 只看到第一个字段的更新
 - 其他字段的变化被忽略
 
 **修复方案**:
+
 ```typescript
 batchUpdate(fn: () => void): void {
     this.isBatching = true;
@@ -279,11 +295,13 @@ batchUpdate(fn: () => void): void {
 **问题**: 缺少表单级别的状态追踪
 
 **当前缺失**:
+
 - 没有 `isTouched()` 方法
 - 没有 `isSubmitting` 状态
 - 没有 `submitCount` 计数
 
 **应用场景**:
+
 ```typescript
 // 显示 "有未保存的更改" 提示
 if (form.isTouched() && form.isDirty()) {
@@ -302,69 +320,73 @@ if (form.submitCount > 3) {
 **实现方案**:
 
 #### 1. 扩展接口
+
 ```typescript
 // interfaces.ts
 export interface IFormStateManager {
-    // 新增方法
-    isTouched(): boolean;
-    isSubmitting(): boolean;
-    getSubmitCount(): number;
-    setAllTouched(touched?: boolean): void;
+	// 新增方法
+	isTouched(): boolean;
+	isSubmitting(): boolean;
+	getSubmitCount(): number;
+	setAllTouched(touched?: boolean): void;
 }
 ```
 
 #### 2. 实现状态管理
+
 ```typescript
 // FormStateManager.ts
 export class FormStateManager implements IFormStateManager {
-    private isSubmittingState = false;
-    private submitCountState = 0;
+	private isSubmittingState = false;
+	private submitCountState = 0;
 
-    isTouched(): boolean {
-        return Array.from(this.fieldStates.values()).some(state => state.touched);
-    }
+	isTouched(): boolean {
+		return Array.from(this.fieldStates.values()).some((state) => state.touched);
+	}
 
-    isSubmitting(): boolean {
-        return this.isSubmittingState;
-    }
+	isSubmitting(): boolean {
+		return this.isSubmittingState;
+	}
 
-    getSubmitCount(): number {
-        return this.submitCountState;
-    }
+	getSubmitCount(): number {
+		return this.submitCountState;
+	}
 
-    setAllTouched(touched = true): void {
-        this.fieldStates.forEach((state, path) => {
-            this.fieldStates.set(path, { ...state, touched });
-        });
-        // 通知观察者
-        this.observers.forEach(observer => {
-            observer.onFieldBlur?.(''); // 全局 blur
-        });
-    }
+	setAllTouched(touched = true): void {
+		this.fieldStates.forEach((state, path) => {
+			this.fieldStates.set(path, { ...state, touched });
+		});
+		// 通知观察者
+		this.observers.forEach((observer) => {
+			observer.onFieldBlur?.(''); // 全局 blur
+		});
+	}
 
-    async submit(onSubmit: (values: Record<string, FieldValue>) => void | Promise<void>): Promise<boolean> {
-        this.setAllTouched(true); // ✅ 使用新方法
+	async submit(
+		onSubmit: (values: Record<string, FieldValue>) => void | Promise<void>
+	): Promise<boolean> {
+		this.setAllTouched(true); // ✅ 使用新方法
 
-        const errors = await this.validateForm();
-        if (Object.keys(errors).length > 0) {
-            return false;
-        }
+		const errors = await this.validateForm();
+		if (Object.keys(errors).length > 0) {
+			return false;
+		}
 
-        this.isSubmittingState = true;
-        this.submitCountState++;
+		this.isSubmittingState = true;
+		this.submitCountState++;
 
-        try {
-            await onSubmit(this.values);
-            this.observers.forEach(observer => {
-                observer.onSubmit?.(this.values);
-            });
-            return true;
-        } catch (error) {
-            return false;
-        } finally {
-            this.isSubmittingState = false;
-        }
-    }
+		try {
+			await onSubmit(this.values);
+			this.observers.forEach((observer) => {
+				observer.onSubmit?.(this.values);
+			});
+			return true;
+		} catch (error) {
+			return false;
+		} finally {
+			this.isSubmittingState = false;
+		}
+	}
 }
 ```
 
@@ -375,36 +397,38 @@ export class FormStateManager implements IFormStateManager {
 **问题**: 验证失败后没有自动聚焦第一个错误字段
 
 **应用场景**:
+
 ```typescript
 const success = await form.submit(handleSubmit);
 if (!success) {
-    form.focusError(); // ✅ 自动滚动到第一个错误并聚焦
+	form.focusError(); // ✅ 自动滚动到第一个错误并聚焦
 }
 ```
 
 **实现方案**:
+
 ```typescript
 // interfaces.ts
 export interface IFormStateManager {
-    focusError(scrollBehavior?: ScrollBehavior): void;
+	focusError(scrollBehavior?: ScrollBehavior): void;
 }
 
 // FormStateManager.ts
 export class FormStateManager {
-    focusError(scrollBehavior: ScrollBehavior = 'smooth'): void {
-        const errors = this.getErrors();
-        const firstErrorPath = Object.keys(errors)[0];
+	focusError(scrollBehavior: ScrollBehavior = 'smooth'): void {
+		const errors = this.getErrors();
+		const firstErrorPath = Object.keys(errors)[0];
 
-        if (!firstErrorPath) return;
+		if (!firstErrorPath) return;
 
-        // 查找 DOM 元素
-        const element = document.querySelector(`[name="${firstErrorPath}"]`) as HTMLElement;
+		// 查找 DOM 元素
+		const element = document.querySelector(`[name="${firstErrorPath}"]`) as HTMLElement;
 
-        if (element) {
-            element.focus();
-            element.scrollIntoView({ behavior: scrollBehavior, block: 'center' });
-        }
-    }
+		if (element) {
+			element.focus();
+			element.scrollIntoView({ behavior: scrollBehavior, block: 'center' });
+		}
+	}
 }
 ```
 
@@ -415,6 +439,7 @@ export class FormStateManager {
 **问题**: 获取字段状态太冗长
 
 **当前用法**:
+
 ```svelte
 <script>
 const form = useFormState({ ... });
@@ -429,6 +454,7 @@ function handleInput(e) {
 ```
 
 **应该简化为**:
+
 ```svelte
 <script>
 const form = useFormState({ ... });
@@ -441,58 +467,59 @@ const email = useField(form, 'email'); // ✅ 一行搞定
 ```
 
 **实现方案**:
+
 ```typescript
 // useField.svelte.ts
 export function useField<T = FieldValue>(form: FormState, path: FieldPath) {
-    const state = $state({
-        stateVersion: 0
-    });
+	const state = $state({
+		stateVersion: 0
+	});
 
-    // 订阅字段变化
-    const unsubscribe = form._manager.subscribe({
-        onFieldChange: (changedPath) => {
-            if (changedPath === path || changedPath === '') {
-                state.stateVersion++;
-            }
-        },
-        onFieldValidation: (validatedPath) => {
-            if (validatedPath === path) {
-                state.stateVersion++;
-            }
-        },
-        onFieldBlur: (blurredPath) => {
-            if (blurredPath === path) {
-                state.stateVersion++;
-            }
-        }
-    });
+	// 订阅字段变化
+	const unsubscribe = form._manager.subscribe({
+		onFieldChange: (changedPath) => {
+			if (changedPath === path || changedPath === '') {
+				state.stateVersion++;
+			}
+		},
+		onFieldValidation: (validatedPath) => {
+			if (validatedPath === path) {
+				state.stateVersion++;
+			}
+		},
+		onFieldBlur: (blurredPath) => {
+			if (blurredPath === path) {
+				state.stateVersion++;
+			}
+		}
+	});
 
-    return {
-        get value(): T {
-            state.stateVersion; // 建立响应式依赖
-            return form.getValue(path) as T;
-        },
-        set value(newValue: T) {
-            form.setValue(path, newValue);
-        },
-        get error() {
-            state.stateVersion;
-            return form.getFieldState(path).error;
-        },
-        get touched() {
-            state.stateVersion;
-            return form.getFieldState(path).touched;
-        },
-        get dirty() {
-            state.stateVersion;
-            return form.getFieldState(path).dirty;
-        },
-        setValue: (value: T) => form.setValue(path, value),
-        setTouched: (touched = true) => form.setFieldTouched(path, touched),
-        setError: (error: FieldError) => form.setFieldError(path, error),
-        validate: () => form.validateField(path),
-        destroy: unsubscribe
-    };
+	return {
+		get value(): T {
+			state.stateVersion; // 建立响应式依赖
+			return form.getValue(path) as T;
+		},
+		set value(newValue: T) {
+			form.setValue(path, newValue);
+		},
+		get error() {
+			state.stateVersion;
+			return form.getFieldState(path).error;
+		},
+		get touched() {
+			state.stateVersion;
+			return form.getFieldState(path).touched;
+		},
+		get dirty() {
+			state.stateVersion;
+			return form.getFieldState(path).dirty;
+		},
+		setValue: (value: T) => form.setValue(path, value),
+		setTouched: (touched = true) => form.setFieldTouched(path, touched),
+		setError: (error: FieldError) => form.setFieldError(path, error),
+		validate: () => form.validateField(path),
+		destroy: unsubscribe
+	};
 }
 ```
 
@@ -503,63 +530,61 @@ export function useField<T = FieldValue>(form: FormState, path: FieldPath) {
 **问题**: 没有 Yup/Zod schema 验证器适配
 
 **应该支持**:
+
 ```typescript
 import { z } from 'zod';
 import { zodValidator } from '@biubiu/formstate';
 
 const schema = z.object({
-    email: z.string().email(),
-    age: z.number().min(18)
+	email: z.string().email(),
+	age: z.number().min(18)
 });
 
 const form = useFormState({
-    validator: zodValidator(schema) // ✅ 一行集成
+	validator: zodValidator(schema) // ✅ 一行集成
 });
 ```
 
 **实现方案**:
+
 ```typescript
 // validators/zodValidator.ts
 import type { z } from 'zod';
 import type { IValidator, FieldValue } from '../core/interfaces';
 
-export function zodValidator<T extends z.ZodType>(
-    schema: T
-): IValidator {
-    return {
-        async validate(value: FieldValue, allValues: Record<string, FieldValue>) {
-            try {
-                schema.parse(allValues); // 验证整个表单
-                return null;
-            } catch (error) {
-                if (error instanceof z.ZodError) {
-                    // 提取第一个错误
-                    const firstError = error.errors[0];
-                    return firstError.message;
-                }
-                return 'Validation failed';
-            }
-        }
-    };
+export function zodValidator<T extends z.ZodType>(schema: T): IValidator {
+	return {
+		async validate(value: FieldValue, allValues: Record<string, FieldValue>) {
+			try {
+				schema.parse(allValues); // 验证整个表单
+				return null;
+			} catch (error) {
+				if (error instanceof z.ZodError) {
+					// 提取第一个错误
+					const firstError = error.errors[0];
+					return firstError.message;
+				}
+				return 'Validation failed';
+			}
+		}
+	};
 }
 
 // validators/yupValidator.ts
-export function yupValidator<T extends yup.AnySchema>(
-    schema: T
-): IValidator {
-    return {
-        async validate(value: FieldValue, allValues: Record<string, FieldValue>) {
-            try {
-                await schema.validate(allValues, { abortEarly: false });
-                return null;
-            } catch (error) {
-                if (error instanceof yup.ValidationError) {
-                    return error.errors[0];
-                }
-                return 'Validation failed';
-            }
-        }
-    };
+export function yupValidator<T extends yup.AnySchema>(schema: T): IValidator {
+	return {
+		async validate(value: FieldValue, allValues: Record<string, FieldValue>) {
+			try {
+				await schema.validate(allValues, { abortEarly: false });
+				return null;
+			} catch (error) {
+				if (error instanceof yup.ValidationError) {
+					return error.errors[0];
+				}
+				return 'Validation failed';
+			}
+		}
+	};
 }
 ```
 
@@ -572,14 +597,15 @@ export function yupValidator<T extends yup.AnySchema>(
 **问题**: 依赖链会触发大量重复通知
 
 **场景**:
+
 ```typescript
 // 10个字段互相依赖
 const form = useFormState({
-    fields: {
-        field1: { dependencies: ['field2'] },
-        field2: { dependencies: ['field3'] },
-        // ... 10 层依赖
-    }
+	fields: {
+		field1: { dependencies: ['field2'] },
+		field2: { dependencies: ['field3'] }
+		// ... 10 层依赖
+	}
 });
 
 form.setValue('field1', 'value');
@@ -593,6 +619,7 @@ form.setValue('field1', 'value');
 ```
 
 **修复方案**: 批量通知
+
 ```typescript
 private notifyBatch(changes: Map<FieldPath, FieldValue>): void {
     // 合并所有变更，一次性通知
@@ -611,6 +638,7 @@ private notifyBatch(changes: Map<FieldPath, FieldValue>): void {
 **问题**: 每次 `PathUtils.get()` 都重复 split 和遍历
 
 **当前实现**:
+
 ```typescript
 get(obj: unknown, path: FieldPath): FieldValue {
     const keys = path.split('.'); // ❌ 每次都 split
@@ -623,39 +651,40 @@ get(obj: unknown, path: FieldPath): FieldValue {
 ```
 
 **优化方案**: LRU 缓存
+
 ```typescript
 // PathUtils.ts
 const pathCache = new Map<FieldPath, string[]>();
 const MAX_CACHE_SIZE = 100;
 
 export const PathUtils = {
-    get(obj: unknown, path: FieldPath): FieldValue {
-        // ✅ 缓存路径分割结果
-        let keys = pathCache.get(path);
+	get(obj: unknown, path: FieldPath): FieldValue {
+		// ✅ 缓存路径分割结果
+		let keys = pathCache.get(path);
 
-        if (!keys) {
-            keys = this.parsePath(path);
+		if (!keys) {
+			keys = this.parsePath(path);
 
-            // LRU: 超过限制，删除最旧的
-            if (pathCache.size >= MAX_CACHE_SIZE) {
-                const firstKey = pathCache.keys().next().value;
-                pathCache.delete(firstKey);
-            }
+			// LRU: 超过限制，删除最旧的
+			if (pathCache.size >= MAX_CACHE_SIZE) {
+				const firstKey = pathCache.keys().next().value;
+				pathCache.delete(firstKey);
+			}
 
-            pathCache.set(path, keys);
-        }
+			pathCache.set(path, keys);
+		}
 
-        let current = obj;
-        for (const key of keys) {
-            // 遍历...
-        }
-        return current;
-    },
+		let current = obj;
+		for (const key of keys) {
+			// 遍历...
+		}
+		return current;
+	},
 
-    parsePath(path: FieldPath): string[] {
-        // 解析 "user.profile.name" 和 "items[0].name"
-        return path.split(/[.\[\]]+/).filter(Boolean);
-    }
+	parsePath(path: FieldPath): string[] {
+		// 解析 "user.profile.name" 和 "items[0].name"
+		return path.split(/[.\[\]]+/).filter(Boolean);
+	}
 };
 ```
 
@@ -670,6 +699,7 @@ export const PathUtils = {
 **当前问题**: `FormStateManager` 职责过多
 
 **职责清单**:
+
 1. ✅ 字段注册管理
 2. ✅ 值状态管理
 3. ✅ 验证逻辑
@@ -694,6 +724,7 @@ FormStateManager (Facade Pattern)
 ```
 
 **示例实现**:
+
 ```typescript
 // FieldRegistry.ts
 export class FieldRegistry {
@@ -757,6 +788,7 @@ export class FormStateManager {
 ```
 
 **优势**:
+
 - ✅ 每个类职责单一，易于测试
 - ✅ 更容易扩展新功能
 - ✅ 减少类之间的耦合
@@ -769,12 +801,13 @@ export class FormStateManager {
 **当前问题**: 没有事件类型系统
 
 **当前实现**:
+
 ```typescript
 export interface IFormObserver {
-    onFieldChange?(path: FieldPath, value: FieldValue): void;
-    onFieldBlur?(path: FieldPath): void;
-    onFieldValidation?(path: FieldPath, error: FieldError): void;
-    // ❌ 接口过大，用户必须实现所有方法？
+	onFieldChange?(path: FieldPath, value: FieldValue): void;
+	onFieldBlur?(path: FieldPath): void;
+	onFieldValidation?(path: FieldPath, error: FieldError): void;
+	// ❌ 接口过大，用户必须实现所有方法？
 }
 ```
 
@@ -783,46 +816,43 @@ export interface IFormObserver {
 ```typescript
 // events.ts
 export type FormEvent =
-    | { type: 'field:change'; path: FieldPath; value: FieldValue }
-    | { type: 'field:blur'; path: FieldPath }
-    | { type: 'field:validation'; path: FieldPath; error: FieldError }
-    | { type: 'form:submit'; values: Record<string, FieldValue> }
-    | { type: 'form:reset' };
+	| { type: 'field:change'; path: FieldPath; value: FieldValue }
+	| { type: 'field:blur'; path: FieldPath }
+	| { type: 'field:validation'; path: FieldPath; error: FieldError }
+	| { type: 'form:submit'; values: Record<string, FieldValue> }
+	| { type: 'form:reset' };
 
 export type EventListener<E extends FormEvent> = (event: E) => void;
 
 export class EventBus {
-    private listeners = new Map<FormEvent['type'], Set<EventListener<any>>>();
+	private listeners = new Map<FormEvent['type'], Set<EventListener<any>>>();
 
-    on<E extends FormEvent>(
-        type: E['type'],
-        listener: EventListener<E>
-    ): () => void {
-        if (!this.listeners.has(type)) {
-            this.listeners.set(type, new Set());
-        }
+	on<E extends FormEvent>(type: E['type'], listener: EventListener<E>): () => void {
+		if (!this.listeners.has(type)) {
+			this.listeners.set(type, new Set());
+		}
 
-        this.listeners.get(type)!.add(listener);
+		this.listeners.get(type)!.add(listener);
 
-        // 返回取消订阅函数
-        return () => {
-            this.listeners.get(type)?.delete(listener);
-        };
-    }
+		// 返回取消订阅函数
+		return () => {
+			this.listeners.get(type)?.delete(listener);
+		};
+	}
 
-    emit<E extends FormEvent>(event: E): void {
-        const listeners = this.listeners.get(event.type);
-        if (listeners) {
-            listeners.forEach(listener => listener(event));
-        }
-    }
+	emit<E extends FormEvent>(event: E): void {
+		const listeners = this.listeners.get(event.type);
+		if (listeners) {
+			listeners.forEach((listener) => listener(event));
+		}
+	}
 }
 
 // 使用示例
 const bus = new EventBus();
 
 bus.on('field:change', (event) => {
-    console.log(event.path, event.value); // ✅ 类型安全
+	console.log(event.path, event.value); // ✅ 类型安全
 });
 
 bus.emit({ type: 'field:change', path: 'email', value: 'test@example.com' });
@@ -835,68 +865,69 @@ bus.emit({ type: 'field:change', path: 'email', value: 'test@example.com' });
 **应用场景**: 表单操作历史和撤销
 
 **实现方案**:
+
 ```typescript
 // Command.ts
 export interface ICommand {
-    execute(): void;
-    undo(): void;
+	execute(): void;
+	undo(): void;
 }
 
 export class SetValueCommand implements ICommand {
-    private oldValue: FieldValue;
+	private oldValue: FieldValue;
 
-    constructor(
-        private manager: FormStateManager,
-        private path: FieldPath,
-        private newValue: FieldValue
-    ) {
-        this.oldValue = manager.getValue(path);
-    }
+	constructor(
+		private manager: FormStateManager,
+		private path: FieldPath,
+		private newValue: FieldValue
+	) {
+		this.oldValue = manager.getValue(path);
+	}
 
-    execute(): void {
-        this.manager.setValue(this.path, this.newValue);
-    }
+	execute(): void {
+		this.manager.setValue(this.path, this.newValue);
+	}
 
-    undo(): void {
-        this.manager.setValue(this.path, this.oldValue);
-    }
+	undo(): void {
+		this.manager.setValue(this.path, this.oldValue);
+	}
 }
 
 // CommandHistory.ts
 export class CommandHistory {
-    private history: ICommand[] = [];
-    private currentIndex = -1;
+	private history: ICommand[] = [];
+	private currentIndex = -1;
 
-    execute(command: ICommand): void {
-        // 清除 redo 历史
-        this.history = this.history.slice(0, this.currentIndex + 1);
+	execute(command: ICommand): void {
+		// 清除 redo 历史
+		this.history = this.history.slice(0, this.currentIndex + 1);
 
-        command.execute();
-        this.history.push(command);
-        this.currentIndex++;
-    }
+		command.execute();
+		this.history.push(command);
+		this.currentIndex++;
+	}
 
-    undo(): void {
-        if (this.currentIndex >= 0) {
-            this.history[this.currentIndex].undo();
-            this.currentIndex--;
-        }
-    }
+	undo(): void {
+		if (this.currentIndex >= 0) {
+			this.history[this.currentIndex].undo();
+			this.currentIndex--;
+		}
+	}
 
-    redo(): void {
-        if (this.currentIndex < this.history.length - 1) {
-            this.currentIndex++;
-            this.history[this.currentIndex].execute();
-        }
-    }
+	redo(): void {
+		if (this.currentIndex < this.history.length - 1) {
+			this.currentIndex++;
+			this.history[this.currentIndex].execute();
+		}
+	}
 
-    canUndo(): boolean {
-        return this.currentIndex >= 0;
-    }
+	canUndo(): boolean {
+		return this.currentIndex >= 0;
+	}
 
-    canRedo(): boolean {
-        return this.currentIndex < this.history.length - 1;
-    }
+	canRedo(): boolean {
+		return this.currentIndex < this.history.length - 1;
+	}
 }
 
 // 使用示例
@@ -916,46 +947,44 @@ history.redo(); // 重做
 ### 简化 1: FormField 简写语法 ✨
 
 **当前用法**:
+
 ```svelte
 <FormField name="email" label="Email">
-    {#snippet children({ value, onInput, onBlur })}
-        <input
-            type="email"
-            {value}
-            oninput={e => onInput(e.target.value)}
-            onblur={onBlur}
-        />
-    {/snippet}
+	{#snippet children({ value, onInput, onBlur })}
+		<input type="email" {value} oninput={(e) => onInput(e.target.value)} onblur={onBlur} />
+	{/snippet}
 </FormField>
 ```
 
 **简化后**:
+
 ```svelte
 <FormField name="email" label="Email" type="email" />
 ```
 
 **实现方案**:
+
 ```svelte
 <!-- FormField.svelte -->
 <script lang="ts">
-let {
-    name,
-    label,
-    type = 'text',
-    component = undefined, // 自定义组件
-    children
-} = $props();
+	let {
+		name,
+		label,
+		type = 'text',
+		component = undefined, // 自定义组件
+		children
+	} = $props();
 
-// 如果没有 children snippet，使用默认输入
-const hasCustomRender = children !== undefined;
+	// 如果没有 children snippet，使用默认输入
+	const hasCustomRender = children !== undefined;
 </script>
 
 {#if hasCustomRender}
-    <!-- 自定义渲染 -->
-    {@render children({ value, onInput, onBlur })}
+	<!-- 自定义渲染 -->
+	{@render children({ value, onInput, onBlur })}
 {:else}
-    <!-- 默认渲染 -->
-    <input {type} {value} oninput={handleInput} onblur={handleBlur} />
+	<!-- 默认渲染 -->
+	<input {type} {value} oninput={handleInput} onblur={handleBlur} />
 {/if}
 ```
 
@@ -964,77 +993,75 @@ const hasCustomRender = children !== undefined;
 ### 简化 2: 字段配置简写 📝
 
 **当前用法**:
+
 ```typescript
 useFormState({
-    fields: {
-        email: {
-            defaultValue: '',
-            validator: Validators.compose(
-                Validators.required(),
-                Validators.email()
-            )
-        },
-        age: {
-            defaultValue: 0,
-            validator: Validators.min(18)
-        }
-    }
-})
+	fields: {
+		email: {
+			defaultValue: '',
+			validator: Validators.compose(Validators.required(), Validators.email())
+		},
+		age: {
+			defaultValue: 0,
+			validator: Validators.min(18)
+		}
+	}
+});
 ```
 
 **简化后**:
+
 ```typescript
 useFormState({
-    email: ['', [Validators.required(), Validators.email()]],
-    age: [0, Validators.min(18)]
-})
+	email: ['', [Validators.required(), Validators.email()]],
+	age: [0, Validators.min(18)]
+});
 ```
 
 **实现方案**:
+
 ```typescript
 // useFormState.svelte.ts
 type ShorthandConfig<T> =
-    | IFieldConfig<T>
-    | [defaultValue: T, validator?: IValidator<T> | IValidator<T>[]]
-    | T; // 只有默认值
+	| IFieldConfig<T>
+	| [defaultValue: T, validator?: IValidator<T> | IValidator<T>[]]
+	| T; // 只有默认值
 
 export function useFormState(config: IFormConfig | Record<string, ShorthandConfig<any>>) {
-    // 规范化配置
-    const normalizedConfig = normalizeConfig(config);
+	// 规范化配置
+	const normalizedConfig = normalizeConfig(config);
 
-    const manager = new FormStateManager(normalizedConfig);
-    // ...
+	const manager = new FormStateManager(normalizedConfig);
+	// ...
 }
 
 function normalizeConfig(config: any): IFormConfig {
-    if (config.fields) {
-        // 已经是标准格式
-        return config as IFormConfig;
-    }
+	if (config.fields) {
+		// 已经是标准格式
+		return config as IFormConfig;
+	}
 
-    // 转换简写格式
-    const fields: Record<FieldPath, IFieldConfig> = {};
+	// 转换简写格式
+	const fields: Record<FieldPath, IFieldConfig> = {};
 
-    Object.entries(config).forEach(([path, value]) => {
-        if (Array.isArray(value)) {
-            // [defaultValue, validator]
-            const [defaultValue, validator] = value;
-            fields[path] = {
-                defaultValue,
-                validator: Array.isArray(validator)
-                    ? Validators.compose(...validator)
-                    : validator
-            };
-        } else if (typeof value === 'object' && 'defaultValue' in value) {
-            // 标准配置对象
-            fields[path] = value as IFieldConfig;
-        } else {
-            // 只有默认值
-            fields[path] = { defaultValue: value };
-        }
-    });
+	Object.entries(config).forEach(([path, value]) => {
+		if (Array.isArray(value)) {
+			// [defaultValue, validator]
+			const [defaultValue, validator] = value;
+			fields[path] = {
+				defaultValue,
+				validator: Array.isArray(validator) ? Validators.compose(...validator) : validator
+			};
+		} else if (typeof value === 'object' && 'defaultValue' in value) {
+			// 标准配置对象
+			fields[path] = value as IFieldConfig;
+		} else {
+			// 只有默认值
+			fields[path] = { defaultValue: value };
+		}
+	});
 
-    return { fields };
+	return { fields };
 }
 ```
 
@@ -1044,34 +1071,35 @@ function normalizeConfig(config: any): IFormConfig {
 
 ### P0 致命Bug修复清单
 
-| Bug | 问题 | 修复方式 | 文件 |
-|-----|------|----------|------|
-| Bug 7 | reset() 不清理状态 | 重置 fieldStates | FormStateManager.ts |
-| Bug 8 | setValues() 缺依赖验证 | 调用 validateDependentFields | FormStateManager.ts |
-| Bug 9 | validateForm() 串行 | Promise.all 并行 | FormStateManager.ts |
-| Bug 10 | getDirtyValues() 路径错误 | 使用返回值 | FormStateManager.ts |
-| Bug 11 | batchUpdate 通知不完整 | 全局变更通知 | FormStateManager.ts |
+| Bug    | 问题                      | 修复方式                     | 文件                |
+| ------ | ------------------------- | ---------------------------- | ------------------- |
+| Bug 7  | reset() 不清理状态        | 重置 fieldStates             | FormStateManager.ts |
+| Bug 8  | setValues() 缺依赖验证    | 调用 validateDependentFields | FormStateManager.ts |
+| Bug 9  | validateForm() 串行       | Promise.all 并行             | FormStateManager.ts |
+| Bug 10 | getDirtyValues() 路径错误 | 使用返回值                   | FormStateManager.ts |
+| Bug 11 | batchUpdate 通知不完整    | 全局变更通知                 | FormStateManager.ts |
 
 ### P1 关键特性实现清单
 
-| Feature | 优先级 | 工作量 | 影响 |
-|---------|--------|--------|------|
-| Feature 2: 表单级状态 | 高 | 4h | 提升用户体验 |
-| Feature 3: 错误聚焦 | 高 | 2h | 改善可访问性 |
-| Feature 4: useField Hook | 高 | 3h | 简化API |
-| Feature 5: Schema 集成 | 中 | 6h | 提升开发效率 |
+| Feature                  | 优先级 | 工作量 | 影响         |
+| ------------------------ | ------ | ------ | ------------ |
+| Feature 2: 表单级状态    | 高     | 4h     | 提升用户体验 |
+| Feature 3: 错误聚焦      | 高     | 2h     | 改善可访问性 |
+| Feature 4: useField Hook | 高     | 3h     | 简化API      |
+| Feature 5: Schema 集成   | 中     | 6h     | 提升开发效率 |
 
 ### P1 性能优化清单
 
-| Perf | 问题 | 优化方式 | 预期提升 |
-|------|------|----------|----------|
-| Perf 2 | 观察者通知风暴 | 批量通知 | 5-10x |
-| Perf 3 | 路径解析开销 | LRU 缓存 | 10x |
-| Perf 4 | validateForm 串行 | 并行验证 | 10x |
+| Perf   | 问题              | 优化方式 | 预期提升 |
+| ------ | ----------------- | -------- | -------- |
+| Perf 2 | 观察者通知风暴    | 批量通知 | 5-10x    |
+| Perf 3 | 路径解析开销      | LRU 缓存 | 10x      |
+| Perf 4 | validateForm 串行 | 并行验证 | 10x      |
 
 ### 建议实现顺序
 
 **Phase 1: 致命Bug修复 (1天)**
+
 1. Bug 7: reset() 清理状态
 2. Bug 9: validateForm() 并行
 3. Bug 10: getDirtyValues() 路径
@@ -1079,15 +1107,18 @@ function normalizeConfig(config: any): IFormConfig {
 5. Bug 11: batchUpdate 通知
 
 **Phase 2: 关键特性 (3天)**
+
 1. Feature 2: 表单级状态
 2. Feature 4: useField Hook
 3. Feature 3: 错误聚焦
 
 **Phase 3: 性能优化 (2天)**
+
 1. Perf 3: PathUtils 缓存
 2. Perf 2: 观察者批量通知
 
 **Phase 4: 设计优化 (可选, 5天)**
+
 1. SRP 重构
 2. EventBus 实现
 3. 命令模式 Undo/Redo
@@ -1106,13 +1137,16 @@ function normalizeConfig(config: any): IFormConfig {
 ### ✅ 优先级建议
 
 **立即修复 (P0)**:
+
 - Bug 7, 9, 10, 8, 11
 
 **近期实现 (P1)**:
+
 - Feature 2, 3, 4
 - Perf 3, 4
 
 **长期优化 (P2)**:
+
 - 设计模式重构
 - API 简化
 - 更多例子
