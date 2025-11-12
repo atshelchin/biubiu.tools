@@ -3,7 +3,7 @@
  * 核心业务逻辑：字段管理、验证、状态追踪
  */
 
-import { produce } from 'immer';
+import { produce, setAutoFreeze } from 'immer';
 import { PathUtils } from '../utils/PathUtils';
 import { debug } from '../utils/debug';
 import type {
@@ -16,6 +16,10 @@ import type {
 	FieldValue,
 	FieldError
 } from './interfaces';
+
+// 禁用 Immer 的 autoFreeze，避免与 Svelte 5 的 $state 代理冲突
+// Svelte 5 的响应式系统需要对象保持可配置（configurable）
+setAutoFreeze(false);
 
 export class FormStateManager implements IFormStateManager {
 	private values: Record<string, FieldValue> = {};

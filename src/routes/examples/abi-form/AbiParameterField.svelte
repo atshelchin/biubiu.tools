@@ -64,6 +64,41 @@
 		return '';
 	}
 
+	// 为tuple创建默认值（基于components定义）
+	function createTupleDefault(): Record<string, unknown> {
+		if (!param.components) return {};
+
+		const obj: Record<string, unknown> = {};
+		for (const component of param.components) {
+			if (component.type.endsWith('[]')) {
+				// 嵌套数组，初始化为空数组
+				obj[component.name] = [];
+			} else if (component.components) {
+				// 嵌套tuple，递归创建
+				obj[component.name] = createNestedTupleDefault(component.components);
+			} else {
+				// 基础类型，使用默认值
+				obj[component.name] = getDefaultValue(component.type);
+			}
+		}
+		return obj;
+	}
+
+	// 递归创建嵌套tuple的默认值
+	function createNestedTupleDefault(components: any[]): Record<string, unknown> {
+		const obj: Record<string, unknown> = {};
+		for (const comp of components) {
+			if (comp.type.endsWith('[]')) {
+				obj[comp.name] = [comp.components ? createNestedTupleDefault(comp.components) : getDefaultValue(comp.type.replace('[]', ''))];
+			} else if (comp.components) {
+				obj[comp.name] = createNestedTupleDefault(comp.components);
+			} else {
+				obj[comp.name] = getDefaultValue(comp.type);
+			}
+		}
+		return obj;
+	}
+
 	// 获取缩进样式
 	const indentClass = depth > 0 ? 'nested-field' : '';
 </script>
@@ -145,7 +180,7 @@
 				<button
 					type="button"
 					class="btn-add"
-					onclick={() => append(isTuple ? {} : getDefaultValue(baseType))}
+					onclick={() => append(isTuple ? createTupleDefault() : getDefaultValue(baseType))}
 				>
 					+ 添加 {param.name}
 				</button>
