@@ -619,6 +619,34 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		get connectionError() {
 			return connectionError;
 		},
+		// Derived public client
+		get publicClient() {
+			if (!currentChainId) return null;
+
+			const network = networks.find((n: { chainId: number }) => n.chainId === currentChainId);
+			if (!network || !network.rpcEndpoints || network.rpcEndpoints.length === 0) return null;
+
+			const rpcUrl = network.rpcEndpoints[0].url;
+			const chain = {
+				id: network.chainId,
+				name: network.name,
+				nativeCurrency: {
+					name: network.symbol,
+					symbol: network.symbol,
+					decimals: 18
+				},
+				rpcUrls: {
+					default: {
+						http: [rpcUrl]
+					}
+				}
+			} as const;
+
+			return createPublicClient({
+				chain,
+				transport: http(rpcUrl)
+			});
+		},
 		// Methods
 		initialize,
 		cleanup,

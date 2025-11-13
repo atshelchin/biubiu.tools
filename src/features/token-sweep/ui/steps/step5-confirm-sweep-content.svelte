@@ -330,61 +330,19 @@
 		description="Review your configuration and execute the asset sweep"
 	/>
 
-	<!-- Transaction Mode Selector -->
-	<TransactionModeSelector mode={transactionMode} onModeChange={handleModeChange} />
-
-	<!-- Temporary Wallet Manager (only shown when temporary mode selected) -->
-	{#if transactionMode === 'temporary' && feeBreakdown && currentNetwork}
-		<TemporaryWalletManager
-			{taskId}
-			estimatedGasCost={feeBreakdown.estimatedGasFee}
-			networkSymbol={currentNetwork.symbol}
-			onWalletCreated={handleWalletCreated}
-			onWalletCleared={handleWalletCleared}
-		/>
-	{/if}
-
-	<!-- Target Address -->
+	<!-- 1. Selected Tokens Display (网络和token) -->
 	<div class="form-section">
-		<label class="form-label">Target Address</label>
-		<input
-			type="text"
-			class="form-input"
-			bind:value={targetAddress}
-			placeholder="0x... (Address to receive all assets)"
-		/>
-		<p class="form-hint">💡 All assets will be transferred to this address</p>
-	</div>
-
-	<!-- Selected Tokens Display -->
-	<div class="form-section">
-		<label class="form-label">Selected Tokens ({selectedTokenCount})</label>
+		<label class="form-label">Selected Network & Tokens ({selectedTokenCount})</label>
+		{#if currentNetwork}
+			<div class="network-info">
+				<span class="network-name">{currentNetwork.name}</span>
+				<span class="network-symbol">({currentNetwork.symbol})</span>
+			</div>
+		{/if}
 		<TokenListDisplay tokens={selectedTokenObjects} {currentNetwork} />
 	</div>
 
-	<!-- Balance Filter Option -->
-	{#if hasScanned && walletWithBalanceCount < walletCount}
-		<div class="form-section">
-			<label class="checkbox-label">
-				<input type="checkbox" bind:checked={onlyWithBalance} />
-				<span>
-					Only sweep wallets with balance ({walletWithBalanceCount} of {walletCount})
-				</span>
-			</label>
-			<p class="form-hint">
-				💡 {onlyWithBalance
-					? `Only ${walletWithBalanceCount} wallets with confirmed balance will be processed`
-					: `All ${walletCount} wallets will be processed (including those without balance)`}
-			</p>
-		</div>
-	{/if}
-
-	<!-- Fee Breakdown Display -->
-	{#if feeBreakdown && currentNetwork}
-		<FeeBreakdownDisplay {feeBreakdown} {membershipStatus} networkSymbol={currentNetwork.symbol} />
-	{/if}
-
-	<!-- Batch Info -->
+	<!-- 2. Batch Info (批次信息) -->
 	<div class="info-card">
 		<div class="info-header">
 			<AlertCircle size={20} />
@@ -405,6 +363,54 @@
 			{/each}
 		</div>
 	</div>
+
+	<!-- 3. Target Address (接收地址) -->
+	<div class="form-section">
+		<label class="form-label">Target Address</label>
+		<input
+			type="text"
+			class="form-input"
+			bind:value={targetAddress}
+			placeholder="0x... (Address to receive all assets)"
+		/>
+		<p class="form-hint">💡 All assets will be transferred to this address</p>
+	</div>
+
+	<!-- Balance Filter Option -->
+	{#if hasScanned && walletWithBalanceCount < walletCount}
+		<div class="form-section">
+			<label class="checkbox-label">
+				<input type="checkbox" bind:checked={onlyWithBalance} />
+				<span>
+					Only sweep wallets with balance ({walletWithBalanceCount} of {walletCount})
+				</span>
+			</label>
+			<p class="form-hint">
+				💡 {onlyWithBalance
+					? `Only ${walletWithBalanceCount} wallets with confirmed balance will be processed`
+					: `All ${walletCount} wallets will be processed (including those without balance)`}
+			</p>
+		</div>
+	{/if}
+
+	<!-- 4. Fee Breakdown Display (费用计算) -->
+	{#if feeBreakdown && currentNetwork}
+		<FeeBreakdownDisplay {feeBreakdown} {membershipStatus} networkSymbol={currentNetwork.symbol} />
+	{/if}
+
+	<!-- 5. Transaction Mode Selector (发送方式选择) -->
+	<TransactionModeSelector mode={transactionMode} onModeChange={handleModeChange} />
+
+	<!-- 6. Temporary Wallet Manager (only shown when temporary mode selected) -->
+	{#if transactionMode === 'temporary' && feeBreakdown && currentNetwork}
+		<TemporaryWalletManager
+			{taskId}
+			estimatedGasCost={feeBreakdown.estimatedGasFee}
+			networkSymbol={currentNetwork.symbol}
+			onWalletCreated={handleWalletCreated}
+			onWalletCleared={handleWalletCleared}
+		/>
+	{/if}
 
 	{#if errorMessage}
 		<div class="error-banner" transition:fade>
@@ -599,6 +605,35 @@
 	}
 	:global([data-theme='dark']) .form-label {
 		color: var(--gray-300);
+	}
+
+	.network-info {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		padding: var(--space-3);
+		margin-bottom: var(--space-2);
+		background: var(--gray-50);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-sm);
+	}
+	:global([data-theme='dark']) .network-info {
+		background: var(--gray-800);
+	}
+
+	.network-name {
+		font-weight: var(--font-semibold);
+		color: var(--gray-900);
+	}
+	:global([data-theme='dark']) .network-name {
+		color: var(--gray-100);
+	}
+
+	.network-symbol {
+		color: var(--gray-600);
+	}
+	:global([data-theme='dark']) .network-symbol {
+		color: var(--gray-400);
 	}
 
 	.form-input {

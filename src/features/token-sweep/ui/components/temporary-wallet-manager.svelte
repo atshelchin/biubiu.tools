@@ -17,10 +17,11 @@
 		Loader2,
 		QrCode,
 		Send,
-		Wallet
+		Wallet,
+		RefreshCw
 	} from 'lucide-svelte';
 	import QRCodeGenerator from '$lib/components/ui/qr-code.svelte';
-	import type { Address, WalletClient } from 'viem';
+	import type { Address } from 'viem';
 	import { formatEther } from 'viem';
 
 	interface Props {
@@ -39,6 +40,7 @@
 	let temporaryWallet = $state<TemporaryWallet | null>(null);
 	let isCreating = $state(false);
 	let errorMessage = $state('');
+	let successMessage = $state('');
 	let copiedField = $state<string | null>(null);
 	let showPrivateKey = $state(false);
 	let showQR = $state(false);
@@ -61,22 +63,40 @@
 
 	// Load wallet balance when wallet or network changes
 	$effect(() => {
-		if (temporaryWallet && connectStore.publicClient) {
+		// Only run when wallet exists and network is selected
+		const wallet = temporaryWallet;
+		const chainId = connectStore.currentChainId;
+
+		if (wallet && chainId) {
 			loadWalletBalance();
 		}
 	});
 
 	async function loadWalletBalance() {
-		if (!temporaryWallet || !connectStore.publicClient) return;
+		if (!temporaryWallet) {
+			console.warn('No temporary wallet available');
+			return;
+		}
+
+		const publicClient = connectStore.publicClient;
+		if (!publicClient) {
+			console.warn('No public client available - network may not be selected');
+			return;
+		}
 
 		isLoadingBalance = true;
+		errorMessage = '';
+
 		try {
-			const balance = await connectStore.publicClient.getBalance({
+			console.log('Loading balance for:', temporaryWallet.address);
+			const balance = await publicClient.getBalance({
 				address: temporaryWallet.address as Address
 			});
+			console.log('Balance loaded:', balance);
 			walletBalance = balance;
 		} catch (error) {
 			console.error('Failed to load wallet balance:', error);
+			errorMessage = error instanceof Error ? error.message : 'Failed to load balance';
 		} finally {
 			isLoadingBalance = false;
 		}
@@ -156,7 +176,7 @@
 	}
 
 	async function handleSendGasFromWallet() {
-		if (!connectStore.walletClient || !connectStore.currentAddress || !temporaryWallet) {
+		if (!connectStore.address || !temporaryWallet) {
 			errorMessage = 'Please connect your wallet first';
 			return;
 		}
@@ -168,20 +188,38 @@
 
 		isSendingGas = true;
 		errorMessage = '';
+		successMessage = '';
 
 		try {
 			const amountInWei = BigInt(Math.floor(Number(gasSendAmount) * 1e18));
+			const amount = gasSendAmount;
 
-			const hash = await (connectStore.walletClient as WalletClient).sendTransaction({
-				account: connectStore.currentAddress as Address,
-				to: temporaryWallet.address,
-				value: amountInWei
+			const hash = await connectStore.sendTransaction({
+				to: temporaryWallet.address as Address,
+				value: amountInWei,
+				data: '0x',
+				gas: BigInt(21000) // Basic transfer gas limit
 			});
 
-			alert(`Gas sent successfully!\n\nTransaction: ${hash}`);
+			// Show success message
+			successMessage = `✅ Transfer successful! Sent ${amount} ${networkSymbol} to temporary wallet. TX: ${hash.slice(0, 10)}...`;
 
-			// Reload balance after successful transfer
-			setTimeout(() => loadWalletBalance(), 2000);
+			// Clear input field
+			gasSendAmount = '';
+
+			// Auto-clear success message after 10 seconds
+			setTimeout(() => {
+				successMessage = '';
+			}, 10000);
+
+			// Reload balance after successful transfer with retry logic
+			// Try multiple times to ensure blockchain has processed the transaction
+			setTimeout(async () => {
+				for (let i = 0; i < 3; i++) {
+					await new Promise((resolve) => setTimeout(resolve, 2000));
+					await loadWalletBalance();
+				}
+			}, 1000);
 		} catch (error) {
 			console.error('Failed to send gas:', error);
 			errorMessage = error instanceof Error ? error.message : 'Failed to send gas';
@@ -281,6 +319,14 @@
 						<Wallet size={16} />
 						<span class="balance-text">{formatEther(walletBalance)} {networkSymbol}</span>
 					{/if}
+					<button
+						class="btn-refresh {isLoadingBalance ? 'spinning' : ''}"
+						onclick={loadWalletBalance}
+						disabled={isLoadingBalance}
+						title="Refresh balance"
+					>
+						<RefreshCw size={16} />
+					</button>
 				</div>
 			</div>
 
@@ -340,7 +386,7 @@
 				<button
 					class="btn-send-gas"
 					onclick={handleSendGasFromWallet}
-					disabled={isSendingGas || !connectStore.currentAddress}
+					disabled={isSendingGas || !connectStore.address}
 				>
 					{#if isSendingGas}
 						<Loader2 size={16} class="spinning" />
@@ -370,6 +416,12 @@
 				<div class="error-message">
 					<AlertCircle size={16} />
 					<span>{errorMessage}</span>
+				</div>
+			{/if}
+
+			{#if successMessage}
+				<div class="success-message">
+					<span>{successMessage}</span>
 				</div>
 			{/if}
 		</div>
@@ -494,6 +546,25 @@
 		color: hsl(0, 80%, 70%);
 	}
 
+	.success-message {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		padding: var(--space-3);
+		background: hsla(142, 76%, 95%, 1);
+		border: 1px solid #10b981;
+		border-radius: var(--radius-sm);
+		color: #059669;
+		font-size: var(--text-sm);
+		margin-top: var(--space-3);
+	}
+
+	:global([data-theme='dark']) .success-message {
+		background: hsla(142, 76%, 15%, 0.3);
+		border-color: #10b981;
+		color: #10b981;
+	}
+
 	.wallet-display {
 		display: flex;
 		flex-direction: column;
@@ -585,7 +656,8 @@
 
 	.btn-icon,
 	.btn-qr,
-	.btn-toggle {
+	.btn-toggle,
+	.btn-refresh {
 		padding: var(--space-1);
 		background: transparent;
 		border: none;
@@ -597,8 +669,26 @@
 
 	.btn-icon:hover,
 	.btn-qr:hover,
-	.btn-toggle:hover {
+	.btn-toggle:hover,
+	.btn-refresh:hover:not(:disabled) {
 		opacity: 0.7;
+	}
+
+	.btn-refresh {
+		margin-left: auto;
+		color: #10b981;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.btn-refresh:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
+	.btn-refresh.spinning {
+		animation: spin 1s linear infinite;
 	}
 
 	.btn-toggle {
