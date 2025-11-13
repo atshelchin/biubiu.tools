@@ -575,6 +575,55 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		return hash;
 	}
 
+	/**
+	 * Get wallet client for the connected wallet
+	 * Used for signing messages and transactions with EIP-7702 support
+	 */
+	async function getWalletClient() {
+		if (!isConnected || !connectionState.connector) {
+			throw new Error('Wallet not connected');
+		}
+
+		if (!currentChainId) {
+			throw new Error('No chain connected');
+		}
+
+		const connector = connectionState.connector;
+		const provider = connector.getProvider();
+
+		if (!provider) {
+			throw new Error('Provider not available');
+		}
+
+		const network = enabledNetworks().find(
+			(n: { chainId: number }) => n.chainId === currentChainId
+		);
+		if (!network) {
+			throw new Error('Current network not found or not enabled');
+		}
+
+		const chain = {
+			id: network.chainId,
+			name: network.name,
+			nativeCurrency: {
+				name: network.symbol,
+				symbol: network.symbol,
+				decimals: 18
+			},
+			rpcUrls: {
+				default: {
+					http: [network.rpcEndpoints[0].url]
+				}
+			}
+		} as const;
+
+		return createWalletClient({
+			chain,
+			transport: custom(provider),
+			account: address as Address
+		});
+	}
+
 	const store = {
 		// Reactive state
 		get isConnected() {
@@ -672,7 +721,8 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		// Transaction methods
 		sendTransaction,
 		waitForTransaction,
-		sendRawTransaction
+		sendRawTransaction,
+		getWalletClient
 	};
 
 	setContext(CONNECT_STORE_KEY, store);

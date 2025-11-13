@@ -305,25 +305,8 @@
 
 		const publicClient = createPublicClient({ chain, transport: http(rpcUrl) });
 
-		// Get provider from connected wallet
-		const connector = connectStore.connectionState.connector;
-		if (!connector) {
-			errorMessage = 'No connector available';
-			return;
-		}
-
-		const provider = await connector.getProvider();
-		if (!provider) {
-			errorMessage = 'Provider not available';
-			return;
-		}
-
-		// Create wallet client for signing
-		const walletClient = createWalletClient({
-			chain,
-			transport: custom(provider),
-			account: connectStore.address
-		});
+		// Get wallet client from connected wallet
+		const walletClient = await connectStore.getWalletClient();
 
 		// Create signer wallet from connected wallet
 		// The signer is the wallet that pays for gas and submits the transaction
