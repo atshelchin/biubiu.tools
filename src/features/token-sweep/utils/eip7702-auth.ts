@@ -76,13 +76,12 @@ export async function batchSignAuthorizations(
 
 /**
  * Wallet signature structure for contract multicall
- * Format: { wallet: address, v: uint8, r: bytes32, s: bytes32 }
+ * Format: { wallet: address, signature: bytes }
+ * Matches contract's Wallet struct
  */
 export interface WalletSignature {
 	wallet: Address;
-	v: number;
-	r: Hex;
-	s: Hex;
+	signature: Hex;
 }
 
 /**
@@ -95,7 +94,7 @@ async function generateDrainSignature(
 	recipient: Address,
 	tokens: Address[],
 	deadline: bigint
-): Promise<{ v: number; r: Hex; s: Hex }> {
+): Promise<Hex> {
 	const account = walletKeysStore.getAccount(wallet.address);
 
 	// Build message hash matching contract's _verifyDrainSignature
@@ -118,12 +117,7 @@ async function generateDrainSignature(
 		message: { raw: messageHash }
 	});
 
-	// Parse signature components
-	const r = `0x${signature.slice(2, 66)}` as Hex;
-	const s = `0x${signature.slice(66, 130)}` as Hex;
-	const v = parseInt(signature.slice(130, 132), 16);
-
-	return { v, r, s };
+	return signature;
 }
 
 /**
@@ -140,13 +134,11 @@ export async function generateDrainSignatures(
 	const signatures: WalletSignature[] = [];
 
 	for (const wallet of wallets) {
-		const { v, r, s } = await generateDrainSignature(wallet, chainId, recipient, tokens, deadline);
+		const signature = await generateDrainSignature(wallet, chainId, recipient, tokens, deadline);
 
 		signatures.push({
 			wallet: wallet.address,
-			v,
-			r,
-			s
+			signature
 		});
 	}
 
