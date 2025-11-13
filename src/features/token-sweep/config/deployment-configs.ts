@@ -140,13 +140,23 @@ const MULTICALL3_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
 	}
 };
 
+// BiuBiuPremium deployment configuration
+const BIUBIU_PREMIUM_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
+	contractName: 'BiuBiuPremium',
+	contractAddress: '0xc5c4bb399938625523250B708dc5c1e7dE4b1626' as Address,
+	description: 'Premium membership management contract',
+	canDeploy: false, // This contract is already deployed and managed
+	deployGuideUrl: 'https://github.com/atshelchin/biubiu-contracts'
+};
+
 /**
  * Deployment configuration registry
  * Maps contract addresses to their deployment configs
  */
 export const DEPLOYMENT_CONFIGS: DeploymentConfigRegistry = {
 	[CREATE2_DEPLOYMENT_CONFIG.contractAddress]: CREATE2_DEPLOYMENT_CONFIG,
-	[MULTICALL3_DEPLOYMENT_CONFIG.contractAddress]: MULTICALL3_DEPLOYMENT_CONFIG
+	[MULTICALL3_DEPLOYMENT_CONFIG.contractAddress]: MULTICALL3_DEPLOYMENT_CONFIG,
+	[BIUBIU_PREMIUM_DEPLOYMENT_CONFIG.contractAddress]: BIUBIU_PREMIUM_DEPLOYMENT_CONFIG
 };
 
 /**
