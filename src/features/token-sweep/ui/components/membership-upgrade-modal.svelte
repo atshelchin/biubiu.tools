@@ -1,7 +1,8 @@
 <script lang="ts">
-	import { Crown, Check, Sparkles, X, Users } from 'lucide-svelte';
+	import { Crown, Check, Sparkles, Users } from 'lucide-svelte';
 	import { getReferralAddress, ZERO_ADDRESS } from '$lib/utils/referral';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
+	import Modal from '$lib/components/ui/modal.svelte';
 
 	interface Props {
 		isOpen: boolean;
@@ -26,16 +27,8 @@
 	// Load referral address when modal opens
 	$effect(() => {
 		if (isOpen) {
-			document.body.style.overflow = 'hidden';
 			loadReferralAddress();
-		} else {
-			document.body.style.overflow = '';
 		}
-
-		// Cleanup on unmount
-		return () => {
-			document.body.style.overflow = '';
-		};
 	});
 
 	async function loadReferralAddress() {
@@ -104,37 +97,26 @@
 		const tier = pricingTiers.find((t) => t.id === selectedTier);
 		// TODO: Integrate payment gateway
 		alert(
-			`Purchase ${tier?.name} plan for ${tier?.price} COIN!\n\nPayment integration coming soon.`
+			`Purchase ${tier?.name} plan for ${tier?.price} ${networkSymbol}!\n\nPayment integration coming soon.`
 		);
-	}
-
-	function handleClickOutside(event: MouseEvent) {
-		if ((event.target as HTMLElement).classList.contains('modal-overlay')) {
-			onClose();
-		}
 	}
 </script>
 
-{#if isOpen}
-	<div class="modal-overlay" onclick={handleClickOutside} role="presentation">
-		<div class="modal-container">
-			<!-- Header -->
-			<div class="modal-header">
-				<div class="header-content">
-					<div class="header-icon">
-						<Crown size={32} />
-					</div>
-					<h2>Upgrade to Premium</h2>
-					<p>Choose the perfect plan for your needs</p>
+<Modal open={isOpen} {onClose} maxWidth="640px">
+	{#snippet children()}
+		<div class="upgrade-modal">
+			<!-- Header with gradient background -->
+			<div class="modal-header-custom">
+				<div class="header-icon">
+					<Crown size={32} />
 				</div>
-				<button class="btn-close" onclick={onClose} aria-label="Close modal">
-					<X size={24} />
-				</button>
+				<h2>Upgrade to Premium</h2>
+				<p>Choose the perfect plan for your needs</p>
 			</div>
 
 			<!-- Referral Info -->
 			<div class="referral-info">
-				<Users size={16} />
+				<Users size={14} />
 				<span class="referral-label">Referred by:</span>
 				<span class="referral-address">{displayReferral()}</span>
 			</div>
@@ -169,9 +151,6 @@
 						</div>
 
 						<div class="card-right">
-							<!-- {#if tier.savings}
-								<div class="savings-badge">{tier.savings}</div>
-							{/if} -->
 							<div class="checkmark">
 								{#if selectedTier === tier.id}
 									<Check size={18} />
@@ -186,7 +165,7 @@
 			<div class="benefits-section">
 				<h3>What's Included</h3>
 				<div class="benefits-grid">
-					{#each benefits as benefit (benefit)}
+					{#each benefits as benefit}
 						<div class="benefit-item">
 							<Check size={16} />
 							<span>{benefit}</span>
@@ -196,7 +175,7 @@
 			</div>
 
 			<!-- CTA -->
-			<div class="modal-footer">
+			<div class="modal-footer-custom">
 				<button class="btn-purchase" onclick={handlePurchase}>
 					<Crown size={20} />
 					<span>Purchase Premium Access</span>
@@ -207,74 +186,22 @@
 				</p>
 			</div>
 		</div>
-	</div>
-{/if}
+	{/snippet}
+</Modal>
 
 <style>
-	.modal-overlay {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: rgba(0, 0, 0, 0.75);
-		backdrop-filter: blur(4px);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		z-index: 9999;
-		padding: var(--space-4);
-		animation: fadeIn 0.2s ease-out;
-		overflow-y: auto;
-	}
-
-	@keyframes fadeIn {
-		from {
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
-	}
-
-	.modal-container {
-		position: relative;
-		max-width: 640px;
+	.upgrade-modal {
 		width: 100%;
-		max-height: 90vh;
-		overflow-y: auto;
-		background: white;
-		border-radius: var(--radius-xl);
-		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-		animation: slideUp 0.3s ease-out;
-		margin: auto;
 	}
 
-	:global([data-theme='dark']) .modal-container {
-		background: var(--gray-900);
-	}
-
-	@keyframes slideUp {
-		from {
-			opacity: 0;
-			transform: translateY(20px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-
-	.modal-header {
+	.modal-header-custom {
 		position: relative;
 		padding: var(--space-5);
 		background: linear-gradient(135deg, #ea580c, #f97316);
 		color: white;
-		border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-	}
-
-	.header-content {
+		border-radius: var(--radius-lg);
 		text-align: center;
+		margin-bottom: var(--space-4);
 	}
 
 	.header-icon {
@@ -289,53 +216,24 @@
 		backdrop-filter: blur(10px);
 	}
 
-	.header-icon :global(svg) {
-		width: 24px;
-		height: 24px;
-	}
-
-	.modal-header h2 {
+	.modal-header-custom h2 {
 		margin: 0 0 var(--space-1) 0;
 		font-size: var(--text-2xl);
 		font-weight: var(--font-bold);
 	}
 
-	.modal-header p {
+	.modal-header-custom p {
 		margin: 0;
 		opacity: 0.9;
 		font-size: var(--text-sm);
-	}
-
-	.btn-close {
-		position: absolute;
-		top: var(--space-4);
-		right: var(--space-4);
-		width: 40px;
-		height: 40px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background: rgba(255, 255, 255, 0.2);
-		border: none;
-		border-radius: 50%;
-		color: white;
-		cursor: pointer;
-		transition: all 0.2s;
-		backdrop-filter: blur(10px);
-	}
-
-	.btn-close:hover {
-		background: rgba(255, 255, 255, 0.3);
-		transform: scale(1.1);
 	}
 
 	.referral-info {
 		display: flex;
 		align-items: center;
 		gap: var(--space-2);
-		padding: var(--space-2) var(--space-4);
-		background: transparent;
-		margin: 0 var(--space-4) var(--space-2) var(--space-4);
+		padding: var(--space-2) 0;
+		margin-bottom: var(--space-2);
 		font-size: var(--text-xs);
 		color: var(--gray-500);
 		justify-content: flex-end;
@@ -375,7 +273,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-3);
-		padding: var(--space-4);
+		margin-bottom: var(--space-4);
 	}
 
 	.pricing-card {
@@ -390,6 +288,7 @@
 		cursor: pointer;
 		transition: all 0.3s;
 		text-align: left;
+		width: 100%;
 	}
 
 	:global([data-theme='dark']) .pricing-card {
@@ -499,16 +398,6 @@
 		gap: var(--space-2);
 	}
 
-	.savings-badge {
-		padding: 2px var(--space-2);
-		background: #10b981;
-		color: white;
-		font-size: 10px;
-		font-weight: var(--font-bold);
-		border-radius: var(--radius-sm);
-		white-space: nowrap;
-	}
-
 	.checkmark {
 		display: flex;
 		align-items: center;
@@ -538,7 +427,14 @@
 	}
 
 	.benefits-section {
-		padding: 0 var(--space-4) var(--space-4);
+		padding: var(--space-4);
+		background: var(--gray-50);
+		border-radius: var(--radius-lg);
+		margin-bottom: var(--space-4);
+	}
+
+	:global([data-theme='dark']) .benefits-section {
+		background: var(--gray-800);
 	}
 
 	.benefits-section h3 {
@@ -564,43 +460,33 @@
 		align-items: center;
 		gap: var(--space-2);
 		padding: var(--space-2);
-		background: var(--gray-50);
+		background: white;
 		border-radius: var(--radius-md);
 		font-size: var(--text-xs);
 		color: var(--gray-700);
 	}
 
-	.benefit-item :global(svg) {
-		width: 14px;
-		height: 14px;
-	}
-
 	:global([data-theme='dark']) .benefit-item {
-		background: var(--gray-800);
+		background: var(--gray-900);
 		color: var(--gray-300);
 	}
 
 	.benefit-item :global(svg) {
-		flex-shrink: 0;
+		width: 14px;
+		height: 14px;
 		color: #10b981;
+		flex-shrink: 0;
 	}
 
-	.modal-footer {
-		padding: var(--space-4);
-		background: var(--gray-50);
-		border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+	.modal-footer-custom {
 		text-align: center;
-	}
-
-	:global([data-theme='dark']) .modal-footer {
-		background: var(--gray-800);
 	}
 
 	.btn-purchase {
 		display: inline-flex;
 		align-items: center;
 		gap: var(--space-2);
-		padding: var(--space-2) var(--space-4);
+		padding: var(--space-3) var(--space-6);
 		background: linear-gradient(135deg, #ea580c, #f97316);
 		color: white;
 		border: none;
@@ -610,6 +496,7 @@
 		cursor: pointer;
 		box-shadow: 0 8px 24px rgba(249, 115, 22, 0.4);
 		transition: all 0.3s;
+		width: 100%;
 	}
 
 	.btn-purchase :global(svg) {
