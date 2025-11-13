@@ -33,20 +33,10 @@
 			</div>
 		</div>
 
-		<ul class="benefits">
-			<li>
-				<Zap size={14} />
-				<span>Zero transaction fees</span>
-			</li>
-			<li>
-				<Zap size={14} />
-				<span>Priority support</span>
-			</li>
-			<li>
-				<Zap size={14} />
-				<span>Exclusive features</span>
-			</li>
-		</ul>
+		<div class="benefit-highlight">
+			<Zap size={16} />
+			<span>Unlock all tools across the platform for free!</span>
+		</div>
 
 		<button class="btn-upgrade" onclick={handleLearnMore}>
 			<Crown size={16} />
@@ -147,24 +137,23 @@
 		opacity: 0.6;
 	}
 
-	.benefits {
-		list-style: none;
-		padding: 0;
-		margin: 0 0 var(--space-3) 0;
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-2);
-	}
-
-	.benefits li {
+	.benefit-highlight {
 		display: flex;
 		align-items: center;
 		gap: var(--space-2);
+		padding: var(--space-3);
+		margin-bottom: var(--space-3);
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: var(--radius-md);
 		font-size: var(--text-sm);
+		font-weight: var(--font-semibold);
+		text-align: center;
+		backdrop-filter: blur(10px);
 	}
 
-	.compact .benefits li {
+	.compact .benefit-highlight {
 		font-size: var(--text-xs);
+		padding: var(--space-2);
 	}
 
 	.btn-upgrade {
