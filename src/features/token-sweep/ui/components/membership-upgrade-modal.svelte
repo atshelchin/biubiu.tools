@@ -8,6 +8,20 @@
 
 	let { isOpen = $bindable(), onClose }: Props = $props();
 
+	// Prevent body scroll when modal is open
+	$effect(() => {
+		if (isOpen) {
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = '';
+		}
+
+		// Cleanup on unmount
+		return () => {
+			document.body.style.overflow = '';
+		};
+	});
+
 	interface PricingTier {
 		id: string;
 		name: string;
@@ -50,10 +64,7 @@
 	const benefits = [
 		'Zero transaction fees on all tools',
 		'Unlimited access to premium features',
-		'Priority customer support',
-		'Early access to new tools',
-		'Advanced analytics & reporting',
-		'API access for automation'
+		'Priority customer support'
 	];
 
 	function handleSelectTier(tierId: string) {
@@ -162,14 +173,15 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: rgba(0, 0, 0, 0.7);
+		background: rgba(0, 0, 0, 0.75);
 		backdrop-filter: blur(4px);
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		z-index: 1000;
+		z-index: 9999;
 		padding: var(--space-4);
 		animation: fadeIn 0.2s ease-out;
+		overflow-y: auto;
 	}
 
 	@keyframes fadeIn {
@@ -183,7 +195,7 @@
 
 	.modal-container {
 		position: relative;
-		max-width: 900px;
+		max-width: 640px;
 		width: 100%;
 		max-height: 90vh;
 		overflow-y: auto;
@@ -191,6 +203,7 @@
 		border-radius: var(--radius-xl);
 		box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 		animation: slideUp 0.3s ease-out;
+		margin: auto;
 	}
 
 	:global([data-theme='dark']) .modal-container {
@@ -210,7 +223,7 @@
 
 	.modal-header {
 		position: relative;
-		padding: var(--space-6);
+		padding: var(--space-5);
 		background: linear-gradient(135deg, #7c3aed, #a855f7);
 		color: white;
 		border-radius: var(--radius-xl) var(--radius-xl) 0 0;
@@ -224,24 +237,29 @@
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		width: 64px;
-		height: 64px;
+		width: 48px;
+		height: 48px;
 		background: rgba(255, 255, 255, 0.2);
 		border-radius: 50%;
-		margin-bottom: var(--space-3);
+		margin-bottom: var(--space-2);
 		backdrop-filter: blur(10px);
 	}
 
+	.header-icon :global(svg) {
+		width: 24px;
+		height: 24px;
+	}
+
 	.modal-header h2 {
-		margin: 0 0 var(--space-2) 0;
-		font-size: var(--text-3xl);
+		margin: 0 0 var(--space-1) 0;
+		font-size: var(--text-2xl);
 		font-weight: var(--font-bold);
 	}
 
 	.modal-header p {
 		margin: 0;
 		opacity: 0.9;
-		font-size: var(--text-base);
+		font-size: var(--text-sm);
 	}
 
 	.btn-close {
@@ -270,8 +288,8 @@
 	.pricing-cards {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		gap: var(--space-4);
-		padding: var(--space-6);
+		gap: var(--space-3);
+		padding: var(--space-4);
 	}
 
 	@media (max-width: 768px) {
@@ -282,9 +300,9 @@
 
 	.pricing-card {
 		position: relative;
-		padding: var(--space-5);
+		padding: var(--space-4);
 		background: var(--gray-50);
-		border: 3px solid transparent;
+		border: 2px solid transparent;
 		border-radius: var(--radius-lg);
 		cursor: pointer;
 		transition: all 0.3s;
@@ -349,8 +367,8 @@
 	}
 
 	.pricing-card h3 {
-		margin: 0 0 var(--space-3) 0;
-		font-size: var(--text-xl);
+		margin: 0 0 var(--space-2) 0;
+		font-size: var(--text-lg);
 		font-weight: var(--font-bold);
 		color: var(--gray-800);
 	}
@@ -360,18 +378,18 @@
 	}
 
 	.price {
-		margin-bottom: var(--space-2);
+		margin-bottom: var(--space-1);
 	}
 
 	.price-value {
-		font-size: var(--text-4xl);
+		font-size: var(--text-2xl);
 		font-weight: var(--font-bold);
 		color: #7c3aed;
 		line-height: 1;
 	}
 
 	.price-period {
-		font-size: var(--text-sm);
+		font-size: var(--text-xs);
 		color: var(--gray-600);
 		margin-left: var(--space-1);
 	}
@@ -381,9 +399,9 @@
 	}
 
 	.price-detail {
-		font-size: var(--text-sm);
+		font-size: var(--text-xs);
 		color: var(--gray-600);
-		margin-bottom: var(--space-3);
+		margin-bottom: var(--space-2);
 	}
 
 	:global([data-theme='dark']) .price-detail {
@@ -394,13 +412,18 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 40px;
-		height: 40px;
+		width: 32px;
+		height: 32px;
 		margin: 0 auto;
 		border: 2px solid var(--gray-300);
 		border-radius: 50%;
 		color: transparent;
 		transition: all 0.2s;
+	}
+
+	.checkmark :global(svg) {
+		width: 16px;
+		height: 16px;
 	}
 
 	:global([data-theme='dark']) .checkmark {
@@ -414,12 +437,12 @@
 	}
 
 	.benefits-section {
-		padding: 0 var(--space-6) var(--space-6);
+		padding: 0 var(--space-4) var(--space-4);
 	}
 
 	.benefits-section h3 {
-		margin: 0 0 var(--space-4) 0;
-		font-size: var(--text-xl);
+		margin: 0 0 var(--space-3) 0;
+		font-size: var(--text-base);
 		font-weight: var(--font-bold);
 		color: var(--gray-800);
 		text-align: center;
@@ -431,14 +454,8 @@
 
 	.benefits-grid {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: var(--space-3);
-	}
-
-	@media (max-width: 640px) {
-		.benefits-grid {
-			grid-template-columns: 1fr;
-		}
+		grid-template-columns: 1fr;
+		gap: var(--space-2);
 	}
 
 	.benefit-item {
@@ -448,8 +465,13 @@
 		padding: var(--space-2);
 		background: var(--gray-50);
 		border-radius: var(--radius-md);
-		font-size: var(--text-sm);
+		font-size: var(--text-xs);
 		color: var(--gray-700);
+	}
+
+	.benefit-item :global(svg) {
+		width: 14px;
+		height: 14px;
 	}
 
 	:global([data-theme='dark']) .benefit-item {
@@ -463,7 +485,7 @@
 	}
 
 	.modal-footer {
-		padding: var(--space-6);
+		padding: var(--space-4);
 		background: var(--gray-50);
 		border-radius: 0 0 var(--radius-xl) var(--radius-xl);
 		text-align: center;
@@ -477,16 +499,21 @@
 		display: inline-flex;
 		align-items: center;
 		gap: var(--space-2);
-		padding: var(--space-3) var(--space-6);
+		padding: var(--space-2) var(--space-4);
 		background: linear-gradient(135deg, #7c3aed, #a855f7);
 		color: white;
 		border: none;
 		border-radius: var(--radius-full);
-		font-size: var(--text-lg);
+		font-size: var(--text-base);
 		font-weight: var(--font-bold);
 		cursor: pointer;
 		box-shadow: 0 8px 24px rgba(124, 58, 237, 0.4);
 		transition: all 0.3s;
+	}
+
+	.btn-purchase :global(svg) {
+		width: 18px;
+		height: 18px;
 	}
 
 	.btn-purchase:hover {
@@ -499,8 +526,8 @@
 	}
 
 	.footer-note {
-		margin: var(--space-3) 0 0 0;
-		font-size: var(--text-sm);
+		margin: var(--space-2) 0 0 0;
+		font-size: var(--text-xs);
 		color: var(--gray-600);
 	}
 
