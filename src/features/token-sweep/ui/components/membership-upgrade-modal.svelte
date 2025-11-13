@@ -157,9 +157,9 @@
 						</div>
 
 						<div class="card-right">
-							{#if tier.savings}
+							<!-- {#if tier.savings}
 								<div class="savings-badge">{tier.savings}</div>
-							{/if}
+							{/if} -->
 							<div class="checkmark">
 								{#if selectedTier === tier.id}
 									<Check size={18} />
@@ -253,7 +253,7 @@
 	.modal-header {
 		position: relative;
 		padding: var(--space-5);
-		background: linear-gradient(135deg, #7c3aed, #a855f7);
+		background: linear-gradient(135deg, #0d9488, #14b8a6);
 		color: white;
 		border-radius: var(--radius-xl) var(--radius-xl) 0 0;
 	}
@@ -331,7 +331,7 @@
 	}
 
 	.referral-info :global(svg) {
-		color: var(--gray-400);
+		color: #14b8a6;
 		flex-shrink: 0;
 		width: 14px;
 		height: 14px;
@@ -387,13 +387,13 @@
 	}
 
 	.pricing-card.selected {
-		border-color: #7c3aed;
-		background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(168, 85, 247, 0.05));
-		box-shadow: 0 8px 24px rgba(124, 58, 237, 0.3);
+		border-color: #14b8a6;
+		background: linear-gradient(135deg, rgba(20, 184, 166, 0.05), rgba(13, 148, 136, 0.05));
+		box-shadow: 0 8px 24px rgba(20, 184, 166, 0.3);
 	}
 
 	:global([data-theme='dark']) .pricing-card.selected {
-		background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(168, 85, 247, 0.15));
+		background: linear-gradient(135deg, rgba(20, 184, 166, 0.15), rgba(13, 148, 136, 0.15));
 	}
 
 	.pricing-card.popular {
@@ -401,7 +401,7 @@
 	}
 
 	.pricing-card.popular.selected {
-		border-color: #7c3aed;
+		border-color: #14b8a6;
 	}
 
 	.card-left {
@@ -586,14 +586,14 @@
 		align-items: center;
 		gap: var(--space-2);
 		padding: var(--space-2) var(--space-4);
-		background: linear-gradient(135deg, #7c3aed, #a855f7);
+		background: linear-gradient(135deg, #0d9488, #14b8a6);
 		color: white;
 		border: none;
 		border-radius: var(--radius-full);
 		font-size: var(--text-base);
 		font-weight: var(--font-bold);
 		cursor: pointer;
-		box-shadow: 0 8px 24px rgba(124, 58, 237, 0.4);
+		box-shadow: 0 8px 24px rgba(20, 184, 166, 0.4);
 		transition: all 0.3s;
 	}
 
@@ -604,7 +604,7 @@
 
 	.btn-purchase:hover {
 		transform: translateY(-2px);
-		box-shadow: 0 12px 32px rgba(124, 58, 237, 0.5);
+		box-shadow: 0 12px 32px rgba(20, 184, 166, 0.5);
 	}
 
 	.btn-purchase:active {
