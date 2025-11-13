@@ -72,7 +72,7 @@
 	.membership-promo {
 		position: relative;
 		padding: var(--space-4);
-		background: linear-gradient(135deg, #0d9488, #14b8a6);
+		background: linear-gradient(135deg, #ea580c, #f97316);
 		border-radius: var(--radius-lg);
 		color: white;
 		overflow: hidden;
