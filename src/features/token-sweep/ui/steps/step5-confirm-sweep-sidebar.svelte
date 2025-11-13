@@ -50,7 +50,10 @@
 
 	<!-- Membership Promo -->
 	<div class="promo-section">
-		<MembershipPromo networkSymbol={currentNetwork?.symbol} compact={true} />
+		<MembershipPromo
+			currentPrice="0.0025 {currentNetwork?.symbol || 'native coin'}/tx"
+			compact={true}
+		/>
 	</div>
 </StepSidebar>
 

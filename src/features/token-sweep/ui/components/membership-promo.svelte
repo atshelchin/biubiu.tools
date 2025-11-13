@@ -2,11 +2,26 @@
 	import { Crown, Zap } from 'lucide-svelte';
 
 	interface Props {
+		/**
+		 * Custom pricing text for non-members (e.g., "0.0025 ETH/tx", "$0.01 per scan", "Free tier")
+		 * If not provided, shows generic "Pay per use"
+		 */
+		currentPrice?: string;
+		/**
+		 * Network symbol for displaying fees (e.g., "ETH", "BNB")
+		 * Only used if currentPrice is not provided
+		 */
 		networkSymbol?: string;
+		/**
+		 * Compact mode for sidebar usage
+		 */
 		compact?: boolean;
 	}
 
-	let { networkSymbol = 'native coin', compact = false }: Props = $props();
+	let { currentPrice, networkSymbol = 'native coin', compact = false }: Props = $props();
+
+	// If currentPrice is not provided, show generic text
+	let displayPrice = $derived(currentPrice || 'Pay per use');
 
 	function handleLearnMore() {
 		// TODO: Link to membership page or modal
@@ -24,7 +39,7 @@
 		<div class="price-comparison">
 			<div class="price-item current">
 				<span class="label">Current</span>
-				<span class="price">0.0025 {networkSymbol}/tx</span>
+				<span class="price">{displayPrice}</span>
 			</div>
 			<div class="arrow">→</div>
 			<div class="price-item premium">
