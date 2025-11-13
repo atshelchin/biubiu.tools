@@ -148,10 +148,9 @@
 
 	.price-item.premium .price {
 		font-size: var(--text-xl);
-		background: linear-gradient(135deg, #fbbf24, #f59e0b);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
+		font-weight: var(--font-black);
+		color: white;
+		text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 	}
 
 	.arrow {

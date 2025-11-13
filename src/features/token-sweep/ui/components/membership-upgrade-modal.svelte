@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Crown, Check, Sparkles, X, Users } from 'lucide-svelte';
 	import { getReferralAddress, ZERO_ADDRESS } from '$lib/utils/referral';
+	import { useConnectStore } from '$lib/stores/connect.svelte';
 
 	interface Props {
 		isOpen: boolean;
@@ -8,6 +9,11 @@
 	}
 
 	let { isOpen = $bindable(), onClose }: Props = $props();
+
+	const connectStore = useConnectStore();
+
+	// Get current network symbol
+	let networkSymbol = $derived(connectStore.currentNetwork?.symbol || 'COIN');
 
 	let referralAddress = $state<string | null>(null);
 
@@ -151,9 +157,9 @@
 
 						<div class="card-center">
 							<div class="price">
-								<span class="price-value">{tier.price} COIN</span>
+								<span class="price-value">{tier.price} {networkSymbol}</span>
 							</div>
-							<div class="price-detail">{tier.pricePerDay.toFixed(5)} COIN/day</div>
+							<div class="price-detail">{tier.pricePerDay.toFixed(5)} {networkSymbol}/day</div>
 						</div>
 
 						<div class="card-right">
@@ -189,7 +195,11 @@
 					<Crown size={20} />
 					<span>Purchase Premium Access</span>
 				</button>
-				<p class="footer-note">💳 Secure payment • Cancel anytime • 30-day money-back guarantee</p>
+				<p class="footer-note">
+					⚠️ Membership valid on <strong
+						>{connectStore.currentNetwork?.name || 'current network'}</strong
+					> only • Switch networks requires new purchase
+				</p>
 			</div>
 		</div>
 	</div>
