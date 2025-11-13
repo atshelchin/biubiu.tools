@@ -14,6 +14,12 @@
 		type SweepConfig,
 		type SweepProgress
 	} from '@/features/token-sweep/utils/sweep-executor';
+	import {
+		executeTokenSweep,
+		estimateTokenSweep,
+		type TokenSweepConfig,
+		type TokenSweepResult
+	} from '@/features/token-sweep/utils/tokensweep-executor';
 	import { checkMembership, calculateFeeBreakdown } from '@/features/token-sweep/utils/membership';
 	import type {
 		TransactionMode,
@@ -214,8 +220,8 @@
 			return;
 		}
 
-		if (transactionMode === 'temporary' && !temporaryWallet) {
-			errorMessage = 'Please create a temporary wallet first';
+		if (!connectStore.address) {
+			errorMessage = 'Please connect your wallet first';
 			return;
 		}
 
@@ -233,49 +239,46 @@
 			return;
 		}
 
-		// Build config
-		const config: SweepConfig = {
+		// Build TokenSweep config
+		const tokenSweepConfig: TokenSweepConfig = {
+			targetAddress: targetAddress as Address,
+			wallets: walletsToSweep,
+			tokens: selectedTokenObjects as (NativeToken | ERC20Token)[],
+			chainId: connectStore.currentChainId,
+			referrer: undefined // Can be set if referral system is implemented
+		};
+
+		// Get stats for confirmation
+		const stats = calculateSweepStats({
 			targetAddress: targetAddress as Address,
 			wallets: walletsToSweep,
 			tokens: selectedTokenObjects as (NativeToken | ERC20Token)[],
 			chainId: connectStore.currentChainId,
 			includeNative: true,
 			batchSize: 100
-		};
+		});
 
-		// Validate
-		const validation = validateSweepConfig(config);
-		if (!validation.valid) {
-			errorMessage = validation.errors.join(', ');
-			return;
-		}
-
-		// Get stats
-		const stats = calculateSweepStats(config);
-
-		// Show confirmation with fee information
+		// Show confirmation with EIP-7702 info
 		const feeInfo = membershipStatus.isMember
-			? 'As a member, you will not be charged any sweep fees.'
-			: `Each transaction will incur a 0.0025 ${currentNetwork?.symbol} sweep fee.`;
-
-		const modeInfo =
-			transactionMode === 'temporary'
-				? `Temporary wallet will be used: ${temporaryWallet?.address.slice(0, 10)}...`
-				: 'You will need to sign each transaction with your connected wallet.';
+			? 'As a premium member, you will not be charged tool fees.'
+			: 'Non-member fee: 0.005 ETH (refunded for premium members)';
 
 		const confirmed = confirm(
-			`Ready to sweep:\n\n` +
+			`🚀 Ready to execute TokenSweep via EIP-7702:\n\n` +
 				`• ${selectedTokenCount} token(s)\n` +
 				`• From ${sweepWalletCount} wallet(s)${onlyWithBalance ? ' (with balance only)' : ''}\n` +
-				`• To ${targetAddress}\n` +
-				`• ${stats.totalTransactions} total transaction(s)\n` +
-				`• In ${stats.totalBatches} batch(es)\n\n` +
-				`Transaction Mode: ${transactionMode}\n` +
-				`${modeInfo}\n\n` +
+				`• To ${targetAddress}\n\n` +
+				`How it works:\n` +
+				`1. Your imported wallets will be temporarily upgraded to smart contracts (EIP-7702)\n` +
+				`2. The TokenSweep contract (0x28ab...239) will execute on their behalf\n` +
+				`3. All tokens will be transferred to the target address in one transaction\n\n` +
 				`Fees:\n` +
-				`${feeInfo}\n\n` +
-				`⚠️ IMPORTANT: This feature requires private key access which is not yet fully implemented.\n` +
-				`The sweep will simulate the process without actually executing transactions.\n\n` +
+				`${feeInfo}\n` +
+				`Gas fees still apply (~0.01-0.05 ETH estimated)\n\n` +
+				`⚠️ IMPORTANT:\n` +
+				`• This uses EIP-7702 for batch execution\n` +
+				`• One transaction will process all wallets\n` +
+				`• Make sure your connected wallet has enough ETH for gas\n\n` +
 				`Continue?`
 		);
 
@@ -300,24 +303,91 @@
 
 		const publicClient = createPublicClient({ chain, transport: http(rpcUrl) });
 
-		// Execute sweep
+		// Create signer wallet from connected wallet
+		// In a real implementation, this would use the actual connected wallet's signing capabilities
+		const signer = {
+			address: connectStore.address,
+			signMessage: async (message: string) => {
+				// Use connectStore to sign the message
+				return await connectStore.signMessage(message);
+			},
+			sendTransaction: async (tx: {
+				to: Address;
+				data: `0x${string}`;
+				value: bigint;
+				gas: bigint;
+			}) => {
+				// Use connectStore to send the transaction
+				return await connectStore.sendTransaction(tx);
+			}
+		};
+
+		// Execute TokenSweep
 		isSweeping = true;
 		errorMessage = '';
 		sweepProgress = null;
 
 		try {
-			const result = await executeSweep(publicClient, config, (progress) => {
-				sweepProgress = progress;
-			});
+			// Show progress indicator
+			sweepProgress = {
+				phase: 'preparing',
+				currentBatch: 0,
+				totalBatches: 1,
+				currentWallet: 0,
+				totalWallets: sweepWalletCount,
+				percentage: 0,
+				message: 'Preparing EIP-7702 authorizations...',
+				results: []
+			};
 
-			if (result.phase === 'completed') {
+			const result = await executeTokenSweep(publicClient, signer, tokenSweepConfig);
+
+			if (result.success) {
 				// Success
-				sweepProgress = result;
-			} else if (result.phase === 'error') {
+				sweepProgress = {
+					phase: 'completed',
+					currentBatch: 1,
+					totalBatches: 1,
+					currentWallet: result.walletsProcessed,
+					totalWallets: sweepWalletCount,
+					percentage: 100,
+					message: `✅ Sweep completed! TX: ${result.transactionHash}`,
+					results: [
+						{
+							wallet: targetAddress as Address,
+							success: true,
+							tokenSymbol: 'ALL',
+							transactionHash: result.transactionHash
+						}
+					]
+				};
+			} else {
 				errorMessage = result.error || 'Sweep failed';
+				sweepProgress = {
+					phase: 'error',
+					currentBatch: 0,
+					totalBatches: 1,
+					currentWallet: 0,
+					totalWallets: sweepWalletCount,
+					percentage: 0,
+					message: result.error || 'Sweep failed',
+					results: [],
+					error: result.error
+				};
 			}
 		} catch (error) {
 			errorMessage = error instanceof Error ? error.message : 'Sweep failed';
+			sweepProgress = {
+				phase: 'error',
+				currentBatch: 0,
+				totalBatches: 1,
+				currentWallet: 0,
+				totalWallets: sweepWalletCount,
+				percentage: 0,
+				message: 'Sweep failed',
+				results: [],
+				error: error instanceof Error ? error.message : 'Unknown error'
+			};
 		} finally {
 			isSweeping = false;
 		}
