@@ -24,7 +24,11 @@ export const KNOWN_CONTRACTS = {
 
 	// BiuBiuPremium (membership management contract)
 	// https://github.com/atshelchin/biubiu-contracts
-	BIUBIU_PREMIUM: '0xc5c4bb399938625523250B708dc5c1e7dE4b1626' as Address
+	BIUBIU_PREMIUM: '0xc5c4bb399938625523250B708dc5c1e7dE4b1626' as Address,
+
+	// TokenSweep (batch token transfer contract)
+	// https://github.com/atshelchin/biubiu-contracts
+	TOKEN_SWEEP: '0x28ab612a3a871EA203aDff9a7b0846C395529239' as Address
 } as const;
 
 /**
@@ -290,6 +294,22 @@ export async function checkBiuBiuPremium(rpcUrl: string): Promise<ContractCheck>
 }
 
 /**
+ * Check TokenSweep deployment
+ */
+export async function checkTokenSweep(rpcUrl: string): Promise<ContractCheck> {
+	return checkContractDeployment(
+		rpcUrl,
+		KNOWN_CONTRACTS.TOKEN_SWEEP,
+		'TokenSweep',
+		'Batch token transfer contract with premium membership integration',
+		{
+			canDeploy: true,
+			deployGuideUrl: 'https://github.com/atshelchin/biubiu-contracts'
+		}
+	);
+}
+
+/**
  * Check biubiu membership contract
  */
 export async function checkBiubiuMembership(
@@ -370,13 +390,17 @@ export async function checkAllDependencies(
 	const biubiuPremiumCheck = await checkBiuBiuPremium(rpcUrl);
 	checks.push(biubiuPremiumCheck);
 
-	// 6. Check Biubiu Membership (if address provided)
+	// 6. Check TokenSweep
+	const tokenSweepCheck = await checkTokenSweep(rpcUrl);
+	checks.push(tokenSweepCheck);
+
+	// 7. Check Biubiu Membership (if address provided)
 	if (membershipContractAddress) {
 		const membershipCheck = await checkBiubiuMembership(rpcUrl, membershipContractAddress);
 		checks.push(membershipCheck);
 	}
 
-	// 7. Check Token Sweep Contract (if address provided)
+	// 8. Check Token Sweep Contract (if address provided)
 	if (sweepContractAddress) {
 		const sweepCheck = await checkTokenSweepContract(rpcUrl, sweepContractAddress);
 		checks.push(sweepCheck);

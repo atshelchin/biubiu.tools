@@ -122,7 +122,7 @@
 
 			<div class="benefit-highlight premium-benefit">
 				<Zap size={16} />
-				<span>All tools FREE • Zero fees</span>
+				<span>Zero tool fees • Gas fees still apply</span>
 			</div>
 
 			<button class="btn-upgrade btn-renew" onclick={handleUpgradeClick}>
