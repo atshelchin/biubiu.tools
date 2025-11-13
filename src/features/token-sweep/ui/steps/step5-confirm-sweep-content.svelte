@@ -277,7 +277,11 @@
 				`Fees:\n` +
 				`${feeInfo}\n` +
 				`Gas fees still apply (~0.01-0.05 ETH estimated)\n\n` +
-				`⚠️ IMPORTANT:\n` +
+				`⚠️ CRITICAL REQUIREMENTS:\n` +
+				`• Your network MUST support EIP-7702 (Prague upgrade)\n` +
+				`• Most public RPCs do NOT support EIP-7702 yet (2024)\n` +
+				`• Requires local testnet (Anvil/Hardhat) or dedicated EIP-7702 RPC\n` +
+				`• If you see "External EIP-7702 transactions are not supported", switch networks\n\n` +
 				`• This uses EIP-7702 for batch execution\n` +
 				`• One transaction will process all wallets\n` +
 				`• Make sure your connected wallet has enough ETH for gas\n\n` +
