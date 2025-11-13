@@ -44,6 +44,7 @@ export interface TokenSweepConfig {
 	referrer?: Address; // Optional referrer address
 	deadline?: bigint; // Signature deadline (default: 1 hour from now)
 	useTemporaryWallet?: boolean; // If true, requires multicall signature; if false, uses connected wallet
+	memberSigner?: TransactionSigner; // Member account for signing authorization (to get fee discount)
 	onProgress?: (message: string, percentage: number) => void; // Progress callback for UI updates
 }
 
@@ -181,13 +182,20 @@ export async function executeTokenSweep(
 		const authorizationList = toViemAuthorizationList(signedAuths);
 		console.log('📝 Authorization list:', authorizationList);
 
-		// 6. Generate overall multicall signature (if using temporary wallet)
-		// For connected wallets, msg.sender is verified directly by the contract
-		// For temporary wallets, signature proves authorization
+		// 6. Generate overall multicall signature
+		// This signature is used to:
+		// 1. Authorize the transaction
+		// 2. Identify the member for fee discount
+		// The contract uses ecrecover to get signer address and check membership
 		console.log('🔏 Generating multicall signature...');
+
+		// Use memberSigner if provided (for member discount), otherwise use transaction signer
+		const authSigner = config.memberSigner || signer;
+		console.log('📝 Authorization signer:', authSigner.address);
+
 		const multicallSignature =
 			config.useTemporaryWallet === true
-				? await generateMulticallSignature(signer, config)
+				? await generateMulticallSignature(authSigner, config)
 				: ('0x' as Hex); // Empty signature for connected wallet mode
 		console.log('✅ Multicall signature:', multicallSignature.slice(0, 20) + '...');
 

@@ -240,6 +240,30 @@
 			return;
 		}
 
+		// Create member signer if user is a member
+		// This allows the contract to identify the member and waive fees
+		let memberSigner: TransactionSigner | undefined;
+
+		if (membershipStatus.isMember && transactionMode === 'temporary') {
+			// User is a member - create signer from connected wallet to sign authorization
+			// This signature proves membership for fee discount
+			console.log('👑 Member detected! Creating member signer for fee discount');
+			const memberWalletClient = await connectStore.getWalletClient();
+
+			memberSigner = {
+				address: connectStore.address,
+				signMessage: async (message: string): Promise<Hex> => {
+					return await memberWalletClient.signMessage({
+						account: connectStore.address,
+						message
+					});
+				},
+				sendTransaction: async () => {
+					throw new Error('Member signer should not send transactions');
+				}
+			};
+		}
+
 		// Build TokenSweep config
 		const tokenSweepConfig: TokenSweepConfig = {
 			targetAddress: targetAddress as Address,
@@ -248,6 +272,7 @@
 			chainId: connectStore.currentChainId,
 			referrer: undefined, // Can be set if referral system is implemented
 			useTemporaryWallet: transactionMode === 'temporary', // Only temporary wallets need signature
+			memberSigner, // Member account to sign authorization (for fee discount)
 			onProgress: (message: string, percentage: number) => {
 				// Update progress in real-time
 				if (sweepProgress) {
@@ -282,7 +307,12 @@
 					`• MetaMask does NOT support EIP-7702 authorizationList\n` +
 					`• This transaction will likely FAIL\n` +
 					`• RECOMMENDED: Switch to TEMPORARY WALLET mode below\n\n`
-				: `\n✅ WALLET MODE:\n` + `• Using TEMPORARY WALLET (supports EIP-7702)\n\n`;
+				: `\n✅ WALLET MODE:\n` +
+					`• Using TEMPORARY WALLET (supports EIP-7702)\n` +
+					(membershipStatus.isMember
+						? `• 👑 MEMBER SIGNATURE: Your connected wallet will sign for fee discount\n`
+						: `• No member signature (0.005 ETH fee will be charged)\n`) +
+					`\n`;
 
 		const confirmed = confirm(
 			`🚀 Ready to execute TokenSweep via EIP-7702:\n\n` +
