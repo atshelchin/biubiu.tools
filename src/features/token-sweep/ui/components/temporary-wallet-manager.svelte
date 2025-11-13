@@ -8,9 +8,20 @@
 		clearTemporaryWallet
 	} from '@/features/token-sweep/utils/temporary-wallet';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
-	import { AlertCircle, Download, Copy, Check, Key, Loader2, QrCode, Send } from 'lucide-svelte';
+	import {
+		AlertCircle,
+		Download,
+		Copy,
+		Check,
+		Key,
+		Loader2,
+		QrCode,
+		Send,
+		Wallet
+	} from 'lucide-svelte';
 	import QRCodeGenerator from '$lib/components/ui/qr-code.svelte';
 	import type { Address, WalletClient } from 'viem';
+	import { formatEther } from 'viem';
 
 	interface Props {
 		taskId: string;
@@ -33,6 +44,8 @@
 	let showQR = $state(false);
 	let isSendingGas = $state(false);
 	let gasSendAmount = $state('');
+	let walletBalance = $state<bigint>(0n);
+	let isLoadingBalance = $state(false);
 
 	// Format gas cost for display
 	let formattedGasCost = $derived((Number(estimatedGasCost) / 1e18).toFixed(6));
@@ -42,8 +55,32 @@
 		const existingWallet = retrieveTemporaryWallet(taskId);
 		if (existingWallet) {
 			temporaryWallet = existingWallet;
+			loadWalletBalance();
 		}
 	});
+
+	// Load wallet balance when wallet or network changes
+	$effect(() => {
+		if (temporaryWallet && connectStore.publicClient) {
+			loadWalletBalance();
+		}
+	});
+
+	async function loadWalletBalance() {
+		if (!temporaryWallet || !connectStore.publicClient) return;
+
+		isLoadingBalance = true;
+		try {
+			const balance = await connectStore.publicClient.getBalance({
+				address: temporaryWallet.address as Address
+			});
+			walletBalance = balance;
+		} catch (error) {
+			console.error('Failed to load wallet balance:', error);
+		} finally {
+			isLoadingBalance = false;
+		}
+	}
 
 	function handleCreateTemporaryWallet() {
 		isCreating = true;
@@ -62,6 +99,9 @@
 			// Set suggested gas amount (estimated + 20% buffer)
 			const suggestedAmount = Number(estimatedGasCost) * 1.2;
 			gasSendAmount = (suggestedAmount / 1e18).toFixed(6);
+
+			// Load wallet balance
+			loadWalletBalance();
 
 			// Notify parent
 			if (onWalletCreated) {
@@ -139,6 +179,9 @@
 			});
 
 			alert(`Gas sent successfully!\n\nTransaction: ${hash}`);
+
+			// Reload balance after successful transfer
+			setTimeout(() => loadWalletBalance(), 2000);
 		} catch (error) {
 			console.error('Failed to send gas:', error);
 			errorMessage = error instanceof Error ? error.message : 'Failed to send gas';
@@ -227,10 +270,24 @@
 				</div>
 			</div>
 
+			<!-- Balance Display -->
+			<div class="wallet-field">
+				<label>Balance (Current Network)</label>
+				<div class="field-content balance-content">
+					{#if isLoadingBalance}
+						<Loader2 size={16} class="spinning" />
+						<span class="balance-text">Loading...</span>
+					{:else}
+						<Wallet size={16} />
+						<span class="balance-text">{formatEther(walletBalance)} {networkSymbol}</span>
+					{/if}
+				</div>
+			</div>
+
 			<!-- QR Code Display -->
 			{#if showQR}
 				<div class="qr-display">
-					<QRCodeGenerator value={temporaryWallet.address} size={200} />
+					<QRCodeGenerator data={temporaryWallet.address} size={200} />
 					<p class="qr-hint">Scan to send gas to this temporary wallet</p>
 				</div>
 			{/if}
@@ -548,6 +605,28 @@
 		font-size: var(--text-xs);
 		font-weight: var(--font-semibold);
 		text-transform: uppercase;
+	}
+
+	.balance-content {
+		background: hsla(142, 76%, 95%, 1);
+		border-color: #10b981;
+	}
+
+	:global([data-theme='dark']) .balance-content {
+		background: hsla(142, 76%, 15%, 0.3);
+		border-color: #10b981;
+	}
+
+	.balance-text {
+		flex: 1;
+		font-family: 'Courier New', monospace;
+		font-size: var(--text-base);
+		font-weight: var(--font-bold);
+		color: #10b981;
+	}
+
+	.balance-content :global(svg) {
+		color: #10b981;
 	}
 
 	.qr-display {

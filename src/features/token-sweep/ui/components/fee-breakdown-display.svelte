@@ -97,20 +97,6 @@
 			</div>
 		{/if}
 	</div>
-
-	<!-- How to Become a Member -->
-	{#if !membershipStatus.isMember}
-		<div class="membership-cta">
-			<h5>💎 Become a Member</h5>
-			<p>Enjoy unlimited free transactions with a membership!</p>
-			<ul>
-				<li>✓ No per-transaction fees</li>
-				<li>✓ Priority support</li>
-				<li>✓ Access to premium features</li>
-			</ul>
-			<button class="btn-membership">Learn More About Membership</button>
-		</div>
-	{/if}
 </div>
 
 <style>
