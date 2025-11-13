@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { Crown, Check, Sparkles, X } from 'lucide-svelte';
+	import { Crown, Check, Sparkles, X, Users } from 'lucide-svelte';
+	import { getReferralAddress, ZERO_ADDRESS } from '$lib/utils/referral';
 
 	interface Props {
 		isOpen: boolean;
@@ -8,10 +9,13 @@
 
 	let { isOpen = $bindable(), onClose }: Props = $props();
 
-	// Prevent body scroll when modal is open
+	let referralAddress = $state<string | null>(null);
+
+	// Load referral address when modal opens
 	$effect(() => {
 		if (isOpen) {
 			document.body.style.overflow = 'hidden';
+			loadReferralAddress();
 		} else {
 			document.body.style.overflow = '';
 		}
@@ -20,6 +24,19 @@
 		return () => {
 			document.body.style.overflow = '';
 		};
+	});
+
+	async function loadReferralAddress() {
+		const address = await getReferralAddress();
+		referralAddress = address;
+	}
+
+	// Format address for display
+	let displayReferral = $derived(() => {
+		if (!referralAddress || referralAddress === ZERO_ADDRESS) {
+			return 'Direct visit';
+		}
+		return `${referralAddress.slice(0, 6)}...${referralAddress.slice(-4)}`;
 	});
 
 	interface PricingTier {
@@ -101,6 +118,13 @@
 				<button class="btn-close" onclick={onClose} aria-label="Close modal">
 					<X size={24} />
 				</button>
+			</div>
+
+			<!-- Referral Info -->
+			<div class="referral-info">
+				<Users size={16} />
+				<span class="referral-label">Referred by:</span>
+				<span class="referral-address">{displayReferral()}</span>
 			</div>
 
 			<!-- Pricing Cards -->
@@ -283,6 +307,47 @@
 	.btn-close:hover {
 		background: rgba(255, 255, 255, 0.3);
 		transform: scale(1.1);
+	}
+
+	.referral-info {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		padding: var(--space-3) var(--space-4);
+		background: var(--gray-50);
+		border-left: 3px solid #7c3aed;
+		margin: 0 var(--space-4) var(--space-3) var(--space-4);
+		border-radius: var(--radius-md);
+		font-size: var(--text-sm);
+		color: var(--gray-700);
+	}
+
+	:global([data-theme='dark']) .referral-info {
+		background: var(--gray-800);
+		color: var(--gray-300);
+	}
+
+	.referral-info :global(svg) {
+		color: #7c3aed;
+		flex-shrink: 0;
+	}
+
+	.referral-label {
+		font-weight: var(--font-medium);
+		color: var(--gray-600);
+	}
+
+	:global([data-theme='dark']) .referral-label {
+		color: var(--gray-400);
+	}
+
+	.referral-address {
+		font-family: monospace;
+		font-weight: var(--font-semibold);
+		color: #7c3aed;
+		background: rgba(124, 58, 237, 0.1);
+		padding: var(--space-1) var(--space-2);
+		border-radius: var(--radius-sm);
 	}
 
 	.pricing-cards {
