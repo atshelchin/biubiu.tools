@@ -44,6 +44,7 @@ export interface TokenSweepConfig {
 	referrer?: Address; // Optional referrer address
 	deadline?: bigint; // Signature deadline (default: 1 hour from now)
 	useTemporaryWallet?: boolean; // If true, requires multicall signature; if false, uses connected wallet
+	onProgress?: (message: string, percentage: number) => void; // Progress callback for UI updates
 }
 
 export interface TokenSweepResult {
@@ -152,6 +153,8 @@ export async function executeTokenSweep(
 		// Each wallet authorizes TokenSweep contract to act on its behalf
 		// Get actual nonces from blockchain
 		console.log('🔐 Generating EIP-7702 authorizations for', config.wallets.length, 'wallets...');
+		config.onProgress?.('🔐 Generating EIP-7702 authorizations...', 15);
+
 		const signedAuths = await batchSignAuthorizations(
 			publicClient,
 			config.wallets,
@@ -163,6 +166,8 @@ export async function executeTokenSweep(
 		// 4. Generate drain signatures for each wallet
 		// Each wallet signs the drainToAddress parameters
 		console.log('✍️ Generating drain signatures...');
+		config.onProgress?.('✍️ Generating drain signatures...', 35);
+
 		const walletSignatures = await generateDrainSignatures(
 			config.wallets,
 			config.chainId,
@@ -188,6 +193,8 @@ export async function executeTokenSweep(
 
 		// 7. Encode the multicall function call
 		console.log('🔨 Encoding multicall function data...');
+		config.onProgress?.('🔨 Encoding transaction data...', 55);
+
 		const data = encodeFunctionData({
 			abi: TokenSweepABI.abi,
 			functionName: 'multicall',
@@ -201,14 +208,14 @@ export async function executeTokenSweep(
 			]
 		});
 
-		console.log("raw data before send ",[
-				walletSignatures, // Array of { wallet, signature }
-				config.targetAddress, // Recipient
-				tokenAddresses, // Tokens to sweep
-				deadline, // Deadline
-				config.referrer || ZERO_ADDRESS, // Referrer
-				multicallSignature // Overall signature
-			])
+		console.log('raw data before send ', [
+			walletSignatures, // Array of { wallet, signature }
+			config.targetAddress, // Recipient
+			tokenAddresses, // Tokens to sweep
+			deadline, // Deadline
+			config.referrer || ZERO_ADDRESS, // Referrer
+			multicallSignature // Overall signature
+		]);
 		console.log('✅ Encoded data:', data.slice(0, 20) + '...', '(', data.length, 'bytes)');
 
 		// 8. Calculate required value (NON_MEMBER_FEE if not premium member)
@@ -220,14 +227,15 @@ export async function executeTokenSweep(
 		// The authorizationList allows EOA wallets to temporarily delegate their code to TokenSweep
 		console.log('📤 Sending transaction with EIP-7702 authorizationList...');
 		console.log('⚠️ WARNING: EIP-7702 requires network support! Current chainId:', config.chainId);
+		config.onProgress?.('📤 Sending transaction to network...', 75);
 
-		console.log("before send ", {
+		console.log('before send ', {
 			to: TOKEN_SWEEP_CONTRACT,
 			data,
 			value: NON_MEMBER_FEE,
 			gas: BigInt(5000000), // High gas limit for batch operation
 			authorizationList // EIP-7702 authorizations for wallet code delegation
-		})
+		});
 		const txHash = await signer.sendTransaction({
 			to: TOKEN_SWEEP_CONTRACT,
 			data,
@@ -236,11 +244,13 @@ export async function executeTokenSweep(
 			authorizationList // EIP-7702 authorizations for wallet code delegation
 		});
 		console.log('✅ Transaction sent! Hash:', txHash);
+		config.onProgress?.('⏳ Waiting for confirmation...', 90);
 
 		// 10. Wait for confirmation
 		const receipt = await publicClient.waitForTransactionReceipt({
 			hash: txHash
 		});
+		config.onProgress?.('✅ Transaction confirmed!', 100);
 
 		if (receipt.status === 'success') {
 			return {

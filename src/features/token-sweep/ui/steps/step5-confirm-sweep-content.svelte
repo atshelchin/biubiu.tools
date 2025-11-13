@@ -247,7 +247,17 @@
 			tokens: selectedTokenObjects as (NativeToken | ERC20Token)[],
 			chainId: connectStore.currentChainId,
 			referrer: undefined, // Can be set if referral system is implemented
-			useTemporaryWallet: transactionMode === 'temporary' // Only temporary wallets need signature
+			useTemporaryWallet: transactionMode === 'temporary', // Only temporary wallets need signature
+			onProgress: (message: string, percentage: number) => {
+				// Update progress in real-time
+				if (sweepProgress) {
+					sweepProgress = {
+						...sweepProgress,
+						message,
+						percentage
+					};
+				}
+			}
 		};
 
 		// Get stats for confirmation
@@ -371,18 +381,22 @@
 		sweepProgress = null;
 
 		try {
-			// Show progress indicator
+			// Initialize progress
 			sweepProgress = {
 				phase: 'preparing',
 				currentBatch: 0,
 				totalBatches: 1,
 				currentWallet: 0,
 				totalWallets: sweepWalletCount,
-				percentage: 0,
-				message: 'Preparing EIP-7702 authorizations...',
+				percentage: 5,
+				message:
+					transactionMode === 'temporary'
+						? '🚀 Starting TokenSweep (Temporary Wallet Mode)...'
+						: '🚀 Starting TokenSweep (Connected Wallet Mode)...',
 				results: []
 			};
 
+			// Execute with real-time progress updates via callback
 			const result = await executeTokenSweep(publicClient, signer, tokenSweepConfig);
 
 			if (result.success) {
