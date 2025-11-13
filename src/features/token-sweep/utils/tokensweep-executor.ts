@@ -2,24 +2,15 @@
  * TokenSweep contract execution with EIP-7702
  * Handles batch token sweeping using the TokenSweep contract
  */
-import {
-	type Address,
-	type Hex,
-	type PublicClient,
-	encodeFunctionData,
-	parseEther,
-	keccak256,
-	toHex,
-	encodeAbiParameters
-} from 'viem';
+import { type Address, type Hex, type PublicClient, encodeFunctionData, parseEther } from 'viem';
 import type { ImportedWallet } from '../types/wallet';
 import type { ERC20Token, NativeToken } from '$lib/types/token';
 import TokenSweepABI from '../../../../static/contracts/TokenSweep.json';
 import {
 	TOKEN_SWEEP_CONTRACT,
 	batchSignAuthorizations,
-	authorizationsToWalletSignatures,
-	type WalletSignature
+	generateDrainSignatures,
+	toViemAuthorizationList
 } from './eip7702-auth';
 
 export interface TokenSweepConfig {
@@ -42,48 +33,44 @@ export interface TokenSweepResult {
 const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000' as Address;
 
 /**
+ * Convert address to hex string format (lowercase with 0x prefix)
+ * Matches contract's _toHexString(address) function
+ */
+function toHexString(address: Address): string {
+	return address.toLowerCase();
+}
+
+/**
  * Generate signature for the overall multicall authorization
  * This signature authorizes the batch operation
+ * Must match the contract's _verifyAuthorization() expected message format
  */
 async function generateMulticallSignature(
 	signer: ImportedWallet,
-	config: TokenSweepConfig,
-	wallets: WalletSignature[],
-	tokenAddresses: Address[],
-	deadline: bigint
+	config: TokenSweepConfig
 ): Promise<Hex> {
-	// Create a message hash for the multicall operation
-	// Format: keccak256(abi.encode(chainId, recipient, tokens, deadline, referrer, wallets))
-	const message = encodeAbiParameters(
-		[
-			{ name: 'chainId', type: 'uint256' },
-			{ name: 'recipient', type: 'address' },
-			{ name: 'tokens', type: 'address[]' },
-			{ name: 'deadline', type: 'uint256' },
-			{ name: 'referrer', type: 'address' },
-			{
-				name: 'wallets',
-				type: 'tuple[]',
-				components: [
-					{ name: 'wallet', type: 'address' },
-					{ name: 'signature', type: 'bytes' }
-				]
-			}
-		],
-		[
-			BigInt(config.chainId),
-			config.targetAddress,
-			tokenAddresses,
-			deadline,
-			config.referrer || ZERO_ADDRESS,
-			wallets
-		]
-	);
+	// Create human-readable message matching contract's _verifyAuthorization()
+	// Format from contract:
+	// "TokenSweep Authorization\n\n"
+	// "I authorize wallet:\n"
+	// _toHexString(caller)
+	// "\n\nto call multicall on my behalf\n\n"
+	// "Recipient address:\n"
+	// _toHexString(recipient)
+	// "\n\nChain ID: "
+	// _toString(block.chainid)
+	const message =
+		'TokenSweep Authorization\n\n' +
+		'I authorize wallet:\n' +
+		toHexString(signer.address) +
+		'\n\nto call multicall on my behalf\n\n' +
+		'Recipient address:\n' +
+		toHexString(config.targetAddress) +
+		'\n\nChain ID: ' +
+		config.chainId.toString();
 
-	const messageHash = keccak256(message);
-
-	// Sign with the connected wallet (the one paying for gas and authorizing the batch)
-	const signature = await signer.signMessage(messageHash);
+	// Sign the message (viem will handle the keccak256 hashing)
+	const signature = await signer.signMessage(message);
 
 	return signature as Hex;
 }
@@ -117,26 +104,32 @@ export async function executeTokenSweep(
 
 		// 3. Generate EIP-7702 authorizations for all wallets
 		// Each wallet authorizes TokenSweep contract to act on its behalf
+		// Get actual nonces from blockchain
 		const signedAuths = await batchSignAuthorizations(
+			publicClient,
 			config.wallets,
 			TOKEN_SWEEP_CONTRACT,
 			config.chainId
 		);
 
-		// 4. Convert to contract format
-		const walletSignatures = authorizationsToWalletSignatures(config.wallets, signedAuths);
-
-		// 5. Generate overall multicall signature
-		// This authorizes the entire batch operation
-		const multicallSignature = await generateMulticallSignature(
-			signer,
-			config,
-			walletSignatures,
+		// 4. Generate drain signatures for each wallet
+		// Each wallet signs the drainToAddress parameters
+		const walletSignatures = await generateDrainSignatures(
+			config.wallets,
+			config.chainId,
+			config.targetAddress,
 			tokenAddresses,
 			deadline
 		);
 
-		// 6. Encode the multicall function call
+		// 5. Convert to viem's authorizationList format for EIP-7702 transaction
+		const authorizationList = toViemAuthorizationList(signedAuths);
+
+		// 6. Generate overall multicall signature
+		// This authorizes the entire batch operation
+		const multicallSignature = await generateMulticallSignature(signer, config);
+
+		// 7. Encode the multicall function call
 		const data = encodeFunctionData({
 			abi: TokenSweepABI.abi,
 			functionName: 'multicall',
@@ -150,19 +143,21 @@ export async function executeTokenSweep(
 			]
 		});
 
-		// 7. Calculate required value (NON_MEMBER_FEE if not premium member)
+		// 8. Calculate required value (NON_MEMBER_FEE if not premium member)
 		// For now, we always send the fee. The contract will refund if user is premium.
 		const NON_MEMBER_FEE = parseEther('0.005'); // 0.005 ETH
 
-		// 8. Send transaction
+		// 9. Send transaction with EIP-7702 authorizationList
+		// The authorizationList allows EOA wallets to temporarily delegate their code to TokenSweep
 		const txHash = await signer.sendTransaction({
 			to: TOKEN_SWEEP_CONTRACT,
 			data,
 			value: NON_MEMBER_FEE,
-			gas: BigInt(5000000) // High gas limit for batch operation
+			gas: BigInt(5000000), // High gas limit for batch operation
+			authorizationList // EIP-7702 authorizations for wallet code delegation
 		});
 
-		// 9. Wait for confirmation
+		// 10. Wait for confirmation
 		const receipt = await publicClient.waitForTransactionReceipt({
 			hash: txHash
 		});

@@ -2,100 +2,72 @@
  * EIP-7702 Authorization utilities for TokenSweep
  * https://eips.ethereum.org/EIPS/eip-7702
  */
-import {
-	type Address,
-	type Hex,
-	keccak256,
-	encodeAbiParameters,
-	parseAbiParameters,
-	signatureToHex,
-	hexToSignature,
-	concat
-} from 'viem';
+import { type Address, type Hex, type PublicClient, keccak256, encodeAbiParameters } from 'viem';
+import type { SignedAuthorizationList } from 'viem';
 import type { ImportedWallet } from '../types/wallet';
 import { walletKeysStore } from '../stores/wallet-keys-store.svelte';
 
 export const TOKEN_SWEEP_CONTRACT = '0x28ab612a3a871EA203aDff9a7b0846C395529239' as Address;
 
 /**
- * EIP-7702 Authorization structure
+ * EIP-7702 Authorization tuple structure for viem
  */
-export interface EIP7702Authorization {
-	chainId: bigint;
+export interface EIP7702AuthorizationTuple {
+	chainId: number;
 	address: Address; // Contract address to delegate to
-	nonce: bigint; // Wallet nonce
+	nonce: number; // Wallet nonce
+	r: Hex;
+	s: Hex;
+	yParity: number;
 }
 
 /**
- * Signed authorization with signature
- */
-export interface SignedAuthorization {
-	authorization: EIP7702Authorization;
-	signature: Hex;
-}
-
-/**
- * Generate EIP-7702 authorization hash
- * The authorization allows a wallet to temporarily delegate its code to a contract
- */
-export function getAuthorizationHash(auth: EIP7702Authorization): Hex {
-	// EIP-7702 magic = 0x05
-	const magic = '0x05' as Hex;
-
-	// Encode: magic || rlp([chainId, address, nonce])
-	// For simplicity, we use ABI encoding instead of RLP
-	const encoded = encodeAbiParameters(
-		parseAbiParameters('uint256 chainId, address contractAddress, uint256 nonce'),
-		[auth.chainId, auth.address, auth.nonce]
-	);
-
-	const data = concat([magic, encoded]);
-	return keccak256(data);
-}
-
-/**
- * Sign EIP-7702 authorization
- * This signature proves the wallet owner authorizes the code delegation
+ * Sign EIP-7702 authorization using viem's native signAuthorization method
+ * This properly creates the authorization signature according to EIP-7702
  */
 export async function signAuthorization(
 	wallet: ImportedWallet,
 	contractAddress: Address,
 	chainId: number,
-	nonce: bigint
-): Promise<SignedAuthorization> {
-	const authorization: EIP7702Authorization = {
-		chainId: BigInt(chainId),
-		address: contractAddress,
+	nonce: number
+): Promise<EIP7702AuthorizationTuple> {
+	// Get the viem account from stored private key
+	const account = walletKeysStore.getAccount(wallet.address);
+
+	// Use viem's native signAuthorization method
+	const authorization = await account.signAuthorization({
+		contractAddress,
+		chainId,
 		nonce
-	};
-
-	const hash = getAuthorizationHash(authorization);
-
-	// Sign the authorization hash with wallet's private key from the keys store
-	const signature = await walletKeysStore.signMessage(wallet.address, hash);
+	});
 
 	return {
-		authorization,
-		signature: signature as Hex
+		chainId,
+		nonce: Number(authorization.nonce),
+		address: contractAddress,
+		r: authorization.r,
+		s: authorization.s,
+		yParity: authorization.yParity || 0
 	};
 }
 
 /**
  * Batch sign authorizations for multiple wallets
+ * Each wallet gets its actual nonce from the blockchain
  */
 export async function batchSignAuthorizations(
+	publicClient: PublicClient,
 	wallets: ImportedWallet[],
 	contractAddress: Address,
-	chainId: number,
-	startNonce: bigint = 0n
-): Promise<SignedAuthorization[]> {
-	const authorizations: SignedAuthorization[] = [];
+	chainId: number
+): Promise<EIP7702AuthorizationTuple[]> {
+	const authorizations: EIP7702AuthorizationTuple[] = [];
 
-	for (let i = 0; i < wallets.length; i++) {
-		const wallet = wallets[i];
-		const nonce = startNonce + BigInt(i);
+	for (const wallet of wallets) {
+		// Get the actual nonce from the blockchain for this wallet
+		const nonce = await publicClient.getTransactionCount({ address: wallet.address });
 
-		const signedAuth = await signAuthorization(wallet, contractAddress, chainId, nonce);
+		const signedAuth = await signAuthorization(wallet, contractAddress, chainId, Number(nonce));
 		authorizations.push(signedAuth);
 	}
 
@@ -103,33 +75,90 @@ export async function batchSignAuthorizations(
 }
 
 /**
- * Convert signed authorization to contract format
- * Format: { wallet: address, signature: bytes }
+ * Wallet signature structure for contract multicall
+ * Format: { wallet: address, v: uint8, r: bytes32, s: bytes32 }
  */
 export interface WalletSignature {
 	wallet: Address;
-	signature: Hex;
-}
-
-export function authorizationToWalletSignature(
-	walletAddress: Address,
-	signedAuth: SignedAuthorization
-): WalletSignature {
-	return {
-		wallet: walletAddress,
-		signature: signedAuth.signature
-	};
+	v: number;
+	r: Hex;
+	s: Hex;
 }
 
 /**
- * Batch convert authorizations to wallet signatures for contract call
+ * Generate drainToAddress signature for a single wallet
+ * Signs: keccak256(abi.encode(chainId, address(this), recipient, tokens, deadline))
  */
-export function authorizationsToWalletSignatures(
+async function generateDrainSignature(
+	wallet: ImportedWallet,
+	chainId: number,
+	recipient: Address,
+	tokens: Address[],
+	deadline: bigint
+): Promise<{ v: number; r: Hex; s: Hex }> {
+	const account = walletKeysStore.getAccount(wallet.address);
+
+	// Build message hash matching contract's _verifyDrainSignature
+	// keccak256(abi.encode(chainId, address(this), recipient, tokens, deadline))
+	const messageHash = keccak256(
+		encodeAbiParameters(
+			[
+				{ type: 'uint256', name: 'chainId' },
+				{ type: 'address', name: 'addressThis' },
+				{ type: 'address', name: 'recipient' },
+				{ type: 'address[]', name: 'tokens' },
+				{ type: 'uint256', name: 'deadline' }
+			],
+			[BigInt(chainId), wallet.address, recipient, tokens, deadline]
+		)
+	);
+
+	// Sign the message hash
+	const signature = await account.signMessage({
+		message: { raw: messageHash }
+	});
+
+	// Parse signature components
+	const r = `0x${signature.slice(2, 66)}` as Hex;
+	const s = `0x${signature.slice(66, 130)}` as Hex;
+	const v = parseInt(signature.slice(130, 132), 16);
+
+	return { v, r, s };
+}
+
+/**
+ * Generate drainToAddress signatures for all wallets
+ * Each wallet signs the drain operation parameters
+ */
+export async function generateDrainSignatures(
 	wallets: ImportedWallet[],
-	signedAuths: SignedAuthorization[]
-): WalletSignature[] {
-	return wallets.map((wallet, i) => ({
-		wallet: wallet.address,
-		signature: signedAuths[i].signature
-	}));
+	chainId: number,
+	recipient: Address,
+	tokens: Address[],
+	deadline: bigint
+): Promise<WalletSignature[]> {
+	const signatures: WalletSignature[] = [];
+
+	for (const wallet of wallets) {
+		const { v, r, s } = await generateDrainSignature(wallet, chainId, recipient, tokens, deadline);
+
+		signatures.push({
+			wallet: wallet.address,
+			v,
+			r,
+			s
+		});
+	}
+
+	return signatures;
+}
+
+/**
+ * Convert EIP-7702 authorization tuples to viem's SignedAuthorizationList format
+ * This is used in the authorizationList field of sendTransaction for EIP-7702
+ */
+export function toViemAuthorizationList(
+	authorizations: EIP7702AuthorizationTuple[]
+): SignedAuthorizationList {
+	return authorizations as SignedAuthorizationList;
 }
