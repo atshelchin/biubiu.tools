@@ -313,41 +313,42 @@
 		display: flex;
 		align-items: center;
 		gap: var(--space-2);
-		padding: var(--space-3) var(--space-4);
-		background: var(--gray-50);
-		border-left: 3px solid #7c3aed;
-		margin: 0 var(--space-4) var(--space-3) var(--space-4);
-		border-radius: var(--radius-md);
-		font-size: var(--text-sm);
-		color: var(--gray-700);
+		padding: var(--space-2) var(--space-4);
+		background: transparent;
+		margin: 0 var(--space-4) var(--space-2) var(--space-4);
+		font-size: var(--text-xs);
+		color: var(--gray-500);
+		justify-content: flex-end;
 	}
 
 	:global([data-theme='dark']) .referral-info {
-		background: var(--gray-800);
-		color: var(--gray-300);
+		color: var(--gray-500);
 	}
 
 	.referral-info :global(svg) {
-		color: #7c3aed;
+		color: var(--gray-400);
 		flex-shrink: 0;
+		width: 14px;
+		height: 14px;
 	}
 
 	.referral-label {
-		font-weight: var(--font-medium);
-		color: var(--gray-600);
+		font-weight: var(--font-normal);
+		color: var(--gray-500);
 	}
 
 	:global([data-theme='dark']) .referral-label {
-		color: var(--gray-400);
+		color: var(--gray-500);
 	}
 
 	.referral-address {
 		font-family: monospace;
-		font-weight: var(--font-semibold);
-		color: #7c3aed;
-		background: rgba(124, 58, 237, 0.1);
-		padding: var(--space-1) var(--space-2);
-		border-radius: var(--radius-sm);
+		font-weight: var(--font-normal);
+		color: var(--gray-600);
+	}
+
+	:global([data-theme='dark']) .referral-address {
+		color: var(--gray-400);
 	}
 
 	.pricing-cards {

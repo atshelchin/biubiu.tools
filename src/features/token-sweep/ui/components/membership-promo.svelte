@@ -56,7 +56,7 @@
 
 		<div class="benefit-highlight">
 			<Zap size={16} />
-			<span>Unlock all tools across the platform for free!</span>
+			<span>Unlock all tools for free!</span>
 		</div>
 
 		<button class="btn-upgrade" onclick={handleUpgradeClick}>
