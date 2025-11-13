@@ -3,7 +3,7 @@
 	import { getReferralAddress, ZERO_ADDRESS } from '$lib/utils/referral';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import Modal from '$lib/components/ui/modal.svelte';
-	import { type Address, parseEther } from 'viem';
+	import { type Address, parseEther, encodeFunctionData } from 'viem';
 	import BiuBiuPremiumABI from '../../../../../static/contracts/BiuBiuPremium.json';
 
 	interface Props {
@@ -182,15 +182,18 @@
 			// Calculate price in wei
 			const priceInWei = parseEther(tier.price.toString());
 
+			// Encode function data
+			const data = encodeFunctionData({
+				abi: BiuBiuPremiumABI.abi,
+				functionName: 'subscribe',
+				args: [tierEnum, referrer]
+			});
+
 			// Call subscribe function
 			const hash = await connectStore.sendTransaction({
 				to: BIUBIU_PREMIUM_CONTRACT,
 				value: priceInWei,
-				data: await connectStore.publicClient!.encodeFunctionData({
-					abi: BiuBiuPremiumABI.abi,
-					functionName: 'subscribe',
-					args: [tierEnum, referrer]
-				}),
+				data,
 				gas: BigInt(200000) // Estimated gas for subscribe
 			});
 
