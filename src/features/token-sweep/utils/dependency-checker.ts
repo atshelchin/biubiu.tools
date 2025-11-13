@@ -20,7 +20,11 @@ export const KNOWN_CONTRACTS = {
 
 	// Multicall3 (custom deployment address for this project)
 	// https://github.com/mds1/multicall/blob/main/src/Multicall3.sol
-	MULTICALL3: '0x2055A30B00555e7cAd48b1756eac4f917781489b' as Address
+	MULTICALL3: '0x2055A30B00555e7cAd48b1756eac4f917781489b' as Address,
+
+	// BiuBiuPremium (membership management contract)
+	// https://github.com/atshelchin/biubiu-contracts
+	BIUBIU_PREMIUM: '0xc5c4bb399938625523250B708dc5c1e7dE4b1626' as Address
 } as const;
 
 /**
@@ -270,6 +274,22 @@ export async function checkMulticall3(rpcUrl: string): Promise<ContractCheck> {
 }
 
 /**
+ * Check BiuBiuPremium deployment
+ */
+export async function checkBiuBiuPremium(rpcUrl: string): Promise<ContractCheck> {
+	return checkContractDeployment(
+		rpcUrl,
+		KNOWN_CONTRACTS.BIUBIU_PREMIUM,
+		'BiuBiuPremium',
+		'Premium membership management contract',
+		{
+			canDeploy: true,
+			deployGuideUrl: 'https://github.com/atshelchin/biubiu-contracts'
+		}
+	);
+}
+
+/**
  * Check biubiu membership contract
  */
 export async function checkBiubiuMembership(
@@ -346,13 +366,17 @@ export async function checkAllDependencies(
 	const multicallCheck = await checkMulticall3(rpcUrl);
 	checks.push(multicallCheck);
 
-	// 5. Check Biubiu Membership (if address provided)
+	// 5. Check BiuBiuPremium
+	const biubiuPremiumCheck = await checkBiuBiuPremium(rpcUrl);
+	checks.push(biubiuPremiumCheck);
+
+	// 6. Check Biubiu Membership (if address provided)
 	if (membershipContractAddress) {
 		const membershipCheck = await checkBiubiuMembership(rpcUrl, membershipContractAddress);
 		checks.push(membershipCheck);
 	}
 
-	// 6. Check Token Sweep Contract (if address provided)
+	// 7. Check Token Sweep Contract (if address provided)
 	if (sweepContractAddress) {
 		const sweepCheck = await checkTokenSweepContract(rpcUrl, sweepContractAddress);
 		checks.push(sweepCheck);
