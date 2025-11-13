@@ -300,6 +300,16 @@
 			? 'As a premium member, you will not be charged tool fees.'
 			: 'Non-member fee: 0.005 ETH (refunded for premium members)';
 
+		const signatureSteps =
+			transactionMode === 'temporary' && membershipStatus.isMember
+				? `\n📝 SIGNATURES YOU WILL NEED TO APPROVE:\n` +
+					`1. Member Authorization (MetaMask) - Proves membership for fee discount\n` +
+					`2. Transaction Submission (Temporary Wallet) - Sends the actual transaction\n\n`
+				: transactionMode === 'temporary'
+					? `\n📝 SIGNATURES YOU WILL NEED TO APPROVE:\n` +
+						`1. Transaction Submission (Temporary Wallet) - Sends the transaction\n\n`
+					: ``;
+
 		const modeWarning =
 			transactionMode === 'connected'
 				? `\n⚠️ WALLET MODE WARNING:\n` +
@@ -310,8 +320,8 @@
 				: `\n✅ WALLET MODE:\n` +
 					`• Using TEMPORARY WALLET (supports EIP-7702)\n` +
 					(membershipStatus.isMember
-						? `• 👑 MEMBER SIGNATURE: Your connected wallet will sign for fee discount\n`
-						: `• No member signature (0.005 ETH fee will be charged)\n`) +
+						? `• 👑 MEMBER: Your connected wallet will sign authorization for fee discount\n`
+						: `• NON-MEMBER: 0.005 ETH tool fee will be charged\n`) +
 					`\n`;
 
 		const confirmed = confirm(
@@ -326,6 +336,7 @@
 				`Fees:\n` +
 				`${feeInfo}\n` +
 				`Gas fees still apply (~0.01-0.05 ETH estimated)\n` +
+				signatureSteps +
 				modeWarning +
 				`⚠️ NETWORK REQUIREMENTS:\n` +
 				`• Your network MUST support EIP-7702 (Prague upgrade)\n` +

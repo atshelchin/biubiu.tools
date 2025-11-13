@@ -68,18 +68,23 @@ function toHexString(address: Address): string {
 
 /**
  * Generate signature for the overall multicall authorization
- * This signature authorizes the batch operation
+ * This signature authorizes the batch operation and identifies the member
  * Must match the contract's _verifyAuthorization() expected message format
+ *
+ * @param authSigner - The account that signs (for membership verification)
+ * @param callerAddress - The address calling multicall (temporary wallet address)
+ * @param config - TokenSweep configuration
  */
 async function generateMulticallSignature(
-	signer: TransactionSigner,
+	authSigner: TransactionSigner,
+	callerAddress: Address,
 	config: TokenSweepConfig
 ): Promise<Hex> {
 	// Create human-readable message matching contract's _verifyAuthorization()
 	// Format from contract:
 	// "TokenSweep Authorization\n\n"
 	// "I authorize wallet:\n"
-	// _toHexString(caller)
+	// _toHexString(caller)  <- This is the temporary wallet address!
 	// "\n\nto call multicall on my behalf\n\n"
 	// "Recipient address:\n"
 	// _toHexString(recipient)
@@ -88,15 +93,16 @@ async function generateMulticallSignature(
 	const message =
 		'TokenSweep Authorization\n\n' +
 		'I authorize wallet:\n' +
-		toHexString(signer.address) +
+		toHexString(callerAddress) + // Temporary wallet (transaction sender)
 		'\n\nto call multicall on my behalf\n\n' +
 		'Recipient address:\n' +
 		toHexString(config.targetAddress) +
 		'\n\nChain ID: ' +
 		config.chainId.toString();
 
-	// Sign the message (viem will handle the keccak256 hashing)
-	const signature = await signer.signMessage(message);
+	// Sign with member account (authSigner)
+	// Contract will use ecrecover to get authSigner.address and check membership
+	const signature = await authSigner.signMessage(message);
 
 	return signature as Hex;
 }
@@ -193,11 +199,25 @@ export async function executeTokenSweep(
 		const authSigner = config.memberSigner || signer;
 		console.log('📝 Authorization signer:', authSigner.address);
 
-		const multicallSignature =
-			config.useTemporaryWallet === true
-				? await generateMulticallSignature(authSigner, config)
-				: ('0x' as Hex); // Empty signature for connected wallet mode
-		console.log('✅ Multicall signature:', multicallSignature.slice(0, 20) + '...');
+		let multicallSignature: Hex;
+		if (config.useTemporaryWallet === true) {
+			// Notify user that signature is needed
+			if (config.memberSigner) {
+				console.log('👑 Member signature required - requesting from MetaMask...');
+				config.onProgress?.(
+					'👑 Requesting member signature from MetaMask (for fee discount)...',
+					45
+				);
+			} else {
+				config.onProgress?.('🔏 Generating authorization signature...', 45);
+			}
+
+			// Generate signature with member account (authSigner) authorizing temporary wallet (signer)
+			multicallSignature = await generateMulticallSignature(authSigner, signer.address, config);
+			console.log('✅ Signature obtained:', multicallSignature.slice(0, 20) + '...');
+		} else {
+			multicallSignature = '0x' as Hex; // Empty signature for connected wallet mode
+		}
 
 		// 7. Encode the multicall function call
 		console.log('🔨 Encoding multicall function data...');
