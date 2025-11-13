@@ -136,30 +136,35 @@
 						class:popular={tier.popular}
 						onclick={() => handleSelectTier(tier.id)}
 					>
-						{#if tier.popular}
-							<div class="popular-badge">
-								<Sparkles size={14} />
-								<span>Most Popular</span>
+						<div class="card-left">
+							<div class="tier-name">
+								<h3>{tier.name}</h3>
+								{#if tier.popular}
+									<span class="popular-badge">
+										<Sparkles size={12} />
+										<span>Popular</span>
+									</span>
+								{/if}
 							</div>
-						{/if}
-
-						{#if tier.savings}
-							<div class="savings-badge">{tier.savings}</div>
-						{/if}
-
-						<h3>{tier.name}</h3>
-						<div class="price">
-							<span class="price-value">{tier.price} COIN</span>
-							<span class="price-period">/{tier.days} days</span>
-						</div>
-						<div class="price-detail">
-							{tier.pricePerDay.toFixed(5)} COIN per day
+							<div class="tier-days">{tier.days} days</div>
 						</div>
 
-						<div class="checkmark">
-							{#if selectedTier === tier.id}
-								<Check size={20} />
+						<div class="card-center">
+							<div class="price">
+								<span class="price-value">{tier.price} COIN</span>
+							</div>
+							<div class="price-detail">{tier.pricePerDay.toFixed(5)} COIN/day</div>
+						</div>
+
+						<div class="card-right">
+							{#if tier.savings}
+								<div class="savings-badge">{tier.savings}</div>
 							{/if}
+							<div class="checkmark">
+								{#if selectedTier === tier.id}
+									<Check size={18} />
+								{/if}
+							</div>
 						</div>
 					</button>
 				{/each}
@@ -352,27 +357,24 @@
 	}
 
 	.pricing-cards {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		display: flex;
+		flex-direction: column;
 		gap: var(--space-3);
 		padding: var(--space-4);
 	}
 
-	@media (max-width: 768px) {
-		.pricing-cards {
-			grid-template-columns: 1fr;
-		}
-	}
-
 	.pricing-card {
 		position: relative;
-		padding: var(--space-4);
+		display: flex;
+		align-items: center;
+		gap: var(--space-4);
+		padding: var(--space-3) var(--space-4);
 		background: var(--gray-50);
 		border: 2px solid transparent;
 		border-radius: var(--radius-lg);
 		cursor: pointer;
 		transition: all 0.3s;
-		text-align: center;
+		text-align: left;
 	}
 
 	:global([data-theme='dark']) .pricing-card {
@@ -402,89 +404,107 @@
 		border-color: #7c3aed;
 	}
 
-	.popular-badge {
-		position: absolute;
-		top: -12px;
-		left: 50%;
-		transform: translateX(-50%);
+	.card-left {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-1);
+	}
+
+	.tier-name {
 		display: flex;
 		align-items: center;
-		gap: var(--space-1);
-		padding: var(--space-1) var(--space-3);
-		background: linear-gradient(135deg, #f59e0b, #d97706);
-		color: white;
-		font-size: var(--text-xs);
-		font-weight: var(--font-bold);
-		border-radius: var(--radius-full);
-		text-transform: uppercase;
-		box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+		gap: var(--space-2);
 	}
 
-	.savings-badge {
-		position: absolute;
-		top: var(--space-3);
-		right: var(--space-3);
-		padding: var(--space-1) var(--space-2);
-		background: #10b981;
-		color: white;
-		font-size: var(--text-xs);
-		font-weight: var(--font-bold);
-		border-radius: var(--radius-sm);
-	}
-
-	.pricing-card h3 {
-		margin: 0 0 var(--space-2) 0;
-		font-size: var(--text-lg);
+	.tier-name h3 {
+		margin: 0;
+		font-size: var(--text-base);
 		font-weight: var(--font-bold);
 		color: var(--gray-800);
 	}
 
-	:global([data-theme='dark']) .pricing-card h3 {
+	:global([data-theme='dark']) .tier-name h3 {
 		color: var(--gray-100);
 	}
 
-	.price {
-		margin-bottom: var(--space-1);
+	.popular-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--space-1);
+		padding: 2px var(--space-2);
+		background: linear-gradient(135deg, #f59e0b, #d97706);
+		color: white;
+		font-size: 10px;
+		font-weight: var(--font-bold);
+		border-radius: var(--radius-full);
+		white-space: nowrap;
+	}
+
+	.tier-days {
+		font-size: var(--text-xs);
+		color: var(--gray-600);
+	}
+
+	:global([data-theme='dark']) .tier-days {
+		color: var(--gray-400);
+	}
+
+	.card-center {
+		flex: 0 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 2px;
 	}
 
 	.price-value {
-		font-size: var(--text-2xl);
+		font-size: var(--text-xl);
 		font-weight: var(--font-bold);
 		color: #7c3aed;
 		line-height: 1;
-	}
-
-	.price-period {
-		font-size: var(--text-xs);
-		color: var(--gray-600);
-		margin-left: var(--space-1);
-	}
-
-	:global([data-theme='dark']) .price-period {
-		color: var(--gray-400);
+		white-space: nowrap;
 	}
 
 	.price-detail {
-		font-size: var(--text-xs);
-		color: var(--gray-600);
-		margin-bottom: var(--space-2);
+		font-size: 10px;
+		color: var(--gray-500);
+		white-space: nowrap;
 	}
 
 	:global([data-theme='dark']) .price-detail {
-		color: var(--gray-400);
+		color: var(--gray-500);
+	}
+
+	.card-right {
+		flex: 0 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--space-2);
+	}
+
+	.savings-badge {
+		padding: 2px var(--space-2);
+		background: #10b981;
+		color: white;
+		font-size: 10px;
+		font-weight: var(--font-bold);
+		border-radius: var(--radius-sm);
+		white-space: nowrap;
 	}
 
 	.checkmark {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 32px;
-		height: 32px;
-		margin: 0 auto;
+		width: 28px;
+		height: 28px;
 		border: 2px solid var(--gray-300);
 		border-radius: 50%;
 		color: transparent;
 		transition: all 0.2s;
+		flex-shrink: 0;
 	}
 
 	.checkmark :global(svg) {
