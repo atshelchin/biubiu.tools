@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Crown, Zap } from 'lucide-svelte';
+	import MembershipUpgradeModal from './membership-upgrade-modal.svelte';
 
 	interface Props {
 		/**
@@ -23,9 +24,14 @@
 	// If currentPrice is not provided, show generic text
 	let displayPrice = $derived(currentPrice || 'Pay per use');
 
-	function handleLearnMore() {
-		// TODO: Link to membership page or modal
-		alert('Membership feature coming soon!');
+	let showModal = $state(false);
+
+	function handleUpgradeClick() {
+		showModal = true;
+	}
+
+	function handleCloseModal() {
+		showModal = false;
 	}
 </script>
 
@@ -53,12 +59,14 @@
 			<span>Unlock all tools across the platform for free!</span>
 		</div>
 
-		<button class="btn-upgrade" onclick={handleLearnMore}>
+		<button class="btn-upgrade" onclick={handleUpgradeClick}>
 			<Crown size={16} />
 			<span>Upgrade Now</span>
 		</button>
 	</div>
 </div>
+
+<MembershipUpgradeModal isOpen={showModal} onClose={handleCloseModal} />
 
 <style>
 	.membership-promo {
