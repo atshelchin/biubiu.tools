@@ -23,7 +23,7 @@
 	} from '@/features/token-sweep/types/fee';
 	import { createPublicClient, http } from 'viem';
 	import type { Address } from 'viem';
-	import { AlertCircle, CheckCircle2, Loader2, Info } from 'lucide-svelte';
+	import { AlertCircle, CheckCircle2, Loader2 } from 'lucide-svelte';
 	import { fade, slide } from 'svelte/transition';
 	import type { Token, NativeToken, ERC20Token } from '$lib/types/token';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
@@ -330,27 +330,6 @@
 		description="Review your configuration and execute the asset sweep"
 	/>
 
-	<!-- Fee Rules Explanation -->
-	<div class="info-banner">
-		<Info size={20} />
-		<div>
-			<h4>💰 How Pricing Works</h4>
-			<div class="pricing-grid">
-				<div class="pricing-option">
-					<strong>Non-Member</strong>
-					<p>Pay 0.0025 {currentNetwork?.symbol || 'native coin'} per transaction</p>
-				</div>
-				<div class="pricing-option member">
-					<strong>Member</strong>
-					<p>Free unlimited transactions</p>
-				</div>
-			</div>
-			<p class="pricing-note">
-				Membership is verified via your connected wallet or signature. Gas fees always apply.
-			</p>
-		</div>
-	</div>
-
 	<!-- Transaction Mode Selector -->
 	<TransactionModeSelector mode={transactionMode} onModeChange={handleModeChange} />
 
@@ -537,81 +516,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-4);
-	}
-
-	.info-banner {
-		display: flex;
-		gap: var(--space-3);
-		padding: var(--space-4);
-		background: linear-gradient(135deg, #eff6ff, #dbeafe);
-		border: 2px solid #3b82f6;
-		border-radius: var(--radius-lg);
-		color: #1e40af;
-	}
-
-	:global([data-theme='dark']) .info-banner {
-		background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.15));
-		border-color: #3b82f6;
-		color: #93c5fd;
-	}
-
-	.info-banner h4 {
-		margin: 0 0 var(--space-3) 0;
-		font-size: var(--text-lg);
-		font-weight: var(--font-bold);
-	}
-
-	.pricing-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: var(--space-3);
-		margin: var(--space-3) 0;
-	}
-
-	@media (max-width: 640px) {
-		.pricing-grid {
-			grid-template-columns: 1fr;
-		}
-	}
-
-	.pricing-option {
-		padding: var(--space-3);
-		background: white;
-		border: 2px solid #e5e7eb;
-		border-radius: var(--radius-md);
-	}
-
-	.pricing-option.member {
-		border-color: #10b981;
-		background: #f0fdf4;
-	}
-
-	:global([data-theme='dark']) .pricing-option {
-		background: var(--gray-800);
-		border-color: var(--gray-700);
-	}
-
-	:global([data-theme='dark']) .pricing-option.member {
-		background: rgba(16, 185, 129, 0.1);
-		border-color: #10b981;
-	}
-
-	.pricing-option strong {
-		display: block;
-		margin-bottom: var(--space-1);
-		font-size: var(--text-base);
-	}
-
-	.pricing-option p {
-		margin: 0;
-		font-size: var(--text-sm);
-		opacity: 0.9;
-	}
-
-	.pricing-note {
-		margin: var(--space-2) 0 0 0;
-		font-size: var(--text-sm);
-		opacity: 0.85;
 	}
 
 	.form-hint {
