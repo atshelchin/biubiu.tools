@@ -12,8 +12,14 @@
 
 	const connectStore = useConnectStore();
 
+	// Current network
+	let currentNetwork = $derived.by(() => {
+		if (!connectStore.currentChainId) return null;
+		return connectStore.networks.find((n) => n.chainId === connectStore.currentChainId);
+	});
+
 	// Get current network symbol
-	let networkSymbol = $derived(connectStore.currentNetwork?.symbol || 'COIN');
+	let networkSymbol = $derived(currentNetwork?.symbol || 'COIN');
 
 	let referralAddress = $state<string | null>(null);
 
@@ -196,9 +202,8 @@
 					<span>Purchase Premium Access</span>
 				</button>
 				<p class="footer-note">
-					⚠️ Membership valid on <strong
-						>{connectStore.currentNetwork?.name || 'current network'}</strong
-					> only • Switch networks requires new purchase
+					⚠️ Membership valid on <strong>{currentNetwork?.name || 'current network'}</strong> only •
+					Switch networks requires new purchase
 				</p>
 			</div>
 		</div>
