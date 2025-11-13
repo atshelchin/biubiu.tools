@@ -3,6 +3,9 @@
 	import { step4State } from '@/features/token-sweep/stores/step4-state.svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import TokenListDisplay from '@/features/token-sweep/ui/components/token-list-display.svelte';
+	import TransactionModeSelector from '@/features/token-sweep/ui/components/transaction-mode-selector.svelte';
+	import FeeBreakdownDisplay from '@/features/token-sweep/ui/components/fee-breakdown-display.svelte';
+	import TemporaryWalletManager from '@/features/token-sweep/ui/components/temporary-wallet-manager.svelte';
 	import {
 		executeSweep,
 		estimateSweep,
@@ -11,9 +14,16 @@
 		type SweepConfig,
 		type SweepProgress
 	} from '@/features/token-sweep/utils/sweep-executor';
+	import { checkMembership, calculateFeeBreakdown } from '@/features/token-sweep/utils/membership';
+	import type {
+		TransactionMode,
+		MembershipStatus,
+		FeeBreakdown,
+		TemporaryWallet
+	} from '@/features/token-sweep/types/fee';
 	import { createPublicClient, http } from 'viem';
 	import type { Address } from 'viem';
-	import { AlertCircle, CheckCircle2, Loader2 } from 'lucide-svelte';
+	import { AlertCircle, CheckCircle2, Loader2, Info } from 'lucide-svelte';
 	import { fade, slide } from 'svelte/transition';
 	import type { Token, NativeToken, ERC20Token } from '$lib/types/token';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
@@ -29,6 +39,13 @@
 		estimatedGas: bigint;
 		estimatedCost: bigint;
 	} | null>(null);
+
+	// New state for transaction mode and fees
+	let transactionMode = $state<TransactionMode>('connected');
+	let membershipStatus = $state<MembershipStatus>({ isMember: false });
+	let feeBreakdown = $state<FeeBreakdown | null>(null);
+	let temporaryWallet = $state<TemporaryWallet | null>(null);
+	let taskId = $state(`task-${Date.now()}`); // Generate unique task ID
 
 	const connectStore = useConnectStore();
 
@@ -59,11 +76,70 @@
 	let walletWithBalanceCount = $derived(walletsWithBalance.length);
 	let batchCount = $derived(Math.ceil(walletCount / 100));
 	let isValid = $derived(
-		targetAddress.match(/^0x[a-fA-F0-9]{40}$/) && selectedTokenCount > 0 && walletCount > 0
+		targetAddress.match(/^0x[a-fA-F0-9]{40}$/) &&
+			selectedTokenCount > 0 &&
+			walletCount > 0 &&
+			(transactionMode === 'connected' || temporaryWallet !== null)
 	);
 
 	// Option to only sweep wallets with balance
 	let onlyWithBalance = $state(false);
+
+	// Check membership when address changes
+	$effect(() => {
+		if (connectStore.currentAddress) {
+			checkMembershipStatus();
+		}
+	});
+
+	// Calculate fees when relevant data changes
+	$effect(() => {
+		if (batchCount > 0 && membershipStatus) {
+			calculateFees();
+		}
+	});
+
+	async function checkMembershipStatus() {
+		if (!connectStore.currentAddress) return;
+
+		const status = await checkMembership(
+			connectStore.currentAddress,
+			taskId,
+			temporaryWallet?.signature as `0x${string}` | undefined,
+			temporaryWallet?.signature ? `task-${taskId}` : undefined
+		);
+
+		membershipStatus = status;
+	}
+
+	function calculateFees() {
+		if (!currentNetwork) return;
+
+		// Estimate 100,000 gas per transaction (rough estimate)
+		const estimatedGasPerTx = BigInt(100000);
+
+		const breakdown = calculateFeeBreakdown(
+			batchCount,
+			estimatedGasPerTx,
+			membershipStatus.isMember
+		);
+
+		feeBreakdown = breakdown;
+	}
+
+	function handleModeChange(mode: TransactionMode) {
+		transactionMode = mode;
+	}
+
+	function handleWalletCreated(wallet: TemporaryWallet) {
+		temporaryWallet = wallet;
+		// Re-check membership with signature
+		checkMembershipStatus();
+	}
+
+	function handleWalletCleared() {
+		temporaryWallet = null;
+	}
 
 	async function handleEstimateSweep() {
 		if (!connectStore.currentChainId) {
@@ -138,6 +214,11 @@
 			return;
 		}
 
+		if (transactionMode === 'temporary' && !temporaryWallet) {
+			errorMessage = 'Please create a temporary wallet first';
+			return;
+		}
+
 		if (!connectStore.currentChainId) {
 			errorMessage = 'No network connected';
 			return;
@@ -172,7 +253,16 @@
 		// Get stats
 		const stats = calculateSweepStats(config);
 
-		// Show confirmation
+		// Show confirmation with fee information
+		const feeInfo = membershipStatus.isMember
+			? 'As a member, you will not be charged any sweep fees.'
+			: `Each transaction will incur a 0.0025 ${currentNetwork?.symbol} sweep fee.`;
+
+		const modeInfo =
+			transactionMode === 'temporary'
+				? `Temporary wallet will be used: ${temporaryWallet?.address.slice(0, 10)}...`
+				: 'You will need to sign each transaction with your connected wallet.';
+
 		const confirmed = confirm(
 			`Ready to sweep:\n\n` +
 				`• ${selectedTokenCount} token(s)\n` +
@@ -180,7 +270,11 @@
 				`• To ${targetAddress}\n` +
 				`• ${stats.totalTransactions} total transaction(s)\n` +
 				`• In ${stats.totalBatches} batch(es)\n\n` +
-				`⚠️ IMPORTANT: This feature requires private key access which is not yet implemented.\n` +
+				`Transaction Mode: ${transactionMode}\n` +
+				`${modeInfo}\n\n` +
+				`Fees:\n` +
+				`${feeInfo}\n\n` +
+				`⚠️ IMPORTANT: This feature requires private key access which is not yet fully implemented.\n` +
 				`The sweep will simulate the process without actually executing transactions.\n\n` +
 				`Continue?`
 		);
@@ -236,6 +330,41 @@
 		description="Review your configuration and execute the asset sweep"
 	/>
 
+	<!-- Fee Rules Explanation -->
+	<div class="info-banner">
+		<Info size={20} />
+		<div>
+			<h4>💰 How Pricing Works</h4>
+			<div class="pricing-grid">
+				<div class="pricing-option">
+					<strong>Non-Member</strong>
+					<p>Pay 0.0025 {currentNetwork?.symbol || 'native coin'} per transaction</p>
+				</div>
+				<div class="pricing-option member">
+					<strong>Member</strong>
+					<p>Free unlimited transactions</p>
+				</div>
+			</div>
+			<p class="pricing-note">
+				Membership is verified via your connected wallet or signature. Gas fees always apply.
+			</p>
+		</div>
+	</div>
+
+	<!-- Transaction Mode Selector -->
+	<TransactionModeSelector mode={transactionMode} onModeChange={handleModeChange} />
+
+	<!-- Temporary Wallet Manager (only shown when temporary mode selected) -->
+	{#if transactionMode === 'temporary' && feeBreakdown && currentNetwork}
+		<TemporaryWalletManager
+			{taskId}
+			estimatedGasCost={feeBreakdown.estimatedGasFee}
+			networkSymbol={currentNetwork.symbol}
+			onWalletCreated={handleWalletCreated}
+			onWalletCleared={handleWalletCleared}
+		/>
+	{/if}
+
 	<!-- Target Address -->
 	<div class="form-section">
 		<label class="form-label">Target Address</label>
@@ -271,6 +400,11 @@
 		</div>
 	{/if}
 
+	<!-- Fee Breakdown Display -->
+	{#if feeBreakdown && currentNetwork}
+		<FeeBreakdownDisplay {feeBreakdown} {membershipStatus} networkSymbol={currentNetwork.symbol} />
+	{/if}
+
 	<!-- Batch Info -->
 	<div class="info-card">
 		<div class="info-header">
@@ -290,23 +424,6 @@
 					</span>
 				</div>
 			{/each}
-		</div>
-	</div>
-
-	<!-- Fee Preview -->
-	<div class="fee-card">
-		<h4>Estimated Costs</h4>
-		<div class="fee-row">
-			<span>Transactions:</span>
-			<span>{batchCount} batch(es)</span>
-		</div>
-		<div class="fee-row">
-			<span>Estimated Gas:</span>
-			<span class="fee-value">~${(batchCount * 10).toFixed(2)}</span>
-		</div>
-		<div class="fee-row total">
-			<span>Total Est. Cost:</span>
-			<span class="fee-value">${(batchCount * 10).toFixed(2)}</span>
 		</div>
 	</div>
 
@@ -416,10 +533,91 @@
 </div>
 
 <style>
+	.step-content {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-4);
+	}
+
+	.info-banner {
+		display: flex;
+		gap: var(--space-3);
+		padding: var(--space-4);
+		background: linear-gradient(135deg, #eff6ff, #dbeafe);
+		border: 2px solid #3b82f6;
+		border-radius: var(--radius-lg);
+		color: #1e40af;
+	}
+
+	:global([data-theme='dark']) .info-banner {
+		background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.15));
+		border-color: #3b82f6;
+		color: #93c5fd;
+	}
+
+	.info-banner h4 {
+		margin: 0 0 var(--space-3) 0;
+		font-size: var(--text-lg);
+		font-weight: var(--font-bold);
+	}
+
+	.pricing-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: var(--space-3);
+		margin: var(--space-3) 0;
+	}
+
+	@media (max-width: 640px) {
+		.pricing-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.pricing-option {
+		padding: var(--space-3);
+		background: white;
+		border: 2px solid #e5e7eb;
+		border-radius: var(--radius-md);
+	}
+
+	.pricing-option.member {
+		border-color: #10b981;
+		background: #f0fdf4;
+	}
+
+	:global([data-theme='dark']) .pricing-option {
+		background: var(--gray-800);
+		border-color: var(--gray-700);
+	}
+
+	:global([data-theme='dark']) .pricing-option.member {
+		background: rgba(16, 185, 129, 0.1);
+		border-color: #10b981;
+	}
+
+	.pricing-option strong {
+		display: block;
+		margin-bottom: var(--space-1);
+		font-size: var(--text-base);
+	}
+
+	.pricing-option p {
+		margin: 0;
+		font-size: var(--text-sm);
+		opacity: 0.9;
+	}
+
+	.pricing-note {
+		margin: var(--space-2) 0 0 0;
+		font-size: var(--text-sm);
+		opacity: 0.85;
+	}
+
 	.form-hint {
 		font-size: var(--text-sm);
 		color: var(--gray-600);
-		margin: 0;
+		margin: var(--space-1) 0 0 0;
 	}
 	:global([data-theme='dark']) .form-hint {
 		color: var(--gray-400);
@@ -470,6 +668,10 @@
 		background: linear-gradient(135deg, #10b981, #059669);
 		color: white;
 		box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: var(--space-2);
 	}
 	.btn-execute:hover:not(:disabled) {
 		transform: translateY(-2px);
@@ -508,16 +710,10 @@
 		box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 	}
 
-	.form-hint {
-		margin-top: var(--space-2);
-	}
-
 	.info-card,
-	.fee-card,
 	.warning-card {
 		padding: var(--space-4);
 		border-radius: var(--radius-lg);
-		margin-bottom: var(--space-5);
 	}
 
 	.info-card {
@@ -552,34 +748,8 @@
 		border-radius: var(--radius-sm);
 	}
 
-	.fee-card {
-		background: var(--color-panel-1);
-		border: 1px solid var(--color-border);
-	}
-	:global([data-theme='dark']) .fee-card {
-		background: var(--gray-800);
-		border-color: var(--gray-700);
-	}
-
-	.fee-row {
-		display: flex;
-		justify-content: space-between;
-		padding: var(--space-2) 0;
-		border-bottom: 1px solid var(--color-border);
-	}
-	.fee-row:last-child {
-		border-bottom: none;
-	}
-	.fee-row.total {
-		font-weight: var(--font-bold);
-		font-size: var(--text-lg);
-		margin-top: var(--space-2);
-		padding-top: var(--space-3);
-	}
-
-	.fee-value {
-		color: var(--color-primary);
-		font-weight: var(--font-semibold);
+	:global([data-theme='dark']) .batch-item {
+		background: var(--gray-900);
 	}
 
 	.warning-card {
@@ -604,7 +774,12 @@
 		border: 1px solid hsl(0, 80%, 60%);
 		border-radius: var(--radius-sm);
 		color: hsl(0, 80%, 40%);
-		margin-bottom: var(--space-4);
+	}
+
+	:global([data-theme='dark']) .error-banner {
+		background: hsla(0, 80%, 15%, 0.3);
+		border-color: hsl(0, 80%, 40%);
+		color: hsl(0, 80%, 70%);
 	}
 
 	.action-buttons {
@@ -718,6 +893,16 @@
 	.result-item.error {
 		background: hsla(0, 60%, 95%, 1);
 		color: hsl(0, 60%, 40%);
+	}
+
+	:global([data-theme='dark']) .result-item.success {
+		background: hsla(120, 60%, 15%, 0.3);
+		color: hsl(120, 60%, 70%);
+	}
+
+	:global([data-theme='dark']) .result-item.error {
+		background: hsla(0, 60%, 15%, 0.3);
+		color: hsl(0, 60%, 70%);
 	}
 
 	.result-wallet {
