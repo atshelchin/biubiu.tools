@@ -56,28 +56,28 @@
 
 	const pricingTiers: PricingTier[] = [
 		{
-			id: 'weekly',
-			name: 'Weekly',
-			days: 7,
+			id: 'daily',
+			name: 'Daily',
+			days: 1,
 			price: 0.01,
-			pricePerDay: 0.00143
+			pricePerDay: 0.01
 		},
 		{
 			id: 'monthly',
 			name: 'Monthly',
 			days: 30,
-			price: 0.02,
-			pricePerDay: 0.00067,
-			savings: 'Save 53%',
+			price: 0.05,
+			pricePerDay: 0.00167,
+			savings: 'Save 83%',
 			popular: true
 		},
 		{
 			id: 'yearly',
 			name: 'Yearly',
 			days: 365,
-			price: 0.05,
-			pricePerDay: 0.00014,
-			savings: 'Save 90%'
+			price: 0.1,
+			pricePerDay: 0.00027,
+			savings: 'Save 97%'
 		}
 	];
 
