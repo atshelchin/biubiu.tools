@@ -41,6 +41,11 @@
 	// Purchase state
 	let isPurchasing = $state(false);
 	let purchaseError = $state('');
+	let purchaseSuccess = $state(false);
+	let purchaseDetails = $state<{
+		tier: string;
+		hash: string;
+	} | null>(null);
 
 	// Load referral address and subscription status when modal opens
 	$effect(() => {
@@ -205,14 +210,16 @@
 				await loadSubscriptionStatus();
 
 				// Show success message
-				alert(
-					`🎉 Successfully subscribed to ${tier.name} plan!\n\n` +
-						`Transaction: ${hash}\n` +
-						`You now have premium access for ${tier.days} days.`
-				);
+				purchaseSuccess = true;
+				purchaseDetails = {
+					tier: tier.name,
+					hash
+				};
 
-				// Close modal
-				onClose();
+				// Auto-close modal after 5 seconds
+				setTimeout(() => {
+					onClose();
+				}, 5000);
 			} else {
 				throw new Error('Transaction failed');
 			}
@@ -228,118 +235,138 @@
 <Modal open={isOpen} {onClose} maxWidth="640px">
 	{#snippet children()}
 		<div class="upgrade-modal">
-			<!-- Header with gradient background -->
-			<div class="modal-header-custom">
-				<div class="header-icon">
-					<Crown size={32} />
+			<!-- Purchase Success Message -->
+			{#if purchaseSuccess && purchaseDetails}
+				<div class="purchase-success">
+					<div class="success-icon">
+						<Check size={32} />
+					</div>
+					<h3>🎉 Purchase Successful!</h3>
+					<p class="success-message">
+						You've successfully subscribed to the <strong>{purchaseDetails.tier}</strong> plan!
+					</p>
+					<div class="transaction-info">
+						<span class="tx-label">Transaction:</span>
+						<code class="tx-hash"
+							>{purchaseDetails.hash.slice(0, 10)}...{purchaseDetails.hash.slice(-8)}</code
+						>
+					</div>
+					<p class="success-note">This modal will close automatically in 5 seconds...</p>
 				</div>
-				<h2>Upgrade to Premium</h2>
-				<p>Choose the perfect plan for your needs</p>
-			</div>
+			{:else}
+				<!-- Header with gradient background -->
+				<div class="modal-header-custom">
+					<div class="header-icon">
+						<Crown size={32} />
+					</div>
+					<h2>Upgrade to Premium</h2>
+					<p>Choose the perfect plan for your needs</p>
+				</div>
 
-			<!-- Current Subscription Status -->
-			{#if isLoadingSubscription}
-				<div class="subscription-status loading">
-					<Loader2 size={16} class="spinning" />
-					<span>Loading subscription status...</span>
-				</div>
-			{:else if isSubscriptionError}
-				<div class="subscription-status error">
-					<span>Unable to load subscription status</span>
-				</div>
-			{:else if subscriptionStatus?.isPremium}
-				<div class="subscription-status active">
-					<Crown size={16} />
-					<span>Active Premium Member</span>
-					<span class="remaining-time"
-						>Expires in {Math.ceil(Number(subscriptionStatus.remainingTime) / 86400)} days</span
-					>
-				</div>
-			{/if}
+				<!-- Current Subscription Status -->
+				{#if isLoadingSubscription}
+					<div class="subscription-status loading">
+						<Loader2 size={16} class="spinning" />
+						<span>Loading subscription status...</span>
+					</div>
+				{:else if isSubscriptionError}
+					<div class="subscription-status error">
+						<span>Unable to load subscription status</span>
+					</div>
+				{:else if subscriptionStatus?.isPremium}
+					<div class="subscription-status active">
+						<Crown size={16} />
+						<span>Active Premium Member</span>
+						<span class="remaining-time"
+							>Expires in {Math.ceil(Number(subscriptionStatus.remainingTime) / 86400)} days</span
+						>
+					</div>
+				{/if}
 
-			<!-- Referral Info -->
-			<div class="referral-info">
-				<Users size={14} />
-				<span class="referral-label">Referred by:</span>
-				<span class="referral-address">{displayReferral()}</span>
-			</div>
+				<!-- Referral Info -->
+				<div class="referral-info">
+					<Users size={14} />
+					<span class="referral-label">Referred by:</span>
+					<span class="referral-address">{displayReferral()}</span>
+				</div>
 
-			<!-- Pricing Cards -->
-			<div class="pricing-cards">
-				{#each pricingTiers as tier (tier.id)}
-					<button
-						class="pricing-card"
-						class:selected={selectedTier === tier.id}
-						class:popular={tier.popular}
-						onclick={() => handleSelectTier(tier.id)}
-					>
-						<div class="card-left">
-							<div class="tier-name">
-								<h3>{tier.name}</h3>
-								{#if tier.popular}
-									<span class="popular-badge">
-										<Sparkles size={12} />
-										<span>Popular</span>
-									</span>
-								{/if}
+				<!-- Pricing Cards -->
+				<div class="pricing-cards">
+					{#each pricingTiers as tier (tier.id)}
+						<button
+							class="pricing-card"
+							class:selected={selectedTier === tier.id}
+							class:popular={tier.popular}
+							onclick={() => handleSelectTier(tier.id)}
+						>
+							<div class="card-left">
+								<div class="tier-name">
+									<h3>{tier.name}</h3>
+									{#if tier.popular}
+										<span class="popular-badge">
+											<Sparkles size={12} />
+											<span>Popular</span>
+										</span>
+									{/if}
+								</div>
+								<div class="tier-days">{tier.days} days</div>
 							</div>
-							<div class="tier-days">{tier.days} days</div>
-						</div>
 
-						<div class="card-center">
-							<div class="price">
-								<span class="price-value">{tier.price} {networkSymbol}</span>
+							<div class="card-center">
+								<div class="price">
+									<span class="price-value">{tier.price} {networkSymbol}</span>
+								</div>
+								<div class="price-detail">{tier.pricePerDay.toFixed(5)} {networkSymbol}/day</div>
 							</div>
-							<div class="price-detail">{tier.pricePerDay.toFixed(5)} {networkSymbol}/day</div>
-						</div>
 
-						<div class="card-right">
-							<div class="checkmark">
-								{#if selectedTier === tier.id}
-									<Check size={18} />
-								{/if}
+							<div class="card-right">
+								<div class="checkmark">
+									{#if selectedTier === tier.id}
+										<Check size={18} />
+									{/if}
+								</div>
 							</div>
-						</div>
-					</button>
-				{/each}
-			</div>
-
-			<!-- Benefits -->
-			<div class="benefits-section">
-				<h3>What's Included</h3>
-				<div class="benefits-grid">
-					{#each benefits as benefit}
-						<div class="benefit-item">
-							<Check size={16} />
-							<span>{benefit}</span>
-						</div>
+						</button>
 					{/each}
 				</div>
-			</div>
 
-			<!-- Purchase Error -->
-			{#if purchaseError}
-				<div class="purchase-error">
-					<span>{purchaseError}</span>
+				<!-- Benefits -->
+				<div class="benefits-section">
+					<h3>What's Included</h3>
+					<div class="benefits-grid">
+						{#each benefits as benefit}
+							<div class="benefit-item">
+								<Check size={16} />
+								<span>{benefit}</span>
+							</div>
+						{/each}
+					</div>
+				</div>
+
+				<!-- Purchase Error -->
+				{#if purchaseError}
+					<div class="purchase-error">
+						<span>{purchaseError}</span>
+					</div>
+				{/if}
+
+				<!-- CTA -->
+				<div class="modal-footer-custom">
+					<button class="btn-purchase" onclick={handlePurchase} disabled={isPurchasing}>
+						{#if isPurchasing}
+							<Loader2 size={20} class="spinning" />
+							<span>Processing...</span>
+						{:else}
+							<Crown size={20} />
+							<span>Purchase Premium Access</span>
+						{/if}
+					</button>
+					<p class="footer-note">
+						⚠️ Membership valid on <strong>{currentNetwork?.name || 'current network'}</strong> only
+						• Switch networks requires new purchase
+					</p>
 				</div>
 			{/if}
-
-			<!-- CTA -->
-			<div class="modal-footer-custom">
-				<button class="btn-purchase" onclick={handlePurchase} disabled={isPurchasing}>
-					{#if isPurchasing}
-						<Loader2 size={20} class="spinning" />
-						<span>Processing...</span>
-					{:else}
-						<Crown size={20} />
-						<span>Purchase Premium Access</span>
-					{/if}
-				</button>
-				<p class="footer-note">
-					⚠️ Membership valid on <strong>{currentNetwork?.name || 'current network'}</strong> only •
-					Switch networks requires new purchase
-				</p>
-			</div>
 		</div>
 	{/snippet}
 </Modal>
@@ -763,5 +790,108 @@
 		to {
 			transform: rotate(360deg);
 		}
+	}
+
+	/* Purchase Success Styles */
+	.purchase-success {
+		text-align: center;
+		padding: var(--space-6);
+		animation: slideIn 0.3s ease-out;
+	}
+
+	@keyframes slideIn {
+		from {
+			opacity: 0;
+			transform: translateY(-20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.success-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 64px;
+		height: 64px;
+		background: linear-gradient(135deg, #10b981, #059669);
+		border-radius: 50%;
+		margin-bottom: var(--space-4);
+		color: white;
+		box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+	}
+
+	.purchase-success h3 {
+		margin: 0 0 var(--space-2) 0;
+		font-size: var(--text-2xl);
+		font-weight: var(--font-bold);
+		color: var(--gray-900);
+	}
+
+	:global([data-theme='dark']) .purchase-success h3 {
+		color: var(--gray-100);
+	}
+
+	.success-message {
+		font-size: var(--text-base);
+		color: var(--gray-700);
+		margin: 0 0 var(--space-4) 0;
+	}
+
+	:global([data-theme='dark']) .success-message {
+		color: var(--gray-300);
+	}
+
+	.success-message strong {
+		color: #f97316;
+		font-weight: var(--font-bold);
+	}
+
+	.transaction-info {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: var(--space-2);
+		padding: var(--space-3);
+		background: var(--gray-50);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-md);
+		margin-bottom: var(--space-3);
+	}
+
+	:global([data-theme='dark']) .transaction-info {
+		background: var(--gray-800);
+	}
+
+	.tx-label {
+		font-size: var(--text-sm);
+		color: var(--gray-600);
+		font-weight: var(--font-semibold);
+	}
+
+	:global([data-theme='dark']) .tx-label {
+		color: var(--gray-400);
+	}
+
+	.tx-hash {
+		font-family: 'Courier New', monospace;
+		font-size: var(--text-sm);
+		color: #10b981;
+		background: rgba(16, 185, 129, 0.1);
+		padding: var(--space-1) var(--space-2);
+		border-radius: var(--radius-sm);
+	}
+
+	.success-note {
+		font-size: var(--text-xs);
+		color: var(--gray-500);
+		margin: 0;
+		font-style: italic;
+	}
+
+	:global([data-theme='dark']) .success-note {
+		color: var(--gray-500);
 	}
 </style>
