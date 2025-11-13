@@ -10,8 +10,7 @@ import {
 	parseEther,
 	keccak256,
 	toHex,
-	encodeAbiParameters,
-	parseAbiParameters
+	encodeAbiParameters
 } from 'viem';
 import type { ImportedWallet } from '../types/wallet';
 import type { ERC20Token, NativeToken } from '$lib/types/token';
@@ -56,16 +55,28 @@ async function generateMulticallSignature(
 	// Create a message hash for the multicall operation
 	// Format: keccak256(abi.encode(chainId, recipient, tokens, deadline, referrer, wallets))
 	const message = encodeAbiParameters(
-		parseAbiParameters(
-			'uint256 chainId, address recipient, address[] tokens, uint256 deadline, address referrer, tuple(address wallet, bytes signature)[] wallets'
-		),
+		[
+			{ name: 'chainId', type: 'uint256' },
+			{ name: 'recipient', type: 'address' },
+			{ name: 'tokens', type: 'address[]' },
+			{ name: 'deadline', type: 'uint256' },
+			{ name: 'referrer', type: 'address' },
+			{
+				name: 'wallets',
+				type: 'tuple[]',
+				components: [
+					{ name: 'wallet', type: 'address' },
+					{ name: 'signature', type: 'bytes' }
+				]
+			}
+		],
 		[
 			BigInt(config.chainId),
 			config.targetAddress,
 			tokenAddresses,
 			deadline,
 			config.referrer || ZERO_ADDRESS,
-			wallets.map((w) => ({ wallet: w.wallet, signature: w.signature }))
+			wallets
 		]
 	);
 
