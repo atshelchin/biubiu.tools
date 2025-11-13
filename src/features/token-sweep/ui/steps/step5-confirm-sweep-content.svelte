@@ -18,7 +18,8 @@
 		executeTokenSweep,
 		estimateTokenSweep,
 		type TokenSweepConfig,
-		type TokenSweepResult
+		type TokenSweepResult,
+		type TransactionSigner
 	} from '@/features/token-sweep/utils/tokensweep-executor';
 	import { checkMembership, calculateFeeBreakdown } from '@/features/token-sweep/utils/membership';
 	import type {
@@ -27,8 +28,8 @@
 		FeeBreakdown,
 		TemporaryWallet
 	} from '@/features/token-sweep/types/fee';
-	import { createPublicClient, http } from 'viem';
-	import type { Address } from 'viem';
+	import { createPublicClient, createWalletClient, http, custom } from 'viem';
+	import type { Address, Hex } from 'viem';
 	import { AlertCircle, CheckCircle2, Loader2 } from 'lucide-svelte';
 	import { fade, slide } from 'svelte/transition';
 	import type { Token, NativeToken, ERC20Token } from '$lib/types/token';
@@ -245,7 +246,8 @@
 			wallets: walletsToSweep,
 			tokens: selectedTokenObjects as (NativeToken | ERC20Token)[],
 			chainId: connectStore.currentChainId,
-			referrer: undefined // Can be set if referral system is implemented
+			referrer: undefined, // Can be set if referral system is implemented
+			useTemporaryWallet: transactionMode === 'temporary' // Only temporary wallets need signature
 		};
 
 		// Get stats for confirmation
@@ -303,22 +305,44 @@
 
 		const publicClient = createPublicClient({ chain, transport: http(rpcUrl) });
 
+		// Get provider from connected wallet
+		const connector = connectStore.connectionState.connector;
+		if (!connector) {
+			errorMessage = 'No connector available';
+			return;
+		}
+
+		const provider = await connector.getProvider();
+		if (!provider) {
+			errorMessage = 'Provider not available';
+			return;
+		}
+
+		// Create wallet client for signing
+		const walletClient = createWalletClient({
+			chain,
+			transport: custom(provider),
+			account: connectStore.address
+		});
+
 		// Create signer wallet from connected wallet
-		// In a real implementation, this would use the actual connected wallet's signing capabilities
-		const signer = {
+		// The signer is the wallet that pays for gas and submits the transaction
+		// NOT the imported wallets that are being swept
+		const signer: TransactionSigner = {
 			address: connectStore.address,
-			signMessage: async (message: string) => {
-				// Use connectStore to sign the message
-				return await connectStore.signMessage(message);
+			signMessage: async (message: string): Promise<Hex> => {
+				// Use wallet client to sign the message
+				return await walletClient.signMessage({
+					account: connectStore.address,
+					message
+				});
 			},
-			sendTransaction: async (tx: {
-				to: Address;
-				data: `0x${string}`;
-				value: bigint;
-				gas: bigint;
-			}) => {
-				// Use connectStore to send the transaction
-				return await connectStore.sendTransaction(tx);
+			sendTransaction: async (tx) => {
+				// Use wallet client to send the transaction with EIP-7702 support
+				return await walletClient.sendTransaction({
+					account: connectStore.address,
+					...tx
+				});
 			}
 		};
 

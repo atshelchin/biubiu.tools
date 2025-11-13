@@ -2,7 +2,14 @@
  * TokenSweep contract execution with EIP-7702
  * Handles batch token sweeping using the TokenSweep contract
  */
-import { type Address, type Hex, type PublicClient, encodeFunctionData, parseEther } from 'viem';
+import {
+	type Address,
+	type Hex,
+	type PublicClient,
+	type SignedAuthorizationList,
+	encodeFunctionData,
+	parseEther
+} from 'viem';
 import type { ImportedWallet } from '../types/wallet';
 import type { ERC20Token, NativeToken } from '$lib/types/token';
 import TokenSweepABI from '../../../../static/contracts/TokenSweep.json';
@@ -13,13 +20,30 @@ import {
 	toViemAuthorizationList
 } from './eip7702-auth';
 
+/**
+ * Signer interface for the wallet that pays gas and submits the transaction
+ * This is NOT the imported wallets being swept - it's the connected wallet or temporary wallet
+ */
+export interface TransactionSigner {
+	address: Address;
+	signMessage: (message: string) => Promise<Hex>;
+	sendTransaction: (tx: {
+		to: Address;
+		data: `0x${string}`;
+		value: bigint;
+		gas: bigint;
+		authorizationList?: SignedAuthorizationList;
+	}) => Promise<Hex>;
+}
+
 export interface TokenSweepConfig {
 	targetAddress: Address; // Recipient address
-	wallets: ImportedWallet[]; // Wallets to sweep from
+	wallets: ImportedWallet[]; // Wallets to sweep from (imported private keys)
 	tokens: (NativeToken | ERC20Token)[]; // Tokens to sweep
 	chainId: number; // Chain ID
 	referrer?: Address; // Optional referrer address
 	deadline?: bigint; // Signature deadline (default: 1 hour from now)
+	useTemporaryWallet?: boolean; // If true, requires multicall signature; if false, uses connected wallet
 }
 
 export interface TokenSweepResult {
@@ -46,7 +70,7 @@ function toHexString(address: Address): string {
  * Must match the contract's _verifyAuthorization() expected message format
  */
 async function generateMulticallSignature(
-	signer: ImportedWallet,
+	signer: TransactionSigner,
 	config: TokenSweepConfig
 ): Promise<Hex> {
 	// Create human-readable message matching contract's _verifyAuthorization()
@@ -78,15 +102,20 @@ async function generateMulticallSignature(
 /**
  * Execute token sweep using TokenSweep contract's multicall function
  *
+ * @param publicClient - Viem public client for blockchain queries
+ * @param signer - The wallet that pays gas and submits the transaction (connected wallet or temporary wallet)
+ * @param config - TokenSweep configuration including wallets to sweep, tokens, and target address
+ *
  * Process:
- * 1. Generate EIP-7702 authorizations for each wallet
- * 2. Sign the overall multicall operation
- * 3. Call TokenSweep.multicall with all authorizations
- * 4. The contract uses EIP-7702 to execute drainToAddress on behalf of each wallet
+ * 1. Generate EIP-7702 authorizations for each imported wallet
+ * 2. Generate drain signatures for each imported wallet
+ * 3. Sign the overall multicall operation with the signer wallet
+ * 4. Call TokenSweep.multicall with all authorizations
+ * 5. The contract uses EIP-7702 to execute drainToAddress on behalf of each wallet
  */
 export async function executeTokenSweep(
 	publicClient: PublicClient,
-	signer: ImportedWallet,
+	signer: TransactionSigner,
 	config: TokenSweepConfig
 ): Promise<TokenSweepResult> {
 	try {
@@ -125,9 +154,13 @@ export async function executeTokenSweep(
 		// 5. Convert to viem's authorizationList format for EIP-7702 transaction
 		const authorizationList = toViemAuthorizationList(signedAuths);
 
-		// 6. Generate overall multicall signature
-		// This authorizes the entire batch operation
-		const multicallSignature = await generateMulticallSignature(signer, config);
+		// 6. Generate overall multicall signature (if using temporary wallet)
+		// For connected wallets, msg.sender is verified directly by the contract
+		// For temporary wallets, signature proves authorization
+		const multicallSignature =
+			config.useTemporaryWallet === true
+				? await generateMulticallSignature(signer, config)
+				: ('0x' as Hex); // Empty signature for connected wallet mode
 
 		// 7. Encode the multicall function call
 		const data = encodeFunctionData({
