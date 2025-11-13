@@ -265,6 +265,15 @@
 			? 'As a premium member, you will not be charged tool fees.'
 			: 'Non-member fee: 0.005 ETH (refunded for premium members)';
 
+		const modeWarning =
+			transactionMode === 'connected'
+				? `\n⚠️ WALLET MODE WARNING:\n` +
+					`• You are using CONNECTED WALLET mode\n` +
+					`• MetaMask does NOT support EIP-7702 authorizationList\n` +
+					`• This transaction will likely FAIL\n` +
+					`• RECOMMENDED: Switch to TEMPORARY WALLET mode below\n\n`
+				: `\n✅ WALLET MODE:\n` + `• Using TEMPORARY WALLET (supports EIP-7702)\n\n`;
+
 		const confirmed = confirm(
 			`🚀 Ready to execute TokenSweep via EIP-7702:\n\n` +
 				`• ${selectedTokenCount} token(s)\n` +
@@ -276,15 +285,13 @@
 				`3. All tokens will be transferred to the target address in one transaction\n\n` +
 				`Fees:\n` +
 				`${feeInfo}\n` +
-				`Gas fees still apply (~0.01-0.05 ETH estimated)\n\n` +
-				`⚠️ CRITICAL REQUIREMENTS:\n` +
+				`Gas fees still apply (~0.01-0.05 ETH estimated)\n` +
+				modeWarning +
+				`⚠️ NETWORK REQUIREMENTS:\n` +
 				`• Your network MUST support EIP-7702 (Prague upgrade)\n` +
 				`• Most public RPCs do NOT support EIP-7702 yet (2024)\n` +
 				`• Requires local testnet (Anvil/Hardhat) or dedicated EIP-7702 RPC\n` +
-				`• If you see "External EIP-7702 transactions are not supported", switch networks\n\n` +
-				`• This uses EIP-7702 for batch execution\n` +
-				`• One transaction will process all wallets\n` +
-				`• Make sure your connected wallet has enough ETH for gas\n\n` +
+				`• If error occurs, check console logs for details\n\n` +
 				`Continue?`
 		);
 
@@ -309,29 +316,54 @@
 
 		const publicClient = createPublicClient({ chain, transport: http(rpcUrl) });
 
-		// Get wallet client from connected wallet
-		const walletClient = await connectStore.getWalletClient();
+		// Create signer based on transaction mode
+		let signer: TransactionSigner;
 
-		// Create signer wallet from connected wallet
-		// The signer is the wallet that pays for gas and submits the transaction
-		// NOT the imported wallets that are being swept
-		const signer: TransactionSigner = {
-			address: connectStore.address,
-			signMessage: async (message: string): Promise<Hex> => {
-				// Use wallet client to sign the message
-				return await walletClient.signMessage({
-					account: connectStore.address,
-					message
-				});
-			},
-			sendTransaction: async (tx) => {
-				// Use wallet client to send the transaction with EIP-7702 support
-				return await walletClient.sendTransaction({
-					account: connectStore.address,
-					...tx
-				});
-			}
-		};
+		if (transactionMode === 'temporary' && temporaryWallet) {
+			// Use temporary wallet - direct signing with private key (supports EIP-7702)
+			console.log('🔑 Using temporary wallet for EIP-7702 transaction');
+			const { privateKeyToAccount } = await import('viem/accounts');
+			const { createWalletClient } = await import('viem');
+
+			const account = privateKeyToAccount(temporaryWallet.privateKey as `0x${string}`);
+			const tempWalletClient = createWalletClient({
+				account,
+				chain,
+				transport: http(rpcUrl)
+			});
+
+			signer = {
+				address: account.address,
+				signMessage: async (message: string): Promise<Hex> => {
+					return await account.signMessage({ message });
+				},
+				sendTransaction: async (tx) => {
+					// Direct transaction with EIP-7702 support
+					return await tempWalletClient.sendTransaction(tx);
+				}
+			};
+		} else {
+			// Use connected wallet (MetaMask) - does NOT support EIP-7702 authorizationList
+			console.log('⚠️ Using connected wallet - EIP-7702 may not be supported by MetaMask');
+			const walletClient = await connectStore.getWalletClient();
+
+			signer = {
+				address: connectStore.address,
+				signMessage: async (message: string): Promise<Hex> => {
+					return await walletClient.signMessage({
+						account: connectStore.address,
+						message
+					});
+				},
+				sendTransaction: async (tx) => {
+					// MetaMask provider - may not support authorizationList
+					return await walletClient.sendTransaction({
+						account: connectStore.address,
+						...tx
+					});
+				}
+			};
+		}
 
 		// Execute TokenSweep
 		isSweeping = true;

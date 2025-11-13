@@ -200,6 +200,15 @@ export async function executeTokenSweep(
 				multicallSignature // Overall signature
 			]
 		});
+
+		console.log("raw data before send ",[
+				walletSignatures, // Array of { wallet, signature }
+				config.targetAddress, // Recipient
+				tokenAddresses, // Tokens to sweep
+				deadline, // Deadline
+				config.referrer || ZERO_ADDRESS, // Referrer
+				multicallSignature // Overall signature
+			])
 		console.log('✅ Encoded data:', data.slice(0, 20) + '...', '(', data.length, 'bytes)');
 
 		// 8. Calculate required value (NON_MEMBER_FEE if not premium member)
@@ -212,6 +221,13 @@ export async function executeTokenSweep(
 		console.log('📤 Sending transaction with EIP-7702 authorizationList...');
 		console.log('⚠️ WARNING: EIP-7702 requires network support! Current chainId:', config.chainId);
 
+		console.log("before send ", {
+			to: TOKEN_SWEEP_CONTRACT,
+			data,
+			value: NON_MEMBER_FEE,
+			gas: BigInt(5000000), // High gas limit for batch operation
+			authorizationList // EIP-7702 authorizations for wallet code delegation
+		})
 		const txHash = await signer.sendTransaction({
 			to: TOKEN_SWEEP_CONTRACT,
 			data,
