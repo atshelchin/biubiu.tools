@@ -1,8 +1,10 @@
 <script lang="ts">
-	import { Crown, Check, Sparkles, Users } from 'lucide-svelte';
+	import { Crown, Check, Sparkles, Users, Loader2 } from 'lucide-svelte';
 	import { getReferralAddress, ZERO_ADDRESS } from '$lib/utils/referral';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import Modal from '$lib/components/ui/modal.svelte';
+	import { type Address, parseEther } from 'viem';
+	import BiuBiuPremiumABI from '../../../../../static/contracts/BiuBiuPremium.json';
 
 	interface Props {
 		isOpen: boolean;
@@ -12,6 +14,9 @@
 	let { isOpen = $bindable(), onClose }: Props = $props();
 
 	const connectStore = useConnectStore();
+
+	// BiuBiuPremium contract address
+	const BIUBIU_PREMIUM_CONTRACT = '0xc5c4bb399938625523250B708dc5c1e7dE4b1626' as Address;
 
 	// Current network
 	let currentNetwork = $derived.by(() => {
@@ -24,16 +29,62 @@
 
 	let referralAddress = $state<string | null>(null);
 
-	// Load referral address when modal opens
+	// Subscription status
+	let subscriptionStatus = $state<{
+		isPremium: boolean;
+		expiryTime: bigint;
+		remainingTime: bigint;
+	} | null>(null);
+	let isLoadingSubscription = $state(false);
+	let isSubscriptionError = $state(false);
+
+	// Purchase state
+	let isPurchasing = $state(false);
+	let purchaseError = $state('');
+
+	// Load referral address and subscription status when modal opens
 	$effect(() => {
 		if (isOpen) {
 			loadReferralAddress();
+			loadSubscriptionStatus();
 		}
 	});
 
 	async function loadReferralAddress() {
 		const address = await getReferralAddress();
 		referralAddress = address;
+	}
+
+	async function loadSubscriptionStatus() {
+		if (!connectStore.address || !connectStore.publicClient) {
+			return;
+		}
+
+		isLoadingSubscription = true;
+		isSubscriptionError = false;
+
+		try {
+			const result = await connectStore.publicClient.readContract({
+				address: BIUBIU_PREMIUM_CONTRACT,
+				abi: BiuBiuPremiumABI.abi,
+				functionName: 'getSubscriptionInfo',
+				args: [connectStore.address]
+			});
+
+			// Result is [isPremium, expiryTime, remainingTime]
+			const [isPremium, expiryTime, remainingTime] = result as [boolean, bigint, bigint];
+
+			subscriptionStatus = {
+				isPremium,
+				expiryTime,
+				remainingTime
+			};
+		} catch (error) {
+			console.error('Failed to load subscription status:', error);
+			isSubscriptionError = true;
+		} finally {
+			isLoadingSubscription = false;
+		}
 	}
 
 	// Format address for display
@@ -93,12 +144,81 @@
 		selectedTier = tierId;
 	}
 
-	function handlePurchase() {
+	async function handlePurchase() {
+		if (!connectStore.address) {
+			purchaseError = 'Please connect your wallet first';
+			return;
+		}
+
 		const tier = pricingTiers.find((t) => t.id === selectedTier);
-		// TODO: Integrate payment gateway
-		alert(
-			`Purchase ${tier?.name} plan for ${tier?.price} ${networkSymbol}!\n\nPayment integration coming soon.`
-		);
+		if (!tier) {
+			purchaseError = 'Invalid tier selected';
+			return;
+		}
+
+		isPurchasing = true;
+		purchaseError = '';
+
+		try {
+			// Map tier ID to contract enum (0=Daily, 1=Monthly, 2=Yearly)
+			let tierEnum: number;
+			switch (tier.id) {
+				case 'daily':
+					tierEnum = 0;
+					break;
+				case 'monthly':
+					tierEnum = 1;
+					break;
+				case 'yearly':
+					tierEnum = 2;
+					break;
+				default:
+					throw new Error('Invalid tier');
+			}
+
+			// Get referrer address (use zero address if none)
+			const referrer = (referralAddress || ZERO_ADDRESS) as Address;
+
+			// Calculate price in wei
+			const priceInWei = parseEther(tier.price.toString());
+
+			// Call subscribe function
+			const hash = await connectStore.sendTransaction({
+				to: BIUBIU_PREMIUM_CONTRACT,
+				value: priceInWei,
+				data: await connectStore.publicClient!.encodeFunctionData({
+					abi: BiuBiuPremiumABI.abi,
+					functionName: 'subscribe',
+					args: [tierEnum, referrer]
+				}),
+				gas: BigInt(200000) // Estimated gas for subscribe
+			});
+
+			// Wait for transaction confirmation
+			const receipt = await connectStore.publicClient!.waitForTransactionReceipt({ hash });
+
+			if (receipt.status === 'success') {
+				// Reload subscription status
+				await loadSubscriptionStatus();
+
+				// Show success message
+				alert(
+					`🎉 Successfully subscribed to ${tier.name} plan!\n\n` +
+						`Transaction: ${hash}\n` +
+						`You now have premium access for ${tier.days} days.`
+				);
+
+				// Close modal
+				onClose();
+			} else {
+				throw new Error('Transaction failed');
+			}
+		} catch (error) {
+			console.error('Failed to purchase subscription:', error);
+			purchaseError = error instanceof Error ? error.message : 'Failed to complete purchase';
+		} finally {
+			isPurchasing = false;
+		}
 	}
 </script>
 
@@ -113,6 +233,26 @@
 				<h2>Upgrade to Premium</h2>
 				<p>Choose the perfect plan for your needs</p>
 			</div>
+
+			<!-- Current Subscription Status -->
+			{#if isLoadingSubscription}
+				<div class="subscription-status loading">
+					<Loader2 size={16} class="spinning" />
+					<span>Loading subscription status...</span>
+				</div>
+			{:else if isSubscriptionError}
+				<div class="subscription-status error">
+					<span>Unable to load subscription status</span>
+				</div>
+			{:else if subscriptionStatus?.isPremium}
+				<div class="subscription-status active">
+					<Crown size={16} />
+					<span>Active Premium Member</span>
+					<span class="remaining-time"
+						>Expires in {Math.ceil(Number(subscriptionStatus.remainingTime) / 86400)} days</span
+					>
+				</div>
+			{/if}
 
 			<!-- Referral Info -->
 			<div class="referral-info">
@@ -174,11 +314,23 @@
 				</div>
 			</div>
 
+			<!-- Purchase Error -->
+			{#if purchaseError}
+				<div class="purchase-error">
+					<span>{purchaseError}</span>
+				</div>
+			{/if}
+
 			<!-- CTA -->
 			<div class="modal-footer-custom">
-				<button class="btn-purchase" onclick={handlePurchase}>
-					<Crown size={20} />
-					<span>Purchase Premium Access</span>
+				<button class="btn-purchase" onclick={handlePurchase} disabled={isPurchasing}>
+					{#if isPurchasing}
+						<Loader2 size={20} class="spinning" />
+						<span>Processing...</span>
+					{:else}
+						<Crown size={20} />
+						<span>Purchase Premium Access</span>
+					{/if}
 				</button>
 				<p class="footer-note">
 					⚠️ Membership valid on <strong>{currentNetwork?.name || 'current network'}</strong> only •
@@ -478,6 +630,73 @@
 		flex-shrink: 0;
 	}
 
+	.subscription-status {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		padding: var(--space-3);
+		margin-bottom: var(--space-3);
+		border-radius: var(--radius-md);
+		font-size: var(--text-sm);
+		font-weight: var(--font-semibold);
+	}
+
+	.subscription-status.loading {
+		background: var(--gray-100);
+		color: var(--gray-600);
+	}
+
+	:global([data-theme='dark']) .subscription-status.loading {
+		background: var(--gray-800);
+		color: var(--gray-400);
+	}
+
+	.subscription-status.error {
+		background: hsla(0, 80%, 95%, 1);
+		color: #dc2626;
+	}
+
+	:global([data-theme='dark']) .subscription-status.error {
+		background: hsla(0, 80%, 15%, 0.3);
+		color: #ef4444;
+	}
+
+	.subscription-status.active {
+		background: linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(234, 88, 12, 0.1));
+		color: #f97316;
+		border: 1px solid #f97316;
+	}
+
+	:global([data-theme='dark']) .subscription-status.active {
+		background: linear-gradient(135deg, rgba(249, 115, 22, 0.2), rgba(234, 88, 12, 0.2));
+	}
+
+	.subscription-status :global(svg) {
+		flex-shrink: 0;
+	}
+
+	.remaining-time {
+		margin-left: auto;
+		font-size: var(--text-xs);
+		opacity: 0.8;
+	}
+
+	.purchase-error {
+		padding: var(--space-3);
+		margin-bottom: var(--space-3);
+		background: hsla(0, 80%, 95%, 1);
+		border: 1px solid #dc2626;
+		border-radius: var(--radius-md);
+		color: #dc2626;
+		font-size: var(--text-sm);
+	}
+
+	:global([data-theme='dark']) .purchase-error {
+		background: hsla(0, 80%, 15%, 0.3);
+		border-color: #ef4444;
+		color: #ef4444;
+	}
+
 	.modal-footer-custom {
 		text-align: center;
 	}
@@ -485,6 +704,7 @@
 	.btn-purchase {
 		display: inline-flex;
 		align-items: center;
+		justify-content: center;
 		gap: var(--space-2);
 		padding: var(--space-3) var(--space-6);
 		background: linear-gradient(135deg, #ea580c, #f97316);
@@ -497,6 +717,11 @@
 		box-shadow: 0 8px 24px rgba(249, 115, 22, 0.4);
 		transition: all 0.3s;
 		width: 100%;
+	}
+
+	.btn-purchase:disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
 	}
 
 	.btn-purchase :global(svg) {
@@ -521,5 +746,19 @@
 
 	:global([data-theme='dark']) .footer-note {
 		color: var(--gray-400);
+	}
+
+	/* Spinning animation for loader */
+	:global(.spinning) {
+		animation: spin 1s linear infinite;
+	}
+
+	@keyframes spin {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
 	}
 </style>
