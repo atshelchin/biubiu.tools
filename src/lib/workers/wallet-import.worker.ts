@@ -24,6 +24,7 @@ export interface WalletGenerationResult {
 		id: string;
 		address: Address;
 		derivationPath: string;
+		privateKey: string; // Private key for EIP-7702 signing
 	}>;
 	progress: number;
 	done: boolean;
@@ -145,14 +146,14 @@ self.addEventListener('message', async (event: MessageEvent<WalletGenerationRequ
 					continue;
 				}
 
-				const account = privateKeyToAccount(
-					`0x${Buffer.from(child.privateKey).toString('hex')}` as Address
-				);
+				const privateKeyHex = `0x${Buffer.from(child.privateKey).toString('hex')}`;
+				const account = privateKeyToAccount(privateKeyHex as Address);
 
 				wallets.push({
 					id: `${account.address}-${index}`,
 					address: account.address,
-					derivationPath: path
+					derivationPath: path,
+					privateKey: privateKeyHex
 				});
 				processed++;
 			}

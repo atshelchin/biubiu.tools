@@ -5,6 +5,7 @@
 	import ImportMethodSelector from '@/features/token-sweep/ui/components/import-method-selector.svelte';
 	import { validateMnemonicPhrase } from '@/features/token-sweep/utils/wallet-import';
 	import { scanMultipleWallets } from '@/features/token-sweep/utils/balance-scanner';
+	import { walletKeysStore } from '@/features/token-sweep/stores/wallet-keys-store.svelte';
 	import type { ImportMethod, DerivationPathType } from '@/features/token-sweep/types/wallet';
 	import type { ERC20Token } from '$lib/types/token';
 	import { createPublicClient, http } from 'viem';
@@ -235,7 +236,17 @@
 				if (result.error) {
 					errorMessage = result.error;
 				} else {
-					step4State.addWallets(result.wallets);
+					// Store private keys before adding wallets
+					walletKeysStore.storeKeys(
+						result.wallets.map((w) => ({
+							address: w.address,
+							privateKey: w.privateKey as `0x${string}`
+						}))
+					);
+					// Add wallets (without privateKey field)
+					step4State.addWallets(
+						result.wallets.map(({ privateKey, ...wallet }) => wallet)
+					);
 				}
 			} else {
 				// Single worker execution
@@ -248,7 +259,17 @@
 				if (result.error) {
 					errorMessage = result.error;
 				} else {
-					step4State.addWallets(result.wallets);
+					// Store private keys before adding wallets
+					walletKeysStore.storeKeys(
+						result.wallets.map((w) => ({
+							address: w.address,
+							privateKey: w.privateKey as `0x${string}`
+						}))
+					);
+					// Add wallets (without privateKey field)
+					step4State.addWallets(
+						result.wallets.map(({ privateKey, ...wallet }) => wallet)
+					);
 				}
 			}
 		} catch (error) {
@@ -338,7 +359,17 @@
 				if (result.error) {
 					errorMessage = result.error;
 				} else {
-					step4State.addWallets(result.wallets);
+					// Store private keys before adding wallets
+					walletKeysStore.storeKeys(
+						result.wallets.map((w) => ({
+							address: w.address,
+							privateKey: w.privateKey as `0x${string}`
+						}))
+					);
+					// Add wallets (without privateKey field)
+					step4State.addWallets(
+						result.wallets.map(({ privateKey, ...wallet }) => wallet)
+					);
 					if (result.invalidKeys.length > 0) {
 						errorMessage = `Imported ${result.wallets.length} wallets. ${result.invalidKeys.length} invalid keys skipped.`;
 					}
@@ -360,7 +391,17 @@
 				if (result.error) {
 					errorMessage = result.error;
 				} else {
-					step4State.addWallets(result.wallets);
+					// Store private keys before adding wallets
+					walletKeysStore.storeKeys(
+						result.wallets.map((w) => ({
+							address: w.address,
+							privateKey: w.privateKey as `0x${string}`
+						}))
+					);
+					// Add wallets (without privateKey field)
+					step4State.addWallets(
+						result.wallets.map(({ privateKey, ...wallet }) => wallet)
+					);
 					if (result.invalidKeys.length > 0) {
 						errorMessage = `Imported ${result.wallets.length} wallets. ${result.invalidKeys.length} invalid keys skipped.`;
 					}

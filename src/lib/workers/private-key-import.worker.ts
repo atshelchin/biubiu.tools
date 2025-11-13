@@ -11,6 +11,7 @@ export interface PrivateKeyImportResult {
 	wallets: Array<{
 		id: string;
 		address: Address;
+		privateKey: string; // Private key for EIP-7702 signing
 	}>;
 	invalidKeys: string[];
 	progress: number;
@@ -22,7 +23,7 @@ export interface PrivateKeyImportResult {
  * Validate and convert a single private key to wallet
  */
 function processPrivateKey(key: string): {
-	wallet?: { id: string; address: Address };
+	wallet?: { id: string; address: Address; privateKey: string };
 	isValid: boolean;
 } {
 	try {
@@ -38,7 +39,8 @@ function processPrivateKey(key: string): {
 		return {
 			wallet: {
 				id: account.address,
-				address: account.address
+				address: account.address,
+				privateKey: cleanKey
 			},
 			isValid: true
 		};
