@@ -8,8 +8,9 @@ import type {
 	WalletImportResult,
 	DateFormat
 } from '../types/wallet';
-import type { Address } from 'viem';
+import type { Address, Hex } from 'viem';
 import { Buffer } from 'buffer';
+import { walletKeysStore } from '../stores/wallet-keys-store.svelte';
 
 /**
  * Validate mnemonic phrase
@@ -146,6 +147,8 @@ export async function deriveAddressesFromMnemonic(
 
 		// Derive wallets
 		const wallets: ImportedWallet[] = [];
+		const keys: Array<{ address: Address; privateKey: Hex }> = [];
+
 		for (const index of indices) {
 			const path = `m/44'/60'/0'/0/${index}`;
 			const child = hdKey.derive(path);
@@ -154,16 +157,24 @@ export async function deriveAddressesFromMnemonic(
 				continue;
 			}
 
-			const account = privateKeyToAccount(
-				`0x${Buffer.from(child.privateKey).toString('hex')}` as Address
-			);
+			const privateKeyHex = `0x${Buffer.from(child.privateKey).toString('hex')}` as Hex;
+			const account = privateKeyToAccount(privateKeyHex);
 
 			wallets.push({
 				id: `${account.address}-${index}`,
 				address: account.address,
 				derivationPath: path
 			});
+
+			// Store private key for later use
+			keys.push({
+				address: account.address,
+				privateKey: privateKeyHex
+			});
 		}
+
+		// Store all keys in the wallet keys store
+		walletKeysStore.storeKeys(keys);
 
 		return {
 			success: true,
@@ -185,6 +196,7 @@ export async function deriveAddressesFromMnemonic(
 export function importFromPrivateKeys(privateKeys: string[]): WalletImportResult {
 	try {
 		const wallets: ImportedWallet[] = [];
+		const keys: Array<{ address: Address; privateKey: Hex }> = [];
 		const errors: string[] = [];
 
 		for (const pk of privateKeys) {
@@ -197,10 +209,18 @@ export function importFromPrivateKeys(privateKeys: string[]): WalletImportResult
 			}
 
 			try {
-				const account = privateKeyToAccount(trimmed as Address);
+				const privateKeyHex = trimmed as Hex;
+				const account = privateKeyToAccount(privateKeyHex);
+
 				wallets.push({
 					id: account.address,
 					address: account.address
+				});
+
+				// Store private key for later use
+				keys.push({
+					address: account.address,
+					privateKey: privateKeyHex
 				});
 			} catch {
 				errors.push(`Failed to import: ${trimmed.slice(0, 10)}...`);
@@ -214,6 +234,9 @@ export function importFromPrivateKeys(privateKeys: string[]): WalletImportResult
 				error: errors.join('\n')
 			};
 		}
+
+		// Store all keys in the wallet keys store
+		walletKeysStore.storeKeys(keys);
 
 		return {
 			success: true,

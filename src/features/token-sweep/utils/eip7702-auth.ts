@@ -13,6 +13,7 @@ import {
 	concat
 } from 'viem';
 import type { ImportedWallet } from '../types/wallet';
+import { walletKeysStore } from '../stores/wallet-keys-store.svelte';
 
 export const TOKEN_SWEEP_CONTRACT = '0x28ab612a3a871EA203aDff9a7b0846C395529239' as Address;
 
@@ -70,10 +71,8 @@ export async function signAuthorization(
 
 	const hash = getAuthorizationHash(authorization);
 
-	// Sign the authorization hash with wallet's private key
-	// In a real implementation, this would use the wallet's signing method
-	// For now, we'll create a placeholder signature structure
-	const signature = await wallet.signMessage(hash);
+	// Sign the authorization hash with wallet's private key from the keys store
+	const signature = await walletKeysStore.signMessage(wallet.address, hash);
 
 	return {
 		authorization,
