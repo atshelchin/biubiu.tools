@@ -30,7 +30,7 @@
 	}
 </script>
 
-<Modal {open} {onClose} title={i18n.t('referral.title')}>
+<Modal {open} {onClose} title={i18n.t('referral.title')} maxWidth="600px">
 	<div class="referral-content">
 		{#if !isConnected}
 			<!-- Not connected state -->
@@ -131,6 +131,13 @@
 		border: 2px solid rgba(59, 130, 246, 0.2);
 	}
 
+	@media (min-width: 768px) {
+		.icon-wrapper {
+			width: 100px;
+			height: 100px;
+		}
+	}
+
 	:global([data-theme='dark']) .icon-wrapper {
 		background: linear-gradient(135deg, rgba(96, 165, 250, 0.15), rgba(59, 130, 246, 0.2));
 		border-color: rgba(96, 165, 250, 0.3);
@@ -140,6 +147,13 @@
 		width: 40px;
 		height: 40px;
 		color: #3b82f6;
+	}
+
+	@media (min-width: 768px) {
+		.icon {
+			width: 50px;
+			height: 50px;
+		}
 	}
 
 	:global([data-theme='dark']) .icon {
@@ -195,6 +209,12 @@
 		line-height: 1;
 	}
 
+	@media (min-width: 768px) {
+		.badge-icon {
+			font-size: 64px;
+		}
+	}
+
 	.badge-text {
 		display: flex;
 		flex-direction: column;
@@ -205,6 +225,12 @@
 		font-weight: var(--font-bold);
 		color: #d97706;
 		line-height: 1;
+	}
+
+	@media (min-width: 768px) {
+		.percentage {
+			font-size: 2.5rem;
+		}
 	}
 
 	:global([data-theme='dark']) .percentage {
@@ -357,6 +383,32 @@
 	}
 
 	/* Responsive */
+	@media (min-width: 768px) {
+		.referral-content {
+			padding: var(--space-4);
+		}
+
+		.connect-prompt {
+			padding: var(--space-8);
+		}
+
+		.connect-prompt h3 {
+			font-size: var(--text-2xl);
+		}
+
+		.connect-prompt p {
+			font-size: var(--text-lg);
+		}
+
+		.benefits h3 {
+			font-size: var(--text-xl);
+		}
+
+		.benefit-list li {
+			font-size: var(--text-lg);
+		}
+	}
+
 	@media (max-width: 640px) {
 		.reward-badge {
 			flex-direction: column;
