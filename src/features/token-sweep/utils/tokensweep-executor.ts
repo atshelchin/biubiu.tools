@@ -100,9 +100,19 @@ async function generateMulticallSignature(
 		'\n\nChain ID: ' +
 		config.chainId.toString();
 
+	console.log('📝 Message to sign for member authorization:');
+	console.log(message);
+	console.log('🖊️ Signer (member account):', authSigner.address);
+	console.log('📞 Caller (temporary wallet):', callerAddress);
+	console.log('⏳ Requesting signature from MetaMask...');
+
 	// Sign with member account (authSigner)
 	// Contract will use ecrecover to get authSigner.address and check membership
+	// This WILL trigger MetaMask popup for user to approve signature
 	const signature = await authSigner.signMessage(message);
+
+	console.log('✅ Member signature received!');
+	console.log('Signature:', signature.slice(0, 20) + '...');
 
 	return signature as Hex;
 }

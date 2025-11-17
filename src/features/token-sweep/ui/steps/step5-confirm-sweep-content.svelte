@@ -244,24 +244,44 @@
 		// This allows the contract to identify the member and waive fees
 		let memberSigner: TransactionSigner | undefined;
 
+		console.log('🔍 Checking membership status:', {
+			isMember: membershipStatus.isMember,
+			transactionMode,
+			address: connectStore.address
+		});
+
 		if (membershipStatus.isMember && transactionMode === 'temporary') {
 			// User is a member - create signer from connected wallet to sign authorization
 			// This signature proves membership for fee discount
 			console.log('👑 Member detected! Creating member signer for fee discount');
+			console.log('👤 Member address:', connectStore.address);
+
 			const memberWalletClient = await connectStore.getWalletClient();
 
 			memberSigner = {
 				address: connectStore.address,
 				signMessage: async (message: string): Promise<Hex> => {
-					return await memberWalletClient.signMessage({
+					console.log('🔔 Member signMessage called!');
+					console.log('📄 Message to sign:', message);
+
+					const sig = await memberWalletClient.signMessage({
 						account: connectStore.address,
 						message
 					});
+
+					console.log('✅ Member signature obtained:', sig.slice(0, 20) + '...');
+					return sig;
 				},
 				sendTransaction: async () => {
 					throw new Error('Member signer should not send transactions');
 				}
 			};
+
+			console.log('✅ Member signer created successfully');
+		} else {
+			console.log('ℹ️ No member signer needed:', {
+				reason: !membershipStatus.isMember ? 'Not a member' : 'Not using temporary wallet mode'
+			});
 		}
 
 		// Build TokenSweep config
