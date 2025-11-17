@@ -13,6 +13,14 @@
 	// Use global theme store
 	const themeStore = useTheme();
 
+	// Wrapper to mark user preference when toggling
+	function handleToggle() {
+		if (typeof window !== 'undefined') {
+			localStorage.setItem('theme-user-preference', 'true');
+		}
+		themeStore.toggleTheme();
+	}
+
 	// Size mapping
 	const sizeMap = {
 		sm: { button: '2rem', icon: 16 },
@@ -25,7 +33,7 @@
 	function handleKeyDown(e: KeyboardEvent) {
 		if (e.key === 'Enter' || e.key === ' ') {
 			e.preventDefault();
-			themeStore.toggleTheme();
+			handleToggle();
 		}
 	}
 </script>
@@ -37,7 +45,7 @@
 
 	<button
 		class="theme-toggle theme-toggle-{size}"
-		onclick={themeStore.toggleTheme}
+		onclick={handleToggle}
 		onkeydown={handleKeyDown}
 		aria-label={themeStore.theme === 'light' ? '切换到暗色模式' : '切换到亮色模式'}
 		title={themeStore.theme === 'light' ? '切换到暗色模式' : '切换到亮色模式'}

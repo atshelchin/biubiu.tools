@@ -523,7 +523,7 @@ body {
 }
 
 /* 响应系统偏好 Respond to System Preferences */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 	:root:not([data-theme]) {
 		--color-background: var(--gray-900);
 		--color-foreground: var(--gray-100);
@@ -536,7 +536,7 @@ body {
 		--color-muted-foreground: var(--gray-400);
 		--color-border: var(--gray-700);
 	}
-}
+} */
 
 @media (prefers-contrast: high) {
 	:root {

@@ -1,9 +1,37 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { useTheme } from '$lib/stores/theme.svelte';
 	import Socials from '$lib/components/ui/socials.svelte';
 	import LangToggle from '$lib/components/widgets/lang-toggle.svelte';
 	import ThemeToggle from '$lib/components/widgets/theme-toggle.svelte';
 
 	const currentYear = new Date().getFullYear();
+	const theme = useTheme();
+
+	// Listen to system theme changes
+	onMount(() => {
+		if (typeof window === 'undefined') return;
+
+		const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+		const handleSystemThemeChange = (e: MediaQueryListEvent) => {
+			// Only apply system theme if user hasn't manually set preference
+			const hasUserPreference = localStorage.getItem('theme-user-preference') === 'true';
+
+			if (!hasUserPreference) {
+				const systemTheme = e.matches ? 'dark' : 'light';
+				theme.setTheme(systemTheme);
+			}
+		};
+
+		// Add listener for system theme changes
+		mediaQuery.addEventListener('change', handleSystemThemeChange);
+
+		// Cleanup on component destroy
+		return () => {
+			mediaQuery.removeEventListener('change', handleSystemThemeChange);
+		};
+	});
 </script>
 
 <footer class="footer">
