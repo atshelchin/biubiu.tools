@@ -13,6 +13,7 @@
 	import Dropdown from './dropdown.svelte';
 	import { longPress } from '$lib/utils/long-press';
 	import { useI18n } from '@shelchin/i18n/svelte';
+	import NetworkIcon from './network-icon.svelte';
 
 	interface Props {
 		selectedChainId: number;
@@ -232,9 +233,7 @@
 					<Check size={20} class="check-icon" />
 					<span class="connected-prefix">{i18n.t('wallet.connected_to')}</span>
 					<div class="network-badge">
-						{#if selectedNetwork?.iconUrl}
-							<img src={selectedNetwork.iconUrl} alt={selectedNetwork.name} class="network-logo" />
-						{/if}
+						<NetworkIcon chainId={selectedChainId} size={20} />
 						<span class="network-name">{selectedNetwork?.name || `Chain ${selectedChainId}`}</span>
 					</div>
 				</div>
@@ -567,7 +566,7 @@
 	.connected-card {
 		padding: var(--space-5);
 		background: hsla(120, 60%, 50%, 0.08);
-		border: 1px solid hsl(120, 60%, 50%);
+		/* border: 1px solid hsl(120, 60%, 50%); */
 		border-radius: var(--radius-lg);
 	}
 
@@ -614,13 +613,6 @@
 	:global([data-theme='dark']) .network-badge {
 		background: hsla(120, 60%, 15%, 0.3);
 		border-color: hsla(120, 60%, 25%, 1);
-	}
-
-	.network-logo {
-		width: 20px;
-		height: 20px;
-		border-radius: 50%;
-		object-fit: contain;
 	}
 
 	.network-name {
