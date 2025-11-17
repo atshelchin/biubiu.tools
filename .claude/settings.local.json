@@ -13,7 +13,8 @@
 			"Bash(find:*)",
 			"Bash(mkdir:*)",
 			"Bash(npx prettier:*)",
-			"Bash(bun x prettier:*)"
+			"Bash(bun x prettier:*)",
+			"Bash(bunx prettier:*)"
 		],
 		"deny": [],
 		"ask": []
