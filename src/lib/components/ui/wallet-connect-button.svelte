@@ -760,7 +760,7 @@
 	}
 
 	.chevron-icon {
-		color: var(--gray-500);
+		color: var(--gray-600);
 		flex-shrink: 0;
 	}
 
@@ -892,12 +892,8 @@
 	}
 
 	.check-icon-small {
-		color: var(--color-primary);
+		color: var(--gray-600);
 		flex-shrink: 0;
-	}
-
-	:global([data-theme='dark']) .check-icon-small {
-		color: hsl(var(--brand-hue), var(--brand-saturation), 60%);
 	}
 
 	/* Error Card */
