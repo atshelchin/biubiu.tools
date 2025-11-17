@@ -39,6 +39,12 @@
 		useI18nKeys: true,
 		appTitle: i18n.t('tools.token_sweep.title'),
 		appDescription: i18n.t('tools.token_sweep.description'),
+		appFeatures: [
+			i18n.t('tools.token_sweep.feature_1'),
+			i18n.t('tools.token_sweep.feature_2'),
+			i18n.t('tools.token_sweep.feature_3'),
+			i18n.t('tools.token_sweep.feature_4')
+		],
 		walletConnect: {
 			chains: [mainnet, polygon, base, bsc, arbitrum, optimism],
 			storageKey: 'biubiu-tools-token-sweep'

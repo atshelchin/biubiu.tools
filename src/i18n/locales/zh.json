@@ -17,6 +17,10 @@
 		"token_sweep": {
 			"title": "代币批量归集",
 			"description": "将多个地址的代币归集到单一目标地址",
+			"feature_1": "彻底清空余额，不留尾巴",
+			"feature_2": "大批量自动化，无需逐笔确认",
+			"feature_3": "钱包无需原生币即可归集",
+			"feature_4": "无许可支持任意 EVM 链",
 			"seo": {
 				"page_title": "代币批量归集 - 批量转移 ERC20 代币 | BiuBiu Tools",
 				"page_description": "高效归集和整合多个钱包的 ERC20 代币。支持以太坊、Polygon、BSC、Arbitrum、Optimism 和 Base 网络。快速、安全、Gas 费优化。",

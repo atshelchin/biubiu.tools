@@ -29,6 +29,7 @@
 		// App-specific configuration
 		appTitle: string;
 		appDescription: string;
+		appFeatures?: string[];
 
 		// Wallet connect configuration (optional)
 		walletConnect?: {
@@ -97,7 +98,11 @@
 <PageLayout>
 	{#snippet toolbar()}
 		<div class="toolbar-content">
-			<AppTitle title={config.appTitle} description={config.appDescription} />
+			<AppTitle
+				title={config.appTitle}
+				description={config.appDescription}
+				features={config.appFeatures}
+			/>
 			<div class="toolbar-actions">
 				{#if toolbarActions}
 					{@render toolbarActions()}

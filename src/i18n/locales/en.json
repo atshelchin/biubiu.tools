@@ -17,6 +17,10 @@
 		"token_sweep": {
 			"title": "Token Sweep",
 			"description": "Sweep tokens from multiple addresses to a single destination address",
+			"feature_1": "Complete balance sweep, zero dust left",
+			"feature_2": "Large-scale automation, no per-tx confirmation",
+			"feature_3": "No native token required in wallets",
+			"feature_4": "Permissionless on any EVM chain",
 			"seo": {
 				"page_title": "Token Sweep - Batch Transfer ERC20 Tokens | BiuBiu Tools",
 				"page_description": "Efficiently sweep and consolidate multiple ERC20 tokens across wallets. Support for Ethereum, Polygon, BSC, Arbitrum, Optimism, and Base networks. Fast, secure, and gas-optimized.",
