@@ -64,16 +64,23 @@
 
 	// Load balance for each account
 	async function loadAccountBalances(accountAddresses: string[]) {
+		const publicClient = connectStore.publicClient;
+		if (!publicClient) {
+			console.error('Public client not available');
+			return;
+		}
+
 		const balances = new Map<string, string>();
 
 		for (const address of accountAddresses) {
 			try {
-				const balance = await connectStore.provider?.getBalance(address);
-				if (balance !== undefined) {
-					// Format balance to 4 decimal places
-					const formatted = (Number(balance) / 1e18).toFixed(4);
-					balances.set(address.toLowerCase(), formatted);
-				}
+				const balance = await publicClient.getBalance({
+					address: address as `0x${string}`
+				});
+
+				// Format balance to 4 decimal places
+				const formatted = (Number(balance) / 1e18).toFixed(4);
+				balances.set(address.toLowerCase(), formatted);
 			} catch (error) {
 				console.error(`Failed to load balance for ${address}:`, error);
 				balances.set(address.toLowerCase(), '0.0000');
