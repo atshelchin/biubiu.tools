@@ -74,7 +74,7 @@
 	}
 
 	// Create step manager from steps config with i18n keys (auto-sets context internally)
-	const stepManager = createStepManager(config.steps, 1, config.useI18nKeys ?? true);
+	const stepManager = createStepManager(config.steps, 1, config.useI18nKeys ?? false);
 
 	// Get current step components
 	const SidebarComponent = $derived(config.stepComponents.sidebar[stepManager.currentStep - 1]);
