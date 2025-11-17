@@ -70,6 +70,10 @@
 							<span class="bullet">✓</span>
 							<span>{i18n.t('referral.benefit_2')}</span>
 						</li>
+						<li>
+							<span class="bullet">✓</span>
+							<span>{i18n.t('referral.benefit_3')}</span>
+						</li>
 					</ul>
 				</div>
 
