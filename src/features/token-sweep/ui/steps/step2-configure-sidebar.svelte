@@ -26,7 +26,7 @@
 		class="wallet-status-section"
 	/>
 
-	{#if summary}
+	{#if summary && summary.total !== undefined}
 		<div class="check-summary">
 			<div class="summary-item">
 				<span class="summary-label">Total Checks:</span>
