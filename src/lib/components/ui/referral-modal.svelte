@@ -70,10 +70,6 @@
 							<span class="bullet">✓</span>
 							<span>{i18n.t('referral.benefit_2')}</span>
 						</li>
-						<li>
-							<span class="bullet">✓</span>
-							<span>{i18n.t('referral.benefit_3')}</span>
-						</li>
 					</ul>
 				</div>
 
@@ -87,18 +83,9 @@
 							{:else}
 								{referralUrl}
 							{/if}
+							<CopyButton value={referralUrl} />
 						</div>
-						<CopyButton value={referralUrl} />
 					</div>
-				</div>
-
-				<div class="note">
-					<svg class="note-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-						<circle cx="12" cy="12" r="10" />
-						<line x1="12" y1="16" x2="12" y2="12" />
-						<line x1="12" y1="8" x2="12.01" y2="8" />
-					</svg>
-					<p>{i18n.t('referral.note')}</p>
 				</div>
 			</div>
 		{/if}
@@ -269,7 +256,7 @@
 
 	.benefit-list li {
 		display: flex;
-		align-items: flex-start;
+		align-items: center;
 		gap: var(--space-2);
 		font-size: var(--text-base);
 		color: var(--gray-700);

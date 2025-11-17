@@ -46,7 +46,7 @@
 
 <style>
 	.copy-button {
-		display: flex;
+		display: inline-flex;
 		align-items: center;
 		justify-content: center;
 		width: var(--space-8);
