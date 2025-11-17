@@ -16,7 +16,28 @@
 		"badge": "Professional Web3 Tools",
 		"token_sweep": {
 			"title": "Token Sweep",
-			"description": "Sweep tokens from multiple addresses to a single destination address"
+			"description": "Sweep tokens from multiple addresses to a single destination address",
+			"step1": {
+				"sidebar": {
+					"title": "Select Network & Connect Wallet",
+					"description": "Choose a blockchain network and connect your wallet to start sweeping tokens.",
+					"what_is_this": "What is this step?",
+					"what_explanation": "You need to:",
+					"what_item1": "Select a blockchain network (Ethereum, BSC, Polygon, etc.)",
+					"what_item2": "Connect your Web3 wallet (MetaMask, etc.)",
+					"why_do_this": "Why do this?",
+					"why_explanation": "Tell the app which network to use, and which wallet's assets to operate on - both are essential.",
+					"what_is_network": "What is a blockchain network?",
+					"network_explanation": "A blockchain network is a platform for storing and transferring crypto, like different banking systems. Ethereum, BSC, and Polygon are separate networks that don't connect.",
+					"what_is_wallet": "What is a wallet?",
+					"wallet_explanation": "A Web3 wallet stores and manages your crypto, like PayPal or Venmo for digital currencies. Popular: MetaMask, Trust Wallet, Coinbase Wallet.",
+					"what_is_native_token": "What is a native token?",
+					"native_token_explanation": "A native token is the currency each network uses for transaction fees. Ethereum uses ETH, BSC uses BNB, Polygon uses POL. Like paying a toll to use the highway.",
+					"beginner_tips": "Tips",
+					"tip1": "✅ Make sure you selected the correct network (choose where your tokens are)",
+					"tip2": "⛽ Ensure you have enough native tokens to pay fees"
+				}
+			}
 		},
 		"token_distribution": {
 			"title": "Token Distribution",

@@ -1,104 +1,70 @@
 <script lang="ts">
 	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
+	import InfoCard from '$lib/components/step/info-card.svelte';
+	import { useI18n } from '@shelchin/i18n/svelte';
+
+	const i18n = useI18n();
 </script>
 
 <StepSidebar
 	stepNumber={1}
-	title="Connect Wallet"
-	description="Connect your Web3 wallet to start sweeping tokens"
+	title={i18n.t('tools.token_sweep.step1.sidebar.title')}
+	description={''}
 >
-	<div class="feature-highlights">
-		<ul class="feature-list">
-			<li>
-				<span class="feature-icon">⚡</span>
-				<span>Batch transfer ERC20 tokens efficiently</span>
-			</li>
-			<li>
-				<span class="feature-icon">🌐</span>
-				<span>Support any EVM-compatible network with EIP-7702</span>
-			</li>
-			<li>
-				<span class="feature-icon">🔒</span>
-				<span>Non-custodial and secure</span>
-			</li>
+	<!-- What is this step? -->
+	<InfoCard
+		variant="primary"
+		icon="📝"
+		title={i18n.t('tools.token_sweep.step1.sidebar.what_is_this')}
+		description={i18n.t('tools.token_sweep.step1.sidebar.what_explanation')}
+	>
+		<ul>
+			<li>{i18n.t('tools.token_sweep.step1.sidebar.what_item1')}</li>
+			<li>{i18n.t('tools.token_sweep.step1.sidebar.what_item2')}</li>
 		</ul>
-	</div>
+	</InfoCard>
 
-	<div class="security-note">
-		<span class="security-icon">🛡️</span>
-		<p>Your private keys never leave your wallet. All transactions are signed locally.</p>
-	</div>
+	<!-- Why do this? -->
+	<InfoCard
+		variant="primary"
+		icon="❓"
+		title={i18n.t('tools.token_sweep.step1.sidebar.why_do_this')}
+		description={i18n.t('tools.token_sweep.step1.sidebar.why_explanation')}
+	/>
+
+	<!-- What is a blockchain network? -->
+	<InfoCard
+		variant="knowledge"
+		icon="🌐"
+		title={i18n.t('tools.token_sweep.step1.sidebar.what_is_network')}
+		description={i18n.t('tools.token_sweep.step1.sidebar.network_explanation')}
+	/>
+
+	<!-- What is a wallet? -->
+	<InfoCard
+		variant="knowledge"
+		icon="🔑"
+		title={i18n.t('tools.token_sweep.step1.sidebar.what_is_wallet')}
+		description={i18n.t('tools.token_sweep.step1.sidebar.wallet_explanation')}
+	/>
+
+	<!-- What is native token? -->
+	<InfoCard
+		variant="knowledge"
+		icon="⛽"
+		title={i18n.t('tools.token_sweep.step1.sidebar.what_is_native_token')}
+		description={i18n.t('tools.token_sweep.step1.sidebar.native_token_explanation')}
+	/>
+
+	<!-- Beginner Tips -->
+	<InfoCard
+		variant="tips"
+		icon="💡"
+		title={i18n.t('tools.token_sweep.step1.sidebar.beginner_tips')}
+	>
+		<ul>
+			<li>{i18n.t('tools.token_sweep.step1.sidebar.tip1')}</li>
+			<li>{i18n.t('tools.token_sweep.step1.sidebar.tip2')}</li>
+		</ul>
+	</InfoCard>
 </StepSidebar>
-
-<style>
-	/* Feature Highlights */
-	.feature-highlights {
-		margin: var(--space-4) 0;
-		padding: var(--space-3);
-		background: var(--color-panel-1);
-		border-radius: var(--radius-md);
-		border: 1px solid var(--color-border);
-	}
-
-	.feature-list {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-2);
-	}
-
-	.feature-list li {
-		display: flex;
-		align-items: flex-start;
-		gap: var(--space-2);
-		font-size: var(--text-sm);
-		color: var(--gray-700);
-		line-height: 1.5;
-	}
-
-	:global([data-theme='dark']) .feature-list li {
-		color: var(--gray-300);
-	}
-
-	.feature-icon {
-		font-size: var(--text-lg);
-		flex-shrink: 0;
-		line-height: 1;
-	}
-
-	/* Security Note */
-	.security-note {
-		margin-top: var(--space-4);
-		padding: var(--space-3);
-		background: hsla(120, 60%, 95%, 1);
-		border-radius: var(--radius-md);
-		border: 1px solid hsla(120, 60%, 80%, 1);
-		display: flex;
-		gap: var(--space-2);
-		align-items: flex-start;
-	}
-
-	:global([data-theme='dark']) .security-note {
-		background: hsla(120, 60%, 15%, 0.3);
-		border-color: hsla(120, 60%, 25%, 1);
-	}
-
-	.security-icon {
-		font-size: var(--text-xl);
-		flex-shrink: 0;
-		line-height: 1;
-	}
-
-	.security-note p {
-		margin: 0;
-		font-size: var(--text-sm);
-		color: var(--gray-700);
-		line-height: 1.5;
-	}
-
-	:global([data-theme='dark']) .security-note p {
-		color: var(--gray-300);
-	}
-</style>
