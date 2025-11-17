@@ -264,7 +264,6 @@
 		<div class="connected-container">
 			<div class="connected-card">
 				<div class="connected-header">
-					<Check size={20} class="check-icon" />
 					<span class="connected-prefix">{i18n.t('wallet.connected_to')}</span>
 					<div class="network-badge">
 						<NetworkIcon chainId={selectedChainId} size={20} />
@@ -348,8 +347,8 @@
 								<div class="account-item-top">
 									<span class="account-item-address">{formatAddress(account)}</span>
 									<span class="account-item-balance"
-										>{accountBalances.get(account.toLowerCase()) || '...'} {selectedNetwork?.symbol ||
-											'ETH'}</span
+										>{accountBalances.get(account.toLowerCase()) || '...'}
+										{selectedNetwork?.symbol || 'ETH'}</span
 									>
 								</div>
 								<span class="account-item-full">{account}</span>
