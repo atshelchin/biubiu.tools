@@ -115,8 +115,8 @@
 		align-items: center;
 		gap: var(--space-2);
 		padding: var(--space-2) var(--space-4);
-		background: var(--color-primary);
-		color: white;
+		background: var(--color-button-primary);
+		color: var(--color-button-primary-foreground);
 		border: none;
 		border-radius: var(--radius-sm);
 		font-weight: var(--font-semibold);
@@ -126,12 +126,27 @@
 		margin-left: auto;
 	}
 
+	:global([data-theme='dark']) :global(.step-footer .continue-btn),
+	:global([data-theme='dark']) :global(.step-footer .footer-continue-btn),
+	:global([data-theme='dark']) :global(.step-footer .btn-execute) {
+		background: var(--brand-600);
+		color: var(--gray-200);
+		box-shadow: var(--shadow-sm);
+	}
+
 	:global(.step-footer .continue-btn:hover),
 	:global(.step-footer .footer-continue-btn:hover),
 	:global(.step-footer .btn-execute:hover:not(:disabled)) {
 		opacity: 0.9;
 		transform: translateY(-1px);
 		box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+	}
+
+	:global([data-theme='dark']) :global(.step-footer .continue-btn:hover),
+	:global([data-theme='dark']) :global(.step-footer .footer-continue-btn:hover),
+	:global([data-theme='dark']) :global(.step-footer .btn-execute:hover:not(:disabled)) {
+		opacity: 0.85;
+		box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
 	}
 
 	:global(.step-footer .btn-execute:disabled) {
