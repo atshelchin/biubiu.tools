@@ -2,7 +2,8 @@
 	import { page } from '$app/stores';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
 	import type { useConnectStore } from '$lib/stores/connect.svelte';
-	import NetworkIcon from './network-icon.svelte';
+	import { Settings, CirclePlus } from 'lucide-svelte';
+	import NetworkCard from './network-card.svelte';
 	import NetworkSettingsModal from './network-settings-modal.svelte';
 
 	interface Props {
@@ -105,19 +106,7 @@
 		<p>Please enable at least one network to continue.</p>
 		{#if hasNetworkManagement}
 			<button class="settings-button" onclick={openNetworkSettings}>
-				<svg
-					width="20"
-					height="20"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-				>
-					<circle cx="12" cy="12" r="3"></circle>
-					<path
-						d="M12 1v6m0 6v6m7.071-13.071l-4.242 4.242m0 6l-4.242 4.242M1 12h6m6 0h6M4.929 4.929l4.242 4.242m0 6l4.242 4.242"
-					></path>
-				</svg>
+				<Settings size={20} />
 				Open Network Settings
 			</button>
 		{/if}
@@ -126,49 +115,18 @@
 	<!-- Network Grid -->
 	<div class="network-grid">
 		{#each enabledNetworks as network (network.chainId)}
-			<button
-				class="network-card"
-				class:selected={selectedChainId === network.chainId}
+			<NetworkCard
+				{network}
+				selected={selectedChainId === network.chainId}
 				onclick={() => selectNetwork(network.chainId)}
-			>
-				<NetworkIcon chainId={network.chainId} size={48} />
-				<div class="network-info">
-					<div class="network-name">{network.name}</div>
-					<div class="network-chain-id">Chain ID: {network.chainId}</div>
-				</div>
-				{#if selectedChainId === network.chainId}
-					<div class="selected-indicator">
-						<svg
-							width="20"
-							height="20"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="3"
-						>
-							<polyline points="20 6 9 17 4 12"></polyline>
-						</svg>
-					</div>
-				{/if}
-			</button>
+			/>
 		{/each}
 
 		{#if showAddButton && hasNetworkManagement}
 			<!-- Add Network Card -->
 			<button class="network-card add-network-card" onclick={openNetworkSettings}>
 				<div class="add-network-icon">
-					<svg
-						width="32"
-						height="32"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-					>
-						<circle cx="12" cy="12" r="10"></circle>
-						<line x1="12" y1="8" x2="12" y2="16"></line>
-						<line x1="8" y1="12" x2="16" y2="12"></line>
-					</svg>
+					<CirclePlus size={32} />
 				</div>
 				<div class="add-network-info">
 					<div class="add-network-title">Network not found?</div>
@@ -269,46 +227,14 @@
 		gap: var(--space-4);
 	}
 
-	.network-card {
-		position: relative;
-		display: flex;
-		align-items: center;
-		gap: var(--space-3);
-		padding: var(--space-4);
-		background: var(--color-background);
-		border: 2px solid var(--color-border);
-		border-radius: var(--radius-lg);
-		cursor: pointer;
-		transition: all 0.2s ease;
-		text-align: left;
-		width: 100%;
-	}
-
-	.network-card:hover {
-		background: var(--color-panel-1);
-		border-color: var(--color-primary);
-		transform: translateY(-2px);
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	}
-
-	.network-card.selected {
-		background: hsla(var(--brand-hue), var(--brand-saturation), 50%, 0.1);
-		border-color: var(--color-primary);
-		border-width: 2px;
-	}
-
-	.add-network-card {
+	/* Add Network Card */
+	:global(.network-card.add-network-card) {
 		border-style: dashed;
-		border-width: 2px;
-		border-color: var(--color-border);
-		background: transparent;
 		justify-content: center;
 		flex-direction: column;
-		gap: var(--space-2);
 	}
 
-	.add-network-card:hover {
-		border-color: var(--color-primary);
+	:global(.network-card.add-network-card:hover) {
 		background: hsla(var(--brand-hue), var(--brand-saturation), 50%, 0.05);
 	}
 
@@ -345,31 +271,11 @@
 		color: var(--color-primary);
 	}
 
-	.add-network-card:hover .add-network-subtitle {
+	:global(.network-card.add-network-card:hover) .add-network-subtitle {
 		color: var(--gray-600);
 	}
 
-	:global([data-theme='dark']) .network-card {
-		background: var(--color-panel-1);
-		border-color: var(--color-panel-border-2);
-	}
-
-	:global([data-theme='dark']) .network-card:hover {
-		background: var(--color-panel-2);
-		border-color: var(--color-primary);
-	}
-
-	:global([data-theme='dark']) .network-card.selected {
-		background: hsla(var(--brand-hue), var(--brand-saturation), 60%, 0.15);
-	}
-
-	:global([data-theme='dark']) .add-network-card {
-		background: transparent;
-		border-color: var(--color-panel-border-2);
-	}
-
-	:global([data-theme='dark']) .add-network-card:hover {
-		border-color: var(--color-primary);
+	:global([data-theme='dark']) :global(.network-card.add-network-card:hover) {
 		background: hsla(var(--brand-hue), var(--brand-saturation), 60%, 0.08);
 	}
 
@@ -381,58 +287,8 @@
 		color: var(--gray-400);
 	}
 
-	:global([data-theme='dark']) .add-network-card:hover .add-network-title {
+	:global([data-theme='dark']) :global(.network-card.add-network-card:hover) .add-network-title {
 		color: var(--color-primary);
-	}
-
-	.network-info {
-		flex: 1;
-	}
-
-	.network-name {
-		font-size: var(--text-base);
-		font-weight: var(--font-semibold);
-		color: var(--gray-900);
-		margin-bottom: var(--space-1);
-	}
-
-	:global([data-theme='dark']) .network-name {
-		color: var(--gray-100);
-	}
-
-	.network-chain-id {
-		font-size: var(--text-sm);
-		color: var(--gray-500);
-	}
-
-	:global([data-theme='dark']) .network-chain-id {
-		color: var(--gray-400);
-	}
-
-	.selected-indicator {
-		position: absolute;
-		top: var(--space-3);
-		right: var(--space-3);
-		width: 28px;
-		height: 28px;
-		border-radius: 50%;
-		background: var(--color-primary);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: white;
-		animation: scaleIn 0.2s ease;
-	}
-
-	@keyframes scaleIn {
-		from {
-			transform: scale(0);
-			opacity: 0;
-		}
-		to {
-			transform: scale(1);
-			opacity: 1;
-		}
 	}
 
 	/* Responsive */

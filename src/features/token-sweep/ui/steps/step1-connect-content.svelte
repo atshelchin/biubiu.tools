@@ -3,11 +3,9 @@
 	import NetworkSelector from '@/lib/components/ui/network-selector.svelte';
 	import WalletConnectButton from '@/lib/components/ui/wallet-connect-button.svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
-	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 
 	const connectStore = useConnectStore();
-	const stepManager = useStepManager();
 
 	// Loading state
 	const isLoading = $derived(!connectStore.isInitialized);
@@ -19,18 +17,6 @@
 	const hasEnabledNetworks = $derived(
 		connectStore.networks.some((n) => connectStore.isNetworkEnabled(n.chainId))
 	);
-
-	// Check if ready to continue to next step
-	const isReadyToContinue = $derived(
-		connectStore.isConnected && selectedChainId && connectStore.currentChainId === selectedChainId
-	);
-
-	// Handle continue to next step
-	function handleContinue() {
-		if (isReadyToContinue) {
-			stepManager.next();
-		}
-	}
 </script>
 
 <div class="step-content">
