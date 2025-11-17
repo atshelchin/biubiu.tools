@@ -89,7 +89,7 @@
 	let { manager }: Props = $props();
 
 	const i18n = useI18n();
-	const isVertical = $derived(manager.steps.length > 3);
+	const isVertical = $derived(manager.steps.length > 5);
 
 	function getStepStatus(index: number) {
 		const stepNumber = index + 1;
