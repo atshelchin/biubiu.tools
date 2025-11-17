@@ -41,6 +41,7 @@
 
 	// Account management
 	let accounts = $state<string[]>([]);
+	let accountBalances = $state<Map<string, string>>(new Map());
 	let showAccountDropdown = $state(false);
 	let accountButtonElement = $state<HTMLElement | undefined>();
 	let copySuccess = $state(false);
@@ -50,10 +51,36 @@
 		return `${addr.slice(0, 6)}...${addr.slice(-4)}`;
 	}
 
-	// Load accounts
+	// Load accounts and their balances
 	async function loadAccounts() {
 		const accs = await connectStore.getAccounts();
 		accounts = accs || [];
+
+		// Load balances for all accounts
+		if (accs && accs.length > 0) {
+			await loadAccountBalances(accs);
+		}
+	}
+
+	// Load balance for each account
+	async function loadAccountBalances(accountAddresses: string[]) {
+		const balances = new Map<string, string>();
+
+		for (const address of accountAddresses) {
+			try {
+				const balance = await connectStore.provider?.getBalance(address);
+				if (balance !== undefined) {
+					// Format balance to 4 decimal places
+					const formatted = (Number(balance) / 1e18).toFixed(4);
+					balances.set(address.toLowerCase(), formatted);
+				}
+			} catch (error) {
+				console.error(`Failed to load balance for ${address}:`, error);
+				balances.set(address.toLowerCase(), '0.0000');
+			}
+		}
+
+		accountBalances = balances;
 	}
 
 	// Switch account
@@ -311,7 +338,13 @@
 					{#each accounts as account (account)}
 						<button class="account-item" onclick={() => handleSwitchAccount(account)}>
 							<div class="account-item-content">
-								<span class="account-item-address">{formatAddress(account)}</span>
+								<div class="account-item-top">
+									<span class="account-item-address">{formatAddress(account)}</span>
+									<span class="account-item-balance"
+										>{accountBalances.get(account.toLowerCase()) || '...'} {selectedNetwork?.symbol ||
+											'ETH'}</span
+									>
+								</div>
 								<span class="account-item-full">{account}</span>
 							</div>
 							{#if account.toLowerCase() === connectStore.address?.toLowerCase()}
@@ -807,6 +840,13 @@
 		min-width: 0;
 	}
 
+	.account-item-top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--space-2);
+	}
+
 	.account-item-address {
 		font-size: var(--text-sm);
 		font-weight: var(--font-medium);
@@ -815,6 +855,13 @@
 
 	:global([data-theme='dark']) .account-item-address {
 		color: var(--gray-100);
+	}
+
+	.account-item-balance {
+		font-size: var(--text-xs);
+		font-weight: var(--font-medium);
+		color: var(--color-primary);
+		white-space: nowrap;
 	}
 
 	.account-item-full {
