@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { ArrowLeft, Plus, Trash2 } from 'lucide-svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
 	import { useI18n } from '@shelchin/i18n/svelte';
@@ -34,12 +35,21 @@
 	let newRpcUrl = $state('');
 	let newRpcError = $state<string | null>(null);
 	let rpcLatencies = new SvelteMap<string, number | undefined>();
+	let firstInputRef: HTMLInputElement | undefined = $state(undefined);
+
+	// Auto-focus first input when entering add mode
+	onMount(() => {
+		if (mode === 'add' && firstInputRef) {
+			firstInputRef.focus();
+		}
+	});
 
 	// Create form state with validators
 	const form: FormState = useFormState({
 		fields: {
 			chainId: {
 				defaultValue: network?.chainId ?? '',
+				validateOnMount: true,
 				validator: Validators.compose(
 					Validators.required(t('wallet.network_settings.error_chainid_required')),
 					Validators.min(1, t('wallet.network_settings.error_chainid_min'))
@@ -47,10 +57,12 @@
 			},
 			name: {
 				defaultValue: network?.name || '',
+				validateOnMount: true,
 				validator: Validators.required(t('wallet.network_settings.error_name_required'))
 			},
 			symbol: {
 				defaultValue: network?.symbol || '',
+				validateOnMount: true,
 				validator: Validators.required(t('wallet.network_settings.error_symbol_required'))
 			},
 			blockExplorer: {
@@ -290,6 +302,7 @@
 			<FormField name="chainId" label={t('wallet.network_settings.chain_id')}>
 				{#snippet children({ value, error, touched, onInput, onBlur })}
 					<input
+						bind:this={firstInputRef}
 						type="number"
 						{value}
 						disabled={mode === 'edit'}

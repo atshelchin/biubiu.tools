@@ -206,7 +206,6 @@
 		position: relative;
 		z-index: 2;
 		flex-shrink: 0;
-		cursor: pointer;
 	}
 
 	.step-circle:hover {
