@@ -80,6 +80,7 @@
 		}
 
 		// Update address bar without reloading
+		// UI components using $derived with i18n.t() will automatically update
 		const newUrl = newPathname + currentUrl.search + currentUrl.hash;
 		window.history.replaceState(window.history.state, '', newUrl);
 	};
