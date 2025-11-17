@@ -32,6 +32,15 @@
 			});
 		}
 	}
+	function goBack() {
+		stepManager.prev();
+	}
 </script>
 
-<StepFooter canContinue={isReadyToContinue} onContinue={handleContinue} hint={footerHint} />
+<StepFooter
+	showBack={true}
+	onBack={goBack}
+	canContinue={isReadyToContinue}
+	onContinue={handleContinue}
+	hint={footerHint}
+/>

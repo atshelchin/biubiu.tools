@@ -52,28 +52,6 @@
 		{#if selectedChainId && hasEnabledNetworks}
 			<WalletConnectButton {selectedChainId} {selectedNetwork} class="wallet-section" />
 		{/if}
-
-		<!-- Continue Button -->
-		{#if isReadyToContinue}
-			<div class="continue-section">
-				<button class="continue-button" onclick={handleContinue}>
-					<span>Continue to Next Step</span>
-					<svg
-						width="20"
-						height="20"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-					>
-						<path d="M5 12h14M12 5l7 7-7 7" />
-					</svg>
-				</button>
-				<p class="continue-hint">
-					Your wallet is connected and ready. Click to proceed with configuration.
-				</p>
-			</div>
-		{/if}
 	{/if}
 </div>
 
@@ -81,55 +59,6 @@
 	/* Wallet Section */
 	:global(.wallet-section) {
 		margin-top: var(--space-8);
-	}
-
-	/* Continue Section */
-	.continue-section {
-		margin-top: var(--space-8);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: var(--space-3);
-	}
-
-	.continue-button {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: var(--space-3);
-		width: 100%;
-		max-width: 400px;
-		min-height: 56px;
-		padding: var(--space-4) var(--space-6);
-		background: linear-gradient(135deg, hsl(120, 60%, 50%), hsl(120, 60%, 40%));
-		color: white;
-		border: none;
-		border-radius: var(--radius-lg);
-		font-size: var(--text-lg);
-		font-weight: var(--font-semibold);
-		cursor: pointer;
-		transition: all 0.3s ease;
-		box-shadow: 0 4px 12px hsla(120, 60%, 50%, 0.3);
-	}
-
-	.continue-button:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 8px 24px hsla(120, 60%, 50%, 0.4);
-	}
-
-	.continue-button:active {
-		transform: translateY(0);
-	}
-
-	.continue-hint {
-		font-size: var(--text-sm);
-		color: var(--gray-600);
-		text-align: center;
-		margin: 0;
-	}
-
-	:global([data-theme='dark']) .continue-hint {
-		color: var(--gray-400);
 	}
 
 	/* Loading State */

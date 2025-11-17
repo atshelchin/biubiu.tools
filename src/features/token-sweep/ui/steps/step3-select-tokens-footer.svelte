@@ -14,9 +14,14 @@
 			stepManager.goTo(4);
 		}
 	}
+	function goBack() {
+		stepManager.prev();
+	}
 </script>
 
 <StepFooter
+	showBack={true}
+	onBack={goBack}
 	{canContinue}
 	onContinue={handleContinue}
 	hint="Please select at least one token to continue"

@@ -48,6 +48,9 @@
 </div>
 
 <style>
+	button {
+		/* width: 100%; */
+	}
 	.step-footer {
 		display: flex;
 		align-items: center;
@@ -56,6 +59,7 @@
 		padding: var(--space-4);
 		background: var(--color-panel-1);
 		/* border-top: 1px solid var(--color-border); */
+		width: 100%;
 	}
 
 	:global([data-theme='dark']) .step-footer {
