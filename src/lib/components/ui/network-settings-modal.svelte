@@ -195,8 +195,6 @@
 	.network-settings {
 		padding: 10px;
 		min-height: 400px;
-		max-height: 70vh;
-		overflow-y: auto;
 		overflow-x: hidden;
 	}
 

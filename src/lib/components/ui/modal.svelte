@@ -131,6 +131,8 @@
 
 	.modal-body {
 		width: 100%;
+		max-height: 70vh;
+		overflow-y: auto;
 	}
 
 	.modal-footer {
