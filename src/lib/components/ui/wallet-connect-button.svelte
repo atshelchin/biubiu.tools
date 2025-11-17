@@ -354,9 +354,11 @@
 								</div>
 								<span class="account-item-full">{account}</span>
 							</div>
-							{#if account.toLowerCase() === connectStore.address?.toLowerCase()}
-								<Check size={16} class="check-icon-small" />
-							{/if}
+							<div class="account-item-check">
+								{#if account.toLowerCase() === connectStore.address?.toLowerCase()}
+									<Check size={16} class="check-icon-small" />
+								{/if}
+							</div>
 						</button>
 					{/each}
 				</div>
@@ -878,6 +880,15 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
+	}
+
+	.account-item-check {
+		width: 20px;
+		height: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
 	}
 
 	.check-icon-small {
