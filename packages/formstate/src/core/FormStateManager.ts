@@ -362,12 +362,12 @@ export class FormStateManager implements IFormStateManager {
 	// 重置到初始值
 	reset(newInitialValues?: Record<string, FieldValue>): void {
 		if (newInitialValues) {
-			// 使用 structuredClone 进行深拷贝，避免共享嵌套引用
-			this.initialValues = structuredClone(newInitialValues);
+			// 使用 JSON 序列化进行深拷贝，避免 Immer draft 对象的循环引用问题
+			this.initialValues = safeParse(safeStringify(newInitialValues)) || newInitialValues;
 		}
 
 		// 深拷贝初始值以确保不可变性
-		this.values = structuredClone(this.initialValues);
+		this.values = safeParse(safeStringify(this.initialValues)) || this.initialValues;
 
 		this.fieldStates.forEach((state, path) => {
 			const value = PathUtils.get(this.initialValues, path);
@@ -389,7 +389,7 @@ export class FormStateManager implements IFormStateManager {
 	// 设置初始值（用于表单加载后填充数据）
 	setInitialValues(values: Record<string, FieldValue>, shouldReset = false): void {
 		// 深拷贝以避免外部修改影响内部状态
-		this.initialValues = structuredClone(values);
+		this.initialValues = safeParse(safeStringify(values)) || values;
 
 		if (shouldReset) {
 			this.reset();
@@ -451,7 +451,8 @@ export class FormStateManager implements IFormStateManager {
 		try {
 			const value = this.getValue(path);
 			// ⚠️ 修复 Bug 5: 快照 values，防止异步验证期间 values 被修改导致不一致
-			const valuesSnapshot = structuredClone(this.values);
+			// 使用 JSON 序列化来克隆，避免 Immer draft 对象的循环引用问题
+			const valuesSnapshot = safeParse(safeStringify(this.values)) || this.values;
 			const error = await Promise.resolve(config.validator.validate(value, valuesSnapshot));
 
 			// 检查是否已被取消

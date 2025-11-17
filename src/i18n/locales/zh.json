@@ -402,15 +402,22 @@
 			"set_primary": "设为主节点",
 			"add_rpc_placeholder": "https://your-rpc-endpoint.com",
 			"add": "添加",
+			"save": "保存",
 			"save_network": "保存网络",
 			"saving": "保存中...",
 			"cancel": "取消",
+			"delete": "删除",
+			"confirm_delete": "确定要删除网络 {name} 吗？",
+			"delete_enabled_network_error": "无法删除已启用的网络，请先禁用该网络",
 			"testing": "测试中...",
 			"failed": "失败",
 			"error_chainid_required": "链 ID 不能为空",
+			"error_chainid_min": "链 ID 必须大于 0",
 			"error_name_required": "网络名称不能为空",
 			"error_symbol_required": "货币符号不能为空",
-			"error_rpc_required": "至少需要一个 RPC 端点"
+			"error_rpc_required": "至少需要一个 RPC 端点",
+			"error_rpc_unavailable": "无法连接到 RPC 端点，请检查 URL 是否正确",
+			"error_rpc_chainid_mismatch": "RPC 端点的链 ID ({actual}) 与输入的链 ID ({expected}) 不匹配"
 		}
 	},
 	"referral": {

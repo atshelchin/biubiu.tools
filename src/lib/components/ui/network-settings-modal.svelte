@@ -1,12 +1,9 @@
 <script lang="ts">
 	import Modal from './modal.svelte';
-	import { Check, Plus, Trash2, Edit2, ArrowLeft, ExternalLink } from 'lucide-svelte';
-	import NetworkIcon from './network-icon.svelte';
-	import ToggleSwitch from './toggle-switch.svelte';
+	import NetworkListView from './network-list-view.svelte';
+	import NetworkFormView from './network-form-view.svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
 	import { useI18n } from '@shelchin/i18n/svelte';
-	import { fade } from 'svelte/transition';
-	import { quintOut } from 'svelte/easing';
 
 	interface Props {
 		open: boolean;
@@ -26,6 +23,7 @@
 			symbol: string;
 			rpcEndpoints: Array<{ url: string; isPrimary: boolean }>;
 			blockExplorer?: string;
+			isBuiltIn?: boolean;
 		}) => void;
 	}
 
@@ -45,274 +43,126 @@
 
 	type ViewMode = 'list' | 'edit' | 'add';
 	let viewMode = $state<ViewMode>('list');
-	let newRpcUrl = $state('');
-	let isSubmitting = $state(false);
-	let searchQuery = $state('');
-	let filterStatus = $state<'all' | 'enabled' | 'disabled'>('all');
-	let toggleVersion = $state(0); // Used to trigger reactivity when toggle changes
-
-	// Edit/Add form state
-	let formData = $state({
-		chainId: 0,
-		name: '',
-		symbol: '',
-		blockExplorer: '',
-		enabled: true,
-		rpcEndpoints: [] as Array<{
-			url: string;
-			isPrimary: boolean;
-			latency?: number;
-			testing?: boolean;
-		}>
-	});
-
-	// Filter networks based on search query and status
-	const filteredNetworks = $derived.by(() => {
-		// Force recomputation when toggleVersion changes
-		void toggleVersion;
-
-		return networks.filter((network) => {
-			// Search filter
-			const matchesSearch =
-				network.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-				network.symbol.toLowerCase().includes(searchQuery.toLowerCase()) ||
-				network.chainId.toString().includes(searchQuery);
-
-			// Status filter
-			const enabled = isNetworkEnabled(network.chainId);
-			const matchesStatus =
-				filterStatus === 'all' ||
-				(filterStatus === 'enabled' && enabled) ||
-				(filterStatus === 'disabled' && !enabled);
-
-			return matchesSearch && matchesStatus;
-		});
-	});
-
-	// RPC latency testing
-	async function testRpcLatency(rpcUrl: string): Promise<number> {
-		const startTime = performance.now();
-		try {
-			const response = await fetch(rpcUrl, {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({
-					jsonrpc: '2.0',
-					method: 'eth_blockNumber',
-					params: [],
-					id: 1
-				}),
-				signal: AbortSignal.timeout(5000)
-			});
-			if (!response.ok) throw new Error('RPC request failed');
-			const endTime = performance.now();
-			return Math.round(endTime - startTime);
-		} catch {
-			return -1; // Failed
-		}
-	}
-
-	async function testAllRpcs() {
-		for (let i = 0; i < formData.rpcEndpoints.length; i++) {
-			const rpc = formData.rpcEndpoints[i];
-			rpc.testing = true;
-			const latency = await testRpcLatency(rpc.url);
-			rpc.latency = latency;
-			rpc.testing = false;
-		}
-	}
+	let editingNetwork = $state<NetworkConfig | undefined>(undefined);
+	let networkFormView: any = $state(undefined);
 
 	function handleAddNetwork() {
 		viewMode = 'add';
-		formData = {
-			chainId: 0,
-			name: '',
-			symbol: '',
-			blockExplorer: '',
-			enabled: true,
-			rpcEndpoints: []
-		};
+		editingNetwork = undefined;
 	}
 
 	function handleEditNetwork(network: NetworkConfig) {
 		viewMode = 'edit';
-
-		formData = {
-			chainId: network.chainId,
-			name: network.name,
-			symbol: network.symbol,
-			blockExplorer: network.blockExplorer || '',
-			enabled: isNetworkEnabled(network.chainId),
-			rpcEndpoints: network.rpcEndpoints.map((rpc) => ({
-				url: rpc.url,
-				isPrimary: rpc.isPrimary
-			}))
-		};
-		newRpcUrl = '';
-		// Test RPC latencies when opening edit view
-		testAllRpcs();
+		editingNetwork = network;
 	}
 
 	function handleBackToList() {
 		viewMode = 'list';
-
-		newRpcUrl = '';
+		editingNetwork = undefined;
 	}
 
-	async function handleAddRpcToForm() {
-		if (!newRpcUrl.trim()) return;
+	function handleSaveNetwork(data: {
+		chainId: number;
+		name: string;
+		symbol: string;
+		rpcEndpoints: Array<{ url: string; isPrimary: boolean }>;
+		blockExplorer?: string;
+		enabled: boolean;
+	}) {
+		console.log('[NetworkSettingsModal] handleSaveNetwork called');
+		console.log('[NetworkSettingsModal] viewMode:', viewMode);
+		console.log('[NetworkSettingsModal] data:', data);
 
-		// Validate chainId when adding RPC
-		if (viewMode === 'add' && (!formData.chainId || formData.chainId === 0)) {
-			alert(t('wallet.network_settings.error_chainid_required'));
-			return;
-		}
+		if (viewMode === 'add') {
+			// Adding new network
+			console.log('[NetworkSettingsModal] Adding new network');
+			onAddOrUpdateNetwork({
+				chainId: data.chainId,
+				name: data.name,
+				symbol: data.symbol,
+				rpcEndpoints: data.rpcEndpoints,
+				blockExplorer: data.blockExplorer
+			});
 
-		const isPrimary = formData.rpcEndpoints.length === 0;
-		const url = newRpcUrl.trim();
-		const newRpc: {
-			url: string;
-			isPrimary: boolean;
-			testing: boolean;
-			latency?: number;
-		} = {
-			url,
-			isPrimary,
-			testing: true,
-			latency: undefined
-		};
-		formData.rpcEndpoints.push(newRpc);
-		newRpcUrl = '';
+			// Enable network if requested
+			if (data.enabled) {
+				onToggleNetwork(data.chainId, true);
+			}
+		} else {
+			// Editing existing network
+			const existingNetwork = networks.find((n) => n.chainId === data.chainId);
+			console.log('[NetworkSettingsModal] Editing existing network');
+			console.log('[NetworkSettingsModal] existingNetwork:', existingNetwork);
 
-		// Test latency for the new RPC
-		const latency = await testRpcLatency(url);
-		newRpc.latency = latency;
-		newRpc.testing = false;
-	}
+			if (existingNetwork) {
+				// Check if name or symbol changed
+				const nameChanged = existingNetwork.name !== data.name;
+				const symbolChanged = existingNetwork.symbol !== data.symbol;
+				console.log(
+					'[NetworkSettingsModal] nameChanged:',
+					nameChanged,
+					existingNetwork.name,
+					'->',
+					data.name
+				);
+				console.log(
+					'[NetworkSettingsModal] symbolChanged:',
+					symbolChanged,
+					existingNetwork.symbol,
+					'->',
+					data.symbol
+				);
 
-	function handleRemoveRpcFromForm(index: number) {
-		formData.rpcEndpoints.splice(index, 1);
-		// If removed primary, make first one primary
-		if (formData.rpcEndpoints.length > 0 && !formData.rpcEndpoints.some((r) => r.isPrimary)) {
-			formData.rpcEndpoints[0].isPrimary = true;
-		}
-	}
-
-	function handleSetPrimaryInForm(index: number) {
-		formData.rpcEndpoints.forEach((rpc, i) => {
-			rpc.isPrimary = i === index;
-		});
-	}
-
-	async function handleSaveNetwork() {
-		if (isSubmitting) return;
-
-		// Validate required fields
-		if (!formData.chainId || formData.chainId === 0) {
-			alert(t('wallet.network_settings.error_chainid_required'));
-			return;
-		}
-		if (!formData.name.trim()) {
-			alert(t('wallet.network_settings.error_name_required'));
-			return;
-		}
-		if (!formData.symbol.trim()) {
-			alert(t('wallet.network_settings.error_symbol_required'));
-			return;
-		}
-		if (formData.rpcEndpoints.length === 0) {
-			alert(t('wallet.network_settings.error_rpc_required'));
-			return;
-		}
-
-		isSubmitting = true;
-		try {
-			// Prepare RPC endpoints without testing/latency fields
-			const rpcEndpoints = formData.rpcEndpoints.map((rpc) => ({
-				url: rpc.url,
-				isPrimary: rpc.isPrimary
-			}));
-
-			if (viewMode === 'add') {
-				// Adding new network - need all fields including name and symbol
-				onAddOrUpdateNetwork({
-					chainId: formData.chainId,
-					name: formData.name,
-					symbol: formData.symbol,
-					rpcEndpoints,
-					blockExplorer: formData.blockExplorer || undefined
-				});
-
-				// If enabled, toggle it on
-				if (formData.enabled) {
-					onToggleNetwork(formData.chainId, true);
-				}
-			} else {
-				// Editing existing network
-				const existingNetwork = networks.find((n) => n.chainId === formData.chainId);
-				if (existingNetwork) {
-					// Check if name or symbol changed
-					if (
-						formData.name !== existingNetwork.name ||
-						formData.symbol !== existingNetwork.symbol
-					) {
-						// Need to update full network info
-						onAddOrUpdateNetwork({
-							chainId: formData.chainId,
-							name: formData.name,
-							symbol: formData.symbol,
-							rpcEndpoints,
-							blockExplorer: formData.blockExplorer || undefined
-						});
-					} else {
-						// Only updating RPC endpoints and block explorer
-						onSaveNetwork(formData.chainId, rpcEndpoints, formData.blockExplorer || undefined);
-					}
+				if (nameChanged || symbolChanged) {
+					// Name or symbol changed, use full update
+					console.log('[NetworkSettingsModal] Calling onAddOrUpdateNetwork for full update');
+					onAddOrUpdateNetwork({
+						chainId: data.chainId,
+						name: data.name,
+						symbol: data.symbol,
+						rpcEndpoints: data.rpcEndpoints,
+						blockExplorer: data.blockExplorer,
+						// Preserve isBuiltIn flag from existing network
+						isBuiltIn: existingNetwork.isBuiltIn
+					});
+				} else {
+					// Only RPC endpoints or block explorer changed
+					console.log('[NetworkSettingsModal] Calling onSaveNetwork for RPC/explorer update');
+					onSaveNetwork(data.chainId, data.rpcEndpoints, data.blockExplorer);
 				}
 
-				// Handle enable/disable toggle
-				const currentlyEnabled = isNetworkEnabled(formData.chainId);
-				if (formData.enabled !== currentlyEnabled) {
-					onToggleNetwork(formData.chainId, formData.enabled);
+				// Handle enabled state change
+				const currentEnabled = isNetworkEnabled(data.chainId);
+				if (currentEnabled !== data.enabled) {
+					console.log(
+						'[NetworkSettingsModal] Toggling network enabled state:',
+						currentEnabled,
+						'->',
+						data.enabled
+					);
+					onToggleNetwork(data.chainId, data.enabled);
 				}
 			}
-
-			handleBackToList();
-		} catch (error) {
-			console.error('Failed to save network:', error);
-		} finally {
-			isSubmitting = false;
 		}
-	}
 
-	function handleToggleNetwork(network: NetworkConfig, enabled: boolean) {
-		const success = onToggleNetwork(network.chainId, enabled);
-		if (!success) {
-			console.error('Failed to toggle network:', network.chainId);
-		} else {
-			// Trigger reactivity to update filtered list immediately
-			toggleVersion++;
-		}
+		handleBackToList();
 	}
 </script>
 
-<Modal {open} {onClose} title={t('wallet.network_settings.title')}>
+<Modal {open} {onClose} title={t('wallet.network_settings.title')} maxWidth="900px">
 	{#snippet footer()}
-		{#if viewMode === 'list'}
-			<button class="add-network-btn" onclick={handleAddNetwork}>
-				<Plus size={18} />
-				{t('wallet.network_settings.add_network')}
-			</button>
-		{:else}
-			<!-- Edit/Add mode footer buttons -->
-			<div class="form-actions-footer">
-				<button class="cancel-btn" onclick={handleBackToList} disabled={isSubmitting}>
+		{#if viewMode !== 'list' && networkFormView}
+			<div class="modal-footer-actions">
+				<button type="button" class="btn-secondary" onclick={handleBackToList}>
 					{t('wallet.network_settings.cancel')}
 				</button>
-				<button class="save-btn" onclick={handleSaveNetwork} disabled={isSubmitting}>
-					{isSubmitting
-						? t('wallet.network_settings.saving')
-						: t('wallet.network_settings.save_network')}
+				<button
+					type="button"
+					class="btn-primary"
+					disabled={!networkFormView.getCanSubmit()}
+					onclick={() => networkFormView.handleSubmit()}
+				>
+					{t('wallet.network_settings.save')}
 				</button>
 			</div>
 		{/if}
@@ -320,222 +170,23 @@
 
 	<div class="network-settings">
 		{#if viewMode === 'list'}
-			<!-- List View -->
-			<div class="list-view">
-				<div class="list-header">
-					<h3>{t('wallet.network_settings.available_networks')}</h3>
-
-					<div class="filter-group">
-						<input
-							type="text"
-							placeholder={t('wallet.network_settings.search_placeholder')}
-							bind:value={searchQuery}
-							class="search-input"
-						/>
-						<div class="status-filter">
-							<button
-								class="filter-btn"
-								class:active={filterStatus === 'all'}
-								onclick={() => (filterStatus = 'all')}
-							>
-								{t('wallet.network_settings.filter_all')}
-							</button>
-							<button
-								class="filter-btn"
-								class:active={filterStatus === 'enabled'}
-								onclick={() => (filterStatus = 'enabled')}
-							>
-								{t('wallet.network_settings.filter_enabled')}
-							</button>
-							<button
-								class="filter-btn"
-								class:active={filterStatus === 'disabled'}
-								onclick={() => (filterStatus = 'disabled')}
-							>
-								{t('wallet.network_settings.filter_disabled')}
-							</button>
-						</div>
-					</div>
-				</div>
-
-				<div class="network-cards">
-					{#each filteredNetworks as network (network.chainId)}
-						<div
-							class="network-card"
-							class:active={network.chainId === currentChainId}
-							transition:fade={{ duration: 300, easing: quintOut }}
-						>
-							<div class="card-header">
-								<NetworkIcon chainId={network.chainId} size={48} />
-								<div class="network-info">
-									<div class="network-name">{network.name}</div>
-									<div class="network-details">
-										<span class="network-symbol">{network.symbol}</span>
-										<span class="separator">•</span>
-										<span class="chain-id">Chain ID: {network.chainId}</span>
-									</div>
-								</div>
-								<div class="badge-group">
-									{#if network.chainId === currentChainId}
-										<div class="active-badge">
-											<Check size={14} />
-											{t('wallet.network_settings.active')}
-										</div>
-									{/if}
-									<ToggleSwitch
-										checked={isNetworkEnabled(network.chainId)}
-										onchange={(checked) => handleToggleNetwork(network, checked)}
-									/>
-								</div>
-							</div>
-
-							<div class="card-body">
-								<div class="rpc-count">
-									{network.rpcEndpoints.length}
-
-									{network.rpcEndpoints.length === 1
-										? t('wallet.network_settings.rpc_endpoint')
-										: t('wallet.network_settings.rpc_endpoints_plural')}
-								</div>
-								{#if network.blockExplorer}
-									<a
-										href={network.blockExplorer}
-										target="_blank"
-										rel="noopener noreferrer"
-										class="explorer-link"
-									>
-										<ExternalLink size={12} />
-										{t('wallet.network_settings.block_explorer')}
-									</a>
-								{/if}
-							</div>
-
-							<div class="card-actions">
-								<button class="action-btn edit" onclick={() => handleEditNetwork(network)}>
-									<Edit2 size={14} />
-									{t('wallet.network_settings.edit_rpc')}
-								</button>
-							</div>
-						</div>
-					{/each}
-				</div>
-			</div>
+			<NetworkListView
+				{networks}
+				{currentChainId}
+				{isNetworkEnabled}
+				{onToggleNetwork}
+				onEditNetwork={handleEditNetwork}
+				onAddNetwork={handleAddNetwork}
+			/>
 		{:else}
-			<!-- Edit/Add View -->
-			<div class="form-view">
-				<div class="form-header">
-					<button class="back-btn" onclick={handleBackToList}>
-						<ArrowLeft size={18} />
-						{t('wallet.network_settings.back')}
-					</button>
-					<h3>
-						{viewMode === 'edit'
-							? t('wallet.network_settings.edit_network')
-							: t('wallet.network_settings.add_network')}
-					</h3>
-				</div>
-
-				<div class="form-content">
-					<div class="form-group">
-						<label for="chainId">{t('wallet.network_settings.chain_id')}</label>
-						<input
-							id="chainId"
-							type="number"
-							bind:value={formData.chainId}
-							disabled={viewMode === 'edit'}
-							placeholder="1"
-						/>
-					</div>
-
-					<div class="form-group">
-						<label for="name">{t('wallet.network_settings.network_name')}</label>
-						<input
-							id="name"
-							type="text"
-							bind:value={formData.name}
-							placeholder="Ethereum Mainnet"
-						/>
-					</div>
-
-					<div class="form-group">
-						<label for="symbol">{t('wallet.network_settings.currency_symbol')}</label>
-						<input id="symbol" type="text" bind:value={formData.symbol} placeholder="ETH" />
-					</div>
-
-					<div class="form-group">
-						<label for="explorer">{t('wallet.network_settings.block_explorer_optional')}</label>
-						<input
-							id="explorer"
-							type="text"
-							bind:value={formData.blockExplorer}
-							placeholder="https://etherscan.io"
-						/>
-					</div>
-
-					<div class="form-group">
-						<label class="checkbox-label">
-							<input type="checkbox" bind:checked={formData.enabled} />
-							<span>{t('wallet.network_settings.enable_network')}</span>
-						</label>
-					</div>
-
-					<div class="form-group rpc-group">
-						<div class="rpc-label">{t('wallet.network_settings.rpc_endpoints_label')}</div>
-						<div class="rpc-list-form">
-							{#each formData.rpcEndpoints as rpc, index (index)}
-								<div class="rpc-item-form" class:primary={rpc.isPrimary}>
-									<div class="rpc-info-wrapper">
-										<div class="rpc-url-display">{rpc.url}</div>
-										{#if rpc.testing}
-											<div class="rpc-latency testing">{t('wallet.network_settings.testing')}</div>
-										{:else if rpc.latency !== undefined}
-											<div class="rpc-latency" class:failed={rpc.latency === -1}>
-												{rpc.latency === -1
-													? t('wallet.network_settings.failed')
-													: `${rpc.latency}ms`}
-											</div>
-										{/if}
-									</div>
-									<div class="rpc-actions-form">
-										{#if rpc.isPrimary}
-											<span class="primary-badge-small">{t('wallet.network_settings.primary')}</span
-											>
-										{:else}
-											<button
-												type="button"
-												class="rpc-action-btn-small"
-												onclick={() => handleSetPrimaryInForm(index)}
-											>
-												{t('wallet.network_settings.set_primary')}
-											</button>
-										{/if}
-										<button
-											type="button"
-											class="rpc-action-btn-small danger"
-											onclick={() => handleRemoveRpcFromForm(index)}
-										>
-											<Trash2 size={12} />
-										</button>
-									</div>
-								</div>
-							{/each}
-						</div>
-
-						<div class="add-rpc-input">
-							<input
-								type="text"
-								placeholder={t('wallet.network_settings.add_rpc_placeholder')}
-								bind:value={newRpcUrl}
-								onkeydown={(e) => e.key === 'Enter' && handleAddRpcToForm()}
-							/>
-							<button type="button" class="add-btn-small" onclick={handleAddRpcToForm}>
-								<Plus size={14} />
-								{t('wallet.network_settings.add')}
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
+			<NetworkFormView
+				bind:this={networkFormView}
+				mode={viewMode}
+				network={editingNetwork}
+				{isNetworkEnabled}
+				onSave={handleSaveNetwork}
+				onCancel={handleBackToList}
+			/>
 		{/if}
 	</div>
 </Modal>
@@ -569,544 +220,57 @@
 		background: color-mix(in srgb, var(--color-foreground) 30%, transparent);
 	}
 
-	h3 {
-		font-size: var(--text-lg);
-		font-weight: var(--font-semibold);
-		color: var(--color-muted-foreground);
-	}
-
-	/* List View */
-	.list-view {
+	/* Modal Footer Actions */
+	.modal-footer-actions {
 		display: flex;
-		flex-direction: column;
-		gap: var(--space-4);
-	}
-
-	.list-header {
-		display: flex;
-		flex-direction: column;
 		gap: var(--space-3);
-	}
-
-	.add-network-btn {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: var(--space-2);
-		padding: var(--space-3) var(--space-4);
-		background: var(--color-secondary);
-		color: var(--color-muted-foreground);
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-md);
-		font-size: var(--text-sm);
-		font-weight: var(--font-medium);
-		cursor: pointer;
-		transition: all 0.2s ease;
+		justify-content: flex-end;
 		width: 100%;
 	}
 
-	.add-network-btn:hover {
-		background: var(--color-muted);
-		color: var(--color-foreground);
-	}
-
-	.filter-group {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-2);
-	}
-
-	.search-input {
-		width: 100%;
-		padding: var(--space-2-5) var(--space-3);
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-md);
-		font-size: var(--text-sm);
-		background: var(--color-input);
-		color: var(--color-foreground);
-		transition: all 0.2s;
-	}
-
-	.search-input:focus {
-		outline: none;
-		border-color: var(--brand-500);
-		box-shadow: 0 0 0 3px rgba(var(--brand-500-rgb, 59, 130, 246), 0.1);
-	}
-
-	.search-input::placeholder {
-		color: var(--color-muted-foreground);
-	}
-
-	.status-filter {
-		display: flex;
-		gap: var(--space-2);
-	}
-
-	.filter-btn {
-		flex: 1;
-		padding: var(--space-2) var(--space-3);
-		background: var(--color-secondary);
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-md);
-		font-size: var(--text-sm);
-		font-weight: var(--font-medium);
-		color: var(--color-muted-foreground);
-		cursor: pointer;
-		transition: all 0.2s;
-	}
-
-	.filter-btn:hover {
-		background: var(--color-secondary);
-		color: var(--color-foreground);
-	}
-
-	.filter-btn.active {
-		background: var(--color-muted);
-		color: var(--color-foreground);
-		border-color: var(--color-border);
-	}
-
-	.network-cards {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-		gap: var(--space-3);
-	}
-
-	/* Responsive grid */
-	@media (max-width: 1200px) {
-		.network-cards {
-			grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-		}
-	}
-
-	@media (max-width: 900px) {
-		.network-cards {
-			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-		}
-	}
-
-	@media (max-width: 640px) {
-		.network-cards {
-			grid-template-columns: 1fr;
-		}
-	}
-
-	.network-card {
-		padding: var(--space-4);
-		background: var(--color-card);
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-lg);
-		transition: all 0.3s ease;
-	}
-
-	.network-card:hover {
-		border-color: var(--color-border);
-	}
-
-	.network-card.active {
-		border-color: var(--color-success, #10b981);
-		background: color-mix(in srgb, var(--color-success, #10b981) 5%, transparent);
-	}
-
-	.card-header {
-		display: flex;
-		align-items: flex-start;
-		gap: var(--space-3);
-		margin-bottom: var(--space-3);
-	}
-
-	.network-info {
-		flex: 1;
-	}
-
-	.network-name {
-		font-size: var(--text-base);
-		font-weight: var(--font-semibold);
-		color: var(--color-foreground);
-		margin-bottom: var(--space-1);
-	}
-
-	.network-details {
-		display: flex;
-		align-items: center;
-		gap: var(--space-2);
-		font-size: var(--text-xs);
-		color: var(--color-muted-foreground);
-	}
-
-	.separator {
-		color: var(--color-border);
-	}
-
-	.badge-group {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
-		gap: var(--space-2);
-	}
-
-	.active-badge {
-		display: flex;
-		align-items: center;
-		gap: var(--space-1);
-		padding: var(--space-1) var(--space-2);
-		background: transparent;
-		color: var(--color-muted-foreground);
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-md);
-		font-size: var(--text-xs);
-		font-weight: var(--font-medium);
-	}
-
-	.card-body {
-		display: flex;
-		align-items: center;
-		gap: var(--space-3);
-		padding: var(--space-2) 0;
-		margin-bottom: var(--space-3);
-		font-size: var(--text-xs);
-		color: var(--color-muted-foreground);
-	}
-
-	.rpc-count {
-		padding: var(--space-1) var(--space-2);
-		background: var(--color-muted);
-		border-radius: var(--radius-sm);
-	}
-
-	.explorer-link {
-		display: flex;
-		align-items: center;
-		gap: var(--space-1);
-		color: var(--color-muted-foreground);
-		text-decoration: none;
-		transition: color 0.2s;
-	}
-
-	.explorer-link:hover {
-		color: var(--color-foreground);
-		text-decoration: underline;
-	}
-
-	.card-actions {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-2);
-	}
-
-	.action-btn {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: var(--space-1-5);
-		padding: var(--space-2-5) var(--space-3);
-		background: var(--color-secondary);
-		border: 1px solid var(--color-border);
+	.btn-secondary,
+	.btn-primary {
+		padding: var(--space-3) var(--space-5);
 		border-radius: var(--radius-md);
 		font-size: var(--text-sm);
 		font-weight: var(--font-medium);
 		cursor: pointer;
 		transition: all 0.2s;
-		width: 100%;
-		color: var(--color-muted-foreground);
 	}
 
-	.action-btn:hover:not(:disabled) {
-		background: var(--color-muted);
-		color: var(--color-foreground);
+	.btn-secondary {
+		background: var(--gray-100);
+		color: var(--gray-700);
+		border: 1px solid var(--gray-200);
 	}
 
-	.action-btn:disabled {
-		opacity: 0.5;
-		cursor: not-allowed;
+	.btn-secondary:hover {
+		background: var(--gray-200);
 	}
 
-	/* Form View */
-	.form-view {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-4);
-	}
-
-	.form-header {
-		display: flex;
-		align-items: center;
-		gap: var(--space-3);
-	}
-
-	.back-btn {
-		display: flex;
-		align-items: center;
-		gap: var(--space-1);
-		padding: var(--space-2);
-		background: transparent;
+	.btn-primary {
+		background: var(--brand-600);
+		color: white;
 		border: none;
-		color: var(--color-muted-foreground);
-		cursor: pointer;
-		transition: all 0.2s;
-		border-radius: var(--radius-md);
 	}
 
-	.back-btn:hover {
-		background: var(--color-secondary);
-		color: var(--color-foreground);
+	.btn-primary:hover:not(:disabled) {
+		background: var(--brand-700);
 	}
 
-	.form-content {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-4);
-	}
-
-	.form-group {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-2);
-	}
-
-	.form-group label,
-	.rpc-label {
-		font-size: var(--text-sm);
-		font-weight: var(--font-medium);
-		color: var(--color-foreground);
-	}
-
-	.checkbox-label {
-		display: flex;
-		align-items: center;
-		gap: var(--space-2);
-		cursor: pointer;
-	}
-
-	.checkbox-label input[type='checkbox'] {
-		width: 18px;
-		height: 18px;
-		cursor: pointer;
-	}
-
-	.form-group input:not([type='checkbox']) {
-		padding: var(--space-2-5) var(--space-3);
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-md);
-		font-size: var(--text-sm);
-		background: var(--color-input);
-		color: var(--color-foreground);
-		transition: all 0.2s;
-	}
-
-	.form-group input:not([type='checkbox']):focus {
-		outline: none;
-		border-color: var(--brand-500);
-		box-shadow: 0 0 0 3px rgba(var(--brand-500-rgb, 59, 130, 246), 0.1);
-	}
-
-	.form-group input:disabled {
+	.btn-primary:disabled {
 		opacity: 0.5;
 		cursor: not-allowed;
 	}
 
-	.rpc-list-form {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-2);
-		margin-bottom: var(--space-2);
+	/* Dark Mode */
+	:global([data-theme='dark']) .btn-secondary {
+		background: var(--gray-700);
+		color: var(--gray-200);
+		border-color: var(--gray-600);
 	}
 
-	.rpc-item-form {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: var(--space-2-5);
-		background: var(--color-card);
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-md);
-		transition: all 0.2s;
-	}
-
-	.rpc-item-form.primary {
-		border-color: var(--brand-500);
-		background: color-mix(in srgb, var(--brand-500) 5%, transparent);
-	}
-
-	.rpc-info-wrapper {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-1);
-		flex: 1;
-		margin-right: var(--space-3);
-	}
-
-	.rpc-url-display {
-		font-size: var(--text-xs);
-		font-family: monospace;
-		color: var(--color-foreground);
-		word-break: break-all;
-	}
-
-	.rpc-latency {
-		font-size: var(--text-xs);
-		padding: var(--space-0-5) var(--space-1-5);
-		border-radius: var(--radius-sm);
-		display: inline-flex;
-		align-items: center;
-		width: fit-content;
-	}
-
-	.rpc-latency.testing {
-		color: var(--color-muted-foreground);
-		background: var(--color-muted);
-		animation: pulse-opacity 1.5s ease-in-out infinite;
-	}
-
-	.rpc-latency:not(.testing):not(.failed) {
-		color: var(--color-success, #10b981);
-		background: color-mix(in srgb, var(--color-success, #10b981) 10%, transparent);
-	}
-
-	.rpc-latency.failed {
-		color: var(--color-danger);
-		background: color-mix(in srgb, var(--color-danger) 10%, transparent);
-	}
-
-	@keyframes pulse-opacity {
-		0%,
-		100% {
-			opacity: 1;
-		}
-		50% {
-			opacity: 0.5;
-		}
-	}
-
-	.rpc-actions-form {
-		display: flex;
-		gap: var(--space-2);
-		align-items: center;
-	}
-
-	.primary-badge-small {
-		padding: var(--space-1) var(--space-2);
-		background: transparent;
-		color: var(--color-muted-foreground);
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-sm);
-		font-size: var(--text-xs);
-		font-weight: var(--font-medium);
-	}
-
-	.rpc-action-btn-small {
-		padding: var(--space-1) var(--space-2);
-		background: var(--color-secondary);
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-sm);
-		font-size: var(--text-xs);
-		cursor: pointer;
-		transition: all 0.2s;
-		white-space: nowrap;
-		color: var(--color-muted-foreground);
-	}
-
-	.rpc-action-btn-small:hover {
-		background: var(--color-muted);
-		color: var(--color-foreground);
-	}
-
-	.rpc-action-btn-small.danger:hover {
-		background: var(--color-muted);
-		color: var(--color-danger);
-		border-color: var(--color-danger);
-	}
-
-	.add-rpc-input {
-		display: flex;
-		gap: var(--space-2);
-	}
-
-	.add-rpc-input input {
-		flex: 1;
-		padding: var(--space-2) var(--space-3);
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-md);
-		font-size: var(--text-sm);
-		background: var(--color-input);
-	}
-
-	.add-btn-small {
-		display: flex;
-		align-items: center;
-		gap: var(--space-1);
-		padding: var(--space-2) var(--space-3);
-		background: var(--color-secondary);
-		color: var(--color-muted-foreground);
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-md);
-		font-size: var(--text-sm);
-		font-weight: var(--font-medium);
-		cursor: pointer;
-		transition: all 0.2s;
-		white-space: nowrap;
-	}
-
-	.add-btn-small:hover {
-		background: var(--color-muted);
-		color: var(--color-foreground);
-	}
-
-	.form-actions-footer {
-		display: flex;
-		gap: var(--space-3);
-		width: 100%;
-	}
-
-	.save-btn,
-	.cancel-btn {
-		flex: 1;
-		padding: var(--space-3) var(--space-4);
-		border-radius: var(--radius-md);
-		font-size: var(--text-sm);
-		font-weight: var(--font-medium);
-		cursor: pointer;
-		transition: all 0.3s ease;
-	}
-
-	.save-btn {
-		background: var(--color-foreground);
-		color: var(--color-card);
-		border: 1px solid var(--color-foreground);
-	}
-
-	.save-btn:hover:not(:disabled) {
-		background: var(--color-muted-foreground);
-		border-color: var(--color-muted-foreground);
-	}
-
-	.save-btn:disabled {
-		opacity: 0.5;
-		cursor: not-allowed;
-	}
-
-	.cancel-btn {
-		background: var(--color-secondary);
-		color: var(--color-muted-foreground);
-		border: 1px solid var(--color-border);
-	}
-
-	.cancel-btn:hover:not(:disabled) {
-		background: var(--color-muted);
-		color: var(--color-foreground);
-	}
-
-	@keyframes check-in {
-		0% {
-			transform: scale(0);
-			opacity: 0;
-		}
-		50% {
-			transform: scale(1.1);
-		}
-		100% {
-			transform: scale(1);
-			opacity: 1;
-		}
+	:global([data-theme='dark']) .btn-secondary:hover {
+		background: var(--gray-600);
 	}
 </style>

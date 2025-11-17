@@ -348,8 +348,13 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		symbol: string;
 		rpcEndpoints: Array<{ url: string; isPrimary: boolean }>;
 		blockExplorer?: string;
+		isBuiltIn?: boolean;
 	}) {
 		networkManager.addOrUpdateCustomNetwork(network);
+	}
+
+	function deleteNetwork(chainId: number) {
+		networkManager.removeCustomNetwork(chainId);
 	}
 
 	function setCurrentNetwork(chainId: number) {
@@ -712,6 +717,7 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		isNetworkEnabled,
 		updateNetworkRpc,
 		addOrUpdateNetwork,
+		deleteNetwork,
 		setCurrentNetwork,
 		// Account management
 		getAccounts,

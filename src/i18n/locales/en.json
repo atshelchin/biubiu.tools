@@ -425,9 +425,13 @@
 			"testing": "Testing...",
 			"failed": "Failed",
 			"error_chainid_required": "Chain ID is required",
+			"error_chainid_min": "Chain ID must be greater than 0",
 			"error_name_required": "Network name is required",
 			"error_symbol_required": "Currency symbol is required",
-			"error_rpc_required": "At least one RPC endpoint is required"
+			"error_rpc_required": "At least one RPC endpoint is required",
+			"error_rpc_unavailable": "Unable to connect to RPC endpoint, please check if the URL is correct",
+			"error_rpc_chainid_mismatch": "The chain ID of RPC endpoint ({actual}) does not match the input chain ID ({expected})",
+			"save": "Save"
 		}
 	},
 	"referral": {

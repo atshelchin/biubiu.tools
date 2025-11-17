@@ -1,272 +1,131 @@
 <script lang="ts">
-	import Modal from '$lib/components/ui/modal.svelte';
-	import { AlertTriangle } from '@lucide/svelte';
-	import { longPress } from '$lib/utils/long-press';
+	import Modal from './modal.svelte';
+	import { AlertTriangle } from 'lucide-svelte';
 
 	interface Props {
 		open: boolean;
-		title?: string;
+		title: string;
 		message: string;
 		confirmText?: string;
 		cancelText?: string;
-		variant?: 'danger' | 'warning' | 'info';
-		requireLongPress?: boolean; // Whether to require 3s long press
-		longPressDuration?: number; // Duration in ms (default 3000)
+		variant?: 'default' | 'danger';
 		onConfirm: () => void;
 		onCancel: () => void;
 	}
 
 	let {
-		open = $bindable(false),
-		title = 'Confirm Action',
+		open,
+		title,
 		message,
-		confirmText = 'Confirm',
-		cancelText = 'Cancel',
-		variant = 'danger',
-		requireLongPress = true,
-		longPressDuration = 3000,
+		confirmText = '确定',
+		cancelText = '取消',
+		variant = 'default',
 		onConfirm,
 		onCancel
 	}: Props = $props();
-
-	let holdProgress = $state(0);
-
-	function handleConfirm() {
-		onConfirm();
-		open = false;
-	}
-
-	function handleCancel() {
-		onCancel();
-		open = false;
-	}
 </script>
 
-<Modal {open} onClose={handleCancel} {title} maxWidth="450px">
-	<div class="confirm-content">
-		<div
-			class="icon-wrapper"
-			class:danger={variant === 'danger'}
-			class:warning={variant === 'warning'}
-			class:info={variant === 'info'}
-		>
-			<AlertTriangle size={48} />
-		</div>
-
-		<p class="message">{message}</p>
-
-		{#if requireLongPress}
-			<p class="instruction">
-				Hold the button for {longPressDuration / 1000} seconds to confirm
-			</p>
+<Modal {open} onClose={onCancel} {title} maxWidth="480px">
+	<div class="confirm-dialog">
+		{#if variant === 'danger'}
+			<div class="icon-wrapper danger">
+				<AlertTriangle size={24} />
+			</div>
 		{/if}
-	</div>
-
-	{#snippet footer()}
-		<div class="footer-actions">
-			<button class="btn-secondary" onclick={handleCancel} disabled={holdProgress > 0}>
+		<p class="message">{message}</p>
+		<div class="actions">
+			<button type="button" class="btn-secondary" onclick={onCancel}>
 				{cancelText}
 			</button>
-
 			<button
-				class="btn-confirm"
-				class:holding={holdProgress > 0}
+				type="button"
+				class="btn-primary"
 				class:danger={variant === 'danger'}
-				class:warning={variant === 'warning'}
-				class:info={variant === 'info'}
-				use:longPress={{
-					duration: requireLongPress ? longPressDuration : 0,
-					onProgress: (progress) => {
-						holdProgress = progress;
-					},
-					onComplete: handleConfirm
+				onclick={() => {
+					onConfirm();
+					onCancel();
 				}}
 			>
-				<span class="btn-text">{confirmText}</span>
-				{#if requireLongPress && holdProgress > 0}
-					<div class="progress-bar" style="width: {holdProgress}%"></div>
-				{/if}
+				{confirmText}
 			</button>
 		</div>
-	{/snippet}
+	</div>
 </Modal>
 
 <style>
-	.confirm-content {
+	.confirm-dialog {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		gap: var(--space-4);
-		padding: var(--space-2) 0;
+		padding: var(--space-4);
 	}
 
 	.icon-wrapper {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 80px;
-		height: 80px;
+		width: 48px;
+		height: 48px;
 		border-radius: 50%;
-		background: hsla(0, 0%, 50%, 0.1);
+		margin: 0 auto;
 	}
 
 	.icon-wrapper.danger {
-		background: hsla(0, 80%, 50%, 0.1);
-		color: hsl(0, 80%, 50%);
-	}
-
-	.icon-wrapper.warning {
-		background: hsla(45, 100%, 50%, 0.1);
-		color: hsl(45, 100%, 45%);
-	}
-
-	.icon-wrapper.info {
-		background: hsla(210, 100%, 50%, 0.1);
-		color: hsl(210, 100%, 50%);
-	}
-
-	:global([data-theme='dark']) .icon-wrapper.danger {
-		background: hsla(0, 80%, 50%, 0.15);
-		color: hsl(0, 80%, 60%);
-	}
-
-	:global([data-theme='dark']) .icon-wrapper.warning {
-		background: hsla(45, 100%, 50%, 0.15);
-		color: hsl(45, 100%, 55%);
-	}
-
-	:global([data-theme='dark']) .icon-wrapper.info {
-		background: hsla(210, 100%, 50%, 0.15);
-		color: hsl(210, 100%, 60%);
+		background: color-mix(in srgb, var(--color-danger) 10%, transparent);
+		color: var(--color-danger);
 	}
 
 	.message {
+		text-align: center;
+		color: var(--color-foreground);
 		font-size: var(--text-base);
-		color: var(--gray-700);
-		text-align: center;
 		line-height: 1.5;
-		max-width: 360px;
 		margin: 0;
 	}
 
-	:global([data-theme='dark']) .message {
-		color: var(--gray-300);
-	}
-
-	.instruction {
-		font-size: var(--text-sm);
-		color: var(--gray-600);
-		text-align: center;
-		margin: 0;
-		font-weight: var(--font-medium);
-	}
-
-	:global([data-theme='dark']) .instruction {
-		color: var(--gray-400);
-	}
-
-	.footer-actions {
+	.actions {
 		display: flex;
 		gap: var(--space-3);
-		justify-content: flex-end;
-		width: 100%;
+		justify-content: center;
+		margin-top: var(--space-2);
 	}
 
-	.btn-secondary,
-	.btn-confirm {
-		position: relative;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		gap: var(--space-2);
-		padding: var(--space-3) var(--space-5);
-		border: none;
-		border-radius: var(--radius-sm);
-		font-weight: var(--font-medium);
+	button {
+		flex: 1;
+		max-width: 150px;
+		padding: var(--space-2-5) var(--space-4);
+		border-radius: var(--radius-md);
 		font-size: var(--text-sm);
+		font-weight: var(--font-medium);
 		cursor: pointer;
 		transition: all 0.2s;
-		overflow: hidden;
-		user-select: none;
-		-webkit-user-select: none;
-		touch-action: none;
 	}
 
 	.btn-secondary {
-		background: var(--gray-200);
-		color: var(--gray-700);
+		background: transparent;
+		color: var(--color-foreground);
+		border: 1px solid var(--color-border);
 	}
 
-	:global([data-theme='dark']) .btn-secondary {
-		background: var(--gray-700);
-		color: var(--gray-200);
+	.btn-secondary:hover {
+		background: var(--color-muted);
 	}
 
-	.btn-secondary:hover:not(:disabled) {
-		background: var(--gray-300);
-	}
-
-	:global([data-theme='dark']) .btn-secondary:hover:not(:disabled) {
-		background: var(--gray-600);
-	}
-
-	.btn-secondary:disabled {
-		opacity: 0.5;
-		cursor: not-allowed;
-	}
-
-	.btn-confirm {
-		min-width: 120px;
-	}
-
-	.btn-confirm.danger {
-		background: hsl(0, 80%, 50%);
+	.btn-primary {
+		background: var(--brand-500);
 		color: white;
+		border: none;
 	}
 
-	.btn-confirm.warning {
-		background: hsl(45, 100%, 45%);
-		color: white;
+	.btn-primary:hover {
+		background: var(--brand-600);
 	}
 
-	.btn-confirm.info {
-		background: hsl(210, 100%, 50%);
-		color: white;
+	.btn-primary.danger {
+		background: var(--color-danger);
 	}
 
-	.btn-confirm:hover:not(.holding) {
-		transform: scale(1.02);
-	}
-
-	.btn-confirm.holding {
-		cursor: grabbing;
-		transform: scale(0.98);
-	}
-
-	.btn-text {
-		position: relative;
-		z-index: 2;
-	}
-
-	.progress-bar {
-		position: absolute;
-		left: 0;
-		top: 0;
-		height: 100%;
-		background: rgba(255, 255, 255, 0.3);
-		transition: width 0.016s linear;
-		z-index: 1;
-	}
-
-	.btn-confirm.danger .progress-bar {
-		background: rgba(255, 255, 255, 0.3);
-	}
-
-	.btn-confirm.warning .progress-bar {
-		background: rgba(255, 255, 255, 0.3);
-	}
-
-	.btn-confirm.info .progress-bar {
-		background: rgba(255, 255, 255, 0.3);
+	.btn-primary.danger:hover {
+		background: color-mix(in srgb, var(--color-danger) 90%, black);
 	}
 </style>

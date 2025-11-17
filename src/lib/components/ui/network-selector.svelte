@@ -2,8 +2,9 @@
 	import { page } from '$app/stores';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
 	import type { useConnectStore } from '$lib/stores/connect.svelte';
-	import { Settings, CirclePlus } from 'lucide-svelte';
+	import { Settings } from 'lucide-svelte';
 	import NetworkCard from './network-card.svelte';
+	import AddCard from './add-card.svelte';
 	import NetworkSettingsModal from './network-settings-modal.svelte';
 
 	interface Props {
@@ -123,16 +124,11 @@
 		{/each}
 
 		{#if showAddButton && hasNetworkManagement}
-			<!-- Add Network Card -->
-			<button class="network-card add-network-card" onclick={openNetworkSettings}>
-				<div class="add-network-icon">
-					<CirclePlus size={32} />
-				</div>
-				<div class="add-network-info">
-					<div class="add-network-title">Network not found?</div>
-					<div class="add-network-subtitle">Add custom network</div>
-				</div>
-			</button>
+			<AddCard
+				title="Network not found?"
+				subtitle="Add custom network"
+				onclick={openNetworkSettings}
+			/>
 		{/if}
 	</div>
 {/if}
@@ -225,70 +221,6 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 		gap: var(--space-4);
-	}
-
-	/* Add Network Card */
-	:global(.network-card.add-network-card) {
-		border-style: dashed;
-		justify-content: center;
-		flex-direction: column;
-	}
-
-	:global(.network-card.add-network-card:hover) {
-		background: hsla(var(--brand-hue), var(--brand-saturation), 50%, 0.05);
-	}
-
-	.add-network-icon {
-		color: var(--gray-400);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		transition: all 0.2s ease;
-	}
-
-	.add-network-card:hover .add-network-icon {
-		color: var(--color-primary);
-		transform: scale(1.1);
-	}
-
-	.add-network-info {
-		text-align: center;
-	}
-
-	.add-network-title {
-		font-size: var(--text-base);
-		font-weight: var(--font-medium);
-		color: var(--gray-700);
-		margin-bottom: var(--space-1);
-	}
-
-	.add-network-subtitle {
-		font-size: var(--text-sm);
-		color: var(--gray-500);
-	}
-
-	.add-network-card:hover .add-network-title {
-		color: var(--color-primary);
-	}
-
-	:global(.network-card.add-network-card:hover) .add-network-subtitle {
-		color: var(--gray-600);
-	}
-
-	:global([data-theme='dark']) :global(.network-card.add-network-card:hover) {
-		background: hsla(var(--brand-hue), var(--brand-saturation), 60%, 0.08);
-	}
-
-	:global([data-theme='dark']) .add-network-title {
-		color: var(--gray-200);
-	}
-
-	:global([data-theme='dark']) .add-network-subtitle {
-		color: var(--gray-400);
-	}
-
-	:global([data-theme='dark']) :global(.network-card.add-network-card:hover) .add-network-title {
-		color: var(--color-primary);
 	}
 
 	/* Responsive */
