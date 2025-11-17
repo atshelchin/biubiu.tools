@@ -667,9 +667,28 @@
 	}
 
 	.network-cards {
-		display: flex;
-		flex-direction: column;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 		gap: var(--space-3);
+	}
+
+	/* Responsive grid */
+	@media (max-width: 1200px) {
+		.network-cards {
+			grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+		}
+	}
+
+	@media (max-width: 900px) {
+		.network-cards {
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		}
+	}
+
+	@media (max-width: 640px) {
+		.network-cards {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	.network-card {
