@@ -4,8 +4,10 @@
 	import WalletConnectButton from '@/lib/components/ui/wallet-connect-button.svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
+	import { useI18n } from '@shelchin/i18n/svelte';
 
 	const connectStore = useConnectStore();
+	const i18n = useI18n();
 
 	// Loading state
 	const isLoading = $derived(!connectStore.isInitialized);
@@ -21,15 +23,15 @@
 
 <div class="step-content">
 	<StepContentHeader
-		title="Select Network"
-		description="Choose the blockchain network for token sweeping"
+		title={i18n.t('tools.token_sweep.step1.content.title')}
+		description={i18n.t('tools.token_sweep.step1.content.description')}
 	/>
 
 	{#if isLoading}
 		<!-- Loading State -->
 		<div class="loading-container">
 			<div class="loading-spinner"></div>
-			<p class="loading-text">Loading network configuration...</p>
+			<p class="loading-text">{i18n.t('tools.token_sweep.step1.content.loading')}</p>
 		</div>
 	{:else}
 		<NetworkSelector {connectStore} {isLoading} bind:selectedChainId bind:selectedNetwork />

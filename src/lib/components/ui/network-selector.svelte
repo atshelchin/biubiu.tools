@@ -6,6 +6,7 @@
 	import NetworkCard from './network-card.svelte';
 	import AddCard from './add-card.svelte';
 	import NetworkSettingsModal from './network-settings-modal.svelte';
+	import { useI18n } from '@shelchin/i18n/svelte';
 
 	interface Props {
 		connectStore: ReturnType<typeof useConnectStore>;
@@ -23,6 +24,7 @@
 		selectedNetwork = $bindable(undefined)
 	}: Props = $props();
 
+	const i18n = useI18n();
 	let showNetworkSettings = $state(false);
 
 	// Derived network data
@@ -103,12 +105,12 @@
 	<!-- Empty State: No Networks Enabled -->
 	<div class="empty-state">
 		<div class="empty-icon">🔗</div>
-		<h3>No Networks Enabled</h3>
-		<p>Please enable at least one network to continue.</p>
+		<h3>{i18n.t('tools.token_sweep.step1.content.no_networks_enabled')}</h3>
+		<p>{i18n.t('tools.token_sweep.step1.content.enable_network_prompt')}</p>
 		{#if hasNetworkManagement}
 			<button class="settings-button" onclick={openNetworkSettings}>
 				<Settings size={20} />
-				Open Network Settings
+				{i18n.t('tools.token_sweep.step1.content.open_network_settings')}
 			</button>
 		{/if}
 	</div>
@@ -125,8 +127,8 @@
 
 		{#if showAddButton && hasNetworkManagement}
 			<AddCard
-				title="Network not found?"
-				subtitle="Add custom network"
+				title={i18n.t('tools.token_sweep.step1.content.network_not_found')}
+				subtitle={i18n.t('tools.token_sweep.step1.content.add_custom_network')}
 				onclick={openNetworkSettings}
 			/>
 		{/if}

@@ -22,6 +22,16 @@
 					"continue": "继续",
 					"hint": "连接钱包后继续"
 				},
+				"content": {
+					"title": "选择网络",
+					"description": "选择代币归集的区块链网络",
+					"loading": "正在加载网络配置...",
+					"no_networks_enabled": "没有启用的网络",
+					"enable_network_prompt": "请至少启用一个网络以继续。",
+					"open_network_settings": "打开网络设置",
+					"network_not_found": "找不到网络？",
+					"add_custom_network": "添加自定义网络"
+				},
 				"sidebar": {
 					"title": "选择网络并连接钱包",
 					"description": "选择区块链网络并连接钱包，开始归集代币。",
