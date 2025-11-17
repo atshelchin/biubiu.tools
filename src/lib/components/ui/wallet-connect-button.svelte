@@ -259,7 +259,7 @@
 									</div>
 								{/if}
 								<div class="account-address-display">
-									<span class="address-label">Address</span>
+									<span class="address-label">{i18n.t('wallet.address_label')}</span>
 									<span class="address-value">{formatAddress(connectStore.address || '')}</span>
 								</div>
 								{#if accounts.length > 1}
@@ -268,7 +268,11 @@
 							</button>
 
 							<div class="account-actions">
-								<button class="icon-action-button" onclick={copyAddress} title="Copy address">
+								<button
+									class="icon-action-button"
+									onclick={copyAddress}
+									title={i18n.t('wallet.copy_address_tooltip')}
+								>
 									{#if copySuccess}
 										<Check size={16} />
 									{:else}
@@ -278,7 +282,7 @@
 								<button
 									class="icon-action-button disconnect"
 									onclick={connectStore.disconnect}
-									title="Disconnect wallet"
+									title={i18n.t('wallet.disconnect_wallet')}
 								>
 									<LogOut size={16} />
 								</button>
@@ -299,8 +303,10 @@
 			>
 				<div class="accounts-dropdown">
 					<div class="dropdown-header">
-						<span>Select Account</span>
-						<span class="account-count">{accounts.length} accounts</span>
+						<span>{i18n.t('wallet.select_account')}</span>
+						<span class="account-count"
+							>{i18n.t('wallet.account_count', { count: accounts.length })}</span
+						>
 					</div>
 					{#each accounts as account (account)}
 						<button class="account-item" onclick={() => handleSwitchAccount(account)}>
@@ -323,7 +329,7 @@
 		<div class="error-card">
 			<div class="error-header">
 				<AlertTriangle size={20} class="error-icon" />
-				<h4>Connection Error</h4>
+				<h4>{i18n.t('wallet.connection_error')}</h4>
 			</div>
 			<p class="error-text">{connectionError}</p>
 		</div>
