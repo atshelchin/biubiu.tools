@@ -12,6 +12,7 @@
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
 	import Dropdown from './dropdown.svelte';
 	import { longPress } from '$lib/utils/long-press';
+	import { useI18n } from '@shelchin/i18n/svelte';
 
 	interface Props {
 		selectedChainId: number;
@@ -22,6 +23,7 @@
 	let { selectedChainId, selectedNetwork, class: className = '' }: Props = $props();
 
 	const connectStore = useConnectStore();
+	const i18n = useI18n();
 
 	// Wallet connection states
 	const isWalletConnected = $derived(connectStore.isConnected);
@@ -175,7 +177,7 @@
 					<div class="button-content">
 						<Wallet size={24} />
 						<span class="button-text">
-							{isWalletConnecting ? 'Connecting Wallet...' : 'Connect Wallet'}
+							{isWalletConnecting ? i18n.t('wallet.connecting') : i18n.t('wallet.connect')}
 						</span>
 					</div>
 				</button>
@@ -191,7 +193,7 @@
 
 		<!-- Reset hint -->
 		{#if isWalletConnecting}
-			<div class="reset-hint">💡 Long press the button to cancel connection</div>
+			<div class="reset-hint">💡 {i18n.t('wallet.long_press_hint')}</div>
 		{/if}
 	{:else if isNetworkMismatch}
 		<!-- Connected but wrong network -->
@@ -199,23 +201,26 @@
 			<div class="warning-card">
 				<div class="warning-header">
 					<AlertTriangle size={24} class="warning-icon" />
-					<h4>Network Mismatch</h4>
+					<h4>{i18n.t('wallet.network_mismatch')}</h4>
 				</div>
 				<p class="warning-text">
-					Your wallet is on a different network. Please switch to <strong
-						>{selectedNetwork?.name || `Chain ${selectedChainId}`}</strong
-					> to continue.
+					{i18n.t('wallet.network_mismatch_hint')}
+					<strong>{selectedNetwork?.name || `Chain ${selectedChainId}`}</strong>
 				</p>
 			</div>
 
 			<div class="action-buttons">
 				<button class="switch-button primary" onclick={handleSwitchNetwork} disabled={isSwitching}>
 					<RefreshCw size={20} class={isSwitching ? 'spinning' : ''} />
-					<span>{isSwitching ? 'Switching Network...' : 'Switch Network in Wallet'}</span>
+					<span
+						>{isSwitching
+							? i18n.t('wallet.switching_network')
+							: i18n.t('wallet.switch_network')}</span
+					>
 				</button>
 				<button class="switch-button secondary" onclick={handleConnectWallet}>
 					<Wallet size={20} />
-					<span>Connect Different Wallet</span>
+					<span>{i18n.t('wallet.connect_different_wallet')}</span>
 				</button>
 			</div>
 		</div>
@@ -225,9 +230,13 @@
 			<div class="connected-card">
 				<div class="connected-header">
 					<Check size={20} class="check-icon" />
-					<span class="connected-label"
-						>Connected to {selectedNetwork?.name || `Chain ${selectedChainId}`}</span
-					>
+					<span class="connected-prefix">{i18n.t('wallet.connected_to')}</span>
+					<div class="network-badge">
+						{#if selectedNetwork?.iconUrl}
+							<img src={selectedNetwork.iconUrl} alt={selectedNetwork.name} class="network-logo" />
+						{/if}
+						<span class="network-name">{selectedNetwork?.name || `Chain ${selectedChainId}`}</span>
+					</div>
 				</div>
 
 				<div class="wallet-details">
@@ -558,7 +567,7 @@
 	.connected-card {
 		padding: var(--space-5);
 		background: hsla(120, 60%, 50%, 0.08);
-		border: 2px solid hsl(120, 60%, 50%);
+		border: 1px solid hsl(120, 60%, 50%);
 		border-radius: var(--radius-lg);
 	}
 
@@ -583,13 +592,44 @@
 		color: hsl(120, 60%, 60%);
 	}
 
-	.connected-label {
+	.connected-prefix {
+		font-size: var(--text-sm);
+		color: var(--gray-600);
+	}
+
+	:global([data-theme='dark']) .connected-prefix {
+		color: var(--gray-400);
+	}
+
+	.network-badge {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		padding: var(--space-1) var(--space-2);
+		background: hsla(120, 60%, 95%, 1);
+		border-radius: var(--radius-md);
+		border: 1px solid hsla(120, 60%, 80%, 1);
+	}
+
+	:global([data-theme='dark']) .network-badge {
+		background: hsla(120, 60%, 15%, 0.3);
+		border-color: hsla(120, 60%, 25%, 1);
+	}
+
+	.network-logo {
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		object-fit: contain;
+	}
+
+	.network-name {
 		font-size: var(--text-base);
 		font-weight: var(--font-semibold);
 		color: hsl(120, 60%, 30%);
 	}
 
-	:global([data-theme='dark']) .connected-label {
+	:global([data-theme='dark']) .network-name {
 		color: hsl(120, 60%, 70%);
 	}
 

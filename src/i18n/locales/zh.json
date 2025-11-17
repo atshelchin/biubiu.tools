@@ -292,12 +292,7 @@
 			"price": "$0",
 			"period": "永久",
 			"description": "适合刚开始使用",
-			"features": [
-				"最多 10 个钱包",
-				"基础批量操作",
-				"社区支持",
-				"标准速度"
-			],
+			"features": ["最多 10 个钱包", "基础批量操作", "社区支持", "标准速度"],
 			"cta": "开始使用"
 		},
 		"pro": {
@@ -305,13 +300,7 @@
 			"price": "$19",
 			"period": "月",
 			"description": "适合高级用户",
-			"features": [
-				"无限钱包",
-				"高级批量操作",
-				"优先支持",
-				"高速处理",
-				"API 访问"
-			],
+			"features": ["无限钱包", "高级批量操作", "优先支持", "高速处理", "API 访问"],
 			"cta": "开始免费试用"
 		},
 		"enterprise": {
@@ -319,13 +308,7 @@
 			"price": "定制",
 			"period": "月",
 			"description": "适合团队和组织",
-			"features": [
-				"包含专业版所有功能",
-				"专属支持",
-				"定制集成",
-				"SLA 保障",
-				"团队管理"
-			],
+			"features": ["包含专业版所有功能", "专属支持", "定制集成", "SLA 保障", "团队管理"],
 			"cta": "联系销售"
 		},
 		"note": "所有计划均包含基础功能和安全保障",
@@ -371,7 +354,13 @@
 		"select_wallet": "选择钱包",
 		"scan_qr": "扫描二维码",
 		"not_installed": "未安装",
-		"long_press_hint": "长按按钮 3 秒可重置连接",
+		"long_press_hint": "长按按钮取消连接",
+		"connected_to": "已连接到",
+		"network_mismatch": "网络不匹配",
+		"network_mismatch_hint": "你的钱包在其他网络上,请切换到",
+		"switch_network": "切换网络",
+		"switching_network": "切换中...",
+		"connect_different_wallet": "连接其他钱包",
 		"walletconnect": {
 			"title": "使用 WalletConnect 连接钱包",
 			"step_1": "打开支持 WalletConnect 的钱包应用",
