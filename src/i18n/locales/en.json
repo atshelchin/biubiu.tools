@@ -28,14 +28,15 @@
 					"why_do_this": "Why do this?",
 					"why_explanation": "Tell the app which network to use, and which wallet's assets to operate on - both are essential.",
 					"what_is_network": "What is a blockchain network?",
-					"network_explanation": "A blockchain network is a platform for storing and transferring crypto, like different banking systems. Ethereum, BSC, and Polygon are separate networks that don't connect.",
+					"network_explanation": "A blockchain network is a public ledger system that records who owns what tokens and all transfers. Ethereum, BSC, and Polygon are different ledgers, each independent and separate.",
 					"what_is_wallet": "What is a wallet?",
-					"wallet_explanation": "A Web3 wallet stores and manages your crypto, like PayPal or Venmo for digital currencies. Popular: MetaMask, Trust Wallet, Coinbase Wallet.",
+					"wallet_explanation": "A Web3 wallet isn't where money is stored - it's the key to manage your blockchain account. Your funds are recorded on the blockchain ledger, and the wallet proves you own the account. Popular: MetaMask, Coinbase Smart Wallet.",
 					"what_is_native_token": "What is a native token?",
-					"native_token_explanation": "A native token is the currency each network uses for transaction fees. Ethereum uses ETH, BSC uses BNB, Polygon uses POL. Like paying a toll to use the highway.",
+					"native_token_explanation": "Native tokens are used to pay miners who process your transactions. Ethereum uses ETH, BSC uses BNB, Polygon uses POL. Miners record your transaction on the blockchain ledger, and you pay them this fee.",
 					"beginner_tips": "Tips",
 					"tip1": "✅ Make sure you selected the correct network (choose where your tokens are)",
-					"tip2": "⛽ Ensure you have enough native tokens to pay fees"
+					"tip2": "⛽ Ensure you have enough native tokens to pay fees",
+					"tip3": "🌍 Supports any EVM-compatible network - you can add any chain"
 				}
 			}
 		},

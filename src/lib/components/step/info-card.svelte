@@ -64,6 +64,13 @@
 		color: var(--gray-600);
 		line-height: 1.6;
 		margin: 0;
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		-ms-hyphens: auto;
+		hyphens: auto;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		word-break: break-word;
 	}
 
 	:global([data-theme='dark']) .card-description {
@@ -108,6 +115,13 @@
 		font-size: var(--text-sm);
 		color: var(--gray-600);
 		line-height: 1.5;
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		-ms-hyphens: auto;
+		hyphens: auto;
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+		word-break: break-word;
 	}
 
 	.info-card.tips :global(ul li) {

@@ -28,14 +28,15 @@
 					"why_do_this": "为什么要这么做?",
 					"why_explanation": "告诉应用你要操作哪个网络的代币,以及使用哪个钱包的资产 - 两者缺一不可。",
 					"what_is_network": "什么是区块链网络?",
-					"network_explanation": "区块链网络是存储和转移加密货币的平台,就像不同的银行系统。以太坊、BSC、Polygon 都是独立的网络,互不相通。",
+					"network_explanation": "区块链网络是一个公开的账本系统,记录了所有代币的归属和转账。以太坊、BSC、Polygon 是不同的账本,各自独立,互不相通。",
 					"what_is_wallet": "什么是钱包?",
-					"wallet_explanation": "Web3 钱包用来存放和管理你的加密货币,就像手机里的支付宝。常见钱包:MetaMask、Trust Wallet、Coinbase Wallet。",
+					"wallet_explanation": "Web3 钱包不是存钱的地方,而是管理区块链账户的钥匙。钱记录在区块链账本上,钱包帮你证明账户归你所有并进行操作。常见钱包:MetaMask、Coinbase Smart Wallet。",
 					"what_is_native_token": "什么是原生币?",
-					"native_token_explanation": "原生币是每个网络用来支付手续费的专属货币。以太坊的原生币是 ETH,BSC 是 BNB,Polygon 是 POL。就像打车要付车费,转账要付手续费。",
+					"native_token_explanation": "原生币是支付给矿工打包交易的费用。以太坊用 ETH,BSC 用 BNB,Polygon 用 POL。矿工把你的交易记录到区块链账本上,你需要付给他们这笔费用。",
 					"beginner_tips": "新手提示",
 					"tip1": "✅ 确保选对了网络(代币在哪个网络就选哪个)",
-					"tip2": "⛽ 确保钱包有充足的原生币支付手续费"
+					"tip2": "⛽ 确保钱包有充足的原生币支付手续费",
+					"tip3": "🌍 支持任意 EVM 兼容网络,可自行添加任何链"
 				}
 			}
 		},

@@ -31,7 +31,18 @@
 		title={i18n.t('tools.token_sweep.step1.sidebar.why_do_this')}
 		description={i18n.t('tools.token_sweep.step1.sidebar.why_explanation')}
 	/>
-
+	<!-- Beginner Tips -->
+	<InfoCard
+		variant="tips"
+		icon="💡"
+		title={i18n.t('tools.token_sweep.step1.sidebar.beginner_tips')}
+	>
+		<ul>
+			<li>{i18n.t('tools.token_sweep.step1.sidebar.tip1')}</li>
+			<li>{i18n.t('tools.token_sweep.step1.sidebar.tip2')}</li>
+			<li>{i18n.t('tools.token_sweep.step1.sidebar.tip3')}</li>
+		</ul>
+	</InfoCard>
 	<!-- What is a blockchain network? -->
 	<InfoCard
 		variant="knowledge"
@@ -55,16 +66,4 @@
 		title={i18n.t('tools.token_sweep.step1.sidebar.what_is_native_token')}
 		description={i18n.t('tools.token_sweep.step1.sidebar.native_token_explanation')}
 	/>
-
-	<!-- Beginner Tips -->
-	<InfoCard
-		variant="tips"
-		icon="💡"
-		title={i18n.t('tools.token_sweep.step1.sidebar.beginner_tips')}
-	>
-		<ul>
-			<li>{i18n.t('tools.token_sweep.step1.sidebar.tip1')}</li>
-			<li>{i18n.t('tools.token_sweep.step1.sidebar.tip2')}</li>
-		</ul>
-	</InfoCard>
 </StepSidebar>
