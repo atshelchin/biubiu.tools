@@ -125,7 +125,10 @@
 
 	<!-- Main content -->
 	<div class="page-content">
-		<StepIndicator manager={stepManager} />
+		<div style="padding-bottom:16px">
+			<StepIndicator manager={stepManager} />
+		</div>
+
 		{#if typeof window !== 'undefined' && window.location.hostname === 'localhost'}
 			<StepControls manager={stepManager} />
 		{/if}
