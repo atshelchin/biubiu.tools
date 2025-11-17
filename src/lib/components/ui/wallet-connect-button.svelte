@@ -759,7 +759,7 @@
 		color: var(--gray-100);
 	}
 
-	.chevron-icon {
+	:global(.chevron-icon) {
 		color: var(--gray-600);
 		flex-shrink: 0;
 	}
@@ -891,7 +891,7 @@
 		flex-shrink: 0;
 	}
 
-	.check-icon-small {
+	:global(.check-icon-small) {
 		color: var(--gray-600);
 		flex-shrink: 0;
 	}
