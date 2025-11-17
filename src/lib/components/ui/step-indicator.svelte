@@ -8,6 +8,7 @@
 	export interface StepManager {
 		steps: Step[];
 		currentStep: number;
+		useI18nKeys: boolean;
 		next: () => void;
 		prev: () => void;
 		goTo: (step: number) => void;
@@ -20,10 +21,15 @@
 
 	/**
 	 * Create a step manager for StepIndicator
-	 * @param steps - Array of step definitions
+	 * @param steps - Array of step definitions with i18n keys or direct values
 	 * @param initialStep - Initial step (1-based, defaults to 1)
+	 * @param useI18nKeys - Whether to treat label/description as i18n keys (default: true)
 	 */
-	export function createStepManager(steps: Step[], initialStep: number = 1): StepManager {
+	export function createStepManager(
+		steps: Step[],
+		initialStep: number = 1,
+		useI18nKeys: boolean = true
+	): StepManager {
 		let currentStep = $state(initialStep);
 
 		const manager = {
@@ -33,6 +39,7 @@
 			get currentStep() {
 				return currentStep;
 			},
+			useI18nKeys,
 			next() {
 				if (currentStep < steps.length) {
 					currentStep++;
@@ -72,6 +79,8 @@
 </script>
 
 <script lang="ts">
+	import { useI18n } from '@shelchin/i18n/svelte';
+
 	interface Props {
 		manager: StepManager;
 	}
@@ -79,6 +88,7 @@
 	// eslint-disable-next-line svelte/no-unused-props
 	let { manager }: Props = $props();
 
+	const i18n = useI18n();
 	const isVertical = $derived(manager.steps.length > 3);
 
 	function getStepStatus(index: number) {
@@ -124,9 +134,13 @@
 
 			<!-- 步骤标签 -->
 			<div class="step-label">
-				<div class="step-title">{step.label}</div>
+				<div class="step-title">
+					{manager.useI18nKeys ? i18n.t(step.label) : step.label}
+				</div>
 				{#if step.description}
-					<div class="step-description">{step.description}</div>
+					<div class="step-description">
+						{manager.useI18nKeys ? i18n.t(step.description) : step.description}
+					</div>
 				{/if}
 			</div>
 

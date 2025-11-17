@@ -452,7 +452,10 @@ export class FormStateManager implements IFormStateManager {
 			const value = this.getValue(path);
 			// ⚠️ 修复 Bug 5: 快照 values，防止异步验证期间 values 被修改导致不一致
 			// 使用 JSON 序列化来克隆，避免 Immer draft 对象的循环引用问题
-			const valuesSnapshot = (safeParse(safeStringify(this.values)) || this.values) as Record<string, unknown>;
+			const valuesSnapshot = (safeParse(safeStringify(this.values)) || this.values) as Record<
+				string,
+				unknown
+			>;
 			const error = await Promise.resolve(config.validator.validate(value, valuesSnapshot));
 
 			// 检查是否已被取消

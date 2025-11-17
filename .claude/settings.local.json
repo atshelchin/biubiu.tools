@@ -1,22 +1,23 @@
 {
-	"permissions": {
-		"allow": [
-			"Bash(git add:*)",
-			"Bash(bun add:*)",
-			"Bash(bun run lint:*)",
-			"Bash(npx eslint:*)",
-			"Bash(bun run:*)",
-			"Bash(bun pm ls:*)",
-			"Bash(curl -s http://localhost:5174/sitemap.xml)",
-			"Bash(curl:*)",
-			"Bash(xargs sed:*)",
-			"Bash(find:*)",
-			"Bash(mkdir:*)",
-			"Bash(npx prettier:*)",
-			"Bash(bun x prettier:*)",
-			"Bash(bunx prettier:*)"
-		],
-		"deny": [],
-		"ask": []
-	}
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(bun add:*)",
+      "Bash(bun run lint:*)",
+      "Bash(npx eslint:*)",
+      "Bash(bun run:*)",
+      "Bash(bun pm ls:*)",
+      "Bash(curl -s http://localhost:5174/sitemap.xml)",
+      "Bash(curl:*)",
+      "Bash(xargs sed:*)",
+      "Bash(find:*)",
+      "Bash(mkdir:*)",
+      "Bash(npx prettier:*)",
+      "Bash(bun x prettier:*)",
+      "Bash(bunx prettier:*)",
+      "Bash(cat:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
 }

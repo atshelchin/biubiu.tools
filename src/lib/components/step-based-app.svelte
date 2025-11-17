@@ -2,6 +2,7 @@
 	import type { Snippet, Component } from 'svelte';
 	import type { Chain } from 'viem';
 	import type { HowToStepData } from '$lib/utils/structured-data';
+	import type { Step } from '$lib/components/ui/step-indicator.svelte';
 
 	// Generic component type for step components
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -20,8 +21,10 @@
 		};
 		structuredData: Record<string, unknown>[];
 
-		// Step configuration
-		steps: HowToStepData[];
+		// Step configuration with i18n keys or direct values
+		steps: Step[];
+		// Whether to treat step label/description as i18n keys (default: true)
+		useI18nKeys?: boolean;
 
 		// App-specific configuration
 		appTitle: string;
@@ -70,13 +73,8 @@
 		);
 	}
 
-	// Create step manager from steps config (auto-sets context internally)
-	const stepManager = createStepManager(
-		config.steps.map((step) => ({
-			label: step.name,
-			description: step.description
-		}))
-	);
+	// Create step manager from steps config with i18n keys (auto-sets context internally)
+	const stepManager = createStepManager(config.steps, 1, config.useI18nKeys ?? true);
 
 	// Get current step components
 	const SidebarComponent = $derived(config.stepComponents.sidebar[stepManager.currentStep - 1]);
