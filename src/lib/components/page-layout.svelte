@@ -24,6 +24,11 @@
 	<div class="layout-grid" class:full-width={!sidebar}>
 		<main class="main-content">
 			{@render children()}
+			{#if footer}
+				<footer class="footer-section">
+					{@render footer()}
+				</footer>
+			{/if}
 		</main>
 
 		{#if sidebar}
@@ -32,12 +37,6 @@
 			</aside>
 		{/if}
 	</div>
-
-	{#if footer}
-		<footer class="footer-section">
-			{@render footer()}
-		</footer>
-	{/if}
 </div>
 
 <style>
@@ -77,6 +76,7 @@
 		top: var(--space-4);
 		max-height: calc(100vh - var(--space-8));
 		overflow-y: auto;
+		z-index: 2;
 	}
 
 	.main-content {
@@ -88,12 +88,13 @@
 
 	.footer-section {
 		background: var(--color-card);
-		padding: var(--space-4) var(--space-4);
-		border-radius: var(--radius-lg);
-		border: 1px solid var(--color-border);
+		/* padding: var(--space-4) var(--space-4); */
+		/* border-radius: var(--radius-lg); */
+		/* border: 1px solid var(--color-border); */
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		margin-top: 16px;
 	}
 
 	@media (max-width: 768px) {

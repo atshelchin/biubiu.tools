@@ -56,7 +56,7 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: var(--space-3);
-		padding: var(--space-4);
+		/* padding: var(--space-4); */
 		background: var(--color-panel-1);
 		/* border-top: 1px solid var(--color-border); */
 		width: 100%;
