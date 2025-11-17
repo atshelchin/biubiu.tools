@@ -18,25 +18,29 @@
 			"title": "代币批量归集",
 			"description": "将多个地址的代币归集到单一目标地址",
 			"step1": {
+				"footer": {
+					"continue": "继续",
+					"hint": "连接钱包后继续"
+				},
 				"sidebar": {
 					"title": "选择网络并连接钱包",
-					"description": "选择区块链网络并连接钱包,开始归集代币。",
-					"what_is_this": "这一步做什么?",
-					"what_explanation": "你需要:",
-					"what_item1": "选择区块链网络(如以太坊、BSC、Polygon)",
-					"what_item2": "连接 Web3 钱包(如 MetaMask)",
-					"why_do_this": "为什么要这么做?",
-					"why_explanation": "告诉应用你要操作哪个网络的代币,以及使用哪个钱包的资产 - 两者缺一不可。",
-					"what_is_network": "什么是区块链网络?",
-					"network_explanation": "区块链网络是一个公开的账本系统,记录了所有代币的归属和转账。以太坊、BSC、Polygon 是不同的账本,各自独立,互不相通。",
-					"what_is_wallet": "什么是钱包?",
-					"wallet_explanation": "Web3 钱包不是存钱的地方,而是管理区块链账户的钥匙。钱记录在区块链账本上,钱包帮你证明账户归你所有并进行操作。常见钱包:MetaMask、Coinbase Smart Wallet。",
-					"what_is_native_token": "什么是原生币?",
-					"native_token_explanation": "原生币是支付给矿工打包交易的费用。以太坊用 ETH,BSC 用 BNB,Polygon 用 POL。矿工把你的交易记录到区块链账本上,你需要付给他们这笔费用。",
+					"description": "选择区块链网络并连接钱包，开始归集代币。",
+					"what_is_this": "这一步做什么？",
+					"what_explanation": "你需要：",
+					"what_item1": "选择区块链网络 (如以太坊、BSC、Polygon)",
+					"what_item2": "连接 Web3 钱包 (如 MetaMask)",
+					"why_do_this": "为什么要这么做？",
+					"why_explanation": "告诉应用你要操作哪个网络的代币，以及使用哪个钱包的资产 - 两者缺一不可。",
+					"what_is_network": "什么是区块链网络？",
+					"network_explanation": "区块链网络是一个公开的账本系统，记录了所有代币的归属和转账。以太坊、BSC、Polygon 是不同的账本，各自独立，互不相通。",
+					"what_is_wallet": "什么是钱包？",
+					"wallet_explanation": "Web3 钱包不是存钱的地方，而是管理区块链账户的钥匙。钱记录在区块链账本上，钱包帮你证明账户归你所有并进行操作。常见钱包:MetaMask、Coinbase Smart Wallet。",
+					"what_is_native_token": "什么是原生币？",
+					"native_token_explanation": "原生币是支付给矿工打包交易的费用。以太坊用 ETH,BSC 用 BNB,Polygon 用 POL。矿工把你的交易记录到区块链账本上，你需要付给他们这笔费用。",
 					"beginner_tips": "新手提示",
-					"tip1": "✅ 确保选对了网络(代币在哪个网络就选哪个)",
+					"tip1": "✅ 确保选对了网络 (代币在哪个网络就选哪个)",
 					"tip2": "⛽ 确保钱包有充足的原生币支付手续费",
-					"tip3": "🌍 支持任意 EVM 兼容网络,可自行添加任何链"
+					"tip3": "🌍 支持任意 EVM 兼容网络，可自行添加任何链"
 				}
 			}
 		},
@@ -53,7 +57,7 @@
 			"description": "扫描、分析和导出区块链智能合约事件"
 		},
 		"ens_scanner": {
-			"title": "ENS域名扫描",
+			"title": "ENS 域名扫描",
 			"description": "批量扫描 ENS 域名可用性和到期状态"
 		},
 		"assets_monitor": {
@@ -62,18 +66,18 @@
 		},
 		"wallet_generator": {
 			"title": "钱包工厂",
-			"description": "从助记词、xpub或秘密文本生成多个钱包，支持HD路径"
+			"description": "从助记词、xpub 或秘密文本生成多个钱包，支持 HD 路径"
 		},
 		"dex_moonshot_trader": {
-			"title": "操DEXScreener Moonshot",
-			"description": "为DEXScreener Moonshot代币提供简单的买卖交易界面"
+			"title": "操 DEXScreener Moonshot",
+			"description": "为 DEXScreener Moonshot 代币提供简单的买卖交易界面"
 		},
 		"token_deployer": {
 			"title": "代币部署器",
 			"description": "快速创建和部署自定义参数的 ERC20 代币"
 		},
 		"nft_deployer": {
-			"title": "NFT部署器",
+			"title": "NFT 部署器",
 			"description": "部署 NFT 智能合约，支持 ERC-721、ERC-721A 和 ERC-1155 标准",
 			"step1": {
 				"sidebar": {
@@ -288,7 +292,12 @@
 			"price": "$0",
 			"period": "永久",
 			"description": "适合刚开始使用",
-			"features": ["最多 10 个钱包", "基础批量操作", "社区支持", "标准速度"],
+			"features": [
+				"最多 10 个钱包",
+				"基础批量操作",
+				"社区支持",
+				"标准速度"
+			],
 			"cta": "开始使用"
 		},
 		"pro": {
@@ -296,7 +305,13 @@
 			"price": "$19",
 			"period": "月",
 			"description": "适合高级用户",
-			"features": ["无限钱包", "高级批量操作", "优先支持", "高速处理", "API 访问"],
+			"features": [
+				"无限钱包",
+				"高级批量操作",
+				"优先支持",
+				"高速处理",
+				"API 访问"
+			],
 			"cta": "开始免费试用"
 		},
 		"enterprise": {
@@ -304,7 +319,13 @@
 			"price": "定制",
 			"period": "月",
 			"description": "适合团队和组织",
-			"features": ["包含专业版所有功能", "专属支持", "定制集成", "SLA 保障", "团队管理"],
+			"features": [
+				"包含专业版所有功能",
+				"专属支持",
+				"定制集成",
+				"SLA 保障",
+				"团队管理"
+			],
 			"cta": "联系销售"
 		},
 		"note": "所有计划均包含基础功能和安全保障",

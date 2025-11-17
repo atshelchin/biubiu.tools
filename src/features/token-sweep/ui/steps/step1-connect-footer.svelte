@@ -2,9 +2,11 @@
 	import { useConnectStore } from '$lib/stores/connect.svelte.js';
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 	import StepFooter from '$lib/components/step/step-footer.svelte';
+	import { useI18n } from '@shelchin/i18n/svelte';
 
 	const connectStore = useConnectStore();
 	const stepManager = useStepManager();
+	const i18n = useI18n();
 
 	// This needs to track the same selectedChainId as content
 	// We'll use connectStore.currentChainId which is set after connection
@@ -22,7 +24,7 @@
 
 <StepFooter
 	canContinue={isReadyToContinue}
-	continueText="Continue to Configuration"
+	continueText={i18n.t('tools.token_sweep.step1.footer.continue')}
 	onContinue={handleContinue}
-	hint="Connect your wallet to continue"
+	hint={i18n.t('tools.token_sweep.step1.footer.hint')}
 />

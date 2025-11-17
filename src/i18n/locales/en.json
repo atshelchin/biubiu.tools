@@ -18,6 +18,10 @@
 			"title": "Token Sweep",
 			"description": "Sweep tokens from multiple addresses to a single destination address",
 			"step1": {
+				"footer": {
+					"continue": "Continue",
+					"hint": "Connect your wallet to continue"
+				},
 				"sidebar": {
 					"title": "Select Network & Connect Wallet",
 					"description": "Choose a blockchain network and connect your wallet to start sweeping tokens.",
