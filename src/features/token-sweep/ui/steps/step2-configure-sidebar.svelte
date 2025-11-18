@@ -4,6 +4,8 @@
 	import { step2State } from '@/features/token-sweep/stores/step2-state.svelte';
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 
+	import { useConnectStore } from '@/lib/stores/connect.svelte';
+	import WalletConnectButton from '@/lib/components/ui/wallet-connect-button.svelte';
 	const stepManager = useStepManager();
 
 	// Use $derived for easier access in template
@@ -13,17 +15,30 @@
 	function goBackToStep1() {
 		stepManager.goTo(1);
 	}
+
+	const connectStore = useConnectStore();
+
+	// Get current network
+	const currentNetwork = $derived(
+		connectStore.currentChainId
+			? connectStore.networks.find((n) => n.chainId === connectStore.currentChainId)
+			: undefined
+	);
 </script>
 
-<StepSidebar
-	stepNumber={2}
-	title="Check Dependencies"
-	description="Verify network services and contracts"
->
-	<WalletConnectionStatus
+<!-- title="Check Dependencies" -->
+<!-- description="Verify network services and contracts" -->
+<StepSidebar stepNumber={2} title="" description="">
+	<!-- <WalletConnectionStatus
 		showChangeButton={true}
 		onChangeWallet={goBackToStep1}
 		class="wallet-status-section"
+	/> -->
+
+	<WalletConnectButton
+		selectedChainId={connectStore.currentChainId ?? 1}
+		selectedNetwork={currentNetwork}
+		class="wallet-section"
 	/>
 
 	{#if summary && summary.total !== undefined}

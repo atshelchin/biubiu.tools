@@ -86,7 +86,7 @@
 						<span class="network-name">{network?.name || `Chain ${chainId}`}</span>
 					</div>
 					<div class="address-info">
-						<span class="address-label">{i18n.t('wallet.address_label')}</span>
+						<!-- <span class="address-label">{i18n.t('wallet.address_label')}</span> -->
 						<span class="address-value">{formatAddress(address)}</span>
 					</div>
 				</div>
@@ -137,6 +137,8 @@
 <style>
 	.connected-container {
 		width: 100%;
+		container-type: inline-size;
+		container-name: wallet-info;
 	}
 
 	.connected-card {
@@ -278,32 +280,34 @@
 		color: hsl(0, 80%, 50%);
 	}
 
-	@media (max-width: 640px) {
-		.wallet-details {
-			gap: var(--space-3);
-		}
-
-		.wallet-icon,
-		.wallet-icon-placeholder {
-			width: 32px;
-			height: 32px;
-			flex-shrink: 0;
-		}
-
-		.account-info {
-			flex: 1;
-			min-width: 0;
-		}
-
+	@container wallet-info (max-width: 400px) {
 		.account-section {
-			width: 100%;
 			flex-direction: column;
 			gap: var(--space-2);
 		}
 
 		.account-button {
 			width: 100%;
-			font-size: var(--text-sm);
+		}
+
+		.wallet-icon,
+		.wallet-icon-placeholder {
+			width: 32px;
+			height: 32px;
+		}
+
+		.network-name {
+			font-size: var(--text-xs);
+		}
+
+		.address-info {
+			/* flex-direction: column; */
+			align-items: flex-start;
+			gap: var(--space-1);
+		}
+
+		.address-value {
+			font-size: var(--text-xs);
 		}
 
 		.account-actions {
@@ -313,6 +317,7 @@
 
 		.icon-action-button {
 			flex: 1;
+			height: 36px;
 		}
 	}
 </style>

@@ -79,9 +79,9 @@
 
 <style>
 	/* Wallet Section */
-	:global(.wallet-section) {
+	/* :global(.wallet-section) {
 		margin-top: var(--space-8);
-	}
+	} */
 
 	/* Continue Section */
 	.continue-section {

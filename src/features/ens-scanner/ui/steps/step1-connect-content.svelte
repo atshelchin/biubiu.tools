@@ -79,9 +79,9 @@
 </div>
 
 <style>
-	:global(.wallet-section) {
+	/* :global(.wallet-section) {
 		margin-top: var(--space-8);
-	}
+	} */
 
 	.warning-box {
 		margin-top: var(--space-4);

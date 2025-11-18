@@ -47,7 +47,7 @@
 		font-weight: var(--font-semibold);
 		cursor: pointer;
 	}
-	:global(.wallet-section) {
+	/* :global(.wallet-section) {
 		margin-top: var(--space-6);
-	}
+	} */
 </style>
