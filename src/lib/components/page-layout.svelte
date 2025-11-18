@@ -60,10 +60,10 @@
 	}
 
 	.sidebar-section {
-		background: var(--color-card);
+		/* background: var(--color-card); */
 		padding: var(--space-4);
 		border-radius: var(--radius-lg);
-		border: 1px solid var(--color-border);
+		/* border: 1px solid var(--color-border); */
 		height: fit-content;
 		position: sticky;
 		top: var(--space-4);
