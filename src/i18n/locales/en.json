@@ -112,7 +112,19 @@
 						"waiting_for_signature": "⏳ Please confirm transaction in your wallet...",
 						"transaction_sent": "⚡ Transaction sent! Waiting for blockchain confirmation...",
 						"finalizing": "✅ Finalizing deployment...",
-						"confirm_in_wallet": "Please confirm transactions in your wallet"
+						"confirm_in_wallet": "Please confirm transactions in your wallet",
+						"steps": {
+							"create2": {
+								"fund_deployer_title": "Fund Deployer Address",
+								"fund_deployer_description": "Send 0.01 ETH to {address}",
+								"deploy_contract_title": "Deploy Contract",
+								"deploy_contract_description": "Send pre-signed deployment transaction"
+							},
+							"via_create2": {
+								"deploy_title": "Deploy {contractName} via CREATE2",
+								"deploy_description": "Send deployment transaction to CREATE2 proxy at {address}"
+							}
+						}
 					},
 					"checks": {
 						"rpc_endpoint": {

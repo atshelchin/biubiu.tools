@@ -112,7 +112,19 @@
 						"waiting_for_signature": "⏳ 请在钱包中确认交易...",
 						"transaction_sent": "⚡ 交易已发送！等待区块链确认...",
 						"finalizing": "✅ 正在完成部署...",
-						"confirm_in_wallet": "请在钱包中确认交易"
+						"confirm_in_wallet": "请在钱包中确认交易",
+						"steps": {
+							"create2": {
+								"fund_deployer_title": "为部署者地址充值",
+								"fund_deployer_description": "发送 0.01 ETH 至 {address}",
+								"deploy_contract_title": "部署合约",
+								"deploy_contract_description": "发送预签名的部署交易"
+							},
+							"via_create2": {
+								"deploy_title": "通过 CREATE2 部署 {contractName}",
+								"deploy_description": "向 CREATE2 代理 {address} 发送部署交易"
+							}
+						}
 					},
 					"checks": {
 						"rpc_endpoint": {
