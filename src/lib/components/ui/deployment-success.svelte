@@ -163,11 +163,6 @@
 			gap: var(--space-4);
 		}
 
-		.success-section :global(svg:first-child) {
-			width: 48px;
-			height: 48px;
-		}
-
 		h3 {
 			font-size: var(--text-xl);
 		}
