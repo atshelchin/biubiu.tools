@@ -148,15 +148,16 @@
 
 					await step.action();
 
-					// Transaction sent, no longer waiting for signature
-					isWaitingForSignature = false;
-
 					console.log(`[Deployment] Step ${i + 1} completed:`, step.title);
 
-					// Mark this step as completed
+					// Mark this step as completed first to avoid showing wrong message
 					steps = steps.map((s, idx) =>
 						idx === i ? { ...s, inProgress: false, completed: true } : s
 					);
+
+					// Transaction sent, no longer waiting for signature
+					isWaitingForSignature = false;
+
 					// Give UI time to update and show feedback
 					await new Promise((resolve) => setTimeout(resolve, 500));
 				}
@@ -173,11 +174,9 @@
 			console.log('[Deployment] Deployment successful!');
 			status = 'success';
 
-			// Notify parent component after brief success display
-			setTimeout(() => {
-				console.log('[Deployment] Calling onSuccess callback');
-				onSuccess();
-			}, 1500);
+			// Notify parent component immediately without closing
+			console.log('[Deployment] Calling onSuccess callback');
+			onSuccess();
 		} catch (error) {
 			console.error('[Deployment] Deployment failed:', error);
 			isWaitingForSignature = false;
@@ -309,6 +308,9 @@
 				description={i18n.t('tools.token_sweep.step2.content.deployment.success_description')}
 				viewOnExplorerText={i18n.t('tools.token_sweep.step2.content.deployment.view_on_explorer')}
 			/>
+			<div class="success-actions">
+				<ActionButton variant="primary" onclick={handleClose}>{i18n.t('common.done')}</ActionButton>
+			</div>
 		{:else if status === 'error'}
 			<DeploymentError
 				errorMessage={errorMessage ?? undefined}
@@ -361,5 +363,13 @@
 		to {
 			transform: rotate(360deg);
 		}
+	}
+
+	.success-actions {
+		display: flex;
+		justify-content: center;
+		gap: var(--space-3);
+		margin-top: var(--space-4);
+		width: 100%;
 	}
 </style>

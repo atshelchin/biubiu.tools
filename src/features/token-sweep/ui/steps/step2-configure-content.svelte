@@ -206,9 +206,8 @@
 			deploymentConfig = null;
 		}}
 		onSuccess={() => {
-			console.log('[Step2] Deployment successful, closing modal and re-checking dependencies');
-			showDeploymentModal = false;
-			deploymentConfig = null;
+			console.log('[Step2] Deployment successful, re-checking dependencies');
+			// Don't close modal automatically - let user close it manually
 			// Re-run dependency checks after successful deployment
 			setTimeout(() => {
 				console.log('[Step2] Re-running dependency checks after deployment');
