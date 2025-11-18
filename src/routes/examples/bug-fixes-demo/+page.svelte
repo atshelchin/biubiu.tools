@@ -65,7 +65,7 @@
 	// 原问题：else if (mountCount > 0) 会读取 mountCount，导致无限循环
 	let mountCount = $state(0);
 	let unmountCount = $state(0);
-	let lastShowState = showOptionalField;
+	let lastShowState = $state(showOptionalField);
 
 	$effect(() => {
 		const currentShowState = showOptionalField;

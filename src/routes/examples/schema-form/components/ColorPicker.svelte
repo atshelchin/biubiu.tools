@@ -43,6 +43,7 @@
 						style="background-color: {presetColor}"
 						onclick={() => handleColorChange(presetColor)}
 						title={presetColor}
+						aria-label={presetColor}
 					></button>
 				{/each}
 			</div>
