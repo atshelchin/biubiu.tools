@@ -194,9 +194,11 @@ async function scanERC20Transfers(
 				console.warn(`Could not fetch token info for ${log.address}`);
 			}
 
-			const blockNumber = typeof log.blockNumber === 'string' ? BigInt(log.blockNumber) : log.blockNumber!;
+			const blockNumber =
+				typeof log.blockNumber === 'string' ? BigInt(log.blockNumber) : log.blockNumber!;
 			const block = await client.getBlock({ blockNumber });
-			const logIndex = typeof log.logIndex === 'string' ? parseInt(log.logIndex, 16) : (log.logIndex || 0);
+			const logIndex =
+				typeof log.logIndex === 'string' ? parseInt(log.logIndex, 16) : log.logIndex || 0;
 
 			const movement: AssetMovement = {
 				id: generateMovementId(log.transactionHash!, logIndex),
@@ -289,9 +291,11 @@ async function scanERC721Transfers(
 			const isFrom = from.toLowerCase() === address.toLowerCase();
 			const direction: TransactionDirection = isFrom ? 'out' : 'in';
 
-			const blockNumber = typeof log.blockNumber === 'string' ? BigInt(log.blockNumber) : log.blockNumber!;
+			const blockNumber =
+				typeof log.blockNumber === 'string' ? BigInt(log.blockNumber) : log.blockNumber!;
 			const block = await client.getBlock({ blockNumber });
-			const logIndex = typeof log.logIndex === 'string' ? parseInt(log.logIndex, 16) : (log.logIndex || 0);
+			const logIndex =
+				typeof log.logIndex === 'string' ? parseInt(log.logIndex, 16) : log.logIndex || 0;
 
 			const movement: AssetMovement = {
 				id: generateMovementId(log.transactionHash!, logIndex),
