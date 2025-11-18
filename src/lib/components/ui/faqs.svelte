@@ -71,12 +71,7 @@
 		transition: all 0.2s ease;
 	}
 
-	.faq-item:hover {
-		/* border-color: var(--color-muted-foreground); */
-	}
-
 	.faq-item.open {
-		/* border-color: var(--color-primary); */
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 	}
 

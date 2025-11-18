@@ -281,7 +281,14 @@
 		role="button"
 		tabindex="0"
 	>
-		<div class="modal-container" onclick={(e) => e.stopPropagation()}>
+		<div
+			class="modal-container"
+			onclick={(e) => e.stopPropagation()}
+			onkeydown={(e) => e.stopPropagation()}
+			role="dialog"
+			aria-modal="true"
+			tabindex="-1"
+		>
 			<div class="modal-header">
 				<h2>Deploy CREATE2 Proxy</h2>
 				<button class="close-button" onclick={handleClose} disabled={isProcessing}>×</button>
