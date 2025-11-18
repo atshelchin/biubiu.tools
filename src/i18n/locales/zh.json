@@ -108,11 +108,20 @@
 					"deploy_coming_soon": "部署合约（即将推出）",
 					"deploy_contract": "部署 {contractName}",
 					"deployment": {
+						"modal_title": "部署 {contractName}",
+						"start_deployment": "开始部署",
 						"deploying_contract": "正在部署合约...",
+						"deployment_steps_heading": "部署步骤：",
+						"contract_address_label": "合约地址：",
+						"network_label": "网络：",
 						"waiting_for_signature": "⏳ 请在钱包中确认交易...",
 						"transaction_sent": "⚡ 交易已发送！等待区块链确认...",
 						"finalizing": "✅ 正在完成部署...",
 						"confirm_in_wallet": "请在钱包中确认交易",
+						"success_title": "部署成功！",
+						"success_description": "合约已成功部署。",
+						"view_on_explorer": "在浏览器中查看",
+						"error_title": "部署失败",
 						"steps": {
 							"create2": {
 								"fund_deployer_title": "为部署者地址充值",

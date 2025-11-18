@@ -108,11 +108,20 @@
 					"deploy_coming_soon": "Deploy Contract (Coming Soon)",
 					"deploy_contract": "Deploy {contractName}",
 					"deployment": {
+						"modal_title": "Deploy {contractName}",
+						"start_deployment": "Start Deployment",
 						"deploying_contract": "Deploying Contract...",
+						"deployment_steps_heading": "Deployment Steps:",
+						"contract_address_label": "Contract Address:",
+						"network_label": "Network:",
 						"waiting_for_signature": "⏳ Please confirm transaction in your wallet...",
 						"transaction_sent": "⚡ Transaction sent! Waiting for blockchain confirmation...",
 						"finalizing": "✅ Finalizing deployment...",
 						"confirm_in_wallet": "Please confirm transactions in your wallet",
+						"success_title": "Deployment Successful!",
+						"success_description": "The contract has been successfully deployed.",
+						"view_on_explorer": "View on Explorer",
+						"error_title": "Deployment Failed",
 						"steps": {
 							"create2": {
 								"fund_deployer_title": "Fund Deployer Address",

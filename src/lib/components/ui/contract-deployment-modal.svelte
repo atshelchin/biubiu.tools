@@ -8,7 +8,8 @@
 	import DeploymentError from '@/lib/components/ui/deployment-error.svelte';
 	import DeploymentProgress from '@/lib/components/ui/deployment-progress.svelte';
 	import ActionButton from '@/lib/components/ui/action-button.svelte';
-	import type { ContractDeploymentConfig, DeploymentContext } from '../types/deployment-config';
+	import type { ContractDeploymentConfig, DeploymentContext } from '$lib/types/deployment-config';
+	import type { DeploymentStep } from '$lib/utils/contract-deployment';
 
 	interface Props {
 		show: boolean;
@@ -83,11 +84,12 @@
 				blockExplorer,
 				sendTransaction: connectStore.sendTransaction,
 				waitForTransaction: connectStore.waitForTransaction,
-				sendRawTransaction: connectStore.sendRawTransaction
+				sendRawTransaction: connectStore.sendRawTransaction,
+				t: i18n.t.bind(i18n)
 			};
 
 			const deployment = await config.deployFunction(context);
-			steps = deployment.steps.map((step) => ({ ...step, completed: false, inProgress: false }));
+			steps = deployment.steps.map((step: DeploymentStep) => ({ ...step, completed: false, inProgress: false }));
 		} catch (error) {
 			console.error('Failed to initialize deployment:', error);
 			errorMessage = 'Failed to initialize deployment configuration';
@@ -113,7 +115,8 @@
 				blockExplorer,
 				sendTransaction: connectStore.sendTransaction,
 				waitForTransaction: connectStore.waitForTransaction,
-				sendRawTransaction: connectStore.sendRawTransaction
+				sendRawTransaction: connectStore.sendRawTransaction,
+				t: i18n.t.bind(i18n)
 			};
 
 			console.log('[Deployment] Starting deployment...');
@@ -154,7 +157,7 @@
 			}
 
 			// If no steps had actions, fall back to onDeploy
-			const hasActions = deployment.steps.some((s) => s.action);
+			const hasActions = deployment.steps.some((s: DeploymentStep) => s.action);
 			if (!hasActions) {
 				console.log('[Deployment] No step actions found, using onDeploy');
 				await deployment.onDeploy();
@@ -250,25 +253,38 @@
 <Modal
 	open={show}
 	onClose={handleClose}
-	title="Deploy {config.contractName}"
+	title={i18n.t('tools.token_sweep.step2.content.deployment.modal_title', {
+		contractName: config.contractName
+	})}
 	maxWidth="600px"
 	height="fit-content"
 >
 	{#snippet children()}
 		{#if status === 'idle'}
 			<div class="info-section">
-				<p class="contract-description">{config.description}</p>
+				<!-- <p class="contract-description">{config.description}</p> -->
 				<ContractDetails
 					contractAddress={config.contractAddress}
+					addressLabel={i18n.t('tools.token_sweep.step2.content.deployment.contract_address_label')}
 					{blockExplorer}
-					details={[{ label: 'Network:', value: networkName }]}
+					details={[
+						{
+							label: i18n.t('tools.token_sweep.step2.content.deployment.network_label'),
+							value: networkName
+						}
+					]}
 				/>
 
 				{#if steps.length > 0}
-					<DeploymentSteps {steps} />
+					<DeploymentSteps
+						{steps}
+						heading={i18n.t('tools.token_sweep.step2.content.deployment.deployment_steps_heading')}
+					/>
 				{/if}
 
-				<ActionButton onclick={handleDeploy}>Start Deployment</ActionButton>
+				<ActionButton onclick={handleDeploy}
+					>{i18n.t('tools.token_sweep.step2.content.deployment.start_deployment')}</ActionButton
+				>
 			</div>
 		{:else if status === 'deploying'}
 			<DeploymentProgress
@@ -285,12 +301,19 @@
 				}}
 			/>
 		{:else if status === 'success'}
-			<DeploymentSuccess contractAddress={config.contractAddress} {blockExplorer} />
+			<DeploymentSuccess
+				contractAddress={config.contractAddress}
+				{blockExplorer}
+				title={i18n.t('tools.token_sweep.step2.content.deployment.success_title')}
+				description={i18n.t('tools.token_sweep.step2.content.deployment.success_description')}
+				viewOnExplorerText={i18n.t('tools.token_sweep.step2.content.deployment.view_on_explorer')}
+			/>
 		{:else if status === 'error'}
 			<DeploymentError
 				errorMessage={errorMessage ?? undefined}
 				showClearCacheGuide={showClearCacheSteps}
 				onRetry={handleRetry}
+				title={i18n.t('tools.token_sweep.step2.content.deployment.error_title')}
 			/>
 		{/if}
 	{/snippet}

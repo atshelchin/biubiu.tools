@@ -11,13 +11,16 @@
 		title?: string;
 		/** Success message description */
 		description?: string;
+		/** View on explorer link text */
+		viewOnExplorerText?: string;
 	}
 
 	let {
 		contractAddress,
 		blockExplorer,
 		title = 'Deployment Successful!',
-		description = 'The contract has been successfully deployed.'
+		description = 'The contract has been successfully deployed.',
+		viewOnExplorerText = 'View on Explorer'
 	}: Props = $props();
 </script>
 
@@ -35,7 +38,7 @@
 				class="explorer-link"
 			>
 				<ExternalLink size={16} />
-				View on Explorer
+				{viewOnExplorerText}
 			</a>
 		{/if}
 	</div>

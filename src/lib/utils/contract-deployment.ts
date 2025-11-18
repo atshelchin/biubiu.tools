@@ -41,8 +41,9 @@ export interface DeploymentContext {
 		data: `0x${string}`;
 		gas?: bigint;
 	}) => Promise<`0x${string}`>;
-	waitForTransaction: (hash: `0x${string}`) => Promise<void>;
+	waitForTransaction: (hash: `0x${string}`) => Promise<unknown>;
 	sendRawTransaction: (signedTx: `0x${string}`) => Promise<`0x${string}`>;
+	t: TranslateFn;
 }
 
 // Translation function type
@@ -79,9 +80,12 @@ export function createCREATE2ProxyDeployment(
 		steps: [
 			{
 				title: t('tools.token_sweep.step2.content.deployment.steps.create2.fund_deployer_title'),
-				description: t('tools.token_sweep.step2.content.deployment.steps.create2.fund_deployer_description', {
-					address: KNOWN_ADDRESSES.CREATE2_DEPLOYER
-				}),
+				description: t(
+					'tools.token_sweep.step2.content.deployment.steps.create2.fund_deployer_description',
+					{
+						address: KNOWN_ADDRESSES.CREATE2_DEPLOYER
+					}
+				),
 				action: async () => {
 					fundingTxHash = await context.sendTransaction({
 						to: KNOWN_ADDRESSES.CREATE2_DEPLOYER,
@@ -94,7 +98,9 @@ export function createCREATE2ProxyDeployment(
 			},
 			{
 				title: t('tools.token_sweep.step2.content.deployment.steps.create2.deploy_contract_title'),
-				description: t('tools.token_sweep.step2.content.deployment.steps.create2.deploy_contract_description'),
+				description: t(
+					'tools.token_sweep.step2.content.deployment.steps.create2.deploy_contract_description'
+				),
 				action: async () => {
 					deploymentTxHash = await context.sendRawTransaction(DEPLOYMENT_TX);
 					await context.waitForTransaction(deploymentTxHash);
@@ -148,9 +154,12 @@ export function createCREATE2Deployment(
 				title: t('tools.token_sweep.step2.content.deployment.steps.via_create2.deploy_title', {
 					contractName: options.contractName
 				}),
-				description: t('tools.token_sweep.step2.content.deployment.steps.via_create2.deploy_description', {
-					address: KNOWN_ADDRESSES.CREATE2_PROXY
-				}),
+				description: t(
+					'tools.token_sweep.step2.content.deployment.steps.via_create2.deploy_description',
+					{
+						address: KNOWN_ADDRESSES.CREATE2_PROXY
+					}
+				),
 				action: async () => {
 					deploymentTxHash = await context.sendTransaction({
 						to: KNOWN_ADDRESSES.CREATE2_PROXY,
@@ -179,8 +188,8 @@ export function createCREATE2Deployment(
  * Useful for verifying deterministic addresses
  */
 export function calculateCREATE2Address(
-	bytecode: `0x${string}`,
-	salt: string = DEPLOYMENT_CONSTANTS.DEFAULT_SALT
+	_bytecode: `0x${string}`,
+	_salt: string = DEPLOYMENT_CONSTANTS.DEFAULT_SALT
 ): Address {
 	// This is a simplified version - actual implementation would use keccak256
 	// For now, this is a placeholder that should be implemented with proper crypto

@@ -5,8 +5,13 @@
 import type { Address } from 'viem';
 import type {
 	ContractDeploymentConfig,
-	DeploymentConfigRegistry
-} from '../types/deployment-config';
+	DeploymentConfigRegistry,
+	DeploymentContext
+} from '$lib/types/deployment-config';
+import {
+	createCREATE2ProxyDeployment,
+	createCREATE2Deployment
+} from '$lib/utils/contract-deployment';
 
 // CREATE2 Proxy deployment configuration
 const CREATE2_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
@@ -20,54 +25,8 @@ const CREATE2_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
 	bytecode:
 		'0x604580600e600039806000f350fe7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe03601600081602082378035828234f58015156039578182fd5b8082525050506014600cf3',
 
-	deployFunction: async (context) => {
-		const DEPLOYER_ADDRESS: Address = '0x3fab184622dc19b6109349b94811493bf2a45362';
-		const FUNDING_AMOUNT = BigInt(10000000000000000); // 0.01 ETH
-		const DEPLOYMENT_TX =
-			'0xf8a58085174876e800830186a08080b853604580600e600039806000f350fe7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe03601600081602082378035828234f58015156039578182fd5b8082525050506014600cf31ba02222222222222222222222222222222222222222222222222222222222222222a02222222222222222222222222222222222222222222222222222222222222222';
-
-		let fundingTxHash: `0x${string}` | null = null;
-		let deploymentTxHash: `0x${string}` | null = null;
-
-		return {
-			steps: [
-				{
-					title: 'Fund Deployer Address',
-					description: `Send 0.01 ETH to ${DEPLOYER_ADDRESS}`,
-					action: async () => {
-						fundingTxHash = await context.sendTransaction({
-							to: DEPLOYER_ADDRESS,
-							value: FUNDING_AMOUNT,
-							data: '0x',
-							gas: BigInt(21000) // Basic transfer gas limit
-						});
-						await context.waitForTransaction(fundingTxHash);
-					}
-				},
-				{
-					title: 'Deploy Contract',
-					description: 'Send pre-signed deployment transaction',
-					action: async () => {
-						deploymentTxHash = await context.sendRawTransaction(DEPLOYMENT_TX);
-						await context.waitForTransaction(deploymentTxHash);
-					}
-				}
-			],
-			// Keep the onDeploy for backward compatibility (executes all steps at once)
-			onDeploy: async () => {
-				// Step 1: Fund deployer
-				fundingTxHash = await context.sendTransaction({
-					to: DEPLOYER_ADDRESS,
-					value: FUNDING_AMOUNT,
-					data: '0x'
-				});
-				await context.waitForTransaction(fundingTxHash);
-
-				// Step 2: Deploy contract
-				deploymentTxHash = await context.sendRawTransaction(DEPLOYMENT_TX);
-				await context.waitForTransaction(deploymentTxHash);
-			}
-		};
+	deployFunction: async (context: DeploymentContext) => {
+		return createCREATE2ProxyDeployment(context, context.t);
 	}
 };
 
@@ -90,53 +49,13 @@ const MULTICALL3_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
 	// Constructor args for Multicall3 (none needed)
 	constructorArgs: [],
 
-	deployFunction: async (context) => {
-		// Multicall3 deployment using CREATE2 proxy
-		// The CREATE2 proxy address (deterministic deployment proxy)
-		const CREATE2_PROXY_ADDRESS = '0x4e59b44847b379578588920cA78FbF26c0B4956C';
-
-		// Salt for CREATE2 deployment (using 0x00...00 to get deterministic address)
-		const salt = '0x0000000000000000000000000000000000000000000000000000000000000000';
-
-		// Deployment data = salt (32 bytes) + bytecode
-		// Note: The actual Multicall3 bytecode needs to be obtained from the official repository
-		const MULTICALL3_BYTECODE =
-			MULTICALL3_DEPLOYMENT_CONFIG.bytecode ||
-			('0x608060405234801561001057600080fd5b50610ee0806100206000396000f3fe6080...' as `0x${string}`);
-
-		const deploymentData = (salt + MULTICALL3_BYTECODE.slice(2)) as `0x${string}`;
-
-		let deploymentTxHash: `0x${string}` | null = null;
-
-		return {
-			steps: [
-				{
-					title: 'Deploy Multicall3 via CREATE2',
-					description: `Send deployment transaction to CREATE2 proxy at ${CREATE2_PROXY_ADDRESS}`,
-					action: async () => {
-						// Send transaction to CREATE2 proxy with deployment data
-						// The CREATE2 proxy will deploy the contract to the deterministic address
-						deploymentTxHash = await context.sendTransaction({
-							to: CREATE2_PROXY_ADDRESS as `0x${string}`,
-							value: BigInt(0),
-							data: deploymentData,
-							gas: BigInt(3000000) // Higher gas limit for contract deployment
-						});
-						await context.waitForTransaction(deploymentTxHash);
-					}
-				}
-			],
-			onDeploy: async () => {
-				// Fallback for backward compatibility
-				const txHash = await context.sendTransaction({
-					to: CREATE2_PROXY_ADDRESS as `0x${string}`,
-					value: BigInt(0),
-					data: deploymentData,
-					gas: BigInt(3000000)
-				});
-				await context.waitForTransaction(txHash);
-			}
-		};
+	deployFunction: async (context: DeploymentContext) => {
+		return createCREATE2Deployment(
+			context,
+			MULTICALL3_DEPLOYMENT_CONFIG.bytecode!,
+			{ contractName: 'Multicall3' },
+			context.t
+		);
 	}
 };
 
@@ -155,45 +74,13 @@ const BIUBIU_PREMIUM_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
 	// No constructor arguments needed
 	constructorArgs: [],
 
-	deployFunction: async (context) => {
-		// BiuBiuPremium deployment using CREATE2 proxy
-		const CREATE2_PROXY_ADDRESS = '0x4e59b44847b379578588920cA78FbF26c0B4956C';
-
-		// Salt for CREATE2 deployment
-		const salt = '0x0000000000000000000000000000000000000000000000000000000000000000';
-
-		// Deployment data = salt (32 bytes) + bytecode
-		const deploymentData = (salt +
-			BIUBIU_PREMIUM_DEPLOYMENT_CONFIG.bytecode!.slice(2)) as `0x${string}`;
-
-		let deploymentTxHash: `0x${string}` | null = null;
-
-		return {
-			steps: [
-				{
-					title: 'Deploy BiuBiuPremium via CREATE2',
-					description: `Send deployment transaction to CREATE2 proxy at ${CREATE2_PROXY_ADDRESS}`,
-					action: async () => {
-						deploymentTxHash = await context.sendTransaction({
-							to: CREATE2_PROXY_ADDRESS as `0x${string}`,
-							value: BigInt(0),
-							data: deploymentData,
-							gas: BigInt(3000000)
-						});
-						await context.waitForTransaction(deploymentTxHash);
-					}
-				}
-			],
-			onDeploy: async () => {
-				const txHash = await context.sendTransaction({
-					to: CREATE2_PROXY_ADDRESS as `0x${string}`,
-					value: BigInt(0),
-					data: deploymentData,
-					gas: BigInt(3000000)
-				});
-				await context.waitForTransaction(txHash);
-			}
-		};
+	deployFunction: async (context: DeploymentContext) => {
+		return createCREATE2Deployment(
+			context,
+			BIUBIU_PREMIUM_DEPLOYMENT_CONFIG.bytecode!,
+			{ contractName: 'BiuBiuPremium' },
+			context.t
+		);
 	}
 };
 
@@ -212,45 +99,13 @@ const TOKEN_SWEEP_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
 	// No constructor arguments needed
 	constructorArgs: [],
 
-	deployFunction: async (context) => {
-		// TokenSweep deployment using CREATE2 proxy
-		const CREATE2_PROXY_ADDRESS = '0x4e59b44847b379578588920cA78FbF26c0B4956C';
-
-		// Salt for CREATE2 deployment
-		const salt = '0x0000000000000000000000000000000000000000000000000000000000000000';
-
-		// Deployment data = salt (32 bytes) + bytecode
-		const deploymentData = (salt +
-			TOKEN_SWEEP_DEPLOYMENT_CONFIG.bytecode!.slice(2)) as `0x${string}`;
-
-		let deploymentTxHash: `0x${string}` | null = null;
-
-		return {
-			steps: [
-				{
-					title: 'Deploy TokenSweep via CREATE2',
-					description: `Send deployment transaction to CREATE2 proxy at ${CREATE2_PROXY_ADDRESS}`,
-					action: async () => {
-						deploymentTxHash = await context.sendTransaction({
-							to: CREATE2_PROXY_ADDRESS as `0x${string}`,
-							value: BigInt(0),
-							data: deploymentData,
-							gas: BigInt(5000000)
-						});
-						await context.waitForTransaction(deploymentTxHash);
-					}
-				}
-			],
-			onDeploy: async () => {
-				const txHash = await context.sendTransaction({
-					to: CREATE2_PROXY_ADDRESS as `0x${string}`,
-					value: BigInt(0),
-					data: deploymentData,
-					gas: BigInt(5000000)
-				});
-				await context.waitForTransaction(txHash);
-			}
-		};
+	deployFunction: async (context: DeploymentContext) => {
+		return createCREATE2Deployment(
+			context,
+			TOKEN_SWEEP_DEPLOYMENT_CONFIG.bytecode!,
+			{ contractName: 'TokenSweep', gasLimit: BigInt(5000000) },
+			context.t
+		);
 	}
 };
 
