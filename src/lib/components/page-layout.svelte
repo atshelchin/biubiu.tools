@@ -22,11 +22,6 @@
 	<div class="layout-grid" class:full-width={!sidebar}>
 		<main class="main-content">
 			{@render children()}
-			{#if footer}
-				<footer class="footer-section">
-					{@render footer()}
-				</footer>
-			{/if}
 		</main>
 
 		{#if sidebar}
@@ -35,6 +30,11 @@
 			</aside>
 		{/if}
 	</div>
+	{#if footer}
+		<footer class="footer-section">
+			{@render footer()}
+		</footer>
+	{/if}
 </div>
 
 <style>
@@ -75,6 +75,9 @@
 		padding: var(--space-4);
 		border-radius: var(--radius-lg);
 		border: 1px solid var(--color-border);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 
 	.footer-section {

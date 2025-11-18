@@ -120,7 +120,7 @@
 	{/snippet}
 
 	{#snippet footer()}
-		<FooterComponent />
+		FAQs
 	{/snippet}
 
 	<!-- Main content -->
@@ -134,9 +134,15 @@
 		{/if}
 		<ContentComponent />
 	</div>
+	<FooterComponent />
 </PageLayout>
 
 <style>
+	.page-content {
+		padding-bottom: 80px; /* Reserve space for footer */
+		min-height: 600px; /* Ensure enough height for absolute positioning */
+	}
+
 	.page-content :global(.step-controls) {
 		margin: var(--space-6) 0;
 	}
