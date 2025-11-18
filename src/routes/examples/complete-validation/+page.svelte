@@ -555,13 +555,6 @@
 		color: #ff9800;
 	}
 
-	.demo-form {
-		padding: 1.5rem;
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-	}
-
 	.input-wrapper {
 		position: relative;
 	}

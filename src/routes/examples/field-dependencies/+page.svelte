@@ -410,12 +410,6 @@ const discountCodeValidator = createValidator(
 		font-size: 0.9rem;
 	}
 
-	.demo-form {
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-	}
-
 	.form-section {
 		padding: 1.5rem;
 		background: #f8f9fa;

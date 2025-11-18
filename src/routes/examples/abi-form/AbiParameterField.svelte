@@ -8,6 +8,7 @@
 	 * - 嵌套结构 (tuple[], tuple 中有 array, array 中有 tuple)
 	 */
 	import { FormField, FieldArray, type FormState } from '@packages/formstate/src';
+	import Self from './AbiParameterField.svelte';
 
 	interface AbiParameter {
 		name: string;
@@ -143,7 +144,7 @@
 								<!-- 数组中的结构体 -->
 								<div class="tuple-container">
 									{#each param.components as component (component.name)}
-										<svelte:self
+										<Self
 											param={component}
 											path={`${path}[${index}].${component.name}`}
 											{formState}
@@ -218,12 +219,7 @@
 
 		<div class="tuple-fields">
 			{#each param.components as component (component.name)}
-				<svelte:self
-					param={component}
-					path={`${path}.${component.name}`}
-					{formState}
-					depth={depth + 1}
-				/>
+				<Self param={component} path={`${path}.${component.name}`} {formState} depth={depth + 1} />
 			{/each}
 		</div>
 	</div>
