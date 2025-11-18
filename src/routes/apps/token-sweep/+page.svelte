@@ -11,16 +11,40 @@
 
 	const faqs = $derived([
 		{
-			question: i18n.t('tools.token_sweep.step1.sidebar.what_is_network'),
-			answer: i18n.t('tools.token_sweep.step1.sidebar.network_explanation')
+			question: i18n.t('tools.token_sweep.faqs.what_is_network'),
+			answer: i18n.t('tools.token_sweep.faqs.network_explanation')
 		},
 		{
-			question: i18n.t('tools.token_sweep.step1.sidebar.what_is_wallet'),
-			answer: i18n.t('tools.token_sweep.step1.sidebar.wallet_explanation')
+			question: i18n.t('tools.token_sweep.faqs.what_is_wallet'),
+			answer: i18n.t('tools.token_sweep.faqs.wallet_explanation')
 		},
 		{
-			question: i18n.t('tools.token_sweep.step1.sidebar.what_is_native_token'),
-			answer: i18n.t('tools.token_sweep.step1.sidebar.native_token_explanation')
+			question: i18n.t('tools.token_sweep.faqs.what_is_native_token'),
+			answer: i18n.t('tools.token_sweep.faqs.native_token_explanation')
+		},
+		{
+			question: i18n.t('tools.token_sweep.faqs.what_is_eip7702'),
+			answer: i18n.t('tools.token_sweep.faqs.eip7702_explanation')
+		},
+		{
+			question: i18n.t('tools.token_sweep.faqs.why_need_eip7702'),
+			answer: i18n.t('tools.token_sweep.faqs.why_need_eip7702_explanation')
+		},
+		{
+			question: i18n.t('tools.token_sweep.faqs.what_is_create2_proxy'),
+			answer: i18n.t('tools.token_sweep.faqs.create2_proxy_explanation')
+		},
+		{
+			question: i18n.t('tools.token_sweep.faqs.what_is_multicall3'),
+			answer: i18n.t('tools.token_sweep.faqs.multicall3_explanation')
+		},
+		{
+			question: i18n.t('tools.token_sweep.faqs.what_is_biubiu_premium'),
+			answer: i18n.t('tools.token_sweep.faqs.biubiu_premium_explanation')
+		},
+		{
+			question: i18n.t('tools.token_sweep.faqs.what_is_token_sweep'),
+			answer: i18n.t('tools.token_sweep.faqs.token_sweep_explanation')
 		}
 	]);
 </script>
