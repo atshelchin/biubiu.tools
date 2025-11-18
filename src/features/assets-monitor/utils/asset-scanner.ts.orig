@@ -194,12 +194,10 @@ async function scanERC20Transfers(
 				console.warn(`Could not fetch token info for ${log.address}`);
 			}
 
-			const blockNumber = typeof log.blockNumber === 'string' ? BigInt(log.blockNumber) : log.blockNumber!;
-			const block = await client.getBlock({ blockNumber });
-			const logIndex = typeof log.logIndex === 'string' ? parseInt(log.logIndex, 16) : (log.logIndex || 0);
+			const block = await client.getBlock({ blockNumber: log.blockNumber! });
 
 			const movement: AssetMovement = {
-				id: generateMovementId(log.transactionHash!, logIndex),
+				id: generateMovementId(log.transactionHash!, log.logIndex || 0),
 				txHash: log.transactionHash!,
 				blockNumber: Number(log.blockNumber),
 				timestamp: Number(block.timestamp) * 1000,
@@ -214,7 +212,7 @@ async function scanERC20Transfers(
 				tokenName,
 				tokenDecimals,
 				contractAddress: log.address,
-				logIndex
+				logIndex: log.logIndex || 0
 			};
 
 			movements.push(movement);
@@ -289,12 +287,10 @@ async function scanERC721Transfers(
 			const isFrom = from.toLowerCase() === address.toLowerCase();
 			const direction: TransactionDirection = isFrom ? 'out' : 'in';
 
-			const blockNumber = typeof log.blockNumber === 'string' ? BigInt(log.blockNumber) : log.blockNumber!;
-			const block = await client.getBlock({ blockNumber });
-			const logIndex = typeof log.logIndex === 'string' ? parseInt(log.logIndex, 16) : (log.logIndex || 0);
+			const block = await client.getBlock({ blockNumber: log.blockNumber! });
 
 			const movement: AssetMovement = {
-				id: generateMovementId(log.transactionHash!, logIndex),
+				id: generateMovementId(log.transactionHash!, log.logIndex || 0),
 				txHash: log.transactionHash!,
 				blockNumber: Number(log.blockNumber),
 				timestamp: Number(block.timestamp) * 1000,
@@ -304,7 +300,7 @@ async function scanERC721Transfers(
 				assetType: 'erc721',
 				tokenId: tokenId.toString(),
 				contractAddress: log.address,
-				logIndex
+				logIndex: log.logIndex || 0
 			};
 
 			movements.push(movement);
