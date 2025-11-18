@@ -91,7 +91,11 @@
 			"step2": {
 				"content": {
 					"title": "依赖检查",
-					"description": "验证网络服务和所需合约是否已部署"
+					"description": "验证网络服务和所需合约是否已部署",
+					"checking_dependencies_for": "正在检查 {network} 的依赖项...",
+					"wallet_not_connected_title": "钱包未连接",
+					"wallet_not_connected_message": "请返回步骤 1 并连接您的钱包",
+					"go_to_step1": "返回步骤 1"
 				},
 				"footer": {
 					"checking_dependencies": "正在检查依赖项...",

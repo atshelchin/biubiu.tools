@@ -91,7 +91,11 @@
 			"step2": {
 				"content": {
 					"title": "Dependency Check",
-					"description": "Verifying network services and required contracts are deployed"
+					"description": "Verifying network services and required contracts are deployed",
+					"checking_dependencies_for": "Checking dependencies for {network}...",
+					"wallet_not_connected_title": "Wallet Not Connected",
+					"wallet_not_connected_message": "Please go back to Step 1 and connect your wallet",
+					"go_to_step1": "Go to Step 1"
 				},
 				"footer": {
 					"checking_dependencies": "Checking dependencies...",

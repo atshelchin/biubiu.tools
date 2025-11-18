@@ -161,17 +161,23 @@
 		<!-- Checking State -->
 		<div class="checking-container">
 			<div class="checking-spinner"><RefreshCw class="spin-icon" size={48} /></div>
-			<p class="checking-text">Checking dependencies for {currentNetwork?.name}...</p>
+			<p class="checking-text">
+				{i18n.t('tools.token_sweep.step2.content.checking_dependencies_for', {
+					network: currentNetwork?.name ?? ''
+				})}
+			</p>
 		</div>
 	{:else if !connectStore.isConnected}
 		<!-- Not Connected State -->
 		<EmptyState
 			icon="🔌"
-			title="Wallet Not Connected"
-			message="Please go back to Step 1 and connect your wallet"
+			title={i18n.t('tools.token_sweep.step2.content.wallet_not_connected_title')}
+			message={i18n.t('tools.token_sweep.step2.content.wallet_not_connected_message')}
 		>
 			{#snippet action()}
-				<button class="back-button" onclick={goBackToStep1}> Go to Step 1 </button>
+				<button class="back-button" onclick={goBackToStep1}>
+					{i18n.t('tools.token_sweep.step2.content.go_to_step1')}
+				</button>
 			{/snippet}
 		</EmptyState>
 	{:else if hasChecked && checks.length > 0}
