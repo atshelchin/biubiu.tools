@@ -306,7 +306,7 @@
 				</FormField>
 
 				<div class="field-group">
-					<label class="field-label">兴趣爱好</label>
+					<div class="field-label">兴趣爱好</div>
 					<div class="checkbox-group">
 						{#each interestOptions as option (option.value)}
 							{@const isChecked = (form.getValue('interests') as string[]).includes(option.value)}

@@ -276,24 +276,28 @@ form.batchUpdate(() => {
 
 		<div class="form-demo">
 			<div class="field">
-				<label>Start Date</label>
-				<input
-					type="date"
-					value={circularForm.getValue('startDate') as string}
-					oninput={(e) => circularForm.setValue('startDate', e.currentTarget.value)}
-				/>
+				<label>
+					Start Date
+					<input
+						type="date"
+						value={circularForm.getValue('startDate') as string}
+						oninput={(e) => circularForm.setValue('startDate', e.currentTarget.value)}
+					/>
+				</label>
 				{#if circularForm.getFieldState('startDate').error}
 					<div class="error">{circularForm.getFieldState('startDate').error}</div>
 				{/if}
 			</div>
 
 			<div class="field">
-				<label>End Date</label>
-				<input
-					type="date"
-					value={circularForm.getValue('endDate') as string}
-					oninput={(e) => circularForm.setValue('endDate', e.currentTarget.value)}
-				/>
+				<label>
+					End Date
+					<input
+						type="date"
+						value={circularForm.getValue('endDate') as string}
+						oninput={(e) => circularForm.setValue('endDate', e.currentTarget.value)}
+					/>
+				</label>
 				{#if circularForm.getFieldState('endDate').error}
 					<div class="error">{circularForm.getFieldState('endDate').error}</div>
 				{/if}

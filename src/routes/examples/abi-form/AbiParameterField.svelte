@@ -226,7 +226,7 @@
 {:else}
 	<!-- 基础类型 -->
 	<div class="field-group {indentClass}">
-		<label class="field-label">
+		<div class="field-label">
 			<span class="label-text">
 				{param.name}
 				<span class="type-badge">{param.type}</span>
@@ -234,7 +234,7 @@
 			{#if param.description}
 				<span class="field-desc">{param.description}</span>
 			{/if}
-		</label>
+		</div>
 
 		<FormField name={path} {formState}>
 			{#snippet children({ value, error, touched, onInput, onBlur })}
