@@ -24,6 +24,9 @@
 <style>
 	.step-sidebar {
 		height: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-4);
 	}
 
 	h3 {

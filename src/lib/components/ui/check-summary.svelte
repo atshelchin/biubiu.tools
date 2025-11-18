@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { useI18n } from '@shelchin/i18n/svelte';
+
 	export interface CheckSummary {
 		total: number;
 		passed: number;
@@ -10,21 +12,23 @@
 	}
 
 	let { summary }: Props = $props();
+
+	const i18n = useI18n();
 </script>
 
 {#if summary && summary.total !== undefined}
 	<div class="check-summary">
 		<div class="summary-item">
-			<span class="summary-label">Total Checks:</span>
+			<span class="summary-label">{i18n.t('common.total_checks')}:</span>
 			<span class="summary-value">{summary.total}</span>
 		</div>
 		<div class="summary-item success">
-			<span class="summary-label">Passed:</span>
+			<span class="summary-label">{i18n.t('common.passed')}:</span>
 			<span class="summary-value">{summary.passed}</span>
 		</div>
 		{#if summary.failed > 0}
 			<div class="summary-item error">
-				<span class="summary-label">Failed:</span>
+				<span class="summary-label">{i18n.t('common.failed')}:</span>
 				<span class="summary-value">{summary.failed}</span>
 			</div>
 		{/if}
