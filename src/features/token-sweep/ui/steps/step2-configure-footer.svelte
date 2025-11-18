@@ -2,8 +2,10 @@
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 	import StepFooter from '$lib/components/step/step-footer.svelte';
 	import { step2State } from '@/features/token-sweep/stores/step2-state.svelte';
+	import { useI18n } from '@shelchin/i18n/svelte';
 
 	const stepManager = useStepManager();
+	const i18n = useI18n();
 
 	// Use $derived for easier access in template
 	let summary = $derived(step2State.summary);
@@ -14,9 +16,10 @@
 
 	// Dynamic footer hint based on state
 	const footerHint = $derived.by(() => {
-		if (isChecking) return 'Checking dependencies...';
-		if (summary && !summary.allPassed) return 'Please resolve all dependency issues to continue';
-		return 'Waiting for dependency checks...';
+		if (isChecking) return i18n.t('tools.token_sweep.step2.footer.checking_dependencies');
+		if (summary && !summary.allPassed)
+			return i18n.t('tools.token_sweep.step2.footer.resolve_issues');
+		return i18n.t('tools.token_sweep.step2.footer.waiting_for_checks');
 	});
 
 	// Handle continue to next step

@@ -87,6 +87,13 @@
 					"tip2": "⛽ Ensure you have enough native tokens to pay fees",
 					"tip3": "🌍 Supports any EVM-compatible network - you can add any chain"
 				}
+			},
+			"step2": {
+				"footer": {
+					"checking_dependencies": "Checking dependencies...",
+					"resolve_issues": "Please resolve all dependency issues to continue",
+					"waiting_for_checks": "Waiting for dependency checks..."
+				}
 			}
 		},
 		"token_distribution": {

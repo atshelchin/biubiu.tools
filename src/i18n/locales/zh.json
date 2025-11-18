@@ -87,6 +87,13 @@
 					"tip2": "⛽ 确保钱包有充足的原生币支付手续费",
 					"tip3": "🌍 支持任意 EVM 兼容网络，可自行添加任何链"
 				}
+			},
+			"step2": {
+				"footer": {
+					"checking_dependencies": "正在检查依赖项...",
+					"resolve_issues": "请解决所有依赖问题后继续",
+					"waiting_for_checks": "等待依赖检查..."
+				}
 			}
 		},
 		"token_distribution": {

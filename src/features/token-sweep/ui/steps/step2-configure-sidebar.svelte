@@ -1,5 +1,4 @@
 <script lang="ts">
-	import WalletConnectionStatus from '@/lib/components/ui/wallet-connection-status.svelte';
 	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
 	import CheckSummary from '$lib/components/ui/check-summary.svelte';
 	import { step2State } from '@/features/token-sweep/stores/step2-state.svelte';
@@ -7,7 +6,6 @@
 
 	import { useConnectStore } from '@/lib/stores/connect.svelte';
 	import WalletConnectButton from '@/lib/components/ui/wallet-connect-button.svelte';
-	const stepManager = useStepManager();
 
 	// Use $derived for easier access in template
 	let summary = $derived(step2State.summary);
@@ -33,10 +31,3 @@
 		<CheckSummary {summary} />
 	{/if}
 </StepSidebar>
-
-<style>
-	/* Wallet Status Section */
-	:global(.wallet-status-section) {
-		margin: var(--space-4) 0;
-	}
-</style>
