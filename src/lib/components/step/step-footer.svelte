@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { ChevronRight } from '@lucide/svelte';
+	import { useI18n } from '@shelchin/i18n/svelte';
 
 	interface Props {
 		/** Show back button */
@@ -24,22 +25,26 @@
 		showBack = false,
 		onBack,
 		canContinue,
-		continueText = 'Continue to Next Step',
+		continueText,
 		onContinue,
 		hint = '',
 		continueButtonClass = 'continue-btn',
 		continueDisabled = false
 	}: Props = $props();
+
+	const i18n = useI18n();
+	const defaultContinueText = $derived(i18n.t('common.continue'));
+	const backText = $derived(i18n.t('common.back'));
 </script>
 
 <div class="step-footer">
 	{#if showBack && onBack}
-		<button class="btn-secondary" onclick={onBack}>← Back</button>
+		<button class="btn-secondary" onclick={onBack}>← {backText}</button>
 	{/if}
 
 	{#if canContinue && onContinue}
 		<button class={continueButtonClass} onclick={onContinue} disabled={continueDisabled}>
-			{continueText}
+			{continueText || defaultContinueText}
 			<ChevronRight size={18} />
 		</button>
 	{:else if hint}
