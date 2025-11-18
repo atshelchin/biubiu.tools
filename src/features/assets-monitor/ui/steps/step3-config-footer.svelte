@@ -10,7 +10,7 @@
 </script>
 
 <div class="step-footer">
-	<button class="btn-primary" disabled={!canContinue} onclick={() => stepManager?.nextStep()}>
+	<button class="btn-primary" disabled={!canContinue} onclick={() => stepManager?.next()}>
 		View Results
 	</button>
 </div>

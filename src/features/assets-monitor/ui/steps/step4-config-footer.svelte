@@ -6,7 +6,7 @@
 
 	function handleNewScan() {
 		monitorState.reset();
-		stepManager?.goToStep(0);
+		stepManager?.goTo(1); // Go to step 1 (steps are 1-indexed)
 	}
 </script>
 

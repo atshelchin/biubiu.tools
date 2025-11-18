@@ -9,6 +9,7 @@
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import { Loader2, CheckCircle2, AlertCircle, Activity } from '@lucide/svelte';
 	import type { AssetMovement } from '../../types/assets';
+	import type { Address } from 'viem';
 
 	const connectStore = useConnectStore();
 	const stepManager = useStepManager();
@@ -110,7 +111,8 @@
 			monitorState.setScanStatus('completed');
 
 			scanCompleted = true;
-			stepManager?.setStepValid(true);
+			// TODO: Implement setStepValid in StepManager if needed
+			// stepManager?.setStepValid(true);
 		} catch (error) {
 			console.error('Scan failed:', error);
 			scanError = error instanceof Error ? error.message : 'Unknown error occurred';

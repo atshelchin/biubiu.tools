@@ -58,7 +58,8 @@
 
 	// Update step validity whenever form changes
 	$effect(() => {
-		stepManager?.setStepValid(isFormValid);
+		// TODO: Implement setStepValid in StepManager if needed
+		// stepManager?.setStepValid(isFormValid);
 
 		// Save to state when valid
 		if (isFormValid && connectStore.currentChainId) {

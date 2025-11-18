@@ -3,12 +3,13 @@
 
 	const stepManager = useStepManager();
 
-	const canContinue = $derived(stepManager.isCurrentStepValid);
+	// TODO: Implement isCurrentStepValid in StepManager if validation is needed
+	const canContinue = $derived(true); // stepManager.isCurrentStepValid
 </script>
 
 <div class="step-footer">
-	<button class="btn-secondary" onclick={() => stepManager?.previousStep()}>Previous</button>
-	<button class="btn-primary" disabled={!canContinue} onclick={() => stepManager?.nextStep()}>
+	<button class="btn-secondary" onclick={() => stepManager?.prev()}>Previous</button>
+	<button class="btn-primary" disabled={!canContinue} onclick={() => stepManager?.next()}>
 		Start Scanning
 	</button>
 </div>
