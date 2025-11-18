@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { HouseIcon } from '@lucide/svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
+	import WalletConnectorModal from '$lib/components/ui/wallet-connector-modal.svelte';
 
 	const i18n = useI18n();
 	const t = $derived(i18n.t);
@@ -15,6 +16,8 @@
 		<HouseIcon size={20} />
 	</a>
 </div>
+
+<WalletConnectorModal />
 
 <style>
 	.header {

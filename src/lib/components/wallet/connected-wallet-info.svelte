@@ -143,12 +143,12 @@
 
 	.connected-card {
 		padding: var(--space-5);
-		background: hsla(120, 60%, 50%, 0.08);
+		/* background: hsla(120, 60%, 50%, 0.08); */
 		border-radius: var(--radius-lg);
 	}
 
 	:global([data-theme='dark']) .connected-card {
-		background: hsla(120, 60%, 60%, 0.12);
+		/* background: hsla(120, 60%, 60%, 0.12); */
 		border-color: hsl(120, 60%, 60%);
 	}
 

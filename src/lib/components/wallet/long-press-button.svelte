@@ -85,8 +85,8 @@
 
 	.connect-button {
 		width: 100%;
-		min-height: 64px;
-		padding: var(--space-4) var(--space-6);
+		min-height: 36px;
+		padding: var(--space-3) var(--space-5);
 		background: linear-gradient(
 			135deg,
 			var(--color-primary),
@@ -97,12 +97,12 @@
 		border-radius: var(--radius-lg);
 		cursor: pointer;
 		transition: all 0.3s ease;
-		box-shadow: 0 4px 12px hsla(var(--brand-hue), var(--brand-saturation), 50%, 0.3);
+		/* box-shadow: 0 4px 12px hsla(var(--brand-hue), var(--brand-saturation), 50%, 0.3); */
 	}
 
 	.connect-button:hover:not(:disabled) {
 		transform: translateY(-2px);
-		box-shadow: 0 8px 24px hsla(var(--brand-hue), var(--brand-saturation), 50%, 0.4);
+		/* box-shadow: 0 8px 24px hsla(var(--brand-hue), var(--brand-saturation), 50%, 0.4); */
 	}
 
 	.connect-button:active:not(:disabled) {

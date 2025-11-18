@@ -12,7 +12,13 @@
 		"moduleResolution": "bundler",
 		"types": ["types/worker-configuration.d.ts"]
 	},
-	"include": ["packages/**/*.js", "packages/**/*.ts", "packages/**/*.svelte"]
+	"include": [
+		"packages/**/*.js",
+		"packages/**/*.ts",
+		"packages/**/*.svelte",
+		"src/**/*.ts",
+		"src/**/*.svelte"
+	]
 	// Path aliases are handled by https://svelte.dev/docs/kit/configuration#alias
 	// except $lib which is handled by https://svelte.dev/docs/kit/configuration#files
 	//
