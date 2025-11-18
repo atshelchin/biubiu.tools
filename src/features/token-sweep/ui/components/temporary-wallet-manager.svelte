@@ -612,13 +612,13 @@
 		gap: var(--space-2);
 	}
 
-	.wallet-field label {
+	.wallet-field .field-label {
 		font-size: var(--text-sm);
 		font-weight: var(--font-semibold);
 		color: var(--gray-700);
 	}
 
-	:global([data-theme='dark']) .wallet-field label {
+	:global([data-theme='dark']) .wallet-field .field-label {
 		color: var(--gray-300);
 	}
 

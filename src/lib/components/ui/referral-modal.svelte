@@ -340,39 +340,6 @@
 		background: rgba(96, 165, 250, 0.12);
 	}
 
-	.note {
-		display: flex;
-		gap: var(--space-3);
-		padding: var(--space-3);
-		background: var(--gray-50);
-		border-radius: var(--radius-md);
-		border: 1px solid var(--gray-200);
-	}
-
-	:global([data-theme='dark']) .note {
-		background: var(--gray-800);
-		border-color: var(--gray-700);
-	}
-
-	.note-icon {
-		flex-shrink: 0;
-		width: 20px;
-		height: 20px;
-		color: #3b82f6;
-		stroke-width: 2;
-	}
-
-	.note p {
-		font-size: var(--text-sm);
-		color: var(--gray-600);
-		margin: 0;
-		line-height: 1.5;
-	}
-
-	:global([data-theme='dark']) .note p {
-		color: var(--gray-400);
-	}
-
 	/* Responsive */
 	@media (min-width: 768px) {
 		.referral-content {

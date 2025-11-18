@@ -10,7 +10,7 @@
 	let generating = $state(false);
 	let error = $state<string | null>(null);
 	let showPrivateKeys = $state(false);
-	let selectedWallets = new SvelteSet<number>();
+	let selectedWallets = $state(new SvelteSet<number>());
 
 	// Start generation on mount if no wallets exist
 	onMount(() => {

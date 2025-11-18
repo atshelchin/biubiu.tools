@@ -29,7 +29,7 @@
 	let isAddingToken = $state(false);
 	let fetchStatus = $state<'idle' | 'loading' | 'success' | 'error'>('idle');
 	let errorMessage = $state('');
-	let fetchedFields = new SvelteSet<string>();
+	let fetchedFields = $state(new SvelteSet<string>());
 	// ERC20 ABI for fetching token info
 	const ERC20_ABI = [
 		{
