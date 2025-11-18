@@ -27,6 +27,19 @@
 	let isChecking = $derived(step2State.isChecking);
 	let hasChecked = $derived(step2State.hasChecked);
 
+	// Safely derive summary properties to avoid null access during reactive updates
+	let summaryVariant = $derived<'success' | 'error'>(summary?.allPassed ? 'success' : 'error');
+	let summaryTitle = $derived(
+		summary?.allPassed
+			? i18n.t('tools.token_sweep.step2.content.all_dependencies_satisfied')
+			: i18n.t('tools.token_sweep.step2.content.dependency_issues_found')
+	);
+	let summaryMessage = $derived(
+		summary?.allPassed
+			? i18n.t('tools.token_sweep.step2.content.network_properly_configured')
+			: i18n.t('tools.token_sweep.step2.content.resolve_issues_before_continuing')
+	);
+
 	// Contract deployment modal state
 	let showDeploymentModal = $state(false);
 	let deploymentConfig = $state<ContractDeploymentConfig | null>(null);
@@ -178,13 +191,9 @@
 		<!-- Summary and Continue -->
 		{#if summary}
 			<SummaryBanner
-				variant={summary.allPassed ? 'success' : 'error'}
-				title={summary.allPassed
-					? i18n.t('tools.token_sweep.step2.content.all_dependencies_satisfied')
-					: i18n.t('tools.token_sweep.step2.content.dependency_issues_found')}
-				message={summary.allPassed
-					? i18n.t('tools.token_sweep.step2.content.network_properly_configured')
-					: i18n.t('tools.token_sweep.step2.content.resolve_issues_before_continuing')}
+				variant={summaryVariant}
+				title={summaryTitle}
+				message={summaryMessage}
 				retryText={i18n.t('tools.token_sweep.step2.content.recheck_dependencies')}
 				onRetry={runDependencyChecks}
 			/>
