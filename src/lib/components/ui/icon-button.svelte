@@ -152,7 +152,7 @@
 
 	.icon-button.size-sm {
 		padding: var(--space-1-5) var(--space-3);
-		font-size: var(--text-xs);
+		font-size: var(--text-sm);
 		gap: var(--space-1-5);
 	}
 
@@ -224,7 +224,7 @@
 		padding: var(--space-2) var(--space-3);
 		background: var(--color-popover, #1f2937);
 		color: var(--color-popover-foreground, white);
-		font-size: var(--text-xs);
+		font-size: var(--text-sm);
 		border-radius: var(--radius-md);
 		white-space: nowrap;
 		pointer-events: none;
@@ -257,7 +257,7 @@
 	@media (max-width: 768px) {
 		.icon-button {
 			padding: var(--space-2) var(--space-3);
-			font-size: var(--text-xs);
+			font-size: var(--text-sm);
 		}
 
 		.icon-button.size-lg {

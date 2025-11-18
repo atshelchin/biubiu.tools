@@ -59,13 +59,16 @@ html {
 	--color-secondary-foreground: var(--brand-700);
 	--color-muted: var(--gray-100);
 	--color-muted-foreground: var(--gray-600);
+	--color-accent: hsl(var(--brand-hue), 15%, 97%);
+	--color-accent-foreground: hsl(var(--brand-hue), 25%, 35%);
+	--color-accent-hover: hsl(var(--brand-hue), 20%, 94%);
 	--color-success: #22c55e;
 	--color-danger: #ef4444;
 	--color-warning: #f59e0b;
 	--color-info: #3b82f6;
 
 	/* 功能色 Functional Colors */
-	--color-background: #ffffff;
+	--color-background: #faf9f5;
 	--color-foreground: var(--gray-900);
 	--color-card: #ffffff;
 	--color-card-foreground: var(--gray-900);
@@ -263,6 +266,9 @@ html {
 	--color-secondary-foreground: var(--brand-200);
 	--color-muted: var(--gray-700);
 	--color-muted-foreground: var(--gray-400);
+	--color-accent: hsl(var(--brand-hue), 15%, 18%);
+	--color-accent-foreground: hsl(var(--brand-hue), 35%, 75%);
+	--color-accent-hover: hsl(var(--brand-hue), 20%, 22%);
 	--color-success: #6ee7b7;
 	--color-danger: #fca5a5;
 	--color-warning: #fcd34d;

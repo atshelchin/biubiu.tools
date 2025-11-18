@@ -16,9 +16,7 @@
 	<AppsHeader />
 
 	{#if toolbar}
-		<div class="toolbar-section">
-			{@render toolbar()}
-		</div>
+		{@render toolbar()}
 	{/if}
 
 	<div class="layout-grid" class:full-width={!sidebar}>
@@ -46,13 +44,6 @@
 		gap: var(--space-4);
 		/* padding: var(--space-4); */
 		min-height: 100vh;
-	}
-
-	.toolbar-section {
-		background: var(--color-card);
-		padding: var(--space-4) var(--space-4);
-		border-radius: var(--radius-lg);
-		border: 1px solid var(--color-border);
 	}
 
 	.layout-grid {

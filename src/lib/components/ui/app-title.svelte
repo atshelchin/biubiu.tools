@@ -66,51 +66,28 @@
 		display: flex;
 		align-items: center;
 		gap: var(--space-1);
-		font-size: var(--text-xs);
-		color: var(--color-muted-foreground);
+		font-size: var(--text-sm);
+		color: var(--color-accent-foreground);
 		padding: var(--space-1) var(--space-2);
-		background: var(--color-muted);
+		background: var(--color-accent);
 		border-radius: var(--radius-md);
 		transition: all 0.2s ease;
 	}
 
 	.feature-item:hover {
-		background: var(--color-accent);
-		color: var(--color-accent-foreground);
+		background: var(--color-accent-hover);
+		transform: translateY(-1px);
 	}
 
 	.check-icon {
 		width: 14px;
 		height: 14px;
-		color: var(--color-success);
+		color: var(--color-accent-foreground);
+		/* color: var(--color-success); */
 		flex-shrink: 0;
 	}
 
 	.feature-item:hover .check-icon {
 		color: currentColor;
-	}
-
-	@media (max-width: 768px) {
-		h1 {
-			font-size: var(--text-xl);
-		}
-
-		.description {
-			font-size: var(--text-xs);
-		}
-
-		.features {
-			gap: var(--space-2);
-		}
-
-		.feature-item {
-			font-size: 10px;
-			padding: 2px var(--space-1);
-		}
-
-		.check-icon {
-			width: 12px;
-			height: 12px;
-		}
 	}
 </style>
