@@ -76,7 +76,7 @@ export class FormStateManager implements IFormStateManager {
 			debug.log(`[registerField] Field already exists: ${path}, merging config`);
 			this.fieldConfigs.set(path, {
 				...existingConfig,
-				...Object.fromEntries(Object.entries(config).filter(([_, v]) => v !== undefined))
+				...Object.fromEntries(Object.entries(config).filter(([, v]) => v !== undefined))
 			});
 		} else {
 			// 新字段，直接设置
@@ -475,15 +475,15 @@ export class FormStateManager implements IFormStateManager {
 		} catch (err) {
 			if (!abortController.signal.aborted) {
 				// ⚠️ 保留错误详情，不要丢失原始错误信息
-				const error =
+				const errorMessage =
 					err instanceof Error ? err.message : typeof err === 'string' ? err : 'Validation error';
-				debug.error('[validateField] Validation threw error:', err);
+				debug.error('[validateField] Validation threw error:', errorMessage);
 				this.fieldStates.set(path, {
 					...this.getFieldState(path),
-					error,
+					error: errorMessage,
 					validating: false
 				});
-				return error;
+				return errorMessage;
 			}
 			return state.error;
 		}
@@ -619,7 +619,7 @@ export class FormStateManager implements IFormStateManager {
 			});
 
 			return true;
-		} catch (error) {
+		} catch {
 			return false;
 		}
 	}

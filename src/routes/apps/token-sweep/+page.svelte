@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { mainnet, polygon, arbitrum, optimism, base, bsc } from 'viem/chains';
+	import { mainnet, polygon, base, bsc } from 'viem/chains';
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import StepBasedApp from '$lib/components/step-based-app.svelte';
 	import { stepComponents } from '@/features/token-sweep/ui/steps';
@@ -89,7 +89,7 @@
 			items: faqs
 		},
 		walletConnect: {
-			chains: [mainnet, polygon, base, bsc, arbitrum, optimism],
+			chains: [mainnet, polygon, base, bsc],
 			storageKey: 'biubiu-tools-token-sweep'
 		},
 		stepComponents

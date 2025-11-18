@@ -278,10 +278,6 @@
 		console.log('[NetworkFormView] Calling onSave with:', dataToSave);
 		onSave(dataToSave);
 	}
-	async function handleSubmit2(values: Record<string, unknown>) {
-		console.log('表单提交：', values);
-		alert(`登录尝试\n邮箱：${values.email}`);
-	}
 </script>
 
 <div class="form-view">

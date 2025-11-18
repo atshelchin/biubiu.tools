@@ -15,7 +15,7 @@
 	{/if}
 	{#if features && features.length > 0}
 		<ul class="features">
-			{#each features as feature}
+			{#each features as feature (feature)}
 				<li class="feature-item">
 					<svg class="check-icon" viewBox="0 0 16 16" fill="none">
 						<path

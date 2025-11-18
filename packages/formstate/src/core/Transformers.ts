@@ -11,8 +11,8 @@ export class Transformers {
 		return isNaN(num) ? value : num;
 	};
 
-	static compose(...transformers: Array<(value: any) => any>) {
-		return (value: any) => {
+	static compose(...transformers: Array<(value: unknown) => unknown>) {
+		return (value: unknown) => {
 			return transformers.reduce((acc, transformer) => transformer(acc), value);
 		};
 	}

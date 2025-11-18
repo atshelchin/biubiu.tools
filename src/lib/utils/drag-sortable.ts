@@ -245,7 +245,7 @@ export function dragSortable(node: HTMLElement, options: DragSortableOptions) {
 		reorderItems(newHoverIndex);
 	}
 
-	function handleDragEnd(e: DragEvent) {
+	function handleDragEnd() {
 		if (!draggedElement) return;
 
 		// Animate ghost back to original position
@@ -373,7 +373,7 @@ export function dragSortable(node: HTMLElement, options: DragSortableOptions) {
 		reorderItems(newHoverIndex);
 	}
 
-	function handleTouchEnd(e: TouchEvent) {
+	function handleTouchEnd() {
 		if (!isTouchDragging || !draggedElement) return;
 
 		isTouchDragging = false;

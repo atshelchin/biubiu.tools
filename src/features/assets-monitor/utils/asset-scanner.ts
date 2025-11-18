@@ -124,21 +124,34 @@ async function scanERC20Transfers(
 	const movements: AssetMovement[] = [];
 
 	// Get incoming transfers (where address is the recipient)
-	const incomingLogs = await client.getLogs({
-		fromBlock: startBlock,
-		toBlock: endBlock,
-		topics: [
-			ERC20_TRANSFER_TOPIC,
-			null,
-			`0x000000000000000000000000${address.slice(2).toLowerCase()}`
+	const incomingLogs = await client.request({
+		method: 'eth_getLogs',
+		params: [
+			{
+				fromBlock: `0x${startBlock.toString(16)}`,
+				toBlock: `0x${endBlock.toString(16)}`,
+				topics: [
+					ERC20_TRANSFER_TOPIC,
+					null,
+					`0x000000000000000000000000${address.slice(2).toLowerCase()}`
+				]
+			}
 		]
 	});
 
 	// Get outgoing transfers (where address is the sender)
-	const outgoingLogs = await client.getLogs({
-		fromBlock: startBlock,
-		toBlock: endBlock,
-		topics: [ERC20_TRANSFER_TOPIC, `0x000000000000000000000000${address.slice(2).toLowerCase()}`]
+	const outgoingLogs = await client.request({
+		method: 'eth_getLogs',
+		params: [
+			{
+				fromBlock: `0x${startBlock.toString(16)}`,
+				toBlock: `0x${endBlock.toString(16)}`,
+				topics: [
+					ERC20_TRANSFER_TOPIC,
+					`0x000000000000000000000000${address.slice(2).toLowerCase()}`
+				]
+			}
+		]
 	});
 
 	const allLogs = [...incomingLogs, ...outgoingLogs];
@@ -237,14 +250,17 @@ async function scanERC721Transfers(
 			ERC721_TRANSFER_TOPIC,
 			null,
 			`0x000000000000000000000000${address.slice(2).toLowerCase()}`
-		]
+		] as const
 	});
 
 	// Get outgoing transfers
 	const outgoingLogs = await client.getLogs({
 		fromBlock: startBlock,
 		toBlock: endBlock,
-		topics: [ERC721_TRANSFER_TOPIC, `0x000000000000000000000000${address.slice(2).toLowerCase()}`]
+		topics: [
+			ERC721_TRANSFER_TOPIC,
+			`0x000000000000000000000000${address.slice(2).toLowerCase()}`
+		] as const
 	});
 
 	const allLogs = [...incomingLogs, ...outgoingLogs];

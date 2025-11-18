@@ -67,7 +67,7 @@
 
 			// Get wallet and public clients
 			const walletClient = await connectStore.getWalletClient();
-			const publicClient = connectStore.getPublicClient();
+			const publicClient = connectStore.publicClient;
 
 			if (!walletClient || !publicClient) {
 				deploymentState.setResult({

@@ -16,20 +16,20 @@
 	const i18n = useI18n();
 </script>
 
-{#if summary && summary.total !== undefined}
+{#if summary && summary?.total !== undefined}
 	<div class="check-summary">
 		<div class="summary-item">
 			<span class="summary-label">{i18n.t('common.total_checks')}:</span>
-			<span class="summary-value">{summary.total}</span>
+			<span class="summary-value">{summary?.total}</span>
 		</div>
 		<div class="summary-item success">
 			<span class="summary-label">{i18n.t('common.passed')}:</span>
-			<span class="summary-value">{summary.passed}</span>
+			<span class="summary-value">{summary?.passed}</span>
 		</div>
-		{#if summary.failed > 0}
+		{#if summary?.failed > 0}
 			<div class="summary-item error">
 				<span class="summary-label">{i18n.t('common.failed')}:</span>
-				<span class="summary-value">{summary.failed}</span>
+				<span class="summary-value">{summary?.failed}</span>
 			</div>
 		{/if}
 	</div>

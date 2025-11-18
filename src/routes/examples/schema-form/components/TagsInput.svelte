@@ -96,7 +96,7 @@
 
 	{#if filteredSuggestions.length > 0}
 		<div class="suggestions">
-			{#each filteredSuggestions as suggestion}
+			{#each filteredSuggestions as suggestion (suggestion)}
 				<button type="button" class="suggestion-item" onclick={() => addTag(suggestion)}>
 					{suggestion}
 				</button>

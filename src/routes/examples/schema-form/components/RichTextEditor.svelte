@@ -36,6 +36,7 @@
 	// 初始化内容
 	$effect(() => {
 		if (editorRef && !editorRef.innerHTML) {
+			// eslint-disable-next-line svelte/no-dom-manipulating
 			editorRef.innerHTML = value;
 		}
 	});

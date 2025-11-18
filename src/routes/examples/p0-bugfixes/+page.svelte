@@ -22,6 +22,7 @@
 	function testBug7() {
 		// 步骤 1: 输入错误值
 		form1.setValue('email', 'invalid-email');
+		// eslint-disable-next-line @typescript-eslint/no-unused-vars
 		const beforeReset = form1.getFieldState('email');
 
 		// 步骤 2: 重置
@@ -36,7 +37,7 @@
 			'validating 已重置': afterReset.validating === false
 		};
 
-		const failed = Object.entries(checks).filter(([_, passed]) => !passed);
+		const failed = Object.entries(checks).filter(([, passed]) => !passed);
 
 		if (failed.length === 0) {
 			bug7Result = '✅ Bug 7 已修复：reset() 正确清理了所有状态';
@@ -185,7 +186,7 @@
 				field1: {
 					defaultValue: '',
 					validator: {
-						validate: async (value) => {
+						validate: async () => {
 							const start = performance.now();
 							await new Promise((r) => setTimeout(r, 100)); // 100ms 延迟
 							const duration = performance.now() - start;
@@ -197,7 +198,7 @@
 				field2: {
 					defaultValue: '',
 					validator: {
-						validate: async (value) => {
+						validate: async () => {
 							const start = performance.now();
 							await new Promise((r) => setTimeout(r, 100));
 							const duration = performance.now() - start;
@@ -209,7 +210,7 @@
 				field3: {
 					defaultValue: '',
 					validator: {
-						validate: async (value) => {
+						validate: async () => {
 							const start = performance.now();
 							await new Promise((r) => setTimeout(r, 100));
 							const duration = performance.now() - start;

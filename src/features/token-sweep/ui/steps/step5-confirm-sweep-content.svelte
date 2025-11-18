@@ -7,7 +7,6 @@
 	import FeeBreakdownDisplay from '@/features/token-sweep/ui/components/fee-breakdown-display.svelte';
 	import TemporaryWalletManager from '@/features/token-sweep/ui/components/temporary-wallet-manager.svelte';
 	import {
-		executeSweep,
 		estimateSweep,
 		validateSweepConfig,
 		calculateSweepStats,
@@ -16,9 +15,7 @@
 	} from '@/features/token-sweep/utils/sweep-executor';
 	import {
 		executeTokenSweep,
-		estimateTokenSweep,
 		type TokenSweepConfig,
-		type TokenSweepResult,
 		type TransactionSigner
 	} from '@/features/token-sweep/utils/tokensweep-executor';
 	import { checkMembership, calculateFeeBreakdown } from '@/features/token-sweep/utils/membership';
@@ -28,7 +25,7 @@
 		FeeBreakdown,
 		TemporaryWallet
 	} from '@/features/token-sweep/types/fee';
-	import { createPublicClient, createWalletClient, http, custom } from 'viem';
+	import { createPublicClient, http } from 'viem';
 	import type { Address, Hex } from 'viem';
 	import { AlertCircle, CheckCircle2, Loader2 } from '@lucide/svelte';
 	import { fade, slide } from 'svelte/transition';
@@ -306,7 +303,7 @@
 		};
 
 		// Get stats for confirmation
-		const stats = calculateSweepStats({
+		calculateSweepStats({
 			targetAddress: targetAddress as Address,
 			wallets: walletsToSweep,
 			tokens: selectedTokenObjects as (NativeToken | ERC20Token)[],

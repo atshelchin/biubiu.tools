@@ -13,6 +13,7 @@
 	} from '@packages/formstate/src';
 
 	// Solidity 函数 ABI 定义
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const exampleABI = {
 		name: 'transferBatch',
 		type: 'function',
@@ -41,6 +42,7 @@
 	};
 
 	// 地址验证器
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const addressValidator = Validators.pattern(/^0x[a-fA-F0-9]{40}$/, '请输入有效的以太坊地址');
 
 	// 创建表单状态

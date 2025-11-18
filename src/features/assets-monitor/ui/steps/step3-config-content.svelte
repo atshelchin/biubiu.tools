@@ -25,7 +25,12 @@
 	});
 
 	async function startScan() {
-		if (!monitorState.scanConfig || !connectStore.rpcUrl) {
+		const currentNetwork = connectStore.networks.find(
+			(n: { chainId: number }) => n.chainId === connectStore.currentChainId
+		);
+		const rpcUrl = currentNetwork?.rpcEndpoints?.[0]?.url;
+
+		if (!monitorState.scanConfig || !rpcUrl) {
 			scanError = 'Missing scan configuration or RPC URL';
 			return;
 		}
@@ -39,27 +44,38 @@
 			monitorState.currentSessionId = sessionId;
 
 			// Start scanning
-			const movements = await scanAssetMovements(
-				monitorState.scanConfig,
-				connectStore.rpcUrl,
-				(progress) => {
-					monitorState.setProgress(progress);
-				}
-			);
+			const movements = await scanAssetMovements(monitorState.scanConfig, rpcUrl, (progress) => {
+				monitorState.setProgress(progress);
+			});
 
 			// Save to IndexedDB
 			await assetsDB.addMovements(sessionId, movements);
 
 			// Calculate balances
 			const balanceMap = await calculateBalancesFromMovements(movements);
-			const balances = Array.from(balanceMap.values());
-			await assetsDB.addBalances(
-				sessionId,
-				balances.map((b) => ({
-					...b,
-					balance: b.netChange
-				}))
-			);
+			const balances = Array.from(balanceMap.values()).map((b) => ({
+				assetType: b.assetType as 'native' | 'erc20' | 'erc721' | 'erc1155',
+				balance: b.netChange,
+				tokenAddress: b.tokenAddress,
+				tokenSymbol: b.tokenSymbol,
+				tokenName: b.tokenName,
+				tokenDecimals: b.tokenDecimals,
+				totalIn: b.totalIn.toString(),
+				totalOut: b.totalOut.toString(),
+				netChange: b.netChange,
+				transactionCount: b.transactionCount
+			}));
+			await assetsDB.addBalances(sessionId, balances);
+
+			// Calculate summary
+			const incomingCount = movements.filter((m) => m.direction === 'in').length;
+			const outgoingCount = movements.filter((m) => m.direction === 'out').length;
+			const assetBreakdown = {
+				native: movements.filter((m) => m.assetType === 'native').length,
+				erc20: movements.filter((m) => m.assetType === 'erc20').length,
+				erc721: movements.filter((m) => m.assetType === 'erc721').length,
+				erc1155: movements.filter((m) => m.assetType === 'erc1155').length
+			};
 
 			// Save session
 			const session = {
@@ -67,9 +83,19 @@
 				config: monitorState.scanConfig,
 				summary: {
 					totalMovements: movements.length,
-					totalAssets: balances.length,
-					startTime: Date.now(),
-					endTime: Date.now()
+					incomingCount,
+					outgoingCount,
+					uniqueAssets: balances.length,
+					timeRange: {
+						start:
+							movements.length > 0 ? Math.min(...movements.map((m) => m.timestamp)) : Date.now(),
+						end: movements.length > 0 ? Math.max(...movements.map((m) => m.timestamp)) : Date.now()
+					},
+					blockRange: {
+						start: movements.length > 0 ? Math.min(...movements.map((m) => m.blockNumber)) : 0,
+						end: movements.length > 0 ? Math.max(...movements.map((m) => m.blockNumber)) : 0
+					},
+					assetBreakdown
 				},
 				createdAt: Date.now(),
 				updatedAt: Date.now(),
@@ -97,11 +123,15 @@
 		const balanceMap = new SvelteMap<
 			string,
 			{
-				symbol: string;
+				assetType: string;
+				tokenAddress?: Address;
+				tokenSymbol: string;
+				tokenName: string;
+				tokenDecimals: number;
 				totalIn: bigint;
 				totalOut: bigint;
-				netChange: bigint;
-				movementCount: number;
+				netChange: string;
+				transactionCount: number;
 			}
 		>();
 
@@ -126,14 +156,16 @@
 			}
 
 			const balance = balanceMap.get(key);
-			balance.transactionCount++;
+			if (balance) {
+				balance.transactionCount++;
 
-			if (movement.value) {
-				const value = BigInt(movement.value);
-				if (movement.direction === 'in') {
-					balance.totalIn += value;
-				} else {
-					balance.totalOut += value;
+				if (movement.value) {
+					const value = BigInt(movement.value);
+					if (movement.direction === 'in') {
+						balance.totalIn += value;
+					} else {
+						balance.totalOut += value;
+					}
 				}
 			}
 		}

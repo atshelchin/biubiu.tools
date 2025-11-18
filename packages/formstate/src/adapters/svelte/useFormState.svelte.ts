@@ -4,7 +4,7 @@
  */
 
 import { FormStateManager } from '../../core/FormStateManager';
-import type { IFormConfig, IFieldConfig, FieldPath, FieldValue } from '../../core/interfaces';
+import type { IFormConfig, FieldPath, FieldValue } from '../../core/interfaces';
 import { PathUtils } from '../../utils/PathUtils';
 import { debug } from '../../utils/debug';
 import { safeStringify } from '../../utils/serialize';
@@ -41,7 +41,7 @@ export function useFormState(config: IFormConfig = {}) {
 	// 订阅管理器变化，直接更新 $state
 	// ⚠️ CRITICAL: 保存 unsubscribe 函数以防止内存泄漏
 	const unsubscribe = manager.subscribe({
-		onFieldChange: (path, value) => {
+		onFieldChange: (path) => {
 			// 更新 state 对象的属性
 			const newValues = manager.getValues() as Record<string, FieldValue>;
 			debug.log(`[useFormState #${instanceId}] Field changed:`, path);
@@ -83,6 +83,7 @@ export function useFormState(config: IFormConfig = {}) {
 		// 字段级响应式状态
 		getFieldState: (path: FieldPath) => {
 			// 访问响应式状态以建立依赖
+			// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 			state.fieldStatesVersion;
 			const fieldState = manager.getFieldState(path);
 			// 确保 value 来自响应式的 values

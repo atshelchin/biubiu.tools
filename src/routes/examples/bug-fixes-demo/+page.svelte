@@ -50,6 +50,7 @@
 	let fieldStatesBefore: string = '';
 	let fieldStatesAfter: string = '';
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	function captureFieldStates(form: ReturnType<typeof useFormState>) {
 		const manager = form._manager;
 		const states = Array.from(manager['fieldStates'].entries()).map(([path, state]) => ({
@@ -57,20 +58,6 @@
 			value: state.value
 		}));
 		return JSON.stringify(states, null, 2);
-	}
-
-	function removeMiddleItem() {
-		fieldStatesBefore = captureFieldStates(arrayForm);
-		// 删除中间项（索引 1）
-		const items = arrayForm.values.items as { name: string; value: number }[];
-		const newItems = [...items];
-		newItems.splice(1, 1);
-		arrayForm.setValue('items', newItems);
-
-		// 延迟捕获，确保重映射完成
-		setTimeout(() => {
-			fieldStatesAfter = captureFieldStates(arrayForm);
-		}, 100);
 	}
 
 	// Bug 2 测试：计数器

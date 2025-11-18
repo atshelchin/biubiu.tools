@@ -201,7 +201,7 @@
 					</div>
 					<p class="example-description">{example.description}</p>
 					<div class="example-tags">
-						{#each example.tags as tag}
+						{#each example.tags as tag (tag)}
 							<span class="tag">{tag}</span>
 						{/each}
 					</div>

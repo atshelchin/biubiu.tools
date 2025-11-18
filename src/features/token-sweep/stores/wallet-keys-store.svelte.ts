@@ -17,7 +17,7 @@ interface WalletKey {
 }
 
 // Session-only storage - cleared on page refresh
-let walletKeys = $state<Map<string, WalletKey>>(new Map());
+const walletKeys = $state<Map<string, WalletKey>>(new Map());
 
 export const walletKeysStore = {
 	/**

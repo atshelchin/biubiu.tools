@@ -78,6 +78,7 @@ class PathUtilsImpl implements IPathUtils {
 	 */
 	setMutable(obj: unknown, path: FieldPath, value: FieldValue): void {
 		const keys = parsePath(path);
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		let current: any = obj;
 
 		for (let i = 0; i < keys.length - 1; i++) {

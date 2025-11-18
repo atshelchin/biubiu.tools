@@ -233,142 +233,140 @@
 </script>
 
 <Modal open={isOpen} {onClose} maxWidth="640px">
-	{#snippet children()}
-		<div class="upgrade-modal">
-			<!-- Purchase Success Message -->
-			{#if purchaseSuccess && purchaseDetails}
-				<div class="purchase-success">
-					<div class="success-icon">
-						<Check size={32} />
-					</div>
-					<h3>🎉 Purchase Successful!</h3>
-					<p class="success-message">
-						You've successfully subscribed to the <strong>{purchaseDetails.tier}</strong> plan!
-					</p>
-					<div class="transaction-info">
-						<span class="tx-label">Transaction:</span>
-						<code class="tx-hash"
-							>{purchaseDetails.hash.slice(0, 10)}...{purchaseDetails.hash.slice(-8)}</code
-						>
-					</div>
-					<p class="success-note">This modal will close automatically in 5 seconds...</p>
+	<div class="upgrade-modal">
+		<!-- Purchase Success Message -->
+		{#if purchaseSuccess && purchaseDetails}
+			<div class="purchase-success">
+				<div class="success-icon">
+					<Check size={32} />
 				</div>
-			{:else}
-				<!-- Header with gradient background -->
-				<div class="modal-header-custom">
-					<div class="header-icon">
-						<Crown size={32} />
-					</div>
-					<h2>Upgrade to Premium</h2>
-					<p>Choose the perfect plan for your needs</p>
+				<h3>🎉 Purchase Successful!</h3>
+				<p class="success-message">
+					You've successfully subscribed to the <strong>{purchaseDetails.tier}</strong> plan!
+				</p>
+				<div class="transaction-info">
+					<span class="tx-label">Transaction:</span>
+					<code class="tx-hash"
+						>{purchaseDetails.hash.slice(0, 10)}...{purchaseDetails.hash.slice(-8)}</code
+					>
 				</div>
-
-				<!-- Current Subscription Status -->
-				{#if isLoadingSubscription}
-					<div class="subscription-status loading">
-						<Loader2 size={16} class="spinning" />
-						<span>Loading subscription status...</span>
-					</div>
-				{:else if isSubscriptionError}
-					<div class="subscription-status error">
-						<span>Unable to load subscription status</span>
-					</div>
-				{:else if subscriptionStatus?.isPremium}
-					<div class="subscription-status active">
-						<Crown size={16} />
-						<span>Active Premium Member</span>
-						<span class="remaining-time"
-							>Expires in {Math.ceil(Number(subscriptionStatus.remainingTime) / 86400)} days</span
-						>
-					</div>
-				{/if}
-
-				<!-- Referral Info -->
-				<div class="referral-info">
-					<Users size={14} />
-					<span class="referral-label">Referred by:</span>
-					<span class="referral-address">{displayReferral()}</span>
+				<p class="success-note">This modal will close automatically in 5 seconds...</p>
+			</div>
+		{:else}
+			<!-- Header with gradient background -->
+			<div class="modal-header-custom">
+				<div class="header-icon">
+					<Crown size={32} />
 				</div>
+				<h2>Upgrade to Premium</h2>
+				<p>Choose the perfect plan for your needs</p>
+			</div>
 
-				<!-- Pricing Cards -->
-				<div class="pricing-cards">
-					{#each pricingTiers as tier (tier.id)}
-						<button
-							class="pricing-card"
-							class:selected={selectedTier === tier.id}
-							class:popular={tier.popular}
-							onclick={() => handleSelectTier(tier.id)}
-						>
-							<div class="card-left">
-								<div class="tier-name">
-									<h3>{tier.name}</h3>
-									{#if tier.popular}
-										<span class="popular-badge">
-											<Sparkles size={12} />
-											<span>Popular</span>
-										</span>
-									{/if}
-								</div>
-								<div class="tier-days">{tier.days} days</div>
-							</div>
-
-							<div class="card-center">
-								<div class="price">
-									<span class="price-value">{tier.price} {networkSymbol}</span>
-								</div>
-								<div class="price-detail">{tier.pricePerDay.toFixed(5)} {networkSymbol}/day</div>
-							</div>
-
-							<div class="card-right">
-								<div class="checkmark">
-									{#if selectedTier === tier.id}
-										<Check size={18} />
-									{/if}
-								</div>
-							</div>
-						</button>
-					{/each}
+			<!-- Current Subscription Status -->
+			{#if isLoadingSubscription}
+				<div class="subscription-status loading">
+					<Loader2 size={16} class="spinning" />
+					<span>Loading subscription status...</span>
 				</div>
-
-				<!-- Benefits -->
-				<div class="benefits-section">
-					<h3>What's Included</h3>
-					<div class="benefits-grid">
-						{#each benefits as benefit}
-							<div class="benefit-item">
-								<Check size={16} />
-								<span>{benefit}</span>
-							</div>
-						{/each}
-					</div>
+			{:else if isSubscriptionError}
+				<div class="subscription-status error">
+					<span>Unable to load subscription status</span>
 				</div>
-
-				<!-- Purchase Error -->
-				{#if purchaseError}
-					<div class="purchase-error">
-						<span>{purchaseError}</span>
-					</div>
-				{/if}
-
-				<!-- CTA -->
-				<div class="modal-footer-custom">
-					<button class="btn-purchase" onclick={handlePurchase} disabled={isPurchasing}>
-						{#if isPurchasing}
-							<Loader2 size={20} class="spinning" />
-							<span>Processing...</span>
-						{:else}
-							<Crown size={20} />
-							<span>Purchase Premium Access</span>
-						{/if}
-					</button>
-					<p class="footer-note">
-						⚠️ Membership valid on <strong>{currentNetwork?.name || 'current network'}</strong> only
-						• Switch networks requires new purchase
-					</p>
+			{:else if subscriptionStatus?.isPremium}
+				<div class="subscription-status active">
+					<Crown size={16} />
+					<span>Active Premium Member</span>
+					<span class="remaining-time"
+						>Expires in {Math.ceil(Number(subscriptionStatus.remainingTime) / 86400)} days</span
+					>
 				</div>
 			{/if}
-		</div>
-	{/snippet}
+
+			<!-- Referral Info -->
+			<div class="referral-info">
+				<Users size={14} />
+				<span class="referral-label">Referred by:</span>
+				<span class="referral-address">{displayReferral()}</span>
+			</div>
+
+			<!-- Pricing Cards -->
+			<div class="pricing-cards">
+				{#each pricingTiers as tier (tier.id)}
+					<button
+						class="pricing-card"
+						class:selected={selectedTier === tier.id}
+						class:popular={tier.popular}
+						onclick={() => handleSelectTier(tier.id)}
+					>
+						<div class="card-left">
+							<div class="tier-name">
+								<h3>{tier.name}</h3>
+								{#if tier.popular}
+									<span class="popular-badge">
+										<Sparkles size={12} />
+										<span>Popular</span>
+									</span>
+								{/if}
+							</div>
+							<div class="tier-days">{tier.days} days</div>
+						</div>
+
+						<div class="card-center">
+							<div class="price">
+								<span class="price-value">{tier.price} {networkSymbol}</span>
+							</div>
+							<div class="price-detail">{tier.pricePerDay.toFixed(5)} {networkSymbol}/day</div>
+						</div>
+
+						<div class="card-right">
+							<div class="checkmark">
+								{#if selectedTier === tier.id}
+									<Check size={18} />
+								{/if}
+							</div>
+						</div>
+					</button>
+				{/each}
+			</div>
+
+			<!-- Benefits -->
+			<div class="benefits-section">
+				<h3>What's Included</h3>
+				<div class="benefits-grid">
+					{#each benefits as benefit (benefit)}
+						<div class="benefit-item">
+							<Check size={16} />
+							<span>{benefit}</span>
+						</div>
+					{/each}
+				</div>
+			</div>
+
+			<!-- Purchase Error -->
+			{#if purchaseError}
+				<div class="purchase-error">
+					<span>{purchaseError}</span>
+				</div>
+			{/if}
+
+			<!-- CTA -->
+			<div class="modal-footer-custom">
+				<button class="btn-purchase" onclick={handlePurchase} disabled={isPurchasing}>
+					{#if isPurchasing}
+						<Loader2 size={20} class="spinning" />
+						<span>Processing...</span>
+					{:else}
+						<Crown size={20} />
+						<span>Purchase Premium Access</span>
+					{/if}
+				</button>
+				<p class="footer-note">
+					⚠️ Membership valid on <strong>{currentNetwork?.name || 'current network'}</strong> only •
+					Switch networks requires new purchase
+				</p>
+			</div>
+		{/if}
+	</div>
 </Modal>
 
 <style>

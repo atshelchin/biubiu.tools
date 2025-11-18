@@ -44,6 +44,7 @@
 	type ViewMode = 'list' | 'edit' | 'add';
 	let viewMode = $state<ViewMode>('list');
 	let editingNetwork = $state<NetworkConfig | undefined>(undefined);
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	let networkFormView: any = $state(undefined);
 
 	function handleAddNetwork() {

@@ -34,7 +34,7 @@
 
 	let {
 		check,
-		index,
+		index: _index,
 		canFix,
 		blockExplorer,
 		onDeploy,

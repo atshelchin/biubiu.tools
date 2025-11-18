@@ -92,6 +92,7 @@
 	}
 
 	// 通用函数：从 components 创建默认对象
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	function createDefaultFromComponents(components: any[]): Record<string, unknown> {
 		const obj: Record<string, unknown> = {};
 		for (const comp of components) {
@@ -141,7 +142,7 @@
 							{#if isTuple && param.components}
 								<!-- 数组中的结构体 -->
 								<div class="tuple-container">
-									{#each param.components as component}
+									{#each param.components as component (component.name)}
 										<svelte:self
 											param={component}
 											path={`${path}[${index}].${component.name}`}
@@ -216,7 +217,7 @@
 		{/if}
 
 		<div class="tuple-fields">
-			{#each param.components as component}
+			{#each param.components as component (component.name)}
 				<svelte:self
 					param={component}
 					path={`${path}.${component.name}`}

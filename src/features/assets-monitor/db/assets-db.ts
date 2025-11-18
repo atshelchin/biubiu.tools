@@ -60,6 +60,18 @@ export class AssetsMonitorDB extends Dexie {
 	}
 
 	/**
+	 * Batch add balances
+	 */
+	async addBalances(sessionId: string, balances: AssetBalance[]) {
+		const balancesWithSessionId = balances.map((b, index) => ({
+			...b,
+			id: `${sessionId}-balance-${index}`,
+			sessionId
+		}));
+		await this.balances.bulkAdd(balancesWithSessionId);
+	}
+
+	/**
 	 * Update session status
 	 */
 	async updateSessionStatus(sessionId: string, status: ScanSession['status']) {

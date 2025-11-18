@@ -244,7 +244,9 @@
 						}))
 					);
 					// Add wallets (without privateKey field)
-					step4State.addWallets(result.wallets.map(({ privateKey, ...wallet }) => wallet));
+					step4State.addWallets(
+						result.wallets.map(({ privateKey: _pk, ...wallet }) => wallet)
+					);
 				}
 			} else {
 				// Single worker execution
@@ -265,7 +267,9 @@
 						}))
 					);
 					// Add wallets (without privateKey field)
-					step4State.addWallets(result.wallets.map(({ privateKey, ...wallet }) => wallet));
+					step4State.addWallets(
+						result.wallets.map(({ privateKey: _pk, ...wallet }) => wallet)
+					);
 				}
 			}
 		} catch (error) {
@@ -363,7 +367,9 @@
 						}))
 					);
 					// Add wallets (without privateKey field)
-					step4State.addWallets(result.wallets.map(({ privateKey, ...wallet }) => wallet));
+					step4State.addWallets(
+						result.wallets.map(({ privateKey: _pk, ...wallet }) => wallet)
+					);
 					if (result.invalidKeys.length > 0) {
 						errorMessage = `Imported ${result.wallets.length} wallets. ${result.invalidKeys.length} invalid keys skipped.`;
 					}
@@ -393,7 +399,9 @@
 						}))
 					);
 					// Add wallets (without privateKey field)
-					step4State.addWallets(result.wallets.map(({ privateKey, ...wallet }) => wallet));
+					step4State.addWallets(
+						result.wallets.map(({ privateKey: _pk, ...wallet }) => wallet)
+					);
 					if (result.invalidKeys.length > 0) {
 						errorMessage = `Imported ${result.wallets.length} wallets. ${result.invalidKeys.length} invalid keys skipped.`;
 					}

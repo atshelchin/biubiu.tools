@@ -215,7 +215,7 @@
 		<div class="form-card">
 			<Form formState={form} onSubmit={handleSubmit}>
 				<!-- 使用递归组件渲染所有参数 -->
-				{#each complexABI.inputs as param}
+				{#each complexABI.inputs as param (param.name)}
 					<AbiParameterField {param} path={param.name} formState={form} />
 				{/each}
 

@@ -209,7 +209,12 @@ export function createCREATE2Deployment(
  * Calculate the CREATE2 deployment address
  * Useful for verifying deterministic addresses
  */
-export function calculateCREATE2Address(_bytecode: `0x${string}`, _salt?: string): Address {
+export function calculateCREATE2Address(
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	_bytecode: `0x${string}`,
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	_salt?: string
+): Address {
 	// This is a simplified version - actual implementation would use keccak256
 	// For now, this is a placeholder that should be implemented with proper crypto
 	throw new Error('CREATE2 address calculation not yet implemented');

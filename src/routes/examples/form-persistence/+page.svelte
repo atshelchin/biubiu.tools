@@ -76,7 +76,7 @@
 			setTimeout(() => {
 				saveStatus = null;
 			}, 3000);
-		} catch (error) {
+		} catch {
 			console.error('保存失败:', error);
 			saveStatus = 'error';
 		}
@@ -102,7 +102,7 @@
 
 			lastSavedTime = new Date().toLocaleTimeString();
 			return true;
-		} catch (error) {
+		} catch {
 			console.error('加载失败:', error);
 			return false;
 		}
@@ -149,6 +149,7 @@
 				}
 				alert('导入成功！');
 			} catch (error) {
+				console.error('Import failed:', error);
 				alert('导入失败：文件格式不正确');
 			}
 		};
@@ -307,7 +308,7 @@
 				<div class="field-group">
 					<label class="field-label">兴趣爱好</label>
 					<div class="checkbox-group">
-						{#each interestOptions as option}
+						{#each interestOptions as option (option.value)}
 							{@const isChecked = (form.getValue('interests') as string[]).includes(option.value)}
 							<label class="checkbox-label">
 								<input

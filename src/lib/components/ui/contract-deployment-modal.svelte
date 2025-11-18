@@ -272,67 +272,65 @@
 	maxWidth="600px"
 	height="fit-content"
 >
-	{#snippet children()}
-		{#if status === 'idle'}
-			<div class="info-section">
-				<!-- <p class="contract-description">{config.description}</p> -->
-				<ContractDetails
-					contractAddress={config.contractAddress}
-					addressLabel={i18n.t('tools.token_sweep.step2.content.deployment.contract_address_label')}
-					{blockExplorer}
-					details={[
-						{
-							label: i18n.t('tools.token_sweep.step2.content.deployment.network_label'),
-							value: networkName
-						}
-					]}
-				/>
-
-				{#if steps.length > 0}
-					<DeploymentSteps
-						{steps}
-						heading={i18n.t('tools.token_sweep.step2.content.deployment.deployment_steps_heading')}
-					/>
-				{/if}
-
-				<ActionButton onclick={handleDeploy}
-					>{i18n.t('tools.token_sweep.step2.content.deployment.start_deployment')}</ActionButton
-				>
-			</div>
-		{:else if status === 'deploying'}
-			<DeploymentProgress
-				{steps}
-				{isWaitingForSignature}
-				title={i18n.t('tools.token_sweep.step2.content.deployment.deploying_contract')}
-				messages={{
-					waitingForSignature: i18n.t(
-						'tools.token_sweep.step2.content.deployment.waiting_for_signature'
-					),
-					transactionSent: i18n.t('tools.token_sweep.step2.content.deployment.transaction_sent'),
-					finalizing: i18n.t('tools.token_sweep.step2.content.deployment.finalizing'),
-					confirmInWallet: i18n.t('tools.token_sweep.step2.content.deployment.confirm_in_wallet')
-				}}
-			/>
-		{:else if status === 'success'}
-			<DeploymentSuccess
+	{#if status === 'idle'}
+		<div class="info-section">
+			<!-- <p class="contract-description">{config.description}</p> -->
+			<ContractDetails
 				contractAddress={config.contractAddress}
+				addressLabel={i18n.t('tools.token_sweep.step2.content.deployment.contract_address_label')}
 				{blockExplorer}
-				title={i18n.t('tools.token_sweep.step2.content.deployment.success_title')}
-				description={i18n.t('tools.token_sweep.step2.content.deployment.success_description')}
-				viewOnExplorerText={i18n.t('tools.token_sweep.step2.content.deployment.view_on_explorer')}
+				details={[
+					{
+						label: i18n.t('tools.token_sweep.step2.content.deployment.network_label'),
+						value: networkName
+					}
+				]}
 			/>
-			<div class="success-actions">
-				<ActionButton variant="primary" onclick={handleClose}>{i18n.t('common.done')}</ActionButton>
-			</div>
-		{:else if status === 'error'}
-			<DeploymentError
-				errorMessage={errorMessage ?? undefined}
-				showClearCacheGuide={showClearCacheSteps}
-				onRetry={handleRetry}
-				title={i18n.t('tools.token_sweep.step2.content.deployment.error_title')}
-			/>
-		{/if}
-	{/snippet}
+
+			{#if steps.length > 0}
+				<DeploymentSteps
+					{steps}
+					heading={i18n.t('tools.token_sweep.step2.content.deployment.deployment_steps_heading')}
+				/>
+			{/if}
+
+			<ActionButton onclick={handleDeploy}
+				>{i18n.t('tools.token_sweep.step2.content.deployment.start_deployment')}</ActionButton
+			>
+		</div>
+	{:else if status === 'deploying'}
+		<DeploymentProgress
+			{steps}
+			{isWaitingForSignature}
+			title={i18n.t('tools.token_sweep.step2.content.deployment.deploying_contract')}
+			messages={{
+				waitingForSignature: i18n.t(
+					'tools.token_sweep.step2.content.deployment.waiting_for_signature'
+				),
+				transactionSent: i18n.t('tools.token_sweep.step2.content.deployment.transaction_sent'),
+				finalizing: i18n.t('tools.token_sweep.step2.content.deployment.finalizing'),
+				confirmInWallet: i18n.t('tools.token_sweep.step2.content.deployment.confirm_in_wallet')
+			}}
+		/>
+	{:else if status === 'success'}
+		<DeploymentSuccess
+			contractAddress={config.contractAddress}
+			{blockExplorer}
+			title={i18n.t('tools.token_sweep.step2.content.deployment.success_title')}
+			description={i18n.t('tools.token_sweep.step2.content.deployment.success_description')}
+			viewOnExplorerText={i18n.t('tools.token_sweep.step2.content.deployment.view_on_explorer')}
+		/>
+		<div class="success-actions">
+			<ActionButton variant="primary" onclick={handleClose}>{i18n.t('common.done')}</ActionButton>
+		</div>
+	{:else if status === 'error'}
+		<DeploymentError
+			errorMessage={errorMessage ?? undefined}
+			showClearCacheGuide={showClearCacheSteps}
+			onRetry={handleRetry}
+			title={i18n.t('tools.token_sweep.step2.content.deployment.error_title')}
+		/>
+	{/if}
 </Modal>
 
 <style>

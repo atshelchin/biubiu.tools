@@ -35,7 +35,7 @@
 
 		{#if presetColors.length > 0}
 			<div class="preset-colors">
-				{#each presetColors as presetColor}
+				{#each presetColors as presetColor (presetColor)}
 					<button
 						type="button"
 						class="preset-btn"

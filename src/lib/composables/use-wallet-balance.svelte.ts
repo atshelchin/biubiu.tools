@@ -4,10 +4,11 @@
  */
 
 import type { PublicClient } from 'viem';
+import { SvelteMap } from 'svelte/reactivity';
 import { formatBalance } from '$lib/utils/wallet-utils';
 
 export function useWalletBalance() {
-	let balances = $state<Map<string, string>>(new Map());
+	let balances = new SvelteMap<string, string>();
 
 	/**
 	 * Load balance for a single account
@@ -43,7 +44,7 @@ export function useWalletBalance() {
 			return;
 		}
 
-		const newBalances = new Map<string, string>();
+		const newBalances = new SvelteMap<string, string>();
 
 		await Promise.all(
 			addresses.map(async (address) => {
@@ -77,7 +78,7 @@ export function useWalletBalance() {
 	 * Clear all balances
 	 */
 	function clearBalances(): void {
-		balances = new Map();
+		balances = new SvelteMap();
 	}
 
 	return {

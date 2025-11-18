@@ -7,7 +7,7 @@
 </script>
 
 <!-- 	title={i18n.t('tools.token_sweep.step1.sidebar.title')} -->
-<StepSidebar stepNumber={1} title="" description={''}>
+<StepSidebar stepNumber={1} title="" description="">
 	<!-- What is this step? -->
 	<!-- <InfoCard
 		variant="primary"

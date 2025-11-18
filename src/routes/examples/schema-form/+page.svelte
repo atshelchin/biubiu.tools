@@ -3,13 +3,7 @@
 	 * Schema 配置渲染示例
 	 * 演示：配置驱动表单、自定义输入组件注册、递归渲染
 	 */
-	import {
-		useFormState,
-		Form,
-		Validators,
-		type FormSchema,
-		type FieldSchema
-	} from '@packages/formstate/src';
+	import { useFormState, Form, Validators, type FormSchema } from '@packages/formstate/src';
 	import ColorPicker from './components/ColorPicker.svelte';
 	import TagsInput from './components/TagsInput.svelte';
 	import RichTextEditor from './components/RichTextEditor.svelte';
@@ -137,7 +131,7 @@
 	const form = useFormState();
 
 	async function handleSubmit(values: Record<string, unknown>) {
-		console.log('提交数据:', values);
+		console.log('提交数据：', values);
 		alert('表单提交成功！\n请查看控制台输出。');
 	}
 </script>
@@ -168,7 +162,7 @@
 					>{`// 1. 创建自定义组件
 // ColorPicker.svelte
 <script lang="ts">
-  let { value, onInput } = $props();
+  let { value = '', onInput = () => {} } = $props();
 </script>
 
 <div class="color-picker">

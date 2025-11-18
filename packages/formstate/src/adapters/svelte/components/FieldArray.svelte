@@ -4,6 +4,7 @@
 	 * 支持添加、删除、移动数组项
 	 */
 	import { getContext } from 'svelte';
+	import { SvelteMap } from 'svelte/reactivity';
 	import type { FormState } from '../useFormState.svelte';
 	import type { FieldPath } from '../../../core/interfaces';
 	import { PathUtils } from '../../../utils/PathUtils';
@@ -128,7 +129,10 @@
 		});
 
 		// 计算新索引并重新映射
-		const remapped = new Map<string, { oldPath: string; newPath: string; newIndex: number }>();
+		const remapped = new SvelteMap<
+			string,
+			{ oldPath: string; newPath: string; newIndex: number }
+		>();
 
 		for (const oldPath of affectedPaths) {
 			const oldIndex = parseInt(oldPath.match(/\[(\d+)\]/)?.[1] || '0');

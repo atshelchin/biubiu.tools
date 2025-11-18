@@ -15,7 +15,8 @@
       "Bash(npx prettier:*)",
       "Bash(bun x prettier:*)",
       "Bash(bunx prettier:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Read(//tmp/**)"
     ],
     "deny": [],
     "ask": []

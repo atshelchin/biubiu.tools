@@ -27,7 +27,7 @@
 </script>
 
 <div class="contract-details">
-	{#each details as detail}
+	{#each details as detail (detail.label)}
 		<div class="detail-row">
 			<span class="label">{detail.label}</span>
 			<span class="value">{detail.value}</span>

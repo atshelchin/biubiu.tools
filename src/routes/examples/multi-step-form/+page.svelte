@@ -190,7 +190,7 @@
 
 	<!-- 步骤指示器 -->
 	<div class="stepper">
-		{#each STEPS as step, index}
+		{#each STEPS as step, index (step.id)}
 			{@const isActive = currentStep === step.id}
 			{@const isCompleted = currentStep > step.id}
 			{@const hasErrors = stepErrors[step.id]?.length > 0}

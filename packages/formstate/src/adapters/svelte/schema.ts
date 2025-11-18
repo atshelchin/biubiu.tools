@@ -4,7 +4,7 @@
  */
 
 import type { IFieldConfig, IValidator } from '../../core/interfaces';
-import type { Component, ComponentProps } from 'svelte';
+import type { Component } from 'svelte';
 
 /**
  * 字段类型枚举

@@ -138,7 +138,7 @@
 								{#if field.placeholder}
 									<option value="">{field.placeholder}</option>
 								{/if}
-								{#each field.options || [] as option}
+								{#each field.options || [] as option (option.value)}
 									<option value={option.value} disabled={option.disabled}>
 										{option.label}
 									</option>
@@ -154,7 +154,7 @@
 							/>
 						{:else if field.type === 'radio' && field.options}
 							<div class="radio-group">
-								{#each field.options as option}
+								{#each field.options as option (option.value)}
 									<label>
 										<input
 											type="radio"

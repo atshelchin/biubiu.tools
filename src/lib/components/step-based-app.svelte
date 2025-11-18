@@ -1,7 +1,6 @@
 <script lang="ts" module>
 	import type { Snippet, Component } from 'svelte';
 	import type { Chain } from 'viem';
-	import type { HowToStepData } from '$lib/utils/structured-data';
 	import type { Step } from '$lib/components/ui/step-indicator.svelte';
 	import type { FAQ } from '$lib/components/ui/faqs.svelte';
 
