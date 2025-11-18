@@ -100,7 +100,15 @@
 					"network_properly_configured": "Your network is properly configured for token sweeping",
 					"dependency_issues_found": "Dependency Issues Found",
 					"resolve_issues_before_continuing": "Please resolve the issues above before continuing",
-					"recheck_dependencies": "Re-check Dependencies"
+					"recheck_dependencies": "Re-check Dependencies",
+					"address_label": "Address:",
+					"block_label": "Block:",
+					"verified_label": "Verified:",
+					"endpoint_label": "Endpoint:",
+					"response_time_label": "Response Time:",
+					"resolve_previous_issue": "Please resolve the previous issue first",
+					"view_deployment_guide": "View Deployment Guide",
+					"deploy_coming_soon": "Deploy Contract (Coming Soon)"
 				},
 				"footer": {
 					"checking_dependencies": "Checking dependencies...",

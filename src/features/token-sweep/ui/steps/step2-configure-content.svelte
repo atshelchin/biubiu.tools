@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
-	import { CheckCircle2, XCircle, AlertCircle, RefreshCw, ExternalLink } from '@lucide/svelte';
-	import { fade, slide } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 	import {
 		checkAllDependencies,
 		calculateCheckSummary
@@ -14,6 +13,7 @@
 	import EmptyState from '@/features/token-sweep/ui/components/empty-state.svelte';
 	import LoadingState from '$lib/components/ui/loading-state.svelte';
 	import SummaryBanner from '$lib/components/ui/summary-banner.svelte';
+	import DependencyCheckCard from '$lib/components/ui/dependency-check-card.svelte';
 	import { step2State } from '@/features/token-sweep/stores/step2-state.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
 
@@ -183,129 +183,33 @@
 		<!-- Check Results -->
 		<div class="checks-container" in:fade={{ duration: 300 }}>
 			{#each checks as check, index (check.id)}
-				<div
-					class="check-card"
-					class:success={check.status === 'success'}
-					class:error={check.status === 'error'}
-					in:slide={{ duration: 200, delay: 50 }}
-				>
-					<div class="check-header">
-						<div class="check-icon">
-							{#if check.status === 'checking'}
-								<RefreshCw size={24} class="spinning" />
-							{:else if check.status === 'success'}
-								<CheckCircle2 size={24} />
-							{:else if check.status === 'warning'}
-								<AlertCircle size={24} />
-							{:else}
-								<XCircle size={24} />
-							{/if}
-						</div>
-						<div class="check-info">
-							<h4>{check.name}</h4>
-							<p class="check-description">{check.description}</p>
-						</div>
-					</div>
-
-					<div class="check-details">
-						{#if check.message}
-							<p class="check-message">{check.message}</p>
-						{/if}
-
-						{#if check.type === 'contract' && check.address}
-							<div class="check-address">
-								<span class="label">Address:</span>
-								<div class="address-content">
-									<code>{check.address}</code>
-									{#if currentNetwork?.blockExplorer}
-										<a
-											href="{currentNetwork.blockExplorer}/address/{check.address}"
-											target="_blank"
-											rel="noopener noreferrer"
-											class="explorer-link"
-											title="View on Block Explorer"
-										>
-											<ExternalLink size={14} />
-										</a>
-									{/if}
-								</div>
-							</div>
-							{#if check.blockNumber !== undefined}
-								<div class="check-block">
-									<span class="label">Block:</span>
-									<span>#{check.blockNumber.toLocaleString()}</span>
-								</div>
-							{/if}
-							{#if check.blockTimestamp}
-								<div class="check-timestamp">
-									<span class="label">Verified:</span>
-									<span>{formatTimestamp(check.blockTimestamp)}</span>
-								</div>
-							{/if}
-						{/if}
-
-						{#if check.type === 'network-service' && check.endpoint}
-							<div class="check-endpoint">
-								<span class="label">Endpoint:</span>
-								<div class="endpoint-content">
-									<code>{check.endpoint}</code>
-									<a
-										href={check.endpoint}
-										target="_blank"
-										rel="noopener noreferrer"
-										class="explorer-link"
-										title="Open RPC Endpoint"
-									>
-										<ExternalLink size={14} />
-									</a>
-								</div>
-							</div>
-							{#if check.responseTime}
-								<div class="check-time">
-									<span class="label">Response Time:</span>
-									<span>{check.responseTime}ms</span>
-								</div>
-							{/if}
-						{/if}
-					</div>
-
-					{#if check.status === 'error' && check.canDeploy}
-						{@const canFix = canFixCheck(index)}
-						<div class="check-actions">
-							{#if !canFix}
-								<div class="blocked-hint">
-									<AlertCircle size={16} />
-									<span>Please resolve the previous issue first</span>
-								</div>
-							{:else if check.type === 'contract' && check.address}
-								{@const config = getDeploymentConfig(check.address as `0x${string}`)}
-								{#if config && config.deployFunction}
-									<button
-										class="deploy-button"
-										onclick={() => {
-											deploymentConfig = config;
-											showDeploymentModal = true;
-										}}
-									>
-										Deploy {config.contractName}
-									</button>
-								{:else if check.deployGuideUrl}
-									<a
-										href={check.deployGuideUrl}
-										target="_blank"
-										rel="noopener noreferrer"
-										class="deploy-link"
-									>
-										<ExternalLink size={16} />
-										View Deployment Guide
-									</a>
-								{:else}
-									<button class="deploy-button" disabled> Deploy Contract (Coming Soon) </button>
-								{/if}
-							{/if}
-						</div>
-					{/if}
-				</div>
+				{@const canFix = canFixCheck(index)}
+				{@const config =
+					check.type === 'contract' && check.address
+						? getDeploymentConfig(check.address as `0x${string}`)
+						: null}
+				<DependencyCheckCard
+					{check}
+					{index}
+					{canFix}
+					blockExplorer={currentNetwork?.blockExplorer}
+					{formatTimestamp}
+					onDeploy={config && config.deployFunction
+						? () => {
+								deploymentConfig = config;
+								showDeploymentModal = true;
+							}
+						: undefined}
+					deployButtonText={config ? `Deploy ${config.contractName}` : undefined}
+					blockedHintText={i18n.t('tools.token_sweep.step2.content.resolve_previous_issue')}
+					addressLabel={i18n.t('tools.token_sweep.step2.content.address_label')}
+					blockLabel={i18n.t('tools.token_sweep.step2.content.block_label')}
+					verifiedLabel={i18n.t('tools.token_sweep.step2.content.verified_label')}
+					endpointLabel={i18n.t('tools.token_sweep.step2.content.endpoint_label')}
+					responseTimeLabel={i18n.t('tools.token_sweep.step2.content.response_time_label')}
+					viewGuideText={i18n.t('tools.token_sweep.step2.content.view_deployment_guide')}
+					deployComingSoonText={i18n.t('tools.token_sweep.step2.content.deploy_coming_soon')}
+				/>
 			{/each}
 		</div>
 
@@ -386,267 +290,4 @@
 		margin-bottom: var(--space-6);
 	}
 
-	.check-card {
-		padding: var(--space-4);
-		background: var(--white);
-		border-radius: var(--radius-lg);
-		border: 2px solid var(--color-border);
-		transition: all 0.2s;
-	}
-
-	:global([data-theme='dark']) .check-card {
-		background: var(--gray-800);
-	}
-
-	.check-card.success {
-		border-color: hsl(120, 60%, 60%);
-		background: hsla(120, 60%, 98%, 1);
-	}
-
-	:global([data-theme='dark']) .check-card.success {
-		border-color: hsl(120, 60%, 40%);
-		background: hsla(120, 60%, 10%, 0.3);
-	}
-
-	.check-card.error {
-		border-color: hsl(0, 80%, 60%);
-		background: hsla(0, 80%, 98%, 1);
-	}
-
-	:global([data-theme='dark']) .check-card.error {
-		border-color: hsl(0, 80%, 40%);
-		background: hsla(0, 80%, 10%, 0.3);
-	}
-
-	.check-header {
-		display: flex;
-		gap: var(--space-3);
-		margin-bottom: var(--space-3);
-	}
-
-	.check-icon {
-		flex-shrink: 0;
-	}
-
-	.check-icon :global(svg) {
-		color: var(--gray-500);
-	}
-
-	.check-card.success .check-icon :global(svg) {
-		color: hsl(120, 60%, 50%);
-	}
-
-	.check-card.error .check-icon :global(svg) {
-		color: hsl(0, 80%, 50%);
-	}
-
-	.check-info {
-		flex: 1;
-		min-width: 0;
-	}
-
-	.check-info h4 {
-		font-size: var(--text-base);
-		font-weight: var(--font-semibold);
-		color: var(--gray-900);
-		margin: 0 0 var(--space-1) 0;
-	}
-
-	:global([data-theme='dark']) .check-info h4 {
-		color: var(--gray-100);
-	}
-
-	.check-description {
-		font-size: var(--text-sm);
-		color: var(--gray-600);
-		margin: 0;
-	}
-
-	:global([data-theme='dark']) .check-description {
-		color: var(--gray-400);
-	}
-
-	.check-details {
-		margin-left: calc(24px + var(--space-3));
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-2);
-	}
-
-	.check-message {
-		font-size: var(--text-sm);
-		color: var(--gray-700);
-		margin: 0;
-	}
-
-	:global([data-theme='dark']) .check-message {
-		color: var(--gray-300);
-	}
-
-	.check-address,
-	.check-endpoint,
-	.check-time,
-	.check-block,
-	.check-timestamp {
-		display: flex;
-		gap: var(--space-2);
-		align-items: baseline;
-		font-size: var(--text-xs);
-	}
-
-	.check-address .label,
-	.check-endpoint .label,
-	.check-time .label,
-	.check-block .label,
-	.check-timestamp .label {
-		font-weight: var(--font-semibold);
-		color: var(--gray-600);
-		min-width: 80px;
-		flex-shrink: 0;
-	}
-
-	:global([data-theme='dark']) .check-address .label,
-	:global([data-theme='dark']) .check-endpoint .label,
-	:global([data-theme='dark']) .check-time .label,
-	:global([data-theme='dark']) .check-block .label,
-	:global([data-theme='dark']) .check-timestamp .label {
-		color: var(--gray-400);
-	}
-
-	.check-block span:not(.label),
-	.check-timestamp span:not(.label) {
-		color: var(--gray-700);
-	}
-
-	:global([data-theme='dark']) .check-block span:not(.label),
-	:global([data-theme='dark']) .check-timestamp span:not(.label) {
-		color: var(--gray-300);
-	}
-
-	.address-content,
-	.endpoint-content {
-		display: flex;
-		align-items: center;
-		gap: var(--space-2);
-		flex: 1;
-		min-width: 0;
-	}
-
-	.check-address code,
-	.check-endpoint code {
-		font-family: var(--font-mono, monospace);
-		font-size: var(--text-xs);
-		color: var(--gray-800);
-		background: var(--gray-100);
-		padding: 2px 6px;
-		border-radius: var(--radius-sm);
-		word-break: break-all;
-		flex: 1;
-		min-width: 0;
-	}
-
-	:global([data-theme='dark']) .check-address code,
-	:global([data-theme='dark']) .check-endpoint code {
-		color: var(--gray-200);
-		background: var(--gray-700);
-	}
-
-	.explorer-link {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		padding: 4px;
-		color: var(--color-primary);
-		background: var(--color-panel-1);
-		border-radius: var(--radius-sm);
-		transition: all 0.2s;
-		flex-shrink: 0;
-	}
-
-	.explorer-link:hover {
-		background: var(--color-primary);
-		color: white;
-		transform: translateY(-1px);
-	}
-
-	:global([data-theme='dark']) .explorer-link {
-		background: var(--gray-700);
-	}
-
-	:global([data-theme='dark']) .explorer-link:hover {
-		background: var(--color-primary);
-	}
-
-	.check-actions {
-		margin-top: var(--space-3);
-		margin-left: calc(24px + var(--space-3));
-		display: flex;
-		gap: var(--space-2);
-	}
-
-	.deploy-link {
-		display: inline-flex;
-		align-items: center;
-		gap: var(--space-2);
-		padding: var(--space-2) var(--space-3);
-		background: var(--color-primary);
-		color: white;
-		border-radius: var(--radius-md);
-		font-size: var(--text-sm);
-		font-weight: var(--font-medium);
-		text-decoration: none;
-		transition: all 0.2s;
-	}
-
-	.deploy-link:hover {
-		opacity: 0.9;
-		transform: translateY(-1px);
-	}
-
-	.deploy-button {
-		padding: var(--space-2) var(--space-3);
-		background: var(--gray-300);
-		color: var(--gray-600);
-		border: none;
-		border-radius: var(--radius-md);
-		font-size: var(--text-sm);
-		font-weight: var(--font-medium);
-		cursor: not-allowed;
-	}
-
-	/* Blocked Hint */
-	.blocked-hint {
-		display: flex;
-		align-items: center;
-		gap: var(--space-2);
-		padding: var(--space-2) var(--space-3);
-		background: hsla(45, 100%, 95%, 1);
-		border: 1px solid hsla(45, 100%, 70%, 1);
-		border-radius: var(--radius-md);
-		color: hsl(45, 100%, 30%);
-		font-size: var(--text-sm);
-		font-weight: var(--font-medium);
-	}
-
-	:global([data-theme='dark']) .blocked-hint {
-		background: hsla(45, 100%, 15%, 0.3);
-		border-color: hsla(45, 100%, 40%, 1);
-		color: hsl(45, 100%, 70%);
-	}
-
-	.blocked-hint :global(svg) {
-		flex-shrink: 0;
-	}
-
-
-	/* Responsive */
-	@media (max-width: 640px) {
-		.check-details {
-			margin-left: 0;
-		}
-
-		.check-actions {
-			margin-left: 0;
-		}
-	}
 </style>
