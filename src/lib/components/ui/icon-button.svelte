@@ -1,10 +1,9 @@
 <script lang="ts">
-	import type { ComponentType } from 'svelte';
-	import type { Icon } from '@lucide/svelte';
+	import type { Component } from 'svelte';
 	import { Check } from '@lucide/svelte';
 
 	interface Props {
-		icon: ComponentType<Icon>;
+		icon: Component;
 		label: string;
 		tooltip?: string;
 		variant?: 'default' | 'primary' | 'danger' | 'ghost';

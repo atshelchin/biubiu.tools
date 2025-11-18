@@ -472,7 +472,7 @@
 							wallet: targetAddress as Address,
 							success: true,
 							tokenSymbol: 'ALL',
-							transactionHash: result.transactionHash
+							txHash: result.transactionHash as `0x${string}`
 						}
 					]
 				};

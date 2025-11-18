@@ -15,7 +15,7 @@
 		appLogoUrl: 'https://biubiu.tools/logo.svg',
 		chains: [mainnet, polygon, base, bsc, arbitrum, optimism],
 		storageKey: 'biubiu-tools-call-master',
-		i18n
+		i18n: i18n as any
 	});
 </script>
 

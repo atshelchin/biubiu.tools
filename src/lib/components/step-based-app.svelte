@@ -80,7 +80,7 @@
 			createConnectConfig({
 				chains: config.walletConnect.chains,
 				storageKey: config.walletConnect.storageKey,
-				i18n
+				i18n: i18n as any
 			})
 		);
 		// Initialize the store to load networks and set up wallet detection

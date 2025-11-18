@@ -19,14 +19,16 @@
 ### 1. `<svelte:self>` 已弃用
 
 **❌ 错误代码：**
+
 ```svelte
 <svelte:self schema={{ fields: field.fields }} />
 ```
 
 **✅ 正确代码：**
+
 ```svelte
 <script>
-import Self from './SchemaRenderer.svelte';
+	import Self from './SchemaRenderer.svelte';
 </script>
 
 <Self schema={{ fields: field.fields }} />
@@ -35,15 +37,17 @@ import Self from './SchemaRenderer.svelte';
 ### 2. `<svelte:component>` 已弃用
 
 **❌ 错误代码：**
+
 ```svelte
 <svelte:component this={option.icon} size={24} />
 ```
 
 **✅ 正确代码：**
+
 ```svelte
 {#each options as option}
-  {@const Icon = option.icon}
-  <Icon size={24} />
+	{@const Icon = option.icon}
+	<Icon size={24} />
 {/each}
 ```
 
@@ -52,11 +56,13 @@ import Self from './SchemaRenderer.svelte';
 ### 3. SvelteSet/SvelteMap 不需要 $state 包装
 
 **❌ 错误代码：**
+
 ```svelte
 let selectedItems = $state(new SvelteSet<string>());
 ```
 
 **✅ 正确代码：**
+
 ```svelte
 let selectedItems = new SvelteSet<string>();
 ```
@@ -66,6 +72,7 @@ let selectedItems = new SvelteSet<string>();
 ### 4. $bindable() 使用
 
 **❌ 错误代码：**
+
 ```svelte
 interface Props {
   open: boolean;  // 不可绑定
@@ -74,6 +81,7 @@ let { open }: Props = $props();
 ```
 
 **✅ 正确代码：**
+
 ```svelte
 interface Props {
   open?: boolean;
@@ -82,6 +90,7 @@ let { open = $bindable(false) }: Props = $props();
 ```
 
 在父组件中使用：
+
 ```svelte
 <Component bind:open={showDialog} />
 ```
@@ -93,31 +102,33 @@ let { open = $bindable(false) }: Props = $props();
 ### 1. blockNumber 类型转换
 
 **❌ 错误代码：**
+
 ```typescript
 const block = await client.getBlock({ blockNumber: log.blockNumber });
 // 错误：log.blockNumber 可能是 `0x${string}` 类型
 ```
 
 **✅ 正确代码：**
+
 ```typescript
 const blockNumberValue =
-  typeof log.blockNumber === 'string'
-    ? BigInt(log.blockNumber)
-    : log.blockNumber;
+	typeof log.blockNumber === 'string' ? BigInt(log.blockNumber) : log.blockNumber;
 const block = await client.getBlock({
-  blockNumber: blockNumberValue as bigint
+	blockNumber: blockNumberValue as bigint
 });
 ```
 
 ### 2. Address 类型转换
 
 **❌ 错误代码：**
+
 ```typescript
-const targetAddress = '0x123...';  // string
+const targetAddress = '0x123...'; // string
 // 传递给需要 Address 类型的函数
 ```
 
 **✅ 正确代码：**
+
 ```typescript
 import type { Address } from 'viem';
 const targetAddress = '0x123...' as Address;
@@ -126,15 +137,17 @@ const targetAddress = '0x123...' as Address;
 ### 3. BigInt 转换
 
 **❌ 错误代码：**
+
 ```typescript
-gasUsed: '0.001'  // string，但期望 bigint
+gasUsed: '0.001'; // string，但期望 bigint
 ```
 
 **✅ 正确代码：**
+
 ```typescript
-gasUsed: BigInt(1000000000000000)
+gasUsed: BigInt(1000000000000000);
 // 或
-gasUsed: BigInt(Math.floor(value * 1e18))
+gasUsed: BigInt(Math.floor(value * 1e18));
 ```
 
 ---
@@ -144,43 +157,49 @@ gasUsed: BigInt(Math.floor(value * 1e18))
 ### 1. StepManager API 变更
 
 **❌ 错误代码：**
+
 ```typescript
-stepManager.previous();  // 旧 API
+stepManager.previous(); // 旧 API
 ```
 
 **✅ 正确代码：**
+
 ```typescript
-stepManager.prev();  // 新 API
+stepManager.prev(); // 新 API
 ```
 
 ### 2. ConnectStore API
 
 **❌ 错误代码：**
+
 ```typescript
-connectStore.currentAddress  // 不存在的属性
+connectStore.currentAddress; // 不存在的属性
 ```
 
 **✅ 正确代码：**
+
 ```typescript
-connectStore.address  // 正确的属性名
+connectStore.address; // 正确的属性名
 ```
 
 ### 3. StepSummary 组件使用
 
 **❌ 错误代码：**
+
 ```svelte
 <StepSummary items={summaryItems} title="Summary" />
 ```
 
 **✅ 正确代码：**
+
 ```svelte
 <StepSummary title="Summary">
-  {#each summaryItems as item}
-    <div class="summary-item">
-      <span>{item.label}</span>
-      <strong>{item.value}</strong>
-    </div>
-  {/each}
+	{#each summaryItems as item}
+		<div class="summary-item">
+			<span>{item.label}</span>
+			<strong>{item.value}</strong>
+		</div>
+	{/each}
 </StepSummary>
 ```
 
@@ -192,12 +211,12 @@ connectStore.address  // 正确的属性名
 ```typescript
 // 文件 A
 type TransactionStatusCallback = (status: {
-  stage: 'signing' | 'broadcasting' | 'confirming';
+	stage: 'signing' | 'broadcasting' | 'confirming';
 }) => void;
 
 // 文件 B
 type TransactionStatusCallback = (status: {
-  stage: 'signing' | 'signed' | 'broadcasting' | 'confirmed';
+	stage: 'signing' | 'signed' | 'broadcasting' | 'confirmed';
 }) => void;
 ```
 
@@ -232,18 +251,19 @@ let selectedIds = $state(new SvelteSet<number>());
 ### 1. Label 必须关联控件
 
 **❌ 错误代码：**
+
 ```svelte
-<label>Block Range</label>
-<div>...</div>
+<label>Block Range</label><div>...</div>
 ```
 
 **✅ 正确代码（方案1 - 改为div）：**
+
 ```svelte
-<div class="form-label">Block Range</div>
-<div>...</div>
+<div class="form-label">Block Range</div><div>...</div>
 ```
 
 **✅ 正确代码（方案2 - 添加for属性）：**
+
 ```svelte
 <label for="block-range-input">Block Range</label>
 <input id="block-range-input" type="text" />
@@ -252,16 +272,18 @@ let selectedIds = $state(new SvelteSet<number>());
 ### 2. 按钮需要可访问的文本
 
 **❌ 错误代码：**
+
 ```svelte
 <button onclick={handler}>
-  <Icon />
+	<Icon />
 </button>
 ```
 
 **✅ 正确代码：**
+
 ```svelte
 <button onclick={handler} aria-label="Close">
-  <Icon />
+	<Icon />
 </button>
 ```
 
@@ -272,14 +294,16 @@ let selectedIds = $state(new SvelteSet<number>());
 ### 1. 未使用的变量
 
 **❌ 产生警告：**
+
 ```typescript
-const stepManager = useStepManager();  // 未使用
+const stepManager = useStepManager(); // 未使用
 ```
 
 **✅ 方案1 - 删除：**
 如果确实不需要，直接删除。
 
 **✅ 方案2 - 添加注释：**
+
 ```typescript
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const stepManager = useStepManager();
@@ -288,11 +312,13 @@ const stepManager = useStepManager();
 ### 2. 解构中未使用的变量
 
 **❌ 产生警告：**
+
 ```typescript
-const { privateKey: _pk, ...wallet } = data;  // _pk 未使用
+const { privateKey: _pk, ...wallet } = data; // _pk 未使用
 ```
 
 **✅ 正确代码：**
+
 ```typescript
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const { privateKey: _pk, ...wallet } = data;
@@ -301,24 +327,27 @@ const { privateKey: _pk, ...wallet } = data;
 ### 3. 未使用的 Props
 
 **❌ 产生警告：**
+
 ```typescript
 interface Props {
-  id: string;  // 在组件中未使用
+	id: string; // 在组件中未使用
 }
 ```
 
 **✅ 方案1 - 删除未使用的属性：**
+
 ```typescript
 interface Props {
-  // 移除 id
+	// 移除 id
 }
 ```
 
 **✅ 方案2 - 添加注释：**
+
 ```typescript
 // eslint-disable-next-line svelte/no-unused-props
 interface Props {
-  id: string;
+	id: string;
 }
 ```
 
@@ -337,9 +366,10 @@ bun run check  # 会显示未使用的选择器
 ### 2. 删除空的 CSS 规则集
 
 **❌ 错误代码：**
+
 ```css
 .empty-rule {
-  /* 所有属性都被注释掉了 */
+	/* 所有属性都被注释掉了 */
 }
 ```
 
@@ -349,17 +379,19 @@ bun run check  # 会显示未使用的选择器
 ### 3. 添加标准属性前缀
 
 **⚠️ 警告：**
+
 ```css
 .text {
-  -webkit-background-clip: text;
+	-webkit-background-clip: text;
 }
 ```
 
 **✅ 正确代码：**
+
 ```css
 .text {
-  background-clip: text;
-  -webkit-background-clip: text;
+	background-clip: text;
+	-webkit-background-clip: text;
 }
 ```
 

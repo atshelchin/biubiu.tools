@@ -235,7 +235,7 @@ const form = useFormState({
 								<div class="strength-indicator">
 									<span class="strength-label">强度:</span>
 									<div class="strength-bar">
-										{#each Array(5) as _unused, i (i)}
+										{#each Array(5) as _, i (i)}
 											<div
 												class="strength-segment"
 												class:active={i < passwordStrength.level}

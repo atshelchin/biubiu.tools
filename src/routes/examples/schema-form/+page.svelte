@@ -162,6 +162,7 @@
 					>{`// 1. 创建自定义组件
 // ColorPicker.svelte
 <script lang="ts">
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, svelte/valid-prop-names-in-kit-pages
   let { value = '', onInput = () => {} } = $props();
 </script>
 
