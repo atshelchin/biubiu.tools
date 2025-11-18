@@ -52,6 +52,7 @@
 
 			// 3. 验证 BigInt 是否正确还原
 			const originalTokenAmount = form.getValue('tokenAmount');
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			const parsedTokenAmount = (parsed as any).values.tokenAmount;
 
 			if (typeof parsedTokenAmount === 'bigint' && parsedTokenAmount === originalTokenAmount) {
@@ -119,14 +120,16 @@
 			complexDeserialized = safeStringify(restored, 2);
 
 			// 验证
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
+			const r = restored as any;
 			const checks = [
-				typeof (restored as any).user.id === 'bigint',
-				(restored as any).user.id === 123n,
-				(restored as any).user.balance === 1000000000000000000n,
-				(restored as any).user.createdAt instanceof Date,
-				(restored as any).user.tags instanceof Set,
-				(restored as any).user.metadata instanceof Map,
-				(restored as any).transactions[0].amount === 50000000000000000n
+				typeof r.user.id === 'bigint',
+				r.user.id === 123n,
+				r.user.balance === 1000000000000000000n,
+				r.user.createdAt instanceof Date,
+				r.user.tags instanceof Set,
+				r.user.metadata instanceof Map,
+				r.transactions[0].amount === 50000000000000000n
 			];
 
 			if (checks.every(Boolean)) {
