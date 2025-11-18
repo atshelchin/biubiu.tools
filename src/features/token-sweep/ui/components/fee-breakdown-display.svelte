@@ -295,49 +295,4 @@
 	.fee-note p {
 		margin: 0;
 	}
-
-	.membership-cta {
-		padding: var(--space-4);
-		background: linear-gradient(135deg, #8b5cf6, #7c3aed);
-		color: white;
-		border-radius: var(--radius-lg);
-	}
-
-	.membership-cta h5 {
-		margin: 0 0 var(--space-2) 0;
-		font-size: var(--text-lg);
-		font-weight: var(--font-bold);
-	}
-
-	.membership-cta p {
-		margin: 0 0 var(--space-3) 0;
-		opacity: 0.95;
-	}
-
-	.membership-cta ul {
-		list-style: none;
-		padding: 0;
-		margin: 0 0 var(--space-4) 0;
-	}
-
-	.membership-cta ul li {
-		padding: var(--space-1) 0;
-		opacity: 0.95;
-	}
-
-	.btn-membership {
-		padding: var(--space-2) var(--space-4);
-		background: white;
-		color: #7c3aed;
-		border: none;
-		border-radius: var(--radius-md);
-		font-weight: var(--font-semibold);
-		cursor: pointer;
-		transition: all 0.2s;
-	}
-
-	.btn-membership:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-	}
 </style>

@@ -343,7 +343,7 @@
 		}
 	}
 
-	.sparkle {
+	:global(.sparkle) {
 		animation: sparkle 1.5s ease-in-out infinite;
 	}
 

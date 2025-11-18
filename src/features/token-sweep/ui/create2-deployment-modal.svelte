@@ -274,7 +274,13 @@
 </script>
 
 {#if show}
-	<div class="modal-overlay" onclick={handleClose}>
+	<div
+		class="modal-overlay"
+		onclick={handleClose}
+		onkeydown={(e) => e.key === 'Escape' && handleClose()}
+		role="button"
+		tabindex="0"
+	>
 		<div class="modal-container" onclick={(e) => e.stopPropagation()}>
 			<div class="modal-header">
 				<h2>Deploy CREATE2 Proxy</h2>
