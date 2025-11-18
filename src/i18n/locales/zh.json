@@ -95,7 +95,12 @@
 					"checking_dependencies_for": "正在检查 {network} 的依赖项...",
 					"wallet_not_connected_title": "钱包未连接",
 					"wallet_not_connected_message": "请返回步骤 1 并连接您的钱包",
-					"go_to_step1": "返回步骤 1"
+					"go_to_step1": "返回步骤 1",
+					"all_dependencies_satisfied": "所有依赖项已满足",
+					"network_properly_configured": "您的网络已正确配置，可以进行代币归集",
+					"dependency_issues_found": "发现依赖问题",
+					"resolve_issues_before_continuing": "请先解决上述问题再继续",
+					"recheck_dependencies": "重新检查依赖项"
 				},
 				"footer": {
 					"checking_dependencies": "正在检查依赖项...",

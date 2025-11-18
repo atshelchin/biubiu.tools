@@ -95,7 +95,12 @@
 					"checking_dependencies_for": "Checking dependencies for {network}...",
 					"wallet_not_connected_title": "Wallet Not Connected",
 					"wallet_not_connected_message": "Please go back to Step 1 and connect your wallet",
-					"go_to_step1": "Go to Step 1"
+					"go_to_step1": "Go to Step 1",
+					"all_dependencies_satisfied": "All Dependencies Satisfied",
+					"network_properly_configured": "Your network is properly configured for token sweeping",
+					"dependency_issues_found": "Dependency Issues Found",
+					"resolve_issues_before_continuing": "Please resolve the issues above before continuing",
+					"recheck_dependencies": "Re-check Dependencies"
 				},
 				"footer": {
 					"checking_dependencies": "Checking dependencies...",

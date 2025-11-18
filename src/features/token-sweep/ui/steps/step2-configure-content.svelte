@@ -13,6 +13,7 @@
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import EmptyState from '@/features/token-sweep/ui/components/empty-state.svelte';
 	import LoadingState from '$lib/components/ui/loading-state.svelte';
+	import SummaryBanner from '$lib/components/ui/summary-banner.svelte';
 	import { step2State } from '@/features/token-sweep/stores/step2-state.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
 
@@ -310,30 +311,17 @@
 
 		<!-- Summary and Continue -->
 		{#if summary}
-			<div class="summary-container">
-				{#if summary.allPassed}
-					<div class="success-banner">
-						<CheckCircle2 size={32} />
-						<div>
-							<h3>All Dependencies Satisfied</h3>
-							<p>Your network is properly configured for token sweeping</p>
-						</div>
-					</div>
-				{:else}
-					<div class="error-banner">
-						<AlertCircle size={32} />
-						<div>
-							<h3>Dependency Issues Found</h3>
-							<p>Please resolve the issues above before continuing</p>
-						</div>
-					</div>
-				{/if}
-
-				<button class="retry-button" onclick={runDependencyChecks}>
-					<RefreshCw size={18} />
-					Re-check Dependencies
-				</button>
-			</div>
+			<SummaryBanner
+				variant={summary.allPassed ? 'success' : 'error'}
+				title={summary.allPassed
+					? i18n.t('tools.token_sweep.step2.content.all_dependencies_satisfied')
+					: i18n.t('tools.token_sweep.step2.content.dependency_issues_found')}
+				message={summary.allPassed
+					? i18n.t('tools.token_sweep.step2.content.network_properly_configured')
+					: i18n.t('tools.token_sweep.step2.content.resolve_issues_before_continuing')}
+				retryText={i18n.t('tools.token_sweep.step2.content.recheck_dependencies')}
+				onRetry={runDependencyChecks}
+			/>
 		{/if}
 	{/if}
 </div>
@@ -650,89 +638,6 @@
 		flex-shrink: 0;
 	}
 
-	/* Summary Container */
-	.summary-container {
-		margin-top: var(--space-6);
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-4);
-	}
-
-	.success-banner,
-	.error-banner {
-		display: flex;
-		gap: var(--space-3);
-		padding: var(--space-4);
-		border-radius: var(--radius-lg);
-		align-items: center;
-	}
-
-	.success-banner {
-		background: hsla(120, 60%, 95%, 1);
-		border: 2px solid hsl(120, 60%, 60%);
-		color: hsl(120, 60%, 30%);
-	}
-
-	:global([data-theme='dark']) .success-banner {
-		background: hsla(120, 60%, 15%, 0.5);
-		border-color: hsl(120, 60%, 40%);
-		color: hsl(120, 60%, 70%);
-	}
-
-	.error-banner {
-		background: hsla(0, 80%, 95%, 1);
-		border: 2px solid hsl(0, 80%, 60%);
-		color: hsl(0, 80%, 30%);
-	}
-
-	:global([data-theme='dark']) .error-banner {
-		background: hsla(0, 80%, 15%, 0.5);
-		border-color: hsl(0, 80%, 40%);
-		color: hsl(0, 80%, 70%);
-	}
-
-	.success-banner h3,
-	.error-banner h3 {
-		margin: 0 0 var(--space-1) 0;
-		font-size: var(--text-lg);
-	}
-
-	.success-banner p,
-	.error-banner p {
-		margin: 0;
-		font-size: var(--text-sm);
-		opacity: 0.9;
-	}
-
-	.retry-button {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: var(--space-2);
-		padding: var(--space-3) var(--space-4);
-		background: var(--gray-200);
-		color: var(--gray-700);
-		border: none;
-		border-radius: var(--radius-md);
-		font-size: var(--text-base);
-		font-weight: var(--font-semibold);
-		cursor: pointer;
-		transition: all 0.2s;
-	}
-
-	:global([data-theme='dark']) .retry-button {
-		background: var(--gray-700);
-		color: var(--gray-200);
-	}
-
-	.retry-button:hover {
-		background: var(--gray-300);
-		transform: translateY(-1px);
-	}
-
-	:global([data-theme='dark']) .retry-button:hover {
-		background: var(--gray-600);
-	}
 
 	/* Responsive */
 	@media (max-width: 640px) {
