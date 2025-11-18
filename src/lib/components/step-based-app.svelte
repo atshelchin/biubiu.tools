@@ -66,12 +66,14 @@
 
 	// Initialize wallet connect if configured
 	if (config.walletConnect) {
-		createConnectStore(
+		const store = createConnectStore(
 			createConnectConfig({
 				chains: config.walletConnect.chains,
 				storageKey: config.walletConnect.storageKey
 			})
 		);
+		// Initialize the store to load networks and set up wallet detection
+		store.initialize();
 	}
 
 	// Create step manager from steps config with i18n keys (auto-sets context internally)
