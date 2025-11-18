@@ -430,13 +430,23 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		}
 	}
 
+	// Import transaction status callback type
+	type TransactionStatusCallback = (status: {
+		stage: 'signing' | 'signed' | 'broadcasting' | 'broadcasted' | 'confirming' | 'confirmed';
+		hash?: `0x${string}`;
+		blockNumber?: bigint;
+	}) => void;
+
 	// Transaction methods
-	async function sendTransaction(params: {
-		to: Address;
-		value: bigint;
-		data: `0x${string}`;
-		gas?: bigint;
-	}): Promise<Hash> {
+	async function sendTransaction(
+		params: {
+			to: Address;
+			value: bigint;
+			data: `0x${string}`;
+			gas?: bigint;
+		},
+		onStatus?: TransactionStatusCallback
+	): Promise<Hash> {
 		if (!isConnected || !connectionState.connector) {
 			throw new Error(i18n.t('wallet.errors.wallet_not_connected'));
 		}
@@ -490,6 +500,9 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		console.log({ walletClient, provider, address });
 
 		// Send transaction with explicit gas limit if gas estimation fails
+		console.log('[sendTransaction] Requesting wallet signature...');
+		onStatus?.({ stage: 'signing' });
+
 		const hash = await walletClient.sendTransaction({
 			account: address as Address,
 			to: params.to,
@@ -498,10 +511,15 @@ export function createConnectStore(config: ConnectStoreConfig) {
 			gas: params.gas || BigInt(21000) // Default to basic transfer gas limit
 		});
 
+		console.log('[sendTransaction] ✅ Transaction signed! Hash:', hash);
+		onStatus?.({ stage: 'signed', hash });
 		return hash;
 	}
 
-	async function waitForTransaction(hash: Hash): Promise<TransactionReceipt> {
+	async function waitForTransaction(
+		hash: Hash,
+		onStatus?: TransactionStatusCallback
+	): Promise<TransactionReceipt> {
 		if (!currentChainId) {
 			throw new Error(i18n.t('wallet.errors.no_chain_connected'));
 		}
@@ -537,14 +555,22 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		});
 
 		// Wait for transaction receipt
+		console.log('[waitForTransaction] ⏳ Waiting for confirmation...', hash);
+		onStatus?.({ stage: 'confirming', hash });
+
 		const receipt = await publicClient.waitForTransactionReceipt({
 			hash
 		});
 
+		console.log('[waitForTransaction] ✅ Transaction confirmed! Block:', receipt.blockNumber);
+		onStatus?.({ stage: 'confirmed', hash, blockNumber: receipt.blockNumber });
 		return receipt;
 	}
 
-	async function sendRawTransaction(signedTx: `0x${string}`): Promise<Hash> {
+	async function sendRawTransaction(
+		signedTx: `0x${string}`,
+		onStatus?: TransactionStatusCallback
+	): Promise<Hash> {
 		if (!currentChainId) {
 			throw new Error(i18n.t('wallet.errors.no_chain_connected'));
 		}
@@ -580,10 +606,15 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		});
 
 		// Send raw transaction
+		console.log('[sendRawTransaction] 📤 Broadcasting signed transaction...');
+		onStatus?.({ stage: 'broadcasting' });
+
 		const hash = await publicClient.sendRawTransaction({
 			serializedTransaction: signedTx
 		});
 
+		console.log('[sendRawTransaction] ✅ Transaction broadcasted! Hash:', hash);
+		onStatus?.({ stage: 'broadcasted', hash });
 		return hash;
 	}
 

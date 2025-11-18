@@ -35,25 +35,41 @@ export interface DeploymentContext {
 	networkName: string;
 	rpcUrl: string;
 	blockExplorer?: string;
-	sendTransaction: (tx: {
-		to: Address;
-		value: bigint;
-		data: `0x${string}`;
-		gas?: bigint;
-	}) => Promise<`0x${string}`>;
-	waitForTransaction: (hash: `0x${string}`) => Promise<unknown>;
-	sendRawTransaction: (signedTx: `0x${string}`) => Promise<`0x${string}`>;
+	sendTransaction: (
+		tx: {
+			to: Address;
+			value: bigint;
+			data: `0x${string}`;
+			gas?: bigint;
+		},
+		onStatus?: TransactionStatusCallback
+	) => Promise<`0x${string}`>;
+	waitForTransaction: (
+		hash: `0x${string}`,
+		onStatus?: TransactionStatusCallback
+	) => Promise<unknown>;
+	sendRawTransaction: (
+		signedTx: `0x${string}`,
+		onStatus?: TransactionStatusCallback
+	) => Promise<`0x${string}`>;
 	t: TranslateFn;
 }
 
 // Translation function type
 export type TranslateFn = (key: string, params?: Record<string, string | number>) => string;
 
+// Transaction status callback
+export type TransactionStatusCallback = (status: {
+	stage: 'signing' | 'signed' | 'broadcasting' | 'broadcasted' | 'confirming' | 'confirmed';
+	hash?: `0x${string}`;
+	blockNumber?: bigint;
+}) => void;
+
 // Deployment step interface
 export interface DeploymentStep {
 	title: string;
 	description: string;
-	action?: () => Promise<void>;
+	action?: (onStatus?: TransactionStatusCallback) => Promise<void>;
 }
 
 // Deployment result interface
@@ -86,14 +102,17 @@ export function createCREATE2ProxyDeployment(
 						address: KNOWN_ADDRESSES.CREATE2_DEPLOYER
 					}
 				),
-				action: async () => {
-					fundingTxHash = await context.sendTransaction({
-						to: KNOWN_ADDRESSES.CREATE2_DEPLOYER,
-						value: DEPLOYMENT_CONSTANTS.CREATE2_DEPLOYER_FUNDING,
-						data: '0x',
-						gas: DEPLOYMENT_CONSTANTS.TRANSFER_GAS
-					});
-					await context.waitForTransaction(fundingTxHash);
+				action: async (onStatus) => {
+					fundingTxHash = await context.sendTransaction(
+						{
+							to: KNOWN_ADDRESSES.CREATE2_DEPLOYER,
+							value: DEPLOYMENT_CONSTANTS.CREATE2_DEPLOYER_FUNDING,
+							data: '0x',
+							gas: DEPLOYMENT_CONSTANTS.TRANSFER_GAS
+						},
+						onStatus
+					);
+					await context.waitForTransaction(fundingTxHash, onStatus);
 				}
 			},
 			{
@@ -101,9 +120,9 @@ export function createCREATE2ProxyDeployment(
 				description: t(
 					'tools.token_sweep.step2.content.deployment.steps.create2.deploy_contract_description'
 				),
-				action: async () => {
-					deploymentTxHash = await context.sendRawTransaction(DEPLOYMENT_TX);
-					await context.waitForTransaction(deploymentTxHash);
+				action: async (onStatus) => {
+					deploymentTxHash = await context.sendRawTransaction(DEPLOYMENT_TX, onStatus);
+					await context.waitForTransaction(deploymentTxHash, onStatus);
 				}
 			}
 		],
@@ -160,14 +179,17 @@ export function createCREATE2Deployment(
 						address: KNOWN_ADDRESSES.CREATE2_PROXY
 					}
 				),
-				action: async () => {
-					deploymentTxHash = await context.sendTransaction({
-						to: KNOWN_ADDRESSES.CREATE2_PROXY,
-						value: BigInt(0),
-						data: deploymentData,
-						gas: gasLimit
-					});
-					await context.waitForTransaction(deploymentTxHash);
+				action: async (onStatus) => {
+					deploymentTxHash = await context.sendTransaction(
+						{
+							to: KNOWN_ADDRESSES.CREATE2_PROXY,
+							value: BigInt(0),
+							data: deploymentData,
+							gas: gasLimit
+						},
+						onStatus
+					);
+					await context.waitForTransaction(deploymentTxHash, onStatus);
 				}
 			}
 		],
@@ -189,7 +211,7 @@ export function createCREATE2Deployment(
  */
 export function calculateCREATE2Address(
 	_bytecode: `0x${string}`,
-	_salt: string = DEPLOYMENT_CONSTANTS.DEFAULT_SALT
+	_salt?: string
 ): Address {
 	// This is a simplified version - actual implementation would use keccak256
 	// For now, this is a placeholder that should be implemented with proper crypto

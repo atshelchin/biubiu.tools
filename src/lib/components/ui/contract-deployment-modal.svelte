@@ -140,23 +140,36 @@
 						step.title
 					);
 
-					// Mark step as in progress and waiting for user signature
-					isWaitingForSignature = true;
+					// Mark step as in progress
 					steps = steps.map((s, idx) =>
 						idx === i ? { ...s, inProgress: true, completed: false } : s
 					);
 
-					await step.action();
+					// Execute step with status callback
+					await step.action?.((status) => {
+						console.log(`[Deployment] Step ${i + 1} status:`, status.stage, status);
+
+						// Update UI state based on transaction stage
+						if (status.stage === 'signing') {
+							isWaitingForSignature = true;
+						} else if (status.stage === 'signed' || status.stage === 'broadcasting') {
+							// Transaction signed, clear waiting state
+							isWaitingForSignature = false;
+						} else if (status.stage === 'confirming') {
+							// Still in progress, waiting for confirmation
+							isWaitingForSignature = false;
+						} else if (status.stage === 'confirmed') {
+							// Transaction confirmed on blockchain
+							isWaitingForSignature = false;
+						}
+					});
 
 					console.log(`[Deployment] Step ${i + 1} completed:`, step.title);
 
-					// Mark this step as completed first to avoid showing wrong message
+					// Mark this step as completed
 					steps = steps.map((s, idx) =>
 						idx === i ? { ...s, inProgress: false, completed: true } : s
 					);
-
-					// Transaction sent, no longer waiting for signature
-					isWaitingForSignature = false;
 
 					// Give UI time to update and show feedback
 					await new Promise((resolve) => setTimeout(resolve, 500));
