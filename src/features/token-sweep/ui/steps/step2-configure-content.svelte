@@ -16,6 +16,7 @@
 	import DependencyCheckCard from '$lib/components/ui/dependency-check-card.svelte';
 	import { step2State } from '@/features/token-sweep/stores/step2-state.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
+	import { formatTimestamp } from '$lib/utils/date-format';
 
 	const i18n = useI18n();
 	const connectStore = useConnectStore();
@@ -111,45 +112,6 @@
 	function canFixCheck(checkIndex: number): boolean {
 		const firstFailedIdx = firstFailedCheckIndex();
 		return firstFailedIdx === checkIndex;
-	}
-
-	// Format timestamp to human-readable format
-	function formatTimestamp(timestamp: number): string {
-		const date = new Date(timestamp * 1000);
-		const now = new Date();
-		const diffMs = now.getTime() - date.getTime();
-		const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-
-		// Format the date
-		const dateStr = date.toLocaleDateString('en-US', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric'
-		});
-
-		const timeStr = date.toLocaleTimeString('en-US', {
-			hour: '2-digit',
-			minute: '2-digit',
-			hour12: false
-		});
-
-		// Add relative time
-		let relativeStr = '';
-		if (diffDays === 0) {
-			relativeStr = 'today';
-		} else if (diffDays === 1) {
-			relativeStr = 'yesterday';
-		} else if (diffDays < 30) {
-			relativeStr = `${diffDays} days ago`;
-		} else if (diffDays < 365) {
-			const months = Math.floor(diffDays / 30);
-			relativeStr = `${months} month${months > 1 ? 's' : ''} ago`;
-		} else {
-			const years = Math.floor(diffDays / 365);
-			relativeStr = `${years} year${years > 1 ? 's' : ''} ago`;
-		}
-
-		return `${dateStr} ${timeStr} (${relativeStr})`;
 	}
 </script>
 
