@@ -3,6 +3,9 @@
 	import { createConnectStore } from '$lib/stores/connect.svelte';
 	import { mainnet, polygon, arbitrum, optimism, base, bsc } from 'viem/chains';
 	import PageLayout from '$lib/components/page-layout.svelte';
+	import { useI18n } from '@shelchin/i18n/svelte';
+
+	const i18n = useI18n();
 
 	// 初始化 wallet connect store
 	createConnectStore({
@@ -11,7 +14,8 @@
 		appUrl: 'https://biubiu.tools',
 		appLogoUrl: 'https://biubiu.tools/logo.svg',
 		chains: [mainnet, polygon, base, bsc, arbitrum, optimism],
-		storageKey: 'biubiu-tools-drain-balance'
+		storageKey: 'biubiu-tools-drain-balance',
+		i18n
 	});
 </script>
 

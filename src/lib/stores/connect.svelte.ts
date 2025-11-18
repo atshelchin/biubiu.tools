@@ -11,6 +11,7 @@ import { createPublicClient, createWalletClient, custom, http } from 'viem';
 import type { Address, Hash, TransactionReceipt } from 'viem';
 import { createWalletManager } from '$lib/utils/wallet-manager';
 import { getContext, setContext } from 'svelte';
+import type { I18n } from '@shelchin/i18n';
 
 const CONNECT_STORE_KEY = Symbol('connect-store');
 
@@ -21,9 +22,11 @@ interface ConnectStoreConfig {
 	appLogoUrl: string;
 	chains: Chain[];
 	storageKey?: string;
+	i18n: I18n;
 }
 
 export function createConnectStore(config: ConnectStoreConfig) {
+	const { i18n } = config;
 	// 创建 wallet manager
 	const manager = createWalletManager({
 		projectId: config.projectId,
@@ -184,41 +187,45 @@ export function createConnectStore(config: ConnectStoreConfig) {
 				const unsupportedChainId = chainIdMatch ? chainIdMatch[1] : chainId.toString();
 				const connectorName = connectorMatch ? connectorMatch[1] : connector.name;
 				const network = networks.find((n) => n.chainId === chainId);
+				const networkName = network?.name || `Chain ${unsupportedChainId}`;
 
 				connectionError = {
-					message: `${connectorName} doesn't support ${network?.name || `Chain ${unsupportedChainId}`}`,
-					details: `The wallet you selected cannot connect to ${network?.name || 'this network'}. Different wallets support different blockchain networks.`,
+					message: i18n.t('wallet.errors.chain_not_supported', { connectorName, networkName }),
+					details: i18n.t('wallet.errors.chain_not_supported_details', { networkName }),
 					solutions: [
-						`Select a different network that ${connectorName} supports`,
-						'Try connecting with a different wallet that supports this network',
-						'Check the wallet documentation for supported networks'
+						i18n.t('wallet.errors.chain_not_supported_solution_1', { connectorName }),
+						i18n.t('wallet.errors.chain_not_supported_solution_2'),
+						i18n.t('wallet.errors.chain_not_supported_solution_3')
 					]
 				};
 			}
 			// User rejected request
 			else if (errorMessage.includes('User rejected') || errorMessage.includes('rejected')) {
 				connectionError = {
-					message: 'Connection request was rejected',
-					details: 'You declined the wallet connection request.',
-					solutions: ['Click "Connect Wallet" again when you are ready to connect']
+					message: i18n.t('wallet.errors.user_rejected'),
+					details: i18n.t('wallet.errors.user_rejected_details'),
+					solutions: [i18n.t('wallet.errors.user_rejected_solution')]
 				};
 			}
 			// Generic error
 			else {
 				connectionError = {
-					message: 'Failed to connect wallet',
+					message: i18n.t('wallet.errors.connection_failed'),
 					details: errorMessage,
 					solutions: [
-						'Make sure your wallet extension is installed and unlocked',
-						'Try refreshing the page',
-						'Try a different wallet'
+						i18n.t('wallet.errors.connection_failed_solution_1'),
+						i18n.t('wallet.errors.connection_failed_solution_2'),
+						i18n.t('wallet.errors.connection_failed_solution_3')
 					]
 				};
 			}
 		} else {
 			connectionError = {
-				message: 'An unexpected error occurred',
-				solutions: ['Please try again', 'Try refreshing the page']
+				message: i18n.t('wallet.errors.unexpected_error'),
+				solutions: [
+					i18n.t('wallet.errors.unexpected_error_solution_1'),
+					i18n.t('wallet.errors.unexpected_error_solution_2')
+				]
 			};
 		}
 	}
@@ -383,17 +390,17 @@ export function createConnectStore(config: ConnectStoreConfig) {
 	// Update wallet's network RPC configuration
 	async function updateWalletNetwork(chainId: number) {
 		if (!isConnected || !connectionState.connector) {
-			throw new Error('Wallet not connected');
+			throw new Error(i18n.t('wallet.errors.wallet_not_connected'));
 		}
 
 		const network = enabledNetworks().find((n) => n.chainId === chainId);
 		if (!network) {
-			throw new Error('Network not found or not enabled');
+			throw new Error(i18n.t('wallet.errors.network_not_found'));
 		}
 
 		const provider = await connectionState.connector.getProvider();
 		if (!provider || !provider.request) {
-			throw new Error('Provider not available');
+			throw new Error(i18n.t('wallet.errors.provider_not_available'));
 		}
 
 		// Build wallet_addEthereumChain parameters
@@ -431,25 +438,25 @@ export function createConnectStore(config: ConnectStoreConfig) {
 		gas?: bigint;
 	}): Promise<Hash> {
 		if (!isConnected || !connectionState.connector) {
-			throw new Error('Wallet not connected');
+			throw new Error(i18n.t('wallet.errors.wallet_not_connected'));
 		}
 		console.log('send', params.to, params.value, params.data);
 
 		if (!currentChainId) {
-			throw new Error('No chain connected');
+			throw new Error(i18n.t('wallet.errors.no_chain_connected'));
 		}
 
 		const connector = connectionState.connector;
 		const provider = await connector.getProvider();
 
 		if (!provider) {
-			throw new Error('Provider not available');
+			throw new Error(i18n.t('wallet.errors.provider_not_available'));
 		}
 
 		// Get current network from enabled networks
 		const network = enabledNetworks().find((n) => n.chainId === currentChainId);
 		if (!network) {
-			throw new Error('Current network not found or not enabled');
+			throw new Error(i18n.t('wallet.errors.network_not_enabled'));
 		}
 
 		console.log({ network });
@@ -496,13 +503,13 @@ export function createConnectStore(config: ConnectStoreConfig) {
 
 	async function waitForTransaction(hash: Hash): Promise<TransactionReceipt> {
 		if (!currentChainId) {
-			throw new Error('No chain connected');
+			throw new Error(i18n.t('wallet.errors.no_chain_connected'));
 		}
 
 		// Get current network from enabled networks
 		const network = enabledNetworks().find((n) => n.chainId === currentChainId);
 		if (!network || network.rpcEndpoints.length === 0) {
-			throw new Error('Current network not found, not enabled, or no RPC endpoint available');
+			throw new Error(i18n.t('wallet.errors.no_rpc_endpoint'));
 		}
 
 		const rpcUrl = network.rpcEndpoints[0].url;
@@ -539,13 +546,13 @@ export function createConnectStore(config: ConnectStoreConfig) {
 
 	async function sendRawTransaction(signedTx: `0x${string}`): Promise<Hash> {
 		if (!currentChainId) {
-			throw new Error('No chain connected');
+			throw new Error(i18n.t('wallet.errors.no_chain_connected'));
 		}
 
 		// Get current network from enabled networks
 		const network = enabledNetworks().find((n) => n.chainId === currentChainId);
 		if (!network || network.rpcEndpoints.length === 0) {
-			throw new Error('Current network not found, not enabled, or no RPC endpoint available');
+			throw new Error(i18n.t('wallet.errors.no_rpc_endpoint'));
 		}
 
 		const rpcUrl = network.rpcEndpoints[0].url;
@@ -586,25 +593,25 @@ export function createConnectStore(config: ConnectStoreConfig) {
 	 */
 	async function getWalletClient() {
 		if (!isConnected || !connectionState.connector) {
-			throw new Error('Wallet not connected');
+			throw new Error(i18n.t('wallet.errors.wallet_not_connected'));
 		}
 
 		if (!currentChainId) {
-			throw new Error('No chain connected');
+			throw new Error(i18n.t('wallet.errors.no_chain_connected'));
 		}
 
 		const connector = connectionState.connector;
 		const provider = connector.getProvider();
 
 		if (!provider) {
-			throw new Error('Provider not available');
+			throw new Error(i18n.t('wallet.errors.provider_not_available'));
 		}
 
 		const network = enabledNetworks().find(
 			(n: { chainId: number }) => n.chainId === currentChainId
 		);
 		if (!network) {
-			throw new Error('Current network not found or not enabled');
+			throw new Error(i18n.t('wallet.errors.network_not_enabled'));
 		}
 
 		const chain = {

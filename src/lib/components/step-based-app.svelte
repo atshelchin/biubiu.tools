@@ -64,6 +64,7 @@
 	import StepIndicator, { createStepManager } from '$lib/components/ui/step-indicator.svelte';
 	import StepControls from '$lib/components/ui/step-controls.svelte';
 	import Faqs from '$lib/components/ui/faqs.svelte';
+	import { useI18n } from '@shelchin/i18n/svelte';
 
 	interface Props {
 		config: StepBasedAppConfig;
@@ -72,12 +73,15 @@
 
 	let { config, toolbarActions }: Props = $props();
 
+	const i18n = useI18n();
+
 	// Initialize wallet connect if configured
 	if (config.walletConnect) {
 		const store = createConnectStore(
 			createConnectConfig({
 				chains: config.walletConnect.chains,
-				storageKey: config.walletConnect.storageKey
+				storageKey: config.walletConnect.storageKey,
+				i18n
 			})
 		);
 		// Initialize the store to load networks and set up wallet detection
