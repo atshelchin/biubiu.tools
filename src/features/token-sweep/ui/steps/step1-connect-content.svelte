@@ -61,7 +61,11 @@
 		border: 2px solid var(--color-border);
 		min-height: 200px;
 	}
-
+	.step-content {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-5);
+	}
 	.loading-spinner {
 		width: 48px;
 		height: 48px;

@@ -26,7 +26,7 @@
 		justify-content: space-between;
 		align-items: flex-start;
 		gap: var(--space-4);
-		margin-bottom: var(--space-4);
+		/* margin-bottom: var(--space-4); */
 	}
 
 	.content-header-text {

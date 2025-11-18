@@ -144,6 +144,7 @@
 		{#if typeof window !== 'undefined' && window.location.hostname === 'localhost'}
 			<StepControls manager={stepManager} />
 		{/if}
+
 		<ContentComponent />
 	</div>
 	<FooterComponent />
