@@ -202,10 +202,6 @@
 		/* background: var(--gray-100); */
 	}
 
-	:global([data-theme='dark']) .check-icon {
-		/* background: var(--gray-700); */
-	}
-
 	.check-icon :global(svg) {
 		color: var(--gray-500);
 	}

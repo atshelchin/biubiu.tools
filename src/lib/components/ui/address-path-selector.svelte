@@ -164,12 +164,12 @@
 	<!-- Path Type Selection -->
 	<div class="path-type-grid">
 		{#each pathOptions as option (option.type)}
+			{@const Icon = option.icon}
 			<button
 				class="path-type-card"
 				class:selected={pathType === option.type}
 				onclick={() => handlePathTypeChange(option.type)}
 			>
-				{@const Icon = option.icon}
 				<div class="path-icon">
 					<Icon size={24} />
 				</div>

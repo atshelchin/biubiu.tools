@@ -654,13 +654,13 @@
 	<!-- Wallet List -->
 	<div class="form-section">
 		<div class="wallet-list-header">
-			<label class="form-label">
+			<div class="form-label">
 				Imported Wallets
 				<span class="wallet-count">({walletCount})</span>
 				{#if hasScanned}
 					<span class="balance-badge">{walletsWithBalance} with balance</span>
 				{/if}
-			</label>
+			</div>
 			<div class="wallet-actions">
 				{#if walletCount > 0}
 					<button
