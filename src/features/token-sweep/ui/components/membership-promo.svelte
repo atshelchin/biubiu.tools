@@ -22,13 +22,13 @@
 		compact?: boolean;
 	}
 
-	let { currentPrice, compact = false }: Props = $props();
+	let { currentPrice, networkSymbol = 'ETH', compact = false }: Props = $props();
 
 	const connectStore = useConnectStore();
 	const BIUBIU_PREMIUM_CONTRACT = '0xc5c4bb399938625523250B708dc5c1e7dE4b1626' as Address;
 
-	// If currentPrice is not provided, show generic text
-	let displayPrice = $derived(currentPrice || 'Pay per use');
+	// If currentPrice is not provided, show generic text with network symbol
+	let displayPrice = $derived(currentPrice || `Pay per use (${networkSymbol})`);
 
 	let showModal = $state(false);
 

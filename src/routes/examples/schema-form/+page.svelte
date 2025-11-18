@@ -184,7 +184,8 @@ const schema: FormSchema = {
       }
     }
   ]
-};`}</code>
+};`}</code
+				>
 </pre>
 		</section>
 
@@ -204,7 +205,8 @@ const customComponents = {
   name: 'color',
   type: 'colorPicker', // 字符串类型
   label: '选择颜色'
-}`}</code></pre>
+}`}</code
+				></pre>
 		</section>
 	</div>
 

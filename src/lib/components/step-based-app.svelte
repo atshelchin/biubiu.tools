@@ -80,6 +80,7 @@
 			createConnectConfig({
 				chains: config.walletConnect.chains,
 				storageKey: config.walletConnect.storageKey,
+				// eslint-disable-next-line @typescript-eslint/no-explicit-any
 				i18n: i18n as any
 			})
 		);

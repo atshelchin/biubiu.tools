@@ -235,6 +235,7 @@ const form = useFormState({
 								<div class="strength-indicator">
 									<span class="strength-label">强度:</span>
 									<div class="strength-bar">
+										<!-- eslint-disable-next-line @typescript-eslint/no-unused-vars -->
 										{#each Array(5) as _, i (i)}
 											<div
 												class="strength-segment"

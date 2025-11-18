@@ -29,6 +29,7 @@
 	let isAddingToken = $state(false);
 	let fetchStatus = $state<'idle' | 'loading' | 'success' | 'error'>('idle');
 	let errorMessage = $state('');
+	// eslint-disable-next-line svelte/no-unnecessary-state-wrap -- SvelteSet needs $state wrapper when being mutated to trigger reactivity
 	let fetchedFields = $state(new SvelteSet<string>());
 	// ERC20 ABI for fetching token info
 	const ERC20_ABI = [

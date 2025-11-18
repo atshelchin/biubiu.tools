@@ -10,6 +10,7 @@
 	let generating = $state(false);
 	let error = $state<string | null>(null);
 	let showPrivateKeys = $state(false);
+	// eslint-disable-next-line svelte/no-unnecessary-state-wrap -- SvelteSet needs $state wrapper when being mutated to trigger reactivity
 	let selectedWallets = $state(new SvelteSet<number>());
 
 	// Start generation on mount if no wallets exist
