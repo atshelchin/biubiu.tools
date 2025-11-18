@@ -107,6 +107,13 @@
 					"view_deployment_guide": "View Deployment Guide",
 					"deploy_coming_soon": "Deploy Contract (Coming Soon)",
 					"deploy_contract": "Deploy {contractName}",
+					"deployment": {
+						"deploying_contract": "Deploying Contract...",
+						"waiting_for_signature": "⏳ Please confirm transaction in your wallet...",
+						"transaction_sent": "⚡ Transaction sent! Waiting for blockchain confirmation...",
+						"finalizing": "✅ Finalizing deployment...",
+						"confirm_in_wallet": "Please confirm transactions in your wallet"
+					},
 					"checks": {
 						"rpc_endpoint": {
 							"name": "RPC Endpoint",

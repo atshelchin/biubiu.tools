@@ -1,8 +1,13 @@
 <script lang="ts">
 	import { useConnectStore } from '$lib/stores/connect.svelte';
-	import { CheckCircle2, XCircle, AlertCircle, Loader2, ExternalLink } from '@lucide/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import Modal from '@/lib/components/ui/modal.svelte';
 	import ContractDetails from '@/lib/components/ui/contract-details.svelte';
+	import DeploymentSteps from '@/lib/components/ui/deployment-steps.svelte';
+	import DeploymentSuccess from '@/lib/components/ui/deployment-success.svelte';
+	import DeploymentError from '@/lib/components/ui/deployment-error.svelte';
+	import DeploymentProgress from '@/lib/components/ui/deployment-progress.svelte';
+	import ActionButton from '@/lib/components/ui/action-button.svelte';
 	import type { ContractDeploymentConfig, DeploymentContext } from '../types/deployment-config';
 
 	interface Props {
@@ -28,6 +33,7 @@
 	}: Props = $props();
 
 	const connectStore = useConnectStore();
+	const i18n = useI18n();
 
 	// Check if current connector is MetaMask
 	const isMetaMask = $derived(() => {
@@ -259,216 +265,39 @@
 				/>
 
 				{#if steps.length > 0}
-					<div class="deployment-steps">
-						<h4>Deployment Steps:</h4>
-						<ol>
-							{#each steps as step (step.title)}
-								<li>
-									<strong>{step.title}</strong>
-									<p>{step.description}</p>
-								</li>
-							{/each}
-						</ol>
-					</div>
+					<DeploymentSteps {steps} />
 				{/if}
 
-				<button class="action-button primary" onclick={handleDeploy}> Start Deployment </button>
+				<ActionButton onclick={handleDeploy}>Start Deployment</ActionButton>
 			</div>
 		{:else if status === 'deploying'}
-			<div class="deploying-section">
-				<Loader2 size={48} class="spinning" />
-				<h3>Deploying Contract...</h3>
-				{#if isWaitingForSignature}
-					<p class="status-text waiting">⏳ Please confirm transaction in your wallet...</p>
-				{:else if steps.some((s) => s.inProgress)}
-					<p class="status-text processing">
-						⚡ Transaction sent! Waiting for blockchain confirmation...
-					</p>
-				{:else if steps.every((s) => s.completed)}
-					<p class="status-text success">✅ Finalizing deployment...</p>
-				{:else}
-					<p class="status-text">Please confirm transactions in your wallet</p>
-				{/if}
-
-				{#if steps.length > 0}
-					<div class="step-progress">
-						{#each steps as step, index (step.title)}
-							<div
-								class="step-item"
-								class:completed={step.completed}
-								class:in-progress={step.inProgress}
-							>
-								<div class="step-marker">
-									{#if step.completed}
-										<CheckCircle2 size={20} />
-									{:else if step.inProgress}
-										<Loader2 size={20} class="spinning" />
-									{:else}
-										{index + 1}
-									{/if}
-								</div>
-								<div class="step-info">
-									<strong>{step.title}</strong>
-									<p>{step.description}</p>
-								</div>
-							</div>
-						{/each}
-					</div>
-				{/if}
-			</div>
+			<DeploymentProgress
+				{steps}
+				{isWaitingForSignature}
+				title={i18n.t('tools.token_sweep.step2.content.deployment.deploying_contract')}
+				messages={{
+					waitingForSignature: i18n.t(
+						'tools.token_sweep.step2.content.deployment.waiting_for_signature'
+					),
+					transactionSent: i18n.t('tools.token_sweep.step2.content.deployment.transaction_sent'),
+					finalizing: i18n.t('tools.token_sweep.step2.content.deployment.finalizing'),
+					confirmInWallet: i18n.t('tools.token_sweep.step2.content.deployment.confirm_in_wallet')
+				}}
+			/>
 		{:else if status === 'success'}
-			<div class="success-section">
-				<CheckCircle2 size={64} />
-				<h3>Deployment Successful!</h3>
-				<p>The contract has been successfully deployed.</p>
-				<div class="deployed-address">
-					<code>{config.contractAddress}</code>
-					{#if blockExplorer}
-						<a
-							href="{blockExplorer}/address/{config.contractAddress}"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="explorer-link large"
-						>
-							<ExternalLink size={16} />
-							View on Explorer
-						</a>
-					{/if}
-				</div>
-			</div>
+			<DeploymentSuccess contractAddress={config.contractAddress} {blockExplorer} />
 		{:else if status === 'error'}
-			<div class="error-section">
-				<XCircle size={64} />
-				<h3>Deployment Failed</h3>
-				{#if errorMessage}
-					<p class="error-message">{errorMessage}</p>
-				{/if}
-
-				{#if showClearCacheSteps}
-					<div class="clear-cache-guide">
-						<div class="guide-header">
-							<AlertCircle size={20} />
-							<h4>Clear MetaMask Cache</h4>
-						</div>
-						<p class="guide-description">Follow these steps to clear cached data:</p>
-						<div class="steps-list">
-							<div class="step-item">
-								<span class="step-number">1</span>
-								<div class="step-content">
-									<strong>Open MetaMask Settings</strong>
-									<p>Click the menu icon → Settings</p>
-								</div>
-							</div>
-							<div class="step-item">
-								<span class="step-number">2</span>
-								<div class="step-content">
-									<strong>Go to Advanced Settings</strong>
-									<p>Navigate to: Advanced</p>
-								</div>
-							</div>
-							<div class="step-item">
-								<span class="step-number">3</span>
-								<div class="step-content">
-									<strong>Clear Activity Tab Data</strong>
-									<p>Click "Clear activity tab data" and confirm</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				{/if}
-
-				<button class="action-button secondary" onclick={handleRetry}> Try Again </button>
-			</div>
+			<DeploymentError
+				errorMessage={errorMessage ?? undefined}
+				showClearCacheGuide={showClearCacheSteps}
+				onRetry={handleRetry}
+			/>
 		{/if}
 	{/snippet}
 </Modal>
 
 <style>
-	/* Modal structure now handled by Modal component */
-	/* Content-specific styles below */
-
-	.action-button {
-		width: 100%;
-		padding: var(--space-4) var(--space-5);
-		border-radius: var(--radius-lg);
-		font-size: var(--text-lg);
-		font-weight: var(--font-bold);
-		cursor: pointer;
-		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-		border: none;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: var(--space-2);
-		position: relative;
-		overflow: hidden;
-	}
-
-	.action-button::before {
-		content: '';
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 0;
-		height: 0;
-		border-radius: 50%;
-		background: rgba(255, 255, 255, 0.3);
-		transform: translate(-50%, -50%);
-		transition:
-			width 0.6s,
-			height 0.6s;
-	}
-
-	.action-button:hover::before {
-		width: 300px;
-		height: 300px;
-	}
-
-	.action-button.primary {
-		background: linear-gradient(135deg, hsl(220, 70%, 55%) 0%, hsl(250, 70%, 60%) 100%);
-		color: white;
-		box-shadow: 0 4px 12px hsla(230, 70%, 55%, 0.4);
-	}
-
-	.action-button.primary:hover:not(:disabled) {
-		transform: translateY(-2px);
-		box-shadow: 0 8px 20px hsla(230, 70%, 55%, 0.5);
-	}
-
-	.action-button.primary:active:not(:disabled) {
-		transform: translateY(0);
-	}
-
-	.action-button.secondary {
-		background: var(--gray-200);
-		color: var(--gray-700);
-		border: 1px solid var(--color-border);
-	}
-
-	:global([data-theme='dark']) .action-button.secondary {
-		background: var(--gray-800);
-		color: var(--gray-200);
-		border-color: var(--gray-700);
-	}
-
-	.action-button.secondary:hover:not(:disabled) {
-		background: var(--gray-300);
-		transform: translateY(-1px);
-	}
-
-	:global([data-theme='dark']) .action-button.secondary:hover:not(:disabled) {
-		background: var(--gray-700);
-	}
-
-	.action-button:disabled {
-		opacity: 0.5;
-		cursor: not-allowed;
-	}
-
-	.info-section,
-	.deploying-section,
-	.success-section,
-	.error-section {
+	.info-section {
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-5);
@@ -488,46 +317,6 @@
 		}
 	}
 
-	.deploying-section :global(.spinning) {
-		color: hsl(220, 70%, 55%);
-		filter: drop-shadow(0 0 8px hsla(220, 70%, 55%, 0.5));
-	}
-
-	.success-section :global(svg) {
-		color: hsl(120, 60%, 45%);
-		filter: drop-shadow(0 0 12px hsla(120, 60%, 50%, 0.6));
-		animation: successPop 0.6s ease-out;
-	}
-
-	@keyframes successPop {
-		0% {
-			transform: scale(0);
-			opacity: 0;
-		}
-		50% {
-			transform: scale(1.2);
-		}
-		100% {
-			transform: scale(1);
-			opacity: 1;
-		}
-	}
-
-	.error-section :global(svg) {
-		color: hsl(0, 70%, 55%);
-		filter: drop-shadow(0 0 12px hsla(0, 70%, 50%, 0.5));
-	}
-
-	.success-section h3,
-	.deploying-section h3 {
-		background: linear-gradient(135deg, hsl(220, 70%, 55%) 0%, hsl(250, 70%, 60%) 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		font-size: var(--text-2xl);
-		font-weight: var(--font-bold);
-	}
-
 	.contract-description {
 		color: var(--gray-600);
 		line-height: 1.6;
@@ -535,356 +324,6 @@
 
 	:global([data-theme='dark']) .contract-description {
 		color: var(--gray-400);
-	}
-
-	.status-text {
-		margin: var(--space-2) 0;
-		line-height: 1.6;
-	}
-
-	.status-text.waiting {
-		color: hsl(45, 100%, 40%);
-		font-weight: var(--font-medium);
-	}
-
-	:global([data-theme='dark']) .status-text.waiting {
-		color: hsl(45, 100%, 70%);
-	}
-
-	.status-text.processing {
-		color: hsl(210, 100%, 45%);
-		font-weight: var(--font-medium);
-	}
-
-	:global([data-theme='dark']) .status-text.processing {
-		color: hsl(210, 100%, 70%);
-	}
-
-	.status-text.success {
-		color: hsl(120, 60%, 40%);
-		font-weight: var(--font-medium);
-	}
-
-	:global([data-theme='dark']) .status-text.success {
-		color: hsl(120, 60%, 65%);
-	}
-
-	/* Removed .contract-details, .detail-row, .label, .value, .address-value styles */
-	/* Now handled by ContractDetails component */
-
-	.explorer-link {
-		display: inline-flex;
-		align-items: center;
-		gap: var(--space-1);
-		padding: 4px;
-		color: var(--color-primary);
-		background: var(--color-panel-1);
-		border-radius: var(--radius-sm);
-		transition: all 0.2s;
-		text-decoration: none;
-	}
-
-	.explorer-link:hover {
-		background: var(--color-primary);
-		color: white;
-	}
-
-	.deployment-steps {
-		width: 100%;
-		text-align: left;
-		background: var(--color-panel-2);
-		padding: var(--space-4);
-		border-radius: var(--radius-lg);
-		border: 1px solid var(--color-border);
-	}
-
-	:global([data-theme='dark']) .deployment-steps {
-		background: rgba(255, 255, 255, 0.02);
-		border-color: rgba(255, 255, 255, 0.1);
-	}
-
-	.deployment-steps h4 {
-		margin-bottom: var(--space-3);
-		font-size: var(--text-base);
-		font-weight: var(--font-semibold);
-		color: var(--gray-800);
-	}
-
-	:global([data-theme='dark']) .deployment-steps h4 {
-		color: var(--gray-200);
-	}
-
-	.deployment-steps ol {
-		margin: 0;
-		padding-left: var(--space-5);
-		counter-reset: step-counter;
-	}
-
-	.deployment-steps li {
-		margin-bottom: var(--space-3);
-		position: relative;
-		counter-increment: step-counter;
-	}
-
-	.deployment-steps li:last-child {
-		margin-bottom: 0;
-	}
-
-	.deployment-steps li::marker {
-		font-weight: var(--font-bold);
-		color: hsl(220, 70%, 55%);
-	}
-
-	.deployment-steps li strong {
-		display: block;
-		margin-bottom: var(--space-1);
-		color: var(--gray-800);
-	}
-
-	:global([data-theme='dark']) .deployment-steps li strong {
-		color: var(--gray-100);
-	}
-
-	.deployment-steps li p {
-		margin: 0;
-		color: var(--gray-600);
-		font-size: var(--text-sm);
-		line-height: 1.5;
-	}
-
-	:global([data-theme='dark']) .deployment-steps li p {
-		color: var(--gray-400);
-	}
-
-	.step-progress {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-3);
-		background: var(--color-panel-2);
-		padding: var(--space-4);
-		border-radius: var(--radius-lg);
-		border: 1px solid var(--color-border);
-	}
-
-	:global([data-theme='dark']) .step-progress {
-		background: rgba(255, 255, 255, 0.02);
-		border-color: rgba(255, 255, 255, 0.1);
-	}
-
-	.step-item {
-		display: flex;
-		gap: var(--space-3);
-		align-items: flex-start;
-		padding: var(--space-3);
-		border-radius: var(--radius-md);
-		background: rgba(0, 0, 0, 0.02);
-		transition: all 0.3s ease;
-		opacity: 0.6;
-	}
-
-	:global([data-theme='dark']) .step-item {
-		background: rgba(255, 255, 255, 0.02);
-	}
-
-	.step-item.in-progress {
-		opacity: 1;
-		background: hsla(220, 70%, 55%, 0.1);
-		border: 2px solid hsla(220, 70%, 55%, 0.3);
-	}
-
-	.step-item.completed {
-		opacity: 1;
-		background: hsla(120, 60%, 50%, 0.1);
-		animation: stepComplete 0.5s ease-out;
-	}
-
-	@keyframes stepComplete {
-		0% {
-			transform: scale(0.95);
-		}
-		50% {
-			transform: scale(1.02);
-		}
-		100% {
-			transform: scale(1);
-		}
-	}
-
-	.step-marker {
-		width: 40px;
-		height: 40px;
-		border-radius: 50%;
-		background: var(--gray-300);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-weight: var(--font-bold);
-		flex-shrink: 0;
-		font-size: var(--text-lg);
-		transition: all 0.3s ease;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	}
-
-	:global([data-theme='dark']) .step-marker {
-		background: var(--gray-700);
-	}
-
-	.step-item.in-progress .step-marker {
-		background: linear-gradient(135deg, hsl(220, 70%, 55%) 0%, hsl(250, 70%, 60%) 100%);
-		color: white;
-		box-shadow: 0 4px 12px hsla(220, 70%, 55%, 0.4);
-	}
-
-	.step-item.completed .step-marker {
-		background: linear-gradient(135deg, hsl(120, 60%, 50%) 0%, hsl(120, 60%, 40%) 100%);
-		color: white;
-		box-shadow: 0 4px 12px hsla(120, 60%, 50%, 0.4);
-		animation: pulse 0.5s ease-out;
-	}
-
-	@keyframes pulse {
-		0% {
-			transform: scale(1);
-		}
-		50% {
-			transform: scale(1.1);
-		}
-		100% {
-			transform: scale(1);
-		}
-	}
-
-	.step-info {
-		flex: 1;
-		text-align: left;
-	}
-
-	.step-info strong {
-		display: block;
-		margin-bottom: var(--space-1);
-	}
-
-	.step-info p {
-		margin: 0;
-		font-size: var(--text-sm);
-		color: var(--gray-600);
-	}
-
-	:global([data-theme='dark']) .step-info p {
-		color: var(--gray-400);
-	}
-
-	.error-message {
-		color: hsl(0, 80%, 50%);
-		line-height: 1.8;
-		white-space: pre-line;
-		text-align: left;
-		max-width: 100%;
-	}
-
-	:global([data-theme='dark']) .error-message {
-		color: hsl(0, 80%, 70%);
-	}
-
-	.clear-cache-guide {
-		margin: var(--space-4) 0;
-		padding: var(--space-4);
-		background: hsla(45, 100%, 95%, 1);
-		border: 2px solid hsl(45, 100%, 50%);
-		border-radius: var(--radius-md);
-		width: 100%;
-		text-align: left;
-	}
-
-	:global([data-theme='dark']) .clear-cache-guide {
-		background: hsla(45, 100%, 15%, 0.5);
-		border-color: hsl(45, 100%, 40%);
-	}
-
-	.guide-header {
-		display: flex;
-		align-items: center;
-		gap: var(--space-2);
-		margin-bottom: var(--space-3);
-		color: hsl(45, 100%, 30%);
-	}
-
-	:global([data-theme='dark']) .guide-header {
-		color: hsl(45, 100%, 70%);
-	}
-
-	.guide-header h4 {
-		margin: 0;
-		font-size: var(--text-base);
-		font-weight: var(--font-semibold);
-	}
-
-	.guide-description {
-		margin: 0 0 var(--space-3) 0;
-		color: hsl(45, 100%, 25%);
-		font-size: var(--text-sm);
-	}
-
-	:global([data-theme='dark']) .guide-description {
-		color: hsl(45, 100%, 75%);
-	}
-
-	.steps-list {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-3);
-	}
-
-	.steps-list .step-item {
-		display: flex;
-		gap: var(--space-3);
-		align-items: flex-start;
-		opacity: 1;
-	}
-
-	.step-number {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 32px;
-		height: 32px;
-		border-radius: 50%;
-		background: hsl(45, 100%, 50%);
-		color: white;
-		font-weight: var(--font-bold);
-		font-size: var(--text-sm);
-		flex-shrink: 0;
-	}
-
-	:global([data-theme='dark']) .step-number {
-		background: hsl(45, 100%, 45%);
-	}
-
-	.step-content {
-		flex: 1;
-	}
-
-	.step-content strong {
-		display: block;
-		margin-bottom: var(--space-1);
-		color: hsl(45, 100%, 20%);
-		font-size: var(--text-sm);
-	}
-
-	:global([data-theme='dark']) .step-content strong {
-		color: hsl(45, 100%, 80%);
-	}
-
-	.step-content p {
-		margin: 0;
-		color: hsl(45, 100%, 30%);
-		font-size: var(--text-xs);
-		line-height: 1.5;
-	}
-
-	:global([data-theme='dark']) .step-content p {
-		color: hsl(45, 100%, 70%);
 	}
 
 	:global(.spinning) {

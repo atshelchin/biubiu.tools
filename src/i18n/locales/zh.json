@@ -107,6 +107,13 @@
 					"view_deployment_guide": "查看部署指南",
 					"deploy_coming_soon": "部署合约（即将推出）",
 					"deploy_contract": "部署 {contractName}",
+					"deployment": {
+						"deploying_contract": "正在部署合约...",
+						"waiting_for_signature": "⏳ 请在钱包中确认交易...",
+						"transaction_sent": "⚡ 交易已发送！等待区块链确认...",
+						"finalizing": "✅ 正在完成部署...",
+						"confirm_in_wallet": "请在钱包中确认交易"
+					},
 					"checks": {
 						"rpc_endpoint": {
 							"name": "RPC 节点",

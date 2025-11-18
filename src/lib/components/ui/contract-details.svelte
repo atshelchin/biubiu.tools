@@ -57,13 +57,14 @@
 
 <style>
 	.contract-details {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-3);
+		width: 100%;
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: var(--space-3) var(--space-4);
 		padding: var(--space-4);
-		background: var(--gray-50);
+		background: var(--gray-200);
 		border-radius: var(--radius-lg);
-		border: 1px solid var(--color-border);
+		align-items: start;
 	}
 
 	:global([data-theme='dark']) .contract-details {
@@ -71,17 +72,15 @@
 	}
 
 	.detail-row {
-		display: flex;
-		gap: var(--space-3);
-		align-items: center;
-		font-size: var(--text-sm);
+		display: contents;
 	}
 
 	.label {
 		font-weight: var(--font-semibold);
 		color: var(--gray-600);
-		min-width: 140px;
-		flex-shrink: 0;
+		font-size: var(--text-sm);
+		white-space: nowrap;
+		padding-top: 2px;
 	}
 
 	:global([data-theme='dark']) .label {
@@ -90,7 +89,8 @@
 
 	.value {
 		color: var(--gray-900);
-		flex: 1;
+		font-size: var(--text-sm);
+		word-break: break-word;
 	}
 
 	:global([data-theme='dark']) .value {
@@ -98,28 +98,26 @@
 	}
 
 	.address-value {
-		flex: 1;
 		display: flex;
 		align-items: center;
 		gap: var(--space-2);
+		min-width: 0;
 	}
 
 	code {
 		font-family: var(--font-mono, monospace);
 		font-size: var(--text-xs);
 		color: var(--gray-700);
-		background: var(--gray-50);
+		/* background: var(--white); */
 		padding: var(--space-2) var(--space-3);
 		border-radius: var(--radius-md);
-		border: 1px solid var(--color-border);
 		word-break: break-all;
 		flex: 1;
 	}
 
 	:global([data-theme='dark']) code {
 		color: var(--gray-300);
-		background: var(--gray-900);
-		border-color: var(--gray-700);
+		/* background: var(--gray-800); */
 	}
 
 	.explorer-link {
@@ -128,8 +126,7 @@
 		justify-content: center;
 		padding: var(--space-2);
 		color: var(--gray-600);
-		background: var(--gray-50);
-		border: 1px solid var(--color-border);
+		/* background: var(--white); */
 		border-radius: var(--radius-md);
 		transition: all 0.2s ease;
 		flex-shrink: 0;
@@ -141,25 +138,56 @@
 	}
 
 	:global([data-theme='dark']) .explorer-link {
-		background: var(--gray-900);
-		border-color: var(--gray-700);
+		/* background: var(--gray-800); */
 		color: var(--gray-400);
 	}
 
 	:global([data-theme='dark']) .explorer-link:hover {
-		background: var(--gray-800);
+		background: var(--gray-700);
 		color: var(--color-primary);
 	}
 
+	/* Responsive: Hide labels on small screens for cleaner look */
 	@media (max-width: 640px) {
-		.detail-row {
+		.contract-details {
+			display: flex;
 			flex-direction: column;
-			align-items: flex-start;
-			gap: var(--space-1);
+			gap: var(--space-2);
+			padding: var(--space-3);
+		}
+
+		.detail-row {
+			display: block;
 		}
 
 		.label {
-			min-width: auto;
+			display: none;
+		}
+
+		.value {
+			font-size: var(--text-sm);
+		}
+
+		.address-value {
+			flex-wrap: wrap;
+		}
+
+		code {
+			font-size: 11px;
+			padding: 0px;
+			/* padding: var(--space-1-5) var(--space-2-5); */
+			word-break: break-all;
+		}
+
+		.explorer-link {
+			padding: var(--space-1-5);
+		}
+	}
+
+	/* Tablet: Optimize spacing */
+	@media (min-width: 641px) and (max-width: 1024px) {
+		.contract-details {
+			gap: var(--space-2) var(--space-3);
 		}
 	}
 </style>
