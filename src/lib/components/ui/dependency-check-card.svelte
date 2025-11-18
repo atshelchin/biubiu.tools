@@ -73,11 +73,13 @@
 	</div>
 
 	<div class="check-details">
-		{#if check.message}
+		<!-- Only show error/warning messages, not success messages -->
+		{#if check.message && (check.status === 'error' || check.status === 'warning')}
 			<p class="check-message">{check.message}</p>
 		{/if}
 
-		{#if check.type === 'contract' && check.address}
+		<!-- Only show address details for failed contract checks -->
+		{#if check.type === 'contract' && check.address && check.status === 'error'}
 			<div class="detail-row">
 				<span class="label">{addressLabel}</span>
 				<div class="detail-value">
@@ -97,7 +99,8 @@
 			</div>
 		{/if}
 
-		{#if check.type === 'network-service' && check.endpoint}
+		<!-- Only show endpoint details for failed network service checks -->
+		{#if check.type === 'network-service' && check.endpoint && check.status === 'error'}
 			<div class="detail-row">
 				<span class="label">{endpointLabel}</span>
 				<div class="detail-value">
@@ -175,11 +178,7 @@
 
 	:global([data-theme='dark']) .check-card.success {
 		border-color: hsl(120, 60%, 40%);
-		background: linear-gradient(
-			135deg,
-			hsla(120, 60%, 10%, 0.4) 0%,
-			hsla(120, 60%, 8%, 0.3) 100%
-		);
+		background: linear-gradient(135deg, hsla(120, 60%, 10%, 0.4) 0%, hsla(120, 60%, 8%, 0.3) 100%);
 	}
 
 	.check-card.error {
@@ -199,11 +198,7 @@
 
 	:global([data-theme='dark']) .check-card.warning {
 		border-color: hsl(45, 100%, 50%);
-		background: linear-gradient(
-			135deg,
-			hsla(45, 100%, 10%, 0.4) 0%,
-			hsla(45, 100%, 8%, 0.3) 100%
-		);
+		background: linear-gradient(135deg, hsla(45, 100%, 10%, 0.4) 0%, hsla(45, 100%, 8%, 0.3) 100%);
 	}
 
 	.check-header {
@@ -316,16 +311,19 @@
 		font-size: var(--text-sm);
 		color: var(--gray-700);
 		margin: 0;
-		padding: var(--space-2) var(--space-3);
-		background: var(--gray-50);
-		border-radius: var(--radius-md);
-		border-left: 3px solid var(--gray-300);
+		padding: var(--space-3) var(--space-4);
+		background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+		border-radius: var(--radius-lg);
+		border-left: 4px solid var(--color-primary);
+		line-height: 1.6;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 	}
 
 	:global([data-theme='dark']) .check-message {
-		color: var(--gray-300);
-		background: var(--gray-700);
-		border-left-color: var(--gray-500);
+		color: var(--gray-200);
+		background: linear-gradient(135deg, var(--gray-700) 0%, var(--gray-750) 100%);
+		border-left-color: var(--color-primary);
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 	}
 
 	.detail-row {
@@ -362,19 +360,27 @@
 	.endpoint-code {
 		font-family: var(--font-mono, monospace);
 		font-size: var(--text-xs);
-		color: var(--gray-800);
-		background: var(--gray-100);
-		padding: var(--space-1) var(--space-2);
-		border-radius: var(--radius-sm);
+		color: var(--color-primary);
+		background: linear-gradient(135deg, hsla(210, 100%, 97%, 1) 0%, hsla(210, 100%, 95%, 1) 100%);
+		padding: var(--space-2) var(--space-3);
+		border-radius: var(--radius-md);
+		border: 1px solid hsla(210, 100%, 90%, 1);
 		word-break: break-all;
 		flex: 1;
 		min-width: 0;
+		font-weight: var(--font-medium);
+		letter-spacing: -0.01em;
 	}
 
 	:global([data-theme='dark']) .address-code,
 	:global([data-theme='dark']) .endpoint-code {
-		color: var(--gray-200);
-		background: var(--gray-700);
+		color: hsl(210, 100%, 70%);
+		background: linear-gradient(
+			135deg,
+			hsla(210, 100%, 12%, 0.6) 0%,
+			hsla(210, 100%, 10%, 0.4) 100%
+		);
+		border-color: hsla(210, 100%, 20%, 0.8);
 	}
 
 	.explorer-link {
@@ -436,32 +442,48 @@
 	}
 
 	.deploy-button {
-		padding: var(--space-2) var(--space-4);
-		background: var(--gray-200);
+		padding: var(--space-3) var(--space-5);
+		background: linear-gradient(135deg, var(--gray-200) 0%, var(--gray-300) 100%);
 		color: var(--gray-600);
 		border: none;
-		border-radius: var(--radius-md);
+		border-radius: var(--radius-lg);
 		font-size: var(--text-sm);
 		font-weight: var(--font-semibold);
 		cursor: not-allowed;
-		transition: all 0.2s;
+		transition: all 0.3s ease;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 	}
 
 	.deploy-button.primary {
-		background: var(--color-primary);
+		background: linear-gradient(135deg, var(--color-primary) 0%, hsl(210, 100%, 45%) 100%);
 		color: white;
 		cursor: pointer;
+		box-shadow: 0 4px 12px hsla(210, 100%, 50%, 0.25);
 	}
 
 	.deploy-button.primary:hover {
-		opacity: 0.9;
-		transform: translateY(-1px);
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px hsla(210, 100%, 50%, 0.35);
+	}
+
+	.deploy-button.primary:active {
+		transform: translateY(0);
+		box-shadow: 0 2px 8px hsla(210, 100%, 50%, 0.25);
 	}
 
 	:global([data-theme='dark']) .deploy-button {
-		background: var(--gray-700);
+		background: linear-gradient(135deg, var(--gray-700) 0%, var(--gray-600) 100%);
 		color: var(--gray-400);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+	}
+
+	:global([data-theme='dark']) .deploy-button.primary {
+		background: linear-gradient(135deg, hsl(210, 100%, 50%) 0%, hsl(210, 100%, 40%) 100%);
+		box-shadow: 0 4px 12px hsla(210, 100%, 40%, 0.4);
+	}
+
+	:global([data-theme='dark']) .deploy-button.primary:hover {
+		box-shadow: 0 6px 20px hsla(210, 100%, 40%, 0.5);
 	}
 
 	.deploy-link {
