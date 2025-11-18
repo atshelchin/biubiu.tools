@@ -10,8 +10,13 @@
 </script>
 
 <div class="step-sidebar">
-	<h3>Step {stepNumber}: {title}</h3>
-	<p>{description}</p>
+	{#if title}
+		<h3>Step {stepNumber}: {title}</h3>
+	{/if}
+
+	{#if description}
+		<p>{description}</p>
+	{/if}
 
 	{@render children?.()}
 </div>

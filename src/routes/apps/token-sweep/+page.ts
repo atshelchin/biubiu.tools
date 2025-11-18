@@ -79,6 +79,22 @@ export const load: PageLoad = ({ url }) => {
 		fr: 'fr_FR'
 	};
 
+	// FAQs configuration
+	const faqs = [
+		{
+			question: t('tools.token_sweep.step1.sidebar.what_is_network'),
+			answer: t('tools.token_sweep.step1.sidebar.network_explanation')
+		},
+		{
+			question: t('tools.token_sweep.step1.sidebar.what_is_wallet'),
+			answer: t('tools.token_sweep.step1.sidebar.wallet_explanation')
+		},
+		{
+			question: t('tools.token_sweep.step1.sidebar.what_is_native_token'),
+			answer: t('tools.token_sweep.step1.sidebar.native_token_explanation')
+		}
+	];
+
 	return {
 		meta: {
 			title: t('tools.token_sweep.seo.page_title'),
@@ -90,6 +106,7 @@ export const load: PageLoad = ({ url }) => {
 			locale: seoLocaleMap[locale] || 'en_US'
 		},
 		steps,
-		structuredData: [webAppData, howToData]
+		structuredData: [webAppData, howToData],
+		faqs
 	};
 };

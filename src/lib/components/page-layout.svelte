@@ -16,7 +16,9 @@
 	<AppsHeader />
 
 	{#if toolbar}
-		{@render toolbar()}
+		<div style="margin-bottom:32px;">
+			{@render toolbar()}
+		</div>
 	{/if}
 
 	<div class="layout-grid" class:full-width={!sidebar}>
@@ -83,7 +85,7 @@
 	}
 
 	.footer-section {
-		background: var(--color-card);
+		/* background: var(--color-card); */
 		/* padding: var(--space-4) var(--space-4); */
 		/* border-radius: var(--radius-lg); */
 		/* border: 1px solid var(--color-border); */

@@ -3,6 +3,7 @@
 	import type { Chain } from 'viem';
 	import type { HowToStepData } from '$lib/utils/structured-data';
 	import type { Step } from '$lib/components/ui/step-indicator.svelte';
+	import type { FAQ } from '$lib/components/ui/faqs.svelte';
 
 	// Generic component type for step components
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -31,6 +32,12 @@
 		appDescription: string;
 		appFeatures?: string[];
 
+		// FAQs configuration (optional)
+		faqs?: {
+			title?: string;
+			items: FAQ[];
+		};
+
 		// Wallet connect configuration (optional)
 		walletConnect?: {
 			chains: Chain[];
@@ -56,6 +63,7 @@
 	import SeoHead from '$lib/components/seo-head.svelte';
 	import StepIndicator, { createStepManager } from '$lib/components/ui/step-indicator.svelte';
 	import StepControls from '$lib/components/ui/step-controls.svelte';
+	import Faqs from '$lib/components/ui/faqs.svelte';
 
 	interface Props {
 		config: StepBasedAppConfig;
@@ -122,7 +130,9 @@
 	{/snippet}
 
 	{#snippet footer()}
-		FAQs
+		{#if config.faqs && config.faqs.items.length > 0}
+			<Faqs faqs={config.faqs.items} title={config.faqs.title} />
+		{/if}
 	{/snippet}
 
 	<!-- Main content -->

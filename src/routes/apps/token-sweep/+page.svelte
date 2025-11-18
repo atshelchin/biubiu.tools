@@ -8,6 +8,21 @@
 	let { data }: { data: PageData } = $props();
 
 	const i18n = useI18n();
+
+	const faqs = $derived([
+		{
+			question: i18n.t('tools.token_sweep.step1.sidebar.what_is_network'),
+			answer: i18n.t('tools.token_sweep.step1.sidebar.network_explanation')
+		},
+		{
+			question: i18n.t('tools.token_sweep.step1.sidebar.what_is_wallet'),
+			answer: i18n.t('tools.token_sweep.step1.sidebar.wallet_explanation')
+		},
+		{
+			question: i18n.t('tools.token_sweep.step1.sidebar.what_is_native_token'),
+			answer: i18n.t('tools.token_sweep.step1.sidebar.native_token_explanation')
+		}
+	]);
 </script>
 
 <StepBasedApp
@@ -45,6 +60,10 @@
 			i18n.t('tools.token_sweep.feature_3'),
 			i18n.t('tools.token_sweep.feature_4')
 		],
+		faqs: {
+			title: i18n.t('common.faqs'),
+			items: faqs
+		},
 		walletConnect: {
 			chains: [mainnet, polygon, base, bsc, arbitrum, optimism],
 			storageKey: 'biubiu-tools-token-sweep'
