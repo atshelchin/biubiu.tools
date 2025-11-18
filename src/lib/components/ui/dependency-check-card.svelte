@@ -23,15 +23,11 @@
 		index: number;
 		canFix: boolean;
 		blockExplorer?: string;
-		formatTimestamp?: (timestamp: number) => string;
 		onDeploy?: () => void;
 		deployButtonText?: string;
 		blockedHintText?: string;
 		addressLabel?: string;
-		blockLabel?: string;
-		verifiedLabel?: string;
 		endpointLabel?: string;
-		responseTimeLabel?: string;
 		viewGuideText?: string;
 		deployComingSoonText?: string;
 	}
@@ -41,15 +37,11 @@
 		index,
 		canFix,
 		blockExplorer,
-		formatTimestamp,
 		onDeploy,
 		deployButtonText = 'Deploy',
 		blockedHintText = 'Please resolve the previous issue first',
 		addressLabel = 'Address:',
-		blockLabel = 'Block:',
-		verifiedLabel = 'Verified:',
 		endpointLabel = 'Endpoint:',
-		responseTimeLabel = 'Response Time:',
 		viewGuideText = 'View Deployment Guide',
 		deployComingSoonText = 'Deploy Contract (Coming Soon)'
 	}: Props = $props();
@@ -103,18 +95,6 @@
 					{/if}
 				</div>
 			</div>
-			{#if check.blockNumber !== undefined}
-				<div class="detail-row">
-					<span class="label">{blockLabel}</span>
-					<span class="detail-value">#{check.blockNumber.toLocaleString()}</span>
-				</div>
-			{/if}
-			{#if check.blockTimestamp && formatTimestamp}
-				<div class="detail-row">
-					<span class="label">{verifiedLabel}</span>
-					<span class="detail-value">{formatTimestamp(check.blockTimestamp)}</span>
-				</div>
-			{/if}
 		{/if}
 
 		{#if check.type === 'network-service' && check.endpoint}
@@ -133,12 +113,6 @@
 					</a>
 				</div>
 			</div>
-			{#if check.responseTime}
-				<div class="detail-row">
-					<span class="label">{responseTimeLabel}</span>
-					<span class="detail-value highlight">{check.responseTime}ms</span>
-				</div>
-			{/if}
 		{/if}
 	</div>
 
@@ -382,11 +356,6 @@
 
 	:global([data-theme='dark']) .detail-value {
 		color: var(--gray-200);
-	}
-
-	.detail-value.highlight {
-		color: var(--color-primary);
-		font-weight: var(--font-semibold);
 	}
 
 	.address-code,

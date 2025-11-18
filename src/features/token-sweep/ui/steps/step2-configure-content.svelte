@@ -16,7 +16,6 @@
 	import DependencyCheckCard from '$lib/components/ui/dependency-check-card.svelte';
 	import { step2State } from '@/features/token-sweep/stores/step2-state.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
-	import { formatTimestamp } from '$lib/utils/date-format';
 
 	const i18n = useI18n();
 	const connectStore = useConnectStore();
@@ -155,7 +154,6 @@
 					{index}
 					{canFix}
 					blockExplorer={currentNetwork?.blockExplorer}
-					{formatTimestamp}
 					onDeploy={config && config.deployFunction
 						? () => {
 								deploymentConfig = config;
@@ -165,10 +163,7 @@
 					deployButtonText={config ? `Deploy ${config.contractName}` : undefined}
 					blockedHintText={i18n.t('tools.token_sweep.step2.content.resolve_previous_issue')}
 					addressLabel={i18n.t('tools.token_sweep.step2.content.address_label')}
-					blockLabel={i18n.t('tools.token_sweep.step2.content.block_label')}
-					verifiedLabel={i18n.t('tools.token_sweep.step2.content.verified_label')}
 					endpointLabel={i18n.t('tools.token_sweep.step2.content.endpoint_label')}
-					responseTimeLabel={i18n.t('tools.token_sweep.step2.content.response_time_label')}
 					viewGuideText={i18n.t('tools.token_sweep.step2.content.view_deployment_guide')}
 					deployComingSoonText={i18n.t('tools.token_sweep.step2.content.deploy_coming_soon')}
 				/>
