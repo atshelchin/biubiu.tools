@@ -281,6 +281,95 @@ export async function checkContractDeployment(
 }
 
 /**
+ * Known contract addresses that can be reused across tools
+ */
+export const KNOWN_CONTRACTS = {
+	// CREATE2 Deterministic Deployment Proxy
+	// https://github.com/Arachnid/deterministic-deployment-proxy
+	CREATE2_PROXY: '0x4e59b44847b379578588920cA78FbF26c0B4956C' as Address,
+
+	// Multicall3 (custom deployment address for this project)
+	// https://github.com/mds1/multicall/blob/main/src/Multicall3.sol
+	MULTICALL3: '0x2055A30B00555e7cAd48b1756eac4f917781489b' as Address,
+
+	// BiuBiuPremium (membership management contract)
+	// https://github.com/atshelchin/biubiu-contracts
+	BIUBIU_PREMIUM: '0xc5c4bb399938625523250B708dc5c1e7dE4b1626' as Address,
+
+	// TokenSweep (batch token transfer contract)
+	// https://github.com/atshelchin/biubiu-contracts
+	TOKEN_SWEEP: '0x28ab612a3a871EA203aDff9a7b0846C395529239' as Address
+} as const;
+
+/**
+ * Create a contract checker for CREATE2 Proxy
+ */
+export async function checkCREATE2Proxy(rpcUrl: string, t: TranslateFn): Promise<ContractCheck> {
+	return checkContractDeployment(
+		rpcUrl,
+		KNOWN_CONTRACTS.CREATE2_PROXY,
+		'CREATE2 Proxy',
+		t('tools.token_sweep.step2.content.checks.contract.create2_proxy_description'),
+		t,
+		{
+			canDeploy: true,
+			deployGuideUrl: 'https://github.com/Arachnid/deterministic-deployment-proxy'
+		}
+	);
+}
+
+/**
+ * Create a contract checker for Multicall3
+ */
+export async function checkMulticall3(rpcUrl: string, t: TranslateFn): Promise<ContractCheck> {
+	return checkContractDeployment(
+		rpcUrl,
+		KNOWN_CONTRACTS.MULTICALL3,
+		'Multicall3',
+		t('tools.token_sweep.step2.content.checks.contract.multicall3_description'),
+		t,
+		{
+			canDeploy: true,
+			deployGuideUrl: 'https://github.com/mds1/multicall'
+		}
+	);
+}
+
+/**
+ * Create a contract checker for BiuBiuPremium
+ */
+export async function checkBiuBiuPremium(rpcUrl: string, t: TranslateFn): Promise<ContractCheck> {
+	return checkContractDeployment(
+		rpcUrl,
+		KNOWN_CONTRACTS.BIUBIU_PREMIUM,
+		'BiuBiuPremium',
+		t('tools.token_sweep.step2.content.checks.contract.biubiu_premium_description'),
+		t,
+		{
+			canDeploy: true,
+			deployGuideUrl: 'https://github.com/atshelchin/biubiu-contracts'
+		}
+	);
+}
+
+/**
+ * Create a contract checker for TokenSweep
+ */
+export async function checkTokenSweep(rpcUrl: string, t: TranslateFn): Promise<ContractCheck> {
+	return checkContractDeployment(
+		rpcUrl,
+		KNOWN_CONTRACTS.TOKEN_SWEEP,
+		'TokenSweep',
+		t('tools.token_sweep.step2.content.checks.contract.token_sweep_description'),
+		t,
+		{
+			canDeploy: true,
+			deployGuideUrl: 'https://github.com/atshelchin/biubiu-contracts'
+		}
+	);
+}
+
+/**
  * Calculate summary from check results
  */
 export function calculateCheckSummary(checks: DependencyCheck[]): DependencyCheckSummary {

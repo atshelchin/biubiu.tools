@@ -1,19 +1,24 @@
 /**
  * Token-sweep specific dependency checker
- * Uses generic blockchain-checker utilities
+ * Orchestrates the dependency checks for token-sweep tool
  */
 
 import type { Address } from 'viem';
 import type { DependencyCheck, ContractCheck } from '../types/dependencies';
 import {
-	checkRPCEndpoint as genericCheckRPC,
-	checkEIP7702Support as genericCheckEIP7702,
+	checkRPCEndpoint,
+	checkEIP7702Support,
+	checkCREATE2Proxy,
+	checkMulticall3,
+	checkBiuBiuPremium,
+	checkTokenSweep,
 	checkContractDeployment,
-	calculateCheckSummary
+	calculateCheckSummary,
+	KNOWN_CONTRACTS
 } from '$lib/utils/blockchain-checker';
 
-// Re-export calculateCheckSummary for convenience
-export { calculateCheckSummary };
+// Re-export for convenience
+export { calculateCheckSummary, KNOWN_CONTRACTS };
 
 /**
  * Translation function type
@@ -21,117 +26,9 @@ export { calculateCheckSummary };
 type TranslateFn = (key: string, params?: Record<string, string | number>) => string;
 
 /**
- * Known contract addresses for token-sweep
+ * Check custom biubiu membership contract (if provided)
  */
-export const KNOWN_CONTRACTS = {
-	// CREATE2 Deterministic Deployment Proxy
-	// https://github.com/Arachnid/deterministic-deployment-proxy
-	CREATE2_PROXY: '0x4e59b44847b379578588920cA78FbF26c0B4956C' as Address,
-
-	// Multicall3 (custom deployment address for this project)
-	// https://github.com/mds1/multicall/blob/main/src/Multicall3.sol
-	MULTICALL3: '0x2055A30B00555e7cAd48b1756eac4f917781489b' as Address,
-
-	// BiuBiuPremium (membership management contract)
-	// https://github.com/atshelchin/biubiu-contracts
-	BIUBIU_PREMIUM: '0xc5c4bb399938625523250B708dc5c1e7dE4b1626' as Address,
-
-	// TokenSweep (batch token transfer contract)
-	// https://github.com/atshelchin/biubiu-contracts
-	TOKEN_SWEEP: '0x28ab612a3a871EA203aDff9a7b0846C395529239' as Address
-} as const;
-
-/**
- * Check RPC endpoint health
- */
-export async function checkRPCEndpoint(
-	rpcUrl: string,
-	chainId: number,
-	networkName: string,
-	t: TranslateFn
-) {
-	return genericCheckRPC(rpcUrl, chainId, networkName, t);
-}
-
-/**
- * Check EIP-7702 support
- */
-export async function checkEIP7702Support(rpcUrl: string, t: TranslateFn) {
-	return genericCheckEIP7702(rpcUrl, t);
-}
-
-/**
- * Check CREATE2 Proxy deployment
- */
-export async function checkCREATE2Proxy(rpcUrl: string, t: TranslateFn): Promise<ContractCheck> {
-	return checkContractDeployment(
-		rpcUrl,
-		KNOWN_CONTRACTS.CREATE2_PROXY,
-		'CREATE2 Proxy',
-		t('tools.token_sweep.step2.content.checks.contract.create2_proxy_description'),
-		t,
-		{
-			canDeploy: true,
-			deployGuideUrl: 'https://github.com/Arachnid/deterministic-deployment-proxy'
-		}
-	);
-}
-
-/**
- * Check Multicall3 deployment
- */
-export async function checkMulticall3(rpcUrl: string, t: TranslateFn): Promise<ContractCheck> {
-	return checkContractDeployment(
-		rpcUrl,
-		KNOWN_CONTRACTS.MULTICALL3,
-		'Multicall3',
-		t('tools.token_sweep.step2.content.checks.contract.multicall3_description'),
-		t,
-		{
-			canDeploy: true,
-			deployGuideUrl: 'https://github.com/mds1/multicall'
-		}
-	);
-}
-
-/**
- * Check BiuBiuPremium deployment
- */
-export async function checkBiuBiuPremium(rpcUrl: string, t: TranslateFn): Promise<ContractCheck> {
-	return checkContractDeployment(
-		rpcUrl,
-		KNOWN_CONTRACTS.BIUBIU_PREMIUM,
-		'BiuBiuPremium',
-		t('tools.token_sweep.step2.content.checks.contract.biubiu_premium_description'),
-		t,
-		{
-			canDeploy: true,
-			deployGuideUrl: 'https://github.com/atshelchin/biubiu-contracts'
-		}
-	);
-}
-
-/**
- * Check TokenSweep deployment
- */
-export async function checkTokenSweep(rpcUrl: string, t: TranslateFn): Promise<ContractCheck> {
-	return checkContractDeployment(
-		rpcUrl,
-		KNOWN_CONTRACTS.TOKEN_SWEEP,
-		'TokenSweep',
-		t('tools.token_sweep.step2.content.checks.contract.token_sweep_description'),
-		t,
-		{
-			canDeploy: true,
-			deployGuideUrl: 'https://github.com/atshelchin/biubiu-contracts'
-		}
-	);
-}
-
-/**
- * Check biubiu membership contract
- */
-export async function checkBiubiuMembership(
+async function checkBiubiuMembership(
 	rpcUrl: string,
 	address: Address,
 	t: TranslateFn
@@ -150,9 +47,9 @@ export async function checkBiubiuMembership(
 }
 
 /**
- * Check token-sweep operation contract
+ * Check custom token-sweep operation contract (if provided)
  */
-export async function checkTokenSweepContract(
+async function checkTokenSweepContract(
 	rpcUrl: string,
 	address: Address,
 	t: TranslateFn
@@ -171,7 +68,8 @@ export async function checkTokenSweepContract(
 }
 
 /**
- * Run all dependency checks for a network
+ * Run all dependency checks for token-sweep
+ * This orchestrates the check sequence specific to token-sweep requirements
  */
 export async function checkAllDependencies(
 	rpcUrl: string,
@@ -218,13 +116,13 @@ export async function checkAllDependencies(
 	const tokenSweepCheck = await checkTokenSweep(rpcUrl, t);
 	checks.push(tokenSweepCheck);
 
-	// 7. Check Biubiu Membership (if address provided)
+	// 7. Check Biubiu Membership (if custom address provided)
 	if (membershipContractAddress) {
 		const membershipCheck = await checkBiubiuMembership(rpcUrl, membershipContractAddress, t);
 		checks.push(membershipCheck);
 	}
 
-	// 8. Check Token Sweep Contract (if address provided)
+	// 8. Check Token Sweep Contract (if custom address provided)
 	if (sweepContractAddress) {
 		const sweepCheck = await checkTokenSweepContract(rpcUrl, sweepContractAddress, t);
 		checks.push(sweepCheck);

@@ -487,9 +487,9 @@
 			"filter_enabled": "已启用",
 			"filter_disabled": "已禁用",
 			"active": "当前",
-			"rpc_endpoints": "RPC 端点",
-			"rpc_endpoint": "个端点",
-			"rpc_endpoints_plural": "个端点",
+			"rpc_endpoints": "RPC 节点",
+			"rpc_endpoint": "个节点",
+			"rpc_endpoints_plural": "个节点",
 			"block_explorer": "区块浏览器",
 			"edit_rpc": "编辑 RPC",
 			"add_network": "添加网络",
@@ -500,7 +500,7 @@
 			"currency_symbol": "货币符号",
 			"block_explorer_optional": "区块浏览器（可选）",
 			"enable_network": "启用此网络",
-			"rpc_endpoints_label": "RPC 端点",
+			"rpc_endpoints_label": "RPC 节点",
 			"primary": "主节点",
 			"set_primary": "设为主节点",
 			"add_rpc_placeholder": "https://your-rpc-endpoint.com",
@@ -518,9 +518,9 @@
 			"error_chainid_min": "链 ID 必须大于 0",
 			"error_name_required": "网络名称不能为空",
 			"error_symbol_required": "货币符号不能为空",
-			"error_rpc_required": "至少需要一个 RPC 端点",
-			"error_rpc_unavailable": "无法连接到 RPC 端点，请检查 URL 是否正确",
-			"error_rpc_chainid_mismatch": "RPC 端点的链 ID ({actual}) 与输入的链 ID ({expected}) 不匹配"
+			"error_rpc_required": "至少需要一个 RPC 节点",
+			"error_rpc_unavailable": "无法连接到 RPC 节点，请检查 URL 是否正确",
+			"error_rpc_chainid_mismatch": "RPC 节点的链 ID ({actual}) 与输入的链 ID ({expected}) 不匹配"
 		}
 	},
 	"referral": {
