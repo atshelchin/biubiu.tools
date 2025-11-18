@@ -66,7 +66,7 @@
 			// 内置转换器示例
 			fullName: {
 				defaultValue: '',
-				transformer: Transformers.trim,
+				transformer: Transformers.trim as (value: unknown) => unknown,
 				validator: Validators.required('请输入姓名')
 			},
 			username: {
@@ -79,7 +79,10 @@
 			},
 			email: {
 				defaultValue: '',
-				transformer: Transformers.compose(Transformers.trim, Transformers.toLowerCase),
+				transformer: Transformers.compose(
+					Transformers.trim as (value: unknown) => unknown,
+					Transformers.toLowerCase as (value: unknown) => unknown
+				) as (value: unknown) => unknown,
 				validator: Validators.compose(
 					Validators.required('请输入邮箱'),
 					Validators.email('邮箱格式不正确')
@@ -114,11 +117,11 @@
 			bio: {
 				defaultValue: '',
 				transformer: Transformers.compose(
-					Transformers.trim,
+					Transformers.trim as (value: unknown) => unknown,
 					// 自定义：限制长度
-					{
-						transform: (value: string) => value.slice(0, 200)
-					}
+					((value: unknown) => (typeof value === 'string' ? value.slice(0, 200) : value)) as (
+						value: unknown
+					) => unknown
 				),
 				validator: Validators.maxLength(200, '简介不超过200字')
 			},
@@ -126,7 +129,7 @@
 			// 数字转换
 			age: {
 				defaultValue: '',
-				transformer: Transformers.toNumber,
+				transformer: Transformers.toNumber as (value: unknown) => unknown,
 				validator: Validators.compose(
 					Validators.min(1, '年龄必须大于0'),
 					Validators.max(150, '年龄必须小于150')
@@ -298,7 +301,7 @@
 					<FormField name="bio" label="个人简介（去空格 + 限制长度）">
 						{#snippet children({ value, onInput, onBlur })}
 							<textarea
-								{value}
+								value={value as string}
 								oninput={(e) => onInput(e.currentTarget.value)}
 								onblur={onBlur}
 								placeholder="介绍一下你自己..."

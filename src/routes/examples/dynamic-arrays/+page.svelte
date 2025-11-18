@@ -63,7 +63,7 @@
   }
 });
 
-<FieldArray name="members" formState={form}>
+<FieldArray name="members" >
   {#snippet children({ fields, append, remove, move })}
     {#each fields as field, index (field.key)}
       <button onclick={() => move(index, index - 1)}>上移</button>
@@ -88,7 +88,7 @@
 
 		<div class="form-card">
 			<Form formState={form} onSubmit={handleSubmit}>
-				<FormField name="teamName" label="团队名称" formState={form}>
+				<FormField name="teamName" label="团队名称">
 					{#snippet children({ value, error, touched, onInput, onBlur })}
 						<input
 							type="text"
@@ -106,7 +106,7 @@
 
 				<div class="array-section">
 					<h3>团队成员</h3>
-					<FieldArray name="members" formState={form}>
+					<FieldArray name="members">
 						{#snippet children({ fields, append, remove, move })}
 							<div class="member-list" use:dragSortable={{ onSort: move, handle: '.drag-handle' }}>
 								{#each fields as field, index (field.key)}
@@ -180,7 +180,7 @@
 										</div>
 
 										<div class="member-fields">
-											<FormField name={`members[${index}].name`} label="姓名" formState={form}>
+											<FormField name={`members[${index}].name`} label="姓名">
 												{#snippet children({ value, error, touched, onInput, onBlur })}
 													<input
 														type="text"
@@ -196,7 +196,7 @@
 												{/snippet}
 											</FormField>
 
-											<FormField name={`members[${index}].email`} label="邮箱" formState={form}>
+											<FormField name={`members[${index}].email`} label="邮箱">
 												{#snippet children({ value, error, touched, onInput, onBlur })}
 													<input
 														type="email"
@@ -212,7 +212,7 @@
 												{/snippet}
 											</FormField>
 
-											<FormField name={`members[${index}].role`} label="角色" formState={form}>
+											<FormField name={`members[${index}].role`} label="角色">
 												{#snippet children({ value, onInput })}
 													<select {value} onchange={(e) => onInput(e.currentTarget.value)}>
 														<option value="developer">开发</option>

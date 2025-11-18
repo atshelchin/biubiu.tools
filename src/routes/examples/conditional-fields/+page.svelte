@@ -85,7 +85,7 @@
 					Validators.email('请输入有效的邮箱地址')
 				),
 				validateOnComplete: true,
-				completeCondition: (v: string) => v.includes('@'),
+				completeCondition: (v: unknown) => typeof v === 'string' && v.includes('@'),
 				// 配置式：虚拟商品时显示
 				showWhen: {
 					field: 'orderType',
@@ -100,7 +100,7 @@
 				placeholder: '用于接收验证码',
 				validator: Validators.pattern(/^\d{11}$/, '请输入11位手机号'),
 				validateOnComplete: true,
-				completeCondition: (v: string) => v.length === 11,
+				completeCondition: (v: unknown) => typeof v === 'string' && v.length === 11,
 				// 配置式：虚拟商品且邮箱验证通过时显示
 				showWhen: {
 					field: 'emailForDigital',

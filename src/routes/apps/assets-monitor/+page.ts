@@ -1,5 +1,6 @@
 import type { PageLoad } from './$types';
 import type { HowToStepData } from '$lib/utils/structured-data';
+import type { Step } from '$lib/components/ui/step-indicator.svelte';
 import { createWebAppData, createHowToData } from '$lib/utils/structured-data';
 
 export const load: PageLoad = ({ url }) => {
@@ -35,6 +36,12 @@ export const load: PageLoad = ({ url }) => {
 			description: 'Analyze and export results'
 		}
 	];
+
+	// Create UI steps from HowToStepData
+	const uiSteps: Step[] = steps.map((step) => ({
+		label: step.name,
+		description: step.description
+	}));
 
 	const webAppData = createWebAppData({
 		name: 'Assets Monitor',
@@ -74,7 +81,7 @@ export const load: PageLoad = ({ url }) => {
 			image,
 			locale
 		},
-		steps,
+		steps: uiSteps,
 		structuredData: [webAppData, howToData]
 	};
 };

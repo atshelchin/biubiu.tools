@@ -170,13 +170,13 @@
 					</div>
 					<p class="param-desc">接收者地址数组</p>
 
-					<FieldArray name="recipients" formState={form}>
+					<FieldArray name="recipients">
 						{#snippet children({ fields, append, remove })}
 							<div class="array-items">
 								{#each fields as field, index (field.key)}
 									<div class="array-item">
 										<span class="item-index">[{index}]</span>
-										<FormField name={`recipients[${index}]`} formState={form}>
+										<FormField name={`recipients[${index}]`}>
 											{#snippet children({ value, error, touched, onInput, onBlur })}
 												<input
 													type="text"
@@ -215,13 +215,13 @@
 					</div>
 					<p class="param-desc">转账金额数组（需与地址数组长度一致）</p>
 
-					<FieldArray name="amounts" formState={form}>
+					<FieldArray name="amounts">
 						{#snippet children({ fields, append, remove })}
 							<div class="array-items">
 								{#each fields as field, index (field.key)}
 									<div class="array-item">
 										<span class="item-index">[{index}]</span>
-										<FormField name={`amounts[${index}]`} formState={form}>
+										<FormField name={`amounts[${index}]`}>
 											{#snippet children({ value, error, touched, onInput, onBlur })}
 												<div class="input-with-unit">
 													<input
@@ -266,7 +266,7 @@
 					<div class="struct-fields">
 						<!-- memo: string -->
 						<div class="struct-field">
-							<FormField name="metadata.memo" label="memo" formState={form}>
+							<FormField name="metadata.memo" label="memo">
 								{#snippet children({ value, error, touched, onInput, onBlur })}
 									<div class="field-wrapper">
 										<div class="field-label-row">
@@ -274,7 +274,7 @@
 											<span class="field-type">string</span>
 										</div>
 										<textarea
-											{value}
+											value={value as string}
 											class:error={touched && error}
 											placeholder="可选备注信息"
 											rows="3"
@@ -291,7 +291,7 @@
 
 						<!-- priority: uint8 -->
 						<div class="struct-field">
-							<FormField name="metadata.priority" label="priority" formState={form}>
+							<FormField name="metadata.priority" label="priority">
 								{#snippet children({ value, error, touched, onInput, onBlur })}
 									<div class="field-wrapper">
 										<div class="field-label-row">
@@ -321,7 +321,7 @@
 
 						<!-- deadline: uint256 -->
 						<div class="struct-field">
-							<FormField name="metadata.deadline" label="deadline" formState={form}>
+							<FormField name="metadata.deadline" label="deadline">
 								{#snippet children({ value, error, touched, onInput, onBlur })}
 									<div class="field-wrapper">
 										<div class="field-label-row">

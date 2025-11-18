@@ -1,4 +1,5 @@
 import type { PageLoad } from './$types';
+import type { Step } from '$lib/components/ui/step-indicator.svelte';
 import { createWebAppData, createHowToData, type HowToStepData } from '$lib/utils/structured-data';
 
 export const load: PageLoad = ({ url }) => {
@@ -33,6 +34,12 @@ export const load: PageLoad = ({ url }) => {
 			description: 'Review settings and deploy'
 		}
 	];
+
+	// Create UI steps from HowToStepData
+	const uiSteps: Step[] = steps.map((step) => ({
+		label: step.name,
+		description: step.description
+	}));
 
 	// Generate structured data from steps config
 	const webAppData = createWebAppData({
@@ -72,7 +79,7 @@ export const load: PageLoad = ({ url }) => {
 			image,
 			locale: 'en_US'
 		},
-		steps,
+		steps: uiSteps,
 		structuredData: [webAppData, howToData]
 	};
 };

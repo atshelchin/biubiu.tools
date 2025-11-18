@@ -110,7 +110,7 @@
 										<strong>Item {index}</strong>
 										<button type="button" onclick={() => remove(index)}>Remove</button>
 									</div>
-									<FormField name="items[{index}].name" label="Name">
+									<FormField name={`items[${index}].name`} label="Name">
 										{#snippet children({ value, onInput, onBlur })}
 											<input
 												type="text"
@@ -120,7 +120,7 @@
 											/>
 										{/snippet}
 									</FormField>
-									<FormField name="items[{index}].value" label="Value">
+									<FormField name={`items[${index}].value`} label="Value">
 										{#snippet children({ value, onInput, onBlur })}
 											<input
 												type="number"

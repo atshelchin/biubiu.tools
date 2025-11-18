@@ -130,7 +130,7 @@
 						<label class="checkbox-label">
 							<input
 								type="checkbox"
-								checked={value}
+								checked={value as boolean}
 								onchange={(e) => onInput(e.currentTarget.checked)}
 							/>
 							<span>记住我</span>

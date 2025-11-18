@@ -88,7 +88,7 @@
 				defaultValue: '2024-01-01',
 				validator: {
 					validate: (value, values) => {
-						if (value >= (values.endDate as string)) {
+						if ((value as string) >= (values.endDate as string)) {
 							return 'Start must be before end';
 						}
 						return null;
@@ -100,7 +100,7 @@
 				defaultValue: '2024-12-31',
 				validator: {
 					validate: (value, values) => {
-						if (value <= (values.startDate as string)) {
+						if ((value as string) <= (values.startDate as string)) {
 							return 'End must be after start';
 						}
 						return null;

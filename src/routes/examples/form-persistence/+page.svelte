@@ -76,7 +76,7 @@
 			setTimeout(() => {
 				saveStatus = null;
 			}, 3000);
-		} catch {
+		} catch (error) {
 			console.error('保存失败:', error);
 			saveStatus = 'error';
 		}
@@ -102,7 +102,7 @@
 
 			lastSavedTime = new Date().toLocaleTimeString();
 			return true;
-		} catch {
+		} catch (error) {
 			console.error('加载失败:', error);
 			return false;
 		}
@@ -293,7 +293,7 @@
 				<FormField name="bio" label="个人简介">
 					{#snippet children({ value, onInput, onBlur })}
 						<textarea
-							{value}
+							value={value as string}
 							oninput={(e) => onInput(e.currentTarget.value)}
 							onblur={onBlur}
 							placeholder="介绍一下你自己..."
@@ -327,7 +327,7 @@
 						<label class="checkbox-label">
 							<input
 								type="checkbox"
-								checked={value}
+								checked={value as boolean}
 								onchange={(e) => onInput(e.currentTarget.checked)}
 							/>
 							<span>订阅新闻邮件</span>

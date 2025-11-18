@@ -95,7 +95,7 @@
 		if (step.fields.length === 0) return true;
 
 		// 验证当前步骤的所有字段
-		const errors = await form._manager.validateFields(step.fields);
+		const errors = await form._manager.validateFields([...step.fields]);
 		const errorFields = Object.keys(errors);
 
 		if (errorFields.length > 0) {
@@ -142,7 +142,7 @@
 			for (let i = currentStep; i < step; i++) {
 				const stepData = STEPS[i - 1];
 				if (stepData.fields.length > 0) {
-					const errors = await form._manager.validateFields(stepData.fields);
+					const errors = await form._manager.validateFields([...stepData.fields]);
 					if (Object.keys(errors).length > 0) {
 						// 验证失败，停在这一步
 						currentStep = i;

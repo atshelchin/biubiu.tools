@@ -52,7 +52,7 @@
 
 			// 3. 验证 BigInt 是否正确还原
 			const originalTokenAmount = form.getValue('tokenAmount');
-			const parsedTokenAmount = parsed.values.tokenAmount;
+			const parsedTokenAmount = (parsed as any).values.tokenAmount;
 
 			if (typeof parsedTokenAmount === 'bigint' && parsedTokenAmount === originalTokenAmount) {
 				testResult = '✅ BigInt 序列化/反序列化成功！';
@@ -120,13 +120,13 @@
 
 			// 验证
 			const checks = [
-				typeof restored.user.id === 'bigint',
-				restored.user.id === 123n,
-				restored.user.balance === 1000000000000000000n,
-				restored.user.createdAt instanceof Date,
-				restored.user.tags instanceof Set,
-				restored.user.metadata instanceof Map,
-				restored.transactions[0].amount === 50000000000000000n
+				typeof (restored as any).user.id === 'bigint',
+				(restored as any).user.id === 123n,
+				(restored as any).user.balance === 1000000000000000000n,
+				(restored as any).user.createdAt instanceof Date,
+				(restored as any).user.tags instanceof Set,
+				(restored as any).user.metadata instanceof Map,
+				(restored as any).transactions[0].amount === 50000000000000000n
 			];
 
 			if (checks.every(Boolean)) {

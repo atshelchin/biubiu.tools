@@ -7,7 +7,7 @@
 	 * - 结构体 (tuple)
 	 * - 嵌套结构 (tuple[], tuple 中有 array, array 中有 tuple)
 	 */
-	import { FormField, FieldArray, type FormState } from '@packages/formstate/src';
+	import { FormField, FieldArray } from '@packages/formstate/src';
 	import Self from './AbiParameterField.svelte';
 
 	interface AbiParameter {
@@ -20,11 +20,10 @@
 	interface Props {
 		param: AbiParameter;
 		path: string;
-		formState: FormState;
 		depth?: number;
 	}
 
-	let { param, path, formState, depth = 0 }: Props = $props();
+	let { param, path, depth = 0 }: Props = $props();
 
 	// 解析类型
 	function parseType(type: string) {
@@ -133,7 +132,7 @@
 			<p class="param-desc">{param.description}</p>
 		{/if}
 
-		<FieldArray name={path} {formState}>
+		<FieldArray name={path}>
 			{#snippet children({ fields, append, remove })}
 				<div class="array-items">
 					{#each fields as field, index (field.key)}
@@ -147,21 +146,20 @@
 										<Self
 											param={component}
 											path={`${path}[${index}].${component.name}`}
-											{formState}
 											depth={depth + 1}
 										/>
 									{/each}
 								</div>
 							{:else}
 								<!-- 数组中的基础类型 -->
-								<FormField name={`${path}[${index}]`} {formState}>
+								<FormField name={`${path}[${index}]`}>
 									{#snippet children({ value, error, touched, onInput, onBlur })}
 										<div class="input-wrapper">
 											{#if baseType === 'bool'}
 												<label class="checkbox-label">
 													<input
 														type="checkbox"
-														checked={value}
+														checked={value as boolean}
 														onchange={(e) => onInput(e.currentTarget.checked)}
 														onblur={onBlur}
 													/>
@@ -219,7 +217,7 @@
 
 		<div class="tuple-fields">
 			{#each param.components as component (component.name)}
-				<Self param={component} path={`${path}.${component.name}`} {formState} depth={depth + 1} />
+				<Self param={component} path={`${path}.${component.name}`} depth={depth + 1} />
 			{/each}
 		</div>
 	</div>
@@ -236,14 +234,14 @@
 			{/if}
 		</div>
 
-		<FormField name={path} {formState}>
+		<FormField name={path}>
 			{#snippet children({ value, error, touched, onInput, onBlur })}
 				<div class="input-wrapper">
 					{#if baseType === 'bool'}
 						<label class="checkbox-label">
 							<input
 								type="checkbox"
-								checked={value}
+								checked={value as boolean}
 								onchange={(e) => onInput(e.currentTarget.checked)}
 								onblur={onBlur}
 							/>
