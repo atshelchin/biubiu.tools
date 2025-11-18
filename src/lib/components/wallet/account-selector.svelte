@@ -31,7 +31,7 @@
 		open = $bindable(false),
 		trigger,
 		onSelectAccount,
-		onClose
+		onClose = () => {}
 	}: Props = $props();
 
 	const i18n = useI18n();

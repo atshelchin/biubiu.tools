@@ -89,17 +89,23 @@
 			};
 
 			const deployment = await config.deployFunction(context);
-			steps = deployment.steps.map((step: DeploymentStep) => ({ ...step, completed: false, inProgress: false }));
+			steps = deployment.steps.map((step: DeploymentStep) => ({
+				...step,
+				completed: false,
+				inProgress: false
+			}));
 		} catch (error) {
 			console.error('Failed to initialize deployment:', error);
-			errorMessage = 'Failed to initialize deployment configuration';
+			errorMessage = i18n.t('tools.token_sweep.step2.content.deployment.errors.init_failed');
 			status = 'error';
 		}
 	}
 
 	async function handleDeploy() {
 		if (!config.deployFunction || !connectStore.isConnected || !connectStore.address) {
-			errorMessage = 'Please connect your wallet first';
+			errorMessage = i18n.t(
+				'tools.token_sweep.step2.content.deployment.errors.wallet_not_connected'
+			);
 			return;
 		}
 
@@ -178,7 +184,7 @@
 			status = 'error';
 
 			// Handle different error types
-			let message = 'Failed to deploy contract';
+			let message = i18n.t('tools.token_sweep.step2.content.deployment.errors.deployment_failed');
 			if (error instanceof Error) {
 				if (
 					error.message.includes('BlockOutOfRangeError') ||
@@ -186,45 +192,40 @@
 					error.message.includes('nonce too high')
 				) {
 					if (isMetaMask()) {
-						message =
-							'MetaMask cached old block data. This happens when your test network was reset.';
+						message = i18n.t('tools.token_sweep.step2.content.deployment.errors.metamask_cache');
 						showClearCacheSteps = true;
 					} else {
-						message = 'Wallet cache error. Please restart your wallet and try again.';
+						message = i18n.t('tools.token_sweep.step2.content.deployment.errors.wallet_cache');
 					}
 				} else if (
 					error.message.includes('Internal JSON-RPC error') ||
 					error.message.includes('internal error was received')
 				) {
 					if (isMetaMask()) {
-						message =
-							'MetaMask internal error. Please try:\n\n1. Clear Activity Tab Data in MetaMask\n   (Settings → Advanced → Clear activity tab data)\n\n2. Update network RPC endpoint\n\n3. Restart MetaMask\n\n4. If deploying Multicall3, ensure CREATE2 Proxy is deployed first';
+						message = i18n.t('tools.token_sweep.step2.content.deployment.errors.metamask_internal');
 					} else {
-						message =
-							'Wallet internal error. Please try:\n\n1. Update network RPC endpoint\n\n2. Restart your wallet\n\n3. If deploying Multicall3, ensure CREATE2 Proxy is deployed first';
+						message = i18n.t('tools.token_sweep.step2.content.deployment.errors.wallet_internal');
 					}
 				} else if (
 					error.message.includes('Failed to fetch') ||
 					error.message.includes('fetch failed') ||
 					error.message.includes('NetworkError')
 				) {
-					message =
-						'Connection failed. Please check:\n\n1. Your wallet is unlocked\n\n2. Your network connection is stable\n\nIf the issue persists, try updating the network RPC endpoint.';
+					message = i18n.t('tools.token_sweep.step2.content.deployment.errors.connection_failed');
 				} else if (error.message.includes('circuit breaker is open')) {
-					message =
-						'RPC service is temporarily unavailable. This is likely because the RPC endpoint configured in your wallet has rate limits or is down.';
+					message = i18n.t('tools.token_sweep.step2.content.deployment.errors.rpc_unavailable');
 				} else if (error.message.includes('insufficient funds')) {
-					message = 'Insufficient balance. You need enough funds for deployment and gas fees.';
+					message = i18n.t('tools.token_sweep.step2.content.deployment.errors.insufficient_funds');
 				} else if (
 					error.message.includes('user rejected') ||
 					error.message.includes('User rejected')
 				) {
-					message = 'Transaction was rejected in your wallet.';
+					message = i18n.t('tools.token_sweep.step2.content.deployment.errors.user_rejected');
 				} else if (
 					error.message.includes('nonce too low') ||
 					error.message.includes('already known')
 				) {
-					message = 'This contract may already be deployed. Please refresh the dependency check.';
+					message = i18n.t('tools.token_sweep.step2.content.deployment.errors.already_deployed');
 				} else {
 					message = error.message;
 				}

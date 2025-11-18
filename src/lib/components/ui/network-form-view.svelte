@@ -361,7 +361,7 @@
 					<label class="checkbox-label">
 						<input
 							type="checkbox"
-							checked={value}
+							checked={Boolean(value)}
 							onchange={(e) => onInput(e.currentTarget.checked)}
 						/>
 						<span>{t('wallet.network_settings.enable_network')}</span>
