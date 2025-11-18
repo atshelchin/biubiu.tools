@@ -105,7 +105,34 @@
 					"endpoint_label": "Endpoint:",
 					"resolve_previous_issue": "Please resolve the previous issue first",
 					"view_deployment_guide": "View Deployment Guide",
-					"deploy_coming_soon": "Deploy Contract (Coming Soon)"
+					"deploy_coming_soon": "Deploy Contract (Coming Soon)",
+					"checks": {
+						"rpc_endpoint": {
+							"name": "RPC Endpoint",
+							"description": "{network} RPC connection",
+							"chain_id_mismatch": "Chain ID mismatch: expected {expected}, got {actual}",
+							"connected_to_block": "Connected to block #{blockNumber}",
+							"failed_to_connect": "Failed to connect: {error}"
+						},
+						"eip7702": {
+							"name": "EIP-7702 Support",
+							"description": "Account abstraction with delegation support",
+							"supported": "Network supports EIP-7702 (tested via eth_estimateGas)",
+							"not_supported": "Network does not support EIP-7702 (invalid opcode)",
+							"check_failed": "Failed to check EIP-7702 support: {error}"
+						},
+						"contract": {
+							"deployed": "Contract is deployed",
+							"not_deployed": "Contract not deployed at this address",
+							"check_failed": "Failed to check deployment: {error}",
+							"create2_proxy_description": "Deterministic deployment proxy for contract creation",
+							"multicall3_description": "Aggregate multiple contract calls into a single request",
+							"biubiu_premium_description": "Premium membership management contract",
+							"token_sweep_description": "Batch token transfer contract with premium membership integration",
+							"biubiu_membership_description": "Biubiu platform membership contract",
+							"token_sweep_contract_description": "Main contract for batch token transfer operations"
+						}
+					}
 				},
 				"footer": {
 					"checking_dependencies": "Checking dependencies...",

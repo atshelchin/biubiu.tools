@@ -73,13 +73,8 @@
 	</div>
 
 	<div class="check-details">
-		<!-- Only show error/warning messages, not success messages -->
-		{#if check.message && (check.status === 'error' || check.status === 'warning')}
-			<p class="check-message">{check.message}</p>
-		{/if}
-
-		<!-- Only show address details for failed contract checks -->
-		{#if check.type === 'contract' && check.address && check.status === 'error'}
+		<!-- Show contract address for all contract checks -->
+		{#if check.type === 'contract' && check.address}
 			<div class="detail-row">
 				<span class="label">{addressLabel}</span>
 				<div class="detail-value">
@@ -99,8 +94,8 @@
 			</div>
 		{/if}
 
-		<!-- Only show endpoint details for failed network service checks -->
-		{#if check.type === 'network-service' && check.endpoint && check.status === 'error'}
+		<!-- Show endpoint for all network service checks -->
+		{#if check.type === 'network-service' && check.endpoint}
 			<div class="detail-row">
 				<span class="label">{endpointLabel}</span>
 				<div class="detail-value">
@@ -116,6 +111,11 @@
 					</a>
 				</div>
 			</div>
+		{/if}
+
+		<!-- Only show error/warning messages at the bottom, not success messages -->
+		{#if check.message && (check.status === 'error' || check.status === 'warning')}
+			<p class="check-message">{check.message}</p>
 		{/if}
 	</div>
 
@@ -152,7 +152,7 @@
 		padding: var(--space-5);
 		background: var(--white);
 		border-radius: var(--radius-xl);
-		border: 2px solid var(--color-border);
+		border: 1px solid var(--color-border);
 		transition: all 0.3s ease;
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 	}
@@ -171,34 +171,28 @@
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 	}
 
+	/* Success: subtle and low-key */
 	.check-card.success {
-		border-color: hsl(120, 60%, 60%);
-		background: linear-gradient(135deg, hsla(120, 60%, 99%, 1) 0%, hsla(120, 60%, 97%, 1) 100%);
+		opacity: 0.7;
 	}
 
-	:global([data-theme='dark']) .check-card.success {
-		border-color: hsl(120, 60%, 40%);
-		background: linear-gradient(135deg, hsla(120, 60%, 10%, 0.4) 0%, hsla(120, 60%, 8%, 0.3) 100%);
-	}
-
+	/* Error: more prominent with red border */
 	.check-card.error {
-		border-color: hsl(0, 80%, 60%);
-		background: linear-gradient(135deg, hsla(0, 80%, 99%, 1) 0%, hsla(0, 80%, 97%, 1) 100%);
+		/* border-color: hsl(0, 70%, 60%); */
+		/* border-width: 2px; */
 	}
 
 	:global([data-theme='dark']) .check-card.error {
-		border-color: hsl(0, 80%, 40%);
-		background: linear-gradient(135deg, hsla(0, 80%, 10%, 0.4) 0%, hsla(0, 80%, 8%, 0.3) 100%);
+		/* border-color: hsl(0, 70%, 50%); */
 	}
 
+	/* Warning: subtle orange border */
 	.check-card.warning {
-		border-color: hsl(45, 100%, 60%);
-		background: linear-gradient(135deg, hsla(45, 100%, 99%, 1) 0%, hsla(45, 100%, 97%, 1) 100%);
+		border-color: hsl(30, 80%, 55%);
 	}
 
 	:global([data-theme='dark']) .check-card.warning {
-		border-color: hsl(45, 100%, 50%);
-		background: linear-gradient(135deg, hsla(45, 100%, 10%, 0.4) 0%, hsla(45, 100%, 8%, 0.3) 100%);
+		border-color: hsl(30, 80%, 50%);
 	}
 
 	.check-header {
@@ -215,51 +209,28 @@
 		width: 40px;
 		height: 40px;
 		border-radius: var(--radius-lg);
-		background: var(--gray-100);
+		/* background: var(--gray-100); */
 	}
 
 	:global([data-theme='dark']) .check-icon {
-		background: var(--gray-700);
+		/* background: var(--gray-700); */
 	}
 
 	.check-icon :global(svg) {
 		color: var(--gray-500);
 	}
 
-	.check-card.success .check-icon {
-		background: hsla(120, 60%, 95%, 1);
-	}
-
-	:global([data-theme='dark']) .check-card.success .check-icon {
-		background: hsla(120, 60%, 20%, 0.5);
-	}
-
+	/* Icon colors: simple and minimal */
 	.check-card.success .check-icon :global(svg) {
-		color: hsl(120, 60%, 40%);
-	}
-
-	.check-card.error .check-icon {
-		background: hsla(0, 80%, 95%, 1);
-	}
-
-	:global([data-theme='dark']) .check-card.error .check-icon {
-		background: hsla(0, 80%, 20%, 0.5);
+		color: var(--color-success);
 	}
 
 	.check-card.error .check-icon :global(svg) {
-		color: hsl(0, 80%, 50%);
-	}
-
-	.check-card.warning .check-icon {
-		background: hsla(45, 100%, 95%, 1);
-	}
-
-	:global([data-theme='dark']) .check-card.warning .check-icon {
-		background: hsla(45, 100%, 20%, 0.5);
+		color: hsl(0, 70%, 50%);
 	}
 
 	.check-card.warning .check-icon :global(svg) {
-		color: hsl(45, 100%, 45%);
+		color: hsl(30, 80%, 50%);
 	}
 
 	:global(.spinning) {
@@ -309,21 +280,23 @@
 
 	.check-message {
 		font-size: var(--text-sm);
-		color: var(--gray-700);
+		color: hsl(0, 70%, 45%);
 		margin: 0;
-		padding: var(--space-3) var(--space-4);
-		background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
-		border-radius: var(--radius-lg);
-		border-left: 4px solid var(--color-primary);
+		padding: var(--space-3) 0 0 0;
 		line-height: 1.6;
-		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+		font-weight: var(--font-medium);
 	}
 
 	:global([data-theme='dark']) .check-message {
-		color: var(--gray-200);
-		background: linear-gradient(135deg, var(--gray-700) 0%, var(--gray-750) 100%);
-		border-left-color: var(--color-primary);
-		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+		color: hsl(0, 70%, 60%);
+	}
+
+	.check-card.warning .check-message {
+		color: hsl(30, 80%, 45%);
+	}
+
+	:global([data-theme='dark']) .check-card.warning .check-message {
+		color: hsl(30, 80%, 60%);
 	}
 
 	.detail-row {
@@ -360,53 +333,50 @@
 	.endpoint-code {
 		font-family: var(--font-mono, monospace);
 		font-size: var(--text-xs);
-		color: var(--color-primary);
-		background: linear-gradient(135deg, hsla(210, 100%, 97%, 1) 0%, hsla(210, 100%, 95%, 1) 100%);
+		color: var(--gray-700);
+		background: var(--gray-50);
 		padding: var(--space-2) var(--space-3);
 		border-radius: var(--radius-md);
-		border: 1px solid hsla(210, 100%, 90%, 1);
+		border: 1px solid var(--color-border);
 		word-break: break-all;
 		flex: 1;
 		min-width: 0;
-		font-weight: var(--font-medium);
-		letter-spacing: -0.01em;
 	}
 
 	:global([data-theme='dark']) .address-code,
 	:global([data-theme='dark']) .endpoint-code {
-		color: hsl(210, 100%, 70%);
-		background: linear-gradient(
-			135deg,
-			hsla(210, 100%, 12%, 0.6) 0%,
-			hsla(210, 100%, 10%, 0.4) 100%
-		);
-		border-color: hsla(210, 100%, 20%, 0.8);
+		color: var(--gray-300);
+		background: var(--gray-900);
+		border-color: var(--gray-700);
 	}
 
 	.explorer-link {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		padding: var(--space-1);
-		color: var(--color-primary);
-		background: var(--color-panel-1);
-		border-radius: var(--radius-sm);
-		transition: all 0.2s;
+		padding: var(--space-2);
+		color: var(--gray-600);
+		background: var(--gray-50);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-md);
+		transition: all 0.2s ease;
 		flex-shrink: 0;
 	}
 
 	.explorer-link:hover {
-		background: var(--color-primary);
-		color: white;
-		transform: translateY(-1px);
+		color: var(--color-primary);
+		background: var(--gray-100);
 	}
 
 	:global([data-theme='dark']) .explorer-link {
-		background: var(--gray-700);
+		background: var(--gray-900);
+		border-color: var(--gray-700);
+		color: var(--gray-400);
 	}
 
 	:global([data-theme='dark']) .explorer-link:hover {
-		background: var(--color-primary);
+		background: var(--gray-800);
+		color: var(--color-primary);
 	}
 
 	.check-actions {
@@ -443,47 +413,46 @@
 
 	.deploy-button {
 		padding: var(--space-3) var(--space-5);
-		background: linear-gradient(135deg, var(--gray-200) 0%, var(--gray-300) 100%);
+		background: var(--gray-200);
 		color: var(--gray-600);
-		border: none;
-		border-radius: var(--radius-lg);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-md);
 		font-size: var(--text-sm);
-		font-weight: var(--font-semibold);
+		font-weight: var(--font-medium);
 		cursor: not-allowed;
-		transition: all 0.3s ease;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+		transition: all 0.2s ease;
 	}
 
 	.deploy-button.primary {
-		background: linear-gradient(135deg, var(--color-primary) 0%, hsl(210, 100%, 45%) 100%);
-		color: white;
+		background: hsla(120, 60%, 96%, 1);
+		color: hsl(120, 60%, 35%);
+		border: 1px solid hsla(120, 60%, 60%, 1);
 		cursor: pointer;
-		box-shadow: 0 4px 12px hsla(210, 100%, 50%, 0.25);
+		font-weight: var(--font-medium);
 	}
 
 	.deploy-button.primary:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 6px 20px hsla(210, 100%, 50%, 0.35);
+		background: hsla(120, 60%, 94%, 1);
 	}
 
 	.deploy-button.primary:active {
-		transform: translateY(0);
-		box-shadow: 0 2px 8px hsla(210, 100%, 50%, 0.25);
+		background: hsla(120, 60%, 92%, 1);
 	}
 
 	:global([data-theme='dark']) .deploy-button {
-		background: linear-gradient(135deg, var(--gray-700) 0%, var(--gray-600) 100%);
+		background: var(--gray-700);
 		color: var(--gray-400);
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+		border-color: var(--gray-600);
 	}
 
 	:global([data-theme='dark']) .deploy-button.primary {
-		background: linear-gradient(135deg, hsl(210, 100%, 50%) 0%, hsl(210, 100%, 40%) 100%);
-		box-shadow: 0 4px 12px hsla(210, 100%, 40%, 0.4);
+		background: hsla(120, 60%, 15%, 0.3);
+		border-color: hsla(120, 60%, 50%, 1);
+		color: hsl(120, 60%, 70%);
 	}
 
 	:global([data-theme='dark']) .deploy-button.primary:hover {
-		box-shadow: 0 6px 20px hsla(210, 100%, 40%, 0.5);
+		background: hsla(120, 60%, 18%, 0.4);
 	}
 
 	.deploy-link {
@@ -491,19 +460,28 @@
 		align-items: center;
 		gap: var(--space-2);
 		padding: var(--space-2) var(--space-4);
-		background: var(--color-primary);
-		color: white;
+		background: var(--gray-100);
+		color: var(--gray-700);
+		border: 1px solid var(--color-border);
 		border-radius: var(--radius-md);
 		font-size: var(--text-sm);
-		font-weight: var(--font-semibold);
+		font-weight: var(--font-medium);
 		text-decoration: none;
 		transition: all 0.2s;
 	}
 
 	.deploy-link:hover {
-		opacity: 0.9;
-		transform: translateY(-1px);
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+		background: var(--gray-200);
+	}
+
+	:global([data-theme='dark']) .deploy-link {
+		background: var(--gray-800);
+		color: var(--gray-300);
+		border-color: var(--gray-700);
+	}
+
+	:global([data-theme='dark']) .deploy-link:hover {
+		background: var(--gray-700);
 	}
 
 	/* Responsive */

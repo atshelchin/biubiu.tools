@@ -59,6 +59,7 @@
 				currentNetwork.rpcEndpoints[0].url,
 				currentNetwork.chainId,
 				currentNetwork.name,
+				i18n.t.bind(i18n),
 				membershipContract,
 				sweepContract
 			);
@@ -246,5 +247,4 @@
 		gap: var(--space-4);
 		margin-bottom: var(--space-6);
 	}
-
 </style>

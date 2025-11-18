@@ -105,7 +105,34 @@
 					"endpoint_label": "节点:",
 					"resolve_previous_issue": "请先解决前一个问题",
 					"view_deployment_guide": "查看部署指南",
-					"deploy_coming_soon": "部署合约（即将推出）"
+					"deploy_coming_soon": "部署合约（即将推出）",
+					"checks": {
+						"rpc_endpoint": {
+							"name": "RPC 节点",
+							"description": "{network} RPC 连接",
+							"chain_id_mismatch": "链 ID 不匹配: 预期 {expected}，实际 {actual}",
+							"connected_to_block": "已连接到区块 #{blockNumber}",
+							"failed_to_connect": "连接失败: {error}"
+						},
+						"eip7702": {
+							"name": "EIP-7702 支持",
+							"description": "账户抽象与授权支持",
+							"supported": "网络支持 EIP-7702（已通过 eth_estimateGas 测试）",
+							"not_supported": "网络不支持 EIP-7702（无效操作码）",
+							"check_failed": "检查 EIP-7702 支持失败: {error}"
+						},
+						"contract": {
+							"deployed": "合约已部署",
+							"not_deployed": "合约未部署在此地址",
+							"check_failed": "检查部署失败: {error}",
+							"create2_proxy_description": "确定性部署代理合约",
+							"multicall3_description": "将多个合约调用聚合为一个请求",
+							"biubiu_premium_description": "高级会员管理合约",
+							"token_sweep_description": "批量代币转账合约（集成高级会员功能）",
+							"biubiu_membership_description": "BiuBiu 平台会员合约",
+							"token_sweep_contract_description": "批量代币转账操作主合约"
+						}
+					}
 				},
 				"footer": {
 					"checking_dependencies": "正在检查依赖项...",

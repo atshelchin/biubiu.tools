@@ -1,41 +1,18 @@
 /**
  * Token Sweep dependency types
+ * Re-export from generic blockchain-checker
  */
 
+export type {
+	CheckResult,
+	NetworkServiceCheck,
+	ContractCheck,
+	DependencyCheck,
+	DependencyCheckSummary
+} from '$lib/utils/blockchain-checker';
+
+// Keep legacy type alias for compatibility
 export type DependencyStatus = 'checking' | 'success' | 'warning' | 'error';
+export type DependencyCheckResult = CheckResult;
 
-export interface DependencyCheckResult {
-	id: string;
-	name: string;
-	description: string;
-	status: DependencyStatus;
-	message?: string;
-	address?: string;
-	canDeploy?: boolean;
-	deployGuideUrl?: string;
-}
-
-export interface NetworkServiceCheck extends DependencyCheckResult {
-	type: 'network-service';
-	endpoint?: string;
-	responseTime?: number;
-}
-
-export interface ContractCheck extends DependencyCheckResult {
-	type: 'contract';
-	address: string;
-	expectedAddress?: string;
-	isDeployed: boolean;
-	blockNumber?: number;
-	blockTimestamp?: number;
-}
-
-export type DependencyCheck = NetworkServiceCheck | ContractCheck;
-
-export interface DependencyCheckSummary {
-	total: number;
-	passed: number;
-	warnings: number;
-	failed: number;
-	allPassed: boolean;
-}
+import type { CheckResult } from '$lib/utils/blockchain-checker';
