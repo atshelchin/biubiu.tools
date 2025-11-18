@@ -32,8 +32,10 @@
 		deployComingSoonText?: string;
 	}
 
+	// eslint-disable-next-line svelte/no-unused-props
 	let {
 		check,
+		// eslint-disable-next-line @typescript-eslint/no-unused-vars
 		index: _index,
 		canFix,
 		blockExplorer,

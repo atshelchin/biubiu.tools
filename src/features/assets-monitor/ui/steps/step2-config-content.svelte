@@ -8,6 +8,7 @@
 	import type { AssetType } from '../../types/assets';
 
 	const connectStore = useConnectStore();
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const stepManager = useStepManager();
 
 	// Form state

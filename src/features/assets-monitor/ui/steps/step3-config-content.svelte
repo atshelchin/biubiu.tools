@@ -12,6 +12,7 @@
 	import type { Address } from 'viem';
 
 	const connectStore = useConnectStore();
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const stepManager = useStepManager();
 
 	let scanStarted = $state(false);

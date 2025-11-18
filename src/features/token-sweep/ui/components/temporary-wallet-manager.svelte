@@ -288,7 +288,7 @@
 
 			<!-- Wallet Address -->
 			<div class="wallet-field">
-				<label>Address</label>
+				<div class="field-label">Address</div>
 				<div class="field-content">
 					<code class="field-value">{temporaryWallet.address}</code>
 					<button
@@ -310,7 +310,7 @@
 
 			<!-- Balance Display -->
 			<div class="wallet-field">
-				<label>Balance (Current Network)</label>
+				<div class="field-label">Balance (Current Network)</div>
 				<div class="field-content balance-content">
 					{#if isLoadingBalance}
 						<Loader2 size={16} class="spinning" />
@@ -340,7 +340,7 @@
 
 			<!-- Private Key (Hidden by default) -->
 			<div class="wallet-field">
-				<label>Private Key</label>
+				<div class="field-label">Private Key</div>
 				<div class="field-content">
 					{#if showPrivateKey}
 						<code class="field-value private-key">{temporaryWallet.privateKey}</code>

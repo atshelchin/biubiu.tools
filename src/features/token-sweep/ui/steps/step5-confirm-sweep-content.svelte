@@ -91,7 +91,7 @@
 
 	// Check membership when address changes
 	$effect(() => {
-		if (connectStore.currentAddress) {
+		if (connectStore.address) {
 			checkMembershipStatus();
 		}
 	});
@@ -104,10 +104,10 @@
 	});
 
 	async function checkMembershipStatus() {
-		if (!connectStore.currentAddress) return;
+		if (!connectStore.address) return;
 
 		const status = await checkMembership(
-			connectStore.currentAddress,
+			connectStore.address,
 			taskId,
 			temporaryWallet?.signature as `0x${string}` | undefined,
 			temporaryWallet?.signature ? `task-${taskId}` : undefined
@@ -517,7 +517,7 @@
 
 	<!-- 1. Selected Tokens Display (网络和token) -->
 	<div class="form-section">
-		<label class="form-label">Selected Network & Tokens ({selectedTokenCount})</label>
+		<div class="form-label">Selected Network & Tokens ({selectedTokenCount})</div>
 		{#if currentNetwork}
 			<div class="network-info">
 				<span class="network-name">{currentNetwork.name}</span>
@@ -551,8 +551,9 @@
 
 	<!-- 3. Target Address (接收地址) -->
 	<div class="form-section">
-		<label class="form-label">Target Address</label>
+		<label class="form-label" for="target-address-input">Target Address</label>
 		<input
+			id="target-address-input"
 			type="text"
 			class="form-input"
 			bind:value={targetAddress}

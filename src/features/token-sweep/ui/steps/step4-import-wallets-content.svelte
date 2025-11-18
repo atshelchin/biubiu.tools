@@ -244,6 +244,7 @@
 						}))
 					);
 					// Add wallets (without privateKey field)
+					// eslint-disable-next-line @typescript-eslint/no-unused-vars
 					step4State.addWallets(result.wallets.map(({ privateKey: _pk, ...wallet }) => wallet));
 				}
 			} else {
@@ -265,6 +266,7 @@
 						}))
 					);
 					// Add wallets (without privateKey field)
+					// eslint-disable-next-line @typescript-eslint/no-unused-vars
 					step4State.addWallets(result.wallets.map(({ privateKey: _pk, ...wallet }) => wallet));
 				}
 			}
@@ -363,6 +365,7 @@
 						}))
 					);
 					// Add wallets (without privateKey field)
+					// eslint-disable-next-line @typescript-eslint/no-unused-vars
 					step4State.addWallets(result.wallets.map(({ privateKey: _pk, ...wallet }) => wallet));
 					if (result.invalidKeys.length > 0) {
 						errorMessage = `Imported ${result.wallets.length} wallets. ${result.invalidKeys.length} invalid keys skipped.`;
@@ -393,6 +396,7 @@
 						}))
 					);
 					// Add wallets (without privateKey field)
+					// eslint-disable-next-line @typescript-eslint/no-unused-vars
 					step4State.addWallets(result.wallets.map(({ privateKey: _pk, ...wallet }) => wallet));
 					if (result.invalidKeys.length > 0) {
 						errorMessage = `Imported ${result.wallets.length} wallets. ${result.invalidKeys.length} invalid keys skipped.`;
