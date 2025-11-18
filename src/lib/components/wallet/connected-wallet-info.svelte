@@ -63,60 +63,58 @@
 
 <div class="connected-container">
 	<div class="connected-card">
-		<div class="connected-header">
-			<span class="connected-prefix">{i18n.t('wallet.connected_to')}</span>
-			<div class="network-badge">
-				<NetworkIcon {chainId} size={20} />
-				<span class="network-name">{network?.name || `Chain ${chainId}`}</span>
-			</div>
-		</div>
-
-		<div class="wallet-details">
-			<div class="account-info">
-				<div class="account-section">
-					<button
-						bind:this={accountButtonElement}
-						class="account-button"
-						class:has-multiple={hasMultipleAccounts}
-						onclick={handleAccountClick}
-					>
-						{#if connectorIcon}
-							<img src={connectorIcon} alt="Wallet" class="wallet-icon" />
-						{:else}
-							<div class="wallet-icon-placeholder">
-								<Wallet size={20} />
-							</div>
-						{/if}
-						<div class="account-address-display">
-							<span class="address-label">{i18n.t('wallet.address_label')}</span>
-							<span class="address-value">{formatAddress(address)}</span>
+		<div class="account-section">
+			<button
+				bind:this={accountButtonElement}
+				class="account-button"
+				class:has-multiple={hasMultipleAccounts}
+				onclick={handleAccountClick}
+			>
+				<div class="wallet-icon-wrapper">
+					{#if connectorIcon}
+						<img src={connectorIcon} alt="Wallet" class="wallet-icon" />
+					{:else}
+						<div class="wallet-icon-placeholder">
+							<Wallet size={20} />
 						</div>
-						{#if hasMultipleAccounts}
-							<ChevronDown size={16} class="chevron-icon" />
-						{/if}
-					</button>
+					{/if}
+				</div>
 
-					<div class="account-actions">
-						<button
-							class="icon-action-button"
-							onclick={onCopyAddress}
-							title={i18n.t('wallet.copy_address_tooltip')}
-						>
-							{#if copySuccess}
-								<Check size={16} />
-							{:else}
-								<Copy size={16} />
-							{/if}
-						</button>
-						<button
-							class="icon-action-button disconnect"
-							onclick={onDisconnect}
-							title={i18n.t('wallet.disconnect_wallet')}
-						>
-							<LogOut size={16} />
-						</button>
+				<div class="account-content">
+					<div class="network-info">
+						<NetworkIcon {chainId} size={16} />
+						<span class="network-name">{network?.name || `Chain ${chainId}`}</span>
+					</div>
+					<div class="address-info">
+						<span class="address-label">{i18n.t('wallet.address_label')}</span>
+						<span class="address-value">{formatAddress(address)}</span>
 					</div>
 				</div>
+
+				{#if hasMultipleAccounts}
+					<ChevronDown size={16} class="chevron-icon" />
+				{/if}
+			</button>
+
+			<div class="account-actions">
+				<button
+					class="icon-action-button"
+					onclick={onCopyAddress}
+					title={i18n.t('wallet.copy_address_tooltip')}
+				>
+					{#if copySuccess}
+						<Check size={16} />
+					{:else}
+						<Copy size={16} />
+					{/if}
+				</button>
+				<button
+					class="icon-action-button disconnect"
+					onclick={onDisconnect}
+					title={i18n.t('wallet.disconnect_wallet')}
+				>
+					<LogOut size={16} />
+				</button>
 			</div>
 		</div>
 	</div>
@@ -142,85 +140,7 @@
 	}
 
 	.connected-card {
-		padding: var(--space-5);
-		/* background: hsla(120, 60%, 50%, 0.08); */
 		border-radius: var(--radius-lg);
-	}
-
-	:global([data-theme='dark']) .connected-card {
-		/* background: hsla(120, 60%, 60%, 0.12); */
-		border-color: hsl(120, 60%, 60%);
-	}
-
-	.connected-header {
-		display: flex;
-		align-items: center;
-		gap: var(--space-2);
-		margin-bottom: var(--space-4);
-	}
-
-	.connected-prefix {
-		font-size: var(--text-sm);
-		color: var(--gray-600);
-	}
-
-	:global([data-theme='dark']) .connected-prefix {
-		color: var(--gray-400);
-	}
-
-	.network-badge {
-		display: flex;
-		align-items: center;
-		gap: var(--space-2);
-		padding: var(--space-1) var(--space-2);
-		background: hsla(120, 60%, 95%, 1);
-		border-radius: var(--radius-md);
-		border: 1px solid hsla(120, 60%, 80%, 1);
-	}
-
-	:global([data-theme='dark']) .network-badge {
-		background: hsla(120, 60%, 15%, 0.3);
-		border-color: hsla(120, 60%, 25%, 1);
-	}
-
-	.network-name {
-		font-size: var(--text-base);
-		font-weight: var(--font-semibold);
-		color: hsl(120, 60%, 30%);
-	}
-
-	:global([data-theme='dark']) .network-name {
-		color: hsl(120, 60%, 70%);
-	}
-
-	.wallet-details {
-		display: flex;
-		align-items: center;
-		gap: var(--space-4);
-	}
-
-	.wallet-icon {
-		width: 48px;
-		height: 48px;
-		border-radius: var(--radius-md);
-		flex-shrink: 0;
-	}
-
-	.wallet-icon-placeholder {
-		width: 48px;
-		height: 48px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background: var(--color-muted);
-		border-radius: var(--radius-md);
-		color: var(--gray-600);
-		flex-shrink: 0;
-	}
-
-	.account-info {
-		flex: 1;
-		min-width: 0;
 	}
 
 	.account-section {
@@ -233,12 +153,11 @@
 		flex: 1;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
-		gap: var(--space-2);
+		gap: var(--space-3);
 		padding: var(--space-3) var(--space-4);
 		background: var(--color-background);
 		border: 1px solid var(--color-border);
-		border-radius: var(--radius-md);
+		border-radius: var(--radius-lg);
 		cursor: default;
 		transition: all 0.2s ease;
 		min-width: 0;
@@ -251,14 +170,55 @@
 	.account-button.has-multiple:hover {
 		background: var(--color-panel-1);
 		border-color: var(--color-primary);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 	}
 
-	.account-address-display {
+	.wallet-icon-wrapper {
+		flex-shrink: 0;
+	}
+
+	.wallet-icon {
+		width: 36px;
+		height: 36px;
+		border-radius: var(--radius-md);
+		display: block;
+	}
+
+	.wallet-icon-placeholder {
+		width: 36px;
+		height: 36px;
 		display: flex;
-		flex-direction: column;
-		gap: var(--space-1);
+		align-items: center;
+		justify-content: center;
+		background: var(--color-muted);
+		border-radius: var(--radius-md);
+		color: var(--gray-600);
+	}
+
+	.account-content {
 		flex: 1;
 		min-width: 0;
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-2);
+	}
+
+	.network-info {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+	}
+
+	.network-name {
+		font-size: var(--text-sm);
+		font-weight: var(--font-semibold);
+		color: var(--color-primary);
+	}
+
+	.address-info {
+		display: flex;
+		align-items: baseline;
+		gap: var(--space-2);
 	}
 
 	.address-label {
@@ -266,10 +226,11 @@
 		color: var(--gray-500);
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
+		flex-shrink: 0;
 	}
 
 	.address-value {
-		font-size: var(--text-base);
+		font-size: var(--text-sm);
 		font-weight: var(--font-medium);
 		color: var(--gray-900);
 		font-family: var(--font-mono, monospace);
