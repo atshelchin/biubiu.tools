@@ -76,7 +76,7 @@
 			{#if token.type === 'erc20' && blockExplorer}
 				{@const erc20Token = token as ERC20Token}
 				<a
-					href="{blockExplorer}/address/{erc20Token.address}"
+					href="{blockExplorer}/token/{erc20Token.address}"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="explorer-link"

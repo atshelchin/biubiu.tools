@@ -58,7 +58,7 @@
 	/* Add Token Card (Dashed Border) */
 	.token-card {
 		position: relative;
-		padding: var(--space-3);
+		padding: var(--space-8);
 		background: var(--color-panel-1);
 		border: 2px solid var(--color-border);
 		border-radius: var(--radius-lg);
