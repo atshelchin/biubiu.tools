@@ -58,14 +58,14 @@
 	/* Add Token Card (Dashed Border) */
 	.token-card {
 		position: relative;
-		padding: var(--space-4);
+		padding: var(--space-3);
 		background: var(--color-panel-1);
 		border: 2px solid var(--color-border);
 		border-radius: var(--radius-lg);
 		cursor: pointer;
 		transition: all 0.2s;
 		display: flex;
-		flex-direction: column;
+		/* flex-direction: column; */
 		gap: var(--space-3);
 		text-align: left;
 	}
@@ -76,8 +76,9 @@
 		border-color: var(--color-border);
 		background: transparent;
 		justify-content: center;
-		flex-direction: column;
-		gap: var(--space-2);
+		/* flex-direction: column; */
+		/* display: flex; */
+		/* gap: var(--space-2); */
 		align-items: center;
 	}
 

@@ -119,7 +119,7 @@
 <style>
 	.token-card {
 		position: relative;
-		padding: var(--space-4);
+		padding: var(--space-3);
 		background: var(--color-panel-1);
 		border: 2px solid var(--color-border);
 		border-radius: var(--radius-lg);
@@ -127,7 +127,7 @@
 		transition: all 0.2s;
 		display: flex;
 		flex-direction: column;
-		gap: var(--space-3);
+		gap: var(--space-2);
 		text-align: left;
 	}
 
@@ -170,8 +170,8 @@
 	}
 
 	.token-logo {
-		width: 48px;
-		height: 48px;
+		width: 36px;
+		height: 36px;
 		border-radius: 50%;
 		object-fit: cover;
 		background: var(--gray-100);
