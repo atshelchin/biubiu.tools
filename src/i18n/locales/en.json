@@ -89,10 +89,20 @@
 				}
 			},
 			"step2": {
+				"content": {
+					"title": "Dependency Check",
+					"description": "Verifying network services and required contracts are deployed"
+				},
 				"footer": {
 					"checking_dependencies": "Checking dependencies...",
 					"resolve_issues": "Please resolve all dependency issues to continue",
 					"waiting_for_checks": "Waiting for dependency checks..."
+				},
+				"sidebar": {
+					"beginner_tips": "Tips",
+					"tip1": "🔍 The system automatically checks if required contracts are deployed",
+					"tip2": "🚀 If a contract is missing, you can deploy it directly from this page",
+					"tip3": "📋 Must resolve dependency issues in order - fix the first failed check before others"
 				}
 			}
 		},

@@ -89,10 +89,20 @@
 				}
 			},
 			"step2": {
+				"content": {
+					"title": "依赖检查",
+					"description": "验证网络服务和所需合约是否已部署"
+				},
 				"footer": {
 					"checking_dependencies": "正在检查依赖项...",
 					"resolve_issues": "请解决所有依赖问题后继续",
 					"waiting_for_checks": "等待依赖检查..."
+				},
+				"sidebar": {
+					"beginner_tips": "新手提示",
+					"tip1": "🔍 系统会自动检查所需的合约是否已部署",
+					"tip2": "🚀 如果缺少合约，可以直接在本页面一键部署",
+					"tip3": "📋 必须按顺序解决依赖问题 - 先修复第一个失败的检查项"
 				}
 			}
 		},

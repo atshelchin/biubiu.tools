@@ -13,7 +13,9 @@
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import EmptyState from '@/features/token-sweep/ui/components/empty-state.svelte';
 	import { step2State } from '@/features/token-sweep/stores/step2-state.svelte';
+	import { useI18n } from '@shelchin/i18n/svelte';
 
+	const i18n = useI18n();
 	const connectStore = useConnectStore();
 	const stepManager = useStepManager();
 
@@ -151,8 +153,8 @@
 
 <div class="step-content">
 	<StepContentHeader
-		title="Dependency Check"
-		description="Verifying network services and required contracts are deployed"
+		title={i18n.t('tools.token_sweep.step2.content.title')}
+		description={i18n.t('tools.token_sweep.step2.content.description')}
 	/>
 
 	{#if isChecking}
@@ -359,6 +361,11 @@
 {/if}
 
 <style>
+	.step-content {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-5);
+	}
 	/* Checking State */
 	.checking-container {
 		display: flex;
