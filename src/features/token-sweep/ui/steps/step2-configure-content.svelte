@@ -12,6 +12,7 @@
 	import type { ContractDeploymentConfig } from '@/features/token-sweep/types/deployment-config';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import EmptyState from '@/features/token-sweep/ui/components/empty-state.svelte';
+	import LoadingState from '$lib/components/ui/loading-state.svelte';
 	import { step2State } from '@/features/token-sweep/stores/step2-state.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
 
@@ -159,14 +160,11 @@
 
 	{#if isChecking}
 		<!-- Checking State -->
-		<div class="checking-container">
-			<div class="checking-spinner"><RefreshCw class="spin-icon" size={48} /></div>
-			<p class="checking-text">
-				{i18n.t('tools.token_sweep.step2.content.checking_dependencies_for', {
-					network: currentNetwork?.name ?? ''
-				})}
-			</p>
-		</div>
+		<LoadingState
+			message={i18n.t('tools.token_sweep.step2.content.checking_dependencies_for', {
+				network: currentNetwork?.name ?? ''
+			})}
+		/>
 	{:else if !connectStore.isConnected}
 		<!-- Not Connected State -->
 		<EmptyState
@@ -371,43 +369,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-5);
-	}
-	/* Checking State */
-	.checking-container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		padding: var(--space-12) var(--space-6);
-		background: var(--color-panel-1);
-		border-radius: var(--radius-lg);
-		border: 2px solid var(--color-border);
-		min-height: 300px;
-	}
-
-	.checking-spinner {
-		color: var(--color-primary);
-		margin-bottom: var(--space-4);
-	}
-
-	:global(.spin-icon) {
-		animation: spin 1s linear infinite;
-	}
-
-	@keyframes spin {
-		to {
-			transform: rotate(360deg);
-		}
-	}
-
-	.checking-text {
-		font-size: var(--text-base);
-		font-weight: var(--font-medium);
-		color: var(--gray-700);
-	}
-
-	:global([data-theme='dark']) .checking-text {
-		color: var(--gray-300);
 	}
 
 	/* Empty State */
