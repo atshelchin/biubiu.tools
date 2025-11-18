@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { CheckCircle2, XCircle, AlertCircle, Loader2, ExternalLink } from '@lucide/svelte';
+	import Modal from '@/lib/components/ui/modal.svelte';
 	import type { ContractDeploymentConfig, DeploymentContext } from '../types/deployment-config';
 
 	interface Props {
@@ -239,15 +240,14 @@
 	}
 </script>
 
-{#if show}
-	<div class="modal-overlay" onclick={handleClose}>
-		<div class="modal-container" onclick={(e) => e.stopPropagation()}>
-			<div class="modal-header">
-				<h2>Deploy {config.contractName}</h2>
-				<button class="close-button" onclick={handleClose} disabled={isProcessing}>×</button>
-			</div>
-
-			<div class="modal-body">
+<Modal
+	open={show}
+	onClose={handleClose}
+	title="Deploy {config.contractName}"
+	maxWidth="600px"
+	height="90vh"
+>
+	{#snippet children()}
 				{#if status === 'idle'}
 					<div class="info-section">
 						<p class="contract-description">{config.description}</p>
@@ -396,130 +396,12 @@
 						<button class="action-button secondary" onclick={handleRetry}> Try Again </button>
 					</div>
 				{/if}
-			</div>
-		</div>
-	</div>
-{/if}
+	{/snippet}
+</Modal>
 
 <style>
-	.modal-overlay {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: rgba(0, 0, 0, 0.6);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		z-index: 1000;
-		backdrop-filter: blur(8px);
-		animation: fadeIn 0.2s ease-out;
-	}
-
-	@keyframes fadeIn {
-		from {
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
-	}
-
-	.modal-container {
-		background: var(--color-panel-1);
-		border-radius: var(--radius-xl);
-		box-shadow:
-			0 20px 60px rgba(0, 0, 0, 0.3),
-			0 0 0 1px rgba(255, 255, 255, 0.1);
-		max-width: 600px;
-		width: 90%;
-		max-height: 90vh;
-		overflow: hidden;
-		animation: slideUp 0.3s ease-out;
-	}
-
-	@keyframes slideUp {
-		from {
-			transform: translateY(20px);
-			opacity: 0;
-		}
-		to {
-			transform: translateY(0);
-			opacity: 1;
-		}
-	}
-
-	:global([data-theme='dark']) .modal-container {
-		background: linear-gradient(135deg, hsl(220, 15%, 12%) 0%, hsl(220, 15%, 15%) 100%);
-		box-shadow:
-			0 20px 60px rgba(0, 0, 0, 0.5),
-			0 0 0 1px rgba(255, 255, 255, 0.05);
-	}
-
-	.modal-header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: var(--space-5) var(--space-6);
-		background: linear-gradient(135deg, hsl(220, 70%, 55%) 0%, hsl(250, 70%, 60%) 100%);
-		position: relative;
-		overflow: hidden;
-	}
-
-	.modal-header::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
-		pointer-events: none;
-	}
-
-	.modal-header h2 {
-		margin: 0;
-		font-size: var(--text-xl);
-		font-weight: var(--font-bold);
-		color: white;
-		text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-		position: relative;
-		z-index: 1;
-	}
-
-	.close-button {
-		background: rgba(255, 255, 255, 0.2);
-		border: none;
-		font-size: 28px;
-		cursor: pointer;
-		color: white;
-		padding: 0;
-		width: 36px;
-		height: 36px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border-radius: var(--radius-md);
-		transition: all 0.2s ease;
-		position: relative;
-		z-index: 1;
-	}
-
-	.close-button:hover {
-		background: rgba(255, 255, 255, 0.3);
-		transform: rotate(90deg);
-	}
-
-	.close-button:active {
-		transform: rotate(90deg) scale(0.95);
-	}
-
-	.modal-body {
-		padding: var(--space-6);
-		overflow-y: auto;
-		max-height: calc(90vh - 80px);
-	}
+	/* Modal structure now handled by Modal component */
+	/* Content-specific styles below */
 
 	.action-button {
 		width: 100%;
