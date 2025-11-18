@@ -161,10 +161,10 @@
 			<pre><code
 					>{`// 1. 创建自定义组件
 // ColorPicker.svelte
-<script lang="ts">
+<${'script'} lang="ts">
   // eslint-disable-next-line @typescript-eslint/no-unused-vars, svelte/valid-prop-names-in-kit-pages
   let { value = '', onInput = () => {} } = $props();
-</script>
+</${'script'}>
 
 <div class="color-picker">
   <input type="color" {value}
@@ -184,8 +184,8 @@ const schema: FormSchema = {
       }
     }
   ]
-};`}</code
-				></pre>
+};`}</code>
+</pre>
 		</section>
 
 		<section class="doc-section">
@@ -204,8 +204,7 @@ const customComponents = {
   name: 'color',
   type: 'colorPicker', // 字符串类型
   label: '选择颜色'
-}`}</code
-				></pre>
+}`}</code></pre>
 		</section>
 	</div>
 
