@@ -72,7 +72,9 @@
 
 	.main-content {
 		background: var(--color-card);
+
 		padding: var(--space-4);
+		padding-top: var(--space-6);
 		border-radius: var(--radius-lg);
 		border: 1px solid var(--color-border);
 		display: flex;

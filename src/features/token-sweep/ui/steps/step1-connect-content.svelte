@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { useConnectStore } from '$lib/stores/connect.svelte.js';
 	import NetworkSelector from '@/lib/components/ui/network-selector.svelte';
-	import WalletConnectButton from '@/lib/components/ui/wallet-connect-button.svelte';
+	import WalletConnectButton from '$lib/components/ui/wallet-connect-button.svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';

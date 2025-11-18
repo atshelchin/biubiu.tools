@@ -18,7 +18,7 @@
 </script>
 
 <button class="network-card {className}" class:selected {onclick}>
-	<NetworkIcon chainId={network.chainId} size={48} />
+	<NetworkIcon chainId={network.chainId} size={36} />
 	<div class="network-info">
 		<div class="network-name">{network.name}</div>
 		<div class="network-chain-id">Chain ID: {network.chainId}</div>
@@ -32,7 +32,7 @@
 		display: flex;
 		align-items: center;
 		gap: var(--space-3);
-		padding: var(--space-4);
+		padding: var(--space-3);
 		background: var(--color-background);
 		border: 2px solid var(--color-border);
 		border-radius: var(--radius-lg);

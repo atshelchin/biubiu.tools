@@ -35,9 +35,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		flex-direction: column;
+		/* flex-direction: column; */
 		gap: var(--space-2);
-		padding: var(--space-4);
+		padding: var(--space-3);
 		background: transparent;
 		border: 2px dashed var(--color-border);
 		border-radius: var(--radius-lg);

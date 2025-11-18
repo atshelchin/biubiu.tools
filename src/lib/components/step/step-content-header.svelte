@@ -26,7 +26,7 @@
 		justify-content: space-between;
 		align-items: flex-start;
 		gap: var(--space-4);
-		margin-bottom: var(--space-6);
+		margin-bottom: var(--space-4);
 	}
 
 	.content-header-text {
@@ -34,9 +34,9 @@
 	}
 
 	h2 {
-		font-size: var(--text-2xl);
+		font-size: var(--text-lg);
 		font-weight: var(--font-bold);
-		margin: 0 0 var(--space-2) 0;
+		margin: 0 0 var(--space-1) 0;
 		color: var(--gray-900);
 	}
 
@@ -57,7 +57,7 @@
 
 	.header-actions {
 		display: flex;
-		gap: var(--space-2);
+		gap: var(--space-1);
 		flex-wrap: wrap;
 	}
 
