@@ -106,6 +106,7 @@
 					"resolve_previous_issue": "Please resolve the previous issue first",
 					"view_deployment_guide": "View Deployment Guide",
 					"deploy_coming_soon": "Deploy Contract (Coming Soon)",
+					"deploy_contract": "Deploy {contractName}",
 					"checks": {
 						"rpc_endpoint": {
 							"name": "RPC Endpoint",

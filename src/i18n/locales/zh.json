@@ -106,6 +106,7 @@
 					"resolve_previous_issue": "请先解决前一个问题",
 					"view_deployment_guide": "查看部署指南",
 					"deploy_coming_soon": "部署合约（即将推出）",
+					"deploy_contract": "部署 {contractName}",
 					"checks": {
 						"rpc_endpoint": {
 							"name": "RPC 节点",

@@ -245,7 +245,7 @@
 	onClose={handleClose}
 	title="Deploy {config.contractName}"
 	maxWidth="600px"
-	height="90vh"
+	height="fit-content"
 >
 	{#snippet children()}
 				{#if status === 'idle'}
