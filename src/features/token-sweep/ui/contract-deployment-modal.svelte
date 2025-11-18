@@ -2,6 +2,7 @@
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { CheckCircle2, XCircle, AlertCircle, Loader2, ExternalLink } from '@lucide/svelte';
 	import Modal from '@/lib/components/ui/modal.svelte';
+	import ContractDetails from '@/lib/components/ui/contract-details.svelte';
 	import type { ContractDeploymentConfig, DeploymentContext } from '../types/deployment-config';
 
 	interface Props {
@@ -248,154 +249,137 @@
 	height="fit-content"
 >
 	{#snippet children()}
-				{#if status === 'idle'}
-					<div class="info-section">
-						<p class="contract-description">{config.description}</p>
-						<div class="contract-details">
-							<div class="detail-row">
-								<span class="label">Network:</span>
-								<span class="value">{networkName}</span>
-							</div>
-							<div class="detail-row">
-								<span class="label">Contract Address:</span>
-								<div class="address-value">
-									<code>{config.contractAddress}</code>
-									{#if blockExplorer}
-										<a
-											href="{blockExplorer}/address/{config.contractAddress}"
-											target="_blank"
-											rel="noopener noreferrer"
-											class="explorer-link"
-										>
-											<ExternalLink size={14} />
-										</a>
-									{/if}
-								</div>
-							</div>
-						</div>
+		{#if status === 'idle'}
+			<div class="info-section">
+				<p class="contract-description">{config.description}</p>
+				<ContractDetails
+					contractAddress={config.contractAddress}
+					{blockExplorer}
+					details={[{ label: 'Network:', value: networkName }]}
+				/>
 
-						{#if steps.length > 0}
-							<div class="deployment-steps">
-								<h4>Deployment Steps:</h4>
-								<ol>
-									{#each steps as step (step.title)}
-										<li>
-											<strong>{step.title}</strong>
-											<p>{step.description}</p>
-										</li>
-									{/each}
-								</ol>
-							</div>
-						{/if}
-
-						<button class="action-button primary" onclick={handleDeploy}> Start Deployment </button>
-					</div>
-				{:else if status === 'deploying'}
-					<div class="deploying-section">
-						<Loader2 size={48} class="spinning" />
-						<h3>Deploying Contract...</h3>
-						{#if isWaitingForSignature}
-							<p class="status-text waiting">⏳ Please confirm transaction in your wallet...</p>
-						{:else if steps.some((s) => s.inProgress)}
-							<p class="status-text processing">
-								⚡ Transaction sent! Waiting for blockchain confirmation...
-							</p>
-						{:else if steps.every((s) => s.completed)}
-							<p class="status-text success">✅ Finalizing deployment...</p>
-						{:else}
-							<p class="status-text">Please confirm transactions in your wallet</p>
-						{/if}
-
-						{#if steps.length > 0}
-							<div class="step-progress">
-								{#each steps as step, index (step.title)}
-									<div
-										class="step-item"
-										class:completed={step.completed}
-										class:in-progress={step.inProgress}
-									>
-										<div class="step-marker">
-											{#if step.completed}
-												<CheckCircle2 size={20} />
-											{:else if step.inProgress}
-												<Loader2 size={20} class="spinning" />
-											{:else}
-												{index + 1}
-											{/if}
-										</div>
-										<div class="step-info">
-											<strong>{step.title}</strong>
-											<p>{step.description}</p>
-										</div>
-									</div>
-								{/each}
-							</div>
-						{/if}
-					</div>
-				{:else if status === 'success'}
-					<div class="success-section">
-						<CheckCircle2 size={64} />
-						<h3>Deployment Successful!</h3>
-						<p>The contract has been successfully deployed.</p>
-						<div class="deployed-address">
-							<code>{config.contractAddress}</code>
-							{#if blockExplorer}
-								<a
-									href="{blockExplorer}/address/{config.contractAddress}"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="explorer-link large"
-								>
-									<ExternalLink size={16} />
-									View on Explorer
-								</a>
-							{/if}
-						</div>
-					</div>
-				{:else if status === 'error'}
-					<div class="error-section">
-						<XCircle size={64} />
-						<h3>Deployment Failed</h3>
-						{#if errorMessage}
-							<p class="error-message">{errorMessage}</p>
-						{/if}
-
-						{#if showClearCacheSteps}
-							<div class="clear-cache-guide">
-								<div class="guide-header">
-									<AlertCircle size={20} />
-									<h4>Clear MetaMask Cache</h4>
-								</div>
-								<p class="guide-description">Follow these steps to clear cached data:</p>
-								<div class="steps-list">
-									<div class="step-item">
-										<span class="step-number">1</span>
-										<div class="step-content">
-											<strong>Open MetaMask Settings</strong>
-											<p>Click the menu icon → Settings</p>
-										</div>
-									</div>
-									<div class="step-item">
-										<span class="step-number">2</span>
-										<div class="step-content">
-											<strong>Go to Advanced Settings</strong>
-											<p>Navigate to: Advanced</p>
-										</div>
-									</div>
-									<div class="step-item">
-										<span class="step-number">3</span>
-										<div class="step-content">
-											<strong>Clear Activity Tab Data</strong>
-											<p>Click "Clear activity tab data" and confirm</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						{/if}
-
-						<button class="action-button secondary" onclick={handleRetry}> Try Again </button>
+				{#if steps.length > 0}
+					<div class="deployment-steps">
+						<h4>Deployment Steps:</h4>
+						<ol>
+							{#each steps as step (step.title)}
+								<li>
+									<strong>{step.title}</strong>
+									<p>{step.description}</p>
+								</li>
+							{/each}
+						</ol>
 					</div>
 				{/if}
+
+				<button class="action-button primary" onclick={handleDeploy}> Start Deployment </button>
+			</div>
+		{:else if status === 'deploying'}
+			<div class="deploying-section">
+				<Loader2 size={48} class="spinning" />
+				<h3>Deploying Contract...</h3>
+				{#if isWaitingForSignature}
+					<p class="status-text waiting">⏳ Please confirm transaction in your wallet...</p>
+				{:else if steps.some((s) => s.inProgress)}
+					<p class="status-text processing">
+						⚡ Transaction sent! Waiting for blockchain confirmation...
+					</p>
+				{:else if steps.every((s) => s.completed)}
+					<p class="status-text success">✅ Finalizing deployment...</p>
+				{:else}
+					<p class="status-text">Please confirm transactions in your wallet</p>
+				{/if}
+
+				{#if steps.length > 0}
+					<div class="step-progress">
+						{#each steps as step, index (step.title)}
+							<div
+								class="step-item"
+								class:completed={step.completed}
+								class:in-progress={step.inProgress}
+							>
+								<div class="step-marker">
+									{#if step.completed}
+										<CheckCircle2 size={20} />
+									{:else if step.inProgress}
+										<Loader2 size={20} class="spinning" />
+									{:else}
+										{index + 1}
+									{/if}
+								</div>
+								<div class="step-info">
+									<strong>{step.title}</strong>
+									<p>{step.description}</p>
+								</div>
+							</div>
+						{/each}
+					</div>
+				{/if}
+			</div>
+		{:else if status === 'success'}
+			<div class="success-section">
+				<CheckCircle2 size={64} />
+				<h3>Deployment Successful!</h3>
+				<p>The contract has been successfully deployed.</p>
+				<div class="deployed-address">
+					<code>{config.contractAddress}</code>
+					{#if blockExplorer}
+						<a
+							href="{blockExplorer}/address/{config.contractAddress}"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="explorer-link large"
+						>
+							<ExternalLink size={16} />
+							View on Explorer
+						</a>
+					{/if}
+				</div>
+			</div>
+		{:else if status === 'error'}
+			<div class="error-section">
+				<XCircle size={64} />
+				<h3>Deployment Failed</h3>
+				{#if errorMessage}
+					<p class="error-message">{errorMessage}</p>
+				{/if}
+
+				{#if showClearCacheSteps}
+					<div class="clear-cache-guide">
+						<div class="guide-header">
+							<AlertCircle size={20} />
+							<h4>Clear MetaMask Cache</h4>
+						</div>
+						<p class="guide-description">Follow these steps to clear cached data:</p>
+						<div class="steps-list">
+							<div class="step-item">
+								<span class="step-number">1</span>
+								<div class="step-content">
+									<strong>Open MetaMask Settings</strong>
+									<p>Click the menu icon → Settings</p>
+								</div>
+							</div>
+							<div class="step-item">
+								<span class="step-number">2</span>
+								<div class="step-content">
+									<strong>Go to Advanced Settings</strong>
+									<p>Navigate to: Advanced</p>
+								</div>
+							</div>
+							<div class="step-item">
+								<span class="step-number">3</span>
+								<div class="step-content">
+									<strong>Clear Activity Tab Data</strong>
+									<p>Click "Clear activity tab data" and confirm</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				{/if}
+
+				<button class="action-button secondary" onclick={handleRetry}> Try Again </button>
+			</div>
+		{/if}
 	{/snippet}
 </Modal>
 
@@ -585,61 +569,8 @@
 		color: hsl(120, 60%, 65%);
 	}
 
-	.contract-details {
-		width: 100%;
-		background: var(--color-panel-2);
-		padding: var(--space-4);
-		border-radius: var(--radius-lg);
-		border: 1px solid var(--color-border);
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-	}
-
-	:global([data-theme='dark']) .contract-details {
-		background: rgba(255, 255, 255, 0.02);
-		border-color: rgba(255, 255, 255, 0.1);
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-	}
-
-	.detail-row {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: var(--space-2);
-	}
-
-	.detail-row:last-child {
-		margin-bottom: 0;
-	}
-
-	.label {
-		color: var(--gray-600);
-		font-size: var(--text-sm);
-	}
-
-	:global([data-theme='dark']) .label {
-		color: var(--gray-400);
-	}
-
-	.value {
-		font-weight: var(--font-medium);
-	}
-
-	.address-value {
-		display: flex;
-		align-items: center;
-		gap: var(--space-2);
-	}
-
-	.address-value code {
-		font-size: var(--text-xs);
-		padding: 2px 6px;
-		background: var(--gray-100);
-		border-radius: var(--radius-sm);
-	}
-
-	:global([data-theme='dark']) .address-value code {
-		background: var(--gray-800);
-	}
+	/* Removed .contract-details, .detail-row, .label, .value, .address-value styles */
+	/* Now handled by ContractDetails component */
 
 	.explorer-link {
 		display: inline-flex;

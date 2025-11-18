@@ -162,10 +162,10 @@
 							}
 						: undefined}
 					deployButtonText={config
-					? i18n.t('tools.token_sweep.step2.content.deploy_contract', {
-							contractName: config.contractName
-						})
-					: undefined}
+						? i18n.t('tools.token_sweep.step2.content.deploy_contract', {
+								contractName: config.contractName
+							})
+						: undefined}
 					blockedHintText={i18n.t('tools.token_sweep.step2.content.resolve_previous_issue')}
 					addressLabel={i18n.t('tools.token_sweep.step2.content.address_label')}
 					endpointLabel={i18n.t('tools.token_sweep.step2.content.endpoint_label')}
