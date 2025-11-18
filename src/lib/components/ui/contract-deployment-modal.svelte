@@ -354,15 +354,6 @@
 		}
 	}
 
-	.contract-description {
-		color: var(--gray-600);
-		line-height: 1.6;
-	}
-
-	:global([data-theme='dark']) .contract-description {
-		color: var(--gray-400);
-	}
-
 	:global(.spinning) {
 		animation: spin 1s linear infinite;
 	}

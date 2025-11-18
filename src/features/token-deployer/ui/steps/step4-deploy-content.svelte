@@ -157,7 +157,7 @@
 				<div class="detail-item">
 					<span class="detail-label">Contract Address:</span>
 					<a
-						href={`${currentNetwork?.blockExplorers?.[0]?.url}/address/${step4State.deploymentResult.contractAddress}`}
+						href={`${currentNetwork?.blockExplorer}/address/${step4State.deploymentResult.contractAddress}`}
 						target="_blank"
 						rel="noopener noreferrer"
 						class="detail-value mono link"
@@ -169,7 +169,7 @@
 				<div class="detail-item">
 					<span class="detail-label">Transaction Hash:</span>
 					<a
-						href={`${currentNetwork?.blockExplorers?.[0]?.url}/tx/${step4State.deploymentResult.transactionHash}`}
+						href={`${currentNetwork?.blockExplorer}/tx/${step4State.deploymentResult.transactionHash}`}
 						target="_blank"
 						rel="noopener noreferrer"
 						class="detail-value mono link"

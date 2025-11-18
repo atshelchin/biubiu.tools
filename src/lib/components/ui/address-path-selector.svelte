@@ -169,8 +169,9 @@
 				class:selected={pathType === option.type}
 				onclick={() => handlePathTypeChange(option.type)}
 			>
+				{@const Icon = option.icon}
 				<div class="path-icon">
-					<svelte:component this={option.icon} size={24} />
+					<Icon size={24} />
 				</div>
 				<div class="path-label">{option.label}</div>
 				<div class="path-desc">{option.description}</div>
@@ -281,7 +282,7 @@
 
 			<!-- Date Granularity Options -->
 			<div class="granularity-options">
-				<label class="granularity-label">Date Format:</label>
+				<div class="granularity-label">Date Format:</div>
 				<div class="granularity-buttons">
 					<button
 						class="granularity-btn"
@@ -584,10 +585,6 @@
 		font-size: var(--text-lg);
 		font-weight: var(--font-bold);
 		color: var(--color-primary);
-	}
-
-	.count-warning .count-value {
-		color: hsl(38, 92%, 50%);
 	}
 
 	.count-unit {

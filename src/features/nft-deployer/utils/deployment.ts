@@ -145,11 +145,12 @@ export async function deployNFTContract(
 
 		// Deploy contract
 		const hash = await walletClient.deployContract({
-			abi: [], // ABI not needed for deployment
+			abi: [],
 			bytecode,
 			account: config.deployer,
-			gas: gasEstimate
-		});
+			gas: gasEstimate,
+			chain: null
+		} as Parameters<typeof walletClient.deployContract>[0]);
 
 		onProgress?.(60, 'Waiting for transaction confirmation...');
 

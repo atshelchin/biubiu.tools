@@ -40,12 +40,21 @@ export interface DeploymentContext {
 }
 
 /**
+ * Transaction status callback
+ */
+export type TransactionStatusCallback = (status: {
+	stage: 'signing' | 'signed' | 'broadcasting' | 'broadcasted' | 'confirming' | 'confirmed';
+	hash?: `0x${string}`;
+	blockNumber?: bigint;
+}) => void;
+
+/**
  * Deployment step for UI
  */
 export interface DeploymentStep {
 	title: string;
 	description: string;
-	action?: () => Promise<void>;
+	action?: (onStatus?: TransactionStatusCallback) => Promise<void>;
 }
 
 /**

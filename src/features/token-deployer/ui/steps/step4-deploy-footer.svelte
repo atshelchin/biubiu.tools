@@ -8,7 +8,7 @@
 	const isCompleted = $derived(step4State.deploymentStatus === 'completed');
 
 	function handleBack() {
-		stepManager.previous();
+		stepManager.prev();
 	}
 </script>
 

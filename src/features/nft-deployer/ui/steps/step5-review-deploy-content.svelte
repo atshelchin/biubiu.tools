@@ -310,11 +310,6 @@
 		white-space: nowrap;
 	}
 
-	.item-value.mono {
-		font-family: 'Courier New', monospace;
-		font-size: var(--text-xs);
-	}
-
 	:global([data-theme='dark']) .item-label {
 		color: var(--gray-400);
 	}

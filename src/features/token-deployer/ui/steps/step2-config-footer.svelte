@@ -15,7 +15,7 @@
 	}
 
 	function handleBack() {
-		stepManager.previous();
+		stepManager.prev();
 	}
 </script>
 

@@ -16,5 +16,5 @@
 	continueText="Start New Scan"
 	onContinue={handleNewScan}
 	hint="Export your results or start a new scan"
-	showBackButton={false}
+	showBack={false}
 />

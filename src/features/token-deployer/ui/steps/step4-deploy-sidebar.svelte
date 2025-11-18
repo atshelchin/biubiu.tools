@@ -44,7 +44,14 @@
 	title="Review & Deploy"
 	description="Verify your token configuration and deploy"
 >
-	<StepSummary items={summaryItems} title="Token Summary" />
+	<StepSummary title="Token Summary">
+		{#each summaryItems as item (item.label)}
+			<div class="summary-item">
+				<span>{item.label}</span>
+				<strong>{item.value}</strong>
+			</div>
+		{/each}
+	</StepSummary>
 
 	<div class="final-note">
 		<span class="note-icon">📝</span>

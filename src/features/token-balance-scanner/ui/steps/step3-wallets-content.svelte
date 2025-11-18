@@ -81,7 +81,7 @@
 		</div>
 
 		<div class="input-method">
-			<label>Upload File</label>
+			<div class="method-label">Upload File</div>
 			<input
 				type="file"
 				accept=".txt,.csv"

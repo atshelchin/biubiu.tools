@@ -383,17 +383,6 @@
 		cursor: not-allowed;
 	}
 
-	.action-btn.delete {
-		color: var(--color-danger);
-		border-color: var(--color-danger);
-		background: transparent;
-	}
-
-	.action-btn.delete:hover:not(:disabled) {
-		background: color-mix(in srgb, var(--color-danger) 10%, transparent);
-		border-color: var(--color-danger);
-	}
-
 	.add-network-btn {
 		display: flex;
 		align-items: center;

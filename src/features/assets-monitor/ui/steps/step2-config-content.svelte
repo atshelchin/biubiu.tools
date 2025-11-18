@@ -127,7 +127,7 @@
 
 	<!-- Block Range -->
 	<div class="form-section">
-		<label class="form-label">Block Range (Optional)</label>
+		<div class="form-label">Block Range (Optional)</div>
 		<p class="form-hint">Leave empty to scan recent 1000 blocks</p>
 		<div class="block-range-grid">
 			<div class="input-wrapper">
@@ -163,10 +163,10 @@
 
 	<!-- Asset Types -->
 	<div class="form-section">
-		<label class="form-label">
+		<div class="form-label">
 			Asset Types to Scan
 			<span class="required">*</span>
-		</label>
+		</div>
 		<div class="asset-types-grid">
 			{#each assetTypes as { type, label, description } (type)}
 				{@const selected = selectedAssetTypes.has(type)}
@@ -199,10 +199,10 @@
 
 	<!-- Transfer Direction -->
 	<div class="form-section">
-		<label class="form-label">
+		<div class="form-label">
 			Transfer Direction
 			<span class="required">*</span>
-		</label>
+		</div>
 		<div class="direction-options">
 			<label class="checkbox-label">
 				<input type="checkbox" bind:checked={includeIncoming} />

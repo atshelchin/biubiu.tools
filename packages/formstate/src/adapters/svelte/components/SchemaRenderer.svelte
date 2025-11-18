@@ -8,6 +8,7 @@
 	import type { FormSchema, FieldSchema } from '../schema';
 	import FormField from './FormField.svelte';
 	import FieldArray from './FieldArray.svelte';
+	import Self from './SchemaRenderer.svelte';
 
 	interface Props {
 		schema: FormSchema;
@@ -64,7 +65,7 @@
 					{#if field.label}
 						<legend>{field.label}</legend>
 					{/if}
-					<svelte:self schema={{ fields: field.fields, layout: schema.layout }} />
+					<Self schema={{ fields: field.fields, layout: schema.layout }} />
 				</div>
 			{:else if field.type === 'array' && field.itemSchema}
 				<!-- 动态数组字段 -->
@@ -72,7 +73,7 @@
 					{#snippet children({ fields, append, remove })}
 						<div class="field-array">
 							{#if field.label}
-								<label>{field.label}</label>
+								<div class="field-array-label">{field.label}</div>
 							{/if}
 
 							{#each fields as arrayField (arrayField.key)}
@@ -101,13 +102,8 @@
 				<!-- 自定义组件 -->
 				<FormField name={field.name} label={field.label} config={field}>
 					{#snippet children({ value, onInput, onBlur })}
-						<svelte:component
-							this={field.component}
-							{value}
-							{onInput}
-							{onBlur}
-							{...field.componentProps}
-						/>
+						{@const Component = field.component}
+						<Component {value} {onInput} {onBlur} {...field.componentProps} />
 					{/snippet}
 				</FormField>
 			{:else}

@@ -1,28 +1,57 @@
 <script lang="ts">
 	import Modal from './modal.svelte';
 	import { AlertTriangle } from '@lucide/svelte';
+	import { longPress } from '$lib/utils/long-press';
 
 	interface Props {
-		open: boolean;
+		open?: boolean;
 		title: string;
 		message: string;
 		confirmText?: string;
 		cancelText?: string;
 		variant?: 'default' | 'danger';
+		requireLongPress?: boolean;
+		longPressDuration?: number;
 		onConfirm: () => void;
 		onCancel: () => void;
 	}
 
 	let {
-		open,
+		open = $bindable(false),
 		title,
 		message,
 		confirmText = '确定',
 		cancelText = '取消',
 		variant = 'default',
+		requireLongPress = false,
+		longPressDuration = 2000,
 		onConfirm,
 		onCancel
 	}: Props = $props();
+
+	let longPressProgress = $state(0);
+	let isPressing = $state(false);
+
+	function handleProgress(progress: number) {
+		if (progress > 0) {
+			isPressing = true;
+			longPressProgress = progress;
+		} else {
+			isPressing = false;
+			longPressProgress = 0;
+		}
+	}
+
+	function handleConfirm() {
+		onConfirm();
+		onCancel();
+	}
+
+	function handleLongPressComplete() {
+		handleConfirm();
+		isPressing = false;
+		longPressProgress = 0;
+	}
 </script>
 
 <Modal {open} onClose={onCancel} {title} maxWidth="480px">
@@ -37,17 +66,34 @@
 			<button type="button" class="btn-secondary" onclick={onCancel}>
 				{cancelText}
 			</button>
-			<button
-				type="button"
-				class="btn-primary"
-				class:danger={variant === 'danger'}
-				onclick={() => {
-					onConfirm();
-					onCancel();
-				}}
-			>
-				{confirmText}
-			</button>
+			{#if requireLongPress}
+				<div
+					class="btn-wrapper"
+					use:longPress={{
+						duration: longPressDuration,
+						onProgress: handleProgress,
+						onComplete: handleLongPressComplete
+					}}
+				>
+					<button type="button" class="btn-primary" class:danger={variant === 'danger'}>
+						{confirmText}
+					</button>
+					{#if isPressing && longPressProgress > 0}
+						<div class="long-press-indicator">
+							<div class="progress-bar" style:width="{longPressProgress}%"></div>
+						</div>
+					{/if}
+				</div>
+			{:else}
+				<button
+					type="button"
+					class="btn-primary"
+					class:danger={variant === 'danger'}
+					onclick={handleConfirm}
+				>
+					{confirmText}
+				</button>
+			{/if}
 		</div>
 	</div>
 </Modal>
@@ -127,5 +173,28 @@
 
 	.btn-primary.danger:hover {
 		background: color-mix(in srgb, var(--color-danger) 90%, black);
+	}
+
+	.btn-wrapper {
+		position: relative;
+		flex: 1;
+		max-width: 150px;
+	}
+
+	.long-press-indicator {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 4px;
+		background: hsla(0, 0%, 100%, 0.2);
+		border-radius: 0 0 var(--radius-md) var(--radius-md);
+		overflow: hidden;
+	}
+
+	.progress-bar {
+		height: 100%;
+		background: linear-gradient(90deg, hsl(45, 100%, 50%), hsl(0, 80%, 50%));
+		transition: width 0.05s linear;
 	}
 </style>

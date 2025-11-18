@@ -569,14 +569,14 @@
 
 	<!-- Import Method Selector -->
 	<div class="form-section">
-		<label class="form-label">Choose Import Method</label>
+		<div class="form-label">Choose Import Method</div>
 		<ImportMethodSelector selected={importMethod} onSelect={handleMethodSelect} />
 	</div>
 
 	<!-- Mnemonic Import -->
 	{#if importMethod === 'mnemonic'}
 		<div class="form-section" transition:slide>
-			<label class="form-label">Enter Mnemonic Phrase</label>
+			<div class="form-label">Enter Mnemonic Phrase</div>
 			<SimpleCodeEditor
 				bind:value={mnemonicText}
 				placeholder="Enter 12 or 24 words separated by spaces"
@@ -585,7 +585,7 @@
 			<p class="form-hint">⚠️ Your mnemonic is never uploaded to any server</p>
 
 			<div style="margin-top: var(--space-4);">
-				<label class="form-label">Derivation Path Configuration</label>
+				<div class="form-label">Derivation Path Configuration</div>
 				<AddressPathSelector
 					bind:pathType
 					bind:startIndex
@@ -620,7 +620,7 @@
 	<!-- Private Key Import -->
 	{#if importMethod === 'privateKey'}
 		<div class="form-section" transition:slide>
-			<label class="form-label">Batch Import Private Keys</label>
+			<div class="form-label">Batch Import Private Keys</div>
 			<SimpleCodeEditor
 				bind:value={privateKeysText}
 				placeholder="One private key per line (starting with 0x)"

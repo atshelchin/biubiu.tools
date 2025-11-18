@@ -176,16 +176,6 @@
 		opacity: 0.7;
 	}
 
-	/* Error: more prominent with red border */
-	.check-card.error {
-		/* border-color: hsl(0, 70%, 60%); */
-		/* border-width: 2px; */
-	}
-
-	:global([data-theme='dark']) .check-card.error {
-		/* border-color: hsl(0, 70%, 50%); */
-	}
-
 	/* Warning: subtle orange border */
 	.check-card.warning {
 		border-color: hsl(30, 80%, 55%);

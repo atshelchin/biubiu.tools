@@ -223,14 +223,6 @@
 		gap: var(--space-2);
 	}
 
-	.address-label {
-		font-size: var(--text-xs);
-		color: var(--gray-500);
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		flex-shrink: 0;
-	}
-
 	.address-value {
 		font-size: var(--text-sm);
 		font-weight: var(--font-medium);

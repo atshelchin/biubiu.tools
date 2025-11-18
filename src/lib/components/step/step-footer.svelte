@@ -53,9 +53,6 @@
 </div>
 
 <style>
-	button {
-		/* width: 100%; */
-	}
 	.step-footer {
 		display: flex;
 		align-items: center;
