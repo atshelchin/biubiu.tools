@@ -7,7 +7,7 @@
 	import { assetsDB } from '../../db/assets-db';
 	import { SvelteMap } from 'svelte/reactivity';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
-	import { Loader2, CheckCircle2, AlertCircle, Activity } from 'lucide-svelte';
+	import { Loader2, CheckCircle2, AlertCircle, Activity } from '@lucide/svelte';
 	import type { AssetMovement } from '../../types/assets';
 
 	const connectStore = useConnectStore();

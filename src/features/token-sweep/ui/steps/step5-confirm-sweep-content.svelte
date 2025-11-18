@@ -30,7 +30,7 @@
 	} from '@/features/token-sweep/types/fee';
 	import { createPublicClient, createWalletClient, http, custom } from 'viem';
 	import type { Address, Hex } from 'viem';
-	import { AlertCircle, CheckCircle2, Loader2 } from 'lucide-svelte';
+	import { AlertCircle, CheckCircle2, Loader2 } from '@lucide/svelte';
 	import { fade, slide } from 'svelte/transition';
 	import type { Token, NativeToken, ERC20Token } from '$lib/types/token';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';

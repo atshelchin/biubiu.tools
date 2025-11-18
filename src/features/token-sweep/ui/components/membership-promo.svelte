@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Crown, Zap, Loader2, Sparkles } from 'lucide-svelte';
+	import { Crown, Zap, Loader2, Sparkles } from '@lucide/svelte';
 	import MembershipUpgradeModal from './membership-upgrade-modal.svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { type Address } from 'viem';

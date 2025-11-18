@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Crown, Check, Sparkles, Users, Loader2 } from 'lucide-svelte';
+	import { Crown, Check, Sparkles, Users, Loader2 } from '@lucide/svelte';
 	import { getReferralAddress, ZERO_ADDRESS } from '$lib/utils/referral';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import Modal from '$lib/components/ui/modal.svelte';

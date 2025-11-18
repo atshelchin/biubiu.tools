@@ -99,7 +99,7 @@
 		border: 1px solid var(--color-border-subtle);
 		font-size: var(--font-size-sm);
 		font-weight: var(--font-weight-medium);
-		color: var(--color-text-secondary);
+		color: var(--color-muted-foreground);
 	}
 
 	:global(.badge-icon) {
@@ -118,7 +118,7 @@
 			135deg,
 			var(--color-text-primary),
 			var(--color-brand-primary),
-			var(--color-text-secondary)
+			var(--color-muted-foreground)
 		);
 		-webkit-background-clip: text;
 		background-clip: text;
@@ -215,7 +215,7 @@
 		border-radius: var(--radius-lg);
 		background: var(--color-panel-2);
 		border: 1px solid var(--color-border);
-		color: var(--color-text-secondary);
+		color: var(--color-muted-foreground);
 		font-size: var(--font-size-base);
 		font-weight: var(--font-weight-medium);
 		cursor: pointer;
@@ -247,7 +247,7 @@
 	}
 
 	.indicator:hover {
-		color: var(--color-text-secondary);
+		color: var(--color-muted-foreground);
 	}
 
 	/* Responsive adjustments */

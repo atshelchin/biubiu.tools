@@ -5,7 +5,7 @@
 	import { scanMultipleWallets } from '../../utils/balance-scanner';
 	import { PREDEFINED_TOKENS } from '$lib/config/tokens';
 	import type { NativeToken, ERC20Token } from '$lib/types/token';
-	import { AlertCircle, CheckCircle2, Loader2 } from 'lucide-svelte';
+	import { AlertCircle, CheckCircle2, Loader2 } from '@lucide/svelte';
 
 	const connectStore = useConnectStore();
 

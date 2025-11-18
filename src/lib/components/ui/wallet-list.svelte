@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
-	import { Trash2, ChevronLeft, ChevronRight } from 'lucide-svelte';
+	import { Trash2, ChevronLeft, ChevronRight } from '@lucide/svelte';
 
 	interface Wallet {
 		id: string;

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Check } from 'lucide-svelte';
+	import { Check } from '@lucide/svelte';
 	import { formatAddress } from '$lib/utils/wallet-utils';
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import Dropdown from '$lib/components/ui/dropdown.svelte';

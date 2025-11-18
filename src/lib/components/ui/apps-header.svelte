@@ -1,5 +1,9 @@
 <script lang="ts">
-	import WalletConnector from './wallet-connector.svelte';
+	import { HouseIcon } from '@lucide/svelte';
+	import { useI18n } from '@shelchin/i18n/svelte';
+
+	const i18n = useI18n();
+	const t = $derived(i18n.t);
 </script>
 
 <div class="header">
@@ -7,20 +11,22 @@
 		<img src="/logo.svg" alt="BiuBiu" class="logo" />
 		<span class="brand-name">biubiu.tools</span>
 	</div>
-	<WalletConnector />
+	<a href="/" class="home-link" title={t('common.back_to_home')}>
+		<HouseIcon size={20} />
+	</a>
 </div>
 
 <style>
 	.header {
-		background: var(--color-card);
-		border-radius: var(--radius-xl);
-		padding: var(--space-4) var(--space-4);
-		margin-bottom: var(--space-5);
-		box-shadow: var(--shadow-sm);
-		border: 1px solid var(--color-border);
+		margin-bottom: var(--space-3);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+	}
+	@media (max-width: 768px) {
+		.header {
+			margin-bottom: var(--space-1);
+		}
 	}
 
 	/* Brand */
@@ -42,12 +48,18 @@
 		color: var(--color-foreground);
 	}
 
-	@media (max-width: 768px) {
-		.header {
-			padding: var(--space-4) var(--space-4);
-			flex-direction: column;
-			gap: var(--space-3);
-			text-align: center;
-		}
+	.home-link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--color-muted-foreground);
+		text-decoration: none;
+		padding: var(--space-2);
+		border-radius: var(--radius-md);
+		transition: all 0.2s ease;
+	}
+
+	.home-link:hover {
+		color: var(--color-primary);
 	}
 </style>

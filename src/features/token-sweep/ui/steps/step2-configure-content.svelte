@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
-	import { CheckCircle2, XCircle, AlertCircle, RefreshCw, ExternalLink } from 'lucide-svelte';
+	import { CheckCircle2, XCircle, AlertCircle, RefreshCw, ExternalLink } from '@lucide/svelte';
 	import { fade, slide } from 'svelte/transition';
 	import {
 		checkAllDependencies,

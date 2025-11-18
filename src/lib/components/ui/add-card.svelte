@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { CirclePlus } from 'lucide-svelte';
+	import { CirclePlus } from '@lucide/svelte';
 
 	interface Props {
 		/** Main title text */

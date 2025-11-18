@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { ComponentType } from 'svelte';
-	import type { Icon } from 'lucide-svelte';
-	import { Check } from 'lucide-svelte';
+	import type { Icon } from '@lucide/svelte';
+	import { Check } from '@lucide/svelte';
 
 	interface Props {
 		icon: ComponentType<Icon>;

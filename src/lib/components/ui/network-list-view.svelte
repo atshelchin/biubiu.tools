@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Check, Plus, Edit2, ExternalLink } from 'lucide-svelte';
+	import { Check, Plus, Edit2, ExternalLink } from '@lucide/svelte';
 	import NetworkIcon from './network-icon.svelte';
 	import ToggleSwitch from './toggle-switch.svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';

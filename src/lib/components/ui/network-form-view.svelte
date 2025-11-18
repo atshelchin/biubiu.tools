@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { ArrowLeft, Plus, Trash2 } from 'lucide-svelte';
+	import { ArrowLeft, Plus, Trash2 } from '@lucide/svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import { SvelteMap } from 'svelte/reactivity';

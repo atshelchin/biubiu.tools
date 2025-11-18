@@ -4,7 +4,7 @@
 	import { step3State } from '@/features/token-deployer/stores/step3-state.svelte';
 	import { step4State } from '@/features/token-deployer/stores/step4-state.svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
-	import { CheckCircle2, XCircle, Loader2 } from 'lucide-svelte';
+	import { CheckCircle2, XCircle, Loader2 } from '@lucide/svelte';
 
 	const connectStore = useConnectStore();
 

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { useConnectStore } from '$lib/stores/connect.svelte';
-	import { CheckCircle2, XCircle, AlertCircle, Loader2, ExternalLink } from 'lucide-svelte';
+	import { CheckCircle2, XCircle, AlertCircle, Loader2, ExternalLink } from '@lucide/svelte';
 	import type { ContractDeploymentConfig, DeploymentContext } from '../types/deployment-config';
 
 	interface Props {

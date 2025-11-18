@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { FeeBreakdown, MembershipStatus } from '@/features/token-sweep/types/fee';
 	import { formatFee } from '@/features/token-sweep/utils/membership';
-	import { Shield, AlertCircle, CheckCircle2 } from 'lucide-svelte';
+	import { Shield, AlertCircle, CheckCircle2 } from '@lucide/svelte';
 
 	interface Props {
 		feeBreakdown: FeeBreakdown;

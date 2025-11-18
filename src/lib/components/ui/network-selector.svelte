@@ -2,7 +2,7 @@
 	import { page } from '$app/stores';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
 	import type { useConnectStore } from '$lib/stores/connect.svelte';
-	import { Settings } from 'lucide-svelte';
+	import { Settings } from '@lucide/svelte';
 	import NetworkCard from './network-card.svelte';
 	import AddCard from './add-card.svelte';
 	import NetworkSettingsModal from './network-settings-modal.svelte';

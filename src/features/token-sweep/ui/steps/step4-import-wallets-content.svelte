@@ -10,7 +10,7 @@
 	import type { ERC20Token } from '$lib/types/token';
 	import { createPublicClient, http } from 'viem';
 	import { SvelteMap, SvelteDate } from 'svelte/reactivity';
-	import { Loader2, AlertCircle } from 'lucide-svelte';
+	import { Loader2, AlertCircle } from '@lucide/svelte';
 	import { slide } from 'svelte/transition';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import AddressPathSelector from '$lib/components/ui/address-path-selector.svelte';

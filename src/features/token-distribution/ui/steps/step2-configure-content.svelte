@@ -2,7 +2,7 @@
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
-	import { CheckCircle2 } from 'lucide-svelte';
+	import { CheckCircle2 } from '@lucide/svelte';
 	import { fade } from 'svelte/transition';
 
 	const connectStore = useConnectStore();

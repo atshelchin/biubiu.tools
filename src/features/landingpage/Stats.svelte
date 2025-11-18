@@ -319,7 +319,7 @@
 	.badge-text {
 		font-size: var(--font-size-sm);
 		font-weight: var(--font-weight-medium);
-		color: var(--color-text-secondary);
+		color: var(--color-muted-foreground);
 	}
 
 	.stats-grid {
@@ -421,7 +421,7 @@
 	.stat-label {
 		font-size: var(--font-size-lg);
 		font-weight: var(--font-weight-medium);
-		color: color-mix(in srgb, var(--color-text-secondary) 80%, transparent);
+		color: color-mix(in srgb, var(--color-muted-foreground) 80%, transparent);
 		transition: color var(--duration-fast);
 	}
 

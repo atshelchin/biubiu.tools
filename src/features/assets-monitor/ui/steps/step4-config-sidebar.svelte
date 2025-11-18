@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { BarChart3, Download, Filter, Database } from 'lucide-svelte';
+	import { BarChart3, Download, Filter, Database } from '@lucide/svelte';
 	import { monitorState } from '../../stores/monitor-state.svelte';
 </script>
 

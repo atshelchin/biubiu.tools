@@ -83,6 +83,7 @@ npm run test:e2e
 - **Testing Split**: Vitest configured with separate browser and server environments
 - **MDsveX**: Enabled for mixing Markdown with Svelte components
 - **Cloudflare Deployment**: Configured via `@sveltejs/adapter-cloudflare`
+- **Icons**: Use `@lucide/svelte` for all icon imports (NOT `lucide-svelte`)
 
 ### Testing Strategy
 
@@ -172,6 +173,11 @@ npm run test:e2e
     - ✅ Check type first: `if (token.type === 'erc20') { const erc20 = token as ERC20Token; erc20.address }`
     - ✅ Or use `@const`: `{@const erc20Token = token as ERC20Token}` in templates
     - TypeScript needs explicit narrowing to access properties of specific union members
+
+14. **Import icons from @lucide/svelte**
+    - ❌ `import { Home } from 'lucide-svelte'`
+    - ✅ `import { Home } from '@lucide/svelte'`
+    - Always use `@lucide/svelte` package for icon imports
 
 ### Pre-Commit Checklist
 

@@ -13,7 +13,7 @@
 	import { eventsDB } from '../../db/events-db';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { createPublicClient, http } from 'viem';
-	import { AlertCircle, CheckCircle2, Loader2, PlayCircle } from 'lucide-svelte';
+	import { AlertCircle, CheckCircle2, Loader2, PlayCircle } from '@lucide/svelte';
 	import type { ScanConfig } from '../../types/scanner';
 
 	const connectStore = useConnectStore();

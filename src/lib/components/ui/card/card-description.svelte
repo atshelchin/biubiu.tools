@@ -12,6 +12,6 @@
 	.card-description {
 		font-size: var(--font-size-sm);
 		line-height: var(--line-height-relaxed);
-		color: var(--color-text-secondary);
+		color: var(--color-muted-foreground);
 	}
 </style>

@@ -161,7 +161,7 @@
 		border: 1px solid var(--color-border-subtle);
 		font-size: var(--font-size-sm);
 		font-weight: var(--font-weight-medium);
-		color: var(--color-text-secondary);
+		color: var(--color-muted-foreground);
 	}
 
 	:global(.badge-icon) {
@@ -176,7 +176,7 @@
 		font-weight: var(--font-weight-bold);
 		line-height: 1.2;
 		margin-bottom: var(--spacing-4);
-		background: linear-gradient(to right, var(--color-text-primary), var(--color-text-secondary));
+		background: linear-gradient(to right, var(--color-text-primary), var(--color-muted-foreground));
 		-webkit-background-clip: text;
 		background-clip: text;
 		-webkit-text-fill-color: transparent;
@@ -368,7 +368,7 @@
 
 	.feature-text {
 		font-size: var(--font-size-base);
-		color: var(--color-text-secondary);
+		color: var(--color-muted-foreground);
 		line-height: 1.5;
 	}
 
@@ -406,7 +406,7 @@
 
 	.cta-button.secondary {
 		background: var(--color-panel-2);
-		color: var(--color-text-secondary);
+		color: var(--color-muted-foreground);
 		border: 1px solid var(--color-border);
 	}
 

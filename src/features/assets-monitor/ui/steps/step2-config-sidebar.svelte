@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Info, Zap, Shield } from 'lucide-svelte';
+	import { Info, Zap, Shield } from '@lucide/svelte';
 </script>
 
 <div class="step-sidebar">

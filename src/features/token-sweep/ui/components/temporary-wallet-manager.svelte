@@ -19,7 +19,7 @@
 		Send,
 		Wallet,
 		RefreshCw
-	} from 'lucide-svelte';
+	} from '@lucide/svelte';
 	import QRCodeGenerator from '$lib/components/ui/qr-code.svelte';
 	import type { Address } from 'viem';
 	import { formatEther } from 'viem';

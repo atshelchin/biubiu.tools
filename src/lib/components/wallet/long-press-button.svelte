@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Wallet } from 'lucide-svelte';
+	import { Wallet } from '@lucide/svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import { longPress } from '$lib/utils/long-press';
 

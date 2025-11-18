@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { AlertTriangle, RefreshCw, Wallet } from 'lucide-svelte';
+	import { AlertTriangle, RefreshCw, Wallet } from '@lucide/svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
 

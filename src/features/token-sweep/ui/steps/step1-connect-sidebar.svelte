@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ChevronDown, ChevronUp } from 'lucide-svelte';
+	import { ChevronDown, ChevronUp } from '@lucide/svelte';
 	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
 	import InfoCard from '$lib/components/step/info-card.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';

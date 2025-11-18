@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Token, ERC20Token } from '$lib/types/token';
-	import { ExternalLink } from 'lucide-svelte';
+	import { ExternalLink } from '@lucide/svelte';
 
 	interface Props {
 		tokens: Token[];

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { useI18n } from '@shelchin/i18n/svelte';
-	import { Share2 } from 'lucide-svelte';
+	import { Share2 } from '@lucide/svelte';
 	import IconButton from './icon-button.svelte';
 	import ReferralModal from './referral-modal.svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte';

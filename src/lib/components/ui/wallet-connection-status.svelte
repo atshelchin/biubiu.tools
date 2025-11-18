@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { useConnectStore } from '$lib/stores/connect.svelte';
-	import { Wallet, AlertCircle, ArrowLeft } from 'lucide-svelte';
+	import { Wallet, AlertCircle, ArrowLeft } from '@lucide/svelte';
 	import NetworkIcon from './network-icon.svelte';
 
 	interface Props {

@@ -2960,7 +2960,7 @@
 
 	.summary-label {
 		font-size: var(--text-sm);
-		color: var(--color-text-secondary);
+		color: var(--color-muted-foreground);
 	}
 
 	/* Filters and Controls */
@@ -3146,7 +3146,7 @@
 
 	.execute-hint {
 		font-size: var(--text-sm);
-		color: var(--color-text-secondary);
+		color: var(--color-muted-foreground);
 		margin-top: var(--space-3);
 		text-align: center;
 	}
@@ -3170,7 +3170,7 @@
 	.no-results {
 		padding: var(--space-8);
 		text-align: center;
-		color: var(--color-text-secondary);
+		color: var(--color-muted-foreground);
 	}
 
 	/* Pagination */
@@ -3204,7 +3204,7 @@
 
 	.page-info {
 		font-size: var(--text-sm);
-		color: var(--color-text-secondary);
+		color: var(--color-muted-foreground);
 	}
 
 	.items-per-page {
@@ -3234,7 +3234,7 @@
 
 	.stat-label {
 		font-size: var(--text-sm);
-		color: var(--color-text-secondary);
+		color: var(--color-muted-foreground);
 	}
 
 	.stat-value {

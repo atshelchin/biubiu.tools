@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Database, Shield, Clock } from 'lucide-svelte';
+	import { Database, Shield, Clock } from '@lucide/svelte';
 	import { monitorState } from '../../stores/monitor-state.svelte';
 </script>
 

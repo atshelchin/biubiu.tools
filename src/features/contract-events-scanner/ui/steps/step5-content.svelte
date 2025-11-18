@@ -2,7 +2,7 @@
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import { resultsState, scanState, contractConfigState } from '../../stores/scanner-state.svelte';
 	import { eventsDB } from '../../db/events-db';
-	import { Download, FileText, FileJson, Search, ChevronLeft, ChevronRight } from 'lucide-svelte';
+	import { Download, FileText, FileJson, Search, ChevronLeft, ChevronRight } from '@lucide/svelte';
 
 	// Load events from scanState
 	$effect(() => {

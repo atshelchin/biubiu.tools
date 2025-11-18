@@ -2,7 +2,7 @@
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import { contractConfigState } from '../../stores/scanner-state.svelte';
 	import { isAddress } from 'viem';
-	import { AlertCircle, CheckCircle2 } from 'lucide-svelte';
+	import { AlertCircle, CheckCircle2 } from '@lucide/svelte';
 	import type { Address } from 'viem';
 
 	// Reactive validation

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { TransactionMode } from '@/features/token-sweep/types/fee';
-	import { Wallet, Key, AlertCircle } from 'lucide-svelte';
+	import { Wallet, Key, AlertCircle } from '@lucide/svelte';
 
 	interface Props {
 		mode: TransactionMode;

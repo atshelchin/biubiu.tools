@@ -2,7 +2,7 @@
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import { scannerState } from '../../stores/scanner-state.svelte';
 	import { isAddress, type Address } from 'viem';
-	import { Trash2, Upload } from 'lucide-svelte';
+	import { Trash2, Upload } from '@lucide/svelte';
 
 	let textareaValue = $state('');
 	let fileInput: HTMLInputElement;

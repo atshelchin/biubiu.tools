@@ -2,7 +2,7 @@
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import { scannerState } from '../../stores/scanner-state.svelte';
 	import { exportToCSV, exportToJSON, calculateTotalBalance } from '../../utils/balance-scanner';
-	import { Download, FileText, FileJson } from 'lucide-svelte';
+	import { Download, FileText, FileJson } from '@lucide/svelte';
 
 	const balances = $derived(scannerState.balances);
 

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
-	import { Calendar, Hash } from 'lucide-svelte';
+	import { Calendar, Hash } from '@lucide/svelte';
 
 	interface Props {
 		/** Path generation type */

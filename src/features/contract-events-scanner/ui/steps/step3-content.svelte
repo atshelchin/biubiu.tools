@@ -1,7 +1,7 @@
 <script lang="ts">
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import { timeRangeState } from '../../stores/scanner-state.svelte';
-	import { Calendar, Layers } from 'lucide-svelte';
+	import { Calendar, Layers } from '@lucide/svelte';
 	import { SvelteDate } from 'svelte/reactivity';
 
 	// Toggle mode

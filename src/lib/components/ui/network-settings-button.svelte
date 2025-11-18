@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { useI18n } from '@shelchin/i18n/svelte';
-	import { Settings } from 'lucide-svelte';
+	import { Settings } from '@lucide/svelte';
 	import IconButton from './icon-button.svelte';
 	import NetworkSettingsModal from './network-settings-modal.svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte';

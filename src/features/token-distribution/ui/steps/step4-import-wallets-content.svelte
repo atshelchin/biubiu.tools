@@ -5,7 +5,7 @@
 	import type { Recipient } from '@/features/token-distribution/types/recipient';
 	import { isAddress } from 'viem';
 	import type { Address } from 'viem';
-	import { Trash2 } from 'lucide-svelte';
+	import { Trash2 } from '@lucide/svelte';
 
 	let manualAddress = $state('');
 	let manualLabel = $state('');
