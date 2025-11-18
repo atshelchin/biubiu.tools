@@ -149,7 +149,7 @@
 	}
 </script>
 
-<Modal {open} {onClose} title={t('wallet.network_settings.title')} maxWidth="900px">
+<Modal {open} {onClose} title={t('wallet.network_settings.title')} maxWidth="900px" height="80vh">
 	{#snippet footer()}
 		{#if viewMode !== 'list' && networkFormView}
 			<div class="modal-footer-actions">

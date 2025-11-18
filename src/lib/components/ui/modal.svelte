@@ -16,11 +16,20 @@
 		onClose: () => void;
 		title?: string;
 		maxWidth?: string;
+		height?: string;
 		children?: import('svelte').Snippet;
 		footer?: import('svelte').Snippet;
 	}
 
-	let { open = false, onClose, title, maxWidth = '400px', children, footer }: Props = $props();
+	let {
+		open = false,
+		onClose,
+		title,
+		maxWidth = '400px',
+		height = 'fit-content',
+		children,
+		footer
+	}: Props = $props();
 
 	let zIndex = $state(baseZIndex);
 
@@ -51,7 +60,11 @@
 	<div class="modal-overlay" style="z-index: {zIndex}" onclick={onClose}>
 		<!-- svelte-ignore a11y_click_events_have_key_events -->
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
-		<div class="modal-content" style="max-width: {maxWidth}" onclick={(e) => e.stopPropagation()}>
+		<div
+			class="modal-content"
+			style="max-width: {maxWidth}; height: {height}"
+			onclick={(e) => e.stopPropagation()}
+		>
 			{#if title}
 				<div class="modal-header">
 					<h3>{title}</h3>
@@ -91,7 +104,6 @@
 		border-radius: var(--radius-xl);
 		padding: var(--space-6);
 		width: 90%;
-		height: 80vh;
 		display: flex;
 		flex-direction: column;
 		box-shadow: var(--shadow-2xl);
@@ -149,7 +161,6 @@
 	@media (max-width: 768px) {
 		.modal-content {
 			width: 95%;
-			height: 80vh;
 			padding: var(--space-4);
 		}
 	}
