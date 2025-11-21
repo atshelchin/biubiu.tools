@@ -31,6 +31,7 @@
 	import { fade, slide } from 'svelte/transition';
 	import type { Token, NativeToken, ERC20Token } from '$lib/types/token';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
+	import StepContent from '$lib/components/step/step-content.svelte';
 
 	// State
 	let targetAddress = $state('');
@@ -509,7 +510,7 @@
 	}
 </script>
 
-<div class="step-content">
+<StepContent>
 	<StepContentHeader
 		title="Confirm Sweep"
 		description="Review your configuration and execute the asset sweep"
@@ -701,15 +702,9 @@
 			{/if}
 		</button>
 	</div>
-</div>
+</StepContent>
 
 <style>
-	.step-content {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-4);
-	}
-
 	.form-hint {
 		font-size: var(--text-sm);
 		color: var(--gray-600);

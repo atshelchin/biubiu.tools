@@ -4,6 +4,7 @@
 	import WalletConnectButton from '$lib/components/ui/wallet-connect-button.svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
+	import StepContent from '$lib/components/step/step-content.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
 
 	const connectStore = useConnectStore();
@@ -21,7 +22,7 @@
 	);
 </script>
 
-<div class="step-content">
+<StepContent>
 	<StepContentHeader
 		title={i18n.t('tools.token_sweep.step1.content.title')}
 		description={i18n.t('tools.token_sweep.step1.content.description')}
@@ -41,7 +42,7 @@
 			<WalletConnectButton {selectedChainId} {selectedNetwork} class="wallet-section" />
 		{/if}
 	{/if}
-</div>
+</StepContent>
 
 <style>
 	/* Wallet Section */
@@ -61,11 +62,7 @@
 		border: 2px solid var(--color-border);
 		min-height: 200px;
 	}
-	.step-content {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-5);
-	}
+
 	.loading-spinner {
 		width: 48px;
 		height: 48px;
@@ -90,12 +87,5 @@
 
 	:global([data-theme='dark']) .loading-text {
 		color: var(--gray-400);
-	}
-
-	/* Responsive */
-	@media (max-width: 640px) {
-		.step-content {
-			padding: var(--space-3);
-		}
 	}
 </style>

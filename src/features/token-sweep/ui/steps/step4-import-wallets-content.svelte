@@ -13,6 +13,7 @@
 	import { Loader2, AlertCircle } from '@lucide/svelte';
 	import { slide } from 'svelte/transition';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
+	import StepContent from '$lib/components/step/step-content.svelte';
 	import AddressPathSelector from '$lib/components/ui/address-path-selector.svelte';
 	import WalletList from '$lib/components/ui/wallet-list.svelte';
 	import SimpleCodeEditor from '$lib/components/widgets/SimpleCodeEditor.svelte';
@@ -565,7 +566,7 @@
 	}
 </script>
 
-<div class="step-content">
+<StepContent>
 	<StepContentHeader
 		title="Import Wallets"
 		description="Add source wallets that you want to sweep assets from"
@@ -695,7 +696,7 @@
 			showDerivationPath={true}
 		/>
 	</div>
-</div>
+</StepContent>
 
 <!-- Confirm Dialogs -->
 <ConfirmDialog

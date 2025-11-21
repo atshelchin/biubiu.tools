@@ -10,6 +10,7 @@
 	import { getDeploymentConfig } from '$lib/config/deployment-configs';
 	import type { ContractDeploymentConfig } from '$lib/types/deployment-config';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
+	import StepContent from '$lib/components/step/step-content.svelte';
 	import EmptyState from '@/features/token-sweep/ui/components/empty-state.svelte';
 	import LoadingState from '$lib/components/ui/loading-state.svelte';
 	import SummaryBanner from '$lib/components/ui/summary-banner.svelte';
@@ -128,7 +129,7 @@
 	}
 </script>
 
-<div class="step-content">
+<StepContent>
 	<StepContentHeader
 		title={i18n.t('tools.token_sweep.step2.content.title')}
 		description={i18n.t('tools.token_sweep.step2.content.description')}
@@ -199,7 +200,7 @@
 			/>
 		{/if}
 	{/if}
-</div>
+</StepContent>
 
 <!-- Generic Contract Deployment Modal -->
 {#if currentNetwork && deploymentConfig}
@@ -227,12 +228,6 @@
 {/if}
 
 <style>
-	.step-content {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-5);
-	}
-
 	/* Empty State */
 	.back-button {
 		margin-top: var(--space-4);

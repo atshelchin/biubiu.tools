@@ -3,6 +3,7 @@
 	import { step3State } from '@/features/token-sweep/stores/step3-state.svelte';
 	import TokenSelector from '$lib/components/ui/token-selector.svelte';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
+	import StepContent from '$lib/components/step/step-content.svelte';
 	import EmptyState from '@/features/token-sweep/ui/components/empty-state.svelte';
 	import { SvelteSet } from 'svelte/reactivity';
 
@@ -31,7 +32,7 @@
 	}
 </script>
 
-<div class="step-content">
+<StepContent>
 	<StepContentHeader
 		title="Select Tokens"
 		description="Choose which tokens you want to sweep from your addresses on {currentNetwork?.name ||
@@ -63,13 +64,4 @@
 			/>
 		{/if}
 	{/if}
-</div>
-
-<style>
-	/* Content */
-	.step-content {
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-	}
-</style>
+</StepContent>
