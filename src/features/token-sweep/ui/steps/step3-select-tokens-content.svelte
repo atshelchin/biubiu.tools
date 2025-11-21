@@ -37,9 +37,9 @@
 		}
 	}
 
-	$effect(()=>{
-		console.log("step3",step3State.selectedTokenIds)
-	})
+	$effect(() => {
+		console.log('step3', step3State.selectedTokenIds);
+	});
 </script>
 
 <StepContent>

@@ -4,6 +4,7 @@
 	import { slide } from 'svelte/transition';
 	import ConfirmDialog from '$lib/components/ui/confirm-dialog.svelte';
 	import TokenAvatar from '$lib/components/ui/token-avatar.svelte';
+	import CopyButton from '$lib/components/ui/copy-button.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
 
 	interface Props {
@@ -44,6 +45,10 @@
 	function cancelRemove() {
 		showConfirmDialog = false;
 	}
+
+	function handleCopyClick(e: Event) {
+		e.stopPropagation();
+	}
 </script>
 
 <div
@@ -62,15 +67,24 @@
 >
 	<div class="token-card-content">
 		<div class="token-header">
-			<TokenAvatar {token} size={36} />
+			<TokenAvatar {token} size={42} />
 			<div class="token-info">
 				<h4>{token.symbol}</h4>
 				<p class="token-name">{token.name}</p>
 				{#if token.type === 'erc20'}
 					{@const erc20Token = token as ERC20Token}
-					<p class="token-address" title={erc20Token.address}>
-						{erc20Token.address.slice(0, 6)}...{erc20Token.address.slice(-4)}
-					</p>
+					<div class="token-address-row">
+						<p class="token-address" title={erc20Token.address}>
+							{erc20Token.address.slice(0, 6)}...{erc20Token.address.slice(-4)}
+						</p>
+						<span
+							onclick={handleCopyClick}
+							onkeydown={(e) => e.key === 'Enter' && handleCopyClick(e)}
+							role="none"
+						>
+							<CopyButton value={erc20Token.address} size={12} class="address-copy-btn" />
+						</span>
+					</div>
 				{/if}
 			</div>
 		</div>
@@ -184,6 +198,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-3);
+		justify-content: space-between;
 	}
 
 	.token-header {
@@ -232,16 +247,45 @@
 		margin: 0;
 	}
 
+	.token-address-row {
+		display: flex;
+		align-items: center;
+		gap: var(--space-1);
+		margin-top: var(--space-1);
+	}
+
 	.token-address {
 		font-size: var(--text-xs);
 		color: var(--gray-400);
 		font-family: var(--font-mono, 'Monaco', 'Courier New', monospace);
-		margin: var(--space-1) 0 0 0;
+		margin: 0;
 		cursor: help;
 	}
 
 	:global([data-theme='dark']) .token-address {
 		color: var(--gray-500);
+	}
+
+	.token-address-row :global(.address-copy-btn) {
+		width: 20px;
+		height: 20px;
+		border: none;
+		background: transparent;
+		opacity: 0;
+		transition: opacity 0.2s;
+	}
+
+	.token-card:hover .token-address-row :global(.address-copy-btn) {
+		opacity: 1;
+	}
+
+	.token-address-row :global(.address-copy-btn:hover) {
+		background: var(--gray-100);
+		opacity: 1 !important;
+	}
+
+	:global([data-theme='dark']) .token-address-row :global(.address-copy-btn:hover) {
+		background: var(--gray-700);
 	}
 
 	.token-meta {
