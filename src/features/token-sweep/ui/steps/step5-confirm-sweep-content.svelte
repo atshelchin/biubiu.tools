@@ -9,6 +9,9 @@
 	import BatchInfoCard from '@/features/token-sweep/ui/components/batch-info-card.svelte';
 	import TargetAddressInput from '@/features/token-sweep/ui/components/target-address-input.svelte';
 	import BalanceFilterOption from '@/features/token-sweep/ui/components/balance-filter-option.svelte';
+	import SweepProgressDisplay from '@/features/token-sweep/ui/components/sweep-progress-display.svelte';
+	import EstimateDisplay from '@/features/token-sweep/ui/components/estimate-display.svelte';
+	import ActionButtons from '@/features/token-sweep/ui/components/action-buttons.svelte';
 	import {
 		estimateSweep,
 		validateSweepConfig,
@@ -41,6 +44,7 @@
 	let errorMessage = $state('');
 	let sweepProgress = $state<SweepProgress | null>(null);
 	let isSweeping = $state(false);
+	let isEstimating = $state(false);
 	let showEstimate = $state(false);
 	let estimateData = $state<{
 		totalTransactions: number;
@@ -84,7 +88,7 @@
 	let walletWithBalanceCount = $derived(walletsWithBalance.length);
 	let batchCount = $derived(Math.ceil(walletCount / 100));
 	let isValid = $derived(
-		targetAddress.match(/^0x[a-fA-F0-9]{40}$/) &&
+		Boolean(targetAddress.match(/^0x[a-fA-F0-9]{40}$/)) &&
 			selectedTokenCount > 0 &&
 			walletCount > 0 &&
 			(transactionMode === 'connected' || temporaryWallet !== null)
@@ -191,13 +195,17 @@
 
 		const publicClient = createPublicClient({ chain, transport: http(rpcUrl) });
 
+		isEstimating = true;
+		errorMessage = '';
+
 		try {
 			const estimate = await estimateSweep(publicClient, config);
 			estimateData = estimate;
 			showEstimate = true;
-			errorMessage = '';
 		} catch (error) {
 			errorMessage = error instanceof Error ? error.message : 'Failed to estimate';
+		} finally {
+			isEstimating = false;
 		}
 	}
 
@@ -568,77 +576,11 @@
 
 	<!-- Sweep Progress -->
 	{#if isSweeping && sweepProgress}
-		<div class="progress-card" transition:slide>
-			<h4>
-				{#if sweepProgress.phase === 'preparing'}
-					⏳ Preparing...
-				{:else if sweepProgress.phase === 'building'}
-					🔧 Building Transactions...
-				{:else if sweepProgress.phase === 'executing'}
-					⚡ Executing Sweep...
-				{:else if sweepProgress.phase === 'confirming'}
-					⏰ Confirming Transactions...
-				{:else if sweepProgress.phase === 'completed'}
-					✅ Completed!
-				{:else if sweepProgress.phase === 'error'}
-					❌ Error
-				{/if}
-			</h4>
-
-			<p class="progress-message">{sweepProgress.message}</p>
-
-			<div class="progress-bar-container">
-				<div class="progress-bar" style="width: {sweepProgress.percentage}%"></div>
-			</div>
-
-			<div class="progress-stats">
-				<span>Batch {sweepProgress.currentBatch} / {sweepProgress.totalBatches}</span>
-				<span>Wallet {sweepProgress.currentWallet} / {sweepProgress.totalWallets}</span>
-				<span>{sweepProgress.percentage}%</span>
-			</div>
-
-			{#if sweepProgress.results.length > 0}
-				<div class="progress-results">
-					<h5>Results ({sweepProgress.results.length}):</h5>
-					<div class="results-list">
-						{#each sweepProgress.results.slice(-5) as result (result.wallet + result.tokenSymbol)}
-							<div class="result-item" class:success={result.success} class:error={!result.success}>
-								{#if result.success}
-									<CheckCircle2 size={14} />
-								{:else}
-									<AlertCircle size={14} />
-								{/if}
-								<span class="result-wallet">{result.wallet.slice(0, 8)}...</span>
-								<span class="result-token">{result.tokenSymbol}</span>
-								{#if result.error}
-									<span class="result-error">{result.error}</span>
-								{/if}
-							</div>
-						{/each}
-					</div>
-				</div>
-			{/if}
-		</div>
+		<SweepProgressDisplay progress={sweepProgress} />
 	{/if}
 
 	<!-- Estimate Display -->
-	{#if showEstimate && estimateData}
-		<div class="estimate-card" transition:slide>
-			<h4>📊 Cost Estimate</h4>
-			<div class="estimate-row">
-				<span>Total Transactions:</span>
-				<strong>{estimateData.totalTransactions}</strong>
-			</div>
-			<div class="estimate-row">
-				<span>Estimated Gas:</span>
-				<strong>{estimateData.estimatedGas.toString()} units</strong>
-			</div>
-			<div class="estimate-row">
-				<span>Estimated Cost:</span>
-				<strong>{(Number(estimateData.estimatedCost) / 1e18).toFixed(6)} ETH</strong>
-			</div>
-		</div>
-	{/if}
+	<EstimateDisplay {showEstimate} {estimateData} />
 
 	<div class="warning-card">
 		<CheckCircle2 size={20} />
@@ -649,59 +591,17 @@
 	</div>
 
 	<!-- Action Buttons -->
-	<div class="action-buttons">
-		<button class="btn-secondary" onclick={handleEstimateSweep} disabled={!isValid || isSweeping}>
-			📊 Estimate Cost
-		</button>
-		<button class="btn-execute" onclick={handleExecuteSweep} disabled={!isValid || isSweeping}>
-			{#if isSweeping}
-				<Loader2 size={20} class="spinning" />
-				Sweeping...
-			{:else}
-				Execute Sweep 🚀
-			{/if}
-		</button>
-	</div>
+	<ActionButtons
+		{isEstimating}
+		{showEstimate}
+		isExecuting={isSweeping}
+		canExecute={isValid}
+		onEstimate={handleEstimateSweep}
+		onExecute={handleExecuteSweep}
+	/>
 </StepContent>
 
 <style>
-	.btn-secondary,
-	.btn-execute {
-		padding: var(--space-3) var(--space-5);
-		border: none;
-		border-radius: var(--radius-md);
-		font-weight: var(--font-semibold);
-		cursor: pointer;
-		transition: all 0.2s;
-	}
-
-	.btn-secondary {
-		background: var(--gray-200);
-		color: var(--gray-700);
-	}
-	:global([data-theme='dark']) .btn-secondary {
-		background: var(--gray-700);
-		color: var(--gray-200);
-	}
-
-	.btn-execute {
-		background: linear-gradient(135deg, #10b981, #059669);
-		color: white;
-		box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: var(--space-2);
-	}
-	.btn-execute:hover:not(:disabled) {
-		transform: translateY(-2px);
-		box-shadow: 0 4px 16px rgba(16, 185, 129, 0.4);
-	}
-	.btn-execute:disabled {
-		opacity: 0.5;
-		cursor: not-allowed;
-	}
-
 	.form-section {
 		margin-bottom: var(--space-5);
 	}
@@ -774,160 +674,6 @@
 		background: hsla(0, 80%, 15%, 0.3);
 		border-color: hsl(0, 80%, 40%);
 		color: hsl(0, 80%, 70%);
-	}
-
-	.action-buttons {
-		display: flex;
-		gap: var(--space-3);
-		margin-top: var(--space-4);
-	}
-
-	.btn-secondary {
-		flex: 1;
-		padding: var(--space-3) var(--space-4);
-		background: var(--gray-200);
-		color: var(--gray-800);
-		border: none;
-		border-radius: var(--radius-md);
-		font-weight: var(--font-semibold);
-		cursor: pointer;
-		transition: all 0.2s;
-	}
-	.btn-secondary:hover:not(:disabled) {
-		background: var(--gray-300);
-	}
-	.btn-secondary:disabled {
-		opacity: 0.5;
-		cursor: not-allowed;
-	}
-	:global([data-theme='dark']) .btn-secondary {
-		background: var(--gray-700);
-		color: var(--gray-200);
-	}
-
-	.progress-card,
-	.estimate-card {
-		padding: var(--space-4);
-		background: var(--gray-50);
-		border: 1px solid var(--gray-200);
-		border-radius: var(--radius-md);
-		margin: var(--space-4) 0;
-	}
-	:global([data-theme='dark']) .progress-card,
-	:global([data-theme='dark']) .estimate-card {
-		background: var(--gray-800);
-		border-color: var(--gray-700);
-	}
-
-	.progress-message {
-		margin: var(--space-2) 0;
-		color: var(--gray-600);
-	}
-	:global([data-theme='dark']) .progress-message {
-		color: var(--gray-400);
-	}
-
-	.progress-bar-container {
-		width: 100%;
-		height: 8px;
-		background: var(--gray-200);
-		border-radius: var(--radius-sm);
-		overflow: hidden;
-		margin: var(--space-3) 0;
-	}
-	:global([data-theme='dark']) .progress-bar-container {
-		background: var(--gray-700);
-	}
-
-	.progress-bar {
-		height: 100%;
-		background: linear-gradient(90deg, #3b82f6, #2563eb);
-		transition: width 0.3s ease;
-	}
-
-	.progress-stats {
-		display: flex;
-		justify-content: space-between;
-		font-size: var(--text-sm);
-		color: var(--gray-600);
-	}
-	:global([data-theme='dark']) .progress-stats {
-		color: var(--gray-400);
-	}
-
-	.progress-results {
-		margin-top: var(--space-4);
-	}
-
-	.progress-results h5 {
-		font-size: var(--text-sm);
-		font-weight: var(--font-semibold);
-		margin: 0 0 var(--space-2) 0;
-	}
-
-	.results-list {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-1);
-	}
-
-	.result-item {
-		display: flex;
-		align-items: center;
-		gap: var(--space-2);
-		padding: var(--space-2);
-		border-radius: var(--radius-sm);
-		font-size: var(--text-sm);
-	}
-
-	.result-item.success {
-		background: hsla(120, 60%, 95%, 1);
-		color: hsl(120, 60%, 30%);
-	}
-	.result-item.error {
-		background: hsla(0, 60%, 95%, 1);
-		color: hsl(0, 60%, 40%);
-	}
-
-	:global([data-theme='dark']) .result-item.success {
-		background: hsla(120, 60%, 15%, 0.3);
-		color: hsl(120, 60%, 70%);
-	}
-
-	:global([data-theme='dark']) .result-item.error {
-		background: hsla(0, 60%, 15%, 0.3);
-		color: hsl(0, 60%, 70%);
-	}
-
-	.result-wallet {
-		font-family: monospace;
-		font-weight: var(--font-semibold);
-	}
-
-	.result-token {
-		padding: 2px 6px;
-		background: var(--color-primary);
-		color: white;
-		font-size: var(--text-xs);
-		border-radius: var(--radius-sm);
-	}
-
-	.result-error {
-		margin-left: auto;
-		font-size: var(--text-xs);
-	}
-
-	.estimate-row {
-		display: flex;
-		justify-content: space-between;
-		padding: var(--space-2) 0;
-		border-bottom: 1px solid var(--gray-200);
-	}
-	.estimate-row:last-child {
-		border-bottom: none;
-	}
-	:global([data-theme='dark']) .estimate-row {
-		border-bottom-color: var(--gray-700);
 	}
 
 	:global(.spinning) {
