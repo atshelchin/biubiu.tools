@@ -236,6 +236,61 @@
 				}
 			},
 			"step4": {
+				"content": {
+					"title": "导入钱包",
+					"description": "添加要清扫资产的源钱包",
+					"choose_method": "选择导入方式",
+					"mnemonic": {
+						"label": "输入助记词",
+						"placeholder": "输入12或24个单词，用空格分隔",
+						"security_hint": "⚠️ 您的助记词永远不会上传到任何服务器",
+						"derivation_path": "派生路径配置",
+						"generate_button": "🔍 生成地址列表",
+						"generating": "生成中... ({progress}%)",
+						"error_empty": "请输入助记词",
+						"error_invalid": "助记词无效。请输入12或24个单词。",
+						"error_range": "地址范围无效",
+						"error_max": "范围过大（一次最多10000个地址）"
+					},
+					"private_key": {
+						"label": "批量导入私钥",
+						"placeholder": "每行一个私钥（以0x开头）",
+						"import_button": "➕ 批量添加钱包",
+						"importing": "导入中... ({progress}%)",
+						"error_empty": "请输入私钥",
+						"error_none": "未找到有效的私钥",
+						"success_with_invalid": "已导入{valid}个钱包。跳过了{invalid}个无效私钥。"
+					},
+					"wallet_list": {
+						"title": "已导入钱包",
+						"count": "（{count}）",
+						"with_balance": "{count}个有余额",
+						"scan_button": "🔍 扫描余额",
+						"scanning": "扫描中... {progress}%",
+						"clear_all": "清除全部",
+						"empty_message": "尚未导入钱包。使用上述方法导入钱包。"
+					},
+					"errors": {
+						"no_network": "未连接网络",
+						"no_wallets": "没有要扫描的钱包",
+						"no_tokens": "请先在第3步选择代币",
+						"no_rpc": "当前网络没有可用的RPC端点",
+						"no_valid_tokens": "当前网络没有选择有效的代币",
+						"no_balance": "所选代币在钱包中没有余额",
+						"generate_failed": "生成地址失败",
+						"import_failed": "导入私钥失败",
+						"scan_failed": "扫描余额失败"
+					},
+					"dialogs": {
+						"remove_wallet_title": "移除钱包",
+						"remove_wallet_message": "确定要从导入列表中移除此钱包吗？\n\n地址：{address}",
+						"remove_button": "移除",
+						"clear_all_title": "清除所有钱包",
+						"clear_all_message": "确定要从导入列表中移除全部{count}个钱包吗？此操作无法撤销。",
+						"clear_all_button": "清除全部",
+						"cancel_button": "取消"
+					}
+				},
 				"footer": {
 					"continue_text": "继续确认",
 					"hint": "请至少导入一个钱包以继续"

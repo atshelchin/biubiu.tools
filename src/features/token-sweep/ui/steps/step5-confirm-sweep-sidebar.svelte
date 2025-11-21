@@ -26,7 +26,7 @@
 	});
 </script>
 
-<StepSidebar stepNumber={5} title="Confirm Sweep" description="Review and execute">
+<StepSidebar stepNumber={5} title="" description="">
 	<StepSummary title="Summary">
 		<div class="summary-item">
 			<span>Selected Tokens:</span>

@@ -4,6 +4,9 @@
 	import AddressPathSelector from '$lib/components/ui/address-path-selector.svelte';
 	import { Loader2 } from '@lucide/svelte';
 	import { slide } from 'svelte/transition';
+	import { useI18n } from '@shelchin/i18n/svelte';
+
+	const i18n = useI18n();
 
 	interface Props {
 		mnemonicText: string;
@@ -37,16 +40,18 @@
 </script>
 
 <div class="form-section" transition:slide>
-	<div class="form-label">Enter Mnemonic Phrase</div>
+	<div class="form-label">{i18n.t('tools.token_sweep.step4.content.mnemonic.label')}</div>
 	<SimpleCodeEditor
 		bind:value={mnemonicText}
-		placeholder="Enter 12 or 24 words separated by spaces"
+		placeholder={i18n.t('tools.token_sweep.step4.content.mnemonic.placeholder')}
 		rows={6}
 	/>
-	<p class="form-hint">⚠️ Your mnemonic is never uploaded to any server</p>
+	<p class="form-hint">{i18n.t('tools.token_sweep.step4.content.mnemonic.security_hint')}</p>
 
 	<div style="margin-top: var(--space-4);">
-		<div class="form-label">Derivation Path Configuration</div>
+		<div class="form-label">
+			{i18n.t('tools.token_sweep.step4.content.mnemonic.derivation_path')}
+		</div>
 		<AddressPathSelector
 			bind:pathType
 			bind:startIndex
@@ -68,10 +73,12 @@
 	>
 		{#if isGenerating}
 			<Loader2 size={18} class="spinning" />
-			Generating... ({Math.round(generationProgress)}%)
+			{i18n.t('tools.token_sweep.step4.content.mnemonic.generating', {
+				progress: Math.round(generationProgress)
+			})}
 			<div class="btn-progress-bar" style="width: {generationProgress}%"></div>
 		{:else}
-			🔍 Generate Address List
+			{i18n.t('tools.token_sweep.step4.content.mnemonic.generate_button')}
 		{/if}
 	</button>
 </div>

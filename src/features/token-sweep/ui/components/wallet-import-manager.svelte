@@ -3,6 +3,9 @@
 	import WalletList from '$lib/components/ui/wallet-list.svelte';
 	import ConfirmDialog from '$lib/components/ui/confirm-dialog.svelte';
 	import { Loader2 } from '@lucide/svelte';
+	import { useI18n } from '@shelchin/i18n/svelte';
+
+	const i18n = useI18n();
 
 	interface Props {
 		wallets: ImportedWallet[];
@@ -57,10 +60,16 @@
 <div class="form-section">
 	<div class="wallet-list-header">
 		<div class="form-label">
-			Imported Wallets
-			<span class="wallet-count">({walletCount})</span>
+			{i18n.t('tools.token_sweep.step4.content.wallet_list.title')}
+			<span class="wallet-count"
+				>{i18n.t('tools.token_sweep.step4.content.wallet_list.count', { count: walletCount })}</span
+			>
 			{#if hasScanned}
-				<span class="balance-badge">{walletsWithBalance} with balance</span>
+				<span class="balance-badge"
+					>{i18n.t('tools.token_sweep.step4.content.wallet_list.with_balance', {
+						count: walletsWithBalance
+					})}</span
+				>
 			{/if}
 		</div>
 		<div class="wallet-actions">
@@ -69,16 +78,20 @@
 					class="btn-scan"
 					onclick={onScanBalances}
 					disabled={isScanning}
-					title="Scan balances for all wallets"
+					title={i18n.t('tools.token_sweep.step4.content.wallet_list.scan_button')}
 				>
 					{#if isScanning}
 						<Loader2 size={14} class="spinning" />
-						Scanning... {scanProgress}%
+						{i18n.t('tools.token_sweep.step4.content.wallet_list.scanning', {
+							progress: scanProgress
+						})}
 					{:else}
-						🔍 Scan Balances
+						{i18n.t('tools.token_sweep.step4.content.wallet_list.scan_button')}
 					{/if}
 				</button>
-				<button class="btn-text-danger" onclick={handleClearAll}>Clear All</button>
+				<button class="btn-text-danger" onclick={handleClearAll}
+					>{i18n.t('tools.token_sweep.step4.content.wallet_list.clear_all')}</button
+				>
 			{/if}
 		</div>
 	</div>
@@ -89,7 +102,7 @@
 		showPagination={true}
 		canRemove={true}
 		onRemove={handleRemoveWallet}
-		emptyMessage="No wallets imported yet. Use the methods above to import wallets."
+		emptyMessage={i18n.t('tools.token_sweep.step4.content.wallet_list.empty_message')}
 		showDerivationPath={true}
 	/>
 </div>
@@ -97,10 +110,12 @@
 <!-- Confirm Dialogs -->
 <ConfirmDialog
 	bind:open={showRemoveDialog}
-	title="Remove Wallet"
-	message={`Are you sure you want to remove this wallet from the import list?\n\nAddress: ${walletToRemove}`}
-	confirmText="Remove"
-	cancelText="Cancel"
+	title={i18n.t('tools.token_sweep.step4.content.dialogs.remove_wallet_title')}
+	message={i18n.t('tools.token_sweep.step4.content.dialogs.remove_wallet_message', {
+		address: walletToRemove
+	})}
+	confirmText={i18n.t('tools.token_sweep.step4.content.dialogs.remove_button')}
+	cancelText={i18n.t('tools.token_sweep.step4.content.dialogs.cancel_button')}
 	variant="danger"
 	requireLongPress={false}
 	onConfirm={confirmRemoveWallet}
@@ -111,10 +126,12 @@
 
 <ConfirmDialog
 	bind:open={showClearAllDialog}
-	title="Clear All Wallets"
-	message={`Are you sure you want to remove all ${walletCount.toLocaleString()} wallets from the import list? This action cannot be undone.`}
-	confirmText="Clear All"
-	cancelText="Cancel"
+	title={i18n.t('tools.token_sweep.step4.content.dialogs.clear_all_title')}
+	message={i18n.t('tools.token_sweep.step4.content.dialogs.clear_all_message', {
+		count: walletCount.toLocaleString()
+	})}
+	confirmText={i18n.t('tools.token_sweep.step4.content.dialogs.clear_all_button')}
+	cancelText={i18n.t('tools.token_sweep.step4.content.dialogs.cancel_button')}
 	variant="danger"
 	requireLongPress={true}
 	longPressDuration={3000}

@@ -2,6 +2,9 @@
 	import SimpleCodeEditor from '$lib/components/widgets/SimpleCodeEditor.svelte';
 	import { Loader2 } from '@lucide/svelte';
 	import { slide } from 'svelte/transition';
+	import { useI18n } from '@shelchin/i18n/svelte';
+
+	const i18n = useI18n();
 
 	interface Props {
 		privateKeysText: string;
@@ -19,10 +22,10 @@
 </script>
 
 <div class="form-section" transition:slide>
-	<div class="form-label">Batch Import Private Keys</div>
+	<div class="form-label">{i18n.t('tools.token_sweep.step4.content.private_key.label')}</div>
 	<SimpleCodeEditor
 		bind:value={privateKeysText}
-		placeholder="One private key per line (starting with 0x)"
+		placeholder={i18n.t('tools.token_sweep.step4.content.private_key.placeholder')}
 		rows={20}
 	/>
 	<button
@@ -33,10 +36,12 @@
 	>
 		{#if isGenerating}
 			<Loader2 size={18} class="spinning" />
-			Importing... ({Math.round(generationProgress)}%)
+			{i18n.t('tools.token_sweep.step4.content.private_key.importing', {
+				progress: Math.round(generationProgress)
+			})}
 			<div class="btn-progress-bar" style="width: {generationProgress}%"></div>
 		{:else}
-			➕ Batch Add Wallets
+			{i18n.t('tools.token_sweep.step4.content.private_key.import_button')}
 		{/if}
 	</button>
 </div>

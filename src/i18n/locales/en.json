@@ -236,6 +236,61 @@
 				}
 			},
 			"step4": {
+				"content": {
+					"title": "Import Wallets",
+					"description": "Add source wallets that you want to sweep assets from",
+					"choose_method": "Choose Import Method",
+					"mnemonic": {
+						"label": "Enter Mnemonic Phrase",
+						"placeholder": "Enter 12 or 24 words separated by spaces",
+						"security_hint": "⚠️ Your mnemonic is never uploaded to any server",
+						"derivation_path": "Derivation Path Configuration",
+						"generate_button": "🔍 Generate Address List",
+						"generating": "Generating... ({progress}%)",
+						"error_empty": "Please enter a mnemonic phrase",
+						"error_invalid": "Invalid mnemonic phrase. Please enter 12 or 24 words.",
+						"error_range": "Invalid address range",
+						"error_max": "Range too large (max 10000 addresses at once)"
+					},
+					"private_key": {
+						"label": "Batch Import Private Keys",
+						"placeholder": "One private key per line (starting with 0x)",
+						"import_button": "➕ Batch Add Wallets",
+						"importing": "Importing... ({progress}%)",
+						"error_empty": "Please enter private keys",
+						"error_none": "No valid private keys found",
+						"success_with_invalid": "Imported {valid} wallets. {invalid} invalid keys skipped."
+					},
+					"wallet_list": {
+						"title": "Imported Wallets",
+						"count": "({count})",
+						"with_balance": "{count} with balance",
+						"scan_button": "🔍 Scan Balances",
+						"scanning": "Scanning... {progress}%",
+						"clear_all": "Clear All",
+						"empty_message": "No wallets imported yet. Use the methods above to import wallets."
+					},
+					"errors": {
+						"no_network": "No network connected",
+						"no_wallets": "No wallets to scan",
+						"no_tokens": "Please select tokens in Step 3 first",
+						"no_rpc": "No RPC endpoint available for current network",
+						"no_valid_tokens": "No valid tokens selected for current network",
+						"no_balance": "No wallets have balance for selected tokens",
+						"generate_failed": "Failed to generate addresses",
+						"import_failed": "Failed to import private keys",
+						"scan_failed": "Failed to scan balances"
+					},
+					"dialogs": {
+						"remove_wallet_title": "Remove Wallet",
+						"remove_wallet_message": "Are you sure you want to remove this wallet from the import list?\n\nAddress: {address}",
+						"remove_button": "Remove",
+						"clear_all_title": "Clear All Wallets",
+						"clear_all_message": "Are you sure you want to remove all {count} wallets from the import list? This action cannot be undone.",
+						"clear_all_button": "Clear All",
+						"cancel_button": "Cancel"
+					}
+				},
 				"footer": {
 					"continue_text": "Continue to Confirm",
 					"hint": "Please import at least one wallet to continue"

@@ -15,7 +15,9 @@
 	import { slide } from 'svelte/transition';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
+	import { useI18n } from '@shelchin/i18n/svelte';
 
+	const i18n = useI18n();
 	const connectStore = useConnectStore();
 	const walletGeneration = useWalletGeneration();
 	const balanceScanner = useBalanceScanner();
@@ -50,12 +52,12 @@
 
 	async function handleGenerateAddresses() {
 		if (!mnemonicText.trim()) {
-			errorMessage = 'Please enter a mnemonic phrase';
+			errorMessage = i18n.t('tools.token_sweep.step4.content.mnemonic.error_empty');
 			return;
 		}
 
 		if (!validateMnemonicPhrase(mnemonicText.trim())) {
-			errorMessage = 'Invalid mnemonic phrase. Please enter 12 or 24 words.';
+			errorMessage = i18n.t('tools.token_sweep.step4.content.mnemonic.error_invalid');
 			return;
 		}
 
@@ -74,7 +76,7 @@
 			if (pathType === 'sequential') {
 				// Sequential mode validation
 				if (startIndex < 0 || endIndex < startIndex) {
-					errorMessage = 'Invalid address range';
+					errorMessage = i18n.t('tools.token_sweep.step4.content.mnemonic.error_range');
 					isGenerating = false;
 					return;
 				}
@@ -82,7 +84,7 @@
 				totalAddresses = endIndex - startIndex + 1;
 
 				if (totalAddresses > 10000) {
-					errorMessage = 'Range too large (max 10000 addresses at once)';
+					errorMessage = i18n.t('tools.token_sweep.step4.content.mnemonic.error_max');
 					isGenerating = false;
 					return;
 				}
@@ -141,7 +143,10 @@
 			}
 		} catch (error) {
 			console.error('Generate addresses error:', error);
-			errorMessage = error instanceof Error ? error.message : 'Failed to generate addresses';
+			errorMessage =
+				error instanceof Error
+					? error.message
+					: i18n.t('tools.token_sweep.step4.content.errors.generate_failed');
 		} finally {
 			isGenerating = false;
 			generationProgress = 0;
@@ -150,7 +155,7 @@
 
 	async function handleImportPrivateKeys() {
 		if (!privateKeysText.trim()) {
-			errorMessage = 'Please enter private keys';
+			errorMessage = i18n.t('tools.token_sweep.step4.content.private_key.error_empty');
 			return;
 		}
 
@@ -160,7 +165,7 @@
 			.filter((line) => line.length > 0);
 
 		if (lines.length === 0) {
-			errorMessage = 'No valid private keys found';
+			errorMessage = i18n.t('tools.token_sweep.step4.content.private_key.error_none');
 			return;
 		}
 
@@ -185,12 +190,21 @@
 				// eslint-disable-next-line @typescript-eslint/no-unused-vars
 				step4State.addWallets(result.wallets.map(({ privateKey: _pk, ...wallet }) => wallet));
 				if (result.invalidKeys.length > 0) {
-					errorMessage = `Imported ${result.wallets.length} wallets. ${result.invalidKeys.length} invalid keys skipped.`;
+					errorMessage = i18n.t(
+						'tools.token_sweep.step4.content.private_key.success_with_invalid',
+						{
+							valid: result.wallets.length,
+							invalid: result.invalidKeys.length
+						}
+					);
 				}
 			}
 		} catch (error) {
 			console.error('Import private keys error:', error);
-			errorMessage = error instanceof Error ? error.message : 'Failed to import private keys';
+			errorMessage =
+				error instanceof Error
+					? error.message
+					: i18n.t('tools.token_sweep.step4.content.errors.import_failed');
 		} finally {
 			isGenerating = false;
 			generationProgress = 0;
@@ -200,19 +214,19 @@
 	async function handleScanBalances() {
 		// Validate prerequisites
 		if (!connectStore.currentChainId) {
-			errorMessage = 'No network connected';
+			errorMessage = i18n.t('tools.token_sweep.step4.content.errors.no_network');
 			return;
 		}
 
 		if (importedWallets.length === 0) {
-			errorMessage = 'No wallets to scan';
+			errorMessage = i18n.t('tools.token_sweep.step4.content.errors.no_wallets');
 			return;
 		}
 
 		// Get selected tokens from step3
 		const selectedTokenIds = Array.from(step3State.selectedTokenIds);
 		if (selectedTokenIds.length === 0) {
-			errorMessage = 'Please select tokens in Step 3 first';
+			errorMessage = i18n.t('tools.token_sweep.step4.content.errors.no_tokens');
 			return;
 		}
 
@@ -222,7 +236,7 @@
 		);
 
 		if (!currentNetwork || currentNetwork.rpcEndpoints.length === 0) {
-			errorMessage = 'No RPC endpoint available for current network';
+			errorMessage = i18n.t('tools.token_sweep.step4.content.errors.no_rpc');
 			return;
 		}
 
@@ -235,7 +249,7 @@
 		const selectedTokens = allTokens.filter((token) => selectedTokenIds.includes(token.id));
 
 		if (selectedTokens.length === 0) {
-			errorMessage = 'No valid tokens selected for current network';
+			errorMessage = i18n.t('tools.token_sweep.step4.content.errors.no_valid_tokens');
 			return;
 		}
 
@@ -266,11 +280,14 @@
 			// Show summary
 			const walletsWithBalance = step4State.getWalletsWithBalance().length;
 			if (walletsWithBalance === 0) {
-				errorMessage = 'No wallets have balance for selected tokens';
+				errorMessage = i18n.t('tools.token_sweep.step4.content.errors.no_balance');
 			}
 		} catch (error) {
 			console.error('Balance scanning error:', error);
-			errorMessage = error instanceof Error ? error.message : 'Failed to scan balances';
+			errorMessage =
+				error instanceof Error
+					? error.message
+					: i18n.t('tools.token_sweep.step4.content.errors.scan_failed');
 		} finally {
 			step4State.isScanning = false;
 		}
@@ -279,13 +296,13 @@
 
 <StepContent>
 	<StepContentHeader
-		title="Import Wallets"
-		description="Add source wallets that you want to sweep assets from"
+		title={i18n.t('tools.token_sweep.step4.content.title')}
+		description={i18n.t('tools.token_sweep.step4.content.description')}
 	/>
 
 	<!-- Import Method Selector -->
 	<div class="form-section">
-		<div class="form-label">Choose Import Method</div>
+		<div class="form-label">{i18n.t('tools.token_sweep.step4.content.choose_method')}</div>
 		<ImportMethodSelector selected={importMethod} onSelect={handleMethodSelect} />
 	</div>
 
