@@ -6,6 +6,9 @@
 	import TransactionModeSelector from '@/features/token-sweep/ui/components/transaction-mode-selector.svelte';
 	import FeeBreakdownDisplay from '@/features/token-sweep/ui/components/fee-breakdown-display.svelte';
 	import TemporaryWalletManager from '@/features/token-sweep/ui/components/temporary-wallet-manager.svelte';
+	import BatchInfoCard from '@/features/token-sweep/ui/components/batch-info-card.svelte';
+	import TargetAddressInput from '@/features/token-sweep/ui/components/target-address-input.svelte';
+	import BalanceFilterOption from '@/features/token-sweep/ui/components/balance-filter-option.svelte';
 	import {
 		estimateSweep,
 		validateSweepConfig,
@@ -529,56 +532,13 @@
 	</div>
 
 	<!-- 2. Batch Info (批次信息) -->
-	<div class="info-card">
-		<div class="info-header">
-			<AlertCircle size={20} />
-			<h4>Batch Processing</h4>
-		</div>
-		<p>
-			Your {walletCount} wallet(s) will be processed in {batchCount} batch(es). Each batch can process
-			up to 100 wallets.
-		</p>
-		<div class="batch-list">
-			{#each Array.from({ length: batchCount }, (_, i) => i) as batchIndex (batchIndex)}
-				<div class="batch-item">
-					<span>Batch {batchIndex + 1}</span>
-					<span class="batch-size">
-						{Math.min(100, walletCount - batchIndex * 100)} wallet(s)
-					</span>
-				</div>
-			{/each}
-		</div>
-	</div>
+	<BatchInfoCard {walletCount} {batchCount} />
 
 	<!-- 3. Target Address (接收地址) -->
-	<div class="form-section">
-		<label class="form-label" for="target-address-input">Target Address</label>
-		<input
-			id="target-address-input"
-			type="text"
-			class="form-input"
-			bind:value={targetAddress}
-			placeholder="0x... (Address to receive all assets)"
-		/>
-		<p class="form-hint">💡 All assets will be transferred to this address</p>
-	</div>
+	<TargetAddressInput bind:targetAddress />
 
 	<!-- Balance Filter Option -->
-	{#if hasScanned && walletWithBalanceCount < walletCount}
-		<div class="form-section">
-			<label class="checkbox-label">
-				<input type="checkbox" bind:checked={onlyWithBalance} />
-				<span>
-					Only sweep wallets with balance ({walletWithBalanceCount} of {walletCount})
-				</span>
-			</label>
-			<p class="form-hint">
-				💡 {onlyWithBalance
-					? `Only ${walletWithBalanceCount} wallets with confirmed balance will be processed`
-					: `All ${walletCount} wallets will be processed (including those without balance)`}
-			</p>
-		</div>
-	{/if}
+	<BalanceFilterOption {hasScanned} {walletWithBalanceCount} {walletCount} bind:onlyWithBalance />
 
 	<!-- 4. Fee Breakdown Display (费用计算) -->
 	{#if feeBreakdown && currentNetwork}
