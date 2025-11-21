@@ -665,37 +665,6 @@
 </StepContent>
 
 <style>
-	.form-hint {
-		font-size: var(--text-sm);
-		color: var(--gray-600);
-		margin: var(--space-1) 0 0 0;
-	}
-	:global([data-theme='dark']) .form-hint {
-		color: var(--gray-400);
-	}
-
-	.checkbox-label {
-		display: flex;
-		align-items: center;
-		gap: var(--space-2);
-		cursor: pointer;
-		font-size: var(--text-base);
-		color: var(--gray-700);
-	}
-	:global([data-theme='dark']) .checkbox-label {
-		color: var(--gray-300);
-	}
-
-	.checkbox-label input[type='checkbox'] {
-		width: 18px;
-		height: 18px;
-		cursor: pointer;
-	}
-
-	.checkbox-label span {
-		user-select: none;
-	}
-
 	.btn-secondary,
 	.btn-execute {
 		padding: var(--space-3) var(--space-5);
@@ -775,61 +744,6 @@
 	}
 	:global([data-theme='dark']) .network-symbol {
 		color: var(--gray-400);
-	}
-
-	.form-input {
-		width: 100%;
-		padding: var(--space-3);
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-sm);
-		font-family: 'Courier New', monospace;
-	}
-	.form-input:focus {
-		outline: none;
-		border-color: var(--color-primary);
-		box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-	}
-
-	.info-card,
-	.warning-card {
-		padding: var(--space-4);
-		border-radius: var(--radius-lg);
-	}
-
-	.info-card {
-		background: hsla(45, 100%, 95%, 1);
-		border: 1px solid hsl(45, 100%, 60%);
-	}
-	:global([data-theme='dark']) .info-card {
-		background: hsla(45, 100%, 15%, 0.3);
-		border-color: hsl(45, 100%, 40%);
-	}
-
-	.info-header {
-		display: flex;
-		align-items: center;
-		gap: var(--space-2);
-		margin-bottom: var(--space-2);
-		color: hsl(45, 100%, 35%);
-	}
-
-	.batch-list {
-		margin-top: var(--space-3);
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-2);
-	}
-
-	.batch-item {
-		display: flex;
-		justify-content: space-between;
-		padding: var(--space-2);
-		background: white;
-		border-radius: var(--radius-sm);
-	}
-
-	:global([data-theme='dark']) .batch-item {
-		background: var(--gray-900);
 	}
 
 	.warning-card {
