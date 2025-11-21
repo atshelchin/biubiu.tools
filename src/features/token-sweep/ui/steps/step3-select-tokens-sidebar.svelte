@@ -8,7 +8,7 @@
 
 	const i18n = useI18n();
 
-	// Use shared state from step3State - create reactive count
+	// Use shared state - create reactive count
 	let selectedCount = $derived(step3State.selectedTokenIds.size);
 </script>
 

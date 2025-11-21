@@ -7,44 +7,36 @@ import { getTokensForChain } from '$lib/config/tokens';
 import { loadCustomTokens } from '../utils/token-storage';
 import type { Token, NativeToken } from '$lib/types/token';
 
-// Module-level state - automatically shared across all imports
-// SvelteSet is already reactive, no need for $state wrapper
-let _selectedTokenIds = new SvelteSet<string>();
-
-export const step3State = {
-	get selectedTokenIds() {
-		return _selectedTokenIds;
-	},
-	set selectedTokenIds(value: SvelteSet<string>) {
-		_selectedTokenIds = value;
-	},
+// Module-level state class for reactivity
+class Step3StateClass {
+	selectedTokenIds = $state(new SvelteSet<string>());
 
 	// Helper methods
 	toggleToken(tokenId: string) {
-		if (_selectedTokenIds.has(tokenId)) {
-			_selectedTokenIds.delete(tokenId);
+		if (this.selectedTokenIds.has(tokenId)) {
+			this.selectedTokenIds.delete(tokenId);
 		} else {
-			_selectedTokenIds.add(tokenId);
+			this.selectedTokenIds.add(tokenId);
 		}
 		// Force reactivity by creating new SvelteSet
-		_selectedTokenIds = new SvelteSet(_selectedTokenIds);
-	},
+		this.selectedTokenIds = new SvelteSet(this.selectedTokenIds);
+	}
 
 	selectAll(tokenIds: string[]) {
-		_selectedTokenIds = new SvelteSet(tokenIds);
-	},
+		this.selectedTokenIds = new SvelteSet(tokenIds);
+	}
 
 	deselectAll() {
-		_selectedTokenIds = new SvelteSet();
-	},
+		this.selectedTokenIds = new SvelteSet();
+	}
 
 	getSelectedTokens() {
-		return Array.from(_selectedTokenIds);
-	},
+		return Array.from(this.selectedTokenIds);
+	}
 
 	getSelectedCount() {
-		return _selectedTokenIds.size;
-	},
+		return this.selectedTokenIds.size;
+	}
 
 	// Get all available tokens for a chain (native + predefined ERC20 + custom)
 	// Note: This requires network config to be passed in, as we can't access connectStore in a module
@@ -77,4 +69,7 @@ export const step3State = {
 
 		return allTokens;
 	}
-};
+}
+
+// Export single shared instance
+export const step3State = new Step3StateClass();
