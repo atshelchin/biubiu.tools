@@ -39,7 +39,15 @@
 				"what_is_biubiu_premium": "BiuBiuPremium 是什么？",
 				"biubiu_premium_explanation": "会员管理合约，处理订阅、折扣、权限等。代码完全公开透明。",
 				"what_is_token_sweep": "TokenSweep 是什么？",
-				"token_sweep_explanation": "批量归集的核心合约，处理授权和转账。开源地址：https://github.com/atshelchin/biubiu-contracts"
+				"token_sweep_explanation": "批量归集的核心合约，处理授权和转账。开源地址：https://github.com/atshelchin/biubiu-contracts",
+				"can_select_multiple_tokens": "可以同时选择多个代币吗？",
+				"can_select_multiple_tokens_explanation": "当然可以！您可以选择任意数量的代币，工具会在一次批量操作中归集所有选中的代币，非常高效。",
+				"what_happens_zero_balance": "如果某个钱包某个代币余额为零会怎样？",
+				"what_happens_zero_balance_explanation": "系统很智能！会自动跳过该钱包对该代币的归集操作，为您节约 gas 费用，不会执行不必要的转账。",
+				"what_tokens_supported": "支持哪些类型的代币？",
+				"what_tokens_supported_explanation": "同时支持原生代币（如以太坊的 ETH、BSC 的 BNB、Polygon 的 MATIC）和所有 ERC-20 标准代币。您遇到的大多数代币都可以使用。",
+				"how_add_custom_token": "如何添加自定义代币？",
+				"how_add_custom_token_explanation": "点击「+ 添加代币」按钮，然后输入代币的合约地址。系统会自动从区块链获取代币的名称、符号和精度信息。"
 			},
 			"seo": {
 				"page_title": "代币批量归集 - 批量转移 ERC20 代币 | BiuBiu Tools",
@@ -220,7 +228,11 @@
 					"description": "选择要归集的代币",
 					"selected_tokens_title": "已选代币",
 					"count_label": "数量：",
-					"empty_hint": "未选择任何代币"
+					"empty_hint": "未选择任何代币",
+					"beginner_tips": "新手提示",
+					"tip1": "✅ 可以同时选择多个代币，一次性批量归集",
+					"tip2": "⚡ 某钱包地址某代币余额为零时，自动跳过该归集操作 - 节约 gas 费用",
+					"tip3": "🪙 同时支持原生代币（ETH、BNB 等）和 ERC-20 代币"
 				}
 			}
 		},

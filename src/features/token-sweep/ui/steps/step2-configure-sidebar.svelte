@@ -3,31 +3,14 @@
 	import CheckSummary from '$lib/components/ui/check-summary.svelte';
 	import { step2State } from '@/features/token-sweep/stores/step2-state.svelte';
 	import InfoCard from '$lib/components/step/info-card.svelte';
-	import { useConnectStore } from '@/lib/stores/connect.svelte';
-	import WalletConnectButton from '@/lib/components/ui/wallet-connect-button.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
 
 	const i18n = useI18n();
 	// Use $derived for easier access in template
 	let summary = $derived(step2State.summary);
-
-	const connectStore = useConnectStore();
-
-	// Get current network
-	const currentNetwork = $derived(
-		connectStore.currentChainId
-			? connectStore.networks.find((n) => n.chainId === connectStore.currentChainId)
-			: undefined
-	);
 </script>
 
-<StepSidebar stepNumber={2} title="" description="">
-	<WalletConnectButton
-		selectedChainId={connectStore.currentChainId ?? 1}
-		selectedNetwork={currentNetwork}
-		class="wallet-section"
-	/>
-
+<StepSidebar stepNumber={2} title="" description="" showWalletConnect={true}>
 	{#if summary}
 		<CheckSummary {summary} />
 	{/if}

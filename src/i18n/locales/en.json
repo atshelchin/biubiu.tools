@@ -39,7 +39,15 @@
 				"what_is_biubiu_premium": "What is BiuBiuPremium?",
 				"biubiu_premium_explanation": "Membership contract managing subscriptions, discounts, and access. Fully open source.",
 				"what_is_token_sweep": "What is TokenSweep?",
-				"token_sweep_explanation": "Core contract for batch transfers. Handles EIP-7702 delegation and approvals. Open source: https://github.com/atshelchin/biubiu-contracts"
+				"token_sweep_explanation": "Core contract for batch transfers. Handles EIP-7702 delegation and approvals. Open source: https://github.com/atshelchin/biubiu-contracts",
+				"can_select_multiple_tokens": "Can I select multiple tokens at once?",
+				"can_select_multiple_tokens_explanation": "Yes! You can select as many tokens as you want. The tool will sweep all selected tokens in one batch operation, making it very efficient.",
+				"what_happens_zero_balance": "What happens if a wallet has zero balance for a token?",
+				"what_happens_zero_balance_explanation": "Smart! The system automatically skips wallets with zero balance for that specific token. This saves you gas costs by not executing unnecessary transfers.",
+				"what_tokens_supported": "What types of tokens are supported?",
+				"what_tokens_supported_explanation": "We support both native tokens (like ETH on Ethereum, BNB on BSC, MATIC on Polygon) and all ERC-20 standard tokens. Most tokens you encounter will work.",
+				"how_add_custom_token": "How do I add a custom token?",
+				"how_add_custom_token_explanation": "Click the '+ Add Token' button, then enter the token's contract address. The system will automatically fetch the token's name, symbol, and decimals from the blockchain."
 			},
 			"seo": {
 				"page_title": "Token Sweep - Batch Transfer ERC20 Tokens | BiuBiu Tools",
@@ -220,7 +228,11 @@
 					"description": "Choose which tokens to sweep",
 					"selected_tokens_title": "Selected Tokens",
 					"count_label": "Count:",
-					"empty_hint": "No tokens selected"
+					"empty_hint": "No tokens selected",
+					"beginner_tips": "Tips",
+					"tip1": "✅ You can select multiple tokens to sweep them all in one batch operation",
+					"tip2": "⚡ Wallets with zero balance for a token will be automatically skipped - saving gas costs",
+					"tip3": "🪙 Supports both native tokens (ETH, BNB, etc.) and ERC-20 tokens"
 				}
 			}
 		},

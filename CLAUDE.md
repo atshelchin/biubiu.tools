@@ -195,6 +195,7 @@ Before committing any code changes:
 **IMPORTANT: Always write commit messages in English.**
 
 Follow conventional commits format:
+
 ```
 <type>: <short description>
 
@@ -204,6 +205,7 @@ Follow conventional commits format:
 ```
 
 Common types:
+
 - `feat`: New feature
 - `fix`: Bug fix
 - `refactor`: Code refactoring
@@ -213,6 +215,7 @@ Common types:
 - `chore`: Build process or auxiliary tool changes
 
 Example:
+
 ```bash
 git commit -m "refactor: create reusable StepContent component
 

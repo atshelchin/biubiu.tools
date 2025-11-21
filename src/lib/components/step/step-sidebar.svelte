@@ -1,12 +1,25 @@
 <script lang="ts">
+	import { useConnectStore } from '$lib/stores/connect.svelte';
+	import WalletConnectButton from '$lib/components/ui/wallet-connect-button.svelte';
+
 	interface Props {
 		stepNumber: number;
 		title: string;
 		description: string;
+		showWalletConnect?: boolean;
 		children?: import('svelte').Snippet;
 	}
 
-	let { stepNumber, title, description, children }: Props = $props();
+	let { stepNumber, title, description, showWalletConnect = true, children }: Props = $props();
+
+	const connectStore = useConnectStore();
+
+	// Get current network when wallet connect is shown
+	const currentNetwork = $derived(
+		showWalletConnect && connectStore.currentChainId
+			? connectStore.networks.find((n) => n.chainId === connectStore.currentChainId)
+			: undefined
+	);
 </script>
 
 <div class="step-sidebar">
@@ -16,6 +29,14 @@
 
 	{#if description}
 		<p>{description}</p>
+	{/if}
+
+	{#if showWalletConnect}
+		<WalletConnectButton
+			selectedChainId={connectStore.currentChainId ?? 1}
+			selectedNetwork={currentNetwork}
+			class="wallet-section"
+		/>
 	{/if}
 
 	{@render children?.()}
