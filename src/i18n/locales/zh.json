@@ -202,6 +202,26 @@
 					"tip2": "🚀 如果缺少合约，可以直接在本页面一键部署",
 					"tip3": "📋 必须按顺序解决依赖问题 - 先修复第一个失败的检查项"
 				}
+			},
+			"step3": {
+				"content": {
+					"title": "选择代币",
+					"description": "选择要从 {network} 地址中归集的代币",
+					"description_fallback": "选择要从该网络地址中归集的代币",
+					"wallet_not_connected_title": "钱包未连接",
+					"wallet_not_connected_message": "请返回步骤 1 并连接您的钱包",
+					"empty_message": "暂无可用代币。请先添加自定义代币。"
+				},
+				"footer": {
+					"hint": "请至少选择一个代币以继续"
+				},
+				"sidebar": {
+					"title": "选择代币",
+					"description": "选择要归集的代币",
+					"selected_tokens_title": "已选代币",
+					"count_label": "数量：",
+					"empty_hint": "未选择任何代币"
+				}
 			}
 		},
 		"token_distribution": {

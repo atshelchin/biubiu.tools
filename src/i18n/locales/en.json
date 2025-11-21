@@ -202,6 +202,26 @@
 					"tip2": "🚀 If a contract is missing, you can deploy it directly from this page",
 					"tip3": "📋 Must resolve dependency issues in order - fix the first failed check before others"
 				}
+			},
+			"step3": {
+				"content": {
+					"title": "Select Tokens",
+					"description": "Choose which tokens you want to sweep from your addresses on {network}",
+					"description_fallback": "Choose which tokens you want to sweep from your addresses on this network",
+					"wallet_not_connected_title": "Wallet Not Connected",
+					"wallet_not_connected_message": "Please go back to Step 1 and connect your wallet",
+					"empty_message": "No tokens available. Add a custom token to get started."
+				},
+				"footer": {
+					"hint": "Please select at least one token to continue"
+				},
+				"sidebar": {
+					"title": "Select Tokens",
+					"description": "Choose which tokens to sweep",
+					"selected_tokens_title": "Selected Tokens",
+					"count_label": "Count:",
+					"empty_hint": "No tokens selected"
+				}
 			}
 		},
 		"token_distribution": {

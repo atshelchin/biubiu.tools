@@ -6,8 +6,10 @@
 	import StepContent from '$lib/components/step/step-content.svelte';
 	import EmptyState from '@/features/token-sweep/ui/components/empty-state.svelte';
 	import { SvelteSet } from 'svelte/reactivity';
+	import { useI18n } from '@shelchin/i18n/svelte';
 
 	const connectStore = useConnectStore();
+	const i18n = useI18n();
 
 	// Get current network info
 	let currentNetwork = $derived.by(() => {
@@ -34,16 +36,17 @@
 
 <StepContent>
 	<StepContentHeader
-		title="Select Tokens"
-		description="Choose which tokens you want to sweep from your addresses on {currentNetwork?.name ||
-			'this network'}"
+		title={i18n.t('tools.token_sweep.step3.content.title')}
+		description={currentNetwork?.name
+			? i18n.t('tools.token_sweep.step3.content.description', { network: currentNetwork.name })
+			: i18n.t('tools.token_sweep.step3.content.description_fallback')}
 	></StepContentHeader>
 
 	{#if !connectStore.isConnected}
 		<EmptyState
 			icon="🔌"
-			title="Wallet Not Connected"
-			message="Please go back to Step 1 and connect your wallet"
+			title={i18n.t('tools.token_sweep.step3.content.wallet_not_connected_title')}
+			message={i18n.t('tools.token_sweep.step3.content.wallet_not_connected_message')}
 		/>
 	{:else if currentNetwork && connectStore.currentChainId}
 		{@const rpcUrl = currentNetwork.rpcEndpoints?.[0]?.url || ''}
@@ -59,7 +62,7 @@
 				bind:selectedTokenIds={step3State.selectedTokenIds}
 				onTokenAdded={handleTokenAdded}
 				onRemoveCustomToken={handleRemoveCustomToken}
-				emptyMessage="No tokens available. Add a custom token to get started."
+				emptyMessage={i18n.t('tools.token_sweep.step3.content.empty_message')}
 				multiSelect={true}
 			/>
 		{/if}
