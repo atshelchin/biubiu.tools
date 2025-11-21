@@ -97,38 +97,41 @@
 	}
 
 	function handleToggle(tokenId: string) {
+		const newSelection = new SvelteSet(selectedTokenIds);
+
 		if (multiSelect) {
 			// Multi-select mode: toggle selection
-			if (selectedTokenIds.has(tokenId)) {
-				selectedTokenIds.delete(tokenId);
+			if (newSelection.has(tokenId)) {
+				newSelection.delete(tokenId);
 			} else {
-				selectedTokenIds.add(tokenId);
+				newSelection.add(tokenId);
 			}
 		} else {
 			// Single-select mode: replace selection
-			selectedTokenIds.clear();
-			selectedTokenIds.add(tokenId);
+			newSelection.clear();
+			newSelection.add(tokenId);
 		}
 
+		selectedTokenIds = newSelection;
 		onSelectionChange?.(selectedTokenIds);
 	}
 
 	function handleSelectAll() {
 		const tokens = displayTokens();
+		const newSelection = new SvelteSet<string>();
 
-		// Clear and add all
-		selectedTokenIds.clear();
+		// Add all tokens
 		tokens.forEach((token) => {
-			selectedTokenIds.add(token.id);
+			newSelection.add(token.id);
 		});
 
+		selectedTokenIds = newSelection;
 		onSelectionChange?.(selectedTokenIds);
 	}
 
 	function handleDeselectAll() {
 		// Clear all selections
-		selectedTokenIds.clear();
-
+		selectedTokenIds = new SvelteSet<string>();
 		onSelectionChange?.(selectedTokenIds);
 	}
 
