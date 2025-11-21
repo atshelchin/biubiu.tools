@@ -3,6 +3,7 @@
 	import { CheckCircle2, Trash2, ExternalLink } from '@lucide/svelte';
 	import { slide } from 'svelte/transition';
 	import ConfirmDialog from '$lib/components/ui/confirm-dialog.svelte';
+	import TokenAvatar from '$lib/components/ui/token-avatar.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
 
 	interface Props {
@@ -43,12 +44,6 @@
 	function cancelRemove() {
 		showConfirmDialog = false;
 	}
-
-	function getTokenLogo(token: Token): string {
-		if (token.logoUrl) return token.logoUrl;
-		// Fallback to generic icon
-		return `https://ui-avatars.com/api/?name=${token.symbol}&background=random`;
-	}
 </script>
 
 <div
@@ -67,7 +62,7 @@
 >
 	<div class="token-card-content">
 		<div class="token-header">
-			<img src={getTokenLogo(token)} alt={token.symbol} class="token-logo" />
+			<TokenAvatar {token} size={36} />
 			<div class="token-info">
 				<h4>{token.symbol}</h4>
 				<p class="token-name">{token.name}</p>
@@ -80,17 +75,24 @@
 					? i18n.t('components.token_card.native')
 					: i18n.t('components.token_card.erc20')}</span
 			>
-			{#if token.type === 'erc20' && blockExplorer}
+			{#if token.type === 'erc20'}
 				{@const erc20Token = token as ERC20Token}
-				<a
-					href="{blockExplorer}/token/{erc20Token.address}"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="explorer-link"
-					onclick={(e) => e.stopPropagation()}
-				>
-					<ExternalLink size={14} />
-				</a>
+				<span class="token-detail" title={i18n.t('components.token_card.decimals_label')}>
+					{erc20Token.decimals}
+					{i18n.t('components.token_card.decimals_unit')}
+				</span>
+				{#if blockExplorer}
+					<a
+						href="{blockExplorer}/token/{erc20Token.address}"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="explorer-link"
+						onclick={(e) => e.stopPropagation()}
+						title={i18n.t('components.token_card.view_on_explorer')}
+					>
+						<ExternalLink size={14} />
+					</a>
+				{/if}
 			{/if}
 			{#if token.isCustom && onRemove}
 				<button
@@ -184,16 +186,19 @@
 		gap: var(--space-3);
 	}
 
-	.token-logo {
-		width: 36px;
-		height: 36px;
-		border-radius: 50%;
-		object-fit: cover;
+	.token-detail {
+		display: inline-block;
+		padding: 2px 8px;
 		background: var(--gray-100);
+		color: var(--gray-600);
+		font-size: var(--text-xs);
+		font-weight: var(--font-medium);
+		border-radius: var(--radius-sm);
 	}
 
-	:global([data-theme='dark']) .token-logo {
+	:global([data-theme='dark']) .token-detail {
 		background: var(--gray-700);
+		color: var(--gray-400);
 	}
 
 	.token-info {

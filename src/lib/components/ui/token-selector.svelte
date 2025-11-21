@@ -139,6 +139,10 @@
 		// Remove from unified localStorage
 		removeCustomToken(tokenId);
 	}
+
+	$effect(() => {
+		console.log({ selectedTokenIds });
+	});
 </script>
 
 {#if displayTokens().length === 0}

@@ -694,6 +694,9 @@
 		"token_card": {
 			"native": "Native",
 			"erc20": "ERC20",
+			"decimals_label": "Decimals",
+			"decimals_unit": "decimals",
+			"view_on_explorer": "View on block explorer",
 			"remove_custom_token": "Remove custom token",
 			"remove_dialog_title": "Remove Custom Token",
 			"remove_dialog_message": "Are you sure you want to remove {symbol} ({name})? This action cannot be undone.",

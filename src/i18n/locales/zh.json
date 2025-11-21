@@ -680,6 +680,9 @@
 		"token_card": {
 			"native": "原生代币",
 			"erc20": "ERC20",
+			"decimals_label": "精度",
+			"decimals_unit": "位",
+			"view_on_explorer": "在区块浏览器中查看",
 			"remove_custom_token": "删除自定义代币",
 			"remove_dialog_title": "删除自定义代币",
 			"remove_dialog_message": "确定要删除 {symbol}（{name}）吗？此操作无法撤销。",
