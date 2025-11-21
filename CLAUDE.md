@@ -190,6 +190,46 @@ Before committing any code changes:
 - [ ] All reactive collections use `SvelteMap`/`SvelteSet`
 - [ ] All interfaces are properly defined and exported
 
+### Git Commit Guidelines
+
+**IMPORTANT: Always write commit messages in English.**
+
+Follow conventional commits format:
+```
+<type>: <short description>
+
+<detailed description>
+
+<optional footer>
+```
+
+Common types:
+- `feat`: New feature
+- `fix`: Bug fix
+- `refactor`: Code refactoring
+- `docs`: Documentation changes
+- `style`: Code style changes (formatting, etc.)
+- `test`: Test additions or changes
+- `chore`: Build process or auxiliary tool changes
+
+Example:
+```bash
+git commit -m "refactor: create reusable StepContent component
+
+Created a new StepContent component to centralize step content styling,
+avoiding repetitive style definitions across step files.
+
+Changes:
+- Add src/lib/components/step/step-content.svelte component
+- Use Svelte 5 snippet feature for content slot
+- Update all step files to use new component
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+Co-Authored-By: Claude <noreply@anthropic.com>
+"
+```
+
 ### When Adding New Features
 
 1. Define types first in the appropriate `types.ts` file
