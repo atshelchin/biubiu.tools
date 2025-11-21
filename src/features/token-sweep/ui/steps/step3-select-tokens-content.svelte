@@ -24,7 +24,7 @@
 	function handleTokenAdded(tokenId: string) {
 		// Auto-select the newly added token
 		step3State.selectedTokenIds.add(tokenId);
-		// Trigger reactivity by creating new Set
+		// Trigger reactivity by creating new SvelteSet
 		step3State.selectedTokenIds = new SvelteSet(step3State.selectedTokenIds);
 	}
 

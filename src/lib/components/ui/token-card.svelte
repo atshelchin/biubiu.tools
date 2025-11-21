@@ -184,13 +184,18 @@
 	}
 
 	.token-card.selected {
-		border-color: var(--color-primary);
+		/* border-color: var(--color-primary);
 		background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(37, 99, 235, 0.05) 100%);
-		box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+		box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); */
+
+		background: hsla(var(--brand-hue), var(--brand-saturation), 50%, 0.1);
+		border-color: var(--color-primary);
+		border-width: 2px;
 	}
 
 	:global([data-theme='dark']) .token-card.selected {
-		background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%);
+		background: hsla(var(--brand-hue), var(--brand-saturation), 60%, 0.15);
+		/* background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%); */
 	}
 
 	.token-card-content {

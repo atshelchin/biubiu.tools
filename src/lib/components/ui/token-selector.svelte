@@ -91,11 +91,6 @@
 		return allTokens;
 	});
 
-	// Helper to check if token is selected (reactive)
-	function isTokenSelected(tokenId: string): boolean {
-		return selectedTokenIds.has(tokenId);
-	}
-
 	function handleToggle(tokenId: string) {
 		const newSelection = new SvelteSet(selectedTokenIds);
 
@@ -165,7 +160,7 @@
 		{#each displayTokens() as token (token.id)}
 			<TokenCard
 				{token}
-				isSelected={isTokenSelected(token.id)}
+				isSelected={selectedTokenIds.has(token.id)}
 				blockExplorer={network.blockExplorer}
 				onToggle={handleToggle}
 				onRemove={onRemoveCustomToken ? handleRemove : undefined}
