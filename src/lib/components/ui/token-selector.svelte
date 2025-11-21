@@ -18,8 +18,8 @@
 
 	interface Props {
 		network: NetworkInfo; // Network info (required)
-		selectedTokenIds?: SvelteSet<string>; // Bindable - external selection state
-		onSelectionChange?: (selectedIds: SvelteSet<string>) => void; // Callback when selection changes
+		selectedTokenIds: SvelteSet<string>; // External selection state (read-only)
+		onSelectionChange: (selectedIds: SvelteSet<string>) => void; // Required callback
 		onTokenAdded?: (tokenId: string) => void; // Callback when token is added
 		onRemoveCustomToken?: (tokenId: string, chainId: number) => void;
 		emptyMessage?: string;
@@ -30,7 +30,7 @@
 
 	let {
 		network,
-		selectedTokenIds = $bindable(new SvelteSet<string>()),
+		selectedTokenIds,
 		onSelectionChange,
 		onTokenAdded,
 		onRemoveCustomToken,
@@ -112,8 +112,7 @@
 			newSelection.add(tokenId);
 		}
 
-		selectedTokenIds = newSelection;
-		onSelectionChange?.(selectedTokenIds);
+		onSelectionChange(newSelection);
 	}
 
 	function handleSelectAll() {
@@ -125,14 +124,13 @@
 			newSelection.add(token.id);
 		});
 
-		selectedTokenIds = newSelection;
-		onSelectionChange?.(selectedTokenIds);
+		onSelectionChange(newSelection);
 	}
 
 	function handleDeselectAll() {
 		// Clear all selections
-		selectedTokenIds = new SvelteSet<string>();
-		onSelectionChange?.(selectedTokenIds);
+		const newSelection = new SvelteSet<string>();
+		onSelectionChange(newSelection);
 	}
 
 	function handleRemove(tokenId: string, chainId: number) {

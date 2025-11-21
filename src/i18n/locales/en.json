@@ -703,6 +703,30 @@
 			"empty_message": "No tokens available",
 			"select_all": "Select All",
 			"deselect_all": "Deselect All"
+		},
+		"add_token_button": {
+			"button_text": "Add Token",
+			"button_subtext": "Add custom ERC20 token"
+		},
+		"add_token_modal": {
+			"title": "Add Custom Token",
+			"token_address_label": "Token Address",
+			"token_symbol_label": "Symbol",
+			"token_name_label": "Name",
+			"decimals_label": "Decimals",
+			"fetching": "Fetching...",
+			"found": "Found",
+			"not_found": "Not Found",
+			"auto_filled": "Auto-filled from blockchain",
+			"address_placeholder": "0x...",
+			"symbol_placeholder": "e.g., USDT",
+			"name_placeholder": "e.g., Tether USD",
+			"address_hint": "The contract address of the ERC20 token",
+			"decimals_hint": "Token decimals (usually 18)",
+			"error_label": "Error:",
+			"success_message": "Token added successfully!",
+			"add_token_button": "Add Token",
+			"adding_button": "Adding..."
 		}
 	}
 }

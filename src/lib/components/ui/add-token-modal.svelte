@@ -7,6 +7,7 @@
 	import { scale, fade } from 'svelte/transition';
 	import { Loader2, CheckCircle2, AlertCircle } from '@lucide/svelte';
 	import { SvelteSet } from 'svelte/reactivity';
+	import { useI18n } from '@shelchin/i18n/svelte';
 
 	interface Props {
 		open: boolean;
@@ -17,6 +18,8 @@
 	}
 
 	let { open = $bindable(false), chainId, rpcUrl, onClose, onTokenAdded }: Props = $props();
+
+	const i18n = useI18n();
 
 	// Form state
 	let newTokenAddress = $state('');
@@ -246,55 +249,60 @@
 	}
 </script>
 
-<Modal {open} onClose={handleCancel} title="Add Custom Token" maxWidth="500px">
+<Modal
+	{open}
+	onClose={handleCancel}
+	title={i18n.t('components.add_token_modal.title')}
+	maxWidth="500px"
+>
 	<div class="form-container">
 		<!-- Token Address Input with Status Indicator -->
 		<div class="form-group">
 			<label for="token-address">
-				Token Address
+				{i18n.t('components.add_token_modal.token_address_label')}
 				{#if isFetchingInfo}
 					<span class="status-badge loading" transition:scale={{ duration: 500, start: 0.8 }}>
 						<Loader2 size={12} class="spin" />
-						Fetching...
+						{i18n.t('components.add_token_modal.fetching')}
 					</span>
 				{:else if fetchStatus === 'success'}
 					<span class="status-badge success" transition:scale={{ duration: 500, start: 0.8 }}>
 						<CheckCircle2 size={12} />
-						Found!
+						{i18n.t('components.add_token_modal.found')}
 					</span>
 				{:else if fetchStatus === 'error'}
 					<span class="status-badge error" transition:scale={{ duration: 500, start: 0.8 }}>
 						<AlertCircle size={12} />
-						Not found
+						{i18n.t('components.add_token_modal.not_found')}
 					</span>
 				{/if}
 			</label>
 			<input
 				id="token-address"
 				type="text"
-				placeholder="0x... "
+				placeholder={i18n.t('components.add_token_modal.address_placeholder')}
 				bind:value={newTokenAddress}
 				class="form-input"
 				class:loading={isFetchingInfo}
 				disabled={isAddingToken}
 			/>
-			<p class="input-hint">Enter the contract address of the ERC-20 token</p>
+			<p class="input-hint">{i18n.t('components.add_token_modal.address_hint')}</p>
 		</div>
 
 		<!-- Token Symbol -->
 		<div class="form-group">
 			<label for="token-symbol">
-				Token Symbol
+				{i18n.t('components.add_token_modal.token_symbol_label')}
 				{#if fetchedFields.has('symbol')}
 					<span class="auto-filled" transition:scale={{ duration: 200, start: 0.8 }}
-						>Auto-filled</span
+						>{i18n.t('components.add_token_modal.auto_filled')}</span
 					>
 				{/if}
 			</label>
 			<input
 				id="token-symbol"
 				type="text"
-				placeholder="e.g. USDT"
+				placeholder={i18n.t('components.add_token_modal.symbol_placeholder')}
 				bind:value={newTokenSymbol}
 				class="form-input"
 				class:auto-filled={fetchedFields.has('symbol')}
@@ -305,17 +313,17 @@
 		<!-- Token Name -->
 		<div class="form-group">
 			<label for="token-name">
-				Token Name
+				{i18n.t('components.add_token_modal.token_name_label')}
 				{#if fetchedFields.has('name')}
 					<span class="auto-filled" transition:scale={{ duration: 200, start: 0.8 }}
-						>Auto-filled</span
+						>{i18n.t('components.add_token_modal.auto_filled')}</span
 					>
 				{/if}
 			</label>
 			<input
 				id="token-name"
 				type="text"
-				placeholder="e.g. Tether USD"
+				placeholder={i18n.t('components.add_token_modal.name_placeholder')}
 				bind:value={newTokenName}
 				class="form-input"
 				class:auto-filled={fetchedFields.has('name')}
@@ -326,10 +334,10 @@
 		<!-- Token Decimals -->
 		<div class="form-group">
 			<label for="token-decimals">
-				Decimals
+				{i18n.t('components.add_token_modal.decimals_label')}
 				{#if fetchedFields.has('decimals')}
 					<span class="auto-filled" transition:scale={{ duration: 200, start: 0.8 }}
-						>Auto-filled</span
+						>{i18n.t('components.add_token_modal.auto_filled')}</span
 					>
 				{/if}
 			</label>
@@ -343,7 +351,7 @@
 				class:auto-filled={fetchedFields.has('decimals')}
 				disabled={isAddingToken || isFetchingInfo}
 			/>
-			<p class="input-hint">Usually 18 for most ERC-20 tokens</p>
+			<p class="input-hint">{i18n.t('components.add_token_modal.decimals_hint')}</p>
 		</div>
 
 		<!-- Error/Info Messages -->
@@ -351,7 +359,7 @@
 			<div class="message error" transition:fade={{ duration: 200 }}>
 				<AlertCircle size={16} />
 				<div>
-					<strong>Error:</strong>
+					<strong>{i18n.t('components.add_token_modal.error_label')}</strong>
 					{errorMessage}
 				</div>
 			</div>
@@ -361,7 +369,7 @@
 			<div class="message success" transition:fade={{ duration: 200 }}>
 				<CheckCircle2 size={16} />
 				<div>
-					<strong>Success!</strong> Token information fetched successfully. Please review and confirm.
+					{i18n.t('components.add_token_modal.success_message')}
 				</div>
 			</div>
 		{/if}
@@ -374,7 +382,7 @@
 				onclick={handleCancel}
 				disabled={isAddingToken || isFetchingInfo}
 			>
-				Cancel
+				{i18n.t('common.cancel')}
 			</button>
 			<button
 				class="btn-primary"
@@ -388,9 +396,9 @@
 			>
 				{#if isAddingToken}
 					<Loader2 size={16} class="spin" />
-					Adding...
+					{i18n.t('components.add_token_modal.adding_button')}
 				{:else}
-					Add Token
+					{i18n.t('components.add_token_modal.add_token_button')}
 				{/if}
 			</button>
 		</div>

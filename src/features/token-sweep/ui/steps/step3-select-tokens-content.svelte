@@ -17,19 +17,23 @@
 		return connectStore.networks.find((n) => n.chainId === connectStore.currentChainId);
 	});
 
+	function handleSelectionChange(newSelection: SvelteSet<string>) {
+		step3State.selectedTokenIds = newSelection;
+	}
+
 	function handleTokenAdded(tokenId: string) {
 		// Auto-select the newly added token
-		const newSelection = new SvelteSet(step3State.selectedTokenIds);
-		newSelection.add(tokenId);
-		step3State.selectedTokenIds = newSelection;
+		step3State.selectedTokenIds.add(tokenId);
+		// Trigger reactivity by creating new Set
+		step3State.selectedTokenIds = new SvelteSet(step3State.selectedTokenIds);
 	}
 
 	function handleRemoveCustomToken(tokenId: string) {
 		// Remove from selection if it was selected
 		if (step3State.selectedTokenIds.has(tokenId)) {
-			const newSelection = new SvelteSet(step3State.selectedTokenIds);
-			newSelection.delete(tokenId);
-			step3State.selectedTokenIds = newSelection;
+			step3State.selectedTokenIds.delete(tokenId);
+			// Trigger reactivity
+			step3State.selectedTokenIds = new SvelteSet(step3State.selectedTokenIds);
 		}
 	}
 </script>
@@ -59,7 +63,8 @@
 					rpcUrl,
 					blockExplorer: currentNetwork.blockExplorer
 				}}
-				bind:selectedTokenIds={step3State.selectedTokenIds}
+				selectedTokenIds={step3State.selectedTokenIds}
+				onSelectionChange={handleSelectionChange}
 				onTokenAdded={handleTokenAdded}
 				onRemoveCustomToken={handleRemoveCustomToken}
 				emptyMessage={i18n.t('tools.token_sweep.step3.content.empty_message')}

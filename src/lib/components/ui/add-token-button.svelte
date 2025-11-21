@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Plus } from '@lucide/svelte';
 	import AddTokenModal from '$lib/components/ui/add-token-modal.svelte';
+	import { useI18n } from '@shelchin/i18n/svelte';
 
 	interface Props {
 		chainId: number;
@@ -10,13 +11,9 @@
 		buttonSubtext?: string;
 	}
 
-	let {
-		chainId,
-		rpcUrl,
-		onTokenAdded,
-		buttonText = 'Add Custom Token',
-		buttonSubtext = 'Import ERC-20 token'
-	}: Props = $props();
+	let { chainId, rpcUrl, onTokenAdded, buttonText, buttonSubtext }: Props = $props();
+
+	const i18n = useI18n();
 
 	let showModal = $state(false);
 
@@ -40,8 +37,12 @@
 		<Plus size={32} />
 	</div>
 	<div class="add-token-info">
-		<div class="add-token-title">{buttonText}</div>
-		<div class="add-token-subtitle">{buttonSubtext}</div>
+		<div class="add-token-title">
+			{buttonText ?? i18n.t('components.add_token_button.button_text')}
+		</div>
+		<div class="add-token-subtitle">
+			{buttonSubtext ?? i18n.t('components.add_token_button.button_subtext')}
+		</div>
 	</div>
 </button>
 

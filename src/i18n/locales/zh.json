@@ -689,6 +689,30 @@
 			"empty_message": "暂无可用代币",
 			"select_all": "全选",
 			"deselect_all": "取消全选"
+		},
+		"add_token_button": {
+			"button_text": "添加代币",
+			"button_subtext": "添加自定义 ERC20 代币"
+		},
+		"add_token_modal": {
+			"title": "添加自定义代币",
+			"token_address_label": "代币地址",
+			"token_symbol_label": "符号",
+			"token_name_label": "名称",
+			"decimals_label": "精度",
+			"fetching": "获取中...",
+			"found": "已找到",
+			"not_found": "未找到",
+			"auto_filled": "已从区块链自动填充",
+			"address_placeholder": "0x...",
+			"symbol_placeholder": "例如：USDT",
+			"name_placeholder": "例如：Tether USD",
+			"address_hint": "ERC20 代币的合约地址",
+			"decimals_hint": "代币精度（通常为 18）",
+			"error_label": "错误：",
+			"success_message": "代币添加成功！",
+			"add_token_button": "添加代币",
+			"adding_button": "添加中..."
 		}
 	}
 }
