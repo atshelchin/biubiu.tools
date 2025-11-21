@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { useI18n } from '@shelchin/i18n/svelte';
 	import { Loader2 } from '@lucide/svelte';
 
 	interface Props {
@@ -12,15 +13,16 @@
 
 	let { isEstimating, showEstimate, isExecuting, canExecute, onEstimate, onExecute }: Props =
 		$props();
+	const i18n = useI18n();
 </script>
 
 <div class="action-buttons">
 	<button class="btn-secondary" onclick={onEstimate} disabled={isEstimating}>
 		{#if isEstimating}
 			<Loader2 size={18} class="spinning" />
-			Estimating...
+			{i18n.t('tools.token_sweep.step5.content.actions.estimating')}
 		{:else}
-			💰 Estimate Cost
+			{i18n.t('tools.token_sweep.step5.content.actions.estimate_cost')}
 		{/if}
 	</button>
 
@@ -28,9 +30,9 @@
 		<button class="btn-execute" onclick={onExecute} disabled={!canExecute || isExecuting}>
 			{#if isExecuting}
 				<Loader2 size={18} class="spinning" />
-				Executing...
+				{i18n.t('tools.token_sweep.step5.content.actions.executing')}
 			{:else}
-				⚡ Execute Sweep
+				{i18n.t('tools.token_sweep.step5.content.actions.execute_sweep')}
 			{/if}
 		</button>
 	{/if}

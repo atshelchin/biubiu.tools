@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { useI18n } from '@shelchin/i18n/svelte';
 	import { step3State } from '@/features/token-sweep/stores/step3-state.svelte';
 	import { step4State } from '@/features/token-sweep/stores/step4-state.svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
@@ -33,11 +34,13 @@
 	} from '@/features/token-sweep/types/fee';
 	import { createPublicClient, http } from 'viem';
 	import type { Address, Hex } from 'viem';
-	import { AlertCircle, CheckCircle2, Loader2 } from '@lucide/svelte';
-	import { fade, slide } from 'svelte/transition';
+	import { AlertCircle, CheckCircle2 } from '@lucide/svelte';
+	import { fade } from 'svelte/transition';
 	import type { Token, NativeToken, ERC20Token } from '$lib/types/token';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
+
+	const i18n = useI18n();
 
 	// State
 	let targetAddress = $state('');
@@ -155,7 +158,7 @@
 
 	async function handleEstimateSweep() {
 		if (!connectStore.currentChainId) {
-			errorMessage = 'No network connected';
+			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.no_network');
 			return;
 		}
 
@@ -181,7 +184,7 @@
 		// Get RPC
 		const network = connectStore.networks.find((n) => n.chainId === connectStore.currentChainId);
 		if (!network || network.rpcEndpoints.length === 0) {
-			errorMessage = 'No RPC endpoint available';
+			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.no_rpc');
 			return;
 		}
 
@@ -211,32 +214,32 @@
 
 	async function handleExecuteSweep() {
 		if (!isValid) {
-			errorMessage = 'Please complete all required fields';
+			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.complete_fields');
 			return;
 		}
 
 		if (!targetAddress.match(/^0x[a-fA-F0-9]{40}$/)) {
-			errorMessage = 'Invalid target address';
+			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.invalid_address');
 			return;
 		}
 
 		if (selectedTokenCount === 0) {
-			errorMessage = 'Please select at least one token in Step 3';
+			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.select_tokens');
 			return;
 		}
 
 		if (walletCount === 0) {
-			errorMessage = 'Please import at least one wallet in Step 4';
+			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.import_wallets');
 			return;
 		}
 
 		if (!connectStore.address) {
-			errorMessage = 'Please connect your wallet first';
+			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.connect_wallet');
 			return;
 		}
 
 		if (!connectStore.currentChainId) {
-			errorMessage = 'No network connected';
+			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.no_network');
 			return;
 		}
 
@@ -245,7 +248,7 @@
 		const sweepWalletCount = walletsToSweep.length;
 
 		if (onlyWithBalance && sweepWalletCount === 0) {
-			errorMessage = 'No wallets with balance to sweep. Please scan balances first in Step 4.';
+			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.no_balance');
 			return;
 		}
 
@@ -382,7 +385,7 @@
 		// Get RPC
 		const network = connectStore.networks.find((n) => n.chainId === connectStore.currentChainId);
 		if (!network || network.rpcEndpoints.length === 0) {
-			errorMessage = 'No RPC endpoint available';
+			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.no_rpc');
 			return;
 		}
 
@@ -523,13 +526,17 @@
 
 <StepContent>
 	<StepContentHeader
-		title="Confirm Sweep"
-		description="Review your configuration and execute the asset sweep"
+		title={i18n.t('tools.token_sweep.step5.content.title')}
+		description={i18n.t('tools.token_sweep.step5.content.description')}
 	/>
 
 	<!-- 1. Selected Tokens Display (网络和token) -->
 	<div class="form-section">
-		<div class="form-label">Selected Network & Tokens ({selectedTokenCount})</div>
+		<div class="form-label">
+			{i18n.t('tools.token_sweep.step5.content.selected_network_tokens', {
+				count: selectedTokenCount
+			})}
+		</div>
 		{#if currentNetwork}
 			<div class="network-info">
 				<span class="network-name">{currentNetwork.name}</span>
@@ -585,8 +592,8 @@
 	<div class="warning-card">
 		<CheckCircle2 size={20} />
 		<div>
-			<strong>Ready to execute</strong>
-			<p>Please review all information carefully before proceeding.</p>
+			<strong>{i18n.t('tools.token_sweep.step5.content.ready_to_execute')}</strong>
+			<p>{i18n.t('tools.token_sweep.step5.content.review_carefully')}</p>
 		</div>
 	</div>
 

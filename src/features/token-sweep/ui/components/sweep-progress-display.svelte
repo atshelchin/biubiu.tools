@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { useI18n } from '@shelchin/i18n/svelte';
 	import type { SweepProgress } from '@/features/token-sweep/utils/sweep-executor';
 	import { CheckCircle2, AlertCircle } from '@lucide/svelte';
 	import { slide } from 'svelte/transition';
@@ -8,22 +9,23 @@
 	}
 
 	let { progress }: Props = $props();
+	const i18n = useI18n();
 </script>
 
 <div class="progress-card" transition:slide>
 	<h4>
 		{#if progress.phase === 'preparing'}
-			⏳ Preparing...
+			{i18n.t('tools.token_sweep.step5.content.progress.preparing')}
 		{:else if progress.phase === 'building'}
-			🔧 Building Transactions...
+			{i18n.t('tools.token_sweep.step5.content.progress.building')}
 		{:else if progress.phase === 'executing'}
-			⚡ Executing Sweep...
+			{i18n.t('tools.token_sweep.step5.content.progress.executing')}
 		{:else if progress.phase === 'confirming'}
-			⏰ Confirming Transactions...
+			{i18n.t('tools.token_sweep.step5.content.progress.confirming')}
 		{:else if progress.phase === 'completed'}
-			✅ Completed!
+			{i18n.t('tools.token_sweep.step5.content.progress.completed')}
 		{:else if progress.phase === 'error'}
-			❌ Error
+			{i18n.t('tools.token_sweep.step5.content.progress.error')}
 		{/if}
 	</h4>
 
@@ -34,14 +36,28 @@
 	</div>
 
 	<div class="progress-stats">
-		<span>Batch {progress.currentBatch} / {progress.totalBatches}</span>
-		<span>Wallet {progress.currentWallet} / {progress.totalWallets}</span>
+		<span
+			>{i18n.t('tools.token_sweep.step5.content.progress.batch', {
+				current: progress.currentBatch,
+				total: progress.totalBatches
+			})}</span
+		>
+		<span
+			>{i18n.t('tools.token_sweep.step5.content.progress.wallet', {
+				current: progress.currentWallet,
+				total: progress.totalWallets
+			})}</span
+		>
 		<span>{progress.percentage}%</span>
 	</div>
 
 	{#if progress.results.length > 0}
 		<div class="progress-results">
-			<h5>Results ({progress.results.length}):</h5>
+			<h5>
+				{i18n.t('tools.token_sweep.step5.content.progress.results', {
+					count: progress.results.length
+				})}
+			</h5>
 			<div class="results-list">
 				{#each progress.results.slice(-5) as result (result.wallet + result.tokenSymbol)}
 					<div class="result-item" class:success={result.success} class:error={!result.success}>

@@ -236,6 +236,48 @@
 				}
 			},
 			"step5": {
+				"content": {
+					"title": "确认归集",
+					"description": "检查您的配置并执行资产归集",
+					"selected_network_tokens": "已选网络和代币（{count}）",
+					"ready_to_execute": "准备执行",
+					"review_carefully": "请在继续之前仔细检查所有信息。",
+					"progress": {
+						"preparing": "⏳ 准备中...",
+						"building": "🔧 构建交易中...",
+						"executing": "⚡ 执行归集中...",
+						"confirming": "⏰ 确认交易中...",
+						"completed": "✅ 已完成！",
+						"error": "❌ 错误",
+						"batch": "批次 {current} / {total}",
+						"wallet": "钱包 {current} / {total}",
+						"results": "结果（{count}）："
+					},
+					"estimate": {
+						"title": "📊 成本估算",
+						"total_transactions": "总交易数：",
+						"estimated_gas": "预估 Gas：",
+						"estimated_cost": "预估费用：",
+						"gas_units": "{amount} 单位",
+						"cost_eth": "{amount} ETH"
+					},
+					"actions": {
+						"estimate_cost": "💰 估算成本",
+						"estimating": "估算中...",
+						"execute_sweep": "⚡ 执行归集",
+						"executing": "执行中..."
+					},
+					"errors": {
+						"no_network": "未连接网络",
+						"no_rpc": "无可用的 RPC 端点",
+						"complete_fields": "请完成所有必填字段",
+						"invalid_address": "无效的目标地址",
+						"select_tokens": "请在步骤 3 中选择至少一个代币",
+						"import_wallets": "请在步骤 4 中导入至少一个钱包",
+						"connect_wallet": "请先连接您的钱包",
+						"no_balance": "没有有余额的钱包可归集。请先在步骤 4 中扫描余额。"
+					}
+				},
 				"sidebar": {
 					"summary_title": "汇总",
 					"selected_tokens": "已选代币：",

@@ -236,6 +236,48 @@
 				}
 			},
 			"step5": {
+				"content": {
+					"title": "Confirm Sweep",
+					"description": "Review your configuration and execute the asset sweep",
+					"selected_network_tokens": "Selected Network & Tokens ({count})",
+					"ready_to_execute": "Ready to execute",
+					"review_carefully": "Please review all information carefully before proceeding.",
+					"progress": {
+						"preparing": "⏳ Preparing...",
+						"building": "🔧 Building Transactions...",
+						"executing": "⚡ Executing Sweep...",
+						"confirming": "⏰ Confirming Transactions...",
+						"completed": "✅ Completed!",
+						"error": "❌ Error",
+						"batch": "Batch {current} / {total}",
+						"wallet": "Wallet {current} / {total}",
+						"results": "Results ({count}):"
+					},
+					"estimate": {
+						"title": "📊 Cost Estimate",
+						"total_transactions": "Total Transactions:",
+						"estimated_gas": "Estimated Gas:",
+						"estimated_cost": "Estimated Cost:",
+						"gas_units": "{amount} units",
+						"cost_eth": "{amount} ETH"
+					},
+					"actions": {
+						"estimate_cost": "💰 Estimate Cost",
+						"estimating": "Estimating...",
+						"execute_sweep": "⚡ Execute Sweep",
+						"executing": "Executing..."
+					},
+					"errors": {
+						"no_network": "No network connected",
+						"no_rpc": "No RPC endpoint available",
+						"complete_fields": "Please complete all required fields",
+						"invalid_address": "Invalid target address",
+						"select_tokens": "Please select at least one token in Step 3",
+						"import_wallets": "Please import at least one wallet in Step 4",
+						"connect_wallet": "Please connect your wallet first",
+						"no_balance": "No wallets with balance to sweep. Please scan balances first in Step 4."
+					}
+				},
 				"sidebar": {
 					"summary_title": "Summary",
 					"selected_tokens": "Selected Tokens:",
