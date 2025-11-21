@@ -23,6 +23,22 @@
 			answer: i18n.t('tools.token_sweep.faqs.native_token_explanation')
 		},
 		{
+			question: i18n.t('tools.token_sweep.faqs.can_select_multiple_tokens'),
+			answer: i18n.t('tools.token_sweep.faqs.can_select_multiple_tokens_explanation')
+		},
+		{
+			question: i18n.t('tools.token_sweep.faqs.what_happens_zero_balance'),
+			answer: i18n.t('tools.token_sweep.faqs.what_happens_zero_balance_explanation')
+		},
+		{
+			question: i18n.t('tools.token_sweep.faqs.what_tokens_supported'),
+			answer: i18n.t('tools.token_sweep.faqs.what_tokens_supported_explanation')
+		},
+		{
+			question: i18n.t('tools.token_sweep.faqs.how_add_custom_token'),
+			answer: i18n.t('tools.token_sweep.faqs.how_add_custom_token_explanation')
+		},
+		{
 			question: i18n.t('tools.token_sweep.faqs.what_is_eip7702'),
 			answer: i18n.t('tools.token_sweep.faqs.eip7702_explanation')
 		},
