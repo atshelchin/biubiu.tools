@@ -234,6 +234,19 @@
 					"tip2": "⚡ 某钱包地址某代币余额为零时，自动跳过该归集操作 - 节约 gas 费用",
 					"tip3": "🪙 同时支持原生代币（ETH、BNB 等）和 ERC-20 代币"
 				}
+			},
+			"step4": {
+				"footer": {
+					"continue_text": "继续确认",
+					"hint": "请至少导入一个钱包以继续"
+				},
+				"sidebar": {
+					"title": "已导入钱包",
+					"total_label": "总数：",
+					"with_balance_label": "有余额：",
+					"scanning_label": "扫描中：",
+					"empty_hint": "未导入任何钱包"
+				}
 			}
 		},
 		"token_distribution": {

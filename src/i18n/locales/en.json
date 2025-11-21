@@ -234,6 +234,19 @@
 					"tip2": "⚡ Wallets with zero balance for a token will be automatically skipped - saving gas costs",
 					"tip3": "🪙 Supports both native tokens (ETH, BNB, etc.) and ERC-20 tokens"
 				}
+			},
+			"step4": {
+				"footer": {
+					"continue_text": "Continue to Confirm",
+					"hint": "Please import at least one wallet to continue"
+				},
+				"sidebar": {
+					"title": "Imported Wallets",
+					"total_label": "Total:",
+					"with_balance_label": "With Balance:",
+					"scanning_label": "Scanning:",
+					"empty_hint": "No wallets imported"
+				}
 			}
 		},
 		"token_distribution": {
