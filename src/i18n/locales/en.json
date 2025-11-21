@@ -235,6 +235,15 @@
 					"tip3": "🪙 Supports both native tokens (ETH, BNB, etc.) and ERC-20 tokens"
 				}
 			},
+			"step5": {
+				"sidebar": {
+					"summary_title": "Summary",
+					"selected_tokens": "Selected Tokens:",
+					"total_wallets": "Total Wallets:",
+					"with_balance": "With Balance:",
+					"batches": "Batches:"
+				}
+			},
 			"step4": {
 				"content": {
 					"title": "Import Wallets",

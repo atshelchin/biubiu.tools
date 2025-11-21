@@ -235,6 +235,15 @@
 					"tip3": "🪙 同时支持原生代币（ETH、BNB 等）和 ERC-20 代币"
 				}
 			},
+			"step5": {
+				"sidebar": {
+					"summary_title": "汇总",
+					"selected_tokens": "已选代币：",
+					"total_wallets": "总钱包数：",
+					"with_balance": "有余额：",
+					"batches": "批次数："
+				}
+			},
 			"step4": {
 				"content": {
 					"title": "导入钱包",

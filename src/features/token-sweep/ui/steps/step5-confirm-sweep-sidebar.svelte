@@ -5,7 +5,9 @@
 	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
 	import StepSummary from '@/features/token-sweep/ui/components/step-summary.svelte';
 	import MembershipPromo from '@/features/token-sweep/ui/components/membership-promo.svelte';
+	import { useI18n } from '@shelchin/i18n/svelte';
 
+	const i18n = useI18n();
 	const connectStore = useConnectStore();
 
 	// Derived from Step 3 (selected tokens)
@@ -27,23 +29,23 @@
 </script>
 
 <StepSidebar stepNumber={5} title="" description="">
-	<StepSummary title="Summary">
+	<StepSummary title={i18n.t('tools.token_sweep.step5.sidebar.summary_title')}>
 		<div class="summary-item">
-			<span>Selected Tokens:</span>
+			<span>{i18n.t('tools.token_sweep.step5.sidebar.selected_tokens')}</span>
 			<strong>{selectedTokenCount}</strong>
 		</div>
 		<div class="summary-item">
-			<span>Total Wallets:</span>
+			<span>{i18n.t('tools.token_sweep.step5.sidebar.total_wallets')}</span>
 			<strong>{walletCount}</strong>
 		</div>
 		{#if hasScanned}
 			<div class="summary-item">
-				<span>With Balance:</span>
+				<span>{i18n.t('tools.token_sweep.step5.sidebar.with_balance')}</span>
 				<strong class="balance-highlight">{walletWithBalanceCount}</strong>
 			</div>
 		{/if}
 		<div class="summary-item">
-			<span>Batches:</span>
+			<span>{i18n.t('tools.token_sweep.step5.sidebar.batches')}</span>
 			<strong>{batchCount}</strong>
 		</div>
 	</StepSummary>
