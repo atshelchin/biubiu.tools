@@ -668,6 +668,7 @@
 		"next": "Next",
 		"finish": "Finish",
 		"done": "Done",
+		"cancel": "Cancel",
 		"optional": "Optional",
 		"chars_left": "characters left",
 		"name": "Name",
@@ -688,5 +689,20 @@
 		"total_checks": "Total Checks",
 		"passed": "Passed",
 		"failed": "Failed"
+	},
+	"components": {
+		"token_card": {
+			"native": "Native",
+			"erc20": "ERC20",
+			"remove_custom_token": "Remove custom token",
+			"remove_dialog_title": "Remove Custom Token",
+			"remove_dialog_message": "Are you sure you want to remove {symbol} ({name})? This action cannot be undone.",
+			"remove_button": "Remove Token"
+		},
+		"token_selector": {
+			"empty_message": "No tokens available",
+			"select_all": "Select All",
+			"deselect_all": "Deselect All"
+		}
 	}
 }

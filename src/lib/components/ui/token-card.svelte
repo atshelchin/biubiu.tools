@@ -3,6 +3,7 @@
 	import { CheckCircle2, Trash2, ExternalLink } from '@lucide/svelte';
 	import { slide } from 'svelte/transition';
 	import ConfirmDialog from '$lib/components/ui/confirm-dialog.svelte';
+	import { useI18n } from '@shelchin/i18n/svelte';
 
 	interface Props {
 		token: Token;
@@ -22,6 +23,7 @@
 		showCheckmark = true
 	}: Props = $props();
 
+	const i18n = useI18n();
 	let showConfirmDialog = $state(false);
 
 	function handleToggle() {
@@ -35,10 +37,11 @@
 
 	function confirmRemove() {
 		onRemove?.(token.id, token.chainId);
+		showConfirmDialog = false;
 	}
 
 	function cancelRemove() {
-		// Just close the dialog
+		showConfirmDialog = false;
 	}
 
 	function getTokenLogo(token: Token): string {
@@ -72,7 +75,11 @@
 		</div>
 
 		<div class="token-meta">
-			<span class="token-type">{token.type === 'native' ? 'Native' : 'ERC20'}</span>
+			<span class="token-type"
+				>{token.type === 'native'
+					? i18n.t('components.token_card.native')
+					: i18n.t('components.token_card.erc20')}</span
+			>
 			{#if token.type === 'erc20' && blockExplorer}
 				{@const erc20Token = token as ERC20Token}
 				<a
@@ -86,7 +93,11 @@
 				</a>
 			{/if}
 			{#if token.isCustom && onRemove}
-				<button class="remove-btn" onclick={handleRemove} title="Remove custom token">
+				<button
+					class="remove-btn"
+					onclick={handleRemove}
+					title={i18n.t('components.token_card.remove_custom_token')}
+				>
 					<Trash2 size={14} />
 				</button>
 			{/if}
@@ -106,11 +117,15 @@
 
 <ConfirmDialog
 	bind:open={showConfirmDialog}
-	title="Remove Custom Token"
-	message="Are you sure you want to remove {token.symbol} ({token.name})? This action cannot be undone."
-	confirmText="Remove Token"
+	title={i18n.t('components.token_card.remove_dialog_title')}
+	message={i18n.t('components.token_card.remove_dialog_message', {
+		symbol: token.symbol,
+		name: token.name
+	})}
+	confirmText={i18n.t('components.token_card.remove_button')}
+	cancelText={i18n.t('common.cancel')}
 	variant="danger"
-	requireLongPress={true}
+	requireLongPress={false}
 	longPressDuration={3000}
 	onConfirm={confirmRemove}
 	onCancel={cancelRemove}

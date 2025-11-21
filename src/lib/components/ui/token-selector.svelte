@@ -6,6 +6,7 @@
 	import AddTokenButton from '$lib/components/ui/add-token-button.svelte';
 	import TokenCard from '$lib/components/ui/token-card.svelte';
 	import { onMount } from 'svelte';
+	import { useI18n } from '@shelchin/i18n/svelte';
 
 	interface NetworkInfo {
 		chainId: number;
@@ -33,11 +34,13 @@
 		onSelectionChange,
 		onTokenAdded,
 		onRemoveCustomToken,
-		emptyMessage = 'No tokens available',
+		emptyMessage,
 		showBulkActions = true,
 		showAddButton = true,
 		multiSelect = true
 	}: Props = $props();
+
+	const i18n = useI18n();
 
 	// Force refresh when custom tokens change
 	let refreshTrigger = $state(0);
@@ -140,13 +143,17 @@
 {#if displayTokens().length === 0}
 	<div class="empty-state">
 		<div class="empty-icon">🪙</div>
-		<p>{emptyMessage}</p>
+		<p>{emptyMessage ?? i18n.t('components.token_selector.empty_message')}</p>
 	</div>
 {:else}
 	{#if showBulkActions}
 		<div class="bulk-actions">
-			<button class="btn-secondary" onclick={handleSelectAll}>Select All</button>
-			<button class="btn-secondary" onclick={handleDeselectAll}>Deselect All</button>
+			<button class="btn-secondary" onclick={handleSelectAll}
+				>{i18n.t('components.token_selector.select_all')}</button
+			>
+			<button class="btn-secondary" onclick={handleDeselectAll}
+				>{i18n.t('components.token_selector.deselect_all')}</button
+			>
 		</div>
 	{/if}
 	<div class="tokens-grid">
