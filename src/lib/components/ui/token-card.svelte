@@ -66,6 +66,12 @@
 			<div class="token-info">
 				<h4>{token.symbol}</h4>
 				<p class="token-name">{token.name}</p>
+				{#if token.type === 'erc20'}
+					{@const erc20Token = token as ERC20Token}
+					<p class="token-address" title={erc20Token.address}>
+						{erc20Token.address.slice(0, 6)}...{erc20Token.address.slice(-4)}
+					</p>
+				{/if}
 			</div>
 		</div>
 
@@ -224,6 +230,18 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		margin: 0;
+	}
+
+	.token-address {
+		font-size: var(--text-xs);
+		color: var(--gray-400);
+		font-family: var(--font-mono, 'Monaco', 'Courier New', monospace);
+		margin: var(--space-1) 0 0 0;
+		cursor: help;
+	}
+
+	:global([data-theme='dark']) .token-address {
+		color: var(--gray-500);
 	}
 
 	.token-meta {
