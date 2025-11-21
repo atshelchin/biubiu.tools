@@ -1,11 +1,15 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import { step4State } from '@/features/token-sweep/stores/step4-state.svelte';
+	import { step3State } from '@/features/token-sweep/stores/step3-state.svelte';
 	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
 	import StepSummary from '@/features/token-sweep/ui/components/step-summary.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useConnectStore } from '$lib/stores/connect.svelte';
+	import { SvelteMap } from 'svelte/reactivity';
 
 	const i18n = useI18n();
+	const connectStore = useConnectStore();
 
 	// Derived state
 	let importedWallets = $derived(step4State.importedWallets);
@@ -14,6 +18,69 @@
 	let isScanning = $derived(step4State.isScanning);
 	let scanProgress = $derived(step4State.scanProgress);
 	let hasScanned = $derived(step4State.hasScanned);
+
+	// Get selected tokens from step3
+	let selectedTokenIds = $derived(step3State.selectedTokenIds);
+
+	// Calculate token balance statistics
+	interface TokenStats {
+		tokenId: string;
+		symbol: string;
+		totalBalance: bigint;
+		addressCount: number;
+	}
+
+	let tokenStats = $derived.by(() => {
+		if (!hasScanned || walletCount === 0) return [];
+
+		// Get current network info to identify native token
+		const currentNetwork = connectStore.currentChainId
+			? connectStore.networks.find((n) => n.chainId === connectStore.currentChainId)
+			: null;
+
+		const stats = new SvelteMap<string, TokenStats>();
+
+		// Initialize stats for selected tokens
+		selectedTokenIds.forEach((tokenId) => {
+			const isNative = tokenId.endsWith(':native');
+			const symbol = isNative
+				? currentNetwork?.symbol || 'Native'
+				: tokenId.split(':')[1] || tokenId;
+
+			stats.set(tokenId, {
+				tokenId,
+				symbol,
+				totalBalance: 0n,
+				addressCount: 0
+			});
+		});
+
+		// Calculate balances for each wallet
+		importedWallets.forEach((wallet) => {
+			if (!wallet.balances) return;
+
+			selectedTokenIds.forEach((tokenId) => {
+				const isNative = tokenId.endsWith(':native');
+				let balance: string | undefined;
+
+				if (isNative) {
+					balance = wallet.balances?.native;
+				} else {
+					// Extract token address from tokenId (format: chainId:address)
+					const tokenAddress = tokenId.split(':')[1];
+					balance = wallet.balances?.tokens?.[tokenAddress];
+				}
+
+				if (balance && balance !== '0') {
+					const stat = stats.get(tokenId)!;
+					stat.totalBalance += BigInt(balance);
+					stat.addressCount += 1;
+				}
+			});
+		});
+
+		return Array.from(stats.values()).filter((s) => s.addressCount > 0);
+	});
 </script>
 
 <StepSidebar stepNumber={4} title="" description="">
@@ -37,6 +104,23 @@
 					</div>
 				{/if}
 			</StepSummary>
+
+			{#if tokenStats.length > 0}
+				<div class="token-stats" transition:fade>
+					<h4 class="token-stats-title">Token Balances</h4>
+					{#each tokenStats as stat (stat.tokenId)}
+						<div class="token-stat-item">
+							<div class="token-stat-header">
+								<span class="token-symbol">{stat.symbol}</span>
+								<span class="address-count">{stat.addressCount} addresses</span>
+							</div>
+							<div class="token-balance">
+								{(Number(stat.totalBalance) / 1e18).toFixed(4)}
+							</div>
+						</div>
+					{/each}
+				</div>
+			{/if}
 		</div>
 	{:else}
 		<p class="empty-hint">{i18n.t('tools.token_sweep.step4.sidebar.empty_hint')}</p>
@@ -54,5 +138,64 @@
 
 	.balance-count {
 		color: #10b981;
+	}
+
+	.token-stats {
+		margin-top: var(--space-4);
+		padding: var(--space-3);
+		background: var(--color-panel-2);
+		border-radius: var(--radius-md);
+		border: 1px solid var(--color-border);
+	}
+
+	:global([data-theme='dark']) .token-stats {
+		background: var(--gray-800);
+		border-color: var(--gray-700);
+	}
+
+	.token-stats-title {
+		font-size: var(--text-sm);
+		font-weight: var(--font-semibold);
+		color: var(--color-heading-2);
+		margin: 0 0 var(--space-3) 0;
+	}
+
+	.token-stat-item {
+		padding: var(--space-2) 0;
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.token-stat-item:last-child {
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+
+	.token-stat-item:first-child {
+		padding-top: 0;
+	}
+
+	.token-stat-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: var(--space-1);
+	}
+
+	.token-symbol {
+		font-weight: var(--font-semibold);
+		color: var(--color-heading-2);
+		font-size: var(--text-sm);
+	}
+
+	.address-count {
+		font-size: var(--text-xs);
+		color: var(--gray-500);
+	}
+
+	.token-balance {
+		font-size: var(--text-base);
+		font-weight: var(--font-medium);
+		color: #10b981;
+		font-family: var(--font-mono, 'Monaco', 'Courier New', monospace);
 	}
 </style>
