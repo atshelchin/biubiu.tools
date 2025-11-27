@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { useI18n } from '@shelchin/i18n/svelte';
+	import { Link, ExternalLink } from '@lucide/svelte';
 	import Modal from './modal.svelte';
 	import GradientButton from './gradient-button.svelte';
 	import CopyButton from './copy-button.svelte';
-	import { generateReferralUrl } from '$lib/utils/referral';
+	import { generateTrackingUrl, createShortLink } from '$lib/utils/shortlink';
 
 	const i18n = useI18n();
 
@@ -17,17 +18,74 @@
 
 	let { open, onClose, walletAddress, isConnected, onConnectWallet }: Props = $props();
 
-	const referralUrl = $derived(
-		walletAddress
-			? generateReferralUrl(walletAddress)
-			: typeof window !== 'undefined'
-				? window.location.href
-				: ''
+	// State for short link
+	let shortUrl = $state<string | null>(null);
+	let isGeneratingShortLink = $state(false);
+	let showFullUrl = $state(false);
+	let shortLinkFailed = $state(false); // Track if short link generation failed
+
+	// Generate full tracking URL with UTM parameters
+	const fullTrackingUrl = $derived(
+		walletAddress && typeof window !== 'undefined' ? generateTrackingUrl(walletAddress) : ''
 	);
+
+	// Display URL - either short or full
+	const displayUrl = $derived(shortUrl && !showFullUrl ? shortUrl : fullTrackingUrl);
+
+	// Generate short link when wallet connects (only if not previously failed)
+	$effect(() => {
+		if (
+			walletAddress &&
+			fullTrackingUrl &&
+			!shortUrl &&
+			!isGeneratingShortLink &&
+			!shortLinkFailed
+		) {
+			generateShortUrl();
+		}
+	});
+
+	async function generateShortUrl() {
+		if (!fullTrackingUrl || isGeneratingShortLink || shortLinkFailed) return;
+
+		isGeneratingShortLink = true;
+		try {
+			const result = await createShortLink(fullTrackingUrl);
+			if (result.success && result.shortUrl) {
+				shortUrl = result.shortUrl;
+				shortLinkFailed = false;
+			} else {
+				console.warn('Short link service unavailable, using full URL:', result.error);
+				// Mark as failed to prevent further retries
+				shortLinkFailed = true;
+				shortUrl = null;
+			}
+		} catch (error) {
+			console.warn('Short link generation failed, using full URL:', error);
+			// Mark as failed to prevent further retries
+			shortLinkFailed = true;
+			shortUrl = null;
+		} finally {
+			isGeneratingShortLink = false;
+		}
+	}
+
+	function toggleUrlDisplay() {
+		showFullUrl = !showFullUrl;
+	}
 
 	function handleConnect() {
 		onConnectWallet();
 	}
+
+	// Reset state when modal closes or wallet disconnects
+	$effect(() => {
+		if (!open || !walletAddress) {
+			shortUrl = null;
+			showFullUrl = false;
+			shortLinkFailed = false; // Reset failed state for next attempt
+		}
+	});
 </script>
 
 <Modal {open} {onClose} title={i18n.t('referral.title')} maxWidth="600px">
@@ -78,18 +136,53 @@
 				</div>
 
 				<div class="share-section">
-					<div class="section-label">{i18n.t('referral.your_link')}</div>
-					<div class="url-display-group">
-						<div class="url-text">
-							{#if walletAddress}
-								{@const parts = referralUrl.split(walletAddress)}
-								{parts[0]}<span class="highlight">{walletAddress}</span>{parts[1] || ''}
+					<div class="section-header">
+						<div class="section-label">{i18n.t('referral.your_link')}</div>
+						<button class="toggle-btn" onclick={toggleUrlDisplay} type="button">
+							{#if showFullUrl}
+								<Link size={16} />
+								<span>{i18n.t('referral.show_short')}</span>
 							{:else}
-								{referralUrl}
+								<ExternalLink size={16} />
+								<span>{i18n.t('referral.show_full')}</span>
 							{/if}
-							<CopyButton value={referralUrl} />
+						</button>
+					</div>
+
+					<div class="url-display-group">
+						<div class="url-container">
+							{#if isGeneratingShortLink}
+								<div class="loading-state">
+									<div class="spinner"></div>
+									<span>{i18n.t('referral.generating_link')}</span>
+								</div>
+							{:else}
+								<div class="url-text">
+									<span class="short-url">{displayUrl}</span>
+								</div>
+							{/if}
+							<CopyButton value={displayUrl} />
 						</div>
 					</div>
+
+					{#if shortUrl && !showFullUrl}
+						<div class="url-hint">
+							<svg
+								class="hint-icon"
+								width="14"
+								height="14"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<circle cx="12" cy="12" r="10"></circle>
+								<line x1="12" y1="16" x2="12" y2="12"></line>
+								<line x1="12" y1="8" x2="12.01" y2="8"></line>
+							</svg>
+							<span>{i18n.t('referral.short_link_hint')}</span>
+						</div>
+					{/if}
 				</div>
 			</div>
 		{/if}
@@ -287,6 +380,13 @@
 	.share-section {
 		display: flex;
 		flex-direction: column;
+		gap: var(--space-3);
+	}
+
+	.section-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		gap: var(--space-2);
 	}
 
@@ -294,11 +394,40 @@
 		font-size: var(--text-sm);
 		font-weight: var(--font-medium);
 		color: var(--gray-700);
-		margin-bottom: var(--space-2);
 	}
 
 	:global([data-theme='dark']) .share-section .section-label {
 		color: var(--gray-300);
+	}
+
+	.toggle-btn {
+		display: flex;
+		align-items: center;
+		gap: var(--space-1);
+		padding: var(--space-1) var(--space-2);
+		font-size: var(--text-xs);
+		color: #3b82f6;
+		background: rgba(59, 130, 246, 0.08);
+		border: 1px solid rgba(59, 130, 246, 0.2);
+		border-radius: var(--radius-md);
+		cursor: pointer;
+		transition: all 0.2s ease;
+	}
+
+	.toggle-btn:hover {
+		background: rgba(59, 130, 246, 0.12);
+		border-color: rgba(59, 130, 246, 0.3);
+	}
+
+	:global([data-theme='dark']) .toggle-btn {
+		color: #60a5fa;
+		background: rgba(96, 165, 250, 0.1);
+		border-color: rgba(96, 165, 250, 0.25);
+	}
+
+	:global([data-theme='dark']) .toggle-btn:hover {
+		background: rgba(96, 165, 250, 0.15);
+		border-color: rgba(96, 165, 250, 0.35);
 	}
 
 	.url-display-group {
@@ -307,24 +436,93 @@
 		align-items: flex-start;
 	}
 
-	.url-text {
+	.url-container {
 		flex: 1;
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
 		padding: var(--space-3);
 		border: 1px solid var(--gray-300);
 		border-radius: var(--radius-md);
+		background: var(--gray-50);
+		min-height: 48px;
+	}
+
+	:global([data-theme='dark']) .url-container {
+		background: var(--gray-800);
+		border-color: var(--gray-600);
+	}
+
+	.loading-state {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		color: var(--gray-600);
+		font-size: var(--text-sm);
+	}
+
+	:global([data-theme='dark']) .loading-state {
+		color: var(--gray-400);
+	}
+
+	.spinner {
+		width: 16px;
+		height: 16px;
+		border: 2px solid rgba(59, 130, 246, 0.2);
+		border-top-color: #3b82f6;
+		border-radius: 50%;
+		animation: spin 0.6s linear infinite;
+	}
+
+	:global([data-theme='dark']) .spinner {
+		border-color: rgba(96, 165, 250, 0.2);
+		border-top-color: #60a5fa;
+	}
+
+	@keyframes spin {
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.url-text {
+		flex: 1;
 		font-family: monospace;
 		font-size: var(--text-sm);
 		color: var(--gray-900);
-		background: var(--gray-50);
-		word-break: break-all;
 		line-height: 1.6;
 		user-select: all;
+		word-break: break-all;
 	}
 
 	:global([data-theme='dark']) .url-text {
-		background: var(--gray-800);
-		border-color: var(--gray-600);
 		color: var(--gray-100);
+	}
+
+	.url-base {
+		color: var(--gray-600);
+	}
+
+	:global([data-theme='dark']) .url-base {
+		color: var(--gray-400);
+	}
+
+	.url-params {
+		color: var(--gray-500);
+		font-size: var(--text-xs);
+	}
+
+	:global([data-theme='dark']) .url-params {
+		color: var(--gray-500);
+	}
+
+	.short-url {
+		color: #3b82f6;
+		font-weight: var(--font-medium);
+	}
+
+	:global([data-theme='dark']) .short-url {
+		color: #60a5fa;
 	}
 
 	.url-text .highlight {
@@ -338,6 +536,33 @@
 	:global([data-theme='dark']) .url-text .highlight {
 		color: #60a5fa;
 		background: rgba(96, 165, 250, 0.12);
+	}
+
+	.url-hint {
+		display: flex;
+		align-items: center;
+		gap: var(--space-1);
+		padding: var(--space-2);
+		font-size: var(--text-xs);
+		color: var(--gray-600);
+		background: rgba(59, 130, 246, 0.05);
+		border-radius: var(--radius-md);
+		border: 1px solid rgba(59, 130, 246, 0.1);
+	}
+
+	:global([data-theme='dark']) .url-hint {
+		color: var(--gray-400);
+		background: rgba(96, 165, 250, 0.08);
+		border-color: rgba(96, 165, 250, 0.15);
+	}
+
+	.hint-icon {
+		flex-shrink: 0;
+		color: #3b82f6;
+	}
+
+	:global([data-theme='dark']) .hint-icon {
+		color: #60a5fa;
 	}
 
 	/* Responsive */
