@@ -198,13 +198,13 @@
 		z-index: 10;
 		max-width: 80rem;
 		margin: 0 auto;
-		padding: 0 var(--space-4);
+		padding: 0 var(--space-6);
 		text-align: center;
 	}
 
 	/* Logo Container */
 	.logo-container {
-		margin-bottom: var(--space-4);
+		margin-bottom: var(--space-6);
 	}
 
 	.logo-wrapper {
@@ -231,11 +231,12 @@
 
 	/* Title Styles */
 	.hero-title {
-		margin-bottom: var(--space-6);
-		padding: 0 var(--space-4);
-		font-size: var(--text-3xl);
+		margin-bottom: var(--space-8);
+		padding: 0;
+		font-size: 2.5rem;
 		font-weight: var(--font-black);
-		line-height: 1.1;
+		line-height: 1.15;
+		letter-spacing: -0.02em;
 	}
 
 	.title-gradient {
@@ -253,13 +254,13 @@
 	/* Subtitle */
 	.hero-subtitle {
 		max-width: 52rem;
-		margin: 0 auto var(--space-10) auto;
-		padding: 0 var(--space-6);
-		font-size: var(--text-lg);
-		font-weight: var(--font-light);
-		line-height: 1.75;
+		margin: 0 auto var(--space-12) auto;
+		padding: 0;
+		font-size: 1.125rem;
+		font-weight: var(--font-normal);
+		line-height: 1.7;
 		color: var(--color-muted-foreground);
-		opacity: 0.9;
+		opacity: 0.85;
 	}
 
 	/* CTA Buttons Container */
@@ -267,19 +268,21 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		gap: var(--space-3);
-		padding: 0 var(--space-4);
+		gap: var(--space-4);
+		padding: 0;
 	}
 
 	/* Secondary Button */
 	.button-secondary {
 		position: relative;
 		width: 100%;
-		padding: var(--space-4) var(--space-10);
+		max-width: 20rem;
+		margin: 0 auto;
+		padding: 1rem 2rem;
 		border-radius: var(--radius-lg);
 		background: transparent;
 		color: var(--color-foreground);
-		font-size: var(--text-lg);
+		font-size: 1.0625rem;
 		font-weight: var(--font-medium);
 		border: 2px solid var(--color-border);
 		cursor: pointer;
@@ -297,16 +300,20 @@
 
 	/* Platform Section */
 	.platform-section {
-		margin-top: var(--space-12);
+		margin-top: var(--space-16);
 		padding-top: var(--space-12);
 		border-top: 1px solid hsla(var(--brand-hue), 10%, 50%, 0.05);
 	}
 
 	.platform-label {
 		margin-bottom: var(--space-6);
-		padding: 0 var(--space-4);
+		padding: 0;
 		font-size: var(--text-sm);
+		font-weight: var(--font-medium);
 		color: var(--color-muted-foreground);
+		opacity: 0.8;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
 	}
 
 	.platform-list {
@@ -314,8 +321,8 @@
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
-		gap: var(--space-6);
-		padding: 0 var(--space-4);
+		gap: var(--space-4) var(--space-6);
+		padding: 0;
 		opacity: 0.5;
 		filter: grayscale(1);
 		transition: all 500ms ease;
@@ -327,8 +334,9 @@
 	}
 
 	.platform-item {
-		font-size: var(--text-base);
+		font-size: 0.9375rem;
 		font-weight: var(--font-semibold);
+		white-space: nowrap;
 	}
 
 	/* Scroll Indicator */

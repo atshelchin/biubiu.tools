@@ -259,7 +259,7 @@
 	/* Premium section with proper spacing */
 	.tools-section {
 		position: relative;
-		padding: var(--space-20) var(--space-6);
+		padding: var(--space-16) var(--space-6);
 		background: var(--color-background);
 		overflow: hidden;
 	}
@@ -292,7 +292,7 @@
 	/* Header with proper spacing */
 	.section-header {
 		text-align: center;
-		margin-bottom: var(--space-24);
+		margin-bottom: var(--space-16);
 	}
 
 	.badge-wrapper {
@@ -334,11 +334,11 @@
 
 	/* Title with strong to weak gradient */
 	.section-title {
-		font-size: var(--text-5xl);
+		font-size: 2.25rem;
 		font-weight: var(--font-bold);
 		line-height: 1.2;
-		margin-bottom: var(--space-8);
-		letter-spacing: -0.01em;
+		margin-bottom: var(--space-6);
+		letter-spacing: -0.02em;
 	}
 
 	.title-line {
@@ -357,8 +357,9 @@
 	.section-subtitle {
 		max-width: 40rem;
 		margin: 0 auto;
-		font-size: var(--text-lg);
-		line-height: 1.7;
+		padding: 0 var(--space-4);
+		font-size: 1.0625rem;
+		line-height: 1.65;
 		color: var(--color-description-3);
 	}
 
@@ -766,14 +767,63 @@
 	}
 
 	@media (max-width: 768px) {
+		.tools-section {
+			padding: var(--space-12) var(--space-5);
+		}
+
+		.section-header {
+			margin-bottom: var(--space-12);
+		}
+
+		.section-title {
+			font-size: 1.875rem;
+			margin-bottom: var(--space-5);
+		}
+
+		.section-subtitle {
+			font-size: 1rem;
+			padding: 0 var(--space-2);
+		}
+
 		.tools-grid {
 			grid-template-columns: 1fr;
-			gap: var(--space-6);
+			gap: var(--space-5);
 		}
 
 		.tool-card {
-			padding: var(--space-6);
-			min-height: 340px;
+			padding: var(--space-7);
+			min-height: 320px;
+		}
+
+		.icon-wrapper {
+			width: 48px;
+			height: 48px;
+			margin-bottom: var(--space-5);
+		}
+
+		:global(.tool-icon) {
+			width: 22px;
+			height: 22px;
+		}
+
+		.tool-title {
+			font-size: 1.0625rem;
+			margin-bottom: var(--space-2);
+		}
+
+		.tool-description {
+			font-size: 0.9375rem;
+			margin-bottom: var(--space-4);
+		}
+
+		.feature-pill {
+			font-size: 0.6875rem;
+			padding: 0.1875rem var(--space-2);
+		}
+
+		.action-btn {
+			padding: var(--space-3) var(--space-4);
+			font-size: 0.9375rem;
 		}
 	}
 </style>
