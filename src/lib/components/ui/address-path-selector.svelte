@@ -130,7 +130,10 @@
 
 	function handleDatePreset(years: number) {
 		const currentYear = new Date().getFullYear();
-		startYear = currentYear - years;
+		// "Past 1 Year" means current year only: 2025-2025
+		// "Past 10 Years" means 10 years back including current: 2016-2025
+		// "Past 100 Years" means 100 years back including current: 1926-2025
+		startYear = currentYear - years + 1;
 		endYear = currentYear;
 		notifyChange();
 	}
