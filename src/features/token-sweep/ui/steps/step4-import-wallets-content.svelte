@@ -261,8 +261,11 @@
 		errorMessage = '';
 
 		try {
-			// Scan balances using composable
-			const updates = await balanceScanner.scanBalances({
+			// Clear any previous rate limit error
+			step4State.clearRateLimitError();
+
+			// Scan balances using composable (resumable)
+			const { updates, state } = await balanceScanner.scanBalances({
 				wallets: importedWallets,
 				selectedTokens,
 				currentChainId: connectStore.currentChainId,
@@ -271,19 +274,32 @@
 				networkSymbol: currentNetwork.symbol,
 				onProgress: (progress) => {
 					step4State.scanProgress = progress;
-				}
+				},
+				onRateLimitError: (error, scanState) => {
+					step4State.handleRateLimitError(error.message, scanState);
+				},
+				initialState: step4State.scanState || undefined
 			});
 
+			step4State.scanState = state;
 			step4State.updateWalletBalances(updates);
-			step4State.hasScanned = true;
+
+			if (!state.isPaused) {
+				step4State.hasScanned = true;
+				step4State.canResumeScan = false;
+			}
 
 			// Show summary
 			const walletsWithBalance = step4State.getWalletsWithBalance().length;
-			if (walletsWithBalance === 0) {
+			if (walletsWithBalance === 0 && !state.isPaused) {
 				errorMessage = i18n.t('tools.token_sweep.step4.content.errors.no_balance');
 			}
 		} catch (error) {
 			console.error('Balance scanning error:', error);
+			if (error instanceof Error && error.name === 'RateLimitError') {
+				// Already handled by onRateLimitError callback
+				return;
+			}
 			errorMessage =
 				error instanceof Error
 					? error.message
@@ -292,6 +308,7 @@
 			step4State.isScanning = false;
 		}
 	}
+
 </script>
 
 <StepContent>
