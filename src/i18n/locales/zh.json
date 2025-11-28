@@ -350,6 +350,8 @@
 				}
 			},
 			"step5": {
+				"target_address_label": "目标地址",
+				"target_address_hint": "代币将归集到您连接的钱包地址",
 				"content": {
 					"title": "确认归集",
 					"description": "检查您的配置并执行资产归集",

@@ -350,6 +350,8 @@
 				}
 			},
 			"step5": {
+				"target_address_label": "Target Address",
+				"target_address_hint": "Tokens will be swept to your connected wallet address",
 				"content": {
 					"title": "Confirm Sweep",
 					"description": "Review your configuration and execute the asset sweep",

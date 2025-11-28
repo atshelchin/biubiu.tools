@@ -3,12 +3,10 @@
 	import { step3State } from '@/features/token-sweep/stores/step3-state.svelte';
 	import { step4State } from '@/features/token-sweep/stores/step4-state.svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
-	import TokenListDisplay from '@/features/token-sweep/ui/components/token-list-display.svelte';
 	import TransactionModeSelector from '@/features/token-sweep/ui/components/transaction-mode-selector.svelte';
 	import FeeBreakdownDisplay from '@/features/token-sweep/ui/components/fee-breakdown-display.svelte';
 	import TemporaryWalletManager from '@/features/token-sweep/ui/components/temporary-wallet-manager.svelte';
 	import BatchInfoCard from '@/features/token-sweep/ui/components/batch-info-card.svelte';
-	import TargetAddressInput from '@/features/token-sweep/ui/components/target-address-input.svelte';
 	import BalanceFilterOption from '@/features/token-sweep/ui/components/balance-filter-option.svelte';
 	import SweepProgressDisplay from '@/features/token-sweep/ui/components/sweep-progress-display.svelte';
 	import EstimateDisplay from '@/features/token-sweep/ui/components/estimate-display.svelte';
@@ -43,7 +41,6 @@
 	const i18n = useI18n();
 
 	// State
-	let targetAddress = $state('');
 	let errorMessage = $state('');
 	let sweepProgress = $state<SweepProgress | null>(null);
 	let isSweeping = $state(false);
@@ -83,6 +80,9 @@
 		return connectStore.networks.find((n) => n.chainId === connectStore.currentChainId);
 	});
 
+	// Use connected wallet address as target address
+	let targetAddress = $derived(connectStore.address || '');
+
 	// Derived from Step 4 (imported wallets)
 	let importedWallets = $derived(step4State.importedWallets);
 	let walletsWithBalance = $derived(step4State.getWalletsWithBalance());
@@ -91,7 +91,7 @@
 	let walletWithBalanceCount = $derived(walletsWithBalance.length);
 	let batchCount = $derived(Math.ceil(walletCount / 100));
 	let isValid = $derived(
-		Boolean(targetAddress.match(/^0x[a-fA-F0-9]{40}$/)) &&
+		Boolean(connectStore.address) &&
 			selectedTokenCount > 0 &&
 			walletCount > 0 &&
 			(transactionMode === 'connected' || temporaryWallet !== null)
@@ -530,30 +530,18 @@
 		description={i18n.t('tools.token_sweep.step5.content.description')}
 	/>
 
-	<!-- 1. Selected Tokens Display (网络和token) -->
-	<div class="form-section">
-		<div class="form-label">
-			{i18n.t('tools.token_sweep.step5.content.selected_network_tokens', {
-				count: selectedTokenCount
-			})}
+	<!-- 1. Selected Tokens Display (网络和 token) -->
+	<!-- Target Address (uses connected wallet address automatically) -->
+	<div class="target-address-info">
+		<h4>{i18n.t('tools.token_sweep.step5.target_address_label')}</h4>
+		<div class="address-display">
+			<span class="address">{targetAddress}</span>
+			<span class="hint">{i18n.t('tools.token_sweep.step5.target_address_hint')}</span>
 		</div>
-		{#if currentNetwork}
-			<div class="network-info">
-				<span class="network-name">{currentNetwork.name}</span>
-				<span class="network-symbol">({currentNetwork.symbol})</span>
-			</div>
-		{/if}
-		<TokenListDisplay tokens={selectedTokenObjects} {currentNetwork} />
 	</div>
 
-	<!-- 2. Batch Info (批次信息) -->
-	<BatchInfoCard {walletCount} {batchCount} />
-
-	<!-- 3. Target Address (接收地址) -->
-	<TargetAddressInput bind:targetAddress />
-
 	<!-- Balance Filter Option -->
-	<BalanceFilterOption {hasScanned} {walletWithBalanceCount} {walletCount} bind:onlyWithBalance />
+	<!-- <BalanceFilterOption {hasScanned} {walletWithBalanceCount} {walletCount} bind:onlyWithBalance /> -->
 
 	<!-- 4. Fee Breakdown Display (费用计算) -->
 	{#if feeBreakdown && currentNetwork}
@@ -690,5 +678,43 @@
 		to {
 			transform: rotate(360deg);
 		}
+	}
+
+	.target-address-info {
+		margin-bottom: var(--space-6);
+		padding: var(--space-4);
+		background: var(--gray-50);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-lg);
+	}
+
+	:global([data-theme='dark']) .target-address-info {
+		background: var(--gray-800);
+		border-color: var(--gray-700);
+	}
+
+	.target-address-info h4 {
+		margin: 0 0 var(--space-2) 0;
+		font-size: var(--text-sm);
+		font-weight: var(--font-semibold);
+		color: var(--color-heading-2);
+	}
+
+	.address-display {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-1);
+	}
+
+	.address-display .address {
+		font-family: var(--font-mono, 'Monaco', 'Courier New', monospace);
+		font-size: var(--text-sm);
+		color: var(--color-text-1);
+		word-break: break-all;
+	}
+
+	.address-display .hint {
+		font-size: var(--text-xs);
+		color: var(--gray-500);
 	}
 </style>
