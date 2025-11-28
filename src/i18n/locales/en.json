@@ -339,7 +339,8 @@
 						"clear_all_title": "Clear All Wallets",
 						"clear_all_message": "Are you sure you want to remove all {count} wallets from the import list? This action cannot be undone.",
 						"clear_all_button": "Clear All",
-						"cancel_button": "Cancel"
+						"cancel_button": "Cancel",
+						"long_press_hint": "⚠️ This action is irreversible. Please long press the button for 3 seconds to confirm"
 					}
 				},
 				"footer": {

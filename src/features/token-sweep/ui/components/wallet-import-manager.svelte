@@ -46,6 +46,7 @@
 			onRemoveWallet(walletToRemove);
 			walletToRemove = '';
 		}
+		showRemoveDialog = false;
 	}
 
 	function handleClearAll() {
@@ -54,6 +55,16 @@
 
 	function confirmClearAll() {
 		onClearAll();
+		showClearAllDialog = false;
+	}
+
+	function cancelRemoveDialog() {
+		walletToRemove = '';
+		showRemoveDialog = false;
+	}
+
+	function cancelClearAllDialog() {
+		showClearAllDialog = false;
 	}
 </script>
 
@@ -119,9 +130,7 @@
 	variant="danger"
 	requireLongPress={false}
 	onConfirm={confirmRemoveWallet}
-	onCancel={() => {
-		walletToRemove = '';
-	}}
+	onCancel={cancelRemoveDialog}
 />
 
 <ConfirmDialog
@@ -131,12 +140,13 @@
 		count: walletCount.toLocaleString()
 	})}
 	confirmText={i18n.t('tools.token_sweep.step4.content.dialogs.clear_all_button')}
+	confirmHint={i18n.t('tools.token_sweep.step4.content.dialogs.long_press_hint')}
 	cancelText={i18n.t('tools.token_sweep.step4.content.dialogs.cancel_button')}
 	variant="danger"
 	requireLongPress={true}
 	longPressDuration={3000}
 	onConfirm={confirmClearAll}
-	onCancel={() => {}}
+	onCancel={cancelClearAllDialog}
 />
 
 <style>

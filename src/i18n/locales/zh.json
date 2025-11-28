@@ -339,7 +339,8 @@
 						"clear_all_title": "清除所有钱包",
 						"clear_all_message": "确定要从导入列表中移除全部{count}个钱包吗？此操作无法撤销。",
 						"clear_all_button": "清除全部",
-						"cancel_button": "取消"
+						"cancel_button": "取消",
+						"long_press_hint": "⚠️ 此操作不可逆，请长按按钮 3 秒确认"
 					}
 				},
 				"footer": {

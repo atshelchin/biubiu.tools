@@ -8,6 +8,7 @@
 		title: string;
 		message: string;
 		confirmText?: string;
+		confirmHint?: string;
 		cancelText?: string;
 		variant?: 'default' | 'danger';
 		requireLongPress?: boolean;
@@ -21,6 +22,7 @@
 		title,
 		message,
 		confirmText = '确定',
+		confirmHint,
 		cancelText = '取消',
 		variant = 'default',
 		requireLongPress = false,
@@ -62,38 +64,43 @@
 			</div>
 		{/if}
 		<p class="message">{message}</p>
-		<div class="actions">
-			<button type="button" class="btn-secondary" onclick={onCancel}>
-				{cancelText}
-			</button>
-			{#if requireLongPress}
-				<div
-					class="btn-wrapper"
-					use:longPress={{
-						duration: longPressDuration,
-						onProgress: handleProgress,
-						onComplete: handleLongPressComplete
-					}}
-				>
-					<button type="button" class="btn-primary" class:danger={variant === 'danger'}>
+		<div class="actions-wrapper">
+			{#if requireLongPress && confirmHint}
+				<p class="confirm-hint">{confirmHint}</p>
+			{/if}
+			<div class="actions">
+				<button type="button" class="btn-secondary" onclick={onCancel}>
+					{cancelText}
+				</button>
+				{#if requireLongPress}
+					<div
+						class="btn-wrapper"
+						use:longPress={{
+							duration: longPressDuration,
+							onProgress: handleProgress,
+							onComplete: handleLongPressComplete
+						}}
+					>
+						<button type="button" class="btn-primary" class:danger={variant === 'danger'}>
+							{confirmText}
+						</button>
+						{#if isPressing && longPressProgress > 0}
+							<div class="long-press-indicator">
+								<div class="progress-bar" style:width="{longPressProgress}%"></div>
+							</div>
+						{/if}
+					</div>
+				{:else}
+					<button
+						type="button"
+						class="btn-primary"
+						class:danger={variant === 'danger'}
+						onclick={handleConfirm}
+					>
 						{confirmText}
 					</button>
-					{#if isPressing && longPressProgress > 0}
-						<div class="long-press-indicator">
-							<div class="progress-bar" style:width="{longPressProgress}%"></div>
-						</div>
-					{/if}
-				</div>
-			{:else}
-				<button
-					type="button"
-					class="btn-primary"
-					class:danger={variant === 'danger'}
-					onclick={handleConfirm}
-				>
-					{confirmText}
-				</button>
-			{/if}
+				{/if}
+			</div>
 		</div>
 	</div>
 </Modal>
@@ -129,11 +136,28 @@
 		margin: 0;
 	}
 
+	.actions-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-3);
+		margin-top: var(--space-2);
+	}
+
+	.confirm-hint {
+		text-align: center;
+		font-size: var(--text-sm);
+		color: var(--color-muted-foreground);
+		margin: 0;
+		padding: var(--space-2) var(--space-3);
+		background: var(--color-muted);
+		border-radius: var(--radius-md);
+		border-left: 3px solid hsl(45, 100%, 50%);
+	}
+
 	.actions {
 		display: flex;
 		gap: var(--space-3);
 		justify-content: center;
-		margin-top: var(--space-2);
 	}
 
 	button {
