@@ -1,13 +1,14 @@
 <script lang="ts">
 	import SimpleCodeEditor from '$lib/components/widgets/SimpleCodeEditor.svelte';
 	import VirtualList from '$lib/components/ui/virtual-list.svelte';
-	import { AlertCircle, Search } from '@lucide/svelte';
+	import { AlertCircle, Loader2 } from '@lucide/svelte';
 	import { slide } from 'svelte/transition';
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import { EditorView } from 'codemirror';
 	import { Decoration, type DecorationSet } from '@codemirror/view';
 	import { StateField, StateEffect } from '@codemirror/state';
-	import { validatePrivateKey } from '@/features/token-sweep/utils/wallet-import';
+	import { usePrivateKeyValidator } from '@/features/token-sweep/composables/use-private-key-validator.svelte';
+	import { onDestroy } from 'svelte';
 
 	interface InvalidKey {
 		key: string; // The invalid private key string
@@ -24,55 +25,92 @@
 	let { value = $bindable(''), placeholder = '', rows = 20, invalidKeys = [] }: Props = $props();
 
 	const i18n = useI18n();
+	const validator = usePrivateKeyValidator();
 	let editorView: EditorView | null = $state(null);
 
 	// Track currently displayed invalid keys (filtered from props based on current editor content)
 	let displayedInvalidKeys = $state<InvalidKey[]>([]);
 
-	// Watch for changes in value and invalidKeys to update displayed errors
+	// Track viewport position for large file optimization
+	let viewportTrigger = $state(0); // Changed to trigger re-validation on scroll
+
+	// Watch for changes in value, invalidKeys, and viewport to update displayed errors
 	$effect(() => {
+		// Access viewportTrigger to make this effect reactive to scroll
+		viewportTrigger;
+
+		if (!editorView) {
+			// If editor not ready, show all invalid keys
+			displayedInvalidKeys = invalidKeys;
+			return;
+		}
+
 		// Get current lines in editor
 		const currentLines = value
 			.split('\n')
 			.map((line) => line.trim())
 			.filter(Boolean);
 
-		// Start with original invalid keys
-		const updatedInvalidKeys: InvalidKey[] = [];
+		// For large files (>5000 lines), only validate visible viewport lines
+		if (currentLines.length > 5000) {
+			console.info(
+				`📊 Large file detected (${currentLines.length} lines). Validating visible viewport only.`
+			);
 
-		// Check each original invalid key
-		invalidKeys.forEach((invalidKey) => {
-			const trimmedKey = invalidKey.key.trim();
-			// Check if this key still exists in the editor (exact match)
-			const stillExists = currentLines.some((line) => line === trimmedKey);
+			// Get viewport info from EditorView
+			const viewport = editorView.viewport;
+			const doc = editorView.state.doc;
 
-			if (stillExists) {
-				// Still exists, check if it's still invalid
-				const isStillInvalid = !validatePrivateKey(trimmedKey);
-				if (isStillInvalid) {
-					updatedInvalidKeys.push(invalidKey);
-				}
-				// If valid now, don't add to list (error fixed)
-			}
-			// If doesn't exist, it was deleted or modified to something else
-		});
+			// Calculate visible line range (with buffer for smooth scrolling)
+			const startLine = doc.lineAt(viewport.from).number;
+			const endLine = doc.lineAt(viewport.to).number;
+			const bufferLines = 50; // Validate 50 extra lines above and below viewport
 
-		// Check for NEW invalid keys that weren't in original invalidKeys
-		currentLines.forEach((line) => {
-			// If this line is invalid and not already in our list
-			const isInvalid = !validatePrivateKey(line);
-			const alreadyTracked = updatedInvalidKeys.some((k) => k.key.trim() === line);
+			const visibleStartLine = Math.max(1, startLine - bufferLines);
+			const visibleEndLine = Math.min(doc.lines, endLine + bufferLines);
 
-			if (isInvalid && !alreadyTracked) {
-				// This is a newly created invalid key (user typed something wrong)
-				updatedInvalidKeys.push({ key: line });
-			}
-		});
+			// Extract only visible lines for validation
+			const visibleLines = currentLines.slice(visibleStartLine - 1, visibleEndLine);
 
-		displayedInvalidKeys = updatedInvalidKeys;
+			// Filter invalidKeys to only show those in visible range or keep original ones
+			const visibleInvalidKeys = invalidKeys.filter((invalidKey) => {
+				const trimmedKey = invalidKey.key.trim();
+				return visibleLines.includes(trimmedKey);
+			});
+
+			// Use web worker to validate visible lines only
+			validator.validateKeys(
+				visibleLines,
+				visibleInvalidKeys,
+				(result) => {
+					// Merge with original invalidKeys that are outside viewport
+					const outsideViewportKeys = invalidKeys.filter((invalidKey) => {
+						const trimmedKey = invalidKey.key.trim();
+						return !visibleLines.includes(trimmedKey);
+					});
+					displayedInvalidKeys = [...result, ...outsideViewportKeys];
+				},
+				300 // 300ms debounce
+			);
+		} else {
+			// For small files (<= 5000 lines), validate all lines
+			validator.validateKeys(
+				currentLines,
+				invalidKeys,
+				(result) => {
+					displayedInvalidKeys = result;
+				},
+				300 // 300ms debounce
+			);
+		}
 	});
 
-	// Auto-highlight all error lines when displayedInvalidKeys or value changes
+	// Cleanup worker on component destroy
+	onDestroy(() => {
+		validator.cleanup();
+	});
+
+	// Auto-highlight all error lines when displayedInvalidKeys changes
 	$effect(() => {
 		if (!editorView) return;
 
@@ -84,17 +122,32 @@
 			return;
 		}
 
-		// Find positions of all error lines
-		const lines = value.split('\n');
-		const errorPositions: number[] = [];
+		const doc = editorView.state.doc;
 
+		// For very large documents (>10000 lines), disable highlighting to prevent UI freeze
+		if (doc.lines > 10000) {
+			console.warn(
+				`⚠️ Error line highlighting disabled for ${doc.lines} lines (limit: 10000)`
+			);
+			return;
+		}
+
+		// Build a map of trimmed line text to line positions for efficient lookup
+		const lineMap = new Map<string, number>();
+		for (let i = 1; i <= doc.lines; i++) {
+			const line = doc.line(i);
+			const trimmed = line.text.trim();
+			if (trimmed && !lineMap.has(trimmed)) {
+				lineMap.set(trimmed, line.from);
+			}
+		}
+
+		// Find positions using the map (O(1) lookup instead of O(n) search)
+		const errorPositions: number[] = [];
 		displayedInvalidKeys.forEach((invalidKey) => {
-			const lineIndex = lines.findIndex((line) => line.trim() === invalidKey.key.trim());
-			if (lineIndex !== -1) {
-				let pos = 0;
-				for (let i = 0; i < lineIndex; i++) {
-					pos += lines[i].length + 1; // +1 for newline
-				}
+			const trimmedKey = invalidKey.key.trim();
+			const pos = lineMap.get(trimmedKey);
+			if (pos !== undefined) {
 				errorPositions.push(pos);
 			}
 		});
@@ -137,6 +190,31 @@
 		// Add the highlight field extension
 		editorView.dispatch({
 			effects: StateEffect.appendConfig.of([highlightField])
+		});
+
+		// Add scroll listener for large files to re-validate visible lines
+		const scrollElement = view.scrollDOM;
+		let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
+
+		const handleScroll = () => {
+			// Debounce scroll events
+			if (scrollTimeout) {
+				clearTimeout(scrollTimeout);
+			}
+			scrollTimeout = setTimeout(() => {
+				// Trigger re-validation by updating viewportTrigger
+				viewportTrigger++;
+			}, 200); // 200ms debounce for scroll
+		};
+
+		scrollElement.addEventListener('scroll', handleScroll);
+
+		// Store cleanup function
+		onDestroy(() => {
+			scrollElement.removeEventListener('scroll', handleScroll);
+			if (scrollTimeout) {
+				clearTimeout(scrollTimeout);
+			}
 		});
 	}
 
