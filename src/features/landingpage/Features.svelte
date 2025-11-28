@@ -15,7 +15,8 @@
 		ScanSearch,
 		Globe,
 		TrendingUp,
-		KeyRound
+		KeyRound,
+		Rocket
 	} from '@lucide/svelte';
 
 	interface Tool {
@@ -106,6 +107,21 @@
 			status: 'active',
 			color: '#10B981',
 			features: ['Advanced Features', 'Tax & Anti-Bot', 'Instant Deploy'],
+			highlight: false,
+			alpha: true
+		},
+		{
+			icon: Rocket,
+			title: t('tools.contract_deployer.title'),
+			description: t('tools.contract_deployer.description'),
+			link: '/apps/contract-deployer',
+			status: 'active',
+			color: '#F59E0B',
+			features: [
+				t('tools.contract_deployer.feature_1'),
+				t('tools.contract_deployer.feature_2'),
+				t('tools.contract_deployer.feature_3')
+			],
 			highlight: false,
 			alpha: true
 		},
