@@ -104,6 +104,7 @@
 		border-radius: var(--radius-xl);
 		padding: var(--space-6);
 		width: 90%;
+		max-height: 90vh;
 		display: flex;
 		flex-direction: column;
 		box-shadow: var(--shadow-2xl);
