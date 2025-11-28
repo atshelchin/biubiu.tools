@@ -14,6 +14,120 @@
 		"section_title": "Powerful Tools",
 		"section_subtitle": "Professional Web3 batch operation tools to improve your efficiency",
 		"badge": "Professional Web3 Tools",
+		"contract_deployer": {
+			"title": "Contract Deployer",
+			"description": "Deploy smart contracts deterministically using CREATE2 proxy",
+			"feature_1": "Deterministic deployment across all chains",
+			"feature_2": "Same contract address on every network",
+			"feature_3": "Simple and developer-friendly interface",
+			"faqs": {
+				"what_is_create2": "What is CREATE2?",
+				"create2_explanation": "CREATE2 is an Ethereum opcode that allows deterministic contract deployment. It calculates the contract address before deployment based on bytecode and salt, ensuring the same address across different networks.",
+				"what_is_deterministic": "What is deterministic deployment?",
+				"deterministic_explanation": "Deterministic deployment means the contract will always be deployed to the same address on any network, as long as you use the same bytecode, constructor arguments, and salt. This is extremely useful for cross-chain applications.",
+				"what_is_bytecode": "What is bytecode?",
+				"bytecode_explanation": "Bytecode is the compiled version of your smart contract code. When you compile your Solidity contract, you get bytecode which is the actual code that runs on the Ethereum Virtual Machine (EVM).",
+				"what_is_abi": "What is ABI?",
+				"abi_explanation": "ABI (Application Binary Interface) defines how to interact with your contract. For deployment, you need the constructor ABI to properly encode the constructor arguments. You can provide it in JSON format or human-readable format.",
+				"what_is_salt": "What is salt?",
+				"salt_explanation": "Salt is a 32-byte value used in CREATE2 to generate the contract address. Different salts result in different addresses. You can use the same salt to deploy to the same address on different networks."
+			},
+			"seo": {
+				"page_title": "Contract Deployer - Deterministic Smart Contract Deployment | BiuBiu Tools",
+				"page_description": "Deploy smart contracts deterministically using CREATE2 proxy. Same contract address across all EVM networks. Developer-friendly interface for testing and production.",
+				"keywords": "contract deployer, CREATE2, deterministic deployment, smart contract, ethereum, polygon, BSC, solidity, web3 tools",
+				"webapp_name": "Contract Deployer",
+				"webapp_description": "Deploy smart contracts deterministically using CREATE2 proxy across all EVM networks.",
+				"feature_1": "Deterministic deployment with CREATE2",
+				"feature_2": "Multi-network support (Ethereum, Polygon, BSC, etc.)",
+				"feature_3": "Preview contract address before deployment",
+				"howto_name": "How to Deploy Contracts Deterministically with CREATE2",
+				"howto_description": "Step-by-step guide to deploy smart contracts to the same address across multiple networks using CREATE2 proxy.",
+				"howto_tool_1": "CREATE2 Proxy Contract (0x4e59b44847b379578588920cA78FbF26c0B4956C)",
+				"step_1_name": "Connect Your Wallet",
+				"step_1_text": "Connect your Web3 wallet to the network where you want to deploy the contract. Make sure you have enough native tokens for gas fees.",
+				"step_1_description": "Link your Web3 wallet",
+				"step_2_name": "Check Dependencies",
+				"step_2_text": "Verify that the CREATE2 proxy contract is available on your selected network. The system will check if the proxy exists at the standard address.",
+				"step_2_description": "Verify CREATE2 proxy availability",
+				"step_3_name": "Deploy Contract",
+				"step_3_text": "Enter your contract bytecode, constructor ABI, constructor arguments, and salt. The system will calculate and show the predicted contract address. Click deploy to execute the deployment transaction.",
+				"step_3_description": "Configure and deploy contract"
+			},
+			"step1": {
+				"sidebar": {
+					"title": "Connect Wallet",
+					"description": "Connect your Web3 wallet to deploy smart contracts using CREATE2 proxy."
+				},
+				"content": {
+					"title": "Select Network & Connect Wallet",
+					"description": "Choose the blockchain network where you want to deploy your contract",
+					"loading": "Loading network configuration..."
+				},
+				"footer": {
+					"continue": "Continue",
+					"hint": "Connect your wallet to continue"
+				}
+			},
+			"step2": {
+				"sidebar": {
+					"title": "Check Dependencies",
+					"description": "Verify that the CREATE2 proxy contract is available on the selected network.",
+					"required_contracts": "Required Contracts"
+				},
+				"content": {
+					"title": "Verify Dependencies",
+					"description": "Checking if CREATE2 proxy is available on this network",
+					"checking": "Checking dependencies...",
+					"available": "Available",
+					"not_available": "Not Available",
+					"all_passed": "All dependencies are available! You can proceed to deployment.",
+					"some_failed": "Some dependencies are not available on this network. Please switch to a supported network.",
+					"check_button": "Check Dependencies"
+				},
+				"footer": {
+					"continue": "Continue",
+					"hint": "All dependencies must be available to continue"
+				}
+			},
+			"step3": {
+				"sidebar": {
+					"title": "Deploy Contract",
+					"description": "Configure your contract deployment parameters",
+					"bytecode_title": "Contract Bytecode",
+					"bytecode_description": "The compiled bytecode of your smart contract. You can get this from your compiler output.",
+					"abi_title": "Constructor ABI",
+					"abi_description": "The ABI definition of your constructor. Supports both JSON and human-readable format.",
+					"constructor_title": "Constructor Arguments",
+					"constructor_description": "The arguments to pass to your contract constructor, in JSON array format.",
+					"salt_title": "Salt",
+					"salt_description": "A 32-byte hex value for deterministic address generation. Same salt = same address."
+				},
+				"content": {
+					"title": "Deploy Your Contract",
+					"description": "Enter contract details to deploy via CREATE2 proxy",
+					"bytecode_label": "Contract Bytecode",
+					"bytecode_help": "Paste the compiled bytecode of your contract (starts with 0x)",
+					"abi_label": "Constructor ABI",
+					"abi_help": "Paste the constructor ABI in JSON or human-readable format",
+					"constructor_args_label": "Constructor Arguments",
+					"constructor_args_help": "Enter constructor arguments as JSON array, e.g. [\"MyToken\", \"MTK\", 18]",
+					"salt_label": "Salt",
+					"salt_help": "A 32-byte hex value for deterministic deployment (0x followed by 64 hex characters)",
+					"generate_random": "Random",
+					"predicted_address": "Predicted Contract Address",
+					"deploy_button": "Deploy Contract",
+					"deploying": "Deploying...",
+					"deployment_success": "Deployment Successful!",
+					"deployment_error": "Deployment Failed",
+					"contract_address": "Contract Address",
+					"transaction_hash": "Transaction Hash"
+				},
+				"footer": {
+					"hint": "This is the final step. Deploy your contract when ready."
+				}
+			}
+		},
 		"token_sweep": {
 			"title": "Token Sweep",
 			"description": "Sweep tokens from multiple addresses to a single destination address",
