@@ -351,7 +351,13 @@
 					"total_label": "总数：",
 					"with_balance_label": "有余额：",
 					"scanning_label": "扫描中：",
-					"empty_hint": "未导入任何钱包"
+					"empty_hint": "未导入任何钱包",
+					"performance_tip": {
+						"title": "⚡ 性能提示",
+						"message": "范围太大会增加扫描时间",
+						"recommended": "推荐范围：",
+						"recommended_range": "1,000 - 10,000 个地址"
+					}
 				}
 			}
 		},

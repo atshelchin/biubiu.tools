@@ -295,8 +295,7 @@
 			<!-- Estimated Count -->
 			<div class="count-display">
 				<span class="count-label">Estimated addresses:</span>
-				<span class="count-value">~{addressCount()}</span>
-				<span class="count-unit">(max {maxAddresses.toLocaleString()})</span>
+				<span class="count-value">{addressCount()}</span>
 			</div>
 		</div>
 	{/if}

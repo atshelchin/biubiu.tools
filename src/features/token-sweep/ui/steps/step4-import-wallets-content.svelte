@@ -83,11 +83,11 @@
 
 				totalAddresses = endIndex - startIndex + 1;
 
-				if (totalAddresses > 10000) {
-					errorMessage = i18n.t('tools.token_sweep.step4.content.mnemonic.error_max');
-					isGenerating = false;
-					return;
-				}
+				// if (totalAddresses > 10000) {
+				// 	errorMessage = i18n.t('tools.token_sweep.step4.content.mnemonic.error_max');
+				// 	isGenerating = false;
+				// 	return;
+				// }
 
 				requestData = {
 					mnemonic: mnemonicText.trim(),
