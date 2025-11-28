@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
 	import { Calendar, Hash } from '@lucide/svelte';
+	import { useI18n } from '@shelchin/i18n/svelte';
+
+	const i18n = useI18n();
 
 	interface Props {
 		/** Path generation type */
@@ -50,20 +53,20 @@
 	}: Props = $props();
 
 	// Path type options
-	const pathOptions = [
+	const pathOptions = $derived([
 		{
-			type: 'sequential',
+			type: 'sequential' as const,
 			icon: Hash,
-			label: 'Sequential',
-			description: '0, 1, 2, 3...'
+			label: i18n.t('components.address_path_selector.sequential.label'),
+			description: i18n.t('components.address_path_selector.sequential.description')
 		},
 		{
-			type: 'date',
+			type: 'date' as const,
 			icon: Calendar,
-			label: 'Date-based',
-			description: '20240101, 20240102...'
+			label: i18n.t('components.address_path_selector.date.label'),
+			description: i18n.t('components.address_path_selector.date.description')
 		}
-	] as const;
+	]);
 
 	// Quick range presets for sequential mode
 	const sequentialPresets = [
@@ -73,11 +76,11 @@
 	];
 
 	// Quick range presets for date mode (backwards from current year)
-	const datePresets = [
-		{ label: 'Past 1 Year', years: 1 },
-		{ label: 'Past 10 Years', years: 10 },
-		{ label: 'Past 100 Years', years: 100 }
-	];
+	const datePresets = $derived([
+		{ label: i18n.t('components.address_path_selector.date.presets.1_year'), years: 1 },
+		{ label: i18n.t('components.address_path_selector.date.presets.10_years'), years: 10 },
+		{ label: i18n.t('components.address_path_selector.date.presets.100_years'), years: 100 }
+	]);
 
 	// Computed values
 	const addressCount = $derived(() => {
@@ -190,7 +193,9 @@
 		<div class="controls-section" transition:slide={{ duration: 300 }}>
 			<!-- Quick Presets -->
 			<div class="presets-row">
-				<span class="presets-label">Quick Select:</span>
+				<span class="presets-label"
+					>{i18n.t('components.address_path_selector.quick_select')}:</span
+				>
 				<div class="presets-buttons">
 					{#each sequentialPresets as preset (preset.value)}
 						<button class="preset-btn" onclick={() => handleSequentialPreset(preset.value)}>
@@ -203,7 +208,7 @@
 			<!-- Range Inputs -->
 			<div class="range-inputs">
 				<div class="input-group">
-					<label for="start-index">Start</label>
+					<label for="start-index">{i18n.t('components.address_path_selector.start')}</label>
 					<input
 						id="start-index"
 						type="number"
@@ -214,10 +219,10 @@
 					/>
 				</div>
 
-				<span class="range-separator">to</span>
+				<span class="range-separator">{i18n.t('components.address_path_selector.to')}</span>
 
 				<div class="input-group">
-					<label for="end-index">End</label>
+					<label for="end-index">{i18n.t('components.address_path_selector.end')}</label>
 					<input
 						id="end-index"
 						type="number"
@@ -232,11 +237,17 @@
 
 			<!-- Address Count Display -->
 			<div class="count-display" class:warning={isOverLimit}>
-				<span class="count-label">Will generate:</span>
+				<span class="count-label"
+					>{i18n.t('components.address_path_selector.will_generate')}:</span
+				>
 				<span class="count-value">{addressCount()}</span>
-				<span class="count-unit">addresses</span>
+				<span class="count-unit">{i18n.t('components.address_path_selector.addresses')}</span>
 				{#if isOverLimit}
-					<span class="count-warning">(Limited to {maxAddresses} max)</span>
+					<span class="count-warning"
+						>({i18n.t('components.address_path_selector.limited_to', {
+							max: maxAddresses
+						})})</span
+					>
 				{/if}
 			</div>
 		</div>
@@ -247,7 +258,9 @@
 		<div class="controls-section" transition:slide={{ duration: 300 }}>
 			<!-- Quick Presets -->
 			<div class="presets-row">
-				<span class="presets-label">Quick Select:</span>
+				<span class="presets-label"
+					>{i18n.t('components.address_path_selector.quick_select')}:</span
+				>
 				<div class="presets-buttons">
 					{#each datePresets as preset (preset.years)}
 						<button class="preset-btn" onclick={() => handleDatePreset(preset.years)}>
@@ -260,7 +273,8 @@
 			<!-- Year Range Inputs -->
 			<div class="range-inputs">
 				<div class="input-group">
-					<label for="start-year">From Year</label>
+					<label for="start-year">{i18n.t('components.address_path_selector.from_year')}</label
+					>
 					<input
 						id="start-year"
 						type="number"
@@ -271,10 +285,10 @@
 					/>
 				</div>
 
-				<span class="range-separator">to</span>
+				<span class="range-separator">{i18n.t('components.address_path_selector.to')}</span>
 
 				<div class="input-group">
-					<label for="end-year">To Year</label>
+					<label for="end-year">{i18n.t('components.address_path_selector.to_year')}</label>
 					<input
 						id="end-year"
 						type="number"
@@ -288,16 +302,20 @@
 
 			<!-- Format Preview -->
 			<div class="format-preview">
-				<span class="preview-label">Format:</span>
+				<span class="preview-label">{i18n.t('components.address_path_selector.format')}:</span>
 				<code class="preview-format">{dateFormat()}</code>
 				<span class="preview-example">
-					Example: {startYear}0101 to {endYear}1231
+					{i18n.t('components.address_path_selector.example')}: {startYear}0101 {i18n.t(
+						'components.address_path_selector.to'
+					)} {endYear}1231
 				</span>
 			</div>
 
 			<!-- Estimated Count -->
 			<div class="count-display">
-				<span class="count-label">Estimated addresses:</span>
+				<span class="count-label"
+					>{i18n.t('components.address_path_selector.estimated_addresses')}:</span
+				>
 				<span class="count-value">{addressCount()}</span>
 			</div>
 		</div>

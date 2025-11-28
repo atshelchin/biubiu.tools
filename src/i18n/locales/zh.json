@@ -806,6 +806,40 @@
 		"failed": "失败"
 	},
 	"components": {
+		"address_path_selector": {
+			"sequential": {
+				"label": "按序号",
+				"description": "0, 1, 2, 3..."
+			},
+			"date": {
+				"label": "按日期",
+				"description": "20240101, 20240102...",
+				"presets": {
+					"1_year": "过去 1 年",
+					"10_years": "过去 10 年",
+					"100_years": "过去 100 年"
+				}
+			},
+			"quick_select": "快速选择",
+			"start": "起始",
+			"end": "结束",
+			"to": "至",
+			"from_year": "开始年份",
+			"to_year": "结束年份",
+			"format": "格式",
+			"example": "示例",
+			"will_generate": "将生成",
+			"estimated_addresses": "预计地址数",
+			"addresses": "个地址",
+			"limited_to": "最多 {max} 个"
+		},
+		"wallet_list": {
+			"empty_message": "尚未添加钱包",
+			"remove_wallet": "移除钱包",
+			"showing": "显示 {start}-{end}，共 {total} 个",
+			"previous_page": "上一页",
+			"next_page": "下一页"
+		},
 		"token_card": {
 			"native": "原生代币",
 			"erc20": "ERC20",

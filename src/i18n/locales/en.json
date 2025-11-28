@@ -820,6 +820,40 @@
 		"failed": "Failed"
 	},
 	"components": {
+		"address_path_selector": {
+			"sequential": {
+				"label": "Sequential",
+				"description": "0, 1, 2, 3..."
+			},
+			"date": {
+				"label": "Date-based",
+				"description": "20240101, 20240102...",
+				"presets": {
+					"1_year": "Past 1 Year",
+					"10_years": "Past 10 Years",
+					"100_years": "Past 100 Years"
+				}
+			},
+			"quick_select": "Quick Select",
+			"start": "Start",
+			"end": "End",
+			"to": "to",
+			"from_year": "From Year",
+			"to_year": "To Year",
+			"format": "Format",
+			"example": "Example",
+			"will_generate": "Will generate",
+			"estimated_addresses": "Estimated addresses",
+			"addresses": "addresses",
+			"limited_to": "Limited to {max} max"
+		},
+		"wallet_list": {
+			"empty_message": "No wallets added yet",
+			"remove_wallet": "Remove wallet",
+			"showing": "Showing {start}-{end} of {total}",
+			"previous_page": "Previous page",
+			"next_page": "Next page"
+		},
 		"token_card": {
 			"native": "Native",
 			"erc20": "ERC20",

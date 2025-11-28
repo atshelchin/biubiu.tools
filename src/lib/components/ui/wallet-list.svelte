@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
 	import { Trash2, ChevronLeft, ChevronRight } from '@lucide/svelte';
+	import { useI18n } from '@shelchin/i18n/svelte';
+
+	const i18n = useI18n();
 
 	interface Wallet {
 		id: string;
@@ -32,9 +35,14 @@
 		showPagination = true,
 		canRemove = true,
 		onRemove,
-		emptyMessage = 'No wallets added yet',
+		emptyMessage,
 		showDerivationPath = true
 	}: Props = $props();
+
+	// Use i18n for default empty message
+	const defaultEmptyMessage = $derived(
+		emptyMessage || i18n.t('components.wallet_list.empty_message')
+	);
 
 	// Pagination state
 	let currentPage = $state(1);
@@ -78,7 +86,7 @@
 	{#if isEmpty}
 		<!-- Empty State -->
 		<div class="empty-state">
-			<p>{emptyMessage}</p>
+			<p>{defaultEmptyMessage}</p>
 		</div>
 	{:else}
 		<!-- Wallet List -->
@@ -95,7 +103,7 @@
 						<button
 							class="btn-icon-danger"
 							onclick={() => handleRemove(wallet.address)}
-							title="Remove wallet"
+							title={i18n.t('components.wallet_list.remove_wallet')}
 						>
 							<Trash2 size={16} />
 						</button>
@@ -108,14 +116,18 @@
 		{#if showPagination && totalPages > 1}
 			<div class="pagination">
 				<div class="pagination-info">
-					Showing {startIndex + 1}-{endIndex} of {wallets.length}
+					{i18n.t('components.wallet_list.showing', {
+						start: startIndex + 1,
+						end: endIndex,
+						total: wallets.length
+					})}
 				</div>
 				<div class="pagination-controls">
 					<button
 						class="pagination-btn"
 						onclick={previousPage}
 						disabled={currentPage === 1}
-						title="Previous page"
+						title={i18n.t('components.wallet_list.previous_page')}
 					>
 						<ChevronLeft size={18} />
 					</button>
@@ -177,7 +189,7 @@
 						class="pagination-btn"
 						onclick={nextPage}
 						disabled={currentPage === totalPages}
-						title="Next page"
+						title={i18n.t('components.wallet_list.next_page')}
 					>
 						<ChevronRight size={18} />
 					</button>
