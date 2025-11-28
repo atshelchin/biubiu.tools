@@ -7,9 +7,35 @@
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { SvelteMap } from 'svelte/reactivity';
+	import type { ERC20Token } from '$lib/types/token';
+	import { Copy, Check } from '@lucide/svelte';
+	import TokenBalanceDisplay from '$lib/components/ui/token-balance-display.svelte';
 
 	const i18n = useI18n();
 	const connectStore = useConnectStore();
+
+	// Track copied addresses
+	let copiedAddress = $state<string | null>(null);
+
+	// Copy to clipboard helper with feedback
+	async function copyToClipboard(text: string) {
+		try {
+			await navigator.clipboard.writeText(text);
+			copiedAddress = text;
+			// Reset after 2 seconds
+			setTimeout(() => {
+				copiedAddress = null;
+			}, 2000);
+		} catch (err) {
+			console.error('Failed to copy:', err);
+		}
+	}
+
+	// Format address for display (0x1234...5678)
+	function formatAddress(address: string): string {
+		if (address.length <= 10) return address;
+		return `${address.slice(0, 6)}...${address.slice(-4)}`;
+	}
 
 	// Derived state
 	let importedWallets = $derived(step4State.importedWallets);
@@ -26,6 +52,8 @@
 	interface TokenStats {
 		tokenId: string;
 		symbol: string;
+		address?: string;
+		decimals: number;
 		totalBalance: bigint;
 		addressCount: number;
 	}
@@ -38,18 +66,31 @@
 			? connectStore.networks.find((n) => n.chainId === connectStore.currentChainId)
 			: null;
 
+		// Get all available tokens to find symbol and address
+		const availableTokens = currentNetwork
+			? step3State.getAvailableTokens(
+					currentNetwork.chainId,
+					currentNetwork.symbol,
+					currentNetwork.name
+				)
+			: [];
+
+		const tokenMap = new Map(availableTokens.map((t) => [t.id, t]));
+
 		const stats = new SvelteMap<string, TokenStats>();
 
 		// Initialize stats for selected tokens
 		selectedTokenIds.forEach((tokenId) => {
-			const isNative = tokenId.endsWith(':native');
-			const symbol = isNative
-				? currentNetwork?.symbol || 'Native'
-				: tokenId.split(':')[1] || tokenId;
+			const token = tokenMap.get(tokenId);
+			const symbol = token?.symbol || tokenId;
+			const address = token?.type === 'erc20' ? (token as ERC20Token).address : undefined;
+			const decimals = token?.decimals || 18;
 
 			stats.set(tokenId, {
 				tokenId,
 				symbol,
+				address,
+				decimals,
 				totalBalance: 0n,
 				addressCount: 0
 			});
@@ -72,12 +113,9 @@
 
 				if (balance && balance !== '0') {
 					const stat = stats.get(tokenId)!;
-					// Convert to BigInt - handle both integer strings and decimal strings
+					// Balance is stored as bigint string (smallest unit)
 					try {
-						// If balance contains decimal point, it's likely in ether units, convert to wei
-						const balanceValue = balance.includes('.')
-							? BigInt(Math.floor(parseFloat(balance) * 1e18))
-							: BigInt(balance);
+						const balanceValue = BigInt(balance);
 						stat.totalBalance += balanceValue;
 						stat.addressCount += 1;
 					} catch (e) {
@@ -144,19 +182,37 @@
 					{#each tokenStats as stat (stat.tokenId)}
 						<div class="token-stat-item">
 							<div class="token-stat-header">
-								<span class="token-symbol">{stat.symbol}</span>
+								<div class="token-info">
+									<span class="token-symbol">{stat.symbol}</span>
+									{#if stat.address}
+										{@const isCopied = copiedAddress === stat.address}
+										<button
+											class="token-address"
+											class:copied={isCopied}
+											onclick={() => copyToClipboard(stat.address!)}
+											title={isCopied ? i18n.t('common.copied') : i18n.t('common.copy_address')}
+										>
+											<span class="address-text">{formatAddress(stat.address)}</span>
+											{#if isCopied}
+												<Check size={12} />
+											{:else}
+												<Copy size={12} />
+											{/if}
+										</button>
+									{/if}
+								</div>
 								<span class="address-count">
 									{i18n.t('tools.token_sweep.step4.sidebar.token_stats.wallets_count', {
 										count: stat.addressCount.toLocaleString()
 									})}
 								</span>
 							</div>
-							<div class="token-balance">
-								{(Number(stat.totalBalance) / 1e18).toLocaleString(undefined, {
-									minimumFractionDigits: 4,
-									maximumFractionDigits: 8
-								})}
-							</div>
+							<TokenBalanceDisplay
+								balance={stat.totalBalance}
+								decimals={stat.decimals}
+								mode="compact"
+								class="token-balance"
+							/>
 						</div>
 					{/each}
 				</div>
@@ -290,8 +346,14 @@
 	.token-stat-header {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
 		margin-bottom: var(--space-1);
+	}
+
+	.token-info {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-1);
 	}
 
 	.token-symbol {
@@ -300,15 +362,54 @@
 		font-size: var(--text-sm);
 	}
 
+	.token-address {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--space-1);
+		padding: 2px var(--space-1);
+		background: transparent;
+		border: none;
+		border-radius: var(--radius-sm);
+		font-size: var(--text-xs);
+		color: var(--gray-500);
+		font-family: var(--font-mono, 'Monaco', 'Courier New', monospace);
+		cursor: pointer;
+		transition: all 0.2s;
+	}
+
+	.token-address:hover {
+		background: var(--gray-100);
+		color: var(--gray-700);
+	}
+
+	:global([data-theme='dark']) .token-address:hover {
+		background: var(--gray-700);
+		color: var(--gray-300);
+	}
+
+	.token-address.copied {
+		color: #10b981;
+		background: rgba(16, 185, 129, 0.1);
+	}
+
+	:global([data-theme='dark']) .token-address.copied {
+		color: #34d399;
+		background: rgba(52, 211, 153, 0.1);
+	}
+
+	.address-text {
+		user-select: none;
+	}
+
 	.address-count {
 		font-size: var(--text-xs);
 		color: var(--gray-500);
+		white-space: nowrap;
 	}
 
-	.token-balance {
+	:global(.token-balance) {
 		font-size: var(--text-base);
 		font-weight: var(--font-medium);
 		color: #10b981;
-		font-family: var(--font-mono, 'Monaco', 'Courier New', monospace);
 	}
 </style>

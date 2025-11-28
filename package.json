@@ -18,7 +18,8 @@
 		"test:unit": "vitest",
 		"test": "bun run test:unit -- --run && bun run test:e2e",
 		"test:e2e": "playwright test",
-		"batch-transfer": "bun run scripts/batch-transfer.ts"
+		"batch-transfer": "bun run scripts/batch-transfer.ts",
+		"batch-transfer-erc20": "bun run scripts/batch-transfer-erc20.ts"
 	},
 	"devDependencies": {
 		"wrangler": "^4.28.0",

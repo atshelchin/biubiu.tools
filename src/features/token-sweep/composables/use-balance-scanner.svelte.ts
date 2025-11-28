@@ -126,9 +126,11 @@ export function useBalanceScanner() {
 					// Format balances for storage
 					for (const balance of result.balances) {
 						if (balance.tokenId.endsWith(':native')) {
-							balances.native = balance.formatted;
+							// Store as string to maintain bigint precision
+							balances.native = balance.balance.toString();
 						} else {
-							balances.tokens![balance.tokenId] = balance.formatted;
+							// Store as string to maintain bigint precision
+							balances.tokens![balance.tokenId] = balance.balance.toString();
 						}
 					}
 
