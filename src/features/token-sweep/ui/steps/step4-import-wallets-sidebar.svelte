@@ -66,9 +66,8 @@
 				if (isNative) {
 					balance = wallet.balances?.native;
 				} else {
-					// Extract token address from tokenId (format: chainId:address)
-					const tokenAddress = tokenId.split(':')[1];
-					balance = wallet.balances?.tokens?.[tokenAddress];
+					// Use tokenId directly as the key (format: chainId:address)
+					balance = wallet.balances?.tokens?.[tokenId];
 				}
 
 				if (balance && balance !== '0') {
