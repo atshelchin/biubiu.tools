@@ -9,8 +9,32 @@ import type { ImportedWallet } from '../types/wallet';
 // Multicall3 contract address (universal across all chains)
 const MULTICALL3_ADDRESS = '0x2055A30B00555e7cAd48b1756eac4f917781489b' as Address;
 
-// Batch size for multicall queries (1000 addresses per batch)
-const BATCH_SIZE = 1000;
+// Debug mode configuration (set via environment or dev tools)
+interface DebugConfig {
+	enableRateLimitTest: boolean;
+	batchSize: number;
+}
+
+// Default debug config (can be overridden)
+let debugConfig: DebugConfig = {
+	enableRateLimitTest: false,
+	batchSize: 1000
+};
+
+// Export function to set debug config
+export function setDebugConfig(config: Partial<DebugConfig>) {
+	debugConfig = { ...debugConfig, ...config };
+	console.log('🐛 Debug config updated:', debugConfig);
+}
+
+// Get current batch size (respects debug config)
+export function getBatchSize(): number {
+	return debugConfig.batchSize;
+}
+
+// Batch size for multicall queries (1000 addresses per batch, or 1 in debug mode)
+const getBatchSizeDynamic = () => debugConfig.batchSize;
+const BATCH_SIZE = 1000; // Keep for backward compatibility
 
 // ERC20 balanceOf ABI
 const ERC20_BALANCE_ABI = [
@@ -60,6 +84,34 @@ const MULTICALL3_ABI = [
 	}
 ] as const;
 
+// Scan state for pause/resume functionality
+export interface ScanState {
+	addresses: Address[];
+	chainId: number;
+	currentTokenIndex: number; // Which token we're scanning
+	currentBatchIndex: number; // Which batch within current token
+	nativeBalances?: Map<Address, TokenBalance>;
+	tokenBalances: Map<string, Map<Address, TokenBalance>>;
+	isPaused: boolean;
+	pauseReason?: 'rate_limit' | 'user_pause' | 'error';
+	error?: string;
+}
+
+// Rate limit error detection
+export class RateLimitError extends Error {
+	constructor(message: string) {
+		super(message);
+		this.name = 'RateLimitError';
+	}
+}
+
+// Scan control interface for pause/resume
+export interface ScanControl {
+	pause: () => void;
+	resume: () => void;
+	isPaused: () => boolean;
+}
+
 export interface TokenBalance {
 	tokenId: string; // chainId:address or chainId:native
 	balance: bigint;
@@ -76,6 +128,33 @@ export interface ScanProgress {
 	current: number;
 	total: number;
 	percentage: number;
+}
+
+/**
+ * Detect if an error is caused by RPC rate limiting
+ */
+export function isRateLimitError(error: unknown): boolean {
+	if (!error) return false;
+
+	const errorStr = String(error).toLowerCase();
+	const errorMessage = error instanceof Error ? error.message.toLowerCase() : errorStr;
+
+	// Common rate limit indicators
+	const rateLimitPatterns = [
+		'rate limit',
+		'too many requests',
+		'429',
+		'quota exceeded',
+		'request limit',
+		'throttle',
+		'rate exceeded',
+		'too fast',
+		'slow down'
+	];
+
+	return rateLimitPatterns.some(
+		(pattern) => errorMessage.includes(pattern) || errorStr.includes(pattern)
+	);
 }
 
 /**
@@ -498,4 +577,289 @@ export function calculateTotalBalance(
 	}
 
 	return total;
+}
+
+/**
+ * Resumable scan balances for multiple wallets with pause/resume support
+ * This function supports pausing when rate limits are hit and resuming from where it left off
+ */
+export async function scanMultipleWalletsResumable(
+	client: PublicClient,
+	wallets: ImportedWallet[],
+	tokenAddresses: { address?: Address; decimals: number; chainId: number; tokenId: string }[],
+	chainId: number,
+	onProgress?: (progress: ScanProgress) => void,
+	onRateLimitError?: (error: RateLimitError, state: ScanState) => void,
+	initialState?: ScanState
+): Promise<{ results: Map<Address, WalletBalanceResult>; state: ScanState }> {
+	const addresses = wallets.map((w) => w.address);
+
+	// Initialize or resume from saved state
+	const state: ScanState = initialState || {
+		addresses,
+		chainId,
+		currentTokenIndex: -1, // -1 means native token
+		currentBatchIndex: 0,
+		tokenBalances: new Map(),
+		isPaused: false
+	};
+
+	const batchCount = Math.ceil(addresses.length / getBatchSize());
+	const totalTokens = 1 + tokenAddresses.filter((t) => t.address).length;
+
+	// Pause control
+	let shouldPause = false;
+	const control: ScanControl = {
+		pause: () => {
+			shouldPause = true;
+			state.isPaused = true;
+			state.pauseReason = 'user_pause';
+		},
+		resume: () => {
+			shouldPause = false;
+			state.isPaused = false;
+			state.pauseReason = undefined;
+		},
+		isPaused: () => shouldPause
+	};
+
+	try {
+		// Step 1: Scan native balances (if not already done)
+		if (state.currentTokenIndex === -1) {
+			const nativeBalances = new Map<Address, TokenBalance>();
+
+			for (let i = state.currentBatchIndex; i < batchCount; i++) {
+				if (shouldPause) {
+					state.currentBatchIndex = i;
+					break;
+				}
+
+				const batchStart = i * getBatchSize();
+				const batch = addresses.slice(batchStart, batchStart + getBatchSize());
+				const calls = batch.map((address) => ({
+					target: MULTICALL3_ADDRESS,
+					allowFailure: true,
+					callData: encodeFunctionData({
+						abi: MULTICALL3_ABI,
+						functionName: 'getEthBalance',
+						args: [address]
+					})
+				}));
+
+				try {
+					// @ts-ignore
+					const response = (await (client as any).readContract({
+						address: MULTICALL3_ADDRESS,
+						abi: MULTICALL3_ABI,
+						functionName: 'aggregate3',
+						args: [calls]
+					})) as unknown as Array<{ success: boolean; returnData: string }>;
+
+					batch.forEach((address, index) => {
+						const result = response[index];
+						let balance = 0n;
+						if (result.success && result.returnData !== '0x') {
+							try {
+								balance = decodeFunctionResult({
+									abi: MULTICALL3_ABI,
+									functionName: 'getEthBalance',
+									data: result.returnData as `0x${string}`
+								}) as bigint;
+							} catch (e) {
+								console.warn(`Failed to decode balance for ${address}:`, e);
+							}
+						}
+						nativeBalances.set(address, {
+							tokenId: `${chainId}:native`,
+							balance,
+							formatted: formatBalance(balance, 18)
+						});
+					});
+
+					// Update progress
+					if (onProgress) {
+						const completedBatches = i + 1;
+						onProgress({
+							current: completedBatches,
+							total: batchCount * totalTokens,
+							percentage: Math.round((completedBatches / (batchCount * totalTokens)) * 100)
+						});
+					}
+				} catch (error) {
+					if (isRateLimitError(error)) {
+						state.isPaused = true;
+						state.pauseReason = 'rate_limit';
+						state.currentBatchIndex = i;
+						state.nativeBalances = nativeBalances;
+						const rateLimitError = new RateLimitError(
+							`RPC rate limit detected while scanning native balances at batch ${i + 1}/${batchCount}`
+						);
+						if (onRateLimitError) {
+							onRateLimitError(rateLimitError, state);
+						}
+						throw rateLimitError;
+					}
+					throw error;
+				}
+			}
+
+			state.nativeBalances = nativeBalances;
+			if (!shouldPause) {
+				state.currentTokenIndex = 0;
+				state.currentBatchIndex = 0;
+			}
+		}
+
+		// Step 2: Scan ERC20 tokens
+		const erc20Tokens = tokenAddresses.filter((t) => t.address);
+		for (
+			let tokenIdx = Math.max(0, state.currentTokenIndex);
+			tokenIdx < erc20Tokens.length;
+			tokenIdx++
+		) {
+			if (shouldPause) {
+				state.currentTokenIndex = tokenIdx;
+				break;
+			}
+
+			const token = erc20Tokens[tokenIdx];
+			if (!token.address) continue;
+
+			const tokenBalances =
+				state.tokenBalances.get(token.tokenId) || new Map<Address, TokenBalance>();
+
+			for (let i = state.currentBatchIndex; i < batchCount; i++) {
+				if (shouldPause) {
+					state.currentTokenIndex = tokenIdx;
+					state.currentBatchIndex = i;
+					break;
+				}
+
+				const batchStart = i * getBatchSize();
+				const batch = addresses.slice(batchStart, batchStart + getBatchSize());
+				const calls = batch.map((address) => ({
+					target: token.address!,
+					allowFailure: true,
+					callData: encodeFunctionData({
+						abi: ERC20_BALANCE_ABI,
+						functionName: 'balanceOf',
+						args: [address]
+					})
+				}));
+
+				try {
+					// @ts-ignore
+					const response = (await (client as any).readContract({
+						address: MULTICALL3_ADDRESS,
+						abi: MULTICALL3_ABI,
+						functionName: 'aggregate3',
+						args: [calls]
+					})) as unknown as Array<{ success: boolean; returnData: string }>;
+
+					batch.forEach((address, index) => {
+						const result = response[index];
+						let balance = 0n;
+						if (result.success && result.returnData !== '0x') {
+							try {
+								balance = decodeFunctionResult({
+									abi: ERC20_BALANCE_ABI,
+									functionName: 'balanceOf',
+									data: result.returnData as `0x${string}`
+								}) as bigint;
+							} catch (e) {
+								console.warn(`Failed to decode ERC20 balance for ${address}:`, e);
+							}
+						}
+						tokenBalances.set(address, {
+							tokenId: token.tokenId,
+							balance,
+							formatted: formatBalance(balance, token.decimals)
+						});
+					});
+
+					// Update progress
+					if (onProgress) {
+						const completedBatches = batchCount + tokenIdx * batchCount + (i + 1);
+						onProgress({
+							current: completedBatches,
+							total: batchCount * totalTokens,
+							percentage: Math.round((completedBatches / (batchCount * totalTokens)) * 100)
+						});
+					}
+				} catch (error) {
+					if (isRateLimitError(error)) {
+						state.isPaused = true;
+						state.pauseReason = 'rate_limit';
+						state.currentTokenIndex = tokenIdx;
+						state.currentBatchIndex = i;
+						state.tokenBalances.set(token.tokenId, tokenBalances);
+						const rateLimitError = new RateLimitError(
+							`RPC rate limit detected while scanning ${token.tokenId} at batch ${i + 1}/${batchCount}`
+						);
+						if (onRateLimitError) {
+							onRateLimitError(rateLimitError, state);
+						}
+						throw rateLimitError;
+					}
+					throw error;
+				}
+			}
+
+			state.tokenBalances.set(token.tokenId, tokenBalances);
+			if (!shouldPause) {
+				state.currentBatchIndex = 0; // Reset for next token
+			}
+		}
+
+		// Combine results
+		const results = new Map<Address, WalletBalanceResult>();
+		for (const wallet of wallets) {
+			const balances: TokenBalance[] = [];
+
+			// Add native balance
+			if (state.nativeBalances) {
+				const nativeBalance = state.nativeBalances.get(wallet.address);
+				if (nativeBalance) {
+					balances.push(nativeBalance);
+				}
+			}
+
+			// Add ERC20 balances
+			for (const [tokenId, tokenBalances] of state.tokenBalances.entries()) {
+				const balance = tokenBalances.get(wallet.address);
+				if (balance) {
+					balances.push(balance);
+				}
+			}
+
+			const hasBalance = balances.some((b) => b.balance > 0n);
+			results.set(wallet.address, {
+				address: wallet.address,
+				balances,
+				hasBalance
+			});
+		}
+
+		return { results, state };
+	} catch (error) {
+		if (error instanceof RateLimitError) {
+			// Return partial results with current state
+			const results = new Map<Address, WalletBalanceResult>();
+			for (const wallet of wallets) {
+				const balances: TokenBalance[] = [];
+				if (state.nativeBalances) {
+					const nativeBalance = state.nativeBalances.get(wallet.address);
+					if (nativeBalance) balances.push(nativeBalance);
+				}
+				for (const [tokenId, tokenBalances] of state.tokenBalances.entries()) {
+					const balance = tokenBalances.get(wallet.address);
+					if (balance) balances.push(balance);
+				}
+				const hasBalance = balances.some((b) => b.balance > 0n);
+				results.set(wallet.address, { address: wallet.address, balances, hasBalance });
+			}
+			return { results, state };
+		}
+		throw error;
+	}
 }
