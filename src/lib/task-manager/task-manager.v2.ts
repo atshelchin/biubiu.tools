@@ -204,10 +204,6 @@ export async function pauseTask(
 	task.pausedAt = Date.now();
 	task.updatedAt = Date.now();
 
-	if (message) {
-		task.errors.push(message);
-	}
-
 	// Pause all descendants if requested
 	if (pauseDescendants) {
 		traverseTree(task, (descendant) => {
@@ -235,7 +231,6 @@ export async function resumeTask(rootTask: Task, taskId: string): Promise<Task> 
 	task.isPaused = false;
 	task.pauseReason = undefined;
 	task.pauseMessage = undefined;
-	task.status = task.completedLeaves > 0 ? 'running' : 'pending';
 	task.pausedAt = undefined;
 	task.updatedAt = Date.now();
 
@@ -244,11 +239,13 @@ export async function resumeTask(rootTask: Task, taskId: string): Promise<Task> 
 		if (descendant.isPaused) {
 			descendant.isPaused = false;
 			descendant.pauseReason = undefined;
-			descendant.status = descendant.status === 'paused' ? 'pending' : descendant.status;
+			descendant.pauseMessage = undefined;
+			descendant.pausedAt = undefined;
 			descendant.updatedAt = Date.now();
 		}
 	});
 
+	// Update statistics will recalculate the correct status based on children
 	updateStatistics(rootTask);
 	await db.saveTask(rootTask);
 
@@ -353,7 +350,15 @@ export async function executeTask(
 					leafTask.updatedAt = Date.now();
 					updateStatistics(rootTask);
 					await db.saveTask(rootTask);
-					onProgress?.(rootTask, leafTask);
+
+					// Call progress callback with error handling
+					if (onProgress) {
+						try {
+							onProgress(rootTask, leafTask);
+						} catch (error) {
+							console.error('Error in onProgress callback:', error);
+						}
+					}
 				},
 				updateTaskState: async (state: Record<string, unknown>) => {
 					leafTask.state = { ...leafTask.state, ...state };
@@ -368,7 +373,15 @@ export async function executeTask(
 					leafTask.updatedAt = Date.now();
 					updateStatistics(rootTask);
 					await db.saveTask(rootTask);
-					onProgress?.(rootTask, leafTask);
+
+					// Call progress callback with error handling
+					if (onProgress) {
+						try {
+							onProgress(rootTask, leafTask);
+						} catch (error) {
+							console.error('Error in onProgress callback:', error);
+						}
+					}
 				},
 				failTask: async (error: string) => {
 					leafTask.status = 'failed';
@@ -378,7 +391,15 @@ export async function executeTask(
 					leafTask.errors.push(error);
 					updateStatistics(rootTask);
 					await db.saveTask(rootTask);
-					onProgress?.(rootTask, leafTask);
+
+					// Call progress callback with error handling
+					if (onProgress) {
+						try {
+							onProgress(rootTask, leafTask);
+						} catch (error) {
+							console.error('Error in onProgress callback:', error);
+						}
+					}
 				},
 				pauseParent: async (reason: PauseReason, message: string) => {
 					if (parentTask) {
