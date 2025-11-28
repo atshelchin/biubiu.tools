@@ -446,6 +446,16 @@
 				"confirm_clear": "Are you sure you want to clear the temporary wallet? Make sure you have downloaded the private key if needed."
 			},
 			"step4": {
+				"import_method": {
+					"mnemonic": {
+						"label": "Mnemonic Phrase",
+						"desc": "Batch derive addresses"
+					},
+					"private_key": {
+						"label": "Private Keys",
+						"desc": "Import one by one"
+					}
+				},
 				"content": {
 					"title": "Import Wallets",
 					"description": "Add source wallets that you want to sweep assets from",

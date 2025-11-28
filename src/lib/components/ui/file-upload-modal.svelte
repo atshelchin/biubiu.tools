@@ -385,12 +385,12 @@
 
 	let canConfirm = $derived.by(() => {
 		if (!uploadedFile) return false;
-		if (parseMode === 'text') return true; // Text mode
-		if (columnCount === 1) return true; // Text mode
+		// Text mode - no column selection required
+		if (columnCount === 0 || parseMode === 'text') return true;
+		// Table mode - all columns must be selected
 		if (selectedColumns.size !== columnCount) return false;
 		// Check all positions are filled
 		for (let i = 1; i <= columnCount; i++) {
-			console.log(123, !isPositionAssigned(i));
 			if (!isPositionAssigned(i)) return false;
 		}
 		return true;

@@ -446,6 +446,16 @@
 				"confirm_clear": "确定要清除临时钱包吗？如果需要，请确保已下载私钥。"
 			},
 			"step4": {
+				"import_method": {
+					"mnemonic": {
+						"label": "助记词",
+						"desc": "批量派生地址"
+					},
+					"private_key": {
+						"label": "私钥",
+						"desc": "逐一导入"
+					}
+				},
 				"content": {
 					"title": "导入钱包",
 					"description": "添加要清扫资产的源钱包",

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { useI18n } from '@shelchin/i18n/svelte';
 	import type { ImportMethod } from '../../types/wallet';
 
 	interface Props {
@@ -7,6 +8,8 @@
 	}
 
 	let { selected = $bindable(), onSelect }: Props = $props();
+
+	const i18n = useI18n();
 
 	function handleSelect(method: ImportMethod) {
 		selected = method;
@@ -22,8 +25,8 @@
 	>
 		<div class="method-icon">🔐</div>
 		<div class="method-content">
-			<div class="method-label">Mnemonic Phrase</div>
-			<div class="method-desc">Batch derive addresses</div>
+			<div class="method-label">{i18n.t('tools.token_sweep.step4.import_method.mnemonic.label')}</div>
+			<div class="method-desc">{i18n.t('tools.token_sweep.step4.import_method.mnemonic.desc')}</div>
 		</div>
 	</button>
 
@@ -34,8 +37,8 @@
 	>
 		<div class="method-icon">🔑</div>
 		<div class="method-content">
-			<div class="method-label">Private Keys</div>
-			<div class="method-desc">Import one by one</div>
+			<div class="method-label">{i18n.t('tools.token_sweep.step4.import_method.private_key.label')}</div>
+			<div class="method-desc">{i18n.t('tools.token_sweep.step4.import_method.private_key.desc')}</div>
 		</div>
 	</button>
 </div>

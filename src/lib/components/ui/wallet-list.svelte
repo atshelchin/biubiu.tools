@@ -91,8 +91,10 @@
 	{:else}
 		<!-- Wallet List -->
 		<div class="wallet-list">
-			{#each paginatedWallets as wallet (wallet.id)}
+			{#each paginatedWallets as wallet, index (wallet.id)}
+				{@const globalIndex = startIndex + index + 1}
 				<div class="wallet-item" transition:slide={{ duration: 200 }}>
+					<div class="wallet-number">{globalIndex}</div>
 					<div class="wallet-info">
 						<code class="wallet-address">{wallet.address}</code>
 						{#if showDerivationPath && wallet.derivationPath}
@@ -282,6 +284,19 @@
 
 	:global([data-theme='dark']) .wallet-item:hover {
 		background: rgba(255, 255, 255, 0.02);
+	}
+
+	.wallet-number {
+		flex-shrink: 0;
+		width: 40px;
+		font-size: var(--text-sm);
+		font-weight: var(--font-semibold);
+		color: var(--gray-500);
+		text-align: center;
+	}
+
+	:global([data-theme='dark']) .wallet-number {
+		color: var(--gray-400);
 	}
 
 	.wallet-info {
