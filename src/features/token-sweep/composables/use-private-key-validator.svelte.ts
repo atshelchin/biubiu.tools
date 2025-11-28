@@ -15,13 +15,24 @@ export function usePrivateKeyValidator() {
 
 	// Initialize worker
 	function initWorker() {
-		if (typeof window === 'undefined') return;
+		if (typeof window === 'undefined') return null;
 
 		if (!worker) {
-			worker = new Worker(
-				new URL('$lib/workers/private-key-validator.worker.ts', import.meta.url),
-				{ type: 'module' }
-			);
+			try {
+				worker = new Worker(
+					new URL('$lib/workers/private-key-validator.worker.ts', import.meta.url),
+					{ type: 'module' }
+				);
+
+				worker.onerror = (error) => {
+					console.error('❌ Worker error:', error);
+				};
+
+				console.log('✅ Private key validator worker initialized');
+			} catch (error) {
+				console.error('❌ Failed to initialize worker:', error);
+				return null;
+			}
 		}
 
 		return worker;
@@ -42,7 +53,12 @@ export function usePrivateKeyValidator() {
 		// Set new timer
 		debounceTimer = setTimeout(() => {
 			const w = initWorker();
-			if (!w) return;
+			if (!w) {
+				console.warn('⚠️ Worker not available, skipping validation');
+				// Fallback: just return the previous invalid keys
+				onResult(previousInvalidKeys);
+				return;
+			}
 
 			isValidating = true;
 
@@ -57,14 +73,24 @@ export function usePrivateKeyValidator() {
 
 			w.addEventListener('message', handleMessage);
 
-			// Send validation request
+			// Send validation request - ensure data is serializable
 			const request: ValidateRequest = {
 				type: 'validate',
 				lines: currentLines,
-				previousInvalidKeys
+				previousInvalidKeys: previousInvalidKeys.map((k) => ({
+					key: k.key,
+					reason: k.reason
+				}))
 			};
 
-			w.postMessage(request);
+			try {
+				w.postMessage(request);
+			} catch (error) {
+				console.error('❌ Failed to post message to worker:', error);
+				isValidating = false;
+				// Fallback: return previous keys
+				onResult(previousInvalidKeys);
+			}
 		}, debounceMs);
 	}
 

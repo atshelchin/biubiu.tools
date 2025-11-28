@@ -1,14 +1,12 @@
 <script lang="ts">
 	import SimpleCodeEditor from '$lib/components/widgets/SimpleCodeEditor.svelte';
 	import VirtualList from '$lib/components/ui/virtual-list.svelte';
-	import { AlertCircle, Loader2 } from '@lucide/svelte';
+	import { AlertCircle } from '@lucide/svelte';
 	import { slide } from 'svelte/transition';
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import { EditorView } from 'codemirror';
 	import { Decoration, type DecorationSet } from '@codemirror/view';
 	import { StateField, StateEffect } from '@codemirror/state';
-	import { usePrivateKeyValidator } from '@/features/token-sweep/composables/use-private-key-validator.svelte';
-	import { onDestroy } from 'svelte';
 
 	interface InvalidKey {
 		key: string; // The invalid private key string
@@ -25,90 +23,10 @@
 	let { value = $bindable(''), placeholder = '', rows = 20, invalidKeys = [] }: Props = $props();
 
 	const i18n = useI18n();
-	const validator = usePrivateKeyValidator();
 	let editorView: EditorView | null = $state(null);
 
-	// Track currently displayed invalid keys (filtered from props based on current editor content)
-	let displayedInvalidKeys = $state<InvalidKey[]>([]);
-
-	// Track viewport position for large file optimization
-	let viewportTrigger = $state(0); // Changed to trigger re-validation on scroll
-
-	// Watch for changes in value, invalidKeys, and viewport to update displayed errors
-	$effect(() => {
-		// Access viewportTrigger to make this effect reactive to scroll
-		viewportTrigger;
-
-		if (!editorView) {
-			// If editor not ready, show all invalid keys
-			displayedInvalidKeys = invalidKeys;
-			return;
-		}
-
-		// Get current lines in editor
-		const currentLines = value
-			.split('\n')
-			.map((line) => line.trim())
-			.filter(Boolean);
-
-		// For large files (>5000 lines), only validate visible viewport lines
-		if (currentLines.length > 5000) {
-			console.info(
-				`📊 Large file detected (${currentLines.length} lines). Validating visible viewport only.`
-			);
-
-			// Get viewport info from EditorView
-			const viewport = editorView.viewport;
-			const doc = editorView.state.doc;
-
-			// Calculate visible line range (with buffer for smooth scrolling)
-			const startLine = doc.lineAt(viewport.from).number;
-			const endLine = doc.lineAt(viewport.to).number;
-			const bufferLines = 50; // Validate 50 extra lines above and below viewport
-
-			const visibleStartLine = Math.max(1, startLine - bufferLines);
-			const visibleEndLine = Math.min(doc.lines, endLine + bufferLines);
-
-			// Extract only visible lines for validation
-			const visibleLines = currentLines.slice(visibleStartLine - 1, visibleEndLine);
-
-			// Filter invalidKeys to only show those in visible range or keep original ones
-			const visibleInvalidKeys = invalidKeys.filter((invalidKey) => {
-				const trimmedKey = invalidKey.key.trim();
-				return visibleLines.includes(trimmedKey);
-			});
-
-			// Use web worker to validate visible lines only
-			validator.validateKeys(
-				visibleLines,
-				visibleInvalidKeys,
-				(result) => {
-					// Merge with original invalidKeys that are outside viewport
-					const outsideViewportKeys = invalidKeys.filter((invalidKey) => {
-						const trimmedKey = invalidKey.key.trim();
-						return !visibleLines.includes(trimmedKey);
-					});
-					displayedInvalidKeys = [...result, ...outsideViewportKeys];
-				},
-				300 // 300ms debounce
-			);
-		} else {
-			// For small files (<= 5000 lines), validate all lines
-			validator.validateKeys(
-				currentLines,
-				invalidKeys,
-				(result) => {
-					displayedInvalidKeys = result;
-				},
-				300 // 300ms debounce
-			);
-		}
-	});
-
-	// Cleanup worker on component destroy
-	onDestroy(() => {
-		validator.cleanup();
-	});
+	// Simply display the invalid keys from parent (no real-time validation)
+	let displayedInvalidKeys = $derived(invalidKeys);
 
 	// Auto-highlight all error lines when displayedInvalidKeys changes
 	$effect(() => {
@@ -171,7 +89,9 @@
 			for (const effect of tr.effects) {
 				if (effect.is(highlightEffect)) {
 					const positions = effect.value;
-					const decs = positions.map((pos) =>
+					// Sort positions to ensure decorations are in order
+					const sortedPositions = [...positions].sort((a, b) => a - b);
+					const decs = sortedPositions.map((pos) =>
 						Decoration.line({
 							attributes: { class: 'error-line' }
 						}).range(pos)
@@ -190,31 +110,6 @@
 		// Add the highlight field extension
 		editorView.dispatch({
 			effects: StateEffect.appendConfig.of([highlightField])
-		});
-
-		// Add scroll listener for large files to re-validate visible lines
-		const scrollElement = view.scrollDOM;
-		let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
-
-		const handleScroll = () => {
-			// Debounce scroll events
-			if (scrollTimeout) {
-				clearTimeout(scrollTimeout);
-			}
-			scrollTimeout = setTimeout(() => {
-				// Trigger re-validation by updating viewportTrigger
-				viewportTrigger++;
-			}, 200); // 200ms debounce for scroll
-		};
-
-		scrollElement.addEventListener('scroll', handleScroll);
-
-		// Store cleanup function
-		onDestroy(() => {
-			scrollElement.removeEventListener('scroll', handleScroll);
-			if (scrollTimeout) {
-				clearTimeout(scrollTimeout);
-			}
 		});
 	}
 
@@ -285,7 +180,7 @@
 								onclick={() => jumpToKey(invalidKey.key)}
 								title={i18n.t('tools.token_sweep.step4.content.private_key.locate_key')}
 							>
-								<Search size={16} />
+								<AlertCircle size={16} />
 								{i18n.t('tools.token_sweep.step4.content.private_key.locate')}
 							</button>
 						</div>
@@ -309,7 +204,7 @@
 								onclick={() => jumpToKey(invalidKey.key)}
 								title={i18n.t('tools.token_sweep.step4.content.private_key.locate_key')}
 							>
-								<Search size={16} />
+								<AlertCircle size={16} />
 								{i18n.t('tools.token_sweep.step4.content.private_key.locate')}
 							</button>
 						</div>

@@ -54,6 +54,7 @@ self.addEventListener('message', (event: MessageEvent<PrivateKeyImportRequest>) 
 	const { keys, batchSize = 100 } = event.data;
 	const wallets: PrivateKeyImportResult['wallets'] = [];
 	const invalidKeys: string[] = [];
+	const seenAddresses = new Set<string>(); // Track unique addresses
 
 	let processed = 0;
 	const total = keys.length;
@@ -68,7 +69,11 @@ self.addEventListener('message', (event: MessageEvent<PrivateKeyImportRequest>) 
 
 			const result = processPrivateKey(key);
 			if (result.isValid && result.wallet) {
-				wallets.push(result.wallet);
+				// Only add if we haven't seen this address before (deduplicate)
+				if (!seenAddresses.has(result.wallet.address)) {
+					seenAddresses.add(result.wallet.address);
+					wallets.push(result.wallet);
+				}
 			} else {
 				invalidKeys.push(key);
 			}

@@ -57,6 +57,47 @@
 	let hasScanned = $derived(step4State.hasScanned);
 	let walletsWithBalance = $derived(step4State.getWalletsWithBalance().length);
 
+	// Track if we've had errors before (to detect when user fixes them)
+	let hadErrors = $state(false);
+	let autoRetryTimeout: ReturnType<typeof setTimeout> | null = null;
+
+	// Watch for error fixes and auto-retry import
+	$effect(() => {
+		const currentLines = privateKeysText
+			.split('\n')
+			.map((line) => line.trim())
+			.filter(Boolean);
+
+		// Check if any invalid keys have been fixed
+		if (hadErrors && invalidPrivateKeys.length > 0) {
+			const stillInvalid = invalidPrivateKeys.filter((invalidKey) =>
+				currentLines.includes(invalidKey.key.trim())
+			);
+
+			// If some errors were removed (user fixed them), auto-retry
+			if (stillInvalid.length < invalidPrivateKeys.length) {
+				console.log(
+					`🔄 Detected ${invalidPrivateKeys.length - stillInvalid.length} fixed error(s), auto-retrying import...`
+				);
+
+				// Clear previous timeout
+				if (autoRetryTimeout) {
+					clearTimeout(autoRetryTimeout);
+				}
+
+				// Debounce auto-retry (wait 1 second after last edit)
+				autoRetryTimeout = setTimeout(() => {
+					handleImportPrivateKeys();
+				}, 1000);
+			}
+		}
+
+		// Track if we have errors
+		if (invalidPrivateKeys.length > 0) {
+			hadErrors = true;
+		}
+	});
+
 	function handleMethodSelect(method: ImportMethod) {
 		importMethod = method;
 		errorMessage = '';
