@@ -73,8 +73,18 @@
 
 				if (balance && balance !== '0') {
 					const stat = stats.get(tokenId)!;
-					stat.totalBalance += BigInt(balance);
-					stat.addressCount += 1;
+					// Convert to BigInt - handle both integer strings and decimal strings
+					try {
+						// If balance contains decimal point, it's likely in ether units, convert to wei
+						const balanceValue = balance.includes('.')
+							? BigInt(Math.floor(parseFloat(balance) * 1e18))
+							: BigInt(balance);
+						stat.totalBalance += balanceValue;
+						stat.addressCount += 1;
+					} catch (e) {
+						// Skip invalid balance values
+						console.warn(`Invalid balance value: ${balance}`, e);
+					}
 				}
 			});
 		});
@@ -129,15 +139,24 @@
 
 			{#if tokenStats.length > 0}
 				<div class="token-stats" transition:fade>
-					<h4 class="token-stats-title">Token Balances</h4>
+					<h4 class="token-stats-title">
+						{i18n.t('tools.token_sweep.step4.sidebar.token_stats.title')}
+					</h4>
 					{#each tokenStats as stat (stat.tokenId)}
 						<div class="token-stat-item">
 							<div class="token-stat-header">
 								<span class="token-symbol">{stat.symbol}</span>
-								<span class="address-count">{stat.addressCount} addresses</span>
+								<span class="address-count">
+									{i18n.t('tools.token_sweep.step4.sidebar.token_stats.wallets_count', {
+										count: stat.addressCount.toLocaleString()
+									})}
+								</span>
 							</div>
 							<div class="token-balance">
-								{(Number(stat.totalBalance) / 1e18).toFixed(4)}
+								{(Number(stat.totalBalance) / 1e18).toLocaleString(undefined, {
+									minimumFractionDigits: 4,
+									maximumFractionDigits: 8
+								})}
 							</div>
 						</div>
 					{/each}

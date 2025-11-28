@@ -472,6 +472,11 @@
 						"message": "范围太大会增加扫描时间",
 						"recommended": "推荐范围：",
 						"recommended_range": "1,000 - 10,000 个地址"
+					},
+					"token_stats": {
+						"title": "代币余额统计",
+						"wallets_count": "{count} 个钱包",
+						"total_balance": "总余额"
 					}
 				}
 			}

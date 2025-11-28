@@ -472,6 +472,11 @@
 						"message": "Large ranges will increase scanning time",
 						"recommended": "Recommended:",
 						"recommended_range": "1,000 - 10,000 addresses"
+					},
+					"token_stats": {
+						"title": "Token Balance Statistics",
+						"wallets_count": "{count} wallets",
+						"total_balance": "Total Balance"
 					}
 				}
 			}
