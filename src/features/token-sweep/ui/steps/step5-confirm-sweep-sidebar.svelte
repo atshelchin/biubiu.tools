@@ -5,12 +5,17 @@
 	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
 	import StepSummary from '@/features/token-sweep/ui/components/step-summary.svelte';
 	import MembershipPromo from '@/features/token-sweep/ui/components/membership-promo.svelte';
+	import TokenBalanceDisplay from '$lib/components/ui/token-balance-display.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
+	import { SvelteMap } from 'svelte/reactivity';
+	import type { ERC20Token } from '$lib/types/token';
+	import { fade } from 'svelte/transition';
 
 	const i18n = useI18n();
 	const connectStore = useConnectStore();
 
 	// Derived from Step 3 (selected tokens)
+	let selectedTokenIds = $derived(step3State.getSelectedTokens());
 	let selectedTokenCount = $derived(step3State.getSelectedCount());
 
 	// Derived from Step 4 (imported wallets)
@@ -25,6 +30,82 @@
 	let currentNetwork = $derived.by(() => {
 		if (!connectStore.currentChainId) return null;
 		return connectStore.networks.find((n) => n.chainId === connectStore.currentChainId);
+	});
+
+	// Calculate token balance statistics
+	interface TokenStats {
+		tokenId: string;
+		symbol: string;
+		address?: string;
+		decimals: number;
+		totalBalance: bigint;
+		addressCount: number;
+	}
+
+	let tokenStats = $derived.by(() => {
+		if (!hasScanned || walletCount === 0) return [];
+
+		// Get all available tokens to find symbol and address
+		const availableTokens = currentNetwork
+			? step3State.getAvailableTokens(
+					currentNetwork.chainId,
+					currentNetwork.symbol,
+					currentNetwork.name
+				)
+			: [];
+
+		const tokenMap = new Map(availableTokens.map((t) => [t.id, t]));
+
+		const stats = new SvelteMap<string, TokenStats>();
+
+		// Initialize stats for selected tokens
+		selectedTokenIds.forEach((tokenId) => {
+			const token = tokenMap.get(tokenId);
+			const symbol = token?.symbol || tokenId;
+			const address = token?.type === 'erc20' ? (token as ERC20Token).address : undefined;
+			const decimals = token?.decimals || 18;
+
+			stats.set(tokenId, {
+				tokenId,
+				symbol,
+				address,
+				decimals,
+				totalBalance: 0n,
+				addressCount: 0
+			});
+		});
+
+		// Calculate balances for each wallet
+		importedWallets.forEach((wallet) => {
+			if (!wallet.balances) return;
+
+			selectedTokenIds.forEach((tokenId) => {
+				const isNative = tokenId.endsWith(':native');
+				let balance: string | undefined;
+
+				if (isNative) {
+					balance = wallet.balances?.native;
+				} else {
+					// Use tokenId directly as the key (format: chainId:address)
+					balance = wallet.balances?.tokens?.[tokenId];
+				}
+
+				if (balance && balance !== '0') {
+					const stat = stats.get(tokenId)!;
+					// Balance is stored as bigint string (smallest unit)
+					try {
+						const balanceValue = BigInt(balance);
+						stat.totalBalance += balanceValue;
+						stat.addressCount += 1;
+					} catch (e) {
+						// Skip invalid balance values
+						console.warn(`Invalid balance value: ${balance}`, e);
+					}
+				}
+			});
+		});
+
+		return Array.from(stats.values()).filter((s) => s.addressCount > 0);
 	});
 </script>
 
@@ -50,6 +131,33 @@
 		</div>
 	</StepSummary>
 
+	<!-- Token Balance Statistics -->
+	{#if tokenStats.length > 0}
+		<div class="token-stats" transition:fade>
+			<h4 class="token-stats-title">
+				{i18n.t('tools.token_sweep.step4.sidebar.token_stats.title')}
+			</h4>
+			{#each tokenStats as stat (stat.tokenId)}
+				<div class="token-stat-item">
+					<div class="token-stat-header">
+						<span class="token-symbol">{stat.symbol}</span>
+						<span class="address-count">
+							{i18n.t('tools.token_sweep.step4.sidebar.token_stats.wallets_count', {
+								count: stat.addressCount.toLocaleString()
+							})}
+						</span>
+					</div>
+					<TokenBalanceDisplay
+						balance={stat.totalBalance}
+						decimals={stat.decimals}
+						mode="compact"
+						class="token-balance"
+					/>
+				</div>
+			{/each}
+		</div>
+	{/if}
+
 	<!-- Membership Promo -->
 	<div class="promo-section">
 		<MembershipPromo
@@ -61,6 +169,65 @@
 
 <style>
 	.balance-highlight {
+		color: #10b981;
+	}
+
+	.token-stats {
+		margin-top: var(--space-4);
+		padding: var(--space-4);
+		background: var(--gray-50);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-lg);
+	}
+
+	:global([data-theme='dark']) .token-stats {
+		background: var(--gray-800);
+		border-color: var(--gray-700);
+	}
+
+	.token-stats-title {
+		font-size: var(--text-sm);
+		font-weight: var(--font-semibold);
+		color: var(--color-heading-2);
+		margin: 0 0 var(--space-3) 0;
+	}
+
+	.token-stat-item {
+		padding: var(--space-2) 0;
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.token-stat-item:last-child {
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+
+	.token-stat-item:first-child {
+		padding-top: 0;
+	}
+
+	.token-stat-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: var(--space-1);
+	}
+
+	.token-symbol {
+		font-weight: var(--font-semibold);
+		color: var(--color-heading-2);
+		font-size: var(--text-sm);
+	}
+
+	.address-count {
+		font-size: var(--text-xs);
+		color: var(--gray-500);
+		white-space: nowrap;
+	}
+
+	:global(.token-balance) {
+		font-size: var(--text-base);
+		font-weight: var(--font-medium);
 		color: #10b981;
 	}
 
