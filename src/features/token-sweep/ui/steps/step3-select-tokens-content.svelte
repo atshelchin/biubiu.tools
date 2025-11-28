@@ -37,6 +37,20 @@
 		}
 	}
 
+	// Auto-select native token when network changes or on first load
+	$effect(() => {
+		if (currentNetwork && connectStore.currentChainId) {
+			const nativeTokenId = `${connectStore.currentChainId}:native`;
+
+			// Auto-select native token if not already selected
+			if (!step3State.selectedTokenIds.has(nativeTokenId)) {
+				step3State.selectedTokenIds.add(nativeTokenId);
+				// Trigger reactivity
+				step3State.selectedTokenIds = new SvelteSet(step3State.selectedTokenIds);
+			}
+		}
+	});
+
 	$effect(() => {
 		console.log('step3', step3State.selectedTokenIds);
 	});
