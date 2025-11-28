@@ -35,9 +35,11 @@
 ## 2. 修复余额过滤逻辑
 
 ### 当前问题
+
 `onlyWithBalance` 过滤逻辑使用 `step4State.getWalletsWithBalance()`，它只检查钱包是否有**任何**代币的余额。
 
 ### 期望行为
+
 只跳过**所有选中代币余额都为 0** 的钱包。
 
 ### 修改方案
@@ -47,45 +49,42 @@
 ```typescript
 // 过滤出至少有一个选中代币余额的钱包
 function getWalletsWithSelectedTokenBalance() {
-  return importedWallets.filter((wallet) => {
-    if (!wallet.balances) return false;
+	return importedWallets.filter((wallet) => {
+		if (!wallet.balances) return false;
 
-    // 检查是否至少有一个选中的代币有余额
-    return selectedTokenIds.some((tokenId) => {
-      const isNative = tokenId.endsWith(':native');
-      const balance = isNative
-        ? wallet.balances?.native
-        : wallet.balances?.tokens?.[tokenId];
+		// 检查是否至少有一个选中的代币有余额
+		return selectedTokenIds.some((tokenId) => {
+			const isNative = tokenId.endsWith(':native');
+			const balance = isNative ? wallet.balances?.native : wallet.balances?.tokens?.[tokenId];
 
-      return balance && balance !== '0';
-    });
-  });
+			return balance && balance !== '0';
+		});
+	});
 }
 ```
 
 2. 更新使用处：
+
 ```typescript
-const walletsToSweep = onlyWithBalance
-  ? getWalletsWithSelectedTokenBalance()
-  : importedWallets;
+const walletsToSweep = onlyWithBalance ? getWalletsWithSelectedTokenBalance() : importedWallets;
 ```
 
 ## 3. Step4 必须扫描余额才能进入 Step5
 
 ### 修改文件
+
 - `src/features/token-sweep/ui/steps/step4-import-wallets-footer.svelte`
 
 ### 修改方案
 
 ```typescript
 let canContinue = $derived(
-  walletCount > 0 &&
-  selectedTokenCount > 0 &&
-  hasScanned  // 添加此条件：必须已扫描余额
+	walletCount > 0 && selectedTokenCount > 0 && hasScanned // 添加此条件：必须已扫描余额
 );
 ```
 
 添加提示信息：
+
 - 如果 `!hasScanned`，显示 "Please scan wallet balances before continuing"
 - 禁用 Continue 按钮直到扫描完成
 

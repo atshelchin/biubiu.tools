@@ -327,7 +327,7 @@
 	}
 
 	function generateOutputContent(): string {
-		if (columnCount === 0 || tableHeaders.length === 0) {
+		if (columnCount <= 1 || tableHeaders.length === 0 || parseMode === 'text') {
 			// Pure text mode
 			return fileContent;
 		}
@@ -385,10 +385,12 @@
 
 	let canConfirm = $derived.by(() => {
 		if (!uploadedFile) return false;
-		if (columnCount === 0) return true; // Text mode
+		if (parseMode === 'text') return true; // Text mode
+		if (columnCount === 1) return true; // Text mode
 		if (selectedColumns.size !== columnCount) return false;
 		// Check all positions are filled
 		for (let i = 1; i <= columnCount; i++) {
+			console.log(123, !isPositionAssigned(i));
 			if (!isPositionAssigned(i)) return false;
 		}
 		return true;
@@ -455,7 +457,7 @@
 
 			{#if isProcessing}
 				<div class="processing">{i18n.t('components.file_upload.processing')}</div>
-			{:else if tableHeaders.length > 0 && (parseMode === 'table' || columnCount > 0)}
+			{:else if tableHeaders.length > 0 && parseMode === 'table'}
 				<!-- Table preview with column selection -->
 				<div class="table-section">
 					<div class="section-title">{i18n.t('components.file_upload.preview_title')}</div>
