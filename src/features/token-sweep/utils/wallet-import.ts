@@ -74,10 +74,11 @@ function generateDateIndices(startDate: string, endDate: string, format: DateFor
 		}
 	} else {
 		// Generate one index per day
-		for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
-			const year = d.getFullYear();
-			const month = d.getMonth() + 1;
-			const day = d.getDate();
+		const currentDate = new Date(start);
+		while (currentDate <= end) {
+			const year = currentDate.getFullYear();
+			const month = currentDate.getMonth() + 1;
+			const day = currentDate.getDate();
 
 			let index: number;
 			if (format === 'yyyymmdd') {
@@ -89,6 +90,9 @@ function generateDateIndices(startDate: string, endDate: string, format: DateFor
 				index = parseInt(dateStr, 10);
 			}
 			indices.push(index);
+
+			// Move to next day
+			currentDate.setDate(currentDate.getDate() + 1);
 		}
 	}
 

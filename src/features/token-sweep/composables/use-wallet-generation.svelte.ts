@@ -52,9 +52,9 @@ export function useWalletGeneration() {
 						// Split date range across workers
 						const startDate = new SvelteDate(data.startDate!);
 						const endDate = new SvelteDate(data.endDate!);
-						const totalDays = Math.ceil(
-							(endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)
-						);
+						// +1 to include both start and end dates
+						const totalDays =
+							Math.ceil((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)) + 1;
 						const daysPerWorker = Math.floor(totalDays / totalWorkers);
 						const remainder = totalDays % totalWorkers;
 

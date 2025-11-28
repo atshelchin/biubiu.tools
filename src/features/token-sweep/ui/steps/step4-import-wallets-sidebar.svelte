@@ -88,7 +88,9 @@
 	{#if walletCount > 10000}
 		<div class="performance-tip-card" transition:fade>
 			<div class="tip-header">
-				<span class="tip-title">{i18n.t('tools.token_sweep.step4.sidebar.performance_tip.title')}</span>
+				<span class="tip-title"
+					>{i18n.t('tools.token_sweep.step4.sidebar.performance_tip.title')}</span
+				>
 			</div>
 			<p class="tip-message">
 				{i18n.t('tools.token_sweep.step4.sidebar.performance_tip.message')}

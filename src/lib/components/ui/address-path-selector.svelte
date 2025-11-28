@@ -193,8 +193,7 @@
 		<div class="controls-section" transition:slide={{ duration: 300 }}>
 			<!-- Quick Presets -->
 			<div class="presets-row">
-				<span class="presets-label"
-					>{i18n.t('components.address_path_selector.quick_select')}:</span
+				<span class="presets-label">{i18n.t('components.address_path_selector.quick_select')}:</span
 				>
 				<div class="presets-buttons">
 					{#each sequentialPresets as preset (preset.value)}
@@ -237,9 +236,7 @@
 
 			<!-- Address Count Display -->
 			<div class="count-display" class:warning={isOverLimit}>
-				<span class="count-label"
-					>{i18n.t('components.address_path_selector.will_generate')}:</span
-				>
+				<span class="count-label">{i18n.t('components.address_path_selector.will_generate')}:</span>
 				<span class="count-value">{addressCount()}</span>
 				<span class="count-unit">{i18n.t('components.address_path_selector.addresses')}</span>
 				{#if isOverLimit}
@@ -258,8 +255,7 @@
 		<div class="controls-section" transition:slide={{ duration: 300 }}>
 			<!-- Quick Presets -->
 			<div class="presets-row">
-				<span class="presets-label"
-					>{i18n.t('components.address_path_selector.quick_select')}:</span
+				<span class="presets-label">{i18n.t('components.address_path_selector.quick_select')}:</span
 				>
 				<div class="presets-buttons">
 					{#each datePresets as preset (preset.years)}
@@ -273,8 +269,7 @@
 			<!-- Year Range Inputs -->
 			<div class="range-inputs">
 				<div class="input-group">
-					<label for="start-year">{i18n.t('components.address_path_selector.from_year')}</label
-					>
+					<label for="start-year">{i18n.t('components.address_path_selector.from_year')}</label>
 					<input
 						id="start-year"
 						type="number"
@@ -307,7 +302,8 @@
 				<span class="preview-example">
 					{i18n.t('components.address_path_selector.example')}: {startYear}0101 {i18n.t(
 						'components.address_path_selector.to'
-					)} {endYear}1231
+					)}
+					{endYear}1231
 				</span>
 			</div>
 

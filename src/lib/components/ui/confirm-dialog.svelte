@@ -81,7 +81,12 @@
 							onComplete: handleLongPressComplete
 						}}
 					>
-						<button type="button" class="btn-primary" class:danger={variant === 'danger'}>
+						<button
+							type="button"
+							style="width:100%"
+							class="btn-primary"
+							class:danger={variant === 'danger'}
+						>
 							{confirmText}
 						</button>
 						{#if isPressing && longPressProgress > 0}
