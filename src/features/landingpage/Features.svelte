@@ -287,7 +287,7 @@
 		margin: 0 auto;
 		width: 100%;
 		z-index: 1;
-		padding: 0 var(--space-6);
+		/* padding: 0 var(--space-6); */
 	}
 
 	/* Header with proper spacing */
