@@ -85,14 +85,14 @@
 	}
 
 	.footer-section {
-		/* background: var(--color-card); */
-		/* padding: var(--space-4) var(--space-4); */
-		/* border-radius: var(--radius-lg); */
-		/* border: 1px solid var(--color-border); */
+		/* footer-section 作为容器不添加背景，保持透明 */
+		/* 让内部内容（如 FAQs）自己控制宽度和样式 */
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-top: 16px;
+		justify-content: center;
+		align-items: flex-start;
+		margin-top: var(--space-8);
+		padding: var(--space-6) 0;
+		width: 100%;
 	}
 
 	@media (max-width: 768px) {
@@ -103,6 +103,8 @@
 		.footer-section {
 			flex-direction: column;
 			gap: var(--space-3);
+			padding: var(--space-4) var(--space-3);
+			margin-top: var(--space-6);
 		}
 	}
 </style>
