@@ -32,6 +32,22 @@
 	): StepManager {
 		let currentStep = $state(initialStep);
 
+		// Helper function to scroll to content area
+		function scrollToContent() {
+			// Use requestAnimationFrame to ensure DOM has updated
+			requestAnimationFrame(() => {
+				// Try to find the main content area (in order of preference)
+				const contentArea = document.querySelector('.main-content, .page-content, main');
+				if (contentArea) {
+					// Scroll the content area into view at the top
+					contentArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+				} else {
+					// Fallback: scroll to top of page
+					window.scrollTo({ top: 0, behavior: 'smooth' });
+				}
+			});
+		}
+
 		const manager = {
 			get steps() {
 				return steps;
@@ -43,16 +59,19 @@
 			next() {
 				if (currentStep < steps.length) {
 					currentStep++;
+					scrollToContent();
 				}
 			},
 			prev() {
 				if (currentStep > 1) {
 					currentStep--;
+					scrollToContent();
 				}
 			},
 			goTo(step: number) {
 				if (step >= 1 && step <= steps.length) {
 					currentStep = step;
+					scrollToContent();
 				}
 			},
 			reset() {

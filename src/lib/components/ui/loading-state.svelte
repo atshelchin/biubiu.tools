@@ -27,7 +27,7 @@
 		background: var(--color-panel-1);
 		border-radius: var(--radius-lg);
 		border: 2px solid var(--color-border);
-		min-height: 300px;
+		min-height: 250px;
 	}
 
 	.loading-spinner {
