@@ -360,32 +360,39 @@
 		color: var(--color-description-3);
 	}
 
-	/* Grid with generous spacing */
+	/* Grid with compact spacing - 3 columns */
 	.tools-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-		gap: var(--space-12);
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: var(--space-6);
 		padding: 0;
+	}
+
+	@media (min-width: 768px) {
+		.tools-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: var(--space-8);
+		}
 	}
 
 	@media (min-width: 1024px) {
 		.tools-grid {
-			grid-template-columns: repeat(2, 1fr);
-			gap: var(--space-16);
+			grid-template-columns: repeat(3, 1fr);
+			gap: var(--space-6);
 		}
 	}
 
-	/* Card with proper layer hierarchy */
+	/* Card with proper layer hierarchy - more compact */
 	.tool-card {
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		padding: var(--space-12);
-		border-radius: var(--radius-2xl);
+		padding: var(--space-8);
+		border-radius: var(--radius-xl);
 		transition: all 200ms ease;
 		animation: fadeUp 0.5s calc(var(--index) * 0.08s) both;
 		cursor: default;
-		min-height: 460px;
+		min-height: 380px;
 	}
 
 	@keyframes fadeUp {
@@ -403,13 +410,13 @@
 	.card-bg {
 		position: absolute;
 		inset: 0;
-		border-radius: var(--radius-2xl);
+		border-radius: var(--radius-xl);
 		background: var(--color-panel-1);
 		border: 1px solid var(--color-panel-border-2);
 		z-index: 1;
 		box-shadow:
-			0 4px 6px -1px rgb(0 0 0 / 0.05),
-			0 2px 4px -2px rgb(0 0 0 / 0.05);
+			0 1px 3px 0 rgb(0 0 0 / 0.05),
+			0 1px 2px -1px rgb(0 0 0 / 0.05);
 		transition: all 200ms ease;
 	}
 
@@ -418,39 +425,41 @@
 		background: var(--color-panel-2);
 		border: 1px solid var(--color-panel-border-2);
 		box-shadow:
-			0 10px 15px -3px rgb(0 0 0 / 0.08),
-			0 4px 6px -4px rgb(0 0 0 / 0.05);
+			0 4px 6px -1px rgb(0 0 0 / 0.05),
+			0 2px 4px -2px rgb(0 0 0 / 0.05);
 	}
 
 	.card-glow {
 		position: absolute;
 		inset: -1px;
-		border-radius: var(--radius-2xl);
+		border-radius: var(--radius-xl);
 		background: radial-gradient(circle at 50% 0%, var(--brand-100), transparent 70%);
 		opacity: 0;
-		transition: opacity 200ms ease;
+		transition: opacity 300ms ease;
 	}
 
 	.tool-card:hover .card-glow {
-		opacity: 1;
+		opacity: 0.5;
 	}
 
 	.tool-card:hover {
-		transform: translateY(-6px);
+		transform: translateY(-4px);
 	}
 
 	.tool-card:hover .card-bg {
 		background: var(--color-panel-2);
 		border-color: var(--color-panel-border-3);
-		box-shadow: var(--shadow-lg);
+		box-shadow:
+			0 10px 15px -3px rgb(0 0 0 / 0.1),
+			0 4px 6px -4px rgb(0 0 0 / 0.05);
 	}
 
 	:global(.light) .tool-card:hover .card-bg {
 		background: var(--color-panel-3);
 		border-color: var(--color-panel-border-3);
 		box-shadow:
-			0 20px 25px -5px rgb(0 0 0 / 0.1),
-			0 8px 10px -6px rgb(0 0 0 / 0.05);
+			0 12px 20px -5px rgb(0 0 0 / 0.08),
+			0 6px 8px -4px rgb(0 0 0 / 0.04);
 	}
 
 	/* Highlighted card with subtle accent */
@@ -542,21 +551,21 @@
 		transform: translateY(-3px);
 	}
 
-	/* Icon with clean design */
+	/* Icon with clean design - more compact */
 	.icon-wrapper {
 		position: relative;
-		width: 64px;
-		height: 64px;
-		margin-bottom: var(--space-10);
+		width: 52px;
+		height: 52px;
+		margin-bottom: var(--space-6);
 		z-index: 2;
 	}
 
 	.icon-glow {
 		position: absolute;
-		inset: -12px;
+		inset: -10px;
 		background: radial-gradient(circle, var(--tool-color), transparent 60%);
 		opacity: 0.15;
-		filter: blur(12px);
+		filter: blur(10px);
 	}
 
 	.icon-box {
@@ -571,7 +580,7 @@
 			var(--tool-color),
 			color-mix(in srgb, var(--tool-color) 80%, black)
 		);
-		border-radius: var(--radius-lg);
+		border-radius: var(--radius-md);
 		box-shadow: var(--shadow-md);
 		transition: all 200ms ease;
 	}
@@ -589,12 +598,12 @@
 	}
 
 	:global(.tool-icon) {
-		width: 28px;
-		height: 28px;
+		width: 24px;
+		height: 24px;
 		color: white;
 	}
 
-	/* Content with proper text hierarchy */
+	/* Content with proper text hierarchy - more compact */
 	.content-wrapper {
 		flex: 1;
 		z-index: 2;
@@ -603,38 +612,38 @@
 	}
 
 	.tool-title {
-		margin-bottom: var(--space-4);
-		font-size: var(--text-xl);
+		margin-bottom: var(--space-3);
+		font-size: var(--text-lg);
 		font-weight: var(--font-semibold);
 		color: var(--color-heading-1);
 		line-height: 1.3;
 	}
 
 	.tool-description {
-		margin-bottom: var(--space-8);
-		font-size: var(--text-base);
-		line-height: 1.7;
+		margin-bottom: var(--space-5);
+		font-size: var(--text-sm);
+		line-height: 1.6;
 		color: var(--color-description-3);
 	}
 
-	/* Feature pills with subtle styling */
+	/* Feature pills with subtle styling - more compact */
 	.features-list {
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--space-3);
+		gap: var(--space-2);
 		margin-top: auto;
-		margin-bottom: var(--space-8);
+		margin-bottom: var(--space-5);
 	}
 
 	.feature-pill {
 		display: inline-flex;
 		align-items: center;
-		gap: var(--space-2);
-		padding: var(--space-2) var(--space-3);
+		gap: var(--space-1);
+		padding: var(--space-1) var(--space-2);
 		background: var(--color-panel-1);
 		border: 1px solid var(--color-panel-border-1);
 		border-radius: var(--radius-full);
-		font-size: var(--text-xs);
+		font-size: 11px;
 		font-weight: var(--font-medium);
 		color: var(--color-description-2);
 		transition: all 150ms ease;
@@ -666,9 +675,9 @@
 		color: var(--color-heading-3);
 	}
 
-	/* Action button with clean design */
+	/* Action button with clean design - more compact */
 	.action-wrapper {
-		padding-top: var(--space-6);
+		padding-top: var(--space-4);
 		border-top: 1px solid var(--color-panel-border-1);
 		z-index: 2;
 	}
@@ -681,12 +690,12 @@
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		gap: var(--space-3);
+		gap: var(--space-2);
 		width: 100%;
-		padding: var(--space-4) var(--space-6);
+		padding: var(--space-3) var(--space-4);
 		border-radius: var(--radius-md);
 		font-weight: var(--font-medium);
-		font-size: var(--text-base);
+		font-size: var(--text-sm);
 		transition: all 150ms ease;
 		text-decoration: none;
 		position: relative;
@@ -773,11 +782,12 @@
 	@media (max-width: 768px) {
 		.tools-grid {
 			grid-template-columns: 1fr;
-			gap: var(--space-8);
+			gap: var(--space-6);
 		}
 
 		.tool-card {
-			padding: var(--space-8);
+			padding: var(--space-6);
+			min-height: 340px;
 		}
 	}
 </style>
