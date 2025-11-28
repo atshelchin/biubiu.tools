@@ -424,11 +424,13 @@ export async function executeTask(
 			updateStatistics(rootTask);
 
 			// Set completion timestamp based on final status
-			if (rootTask.status === 'completed') {
+			// Note: updateStatistics() can change the status from 'running' to other states
+			const finalStatus = rootTask.status as TaskStatus;
+			if (finalStatus === 'completed') {
 				rootTask.completedAt = Date.now();
-			} else if (rootTask.status === 'failed') {
+			} else if (finalStatus === 'failed') {
 				rootTask.failedAt = Date.now();
-			} else if (rootTask.status === 'partial') {
+			} else if (finalStatus === 'partial') {
 				rootTask.completedAt = Date.now();
 			}
 

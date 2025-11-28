@@ -10,7 +10,7 @@ import type { Address } from 'viem';
 /**
  * 批次执行数据
  */
-export interface SweepBatchData {
+export interface SweepBatchData extends Record<string, unknown> {
 	tokenId: string;
 	tokenSymbol: string;
 	tokenAddress?: Address;
@@ -213,6 +213,7 @@ export function buildTokenSweepTaskTree(config: TokenSweepConfig) {
 				const batchWallets = token.wallets.slice(start, end);
 
 				batches.push({
+					type: 'batch' as const,
 					name: `批次 ${i + 1} (钱包 ${start + 1}-${end})`,
 					executionData: {
 						tokenId: token.id,
@@ -232,6 +233,7 @@ export function buildTokenSweepTaskTree(config: TokenSweepConfig) {
 			}
 
 			return {
+				type: 'token' as const,
 				name: `${token.symbol} 归集 (${token.wallets.length} 个钱包)`,
 				children: batches
 			};
