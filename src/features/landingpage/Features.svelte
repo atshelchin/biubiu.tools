@@ -679,7 +679,8 @@
 	.action-wrapper {
 		padding-top: var(--space-4);
 		border-top: 1px solid var(--color-panel-border-1);
-		z-index: 2;
+		position: relative;
+		z-index: 10;
 	}
 
 	:global(.light) .action-wrapper {
@@ -692,57 +693,81 @@
 		justify-content: center;
 		gap: var(--space-2);
 		width: 100%;
-		padding: var(--space-3) var(--space-4);
+		padding: var(--space-3) var(--space-5);
 		border-radius: var(--radius-md);
-		font-weight: var(--font-medium);
+		font-weight: var(--font-semibold);
 		font-size: var(--text-sm);
-		transition: all 150ms ease;
+		transition: all 200ms ease;
 		text-decoration: none;
 		position: relative;
+		cursor: pointer;
+		z-index: 10;
 	}
 
 	.action-btn.primary {
-		background: var(--color-panel-3);
-		color: var(--color-primary);
-		border: 1px solid var(--color-panel-border-3);
-		box-shadow: none;
-		font-weight: var(--font-semibold);
-	}
-
-	:global(.light) .action-btn.primary {
-		background: var(--color-primary);
+		background: linear-gradient(
+			135deg,
+			var(--color-primary),
+			color-mix(in srgb, var(--color-primary) 85%, black)
+		);
 		color: white;
 		border: 1px solid var(--color-primary);
 		box-shadow:
-			0 1px 3px 0 rgb(0 0 0 / 0.1),
-			0 1px 2px -1px rgb(0 0 0 / 0.1);
+			0 2px 4px 0 color-mix(in srgb, var(--color-primary) 25%, transparent),
+			0 1px 2px 0 rgb(0 0 0 / 0.05);
+	}
+
+	:global(.light) .action-btn.primary {
+		background: linear-gradient(
+			135deg,
+			var(--color-primary),
+			color-mix(in srgb, var(--color-primary) 90%, black)
+		);
+		box-shadow:
+			0 2px 8px 0 color-mix(in srgb, var(--color-primary) 30%, transparent),
+			0 1px 3px 0 rgb(0 0 0 / 0.1);
 	}
 
 	.action-btn.primary:hover {
-		background: var(--color-panel-4);
-		border-color: var(--color-primary);
-		color: var(--color-primary);
-		transform: translateY(-1px);
-		box-shadow: 0 0 0 1px var(--color-primary);
+		background: linear-gradient(
+			135deg,
+			color-mix(in srgb, var(--color-primary) 90%, white),
+			var(--color-primary)
+		);
+		transform: translateY(-2px);
+		box-shadow:
+			0 4px 12px 0 color-mix(in srgb, var(--color-primary) 35%, transparent),
+			0 2px 4px 0 rgb(0 0 0 / 0.1);
 	}
 
 	:global(.light) .action-btn.primary:hover {
-		background: var(--brand-700);
-		border-color: var(--brand-700);
-		color: white;
+		background: linear-gradient(
+			135deg,
+			color-mix(in srgb, var(--color-primary) 85%, black),
+			color-mix(in srgb, var(--color-primary) 95%, black)
+		);
 		box-shadow:
-			0 4px 6px -1px rgb(0 0 0 / 0.1),
-			0 2px 4px -2px rgb(0 0 0 / 0.1);
+			0 6px 16px 0 color-mix(in srgb, var(--color-primary) 40%, transparent),
+			0 2px 6px 0 rgb(0 0 0 / 0.15);
+	}
+
+	.action-btn.primary:active {
+		transform: translateY(0);
 	}
 
 	:global(.btn-arrow) {
-		width: 16px;
-		height: 16px;
-		transition: transform 150ms ease;
+		width: 18px;
+		height: 18px;
+		transition: transform 200ms ease;
+		flex-shrink: 0;
 	}
 
 	.action-btn.primary:hover :global(.btn-arrow) {
-		transform: translateX(3px);
+		transform: translateX(4px);
+	}
+
+	.action-btn.primary:active :global(.btn-arrow) {
+		transform: translateX(2px);
 	}
 
 	.action-btn.telegram {
