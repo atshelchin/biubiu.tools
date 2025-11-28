@@ -82,11 +82,10 @@
 		{ label: i18n.t('components.address_path_selector.date.presets.100_years'), years: 100 }
 	]);
 
-	// Computed values
-	const addressCount = $derived(() => {
+	// Computed values - calculate actual count without limiting
+	const addressCount = $derived.by(() => {
 		if (pathType === 'sequential') {
-			const count = Math.max(0, endIndex - startIndex + 1);
-			return Math.min(count, maxAddresses);
+			return Math.max(0, endIndex - startIndex + 1);
 		} else {
 			const years = Math.max(0, endYear - startYear + 1);
 			let count: number;
@@ -98,23 +97,22 @@
 				// Year + Month: 12 months per year
 				count = years * 12;
 			} else {
-				// Full date: approximate days
-				// More accurate: account for leap years
+				// Full date: calculate exact days including leap years
 				const startDate = new Date(startYear, 0, 1);
 				const endDate = new Date(endYear, 11, 31);
 				const diffTime = endDate.getTime() - startDate.getTime();
 				count = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1;
 			}
 
-			return Math.min(count, maxAddresses);
+			return count;
 		}
 	});
 
-	const isOverLimit = $derived(
-		pathType === 'sequential' ? endIndex - startIndex + 1 > maxAddresses : false
-	);
+	const isOverLimit = $derived.by(() => {
+		return addressCount > maxAddresses;
+	});
 
-	const dateFormat = $derived(() => {
+	const dateFormat = $derived.by(() => {
 		// Always use full date format with leading zeros
 		return 'YYYYMMDD';
 	});
@@ -155,6 +153,7 @@
 
 	// Watch for changes
 	$effect(() => {
+		console.log({ isOverLimit });
 		// Enforce max limit for sequential mode
 		if (pathType === 'sequential' && endIndex - startIndex + 1 > maxAddresses) {
 			endIndex = startIndex + maxAddresses - 1;
@@ -237,12 +236,12 @@
 			<!-- Address Count Display -->
 			<div class="count-display" class:warning={isOverLimit}>
 				<span class="count-label">{i18n.t('components.address_path_selector.will_generate')}:</span>
-				<span class="count-value">{addressCount()}</span>
+				<span class="count-value">{addressCount.toLocaleString()}</span>
 				<span class="count-unit">{i18n.t('components.address_path_selector.addresses')}</span>
 				{#if isOverLimit}
 					<span class="count-warning"
 						>({i18n.t('components.address_path_selector.limited_to', {
-							max: maxAddresses
+							max: maxAddresses.toLocaleString()
 						})})</span
 					>
 				{/if}
@@ -298,7 +297,7 @@
 			<!-- Format Preview -->
 			<div class="format-preview">
 				<span class="preview-label">{i18n.t('components.address_path_selector.format')}:</span>
-				<code class="preview-format">{dateFormat()}</code>
+				<code class="preview-format">{dateFormat}</code>
 				<span class="preview-example">
 					{i18n.t('components.address_path_selector.example')}: {startYear}0101 {i18n.t(
 						'components.address_path_selector.to'
@@ -308,11 +307,18 @@
 			</div>
 
 			<!-- Estimated Count -->
-			<div class="count-display">
+			<div class="count-display" class:warning={isOverLimit}>
 				<span class="count-label"
 					>{i18n.t('components.address_path_selector.estimated_addresses')}:</span
 				>
-				<span class="count-value">{addressCount()}</span>
+				<span class="count-value">{addressCount.toLocaleString()}</span>
+				{#if isOverLimit}
+					<span class="count-warning"
+						>({i18n.t('components.address_path_selector.limited_to', {
+							max: maxAddresses.toLocaleString()
+						})})</span
+					>
+				{/if}
 			</div>
 		</div>
 	{/if}
