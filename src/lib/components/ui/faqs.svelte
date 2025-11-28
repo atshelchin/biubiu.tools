@@ -46,7 +46,7 @@
 		width: 100%;
 		max-width: 738px;
 		margin: 0 auto;
-		padding: var(--space-6) var(--space-5);
+		/* padding: var(--space-6) var(--space-5); */
 	}
 
 	.faqs-title {
@@ -137,7 +137,7 @@
 
 	@media (max-width: 640px) {
 		.faqs-container {
-			padding: var(--space-5) var(--space-4);
+			/* padding: var(--space-5) var(--space-4); */
 			border-radius: var(--radius-lg);
 		}
 
