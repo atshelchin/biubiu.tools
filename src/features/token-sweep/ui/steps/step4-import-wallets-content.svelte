@@ -463,6 +463,18 @@
 				<div class="banner-hint">
 					{i18n.t('tools.token_sweep.step4.content.rate_limit.hint')}
 				</div>
+				<div class="banner-recommend">
+					💡 {i18n.t('tools.token_sweep.step4.content.rate_limit.recommend_prefix')}
+					<a
+						href="https://chainlist.org"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="chainlist-link"
+					>
+						chainlist.org
+					</a>
+					{i18n.t('tools.token_sweep.step4.content.rate_limit.recommend_suffix')}
+				</div>
 			</div>
 			<div class="banner-actions">
 				<button class="btn-manage-rpc" onclick={handleOpenRpcManager}>
@@ -584,11 +596,51 @@
 		background: rgba(255, 255, 255, 0.5);
 		border-radius: var(--radius-sm);
 		border-left: 3px solid #fb923c;
-		margin-bottom: var(--space-3);
+		margin-bottom: var(--space-2);
 	}
 	:global([data-theme='dark']) .banner-hint {
 		color: #fed7aa;
 		background: rgba(0, 0, 0, 0.2);
+	}
+
+	.banner-recommend {
+		font-size: var(--text-sm);
+		color: #0369a1;
+		padding: var(--space-2);
+		background: rgba(240, 249, 255, 0.8);
+		border-radius: var(--radius-sm);
+		border-left: 3px solid #38bdf8;
+		margin-bottom: var(--space-3);
+		display: flex;
+		align-items: center;
+		gap: var(--space-1);
+		flex-wrap: wrap;
+	}
+	:global([data-theme='dark']) .banner-recommend {
+		color: #bae6fd;
+		background: rgba(7, 89, 133, 0.2);
+	}
+
+	.chainlist-link {
+		color: #0284c7;
+		font-weight: 600;
+		text-decoration: none;
+		border-bottom: 1px solid transparent;
+		transition: all 0.2s ease;
+		display: inline-flex;
+		align-items: center;
+		gap: 2px;
+	}
+	.chainlist-link:hover {
+		color: #0369a1;
+		border-bottom-color: #0369a1;
+	}
+	:global([data-theme='dark']) .chainlist-link {
+		color: #38bdf8;
+	}
+	:global([data-theme='dark']) .chainlist-link:hover {
+		color: #7dd3fc;
+		border-bottom-color: #7dd3fc;
 	}
 
 	.banner-actions {

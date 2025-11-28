@@ -447,10 +447,13 @@
 						"scan_failed": "Failed to scan balances"
 					},
 					"rate_limit": {
-						"title": "RPC Rate Limit Detected",
+						"title": "All RPC Endpoints Rate Limited",
 						"error_native": "Rate limit triggered while scanning native token balances (batch {batch}/{total})",
 						"error_erc20": "Rate limit triggered while scanning token {token} balances (batch {batch}/{total})",
-						"hint": "💡 Please click the ⚙️ Settings button at the top right corner of the page to switch to another RPC endpoint, then click the \"Resume Scan\" button below to continue. The scan will resume from where it left off without losing progress.",
+						"hint": "💡 Please click the button below to add new RPC endpoints, or wait for existing RPCs to recover before retrying. Adding multiple RPCs enables automatic rotation to avoid frequent rate limits.",
+						"recommend_prefix": "Recommended: Find available RPC endpoints at",
+						"recommend_suffix": "",
+						"manage_rpc_button": "Manage RPC",
 						"resume_button": "Resume Scan"
 					},
 					"dialogs": {
@@ -882,6 +885,8 @@
 			"block_explorer_optional": "Block Explorer (Optional)",
 			"enable_network": "Enable this network",
 			"rpc_endpoints_label": "RPC Endpoints",
+			"rpc_hint_prefix": "Recommended: Find available RPC endpoints at",
+			"rpc_hint_suffix": "",
 			"primary": "Primary",
 			"set_primary": "Set Primary",
 			"add_rpc_placeholder": "https://your-rpc-endpoint.com",

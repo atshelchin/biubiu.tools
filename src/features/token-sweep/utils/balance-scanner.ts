@@ -728,6 +728,14 @@ export async function scanMultipleWalletsResumable(
 						});
 					}
 				} catch (error) {
+					console.error(`❌ [Native] Batch ${i + 1}/${batchCount} failed:`, error);
+					console.error(
+						'Error type:',
+						error instanceof Error ? error.constructor.name : typeof error
+					);
+					console.error('Error message:', error instanceof Error ? error.message : String(error));
+					console.error('Is rate limit error:', isRateLimitError(error));
+
 					if (isRateLimitError(error)) {
 						state.isPaused = true;
 						state.pauseReason = 'rate_limit';
@@ -845,6 +853,17 @@ export async function scanMultipleWalletsResumable(
 						});
 					}
 				} catch (error) {
+					console.error(
+						`❌ [ERC20 ${tokenIdx + 1}/${erc20Tokens.length}] Batch ${i + 1}/${batchCount} failed:`,
+						error
+					);
+					console.error(
+						'Error type:',
+						error instanceof Error ? error.constructor.name : typeof error
+					);
+					console.error('Error message:', error instanceof Error ? error.message : String(error));
+					console.error('Is rate limit error:', isRateLimitError(error));
+
 					if (isRateLimitError(error)) {
 						state.isPaused = true;
 						state.pauseReason = 'rate_limit';
@@ -899,22 +918,10 @@ export async function scanMultipleWalletsResumable(
 		return { results, state };
 	} catch (error) {
 		if (error instanceof RateLimitError) {
-			// Return partial results with current state
-			const results = new Map<Address, WalletBalanceResult>();
-			for (const wallet of wallets) {
-				const balances: TokenBalance[] = [];
-				if (state.nativeBalances) {
-					const nativeBalance = state.nativeBalances.get(wallet.address);
-					if (nativeBalance) balances.push(nativeBalance);
-				}
-				for (const [tokenId, tokenBalances] of state.tokenBalances.entries()) {
-					const balance = tokenBalances.get(wallet.address);
-					if (balance) balances.push(balance);
-				}
-				const hasBalance = balances.some((b) => b.balance > 0n);
-				results.set(wallet.address, { address: wallet.address, balances, hasBalance });
-			}
-			return { results, state };
+			// Re-throw RateLimitError so the caller can handle RPC switching
+			// The state is already saved in the error callback
+			console.log('🔄 Re-throwing RateLimitError for RPC switching');
+			throw error;
 		}
 		throw error;
 	}

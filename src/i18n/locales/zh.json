@@ -451,6 +451,8 @@
 						"error_native": "扫描原生代币余额时触发限流（批次 {batch}/{total}）",
 						"error_erc20": "扫描代币 {token} 余额时触发限流（批次 {batch}/{total}）",
 						"hint": "💡 请点击下方按钮添加新的 RPC 端点，或等待现有 RPC 恢复后重试。添加多个 RPC 可以自动轮换，避免频繁限流。",
+						"recommend_prefix": "推荐从",
+						"recommend_suffix": "查找可用的 RPC 端点",
 						"manage_rpc_button": "管理 RPC",
 						"resume_button": "恢复扫描"
 					},
@@ -866,6 +868,8 @@
 			"block_explorer_optional": "区块浏览器（可选）",
 			"enable_network": "启用此网络",
 			"rpc_endpoints_label": "RPC 节点",
+			"rpc_hint_prefix": "推荐从",
+			"rpc_hint_suffix": "查找可用的 RPC 端点",
 			"primary": "主节点",
 			"set_primary": "设为主节点",
 			"add_rpc_placeholder": "https://your-rpc-endpoint.com",

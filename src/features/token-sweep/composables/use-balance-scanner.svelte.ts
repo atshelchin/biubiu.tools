@@ -79,9 +79,14 @@ export function useBalanceScanner() {
 			const publicClient = createPublicClient({
 				chain,
 				transport: http(currentRpcUrl, {
-					retryCount: 0, // Disable internal retries
+					retryCount: 0, // Disable transport-level retries
+					retryDelay: 0, // No delay between retries (since retryCount is 0)
 					timeout: 30000 // 30 second timeout
-				})
+				}),
+				batch: {
+					multicall: false // Disable built-in multicall batching
+				},
+				pollingInterval: undefined // Disable polling
 			});
 
 			try {
@@ -94,7 +99,11 @@ export function useBalanceScanner() {
 					(progress) => {
 						onProgress(progress.percentage);
 					},
-					undefined, // Don't pass onRateLimitError - we handle it here
+					// Capture the state when rate limit error occurs
+					(_error, capturedState) => {
+						console.log('📋 Captured state from rate limit error:', capturedState);
+						scanState = capturedState; // Save the state for retry
+					},
 					scanState
 				);
 
@@ -137,21 +146,23 @@ export function useBalanceScanner() {
 				if (error instanceof RateLimitError || isRateLimitError(error)) {
 					console.log('⚠️ Rate limit/RPC error detected, switching to next RPC...');
 
-					// Create scanState for resume
-					// If error is RateLimitError instance, use its data; otherwise use defaults
-					const currentTokenIndex =
-						error instanceof RateLimitError ? (error.scanType === 'native' ? -1 : 0) : -1;
-					const currentBatchIndex = error instanceof RateLimitError ? error.currentBatch - 1 : 0;
+					// scanState should already be updated by the onRateLimitError callback above
+					// If not, create a minimal scanState for safety
+					if (!scanState) {
+						const currentTokenIndex =
+							error instanceof RateLimitError ? (error.scanType === 'native' ? -1 : 0) : -1;
+						const currentBatchIndex = error instanceof RateLimitError ? error.currentBatch - 1 : 0;
 
-					scanState = {
-						addresses: wallets.map((w) => w.address),
-						chainId: currentChainId,
-						currentTokenIndex,
-						currentBatchIndex,
-						tokenBalances: new Map(),
-						isPaused: true,
-						pauseReason: 'rate_limit'
-					};
+						scanState = {
+							addresses: wallets.map((w) => w.address),
+							chainId: currentChainId,
+							currentTokenIndex,
+							currentBatchIndex,
+							tokenBalances: new Map(),
+							isPaused: true,
+							pauseReason: 'rate_limit'
+						};
+					}
 
 					const switched = rpcManager.markRateLimitedAndSwitch();
 					if (!switched) {
@@ -182,10 +193,10 @@ export function useBalanceScanner() {
 									? error
 									: new RateLimitError(
 											'native',
-											currentBatchIndex + 1,
+											(scanState?.currentBatchIndex ?? 0) + 1,
 											Math.ceil(wallets.length / 1000)
 										);
-							onRateLimitError(rateLimitError, scanState);
+							onRateLimitError(rateLimitError, scanState!);
 						}
 						break;
 					}

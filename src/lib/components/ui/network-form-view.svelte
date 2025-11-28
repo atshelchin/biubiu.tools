@@ -368,6 +368,19 @@
 			<div class="form-group rpc-group">
 				<div class="rpc-label">{t('wallet.network_settings.rpc_endpoints_label')}</div>
 
+				<div class="rpc-hint">
+					💡 {t('wallet.network_settings.rpc_hint_prefix')}
+					<a
+						href="https://chainlist.org"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="chainlist-link-inline"
+					>
+						chainlist.org
+					</a>
+					{t('wallet.network_settings.rpc_hint_suffix')}
+				</div>
+
 				{#if form.getFieldState('rpcEndpoints').error && form.getFieldState('rpcEndpoints').touched}
 					{@const rpcEndpointsState = form.getFieldState('rpcEndpoints')}
 					<span class="error-message">{rpcEndpointsState.error}</span>
@@ -544,6 +557,33 @@
 	.rpc-label {
 		font-weight: var(--font-medium);
 		color: var(--color-foreground);
+	}
+
+	.rpc-hint {
+		font-size: var(--text-sm);
+		color: var(--color-muted-foreground);
+		margin-top: var(--space-2);
+		margin-bottom: var(--space-3);
+		padding: var(--space-2);
+		background: var(--color-muted);
+		border-radius: var(--radius-sm);
+		border-left: 3px solid var(--color-primary);
+		display: flex;
+		align-items: center;
+		gap: var(--space-1);
+		flex-wrap: wrap;
+	}
+
+	.chainlist-link-inline {
+		color: var(--color-primary);
+		font-weight: 600;
+		text-decoration: none;
+		border-bottom: 1px solid transparent;
+		transition: all 0.2s ease;
+	}
+	.chainlist-link-inline:hover {
+		border-bottom-color: var(--color-primary);
+		opacity: 0.8;
 	}
 
 	.rpc-list-form {
