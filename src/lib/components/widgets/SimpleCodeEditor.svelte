@@ -15,6 +15,7 @@
 			rows?: number;
 			onChange?: (value: string) => void;
 			theme?: 'light' | 'dark';
+			onViewReady?: (view: EditorView) => void;
 		}
 	) {
 		let { value = '', placeholder = '', rows = 8, onChange, theme = 'light' } = options;
@@ -93,6 +94,11 @@
 			parent: node
 		});
 
+		// Notify parent component that view is ready
+		if (options.onViewReady) {
+			options.onViewReady(view);
+		}
+
 		return {
 			update(newOptions: typeof options) {
 				// Update theme if changed
@@ -123,19 +129,22 @@
 
 <script lang="ts">
 	import { useTheme } from '$lib/stores/theme.svelte';
+	import type { EditorView } from 'codemirror';
 
 	interface Props {
 		value?: string;
 		placeholder?: string;
 		rows?: number;
 		class?: string;
+		onViewReady?: (view: EditorView) => void;
 	}
 
 	let {
 		value = $bindable(''),
 		placeholder = '',
 		rows = 8,
-		class: className = ''
+		class: className = '',
+		onViewReady
 	}: Props = $props();
 
 	const themeStore = useTheme();
@@ -150,7 +159,8 @@
 		onChange: (newValue) => {
 			value = newValue;
 		},
-		theme: themeStore.theme
+		theme: themeStore.theme,
+		onViewReady
 	}}
 ></div>
 

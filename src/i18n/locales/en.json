@@ -482,7 +482,12 @@
 						"importing": "Importing... ({progress}%)",
 						"error_empty": "Please enter private keys",
 						"error_none": "No valid private keys found",
-						"success_with_invalid": "Imported {valid} wallets. {invalid} invalid keys skipped."
+						"success_with_invalid": "Imported {valid} wallets. {invalid} invalid keys skipped.",
+						"invalid_keys_found": "Found {count} invalid private keys",
+						"locate": "Locate",
+						"locate_key": "Click to locate error in editor",
+						"error_key_not_found": "Error: Private key has been modified or deleted",
+						"manual_search": "Please manually search line {line}"
 					},
 					"wallet_list": {
 						"title": "Imported Wallets",

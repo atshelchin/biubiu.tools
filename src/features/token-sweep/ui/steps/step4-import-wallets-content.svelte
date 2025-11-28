@@ -47,6 +47,7 @@
 	let isGenerating = $state(false);
 	let generationProgress = $state(0);
 	let errorMessage = $state('');
+	let invalidPrivateKeys = $state<Array<{ key: string; reason?: string }>>([]);
 	let showRpcManager = $state(false);
 
 	// Derived state
@@ -186,6 +187,7 @@
 		isGenerating = true;
 		generationProgress = 0;
 		errorMessage = '';
+		invalidPrivateKeys = [];
 
 		try {
 			// Import private keys using composable
@@ -201,6 +203,7 @@
 				// eslint-disable-next-line @typescript-eslint/no-unused-vars
 				step4State.addWallets(result.wallets.map(({ privateKey: _pk, ...wallet }) => wallet));
 				if (result.invalidKeys.length > 0) {
+					invalidPrivateKeys = result.invalidKeys.map((key) => ({ key }));
 					errorMessage = i18n.t(
 						'tools.token_sweep.step4.content.private_key.success_with_invalid',
 						{
@@ -453,6 +456,7 @@
 			bind:privateKeysText
 			{isGenerating}
 			{generationProgress}
+			{invalidPrivateKeys}
 			onImport={handleImportPrivateKeys}
 		/>
 	{/if}

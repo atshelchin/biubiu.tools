@@ -482,7 +482,12 @@
 						"importing": "导入中... ({progress}%)",
 						"error_empty": "请输入私钥",
 						"error_none": "未找到有效的私钥",
-						"success_with_invalid": "已导入{valid}个钱包。跳过了{invalid}个无效私钥。"
+						"success_with_invalid": "已导入{valid}个钱包。跳过了{invalid}个无效私钥。",
+						"invalid_keys_found": "发现 {count} 个无效私钥",
+						"locate": "定位",
+						"locate_key": "点击定位到编辑器中的错误位置",
+						"error_key_not_found": "错误：该私钥已被修改或删除",
+						"manual_search": "请手动搜索第 {line} 行"
 					},
 					"wallet_list": {
 						"title": "已导入钱包",

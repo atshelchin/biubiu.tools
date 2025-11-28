@@ -1,5 +1,5 @@
 <script lang="ts">
-	import SimpleCodeEditor from '$lib/components/widgets/SimpleCodeEditor.svelte';
+	import PrivateKeyEditorWithErrors from './private-key-editor-with-errors.svelte';
 	import FileUploadModal from '$lib/components/ui/file-upload-modal.svelte';
 	import { Loader2, Upload } from '@lucide/svelte';
 	import { slide } from 'svelte/transition';
@@ -7,10 +7,16 @@
 
 	const i18n = useI18n();
 
+	interface InvalidKey {
+		key: string;
+		reason?: string;
+	}
+
 	interface Props {
 		privateKeysText: string;
 		isGenerating: boolean;
 		generationProgress: number;
+		invalidPrivateKeys?: InvalidKey[];
 		onImport: () => void;
 	}
 
@@ -18,6 +24,7 @@
 		privateKeysText = $bindable(),
 		isGenerating,
 		generationProgress,
+		invalidPrivateKeys = [],
 		onImport
 	}: Props = $props();
 
@@ -41,10 +48,11 @@
 			{i18n.t('tools.token_sweep.step4.content.private_key.upload_file')}
 		</button>
 	</div>
-	<SimpleCodeEditor
+	<PrivateKeyEditorWithErrors
 		bind:value={privateKeysText}
 		placeholder={i18n.t('tools.token_sweep.step4.content.private_key.placeholder')}
 		rows={20}
+		invalidKeys={invalidPrivateKeys}
 	/>
 	<button
 		class="btn-primary btn-with-progress"
