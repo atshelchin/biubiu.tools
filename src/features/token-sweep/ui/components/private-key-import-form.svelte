@@ -66,10 +66,10 @@
 
 <FileUploadModal
 	open={showUploadModal}
-	columnCount={2}
+	columnCount={1}
 	columnLabels={[
-		i18n.t('tools.token_sweep.step4.content.private_key.column_label'),
-		i18n.t('tools.token_sweep.step4.content.private_key.address_label')
+		i18n.t('tools.token_sweep.step4.content.private_key.column_label')
+		// i18n.t('tools.token_sweep.step4.content.private_key.address_label')
 	]}
 	onClose={() => (showUploadModal = false)}
 	onConfirm={handleUploadConfirm}

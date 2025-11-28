@@ -327,7 +327,7 @@
 	}
 
 	function generateOutputContent(): string {
-		if (columnCount <= 1 || tableHeaders.length === 0 || parseMode === 'text') {
+		if (parseMode === 'text') {
 			// Pure text mode
 			return fileContent;
 		}
