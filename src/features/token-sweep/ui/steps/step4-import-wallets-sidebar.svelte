@@ -160,12 +160,12 @@
 					<span>{i18n.t('tools.token_sweep.step4.sidebar.total_label')}</span>
 					<strong>{walletCount.toLocaleString()}</strong>
 				</div>
-				{#if hasScanned}
+				<!-- {#if hasScanned}
 					<div class="summary-item">
 						<span>{i18n.t('tools.token_sweep.step4.sidebar.with_balance_label')}</span>
 						<strong class="balance-count">{walletsWithBalance.toLocaleString()}</strong>
 					</div>
-				{/if}
+				{/if} -->
 				{#if isScanning}
 					<div class="summary-item">
 						<span>{i18n.t('tools.token_sweep.step4.sidebar.scanning_label')}</span>

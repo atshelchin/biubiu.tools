@@ -400,7 +400,7 @@
 		suggestedAmount={suggestedGasCost}
 		{networkSymbol}
 		{isSendingGas}
-		bind:gasSendAmount
+		{gasSendAmount}
 		isConnected={Boolean(connectStore.address)}
 		onClose={closeGasFundingModal}
 		onSend={handleSendGasFromWallet}

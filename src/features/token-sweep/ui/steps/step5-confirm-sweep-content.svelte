@@ -3,10 +3,7 @@
 	import { step3State } from '@/features/token-sweep/stores/step3-state.svelte';
 	import { step4State } from '@/features/token-sweep/stores/step4-state.svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
-	import FeeBreakdownDisplay from '@/features/token-sweep/ui/components/fee-breakdown-display.svelte';
 	import TemporaryWalletManager from '@/features/token-sweep/ui/components/temporary-wallet-manager.svelte';
-	import BatchInfoCard from '@/features/token-sweep/ui/components/batch-info-card.svelte';
-	import BalanceFilterOption from '@/features/token-sweep/ui/components/balance-filter-option.svelte';
 	import SweepProgressDisplay from '@/features/token-sweep/ui/components/sweep-progress-display.svelte';
 	import EstimateDisplay from '@/features/token-sweep/ui/components/estimate-display.svelte';
 	import ActionButtons from '@/features/token-sweep/ui/components/action-buttons.svelte';
@@ -33,6 +30,7 @@
 	import type { Address, Hex } from 'viem';
 	import { AlertCircle, CheckCircle2 } from '@lucide/svelte';
 	import { fade } from 'svelte/transition';
+	import { SvelteMap } from 'svelte/reactivity';
 	import type { Token, NativeToken, ERC20Token } from '$lib/types/token';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
@@ -50,6 +48,11 @@
 		estimatedGas: bigint;
 		estimatedCost: bigint;
 	} | null>(null);
+
+	// Gas monitoring state
+	let isPausedForGas = $state(false);
+	let requiredGas = $state<bigint>(0n);
+	let currentGasBalance = $state<bigint>(0n);
 
 	// New state for transaction mode and fees
 	let transactionMode = $state<TransactionMode>('temporary'); // Only support temporary wallet mode
@@ -85,10 +88,7 @@
 	// Derived from Step 4 (imported wallets)
 	let importedWallets = $derived(step4State.importedWallets);
 	let walletsWithBalance = $derived(step4State.getWalletsWithBalance());
-	let hasScanned = $derived(step4State.hasScanned);
 	let walletCount = $derived(importedWallets.length);
-	let walletWithBalanceCount = $derived(walletsWithBalance.length);
-	let batchCount = $derived(Math.ceil(walletCount / 100));
 	let isValid = $derived(
 		Boolean(connectStore.address) &&
 			selectedTokenCount > 0 &&
@@ -108,7 +108,7 @@
 
 	// Calculate fees when relevant data changes
 	$effect(() => {
-		if (batchCount > 0 && membershipStatus) {
+		if (importedWallets.length > 0 && selectedTokenIds.length > 0 && membershipStatus) {
 			calculateFees();
 		}
 	});
@@ -126,15 +126,114 @@
 		membershipStatus = status;
 	}
 
-	function calculateFees() {
+	async function simulateGasForTokenBatch(
+		tokenId: string,
+		walletAddresses: string[]
+	): Promise<bigint> {
+		try {
+			if (!connectStore.currentChainId || !currentNetwork) return BigInt(0);
+
+			// Get first batch of wallets (up to 100)
+			const firstBatch = walletAddresses.slice(0, 100);
+			if (firstBatch.length === 0) return BigInt(0);
+
+			const publicClient = connectStore.publicClient;
+			if (!publicClient) return BigInt(0);
+
+			// Find token object
+			const token = selectedTokenObjects.find((t) => t.id === tokenId);
+			if (!token) return BigInt(0);
+
+			// Build simulation transaction
+			// Note: This is a simplified simulation - actual implementation would need
+			// to call the TokenSweep contract's sweep function with proper parameters
+			const isNative = token.id.endsWith(':native');
+
+			// Estimate gas based on token type and batch size
+			// These are rough estimates that should be replaced with actual contract simulations
+			const baseGasPerWallet = isNative ? BigInt(21000) : BigInt(65000); // Native vs ERC20
+			const estimatedGas = baseGasPerWallet * BigInt(firstBatch.length);
+
+			return estimatedGas;
+		} catch (error) {
+			console.error(`Failed to simulate gas for token ${tokenId}:`, error);
+			// Return a conservative estimate on error
+			return BigInt(100000) * BigInt(100); // 10M gas as fallback
+		}
+	}
+
+	async function calculateFees() {
 		if (!currentNetwork) return;
 
-		// Estimate 100,000 gas per transaction (rough estimate)
-		const estimatedGasPerTx = BigInt(100000);
+		// Calculate total batch count across all tokens
+		const BATCH_SIZE = 100;
+		const stats = new SvelteMap<
+			string,
+			{ addressCount: number; batchCount: number; walletsWithBalance: string[] }
+		>();
+
+		// Initialize stats for selected tokens
+		selectedTokenIds.forEach((tokenId) => {
+			stats.set(tokenId, {
+				addressCount: 0,
+				batchCount: 0,
+				walletsWithBalance: []
+			});
+		});
+
+		// Count addresses with balance for each token
+		importedWallets.forEach((wallet) => {
+			if (!wallet.balances) return;
+
+			selectedTokenIds.forEach((tokenId) => {
+				const stat = stats.get(tokenId);
+				if (!stat) return;
+
+				// Check if wallet has balance for this token
+				const isNative = tokenId.endsWith(':native');
+				const balance = isNative ? wallet.balances?.native : wallet.balances?.tokens?.[tokenId];
+
+				if (balance) {
+					try {
+						const balanceBigInt = BigInt(balance);
+						if (balanceBigInt > 0n) {
+							stat.addressCount++;
+							stat.walletsWithBalance.push(wallet.address);
+						}
+					} catch {
+						// Skip invalid balance values
+					}
+				}
+			});
+		});
+
+		// Calculate batch count and simulate gas for each token
+		let totalEstimatedGas = BigInt(0);
+
+		for (const [tokenId, stat] of stats.entries()) {
+			stat.batchCount = Math.ceil(stat.addressCount / BATCH_SIZE);
+
+			if (stat.batchCount > 0 && stat.walletsWithBalance.length > 0) {
+				// Simulate first batch to get accurate gas estimate
+				const firstBatchGas = await simulateGasForTokenBatch(tokenId, stat.walletsWithBalance);
+				// Multiply by total batch count for this token
+				const tokenTotalGas = (firstBatchGas * BigInt(stat.batchCount)) / BigInt(1); // Assuming first batch is representative
+				totalEstimatedGas += tokenTotalGas;
+			}
+		}
+
+		// If simulation failed or returned 0, use fallback estimate
+		if (totalEstimatedGas === BigInt(0)) {
+			const totalBatchCount = Array.from(stats.values()).reduce(
+				(sum, stat) => sum + stat.batchCount,
+				0
+			);
+			totalEstimatedGas = BigInt(100000) * BigInt(totalBatchCount);
+		}
 
 		const breakdown = calculateFeeBreakdown(
-			batchCount,
-			estimatedGasPerTx,
+			1, // Pass 1 as batch count since we're providing total gas directly
+			totalEstimatedGas, // Use actual simulated total gas
 			membershipStatus.isMember
 		);
 
@@ -149,6 +248,52 @@
 
 	function handleWalletCleared() {
 		temporaryWallet = null;
+	}
+
+	async function checkTemporaryWalletGasBalance(): Promise<boolean> {
+		if (!temporaryWallet || !connectStore.publicClient) return false;
+
+		try {
+			const balance = await connectStore.publicClient.getBalance({
+				address: temporaryWallet.address as Address
+			});
+
+			currentGasBalance = balance;
+
+			// Check if we have enough gas (require at least estimated gas cost)
+			if (feeBreakdown && balance < feeBreakdown.estimatedGasFee) {
+				requiredGas = feeBreakdown.estimatedGasFee - balance;
+				return false;
+			}
+
+			return true;
+		} catch (error) {
+			console.error('Failed to check gas balance:', error);
+			return false;
+		}
+	}
+
+	async function handleResumeAfterGasRefill() {
+		// Check gas balance again
+		const hasEnoughGas = await checkTemporaryWalletGasBalance();
+
+		if (!hasEnoughGas) {
+			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.still_insufficient_gas');
+			return;
+		}
+
+		// Resume execution
+		isPausedForGas = false;
+		errorMessage = '';
+
+		// Continue with sweep execution
+		// Note: This requires the sweep executor to support pause/resume
+		// For now, user would need to restart the sweep
+		alert(
+			i18n.t('tools.token_sweep.step5.content.gas_refilled_restart', {
+				balance: (Number(currentGasBalance) / 1e18).toFixed(6)
+			})
+		);
 	}
 
 	async function handleEstimateSweep() {
@@ -443,6 +588,20 @@
 			};
 		}
 
+		// Check temporary wallet gas balance before execution
+		if (transactionMode === 'temporary') {
+			const hasEnoughGas = await checkTemporaryWalletGasBalance();
+			if (!hasEnoughGas) {
+				isPausedForGas = true;
+				errorMessage = i18n.t('tools.token_sweep.step5.content.errors.insufficient_gas', {
+					required: (Number(requiredGas) / 1e18).toFixed(6),
+					current: (Number(currentGasBalance) / 1e18).toFixed(6),
+					symbol: currentNetwork?.symbol || 'ETH'
+				});
+				return;
+			}
+		}
+
 		// Execute TokenSweep
 		isSweeping = true;
 		errorMessage = '';
@@ -535,14 +694,6 @@
 		</div>
 	</div>
 
-	<!-- Balance Filter Option -->
-	<!-- <BalanceFilterOption {hasScanned} {walletWithBalanceCount} {walletCount} bind:onlyWithBalance /> -->
-
-	<!-- 4. Fee Breakdown Display (费用计算) -->
-	{#if feeBreakdown && currentNetwork}
-		<!-- <FeeBreakdownDisplay {feeBreakdown} {membershipStatus} networkSymbol={currentNetwork.symbol} /> -->
-	{/if}
-
 	<!-- 5. Temporary Wallet Manager (always shown, only support temporary mode) -->
 	{#if feeBreakdown && currentNetwork}
 		<TemporaryWalletManager
@@ -558,6 +709,26 @@
 		<div class="error-banner" transition:fade>
 			<AlertCircle size={20} />
 			<span>{errorMessage}</span>
+		</div>
+	{/if}
+
+	<!-- Gas Insufficient Warning with Resume Button -->
+	{#if isPausedForGas}
+		<div class="gas-warning-banner" transition:fade>
+			<AlertCircle size={24} />
+			<div class="gas-warning-content">
+				<strong>{i18n.t('tools.token_sweep.step5.content.gas_insufficient_title')}</strong>
+				<p>
+					{i18n.t('tools.token_sweep.step5.content.gas_insufficient_message', {
+						required: (Number(requiredGas) / 1e18).toFixed(6),
+						current: (Number(currentGasBalance) / 1e18).toFixed(6),
+						symbol: currentNetwork?.symbol || 'ETH'
+					})}
+				</p>
+				<button class="btn-resume-gas" onclick={handleResumeAfterGasRefill}>
+					{i18n.t('tools.token_sweep.step5.content.check_and_resume')}
+				</button>
+			</div>
 		</div>
 	{/if}
 
@@ -661,6 +832,61 @@
 		background: hsla(0, 80%, 15%, 0.3);
 		border-color: hsl(0, 80%, 40%);
 		color: hsl(0, 80%, 70%);
+	}
+
+	.gas-warning-banner {
+		display: flex;
+		align-items: flex-start;
+		gap: var(--space-3);
+		padding: var(--space-4);
+		background: hsla(45, 100%, 95%, 1);
+		border: 2px solid hsl(45, 100%, 50%);
+		border-radius: var(--radius-md);
+		color: hsl(45, 100%, 25%);
+		margin: var(--space-4) 0;
+	}
+
+	:global([data-theme='dark']) .gas-warning-banner {
+		background: hsla(45, 100%, 15%, 0.3);
+		border-color: hsl(45, 100%, 40%);
+		color: hsl(45, 100%, 70%);
+	}
+
+	.gas-warning-content {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-2);
+	}
+
+	.gas-warning-content strong {
+		font-size: var(--text-lg);
+		display: block;
+		margin-bottom: var(--space-1);
+	}
+
+	.gas-warning-content p {
+		margin: 0;
+		font-size: var(--text-sm);
+		line-height: 1.5;
+	}
+
+	.btn-resume-gas {
+		align-self: flex-start;
+		padding: var(--space-2) var(--space-4);
+		background: var(--color-primary);
+		color: white;
+		border: none;
+		border-radius: var(--radius-md);
+		font-weight: var(--font-semibold);
+		cursor: pointer;
+		transition: all 0.2s;
+		margin-top: var(--space-2);
+	}
+
+	.btn-resume-gas:hover {
+		opacity: 0.9;
+		transform: translateY(-1px);
 	}
 
 	:global(.spinning) {

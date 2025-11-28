@@ -40,6 +40,7 @@
 		decimals: number;
 		totalBalance: bigint;
 		addressCount: number;
+		batchCount: number; // Number of batches needed for this token
 	}
 
 	let tokenStats = $derived.by(() => {
@@ -71,7 +72,8 @@
 				address,
 				decimals,
 				totalBalance: 0n,
-				addressCount: 0
+				addressCount: 0,
+				batchCount: 0 // Will be calculated after counting addresses
 			});
 		});
 
@@ -105,6 +107,12 @@
 			});
 		});
 
+		// Calculate batch count for each token (100 wallets per batch)
+		const BATCH_SIZE = 100;
+		stats.forEach((stat) => {
+			stat.batchCount = Math.ceil(stat.addressCount / BATCH_SIZE);
+		});
+
 		return Array.from(stats.values()).filter((s) => s.addressCount > 0);
 	});
 </script>
@@ -119,16 +127,6 @@
 			<span>{i18n.t('tools.token_sweep.step5.sidebar.total_wallets')}</span>
 			<strong>{walletCount}</strong>
 		</div>
-		{#if hasScanned}
-			<div class="summary-item">
-				<span>{i18n.t('tools.token_sweep.step5.sidebar.with_balance')}</span>
-				<strong class="balance-highlight">{walletWithBalanceCount}</strong>
-			</div>
-		{/if}
-		<div class="summary-item">
-			<span>{i18n.t('tools.token_sweep.step5.sidebar.batches')}</span>
-			<strong>{batchCount}</strong>
-		</div>
 	</StepSummary>
 
 	<!-- Token Balance Statistics -->
@@ -140,19 +138,27 @@
 			{#each tokenStats as stat (stat.tokenId)}
 				<div class="token-stat-item">
 					<div class="token-stat-header">
-						<span class="token-symbol">{stat.symbol}</span>
-						<span class="address-count">
-							{i18n.t('tools.token_sweep.step4.sidebar.token_stats.wallets_count', {
-								count: stat.addressCount.toLocaleString()
-							})}
+						<div class="token-info">
+							<span class="token-symbol">{stat.symbol}</span>
+							<span class="address-count">
+								{i18n.t('tools.token_sweep.step4.sidebar.token_stats.wallets_count', {
+									count: stat.addressCount.toLocaleString()
+								})}
+							</span>
+						</div>
+						<span class="batch-info">
+							{stat.batchCount}
+							{i18n.t('tools.token_sweep.step5.sidebar.batches')}
 						</span>
 					</div>
-					<TokenBalanceDisplay
-						balance={stat.totalBalance}
-						decimals={stat.decimals}
-						mode="compact"
-						class="token-balance"
-					/>
+					<div class="token-balance-wrapper">
+						<TokenBalanceDisplay
+							balance={stat.totalBalance}
+							decimals={stat.decimals}
+							mode="compact"
+							class="token-balance"
+						/>
+					</div>
 				</div>
 			{/each}
 		</div>
@@ -193,7 +199,7 @@
 	}
 
 	.token-stat-item {
-		padding: var(--space-2) 0;
+		padding: var(--space-3) 0;
 		border-bottom: 1px solid var(--color-border);
 	}
 
@@ -209,20 +215,47 @@
 	.token-stat-header {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
-		margin-bottom: var(--space-1);
+		align-items: flex-start;
+		margin-bottom: var(--space-2);
+		gap: var(--space-2);
+	}
+
+	.token-info {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-1);
+		flex: 1;
+		min-width: 0;
 	}
 
 	.token-symbol {
 		font-weight: var(--font-semibold);
 		color: var(--color-heading-2);
-		font-size: var(--text-sm);
+		font-size: var(--text-base);
 	}
 
 	.address-count {
 		font-size: var(--text-xs);
 		color: var(--gray-500);
+	}
+
+	.batch-info {
+		font-size: var(--text-xs);
+		color: var(--color-primary);
+		font-weight: var(--font-semibold);
 		white-space: nowrap;
+		background: var(--color-primary-light);
+		padding: var(--space-1-5) var(--space-2-5);
+		border-radius: var(--radius-md);
+		flex-shrink: 0;
+	}
+
+	:global([data-theme='dark']) .batch-info {
+		background: rgba(var(--color-primary-rgb), 0.15);
+	}
+
+	.token-balance-wrapper {
+		margin-top: var(--space-1);
 	}
 
 	:global(.token-balance) {

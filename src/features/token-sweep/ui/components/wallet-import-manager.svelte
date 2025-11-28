@@ -75,13 +75,13 @@
 			<span class="wallet-count"
 				>{i18n.t('tools.token_sweep.step4.content.wallet_list.count', { count: walletCount })}</span
 			>
-			{#if hasScanned}
+			<!-- {#if hasScanned}
 				<span class="balance-badge"
 					>{i18n.t('tools.token_sweep.step4.content.wallet_list.with_balance', {
 						count: walletsWithBalance
 					})}</span
 				>
-			{/if}
+			{/if} -->
 		</div>
 		<div class="wallet-actions">
 			{#if walletCount > 0}
