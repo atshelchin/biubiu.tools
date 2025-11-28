@@ -618,14 +618,20 @@ export async function scanMultipleWalletsResumable(
 	const addresses = wallets.map((w) => w.address);
 
 	// Initialize or resume from saved state
-	const state: ScanState = initialState || {
-		addresses,
-		chainId,
-		currentTokenIndex: -1, // -1 means native token
-		currentBatchIndex: 0,
-		tokenBalances: new Map(),
-		isPaused: false
-	};
+	const state: ScanState = initialState
+		? {
+				...initialState,
+				isPaused: false, // Reset isPaused when resuming
+				pauseReason: undefined // Clear pause reason when resuming
+			}
+		: {
+				addresses,
+				chainId,
+				currentTokenIndex: -1, // -1 means native token
+				currentBatchIndex: 0,
+				tokenBalances: new Map(),
+				isPaused: false
+			};
 
 	const batchCount = Math.ceil(addresses.length / getBatchSize());
 	const totalTokens = 1 + tokenAddresses.filter((t) => t.address).length;

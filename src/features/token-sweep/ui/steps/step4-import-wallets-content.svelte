@@ -372,8 +372,24 @@
 			});
 
 			console.log('✅ Scan completed, updates:', updates.size, 'state:', state);
+			console.log('📊 Sample updates:', Array.from(updates.entries()).slice(0, 3));
+			console.log('📊 Imported wallets before update:', importedWallets.length);
+
 			step4State.scanState = state;
 			step4State.updateWalletBalances(updates);
+
+			console.log(
+				'📊 Wallets with balance after update:',
+				step4State.getWalletsWithBalance().length
+			);
+			console.log(
+				'📊 Sample wallet balances:',
+				importedWallets.slice(0, 3).map((w) => ({
+					address: w.address,
+					hasBalance: w.hasBalance,
+					balances: w.balances
+				}))
+			);
 
 			if (!state.isPaused) {
 				step4State.hasScanned = true;
