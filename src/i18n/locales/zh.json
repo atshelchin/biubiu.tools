@@ -35,7 +35,7 @@
 			"seo": {
 				"page_title": "合约部署器 - 确定性智能合约部署 | BiuBiu 工具",
 				"page_description": "使用 CREATE2 代理进行确定性智能合约部署。所有 EVM 网络相同合约地址。开发者友好的测试和生产界面。",
-				"keywords": "合约部署器, CREATE2, 确定性部署, 智能合约, 以太坊, Polygon, BSC, Solidity, Web3 工具",
+				"keywords": "合约部署器，CREATE2, 确定性部署，智能合约，以太坊，Polygon, BSC, Solidity, Web3 工具",
 				"webapp_name": "合约部署器",
 				"webapp_description": "使用 CREATE2 代理在所有 EVM 网络上进行确定性智能合约部署。",
 				"feature_1": "CREATE2 确定性部署",
@@ -237,8 +237,8 @@
 					"dependency_issues_found": "发现依赖问题",
 					"resolve_issues_before_continuing": "请先解决上述问题再继续",
 					"recheck_dependencies": "重新检查依赖项",
-					"address_label": "地址:",
-					"endpoint_label": "节点:",
+					"address_label": "地址：",
+					"endpoint_label": "节点：",
 					"resolve_previous_issue": "请先解决前一个问题",
 					"view_deployment_guide": "查看部署指南",
 					"deploy_coming_soon": "部署合约（即将推出）",
@@ -289,21 +289,21 @@
 						"rpc_endpoint": {
 							"name": "RPC 节点",
 							"description": "{network} RPC 连接",
-							"chain_id_mismatch": "链 ID 不匹配: 预期 {expected}，实际 {actual}",
+							"chain_id_mismatch": "链 ID 不匹配：预期 {expected}，实际 {actual}",
 							"connected_to_block": "已连接到区块 #{blockNumber}",
-							"failed_to_connect": "连接失败: {error}"
+							"failed_to_connect": "连接失败：{error}"
 						},
 						"eip7702": {
 							"name": "EIP-7702 支持",
 							"description": "账户抽象与授权支持",
 							"supported": "网络支持 EIP-7702（已通过 eth_estimateGas 测试）",
 							"not_supported": "网络不支持 EIP-7702（无效操作码）",
-							"check_failed": "检查 EIP-7702 支持失败: {error}"
+							"check_failed": "检查 EIP-7702 支持失败：{error}"
 						},
 						"contract": {
 							"deployed": "合约已部署",
 							"not_deployed": "合约未部署在此地址",
-							"check_failed": "检查部署失败: {error}",
+							"check_failed": "检查部署失败：{error}",
 							"create2_proxy_description": "确定性部署代理合约",
 							"multicall3_description": "将多个合约调用聚合为一个请求",
 							"biubiu_premium_description": "高级会员管理合约",
@@ -407,19 +407,19 @@
 					"choose_method": "选择导入方式",
 					"mnemonic": {
 						"label": "输入助记词",
-						"placeholder": "输入12或24个单词，用空格分隔",
+						"placeholder": "输入 12 或 24 个单词，用空格分隔",
 						"security_hint": "⚠️ 您的助记词永远不会上传到任何服务器",
 						"derivation_path": "派生路径配置",
 						"generate_button": "🔍 生成地址列表",
 						"generating": "生成中... ({progress}%)",
 						"error_empty": "请输入助记词",
-						"error_invalid": "助记词无效。请输入12或24个单词。",
+						"error_invalid": "助记词无效。请输入 12 或 24 个单词。",
 						"error_range": "地址范围无效",
-						"error_max": "范围过大（一次最多10000个地址）"
+						"error_max": "范围过大（一次最多 10000 个地址）"
 					},
 					"private_key": {
 						"label": "批量导入私钥",
-						"placeholder": "每行一个私钥（以0x开头）",
+						"placeholder": "每行一个私钥（以 0x 开头）",
 						"import_button": "➕ 批量添加钱包",
 						"importing": "导入中... ({progress}%)",
 						"error_empty": "请输入私钥",
@@ -428,7 +428,7 @@
 					},
 					"wallet_list": {
 						"title": "已导入钱包",
-						"count": "（{count}）",
+						"count": "({count})",
 						"with_balance": "{count}个有余额",
 						"scan_button": "🔍 扫描余额",
 						"scanning": "扫描中... {progress}%",
@@ -438,13 +438,21 @@
 					"errors": {
 						"no_network": "未连接网络",
 						"no_wallets": "没有要扫描的钱包",
-						"no_tokens": "请先在第3步选择代币",
-						"no_rpc": "当前网络没有可用的RPC端点",
+						"no_tokens": "请先在第 3 步选择代币",
+						"no_rpc": "当前网络没有可用的 RPC 端点",
 						"no_valid_tokens": "当前网络没有选择有效的代币",
 						"no_balance": "所选代币在钱包中没有余额",
 						"generate_failed": "生成地址失败",
 						"import_failed": "导入私钥失败",
 						"scan_failed": "扫描余额失败"
+					},
+					"rate_limit": {
+						"title": "所有 RPC 端点均已限流",
+						"error_native": "扫描原生代币余额时触发限流（批次 {batch}/{total}）",
+						"error_erc20": "扫描代币 {token} 余额时触发限流（批次 {batch}/{total}）",
+						"hint": "💡 请点击下方按钮添加新的 RPC 端点，或等待现有 RPC 恢复后重试。添加多个 RPC 可以自动轮换，避免频繁限流。",
+						"manage_rpc_button": "管理 RPC",
+						"resume_button": "恢复扫描"
 					},
 					"dialogs": {
 						"remove_wallet_title": "移除钱包",
@@ -926,6 +934,22 @@
 		"failed": "失败"
 	},
 	"components": {
+		"quick_rpc_manager": {
+			"title": "快速管理 RPC 端点",
+			"network": "当前网络",
+			"add_new": "添加新的 RPC",
+			"placeholder": "https://example.com/rpc",
+			"add_button": "添加",
+			"current_rpcs": "当前 RPC 列表",
+			"primary": "主要",
+			"no_rpcs": "暂无 RPC 端点",
+			"invalid_url": "无效的 URL，必须以 http:// 或 https:// 开头",
+			"duplicate_url": "此 RPC 端点已存在",
+			"at_least_one": "至少需要保留一个 RPC 端点",
+			"hint": "添加多个 RPC 端点可以在某个被限流时自动切换，提高扫描成功率。",
+			"cancel": "取消",
+			"save": "保存并继续扫描"
+		},
 		"address_path_selector": {
 			"sequential": {
 				"label": "按序号",

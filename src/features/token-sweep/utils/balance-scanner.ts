@@ -99,9 +99,23 @@ export interface ScanState {
 
 // Rate limit error detection
 export class RateLimitError extends Error {
-	constructor(message: string) {
-		super(message);
+	public readonly scanType: 'native' | 'erc20';
+	public readonly currentBatch: number;
+	public readonly totalBatches: number;
+	public readonly tokenId?: string;
+
+	constructor(
+		scanType: 'native' | 'erc20',
+		currentBatch: number,
+		totalBatches: number,
+		tokenId?: string
+	) {
+		super('RPC_RATE_LIMIT');
 		this.name = 'RateLimitError';
+		this.scanType = scanType;
+		this.currentBatch = currentBatch;
+		this.totalBatches = totalBatches;
+		this.tokenId = tokenId;
 	}
 }
 
@@ -131,7 +145,8 @@ export interface ScanProgress {
 }
 
 /**
- * Detect if an error is caused by RPC rate limiting
+ * Detect if an error is caused by RPC rate limiting or unavailability
+ * This includes: rate limits, CORS errors, network failures, etc.
  */
 export function isRateLimitError(error: unknown): boolean {
 	if (!error) return false;
@@ -139,7 +154,7 @@ export function isRateLimitError(error: unknown): boolean {
 	const errorStr = String(error).toLowerCase();
 	const errorMessage = error instanceof Error ? error.message.toLowerCase() : errorStr;
 
-	// Common rate limit indicators
+	// Common rate limit and RPC failure indicators
 	const rateLimitPatterns = [
 		'rate limit',
 		'too many requests',
@@ -149,7 +164,15 @@ export function isRateLimitError(error: unknown): boolean {
 		'throttle',
 		'rate exceeded',
 		'too fast',
-		'slow down'
+		'slow down',
+		'http request failed',
+		'cors', // CORS errors indicate RPC not accessible
+		'err_failed', // Network failures
+		'fetch failed', // Fetch failures
+		'network error', // Generic network errors
+		'failed to fetch', // Common fetch error
+		'access-control-allow-origin', // CORS specific
+		'preflight' // CORS preflight failures
 	];
 
 	return rateLimitPatterns.some(
@@ -623,6 +646,7 @@ export async function scanMultipleWalletsResumable(
 		isPaused: () => shouldPause
 	};
 
+	console.log(123, state);
 	try {
 		// Step 1: Scan native balances (if not already done)
 		if (state.currentTokenIndex === -1) {
@@ -647,6 +671,10 @@ export async function scanMultipleWalletsResumable(
 				}));
 
 				try {
+					const rpcUrl = (client.transport as any).url || 'unknown';
+					console.log(
+						`📡 [Native] Batch ${i + 1}/${batchCount} - querying ${batch.length} addresses via Multicall3 using RPC: ${rpcUrl}`
+					);
 					// @ts-ignore
 					const response = (await (client as any).readContract({
 						address: MULTICALL3_ADDRESS,
@@ -654,6 +682,20 @@ export async function scanMultipleWalletsResumable(
 						functionName: 'aggregate3',
 						args: [calls]
 					})) as unknown as Array<{ success: boolean; returnData: string }>;
+
+					// Validate response
+					if (!response || !Array.isArray(response) || response.length !== batch.length) {
+						console.error(
+							`❌ [Native] Invalid response from RPC: expected ${batch.length} results, got ${response ? response.length : 'null'}`
+						);
+						throw new Error(
+							`Invalid RPC response: expected array of ${batch.length}, got ${response ? response.length : 'null'}`
+						);
+					}
+
+					console.log(
+						`✅ [Native] Batch ${i + 1}/${batchCount} completed - ${response.length} results`
+					);
 
 					batch.forEach((address, index) => {
 						const result = response[index];
@@ -691,9 +733,7 @@ export async function scanMultipleWalletsResumable(
 						state.pauseReason = 'rate_limit';
 						state.currentBatchIndex = i;
 						state.nativeBalances = nativeBalances;
-						const rateLimitError = new RateLimitError(
-							`RPC rate limit detected while scanning native balances at batch ${i + 1}/${batchCount}`
-						);
+						const rateLimitError = new RateLimitError('native', i + 1, batchCount);
 						if (onRateLimitError) {
 							onRateLimitError(rateLimitError, state);
 						}
@@ -748,6 +788,10 @@ export async function scanMultipleWalletsResumable(
 				}));
 
 				try {
+					const rpcUrl = (client.transport as any).url || 'unknown';
+					console.log(
+						`📡 [ERC20 ${tokenIdx + 1}/${erc20Tokens.length}] Batch ${i + 1}/${batchCount} - querying ${batch.length} addresses for token ${token.tokenId} using RPC: ${rpcUrl}`
+					);
 					// @ts-ignore
 					const response = (await (client as any).readContract({
 						address: MULTICALL3_ADDRESS,
@@ -755,6 +799,20 @@ export async function scanMultipleWalletsResumable(
 						functionName: 'aggregate3',
 						args: [calls]
 					})) as unknown as Array<{ success: boolean; returnData: string }>;
+
+					// Validate response
+					if (!response || !Array.isArray(response) || response.length !== batch.length) {
+						console.error(
+							`❌ [ERC20] Invalid response from RPC: expected ${batch.length} results, got ${response ? response.length : 'null'}`
+						);
+						throw new Error(
+							`Invalid RPC response: expected array of ${batch.length}, got ${response ? response.length : 'null'}`
+						);
+					}
+
+					console.log(
+						`✅ [ERC20 ${tokenIdx + 1}/${erc20Tokens.length}] Batch ${i + 1}/${batchCount} completed - ${response.length} results`
+					);
 
 					batch.forEach((address, index) => {
 						const result = response[index];
@@ -793,9 +851,7 @@ export async function scanMultipleWalletsResumable(
 						state.currentTokenIndex = tokenIdx;
 						state.currentBatchIndex = i;
 						state.tokenBalances.set(token.tokenId, tokenBalances);
-						const rateLimitError = new RateLimitError(
-							`RPC rate limit detected while scanning ${token.tokenId} at batch ${i + 1}/${batchCount}`
-						);
+						const rateLimitError = new RateLimitError('erc20', i + 1, batchCount, token.tokenId);
 						if (onRateLimitError) {
 							onRateLimitError(rateLimitError, state);
 						}

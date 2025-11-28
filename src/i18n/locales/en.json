@@ -446,6 +446,13 @@
 						"import_failed": "Failed to import private keys",
 						"scan_failed": "Failed to scan balances"
 					},
+					"rate_limit": {
+						"title": "RPC Rate Limit Detected",
+						"error_native": "Rate limit triggered while scanning native token balances (batch {batch}/{total})",
+						"error_erc20": "Rate limit triggered while scanning token {token} balances (batch {batch}/{total})",
+						"hint": "💡 Please click the ⚙️ Settings button at the top right corner of the page to switch to another RPC endpoint, then click the \"Resume Scan\" button below to continue. The scan will resume from where it left off without losing progress.",
+						"resume_button": "Resume Scan"
+					},
 					"dialogs": {
 						"remove_wallet_title": "Remove Wallet",
 						"remove_wallet_message": "Are you sure you want to remove this wallet from the import list?\n\nAddress: {address}",
