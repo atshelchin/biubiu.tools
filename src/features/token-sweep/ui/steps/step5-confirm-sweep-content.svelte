@@ -3,7 +3,6 @@
 	import { step3State } from '@/features/token-sweep/stores/step3-state.svelte';
 	import { step4State } from '@/features/token-sweep/stores/step4-state.svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
-	import TransactionModeSelector from '@/features/token-sweep/ui/components/transaction-mode-selector.svelte';
 	import FeeBreakdownDisplay from '@/features/token-sweep/ui/components/fee-breakdown-display.svelte';
 	import TemporaryWalletManager from '@/features/token-sweep/ui/components/temporary-wallet-manager.svelte';
 	import BatchInfoCard from '@/features/token-sweep/ui/components/batch-info-card.svelte';
@@ -53,7 +52,7 @@
 	} | null>(null);
 
 	// New state for transaction mode and fees
-	let transactionMode = $state<TransactionMode>('connected');
+	let transactionMode = $state<TransactionMode>('temporary'); // Only support temporary wallet mode
 	let membershipStatus = $state<MembershipStatus>({ isMember: false });
 	let feeBreakdown = $state<FeeBreakdown | null>(null);
 	let temporaryWallet = $state<TemporaryWallet | null>(null);
@@ -94,7 +93,7 @@
 		Boolean(connectStore.address) &&
 			selectedTokenCount > 0 &&
 			walletCount > 0 &&
-			(transactionMode === 'connected' || temporaryWallet !== null)
+			temporaryWallet !== null // Only support temporary wallet mode
 	);
 
 	// Option to only sweep wallets with balance
@@ -140,10 +139,6 @@
 		);
 
 		feeBreakdown = breakdown;
-	}
-
-	function handleModeChange(mode: TransactionMode) {
-		transactionMode = mode;
 	}
 
 	function handleWalletCreated(wallet: TemporaryWallet) {
@@ -545,14 +540,11 @@
 
 	<!-- 4. Fee Breakdown Display (费用计算) -->
 	{#if feeBreakdown && currentNetwork}
-		<FeeBreakdownDisplay {feeBreakdown} {membershipStatus} networkSymbol={currentNetwork.symbol} />
+		<!-- <FeeBreakdownDisplay {feeBreakdown} {membershipStatus} networkSymbol={currentNetwork.symbol} /> -->
 	{/if}
 
-	<!-- 5. Transaction Mode Selector (发送方式选择) -->
-	<TransactionModeSelector mode={transactionMode} onModeChange={handleModeChange} />
-
-	<!-- 6. Temporary Wallet Manager (only shown when temporary mode selected) -->
-	{#if transactionMode === 'temporary' && feeBreakdown && currentNetwork}
+	<!-- 5. Temporary Wallet Manager (always shown, only support temporary mode) -->
+	{#if feeBreakdown && currentNetwork}
 		<TemporaryWalletManager
 			{taskId}
 			estimatedGasCost={feeBreakdown.estimatedGasFee}
