@@ -111,18 +111,29 @@ export async function clearReferral(): Promise<void> {
  */
 export function generateReferralUrl(address: string): string {
 	const url = new URL(window.location.href);
-	url.searchParams.set('ref', address);
+	url.searchParams.set('utm_term', address);
 	return url.toString();
 }
 
 /**
  * Extract referral address from URL query parameters
+ * Looks for address in utm_term parameter (format: "eth:0x1234...")
+ * Falls back to ref parameter for backwards compatibility
  */
 export function getReferralFromUrl(): string | null {
 	if (typeof window === 'undefined') return null;
 
 	const params = new URLSearchParams(window.location.search);
-	return params.get('ref');
+
+	// Try to get from utm_term first (new format with eth: prefix)
+	const utmTerm = params.get('utm_term') ?? '0x';
+	if (utmTerm) {
+		// Remove "eth:" prefix if present
+		if (utmTerm.startsWith('eth:')) {
+			return utmTerm.substring(4); // Remove "eth:" (4 characters)
+		}
+	}
+	return utmTerm;
 }
 
 /**

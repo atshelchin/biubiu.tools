@@ -499,23 +499,6 @@
 		color: var(--gray-100);
 	}
 
-	.url-base {
-		color: var(--gray-600);
-	}
-
-	:global([data-theme='dark']) .url-base {
-		color: var(--gray-400);
-	}
-
-	.url-params {
-		color: var(--gray-500);
-		font-size: var(--text-xs);
-	}
-
-	:global([data-theme='dark']) .url-params {
-		color: var(--gray-500);
-	}
-
 	.short-url {
 		color: #3b82f6;
 		font-weight: var(--font-medium);
@@ -523,19 +506,6 @@
 
 	:global([data-theme='dark']) .short-url {
 		color: #60a5fa;
-	}
-
-	.url-text .highlight {
-		color: #3b82f6;
-		font-weight: var(--font-medium);
-		background: rgba(59, 130, 246, 0.08);
-		padding: 0 2px;
-		border-radius: 2px;
-	}
-
-	:global([data-theme='dark']) .url-text .highlight {
-		color: #60a5fa;
-		background: rgba(96, 165, 250, 0.12);
 	}
 
 	.url-hint {
