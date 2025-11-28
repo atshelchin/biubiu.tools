@@ -1,4 +1,5 @@
 <script lang="ts">
+	import TopToolbar from './TopToolbar.svelte';
 	import Hero from './Hero.svelte';
 	import Features from './Features.svelte';
 	// import Stats from './Stats.svelte';
@@ -9,6 +10,9 @@
 
 <!-- Landing page layout | 着陆页布局 -->
 <div class="landing-page">
+	<!-- Top Toolbar | 顶部工具栏 -->
+	<TopToolbar />
+
 	<!-- Hero section | 主要展示区 -->
 	<Hero />
 

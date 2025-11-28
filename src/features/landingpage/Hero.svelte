@@ -125,6 +125,7 @@
 			var(--color-panel-1) 50%,
 			var(--color-background) 100%
 		);
+		padding-top: 60px; /* Account for fixed toolbar */
 	}
 
 	/* Pattern Overlay */
