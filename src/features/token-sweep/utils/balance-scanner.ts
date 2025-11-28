@@ -134,13 +134,16 @@ export async function scanERC20Balance(
 export async function batchScanNativeBalances(
 	client: PublicClient,
 	addresses: Address[],
-	chainId: number
+	chainId: number,
+	onBatchProgress?: (current: number, total: number) => void
 ): Promise<Map<Address, TokenBalance>> {
 	const results = new Map<Address, TokenBalance>();
+	const totalBatches = Math.ceil(addresses.length / BATCH_SIZE);
 
 	// Process in batches of BATCH_SIZE
 	for (let i = 0; i < addresses.length; i += BATCH_SIZE) {
 		const batch = addresses.slice(i, i + BATCH_SIZE);
+		const batchIndex = Math.floor(i / BATCH_SIZE) + 1;
 
 		// Prepare multicall calls for native balance
 		const calls = batch.map((address) => ({
@@ -197,6 +200,11 @@ export async function batchScanNativeBalances(
 				});
 			});
 		}
+
+		// Report batch progress
+		if (onBatchProgress) {
+			onBatchProgress(batchIndex, totalBatches);
+		}
 	}
 
 	return results;
@@ -210,14 +218,17 @@ export async function batchScanERC20Balances(
 	addresses: Address[],
 	tokenAddress: Address,
 	decimals: number,
-	chainId: number
+	chainId: number,
+	onBatchProgress?: (current: number, total: number) => void
 ): Promise<Map<Address, TokenBalance>> {
 	const results = new Map<Address, TokenBalance>();
 	const tokenId = `${chainId}:${tokenAddress.toLowerCase()}`;
+	const totalBatches = Math.ceil(addresses.length / BATCH_SIZE);
 
 	// Process in batches of BATCH_SIZE
 	for (let i = 0; i < addresses.length; i += BATCH_SIZE) {
 		const batch = addresses.slice(i, i + BATCH_SIZE);
+		const batchIndex = Math.floor(i / BATCH_SIZE) + 1;
 
 		// Prepare multicall calls for ERC20 balanceOf
 		const calls = batch.map((address) => ({
@@ -273,6 +284,11 @@ export async function batchScanERC20Balances(
 					formatted: '0'
 				});
 			});
+		}
+
+		// Report batch progress
+		if (onBatchProgress) {
+			onBatchProgress(batchIndex, totalBatches);
 		}
 	}
 
@@ -332,44 +348,54 @@ export async function scanMultipleWallets(
 	const results = new Map<Address, WalletBalanceResult>();
 	const addresses = wallets.map((w) => w.address);
 
-	// Total steps: 1 (native) + N (ERC20 tokens)
-	const totalSteps = 1 + tokenAddresses.filter((t) => t.address).length;
-	let completedSteps = 0;
+	// Calculate total batches for accurate progress tracking
+	const batchCount = Math.ceil(addresses.length / BATCH_SIZE);
+	const totalTokens = 1 + tokenAddresses.filter((t) => t.address).length; // native + ERC20s
+	const totalBatches = batchCount * totalTokens;
+	let completedBatches = 0;
+
+	// Progress callback for batch-level updates
+	const updateProgress = () => {
+		if (onProgress) {
+			onProgress({
+				current: completedBatches,
+				total: totalBatches,
+				percentage: Math.round((completedBatches / totalBatches) * 100)
+			});
+		}
+	};
 
 	// Step 1: Batch scan native balances for all addresses
-	const nativeBalances = await batchScanNativeBalances(client, addresses, chainId);
-	completedSteps++;
-
-	if (onProgress) {
-		onProgress({
-			current: completedSteps,
-			total: totalSteps,
-			percentage: Math.round((completedSteps / totalSteps) * 100)
-		});
-	}
+	const nativeBalances = await batchScanNativeBalances(
+		client,
+		addresses,
+		chainId,
+		(current, total) => {
+			completedBatches = current;
+			updateProgress();
+		}
+	);
 
 	// Step 2: Batch scan each ERC20 token for all addresses
 	const tokenBalancesMaps = new Map<string, Map<Address, TokenBalance>>();
+	let tokenIndex = 0;
 
 	for (const token of tokenAddresses) {
 		if (token.address) {
+			tokenIndex++;
 			const balances = await batchScanERC20Balances(
 				client,
 				addresses,
 				token.address,
 				token.decimals,
-				chainId
+				chainId,
+				(current, total) => {
+					// Calculate cumulative progress: native batches + previous tokens + current token
+					completedBatches = batchCount + (tokenIndex - 1) * batchCount + current;
+					updateProgress();
+				}
 			);
 			tokenBalancesMaps.set(token.tokenId, balances);
-
-			completedSteps++;
-			if (onProgress) {
-				onProgress({
-					current: completedSteps,
-					total: totalSteps,
-					percentage: Math.round((completedSteps / totalSteps) * 100)
-				});
-			}
 		}
 	}
 
