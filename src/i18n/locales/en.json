@@ -952,6 +952,22 @@
 		"failed": "Failed"
 	},
 	"components": {
+		"quick_rpc_manager": {
+			"title": "Quick RPC Management",
+			"network": "Current Network",
+			"add_new": "Add New RPC",
+			"placeholder": "https://example.com/rpc",
+			"add_button": "Add",
+			"current_rpcs": "Current RPC List",
+			"primary": "Primary",
+			"no_rpcs": "No RPC endpoints",
+			"invalid_url": "Invalid URL, must start with http:// or https://",
+			"duplicate_url": "This RPC endpoint already exists",
+			"at_least_one": "At least one RPC endpoint is required",
+			"hint": "Adding multiple RPC endpoints enables automatic switching when one is rate limited, improving scan success rate.",
+			"cancel": "Cancel",
+			"save": "Save and Continue Scan"
+		},
 		"address_path_selector": {
 			"sequential": {
 				"label": "Sequential",
