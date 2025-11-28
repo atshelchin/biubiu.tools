@@ -999,7 +999,14 @@
 		"faqs": "常见问题",
 		"total_checks": "总检查数",
 		"passed": "通过",
-		"failed": "失败"
+		"failed": "失败",
+		"status": {
+			"coming_soon": "即将推出",
+			"alpha": "内测版",
+			"beta": "公测版",
+			"stable": "稳定版",
+			"new": "新推出"
+		}
 	},
 	"components": {
 		"gas_funding": {

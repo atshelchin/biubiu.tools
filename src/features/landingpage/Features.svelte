@@ -18,6 +18,7 @@
 		KeyRound,
 		Rocket
 	} from '@lucide/svelte';
+	import ToolStatusBadge from '$lib/components/ui/tool-status-badge.svelte';
 
 	interface Tool {
 		icon: typeof Wallet;
@@ -27,8 +28,7 @@
 		status: 'active' | 'coming-soon';
 		color: string;
 		features?: string[];
-		highlight?: boolean;
-		alpha?: boolean;
+		stage?: 'coming-soon' | 'alpha' | 'beta' | 'stable' | 'new';
 	}
 
 	// Tools data with full i18n - reactive to language changes
@@ -41,8 +41,7 @@
 			status: 'active',
 			color: '#10B981',
 			features: ['Multi-chain Support', 'Batch Processing', 'Gas Optimized'],
-			highlight: true,
-			alpha: true
+			stage: 'beta'
 		},
 		{
 			icon: SendHorizontal,
@@ -52,8 +51,7 @@
 			status: 'active',
 			color: '#F59E0B',
 			features: ['Equal or Custom Amounts', 'CSV Import Ready', 'Real-time Preview'],
-			highlight: false,
-			alpha: true
+			stage: 'alpha'
 		},
 		{
 			icon: ScanSearch,
@@ -63,8 +61,7 @@
 			status: 'active',
 			color: '#3B82F6',
 			features: ['Multi-Wallet Scanning', 'CSV/JSON Export', 'Read-only Operations'],
-			highlight: false,
-			alpha: true
+			stage: 'alpha'
 		},
 		{
 			icon: Globe,
@@ -74,8 +71,7 @@
 			status: 'active',
 			color: '#EC4899',
 			features: ['Pattern Generation', 'Expiry Tracking', 'Batch Scanning'],
-			highlight: false,
-			alpha: true
+			stage: 'alpha'
 		},
 		{
 			icon: KeyRound,
@@ -85,8 +81,7 @@
 			status: 'active',
 			color: '#8B5CF6',
 			features: ['HD Path Support', 'Multiple Chains', 'Export to CSV/JSON'],
-			highlight: false,
-			alpha: true
+			stage: 'alpha'
 		},
 		{
 			icon: TrendingUp,
@@ -96,8 +91,7 @@
 			status: 'active',
 			color: '#EF4444',
 			features: ['Buy & Sell Tokens', 'Adjustable Slippage', 'Multi-Chain Support'],
-			highlight: false,
-			alpha: true
+			stage: 'alpha'
 		},
 		{
 			icon: Sparkles,
@@ -107,8 +101,7 @@
 			status: 'active',
 			color: '#10B981',
 			features: ['Advanced Features', 'Tax & Anti-Bot', 'Instant Deploy'],
-			highlight: false,
-			alpha: true
+			stage: 'alpha'
 		},
 		{
 			icon: Rocket,
@@ -122,23 +115,20 @@
 				t('tools.contract_deployer.feature_2'),
 				t('tools.contract_deployer.feature_3')
 			],
-			highlight: false,
-			alpha: true
+			stage: 'alpha'
 		},
 		{
 			icon: Zap,
 			title: t('tools.call_master.title'),
 			description: t('tools.call_master.description'),
-			link: '/apps/call-master',
-			status: 'active',
+			status: 'coming-soon',
 			color: '#8B5CF6',
 			features: [
 				t('tools.call_master.feature_1'),
 				t('tools.call_master.feature_2'),
 				t('tools.call_master.feature_3')
 			],
-			highlight: false,
-			alpha: false
+			stage: 'coming-soon'
 		}
 	]);
 
@@ -181,9 +171,7 @@
 			{#each tools as tool, index (index)}
 				{@const Icon = tool.icon}
 				<article
-					class="tool-card {tool.highlight ? 'highlighted' : ''} {tool.status === 'coming-soon'
-						? 'coming-soon'
-						: ''}"
+					class="tool-card {tool.status === 'coming-soon' ? 'coming-soon' : ''}"
 					style="--index: {index}; --tool-color: {tool.color};"
 				>
 					<!-- Card glow effect -->
@@ -197,14 +185,8 @@
 							<Lock class="ribbon-icon" />
 							<span>{t('tools.coming_soon')}</span>
 						</div>
-					{/if}
-
-					{#if tool.highlight}
-						<div class="highlight-badge">{t('tools.available_now')}</div>
-					{/if}
-
-					{#if tool.alpha}
-						<div class="alpha-badge">Alpha</div>
+					{:else if tool.stage}
+						<ToolStatusBadge status={tool.stage} />
 					{/if}
 
 					<!-- Premium icon with animation -->
@@ -460,63 +442,6 @@
 		box-shadow:
 			0 12px 20px -5px rgb(0 0 0 / 0.08),
 			0 6px 8px -4px rgb(0 0 0 / 0.04);
-	}
-
-	/* Highlighted card with subtle accent */
-	.tool-card.highlighted .card-bg {
-		background: var(--color-panel-2);
-		border: 1px solid var(--color-panel-border-3);
-		box-shadow: var(--shadow-md);
-	}
-
-	:global(.light) .tool-card.highlighted .card-bg {
-		background: var(--color-panel-3);
-		border: 2px solid var(--color-primary);
-		box-shadow:
-			0 10px 40px -10px color-mix(in srgb, var(--color-primary) 20%, transparent),
-			0 4px 6px -4px rgb(0 0 0 / 0.1);
-	}
-
-	.highlight-badge {
-		position: absolute;
-		top: var(--space-6);
-		right: var(--space-6);
-		padding: var(--space-1) var(--space-3);
-		background: var(--color-panel-accent);
-		color: var(--color-success);
-		font-size: 10px;
-		font-weight: var(--font-semibold);
-		border-radius: var(--radius-md);
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		z-index: 10;
-	}
-
-	:global(.light) .highlight-badge {
-		background: var(--color-success);
-		color: white;
-		box-shadow: 0 2px 8px -2px color-mix(in srgb, var(--color-success) 50%, transparent);
-	}
-
-	/* Alpha badge */
-	.alpha-badge {
-		position: absolute;
-		top: var(--space-3);
-		left: var(--space-3);
-		padding: var(--space-1) var(--space-3);
-		background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-		color: white;
-		font-size: 10px;
-		font-weight: var(--font-bold);
-		border-radius: var(--radius-md);
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		z-index: 10;
-		box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
-	}
-
-	:global(.light) .alpha-badge {
-		box-shadow: 0 2px 8px rgba(102, 126, 234, 0.5);
 	}
 
 	/* Coming soon ribbon */

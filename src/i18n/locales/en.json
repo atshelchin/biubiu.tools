@@ -1013,7 +1013,14 @@
 		"faqs": "Frequently Asked Questions",
 		"total_checks": "Total Checks",
 		"passed": "Passed",
-		"failed": "Failed"
+		"failed": "Failed",
+		"status": {
+			"coming_soon": "Coming Soon",
+			"alpha": "Alpha",
+			"beta": "Beta",
+			"stable": "Stable",
+			"new": "New"
+		}
 	},
 	"components": {
 		"gas_funding": {
