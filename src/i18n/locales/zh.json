@@ -391,16 +391,59 @@
 						"select_tokens": "请在步骤 3 中选择至少一个代币",
 						"import_wallets": "请在步骤 4 中导入至少一个钱包",
 						"connect_wallet": "请先连接您的钱包",
-						"no_balance": "没有有余额的钱包可归集。请先在步骤 4 中扫描余额。"
-					}
+						"no_balance": "没有有余额的钱包可归集。请先在步骤 4 中扫描余额。",
+						"insufficient_gas": "临时钱包 gas 不足！需要 {required} {symbol}，当前仅有 {current} {symbol}。请向临时钱包充值后点击下方按钮继续。",
+						"still_insufficient_gas": "临时钱包 gas 仍然不足，请继续充值。"
+					},
+					"gas_insufficient_title": "⛽ Gas 不足",
+					"gas_insufficient_message": "临时钱包余额不足以支付预估的 gas 费用。需要 {required} {symbol}，当前仅有 {current} {symbol}。请使用上方的【为钱包充值 Gas】功能向临时钱包转账，充值完成后点击下方按钮继续执行。",
+					"check_and_resume": "检查余额并继续执行",
+					"gas_refilled_restart": "Gas 已充值！当前余额：{balance} ETH。请重新点击【执行归集】按钮开始。"
 				},
 				"sidebar": {
 					"summary_title": "汇总",
 					"selected_tokens": "已选代币：",
 					"total_wallets": "总钱包数：",
 					"with_balance": "有余额：",
-					"batches": "批次数："
+					"batches": "批次"
 				}
+			},
+			"temporary_wallet": {
+				"title": "临时钱包",
+				"description": "创建随机临时钱包以自动化批量交易。钱包将仅存储在浏览器会话中。",
+				"important": "重要提示",
+				"warning_text": "临时钱包将在您的浏览器中创建。您需要：",
+				"step_download": "下载私钥备份",
+				"step_fund": "为其充值 <strong>{amount} {symbol}</strong> 作为 gas 费用",
+				"step_clear": "完成任务后清除钱包",
+				"btn_create": "创建临时钱包",
+				"creating": "创建中...",
+				"wallet_ready": "钱包就绪",
+				"created_at": "创建时间：{time}",
+				"address": "地址",
+				"balance": "余额（当前网络）",
+				"loading": "加载中...",
+				"private_key": "私钥",
+				"show": "显示",
+				"hide": "隐藏",
+				"copy_address": "复制地址",
+				"copy_private_key": "复制私钥",
+				"show_qr": "显示二维码",
+				"refresh_balance": "刷新余额",
+				"qr_hint": "扫描向此临时钱包发送 gas",
+				"fund_title": "为钱包充值 Gas",
+				"estimated_gas": "预估所需 gas：{amount} {symbol}",
+				"suggested_amount": "💰 建议充值：<strong>{amount} {symbol}</strong> (2倍预估值)",
+				"amount_placeholder": "发送金额",
+				"btn_send": "从连接的钱包发送",
+				"sending": "发送中...",
+				"tip": "💡 提示：已自动填充建议金额（2倍预估值）以确保资金充足。您也可以扫描二维码从任何钱包发送。",
+				"btn_download": "下载私钥",
+				"btn_clear": "清除钱包",
+				"error_no_wallet": "请先连接您的钱包",
+				"error_invalid_amount": "请输入有效金额",
+				"success_transfer": "✅ 转账成功！已发送 {amount} {symbol} 到临时钱包。交易：{tx}...",
+				"confirm_clear": "确定要清除临时钱包吗？如果需要，请确保已下载私钥。"
 			},
 			"step4": {
 				"content": {
@@ -941,6 +984,19 @@
 		"failed": "失败"
 	},
 	"components": {
+		"gas_funding": {
+			"title": "充值 Gas",
+			"target_wallet": "目标钱包",
+			"estimated_gas": "预估所需 Gas",
+			"suggested_amount": "建议充值",
+			"send_amount": "发送金额",
+			"amount_placeholder": "输入金额",
+			"tip": "提示：已自动填充建议金额（2倍预估值）以确保资金充足",
+			"security_notice": "💰 充值到临时钱包的资金可以通过私钥自己转出来，不用担心资金安全",
+			"btn_send": "发送",
+			"sending": "发送中...",
+			"cancel": "取消"
+		},
 		"quick_rpc_manager": {
 			"title": "快速管理 RPC 端点",
 			"network": "当前网络",

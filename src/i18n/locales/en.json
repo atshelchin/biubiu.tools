@@ -391,16 +391,59 @@
 						"select_tokens": "Please select at least one token in Step 3",
 						"import_wallets": "Please import at least one wallet in Step 4",
 						"connect_wallet": "Please connect your wallet first",
-						"no_balance": "No wallets with balance to sweep. Please scan balances first in Step 4."
-					}
+						"no_balance": "No wallets with balance to sweep. Please scan balances first in Step 4.",
+						"insufficient_gas": "Temporary wallet has insufficient gas! Requires {required} {symbol}, but only has {current} {symbol}. Please refill and click the button below to continue.",
+						"still_insufficient_gas": "Temporary wallet still has insufficient gas. Please continue refilling."
+					},
+					"gas_insufficient_title": "⛽ Insufficient Gas",
+					"gas_insufficient_message": "Temporary wallet balance is insufficient to cover the estimated gas fee. Requires {required} {symbol}, but only has {current} {symbol}. Please use the [Fund Wallet with Gas] feature above to transfer funds to the temporary wallet, then click the button below to continue.",
+					"check_and_resume": "Check Balance and Resume",
+					"gas_refilled_restart": "Gas refilled! Current balance: {balance} ETH. Please click [Execute Sweep] button again to start."
 				},
 				"sidebar": {
 					"summary_title": "Summary",
 					"selected_tokens": "Selected Tokens:",
 					"total_wallets": "Total Wallets:",
 					"with_balance": "With Balance:",
-					"batches": "Batches:"
+					"batches": "Batches"
 				}
+			},
+			"temporary_wallet": {
+				"title": "Temporary Wallet",
+				"description": "Create a random temporary wallet to automate batch transactions. The wallet will be stored in your browser session only.",
+				"important": "Important",
+				"warning_text": "The temporary wallet will be created in your browser. You'll need to:",
+				"step_download": "Download the private key for backup",
+				"step_fund": "Fund it with <strong>{amount} {symbol}</strong> for gas fees",
+				"step_clear": "Clear it after completing your tasks",
+				"btn_create": "Create Temporary Wallet",
+				"creating": "Creating...",
+				"wallet_ready": "Wallet Ready",
+				"created_at": "Created: {time}",
+				"address": "Address",
+				"balance": "Balance (Current Network)",
+				"loading": "Loading...",
+				"private_key": "Private Key",
+				"show": "Show",
+				"hide": "Hide",
+				"copy_address": "Copy address",
+				"copy_private_key": "Copy private key",
+				"show_qr": "Show QR Code",
+				"refresh_balance": "Refresh balance",
+				"qr_hint": "Scan to send gas to this temporary wallet",
+				"fund_title": "Fund Wallet with Gas",
+				"estimated_gas": "Estimated gas needed: {amount} {symbol}",
+				"suggested_amount": "💰 Suggested amount: <strong>{amount} {symbol}</strong> (2x estimated)",
+				"amount_placeholder": "Amount to send",
+				"btn_send": "Send from Connected Wallet",
+				"sending": "Sending...",
+				"tip": "💡 Tip: Suggested amount (2x estimated) is auto-filled to ensure sufficient funds. You can also scan the QR code to send from any wallet.",
+				"btn_download": "Download Private Key",
+				"btn_clear": "Clear Wallet",
+				"error_no_wallet": "Please connect your wallet first",
+				"error_invalid_amount": "Please enter a valid amount",
+				"success_transfer": "✅ Transfer successful! Sent {amount} {symbol} to temporary wallet. TX: {tx}...",
+				"confirm_clear": "Are you sure you want to clear the temporary wallet? Make sure you have downloaded the private key if needed."
 			},
 			"step4": {
 				"content": {
@@ -955,6 +998,19 @@
 		"failed": "Failed"
 	},
 	"components": {
+		"gas_funding": {
+			"title": "Fund Gas",
+			"target_wallet": "Target Wallet",
+			"estimated_gas": "Estimated Gas",
+			"suggested_amount": "Suggested Amount",
+			"send_amount": "Send Amount",
+			"amount_placeholder": "Enter amount",
+			"tip": "Tip: Pre-filled with suggested amount (2x estimated) to ensure sufficient funds",
+			"security_notice": "💰 Funds sent to the temporary wallet can be transferred out using the private key - your funds are safe",
+			"btn_send": "Send",
+			"sending": "Sending...",
+			"cancel": "Cancel"
+		},
 		"quick_rpc_manager": {
 			"title": "Quick RPC Management",
 			"network": "Current Network",

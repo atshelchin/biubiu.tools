@@ -21,8 +21,10 @@
 		RefreshCw
 	} from '@lucide/svelte';
 	import QRCodeGenerator from '$lib/components/ui/qr-code.svelte';
+	import GasFundingModal from '$lib/components/ui/gas-funding-modal.svelte';
 	import type { Address } from 'viem';
 	import { formatEther } from 'viem';
+	import { useI18n } from '@shelchin/i18n';
 
 	interface Props {
 		taskId: string;
@@ -36,6 +38,7 @@
 		$props();
 
 	const connectStore = useConnectStore();
+	const i18n = useI18n();
 
 	let temporaryWallet = $state<TemporaryWallet | null>(null);
 	let isCreating = $state(false);
@@ -44,13 +47,15 @@
 	let copiedField = $state<string | null>(null);
 	let showPrivateKey = $state(false);
 	let showQR = $state(false);
+	let showGasFundingModal = $state(false);
 	let isSendingGas = $state(false);
 	let gasSendAmount = $state('');
 	let walletBalance = $state<bigint>(0n);
 	let isLoadingBalance = $state(false);
 
-	// Format gas cost for display
+	// Format gas cost for display (2x the estimated cost as suggested amount)
 	let formattedGasCost = $derived((Number(estimatedGasCost) / 1e18).toFixed(6));
+	let suggestedGasCost = $derived(((Number(estimatedGasCost) * 2) / 1e18).toFixed(6));
 
 	// Check if temporary wallet already exists in session storage
 	$effect(() => {
@@ -116,9 +121,8 @@
 			// Update state
 			temporaryWallet = newWallet;
 
-			// Set suggested gas amount (estimated + 20% buffer)
-			const suggestedAmount = Number(estimatedGasCost) * 1.2;
-			gasSendAmount = (suggestedAmount / 1e18).toFixed(6);
+			// Set suggested gas amount (2x the estimated cost)
+			gasSendAmount = suggestedGasCost;
 
 			// Load wallet balance
 			loadWalletBalance();
@@ -150,11 +154,7 @@
 	}
 
 	function handleClearWallet() {
-		if (
-			confirm(
-				'Are you sure you want to clear the temporary wallet? Make sure you have downloaded the private key if needed.'
-			)
-		) {
+		if (confirm(i18n.t('tools.token_sweep.temporary_wallet.confirm_clear'))) {
 			clearTemporaryWallet(taskId);
 			temporaryWallet = null;
 			showPrivateKey = false;
@@ -175,14 +175,22 @@
 		showQR = !showQR;
 	}
 
+	function openGasFundingModal() {
+		showGasFundingModal = true;
+	}
+
+	function closeGasFundingModal() {
+		showGasFundingModal = false;
+	}
+
 	async function handleSendGasFromWallet() {
 		if (!connectStore.address || !temporaryWallet) {
-			errorMessage = 'Please connect your wallet first';
+			errorMessage = i18n.t('tools.token_sweep.temporary_wallet.error_no_wallet');
 			return;
 		}
 
 		if (!gasSendAmount || Number(gasSendAmount) <= 0) {
-			errorMessage = 'Please enter a valid amount';
+			errorMessage = i18n.t('tools.token_sweep.temporary_wallet.error_invalid_amount');
 			return;
 		}
 
@@ -202,10 +210,17 @@
 			});
 
 			// Show success message
-			successMessage = `✅ Transfer successful! Sent ${amount} ${networkSymbol} to temporary wallet. TX: ${hash.slice(0, 10)}...`;
+			successMessage = i18n.t('tools.token_sweep.temporary_wallet.success_transfer', {
+				amount,
+				symbol: networkSymbol,
+				tx: hash.slice(0, 10)
+			});
 
 			// Clear input field
 			gasSendAmount = '';
+
+			// Close modal
+			closeGasFundingModal();
 
 			// Auto-clear success message after 10 seconds
 			setTimeout(() => {
@@ -232,26 +247,30 @@
 <div class="temporary-wallet-manager">
 	<div class="manager-header">
 		<Key size={20} />
-		<h4>Temporary Wallet</h4>
+		<h4>{i18n.t('tools.token_sweep.temporary_wallet.title')}</h4>
 	</div>
 
 	{#if !temporaryWallet}
 		<!-- Create Temporary Wallet -->
 		<div class="create-section">
 			<p class="create-description">
-				Create a random temporary wallet to automate batch transactions. The wallet will be stored
-				in your browser session only.
+				{i18n.t('tools.token_sweep.temporary_wallet.description')}
 			</p>
 
 			<div class="create-warning">
 				<AlertCircle size={18} />
 				<div>
-					<strong>Important:</strong> The temporary wallet will be created in your browser. You'll
-					need to:
+					<strong>{i18n.t('tools.token_sweep.temporary_wallet.important')}:</strong>
+					{i18n.t('tools.token_sweep.temporary_wallet.warning_text')}
 					<ul>
-						<li>Download the private key for backup</li>
-						<li>Fund it with <strong>{formattedGasCost} {networkSymbol}</strong> for gas fees</li>
-						<li>Clear it after completing your tasks</li>
+						<li>{i18n.t('tools.token_sweep.temporary_wallet.step_download')}</li>
+						<li>
+							{i18n.t('tools.token_sweep.temporary_wallet.step_fund', {
+								amount: formattedGasCost,
+								symbol: networkSymbol
+							})}
+						</li>
+						<li>{i18n.t('tools.token_sweep.temporary_wallet.step_clear')}</li>
 					</ul>
 				</div>
 			</div>
@@ -259,10 +278,10 @@
 			<button class="btn-create" onclick={handleCreateTemporaryWallet} disabled={isCreating}>
 				{#if isCreating}
 					<Loader2 size={20} class="spinning" />
-					Creating...
+					{i18n.t('tools.token_sweep.temporary_wallet.creating')}
 				{:else}
 					<Key size={20} />
-					Create Temporary Wallet
+					{i18n.t('tools.token_sweep.temporary_wallet.btn_create')}
 				{/if}
 			</button>
 
@@ -276,25 +295,27 @@
 	{:else}
 		<!-- Display Temporary Wallet -->
 		<div class="wallet-display">
-			<div class="wallet-status">
+			<!-- <div class="wallet-status">
 				<div class="status-badge">
 					<Check size={16} />
-					<span>Wallet Ready</span>
+					<span>{i18n.t('tools.token_sweep.temporary_wallet.wallet_ready')}</span>
 				</div>
 				<p class="status-info">
-					Created: {new Date(temporaryWallet.createdAt).toLocaleString()}
+					{i18n.t('tools.token_sweep.temporary_wallet.created_at', {
+						time: new Date(temporaryWallet.createdAt).toLocaleString()
+					})}
 				</p>
-			</div>
+			</div> -->
 
 			<!-- Wallet Address -->
 			<div class="wallet-field">
-				<div class="field-label">Address</div>
+				<div class="field-label">{i18n.t('tools.token_sweep.temporary_wallet.address')}</div>
 				<div class="field-content">
 					<code class="field-value">{temporaryWallet.address}</code>
 					<button
 						class="btn-icon"
 						onclick={() => handleCopyToClipboard(temporaryWallet?.address || '', 'address')}
-						title="Copy address"
+						title={i18n.t('tools.token_sweep.temporary_wallet.copy_address')}
 					>
 						{#if copiedField === 'address'}
 							<Check size={16} />
@@ -302,7 +323,11 @@
 							<Copy size={16} />
 						{/if}
 					</button>
-					<button class="btn-qr" onclick={toggleQR} title="Show QR Code">
+					<button
+						class="btn-qr"
+						onclick={toggleQR}
+						title={i18n.t('tools.token_sweep.temporary_wallet.show_qr')}
+					>
 						<QrCode size={16} />
 					</button>
 				</div>
@@ -310,11 +335,11 @@
 
 			<!-- Balance Display -->
 			<div class="wallet-field">
-				<div class="field-label">Balance (Current Network)</div>
+				<div class="field-label">{i18n.t('tools.token_sweep.temporary_wallet.balance')}</div>
 				<div class="field-content balance-content">
 					{#if isLoadingBalance}
 						<Loader2 size={16} class="spinning" />
-						<span class="balance-text">Loading...</span>
+						<span class="balance-text">{i18n.t('tools.token_sweep.temporary_wallet.loading')}</span>
 					{:else}
 						<Wallet size={16} />
 						<span class="balance-text">{formatEther(walletBalance)} {networkSymbol}</span>
@@ -323,7 +348,7 @@
 						class="btn-refresh {isLoadingBalance ? 'spinning' : ''}"
 						onclick={loadWalletBalance}
 						disabled={isLoadingBalance}
-						title="Refresh balance"
+						title={i18n.t('tools.token_sweep.temporary_wallet.refresh_balance')}
 					>
 						<RefreshCw size={16} />
 					</button>
@@ -334,82 +359,20 @@
 			{#if showQR}
 				<div class="qr-display">
 					<QRCodeGenerator data={temporaryWallet.address} size={200} />
-					<p class="qr-hint">Scan to send gas to this temporary wallet</p>
+					<p class="qr-hint">{i18n.t('tools.token_sweep.temporary_wallet.qr_hint')}</p>
 				</div>
 			{/if}
-
-			<!-- Private Key (Hidden by default) -->
-			<div class="wallet-field">
-				<div class="field-label">Private Key</div>
-				<div class="field-content">
-					{#if showPrivateKey}
-						<code class="field-value private-key">{temporaryWallet.privateKey}</code>
-						<button
-							class="btn-icon"
-							onclick={() => handleCopyToClipboard(temporaryWallet?.privateKey || '', 'privateKey')}
-							title="Copy private key"
-						>
-							{#if copiedField === 'privateKey'}
-								<Check size={16} />
-							{:else}
-								<Copy size={16} />
-							{/if}
-						</button>
-					{:else}
-						<code class="field-value">{'•'.repeat(64)}</code>
-					{/if}
-					<button class="btn-toggle" onclick={togglePrivateKeyVisibility}>
-						{showPrivateKey ? 'Hide' : 'Show'}
-					</button>
-				</div>
-			</div>
-
-			<!-- Gas Funding Section -->
-			<div class="gas-funding-section">
-				<h5>Fund Wallet with Gas</h5>
-				<p class="gas-info">
-					Estimated gas needed: <strong>{formattedGasCost} {networkSymbol}</strong>
-				</p>
-
-				<div class="gas-input-group">
-					<input
-						type="number"
-						class="gas-input"
-						bind:value={gasSendAmount}
-						placeholder="Amount to send"
-						step="0.001"
-						min="0"
-					/>
-					<span class="gas-unit">{networkSymbol}</span>
-				</div>
-
-				<button
-					class="btn-send-gas"
-					onclick={handleSendGasFromWallet}
-					disabled={isSendingGas || !connectStore.address}
-				>
-					{#if isSendingGas}
-						<Loader2 size={16} class="spinning" />
-						Sending...
-					{:else}
-						<Send size={16} />
-						Send from Connected Wallet
-					{/if}
-				</button>
-
-				<p class="gas-hint">
-					💡 Tip: Add 20% extra gas to ensure sufficient funds. You can also scan the QR code to
-					send from any wallet.
-				</p>
-			</div>
 
 			<!-- Actions -->
 			<div class="wallet-actions">
 				<button class="btn-download" onclick={handleDownloadWallet}>
 					<Download size={16} />
-					Download Private Key
+					{i18n.t('tools.token_sweep.temporary_wallet.btn_download')}
 				</button>
-				<button class="btn-clear" onclick={handleClearWallet}>Clear Wallet</button>
+				<button class="btn-fund-gas" onclick={openGasFundingModal}>
+					<Send size={16} />
+					{i18n.t('tools.token_sweep.temporary_wallet.fund_title')}
+				</button>
 			</div>
 
 			{#if errorMessage}
@@ -427,6 +390,25 @@
 		</div>
 	{/if}
 </div>
+
+<!-- Gas Funding Modal -->
+{#if temporaryWallet}
+	<GasFundingModal
+		open={showGasFundingModal}
+		walletAddress={temporaryWallet.address}
+		estimatedGasCost={formattedGasCost}
+		suggestedAmount={suggestedGasCost}
+		{networkSymbol}
+		{isSendingGas}
+		bind:gasSendAmount
+		isConnected={Boolean(connectStore.address)}
+		onClose={closeGasFundingModal}
+		onSend={handleSendGasFromWallet}
+		onAmountChange={(amount) => {
+			gasSendAmount = amount;
+		}}
+	/>
+{/if}
 
 <style>
 	.temporary-wallet-manager {
@@ -571,41 +553,6 @@
 		gap: var(--space-3);
 	}
 
-	.wallet-status {
-		padding: var(--space-3);
-		background: hsla(142, 76%, 95%, 1);
-		border: 1px solid #10b981;
-		border-radius: var(--radius-md);
-	}
-
-	:global([data-theme='dark']) .wallet-status {
-		background: hsla(142, 76%, 15%, 0.3);
-		border-color: #10b981;
-	}
-
-	.status-badge {
-		display: inline-flex;
-		align-items: center;
-		gap: var(--space-1);
-		padding: var(--space-1) var(--space-2);
-		background: #10b981;
-		color: white;
-		border-radius: var(--radius-sm);
-		font-size: var(--text-sm);
-		font-weight: var(--font-semibold);
-		margin-bottom: var(--space-2);
-	}
-
-	.status-info {
-		margin: 0;
-		font-size: var(--text-xs);
-		color: var(--gray-700);
-	}
-
-	:global([data-theme='dark']) .status-info {
-		color: var(--gray-300);
-	}
-
 	.wallet-field {
 		display: flex;
 		flex-direction: column;
@@ -649,14 +596,8 @@
 		color: var(--gray-100);
 	}
 
-	.field-value.private-key {
-		color: #ef4444;
-		font-weight: var(--font-semibold);
-	}
-
 	.btn-icon,
 	.btn-qr,
-	.btn-toggle,
 	.btn-refresh {
 		padding: var(--space-1);
 		background: transparent;
@@ -669,7 +610,6 @@
 
 	.btn-icon:hover,
 	.btn-qr:hover,
-	.btn-toggle:hover,
 	.btn-refresh:hover:not(:disabled) {
 		opacity: 0.7;
 	}
@@ -689,12 +629,6 @@
 
 	.btn-refresh.spinning {
 		animation: spin 1s linear infinite;
-	}
-
-	.btn-toggle {
-		font-size: var(--text-xs);
-		font-weight: var(--font-semibold);
-		text-transform: uppercase;
 	}
 
 	.balance-content {
@@ -746,106 +680,6 @@
 		color: var(--gray-400);
 	}
 
-	.gas-funding-section {
-		padding: var(--space-4);
-		background: hsla(204, 100%, 95%, 1);
-		border: 2px solid #3b82f6;
-		border-radius: var(--radius-md);
-	}
-
-	:global([data-theme='dark']) .gas-funding-section {
-		background: hsla(204, 100%, 15%, 0.3);
-		border-color: #3b82f6;
-	}
-
-	.gas-funding-section h5 {
-		margin: 0 0 var(--space-2) 0;
-		font-size: var(--text-base);
-		font-weight: var(--font-semibold);
-		color: var(--gray-800);
-	}
-
-	:global([data-theme='dark']) .gas-funding-section h5 {
-		color: var(--gray-200);
-	}
-
-	.gas-info {
-		margin: 0 0 var(--space-3) 0;
-		font-size: var(--text-sm);
-		color: var(--gray-700);
-	}
-
-	:global([data-theme='dark']) .gas-info {
-		color: var(--gray-300);
-	}
-
-	.gas-input-group {
-		display: flex;
-		align-items: center;
-		gap: var(--space-2);
-		margin-bottom: var(--space-3);
-	}
-
-	.gas-input {
-		flex: 1;
-		padding: var(--space-2);
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-sm);
-		font-family: 'Courier New', monospace;
-		font-size: var(--text-sm);
-	}
-
-	.gas-input:focus {
-		outline: none;
-		border-color: var(--color-primary);
-		box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-	}
-
-	.gas-unit {
-		font-weight: var(--font-semibold);
-		color: var(--gray-700);
-	}
-
-	:global([data-theme='dark']) .gas-unit {
-		color: var(--gray-300);
-	}
-
-	.btn-send-gas {
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: var(--space-2);
-		padding: var(--space-2) var(--space-3);
-		background: var(--color-primary);
-		color: white;
-		border: none;
-		border-radius: var(--radius-md);
-		font-weight: var(--font-semibold);
-		cursor: pointer;
-		transition: all 0.2s;
-		margin-bottom: var(--space-2);
-	}
-
-	.btn-send-gas:hover:not(:disabled) {
-		opacity: 0.9;
-	}
-
-	.btn-send-gas:disabled {
-		opacity: 0.5;
-		cursor: not-allowed;
-	}
-
-	.gas-hint {
-		margin: 0;
-		font-size: var(--text-xs);
-		color: var(--gray-600);
-	}
-
-	:global([data-theme='dark']) .gas-hint {
-		color: var(--gray-400);
-	}
-
 	.wallet-actions {
 		display: flex;
 		gap: var(--space-2);
@@ -853,7 +687,7 @@
 	}
 
 	.btn-download,
-	.btn-clear {
+	.btn-fund-gas {
 		flex: 1;
 		display: flex;
 		align-items: center;
@@ -877,18 +711,15 @@
 		opacity: 0.9;
 	}
 
-	.btn-clear {
-		background: var(--gray-200);
-		color: var(--gray-800);
+	.btn-fund-gas {
+		background: linear-gradient(135deg, #10b981, #059669);
+		color: white;
 	}
 
-	.btn-clear:hover {
-		background: var(--gray-300);
-	}
-
-	:global([data-theme='dark']) .btn-clear {
-		background: var(--gray-700);
-		color: var(--gray-200);
+	.btn-fund-gas:hover {
+		opacity: 0.9;
+		transform: translateY(-1px);
+		box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
 	}
 
 	:global(.spinning) {
