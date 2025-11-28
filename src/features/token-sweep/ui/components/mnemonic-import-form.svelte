@@ -61,7 +61,7 @@
 			bind:includeMonth
 			bind:includeDay
 			bind:useLeadingZeros
-			maxAddresses={10000}
+			maxAddresses={100_000}
 		/>
 	</div>
 

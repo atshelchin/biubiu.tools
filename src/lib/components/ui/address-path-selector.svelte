@@ -45,7 +45,7 @@
 		includeMonth = $bindable(false),
 		includeDay = $bindable(false),
 		useLeadingZeros = $bindable(true),
-		maxAddresses = 10000,
+		maxAddresses = 100_000,
 		onChange
 	}: Props = $props();
 
@@ -67,18 +67,16 @@
 
 	// Quick range presets for sequential mode
 	const sequentialPresets = [
-		{ label: '100', value: 100 },
-		{ label: '1K', value: 1000 },
-		{ label: '5K', value: 5000 },
-		{ label: '10K', value: 10000 }
+		{ label: '1,000', value: 1_000 },
+		{ label: '10,000', value: 10_000 },
+		{ label: '100,000', value: 100_000 }
 	];
 
-	// Quick range presets for date mode
+	// Quick range presets for date mode (backwards from current year)
 	const datePresets = [
-		{ label: '1 Year', years: 1 },
-		{ label: '5 Years', years: 5 },
-		{ label: '10 Years', years: 10 },
-		{ label: '20 Years', years: 20 }
+		{ label: 'Past 1 Year', years: 1 },
+		{ label: 'Past 10 Years', years: 10 },
+		{ label: 'Past 100 Years', years: 100 }
 	];
 
 	// Computed values
@@ -114,9 +112,8 @@
 	);
 
 	const dateFormat = $derived(() => {
-		if (!includeMonth && !includeDay) return 'YYYY';
-		if (includeMonth && !includeDay) return useLeadingZeros ? 'YYYYMM' : 'YYYYM';
-		return useLeadingZeros ? 'YYYYMMDD' : 'YYYYMDD';
+		// Always use full date format with leading zeros
+		return 'YYYYMMDD';
 	});
 
 	// Handlers
@@ -155,6 +152,12 @@
 		// Enforce max limit for sequential mode
 		if (pathType === 'sequential' && endIndex - startIndex + 1 > maxAddresses) {
 			endIndex = startIndex + maxAddresses - 1;
+		}
+		// Force full date format with leading zeros for date mode
+		if (pathType === 'date') {
+			includeMonth = true;
+			includeDay = true;
+			useLeadingZeros = true;
 		}
 		notifyChange();
 	});
@@ -251,7 +254,7 @@
 				</div>
 			</div>
 
-			<!-- Year Range -->
+			<!-- Year Range Inputs -->
 			<div class="range-inputs">
 				<div class="input-group">
 					<label for="start-year">From Year</label>
@@ -280,83 +283,12 @@
 				</div>
 			</div>
 
-			<!-- Date Granularity Options -->
-			<div class="granularity-options">
-				<div class="granularity-label">Date Format:</div>
-				<div class="granularity-buttons">
-					<button
-						class="granularity-btn"
-						class:active={!includeMonth && !includeDay}
-						onclick={() => {
-							includeMonth = false;
-							includeDay = false;
-						}}
-					>
-						<span class="format-text">YYYY</span>
-						<span class="format-desc">Year only</span>
-					</button>
-					<button
-						class="granularity-btn"
-						class:active={includeMonth && !includeDay}
-						onclick={() => {
-							includeMonth = true;
-							includeDay = false;
-						}}
-					>
-						<span class="format-text">YYYYMM</span>
-						<span class="format-desc">Year + Month</span>
-					</button>
-					<button
-						class="granularity-btn"
-						class:active={includeMonth && includeDay}
-						onclick={() => {
-							includeMonth = true;
-							includeDay = true;
-						}}
-					>
-						<span class="format-text">YYYYMMDD</span>
-						<span class="format-desc">Full date</span>
-					</button>
-				</div>
-			</div>
-
-			<!-- Leading Zeros Toggle (only show when month or day is included) -->
-			{#if includeMonth || includeDay}
-				<div class="leading-zeros-toggle">
-					<div class="toggle-header">
-						<span class="toggle-title">Number Format</span>
-					</div>
-					<label class="toggle-switch-container">
-						<input type="checkbox" bind:checked={useLeadingZeros} class="toggle-checkbox" />
-						<span class="toggle-switch"></span>
-						<div class="toggle-labels">
-							<span class="toggle-label-text">
-								{useLeadingZeros ? 'With Leading Zeros' : 'Without Leading Zeros'}
-							</span>
-							<span class="toggle-example">
-								{useLeadingZeros
-									? includeDay
-										? '20240101'
-										: '202401'
-									: includeDay
-										? '202411'
-										: '20241'}
-							</span>
-						</div>
-					</label>
-				</div>
-			{/if}
-
 			<!-- Format Preview -->
 			<div class="format-preview">
 				<span class="preview-label">Format:</span>
 				<code class="preview-format">{dateFormat()}</code>
 				<span class="preview-example">
-					Example: {startYear}{includeMonth ? (useLeadingZeros ? '01' : '1') : ''}{includeDay
-						? useLeadingZeros
-							? '01'
-							: '1'
-						: ''}
+					Example: {startYear}0101 to {endYear}1231
 				</span>
 			</div>
 
@@ -364,7 +296,7 @@
 			<div class="count-display">
 				<span class="count-label">Estimated addresses:</span>
 				<span class="count-value">~{addressCount()}</span>
-				<span class="count-unit">(max {maxAddresses})</span>
+				<span class="count-unit">(max {maxAddresses.toLocaleString()})</span>
 			</div>
 		</div>
 	{/if}
@@ -595,182 +527,6 @@
 		margin-left: auto;
 		color: hsl(38, 92%, 50%);
 		font-weight: var(--font-medium);
-	}
-
-	/* Granularity Options */
-	.granularity-options {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-2);
-	}
-
-	.granularity-label {
-		font-size: var(--text-sm);
-		font-weight: var(--font-medium);
-		color: var(--gray-600);
-	}
-
-	:global([data-theme='dark']) .granularity-label {
-		color: var(--gray-400);
-	}
-
-	.granularity-buttons {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-		gap: var(--space-2);
-	}
-
-	.granularity-btn {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: var(--space-1);
-		padding: var(--space-3);
-		background: var(--white);
-		border: 2px solid var(--color-border);
-		border-radius: var(--radius-md);
-		cursor: pointer;
-		transition: all 0.2s ease;
-	}
-
-	:global([data-theme='dark']) .granularity-btn {
-		background: var(--gray-700);
-	}
-
-	.granularity-btn:hover {
-		border-color: var(--color-primary);
-		transform: translateY(-1px);
-	}
-
-	.granularity-btn.active {
-		border-color: var(--color-primary);
-		background: rgba(59, 130, 246, 0.05);
-		box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-	}
-
-	.format-text {
-		font-size: var(--text-base);
-		font-weight: var(--font-bold);
-		font-family: monospace;
-		color: var(--gray-900);
-	}
-
-	:global([data-theme='dark']) .format-text {
-		color: var(--gray-100);
-	}
-
-	.granularity-btn.active .format-text {
-		color: var(--color-primary);
-	}
-
-	.format-desc {
-		font-size: var(--text-xs);
-		color: var(--gray-500);
-	}
-
-	/* Leading Zeros Toggle */
-	.leading-zeros-toggle {
-		padding: var(--space-4);
-		background: var(--white);
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-md);
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-3);
-	}
-
-	:global([data-theme='dark']) .leading-zeros-toggle {
-		background: var(--gray-800);
-	}
-
-	.toggle-header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-
-	.toggle-title {
-		font-size: var(--text-sm);
-		font-weight: var(--font-semibold);
-		color: var(--gray-700);
-	}
-
-	:global([data-theme='dark']) .toggle-title {
-		color: var(--gray-300);
-	}
-
-	.toggle-switch-container {
-		display: flex;
-		align-items: center;
-		gap: var(--space-3);
-		cursor: pointer;
-		user-select: none;
-	}
-
-	.toggle-checkbox {
-		position: absolute;
-		opacity: 0;
-		width: 0;
-		height: 0;
-	}
-
-	.toggle-switch {
-		position: relative;
-		width: 44px;
-		height: 24px;
-		background: var(--gray-300);
-		border-radius: var(--radius-full);
-		transition: background-color 0.3s ease;
-		flex-shrink: 0;
-	}
-
-	:global([data-theme='dark']) .toggle-switch {
-		background: var(--gray-600);
-	}
-
-	.toggle-switch::after {
-		content: '';
-		position: absolute;
-		top: 2px;
-		left: 2px;
-		width: 20px;
-		height: 20px;
-		background: white;
-		border-radius: 50%;
-		transition: transform 0.3s ease;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-	}
-
-	.toggle-checkbox:checked + .toggle-switch {
-		background: var(--color-primary);
-	}
-
-	.toggle-checkbox:checked + .toggle-switch::after {
-		transform: translateX(20px);
-	}
-
-	.toggle-labels {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-1);
-		flex: 1;
-	}
-
-	.toggle-label-text {
-		font-size: var(--text-sm);
-		font-weight: var(--font-medium);
-		color: var(--gray-900);
-	}
-
-	:global([data-theme='dark']) .toggle-label-text {
-		color: var(--gray-100);
-	}
-
-	.toggle-example {
-		font-size: var(--text-xs);
-		color: var(--gray-500);
-		font-family: monospace;
-		font-weight: var(--font-semibold);
 	}
 
 	/* Format Preview */
