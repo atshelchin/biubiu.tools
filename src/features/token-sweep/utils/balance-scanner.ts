@@ -656,7 +656,8 @@ export async function scanMultipleWalletsResumable(
 	try {
 		// Step 1: Scan native balances (if not already done)
 		if (state.currentTokenIndex === -1) {
-			const nativeBalances = new Map<Address, TokenBalance>();
+			// Resume from existing nativeBalances if available (for RPC switching)
+			const nativeBalances = state.nativeBalances || new Map<Address, TokenBalance>();
 
 			for (let i = state.currentBatchIndex; i < batchCount; i++) {
 				if (shouldPause) {
