@@ -36,35 +36,35 @@
 
 <footer class="footer">
 	<div class="footer-container">
-		<!-- Single centered column layout -->
-		<div class="footer-content">
-			<!-- Brand -->
-			<div class="brand-group">
-				<img src="/logo.svg" alt="BiuBiu" class="logo" />
-				<span class="brand-name">biubiu.tools</span>
+		<!-- Top row: Brand and Tagline -->
+		<div class="footer-top">
+			<div class="brand-section">
+				<div class="brand-group">
+					<img src="/logo.svg" alt="BiuBiu" class="logo" />
+					<span class="brand-name">biubiu.tools</span>
+				</div>
+				<p class="tagline">Powerful batch operations for Ethereum ecosystem</p>
 			</div>
-
-			<!-- Tagline -->
-			<p class="tagline">Powerful batch operations for Ethereum ecosystem</p>
 
 			<!-- Socials -->
-			<div class="socials-group">
+			<div class="socials-section">
 				<Socials />
 			</div>
+		</div>
 
-			<!-- Controls -->
-			<div class="controls-group">
-				<LangToggle />
-				<ThemeToggle />
-			</div>
-
-			<!-- Footer info -->
+		<!-- Bottom row: Footer info and Controls -->
+		<div class="footer-bottom">
 			<div class="footer-info">
 				<span class="copyright">© {currentYear} biubiu.tools</span>
 				<span class="separator">·</span>
 				<span class="tech">Built with Svelte</span>
 				<span class="separator">·</span>
 				<span class="tech">Powered by Ethereum</span>
+			</div>
+
+			<div class="controls-group">
+				<LangToggle />
+				<ThemeToggle />
 			</div>
 		</div>
 	</div>
@@ -75,24 +75,32 @@
 		background: var(--color-background);
 		border-top: 1px solid hsla(var(--brand-hue), 10%, 50%, 0.1);
 		margin-top: auto;
-		padding: var(--space-12) 0;
+		padding: var(--space-12) 0 var(--space-8);
 	}
 
 	.footer-container {
-		max-width: 40rem;
+		max-width: 80rem;
 		margin: 0 auto;
 		padding: 0 var(--space-6);
-	}
-
-	.footer-content {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		gap: var(--space-6);
-		text-align: center;
+		gap: var(--space-8);
 	}
 
-	/* Brand */
+	/* Top row - horizontal layout */
+	.footer-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: var(--space-8);
+	}
+
+	.brand-section {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-2);
+	}
+
 	.brand-group {
 		display: flex;
 		align-items: center;
@@ -103,6 +111,11 @@
 		width: 2.5rem;
 		height: 2.5rem;
 		border-radius: var(--radius-md);
+		transition: transform 0.3s ease;
+	}
+
+	.brand-group:hover .logo {
+		transform: scale(1.05);
 	}
 
 	.brand-name {
@@ -111,38 +124,34 @@
 		color: var(--color-foreground);
 	}
 
-	/* Tagline */
 	.tagline {
 		font-size: var(--text-sm);
 		color: var(--color-muted-foreground);
-		opacity: 0.8;
+		opacity: 0.7;
 		margin: 0;
 	}
 
-	/* Controls */
-	.controls-group {
+	.socials-section {
 		display: flex;
+	}
+
+	/* Bottom row - horizontal layout */
+	.footer-bottom {
+		display: flex;
+		justify-content: space-between;
 		align-items: center;
-		gap: var(--space-3);
+		gap: var(--space-6);
+		padding-top: var(--space-6);
+		border-top: 1px solid hsla(var(--brand-hue), 10%, 50%, 0.1);
 	}
 
-	/* Socials */
-	.socials-group {
-		display: flex;
-		justify-content: center;
-	}
-
-	/* Footer Info */
 	.footer-info {
 		display: flex;
 		align-items: center;
-		justify-content: center;
 		gap: var(--space-2);
 		font-size: var(--text-xs);
 		color: var(--color-muted-foreground);
 		opacity: 0.6;
-		padding-top: var(--space-6);
-		border-top: 1px solid hsla(var(--brand-hue), 10%, 50%, 0.1);
 	}
 
 	.copyright {
@@ -162,43 +171,66 @@
 		cursor: default;
 	}
 
+	.controls-group {
+		display: flex;
+		align-items: center;
+		gap: var(--space-3);
+	}
+
 	/* Dark mode */
 	:global([data-theme='dark']) .footer {
 		background: var(--color-background);
 		border-top-color: hsla(var(--brand-hue), 10%, 50%, 0.15);
 	}
 
-	:global([data-theme='dark']) .footer-info {
+	:global([data-theme='dark']) .footer-bottom {
 		border-top-color: hsla(var(--brand-hue), 10%, 50%, 0.15);
+	}
+
+	/* Tablet */
+	@media (max-width: 768px) {
+		.footer-top {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: var(--space-6);
+		}
+
+		.footer-bottom {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: var(--space-4);
+		}
+
+		.brand-section {
+			width: 100%;
+		}
+
+		.socials-section {
+			width: 100%;
+		}
 	}
 
 	/* Mobile */
 	@media (max-width: 640px) {
 		.footer {
-			padding: var(--space-10) 0;
+			padding: var(--space-10) 0 var(--space-6);
 		}
 
-		.footer-content {
+		.footer-container {
+			gap: var(--space-6);
+		}
+
+		.footer-top {
 			gap: var(--space-5);
 		}
 
 		.footer-info {
 			flex-wrap: wrap;
-			justify-content: center;
 			line-height: 1.8;
 		}
 
-		.separator:nth-of-type(1) {
+		.separator:last-of-type {
 			display: none;
 		}
-	}
-
-	/* Hover effects */
-	.logo {
-		transition: transform 0.3s ease;
-	}
-
-	.brand-group:hover .logo {
-		transform: scale(1.05);
 	}
 </style>
