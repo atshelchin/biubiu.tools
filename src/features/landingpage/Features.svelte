@@ -31,6 +31,9 @@
 		stage?: 'coming-soon' | 'alpha' | 'beta' | 'stable' | 'new';
 	}
 
+	// Telegram group link
+	const telegramGroupLink = 'https://t.me/+ABMpMG1islA4NTVl';
+
 	// Tools data with full i18n - reactive to language changes
 	const tools = $derived<Tool[]>([
 		{
@@ -62,6 +65,19 @@
 			color: '#3B82F6',
 			features: ['Multi-Wallet Scanning', 'CSV/JSON Export', 'Read-only Operations'],
 			stage: 'alpha'
+		},
+		{
+			icon: MessageCircle,
+			title: t('tools.feedback_card.title'),
+			description: t('tools.feedback_card.description'),
+			link: telegramGroupLink,
+			status: 'active',
+			color: '#06B6D4',
+			features: [
+				t('tools.feedback_card.feature_1'),
+				t('tools.feedback_card.feature_2'),
+				t('tools.feedback_card.feature_3')
+			]
 		},
 		{
 			icon: Globe,
@@ -131,9 +147,6 @@
 			stage: 'coming-soon'
 		}
 	]);
-
-	// Telegram group link
-	const telegramGroupLink = 'https://t.me/+ABMpMG1islA4NTVl';
 
 	function joinTelegramGroup() {
 		window.open(telegramGroupLink, '_blank');
@@ -217,11 +230,18 @@
 
 					<!-- Premium action button -->
 					<div class="action-wrapper">
-						{#if tool.status === 'active'}
-							<a href={tool.link} class="action-btn primary">
-								<span class="btn-text">{t('tools.launch_app')}</span>
-								<ArrowRight class="btn-arrow" />
-							</a>
+						{#if tool.status === 'active' && tool.link}
+							{#if tool.link === telegramGroupLink}
+								<button class="action-btn telegram" onclick={joinTelegramGroup}>
+									<MessageCircle class="btn-icon" />
+									<span class="btn-text">{t('tools.join_telegram')}</span>
+								</button>
+							{:else}
+								<a href={tool.link} class="action-btn primary">
+									<span class="btn-text">{t('tools.launch_app')}</span>
+									<ArrowRight class="btn-arrow" />
+								</a>
+							{/if}
 						{:else}
 							<button class="action-btn telegram" onclick={joinTelegramGroup}>
 								<MessageCircle class="btn-icon" />

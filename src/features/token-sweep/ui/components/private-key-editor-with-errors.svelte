@@ -44,9 +44,7 @@
 
 		// For very large documents (>10000 lines), disable highlighting to prevent UI freeze
 		if (doc.lines > 10000) {
-			console.warn(
-				`⚠️ Error line highlighting disabled for ${doc.lines} lines (limit: 10000)`
-			);
+			console.warn(`⚠️ Error line highlighting disabled for ${doc.lines} lines (limit: 10000)`);
 			return;
 		}
 

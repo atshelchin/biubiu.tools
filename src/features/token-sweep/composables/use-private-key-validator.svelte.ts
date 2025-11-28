@@ -1,7 +1,4 @@
-import type {
-	ValidateRequest,
-	ValidateResponse
-} from '$lib/workers/private-key-validator.worker';
+import type { ValidateRequest, ValidateResponse } from '$lib/workers/private-key-validator.worker';
 
 interface InvalidKey {
 	key: string;
