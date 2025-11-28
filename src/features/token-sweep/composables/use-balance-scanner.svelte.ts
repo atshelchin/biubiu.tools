@@ -1,5 +1,9 @@
 import { createPublicClient, http } from 'viem';
-import { scanMultipleWallets } from '@/features/token-sweep/utils/balance-scanner';
+import {
+	scanMultipleWalletsResumable,
+	RateLimitError,
+	type ScanState
+} from '@/features/token-sweep/utils/balance-scanner';
 import type { ImportedWallet } from '@/features/token-sweep/types/wallet';
 import type { ERC20Token, Token } from '$lib/types/token';
 import { SvelteMap } from 'svelte/reactivity';
@@ -12,6 +16,8 @@ interface ScanBalancesParams {
 	networkName: string;
 	networkSymbol: string;
 	onProgress: (progress: number) => void;
+	onRateLimitError?: (error: RateLimitError, state: ScanState) => void;
+	initialState?: ScanState;
 }
 
 export function useBalanceScanner() {
@@ -23,7 +29,9 @@ export function useBalanceScanner() {
 			rpcUrl,
 			networkName,
 			networkSymbol,
-			onProgress
+			onProgress,
+			onRateLimitError,
+			initialState
 		} = params;
 
 		// Create chain object for viem
@@ -56,15 +64,17 @@ export function useBalanceScanner() {
 			tokenId: token.id
 		}));
 
-		// Scan all wallets
-		const results = await scanMultipleWallets(
+		// Use resumable scan with rate limit handling
+		const { results, state } = await scanMultipleWalletsResumable(
 			publicClient,
 			wallets,
 			tokenAddresses,
 			currentChainId,
 			(progress) => {
 				onProgress(progress.percentage);
-			}
+			},
+			onRateLimitError,
+			initialState
 		);
 
 		// Format results for storage
@@ -93,7 +103,7 @@ export function useBalanceScanner() {
 			});
 		}
 
-		return updates;
+		return { updates, state };
 	}
 
 	return {

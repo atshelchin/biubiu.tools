@@ -4,12 +4,19 @@
  */
 import { SvelteSet } from 'svelte/reactivity';
 import type { ImportedWallet } from '../types/wallet';
+import type { ScanState } from '../utils/balance-scanner';
 
 // Module-level state - automatically shared across all imports
 let importedWallets = $state<ImportedWallet[]>([]);
 let isScanning = $state(false);
 let scanProgress = $state(0);
 let hasScanned = $state(false);
+
+// Resumable scan state
+let scanState = $state<ScanState | null>(null);
+let isRateLimited = $state(false);
+let rateLimitMessage = $state<string>('');
+let canResumeScan = $state(false);
 
 export const step4State = {
 	get importedWallets() {
@@ -96,5 +103,53 @@ export const step4State = {
 		hasScanned = false;
 		scanProgress = 0;
 		isScanning = false;
+		scanState = null;
+		isRateLimited = false;
+		rateLimitMessage = '';
+		canResumeScan = false;
+	},
+
+	// Resumable scan state management
+	get scanState() {
+		return scanState;
+	},
+	set scanState(value: ScanState | null) {
+		scanState = value;
+	},
+
+	get isRateLimited() {
+		return isRateLimited;
+	},
+	set isRateLimited(value: boolean) {
+		isRateLimited = value;
+	},
+
+	get rateLimitMessage() {
+		return rateLimitMessage;
+	},
+	set rateLimitMessage(value: string) {
+		rateLimitMessage = value;
+	},
+
+	get canResumeScan() {
+		return canResumeScan;
+	},
+	set canResumeScan(value: boolean) {
+		canResumeScan = value;
+	},
+
+	// Handle rate limit error
+	handleRateLimitError(message: string, state: ScanState) {
+		isRateLimited = true;
+		rateLimitMessage = message;
+		scanState = state;
+		canResumeScan = true;
+		isScanning = false;
+	},
+
+	// Clear rate limit state
+	clearRateLimitError() {
+		isRateLimited = false;
+		rateLimitMessage = '';
 	}
 };
