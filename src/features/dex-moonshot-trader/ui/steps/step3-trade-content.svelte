@@ -3,18 +3,22 @@
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import { appState } from '../../stores/app-state.svelte';
 	import type { TradeType } from '../../types/trade';
-	import { formatUnits } from 'viem';
+	import { formatUnits, parseUnits, createPublicClient, http, type Address } from 'viem';
+	import { MoonshotService, formatEthAmount, applySlippage } from '../../services/moonshot-service';
+	import type { MoonshotQuote } from '../../types/moonshot';
 
 	const connectStore = useConnectStore();
 
 	// Local state
 	let activeTab = $state<TradeType>('buy');
 	let amount = $state('');
-	let slippage = $state(0.5);
+	let slippage = $state(1); // Default 1%
 	let isTrading = $state(false);
 	let tradeError = $state<string | null>(null);
 	let tradeSuccess = $state(false);
 	let txHash = $state<string | null>(null);
+	let quote = $state<MoonshotQuote | null>(null);
+	let isLoadingQuote = $state(false);
 
 	// Get network native token symbol
 	const nativeTokenSymbol = $derived(() => {
@@ -28,11 +32,12 @@
 		return 'ETH';
 	});
 
-	// Get native token balance (demo - would fetch from wallet in production)
+	// ETH balance
+	let ethBalance = $state<bigint>(BigInt(0));
+
+	// Get native token balance
 	const nativeBalance = $derived(() => {
-		// For demo purposes, return a placeholder balance
-		// In production, fetch from public client using connectStore.address
-		return '0.0';
+		return formatEthAmount(ethBalance);
 	});
 
 	// Get token balance
@@ -42,6 +47,95 @@
 		}
 		return '0';
 	});
+
+	// Load balances on mount and when active tab changes
+	$effect(() => {
+		loadBalances();
+	});
+
+	// Reload token balance when switching to sell tab
+	$effect(() => {
+		if (activeTab === 'sell' && appState.tokenAddress && connectStore.address) {
+			reloadTokenBalance();
+		}
+	});
+
+	async function loadBalances() {
+		if (!connectStore.address || !connectStore.currentChainId) return;
+
+		try {
+			const currentNetwork = connectStore.networks.find(
+				(n) => n.chainId === connectStore.currentChainId
+			);
+			if (!currentNetwork) return;
+
+			const networkObj = currentNetwork as
+				| { rpcEndpoints?: Array<{ url: string; isPrimary: boolean }> }
+				| undefined;
+			const rpcUrl =
+				networkObj?.rpcEndpoints?.find((endpoint) => endpoint.isPrimary)?.url ||
+				networkObj?.rpcEndpoints?.[0]?.url;
+			if (!rpcUrl) return;
+
+			const publicClient = createPublicClient({
+				transport: http(rpcUrl)
+			});
+
+			ethBalance = await publicClient.getBalance({ address: connectStore.address as Address });
+		} catch (error) {
+			console.error('Failed to load balances:', error);
+		}
+	}
+
+	async function reloadTokenBalance() {
+		if (
+			!connectStore.address ||
+			!connectStore.currentChainId ||
+			!appState.tokenAddress ||
+			!appState.factoryAddress
+		)
+			return;
+
+		try {
+			const currentNetwork = connectStore.networks.find(
+				(n) => n.chainId === connectStore.currentChainId
+			);
+			if (!currentNetwork) return;
+
+			const networkObj = currentNetwork as
+				| { rpcEndpoints?: Array<{ url: string; isPrimary: boolean }> }
+				| undefined;
+			const rpcUrl =
+				networkObj?.rpcEndpoints?.find((endpoint) => endpoint.isPrimary)?.url ||
+				networkObj?.rpcEndpoints?.[0]?.url;
+			if (!rpcUrl) return;
+
+			const publicClient = createPublicClient({
+				transport: http(rpcUrl)
+			});
+
+			const moonshotService = new MoonshotService(
+				publicClient,
+				null,
+				appState.factoryAddress as Address
+			);
+
+			const balance = await moonshotService.getTokenBalance(
+				appState.tokenAddress as Address,
+				connectStore.address as Address
+			);
+
+			// Update token info balance in app state
+			if (appState.tokenInfo) {
+				appState.tokenInfo = {
+					...appState.tokenInfo,
+					balance
+				};
+			}
+		} catch (error) {
+			console.error('Failed to reload token balance:', error);
+		}
+	}
 
 	// Validation
 	const isValidAmount = $derived(() => {
@@ -64,6 +158,14 @@
 
 	const canTrade = $derived(isValidAmount() && !isTrading);
 
+	// Slippage warning
+	const slippageWarning = $derived(() => {
+		if (slippage < 1) {
+			return 'Slippage too low may cause transaction failure';
+		}
+		return null;
+	});
+
 	// Switch tab
 	function switchTab(tab: TradeType) {
 		activeTab = tab;
@@ -73,9 +175,80 @@
 		txHash = null;
 	}
 
-	// Execute trade (simplified - in production would interact with DEX router)
+	// Load quote when amount changes
+	$effect(() => {
+		if (amount && parseFloat(amount) > 0 && appState.tokenAddress) {
+			loadQuote();
+		} else {
+			quote = null;
+		}
+	});
+
+	async function loadQuote() {
+		if (!appState.tokenAddress || !appState.factoryAddress || !connectStore.currentChainId) return;
+
+		// Validate amount is a valid number string
+		if (!amount || amount === '' || isNaN(parseFloat(amount))) {
+			quote = null;
+			return;
+		}
+
+		isLoadingQuote = true;
+		try {
+			const currentNetwork = connectStore.networks.find(
+				(n) => n.chainId === connectStore.currentChainId
+			);
+			if (!currentNetwork) return;
+
+			const networkObj = currentNetwork as
+				| { rpcEndpoints?: Array<{ url: string; isPrimary: boolean }> }
+				| undefined;
+			const rpcUrl =
+				networkObj?.rpcEndpoints?.find((endpoint) => endpoint.isPrimary)?.url ||
+				networkObj?.rpcEndpoints?.[0]?.url;
+			if (!rpcUrl) return;
+
+			const publicClient = createPublicClient({
+				transport: http(rpcUrl)
+			});
+
+			const moonshotService = new MoonshotService(
+				publicClient,
+				null,
+				appState.factoryAddress as Address
+			);
+
+			if (activeTab === 'buy') {
+				// Ensure amount is a string
+				const amountStr = String(amount);
+				quote = await moonshotService.getBuyQuoteExactIn(
+					appState.tokenAddress as Address,
+					amountStr
+				);
+			} else {
+				const amountStr = String(amount);
+				const tokenAmount = parseUnits(amountStr, appState.tokenInfo?.decimals ?? 18);
+				quote = await moonshotService.getSellQuoteExactIn(
+					appState.tokenAddress as Address,
+					tokenAmount
+				);
+			}
+		} catch (error) {
+			console.error('Failed to load quote:', error);
+			quote = null;
+		} finally {
+			isLoadingQuote = false;
+		}
+	}
+
+	// Execute trade
 	async function executeTrade() {
-		if (!canTrade || !appState.tokenInfo) {
+		if (!canTrade || !appState.tokenInfo || !appState.tokenAddress || !appState.factoryAddress) {
+			return;
+		}
+
+		if (!connectStore.address || !connectStore.currentChainId) {
+			tradeError = 'Wallet not connected';
 			return;
 		}
 
@@ -85,25 +258,90 @@
 		txHash = null;
 
 		try {
-			// In a real implementation, this would:
-			// 1. Get quote from DEX router (Uniswap, PancakeSwap, etc.)
-			// 2. Build transaction with proper slippage protection
-			// 3. Execute swap transaction
-			// 4. Wait for confirmation
+			console.log('=== Starting trade execution ===');
+			console.log('Trade type:', activeTab);
+			console.log('Amount:', amount);
+			console.log('Slippage:', slippage);
+			console.log('Token address:', appState.tokenAddress);
+			console.log('Factory address:', appState.factoryAddress);
 
-			// For now, we'll show a placeholder message
-			await new Promise((resolve) => setTimeout(resolve, 2000));
+			const currentNetwork = connectStore.networks.find(
+				(n) => n.chainId === connectStore.currentChainId
+			);
+			if (!currentNetwork) {
+				throw new Error('Network not found');
+			}
 
-			// Simulate success
-			tradeSuccess = true;
-			txHash = '0x' + Array.from({ length: 64 }, () => '0').join('');
+			const networkObj = currentNetwork as
+				| { rpcEndpoints?: Array<{ url: string; isPrimary: boolean }> }
+				| undefined;
+			const rpcUrl = networkObj?.rpcEndpoints?.[0]?.url;
+			if (!rpcUrl) {
+				throw new Error('RPC URL not available');
+			}
 
-			// Reset form after delay
-			setTimeout(() => {
-				amount = '';
-				tradeSuccess = false;
-				txHash = null;
-			}, 5000);
+			const publicClient = createPublicClient({
+				transport: http(rpcUrl)
+			});
+
+			// Get wallet client from connectStore
+			const walletClient = await connectStore.getWalletClient();
+
+			if (!walletClient) {
+				throw new Error('Wallet not connected. Please connect your wallet first.');
+			}
+
+			const moonshotService = new MoonshotService(
+				publicClient,
+				walletClient,
+				appState.factoryAddress as Address
+			);
+
+			let hash: string;
+
+			if (activeTab === 'buy') {
+				// Buy tokens with ETH
+				const minTokensOut = quote ? applySlippage(quote.amountOut, slippage, true) : BigInt(0);
+
+				hash = await moonshotService.buyExactIn(
+					appState.tokenAddress as Address,
+					String(amount),
+					minTokensOut,
+					connectStore.address as Address
+				);
+			} else {
+				// Sell tokens for ETH
+				const tokenAmount = parseUnits(String(amount), appState.tokenInfo.decimals);
+				const minEthOutBigInt = quote ? applySlippage(quote.amountOut, slippage, true) : BigInt(0);
+
+				hash = await moonshotService.sellExactIn(
+					appState.tokenAddress as Address,
+					tokenAmount,
+					minEthOutBigInt,
+					connectStore.address as Address
+				);
+			}
+
+			// Wait for transaction confirmation
+			const receipt = await publicClient.waitForTransactionReceipt({ hash: hash as `0x${string}` });
+
+			if (receipt.status === 'success') {
+				tradeSuccess = true;
+				txHash = hash;
+
+				// Reload balances
+				await loadBalances();
+
+				// Reset form after delay
+				setTimeout(() => {
+					amount = '';
+					tradeSuccess = false;
+					txHash = null;
+					quote = null;
+				}, 5000);
+			} else {
+				throw new Error('Transaction failed');
+			}
 		} catch (error) {
 			console.error('Trade execution error:', error);
 			tradeError = error instanceof Error ? error.message : 'Failed to execute trade';
@@ -214,29 +452,64 @@
 					disabled={isTrading}
 				/>
 			</div>
+			{#if slippageWarning()}
+				<p class="slippage-warning">⚠️ {slippageWarning()}</p>
+			{/if}
 		</div>
 
 		<!-- Trade Info -->
 		{#if amount && isValidAmount()}
 			<div class="trade-info">
-				<div class="info-row">
-					<span class="info-label">You {activeTab === 'buy' ? 'pay' : 'receive'}</span>
-					<span class="info-value"
-						>{amount}
-						{activeTab === 'buy' ? nativeTokenSymbol() : appState.tokenInfo?.symbol}</span
-					>
-				</div>
-				<div class="info-row">
-					<span class="info-label">You {activeTab === 'buy' ? 'receive' : 'pay'} (estimated)</span>
-					<span class="info-value">
-						~ {(parseFloat(amount) * 1000).toFixed(4)}
-						{activeTab === 'buy' ? appState.tokenInfo?.symbol : nativeTokenSymbol()}
-					</span>
-				</div>
-				<div class="info-row">
-					<span class="info-label">Slippage</span>
-					<span class="info-value">{slippage}%</span>
-				</div>
+				{#if isLoadingQuote}
+					<div class="loading-quote">
+						<span class="spinner small"></span>
+						<span>Getting quote...</span>
+					</div>
+				{:else if quote}
+					<div class="info-row">
+						<span class="info-label">You {activeTab === 'buy' ? 'pay' : 'sell'}</span>
+						<span class="info-value">
+							{amount}
+							{activeTab === 'buy' ? nativeTokenSymbol() : appState.tokenInfo?.symbol}
+						</span>
+					</div>
+					<div class="info-row">
+						<span class="info-label">You {activeTab === 'buy' ? 'receive' : 'get'} (estimated)</span
+						>
+						<span class="info-value">
+							{activeTab === 'buy'
+								? formatUnits(quote.amountOut, appState.tokenInfo?.decimals ?? 18)
+								: formatEthAmount(quote.amountOut)}
+							{activeTab === 'buy' ? appState.tokenInfo?.symbol : nativeTokenSymbol()}
+						</span>
+					</div>
+					<div class="info-row">
+						<span class="info-label">Fee</span>
+						<span class="info-value">{formatEthAmount(quote.fee)} {nativeTokenSymbol()}</span>
+					</div>
+					<div class="info-row">
+						<span class="info-label">Price Impact</span>
+						<span class="info-value" class:warning={quote.priceImpact > 5}>
+							{quote.priceImpact.toFixed(2)}%
+						</span>
+					</div>
+					<div class="info-row">
+						<span class="info-label">Slippage Tolerance</span>
+						<span class="info-value">{slippage}%</span>
+					</div>
+					<div class="info-row">
+						<span class="info-label">Minimum Received</span>
+						<span class="info-value">
+							{activeTab === 'buy'
+								? formatUnits(
+										applySlippage(quote.amountOut, slippage, true),
+										appState.tokenInfo?.decimals ?? 18
+									)
+								: formatEthAmount(applySlippage(quote.amountOut, slippage, true))}
+							{activeTab === 'buy' ? appState.tokenInfo?.symbol : nativeTokenSymbol()}
+						</span>
+					</div>
+				{/if}
 			</div>
 		{/if}
 
@@ -274,19 +547,29 @@
 				<span>{activeTab === 'buy' ? 'Buy' : 'Sell'} {appState.tokenInfo?.symbol}</span>
 			{/if}
 		</button>
-
-		<!-- Disclaimer -->
-		<div class="disclaimer">
-			<p>
-				⚠️ <strong>Important:</strong> This is a demo interface. In production, this would integrate
-				with DEX routers (Uniswap, PancakeSwap, etc.) to execute real trades. Always verify contract
-				addresses and understand the risks before trading.
-			</p>
-		</div>
 	</div>
 </div>
 
 <style>
+	.loading-quote {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		justify-content: center;
+		padding: var(--space-3);
+		color: var(--gray-600);
+	}
+
+	.spinner.small {
+		width: 16px;
+		height: 16px;
+	}
+
+	.info-value.warning {
+		color: hsl(40, 100%, 50%);
+		font-weight: var(--font-bold);
+	}
+
 	.step-content {
 		padding: var(--space-6);
 	}
@@ -497,6 +780,12 @@
 		border-color: var(--color-primary);
 	}
 
+	.slippage-warning {
+		font-size: var(--text-sm);
+		color: hsl(40, 100%, 50%);
+		margin: var(--space-1) 0 0 0;
+	}
+
 	/* Trade Info */
 	.trade-info {
 		padding: var(--space-4);
@@ -641,27 +930,6 @@
 		to {
 			transform: rotate(360deg);
 		}
-	}
-
-	/* Disclaimer */
-	.disclaimer {
-		padding: var(--space-3);
-		background: hsla(40, 100%, 95%, 1);
-		border: 1px solid hsla(40, 100%, 80%, 1);
-		border-radius: var(--radius-md);
-		font-size: var(--text-sm);
-		color: var(--gray-700);
-	}
-
-	:global([data-theme='dark']) .disclaimer {
-		background: hsla(40, 100%, 15%, 0.3);
-		border-color: hsla(40, 100%, 25%, 1);
-		color: var(--gray-300);
-	}
-
-	.disclaimer p {
-		margin: 0;
-		line-height: 1.5;
 	}
 
 	/* Responsive */

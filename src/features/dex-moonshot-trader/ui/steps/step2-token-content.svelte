@@ -4,8 +4,11 @@
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import { appState } from '../../stores/app-state.svelte';
 	import type { Address } from 'viem';
-	import { isAddress, createPublicClient, http } from 'viem';
+	import { isAddress, createPublicClient, http, formatEther } from 'viem';
 	import type { TokenInfo } from '../../types/token';
+	import type { MoonshotTokenInfo } from '../../types/moonshot';
+	import { MoonshotService } from '../../services/moonshot-service';
+	import { MOONSHOT_TOKEN_ABI } from '../../contracts/moonshot-abi';
 
 	const connectStore = useConnectStore();
 	const stepManager = useStepManager();
@@ -15,6 +18,7 @@
 	let isValidating = $state(false);
 	let validationError = $state<string | null>(null);
 	let tokenInfo = $state<TokenInfo | null>(null);
+	let moonshotInfo = $state<MoonshotTokenInfo | null>(null);
 
 	// Get current network
 	const currentNetwork = $derived(
@@ -37,85 +41,69 @@
 		isValidating = true;
 		validationError = null;
 		tokenInfo = null;
+		moonshotInfo = null;
 
 		try {
 			const tokenAddress = tokenAddressInput as Address;
 
 			// Create public client for reading contract data
-			const rpcUrl = (currentNetwork as unknown as { rpcUrls: string[] }).rpcUrls[0];
+			const networkObj = currentNetwork as
+				| { rpcEndpoints?: Array<{ url: string; isPrimary: boolean }> }
+				| undefined;
+			const rpcUrl =
+				networkObj?.rpcEndpoints?.find((endpoint) => endpoint.isPrimary)?.url ||
+				networkObj?.rpcEndpoints?.[0]?.url;
+
+			if (!rpcUrl) {
+				throw new Error('RPC URL not available for current network');
+			}
+
 			const publicClient = createPublicClient({
 				transport: http(rpcUrl)
 			});
 
-			// Basic ERC20 ABI for token info
-			const erc20Abi = [
-				{
-					name: 'name',
-					type: 'function',
-					stateMutability: 'view',
-					inputs: [],
-					outputs: [{ type: 'string' }]
-				},
-				{
-					name: 'symbol',
-					type: 'function',
-					stateMutability: 'view',
-					inputs: [],
-					outputs: [{ type: 'string' }]
-				},
-				{
-					name: 'decimals',
-					type: 'function',
-					stateMutability: 'view',
-					inputs: [],
-					outputs: [{ type: 'uint8' }]
-				},
-				{
-					name: 'balanceOf',
-					type: 'function',
-					stateMutability: 'view',
-					inputs: [{ name: 'account', type: 'address' }],
-					outputs: [{ type: 'uint256' }]
-				}
-			] as const;
+			// First, get the factory address from the token contract
+			const factoryAddress = (await publicClient.readContract({
+				address: tokenAddress,
+				abi: MOONSHOT_TOKEN_ABI,
+				functionName: 'factory'
+			})) as Address;
 
-			// Read token info from contract
-			const [name, symbol, decimals, balance] = await Promise.all([
-				publicClient.readContract({
-					address: tokenAddress,
-					abi: erc20Abi,
-					functionName: 'name'
-				}),
-				publicClient.readContract({
-					address: tokenAddress,
-					abi: erc20Abi,
-					functionName: 'symbol'
-				}),
-				publicClient.readContract({
-					address: tokenAddress,
-					abi: erc20Abi,
-					functionName: 'decimals'
-				}),
-				publicClient.readContract({
-					address: tokenAddress,
-					abi: erc20Abi,
-					functionName: 'balanceOf',
-					args: [connectStore.address as Address]
-				})
-			]);
+			if (!factoryAddress || factoryAddress === '0x0000000000000000000000000000000000000000') {
+				throw new Error('This token is not a valid Moonshot token');
+			}
 
-			// Create token info object
+			// Create wallet client if available (optional for read-only operations)
+			const walletClient = null;
+
+			// Create Moonshot service
+			const moonshotService = new MoonshotService(publicClient, walletClient, factoryAddress);
+
+			// Get Moonshot token info
+			const msInfo = await moonshotService.getTokenInfo(tokenAddress);
+
+			// Get user's token balance
+			const balance = await moonshotService.getTokenBalance(
+				tokenAddress,
+				connectStore.address as Address
+			);
+
+			// Create basic token info object
 			const info: TokenInfo = {
 				address: tokenAddress,
-				name: name as string,
-				symbol: symbol as string,
-				decimals: decimals as number,
-				balance: balance as bigint
+				name: msInfo.name,
+				symbol: msInfo.symbol,
+				decimals: msInfo.decimals,
+				balance: balance,
+				totalSupply: msInfo.totalSupply
 			};
 
 			tokenInfo = info;
+			moonshotInfo = msInfo;
 			appState.tokenAddress = tokenAddress;
 			appState.tokenInfo = info;
+			appState.moonshotTokenInfo = msInfo;
+			appState.factoryAddress = factoryAddress;
 
 			validationError = null;
 		} catch (error) {
@@ -123,8 +111,10 @@
 			validationError =
 				error instanceof Error ? error.message : 'Failed to validate token contract';
 			tokenInfo = null;
+			moonshotInfo = null;
 			appState.tokenAddress = null;
 			appState.tokenInfo = null;
+			appState.moonshotTokenInfo = null;
 		} finally {
 			isValidating = false;
 		}
@@ -208,6 +198,26 @@
 						{tokenInfo.symbol}</span
 					>
 				</div>
+				{#if moonshotInfo}
+					<div class="info-item">
+						<span class="info-label">Market Cap</span>
+						<span class="info-value"
+							>{parseFloat(formatEther(moonshotInfo.marketCap)).toFixed(4)} ETH</span
+						>
+					</div>
+					<div class="info-item">
+						<span class="info-label">Curve Progress</span>
+						<span class="info-value"
+							>{(Number(moonshotInfo.curveProgressBps) / 100).toFixed(2)}%</span
+						>
+					</div>
+					<div class="info-item">
+						<span class="info-label">Trading Status</span>
+						<span class="info-value" class:error={moonshotInfo.tradingStopped}>
+							{moonshotInfo.tradingStopped ? 'Stopped' : 'Active'}
+						</span>
+					</div>
+				{/if}
 				<div class="info-item full-width">
 					<span class="info-label">Contract Address</span>
 					<span class="info-value address">{tokenInfo.address}</span>
@@ -407,6 +417,10 @@
 		font-family: 'Courier New', monospace;
 		font-size: var(--text-sm);
 		word-break: break-all;
+	}
+
+	.info-value.error {
+		color: hsl(0, 70%, 50%);
 	}
 
 	/* Continue Section */

@@ -1,6 +1,7 @@
 import type { Address } from 'viem';
 import type { TokenInfo } from '../types/token';
 import type { TradeType } from '../types/trade';
+import type { MoonshotTokenInfo } from '../types/moonshot';
 
 /**
  * Global app state for the DEX Moonshot Trader
@@ -9,10 +10,12 @@ class AppState {
 	// Step 1: Network & Wallet
 	selectedChainId = $state<number | null>(null);
 	connectedWallet = $state<Address | null>(null);
+	factoryAddress = $state<Address | null>(null);
 
 	// Step 2: Token Information
 	tokenAddress = $state<Address | null>(null);
 	tokenInfo = $state<TokenInfo | null>(null);
+	moonshotTokenInfo = $state<MoonshotTokenInfo | null>(null);
 
 	// Step 3: Trade State
 	activeTradeType = $state<TradeType>('buy');
@@ -23,6 +26,7 @@ class AppState {
 	resetTokenState() {
 		this.tokenAddress = null;
 		this.tokenInfo = null;
+		this.moonshotTokenInfo = null;
 		this.resetTradeState();
 	}
 
@@ -35,6 +39,7 @@ class AppState {
 	resetAll() {
 		this.selectedChainId = null;
 		this.connectedWallet = null;
+		this.factoryAddress = null;
 		this.resetTokenState();
 	}
 }
