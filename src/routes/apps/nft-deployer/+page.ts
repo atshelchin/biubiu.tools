@@ -14,19 +14,14 @@ export const load: PageLoad = ({ url }) => {
 			description: 'Connect wallet and select network'
 		},
 		{
-			name: 'Select NFT Standard',
-			text: 'Choose the NFT standard that best fits your needs: ERC-721 for standard NFTs, ERC-721A for gas-optimized batch minting, or ERC-1155 for multi-token support. Each standard has different features and use cases.',
-			description: 'Choose NFT standard (ERC-721, ERC-721A, ERC-1155)'
+			name: 'Check Dependencies',
+			text: 'Verify that all required smart contracts are deployed on your selected network, including CREATE2 Proxy, Multicall3, BiuBiuPremium, and NFTFactory. If any dependencies are missing, deploy them using the provided deployment tools.',
+			description: 'Verify network and contracts'
 		},
 		{
-			name: 'Configure Basic Information',
-			text: 'Enter your NFT collection name, symbol, and description. Optionally, provide a base URI for your token metadata. This information will be stored on the blockchain and displayed on NFT marketplaces.',
-			description: 'Set name, symbol, and description'
-		},
-		{
-			name: 'Configure Advanced Settings',
-			text: 'Set up advanced features like max supply, mint price, royalties (EIP-2981), access control, and special features (pausable, burnable, revealable). These settings can help you manage your NFT collection effectively.',
-			description: 'Configure pricing, royalties, and features'
+			name: 'Configure NFT',
+			text: 'Enter your NFT collection details including name, symbol, and base URI. Configure minting options such as public mint and stake-to-mint mechanism. If stake-to-mint is enabled, specify the stake token address and amount required.',
+			description: 'Set NFT parameters and minting options'
 		},
 		{
 			name: 'Review and Deploy',
@@ -45,13 +40,13 @@ export const load: PageLoad = ({ url }) => {
 	const webAppData = createWebAppData({
 		name: 'NFT Deployer',
 		description:
-			'Deploy NFT smart contracts in minutes. Support for ERC-721, ERC-721A, and ERC-1155 standards with advanced features like royalties, access control, and more. No coding required.',
+			'Deploy NFT smart contracts in minutes using NFTFactory. Support for ERC-721 with stake-to-mint mechanism. Automatic dependency checking and streamlined deployment process. No coding required.',
 		canonical,
 		features: [
-			'ERC-721, ERC-721A, ERC-1155 support',
+			'NFTFactory integration',
+			'Stake-to-mint mechanism',
 			'No coding required',
-			'EIP-2981 royalty standard',
-			'Access control & whitelist',
+			'Automatic dependency checking',
 			'Gas-optimized deployment',
 			'Multi-chain support (Ethereum, Polygon, BSC, Arbitrum, Optimism, Base)'
 		]
@@ -60,7 +55,7 @@ export const load: PageLoad = ({ url }) => {
 	const howToData = createHowToData({
 		name: 'How to Deploy NFT Smart Contracts with NFT Deployer',
 		description:
-			'Step-by-step guide to deploy your own NFT smart contract using BiuBiu NFT Deployer tool. Support for multiple NFT standards and advanced features.',
+			'Step-by-step guide to deploy your own NFT smart contract using BiuBiu NFT Deployer tool. Integrated with NFTFactory for streamlined deployment with stake-to-mint support.',
 		canonical,
 		image,
 		steps,
@@ -71,9 +66,9 @@ export const load: PageLoad = ({ url }) => {
 		meta: {
 			title: 'NFT Deployer - Deploy NFT Smart Contracts | BiuBiu Tools',
 			description:
-				'Deploy NFT smart contracts in minutes. Support for ERC-721, ERC-721A, and ERC-1155 standards. Configure royalties, access control, and advanced features without coding.',
+				'Deploy NFT smart contracts in minutes using NFTFactory. Support for ERC-721 with stake-to-mint mechanism. Automatic dependency checking and streamlined deployment without coding.',
 			keywords:
-				'nft deployer, create nft, deploy nft contract, erc721, erc721a, erc1155, nft smart contract, web3 tools, ethereum tools, polygon nft, nft royalties, nft creator',
+				'nft deployer, create nft, deploy nft contract, erc721, nft factory, stake to mint, nft smart contract, web3 tools, ethereum tools, polygon nft, nft creator',
 			canonical,
 			type: 'website' as const,
 			image,
