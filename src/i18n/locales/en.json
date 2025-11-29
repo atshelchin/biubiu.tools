@@ -564,7 +564,10 @@
 		},
 		"contract_events_scanner": {
 			"title": "Contract Events Scanner",
-			"description": "Scan, analyze and export smart contract events from blockchain"
+			"description": "Scan, analyze and export smart contract events from blockchain",
+			"feature_1": "Scan historical event logs from any contract",
+			"feature_2": "Custom event filters and block range selection",
+			"feature_3": "Export event data to CSV, JSON formats"
 		},
 		"ens_scanner": {
 			"title": "ENS Scanner",
@@ -572,7 +575,10 @@
 		},
 		"assets_monitor": {
 			"title": "Assets Monitor",
-			"description": "Track and analyze wallet asset movements across multiple chains"
+			"description": "Track and analyze wallet asset movements across multiple chains",
+			"feature_1": "Real-time monitoring of multiple wallet addresses",
+			"feature_2": "Cross-chain asset aggregation and statistics",
+			"feature_3": "Transaction history and trend analysis"
 		},
 		"wallet_generator": {
 			"title": "Wallet Factory",
@@ -589,6 +595,9 @@
 		"nft_deployer": {
 			"title": "NFT Deployer",
 			"description": "Deploy NFT smart contracts with ERC-721, ERC-721A, and ERC-1155 standards",
+			"feature_1": "Support ERC-721, ERC-721A, ERC-1155 standards",
+			"feature_2": "Configurable royalties, supply, mint price",
+			"feature_3": "Advanced features: pausable, burnable, revealable",
 			"step1": {
 				"sidebar": {
 					"title": "Connect Wallet",

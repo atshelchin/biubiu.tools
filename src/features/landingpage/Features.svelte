@@ -16,7 +16,10 @@
 		Globe,
 		TrendingUp,
 		KeyRound,
-		Rocket
+		Rocket,
+		Activity,
+		Search,
+		Image
 	} from '@lucide/svelte';
 	import ToolStatusBadge from '$lib/components/ui/tool-status-badge.svelte';
 
@@ -130,6 +133,48 @@
 				t('tools.contract_deployer.feature_1'),
 				t('tools.contract_deployer.feature_2'),
 				t('tools.contract_deployer.feature_3')
+			],
+			stage: 'alpha'
+		},
+		{
+			icon: Image,
+			title: t('tools.nft_deployer.title'),
+			description: t('tools.nft_deployer.description'),
+			link: '/apps/nft-deployer',
+			status: 'active',
+			color: '#EC4899',
+			features: [
+				t('tools.nft_deployer.feature_1'),
+				t('tools.nft_deployer.feature_2'),
+				t('tools.nft_deployer.feature_3')
+			],
+			stage: 'alpha'
+		},
+		{
+			icon: Activity,
+			title: t('tools.assets_monitor.title'),
+			description: t('tools.assets_monitor.description'),
+			link: '/apps/assets-monitor',
+			status: 'active',
+			color: '#06B6D4',
+			features: [
+				t('tools.assets_monitor.feature_1'),
+				t('tools.assets_monitor.feature_2'),
+				t('tools.assets_monitor.feature_3')
+			],
+			stage: 'alpha'
+		},
+		{
+			icon: Search,
+			title: t('tools.contract_events_scanner.title'),
+			description: t('tools.contract_events_scanner.description'),
+			link: '/apps/contract-events-scanner',
+			status: 'active',
+			color: '#A855F7',
+			features: [
+				t('tools.contract_events_scanner.feature_1'),
+				t('tools.contract_events_scanner.feature_2'),
+				t('tools.contract_events_scanner.feature_3')
 			],
 			stage: 'alpha'
 		},

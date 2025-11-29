@@ -564,7 +564,10 @@
 		},
 		"contract_events_scanner": {
 			"title": "智能合约事件扫描",
-			"description": "扫描、分析和导出区块链智能合约事件"
+			"description": "扫描、分析和导出区块链智能合约事件",
+			"feature_1": "扫描任意合约的历史事件日志",
+			"feature_2": "支持自定义事件过滤和区块范围",
+			"feature_3": "导出事件数据为 CSV、JSON 格式"
 		},
 		"ens_scanner": {
 			"title": "ENS 域名扫描",
@@ -572,7 +575,10 @@
 		},
 		"assets_monitor": {
 			"title": "资产雷达",
-			"description": "追踪和分析多链钱包资产变动"
+			"description": "追踪和分析多链钱包资产变动",
+			"feature_1": "实时监控多个钱包地址资产变化",
+			"feature_2": "支持跨链资产聚合统计",
+			"feature_3": "交易历史记录和趋势分析"
 		},
 		"wallet_generator": {
 			"title": "钱包工厂",
@@ -589,6 +595,9 @@
 		"nft_deployer": {
 			"title": "NFT 部署器",
 			"description": "部署 NFT 智能合约，支持 ERC-721、ERC-721A 和 ERC-1155 标准",
+			"feature_1": "支持 ERC-721、ERC-721A、ERC-1155 标准",
+			"feature_2": "可配置版税、供应量、铸造价格",
+			"feature_3": "支持暂停、销毁、揭示等高级功能",
 			"step1": {
 				"sidebar": {
 					"title": "连接钱包",
