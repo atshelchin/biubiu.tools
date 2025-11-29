@@ -5,6 +5,10 @@
 
 <div class="top-toolbar">
 	<div class="toolbar-container">
+		<a href="/" class="logo-section">
+			<img src="/logo.svg" alt="BiuBiu Tools Logo" class="logo" />
+			<span class="site-title">BiuBiu Tools</span>
+		</a>
 		<div class="toolbar-controls">
 			<LangToggle />
 			<ThemeToggle />
@@ -39,7 +43,36 @@
 	.toolbar-container {
 		max-width: 80rem;
 		margin: 0 auto;
-		padding: var(--space-4) var(--space-6);
+		padding: var(--space-4) var(--space-5);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--space-4);
+	}
+
+	.logo-section {
+		display: flex;
+		align-items: center;
+		gap: var(--space-3);
+		text-decoration: none;
+		color: var(--color-text);
+		transition: opacity 0.2s ease;
+	}
+
+	.logo-section:hover {
+		opacity: 0.8;
+	}
+
+	.logo {
+		width: 2rem;
+		height: 2rem;
+	}
+
+	.site-title {
+		font-size: var(--font-size-lg);
+		font-weight: 600;
+		color: var(--color-text);
+		white-space: nowrap;
 	}
 
 	.toolbar-controls {
@@ -62,6 +95,15 @@
 
 		.toolbar-controls {
 			gap: var(--space-2);
+		}
+
+		.site-title {
+			/* display: none; */
+		}
+
+		.logo {
+			width: 1.75rem;
+			height: 1.75rem;
 		}
 	}
 
