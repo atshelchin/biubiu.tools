@@ -64,30 +64,51 @@
 			<p class="form-hint">{i18n.t('tools.nft_deployer.step3.content.base_uri_hint')}</p>
 		</div>
 
-		<!-- Public Mint -->
+		<!-- Mint Type Selection (Radio buttons - must choose one) -->
 		<div class="form-group">
-			<label class="checkbox-label">
-				<input type="checkbox" bind:checked={step3NFTConfigState.publicMintEnabled} />
-				<span class="checkbox-text">
-					<strong>{i18n.t('tools.nft_deployer.step3.content.public_mint_enabled')}</strong>
-					<span class="checkbox-description">
-						{i18n.t('tools.nft_deployer.step3.content.public_mint_hint')}
-					</span>
-				</span>
+			<label class="form-label">
+				{i18n.t('tools.nft_deployer.step3.content.mint_type_label')}
+				<span class="required">*</span>
 			</label>
-		</div>
+			<div class="radio-group">
+				<label class="radio-label">
+					<input
+						type="radio"
+						name="mint-type"
+						checked={step3NFTConfigState.publicMintEnabled &&
+							!step3NFTConfigState.stakeToMintEnabled}
+						onchange={() => {
+							step3NFTConfigState.publicMintEnabled = true;
+							step3NFTConfigState.stakeToMintEnabled = false;
+						}}
+					/>
+					<span class="radio-text">
+						<strong>{i18n.t('tools.nft_deployer.step3.content.public_mint_enabled')}</strong>
+						<span class="radio-description">
+							{i18n.t('tools.nft_deployer.step3.content.public_mint_hint')}
+						</span>
+					</span>
+				</label>
 
-		<!-- Stake-to-Mint -->
-		<div class="form-group">
-			<label class="checkbox-label">
-				<input type="checkbox" bind:checked={step3NFTConfigState.stakeToMintEnabled} />
-				<span class="checkbox-text">
-					<strong>{i18n.t('tools.nft_deployer.step3.content.enable_stake_to_mint')}</strong>
-					<span class="checkbox-description">
-						{i18n.t('tools.nft_deployer.step3.content.stake_to_mint_hint')}
+				<label class="radio-label">
+					<input
+						type="radio"
+						name="mint-type"
+						checked={step3NFTConfigState.stakeToMintEnabled &&
+							!step3NFTConfigState.publicMintEnabled}
+						onchange={() => {
+							step3NFTConfigState.publicMintEnabled = false;
+							step3NFTConfigState.stakeToMintEnabled = true;
+						}}
+					/>
+					<span class="radio-text">
+						<strong>{i18n.t('tools.nft_deployer.step3.content.enable_stake_to_mint')}</strong>
+						<span class="radio-description">
+							{i18n.t('tools.nft_deployer.step3.content.stake_to_mint_hint')}
+						</span>
 					</span>
-				</span>
-			</label>
+				</label>
+			</div>
 		</div>
 
 		<!-- Stake Token Address (conditional) -->
@@ -273,6 +294,66 @@
 	}
 
 	:global([data-theme='dark']) .checkbox-description {
+		color: var(--gray-400);
+	}
+
+	/* Radio button styles */
+	.radio-group {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-3);
+	}
+
+	.radio-label {
+		display: flex;
+		align-items: flex-start;
+		gap: var(--space-3);
+		cursor: pointer;
+		padding: var(--space-3);
+		border: 2px solid var(--color-border);
+		border-radius: var(--radius-md);
+		transition: all 0.2s;
+	}
+
+	.radio-label:hover {
+		border-color: var(--color-primary);
+		background: var(--gray-50);
+	}
+
+	:global([data-theme='dark']) .radio-label:hover {
+		background: var(--gray-800);
+	}
+
+	.radio-label input[type='radio'] {
+		width: 18px;
+		height: 18px;
+		margin-top: 2px;
+		cursor: pointer;
+	}
+
+	.radio-text {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-1);
+		flex: 1;
+	}
+
+	.radio-text strong {
+		font-size: var(--text-base);
+		color: var(--gray-900);
+	}
+
+	:global([data-theme='dark']) .radio-text strong {
+		color: var(--gray-100);
+	}
+
+	.radio-description {
+		font-size: var(--text-sm);
+		color: var(--gray-600);
+		font-weight: normal;
+	}
+
+	:global([data-theme='dark']) .radio-description {
 		color: var(--gray-400);
 	}
 
