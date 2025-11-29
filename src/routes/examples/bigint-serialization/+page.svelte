@@ -299,7 +299,7 @@ const serialized = form._manager.serialize();`}</code
 
 <style>
 	.bigint-test {
-		max-width: 1200px;
+		max-width: 80rem;
 		margin: 0 auto;
 		padding: 2rem;
 	}

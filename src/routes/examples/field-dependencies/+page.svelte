@@ -573,7 +573,7 @@ const discountCodeValidator = createValidator(
 		line-height: 1.6;
 	}
 
-	@media (max-width: 1200px) {
+	@media (max-width: 80rem) {
 		.content {
 			grid-template-columns: 1fr;
 		}

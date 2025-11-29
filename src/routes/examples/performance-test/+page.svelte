@@ -332,7 +332,7 @@ form.batchUpdate(() => {
 
 <style>
 	.performance-test {
-		max-width: 1200px;
+		max-width: 80rem;
 		margin: 0 auto;
 		padding: 2rem;
 	}

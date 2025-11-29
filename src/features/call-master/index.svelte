@@ -10,7 +10,7 @@
 <style>
 	.call-master-app {
 		padding: var(--space-8);
-		max-width: 1200px;
+		max-width: 80rem;
 		margin: 0 auto;
 	}
 </style>

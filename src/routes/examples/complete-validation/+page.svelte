@@ -700,7 +700,7 @@
 		margin-bottom: 0.5rem;
 	}
 
-	@media (max-width: 1200px) {
+	@media (max-width: 80rem) {
 		.comparison-grid {
 			grid-template-columns: 1fr;
 		}

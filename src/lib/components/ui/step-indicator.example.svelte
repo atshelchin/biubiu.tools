@@ -46,7 +46,7 @@
 		flex-direction: column;
 		gap: var(--space-8);
 		/* padding: var(--space-6); */
-		max-width: 1200px;
+		max-width: 80rem;
 		margin: 0 auto;
 	}
 

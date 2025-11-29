@@ -12,7 +12,7 @@
 	.header {
 		margin-bottom: var(--space-3);
 		/* Add padding top to account for fixed toolbar */
-		padding-top: 60px;
+		/* padding-top: 60px; */
 	}
 	@media (max-width: 768px) {
 		.header {

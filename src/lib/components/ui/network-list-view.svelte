@@ -234,7 +234,7 @@
 		gap: var(--space-3);
 	}
 
-	@media (max-width: 1200px) {
+	@media (max-width: 80rem) {
 		.network-cards {
 			grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 		}
