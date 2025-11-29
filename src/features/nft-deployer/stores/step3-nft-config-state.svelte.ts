@@ -36,9 +36,7 @@ class Step3NFTConfigState {
 		if (!this.symbol || this.symbol.trim().length === 0) {
 			return false;
 		}
-		if (!this.baseURI || this.baseURI.trim().length === 0) {
-			return false;
-		}
+		// baseURI is optional, will use empty string if not provided
 
 		// Stake-to-mint validation
 		if (this.stakeToMintEnabled) {
@@ -57,7 +55,7 @@ class Step3NFTConfigState {
 		return {
 			name: this.name,
 			symbol: this.symbol,
-			baseURI: this.baseURI,
+			baseURI: this.baseURI || '', // Use empty string if not provided
 			publicMintEnabled: this.publicMintEnabled,
 			stakeToMintEnabled: this.stakeToMintEnabled,
 			stakeToken: this.stakeToMintEnabled

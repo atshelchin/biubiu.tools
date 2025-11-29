@@ -48,22 +48,6 @@
 			<p class="form-hint">{i18n.t('tools.nft_deployer.step3.content.symbol_hint')}</p>
 		</div>
 
-		<!-- Base URI -->
-		<div class="form-group">
-			<label for="base-uri" class="form-label">
-				{i18n.t('tools.nft_deployer.step3.content.base_uri_label')}
-				<span class="required">*</span>
-			</label>
-			<input
-				id="base-uri"
-				type="text"
-				class="form-input"
-				placeholder={i18n.t('tools.nft_deployer.step3.content.base_uri_placeholder')}
-				bind:value={step3NFTConfigState.baseURI}
-			/>
-			<p class="form-hint">{i18n.t('tools.nft_deployer.step3.content.base_uri_hint')}</p>
-		</div>
-
 		<!-- Mint Type Selection (Radio buttons - must choose one) -->
 		<div class="form-group">
 			<label class="form-label">
@@ -152,18 +136,8 @@
 					<p>
 						<strong>{step3NFTConfigState.name} ({step3NFTConfigState.symbol})</strong>
 					</p>
-					{#if step3NFTConfigState.baseURI}
-						<p>Base URI: {step3NFTConfigState.baseURI}</p>
-					{/if}
 					<p>
-						Public Mint: {step3NFTConfigState.publicMintEnabled
-							? i18n.t('common.enabled')
-							: i18n.t('common.disabled')}
-					</p>
-					<p>
-						Stake-to-Mint: {step3NFTConfigState.stakeToMintEnabled
-							? i18n.t('common.enabled')
-							: i18n.t('common.disabled')}
+						Minting Type: {step3NFTConfigState.publicMintEnabled ? 'Owner Mint' : 'Stake-to-Mint'}
 					</p>
 					{#if step3NFTConfigState.stakeToMintEnabled && step3NFTConfigState.stakeToken}
 						<p>Stake Token: {step3NFTConfigState.stakeToken}</p>

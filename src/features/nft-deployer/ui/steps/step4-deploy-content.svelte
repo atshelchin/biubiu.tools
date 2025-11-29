@@ -142,11 +142,6 @@
 				</div>
 
 				<div class="config-item">
-					<span class="config-label">Base URI</span>
-					<span class="config-value mono">{config.baseURI}</span>
-				</div>
-
-				<div class="config-item">
 					<span class="config-label">Minting Type</span>
 					<span class="config-value">
 						{config.publicMintEnabled ? 'Owner Mint' : 'Stake-to-Mint'}
