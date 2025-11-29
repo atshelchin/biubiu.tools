@@ -4,7 +4,7 @@
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import { appState } from '../../stores/app-state.svelte';
 	import type { Address } from 'viem';
-	import { isAddress, createPublicClient, http, formatEther } from 'viem';
+	import { isAddress, createPublicClient, http, formatEther, formatUnits } from 'viem';
 	import type { TokenInfo } from '../../types/token';
 	import type { MoonshotTokenInfo } from '../../types/moonshot';
 	import { MoonshotService } from '../../services/moonshot-service';
@@ -210,6 +210,51 @@
 						<span class="info-value"
 							>{(Number(moonshotInfo.curveProgressBps) / 100).toFixed(2)}%</span
 						>
+					</div>
+					<div class="info-item">
+						<span class="info-label">Raised ETH</span>
+						<span class="info-value">
+							{parseFloat(
+								formatEther(
+									moonshotInfo.virtualCollateralReserves -
+										moonshotInfo.virtualCollateralReservesInitial
+								)
+							).toFixed(4)} ETH
+						</span>
+					</div>
+					<div class="info-item">
+						<span class="info-label">Remaining Tokens</span>
+						<span class="info-value">
+							{parseFloat(
+								formatUnits(moonshotInfo.virtualTokenReserves, tokenInfo.decimals)
+							).toFixed(0)}
+							{tokenInfo.symbol}
+						</span>
+					</div>
+					<div class="info-item">
+						<span class="info-label">Tokens Available to Buy</span>
+						<span class="info-value">
+							{parseFloat(
+								formatUnits(moonshotInfo.virtualTokenReserves, tokenInfo.decimals)
+							).toFixed(0)}
+							{tokenInfo.symbol}
+						</span>
+					</div>
+					<div class="info-item">
+						<span class="info-label">ETH to Graduation</span>
+						<span class="info-value">
+							{#if moonshotInfo.tradingStopped}
+								Graduated! 🎉
+							{:else}
+								{parseFloat(
+									formatEther(
+										(moonshotInfo.virtualCollateralReserves * BigInt(10000)) /
+											moonshotInfo.curveProgressBps -
+											moonshotInfo.virtualCollateralReserves
+									)
+								).toFixed(4)} ETH
+							{/if}
+						</span>
 					</div>
 					<div class="info-item">
 						<span class="info-label">Trading Status</span>

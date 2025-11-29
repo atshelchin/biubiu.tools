@@ -166,6 +166,30 @@
 		return null;
 	});
 
+	// Balance warning
+	const balanceWarning = $derived(() => {
+		if (!amount || amount === '0') return null;
+		try {
+			const value = parseFloat(amount);
+			if (isNaN(value) || value <= 0) return null;
+
+			if (activeTab === 'buy') {
+				const balance = parseFloat(nativeBalance());
+				if (value > balance) {
+					return `Insufficient ${nativeTokenSymbol()} balance. You have ${nativeBalance()} ${nativeTokenSymbol()}`;
+				}
+			} else {
+				const balance = parseFloat(tokenBalance());
+				if (value > balance) {
+					return `Insufficient ${appState.tokenInfo?.symbol} balance. You have ${tokenBalance()} ${appState.tokenInfo?.symbol}`;
+				}
+			}
+		} catch {
+			return null;
+		}
+		return null;
+	});
+
 	// Switch tab
 	function switchTab(tab: TradeType) {
 		activeTab = tab;
@@ -402,6 +426,7 @@
 					step="any"
 					min="0"
 					class="amount-input"
+					class:error={balanceWarning()}
 					placeholder="0.0"
 					bind:value={amount}
 					disabled={isTrading}
@@ -411,6 +436,9 @@
 				</span>
 				<button class="max-button" onclick={setMaxAmount} disabled={isTrading}>MAX</button>
 			</div>
+			{#if balanceWarning()}
+				<p class="balance-warning">⚠️ {balanceWarning()}</p>
+			{/if}
 		</div>
 
 		<!-- Slippage Setting -->
@@ -684,6 +712,17 @@
 	.amount-input:disabled {
 		opacity: 0.6;
 		cursor: not-allowed;
+	}
+
+	.amount-input.error {
+		border-color: hsl(0, 70%, 50%);
+	}
+
+	.balance-warning {
+		font-size: var(--text-sm);
+		color: hsl(0, 70%, 50%);
+		margin: var(--space-2) 0 0 0;
+		font-weight: var(--font-medium);
 	}
 
 	.input-suffix {
