@@ -4,12 +4,11 @@
 	import NetworkSelector from '@/lib/components/ui/network-selector.svelte';
 	import WalletConnectButton from '@/lib/components/ui/wallet-connect-button.svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
-	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
+	import StepContent from '$lib/components/step/step-content.svelte';
 
 	const i18n = useI18n();
 	const connectStore = useConnectStore();
-	const stepManager = useStepManager();
 
 	// Loading state
 	const isLoading = $derived(!connectStore.isInitialized);
@@ -21,21 +20,9 @@
 	const hasEnabledNetworks = $derived(
 		connectStore.networks.some((n) => connectStore.isNetworkEnabled(n.chainId))
 	);
-
-	// Check if ready to continue to next step
-	const isReadyToContinue = $derived(
-		connectStore.isConnected && selectedChainId && connectStore.currentChainId === selectedChainId
-	);
-
-	// Handle continue to next step
-	function handleContinue() {
-		if (isReadyToContinue) {
-			stepManager.next();
-		}
-	}
 </script>
 
-<div class="step-content">
+<StepContent>
 	<StepContentHeader
 		title={i18n.t('tools.nft_deployer.step1.content.title')}
 		description={i18n.t('tools.nft_deployer.step1.content.description')}
@@ -54,86 +41,10 @@
 		{#if selectedChainId && hasEnabledNetworks}
 			<WalletConnectButton {selectedChainId} {selectedNetwork} class="wallet-section" />
 		{/if}
-
-		<!-- Continue Button -->
-		{#if isReadyToContinue}
-			<div class="continue-section">
-				<button class="continue-button" onclick={handleContinue}>
-					<span>{i18n.t('common.continue')}</span>
-					<svg
-						width="20"
-						height="20"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-					>
-						<path d="M5 12h14M12 5l7 7-7 7" />
-					</svg>
-				</button>
-				<p class="continue-hint">
-					{i18n.t('tools.nft_deployer.step1.content.ready_hint')}
-				</p>
-			</div>
-		{/if}
 	{/if}
-</div>
+</StepContent>
 
 <style>
-	/* Wallet Section */
-	/* :global(.wallet-section) {
-		margin-top: var(--space-8);
-	} */
-
-	/* Continue Section */
-	.continue-section {
-		margin-top: var(--space-8);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: var(--space-3);
-	}
-
-	.continue-button {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: var(--space-3);
-		width: 100%;
-		max-width: 400px;
-		min-height: 56px;
-		padding: var(--space-4) var(--space-6);
-		background: linear-gradient(135deg, hsl(210, 100%, 50%), hsl(210, 100%, 40%));
-		color: white;
-		border: none;
-		border-radius: var(--radius-lg);
-		font-size: var(--text-lg);
-		font-weight: var(--font-semibold);
-		cursor: pointer;
-		transition: all 0.3s ease;
-		box-shadow: 0 4px 12px hsla(210, 100%, 50%, 0.3);
-	}
-
-	.continue-button:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 8px 24px hsla(210, 100%, 50%, 0.4);
-	}
-
-	.continue-button:active {
-		transform: translateY(0);
-	}
-
-	.continue-hint {
-		font-size: var(--text-sm);
-		color: var(--gray-600);
-		text-align: center;
-		margin: 0;
-	}
-
-	:global([data-theme='dark']) .continue-hint {
-		color: var(--gray-400);
-	}
-
 	/* Loading State */
 	.loading-container {
 		display: flex;
@@ -171,12 +82,5 @@
 
 	:global([data-theme='dark']) .loading-text {
 		color: var(--gray-400);
-	}
-
-	/* Responsive */
-	@media (max-width: 640px) {
-		.step-content {
-			padding: var(--space-3);
-		}
 	}
 </style>

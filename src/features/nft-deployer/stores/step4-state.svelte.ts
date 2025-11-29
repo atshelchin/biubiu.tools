@@ -25,6 +25,11 @@ class Step4State {
 	burnable = $state<boolean>(false);
 	revealable = $state<boolean>(false);
 
+	// Stake-to-mint
+	stakeToMintEnabled = $state<boolean>(false);
+	stakeToken = $state<string>('');
+	stakeAmount = $state<string>('');
+
 	// ERC1155 specific
 	fungible = $state<boolean>(false);
 
@@ -41,6 +46,9 @@ class Step4State {
 		this.pausable = false;
 		this.burnable = false;
 		this.revealable = false;
+		this.stakeToMintEnabled = false;
+		this.stakeToken = '';
+		this.stakeAmount = '';
 		this.fungible = false;
 	}
 
@@ -54,6 +62,17 @@ class Step4State {
 				return false;
 			}
 		}
+
+		// Validate stake-to-mint settings if enabled
+		if (this.stakeToMintEnabled) {
+			if (!this.stakeToken || this.stakeToken.length !== 42) {
+				return false;
+			}
+			if (!this.stakeAmount || this.stakeAmount === '0') {
+				return false;
+			}
+		}
+
 		return true;
 	}
 
@@ -71,6 +90,9 @@ class Step4State {
 			pausable: this.pausable,
 			burnable: this.burnable,
 			revealable: this.revealable,
+			stakeToMintEnabled: this.stakeToMintEnabled,
+			stakeToken: this.stakeToMintEnabled ? (this.stakeToken as Address) : undefined,
+			stakeAmount: this.stakeToMintEnabled ? this.stakeAmount : undefined,
 			fungible: this.fungible
 		};
 	}

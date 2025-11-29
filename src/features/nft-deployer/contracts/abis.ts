@@ -132,3 +132,445 @@ export const ERC1155_ABI = [
 		type: 'function'
 	}
 ] as const;
+export const NFT_FACTORY_ABI = [
+	{
+		type: 'function',
+		name: 'allNFTs',
+		inputs: [
+			{
+				name: '',
+				type: 'uint256',
+				internalType: 'uint256'
+			}
+		],
+		outputs: [
+			{
+				name: '',
+				type: 'address',
+				internalType: 'address'
+			}
+		],
+		stateMutability: 'view'
+	},
+	{
+		type: 'function',
+		name: 'allNFTsLength',
+		inputs: [],
+		outputs: [
+			{
+				name: '',
+				type: 'uint256',
+				internalType: 'uint256'
+			}
+		],
+		stateMutability: 'view'
+	},
+	{
+		type: 'function',
+		name: 'createERC721',
+		inputs: [
+			{
+				name: 'name',
+				type: 'string',
+				internalType: 'string'
+			},
+			{
+				name: 'symbol',
+				type: 'string',
+				internalType: 'string'
+			},
+			{
+				name: 'baseURI',
+				type: 'string',
+				internalType: 'string'
+			},
+			{
+				name: 'publicMintEnabled',
+				type: 'bool',
+				internalType: 'bool'
+			},
+			{
+				name: 'stakeToMintEnabled',
+				type: 'bool',
+				internalType: 'bool'
+			},
+			{
+				name: 'stakeToken',
+				type: 'address',
+				internalType: 'address'
+			},
+			{
+				name: 'stakeAmount',
+				type: 'uint256',
+				internalType: 'uint256'
+			}
+		],
+		outputs: [
+			{
+				name: '',
+				type: 'address',
+				internalType: 'address'
+			}
+		],
+		stateMutability: 'nonpayable'
+	},
+	{
+		type: 'function',
+		name: 'getAllNFTs',
+		inputs: [],
+		outputs: [
+			{
+				name: '',
+				type: 'address[]',
+				internalType: 'address[]'
+			}
+		],
+		stateMutability: 'view'
+	},
+	{
+		type: 'function',
+		name: 'getAllNFTsInfoPaginated',
+		inputs: [
+			{
+				name: 'offset',
+				type: 'uint256',
+				internalType: 'uint256'
+			},
+			{
+				name: 'limit',
+				type: 'uint256',
+				internalType: 'uint256'
+			}
+		],
+		outputs: [
+			{
+				name: 'nftInfos',
+				type: 'tuple[]',
+				internalType: 'struct NFTFactory.NFTInfo[]',
+				components: [
+					{
+						name: 'nftAddress',
+						type: 'address',
+						internalType: 'address'
+					},
+					{
+						name: 'name',
+						type: 'string',
+						internalType: 'string'
+					},
+					{
+						name: 'symbol',
+						type: 'string',
+						internalType: 'string'
+					},
+					{
+						name: 'creator',
+						type: 'address',
+						internalType: 'address'
+					},
+					{
+						name: 'stakeToMintEnabled',
+						type: 'bool',
+						internalType: 'bool'
+					},
+					{
+						name: 'stakeToken',
+						type: 'address',
+						internalType: 'address'
+					}
+				]
+			},
+			{
+				name: 'total',
+				type: 'uint256',
+				internalType: 'uint256'
+			}
+		],
+		stateMutability: 'view'
+	},
+	{
+		type: 'function',
+		name: 'getAllNFTsPaginated',
+		inputs: [
+			{
+				name: 'offset',
+				type: 'uint256',
+				internalType: 'uint256'
+			},
+			{
+				name: 'limit',
+				type: 'uint256',
+				internalType: 'uint256'
+			}
+		],
+		outputs: [
+			{
+				name: 'nfts',
+				type: 'address[]',
+				internalType: 'address[]'
+			},
+			{
+				name: 'total',
+				type: 'uint256',
+				internalType: 'uint256'
+			}
+		],
+		stateMutability: 'view'
+	},
+	{
+		type: 'function',
+		name: 'getNFTInfo',
+		inputs: [
+			{
+				name: 'nftAddress',
+				type: 'address',
+				internalType: 'address'
+			}
+		],
+		outputs: [
+			{
+				name: 'info',
+				type: 'tuple',
+				internalType: 'struct NFTFactory.NFTInfo',
+				components: [
+					{
+						name: 'nftAddress',
+						type: 'address',
+						internalType: 'address'
+					},
+					{
+						name: 'name',
+						type: 'string',
+						internalType: 'string'
+					},
+					{
+						name: 'symbol',
+						type: 'string',
+						internalType: 'string'
+					},
+					{
+						name: 'creator',
+						type: 'address',
+						internalType: 'address'
+					},
+					{
+						name: 'stakeToMintEnabled',
+						type: 'bool',
+						internalType: 'bool'
+					},
+					{
+						name: 'stakeToken',
+						type: 'address',
+						internalType: 'address'
+					}
+				]
+			}
+		],
+		stateMutability: 'view'
+	},
+	{
+		type: 'function',
+		name: 'getUserNFTs',
+		inputs: [
+			{
+				name: 'user',
+				type: 'address',
+				internalType: 'address'
+			}
+		],
+		outputs: [
+			{
+				name: '',
+				type: 'address[]',
+				internalType: 'address[]'
+			}
+		],
+		stateMutability: 'view'
+	},
+	{
+		type: 'function',
+		name: 'getUserNFTsInfoPaginated',
+		inputs: [
+			{
+				name: 'user',
+				type: 'address',
+				internalType: 'address'
+			},
+			{
+				name: 'offset',
+				type: 'uint256',
+				internalType: 'uint256'
+			},
+			{
+				name: 'limit',
+				type: 'uint256',
+				internalType: 'uint256'
+			}
+		],
+		outputs: [
+			{
+				name: 'nftInfos',
+				type: 'tuple[]',
+				internalType: 'struct NFTFactory.NFTInfo[]',
+				components: [
+					{
+						name: 'nftAddress',
+						type: 'address',
+						internalType: 'address'
+					},
+					{
+						name: 'name',
+						type: 'string',
+						internalType: 'string'
+					},
+					{
+						name: 'symbol',
+						type: 'string',
+						internalType: 'string'
+					},
+					{
+						name: 'creator',
+						type: 'address',
+						internalType: 'address'
+					},
+					{
+						name: 'stakeToMintEnabled',
+						type: 'bool',
+						internalType: 'bool'
+					},
+					{
+						name: 'stakeToken',
+						type: 'address',
+						internalType: 'address'
+					}
+				]
+			},
+			{
+				name: 'total',
+				type: 'uint256',
+				internalType: 'uint256'
+			}
+		],
+		stateMutability: 'view'
+	},
+	{
+		type: 'function',
+		name: 'getUserNFTsPaginated',
+		inputs: [
+			{
+				name: 'user',
+				type: 'address',
+				internalType: 'address'
+			},
+			{
+				name: 'offset',
+				type: 'uint256',
+				internalType: 'uint256'
+			},
+			{
+				name: 'limit',
+				type: 'uint256',
+				internalType: 'uint256'
+			}
+		],
+		outputs: [
+			{
+				name: 'nfts',
+				type: 'address[]',
+				internalType: 'address[]'
+			},
+			{
+				name: 'total',
+				type: 'uint256',
+				internalType: 'uint256'
+			}
+		],
+		stateMutability: 'view'
+	},
+	{
+		type: 'function',
+		name: 'userNFTs',
+		inputs: [
+			{
+				name: '',
+				type: 'address',
+				internalType: 'address'
+			},
+			{
+				name: '',
+				type: 'uint256',
+				internalType: 'uint256'
+			}
+		],
+		outputs: [
+			{
+				name: '',
+				type: 'address',
+				internalType: 'address'
+			}
+		],
+		stateMutability: 'view'
+	},
+	{
+		type: 'function',
+		name: 'userNFTsLength',
+		inputs: [
+			{
+				name: 'user',
+				type: 'address',
+				internalType: 'address'
+			}
+		],
+		outputs: [
+			{
+				name: '',
+				type: 'uint256',
+				internalType: 'uint256'
+			}
+		],
+		stateMutability: 'view'
+	},
+	{
+		type: 'event',
+		name: 'NFTCreated',
+		inputs: [
+			{
+				name: 'nftAddress',
+				type: 'address',
+				indexed: true,
+				internalType: 'address'
+			},
+			{
+				name: 'creator',
+				type: 'address',
+				indexed: true,
+				internalType: 'address'
+			},
+			{
+				name: 'name',
+				type: 'string',
+				indexed: false,
+				internalType: 'string'
+			},
+			{
+				name: 'symbol',
+				type: 'string',
+				indexed: false,
+				internalType: 'string'
+			},
+			{
+				name: 'stakeToMintEnabled',
+				type: 'bool',
+				indexed: false,
+				internalType: 'bool'
+			},
+			{
+				name: 'stakeToken',
+				type: 'address',
+				indexed: false,
+				internalType: 'address'
+			}
+		],
+		anonymous: false
+	}
+] as const;

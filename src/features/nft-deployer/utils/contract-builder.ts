@@ -26,6 +26,9 @@ export function buildNFTConfig(
 		pausable: boolean;
 		burnable: boolean;
 		revealable: boolean;
+		stakeToMintEnabled: boolean;
+		stakeToken?: `0x${string}`;
+		stakeAmount?: string;
 		fungible?: boolean;
 	}
 ): NFTConfig {
@@ -92,6 +95,19 @@ export function validateNFTConfig(config: NFTConfig): {
 		}
 	}
 
+	// Validate stake-to-mint settings
+	if (config.advanced.stakeToMintEnabled) {
+		if (!config.advanced.stakeToken) {
+			errors.push('Stake token address is required when stake-to-mint is enabled');
+		} else if (!/^0x[a-fA-F0-9]{40}$/.test(config.advanced.stakeToken)) {
+			errors.push('Invalid stake token address');
+		}
+
+		if (!config.advanced.stakeAmount || config.advanced.stakeAmount === '0') {
+			errors.push('Stake amount must be greater than 0 when stake-to-mint is enabled');
+		}
+	}
+
 	return {
 		isValid: errors.length === 0,
 		errors
@@ -134,6 +150,10 @@ export function generateDeploymentSummary(config: NFTConfig) {
 
 	if (config.advanced.whitelistEnabled) {
 		features.push('Whitelist Enabled');
+	}
+
+	if (config.advanced.stakeToMintEnabled) {
+		features.push('Stake-to-Mint Enabled');
 	}
 
 	return {

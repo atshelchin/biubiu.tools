@@ -139,6 +139,36 @@ const TOKEN_FACTORY_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
 	}
 };
 
+// NFTFactory deployment configuration
+const NFT_FACTORY_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
+	contractName: 'NFTFactory',
+	contractAddress: '0xB003AdCD063aAAe88A634aC65257820c1322751D' as Address,
+	description: 'ERC721 NFT deployment factory with stake-to-mint support',
+	canDeploy: true,
+	deployGuideUrl: 'https://github.com/atshelchin/biubiu-contracts',
+
+	// NFTFactory bytecode - from https://github.com/atshelchin/biubiu-contracts
+	// Loaded from static/contracts/NFTFactory.json
+	bytecode: undefined, // Will be loaded dynamically from /contracts/NFTFactory.json
+
+	// No constructor arguments needed
+	constructorArgs: [],
+
+	deployFunction: async (context: DeploymentContext) => {
+		// Load bytecode from NFTFactory.json
+		const response = await fetch('/contracts/NFTFactory.json');
+		const data = await response.json();
+		const bytecode = data.bytecode.object as `0x${string}`;
+
+		return createCREATE2Deployment(
+			context,
+			bytecode,
+			{ contractName: 'NFTFactory', gasLimit: BigInt(10000000) },
+			context.t
+		);
+	}
+};
+
 /**
  * Deployment configuration registry
  * Maps contract addresses to their deployment configs
@@ -148,7 +178,8 @@ export const DEPLOYMENT_CONFIGS: DeploymentConfigRegistry = {
 	[MULTICALL3_DEPLOYMENT_CONFIG.contractAddress]: MULTICALL3_DEPLOYMENT_CONFIG,
 	[BIUBIU_PREMIUM_DEPLOYMENT_CONFIG.contractAddress]: BIUBIU_PREMIUM_DEPLOYMENT_CONFIG,
 	[TOKEN_SWEEP_DEPLOYMENT_CONFIG.contractAddress]: TOKEN_SWEEP_DEPLOYMENT_CONFIG,
-	[TOKEN_FACTORY_DEPLOYMENT_CONFIG.contractAddress]: TOKEN_FACTORY_DEPLOYMENT_CONFIG
+	[TOKEN_FACTORY_DEPLOYMENT_CONFIG.contractAddress]: TOKEN_FACTORY_DEPLOYMENT_CONFIG,
+	[NFT_FACTORY_DEPLOYMENT_CONFIG.contractAddress]: NFT_FACTORY_DEPLOYMENT_CONFIG
 };
 
 /**

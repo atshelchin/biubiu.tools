@@ -183,6 +183,59 @@
 				</div>
 			{/if}
 		</div>
+
+		<!-- Stake-to-Mint Section -->
+		<div class="section-card">
+			<h3 class="section-title">{i18n.t('tools.nft_deployer.step4.content.stake_to_mint')}</h3>
+
+			<div class="toggle-field">
+				<label class="toggle-label">
+					<input type="checkbox" bind:checked={step4State.stakeToMintEnabled} />
+					<span class="toggle-text"
+						>{i18n.t('tools.nft_deployer.step4.content.enable_stake_to_mint')}</span
+					>
+				</label>
+				<div class="field-hint">
+					{i18n.t('tools.nft_deployer.step4.content.stake_to_mint_hint')}
+				</div>
+			</div>
+
+			{#if step4State.stakeToMintEnabled}
+				<div class="form-field">
+					<label for="stake-token" class="field-label">
+						{i18n.t('tools.nft_deployer.step4.content.stake_token_label')}
+						<span class="required">*</span>
+					</label>
+					<input
+						id="stake-token"
+						type="text"
+						class="field-input"
+						placeholder="0x..."
+						bind:value={step4State.stakeToken}
+					/>
+					<div class="field-hint">
+						{i18n.t('tools.nft_deployer.step4.content.stake_token_hint')}
+					</div>
+				</div>
+
+				<div class="form-field">
+					<label for="stake-amount" class="field-label">
+						{i18n.t('tools.nft_deployer.step4.content.stake_amount_label')}
+						<span class="required">*</span>
+					</label>
+					<input
+						id="stake-amount"
+						type="text"
+						class="field-input"
+						placeholder="1000000000000000000"
+						bind:value={step4State.stakeAmount}
+					/>
+					<div class="field-hint">
+						{i18n.t('tools.nft_deployer.step4.content.stake_amount_hint')}
+					</div>
+				</div>
+			{/if}
+		</div>
 	</div>
 </div>
 

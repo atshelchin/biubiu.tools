@@ -51,6 +51,11 @@ export interface NFTAdvancedSettings {
 	burnable: boolean; // Tokens can be burned
 	revealable: boolean; // Support for reveal mechanism
 
+	// Stake-to-mint (NFTFactory specific)
+	stakeToMintEnabled: boolean; // Enable stake-to-mint mechanism
+	stakeToken?: Address; // ERC20 token address to stake
+	stakeAmount?: string; // Amount of tokens to stake per NFT
+
 	// ERC1155 specific
 	fungible?: boolean; // For ERC1155: whether tokens are fungible
 }

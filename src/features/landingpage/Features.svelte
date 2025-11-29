@@ -328,11 +328,11 @@
 
 	.container {
 		position: relative;
-		max-width: 1200px;
+		max-width: 80rem;
 		margin: 0 auto;
 		width: 100%;
 		z-index: 1;
-		/* padding: 0 var(--space-6); */
+		padding: var(--space-4) var(--space-5);
 	}
 
 	/* Header with proper spacing */
