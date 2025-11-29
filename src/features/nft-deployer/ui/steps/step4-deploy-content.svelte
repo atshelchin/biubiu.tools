@@ -254,6 +254,7 @@
 				>
 					View on Explorer
 				</a>
+				<a href="/apps/nft-manager" class="action-button">Manage NFTs</a>
 			</div>
 		</div>
 	{:else if hasError}

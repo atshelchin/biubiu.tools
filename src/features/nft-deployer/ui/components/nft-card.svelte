@@ -3,7 +3,7 @@
 	import { ExternalLink, Image } from '@lucide/svelte';
 	import { slide } from 'svelte/transition';
 	import CopyButton from '$lib/components/ui/copy-button.svelte';
-	import { formatAddress } from '$lib/utils/format';
+	import { formatAddress } from '$lib/utils/wallet-utils';
 
 	interface Props {
 		nft: NFTInfo;

@@ -1,4 +1,4 @@
-import { readContract, type Address, type PublicClient } from 'viem';
+import type { Address, PublicClient } from 'viem';
 import { KNOWN_CONTRACTS } from '$lib/utils/blockchain-checker';
 import type { DeployedTokenInfo } from '../types/token';
 
@@ -61,33 +61,25 @@ async function getTokenInfo(
 ): Promise<DeployedTokenInfo | null> {
 	try {
 		const [name, symbol, decimals, totalSupply] = await Promise.all([
-			readContract({
+			publicClient.readContract({
 				address: tokenAddress,
 				abi: ERC20_ABI,
-				functionName: 'name',
-				// @ts-expect-error - viem types are complex
-				client: publicClient
+				functionName: 'name'
 			}),
-			readContract({
+			publicClient.readContract({
 				address: tokenAddress,
 				abi: ERC20_ABI,
-				functionName: 'symbol',
-				// @ts-expect-error - viem types are complex
-				client: publicClient
+				functionName: 'symbol'
 			}),
-			readContract({
+			publicClient.readContract({
 				address: tokenAddress,
 				abi: ERC20_ABI,
-				functionName: 'decimals',
-				// @ts-expect-error - viem types are complex
-				client: publicClient
+				functionName: 'decimals'
 			}),
-			readContract({
+			publicClient.readContract({
 				address: tokenAddress,
 				abi: ERC20_ABI,
-				functionName: 'totalSupply',
-				// @ts-expect-error - viem types are complex
-				client: publicClient
+				functionName: 'totalSupply'
 			})
 		]);
 
@@ -117,13 +109,11 @@ export async function getUserDeployedTokens(
 ): Promise<DeployedTokenInfo[]> {
 	try {
 		// Get token addresses from TokenFactory
-		const tokenAddresses = (await readContract({
+		const tokenAddresses = (await publicClient.readContract({
 			address: KNOWN_CONTRACTS.TOKEN_FACTORY,
 			abi: TOKEN_FACTORY_ABI,
 			functionName: 'getUserTokens',
-			args: [userAddress],
-			// @ts-expect-error - viem types are complex
-			client: publicClient
+			args: [userAddress]
 		})) as Address[];
 
 		if (!tokenAddresses || tokenAddresses.length === 0) {
@@ -155,12 +145,10 @@ export async function getAllDeployedTokens(
 ): Promise<DeployedTokenInfo[]> {
 	try {
 		// Get all token addresses from TokenFactory
-		const tokenAddresses = (await readContract({
+		const tokenAddresses = (await publicClient.readContract({
 			address: KNOWN_CONTRACTS.TOKEN_FACTORY,
 			abi: TOKEN_FACTORY_ABI,
-			functionName: 'getAllTokens',
-			// @ts-expect-error - viem types are complex
-			client: publicClient
+			functionName: 'getAllTokens'
 		})) as Address[];
 
 		if (!tokenAddresses || tokenAddresses.length === 0) {

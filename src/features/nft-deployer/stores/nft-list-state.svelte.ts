@@ -38,16 +38,36 @@ const createNFTListState = () => {
 
 	return {
 		// Getters
-		get nfts() { return state.nfts; },
-		get total() { return state.total; },
-		get currentPage() { return state.currentPage; },
-		get pageSize() { return state.pageSize; },
-		get mode() { return state.mode; },
-		get loading() { return state.loading; },
-		get error() { return state.error; },
-		get userAddress() { return state.userAddress; },
-		get totalPages() { return Math.ceil(state.total / state.pageSize); },
-		get hasMore() { return state.currentPage < Math.ceil(state.total / state.pageSize); },
+		get nfts() {
+			return state.nfts;
+		},
+		get total() {
+			return state.total;
+		},
+		get currentPage() {
+			return state.currentPage;
+		},
+		get pageSize() {
+			return state.pageSize;
+		},
+		get mode() {
+			return state.mode;
+		},
+		get loading() {
+			return state.loading;
+		},
+		get error() {
+			return state.error;
+		},
+		get userAddress() {
+			return state.userAddress;
+		},
+		get totalPages() {
+			return Math.ceil(state.total / state.pageSize);
+		},
+		get hasMore() {
+			return state.currentPage < Math.ceil(state.total / state.pageSize);
+		},
 
 		// Actions
 		setNFTs(nfts: NFTInfo[], total: number) {

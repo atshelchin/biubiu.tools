@@ -19,7 +19,8 @@
 		Rocket,
 		Activity,
 		Search,
-		Image
+		Image,
+		Folder
 	} from '@lucide/svelte';
 	import ToolStatusBadge from '$lib/components/ui/tool-status-badge.svelte';
 
@@ -148,6 +149,16 @@
 				t('tools.nft_deployer.feature_2'),
 				t('tools.nft_deployer.feature_3')
 			],
+			stage: 'alpha'
+		},
+		{
+			icon: Folder,
+			title: 'NFT Manager',
+			description: 'Manage your deployed NFT collections. View, mint, and interact with NFTs.',
+			link: '/apps/nft-manager',
+			status: 'active',
+			color: '#A855F7',
+			features: ['View NFT Collections', 'Owner & Stake Mint', 'Paginated Browsing'],
 			stage: 'alpha'
 		},
 		{
