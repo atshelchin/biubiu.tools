@@ -73,3 +73,17 @@ export interface DeploymentSummary {
 	chainId: number;
 	networkName: string;
 }
+
+/**
+ * Deployed token info from blockchain
+ */
+export interface DeployedTokenInfo {
+	address: Address;
+	name: string;
+	symbol: string;
+	decimals: number;
+	totalSupply: string;
+	deployer: Address;
+	deployedAt: number;
+	chainId: number;
+}

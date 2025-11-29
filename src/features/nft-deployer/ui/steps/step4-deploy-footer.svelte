@@ -14,7 +14,7 @@
 
 	let { onPrevious }: Props = $props();
 
-	const isDeployed = $derived(step4DeployState.deploymentStatus === 'completed');
+	const isDeployed = $derived(step4DeployState.status === 'completed');
 
 	function handleReset() {
 		// Reset all states

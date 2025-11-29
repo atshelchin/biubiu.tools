@@ -99,3 +99,45 @@ export interface DeploymentSummary {
 	estimatedGasCost: string;
 	chainId: number;
 }
+
+/**
+ * NFT Info from NFTFactory contract
+ */
+export interface NFTInfo {
+	nftAddress: Address;
+	name: string;
+	symbol: string;
+	creator: Address;
+	stakeToMintEnabled: boolean;
+	stakeToken: Address;
+}
+
+/**
+ * Extended NFT Info with additional details
+ */
+export interface ExtendedNFTInfo extends NFTInfo {
+	totalSupply?: number;
+	baseURI?: string;
+	publicMintEnabled?: boolean;
+	owner?: Address;
+}
+
+/**
+ * NFT List view mode
+ */
+export type NFTListMode = 'my-nfts' | 'all-nfts';
+
+/**
+ * Mint status
+ */
+export type MintStatus = 'idle' | 'approving' | 'minting' | 'success' | 'error';
+
+/**
+ * Mint result
+ */
+export interface MintResult {
+	success: boolean;
+	tokenId?: bigint;
+	transactionHash?: string;
+	error?: string;
+}

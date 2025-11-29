@@ -71,6 +71,8 @@
 			const receipt = await connectStore.waitForTransaction(hash);
 
 			console.log('[NFTDeployer] Transaction confirmed:', receipt);
+			console.log('[NFTDeployer] NFT_FACTORY address:', KNOWN_CONTRACTS.NFT_FACTORY);
+			console.log('[NFTDeployer] All receipt logs:', receipt.logs);
 
 			// Parse event logs to get the created NFT address
 			const nftCreatedEvent = receipt.logs.find(
@@ -79,11 +81,18 @@
 					log.topics.length >= 2
 			);
 
+			console.log('[NFTDeployer] NFT Created Event found:', nftCreatedEvent);
+
+			if (nftCreatedEvent) {
+				console.log('[NFTDeployer] Event topics:', nftCreatedEvent.topics);
+				console.log('[NFTDeployer] Topics[1]:', nftCreatedEvent.topics[1]);
+			}
+
 			const createdNFTAddress = nftCreatedEvent
-			? (`0x${nftCreatedEvent.topics[1]?.slice(26)}` as Address)
+				? (`0x${nftCreatedEvent.topics[1]?.slice(26)}` as Address)
 				: undefined;
 
-			console.log('[NFTDeployer] Created NFT address:', createdNFTAddress);
+			console.log('[NFTDeployer] Extracted NFT address:', createdNFTAddress);
 
 			if (!createdNFTAddress) {
 				throw new Error('Failed to get NFT address from transaction receipt');

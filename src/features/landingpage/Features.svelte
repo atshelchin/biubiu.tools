@@ -417,6 +417,12 @@
 		padding: 0;
 	}
 
+	@media (max-width: 768px) {
+		.container {
+			padding: var(--space-3) var(--space-1);
+		}
+	}
+
 	@media (min-width: 768px) {
 		.tools-grid {
 			grid-template-columns: repeat(2, 1fr);

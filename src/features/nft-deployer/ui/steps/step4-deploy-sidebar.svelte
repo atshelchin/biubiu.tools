@@ -5,7 +5,7 @@
 
 	const i18n = useI18n();
 
-	const status = $derived(step4DeployState.deploymentStatus);
+	const status = $derived(step4DeployState.status);
 </script>
 
 <div class="space-y-3">
@@ -26,7 +26,7 @@
 		{i18n.t('tools.nft_deployer.step4.sidebar.description')}
 	</p>
 
-	{#if status === 'completed' && step4DeployState.deployedAddress}
+	{#if status === 'completed' && step4DeployState.nftAddress}
 		<div class="p-3 bg-green-50 dark:bg-green-950/20 rounded-lg">
 			<p class="text-sm font-medium text-green-900 dark:text-green-100">
 				{i18n.t('tools.nft_deployer.step4.sidebar.success')}
