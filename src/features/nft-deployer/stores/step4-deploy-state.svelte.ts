@@ -9,34 +9,34 @@ export type DeploymentStatus = 'idle' | 'preparing' | 'deploying' | 'completed' 
  * Step 4 state - Deployment
  */
 class Step4DeployState {
-	deploymentStatus = $state<DeploymentStatus>('idle');
-	deployedAddress = $state<Address | null>(null);
-	transactionHash = $state<string | null>(null);
+	status = $state<DeploymentStatus>('idle');
+	nftAddress = $state<Address | null>(null);
+	txHash = $state<string | null>(null);
 	error = $state<string | null>(null);
-	gasEstimate = $state<bigint | null>(null);
+	deploymentCost = $state<string | null>(null);
 
 	reset() {
-		this.deploymentStatus = 'idle';
-		this.deployedAddress = null;
-		this.transactionHash = null;
+		this.status = 'idle';
+		this.nftAddress = null;
+		this.txHash = null;
 		this.error = null;
-		this.gasEstimate = null;
+		this.deploymentCost = null;
 	}
 
 	setDeploying() {
-		this.deploymentStatus = 'deploying';
+		this.status = 'deploying';
 		this.error = null;
 	}
 
 	setCompleted(address: Address, txHash: string) {
-		this.deploymentStatus = 'completed';
-		this.deployedAddress = address;
-		this.transactionHash = txHash;
+		this.status = 'completed';
+		this.nftAddress = address;
+		this.txHash = txHash;
 		this.error = null;
 	}
 
 	setError(error: string) {
-		this.deploymentStatus = 'error';
+		this.status = 'error';
 		this.error = error;
 	}
 }

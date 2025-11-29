@@ -80,7 +80,7 @@
 			);
 
 			const createdNFTAddress = nftCreatedEvent
-				? ('0x' + nftCreatedEvent.topics[1].slice(26) as Address)
+			? (`0x${nftCreatedEvent.topics[1]?.slice(26)}` as Address)
 				: undefined;
 
 			console.log('[NFTDeployer] Created NFT address:', createdNFTAddress);
