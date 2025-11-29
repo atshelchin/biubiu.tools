@@ -60,6 +60,18 @@
 		}
 	});
 
+	// Auto-refresh balances every 10 seconds
+	$effect(() => {
+		const interval = setInterval(() => {
+			loadBalances();
+			if (activeTab === 'sell' && appState.tokenAddress && connectStore.address) {
+				reloadTokenBalance();
+			}
+		}, 10000); // 10 seconds
+
+		return () => clearInterval(interval);
+	});
+
 	async function loadBalances() {
 		if (!connectStore.address || !connectStore.currentChainId) return;
 
@@ -353,8 +365,11 @@
 				tradeSuccess = true;
 				txHash = hash;
 
-				// Reload balances
+				// Reload balances after trade
 				await loadBalances();
+				if (appState.tokenAddress && connectStore.address) {
+					await reloadTokenBalance();
+				}
 
 				// Reset form after delay
 				setTimeout(() => {
