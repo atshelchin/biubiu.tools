@@ -3,7 +3,7 @@
 </script>
 
 <StepSidebar
-	stepNumber={2}
+	stepNumber={3}
 	title="Basic Token Information"
 	description="Configure the fundamental properties of your token"
 >

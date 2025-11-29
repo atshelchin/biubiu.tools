@@ -1,6 +1,6 @@
 <script lang="ts">
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
-	import { step2State } from '@/features/token-deployer/stores/step2-state.svelte';
+	import { step3State } from '@/features/token-deployer/stores/step3-state.svelte';
 
 	// Common decimals options
 	const decimalsOptions = [6, 8, 9, 18];
@@ -10,10 +10,10 @@
 		const value = target.value;
 		// Only allow numbers and decimal point
 		if (value && !/^\d*\.?\d*$/.test(value)) {
-			target.value = step2State.initialSupply;
+			target.value = step3State.initialSupply;
 			return;
 		}
-		step2State.initialSupply = value;
+		step3State.initialSupply = value;
 	}
 </script>
 
@@ -34,7 +34,7 @@
 				type="text"
 				class="form-input"
 				placeholder="e.g., My Awesome Token"
-				bind:value={step2State.name}
+				bind:value={step3State.name}
 				maxlength="50"
 			/>
 			<p class="form-hint">The full name of your token (e.g., "Bitcoin", "Ethereum")</p>
@@ -50,7 +50,7 @@
 				type="text"
 				class="form-input"
 				placeholder="e.g., MAT"
-				bind:value={step2State.symbol}
+				bind:value={step3State.symbol}
 				maxlength="10"
 				style="text-transform: uppercase;"
 			/>
@@ -67,8 +67,8 @@
 					<button
 						type="button"
 						class="decimal-option"
-						class:selected={step2State.decimals === decimalValue}
-						onclick={() => (step2State.decimals = decimalValue)}
+						class:selected={step3State.decimals === decimalValue}
+						onclick={() => (step3State.decimals = decimalValue)}
 					>
 						{decimalValue}
 					</button>
@@ -77,7 +77,7 @@
 					id="token-decimals"
 					type="number"
 					class="form-input decimals-input"
-					bind:value={step2State.decimals}
+					bind:value={step3State.decimals}
 					min="0"
 					max="18"
 				/>
@@ -98,27 +98,40 @@
 					type="text"
 					class="form-input"
 					placeholder="e.g., 1000000"
-					value={step2State.initialSupply}
+					value={step3State.initialSupply}
 					oninput={handleSupplyInput}
 				/>
-				<span class="supply-suffix">{step2State.symbol || 'TOKENS'}</span>
+				<span class="supply-suffix">{step3State.symbol || 'TOKENS'}</span>
 			</div>
 			<p class="form-hint">Total tokens created at deployment. This will be sent to your wallet.</p>
 		</div>
 
+		<!-- Mintable Option -->
+		<div class="form-group">
+			<label class="checkbox-label">
+				<input type="checkbox" bind:checked={step3State.mintable} />
+				<span class="checkbox-text">
+					<strong>Mintable</strong>
+					<span class="checkbox-description">
+						Allow minting new tokens after deployment. Only the contract owner can mint.
+					</span>
+				</span>
+			</label>
+		</div>
+
 		<!-- Example Preview -->
-		{#if step2State.name && step2State.symbol && step2State.initialSupply}
+		{#if step3State.name && step3State.symbol && step3State.initialSupply}
 			<div class="preview-box">
 				<h4>Preview</h4>
 				<div class="preview-content">
 					<p>
-						<strong>{step2State.name} ({step2State.symbol})</strong>
+						<strong>{step3State.name} ({step3State.symbol})</strong>
 					</p>
 					<p>
-						Initial Supply: {parseFloat(step2State.initialSupply).toLocaleString()}
-						{step2State.symbol}
+						Initial Supply: {parseFloat(step3State.initialSupply).toLocaleString()}
+						{step3State.symbol}
 					</p>
-					<p>Decimals: {step2State.decimals}</p>
+					<p>Decimals: {step3State.decimals}</p>
 				</div>
 			</div>
 		{/if}
@@ -284,6 +297,59 @@
 
 	:global([data-theme='dark']) .preview-content p {
 		color: var(--gray-300);
+	}
+
+	/* Checkbox Label */
+	.checkbox-label {
+		display: flex;
+		align-items: flex-start;
+		gap: var(--space-3);
+		padding: var(--space-4);
+		background: var(--color-panel-1);
+		border: 2px solid var(--color-border);
+		border-radius: var(--radius-md);
+		cursor: pointer;
+		transition: all 0.2s ease;
+	}
+
+	.checkbox-label:hover {
+		border-color: var(--color-primary);
+		background: var(--color-panel-2);
+	}
+
+	.checkbox-label input[type='checkbox'] {
+		margin-top: 2px;
+		width: 18px;
+		height: 18px;
+		cursor: pointer;
+		accent-color: var(--color-primary);
+	}
+
+	.checkbox-text {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-1);
+		flex: 1;
+	}
+
+	.checkbox-text strong {
+		font-size: var(--text-base);
+		font-weight: var(--font-semibold);
+		color: var(--gray-900);
+	}
+
+	:global([data-theme='dark']) .checkbox-text strong {
+		color: var(--gray-100);
+	}
+
+	.checkbox-description {
+		font-size: var(--text-sm);
+		color: var(--gray-600);
+		line-height: 1.4;
+	}
+
+	:global([data-theme='dark']) .checkbox-description {
+		color: var(--gray-400);
 	}
 
 	@media (max-width: 640px) {

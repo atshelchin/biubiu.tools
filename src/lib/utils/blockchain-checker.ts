@@ -298,7 +298,15 @@ export const KNOWN_CONTRACTS = {
 
 	// TokenSweep (batch token transfer contract)
 	// https://github.com/atshelchin/biubiu-contracts
-	TOKEN_SWEEP: '0x28ab612a3a871EA203aDff9a7b0846C395529239' as Address
+	TOKEN_SWEEP: '0x28ab612a3a871EA203aDff9a7b0846C395529239' as Address,
+
+	// TokenFactory (ERC20 token deployment factory)
+	// https://github.com/atshelchin/biubiu-contracts
+	TOKEN_FACTORY: '0xd53219D61e6F7305d5D6e23F29197F3AD58521E1' as Address,
+
+	// NFTFactory (ERC721 NFT deployment factory with stake-to-mint support)
+	// https://github.com/atshelchin/biubiu-contracts
+	NFT_FACTORY: '0xB003AdCD063aAAe88A634aC65257820c1322751D' as Address
 } as const;
 
 /**
@@ -361,6 +369,40 @@ export async function checkTokenSweep(rpcUrl: string, t: TranslateFn): Promise<C
 		KNOWN_CONTRACTS.TOKEN_SWEEP,
 		'TokenSweep',
 		t('tools.token_sweep.step2.content.checks.contract.token_sweep_description'),
+		t,
+		{
+			canDeploy: true,
+			deployGuideUrl: 'https://github.com/atshelchin/biubiu-contracts'
+		}
+	);
+}
+
+/**
+ * Create a contract checker for TokenFactory
+ */
+export async function checkTokenFactory(rpcUrl: string, t: TranslateFn): Promise<ContractCheck> {
+	return checkContractDeployment(
+		rpcUrl,
+		KNOWN_CONTRACTS.TOKEN_FACTORY,
+		'TokenFactory',
+		t('tools.token_deployer.step2.content.checks.contract.token_factory_description'),
+		t,
+		{
+			canDeploy: true,
+			deployGuideUrl: 'https://github.com/atshelchin/biubiu-contracts'
+		}
+	);
+}
+
+/**
+ * Create a contract checker for NFTFactory
+ */
+export async function checkNFTFactory(rpcUrl: string, t: TranslateFn): Promise<ContractCheck> {
+	return checkContractDeployment(
+		rpcUrl,
+		KNOWN_CONTRACTS.NFT_FACTORY,
+		'NFTFactory',
+		t('tools.nft_deployer.step2.content.checks.contract.nft_factory_description'),
 		t,
 		{
 			canDeploy: true,

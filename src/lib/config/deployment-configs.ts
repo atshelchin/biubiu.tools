@@ -109,6 +109,36 @@ const TOKEN_SWEEP_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
 	}
 };
 
+// TokenFactory deployment configuration
+const TOKEN_FACTORY_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
+	contractName: 'TokenFactory',
+	contractAddress: '0xd53219D61e6F7305d5D6e23F29197F3AD58521E1' as Address,
+	description: 'ERC20 token deployment factory with CREATE2 support',
+	canDeploy: true,
+	deployGuideUrl: 'https://github.com/atshelchin/biubiu-contracts',
+
+	// TokenFactory bytecode - from https://github.com/atshelchin/biubiu-contracts commit aa6c1a0
+	// Loaded from static/contracts/TokenFactory.json
+	bytecode: undefined, // Will be loaded dynamically from /contracts/TokenFactory.json
+
+	// No constructor arguments needed
+	constructorArgs: [],
+
+	deployFunction: async (context: DeploymentContext) => {
+		// Load bytecode from TokenFactory.json
+		const response = await fetch('/contracts/TokenFactory.json');
+		const data = await response.json();
+		const bytecode = data.bytecode.object as `0x${string}`;
+
+		return createCREATE2Deployment(
+			context,
+			bytecode,
+			{ contractName: 'TokenFactory', gasLimit: BigInt(10000000) },
+			context.t
+		);
+	}
+};
+
 /**
  * Deployment configuration registry
  * Maps contract addresses to their deployment configs
@@ -117,7 +147,8 @@ export const DEPLOYMENT_CONFIGS: DeploymentConfigRegistry = {
 	[CREATE2_DEPLOYMENT_CONFIG.contractAddress]: CREATE2_DEPLOYMENT_CONFIG,
 	[MULTICALL3_DEPLOYMENT_CONFIG.contractAddress]: MULTICALL3_DEPLOYMENT_CONFIG,
 	[BIUBIU_PREMIUM_DEPLOYMENT_CONFIG.contractAddress]: BIUBIU_PREMIUM_DEPLOYMENT_CONFIG,
-	[TOKEN_SWEEP_DEPLOYMENT_CONFIG.contractAddress]: TOKEN_SWEEP_DEPLOYMENT_CONFIG
+	[TOKEN_SWEEP_DEPLOYMENT_CONFIG.contractAddress]: TOKEN_SWEEP_DEPLOYMENT_CONFIG,
+	[TOKEN_FACTORY_DEPLOYMENT_CONFIG.contractAddress]: TOKEN_FACTORY_DEPLOYMENT_CONFIG
 };
 
 /**

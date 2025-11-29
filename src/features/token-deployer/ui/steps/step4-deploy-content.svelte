@@ -1,37 +1,108 @@
 <script lang="ts">
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
-	import { step2State } from '@/features/token-deployer/stores/step2-state.svelte';
 	import { step3State } from '@/features/token-deployer/stores/step3-state.svelte';
 	import { step4State } from '@/features/token-deployer/stores/step4-state.svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { CheckCircle2, XCircle, Loader2 } from '@lucide/svelte';
+	import { encodeFunctionData, parseEther, type Address } from 'viem';
+	import { KNOWN_CONTRACTS } from '$lib/utils/blockchain-checker';
 
 	const connectStore = useConnectStore();
 
-	// Mock deployment function (replace with actual implementation)
+	// Real deployment function using TokenFactory
 	async function handleDeploy() {
 		if (step4State.deploymentStatus === 'deploying') return;
 
 		step4State.deploymentStatus = 'preparing';
 
 		try {
-			// Simulate deployment
-			await new Promise((resolve) => setTimeout(resolve, 2000));
+			// Validate wallet connection
+			if (!connectStore.isConnected || !connectStore.address) {
+				throw new Error('Please connect your wallet first');
+			}
+
+			// Fetch TokenFactory ABI
+			const response = await fetch('/contracts/TokenFactory.json');
+			const tokenFactoryData = await response.json();
+			const abi = tokenFactoryData.abi;
+
+			// Calculate initial supply with decimals
+			// e.g., if user enters "1000000" and decimals is 18, we need 1000000 * 10^18
+			const initialSupplyBigInt = BigInt(
+				Math.floor(parseFloat(step3State.initialSupply)) * 10 ** step3State.decimals
+			);
+
+			// Encode function call to TokenFactory.createToken
+			const data = encodeFunctionData({
+				abi,
+				functionName: 'createToken',
+				args: [
+					step3State.name, // string name
+					step3State.symbol, // string symbol
+					step3State.decimals, // uint8 decimals
+					initialSupplyBigInt, // uint256 initialSupply
+					step3State.mintable // bool mintable
+				]
+			});
+
+			console.log('[TokenDeployer] Encoded transaction data:', {
+				name: step3State.name,
+				symbol: step3State.symbol,
+				decimals: step3State.decimals,
+				initialSupply: initialSupplyBigInt.toString(),
+				mintable: step3State.mintable
+			});
+
 			step4State.deploymentStatus = 'deploying';
 
-			await new Promise((resolve) => setTimeout(resolve, 3000));
+			// Send transaction
+			const hash = await connectStore.sendTransaction({
+				to: KNOWN_CONTRACTS.TOKEN_FACTORY,
+				value: BigInt(0),
+				data,
+				gas: BigInt(5000000) // 5M gas should be enough for token creation
+			});
 
-			// Mock successful deployment
+			console.log('[TokenDeployer] Transaction sent! Hash:', hash);
+
+			// Wait for transaction confirmation
+			const receipt = await connectStore.waitForTransaction(hash);
+
+			console.log('[TokenDeployer] Transaction confirmed:', receipt);
+
+			// Parse event logs to get the created token address
+			// TokenFactory emits TokenCreated(address indexed token, address indexed creator)
+			const tokenCreatedEvent = receipt.logs.find(
+				(log) =>
+					log.address.toLowerCase() === KNOWN_CONTRACTS.TOKEN_FACTORY.toLowerCase() &&
+					log.topics.length >= 2
+			);
+
+			const createdTokenAddress = tokenCreatedEvent
+				? (`0x${tokenCreatedEvent.topics[1]?.slice(26)}` as Address)
+				: undefined;
+
+			console.log('[TokenDeployer] Created token address:', createdTokenAddress);
+
+			// Calculate deployment cost (gas used * effective gas price)
+			const gasUsed = receipt.gasUsed;
+			const effectiveGasPrice = receipt.effectiveGasPrice || BigInt(0);
+			const deploymentCostWei = gasUsed * effectiveGasPrice;
+			const deploymentCostEth = (Number(deploymentCostWei) / 1e18).toFixed(6);
+
+			// Success!
 			step4State.deploymentResult = {
 				success: true,
-				contractAddress: '0x1234567890abcdef1234567890abcdef12345678' as `0x${string}`,
-				transactionHash: '0xabcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890',
-				deploymentCost: '0.05',
-				gasUsed: BigInt(500000),
+				contractAddress:
+					createdTokenAddress || ('0x0000000000000000000000000000000000000000' as Address),
+				transactionHash: hash,
+				deploymentCost: deploymentCostEth,
+				gasUsed,
 				timestamp: Date.now()
 			};
 			step4State.deploymentStatus = 'completed';
 		} catch (error) {
+			console.error('[TokenDeployer] Deployment failed:', error);
 			step4State.deploymentResult = {
 				success: false,
 				error: error instanceof Error ? error.message : 'Deployment failed'
@@ -47,11 +118,76 @@
 	const hasError = $derived(step4State.deploymentStatus === 'error');
 
 	// Get current network
-	const currentNetwork = $derived(
-		connectStore.currentChainId
-			? connectStore.networks.find((n) => n.chainId === connectStore.currentChainId)
-			: undefined
-	);
+	const currentNetwork = $derived.by(() => {
+		if (!connectStore.currentChainId) return null;
+		return connectStore.networks.find((n) => n.chainId === connectStore.currentChainId);
+	});
+
+	// Add token to wallet
+	async function handleAddToWallet() {
+		if (!step4State.deploymentResult?.success || !step4State.deploymentResult.contractAddress) {
+			return;
+		}
+
+		try {
+			// Get wallet client to access the provider
+			const walletClient = await connectStore.getWalletClient();
+			if (!walletClient?.transport) {
+				throw new Error('Wallet client not available');
+			}
+
+			// Get provider from wallet client transport
+			// This works for all wallet types (MetaMask, WalletConnect, TokenPocket, etc.)
+			const provider = (walletClient.transport as { request?: unknown }).request
+				? walletClient.transport
+				: null;
+
+			if (!provider || typeof provider.request !== 'function') {
+				// Fallback to window.ethereum for browser extension wallets
+				if (window.ethereum?.request) {
+					await window.ethereum.request({
+						method: 'wallet_watchAsset',
+						params: {
+							type: 'ERC20',
+							options: {
+								address: step4State.deploymentResult.contractAddress,
+								symbol: step3State.symbol,
+								decimals: step3State.decimals
+							}
+						}
+					});
+					console.log('[TokenDeployer] Token added to wallet successfully (via window.ethereum)');
+					return;
+				}
+				throw new Error('No compatible wallet provider found');
+			}
+
+			// Use provider.request for universal wallet support
+			const wasAdded = await provider.request({
+				method: 'wallet_watchAsset',
+				params: {
+					type: 'ERC20',
+					options: {
+						address: step4State.deploymentResult.contractAddress,
+						symbol: step3State.symbol,
+						decimals: step3State.decimals
+					}
+				}
+			});
+
+			if (wasAdded) {
+				console.log('[TokenDeployer] Token added to wallet successfully');
+			}
+		} catch (error) {
+			console.error('[TokenDeployer] Failed to add token to wallet:', error);
+			// Show user-friendly error message
+			alert(
+				error instanceof Error
+					? error.message
+					: 'Failed to add token to wallet. Please add it manually.'
+			);
+		}
+	}
 </script>
 
 <div class="step-content">
@@ -68,23 +204,23 @@
 			<div class="config-grid">
 				<div class="config-item">
 					<span class="config-label">Name</span>
-					<span class="config-value">{step2State.name}</span>
+					<span class="config-value">{step3State.name}</span>
 				</div>
 
 				<div class="config-item">
 					<span class="config-label">Symbol</span>
-					<span class="config-value">{step2State.symbol}</span>
+					<span class="config-value">{step3State.symbol}</span>
 				</div>
 
 				<div class="config-item">
 					<span class="config-label">Decimals</span>
-					<span class="config-value">{step2State.decimals}</span>
+					<span class="config-value">{step3State.decimals}</span>
 				</div>
 
 				<div class="config-item">
 					<span class="config-label">Initial Supply</span>
 					<span class="config-value"
-						>{parseFloat(step2State.initialSupply).toLocaleString()} {step2State.symbol}</span
+						>{parseFloat(step3State.initialSupply).toLocaleString()} {step3State.symbol}</span
 					>
 				</div>
 
@@ -100,26 +236,10 @@
 			</div>
 
 			<!-- Advanced Features -->
-			{#if step3State.mintable || step3State.burnable || step3State.pausable || step3State.blacklistable || step3State.taxEnabled}
+			{#if step3State.mintable}
 				<h3 class="review-title">Advanced Features</h3>
 				<div class="features-list">
-					{#if step3State.mintable}
-						<div class="feature-badge">✨ Mintable</div>
-					{/if}
-					{#if step3State.burnable}
-						<div class="feature-badge">🔥 Burnable</div>
-					{/if}
-					{#if step3State.pausable}
-						<div class="feature-badge">⏸️ Pausable</div>
-					{/if}
-					{#if step3State.blacklistable}
-						<div class="feature-badge">🚫 Blacklistable</div>
-					{/if}
-					{#if step3State.taxEnabled}
-						<div class="feature-badge">
-							💸 Tax Enabled ({step3State.buyTax}% / {step3State.sellTax}%)
-						</div>
-					{/if}
+					<div class="feature-badge">✨ Mintable</div>
 				</div>
 			{/if}
 		</div>
@@ -185,8 +305,15 @@
 			</div>
 
 			<div class="actions">
-				<button class="action-button primary">View on Explorer</button>
-				<button class="action-button">Add to Wallet</button>
+				<a
+					href={`${currentNetwork?.blockExplorer}/address/${step4State.deploymentResult.contractAddress}`}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="action-button primary"
+				>
+					View on Explorer
+				</a>
+				<button class="action-button" onclick={handleAddToWallet}>Add to Wallet</button>
 			</div>
 		</div>
 	{:else if hasError}
@@ -500,6 +627,9 @@
 	}
 
 	.action-button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 		padding: var(--space-3) var(--space-6);
 		border: 2px solid var(--color-border);
 		border-radius: var(--radius-md);
@@ -509,6 +639,7 @@
 		transition: all 0.2s ease;
 		background: var(--color-panel-1);
 		color: var(--gray-900);
+		text-decoration: none;
 	}
 
 	:global([data-theme='dark']) .action-button {
@@ -519,6 +650,10 @@
 		background: hsl(210, 100%, 50%);
 		border-color: hsl(210, 100%, 50%);
 		color: white;
+	}
+
+	.action-button.primary:hover {
+		background: hsl(210, 100%, 45%);
 	}
 
 	.action-button:hover {

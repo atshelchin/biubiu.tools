@@ -1,40 +1,30 @@
 <script lang="ts">
 	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
 	import StepSummary from '$lib/components/step/step-summary.svelte';
-	import { step2State } from '@/features/token-deployer/stores/step2-state.svelte';
 	import { step3State } from '@/features/token-deployer/stores/step3-state.svelte';
 
 	const summaryItems = $derived([
 		{
 			label: 'Token Name',
-			value: step2State.name || 'Not set'
+			value: step3State.name || 'Not set'
 		},
 		{
 			label: 'Symbol',
-			value: step2State.symbol || 'Not set'
+			value: step3State.symbol || 'Not set'
 		},
 		{
 			label: 'Decimals',
-			value: step2State.decimals.toString()
+			value: step3State.decimals.toString()
 		},
 		{
 			label: 'Initial Supply',
-			value: step2State.initialSupply
-				? `${parseFloat(step2State.initialSupply).toLocaleString()} ${step2State.symbol}`
+			value: step3State.initialSupply
+				? `${parseFloat(step3State.initialSupply).toLocaleString()} ${step3State.symbol}`
 				: 'Not set'
 		},
 		{
 			label: 'Features',
-			value:
-				[
-					step3State.mintable && 'Mintable',
-					step3State.burnable && 'Burnable',
-					step3State.pausable && 'Pausable',
-					step3State.blacklistable && 'Blacklistable',
-					step3State.taxEnabled && 'Tax Enabled'
-				]
-					.filter(Boolean)
-					.join(', ') || 'None'
+			value: step3State.mintable ? 'Mintable' : 'None'
 		}
 	]);
 </script>

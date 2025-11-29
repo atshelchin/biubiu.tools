@@ -8,6 +8,12 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+
+	interface Window {
+		ethereum?: {
+			request: (args: { method: string; params?: unknown[] | object }) => Promise<unknown>;
+		};
+	}
 }
 
 export {};

@@ -21,14 +21,14 @@ export const load: PageLoad = ({ url }) => {
 			description: 'Connect wallet and select deployment network'
 		},
 		{
-			name: 'Configure Basic Info',
-			text: 'Enter your token name, symbol, decimals (usually 18), and initial supply. These fundamental properties define your token identity.',
-			description: 'Set token name, symbol, decimals and supply'
+			name: 'Check Dependencies',
+			text: 'Verify that all required contracts are deployed on the selected network. This includes the TokenFactory contract, CREATE2 Proxy, Multicall3, and BiuBiuPremium membership contract.',
+			description: 'Verify network and required contracts'
 		},
 		{
-			name: 'Set Advanced Parameters',
-			text: 'Optionally enable advanced features like mintable, burnable, pausable, tax system, or anti-bot protection based on your needs.',
-			description: 'Configure optional advanced features'
+			name: 'Configure Token',
+			text: 'Enter your token name, symbol, decimals (usually 18), and initial supply. Optionally enable the mintable feature to allow minting new tokens after deployment.',
+			description: 'Set token properties and features'
 		},
 		{
 			name: 'Review and Deploy',
@@ -46,25 +46,23 @@ export const load: PageLoad = ({ url }) => {
 	const webAppData = createWebAppData({
 		name: 'Token Deployer',
 		description:
-			'Create and deploy custom ERC20 tokens with advanced features on any EVM-compatible network',
+			'Create and deploy custom ERC20 tokens with mintable feature on any EVM-compatible network',
 		canonical,
 		features: [
 			'Connect Web3 wallet (MetaMask, WalletConnect, Coinbase Wallet)',
 			'Support multiple EVM networks (Ethereum, BSC, Polygon, Arbitrum, etc.)',
 			'Configure token name, symbol, decimals, and initial supply',
-			'Optional features: Mintable, Burnable, Pausable',
-			'Tax system with buy/sell fees',
-			'Anti-bot protection (max transaction, max wallet, trading delay)',
-			'Blacklist functionality',
+			'Optional mintable feature for creating new tokens after deployment',
+			'Dependency checks for required contracts',
 			'Gas cost estimation',
-			'Instant deployment'
+			'Instant deployment via TokenFactory contract'
 		]
 	});
 
 	const howToData = createHowToData({
 		name: 'How to Deploy an ERC20 Token',
 		description:
-			'Complete guide to creating and deploying custom ERC20 tokens with advanced features',
+			'Complete guide to creating and deploying custom ERC20 tokens with optional mintable feature',
 		canonical,
 		image,
 		steps,

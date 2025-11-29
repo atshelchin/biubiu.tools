@@ -590,7 +590,59 @@
 		},
 		"token_deployer": {
 			"title": "Token Deployer",
-			"description": "Create and deploy ERC20 tokens with custom parameters in minutes"
+			"description": "Create and deploy ERC20 tokens with custom parameters in minutes",
+			"step2": {
+				"content": {
+					"title": "Dependency Check",
+					"description": "Verifying network services and required contracts are deployed",
+					"checking_dependencies_for": "Checking dependencies for {network}...",
+					"wallet_not_connected_title": "Wallet Not Connected",
+					"wallet_not_connected_message": "Please go back to Step 1 and connect your wallet",
+					"go_to_step1": "Go to Step 1",
+					"all_dependencies_satisfied": "All Dependencies Satisfied",
+					"network_properly_configured": "Your network is properly configured for token deployment",
+					"dependency_issues_found": "Dependency Issues Found",
+					"resolve_issues_before_continuing": "Please resolve the issues above before continuing",
+					"recheck_dependencies": "Re-check Dependencies",
+					"address_label": "Address:",
+					"endpoint_label": "Endpoint:",
+					"resolve_previous_issue": "Please resolve the previous issue first",
+					"view_deployment_guide": "View Deployment Guide",
+					"deploy_coming_soon": "Deploy Contract (Coming Soon)",
+					"deploy_contract": "Deploy {contractName}",
+					"checks": {
+						"contract": {
+							"token_factory_description": "ERC20 token deployment factory with CREATE2 support"
+						}
+					}
+				},
+				"footer": {
+					"back": "Back",
+					"continue": "Continue to Token Configuration"
+				},
+				"sidebar": {
+					"title": "Check Dependencies",
+					"description": "Ensure all required contracts are deployed on your selected network before proceeding with token deployment.",
+					"checking": "Checking dependencies...",
+					"total": "Total Checks",
+					"passed": "Passed",
+					"failed": "Failed",
+					"network": "Current Network",
+					"what_is_this": "What is this?",
+					"what_is_this_desc": "Before deploying your token, we need to verify that all required smart contracts are available on your selected network.",
+					"dependencies": "Required Dependencies",
+					"rpc_endpoint": "RPC Endpoint",
+					"rpc_endpoint_desc": "Network connection for blockchain communication",
+					"create2_proxy": "CREATE2 Proxy",
+					"create2_proxy_desc": "Enables deterministic contract deployment across chains",
+					"multicall3": "Multicall3",
+					"multicall3_desc": "Batches multiple contract calls for efficiency",
+					"biubiu_premium": "BiuBiuPremium",
+					"biubiu_premium_desc": "Membership contract for premium features",
+					"token_factory": "TokenFactory",
+					"token_factory_desc": "Main contract for deploying your ERC20 tokens"
+				}
+			}
 		},
 		"nft_deployer": {
 			"title": "NFT Deployer",
