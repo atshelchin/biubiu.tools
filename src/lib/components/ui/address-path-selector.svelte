@@ -64,6 +64,10 @@
 	type SettingsMode = 'quick' | 'advanced';
 	let settingsMode = $state<SettingsMode>('quick');
 
+	// Track selected preset
+	let selectedSequentialPreset = $state<number | null>(null);
+	let selectedDatePreset = $state<number | null>(null);
+
 	// Path type options for SegmentedControl
 	type PathType = 'sequential' | 'date';
 	const pathTypeOptions = $derived([
@@ -134,11 +138,13 @@
 	}
 
 	function handleSequentialPreset(count: number) {
+		selectedSequentialPreset = count;
 		endIndex = startIndex + count - 1;
 		notifyChange();
 	}
 
 	function handleDatePreset(years: number) {
+		selectedDatePreset = years;
 		const currentYear = getCurrentYear();
 		// "Past 1 Year" means current year only: 2025-2025
 		// "Past 10 Years" means 10 years back including current: 2016-2025
@@ -214,7 +220,11 @@
 			{#if settingsMode === 'quick'}
 				<div class="presets-buttons" transition:slide={{ duration: 200 }}>
 					{#each sequentialPresets as preset (preset.value)}
-						<button class="preset-btn" onclick={() => handleSequentialPreset(preset.value)}>
+						<button
+							class="preset-btn"
+							class:active={selectedSequentialPreset === preset.value}
+							onclick={() => handleSequentialPreset(preset.value)}
+						>
 							{preset.label}
 						</button>
 					{/each}
@@ -287,7 +297,11 @@
 			{#if settingsMode === 'quick'}
 				<div class="presets-buttons" transition:slide={{ duration: 200 }}>
 					{#each datePresets as preset (preset.years)}
-						<button class="preset-btn" onclick={() => handleDatePreset(preset.years)}>
+						<button
+							class="preset-btn"
+							class:active={selectedDatePreset === preset.years}
+							onclick={() => handleDatePreset(preset.years)}
+						>
 							{preset.label}
 						</button>
 					{/each}
@@ -451,6 +465,12 @@
 		color: white;
 		border-color: var(--color-primary);
 		transform: translateY(-1px);
+	}
+
+	.preset-btn.active {
+		background: var(--color-primary);
+		color: white;
+		border-color: var(--color-primary);
 	}
 
 	/* Advanced Section */
