@@ -13,7 +13,7 @@
 </script>
 
 <div class="summary-container">
-	<div class="banner" class:success={variant === 'success'} class:error={variant === 'error'}>
+	<!-- <div class="banner" class:success={variant === 'success'} class:error={variant === 'error'}>
 		{#if variant === 'success'}
 			<CheckCircle2 size={32} />
 		{:else}
@@ -23,7 +23,7 @@
 			<h3>{title}</h3>
 			<p>{message}</p>
 		</div>
-	</div>
+	</div> -->
 
 	{#if onRetry && retryText}
 		<button class="retry-button" onclick={onRetry}>

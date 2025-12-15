@@ -71,6 +71,7 @@
 
 <div
 	class="check-card"
+	class:cannotfix={!canFix}
 	class:success={check.status === 'success'}
 	class:error={check.status === 'error'}
 	class:warning={check.status === 'warning'}
@@ -161,32 +162,25 @@
 	{#if check.status === 'error' && check.canDeploy}
 		<div class="check-actions">
 			{#if !canFix}
-				<div class="blocked-hint">
+				<!-- <div class="blocked-hint w-full">
 					<AlertCircle size={16} />
 					<span>{blockedHintText}</span>
-				</div>
+				</div> -->
 			{:else if onDeploy}
-				<button class="deploy-button primary" onclick={onDeploy}>
+				<button class="deploy-button primary w-full mt-4" onclick={onDeploy}>
 					{deployButtonText}
 				</button>
-			{:else if check.deployGuideUrl}
-				<a
-					href={check.deployGuideUrl}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="deploy-link"
-				>
-					<ExternalLink size={16} />
-					{viewGuideText}
-				</a>
 			{:else}
-				<button class="deploy-button" disabled>{deployComingSoonText}</button>
+				<button class="deploy-button w-full mt-4" disabled>{deployComingSoonText}</button>
 			{/if}
 		</div>
 	{/if}
 </div>
 
 <style>
+	.w-full {
+		width: 100%;
+	}
 	.check-card {
 		padding: var(--space-5);
 		background: var(--white);
@@ -212,6 +206,10 @@
 
 	/* Success: subtle and low-key */
 	.check-card.success {
+		opacity: 0.7
+	}
+
+	.check-card.cannotfix {
 		opacity: 0.7;
 	}
 
@@ -499,11 +497,14 @@
 		color: var(--color-primary);
 	}
 
-	.check-actions {
+	.mt-4 {
 		margin-top: var(--space-4);
-		padding-top: var(--space-4);
+	}
+	.check-actions {
+		/* margin-top: var(--space-4); */
+		/* padding-top: var(--space-4); */
 		/* padding-left: calc(40px + var(--space-3)); */
-		border-top: 1px solid var(--color-border);
+		/* border-top: 1px solid var(--color-border); */
 		display: flex;
 		gap: var(--space-2);
 	}
