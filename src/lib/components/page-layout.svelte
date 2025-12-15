@@ -99,6 +99,11 @@
 			grid-template-columns: 1fr;
 		}
 
+		.sidebar-section {
+			position: static;
+			max-height: none;
+		}
+
 		.footer-section {
 			flex-direction: column;
 			gap: var(--space-3);
