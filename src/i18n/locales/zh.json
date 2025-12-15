@@ -228,7 +228,7 @@
 				"content": {
 					"title": "依赖检查",
 					"description": "确保所需基础设施已就绪",
-					"checking_dependencies_for": "正在检查 {network} 的依赖项...",
+					"checking_dependencies_for": "正在检查 {network} 网络环境...",
 					"wallet_not_connected_title": "钱包未连接",
 					"wallet_not_connected_message": "请返回步骤 1 并连接您的钱包",
 					"go_to_step1": "返回步骤 1",
@@ -602,7 +602,7 @@
 				"content": {
 					"title": "依赖检查",
 					"description": "确保所需基础设施已就绪",
-					"checking_dependencies_for": "正在检查 {network} 的依赖...",
+					"checking_dependencies_for": "正在检查 {network} 网络环境...",
 					"wallet_not_connected_title": "钱包未连接",
 					"wallet_not_connected_message": "请返回步骤 1 并连接您的钱包",
 					"go_to_step1": "前往步骤 1",
