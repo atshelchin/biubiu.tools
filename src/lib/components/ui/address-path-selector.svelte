@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
 	import { useI18n } from '@shelchin/i18n/svelte';
-	import { ChevronDown, ChevronUp } from '@lucide/svelte';
+	import { Settings2 } from '@lucide/svelte';
 	import SegmentedControl from '$lib/components/ui/segmented-control.svelte';
 	import AddressCountHint from '$lib/components/ui/address-count-hint.svelte';
 
@@ -60,8 +60,9 @@
 		onChange
 	}: Props = $props();
 
-	// Advanced settings toggle
-	let showAdvanced = $state(false);
+	// Settings mode: 'quick' or 'advanced'
+	type SettingsMode = 'quick' | 'advanced';
+	let settingsMode = $state<SettingsMode>('quick');
 
 	// Path type options for SegmentedControl
 	type PathType = 'sequential' | 'date';
@@ -106,10 +107,8 @@
 				count = years * 12;
 			} else {
 				// Full date: calculate exact days including leap years
-				/* eslint-disable svelte/prefer-svelte-reactivity -- local variables, not reactive state */
 				const startDate = new Date(startYear, 0, 1);
 				const endDate = new Date(endYear, 11, 31);
-				/* eslint-enable svelte/prefer-svelte-reactivity */
 				const diffTime = endDate.getTime() - startDate.getTime();
 				count = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1;
 			}
@@ -149,8 +148,8 @@
 		notifyChange();
 	}
 
-	function toggleAdvanced() {
-		showAdvanced = !showAdvanced;
+	function toggleSettingsMode() {
+		settingsMode = settingsMode === 'quick' ? 'advanced' : 'quick';
 	}
 
 	function notifyChange() {
@@ -192,34 +191,38 @@
 	<!-- Sequential Mode Controls -->
 	{#if pathType === 'sequential'}
 		<div class="controls-section" transition:slide={{ duration: 300 }}>
-			<!-- Quick Presets -->
-			<div class="presets-row">
-				<span class="presets-label">{i18n.t('components.address_path_selector.quick_select')}:</span
+			<!-- Header with Settings Toggle -->
+			<div class="section-header">
+				<span class="section-title">
+					{settingsMode === 'quick'
+						? i18n.t('components.address_path_selector.quick_select')
+						: i18n.t('components.address_path_selector.advanced_settings')}
+				</span>
+				<button
+					class="settings-toggle"
+					class:active={settingsMode === 'advanced'}
+					onclick={toggleSettingsMode}
+					title={settingsMode === 'quick'
+						? i18n.t('components.address_path_selector.switch_to_advanced')
+						: i18n.t('components.address_path_selector.switch_to_quick')}
 				>
-				<div class="presets-buttons">
+					<Settings2 size={16} />
+				</button>
+			</div>
+
+			<!-- Quick Presets -->
+			{#if settingsMode === 'quick'}
+				<div class="presets-buttons" transition:slide={{ duration: 200 }}>
 					{#each sequentialPresets as preset (preset.value)}
 						<button class="preset-btn" onclick={() => handleSequentialPreset(preset.value)}>
 							{preset.label}
 						</button>
 					{/each}
 				</div>
-			</div>
-
-			<!-- Address Count Display -->
-			<AddressCountHint count={addressCount} maxLimit={maxAddresses} />
-
-			<!-- Advanced Settings Toggle -->
-			<button class="advanced-toggle" onclick={toggleAdvanced}>
-				<span>{i18n.t('components.address_path_selector.advanced_settings')}</span>
-				{#if showAdvanced}
-					<ChevronUp size={16} />
-				{:else}
-					<ChevronDown size={16} />
-				{/if}
-			</button>
+			{/if}
 
 			<!-- Advanced Settings -->
-			{#if showAdvanced}
+			{#if settingsMode === 'advanced'}
 				<div class="advanced-section" transition:slide={{ duration: 200 }}>
 					<!-- Range Inputs -->
 					<div class="range-inputs">
@@ -252,40 +255,47 @@
 					</div>
 				</div>
 			{/if}
+
+			<!-- Address Count Display -->
+			<AddressCountHint count={addressCount} maxLimit={maxAddresses} />
 		</div>
 	{/if}
 
 	<!-- Date Mode Controls -->
 	{#if pathType === 'date'}
 		<div class="controls-section" transition:slide={{ duration: 300 }}>
-			<!-- Quick Presets -->
-			<div class="presets-row">
-				<span class="presets-label">{i18n.t('components.address_path_selector.quick_select')}:</span
+			<!-- Header with Settings Toggle -->
+			<div class="section-header">
+				<span class="section-title">
+					{settingsMode === 'quick'
+						? i18n.t('components.address_path_selector.quick_select')
+						: i18n.t('components.address_path_selector.advanced_settings')}
+				</span>
+				<button
+					class="settings-toggle"
+					class:active={settingsMode === 'advanced'}
+					onclick={toggleSettingsMode}
+					title={settingsMode === 'quick'
+						? i18n.t('components.address_path_selector.switch_to_advanced')
+						: i18n.t('components.address_path_selector.switch_to_quick')}
 				>
-				<div class="presets-buttons">
+					<Settings2 size={16} />
+				</button>
+			</div>
+
+			<!-- Quick Presets -->
+			{#if settingsMode === 'quick'}
+				<div class="presets-buttons" transition:slide={{ duration: 200 }}>
 					{#each datePresets as preset (preset.years)}
 						<button class="preset-btn" onclick={() => handleDatePreset(preset.years)}>
 							{preset.label}
 						</button>
 					{/each}
 				</div>
-			</div>
-
-			<!-- Estimated Count -->
-			<AddressCountHint count={addressCount} maxLimit={maxAddresses} />
-
-			<!-- Advanced Settings Toggle -->
-			<button class="advanced-toggle" onclick={toggleAdvanced}>
-				<span>{i18n.t('components.address_path_selector.advanced_settings')}</span>
-				{#if showAdvanced}
-					<ChevronUp size={16} />
-				{:else}
-					<ChevronDown size={16} />
-				{/if}
-			</button>
+			{/if}
 
 			<!-- Advanced Settings -->
-			{#if showAdvanced}
+			{#if settingsMode === 'advanced'}
 				<div class="advanced-section" transition:slide={{ duration: 200 }}>
 					<!-- Year Range Inputs -->
 					<div class="range-inputs">
@@ -329,6 +339,9 @@
 					</div>
 				</div>
 			{/if}
+
+			<!-- Estimated Count -->
+			<AddressCountHint count={addressCount} maxLimit={maxAddresses} />
 		</div>
 	{/if}
 </div>
@@ -344,31 +357,72 @@
 	.controls-section {
 		display: flex;
 		flex-direction: column;
-		gap: var(--space-4);
+		gap: var(--space-3);
 		padding: var(--space-4);
 		background: var(--color-panel-1);
 		border: 1px solid var(--color-border);
 		border-radius: var(--radius-lg);
 	}
 
-	/* Presets Row */
-	.presets-row {
+	/* Section Header */
+	.section-header {
 		display: flex;
 		align-items: center;
-		gap: var(--space-3);
-		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 
-	.presets-label {
+	.section-title {
 		font-size: var(--text-sm);
 		font-weight: var(--font-medium);
 		color: var(--gray-600);
 	}
 
-	:global([data-theme='dark']) .presets-label {
+	:global([data-theme='dark']) .section-title {
 		color: var(--gray-400);
 	}
 
+	/* Settings Toggle Button */
+	.settings-toggle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+		padding: 0;
+		background: var(--white);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-sm);
+		color: var(--gray-500);
+		cursor: pointer;
+		transition: all 0.2s;
+	}
+
+	.settings-toggle:hover {
+		color: var(--color-primary);
+		border-color: var(--color-primary);
+	}
+
+	.settings-toggle.active {
+		background: var(--color-primary);
+		border-color: var(--color-primary);
+		color: white;
+	}
+
+	:global([data-theme='dark']) .settings-toggle {
+		background: var(--gray-700);
+		color: var(--gray-400);
+	}
+
+	:global([data-theme='dark']) .settings-toggle:hover {
+		color: var(--color-primary);
+	}
+
+	:global([data-theme='dark']) .settings-toggle.active {
+		background: var(--color-primary);
+		color: white;
+	}
+
+	/* Presets Buttons */
 	.presets-buttons {
 		display: flex;
 		gap: var(--space-2);
@@ -376,7 +430,7 @@
 	}
 
 	.preset-btn {
-		padding: var(--space-1) var(--space-3);
+		padding: var(--space-2) var(--space-4);
 		background: var(--white);
 		border: 1px solid var(--color-border);
 		border-radius: var(--radius-md);
@@ -399,38 +453,11 @@
 		transform: translateY(-1px);
 	}
 
-	/* Advanced Toggle */
-	.advanced-toggle {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: var(--space-1);
-		padding: var(--space-2);
-		background: transparent;
-		border: none;
-		border-top: 1px solid var(--color-border);
-		margin-top: var(--space-2);
-		padding-top: var(--space-3);
-		font-size: var(--text-sm);
-		color: var(--gray-500);
-		cursor: pointer;
-		transition: color 0.2s;
-	}
-
-	.advanced-toggle:hover {
-		color: var(--gray-700);
-	}
-
-	:global([data-theme='dark']) .advanced-toggle:hover {
-		color: var(--gray-300);
-	}
-
 	/* Advanced Section */
 	.advanced-section {
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-4);
-		padding-top: var(--space-2);
 	}
 
 	/* Range Inputs */
@@ -542,11 +569,6 @@
 		.range-separator {
 			align-self: center;
 			margin: var(--space-1) 0;
-		}
-
-		.presets-row {
-			flex-direction: column;
-			align-items: flex-start;
 		}
 
 		.format-preview {

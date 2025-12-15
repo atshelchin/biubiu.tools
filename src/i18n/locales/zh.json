@@ -1176,7 +1176,9 @@
 			"estimated_addresses": "预计地址数",
 			"addresses": "个地址",
 			"limited_to": "最多 {max} 个",
-			"advanced_settings": "高级设置"
+			"advanced_settings": "高级设置",
+			"switch_to_advanced": "切换到高级设置",
+			"switch_to_quick": "切换到快速选择"
 		},
 		"wallet_list": {
 			"empty_message": "尚未添加钱包",
