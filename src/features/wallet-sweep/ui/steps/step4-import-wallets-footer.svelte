@@ -14,12 +14,12 @@
 
 	function handleContinue() {
 		if (canContinue) {
-			stepManager.goTo(5);
+			stepManager.next()
 		}
 	}
 
 	function goBack() {
-		stepManager.goTo(3);
+		stepManager.prev();
 	}
 </script>
 

@@ -230,11 +230,13 @@
 	}
 </script>
 
-{#if checker.isChecking}
-	<LoadingState message={loadingMessage} />
-{:else if !checker.hasChecked && empty}
-	{@render empty()}
-{:else if checker.hasChecked && checker.checks.length > 0}
+{#if checker.isChecking || !checker.hasChecked}
+	{#if empty && !checker.isChecking}
+		{@render empty()}
+	{:else}
+		<LoadingState message={loadingMessage} />
+	{/if}
+{:else if checker.checks.length > 0}
 	<!-- Check Results -->
 	<div class="checks-container" in:fade={{ duration: 300 }}>
 		{#each checker.checks as check, index (check.id)}
