@@ -28,7 +28,9 @@
 			<div class="method-label">
 				{i18n.t('tools.wallet_sweep.step4.import_method.mnemonic.label')}
 			</div>
-			<div class="method-desc">{i18n.t('tools.wallet_sweep.step4.import_method.mnemonic.desc')}</div>
+			<div class="method-desc">
+				{i18n.t('tools.wallet_sweep.step4.import_method.mnemonic.desc')}
+			</div>
 		</div>
 	</button>
 

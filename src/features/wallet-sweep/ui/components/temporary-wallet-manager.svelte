@@ -339,7 +339,8 @@
 				<div class="field-content balance-content">
 					{#if isLoadingBalance}
 						<Loader2 size={16} class="spinning" />
-						<span class="balance-text">{i18n.t('tools.wallet_sweep.temporary_wallet.loading')}</span>
+						<span class="balance-text">{i18n.t('tools.wallet_sweep.temporary_wallet.loading')}</span
+						>
 					{:else}
 						<Wallet size={16} />
 						<span class="balance-text">{formatEther(walletBalance)} {networkSymbol}</span>

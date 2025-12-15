@@ -24,17 +24,11 @@
 
 	// Handle continue to next step
 	function handleContinue() {
-		console.log('handleContinue called', { isReadyToContinue, summary });
 		if (isReadyToContinue) {
-			console.log('Calling stepManager.next()');
 			stepManager.next();
-		} else {
-			console.log('Cannot continue:', {
-				isReady: isReadyToContinue,
-				summary
-			});
 		}
 	}
+
 	function goBack() {
 		stepManager.prev();
 	}

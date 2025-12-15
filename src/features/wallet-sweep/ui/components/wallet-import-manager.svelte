@@ -73,7 +73,9 @@
 		<div class="form-label">
 			{i18n.t('tools.wallet_sweep.step4.content.wallet_list.title')}
 			<span class="wallet-count"
-				>{i18n.t('tools.wallet_sweep.step4.content.wallet_list.count', { count: walletCount })}</span
+				>{i18n.t('tools.wallet_sweep.step4.content.wallet_list.count', {
+					count: walletCount
+				})}</span
 			>
 			<!-- {#if hasScanned}
 				<span class="balance-badge"

@@ -214,7 +214,9 @@
 					error.message.includes('internal error was received')
 				) {
 					if (isMetaMask()) {
-						message = i18n.t('tools.wallet_sweep.step2.content.deployment.errors.metamask_internal');
+						message = i18n.t(
+							'tools.wallet_sweep.step2.content.deployment.errors.metamask_internal'
+						);
 					} else {
 						message = i18n.t('tools.wallet_sweep.step2.content.deployment.errors.wallet_internal');
 					}
