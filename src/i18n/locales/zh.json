@@ -280,8 +280,8 @@
 								"deploy_contract_description": "发送预签名的部署交易"
 							},
 							"via_create2": {
-								"deploy_title": "通过 CREATE2 部署 {contractName}",
-								"deploy_description": "向 CREATE2 代理 {address} 发送部署交易"
+								"deploy_title": "部署 {contractName} 合约",
+								"deploy_description": "向 Deterministic Deployment Proxy 发送部署交易"
 							}
 						}
 					},

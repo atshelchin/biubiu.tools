@@ -280,8 +280,8 @@
 								"deploy_contract_description": "Send pre-signed deployment transaction"
 							},
 							"via_create2": {
-								"deploy_title": "Deploy {contractName} via CREATE2",
-								"deploy_description": "Send deployment transaction to CREATE2 proxy at {address}"
+								"deploy_title": "Deploy {contractName} Contract",
+								"deploy_description": "Send deployment transaction to Deterministic Deployment Proxy"
 							}
 						}
 					},

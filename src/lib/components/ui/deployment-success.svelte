@@ -27,7 +27,7 @@
 <div class="success-section">
 	<CheckCircle2 size={64} />
 	<h3>{title}</h3>
-	<p>{description}</p>
+	<!-- <p>{description}</p> -->
 	<div class="deployed-address">
 		<code>{contractAddress}</code>
 		{#if blockExplorer}
