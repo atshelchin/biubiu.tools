@@ -45,11 +45,6 @@
 </StepContent>
 
 <style>
-	/* Wallet Section */
-	/* :global(.wallet-section) {
-		margin-top: var(--space-8);
-	} */
-
 	/* Loading State */
 	.loading-container {
 		display: flex;
