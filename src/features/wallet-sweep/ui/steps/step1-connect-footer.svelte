@@ -24,7 +24,7 @@
 
 <StepFooter
 	canContinue={isReadyToContinue}
-	continueText={i18n.t('tools.token_sweep.step1.footer.continue')}
+	continueText={i18n.t('tools.wallet_sweep.step1.footer.continue')}
 	onContinue={handleContinue}
-	hint={i18n.t('tools.token_sweep.step1.footer.hint')}
+	hint={i18n.t('tools.wallet_sweep.step1.footer.hint')}
 />

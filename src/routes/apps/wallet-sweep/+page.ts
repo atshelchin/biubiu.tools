@@ -22,53 +22,53 @@ export const load: PageLoad = ({ url }) => {
 	// Define steps with both SEO text and UI description using i18n
 	const steps: HowToStepData[] = [
 		{
-			name: t('tools.token_sweep.seo.step_1_name'),
-			text: t('tools.token_sweep.seo.step_1_text'),
-			description: t('tools.token_sweep.seo.step_1_description')
+			name: t('tools.wallet_sweep.seo.step_1_name'),
+			text: t('tools.wallet_sweep.seo.step_1_text'),
+			description: t('tools.wallet_sweep.seo.step_1_description')
 		},
 		{
-			name: t('tools.token_sweep.seo.step_2_name'),
-			text: t('tools.token_sweep.seo.step_2_text'),
-			description: t('tools.token_sweep.seo.step_2_description')
+			name: t('tools.wallet_sweep.seo.step_2_name'),
+			text: t('tools.wallet_sweep.seo.step_2_text'),
+			description: t('tools.wallet_sweep.seo.step_2_description')
 		},
 		{
-			name: t('tools.token_sweep.seo.step_3_name'),
-			text: t('tools.token_sweep.seo.step_3_text'),
-			description: t('tools.token_sweep.seo.step_3_description')
+			name: t('tools.wallet_sweep.seo.step_3_name'),
+			text: t('tools.wallet_sweep.seo.step_3_text'),
+			description: t('tools.wallet_sweep.seo.step_3_description')
 		},
 		{
-			name: t('tools.token_sweep.seo.step_4_name'),
-			text: t('tools.token_sweep.seo.step_4_text'),
-			description: t('tools.token_sweep.seo.step_4_description')
+			name: t('tools.wallet_sweep.seo.step_4_name'),
+			text: t('tools.wallet_sweep.seo.step_4_text'),
+			description: t('tools.wallet_sweep.seo.step_4_description')
 		},
 		{
-			name: t('tools.token_sweep.seo.step_5_name'),
-			text: t('tools.token_sweep.seo.step_5_text'),
-			description: t('tools.token_sweep.seo.step_5_description')
+			name: t('tools.wallet_sweep.seo.step_5_name'),
+			text: t('tools.wallet_sweep.seo.step_5_text'),
+			description: t('tools.wallet_sweep.seo.step_5_description')
 		}
 	];
 
 	// Generate structured data from steps config
 	const webAppData = createWebAppData({
-		name: t('tools.token_sweep.seo.webapp_name'),
-		description: t('tools.token_sweep.seo.webapp_description'),
+		name: t('tools.wallet_sweep.seo.webapp_name'),
+		description: t('tools.wallet_sweep.seo.webapp_description'),
 		canonical,
 		features: [
-			t('tools.token_sweep.seo.feature_1'),
-			t('tools.token_sweep.seo.feature_2'),
-			t('tools.token_sweep.seo.feature_3'),
-			t('tools.token_sweep.seo.feature_4'),
-			t('tools.token_sweep.seo.feature_5')
+			t('tools.wallet_sweep.seo.feature_1'),
+			t('tools.wallet_sweep.seo.feature_2'),
+			t('tools.wallet_sweep.seo.feature_3'),
+			t('tools.wallet_sweep.seo.feature_4'),
+			t('tools.wallet_sweep.seo.feature_5')
 		]
 	});
 
 	const howToData = createHowToData({
-		name: t('tools.token_sweep.seo.howto_name'),
-		description: t('tools.token_sweep.seo.howto_description'),
+		name: t('tools.wallet_sweep.seo.howto_name'),
+		description: t('tools.wallet_sweep.seo.howto_description'),
 		canonical,
 		image,
 		steps,
-		tools: [t('tools.token_sweep.seo.howto_tool_1'), t('tools.token_sweep.seo.howto_tool_2')]
+		tools: [t('tools.wallet_sweep.seo.howto_tool_1'), t('tools.wallet_sweep.seo.howto_tool_2')]
 	});
 
 	// Map locale to SEO locale format (e.g., 'zh' -> 'zh_CN', 'en' -> 'en_US')
@@ -82,24 +82,24 @@ export const load: PageLoad = ({ url }) => {
 	// FAQs configuration
 	const faqs = [
 		{
-			question: t('tools.token_sweep.step1.sidebar.what_is_network'),
-			answer: t('tools.token_sweep.step1.sidebar.network_explanation')
+			question: t('tools.wallet_sweep.step1.sidebar.what_is_network'),
+			answer: t('tools.wallet_sweep.step1.sidebar.network_explanation')
 		},
 		{
-			question: t('tools.token_sweep.step1.sidebar.what_is_wallet'),
-			answer: t('tools.token_sweep.step1.sidebar.wallet_explanation')
+			question: t('tools.wallet_sweep.step1.sidebar.what_is_wallet'),
+			answer: t('tools.wallet_sweep.step1.sidebar.wallet_explanation')
 		},
 		{
-			question: t('tools.token_sweep.step1.sidebar.what_is_native_token'),
-			answer: t('tools.token_sweep.step1.sidebar.native_token_explanation')
+			question: t('tools.wallet_sweep.step1.sidebar.what_is_native_token'),
+			answer: t('tools.wallet_sweep.step1.sidebar.native_token_explanation')
 		}
 	];
 
 	return {
 		meta: {
-			title: t('tools.token_sweep.seo.page_title'),
-			description: t('tools.token_sweep.seo.page_description'),
-			keywords: t('tools.token_sweep.seo.keywords'),
+			title: t('tools.wallet_sweep.seo.page_title'),
+			description: t('tools.wallet_sweep.seo.page_description'),
+			keywords: t('tools.wallet_sweep.seo.keywords'),
 			canonical,
 			type: 'website' as const,
 			image,

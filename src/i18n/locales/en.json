@@ -128,7 +128,7 @@
 				}
 			}
 		},
-		"token_sweep": {
+		"wallet_sweep": {
 			"title": "Wallet Sweep",
 			"description": "Transfer balances from multiple wallets to one address",
 			"feature_1": "Complete balance sweep, zero dust left",
@@ -152,8 +152,8 @@
 				"multicall3_explanation": "Batches multiple calls into one. Saves gas and time. All-or-nothing execution.",
 				"what_is_biubiu_premium": "What is BiuBiuPremium?",
 				"biubiu_premium_explanation": "Membership contract managing subscriptions, discounts, and access. Fully open source.",
-				"what_is_token_sweep": "What is TokenSweep?",
-				"token_sweep_explanation": "Core contract for batch transfers. Handles EIP-7702 delegation and approvals. Open source: https://github.com/atshelchin/biubiu-contracts",
+				"what_is_wallet_sweep": "What is TokenSweep?",
+				"wallet_sweep_explanation": "Core contract for batch transfers. Handles EIP-7702 delegation and approvals. Open source: https://github.com/atshelchin/biubiu-contracts",
 				"can_select_multiple_tokens": "Can I select multiple tokens at once?",
 				"can_select_multiple_tokens_explanation": "Yes! You can select as many tokens as you want. The tool will sweep all selected tokens in one batch operation, making it very efficient.",
 				"what_happens_zero_balance": "What happens if a wallet has zero balance for a token?",
@@ -307,9 +307,9 @@
 							"create2_proxy_description": "Deterministic deployment proxy for contract creation",
 							"multicall3_description": "Aggregate multiple contract calls into a single request",
 							"biubiu_premium_description": "Premium membership management contract",
-							"token_sweep_description": "Batch token transfer contract with premium membership integration",
+							"wallet_sweep_description": "Batch token transfer contract with premium membership integration",
 							"biubiu_membership_description": "Biubiu platform membership contract",
-							"token_sweep_contract_description": "Main contract for batch token transfer operations"
+							"wallet_sweep_contract_description": "Main contract for batch token transfer operations"
 						}
 					}
 				},

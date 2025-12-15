@@ -14,7 +14,7 @@ import type { ImportedWallet } from '../types/wallet';
 import type { ERC20Token, NativeToken } from '$lib/types/token';
 import TokenSweepABI from '../../../../static/contracts/TokenSweep.json';
 import {
-	TOKEN_SWEEP_CONTRACT,
+	wallet_sweep_CONTRACT,
 	batchSignAuthorizations,
 	generateDrainSignatures,
 	toViemAuthorizationList
@@ -175,7 +175,7 @@ export async function executeTokenSweep(
 		const signedAuths = await batchSignAuthorizations(
 			publicClient,
 			config.wallets,
-			TOKEN_SWEEP_CONTRACT,
+			wallet_sweep_CONTRACT,
 			config.chainId
 		);
 		console.log('✅ Generated', signedAuths.length, 'EIP-7702 authorizations');
@@ -268,14 +268,14 @@ export async function executeTokenSweep(
 		config.onProgress?.('📤 Sending transaction to network...', 75);
 
 		console.log('before send ', {
-			to: TOKEN_SWEEP_CONTRACT,
+			to: wallet_sweep_CONTRACT,
 			data,
 			value: NON_MEMBER_FEE,
 			gas: BigInt(5000000), // High gas limit for batch operation
 			authorizationList // EIP-7702 authorizations for wallet code delegation
 		});
 		const txHash = await signer.sendTransaction({
-			to: TOKEN_SWEEP_CONTRACT,
+			to: wallet_sweep_CONTRACT,
 			data,
 			value: NON_MEMBER_FEE,
 			gas: BigInt(5000000), // High gas limit for batch operation

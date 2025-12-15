@@ -95,9 +95,9 @@ export function createCREATE2ProxyDeployment(
 	return {
 		steps: [
 			{
-				title: t('tools.token_sweep.step2.content.deployment.steps.create2.fund_deployer_title'),
+				title: t('tools.wallet_sweep.step2.content.deployment.steps.create2.fund_deployer_title'),
 				description: t(
-					'tools.token_sweep.step2.content.deployment.steps.create2.fund_deployer_description',
+					'tools.wallet_sweep.step2.content.deployment.steps.create2.fund_deployer_description',
 					{
 						address: KNOWN_ADDRESSES.CREATE2_DEPLOYER
 					}
@@ -116,9 +116,9 @@ export function createCREATE2ProxyDeployment(
 				}
 			},
 			{
-				title: t('tools.token_sweep.step2.content.deployment.steps.create2.deploy_contract_title'),
+				title: t('tools.wallet_sweep.step2.content.deployment.steps.create2.deploy_contract_title'),
 				description: t(
-					'tools.token_sweep.step2.content.deployment.steps.create2.deploy_contract_description'
+					'tools.wallet_sweep.step2.content.deployment.steps.create2.deploy_contract_description'
 				),
 				action: async (onStatus) => {
 					deploymentTxHash = await context.sendRawTransaction(DEPLOYMENT_TX, onStatus);
@@ -170,11 +170,11 @@ export function createCREATE2Deployment(
 	return {
 		steps: [
 			{
-				title: t('tools.token_sweep.step2.content.deployment.steps.via_create2.deploy_title', {
+				title: t('tools.wallet_sweep.step2.content.deployment.steps.via_create2.deploy_title', {
 					contractName: options.contractName
 				}),
 				description: t(
-					'tools.token_sweep.step2.content.deployment.steps.via_create2.deploy_description',
+					'tools.wallet_sweep.step2.content.deployment.steps.via_create2.deploy_description',
 					{
 						address: KNOWN_ADDRESSES.CREATE2_PROXY
 					}

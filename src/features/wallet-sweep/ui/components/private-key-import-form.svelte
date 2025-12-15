@@ -42,15 +42,15 @@
 
 <div class="form-section" transition:slide>
 	<div class="form-header">
-		<div class="form-label">{i18n.t('tools.token_sweep.step4.content.private_key.label')}</div>
+		<div class="form-label">{i18n.t('tools.wallet_sweep.step4.content.private_key.label')}</div>
 		<button class="btn-upload" onclick={handleUploadClick} disabled={isGenerating}>
 			<Upload size={16} />
-			{i18n.t('tools.token_sweep.step4.content.private_key.upload_file')}
+			{i18n.t('tools.wallet_sweep.step4.content.private_key.upload_file')}
 		</button>
 	</div>
 	<PrivateKeyEditorWithErrors
 		bind:value={privateKeysText}
-		placeholder={i18n.t('tools.token_sweep.step4.content.private_key.placeholder')}
+		placeholder={i18n.t('tools.wallet_sweep.step4.content.private_key.placeholder')}
 		rows={20}
 		invalidKeys={invalidPrivateKeys}
 	/>
@@ -62,12 +62,12 @@
 	>
 		{#if isGenerating}
 			<Loader2 size={18} class="spinning" />
-			{i18n.t('tools.token_sweep.step4.content.private_key.importing', {
+			{i18n.t('tools.wallet_sweep.step4.content.private_key.importing', {
 				progress: Math.round(generationProgress)
 			})}
 			<div class="btn-progress-bar" style="width: {generationProgress}%"></div>
 		{:else}
-			{i18n.t('tools.token_sweep.step4.content.private_key.import_button')}
+			{i18n.t('tools.wallet_sweep.step4.content.private_key.import_button')}
 		{/if}
 	</button>
 </div>
@@ -76,8 +76,8 @@
 	open={showUploadModal}
 	columnCount={1}
 	columnLabels={[
-		i18n.t('tools.token_sweep.step4.content.private_key.column_label')
-		// i18n.t('tools.token_sweep.step4.content.private_key.address_label')
+		i18n.t('tools.wallet_sweep.step4.content.private_key.column_label')
+		// i18n.t('tools.wallet_sweep.step4.content.private_key.address_label')
 	]}
 	onClose={() => (showUploadModal = false)}
 	onConfirm={handleUploadConfirm}

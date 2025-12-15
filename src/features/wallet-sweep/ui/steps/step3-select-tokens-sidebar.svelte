@@ -15,26 +15,26 @@
 <StepSidebar title="" description="" stepNumber={3} showWalletConnect={true}>
 	{#if selectedCount > 0}
 		<div transition:fade>
-			<StepSummary title={i18n.t('tools.token_sweep.step3.sidebar.selected_tokens_title')}>
+			<StepSummary title={i18n.t('tools.wallet_sweep.step3.sidebar.selected_tokens_title')}>
 				<div class="summary-item">
-					<span>{i18n.t('tools.token_sweep.step3.sidebar.count_label')}</span>
+					<span>{i18n.t('tools.wallet_sweep.step3.sidebar.count_label')}</span>
 					<strong>{selectedCount}</strong>
 				</div>
 			</StepSummary>
 		</div>
 	{:else}
-		<p class="empty-hint">{i18n.t('tools.token_sweep.step3.sidebar.empty_hint')}</p>
+		<p class="empty-hint">{i18n.t('tools.wallet_sweep.step3.sidebar.empty_hint')}</p>
 	{/if}
 
 	<InfoCard
 		variant="tips"
 		icon="💡"
-		title={i18n.t('tools.token_sweep.step3.sidebar.beginner_tips')}
+		title={i18n.t('tools.wallet_sweep.step3.sidebar.beginner_tips')}
 	>
 		<ul>
-			<li>{i18n.t('tools.token_sweep.step3.sidebar.tip1')}</li>
-			<li>{i18n.t('tools.token_sweep.step3.sidebar.tip2')}</li>
-			<li>{i18n.t('tools.token_sweep.step3.sidebar.tip3')}</li>
+			<li>{i18n.t('tools.wallet_sweep.step3.sidebar.tip1')}</li>
+			<li>{i18n.t('tools.wallet_sweep.step3.sidebar.tip2')}</li>
+			<li>{i18n.t('tools.wallet_sweep.step3.sidebar.tip3')}</li>
 		</ul>
 	</InfoCard>
 </StepSidebar>

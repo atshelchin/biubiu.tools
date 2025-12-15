@@ -18,12 +18,12 @@
 	<InfoCard
 		variant="tips"
 		icon="💡"
-		title={i18n.t('tools.token_sweep.step2.sidebar.beginner_tips')}
+		title={i18n.t('tools.wallet_sweep.step2.sidebar.beginner_tips')}
 	>
 		<ul>
-			<li>{i18n.t('tools.token_sweep.step2.sidebar.tip1')}</li>
-			<li>{i18n.t('tools.token_sweep.step2.sidebar.tip2')}</li>
-			<li>{i18n.t('tools.token_sweep.step2.sidebar.tip3')}</li>
+			<li>{i18n.t('tools.wallet_sweep.step2.sidebar.tip1')}</li>
+			<li>{i18n.t('tools.wallet_sweep.step2.sidebar.tip2')}</li>
+			<li>{i18n.t('tools.wallet_sweep.step2.sidebar.tip3')}</li>
 		</ul>
 	</InfoCard>
 </StepSidebar>

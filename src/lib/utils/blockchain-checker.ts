@@ -73,12 +73,12 @@ export async function checkRPCEndpoint(
 			return {
 				id: 'rpc-endpoint',
 				type: 'network-service',
-				name: t('tools.token_sweep.step2.content.checks.rpc_endpoint.name'),
-				description: t('tools.token_sweep.step2.content.checks.rpc_endpoint.description', {
+				name: t('tools.wallet_sweep.step2.content.checks.rpc_endpoint.name'),
+				description: t('tools.wallet_sweep.step2.content.checks.rpc_endpoint.description', {
 					network: networkName
 				}),
 				status: 'error',
-				message: t('tools.token_sweep.step2.content.checks.rpc_endpoint.chain_id_mismatch', {
+				message: t('tools.wallet_sweep.step2.content.checks.rpc_endpoint.chain_id_mismatch', {
 					expected: chainId,
 					actual: actualChainId
 				}),
@@ -90,12 +90,12 @@ export async function checkRPCEndpoint(
 		return {
 			id: 'rpc-endpoint',
 			type: 'network-service',
-			name: t('tools.token_sweep.step2.content.checks.rpc_endpoint.name'),
-			description: t('tools.token_sweep.step2.content.checks.rpc_endpoint.description', {
+			name: t('tools.wallet_sweep.step2.content.checks.rpc_endpoint.name'),
+			description: t('tools.wallet_sweep.step2.content.checks.rpc_endpoint.description', {
 				network: networkName
 			}),
 			status: 'success',
-			message: t('tools.token_sweep.step2.content.checks.rpc_endpoint.connected_to_block', {
+			message: t('tools.wallet_sweep.step2.content.checks.rpc_endpoint.connected_to_block', {
 				blockNumber: Number(blockNumber)
 			}),
 			endpoint: rpcUrl,
@@ -108,12 +108,12 @@ export async function checkRPCEndpoint(
 		return {
 			id: 'rpc-endpoint',
 			type: 'network-service',
-			name: t('tools.token_sweep.step2.content.checks.rpc_endpoint.name'),
-			description: t('tools.token_sweep.step2.content.checks.rpc_endpoint.description', {
+			name: t('tools.wallet_sweep.step2.content.checks.rpc_endpoint.name'),
+			description: t('tools.wallet_sweep.step2.content.checks.rpc_endpoint.description', {
 				network: networkName
 			}),
 			status: 'error',
-			message: t('tools.token_sweep.step2.content.checks.rpc_endpoint.failed_to_connect', {
+			message: t('tools.wallet_sweep.step2.content.checks.rpc_endpoint.failed_to_connect', {
 				error: errorMessage
 			}),
 			endpoint: rpcUrl,
@@ -161,10 +161,10 @@ export async function checkEIP7702Support(
 		return {
 			id: 'eip-7702-support',
 			type: 'network-service',
-			name: t('tools.token_sweep.step2.content.checks.eip7702.name'),
-			description: t('tools.token_sweep.step2.content.checks.eip7702.description'),
+			name: t('tools.wallet_sweep.step2.content.checks.eip7702.name'),
+			description: t('tools.wallet_sweep.step2.content.checks.eip7702.description'),
 			status: 'success',
-			message: t('tools.token_sweep.step2.content.checks.eip7702.supported'),
+			message: t('tools.wallet_sweep.step2.content.checks.eip7702.supported'),
 			endpoint: rpcUrl,
 			responseTime
 		};
@@ -177,10 +177,10 @@ export async function checkEIP7702Support(
 			return {
 				id: 'eip-7702-support',
 				type: 'network-service',
-				name: t('tools.token_sweep.step2.content.checks.eip7702.name'),
-				description: t('tools.token_sweep.step2.content.checks.eip7702.description'),
+				name: t('tools.wallet_sweep.step2.content.checks.eip7702.name'),
+				description: t('tools.wallet_sweep.step2.content.checks.eip7702.description'),
 				status: 'error',
-				message: t('tools.token_sweep.step2.content.checks.eip7702.not_supported'),
+				message: t('tools.wallet_sweep.step2.content.checks.eip7702.not_supported'),
 				endpoint: rpcUrl,
 				responseTime
 			};
@@ -190,10 +190,10 @@ export async function checkEIP7702Support(
 		return {
 			id: 'eip-7702-support',
 			type: 'network-service',
-			name: t('tools.token_sweep.step2.content.checks.eip7702.name'),
-			description: t('tools.token_sweep.step2.content.checks.eip7702.description'),
+			name: t('tools.wallet_sweep.step2.content.checks.eip7702.name'),
+			description: t('tools.wallet_sweep.step2.content.checks.eip7702.description'),
 			status: 'error',
-			message: t('tools.token_sweep.step2.content.checks.eip7702.check_failed', {
+			message: t('tools.wallet_sweep.step2.content.checks.eip7702.check_failed', {
 				error: errorMessage
 			}),
 			endpoint: rpcUrl,
@@ -241,7 +241,7 @@ export async function checkContractDeployment(
 				name: contractName,
 				description,
 				status: 'success',
-				message: t('tools.token_sweep.step2.content.checks.contract.deployed'),
+				message: t('tools.wallet_sweep.step2.content.checks.contract.deployed'),
 				address,
 				isDeployed: true,
 				blockNumber: Number(currentBlockNumber),
@@ -255,7 +255,7 @@ export async function checkContractDeployment(
 				name: contractName,
 				description,
 				status: 'error',
-				message: t('tools.token_sweep.step2.content.checks.contract.not_deployed'),
+				message: t('tools.wallet_sweep.step2.content.checks.contract.not_deployed'),
 				address,
 				isDeployed: false,
 				...options
@@ -270,7 +270,7 @@ export async function checkContractDeployment(
 			name: contractName,
 			description,
 			status: 'error',
-			message: t('tools.token_sweep.step2.content.checks.contract.check_failed', {
+			message: t('tools.wallet_sweep.step2.content.checks.contract.check_failed', {
 				error: errorMessage
 			}),
 			address,
@@ -298,7 +298,7 @@ export const KNOWN_CONTRACTS = {
 
 	// TokenSweep (batch token transfer contract)
 	// https://github.com/atshelchin/biubiu-contracts
-	TOKEN_SWEEP: '0x28ab612a3a871EA203aDff9a7b0846C395529239' as Address,
+	wallet_sweep: '0x28ab612a3a871EA203aDff9a7b0846C395529239' as Address,
 
 	// TokenFactory (ERC20 token deployment factory)
 	// https://github.com/atshelchin/biubiu-contracts
@@ -317,7 +317,7 @@ export async function checkCREATE2Proxy(rpcUrl: string, t: TranslateFn): Promise
 		rpcUrl,
 		KNOWN_CONTRACTS.CREATE2_PROXY,
 		'CREATE2 Proxy',
-		t('tools.token_sweep.step2.content.checks.contract.create2_proxy_description'),
+		t('tools.wallet_sweep.step2.content.checks.contract.create2_proxy_description'),
 		t,
 		{
 			canDeploy: true,
@@ -334,7 +334,7 @@ export async function checkMulticall3(rpcUrl: string, t: TranslateFn): Promise<C
 		rpcUrl,
 		KNOWN_CONTRACTS.MULTICALL3,
 		'Multicall3',
-		t('tools.token_sweep.step2.content.checks.contract.multicall3_description'),
+		t('tools.wallet_sweep.step2.content.checks.contract.multicall3_description'),
 		t,
 		{
 			canDeploy: true,
@@ -351,7 +351,7 @@ export async function checkBiuBiuPremium(rpcUrl: string, t: TranslateFn): Promis
 		rpcUrl,
 		KNOWN_CONTRACTS.BIUBIU_PREMIUM,
 		'BiuBiuPremium',
-		t('tools.token_sweep.step2.content.checks.contract.biubiu_premium_description'),
+		t('tools.wallet_sweep.step2.content.checks.contract.biubiu_premium_description'),
 		t,
 		{
 			canDeploy: true,
@@ -366,9 +366,9 @@ export async function checkBiuBiuPremium(rpcUrl: string, t: TranslateFn): Promis
 export async function checkTokenSweep(rpcUrl: string, t: TranslateFn): Promise<ContractCheck> {
 	return checkContractDeployment(
 		rpcUrl,
-		KNOWN_CONTRACTS.TOKEN_SWEEP,
+		KNOWN_CONTRACTS.wallet_sweep,
 		'TokenSweep',
-		t('tools.token_sweep.step2.content.checks.contract.token_sweep_description'),
+		t('tools.wallet_sweep.step2.content.checks.contract.wallet_sweep_description'),
 		t,
 		{
 			canDeploy: true,

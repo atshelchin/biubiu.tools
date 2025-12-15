@@ -16,10 +16,10 @@
 
 	// Dynamic footer hint based on state
 	const footerHint = $derived.by(() => {
-		if (isChecking) return i18n.t('tools.token_sweep.step2.footer.checking_dependencies');
+		if (isChecking) return i18n.t('tools.wallet_sweep.step2.footer.checking_dependencies');
 		if (summary && !summary.allPassed)
-			return i18n.t('tools.token_sweep.step2.footer.resolve_issues');
-		return i18n.t('tools.token_sweep.step2.footer.waiting_for_checks');
+			return i18n.t('tools.wallet_sweep.step2.footer.resolve_issues');
+		return i18n.t('tools.wallet_sweep.step2.footer.waiting_for_checks');
 	});
 
 	// Handle continue to next step

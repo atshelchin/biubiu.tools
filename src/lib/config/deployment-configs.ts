@@ -85,7 +85,7 @@ const BIUBIU_PREMIUM_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
 };
 
 // TokenSweep deployment configuration
-const TOKEN_SWEEP_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
+const wallet_sweep_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
 	contractName: 'TokenSweep',
 	contractAddress: '0x28ab612a3a871EA203aDff9a7b0846C395529239' as Address,
 	description: 'Batch token transfer contract with premium membership integration',
@@ -102,7 +102,7 @@ const TOKEN_SWEEP_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
 	deployFunction: async (context: DeploymentContext) => {
 		return createCREATE2Deployment(
 			context,
-			TOKEN_SWEEP_DEPLOYMENT_CONFIG.bytecode!,
+			wallet_sweep_DEPLOYMENT_CONFIG.bytecode!,
 			{ contractName: 'TokenSweep', gasLimit: BigInt(5000000) },
 			context.t
 		);
@@ -177,7 +177,7 @@ export const DEPLOYMENT_CONFIGS: DeploymentConfigRegistry = {
 	[CREATE2_DEPLOYMENT_CONFIG.contractAddress]: CREATE2_DEPLOYMENT_CONFIG,
 	[MULTICALL3_DEPLOYMENT_CONFIG.contractAddress]: MULTICALL3_DEPLOYMENT_CONFIG,
 	[BIUBIU_PREMIUM_DEPLOYMENT_CONFIG.contractAddress]: BIUBIU_PREMIUM_DEPLOYMENT_CONFIG,
-	[TOKEN_SWEEP_DEPLOYMENT_CONFIG.contractAddress]: TOKEN_SWEEP_DEPLOYMENT_CONFIG,
+	[wallet_sweep_DEPLOYMENT_CONFIG.contractAddress]: wallet_sweep_DEPLOYMENT_CONFIG,
 	[TOKEN_FACTORY_DEPLOYMENT_CONFIG.contractAddress]: TOKEN_FACTORY_DEPLOYMENT_CONFIG,
 	[NFT_FACTORY_DEPLOYMENT_CONFIG.contractAddress]: NFT_FACTORY_DEPLOYMENT_CONFIG
 };

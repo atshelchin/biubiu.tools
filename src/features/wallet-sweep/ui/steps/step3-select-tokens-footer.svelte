@@ -26,5 +26,5 @@
 	onBack={goBack}
 	{canContinue}
 	onContinue={handleContinue}
-	hint={i18n.t('tools.token_sweep.step3.footer.hint')}
+	hint={i18n.t('tools.wallet_sweep.step3.footer.hint')}
 />

@@ -278,7 +278,7 @@
 		const hasEnoughGas = await checkTemporaryWalletGasBalance();
 
 		if (!hasEnoughGas) {
-			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.still_insufficient_gas');
+			errorMessage = i18n.t('tools.wallet_sweep.step5.content.errors.still_insufficient_gas');
 			return;
 		}
 
@@ -290,7 +290,7 @@
 		// Note: This requires the sweep executor to support pause/resume
 		// For now, user would need to restart the sweep
 		alert(
-			i18n.t('tools.token_sweep.step5.content.gas_refilled_restart', {
+			i18n.t('tools.wallet_sweep.step5.content.gas_refilled_restart', {
 				balance: (Number(currentGasBalance) / 1e18).toFixed(6)
 			})
 		);
@@ -298,7 +298,7 @@
 
 	async function handleEstimateSweep() {
 		if (!connectStore.currentChainId) {
-			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.no_network');
+			errorMessage = i18n.t('tools.wallet_sweep.step5.content.errors.no_network');
 			return;
 		}
 
@@ -324,7 +324,7 @@
 		// Get RPC
 		const network = connectStore.networks.find((n) => n.chainId === connectStore.currentChainId);
 		if (!network || network.rpcEndpoints.length === 0) {
-			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.no_rpc');
+			errorMessage = i18n.t('tools.wallet_sweep.step5.content.errors.no_rpc');
 			return;
 		}
 
@@ -354,32 +354,32 @@
 
 	async function handleExecuteSweep() {
 		if (!isValid) {
-			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.complete_fields');
+			errorMessage = i18n.t('tools.wallet_sweep.step5.content.errors.complete_fields');
 			return;
 		}
 
 		if (!targetAddress.match(/^0x[a-fA-F0-9]{40}$/)) {
-			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.invalid_address');
+			errorMessage = i18n.t('tools.wallet_sweep.step5.content.errors.invalid_address');
 			return;
 		}
 
 		if (selectedTokenCount === 0) {
-			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.select_tokens');
+			errorMessage = i18n.t('tools.wallet_sweep.step5.content.errors.select_tokens');
 			return;
 		}
 
 		if (walletCount === 0) {
-			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.import_wallets');
+			errorMessage = i18n.t('tools.wallet_sweep.step5.content.errors.import_wallets');
 			return;
 		}
 
 		if (!connectStore.address) {
-			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.connect_wallet');
+			errorMessage = i18n.t('tools.wallet_sweep.step5.content.errors.connect_wallet');
 			return;
 		}
 
 		if (!connectStore.currentChainId) {
-			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.no_network');
+			errorMessage = i18n.t('tools.wallet_sweep.step5.content.errors.no_network');
 			return;
 		}
 
@@ -388,7 +388,7 @@
 		const sweepWalletCount = walletsToSweep.length;
 
 		if (onlyWithBalance && sweepWalletCount === 0) {
-			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.no_balance');
+			errorMessage = i18n.t('tools.wallet_sweep.step5.content.errors.no_balance');
 			return;
 		}
 
@@ -525,7 +525,7 @@
 		// Get RPC
 		const network = connectStore.networks.find((n) => n.chainId === connectStore.currentChainId);
 		if (!network || network.rpcEndpoints.length === 0) {
-			errorMessage = i18n.t('tools.token_sweep.step5.content.errors.no_rpc');
+			errorMessage = i18n.t('tools.wallet_sweep.step5.content.errors.no_rpc');
 			return;
 		}
 
@@ -593,7 +593,7 @@
 			const hasEnoughGas = await checkTemporaryWalletGasBalance();
 			if (!hasEnoughGas) {
 				isPausedForGas = true;
-				errorMessage = i18n.t('tools.token_sweep.step5.content.errors.insufficient_gas', {
+				errorMessage = i18n.t('tools.wallet_sweep.step5.content.errors.insufficient_gas', {
 					required: (Number(requiredGas) / 1e18).toFixed(6),
 					current: (Number(currentGasBalance) / 1e18).toFixed(6),
 					symbol: currentNetwork?.symbol || 'ETH'
@@ -680,17 +680,17 @@
 
 <StepContent>
 	<StepContentHeader
-		title={i18n.t('tools.token_sweep.step5.content.title')}
-		description={i18n.t('tools.token_sweep.step5.content.description')}
+		title={i18n.t('tools.wallet_sweep.step5.content.title')}
+		description={i18n.t('tools.wallet_sweep.step5.content.description')}
 	/>
 
 	<!-- 1. Selected Tokens Display (网络和 token) -->
 	<!-- Target Address (uses connected wallet address automatically) -->
 	<div class="target-address-info">
-		<h4>{i18n.t('tools.token_sweep.step5.target_address_label')}</h4>
+		<h4>{i18n.t('tools.wallet_sweep.step5.target_address_label')}</h4>
 		<div class="address-display">
 			<span class="address">{targetAddress}</span>
-			<span class="hint">{i18n.t('tools.token_sweep.step5.target_address_hint')}</span>
+			<span class="hint">{i18n.t('tools.wallet_sweep.step5.target_address_hint')}</span>
 		</div>
 	</div>
 
@@ -717,16 +717,16 @@
 		<div class="gas-warning-banner" transition:fade>
 			<AlertCircle size={24} />
 			<div class="gas-warning-content">
-				<strong>{i18n.t('tools.token_sweep.step5.content.gas_insufficient_title')}</strong>
+				<strong>{i18n.t('tools.wallet_sweep.step5.content.gas_insufficient_title')}</strong>
 				<p>
-					{i18n.t('tools.token_sweep.step5.content.gas_insufficient_message', {
+					{i18n.t('tools.wallet_sweep.step5.content.gas_insufficient_message', {
 						required: (Number(requiredGas) / 1e18).toFixed(6),
 						current: (Number(currentGasBalance) / 1e18).toFixed(6),
 						symbol: currentNetwork?.symbol || 'ETH'
 					})}
 				</p>
 				<button class="btn-resume-gas" onclick={handleResumeAfterGasRefill}>
-					{i18n.t('tools.token_sweep.step5.content.check_and_resume')}
+					{i18n.t('tools.wallet_sweep.step5.content.check_and_resume')}
 				</button>
 			</div>
 		</div>
@@ -743,8 +743,8 @@
 	<div class="warning-card">
 		<CheckCircle2 size={20} />
 		<div>
-			<strong>{i18n.t('tools.token_sweep.step5.content.ready_to_execute')}</strong>
-			<p>{i18n.t('tools.token_sweep.step5.content.review_carefully')}</p>
+			<strong>{i18n.t('tools.wallet_sweep.step5.content.ready_to_execute')}</strong>
+			<p>{i18n.t('tools.wallet_sweep.step5.content.review_carefully')}</p>
 		</div>
 	</div>
 

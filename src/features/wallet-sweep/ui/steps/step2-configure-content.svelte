@@ -32,13 +32,13 @@
 	let summaryVariant = $derived<'success' | 'error'>(summary?.allPassed ? 'success' : 'error');
 	let summaryTitle = $derived(
 		summary?.allPassed
-			? i18n.t('tools.token_sweep.step2.content.all_dependencies_satisfied')
-			: i18n.t('tools.token_sweep.step2.content.dependency_issues_found')
+			? i18n.t('tools.wallet_sweep.step2.content.all_dependencies_satisfied')
+			: i18n.t('tools.wallet_sweep.step2.content.dependency_issues_found')
 	);
 	let summaryMessage = $derived(
 		summary?.allPassed
-			? i18n.t('tools.token_sweep.step2.content.network_properly_configured')
-			: i18n.t('tools.token_sweep.step2.content.resolve_issues_before_continuing')
+			? i18n.t('tools.wallet_sweep.step2.content.network_properly_configured')
+			: i18n.t('tools.wallet_sweep.step2.content.resolve_issues_before_continuing')
 	);
 
 	// Contract deployment modal state
@@ -131,14 +131,14 @@
 
 <StepContent>
 	<StepContentHeader
-		title={i18n.t('tools.token_sweep.step2.content.title')}
-		description={i18n.t('tools.token_sweep.step2.content.description')}
+		title={i18n.t('tools.wallet_sweep.step2.content.title')}
+		description={i18n.t('tools.wallet_sweep.step2.content.description')}
 	/>
 
 	{#if isChecking}
 		<!-- Checking State -->
 		<LoadingState
-			message={i18n.t('tools.token_sweep.step2.content.checking_dependencies_for', {
+			message={i18n.t('tools.wallet_sweep.step2.content.checking_dependencies_for', {
 				network: currentNetwork?.name ?? ''
 			})}
 		/>
@@ -146,12 +146,12 @@
 		<!-- Not Connected State -->
 		<EmptyState
 			icon="🔌"
-			title={i18n.t('tools.token_sweep.step2.content.wallet_not_connected_title')}
-			message={i18n.t('tools.token_sweep.step2.content.wallet_not_connected_message')}
+			title={i18n.t('tools.wallet_sweep.step2.content.wallet_not_connected_title')}
+			message={i18n.t('tools.wallet_sweep.step2.content.wallet_not_connected_message')}
 		>
 			{#snippet action()}
 				<button class="back-button" onclick={goBackToStep1}>
-					{i18n.t('tools.token_sweep.step2.content.go_to_step1')}
+					{i18n.t('tools.wallet_sweep.step2.content.go_to_step1')}
 				</button>
 			{/snippet}
 		</EmptyState>
@@ -176,15 +176,15 @@
 							}
 						: undefined}
 					deployButtonText={config
-						? i18n.t('tools.token_sweep.step2.content.deploy_contract', {
+						? i18n.t('tools.wallet_sweep.step2.content.deploy_contract', {
 								contractName: config.contractName
 							})
 						: undefined}
-					blockedHintText={i18n.t('tools.token_sweep.step2.content.resolve_previous_issue')}
-					addressLabel={i18n.t('tools.token_sweep.step2.content.address_label')}
-					endpointLabel={i18n.t('tools.token_sweep.step2.content.endpoint_label')}
-					viewGuideText={i18n.t('tools.token_sweep.step2.content.view_deployment_guide')}
-					deployComingSoonText={i18n.t('tools.token_sweep.step2.content.deploy_coming_soon')}
+					blockedHintText={i18n.t('tools.wallet_sweep.step2.content.resolve_previous_issue')}
+					addressLabel={i18n.t('tools.wallet_sweep.step2.content.address_label')}
+					endpointLabel={i18n.t('tools.wallet_sweep.step2.content.endpoint_label')}
+					viewGuideText={i18n.t('tools.wallet_sweep.step2.content.view_deployment_guide')}
+					deployComingSoonText={i18n.t('tools.wallet_sweep.step2.content.deploy_coming_soon')}
 				/>
 			{/each}
 		</div>
@@ -195,7 +195,7 @@
 				variant={summaryVariant}
 				title={summaryTitle}
 				message={summaryMessage}
-				retryText={i18n.t('tools.token_sweep.step2.content.recheck_dependencies')}
+				retryText={i18n.t('tools.wallet_sweep.step2.content.recheck_dependencies')}
 				onRetry={runDependencyChecks}
 			/>
 		{/if}

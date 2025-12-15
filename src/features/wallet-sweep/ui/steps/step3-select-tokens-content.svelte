@@ -58,17 +58,17 @@
 
 <StepContent>
 	<StepContentHeader
-		title={i18n.t('tools.token_sweep.step3.content.title')}
+		title={i18n.t('tools.wallet_sweep.step3.content.title')}
 		description={currentNetwork?.name
-			? i18n.t('tools.token_sweep.step3.content.description', { network: currentNetwork.name })
-			: i18n.t('tools.token_sweep.step3.content.description_fallback')}
+			? i18n.t('tools.wallet_sweep.step3.content.description', { network: currentNetwork.name })
+			: i18n.t('tools.wallet_sweep.step3.content.description_fallback')}
 	></StepContentHeader>
 
 	{#if !connectStore.isConnected}
 		<EmptyState
 			icon="🔌"
-			title={i18n.t('tools.token_sweep.step3.content.wallet_not_connected_title')}
-			message={i18n.t('tools.token_sweep.step3.content.wallet_not_connected_message')}
+			title={i18n.t('tools.wallet_sweep.step3.content.wallet_not_connected_title')}
+			message={i18n.t('tools.wallet_sweep.step3.content.wallet_not_connected_message')}
 		/>
 	{:else if currentNetwork && connectStore.currentChainId}
 		{@const rpcUrl = currentNetwork.rpcEndpoints?.[0]?.url || ''}
@@ -85,7 +85,7 @@
 				onSelectionChange={handleSelectionChange}
 				onTokenAdded={handleTokenAdded}
 				onRemoveCustomToken={handleRemoveCustomToken}
-				emptyMessage={i18n.t('tools.token_sweep.step3.content.empty_message')}
+				emptyMessage={i18n.t('tools.wallet_sweep.step3.content.empty_message')}
 				multiSelect={true}
 			/>
 		{/if}

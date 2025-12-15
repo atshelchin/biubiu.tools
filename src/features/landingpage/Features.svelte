@@ -42,16 +42,16 @@
 	const tools = $derived<Tool[]>([
 		{
 			icon: ArrowRightLeft,
-			title: t('tools.token_sweep.title'),
-			description: t('tools.token_sweep.description'),
+			title: t('tools.wallet_sweep.title'),
+			description: t('tools.wallet_sweep.description'),
 			link: '/apps/wallet-sweep',
 			status: 'active',
 			color: '#10B981',
 			features: [
-				i18n.t('tools.token_sweep.feature_1'),
-				i18n.t('tools.token_sweep.feature_2'),
-				i18n.t('tools.token_sweep.feature_3'),
-				i18n.t('tools.token_sweep.feature_4')
+				i18n.t('tools.wallet_sweep.feature_1'),
+				i18n.t('tools.wallet_sweep.feature_2'),
+				i18n.t('tools.wallet_sweep.feature_3'),
+				i18n.t('tools.wallet_sweep.feature_4')
 			],
 			stage: 'beta'
 		},

@@ -128,7 +128,7 @@
 				}
 			}
 		},
-		"token_sweep": {
+		"wallet_sweep": {
 			"title": "钱包归集",
 			"description": "将多个钱包的余额一键转移到目标地址",
 			"feature_1": "彻底清空余额，不留尾巴",
@@ -152,8 +152,8 @@
 				"multicall3_explanation": "把多次调用打包成一次的批量工具。省 Gas、省时间，要么全成功要么全失败。",
 				"what_is_biubiu_premium": "BiuBiuPremium 是什么？",
 				"biubiu_premium_explanation": "会员管理合约，处理订阅、折扣、权限等。代码完全公开透明。",
-				"what_is_token_sweep": "TokenSweep 是什么？",
-				"token_sweep_explanation": "批量归集的核心合约，处理授权和转账。开源地址：https://github.com/atshelchin/biubiu-contracts",
+				"what_is_wallet_sweep": "TokenSweep 是什么？",
+				"wallet_sweep_explanation": "批量归集的核心合约，处理授权和转账。开源地址：https://github.com/atshelchin/biubiu-contracts",
 				"can_select_multiple_tokens": "可以同时选择多个代币吗？",
 				"can_select_multiple_tokens_explanation": "当然可以！您可以选择任意数量的代币，工具会在一次批量操作中归集所有选中的代币，非常高效。",
 				"what_happens_zero_balance": "如果某个钱包某个代币余额为零会怎样？",
@@ -307,9 +307,9 @@
 							"create2_proxy_description": "确定性部署代理合约",
 							"multicall3_description": "将多个合约调用聚合为一个请求",
 							"biubiu_premium_description": "高级会员管理合约",
-							"token_sweep_description": "批量代币转账合约（集成高级会员功能）",
+							"wallet_sweep_description": "批量代币转账合约（集成高级会员功能）",
 							"biubiu_membership_description": "BiuBiu 平台会员合约",
-							"token_sweep_contract_description": "批量代币转账操作主合约"
+							"wallet_sweep_contract_description": "批量代币转账操作主合约"
 						}
 					}
 				},

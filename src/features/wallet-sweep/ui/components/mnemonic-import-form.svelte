@@ -40,17 +40,17 @@
 </script>
 
 <div class="form-section" transition:slide>
-	<div class="form-label">{i18n.t('tools.token_sweep.step4.content.mnemonic.label')}</div>
+	<div class="form-label">{i18n.t('tools.wallet_sweep.step4.content.mnemonic.label')}</div>
 	<SimpleCodeEditor
 		bind:value={mnemonicText}
-		placeholder={i18n.t('tools.token_sweep.step4.content.mnemonic.placeholder')}
+		placeholder={i18n.t('tools.wallet_sweep.step4.content.mnemonic.placeholder')}
 		rows={6}
 	/>
-	<p class="form-hint">{i18n.t('tools.token_sweep.step4.content.mnemonic.security_hint')}</p>
+	<p class="form-hint">{i18n.t('tools.wallet_sweep.step4.content.mnemonic.security_hint')}</p>
 
 	<div style="margin-top: var(--space-4);">
 		<div class="form-label">
-			{i18n.t('tools.token_sweep.step4.content.mnemonic.derivation_path')}
+			{i18n.t('tools.wallet_sweep.step4.content.mnemonic.derivation_path')}
 		</div>
 		<AddressPathSelector
 			bind:pathType
@@ -73,12 +73,12 @@
 	>
 		{#if isGenerating}
 			<Loader2 size={18} class="spinning" />
-			{i18n.t('tools.token_sweep.step4.content.mnemonic.generating', {
+			{i18n.t('tools.wallet_sweep.step4.content.mnemonic.generating', {
 				progress: Math.round(generationProgress)
 			})}
 			<div class="btn-progress-bar" style="width: {generationProgress}%"></div>
 		{:else}
-			{i18n.t('tools.token_sweep.step4.content.mnemonic.generate_button')}
+			{i18n.t('tools.wallet_sweep.step4.content.mnemonic.generate_button')}
 		{/if}
 	</button>
 </div>

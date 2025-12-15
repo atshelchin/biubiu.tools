@@ -136,18 +136,18 @@
 		<div class="performance-tip-card" transition:fade>
 			<div class="tip-header">
 				<span class="tip-title"
-					>{i18n.t('tools.token_sweep.step4.sidebar.performance_tip.title')}</span
+					>{i18n.t('tools.wallet_sweep.step4.sidebar.performance_tip.title')}</span
 				>
 			</div>
 			<p class="tip-message">
-				{i18n.t('tools.token_sweep.step4.sidebar.performance_tip.message')}
+				{i18n.t('tools.wallet_sweep.step4.sidebar.performance_tip.message')}
 			</p>
 			<div class="tip-recommendation">
 				<span class="tip-label"
-					>{i18n.t('tools.token_sweep.step4.sidebar.performance_tip.recommended')}</span
+					>{i18n.t('tools.wallet_sweep.step4.sidebar.performance_tip.recommended')}</span
 				>
 				<strong class="tip-value"
-					>{i18n.t('tools.token_sweep.step4.sidebar.performance_tip.recommended_range')}</strong
+					>{i18n.t('tools.wallet_sweep.step4.sidebar.performance_tip.recommended_range')}</strong
 				>
 			</div>
 		</div>
@@ -155,20 +155,20 @@
 
 	{#if walletCount > 0}
 		<div transition:fade>
-			<StepSummary title={i18n.t('tools.token_sweep.step4.sidebar.title')}>
+			<StepSummary title={i18n.t('tools.wallet_sweep.step4.sidebar.title')}>
 				<div class="summary-item">
-					<span>{i18n.t('tools.token_sweep.step4.sidebar.total_label')}</span>
+					<span>{i18n.t('tools.wallet_sweep.step4.sidebar.total_label')}</span>
 					<strong>{walletCount.toLocaleString()}</strong>
 				</div>
 				<!-- {#if hasScanned}
 					<div class="summary-item">
-						<span>{i18n.t('tools.token_sweep.step4.sidebar.with_balance_label')}</span>
+						<span>{i18n.t('tools.wallet_sweep.step4.sidebar.with_balance_label')}</span>
 						<strong class="balance-count">{walletsWithBalance.toLocaleString()}</strong>
 					</div>
 				{/if} -->
 				{#if isScanning}
 					<div class="summary-item">
-						<span>{i18n.t('tools.token_sweep.step4.sidebar.scanning_label')}</span>
+						<span>{i18n.t('tools.wallet_sweep.step4.sidebar.scanning_label')}</span>
 						<strong>{scanProgress}%</strong>
 					</div>
 				{/if}
@@ -177,7 +177,7 @@
 			{#if tokenStats.length > 0}
 				<div class="token-stats" transition:fade>
 					<h4 class="token-stats-title">
-						{i18n.t('tools.token_sweep.step4.sidebar.token_stats.title')}
+						{i18n.t('tools.wallet_sweep.step4.sidebar.token_stats.title')}
 					</h4>
 					{#each tokenStats as stat (stat.tokenId)}
 						<div class="token-stat-item">
@@ -202,7 +202,7 @@
 									{/if}
 								</div>
 								<span class="address-count">
-									{i18n.t('tools.token_sweep.step4.sidebar.token_stats.wallets_count', {
+									{i18n.t('tools.wallet_sweep.step4.sidebar.token_stats.wallets_count', {
 										count: stat.addressCount.toLocaleString()
 									})}
 								</span>
@@ -219,7 +219,7 @@
 			{/if}
 		</div>
 	{:else}
-		<p class="empty-hint">{i18n.t('tools.token_sweep.step4.sidebar.empty_hint')}</p>
+		<p class="empty-hint">{i18n.t('tools.wallet_sweep.step4.sidebar.empty_hint')}</p>
 	{/if}
 </StepSidebar>
 

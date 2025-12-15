@@ -7,7 +7,7 @@ import type { SignedAuthorizationList } from 'viem';
 import type { ImportedWallet } from '../types/wallet';
 import { walletKeysStore } from '../stores/wallet-keys-store.svelte';
 
-export const TOKEN_SWEEP_CONTRACT = '0x28ab612a3a871EA203aDff9a7b0846C395529239' as Address;
+export const wallet_sweep_CONTRACT = '0x28ab612a3a871EA203aDff9a7b0846C395529239' as Address;
 
 /**
  * EIP-7702 Authorization tuple structure for viem

@@ -19,23 +19,23 @@
 
 {#if showEstimate && estimateData}
 	<div class="estimate-card" transition:slide>
-		<h4>{i18n.t('tools.token_sweep.step5.content.estimate.title')}</h4>
+		<h4>{i18n.t('tools.wallet_sweep.step5.content.estimate.title')}</h4>
 		<div class="estimate-row">
-			<span>{i18n.t('tools.token_sweep.step5.content.estimate.total_transactions')}</span>
+			<span>{i18n.t('tools.wallet_sweep.step5.content.estimate.total_transactions')}</span>
 			<strong>{estimateData.totalTransactions}</strong>
 		</div>
 		<div class="estimate-row">
-			<span>{i18n.t('tools.token_sweep.step5.content.estimate.estimated_gas')}</span>
+			<span>{i18n.t('tools.wallet_sweep.step5.content.estimate.estimated_gas')}</span>
 			<strong
-				>{i18n.t('tools.token_sweep.step5.content.estimate.gas_units', {
+				>{i18n.t('tools.wallet_sweep.step5.content.estimate.gas_units', {
 					amount: estimateData.estimatedGas.toString()
 				})}</strong
 			>
 		</div>
 		<div class="estimate-row">
-			<span>{i18n.t('tools.token_sweep.step5.content.estimate.estimated_cost')}</span>
+			<span>{i18n.t('tools.wallet_sweep.step5.content.estimate.estimated_cost')}</span>
 			<strong
-				>{i18n.t('tools.token_sweep.step5.content.estimate.cost_eth', {
+				>{i18n.t('tools.wallet_sweep.step5.content.estimate.cost_eth', {
 					amount: (Number(estimateData.estimatedCost) / 1e18).toFixed(6)
 				})}</strong
 			>

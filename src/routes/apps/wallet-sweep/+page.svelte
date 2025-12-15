@@ -11,56 +11,56 @@
 
 	const faqs = $derived([
 		{
-			question: i18n.t('tools.token_sweep.faqs.what_is_network'),
-			answer: i18n.t('tools.token_sweep.faqs.network_explanation')
+			question: i18n.t('tools.wallet_sweep.faqs.what_is_network'),
+			answer: i18n.t('tools.wallet_sweep.faqs.network_explanation')
 		},
 		{
-			question: i18n.t('tools.token_sweep.faqs.what_is_wallet'),
-			answer: i18n.t('tools.token_sweep.faqs.wallet_explanation')
+			question: i18n.t('tools.wallet_sweep.faqs.what_is_wallet'),
+			answer: i18n.t('tools.wallet_sweep.faqs.wallet_explanation')
 		},
 		{
-			question: i18n.t('tools.token_sweep.faqs.what_is_native_token'),
-			answer: i18n.t('tools.token_sweep.faqs.native_token_explanation')
+			question: i18n.t('tools.wallet_sweep.faqs.what_is_native_token'),
+			answer: i18n.t('tools.wallet_sweep.faqs.native_token_explanation')
 		},
 		{
-			question: i18n.t('tools.token_sweep.faqs.can_select_multiple_tokens'),
-			answer: i18n.t('tools.token_sweep.faqs.can_select_multiple_tokens_explanation')
+			question: i18n.t('tools.wallet_sweep.faqs.can_select_multiple_tokens'),
+			answer: i18n.t('tools.wallet_sweep.faqs.can_select_multiple_tokens_explanation')
 		},
 		{
-			question: i18n.t('tools.token_sweep.faqs.what_happens_zero_balance'),
-			answer: i18n.t('tools.token_sweep.faqs.what_happens_zero_balance_explanation')
+			question: i18n.t('tools.wallet_sweep.faqs.what_happens_zero_balance'),
+			answer: i18n.t('tools.wallet_sweep.faqs.what_happens_zero_balance_explanation')
 		},
 		{
-			question: i18n.t('tools.token_sweep.faqs.what_tokens_supported'),
-			answer: i18n.t('tools.token_sweep.faqs.what_tokens_supported_explanation')
+			question: i18n.t('tools.wallet_sweep.faqs.what_tokens_supported'),
+			answer: i18n.t('tools.wallet_sweep.faqs.what_tokens_supported_explanation')
 		},
 		{
-			question: i18n.t('tools.token_sweep.faqs.how_add_custom_token'),
-			answer: i18n.t('tools.token_sweep.faqs.how_add_custom_token_explanation')
+			question: i18n.t('tools.wallet_sweep.faqs.how_add_custom_token'),
+			answer: i18n.t('tools.wallet_sweep.faqs.how_add_custom_token_explanation')
 		},
 		{
-			question: i18n.t('tools.token_sweep.faqs.what_is_eip7702'),
-			answer: i18n.t('tools.token_sweep.faqs.eip7702_explanation')
+			question: i18n.t('tools.wallet_sweep.faqs.what_is_eip7702'),
+			answer: i18n.t('tools.wallet_sweep.faqs.eip7702_explanation')
 		},
 		{
-			question: i18n.t('tools.token_sweep.faqs.why_need_eip7702'),
-			answer: i18n.t('tools.token_sweep.faqs.why_need_eip7702_explanation')
+			question: i18n.t('tools.wallet_sweep.faqs.why_need_eip7702'),
+			answer: i18n.t('tools.wallet_sweep.faqs.why_need_eip7702_explanation')
 		},
 		{
-			question: i18n.t('tools.token_sweep.faqs.what_is_create2_proxy'),
-			answer: i18n.t('tools.token_sweep.faqs.create2_proxy_explanation')
+			question: i18n.t('tools.wallet_sweep.faqs.what_is_create2_proxy'),
+			answer: i18n.t('tools.wallet_sweep.faqs.create2_proxy_explanation')
 		},
 		{
-			question: i18n.t('tools.token_sweep.faqs.what_is_multicall3'),
-			answer: i18n.t('tools.token_sweep.faqs.multicall3_explanation')
+			question: i18n.t('tools.wallet_sweep.faqs.what_is_multicall3'),
+			answer: i18n.t('tools.wallet_sweep.faqs.multicall3_explanation')
 		},
 		{
-			question: i18n.t('tools.token_sweep.faqs.what_is_biubiu_premium'),
-			answer: i18n.t('tools.token_sweep.faqs.biubiu_premium_explanation')
+			question: i18n.t('tools.wallet_sweep.faqs.what_is_biubiu_premium'),
+			answer: i18n.t('tools.wallet_sweep.faqs.biubiu_premium_explanation')
 		},
 		{
-			question: i18n.t('tools.token_sweep.faqs.what_is_token_sweep'),
-			answer: i18n.t('tools.token_sweep.faqs.token_sweep_explanation')
+			question: i18n.t('tools.wallet_sweep.faqs.what_is_wallet_sweep'),
+			answer: i18n.t('tools.wallet_sweep.faqs.wallet_sweep_explanation')
 		}
 	]);
 </script>
@@ -71,34 +71,34 @@
 		structuredData: data.structuredData,
 		steps: [
 			{
-				label: 'tools.token_sweep.seo.step_1_name',
-				description: 'tools.token_sweep.seo.step_1_description'
+				label: 'tools.wallet_sweep.seo.step_1_name',
+				description: 'tools.wallet_sweep.seo.step_1_description'
 			},
 			{
-				label: 'tools.token_sweep.seo.step_2_name',
-				description: 'tools.token_sweep.seo.step_2_description'
+				label: 'tools.wallet_sweep.seo.step_2_name',
+				description: 'tools.wallet_sweep.seo.step_2_description'
 			},
 			{
-				label: 'tools.token_sweep.seo.step_3_name',
-				description: 'tools.token_sweep.seo.step_3_description'
+				label: 'tools.wallet_sweep.seo.step_3_name',
+				description: 'tools.wallet_sweep.seo.step_3_description'
 			},
 			{
-				label: 'tools.token_sweep.seo.step_4_name',
-				description: 'tools.token_sweep.seo.step_4_description'
+				label: 'tools.wallet_sweep.seo.step_4_name',
+				description: 'tools.wallet_sweep.seo.step_4_description'
 			},
 			{
-				label: 'tools.token_sweep.seo.step_5_name',
-				description: 'tools.token_sweep.seo.step_5_description'
+				label: 'tools.wallet_sweep.seo.step_5_name',
+				description: 'tools.wallet_sweep.seo.step_5_description'
 			}
 		],
 		useI18nKeys: true,
-		appTitle: i18n.t('tools.token_sweep.title'),
-		appDescription: i18n.t('tools.token_sweep.description'),
+		appTitle: i18n.t('tools.wallet_sweep.title'),
+		appDescription: i18n.t('tools.wallet_sweep.description'),
 		appFeatures: [
-			i18n.t('tools.token_sweep.feature_1'),
-			i18n.t('tools.token_sweep.feature_2'),
-			i18n.t('tools.token_sweep.feature_3'),
-			i18n.t('tools.token_sweep.feature_4')
+			i18n.t('tools.wallet_sweep.feature_1'),
+			i18n.t('tools.wallet_sweep.feature_2'),
+			i18n.t('tools.wallet_sweep.feature_3'),
+			i18n.t('tools.wallet_sweep.feature_4')
 		],
 		faqs: {
 			title: i18n.t('common.faqs'),

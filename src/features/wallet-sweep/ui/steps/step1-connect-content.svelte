@@ -24,15 +24,15 @@
 
 <StepContent>
 	<StepContentHeader
-		title={i18n.t('tools.token_sweep.step1.content.title')}
-		description={i18n.t('tools.token_sweep.step1.content.description')}
+		title={i18n.t('tools.wallet_sweep.step1.content.title')}
+		description={i18n.t('tools.wallet_sweep.step1.content.description')}
 	/>
 
 	{#if isLoading}
 		<!-- Loading State -->
 		<div class="loading-container">
 			<div class="loading-spinner"></div>
-			<p class="loading-text">{i18n.t('tools.token_sweep.step1.content.loading')}</p>
+			<p class="loading-text">{i18n.t('tools.wallet_sweep.step1.content.loading')}</p>
 		</div>
 	{:else}
 		<NetworkSelector {connectStore} {isLoading} bind:selectedChainId bind:selectedNetwork />

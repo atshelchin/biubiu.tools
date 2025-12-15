@@ -26,9 +26,9 @@
 		<div class="method-icon">🔐</div>
 		<div class="method-content">
 			<div class="method-label">
-				{i18n.t('tools.token_sweep.step4.import_method.mnemonic.label')}
+				{i18n.t('tools.wallet_sweep.step4.import_method.mnemonic.label')}
 			</div>
-			<div class="method-desc">{i18n.t('tools.token_sweep.step4.import_method.mnemonic.desc')}</div>
+			<div class="method-desc">{i18n.t('tools.wallet_sweep.step4.import_method.mnemonic.desc')}</div>
 		</div>
 	</button>
 
@@ -40,10 +40,10 @@
 		<div class="method-icon">🔑</div>
 		<div class="method-content">
 			<div class="method-label">
-				{i18n.t('tools.token_sweep.step4.import_method.private_key.label')}
+				{i18n.t('tools.wallet_sweep.step4.import_method.private_key.label')}
 			</div>
 			<div class="method-desc">
-				{i18n.t('tools.token_sweep.step4.import_method.private_key.desc')}
+				{i18n.t('tools.wallet_sweep.step4.import_method.private_key.desc')}
 			</div>
 		</div>
 	</button>

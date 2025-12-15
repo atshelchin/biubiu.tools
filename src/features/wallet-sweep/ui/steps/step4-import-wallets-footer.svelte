@@ -27,7 +27,7 @@
 	showBack={true}
 	onBack={goBack}
 	{canContinue}
-	continueText={i18n.t('tools.token_sweep.step4.footer.continue_text')}
+	continueText={i18n.t('tools.wallet_sweep.step4.footer.continue_text')}
 	onContinue={handleContinue}
-	hint={i18n.t('tools.token_sweep.step4.footer.hint')}
+	hint={i18n.t('tools.wallet_sweep.step4.footer.hint')}
 />

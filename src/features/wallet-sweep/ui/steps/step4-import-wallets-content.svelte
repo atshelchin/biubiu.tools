@@ -105,12 +105,12 @@
 
 	async function handleGenerateAddresses() {
 		if (!mnemonicText.trim()) {
-			errorMessage = i18n.t('tools.token_sweep.step4.content.mnemonic.error_empty');
+			errorMessage = i18n.t('tools.wallet_sweep.step4.content.mnemonic.error_empty');
 			return;
 		}
 
 		if (!validateMnemonicPhrase(mnemonicText.trim())) {
-			errorMessage = i18n.t('tools.token_sweep.step4.content.mnemonic.error_invalid');
+			errorMessage = i18n.t('tools.wallet_sweep.step4.content.mnemonic.error_invalid');
 			return;
 		}
 
@@ -129,7 +129,7 @@
 			if (pathType === 'sequential') {
 				// Sequential mode validation
 				if (startIndex < 0 || endIndex < startIndex) {
-					errorMessage = i18n.t('tools.token_sweep.step4.content.mnemonic.error_range');
+					errorMessage = i18n.t('tools.wallet_sweep.step4.content.mnemonic.error_range');
 					isGenerating = false;
 					return;
 				}
@@ -137,7 +137,7 @@
 				totalAddresses = endIndex - startIndex + 1;
 
 				// if (totalAddresses > 10000) {
-				// 	errorMessage = i18n.t('tools.token_sweep.step4.content.mnemonic.error_max');
+				// 	errorMessage = i18n.t('tools.wallet_sweep.step4.content.mnemonic.error_max');
 				// 	isGenerating = false;
 				// 	return;
 				// }
@@ -199,7 +199,7 @@
 			errorMessage =
 				error instanceof Error
 					? error.message
-					: i18n.t('tools.token_sweep.step4.content.errors.generate_failed');
+					: i18n.t('tools.wallet_sweep.step4.content.errors.generate_failed');
 		} finally {
 			isGenerating = false;
 			generationProgress = 0;
@@ -208,7 +208,7 @@
 
 	async function handleImportPrivateKeys() {
 		if (!privateKeysText.trim()) {
-			errorMessage = i18n.t('tools.token_sweep.step4.content.private_key.error_empty');
+			errorMessage = i18n.t('tools.wallet_sweep.step4.content.private_key.error_empty');
 			return;
 		}
 
@@ -218,7 +218,7 @@
 			.filter((line) => line.length > 0);
 
 		if (lines.length === 0) {
-			errorMessage = i18n.t('tools.token_sweep.step4.content.private_key.error_none');
+			errorMessage = i18n.t('tools.wallet_sweep.step4.content.private_key.error_none');
 			return;
 		}
 
@@ -246,7 +246,7 @@
 				if (result.invalidKeys.length > 0) {
 					invalidPrivateKeys = result.invalidKeys.map((key) => ({ key }));
 					errorMessage = i18n.t(
-						'tools.token_sweep.step4.content.private_key.success_with_invalid',
+						'tools.wallet_sweep.step4.content.private_key.success_with_invalid',
 						{
 							valid: result.wallets.length,
 							invalid: result.invalidKeys.length
@@ -259,7 +259,7 @@
 			errorMessage =
 				error instanceof Error
 					? error.message
-					: i18n.t('tools.token_sweep.step4.content.errors.import_failed');
+					: i18n.t('tools.wallet_sweep.step4.content.errors.import_failed');
 		} finally {
 			isGenerating = false;
 			generationProgress = 0;
@@ -291,13 +291,13 @@
 		// Validate prerequisites
 		if (!connectStore.currentChainId) {
 			console.log('❌ No network connected');
-			errorMessage = i18n.t('tools.token_sweep.step4.content.errors.no_network');
+			errorMessage = i18n.t('tools.wallet_sweep.step4.content.errors.no_network');
 			return;
 		}
 
 		if (importedWallets.length === 0) {
 			console.log('❌ No wallets imported');
-			errorMessage = i18n.t('tools.token_sweep.step4.content.errors.no_wallets');
+			errorMessage = i18n.t('tools.wallet_sweep.step4.content.errors.no_wallets');
 			return;
 		}
 
@@ -305,7 +305,7 @@
 		const selectedTokenIds = Array.from(step3State.selectedTokenIds);
 		if (selectedTokenIds.length === 0) {
 			console.log('❌ No tokens selected');
-			errorMessage = i18n.t('tools.token_sweep.step4.content.errors.no_tokens');
+			errorMessage = i18n.t('tools.wallet_sweep.step4.content.errors.no_tokens');
 			return;
 		}
 
@@ -322,7 +322,7 @@
 
 		if (!currentNetwork || currentNetwork.rpcEndpoints.length === 0) {
 			console.log('❌ No RPC endpoint');
-			errorMessage = i18n.t('tools.token_sweep.step4.content.errors.no_rpc');
+			errorMessage = i18n.t('tools.wallet_sweep.step4.content.errors.no_rpc');
 			return;
 		}
 
@@ -337,7 +337,7 @@
 
 		if (selectedTokens.length === 0) {
 			console.log('❌ No valid tokens');
-			errorMessage = i18n.t('tools.token_sweep.step4.content.errors.no_valid_tokens');
+			errorMessage = i18n.t('tools.wallet_sweep.step4.content.errors.no_valid_tokens');
 			return;
 		}
 
@@ -401,11 +401,11 @@
 					// Format error message with i18n (only called when all RPCs exhausted)
 					const errorMessage =
 						error.scanType === 'native'
-							? i18n.t('tools.token_sweep.step4.content.rate_limit.error_native', {
+							? i18n.t('tools.wallet_sweep.step4.content.rate_limit.error_native', {
 									batch: error.currentBatch,
 									total: error.totalBatches
 								})
-							: i18n.t('tools.token_sweep.step4.content.rate_limit.error_erc20', {
+							: i18n.t('tools.wallet_sweep.step4.content.rate_limit.error_erc20', {
 									batch: error.currentBatch,
 									total: error.totalBatches,
 									token: error.tokenId || ''
@@ -443,7 +443,7 @@
 			// Show summary
 			const walletsWithBalance = step4State.getWalletsWithBalance().length;
 			if (walletsWithBalance === 0 && !state.isPaused) {
-				errorMessage = i18n.t('tools.token_sweep.step4.content.errors.no_balance');
+				errorMessage = i18n.t('tools.wallet_sweep.step4.content.errors.no_balance');
 			}
 		} catch (error) {
 			console.error('Balance scanning error:', error);
@@ -454,7 +454,7 @@
 			errorMessage =
 				error instanceof Error
 					? error.message
-					: i18n.t('tools.token_sweep.step4.content.errors.scan_failed');
+					: i18n.t('tools.wallet_sweep.step4.content.errors.scan_failed');
 		} finally {
 			step4State.isScanning = false;
 		}
@@ -463,13 +463,13 @@
 
 <StepContent>
 	<StepContentHeader
-		title={i18n.t('tools.token_sweep.step4.content.title')}
-		description={i18n.t('tools.token_sweep.step4.content.description')}
+		title={i18n.t('tools.wallet_sweep.step4.content.title')}
+		description={i18n.t('tools.wallet_sweep.step4.content.description')}
 	/>
 
 	<!-- Import Method Selector -->
 	<div class="form-section">
-		<div class="form-label">{i18n.t('tools.token_sweep.step4.content.choose_method')}</div>
+		<div class="form-label">{i18n.t('tools.wallet_sweep.step4.content.choose_method')}</div>
 		<ImportMethodSelector selected={importMethod} onSelect={handleMethodSelect} />
 	</div>
 
@@ -516,16 +516,16 @@
 			<div class="banner-icon">⚠️</div>
 			<div class="banner-content">
 				<div class="banner-title">
-					{i18n.t('tools.token_sweep.step4.content.rate_limit.title')}
+					{i18n.t('tools.wallet_sweep.step4.content.rate_limit.title')}
 				</div>
 				<div class="banner-message">
 					{step4State.rateLimitMessage}
 				</div>
 				<div class="banner-hint">
-					{i18n.t('tools.token_sweep.step4.content.rate_limit.hint')}
+					{i18n.t('tools.wallet_sweep.step4.content.rate_limit.hint')}
 				</div>
 				<div class="banner-recommend">
-					💡 {i18n.t('tools.token_sweep.step4.content.rate_limit.recommend_prefix')}
+					💡 {i18n.t('tools.wallet_sweep.step4.content.rate_limit.recommend_prefix')}
 					<a
 						href="https://chainlist.org"
 						target="_blank"
@@ -534,15 +534,15 @@
 					>
 						chainlist.org
 					</a>
-					{i18n.t('tools.token_sweep.step4.content.rate_limit.recommend_suffix')}
+					{i18n.t('tools.wallet_sweep.step4.content.rate_limit.recommend_suffix')}
 				</div>
 			</div>
 			<div class="banner-actions">
 				<button class="btn-manage-rpc" onclick={handleOpenRpcManager}>
-					{i18n.t('tools.token_sweep.step4.content.rate_limit.manage_rpc_button')}
+					{i18n.t('tools.wallet_sweep.step4.content.rate_limit.manage_rpc_button')}
 				</button>
 				<button class="btn-resume" onclick={handleScanBalances}>
-					{i18n.t('tools.token_sweep.step4.content.rate_limit.resume_button')}
+					{i18n.t('tools.wallet_sweep.step4.content.rate_limit.resume_button')}
 				</button>
 			</div>
 		</div>
