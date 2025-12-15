@@ -319,7 +319,6 @@
 			contractAddress={config.contractAddress}
 			{blockExplorer}
 			title={i18n.t('tools.wallet_sweep.step2.content.deployment.success_title')}
-			description={i18n.t('tools.wallet_sweep.step2.content.deployment.success_description')}
 			viewOnExplorerText={i18n.t('tools.wallet_sweep.step2.content.deployment.view_on_explorer')}
 		/>
 		<div class="success-actions">

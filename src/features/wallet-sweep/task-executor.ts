@@ -142,7 +142,8 @@ export async function executeSweepSubTask(ctx: TaskExecutionContext) {
  * 模拟转账（临时实现）
  * TODO: 替换为实际的转账逻辑
  */
-async function simulateTransfer(params: {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+async function simulateTransfer(_params: {
 	from: Address;
 	to: Address;
 	tokenAddress?: Address;

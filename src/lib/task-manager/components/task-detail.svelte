@@ -115,8 +115,16 @@
 </script>
 
 {#if isOpen && task}
+	<!-- svelte-ignore a11y_no_static_element_interactions a11y_click_events_have_key_events -->
 	<div class="modal-overlay" onclick={onClose}>
-		<div class="modal-content" onclick={(e) => e.stopPropagation()}>
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
+		<div
+			class="modal-content"
+			onclick={(e) => e.stopPropagation()}
+			role="dialog"
+			aria-modal="true"
+			tabindex="-1"
+		>
 			<div class="modal-header">
 				<h2>{task.name}</h2>
 				<button class="btn-close" onclick={onClose} aria-label="关闭">
@@ -226,6 +234,7 @@
 							{@const SubTaskIcon = getSubTaskIcon(subTask)}
 							{@const isExpanded = expandedSubTasks.has(subTask.id)}
 							<div class="subtask-item {getStatusColor(subTask.status)}">
+								<!-- svelte-ignore a11y_no_static_element_interactions a11y_click_events_have_key_events -->
 								<div class="subtask-header" onclick={() => toggleSubTask(subTask.id)}>
 									<div class="subtask-title">
 										<SubTaskIcon size={16} class={subTask.status === 'running' ? 'spinning' : ''} />

@@ -1,4 +1,5 @@
 <script lang="ts">
+	/* eslint-disable svelte/no-unused-props -- Props reserved for future use */
 	import { CheckCircle2, XCircle, AlertCircle, RefreshCw, ExternalLink } from '@lucide/svelte';
 	import { slide } from 'svelte/transition';
 
@@ -38,19 +39,14 @@
 		};
 	}
 
-	// eslint-disable-next-line svelte/no-unused-props
 	let {
 		check,
-		// eslint-disable-next-line @typescript-eslint/no-unused-vars
-		index: _index,
 		canFix,
 		blockExplorer,
 		onDeploy,
 		deployButtonText = 'Deploy',
-		blockedHintText = 'Please resolve the previous issue first',
 		addressLabel = 'Address:',
 		endpointLabel = 'Endpoint:',
-		viewGuideText = 'View Deployment Guide',
 		deployComingSoonText = 'Deploy Contract (Coming Soon)',
 		categoryLabels = {
 			network: 'Network',

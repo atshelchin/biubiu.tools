@@ -321,18 +321,6 @@
 		color: var(--gray-600);
 	}
 
-	.step-description {
-		font-size: var(--text-xs);
-		color: var(--gray-400);
-		margin-top: var(--space-1);
-		line-height: 1.4;
-		transition: all 0.3s ease;
-	}
-
-	.step-item.active .step-description {
-		color: #60a5fa;
-	}
-
 	/* 连接线 */
 	.step-connector {
 		position: absolute;

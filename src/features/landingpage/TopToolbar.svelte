@@ -95,10 +95,6 @@
 			gap: var(--space-2);
 		}
 
-		.site-title {
-			/* display: none; */
-		}
-
 		.logo {
 			width: 1.75rem;
 			height: 1.75rem;

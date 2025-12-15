@@ -47,7 +47,10 @@
 
 	const account = $derived(store.address ? { address: store.address } : null);
 	const publicClient = $derived(store.publicClient);
-	const blockExplorer = $derived(publicClient?.chain?.blockExplorers?.default?.url);
+	const blockExplorer = $derived(
+		(publicClient?.chain as { blockExplorers?: { default?: { url?: string } } } | undefined)
+			?.blockExplorers?.default?.url
+	);
 
 	async function loadNFTs() {
 		if (!publicClient) return;
@@ -127,7 +130,7 @@
 	});
 </script>
 
-<SeoHead meta={data.meta} structuredData={[]} />
+<SeoHead {...data.meta} structuredData={[]} />
 
 <PageLayout>
 	<div class="nft-manager-page">

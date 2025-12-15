@@ -1,6 +1,7 @@
 /**
  * Balance scanning utilities for checking wallet balances
  */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { PublicClient } from 'viem';
 import type { Address } from 'viem';
 import { encodeFunctionData, decodeFunctionResult } from 'viem';
@@ -33,7 +34,6 @@ export function getBatchSize(): number {
 }
 
 // Batch size for multicall queries (1000 addresses per batch, or 1 in debug mode)
-const getBatchSizeDynamic = () => debugConfig.batchSize;
 const BATCH_SIZE = 1000; // Keep for backward compatibility
 
 // ERC20 balanceOf ABI
@@ -260,7 +260,6 @@ export async function batchScanNativeBalances(
 
 		try {
 			// Execute multicall
-			// @ts-ignore - Multicall3 aggregate3 not in default viem types
 			const response = (await (client as any).readContract({
 				address: MULTICALL3_ADDRESS,
 				abi: MULTICALL3_ABI,
@@ -345,7 +344,6 @@ export async function batchScanERC20Balances(
 
 		try {
 			// Execute multicall
-			// @ts-ignore - Multicall3 aggregate3 not in default viem types
 			const response = (await (client as any).readContract({
 				address: MULTICALL3_ADDRESS,
 				abi: MULTICALL3_ABI,
@@ -468,15 +466,10 @@ export async function scanMultipleWallets(
 	};
 
 	// Step 1: Batch scan native balances for all addresses
-	const nativeBalances = await batchScanNativeBalances(
-		client,
-		addresses,
-		chainId,
-		(current, total) => {
-			completedBatches = current;
-			updateProgress();
-		}
-	);
+	const nativeBalances = await batchScanNativeBalances(client, addresses, chainId, (current) => {
+		completedBatches = current;
+		updateProgress();
+	});
 
 	// Step 2: Batch scan each ERC20 token for all addresses
 	const tokenBalancesMaps = new Map<string, Map<Address, TokenBalance>>();
@@ -491,7 +484,7 @@ export async function scanMultipleWallets(
 				token.address,
 				token.decimals,
 				chainId,
-				(current, total) => {
+				(current) => {
 					// Calculate cumulative progress: native batches + previous tokens + current token
 					completedBatches = batchCount + (tokenIndex - 1) * batchCount + current;
 					updateProgress();
@@ -512,7 +505,7 @@ export async function scanMultipleWallets(
 		}
 
 		// Add ERC20 balances
-		for (const [tokenId, tokenBalances] of tokenBalancesMaps.entries()) {
+		for (const [, tokenBalances] of tokenBalancesMaps.entries()) {
 			const balance = tokenBalances.get(wallet.address);
 			if (balance) {
 				balances.push(balance);
@@ -638,7 +631,8 @@ export async function scanMultipleWalletsResumable(
 
 	// Pause control
 	let shouldPause = false;
-	const control: ScanControl = {
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	const _control: ScanControl = {
 		pause: () => {
 			shouldPause = true;
 			state.isPaused = true;
@@ -651,8 +645,6 @@ export async function scanMultipleWalletsResumable(
 		},
 		isPaused: () => shouldPause
 	};
-
-	console.log(123, state);
 	try {
 		// Step 1: Scan native balances (if not already done)
 		if (state.currentTokenIndex === -1) {
@@ -682,7 +674,6 @@ export async function scanMultipleWalletsResumable(
 					console.log(
 						`📡 [Native] Batch ${i + 1}/${batchCount} - querying ${batch.length} addresses via Multicall3 using RPC: ${rpcUrl}`
 					);
-					// @ts-ignore
 					const response = (await (client as any).readContract({
 						address: MULTICALL3_ADDRESS,
 						abi: MULTICALL3_ABI,
@@ -807,7 +798,6 @@ export async function scanMultipleWalletsResumable(
 					console.log(
 						`📡 [ERC20 ${tokenIdx + 1}/${erc20Tokens.length}] Batch ${i + 1}/${batchCount} - querying ${batch.length} addresses for token ${token.tokenId} using RPC: ${rpcUrl}`
 					);
-					// @ts-ignore
 					const response = (await (client as any).readContract({
 						address: MULTICALL3_ADDRESS,
 						abi: MULTICALL3_ABI,
@@ -907,7 +897,7 @@ export async function scanMultipleWalletsResumable(
 			}
 
 			// Add ERC20 balances
-			for (const [tokenId, tokenBalances] of state.tokenBalances.entries()) {
+			for (const [, tokenBalances] of state.tokenBalances.entries()) {
 				const balance = tokenBalances.get(wallet.address);
 				if (balance) {
 					balances.push(balance);

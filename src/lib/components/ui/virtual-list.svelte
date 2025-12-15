@@ -1,9 +1,11 @@
 <script lang="ts" generics="T">
+	import type { Snippet } from 'svelte';
+
 	interface Props<T> {
 		items: T[];
 		itemHeight: number;
 		maxHeight?: number;
-		children: (item: T, index: number) => any;
+		children: Snippet<[T, number]>;
 	}
 
 	let { items, itemHeight, maxHeight = 400, children }: Props<T> = $props();

@@ -1,7 +1,11 @@
 <script module lang="ts">
-	import type { DependencyCheck, DependencyCheckSummary } from '$lib/utils/blockchain-checker';
+	import type {
+		DependencyCheck as ImportedDependencyCheck,
+		DependencyCheckSummary as ImportedDependencyCheckSummary
+	} from '$lib/utils/blockchain-checker';
 
-	export { type DependencyCheck, type DependencyCheckSummary };
+	export type DependencyCheck = ImportedDependencyCheck;
+	export type DependencyCheckSummary = ImportedDependencyCheckSummary;
 
 	/**
 	 * Checker factory type - returns a function that performs all dependency checks
@@ -204,6 +208,10 @@
 		// i18n texts
 		loadingMessage?: string;
 		retryText?: string;
+		allPassedTitle?: string;
+		allPassedMessage?: string;
+		issuesFoundTitle?: string;
+		issuesFoundMessage?: string;
 		resolveHintText?: string;
 		addressLabel?: string;
 		endpointLabel?: string;
@@ -225,11 +233,18 @@
 		empty?: Snippet;
 	}
 
+	/* eslint-disable svelte/no-unused-props, @typescript-eslint/no-unused-vars */
+	// checker props are used by parent via the exported object, some props reserved for future use
 	let {
 		checker,
 		network,
 		loadingMessage = 'Checking dependencies...',
 		retryText = 'Recheck',
+		// Reserved for future use by SummaryBanner
+		allPassedTitle = 'All checks passed',
+		allPassedMessage = 'All dependencies are satisfied',
+		issuesFoundTitle = 'Issues found',
+		issuesFoundMessage = 'Please resolve the issues below',
 		resolveHintText = 'Please resolve the previous issue first',
 		addressLabel = 'Address',
 		endpointLabel = 'Endpoint',
@@ -244,6 +259,7 @@
 		onDeploySuccess,
 		empty
 	}: Props = $props();
+	/* eslint-enable svelte/no-unused-props, @typescript-eslint/no-unused-vars */
 
 	// ============================================================================
 	// STATE

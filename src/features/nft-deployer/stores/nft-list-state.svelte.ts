@@ -25,7 +25,7 @@ interface NFTListState {
 }
 
 const createNFTListState = () => {
-	let state = $state<NFTListState>({
+	const state = $state<NFTListState>({
 		nfts: [],
 		total: 0,
 		currentPage: 1,

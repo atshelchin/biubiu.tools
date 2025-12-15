@@ -31,13 +31,15 @@
 	const connectStore = useConnectStore();
 
 	// Initialize composables
+	/* eslint-disable @typescript-eslint/no-explicit-any -- Work around viem type version conflicts */
 	const feeCalculator = useFeeCalculator({
-		getPublicClient: () => connectStore.publicClient
+		getPublicClient: () => connectStore.publicClient as any
 	});
 
 	const gasMonitor = useGasMonitor({
-		getPublicClient: () => connectStore.publicClient
+		getPublicClient: () => connectStore.publicClient as any
 	});
+	/* eslint-enable @typescript-eslint/no-explicit-any */
 
 	const sweepExecutor = useSweepExecutor({
 		getConnectedAddress: () => connectStore.address,
@@ -116,10 +118,6 @@
 	function handleWalletCreated(wallet: TemporaryWallet) {
 		temporaryWallet = wallet;
 		checkMembershipStatus();
-	}
-
-	function handleWalletCleared() {
-		temporaryWallet = null;
 	}
 
 	async function handleResumeAfterGasRefill() {
@@ -260,7 +258,6 @@
 			estimatedGasCost={feeCalculator.feeBreakdown.estimatedGasFee}
 			networkSymbol={currentNetwork.symbol}
 			onWalletCreated={handleWalletCreated}
-			onWalletCleared={handleWalletCleared}
 		/>
 	{/if}
 

@@ -54,11 +54,6 @@
 		useI18nKeys: true,
 		appTitle: i18n.t('tools.contract_deployer.title'),
 		appDescription: i18n.t('tools.contract_deployer.description'),
-		appFeatures: [
-			i18n.t('tools.contract_deployer.feature_1'),
-			i18n.t('tools.contract_deployer.feature_2'),
-			i18n.t('tools.contract_deployer.feature_3')
-		],
 		faqs: {
 			title: i18n.t('common.faqs'),
 			items: faqs

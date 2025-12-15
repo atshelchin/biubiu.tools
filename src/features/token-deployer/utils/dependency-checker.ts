@@ -3,7 +3,6 @@
  * Orchestrates the dependency checks for token-deployer tool
  */
 
-import type { Address } from 'viem';
 import type { DependencyCheck } from '../types/dependencies';
 import {
 	checkRPCEndpoint,

@@ -160,7 +160,7 @@ export function useBalanceScanner() {
 							chainId: currentChainId,
 							currentTokenIndex,
 							currentBatchIndex,
-							tokenBalances: new Map(),
+							tokenBalances: new SvelteMap(),
 							isPaused: true,
 							pauseReason: 'rate_limit'
 						};

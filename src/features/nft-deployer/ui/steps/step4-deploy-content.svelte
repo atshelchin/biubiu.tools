@@ -443,18 +443,6 @@
 		border: 2px solid rgb(239, 68, 68);
 	}
 
-	.result-icon {
-		color: inherit;
-	}
-
-	.result-container.success .result-icon {
-		color: rgb(34, 197, 94);
-	}
-
-	.result-container.error .result-icon {
-		color: rgb(239, 68, 68);
-	}
-
 	.result-title {
 		font-size: var(--text-2xl);
 		font-weight: var(--font-bold);

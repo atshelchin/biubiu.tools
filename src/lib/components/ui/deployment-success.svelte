@@ -9,8 +9,6 @@
 		blockExplorer?: string;
 		/** Success message title */
 		title?: string;
-		/** Success message description */
-		description?: string;
 		/** View on explorer link text */
 		viewOnExplorerText?: string;
 	}
@@ -19,7 +17,6 @@
 		contractAddress,
 		blockExplorer,
 		title = 'Deployment Successful!',
-		description = 'The contract has been successfully deployed.',
 		viewOnExplorerText = 'View on Explorer'
 	}: Props = $props();
 </script>
@@ -95,16 +92,6 @@
 		margin: 0;
 	}
 
-	p {
-		margin: 0;
-		color: var(--gray-600);
-		line-height: 1.6;
-	}
-
-	:global([data-theme='dark']) p {
-		color: var(--gray-400);
-	}
-
 	.deployed-address {
 		display: flex;
 		flex-direction: column;
@@ -165,10 +152,6 @@
 
 		h3 {
 			font-size: var(--text-xl);
-		}
-
-		p {
-			font-size: var(--text-sm);
 		}
 
 		code {

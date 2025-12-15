@@ -129,14 +129,14 @@
 
 <script lang="ts">
 	import { useTheme } from '$lib/stores/theme.svelte';
-	import type { EditorView } from 'codemirror';
+	import type { EditorView as EditorViewType } from 'codemirror';
 
 	interface Props {
 		value?: string;
 		placeholder?: string;
 		rows?: number;
 		class?: string;
-		onViewReady?: (view: EditorView) => void;
+		onViewReady?: (view: EditorViewType) => void;
 	}
 
 	let {

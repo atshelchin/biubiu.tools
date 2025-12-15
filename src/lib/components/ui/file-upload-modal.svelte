@@ -185,9 +185,9 @@
 			}
 
 			tableHeaders = result.meta.fields || [];
-			tableRows = result.data
+			tableRows = (result.data as Record<string, string>[])
 				.slice(0, PREVIEW_ROWS)
-				.map((row: Record<string, string>) => tableHeaders.map((header) => row[header] || ''));
+				.map((row) => tableHeaders.map((header) => row[header] || ''));
 
 			// Full data for export
 			fileContent = Papa.unparse(result.data);
@@ -406,6 +406,8 @@
 				ondragover={handleDragOver}
 				ondragleave={handleDragLeave}
 				ondrop={handleDrop}
+				role="region"
+				aria-label="File upload area"
 			>
 				<Upload size={48} />
 				<p class="upload-text">{i18n.t('components.file_upload.drop_file')}</p>

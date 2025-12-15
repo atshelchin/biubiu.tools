@@ -10,12 +10,9 @@
 		Trash2,
 		RefreshCw,
 		Eye,
-		Edit2,
 		Download,
 		Upload,
 		X,
-		ChevronDown,
-		ChevronRight,
 		Search,
 		Filter
 	} from '@lucide/svelte';
@@ -165,15 +162,6 @@
 			}
 		};
 		input.click();
-	}
-
-	// 切换任务树展开状态
-	function toggleExpand(taskId: string) {
-		if (expandedTasks.has(taskId)) {
-			expandedTasks.delete(taskId);
-		} else {
-			expandedTasks.add(taskId);
-		}
 	}
 
 	// 格式化时间

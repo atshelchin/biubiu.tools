@@ -16,10 +16,9 @@ export function usePrivateKeyValidator() {
 
 		if (!worker) {
 			try {
-				worker = new Worker(
-					new URL('$lib/workers/private-key-validator.worker.ts', import.meta.url),
-					{ type: 'module' }
-				);
+				// eslint-disable-next-line svelte/prefer-svelte-reactivity -- URL used for Worker initialization, not reactive state
+				const workerUrl = new URL('$lib/workers/private-key-validator.worker.ts', import.meta.url);
+				worker = new Worker(workerUrl, { type: 'module' });
 
 				worker.onerror = (error) => {
 					console.error('❌ Worker error:', error);

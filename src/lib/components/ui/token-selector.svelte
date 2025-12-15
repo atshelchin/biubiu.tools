@@ -23,7 +23,6 @@
 		onTokenAdded?: (tokenId: string) => void; // Callback when token is added
 		onRemoveCustomToken?: (tokenId: string, chainId: number) => void;
 		emptyMessage?: string;
-		showBulkActions?: boolean;
 		showAddButton?: boolean; // Show dashed "Add Token" card
 		multiSelect?: boolean; // Allow multiple selection
 	}
@@ -35,7 +34,6 @@
 		onTokenAdded,
 		onRemoveCustomToken,
 		emptyMessage,
-		showBulkActions = true,
 		showAddButton = true,
 		multiSelect = true
 	}: Props = $props();
@@ -110,24 +108,6 @@
 		onSelectionChange(newSelection);
 	}
 
-	function handleSelectAll() {
-		const tokens = displayTokens();
-		const newSelection = new SvelteSet<string>();
-
-		// Add all tokens
-		tokens.forEach((token) => {
-			newSelection.add(token.id);
-		});
-
-		onSelectionChange(newSelection);
-	}
-
-	function handleDeselectAll() {
-		// Clear all selections
-		const newSelection = new SvelteSet<string>();
-		onSelectionChange(newSelection);
-	}
-
 	function handleRemove(tokenId: string, chainId: number) {
 		onRemoveCustomToken?.(tokenId, chainId);
 
@@ -174,29 +154,6 @@
 {/if}
 
 <style>
-	.bulk-actions {
-		display: flex;
-		gap: var(--space-2);
-		margin-bottom: var(--space-4);
-	}
-
-	.btn-secondary {
-		padding: var(--space-2) var(--space-4);
-		background: var(--color-panel-2);
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-md);
-		font-size: var(--text-sm);
-		font-weight: var(--font-medium);
-		color: var(--color-heading-2);
-		cursor: pointer;
-		transition: all 0.2s ease;
-	}
-
-	.btn-secondary:hover {
-		background: var(--color-panel-3);
-		border-color: var(--color-primary);
-	}
-
 	.empty-state {
 		display: flex;
 		flex-direction: column;

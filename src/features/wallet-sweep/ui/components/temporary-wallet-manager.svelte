@@ -4,8 +4,7 @@
 		generateTemporaryWallet,
 		downloadTemporaryWallet,
 		storeTemporaryWallet,
-		retrieveTemporaryWallet,
-		clearTemporaryWallet
+		retrieveTemporaryWallet
 	} from '@/features/wallet-sweep/utils/temporary-wallet';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import {
@@ -31,11 +30,9 @@
 		estimatedGasCost: bigint; // Estimated gas cost in wei
 		networkSymbol: string;
 		onWalletCreated?: (wallet: TemporaryWallet) => void;
-		onWalletCleared?: () => void;
 	}
 
-	let { taskId, estimatedGasCost, networkSymbol, onWalletCreated, onWalletCleared }: Props =
-		$props();
+	let { taskId, estimatedGasCost, networkSymbol, onWalletCreated }: Props = $props();
 
 	const connectStore = useConnectStore();
 	const i18n = useI18n();
@@ -45,7 +42,6 @@
 	let errorMessage = $state('');
 	let successMessage = $state('');
 	let copiedField = $state<string | null>(null);
-	let showPrivateKey = $state(false);
 	let showQR = $state(false);
 	let showGasFundingModal = $state(false);
 	let isSendingGas = $state(false);
@@ -151,24 +147,6 @@
 		setTimeout(() => {
 			copiedField = null;
 		}, 2000);
-	}
-
-	function handleClearWallet() {
-		if (confirm(i18n.t('tools.wallet_sweep.temporary_wallet.confirm_clear'))) {
-			clearTemporaryWallet(taskId);
-			temporaryWallet = null;
-			showPrivateKey = false;
-			showQR = false;
-			gasSendAmount = '';
-
-			if (onWalletCleared) {
-				onWalletCleared();
-			}
-		}
-	}
-
-	function togglePrivateKeyVisibility() {
-		showPrivateKey = !showPrivateKey;
 	}
 
 	function toggleQR() {

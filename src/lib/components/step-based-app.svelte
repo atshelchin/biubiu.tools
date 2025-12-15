@@ -29,7 +29,6 @@
 		// App-specific configuration
 		appTitle: string;
 		appDescription: string;
-		appFeatures?: string[];
 
 		// FAQs configuration (optional)
 		faqs?: {
@@ -112,11 +111,7 @@
 <PageLayout>
 	{#snippet toolbar()}
 		<div class="toolbar-content">
-			<AppTitle
-				title={config.appTitle}
-				description={config.appDescription}
-				features={config.appFeatures}
-			/>
+			<AppTitle title={config.appTitle} description={config.appDescription} />
 			<div class="toolbar-actions">
 				{#if toolbarActions}
 					{@render toolbarActions()}

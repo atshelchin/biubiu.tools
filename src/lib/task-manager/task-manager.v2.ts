@@ -6,13 +6,11 @@
 
 import type {
 	Task,
-	TaskType,
 	TaskStatus,
 	PauseReason,
 	CreateTaskOptions,
 	TaskUpdate,
 	TaskExecutionContext,
-	TaskExecutor,
 	TaskExecutorRegistry
 } from './types.v2';
 import * as db from './db.v2';

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { X, Loader2 } from '@lucide/svelte';
-	import type { Address, PublicClient, WalletClient } from 'viem';
+	import type { Address } from 'viem';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import type { NFTInfo, MintStatus } from '../../types/nft';
 	import { formatAddress } from '$lib/utils/wallet-utils';
@@ -15,7 +15,6 @@
 
 	const store = useConnectStore();
 
-	const walletClient = $derived(store.getWalletClient ? store.getWalletClient() : null);
 	const publicClient = $derived(store.publicClient);
 
 	let mintStatus = $state<MintStatus>('idle');
@@ -83,12 +82,17 @@
 	] as const;
 
 	async function handleMint() {
-		if (!nft || !walletClient || !publicClient) return;
+		if (!nft || !publicClient) return;
 
 		try {
 			mintStatus = 'minting';
 			error = null;
 			txHash = null;
+
+			const walletClient = await store.getWalletClient();
+			if (!walletClient) {
+				throw new Error('Wallet not connected');
+			}
 
 			const account = walletClient.account?.address;
 			if (!account) {
@@ -202,8 +206,16 @@
 	}
 </script>
 
+<!-- svelte-ignore a11y_no_static_element_interactions a11y_click_events_have_key_events -->
 <div class="modal-overlay" onclick={handleClose}>
-	<div class="modal-content" onclick={(e) => e.stopPropagation()}>
+	<!-- svelte-ignore a11y_click_events_have_key_events -->
+	<div
+		class="modal-content"
+		onclick={(e) => e.stopPropagation()}
+		role="dialog"
+		aria-modal="true"
+		tabindex="-1"
+	>
 		<div class="modal-header">
 			<h2>Mint NFT</h2>
 			<button

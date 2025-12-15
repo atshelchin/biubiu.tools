@@ -69,16 +69,6 @@
 		overflow: hidden;
 	}
 
-	.btn-progress-bar {
-		position: absolute;
-		left: 0;
-		top: 0;
-		height: 100%;
-		background: rgba(255, 255, 255, 0.2);
-		transition: width 0.3s ease;
-		z-index: 0;
-	}
-
 	.btn-with-progress > :global(*) {
 		position: relative;
 		z-index: 1;

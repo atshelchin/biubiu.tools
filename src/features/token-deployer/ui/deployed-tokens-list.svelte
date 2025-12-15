@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ExternalLink, Loader2, Search, Filter } from '@lucide/svelte';
+	import { ExternalLink, Loader2, Search } from '@lucide/svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { getUserDeployedTokens, getAllDeployedTokens } from '../utils/token-query';
 	import type { DeployedTokenInfo } from '../types/token';
@@ -234,7 +234,7 @@
 				</button>
 
 				<div class="page-numbers">
-					{#each Array(totalPages) as _, i}
+					{#each Array.from({ length: totalPages }, (_, index) => index) as i (i)}
 						{@const page = i + 1}
 						{#if page === 1 || page === totalPages || (page >= currentPage - 1 && page <= currentPage + 1)}
 							<button

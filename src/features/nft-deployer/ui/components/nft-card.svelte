@@ -47,8 +47,9 @@
 				<span class="address" title={nft.nftAddress}>
 					{formatAddress(nft.nftAddress)}
 				</span>
+				<!-- svelte-ignore a11y_no_static_element_interactions a11y_click_events_have_key_events -->
 				<span onclick={(e) => e.stopPropagation()}>
-					<CopyButton text={nft.nftAddress} size="sm" />
+					<CopyButton value={nft.nftAddress} size={14} />
 				</span>
 				{#if explorerUrl}
 					<a href={explorerUrl} target="_blank" rel="noopener noreferrer" class="explorer-link">
@@ -64,8 +65,9 @@
 				<span class="address" title={nft.creator}>
 					{formatAddress(nft.creator)}
 				</span>
+				<!-- svelte-ignore a11y_no_static_element_interactions a11y_click_events_have_key_events -->
 				<span onclick={(e) => e.stopPropagation()}>
-					<CopyButton text={nft.creator} size="sm" />
+					<CopyButton value={nft.creator} size={14} />
 				</span>
 			</div>
 		</div>
@@ -77,8 +79,9 @@
 					<span class="address" title={nft.stakeToken}>
 						{formatAddress(nft.stakeToken)}
 					</span>
+					<!-- svelte-ignore a11y_no_static_element_interactions a11y_click_events_have_key_events -->
 					<span onclick={(e) => e.stopPropagation()}>
-						<CopyButton text={nft.stakeToken} size="sm" />
+						<CopyButton value={nft.stakeToken} size={14} />
 					</span>
 				</div>
 			</div>

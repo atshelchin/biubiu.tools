@@ -39,8 +39,6 @@
 	let importedWallets = $derived(step4State.importedWallets);
 	let isScanning = $derived(step4State.isScanning);
 	let scanProgress = $derived(step4State.scanProgress);
-	let hasScanned = $derived(step4State.hasScanned);
-	let walletsWithBalance = $derived(step4State.getWalletsWithBalance().length);
 
 	// Combined error message from import methods and scan errors
 	let errorMessage = $derived(
@@ -191,7 +189,7 @@
 
 <StepContent>
 	<!-- i18n.t('tools.wallet_sweep.step4.content.description') -->
-	<StepContentHeader title={i18n.t('tools.wallet_sweep.step4.content.title')} description={''} />
+	<StepContentHeader title={i18n.t('tools.wallet_sweep.step4.content.title')} description="" />
 
 	<!-- Import Method Selector -->
 	<div>
@@ -261,8 +259,6 @@
 			wallets={importedWallets}
 			{isScanning}
 			{scanProgress}
-			{hasScanned}
-			{walletsWithBalance}
 			onScanBalances={handleScanBalances}
 			onRemoveWallet={(address) => step4State.removeWallet(address)}
 			onClearAll={() => step4State.clearWallets()}

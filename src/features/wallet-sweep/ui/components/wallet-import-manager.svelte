@@ -11,23 +11,13 @@
 		wallets: ImportedWallet[];
 		isScanning: boolean;
 		scanProgress: number;
-		hasScanned: boolean;
-		walletsWithBalance: number;
 		onScanBalances: () => void;
 		onRemoveWallet: (address: string) => void;
 		onClearAll: () => void;
 	}
 
-	let {
-		wallets,
-		isScanning,
-		scanProgress,
-		hasScanned,
-		walletsWithBalance,
-		onScanBalances,
-		onRemoveWallet,
-		onClearAll
-	}: Props = $props();
+	let { wallets, isScanning, scanProgress, onScanBalances, onRemoveWallet, onClearAll }: Props =
+		$props();
 
 	let walletCount = $derived(wallets.length);
 
@@ -178,16 +168,6 @@
 
 	.wallet-count {
 		color: var(--color-primary);
-	}
-
-	.balance-badge {
-		margin-left: var(--space-2);
-		padding: 2px 8px;
-		background: #10b981;
-		color: white;
-		font-size: var(--text-xs);
-		border-radius: var(--radius-sm);
-		font-weight: var(--font-medium);
 	}
 
 	.wallet-actions {

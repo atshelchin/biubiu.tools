@@ -128,7 +128,8 @@
 			await resumeTask(task, task.id);
 
 			// Resume task execution
-			executeTask(task.id, tokenSweepExecutors, async (root, current) => {
+			// eslint-disable-next-line @typescript-eslint/no-unused-vars
+			executeTask(task.id, tokenSweepExecutors, async (root, _current) => {
 				taskStore.setTask(root);
 				console.log(`Task resumed: ${root.progress}%`);
 			}).catch((error) => {

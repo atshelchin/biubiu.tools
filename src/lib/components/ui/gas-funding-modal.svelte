@@ -35,49 +35,47 @@
 </script>
 
 <Modal {open} {onClose} title={i18n.t('components.gas_funding.title')} maxWidth="500px">
-	{#snippet children()}
-		<div class="modal-body">
-			<div class="wallet-info">
-				<span class="label">{i18n.t('components.gas_funding.target_wallet')}</span>
-				<code class="wallet-address">{walletAddress}</code>
-			</div>
+	<div class="modal-body">
+		<div class="wallet-info">
+			<span class="label">{i18n.t('components.gas_funding.target_wallet')}</span>
+			<code class="wallet-address">{walletAddress}</code>
+		</div>
 
-			<div class="gas-info">
-				<p class="info-item">
-					<span class="info-label">{i18n.t('components.gas_funding.estimated_gas')}:</span>
-					<strong>{estimatedGasCost} {networkSymbol}</strong>
-				</p>
-				<p class="info-item suggested">
-					<span class="info-label">{i18n.t('components.gas_funding.suggested_amount')}:</span>
-					<strong>{suggestedAmount} {networkSymbol}</strong>
-				</p>
-			</div>
-
-			<div class="input-group">
-				<label for="gas-amount">{i18n.t('components.gas_funding.send_amount')}</label>
-				<div class="input-wrapper">
-					<input
-						id="gas-amount"
-						type="number"
-						value={gasSendAmount}
-						oninput={(e) => onAmountChange(e.currentTarget.value)}
-						placeholder={i18n.t('components.gas_funding.amount_placeholder')}
-						step="0.001"
-						min="0"
-					/>
-					<span class="unit">{networkSymbol}</span>
-				</div>
-			</div>
-
-			<p class="hint">
-				💡 {i18n.t('components.gas_funding.tip')}
+		<div class="gas-info">
+			<p class="info-item">
+				<span class="info-label">{i18n.t('components.gas_funding.estimated_gas')}:</span>
+				<strong>{estimatedGasCost} {networkSymbol}</strong>
 			</p>
-
-			<p class="security-notice">
-				{i18n.t('components.gas_funding.security_notice')}
+			<p class="info-item suggested">
+				<span class="info-label">{i18n.t('components.gas_funding.suggested_amount')}:</span>
+				<strong>{suggestedAmount} {networkSymbol}</strong>
 			</p>
 		</div>
-	{/snippet}
+
+		<div class="input-group">
+			<label for="gas-amount">{i18n.t('components.gas_funding.send_amount')}</label>
+			<div class="input-wrapper">
+				<input
+					id="gas-amount"
+					type="number"
+					value={gasSendAmount}
+					oninput={(e) => onAmountChange(e.currentTarget.value)}
+					placeholder={i18n.t('components.gas_funding.amount_placeholder')}
+					step="0.001"
+					min="0"
+				/>
+				<span class="unit">{networkSymbol}</span>
+			</div>
+		</div>
+
+		<p class="hint">
+			💡 {i18n.t('components.gas_funding.tip')}
+		</p>
+
+		<p class="security-notice">
+			{i18n.t('components.gas_funding.security_notice')}
+		</p>
+	</div>
 
 	{#snippet footer()}
 		<div class="modal-footer">

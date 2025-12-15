@@ -1,4 +1,5 @@
 <script lang="ts">
+	/* eslint-disable svelte/no-useless-mustaches -- Template literal needed for JSON placeholder */
 	import { useConnectStore } from '$lib/stores/connect.svelte.js';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
@@ -178,7 +179,7 @@
 			<textarea
 				id="constructor-args"
 				bind:value={constructorArgsInput}
-				placeholder={'["MyToken", "MTK", 18]'}
+				placeholder={`["MyToken", "MTK", 18]`}
 				rows={3}
 			></textarea>
 			<p class="help-text">

@@ -94,12 +94,6 @@
 		useI18nKeys: true,
 		appTitle: i18n.t('tools.wallet_sweep.title'),
 		appDescription: i18n.t('tools.wallet_sweep.description'),
-		appFeatures: [
-			i18n.t('tools.wallet_sweep.feature_1'),
-			i18n.t('tools.wallet_sweep.feature_2'),
-			i18n.t('tools.wallet_sweep.feature_3'),
-			i18n.t('tools.wallet_sweep.feature_4')
-		],
 		faqs: {
 			title: i18n.t('common.faqs'),
 			items: faqs

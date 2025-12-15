@@ -49,11 +49,11 @@
 		</div>
 
 		<!-- Mint Type Selection (Radio buttons - must choose one) -->
-		<div class="form-group">
-			<label class="form-label">
+		<fieldset class="form-group">
+			<legend class="form-label">
 				{i18n.t('tools.nft_deployer.step3.content.mint_type_label')}
 				<span class="required">*</span>
-			</label>
+			</legend>
 			<div class="radio-group">
 				<label class="radio-label">
 					<input
@@ -93,7 +93,7 @@
 					</span>
 				</label>
 			</div>
-		</div>
+		</fieldset>
 
 		<!-- Stake Token Address (conditional) -->
 		{#if step3NFTConfigState.stakeToMintEnabled}
@@ -167,6 +167,17 @@
 		gap: var(--space-2);
 	}
 
+	fieldset.form-group {
+		border: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	fieldset.form-group legend.form-label {
+		padding: 0;
+		margin-bottom: var(--space-2);
+	}
+
 	.form-group.conditional {
 		padding-left: var(--space-6);
 		border-left: 3px solid var(--color-primary);
@@ -216,58 +227,6 @@
 	}
 
 	:global([data-theme='dark']) .form-hint {
-		color: var(--gray-400);
-	}
-
-	.checkbox-label {
-		display: flex;
-		align-items: flex-start;
-		gap: var(--space-3);
-		cursor: pointer;
-		padding: var(--space-3);
-		border: 2px solid var(--color-border);
-		border-radius: var(--radius-md);
-		transition: all 0.2s;
-	}
-
-	.checkbox-label:hover {
-		border-color: var(--color-primary);
-		background: var(--gray-50);
-	}
-
-	:global([data-theme='dark']) .checkbox-label:hover {
-		background: var(--gray-800);
-	}
-
-	.checkbox-label input[type='checkbox'] {
-		width: 18px;
-		height: 18px;
-		margin-top: 2px;
-		cursor: pointer;
-	}
-
-	.checkbox-text {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-1);
-	}
-
-	.checkbox-text strong {
-		font-size: var(--text-base);
-		color: var(--gray-900);
-	}
-
-	:global([data-theme='dark']) .checkbox-text strong {
-		color: var(--gray-100);
-	}
-
-	.checkbox-description {
-		font-size: var(--text-sm);
-		color: var(--gray-600);
-		font-weight: normal;
-	}
-
-	:global([data-theme='dark']) .checkbox-description {
 		color: var(--gray-400);
 	}
 

@@ -4,7 +4,7 @@
 	import { step4State } from '@/features/token-deployer/stores/step4-state.svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { CheckCircle2, XCircle, Loader2 } from '@lucide/svelte';
-	import { encodeFunctionData, parseEther, type Address } from 'viem';
+	import { encodeFunctionData, type Address } from 'viem';
 	import { KNOWN_CONTRACTS } from '$lib/utils/blockchain-checker';
 
 	const connectStore = useConnectStore();

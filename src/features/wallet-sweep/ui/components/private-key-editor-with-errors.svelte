@@ -56,6 +56,7 @@
 		}
 
 		// Build a map of trimmed line text to line positions for efficient lookup
+		// eslint-disable-next-line svelte/prefer-svelte-reactivity -- Not reactive state, just local computation
 		const lineMap = new Map<string, number>();
 		for (let i = 1; i <= doc.lines; i++) {
 			const line = doc.line(i);
