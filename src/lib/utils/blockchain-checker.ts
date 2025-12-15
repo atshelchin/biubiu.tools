@@ -168,7 +168,7 @@ export async function checkEIP7702Support(
 			description: t('tools.wallet_sweep.step2.content.checks.eip7702.description'),
 			status: 'success',
 			message: t('tools.wallet_sweep.step2.content.checks.eip7702.supported'),
-			endpoint: rpcUrl,
+			// endpoint: rpcUrl,
 			responseTime,
 			docUrl: 'https://eips.ethereum.org/EIPS/eip-7702'
 		};
