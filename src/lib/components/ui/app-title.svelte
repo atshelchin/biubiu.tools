@@ -13,7 +13,7 @@
 	{#if description}
 		<p class="description">{description}</p>
 	{/if}
-	{#if features && features.length > 0}
+	<!-- {#if features && features.length > 0}
 		<ul class="features">
 			{#each features as feature (feature)}
 				<li class="feature-item">
@@ -30,7 +30,7 @@
 				</li>
 			{/each}
 		</ul>
-	{/if}
+	{/if} -->
 </div>
 
 <style>
