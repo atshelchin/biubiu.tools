@@ -22,16 +22,10 @@
 	{/if}
 
 	<div class="layout-grid" class:full-width={!sidebar}>
-		<main class="main-container">
+		<main class="content-section">
 			<div class="main-content">
 				{@render children()}
 			</div>
-
-			{#if footer}
-				<footer class="footer-section">
-					{@render footer()}
-				</footer>
-			{/if}
 		</main>
 
 		{#if sidebar}
@@ -39,6 +33,14 @@
 				{@render sidebar()}
 			</aside>
 		{/if}
+
+		<div class="content-section">
+			{#if footer}
+				<footer class="footer-section">
+					{@render footer()}
+				</footer>
+			{/if}
+		</div>
 	</div>
 </div>
 
@@ -47,7 +49,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-4);
-		/* padding: var(--space-4); */
 		min-height: 100vh;
 	}
 
@@ -63,10 +64,6 @@
 	}
 
 	.sidebar-section {
-		/* background: var(--color-card); */
-		/* padding: var(--space-4); */
-		/* border-radius: var(--radius-lg); */
-		/* border: 1px solid var(--color-border); */
 		height: fit-content;
 		position: sticky;
 		top: var(--space-4);
@@ -74,7 +71,7 @@
 		overflow-y: auto;
 		z-index: 2;
 	}
-	.main-container {
+	.content-section {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -82,7 +79,6 @@
 
 	.main-content {
 		background: var(--color-card);
-
 		padding: var(--space-4);
 		padding-top: var(--space-6);
 		border-radius: var(--radius-lg);
@@ -90,14 +86,11 @@
 	}
 
 	.footer-section {
-		/* footer-section 作为容器不添加背景，保持透明 */
-		/* 让内部内容（如 FAQs）自己控制宽度和样式 */
 		background: transparent;
 		display: flex;
 		justify-content: center;
 		align-items: flex-start;
 		margin-top: var(--space-8);
-		/* padding: var(--space-6) 0; */
 		width: 100%;
 	}
 
@@ -109,7 +102,6 @@
 		.footer-section {
 			flex-direction: column;
 			gap: var(--space-3);
-			/* padding: var(--space-4) var(--space-3); */
 			margin-top: var(--space-6);
 		}
 	}
