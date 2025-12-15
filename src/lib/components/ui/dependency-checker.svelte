@@ -22,18 +22,7 @@
 				checks = [...results];
 
 				// Calculate summary
-				const total = results.length;
-				const passed = results.filter((c) => c.status === 'success').length;
-				const warnings = results.filter((c) => c.status === 'warning').length;
-				const failed = results.filter((c) => c.status === 'error').length;
-
-				summary = {
-					total,
-					passed,
-					warnings,
-					failed,
-					allPassed: failed === 0
-				};
+				updateSummary();
 
 				hasChecked = true;
 			} catch {
@@ -41,6 +30,54 @@
 			} finally {
 				isChecking = false;
 			}
+		}
+
+		/**
+		 * Recheck a single dependency by its ID
+		 * Only updates that specific check, keeping others intact
+		 * This provides better UX after deploying a contract
+		 */
+		async function recheckSingle(checkId: string, checker: () => Promise<DependencyCheck>) {
+			const checkIndex = checks.findIndex((c) => c.id === checkId);
+			if (checkIndex === -1) return;
+
+			// Set the specific check to 'checking' status
+			const currentCheck = checks[checkIndex];
+			checks[checkIndex] = { ...currentCheck, status: 'checking' };
+			// Force reactivity by creating new array reference
+			checks = [...checks];
+
+			try {
+				const result = await checker();
+				// Update only this check with the result
+				checks[checkIndex] = result;
+				checks = [...checks];
+
+				// Recalculate summary
+				updateSummary();
+			} catch {
+				// On error, restore the previous check state
+				checks[checkIndex] = currentCheck;
+				checks = [...checks];
+			}
+		}
+
+		/**
+		 * Update the summary based on current checks
+		 */
+		function updateSummary() {
+			const total = checks.length;
+			const passed = checks.filter((c) => c.status === 'success').length;
+			const warnings = checks.filter((c) => c.status === 'warning').length;
+			const failed = checks.filter((c) => c.status === 'error').length;
+
+			summary = {
+				total,
+				passed,
+				warnings,
+				failed,
+				allPassed: failed === 0
+			};
 		}
 
 		function reset() {
@@ -70,6 +107,7 @@
 
 			// API
 			runChecks,
+			recheckSingle,
 			reset
 		};
 	}

@@ -77,17 +77,6 @@
 	in:slide={{ duration: 200, delay: 50 }}
 >
 	<div class="check-header">
-		<div class="check-icon">
-			{#if check.status === 'checking'}
-				<RefreshCw size={24} class="spinning" />
-			{:else if check.status === 'success'}
-				<CheckCircle2 size={24} />
-			{:else if check.status === 'warning'}
-				<AlertCircle size={24} />
-			{:else}
-				<XCircle size={24} />
-			{/if}
-		</div>
 		<div class="check-info">
 			<div class="check-title">
 				<h4>{check.name}</h4>
@@ -150,9 +139,23 @@
 		{/if}
 
 		<!-- Only show error/warning messages at the bottom, not success messages -->
-		{#if check.message && (check.status === 'error' || check.status === 'warning')}
-			<p class="check-message">{check.message}</p>
-		{/if}
+		<!-- && (check.status === 'error' || check.status === 'warning') -->
+		<div style="display:flex;align-items: center;gap:8px">
+			<div class="check-icon">
+				{#if check.status === 'checking'}
+					<RefreshCw size={24} class="spinning" />
+				{:else if check.status === 'success'}
+					<CheckCircle2 size={24} />
+				{:else if check.status === 'warning'}
+					<AlertCircle size={24} />
+				{:else}
+					<XCircle size={24} />
+				{/if}
+			</div>
+			{#if check.message}
+				<p class="check-message">{check.message}</p>
+			{/if}
+		</div>
 	</div>
 
 	{#if check.status === 'error' && check.canDeploy}
@@ -232,8 +235,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 40px;
-		height: 40px;
+		/* width: 40px; */
+		/* height: 40px; */
+		font-weight: var(--font-medium);
 		border-radius: var(--radius-lg);
 		/* background: var(--gray-100); */
 	}
@@ -369,7 +373,7 @@
 	}
 
 	.check-details {
-		padding-left: calc(40px + var(--space-3));
+		/* padding-left: calc(40px + var(--space-3)); */
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-3);
@@ -377,17 +381,36 @@
 
 	.check-message {
 		font-size: var(--text-sm);
-		color: hsl(0, 70%, 45%);
+		color: var(--gray-600);
 		margin: 0;
-		padding: var(--space-3) 0 0 0;
+		/* padding: var(--space-3) 0 0 0; */
 		line-height: 1.6;
 		font-weight: var(--font-medium);
 	}
 
 	:global([data-theme='dark']) .check-message {
+		color: var(--gray-400);
+	}
+
+	/* Success message: green */
+	.check-card.success .check-message {
+		color: hsl(150, 60%, 35%);
+	}
+
+	:global([data-theme='dark']) .check-card.success .check-message {
+		color: hsl(150, 60%, 55%);
+	}
+
+	/* Error message: red */
+	.check-card.error .check-message {
+		color: hsl(0, 70%, 45%);
+	}
+
+	:global([data-theme='dark']) .check-card.error .check-message {
 		color: hsl(0, 70%, 60%);
 	}
 
+	/* Warning message: orange */
 	.check-card.warning .check-message {
 		color: hsl(30, 80%, 45%);
 	}
@@ -479,7 +502,7 @@
 	.check-actions {
 		margin-top: var(--space-4);
 		padding-top: var(--space-4);
-		padding-left: calc(40px + var(--space-3));
+		/* padding-left: calc(40px + var(--space-3)); */
 		border-top: 1px solid var(--color-border);
 		display: flex;
 		gap: var(--space-2);
