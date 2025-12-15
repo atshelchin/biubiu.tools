@@ -16,7 +16,7 @@
 	<AppsHeader />
 
 	{#if toolbar}
-		<div style="margin-bottom:32px;">
+		<div style="margin-bottom:32px;z-index:3">
 			{@render toolbar()}
 		</div>
 	{/if}

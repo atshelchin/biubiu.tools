@@ -3,6 +3,7 @@
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import { CheckCircle2 } from '@lucide/svelte';
+	import BackButton from '$lib/components/ui/back-button.svelte';
 	import { fade } from 'svelte/transition';
 
 	const connectStore = useConnectStore();
@@ -49,7 +50,7 @@
 	{:else}
 		<div class="error-state">
 			<p>Wallet not connected. Please go back to Step 1.</p>
-			<button class="back-button" onclick={goBackToStep1}>Go Back to Step 1</button>
+			<BackButton onclick={goBackToStep1}>Go Back to Step 1</BackButton>
 		</div>
 	{/if}
 </div>
@@ -190,23 +191,6 @@
 
 	:global([data-theme='dark']) .error-state p {
 		color: var(--gray-300);
-	}
-
-	.back-button {
-		padding: var(--space-3) var(--space-6);
-		background: var(--color-primary);
-		color: white;
-		border: none;
-		border-radius: var(--radius-md);
-		font-size: var(--text-base);
-		font-weight: var(--font-medium);
-		cursor: pointer;
-		transition: all 0.2s ease;
-	}
-
-	.back-button:hover {
-		transform: translateY(-1px);
-		box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.15);
 	}
 
 	@media (max-width: 640px) {

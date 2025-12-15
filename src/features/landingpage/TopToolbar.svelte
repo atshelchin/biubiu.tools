@@ -24,8 +24,6 @@
 		right: 0;
 		z-index: 100;
 		background: var(--color-background);
-		backdrop-filter: blur(12px);
-		-webkit-backdrop-filter: blur(12px);
 		border-bottom: 1px solid hsla(var(--brand-hue), 10%, 50%, 0.1);
 		transition: all 0.3s ease;
 	}

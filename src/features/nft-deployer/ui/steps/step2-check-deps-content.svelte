@@ -12,6 +12,7 @@
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
 	import EmptyState from '@/features/wallet-sweep/ui/components/empty-state.svelte';
+	import BackButton from '$lib/components/ui/back-button.svelte';
 	import LoadingState from '$lib/components/ui/loading-state.svelte';
 	import SummaryBanner from '$lib/components/ui/summary-banner.svelte';
 	import DependencyCheckCard from '$lib/components/ui/dependency-check-card.svelte';
@@ -143,9 +144,9 @@
 			message={i18n.t('tools.nft_deployer.step2.content.wallet_not_connected_message')}
 		>
 			{#snippet action()}
-				<button class="back-button" onclick={goBackToStep1}>
+				<BackButton onclick={goBackToStep1}>
 					{i18n.t('tools.nft_deployer.step2.content.go_to_step1')}
-				</button>
+				</BackButton>
 			{/snippet}
 		</EmptyState>
 	{:else if hasChecked && checks.length > 0}
@@ -221,25 +222,6 @@
 {/if}
 
 <style>
-	/* Empty State */
-	.back-button {
-		margin-top: var(--space-4);
-		padding: var(--space-2) var(--space-4);
-		background: var(--color-primary);
-		color: white;
-		border: none;
-		border-radius: var(--radius-md);
-		font-size: var(--text-sm);
-		font-weight: var(--font-semibold);
-		cursor: pointer;
-		transition: all 0.2s;
-	}
-
-	.back-button:hover {
-		opacity: 0.9;
-		transform: translateY(-1px);
-	}
-
 	/* Check Cards */
 	.checks-container {
 		display: flex;
