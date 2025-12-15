@@ -88,6 +88,8 @@
 	// Auto-run checks when wallet is connected and network is selected
 	$effect(() => {
 		if (connectStore.isConnected && currentNetwork && !checker.hasChecked) {
+			// Store the checker factory for later recheck
+			checker.setCheckerFactory(createChecker);
 			checker.runChecks(createChecker());
 		}
 	});

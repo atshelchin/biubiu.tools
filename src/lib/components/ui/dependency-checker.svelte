@@ -4,6 +4,11 @@
 	export { type DependencyCheck, type DependencyCheckSummary };
 
 	/**
+	 * Checker factory type - returns a function that performs all dependency checks
+	 */
+	export type CheckerFactory = () => () => Promise<DependencyCheck[]>;
+
+	/**
 	 * Create a dependency checker instance
 	 * Manages state for dependency checking workflow
 	 */
@@ -12,6 +17,10 @@
 		let summary = $state<DependencyCheckSummary | null>(null);
 		let isChecking = $state(false);
 		let hasChecked = $state(false);
+		let isRechecking = $state(false);
+
+		// Store the checker factory for recheck
+		let storedCheckerFactory: CheckerFactory | null = null;
 
 		async function runChecks(checker: () => Promise<DependencyCheck[]>) {
 			isChecking = true;
@@ -29,6 +38,45 @@
 				// Silently handle errors - checks will show as incomplete
 			} finally {
 				isChecking = false;
+			}
+		}
+
+		/**
+		 * Set the checker factory for later use in recheckAll
+		 */
+		function setCheckerFactory(factory: CheckerFactory) {
+			storedCheckerFactory = factory;
+		}
+
+		/**
+		 * Recheck all dependencies
+		 * Sets all cards to 'checking' status first, then re-runs all checks
+		 * This provides a smooth visual experience with cards staying in place
+		 */
+		async function recheckAll() {
+			if (!storedCheckerFactory || checks.length === 0) return;
+
+			isRechecking = true;
+
+			// Set all checks to 'checking' status while preserving other data
+			checks = checks.map((check) => ({ ...check, status: 'checking' as const }));
+
+			try {
+				const checker = storedCheckerFactory();
+				const results = await checker();
+				checks = [...results];
+
+				// Recalculate summary
+				updateSummary();
+			} catch {
+				// On error, restore checks to error state
+				checks = checks.map((check) => ({
+					...check,
+					status: 'error' as const,
+					message: 'Recheck failed'
+				}));
+			} finally {
+				isRechecking = false;
 			}
 		}
 
@@ -85,6 +133,7 @@
 			summary = null;
 			hasChecked = false;
 			isChecking = false;
+			isRechecking = false;
 		}
 
 		return {
@@ -101,12 +150,17 @@
 			get hasChecked() {
 				return hasChecked;
 			},
+			get isRechecking() {
+				return isRechecking;
+			},
 			get allPassed() {
 				return summary?.allPassed ?? false;
 			},
 
 			// API
 			runChecks,
+			setCheckerFactory,
+			recheckAll,
 			recheckSingle,
 			reset
 		};
@@ -266,7 +320,8 @@
 	{#if checker.summary}
 		<SummaryBanner
 			{retryText}
-			onRetry={() => checker.runChecks(() => Promise.resolve(checker.checks))}
+			isLoading={checker.isRechecking}
+			onRetry={() => checker.recheckAll()}
 		/>
 	{/if}
 {/if}

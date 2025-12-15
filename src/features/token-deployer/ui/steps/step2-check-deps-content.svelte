@@ -40,16 +40,29 @@
 			: undefined
 	);
 
+	// Rechecking state for better UX
+	let isRechecking = $state(false);
+
 	// Run dependency checks
-	async function runDependencyChecks() {
+	async function runDependencyChecks(isRecheck = false) {
 		if (!currentNetwork || !connectStore.isConnected) {
 			console.log('[Step2] Cannot run checks - network or wallet not ready');
 			return;
 		}
 
 		console.log('[Step2] Starting dependency checks for', currentNetwork.name);
-		step2State.isChecking = true;
-		step2State.hasChecked = false;
+
+		if (isRecheck && step2State.checks.length > 0) {
+			// For recheck: keep cards in place, show loading state on each
+			isRechecking = true;
+			step2State.checks = step2State.checks.map((check) => ({
+				...check,
+				status: 'checking' as const
+			}));
+		} else {
+			step2State.isChecking = true;
+			step2State.hasChecked = false;
+		}
 
 		try {
 			const results = await checkAllDependencies(
@@ -74,6 +87,7 @@
 			console.error('[Step2] Failed to run dependency checks:', error);
 		} finally {
 			step2State.isChecking = false;
+			isRechecking = false;
 		}
 	}
 
@@ -179,7 +193,8 @@
 		{#if summary}
 			<SummaryBanner
 				retryText={i18n.t('tools.token_deployer.step2.content.recheck_dependencies')}
-				onRetry={runDependencyChecks}
+				isLoading={isRechecking}
+				onRetry={() => runDependencyChecks(true)}
 			/>
 		{/if}
 	{/if}

@@ -3,16 +3,17 @@
 
 	interface Props {
 		retryText?: string;
+		isLoading?: boolean;
 		onRetry?: () => void;
 	}
 
-	let { retryText, onRetry }: Props = $props();
+	let { retryText, isLoading = false, onRetry }: Props = $props();
 </script>
 
 <div class="summary-container">
 	{#if onRetry && retryText}
-		<button class="retry-button" onclick={onRetry}>
-			<RefreshCw size={18} />
+		<button class="retry-button" class:loading={isLoading} onclick={onRetry} disabled={isLoading}>
+			<RefreshCw size={18} class={isLoading ? 'spinning' : ''} />
 			{retryText}
 		</button>
 	{/if}
@@ -54,5 +55,24 @@
 
 	:global([data-theme='dark']) .retry-button:hover {
 		background: var(--gray-600);
+	}
+
+	.retry-button.loading {
+		opacity: 0.7;
+		cursor: not-allowed;
+	}
+
+	.retry-button.loading:hover {
+		transform: none;
+	}
+
+	:global(.spinning) {
+		animation: spin 1s linear infinite;
+	}
+
+	@keyframes spin {
+		to {
+			transform: rotate(360deg);
+		}
 	}
 </style>
