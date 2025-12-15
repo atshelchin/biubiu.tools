@@ -328,8 +328,8 @@
 			"step3": {
 				"content": {
 					"title": "选择代币",
-					"description": "选择要从 {network} 地址中归集的代币",
-					"description_fallback": "选择要从该网络地址中归集的代币",
+					"description": "选择在 {network} 网络上要归集的代币",
+					"description_fallback": "选择在该网络上要归集的代币",
 					"wallet_not_connected_title": "钱包未连接",
 					"wallet_not_connected_message": "请返回步骤 1 并连接您的钱包",
 					"empty_message": "暂无可用代币。请先添加自定义代币。"

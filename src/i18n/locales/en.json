@@ -328,8 +328,8 @@
 			"step3": {
 				"content": {
 					"title": "Select Tokens",
-					"description": "Choose which tokens you want to sweep from your addresses on {network}",
-					"description_fallback": "Choose which tokens you want to sweep from your addresses on this network",
+					"description": "Select tokens to sweep on the {network} network",
+					"description_fallback": "Select tokens to sweep on this network",
 					"wallet_not_connected_title": "Wallet Not Connected",
 					"wallet_not_connected_message": "Please go back to Step 1 and connect your wallet",
 					"empty_message": "No tokens available. Add a custom token to get started."
