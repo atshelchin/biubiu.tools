@@ -38,16 +38,18 @@
 		}
 	}
 
-	// Auto-select native token when network changes or on first load
+	// Track which chainId has been initialized to avoid re-selecting after user deselects
+	let initializedChainId = $state<number | null>(null);
+
+	// Auto-select native token only on first load or network change
 	$effect(() => {
 		if (currentNetwork && connectStore.currentChainId) {
-			const nativeTokenId = `${connectStore.currentChainId}:native`;
-
-			// Auto-select native token if not already selected
-			if (!step3State.selectedTokenIds.has(nativeTokenId)) {
+			// Only auto-select if this is a new network (not already initialized)
+			if (initializedChainId !== connectStore.currentChainId) {
+				const nativeTokenId = `${connectStore.currentChainId}:native`;
 				step3State.selectedTokenIds.add(nativeTokenId);
-				// Trigger reactivity
 				step3State.selectedTokenIds = new SvelteSet(step3State.selectedTokenIds);
+				initializedChainId = connectStore.currentChainId;
 			}
 		}
 	});
