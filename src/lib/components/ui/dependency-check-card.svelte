@@ -8,6 +8,7 @@
 		description: string;
 		status: 'checking' | 'success' | 'error' | 'warning';
 		message?: string;
+		docUrl?: string;
 		type?: 'contract' | 'network-service';
 		address?: string;
 		blockNumber?: number;
@@ -69,7 +70,20 @@
 			{/if}
 		</div>
 		<div class="check-info">
-			<h4>{check.name}</h4>
+			<div class="check-title">
+				<h4>{check.name}</h4>
+				{#if check.docUrl}
+					<a
+						href={check.docUrl}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="doc-link"
+						title="View documentation"
+					>
+						<ExternalLink size={14} />
+					</a>
+				{/if}
+			</div>
 			<p class="check-description">{check.description}</p>
 		</div>
 	</div>
@@ -236,6 +250,12 @@
 		min-width: 0;
 	}
 
+	.check-title {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+	}
+
 	.check-info h4 {
 		font-size: var(--text-lg);
 		font-weight: var(--font-semibold);
@@ -246,6 +266,26 @@
 
 	:global([data-theme='dark']) .check-info h4 {
 		color: var(--gray-100);
+	}
+
+	.doc-link {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--gray-400);
+		transition: color 0.2s ease;
+	}
+
+	.doc-link:hover {
+		color: var(--color-primary);
+	}
+
+	:global([data-theme='dark']) .doc-link {
+		color: var(--gray-500);
+	}
+
+	:global([data-theme='dark']) .doc-link:hover {
+		color: var(--color-primary);
 	}
 
 	.check-description {
