@@ -268,7 +268,7 @@
 	.wallet-item {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		/* align-items: center; */
 		padding: var(--space-3);
 		border-bottom: 1px solid var(--color-border);
 		transition: background 0.2s;
@@ -288,11 +288,12 @@
 
 	.wallet-number {
 		flex-shrink: 0;
-		width: 40px;
+		width: fit-content;
 		font-size: var(--text-sm);
 		font-weight: var(--font-semibold);
 		color: var(--gray-500);
 		text-align: center;
+		padding-right: var(--space-4);
 	}
 
 	:global([data-theme='dark']) .wallet-number {

@@ -31,7 +31,7 @@
 	{#if isLoading}
 		<Loader2 size={18} class="spinning" />
 		{loadingLabel}
-		<div class="btn-progress-bar" style="width: {progress}%"></div>
+		<!-- <div class="btn-progress-bar" style="width: {progress}%"></div> -->
 	{:else}
 		{label}
 	{/if}

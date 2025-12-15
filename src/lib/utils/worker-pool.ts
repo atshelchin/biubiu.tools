@@ -286,7 +286,7 @@ export function spawnPool<TRequest = unknown, TResult = unknown, TMerged = TResu
 
 			try {
 				// workerPath is already a URL string from ?worker&url import
-				console.log(`[spawnPool] Creating worker ${workerIndex}:`, workerPath);
+				// console.log(`[spawnPool] Creating worker ${workerIndex}:`, workerPath);
 
 				const worker = new Worker(workerPath, {
 					type: 'module'
@@ -294,11 +294,11 @@ export function spawnPool<TRequest = unknown, TResult = unknown, TMerged = TResu
 
 				worker.onmessage = (event) => {
 					const result = event.data;
-					console.log(`[spawnPool] Worker ${workerIndex} message:`, {
-						done: result.done,
-						progress: result.progress,
-						hasError: !!result.error
-					});
+					// console.log(`[spawnPool] Worker ${workerIndex} message:`, {
+					// 	done: result.done,
+					// 	progress: result.progress,
+					// 	hasError: !!result.error
+					// });
 
 					// Progress update
 					if (!result.done && result.progress !== undefined) {
@@ -314,7 +314,7 @@ export function spawnPool<TRequest = unknown, TResult = unknown, TMerged = TResu
 							cleanup();
 							reject(new Error(result.error));
 						} else {
-							console.log(`[spawnPool] Worker ${workerIndex} completed`);
+							// console.log(`[spawnPool] Worker ${workerIndex} completed`);
 							results[workerIndex] = result as TResult;
 							completedWorkers++;
 
@@ -345,7 +345,7 @@ export function spawnPool<TRequest = unknown, TResult = unknown, TMerged = TResu
 
 				// Split the task for this worker
 				const partialTask = splitTask(data, workerIndex, numWorkers);
-				console.log(`[spawnPool] Worker ${workerIndex} task:`, partialTask);
+				// console.log(`[spawnPool] Worker ${workerIndex} task:`, partialTask);
 				worker.postMessage(partialTask);
 
 				workers.push(worker);
