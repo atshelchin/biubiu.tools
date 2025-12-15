@@ -54,7 +54,7 @@
 
 <style>
 	button {
-		height: 64px;
+		height: 48px;
 		font-size: var(--text-lg) !important;
 		padding-left: var(--space-8) !important;
 		padding-right: var(--space-8) !important;
