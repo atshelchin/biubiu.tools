@@ -6,114 +6,40 @@
 	import StepSummary from '@/features/wallet-sweep/ui/components/step-summary.svelte';
 	import MembershipPromo from '@/features/wallet-sweep/ui/components/membership-promo.svelte';
 	import TokenBalanceDisplay from '$lib/components/ui/token-balance-display.svelte';
+	import { useTokenStats } from '@/features/wallet-sweep/composables/use-token-stats.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
-	import { SvelteMap } from 'svelte/reactivity';
-	import type { ERC20Token } from '$lib/types/token';
 	import { fade } from 'svelte/transition';
 
 	const i18n = useI18n();
 	const connectStore = useConnectStore();
 
-	// Derived from Step 3 (selected tokens)
-	let selectedTokenIds = $derived(step3State.getSelectedTokens());
+	// Token stats composable
+	const tokenStatsHelper = useTokenStats({
+		getCurrentChainId: () => connectStore.currentChainId,
+		getNetworkInfo: (chainId) => {
+			const network = connectStore.networks.find((n) => n.chainId === chainId);
+			return network ? { symbol: network.symbol, name: network.name } : undefined;
+		}
+	});
+
+	// Derived from stores
 	let selectedTokenCount = $derived(step3State.getSelectedCount());
-
-	// Derived from Step 4 (imported wallets)
 	let importedWallets = $derived(step4State.importedWallets);
-	let walletsWithBalance = $derived(step4State.getWalletsWithBalance());
-	let hasScanned = $derived(step4State.hasScanned);
 	let walletCount = $derived(importedWallets.length);
-	let walletWithBalanceCount = $derived(walletsWithBalance.length);
-	let batchCount = $derived(Math.ceil(walletCount / 100));
 
-	// Current network
 	let currentNetwork = $derived.by(() => {
 		if (!connectStore.currentChainId) return null;
 		return connectStore.networks.find((n) => n.chainId === connectStore.currentChainId);
 	});
 
-	// Calculate token balance statistics
-	interface TokenStats {
-		tokenId: string;
-		symbol: string;
-		address?: string;
-		decimals: number;
-		totalBalance: bigint;
-		addressCount: number;
-		batchCount: number; // Number of batches needed for this token
-	}
-
-	let tokenStats = $derived.by(() => {
-		if (!hasScanned || walletCount === 0) return [];
-
-		// Get all available tokens to find symbol and address
-		const availableTokens = currentNetwork
-			? step3State.getAvailableTokens(
-					currentNetwork.chainId,
-					currentNetwork.symbol,
-					currentNetwork.name
-				)
-			: [];
-
-		const tokenMap = new Map(availableTokens.map((t) => [t.id, t]));
-
-		const stats = new SvelteMap<string, TokenStats>();
-
-		// Initialize stats for selected tokens
-		selectedTokenIds.forEach((tokenId) => {
-			const token = tokenMap.get(tokenId);
-			const symbol = token?.symbol || tokenId;
-			const address = token?.type === 'erc20' ? (token as ERC20Token).address : undefined;
-			const decimals = token?.decimals || 18;
-
-			stats.set(tokenId, {
-				tokenId,
-				symbol,
-				address,
-				decimals,
-				totalBalance: 0n,
-				addressCount: 0,
-				batchCount: 0 // Will be calculated after counting addresses
-			});
-		});
-
-		// Calculate balances for each wallet
-		importedWallets.forEach((wallet) => {
-			if (!wallet.balances) return;
-
-			selectedTokenIds.forEach((tokenId) => {
-				const isNative = tokenId.endsWith(':native');
-				let balance: string | undefined;
-
-				if (isNative) {
-					balance = wallet.balances?.native;
-				} else {
-					// Use tokenId directly as the key (format: chainId:address)
-					balance = wallet.balances?.tokens?.[tokenId];
-				}
-
-				if (balance && balance !== '0') {
-					const stat = stats.get(tokenId)!;
-					// Balance is stored as bigint string (smallest unit)
-					try {
-						const balanceValue = BigInt(balance);
-						stat.totalBalance += balanceValue;
-						stat.addressCount += 1;
-					} catch (e) {
-						// Skip invalid balance values
-						console.warn(`Invalid balance value: ${balance}`, e);
-					}
-				}
-			});
-		});
-
-		// Calculate batch count for each token (100 wallets per batch)
-		const BATCH_SIZE = 100;
-		stats.forEach((stat) => {
-			stat.batchCount = Math.ceil(stat.addressCount / BATCH_SIZE);
-		});
-
-		return Array.from(stats.values()).filter((s) => s.addressCount > 0);
+	// Calculate token stats with batch count
+	const BATCH_SIZE = 100;
+	let tokenStatsWithBatch = $derived.by(() => {
+		const stats = tokenStatsHelper.calculateStats();
+		return stats.map((stat) => ({
+			...stat,
+			batchCount: Math.ceil(stat.addressCount / BATCH_SIZE)
+		}));
 	});
 </script>
 
@@ -130,12 +56,12 @@
 	</StepSummary>
 
 	<!-- Token Balance Statistics -->
-	{#if tokenStats.length > 0}
+	{#if tokenStatsWithBatch.length > 0}
 		<div class="token-stats" transition:fade>
 			<h4 class="token-stats-title">
 				{i18n.t('tools.wallet_sweep.step4.sidebar.token_stats.title')}
 			</h4>
-			{#each tokenStats as stat (stat.tokenId)}
+			{#each tokenStatsWithBatch as stat (stat.tokenId)}
 				<div class="token-stat-item">
 					<div class="token-stat-header">
 						<div class="token-info">
@@ -174,10 +100,6 @@
 </StepSidebar>
 
 <style>
-	.balance-highlight {
-		color: #10b981;
-	}
-
 	.token-stats {
 		margin-top: var(--space-4);
 		padding: var(--space-4);
