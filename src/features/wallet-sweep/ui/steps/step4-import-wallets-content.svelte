@@ -53,6 +53,8 @@
 		mnemonicImport.clearError();
 		privateKeyImport.clearError();
 		step4State.clearError();
+		// Clear imported wallets when switching import method
+		step4State.clearWallets();
 	}
 
 	async function handleGenerateAddresses() {
@@ -188,13 +190,11 @@
 </script>
 
 <StepContent>
-	<StepContentHeader
-		title={i18n.t('tools.wallet_sweep.step4.content.title')}
-		description={i18n.t('tools.wallet_sweep.step4.content.description')}
-	/>
+	<!-- i18n.t('tools.wallet_sweep.step4.content.description') -->
+	<StepContentHeader title={i18n.t('tools.wallet_sweep.step4.content.title')} description={''} />
 
 	<!-- Import Method Selector -->
-	<div class="form-section">
+	<div>
 		<div class="form-label">{i18n.t('tools.wallet_sweep.step4.content.choose_method')}</div>
 		<ImportMethodSelector selected={importMethod} onSelect={handleMethodSelect} />
 	</div>
@@ -281,10 +281,6 @@
 {/if}
 
 <style>
-	.form-section {
-		margin-bottom: var(--space-2);
-	}
-
 	.form-label {
 		display: block;
 		font-size: var(--text-sm);

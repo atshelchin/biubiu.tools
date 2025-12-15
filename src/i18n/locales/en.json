@@ -465,6 +465,7 @@
 					"title": "Import Wallets",
 					"description": "Add source wallets that you want to sweep assets from",
 					"choose_method": "Choose Import Method",
+					"import_wallets_button": "Import Wallets",
 					"mnemonic": {
 						"label": "Enter Mnemonic Phrase",
 						"placeholder": "Enter 12 or 24 words separated by spaces",

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SimpleCodeEditor from '$lib/components/widgets/SimpleCodeEditor.svelte';
 	import VirtualList from '$lib/components/ui/virtual-list.svelte';
-	import { AlertCircle } from '@lucide/svelte';
+	import { AlertCircle, Upload } from '@lucide/svelte';
 	import { slide } from 'svelte/transition';
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import { EditorView } from 'codemirror';
@@ -18,9 +18,16 @@
 		placeholder?: string;
 		rows?: number;
 		invalidKeys?: InvalidKey[];
+		onUploadClick?: () => void;
 	}
 
-	let { value = $bindable(''), placeholder = '', rows = 20, invalidKeys = [] }: Props = $props();
+	let {
+		value = $bindable(''),
+		placeholder = '',
+		rows = 20,
+		invalidKeys = [],
+		onUploadClick
+	}: Props = $props();
 
 	const i18n = useI18n();
 	let editorView: EditorView | null = $state(null);
@@ -147,7 +154,18 @@
 </script>
 
 <div class="editor-container">
-	<SimpleCodeEditor bind:value {placeholder} {rows} onViewReady={handleViewReady} />
+	<div class="editor-wrapper">
+		<SimpleCodeEditor bind:value {placeholder} {rows} onViewReady={handleViewReady} />
+		{#if onUploadClick}
+			<button
+				class="btn-upload-float"
+				onclick={onUploadClick}
+				title={i18n.t('tools.wallet_sweep.step4.content.private_key.upload_file')}
+			>
+				<Upload size={16} />
+			</button>
+		{/if}
+	</div>
 
 	{#if displayedInvalidKeys && displayedInvalidKeys.length > 0}
 		<div class="error-panel" transition:slide>
@@ -218,6 +236,48 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-3);
+	}
+
+	.editor-wrapper {
+		position: relative;
+	}
+
+	.btn-upload-float {
+		position: absolute;
+		top: var(--space-2);
+		right: var(--space-2);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+		padding: 0;
+		background: var(--color-muted);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-sm);
+		color: var(--gray-500);
+		cursor: pointer;
+		opacity: 0.6;
+		transition: all 0.2s;
+		z-index: 10;
+	}
+
+	.btn-upload-float:hover {
+		opacity: 1;
+		background: var(--white);
+		color: var(--color-primary);
+		border-color: var(--color-primary);
+		transform: scale(1.05);
+	}
+
+	:global([data-theme='dark']) .btn-upload-float {
+		background: var(--gray-700);
+		color: var(--gray-400);
+	}
+
+	:global([data-theme='dark']) .btn-upload-float:hover {
+		background: var(--gray-600);
+		color: var(--color-primary);
 	}
 
 	.error-panel {

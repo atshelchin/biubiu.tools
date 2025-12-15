@@ -465,6 +465,7 @@
 					"title": "导入钱包",
 					"description": "添加要清扫资产的源钱包",
 					"choose_method": "选择导入方式",
+					"import_wallets_button": "导入钱包",
 					"mnemonic": {
 						"label": "输入助记词",
 						"placeholder": "输入 12 或 24 个单词，用空格分隔",
