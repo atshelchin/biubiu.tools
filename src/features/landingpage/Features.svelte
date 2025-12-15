@@ -44,10 +44,15 @@
 			icon: ArrowRightLeft,
 			title: t('tools.token_sweep.title'),
 			description: t('tools.token_sweep.description'),
-			link: '/apps/token-sweep',
+			link: '/apps/wallet-sweep',
 			status: 'active',
 			color: '#10B981',
-			features: ['Multi-chain Support', 'Batch Processing', 'Gas Optimized'],
+			features: [
+				i18n.t('tools.token_sweep.feature_1'),
+				i18n.t('tools.token_sweep.feature_2'),
+				i18n.t('tools.token_sweep.feature_3'),
+				i18n.t('tools.token_sweep.feature_4')
+			],
 			stage: 'beta'
 		},
 		{

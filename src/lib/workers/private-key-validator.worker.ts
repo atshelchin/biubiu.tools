@@ -1,4 +1,4 @@
-import { validatePrivateKey } from '@/features/token-sweep/utils/wallet-import';
+import { validatePrivateKey } from '@/features/wallet-sweep/utils/wallet-import';
 
 export interface ValidateRequest {
 	type: 'validate';

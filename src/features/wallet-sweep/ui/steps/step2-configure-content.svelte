@@ -5,7 +5,7 @@
 	import {
 		checkAllDependencies,
 		calculateCheckSummary
-	} from '@/features/nft-deployer/utils/dependency-checker';
+	} from '@/features/wallet-sweep/utils/dependency-checker';
 	import ContractDeploymentModal from '$lib/components/ui/contract-deployment-modal.svelte';
 	import { getDeploymentConfig } from '$lib/config/deployment-configs';
 	import type { ContractDeploymentConfig } from '$lib/types/deployment-config';
@@ -15,7 +15,7 @@
 	import LoadingState from '$lib/components/ui/loading-state.svelte';
 	import SummaryBanner from '$lib/components/ui/summary-banner.svelte';
 	import DependencyCheckCard from '$lib/components/ui/dependency-check-card.svelte';
-	import { step2CheckDepsState } from '@/features/nft-deployer/stores/step2-check-deps-state.svelte';
+	import { step2State } from '@/features/wallet-sweep/stores/step2-state.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
 
 	const i18n = useI18n();
@@ -23,22 +23,22 @@
 	const stepManager = useStepManager();
 
 	// Use $derived for easier access in template
-	let checks = $derived(step2CheckDepsState.checks);
-	let summary = $derived(step2CheckDepsState.summary);
-	let isChecking = $derived(step2CheckDepsState.isChecking);
-	let hasChecked = $derived(step2CheckDepsState.hasChecked);
+	let checks = $derived(step2State.checks);
+	let summary = $derived(step2State.summary);
+	let isChecking = $derived(step2State.isChecking);
+	let hasChecked = $derived(step2State.hasChecked);
 
 	// Safely derive summary properties to avoid null access during reactive updates
 	let summaryVariant = $derived<'success' | 'error'>(summary?.allPassed ? 'success' : 'error');
 	let summaryTitle = $derived(
 		summary?.allPassed
-			? i18n.t('tools.nft_deployer.step2.content.all_dependencies_satisfied')
-			: i18n.t('tools.nft_deployer.step2.content.dependency_issues_found')
+			? i18n.t('tools.token_sweep.step2.content.all_dependencies_satisfied')
+			: i18n.t('tools.token_sweep.step2.content.dependency_issues_found')
 	);
 	let summaryMessage = $derived(
 		summary?.allPassed
-			? i18n.t('tools.nft_deployer.step2.content.network_properly_configured')
-			: i18n.t('tools.nft_deployer.step2.content.resolve_issues_before_continuing')
+			? i18n.t('tools.token_sweep.step2.content.network_properly_configured')
+			: i18n.t('tools.token_sweep.step2.content.resolve_issues_before_continuing')
 	);
 
 	// Contract deployment modal state
@@ -60,32 +60,39 @@
 		}
 
 		console.log('[Step2] Starting dependency checks for', currentNetwork.name);
-		step2CheckDepsState.isChecking = true;
-		step2CheckDepsState.hasChecked = false;
+		step2State.isChecking = true;
+		step2State.hasChecked = false;
 
 		try {
+			// For now, we'll use hardcoded contract addresses
+			// These should come from configuration later
+			const membershipContract = undefined; // TODO: Get from config
+			const sweepContract = undefined; // TODO: Get from config
+
 			const results = await checkAllDependencies(
 				currentNetwork.rpcEndpoints[0].url,
 				currentNetwork.chainId,
 				currentNetwork.name,
-				i18n.t.bind(i18n)
+				i18n.t.bind(i18n),
+				membershipContract,
+				sweepContract
 			);
 
 			console.log('[Step2] Dependency check results:', results);
 
 			// Update shared state - force new references for Svelte reactivity
-			step2CheckDepsState.checks = [...results];
+			step2State.checks = [...results];
 
 			// Force new object reference for summary
 			const newSummary = calculateCheckSummary(results);
-			step2CheckDepsState.summary = { ...newSummary };
+			step2State.summary = { ...newSummary };
 
-			console.log('[Step2] Calculated summary:', step2CheckDepsState.summary);
-			step2CheckDepsState.hasChecked = true;
+			console.log('[Step2] Calculated summary:', step2State.summary);
+			step2State.hasChecked = true;
 		} catch (error) {
 			console.error('[Step2] Failed to run dependency checks:', error);
 		} finally {
-			step2CheckDepsState.isChecking = false;
+			step2State.isChecking = false;
 		}
 	}
 
@@ -99,9 +106,9 @@
 	// Reset checks when network changes
 	$effect(() => {
 		if (connectStore.currentChainId) {
-			step2CheckDepsState.hasChecked = false;
-			step2CheckDepsState.checks = [];
-			step2CheckDepsState.summary = null;
+			step2State.hasChecked = false;
+			step2State.checks = [];
+			step2State.summary = null;
 		}
 	});
 
@@ -124,14 +131,14 @@
 
 <StepContent>
 	<StepContentHeader
-		title={i18n.t('tools.nft_deployer.step2.content.title')}
-		description={i18n.t('tools.nft_deployer.step2.content.description')}
+		title={i18n.t('tools.token_sweep.step2.content.title')}
+		description={i18n.t('tools.token_sweep.step2.content.description')}
 	/>
 
 	{#if isChecking}
 		<!-- Checking State -->
 		<LoadingState
-			message={i18n.t('tools.nft_deployer.step2.content.checking_dependencies_for', {
+			message={i18n.t('tools.token_sweep.step2.content.checking_dependencies_for', {
 				network: currentNetwork?.name ?? ''
 			})}
 		/>
@@ -139,12 +146,12 @@
 		<!-- Not Connected State -->
 		<EmptyState
 			icon="🔌"
-			title={i18n.t('tools.nft_deployer.step2.content.wallet_not_connected_title')}
-			message={i18n.t('tools.nft_deployer.step2.content.wallet_not_connected_message')}
+			title={i18n.t('tools.token_sweep.step2.content.wallet_not_connected_title')}
+			message={i18n.t('tools.token_sweep.step2.content.wallet_not_connected_message')}
 		>
 			{#snippet action()}
 				<button class="back-button" onclick={goBackToStep1}>
-					{i18n.t('tools.nft_deployer.step2.content.go_to_step1')}
+					{i18n.t('tools.token_sweep.step2.content.go_to_step1')}
 				</button>
 			{/snippet}
 		</EmptyState>
@@ -169,15 +176,15 @@
 							}
 						: undefined}
 					deployButtonText={config
-						? i18n.t('tools.nft_deployer.step2.content.deploy_contract', {
+						? i18n.t('tools.token_sweep.step2.content.deploy_contract', {
 								contractName: config.contractName
 							})
 						: undefined}
-					blockedHintText={i18n.t('tools.nft_deployer.step2.content.resolve_previous_issue')}
-					addressLabel={i18n.t('tools.nft_deployer.step2.content.address_label')}
-					endpointLabel={i18n.t('tools.nft_deployer.step2.content.endpoint_label')}
-					viewGuideText={i18n.t('tools.nft_deployer.step2.content.view_deployment_guide')}
-					deployComingSoonText={i18n.t('tools.nft_deployer.step2.content.deploy_coming_soon')}
+					blockedHintText={i18n.t('tools.token_sweep.step2.content.resolve_previous_issue')}
+					addressLabel={i18n.t('tools.token_sweep.step2.content.address_label')}
+					endpointLabel={i18n.t('tools.token_sweep.step2.content.endpoint_label')}
+					viewGuideText={i18n.t('tools.token_sweep.step2.content.view_deployment_guide')}
+					deployComingSoonText={i18n.t('tools.token_sweep.step2.content.deploy_coming_soon')}
 				/>
 			{/each}
 		</div>
@@ -188,7 +195,7 @@
 				variant={summaryVariant}
 				title={summaryTitle}
 				message={summaryMessage}
-				retryText={i18n.t('tools.nft_deployer.step2.content.recheck_dependencies')}
+				retryText={i18n.t('tools.token_sweep.step2.content.recheck_dependencies')}
 				onRetry={runDependencyChecks}
 			/>
 		{/if}

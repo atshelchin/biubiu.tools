@@ -22,7 +22,7 @@ function extractRoutes(): string[] {
 
 	for (const path of Object.keys(pages)) {
 		// Convert file path to route path
-		// /src/routes/apps/token-sweep/+page.svelte -> /apps/token-sweep
+		// /src/routes/apps/wallet-sweep/+page.svelte -> /apps/wallet-sweep
 		const route = path
 			.replace('/src/routes', '')
 			.replace('/+page.svelte', '')

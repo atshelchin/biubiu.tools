@@ -49,7 +49,7 @@ export type TaskStatus =
  * Task type - identifies the feature that created this task
  */
 export type TaskType =
-	| 'token-sweep'
+	| 'wallet-sweep'
 	| 'token-distribution'
 	| 'batch-transfer'
 	| 'wallet-generation'

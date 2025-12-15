@@ -39,7 +39,7 @@ export type TaskStatus =
  * Task type - identifies which feature created this task
  */
 export type TaskType =
-	| 'token-sweep' // Token归集
+	| 'wallet-sweep' // 钱包归集
 	| 'token-distribution' // 代币分发
 	| 'batch-transfer' // 批量转账
 	| 'wallet-generation' // 钱包生成
@@ -97,7 +97,7 @@ export interface SubTask {
  * Main task that contains multiple subtasks
  */
 export interface Task {
-	id: string; // Unique task ID (e.g., "task-token-sweep-1234567890")
+	id: string; // Unique task ID (e.g., "task-wallet-sweep-1234567890")
 	type: TaskType; // What kind of task is this?
 	name: string; // Human-readable name (e.g., "归集 ETH, USDC, DAI")
 	description?: string; // Optional description

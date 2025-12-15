@@ -4,7 +4,7 @@ import { mnemonicToSeed } from '@scure/bip39';
 import { privateKeyToAccount } from 'viem/accounts';
 import type { Address } from 'viem';
 import { Buffer } from 'buffer';
-import type { DateFormat } from '@/features/token-sweep/types/wallet';
+import type { DateFormat } from '@/features/wallet-sweep/types/wallet';
 
 export interface WalletGenerationRequest {
 	mnemonic: string;

@@ -129,8 +129,8 @@
 			}
 		},
 		"token_sweep": {
-			"title": "Token Sweep",
-			"description": "Sweep tokens from multiple addresses to a single destination address",
+			"title": "Wallet Sweep",
+			"description": "Transfer balances from multiple wallets to one address",
 			"feature_1": "Complete balance sweep, zero dust left",
 			"feature_2": "Large-scale automation, no per-tx confirmation",
 			"feature_3": "No native token required in wallets",

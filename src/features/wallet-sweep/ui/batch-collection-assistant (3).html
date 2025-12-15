@@ -1,0 +1,2799 @@
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>批量归集助手 - 一键归集多钱包资产</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family:
+					-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+				background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+				min-height: 100vh;
+				padding: 20px;
+				color: #333;
+			}
+
+			.container {
+				max-width: 900px;
+				margin: 0 auto;
+			}
+
+			/* 顶部导航 */
+			.header {
+				background: white;
+				border-radius: 16px;
+				padding: 20px 30px;
+				margin-bottom: 20px;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.logo {
+				font-size: 24px;
+				font-weight: bold;
+				color: #667eea;
+			}
+
+			.membership-badge {
+				background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+				color: white;
+				padding: 8px 20px;
+				border-radius: 20px;
+				font-size: 14px;
+				font-weight: 600;
+				cursor: pointer;
+				transition: transform 0.2s;
+			}
+
+			.membership-badge:hover {
+				transform: scale(1.05);
+			}
+
+			/* 主内容区 */
+			.main-content {
+				display: grid;
+				grid-template-columns: 2fr 1fr;
+				gap: 20px;
+			}
+
+			/* 左侧卡片 */
+			.card {
+				background: white;
+				border-radius: 16px;
+				padding: 30px;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+			}
+
+			.card-title {
+				font-size: 20px;
+				font-weight: 600;
+				margin-bottom: 10px;
+				color: #333;
+			}
+
+			.card-subtitle {
+				color: #666;
+				font-size: 14px;
+				margin-bottom: 25px;
+			}
+
+			/* 步骤指示器 */
+			.steps {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 30px;
+				position: relative;
+			}
+
+			.steps::before {
+				content: '';
+				position: absolute;
+				top: 20px;
+				left: 30px;
+				right: 30px;
+				height: 2px;
+				background: #e0e0e0;
+				z-index: 0;
+			}
+
+			.step {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				position: relative;
+				z-index: 1;
+			}
+
+			.step-circle {
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				background: #e0e0e0;
+				color: #999;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-weight: 600;
+				margin-bottom: 8px;
+				transition: all 0.3s;
+			}
+
+			.step.active .step-circle {
+				background: #667eea;
+				color: white;
+				box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+			}
+
+			.step.completed .step-circle {
+				background: #10b981;
+				color: white;
+			}
+
+			.step-label {
+				font-size: 13px;
+				color: #666;
+				text-align: center;
+			}
+
+			.step.active .step-label {
+				color: #667eea;
+				font-weight: 600;
+			}
+
+			/* 表单区域 */
+			.form-section {
+				display: none;
+				animation: fadeIn 0.3s;
+			}
+
+			.form-section.active {
+				display: block;
+			}
+
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+					transform: translateY(10px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			.form-group {
+				margin-bottom: 20px;
+			}
+
+			.form-label {
+				display: block;
+				font-size: 14px;
+				font-weight: 600;
+				color: #333;
+				margin-bottom: 8px;
+			}
+
+			.form-input,
+			.form-select,
+			.form-textarea {
+				width: 100%;
+				padding: 12px 16px;
+				border: 2px solid #e0e0e0;
+				border-radius: 10px;
+				font-size: 14px;
+				transition: border-color 0.3s;
+				font-family: inherit;
+			}
+
+			.form-input:focus,
+			.form-select:focus,
+			.form-textarea:focus {
+				outline: none;
+				border-color: #667eea;
+			}
+
+			.form-textarea {
+				resize: vertical;
+				min-height: 120px;
+				font-family: 'Courier New', monospace;
+			}
+
+			.radio-group {
+				display: flex;
+				gap: 15px;
+				margin-top: 10px;
+			}
+
+			.radio-option {
+				flex: 1;
+				padding: 15px;
+				border: 2px solid #e0e0e0;
+				border-radius: 10px;
+				cursor: pointer;
+				transition: all 0.3s;
+				text-align: center;
+			}
+
+			.radio-option:hover {
+				border-color: #667eea;
+				background: #f8f9ff;
+			}
+
+			.radio-option.selected {
+				border-color: #667eea;
+				background: #f0f3ff;
+			}
+
+			.radio-option input[type='radio'] {
+				display: none;
+			}
+
+			.radio-label {
+				font-weight: 600;
+				color: #333;
+				display: block;
+				margin-bottom: 5px;
+			}
+
+			.radio-desc {
+				font-size: 12px;
+				color: #666;
+			}
+
+			/* 钱包列表 */
+			.wallet-list {
+				border: 2px dashed #e0e0e0;
+				border-radius: 10px;
+				padding: 20px;
+				min-height: 100px;
+				margin-bottom: 15px;
+			}
+
+			.wallet-item {
+				background: #f8f9fa;
+				padding: 12px 16px;
+				border-radius: 8px;
+				margin-bottom: 10px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.wallet-address {
+				font-family: 'Courier New', monospace;
+				font-size: 13px;
+				color: #333;
+			}
+
+			.wallet-balance {
+				color: #10b981;
+				font-weight: 600;
+				font-size: 14px;
+			}
+
+			.remove-btn {
+				color: #ef4444;
+				cursor: pointer;
+				font-size: 18px;
+				padding: 0 8px;
+			}
+
+			.empty-state {
+				text-align: center;
+				color: #999;
+				padding: 30px;
+			}
+
+			/* 按钮 */
+			.button-group {
+				display: flex;
+				gap: 12px;
+				margin-top: 25px;
+			}
+
+			.btn {
+				flex: 1;
+				padding: 14px 24px;
+				border: none;
+				border-radius: 10px;
+				font-size: 15px;
+				font-weight: 600;
+				cursor: pointer;
+				transition: all 0.3s;
+			}
+
+			.btn-primary {
+				background: #667eea;
+				color: white;
+			}
+
+			.btn-primary:hover {
+				background: #5568d3;
+				transform: translateY(-2px);
+				box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+			}
+
+			.btn-secondary {
+				background: #f3f4f6;
+				color: #666;
+			}
+
+			.btn-secondary:hover {
+				background: #e5e7eb;
+			}
+
+			/* 右侧提示卡片 */
+			.tip-card {
+				background: white;
+				border-radius: 16px;
+				padding: 25px;
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+				position: sticky;
+				top: 20px;
+			}
+
+			.tip-icon {
+				font-size: 40px;
+				margin-bottom: 15px;
+			}
+
+			.tip-title {
+				font-size: 16px;
+				font-weight: 600;
+				color: #333;
+				margin-bottom: 12px;
+			}
+
+			.tip-content {
+				font-size: 14px;
+				color: #666;
+				line-height: 1.6;
+				margin-bottom: 8px;
+			}
+
+			.tip-list {
+				list-style: none;
+				padding-left: 0;
+			}
+
+			.tip-list li {
+				font-size: 13px;
+				color: #666;
+				padding: 8px 0;
+				padding-left: 24px;
+				position: relative;
+			}
+
+			.tip-list li::before {
+				content: '✓';
+				position: absolute;
+				left: 0;
+				color: #10b981;
+				font-weight: bold;
+			}
+
+			/* 费用预览 */
+			.fee-preview {
+				background: #f8f9ff;
+				border-radius: 10px;
+				padding: 20px;
+				margin-top: 20px;
+			}
+
+			.fee-row {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 12px;
+				font-size: 14px;
+			}
+
+			.fee-label {
+				color: #666;
+			}
+
+			.fee-value {
+				font-weight: 600;
+				color: #333;
+			}
+
+			.fee-total {
+				border-top: 2px solid #e0e0e0;
+				padding-top: 12px;
+				margin-top: 12px;
+				font-size: 16px;
+			}
+
+			.fee-total .fee-value {
+				color: #667eea;
+				font-size: 18px;
+			}
+
+			.discount-tag {
+				background: #10b981;
+				color: white;
+				font-size: 12px;
+				padding: 4px 8px;
+				border-radius: 4px;
+				margin-left: 8px;
+			}
+
+			/* 分组信息 */
+			.group-info {
+				background: #fff7ed;
+				border-left: 4px solid #f97316;
+				padding: 15px;
+				border-radius: 8px;
+				margin-bottom: 20px;
+				font-size: 14px;
+			}
+
+			.group-info-title {
+				font-weight: 600;
+				color: #ea580c;
+				margin-bottom: 8px;
+			}
+
+			.group-list {
+				margin-top: 10px;
+			}
+
+			.group-item {
+				background: white;
+				padding: 10px;
+				border-radius: 6px;
+				margin-bottom: 8px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.group-badge {
+				background: #f97316;
+				color: white;
+				padding: 4px 10px;
+				border-radius: 12px;
+				font-size: 12px;
+				font-weight: 600;
+			}
+
+			/* 进度展示 */
+			.progress-section {
+				margin-top: 20px;
+			}
+
+			.progress-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 15px;
+			}
+
+			.progress-status {
+				font-size: 16px;
+				font-weight: 600;
+				color: #667eea;
+			}
+
+			.progress-percentage {
+				font-size: 24px;
+				font-weight: bold;
+				color: #667eea;
+			}
+
+			.progress-bar-container {
+				width: 100%;
+				height: 12px;
+				background: #e0e0e0;
+				border-radius: 10px;
+				overflow: hidden;
+				margin-bottom: 20px;
+			}
+
+			.progress-bar {
+				height: 100%;
+				background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+				transition: width 0.5s ease;
+				border-radius: 10px;
+			}
+
+			.batch-progress {
+				margin-top: 15px;
+			}
+
+			.batch-item {
+				background: #f8f9fa;
+				padding: 15px;
+				border-radius: 10px;
+				margin-bottom: 10px;
+				border-left: 4px solid #e0e0e0;
+			}
+
+			.batch-item.processing {
+				border-left-color: #3b82f6;
+				animation: pulse 2s infinite;
+			}
+
+			.batch-item.completed {
+				border-left-color: #10b981;
+			}
+
+			.batch-item.failed {
+				border-left-color: #ef4444;
+			}
+
+			@keyframes pulse {
+				0%,
+				100% {
+					opacity: 1;
+				}
+				50% {
+					opacity: 0.7;
+				}
+			}
+
+			.batch-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 8px;
+			}
+
+			.batch-title {
+				font-weight: 600;
+				color: #333;
+				font-size: 14px;
+			}
+
+			.batch-status {
+				font-size: 12px;
+				padding: 4px 10px;
+				border-radius: 12px;
+				font-weight: 600;
+			}
+
+			.batch-status.pending {
+				background: #e5e7eb;
+				color: #6b7280;
+			}
+
+			.batch-status.processing {
+				background: #dbeafe;
+				color: #2563eb;
+			}
+
+			.batch-status.completed {
+				background: #d1fae5;
+				color: #059669;
+			}
+
+			.batch-status.failed {
+				background: #fee2e2;
+				color: #dc2626;
+			}
+
+			.batch-details {
+				font-size: 13px;
+				color: #666;
+				display: flex;
+				gap: 15px;
+				flex-wrap: wrap;
+			}
+
+			.batch-detail-item {
+				display: flex;
+				align-items: center;
+				gap: 5px;
+			}
+
+			/* 结果页面 */
+			.result-container {
+				text-align: center;
+				padding: 40px 20px;
+			}
+
+			.result-icon {
+				font-size: 80px;
+				margin-bottom: 20px;
+				animation: scaleIn 0.5s;
+			}
+
+			@keyframes scaleIn {
+				from {
+					transform: scale(0);
+				}
+				to {
+					transform: scale(1);
+				}
+			}
+
+			.result-title {
+				font-size: 24px;
+				font-weight: bold;
+				margin-bottom: 10px;
+			}
+
+			.result-title.success {
+				color: #10b981;
+			}
+
+			.result-title.partial {
+				color: #f59e0b;
+			}
+
+			.result-title.failed {
+				color: #ef4444;
+			}
+
+			.result-subtitle {
+				color: #666;
+				margin-bottom: 30px;
+				font-size: 15px;
+			}
+
+			.result-stats {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+				gap: 15px;
+				margin-bottom: 30px;
+			}
+
+			.stat-box {
+				background: #f8f9fa;
+				padding: 20px;
+				border-radius: 10px;
+			}
+
+			.stat-value {
+				font-size: 28px;
+				font-weight: bold;
+				margin-bottom: 5px;
+			}
+
+			.stat-value.success {
+				color: #10b981;
+			}
+
+			.stat-value.failed {
+				color: #ef4444;
+			}
+
+			.stat-label {
+				font-size: 13px;
+				color: #666;
+			}
+
+			.result-details {
+				background: #f8f9fa;
+				border-radius: 10px;
+				padding: 20px;
+				text-align: left;
+				margin-bottom: 20px;
+			}
+
+			.detail-row {
+				display: flex;
+				justify-content: space-between;
+				padding: 12px 0;
+				border-bottom: 1px solid #e0e0e0;
+			}
+
+			.detail-row:last-child {
+				border-bottom: none;
+			}
+
+			.detail-label {
+				color: #666;
+				font-size: 14px;
+			}
+
+			.detail-value {
+				font-weight: 600;
+				color: #333;
+				font-size: 14px;
+			}
+
+			.tx-hash {
+				font-family: 'Courier New', monospace;
+				font-size: 12px;
+				color: #667eea;
+				word-break: break-all;
+			}
+
+			/* 错误列表 */
+			.error-list {
+				background: #fef2f2;
+				border-radius: 10px;
+				padding: 15px;
+				margin-top: 20px;
+			}
+
+			.error-item {
+				padding: 10px;
+				border-left: 3px solid #ef4444;
+				background: white;
+				margin-bottom: 10px;
+				border-radius: 4px;
+				font-size: 13px;
+			}
+
+			.error-item:last-child {
+				margin-bottom: 0;
+			}
+
+			/* 模式选择说明 */
+			.mode-description {
+				animation: fadeIn 0.3s;
+			}
+
+			/* 代理步骤指示器 */
+			.delegate-step {
+				flex: 1;
+				text-align: center;
+				padding: 15px;
+				background: #f8f9fa;
+				border-radius: 10px;
+				transition: all 0.3s;
+			}
+
+			.delegate-step.active {
+				background: #dbeafe;
+				border: 2px solid #3b82f6;
+			}
+
+			.delegate-step.completed {
+				background: #d1fae5;
+				border: 2px solid #10b981;
+			}
+
+			.delegate-step-num {
+				width: 32px;
+				height: 32px;
+				margin: 0 auto 8px;
+				background: #e0e0e0;
+				color: #666;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-weight: 600;
+				transition: all 0.3s;
+			}
+
+			.delegate-step.active .delegate-step-num {
+				background: #3b82f6;
+				color: white;
+			}
+
+			.delegate-step.completed .delegate-step-num {
+				background: #10b981;
+				color: white;
+			}
+
+			.delegate-step.completed .delegate-step-num::before {
+				content: '✓';
+			}
+
+			.delegate-step-label {
+				font-size: 12px;
+				color: #666;
+				font-weight: 500;
+			}
+
+			.delegate-step.active .delegate-step-label {
+				color: #1e40af;
+				font-weight: 600;
+			}
+
+			.delegate-substep {
+				animation: fadeIn 0.3s;
+			}
+
+			/* 加载动画 */
+			.spinner {
+				display: inline-block;
+				width: 40px;
+				height: 40px;
+				border: 4px solid rgba(102, 126, 234, 0.3);
+				border-radius: 50%;
+				border-top-color: #667eea;
+				animation: spin 1s linear infinite;
+			}
+
+			@keyframes spin {
+				to {
+					transform: rotate(360deg);
+				}
+			}
+
+			/* 响应式 - 移动端优化 */
+			@media (max-width: 768px) {
+				body {
+					padding: 10px;
+				}
+
+				.container {
+					max-width: 100%;
+				}
+
+				.header {
+					padding: 15px 20px;
+					flex-direction: column;
+					gap: 12px;
+					text-align: center;
+				}
+
+				.logo {
+					font-size: 20px;
+				}
+
+				.membership-badge {
+					width: 100%;
+					text-align: center;
+				}
+
+				.main-content {
+					grid-template-columns: 1fr;
+					gap: 15px;
+				}
+
+				.card {
+					padding: 20px;
+				}
+
+				.card-title {
+					font-size: 18px;
+				}
+
+				.card-subtitle {
+					font-size: 13px;
+				}
+
+				/* 优化步骤指示器 */
+				.steps {
+					margin-bottom: 25px;
+				}
+
+				.steps::before {
+					display: none; /* 移动端隐藏连接线 */
+				}
+
+				.step {
+					flex: 1;
+				}
+
+				.step-circle {
+					width: 36px;
+					height: 36px;
+					font-size: 14px;
+				}
+
+				.step-label {
+					font-size: 11px;
+					max-width: 80px;
+				}
+
+				/* 表单优化 */
+				.form-input,
+				.form-select,
+				.form-textarea {
+					font-size: 16px; /* 防止iOS自动缩放 */
+					padding: 14px;
+				}
+
+				.radio-group {
+					flex-direction: column;
+					gap: 10px;
+				}
+
+				.radio-option {
+					padding: 12px;
+				}
+
+				/* 钱包列表优化 */
+				.wallet-item {
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 8px;
+				}
+
+				.wallet-address {
+					font-size: 12px;
+					word-break: break-all;
+				}
+
+				/* 按钮优化 */
+				.button-group {
+					flex-direction: column;
+				}
+
+				.btn {
+					width: 100%;
+					padding: 16px 24px;
+					font-size: 16px;
+				}
+
+				/* 费用预览优化 */
+				.fee-preview {
+					padding: 15px;
+				}
+
+				.fee-row {
+					font-size: 13px;
+					gap: 10px;
+				}
+
+				/* 提示卡片移动端优化 */
+				.tip-card {
+					position: static;
+					padding: 20px;
+				}
+
+				.tip-icon {
+					font-size: 32px;
+				}
+
+				.tip-title {
+					font-size: 15px;
+				}
+
+				.tip-content {
+					font-size: 13px;
+				}
+
+				.tip-list li {
+					font-size: 12px;
+				}
+
+				/* 批次进度优化 */
+				.batch-details {
+					flex-direction: column;
+					gap: 8px;
+				}
+
+				/* 结果页优化 */
+				.result-icon {
+					font-size: 60px;
+				}
+
+				.result-title {
+					font-size: 20px;
+				}
+
+				.result-stats {
+					grid-template-columns: 1fr 1fr;
+					gap: 10px;
+				}
+
+				.stat-box {
+					padding: 15px;
+				}
+
+				.stat-value {
+					font-size: 24px;
+				}
+
+				/* 底部固定按钮（移动端） */
+				.mobile-fixed-bottom {
+					position: fixed;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					background: white;
+					padding: 15px;
+					box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+					z-index: 100;
+				}
+			}
+
+			/* 加载动画 */
+			.spinner {
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				border: 3px solid rgba(255, 255, 255, 0.3);
+				border-radius: 50%;
+				border-top-color: white;
+				animation: spin 1s linear infinite;
+			}
+
+			@keyframes spin {
+				to {
+					transform: rotate(360deg);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<!-- 顶部导航 -->
+			<div class="header">
+				<div class="logo">🚀 批量归集助手</div>
+				<div class="membership-badge" onclick="showMembership()">💎 开通会员免手续费</div>
+			</div>
+
+			<!-- 主内容 -->
+			<div class="main-content">
+				<!-- 左侧主卡片 -->
+				<div class="card">
+					<h1 class="card-title">一键归集多钱包资产</h1>
+					<p class="card-subtitle">简单三步，安全快速地将多个钱包的资产归集到一起</p>
+
+					<!-- 步骤指示器 -->
+					<div class="steps">
+						<div class="step active" data-step="1">
+							<div class="step-circle">1</div>
+							<div class="step-label">选择网络</div>
+						</div>
+						<div class="step" data-step="2">
+							<div class="step-circle">2</div>
+							<div class="step-label">导入钱包</div>
+						</div>
+						<div class="step" data-step="3">
+							<div class="step-circle">3</div>
+							<div class="step-label">确认归集</div>
+						</div>
+					</div>
+
+					<!-- 步骤1: 选择网络 -->
+					<div class="form-section active" id="step1">
+						<div class="form-group">
+							<label class="form-label">选择区块链网络</label>
+							<select class="form-select" id="networkSelect">
+								<option value="">请选择网络...</option>
+								<option value="ethereum">Ethereum (ETH) - 手续费 $10</option>
+								<option value="bsc">BNB Chain (BNB) - 手续费 $2.5</option>
+								<option value="polygon">Polygon (MATIC) - 手续费 $1</option>
+							</select>
+						</div>
+
+						<div class="button-group">
+							<button class="btn btn-primary" onclick="nextStep(2)">下一步：导入钱包 →</button>
+						</div>
+					</div>
+
+					<!-- 步骤2: 导入钱包 -->
+					<div class="form-section" id="step2">
+						<div class="form-group">
+							<label class="form-label">选择导入方式</label>
+							<div class="radio-group">
+								<label class="radio-option" onclick="selectImportType('mnemonic')">
+									<input type="radio" name="importType" value="mnemonic" />
+									<div class="radio-label">🔐 助记词</div>
+									<div class="radio-desc">批量衍生地址</div>
+								</label>
+								<label class="radio-option" onclick="selectImportType('privateKey')">
+									<input type="radio" name="importType" value="privateKey" />
+									<div class="radio-label">🔑 私钥</div>
+									<div class="radio-desc">逐个导入钱包</div>
+								</label>
+							</div>
+						</div>
+
+						<!-- 助记词导入 -->
+						<div class="form-group" id="mnemonicInput" style="display: none">
+							<label class="form-label">输入助记词</label>
+							<textarea
+								class="form-textarea"
+								id="mnemonicText"
+								placeholder="请输入12或24个单词的助记词，用空格分隔&#10;例如：word1 word2 word3 ..."
+							></textarea>
+
+							<label class="form-label" style="margin-top: 20px">衍生路径类型</label>
+							<div class="radio-group">
+								<label class="radio-option" onclick="selectPathType('sequential')">
+									<input type="radio" name="pathType" value="sequential" checked />
+									<div class="radio-label">📊 自然序号</div>
+									<div class="radio-desc">0, 1, 2, 3...</div>
+								</label>
+								<label class="radio-option" onclick="selectPathType('date')">
+									<input type="radio" name="pathType" value="date" />
+									<div class="radio-label">📅 日期序号</div>
+									<div class="radio-desc">20240919, 2024919...</div>
+								</label>
+							</div>
+
+							<!-- 自然序号范围 -->
+							<div id="sequentialRange" style="margin-top: 15px">
+								<label class="form-label">地址范围</label>
+								<div style="display: flex; gap: 10px; align-items: center">
+									<input
+										type="number"
+										class="form-input"
+										id="startIndex"
+										value="0"
+										placeholder="起始"
+										style="flex: 1"
+									/>
+									<span style="color: #666">到</span>
+									<input
+										type="number"
+										class="form-input"
+										id="endIndex"
+										value="999"
+										placeholder="结束"
+										style="flex: 1"
+									/>
+								</div>
+								<p style="font-size: 12px; color: #999; margin-top: 8px">
+									💡 例如：0-999 将衍生 1000 个地址
+								</p>
+							</div>
+
+							<!-- 日期范围 -->
+							<div id="dateRange" style="margin-top: 15px; display: none">
+								<label class="form-label">日期范围</label>
+								<div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap">
+									<input
+										type="date"
+										class="form-input"
+										id="startDate"
+										style="flex: 1; min-width: 140px"
+									/>
+									<span style="color: #666">到</span>
+									<input
+										type="date"
+										class="form-input"
+										id="endDate"
+										style="flex: 1; min-width: 140px"
+									/>
+								</div>
+								<label class="form-label" style="margin-top: 15px">日期格式</label>
+								<div class="radio-group">
+									<label class="radio-option" onclick="selectDateFormat('yyyymmdd')">
+										<input type="radio" name="dateFormat" value="yyyymmdd" checked />
+										<div class="radio-label">20240919</div>
+										<div class="radio-desc">完整格式</div>
+									</label>
+									<label class="radio-option" onclick="selectDateFormat('yyyymdd')">
+										<input type="radio" name="dateFormat" value="yyyymdd" />
+										<div class="radio-label">2024919</div>
+										<div class="radio-desc">无前导零</div>
+									</label>
+								</div>
+							</div>
+
+							<button
+								class="btn btn-primary"
+								style="margin-top: 15px; width: 100%"
+								onclick="deriveAddresses()"
+							>
+								🔍 生成地址列表
+							</button>
+
+							<p style="font-size: 12px; color: #999; margin-top: 8px">
+								⚠️ 助记词不会上传到服务器，仅在本地使用
+							</p>
+						</div>
+
+						<!-- 私钥导入 -->
+						<div class="form-group" id="privateKeyInput" style="display: none">
+							<label class="form-label">批量导入私钥</label>
+							<textarea
+								class="form-textarea"
+								id="privateKeyText"
+								placeholder="每行一个私钥（以 0x 开头）&#10;0x1234...&#10;0x5678..."
+							></textarea>
+							<button
+								class="btn btn-primary"
+								style="margin-top: 10px; width: 100%"
+								onclick="importPrivateKeys()"
+							>
+								➕ 批量添加钱包
+							</button>
+						</div>
+
+						<!-- 已添加的钱包列表 -->
+						<div class="form-group">
+							<label class="form-label">
+								已生成的地址
+								<span style="color: #667eea" id="walletCountLabel">(0)</span>
+							</label>
+							<div class="wallet-list" id="walletList">
+								<div class="empty-state">
+									还没有生成地址<br />
+									<small>请使用上方方式导入</small>
+								</div>
+							</div>
+
+							<button
+								class="btn btn-secondary"
+								id="scanAssetsBtn"
+								style="margin-top: 10px; width: 100%; display: none"
+								onclick="scanAssets()"
+							>
+								🔍 扫描资产（检查哪些地址有余额）
+							</button>
+						</div>
+
+						<div class="button-group">
+							<button class="btn btn-secondary" onclick="prevStep(1)">← 上一步</button>
+							<button class="btn btn-primary" id="nextToStep3Btn" onclick="nextStep(3)" disabled>
+								下一步：确认归集 →
+							</button>
+						</div>
+					</div>
+
+					<!-- 步骤2.5: 资产扫描 -->
+					<div class="form-section" id="step2_5">
+						<div class="progress-section">
+							<div class="progress-header">
+								<div class="progress-status" id="scanStatus">正在扫描资产...</div>
+								<div class="progress-percentage" id="scanPercentage">0%</div>
+							</div>
+							<div class="progress-bar-container">
+								<div class="progress-bar" id="scanProgressBar" style="width: 0%"></div>
+							</div>
+
+							<div style="margin-top: 20px; font-size: 14px; color: #666">
+								<p>⏳ 正在查询链上余额，请稍候...</p>
+								<p style="margin-top: 8px">
+									已扫描: <span id="scannedCount">0</span> / <span id="totalScanCount">0</span>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- 步骤2.8: 扫描结果 -->
+					<div class="form-section" id="step2_8">
+						<div class="scan-results">
+							<h3 style="font-size: 18px; font-weight: 600; margin-bottom: 15px">📊 扫描结果</h3>
+
+							<div class="result-stats" style="margin-bottom: 20px">
+								<div class="stat-box">
+									<div class="stat-value" id="totalAddresses">0</div>
+									<div class="stat-label">总地址数</div>
+								</div>
+								<div class="stat-box">
+									<div class="stat-value success" id="withBalanceCount">0</div>
+									<div class="stat-label">有资产</div>
+								</div>
+								<div class="stat-box">
+									<div class="stat-value" style="color: #999" id="emptyCount">0</div>
+									<div class="stat-label">空地址</div>
+								</div>
+							</div>
+
+							<div class="group-info" style="background: #f0f9ff; border-left-color: #3b82f6">
+								<div class="group-info-title" style="color: #1e40af">💡 智能过滤</div>
+								<p style="margin-bottom: 0">已自动过滤掉空地址，仅保留有资产的地址进入归集流程</p>
+							</div>
+
+							<!-- 有资产的地址列表 -->
+							<div class="form-group" style="margin-top: 20px">
+								<label class="form-label">
+									有资产的地址
+									<button
+										class="btn btn-secondary"
+										style="padding: 4px 12px; font-size: 12px; margin-left: 10px"
+										onclick="downloadScanResult()"
+									>
+										📥 下载报告
+									</button>
+								</label>
+								<div
+									id="assetAddressList"
+									style="
+										max-height: 300px;
+										overflow-y: auto;
+										border: 1px solid #e0e0e0;
+										border-radius: 10px;
+										padding: 10px;
+									"
+								>
+									<!-- 动态生成 -->
+								</div>
+							</div>
+						</div>
+
+						<div class="button-group">
+							<button class="btn btn-secondary" onclick="backToImport()">← 重新导入</button>
+							<button class="btn btn-primary" onclick="proceedWithAssets()">继续归集 →</button>
+						</div>
+					</div>
+
+					<!-- 步骤3: 确认归集 -->
+					<div class="form-section" id="step3">
+						<!-- 签名模式选择 -->
+						<div class="form-group">
+							<label class="form-label">选择签名模式</label>
+							<div class="radio-group">
+								<label
+									class="radio-option"
+									id="manualModeOption"
+									onclick="selectSignMode('manual')"
+								>
+									<input type="radio" name="signMode" value="manual" checked />
+									<div class="radio-label">👆 手动签名</div>
+									<div class="radio-desc">钱包弹窗 <span id="manualTxCount">100</span> 次</div>
+								</label>
+								<label
+									class="radio-option"
+									id="delegateModeOption"
+									onclick="selectSignMode('delegate')"
+								>
+									<input type="radio" name="signMode" value="delegate" />
+									<div class="radio-label">🤖 代理模式</div>
+									<div class="radio-desc">仅签名 1 次</div>
+								</label>
+							</div>
+
+							<!-- 手动模式说明 -->
+							<div id="manualModeDesc" class="mode-description" style="margin-top: 15px">
+								<div
+									style="padding: 15px; background: #f8f9fa; border-radius: 8px; font-size: 13px"
+								>
+									<div style="font-weight: 600; margin-bottom: 8px">✓ 传统方式，最安全</div>
+									<div style="color: #666; line-height: 1.6">
+										• 每笔交易都需要您手动确认<br />
+										• Gas 费从源钱包直接扣除<br />
+										• 适合交易数量较少的场景
+									</div>
+								</div>
+							</div>
+
+							<!-- 代理模式说明 -->
+							<div
+								id="delegateModeDesc"
+								class="mode-description"
+								style="margin-top: 15px; display: none"
+							>
+								<div
+									style="
+										padding: 15px;
+										background: #f0f9ff;
+										border-radius: 8px;
+										font-size: 13px;
+										border-left: 4px solid #3b82f6;
+									"
+								>
+									<div style="font-weight: 600; margin-bottom: 8px; color: #1e40af">
+										🤖 智能代理模式
+									</div>
+									<div style="color: #666; line-height: 1.6; margin-bottom: 12px">
+										工作原理：<br />
+										1️⃣ 您签名一次，生成临时"代理私钥"<br />
+										2️⃣ 转入 Gas 费到代理地址（约 <span id="estimatedGas">0.05</span> ETH）<br />
+										3️⃣ 系统自动执行所有交易<br />
+										4️⃣ 完成后自动退回剩余 Gas
+									</div>
+									<div
+										style="
+											padding: 10px;
+											background: #fef3c7;
+											border-radius: 6px;
+											margin-bottom: 12px;
+										"
+									>
+										<div style="font-size: 12px; color: #92400e">
+											⚠️ <strong>安全提示</strong><br />
+											• 代理私钥由您的钱包签名生成<br />
+											• 仅用于本次任务，1小时后失效<br />
+											• 不会上传到任何服务器
+										</div>
+									</div>
+									<div style="font-size: 12px; color: #059669">
+										✓ 推荐用于 10 笔以上的大批量归集
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 分组信息提示 -->
+						<div class="group-info">
+							<div class="group-info-title">⚠️ 批次分组说明</div>
+							<p style="margin-bottom: 10px">
+								由于区块链 Gas Limit 限制，您的钱包将被分为多个批次处理：
+							</p>
+							<div class="group-list" id="groupList">
+								<div class="group-item">
+									<span>批次 1</span>
+									<span class="group-badge">100 个钱包</span>
+								</div>
+								<div class="group-item">
+									<span>批次 2</span>
+									<span class="group-badge">50 个钱包</span>
+								</div>
+							</div>
+							<p style="margin-top: 10px; font-size: 13px; color: #666">
+								💡 每个批次最多处理 100 个钱包，总计需要 2 笔交易
+							</p>
+						</div>
+
+						<div class="form-group">
+							<label class="form-label">归集目标地址</label>
+							<input
+								type="text"
+								class="form-input"
+								id="targetAddress"
+								placeholder="输入接收所有资产的钱包地址 (0x...)"
+							/>
+							<p style="font-size: 12px; color: #999; margin-top: 8px">
+								💡 所有资产将转移到这个地址，请仔细核对
+							</p>
+						</div>
+
+						<div class="form-group">
+							<label class="form-label">选择要归集的资产</label>
+							<div style="border: 2px solid #e0e0e0; border-radius: 10px; padding: 15px">
+								<label style="display: flex; align-items: center; margin-bottom: 12px">
+									<input type="checkbox" checked style="margin-right: 10px" />
+									<span>原生代币 (ETH/BNB/MATIC)</span>
+									<span style="margin-left: auto; color: #10b981; font-weight: 600">15.234</span>
+								</label>
+								<label style="display: flex; align-items: center; margin-bottom: 12px">
+									<input type="checkbox" checked style="margin-right: 10px" />
+									<span>USDT</span>
+									<span style="margin-left: auto; color: #10b981; font-weight: 600">1,234.56</span>
+								</label>
+								<label style="display: flex; align-items: center">
+									<input type="checkbox" checked style="margin-right: 10px" />
+									<span>USDC</span>
+									<span style="margin-left: auto; color: #10b981; font-weight: 600">890.00</span>
+								</label>
+							</div>
+						</div>
+
+						<!-- 费用预览 -->
+						<div class="fee-preview">
+							<div class="fee-row">
+								<span class="fee-label">源钱包数量</span>
+								<span class="fee-value" id="walletCount">5 个</span>
+							</div>
+							<div class="fee-row">
+								<span class="fee-label">分批次数</span>
+								<span class="fee-value" id="batchCount">2 批次</span>
+							</div>
+							<div class="fee-row">
+								<span class="fee-label">预估 Gas 费用</span>
+								<span class="fee-value">~$10.00</span>
+							</div>
+							<div class="fee-row">
+								<span class="fee-label">平台手续费 (2笔 × $10)</span>
+								<span class="fee-value">
+									$20.00
+									<span class="discount-tag">会员免费</span>
+								</span>
+							</div>
+							<div class="fee-row fee-total">
+								<span class="fee-label">总费用</span>
+								<span class="fee-value">$30.00</span>
+							</div>
+						</div>
+
+						<div class="button-group">
+							<button class="btn btn-secondary" onclick="prevStep(2)">← 上一步</button>
+							<button class="btn btn-primary" onclick="startCollection()">🚀 开始归集</button>
+						</div>
+					</div>
+
+					<!-- 步骤3.5: 代理模式准备 -->
+					<div class="form-section" id="step3_5">
+						<h3 style="font-size: 18px; font-weight: 600; margin-bottom: 20px">🤖 设置代理模式</h3>
+
+						<!-- 进度指示 -->
+						<div style="display: flex; gap: 10px; margin-bottom: 30px">
+							<div class="delegate-step active" id="delegateStep1">
+								<div class="delegate-step-num">1</div>
+								<div class="delegate-step-label">生成代理私钥</div>
+							</div>
+							<div class="delegate-step" id="delegateStep2">
+								<div class="delegate-step-num">2</div>
+								<div class="delegate-step-label">转入Gas费</div>
+							</div>
+							<div class="delegate-step" id="delegateStep3">
+								<div class="delegate-step-num">3</div>
+								<div class="delegate-step-label">开始执行</div>
+							</div>
+						</div>
+
+						<!-- 步骤1: 生成代理私钥 -->
+						<div id="delegateSubStep1" class="delegate-substep">
+							<div class="group-info" style="background: #fef3c7; border-left-color: #f59e0b">
+								<div class="group-info-title" style="color: #d97706">📝 即将请求签名</div>
+								<p style="margin-bottom: 10px">请在钱包中签名以下消息以生成临时代理私钥：</p>
+								<div
+									style="
+										background: white;
+										padding: 12px;
+										border-radius: 6px;
+										font-family: monospace;
+										font-size: 12px;
+										color: #666;
+										max-height: 150px;
+										overflow-y: auto;
+									"
+								>
+									<pre
+										id="signatureMessage"
+										style="margin: 0; white-space: pre-wrap"
+									>批量归集助手 - 代理授权
+
+任务ID: <span id="taskIdInMessage"></span>
+网络: <span id="networkInMessage"></span>
+钱包: <span id="walletInMessage"></span>
+交易数: <span id="txCountInMessage"></span>
+时间: <span id="timeInMessage"></span>
+
+我授权生成临时代理私钥用于本次归集任务
+有效期: 1小时</pre>
+								</div>
+							</div>
+
+							<button
+								class="btn btn-primary"
+								style="width: 100%; margin-top: 15px"
+								onclick="generateDelegateKey()"
+							>
+								✍️ 签名生成代理私钥
+							</button>
+						</div>
+
+						<!-- 步骤2: 转入Gas费 -->
+						<div id="delegateSubStep2" class="delegate-substep" style="display: none">
+							<div class="group-info" style="background: #dbeafe; border-left-color: #3b82f6">
+								<div class="group-info-title" style="color: #1e40af">💰 转入 Gas 费</div>
+								<p style="margin-bottom: 15px">代理私钥已生成，现在需要转入 Gas 费用：</p>
+
+								<div
+									style="background: white; padding: 15px; border-radius: 8px; margin-bottom: 15px"
+								>
+									<div style="display: flex; justify-content: space-between; margin-bottom: 10px">
+										<span style="color: #666">代理地址:</span>
+										<span
+											style="font-family: monospace; font-size: 12px; color: #333"
+											id="delegateAddress"
+										></span>
+									</div>
+									<div style="display: flex; justify-content: space-between; margin-bottom: 10px">
+										<span style="color: #666">预估 Gas 费:</span>
+										<span style="font-weight: 600; color: #333" id="estimatedGasFee"></span>
+									</div>
+									<div style="display: flex; justify-content: space-between; margin-bottom: 10px">
+										<span style="color: #666">建议转入:</span>
+										<span style="font-weight: 600; color: #3b82f6" id="recommendedAmount"></span>
+									</div>
+									<div style="display: flex; justify-content: space-between">
+										<span style="color: #666">当前余额:</span>
+										<span style="font-weight: 600" id="delegateBalance">0 ETH</span>
+									</div>
+								</div>
+
+								<div style="font-size: 12px; color: #666; line-height: 1.6">
+									💡 建议转入金额 = 预估Gas费 × 1.2（含20%缓冲）<br />
+									✓ 归集完成后会自动退回剩余Gas到您的钱包
+								</div>
+							</div>
+
+							<button
+								class="btn btn-primary"
+								style="width: 100%; margin-top: 15px"
+								onclick="transferGasFee()"
+							>
+								💸 转入 Gas 费
+							</button>
+
+							<div
+								id="waitingForGas"
+								style="
+									display: none;
+									text-align: center;
+									margin-top: 20px;
+									padding: 20px;
+									background: #f8f9fa;
+									border-radius: 10px;
+								"
+							>
+								<div class="spinner" style="margin: 0 auto 15px"></div>
+								<p style="color: #666; font-size: 14px">等待 Gas 费到账...</p>
+								<p style="color: #999; font-size: 12px">通常需要 15-30 秒</p>
+							</div>
+						</div>
+
+						<!-- 步骤3: 准备就绪 -->
+						<div id="delegateSubStep3" class="delegate-substep" style="display: none">
+							<div style="text-align: center; padding: 40px 20px">
+								<div style="font-size: 60px; margin-bottom: 20px">✅</div>
+								<h3 style="font-size: 20px; font-weight: 600; color: #10b981; margin-bottom: 10px">
+									准备就绪！
+								</h3>
+								<p style="color: #666; margin-bottom: 30px">代理模式已设置完成，即将开始自动归集</p>
+
+								<div
+									style="
+										background: #f0fdf4;
+										padding: 20px;
+										border-radius: 10px;
+										text-align: left;
+										margin-bottom: 20px;
+									"
+								>
+									<div style="font-weight: 600; margin-bottom: 12px; color: #166534">
+										📊 任务摘要
+									</div>
+									<div
+										style="
+											display: flex;
+											justify-content: space-between;
+											padding: 8px 0;
+											border-bottom: 1px solid #dcfce7;
+										"
+									>
+										<span style="color: #666">代理地址:</span>
+										<span
+											style="font-size: 12px; font-family: monospace"
+											id="delegateSummaryAddress"
+										></span>
+									</div>
+									<div
+										style="
+											display: flex;
+											justify-content: space-between;
+											padding: 8px 0;
+											border-bottom: 1px solid #dcfce7;
+										"
+									>
+										<span style="color: #666">可用 Gas:</span>
+										<span
+											style="font-weight: 600; color: #10b981"
+											id="delegateSummaryBalance"
+										></span>
+									</div>
+									<div style="display: flex; justify-content: space-between; padding: 8px 0">
+										<span style="color: #666">待发送交易:</span>
+										<span style="font-weight: 600" id="delegateSummaryTxCount"></span>
+									</div>
+								</div>
+							</div>
+
+							<button
+								class="btn btn-primary"
+								style="width: 100%"
+								onclick="startDelegateCollection()"
+							>
+								🚀 开始自动归集
+							</button>
+						</div>
+
+						<div class="button-group" style="margin-top: 20px">
+							<button class="btn btn-secondary" onclick="backToStep3()">← 返回</button>
+						</div>
+					</div>
+
+					<!-- 步骤4: 归集进度 -->
+					<div class="form-section" id="step4">
+						<!-- 签名提示 -->
+						<div
+							class="group-info"
+							style="background: #fef3c7; border-left-color: #f59e0b; margin-bottom: 20px"
+						>
+							<div class="group-info-title" style="color: #d97706">⚡ 批量签名模式</div>
+							<p style="margin-bottom: 10px">为了提升效率，我们将所有交易打包提交给钱包：</p>
+							<ul style="margin-left: 20px; font-size: 13px; color: #666">
+								<li style="margin: 5px 0">
+									✅ 钱包会依次弹出 <strong id="totalTxCount">100</strong> 笔交易签名
+								</li>
+								<li style="margin: 5px 0">✅ 您只需连续点击"确认"即可</li>
+								<li style="margin: 5px 0">✅ 中途可以拒绝后续交易</li>
+							</ul>
+						</div>
+
+						<div class="progress-section">
+							<div class="progress-header">
+								<div class="progress-status" id="progressStatus">准备发送交易...</div>
+								<div class="progress-percentage" id="progressPercentage">0%</div>
+							</div>
+							<div class="progress-bar-container">
+								<div class="progress-bar" id="progressBar" style="width: 0%"></div>
+							</div>
+
+							<div
+								style="margin-top: 15px; padding: 15px; background: #f8f9fa; border-radius: 10px"
+							>
+								<div style="display: flex; justify-content: space-between; margin-bottom: 10px">
+									<span style="color: #666">已发送：</span>
+									<span style="font-weight: 600" id="sentCount">0 / 0</span>
+								</div>
+								<div style="display: flex; justify-content: space-between; margin-bottom: 10px">
+									<span style="color: #666">确认中：</span>
+									<span style="font-weight: 600; color: #3b82f6" id="pendingCount">0</span>
+								</div>
+								<div style="display: flex; justify-content: space-between; margin-bottom: 10px">
+									<span style="color: #666">已完成：</span>
+									<span style="font-weight: 600; color: #10b981" id="completedCount">0</span>
+								</div>
+								<div style="display: flex; justify-content: space-between">
+									<span style="color: #666">失败：</span>
+									<span style="font-weight: 600; color: #ef4444" id="failedCount">0</span>
+								</div>
+							</div>
+
+							<div class="batch-progress" id="batchProgress" style="margin-top: 20px">
+								<!-- 批次进度将动态生成 -->
+							</div>
+						</div>
+
+						<div class="button-group" style="margin-top: 30px">
+							<button class="btn btn-secondary" onclick="stopCollection()" id="stopBtn">
+								⏸️ 暂停发送
+							</button>
+						</div>
+					</div>
+
+					<!-- 步骤5: 归集结果 -->
+					<div class="form-section" id="step5">
+						<div class="result-container" id="resultContainer">
+							<!-- 结果内容将动态生成 -->
+						</div>
+
+						<!-- 失败交易详情 -->
+						<div id="failedTxDetails" style="margin-top: 20px; display: none">
+							<div class="error-list">
+								<div
+									style="
+										display: flex;
+										justify-content: space-between;
+										align-items: center;
+										margin-bottom: 15px;
+									"
+								>
+									<strong style="color: #ef4444">失败的交易明细：</strong>
+									<button
+										class="btn btn-secondary"
+										style="padding: 4px 12px; font-size: 12px"
+										onclick="downloadFailedList()"
+									>
+										📥 下载失败列表
+									</button>
+								</div>
+								<div id="failedTxList">
+									<!-- 动态生成失败交易列表 -->
+								</div>
+							</div>
+						</div>
+
+						<div class="button-group">
+							<button class="btn btn-secondary" onclick="location.reload()">← 返回首页</button>
+							<button class="btn btn-primary" onclick="downloadCompleteReport()">
+								📥 下载完整报告
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- 右侧提示卡片 -->
+				<div class="tip-card" id="tipCard">
+					<!-- 步骤1提示 -->
+					<div class="tip-content-step" id="tip1">
+						<div class="tip-icon">🌐</div>
+						<div class="tip-title">选择正确的网络</div>
+						<p class="tip-content">不同网络的手续费不同，选择您钱包所在的网络：</p>
+						<ul class="tip-list">
+							<li>Ethereum：最安全但费用较高</li>
+							<li>BNB Chain：速度快，费用适中</li>
+							<li>Polygon：费用最低</li>
+						</ul>
+					</div>
+
+					<!-- 步骤2提示 -->
+					<div class="tip-content-step" id="tip2" style="display: none">
+						<div class="tip-icon">🔒</div>
+						<div class="tip-title">安全导入钱包</div>
+						<p class="tip-content">我们重视您的资产安全：</p>
+						<ul class="tip-list">
+							<li>助记词和私钥仅在本地处理</li>
+							<li>不会上传到任何服务器</li>
+							<li>建议完成后清理浏览器缓存</li>
+							<li>可以使用助记词批量导入HD钱包</li>
+						</ul>
+					</div>
+
+					<!-- 步骤3提示 -->
+					<div class="tip-content-step" id="tip3" style="display: none">
+						<div class="tip-icon">✨</div>
+						<div class="tip-title">确认归集信息</div>
+						<p class="tip-content">最后检查：</p>
+						<ul class="tip-list">
+							<li>目标地址是否正确</li>
+							<li>要归集的资产是否全选</li>
+							<li>费用预览是否符合预期</li>
+							<li>开通会员可免手续费</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			let currentStep = 1;
+			const wallets = [];
+			const BATCH_SIZE = 100; // 每批次最多100个钱包
+			let batches = [];
+			let currentBatch = 0;
+			let pathType = 'sequential';
+			let dateFormat = 'yyyymmdd';
+			let signMode = 'manual'; // manual | delegate
+			let delegateKey = null;
+			let scanResults = {
+				total: 0,
+				withBalance: 0,
+				empty: 0,
+				details: []
+			};
+			let collectionResults = {
+				total: 0,
+				sent: 0,
+				pending: 0,
+				completed: 0,
+				failed: 0,
+				transactions: [],
+				failedTx: []
+			};
+			let isPaused = false;
+
+			// 切换步骤
+			function nextStep(step) {
+				if (step === 2 && !document.getElementById('networkSelect').value) {
+					alert('请先选择网络！');
+					return;
+				}
+				if (step === 3 && wallets.filter((w) => w.hasBalance).length === 0) {
+					alert('没有可归集的资产！请先扫描资产。');
+					return;
+				}
+
+				// 进入步骤3时，计算分组
+				if (step === 3) {
+					calculateBatches();
+				}
+
+				updateStep(step);
+			}
+
+			function prevStep(step) {
+				updateStep(step);
+			}
+
+			function updateStep(step) {
+				// 隐藏所有步骤内容
+				document.querySelectorAll('.form-section').forEach((section) => {
+					section.classList.remove('active');
+				});
+
+				// 显示当前步骤
+				document.getElementById('step' + step.toString().replace('.', '_')).classList.add('active');
+
+				// 更新步骤指示器
+				const numStep = parseFloat(step);
+				document.querySelectorAll('.step').forEach((stepEl, index) => {
+					stepEl.classList.remove('active', 'completed');
+					if (index + 1 < Math.floor(numStep)) {
+						stepEl.classList.add('completed');
+					} else if (index + 1 === Math.floor(numStep)) {
+						stepEl.classList.add('active');
+					}
+				});
+
+				// 更新提示卡片
+				document.querySelectorAll('.tip-content-step').forEach((tip) => {
+					tip.style.display = 'none';
+				});
+
+				// 步骤4、5隐藏提示卡片
+				if (Math.floor(numStep) <= 3) {
+					document.getElementById('tip' + Math.floor(numStep)).style.display = 'block';
+					document.getElementById('tipCard').style.display = 'block';
+				} else {
+					document.getElementById('tipCard').style.display = 'none';
+				}
+
+				currentStep = numStep;
+			}
+
+			// 选择路径类型
+			function selectPathType(type) {
+				pathType = type;
+				if (type === 'sequential') {
+					document.getElementById('sequentialRange').style.display = 'block';
+					document.getElementById('dateRange').style.display = 'none';
+				} else {
+					document.getElementById('sequentialRange').style.display = 'none';
+					document.getElementById('dateRange').style.display = 'block';
+				}
+			}
+
+			// 选择日期格式
+			function selectDateFormat(format) {
+				dateFormat = format;
+			}
+
+			// 衍生地址
+			function deriveAddresses() {
+				const mnemonic = document.getElementById('mnemonicText').value.trim();
+				if (!mnemonic) {
+					alert('请输入助记词！');
+					return;
+				}
+
+				wallets.length = 0; // 清空
+
+				if (pathType === 'sequential') {
+					const start = parseInt(document.getElementById('startIndex').value);
+					const end = parseInt(document.getElementById('endIndex').value);
+
+					if (isNaN(start) || isNaN(end) || start > end) {
+						alert('请输入有效的范围！');
+						return;
+					}
+
+					const count = end - start + 1;
+					if (count > 10000) {
+						alert('最多支持10000个地址！');
+						return;
+					}
+
+					// 生成地址
+					for (let i = start; i <= end; i++) {
+						wallets.push({
+							address: '0x' + Math.random().toString(16).substr(2, 40),
+							path: `m/44'/60'/0'/0/${i}`,
+							hasBalance: null, // 未扫描
+							balance: 0
+						});
+					}
+				} else {
+					const startDate = new Date(document.getElementById('startDate').value);
+					const endDate = new Date(document.getElementById('endDate').value);
+
+					if (!startDate || !endDate || startDate > endDate) {
+						alert('请选择有效的日期范围！');
+						return;
+					}
+
+					// 生成日期序列
+					let currentDate = new Date(startDate);
+					while (currentDate <= endDate) {
+						let pathIndex;
+						if (dateFormat === 'yyyymmdd') {
+							pathIndex =
+								currentDate.getFullYear() * 10000 +
+								(currentDate.getMonth() + 1) * 100 +
+								currentDate.getDate();
+						} else {
+							pathIndex =
+								currentDate.getFullYear() * 10000 +
+								(currentDate.getMonth() + 1) * 100 +
+								currentDate.getDate();
+							pathIndex = parseInt(pathIndex.toString().replace(/0(\d)$/, '$1'));
+						}
+
+						wallets.push({
+							address: '0x' + Math.random().toString(16).substr(2, 40),
+							path: `m/44'/60'/0'/0/${pathIndex}`,
+							hasBalance: null,
+							balance: 0
+						});
+
+						currentDate.setDate(currentDate.getDate() + 1);
+					}
+				}
+
+				updateWalletList();
+				document.getElementById('scanAssetsBtn').style.display = 'block';
+				alert(`✅ 成功生成 ${wallets.length} 个地址！\n\n请点击"扫描资产"按钮检查哪些地址有余额。`);
+			}
+
+			// 批量导入私钥
+			function importPrivateKeys() {
+				const text = document.getElementById('privateKeyText').value.trim();
+				if (!text) {
+					alert('请输入私钥！');
+					return;
+				}
+
+				const lines = text.split('\n').filter((line) => line.trim().startsWith('0x'));
+				wallets.length = 0;
+
+				lines.forEach((pk) => {
+					wallets.push({
+						address: '0x' + Math.random().toString(16).substr(2, 40),
+						privateKey: pk.trim(),
+						hasBalance: null,
+						balance: 0
+					});
+				});
+
+				updateWalletList();
+				document.getElementById('scanAssetsBtn').style.display = 'block';
+				alert(`✅ 成功导入 ${wallets.length} 个钱包！\n\n请点击"扫描资产"按钮检查哪些地址有余额。`);
+			}
+
+			// 选择导入方式
+			function selectImportType(type) {
+				document.querySelectorAll('.radio-option').forEach((option) => {
+					option.classList.remove('selected');
+				});
+				event.target.closest('.radio-option').classList.add('selected');
+
+				if (type === 'mnemonic') {
+					document.getElementById('mnemonicInput').style.display = 'block';
+					document.getElementById('privateKeyInput').style.display = 'none';
+				} else {
+					document.getElementById('mnemonicInput').style.display = 'none';
+					document.getElementById('privateKeyInput').style.display = 'block';
+				}
+			}
+
+			// 扫描资产
+			async function scanAssets() {
+				if (wallets.length === 0) {
+					alert('请先导入地址！');
+					return;
+				}
+
+				// 进入扫描页面
+				updateStep(2.5);
+
+				// 初始化扫描
+				document.getElementById('totalScanCount').textContent = wallets.length;
+				document.getElementById('scannedCount').textContent = '0';
+				document.getElementById('scanPercentage').textContent = '0%';
+				document.getElementById('scanProgressBar').style.width = '0%';
+
+				// 模拟扫描
+				for (let i = 0; i < wallets.length; i++) {
+					// 模拟30%的地址有余额
+					const hasBalance = Math.random() > 0.7;
+					wallets[i].hasBalance = hasBalance;
+					wallets[i].balance = hasBalance ? (Math.random() * 5).toFixed(4) : 0;
+
+					// 更新进度
+					const progress = (((i + 1) / wallets.length) * 100).toFixed(0);
+					document.getElementById('scannedCount').textContent = i + 1;
+					document.getElementById('scanPercentage').textContent = `${progress}%`;
+					document.getElementById('scanProgressBar').style.width = `${progress}%`;
+
+					// 模拟延迟
+					if (i % 10 === 0) {
+						await sleep(100);
+					}
+				}
+
+				// 统计结果
+				scanResults.total = wallets.length;
+				scanResults.withBalance = wallets.filter((w) => w.hasBalance).length;
+				scanResults.empty = scanResults.total - scanResults.withBalance;
+				scanResults.details = wallets.filter((w) => w.hasBalance);
+
+				// 显示结果
+				showScanResults();
+			}
+
+			// 显示扫描结果
+			function showScanResults() {
+				updateStep(2.8);
+
+				document.getElementById('totalAddresses').textContent = scanResults.total;
+				document.getElementById('withBalanceCount').textContent = scanResults.withBalance;
+				document.getElementById('emptyCount').textContent = scanResults.empty;
+
+				const listEl = document.getElementById('assetAddressList');
+				listEl.innerHTML = scanResults.details
+					.map(
+						(w) => `
+                <div class="wallet-item">
+                    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                        <div>
+                            <span class="wallet-address">${w.address.substr(0, 10)}...${w.address.substr(-8)}</span>
+                            <div style="font-size: 11px; color: #999; margin-top: 4px;">${w.path || 'Private Key'}</div>
+                        </div>
+                        <span class="wallet-balance">${w.balance} ETH</span>
+                    </div>
+                </div>
+            `
+					)
+					.join('');
+			}
+
+			// 下载扫描结果
+			function downloadScanResult() {
+				const csv = ['地址,路径/来源,余额(ETH)'];
+				wallets.forEach((w) => {
+					csv.push(`${w.address},${w.path || 'Private Key'},${w.balance}`);
+				});
+
+				downloadCSV(csv.join('\n'), `scan-result-${Date.now()}.csv`);
+			}
+
+			// 继续归集（仅有资产的地址）
+			function proceedWithAssets() {
+				// 只保留有余额的地址
+				const originalCount = wallets.length;
+				const filtered = wallets.filter((w) => w.hasBalance);
+
+				if (filtered.length === 0) {
+					alert('没有可归集的资产！');
+					return;
+				}
+
+				wallets.length = 0;
+				wallets.push(...filtered);
+
+				alert(
+					`✅ 已过滤 ${originalCount - filtered.length} 个空地址\n保留 ${filtered.length} 个有资产的地址`
+				);
+
+				nextStep(3);
+			}
+
+			// 返回导入
+			function backToImport() {
+				wallets.length = 0;
+				updateWalletList();
+				updateStep(2);
+			}
+
+			// 更新钱包列表
+			function updateWalletList() {
+				const listEl = document.getElementById('walletList');
+
+				if (wallets.length === 0) {
+					listEl.innerHTML =
+						'<div class="empty-state">还没有生成地址<br><small>请使用上方方式导入</small></div>';
+					document.getElementById('walletCountLabel').textContent = '(0)';
+					document.getElementById('nextToStep3Btn').disabled = true;
+					return;
+				}
+
+				// 只显示前3个
+				const displayCount = Math.min(3, wallets.length);
+				let html = '';
+
+				for (let i = 0; i < displayCount; i++) {
+					const wallet = wallets[i];
+					html += `
+                    <div class="wallet-item">
+                        <div style="flex: 1;">
+                            <span class="wallet-address">${wallet.address.substr(0, 10)}...${wallet.address.substr(-8)}</span>
+                            <div style="font-size: 11px; color: #999; margin-top: 4px;">${wallet.path || 'Private Key'}</div>
+                        </div>
+                    </div>
+                `;
+				}
+
+				if (wallets.length > 3) {
+					html += `
+                    <div style="text-align: center; padding: 10px; color: #666; font-size: 14px;">
+                        还有 ${wallets.length - 3} 个地址...
+                    </div>
+                `;
+				}
+
+				listEl.innerHTML = html;
+				document.getElementById('walletCountLabel').textContent = `(${wallets.length})`;
+			}
+
+			// 计算分组
+			function calculateBatches() {
+				batches = [];
+				const walletsWithBalance = wallets.filter((w) => w.hasBalance);
+
+				for (let i = 0; i < walletsWithBalance.length; i += BATCH_SIZE) {
+					batches.push(walletsWithBalance.slice(i, i + BATCH_SIZE));
+				}
+
+				updateGroupInfo();
+				updateFeePreview();
+			}
+
+			// 更新分组信息
+			function updateGroupInfo() {
+				const groupList = document.getElementById('groupList');
+				groupList.innerHTML = batches
+					.map(
+						(batch, index) => `
+                <div class="group-item">
+                    <span>批次 ${index + 1}</span>
+                    <span class="group-badge">${batch.length} 个钱包</span>
+                </div>
+            `
+					)
+					.join('');
+			}
+
+			// 更新费用预览
+			function updateFeePreview() {
+				const totalWallets = batches.reduce((sum, b) => sum + b.length, 0);
+				document.getElementById('walletCount').textContent = `${totalWallets} 个`;
+				document.getElementById('batchCount').textContent = `${batches.length} 批次`;
+			}
+
+			// 选择签名模式
+			function selectSignMode(mode) {
+				signMode = mode;
+
+				// 更新选中状态
+				document.querySelectorAll('[name="signMode"]').forEach((radio) => {
+					radio.closest('.radio-option').classList.remove('selected');
+				});
+				event.target.closest('.radio-option').classList.add('selected');
+
+				// 显示对应说明
+				if (mode === 'manual') {
+					document.getElementById('manualModeDesc').style.display = 'block';
+					document.getElementById('delegateModeDesc').style.display = 'none';
+				} else {
+					document.getElementById('manualModeDesc').style.display = 'none';
+					document.getElementById('delegateModeDesc').style.display = 'block';
+				}
+			}
+
+			// 开始归集（根据模式）
+			function startCollection() {
+				const targetAddress = document.getElementById('targetAddress').value;
+				if (!targetAddress || !targetAddress.startsWith('0x')) {
+					alert('❌ 请输入有效的目标地址！');
+					return;
+				}
+
+				if (signMode === 'delegate') {
+					// 进入代理模式准备
+					startDelegateMode();
+				} else {
+					// 手动模式
+					startManualMode();
+				}
+			}
+
+			// 返回步骤3
+			function backToStep3() {
+				updateStep(3);
+			}
+
+			// 开始代理模式
+			function startDelegateMode() {
+				updateStep(3.5);
+
+				// 填充签名消息
+				document.getElementById('taskIdInMessage').textContent = 'TASK_' + Date.now();
+				document.getElementById('networkInMessage').textContent =
+					document.getElementById('networkSelect').selectedOptions[0].text;
+				document.getElementById('walletInMessage').textContent =
+					'0x' + Math.random().toString(16).substr(2, 40);
+				document.getElementById('txCountInMessage').textContent = batches.length;
+				document.getElementById('timeInMessage').textContent = new Date().toLocaleString('zh-CN');
+			}
+
+			// 生成代理私钥
+			async function generateDelegateKey() {
+				// 模拟钱包签名
+				await sleep(1000);
+
+				const confirmed = confirm(
+					'📝 钱包签名请求\n\n请在 MetaMask 中确认签名以生成代理私钥\n\n⚠️ 此签名不会产生任何费用'
+				);
+
+				if (!confirmed) {
+					alert('❌ 用户取消了签名');
+					return;
+				}
+
+				// 模拟生成代理私钥
+				delegateKey = {
+					address: '0x' + Math.random().toString(16).substr(2, 40),
+					privateKey: '0x' + Math.random().toString(16).substr(2, 64),
+					createdAt: Date.now(),
+					expiresAt: Date.now() + 3600000 // 1小时后过期
+				};
+
+				// 更新UI
+				document.getElementById('delegateStep1').classList.remove('active');
+				document.getElementById('delegateStep1').classList.add('completed');
+				document.getElementById('delegateStep2').classList.add('active');
+
+				document.getElementById('delegateSubStep1').style.display = 'none';
+				document.getElementById('delegateSubStep2').style.display = 'block';
+
+				// 显示代理地址和Gas费估算
+				document.getElementById('delegateAddress').textContent =
+					delegateKey.address.substr(0, 10) + '...' + delegateKey.address.substr(-8);
+
+				const gasPerTx = 0.0005; // 每笔约0.0005 ETH
+				const estimatedGas = (gasPerTx * batches.length).toFixed(4);
+				const recommended = (gasPerTx * batches.length * 1.2).toFixed(4);
+
+				document.getElementById('estimatedGasFee').textContent = `${estimatedGas} ETH`;
+				document.getElementById('recommendedAmount').textContent = `${recommended} ETH`;
+				document.getElementById('estimatedGas').textContent = recommended;
+			}
+
+			// 转入Gas费
+			async function transferGasFee() {
+				const btn = event.target;
+				btn.disabled = true;
+				btn.textContent = '转账中...';
+
+				// 模拟转账
+				await sleep(2000);
+
+				// 显示等待状态
+				btn.style.display = 'none';
+				document.getElementById('waitingForGas').style.display = 'block';
+
+				// 模拟等待确认
+				await sleep(3000);
+
+				// 更新余额
+				const recommended = document.getElementById('recommendedAmount').textContent;
+				document.getElementById('delegateBalance').textContent = recommended;
+				document.getElementById('delegateBalance').style.color = '#10b981';
+
+				// 进入下一步
+				document.getElementById('delegateStep2').classList.remove('active');
+				document.getElementById('delegateStep2').classList.add('completed');
+				document.getElementById('delegateStep3').classList.add('active');
+
+				document.getElementById('delegateSubStep2').style.display = 'none';
+				document.getElementById('delegateSubStep3').style.display = 'block';
+
+				// 填充摘要信息
+				document.getElementById('delegateSummaryAddress').textContent =
+					delegateKey.address.substr(0, 10) + '...' + delegateKey.address.substr(-8);
+				document.getElementById('delegateSummaryBalance').textContent = recommended;
+				document.getElementById('delegateSummaryTxCount').textContent = `${batches.length} 笔`;
+			}
+
+			// 开始代理归集
+			function startDelegateCollection() {
+				alert('🚀 开始自动归集！\n\n所有交易将由代理私钥自动签名发送\n无需您再次操作钱包');
+
+				// 进入进度页面
+				updateStep(4);
+				document.getElementById('totalTxCount').textContent = batches.length;
+
+				collectionResults = {
+					total: batches.length,
+					sent: 0,
+					pending: 0,
+					completed: 0,
+					failed: 0,
+					transactions: [],
+					failedTx: []
+				};
+				isPaused = false;
+
+				// 更新提示文字（代理模式不需要手动签名）
+				document.querySelector('.group-info .group-info-title').textContent = '🤖 自动执行中';
+				document.querySelector('.group-info ul').innerHTML = `
+                <li style="margin: 5px 0;">✓ 使用代理私钥自动签名</li>
+                <li style="margin: 5px 0;">✓ 无需手动确认</li>
+                <li style="margin: 5px 0;">✓ 完成后自动退回剩余Gas</li>
+            `;
+
+				// 初始化批次进度UI
+				initBatchProgress();
+
+				// 开始处理
+				processBatchesWithDelegate();
+			}
+
+			// 使用代理模式处理批次
+			async function processBatchesWithDelegate() {
+				for (let i = 0; i < batches.length; i++) {
+					if (isPaused) {
+						alert('已暂停发送');
+						return;
+					}
+
+					currentBatch = i;
+					updateCollectionProgress();
+
+					// 直接发送（无需等待用户签名）
+					updateBatchStatus(i, 'processing', '自动签名中');
+					await sleep(500);
+
+					// 发送交易
+					collectionResults.sent++;
+					collectionResults.pending++;
+					updateBatchStatus(i, 'processing', '交易发送中...');
+					updateCollectionProgress();
+
+					// 模拟处理
+					const result = await processSingleBatch(i, batches[i]);
+					collectionResults.pending--;
+
+					if (result.success) {
+						updateBatchStatus(i, 'completed', '已完成', result);
+						collectionResults.completed++;
+						collectionResults.transactions.push(result.txHash);
+					} else {
+						updateBatchStatus(i, 'failed', '交易失败', result);
+						collectionResults.failed++;
+						collectionResults.failedTx.push({
+							batch: i + 1,
+							wallets: batches[i],
+							reason: result.error,
+							txHash: result.txHash
+						});
+					}
+
+					updateCollectionProgress();
+					await sleep(1000); // 代理模式更快
+				}
+
+				// 自动退回剩余Gas
+				await refundRemainingGas();
+
+				// 完成，显示结果
+				showResults();
+			}
+
+			// 退回剩余Gas
+			async function refundRemainingGas() {
+				const remaining = (Math.random() * 0.02).toFixed(4);
+
+				if (parseFloat(remaining) > 0) {
+					alert(`💰 退回剩余 Gas\n\n剩余 ${remaining} ETH 已自动退回到您的钱包`);
+				}
+			}
+
+			// 开始手动模式（原逻辑）
+			function startManualMode() {
+				const targetAddress = document.getElementById('targetAddress').value;
+				if (!targetAddress || !targetAddress.startsWith('0x')) {
+					alert('❌ 请输入有效的目标地址！');
+					return;
+				}
+
+				const totalTx = batches.length;
+				if (
+					!confirm(
+						`⚠️ 重要提示\n\n将发送 ${totalTx} 笔交易到区块链\n钱包会依次弹出 ${totalTx} 次签名请求\n\n建议：\n- 确保网络稳定\n- 准备好连续点击"确认"\n- Gas费充足\n\n确认开始吗？`
+					)
+				) {
+					return;
+				}
+
+				// 进入进度页面
+				updateStep(4);
+				document.getElementById('totalTxCount').textContent = totalTx;
+
+				collectionResults = {
+					total: totalTx,
+					sent: 0,
+					pending: 0,
+					completed: 0,
+					failed: 0,
+					transactions: [],
+					failedTx: []
+				};
+				isPaused = false;
+
+				// 初始化批次进度UI
+				initBatchProgress();
+
+				// 开始处理
+				processBatches();
+			}
+
+			// 初始化批次进度UI
+			function initBatchProgress() {
+				const container = document.getElementById('batchProgress');
+				container.innerHTML = batches
+					.map(
+						(batch, index) => `
+                <div class="batch-item pending" id="batch-${index}">
+                    <div class="batch-header">
+                        <span class="batch-title">交易 ${index + 1} - ${batch.length} 个钱包</span>
+                        <span class="batch-status pending" id="batch-status-${index}">等待签名</span>
+                    </div>
+                    <div class="batch-details" id="batch-details-${index}">
+                        <span class="batch-detail-item">⏳ 等待用户签名...</span>
+                    </div>
+                </div>
+            `
+					)
+					.join('');
+			}
+
+			// 处理所有批次
+			async function processBatches() {
+				for (let i = 0; i < batches.length; i++) {
+					if (isPaused) {
+						alert('已暂停发送');
+						return;
+					}
+
+					currentBatch = i;
+					updateCollectionProgress();
+
+					// 更新批次状态
+					updateBatchStatus(i, 'processing', '请在钱包中签名');
+
+					// 模拟签名请求
+					await sleep(1000);
+
+					// 85%概率用户确认签名
+					const userApproved = Math.random() > 0.15;
+
+					if (!userApproved) {
+						updateBatchStatus(i, 'failed', '用户拒绝签名', {
+							error: '用户取消了交易签名',
+							timestamp: new Date().toLocaleTimeString('zh-CN')
+						});
+						collectionResults.failed++;
+						collectionResults.failedTx.push({
+							batch: i + 1,
+							wallets: batches[i],
+							reason: '用户拒绝签名'
+						});
+						continue;
+					}
+
+					// 发送交易
+					collectionResults.sent++;
+					collectionResults.pending++;
+					updateBatchStatus(i, 'processing', '交易发送中...');
+					updateCollectionProgress();
+
+					// 模拟处理
+					const result = await processSingleBatch(i, batches[i]);
+					collectionResults.pending--;
+
+					if (result.success) {
+						updateBatchStatus(i, 'completed', '已完成', result);
+						collectionResults.completed++;
+						collectionResults.transactions.push(result.txHash);
+					} else {
+						updateBatchStatus(i, 'failed', '交易失败', result);
+						collectionResults.failed++;
+						collectionResults.failedTx.push({
+							batch: i + 1,
+							wallets: batches[i],
+							reason: result.error,
+							txHash: result.txHash
+						});
+					}
+
+					updateCollectionProgress();
+					await sleep(1500);
+				}
+
+				// 完成，显示结果
+				showResults();
+			}
+
+			// 处理单个批次
+			async function processSingleBatch(index, batch) {
+				await sleep(2000);
+
+				// 90%概率成功
+				const success = Math.random() > 0.1;
+
+				return {
+					success: success,
+					batchIndex: index,
+					walletCount: batch.length,
+					txHash: '0x' + Math.random().toString(16).substr(2, 64),
+					error: success ? null : 'Gas估算失败或网络拥堵',
+					gasUsed: success ? (Math.random() * 0.01).toFixed(6) : 0,
+					timestamp: new Date().toLocaleTimeString('zh-CN')
+				};
+			}
+
+			// 更新批次状态
+			function updateBatchStatus(index, status, statusText, result = null) {
+				const batchEl = document.getElementById(`batch-${index}`);
+				const statusEl = document.getElementById(`batch-status-${index}`);
+				const detailsEl = document.getElementById(`batch-details-${index}`);
+
+				if (!batchEl) return;
+
+				batchEl.className = `batch-item ${status}`;
+				statusEl.className = `batch-status ${status}`;
+				statusEl.textContent = statusText;
+
+				if (status === 'processing') {
+					detailsEl.innerHTML = `
+                    <span class="batch-detail-item">⏳ ${statusText}...</span>
+                `;
+				} else if (status === 'completed' && result) {
+					detailsEl.innerHTML = `
+                    <span class="batch-detail-item">✅ ${result.walletCount} 个钱包</span>
+                    <span class="batch-detail-item">⛽ Gas: ${result.gasUsed} ETH</span>
+                    <span class="batch-detail-item">🕐 ${result.timestamp}</span>
+                `;
+				} else if (status === 'failed' && result) {
+					detailsEl.innerHTML = `
+                    <span class="batch-detail-item" style="color: #ef4444;">❌ ${result.error}</span>
+                    <span class="batch-detail-item">🕐 ${result.timestamp}</span>
+                `;
+				}
+			}
+
+			// 更新归集进度
+			function updateCollectionProgress() {
+				const progress = ((collectionResults.sent / collectionResults.total) * 100).toFixed(0);
+				document.getElementById('progressPercentage').textContent = `${progress}%`;
+				document.getElementById('progressBar').style.width = `${progress}%`;
+				document.getElementById('progressStatus').textContent =
+					`已发送 ${collectionResults.sent}/${collectionResults.total} 笔交易`;
+
+				document.getElementById('sentCount').textContent =
+					`${collectionResults.sent} / ${collectionResults.total}`;
+				document.getElementById('pendingCount').textContent = collectionResults.pending;
+				document.getElementById('completedCount').textContent = collectionResults.completed;
+				document.getElementById('failedCount').textContent = collectionResults.failed;
+			}
+
+			// 暂停归集
+			function stopCollection() {
+				if (confirm('⚠️ 确认暂停吗？\n\n已发送的交易会继续执行\n未发送的交易将不再提交')) {
+					isPaused = true;
+					document.getElementById('stopBtn').textContent = '⏸️ 已暂停';
+					document.getElementById('stopBtn').disabled = true;
+				}
+			}
+
+			// 显示结果
+			function showResults() {
+				updateStep(5);
+
+				const container = document.getElementById('resultContainer');
+				const allSuccess = collectionResults.failed === 0;
+				const allFailed = collectionResults.completed === 0;
+
+				let resultType, resultIcon, resultTitle, resultSubtitle;
+
+				if (allSuccess) {
+					resultType = 'success';
+					resultIcon = '🎉';
+					resultTitle = '归集完成！';
+					resultSubtitle = '所有资产已成功归集到目标地址';
+				} else if (allFailed) {
+					resultType = 'failed';
+					resultIcon = '❌';
+					resultTitle = '归集失败';
+					resultSubtitle = '所有交易都未成功，请检查后重试';
+				} else {
+					resultType = 'partial';
+					resultIcon = '⚠️';
+					resultTitle = '部分成功';
+					resultSubtitle = `成功 ${collectionResults.completed} 笔，失败 ${collectionResults.failed} 笔`;
+				}
+
+				container.innerHTML = `
+                <div class="result-icon">${resultIcon}</div>
+                <h2 class="result-title ${resultType}">${resultTitle}</h2>
+                <p class="result-subtitle">${resultSubtitle}</p>
+                
+                <div class="result-stats">
+                    <div class="stat-box">
+                        <div class="stat-value">${collectionResults.total}</div>
+                        <div class="stat-label">总交易数</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value success">${collectionResults.completed}</div>
+                        <div class="stat-label">成功</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value failed">${collectionResults.failed}</div>
+                        <div class="stat-label">失败</div>
+                    </div>
+                </div>
+                
+                <div class="result-details">
+                    <div class="detail-row">
+                        <span class="detail-label">归集钱包数</span>
+                        <span class="detail-value">${wallets.length} 个</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">成功交易数</span>
+                        <span class="detail-value">${collectionResults.completed} 笔</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">总 Gas 费用</span>
+                        <span class="detail-value">~${(collectionResults.completed * 0.005).toFixed(4)} ETH</span>
+                    </div>
+                </div>
+            `;
+
+				// 显示失败详情
+				if (collectionResults.failed > 0) {
+					document.getElementById('failedTxDetails').style.display = 'block';
+					const failedList = document.getElementById('failedTxList');
+					failedList.innerHTML = collectionResults.failedTx
+						.map(
+							(tx) => `
+                    <div class="error-item">
+                        <strong>批次 ${tx.batch}</strong> (${tx.wallets.length} 个钱包)<br>
+                        <span style="color: #666;">原因：${tx.reason}</span>
+                        ${tx.txHash ? `<br><span style="font-size: 11px; color: #999;">交易哈希: ${tx.txHash.substr(0, 20)}...</span>` : ''}
+                    </div>
+                `
+						)
+						.join('');
+				}
+			}
+
+			// 下载失败列表
+			function downloadFailedList() {
+				const csv = ['批次,钱包数量,失败原因,交易哈希'];
+				collectionResults.failedTx.forEach((tx) => {
+					csv.push(`${tx.batch},${tx.wallets.length},${tx.reason},${tx.txHash || 'N/A'}`);
+				});
+				downloadCSV(csv.join('\n'), `failed-transactions-${Date.now()}.csv`);
+			}
+
+			// 下载完整报告
+			function downloadCompleteReport() {
+				const lines = [
+					'=== 批量归集助手 - 完整报告 ===',
+					`生成时间: ${new Date().toLocaleString('zh-CN')}`,
+					'',
+					'--- 汇总信息 ---',
+					`扫描地址总数: ${scanResults.total}`,
+					`有资产地址: ${scanResults.withBalance}`,
+					`空地址: ${scanResults.empty}`,
+					`发送交易数: ${collectionResults.total}`,
+					`成功: ${collectionResults.completed}`,
+					`失败: ${collectionResults.failed}`,
+					'',
+					'--- 成功的交易 ---'
+				];
+
+				collectionResults.transactions.forEach((tx, i) => {
+					lines.push(`交易 ${i + 1}: ${tx}`);
+				});
+
+				if (collectionResults.failedTx.length > 0) {
+					lines.push('');
+					lines.push('--- 失败的交易 ---');
+					collectionResults.failedTx.forEach((tx) => {
+						lines.push(`批次 ${tx.batch}: ${tx.reason}`);
+					});
+				}
+
+				downloadText(lines.join('\n'), `collection-report-${Date.now()}.txt`);
+			}
+
+			// 下载CSV
+			function downloadCSV(content, filename) {
+				const blob = new Blob(['\ufeff' + content], { type: 'text/csv;charset=utf-8;' });
+				const link = document.createElement('a');
+				link.href = URL.createObjectURL(blob);
+				link.download = filename;
+				link.click();
+			}
+
+			// 下载文本
+			function downloadText(content, filename) {
+				const blob = new Blob([content], { type: 'text/plain' });
+				const link = document.createElement('a');
+				link.href = URL.createObjectURL(blob);
+				link.download = filename;
+				link.click();
+			}
+
+			// 显示会员页面
+			function showMembership() {
+				alert(
+					'💎 会员特权\n\n• 免除所有手续费\n• 月费：0.01 ETH (~$40)\n• 年费：0.05 ETH (~$200)\n\n开通后立即生效！'
+				);
+			}
+
+			// 工具函数
+			function sleep(ms) {
+				return new Promise((resolve) => setTimeout(resolve, ms));
+			}
+		</script>
+	</body>
+</html>
