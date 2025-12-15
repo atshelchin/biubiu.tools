@@ -78,7 +78,6 @@
 				progress: Math.round(generationProgress)
 			})}
 			isLoading={isGenerating}
-			progress={generationProgress}
 			onclick={onGenerate}
 		/>
 	{/if}

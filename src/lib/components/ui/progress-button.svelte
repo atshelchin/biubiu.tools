@@ -9,15 +9,13 @@
 		loadingLabel: string;
 		/** Whether the button is in loading state */
 		isLoading: boolean;
-		/** Progress value (0-100) */
-		progress?: number;
 		/** Whether the button is disabled */
 		disabled?: boolean;
 		/** Click handler */
 		onclick: () => void;
 	}
 
-	let { label, loadingLabel, isLoading, progress = 0, disabled = false, onclick }: Props = $props();
+	let { label, loadingLabel, isLoading, disabled = false, onclick }: Props = $props();
 
 	const isDisabled = $derived(disabled || isLoading);
 </script>
