@@ -146,7 +146,7 @@
 		<p>{emptyMessage ?? i18n.t('components.token_selector.empty_message')}</p>
 	</div>
 {:else}
-	{#if showBulkActions}
+	<!-- {#if showBulkActions}
 		<div class="bulk-actions">
 			<button class="btn-secondary" onclick={handleSelectAll}
 				>{i18n.t('components.token_selector.select_all')}</button
@@ -155,7 +155,7 @@
 				>{i18n.t('components.token_selector.deselect_all')}</button
 			>
 		</div>
-	{/if}
+	{/if} -->
 	<div class="tokens-grid">
 		{#each displayTokens() as token (token.id)}
 			<TokenCard
