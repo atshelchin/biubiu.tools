@@ -288,14 +288,14 @@
 					"checks": {
 						"rpc_endpoint": {
 							"name": "RPC 节点",
-							"description": "{network} RPC 连接",
+							"description": "检查当前 RPC 节点是否可用",
 							"chain_id_mismatch": "链 ID 不匹配：预期 {expected}，实际 {actual}",
 							"connected_to_block": "已连接到区块 #{blockNumber}",
 							"failed_to_connect": "连接失败：{error}"
 						},
 						"eip7702": {
-							"name": "EIP-7702 支持",
-							"description": "账户抽象与授权支持",
+							"name": "EIP-7702",
+							"description": "检查网络是否支持 EIP-7702 协议",
 							"supported": "网络支持 EIP-7702（已通过 eth_estimateGas 测试）",
 							"not_supported": "网络不支持 EIP-7702（无效操作码）",
 							"check_failed": "检查 EIP-7702 支持失败：{error}"
@@ -310,6 +310,11 @@
 							"wallet_sweep_description": "用于批量归集分散在多个钱包中的代币",
 							"biubiu_membership_description": "BiuBiu 平台会员合约",
 							"wallet_sweep_contract_description": "批量代币转账操作主合约"
+						},
+						"category": {
+							"network": "网络",
+							"protocol": "协议",
+							"contract": "合约"
 						}
 					}
 				},
@@ -613,6 +618,11 @@
 					"checks": {
 						"contract": {
 							"token_factory_description": "支持 CREATE2 的 ERC20 代币部署工厂"
+						},
+						"category": {
+							"network": "网络",
+							"protocol": "协议",
+							"contract": "合约"
 						}
 					}
 				},
@@ -702,6 +712,11 @@
 							"multicall3_description": "Multicall3 用于批量操作",
 							"biubiu_premium_description": "BiuBiu Premium 提供高级功能",
 							"nft_factory_description": "NFT Factory 用于部署 NFT 合约"
+						},
+						"category": {
+							"network": "网络",
+							"protocol": "协议",
+							"contract": "合约"
 						}
 					}
 				}

@@ -148,6 +148,11 @@
 			deployComingSoonText={i18n.t('tools.wallet_sweep.step2.content.deploy_coming_soon')}
 			deployButtonText={(contractName) =>
 				i18n.t('tools.wallet_sweep.step2.content.deploy_contract', { contractName })}
+			categoryLabels={{
+				network: i18n.t('tools.wallet_sweep.step2.content.checks.category.network'),
+				protocol: i18n.t('tools.wallet_sweep.step2.content.checks.category.protocol'),
+				contract: i18n.t('tools.wallet_sweep.step2.content.checks.category.contract')
+			}}
 			onDeploySuccess={handleDeploySuccess}
 		/>
 	{/if}

@@ -85,7 +85,7 @@ export async function checkRPCEndpoint(
 				}),
 				endpoint: rpcUrl,
 				responseTime,
-				docUrl: ""
+				docUrl: ''
 			};
 		}
 
@@ -102,7 +102,7 @@ export async function checkRPCEndpoint(
 			}),
 			endpoint: rpcUrl,
 			responseTime,
-			docUrl: ""
+			docUrl: ''
 		};
 	} catch (error) {
 		const responseTime = Date.now() - startTime;
@@ -170,7 +170,7 @@ export async function checkEIP7702Support(
 			message: t('tools.wallet_sweep.step2.content.checks.eip7702.supported'),
 			endpoint: rpcUrl,
 			responseTime,
-			docUrl: "https://eips.ethereum.org/EIPS/eip-7702"
+			docUrl: 'https://eips.ethereum.org/EIPS/eip-7702'
 		};
 	} catch (error) {
 		const responseTime = Date.now() - startTime;
@@ -218,7 +218,7 @@ export async function checkContractDeployment(
 	options?: {
 		canDeploy?: boolean;
 		deployGuideUrl?: string;
-		docUrl?: string
+		docUrl?: string;
 	}
 ): Promise<ContractCheck> {
 	try {
@@ -327,7 +327,7 @@ export async function checkCREATE2Proxy(rpcUrl: string, t: TranslateFn): Promise
 		{
 			canDeploy: true,
 			deployGuideUrl: 'https://github.com/Arachnid/deterministic-deployment-proxy',
-			docUrl: "https://github.com/Arachnid/deterministic-deployment-proxy"
+			docUrl: 'https://github.com/Arachnid/deterministic-deployment-proxy'
 		}
 	);
 }
@@ -345,7 +345,7 @@ export async function checkMulticall3(rpcUrl: string, t: TranslateFn): Promise<C
 		{
 			canDeploy: true,
 			deployGuideUrl: 'https://github.com/mds1/multicall',
-			docUrl: "https://github.com/mds1/multicall3"
+			docUrl: 'https://github.com/mds1/multicall3'
 		}
 	);
 }
@@ -363,7 +363,7 @@ export async function checkBiuBiuPremium(rpcUrl: string, t: TranslateFn): Promis
 		{
 			canDeploy: true,
 			deployGuideUrl: 'https://github.com/atshelchin/biubiu-contracts',
-			docUrl: "https://github.com/atshelchin/biubiu-contracts/blob/main/src/BiuBiuPremium.sol"
+			docUrl: 'https://github.com/atshelchin/biubiu-contracts/blob/main/src/BiuBiuPremium.sol'
 		}
 	);
 }
@@ -381,7 +381,7 @@ export async function checkTokenSweep(rpcUrl: string, t: TranslateFn): Promise<C
 		{
 			canDeploy: true,
 			deployGuideUrl: 'https://github.com/atshelchin/biubiu-contracts',
-			docUrl: "https://github.com/atshelchin/biubiu-contracts/blob/main/src/TokenSweep.sol"
+			docUrl: 'https://github.com/atshelchin/biubiu-contracts/blob/main/src/TokenSweep.sol'
 		}
 	);
 }

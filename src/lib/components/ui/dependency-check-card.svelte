@@ -31,6 +31,11 @@
 		endpointLabel?: string;
 		viewGuideText?: string;
 		deployComingSoonText?: string;
+		categoryLabels?: {
+			network: string;
+			protocol: string;
+			contract: string;
+		};
 	}
 
 	// eslint-disable-next-line svelte/no-unused-props
@@ -46,8 +51,22 @@
 		addressLabel = 'Address:',
 		endpointLabel = 'Endpoint:',
 		viewGuideText = 'View Deployment Guide',
-		deployComingSoonText = 'Deploy Contract (Coming Soon)'
+		deployComingSoonText = 'Deploy Contract (Coming Soon)',
+		categoryLabels = {
+			network: 'Network',
+			protocol: 'Protocol',
+			contract: 'Contract'
+		}
 	}: Props = $props();
+
+	// Determine category based on check type and id
+	type Category = 'network' | 'protocol' | 'contract';
+	let category = $derived.by((): Category => {
+		if (check.type === 'contract') return 'contract';
+		if (check.id === 'rpc-endpoint') return 'network';
+		if (check.id?.startsWith('eip-')) return 'protocol';
+		return 'network'; // default fallback
+	});
 </script>
 
 <div
@@ -72,6 +91,7 @@
 		<div class="check-info">
 			<div class="check-title">
 				<h4>{check.name}</h4>
+				<span class="category-tag {category}">{categoryLabels[category]}</span>
 				{#if check.docUrl}
 					<a
 						href={check.docUrl}
@@ -266,6 +286,55 @@
 
 	:global([data-theme='dark']) .check-info h4 {
 		color: var(--gray-100);
+	}
+
+	.category-tag {
+		display: inline-flex;
+		align-items: center;
+		padding: 2px 8px;
+		font-size: var(--text-xs);
+		font-weight: var(--font-medium);
+		border-radius: var(--radius-full);
+		white-space: nowrap;
+	}
+
+	/* Network: Blue */
+	.category-tag.network {
+		background: hsla(210, 100%, 95%, 1);
+		color: hsl(210, 80%, 45%);
+		border: 1px solid hsla(210, 80%, 80%, 1);
+	}
+
+	:global([data-theme='dark']) .category-tag.network {
+		background: hsla(210, 80%, 20%, 0.3);
+		color: hsl(210, 80%, 70%);
+		border-color: hsla(210, 80%, 50%, 0.5);
+	}
+
+	/* Protocol: Purple */
+	.category-tag.protocol {
+		background: hsla(270, 100%, 95%, 1);
+		color: hsl(270, 70%, 50%);
+		border: 1px solid hsla(270, 70%, 80%, 1);
+	}
+
+	:global([data-theme='dark']) .category-tag.protocol {
+		background: hsla(270, 70%, 20%, 0.3);
+		color: hsl(270, 70%, 70%);
+		border-color: hsla(270, 70%, 50%, 0.5);
+	}
+
+	/* Contract: Green */
+	.category-tag.contract {
+		background: hsla(150, 80%, 95%, 1);
+		color: hsl(150, 70%, 35%);
+		border: 1px solid hsla(150, 70%, 70%, 1);
+	}
+
+	:global([data-theme='dark']) .category-tag.contract {
+		background: hsla(150, 70%, 20%, 0.3);
+		color: hsl(150, 70%, 65%);
+		border-color: hsla(150, 70%, 45%, 0.5);
 	}
 
 	.doc-link {

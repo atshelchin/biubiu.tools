@@ -121,6 +121,11 @@
 		endpointLabel?: string;
 		viewGuideText?: string;
 		deployComingSoonText?: string;
+		categoryLabels?: {
+			network: string;
+			protocol: string;
+			contract: string;
+		};
 
 		// Deploy button text factory
 		deployButtonText?: (contractName: string) => string;
@@ -146,6 +151,11 @@
 		endpointLabel = 'Endpoint',
 		viewGuideText = 'View deployment guide',
 		deployComingSoonText = 'Deploy coming soon',
+		categoryLabels = {
+			network: 'Network',
+			protocol: 'Protocol',
+			contract: 'Contract'
+		},
 		deployButtonText = (name: string) => `Deploy ${name}`,
 		onDeploySuccess,
 		empty
@@ -221,6 +231,7 @@
 				{endpointLabel}
 				{viewGuideText}
 				{deployComingSoonText}
+				{categoryLabels}
 			/>
 		{/each}
 	</div>

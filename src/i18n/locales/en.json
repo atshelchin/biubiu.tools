@@ -288,14 +288,14 @@
 					"checks": {
 						"rpc_endpoint": {
 							"name": "RPC Endpoint",
-							"description": "{network} RPC connection",
+							"description": "Check if the current RPC endpoint is available",
 							"chain_id_mismatch": "Chain ID mismatch: expected {expected}, got {actual}",
 							"connected_to_block": "Connected to block #{blockNumber}",
 							"failed_to_connect": "Failed to connect: {error}"
 						},
 						"eip7702": {
-							"name": "EIP-7702 Support",
-							"description": "Account abstraction with delegation support",
+							"name": "EIP-7702",
+							"description": "Check if the network supports EIP-7702 protocol",
 							"supported": "Network supports EIP-7702 (tested via eth_estimateGas)",
 							"not_supported": "Network does not support EIP-7702 (invalid opcode)",
 							"check_failed": "Failed to check EIP-7702 support: {error}"
@@ -310,6 +310,11 @@
 							"wallet_sweep_description": "Batch collect tokens scattered across multiple wallets",
 							"biubiu_membership_description": "Biubiu platform membership contract",
 							"wallet_sweep_contract_description": "Main contract for batch token transfer operations"
+						},
+						"category": {
+							"network": "Network",
+							"protocol": "Protocol",
+							"contract": "Contract"
 						}
 					}
 				},
@@ -613,6 +618,11 @@
 					"checks": {
 						"contract": {
 							"token_factory_description": "ERC20 token deployment factory with CREATE2 support"
+						},
+						"category": {
+							"network": "Network",
+							"protocol": "Protocol",
+							"contract": "Contract"
 						}
 					}
 				},
@@ -702,6 +712,11 @@
 							"multicall3_description": "Multicall3 for batch operations",
 							"biubiu_premium_description": "BiuBiu Premium for advanced features",
 							"nft_factory_description": "NFT Factory for deploying NFT contracts"
+						},
+						"category": {
+							"network": "Network",
+							"protocol": "Protocol",
+							"contract": "Contract"
 						}
 					}
 				}

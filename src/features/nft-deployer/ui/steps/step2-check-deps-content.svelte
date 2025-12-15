@@ -179,6 +179,11 @@
 					endpointLabel={i18n.t('tools.nft_deployer.step2.content.endpoint_label')}
 					viewGuideText={i18n.t('tools.nft_deployer.step2.content.view_deployment_guide')}
 					deployComingSoonText={i18n.t('tools.nft_deployer.step2.content.deploy_coming_soon')}
+					categoryLabels={{
+						network: i18n.t('tools.nft_deployer.step2.content.checks.category.network'),
+						protocol: i18n.t('tools.nft_deployer.step2.content.checks.category.protocol'),
+						contract: i18n.t('tools.nft_deployer.step2.content.checks.category.contract')
+					}}
 				/>
 			{/each}
 		</div>
