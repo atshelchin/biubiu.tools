@@ -8,12 +8,11 @@
 	const i18n = useI18n();
 
 	// Check if can continue - derive from size property
-	let canContinue = $derived(step3State.selectedTokenIds.size > 0);
+	let isReadyToContinue = $derived(step3State.selectedTokenIds.size > 0);
 
 	function handleContinue() {
-		if (canContinue) {
-			console.log('Selected tokens:', step3State.getSelectedTokens());
-			stepManager.goTo(4);
+		if (isReadyToContinue) {
+			stepManager.next();
 		}
 	}
 	function goBack() {
@@ -24,7 +23,7 @@
 <StepFooter
 	showBack={true}
 	onBack={goBack}
-	{canContinue}
+	canContinue={isReadyToContinue}
 	onContinue={handleContinue}
 	hint={i18n.t('tools.wallet_sweep.step3.footer.hint')}
 />

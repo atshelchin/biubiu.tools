@@ -4,6 +4,7 @@
 	import { step3State } from '@/features/wallet-sweep/stores/step3-state.svelte';
 	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
 	import StepSummary from '@/features/wallet-sweep/ui/components/step-summary.svelte';
+	import EmptyHint from '$lib/components/ui/empty-hint.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { SvelteMap } from 'svelte/reactivity';
@@ -219,7 +220,7 @@
 			{/if}
 		</div>
 	{:else}
-		<p class="empty-hint">{i18n.t('tools.wallet_sweep.step4.sidebar.empty_hint')}</p>
+		<EmptyHint message={i18n.t('tools.wallet_sweep.step4.sidebar.empty_hint')} />
 	{/if}
 </StepSidebar>
 
@@ -295,14 +296,6 @@
 
 	:global([data-theme='dark']) .tip-value {
 		color: hsl(38, 92%, 55%);
-	}
-
-	.empty-hint {
-		margin-top: var(--space-4);
-		text-align: center;
-		font-size: var(--text-sm);
-		color: var(--gray-500);
-		font-style: italic;
 	}
 
 	.balance-count {

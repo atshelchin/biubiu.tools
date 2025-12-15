@@ -18,6 +18,7 @@
 	});
 
 	function handleSelectionChange(newSelection: SvelteSet<string>) {
+		console.log({ newSelection }, JSON.stringify(newSelection));
 		step3State.selectedTokenIds = newSelection;
 	}
 
@@ -49,10 +50,6 @@
 				step3State.selectedTokenIds = new SvelteSet(step3State.selectedTokenIds);
 			}
 		}
-	});
-
-	$effect(() => {
-		console.log('step3', step3State.selectedTokenIds);
 	});
 </script>
 
