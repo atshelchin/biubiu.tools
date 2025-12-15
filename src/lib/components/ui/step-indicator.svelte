@@ -156,11 +156,6 @@
 				<div class="step-title">
 					{manager.useI18nKeys ? i18n.t(step.label) : step.label}
 				</div>
-				{#if step.description}
-					<div class="step-description">
-						{manager.useI18nKeys ? i18n.t(step.description) : step.description}
-					</div>
-				{/if}
 			</div>
 
 			<!-- 连接线 -->
