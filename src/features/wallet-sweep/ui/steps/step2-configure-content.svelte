@@ -1,14 +1,21 @@
 <script lang="ts">
+	// ============================================================================
+	// IMPORTS
+	// ============================================================================
+
+	// Svelte
+	import { fade } from 'svelte/transition';
+
+	// Stores & Context
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
-	import { fade } from 'svelte/transition';
-	import {
-		checkAllDependencies,
-		calculateCheckSummary
-	} from '@/features/wallet-sweep/utils/dependency-checker';
+	import { step2State } from '@/features/wallet-sweep/stores/step2-state.svelte';
+
+	// i18n
+	import { useI18n } from '@shelchin/i18n/svelte';
+
+	// Components
 	import ContractDeploymentModal from '$lib/components/ui/contract-deployment-modal.svelte';
-	import { getDeploymentConfig } from '$lib/config/deployment-configs';
-	import type { ContractDeploymentConfig } from '$lib/types/deployment-config';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
 	import EmptyState from '@/features/wallet-sweep/ui/components/empty-state.svelte';
@@ -16,20 +23,50 @@
 	import LoadingState from '$lib/components/ui/loading-state.svelte';
 	import SummaryBanner from '$lib/components/ui/summary-banner.svelte';
 	import DependencyCheckCard from '$lib/components/ui/dependency-check-card.svelte';
-	import { step2State } from '@/features/wallet-sweep/stores/step2-state.svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+
+	// Utils & Config
+	import {
+		checkAllDependencies,
+		calculateCheckSummary
+	} from '@/features/wallet-sweep/utils/dependency-checker';
+	import { getDeploymentConfig } from '$lib/config/deployment-configs';
+
+	// Types
+	import type { ContractDeploymentConfig } from '$lib/types/deployment-config';
+
+	// ============================================================================
+	// STORES & CONTEXT
+	// ============================================================================
 
 	const i18n = useI18n();
 	const connectStore = useConnectStore();
 	const stepManager = useStepManager();
 
-	// Use $derived for easier access in template
+	// ============================================================================
+	// STATE
+	// ============================================================================
+
+	let showDeploymentModal = $state(false);
+	let deploymentConfig = $state<ContractDeploymentConfig | null>(null);
+
+	// ============================================================================
+	// DERIVED
+	// ============================================================================
+
+	// Step2 state shortcuts
 	let checks = $derived(step2State.checks);
 	let summary = $derived(step2State.summary);
 	let isChecking = $derived(step2State.isChecking);
 	let hasChecked = $derived(step2State.hasChecked);
 
-	// Safely derive summary properties to avoid null access during reactive updates
+	// Network
+	const currentNetwork = $derived(
+		connectStore.currentChainId
+			? connectStore.networks.find((n) => n.chainId === connectStore.currentChainId)
+			: undefined
+	);
+
+	// Summary display properties
 	let summaryVariant = $derived<'success' | 'error'>(summary?.allPassed ? 'success' : 'error');
 	let summaryTitle = $derived(
 		summary?.allPassed
@@ -42,33 +79,26 @@
 			: i18n.t('tools.wallet_sweep.step2.content.resolve_issues_before_continuing')
 	);
 
-	// Contract deployment modal state
-	let showDeploymentModal = $state(false);
-	let deploymentConfig = $state<ContractDeploymentConfig | null>(null);
+	// Find the first failed check index (for sequential fix flow)
+	const firstFailedCheckIndex = $derived(() => {
+		return checks.findIndex((check) => check.status === 'error');
+	});
 
-	// Get current network details
-	const currentNetwork = $derived(
-		connectStore.currentChainId
-			? connectStore.networks.find((n) => n.chainId === connectStore.currentChainId)
-			: undefined
-	);
+	// ============================================================================
+	// FUNCTIONS
+	// ============================================================================
 
-	// Run dependency checks
 	async function runDependencyChecks() {
 		if (!currentNetwork || !connectStore.isConnected) {
-			console.log('[Step2] Cannot run checks - network or wallet not ready');
 			return;
 		}
 
-		console.log('[Step2] Starting dependency checks for', currentNetwork.name);
 		step2State.isChecking = true;
 		step2State.hasChecked = false;
 
 		try {
-			// For now, we'll use hardcoded contract addresses
-			// These should come from configuration later
-			const membershipContract = undefined; // TODO: Get from config
-			const sweepContract = undefined; // TODO: Get from config
+			const membershipContract = undefined;
+			const sweepContract = undefined;
 
 			const results = await checkAllDependencies(
 				currentNetwork.rpcEndpoints[0].url,
@@ -79,23 +109,43 @@
 				sweepContract
 			);
 
-			console.log('[Step2] Dependency check results:', results);
-
 			// Update shared state - force new references for Svelte reactivity
 			step2State.checks = [...results];
-
-			// Force new object reference for summary
-			const newSummary = calculateCheckSummary(results);
-			step2State.summary = { ...newSummary };
-
-			console.log('[Step2] Calculated summary:', step2State.summary);
+			step2State.summary = { ...calculateCheckSummary(results) };
 			step2State.hasChecked = true;
-		} catch (error) {
-			console.error('[Step2] Failed to run dependency checks:', error);
+		} catch {
+			// Silently handle errors - checks will show as incomplete
 		} finally {
 			step2State.isChecking = false;
 		}
 	}
+
+	function goBackToStep1() {
+		stepManager.goTo(1);
+	}
+
+	function canFixCheck(checkIndex: number): boolean {
+		return firstFailedCheckIndex() === checkIndex;
+	}
+
+	function openDeploymentModal(config: ContractDeploymentConfig) {
+		deploymentConfig = config;
+		showDeploymentModal = true;
+	}
+
+	function closeDeploymentModal() {
+		showDeploymentModal = false;
+		deploymentConfig = null;
+	}
+
+	function handleDeploymentSuccess() {
+		// Re-run dependency checks after successful deployment
+		setTimeout(() => runDependencyChecks(), 500);
+	}
+
+	// ============================================================================
+	// EFFECTS
+	// ============================================================================
 
 	// Auto-run checks when wallet is connected and network is selected
 	$effect(() => {
@@ -112,22 +162,6 @@
 			step2State.summary = null;
 		}
 	});
-
-	// Go back to step 1
-	function goBackToStep1() {
-		stepManager.goTo(1);
-	}
-
-	// Find the first failed check index
-	const firstFailedCheckIndex = $derived(() => {
-		return checks.findIndex((check) => check.status === 'error');
-	});
-
-	// Check if a specific check can be fixed (only the first failed check)
-	function canFixCheck(checkIndex: number): boolean {
-		const firstFailedIdx = firstFailedCheckIndex();
-		return firstFailedIdx === checkIndex;
-	}
 </script>
 
 <StepContent>
@@ -170,12 +204,7 @@
 					{index}
 					{canFix}
 					blockExplorer={currentNetwork?.blockExplorer}
-					onDeploy={config && config.deployFunction
-						? () => {
-								deploymentConfig = config;
-								showDeploymentModal = true;
-							}
-						: undefined}
+					onDeploy={config?.deployFunction ? () => openDeploymentModal(config) : undefined}
 					deployButtonText={config
 						? i18n.t('tools.wallet_sweep.step2.content.deploy_contract', {
 								contractName: config.contractName
@@ -203,7 +232,7 @@
 	{/if}
 </StepContent>
 
-<!-- Generic Contract Deployment Modal -->
+<!-- Contract Deployment Modal -->
 {#if currentNetwork && deploymentConfig}
 	<ContractDeploymentModal
 		bind:show={showDeploymentModal}
@@ -212,19 +241,8 @@
 		networkName={currentNetwork.name}
 		rpcUrl={currentNetwork.rpcEndpoints[0].url}
 		blockExplorer={currentNetwork.blockExplorer}
-		onClose={() => {
-			showDeploymentModal = false;
-			deploymentConfig = null;
-		}}
-		onSuccess={() => {
-			console.log('[Step2] Deployment successful, re-checking dependencies');
-			// Don't close modal automatically - let user close it manually
-			// Re-run dependency checks after successful deployment
-			setTimeout(() => {
-				console.log('[Step2] Re-running dependency checks after deployment');
-				runDependencyChecks();
-			}, 500);
-		}}
+		onClose={closeDeploymentModal}
+		onSuccess={handleDeploymentSuccess}
 	/>
 {/if}
 
