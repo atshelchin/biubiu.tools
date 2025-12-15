@@ -53,6 +53,12 @@
 </div>
 
 <style>
+	button {
+		height: 64px;
+		font-size: var(--text-lg) !important;
+		padding-left: var(--space-8)!important;
+		padding-right: var(--space-8)!important;
+	}
 	.step-footer {
 		display: flex;
 		align-items: center;
@@ -79,6 +85,7 @@
 		border-radius: var(--radius-sm);
 		font-weight: var(--font-medium);
 		font-size: var(--text-sm);
+
 		cursor: pointer;
 		transition: all 0.2s;
 	}

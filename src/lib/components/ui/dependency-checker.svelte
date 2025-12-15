@@ -150,10 +150,6 @@
 		// i18n texts
 		loadingMessage?: string;
 		retryText?: string;
-		allPassedTitle?: string;
-		allPassedMessage?: string;
-		issuesFoundTitle?: string;
-		issuesFoundMessage?: string;
 		resolveHintText?: string;
 		addressLabel?: string;
 		endpointLabel?: string;
@@ -180,10 +176,6 @@
 		network,
 		loadingMessage = 'Checking dependencies...',
 		retryText = 'Recheck',
-		allPassedTitle = 'All dependencies satisfied',
-		allPassedMessage = 'Network is properly configured',
-		issuesFoundTitle = 'Dependency issues found',
-		issuesFoundMessage = 'Please resolve the issues before continuing',
 		resolveHintText = 'Please resolve the previous issue first',
 		addressLabel = 'Address',
 		endpointLabel = 'Endpoint',
@@ -209,12 +201,6 @@
 	// ============================================================================
 	// DERIVED
 	// ============================================================================
-
-	let summaryVariant = $derived<'success' | 'error'>(
-		checker.summary?.allPassed ? 'success' : 'error'
-	);
-	let summaryTitle = $derived(checker.summary?.allPassed ? allPassedTitle : issuesFoundTitle);
-	let summaryMessage = $derived(checker.summary?.allPassed ? allPassedMessage : issuesFoundMessage);
 
 	// Find first failed check index (for sequential fix flow)
 	const firstFailedCheckIndex = $derived(() => {
@@ -277,9 +263,6 @@
 	<!-- Summary Banner -->
 	{#if checker.summary}
 		<SummaryBanner
-			variant={summaryVariant}
-			title={summaryTitle}
-			message={summaryMessage}
 			{retryText}
 			onRetry={() => checker.runChecks(() => Promise.resolve(checker.checks))}
 		/>

@@ -206,7 +206,7 @@
 
 	/* Success: subtle and low-key */
 	.check-card.success {
-		opacity: 0.7
+		opacity: 0.7;
 	}
 
 	.check-card.cannotfix {

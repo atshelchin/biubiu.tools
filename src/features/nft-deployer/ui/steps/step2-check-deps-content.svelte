@@ -29,19 +29,6 @@
 	let isChecking = $derived(step2CheckDepsState.isChecking);
 	let hasChecked = $derived(step2CheckDepsState.hasChecked);
 
-	// Safely derive summary properties to avoid null access during reactive updates
-	let summaryVariant = $derived<'success' | 'error'>(summary?.allPassed ? 'success' : 'error');
-	let summaryTitle = $derived(
-		summary?.allPassed
-			? i18n.t('tools.nft_deployer.step2.content.all_dependencies_satisfied')
-			: i18n.t('tools.nft_deployer.step2.content.dependency_issues_found')
-	);
-	let summaryMessage = $derived(
-		summary?.allPassed
-			? i18n.t('tools.nft_deployer.step2.content.network_properly_configured')
-			: i18n.t('tools.nft_deployer.step2.content.resolve_issues_before_continuing')
-	);
-
 	// Contract deployment modal state
 	let showDeploymentModal = $state(false);
 	let deploymentConfig = $state<ContractDeploymentConfig | null>(null);
@@ -191,9 +178,6 @@
 		<!-- Summary and Continue -->
 		{#if summary}
 			<SummaryBanner
-				variant={summaryVariant}
-				title={summaryTitle}
-				message={summaryMessage}
 				retryText={i18n.t('tools.nft_deployer.step2.content.recheck_dependencies')}
 				onRetry={runDependencyChecks}
 			/>
