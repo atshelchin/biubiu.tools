@@ -51,6 +51,7 @@
 		invalidKeys={invalidPrivateKeys}
 		onUploadClick={handleUploadClick}
 	/>
+	<p class="form-hint">{i18n.t('tools.wallet_sweep.step4.content.private_key.security_hint')}</p>
 	{#if hasContent}
 		<ProgressButton
 			label={i18n.t('tools.wallet_sweep.step4.content.import_wallets_button')}
@@ -58,7 +59,6 @@
 				progress: Math.round(generationProgress)
 			})}
 			isLoading={isGenerating}
-			progress={generationProgress}
 			onclick={onImport}
 		/>
 	{/if}
@@ -76,5 +76,12 @@
 />
 
 <style>
-	/* No local styles needed - using ProgressButton component */
+	.form-hint {
+		font-size: var(--text-sm);
+		color: var(--gray-600);
+		margin: var(--space-2) 0 0 0;
+	}
+	:global([data-theme='dark']) .form-hint {
+		color: var(--gray-400);
+	}
 </style>

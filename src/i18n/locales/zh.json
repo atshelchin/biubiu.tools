@@ -493,7 +493,8 @@
 						"locate": "定位",
 						"locate_key": "点击定位到编辑器中的错误位置",
 						"error_key_not_found": "错误：该私钥已被修改或删除",
-						"manual_search": "请手动搜索第 {line} 行"
+						"manual_search": "请手动搜索第 {line} 行",
+						"security_hint": "🔒 私钥仅在本地浏览器中处理，不会发送到服务器"
 					},
 					"wallet_list": {
 						"title": "已导入钱包",

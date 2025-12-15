@@ -493,7 +493,8 @@
 						"locate": "Locate",
 						"locate_key": "Click to locate error in editor",
 						"error_key_not_found": "Error: Private key has been modified or deleted",
-						"manual_search": "Please manually search line {line}"
+						"manual_search": "Please manually search line {line}",
+						"security_hint": "🔒 Private keys are processed locally in your browser, never sent to any server"
 					},
 					"wallet_list": {
 						"title": "Imported Wallets",
