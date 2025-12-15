@@ -201,7 +201,7 @@
 				},
 				"content": {
 					"title": "选择网络",
-					"description": "选择代币归集的区块链网络",
+					"description": "连接钱包并开始归集操作",
 					"loading": "正在加载网络配置...",
 					"no_networks_enabled": "没有启用的网络",
 					"enable_network_prompt": "请至少启用一个网络以继续。",
@@ -227,7 +227,7 @@
 			"step2": {
 				"content": {
 					"title": "依赖检查",
-					"description": "验证网络服务和所需合约是否已部署",
+					"description": "确保所需基础设施已就绪",
 					"checking_dependencies_for": "正在检查 {network} 的依赖项...",
 					"wallet_not_connected_title": "钱包未连接",
 					"wallet_not_connected_message": "请返回步骤 1 并连接您的钱包",
@@ -599,7 +599,7 @@
 			"step2": {
 				"content": {
 					"title": "依赖检查",
-					"description": "验证网络服务和所需合约是否已部署",
+					"description": "确保所需基础设施已就绪",
 					"checking_dependencies_for": "正在检查 {network} 的依赖...",
 					"wallet_not_connected_title": "钱包未连接",
 					"wallet_not_connected_message": "请返回步骤 1 并连接您的钱包",

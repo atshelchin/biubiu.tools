@@ -201,7 +201,7 @@
 				},
 				"content": {
 					"title": "Select Network",
-					"description": "Choose the blockchain network for token sweeping",
+					"description": "Connect wallet to start sweeping",
 					"loading": "Loading network configuration...",
 					"no_networks_enabled": "No Networks Enabled",
 					"enable_network_prompt": "Please enable at least one network to continue.",
@@ -227,7 +227,7 @@
 			"step2": {
 				"content": {
 					"title": "Dependency Check",
-					"description": "Verifying network services and required contracts are deployed",
+					"description": "Ensure required infrastructure is ready",
 					"checking_dependencies_for": "Checking dependencies for {network}...",
 					"wallet_not_connected_title": "Wallet Not Connected",
 					"wallet_not_connected_message": "Please go back to Step 1 and connect your wallet",
@@ -599,7 +599,7 @@
 			"step2": {
 				"content": {
 					"title": "Dependency Check",
-					"description": "Verifying network services and required contracts are deployed",
+					"description": "Ensure required infrastructure is ready",
 					"checking_dependencies_for": "Checking dependencies for {network}...",
 					"wallet_not_connected_title": "Wallet Not Connected",
 					"wallet_not_connected_message": "Please go back to Step 1 and connect your wallet",

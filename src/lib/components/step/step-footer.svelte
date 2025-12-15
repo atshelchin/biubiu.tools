@@ -56,8 +56,8 @@
 	button {
 		height: 64px;
 		font-size: var(--text-lg) !important;
-		padding-left: var(--space-8)!important;
-		padding-right: var(--space-8)!important;
+		padding-left: var(--space-8) !important;
+		padding-right: var(--space-8) !important;
 	}
 	.step-footer {
 		display: flex;
