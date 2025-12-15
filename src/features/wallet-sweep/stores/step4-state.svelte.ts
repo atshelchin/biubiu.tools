@@ -12,6 +12,9 @@ let isScanning = $state(false);
 let scanProgress = $state(0);
 let hasScanned = $state(false);
 
+// Error message
+let errorMessage = $state('');
+
 // Resumable scan state
 let scanState = $state<ScanState | null>(null);
 let isRateLimited = $state(false);
@@ -43,6 +46,12 @@ export const step4State = {
 	set hasScanned(value: boolean) {
 		hasScanned = value;
 	},
+	get errorMessage() {
+		return errorMessage;
+	},
+	set errorMessage(value: string) {
+		errorMessage = value;
+	},
 
 	// Helper methods
 	addWallets(wallets: ImportedWallet[]) {
@@ -56,6 +65,11 @@ export const step4State = {
 		importedWallets = [];
 		hasScanned = false;
 		scanProgress = 0;
+		errorMessage = '';
+	},
+
+	clearError() {
+		errorMessage = '';
 	},
 
 	removeWallet(address: string) {

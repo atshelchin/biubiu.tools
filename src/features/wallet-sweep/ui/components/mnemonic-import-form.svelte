@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { DerivationPathType } from '@/features/wallet-sweep/types/wallet';
+	import { validateMnemonicPhrase } from '@/features/wallet-sweep/utils/wallet-import';
 	import SimpleCodeEditor from '$lib/components/widgets/SimpleCodeEditor.svelte';
 	import AddressPathSelector from '$lib/components/ui/address-path-selector.svelte';
 	import { Loader2 } from '@lucide/svelte';
@@ -37,6 +38,11 @@
 		generationProgress,
 		onGenerate
 	}: Props = $props();
+
+	// Check if mnemonic is valid for showing derivation path options
+	const isMnemonicValid = $derived(
+		mnemonicText.trim().length > 0 && validateMnemonicPhrase(mnemonicText.trim())
+	);
 </script>
 
 <div class="form-section" transition:slide>
@@ -48,44 +54,47 @@
 	/>
 	<p class="form-hint">{i18n.t('tools.wallet_sweep.step4.content.mnemonic.security_hint')}</p>
 
-	<div style="margin-top: var(--space-4);">
-		<div class="form-label">
-			{i18n.t('tools.wallet_sweep.step4.content.mnemonic.derivation_path')}
+	{#if isMnemonicValid}
+		<div style="margin-top: var(--space-4);" transition:slide={{ duration: 200 }}>
+			<div class="form-label">
+				{i18n.t('tools.wallet_sweep.step4.content.mnemonic.derivation_path')}
+			</div>
+			<AddressPathSelector
+				bind:pathType
+				bind:startIndex
+				bind:endIndex
+				bind:startYear
+				bind:endYear
+				bind:includeMonth
+				bind:includeDay
+				bind:useLeadingZeros
+				maxAddresses={100_000}
+			/>
 		</div>
-		<AddressPathSelector
-			bind:pathType
-			bind:startIndex
-			bind:endIndex
-			bind:startYear
-			bind:endYear
-			bind:includeMonth
-			bind:includeDay
-			bind:useLeadingZeros
-			maxAddresses={100_000}
-		/>
-	</div>
 
-	<button
-		class="btn-primary btn-with-progress"
-		onclick={onGenerate}
-		disabled={isGenerating}
-		style="width: 100%; margin-top: var(--space-3);"
-	>
-		{#if isGenerating}
-			<Loader2 size={18} class="spinning" />
-			{i18n.t('tools.wallet_sweep.step4.content.mnemonic.generating', {
-				progress: Math.round(generationProgress)
-			})}
-			<div class="btn-progress-bar" style="width: {generationProgress}%"></div>
-		{:else}
-			{i18n.t('tools.wallet_sweep.step4.content.mnemonic.generate_button')}
-		{/if}
-	</button>
+		<button
+			class="btn-primary btn-with-progress"
+			onclick={onGenerate}
+			disabled={isGenerating}
+			style="width: 100%; margin-top: var(--space-3);"
+			transition:slide={{ duration: 200 }}
+		>
+			{#if isGenerating}
+				<Loader2 size={18} class="spinning" />
+				{i18n.t('tools.wallet_sweep.step4.content.mnemonic.generating', {
+					progress: Math.round(generationProgress)
+				})}
+				<div class="btn-progress-bar" style="width: {generationProgress}%"></div>
+			{:else}
+				{i18n.t('tools.wallet_sweep.step4.content.mnemonic.generate_button')}
+			{/if}
+		</button>
+	{/if}
 </div>
 
 <style>
 	.form-section {
-		margin-bottom: var(--space-6);
+		margin-bottom: var(--space-2);
 	}
 
 	.form-label {

@@ -468,7 +468,7 @@
 					"mnemonic": {
 						"label": "Enter Mnemonic Phrase",
 						"placeholder": "Enter 12 or 24 words separated by spaces",
-						"security_hint": "⚠️ Your mnemonic is never uploaded to any server",
+						"security_hint": "🔒 Mnemonic is processed locally in your browser, never sent to any server",
 						"derivation_path": "Derivation Path Configuration",
 						"generate_button": "🔍 Generate Address List",
 						"generating": "Generating... ({progress}%)",
@@ -1188,7 +1188,8 @@
 			"will_generate": "Will generate",
 			"estimated_addresses": "Estimated addresses",
 			"addresses": "addresses",
-			"limited_to": "Limited to {max} max"
+			"limited_to": "Limited to {max} max",
+			"advanced_settings": "Advanced Settings"
 		},
 		"wallet_list": {
 			"empty_message": "No wallets added yet",

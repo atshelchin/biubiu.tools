@@ -14,7 +14,7 @@
 
 	function handleContinue() {
 		if (canContinue) {
-			stepManager.next()
+			stepManager.next();
 		}
 	}
 

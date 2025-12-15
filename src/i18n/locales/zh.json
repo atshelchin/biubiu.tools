@@ -468,7 +468,7 @@
 					"mnemonic": {
 						"label": "输入助记词",
 						"placeholder": "输入 12 或 24 个单词，用空格分隔",
-						"security_hint": "⚠️ 您的助记词永远不会上传到任何服务器",
+						"security_hint": "🔒 助记词仅在本地浏览器中计算，不会发送到服务器",
 						"derivation_path": "派生路径配置",
 						"generate_button": "🔍 生成地址列表",
 						"generating": "生成中... ({progress}%)",
@@ -1174,7 +1174,8 @@
 			"will_generate": "将生成",
 			"estimated_addresses": "预计地址数",
 			"addresses": "个地址",
-			"limited_to": "最多 {max} 个"
+			"limited_to": "最多 {max} 个",
+			"advanced_settings": "高级设置"
 		},
 		"wallet_list": {
 			"empty_message": "尚未添加钱包",

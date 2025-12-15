@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
-	import { Calendar, Hash } from '@lucide/svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
+	import { ChevronDown, ChevronUp } from '@lucide/svelte';
+	import SegmentedControl from '$lib/components/ui/segmented-control.svelte';
+	import AddressCountHint from '$lib/components/ui/address-count-hint.svelte';
 
 	const i18n = useI18n();
 
@@ -38,13 +40,19 @@
 		}) => void;
 	}
 
+	// Helper to get current year without triggering Date reactivity warning
+	const getCurrentYear = () => {
+		const date = new Date();
+		return date.getFullYear();
+	};
+
 	let {
 		pathType = $bindable('sequential'),
 		onPathTypeChange,
 		startIndex = $bindable(0),
 		endIndex = $bindable(999),
-		startYear = $bindable(new Date().getFullYear() - 10),
-		endYear = $bindable(new Date().getFullYear()),
+		startYear = $bindable(getCurrentYear() - 10),
+		endYear = $bindable(getCurrentYear()),
 		includeMonth = $bindable(false),
 		includeDay = $bindable(false),
 		useLeadingZeros = $bindable(true),
@@ -52,19 +60,19 @@
 		onChange
 	}: Props = $props();
 
-	// Path type options
-	const pathOptions = $derived([
+	// Advanced settings toggle
+	let showAdvanced = $state(false);
+
+	// Path type options for SegmentedControl
+	type PathType = 'sequential' | 'date';
+	const pathTypeOptions = $derived([
 		{
-			type: 'sequential' as const,
-			icon: Hash,
-			label: i18n.t('components.address_path_selector.sequential.label'),
-			description: i18n.t('components.address_path_selector.sequential.description')
+			value: 'sequential' as PathType,
+			label: i18n.t('components.address_path_selector.sequential.label')
 		},
 		{
-			type: 'date' as const,
-			icon: Calendar,
-			label: i18n.t('components.address_path_selector.date.label'),
-			description: i18n.t('components.address_path_selector.date.description')
+			value: 'date' as PathType,
+			label: i18n.t('components.address_path_selector.date.label')
 		}
 	]);
 
@@ -98,8 +106,10 @@
 				count = years * 12;
 			} else {
 				// Full date: calculate exact days including leap years
+				/* eslint-disable svelte/prefer-svelte-reactivity -- local variables, not reactive state */
 				const startDate = new Date(startYear, 0, 1);
 				const endDate = new Date(endYear, 11, 31);
+				/* eslint-enable svelte/prefer-svelte-reactivity */
 				const diffTime = endDate.getTime() - startDate.getTime();
 				count = Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 1;
 			}
@@ -130,13 +140,17 @@
 	}
 
 	function handleDatePreset(years: number) {
-		const currentYear = new Date().getFullYear();
+		const currentYear = getCurrentYear();
 		// "Past 1 Year" means current year only: 2025-2025
 		// "Past 10 Years" means 10 years back including current: 2016-2025
 		// "Past 100 Years" means 100 years back including current: 1926-2025
 		startYear = currentYear - years + 1;
 		endYear = currentYear;
 		notifyChange();
+	}
+
+	function toggleAdvanced() {
+		showAdvanced = !showAdvanced;
 	}
 
 	function notifyChange() {
@@ -153,7 +167,6 @@
 
 	// Watch for changes
 	$effect(() => {
-		console.log({ isOverLimit });
 		// Enforce max limit for sequential mode
 		if (pathType === 'sequential' && endIndex - startIndex + 1 > maxAddresses) {
 			endIndex = startIndex + maxAddresses - 1;
@@ -170,22 +183,11 @@
 
 <div class="address-path-selector">
 	<!-- Path Type Selection -->
-	<div class="path-type-grid">
-		{#each pathOptions as option (option.type)}
-			{@const Icon = option.icon}
-			<button
-				class="path-type-card"
-				class:selected={pathType === option.type}
-				onclick={() => handlePathTypeChange(option.type)}
-			>
-				<div class="path-icon">
-					<Icon size={24} />
-				</div>
-				<div class="path-label">{option.label}</div>
-				<div class="path-desc">{option.description}</div>
-			</button>
-		{/each}
-	</div>
+	<SegmentedControl
+		options={pathTypeOptions}
+		bind:value={pathType}
+		onValueChange={handlePathTypeChange}
+	/>
 
 	<!-- Sequential Mode Controls -->
 	{#if pathType === 'sequential'}
@@ -203,49 +205,53 @@
 				</div>
 			</div>
 
-			<!-- Range Inputs -->
-			<div class="range-inputs">
-				<div class="input-group">
-					<label for="start-index">{i18n.t('components.address_path_selector.start')}</label>
-					<input
-						id="start-index"
-						type="number"
-						bind:value={startIndex}
-						min="0"
-						max={maxAddresses - 1}
-						class="range-input"
-					/>
-				</div>
-
-				<span class="range-separator">{i18n.t('components.address_path_selector.to')}</span>
-
-				<div class="input-group">
-					<label for="end-index">{i18n.t('components.address_path_selector.end')}</label>
-					<input
-						id="end-index"
-						type="number"
-						bind:value={endIndex}
-						min={startIndex}
-						max={startIndex + maxAddresses - 1}
-						class="range-input"
-						class:error={isOverLimit}
-					/>
-				</div>
-			</div>
-
 			<!-- Address Count Display -->
-			<div class="count-display" class:warning={isOverLimit}>
-				<span class="count-label">{i18n.t('components.address_path_selector.will_generate')}:</span>
-				<span class="count-value">{addressCount.toLocaleString()}</span>
-				<span class="count-unit">{i18n.t('components.address_path_selector.addresses')}</span>
-				{#if isOverLimit}
-					<span class="count-warning"
-						>({i18n.t('components.address_path_selector.limited_to', {
-							max: maxAddresses.toLocaleString()
-						})})</span
-					>
+			<AddressCountHint count={addressCount} maxLimit={maxAddresses} />
+
+			<!-- Advanced Settings Toggle -->
+			<button class="advanced-toggle" onclick={toggleAdvanced}>
+				<span>{i18n.t('components.address_path_selector.advanced_settings')}</span>
+				{#if showAdvanced}
+					<ChevronUp size={16} />
+				{:else}
+					<ChevronDown size={16} />
 				{/if}
-			</div>
+			</button>
+
+			<!-- Advanced Settings -->
+			{#if showAdvanced}
+				<div class="advanced-section" transition:slide={{ duration: 200 }}>
+					<!-- Range Inputs -->
+					<div class="range-inputs">
+						<div class="input-group">
+							<label for="start-index">{i18n.t('components.address_path_selector.start')}</label>
+							<input
+								id="start-index"
+								type="number"
+								bind:value={startIndex}
+								min="0"
+								max={maxAddresses - 1}
+								class="range-input"
+							/>
+						</div>
+
+						<span class="range-separator">{i18n.t('components.address_path_selector.to')}</span>
+
+						<div class="input-group">
+							<label for="end-index">{i18n.t('components.address_path_selector.end')}</label>
+							<input
+								id="end-index"
+								type="number"
+								bind:value={endIndex}
+								min={startIndex}
+								max={startIndex + maxAddresses - 1}
+								class="range-input"
+								class:error={isOverLimit}
+							/>
+						</div>
+					</div>
+				</div>
+			{/if}
 		</div>
 	{/if}
 
@@ -265,61 +271,64 @@
 				</div>
 			</div>
 
-			<!-- Year Range Inputs -->
-			<div class="range-inputs">
-				<div class="input-group">
-					<label for="start-year">{i18n.t('components.address_path_selector.from_year')}</label>
-					<input
-						id="start-year"
-						type="number"
-						bind:value={startYear}
-						min={new Date().getFullYear() - 100}
-						max={endYear}
-						class="range-input"
-					/>
-				</div>
-
-				<span class="range-separator">{i18n.t('components.address_path_selector.to')}</span>
-
-				<div class="input-group">
-					<label for="end-year">{i18n.t('components.address_path_selector.to_year')}</label>
-					<input
-						id="end-year"
-						type="number"
-						bind:value={endYear}
-						min={startYear}
-						max={new Date().getFullYear()}
-						class="range-input"
-					/>
-				</div>
-			</div>
-
-			<!-- Format Preview -->
-			<div class="format-preview">
-				<span class="preview-label">{i18n.t('components.address_path_selector.format')}:</span>
-				<code class="preview-format">{dateFormat}</code>
-				<span class="preview-example">
-					{i18n.t('components.address_path_selector.example')}: {startYear}0101 {i18n.t(
-						'components.address_path_selector.to'
-					)}
-					{endYear}1231
-				</span>
-			</div>
-
 			<!-- Estimated Count -->
-			<div class="count-display" class:warning={isOverLimit}>
-				<span class="count-label"
-					>{i18n.t('components.address_path_selector.estimated_addresses')}:</span
-				>
-				<span class="count-value">{addressCount.toLocaleString()}</span>
-				{#if isOverLimit}
-					<span class="count-warning"
-						>({i18n.t('components.address_path_selector.limited_to', {
-							max: maxAddresses.toLocaleString()
-						})})</span
-					>
+			<AddressCountHint count={addressCount} maxLimit={maxAddresses} />
+
+			<!-- Advanced Settings Toggle -->
+			<button class="advanced-toggle" onclick={toggleAdvanced}>
+				<span>{i18n.t('components.address_path_selector.advanced_settings')}</span>
+				{#if showAdvanced}
+					<ChevronUp size={16} />
+				{:else}
+					<ChevronDown size={16} />
 				{/if}
-			</div>
+			</button>
+
+			<!-- Advanced Settings -->
+			{#if showAdvanced}
+				<div class="advanced-section" transition:slide={{ duration: 200 }}>
+					<!-- Year Range Inputs -->
+					<div class="range-inputs">
+						<div class="input-group">
+							<label for="start-year">{i18n.t('components.address_path_selector.from_year')}</label>
+							<input
+								id="start-year"
+								type="number"
+								bind:value={startYear}
+								min={getCurrentYear() - 100}
+								max={endYear}
+								class="range-input"
+							/>
+						</div>
+
+						<span class="range-separator">{i18n.t('components.address_path_selector.to')}</span>
+
+						<div class="input-group">
+							<label for="end-year">{i18n.t('components.address_path_selector.to_year')}</label>
+							<input
+								id="end-year"
+								type="number"
+								bind:value={endYear}
+								min={startYear}
+								max={getCurrentYear()}
+								class="range-input"
+							/>
+						</div>
+					</div>
+
+					<!-- Format Preview -->
+					<div class="format-preview">
+						<span class="preview-label">{i18n.t('components.address_path_selector.format')}:</span>
+						<code class="preview-format">{dateFormat}</code>
+						<span class="preview-example">
+							{i18n.t('components.address_path_selector.example')}: {startYear}0101 {i18n.t(
+								'components.address_path_selector.to'
+							)}
+							{endYear}1231
+						</span>
+					</div>
+				</div>
+			{/if}
 		</div>
 	{/if}
 </div>
@@ -329,67 +338,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-4);
-	}
-
-	/* Path Type Selection */
-	.path-type-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-		gap: var(--space-3);
-	}
-
-	.path-type-card {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: var(--space-2);
-		padding: var(--space-4);
-		background: var(--color-panel-1);
-		border: 2px solid var(--color-border);
-		border-radius: var(--radius-lg);
-		cursor: pointer;
-		transition: all 0.2s ease;
-	}
-
-	.path-type-card:hover {
-		border-color: var(--color-primary);
-		transform: translateY(-2px);
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	}
-
-	.path-type-card.selected {
-		border-color: var(--color-primary);
-		background: rgba(59, 130, 246, 0.05);
-		box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
-	}
-
-	.path-icon {
-		color: var(--gray-600);
-		transition: color 0.2s;
-	}
-
-	.path-type-card.selected .path-icon {
-		color: var(--color-primary);
-	}
-
-	:global([data-theme='dark']) .path-icon {
-		color: var(--gray-400);
-	}
-
-	.path-label {
-		font-size: var(--text-base);
-		font-weight: var(--font-semibold);
-		color: var(--gray-900);
-	}
-
-	:global([data-theme='dark']) .path-label {
-		color: var(--gray-100);
-	}
-
-	.path-desc {
-		font-size: var(--text-xs);
-		color: var(--gray-500);
-		font-family: monospace;
 	}
 
 	/* Controls Section */
@@ -451,6 +399,40 @@
 		transform: translateY(-1px);
 	}
 
+	/* Advanced Toggle */
+	.advanced-toggle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: var(--space-1);
+		padding: var(--space-2);
+		background: transparent;
+		border: none;
+		border-top: 1px solid var(--color-border);
+		margin-top: var(--space-2);
+		padding-top: var(--space-3);
+		font-size: var(--text-sm);
+		color: var(--gray-500);
+		cursor: pointer;
+		transition: color 0.2s;
+	}
+
+	.advanced-toggle:hover {
+		color: var(--gray-700);
+	}
+
+	:global([data-theme='dark']) .advanced-toggle:hover {
+		color: var(--gray-300);
+	}
+
+	/* Advanced Section */
+	.advanced-section {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-4);
+		padding-top: var(--space-2);
+	}
+
 	/* Range Inputs */
 	.range-inputs {
 		display: flex;
@@ -510,47 +492,6 @@
 		margin-bottom: var(--space-2);
 	}
 
-	/* Count Display */
-	.count-display {
-		display: flex;
-		align-items: center;
-		gap: var(--space-2);
-		padding: var(--space-3);
-		background: rgba(59, 130, 246, 0.05);
-		border: 1px solid rgba(59, 130, 246, 0.2);
-		border-radius: var(--radius-md);
-		font-size: var(--text-sm);
-	}
-
-	.count-display.warning {
-		background: rgba(245, 158, 11, 0.05);
-		border-color: rgba(245, 158, 11, 0.3);
-	}
-
-	.count-label {
-		color: var(--gray-600);
-	}
-
-	:global([data-theme='dark']) .count-label {
-		color: var(--gray-400);
-	}
-
-	.count-value {
-		font-size: var(--text-lg);
-		font-weight: var(--font-bold);
-		color: var(--color-primary);
-	}
-
-	.count-unit {
-		color: var(--gray-500);
-	}
-
-	.count-warning {
-		margin-left: auto;
-		color: hsl(38, 92%, 50%);
-		font-weight: var(--font-medium);
-	}
-
 	/* Format Preview */
 	.format-preview {
 		display: flex;
@@ -593,10 +534,6 @@
 
 	/* Mobile Responsive */
 	@media (max-width: 640px) {
-		.path-type-grid {
-			grid-template-columns: 1fr;
-		}
-
 		.range-inputs {
 			flex-direction: column;
 			align-items: stretch;
