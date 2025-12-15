@@ -22,8 +22,16 @@
 	{/if}
 
 	<div class="layout-grid" class:full-width={!sidebar}>
-		<main class="main-content">
-			{@render children()}
+		<main class="main-container">
+			<div class="main-content">
+				{@render children()}
+			</div>
+
+			{#if footer}
+				<footer class="footer-section">
+					{@render footer()}
+				</footer>
+			{/if}
 		</main>
 
 		{#if sidebar}
@@ -32,11 +40,6 @@
 			</aside>
 		{/if}
 	</div>
-	{#if footer}
-		<footer class="footer-section">
-			{@render footer()}
-		</footer>
-	{/if}
 </div>
 
 <style>
@@ -71,6 +74,11 @@
 		overflow-y: auto;
 		z-index: 2;
 	}
+	.main-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
 
 	.main-content {
 		background: var(--color-card);
@@ -79,14 +87,12 @@
 		padding-top: var(--space-6);
 		border-radius: var(--radius-lg);
 		border: 1px solid var(--color-border);
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
 	}
 
 	.footer-section {
 		/* footer-section 作为容器不添加背景，保持透明 */
 		/* 让内部内容（如 FAQs）自己控制宽度和样式 */
+		background: transparent;
 		display: flex;
 		justify-content: center;
 		align-items: flex-start;

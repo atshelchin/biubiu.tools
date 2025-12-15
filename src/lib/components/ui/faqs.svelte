@@ -44,8 +44,8 @@
 <style>
 	.faqs-container {
 		width: 100%;
-		max-width: 738px;
-		margin: 0 auto;
+		/* max-width: 738px; */
+		margin: 12px auto;
 		/* padding: var(--space-6) var(--space-5); */
 	}
 
