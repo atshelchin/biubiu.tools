@@ -2,6 +2,7 @@
 	import Modal from './modal.svelte';
 	import NetworkListView from './network-list-view.svelte';
 	import NetworkFormView from './network-form-view.svelte';
+	import { Check } from '@lucide/svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
 	import { useI18n } from '@shelchin/i18n/svelte';
 
@@ -45,10 +46,12 @@
 	const t = i18n.t;
 
 	type ViewMode = 'list' | 'edit' | 'add';
+	type SaveStatus = 'idle' | 'saving' | 'success' | 'error';
 	let viewMode = $state<ViewMode>('list');
 	let editingNetwork = $state<NetworkConfig | undefined>(undefined);
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	let networkFormView: any = $state(undefined);
+	let saveStatus = $state<SaveStatus>('idle');
 
 	// Handle initialEditChainId - open directly to edit mode when modal opens
 	$effect(() => {
@@ -66,8 +69,37 @@
 		if (!open) {
 			viewMode = 'list';
 			editingNetwork = undefined;
+			saveStatus = 'idle';
 		}
 	});
+
+	// Handle save button click with status feedback
+	async function handleSaveClick() {
+		if (!networkFormView) return;
+
+		saveStatus = 'saving';
+
+		try {
+			const success = await networkFormView.handleSubmit();
+			if (success) {
+				saveStatus = 'success';
+				// Show success for 1 second then go back to list
+				setTimeout(() => {
+					// handleBackToList();
+					saveStatus = 'idle';
+				}, 1000);
+			} else {
+				// Validation failed - form will show error, reset button state
+				saveStatus = 'idle';
+			}
+		} catch {
+			saveStatus = 'error';
+			// Reset after showing error
+			setTimeout(() => {
+				saveStatus = 'idle';
+			}, 2000);
+		}
+	}
 
 	function handleAddNetwork() {
 		viewMode = 'add';
@@ -154,7 +186,7 @@
 			}
 		}
 
-		handleBackToList();
+		// handleBackToList();
 	}
 </script>
 
@@ -163,22 +195,41 @@
 	{open}
 	{onClose}
 	title={t('wallet.network_settings.title')}
-	maxWidth="800px"
+	maxWidth="600px"
 	closeOnOverlayClick={false}
 >
 	{#snippet footer()}
 		{#if viewMode !== 'list' && networkFormView}
 			<div class="modal-footer-actions">
-				<button type="button" class="btn-secondary" onclick={handleBackToList}>
+				<button
+					type="button"
+					class="btn-secondary"
+					onclick={handleBackToList}
+					disabled={saveStatus === 'saving' || saveStatus === 'success'}
+				>
 					{t('wallet.network_settings.cancel')}
 				</button>
 				<button
 					type="button"
 					class="btn-primary"
-					disabled={!networkFormView.getCanSubmit()}
-					onclick={() => networkFormView.handleSubmit()}
+					class:saving={saveStatus === 'saving'}
+					class:success={saveStatus === 'success'}
+					class:error={saveStatus === 'error'}
+					disabled={!networkFormView.getCanSubmit() ||
+						saveStatus === 'saving' ||
+						saveStatus === 'success'}
+					onclick={handleSaveClick}
 				>
-					{t('wallet.network_settings.save')}
+					{#if saveStatus === 'saving'}
+						{t('wallet.network_settings.saving')}
+					{:else if saveStatus === 'success'}
+						<Check size={16} />
+						{t('wallet.network_settings.saved')}
+					{:else if saveStatus === 'error'}
+						{t('wallet.network_settings.save_failed')}
+					{:else}
+						{t('wallet.network_settings.save')}
+					{/if}
 				</button>
 			</div>
 		{/if}
@@ -272,6 +323,30 @@
 	}
 
 	.btn-primary:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
+	/* Save button states */
+	.btn-primary.saving {
+		background: var(--brand-500);
+		opacity: 0.8;
+	}
+
+	.btn-primary.success {
+		background: var(--color-success, #10b981);
+		opacity: 1;
+		display: flex;
+		align-items: center;
+		gap: var(--space-1);
+	}
+
+	.btn-primary.error {
+		background: var(--color-danger, #ef4444);
+		opacity: 1;
+	}
+
+	.btn-secondary:disabled {
 		opacity: 0.5;
 		cursor: not-allowed;
 	}

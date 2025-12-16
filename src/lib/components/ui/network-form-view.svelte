@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { flip } from 'svelte/animate';
 	import { ArrowLeft, Plus, Trash2 } from '@lucide/svelte';
 	import InfoHint from './info-hint.svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
@@ -235,29 +236,34 @@
 			url: string;
 			isPrimary: boolean;
 		}>;
-		const updated = currentEndpoints.map((rpc, i) => ({
-			...rpc,
-			isPrimary: i === index
-		}));
+
+		// Get the endpoint being set as primary
+		const newPrimary = currentEndpoints[index];
+
+		// Create new array: new primary first, then others (all non-primary)
+		const updated = [
+			{ ...newPrimary, isPrimary: true },
+			...currentEndpoints.filter((_, i) => i !== index).map((rpc) => ({ ...rpc, isPrimary: false }))
+		];
 
 		form.setValue('rpcEndpoints', updated);
 
 		// Test latency for the new primary endpoint
-		const newPrimaryUrl = updated[index].url;
-		rpcLatencies.set(newPrimaryUrl, undefined); // Set to "testing" state
-		const latency = await testRpcLatency(newPrimaryUrl);
-		rpcLatencies.set(newPrimaryUrl, latency);
+		rpcLatencies.set(newPrimary.url, undefined); // Set to "testing" state
+		const latency = await testRpcLatency(newPrimary.url);
+		rpcLatencies.set(newPrimary.url, latency);
 	}
 
 	// Export function to parent - validates primary RPC before saving
-	export async function handleSubmit() {
+	// Returns true if save was successful, false if validation failed
+	export async function handleSubmit(): Promise<boolean> {
 		console.log('[NetworkFormView] handleSubmit called values', form.values);
 		console.log('[NetworkFormView] form.isValid:', form.isValid);
 		console.log('[NetworkFormView] form.isValidating:', form.isValidating);
 
 		if (!form.isValid || form.isValidating || isValidatingPrimaryRpc) {
 			console.log('[NetworkFormView] Cannot submit - form invalid or validating');
-			return;
+			return false;
 		}
 
 		// Use $state.snapshot to get plain values from Immer proxy
@@ -270,7 +276,7 @@
 		if (!primaryRpc) {
 			console.log('[NetworkFormView] No primary RPC found');
 			primaryRpcValidationError = t('wallet.network_settings.error_rpc_required');
-			return;
+			return false;
 		}
 
 		// Validate primary RPC is available and matches chain ID
@@ -284,7 +290,7 @@
 			if (rpcChainId === null) {
 				primaryRpcValidationError = t('wallet.network_settings.error_rpc_unavailable');
 				console.log('[NetworkFormView] Primary RPC unavailable');
-				return;
+				return false;
 			}
 
 			if (rpcChainId !== chainId) {
@@ -293,7 +299,7 @@
 					actual: rpcChainId
 				});
 				console.log('[NetworkFormView] Primary RPC chain ID mismatch:', rpcChainId, 'vs', chainId);
-				return;
+				return false;
 			}
 
 			console.log('[NetworkFormView] Primary RPC validation passed');
@@ -308,6 +314,7 @@
 
 			console.log('[NetworkFormView] Calling onSave with:', dataToSave);
 			onSave(dataToSave);
+			return true;
 		} finally {
 			isValidatingPrimaryRpc = false;
 		}
@@ -387,8 +394,12 @@
 				{/if}
 
 				<div class="rpc-list-form">
-					{#each form.values.rpcEndpoints as Array<{ url: string; isPrimary: boolean }> as rpc, index (index)}
-						<div class="rpc-item-form" class:primary={rpc.isPrimary}>
+					{#each form.values.rpcEndpoints as Array<{ url: string; isPrimary: boolean }> as rpc, index (rpc.url)}
+						<div
+							class="rpc-item-form"
+							class:primary={rpc.isPrimary}
+							animate:flip={{ duration: 300 }}
+						>
 							<div class="rpc-info-wrapper">
 								<div class="rpc-url-display">{rpc.url}</div>
 								{#if rpcLatencies.has(rpc.url)}

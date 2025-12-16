@@ -1060,6 +1060,8 @@
 			"error_rpc_chainid_mismatch": "The chain ID of RPC endpoint ({actual}) does not match the input chain ID ({expected})",
 			"validating_primary_rpc": "Validating primary RPC endpoint...",
 			"save": "Save",
+			"saved": "Saved",
+			"save_failed": "Save Failed",
 			"toggle_enable_hint": "Click to enable this network",
 			"toggle_disable_hint": "Click to disable this network"
 		}
