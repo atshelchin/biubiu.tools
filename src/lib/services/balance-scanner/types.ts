@@ -241,7 +241,9 @@ export function getTaskKey(address: Address, tokenId: string): string {
 
 /** Parse task key back to address and tokenId */
 export function parseTaskKey(key: string): { address: Address; tokenId: string } {
-	const [address, tokenId] = key.split(':');
+	const firstColonIndex = key.indexOf(':');
+	const address = key.slice(0, firstColonIndex);
+	const tokenId = key.slice(firstColonIndex + 1);
 	return { address: address as Address, tokenId };
 }
 

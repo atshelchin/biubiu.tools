@@ -1,92 +1,98 @@
 import type { PageLoad } from './$types';
-import type { HowToStepData } from '$lib/utils/structured-data';
-import type { Step } from '$lib/components/ui/step-indicator.svelte';
-import { createWebAppData, createHowToData } from '$lib/utils/structured-data';
+import { createWebAppData, createHowToData, type HowToStepData } from '$lib/utils/structured-data';
+import { I18n } from '@shelchin/i18n';
+import { extractLocaleFromPathname } from '@shelchin/i18n/utils';
+import en from '../../../i18n/locales/en.json';
+import zh from '../../../i18n/locales/zh.json';
+import type { PackageLocales } from '@shelchin/i18n';
 
 export const load: PageLoad = ({ url }) => {
-	const title = 'Token Balance Scanner - Batch Check Wallet Balances | BiuBiu Tools';
-	const description =
-		'Scan and aggregate token balances across multiple wallets. Check holdings for native tokens and ERC20 tokens, export results to CSV or JSON.';
-	const keywords =
-		'token balance, wallet scanner, batch balance check, crypto portfolio, token holdings, multi-wallet scanner, blockchain balance, web3 tools';
-	const canonical = url.origin + url.pathname;
-	const type = 'website' as const;
-	const image = `${url.origin}/og-token-balance-scanner.png`;
-	const locale = 'en_US';
+	// Extract locale from URL pathname (e.g., /zh/apps/token-balance-scanner -> 'zh')
+	const locale = extractLocaleFromPathname(url.pathname) || 'en';
 
+	// Create i18n instance for this request
+	const locales = { en, zh } as unknown as PackageLocales;
+	const i18n = new I18n(locale);
+	i18n.register('__default__', locales);
+	const t = i18n.t.bind(i18n);
+
+	const canonical = url.origin + url.pathname;
+	const image = `${url.origin}/og-token-balance-scanner.png`;
+
+	// Define steps with both SEO text and UI description using i18n
 	const steps: HowToStepData[] = [
 		{
-			name: 'Connect Your Wallet',
-			text: 'Click the "Connect Wallet" button and connect your Web3 wallet to select the blockchain network you want to scan.',
-			description: 'Connect wallet and select network'
+			name: t('tools.token_balance_scanner.seo.step_1_name'),
+			text: t('tools.token_balance_scanner.seo.step_1_text'),
+			description: t('tools.token_balance_scanner.seo.step_1_description')
 		},
 		{
-			name: 'Select Tokens to Scan',
-			text: 'Choose which tokens you want to check balances for. You can select native tokens (ETH, BNB, MATIC) and any ERC20 tokens available on the network.',
-			description: 'Select tokens to scan'
+			name: t('tools.token_balance_scanner.seo.step_2_name'),
+			text: t('tools.token_balance_scanner.seo.step_2_text'),
+			description: t('tools.token_balance_scanner.seo.step_2_description')
 		},
 		{
-			name: 'Import Wallet Addresses',
-			text: 'Add wallet addresses to scan by pasting them (one per line), uploading a CSV/TXT file, or entering them manually. You can scan up to 1000 wallets at once.',
-			description: 'Add wallet addresses to scan'
+			name: t('tools.token_balance_scanner.seo.step_3_name'),
+			text: t('tools.token_balance_scanner.seo.step_3_text'),
+			description: t('tools.token_balance_scanner.seo.step_3_description')
 		},
 		{
-			name: 'Scan Balances',
-			text: 'Click "Start Scanning" to query token balances across all wallets. The tool will fetch balance data from the blockchain and display progress in real-time.',
-			description: 'Execute the balance scan'
+			name: t('tools.token_balance_scanner.seo.step_4_name'),
+			text: t('tools.token_balance_scanner.seo.step_4_text'),
+			description: t('tools.token_balance_scanner.seo.step_4_description')
 		},
 		{
-			name: 'View and Export Results',
-			text: 'Review the scanned balances in a table format, see total holdings for each token, and export the results to CSV or JSON format for further analysis.',
-			description: 'View results and export data'
+			name: t('tools.token_balance_scanner.seo.step_5_name'),
+			text: t('tools.token_balance_scanner.seo.step_5_text'),
+			description: t('tools.token_balance_scanner.seo.step_5_description')
 		}
 	];
 
-	// Create UI steps from HowToStepData
-	const uiSteps: Step[] = steps.map((step) => ({
-		label: step.name,
-		description: step.description
-	}));
-
+	// Generate structured data from steps config
 	const webAppData = createWebAppData({
-		name: 'Token Balance Scanner',
-		description:
-			'Batch scan and aggregate token balances across multiple wallets on various blockchains',
+		name: t('tools.token_balance_scanner.seo.webapp_name'),
+		description: t('tools.token_balance_scanner.seo.webapp_description'),
 		canonical,
 		features: [
-			'Connect Web3 wallet for network selection',
-			'Support multiple networks (Ethereum, Polygon, BSC, Base, Arbitrum, Optimism)',
-			'Scan native tokens (ETH, BNB, MATIC) and ERC20 token balances',
-			'Import wallets via CSV, TXT, or manual entry',
-			'Scan up to 1000 wallets at once',
-			'Real-time scan progress tracking',
-			'Aggregate total holdings across all wallets',
-			'Export results to CSV or JSON',
-			'No on-chain transactions required (read-only)'
+			t('tools.token_balance_scanner.seo.feature_1'),
+			t('tools.token_balance_scanner.seo.feature_2'),
+			t('tools.token_balance_scanner.seo.feature_3'),
+			t('tools.token_balance_scanner.seo.feature_4'),
+			t('tools.token_balance_scanner.seo.feature_5')
 		]
 	});
 
 	const howToData = createHowToData({
-		name: 'How to Batch Scan Token Balances Across Multiple Wallets',
-		description:
-			'Complete guide to scanning and aggregating token balances for multiple wallet addresses',
+		name: t('tools.token_balance_scanner.seo.howto_name'),
+		description: t('tools.token_balance_scanner.seo.howto_description'),
 		canonical,
 		image,
 		steps,
-		tools: ['Web3 Wallet (MetaMask, WalletConnect, etc.)', 'List of wallet addresses to scan']
+		tools: [
+			t('tools.token_balance_scanner.seo.howto_tool_1'),
+			t('tools.token_balance_scanner.seo.howto_tool_2')
+		]
 	});
+
+	// Map locale to SEO locale format (e.g., 'zh' -> 'zh_CN', 'en' -> 'en_US')
+	const seoLocaleMap: Record<string, string> = {
+		en: 'en_US',
+		zh: 'zh_CN',
+		ja: 'ja_JP',
+		fr: 'fr_FR'
+	};
 
 	return {
 		meta: {
-			title,
-			description,
-			keywords,
+			title: t('tools.token_balance_scanner.seo.page_title'),
+			description: t('tools.token_balance_scanner.seo.page_description'),
+			keywords: t('tools.token_balance_scanner.seo.keywords'),
 			canonical,
-			type,
+			type: 'website' as const,
 			image,
-			locale
+			locale: seoLocaleMap[locale] || 'en_US'
 		},
-		steps: uiSteps,
+		steps,
 		structuredData: [webAppData, howToData]
 	};
 };

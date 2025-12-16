@@ -5,18 +5,24 @@
 
 	const stepManager = useStepManager();
 
-	const canContinue = $derived(scannerState.scanStatus === 'completed');
+	const canContinue = $derived(scannerState.selectedTokens.size > 0);
 
 	function handleContinue() {
 		if (canContinue) {
 			stepManager.next();
 		}
 	}
+
+	function goBack() {
+		stepManager.prev();
+	}
 </script>
 
 <StepFooter
+	showBack={true}
+	onBack={goBack}
 	{canContinue}
-	continueText="View Results"
+	continueText="Continue to Import Addresses"
 	onContinue={handleContinue}
-	hint="Complete the scan to continue"
+	hint="Select at least one token to continue"
 />

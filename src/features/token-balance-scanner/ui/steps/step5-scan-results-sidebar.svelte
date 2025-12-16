@@ -4,9 +4,14 @@
 
 	const status = $derived(scannerState.scanStatus);
 	const progress = $derived(scannerState.progress);
+	const balances = $derived(scannerState.balances);
+	const totalWallets = $derived(balances.length);
+
+	// Get first wallet's tokens to calculate totals
+	const tokens = $derived(balances[0]?.balances.map((b) => b.token) || []);
 </script>
 
-<StepSidebar stepNumber={4} title="Scan Balances" description="Scan token balances across wallets">
+<StepSidebar stepNumber={5} title="Scan & Results" description="Scan balances and export data">
 	{#if status === 'scanning' && progress}
 		<div class="progress-box">
 			<div class="progress-stats">
@@ -20,6 +25,28 @@
 				<span>Wallet {progress.current} of {progress.total}</span>
 			</div>
 		</div>
+	{:else if status === 'completed'}
+		<div class="stats-box completed">
+			<div class="stat">
+				<span class="stat-value">{totalWallets}</span>
+				<span class="stat-label">Wallets Scanned</span>
+			</div>
+			<div class="stat">
+				<span class="stat-value">{tokens.length}</span>
+				<span class="stat-label">Tokens Checked</span>
+			</div>
+		</div>
+	{:else}
+		<div class="stats-box">
+			<div class="stat">
+				<span class="stat-value">{scannerState.wallets.length}</span>
+				<span class="stat-label">Wallets to Scan</span>
+			</div>
+			<div class="stat">
+				<span class="stat-value">{scannerState.selectedTokens.size}</span>
+				<span class="stat-label">Tokens Selected</span>
+			</div>
+		</div>
 	{/if}
 
 	<div class="info-box">
@@ -31,10 +58,15 @@
 		</ul>
 	</div>
 
-	<div class="tip-box">
-		<span class="tip-icon">⏱️</span>
-		<p>This may take a few moments depending on the number of wallets and tokens.</p>
-	</div>
+	{#if status === 'completed'}
+		<div class="tip-box">
+			<p>Use CSV export to analyze data in Excel or Google Sheets.</p>
+		</div>
+	{:else}
+		<div class="tip-box">
+			<p>This may take a few moments depending on the number of wallets and tokens.</p>
+		</div>
+	{/if}
 </StepSidebar>
 
 <style>
@@ -99,6 +131,62 @@
 		color: var(--gray-400);
 	}
 
+	/* Stats Box */
+	.stats-box {
+		margin: var(--space-4) 0;
+		padding: var(--space-4);
+		background: linear-gradient(135deg, hsl(210, 100%, 98%), hsl(210, 100%, 95%));
+		border-radius: var(--radius-lg);
+		border: 2px solid hsl(210, 100%, 85%);
+		display: flex;
+		gap: var(--space-4);
+	}
+
+	.stats-box.completed {
+		background: linear-gradient(135deg, hsl(120, 60%, 98%), hsl(120, 60%, 95%));
+		border-color: hsl(120, 60%, 85%);
+	}
+
+	:global([data-theme='dark']) .stats-box {
+		background: linear-gradient(135deg, hsl(210, 100%, 15%), hsl(210, 100%, 10%));
+		border-color: hsl(210, 100%, 25%);
+	}
+
+	:global([data-theme='dark']) .stats-box.completed {
+		background: linear-gradient(135deg, hsl(120, 60%, 15%), hsl(120, 60%, 10%));
+		border-color: hsl(120, 60%, 25%);
+	}
+
+	.stat {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--space-1);
+	}
+
+	.stat-value {
+		font-size: var(--text-2xl);
+		font-weight: var(--font-bold);
+		color: var(--color-primary);
+	}
+
+	.stats-box.completed .stat-value {
+		color: hsla(120, 60%, 50%, 1);
+	}
+
+	.stat-label {
+		font-size: var(--text-xs);
+		color: var(--gray-600);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		text-align: center;
+	}
+
+	:global([data-theme='dark']) .stat-label {
+		color: var(--gray-400);
+	}
+
 	/* Info Box */
 	.info-box {
 		margin-top: var(--space-4);
@@ -141,7 +229,7 @@
 	}
 
 	.info-list li::before {
-		content: '→';
+		content: '>';
 		position: absolute;
 		left: 0;
 		color: var(--color-primary);
@@ -155,20 +243,11 @@
 		background: hsla(45, 100%, 95%, 1);
 		border-radius: var(--radius-md);
 		border: 1px solid hsla(45, 100%, 80%, 1);
-		display: flex;
-		gap: var(--space-2);
-		align-items: flex-start;
 	}
 
 	:global([data-theme='dark']) .tip-box {
 		background: hsla(45, 100%, 15%, 0.3);
 		border-color: hsla(45, 100%, 25%, 1);
-	}
-
-	.tip-icon {
-		font-size: var(--text-xl);
-		flex-shrink: 0;
-		line-height: 1;
 	}
 
 	.tip-box p {

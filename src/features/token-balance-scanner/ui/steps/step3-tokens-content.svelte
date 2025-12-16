@@ -107,7 +107,7 @@
 
 	{#if !hasSelections}
 		<div class="empty-state">
-			<p>👆 Select at least one token to continue</p>
+			<p>Select at least one token to continue</p>
 		</div>
 	{/if}
 </div>

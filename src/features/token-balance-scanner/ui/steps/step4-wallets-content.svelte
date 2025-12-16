@@ -118,7 +118,7 @@
 		</div>
 	{:else}
 		<div class="empty-state">
-			<p>👆 Add wallet addresses using one of the methods above</p>
+			<p>Add wallet addresses using one of the methods above</p>
 		</div>
 	{/if}
 </div>

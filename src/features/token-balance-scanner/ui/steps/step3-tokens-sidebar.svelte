@@ -11,7 +11,7 @@
 </script>
 
 <StepSidebar
-	stepNumber={2}
+	stepNumber={3}
 	title="Select Tokens"
 	description="Choose which tokens to scan across wallets"
 >

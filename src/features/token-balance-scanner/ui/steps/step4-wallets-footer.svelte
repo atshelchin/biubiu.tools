@@ -12,9 +12,15 @@
 			stepManager.next();
 		}
 	}
+
+	function goBack() {
+		stepManager.prev();
+	}
 </script>
 
 <StepFooter
+	showBack={true}
+	onBack={goBack}
 	{canContinue}
 	continueText="Continue to Scan"
 	onContinue={handleContinue}
