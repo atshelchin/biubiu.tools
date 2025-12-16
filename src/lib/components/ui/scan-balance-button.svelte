@@ -3,7 +3,7 @@
 
 	interface Props {
 		isScanning: boolean;
-		scanProgress: number;
+		scanProgress?: number;
 		scanCompleted?: boolean;
 		disabled?: boolean;
 		scanningText?: string;
@@ -14,7 +14,7 @@
 
 	let {
 		isScanning,
-		scanProgress,
+		scanProgress: _scanProgress,
 		scanCompleted = false,
 		disabled = false,
 		scanningText = 'Scanning...',
@@ -22,6 +22,8 @@
 		completedText = 'Scan Completed',
 		onScan
 	}: Props = $props();
+	// Note: scanProgress is received but not displayed (commented out in template)
+	void _scanProgress;
 
 	let isDisabled = $derived(disabled || isScanning);
 </script>
@@ -36,7 +38,6 @@
 	{#if isScanning}
 		<Loader2 size={16} class="spinning" />
 		<span>{scanningText}</span>
-		<span class="progress-badge">{scanProgress}%</span>
 	{:else if scanCompleted}
 		<Check size={16} />
 		<span>{completedText}</span>
@@ -62,6 +63,7 @@
 		cursor: pointer;
 		transition: all 0.2s;
 		min-width: 160px;
+		width: 100%;
 	}
 
 	.scan-balance-btn:hover:not(:disabled) {

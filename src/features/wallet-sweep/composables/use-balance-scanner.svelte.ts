@@ -20,6 +20,7 @@ interface ScanBalancesParams {
 	onProgress: (progress: number) => void;
 	onRateLimitError?: (error: RateLimitError, state: ScanState) => void;
 	onAllRPCsExhausted?: () => void; // New callback when all RPCs are exhausted
+	onStateUpdate?: (state: ScanState) => void; // Callback to report state updates during scan
 	initialState?: ScanState;
 }
 
@@ -35,6 +36,7 @@ export function useBalanceScanner() {
 			onProgress,
 			onRateLimitError,
 			onAllRPCsExhausted,
+			onStateUpdate,
 			initialState
 		} = params;
 
@@ -52,7 +54,14 @@ export function useBalanceScanner() {
 		}));
 
 		// Retry loop with RPC rotation
+		// Use initialState if provided (for resume), otherwise start fresh
 		let scanState = initialState;
+		console.log('🔄 Starting scan with initialState:', initialState ? 'resuming' : 'fresh start');
+		if (initialState) {
+			console.log(
+				`   Resume from: tokenIndex=${initialState.currentTokenIndex}, batchIndex=${initialState.currentBatchIndex}`
+			);
+		}
 
 		while (!rpcManager.isAllExhausted()) {
 			const currentRpcUrl = rpcManager.getCurrentRPC();
@@ -98,11 +107,20 @@ export function useBalanceScanner() {
 					currentChainId,
 					(progress) => {
 						onProgress(progress.percentage);
+						// Report state update on each progress (state is now included in progress)
+						if (onStateUpdate && progress.state) {
+							scanState = progress.state; // Keep local state updated
+							onStateUpdate(progress.state);
+						}
 					},
 					// Capture the state when rate limit error occurs
 					(_error, capturedState) => {
 						console.log('📋 Captured state from rate limit error:', capturedState);
 						scanState = capturedState; // Save the state for retry
+						// Report state update immediately
+						if (onStateUpdate) {
+							onStateUpdate(capturedState);
+						}
 					},
 					scanState
 				);

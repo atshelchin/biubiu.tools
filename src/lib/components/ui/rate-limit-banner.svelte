@@ -26,7 +26,7 @@
 </script>
 
 <div class="rate-limit-banner" transition:slide>
-	<div class="banner-icon">⚠️</div>
+	<!-- <div class="banner-icon">⚠️</div> -->
 	<div class="banner-content">
 		<div class="banner-title">{title}</div>
 		<div class="banner-message">{message}</div>
@@ -58,6 +58,7 @@
 <style>
 	.rate-limit-banner {
 		display: flex;
+		flex-direction: column;
 		align-items: flex-start;
 		gap: var(--space-3);
 		padding: var(--space-4);
@@ -168,7 +169,7 @@
 		display: flex;
 		gap: var(--space-2);
 		flex-shrink: 0;
-		flex-direction: column;
+		width: 100%;
 	}
 
 	.btn-primary {
@@ -182,6 +183,7 @@
 		cursor: pointer;
 		transition: all 0.2s;
 		white-space: nowrap;
+		flex: auto;
 	}
 
 	.btn-primary:hover {

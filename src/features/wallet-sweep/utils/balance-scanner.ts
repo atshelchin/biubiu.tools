@@ -142,6 +142,7 @@ export interface ScanProgress {
 	current: number;
 	total: number;
 	percentage: number;
+	state?: ScanState; // Current scan state for resume capability
 }
 
 /**
@@ -716,13 +717,16 @@ export async function scanMultipleWalletsResumable(
 						});
 					});
 
-					// Update progress
+					// Update progress with current state
+					state.currentBatchIndex = i + 1;
+					state.nativeBalances = nativeBalances;
 					if (onProgress) {
 						const completedBatches = i + 1;
 						onProgress({
 							current: completedBatches,
 							total: batchCount * totalTokens,
-							percentage: Math.round((completedBatches / (batchCount * totalTokens)) * 100)
+							percentage: Math.round((completedBatches / (batchCount * totalTokens)) * 100),
+							state: { ...state } // Pass a copy of current state
 						});
 					}
 				} catch (error) {
@@ -840,13 +844,17 @@ export async function scanMultipleWalletsResumable(
 						});
 					});
 
-					// Update progress
+					// Update progress with current state
+					state.currentTokenIndex = tokenIdx;
+					state.currentBatchIndex = i + 1;
+					state.tokenBalances.set(token.tokenId, tokenBalances);
 					if (onProgress) {
 						const completedBatches = batchCount + tokenIdx * batchCount + (i + 1);
 						onProgress({
 							current: completedBatches,
 							total: batchCount * totalTokens,
-							percentage: Math.round((completedBatches / (batchCount * totalTokens)) * 100)
+							percentage: Math.round((completedBatches / (batchCount * totalTokens)) * 100),
+							state: { ...state } // Pass a copy of current state
 						});
 					}
 				} catch (error) {

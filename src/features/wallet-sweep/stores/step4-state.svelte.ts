@@ -16,6 +16,8 @@ let scanCompleted = $state(false);
 
 // Error message
 let errorMessage = $state('');
+// Flag to indicate if errorMessage is just info (not an error)
+let isInfoMessage = $state(false);
 
 // Resumable scan state
 let scanState = $state<ScanState | null>(null);
@@ -60,6 +62,12 @@ export const step4State = {
 	set errorMessage(value: string) {
 		errorMessage = value;
 	},
+	get isInfoMessage() {
+		return isInfoMessage;
+	},
+	set isInfoMessage(value: boolean) {
+		isInfoMessage = value;
+	},
 
 	// Helper methods
 	addWallets(wallets: ImportedWallet[]) {
@@ -75,10 +83,12 @@ export const step4State = {
 		scanCompleted = false;
 		scanProgress = 0;
 		errorMessage = '';
+		isInfoMessage = false;
 	},
 
 	clearError() {
 		errorMessage = '';
+		isInfoMessage = false;
 	},
 
 	removeWallet(address: string) {

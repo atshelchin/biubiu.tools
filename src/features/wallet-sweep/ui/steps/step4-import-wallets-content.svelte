@@ -11,14 +11,14 @@
 	import { usePrivateKeyImport } from '@/features/wallet-sweep/composables/use-private-key-import.svelte';
 	import { useRpcManager } from '@/features/wallet-sweep/composables/use-rpc-manager.svelte';
 	import { useBalanceScanner } from '@/features/wallet-sweep/composables/use-balance-scanner.svelte';
-	import { setDebugConfig } from '@/features/wallet-sweep/utils/balance-scanner';
+	import { setDebugConfig, type ScanState } from '@/features/wallet-sweep/utils/balance-scanner';
 	import type { ImportMethod } from '@/features/wallet-sweep/types/wallet';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
 	import QuickRpcManagerModal from '$lib/components/ui/quick-rpc-manager-modal.svelte';
-	import RateLimitBanner from '$lib/components/ui/rate-limit-banner.svelte';
-	import ErrorBanner from '$lib/components/ui/error-banner.svelte';
+	import InlineAlert from '$lib/components/ui/inline-alert.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useDevToolsEnabled } from '$lib/utils/dev-tools.svelte';
 
 	const i18n = useI18n();
 	const connectStore = useConnectStore();
@@ -36,17 +36,22 @@
 	// Local state - default to privateKey as it's the most common use case
 	let importMethod = $state<ImportMethod>('privateKey');
 
+	// Dev tools visibility - reactive, updates in real-time when window.toggleDevTools() is called
+	let showDevTools = $derived(import.meta.env.DEV && useDevToolsEnabled());
+
 	// Derived state
 	let importedWallets = $derived(step4State.importedWallets);
 	let isScanning = $derived(step4State.isScanning);
 	let scanProgress = $derived(step4State.scanProgress);
 	let scanCompleted = $derived(step4State.scanCompleted);
 
-	// Combined error message from import methods and scan errors
-	let errorMessage = $derived(
-		step4State.errorMessage ||
-			(importMethod === 'mnemonic' ? mnemonicImport.errorMessage : privateKeyImport.errorMessage)
+	// Import error message (from mnemonic or private key import)
+	let importErrorMessage = $derived(
+		importMethod === 'mnemonic' ? mnemonicImport.errorMessage : privateKeyImport.errorMessage
 	);
+
+	// Scan error message (from balance scanning)
+	let scanErrorMessage = $derived(step4State.errorMessage);
 
 	function handleMethodSelect(method: ImportMethod) {
 		importMethod = method;
@@ -159,6 +164,11 @@
 								});
 					step4State.handleRateLimitError(errorMessage, scanState);
 				},
+				onStateUpdate: (scanState) => {
+					// Always keep track of the latest scan state for resume capability
+					step4State.scanState = scanState;
+					step4State.canResumeScan = true;
+				},
 				initialState: step4State.canResumeScan ? step4State.scanState || undefined : undefined
 			});
 
@@ -175,6 +185,7 @@
 			const walletsWithBalance = step4State.getWalletsWithBalance().length;
 			if (walletsWithBalance === 0 && !state.isPaused) {
 				step4State.errorMessage = i18n.t('tools.wallet_sweep.step4.content.errors.no_balance');
+				step4State.isInfoMessage = true; // This is info, not an error
 			}
 		} catch (error) {
 			if (error instanceof Error && error.name === 'RateLimitError') {
@@ -184,6 +195,7 @@
 				error instanceof Error
 					? error.message
 					: i18n.t('tools.wallet_sweep.step4.content.errors.scan_failed');
+			step4State.isInfoMessage = false; // This is an actual error
 		} finally {
 			step4State.isScanning = false;
 		}
@@ -229,30 +241,9 @@
 		/>
 	{/if}
 
-	<!-- Error Message -->
-	{#if errorMessage}
-		<ErrorBanner message={errorMessage} />
-	{/if}
-
-	<!-- Rate Limit Error Banner -->
-	{#if step4State.isRateLimited}
-		<RateLimitBanner
-			title={i18n.t('tools.wallet_sweep.step4.content.rate_limit.title')}
-			message={step4State.rateLimitMessage}
-			hint={i18n.t('tools.wallet_sweep.step4.content.rate_limit.hint')}
-			primaryButtonText={i18n.t('tools.wallet_sweep.step4.content.rate_limit.manage_rpc_button')}
-			secondaryButtonText={i18n.t('tools.wallet_sweep.step4.content.rate_limit.resume_button')}
-			onPrimaryClick={rpcManager.openRpcManager}
-			onSecondaryClick={handleScanBalances}
-		>
-			{#snippet recommend()}
-				💡 {i18n.t('tools.wallet_sweep.step4.content.rate_limit.recommend_prefix')}
-				<a href="https://chainid.network" target="_blank" rel="noopener noreferrer">
-					chainid.network
-				</a>
-				{i18n.t('tools.wallet_sweep.step4.content.rate_limit.recommend_suffix')}
-			{/snippet}
-		</RateLimitBanner>
+	<!-- Import Error Message (near import forms) -->
+	{#if importErrorMessage}
+		<InlineAlert variant="error" message={importErrorMessage} />
 	{/if}
 
 	<!-- Wallet List -->
@@ -265,8 +256,8 @@
 		/>
 
 		<!-- Scan Balance Section -->
-		<div class="scan-section" class:completed={scanCompleted}>
-			<div class="scan-header">
+		<div>
+			<!-- <div class="scan-header">
 				<span class="scan-title"
 					>{i18n.t('tools.wallet_sweep.step4.content.scan_section.title')}</span
 				>
@@ -275,7 +266,7 @@
 						>{i18n.t('tools.wallet_sweep.step4.content.scan_section.required')}</span
 					>
 				{/if}
-			</div>
+			</div> -->
 			<ScanBalanceButton
 				{isScanning}
 				{scanProgress}
@@ -288,12 +279,40 @@
 				completedText={i18n.t('tools.wallet_sweep.step4.content.wallet_list.scan_completed')}
 				onScan={handleScanBalances}
 			/>
-			<!-- {#if !scanCompleted && !isScanning}
-				<p class="scan-hint">{i18n.t('tools.wallet_sweep.step4.content.wallet_list.scan_hint')}</p>
-			{/if} -->
 
-			<!-- Developer Debug Buttons (only in dev mode) -->
-			{#if import.meta.env.DEV}
+			<!-- Scan Error/Info Message (inline, close to scan button) -->
+			{#if scanErrorMessage && !step4State.isRateLimited}
+				<div class="scan-error-inline">
+					<InlineAlert
+						variant={step4State.isInfoMessage ? 'info' : 'error'}
+						title={scanErrorMessage}
+						message=""
+					/>
+				</div>
+			{/if}
+
+			<!-- Rate Limit Error (inline, close to scan button) -->
+			{#if step4State.isRateLimited}
+				<div class="scan-error-inline">
+					<InlineAlert
+						variant="warning"
+						title={i18n.t('tools.wallet_sweep.step4.content.rate_limit.title')}
+						message={step4State.rateLimitMessage}
+						hint={i18n.t('tools.wallet_sweep.step4.content.rate_limit.hint')}
+						primaryButtonText={i18n.t(
+							'tools.wallet_sweep.step4.content.rate_limit.manage_rpc_button'
+						)}
+						secondaryButtonText={i18n.t(
+							'tools.wallet_sweep.step4.content.rate_limit.resume_button'
+						)}
+						onPrimaryClick={rpcManager.openRpcManager}
+						onSecondaryClick={handleScanBalances}
+					/>
+				</div>
+			{/if}
+
+			<!-- Developer Debug Buttons (controlled by localStorage, toggle with window.toggleDevTools()) -->
+			{#if showDevTools}
 				<div class="dev-tools">
 					<span class="dev-label">Dev Tools:</span>
 					<button
@@ -325,7 +344,16 @@
 					<button
 						class="dev-btn dev-btn-warning"
 						onclick={() => {
-							step4State.handleRateLimitError('Simulated rate limit error', null);
+							const mockState: ScanState = {
+								addresses: [],
+								chainId: 1,
+								currentTokenIndex: 0,
+								currentBatchIndex: 0,
+								tokenBalances: new Map(),
+								isPaused: true,
+								pauseReason: 'rate_limit'
+							};
+							step4State.handleRateLimitError('Simulated rate limit error', mockState);
 						}}
 					>
 						Rate Limit
@@ -411,11 +439,10 @@
 		border-radius: var(--radius-full);
 	}
 
-	.scan-hint {
-		font-size: var(--text-xs);
-		color: var(--color-muted-foreground);
-		margin: 0;
-		text-align: center;
+	/* Inline error container within scan section */
+	.scan-error-inline {
+		width: 100%;
+		margin-top: var(--space-2);
 	}
 
 	/* Developer Tools Styles */
