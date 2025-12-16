@@ -1038,6 +1038,10 @@
 			"rpc_endpoints_label": "RPC Endpoints",
 			"rpc_hint_prefix": "Recommended: Find available RPC endpoints at",
 			"rpc_hint_suffix": "",
+			"chainlist_hint_prefix": "Look up Chain ID, RPC endpoints and Block Explorer info at",
+			"chainlist_hint_suffix": "",
+			"explorer_hint_prefix": "Find block explorer URLs at",
+			"explorer_hint_suffix": "",
 			"primary": "Primary",
 			"set_primary": "Set Primary",
 			"add_rpc_placeholder": "https://your-rpc-endpoint.com",
@@ -1054,6 +1058,7 @@
 			"error_rpc_required": "At least one RPC endpoint is required",
 			"error_rpc_unavailable": "Unable to connect to RPC endpoint, please check if the URL is correct",
 			"error_rpc_chainid_mismatch": "The chain ID of RPC endpoint ({actual}) does not match the input chain ID ({expected})",
+			"validating_primary_rpc": "Validating primary RPC endpoint...",
 			"save": "Save",
 			"toggle_enable_hint": "Click to enable this network",
 			"toggle_disable_hint": "Click to disable this network"

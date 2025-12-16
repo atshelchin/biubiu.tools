@@ -1021,6 +1021,10 @@
 			"rpc_endpoints_label": "RPC 节点",
 			"rpc_hint_prefix": "推荐从",
 			"rpc_hint_suffix": "查找可用的 RPC 端点",
+			"chainlist_hint_prefix": "在",
+			"chainlist_hint_suffix": "查询 Chain ID、RPC 节点和区块浏览器",
+			"explorer_hint_prefix": "在",
+			"explorer_hint_suffix": "查询区块浏览器地址",
 			"primary": "主节点",
 			"set_primary": "设为主节点",
 			"add_rpc_placeholder": "https://your-rpc-endpoint.com",
@@ -1041,6 +1045,7 @@
 			"error_rpc_required": "至少需要一个 RPC 节点",
 			"error_rpc_unavailable": "无法连接到 RPC 节点，请检查 URL 是否正确",
 			"error_rpc_chainid_mismatch": "RPC 节点的链 ID ({actual}) 与输入的链 ID ({expected}) 不匹配",
+			"validating_primary_rpc": "正在验证主节点...",
 			"toggle_enable_hint": "点击启用此网络",
 			"toggle_disable_hint": "点击禁用此网络"
 		}

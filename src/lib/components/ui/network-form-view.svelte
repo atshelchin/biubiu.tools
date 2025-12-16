@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { ArrowLeft, Plus, Trash2 } from '@lucide/svelte';
+	import InfoHint from './info-hint.svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import { SvelteMap } from 'svelte/reactivity';
@@ -15,19 +16,17 @@
 	interface Props {
 		mode: 'add' | 'edit';
 		network?: NetworkConfig;
-		isNetworkEnabled?: (chainId: number) => boolean;
 		onSave: (data: {
 			chainId: number;
 			name: string;
 			symbol: string;
 			rpcEndpoints: Array<{ url: string; isPrimary: boolean }>;
 			blockExplorer?: string;
-			enabled: boolean;
 		}) => void;
 		onCancel: () => void;
 	}
 
-	let { mode, network, isNetworkEnabled, onSave, onCancel }: Props = $props();
+	let { mode, network, onSave, onCancel }: Props = $props();
 
 	const i18n = useI18n();
 	const t = i18n.t;
@@ -36,6 +35,8 @@
 	let newRpcError = $state<string | null>(null);
 	let rpcLatencies = new SvelteMap<string, number | undefined>();
 	let firstInputRef: HTMLInputElement | undefined = $state(undefined);
+	let isValidatingPrimaryRpc = $state(false);
+	let primaryRpcValidationError = $state<string | null>(null);
 
 	// Auto-focus first input when entering add mode
 	onMount(() => {
@@ -68,9 +69,6 @@
 			blockExplorer: {
 				defaultValue: network?.blockExplorer || ''
 			},
-			enabled: {
-				defaultValue: network && isNetworkEnabled ? isNetworkEnabled(network.chainId) : true
-			},
 			rpcEndpoints: {
 				defaultValue: (network?.rpcEndpoints || []).map((rpc) => ({
 					url: rpc.url,
@@ -90,8 +88,8 @@
 		}
 	});
 
-	// Computed property
-	const canSubmitValue = $derived(form.isValid && !form.isValidating);
+	// Computed property - include isValidatingPrimaryRpc to disable submit during validation
+	const canSubmitValue = $derived(form.isValid && !form.isValidating && !isValidatingPrimaryRpc);
 
 	// Expose to parent via getter
 	export function getCanSubmit() {
@@ -251,32 +249,68 @@
 		rpcLatencies.set(newPrimaryUrl, latency);
 	}
 
-	// Export function to parent
-	export function handleSubmit() {
+	// Export function to parent - validates primary RPC before saving
+	export async function handleSubmit() {
 		console.log('[NetworkFormView] handleSubmit called values', form.values);
 		console.log('[NetworkFormView] form.isValid:', form.isValid);
 		console.log('[NetworkFormView] form.isValidating:', form.isValidating);
 
-		if (!form.isValid || form.isValidating) {
+		if (!form.isValid || form.isValidating || isValidatingPrimaryRpc) {
 			console.log('[NetworkFormView] Cannot submit - form invalid or validating');
 			return;
 		}
 
 		// Use $state.snapshot to get plain values from Immer proxy
 		const values = $state.snapshot(form.values);
-		console.log('[NetworkFormView] form.values:', values);
+		const chainId = values.chainId as number;
+		const rpcEndpoints = values.rpcEndpoints as Array<{ url: string; isPrimary: boolean }>;
 
-		const dataToSave = {
-			chainId: values.chainId as number,
-			name: values.name as string,
-			symbol: values.symbol as string,
-			blockExplorer: values.blockExplorer as string | undefined,
-			enabled: values.enabled as boolean,
-			rpcEndpoints: values.rpcEndpoints as Array<{ url: string; isPrimary: boolean }>
-		};
+		// Find the primary RPC endpoint
+		const primaryRpc = rpcEndpoints.find((rpc) => rpc.isPrimary);
+		if (!primaryRpc) {
+			console.log('[NetworkFormView] No primary RPC found');
+			primaryRpcValidationError = t('wallet.network_settings.error_rpc_required');
+			return;
+		}
 
-		console.log('[NetworkFormView] Calling onSave with:', dataToSave);
-		onSave(dataToSave);
+		// Validate primary RPC is available and matches chain ID
+		console.log('[NetworkFormView] Validating primary RPC:', primaryRpc.url);
+		isValidatingPrimaryRpc = true;
+		primaryRpcValidationError = null;
+
+		try {
+			const rpcChainId = await getRpcChainId(primaryRpc.url);
+
+			if (rpcChainId === null) {
+				primaryRpcValidationError = t('wallet.network_settings.error_rpc_unavailable');
+				console.log('[NetworkFormView] Primary RPC unavailable');
+				return;
+			}
+
+			if (rpcChainId !== chainId) {
+				primaryRpcValidationError = t('wallet.network_settings.error_rpc_chainid_mismatch', {
+					expected: chainId,
+					actual: rpcChainId
+				});
+				console.log('[NetworkFormView] Primary RPC chain ID mismatch:', rpcChainId, 'vs', chainId);
+				return;
+			}
+
+			console.log('[NetworkFormView] Primary RPC validation passed');
+
+			const dataToSave = {
+				chainId,
+				name: values.name as string,
+				symbol: values.symbol as string,
+				blockExplorer: values.blockExplorer as string | undefined,
+				rpcEndpoints
+			};
+
+			console.log('[NetworkFormView] Calling onSave with:', dataToSave);
+			onSave(dataToSave);
+		} finally {
+			isValidatingPrimaryRpc = false;
+		}
 	}
 </script>
 
@@ -293,93 +327,59 @@
 		</h3>
 	</div>
 
+	<InfoHint>
+		{t('wallet.network_settings.chainlist_hint_prefix')}
+		<a href="https://chainid.network" target="_blank" rel="noopener noreferrer">chainid.network</a>
+		{t('wallet.network_settings.chainlist_hint_suffix')}
+	</InfoHint>
 	<Form formState={form}>
 		<div class="form-content">
-			<FormField name="chainId" label={t('wallet.network_settings.chain_id')}>
-				{#snippet children({ value, error, touched, onInput, onBlur })}
-					<input
-						bind:this={firstInputRef}
-						type="number"
-						{value}
-						disabled={mode === 'edit'}
-						placeholder="1"
-						class:error={touched && error}
-						oninput={(e) => onInput(Number(e.currentTarget.value))}
-						onblur={onBlur}
-					/>
-				{/snippet}
-			</FormField>
-
-			<FormField name="name" label={t('wallet.network_settings.network_name')}>
-				{#snippet children({ value, error, touched, onInput, onBlur })}
-					<input
-						type="text"
-						{value}
-						placeholder="Ethereum Mainnet"
-						class:error={touched && error}
-						oninput={(e) => onInput(e.currentTarget.value)}
-						onblur={onBlur}
-					/>
-				{/snippet}
-			</FormField>
-
-			<FormField name="symbol" label={t('wallet.network_settings.currency_symbol')}>
-				{#snippet children({ value, error, touched, onInput, onBlur })}
-					<input
-						type="text"
-						{value}
-						placeholder="ETH"
-						class:error={touched && error}
-						oninput={(e) => onInput(e.currentTarget.value)}
-						onblur={onBlur}
-					/>
-				{/snippet}
-			</FormField>
-
-			<FormField
-				name="blockExplorer"
-				label={t('wallet.network_settings.block_explorer_optional')}
-				showError={false}
-			>
-				{#snippet children({ value, onInput, onBlur })}
-					<input
-						type="text"
-						{value}
-						placeholder="https://etherscan.io"
-						oninput={(e) => onInput(e.currentTarget.value)}
-						onblur={onBlur}
-					/>
-				{/snippet}
-			</FormField>
-
-			<FormField name="enabled" showError={false}>
-				{#snippet children({ value, onInput })}
-					<label class="checkbox-label">
+			<!-- Network basic info: 3 columns on large screens, 1 column on mobile -->
+			<div class="basic-info-row">
+				<FormField name="name" label={t('wallet.network_settings.network_name')}>
+					{#snippet children({ value, error, touched, onInput, onBlur })}
 						<input
-							type="checkbox"
-							checked={Boolean(value)}
-							onchange={(e) => onInput(e.currentTarget.checked)}
+							type="text"
+							{value}
+							placeholder="Ethereum Mainnet"
+							class:error={touched && error}
+							oninput={(e) => onInput(e.currentTarget.value)}
+							onblur={onBlur}
 						/>
-						<span>{t('wallet.network_settings.enable_network')}</span>
-					</label>
-				{/snippet}
-			</FormField>
+					{/snippet}
+				</FormField>
+
+				<FormField name="symbol" label={t('wallet.network_settings.currency_symbol')}>
+					{#snippet children({ value, error, touched, onInput, onBlur })}
+						<input
+							type="text"
+							{value}
+							placeholder="ETH"
+							class:error={touched && error}
+							oninput={(e) => onInput(e.currentTarget.value)}
+							onblur={onBlur}
+						/>
+					{/snippet}
+				</FormField>
+
+				<FormField name="chainId" label={t('wallet.network_settings.chain_id')}>
+					{#snippet children({ value, error, touched, onInput, onBlur })}
+						<input
+							bind:this={firstInputRef}
+							type="number"
+							{value}
+							disabled={mode === 'edit'}
+							placeholder="1"
+							class:error={touched && error}
+							oninput={(e) => onInput(Number(e.currentTarget.value))}
+							onblur={onBlur}
+						/>
+					{/snippet}
+				</FormField>
+			</div>
 
 			<div class="form-group rpc-group">
 				<div class="rpc-label">{t('wallet.network_settings.rpc_endpoints_label')}</div>
-
-				<div class="rpc-hint">
-					💡 {t('wallet.network_settings.rpc_hint_prefix')}
-					<a
-						href="https://chainlist.org"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="chainlist-link-inline"
-					>
-						chainlist.org
-					</a>
-					{t('wallet.network_settings.rpc_hint_suffix')}
-				</div>
 
 				{#if form.getFieldState('rpcEndpoints').error && form.getFieldState('rpcEndpoints').touched}
 					{@const rpcEndpointsState = form.getFieldState('rpcEndpoints')}
@@ -443,7 +443,39 @@
 				{#if newRpcError}
 					<span class="error-message">{newRpcError}</span>
 				{/if}
+				{#if primaryRpcValidationError}
+					<span class="error-message">{primaryRpcValidationError}</span>
+				{/if}
+				{#if isValidatingPrimaryRpc}
+					<div class="validating-message">
+						{t('wallet.network_settings.validating_primary_rpc')}
+					</div>
+				{/if}
 			</div>
+
+			<FormField
+				name="blockExplorer"
+				label={t('wallet.network_settings.block_explorer_optional')}
+				showError={false}
+			>
+				{#snippet children({ value, onInput, onBlur })}
+					<input
+						type="text"
+						{value}
+						placeholder="https://etherscan.io"
+						oninput={(e) => onInput(e.currentTarget.value)}
+						onblur={onBlur}
+					/>
+				{/snippet}
+			</FormField>
+
+			<!-- <InfoHint>
+				{t('wallet.network_settings.explorer_hint_prefix')}
+				<a href="https://github.com/ethereum-lists/chains" target="_blank" rel="noopener noreferrer"
+					>ethereum-lists/chains</a
+				>
+				{t('wallet.network_settings.explorer_hint_suffix')}
+			</InfoHint> -->
 		</div>
 	</Form>
 </div>
@@ -494,26 +526,26 @@
 		gap: var(--space-4);
 	}
 
+	/* Network basic info: responsive 3-column layout */
+	.basic-info-row {
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr;
+		gap: var(--space-4);
+	}
+
+	@media (max-width: 640px) {
+		.basic-info-row {
+			grid-template-columns: 1fr;
+		}
+	}
+
 	.form-group {
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-2);
 	}
 
-	.checkbox-label {
-		display: flex;
-		align-items: center;
-		gap: var(--space-2);
-		cursor: pointer;
-	}
-
-	.checkbox-label input[type='checkbox'] {
-		width: 18px;
-		height: 18px;
-		cursor: pointer;
-	}
-
-	input:not([type='checkbox']) {
+	input {
 		width: 100%;
 		padding: var(--space-2-5) var(--space-3);
 		border: 1px solid var(--color-border);
@@ -524,7 +556,7 @@
 		transition: all 0.2s;
 	}
 
-	input:not([type='checkbox']):focus {
+	input:focus {
 		outline: none;
 		border-color: var(--brand-500);
 		box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
@@ -550,6 +582,13 @@
 		font-weight: var(--font-medium);
 	}
 
+	.validating-message {
+		color: var(--color-muted-foreground);
+		font-size: var(--text-sm);
+		font-weight: var(--font-medium);
+		animation: pulse-opacity 1.5s ease-in-out infinite;
+	}
+
 	.rpc-group {
 		gap: var(--space-2);
 	}
@@ -557,33 +596,6 @@
 	.rpc-label {
 		font-weight: var(--font-medium);
 		color: var(--color-foreground);
-	}
-
-	.rpc-hint {
-		font-size: var(--text-sm);
-		color: var(--color-muted-foreground);
-		margin-top: var(--space-2);
-		margin-bottom: var(--space-3);
-		padding: var(--space-2);
-		background: var(--color-muted);
-		border-radius: var(--radius-sm);
-		border-left: 3px solid var(--color-primary);
-		display: flex;
-		align-items: center;
-		gap: var(--space-1);
-		flex-wrap: wrap;
-	}
-
-	.chainlist-link-inline {
-		color: var(--color-primary);
-		font-weight: 600;
-		text-decoration: none;
-		border-bottom: 1px solid transparent;
-		transition: all 0.2s ease;
-	}
-	.chainlist-link-inline:hover {
-		border-bottom-color: var(--color-primary);
-		opacity: 0.8;
 	}
 
 	.rpc-list-form {

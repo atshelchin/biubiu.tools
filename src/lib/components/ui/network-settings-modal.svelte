@@ -90,7 +90,6 @@
 		symbol: string;
 		rpcEndpoints: Array<{ url: string; isPrimary: boolean }>;
 		blockExplorer?: string;
-		enabled: boolean;
 	}) {
 		console.log('[NetworkSettingsModal] handleSaveNetwork called');
 		console.log('[NetworkSettingsModal] viewMode:', viewMode);
@@ -107,10 +106,8 @@
 				blockExplorer: data.blockExplorer
 			});
 
-			// Enable network if requested
-			if (data.enabled) {
-				onToggleNetwork(data.chainId, true);
-			}
+			// New networks are always enabled by default
+			onToggleNetwork(data.chainId, true);
 		} else {
 			// Editing existing network
 			const existingNetwork = networks.find((n) => n.chainId === data.chainId);
@@ -153,18 +150,7 @@
 					console.log('[NetworkSettingsModal] Calling onSaveNetwork for RPC/explorer update');
 					onSaveNetwork(data.chainId, data.rpcEndpoints, data.blockExplorer);
 				}
-
-				// Handle enabled state change
-				const currentEnabled = isNetworkEnabled(data.chainId);
-				if (currentEnabled !== data.enabled) {
-					console.log(
-						'[NetworkSettingsModal] Toggling network enabled state:',
-						currentEnabled,
-						'->',
-						data.enabled
-					);
-					onToggleNetwork(data.chainId, data.enabled);
-				}
+				// Edit mode: keep original enabled state (don't change it)
 			}
 		}
 
@@ -172,7 +158,14 @@
 	}
 </script>
 
-<Modal {open} {onClose} title={t('wallet.network_settings.title')} maxWidth="900px" height="80vh">
+<!-- height="80vh" -->
+<Modal
+	{open}
+	{onClose}
+	title={t('wallet.network_settings.title')}
+	maxWidth="800px"
+	closeOnOverlayClick={false}
+>
 	{#snippet footer()}
 		{#if viewMode !== 'list' && networkFormView}
 			<div class="modal-footer-actions">
@@ -206,7 +199,6 @@
 				bind:this={networkFormView}
 				mode={viewMode}
 				network={editingNetwork}
-				{isNetworkEnabled}
 				onSave={handleSaveNetwork}
 				onCancel={handleBackToList}
 			/>

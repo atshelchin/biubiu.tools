@@ -17,6 +17,7 @@
 		title?: string;
 		maxWidth?: string;
 		height?: string;
+		closeOnOverlayClick?: boolean;
 		children?: import('svelte').Snippet;
 		footer?: import('svelte').Snippet;
 	}
@@ -27,9 +28,16 @@
 		title,
 		maxWidth = '400px',
 		height = 'fit-content',
+		closeOnOverlayClick = true,
 		children,
 		footer
 	}: Props = $props();
+
+	function handleOverlayClick() {
+		if (closeOnOverlayClick) {
+			onClose();
+		}
+	}
 
 	let zIndex = $state(baseZIndex);
 
@@ -57,7 +65,7 @@
 {#if open}
 	<!-- svelte-ignore a11y_click_events_have_key_events -->
 	<!-- svelte-ignore a11y_no_static_element_interactions -->
-	<div class="modal-overlay" style="z-index: {zIndex}" onclick={onClose}>
+	<div class="modal-overlay" style="z-index: {zIndex}" onclick={handleOverlayClick}>
 		<!-- svelte-ignore a11y_click_events_have_key_events -->
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div
