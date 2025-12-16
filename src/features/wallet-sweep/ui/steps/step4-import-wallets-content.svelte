@@ -244,8 +244,8 @@
 		>
 			{#snippet recommend()}
 				💡 {i18n.t('tools.wallet_sweep.step4.content.rate_limit.recommend_prefix')}
-				<a href="https://chainlist.org" target="_blank" rel="noopener noreferrer">
-					chainlist.org
+				<a href="https://chainid.network" target="_blank" rel="noopener noreferrer">
+					chainid.network
 				</a>
 				{i18n.t('tools.wallet_sweep.step4.content.rate_limit.recommend_suffix')}
 			{/snippet}

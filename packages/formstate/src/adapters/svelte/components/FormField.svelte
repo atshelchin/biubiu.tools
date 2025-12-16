@@ -123,9 +123,9 @@
 </div>
 
 <style>
-	.form-field {
-		margin-bottom: 1rem;
-	}
+	/* .form-field { */
+	/* margin-bottom: 1rem; */
+	/* } */
 
 	.form-field__label {
 		display: block;
