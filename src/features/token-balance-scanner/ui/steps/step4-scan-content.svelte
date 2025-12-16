@@ -81,7 +81,7 @@
 			const results = await scanMultipleWallets(
 				scannerState.wallets,
 				tokens,
-				currentNetwork.rpcEndpoints[0].url,
+				currentNetwork?.rpcEndpoints?.[0]?.url ?? '',
 				(prog) => {
 					scannerState.setProgress(prog);
 				}

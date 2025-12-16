@@ -1,6 +1,13 @@
 <script lang="ts">
 	/* eslint-disable svelte/no-unused-props -- Props reserved for future use */
-	import { CheckCircle2, XCircle, AlertCircle, RefreshCw, ExternalLink } from '@lucide/svelte';
+	import {
+		CheckCircle2,
+		XCircle,
+		AlertCircle,
+		RefreshCw,
+		ExternalLink,
+		Settings
+	} from '@lucide/svelte';
 	import { slide } from 'svelte/transition';
 
 	interface DependencyCheck {
@@ -18,6 +25,8 @@
 		responseTime?: number;
 		canDeploy?: boolean;
 		deployGuideUrl?: string;
+		/** Whether the user needs to configure RPC endpoint */
+		needsRpcConfig?: boolean;
 	}
 
 	interface Props {
@@ -26,7 +35,9 @@
 		canFix: boolean;
 		blockExplorer?: string;
 		onDeploy?: () => void;
+		onConfigureRpc?: () => void;
 		deployButtonText?: string;
+		configureRpcButtonText?: string;
 		blockedHintText?: string;
 		addressLabel?: string;
 		endpointLabel?: string;
@@ -44,7 +55,9 @@
 		canFix,
 		blockExplorer,
 		onDeploy,
+		onConfigureRpc,
 		deployButtonText = 'Deploy',
+		configureRpcButtonText = 'Configure RPC',
 		addressLabel = 'Address:',
 		endpointLabel = 'Endpoint:',
 		deployComingSoonText = 'Deploy Contract (Coming Soon)',
@@ -155,7 +168,15 @@
 		</div>
 	</div>
 
-	{#if check.status === 'error' && check.canDeploy}
+	{#if check.status === 'error' && check.needsRpcConfig && onConfigureRpc}
+		<!-- Show Configure RPC button when RPC is not configured -->
+		<div class="check-actions">
+			<button class="configure-rpc-button w-full mt-4" onclick={onConfigureRpc}>
+				<Settings size={16} />
+				{configureRpcButtonText}
+			</button>
+		</div>
+	{:else if check.status === 'error' && check.canDeploy}
 		<div class="check-actions">
 			{#if !canFix}
 				<!-- <div class="blocked-hint w-full">
@@ -570,6 +591,41 @@
 
 	:global([data-theme='dark']) .deploy-button.primary:hover {
 		background: hsla(120, 60%, 18%, 0.4);
+	}
+
+	/* Configure RPC Button - Blue/Primary color */
+	.configure-rpc-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: var(--space-2);
+		padding: var(--space-3) var(--space-5);
+		background: hsla(210, 80%, 96%, 1);
+		color: hsl(210, 80%, 45%);
+		border: 1px solid hsla(210, 80%, 60%, 1);
+		border-radius: var(--radius-md);
+		font-size: var(--text-sm);
+		font-weight: var(--font-medium);
+		cursor: pointer;
+		transition: all 0.2s ease;
+	}
+
+	.configure-rpc-button:hover {
+		background: hsla(210, 80%, 94%, 1);
+	}
+
+	.configure-rpc-button:active {
+		background: hsla(210, 80%, 92%, 1);
+	}
+
+	:global([data-theme='dark']) .configure-rpc-button {
+		background: hsla(210, 80%, 15%, 0.3);
+		border-color: hsla(210, 80%, 50%, 1);
+		color: hsl(210, 80%, 70%);
+	}
+
+	:global([data-theme='dark']) .configure-rpc-button:hover {
+		background: hsla(210, 80%, 18%, 0.4);
 	}
 
 	.deploy-link {

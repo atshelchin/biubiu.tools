@@ -291,13 +291,16 @@
 							"description": "检查当前 RPC 节点是否可用",
 							"chain_id_mismatch": "链 ID 不匹配：预期 {expected}，实际 {actual}",
 							"connected_to_block": "已连接到区块 #{blockNumber}",
-							"failed_to_connect": "连接失败：{error}"
+							"failed_to_connect": "连接失败：{error}",
+							"no_rpc_configured": "当前网络未配置 RPC 节点",
+							"configure_rpc_button": "配置 RPC"
 						},
 						"eip7702": {
 							"name": "EIP-7702",
 							"description": "检查网络是否支持 EIP-7702 协议",
 							"supported": "网络支持 EIP-7702（已通过 eth_estimateGas 测试）",
 							"not_supported": "网络不支持 EIP-7702（无效操作码）",
+							"rpc_not_capable": "当前 RPC 不支持此检测方法所需的状态覆盖功能，请尝试更换 RPC 节点",
 							"check_failed": "检查 EIP-7702 支持失败：{error}"
 						},
 						"contract": {
@@ -1000,6 +1003,7 @@
 			"filter_all": "全部",
 			"filter_enabled": "已启用",
 			"filter_disabled": "已禁用",
+			"networks_count": "个网络",
 			"active": "当前",
 			"rpc_endpoints": "RPC 节点",
 			"rpc_endpoint": "个节点",
@@ -1036,7 +1040,9 @@
 			"error_symbol_required": "货币符号不能为空",
 			"error_rpc_required": "至少需要一个 RPC 节点",
 			"error_rpc_unavailable": "无法连接到 RPC 节点，请检查 URL 是否正确",
-			"error_rpc_chainid_mismatch": "RPC 节点的链 ID ({actual}) 与输入的链 ID ({expected}) 不匹配"
+			"error_rpc_chainid_mismatch": "RPC 节点的链 ID ({actual}) 与输入的链 ID ({expected}) 不匹配",
+			"toggle_enable_hint": "点击启用此网络",
+			"toggle_disable_hint": "点击禁用此网络"
 		}
 	},
 	"referral": {

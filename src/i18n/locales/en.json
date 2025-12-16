@@ -291,13 +291,16 @@
 							"description": "Check if the current RPC endpoint is available",
 							"chain_id_mismatch": "Chain ID mismatch: expected {expected}, got {actual}",
 							"connected_to_block": "Connected to block #{blockNumber}",
-							"failed_to_connect": "Failed to connect: {error}"
+							"failed_to_connect": "Failed to connect: {error}",
+							"no_rpc_configured": "No RPC endpoint configured for this network",
+							"configure_rpc_button": "Configure RPC"
 						},
 						"eip7702": {
 							"name": "EIP-7702",
 							"description": "Check if the network supports EIP-7702 protocol",
 							"supported": "Network supports EIP-7702 (tested via eth_estimateGas)",
 							"not_supported": "Network does not support EIP-7702 (invalid opcode)",
+							"rpc_not_capable": "Current RPC does not support state override for this check. Try a different RPC endpoint.",
 							"check_failed": "Failed to check EIP-7702 support: {error}"
 						},
 						"contract": {
@@ -1017,6 +1020,7 @@
 			"filter_all": "All",
 			"filter_enabled": "Enabled",
 			"filter_disabled": "Disabled",
+			"networks_count": "networks",
 			"active": "Active",
 			"rpc_endpoints": "RPC Endpoints",
 			"rpc_endpoint": "endpoint",
@@ -1050,7 +1054,9 @@
 			"error_rpc_required": "At least one RPC endpoint is required",
 			"error_rpc_unavailable": "Unable to connect to RPC endpoint, please check if the URL is correct",
 			"error_rpc_chainid_mismatch": "The chain ID of RPC endpoint ({actual}) does not match the input chain ID ({expected})",
-			"save": "Save"
+			"save": "Save",
+			"toggle_enable_hint": "Click to enable this network",
+			"toggle_disable_hint": "Click to disable this network"
 		}
 	},
 	"referral": {

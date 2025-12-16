@@ -75,8 +75,8 @@
 	}
 
 	.toggle-switch input:checked + .toggle-slider {
-		background: var(--brand-500);
-		border-color: var(--brand-500);
+		background: var(--brand-600);
+		border-color: var(--brand-600);
 	}
 
 	.toggle-switch input:checked + .toggle-slider::before {

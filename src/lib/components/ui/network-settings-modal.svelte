@@ -9,6 +9,8 @@
 		open: boolean;
 		networks: NetworkConfig[];
 		currentChainId?: number;
+		/** If provided, open directly to edit mode for this network */
+		initialEditChainId?: number;
 		onClose: () => void;
 		onToggleNetwork: (chainId: number, enabled: boolean) => boolean;
 		isNetworkEnabled: (chainId: number) => boolean;
@@ -31,6 +33,7 @@
 		open,
 		networks,
 		currentChainId,
+		initialEditChainId: _initialEditChainId,
 		onClose,
 		onToggleNetwork,
 		isNetworkEnabled,
@@ -46,6 +49,25 @@
 	let editingNetwork = $state<NetworkConfig | undefined>(undefined);
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	let networkFormView: any = $state(undefined);
+
+	// Handle initialEditChainId - open directly to edit mode when modal opens
+	$effect(() => {
+		if (open && _initialEditChainId) {
+			const networkToEdit = networks.find((n) => n.chainId === _initialEditChainId);
+			if (networkToEdit) {
+				viewMode = 'edit';
+				editingNetwork = networkToEdit;
+			}
+		}
+	});
+
+	// Reset to list view when modal closes
+	$effect(() => {
+		if (!open) {
+			viewMode = 'list';
+			editingNetwork = undefined;
+		}
+	});
 
 	function handleAddNetwork() {
 		viewMode = 'add';
@@ -194,8 +216,8 @@
 
 <style>
 	.network-settings {
-		padding: 10px;
-		min-height: 400px;
+		/* padding: 10px; */
+		/* min-height: 400px; */
 		overflow-x: hidden;
 	}
 

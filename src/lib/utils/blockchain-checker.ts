@@ -18,6 +18,8 @@ export interface NetworkServiceCheck extends CheckResult {
 	type: 'network-service';
 	endpoint?: string;
 	responseTime?: number;
+	/** Whether the user needs to configure RPC endpoint (e.g., no RPC URL provided) */
+	needsRpcConfig?: boolean;
 }
 
 export interface ContractCheck extends CheckResult {
@@ -108,6 +110,21 @@ export async function checkRPCEndpoint(
 		const responseTime = Date.now() - startTime;
 		const errorMessage = error instanceof Error ? error.message : String(error);
 
+		// Check if the error is due to missing RPC URL
+		const isNoRpcConfigured =
+			errorMessage.includes('No URL was provided') || !rpcUrl || rpcUrl.trim() === '';
+
+		// For RPC endpoint check, always allow configuration (whether missing or unavailable)
+		// This helps users switch to a better RPC when current one is rate-limited, down, etc.
+		const needsRpcConfig = true;
+
+		// Use specific message for missing RPC config vs connection failure
+		const message = isNoRpcConfigured
+			? t('tools.wallet_sweep.step2.content.checks.rpc_endpoint.no_rpc_configured')
+			: t('tools.wallet_sweep.step2.content.checks.rpc_endpoint.failed_to_connect', {
+					error: errorMessage
+				});
+
 		return {
 			id: 'rpc-endpoint',
 			type: 'network-service',
@@ -116,11 +133,10 @@ export async function checkRPCEndpoint(
 				network: networkName
 			}),
 			status: 'error',
-			message: t('tools.wallet_sweep.step2.content.checks.rpc_endpoint.failed_to_connect', {
-				error: errorMessage
-			}),
+			message,
 			endpoint: rpcUrl,
-			responseTime
+			responseTime,
+			needsRpcConfig
 		};
 	}
 }
@@ -175,9 +191,10 @@ export async function checkEIP7702Support(
 	} catch (error) {
 		const responseTime = Date.now() - startTime;
 		const errorMessage = error instanceof Error ? error.message : String(error);
+		const errorLower = errorMessage.toLowerCase();
 
-		// Check if error is due to invalid opcode (no EIP-7702 support)
-		if (errorMessage.toLowerCase().includes('invalid opcode')) {
+		// 1. Check if error is due to invalid opcode (chain definitely doesn't support EIP-7702)
+		if (errorLower.includes('invalid opcode')) {
 			return {
 				id: 'eip-7702-support',
 				type: 'network-service',
@@ -187,10 +204,34 @@ export async function checkEIP7702Support(
 				message: t('tools.wallet_sweep.step2.content.checks.eip7702.not_supported'),
 				endpoint: rpcUrl,
 				responseTime
+				// needsRpcConfig: false - chain doesn't support, changing RPC won't help
 			};
 		}
 
-		// Other errors
+		// 2. Check if error is due to RPC not supporting state override (RPC capability issue)
+		// Common patterns: "too many arguments", "invalid parameters", "unsupported method"
+		const isRpcCapabilityError =
+			errorLower.includes('too many arguments') ||
+			errorLower.includes('invalid parameters') ||
+			errorLower.includes('unsupported') ||
+			errorLower.includes('not supported') ||
+			errorLower.includes('unknown method');
+
+		if (isRpcCapabilityError) {
+			return {
+				id: 'eip-7702-support',
+				type: 'network-service',
+				name: t('tools.wallet_sweep.step2.content.checks.eip7702.name'),
+				description: t('tools.wallet_sweep.step2.content.checks.eip7702.description'),
+				status: 'error',
+				message: t('tools.wallet_sweep.step2.content.checks.eip7702.rpc_not_capable'),
+				endpoint: rpcUrl,
+				responseTime,
+				needsRpcConfig: true // User should try a different RPC
+			};
+		}
+
+		// 3. Other errors (network timeout, rate limit, etc.) - also suggest RPC config
 		return {
 			id: 'eip-7702-support',
 			type: 'network-service',
@@ -201,7 +242,8 @@ export async function checkEIP7702Support(
 				error: errorMessage
 			}),
 			endpoint: rpcUrl,
-			responseTime
+			responseTime,
+			needsRpcConfig: true // Network errors can be fixed by trying different RPC
 		};
 	}
 }

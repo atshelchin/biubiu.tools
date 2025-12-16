@@ -15,6 +15,7 @@
 	import DependencyChecker, {
 		createDependencyChecker
 	} from '$lib/components/ui/dependency-checker.svelte';
+	import NetworkSettingsModal from '$lib/components/ui/network-settings-modal.svelte';
 
 	// Utils
 	import { checkAllDependencies } from '@/features/wallet-sweep/utils/dependency-checker';
@@ -34,6 +35,12 @@
 	const checker = createDependencyChecker();
 
 	// ============================================================================
+	// STATE
+	// ============================================================================
+
+	let showNetworkSettings = $state(false);
+
+	// ============================================================================
 	// DERIVED
 	// ============================================================================
 
@@ -48,7 +55,7 @@
 			? {
 					chainId: currentNetwork.chainId,
 					name: currentNetwork.name,
-					rpcUrl: currentNetwork.rpcEndpoints[0].url,
+					rpcUrl: currentNetwork?.rpcEndpoints?.[0]?.url ?? '',
 					blockExplorer: currentNetwork.blockExplorer
 				}
 			: undefined
@@ -63,7 +70,7 @@
 
 		return () =>
 			checkAllDependencies(
-				currentNetwork.rpcEndpoints[0].url,
+				currentNetwork?.rpcEndpoints?.[0]?.url ?? '',
 				currentNetwork.chainId,
 				currentNetwork.name,
 				i18n.t.bind(i18n),
@@ -79,6 +86,19 @@
 	function handleDeploySuccess() {
 		// Re-run dependency checks after successful deployment
 		setTimeout(() => checker.runChecks(createChecker()), 500);
+	}
+
+	function handleConfigureRpc() {
+		showNetworkSettings = true;
+	}
+
+	function handleNetworkSettingsClose() {
+		showNetworkSettings = false;
+		// Re-run dependency checks after closing settings (user may have added RPC)
+		setTimeout(() => {
+			checker.reset();
+			checker.runChecks(createChecker());
+		}, 300);
 	}
 
 	// ============================================================================
@@ -148,6 +168,9 @@
 			endpointLabel={i18n.t('tools.wallet_sweep.step2.content.endpoint_label')}
 			viewGuideText={i18n.t('tools.wallet_sweep.step2.content.view_deployment_guide')}
 			deployComingSoonText={i18n.t('tools.wallet_sweep.step2.content.deploy_coming_soon')}
+			configureRpcButtonText={i18n.t(
+				'tools.wallet_sweep.step2.content.checks.rpc_endpoint.configure_rpc_button'
+			)}
 			deployButtonText={(contractName) =>
 				i18n.t('tools.wallet_sweep.step2.content.deploy_contract', { contractName })}
 			categoryLabels={{
@@ -156,6 +179,23 @@
 				contract: i18n.t('tools.wallet_sweep.step2.content.checks.category.contract')
 			}}
 			onDeploySuccess={handleDeploySuccess}
+			onConfigureRpc={handleConfigureRpc}
 		/>
 	{/if}
 </StepContent>
+
+<!-- Network Settings Modal -->
+{#if showNetworkSettings && currentNetwork}
+	<NetworkSettingsModal
+		open={showNetworkSettings}
+		networks={connectStore.networks}
+		currentChainId={connectStore.currentChainId ?? undefined}
+		initialEditChainId={currentNetwork.chainId}
+		onClose={handleNetworkSettingsClose}
+		onToggleNetwork={(chainId, enabled) => connectStore.toggleNetwork(chainId, enabled)}
+		isNetworkEnabled={(chainId) => connectStore.isNetworkEnabled(chainId)}
+		onSaveNetwork={(chainId, rpcEndpoints, blockExplorer) =>
+			connectStore.updateNetworkRpc(chainId, rpcEndpoints, blockExplorer)}
+		onAddOrUpdateNetwork={(network) => connectStore.addOrUpdateNetwork(network)}
+	/>
+{/if}

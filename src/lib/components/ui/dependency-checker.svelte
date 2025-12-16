@@ -217,6 +217,7 @@
 		endpointLabel?: string;
 		viewGuideText?: string;
 		deployComingSoonText?: string;
+		configureRpcButtonText?: string;
 		categoryLabels?: {
 			network: string;
 			protocol: string;
@@ -228,6 +229,7 @@
 
 		// Callbacks
 		onDeploySuccess?: () => void;
+		onConfigureRpc?: () => void;
 
 		// Slots
 		empty?: Snippet;
@@ -250,6 +252,7 @@
 		endpointLabel = 'Endpoint',
 		viewGuideText = 'View deployment guide',
 		deployComingSoonText = 'Deploy coming soon',
+		configureRpcButtonText = 'Configure RPC',
 		categoryLabels = {
 			network: 'Network',
 			protocol: 'Protocol',
@@ -257,6 +260,7 @@
 		},
 		deployButtonText = (name: string) => `Deploy ${name}`,
 		onDeploySuccess,
+		onConfigureRpc,
 		empty
 	}: Props = $props();
 	/* eslint-enable svelte/no-unused-props, @typescript-eslint/no-unused-vars */
@@ -321,7 +325,9 @@
 				{canFix}
 				blockExplorer={network?.blockExplorer}
 				onDeploy={config?.deployFunction ? () => openDeploymentModal(config) : undefined}
+				{onConfigureRpc}
 				deployButtonText={config ? deployButtonText(config.contractName) : undefined}
+				{configureRpcButtonText}
 				blockedHintText={resolveHintText}
 				{addressLabel}
 				{endpointLabel}
