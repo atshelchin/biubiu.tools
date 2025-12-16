@@ -6,6 +6,7 @@
 	import MnemonicImportForm from '@/features/wallet-sweep/ui/components/mnemonic-import-form.svelte';
 	import PrivateKeyImportForm from '@/features/wallet-sweep/ui/components/private-key-import-form.svelte';
 	import WalletImportManager from '@/features/wallet-sweep/ui/components/wallet-import-manager.svelte';
+	import ScanBalanceButton from '$lib/components/ui/scan-balance-button.svelte';
 	import { useMnemonicImport } from '@/features/wallet-sweep/composables/use-mnemonic-import.svelte';
 	import { usePrivateKeyImport } from '@/features/wallet-sweep/composables/use-private-key-import.svelte';
 	import { useRpcManager } from '@/features/wallet-sweep/composables/use-rpc-manager.svelte';
@@ -39,6 +40,7 @@
 	let importedWallets = $derived(step4State.importedWallets);
 	let isScanning = $derived(step4State.isScanning);
 	let scanProgress = $derived(step4State.scanProgress);
+	let scanCompleted = $derived(step4State.scanCompleted);
 
 	// Combined error message from import methods and scan errors
 	let errorMessage = $derived(
@@ -165,6 +167,7 @@
 
 			if (!state.isPaused) {
 				step4State.hasScanned = true;
+				step4State.scanCompleted = true;
 				step4State.canResumeScan = false;
 			}
 
@@ -257,12 +260,79 @@
 	{#if importedWallets.length > 0}
 		<WalletImportManager
 			wallets={importedWallets}
-			{isScanning}
-			{scanProgress}
-			onScanBalances={handleScanBalances}
 			onRemoveWallet={(address) => step4State.removeWallet(address)}
 			onClearAll={() => step4State.clearWallets()}
 		/>
+
+		<!-- Scan Balance Section -->
+		<div class="scan-section" class:completed={scanCompleted}>
+			<div class="scan-header">
+				<span class="scan-title"
+					>{i18n.t('tools.wallet_sweep.step4.content.scan_section.title')}</span
+				>
+				{#if !scanCompleted && !isScanning}
+					<span class="scan-required-badge"
+						>{i18n.t('tools.wallet_sweep.step4.content.scan_section.required')}</span
+					>
+				{/if}
+			</div>
+			<ScanBalanceButton
+				{isScanning}
+				{scanProgress}
+				{scanCompleted}
+				disabled={importedWallets.length === 0}
+				scanningText={i18n.t('tools.wallet_sweep.step4.content.wallet_list.scanning', {
+					progress: scanProgress
+				})}
+				scanButtonText={i18n.t('tools.wallet_sweep.step4.content.wallet_list.scan_button')}
+				completedText={i18n.t('tools.wallet_sweep.step4.content.wallet_list.scan_completed')}
+				onScan={handleScanBalances}
+			/>
+			<!-- {#if !scanCompleted && !isScanning}
+				<p class="scan-hint">{i18n.t('tools.wallet_sweep.step4.content.wallet_list.scan_hint')}</p>
+			{/if} -->
+
+			<!-- Developer Debug Buttons (only in dev mode) -->
+			{#if import.meta.env.DEV}
+				<div class="dev-tools">
+					<span class="dev-label">Dev Tools:</span>
+					<button
+						class="dev-btn"
+						onclick={() => {
+							step4State.scanCompleted = true;
+							step4State.hasScanned = true;
+						}}
+					>
+						Mark Complete
+					</button>
+					<button
+						class="dev-btn"
+						onclick={() => {
+							step4State.scanCompleted = false;
+							step4State.hasScanned = false;
+						}}
+					>
+						Reset Scan
+					</button>
+					<button
+						class="dev-btn dev-btn-error"
+						onclick={() => {
+							step4State.errorMessage = 'Simulated scan error for testing';
+						}}
+					>
+						Trigger Error
+					</button>
+					<button
+						class="dev-btn dev-btn-warning"
+						onclick={() => {
+							step4State.handleRateLimitError('Simulated rate limit error', null);
+						}}
+					>
+						Rate Limit
+					</button>
+				</div>
+			{/if}
+		</div>
 	{/if}
 </StepContent>
 
@@ -286,5 +356,118 @@
 	}
 	:global([data-theme='dark']) .form-label {
 		color: var(--gray-300);
+	}
+
+	.scan-section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--space-3);
+		margin-top: var(--space-4);
+		padding: var(--space-4);
+		background: linear-gradient(135deg, var(--color-muted) 0%, var(--color-background) 100%);
+		border-radius: var(--radius-lg);
+		border: 2px dashed var(--color-border);
+		transition: all 0.3s ease;
+	}
+
+	.scan-section:hover {
+		border-color: var(--color-primary);
+		background: linear-gradient(
+			135deg,
+			color-mix(in srgb, var(--color-primary) 5%, var(--color-muted)) 0%,
+			var(--color-background) 100%
+		);
+	}
+
+	.scan-section.completed {
+		border-style: solid;
+		border-color: var(--color-success, #10b981);
+		background: linear-gradient(
+			135deg,
+			color-mix(in srgb, var(--color-success, #10b981) 5%, var(--color-muted)) 0%,
+			var(--color-background) 100%
+		);
+	}
+
+	.scan-header {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+	}
+
+	.scan-title {
+		font-size: var(--text-sm);
+		font-weight: var(--font-semibold);
+		color: var(--color-foreground);
+	}
+
+	.scan-required-badge {
+		font-size: var(--text-xs);
+		font-weight: var(--font-medium);
+		color: var(--color-warning, #f59e0b);
+		background: color-mix(in srgb, var(--color-warning, #f59e0b) 15%, transparent);
+		padding: var(--space-0-5) var(--space-2);
+		border-radius: var(--radius-full);
+	}
+
+	.scan-hint {
+		font-size: var(--text-xs);
+		color: var(--color-muted-foreground);
+		margin: 0;
+		text-align: center;
+	}
+
+	/* Developer Tools Styles */
+	.dev-tools {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--space-2);
+		align-items: center;
+		margin-top: var(--space-2);
+		padding-top: var(--space-2);
+		border-top: 1px dashed var(--color-border);
+		width: 100%;
+		justify-content: center;
+	}
+
+	.dev-label {
+		font-size: var(--text-xs);
+		color: var(--color-muted-foreground);
+		font-weight: var(--font-medium);
+	}
+
+	.dev-btn {
+		font-size: var(--text-xs);
+		padding: var(--space-1) var(--space-2);
+		border-radius: var(--radius-sm);
+		border: 1px solid var(--color-border);
+		background: var(--color-background);
+		color: var(--color-foreground);
+		cursor: pointer;
+		transition: all 0.2s ease;
+	}
+
+	.dev-btn:hover {
+		background: var(--color-muted);
+		border-color: var(--color-primary);
+	}
+
+	.dev-btn-error {
+		border-color: hsl(0, 70%, 50%);
+		color: hsl(0, 70%, 50%);
+	}
+
+	.dev-btn-error:hover {
+		background: hsl(0, 70%, 95%);
+	}
+
+	.dev-btn-warning {
+		border-color: var(--color-warning, #f59e0b);
+		color: var(--color-warning, #f59e0b);
+	}
+
+	.dev-btn-warning:hover {
+		background: color-mix(in srgb, var(--color-warning, #f59e0b) 10%, transparent);
 	}
 </style>

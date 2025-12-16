@@ -2,22 +2,17 @@
 	import type { ImportedWallet } from '@/features/wallet-sweep/types/wallet';
 	import WalletList from '$lib/components/ui/wallet-list.svelte';
 	import ConfirmDialog from '$lib/components/ui/confirm-dialog.svelte';
-	import { Loader2 } from '@lucide/svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
 
 	const i18n = useI18n();
 
 	interface Props {
 		wallets: ImportedWallet[];
-		isScanning: boolean;
-		scanProgress: number;
-		onScanBalances: () => void;
 		onRemoveWallet: (address: string) => void;
 		onClearAll: () => void;
 	}
 
-	let { wallets, isScanning, scanProgress, onScanBalances, onRemoveWallet, onClearAll }: Props =
-		$props();
+	let { wallets, onRemoveWallet, onClearAll }: Props = $props();
 
 	let walletCount = $derived(wallets.length);
 
@@ -77,21 +72,6 @@
 		</div>
 		<div class="wallet-actions">
 			{#if walletCount > 0}
-				<button
-					class="btn-scan"
-					onclick={onScanBalances}
-					disabled={isScanning}
-					title={i18n.t('tools.wallet_sweep.step4.content.wallet_list.scan_button')}
-				>
-					{#if isScanning}
-						<Loader2 size={14} class="spinning" />
-						{i18n.t('tools.wallet_sweep.step4.content.wallet_list.scanning', {
-							progress: scanProgress
-						})}
-					{:else}
-						{i18n.t('tools.wallet_sweep.step4.content.wallet_list.scan_button')}
-					{/if}
-				</button>
 				<button class="btn-text-danger" onclick={handleClearAll}
 					>{i18n.t('tools.wallet_sweep.step4.content.wallet_list.clear_all')}</button
 				>
@@ -176,31 +156,6 @@
 		align-items: center;
 	}
 
-	.btn-scan {
-		display: inline-flex;
-		align-items: center;
-		gap: var(--space-1);
-		padding: var(--space-2) var(--space-3);
-		background: linear-gradient(135deg, #3b82f6, #2563eb);
-		color: white;
-		border: none;
-		border-radius: var(--radius-sm);
-		font-size: var(--text-sm);
-		font-weight: var(--font-medium);
-		cursor: pointer;
-		transition: all 0.2s;
-	}
-
-	.btn-scan:hover:not(:disabled) {
-		transform: translateY(-1px);
-		box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
-	}
-
-	.btn-scan:disabled {
-		opacity: 0.7;
-		cursor: not-allowed;
-	}
-
 	.btn-text-danger {
 		background: none;
 		border: none;
@@ -210,14 +165,5 @@
 	}
 	.btn-text-danger:hover {
 		color: hsl(0, 80%, 40%);
-	}
-
-	:global(.spinning) {
-		animation: spin 1s linear infinite;
-	}
-	@keyframes spin {
-		to {
-			transform: rotate(360deg);
-		}
 	}
 </style>

@@ -54,16 +54,19 @@
 						</button>
 					{/if}
 				</div>
-				<span class="address-count">
-					{walletsCountLabel(stat.addressCount.toLocaleString())}
-				</span>
+
+				<div style="display:flex;flex-direction: column;">
+					<span class="address-count">
+						{walletsCountLabel(stat.addressCount.toLocaleString())}
+					</span>
+					<TokenBalanceDisplay
+						balance={stat.totalBalance}
+						decimals={stat.decimals}
+						mode="compact"
+						class="token-balance"
+					/>
+				</div>
 			</div>
-			<TokenBalanceDisplay
-				balance={stat.totalBalance}
-				decimals={stat.decimals}
-				mode="compact"
-				class="token-balance"
-			/>
 		</div>
 	{/each}
 </div>

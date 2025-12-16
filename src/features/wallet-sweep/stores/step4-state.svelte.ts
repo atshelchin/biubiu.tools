@@ -11,6 +11,8 @@ let importedWallets = $state<ImportedWallet[]>([]);
 let isScanning = $state(false);
 let scanProgress = $state(0);
 let hasScanned = $state(false);
+// Indicates scan completed successfully (100% without interruption)
+let scanCompleted = $state(false);
 
 // Error message
 let errorMessage = $state('');
@@ -46,6 +48,12 @@ export const step4State = {
 	set hasScanned(value: boolean) {
 		hasScanned = value;
 	},
+	get scanCompleted() {
+		return scanCompleted;
+	},
+	set scanCompleted(value: boolean) {
+		scanCompleted = value;
+	},
 	get errorMessage() {
 		return errorMessage;
 	},
@@ -64,6 +72,7 @@ export const step4State = {
 	clearWallets() {
 		importedWallets = [];
 		hasScanned = false;
+		scanCompleted = false;
 		scanProgress = 0;
 		errorMessage = '';
 	},
@@ -115,6 +124,7 @@ export const step4State = {
 	// Reset scan state
 	resetScanState() {
 		hasScanned = false;
+		scanCompleted = false;
 		scanProgress = 0;
 		isScanning = false;
 		scanState = null;

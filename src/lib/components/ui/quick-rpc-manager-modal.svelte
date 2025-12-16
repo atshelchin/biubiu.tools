@@ -150,6 +150,12 @@
 
 				<div class="hint">
 					💡 {i18n.t('components.quick_rpc_manager.hint')}
+					<br />
+					{i18n.t('components.quick_rpc_manager.recommend_prefix')}
+					<a href="https://chainid.network" target="_blank" rel="noopener noreferrer">
+						chainid.network
+					</a>
+					{i18n.t('components.quick_rpc_manager.recommend_suffix')}
 				</div>
 			</div>
 
@@ -421,9 +427,22 @@
 		line-height: 1.5;
 	}
 
+	.hint a {
+		color: var(--color-primary);
+		text-decoration: none;
+	}
+
+	.hint a:hover {
+		text-decoration: underline;
+	}
+
 	:global([data-theme='dark']) .hint {
 		background: rgba(59, 130, 246, 0.1);
 		color: var(--gray-300);
+	}
+
+	:global([data-theme='dark']) .hint a {
+		color: var(--blue-400);
 	}
 
 	.modal-footer {

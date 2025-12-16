@@ -28,6 +28,7 @@
 	let isScanning = $derived(step4State.isScanning);
 	let scanProgress = $derived(step4State.scanProgress);
 	let hasScanned = $derived(step4State.hasScanned);
+	let scanCompleted = $derived(step4State.scanCompleted);
 
 	// Calculate token stats using composable
 	let tokenStats = $derived.by(() => tokenStatsHelper.calculateStats());
@@ -58,6 +59,16 @@
 						<span>{i18n.t('tools.wallet_sweep.step4.sidebar.scanning_label')}</span>
 						<strong>{scanProgress}%</strong>
 					</div>
+				{:else if scanCompleted}
+					<div class="summary-item scan-status-completed">
+						<span>{i18n.t('tools.wallet_sweep.step4.sidebar.scan_status_label')}</span>
+						<strong>{i18n.t('tools.wallet_sweep.step4.sidebar.scan_completed')}</strong>
+					</div>
+				{:else}
+					<div class="summary-item scan-status-pending">
+						<span>{i18n.t('tools.wallet_sweep.step4.sidebar.scan_status_label')}</span>
+						<strong>{i18n.t('tools.wallet_sweep.step4.sidebar.scan_pending')}</strong>
+					</div>
 				{/if}
 			</StepSummary>
 
@@ -70,9 +81,45 @@
 					copyAddressTitle={i18n.t('common.copy_address')}
 					copiedTitle={i18n.t('common.copied')}
 				/>
+			{:else if hasScanned}
+				<div class="no-balance-hint" transition:fade>
+					{i18n.t('tools.wallet_sweep.step4.sidebar.no_balance_found')}
+				</div>
 			{/if}
 		</div>
 	{:else}
 		<EmptyHint message={i18n.t('tools.wallet_sweep.step4.sidebar.empty_hint')} />
 	{/if}
 </StepSidebar>
+
+<style>
+	.summary-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: var(--space-2) 0;
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.summary-item:last-child {
+		border-bottom: none;
+	}
+
+	.scan-status-completed strong {
+		color: var(--color-success, #10b981);
+	}
+
+	.scan-status-pending strong {
+		color: var(--color-warning, #f59e0b);
+	}
+
+	.no-balance-hint {
+		margin-top: var(--space-4);
+		padding: var(--space-3);
+		background: var(--color-muted);
+		border-radius: var(--radius-md);
+		font-size: var(--text-sm);
+		color: var(--color-muted-foreground);
+		text-align: center;
+	}
+</style>

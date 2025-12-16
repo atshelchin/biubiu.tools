@@ -505,8 +505,14 @@
 						"with_balance": "{count}个有余额",
 						"scan_button": "🔍 扫描余额",
 						"scanning": "扫描中... {progress}%",
+						"scan_completed": "扫描完成",
+						"scan_hint": "需要扫描余额后才能进入下一步",
 						"clear_all": "清除全部",
 						"empty_message": "尚未导入钱包。使用上述方法导入钱包。"
+					},
+					"scan_section": {
+						"title": "余额扫描",
+						"required": "必需"
 					},
 					"errors": {
 						"no_network": "未连接网络",
@@ -542,13 +548,18 @@
 				},
 				"footer": {
 					"continue_text": "继续确认",
-					"hint": "请至少导入一个钱包以继续"
+					"hint": "请至少导入一个钱包以继续",
+					"hint_scan_required": "请先扫描余额后再继续"
 				},
 				"sidebar": {
 					"title": "已导入钱包",
 					"total_label": "总数：",
 					"with_balance_label": "有余额：",
 					"scanning_label": "扫描中：",
+					"scan_status_label": "扫描状态：",
+					"scan_completed": "已完成",
+					"scan_pending": "待扫描",
+					"no_balance_found": "扫描完成后未发现任何余额。所有钱包在所选代币上的余额均为零。",
 					"empty_hint": "未导入任何钱包",
 					"performance_tip": {
 						"title": "⚡ 性能提示",
@@ -1161,6 +1172,8 @@
 			"duplicate_url": "此 RPC 端点已存在",
 			"at_least_one": "至少需要保留一个 RPC 端点",
 			"hint": "添加多个 RPC 端点可以在某个被限流时自动切换，提高扫描成功率。",
+			"recommend_prefix": "推荐从",
+			"recommend_suffix": "获取可用的 RPC 端点",
 			"cancel": "取消",
 			"save": "保存并继续扫描"
 		},

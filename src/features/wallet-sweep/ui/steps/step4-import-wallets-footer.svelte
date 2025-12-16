@@ -10,7 +10,22 @@
 	// Derived state
 	let importedWallets = $derived(step4State.importedWallets);
 	let walletCount = $derived(importedWallets.length);
-	let canContinue = $derived(walletCount > 0);
+	let scanCompleted = $derived(step4State.scanCompleted);
+	// Can only continue after scan is completed
+	let canContinue = $derived(walletCount > 0 && scanCompleted);
+
+	// Dynamic hint based on state
+	let hint = $derived.by(() => {
+		if (walletCount === 0) {
+			// No wallets imported yet
+			return i18n.t('tools.wallet_sweep.step4.footer.hint');
+		} else if (!scanCompleted) {
+			// Wallets imported but not scanned
+			return i18n.t('tools.wallet_sweep.step4.footer.hint_scan_required');
+		}
+		// All conditions met
+		return '';
+	});
 
 	function handleContinue() {
 		if (canContinue) {
@@ -29,5 +44,5 @@
 	{canContinue}
 	continueText={i18n.t('tools.wallet_sweep.step4.footer.continue_text')}
 	onContinue={handleContinue}
-	hint={i18n.t('tools.wallet_sweep.step4.footer.hint')}
+	{hint}
 />

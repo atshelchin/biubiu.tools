@@ -503,10 +503,16 @@
 						"title": "Imported Wallets",
 						"count": "({count})",
 						"with_balance": "{count} with balance",
-						"scan_button": "🔍 Scan Balances",
+						"scan_button": "Scan Balances",
 						"scanning": "Scanning... {progress}%",
+						"scan_completed": "Scan Completed",
+						"scan_hint": "Scanning balances is required before continuing to the next step",
 						"clear_all": "Clear All",
 						"empty_message": "No wallets imported yet. Use the methods above to import wallets."
+					},
+					"scan_section": {
+						"title": "Balance Scan",
+						"required": "Required"
 					},
 					"errors": {
 						"no_network": "No network connected",
@@ -542,13 +548,18 @@
 				},
 				"footer": {
 					"continue_text": "Continue to Confirm",
-					"hint": "Please import at least one wallet to continue"
+					"hint": "Please import at least one wallet to continue",
+					"hint_scan_required": "Please scan balances before continuing"
 				},
 				"sidebar": {
 					"title": "Imported Wallets",
 					"total_label": "Total:",
 					"with_balance_label": "With Balance:",
 					"scanning_label": "Scanning:",
+					"scan_status_label": "Scan Status:",
+					"scan_completed": "Completed",
+					"scan_pending": "Pending",
+					"no_balance_found": "No balances found after scanning. All wallets have zero balance for the selected tokens.",
 					"empty_hint": "No wallets imported",
 					"performance_tip": {
 						"title": "⚡ Performance Tip",
@@ -1175,6 +1186,8 @@
 			"duplicate_url": "This RPC endpoint already exists",
 			"at_least_one": "At least one RPC endpoint is required",
 			"hint": "Adding multiple RPC endpoints enables automatic switching when one is rate limited, improving scan success rate.",
+			"recommend_prefix": "Find available RPC endpoints at",
+			"recommend_suffix": "",
 			"cancel": "Cancel",
 			"save": "Save and Continue Scan"
 		},
