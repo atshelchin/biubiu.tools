@@ -403,7 +403,11 @@
 	.dice-overlay {
 		position: fixed;
 		inset: 0;
-		background: radial-gradient(ellipse at center, rgba(139, 92, 246, 0.15) 0%, rgba(0, 0, 0, 0.85) 100%);
+		background: radial-gradient(
+			ellipse at center,
+			rgba(139, 92, 246, 0.15) 0%,
+			rgba(0, 0, 0, 0.85) 100%
+		);
 		backdrop-filter: blur(12px);
 		z-index: 1001;
 		display: flex;
