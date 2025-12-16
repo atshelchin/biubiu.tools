@@ -686,7 +686,11 @@ export class BalanceScannerStorage {
 		let usage = 0;
 		let quota = 0;
 
-		if ('storage' in navigator && 'estimate' in navigator.storage) {
+		if (
+			typeof navigator !== 'undefined' &&
+			'storage' in navigator &&
+			'estimate' in navigator.storage
+		) {
 			try {
 				const estimate = await navigator.storage.estimate();
 				usage = estimate.usage || 0;

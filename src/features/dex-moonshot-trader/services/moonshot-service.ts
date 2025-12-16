@@ -4,7 +4,7 @@ import { MOONSHOT_TOKEN_ABI, MOONSHOT_FACTORY_ABI } from '../contracts/moonshot-
 import type { MoonshotTokenInfo, MoonshotQuote } from '../types/moonshot';
 
 // Multicall3 address (same on all chains)
-const MULTICALL3_ADDRESS = '0xcA11bde05977b3631167028862bE2a173976CA11' as Address;
+const MULTICALL3_ADDRESS = '0x2055A30B00555e7cAd48b1756eac4f917781489b' as Address;
 
 const MULTICALL3_ABI = [
 	{

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { useI18n } from '@shelchin/i18n/svelte';
+	import confetti from 'canvas-confetti';
 
 	const i18n = useI18n();
 	const t = i18n.t;
@@ -20,9 +21,14 @@
 		Activity,
 		Search,
 		Image,
-		Folder
+		Folder,
+		Dices,
+		ChevronDown,
+		ChevronUp,
+		X
 	} from '@lucide/svelte';
 	import ToolStatusBadge from '$lib/components/ui/tool-status-badge.svelte';
+	import Dice3D from '$lib/components/ui/dice-3d.svelte';
 
 	interface Tool {
 		icon: typeof Wallet;
@@ -41,21 +47,6 @@
 	// Tools data with full i18n - reactive to language changes
 	const tools = $derived<Tool[]>([
 		{
-			icon: ArrowRightLeft,
-			title: t('tools.wallet_sweep.title'),
-			description: t('tools.wallet_sweep.description'),
-			link: '/apps/wallet-sweep',
-			status: 'active',
-			color: '#10B981',
-			features: [
-				i18n.t('tools.wallet_sweep.feature_1'),
-				i18n.t('tools.wallet_sweep.feature_2'),
-				i18n.t('tools.wallet_sweep.feature_3'),
-				i18n.t('tools.wallet_sweep.feature_4')
-			],
-			stage: 'beta'
-		},
-		{
 			icon: SendHorizontal,
 			title: t('tools.token_distribution.title'),
 			description: t('tools.token_distribution.description'),
@@ -72,51 +63,28 @@
 			link: '/apps/token-balance-scanner',
 			status: 'active',
 			color: '#3B82F6',
-			features: ['Multi-Wallet Scanning', 'CSV/JSON Export', 'Read-only Operations'],
-			stage: 'alpha'
-		},
-		{
-			icon: MessageCircle,
-			title: t('tools.feedback_card.title'),
-			description: t('tools.feedback_card.description'),
-			link: telegramGroupLink,
-			status: 'active',
-			color: '#06B6D4',
 			features: [
-				t('tools.feedback_card.feature_1'),
-				t('tools.feedback_card.feature_2'),
-				t('tools.feedback_card.feature_3')
-			]
-		},
-		{
-			icon: Globe,
-			title: t('tools.ens_scanner.title'),
-			description: t('tools.ens_scanner.description'),
-			link: '/apps/ens-scanner',
-			status: 'active',
-			color: '#EC4899',
-			features: ['Pattern Generation', 'Expiry Tracking', 'Batch Scanning'],
+				t('tools.token_balance_scanner.feature_1'),
+				t('tools.token_balance_scanner.feature_2'),
+				t('tools.token_balance_scanner.feature_3'),
+				t('tools.token_balance_scanner.feature_4')
+			],
 			stage: 'alpha'
 		},
 		{
-			icon: KeyRound,
-			title: t('tools.wallet_generator.title'),
-			description: t('tools.wallet_generator.description'),
-			link: '/apps/wallet-generator',
+			icon: ArrowRightLeft,
+			title: t('tools.wallet_sweep.title'),
+			description: t('tools.wallet_sweep.description'),
+			link: '/apps/wallet-sweep',
 			status: 'active',
-			color: '#8B5CF6',
-			features: ['HD Path Support', 'Multiple Chains', 'Export to CSV/JSON'],
-			stage: 'alpha'
-		},
-		{
-			icon: TrendingUp,
-			title: t('tools.dex_moonshot_trader.title'),
-			description: t('tools.dex_moonshot_trader.description'),
-			link: '/apps/dex-moonshot-trader',
-			status: 'active',
-			color: '#EF4444',
-			features: ['Buy & Sell Tokens', 'Adjustable Slippage', 'Multi-Chain Support'],
-			stage: 'alpha'
+			color: '#10B981',
+			features: [
+				i18n.t('tools.wallet_sweep.feature_1'),
+				i18n.t('tools.wallet_sweep.feature_2'),
+				i18n.t('tools.wallet_sweep.feature_3'),
+				i18n.t('tools.wallet_sweep.feature_4')
+			],
+			stage: 'beta'
 		},
 		{
 			icon: Sparkles,
@@ -157,28 +125,17 @@
 			stage: 'alpha'
 		},
 		{
-			icon: Folder,
-			title: 'NFT Manager',
-			description: 'Manage your deployed NFT collections. View, mint, and interact with NFTs.',
-			link: '/apps/nft-manager',
-			status: 'active',
-			color: '#A855F7',
-			features: ['View NFT Collections', 'Owner & Stake Mint', 'Paginated Browsing'],
-			stage: 'alpha'
-		},
-		{
-			icon: Activity,
-			title: t('tools.assets_monitor.title'),
-			description: t('tools.assets_monitor.description'),
-			link: '/apps/assets-monitor',
+			icon: MessageCircle,
+			title: t('tools.feedback_card.title'),
+			description: t('tools.feedback_card.description'),
+			link: telegramGroupLink,
 			status: 'active',
 			color: '#06B6D4',
 			features: [
-				t('tools.assets_monitor.feature_1'),
-				t('tools.assets_monitor.feature_2'),
-				t('tools.assets_monitor.feature_3')
-			],
-			stage: 'alpha'
+				t('tools.feedback_card.feature_1'),
+				t('tools.feedback_card.feature_2'),
+				t('tools.feedback_card.feature_3')
+			]
 		},
 		{
 			icon: Search,
@@ -206,11 +163,269 @@
 				t('tools.call_master.feature_3')
 			],
 			stage: 'coming-soon'
+		},
+		{
+			icon: Globe,
+			title: t('tools.ens_scanner.title'),
+			description: t('tools.ens_scanner.description'),
+			link: '/apps/ens-scanner',
+			status: 'active',
+			color: '#EC4899',
+			features: ['Pattern Generation', 'Expiry Tracking', 'Batch Scanning'],
+			stage: 'alpha'
+		},
+		{
+			icon: KeyRound,
+			title: t('tools.wallet_generator.title'),
+			description: t('tools.wallet_generator.description'),
+			link: '/apps/wallet-generator',
+			status: 'active',
+			color: '#8B5CF6',
+			features: ['HD Path Support', 'Multiple Chains', 'Export to CSV/JSON'],
+			stage: 'alpha'
+		},
+		{
+			icon: TrendingUp,
+			title: t('tools.dex_moonshot_trader.title'),
+			description: t('tools.dex_moonshot_trader.description'),
+			link: '/apps/dex-moonshot-trader',
+			status: 'active',
+			color: '#EF4444',
+			features: ['Buy & Sell Tokens', 'Adjustable Slippage', 'Multi-Chain Support'],
+			stage: 'alpha'
+		},
+
+		{
+			icon: Folder,
+			title: 'NFT Manager',
+			description: 'Manage your deployed NFT collections. View, mint, and interact with NFTs.',
+			link: '/apps/nft-manager',
+			status: 'active',
+			color: '#A855F7',
+			features: ['View NFT Collections', 'Owner & Stake Mint', 'Paginated Browsing'],
+			stage: 'alpha'
+		},
+		{
+			icon: Activity,
+			title: t('tools.assets_monitor.title'),
+			description: t('tools.assets_monitor.description'),
+			link: '/apps/assets-monitor',
+			status: 'active',
+			color: '#06B6D4',
+			features: [
+				t('tools.assets_monitor.feature_1'),
+				t('tools.assets_monitor.feature_2'),
+				t('tools.assets_monitor.feature_3')
+			],
+			stage: 'alpha'
 		}
 	]);
 
 	function joinTelegramGroup() {
 		window.open(telegramGroupLink, '_blank');
+	}
+
+	// Show more/less state
+	const INITIAL_VISIBLE_COUNT = 9;
+	let showAll = $state(false);
+
+	// Random tool discovery state
+	let isShaking = $state(false);
+	let showDice3D = $state(false);
+	let showDiscoveryModal = $state(false);
+	let discoveredTool = $state<Tool | null>(null);
+
+	// Filter only active tools for random discovery
+	const activeTools = $derived(tools.filter((tool) => tool.status === 'active' && tool.link));
+
+	// Create custom confetti with high z-index
+	let customConfetti: ReturnType<typeof confetti.create> | null = null;
+
+	function getConfetti() {
+		if (!customConfetti) {
+			// Create a canvas for confetti with high z-index
+			const canvas = document.createElement('canvas');
+			canvas.style.position = 'fixed';
+			canvas.style.inset = '0';
+			canvas.style.width = '100%';
+			canvas.style.height = '100%';
+			canvas.style.pointerEvents = 'none';
+			canvas.style.zIndex = '10000';
+			document.body.appendChild(canvas);
+			customConfetti = confetti.create(canvas, { resize: true, useWorker: true });
+		}
+		return customConfetti;
+	}
+
+	// Audio context for sound effects
+	let audioContext: AudioContext | null = null;
+
+	function getAudioContext() {
+		if (!audioContext) {
+			audioContext = new AudioContext();
+		}
+		return audioContext;
+	}
+
+	function playDiceRollSound() {
+		try {
+			const ctx = getAudioContext();
+			const now = ctx.currentTime;
+
+			// Create multiple short "click" sounds to simulate dice rolling
+			for (let i = 0; i < 12; i++) {
+				const osc = ctx.createOscillator();
+				const gain = ctx.createGain();
+
+				osc.connect(gain);
+				gain.connect(ctx.destination);
+
+				// Random frequency for each click
+				osc.frequency.value = 200 + Math.random() * 400;
+				osc.type = 'sine';
+
+				// Fade in/out quickly
+				const clickTime = now + i * 0.12 + Math.random() * 0.05;
+				gain.gain.setValueAtTime(0, clickTime);
+				gain.gain.linearRampToValueAtTime(0.12, clickTime + 0.01);
+				gain.gain.exponentialRampToValueAtTime(0.01, clickTime + 0.08);
+
+				osc.start(clickTime);
+				osc.stop(clickTime + 0.1);
+			}
+		} catch {
+			// Audio not supported, silently fail
+		}
+	}
+
+	function playCelebrationSound() {
+		try {
+			const ctx = getAudioContext();
+			const now = ctx.currentTime;
+
+			// Victory fanfare - ascending notes
+			const notes = [523.25, 659.25, 783.99, 1046.5]; // C5, E5, G5, C6
+
+			notes.forEach((freq, i) => {
+				const osc = ctx.createOscillator();
+				const gain = ctx.createGain();
+
+				osc.connect(gain);
+				gain.connect(ctx.destination);
+
+				osc.frequency.value = freq;
+				osc.type = 'sine';
+
+				const noteTime = now + i * 0.15;
+				gain.gain.setValueAtTime(0, noteTime);
+				gain.gain.linearRampToValueAtTime(0.15, noteTime + 0.05);
+				gain.gain.exponentialRampToValueAtTime(0.01, noteTime + 0.4);
+
+				osc.start(noteTime);
+				osc.stop(noteTime + 0.45);
+			});
+
+			// Add a shimmer effect
+			for (let i = 0; i < 5; i++) {
+				const osc = ctx.createOscillator();
+				const gain = ctx.createGain();
+
+				osc.connect(gain);
+				gain.connect(ctx.destination);
+
+				osc.frequency.value = 2000 + Math.random() * 2000;
+				osc.type = 'sine';
+
+				const shimmerTime = now + 0.5 + i * 0.1;
+				gain.gain.setValueAtTime(0, shimmerTime);
+				gain.gain.linearRampToValueAtTime(0.04, shimmerTime + 0.02);
+				gain.gain.exponentialRampToValueAtTime(0.001, shimmerTime + 0.15);
+
+				osc.start(shimmerTime);
+				osc.stop(shimmerTime + 0.2);
+			}
+		} catch {
+			// Audio not supported, silently fail
+		}
+	}
+
+	function handleShake() {
+		if (isShaking || showDice3D) return;
+
+		isShaking = true;
+		showDice3D = true;
+		playDiceRollSound();
+	}
+
+	function onDiceComplete() {
+		showDice3D = false;
+		isShaking = false;
+
+		// Pick a random active tool
+		const randomIndex = Math.floor(Math.random() * activeTools.length);
+		discoveredTool = activeTools[randomIndex];
+		showDiscoveryModal = true;
+
+		// Play celebration sound
+		playCelebrationSound();
+
+		const myConfetti = getConfetti();
+
+		// Fire confetti with a burst effect
+		myConfetti({
+			particleCount: 100,
+			spread: 70,
+			origin: { x: 0.5, y: 0.5 },
+			colors: ['#F59E0B', '#EC4899', '#8B5CF6', '#10B981', '#3B82F6'],
+			startVelocity: 45,
+			gravity: 1.2
+		});
+
+		// Side confetti streams
+		const duration = 2500;
+		const end = Date.now() + duration;
+
+		const frame = () => {
+			myConfetti({
+				particleCount: 4,
+				angle: 60,
+				spread: 55,
+				origin: { x: 0, y: 0.65 },
+				colors: ['#F59E0B', '#EC4899', '#8B5CF6']
+			});
+			myConfetti({
+				particleCount: 4,
+				angle: 120,
+				spread: 55,
+				origin: { x: 1, y: 0.65 },
+				colors: ['#10B981', '#3B82F6', '#8B5CF6']
+			});
+
+			if (Date.now() < end) {
+				requestAnimationFrame(frame);
+			}
+		};
+
+		frame();
+	}
+
+	function closeDiscoveryModal() {
+		showDiscoveryModal = false;
+		discoveredTool = null;
+	}
+
+	function goToDiscoveredTool() {
+		if (discoveredTool?.link) {
+			window.location.href = discoveredTool.link;
+		}
+	}
+
+	function tryAgain() {
+		closeDiscoveryModal();
+		// Small delay before starting new dice roll
+		setTimeout(() => {
+			handleShake();
+		}, 100);
 	}
 </script>
 
@@ -246,7 +461,9 @@
 				{@const Icon = tool.icon}
 				<article
 					class="tool-card {tool.status === 'coming-soon' ? 'coming-soon' : ''}"
+					class:visually-hidden={!showAll && index >= INITIAL_VISIBLE_COUNT}
 					style="--index: {index}; --tool-color: {tool.color};"
+					aria-hidden={!showAll && index >= INITIAL_VISIBLE_COUNT ? 'true' : undefined}
 				>
 					<!-- Card glow effect -->
 					<div class="card-glow"></div>
@@ -313,7 +530,103 @@
 				</article>
 			{/each}
 		</div>
+
+		<!-- Show More / Show Less Button -->
+		{#if tools.length > INITIAL_VISIBLE_COUNT}
+			<div class="show-more-wrapper">
+				<button class="show-more-btn" onclick={() => (showAll = !showAll)}>
+					{#if showAll}
+						<ChevronUp class="show-more-icon" />
+						<span>{t('common.show_less')}</span>
+					{:else}
+						<ChevronDown class="show-more-icon" />
+						<span>{t('common.show_more')} ({tools.length - INITIAL_VISIBLE_COUNT})</span>
+					{/if}
+				</button>
+			</div>
+		{/if}
 	</div>
+
+	<!-- Floating Shake Button -->
+	<button
+		class="shake-btn"
+		class:shaking={isShaking}
+		onclick={handleShake}
+		title={t('tools.discover_random')}
+		aria-label={t('tools.discover_random')}
+	>
+		<Dices class="shake-icon" />
+	</button>
+
+	<!-- Discovery Modal -->
+	{#if showDiscoveryModal && discoveredTool}
+		{@const DiscoveredIcon = discoveredTool.icon}
+		<div class="discovery-overlay" onclick={closeDiscoveryModal} role="presentation">
+			<div
+				class="discovery-modal"
+				onclick={(e) => e.stopPropagation()}
+				role="dialog"
+				aria-modal="true"
+				style="--tool-color: {discoveredTool.color};"
+			>
+				<!-- Decorative elements -->
+				<div class="modal-decoration modal-decoration-top-left"></div>
+				<div class="modal-decoration modal-decoration-bottom-right"></div>
+
+				<!-- Close button -->
+				<button class="modal-close" onclick={closeDiscoveryModal} aria-label="Close">
+					<X size={18} />
+				</button>
+
+				<div class="discovery-content">
+					<!-- Animated badge -->
+					<div class="discovery-badge">
+						<div class="badge-sparkle"></div>
+						<Sparkles size={14} />
+						<span>{t('tools.you_discovered')}</span>
+						<div class="badge-sparkle"></div>
+					</div>
+
+					<!-- Icon with animated glow -->
+					<div class="discovery-icon-wrapper">
+						<div class="discovery-icon-ring"></div>
+						<div class="discovery-icon-glow"></div>
+						<div class="discovery-icon-box">
+							<DiscoveredIcon class="discovery-icon" />
+						</div>
+					</div>
+
+					<!-- Tool info with gradient text -->
+					<h3 class="discovery-title">{discoveredTool.title}</h3>
+					<p class="discovery-description">{discoveredTool.description}</p>
+
+					<!-- Feature tags -->
+					{#if discoveredTool.features}
+						<div class="discovery-features">
+							{#each discoveredTool.features.slice(0, 3) as feature, i (feature)}
+								<span class="discovery-feature" style="--delay: {i * 0.1}s">{feature}</span>
+							{/each}
+						</div>
+					{/if}
+
+					<!-- Action buttons -->
+					<div class="discovery-actions">
+						<button class="discovery-btn primary" onclick={goToDiscoveredTool}>
+							<span>{t('tools.launch_app')}</span>
+							<ArrowRight size={18} />
+						</button>
+						<button class="discovery-btn secondary" onclick={tryAgain}>
+							<Dices size={18} />
+							<span>{t('tools.try_again')}</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	{/if}
+
+	<!-- 3D Dice Animation -->
+	<Dice3D visible={showDice3D} onComplete={onDiceComplete} />
 </section>
 
 <style>
@@ -892,6 +1205,445 @@
 		.action-btn {
 			padding: var(--space-3) var(--space-4);
 			font-size: 0.9375rem;
+		}
+	}
+
+	/* SEO-friendly hidden cards - content remains in DOM for crawlers */
+	.tool-card.visually-hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+
+	/* Show More Button */
+	.show-more-wrapper {
+		display: flex;
+		justify-content: center;
+		margin-top: var(--space-10);
+	}
+
+	.show-more-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--space-2);
+		padding: var(--space-3) var(--space-6);
+		background: var(--color-panel-2);
+		border: 1px solid var(--color-panel-border-2);
+		border-radius: var(--radius-full);
+		font-size: var(--text-sm);
+		font-weight: var(--font-medium);
+		color: var(--color-text-secondary);
+		cursor: pointer;
+		transition: all 0.2s ease;
+	}
+
+	.show-more-btn:hover {
+		background: var(--color-panel-3);
+		border-color: var(--color-primary);
+		color: var(--color-primary);
+		transform: translateY(-2px);
+	}
+
+	:global(.show-more-icon) {
+		width: 18px;
+		height: 18px;
+	}
+
+	/* Floating Shake Button */
+	.shake-btn {
+		position: fixed;
+		right: var(--space-6);
+		bottom: var(--space-24);
+		width: 64px;
+		height: 64px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: linear-gradient(135deg, #f59e0b, #ec4899, #8b5cf6);
+		background-size: 200% 200%;
+		border: none;
+		border-radius: 16px;
+		color: white;
+		cursor: pointer;
+		box-shadow:
+			0 8px 32px rgba(139, 92, 246, 0.5),
+			0 4px 16px rgba(236, 72, 153, 0.3),
+			inset 0 1px 0 rgba(255, 255, 255, 0.2);
+		transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+		z-index: 100;
+		transform-style: preserve-3d;
+		perspective: 1000px;
+		animation:
+			gradientShift 3s ease infinite,
+			floatIdle 2s ease-in-out infinite;
+	}
+
+	@keyframes gradientShift {
+		0%,
+		100% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+	}
+
+	@keyframes floatIdle {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-4px);
+		}
+	}
+
+	.shake-btn:hover {
+		transform: scale(1.15) translateY(-2px);
+		box-shadow:
+			0 12px 40px rgba(139, 92, 246, 0.6),
+			0 6px 20px rgba(236, 72, 153, 0.4),
+			inset 0 1px 0 rgba(255, 255, 255, 0.3);
+		animation: gradientShift 1.5s ease infinite;
+	}
+
+	.shake-btn.shaking {
+		animation: diceRoll3D 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+	}
+
+	@keyframes diceRoll3D {
+		0% {
+			transform: perspective(600px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1);
+		}
+		10% {
+			transform: perspective(600px) rotateX(45deg) rotateY(-30deg) rotateZ(15deg) scale(1.1)
+				translateY(-20px);
+		}
+		25% {
+			transform: perspective(600px) rotateX(-30deg) rotateY(60deg) rotateZ(-20deg) scale(1.2)
+				translateY(-30px);
+		}
+		40% {
+			transform: perspective(600px) rotateX(60deg) rotateY(-45deg) rotateZ(30deg) scale(1.15)
+				translateY(-25px);
+		}
+		55% {
+			transform: perspective(600px) rotateX(-45deg) rotateY(30deg) rotateZ(-15deg) scale(1.1)
+				translateY(-15px);
+		}
+		70% {
+			transform: perspective(600px) rotateX(30deg) rotateY(-20deg) rotateZ(10deg) scale(1.05)
+				translateY(-8px);
+		}
+		85% {
+			transform: perspective(600px) rotateX(-15deg) rotateY(10deg) rotateZ(-5deg) scale(1.02)
+				translateY(-3px);
+		}
+		100% {
+			transform: perspective(600px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1) translateY(0);
+		}
+	}
+
+	:global(.shake-icon) {
+		width: 32px;
+		height: 32px;
+		filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+		transition: transform 0.3s ease;
+	}
+
+	.shake-btn:hover :global(.shake-icon) {
+		transform: rotate(15deg);
+	}
+
+	.shake-btn.shaking :global(.shake-icon) {
+		animation: iconSpin 0.8s ease-in-out;
+	}
+
+	@keyframes iconSpin {
+		0% {
+			transform: rotate(0deg);
+		}
+		25% {
+			transform: rotate(180deg) scale(1.2);
+		}
+		50% {
+			transform: rotate(360deg);
+		}
+		75% {
+			transform: rotate(540deg) scale(0.9);
+		}
+		100% {
+			transform: rotate(720deg);
+		}
+	}
+
+	/* Discovery Modal Overlay */
+	.discovery-overlay {
+		position: fixed;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.6);
+		backdrop-filter: blur(8px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 1000;
+		animation: fadeIn 0.3s ease;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	/* Discovery Modal */
+	.discovery-modal {
+		position: relative;
+		width: 90%;
+		max-width: 420px;
+		background: var(--color-panel-2);
+		border: 1px solid var(--color-panel-border-2);
+		border-radius: var(--radius-xl);
+		padding: var(--space-8);
+		animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+		box-shadow:
+			0 25px 50px -12px rgba(0, 0, 0, 0.25),
+			0 0 0 1px rgba(255, 255, 255, 0.05);
+	}
+
+	@keyframes popIn {
+		from {
+			opacity: 0;
+			transform: scale(0.9) translateY(20px);
+		}
+		to {
+			opacity: 1;
+			transform: scale(1) translateY(0);
+		}
+	}
+
+	.modal-close {
+		position: absolute;
+		top: var(--space-4);
+		right: var(--space-4);
+		width: 32px;
+		height: 32px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: var(--color-panel-1);
+		border: 1px solid var(--color-panel-border-1);
+		border-radius: var(--radius-md);
+		color: var(--color-text-secondary);
+		cursor: pointer;
+		transition: all 0.2s;
+	}
+
+	.modal-close:hover {
+		background: var(--color-panel-3);
+		color: var(--color-text-primary);
+	}
+
+	.discovery-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.discovery-badge {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--space-2);
+		padding: var(--space-2) var(--space-4);
+		background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(236, 72, 153, 0.2));
+		border: 1px solid rgba(245, 158, 11, 0.3);
+		border-radius: var(--radius-full);
+		font-size: var(--text-xs);
+		font-weight: var(--font-semibold);
+		color: #f59e0b;
+		margin-bottom: var(--space-6);
+		animation: pulse 2s infinite;
+	}
+
+	@keyframes pulse {
+		0%,
+		100% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0.7;
+		}
+	}
+
+	.discovery-icon-wrapper {
+		position: relative;
+		width: 80px;
+		height: 80px;
+		margin-bottom: var(--space-6);
+	}
+
+	.discovery-icon-glow {
+		position: absolute;
+		inset: -20px;
+		background: radial-gradient(circle, var(--tool-color), transparent 60%);
+		opacity: 0.3;
+		filter: blur(20px);
+		animation: glowPulse 2s infinite;
+	}
+
+	@keyframes glowPulse {
+		0%,
+		100% {
+			opacity: 0.3;
+			transform: scale(1);
+		}
+		50% {
+			opacity: 0.5;
+			transform: scale(1.1);
+		}
+	}
+
+	.discovery-icon-box {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: linear-gradient(
+			135deg,
+			var(--tool-color),
+			color-mix(in srgb, var(--tool-color) 80%, black)
+		);
+		border-radius: var(--radius-lg);
+		box-shadow:
+			0 10px 40px color-mix(in srgb, var(--tool-color) 40%, transparent),
+			0 4px 12px rgba(0, 0, 0, 0.2);
+	}
+
+	:global(.discovery-icon) {
+		width: 40px;
+		height: 40px;
+		color: white;
+	}
+
+	.discovery-title {
+		font-size: var(--text-xl);
+		font-weight: var(--font-bold);
+		color: var(--color-heading-1);
+		margin-bottom: var(--space-3);
+	}
+
+	.discovery-description {
+		font-size: var(--text-sm);
+		color: var(--color-description-3);
+		line-height: 1.6;
+		margin-bottom: var(--space-5);
+		max-width: 320px;
+	}
+
+	.discovery-features {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: var(--space-2);
+		margin-bottom: var(--space-6);
+	}
+
+	.discovery-feature {
+		padding: var(--space-1) var(--space-3);
+		background: var(--color-panel-1);
+		border: 1px solid var(--color-panel-border-1);
+		border-radius: var(--radius-full);
+		font-size: 11px;
+		color: var(--color-description-2);
+	}
+
+	.discovery-actions {
+		display: flex;
+		gap: var(--space-3);
+		width: 100%;
+	}
+
+	.discovery-btn {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: var(--space-2);
+		padding: var(--space-3) var(--space-4);
+		border-radius: var(--radius-md);
+		font-size: var(--text-sm);
+		font-weight: var(--font-semibold);
+		cursor: pointer;
+		transition: all 0.2s;
+	}
+
+	.discovery-btn.primary {
+		background: linear-gradient(135deg, var(--color-primary), #8b5cf6);
+		border: none;
+		color: white;
+		box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+	}
+
+	.discovery-btn.primary:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+	}
+
+	.discovery-btn.secondary {
+		background: var(--color-panel-1);
+		border: 1px solid var(--color-panel-border-2);
+		color: var(--color-text-secondary);
+	}
+
+	.discovery-btn.secondary:hover {
+		background: var(--color-panel-3);
+		border-color: var(--color-primary);
+		color: var(--color-primary);
+	}
+
+	/* Mobile adjustments for shake button */
+	@media (max-width: 768px) {
+		.shake-btn {
+			right: var(--space-4);
+			bottom: var(--space-20);
+			width: 56px;
+			height: 56px;
+			border-radius: 14px;
+		}
+
+		:global(.shake-icon) {
+			width: 28px;
+			height: 28px;
+		}
+
+		.discovery-modal {
+			padding: var(--space-6);
+		}
+
+		.discovery-icon-wrapper {
+			width: 64px;
+			height: 64px;
+		}
+
+		:global(.discovery-icon) {
+			width: 32px;
+			height: 32px;
+		}
+
+		.discovery-actions {
+			flex-direction: column;
 		}
 	}
 </style>
