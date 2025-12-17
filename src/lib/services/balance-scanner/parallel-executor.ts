@@ -217,9 +217,27 @@ export class ParallelRPCExecutor {
 			}
 		}
 
+		const totalBatches = batches.length;
+		const tokenSymbol = token.symbol || token.id;
+
 		// Execute all batches in parallel
-		const batchPromises = batches.map(async ({ rpc, addresses: batchAddresses }) => {
+		const batchPromises = batches.map(async ({ rpc, addresses: batchAddresses }, batchIndex) => {
 			const rpcName = rpc.name || new URL(rpc.url).hostname;
+			const batchNum = batchIndex + 1;
+
+			// Emit batch started event
+			this.emitEvent(
+				'batch_started',
+				`[${tokenSymbol}] Batch ${batchNum}/${totalBatches}: ${batchAddresses.length} addresses via ${rpcName}`,
+				{
+					tokenId: token.id,
+					batchNum,
+					totalBatches,
+					addressCount: batchAddresses.length,
+					rpcUrl: rpc.url,
+					rpcName
+				}
+			);
 
 			try {
 				const startTime = Date.now();
@@ -234,6 +252,21 @@ export class ParallelRPCExecutor {
 				for (let i = 0; i < batchAddresses.length; i++) {
 					results.set(batchAddresses[i], batchResults[i]);
 				}
+
+				// Emit batch completed event
+				this.emitEvent(
+					'batch_completed',
+					`[${tokenSymbol}] Batch ${batchNum}/${totalBatches}: ✓ ${batchAddresses.length} addresses via ${rpcName} (${responseTime}ms)`,
+					{
+						tokenId: token.id,
+						batchNum,
+						totalBatches,
+						addressCount: batchAddresses.length,
+						responseTime,
+						rpcUrl: rpc.url,
+						rpcName
+					}
+				);
 
 				return {
 					rpcUrl: rpc.url,
@@ -258,6 +291,21 @@ export class ParallelRPCExecutor {
 				for (const addr of batchAddresses) {
 					results.set(addr, { success: false, balance: 0n });
 				}
+
+				// Emit batch failed event
+				this.emitEvent(
+					isRateLimited ? 'rate_limited' : 'batch_failed',
+					`[${tokenSymbol}] Batch ${batchNum}/${totalBatches}: failed via ${rpcName} - ${errorMessage}`,
+					{
+						tokenId: token.id,
+						batchNum,
+						totalBatches,
+						rpcUrl: rpc.url,
+						rpcName,
+						error: errorMessage,
+						isRateLimited
+					}
+				);
 
 				return {
 					rpcUrl: rpc.url,

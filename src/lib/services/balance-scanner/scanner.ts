@@ -295,9 +295,12 @@ export class BalanceScanner {
 		}
 
 		if (this.isComplete()) {
+			const tokenCount = this.state.tokens.length;
+			const addressCount = this.state.addresses.length;
+			const totalQueries = this.state.stats.success;
 			this.emitEvent(
 				'scan_completed',
-				`Scan completed! ${this.state.stats.success} balances retrieved`
+				`Scan completed! ${tokenCount} tokens × ${addressCount} addresses = ${totalQueries} balance queries`
 			);
 			this.callbacks.onComplete?.(this.buildResults());
 		} else if (this.state.isPaused) {
