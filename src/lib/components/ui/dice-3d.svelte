@@ -6,9 +6,11 @@
 	interface Props {
 		visible: boolean;
 		onComplete: () => void;
+		onAnimationStart?: () => void;
+		onLanding?: () => void;
 	}
 
-	let { visible, onComplete }: Props = $props();
+	let { visible, onComplete, onAnimationStart, onLanding }: Props = $props();
 
 	let container: HTMLDivElement | undefined = $state();
 	let scene: THREE.Scene | undefined;
@@ -136,9 +138,11 @@
 		// Scene
 		scene = new THREE.Scene();
 
-		// Camera
-		camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
-		camera.position.z = 5;
+		// Camera - adjust for mobile screens
+		const isMobile = window.innerWidth < 768;
+		const fov = isMobile ? 70 : 60; // Wider FOV on mobile to see dice better
+		camera = new THREE.PerspectiveCamera(fov, window.innerWidth / window.innerHeight, 0.1, 1000);
+		camera.position.z = isMobile ? 6 : 5; // Further back on mobile
 
 		// Renderer with better quality
 		renderer = new THREE.WebGLRenderer({
@@ -151,6 +155,7 @@
 		renderer.setClearColor(0x000000, 0);
 		renderer.toneMapping = THREE.ACESFilmicToneMapping;
 		renderer.toneMappingExposure = 1.2;
+		// eslint-disable-next-line svelte/no-dom-manipulating
 		container.appendChild(renderer.domElement);
 
 		// Enhanced lighting
@@ -254,59 +259,49 @@
 	function animateDice() {
 		if (!dice || !scene || !camera || !renderer || !glowMesh) return;
 
-		// Animation parameters
-		const duration = 2000; // ms
+		// Single smooth animation - dice tumbles in from above and gradually slows down
+		const duration = 2800; // ms
 		const startTime = Date.now();
 
 		// Random target rotation (multiple full rotations)
-		const targetRotationX = Math.PI * (6 + Math.random() * 6);
-		const targetRotationY = Math.PI * (6 + Math.random() * 6);
-		const targetRotationZ = Math.PI * (3 + Math.random() * 3);
+		const targetRotationX = Math.PI * (8 + Math.random() * 6);
+		const targetRotationY = Math.PI * (8 + Math.random() * 6);
+		const targetRotationZ = Math.PI * (4 + Math.random() * 3);
 
 		// Starting position (off-screen top)
-		dice.position.set(0, 10, 0);
+		dice.position.set(0, 8, 0);
 		dice.rotation.set(0, 0, 0);
-		dice.scale.set(0.2, 0.2, 0.2);
+		dice.scale.set(0.3, 0.3, 0.3);
 		glowMesh.position.copy(dice.position);
 		glowMesh.scale.copy(dice.scale);
+
+		// Trigger animation start callback for sound sync
+		onAnimationStart?.();
 
 		const animate = () => {
 			const elapsed = Date.now() - startTime;
 			const progress = Math.min(elapsed / duration, 1);
 
-			// Easing function - bounce effect
-			const easeOutBounce = (t: number): number => {
-				const n1 = 7.5625;
-				const d1 = 2.75;
-				if (t < 1 / d1) {
-					return n1 * t * t;
-				} else if (t < 2 / d1) {
-					return n1 * (t -= 1.5 / d1) * t + 0.75;
-				} else if (t < 2.5 / d1) {
-					return n1 * (t -= 2.25 / d1) * t + 0.9375;
-				} else {
-					return n1 * (t -= 2.625 / d1) * t + 0.984375;
-				}
-			};
+			// Custom easing - fast at start, very gradual slowdown
+			const easeOutQuart = (t: number) => 1 - Math.pow(1 - t, 4);
+			const easeProgress = easeOutQuart(progress);
 
-			// Easing for scale and position
-			const easeProgress = easeOutBounce(progress);
-
-			// Scale up with overshoot
-			const scale = 0.2 + 0.9 * easeProgress;
+			// Scale up smoothly
+			const scale = 0.3 + 0.8 * easeProgress;
 			dice!.scale.set(scale, scale, scale);
 			glowMesh!.scale.set(scale * 1.1, scale * 1.1, scale * 1.1);
 
-			// Position - fall from top to center
-			const yPos = 10 * (1 - easeProgress);
+			// Position - smooth descent to center
+			const yPos = 8 * (1 - easeProgress);
 			dice!.position.y = yPos;
 			glowMesh!.position.y = yPos;
 
-			// Rotation - spin fast then slow down
-			const rotProgress = 1 - Math.pow(1 - progress, 4); // ease out quartic for rotation
-			dice!.rotation.x = targetRotationX * rotProgress;
-			dice!.rotation.y = targetRotationY * rotProgress;
-			dice!.rotation.z = targetRotationZ * rotProgress;
+			// Rotation - continuous tumbling that gradually slows
+			// Use a different easing for rotation to make it feel more natural
+			const rotEase = 1 - Math.pow(1 - progress, 3);
+			dice!.rotation.x = targetRotationX * rotEase;
+			dice!.rotation.y = targetRotationY * rotEase;
+			dice!.rotation.z = targetRotationZ * rotEase;
 			glowMesh!.rotation.copy(dice!.rotation);
 
 			// Pulsing glow effect
@@ -318,33 +313,39 @@
 			if (progress < 1) {
 				animationId = requestAnimationFrame(animate);
 			} else {
-				// Continue a subtle idle animation for a moment
-				const idleStart = Date.now();
-				const idleDuration = 400;
-
-				const idleAnimate = () => {
-					const idleElapsed = Date.now() - idleStart;
-					const idleProgress = idleElapsed / idleDuration;
-
-					if (idleProgress < 1) {
-						// Subtle wobble
-						dice!.rotation.x += Math.sin(idleElapsed * 0.02) * 0.002;
-						dice!.rotation.y += Math.cos(idleElapsed * 0.015) * 0.002;
-						glowMesh!.rotation.copy(dice!.rotation);
-
-						// Glow pulse
-						const glowPulse = 0.15 + 0.1 * Math.sin(idleElapsed * 0.015);
-						(glowMesh!.material as THREE.MeshBasicMaterial).opacity = glowPulse;
-
-						renderer!.render(scene!, camera!);
-						animationId = requestAnimationFrame(idleAnimate);
-					} else {
-						onComplete();
-					}
-				};
-
-				idleAnimate();
+				// Brief pause at the end before completing
+				onLanding?.();
+				animateIdle();
 			}
+		};
+
+		// Brief idle animation before complete
+		const animateIdle = () => {
+			const idleStart = Date.now();
+			const idleDuration = 500;
+
+			const idleAnimate = () => {
+				const idleElapsed = Date.now() - idleStart;
+				const idleProgress = idleElapsed / idleDuration;
+
+				if (idleProgress < 1) {
+					// Very subtle floating motion
+					dice!.rotation.x += Math.sin(idleElapsed * 0.012) * 0.0008;
+					dice!.rotation.y += Math.cos(idleElapsed * 0.01) * 0.0008;
+					glowMesh!.rotation.copy(dice!.rotation);
+
+					// Glow pulse
+					const glowPulse = 0.15 + 0.1 * Math.sin(idleElapsed * 0.015);
+					(glowMesh!.material as THREE.MeshBasicMaterial).opacity = glowPulse;
+
+					renderer!.render(scene!, camera!);
+					animationId = requestAnimationFrame(idleAnimate);
+				} else {
+					onComplete();
+				}
+			};
+
+			idleAnimate();
 		};
 
 		animate();
@@ -355,6 +356,7 @@
 			cancelAnimationFrame(animationId);
 		}
 		if (renderer && container && renderer.domElement.parentNode === container) {
+			// eslint-disable-next-line svelte/no-dom-manipulating
 			container.removeChild(renderer.domElement);
 			renderer.dispose();
 		}
@@ -362,8 +364,9 @@
 			dice.geometry.dispose();
 			if (Array.isArray(dice.material)) {
 				dice.material.forEach((m) => {
-					if (m.map) m.map.dispose();
-					m.dispose();
+					const material = m as THREE.MeshPhysicalMaterial;
+					if (material.map) material.map.dispose();
+					material.dispose();
 				});
 			}
 		}
