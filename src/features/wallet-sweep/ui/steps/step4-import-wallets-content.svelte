@@ -11,8 +11,10 @@
 	import { usePrivateKeyImport } from '@/features/wallet-sweep/composables/use-private-key-import.svelte';
 	import { useRpcManager } from '@/features/wallet-sweep/composables/use-rpc-manager.svelte';
 	import { useBalanceScannerV2 } from '@/features/wallet-sweep/composables/use-balance-scanner-v2.svelte';
-	import type { ScanState } from '$lib/services/balance-scanner/types';
+	import type { ScanState, ScanTaskStatus } from '$lib/services/balance-scanner/types';
 	import type { ImportMethod } from '@/features/wallet-sweep/types/wallet';
+	import type { ERC20Token } from '$lib/types/token';
+	import type { Address } from 'viem';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
 	import QuickRpcManagerModal from '$lib/components/ui/quick-rpc-manager-modal.svelte';
@@ -38,6 +40,10 @@
 	let isScanning = $derived(step4State.isScanning);
 	let scanProgress = $derived(step4State.scanProgress);
 	let scanCompleted = $derived(step4State.scanCompleted);
+
+	// RPC count for showing guidance hint
+	let rpcCount = $derived(rpcManager.currentNetwork?.rpcEndpoints.length ?? 0);
+	let showRpcHint = $derived(rpcCount === 1 && importedWallets.length > 0 && !scanCompleted);
 
 	// Import error message (from mnemonic or private key import)
 	let importErrorMessage = $derived(
@@ -108,6 +114,7 @@
 		step4State.errorMessage = '';
 		step4State.scanProgress = 0;
 		step4State.clearScanEvents(); // Clear previous scan events
+		step4State.startScanTracking(); // Start scan rate tracking
 
 		try {
 			// Clear any previous rate limit error
@@ -126,6 +133,10 @@
 				onEvent: (event) => {
 					// Store events for log display in sidebar
 					step4State.addScanEvent(event);
+					// Track scanned addresses for rate calculation
+					if (event.type === 'batch_completed' && event.details?.successCount) {
+						step4State.addScannedAddresses(event.details.successCount as number);
+					}
 				},
 				onStateChange: (scanState) => {
 					// Always keep track of the latest scan state for resume capability
@@ -223,16 +234,19 @@
 
 		<!-- Scan Balance Section -->
 		<div>
-			<!-- <div class="scan-header">
-				<span class="scan-title"
-					>{i18n.t('tools.wallet_sweep.step4.content.scan_section.title')}</span
-				>
-				{#if !scanCompleted && !isScanning}
-					<span class="scan-required-badge"
-						>{i18n.t('tools.wallet_sweep.step4.content.scan_section.required')}</span
-					>
-				{/if}
-			</div> -->
+			<!-- RPC Guidance Hint - shown when only 1 RPC is configured -->
+			{#if showRpcHint}
+				<div class="rpc-hint">
+					<InlineAlert
+						variant="info"
+						title={i18n.t('tools.wallet_sweep.step4.content.rpc_hint.title')}
+						message={i18n.t('tools.wallet_sweep.step4.content.rpc_hint.message')}
+						primaryButtonText={i18n.t('tools.wallet_sweep.step4.content.rpc_hint.add_rpc_button')}
+						onPrimaryClick={rpcManager.openRpcManager}
+					/>
+				</div>
+			{/if}
+
 			<ScanBalanceButton
 				{isScanning}
 				{scanProgress}
@@ -310,14 +324,55 @@
 					<button
 						class="dev-btn dev-btn-warning"
 						onclick={() => {
+							// Use actual imported wallets and selected tokens for realistic simulation
+							const addresses = importedWallets.map((w) => w.address) as Address[];
+							const currentNetwork = rpcManager.currentNetwork;
+							const allTokens = currentNetwork
+								? step3State.getAvailableTokens(
+										connectStore.currentChainId,
+										currentNetwork.symbol,
+										currentNetwork.name
+									)
+								: [];
+							const selectedIds = Array.from(step3State.selectedTokenIds);
+							const tokens = allTokens
+								.filter((t) => selectedIds.includes(t.id))
+								.map((t) => ({
+									id: t.id,
+									address: t.type === 'erc20' ? (t as ERC20Token).address : undefined,
+									decimals: t.decimals,
+									chainId: t.chainId,
+									symbol: t.symbol
+								}));
+
+							// Create task status map with 50% progress
+							/* eslint-disable-next-line svelte/prefer-svelte-reactivity -- mock state for dev tools only */
+							const taskStatus = new Map<string, ScanTaskStatus>();
+							const totalTasks = addresses.length * tokens.length;
+							const completedTasks = Math.floor(totalTasks / 2);
+							let taskCount = 0;
+							for (const addr of addresses) {
+								for (const token of tokens) {
+									const key = `${addr.toLowerCase()}:${token.id}`;
+									taskStatus.set(key, taskCount < completedTasks ? 'success' : 'pending');
+									taskCount++;
+								}
+							}
+
 							const mockState: ScanState = {
-								sessionId: 'mock_session',
-								chainId: 1,
-								addresses: [],
-								tokens: [],
-								taskStatus: new Map(),
+								sessionId: `mock_session_${Date.now()}`,
+								chainId: connectStore.currentChainId,
+								addresses,
+								tokens,
+								taskStatus,
 								balances: new Map(),
-								stats: { total: 0, success: 0, failed: 0, pending: 0, progress: 0 },
+								stats: {
+									total: totalTasks,
+									success: completedTasks,
+									failed: 0,
+									pending: totalTasks - completedTasks,
+									progress: Math.round((completedTasks / totalTasks) * 100) || 0
+								},
 								config: {
 									batchSize: 100,
 									maxRetries: 3,
@@ -325,7 +380,7 @@
 									rateLimitDelay: 5000,
 									maxConsecutiveErrors: 5
 								},
-								startedAt: Date.now(),
+								startedAt: Date.now() - 30000, // Started 30 seconds ago
 								lastActivityAt: Date.now(),
 								isPaused: true,
 								pauseReason: 'rate_limit'
@@ -420,6 +475,11 @@
 	.scan-error-inline {
 		width: 100%;
 		margin-top: var(--space-2);
+	}
+
+	/* RPC hint container */
+	.rpc-hint {
+		margin-bottom: var(--space-3);
 	}
 
 	/* Developer Tools Styles */
