@@ -228,7 +228,7 @@ export class ParallelRPCExecutor {
 			// Emit batch started event
 			this.emitEvent(
 				'batch_started',
-				`[${tokenSymbol}] Batch ${batchNum}/${totalBatches}: ${batchAddresses.length} addresses via ${rpcName}`,
+				`[${tokenSymbol}] Batch ${batchNum}/${totalBatches}: ${batchAddresses.length} addresses`,
 				{
 					tokenId: token.id,
 					batchNum,
@@ -256,7 +256,7 @@ export class ParallelRPCExecutor {
 				// Emit batch completed event
 				this.emitEvent(
 					'batch_completed',
-					`[${tokenSymbol}] Batch ${batchNum}/${totalBatches}: ✓ ${batchAddresses.length} addresses via ${rpcName} (${responseTime}ms)`,
+					`[${tokenSymbol}] Batch ${batchNum}/${totalBatches}: ✓ ${batchAddresses.length} addresses (${responseTime}ms)`,
 					{
 						tokenId: token.id,
 						batchNum,
@@ -295,7 +295,7 @@ export class ParallelRPCExecutor {
 				// Emit batch failed event
 				this.emitEvent(
 					isRateLimited ? 'rate_limited' : 'batch_failed',
-					`[${tokenSymbol}] Batch ${batchNum}/${totalBatches}: failed via ${rpcName} - ${errorMessage}`,
+					`[${tokenSymbol}] Batch ${batchNum}/${totalBatches}: ✗ ${errorMessage}`,
 					{
 						tokenId: token.id,
 						batchNum,
