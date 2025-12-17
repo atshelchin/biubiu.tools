@@ -160,7 +160,7 @@ export const DEFAULT_AUTO_RECOVERY_CONFIG: AutoRecoveryConfig = {
 };
 
 export const DEFAULT_SCAN_CONFIG: ScanConfig = {
-	batchSize: 1000,
+	batchSize: 500,
 	maxRetries: 3,
 	retryDelay: 1000,
 	rateLimitDelay: 5000,
