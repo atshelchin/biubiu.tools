@@ -46,10 +46,22 @@
 		if (currentNetwork && connectStore.currentChainId) {
 			// Only auto-select if this is a new network (not already initialized)
 			if (initializedChainId !== connectStore.currentChainId) {
-				const nativeTokenId = `${connectStore.currentChainId}:native`;
-				step3State.selectedTokenIds.add(nativeTokenId);
-				step3State.selectedTokenIds = new SvelteSet(step3State.selectedTokenIds);
-				initializedChainId = connectStore.currentChainId;
+				const newChainId = connectStore.currentChainId;
+				const chainPrefix = `${newChainId}:`;
+
+				// Clear tokens from other chains, keep only tokens for current chain
+				const filteredTokens = Array.from(step3State.selectedTokenIds).filter((tokenId) =>
+					tokenId.startsWith(chainPrefix)
+				);
+
+				// Add native token for new chain
+				const nativeTokenId = `${newChainId}:native`;
+				if (!filteredTokens.includes(nativeTokenId)) {
+					filteredTokens.push(nativeTokenId);
+				}
+
+				step3State.selectedTokenIds = new SvelteSet(filteredTokens);
+				initializedChainId = newChainId;
 			}
 		}
 	});

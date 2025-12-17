@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { fade, slide } from 'svelte/transition';
 	import type { ScanEvent, ScanEventType } from '$lib/services/balance-scanner/types';
-	import { ChevronDown, ChevronUp, Terminal, Trash2 } from '@lucide/svelte';
+	import { ChevronDown, ChevronUp, Terminal, Trash2, Copy, Check } from '@lucide/svelte';
 
 	interface Props {
 		/** Array of scan events to display */
@@ -14,12 +14,23 @@
 		collapsed?: boolean;
 		/** Callback to clear logs */
 		onClear?: () => void;
+		/** Scan rate in addresses per second (optional) */
+		scanRate?: number;
 	}
 
-	let { events, maxEvents = 100, title = 'Scan Log', collapsed = false, onClear }: Props = $props();
+	let {
+		events,
+		maxEvents = 1000,
+		title = 'Scan Log',
+		collapsed = false,
+		onClear,
+		scanRate = 0
+	}: Props = $props();
 
 	let isCollapsed = $state(collapsed);
 	let logContainer: HTMLDivElement | undefined = $state();
+	let isHovered = $state(false);
+	let isCopied = $state(false);
 
 	// Get icon and color for each event type
 	function getEventStyle(type: ScanEventType): { icon: string; color: string; bgColor: string } {
@@ -83,9 +94,9 @@
 	// Get visible events (limited and reversed for newest first)
 	let visibleEvents = $derived(events.slice(-maxEvents).reverse());
 
-	// Auto-scroll to bottom when new events arrive
+	// Auto-scroll to top when new events arrive (only if not hovered)
 	$effect(() => {
-		if (logContainer && events.length > 0 && !isCollapsed) {
+		if (logContainer && events.length > 0 && !isCollapsed && !isHovered) {
 			// Scroll to top since we're showing newest first
 			logContainer.scrollTop = 0;
 		}
@@ -98,6 +109,48 @@
 	function handleClear() {
 		onClear?.();
 	}
+
+	// Format event for text export
+	function formatEventForExport(event: ScanEvent): string {
+		const time = formatTime(event.timestamp);
+		let line = `[${time}] ${event.message}`;
+
+		if (event.details) {
+			const details = event.details;
+			const parts: string[] = [];
+
+			if (details.rpcUrl) parts.push(`RPC: ${details.rpcUrl}`);
+			if (details.addressRange) parts.push(`Addresses: ${details.addressRange}`);
+			if (details.error) parts.push(`Error: ${details.error}`);
+
+			if (parts.length > 0) {
+				line += ` | ${parts.join(' | ')}`;
+			}
+		}
+
+		return line;
+	}
+
+	// Copy all logs to clipboard
+	async function handleCopyLogs() {
+		const logText = events.map(formatEventForExport).join('\n');
+
+		try {
+			await navigator.clipboard.writeText(logText);
+			isCopied = true;
+			setTimeout(() => {
+				isCopied = false;
+			}, 2000);
+		} catch (err) {
+			console.error('Failed to copy logs:', err);
+		}
+	}
+
+	// Get RPC name from event details
+	function getRpcName(event: ScanEvent): string | undefined {
+		if (!event.details) return undefined;
+		return (event.details.rpcName as string) || undefined;
+	}
 </script>
 
 <div class="scan-log-panel">
@@ -108,11 +161,31 @@
 			{#if events.length > 0}
 				<span class="event-count">({events.length})</span>
 			{/if}
+			{#if scanRate > 0}
+				<span class="scan-rate">{scanRate} addr/s</span>
+			{/if}
 		</div>
 		<div class="header-right">
+			{#if events.length > 0}
+				<button
+					class="action-btn copy-btn"
+					onclick={(e) => {
+						e.stopPropagation();
+						handleCopyLogs();
+					}}
+					title={isCopied ? 'Copied!' : 'Copy logs'}
+					type="button"
+				>
+					{#if isCopied}
+						<Check size={14} />
+					{:else}
+						<Copy size={14} />
+					{/if}
+				</button>
+			{/if}
 			{#if events.length > 0 && onClear}
 				<button
-					class="clear-btn"
+					class="action-btn clear-btn"
 					onclick={(e) => {
 						e.stopPropagation();
 						handleClear();
@@ -132,7 +205,13 @@
 	</button>
 
 	{#if !isCollapsed}
-		<div class="log-container" bind:this={logContainer} transition:slide={{ duration: 200 }}>
+		<div
+			class="log-container"
+			bind:this={logContainer}
+			transition:slide={{ duration: 200 }}
+			onmouseenter={() => (isHovered = true)}
+			onmouseleave={() => (isHovered = false)}
+		>
 			{#if visibleEvents.length === 0}
 				<div class="empty-state">
 					<span>No events yet</span>
@@ -140,14 +219,23 @@
 			{:else}
 				{#each visibleEvents as event (event.timestamp + event.type + event.message)}
 					{@const style = getEventStyle(event.type)}
+					{@const rpcName = getRpcName(event)}
 					<div
 						class="log-entry"
 						style="--entry-color: {style.color}; --entry-bg: {style.bgColor}"
 						transition:fade={{ duration: 150 }}
 					>
-						<span class="log-time">{formatTime(event.timestamp)}</span>
-						<span class="log-icon">{style.icon}</span>
-						<span class="log-message">{event.message}</span>
+						<div class="log-main-row">
+							<span class="log-time">{formatTime(event.timestamp)}</span>
+							<span class="log-icon">{style.icon}</span>
+							<span class="log-message">{event.message}</span>
+						</div>
+						{#if rpcName}
+							<div class="log-details-row">
+								<span class="log-icon">🌐</span>
+								<span class="rpc-badge" title={event.details?.rpcUrl as string}>{rpcName}</span>
+							</div>
+						{/if}
 					</div>
 				{/each}
 			{/if}
@@ -199,6 +287,15 @@
 		color: var(--color-muted-foreground);
 	}
 
+	.scan-rate {
+		font-size: var(--text-xs);
+		color: var(--color-success);
+		font-weight: var(--font-medium);
+		padding: 0 var(--space-1-5);
+		background: var(--color-success-muted);
+		border-radius: var(--radius-sm);
+	}
+
 	.header-right {
 		display: flex;
 		align-items: center;
@@ -206,7 +303,7 @@
 		color: var(--color-muted-foreground);
 	}
 
-	.clear-btn {
+	.action-btn {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -219,8 +316,15 @@
 		transition: all 0.2s ease;
 	}
 
-	.clear-btn:hover {
+	.action-btn:hover {
 		background: var(--color-background);
+	}
+
+	.copy-btn:hover {
+		color: var(--color-primary);
+	}
+
+	.clear-btn:hover {
 		color: var(--color-error);
 	}
 
@@ -241,8 +345,8 @@
 
 	.log-entry {
 		display: flex;
-		align-items: flex-start;
-		gap: var(--space-2);
+		flex-direction: column;
+		gap: var(--space-1);
 		padding: var(--space-1-5) var(--space-3);
 		border-bottom: 1px solid var(--color-border);
 		background: var(--entry-bg, transparent);
@@ -252,10 +356,18 @@
 		border-bottom: none;
 	}
 
+	.log-main-row {
+		display: flex;
+		align-items: flex-start;
+		gap: var(--space-2);
+		min-width: 0;
+	}
+
 	.log-time {
 		flex-shrink: 0;
 		color: var(--color-muted-foreground);
 		opacity: 0.7;
+		white-space: nowrap;
 	}
 
 	.log-icon {
@@ -266,8 +378,33 @@
 
 	.log-message {
 		flex: 1;
+		min-width: 0;
 		color: var(--entry-color, var(--color-foreground));
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.log-entry:hover .log-message {
+		white-space: normal;
 		word-break: break-word;
+		overflow: visible;
+	}
+
+	.log-details-row {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		padding-left: calc(8ch + var(--space-2));
+	}
+
+	.rpc-badge {
+		font-size: 0.65rem;
+		padding: 0 var(--space-1-5);
+		background: var(--color-muted);
+		color: var(--color-muted-foreground);
+		border-radius: var(--radius-sm);
+		cursor: help;
 	}
 
 	/* Scrollbar styling */
