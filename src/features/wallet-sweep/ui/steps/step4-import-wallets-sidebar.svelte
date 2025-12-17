@@ -4,7 +4,6 @@
 	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
 	import StepSummary from '@/features/wallet-sweep/ui/components/step-summary.svelte';
 	import EmptyHint from '$lib/components/ui/empty-hint.svelte';
-	import PerformanceTipCard from '@/features/wallet-sweep/ui/components/performance-tip-card.svelte';
 	import TokenStatsPanel from '@/features/wallet-sweep/ui/components/token-stats-panel.svelte';
 	import ScanLogPanel from '@/features/wallet-sweep/ui/components/scan-log-panel.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
@@ -25,30 +24,27 @@
 
 	// Derived state
 	let importedWallets = $derived(step4State.importedWallets);
+
+	// Get network name for Excel export
+	let networkName = $derived.by(() => {
+		const chainId = connectStore.currentChainId;
+		if (!chainId) return 'Network';
+		const network = connectStore.networks.find((n) => n.chainId === chainId);
+		return network?.name || 'Network';
+	});
 	let walletCount = $derived(importedWallets.length);
 	let isScanning = $derived(step4State.isScanning);
 	let scanProgress = $derived(step4State.scanProgress);
 	let hasScanned = $derived(step4State.hasScanned);
 	let scanCompleted = $derived(step4State.scanCompleted);
 	let scanEvents = $derived(step4State.scanEvents);
+	let scanRate = $derived(step4State.getScanRate());
 
 	// Calculate token stats using composable
 	let tokenStats = $derived.by(() => tokenStatsHelper.calculateStats());
 </script>
 
 <StepSidebar stepNumber={4} title="" description="">
-	<!-- Performance Tip Card -->
-	{#if walletCount > 10000}
-		<PerformanceTipCard
-			title={i18n.t('tools.wallet_sweep.step4.sidebar.performance_tip.title')}
-			message={i18n.t('tools.wallet_sweep.step4.sidebar.performance_tip.message')}
-			recommendedLabel={i18n.t('tools.wallet_sweep.step4.sidebar.performance_tip.recommended')}
-			recommendedValue={i18n.t(
-				'tools.wallet_sweep.step4.sidebar.performance_tip.recommended_range'
-			)}
-		/>
-	{/if}
-
 	{#if walletCount > 0}
 		<div transition:fade>
 			<StepSummary title={i18n.t('tools.wallet_sweep.step4.sidebar.title')}>
@@ -82,25 +78,29 @@
 						i18n.t('tools.wallet_sweep.step4.sidebar.token_stats.wallets_count', { count })}
 					copyAddressTitle={i18n.t('common.copy_address')}
 					copiedTitle={i18n.t('common.copied')}
+					wallets={importedWallets}
+					{networkName}
+					downloadTitle={i18n.t('tools.wallet_sweep.step4.sidebar.token_stats.download_title')}
 				/>
 			{:else if hasScanned}
 				<div class="no-balance-hint" transition:fade>
 					{i18n.t('tools.wallet_sweep.step4.sidebar.no_balance_found')}
 				</div>
 			{/if}
-
-			<!-- Scan Log Panel - show when scanning or has events -->
-			{#if isScanning || scanEvents.length > 0}
-				<ScanLogPanel
-					events={scanEvents}
-					title={i18n.t('tools.wallet_sweep.step4.sidebar.scan_log.title')}
-					collapsed={!isScanning}
-					onClear={() => step4State.clearScanEvents()}
-				/>
-			{/if}
 		</div>
 	{:else}
 		<EmptyHint message={i18n.t('tools.wallet_sweep.step4.sidebar.empty_hint')} />
+	{/if}
+
+	<!-- Scan Log Panel - show when scanning or has events -->
+	{#if isScanning || scanEvents.length > 0}
+		<ScanLogPanel
+			events={scanEvents}
+			title={i18n.t('tools.wallet_sweep.step4.sidebar.scan_log.title')}
+			collapsed={!isScanning}
+			onClear={() => step4State.clearScanEvents()}
+			{scanRate}
+		/>
 	{/if}
 </StepSidebar>
 

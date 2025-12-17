@@ -260,7 +260,7 @@
 		cursor: pointer;
 		opacity: 0.6;
 		transition: all 0.2s;
-		z-index: 10;
+		z-index: 2;
 	}
 
 	.btn-upload-float:hover {

@@ -165,46 +165,55 @@
 		}
 	}
 
-	// 4. Subtle "ding" when dice settles - gentle completion indicator
+	// 4. Soft thump when dice lands - cushioned impact sound
 	function playLandingSound() {
 		try {
 			const ctx = getAudioContext();
 			const now = ctx.currentTime;
 
-			// Soft chime/ding to indicate dice has settled
+			// Low frequency thump - soft cushioned landing
 			const osc = ctx.createOscillator();
 			const gain = ctx.createGain();
 
-			osc.connect(gain);
+			// Low-pass filter for muffled effect
+			const filter = ctx.createBiquadFilter();
+			filter.type = 'lowpass';
+			filter.frequency.value = 200;
+			filter.Q.value = 1;
+
+			osc.connect(filter);
+			filter.connect(gain);
 			gain.connect(ctx.destination);
 
-			// Pleasant high frequency chime
-			osc.frequency.value = 880; // A5 note
+			// Low frequency for soft thump
+			osc.frequency.setValueAtTime(120, now);
+			osc.frequency.exponentialRampToValueAtTime(60, now + 0.15);
 			osc.type = 'sine';
 
+			// Quick attack, smooth decay
 			gain.gain.setValueAtTime(0, now);
-			gain.gain.linearRampToValueAtTime(0.1, now + 0.01);
-			gain.gain.exponentialRampToValueAtTime(0.001, now + 0.3);
+			gain.gain.linearRampToValueAtTime(0.25, now + 0.02);
+			gain.gain.exponentialRampToValueAtTime(0.001, now + 0.2);
 
 			osc.start(now);
-			osc.stop(now + 0.35);
+			osc.stop(now + 0.25);
 
-			// Add a subtle harmonic
-			const osc2 = ctx.createOscillator();
-			const gain2 = ctx.createGain();
+			// Add subtle high-frequency "tap" for texture
+			const tap = ctx.createOscillator();
+			const tapGain = ctx.createGain();
 
-			osc2.connect(gain2);
-			gain2.connect(ctx.destination);
+			tap.connect(tapGain);
+			tapGain.connect(ctx.destination);
 
-			osc2.frequency.value = 1320; // E6 - perfect fifth above
-			osc2.type = 'sine';
+			tap.frequency.value = 400;
+			tap.type = 'triangle';
 
-			gain2.gain.setValueAtTime(0, now + 0.02);
-			gain2.gain.linearRampToValueAtTime(0.05, now + 0.03);
-			gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.25);
+			tapGain.gain.setValueAtTime(0, now);
+			tapGain.gain.linearRampToValueAtTime(0.06, now + 0.005);
+			tapGain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
 
-			osc2.start(now + 0.02);
-			osc2.stop(now + 0.3);
+			tap.start(now);
+			tap.stop(now + 0.06);
 		} catch {
 			// Audio not supported
 		}

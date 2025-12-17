@@ -17,6 +17,8 @@ import {
 	type Address
 } from 'viem';
 import { RPCManager } from './rpc-manager';
+import { getRPCQualityTracker, type RPCQualityTracker } from './rpc-quality';
+import { ParallelRPCExecutor } from './parallel-executor';
 import {
 	type ScanState,
 	type ScanStats,
@@ -27,7 +29,9 @@ import {
 	type AddressBalance,
 	type TokenBalance,
 	type AutoRecoveryConfig,
+	type ParallelScanConfig,
 	DEFAULT_AUTO_RECOVERY_CONFIG,
+	DEFAULT_PARALLEL_SCAN_CONFIG,
 	createInitialState,
 	getTaskKey,
 	calculateProgress
@@ -137,6 +141,8 @@ function sleep(ms: number): Promise<void> {
 export class BalanceScanner {
 	private state: ScanState;
 	private rpcManager: RPCManager;
+	private qualityTracker: RPCQualityTracker;
+	private parallelExecutor: ParallelRPCExecutor | null = null;
 	private callbacks: ScanCallbacks;
 	private networkName: string;
 	private networkSymbol: string;
@@ -144,11 +150,13 @@ export class BalanceScanner {
 	private shouldStop: boolean = false;
 	private consecutiveErrors: number = 0;
 	private autoRecoveryConfig: AutoRecoveryConfig;
+	private parallelConfig: ParallelScanConfig;
 	private recoveryAttempts: number = 0;
 	private currentRecoveryDelay: number = 0;
 
 	constructor(options: ScannerOptions) {
 		this.rpcManager = new RPCManager(options.rpcEndpoints);
+		this.qualityTracker = getRPCQualityTracker();
 		this.callbacks = options.callbacks || {};
 		this.networkName = options.networkName;
 		this.networkSymbol = options.networkSymbol;
@@ -159,6 +167,24 @@ export class BalanceScanner {
 			...options.config?.autoRecovery
 		};
 		this.currentRecoveryDelay = this.autoRecoveryConfig.initialDelay;
+
+		// Initialize parallel config
+		this.parallelConfig = {
+			...DEFAULT_PARALLEL_SCAN_CONFIG,
+			...options.config?.parallel
+		};
+
+		// Create parallel executor if multiple RPCs available
+		if (options.rpcEndpoints.length > 1 && this.parallelConfig.enabled) {
+			this.parallelExecutor = new ParallelRPCExecutor({
+				rpcEndpoints: options.rpcEndpoints,
+				chainId: options.chainId,
+				networkName: options.networkName,
+				networkSymbol: options.networkSymbol,
+				config: this.parallelConfig,
+				onEvent: (event) => this.callbacks.onEvent?.(event)
+			});
+		}
 
 		// Initialize or restore state
 		if (options.initialState) {
@@ -286,22 +312,46 @@ export class BalanceScanner {
 	private async scanTokenForAddresses(token: TokenConfig, addresses: Address[]): Promise<void> {
 		const { batchSize, rateLimitDelay, retryDelay, maxConsecutiveErrors } = this.state.config;
 
-		// Process in batches
+		// Check if we should use parallel mode
+		const useParallel =
+			this.parallelExecutor &&
+			this.parallelExecutor.shouldUseParallel(addresses.length) &&
+			this.parallelExecutor.getAvailableCount() > 1;
+
+		if (useParallel) {
+			await this.scanTokenParallel(token, addresses);
+			return;
+		}
+
+		// Process in batches (sequential mode)
 		for (let i = 0; i < addresses.length; i += batchSize) {
 			if (this.shouldStop) break;
 
 			const batch = addresses.slice(i, i + batchSize);
 			const batchNum = Math.floor(i / batchSize) + 1;
 			const totalBatches = Math.ceil(addresses.length / batchSize);
+			const currentRpcUrl = this.rpcManager.getCurrentRPC();
+			const rpcName = this.rpcManager.getCurrentRPCName();
+			const addressRange = `${i + 1}-${Math.min(i + batchSize, addresses.length)} of ${addresses.length}`;
 
 			this.emitEvent(
 				'batch_started',
 				`[${token.symbol || token.id}] Batch ${batchNum}/${totalBatches} (${batch.length} addresses)`,
-				{ tokenId: token.id, batch: batchNum, total: totalBatches }
+				{
+					tokenId: token.id,
+					batch: batchNum,
+					total: totalBatches,
+					rpcUrl: currentRpcUrl,
+					rpcName,
+					addressRange
+				}
 			);
 
 			try {
+				// Track response time for quality metrics
+				const startTime = Date.now();
 				const results = await this.executeBatch(token, batch);
+				const responseTime = Date.now() - startTime;
 
 				// Process results
 				let successCount = 0;
@@ -328,13 +378,23 @@ export class BalanceScanner {
 
 				this.consecutiveErrors = 0;
 				this.rpcManager.markSuccess();
+				// Record success with response time for RPC quality tracking
+				this.qualityTracker.recordSuccess(currentRpcUrl, this.state.chainId, responseTime);
 				this.updateStats();
 				this.resetRecoveryState(); // Reset recovery counter after successful batch
 
 				this.emitEvent(
 					'batch_completed',
 					`[${token.symbol || token.id}] Batch ${batchNum}/${totalBatches}: ${successCount} success, ${failCount} failed`,
-					{ successCount, failCount }
+					{
+						successCount,
+						failCount,
+						rpcUrl: currentRpcUrl,
+						rpcName,
+						batch: batchNum,
+						total: totalBatches,
+						addressRange
+					}
 				);
 
 				// Report progress
@@ -342,13 +402,23 @@ export class BalanceScanner {
 				this.callbacks.onStateChange?.(this.state);
 			} catch (error) {
 				this.consecutiveErrors++;
+				const errorMessage = error instanceof Error ? error.message : String(error);
 
 				if (isRateLimitError(error)) {
 					this.emitEvent('rate_limited', `Rate limited on batch ${batchNum}. Switching RPC...`, {
-						error: error instanceof Error ? error.message : String(error)
+						error: errorMessage,
+						rpcUrl: currentRpcUrl,
+						rpcName,
+						batch: batchNum,
+						total: totalBatches,
+						addressRange,
+						tokenId: token.id,
+						tokenSymbol: token.symbol
 					});
 
 					const hasHealthyRPC = this.rpcManager.markRateLimited();
+					// Record rate limit for RPC quality tracking
+					this.qualityTracker.recordRateLimit(currentRpcUrl, this.state.chainId);
 
 					if (!hasHealthyRPC) {
 						// All RPCs exhausted - attempt auto-recovery if enabled
@@ -377,13 +447,21 @@ export class BalanceScanner {
 					await sleep(rateLimitDelay);
 				} else {
 					// Non-rate-limit error
-					this.emitEvent(
-						'batch_failed',
-						`Batch ${batchNum} failed: ${error instanceof Error ? error.message : String(error)}`,
-						{ error: error instanceof Error ? error.message : String(error) }
-					);
+					this.emitEvent('batch_failed', `Batch ${batchNum} failed: ${errorMessage}`, {
+						error: errorMessage,
+						rpcUrl: currentRpcUrl,
+						rpcName,
+						batch: batchNum,
+						total: totalBatches,
+						addressRange,
+						tokenId: token.id,
+						tokenSymbol: token.symbol,
+						consecutiveErrors: this.consecutiveErrors
+					});
 
 					this.rpcManager.markFailed();
+					// Record failure for RPC quality tracking
+					this.qualityTracker.recordFailure(currentRpcUrl, this.state.chainId);
 
 					// Mark batch as failed for retry
 					for (const address of batch) {
@@ -411,6 +489,108 @@ export class BalanceScanner {
 				}
 			}
 		}
+	}
+
+	/**
+	 * Scan a token using parallel RPC execution
+	 */
+	private async scanTokenParallel(token: TokenConfig, addresses: Address[]): Promise<void> {
+		if (!this.parallelExecutor) return;
+
+		const availableRPCs = this.parallelExecutor.getAvailableCount();
+
+		this.emitEvent(
+			'batch_started',
+			`[${token.symbol || token.id}] Parallel scan: ${addresses.length} addresses across ${availableRPCs} RPCs`,
+			{
+				tokenId: token.id,
+				addressCount: addresses.length,
+				parallelRPCs: availableRPCs,
+				mode: 'parallel'
+			}
+		);
+
+		// Execute parallel scan
+		const { results, rpcResults } = await this.parallelExecutor.executeParallel(token, addresses);
+
+		// Process results
+		let successCount = 0;
+		let failCount = 0;
+
+		for (const [address, result] of results) {
+			const key = getTaskKey(address, token.id);
+
+			if (result.success) {
+				this.state.taskStatus.set(key, 'success');
+				this.state.balances.set(key, result.balance);
+				successCount++;
+			} else {
+				const currentStatus = this.state.taskStatus.get(key);
+				if (currentStatus !== 'success') {
+					this.state.taskStatus.set(key, 'failed');
+					failCount++;
+				}
+			}
+		}
+
+		// Log RPC-specific results
+		const successfulRPCs = rpcResults.filter((r) => r.success);
+		const failedRPCs = rpcResults.filter((r) => !r.success);
+
+		if (failedRPCs.length > 0) {
+			for (const failed of failedRPCs) {
+				this.emitEvent(
+					failed.isRateLimited ? 'rate_limited' : 'batch_failed',
+					`[${token.symbol || token.id}] RPC ${failed.rpcName} failed: ${failed.error}`,
+					{
+						rpcUrl: failed.rpcUrl,
+						rpcName: failed.rpcName,
+						isRateLimited: failed.isRateLimited,
+						error: failed.error
+					}
+				);
+			}
+		}
+
+		// Check if all RPCs exhausted
+		if (this.parallelExecutor.isAllExhausted()) {
+			const recovered = await this.attemptAutoRecovery();
+			if (!recovered) {
+				this.state.isPaused = true;
+				this.state.pauseReason = 'rate_limit';
+				this.shouldStop = true;
+				return;
+			}
+			// Reset parallel executor after recovery
+			this.parallelExecutor.resetAllRPCs();
+		}
+
+		this.updateStats();
+		this.resetRecoveryState();
+
+		const avgResponseTime =
+			successfulRPCs.length > 0
+				? Math.round(
+						successfulRPCs.reduce((sum, r) => sum + r.responseTime, 0) / successfulRPCs.length
+					)
+				: 0;
+
+		this.emitEvent(
+			'batch_completed',
+			`[${token.symbol || token.id}] Parallel scan complete: ${successCount} success, ${failCount} failed (${successfulRPCs.length}/${rpcResults.length} RPCs, avg ${avgResponseTime}ms)`,
+			{
+				successCount,
+				failCount,
+				successfulRPCs: successfulRPCs.length,
+				totalRPCs: rpcResults.length,
+				avgResponseTime,
+				mode: 'parallel'
+			}
+		);
+
+		// Report progress
+		this.callbacks.onProgress?.(this.state.stats, this.state);
+		this.callbacks.onStateChange?.(this.state);
 	}
 
 	/**

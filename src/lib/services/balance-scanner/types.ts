@@ -132,6 +132,8 @@ export interface ScanConfig {
 	maxConsecutiveErrors: number;
 	/** Auto-recovery configuration */
 	autoRecovery?: AutoRecoveryConfig;
+	/** Parallel scanning configuration */
+	parallel?: ParallelScanConfig;
 }
 
 /**
@@ -151,6 +153,19 @@ export interface AutoRecoveryConfig {
 	maxAttempts: number;
 }
 
+/**
+ * Configuration for parallel RPC scanning
+ * Enables using multiple RPCs simultaneously for faster scanning
+ */
+export interface ParallelScanConfig {
+	/** Enable parallel scanning (default: true when multiple RPCs available) */
+	enabled: boolean;
+	/** Maximum number of RPCs to use in parallel (default: 3) */
+	maxParallelRPCs: number;
+	/** Minimum batch size per RPC to make parallel worthwhile (default: 50) */
+	minBatchSize: number;
+}
+
 export const DEFAULT_AUTO_RECOVERY_CONFIG: AutoRecoveryConfig = {
 	enabled: true,
 	initialDelay: 10000, // 10 seconds
@@ -159,13 +174,20 @@ export const DEFAULT_AUTO_RECOVERY_CONFIG: AutoRecoveryConfig = {
 	maxAttempts: 10
 };
 
+export const DEFAULT_PARALLEL_SCAN_CONFIG: ParallelScanConfig = {
+	enabled: true,
+	maxParallelRPCs: 3,
+	minBatchSize: 50
+};
+
 export const DEFAULT_SCAN_CONFIG: ScanConfig = {
 	batchSize: 500,
 	maxRetries: 3,
 	retryDelay: 1000,
 	rateLimitDelay: 5000,
 	maxConsecutiveErrors: 5,
-	autoRecovery: DEFAULT_AUTO_RECOVERY_CONFIG
+	autoRecovery: DEFAULT_AUTO_RECOVERY_CONFIG,
+	parallel: DEFAULT_PARALLEL_SCAN_CONFIG
 };
 
 // ============================================================================

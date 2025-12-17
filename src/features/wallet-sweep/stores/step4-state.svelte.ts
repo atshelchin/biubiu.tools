@@ -25,8 +25,14 @@ let isRateLimited = $state(false);
 let rateLimitMessage = $state<string>('');
 let canResumeScan = $state(false);
 
-// Scan log events
+// Scan log events - limited to prevent memory issues
 let scanEvents = $state<ScanEvent[]>([]);
+const MAX_SCAN_EVENTS = 1000; // Keep only the latest 1000 events to prevent memory issues
+const MAX_MESSAGE_LENGTH = 300; // Truncate long messages to prevent memory issues
+
+// Scan rate tracking
+let scanStartTime = $state<number | null>(null);
+let totalScannedAddresses = $state(0);
 
 export const step4State = {
 	get importedWallets() {
@@ -198,13 +204,67 @@ export const step4State = {
 		scanEvents = value;
 	},
 
-	// Add a scan event
+	// Add a scan event (limited to MAX_SCAN_EVENTS to prevent memory issues)
 	addScanEvent(event: ScanEvent) {
-		scanEvents = [...scanEvents, event];
+		// Truncate long messages to prevent memory issues
+		const truncatedEvent =
+			event.message.length > MAX_MESSAGE_LENGTH
+				? { ...event, message: event.message.slice(0, MAX_MESSAGE_LENGTH) + '...' }
+				: event;
+
+		scanEvents = [...scanEvents, truncatedEvent];
+		// Trim old events if exceeding limit
+		if (scanEvents.length > MAX_SCAN_EVENTS) {
+			scanEvents = scanEvents.slice(-MAX_SCAN_EVENTS);
+		}
 	},
 
 	// Clear scan events
 	clearScanEvents() {
 		scanEvents = [];
+	},
+
+	// Scan rate tracking
+	get scanStartTime() {
+		return scanStartTime;
+	},
+	set scanStartTime(value: number | null) {
+		scanStartTime = value;
+	},
+
+	get totalScannedAddresses() {
+		return totalScannedAddresses;
+	},
+	set totalScannedAddresses(value: number) {
+		totalScannedAddresses = value;
+	},
+
+	// Start scan rate tracking
+	startScanTracking() {
+		scanStartTime = Date.now();
+		totalScannedAddresses = 0;
+	},
+
+	// Update scanned address count
+	addScannedAddresses(count: number) {
+		totalScannedAddresses += count;
+	},
+
+	// Get scan rate (addresses per second)
+	getScanRate(): number {
+		if (!scanStartTime || totalScannedAddresses === 0) {
+			return 0;
+		}
+		const elapsedSeconds = (Date.now() - scanStartTime) / 1000;
+		if (elapsedSeconds < 1) {
+			return 0;
+		}
+		return Math.round(totalScannedAddresses / elapsedSeconds);
+	},
+
+	// Reset scan tracking
+	resetScanTracking() {
+		scanStartTime = null;
+		totalScannedAddresses = 0;
 	}
 };

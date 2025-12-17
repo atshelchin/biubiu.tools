@@ -109,19 +109,7 @@ export const toolsConfig: Tool[] = [
 		],
 		stage: 'alpha'
 	},
-	{
-		icon: MessageCircle,
-		titleKey: 'tools.feedback_card.title',
-		descriptionKey: 'tools.feedback_card.description',
-		link: TELEGRAM_GROUP_LINK,
-		status: 'active',
-		color: '#06B6D4',
-		featureKeys: [
-			'tools.feedback_card.feature_1',
-			'tools.feedback_card.feature_2',
-			'tools.feedback_card.feature_3'
-		]
-	},
+
 	{
 		icon: Search,
 		titleKey: 'tools.contract_events_scanner.title',
@@ -148,6 +136,19 @@ export const toolsConfig: Tool[] = [
 			'tools.call_master.feature_3'
 		],
 		stage: 'coming-soon'
+	},
+	{
+		icon: MessageCircle,
+		titleKey: 'tools.feedback_card.title',
+		descriptionKey: 'tools.feedback_card.description',
+		link: TELEGRAM_GROUP_LINK,
+		status: 'active',
+		color: '#06B6D4',
+		featureKeys: [
+			'tools.feedback_card.feature_1',
+			'tools.feedback_card.feature_2',
+			'tools.feedback_card.feature_3'
+		]
 	},
 	{
 		icon: Globe,

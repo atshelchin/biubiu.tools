@@ -4,7 +4,7 @@
  * Tests for IndexedDB storage layer using fake-indexeddb.
  */
 
-import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import 'fake-indexeddb/auto';
 import { BalanceScannerStorage, type ScanSession } from './storage';
 import type { Address } from 'viem';
