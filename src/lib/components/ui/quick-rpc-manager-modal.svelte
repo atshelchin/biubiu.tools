@@ -21,6 +21,9 @@
 	let rpcEndpoints = $state<{ url: string; isPrimary: boolean }[]>([]);
 	let newRpcUrl = $state('');
 
+	// Check if input contains http:// (insecure)
+	let showHttpWarning = $derived(newRpcUrl.trim().toLowerCase().startsWith('http://'));
+
 	// Initialize when opening
 	$effect(() => {
 		if (open && network) {
@@ -106,6 +109,7 @@
 							bind:value={newRpcUrl}
 							placeholder={i18n.t('components.quick_rpc_manager.placeholder')}
 							class="rpc-input"
+							class:has-warning={showHttpWarning}
 							onkeydown={(e) => e.key === 'Enter' && handleAddRpc()}
 						/>
 						<button class="btn-add" onclick={handleAddRpc}>
@@ -113,6 +117,12 @@
 							{i18n.t('components.quick_rpc_manager.add_button')}
 						</button>
 					</div>
+					<div class="input-hint">{i18n.t('components.quick_rpc_manager.url_format_hint')}</div>
+					{#if showHttpWarning}
+						<div class="http-warning">
+							⚠️ {i18n.t('components.quick_rpc_manager.http_warning')}
+						</div>
+					{/if}
 				</div>
 
 				<div class="section">
@@ -317,6 +327,42 @@
 		outline: none;
 		border-color: var(--color-primary);
 		box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+	}
+
+	.rpc-input.has-warning {
+		border-color: #f59e0b;
+	}
+
+	.rpc-input.has-warning:focus {
+		border-color: #f59e0b;
+		box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.1);
+	}
+
+	.input-hint {
+		margin-top: var(--space-1);
+		font-size: var(--text-xs);
+		color: var(--gray-500);
+	}
+
+	:global([data-theme='dark']) .input-hint {
+		color: var(--gray-400);
+	}
+
+	.http-warning {
+		margin-top: var(--space-2);
+		padding: var(--space-2) var(--space-3);
+		background: #fef3c7;
+		border: 1px solid #f59e0b;
+		border-radius: var(--radius-sm);
+		font-size: var(--text-xs);
+		color: #92400e;
+		line-height: 1.5;
+	}
+
+	:global([data-theme='dark']) .http-warning {
+		background: rgba(245, 158, 11, 0.1);
+		border-color: rgba(245, 158, 11, 0.5);
+		color: #fcd34d;
 	}
 
 	.btn-add {

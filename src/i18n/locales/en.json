@@ -544,6 +544,11 @@
 						"clear_all_button": "Clear All",
 						"cancel_button": "Cancel",
 						"long_press_hint": "⚠️ This action is irreversible. Please long press the button for 3 seconds to confirm"
+					},
+					"rpc_hint": {
+						"title": "Add More RPCs for Better Reliability",
+						"message": "You only have 1 RPC endpoint configured. Adding multiple RPCs enables automatic rotation when rate limits occur, improving scan reliability.",
+						"add_rpc_button": "Add RPC"
 					}
 				},
 				"footer": {
@@ -570,7 +575,11 @@
 					"token_stats": {
 						"title": "Token Balance Statistics",
 						"wallets_count": "{count} wallets",
-						"total_balance": "Total Balance"
+						"total_balance": "Total Balance",
+						"download_title": "Download Excel Report"
+					},
+					"scan_log": {
+						"title": "Scan Log"
 					}
 				}
 			}
@@ -1243,7 +1252,9 @@
 			"recommend_prefix": "Find available RPC endpoints at",
 			"recommend_suffix": "",
 			"cancel": "Cancel",
-			"save": "Save and Continue Scan"
+			"save": "Save and Continue Scan",
+			"url_format_hint": "Enter RPC URL starting with http:// or https://",
+			"http_warning": "Using http:// (insecure) may be blocked by browsers. To allow in Chrome: Click the icon in address bar → Site settings → Insecure content → Allow"
 		},
 		"address_path_selector": {
 			"sequential": {

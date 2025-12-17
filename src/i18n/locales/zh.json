@@ -544,6 +544,11 @@
 						"clear_all_button": "清除全部",
 						"cancel_button": "取消",
 						"long_press_hint": "⚠️ 此操作不可逆，请长按按钮 3 秒确认"
+					},
+					"rpc_hint": {
+						"title": "添加更多 RPC 以提高可靠性",
+						"message": "您只配置了 1 个 RPC 端点。添加多个 RPC 可以在遇到限流时自动切换，提升扫描稳定性。",
+						"add_rpc_button": "添加 RPC"
 					}
 				},
 				"footer": {
@@ -570,7 +575,11 @@
 					"token_stats": {
 						"title": "代币余额统计",
 						"wallets_count": "{count} 个钱包",
-						"total_balance": "总余额"
+						"total_balance": "总余额",
+						"download_title": "下载 Excel 报告"
+					},
+					"scan_log": {
+						"title": "扫描日志"
 					}
 				}
 			}
@@ -1229,7 +1238,9 @@
 			"recommend_prefix": "推荐从",
 			"recommend_suffix": "获取可用的 RPC 端点",
 			"cancel": "取消",
-			"save": "保存并继续扫描"
+			"save": "保存并继续扫描",
+			"url_format_hint": "请输入以 http:// 或 https:// 开头的 RPC 地址",
+			"http_warning": "使用 http:// 协议（非 HTTPS）可能会被浏览器阻止。如需使用，请在 Chrome 浏览器中：点击地址栏左侧的图标 → 网站设置 → 不安全内容 → 设置为「允许」"
 		},
 		"address_path_selector": {
 			"sequential": {
