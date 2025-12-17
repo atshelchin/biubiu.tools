@@ -393,4 +393,165 @@ describe('RPCManager', () => {
 			expect(manager.getCurrentRPC()).toBe('https://rpc1.example.com');
 		});
 	});
+
+	describe('hasHealthyRPC', () => {
+		it('should return true when healthy RPCs available', () => {
+			const manager = new RPCManager([{ url: 'https://rpc1.example.com' }]);
+
+			expect(manager.hasHealthyRPC()).toBe(true);
+		});
+
+		it('should return false when all RPCs are unhealthy', () => {
+			const manager = new RPCManager([{ url: 'https://rpc1.example.com' }]);
+
+			// Make it unhealthy
+			manager.markFailed();
+			manager.markFailed();
+			manager.markFailed();
+
+			expect(manager.hasHealthyRPC()).toBe(false);
+		});
+
+		it('should return false when all RPCs are rate limited', () => {
+			const manager = new RPCManager([
+				{ url: 'https://rpc1.example.com' },
+				{ url: 'https://rpc2.example.com' }
+			]);
+
+			manager.markRateLimited();
+			manager.markRateLimited();
+
+			expect(manager.hasHealthyRPC()).toBe(false);
+		});
+
+		it('should return true when at least one RPC is healthy', () => {
+			const manager = new RPCManager([
+				{ url: 'https://rpc1.example.com' },
+				{ url: 'https://rpc2.example.com' }
+			]);
+
+			manager.markRateLimited(); // Only first one is rate limited
+
+			expect(manager.hasHealthyRPC()).toBe(true);
+		});
+	});
+
+	describe('resetAllRPCs', () => {
+		it('should reset all RPCs to healthy state', () => {
+			const manager = new RPCManager([
+				{ url: 'https://rpc1.example.com' },
+				{ url: 'https://rpc2.example.com' }
+			]);
+
+			// Make both unhealthy
+			manager.markRateLimited();
+			manager.markRateLimited();
+
+			expect(manager.getHealthyCount()).toBe(0);
+
+			manager.resetAllRPCs();
+
+			expect(manager.getHealthyCount()).toBe(2);
+			expect(manager.hasHealthyRPC()).toBe(true);
+		});
+
+		it('should reset fail counts', () => {
+			const manager = new RPCManager([{ url: 'https://rpc1.example.com' }]);
+
+			// Partially fail (but not enough to make unhealthy)
+			manager.markFailed();
+			manager.markFailed();
+
+			// Still healthy but has fail count
+			expect(manager.getHealthyCount()).toBe(1);
+
+			manager.resetAllRPCs();
+
+			// After reset, fail counter should be 0, so 3 failures needed again
+			manager.markFailed();
+			manager.markFailed();
+			expect(manager.getHealthyCount()).toBe(1); // Still healthy
+
+			manager.markFailed();
+			expect(manager.getHealthyCount()).toBe(0); // Now unhealthy
+		});
+
+		it('should reset current index to first RPC', () => {
+			const manager = new RPCManager([
+				{ url: 'https://rpc1.example.com' },
+				{ url: 'https://rpc2.example.com' }
+			]);
+
+			// Rotate to second RPC
+			manager.markRateLimited();
+			expect(manager.getCurrentRPC()).toBe('https://rpc2.example.com');
+
+			manager.resetAllRPCs();
+
+			// Should be back to first RPC
+			expect(manager.getCurrentRPC()).toBe('https://rpc1.example.com');
+		});
+
+		it('should clear rate limit status', () => {
+			const manager = new RPCManager([{ url: 'https://rpc1.example.com' }]);
+
+			manager.markRateLimited();
+			expect(manager.isAllExhausted()).toBe(true);
+
+			manager.resetAllRPCs();
+
+			expect(manager.isAllExhausted()).toBe(false);
+			expect(manager.hasHealthyRPC()).toBe(true);
+		});
+	});
+
+	describe('auto-recovery integration', () => {
+		it('should support recovery workflow: exhaust -> wait -> reset -> continue', () => {
+			const manager = new RPCManager([
+				{ url: 'https://rpc1.example.com' },
+				{ url: 'https://rpc2.example.com' }
+			]);
+
+			// Step 1: Exhaust all RPCs
+			manager.markRateLimited();
+			manager.markRateLimited();
+			expect(manager.isAllExhausted()).toBe(true);
+			expect(manager.hasHealthyRPC()).toBe(false);
+
+			// Step 2: After waiting (simulated), reset all RPCs
+			manager.resetAllRPCs();
+
+			// Step 3: RPCs should be available again
+			expect(manager.isAllExhausted()).toBe(false);
+			expect(manager.hasHealthyRPC()).toBe(true);
+			expect(manager.getHealthyCount()).toBe(2);
+		});
+
+		it('should allow multiple reset cycles', () => {
+			const manager = new RPCManager([{ url: 'https://rpc1.example.com' }]);
+
+			// First cycle
+			manager.markRateLimited();
+			expect(manager.hasHealthyRPC()).toBe(false);
+
+			manager.resetAllRPCs();
+			expect(manager.hasHealthyRPC()).toBe(true);
+
+			// Second cycle
+			manager.markFailed();
+			manager.markFailed();
+			manager.markFailed();
+			expect(manager.hasHealthyRPC()).toBe(false);
+
+			manager.resetAllRPCs();
+			expect(manager.hasHealthyRPC()).toBe(true);
+
+			// Third cycle
+			manager.markRateLimited();
+			expect(manager.hasHealthyRPC()).toBe(false);
+
+			manager.resetAllRPCs();
+			expect(manager.hasHealthyRPC()).toBe(true);
+		});
+	});
 });

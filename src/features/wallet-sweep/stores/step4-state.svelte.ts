@@ -4,7 +4,7 @@
  */
 import { SvelteSet } from 'svelte/reactivity';
 import type { ImportedWallet } from '../types/wallet';
-import type { ScanState } from '../utils/balance-scanner';
+import type { ScanState, ScanEvent } from '$lib/services/balance-scanner/types';
 
 // Module-level state - automatically shared across all imports
 let importedWallets = $state<ImportedWallet[]>([]);
@@ -24,6 +24,9 @@ let scanState = $state<ScanState | null>(null);
 let isRateLimited = $state(false);
 let rateLimitMessage = $state<string>('');
 let canResumeScan = $state(false);
+
+// Scan log events
+let scanEvents = $state<ScanEvent[]>([]);
 
 export const step4State = {
 	get importedWallets() {
@@ -185,5 +188,23 @@ export const step4State = {
 	clearRateLimitError() {
 		isRateLimited = false;
 		rateLimitMessage = '';
+	},
+
+	// Scan events management
+	get scanEvents() {
+		return scanEvents;
+	},
+	set scanEvents(value: ScanEvent[]) {
+		scanEvents = value;
+	},
+
+	// Add a scan event
+	addScanEvent(event: ScanEvent) {
+		scanEvents = [...scanEvents, event];
+	},
+
+	// Clear scan events
+	clearScanEvents() {
+		scanEvents = [];
 	}
 };

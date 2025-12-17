@@ -6,6 +6,7 @@
 	import EmptyHint from '$lib/components/ui/empty-hint.svelte';
 	import PerformanceTipCard from '@/features/wallet-sweep/ui/components/performance-tip-card.svelte';
 	import TokenStatsPanel from '@/features/wallet-sweep/ui/components/token-stats-panel.svelte';
+	import ScanLogPanel from '@/features/wallet-sweep/ui/components/scan-log-panel.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { useTokenStats } from '@/features/wallet-sweep/composables/use-token-stats.svelte';
@@ -29,6 +30,7 @@
 	let scanProgress = $derived(step4State.scanProgress);
 	let hasScanned = $derived(step4State.hasScanned);
 	let scanCompleted = $derived(step4State.scanCompleted);
+	let scanEvents = $derived(step4State.scanEvents);
 
 	// Calculate token stats using composable
 	let tokenStats = $derived.by(() => tokenStatsHelper.calculateStats());
@@ -85,6 +87,16 @@
 				<div class="no-balance-hint" transition:fade>
 					{i18n.t('tools.wallet_sweep.step4.sidebar.no_balance_found')}
 				</div>
+			{/if}
+
+			<!-- Scan Log Panel - show when scanning or has events -->
+			{#if isScanning || scanEvents.length > 0}
+				<ScanLogPanel
+					events={scanEvents}
+					title={i18n.t('tools.wallet_sweep.step4.sidebar.scan_log.title')}
+					collapsed={!isScanning}
+					onClear={() => step4State.clearScanEvents()}
+				/>
 			{/if}
 		</div>
 	{:else}

@@ -238,4 +238,25 @@ export class RPCManager {
 	getTotalCount(): number {
 		return this.endpoints.length;
 	}
+
+	/**
+	 * Check if there's at least one healthy RPC available
+	 */
+	hasHealthyRPC(): boolean {
+		return this.getHealthyCount() > 0;
+	}
+
+	/**
+	 * Reset all RPCs to healthy state (for auto-recovery)
+	 * This gives all RPCs a fresh chance after waiting
+	 */
+	resetAllRPCs(): void {
+		console.log('🔄 Resetting all RPCs to healthy state');
+		for (const status of this.endpoints) {
+			status.isHealthy = true;
+			status.failCount = 0;
+			status.rateLimitedUntil = undefined;
+		}
+		this.currentIndex = 0;
+	}
 }

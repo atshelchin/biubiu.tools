@@ -26,6 +26,8 @@ import {
 	type TokenConfig,
 	type AddressBalance,
 	type TokenBalance,
+	type AutoRecoveryConfig,
+	DEFAULT_AUTO_RECOVERY_CONFIG,
 	createInitialState,
 	getTaskKey,
 	calculateProgress
@@ -141,12 +143,22 @@ export class BalanceScanner {
 	private isRunning: boolean = false;
 	private shouldStop: boolean = false;
 	private consecutiveErrors: number = 0;
+	private autoRecoveryConfig: AutoRecoveryConfig;
+	private recoveryAttempts: number = 0;
+	private currentRecoveryDelay: number = 0;
 
 	constructor(options: ScannerOptions) {
 		this.rpcManager = new RPCManager(options.rpcEndpoints);
 		this.callbacks = options.callbacks || {};
 		this.networkName = options.networkName;
 		this.networkSymbol = options.networkSymbol;
+
+		// Initialize auto-recovery config
+		this.autoRecoveryConfig = {
+			...DEFAULT_AUTO_RECOVERY_CONFIG,
+			...options.config?.autoRecovery
+		};
+		this.currentRecoveryDelay = this.autoRecoveryConfig.initialDelay;
 
 		// Initialize or restore state
 		if (options.initialState) {
@@ -317,6 +329,7 @@ export class BalanceScanner {
 				this.consecutiveErrors = 0;
 				this.rpcManager.markSuccess();
 				this.updateStats();
+				this.resetRecoveryState(); // Reset recovery counter after successful batch
 
 				this.emitEvent(
 					'batch_completed',
@@ -338,12 +351,11 @@ export class BalanceScanner {
 					const hasHealthyRPC = this.rpcManager.markRateLimited();
 
 					if (!hasHealthyRPC) {
-						// All RPCs exhausted, wait and retry
-						this.emitEvent('rate_limited', 'All RPCs rate limited. Waiting for recovery...');
-						const recovered = await this.rpcManager.waitForAvailableRPC();
+						// All RPCs exhausted - attempt auto-recovery if enabled
+						const recovered = await this.attemptAutoRecovery();
 
 						if (!recovered) {
-							// Still no available RPC, pause the scan
+							// Auto-recovery failed or disabled, pause the scan
 							this.state.isPaused = true;
 							this.state.pauseReason = 'rate_limit';
 							this.shouldStop = true;
@@ -608,6 +620,110 @@ export class BalanceScanner {
 		}
 
 		return results;
+	}
+
+	/**
+	 * Attempt auto-recovery when all RPCs are exhausted
+	 * Returns true if recovery succeeded, false if should pause
+	 */
+	private async attemptAutoRecovery(): Promise<boolean> {
+		const { enabled, maxAttempts, maxDelay, backoffMultiplier } = this.autoRecoveryConfig;
+
+		// If auto-recovery is disabled, return false to trigger pause
+		if (!enabled) {
+			this.emitEvent('recovery_failed', 'Auto-recovery disabled. Pausing scan.');
+			return false;
+		}
+
+		// Check if we've exceeded max recovery attempts
+		if (this.recoveryAttempts >= maxAttempts) {
+			this.emitEvent(
+				'recovery_failed',
+				`Max recovery attempts (${maxAttempts}) exceeded. Pausing scan.`,
+				{ attempts: this.recoveryAttempts, maxAttempts }
+			);
+			return false;
+		}
+
+		this.recoveryAttempts++;
+
+		this.emitEvent(
+			'recovery_started',
+			`All RPCs exhausted. Starting auto-recovery (attempt ${this.recoveryAttempts}/${maxAttempts})`,
+			{ attempt: this.recoveryAttempts, maxAttempts }
+		);
+
+		// Calculate wait time with exponential backoff
+		const waitTime = Math.min(this.currentRecoveryDelay, maxDelay);
+		const waitMinutes = Math.floor(waitTime / 60000);
+		const waitSeconds = Math.floor((waitTime % 60000) / 1000);
+		const waitDisplay = waitMinutes > 0 ? `${waitMinutes}m ${waitSeconds}s` : `${waitSeconds}s`;
+
+		this.emitEvent('recovery_waiting', `Waiting ${waitDisplay} before retry...`, {
+			waitTime,
+			attempt: this.recoveryAttempts
+		});
+
+		// Notify UI about recovery state
+		this.callbacks.onStateChange?.(this.state);
+
+		// Wait for the recovery delay
+		await sleep(waitTime);
+
+		// Check if user paused during wait
+		if (this.shouldStop) {
+			this.emitEvent('recovery_failed', 'Recovery cancelled by user');
+			return false;
+		}
+
+		// Reset all RPCs to try again
+		this.rpcManager.resetAllRPCs();
+
+		// Try to get an available RPC
+		const hasAvailableRPC = this.rpcManager.hasHealthyRPC();
+
+		if (hasAvailableRPC) {
+			this.emitEvent('recovery_success', `Recovery successful! Resuming scan with available RPC.`, {
+				attempt: this.recoveryAttempts
+			});
+
+			// Reset consecutive errors since we recovered
+			this.consecutiveErrors = 0;
+
+			// Increase delay for next recovery attempt (exponential backoff)
+			this.currentRecoveryDelay = Math.min(this.currentRecoveryDelay * backoffMultiplier, maxDelay);
+
+			return true;
+		}
+
+		// Still no available RPC after reset, try waiting for one
+		this.emitEvent('recovery_attempt', 'Waiting for RPC to become available...');
+		const recovered = await this.rpcManager.waitForAvailableRPC();
+
+		if (recovered) {
+			this.emitEvent('recovery_success', `Recovery successful! RPC available after wait.`, {
+				attempt: this.recoveryAttempts
+			});
+
+			// Reset consecutive errors since we recovered
+			this.consecutiveErrors = 0;
+
+			// Increase delay for next recovery attempt (exponential backoff)
+			this.currentRecoveryDelay = Math.min(this.currentRecoveryDelay * backoffMultiplier, maxDelay);
+
+			return true;
+		}
+
+		// Recovery failed, try again if we have attempts left
+		return this.attemptAutoRecovery();
+	}
+
+	/**
+	 * Reset recovery state (call after successful batch)
+	 */
+	private resetRecoveryState(): void {
+		this.recoveryAttempts = 0;
+		this.currentRecoveryDelay = this.autoRecoveryConfig.initialDelay;
 	}
 
 	/**

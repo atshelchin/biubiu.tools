@@ -10,8 +10,8 @@
 	import { useMnemonicImport } from '@/features/wallet-sweep/composables/use-mnemonic-import.svelte';
 	import { usePrivateKeyImport } from '@/features/wallet-sweep/composables/use-private-key-import.svelte';
 	import { useRpcManager } from '@/features/wallet-sweep/composables/use-rpc-manager.svelte';
-	import { useBalanceScanner } from '@/features/wallet-sweep/composables/use-balance-scanner.svelte';
-	import { setDebugConfig, type ScanState } from '@/features/wallet-sweep/utils/balance-scanner';
+	import { useBalanceScannerV2 } from '@/features/wallet-sweep/composables/use-balance-scanner-v2.svelte';
+	import type { ScanState } from '$lib/services/balance-scanner/types';
 	import type { ImportMethod } from '@/features/wallet-sweep/types/wallet';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
@@ -25,13 +25,7 @@
 	const mnemonicImport = useMnemonicImport(i18n.t);
 	const privateKeyImport = usePrivateKeyImport(i18n.t);
 	const rpcManager = useRpcManager();
-	const balanceScanner = useBalanceScanner();
-
-	// Expose debug config to browser console
-	if (typeof window !== 'undefined') {
-		(window as unknown as { setDebugConfig: typeof setDebugConfig }).setDebugConfig =
-			setDebugConfig;
-	}
+	const balanceScanner = useBalanceScannerV2();
 
 	// Local state - default to privateKey as it's the most common use case
 	let importMethod = $state<ImportMethod>('privateKey');
@@ -112,70 +106,45 @@
 		// Start scanning
 		step4State.isScanning = true;
 		step4State.errorMessage = '';
-
-		// Calculate initial progress if resuming
-		if (step4State.canResumeScan && step4State.scanState) {
-			const state = step4State.scanState;
-			const batchCount = Math.ceil(importedWallets.length / 1000);
-			const totalTokens = 1 + selectedTokens.filter((t) => t.type === 'erc20').length;
-			const totalBatches = batchCount * totalTokens;
-
-			let completedBatches = 0;
-			if (state.currentTokenIndex === -1) {
-				completedBatches = state.currentBatchIndex;
-			} else {
-				completedBatches =
-					batchCount + state.currentTokenIndex * batchCount + state.currentBatchIndex;
-			}
-
-			step4State.scanProgress = Math.round((completedBatches / totalBatches) * 100);
-		} else {
-			step4State.scanProgress = 0;
-		}
+		step4State.scanProgress = 0;
+		step4State.clearScanEvents(); // Clear previous scan events
 
 		try {
 			// Clear any previous rate limit error
 			step4State.clearRateLimitError();
 
-			const { updates, state } = await balanceScanner.scanBalances({
+			const { updates, state, completed } = await balanceScanner.scanBalances({
 				wallets: importedWallets,
 				selectedTokens,
 				currentChainId: connectStore.currentChainId,
 				rpcEndpoints: currentNetwork.rpcEndpoints,
 				networkName: currentNetwork.name,
 				networkSymbol: currentNetwork.symbol,
-				onProgress: (progress) => {
-					step4State.scanProgress = progress;
+				onProgress: (stats) => {
+					step4State.scanProgress = stats.progress;
 				},
-				onAllRPCsExhausted: () => {
-					// Only show rate limit error when ALL RPCs are exhausted
+				onEvent: (event) => {
+					// Store events for log display in sidebar
+					step4State.addScanEvent(event);
 				},
-				onRateLimitError: (error, scanState) => {
-					const errorMessage =
-						error.scanType === 'native'
-							? i18n.t('tools.wallet_sweep.step4.content.rate_limit.error_native', {
-									batch: error.currentBatch,
-									total: error.totalBatches
-								})
-							: i18n.t('tools.wallet_sweep.step4.content.rate_limit.error_erc20', {
-									batch: error.currentBatch,
-									total: error.totalBatches,
-									token: error.tokenId || ''
-								});
-					step4State.handleRateLimitError(errorMessage, scanState);
-				},
-				onStateUpdate: (scanState) => {
+				onStateChange: (scanState) => {
 					// Always keep track of the latest scan state for resume capability
 					step4State.scanState = scanState;
 					step4State.canResumeScan = true;
 				},
-				initialState: step4State.canResumeScan ? step4State.scanState || undefined : undefined
+				onPause: (reason, scanState) => {
+					const errorMessage = i18n.t('tools.wallet_sweep.step4.content.rate_limit.error_generic', {
+						reason
+					});
+					step4State.handleRateLimitError(errorMessage, scanState);
+				},
+				initialState: step4State.canResumeScan ? (step4State.scanState ?? undefined) : undefined
 			});
 
 			step4State.scanState = state;
 			step4State.updateWalletBalances(updates);
 
-			if (!state.isPaused) {
+			if (completed) {
 				step4State.hasScanned = true;
 				step4State.scanCompleted = true;
 				step4State.canResumeScan = false;
@@ -183,14 +152,11 @@
 
 			// Show summary
 			const walletsWithBalance = step4State.getWalletsWithBalance().length;
-			if (walletsWithBalance === 0 && !state.isPaused) {
+			if (walletsWithBalance === 0 && completed) {
 				step4State.errorMessage = i18n.t('tools.wallet_sweep.step4.content.errors.no_balance');
 				step4State.isInfoMessage = true; // This is info, not an error
 			}
 		} catch (error) {
-			if (error instanceof Error && error.name === 'RateLimitError') {
-				return;
-			}
 			step4State.errorMessage =
 				error instanceof Error
 					? error.message
@@ -345,11 +311,22 @@
 						class="dev-btn dev-btn-warning"
 						onclick={() => {
 							const mockState: ScanState = {
-								addresses: [],
+								sessionId: 'mock_session',
 								chainId: 1,
-								currentTokenIndex: 0,
-								currentBatchIndex: 0,
-								tokenBalances: new Map(),
+								addresses: [],
+								tokens: [],
+								taskStatus: new Map(),
+								balances: new Map(),
+								stats: { total: 0, success: 0, failed: 0, pending: 0, progress: 0 },
+								config: {
+									batchSize: 100,
+									maxRetries: 3,
+									retryDelay: 1000,
+									rateLimitDelay: 5000,
+									maxConsecutiveErrors: 5
+								},
+								startedAt: Date.now(),
+								lastActivityAt: Date.now(),
 								isPaused: true,
 								pauseReason: 'rate_limit'
 							};

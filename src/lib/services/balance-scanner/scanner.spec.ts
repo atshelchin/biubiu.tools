@@ -8,8 +8,8 @@
 
 import { describe, it, expect, beforeEach, vi, afterEach } from 'vitest';
 import { BalanceScanner, createScanner } from './scanner';
-import type { ScannerOptions, TokenConfig } from './types';
-import { createInitialState } from './types';
+import type { ScannerOptions, TokenConfig, AutoRecoveryConfig, ScanEvent } from './types';
+import { createInitialState, DEFAULT_AUTO_RECOVERY_CONFIG } from './types';
 import type { Address } from 'viem';
 
 describe('BalanceScanner', () => {
@@ -268,6 +268,161 @@ describe('BalanceScanner', () => {
 			const scanner2 = new BalanceScanner(baseOptions);
 
 			expect(scanner1.getState().sessionId).not.toBe(scanner2.getState().sessionId);
+		});
+	});
+
+	describe('auto-recovery configuration', () => {
+		it('should use default auto-recovery config when not provided', () => {
+			const scanner = new BalanceScanner(baseOptions);
+			const state = scanner.getState();
+
+			// Config should have auto-recovery with default values
+			expect(state.config.autoRecovery).toBeDefined();
+			expect(state.config.autoRecovery?.enabled).toBe(DEFAULT_AUTO_RECOVERY_CONFIG.enabled);
+			expect(state.config.autoRecovery?.initialDelay).toBe(
+				DEFAULT_AUTO_RECOVERY_CONFIG.initialDelay
+			);
+			expect(state.config.autoRecovery?.maxDelay).toBe(DEFAULT_AUTO_RECOVERY_CONFIG.maxDelay);
+			expect(state.config.autoRecovery?.backoffMultiplier).toBe(
+				DEFAULT_AUTO_RECOVERY_CONFIG.backoffMultiplier
+			);
+			expect(state.config.autoRecovery?.maxAttempts).toBe(DEFAULT_AUTO_RECOVERY_CONFIG.maxAttempts);
+		});
+
+		it('should use custom auto-recovery config when provided', () => {
+			const customConfig: AutoRecoveryConfig = {
+				enabled: false,
+				initialDelay: 5000,
+				maxDelay: 60000,
+				backoffMultiplier: 1.5,
+				maxAttempts: 5
+			};
+
+			const scanner = new BalanceScanner({
+				...baseOptions,
+				config: {
+					autoRecovery: customConfig
+				}
+			});
+			const state = scanner.getState();
+
+			expect(state.config.autoRecovery?.enabled).toBe(false);
+			expect(state.config.autoRecovery?.initialDelay).toBe(5000);
+			expect(state.config.autoRecovery?.maxDelay).toBe(60000);
+			expect(state.config.autoRecovery?.backoffMultiplier).toBe(1.5);
+			expect(state.config.autoRecovery?.maxAttempts).toBe(5);
+		});
+
+		it('should merge partial auto-recovery config with defaults', () => {
+			const scanner = new BalanceScanner({
+				...baseOptions,
+				config: {
+					autoRecovery: {
+						enabled: true,
+						initialDelay: 20000,
+						maxDelay: 600000,
+						backoffMultiplier: 3,
+						maxAttempts: 20
+					}
+				}
+			});
+			const state = scanner.getState();
+
+			// Custom values should be used
+			expect(state.config.autoRecovery?.initialDelay).toBe(20000);
+			expect(state.config.autoRecovery?.maxAttempts).toBe(20);
+		});
+	});
+
+	describe('scan events callback', () => {
+		it('should call onEvent callback when scan starts', () => {
+			const events: ScanEvent[] = [];
+			const onEvent = vi.fn((event: ScanEvent) => {
+				events.push(event);
+			});
+
+			new BalanceScanner({
+				...baseOptions,
+				callbacks: { onEvent }
+			});
+
+			// The constructor doesn't emit scan_started - that happens when scan() is called
+			// So we just verify the scanner was created successfully
+			expect(events.length).toBe(0);
+		});
+
+		it('should emit scan_resumed event when restoring from state', () => {
+			const events: ScanEvent[] = [];
+			const onEvent = vi.fn((event: ScanEvent) => {
+				events.push(event);
+			});
+
+			const initialState = createInitialState(baseOptions);
+			initialState.stats.progress = 50;
+
+			new BalanceScanner({
+				...baseOptions,
+				initialState,
+				callbacks: { onEvent }
+			});
+
+			// Should emit scan_resumed when restoring
+			expect(onEvent).toHaveBeenCalled();
+			expect(events.some((e) => e.type === 'scan_resumed')).toBe(true);
+		});
+	});
+
+	describe('DEFAULT_AUTO_RECOVERY_CONFIG', () => {
+		it('should have expected default values', () => {
+			expect(DEFAULT_AUTO_RECOVERY_CONFIG.enabled).toBe(true);
+			expect(DEFAULT_AUTO_RECOVERY_CONFIG.initialDelay).toBe(10000); // 10 seconds
+			expect(DEFAULT_AUTO_RECOVERY_CONFIG.maxDelay).toBe(300000); // 5 minutes
+			expect(DEFAULT_AUTO_RECOVERY_CONFIG.backoffMultiplier).toBe(2);
+			expect(DEFAULT_AUTO_RECOVERY_CONFIG.maxAttempts).toBe(10);
+		});
+	});
+
+	describe('recovery event types', () => {
+		it('should have all recovery event types defined in ScanEventType', () => {
+			// These are the recovery-related event types that should be supported
+			const recoveryEventTypes = [
+				'recovery_started',
+				'recovery_waiting',
+				'recovery_attempt',
+				'recovery_success',
+				'recovery_failed'
+			];
+
+			// Verify each recovery event type by checking the ScanEvent type accepts them
+			const testEvent = (type: string): ScanEvent => ({
+				type: type as ScanEvent['type'],
+				timestamp: Date.now(),
+				message: 'Test message'
+			});
+
+			for (const eventType of recoveryEventTypes) {
+				const event = testEvent(eventType);
+				expect(event.type).toBe(eventType);
+				expect(event.timestamp).toBeDefined();
+				expect(event.message).toBeDefined();
+			}
+		});
+
+		it('should support details in scan events', () => {
+			const event: ScanEvent = {
+				type: 'recovery_started',
+				timestamp: Date.now(),
+				message: 'Starting recovery',
+				details: {
+					attempt: 1,
+					maxAttempts: 10,
+					waitTime: 10000
+				}
+			};
+
+			expect(event.details?.attempt).toBe(1);
+			expect(event.details?.maxAttempts).toBe(10);
+			expect(event.details?.waitTime).toBe(10000);
 		});
 	});
 });

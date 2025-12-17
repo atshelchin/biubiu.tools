@@ -130,14 +130,42 @@ export interface ScanConfig {
 	rateLimitDelay: number;
 	/** Max consecutive errors before pausing (default: 5) */
 	maxConsecutiveErrors: number;
+	/** Auto-recovery configuration */
+	autoRecovery?: AutoRecoveryConfig;
 }
+
+/**
+ * Configuration for automatic recovery when all RPCs fail
+ * Enables unattended operation - scanner will wait and retry automatically
+ */
+export interface AutoRecoveryConfig {
+	/** Enable auto-recovery (default: true) */
+	enabled: boolean;
+	/** Initial delay before first retry in ms (default: 10000 = 10s) */
+	initialDelay: number;
+	/** Maximum delay between retries in ms (default: 300000 = 5 minutes) */
+	maxDelay: number;
+	/** Backoff multiplier (default: 2) */
+	backoffMultiplier: number;
+	/** Maximum number of recovery attempts before giving up (default: 10) */
+	maxAttempts: number;
+}
+
+export const DEFAULT_AUTO_RECOVERY_CONFIG: AutoRecoveryConfig = {
+	enabled: true,
+	initialDelay: 10000, // 10 seconds
+	maxDelay: 300000, // 5 minutes
+	backoffMultiplier: 2,
+	maxAttempts: 10
+};
 
 export const DEFAULT_SCAN_CONFIG: ScanConfig = {
 	batchSize: 1000,
 	maxRetries: 3,
 	retryDelay: 1000,
 	rateLimitDelay: 5000,
-	maxConsecutiveErrors: 5
+	maxConsecutiveErrors: 5,
+	autoRecovery: DEFAULT_AUTO_RECOVERY_CONFIG
 };
 
 // ============================================================================
@@ -167,7 +195,12 @@ export type ScanEventType =
 	| 'scan_paused'
 	| 'scan_resumed'
 	| 'scan_completed'
-	| 'progress_update';
+	| 'progress_update'
+	| 'recovery_started'
+	| 'recovery_waiting'
+	| 'recovery_attempt'
+	| 'recovery_success'
+	| 'recovery_failed';
 
 export interface ScanEvent {
 	type: ScanEventType;
