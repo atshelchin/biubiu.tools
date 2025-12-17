@@ -327,12 +327,9 @@
 							// Use actual imported wallets and selected tokens for realistic simulation
 							const addresses = importedWallets.map((w) => w.address) as Address[];
 							const currentNetwork = rpcManager.currentNetwork;
+							const chainId = connectStore.currentChainId ?? 0;
 							const allTokens = currentNetwork
-								? step3State.getAvailableTokens(
-										connectStore.currentChainId,
-										currentNetwork.symbol,
-										currentNetwork.name
-									)
+								? step3State.getAvailableTokens(chainId, currentNetwork.symbol, currentNetwork.name)
 								: [];
 							const selectedIds = Array.from(step3State.selectedTokenIds);
 							const tokens = allTokens
@@ -361,7 +358,7 @@
 
 							const mockState: ScanState = {
 								sessionId: `mock_session_${Date.now()}`,
-								chainId: connectStore.currentChainId,
+								chainId,
 								addresses,
 								tokens,
 								taskStatus,
