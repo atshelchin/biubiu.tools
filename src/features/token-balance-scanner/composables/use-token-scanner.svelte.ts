@@ -438,14 +438,18 @@ export function useTokenScanner() {
 			const storage = getStorage();
 			const state = scanner.getState();
 
+			// Deep clone to remove any proxy wrappers (Svelte 5 reactivity)
+			// and ensure plain JS objects for IndexedDB compatibility
+			const cloneForStorage = <T>(obj: T): T => JSON.parse(JSON.stringify(obj));
+
 			// Save session
 			await storage.createSession({
 				sessionId: state.sessionId,
 				chainId: state.chainId,
-				addresses: state.addresses,
-				tokens: state.tokens,
-				config: state.config,
-				stats: state.stats,
+				addresses: cloneForStorage(state.addresses),
+				tokens: cloneForStorage(state.tokens),
+				config: cloneForStorage(state.config),
+				stats: cloneForStorage(state.stats),
 				startedAt: state.startedAt,
 				lastActivityAt: state.lastActivityAt,
 				isPaused: state.isPaused,

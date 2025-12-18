@@ -144,7 +144,7 @@
 			</button>
 			{#if logsExpanded && recentLogs.length > 0}
 				<div class="logs-list">
-					{#each recentLogs as log (log.timestamp)}
+					{#each recentLogs as log, index (`${log.timestamp}-${index}`)}
 						<div class="log-entry {getLogTypeClass(log.type)}">
 							<span class="log-time">{formatLogTime(log.timestamp)}</span>
 							<span class="log-message">{log.message}</span>
