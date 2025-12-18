@@ -13,6 +13,7 @@ import type {
 	SortState
 } from '../types/scanner';
 import type { ScanEvent, TokenConfig } from '$lib/services/balance-scanner/types';
+import type { ScanSession } from '$lib/services/balance-scanner/storage';
 import { parseUnits } from 'viem';
 
 // Module-level state class for reactivity
@@ -37,6 +38,9 @@ class Step5StateClass {
 
 	// Resumable session
 	resumableSession = $state<ResumableSession | null>(null);
+
+	// Session to restore from IndexedDB (set when user clicks Resume in modal)
+	sessionToRestore = $state<ScanSession | null>(null);
 
 	// Filter state
 	filter = $state<BalanceFilter>({
@@ -112,6 +116,11 @@ class Step5StateClass {
 	// Set resumable session
 	setResumableSession(session: ResumableSession | null) {
 		this.resumableSession = session;
+	}
+
+	// Set session to restore (from IndexedDB when user clicks Resume)
+	setSessionToRestore(session: ScanSession | null) {
+		this.sessionToRestore = session;
 	}
 
 	// Filter methods
@@ -255,6 +264,7 @@ class Step5StateClass {
 		this.tokenConfigs = [];
 		this.logs = [];
 		this.resumableSession = null;
+		this.sessionToRestore = null;
 		this.filter = {
 			balanceStatus: 'all',
 			tokenId: 'all'

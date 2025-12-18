@@ -148,6 +148,7 @@ export class BalanceScanner {
 	private networkSymbol: string;
 	private isRunning: boolean = false;
 	private shouldStop: boolean = false;
+	private abortController: AbortController | null = null;
 	private consecutiveErrors: number = 0;
 	private autoRecoveryConfig: AutoRecoveryConfig;
 	private parallelConfig: ParallelScanConfig;
@@ -230,6 +231,15 @@ export class BalanceScanner {
 		this.shouldStop = true;
 		this.state.isPaused = true;
 		this.state.pauseReason = 'user_pause';
+		// Abort any in-flight requests
+		if (this.abortController) {
+			this.abortController.abort();
+			this.abortController = null;
+		}
+		// Also abort parallel executor if active
+		if (this.parallelExecutor) {
+			this.parallelExecutor.abort();
+		}
 	}
 
 	/**
@@ -242,6 +252,7 @@ export class BalanceScanner {
 
 		this.isRunning = true;
 		this.shouldStop = false;
+		this.abortController = new AbortController();
 		this.state.isPaused = false;
 		this.state.pauseReason = undefined;
 
@@ -606,7 +617,7 @@ export class BalanceScanner {
 		const rpcUrl = this.rpcManager.getCurrentRPC();
 		const isNative = !token.address;
 
-		// Create viem client
+		// Create viem client with abort signal
 		const client = createPublicClient({
 			chain: {
 				id: this.state.chainId,
@@ -622,7 +633,10 @@ export class BalanceScanner {
 			},
 			transport: http(rpcUrl, {
 				retryCount: 0,
-				timeout: 30000
+				timeout: 30000,
+				fetchOptions: {
+					signal: this.abortController?.signal
+				}
 			})
 		});
 

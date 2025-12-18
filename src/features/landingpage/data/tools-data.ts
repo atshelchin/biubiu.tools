@@ -167,7 +167,7 @@ export const toolsConfig: Tool[] = [
 		link: '/apps/wallet-generator',
 		status: 'active',
 		color: '#8B5CF6',
-		features: ['HD Path Support', 'Multiple Chains', 'Export to CSV/JSON'],
+		features: ['HD Path Support', 'Multiple Chains', 'Export to EXCEL/CSV/JSON'],
 		stage: 'alpha'
 	},
 	{

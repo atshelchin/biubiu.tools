@@ -22,12 +22,15 @@ const STORES = {
 } as const;
 
 // Cleanup constants
-const DEFAULT_SESSION_TTL_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
-const MAX_SESSIONS_TO_KEEP = 10; // Keep at most 10 sessions
+const DEFAULT_SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000; // 30 days
+const MAX_SESSIONS_TO_KEEP = 20; // Keep at most 20 sessions
 
 // ============================================================================
 // Types for IndexedDB Storage
 // ============================================================================
+
+/** Session status type */
+export type SessionStatus = 'scanning' | 'paused' | 'completed' | 'abandoned';
 
 /** Scan session metadata (lightweight, kept in memory) */
 export interface ScanSession {
@@ -41,6 +44,12 @@ export interface ScanSession {
 	lastActivityAt: number;
 	isPaused: boolean;
 	pauseReason?: 'rate_limit' | 'user_pause' | 'error';
+	/** Session status for lifecycle management */
+	status: SessionStatus;
+	/** Whether the user has downloaded the report */
+	hasDownloaded: boolean;
+	/** Network name for display */
+	networkName?: string;
 }
 
 /** Balance record stored in IndexedDB */
@@ -764,6 +773,109 @@ export class BalanceScannerStorage {
 		}
 
 		return deletedCount;
+	}
+
+	// ============================================================================
+	// Session Status Management
+	// ============================================================================
+
+	/**
+	 * Update session status
+	 */
+	async updateSessionStatus(sessionId: string, status: SessionStatus): Promise<void> {
+		const session = await this.getSession(sessionId);
+		if (!session) return;
+
+		session.status = status;
+		session.lastActivityAt = Date.now();
+
+		// Update isPaused based on status for backwards compatibility
+		session.isPaused = status === 'paused';
+
+		await this.updateSession(session);
+	}
+
+	/**
+	 * Mark session as downloaded
+	 */
+	async markSessionDownloaded(sessionId: string): Promise<void> {
+		const session = await this.getSession(sessionId);
+		if (!session) return;
+
+		session.hasDownloaded = true;
+		session.lastActivityAt = Date.now();
+		await this.updateSession(session);
+	}
+
+	/**
+	 * Get active sessions (scanning, paused, or completed but not downloaded)
+	 * These are sessions that need user attention
+	 */
+	async getActiveSessions(): Promise<ScanSession[]> {
+		const sessions = await this.getAllSessions();
+		const now = Date.now();
+		const ttl = DEFAULT_SESSION_TTL_MS;
+
+		return sessions.filter((s) => {
+			// Filter out expired sessions
+			if (now - s.lastActivityAt > ttl) return false;
+
+			// Filter out abandoned sessions
+			if (s.status === 'abandoned') return false;
+
+			// Keep scanning, paused sessions
+			if (s.status === 'scanning' || s.status === 'paused') return true;
+
+			// Keep completed sessions that haven't been downloaded
+			if (s.status === 'completed' && !s.hasDownloaded) return true;
+
+			return false;
+		});
+	}
+
+	/**
+	 * Check if a session can be deleted
+	 * Rules:
+	 * - abandoned: can always delete
+	 * - completed + hasDownloaded: can delete
+	 * - completed + !hasDownloaded: cannot delete (must download first)
+	 * - scanning/paused: cannot delete (must abandon first)
+	 */
+	canDeleteSession(session: ScanSession): { canDelete: boolean; reason?: string } {
+		if (session.status === 'abandoned') {
+			return { canDelete: true };
+		}
+
+		if (session.status === 'completed') {
+			if (session.hasDownloaded) {
+				return { canDelete: true };
+			}
+			return {
+				canDelete: false,
+				reason: 'Please download the report before deleting this session'
+			};
+		}
+
+		// scanning or paused
+		return {
+			canDelete: false,
+			reason: 'Please finish or abandon this scan before deleting'
+		};
+	}
+
+	/**
+	 * Abandon a session (mark as abandoned so it can be deleted)
+	 */
+	async abandonSession(sessionId: string): Promise<void> {
+		await this.updateSessionStatus(sessionId, 'abandoned');
+	}
+
+	/**
+	 * Get sessions by chain ID
+	 */
+	async getSessionsByChain(chainId: number): Promise<ScanSession[]> {
+		const sessions = await this.getAllSessions();
+		return sessions.filter((s) => s.chainId === chainId);
 	}
 }
 

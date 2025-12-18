@@ -591,10 +591,35 @@
 		"token_balance_scanner": {
 			"title": "Wallet Balance Checker",
 			"description": "Quickly filter wallets with balances, identify non-empty addresses, and aggregate token holdings across multiple wallets",
+			"session": {
+				"title": "Scan Sessions",
+				"status": {
+					"scanning": "Scanning",
+					"paused": "Paused",
+					"completed": "Completed",
+					"abandoned": "Abandoned"
+				},
+				"progress": "Progress",
+				"addresses": "Addresses",
+				"tokens": "Tokens",
+				"last_activity": "Last Activity",
+				"view": "View",
+				"resume": "Resume",
+				"abandon": "Abandon",
+				"delete": "Delete",
+				"start_new": "Start New Scan",
+				"empty": "No active sessions",
+				"error": {
+					"abandon_failed": "Failed to abandon session",
+					"delete_failed": "Failed to delete session",
+					"not_found": "Session not found",
+					"restore_failed": "Failed to restore session"
+				}
+			},
 			"feature_1": "Scan up to 100K addresses",
 			"feature_2": "Filter wallets with balances",
 			"feature_3": "Aggregate holdings statistics",
-			"feature_4": "Export to CSV/JSON",
+			"feature_4": "Export to EXCEL/CSV/JSON",
 			"faqs": {
 				"what_is_balance_checker": "What is Wallet Balance Checker?",
 				"balance_checker_explanation": "A tool to scan multiple wallet addresses and check their token balances. It helps you quickly identify which wallets have assets and aggregate total holdings across all wallets.",
@@ -613,7 +638,7 @@
 			},
 			"seo": {
 				"page_title": "Wallet Balance Checker - Batch Scan Token Balances | BiuBiu Tools",
-				"page_description": "Quickly scan and filter wallets with balances across multiple addresses. Identify non-empty wallets, aggregate token holdings, and export results to CSV/JSON.",
+				"page_description": "Quickly scan and filter wallets with balances across multiple addresses. Identify non-empty wallets, aggregate token holdings, and export results to EXCEL/CSV/JSON.",
 				"keywords": "wallet balance checker, batch balance scan, token balance scanner, crypto portfolio, multi-wallet scanner, blockchain balance, web3 tools, ERC20 balance",
 				"webapp_name": "Wallet Balance Checker",
 				"webapp_description": "Quickly filter wallets with balances, identify non-empty addresses, and aggregate token holdings across multiple wallets.",

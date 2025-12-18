@@ -19,12 +19,16 @@
 		type StartScanParams
 	} from '../../composables/use-token-scanner.svelte';
 	import { PREDEFINED_TOKENS } from '$lib/config/tokens';
+	import { getStorage } from '$lib/services/balance-scanner/storage';
 	import type { NativeToken, Token } from '$lib/types/token';
-	import type { BalanceFilter, SortState } from '../../types/scanner';
+	import type { BalanceFilter, SortState, AddressBalance } from '../../types/scanner';
 
 	const i18n = useI18n();
 	const connectStore = useConnectStore();
 	const scanner = useTokenScanner();
+
+	// Track if we're restoring from a session
+	let isRestoring = $state(false);
 
 	// Get selected tokens
 	const selectedTokens = $derived(() => {
@@ -116,9 +120,26 @@
 		step5State.setLogs(scanner.logs);
 	});
 
-	// Check for resumable session on mount
+	// Check for session to restore (from SessionManagerModal)
 	$effect(() => {
-		if (connectStore.currentChainId && step5State.scanStatus === 'idle') {
+		const sessionToRestore = step5State.sessionToRestore;
+		if (sessionToRestore && !isRestoring) {
+			isRestoring = true;
+			restoreSession(sessionToRestore.sessionId).then(() => {
+				isRestoring = false;
+				step5State.setSessionToRestore(null);
+			});
+		}
+	});
+
+	// Check for resumable session on mount (only if not restoring)
+	$effect(() => {
+		if (
+			connectStore.currentChainId &&
+			step5State.scanStatus === 'idle' &&
+			!step5State.sessionToRestore &&
+			!isRestoring
+		) {
 			checkResumable();
 		}
 	});
@@ -128,6 +149,138 @@
 		const resumable = await scanner.checkResumableSession(connectStore.currentChainId);
 		if (resumable) {
 			step5State.setResumableSession(resumable);
+		}
+	}
+
+	/**
+	 * Restore a session from IndexedDB
+	 * Loads balances and updates step5State to show the data
+	 */
+	async function restoreSession(sessionId: string) {
+		try {
+			const storage = getStorage();
+			const session = await storage.getSession(sessionId);
+
+			if (!session) {
+				step5State.setError(
+					i18n.t('tools.token_balance_scanner.session.error.not_found') || 'Session not found'
+				);
+				return;
+			}
+
+			// Set token configs
+			step5State.setTokenConfigs(session.tokens);
+			step5State.setSessionId(session.sessionId);
+
+			// Load balances from IndexedDB
+			const balanceResults = await storage.getBalancesBySession(sessionId, session.tokens, {
+				limit: 100000
+			});
+
+			// Convert to AddressBalance format
+			const addressBalances: AddressBalance[] = balanceResults.results.map((result) => ({
+				address: result.address,
+				label: undefined, // Labels not stored in session
+				balances: result.balances.map((b) => ({
+					tokenId: b.tokenId,
+					balance: b.balance,
+					formattedBalance: b.formattedBalance || '0'
+				})),
+				hasBalance: result.balances.some((b) => b.balance > 0n)
+			}));
+
+			step5State.setResults(addressBalances);
+
+			// Set progress from session stats
+			step5State.setProgress({
+				current: session.stats.success,
+				total: session.stats.total,
+				percentage: session.stats.progress,
+				success: session.stats.success,
+				failed: session.stats.failed,
+				pending: session.stats.pending
+			});
+
+			// Determine status based on session state
+			if (
+				session.status === 'completed' ||
+				(session.stats.pending === 0 && session.stats.failed === 0)
+			) {
+				step5State.setScanStatus('completed');
+			} else if (session.status === 'paused' || session.isPaused) {
+				step5State.setScanStatus('paused');
+				// Set up for resuming
+				step5State.setResumableSession({
+					sessionId: session.sessionId,
+					chainId: session.chainId,
+					addressCount: session.addresses.length,
+					tokenCount: session.tokens.length,
+					progress: session.stats.progress,
+					startedAt: session.startedAt,
+					lastActivityAt: session.lastActivityAt,
+					isPaused: session.isPaused,
+					pauseReason: session.pauseReason
+				});
+			} else {
+				// Scanning or other active state - show as paused so user can resume
+				step5State.setScanStatus('paused');
+				step5State.setResumableSession({
+					sessionId: session.sessionId,
+					chainId: session.chainId,
+					addressCount: session.addresses.length,
+					tokenCount: session.tokens.length,
+					progress: session.stats.progress,
+					startedAt: session.startedAt,
+					lastActivityAt: session.lastActivityAt,
+					isPaused: true,
+					pauseReason: undefined
+				});
+			}
+
+			// Calculate and set summary
+			if (addressBalances.length > 0) {
+				const walletsWithBalance = addressBalances.filter((r) => r.hasBalance).length;
+				const tokenTotals = session.tokens.map((token) => {
+					let totalBalance = 0n;
+					let walletsWithTokenBalance = 0;
+
+					for (const result of addressBalances) {
+						const tokenBalance = result.balances.find((b) => b.tokenId === token.id);
+						if (tokenBalance && tokenBalance.balance > 0n) {
+							totalBalance += tokenBalance.balance;
+							walletsWithTokenBalance++;
+						}
+					}
+
+					return {
+						tokenId: token.id,
+						symbol: token.symbol || '',
+						name: token.symbol || '',
+						decimals: token.decimals,
+						totalBalance,
+						formattedTotal: '0', // Will be formatted in UI
+						walletsWithBalance: walletsWithTokenBalance
+					};
+				});
+
+				step5State.setSummary({
+					totalWallets: addressBalances.length,
+					walletsWithBalance,
+					totalTokens: session.tokens.length,
+					tokenTotals,
+					scanDuration: session.lastActivityAt - session.startedAt,
+					successCount: session.stats.success,
+					failureCount: session.stats.failed
+				});
+			}
+
+			console.log('✅ Session restored successfully:', sessionId);
+		} catch (err) {
+			console.error('Failed to restore session:', err);
+			step5State.setError(
+				i18n.t('tools.token_balance_scanner.session.error.restore_failed') ||
+					'Failed to restore session'
+			);
 		}
 	}
 

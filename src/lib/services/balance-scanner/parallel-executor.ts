@@ -113,6 +113,7 @@ export class ParallelRPCExecutor {
 	private networkSymbol: string;
 	private config: ParallelScanConfig;
 	private onEvent?: (event: ScanEvent) => void;
+	private abortController: AbortController | null = null;
 
 	constructor(options: {
 		rpcEndpoints: RPCEndpoint[];
@@ -178,6 +179,16 @@ export class ParallelRPCExecutor {
 	}
 
 	/**
+	 * Abort all in-flight requests
+	 */
+	abort(): void {
+		if (this.abortController) {
+			this.abortController.abort();
+			this.abortController = null;
+		}
+	}
+
+	/**
 	 * Execute batches in parallel across multiple RPCs
 	 *
 	 * @param token - Token to query
@@ -191,6 +202,9 @@ export class ParallelRPCExecutor {
 		results: Map<Address, { success: boolean; balance: bigint }>;
 		rpcResults: ParallelBatchResult[];
 	}> {
+		// Create new abort controller for this execution
+		this.abortController = new AbortController();
+
 		const availableRPCs = this.getAvailableRPCs();
 		const results = new Map<Address, { success: boolean; balance: bigint }>();
 		const rpcResults: ParallelBatchResult[] = [];
@@ -350,7 +364,10 @@ export class ParallelRPCExecutor {
 			},
 			transport: http(rpc.url, {
 				retryCount: 0,
-				timeout: 30000
+				timeout: 30000,
+				fetchOptions: {
+					signal: this.abortController?.signal
+				}
 			})
 		});
 

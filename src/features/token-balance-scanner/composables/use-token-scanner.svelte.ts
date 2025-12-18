@@ -442,6 +442,10 @@ export function useTokenScanner() {
 			// and ensure plain JS objects for IndexedDB compatibility
 			const cloneForStorage = <T>(obj: T): T => JSON.parse(JSON.stringify(obj));
 
+			// Determine session status based on scan state
+			const isComplete = state.stats.pending === 0 && state.stats.failed === 0;
+			const sessionStatus = isComplete ? 'completed' : state.isPaused ? 'paused' : 'scanning';
+
 			// Save session
 			await storage.createSession({
 				sessionId: state.sessionId,
@@ -453,7 +457,9 @@ export function useTokenScanner() {
 				startedAt: state.startedAt,
 				lastActivityAt: state.lastActivityAt,
 				isPaused: state.isPaused,
-				pauseReason: state.pauseReason
+				pauseReason: state.pauseReason,
+				status: sessionStatus,
+				hasDownloaded: false
 			});
 
 			// Save balances

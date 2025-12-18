@@ -59,7 +59,10 @@
 	import NetworkSettingsButton from '$lib/components/ui/network-settings-button.svelte';
 	import ReferralButton from '$lib/components/ui/referral-button.svelte';
 	import SeoHead from '$lib/components/seo-head.svelte';
-	import StepIndicator, { createStepManager } from '$lib/components/ui/step-indicator.svelte';
+	import StepIndicator, {
+		createStepManager,
+		type StepManager
+	} from '$lib/components/ui/step-indicator.svelte';
 	import StepControls from '$lib/components/ui/step-controls.svelte';
 	import Faqs from '$lib/components/ui/faqs.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
@@ -67,9 +70,13 @@
 	interface Props {
 		config: StepBasedAppConfig;
 		toolbarActions?: Snippet;
+		/** Initial step to start on (1-based, defaults to 1) */
+		initialStep?: number;
+		/** Callback when step manager is created, allows parent to access goTo() etc. */
+		onStepManagerReady?: (manager: StepManager) => void;
 	}
 
-	let { config, toolbarActions }: Props = $props();
+	let { config, toolbarActions, initialStep = 1, onStepManagerReady }: Props = $props();
 
 	const i18n = useI18n();
 
@@ -88,7 +95,12 @@
 	}
 
 	// Create step manager from steps config with i18n keys (auto-sets context internally)
-	const stepManager = createStepManager(config.steps, 1, config.useI18nKeys ?? false);
+	const stepManager = createStepManager(config.steps, initialStep, config.useI18nKeys ?? false);
+
+	// Notify parent when step manager is ready
+	if (onStepManagerReady) {
+		onStepManagerReady(stepManager);
+	}
 
 	// Get current step components
 	const SidebarComponent = $derived(config.stepComponents.sidebar[stepManager.currentStep - 1]);

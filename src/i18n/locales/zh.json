@@ -591,10 +591,35 @@
 		"token_balance_scanner": {
 			"title": "钱包余额筛查器",
 			"description": "快速筛查多个钱包的代币余额，找出有资产的地址，汇总统计持仓分布",
+			"session": {
+				"title": "扫描会话",
+				"status": {
+					"scanning": "扫描中",
+					"paused": "已暂停",
+					"completed": "已完成",
+					"abandoned": "已废弃"
+				},
+				"progress": "进度",
+				"addresses": "地址数",
+				"tokens": "代币数",
+				"last_activity": "最后活动",
+				"view": "查看",
+				"resume": "继续",
+				"abandon": "废弃",
+				"delete": "删除",
+				"start_new": "开始新扫描",
+				"empty": "暂无活跃会话",
+				"error": {
+					"abandon_failed": "废弃会话失败",
+					"delete_failed": "删除会话失败",
+					"not_found": "会话未找到",
+					"restore_failed": "恢复会话失败"
+				}
+			},
 			"feature_1": "支持 10 万地址批量查询",
 			"feature_2": "快速筛选有余额的钱包",
 			"feature_3": "汇总统计持仓分布",
-			"feature_4": "导出 CSV/JSON",
+			"feature_4": "导出 EXCEL/CSV/JSON",
 			"faqs": {
 				"what_is_balance_checker": "什么是钱包余额筛查器？",
 				"balance_checker_explanation": "一个用于扫描多个钱包地址并检查代币余额的工具。帮助您快速识别哪些钱包有资产，并汇总所有钱包的总持仓。",
