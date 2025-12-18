@@ -1,8 +1,8 @@
 <script lang="ts">
 	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
-	import { scannerState } from '../../stores/scanner-state.svelte';
+	import { step4State } from '../../stores/step4-state.svelte';
 
-	const walletCount = $derived(scannerState.wallets.length);
+	const walletCount = $derived(step4State.wallets.length);
 </script>
 
 <StepSidebar stepNumber={4} title="Import Addresses" description="Add wallet addresses to scan">

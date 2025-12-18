@@ -1,6 +1,6 @@
 <script lang="ts">
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
-	import { scannerState } from '../../stores/scanner-state.svelte';
+	import { step4State } from '../../stores/step4-state.svelte';
 	import { isAddress, type Address } from 'viem';
 	import { Trash2, Upload } from '@lucide/svelte';
 
@@ -18,7 +18,7 @@
 	// Handle paste
 	function handlePaste() {
 		const addresses = parseAddresses(textareaValue);
-		addresses.forEach((addr) => scannerState.addWallet(addr));
+		addresses.forEach((addr) => step4State.addWallet(addr));
 		textareaValue = '';
 	}
 
@@ -30,7 +30,7 @@
 
 		const text = await file.text();
 		const addresses = parseAddresses(text);
-		addresses.forEach((addr) => scannerState.addWallet(addr));
+		addresses.forEach((addr) => step4State.addWallet(addr));
 
 		// Reset input
 		input.value = '';
@@ -43,15 +43,15 @@
 
 	// Remove wallet
 	function removeWallet(address: Address) {
-		scannerState.removeWallet(address);
+		step4State.removeWallet(address);
 	}
 
 	// Clear all wallets
 	function clearAll() {
-		scannerState.clearWallets();
+		step4State.clearWallets();
 	}
 
-	const hasWallets = $derived(scannerState.wallets.length > 0);
+	const hasWallets = $derived(step4State.wallets.length > 0);
 	const canPaste = $derived(textareaValue.trim().length > 0);
 </script>
 
@@ -101,12 +101,12 @@
 	{#if hasWallets}
 		<div class="wallet-list-section">
 			<div class="list-header">
-				<h3>Wallets to Scan ({scannerState.wallets.length})</h3>
+				<h3>Wallets to Scan ({step4State.wallets.length})</h3>
 				<button class="clear-btn" onclick={clearAll}>Clear All</button>
 			</div>
 
 			<div class="wallet-list">
-				{#each scannerState.wallets as wallet (wallet)}
+				{#each step4State.wallets as wallet (wallet)}
 					<div class="wallet-item">
 						<span class="wallet-address">{wallet}</span>
 						<button class="remove-btn" onclick={() => removeWallet(wallet)} title="Remove wallet">

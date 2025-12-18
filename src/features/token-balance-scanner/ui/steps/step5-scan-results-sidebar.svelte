@@ -1,10 +1,12 @@
 <script lang="ts">
 	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
-	import { scannerState } from '../../stores/scanner-state.svelte';
+	import { step3State } from '../../stores/step3-state.svelte';
+	import { step4State } from '../../stores/step4-state.svelte';
+	import { step5State } from '../../stores/step5-state.svelte';
 
-	const status = $derived(scannerState.scanStatus);
-	const progress = $derived(scannerState.progress);
-	const balances = $derived(scannerState.balances);
+	const status = $derived(step5State.scanStatus);
+	const progress = $derived(step5State.progress);
+	const balances = $derived(step5State.balances);
 	const totalWallets = $derived(balances.length);
 
 	// Get first wallet's tokens to calculate totals
@@ -39,11 +41,11 @@
 	{:else}
 		<div class="stats-box">
 			<div class="stat">
-				<span class="stat-value">{scannerState.wallets.length}</span>
+				<span class="stat-value">{step4State.wallets.length}</span>
 				<span class="stat-label">Wallets to Scan</span>
 			</div>
 			<div class="stat">
-				<span class="stat-value">{scannerState.selectedTokens.size}</span>
+				<span class="stat-value">{step3State.selectedTokens.size}</span>
 				<span class="stat-label">Tokens Selected</span>
 			</div>
 		</div>

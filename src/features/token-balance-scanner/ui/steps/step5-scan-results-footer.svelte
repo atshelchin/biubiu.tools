@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 	import StepFooter from '$lib/components/step/step-footer.svelte';
-	import { scannerState } from '../../stores/scanner-state.svelte';
+	import { step3State } from '../../stores/step3-state.svelte';
+	import { step4State } from '../../stores/step4-state.svelte';
+	import { step5State } from '../../stores/step5-state.svelte';
 
 	const stepManager = useStepManager();
 
-	const status = $derived(scannerState.scanStatus);
+	const status = $derived(step5State.scanStatus);
 
 	// Dynamic hint based on status
 	const footerHint = $derived.by(() => {
@@ -17,7 +19,9 @@
 	});
 
 	function handleNewScan() {
-		scannerState.reset();
+		step3State.reset();
+		step4State.reset();
+		step5State.reset();
 		stepManager.goTo(1);
 	}
 

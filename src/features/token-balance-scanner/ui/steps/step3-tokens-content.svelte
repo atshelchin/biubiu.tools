@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { useConnectStore } from '$lib/stores/connect.svelte';
-	import { scannerState } from '../../stores/scanner-state.svelte';
+	import { step3State } from '../../stores/step3-state.svelte';
 	import TokenSelector from '$lib/components/ui/token-selector.svelte';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
@@ -19,19 +19,19 @@
 
 	function handleSelectionChange(newSelection: SvelteSet<string>) {
 		// Clear existing and add new selections
-		scannerState.selectedTokens.clear();
-		newSelection.forEach((tokenId) => scannerState.selectedTokens.add(tokenId));
+		step3State.selectedTokens.clear();
+		newSelection.forEach((tokenId) => step3State.selectedTokens.add(tokenId));
 	}
 
 	function handleTokenAdded(tokenId: string) {
 		// Auto-select the newly added token
-		scannerState.addToken(tokenId);
+		step3State.addToken(tokenId);
 	}
 
 	function handleRemoveCustomToken(tokenId: string) {
 		// Remove from selection if it was selected
-		if (scannerState.selectedTokens.has(tokenId)) {
-			scannerState.removeToken(tokenId);
+		if (step3State.selectedTokens.has(tokenId)) {
+			step3State.removeToken(tokenId);
 		}
 	}
 
@@ -47,7 +47,7 @@
 				const chainPrefix = `${newChainId}:`;
 
 				// Clear tokens from other chains, keep only tokens for current chain
-				const filteredTokens = Array.from(scannerState.selectedTokens).filter((tokenId) =>
+				const filteredTokens = Array.from(step3State.selectedTokens).filter((tokenId) =>
 					tokenId.startsWith(chainPrefix)
 				);
 
@@ -57,8 +57,8 @@
 					filteredTokens.push(nativeTokenId);
 				}
 
-				scannerState.selectedTokens.clear();
-				filteredTokens.forEach((tokenId) => scannerState.selectedTokens.add(tokenId));
+				step3State.selectedTokens.clear();
+				filteredTokens.forEach((tokenId) => step3State.selectedTokens.add(tokenId));
 				initializedChainId = newChainId;
 			}
 		}
@@ -92,7 +92,7 @@
 					rpcUrl,
 					blockExplorer: currentNetwork.blockExplorer
 				}}
-				selectedTokenIds={scannerState.selectedTokens}
+				selectedTokenIds={step3State.selectedTokens}
 				onSelectionChange={handleSelectionChange}
 				onTokenAdded={handleTokenAdded}
 				onRemoveCustomToken={handleRemoveCustomToken}

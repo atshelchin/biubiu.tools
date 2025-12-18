@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 	import StepFooter from '$lib/components/step/step-footer.svelte';
-	import { scannerState } from '../../stores/scanner-state.svelte';
+	import { step4State } from '../../stores/step4-state.svelte';
 
 	const stepManager = useStepManager();
 
-	const canContinue = $derived(scannerState.wallets.length > 0);
+	const canContinue = $derived(step4State.wallets.length > 0);
 
 	function handleContinue() {
 		if (canContinue) {

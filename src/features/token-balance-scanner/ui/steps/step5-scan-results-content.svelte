@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { useConnectStore } from '$lib/stores/connect.svelte';
-	import { scannerState } from '../../stores/scanner-state.svelte';
+	import { step3State } from '../../stores/step3-state.svelte';
+	import { step4State } from '../../stores/step4-state.svelte';
+	import { step5State } from '../../stores/step5-state.svelte';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import {
 		scanMultipleWallets,
@@ -43,7 +45,7 @@
 			tokens.push(...erc20Tokens);
 		}
 
-		return tokens.filter((token) => scannerState.selectedTokens.has(token.id));
+		return tokens.filter((token) => step3State.selectedTokens.has(token.id));
 	});
 
 	// Get current network
@@ -54,10 +56,10 @@
 	);
 
 	// Scan status
-	const status = $derived(scannerState.scanStatus);
-	const progress = $derived(scannerState.progress);
-	const error = $derived(scannerState.error);
-	const balances = $derived(scannerState.balances);
+	const status = $derived(step5State.scanStatus);
+	const progress = $derived(step5State.progress);
+	const error = $derived(step5State.error);
+	const balances = $derived(step5State.balances);
 
 	// Get unique tokens from first wallet (for results display)
 	const resultTokens = $derived(balances[0]?.balances.map((b) => b.token) || []);
@@ -73,43 +75,43 @@
 	// Start scan
 	async function startScan() {
 		if (!currentNetwork || !connectStore.currentChainId) {
-			scannerState.setScanStatus('error');
-			scannerState.setError('No network selected');
+			step5State.setScanStatus('error');
+			step5State.setError('No network selected');
 			return;
 		}
 
 		const tokens = selectedTokens();
 		if (tokens.length === 0) {
-			scannerState.setScanStatus('error');
-			scannerState.setError('No tokens selected');
+			step5State.setScanStatus('error');
+			step5State.setError('No tokens selected');
 			return;
 		}
 
-		if (scannerState.wallets.length === 0) {
-			scannerState.setScanStatus('error');
-			scannerState.setError('No wallets added');
+		if (step4State.wallets.length === 0) {
+			step5State.setScanStatus('error');
+			step5State.setError('No wallets added');
 			return;
 		}
 
 		try {
-			scannerState.setScanStatus('scanning');
-			scannerState.setError(null);
+			step5State.setScanStatus('scanning');
+			step5State.setError(null);
 
 			const results = await scanMultipleWallets(
-				scannerState.wallets,
+				step4State.wallets,
 				tokens,
 				currentNetwork?.rpcEndpoints?.[0]?.url ?? '',
 				(prog) => {
-					scannerState.setProgress(prog);
+					step5State.setProgress(prog);
 				}
 			);
 
-			scannerState.setBalances(results);
-			scannerState.setScanStatus('completed');
+			step5State.setBalances(results);
+			step5State.setScanStatus('completed');
 		} catch (err) {
 			console.error('Scan failed:', err);
-			scannerState.setScanStatus('error');
-			scannerState.setError(err instanceof Error ? err.message : 'Scan failed');
+			step5State.setScanStatus('error');
+			step5State.setError(err instanceof Error ? err.message : 'Scan failed');
 		}
 	}
 
@@ -162,11 +164,11 @@
 			</div>
 			<div class="config-item">
 				<span class="config-label">Wallets:</span>
-				<span class="config-value">{scannerState.wallets.length}</span>
+				<span class="config-value">{step4State.wallets.length}</span>
 			</div>
 			<div class="config-item">
 				<span class="config-label">Tokens:</span>
-				<span class="config-value">{scannerState.selectedTokens.size}</span>
+				<span class="config-value">{step3State.selectedTokens.size}</span>
 			</div>
 		</div>
 
