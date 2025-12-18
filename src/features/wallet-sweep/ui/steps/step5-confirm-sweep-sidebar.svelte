@@ -3,7 +3,7 @@
 	import { step4State } from '@/features/wallet-sweep/stores/step4-state.svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
-	import StepSummary from '@/features/wallet-sweep/ui/components/step-summary.svelte';
+	import StepSummary from '$lib/components/step/step-summary.svelte';
 	import MembershipPromo from '@/features/wallet-sweep/ui/components/membership-promo.svelte';
 	import TokenBalanceDisplay from '$lib/components/ui/token-balance-display.svelte';
 	import { useTokenStats } from '@/features/wallet-sweep/composables/use-token-stats.svelte';

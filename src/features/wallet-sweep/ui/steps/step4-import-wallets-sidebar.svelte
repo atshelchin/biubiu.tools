@@ -2,7 +2,7 @@
 	import { fade } from 'svelte/transition';
 	import { step4State } from '@/features/wallet-sweep/stores/step4-state.svelte';
 	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
-	import StepSummary from '@/features/wallet-sweep/ui/components/step-summary.svelte';
+	import StepSummary from '$lib/components/step/step-summary.svelte';
 	import EmptyHint from '$lib/components/ui/empty-hint.svelte';
 	import TokenStatsPanel from '@/features/wallet-sweep/ui/components/token-stats-panel.svelte';
 	import ScanLogPanel from '@/features/wallet-sweep/ui/components/scan-log-panel.svelte';

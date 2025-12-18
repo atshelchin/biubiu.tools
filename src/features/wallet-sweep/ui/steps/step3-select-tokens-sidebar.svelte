@@ -2,7 +2,7 @@
 	import { fade } from 'svelte/transition';
 	import { step3State } from '@/features/wallet-sweep/stores/step3-state.svelte';
 	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
-	import StepSummary from '@/features/wallet-sweep/ui/components/step-summary.svelte';
+	import StepSummary from '$lib/components/step/step-summary.svelte';
 	import EmptyHint from '$lib/components/ui/empty-hint.svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
 
