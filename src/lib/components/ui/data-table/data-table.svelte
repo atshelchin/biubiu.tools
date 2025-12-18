@@ -272,8 +272,9 @@
 		border: 1px solid var(--color-border);
 		border-radius: var(--radius-lg);
 		overflow: hidden;
-		/* Minimum width close to mobile screen width, content scrolls horizontally */
-		min-width: 320px;
+		/* Prevent wrapper from expanding beyond parent - forces internal scroll */
+		width: 0;
+		min-width: 100%;
 	}
 
 	/* Header with pagination */

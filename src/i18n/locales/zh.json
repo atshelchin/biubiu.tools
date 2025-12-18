@@ -707,6 +707,123 @@
 					"long_press_hint": "长按确认",
 					"cancel_button": "取消"
 				}
+			},
+			"step5": {
+				"title": "扫描与查看结果",
+				"description": "扫描代币余额并导出数据",
+				"start": "开始扫描",
+				"new_scan": "开始新扫描",
+				"info": "点击「开始扫描」查询所有配置钱包的代币余额。将使用多个 RPC 端点并行扫描以提高速度。",
+				"config": {
+					"network": "网络",
+					"wallets": "钱包数量",
+					"tokens": "代币数量",
+					"rpcs": "RPC 端点"
+				},
+				"resume": {
+					"title": "继续上次扫描？",
+					"info": "进度：{progress}%（{addresses} 个地址，{tokens} 种代币）",
+					"last_activity": "上次活动",
+					"continue": "继续",
+					"discard": "丢弃"
+				},
+				"scanning": {
+					"title": "正在扫描余额...",
+					"success": "已完成",
+					"failed": "失败",
+					"pending": "待处理",
+					"pause": "暂停"
+				},
+				"paused": {
+					"title": "扫描已暂停",
+					"message": "扫描已暂停。",
+					"resume": "继续",
+					"new_scan": "新扫描"
+				},
+				"completed": {
+					"banner": "扫描完成 - 已扫描 {count} 个钱包"
+				},
+				"export": {
+					"title": "导出结果",
+					"copied": "已复制！",
+					"copy_summary": "复制摘要"
+				},
+				"totals": {
+					"title": "持仓汇总",
+					"wallets": "{count} 个钱包",
+					"wallets_short": "个钱包"
+				},
+				"filter": {
+					"title": "筛选",
+					"reset": "重置",
+					"balance_status": "余额状态",
+					"status_all": "全部",
+					"status_has_balance": "有余额",
+					"status_no_balance": "无余额",
+					"token": "代币",
+					"token_all": "所有代币",
+					"balance_range": "余额范围",
+					"min": "最小",
+					"max": "最大",
+					"showing": "显示 {filtered} / {total}",
+					"total": "共 {count} 条"
+				},
+				"balances": {
+					"title": "钱包余额",
+					"address": "地址",
+					"label": "标签",
+					"results": "条结果",
+					"no_results": "未找到结果"
+				},
+				"error": {
+					"title": "扫描失败",
+					"unknown": "发生未知错误",
+					"retry": "重试扫描",
+					"no_network": "未选择网络",
+					"no_tokens": "未选择代币",
+					"no_wallets": "未添加钱包"
+				},
+				"sidebar": {
+					"title": "扫描与结果",
+					"description": "扫描钱包代币余额并查看结果",
+					"progress": "进度",
+					"total": "总计",
+					"tasks": "任务",
+					"failed": "失败",
+					"queries_failed": "次查询失败",
+					"logs": "实时日志",
+					"completed": "已完成",
+					"remaining": "剩余",
+					"paused": "已暂停",
+					"scan_results": "扫描结果",
+					"addresses_scanned": "个地址已扫描",
+					"wallets_scanned": "已扫描钱包",
+					"with_balance": "个地址有余额",
+					"success": "成功",
+					"wallets_to_scan": "待扫描钱包",
+					"tokens_selected": "已选代币",
+					"export": "导出",
+					"new_scan": "开始新扫描",
+					"ready": "准备扫描",
+					"wallets": "个钱包",
+					"tokens": "种代币",
+					"info_title": "正在做什么？",
+					"info_1": "正在查询区块链代币余额",
+					"info_2": "使用多个 RPC 并行查询",
+					"info_3": "自动重试失败的请求",
+					"tip_completed": "导出 Excel 用于高级分析，或导出 CSV 用于简单表格。",
+					"tip_scanning": "您可以关闭浏览器，进度会自动保存。",
+					"tip_idle": "大规模扫描可能需要一些时间，但可以随时暂停和恢复。"
+				},
+				"footer": {
+					"hint_idle": "点击「开始扫描」开始",
+					"hint_scanning": "正在扫描中...",
+					"hint_paused": "扫描已暂停。继续或开始新扫描。",
+					"hint_completed": "导出结果或开始新扫描",
+					"hint_error": "重试扫描或返回修复问题",
+					"new_scan": "开始新扫描",
+					"continue": "继续"
+				}
 			}
 		},
 		"contract_events_scanner": {

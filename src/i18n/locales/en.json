@@ -707,6 +707,123 @@
 					"long_press_hint": "Hold to confirm",
 					"cancel_button": "Cancel"
 				}
+			},
+			"step5": {
+				"title": "Scan & View Results",
+				"description": "Scan token balances and export data",
+				"start": "Start Scanning",
+				"new_scan": "Start New Scan",
+				"info": "Click \"Start Scanning\" to query token balances for all configured wallets. Multiple RPC endpoints will be used in parallel for faster scanning.",
+				"config": {
+					"network": "Network",
+					"wallets": "Wallets",
+					"tokens": "Tokens",
+					"rpcs": "RPC Endpoints"
+				},
+				"resume": {
+					"title": "Resume Previous Scan?",
+					"info": "Progress: {progress}% ({addresses} addresses, {tokens} tokens)",
+					"last_activity": "Last activity",
+					"continue": "Continue",
+					"discard": "Discard"
+				},
+				"scanning": {
+					"title": "Scanning Balances...",
+					"success": "completed",
+					"failed": "failed",
+					"pending": "pending",
+					"pause": "Pause"
+				},
+				"paused": {
+					"title": "Scan Paused",
+					"message": "The scan has been paused.",
+					"resume": "Resume",
+					"new_scan": "New Scan"
+				},
+				"completed": {
+					"banner": "Scan Complete - {count} wallets scanned"
+				},
+				"export": {
+					"title": "Export Results",
+					"copied": "Copied!",
+					"copy_summary": "Copy Summary"
+				},
+				"totals": {
+					"title": "Total Holdings",
+					"wallets": "{count} wallets",
+					"wallets_short": "wallets"
+				},
+				"filter": {
+					"title": "Filter",
+					"reset": "Reset",
+					"balance_status": "Balance Status",
+					"status_all": "All",
+					"status_has_balance": "Has Balance",
+					"status_no_balance": "No Balance",
+					"token": "Token",
+					"token_all": "All Tokens",
+					"balance_range": "Balance Range",
+					"min": "Min",
+					"max": "Max",
+					"showing": "Showing {filtered} of {total}",
+					"total": "{count} results"
+				},
+				"balances": {
+					"title": "Wallet Balances",
+					"address": "Address",
+					"label": "Label",
+					"results": "results",
+					"no_results": "No results found"
+				},
+				"error": {
+					"title": "Scan Failed",
+					"unknown": "An unknown error occurred",
+					"retry": "Retry Scan",
+					"no_network": "No network selected",
+					"no_tokens": "No tokens selected",
+					"no_wallets": "No wallets added"
+				},
+				"sidebar": {
+					"title": "Scan & Results",
+					"description": "Scan wallets for token balances and view results",
+					"progress": "Progress",
+					"total": "total",
+					"tasks": "tasks",
+					"failed": "failed",
+					"queries_failed": "queries failed",
+					"logs": "Live Logs",
+					"completed": "Completed",
+					"remaining": "Remaining",
+					"paused": "Paused",
+					"scan_results": "Scan Results",
+					"addresses_scanned": "addresses scanned",
+					"wallets_scanned": "Wallets Scanned",
+					"with_balance": "addresses with balance",
+					"success": "Success",
+					"wallets_to_scan": "Wallets to Scan",
+					"tokens_selected": "Tokens Selected",
+					"export": "Export",
+					"new_scan": "Start New Scan",
+					"ready": "Ready to Scan",
+					"wallets": "wallets",
+					"tokens": "tokens",
+					"info_title": "What's Happening?",
+					"info_1": "Querying blockchain for token balances",
+					"info_2": "Using multiple RPCs in parallel",
+					"info_3": "Auto-retrying failed requests",
+					"tip_completed": "Export to Excel for advanced analysis, or CSV for simple spreadsheets.",
+					"tip_scanning": "You can close the browser - progress is saved automatically.",
+					"tip_idle": "Large scans may take time but can be paused and resumed anytime."
+				},
+				"footer": {
+					"hint_idle": "Click \"Start Scanning\" to begin",
+					"hint_scanning": "Scanning in progress...",
+					"hint_paused": "Scan paused. Resume or start a new scan.",
+					"hint_completed": "Export your results or start a new scan",
+					"hint_error": "Retry the scan or go back to fix the issue",
+					"new_scan": "Start New Scan",
+					"continue": "Continue"
+				}
 			}
 		},
 		"contract_events_scanner": {
