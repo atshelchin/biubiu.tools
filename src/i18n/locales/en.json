@@ -652,6 +652,24 @@
 					"continue": "Continue",
 					"hint": "Connect your wallet to continue"
 				}
+			},
+			"step3": {
+				"content": {
+					"title": "Select Tokens",
+					"description": "Choose which tokens to scan on {network}",
+					"description_fallback": "Choose which tokens to scan",
+					"wallet_not_connected_title": "Wallet Not Connected",
+					"wallet_not_connected_message": "Please connect your wallet first to select tokens",
+					"empty_message": "Select at least one token to scan"
+				},
+				"sidebar": {
+					"selected_tokens_title": "Selected Tokens",
+					"count_label": "Token Count",
+					"empty_hint": "Select at least one token to continue"
+				},
+				"footer": {
+					"hint": "Select at least one token to continue"
+				}
 			}
 		},
 		"contract_events_scanner": {

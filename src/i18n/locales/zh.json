@@ -652,6 +652,24 @@
 					"continue": "继续",
 					"hint": "连接钱包以继续"
 				}
+			},
+			"step3": {
+				"content": {
+					"title": "选择代币",
+					"description": "选择要在 {network} 上扫描的代币",
+					"description_fallback": "选择要扫描的代币",
+					"wallet_not_connected_title": "钱包未连接",
+					"wallet_not_connected_message": "请先连接钱包以选择代币",
+					"empty_message": "请至少选择一个代币进行扫描"
+				},
+				"sidebar": {
+					"selected_tokens_title": "已选代币",
+					"count_label": "代币数量",
+					"empty_hint": "请至少选择一个代币以继续"
+				},
+				"footer": {
+					"hint": "请至少选择一个代币以继续"
+				}
 			}
 		},
 		"contract_events_scanner": {
