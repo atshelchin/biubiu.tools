@@ -641,6 +641,17 @@
 				"step_5_name": "扫描与结果",
 				"step_5_text": "点击「开始扫描」查询所有钱包的代币余额，实时显示进度，筛选有余额的钱包，并将结果导出为 CSV 或 JSON 格式。",
 				"step_5_description": "扫描并导出结果"
+			},
+			"step1": {
+				"content": {
+					"title": "选择网络",
+					"description": "选择要扫描余额的区块链网络",
+					"loading": "正在加载网络配置..."
+				},
+				"footer": {
+					"continue": "继续",
+					"hint": "连接钱包以继续"
+				}
 			}
 		},
 		"contract_events_scanner": {

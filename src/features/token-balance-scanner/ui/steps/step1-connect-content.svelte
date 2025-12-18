@@ -6,8 +6,10 @@
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
 	import LoadingState from '$lib/components/ui/loading-state.svelte';
+	import { useI18n } from '@shelchin/i18n/svelte';
 
 	const connectStore = useConnectStore();
+	const i18n = useI18n();
 
 	// Loading state
 	const isLoading = $derived(!connectStore.isInitialized);
@@ -23,12 +25,12 @@
 
 <StepContent>
 	<StepContentHeader
-		title="Select Network"
-		description="Choose the blockchain network for balance scanning"
+		title={i18n.t('tools.token_balance_scanner.step1.content.title')}
+		description={i18n.t('tools.token_balance_scanner.step1.content.description')}
 	/>
 
 	{#if isLoading}
-		<LoadingState message="Loading network configuration..." />
+		<LoadingState message={i18n.t('tools.token_balance_scanner.step1.content.loading')} />
 	{:else}
 		<NetworkSelector {connectStore} {isLoading} bind:selectedChainId bind:selectedNetwork />
 

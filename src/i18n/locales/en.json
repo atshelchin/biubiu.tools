@@ -641,6 +641,17 @@
 				"step_5_name": "Scan & Results",
 				"step_5_text": "Start scanning and view results in real-time. Filter wallets with balances, see aggregate statistics, and export to CSV or JSON.",
 				"step_5_description": "Scan and export results"
+			},
+			"step1": {
+				"content": {
+					"title": "Select Network",
+					"description": "Choose the blockchain network for balance scanning",
+					"loading": "Loading network configuration..."
+				},
+				"footer": {
+					"continue": "Continue",
+					"hint": "Connect your wallet to continue"
+				}
 			}
 		},
 		"contract_events_scanner": {
