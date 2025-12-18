@@ -262,29 +262,29 @@ When implementing features that involve data import or generation (e.g., wallet 
 ```typescript
 // When switching import method
 function handleMethodChange(method: ImportMethod) {
-  importMethod = method;
-  // Clear errors from all import methods
-  methodA.clearError();
-  methodB.clearError();
-  // Clear the data list
-  state.clearData();
-  // Note: Do NOT clear input fields (keep them for user reference)
+	importMethod = method;
+	// Clear errors from all import methods
+	methodA.clearError();
+	methodB.clearError();
+	// Clear the data list
+	state.clearData();
+	// Note: Do NOT clear input fields (keep them for user reference)
 }
 
 // When generating/importing new data
 async function generateData() {
-  // Validate input first
-  if (!isValid) {
-    errorMessage = 'Validation error';
-    return;
-  }
+	// Validate input first
+	if (!isValid) {
+		errorMessage = 'Validation error';
+		return;
+	}
 
-  // Clear existing data before generating new ones
-  state.clearData();
+	// Clear existing data before generating new ones
+	state.clearData();
 
-  // Then generate/import new data
-  isGenerating = true;
-  // ... generation logic
+	// Then generate/import new data
+	isGenerating = true;
+	// ... generation logic
 }
 ```
 
