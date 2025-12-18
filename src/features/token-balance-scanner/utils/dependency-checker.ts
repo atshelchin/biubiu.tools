@@ -1,13 +1,14 @@
 /**
  * Token-balance-scanner specific dependency checker
  * Orchestrates the dependency checks for token-balance-scanner tool
- * Only checks RPC endpoint and Multicall3 (no EIP-7702, CREATE2, BiuBiuPremium, TokenSweep)
  */
 
 import type { DependencyCheck } from '$lib/utils/blockchain-checker';
 import {
 	checkRPCEndpoint,
+	checkCREATE2Proxy,
 	checkMulticall3,
+	checkBiuBiuPremium,
 	calculateCheckSummary
 } from '$lib/utils/blockchain-checker';
 
@@ -22,7 +23,6 @@ type TranslateFn = (key: string, params?: Record<string, string | number>) => st
 /**
  * Run all dependency checks for token-balance-scanner
  * This orchestrates the check sequence specific to token-balance-scanner requirements
- * Only checks RPC endpoint and Multicall3 (simpler than wallet-sweep)
  */
 export async function checkAllDependencies(
 	rpcUrl: string,
@@ -41,9 +41,17 @@ export async function checkAllDependencies(
 		return checks;
 	}
 
-	// 2. Check Multicall3 (required for batch balance queries)
+	// 2. Check CREATE2 Proxy (Deterministic Deployment Proxy)
+	const create2Check = await checkCREATE2Proxy(rpcUrl, t);
+	checks.push(create2Check);
+
+	// 3. Check Multicall3 (required for batch balance queries)
 	const multicallCheck = await checkMulticall3(rpcUrl, t);
 	checks.push(multicallCheck);
+
+	// 4. Check BiuBiuPremium
+	const biubiuPremiumCheck = await checkBiuBiuPremium(rpcUrl, t);
+	checks.push(biubiuPremiumCheck);
 
 	return checks;
 }
