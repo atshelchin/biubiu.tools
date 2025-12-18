@@ -160,11 +160,14 @@ export function useXpubImport() {
 				? await deriveWithParallelWorkers(request)
 				: await deriveWithSingleWorker(request);
 
-			// Add addresses to state with derivation paths
+			// Add addresses to state with derivation paths (batch operation for performance)
 			if (result.addresses.length > 0) {
-				result.addresses.forEach((item) => {
-					step4State.addWallet(item.address, item.derivationPath);
-				});
+				step4State.addWallets(
+					result.addresses.map((item) => ({
+						address: item.address,
+						label: item.derivationPath
+					}))
+				);
 				// Don't clear input - keep it for user reference
 			} else {
 				errorMessage = 'No addresses were derived';

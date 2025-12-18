@@ -20,6 +20,25 @@ class Step4StateClass {
 		}
 	}
 
+	// Add multiple wallets at once (batch operation for performance)
+	addWallets(items: Array<{ address: Address; label?: string }>) {
+		// Filter out duplicates
+		const existingSet = new Set(this.wallets);
+		const newItems = items.filter((item) => !existingSet.has(item.address));
+
+		if (newItems.length === 0) return;
+
+		// Batch update wallets array (single reactive update)
+		this.wallets = [...this.wallets, ...newItems.map((item) => item.address)];
+
+		// Batch update labels
+		for (const item of newItems) {
+			if (item.label) {
+				this.walletLabels.set(item.address, item.label);
+			}
+		}
+	}
+
 	// Remove wallet
 	removeWallet(address: Address) {
 		this.wallets = this.wallets.filter((w) => w !== address);
