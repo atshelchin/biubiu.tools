@@ -34,9 +34,10 @@ export function useXpubImport() {
 	let errorMessage = $state('');
 
 	// Validate xpub format
+	// Supports mainnet (xpub, ypub, zpub) and testnet (tpub, upub, vpub)
 	function validateXpub(xpub: string): boolean {
 		const trimmed = xpub.trim();
-		return /^(xpub|ypub|zpub)[a-zA-Z0-9]{107,111}$/.test(trimmed);
+		return /^(xpub|ypub|zpub|tpub|upub|vpub)[a-zA-Z0-9]{107,111}$/.test(trimmed);
 	}
 
 	// Calculate total addresses to derive
@@ -134,7 +135,8 @@ export function useXpubImport() {
 		}
 
 		if (!validateXpub(trimmedXpub)) {
-			errorMessage = 'Invalid xpub format. Must start with xpub, ypub, or zpub.';
+			errorMessage =
+				'Invalid extended public key format. Must start with xpub/ypub/zpub (mainnet) or tpub/upub/vpub (testnet).';
 			return;
 		}
 
