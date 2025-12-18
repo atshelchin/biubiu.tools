@@ -1,378 +1,267 @@
 <script lang="ts">
+	import { useI18n } from '@shelchin/i18n/svelte';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
+	import StepContent from '$lib/components/step/step-content.svelte';
+	import SegmentedControl from '$lib/components/ui/segmented-control.svelte';
+	import AddressTextImport from '$lib/components/ui/address-text-import.svelte';
+	import XpubImportForm from '$lib/components/ui/xpub-import-form.svelte';
+	import WalletList from '$lib/components/ui/wallet-list.svelte';
+	import InlineAlert from '$lib/components/ui/inline-alert.svelte';
+	import ConfirmDialog from '$lib/components/ui/confirm-dialog.svelte';
 	import { step4State } from '../../stores/step4-state.svelte';
-	import { isAddress, type Address } from 'viem';
-	import { Trash2, Upload } from '@lucide/svelte';
+	import { useXpubImport } from '../../composables/use-xpub-import.svelte';
+	import type { Address } from 'viem';
 
-	let textareaValue = $state('');
-	let fileInput: HTMLInputElement;
+	const i18n = useI18n();
+	const xpubImport = useXpubImport();
 
-	// Parse addresses from text (line by line)
-	function parseAddresses(text: string): Address[] {
-		return text
-			.split('\n')
-			.map((line) => line.trim())
-			.filter((line) => line && isAddress(line)) as Address[];
+	// Import method type
+	type ImportMethod = 'address' | 'xpub';
+	let importMethod = $state<ImportMethod>('address');
+
+	// Address text import state
+	let addressText = $state('');
+
+	// Dialog state
+	let showRemoveDialog = $state(false);
+	let showClearAllDialog = $state(false);
+	let walletToRemove = $state<string>('');
+
+	// Derived state
+	const wallets = $derived(step4State.wallets);
+	const walletCount = $derived(wallets.length);
+
+	// Import method options
+	const importMethodOptions = $derived([
+		{
+			value: 'address' as const,
+			label: i18n.t('tools.token_balance_scanner.step4.import_method.address') || 'Addresses'
+		},
+		{
+			value: 'xpub' as const,
+			label: i18n.t('tools.token_balance_scanner.step4.import_method.xpub') || 'Extended Public Key'
+		}
+	]);
+
+	// Convert wallets to format expected by WalletList
+	const walletListItems = $derived(
+		wallets.map((address, index) => ({
+			id: `wallet-${index}`,
+			address,
+			derivationPath: step4State.walletLabels.get(address)
+		}))
+	);
+
+	// Handle method change
+	function handleMethodChange(method: ImportMethod) {
+		importMethod = method;
+		// Clear errors when switching
+		xpubImport.clearError();
 	}
 
-	// Handle paste
-	function handlePaste() {
-		const addresses = parseAddresses(textareaValue);
+	// Handle address import
+	function handleAddressImport(addresses: Address[]) {
 		addresses.forEach((addr) => step4State.addWallet(addr));
-		textareaValue = '';
+		addressText = '';
 	}
 
-	// Handle file upload
-	async function handleFileUpload(event: Event) {
-		const input = event.target as HTMLInputElement;
-		const file = input.files?.[0];
-		if (!file) return;
-
-		const text = await file.text();
-		const addresses = parseAddresses(text);
-		addresses.forEach((addr) => step4State.addWallet(addr));
-
-		// Reset input
-		input.value = '';
+	// Handle xpub derivation
+	async function handleXpubDerive() {
+		await xpubImport.deriveAddresses();
 	}
 
-	// Trigger file input
-	function triggerFileInput() {
-		fileInput?.click();
+	// Handle wallet removal
+	function handleRemoveWallet(address: string) {
+		walletToRemove = address;
+		showRemoveDialog = true;
 	}
 
-	// Remove wallet
-	function removeWallet(address: Address) {
-		step4State.removeWallet(address);
+	function confirmRemoveWallet() {
+		if (walletToRemove) {
+			step4State.removeWallet(walletToRemove as Address);
+			walletToRemove = '';
+		}
+		showRemoveDialog = false;
 	}
 
-	// Clear all wallets
-	function clearAll() {
+	// Handle clear all
+	function handleClearAll() {
+		showClearAllDialog = true;
+	}
+
+	function confirmClearAll() {
 		step4State.clearWallets();
+		showClearAllDialog = false;
 	}
-
-	const hasWallets = $derived(step4State.wallets.length > 0);
-	const canPaste = $derived(textareaValue.trim().length > 0);
 </script>
 
-<div class="step-content">
+<StepContent>
 	<StepContentHeader
-		title="Import Wallet Addresses"
-		description="Add wallets to scan for balances"
+		title={i18n.t('tools.token_balance_scanner.step4.content.title') || 'Import Wallet Addresses'}
+		description={i18n.t('tools.token_balance_scanner.step4.content.description') ||
+			'Add wallet addresses to scan for token balances'}
 	/>
 
-	<!-- Input Methods -->
-	<div class="input-section">
-		<div class="input-method">
-			<label for="addresses-textarea">Paste Addresses</label>
-			<textarea
-				id="addresses-textarea"
-				bind:value={textareaValue}
-				placeholder="Paste wallet addresses here (one per line)&#10;0x1234...&#10;0x5678...&#10;0xabcd..."
-				rows="8"
-			></textarea>
-			<button class="action-btn primary" onclick={handlePaste} disabled={!canPaste}>
-				Add Addresses ({parseAddresses(textareaValue).length})
-			</button>
+	<!-- Import Method Selector -->
+	<div>
+		<div class="form-label">
+			{i18n.t('tools.token_balance_scanner.step4.content.choose_method') || 'Choose Import Method'}
 		</div>
-
-		<div class="divider">
-			<span>OR</span>
-		</div>
-
-		<div class="input-method">
-			<div class="method-label">Upload File</div>
-			<input
-				type="file"
-				accept=".txt,.csv"
-				bind:this={fileInput}
-				onchange={handleFileUpload}
-				style="display: none;"
-			/>
-			<button class="action-btn secondary" onclick={triggerFileInput}>
-				<Upload size={20} />
-				<span>Upload CSV/TXT File</span>
-			</button>
-			<p class="help-text">Upload a file with one address per line</p>
-		</div>
+		<SegmentedControl
+			options={importMethodOptions}
+			bind:value={importMethod}
+			onValueChange={handleMethodChange}
+		/>
 	</div>
 
+	<!-- Address Text Import -->
+	{#if importMethod === 'address'}
+		<AddressTextImport
+			bind:value={addressText}
+			onImport={handleAddressImport}
+			placeholder={i18n.t('tools.token_balance_scanner.step4.content.address_placeholder') ||
+				'Paste wallet addresses here (one per line)\n0x1234...\n0x5678...'}
+			rows={8}
+		/>
+	{/if}
+
+	<!-- Xpub Import -->
+	{#if importMethod === 'xpub'}
+		<XpubImportForm
+			bind:xpubText={xpubImport.xpubText}
+			bind:pathType={xpubImport.pathType}
+			bind:startIndex={xpubImport.startIndex}
+			bind:endIndex={xpubImport.endIndex}
+			bind:startYear={xpubImport.startYear}
+			bind:endYear={xpubImport.endYear}
+			bind:includeMonth={xpubImport.includeMonth}
+			bind:includeDay={xpubImport.includeDay}
+			bind:useLeadingZeros={xpubImport.useLeadingZeros}
+			isGenerating={xpubImport.isGenerating}
+			generationProgress={xpubImport.generationProgress}
+			onGenerate={handleXpubDerive}
+		/>
+	{/if}
+
+	<!-- Error Message -->
+	{#if xpubImport.errorMessage}
+		<InlineAlert variant="error" message={xpubImport.errorMessage} />
+	{/if}
+
 	<!-- Wallet List -->
-	{#if hasWallets}
-		<div class="wallet-list-section">
-			<div class="list-header">
-				<h3>Wallets to Scan ({step4State.wallets.length})</h3>
-				<button class="clear-btn" onclick={clearAll}>Clear All</button>
+	{#if walletCount > 0}
+		<div class="form-section">
+			<div class="wallet-list-header">
+				<div class="form-label">
+					{i18n.t('tools.token_balance_scanner.step4.content.wallet_list.title') || 'Wallets'}
+					<span class="wallet-count">
+						{i18n.t('tools.token_balance_scanner.step4.content.wallet_list.count', {
+							count: walletCount
+						}) || `(${walletCount})`}
+					</span>
+				</div>
+				<button class="btn-text-danger" onclick={handleClearAll}>
+					{i18n.t('tools.token_balance_scanner.step4.content.wallet_list.clear_all') || 'Clear All'}
+				</button>
 			</div>
 
-			<div class="wallet-list">
-				{#each step4State.wallets as wallet (wallet)}
-					<div class="wallet-item">
-						<span class="wallet-address">{wallet}</span>
-						<button class="remove-btn" onclick={() => removeWallet(wallet)} title="Remove wallet">
-							<Trash2 size={16} />
-						</button>
-					</div>
-				{/each}
-			</div>
-		</div>
-	{:else}
-		<div class="empty-state">
-			<p>Add wallet addresses using one of the methods above</p>
+			<WalletList
+				wallets={walletListItems}
+				pageSize={20}
+				showPagination={true}
+				canRemove={true}
+				onRemove={handleRemoveWallet}
+				emptyMessage={i18n.t('tools.token_balance_scanner.step4.content.wallet_list.empty') ||
+					'No wallets added yet'}
+				showDerivationPath={importMethod === 'xpub'}
+			/>
 		</div>
 	{/if}
-</div>
+</StepContent>
+
+<!-- Confirm Dialogs -->
+<ConfirmDialog
+	bind:open={showRemoveDialog}
+	title={i18n.t('tools.token_balance_scanner.step4.dialogs.remove_wallet_title') || 'Remove Wallet'}
+	message={i18n.t('tools.token_balance_scanner.step4.dialogs.remove_wallet_message', {
+		address: walletToRemove
+	}) || `Are you sure you want to remove this wallet?\n${walletToRemove}`}
+	confirmText={i18n.t('tools.token_balance_scanner.step4.dialogs.remove_button') || 'Remove'}
+	cancelText={i18n.t('tools.token_balance_scanner.step4.dialogs.cancel_button') || 'Cancel'}
+	variant="danger"
+	requireLongPress={false}
+	onConfirm={confirmRemoveWallet}
+	onCancel={() => {
+		walletToRemove = '';
+		showRemoveDialog = false;
+	}}
+/>
+
+<ConfirmDialog
+	bind:open={showClearAllDialog}
+	title={i18n.t('tools.token_balance_scanner.step4.dialogs.clear_all_title') || 'Clear All Wallets'}
+	message={i18n.t('tools.token_balance_scanner.step4.dialogs.clear_all_message', {
+		count: walletCount
+	}) || `Are you sure you want to remove all ${walletCount} wallets?`}
+	confirmText={i18n.t('tools.token_balance_scanner.step4.dialogs.clear_all_button') || 'Clear All'}
+	confirmHint={i18n.t('tools.token_balance_scanner.step4.dialogs.long_press_hint') ||
+		'Hold to confirm'}
+	cancelText={i18n.t('tools.token_balance_scanner.step4.dialogs.cancel_button') || 'Cancel'}
+	variant="danger"
+	requireLongPress={true}
+	longPressDuration={3000}
+	onConfirm={confirmClearAll}
+	onCancel={() => (showClearAllDialog = false)}
+/>
 
 <style>
-	.step-content {
-		padding: var(--space-6);
+	.form-section {
+		margin-bottom: var(--space-6);
 	}
 
-	/* Input Section */
-	.input-section {
-		margin-top: var(--space-6);
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-6);
-	}
-
-	.input-method {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-3);
-	}
-
-	.input-method label {
-		font-size: var(--text-base);
+	.form-label {
+		display: block;
+		font-size: var(--text-sm);
 		font-weight: var(--font-semibold);
-		color: var(--gray-900);
-	}
-
-	:global([data-theme='dark']) .input-method label {
-		color: var(--gray-100);
-	}
-
-	textarea {
-		width: 100%;
-		padding: var(--space-3);
-		background: var(--color-panel-1);
-		border: 2px solid var(--color-border);
-		border-radius: var(--radius-md);
-		font-family: monospace;
-		font-size: var(--text-sm);
-		color: var(--gray-900);
-		resize: vertical;
-		min-height: 120px;
-	}
-
-	:global([data-theme='dark']) textarea {
-		color: var(--gray-100);
-	}
-
-	textarea:focus {
-		outline: none;
-		border-color: var(--color-primary);
-	}
-
-	.action-btn {
-		padding: var(--space-3) var(--space-6);
-		border: none;
-		border-radius: var(--radius-md);
-		font-size: var(--text-base);
-		font-weight: var(--font-medium);
-		cursor: pointer;
-		transition: all 0.2s ease;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: var(--space-2);
-	}
-
-	.action-btn.primary {
-		background: var(--color-primary);
-		color: white;
-	}
-
-	.action-btn.primary:hover:not(:disabled) {
-		transform: translateY(-1px);
-		box-shadow: 0 4px 12px hsla(210, 100%, 50%, 0.3);
-	}
-
-	.action-btn.primary:disabled {
-		opacity: 0.5;
-		cursor: not-allowed;
-	}
-
-	.action-btn.secondary {
-		background: var(--color-panel-1);
-		border: 2px solid var(--color-border);
-		color: var(--gray-900);
-	}
-
-	:global([data-theme='dark']) .action-btn.secondary {
-		color: var(--gray-100);
-	}
-
-	.action-btn.secondary:hover {
-		border-color: var(--color-primary);
-		background: var(--color-panel-2);
-	}
-
-	.help-text {
-		margin: 0;
-		font-size: var(--text-sm);
-		color: var(--gray-600);
-	}
-
-	:global([data-theme='dark']) .help-text {
-		color: var(--gray-400);
-	}
-
-	/* Divider */
-	.divider {
-		display: flex;
-		align-items: center;
-		gap: var(--space-4);
-		color: var(--gray-500);
-		font-size: var(--text-sm);
-		font-weight: var(--font-medium);
-	}
-
-	.divider::before,
-	.divider::after {
-		content: '';
-		flex: 1;
-		height: 1px;
-		background: var(--color-border);
-	}
-
-	/* Wallet List */
-	.wallet-list-section {
-		margin-top: var(--space-8);
-	}
-
-	.list-header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: var(--space-4);
-	}
-
-	.list-header h3 {
-		margin: 0;
-		font-size: var(--text-lg);
-		font-weight: var(--font-semibold);
-		color: var(--gray-900);
-	}
-
-	:global([data-theme='dark']) .list-header h3 {
-		color: var(--gray-100);
-	}
-
-	.clear-btn {
-		padding: var(--space-2) var(--space-4);
-		background: transparent;
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-md);
-		font-size: var(--text-sm);
-		font-weight: var(--font-medium);
 		color: var(--gray-700);
-		cursor: pointer;
-		transition: all 0.2s ease;
+		margin-bottom: var(--space-2);
 	}
 
-	:global([data-theme='dark']) .clear-btn {
+	:global([data-theme='dark']) .form-label {
 		color: var(--gray-300);
 	}
 
-	.clear-btn:hover {
-		background: var(--color-panel-2);
-		border-color: hsl(0, 70%, 50%);
-		color: hsl(0, 70%, 50%);
-	}
-
-	.wallet-list {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-2);
-		max-height: 400px;
-		overflow-y: auto;
-		padding: var(--space-3);
-		background: var(--color-panel-1);
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-md);
-	}
-
-	.wallet-item {
+	.wallet-list-header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: var(--space-2) var(--space-3);
-		background: var(--color-panel-0);
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-sm);
+		margin-bottom: var(--space-3);
 		gap: var(--space-3);
+		flex-wrap: wrap;
 	}
 
-	.wallet-address {
-		font-family: monospace;
-		font-size: var(--text-sm);
-		color: var(--gray-700);
-		word-break: break-all;
-		flex: 1;
+	.wallet-count {
+		color: var(--color-primary);
+		margin-left: var(--space-1);
 	}
 
-	:global([data-theme='dark']) .wallet-address {
-		color: var(--gray-300);
-	}
-
-	.remove-btn {
-		padding: var(--space-1);
-		background: transparent;
+	.btn-text-danger {
+		background: none;
 		border: none;
-		color: var(--gray-500);
-		cursor: pointer;
-		transition: all 0.2s ease;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border-radius: var(--radius-sm);
-	}
-
-	.remove-btn:hover {
-		background: hsla(0, 70%, 95%, 1);
 		color: hsl(0, 70%, 50%);
+		cursor: pointer;
+		font-size: var(--text-sm);
+		padding: var(--space-1) var(--space-2);
+		border-radius: var(--radius-sm);
+		transition: all 0.2s ease;
 	}
 
-	:global([data-theme='dark']) .remove-btn:hover {
-		background: hsla(0, 70%, 20%, 0.3);
-		color: hsl(0, 70%, 60%);
+	.btn-text-danger:hover {
+		color: hsl(0, 80%, 40%);
+		background: hsl(0, 70%, 95%);
 	}
 
-	/* Empty State */
-	.empty-state {
-		margin-top: var(--space-8);
-		padding: var(--space-6);
-		text-align: center;
-		background: var(--color-panel-1);
-		border-radius: var(--radius-lg);
-		border: 2px dashed var(--color-border);
-	}
-
-	.empty-state p {
-		margin: 0;
-		font-size: var(--text-base);
-		color: var(--gray-600);
-	}
-
-	:global([data-theme='dark']) .empty-state p {
-		color: var(--gray-400);
-	}
-
-	/* Responsive */
-	@media (max-width: 640px) {
-		.step-content {
-			padding: var(--space-3);
-		}
+	:global([data-theme='dark']) .btn-text-danger:hover {
+		background: hsl(0, 70%, 20%);
 	}
 </style>

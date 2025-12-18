@@ -670,6 +670,43 @@
 				"footer": {
 					"hint": "Select at least one token to continue"
 				}
+			},
+			"step4": {
+				"import_method": {
+					"address": "Addresses",
+					"xpub": "Extended Public Key"
+				},
+				"content": {
+					"title": "Import Wallet Addresses",
+					"description": "Add wallet addresses to scan for token balances",
+					"choose_method": "Choose Import Method",
+					"address_placeholder": "Paste wallet addresses here (one per line)\n0x1234...\n0x5678...",
+					"wallet_list": {
+						"title": "Wallets",
+						"count": "({count})",
+						"clear_all": "Clear All",
+						"empty": "No wallets added yet"
+					}
+				},
+				"sidebar": {
+					"title": "Summary",
+					"description": "Add wallet addresses to scan",
+					"total_label": "Total Wallets",
+					"empty_hint": "No wallets added yet"
+				},
+				"footer": {
+					"hint": "Add at least one wallet to continue"
+				},
+				"dialogs": {
+					"remove_wallet_title": "Remove Wallet",
+					"remove_wallet_message": "Are you sure you want to remove this wallet?\n{address}",
+					"remove_button": "Remove",
+					"clear_all_title": "Clear All Wallets",
+					"clear_all_message": "Are you sure you want to remove all {count} wallets?",
+					"clear_all_button": "Clear All",
+					"long_press_hint": "Hold to confirm",
+					"cancel_button": "Cancel"
+				}
 			}
 		},
 		"contract_events_scanner": {
@@ -1225,6 +1262,20 @@
 		}
 	},
 	"components": {
+		"address_text_import": {
+			"placeholder": "Paste wallet addresses here (one per line)\n0x1234...\n0x5678...\n0xabcd...",
+			"hint": "Enter one address per line",
+			"import_button": "Import Addresses ({count})",
+			"importing": "Importing... {progress}%",
+			"column_label": "Address"
+		},
+		"xpub_import_form": {
+			"placeholder": "Enter your extended public key (xpub, ypub, or zpub)...",
+			"hint": "xpub allows address derivation without exposing private keys",
+			"derivation_path": "Derivation Range",
+			"derive_button": "Derive Addresses",
+			"deriving": "Deriving... {progress}%"
+		},
 		"gas_funding": {
 			"title": "Fund Gas",
 			"target_wallet": "Target Wallet",

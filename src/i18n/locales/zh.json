@@ -670,6 +670,43 @@
 				"footer": {
 					"hint": "请至少选择一个代币以继续"
 				}
+			},
+			"step4": {
+				"import_method": {
+					"address": "地址",
+					"xpub": "扩展公钥"
+				},
+				"content": {
+					"title": "导入钱包地址",
+					"description": "添加要扫描代币余额的钱包地址",
+					"choose_method": "选择导入方式",
+					"address_placeholder": "在此粘贴钱包地址（每行一个）\n0x1234...\n0x5678...",
+					"wallet_list": {
+						"title": "钱包列表",
+						"count": "({count})",
+						"clear_all": "清空全部",
+						"empty": "暂未添加钱包"
+					}
+				},
+				"sidebar": {
+					"title": "汇总",
+					"description": "添加要扫描的钱包地址",
+					"total_label": "钱包总数",
+					"empty_hint": "暂未添加钱包"
+				},
+				"footer": {
+					"hint": "请至少添加一个钱包地址以继续"
+				},
+				"dialogs": {
+					"remove_wallet_title": "移除钱包",
+					"remove_wallet_message": "确定要移除此钱包吗？\n{address}",
+					"remove_button": "移除",
+					"clear_all_title": "清空所有钱包",
+					"clear_all_message": "确定要移除全部 {count} 个钱包吗？",
+					"clear_all_button": "清空全部",
+					"long_press_hint": "长按确认",
+					"cancel_button": "取消"
+				}
 			}
 		},
 		"contract_events_scanner": {
@@ -1211,6 +1248,20 @@
 		}
 	},
 	"components": {
+		"address_text_import": {
+			"placeholder": "在此粘贴钱包地址（每行一个）\n0x1234...\n0x5678...\n0xabcd...",
+			"hint": "每行输入一个地址",
+			"import_button": "导入地址 ({count})",
+			"importing": "导入中... {progress}%",
+			"column_label": "地址"
+		},
+		"xpub_import_form": {
+			"placeholder": "输入扩展公钥（xpub、ypub 或 zpub）...",
+			"hint": "xpub 可以派生地址而不暴露私钥",
+			"derivation_path": "派生范围",
+			"derive_button": "派生地址",
+			"deriving": "派生中... {progress}%"
+		},
 		"gas_funding": {
 			"title": "充值 Gas",
 			"target_wallet": "目标钱包",
