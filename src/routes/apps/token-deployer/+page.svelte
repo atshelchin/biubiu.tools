@@ -20,7 +20,7 @@
 		appTitle: i18n.t('tools.token_deployer.title'),
 		appDescription: i18n.t('tools.token_deployer.description'),
 		walletConnect: {
-			chains: [mainnet, polygon, base, bsc, arbitrum, optimism],
+			chains: [mainnet, base, bsc, polygon, arbitrum, optimism],
 			storageKey: 'biubiu-tools-token-deployer'
 		},
 		stepComponents

@@ -17,7 +17,7 @@
 		appTitle: i18n.t('tools.token_distribution.title'),
 		appDescription: i18n.t('tools.token_distribution.description'),
 		walletConnect: {
-			chains: [mainnet, polygon, base, bsc, arbitrum, optimism],
+			chains: [mainnet, base, bsc, polygon, arbitrum, optimism],
 			storageKey: 'biubiu-tools-token-distribution'
 		},
 		stepComponents

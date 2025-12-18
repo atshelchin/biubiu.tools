@@ -17,7 +17,7 @@
 		appTitle: i18n.t('tools.dex_moonshot_trader.title'),
 		appDescription: i18n.t('tools.dex_moonshot_trader.description'),
 		walletConnect: {
-			chains: [mainnet, polygon, base, bsc, arbitrum, optimism],
+			chains: [mainnet, base, bsc, polygon, arbitrum, optimism],
 			storageKey: 'biubiu-tools-dex-moonshot-trader'
 		},
 		stepComponents

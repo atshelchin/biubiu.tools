@@ -6,6 +6,7 @@
  */
 
 import type { Address } from 'viem';
+import { nanoid } from 'nanoid';
 
 // ============================================================================
 // Token & Balance Types
@@ -302,9 +303,9 @@ export function parseTaskKey(key: string): { address: Address; tokenId: string }
 	return { address: address as Address, tokenId };
 }
 
-/** Generate unique session ID */
+/** Generate unique session ID using nanoid */
 export function generateSessionId(): string {
-	return `scan_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+	return nanoid();
 }
 
 /** Calculate progress from stats */

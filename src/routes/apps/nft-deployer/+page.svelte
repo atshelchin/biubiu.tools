@@ -18,7 +18,7 @@
 		appTitle: i18n.t('tools.nft_deployer.title'),
 		appDescription: i18n.t('tools.nft_deployer.description'),
 		walletConnect: {
-			chains: [mainnet, polygon, base, bsc, arbitrum, optimism],
+			chains: [mainnet, base, bsc, polygon, arbitrum, optimism],
 			storageKey: 'biubiu-tools-nft-deployer'
 		},
 		stepComponents

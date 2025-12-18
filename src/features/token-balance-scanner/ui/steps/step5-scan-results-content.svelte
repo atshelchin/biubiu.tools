@@ -184,7 +184,7 @@
 				balances: result.balances.map((b) => ({
 					tokenId: b.tokenId,
 					balance: b.balance,
-					formattedBalance: b.formattedBalance || '0'
+					formatted: b.formatted
 				})),
 				hasBalance: result.balances.some((b) => b.balance > 0n)
 			}));

@@ -140,7 +140,7 @@
 				items: faqs
 			},
 			walletConnect: {
-				chains: [mainnet, polygon, base, bsc, arbitrum, optimism],
+				chains: [mainnet, base, bsc, polygon, arbitrum, optimism],
 				storageKey: 'biubiu-tools-token-balance-scanner'
 			},
 			stepComponents

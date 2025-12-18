@@ -17,7 +17,7 @@
 		appTitle: i18n.t('tools.assets_monitor.title'),
 		appDescription: i18n.t('tools.assets_monitor.description'),
 		walletConnect: {
-			chains: [mainnet, polygon, base, bsc, arbitrum, optimism],
+			chains: [mainnet, base, bsc, polygon, arbitrum, optimism],
 			storageKey: 'biubiu-tools-assets-monitor'
 		},
 		stepComponents

@@ -238,14 +238,19 @@
 		{#snippet cellSnippet({ row, column, value })}
 			{#if column.id === 'address'}
 				<div class="cell-address">
-					<span class="address-text" title={row.address}>{shortenAddress(row.address)}</span>
-					<button class="copy-btn" onclick={() => copyAddress(row.address)}>
-						{#if copiedAddress === row.address}
-							<Check size={14} />
-						{:else}
-							<Copy size={14} />
-						{/if}
-					</button>
+					<div class="address-row">
+						<span class="address-text" title={row.address}>{shortenAddress(row.address)}</span>
+						<button class="copy-btn" onclick={() => copyAddress(row.address)}>
+							{#if copiedAddress === row.address}
+								<Check size={14} />
+							{:else}
+								<Copy size={14} />
+							{/if}
+						</button>
+					</div>
+					{#if row.label}
+						<span class="derivation-path">{row.label}</span>
+					{/if}
 				</div>
 			{:else}
 				{@const token = tokens.find((t) => t.id === column.id)}
@@ -347,6 +352,12 @@
 	/* Cell styles */
 	.cell-address {
 		display: flex;
+		flex-direction: column;
+		gap: 2px;
+	}
+
+	.address-row {
+		display: flex;
 		align-items: center;
 		gap: var(--space-2);
 	}
@@ -354,6 +365,16 @@
 	.address-text {
 		font-family: monospace;
 		font-size: var(--text-xs);
+	}
+
+	.derivation-path {
+		font-family: monospace;
+		font-size: 10px;
+		color: var(--gray-400);
+	}
+
+	:global([data-theme='dark']) .derivation-path {
+		color: var(--gray-500);
 	}
 
 	.copy-btn {

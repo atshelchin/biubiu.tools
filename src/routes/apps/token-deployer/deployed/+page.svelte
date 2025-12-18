@@ -14,7 +14,7 @@
 	// Initialize wallet connect
 	const store = createConnectStore(
 		createConnectConfig({
-			chains: [mainnet, polygon, base, bsc, arbitrum, optimism],
+			chains: [mainnet, base, bsc, polygon, arbitrum, optimism],
 			storageKey: 'biubiu-tools-token-deployer',
 			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			i18n: i18n as any
