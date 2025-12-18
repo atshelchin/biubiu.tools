@@ -239,3 +239,60 @@ Co-Authored-By: Claude <noreply@anthropic.com>
 2. Import necessary types from libraries (`viem`, `svelte`, etc.)
 3. Use strict TypeScript - avoid type assertions unless absolutely necessary
 4. Test type safety with `bun run check` during development
+
+## UI/UX Consistency Guidelines
+
+### Data Import/Generation Behavior
+
+When implementing features that involve data import or generation (e.g., wallet import, address derivation), follow these consistent patterns:
+
+1. **Switching Import Methods**
+   - Clear the data list when switching between import methods
+   - Clear all error messages from all import methods
+   - Keep input field content (don't clear) - so users can switch back and see their previous input
+   - Reference: `wallet-sweep/ui/steps/step4-import-wallets-content.svelte`
+
+2. **Re-importing or Re-generating Data**
+   - Clear existing data before generating/importing new data
+   - This prevents confusion from mixing old and new data
+   - Reference: `wallet-sweep/composables/use-mnemonic-import.svelte.ts`
+
+3. **Example Pattern**
+
+```typescript
+// When switching import method
+function handleMethodChange(method: ImportMethod) {
+  importMethod = method;
+  // Clear errors from all import methods
+  methodA.clearError();
+  methodB.clearError();
+  // Clear the data list
+  state.clearData();
+  // Note: Do NOT clear input fields (keep them for user reference)
+}
+
+// When generating/importing new data
+async function generateData() {
+  // Validate input first
+  if (!isValid) {
+    errorMessage = 'Validation error';
+    return;
+  }
+
+  // Clear existing data before generating new ones
+  state.clearData();
+
+  // Then generate/import new data
+  isGenerating = true;
+  // ... generation logic
+}
+```
+
+### Batch State Updates
+
+When updating large amounts of reactive data, use batch operations to prevent UI freeze:
+
+- ❌ `items.forEach(item => state.addItem(item))` - causes N reactive updates
+- ✅ `state.addItems(items)` - single reactive update
+
+Always provide batch methods in state stores for bulk operations.

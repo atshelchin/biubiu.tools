@@ -57,10 +57,14 @@
 		importMethod = method;
 		// Clear errors when switching
 		xpubImport.clearError();
+		// Clear wallets when switching import method (consistent with wallet-sweep behavior)
+		step4State.clearWallets();
 	}
 
 	// Handle address import
 	function handleAddressImport(addresses: Address[]) {
+		// Clear existing wallets before importing new ones (consistent with wallet-sweep behavior)
+		step4State.clearWallets();
 		addresses.forEach((addr) => step4State.addWallet(addr));
 		addressText = '';
 	}

@@ -138,6 +138,9 @@ export function useXpubImport() {
 			return;
 		}
 
+		// Clear existing wallets before generating new ones (consistent with wallet-sweep behavior)
+		step4State.clearWallets();
+
 		isGenerating = true;
 		generationProgress = 0;
 		errorMessage = '';
