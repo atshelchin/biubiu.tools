@@ -631,6 +631,18 @@
 				"import_recipients_explanation": "You can add recipients by: 1) Manual entry one by one, 2) Bulk paste a list of addresses, or 3) Upload a CSV file with addresses and optional amounts.",
 				"what_networks_supported": "Which blockchain networks are supported?",
 				"networks_supported_explanation": "Currently we support Ethereum Mainnet, Polygon, BSC (Binance Smart Chain), Base, Arbitrum, and Optimism. More networks will be added in the future."
+			},
+			"step2": {
+				"content": {
+					"title": "Check Dependencies",
+					"description": "Verify required contracts are deployed on this network",
+					"checks": {
+						"contract": {
+							"weth_description": "WETH contract for delegated execute mode (converts WETH to ETH for distribution)",
+							"token_distribution_description": "TokenDistribution contract for batch distributing tokens and NFTs to multiple recipients"
+						}
+					}
+				}
 			}
 		},
 		"token_balance_scanner": {

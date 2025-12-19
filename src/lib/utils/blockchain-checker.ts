@@ -353,7 +353,18 @@ export const KNOWN_CONTRACTS = {
 
 	// NFTFactory (ERC721 NFT deployment factory with stake-to-mint support)
 	// https://github.com/atshelchin/biubiu-contracts
-	NFT_FACTORY: '0xB003AdCD063aAAe88A634aC65257820c1322751D' as Address
+	NFT_FACTORY: '0xB003AdCD063aAAe88A634aC65257820c1322751D' as Address,
+
+	// WETH (Wrapped ETH for TokenDistribution delegated mode)
+	// Custom CREATE2 deployed, same address on all chains
+	// https://github.com/atshelchin/biubiu-contracts
+	WETH: '0xe3E75C1fe9AE82993FEb6F9CA2e9627aaE1e3d18' as Address,
+
+	// TokenDistribution (batch distribute tokens/NFTs to multiple recipients)
+	// Custom CREATE2 deployed, same address on all chains
+	// https://github.com/atshelchin/biubiu-contracts
+	// TODO: Replace with actual address after deployment
+	TOKEN_DISTRIBUTION: '0x0000000000000000000000000000000000000000' as Address
 } as const;
 
 /**
@@ -458,6 +469,45 @@ export async function checkNFTFactory(rpcUrl: string, t: TranslateFn): Promise<C
 		{
 			canDeploy: true,
 			deployGuideUrl: 'https://github.com/atshelchin/biubiu-contracts'
+		}
+	);
+}
+
+/**
+ * Create a contract checker for WETH (used in TokenDistribution delegated mode)
+ */
+export async function checkWETH(rpcUrl: string, t: TranslateFn): Promise<ContractCheck> {
+	return checkContractDeployment(
+		rpcUrl,
+		KNOWN_CONTRACTS.WETH,
+		'WETH',
+		t('tools.one_to_many_transfer.step2.content.checks.contract.weth_description'),
+		t,
+		{
+			canDeploy: true,
+			deployGuideUrl: 'https://github.com/atshelchin/biubiu-contracts',
+			docUrl: 'https://github.com/atshelchin/biubiu-contracts/blob/main/src/WETH.sol'
+		}
+	);
+}
+
+/**
+ * Create a contract checker for TokenDistribution
+ */
+export async function checkTokenDistribution(
+	rpcUrl: string,
+	t: TranslateFn
+): Promise<ContractCheck> {
+	return checkContractDeployment(
+		rpcUrl,
+		KNOWN_CONTRACTS.TOKEN_DISTRIBUTION,
+		'TokenDistribution',
+		t('tools.one_to_many_transfer.step2.content.checks.contract.token_distribution_description'),
+		t,
+		{
+			canDeploy: true,
+			deployGuideUrl: 'https://github.com/atshelchin/biubiu-contracts',
+			docUrl: 'https://github.com/atshelchin/biubiu-contracts/blob/main/src/TokenDistribution.sol'
 		}
 	);
 }

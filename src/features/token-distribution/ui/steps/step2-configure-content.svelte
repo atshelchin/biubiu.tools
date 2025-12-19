@@ -1,201 +1,200 @@
 <script lang="ts">
+	// Stores & Context
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
-	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
-	import { CheckCircle2 } from '@lucide/svelte';
-	import BackButton from '$lib/components/ui/back-button.svelte';
-	import { fade } from 'svelte/transition';
+	import { step2State } from '@/features/token-distribution/stores/step2-state.svelte';
 
+	// i18n
+	import { useI18n } from '@shelchin/i18n/svelte';
+
+	// Components
+	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
+	import StepContent from '$lib/components/step/step-content.svelte';
+	import EmptyState from '@/features/wallet-sweep/ui/components/empty-state.svelte';
+	import BackButton from '$lib/components/ui/back-button.svelte';
+	import DependencyChecker, {
+		createDependencyChecker
+	} from '$lib/components/ui/dependency-checker.svelte';
+	import NetworkSettingsModal from '$lib/components/ui/network-settings-modal.svelte';
+
+	// Utils
+	import { checkAllDependencies } from '@/features/token-distribution/utils/dependency-checker';
+
+	// ============================================================================
+	// STORES & CONTEXT
+	// ============================================================================
+
+	const i18n = useI18n();
 	const connectStore = useConnectStore();
 	const stepManager = useStepManager();
 
-	// Get current network details
+	// ============================================================================
+	// DEPENDENCY CHECKER
+	// ============================================================================
+
+	const checker = createDependencyChecker();
+
+	// ============================================================================
+	// STATE
+	// ============================================================================
+
+	let showNetworkSettings = $state(false);
+
+	// ============================================================================
+	// DERIVED
+	// ============================================================================
+
 	const currentNetwork = $derived(
 		connectStore.currentChainId
 			? connectStore.networks.find((n) => n.chainId === connectStore.currentChainId)
 			: undefined
 	);
 
-	const isConnected = $derived(connectStore.isConnected);
+	const networkConfig = $derived(
+		currentNetwork
+			? {
+					chainId: currentNetwork.chainId,
+					name: currentNetwork.name,
+					rpcUrl: currentNetwork?.rpcEndpoints?.[0]?.url ?? '',
+					blockExplorer: currentNetwork.blockExplorer
+				}
+			: undefined
+	);
+
+	// ============================================================================
+	// FUNCTIONS
+	// ============================================================================
+
+	function createChecker() {
+		if (!currentNetwork) return () => Promise.resolve([]);
+
+		return () =>
+			checkAllDependencies(
+				currentNetwork?.rpcEndpoints?.[0]?.url ?? '',
+				currentNetwork.chainId,
+				currentNetwork.name,
+				i18n.t.bind(i18n)
+			);
+	}
 
 	function goBackToStep1() {
 		stepManager.goTo(1);
 	}
+
+	function handleDeploySuccess() {
+		// Re-run dependency checks after successful deployment
+		setTimeout(() => checker.runChecks(createChecker()), 500);
+	}
+
+	function handleConfigureRpc() {
+		showNetworkSettings = true;
+	}
+
+	function handleNetworkSettingsClose() {
+		showNetworkSettings = false;
+		// Re-run dependency checks after closing settings (user may have added RPC)
+		setTimeout(() => {
+			checker.reset();
+			checker.runChecks(createChecker());
+		}, 300);
+	}
+
+	// ============================================================================
+	// EFFECTS
+	// ============================================================================
+
+	// Auto-run checks when wallet is connected and network is selected
+	$effect(() => {
+		if (connectStore.isConnected && currentNetwork && !checker.hasChecked) {
+			// Store the checker factory for later recheck
+			checker.setCheckerFactory(createChecker);
+			checker.runChecks(createChecker());
+		}
+	});
+
+	// Reset checks when network changes
+	$effect(() => {
+		if (connectStore.currentChainId) {
+			checker.reset();
+			step2State.reset();
+		}
+	});
+
+	// Sync checker state to step2State for sidebar/footer access
+	$effect(() => {
+		step2State.checks = checker.checks;
+		step2State.summary = checker.summary;
+		step2State.isChecking = checker.isChecking;
+		step2State.hasChecked = checker.hasChecked;
+	});
 </script>
 
-<div class="step-content">
+<StepContent>
 	<StepContentHeader
-		title="Source Wallet Ready"
-		description="Your wallet is connected and ready for token distribution"
+		title={i18n.t('tools.one_to_many_transfer.step2.content.title')}
+		description={i18n.t('tools.one_to_many_transfer.step2.content.description')}
 	/>
 
-	{#if isConnected && currentNetwork}
-		<div class="status-container" transition:fade>
-			<div class="status-card success">
-				<CheckCircle2 size={48} class="status-icon" />
-				<h3>Wallet Connected</h3>
-				<p class="wallet-address">{connectStore.address || ''}</p>
-				<p class="network-info">Network: {currentNetwork.name}</p>
-			</div>
-
-			<div class="info-box">
-				<h4>Before Continuing:</h4>
-				<ul class="checklist">
-					<li>Ensure you have enough tokens to distribute</li>
-					<li>Verify you have sufficient gas fees (ETH)</li>
-					<li>Double-check you're on the correct network</li>
-				</ul>
-			</div>
-		</div>
+	{#if !connectStore.isConnected && !checker.isChecking}
+		<!-- Not Connected State -->
+		<EmptyState
+			icon="🔌"
+			title={i18n.t('tools.wallet_sweep.step2.content.wallet_not_connected_title')}
+			message={i18n.t('tools.wallet_sweep.step2.content.wallet_not_connected_message')}
+		>
+			{#snippet action()}
+				<BackButton onclick={goBackToStep1}>
+					{i18n.t('tools.wallet_sweep.step2.content.go_to_step1')}
+				</BackButton>
+			{/snippet}
+		</EmptyState>
 	{:else}
-		<div class="error-state">
-			<p>Wallet not connected. Please go back to Step 1.</p>
-			<BackButton onclick={goBackToStep1}>Go Back to Step 1</BackButton>
-		</div>
+		<DependencyChecker
+			{checker}
+			network={networkConfig}
+			loadingMessage={i18n.t('tools.wallet_sweep.step2.content.checking_dependencies_for', {
+				network: currentNetwork?.name ?? ''
+			})}
+			retryText={i18n.t('tools.wallet_sweep.step2.content.recheck_dependencies')}
+			allPassedTitle={i18n.t('tools.wallet_sweep.step2.content.all_dependencies_satisfied')}
+			allPassedMessage={i18n.t('tools.wallet_sweep.step2.content.network_properly_configured')}
+			issuesFoundTitle={i18n.t('tools.wallet_sweep.step2.content.dependency_issues_found')}
+			issuesFoundMessage={i18n.t(
+				'tools.wallet_sweep.step2.content.resolve_issues_before_continuing'
+			)}
+			resolveHintText={i18n.t('tools.wallet_sweep.step2.content.resolve_previous_issue')}
+			addressLabel={i18n.t('tools.wallet_sweep.step2.content.address_label')}
+			endpointLabel={i18n.t('tools.wallet_sweep.step2.content.endpoint_label')}
+			viewGuideText={i18n.t('tools.wallet_sweep.step2.content.view_deployment_guide')}
+			deployComingSoonText={i18n.t('tools.wallet_sweep.step2.content.deploy_coming_soon')}
+			configureRpcButtonText={i18n.t(
+				'tools.wallet_sweep.step2.content.checks.rpc_endpoint.configure_rpc_button'
+			)}
+			deployButtonText={(contractName) =>
+				i18n.t('tools.wallet_sweep.step2.content.deploy_contract', { contractName })}
+			categoryLabels={{
+				network: i18n.t('tools.wallet_sweep.step2.content.checks.category.network'),
+				protocol: i18n.t('tools.wallet_sweep.step2.content.checks.category.protocol'),
+				contract: i18n.t('tools.wallet_sweep.step2.content.checks.category.contract')
+			}}
+			onDeploySuccess={handleDeploySuccess}
+			onConfigureRpc={handleConfigureRpc}
+		/>
 	{/if}
-</div>
+</StepContent>
 
-<style>
-	.step-content {
-		padding: var(--space-6);
-	}
-
-	.status-container {
-		margin-top: var(--space-6);
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-6);
-	}
-
-	.status-card {
-		padding: var(--space-8);
-		background: var(--color-panel-1);
-		border-radius: var(--radius-lg);
-		border: 2px solid var(--color-border);
-		text-align: center;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: var(--space-3);
-	}
-
-	.status-card.success {
-		border-color: hsla(120, 60%, 50%, 0.5);
-		background: hsla(120, 60%, 98%, 1);
-	}
-
-	:global([data-theme='dark']) .status-card.success {
-		background: hsla(120, 60%, 10%, 0.2);
-		border-color: hsla(120, 60%, 30%, 0.5);
-	}
-
-	.status-card h3 {
-		margin: 0;
-		font-size: var(--text-2xl);
-		font-weight: var(--font-bold);
-		color: var(--gray-900);
-	}
-
-	:global([data-theme='dark']) .status-card h3 {
-		color: var(--gray-100);
-	}
-
-	:global(.status-icon) {
-		color: hsla(120, 60%, 50%, 1);
-	}
-
-	.wallet-address {
-		font-family: monospace;
-		font-size: var(--text-sm);
-		color: var(--gray-600);
-		margin: 0;
-		word-break: break-all;
-	}
-
-	:global([data-theme='dark']) .wallet-address {
-		color: var(--gray-400);
-	}
-
-	.network-info {
-		font-size: var(--text-base);
-		font-weight: var(--font-medium);
-		color: var(--gray-700);
-		margin: 0;
-	}
-
-	:global([data-theme='dark']) .network-info {
-		color: var(--gray-300);
-	}
-
-	.info-box {
-		padding: var(--space-4);
-		background: var(--color-panel-1);
-		border-radius: var(--radius-md);
-		border: 1px solid var(--color-border);
-	}
-
-	.info-box h4 {
-		margin: 0 0 var(--space-3) 0;
-		font-size: var(--text-lg);
-		font-weight: var(--font-semibold);
-		color: var(--gray-900);
-	}
-
-	:global([data-theme='dark']) .info-box h4 {
-		color: var(--gray-100);
-	}
-
-	.checklist {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-2);
-	}
-
-	.checklist li {
-		padding-left: var(--space-6);
-		position: relative;
-		font-size: var(--text-sm);
-		color: var(--gray-700);
-		line-height: 1.5;
-	}
-
-	:global([data-theme='dark']) .checklist li {
-		color: var(--gray-300);
-	}
-
-	.checklist li::before {
-		content: '✓';
-		position: absolute;
-		left: 0;
-		color: hsla(120, 60%, 50%, 1);
-		font-weight: bold;
-	}
-
-	.error-state {
-		margin-top: var(--space-6);
-		padding: var(--space-8);
-		background: var(--color-panel-1);
-		border-radius: var(--radius-lg);
-		border: 2px solid hsla(0, 80%, 50%, 0.3);
-		text-align: center;
-	}
-
-	.error-state p {
-		color: var(--gray-700);
-		font-size: var(--text-base);
-		margin-bottom: var(--space-4);
-	}
-
-	:global([data-theme='dark']) .error-state p {
-		color: var(--gray-300);
-	}
-
-	@media (max-width: 640px) {
-		.step-content {
-			padding: var(--space-3);
-		}
-	}
-</style>
+<!-- Network Settings Modal -->
+{#if showNetworkSettings && currentNetwork}
+	<NetworkSettingsModal
+		open={showNetworkSettings}
+		networks={connectStore.networks}
+		currentChainId={connectStore.currentChainId ?? undefined}
+		initialEditChainId={currentNetwork.chainId}
+		onClose={handleNetworkSettingsClose}
+		onToggleNetwork={(chainId, enabled) => connectStore.toggleNetwork(chainId, enabled)}
+		isNetworkEnabled={(chainId) => connectStore.isNetworkEnabled(chainId)}
+		onSaveNetwork={(chainId, rpcEndpoints, blockExplorer) =>
+			connectStore.updateNetworkRpc(chainId, rpcEndpoints, blockExplorer)}
+		onAddOrUpdateNetwork={(network) => connectStore.addOrUpdateNetwork(network)}
+	/>
+{/if}
