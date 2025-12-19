@@ -643,6 +643,71 @@
 						}
 					}
 				}
+			},
+			"step3": {
+				"sidebar": {
+					"title": "选择代币",
+					"description": "选择代币类型并指定要分发的代币"
+				},
+				"content": {
+					"title": "选择要分发的代币",
+					"description": "选择代币类型并指定要发送给多个收款人的具体代币",
+					"token_type": {
+						"title": "代币类型",
+						"native": "原生代币",
+						"native_desc": "ETH、BNB、MATIC 等",
+						"erc20": "ERC20 代币",
+						"erc20_desc": "USDT、USDC、DAI 等",
+						"erc721": "ERC721 NFT",
+						"erc721_desc": "单个NFT（每个收款人1个）",
+						"erc1155": "ERC1155 多代币",
+						"erc1155_desc": "批量NFT或半同质化代币"
+					},
+					"select_token": {
+						"title": "选择代币",
+						"no_tokens": "此网络暂无可用代币",
+						"add_custom": "添加自定义代币"
+					},
+					"nft_config": {
+						"title": "NFT 配置",
+						"contract_address": "合约地址",
+						"contract_placeholder": "输入NFT合约地址 (0x...)",
+						"token_ids": "Token IDs",
+						"token_ids_placeholder": "输入Token ID（多个用逗号分隔）",
+						"token_ids_hint": "ERC721：每个收款人一个Token ID。ERC1155：指定要分发的Token ID。",
+						"load_button": "加载NFT信息",
+						"loading": "正在加载NFT信息...",
+						"collection_name": "系列名称",
+						"total_supply": "总供应量",
+						"your_balance": "您的余额"
+					},
+					"amount_mode": {
+						"title": "分发模式",
+						"equal": "等额分发",
+						"equal_desc": "每个收款人获得相同数量",
+						"custom": "自定义金额",
+						"custom_desc": "为每个收款人设置不同金额（在步骤4中）",
+						"random": "随机金额",
+						"random_desc": "每个收款人获得随机范围内的金额"
+					},
+					"amount_input": {
+						"title": "每个收款人的金额",
+						"placeholder": "0.0",
+						"hint": "此金额将发送给每个收款人。总金额将根据收款人数量自动计算。"
+					},
+					"custom_mode_info": "您已选择自定义金额模式。将在步骤4中为每个收款人设置具体金额。",
+					"random_mode_config": {
+						"min_amount": "最小金额",
+						"max_amount": "最大金额",
+						"min_placeholder": "0.0",
+						"max_placeholder": "0.0",
+						"hint": "每个收款人将获得最小和最大值之间的随机金额。"
+					}
+				},
+				"footer": {
+					"continue": "继续添加收款人",
+					"hint": "选择代币并配置金额后继续"
+				}
 			}
 		},
 		"token_balance_scanner": {

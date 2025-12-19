@@ -1,18 +1,23 @@
 import type { Address } from 'viem';
-import type { NativeToken, ERC20Token } from '$lib/types/token';
+import type { AnyToken } from '$lib/types/token';
 import type { Recipient } from './recipient';
+
+/**
+ * Distribution token type category (for UI selection)
+ */
+export type DistributionTokenType = 'native' | 'erc20' | 'erc721' | 'erc1155';
 
 /**
  * Distribution amount mode
  */
-export type DistributionAmountMode = 'equal' | 'custom';
+export type DistributionAmountMode = 'equal' | 'custom' | 'random';
 
 /**
  * Distribution configuration
  */
 export interface DistributionConfig {
 	sourceWallet: Address; // Connected wallet address
-	token: NativeToken | ERC20Token; // Token to distribute
+	token: AnyToken; // Token to distribute (Native, ERC20, ERC721, or ERC1155)
 	amountMode: DistributionAmountMode;
 	totalAmount?: string; // Total amount to distribute (for equal mode)
 	amountPerRecipient?: string; // Amount per recipient (for equal mode)
@@ -62,7 +67,7 @@ export interface DistributionResult {
  * Distribution summary
  */
 export interface DistributionSummary {
-	token: NativeToken | ERC20Token;
+	token: AnyToken;
 	recipientCount: number;
 	totalAmount: string;
 	estimatedGasCost: string;
