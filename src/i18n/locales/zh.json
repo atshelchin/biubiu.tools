@@ -1440,6 +1440,7 @@
 		"showing_count": "显示 {count} / {total} 个工具",
 		"categories": {
 			"all": "全部",
+			"featured": "精选",
 			"defi": "DeFi",
 			"nft": "NFT",
 			"analytics": "数据分析",
@@ -1448,7 +1449,14 @@
 			"wallet": "钱包工具",
 			"explorer": "区块浏览器",
 			"dev": "开发工具",
-			"dao": "DAO"
+			"dao": "DAO",
+			"infra": "基础设施",
+			"launchpad": "发射台",
+			"identity": "身份认证",
+			"social": "社交",
+			"l2": "Layer 2",
+			"gamefi": "链游",
+			"payments": "支付"
 		},
 		"tools": {
 			"uniswap": {
@@ -2128,6 +2136,261 @@
 			},
 			"jokerace": {
 				"description": "链上投票竞赛"
+			},
+			"ankr": {
+				"description": "多链 RPC 端点和质押基础设施"
+			},
+			"chainstack": {
+				"description": "面向企业的托管区块链基础设施"
+			},
+			"blast_api": {
+				"description": "面向 Web3 开发者的去中心化 API 平台"
+			},
+			"chainlink": {
+				"description": "智能合约的去中心化预言机网络"
+			},
+			"band_protocol": {
+				"description": "跨链数据预言机平台"
+			},
+			"api3": {
+				"description": "第一方预言机解决方案 Airnode"
+			},
+			"redstone": {
+				"description": "面向 DeFi、LSD 和 RWA 的模块化预言机"
+			},
+			"thegraph": {
+				"description": "查询区块链数据的索引协议"
+			},
+			"subsquid": {
+				"description": "TypeScript 优先的区块链数据索引 SDK"
+			},
+			"ipfs": {
+				"description": "去中心化文件存储和内容寻址"
+			},
+			"arweave": {
+				"description": "永久去中心化数据存储"
+			},
+			"filecoin": {
+				"description": "带激励机制的去中心化存储网络"
+			},
+			"ceramic": {
+				"description": "去中心化数据流和可组合数据"
+			},
+			"push_protocol": {
+				"description": "Web3 原生通知和消息"
+			},
+			"xmtp": {
+				"description": "安全的钱包间消息协议"
+			},
+			"walletconnect": {
+				"description": "连接钱包和 DApp 的开放协议"
+			},
+			"pump_fun": {
+				"description": "Solana 上的 Meme 代币公平发射平台"
+			},
+			"dao_maker": {
+				"description": "领先的 IDO 发射台和孵化器"
+			},
+			"fjord_foundry": {
+				"description": "公平价格发现的流动性引导池"
+			},
+			"camelot_launchpad": {
+				"description": "Arbitrum 生态原生发射台"
+			},
+			"pinksale": {
+				"description": "多链预售和公平发射平台"
+			},
+			"gempad": {
+				"description": "跨链代币预售发射台"
+			},
+			"mint_fun": {
+				"description": "发现和铸造热门 NFT"
+			},
+			"zora_create": {
+				"description": "在 Zora 协议上铸造和创建 NFT"
+			},
+			"thirdweb_deploy": {
+				"description": "无代码智能合约部署平台"
+			},
+			"seedify": {
+				"description": "GameFi 孵化器和 IGO 发射台"
+			},
+			"polkastarter": {
+				"description": "游戏和 DeFi 跨链 IDO 平台"
+			},
+			"ens": {
+				"description": "以太坊域名服务，人类可读地址"
+			},
+			"unstoppable_domains": {
+				"description": "Web3 身份的 NFT 域名"
+			},
+			"space_id": {
+				"description": "多链域名服务"
+			},
+			"dotbit": {
+				"description": "跨链去中心化身份协议"
+			},
+			"gitcoin_passport": {
+				"description": "抗女巫身份验证系统"
+			},
+			"galxe": {
+				"description": "Web3 凭证和活动平台"
+			},
+			"layer3": {
+				"description": "学习赚钱任务和 Web3 入门"
+			},
+			"degenscore": {
+				"description": "链上声誉和 DeFi 评分"
+			},
+			"worldcoin": {
+				"description": "人格证明身份协议"
+			},
+			"civic": {
+				"description": "身份验证和 KYC 解决方案"
+			},
+			"poap": {
+				"description": "活动出席证明徽章协议"
+			},
+			"talent_protocol": {
+				"description": "Builder 评分和专业声誉"
+			},
+			"lens_protocol": {
+				"description": "可组合的去中心化社交图谱"
+			},
+			"warpcast": {
+				"description": "Farcaster 社交网络主客户端"
+			},
+			"hey": {
+				"description": "Lens 协议上的去中心化社交应用"
+			},
+			"orb": {
+				"description": "移动优先的 Lens 协议客户端"
+			},
+			"cyberconnect": {
+				"description": "带 Web3 身份的社交图谱协议"
+			},
+			"friend_tech": {
+				"description": "交易社交密钥的 SocialFi 平台"
+			},
+			"mirror": {
+				"description": "Web3 发布和众筹平台"
+			},
+			"paragraph": {
+				"description": "Web3 原生新闻通讯和发布"
+			},
+			"deso": {
+				"description": "专为社交应用构建的 L1 区块链"
+			},
+			"phaver": {
+				"description": "跨平台 Web3 社交应用"
+			},
+			"drakula": {
+				"description": "Farcaster 上的短视频平台"
+			},
+			"arbitrum_one": {
+				"description": "领先的以太坊 Optimistic Rollup L2"
+			},
+			"optimism": {
+				"description": "基于 OP Stack 的以太坊 L2，愿景是超级链"
+			},
+			"base": {
+				"description": "Coinbase 基于 OP Stack 构建的 L2"
+			},
+			"zksync_era": {
+				"description": "原生支持账户抽象的 ZK Rollup"
+			},
+			"starknet": {
+				"description": "使用 Cairo 进行有效性证明的 ZK Rollup"
+			},
+			"scroll": {
+				"description": "EVM 等效的 zkEVM Rollup"
+			},
+			"linea": {
+				"description": "ConsenSys 的 zkEVM L2 解决方案"
+			},
+			"polygon_zkevm": {
+				"description": "Polygon 的零知识 EVM 扩容方案"
+			},
+			"manta_pacific": {
+				"description": "面向 ZK 应用的模块化 L2"
+			},
+			"blast_l2": {
+				"description": "ETH 和稳定币原生收益的 L2"
+			},
+			"mode": {
+				"description": "专注 DeFi 的 OP Stack L2"
+			},
+			"mantle": {
+				"description": "带数据可用性层的模块化 L2"
+			},
+			"immutable": {
+				"description": "专注游戏的 L2，带 zkEVM"
+			},
+			"ronin": {
+				"description": "Axie Infinity 生态的游戏侧链"
+			},
+			"treasure": {
+				"description": "Arbitrum 上的去中心化游戏生态"
+			},
+			"beam": {
+				"description": "Avalanche 上的游戏子网"
+			},
+			"stardust": {
+				"description": "Web3 游戏 SDK 和钱包解决方案"
+			},
+			"fractal": {
+				"description": "游戏 NFT 市场和发现平台"
+			},
+			"xai": {
+				"description": "基于 Arbitrum Orbit 的游戏 L3"
+			},
+			"ygg": {
+				"description": "带奖学金计划的游戏公会"
+			},
+			"loot8": {
+				"description": "NFT 游戏收藏品平台"
+			},
+			"iskra": {
+				"description": "Web3 游戏平台和社区"
+			},
+			"elixir_games": {
+				"description": "Web3 游戏启动器和发现平台"
+			},
+			"moonpay": {
+				"description": "加密货币法币出入金"
+			},
+			"transak": {
+				"description": "法币转加密货币支付基础设施"
+			},
+			"ramp": {
+				"description": "非托管法币入金 SDK"
+			},
+			"onmeta": {
+				"description": "面向印度用户的法币入金"
+			},
+			"request_network": {
+				"description": "加密货币发票和支付请求"
+			},
+			"superfluid": {
+				"description": "实时代币流支付"
+			},
+			"sablier": {
+				"description": "用于归属和薪资的代币流"
+			},
+			"coinshift": {
+				"description": "资金库管理和多签操作"
+			},
+			"utopia_labs": {
+				"description": "DAO 薪资和资金库运营"
+			},
+			"gnosis_pay": {
+				"description": "自托管 Visa 借记卡"
+			},
+			"spritz": {
+				"description": "用加密货币通过 ACH 支付账单"
+			},
+			"bitpay": {
+				"description": "面向商家的加密支付处理"
 			}
 		},
 		"seo": {

@@ -15,7 +15,7 @@
 
 	// State
 	let searchQuery = $state('');
-	let selectedCategory = $state<CategoryId>('all');
+	let selectedCategory = $state<CategoryId>('featured');
 
 	// Debounced search
 	let debouncedQuery = $state('');
@@ -40,7 +40,7 @@
 	function clearFilters() {
 		searchQuery = '';
 		debouncedQuery = '';
-		selectedCategory = 'all';
+		selectedCategory = 'featured';
 	}
 
 	/**
@@ -128,9 +128,14 @@
 		let result = toolsData;
 
 		// Filter by category
-		if (selectedCategory !== 'all') {
+		if (selectedCategory === 'featured') {
+			// Show only featured tools
+			result = result.filter((tool) => tool.isFeatured === true);
+		} else if (selectedCategory !== 'all') {
+			// Filter by specific category
 			result = result.filter((tool) => tool.category === selectedCategory);
 		}
+		// 'all' shows everything without filtering
 
 		// Filter by search query
 		if (debouncedQuery.trim()) {
@@ -140,16 +145,15 @@
 			}
 		}
 
-		// Only sort when filtering by specific category (not "all")
-		// This puts BiuBiu tools before competitors within the same category
-		if (selectedCategory !== 'all') {
+		// Sort BiuBiu tools first when filtering by specific category (not "all" or "featured")
+		if (selectedCategory !== 'all' && selectedCategory !== 'featured') {
 			return sortToolsWithBiubiuFirst(result);
 		}
 
 		return result;
 	});
 
-	const hasActiveFilters = $derived(selectedCategory !== 'all' || debouncedQuery.trim() !== '');
+	const hasActiveFilters = $derived(selectedCategory !== 'featured' || debouncedQuery.trim() !== '');
 </script>
 
 <div class="chain-tools-page">

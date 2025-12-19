@@ -1440,6 +1440,7 @@
 		"showing_count": "Showing {count} of {total} tools",
 		"categories": {
 			"all": "All",
+			"featured": "Featured",
 			"defi": "DeFi",
 			"nft": "NFT",
 			"analytics": "Analytics",
@@ -1448,7 +1449,14 @@
 			"wallet": "Wallet",
 			"explorer": "Explorer",
 			"dev": "Dev Tools",
-			"dao": "DAO"
+			"dao": "DAO",
+			"infra": "Infra",
+			"launchpad": "Launchpad",
+			"identity": "Identity",
+			"social": "Social",
+			"l2": "Layer 2",
+			"gamefi": "GameFi",
+			"payments": "Payments"
 		},
 		"tools": {
 			"uniswap": {
@@ -2155,6 +2163,261 @@
 			},
 			"jokerace": {
 				"description": "On-chain voting contests"
+			},
+			"ankr": {
+				"description": "Multi-chain RPC endpoints and staking infrastructure"
+			},
+			"chainstack": {
+				"description": "Managed blockchain infrastructure for enterprises"
+			},
+			"blast_api": {
+				"description": "Decentralized API platform for Web3 builders"
+			},
+			"chainlink": {
+				"description": "Decentralized oracle network for smart contracts"
+			},
+			"band_protocol": {
+				"description": "Cross-chain data oracle platform"
+			},
+			"api3": {
+				"description": "First-party oracle solution with Airnode"
+			},
+			"redstone": {
+				"description": "Modular oracle for DeFi, LSDs, and RWAs"
+			},
+			"thegraph": {
+				"description": "Indexing protocol for querying blockchain data"
+			},
+			"subsquid": {
+				"description": "TypeScript-first indexing SDK for blockchain data"
+			},
+			"ipfs": {
+				"description": "Decentralized file storage and content addressing"
+			},
+			"arweave": {
+				"description": "Permanent decentralized data storage"
+			},
+			"filecoin": {
+				"description": "Decentralized storage network with incentives"
+			},
+			"ceramic": {
+				"description": "Decentralized data streams and composable data"
+			},
+			"push_protocol": {
+				"description": "Web3 native notifications and messaging"
+			},
+			"xmtp": {
+				"description": "Secure wallet-to-wallet messaging protocol"
+			},
+			"walletconnect": {
+				"description": "Open protocol for connecting wallets to DApps"
+			},
+			"pump_fun": {
+				"description": "Fair launch platform for meme tokens on Solana"
+			},
+			"dao_maker": {
+				"description": "Leading IDO launchpad and incubator"
+			},
+			"fjord_foundry": {
+				"description": "Liquidity bootstrapping pools for fair price discovery"
+			},
+			"camelot_launchpad": {
+				"description": "Native Arbitrum ecosystem launchpad"
+			},
+			"pinksale": {
+				"description": "Multi-chain presale and fair launch platform"
+			},
+			"gempad": {
+				"description": "Cross-chain launchpad for token presales"
+			},
+			"mint_fun": {
+				"description": "Discover and mint trending NFTs"
+			},
+			"zora_create": {
+				"description": "Mint and create NFTs on Zora protocol"
+			},
+			"thirdweb_deploy": {
+				"description": "No-code smart contract deployment platform"
+			},
+			"seedify": {
+				"description": "GameFi incubator and IGO launchpad"
+			},
+			"polkastarter": {
+				"description": "Cross-chain IDO platform for gaming and DeFi"
+			},
+			"ens": {
+				"description": "Ethereum Name Service for human-readable addresses"
+			},
+			"unstoppable_domains": {
+				"description": "NFT domains for Web3 identity"
+			},
+			"space_id": {
+				"description": "Multi-chain domain name service"
+			},
+			"dotbit": {
+				"description": "Cross-chain decentralized identity protocol"
+			},
+			"gitcoin_passport": {
+				"description": "Sybil-resistant identity verification with stamps"
+			},
+			"galxe": {
+				"description": "Web3 credential and campaign platform"
+			},
+			"layer3": {
+				"description": "Learn-to-earn quests and Web3 onboarding"
+			},
+			"degenscore": {
+				"description": "On-chain reputation and DeFi score"
+			},
+			"worldcoin": {
+				"description": "Proof-of-personhood identity protocol"
+			},
+			"civic": {
+				"description": "Identity verification and KYC solutions"
+			},
+			"poap": {
+				"description": "Proof of Attendance Protocol for event badges"
+			},
+			"talent_protocol": {
+				"description": "Builder score and professional reputation"
+			},
+			"lens_protocol": {
+				"description": "Composable decentralized social graph"
+			},
+			"warpcast": {
+				"description": "Primary client for Farcaster social network"
+			},
+			"hey": {
+				"description": "Decentralized social app on Lens Protocol"
+			},
+			"orb": {
+				"description": "Mobile-first Lens Protocol client"
+			},
+			"cyberconnect": {
+				"description": "Social graph protocol with Web3 identity"
+			},
+			"friend_tech": {
+				"description": "SocialFi platform for trading social keys"
+			},
+			"mirror": {
+				"description": "Web3 publishing and crowdfunding platform"
+			},
+			"paragraph": {
+				"description": "Web3 native newsletter and publishing"
+			},
+			"deso": {
+				"description": "Layer 1 blockchain built for social applications"
+			},
+			"phaver": {
+				"description": "Cross-platform Web3 social app"
+			},
+			"drakula": {
+				"description": "Short-form video platform on Farcaster"
+			},
+			"arbitrum_one": {
+				"description": "Leading Ethereum optimistic rollup L2"
+			},
+			"optimism": {
+				"description": "OP Stack powered Ethereum L2 with Superchain vision"
+			},
+			"base": {
+				"description": "Coinbase's L2 built on OP Stack"
+			},
+			"zksync_era": {
+				"description": "ZK rollup with native account abstraction"
+			},
+			"starknet": {
+				"description": "ZK rollup using Cairo for validity proofs"
+			},
+			"scroll": {
+				"description": "EVM-equivalent zkEVM rollup"
+			},
+			"linea": {
+				"description": "ConsenSys zkEVM L2 solution"
+			},
+			"polygon_zkevm": {
+				"description": "Polygon's zero-knowledge EVM scaling solution"
+			},
+			"manta_pacific": {
+				"description": "Modular L2 for ZK applications"
+			},
+			"blast_l2": {
+				"description": "L2 with native yield for ETH and stablecoins"
+			},
+			"mode": {
+				"description": "OP Stack L2 with DeFi focus"
+			},
+			"mantle": {
+				"description": "Modular L2 with data availability layer"
+			},
+			"immutable": {
+				"description": "Gaming-focused L2 with zkEVM"
+			},
+			"ronin": {
+				"description": "Gaming sidechain for Axie Infinity ecosystem"
+			},
+			"treasure": {
+				"description": "Decentralized gaming ecosystem on Arbitrum"
+			},
+			"beam": {
+				"description": "Gaming subnet on Avalanche"
+			},
+			"stardust": {
+				"description": "Web3 gaming SDK and wallet solution"
+			},
+			"fractal": {
+				"description": "Gaming NFT marketplace and discovery"
+			},
+			"xai": {
+				"description": "Gaming L3 built on Arbitrum Orbit"
+			},
+			"ygg": {
+				"description": "Gaming guild with scholarship programs"
+			},
+			"loot8": {
+				"description": "NFT gaming collectibles platform"
+			},
+			"iskra": {
+				"description": "Web3 gaming platform and community"
+			},
+			"elixir_games": {
+				"description": "Web3 game launcher and discovery platform"
+			},
+			"moonpay": {
+				"description": "Fiat on-ramp and off-ramp for crypto"
+			},
+			"transak": {
+				"description": "Fiat-to-crypto payment infrastructure"
+			},
+			"ramp": {
+				"description": "Non-custodial fiat on-ramp SDK"
+			},
+			"onmeta": {
+				"description": "Fiat on-ramp for Indian users"
+			},
+			"request_network": {
+				"description": "Crypto invoicing and payment requests"
+			},
+			"superfluid": {
+				"description": "Real-time token streaming for payments"
+			},
+			"sablier": {
+				"description": "Token streaming for vesting and payroll"
+			},
+			"coinshift": {
+				"description": "Treasury management and multi-sig operations"
+			},
+			"utopia_labs": {
+				"description": "DAO payroll and treasury operations"
+			},
+			"gnosis_pay": {
+				"description": "Self-custodial Visa debit card"
+			},
+			"spritz": {
+				"description": "Pay bills with crypto via ACH"
+			},
+			"bitpay": {
+				"description": "Crypto payment processing for merchants"
 			}
 		},
 		"seo": {

@@ -4,6 +4,7 @@ import type { Component } from 'svelte';
  * Tool category identifiers
  */
 export type CategoryId =
+	| 'featured'
 	| 'all'
 	| 'defi'
 	| 'nft'
@@ -13,7 +14,14 @@ export type CategoryId =
 	| 'wallet'
 	| 'explorer'
 	| 'dev'
-	| 'dao';
+	| 'dao'
+	| 'infra'
+	| 'launchpad'
+	| 'identity'
+	| 'social'
+	| 'l2'
+	| 'gamefi'
+	| 'payments';
 
 /**
  * Category definition with i18n keys and styling
@@ -34,10 +42,11 @@ export interface ExternalTool {
 	descriptionKey: string;
 	url: string;
 	icon: Component;
-	category: Exclude<CategoryId, 'all'>;
+	category: Exclude<CategoryId, 'all' | 'featured'>;
 	tags: string[];
 	chains?: string[];
 	color: string;
+	isFeatured?: boolean;
 }
 
 /**

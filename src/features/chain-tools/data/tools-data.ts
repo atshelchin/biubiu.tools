@@ -59,7 +59,34 @@ import {
 	MessageSquare,
 	Bell,
 	Megaphone,
-	Award
+	Award,
+	// New icons for additional categories
+	Server,
+	Cloud,
+	Gamepad2,
+	CreditCard,
+	Fingerprint,
+	Share2,
+	Blocks,
+	RocketIcon,
+	BadgeCheck,
+	Orbit,
+	MessageCircle,
+	Podcast,
+	Newspaper,
+	Trophy,
+	Joystick,
+	Sword,
+	Wallet2,
+	Receipt,
+	Banknote as BanknoteIcon,
+	ArrowUpDown,
+	Layers2,
+	Network,
+	HardDrive,
+	CloudCog,
+	Antenna,
+	Binary
 } from '@lucide/svelte';
 import type { Category, ExternalTool, CategoryId } from '../types';
 
@@ -67,7 +94,7 @@ import type { Category, ExternalTool, CategoryId } from '../types';
  * Category definitions with i18n keys and colors
  */
 export const categories: Category[] = [
-	{ id: 'all', labelKey: 'chain_tools.categories.all', color: '#6B7280', icon: Layers },
+	{ id: 'featured', labelKey: 'chain_tools.categories.featured', color: '#F59E0B', icon: Award },
 	{ id: 'defi', labelKey: 'chain_tools.categories.defi', color: '#10B981', icon: TrendingUp },
 	{ id: 'nft', labelKey: 'chain_tools.categories.nft', color: '#EC4899', icon: Image },
 	{
@@ -86,7 +113,25 @@ export const categories: Category[] = [
 	{ id: 'wallet', labelKey: 'chain_tools.categories.wallet', color: '#F59E0B', icon: Wallet },
 	{ id: 'explorer', labelKey: 'chain_tools.categories.explorer', color: '#06B6D4', icon: Search },
 	{ id: 'dev', labelKey: 'chain_tools.categories.dev', color: '#6366F1', icon: Code },
-	{ id: 'dao', labelKey: 'chain_tools.categories.dao', color: '#A855F7', icon: Vote }
+	{ id: 'dao', labelKey: 'chain_tools.categories.dao', color: '#A855F7', icon: Vote },
+	{ id: 'infra', labelKey: 'chain_tools.categories.infra', color: '#14B8A6', icon: Server },
+	{ id: 'launchpad', labelKey: 'chain_tools.categories.launchpad', color: '#F97316', icon: Rocket },
+	{
+		id: 'identity',
+		labelKey: 'chain_tools.categories.identity',
+		color: '#06B6D4',
+		icon: Fingerprint
+	},
+	{ id: 'social', labelKey: 'chain_tools.categories.social', color: '#8B5CF6', icon: Share2 },
+	{ id: 'l2', labelKey: 'chain_tools.categories.l2', color: '#3B82F6', icon: Layers2 },
+	{ id: 'gamefi', labelKey: 'chain_tools.categories.gamefi', color: '#EC4899', icon: Gamepad2 },
+	{
+		id: 'payments',
+		labelKey: 'chain_tools.categories.payments',
+		color: '#10B981',
+		icon: CreditCard
+	},
+	{ id: 'all', labelKey: 'chain_tools.categories.all', color: '#6B7280', icon: Layers }
 ];
 
 /**
@@ -110,7 +155,8 @@ export const toolsData: ExternalTool[] = [
 		category: 'defi',
 		tags: ['swap', 'dex', 'amm', 'liquidity'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism', 'Base'],
-		color: '#FF007A'
+		color: '#FF007A',
+		isFeatured: true
 	},
 	{
 		id: 'aave',
@@ -121,7 +167,8 @@ export const toolsData: ExternalTool[] = [
 		category: 'defi',
 		tags: ['lending', 'borrowing', 'defi', 'yield'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism', 'Avalanche'],
-		color: '#B6509E'
+		color: '#B6509E',
+		isFeatured: true
 	},
 	{
 		id: '1inch',
@@ -155,7 +202,8 @@ export const toolsData: ExternalTool[] = [
 		icon: BarChart3,
 		category: 'analytics',
 		tags: ['analytics', 'data', 'sql', 'dashboard', 'visualization'],
-		color: '#F0603A'
+		color: '#F0603A',
+		isFeatured: true
 	},
 	{
 		id: 'defillama',
@@ -165,7 +213,8 @@ export const toolsData: ExternalTool[] = [
 		icon: PieChart,
 		category: 'analytics',
 		tags: ['tvl', 'defi', 'analytics', 'protocols'],
-		color: '#2775CA'
+		color: '#2775CA',
+		isFeatured: true
 	},
 	{
 		id: 'nansen',
@@ -198,7 +247,8 @@ export const toolsData: ExternalTool[] = [
 		category: 'security',
 		tags: ['approvals', 'revoke', 'security', 'permissions'],
 		chains: ['Ethereum', 'Polygon', 'BSC', 'Arbitrum', 'Optimism'],
-		color: '#E53E3E'
+		color: '#E53E3E',
+		isFeatured: true
 	},
 	{
 		id: 'debank',
@@ -266,7 +316,8 @@ export const toolsData: ExternalTool[] = [
 		category: 'explorer',
 		tags: ['explorer', 'ethereum', 'transactions', 'contracts'],
 		chains: ['Ethereum'],
-		color: '#21325B'
+		color: '#21325B',
+		isFeatured: true
 	},
 	{
 		id: 'blockscout',
@@ -321,7 +372,8 @@ export const toolsData: ExternalTool[] = [
 		category: 'nft',
 		tags: ['marketplace', 'nft', 'trading', 'collections'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism', 'Base'],
-		color: '#2081E2'
+		color: '#2081E2',
+		isFeatured: true
 	},
 	{
 		id: 'blur',
@@ -378,7 +430,8 @@ export const toolsData: ExternalTool[] = [
 		category: 'wallet',
 		tags: ['sweep', 'batch', 'transfer', 'consolidate', 'biubiu'],
 		chains: ['Ethereum', 'Polygon', 'BSC', 'Base', 'Arbitrum'],
-		color: '#10B981'
+		color: '#10B981',
+		isFeatured: true
 	},
 	{
 		id: 'biubiu-one-to-many',
@@ -389,7 +442,8 @@ export const toolsData: ExternalTool[] = [
 		category: 'wallet',
 		tags: ['airdrop', 'batch', 'transfer', 'distribution', 'biubiu'],
 		chains: ['Ethereum', 'Polygon', 'BSC', 'Base', 'Arbitrum'],
-		color: '#F59E0B'
+		color: '#F59E0B',
+		isFeatured: true
 	},
 	{
 		id: 'biubiu-wallet-generator',
@@ -399,7 +453,8 @@ export const toolsData: ExternalTool[] = [
 		icon: KeyRound,
 		category: 'wallet',
 		tags: ['generator', 'mnemonic', 'hd-wallet', 'batch', 'biubiu'],
-		color: '#8B5CF6'
+		color: '#8B5CF6',
+		isFeatured: true
 	},
 	{
 		id: 'biubiu-balance-scanner',
@@ -410,7 +465,8 @@ export const toolsData: ExternalTool[] = [
 		category: 'analytics',
 		tags: ['balance', 'scanner', 'batch', 'portfolio', 'biubiu'],
 		chains: ['Ethereum', 'Polygon', 'BSC', 'Base', 'Arbitrum'],
-		color: '#3B82F6'
+		color: '#3B82F6',
+		isFeatured: true
 	},
 	// Dev Tools (BiuBiu)
 	{
@@ -422,7 +478,8 @@ export const toolsData: ExternalTool[] = [
 		category: 'dev',
 		tags: ['deploy', 'create2', 'deterministic', 'smart-contract', 'biubiu'],
 		chains: ['Ethereum', 'Polygon', 'BSC', 'Base', 'Arbitrum'],
-		color: '#F59E0B'
+		color: '#F59E0B',
+		isFeatured: true
 	},
 	{
 		id: 'biubiu-token-deployer',
@@ -433,7 +490,8 @@ export const toolsData: ExternalTool[] = [
 		category: 'dev',
 		tags: ['erc20', 'token', 'deploy', 'create', 'biubiu'],
 		chains: ['Ethereum', 'Polygon', 'BSC', 'Base', 'Arbitrum'],
-		color: '#10B981'
+		color: '#10B981',
+		isFeatured: true
 	},
 	{
 		id: 'biubiu-events-scanner',
@@ -443,7 +501,8 @@ export const toolsData: ExternalTool[] = [
 		icon: FileSearch,
 		category: 'analytics',
 		tags: ['events', 'logs', 'scanner', 'smart-contract', 'biubiu'],
-		color: '#A855F7'
+		color: '#A855F7',
+		isFeatured: true
 	},
 	{
 		id: 'biubiu-chainlist',
@@ -453,7 +512,8 @@ export const toolsData: ExternalTool[] = [
 		icon: Globe,
 		category: 'dev',
 		tags: ['chains', 'rpc', 'networks', 'add-network', 'biubiu'],
-		color: '#6366F1'
+		color: '#6366F1',
+		isFeatured: true
 	},
 
 	// ========== More DeFi Protocols ==========
@@ -1349,7 +1409,8 @@ export const toolsData: ExternalTool[] = [
 		icon: Wallet,
 		category: 'wallet',
 		tags: ['wallet', 'extension', 'mobile', 'popular'],
-		color: '#F6851B'
+		color: '#F6851B',
+		isFeatured: true
 	},
 	{
 		id: 'frame',
@@ -1379,7 +1440,8 @@ export const toolsData: ExternalTool[] = [
 		icon: Lock,
 		category: 'wallet',
 		tags: ['multisig', 'smart-wallet', 'treasury'],
-		color: '#12FF80'
+		color: '#12FF80',
+		isFeatured: true
 	},
 	{
 		id: 'zapper',
@@ -2596,5 +2658,1092 @@ export const toolsData: ExternalTool[] = [
 		category: 'dao',
 		tags: ['contests', 'voting', 'governance', 'fun'],
 		color: '#FF6B6B'
+	},
+
+	// ============================================
+	// INFRA - Infrastructure Tools
+	// ============================================
+	{
+		id: 'alchemy',
+		name: 'Alchemy',
+		descriptionKey: 'chain_tools.tools.alchemy.description',
+		url: 'https://www.alchemy.com',
+		icon: Server,
+		category: 'infra',
+		tags: ['rpc', 'api', 'node', 'infrastructure'],
+		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism', 'Base', 'Solana'],
+		color: '#0C5ADB',
+		isFeatured: true
+	},
+	{
+		id: 'infura',
+		name: 'Infura',
+		descriptionKey: 'chain_tools.tools.infura.description',
+		url: 'https://www.infura.io',
+		icon: Cloud,
+		category: 'infra',
+		tags: ['rpc', 'api', 'node', 'consensys'],
+		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism', 'Avalanche'],
+		color: '#FF6B4A'
+	},
+	{
+		id: 'quicknode',
+		name: 'QuickNode',
+		descriptionKey: 'chain_tools.tools.quicknode.description',
+		url: 'https://www.quicknode.com',
+		icon: Zap,
+		category: 'infra',
+		tags: ['rpc', 'api', 'node', 'fast'],
+		chains: ['Ethereum', 'Polygon', 'Solana', 'BSC', 'Avalanche'],
+		color: '#0052FF'
+	},
+	{
+		id: 'ankr',
+		name: 'Ankr',
+		descriptionKey: 'chain_tools.tools.ankr.description',
+		url: 'https://www.ankr.com',
+		icon: Network,
+		category: 'infra',
+		tags: ['rpc', 'staking', 'node', 'multi-chain'],
+		chains: ['Ethereum', 'BSC', 'Polygon', 'Avalanche', 'Fantom'],
+		color: '#356DF3'
+	},
+	{
+		id: 'chainstack',
+		name: 'Chainstack',
+		descriptionKey: 'chain_tools.tools.chainstack.description',
+		url: 'https://chainstack.com',
+		icon: HardDrive,
+		category: 'infra',
+		tags: ['rpc', 'node', 'enterprise', 'managed'],
+		chains: ['Ethereum', 'Polygon', 'BSC', 'Solana', 'Avalanche'],
+		color: '#1B1464'
+	},
+	{
+		id: 'blast-api',
+		name: 'Blast API',
+		descriptionKey: 'chain_tools.tools.blast_api.description',
+		url: 'https://blastapi.io',
+		icon: Zap,
+		category: 'infra',
+		tags: ['rpc', 'api', 'decentralized', 'fast'],
+		chains: ['Ethereum', 'Polygon', 'BSC', 'Avalanche'],
+		color: '#FCFC03'
+	},
+	{
+		id: 'chainlink',
+		name: 'Chainlink',
+		descriptionKey: 'chain_tools.tools.chainlink.description',
+		url: 'https://chain.link',
+		icon: Link2,
+		category: 'infra',
+		tags: ['oracle', 'price-feed', 'vrf', 'automation'],
+		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism', 'Avalanche'],
+		color: '#375BD2'
+	},
+	{
+		id: 'pyth',
+		name: 'Pyth Network',
+		descriptionKey: 'chain_tools.tools.pyth.description',
+		url: 'https://pyth.network',
+		icon: Activity,
+		category: 'infra',
+		tags: ['oracle', 'price-feed', 'high-frequency', 'solana'],
+		chains: ['Solana', 'Ethereum', 'Arbitrum', 'Optimism', 'Base'],
+		color: '#E6DAFE'
+	},
+	{
+		id: 'band-protocol',
+		name: 'Band Protocol',
+		descriptionKey: 'chain_tools.tools.band_protocol.description',
+		url: 'https://bandprotocol.com',
+		icon: Radio,
+		category: 'infra',
+		tags: ['oracle', 'cross-chain', 'data'],
+		chains: ['Ethereum', 'BSC', 'Cosmos'],
+		color: '#516FFA'
+	},
+	{
+		id: 'api3',
+		name: 'API3',
+		descriptionKey: 'chain_tools.tools.api3.description',
+		url: 'https://api3.org',
+		icon: CloudCog,
+		category: 'infra',
+		tags: ['oracle', 'first-party', 'dapi', 'airnode'],
+		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism'],
+		color: '#7C3AED'
+	},
+	{
+		id: 'redstone',
+		name: 'RedStone',
+		descriptionKey: 'chain_tools.tools.redstone.description',
+		url: 'https://redstone.finance',
+		icon: Gem,
+		category: 'infra',
+		tags: ['oracle', 'modular', 'lsd', 'rwa'],
+		chains: ['Ethereum', 'Arbitrum', 'Optimism', 'Base'],
+		color: '#FD4040'
+	},
+	{
+		id: 'thegraph',
+		name: 'The Graph',
+		descriptionKey: 'chain_tools.tools.thegraph.description',
+		url: 'https://thegraph.com',
+		icon: Database,
+		category: 'infra',
+		tags: ['indexer', 'subgraph', 'graphql', 'query'],
+		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism', 'Avalanche'],
+		color: '#6747ED'
+	},
+	{
+		id: 'covalent',
+		name: 'Covalent',
+		descriptionKey: 'chain_tools.tools.covalent.description',
+		url: 'https://www.covalenthq.com',
+		icon: Database,
+		category: 'infra',
+		tags: ['indexer', 'api', 'multi-chain', 'unified'],
+		chains: ['Ethereum', 'Polygon', 'BSC', 'Avalanche', 'Fantom'],
+		color: '#FF4C8B'
+	},
+	{
+		id: 'goldsky',
+		name: 'Goldsky',
+		descriptionKey: 'chain_tools.tools.goldsky.description',
+		url: 'https://goldsky.com',
+		icon: Database,
+		category: 'infra',
+		tags: ['indexer', 'streaming', 'real-time', 'mirror'],
+		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Base'],
+		color: '#F7931A'
+	},
+	{
+		id: 'subsquid',
+		name: 'Subsquid',
+		descriptionKey: 'chain_tools.tools.subsquid.description',
+		url: 'https://subsquid.io',
+		icon: Database,
+		category: 'infra',
+		tags: ['indexer', 'sdk', 'typescript', 'fast'],
+		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Substrate'],
+		color: '#00CCFF'
+	},
+	{
+		id: 'ipfs',
+		name: 'IPFS',
+		descriptionKey: 'chain_tools.tools.ipfs.description',
+		url: 'https://ipfs.tech',
+		icon: Globe,
+		category: 'infra',
+		tags: ['storage', 'decentralized', 'pinning', 'content-addressing'],
+		color: '#65C2CB'
+	},
+	{
+		id: 'arweave',
+		name: 'Arweave',
+		descriptionKey: 'chain_tools.tools.arweave.description',
+		url: 'https://www.arweave.org',
+		icon: HardDrive,
+		category: 'infra',
+		tags: ['storage', 'permanent', 'permaweb'],
+		color: '#222326'
+	},
+	{
+		id: 'filecoin',
+		name: 'Filecoin',
+		descriptionKey: 'chain_tools.tools.filecoin.description',
+		url: 'https://filecoin.io',
+		icon: HardDrive,
+		category: 'infra',
+		tags: ['storage', 'decentralized', 'incentivized'],
+		color: '#0090FF'
+	},
+	{
+		id: 'ceramic',
+		name: 'Ceramic',
+		descriptionKey: 'chain_tools.tools.ceramic.description',
+		url: 'https://ceramic.network',
+		icon: Database,
+		category: 'infra',
+		tags: ['storage', 'streams', 'composable', 'identity'],
+		color: '#FF5733'
+	},
+	{
+		id: 'push-protocol',
+		name: 'Push Protocol',
+		descriptionKey: 'chain_tools.tools.push_protocol.description',
+		url: 'https://push.org',
+		icon: Bell,
+		category: 'infra',
+		tags: ['messaging', 'notifications', 'web3-native'],
+		chains: ['Ethereum', 'Polygon', 'BSC', 'Arbitrum'],
+		color: '#DD44B9'
+	},
+	{
+		id: 'xmtp',
+		name: 'XMTP',
+		descriptionKey: 'chain_tools.tools.xmtp.description',
+		url: 'https://xmtp.org',
+		icon: MessageSquare,
+		category: 'infra',
+		tags: ['messaging', 'e2e-encrypted', 'wallet-to-wallet'],
+		chains: ['Ethereum'],
+		color: '#FC4F37'
+	},
+	{
+		id: 'walletconnect',
+		name: 'WalletConnect',
+		descriptionKey: 'chain_tools.tools.walletconnect.description',
+		url: 'https://walletconnect.com',
+		icon: Link2,
+		category: 'infra',
+		tags: ['connection', 'protocol', 'multi-chain', 'standard'],
+		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism', 'Solana'],
+		color: '#3B99FC'
+	},
+
+	// ============================================
+	// LAUNCHPAD - Token & NFT Launch Platforms
+	// ============================================
+	{
+		id: 'pump-fun',
+		name: 'Pump.fun',
+		descriptionKey: 'chain_tools.tools.pump_fun.description',
+		url: 'https://pump.fun',
+		icon: Rocket,
+		category: 'launchpad',
+		tags: ['fair-launch', 'meme', 'bonding-curve', 'solana'],
+		chains: ['Solana'],
+		color: '#00D181',
+		isFeatured: true
+	},
+	{
+		id: 'dao-maker',
+		name: 'DAO Maker',
+		descriptionKey: 'chain_tools.tools.dao_maker.description',
+		url: 'https://daomaker.com',
+		icon: Rocket,
+		category: 'launchpad',
+		tags: ['ido', 'sho', 'incubator', 'venture'],
+		chains: ['Ethereum', 'BSC', 'Polygon'],
+		color: '#0B0E11'
+	},
+	{
+		id: 'fjord-foundry',
+		name: 'Fjord Foundry',
+		descriptionKey: 'chain_tools.tools.fjord_foundry.description',
+		url: 'https://fjordfoundry.com',
+		icon: Droplets,
+		category: 'launchpad',
+		tags: ['lbp', 'fair-launch', 'price-discovery'],
+		chains: ['Ethereum', 'Arbitrum', 'Base'],
+		color: '#3B82F6'
+	},
+	{
+		id: 'camelot-launchpad',
+		name: 'Camelot Launchpad',
+		descriptionKey: 'chain_tools.tools.camelot_launchpad.description',
+		url: 'https://camelot.exchange',
+		icon: Rocket,
+		category: 'launchpad',
+		tags: ['arbitrum', 'ido', 'native'],
+		chains: ['Arbitrum'],
+		color: '#FFAF1D'
+	},
+	{
+		id: 'pinksale',
+		name: 'PinkSale',
+		descriptionKey: 'chain_tools.tools.pinksale.description',
+		url: 'https://www.pinksale.finance',
+		icon: Rocket,
+		category: 'launchpad',
+		tags: ['presale', 'fair-launch', 'multi-chain'],
+		chains: ['BSC', 'Ethereum', 'Polygon', 'Arbitrum'],
+		color: '#FF1493'
+	},
+	{
+		id: 'gempad',
+		name: 'GemPad',
+		descriptionKey: 'chain_tools.tools.gempad.description',
+		url: 'https://gempad.app',
+		icon: Gem,
+		category: 'launchpad',
+		tags: ['presale', 'fair-launch', 'multi-chain'],
+		chains: ['Ethereum', 'BSC', 'Arbitrum', 'Base'],
+		color: '#6366F1'
+	},
+	{
+		id: 'mint-fun',
+		name: 'Mint.fun',
+		descriptionKey: 'chain_tools.tools.mint_fun.description',
+		url: 'https://mint.fun',
+		icon: Sparkles,
+		category: 'launchpad',
+		tags: ['nft', 'free-mint', 'discovery', 'trending'],
+		chains: ['Ethereum', 'Base', 'Zora', 'Optimism'],
+		color: '#00D395'
+	},
+	{
+		id: 'manifold',
+		name: 'Manifold',
+		descriptionKey: 'chain_tools.tools.manifold.description',
+		url: 'https://manifold.xyz',
+		icon: Box,
+		category: 'launchpad',
+		tags: ['nft', 'creator', 'contract', 'studio'],
+		chains: ['Ethereum', 'Base', 'Optimism', 'Polygon'],
+		color: '#000000'
+	},
+	{
+		id: 'zora-create',
+		name: 'Zora Create',
+		descriptionKey: 'chain_tools.tools.zora_create.description',
+		url: 'https://zora.co/create',
+		icon: Sparkles,
+		category: 'launchpad',
+		tags: ['nft', 'mint', 'creator', 'protocol'],
+		chains: ['Zora', 'Base', 'Ethereum', 'Optimism'],
+		color: '#000000'
+	},
+	{
+		id: 'thirdweb-deploy',
+		name: 'Thirdweb Deploy',
+		descriptionKey: 'chain_tools.tools.thirdweb_deploy.description',
+		url: 'https://thirdweb.com/deploy',
+		icon: Rocket,
+		category: 'launchpad',
+		tags: ['contract', 'deploy', 'no-code', 'sdk'],
+		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Base', 'Optimism'],
+		color: '#F213A4'
+	},
+	{
+		id: 'seedify',
+		name: 'Seedify',
+		descriptionKey: 'chain_tools.tools.seedify.description',
+		url: 'https://seedify.fund',
+		icon: Rocket,
+		category: 'launchpad',
+		tags: ['igo', 'ino', 'gamefi', 'incubator'],
+		chains: ['BSC', 'Ethereum'],
+		color: '#2BFDA6'
+	},
+	{
+		id: 'polkastarter',
+		name: 'Polkastarter',
+		descriptionKey: 'chain_tools.tools.polkastarter.description',
+		url: 'https://polkastarter.com',
+		icon: Rocket,
+		category: 'launchpad',
+		tags: ['ido', 'cross-chain', 'gaming'],
+		chains: ['Ethereum', 'Polygon', 'BSC'],
+		color: '#FF3465'
+	},
+
+	// ============================================
+	// IDENTITY - DID & Credentials
+	// ============================================
+	{
+		id: 'ens',
+		name: 'ENS',
+		descriptionKey: 'chain_tools.tools.ens.description',
+		url: 'https://ens.domains',
+		icon: Globe,
+		category: 'identity',
+		tags: ['domain', 'naming', 'ethereum', 'identity'],
+		chains: ['Ethereum'],
+		color: '#5298FF',
+		isFeatured: true
+	},
+	{
+		id: 'unstoppable-domains',
+		name: 'Unstoppable Domains',
+		descriptionKey: 'chain_tools.tools.unstoppable_domains.description',
+		url: 'https://unstoppabledomains.com',
+		icon: Globe,
+		category: 'identity',
+		tags: ['domain', 'nft', 'multi-chain', 'identity'],
+		chains: ['Ethereum', 'Polygon'],
+		color: '#0D67FE'
+	},
+	{
+		id: 'space-id',
+		name: 'SPACE ID',
+		descriptionKey: 'chain_tools.tools.space_id.description',
+		url: 'https://space.id',
+		icon: Globe,
+		category: 'identity',
+		tags: ['domain', 'bnb', 'arbitrum', 'multi-chain'],
+		chains: ['BSC', 'Arbitrum', 'Ethereum'],
+		color: '#2B6AFF'
+	},
+	{
+		id: 'dotbit',
+		name: '.bit',
+		descriptionKey: 'chain_tools.tools.dotbit.description',
+		url: 'https://did.id',
+		icon: Globe,
+		category: 'identity',
+		tags: ['domain', 'cross-chain', 'nervos'],
+		chains: ['Ethereum', 'BSC', 'Polygon', 'Nervos'],
+		color: '#22C55E'
+	},
+	{
+		id: 'gitcoin-passport',
+		name: 'Gitcoin Passport',
+		descriptionKey: 'chain_tools.tools.gitcoin_passport.description',
+		url: 'https://passport.gitcoin.co',
+		icon: BadgeCheck,
+		category: 'identity',
+		tags: ['sybil', 'identity', 'stamps', 'verification'],
+		chains: ['Ethereum', 'Optimism'],
+		color: '#02E2AC'
+	},
+	{
+		id: 'galxe',
+		name: 'Galxe',
+		descriptionKey: 'chain_tools.tools.galxe.description',
+		url: 'https://galxe.com',
+		icon: Trophy,
+		category: 'identity',
+		tags: ['credentials', 'campaigns', 'oat', 'quest'],
+		chains: ['Ethereum', 'Polygon', 'BSC', 'Arbitrum', 'Optimism'],
+		color: '#000000'
+	},
+	{
+		id: 'layer3',
+		name: 'Layer3',
+		descriptionKey: 'chain_tools.tools.layer3.description',
+		url: 'https://layer3.xyz',
+		icon: Trophy,
+		category: 'identity',
+		tags: ['quests', 'learn-to-earn', 'credentials', 'onboarding'],
+		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism', 'Base'],
+		color: '#6366F1'
+	},
+	{
+		id: 'degenscore',
+		name: 'DegenScore',
+		descriptionKey: 'chain_tools.tools.degenscore.description',
+		url: 'https://degenscore.com',
+		icon: Award,
+		category: 'identity',
+		tags: ['reputation', 'score', 'on-chain', 'beacon'],
+		chains: ['Ethereum'],
+		color: '#FF6B00'
+	},
+	{
+		id: 'worldcoin',
+		name: 'Worldcoin',
+		descriptionKey: 'chain_tools.tools.worldcoin.description',
+		url: 'https://worldcoin.org',
+		icon: Eye,
+		category: 'identity',
+		tags: ['identity', 'proof-of-personhood', 'biometric'],
+		chains: ['Optimism', 'Ethereum'],
+		color: '#000000'
+	},
+	{
+		id: 'civic',
+		name: 'Civic',
+		descriptionKey: 'chain_tools.tools.civic.description',
+		url: 'https://www.civic.com',
+		icon: BadgeCheck,
+		category: 'identity',
+		tags: ['kyc', 'identity', 'verification', 'compliance'],
+		chains: ['Ethereum', 'Solana', 'Polygon'],
+		color: '#3AB03E'
+	},
+	{
+		id: 'poap',
+		name: 'POAP',
+		descriptionKey: 'chain_tools.tools.poap.description',
+		url: 'https://poap.xyz',
+		icon: Award,
+		category: 'identity',
+		tags: ['attendance', 'badge', 'nft', 'proof'],
+		chains: ['Gnosis', 'Ethereum'],
+		color: '#6534FF'
+	},
+	{
+		id: 'talent-protocol',
+		name: 'Talent Protocol',
+		descriptionKey: 'chain_tools.tools.talent_protocol.description',
+		url: 'https://talentprotocol.com',
+		icon: Users,
+		category: 'identity',
+		tags: ['builder-score', 'reputation', 'talent'],
+		chains: ['Base', 'Ethereum'],
+		color: '#7C3AED'
+	},
+
+	// ============================================
+	// SOCIAL - SocialFi & Content
+	// ============================================
+	{
+		id: 'lens-protocol',
+		name: 'Lens Protocol',
+		descriptionKey: 'chain_tools.tools.lens_protocol.description',
+		url: 'https://lens.xyz',
+		icon: Share2,
+		category: 'social',
+		tags: ['social-graph', 'composable', 'polygon', 'decentralized'],
+		chains: ['Polygon'],
+		color: '#00501E'
+	},
+	{
+		id: 'farcaster',
+		name: 'Farcaster',
+		descriptionKey: 'chain_tools.tools.farcaster.description',
+		url: 'https://www.farcaster.xyz',
+		icon: MessageCircle,
+		category: 'social',
+		tags: ['social', 'decentralized', 'frames', 'warpcast'],
+		chains: ['Optimism'],
+		color: '#8A63D2',
+		isFeatured: true
+	},
+	{
+		id: 'warpcast',
+		name: 'Warpcast',
+		descriptionKey: 'chain_tools.tools.warpcast.description',
+		url: 'https://warpcast.com',
+		icon: MessageCircle,
+		category: 'social',
+		tags: ['farcaster', 'client', 'social', 'mobile'],
+		chains: ['Optimism'],
+		color: '#8A63D2'
+	},
+	{
+		id: 'hey',
+		name: 'Hey',
+		descriptionKey: 'chain_tools.tools.hey.description',
+		url: 'https://hey.xyz',
+		icon: MessageCircle,
+		category: 'social',
+		tags: ['lens', 'social', 'decentralized', 'client'],
+		chains: ['Polygon'],
+		color: '#FB3A5D'
+	},
+	{
+		id: 'orb',
+		name: 'Orb',
+		descriptionKey: 'chain_tools.tools.orb.description',
+		url: 'https://orb.club',
+		icon: Orbit,
+		category: 'social',
+		tags: ['lens', 'mobile', 'social', 'communities'],
+		chains: ['Polygon'],
+		color: '#6366F1'
+	},
+	{
+		id: 'cyberconnect',
+		name: 'CyberConnect',
+		descriptionKey: 'chain_tools.tools.cyberconnect.description',
+		url: 'https://cyber.co',
+		icon: Share2,
+		category: 'social',
+		tags: ['social-graph', 'l2', 'identity'],
+		chains: ['Ethereum', 'BSC', 'Polygon', 'Optimism'],
+		color: '#000000'
+	},
+	{
+		id: 'friend-tech',
+		name: 'Friend.tech',
+		descriptionKey: 'chain_tools.tools.friend_tech.description',
+		url: 'https://www.friend.tech',
+		icon: Users,
+		category: 'social',
+		tags: ['socialfi', 'keys', 'base', 'speculation'],
+		chains: ['Base'],
+		color: '#0052FF'
+	},
+	{
+		id: 'mirror',
+		name: 'Mirror',
+		descriptionKey: 'chain_tools.tools.mirror.description',
+		url: 'https://mirror.xyz',
+		icon: Newspaper,
+		category: 'social',
+		tags: ['writing', 'publishing', 'nft', 'crowdfunding'],
+		chains: ['Ethereum', 'Optimism'],
+		color: '#007AFF'
+	},
+	{
+		id: 'paragraph',
+		name: 'Paragraph',
+		descriptionKey: 'chain_tools.tools.paragraph.description',
+		url: 'https://paragraph.xyz',
+		icon: Newspaper,
+		category: 'social',
+		tags: ['newsletter', 'writing', 'web3', 'publishing'],
+		chains: ['Ethereum', 'Base'],
+		color: '#000000'
+	},
+	{
+		id: 'deso',
+		name: 'DeSo',
+		descriptionKey: 'chain_tools.tools.deso.description',
+		url: 'https://deso.com',
+		icon: Share2,
+		category: 'social',
+		tags: ['l1', 'social', 'decentralized', 'blockchain'],
+		chains: ['DeSo'],
+		color: '#0057FF'
+	},
+	{
+		id: 'phaver',
+		name: 'Phaver',
+		descriptionKey: 'chain_tools.tools.phaver.description',
+		url: 'https://phaver.com',
+		icon: MessageCircle,
+		category: 'social',
+		tags: ['lens', 'farcaster', 'social', 'stake-to-post'],
+		chains: ['Polygon', 'Optimism'],
+		color: '#5D5FEF'
+	},
+	{
+		id: 'drakula',
+		name: 'Drakula',
+		descriptionKey: 'chain_tools.tools.drakula.description',
+		url: 'https://drakula.app',
+		icon: Podcast,
+		category: 'social',
+		tags: ['video', 'short-form', 'creator', 'farcaster'],
+		chains: ['Base'],
+		color: '#FF0050'
+	},
+
+	// ============================================
+	// L2 - Layer 2 Solutions & Tools
+	// ============================================
+	{
+		id: 'arbitrum-one',
+		name: 'Arbitrum One',
+		descriptionKey: 'chain_tools.tools.arbitrum_one.description',
+		url: 'https://arbitrum.io',
+		icon: Layers2,
+		category: 'l2',
+		tags: ['optimistic-rollup', 'ethereum', 'scaling', 'evm'],
+		chains: ['Arbitrum'],
+		color: '#28A0F0',
+		isFeatured: true
+	},
+	{
+		id: 'optimism',
+		name: 'Optimism',
+		descriptionKey: 'chain_tools.tools.optimism.description',
+		url: 'https://www.optimism.io',
+		icon: Layers2,
+		category: 'l2',
+		tags: ['optimistic-rollup', 'ethereum', 'superchain', 'op-stack'],
+		chains: ['Optimism'],
+		color: '#FF0420'
+	},
+	{
+		id: 'base',
+		name: 'Base',
+		descriptionKey: 'chain_tools.tools.base.description',
+		url: 'https://base.org',
+		icon: Hexagon,
+		category: 'l2',
+		tags: ['optimistic-rollup', 'coinbase', 'op-stack', 'evm'],
+		chains: ['Base'],
+		color: '#0052FF'
+	},
+	{
+		id: 'zksync-era',
+		name: 'zkSync Era',
+		descriptionKey: 'chain_tools.tools.zksync_era.description',
+		url: 'https://zksync.io',
+		icon: Layers2,
+		category: 'l2',
+		tags: ['zk-rollup', 'ethereum', 'scaling', 'account-abstraction'],
+		chains: ['zkSync'],
+		color: '#8C8DFC'
+	},
+	{
+		id: 'starknet',
+		name: 'Starknet',
+		descriptionKey: 'chain_tools.tools.starknet.description',
+		url: 'https://www.starknet.io',
+		icon: Layers2,
+		category: 'l2',
+		tags: ['zk-rollup', 'ethereum', 'cairo', 'validity-proof'],
+		chains: ['Starknet'],
+		color: '#29296E'
+	},
+	{
+		id: 'scroll',
+		name: 'Scroll',
+		descriptionKey: 'chain_tools.tools.scroll.description',
+		url: 'https://scroll.io',
+		icon: Layers2,
+		category: 'l2',
+		tags: ['zk-rollup', 'ethereum', 'evm-equivalent', 'zkevm'],
+		chains: ['Scroll'],
+		color: '#FFEEDA'
+	},
+	{
+		id: 'linea',
+		name: 'Linea',
+		descriptionKey: 'chain_tools.tools.linea.description',
+		url: 'https://linea.build',
+		icon: Layers2,
+		category: 'l2',
+		tags: ['zk-rollup', 'consensys', 'zkevm', 'ethereum'],
+		chains: ['Linea'],
+		color: '#61DFFF'
+	},
+	{
+		id: 'polygon-zkevm',
+		name: 'Polygon zkEVM',
+		descriptionKey: 'chain_tools.tools.polygon_zkevm.description',
+		url: 'https://polygon.technology/polygon-zkevm',
+		icon: Layers2,
+		category: 'l2',
+		tags: ['zk-rollup', 'polygon', 'zkevm', 'ethereum'],
+		chains: ['Polygon zkEVM'],
+		color: '#8247E5'
+	},
+	{
+		id: 'manta-pacific',
+		name: 'Manta Pacific',
+		descriptionKey: 'chain_tools.tools.manta_pacific.description',
+		url: 'https://pacific.manta.network',
+		icon: Layers2,
+		category: 'l2',
+		tags: ['modular', 'zk', 'ethereum', 'defi'],
+		chains: ['Manta Pacific'],
+		color: '#00D2FF'
+	},
+	{
+		id: 'blast-l2',
+		name: 'Blast',
+		descriptionKey: 'chain_tools.tools.blast_l2.description',
+		url: 'https://blast.io',
+		icon: Zap,
+		category: 'l2',
+		tags: ['optimistic-rollup', 'native-yield', 'ethereum'],
+		chains: ['Blast'],
+		color: '#FCFC03'
+	},
+	{
+		id: 'mode',
+		name: 'Mode',
+		descriptionKey: 'chain_tools.tools.mode.description',
+		url: 'https://www.mode.network',
+		icon: Layers2,
+		category: 'l2',
+		tags: ['optimistic-rollup', 'op-stack', 'defi', 'sequencer-sharing'],
+		chains: ['Mode'],
+		color: '#DFFE00'
+	},
+	{
+		id: 'mantle',
+		name: 'Mantle',
+		descriptionKey: 'chain_tools.tools.mantle.description',
+		url: 'https://www.mantle.xyz',
+		icon: Layers2,
+		category: 'l2',
+		tags: ['modular', 'ethereum', 'bitdao', 'lsd'],
+		chains: ['Mantle'],
+		color: '#000000'
+	},
+	{
+		id: 'l2beat',
+		name: 'L2BEAT',
+		descriptionKey: 'chain_tools.tools.l2beat.description',
+		url: 'https://l2beat.com',
+		icon: BarChart3,
+		category: 'l2',
+		tags: ['analytics', 'risk', 'tvl', 'comparison'],
+		chains: ['Ethereum'],
+		color: '#A537FD'
+	},
+	{
+		id: 'growthepie',
+		name: 'growthepie',
+		descriptionKey: 'chain_tools.tools.growthepie.description',
+		url: 'https://growthepie.xyz',
+		icon: PieChart,
+		category: 'l2',
+		tags: ['analytics', 'l2', 'metrics', 'fundamentals'],
+		chains: ['Ethereum'],
+		color: '#10B981'
+	},
+
+	// ============================================
+	// GAMEFI - Gaming & Metaverse
+	// ============================================
+	{
+		id: 'immutable',
+		name: 'Immutable',
+		descriptionKey: 'chain_tools.tools.immutable.description',
+		url: 'https://www.immutable.com',
+		icon: Gamepad2,
+		category: 'gamefi',
+		tags: ['gaming', 'nft', 'zkEVM', 'layer2'],
+		chains: ['Immutable X', 'Immutable zkEVM'],
+		color: '#00BFBF',
+		isFeatured: true
+	},
+	{
+		id: 'ronin',
+		name: 'Ronin',
+		descriptionKey: 'chain_tools.tools.ronin.description',
+		url: 'https://roninchain.com',
+		icon: Sword,
+		category: 'gamefi',
+		tags: ['gaming', 'axie', 'sidechain', 'sky-mavis'],
+		chains: ['Ronin'],
+		color: '#1273EA'
+	},
+	{
+		id: 'treasure',
+		name: 'Treasure',
+		descriptionKey: 'chain_tools.tools.treasure.description',
+		url: 'https://treasure.lol',
+		icon: Trophy,
+		category: 'gamefi',
+		tags: ['gaming', 'arbitrum', 'ecosystem', 'magic'],
+		chains: ['Arbitrum'],
+		color: '#DC2626'
+	},
+	{
+		id: 'beam',
+		name: 'Beam',
+		descriptionKey: 'chain_tools.tools.beam.description',
+		url: 'https://www.beam.gg',
+		icon: Gamepad2,
+		category: 'gamefi',
+		tags: ['gaming', 'avalanche', 'subnet', 'merit-circle'],
+		chains: ['Beam'],
+		color: '#FCFC03'
+	},
+	{
+		id: 'sequence',
+		name: 'Sequence',
+		descriptionKey: 'chain_tools.tools.sequence.description',
+		url: 'https://sequence.xyz',
+		icon: Box,
+		category: 'gamefi',
+		tags: ['wallet', 'sdk', 'gaming', 'infrastructure'],
+		chains: ['Ethereum', 'Polygon', 'Arbitrum'],
+		color: '#000000'
+	},
+	{
+		id: 'stardust',
+		name: 'Stardust',
+		descriptionKey: 'chain_tools.tools.stardust.description',
+		url: 'https://stardust.gg',
+		icon: Sparkles,
+		category: 'gamefi',
+		tags: ['sdk', 'wallet', 'nft', 'gaming'],
+		chains: ['Ethereum', 'Polygon', 'Solana'],
+		color: '#7C3AED'
+	},
+	{
+		id: 'fractal',
+		name: 'Fractal',
+		descriptionKey: 'chain_tools.tools.fractal.description',
+		url: 'https://www.fractal.is',
+		icon: Hexagon,
+		category: 'gamefi',
+		tags: ['marketplace', 'gaming', 'nft', 'discovery'],
+		chains: ['Solana', 'Ethereum', 'Polygon'],
+		color: '#7C3AED'
+	},
+	{
+		id: 'xai',
+		name: 'Xai',
+		descriptionKey: 'chain_tools.tools.xai.description',
+		url: 'https://xai.games',
+		icon: Gamepad2,
+		category: 'gamefi',
+		tags: ['gaming', 'arbitrum-orbit', 'layer3', 'offchain-labs'],
+		chains: ['Xai'],
+		color: '#F5F5F5'
+	},
+	{
+		id: 'ygg',
+		name: 'Yield Guild Games',
+		descriptionKey: 'chain_tools.tools.ygg.description',
+		url: 'https://yieldguild.io',
+		icon: Users,
+		category: 'gamefi',
+		tags: ['guild', 'scholarship', 'gaming', 'dao'],
+		chains: ['Ethereum', 'Polygon', 'Ronin'],
+		color: '#E74C3C'
+	},
+	{
+		id: 'loot8',
+		name: 'Loot8',
+		descriptionKey: 'chain_tools.tools.loot8.description',
+		url: 'https://loot8.io',
+		icon: Box,
+		category: 'gamefi',
+		tags: ['nft', 'gaming', 'collectibles', 'brands'],
+		chains: ['Ethereum', 'Polygon'],
+		color: '#FF6B00'
+	},
+	{
+		id: 'iskra',
+		name: 'Iskra',
+		descriptionKey: 'chain_tools.tools.iskra.description',
+		url: 'https://iskra.world',
+		icon: Flame,
+		category: 'gamefi',
+		tags: ['gaming', 'platform', 'community', 'web3'],
+		chains: ['Ethereum', 'Klaytn'],
+		color: '#FF4500'
+	},
+	{
+		id: 'elixir-games',
+		name: 'Elixir Games',
+		descriptionKey: 'chain_tools.tools.elixir_games.description',
+		url: 'https://elixir.app',
+		icon: Joystick,
+		category: 'gamefi',
+		tags: ['launcher', 'gaming', 'discovery', 'desktop'],
+		chains: ['Multi-chain'],
+		color: '#8B5CF6'
+	},
+
+	// ============================================
+	// PAYMENTS - Crypto Payments & Fiat On-ramp
+	// ============================================
+	{
+		id: 'moonpay',
+		name: 'MoonPay',
+		descriptionKey: 'chain_tools.tools.moonpay.description',
+		url: 'https://www.moonpay.com',
+		icon: CreditCard,
+		category: 'payments',
+		tags: ['fiat', 'on-ramp', 'off-ramp', 'card'],
+		chains: ['Ethereum', 'Bitcoin', 'Solana', 'Polygon'],
+		color: '#7D00FF',
+		isFeatured: true
+	},
+	{
+		id: 'transak',
+		name: 'Transak',
+		descriptionKey: 'chain_tools.tools.transak.description',
+		url: 'https://transak.com',
+		icon: CreditCard,
+		category: 'payments',
+		tags: ['fiat', 'on-ramp', 'off-ramp', 'sdk'],
+		chains: ['Ethereum', 'Polygon', 'BSC', 'Solana'],
+		color: '#0052FF'
+	},
+	{
+		id: 'ramp',
+		name: 'Ramp',
+		descriptionKey: 'chain_tools.tools.ramp.description',
+		url: 'https://ramp.network',
+		icon: ArrowUpDown,
+		category: 'payments',
+		tags: ['fiat', 'on-ramp', 'sdk', 'non-custodial'],
+		chains: ['Ethereum', 'Polygon', 'Solana', 'Avalanche'],
+		color: '#21BF73'
+	},
+	{
+		id: 'onmeta',
+		name: 'Onmeta',
+		descriptionKey: 'chain_tools.tools.onmeta.description',
+		url: 'https://onmeta.in',
+		icon: CreditCard,
+		category: 'payments',
+		tags: ['fiat', 'on-ramp', 'india', 'upi'],
+		chains: ['Ethereum', 'Polygon', 'BSC'],
+		color: '#6366F1'
+	},
+	{
+		id: 'request-network',
+		name: 'Request Network',
+		descriptionKey: 'chain_tools.tools.request_network.description',
+		url: 'https://request.network',
+		icon: Receipt,
+		category: 'payments',
+		tags: ['invoicing', 'crypto-payments', 'b2b', 'accounting'],
+		chains: ['Ethereum', 'Polygon', 'Gnosis'],
+		color: '#00E6A0'
+	},
+	{
+		id: 'superfluid',
+		name: 'Superfluid',
+		descriptionKey: 'chain_tools.tools.superfluid.description',
+		url: 'https://superfluid.finance',
+		icon: Droplets,
+		category: 'payments',
+		tags: ['streaming', 'real-time', 'subscriptions', 'payroll'],
+		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism', 'BSC'],
+		color: '#12141E'
+	},
+	{
+		id: 'sablier',
+		name: 'Sablier',
+		descriptionKey: 'chain_tools.tools.sablier.description',
+		url: 'https://sablier.com',
+		icon: Droplets,
+		category: 'payments',
+		tags: ['streaming', 'vesting', 'payroll', 'lockup'],
+		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism', 'Base'],
+		color: '#F77423'
+	},
+	{
+		id: 'coinshift',
+		name: 'Coinshift',
+		descriptionKey: 'chain_tools.tools.coinshift.description',
+		url: 'https://coinshift.xyz',
+		icon: Building2,
+		category: 'payments',
+		tags: ['treasury', 'multi-sig', 'payroll', 'invoicing'],
+		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism'],
+		color: '#5856D6'
+	},
+	{
+		id: 'utopia-labs',
+		name: 'Utopia Labs',
+		descriptionKey: 'chain_tools.tools.utopia_labs.description',
+		url: 'https://www.utopialabs.com',
+		icon: Building2,
+		category: 'payments',
+		tags: ['payroll', 'dao', 'treasury', 'operations'],
+		chains: ['Ethereum', 'Polygon', 'Optimism'],
+		color: '#7C3AED'
+	},
+	{
+		id: 'gnosis-pay',
+		name: 'Gnosis Pay',
+		descriptionKey: 'chain_tools.tools.gnosis_pay.description',
+		url: 'https://gnosispay.com',
+		icon: CreditCard,
+		category: 'payments',
+		tags: ['card', 'visa', 'self-custody', 'spend'],
+		chains: ['Gnosis'],
+		color: '#04795B'
+	},
+	{
+		id: 'spritz',
+		name: 'Spritz',
+		descriptionKey: 'chain_tools.tools.spritz.description',
+		url: 'https://spritz.finance',
+		icon: Banknote,
+		category: 'payments',
+		tags: ['bill-pay', 'off-ramp', 'ach', 'fiat'],
+		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'BSC'],
+		color: '#00D4AA'
+	},
+	{
+		id: 'bitpay',
+		name: 'BitPay',
+		descriptionKey: 'chain_tools.tools.bitpay.description',
+		url: 'https://bitpay.com',
+		icon: CreditCard,
+		category: 'payments',
+		tags: ['merchant', 'payments', 'card', 'invoice'],
+		chains: ['Bitcoin', 'Ethereum', 'Polygon'],
+		color: '#1A3B8B'
 	}
 ];
