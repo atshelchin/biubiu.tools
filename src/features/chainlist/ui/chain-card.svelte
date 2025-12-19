@@ -203,6 +203,7 @@
 		border-radius: var(--radius-lg);
 		overflow: hidden;
 		transition: all 0.2s ease;
+		max-width: 100%;
 	}
 
 	.chain-card:hover {
@@ -221,11 +222,14 @@
 		justify-content: space-between;
 		gap: var(--space-4);
 		width: 100%;
+		max-width: 100%;
+		min-width: 0;
 		padding: var(--space-4);
 		border: none;
 		background: transparent;
 		cursor: pointer;
 		text-align: left;
+		overflow: hidden;
 	}
 
 	.chain-info {
@@ -233,6 +237,8 @@
 		align-items: center;
 		gap: var(--space-3);
 		min-width: 0;
+		overflow: hidden;
+		flex: 1;
 	}
 
 	.chain-icon {
@@ -264,6 +270,8 @@
 
 	.chain-details {
 		min-width: 0;
+		overflow: hidden;
+		flex: 1;
 	}
 
 	.chain-name-row {
@@ -352,6 +360,8 @@
 		border-top: 1px solid var(--color-border);
 		margin-top: 0;
 		padding-top: var(--space-4);
+		max-width: 100%;
+		overflow: hidden;
 	}
 
 	.action-buttons {
@@ -423,6 +433,21 @@
 	}
 
 	@media (max-width: 640px) {
+		.card-header {
+			flex-direction: column;
+			align-items: stretch;
+			gap: var(--space-3);
+		}
+
+		.chain-info {
+			width: 100%;
+		}
+
+		.card-actions {
+			width: 100%;
+			justify-content: space-between;
+		}
+
 		.chain-meta {
 			flex-direction: column;
 			align-items: flex-start;

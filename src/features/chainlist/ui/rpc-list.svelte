@@ -1,11 +1,30 @@
 <script lang="ts">
 	import { ExternalLink, Shield, ShieldAlert, ShieldQuestion } from '@lucide/svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
+	import { onMount } from 'svelte';
 	import type { RpcEndpoint, RpcTestResult, Explorer } from '../types/chain';
 	import { formatLatency, formatBlockHeight, getLatencyQuality } from '../utils/rpc-tester';
 	import CopyButton from '$lib/components/ui/copy-button.svelte';
 
 	type RpcProtocol = 'https' | 'wss';
+
+	// Detect mobile screen
+	let isMobile = $state(false);
+
+	onMount(() => {
+		const checkMobile = () => {
+			isMobile = window.innerWidth <= 640;
+		};
+		checkMobile();
+		window.addEventListener('resize', checkMobile);
+		return () => window.removeEventListener('resize', checkMobile);
+	});
+
+	// Truncate URL for mobile display (max 40 chars)
+	function truncateUrl(url: string, maxLength = 40): string {
+		if (url.length <= maxLength) return url;
+		return url.slice(0, maxLength) + '...';
+	}
 
 	interface Props {
 		rpcEndpoints: RpcEndpoint[];
@@ -158,7 +177,7 @@
 						<td class="col-url">
 							<div class="url-cell">
 								<span class="url-text" title={endpoint.url}>
-									{endpoint.url}
+									{isMobile ? truncateUrl(endpoint.url) : endpoint.url}
 								</span>
 								<CopyButton value={endpoint.url} size={14} class="rpc-copy-btn" />
 							</div>
@@ -210,6 +229,8 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-4);
+		max-width: 100%;
+		overflow: hidden;
 	}
 
 	.rpc-table-wrapper {
