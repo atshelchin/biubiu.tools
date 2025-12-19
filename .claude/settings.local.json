@@ -16,7 +16,13 @@
       "Bash(bun x prettier:*)",
       "Bash(bunx prettier:*)",
       "Bash(cat:*)",
-      "Read(//tmp/**)"
+      "Read(//tmp/**)",
+      "Bash(tree:*)",
+      "Bash(echo:*)",
+      "Bash(node:*)",
+      "Bash(for id in across aragon arkham blockscout blur eigenlayer foundry hardhat lido magic-eden mythx nansen orbiter reservoir slither tally tenderly ultrasound)",
+      "Bash(do)",
+      "Bash(done)"
     ],
     "deny": [],
     "ask": []

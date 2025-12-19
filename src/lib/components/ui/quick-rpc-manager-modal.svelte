@@ -162,9 +162,7 @@
 					💡 {i18n.t('components.quick_rpc_manager.hint')}
 					<br />
 					{i18n.t('components.quick_rpc_manager.recommend_prefix')}
-					<a href="https://chainid.network" target="_blank" rel="noopener noreferrer">
-						chainid.network
-					</a>
+					<a href="/apps/chainlist" target="_blank" rel="noopener noreferrer"> Chainlist </a>
 					{i18n.t('components.quick_rpc_manager.recommend_suffix')}
 				</div>
 			</div>

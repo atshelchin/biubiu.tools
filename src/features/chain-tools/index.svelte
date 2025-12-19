@@ -153,7 +153,9 @@
 		return result;
 	});
 
-	const hasActiveFilters = $derived(selectedCategory !== 'featured' || debouncedQuery.trim() !== '');
+	const hasActiveFilters = $derived(
+		selectedCategory !== 'featured' || debouncedQuery.trim() !== ''
+	);
 </script>
 
 <div class="chain-tools-page">

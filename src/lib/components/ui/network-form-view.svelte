@@ -336,7 +336,7 @@
 
 	<InfoHint>
 		{t('wallet.network_settings.chainlist_hint_prefix')}
-		<a href="https://chainid.network" target="_blank" rel="noopener noreferrer">chainid.network</a>
+		<a href="/apps/chainlist" target="_blank" rel="noopener noreferrer">Chainlist</a>
 		{t('wallet.network_settings.chainlist_hint_suffix')}
 	</InfoHint>
 	<Form formState={form}>
