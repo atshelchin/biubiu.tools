@@ -78,13 +78,6 @@ import {
 	Layers2,
 	Network,
 	HardDrive,
-	// New category icons
-	Laugh,
-	Radio as RadioIcon,
-	Repeat2,
-	Sprout,
-	EyeOff,
-	DatabaseZap
 } from '@lucide/svelte';
 import type { Category, ExternalTool, CategoryId } from '../types';
 
@@ -128,18 +121,7 @@ export const categories: Category[] = [
 		labelKey: 'chain_tools.categories.payments',
 		color: '#10B981',
 		icon: CreditCard
-	},
-	{ id: 'meme', labelKey: 'chain_tools.categories.meme', color: '#FBBF24', icon: Laugh },
-	{ id: 'oracle', labelKey: 'chain_tools.categories.oracle', color: '#7C3AED', icon: RadioIcon },
-	{
-		id: 'restaking',
-		labelKey: 'chain_tools.categories.restaking',
-		color: '#0EA5E9',
-		icon: Repeat2
-	},
-	{ id: 'yield', labelKey: 'chain_tools.categories.yield', color: '#22C55E', icon: Sprout },
-	{ id: 'privacy', labelKey: 'chain_tools.categories.privacy', color: '#64748B', icon: EyeOff },
-	{ id: 'data', labelKey: 'chain_tools.categories.data', color: '#F43F5E', icon: DatabaseZap }
+	}
 ];
 
 /**
@@ -5318,8 +5300,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'Four.meme',
 		descriptionKey: 'chain_tools.tools.four_meme.description',
 		url: 'https://four.meme',
-		icon: Laugh,
-		category: 'meme',
+		icon: Rocket,
+		category: 'launchpad',
 		tags: ['meme', 'token-launch', 'bnb', 'fair-launch'],
 		chains: ['BNB Chain'],
 		color: '#FBBF24',
@@ -5330,8 +5312,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'SunPump',
 		descriptionKey: 'chain_tools.tools.sunpump.description',
 		url: 'https://sunpump.meme',
-		icon: Laugh,
-		category: 'meme',
+		icon: Rocket,
+		category: 'launchpad',
 		tags: ['meme', 'token-launch', 'tron', 'fair-launch'],
 		chains: ['Tron'],
 		color: '#FF0000'
@@ -5342,7 +5324,7 @@ export const toolsData: ExternalTool[] = [
 		descriptionKey: 'chain_tools.tools.moonshot.description',
 		url: 'https://moonshot.money',
 		icon: Rocket,
-		category: 'meme',
+		category: 'launchpad',
 		tags: ['meme', 'token-launch', 'solana', 'trading'],
 		chains: ['Solana'],
 		color: '#7C3AED'
@@ -5352,8 +5334,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'Ape.Store',
 		descriptionKey: 'chain_tools.tools.ape_store.description',
 		url: 'https://ape.store',
-		icon: Laugh,
-		category: 'meme',
+		icon: Rocket,
+		category: 'launchpad',
 		tags: ['meme', 'token-launch', 'ethereum', 'fair-launch'],
 		chains: ['Ethereum', 'Base'],
 		color: '#10B981'
@@ -5364,7 +5346,7 @@ export const toolsData: ExternalTool[] = [
 		descriptionKey: 'chain_tools.tools.believe.description',
 		url: 'https://believe.app',
 		icon: Sparkles,
-		category: 'meme',
+		category: 'launchpad',
 		tags: ['meme', 'social', 'token-launch', 'solana'],
 		chains: ['Solana'],
 		color: '#EC4899'
@@ -5375,7 +5357,7 @@ export const toolsData: ExternalTool[] = [
 		descriptionKey: 'chain_tools.tools.virtuals.description',
 		url: 'https://virtuals.io',
 		icon: Cpu,
-		category: 'meme',
+		category: 'launchpad',
 		tags: ['ai-agent', 'token-launch', 'base', 'gaming'],
 		chains: ['Base'],
 		color: '#3B82F6'
@@ -5385,8 +5367,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'Clanker',
 		descriptionKey: 'chain_tools.tools.clanker.description',
 		url: 'https://clanker.world',
-		icon: Laugh,
-		category: 'meme',
+		icon: Rocket,
+		category: 'launchpad',
 		tags: ['meme', 'farcaster', 'base', 'social-token'],
 		chains: ['Base'],
 		color: '#8B5CF6'
@@ -5397,7 +5379,7 @@ export const toolsData: ExternalTool[] = [
 		descriptionKey: 'chain_tools.tools.dexscreener_moonshot.description',
 		url: 'https://dexscreener.com/moonshot',
 		icon: TrendingUp,
-		category: 'meme',
+		category: 'launchpad',
 		tags: ['meme', 'analytics', 'trending', 'discovery'],
 		chains: ['Solana'],
 		color: '#22C55E'
@@ -5635,8 +5617,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'Switchboard',
 		descriptionKey: 'chain_tools.tools.switchboard.description',
 		url: 'https://switchboard.xyz',
-		icon: RadioIcon,
-		category: 'oracle',
+		icon: Server,
+		category: 'infra',
 		tags: ['oracle', 'solana', 'vrf', 'price-feeds'],
 		chains: ['Solana', 'Aptos', 'Sui', 'CoreDAO'],
 		color: '#00D1FF'
@@ -5646,8 +5628,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'DIA',
 		descriptionKey: 'chain_tools.tools.dia.description',
 		url: 'https://diadata.org',
-		icon: RadioIcon,
-		category: 'oracle',
+		icon: Server,
+		category: 'infra',
 		tags: ['oracle', 'transparent', 'customizable', 'nft-floor'],
 		chains: ['Ethereum', 'Polygon', 'BNB Chain', 'Arbitrum', 'Fantom'],
 		color: '#FF6B6B'
@@ -5657,8 +5639,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'Band Protocol',
 		descriptionKey: 'chain_tools.tools.band_protocol.description',
 		url: 'https://bandprotocol.com',
-		icon: RadioIcon,
-		category: 'oracle',
+		icon: Server,
+		category: 'infra',
 		tags: ['oracle', 'cross-chain', 'cosmos', 'price-feeds'],
 		chains: ['Ethereum', 'BNB Chain', 'Fantom', 'Cosmos'],
 		color: '#516AFF'
@@ -5668,8 +5650,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'Tellor',
 		descriptionKey: 'chain_tools.tools.tellor.description',
 		url: 'https://tellor.io',
-		icon: RadioIcon,
-		category: 'oracle',
+		icon: Server,
+		category: 'infra',
 		tags: ['oracle', 'decentralized', 'dispute', 'crypto-native'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism', 'Gnosis'],
 		color: '#20E19F'
@@ -5683,8 +5665,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'Symbiotic',
 		descriptionKey: 'chain_tools.tools.symbiotic_restaking.description',
 		url: 'https://symbiotic.fi',
-		icon: Repeat2,
-		category: 'restaking',
+		icon: TrendingUp,
+		category: 'defi',
 		tags: ['restaking', 'modular', 'permissionless', 'security'],
 		chains: ['Ethereum'],
 		color: '#8B5CF6'
@@ -5694,8 +5676,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'Karak',
 		descriptionKey: 'chain_tools.tools.karak.description',
 		url: 'https://karak.network',
-		icon: Repeat2,
-		category: 'restaking',
+		icon: TrendingUp,
+		category: 'defi',
 		tags: ['restaking', 'universal', 'multichain', 'security'],
 		chains: ['Ethereum', 'Arbitrum', 'BNB Chain'],
 		color: '#F97316'
@@ -5705,8 +5687,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'Ether.fi',
 		descriptionKey: 'chain_tools.tools.ether_fi.description',
 		url: 'https://ether.fi',
-		icon: Repeat2,
-		category: 'restaking',
+		icon: TrendingUp,
+		category: 'defi',
 		tags: ['liquid-restaking', 'eeth', 'non-custodial', 'defi'],
 		chains: ['Ethereum'],
 		color: '#6366F1',
@@ -5717,8 +5699,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'Swell',
 		descriptionKey: 'chain_tools.tools.swell.description',
 		url: 'https://swellnetwork.io',
-		icon: Repeat2,
-		category: 'restaking',
+		icon: TrendingUp,
+		category: 'defi',
 		tags: ['liquid-restaking', 'sweth', 'rsweth', 'defi'],
 		chains: ['Ethereum'],
 		color: '#0EA5E9'
@@ -5732,8 +5714,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'Equilibria',
 		descriptionKey: 'chain_tools.tools.equilibria.description',
 		url: 'https://equilibria.fi',
-		icon: Sprout,
-		category: 'yield',
+		icon: TrendingUp,
+		category: 'defi',
 		tags: ['yield', 'pendle', 'boosted', 'vaults'],
 		chains: ['Ethereum', 'Arbitrum', 'BNB Chain'],
 		color: '#8B5CF6'
@@ -5747,8 +5729,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'Railgun',
 		descriptionKey: 'chain_tools.tools.railgun.description',
 		url: 'https://railgun.org',
-		icon: EyeOff,
-		category: 'privacy',
+		icon: Shield,
+		category: 'security',
 		tags: ['privacy', 'zk-snark', 'defi', 'shielded'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'BNB Chain'],
 		color: '#2D3748'
@@ -5758,8 +5740,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'Aztec',
 		descriptionKey: 'chain_tools.tools.aztec.description',
 		url: 'https://aztec.network',
-		icon: EyeOff,
-		category: 'privacy',
+		icon: Shield,
+		category: 'security',
 		tags: ['privacy', 'zk-rollup', 'programmable', 'l2'],
 		chains: ['Ethereum'],
 		color: '#4A5568'
@@ -5769,8 +5751,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'Nocturne',
 		descriptionKey: 'chain_tools.tools.nocturne.description',
 		url: 'https://nocturne.xyz',
-		icon: EyeOff,
-		category: 'privacy',
+		icon: Shield,
+		category: 'security',
 		tags: ['privacy', 'stealth', 'defi', 'ethereum'],
 		chains: ['Ethereum'],
 		color: '#1A1A2E'
@@ -5780,8 +5762,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'Umbra',
 		descriptionKey: 'chain_tools.tools.umbra.description',
 		url: 'https://umbra.cash',
-		icon: EyeOff,
-		category: 'privacy',
+		icon: Shield,
+		category: 'security',
 		tags: ['privacy', 'stealth-addresses', 'payments', 'multichain'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism', 'Gnosis'],
 		color: '#553C9A'
@@ -5791,8 +5773,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'Labyrinth',
 		descriptionKey: 'chain_tools.tools.labyrinth.description',
 		url: 'https://labyrinth.technology',
-		icon: EyeOff,
-		category: 'privacy',
+		icon: Shield,
+		category: 'security',
 		tags: ['privacy', 'compliance', 'zkp', 'institutional'],
 		chains: ['Ethereum'],
 		color: '#0D1117'
@@ -5802,8 +5784,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'Elusiv',
 		descriptionKey: 'chain_tools.tools.elusiv.description',
 		url: 'https://elusiv.io',
-		icon: EyeOff,
-		category: 'privacy',
+		icon: Shield,
+		category: 'security',
 		tags: ['privacy', 'solana', 'zk', 'compliant'],
 		chains: ['Solana'],
 		color: '#14F195'
@@ -5813,8 +5795,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'Zcash',
 		descriptionKey: 'chain_tools.tools.zcash.description',
 		url: 'https://z.cash',
-		icon: EyeOff,
-		category: 'privacy',
+		icon: Shield,
+		category: 'security',
 		tags: ['privacy', 'shielded', 'zk-snark', 'native'],
 		chains: ['Zcash'],
 		color: '#F4B728'
@@ -5828,8 +5810,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'The Graph',
 		descriptionKey: 'chain_tools.tools.the_graph.description',
 		url: 'https://thegraph.com',
-		icon: DatabaseZap,
-		category: 'data',
+		icon: BarChart3,
+		category: 'analytics',
 		tags: ['indexing', 'subgraph', 'api', 'decentralized'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism', 'BNB Chain', 'Avalanche'],
 		color: '#6747ED',
@@ -5840,8 +5822,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'Space and Time',
 		descriptionKey: 'chain_tools.tools.space_and_time.description',
 		url: 'https://spaceandtime.io',
-		icon: DatabaseZap,
-		category: 'data',
+		icon: BarChart3,
+		category: 'analytics',
 		tags: ['data-warehouse', 'zk', 'sql', 'verifiable'],
 		chains: ['Ethereum', 'Polygon', 'Sui', 'Avalanche'],
 		color: '#7C3AED'
@@ -5851,8 +5833,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'Allium',
 		descriptionKey: 'chain_tools.tools.allium.description',
 		url: 'https://allium.so',
-		icon: DatabaseZap,
-		category: 'data',
+		icon: BarChart3,
+		category: 'analytics',
 		tags: ['data', 'analytics', 'enterprise', 'real-time'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism', 'Solana'],
 		color: '#F97316'
@@ -5862,8 +5844,8 @@ export const toolsData: ExternalTool[] = [
 		name: 'Sentio',
 		descriptionKey: 'chain_tools.tools.sentio.description',
 		url: 'https://sentio.xyz',
-		icon: DatabaseZap,
-		category: 'data',
+		icon: BarChart3,
+		category: 'analytics',
 		tags: ['observability', 'monitoring', 'debugging', 'multichain'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism', 'BNB Chain', 'Aptos', 'Sui'],
 		color: '#3B82F6'

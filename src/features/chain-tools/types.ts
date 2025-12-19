@@ -5,7 +5,6 @@ import type { Component } from 'svelte';
  */
 export type CategoryId =
 	| 'featured'
-	| 'all'
 	| 'defi'
 	| 'nft'
 	| 'analytics'
@@ -21,13 +20,7 @@ export type CategoryId =
 	| 'social'
 	| 'l2'
 	| 'gamefi'
-	| 'payments'
-	| 'meme'
-	| 'oracle'
-	| 'restaking'
-	| 'yield'
-	| 'privacy'
-	| 'data';
+	| 'payments';
 
 /**
  * Category definition with i18n keys and styling
@@ -48,7 +41,7 @@ export interface ExternalTool {
 	descriptionKey: string;
 	url: string;
 	icon: Component;
-	category: Exclude<CategoryId, 'all' | 'featured'>;
+	category: Exclude<CategoryId, 'featured'>;
 	tags: string[];
 	chains?: string[];
 	color: string;

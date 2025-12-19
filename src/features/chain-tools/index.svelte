@@ -141,13 +141,12 @@
 		if (selectedCategory === 'featured') {
 			// Show only featured tools
 			result = result.filter((tool) => tool.isFeatured === true);
-		} else if (selectedCategory !== 'all') {
+		} else {
 			// Filter by specific category
 			result = result.filter((tool) => tool.category === selectedCategory);
 			// Sort BiuBiu tools first when filtering by specific category
 			return sortToolsWithBiubiuFirst(result);
 		}
-		// 'all' shows everything without filtering
 
 		return result;
 	});
