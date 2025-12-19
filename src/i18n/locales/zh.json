@@ -584,9 +584,54 @@
 				}
 			}
 		},
-		"token_distribution": {
-			"title": "代币批量分散",
-			"description": "从一个钱包批量分发代币到多个收款地址"
+		"one_to_many_transfer": {
+			"title": "一对多批量转账",
+			"description": "从单个钱包向多地址分发代币和 NFT，支持所有主流资产标准",
+			"seo": {
+				"page_title": "一对多批量转账 - 批量发送代币和NFT到多个钱包 | BiuBiu Tools",
+				"page_description": "从一个钱包批量发送代币和NFT到多个地址。支持ETH、ERC20、ERC721、ERC1155，覆盖多条区块链网络。",
+				"keywords": "一对多转账, 批量转账, 空投, 代币转账, NFT转账, 多地址发送, 批量发币, ERC20, ERC721, ERC1155, 加密货币分发, web3工具",
+				"webapp_name": "一对多批量转账",
+				"webapp_description": "从一个钱包批量发送代币和NFT到多个收款地址，支持多条区块链网络",
+				"howto_name": "如何批量发送代币和NFT到多个钱包",
+				"howto_description": "从一个钱包向多个收款地址发送代币和NFT的完整指南",
+				"howto_tool_1": "Web3钱包（MetaMask、WalletConnect等）",
+				"howto_tool_2": "足够的代币余额和Gas费",
+				"step_1_name": "连接钱包",
+				"step_1_text": "点击\"连接钱包\"按钮，连接您的Web3钱包（MetaMask、WalletConnect等）。此钱包将作为代币分发的来源。",
+				"step_1_description": "将您的Web3钱包连接为源钱包",
+				"step_2_name": "检查余额",
+				"step_2_text": "选择区块链网络，确认您的钱包有足够的代币余额和Gas费用于交易。",
+				"step_2_description": "确认源钱包余额充足",
+				"step_3_name": "选择代币和金额",
+				"step_3_text": "选择要分发的代币类型（原生代币、ERC20或NFT），设置分发模式（等额分发或自定义金额），并指定每个收款人的金额或总金额。",
+				"step_3_description": "配置代币和分发金额",
+				"step_4_name": "导入收款地址",
+				"step_4_text": "通过手动输入、上传CSV文件或粘贴列表来添加收款钱包地址。可选择为每个收款人设置自定义金额。",
+				"step_4_description": "添加收款钱包地址",
+				"step_5_name": "确认并执行",
+				"step_5_text": "查看分发摘要，包括总金额、收款人数量和预估Gas费用。确认后执行批量分发，使用钱包签署每笔交易。",
+				"step_5_description": "执行代币分发",
+				"feature_1": "连接Web3钱包（MetaMask、WalletConnect、Coinbase Wallet）",
+				"feature_2": "支持多条网络（Ethereum、Polygon、BSC、Base、Arbitrum、Optimism）",
+				"feature_3": "发送原生代币（ETH、BNB、MATIC）、ERC20代币和NFT（ERC721、ERC1155）",
+				"feature_4": "等额分发或自定义每个收款人的金额",
+				"feature_5": "通过CSV、粘贴或手动输入导入收款地址"
+			},
+			"faqs": {
+				"what_is_one_to_many": "什么是一对多批量转账？",
+				"one_to_many_explanation": "一对多批量转账允许您从单个钱包向多个收款地址批量发送代币或NFT。适用于空投、工资发放、奖励分发等需要向多个地址高效发送资产的场景。",
+				"what_tokens_supported": "支持哪些类型的代币？",
+				"tokens_supported_explanation": "我们支持原生代币（ETH、BNB、MATIC等）、ERC20代币（USDT、USDC等）以及NFT（包括ERC721和ERC1155标准）。",
+				"what_is_equal_distribution": "什么是等额分发模式？",
+				"equal_distribution_explanation": "在等额分发模式下，您指定每个收款人的金额，每个地址都会收到相同的金额。总金额会根据收款人数量自动计算。",
+				"what_is_custom_amounts": "什么是自定义金额模式？",
+				"custom_amounts_explanation": "在自定义金额模式下，您可以为每个收款人指定不同的金额。当不同地址需要收到不同数量时非常有用。",
+				"how_to_import_recipients": "如何导入收款地址？",
+				"import_recipients_explanation": "您可以通过以下方式添加收款人：1）逐个手动输入，2）批量粘贴地址列表，或3）上传包含地址和可选金额的CSV文件。",
+				"what_networks_supported": "支持哪些区块链网络？",
+				"networks_supported_explanation": "目前我们支持Ethereum主网、Polygon、BSC（币安智能链）、Base、Arbitrum和Optimism。未来将添加更多网络。"
+			}
 		},
 		"token_balance_scanner": {
 			"title": "钱包余额筛查器",

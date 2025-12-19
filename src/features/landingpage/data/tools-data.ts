@@ -33,12 +33,16 @@ export const TELEGRAM_GROUP_LINK = 'https://t.me/+ABMpMG1islA4NTVl';
 export const toolsConfig: Tool[] = [
 	{
 		icon: SendHorizontal,
-		titleKey: 'tools.token_distribution.title',
-		descriptionKey: 'tools.token_distribution.description',
-		link: '/apps/token-distribution',
+		titleKey: 'tools.one_to_many_transfer.title',
+		descriptionKey: 'tools.one_to_many_transfer.description',
+		link: '/apps/one-to-many-transfer',
 		status: 'active',
 		color: '#F59E0B',
-		features: ['Equal or Custom Amounts', 'CSV Import Ready', 'Real-time Preview'],
+		featureKeys: [
+			'tools.one_to_many_transfer.seo.feature_3',
+			'tools.one_to_many_transfer.seo.feature_4',
+			'tools.one_to_many_transfer.seo.feature_5'
+		],
 		stage: 'alpha'
 	},
 	{

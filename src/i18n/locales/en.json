@@ -584,9 +584,54 @@
 				}
 			}
 		},
-		"token_distribution": {
-			"title": "Token Distribution",
-			"description": "Distribute tokens from one wallet to multiple recipient addresses"
+		"one_to_many_transfer": {
+			"title": "One-to-Many Transfer",
+			"description": "Send tokens & NFTs from one wallet to multiple addresses in batch",
+			"seo": {
+				"page_title": "One-to-Many Transfer - Batch Send Tokens & NFTs to Multiple Wallets | BiuBiu Tools",
+				"page_description": "Send tokens and NFTs from one wallet to multiple addresses in batch. Support for ETH, ERC20, ERC721, ERC1155 across multiple blockchain networks.",
+				"keywords": "one to many transfer, batch send, airdrop, token transfer, NFT transfer, multi-send, batch transfer, ERC20, ERC721, ERC1155, crypto distribution, web3 tools",
+				"webapp_name": "One-to-Many Transfer",
+				"webapp_description": "Batch send tokens and NFTs from one wallet to multiple recipients across various blockchain networks",
+				"howto_name": "How to Batch Send Tokens & NFTs to Multiple Wallets",
+				"howto_description": "Complete guide to sending tokens and NFTs from one wallet to multiple recipient addresses",
+				"howto_tool_1": "Web3 Wallet (MetaMask, WalletConnect, etc.)",
+				"howto_tool_2": "Sufficient token balance and gas fees",
+				"step_1_name": "Connect Your Wallet",
+				"step_1_text": "Click the \"Connect Wallet\" button and connect your Web3 wallet (MetaMask, WalletConnect, etc.) to the application. This wallet will be the source of tokens for distribution.",
+				"step_1_description": "Link your Web3 wallet as the source wallet",
+				"step_2_name": "Check Source Balance",
+				"step_2_text": "Select the blockchain network and verify your wallet has sufficient balance of the token you want to distribute, plus gas fees for the transactions.",
+				"step_2_description": "Verify source wallet has sufficient balance",
+				"step_3_name": "Select Token and Amount",
+				"step_3_text": "Choose which token to distribute (native token, ERC20, or NFT), set the distribution mode (equal amounts or custom per recipient), and specify the amount per recipient or total amount.",
+				"step_3_description": "Configure token and distribution amounts",
+				"step_4_name": "Import Recipients",
+				"step_4_text": "Add recipient wallet addresses by manually entering them, uploading a CSV file, or pasting a list. Optionally set custom amounts for each recipient.",
+				"step_4_description": "Add recipient wallet addresses",
+				"step_5_name": "Review and Execute",
+				"step_5_text": "Review the distribution summary including total amount, recipient count, and estimated gas costs. Confirm and execute the batch distribution. Sign each transaction with your wallet.",
+				"step_5_description": "Execute the token distribution",
+				"feature_1": "Connect Web3 wallet (MetaMask, WalletConnect, Coinbase Wallet)",
+				"feature_2": "Support multiple networks (Ethereum, Polygon, BSC, Base, Arbitrum, Optimism)",
+				"feature_3": "Send native tokens (ETH, BNB, MATIC), ERC20 tokens, and NFTs (ERC721, ERC1155)",
+				"feature_4": "Equal distribution or custom amounts per recipient",
+				"feature_5": "Import recipients via CSV, paste, or manual entry"
+			},
+			"faqs": {
+				"what_is_one_to_many": "What is One-to-Many Transfer?",
+				"one_to_many_explanation": "One-to-Many Transfer allows you to send tokens or NFTs from a single wallet to multiple recipient addresses in batch. It's ideal for airdrops, payroll, rewards distribution, and any scenario where you need to send assets to many addresses efficiently.",
+				"what_tokens_supported": "What types of tokens are supported?",
+				"tokens_supported_explanation": "We support native tokens (ETH, BNB, MATIC, etc.), ERC20 tokens (USDT, USDC, etc.), and NFTs including both ERC721 and ERC1155 standards.",
+				"what_is_equal_distribution": "What is equal distribution mode?",
+				"equal_distribution_explanation": "In equal distribution mode, you specify an amount per recipient, and every address receives the same amount. The total is calculated automatically based on the number of recipients.",
+				"what_is_custom_amounts": "What is custom amounts mode?",
+				"custom_amounts_explanation": "In custom amounts mode, you can specify different amounts for each recipient. This is useful when different addresses should receive different quantities.",
+				"how_to_import_recipients": "How can I import recipient addresses?",
+				"import_recipients_explanation": "You can add recipients by: 1) Manual entry one by one, 2) Bulk paste a list of addresses, or 3) Upload a CSV file with addresses and optional amounts.",
+				"what_networks_supported": "Which blockchain networks are supported?",
+				"networks_supported_explanation": "Currently we support Ethereum Mainnet, Polygon, BSC (Binance Smart Chain), Base, Arbitrum, and Optimism. More networks will be added in the future."
+			}
 		},
 		"token_balance_scanner": {
 			"title": "Wallet Balance Checker",
