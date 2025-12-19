@@ -103,52 +103,50 @@
 	]);
 </script>
 
-{#if !isLoading}
-	<StepBasedApp
-		{initialStep}
-		onStepManagerReady={handleStepManagerReady}
-		config={{
-			meta: data.meta,
-			structuredData: data.structuredData,
-			steps: [
-				{
-					label: 'tools.token_balance_scanner.seo.step_1_name',
-					description: 'tools.token_balance_scanner.seo.step_1_description'
-				},
-				{
-					label: 'tools.token_balance_scanner.seo.step_2_name',
-					description: 'tools.token_balance_scanner.seo.step_2_description'
-				},
-				{
-					label: 'tools.token_balance_scanner.seo.step_3_name',
-					description: 'tools.token_balance_scanner.seo.step_3_description'
-				},
-				{
-					label: 'tools.token_balance_scanner.seo.step_4_name',
-					description: 'tools.token_balance_scanner.seo.step_4_description'
-				},
-				{
-					label: 'tools.token_balance_scanner.seo.step_5_name',
-					description: 'tools.token_balance_scanner.seo.step_5_description'
-				}
-			],
-			useI18nKeys: true,
-			appTitle: i18n.t('tools.token_balance_scanner.title'),
-			appDescription: i18n.t('tools.token_balance_scanner.description'),
-			faqs: {
-				title: i18n.t('common.faqs'),
-				items: faqs
+<StepBasedApp
+	{initialStep}
+	onStepManagerReady={handleStepManagerReady}
+	config={{
+		meta: data.meta,
+		structuredData: data.structuredData,
+		steps: [
+			{
+				label: 'tools.token_balance_scanner.seo.step_1_name',
+				description: 'tools.token_balance_scanner.seo.step_1_description'
 			},
-			walletConnect: {
-				chains: [mainnet, base, bsc, polygon, arbitrum, optimism],
-				storageKey: 'biubiu-tools-token-balance-scanner'
+			{
+				label: 'tools.token_balance_scanner.seo.step_2_name',
+				description: 'tools.token_balance_scanner.seo.step_2_description'
 			},
-			stepComponents
-		}}
-	/>
-{/if}
+			{
+				label: 'tools.token_balance_scanner.seo.step_3_name',
+				description: 'tools.token_balance_scanner.seo.step_3_description'
+			},
+			{
+				label: 'tools.token_balance_scanner.seo.step_4_name',
+				description: 'tools.token_balance_scanner.seo.step_4_description'
+			},
+			{
+				label: 'tools.token_balance_scanner.seo.step_5_name',
+				description: 'tools.token_balance_scanner.seo.step_5_description'
+			}
+		],
+		useI18nKeys: true,
+		appTitle: i18n.t('tools.token_balance_scanner.title'),
+		appDescription: i18n.t('tools.token_balance_scanner.description'),
+		faqs: {
+			title: i18n.t('common.faqs'),
+			items: faqs
+		},
+		walletConnect: {
+			chains: [mainnet, base, bsc, polygon, arbitrum, optimism],
+			storageKey: 'biubiu-tools-token-balance-scanner'
+		},
+		stepComponents
+	}}
+/>
 
-{#if showSessionModal}
+{#if !isLoading && showSessionModal}
 	<SessionManagerModal
 		sessions={activeSessions}
 		onClose={handleCloseModal}
