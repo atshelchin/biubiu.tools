@@ -382,16 +382,16 @@
 	}
 
 	.action-btn.primary:hover:not(:disabled) {
-		background: var(--color-brand);
-		border-color: var(--color-brand);
-		color: var(--color-brand-foreground, white);
+		background: #6366f1;
+		border-color: #6366f1;
+		color: white;
 		transform: translateY(-1px);
-		box-shadow: 0 4px 12px var(--color-brand-alpha-30, rgba(99, 102, 241, 0.3));
+		box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
 	}
 
 	.action-btn.primary:active:not(:disabled) {
 		transform: translateY(0);
-		box-shadow: none;
+		box-shadow: 0 2px 6px rgba(99, 102, 241, 0.3);
 	}
 
 	.action-btn.primary:disabled {
