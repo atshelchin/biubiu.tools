@@ -172,6 +172,11 @@
 		}
 
 		.filter-tabs {
+			width: 100%;
+		}
+
+		.filter-tab {
+			flex: 1;
 			justify-content: center;
 		}
 

@@ -341,9 +341,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 32px;
-		height: 32px;
-		border-radius: var(--radius-sm);
+		width: 36px;
+		height: 36px;
+		border-radius: var(--radius-md);
 		background: var(--color-panel-2);
 		color: var(--color-muted-foreground);
 		transition: all 0.2s ease;
@@ -356,10 +356,7 @@
 
 	.card-content {
 		padding: var(--space-4);
-		padding-top: 0;
 		border-top: 1px solid var(--color-border);
-		margin-top: 0;
-		padding-top: var(--space-4);
 		max-width: 100%;
 		overflow: hidden;
 	}
@@ -392,16 +389,16 @@
 	}
 
 	.action-btn.primary:hover:not(:disabled) {
-		background: #6366f1;
-		border-color: #6366f1;
+		background: var(--color-brand);
+		border-color: var(--color-brand);
 		color: white;
 		transform: translateY(-1px);
-		box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+		box-shadow: 0 4px 12px var(--color-brand-alpha-40);
 	}
 
 	.action-btn.primary:active:not(:disabled) {
 		transform: translateY(0);
-		box-shadow: 0 2px 6px rgba(99, 102, 241, 0.3);
+		box-shadow: 0 2px 6px var(--color-brand-alpha-30);
 	}
 
 	.action-btn.primary:disabled {
@@ -437,10 +434,20 @@
 			flex-direction: column;
 			align-items: stretch;
 			gap: var(--space-3);
+			padding: var(--space-3);
 		}
 
 		.chain-info {
 			width: 100%;
+		}
+
+		.chain-icon {
+			width: 36px;
+			height: 36px;
+		}
+
+		.chain-name {
+			font-size: var(--text-sm);
 		}
 
 		.card-actions {
@@ -448,23 +455,35 @@
 			justify-content: space-between;
 		}
 
+		.rpc-count {
+			font-size: var(--text-xs);
+		}
+
 		.chain-meta {
 			flex-direction: column;
 			align-items: flex-start;
 			gap: var(--space-1);
+			font-size: var(--text-xs);
 		}
 
 		.separator {
 			display: none;
 		}
 
+		.card-content {
+			padding: var(--space-3);
+		}
+
 		.action-buttons {
 			flex-direction: column;
+			gap: var(--space-2);
 		}
 
 		.action-btn {
 			width: 100%;
 			justify-content: center;
+			padding: var(--space-2) var(--space-3);
+			font-size: var(--text-sm);
 		}
 	}
 </style>

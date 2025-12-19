@@ -376,6 +376,13 @@
 		flex-shrink: 0;
 	}
 
+	@media (max-width: 640px) {
+		:global(.rpc-copy-btn) {
+			width: 24px !important;
+			height: 24px !important;
+		}
+	}
+
 	.testing-indicator {
 		display: inline-block;
 		width: 16px;
@@ -597,5 +604,23 @@
 		background: var(--color-panel-2);
 		border-color: var(--color-brand);
 		color: var(--color-brand);
+	}
+
+	@media (max-width: 640px) {
+		.explorers-section {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: var(--space-2);
+		}
+
+		.explorers-list {
+			width: 100%;
+		}
+
+		.explorer-link {
+			flex: 1;
+			justify-content: center;
+			min-width: calc(50% - var(--space-1));
+		}
 	}
 </style>
