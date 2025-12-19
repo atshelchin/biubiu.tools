@@ -1456,7 +1456,13 @@
 			"social": "Social",
 			"l2": "Layer 2",
 			"gamefi": "GameFi",
-			"payments": "Payments"
+			"payments": "Payments",
+			"meme": "Meme",
+			"oracle": "Oracle",
+			"restaking": "Restaking",
+			"yield": "Yield",
+			"privacy": "Privacy",
+			"data": "Data"
 		},
 		"tools": {
 			"uniswap": {
@@ -2418,6 +2424,732 @@
 			},
 			"bitpay": {
 				"description": "Crypto payment processing for merchants"
+			},
+			"bentobox": {
+				"description": "Sushi's token vault with flash loan and lending features"
+			},
+			"ribbon": {
+				"description": "Structured products and options vaults for sustainable yield"
+			},
+			"opyn": {
+				"description": "Options protocol with squeeth perpetual strategy"
+			},
+			"notional": {
+				"description": "Fixed-rate lending and borrowing protocol"
+			},
+			"goldfinch": {
+				"description": "Crypto lending for real-world credit in emerging markets"
+			},
+			"maple": {
+				"description": "Institutional undercollateralized lending marketplace"
+			},
+			"truefi": {
+				"description": "Uncollateralized lending for institutional borrowers"
+			},
+			"tokemak": {
+				"description": "Liquidity reactor for sustainable DeFi liquidity"
+			},
+			"olympus": {
+				"description": "Decentralized reserve currency protocol with OHM token"
+			},
+			"jones_dao": {
+				"description": "Options vaults and yield strategies on Arbitrum"
+			},
+			"umami": {
+				"description": "Sustainable yield vaults using GLP on Arbitrum"
+			},
+			"rage_trade": {
+				"description": "Delta-neutral perpetuals and yield strategies"
+			},
+			"vela": {
+				"description": "Perpetual DEX with advanced trading features"
+			},
+			"y2k": {
+				"description": "Stablecoin depeg insurance and hedging protocol"
+			},
+			"kwenta": {
+				"description": "Perpetual futures trading on Synthetix"
+			},
+			"polynomial": {
+				"description": "Options vaults powered by Synthetix on Optimism"
+			},
+			"angle": {
+				"description": "Euro stablecoin and forex DeFi protocol"
+			},
+			"liquity": {
+				"description": "Interest-free borrowing against ETH with LUSD stablecoin"
+			},
+			"reflexer": {
+				"description": "Non-pegged stablecoin RAI with PID controller"
+			},
+			"mstable": {
+				"description": "Meta-stablecoin platform with yield savings"
+			},
+			"raft": {
+				"description": "LSD-backed stablecoin borrowing protocol"
+			},
+			"prisma": {
+				"description": "LSD-backed mkUSD stablecoin with Curve integration"
+			},
+			"gravita": {
+				"description": "LSD-backed GRAI stablecoin borrowing"
+			},
+			"gyroscope": {
+				"description": "All-weather stablecoin with diversified reserves"
+			},
+			"origin_dollar": {
+				"description": "Yield-bearing stablecoin with auto-compounding"
+			},
+			"paraswap": {
+				"description": "DEX aggregator for best swap rates across chains"
+			},
+			"matcha": {
+				"description": "DEX aggregator powered by 0x protocol"
+			},
+			"cowswap": {
+				"description": "MEV-protected swaps with batch auctions"
+			},
+			"bebop": {
+				"description": "Multi-token swaps with gasless trading"
+			},
+			"dodo": {
+				"description": "Proactive market maker DEX with crowdpooling"
+			},
+			"clipper": {
+				"description": "DEX optimized for retail traders and small trades"
+			},
+			"woofi_pro": {
+				"description": "Professional perpetuals trading platform"
+			},
+			"sudoswap": {
+				"description": "NFT AMM for instant liquidity and trading"
+			},
+			"caviar": {
+				"description": "NFT fractionalization and AMM protocol"
+			},
+			"nftx": {
+				"description": "NFT liquidity protocol with vaulted floor prices"
+			},
+			"floor_protocol": {
+				"description": "NFT fractionalization into micro-tokens"
+			},
+			"tessera": {
+				"description": "Collective NFT ownership through fractionalization"
+			},
+			"premint": {
+				"description": "NFT allowlist and whitelist management tool"
+			},
+			"bueno": {
+				"description": "No-code generative NFT art creation tool"
+			},
+			"highlight": {
+				"description": "Creator tools for NFT minting and distribution"
+			},
+			"transient_labs": {
+				"description": "Smart contract tools for NFT creators"
+			},
+			"decent_xyz": {
+				"description": "Cross-chain NFT minting and bridging"
+			},
+			"tokenproof": {
+				"description": "NFT verification and token-gated experiences"
+			},
+			"delegate_cash": {
+				"description": "NFT delegation for secure hot wallet usage"
+			},
+			"warm_xyz": {
+				"description": "Link cold and hot wallets for NFT utility"
+			},
+			"layer3_quests": {
+				"description": "Learn-to-earn quests and credential platform"
+			},
+			"rabbithole": {
+				"description": "On-chain quests and credential earning"
+			},
+			"flipside": {
+				"description": "Blockchain analytics with SQL queries"
+			},
+			"footprint": {
+				"description": "No-code blockchain data analysis platform"
+			},
+			"defi_pulse": {
+				"description": "DeFi TVL rankings and protocol analytics"
+			},
+			"l2fees": {
+				"description": "Layer 2 fee comparison and analytics"
+			},
+			"cryptofees": {
+				"description": "Protocol fee and revenue analytics"
+			},
+			"openbb": {
+				"description": "Open-source investment research terminal"
+			},
+			"watchers": {
+				"description": "Whale wallet tracking and alerts"
+			},
+			"cielo": {
+				"description": "Social wallet tracking and transaction feed"
+			},
+			"zerion_api": {
+				"description": "DeFi portfolio tracking SDK and API"
+			},
+			"sim_farm": {
+				"description": "DeFi yield farming strategy simulator"
+			},
+			"hexagate": {
+				"description": "Real-time smart contract threat monitoring"
+			},
+			"hypernative": {
+				"description": "AI-powered security monitoring and prevention"
+			},
+			"chainalert": {
+				"description": "Blockchain security alerts and notifications"
+			},
+			"webacy": {
+				"description": "Wallet safety backup and crypto inheritance"
+			},
+			"harpie": {
+				"description": "On-chain firewall and scam protection"
+			},
+			"blowfish": {
+				"description": "Transaction simulation and threat prevention"
+			},
+			"stelo": {
+				"description": "Human-readable transaction previews"
+			},
+			"fire": {
+				"description": "Transaction simulation for wallet protection"
+			},
+			"wallet_guard": {
+				"description": "Browser extension for phishing protection"
+			},
+			"scamsniffer": {
+				"description": "Scam and phishing detection service"
+			},
+			"peckshield": {
+				"description": "Blockchain security audit and research firm"
+			},
+			"slowmist": {
+				"description": "Security audit and incident investigation"
+			},
+			"quantstamp": {
+				"description": "Enterprise blockchain security auditing"
+			},
+			"consensys_diligence": {
+				"description": "Smart contract security auditing tools"
+			},
+			"spearbit": {
+				"description": "Expert security researchers network"
+			},
+			"scaffold_eth": {
+				"description": "Rapid Ethereum prototyping starter kit"
+			},
+			"create_eth_app": {
+				"description": "CLI boilerplate for React dApp development"
+			},
+			"cookbook_dev": {
+				"description": "Smart contract templates and registry"
+			},
+			"solidity_by_example": {
+				"description": "Learn Solidity through code examples"
+			},
+			"speedrun_ethereum": {
+				"description": "Interactive Ethereum development challenges"
+			},
+			"eth_build": {
+				"description": "Visual programming sandbox for Ethereum"
+			},
+			"crypto_zombies": {
+				"description": "Learn Solidity by building a zombie game"
+			},
+			"useweb3": {
+				"description": "Curated Web3 learning resources"
+			},
+			"buildspace": {
+				"description": "Project-based Web3 learning community"
+			},
+			"pointer": {
+				"description": "Learn Web3 development and earn crypto"
+			},
+			"chainide": {
+				"description": "Cloud-based multi-chain development IDE"
+			},
+			"atlas_ide": {
+				"description": "ZK circuit development IDE in the cloud"
+			},
+			"constructor": {
+				"description": "Visual no-code smart contract builder"
+			},
+			"bunzz": {
+				"description": "No-code smart contract deployment platform"
+			},
+			"crossmint": {
+				"description": "NFT minting API with fiat payments"
+			},
+			"paper_xyz": {
+				"description": "NFT checkout and fiat minting solution"
+			},
+			"li_fi": {
+				"description": "Cross-chain bridge and swap aggregator"
+			},
+			"bungee": {
+				"description": "Bridge aggregator with gas refuel feature"
+			},
+			"jumper": {
+				"description": "Multi-chain bridge aggregator by LI.FI"
+			},
+			"superbridge": {
+				"description": "Native bridge for Optimism and Base"
+			},
+			"relay": {
+				"description": "Instant cross-chain bridging solution"
+			},
+			"symbiosis": {
+				"description": "Cross-chain liquidity protocol and DEX"
+			},
+			"dln": {
+				"description": "DeBridge limit order cross-chain trading"
+			},
+			"circle_cctp": {
+				"description": "Native USDC cross-chain transfer protocol"
+			},
+			"ambire": {
+				"description": "Smart wallet with email login and gasless transactions"
+			},
+			"obvious": {
+				"description": "Smart wallet with account abstraction"
+			},
+			"soul_wallet": {
+				"description": "Modular ERC-4337 smart wallet"
+			},
+			"patch_wallet": {
+				"description": "Social login embedded smart wallet"
+			},
+			"pimlico": {
+				"description": "ERC-4337 bundler and paymaster infrastructure"
+			},
+			"stackup": {
+				"description": "Account abstraction bundler and SDK"
+			},
+			"biconomy": {
+				"description": "Account abstraction and gasless transaction SDK"
+			},
+			"alchemy_aa": {
+				"description": "Smart wallet SDK and account abstraction toolkit"
+			},
+			"zerodev": {
+				"description": "Modular smart wallet SDK with Kernel"
+			},
+			"particle_network": {
+				"description": "Wallet-as-a-service with social login"
+			},
+			"oklink": {
+				"description": "Multi-chain blockchain explorer by OKX"
+			},
+			"routescan": {
+				"description": "Unified multi-chain block explorer"
+			},
+			"onceupon": {
+				"description": "Human-readable blockchain transaction explorer"
+			},
+			"evm_explorer": {
+				"description": "Multi-chain EVM block explorer"
+			},
+			"anyabi": {
+				"description": "Smart contract ABI lookup and decoder"
+			},
+			"samczsun_explorer": {
+				"description": "Advanced transaction tracer and debugger"
+			},
+			"commonwealth": {
+				"description": "Governance discussion and community forum"
+			},
+			"jokedao": {
+				"description": "On-chain voting contests and governance games"
+			},
+			"nouns_builder": {
+				"description": "Launch Nouns-style DAOs with daily auctions"
+			},
+			"hats_protocol": {
+				"description": "DAO roles and permissions management"
+			},
+			"llama": {
+				"description": "DAO governance and treasury operations"
+			},
+			"utopia_dao": {
+				"description": "DAO payroll and treasury management"
+			},
+			"grove": {
+				"description": "Decentralized RPC relay powered by POKT"
+			},
+			"drpc": {
+				"description": "Decentralized multi-chain RPC provider"
+			},
+			"nodies": {
+				"description": "Multi-chain RPC node infrastructure"
+			},
+			"llamanodes": {
+				"description": "Privacy-focused RPC with MEV protection"
+			},
+			"tenderly_node": {
+				"description": "RPC with transaction simulation capabilities"
+			},
+			"getblock": {
+				"description": "Multi-chain node access and RPC provider"
+			},
+			"public_node": {
+				"description": "Free public RPC endpoints"
+			},
+			"flashbots_protect": {
+				"description": "MEV protection RPC for private transactions"
+			},
+			"mev_blocker": {
+				"description": "MEV protection with rebates for users"
+			},
+			"bounce": {
+				"description": "Decentralized auction platform for tokens and NFTs"
+			},
+			"tokensoft": {
+				"description": "Token distribution and compliant airdrops"
+			},
+			"hedgey": {
+				"description": "Token vesting and lockup management"
+			},
+			"magna": {
+				"description": "Token vesting and cap table management"
+			},
+			"superfluid_vesting": {
+				"description": "Continuous token streaming vesting"
+			},
+			"talentprotocol": {
+				"description": "Builder reputation and credentials platform"
+			},
+			"phi": {
+				"description": "Metaverse identity and credential land"
+			},
+			"otterspace": {
+				"description": "Soulbound badges for DAO membership"
+			},
+			"disco": {
+				"description": "Verifiable credentials data backpack"
+			},
+			"holonym": {
+				"description": "Privacy-preserving identity verification with ZK"
+			},
+			"anima": {
+				"description": "Biometric identity for sybil resistance"
+			},
+			"link3": {
+				"description": "Web3 events and credentials by CyberConnect"
+			},
+			"kiwi_news": {
+				"description": "Community-curated Web3 news aggregator"
+			},
+			"orb_app": {
+				"description": "Professional social network on Lens"
+			},
+			"buttrfly": {
+				"description": "Cross-platform social aggregator for Lens"
+			},
+			"tape": {
+				"description": "Decentralized video platform on Lens"
+			},
+			"unlonely": {
+				"description": "Web3 live streaming community platform"
+			},
+			"l2_marathon": {
+				"description": "Layer 2 analytics and comparison dashboard"
+			},
+			"chainlist_l2": {
+				"description": "Add L2 networks to wallet with RPC info"
+			},
+			"op_stack": {
+				"description": "Modular framework for building L2 rollups"
+			},
+			"orbit_chain": {
+				"description": "Build custom L3 chains on Arbitrum"
+			},
+			"polygon_cdk": {
+				"description": "ZK-powered chain development kit"
+			},
+			"zk_stack": {
+				"description": "Hyperchain framework by zkSync"
+			},
+			"loot": {
+				"description": "Composable NFT adventure gear project"
+			},
+			"pixels": {
+				"description": "Social farming game on Ronin chain"
+			},
+			"parallel": {
+				"description": "Sci-fi trading card game on Ethereum"
+			},
+			"pirate_nation": {
+				"description": "Fully on-chain pirate RPG adventure"
+			},
+			"illuvium": {
+				"description": "AAA auto-battler RPG on Immutable X"
+			},
+			"shrapnel": {
+				"description": "Moddable extraction FPS on Avalanche"
+			},
+			"ev_io": {
+				"description": "Browser-based FPS with play-to-earn"
+			},
+			"gnosis_card": {
+				"description": "Self-custodial Visa card on Gnosis Chain"
+			},
+			"holyheld": {
+				"description": "DeFi debit card with yield features"
+			},
+			"fusepay": {
+				"description": "Crypto spending card on Fuse network"
+			},
+			"loopcrypto": {
+				"description": "Recurring crypto billing and subscriptions"
+			},
+			"reveel": {
+				"description": "Automated revenue sharing and royalty splits"
+			},
+			"splits": {
+				"description": "On-chain payment splitting protocol"
+			},
+			"four_meme": {
+				"description": "BNB Chain meme coin launchpad with fair launch"
+			},
+			"sunpump": {
+				"description": "Tron meme coin launchpad with bonding curve"
+			},
+			"moonshot": {
+				"description": "Solana meme token discovery and trading"
+			},
+			"ape_store": {
+				"description": "Ethereum meme coin fair launch platform"
+			},
+			"believe": {
+				"description": "Social token launch platform on Solana"
+			},
+			"virtuals": {
+				"description": "AI agent token launch and gaming platform"
+			},
+			"clanker": {
+				"description": "Farcaster-native token launch on Base"
+			},
+			"dexscreener_moonshot": {
+				"description": "Trending meme coin discovery and analytics"
+			},
+			"lfg_launchpad": {
+				"description": "Jupiter's official token launch platform"
+			},
+			"starter": {
+				"description": "Multi-chain IDO and incubator platform"
+			},
+			"impossible_finance": {
+				"description": "Multi-chain launchpad with staking tiers"
+			},
+			"gamefi_launchpad": {
+				"description": "Gaming-focused IGO and IDO platform"
+			},
+			"kommunitas": {
+				"description": "Community-driven decentralized launchpad"
+			},
+			"red_kite": {
+				"description": "Multi-chain launchpad by PolkaFoundry"
+			},
+			"enjinstarter": {
+				"description": "Gaming and metaverse launchpad"
+			},
+			"trustpad": {
+				"description": "Multi-chain launchpad with tier system"
+			},
+			"spores": {
+				"description": "Multi-chain NFT and token launchpad"
+			},
+			"bullperks": {
+				"description": "VC-backed multi-chain launchpad"
+			},
+			"decubate": {
+				"description": "Multi-chain IDO with built-in vesting"
+			},
+			"gagarin": {
+				"description": "TON ecosystem launchpad via Telegram"
+			},
+			"tonstarter": {
+				"description": "Premier launchpad for TON blockchain"
+			},
+			"raydium_acceleraytor": {
+				"description": "Raydium's token launch platform on Solana"
+			},
+			"meteora_dlmm": {
+				"description": "Dynamic liquidity market maker for token launches"
+			},
+			"orca_whirlpools": {
+				"description": "Concentrated liquidity for Solana token launches"
+			},
+			"legion": {
+				"description": "Community-first Solana launchpad"
+			},
+			"armada": {
+				"description": "Solana staking infrastructure and validators"
+			},
+			"streamflow": {
+				"description": "Token vesting and streaming payments"
+			},
+			"vestinglab": {
+				"description": "Multi-chain token vesting infrastructure"
+			},
+			"switchboard": {
+				"description": "Decentralized oracle for Solana and Move chains"
+			},
+			"dia": {
+				"description": "Transparent and customizable oracle platform"
+			},
+			"band_protocol": {
+				"description": "Cross-chain data oracle for Cosmos ecosystem"
+			},
+			"tellor": {
+				"description": "Decentralized oracle with dispute mechanism"
+			},
+			"symbiotic_restaking": {
+				"description": "Permissionless modular restaking protocol"
+			},
+			"karak": {
+				"description": "Universal restaking for multi-chain security"
+			},
+			"ether_fi": {
+				"description": "Non-custodial liquid restaking with eETH"
+			},
+			"puffer": {
+				"description": "Liquid restaking with anti-slashing tech"
+			},
+			"kelp": {
+				"description": "Liquid restaking with rsETH on EigenLayer"
+			},
+			"swell": {
+				"description": "Liquid staking and restaking with swETH"
+			},
+			"convex": {
+				"description": "Boosted Curve yields without locking CRV"
+			},
+			"beefy": {
+				"description": "Multi-chain auto-compounding yield optimizer"
+			},
+			"harvest": {
+				"description": "DeFi yield farming aggregator"
+			},
+			"sommelier": {
+				"description": "Actively managed DeFi vault strategies"
+			},
+			"concentrator": {
+				"description": "Auto-compounding for Curve and Convex"
+			},
+			"equilibria": {
+				"description": "Boosted yields for Pendle pools"
+			},
+			"railgun": {
+				"description": "Private DeFi with zk-SNARKs on EVM chains"
+			},
+			"aztec": {
+				"description": "Programmable privacy with zk-rollup"
+			},
+			"nocturne": {
+				"description": "Private account layer for Ethereum"
+			},
+			"umbra": {
+				"description": "Stealth address payments on EVM chains"
+			},
+			"labyrinth": {
+				"description": "Compliant privacy for institutions"
+			},
+			"elusiv": {
+				"description": "Compliant privacy payments on Solana"
+			},
+			"zcash": {
+				"description": "Native privacy blockchain with shielded transactions"
+			},
+			"the_graph": {
+				"description": "Decentralized protocol for indexing blockchain data"
+			},
+			"goldsky": {
+				"description": "Real-time blockchain data streaming and indexing"
+			},
+			"subsquid": {
+				"description": "Fast blockchain data indexing SDK"
+			},
+			"envio": {
+				"description": "HyperSync for ultra-fast blockchain indexing"
+			},
+			"space_and_time": {
+				"description": "Verifiable data warehouse with ZK proofs"
+			},
+			"allium": {
+				"description": "Enterprise blockchain data platform"
+			},
+			"sentio": {
+				"description": "Multi-chain observability and monitoring"
+			},
+			"transpose": {
+				"description": "Real-time blockchain data with SQL API"
+			},
+			"morpho": {
+				"description": "Peer-to-peer lending with optimized rates"
+			},
+			"spark": {
+				"description": "DAI lending protocol by MakerDAO"
+			},
+			"aerodrome": {
+				"description": "Central liquidity hub for Base network"
+			},
+			"maverick": {
+				"description": "Dynamic distribution AMM for liquidity"
+			},
+			"hyperliquid": {
+				"description": "On-chain perpetual orderbook DEX"
+			},
+			"tensor": {
+				"description": "Professional NFT trading on Solana"
+			},
+			"hyperspace": {
+				"description": "NFT aggregator and marketplace on Solana"
+			},
+			"tradeport": {
+				"description": "NFT marketplace for Sui and Aptos"
+			},
+			"campfire": {
+				"description": "NFT marketplace on Avalanche"
+			},
+			"paintswap": {
+				"description": "NFT marketplace on Fantom and Sonic"
+			},
+			"artemis": {
+				"description": "Fundamental crypto analytics and research"
+			},
+			"tokenterminal": {
+				"description": "Protocol financials and revenue metrics"
+			},
+			"defillama_yields": {
+				"description": "Cross-chain yield farming comparison"
+			},
+			"defilabs": {
+				"description": "Whale and smart money tracking"
+			},
+			"chainanalytics": {
+				"description": "Custom blockchain data dashboards"
+			},
+			"dedaub": {
+				"description": "Smart contract security tools and decompiler"
+			},
+			"forta": {
+				"description": "Real-time threat detection network"
+			},
+			"immunefi": {
+				"description": "Web3 bug bounty platform"
+			},
+			"code4rena": {
+				"description": "Community-driven audit contests"
+			},
+			"sherlock": {
+				"description": "Audit contests with exploit coverage"
 			}
 		},
 		"seo": {
@@ -2426,7 +3158,7 @@
 			"keywords": "web3 tools, dapp directory, defi tools, nft marketplace, blockchain explorer, crypto tools, ethereum tools, web3 resources",
 			"webapp_name": "Chain Tools",
 			"webapp_description": "Curated directory of quality Web3 tools and DApps for DeFi, NFT, Analytics, Security, and more.",
-			"feature_1": "Browse 240+ curated Web3 tools",
+			"feature_1": "Browse 600+ curated Web3 tools",
 			"feature_2": "Filter by category: DeFi, NFT, Analytics, Security",
 			"feature_3": "Search by name, tag, or blockchain",
 			"feature_4": "Direct links to official tool websites"

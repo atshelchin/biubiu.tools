@@ -1456,7 +1456,13 @@
 			"social": "社交",
 			"l2": "Layer 2",
 			"gamefi": "链游",
-			"payments": "支付"
+			"payments": "支付",
+			"meme": "Meme 币",
+			"oracle": "预言机",
+			"restaking": "再质押",
+			"yield": "收益聚合",
+			"privacy": "隐私",
+			"data": "数据索引"
 		},
 		"tools": {
 			"uniswap": {
@@ -2391,6 +2397,660 @@
 			},
 			"bitpay": {
 				"description": "面向商家的加密支付处理"
+			},
+			"bentobox": {
+				"description": "SushiSwap的代币金库与借贷基础设施"
+			},
+			"ribbon": {
+				"description": "DeFi结构化期权产品与收益金库"
+			},
+			"opyn": {
+				"description": "去中心化期权协议与永续合约"
+			},
+			"notional": {
+				"description": "链上固定利率借贷协议"
+			},
+			"goldfinch": {
+				"description": "面向新兴市场的无抵押加密贷款"
+			},
+			"maple": {
+				"description": "机构级无抵押借贷市场"
+			},
+			"truefi": {
+				"description": "信用评分驱动的无抵押借贷"
+			},
+			"tokemak": {
+				"description": "DeFi流动性供应与引导协议"
+			},
+			"olympus": {
+				"description": "协议自有流动性与国库管理"
+			},
+			"jones_dao": {
+				"description": "期权策略收益金库"
+			},
+			"umami": {
+				"description": "Arbitrum上的可持续收益协议"
+			},
+			"rage_trade": {
+				"description": "全链回收流动性永续合约"
+			},
+			"vela": {
+				"description": "低费用高杠杆永续合约DEX"
+			},
+			"y2k": {
+				"description": "稳定币与锚定资产脱钩保险"
+			},
+			"kwenta": {
+				"description": "Synthetix驱动的永续合约交易"
+			},
+			"polynomial": {
+				"description": "Optimism上的DeFi衍生品金库"
+			},
+			"angle": {
+				"description": "去中心化欧元稳定币协议"
+			},
+			"liquity": {
+				"description": "无息借贷与LUSD稳定币"
+			},
+			"reflexer": {
+				"description": "RAI非锚定稳定资产协议"
+			},
+			"mstable": {
+				"description": "稳定资产聚合与收益生成"
+			},
+			"raft": {
+				"description": "LST抵押借贷与R稳定币"
+			},
+			"prisma": {
+				"description": "LST抵押借贷与mkUSD稳定币"
+			},
+			"gravita": {
+				"description": "LST零息贷款协议"
+			},
+			"gyroscope": {
+				"description": "全天候稳定币与储备设计"
+			},
+			"origin_dollar": {
+				"description": "收益型稳定币与DeFi策略"
+			},
+			"paraswap": {
+				"description": "最优路径DEX聚合与Gas优化"
+			},
+			"matcha": {
+				"description": "0x驱动的DEX聚合交易"
+			},
+			"cowswap": {
+				"description": "批量拍卖MEV保护交易"
+			},
+			"bebop": {
+				"description": "做市商驱动的无Gas签名交易"
+			},
+			"dodo": {
+				"description": "PMM主动做市与代币发行"
+			},
+			"clipper": {
+				"description": "小额交易低滑点DEX"
+			},
+			"woofi_pro": {
+				"description": "sPMM合成做市订单簿DEX"
+			},
+			"sudoswap": {
+				"description": "NFT AMM与即时流动性"
+			},
+			"caviar": {
+				"description": "NFT流动性与碎片化协议"
+			},
+			"nftx": {
+				"description": "NFT金库与流动性池"
+			},
+			"floor_protocol": {
+				"description": "NFT碎片化与uToken交易"
+			},
+			"tessera": {
+				"description": "稀有NFT共同所有权平台"
+			},
+			"premint": {
+				"description": "NFT白名单管理与抽奖"
+			},
+			"bueno": {
+				"description": "无代码NFT生成式艺术创作"
+			},
+			"highlight": {
+				"description": "创作者NFT铸造平台"
+			},
+			"transient_labs": {
+				"description": "创新NFT智能合约开发"
+			},
+			"decent_xyz": {
+				"description": "一键跨链NFT铸造"
+			},
+			"tokenproof": {
+				"description": "NFT持有验证与会员服务"
+			},
+			"delegate_cash": {
+				"description": "NFT委托管理与冷钱包安全"
+			},
+			"warm_xyz": {
+				"description": "热钱包到冷钱包NFT链接"
+			},
+			"layer3_quests": {
+				"description": "学习赚取Web3任务平台"
+			},
+			"rabbithole": {
+				"description": "链上行为学习与奖励"
+			},
+			"flipside": {
+				"description": "社区驱动的区块链数据分析"
+			},
+			"footprint": {
+				"description": "无代码区块链数据分析平台"
+			},
+			"defi_pulse": {
+				"description": "DeFi TVL排名与追踪"
+			},
+			"l2fees": {
+				"description": "Layer 2实时费用对比"
+			},
+			"cryptofees": {
+				"description": "协议收入与费用数据追踪"
+			},
+			"openbb": {
+				"description": "开源加密金融终端"
+			},
+			"watchers": {
+				"description": "NFT市场与藏品追踪"
+			},
+			"cielo": {
+				"description": "多链钱包追踪信息流"
+			},
+			"zerion_api": {
+				"description": "DeFi投资组合数据API"
+			},
+			"sim_farm": {
+				"description": "交易模拟与回测工具"
+			},
+			"hexagate": {
+				"description": "智能合约实时威胁检测"
+			},
+			"hypernative": {
+				"description": "链上风险监控与预警"
+			},
+			"chainalert": {
+				"description": "自定义区块链事件监控"
+			},
+			"webacy": {
+				"description": "钱包安全评分与风险评估"
+			},
+			"harpie": {
+				"description": "链上防火墙与盗窃防护"
+			},
+			"blowfish": {
+				"description": "交易模拟安全预览"
+			},
+			"stelo": {
+				"description": "人性化交易安全预览"
+			},
+			"fire": {
+				"description": "交易安全浏览器扩展"
+			},
+			"wallet_guard": {
+				"description": "Web3钓鱼防护扩展"
+			},
+			"scamsniffer": {
+				"description": "实时反诈骗与恶意检测"
+			},
+			"peckshield": {
+				"description": "区块链安全审计领导者"
+			},
+			"slowmist": {
+				"description": "区块链生态安全服务"
+			},
+			"quantstamp": {
+				"description": "自动化智能合约审计"
+			},
+			"consensys_diligence": {
+				"description": "以太坊安全审计与工具"
+			},
+			"spearbit": {
+				"description": "精英安全审计研究员网络"
+			},
+			"scaffold_eth": {
+				"description": "以太坊快速原型开发框架"
+			},
+			"create_eth_app": {
+				"description": "一键创建以太坊DApp脚手架"
+			},
+			"cookbook_dev": {
+				"description": "智能合约模板与代码示例"
+			},
+			"solidity_by_example": {
+				"description": "Solidity示例代码学习"
+			},
+			"speedrun_ethereum": {
+				"description": "挑战式以太坊开发学习"
+			},
+			"eth_build": {
+				"description": "可视化以太坊开发沙盒"
+			},
+			"crypto_zombies": {
+				"description": "游戏化Solidity编程教程"
+			},
+			"useweb3": {
+				"description": "Web3开发者学习资源导航"
+			},
+			"buildspace": {
+				"description": "项目制Web3学习社区"
+			},
+			"pointer": {
+				"description": "边学边赚加密开发教程"
+			},
+			"chainide": {
+				"description": "云端多链智能合约IDE"
+			},
+			"atlas_ide": {
+				"description": "协作式Web3开发平台"
+			},
+			"constructor": {
+				"description": "可视化智能合约构建器"
+			},
+			"bunzz": {
+				"description": "智能合约即服务平台"
+			},
+			"crossmint": {
+				"description": "企业级NFT基础设施API"
+			},
+			"paper_xyz": {
+				"description": "法币购买NFT无障碍入口"
+			},
+			"li_fi": {
+				"description": "全链聚合跨链桥与DEX"
+			},
+			"bungee": {
+				"description": "Socket驱动的跨链聚合"
+			},
+			"jumper": {
+				"description": "LI.FI跨链资产转移界面"
+			},
+			"superbridge": {
+				"description": "OP Stack原生跨链桥"
+			},
+			"relay": {
+				"description": "意图驱动的即时跨链桥"
+			},
+			"symbiosis": {
+				"description": "全链流动性跨链协议"
+			},
+			"dln": {
+				"description": "deBridge流动性网络跨链"
+			},
+			"circle_cctp": {
+				"description": "原生USDC跨链转账协议"
+			},
+			"ambire": {
+				"description": "账户抽象智能合约钱包"
+			},
+			"obvious": {
+				"description": "社交恢复智能钱包"
+			},
+			"soul_wallet": {
+				"description": "开源ERC-4337智能钱包"
+			},
+			"patch_wallet": {
+				"description": "社交账户绑定钱包"
+			},
+			"pimlico": {
+				"description": "ERC-4337打包器与支付商基础设施"
+			},
+			"stackup": {
+				"description": "账户抽象开发工具包"
+			},
+			"biconomy": {
+				"description": "无Gas交易与账户抽象SDK"
+			},
+			"alchemy_aa": {
+				"description": "Alchemy账户抽象开发套件"
+			},
+			"zerodev": {
+				"description": "智能钱包与会话密钥SDK"
+			},
+			"particle_network": {
+				"description": "链抽象与钱包即服务"
+			},
+			"oklink": {
+				"description": "OKX多链区块浏览器"
+			},
+			"routescan": {
+				"description": "多链统一区块浏览器"
+			},
+			"onceupon": {
+				"description": "人性化交易叙事浏览器"
+			},
+			"evm_explorer": {
+				"description": "通用EVM链浏览器"
+			},
+			"anyabi": {
+				"description": "任意合约ABI获取工具"
+			},
+			"samczsun_explorer": {
+				"description": "samczsun的交易分析器"
+			},
+			"commonwealth": {
+				"description": "全链社区治理论坛"
+			},
+			"jokedao": {
+				"description": "社区竞赛投票与激励"
+			},
+			"nouns_builder": {
+				"description": "Nouns式DAO一键部署"
+			},
+			"hats_protocol": {
+				"description": "链上角色权限管理协议"
+			},
+			"llama": {
+				"description": "链上治理与执行框架"
+			},
+			"utopia_dao": {
+				"description": "DAO财务与工资管理"
+			},
+			"grove": {
+				"description": "去中心化RPC网关网络"
+			},
+			"drpc": {
+				"description": "分布式多链RPC网络"
+			},
+			"nodies": {
+				"description": "边缘优化RPC基础设施"
+			},
+			"llamanodes": {
+				"description": "隐私优先公共RPC节点"
+			},
+			"tenderly_node": {
+				"description": "Tenderly托管节点服务"
+			},
+			"getblock": {
+				"description": "多链节点API服务商"
+			},
+			"public_node": {
+				"description": "免费公共RPC节点列表"
+			},
+			"flashbots_protect": {
+				"description": "MEV保护隐私交易RPC"
+			},
+			"mev_blocker": {
+				"description": "MEV拦截与退款RPC"
+			},
+			"bounce": {
+				"description": "链上去中心化拍卖协议"
+			},
+			"tokensoft": {
+				"description": "合规代币发行与归属"
+			},
+			"hedgey": {
+				"description": "代币归属锁仓基础设施"
+			},
+			"magna": {
+				"description": "代币归属与薪酬管理"
+			},
+			"superfluid_vesting": {
+				"description": "实时流支付与归属"
+			},
+			"talentprotocol": {
+				"description": "Builder信誉评分系统"
+			},
+			"phi": {
+				"description": "链上身份可视化土地"
+			},
+			"otterspace": {
+				"description": "不可转让徽章凭证协议"
+			},
+			"disco": {
+				"description": "去中心化身份数据背包"
+			},
+			"holonym": {
+				"description": "零知识人格证明协议"
+			},
+			"anima": {
+				"description": "生物识别身份验证"
+			},
+			"link3": {
+				"description": "CyberConnect社交资料"
+			},
+			"kiwi_news": {
+				"description": "Web3加密新闻社区"
+			},
+			"orb_app": {
+				"description": "Lens协议移动端应用"
+			},
+			"buttrfly": {
+				"description": "Lens协议社交客户端"
+			},
+			"tape": {
+				"description": "Lens协议视频分享"
+			},
+			"unlonely": {
+				"description": "Web3直播与互动平台"
+			},
+			"l2_marathon": {
+				"description": "L2链信息对比导航"
+			},
+			"chainlist_l2": {
+				"description": "L2网络配置列表"
+			},
+			"op_stack": {
+				"description": "Optimism开源L2框架"
+			},
+			"orbit_chain": {
+				"description": "Arbitrum L3部署工具"
+			},
+			"polygon_cdk": {
+				"description": "Polygon ZK L2开发套件"
+			},
+			"zk_stack": {
+				"description": "zkSync ZK链开发框架"
+			},
+			"loot": {
+				"description": "可组合冒险NFT装备"
+			},
+			"pixels": {
+				"description": "链上农业社交游戏"
+			},
+			"parallel": {
+				"description": "科幻卡牌对战游戏"
+			},
+			"pirate_nation": {
+				"description": "全链海盗冒险RPG"
+			},
+			"illuvium": {
+				"description": "3A级链上战斗RPG"
+			},
+			"shrapnel": {
+				"description": "3A级射击GameFi"
+			},
+			"ev_io": {
+				"description": "浏览器多人射击游戏"
+			},
+			"gnosis_card": {
+				"description": "Gnosis Pay加密借记卡"
+			},
+			"holyheld": {
+				"description": "非托管加密Visa卡"
+			},
+			"fusepay": {
+				"description": "Fuse网络支付解决方案"
+			},
+			"loopcrypto": {
+				"description": "链上订阅支付协议"
+			},
+			"reveel": {
+				"description": "链上收入分成协议"
+			},
+			"splits": {
+				"description": "无需信任的支付拆分"
+			},
+			"four_meme": {
+				"description": "BNB Chain Meme币公平发射平台"
+			},
+			"sunpump": {
+				"description": "Tron链Meme币发射平台"
+			},
+			"moonshot": {
+				"description": "Solana Meme币发现与交易"
+			},
+			"ape_store": {
+				"description": "以太坊Meme币公平发射平台"
+			},
+			"believe": {
+				"description": "Solana社交代币发射平台"
+			},
+			"virtuals": {
+				"description": "AI Agent代币发射与游戏平台"
+			},
+			"clanker": {
+				"description": "Farcaster原生Base代币发射"
+			},
+			"dexscreener_moonshot": {
+				"description": "热门Meme币发现与分析"
+			},
+			"lfg_launchpad": {
+				"description": "Jupiter官方代币发射平台"
+			},
+			"starter": {
+				"description": "多链IDO与孵化平台"
+			},
+			"impossible_finance": {
+				"description": "多链发射台与质押分层"
+			},
+			"gamefi_launchpad": {
+				"description": "游戏IGO与IDO发射平台"
+			},
+			"kommunitas": {
+				"description": "社区驱动去中心化发射台"
+			},
+			"red_kite": {
+				"description": "PolkaFoundry多链发射台"
+			},
+			"enjinstarter": {
+				"description": "游戏与元宇宙发射平台"
+			},
+			"trustpad": {
+				"description": "多链发射台与分层系统"
+			},
+			"spores": {
+				"description": "多链NFT与代币发射台"
+			},
+			"bullperks": {
+				"description": "VC支持的多链发射平台"
+			},
+			"decubate": {
+				"description": "内置归属的多链IDO"
+			},
+			"gagarin": {
+				"description": "TON生态Telegram发射台"
+			},
+			"tonstarter": {
+				"description": "TON区块链首选发射台"
+			},
+			"raydium_acceleraytor": {
+				"description": "Raydium的Solana代币发射平台"
+			},
+			"meteora_dlmm": {
+				"description": "动态流动性做市代币发射"
+			},
+			"orca_whirlpools": {
+				"description": "Solana集中流动性代币发射"
+			},
+			"legion": {
+				"description": "社区优先的Solana发射台"
+			},
+			"armada": {
+				"description": "Solana质押基础设施与验证节点"
+			},
+			"streamflow": {
+				"description": "代币归属与流支付"
+			},
+			"vestinglab": {
+				"description": "多链代币归属基础设施"
+			},
+			"switchboard": {
+				"description": "Solana与Move链去中心化预言机"
+			},
+			"dia": {
+				"description": "透明可定制的预言机平台"
+			},
+			"tellor": {
+				"description": "带争议机制的去中心化预言机"
+			},
+			"symbiotic_restaking": {
+				"description": "无许可模块化再质押协议"
+			},
+			"karak": {
+				"description": "多链安全通用再质押"
+			},
+			"ether_fi": {
+				"description": "非托管eETH流动性再质押"
+			},
+			"swell": {
+				"description": "swETH流动性质押与再质押"
+			},
+			"equilibria": {
+				"description": "Pendle池增强收益"
+			},
+			"railgun": {
+				"description": "EVM链zk-SNARKs隐私DeFi"
+			},
+			"aztec": {
+				"description": "zk-rollup可编程隐私"
+			},
+			"nocturne": {
+				"description": "以太坊隐私账户层"
+			},
+			"umbra": {
+				"description": "EVM链隐身地址支付"
+			},
+			"labyrinth": {
+				"description": "机构合规隐私方案"
+			},
+			"elusiv": {
+				"description": "Solana合规隐私支付"
+			},
+			"zcash": {
+				"description": "原生隐私区块链屏蔽交易"
+			},
+			"space_and_time": {
+				"description": "ZK证明可验证数据仓库"
+			},
+			"allium": {
+				"description": "企业级区块链数据平台"
+			},
+			"sentio": {
+				"description": "多链可观测性与监控"
+			},
+			"hyperspace": {
+				"description": "Solana NFT聚合市场"
+			},
+			"tradeport": {
+				"description": "Sui与Aptos NFT市场"
+			},
+			"campfire": {
+				"description": "Avalanche NFT市场"
+			},
+			"paintswap": {
+				"description": "Fantom与Sonic NFT市场"
+			},
+			"defillama_yields": {
+				"description": "跨链收益农场对比"
+			},
+			"defilabs": {
+				"description": "鲸鱼与聪明钱追踪"
+			},
+			"chainanalytics": {
+				"description": "自定义区块链数据仪表盘"
+			},
+			"code4rena": {
+				"description": "社区驱动审计竞赛"
+			},
+			"sherlock": {
+				"description": "带漏洞保障的审计竞赛"
 			}
 		},
 		"seo": {
@@ -2399,7 +3059,7 @@
 			"keywords": "web3工具, dapp导航, defi工具, nft市场, 区块浏览器, 加密工具, 以太坊工具, web3资源",
 			"webapp_name": "链上工具集",
 			"webapp_description": "精选 Web3 工具和 DApp 导航，涵盖 DeFi、NFT、数据分析、安全等领域。",
-			"feature_1": "浏览 240+ 精选 Web3 工具",
+			"feature_1": "浏览 600+ 精选 Web3 工具",
 			"feature_2": "按分类筛选：DeFi、NFT、数据分析、安全",
 			"feature_3": "按名称、标签或区块链搜索",
 			"feature_4": "直达官方工具网站"

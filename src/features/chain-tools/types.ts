@@ -21,7 +21,13 @@ export type CategoryId =
 	| 'social'
 	| 'l2'
 	| 'gamefi'
-	| 'payments';
+	| 'payments'
+	| 'meme'
+	| 'oracle'
+	| 'restaking'
+	| 'yield'
+	| 'privacy'
+	| 'data';
 
 /**
  * Category definition with i18n keys and styling
