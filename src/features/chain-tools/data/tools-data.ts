@@ -139,8 +139,7 @@ export const categories: Category[] = [
 	},
 	{ id: 'yield', labelKey: 'chain_tools.categories.yield', color: '#22C55E', icon: Sprout },
 	{ id: 'privacy', labelKey: 'chain_tools.categories.privacy', color: '#64748B', icon: EyeOff },
-	{ id: 'data', labelKey: 'chain_tools.categories.data', color: '#F43F5E', icon: DatabaseZap },
-	{ id: 'all', labelKey: 'chain_tools.categories.all', color: '#6B7280', icon: Layers }
+	{ id: 'data', labelKey: 'chain_tools.categories.data', color: '#F43F5E', icon: DatabaseZap }
 ];
 
 /**
