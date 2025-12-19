@@ -3,14 +3,41 @@
 	import { mainnet, polygon, arbitrum, optimism, base, bsc } from 'viem/chains';
 	import { createConnectStore } from '$lib/stores/connect.svelte';
 	import PageLayout from '$lib/components/page-layout.svelte';
+	import FAQs from '$lib/components/ui/faqs.svelte';
 	import SearchFilterBar from '@/features/chainlist/ui/search-filter-bar.svelte';
 	import ChainCard from '@/features/chainlist/ui/chain-card.svelte';
-	import type { Chain, NetworkFilter } from '@/features/chainlist/types/chain';
+	import type { NetworkFilter } from '@/features/chainlist/types/chain';
 	import type { PageData } from './$types';
+	import { onMount } from 'svelte';
+	import type { Chain, RpcEndpoint, Explorer } from '@/features/chainlist/types/chain';
 
 	let { data }: { data: PageData } = $props();
 
 	const i18n = useI18n();
+
+	// FAQs for SEO
+	const faqs = $derived([
+		{
+			question: i18n.t('chainlist.faq.q1'),
+			answer: i18n.t('chainlist.faq.a1')
+		},
+		{
+			question: i18n.t('chainlist.faq.q2'),
+			answer: i18n.t('chainlist.faq.a2')
+		},
+		{
+			question: i18n.t('chainlist.faq.q3'),
+			answer: i18n.t('chainlist.faq.a3')
+		},
+		{
+			question: i18n.t('chainlist.faq.q4'),
+			answer: i18n.t('chainlist.faq.a4')
+		},
+		{
+			question: i18n.t('chainlist.faq.q5'),
+			answer: i18n.t('chainlist.faq.a5')
+		}
+	]);
 
 	// Initialize wallet connect store (required for PageLayout/AppsHeader)
 	createConnectStore({
@@ -29,9 +56,11 @@
 	let filter = $state<NetworkFilter>('all');
 	let expandedChainId = $state<number | null>(null);
 
+	let chains = $state([]);
+
 	// Filtered chains based on search and filter
 	const filteredChains = $derived.by(() => {
-		let result = data.chains;
+		let result = chains;
 
 		// Apply network filter
 		if (filter === 'mainnet') {
@@ -95,12 +124,34 @@
 			expandedChainId = chainId;
 		}
 	}
+	// Dedupe arrays by a key field (keep first occurrence)
+	function dedupeByKey<T>(items: T[], keyFn: (item: T) => string): T[] {
+		const seen = new Set<string>();
+		return items.filter((item) => {
+			const key = keyFn(item);
+			if (seen.has(key)) return false;
+			seen.add(key);
+			return true;
+		});
+	}
+	onMount(async () => {
+		// Load chain data
+		const response = await fetch('/rpcs.json');
+		const chains_: Chain[] = await response.json();
+
+		// Dedupe RPC endpoints and explorers for each chain
+		chains = chains_.map((chain) => ({
+			...chain,
+			rpc: dedupeByKey<RpcEndpoint>(chain.rpc, (r) => r.url),
+			explorers: chain.explorers ? dedupeByKey<Explorer>(chain.explorers, (e) => e.url) : undefined
+		}));
+	});
 </script>
 
 <svelte:head>
 	<title>{data.meta.title}</title>
 	<meta name="description" content={data.meta.description} />
-	<meta name="keywords" content={data.meta.keywords.join(', ')} />
+	<meta name="keywords" content={data.meta.keywords} />
 </svelte:head>
 
 <PageLayout>
@@ -115,7 +166,7 @@
 			{filter}
 			onSearchChange={handleSearchChange}
 			onFilterChange={handleFilterChange}
-			totalCount={data.chains.length}
+			totalCount={chains.length}
 			filteredCount={filteredChains.length}
 		/>
 
@@ -146,6 +197,9 @@
 				</button>
 			</div>
 		{/if}
+
+		<!-- FAQ Section for SEO -->
+		<FAQs {faqs} title={i18n.t('chainlist.faq.title')} />
 
 		<footer class="data-source">
 			{i18n.t('chainlist.data_source')}
