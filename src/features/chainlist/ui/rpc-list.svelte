@@ -4,6 +4,8 @@
 	import type { RpcEndpoint, RpcTestResult, Explorer } from '../types/chain';
 	import { formatLatency, formatBlockHeight, getLatencyQuality } from '../utils/rpc-tester';
 
+	type RpcProtocol = 'https' | 'wss';
+
 	interface Props {
 		rpcEndpoints: RpcEndpoint[];
 		explorers?: Explorer[];
@@ -17,6 +19,20 @@
 	const i18n = useI18n();
 
 	let copiedUrl = $state<string | null>(null);
+	let rpcProtocol = $state<RpcProtocol>('https');
+
+	// Filter endpoints by protocol
+	function isHttpEndpoint(url: string): boolean {
+		return url.startsWith('http://') || url.startsWith('https://');
+	}
+
+	function isWssEndpoint(url: string): boolean {
+		return url.startsWith('wss://') || url.startsWith('ws://');
+	}
+
+	// Count endpoints by protocol
+	const httpsCount = $derived(rpcEndpoints.filter((r) => isHttpEndpoint(r.url)).length);
+	const wssCount = $derived(rpcEndpoints.filter((r) => isWssEndpoint(r.url)).length);
 
 	async function copyToClipboard(text: string) {
 		await navigator.clipboard.writeText(text);
@@ -56,7 +72,17 @@
 	const sortedEndpoints = $derived.by(() => {
 		// Access version to create dependency
 		void testResultsVersion;
-		return [...rpcEndpoints].sort((a, b) => {
+
+		// Filter by protocol first
+		const filtered = rpcEndpoints.filter((endpoint) => {
+			if (rpcProtocol === 'https') {
+				return isHttpEndpoint(endpoint.url);
+			} else {
+				return isWssEndpoint(endpoint.url);
+			}
+		});
+
+		return [...filtered].sort((a, b) => {
 			const resultA = testResults.get(a.url);
 			const resultB = testResults.get(b.url);
 
@@ -100,7 +126,33 @@
 		<table class="rpc-table">
 			<thead>
 				<tr>
-					<th class="col-url">{i18n.t('chainlist.rpc.url')}</th>
+					<th class="col-url">
+						<div class="url-header">
+							<span>{i18n.t('chainlist.rpc.url')}</span>
+							<div class="protocol-toggle">
+								<button
+									class="protocol-btn"
+									class:active={rpcProtocol === 'https'}
+									onclick={() => (rpcProtocol = 'https')}
+									title="HTTPS ({httpsCount})"
+								>
+									HTTPS
+									<span class="protocol-count">{httpsCount}</span>
+								</button>
+								{#if wssCount > 0}
+									<button
+										class="protocol-btn"
+										class:active={rpcProtocol === 'wss'}
+										onclick={() => (rpcProtocol = 'wss')}
+										title="WSS ({wssCount})"
+									>
+										WSS
+										<span class="protocol-count">{wssCount}</span>
+									</button>
+								{/if}
+							</div>
+						</div>
+					</th>
 					<th class="col-height">{i18n.t('chainlist.rpc.height')}</th>
 					<th class="col-latency">{i18n.t('chainlist.rpc.latency')}</th>
 					<th class="col-privacy">{i18n.t('chainlist.rpc.privacy')}</th>
@@ -226,7 +278,53 @@
 
 	.col-url {
 		min-width: 200px;
-		max-width: 300px;
+		max-width: 400px;
+	}
+
+	.url-header {
+		display: flex;
+		align-items: center;
+		gap: var(--space-3);
+		flex-wrap: wrap;
+	}
+
+	.protocol-toggle {
+		display: flex;
+		gap: var(--space-1);
+		background: var(--color-panel-2);
+		padding: 2px;
+		border-radius: var(--radius-sm);
+	}
+
+	.protocol-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--space-1);
+		padding: var(--space-1) var(--space-2);
+		border: none;
+		background: transparent;
+		border-radius: var(--radius-xs);
+		font-size: var(--text-xs);
+		font-weight: var(--font-medium);
+		color: var(--color-muted-foreground);
+		cursor: pointer;
+		transition: all 0.15s ease;
+		text-transform: uppercase;
+	}
+
+	.protocol-btn:hover {
+		color: var(--color-foreground);
+	}
+
+	.protocol-btn.active {
+		background: var(--color-background);
+		color: var(--color-foreground);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.protocol-count {
+		font-size: 10px;
+		opacity: 0.7;
 	}
 
 	.url-text {

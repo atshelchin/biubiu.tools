@@ -384,7 +384,14 @@
 	.action-btn.primary:hover:not(:disabled) {
 		background: var(--color-brand);
 		border-color: var(--color-brand);
-		color: white;
+		color: var(--color-brand-foreground, white);
+		transform: translateY(-1px);
+		box-shadow: 0 4px 12px var(--color-brand-alpha-30, rgba(99, 102, 241, 0.3));
+	}
+
+	.action-btn.primary:active:not(:disabled) {
+		transform: translateY(0);
+		box-shadow: none;
 	}
 
 	.action-btn.primary:disabled {

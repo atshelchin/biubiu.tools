@@ -56,7 +56,7 @@
 	let filter = $state<NetworkFilter>('all');
 	let expandedChainId = $state<number | null>(null);
 
-	let chains = $state([]);
+	let chains = $state<Chain[]>([]);
 
 	// Filtered chains based on search and filter
 	const filteredChains = $derived.by(() => {
