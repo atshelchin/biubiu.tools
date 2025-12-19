@@ -600,9 +600,9 @@
 				"step_1_name": "连接钱包",
 				"step_1_text": "点击\"连接钱包\"按钮，连接您的Web3钱包（MetaMask、WalletConnect等）。此钱包将作为代币分发的来源。",
 				"step_1_description": "将您的Web3钱包连接为源钱包",
-				"step_2_name": "检查余额",
-				"step_2_text": "选择区块链网络，确认您的钱包有足够的代币余额和Gas费用于交易。",
-				"step_2_description": "确认源钱包余额充足",
+				"step_2_name": "检查依赖项",
+				"step_2_text": "验证所选网络上是否部署了必需的智能合约（WETH和TokenDistribution）。这些合约用于实现批量分发功能。",
+				"step_2_description": "确认必需合约已部署",
 				"step_3_name": "选择代币和金额",
 				"step_3_text": "选择要分发的代币类型（原生代币、ERC20或NFT），设置分发模式（等额分发或自定义金额），并指定每个收款人的金额或总金额。",
 				"step_3_description": "配置代币和分发金额",
@@ -1429,6 +1429,719 @@
 			"error": "请输入有效的邮箱地址。"
 		}
 	},
+	"chain_tools": {
+		"title": "链上工具集",
+		"subtitle": "发现优质的 Web3 工具和 DApp",
+		"search_placeholder": "搜索工具名称、标签或链...",
+		"visit": "访问",
+		"empty_title": "没有找到匹配的工具",
+		"empty_description": "试试其他关键词或清除筛选条件",
+		"clear_filters": "清除筛选",
+		"showing_count": "显示 {count} / {total} 个工具",
+		"categories": {
+			"all": "全部",
+			"defi": "DeFi",
+			"nft": "NFT",
+			"analytics": "数据分析",
+			"security": "安全工具",
+			"bridge": "跨链桥",
+			"wallet": "钱包工具",
+			"explorer": "区块浏览器",
+			"dev": "开发工具",
+			"dao": "DAO"
+		},
+		"tools": {
+			"uniswap": {
+				"description": "领先的去中心化交易所"
+			},
+			"aave": {
+				"description": "去中心化借贷协议"
+			},
+			"1inch": {
+				"description": "DEX 聚合器，获取最优价格"
+			},
+			"curve": {
+				"description": "稳定币 AMM，低滑点交易"
+			},
+			"dune": {
+				"description": "区块链数据分析，支持自定义 SQL 查询"
+			},
+			"defillama": {
+				"description": "DeFi TVL 聚合器和协议分析"
+			},
+			"nansen": {
+				"description": "链上分析，追踪聪明钱"
+			},
+			"arkham": {
+				"description": "钱包追踪情报平台"
+			},
+			"revoke": {
+				"description": "管理和撤销代币授权"
+			},
+			"debank": {
+				"description": "多链资产追踪和社交平台"
+			},
+			"pocket_universe": {
+				"description": "交易模拟，安全检测"
+			},
+			"across": {
+				"description": "快速低成本跨链桥"
+			},
+			"stargate": {
+				"description": "基于 LayerZero 的全链桥"
+			},
+			"orbiter": {
+				"description": "L2 到 L2 跨 Rollup 桥"
+			},
+			"etherscan": {
+				"description": "以太坊区块浏览器"
+			},
+			"blockscout": {
+				"description": "开源多链区块浏览器"
+			},
+			"tenderly": {
+				"description": "智能合约调试和模拟"
+			},
+			"chainlist": {
+				"description": "一键添加 EVM 网络到钱包"
+			},
+			"remix": {
+				"description": "浏览器版 Solidity IDE"
+			},
+			"opensea": {
+				"description": "最大的 NFT 交易市场"
+			},
+			"blur": {
+				"description": "专业交易者的 NFT 市场"
+			},
+			"reservoir": {
+				"description": "NFT 流动性聚合器和 API"
+			},
+			"snapshot": {
+				"description": "链下无 Gas 治理投票"
+			},
+			"tally": {
+				"description": "链上治理和 DAO 管理"
+			},
+			"biubiu_wallet_sweep": {
+				"description": "批量归集多钱包代币"
+			},
+			"biubiu_one_to_many": {
+				"description": "一对多批量分发代币"
+			},
+			"biubiu_wallet_generator": {
+				"description": "助记词 HD 钱包批量生成"
+			},
+			"biubiu_balance_scanner": {
+				"description": "批量查询多钱包余额"
+			},
+			"biubiu_contract_deployer": {
+				"description": "CREATE2 智能合约部署"
+			},
+			"biubiu_token_deployer": {
+				"description": "一键部署 ERC-20 代币"
+			},
+			"biubiu_events_scanner": {
+				"description": "扫描和解析合约事件"
+			},
+			"biubiu_chainlist": {
+				"description": "浏览和添加 EVM 网络"
+			},
+			"lido": {
+				"description": "以太坊流动性质押协议"
+			},
+			"compound": {
+				"description": "算法货币市场协议"
+			},
+			"maker": {
+				"description": "DAI 稳定币和借贷协议"
+			},
+			"gmx": {
+				"description": "去中心化永续合约交易所"
+			},
+			"pancakeswap": {
+				"description": "BNB Chain 上领先的 DEX"
+			},
+			"sushiswap": {
+				"description": "多链 AMM 和 DeFi 平台"
+			},
+			"balancer": {
+				"description": "自动化投资组合管理和 DEX"
+			},
+			"eigenlayer": {
+				"description": "以太坊再质押协议"
+			},
+			"magic_eden": {
+				"description": "支持比特币等多链的 NFT 市场"
+			},
+			"rarible": {
+				"description": "多链 NFT 创作和交易平台"
+			},
+			"foundry": {
+				"description": "高性能以太坊开发工具包"
+			},
+			"hardhat": {
+				"description": "以太坊开发环境框架"
+			},
+			"slither": {
+				"description": "Solidity 静态分析工具"
+			},
+			"mythx": {
+				"description": "智能合约安全分析平台"
+			},
+			"abi_ninja": {
+				"description": "与任意智能合约交互"
+			},
+			"4byte": {
+				"description": "以太坊函数签名数据库"
+			},
+			"token_terminal": {
+				"description": "加密协议财务指标分析"
+			},
+			"ultrasound": {
+				"description": "ETH 供应量和燃烧追踪"
+			},
+			"aragon": {
+				"description": "轻松构建和管理 DAO"
+			},
+			"colony": {
+				"description": "DAO 基础设施和薪资管理"
+			},
+			"dydx": {
+				"description": "去中心化永续合约交易所"
+			},
+			"convex": {
+				"description": "Curve 增强质押和收益"
+			},
+			"yearn": {
+				"description": "自动化收益优化金库"
+			},
+			"pendle": {
+				"description": "收益代币化和交易"
+			},
+			"radiant": {
+				"description": "全链货币市场"
+			},
+			"morpho": {
+				"description": "优化的点对点借贷"
+			},
+			"frax": {
+				"description": "算法稳定币生态系统"
+			},
+			"rocketpool": {
+				"description": "去中心化以太坊质押"
+			},
+			"venus": {
+				"description": "BSC 借贷协议"
+			},
+			"trader_joe": {
+				"description": "Avalanche 原生 DEX"
+			},
+			"camelot": {
+				"description": "Arbitrum 原生 DEX 和 Launchpad"
+			},
+			"velodrome": {
+				"description": "Optimism 流动性中心"
+			},
+			"aerodrome": {
+				"description": "Base 流动性中心"
+			},
+			"maverick": {
+				"description": "动态集中流动性 AMM"
+			},
+			"spark": {
+				"description": "MakerDAO 借贷协议"
+			},
+			"instadapp": {
+				"description": "DeFi 智能账户聚合器"
+			},
+			"sommelier": {
+				"description": "自动化 DeFi 金库策略"
+			},
+			"hop": {
+				"description": "L2 到 L2 代币桥"
+			},
+			"synapse": {
+				"description": "跨链桥和兑换"
+			},
+			"cbridge": {
+				"description": "Celer 跨链桥"
+			},
+			"multichain": {
+				"description": "多链路由协议"
+			},
+			"wormhole": {
+				"description": "跨链消息传递协议"
+			},
+			"socket": {
+				"description": "跨链桥聚合器"
+			},
+			"rhino": {
+				"description": "自托管桥聚合器"
+			},
+			"arbiscan": {
+				"description": "Arbitrum 区块浏览器"
+			},
+			"optimistic_scan": {
+				"description": "Optimism 区块浏览器"
+			},
+			"polygonscan": {
+				"description": "Polygon 区块浏览器"
+			},
+			"bscscan": {
+				"description": "BNB Chain 区块浏览器"
+			},
+			"basescan": {
+				"description": "Base 区块浏览器"
+			},
+			"snowtrace": {
+				"description": "Avalanche 区块浏览器"
+			},
+			"zksync_explorer": {
+				"description": "zkSync Era 区块浏览器"
+			},
+			"lineascan": {
+				"description": "Linea 区块浏览器"
+			},
+			"l2beat": {
+				"description": "Layer 2 风险和 TVL 分析"
+			},
+			"messari": {
+				"description": "加密研究和数据平台"
+			},
+			"coingecko": {
+				"description": "加密货币价格和市场数据"
+			},
+			"coinmarketcap": {
+				"description": "加密市值排名"
+			},
+			"glassnode": {
+				"description": "链上市场情报"
+			},
+			"santiment": {
+				"description": "链上和社交分析"
+			},
+			"dexscreener": {
+				"description": "实时 DEX 交易对图表"
+			},
+			"defined": {
+				"description": "多链 DEX 分析"
+			},
+			"bubblemaps": {
+				"description": "代币持有者分布可视化"
+			},
+			"certik": {
+				"description": "安全审计和 Skynet"
+			},
+			"hacken": {
+				"description": "区块链安全审计"
+			},
+			"immunefi": {
+				"description": "Web3 漏洞赏金平台"
+			},
+			"openzeppelin": {
+				"description": "智能合约安全库"
+			},
+			"dedaub": {
+				"description": "智能合约反编译器"
+			},
+			"de_fi": {
+				"description": "DeFi 安全扫描工具"
+			},
+			"honeypot": {
+				"description": "代币蜜罐检测"
+			},
+			"ethers": {
+				"description": "JavaScript 以太坊库"
+			},
+			"viem": {
+				"description": "TypeScript 以太坊库"
+			},
+			"wagmi": {
+				"description": "以太坊 React Hooks"
+			},
+			"rainbowkit": {
+				"description": "React 钱包连接 UI"
+			},
+			"web3modal": {
+				"description": "多框架钱包连接"
+			},
+			"thirdweb": {
+				"description": "全栈 Web3 开发平台"
+			},
+			"alchemy": {
+				"description": "Web3 开发平台"
+			},
+			"infura": {
+				"description": "以太坊 API 基础设施"
+			},
+			"quicknode": {
+				"description": "多链节点基础设施"
+			},
+			"solidity": {
+				"description": "Solidity 语言文档"
+			},
+			"evm_codes": {
+				"description": "EVM 操作码参考和测试"
+			},
+			"sourcify": {
+				"description": "去中心化合约验证"
+			},
+			"rabby": {
+				"description": "多链浏览器钱包"
+			},
+			"rainbow": {
+				"description": "精美的以太坊钱包"
+			},
+			"metamask": {
+				"description": "最流行的 Web3 钱包"
+			},
+			"frame": {
+				"description": "注重隐私的桌面钱包"
+			},
+			"zerion": {
+				"description": "DeFi 投资组合和钱包"
+			},
+			"safe": {
+				"description": "多重签名智能钱包"
+			},
+			"zapper": {
+				"description": "DeFi 投资组合仪表板"
+			},
+			"zora": {
+				"description": "NFT 创作和交易平台"
+			},
+			"foundation": {
+				"description": "精选数字艺术市场"
+			},
+			"sound_xyz": {
+				"description": "音乐 NFT 平台"
+			},
+			"manifold": {
+				"description": "NFT 创作者工具和合约"
+			},
+			"icy_tools": {
+				"description": "NFT 市场分析"
+			},
+			"nftnerds": {
+				"description": "NFT 交易和分析"
+			},
+			"boardroom": {
+				"description": "DAO 治理仪表板"
+			},
+			"karma": {
+				"description": "DAO 贡献者声誉"
+			},
+			"lenster": {
+				"description": "Lens 上的去中心化社交"
+			},
+			"farcaster": {
+				"description": "去中心化社交协议"
+			},
+			"push": {
+				"description": "Web3 通知和聊天"
+			},
+			"euler": {
+				"description": "无许可借贷协议"
+			},
+			"benqi": {
+				"description": "Avalanche借贷和流动性质押"
+			},
+			"silo": {
+				"description": "隔离风险借贷市场"
+			},
+			"abracadabra": {
+				"description": "生息代币借贷"
+			},
+			"alchemix": {
+				"description": "自偿还贷款协议"
+			},
+			"exactly": {
+				"description": "固定利率和浮动利率借贷"
+			},
+			"kyberswap": {
+				"description": "弹性池DEX聚合器"
+			},
+			"odos": {
+				"description": "智能路由聚合器"
+			},
+			"openocean": {
+				"description": "跨链DEX聚合器"
+			},
+			"hashflow": {
+				"description": "MEV保护的RFQ交易"
+			},
+			"syncswap": {
+				"description": "zkSync Era原生DEX"
+			},
+			"mute": {
+				"description": "zkSync DEX与放大器"
+			},
+			"spacefi": {
+				"description": "zkSync DEX和收益农场"
+			},
+			"ramses": {
+				"description": "Arbitrum ve(3,3) DEX"
+			},
+			"thena": {
+				"description": "BNB Chain ve(3,3) DEX"
+			},
+			"baseswap": {
+				"description": "Base原生DEX和农场"
+			},
+			"woofi": {
+				"description": "低滑点跨链DEX"
+			},
+			"gains": {
+				"description": "去中心化杠杆交易"
+			},
+			"level": {
+				"description": "永续合约交易平台"
+			},
+			"mux": {
+				"description": "杠杆交易聚合器"
+			},
+			"vertex": {
+				"description": "永续和现货DEX"
+			},
+			"hyperliquid": {
+				"description": "链上永续订单簿"
+			},
+			"aevo": {
+				"description": "期权和永续交易所"
+			},
+			"lyra": {
+				"description": "期权AMM协议"
+			},
+			"dopex": {
+				"description": "去中心化期权协议"
+			},
+			"premia": {
+				"description": "期权金库和交易"
+			},
+			"harvest": {
+				"description": "收益农场聚合器"
+			},
+			"pickle": {
+				"description": "收益优化罐"
+			},
+			"concentrator": {
+				"description": "Curve收益集中器"
+			},
+			"conic": {
+				"description": "Curve全能池平台"
+			},
+			"sturdy": {
+				"description": "免息借贷协议"
+			},
+			"stakewise": {
+				"description": "非托管ETH质押"
+			},
+			"frax_ether": {
+				"description": "Frax流动性质押代币"
+			},
+			"stader": {
+				"description": "多链流动性质押"
+			},
+			"mantle_lsp": {
+				"description": "Mantle流动性质押协议"
+			},
+			"renzo": {
+				"description": "EigenLayer流动性再质押"
+			},
+			"etherfi": {
+				"description": "去中心化质押协议"
+			},
+			"puffer": {
+				"description": "原生流动性再质押"
+			},
+			"kelp": {
+				"description": "流动性再质押解决方案"
+			},
+			"hyphen": {
+				"description": "即时跨链转账"
+			},
+			"connext": {
+				"description": "无信任跨链桥"
+			},
+			"debridge": {
+				"description": "跨链互操作性"
+			},
+			"allbridge": {
+				"description": "多链稳定币桥"
+			},
+			"portal": {
+				"description": "Wormhole Portal桥"
+			},
+			"squid": {
+				"description": "跨链兑换路由"
+			},
+			"owlto": {
+				"description": "快速低费L2桥"
+			},
+			"scrollscan": {
+				"description": "Scroll网络浏览器"
+			},
+			"mantlescan": {
+				"description": "Mantle网络浏览器"
+			},
+			"blastscan": {
+				"description": "Blast网络浏览器"
+			},
+			"modescan": {
+				"description": "Mode网络浏览器"
+			},
+			"celoscan": {
+				"description": "Celo区块链浏览器"
+			},
+			"ftmscan": {
+				"description": "Fantom网络浏览器"
+			},
+			"gnosisscan": {
+				"description": "Gnosis Chain浏览器"
+			},
+			"cronoscan": {
+				"description": "Cronos网络浏览器"
+			},
+			"moonbeamscan": {
+				"description": "Moonbeam和Moonriver浏览器"
+			},
+			"tokenterminal": {
+				"description": "协议财务指标"
+			},
+			"artemis": {
+				"description": "基本面加密分析"
+			},
+			"growthepie": {
+				"description": "L2分析和对比"
+			},
+			"dappradar": {
+				"description": "DApp排名和追踪"
+			},
+			"ultrasound": {
+				"description": "ETH供应和销毁追踪"
+			},
+			"ethburned": {
+				"description": "以太坊销毁统计"
+			},
+			"parsec": {
+				"description": "DeFi分析仪表盘"
+			},
+			"eigenexplorer": {
+				"description": "EigenLayer分析浏览器"
+			},
+			"phalcon": {
+				"description": "交易分析浏览器"
+			},
+			"tx_tracer": {
+				"description": "交易追踪解码器"
+			},
+			"contract_diff": {
+				"description": "合约版本对比"
+			},
+			"chainalysis": {
+				"description": "区块链合规平台"
+			},
+			"brownie": {
+				"description": "Python智能合约框架"
+			},
+			"ape": {
+				"description": "模块化Python框架"
+			},
+			"pyth": {
+				"description": "实时价格预言机"
+			},
+			"the_graph": {
+				"description": "区块链数据索引"
+			},
+			"goldsky": {
+				"description": "实时数据流"
+			},
+			"envio": {
+				"description": "快速区块链索引器"
+			},
+			"covalent": {
+				"description": "统一区块链数据API"
+			},
+			"transpose": {
+				"description": "实时SQL区块链数据"
+			},
+			"chainbase": {
+				"description": "一体化数据平台"
+			},
+			"coinbase_wallet": {
+				"description": "自托管加密钱包"
+			},
+			"trust_wallet": {
+				"description": "多链移动钱包"
+			},
+			"argent": {
+				"description": "带恢复的智能钱包"
+			},
+			"sequence": {
+				"description": "游戏智能钱包"
+			},
+			"ledger": {
+				"description": "硬件钱包安全"
+			},
+			"trezor": {
+				"description": "硬件钱包先驱"
+			},
+			"privy": {
+				"description": "嵌入式钱包方案"
+			},
+			"dynamic": {
+				"description": "多钱包认证"
+			},
+			"looksrare": {
+				"description": "社区NFT市场"
+			},
+			"x2y2": {
+				"description": "低费NFT市场"
+			},
+			"gem": {
+				"description": "NFT聚合器和扫货工具"
+			},
+			"nftfi": {
+				"description": "NFT抵押贷款"
+			},
+			"arcade": {
+				"description": "NFT借贷协议"
+			},
+			"mintfun": {
+				"description": "NFT铸造发现"
+			},
+			"daohaus": {
+				"description": "Moloch DAO启动器"
+			},
+			"charmverse": {
+				"description": "Web3工作空间平台"
+			},
+			"wonderverse": {
+				"description": "DAO项目管理"
+			},
+			"coordinape": {
+				"description": "去中心化薪酬"
+			},
+			"guild": {
+				"description": "代币门控社区"
+			},
+			"jokerace": {
+				"description": "链上投票竞赛"
+			}
+		},
+		"seo": {
+			"page_title": "链上工具集 - Web3 工具导航 | BiuBiu Tools",
+			"page_description": "发现最好的 Web3 工具和 DApp。浏览精选的 DeFi、NFT、数据分析、安全、跨链桥和开发者工具。",
+			"keywords": "web3工具, dapp导航, defi工具, nft市场, 区块浏览器, 加密工具, 以太坊工具, web3资源",
+			"webapp_name": "链上工具集",
+			"webapp_description": "精选 Web3 工具和 DApp 导航，涵盖 DeFi、NFT、数据分析、安全等领域。",
+			"feature_1": "浏览 240+ 精选 Web3 工具",
+			"feature_2": "按分类筛选：DeFi、NFT、数据分析、安全",
+			"feature_3": "按名称、标签或区块链搜索",
+			"feature_4": "直达官方工具网站"
+		}
+	},
 	"cta": {
 		"title": "准备好开始了吗？",
 		"subtitle": "加入数千名已经使用 biubiu.tools 简化 Web3 操作的用户",
@@ -1668,6 +2381,46 @@
 			"stable": "稳定版",
 			"new": "新推出"
 		}
+	},
+	"chainlist": {
+		"title": "链列表",
+		"description": "搜索并添加 EVM 兼容的区块链网络到您的钱包",
+		"search_placeholder": "按名称、Chain ID 或代币符号搜索...",
+		"filter": {
+			"all": "全部",
+			"mainnet": "主网",
+			"testnet": "测试网"
+		},
+		"showing_results": "显示 {count} / {total} 个网络",
+		"no_results": "未找到匹配的网络",
+		"load_more": "加载更多",
+		"remaining": "剩余",
+		"testnet": "测试网",
+		"data_source": "数据来源于",
+		"explorers": "区块浏览器",
+		"rpc": {
+			"url": "RPC 地址",
+			"height": "区块高度",
+			"latency": "延迟",
+			"privacy": "隐私",
+			"failed": "失败",
+			"privacy_none": "无追踪",
+			"privacy_limited": "有限追踪",
+			"privacy_yes": "有追踪",
+			"privacy_unknown": "未知"
+		},
+		"actions": {
+			"add_to_wallet": "添加到钱包",
+			"connect_wallet": "连接钱包",
+			"adding": "添加中...",
+			"copy_chain_id": "复制 Chain ID",
+			"copy_rpc": "复制 RPC 地址",
+			"copied": "已复制!",
+			"website": "官网"
+		},
+		"feature_1": "按 Chain ID、名称、符号搜索",
+		"feature_2": "实时 RPC 测试",
+		"feature_3": "一键添加到钱包"
 	},
 	"components": {
 		"address_text_import": {

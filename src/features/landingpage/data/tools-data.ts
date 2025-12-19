@@ -9,7 +9,9 @@ import {
 	KeyRound,
 	Rocket,
 	Search,
-	Image
+	Image,
+	Globe,
+	Link2
 } from '@lucide/svelte';
 import type { Component } from 'svelte';
 
@@ -172,6 +174,30 @@ export const toolsConfig: Tool[] = [
 			'tools.nft_deployer.feature_3'
 		],
 		stage: 'alpha'
+	},
+	{
+		icon: Globe,
+		titleKey: 'chainlist.title',
+		descriptionKey: 'chainlist.description',
+		link: '/apps/chainlist',
+		status: 'active',
+		color: '#6366F1',
+		featureKeys: ['chainlist.feature_1', 'chainlist.feature_2', 'chainlist.feature_3'],
+		stage: 'alpha'
+	},
+	{
+		icon: Link2,
+		titleKey: 'chain_tools.title',
+		descriptionKey: 'chain_tools.subtitle',
+		link: '/apps/chain-tools',
+		status: 'active',
+		color: '#06B6D4',
+		featureKeys: [
+			'chain_tools.seo.feature_1',
+			'chain_tools.seo.feature_2',
+			'chain_tools.seo.feature_3'
+		],
+		stage: 'new'
 	}
 	// {
 	// 	icon: Globe,

@@ -600,9 +600,9 @@
 				"step_1_name": "Connect Your Wallet",
 				"step_1_text": "Click the \"Connect Wallet\" button and connect your Web3 wallet (MetaMask, WalletConnect, etc.) to the application. This wallet will be the source of tokens for distribution.",
 				"step_1_description": "Link your Web3 wallet as the source wallet",
-				"step_2_name": "Check Source Balance",
-				"step_2_text": "Select the blockchain network and verify your wallet has sufficient balance of the token you want to distribute, plus gas fees for the transactions.",
-				"step_2_description": "Verify source wallet has sufficient balance",
+				"step_2_name": "Check Dependencies",
+				"step_2_text": "Verify that required smart contracts (WETH and TokenDistribution) are deployed on the selected network. These contracts enable batch distribution functionality.",
+				"step_2_description": "Verify required contracts are deployed",
 				"step_3_name": "Select Token and Amount",
 				"step_3_text": "Choose which token to distribute (native token, ERC20, or NFT), set the distribution mode (equal amounts or custom per recipient), and specify the amount per recipient or total amount.",
 				"step_3_description": "Configure token and distribution amounts",
@@ -1429,6 +1429,746 @@
 			"error": "Please enter a valid email address."
 		}
 	},
+	"chain_tools": {
+		"title": "Chain Tools",
+		"subtitle": "Discover quality Web3 tools and DApps",
+		"search_placeholder": "Search tools by name, tag, or chain...",
+		"visit": "Visit",
+		"empty_title": "No matching tools found",
+		"empty_description": "Try different keywords or clear your filters",
+		"clear_filters": "Clear Filters",
+		"showing_count": "Showing {count} of {total} tools",
+		"categories": {
+			"all": "All",
+			"defi": "DeFi",
+			"nft": "NFT",
+			"analytics": "Analytics",
+			"security": "Security",
+			"bridge": "Bridge",
+			"wallet": "Wallet",
+			"explorer": "Explorer",
+			"dev": "Dev Tools",
+			"dao": "DAO"
+		},
+		"tools": {
+			"uniswap": {
+				"description": "Leading decentralized exchange for token swaps"
+			},
+			"aave": {
+				"description": "Decentralized lending and borrowing protocol"
+			},
+			"1inch": {
+				"description": "DEX aggregator for best swap prices"
+			},
+			"curve": {
+				"description": "Stablecoin-focused AMM with low slippage"
+			},
+			"dune": {
+				"description": "Blockchain analytics with custom SQL queries"
+			},
+			"defillama": {
+				"description": "DeFi TVL aggregator and protocol analytics"
+			},
+			"nansen": {
+				"description": "On-chain analytics with smart money tracking"
+			},
+			"arkham": {
+				"description": "Intelligence platform for wallet tracking"
+			},
+			"revoke": {
+				"description": "Manage and revoke token approvals"
+			},
+			"debank": {
+				"description": "Multi-chain portfolio tracker and social platform"
+			},
+			"pocket_universe": {
+				"description": "Transaction simulation for security"
+			},
+			"across": {
+				"description": "Fast and cheap cross-chain bridge"
+			},
+			"stargate": {
+				"description": "Omnichain bridge powered by LayerZero"
+			},
+			"orbiter": {
+				"description": "L2 to L2 cross-rollup bridge"
+			},
+			"etherscan": {
+				"description": "Ethereum blockchain explorer"
+			},
+			"blockscout": {
+				"description": "Open-source multi-chain explorer"
+			},
+			"tenderly": {
+				"description": "Smart contract debugging and simulation"
+			},
+			"chainlist": {
+				"description": "Add EVM networks to your wallet"
+			},
+			"remix": {
+				"description": "Browser-based Solidity IDE"
+			},
+			"opensea": {
+				"description": "Largest NFT marketplace"
+			},
+			"blur": {
+				"description": "Pro NFT marketplace for traders"
+			},
+			"reservoir": {
+				"description": "NFT liquidity aggregator and API"
+			},
+			"snapshot": {
+				"description": "Off-chain gasless governance voting"
+			},
+			"tally": {
+				"description": "On-chain governance and DAO management"
+			},
+			"biubiu_wallet_sweep": {
+				"description": "Batch sweep tokens from multiple wallets"
+			},
+			"biubiu_one_to_many": {
+				"description": "Distribute tokens to multiple addresses"
+			},
+			"biubiu_wallet_generator": {
+				"description": "Generate HD wallets with mnemonic"
+			},
+			"biubiu_balance_scanner": {
+				"description": "Scan token balances across multiple wallets"
+			},
+			"biubiu_contract_deployer": {
+				"description": "Deploy smart contracts with CREATE2"
+			},
+			"biubiu_token_deployer": {
+				"description": "Deploy ERC-20 tokens easily"
+			},
+			"biubiu_events_scanner": {
+				"description": "Scan and decode contract events"
+			},
+			"biubiu_chainlist": {
+				"description": "Browse and add EVM networks"
+			},
+			"lido": {
+				"description": "Liquid staking for Ethereum and more"
+			},
+			"compound": {
+				"description": "Algorithmic money market protocol"
+			},
+			"maker": {
+				"description": "DAI stablecoin and lending protocol"
+			},
+			"gmx": {
+				"description": "Decentralized perpetual exchange"
+			},
+			"pancakeswap": {
+				"description": "Leading DEX on BNB Chain"
+			},
+			"sushiswap": {
+				"description": "Multi-chain AMM and DeFi platform"
+			},
+			"balancer": {
+				"description": "Automated portfolio manager and DEX"
+			},
+			"eigenlayer": {
+				"description": "Restaking protocol for Ethereum security"
+			},
+			"magic_eden": {
+				"description": "NFT marketplace for Bitcoin and more"
+			},
+			"rarible": {
+				"description": "Create and trade NFTs on any chain"
+			},
+			"foundry": {
+				"description": "Blazing fast Ethereum development toolkit"
+			},
+			"hardhat": {
+				"description": "Ethereum development environment"
+			},
+			"slither": {
+				"description": "Static analyzer for Solidity"
+			},
+			"mythx": {
+				"description": "Smart contract security analysis"
+			},
+			"abi_ninja": {
+				"description": "Interact with any smart contract"
+			},
+			"4byte": {
+				"description": "Ethereum function signature database"
+			},
+			"token_terminal": {
+				"description": "Financial metrics for crypto protocols"
+			},
+			"ultrasound": {
+				"description": "Track ETH supply and burn metrics"
+			},
+			"aragon": {
+				"description": "Build and manage DAOs easily"
+			},
+			"colony": {
+				"description": "DAO infrastructure and payroll"
+			},
+			"dydx": {
+				"description": "Decentralized perpetual trading exchange"
+			},
+			"convex": {
+				"description": "Boosted Curve staking and yield"
+			},
+			"yearn": {
+				"description": "Automated yield optimization vaults"
+			},
+			"pendle": {
+				"description": "Yield tokenization and trading"
+			},
+			"radiant": {
+				"description": "Omnichain money market"
+			},
+			"morpho": {
+				"description": "Optimized peer-to-peer lending"
+			},
+			"frax": {
+				"description": "Algorithmic stablecoin ecosystem"
+			},
+			"rocketpool": {
+				"description": "Decentralized Ethereum staking"
+			},
+			"venus": {
+				"description": "BSC lending and borrowing"
+			},
+			"trader_joe": {
+				"description": "Avalanche native DEX"
+			},
+			"camelot": {
+				"description": "Arbitrum native DEX and launchpad"
+			},
+			"velodrome": {
+				"description": "Optimism liquidity hub"
+			},
+			"aerodrome": {
+				"description": "Base liquidity hub"
+			},
+			"maverick": {
+				"description": "Dynamic concentrated liquidity AMM"
+			},
+			"spark": {
+				"description": "MakerDAO lending protocol"
+			},
+			"instadapp": {
+				"description": "DeFi smart account aggregator"
+			},
+			"sommelier": {
+				"description": "Automated DeFi vault strategies"
+			},
+			"hop": {
+				"description": "L2 to L2 token bridge"
+			},
+			"synapse": {
+				"description": "Cross-chain bridge and swap"
+			},
+			"cbridge": {
+				"description": "Celer cross-chain bridge"
+			},
+			"multichain": {
+				"description": "Multi-chain router protocol"
+			},
+			"wormhole": {
+				"description": "Cross-chain messaging protocol"
+			},
+			"socket": {
+				"description": "Bridge aggregator for best routes"
+			},
+			"rhino": {
+				"description": "Self-custodial bridge aggregator"
+			},
+			"arbiscan": {
+				"description": "Arbitrum blockchain explorer"
+			},
+			"optimistic_scan": {
+				"description": "Optimism blockchain explorer"
+			},
+			"polygonscan": {
+				"description": "Polygon blockchain explorer"
+			},
+			"bscscan": {
+				"description": "BNB Chain blockchain explorer"
+			},
+			"basescan": {
+				"description": "Base blockchain explorer"
+			},
+			"snowtrace": {
+				"description": "Avalanche blockchain explorer"
+			},
+			"zksync_explorer": {
+				"description": "zkSync Era blockchain explorer"
+			},
+			"lineascan": {
+				"description": "Linea blockchain explorer"
+			},
+			"l2beat": {
+				"description": "Layer 2 risk and TVL analysis"
+			},
+			"messari": {
+				"description": "Crypto research and data platform"
+			},
+			"coingecko": {
+				"description": "Cryptocurrency prices and market data"
+			},
+			"coinmarketcap": {
+				"description": "Crypto market cap rankings"
+			},
+			"glassnode": {
+				"description": "On-chain market intelligence"
+			},
+			"santiment": {
+				"description": "On-chain and social analytics"
+			},
+			"dexscreener": {
+				"description": "Real-time DEX pair charts"
+			},
+			"defined": {
+				"description": "Multi-chain DEX analytics"
+			},
+			"bubblemaps": {
+				"description": "Token holder distribution visualization"
+			},
+			"certik": {
+				"description": "Security audits and skynet"
+			},
+			"hacken": {
+				"description": "Blockchain security auditing"
+			},
+			"immunefi": {
+				"description": "Bug bounty platform for Web3"
+			},
+			"openzeppelin": {
+				"description": "Smart contract security library"
+			},
+			"dedaub": {
+				"description": "Smart contract decompiler"
+			},
+			"de_fi": {
+				"description": "DeFi security scanner and tools"
+			},
+			"honeypot": {
+				"description": "Token honeypot detection"
+			},
+			"ethers": {
+				"description": "JavaScript Ethereum library"
+			},
+			"viem": {
+				"description": "TypeScript Ethereum library"
+			},
+			"wagmi": {
+				"description": "React hooks for Ethereum"
+			},
+			"rainbowkit": {
+				"description": "React wallet connection UI"
+			},
+			"web3modal": {
+				"description": "Multi-framework wallet connect"
+			},
+			"thirdweb": {
+				"description": "Full-stack Web3 development"
+			},
+			"alchemy": {
+				"description": "Web3 development platform"
+			},
+			"infura": {
+				"description": "Ethereum API infrastructure"
+			},
+			"quicknode": {
+				"description": "Multi-chain node infrastructure"
+			},
+			"solidity": {
+				"description": "Solidity language documentation"
+			},
+			"evm_codes": {
+				"description": "EVM opcode reference and playground"
+			},
+			"sourcify": {
+				"description": "Decentralized contract verification"
+			},
+			"rabby": {
+				"description": "Multi-chain browser wallet"
+			},
+			"rainbow": {
+				"description": "Beautiful Ethereum wallet"
+			},
+			"metamask": {
+				"description": "Most popular Web3 wallet"
+			},
+			"frame": {
+				"description": "Privacy-focused desktop wallet"
+			},
+			"zerion": {
+				"description": "DeFi portfolio and wallet"
+			},
+			"safe": {
+				"description": "Multi-signature smart wallet"
+			},
+			"zapper": {
+				"description": "DeFi portfolio dashboard"
+			},
+			"zora": {
+				"description": "NFT creation and marketplace"
+			},
+			"foundation": {
+				"description": "Curated digital art marketplace"
+			},
+			"sound_xyz": {
+				"description": "Music NFT platform"
+			},
+			"manifold": {
+				"description": "NFT creator tools and contracts"
+			},
+			"icy_tools": {
+				"description": "NFT market analytics"
+			},
+			"nftnerds": {
+				"description": "NFT trading and analytics"
+			},
+			"boardroom": {
+				"description": "DAO governance dashboard"
+			},
+			"karma": {
+				"description": "DAO contributor reputation"
+			},
+			"lenster": {
+				"description": "Decentralized social on Lens"
+			},
+			"farcaster": {
+				"description": "Decentralized social protocol"
+			},
+			"push": {
+				"description": "Web3 notifications and chat"
+			},
+			"euler": {
+				"description": "Permissionless lending protocol"
+			},
+			"benqi": {
+				"description": "Avalanche lending & liquid staking"
+			},
+			"silo": {
+				"description": "Isolated risk lending markets"
+			},
+			"abracadabra": {
+				"description": "Interest-bearing token lending"
+			},
+			"alchemix": {
+				"description": "Self-repaying loans protocol"
+			},
+			"exactly": {
+				"description": "Fixed and variable rate lending"
+			},
+			"kyberswap": {
+				"description": "DEX aggregator with elastic pools"
+			},
+			"odos": {
+				"description": "Smart order routing aggregator"
+			},
+			"openocean": {
+				"description": "Cross-chain DEX aggregator"
+			},
+			"hashflow": {
+				"description": "MEV-protected RFQ trading"
+			},
+			"syncswap": {
+				"description": "zkSync Era native DEX"
+			},
+			"mute": {
+				"description": "zkSync DEX with amplifier"
+			},
+			"spacefi": {
+				"description": "zkSync DEX and yield farm"
+			},
+			"ramses": {
+				"description": "Arbitrum ve(3,3) DEX"
+			},
+			"thena": {
+				"description": "BNB Chain ve(3,3) DEX"
+			},
+			"baseswap": {
+				"description": "Base native DEX and farm"
+			},
+			"woofi": {
+				"description": "Low-slippage cross-chain DEX"
+			},
+			"gains": {
+				"description": "Decentralized leveraged trading"
+			},
+			"level": {
+				"description": "Perpetual trading platform"
+			},
+			"mux": {
+				"description": "Leveraged trading aggregator"
+			},
+			"vertex": {
+				"description": "Perpetuals and spot DEX"
+			},
+			"hyperliquid": {
+				"description": "On-chain perpetual orderbook"
+			},
+			"aevo": {
+				"description": "Options and perpetuals exchange"
+			},
+			"lyra": {
+				"description": "Options AMM protocol"
+			},
+			"dopex": {
+				"description": "Decentralized options protocol"
+			},
+			"premia": {
+				"description": "Options vaults and trading"
+			},
+			"harvest": {
+				"description": "Yield farming aggregator"
+			},
+			"pickle": {
+				"description": "Yield optimization jars"
+			},
+			"concentrator": {
+				"description": "Curve yield concentrator"
+			},
+			"conic": {
+				"description": "Curve omnipool platform"
+			},
+			"sturdy": {
+				"description": "Interest-free lending protocol"
+			},
+			"stakewise": {
+				"description": "Non-custodial ETH staking"
+			},
+			"frax_ether": {
+				"description": "Frax liquid staking tokens"
+			},
+			"stader": {
+				"description": "Multi-chain liquid staking"
+			},
+			"mantle_lsp": {
+				"description": "Mantle liquid staking protocol"
+			},
+			"renzo": {
+				"description": "EigenLayer liquid restaking"
+			},
+			"etherfi": {
+				"description": "Decentralized staking protocol"
+			},
+			"puffer": {
+				"description": "Native liquid restaking"
+			},
+			"kelp": {
+				"description": "Liquid restaking solution"
+			},
+			"hyphen": {
+				"description": "Instant cross-chain transfers"
+			},
+			"connext": {
+				"description": "Trustless cross-chain bridge"
+			},
+			"debridge": {
+				"description": "Cross-chain interoperability"
+			},
+			"allbridge": {
+				"description": "Multi-chain stablecoin bridge"
+			},
+			"portal": {
+				"description": "Wormhole Portal bridge"
+			},
+			"squid": {
+				"description": "Cross-chain swap router"
+			},
+			"orbiter": {
+				"description": "L2 cross-rollup bridge"
+			},
+			"owlto": {
+				"description": "Fast and cheap L2 bridge"
+			},
+			"scrollscan": {
+				"description": "Scroll network explorer"
+			},
+			"mantlescan": {
+				"description": "Mantle network explorer"
+			},
+			"blastscan": {
+				"description": "Blast network explorer"
+			},
+			"modescan": {
+				"description": "Mode network explorer"
+			},
+			"celoscan": {
+				"description": "Celo blockchain explorer"
+			},
+			"ftmscan": {
+				"description": "Fantom network explorer"
+			},
+			"gnosisscan": {
+				"description": "Gnosis Chain explorer"
+			},
+			"cronoscan": {
+				"description": "Cronos network explorer"
+			},
+			"moonbeamscan": {
+				"description": "Moonbeam & Moonriver explorer"
+			},
+			"blockscout": {
+				"description": "Open source block explorer"
+			},
+			"tokenterminal": {
+				"description": "Protocol financial metrics"
+			},
+			"artemis": {
+				"description": "Fundamental crypto analytics"
+			},
+			"growthepie": {
+				"description": "L2 analytics and comparison"
+			},
+			"dappradar": {
+				"description": "DApp ranking and tracking"
+			},
+			"ultrasound": {
+				"description": "ETH supply and burn tracker"
+			},
+			"ethburned": {
+				"description": "Ethereum burn statistics"
+			},
+			"arkham": {
+				"description": "Blockchain intelligence platform"
+			},
+			"parsec": {
+				"description": "DeFi analytics dashboard"
+			},
+			"eigenexplorer": {
+				"description": "EigenLayer analytics explorer"
+			},
+			"slither": {
+				"description": "Static analysis framework"
+			},
+			"mythx": {
+				"description": "Smart contract security API"
+			},
+			"tenderly": {
+				"description": "Web3 development platform"
+			},
+			"phalcon": {
+				"description": "Transaction analysis explorer"
+			},
+			"tx_tracer": {
+				"description": "Transaction trace decoder"
+			},
+			"contract_diff": {
+				"description": "Compare contract versions"
+			},
+			"chainalysis": {
+				"description": "Blockchain compliance platform"
+			},
+			"foundry": {
+				"description": "Blazing fast Solidity toolkit"
+			},
+			"brownie": {
+				"description": "Python smart contract framework"
+			},
+			"ape": {
+				"description": "Modular Python framework"
+			},
+			"pyth": {
+				"description": "Real-time price oracle"
+			},
+			"the_graph": {
+				"description": "Blockchain data indexing"
+			},
+			"goldsky": {
+				"description": "Real-time data streaming"
+			},
+			"envio": {
+				"description": "Fast blockchain indexer"
+			},
+			"covalent": {
+				"description": "Unified blockchain data API"
+			},
+			"transpose": {
+				"description": "Real-time SQL blockchain data"
+			},
+			"chainbase": {
+				"description": "All-in-one data platform"
+			},
+			"coinbase_wallet": {
+				"description": "Self-custody crypto wallet"
+			},
+			"trust_wallet": {
+				"description": "Multi-chain mobile wallet"
+			},
+			"argent": {
+				"description": "Smart wallet with recovery"
+			},
+			"sequence": {
+				"description": "Smart wallet for gaming"
+			},
+			"ledger": {
+				"description": "Hardware wallet security"
+			},
+			"trezor": {
+				"description": "Hardware wallet pioneer"
+			},
+			"privy": {
+				"description": "Embedded wallet solution"
+			},
+			"dynamic": {
+				"description": "Multi-wallet authentication"
+			},
+			"magic_eden": {
+				"description": "Multi-chain NFT marketplace"
+			},
+			"looksrare": {
+				"description": "Community NFT marketplace"
+			},
+			"x2y2": {
+				"description": "Low-fee NFT marketplace"
+			},
+			"reservoir": {
+				"description": "NFT liquidity infrastructure"
+			},
+			"gem": {
+				"description": "NFT aggregator and sweeper"
+			},
+			"nftfi": {
+				"description": "NFT-collateralized loans"
+			},
+			"arcade": {
+				"description": "NFT lending protocol"
+			},
+			"mintfun": {
+				"description": "NFT minting discovery"
+			},
+			"daohaus": {
+				"description": "Moloch DAO launcher"
+			},
+			"charmverse": {
+				"description": "Web3 workspace platform"
+			},
+			"wonderverse": {
+				"description": "DAO project management"
+			},
+			"coordinape": {
+				"description": "Decentralized compensation"
+			},
+			"guild": {
+				"description": "Token-gated communities"
+			},
+			"jokerace": {
+				"description": "On-chain voting contests"
+			}
+		},
+		"seo": {
+			"page_title": "Chain Tools - Web3 Tools Directory | BiuBiu Tools",
+			"page_description": "Discover the best Web3 tools and DApps. Browse curated DeFi, NFT, Analytics, Security, Bridge, and Developer tools across multiple blockchains.",
+			"keywords": "web3 tools, dapp directory, defi tools, nft marketplace, blockchain explorer, crypto tools, ethereum tools, web3 resources",
+			"webapp_name": "Chain Tools",
+			"webapp_description": "Curated directory of quality Web3 tools and DApps for DeFi, NFT, Analytics, Security, and more.",
+			"feature_1": "Browse 240+ curated Web3 tools",
+			"feature_2": "Filter by category: DeFi, NFT, Analytics, Security",
+			"feature_3": "Search by name, tag, or blockchain",
+			"feature_4": "Direct links to official tool websites"
+		}
+	},
 	"cta": {
 		"title": "Ready to Get Started?",
 		"subtitle": "Join thousands of users who are already using biubiu.tools to streamline their Web3 operations",
@@ -1682,6 +2422,46 @@
 			"stable": "Stable",
 			"new": "New"
 		}
+	},
+	"chainlist": {
+		"title": "Chain List",
+		"description": "Search and add EVM-compatible blockchain networks to your wallet",
+		"search_placeholder": "Search by name, chain ID, or symbol...",
+		"filter": {
+			"all": "All",
+			"mainnet": "Mainnet",
+			"testnet": "Testnet"
+		},
+		"showing_results": "Showing {count} of {total} networks",
+		"no_results": "No networks found matching your search",
+		"load_more": "Load More",
+		"remaining": "remaining",
+		"testnet": "Testnet",
+		"data_source": "Data sourced from",
+		"explorers": "Explorers",
+		"rpc": {
+			"url": "RPC URL",
+			"height": "Height",
+			"latency": "Latency",
+			"privacy": "Privacy",
+			"failed": "Failed",
+			"privacy_none": "No Tracking",
+			"privacy_limited": "Limited",
+			"privacy_yes": "Tracking",
+			"privacy_unknown": "Unknown"
+		},
+		"actions": {
+			"add_to_wallet": "Add to Wallet",
+			"connect_wallet": "Connect Wallet",
+			"adding": "Adding...",
+			"copy_chain_id": "Copy Chain ID",
+			"copy_rpc": "Copy RPC URL",
+			"copied": "Copied!",
+			"website": "Website"
+		},
+		"feature_1": "Search by Chain ID, Name, Symbol",
+		"feature_2": "Real-time RPC Testing",
+		"feature_3": "One-click Add to Wallet"
 	},
 	"components": {
 		"address_text_import": {
