@@ -1,8 +1,9 @@
 <script lang="ts">
-	import { Copy, Check, ExternalLink, Shield, ShieldAlert, ShieldQuestion } from '@lucide/svelte';
+	import { ExternalLink, Shield, ShieldAlert, ShieldQuestion } from '@lucide/svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import type { RpcEndpoint, RpcTestResult, Explorer } from '../types/chain';
 	import { formatLatency, formatBlockHeight, getLatencyQuality } from '../utils/rpc-tester';
+	import CopyButton from '$lib/components/ui/copy-button.svelte';
 
 	type RpcProtocol = 'https' | 'wss';
 
@@ -18,7 +19,6 @@
 
 	const i18n = useI18n();
 
-	let copiedUrl = $state<string | null>(null);
 	let rpcProtocol = $state<RpcProtocol>('https');
 
 	// Filter endpoints by protocol
@@ -33,14 +33,6 @@
 	// Count endpoints by protocol
 	const httpsCount = $derived(rpcEndpoints.filter((r) => isHttpEndpoint(r.url)).length);
 	const wssCount = $derived(rpcEndpoints.filter((r) => isWssEndpoint(r.url)).length);
-
-	async function copyToClipboard(text: string) {
-		await navigator.clipboard.writeText(text);
-		copiedUrl = text;
-		setTimeout(() => {
-			copiedUrl = null;
-		}, 2000);
-	}
 
 	function getPrivacyIcon(tracking: RpcEndpoint['tracking']) {
 		switch (tracking) {
@@ -156,7 +148,6 @@
 					<th class="col-height">{i18n.t('chainlist.rpc.height')}</th>
 					<th class="col-latency">{i18n.t('chainlist.rpc.latency')}</th>
 					<th class="col-privacy">{i18n.t('chainlist.rpc.privacy')}</th>
-					<th class="col-actions"></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -165,11 +156,14 @@
 					{@const PrivacyIcon = getPrivacyIcon(endpoint.tracking)}
 					<tr class:failed={result?.status === 'failed'}>
 						<td class="col-url">
-							<span class="url-text" title={endpoint.url}>
-								{endpoint.url}
-							</span>
+							<div class="url-cell">
+								<span class="url-text" title={endpoint.url}>
+									{endpoint.url}
+								</span>
+								<CopyButton value={endpoint.url} size={14} class="rpc-copy-btn" />
+							</div>
 						</td>
-						<td class="col-height">
+						<td class="col-height" data-label={i18n.t('chainlist.rpc.height')}>
 							{#if isTesting && !result}
 								<span class="testing-indicator"></span>
 							{:else if result?.status === 'success'}
@@ -180,7 +174,7 @@
 								-
 							{/if}
 						</td>
-						<td class="col-latency">
+						<td class="col-latency" data-label={i18n.t('chainlist.rpc.latency')}>
 							{#if isTesting && !result}
 								<span class="testing-indicator"></span>
 							{:else if result?.status === 'success'}
@@ -195,7 +189,7 @@
 								-
 							{/if}
 						</td>
-						<td class="col-privacy">
+						<td class="col-privacy" data-label={i18n.t('chainlist.rpc.privacy')}>
 							<span
 								class="privacy-badge privacy-{endpoint.tracking}"
 								title={getPrivacyLabel(endpoint.tracking)}
@@ -203,19 +197,6 @@
 								<PrivacyIcon size={14} />
 								<span class="privacy-label">{getPrivacyLabel(endpoint.tracking)}</span>
 							</span>
-						</td>
-						<td class="col-actions">
-							<button
-								class="action-btn"
-								onclick={() => copyToClipboard(endpoint.url)}
-								title={i18n.t('chainlist.actions.copy_rpc')}
-							>
-								{#if copiedUrl === endpoint.url}
-									<Check size={16} />
-								{:else}
-									<Copy size={16} />
-								{/if}
-							</button>
 						</td>
 					</tr>
 				{/each}
@@ -346,9 +327,16 @@
 		white-space: nowrap;
 	}
 
-	.col-actions {
-		width: 50px;
-		text-align: center;
+	.url-cell {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+	}
+
+	:global(.rpc-copy-btn) {
+		width: 28px !important;
+		height: 28px !important;
+		flex-shrink: 0;
 	}
 
 	.testing-indicator {
@@ -432,23 +420,92 @@
 		}
 	}
 
-	.action-btn {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: 32px;
-		height: 32px;
-		border: none;
-		background: transparent;
-		border-radius: var(--radius-sm);
-		color: var(--color-muted-foreground);
-		cursor: pointer;
-		transition: all 0.2s ease;
-	}
+	/* Mobile responsive - card layout */
+	@media (max-width: 640px) {
+		.rpc-table-wrapper {
+			border: none;
+			border-radius: 0;
+		}
 
-	.action-btn:hover {
-		background: var(--color-panel-2);
-		color: var(--color-foreground);
+		.rpc-table {
+			display: block;
+		}
+
+		.rpc-table thead {
+			display: none;
+		}
+
+		.rpc-table tbody {
+			display: flex;
+			flex-direction: column;
+			gap: var(--space-2);
+		}
+
+		.rpc-table tbody tr {
+			display: flex;
+			flex-direction: column;
+			gap: var(--space-2);
+			padding: var(--space-3);
+			border: 1px solid var(--color-border);
+			border-radius: var(--radius-md);
+			background: var(--color-panel-0);
+		}
+
+		.rpc-table tbody tr:hover {
+			background: var(--color-panel-1);
+		}
+
+		.rpc-table td {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0;
+			border: none;
+		}
+
+		.rpc-table td::before {
+			content: attr(data-label);
+			font-size: var(--text-xs);
+			font-weight: var(--font-medium);
+			color: var(--color-muted-foreground);
+			text-transform: uppercase;
+		}
+
+		.col-url {
+			flex-direction: column;
+			align-items: stretch;
+			gap: var(--space-2);
+			max-width: none;
+		}
+
+		.col-url::before {
+			display: none;
+		}
+
+		.url-cell {
+			width: 100%;
+		}
+
+		.url-text {
+			flex: 1;
+			min-width: 0;
+		}
+
+		.url-header {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: var(--space-2);
+		}
+
+		.protocol-toggle {
+			width: 100%;
+			justify-content: center;
+		}
+
+		.protocol-btn {
+			flex: 1;
+			justify-content: center;
+		}
 	}
 
 	.explorers-section {
