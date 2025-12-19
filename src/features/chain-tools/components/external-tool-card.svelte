@@ -72,19 +72,19 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		padding: var(--space-6);
+		padding: var(--space-5);
 		border-radius: var(--radius-xl);
 		text-decoration: none;
 		cursor: pointer;
-		transition: all 0.2s ease;
-		animation: fadeUp 0.4s calc(var(--index) * 0.05s) both;
-		min-height: 220px;
+		transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+		animation: fadeUp 0.4s calc(var(--index) * 0.03s) both;
+		min-height: 200px;
 	}
 
 	@keyframes fadeUp {
 		from {
 			opacity: 0;
-			transform: translateY(16px);
+			transform: translateY(12px);
 		}
 		to {
 			opacity: 1;
@@ -99,7 +99,7 @@
 		background: var(--color-panel-1);
 		border: 1px solid var(--color-panel-border-2);
 		z-index: 1;
-		transition: all 0.2s ease;
+		transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
 	:global(.light) .card-bg {
@@ -117,15 +117,15 @@
 	}
 
 	.tool-card:hover {
-		transform: translateY(-4px);
+		transform: translateY(-6px);
 	}
 
 	.tool-card:hover .card-bg {
 		background: var(--color-panel-2);
-		border-color: var(--color-panel-border-3);
+		border-color: color-mix(in srgb, var(--tool-color) 30%, var(--color-panel-border-3));
 		box-shadow:
-			0 10px 20px -5px rgb(0 0 0 / 0.1),
-			0 4px 6px -4px rgb(0 0 0 / 0.05);
+			0 12px 24px -6px rgb(0 0 0 / 0.12),
+			0 6px 12px -4px rgb(0 0 0 / 0.08);
 	}
 
 	:global(.light) .tool-card:hover .card-bg {
@@ -133,24 +133,29 @@
 	}
 
 	.tool-card:hover .card-glow {
-		opacity: 0.15;
+		opacity: 0.2;
 	}
 
 	/* Icon */
 	.icon-wrapper {
 		position: relative;
-		width: 44px;
-		height: 44px;
-		margin-bottom: var(--space-4);
+		width: 42px;
+		height: 42px;
+		margin-bottom: var(--space-3);
 		z-index: 2;
 	}
 
 	.icon-glow {
 		position: absolute;
-		inset: -8px;
+		inset: -6px;
 		background: radial-gradient(circle, var(--tool-color), transparent 60%);
-		opacity: 0.15;
-		filter: blur(8px);
+		opacity: 0.12;
+		filter: blur(6px);
+		transition: opacity 0.25s ease;
+	}
+
+	.tool-card:hover .icon-glow {
+		opacity: 0.25;
 	}
 
 	.icon-box {
@@ -163,21 +168,21 @@
 		background: linear-gradient(
 			135deg,
 			var(--tool-color),
-			color-mix(in srgb, var(--tool-color) 80%, black)
+			color-mix(in srgb, var(--tool-color) 75%, black)
 		);
-		border-radius: var(--radius-md);
-		box-shadow: var(--shadow-sm);
-		transition: all 0.2s ease;
+		border-radius: var(--radius-lg);
+		box-shadow: 0 2px 6px color-mix(in srgb, var(--tool-color) 30%, transparent);
+		transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
 	.tool-card:hover .icon-box {
-		transform: translateY(-2px) scale(1.05);
-		box-shadow: var(--shadow-md);
+		transform: translateY(-2px) scale(1.08);
+		box-shadow: 0 4px 12px color-mix(in srgb, var(--tool-color) 40%, transparent);
 	}
 
 	:global(.tool-icon) {
-		width: 22px;
-		height: 22px;
+		width: 20px;
+		height: 20px;
 		color: white;
 	}
 
@@ -185,20 +190,27 @@
 	.content {
 		flex: 1;
 		z-index: 2;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.tool-name {
-		margin-bottom: var(--space-2);
+		margin-bottom: var(--space-1-5);
 		font-size: var(--text-base);
 		font-weight: var(--font-semibold);
 		color: var(--color-heading-1);
 		line-height: 1.3;
+		transition: color 0.2s ease;
+	}
+
+	.tool-card:hover .tool-name {
+		color: var(--tool-color);
 	}
 
 	.tool-description {
 		font-size: var(--text-sm);
-		line-height: 1.5;
-		color: var(--color-description-3);
+		line-height: 1.55;
+		color: var(--color-description-2);
 		display: -webkit-box;
 		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
@@ -209,17 +221,18 @@
 	.chains {
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--space-1);
+		gap: var(--space-1-5);
 		margin-top: var(--space-3);
 	}
 
 	.chain-tag {
-		padding: var(--space-0-5) var(--space-2);
+		padding: var(--space-1) var(--space-2);
 		background: var(--color-panel-2);
 		border-radius: var(--radius-sm);
-		font-size: 10px;
+		font-size: var(--text-xs);
 		font-weight: var(--font-medium);
 		color: var(--color-description-2);
+		line-height: 1;
 	}
 
 	:global(.light) .chain-tag {
@@ -227,8 +240,8 @@
 	}
 
 	.chain-tag.more {
-		background: var(--color-panel-muted);
-		color: var(--color-description-3);
+		background: color-mix(in srgb, var(--tool-color) 15%, transparent);
+		color: var(--tool-color);
 	}
 
 	/* Footer */
@@ -236,8 +249,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin-top: var(--space-4);
-		padding-top: var(--space-4);
+		margin-top: auto;
+		padding-top: var(--space-3);
 		border-top: 1px solid var(--color-panel-border-1);
 		z-index: 2;
 	}
@@ -247,14 +260,13 @@
 	}
 
 	.category-badge {
-		padding: var(--space-1) var(--space-2);
-		background: color-mix(in srgb, var(--category-color) 15%, transparent);
-		border-radius: var(--radius-sm);
-		font-size: 11px;
-		font-weight: var(--font-semibold);
+		padding: var(--space-1) var(--space-2-5);
+		background: color-mix(in srgb, var(--category-color) 12%, transparent);
+		border-radius: var(--radius-md);
+		font-size: var(--text-xs);
+		font-weight: var(--font-medium);
 		color: var(--category-color);
-		text-transform: uppercase;
-		letter-spacing: 0.03em;
+		line-height: 1.4;
 	}
 
 	.visit-link {
@@ -263,18 +275,18 @@
 		gap: var(--space-1);
 		font-size: var(--text-sm);
 		font-weight: var(--font-medium);
-		color: var(--color-description-2);
-		transition: all 0.15s ease;
+		color: var(--color-description-3);
+		transition: all 0.2s ease;
 	}
 
 	.tool-card:hover .visit-link {
-		color: var(--color-primary);
+		color: var(--tool-color);
 	}
 
 	:global(.external-icon) {
 		width: 14px;
 		height: 14px;
-		transition: transform 0.15s ease;
+		transition: transform 0.2s ease;
 	}
 
 	.tool-card:hover :global(.external-icon) {
@@ -283,18 +295,18 @@
 
 	@media (max-width: 768px) {
 		.tool-card {
-			padding: var(--space-5);
-			min-height: 200px;
+			padding: var(--space-4);
+			min-height: 180px;
 		}
 
 		.icon-wrapper {
-			width: 40px;
-			height: 40px;
+			width: 36px;
+			height: 36px;
 		}
 
 		:global(.tool-icon) {
-			width: 20px;
-			height: 20px;
+			width: 18px;
+			height: 18px;
 		}
 
 		.tool-name {
@@ -303,6 +315,34 @@
 
 		.tool-description {
 			font-size: var(--text-xs);
+			-webkit-line-clamp: 2;
+		}
+
+		.chains {
+			margin-top: var(--space-2);
+		}
+
+		.chain-tag {
+			font-size: 10px;
+			padding: var(--space-0-5) var(--space-1-5);
+		}
+
+		.card-footer {
+			padding-top: var(--space-2);
+		}
+
+		.category-badge {
+			font-size: 10px;
+			padding: var(--space-0-5) var(--space-2);
+		}
+
+		.visit-link {
+			font-size: var(--text-xs);
+		}
+
+		:global(.external-icon) {
+			width: 12px;
+			height: 12px;
 		}
 	}
 </style>

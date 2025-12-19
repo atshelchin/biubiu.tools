@@ -43,22 +43,27 @@
 		display: flex;
 		align-items: center;
 		width: 100%;
-		max-width: 600px;
+		max-width: 720px;
 		margin: 0 auto;
 	}
 
 	:global(.search-icon) {
 		position: absolute;
-		left: var(--space-4);
+		left: var(--space-5);
 		width: 20px;
 		height: 20px;
 		color: var(--color-description-3);
 		pointer-events: none;
+		transition: color 0.2s ease;
+	}
+
+	.search-bar:focus-within :global(.search-icon) {
+		color: var(--color-primary);
 	}
 
 	.search-input {
 		width: 100%;
-		padding: var(--space-4) var(--space-12);
+		padding: var(--space-4) var(--space-14) var(--space-4) var(--space-12);
 		background: var(--color-panel-1);
 		border: 1px solid var(--color-panel-border-2);
 		border-radius: var(--radius-xl);
@@ -74,7 +79,7 @@
 	.search-input:focus {
 		outline: none;
 		border-color: var(--color-primary);
-		box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 20%, transparent);
+		box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 15%, transparent);
 	}
 
 	:global(.light) .search-input {
@@ -82,12 +87,12 @@
 	}
 
 	:global(.light) .search-input:focus {
-		background: var(--color-panel-3);
+		background: var(--color-panel-0);
 	}
 
 	.clear-btn {
 		position: absolute;
-		right: var(--space-3);
+		right: var(--space-4);
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -98,16 +103,41 @@
 		border: none;
 		border-radius: var(--radius-full);
 		cursor: pointer;
-		transition: all 0.15s ease;
+		transition: all 0.2s ease;
 	}
 
 	.clear-btn:hover {
 		background: var(--color-panel-3);
+		transform: scale(1.05);
 	}
 
 	:global(.clear-icon) {
-		width: 16px;
-		height: 16px;
+		width: 14px;
+		height: 14px;
 		color: var(--color-description-2);
+	}
+
+	@media (max-width: 768px) {
+		.search-input {
+			padding: var(--space-3) var(--space-12) var(--space-3) var(--space-10);
+			font-size: var(--text-sm);
+		}
+
+		:global(.search-icon) {
+			left: var(--space-4);
+			width: 18px;
+			height: 18px;
+		}
+
+		.clear-btn {
+			right: var(--space-3);
+			width: 24px;
+			height: 24px;
+		}
+
+		:global(.clear-icon) {
+			width: 12px;
+			height: 12px;
+		}
 	}
 </style>
