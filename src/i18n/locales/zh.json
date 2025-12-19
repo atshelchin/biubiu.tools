@@ -679,7 +679,8 @@
 						"loading": "正在加载NFT信息...",
 						"collection_name": "系列名称",
 						"total_supply": "总供应量",
-						"your_balance": "您的余额"
+						"your_balance": "您的余额",
+						"invalid_address": "无效的合约地址格式"
 					},
 					"amount_mode": {
 						"title": "分发模式",
@@ -701,12 +702,168 @@
 						"max_amount": "最大金额",
 						"min_placeholder": "0.0",
 						"max_placeholder": "0.0",
-						"hint": "每个收款人将获得最小和最大值之间的随机金额。"
+						"hint": "每个收款人将获得最小和最大值之间的随机金额。",
+						"valid_range": "随机金额将在 {min} 到 {max} {symbol} 之间",
+						"error_max_less_than_min": "最大金额必须大于最小金额"
 					}
 				},
 				"footer": {
 					"continue": "继续添加收款人",
 					"hint": "选择代币并配置金额后继续"
+				}
+			},
+			"step4": {
+				"sidebar": {
+					"title": "导入收款人",
+					"description": "添加将接收代币的钱包地址"
+				},
+				"content": {
+					"title": "添加收款人",
+					"description": "导入将从此分发中接收代币的钱包地址",
+					"distributing": "正在分发",
+					"method": {
+						"manual": "手动输入",
+						"paste": "粘贴列表",
+						"csv": "上传CSV"
+					},
+					"manual": {
+						"title": "手动添加收款人",
+						"address": "钱包地址",
+						"token_id": "Token ID",
+						"token_amount": "数量",
+						"amount": "金额",
+						"label": "标签（可选）",
+						"label_placeholder": "例如：Alice, Bob",
+						"add_button": "添加收款人"
+					},
+					"paste": {
+						"title": "粘贴多个地址",
+						"add_button": "全部添加"
+					},
+					"paste_hint": {
+						"fungible_equal": "格式：地址, 标签（可选）。每行一个。",
+						"fungible_custom": "格式：地址, 标签（可选）, 金额。每行一个。",
+						"erc721": "格式：地址, tokenId, 标签（可选）。每行一个。",
+						"erc1155": "格式：地址, tokenId, 数量, 标签（可选）。每行一个。"
+					},
+					"csv": {
+						"title": "上传CSV文件",
+						"description": "上传包含收款地址的CSV文件",
+						"upload_button": "选择文件",
+						"hint": "CSV应包含地址列。可选：标签、金额/tokenId列。"
+					},
+					"recipients": {
+						"title": "收款人列表",
+						"clear_all": "清空全部",
+						"regenerate_random": "重新随机",
+						"col_address": "地址",
+						"col_token_id": "Token ID",
+						"col_token_amount": "数量",
+						"col_amount": "金额",
+						"col_label": "标签"
+					},
+					"empty_state": "暂无收款人。使用上方表单添加收款地址。",
+					"error": {
+						"invalid_address": "请输入有效的以太坊地址",
+						"invalid_address_line": "第 {line} 行：地址格式无效",
+						"token_id_required": "NFT分发需要填写Token ID",
+						"invalid_token_id_line": "第 {line} 行：Token ID无效或缺失"
+					}
+				},
+				"footer": {
+					"continue": "继续确认",
+					"hint": "添加至少一个收款人后继续"
+				}
+			},
+			"step5": {
+				"sidebar": {
+					"title": "确认并执行",
+					"description": "检查分发详情并执行转账"
+				},
+				"mode": {
+					"title": "执行模式",
+					"self": {
+						"title": "自主执行",
+						"description": "从您的钱包签名并发送每笔交易。适合较小规模的分发。"
+					},
+					"delegated": {
+						"title": "委托执行",
+						"description": "签名一次，任何人都可执行批次。适合大量接收者的分发。",
+						"info": "委托模式使用智能合约批量转账。您签署授权后，任何人（包括您自己）都可以执行批次。"
+					}
+				},
+				"delegated": {
+					"authorize": "签署授权",
+					"authorizing": "签名中...",
+					"execute_batch": "执行批次 {current}/{total}",
+					"execute_all": "执行所有批次",
+					"batch_status": "批次状态",
+					"batch_pending": "等待中",
+					"batch_completed": "已完成",
+					"batch_failed": "失败",
+					"export_session": "导出会话",
+					"import_session": "导入会话",
+					"session_expired": "会话已过期",
+					"session_info": "会话ID: {id} | 过期时间: {time}"
+				},
+				"session": {
+					"title": "分发会话",
+					"empty": "暂无保存的会话",
+					"import": "导入会话",
+					"export": "导出",
+					"delete": "删除",
+					"resume": "恢复",
+					"batches": "批次",
+					"expires_in": "剩余时间",
+					"expired": "已过期",
+					"status_pending": "等待中",
+					"status_partial": "进行中",
+					"status_completed": "已完成",
+					"status_expired": "已过期",
+					"import_error": "导入会话失败，请检查文件格式。",
+					"importing": "导入中..."
+				},
+				"content": {
+					"title": "确认并执行分发",
+					"description": "检查分发摘要并执行代币转账",
+					"executor_wallet": "执行钱包",
+					"summary_title": "分发摘要",
+					"token": "代币",
+					"mode": "模式",
+					"mode_equal": "平均分发",
+					"mode_random": "随机分发",
+					"mode_custom": "自定义金额",
+					"recipients": "收款人",
+					"total_amount": "总金额",
+					"total_nfts": "NFT总数",
+					"estimated_gas": "预估Gas",
+					"network": "网络",
+					"preview_title": "收款人预览（前10个）",
+					"more_recipients": "个收款人",
+					"progress_title": "执行进度",
+					"successful": "成功",
+					"failed": "失败",
+					"pending": "待处理",
+					"execute": "执行分发",
+					"stop": "停止执行",
+					"resume": "继续",
+					"reset": "重置",
+					"start_new": "开始新分发",
+					"completed": "分发完成！",
+					"confirm_continue": "是否继续？",
+					"warning_title": "重要提示",
+					"warning_message": "请确保您有足够的余额和Gas费用。每个收款人将收到单独的交易。执行前请仔细检查所有详情。",
+					"errors": {
+						"invalid_config": "分发配置无效，请检查之前的步骤。",
+						"connect_wallet": "请先连接您的钱包",
+						"no_network": "未选择网络",
+						"no_token": "未选择代币",
+						"no_recipients": "未添加收款人"
+					}
+				},
+				"footer": {
+					"back": "返回收款人",
+					"execute": "执行分发"
 				}
 			}
 		},

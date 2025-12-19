@@ -362,9 +362,8 @@ export const KNOWN_CONTRACTS = {
 
 	// TokenDistribution (batch distribute tokens/NFTs to multiple recipients)
 	// Custom CREATE2 deployed, same address on all chains
-	// https://github.com/atshelchin/biubiu-contracts
-	// TODO: Replace with actual address after deployment
-	TOKEN_DISTRIBUTION: '0x0000000000000000000000000000000000000000' as Address
+	// https://github.com/atshelchin/biubiu-contracts commit 8212ca1
+	TOKEN_DISTRIBUTION: '0xD35cE8751e46D518D4bb650e271696903BaFF70C' as Address
 } as const;
 
 /**

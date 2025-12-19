@@ -6,8 +6,10 @@ import type { Address } from 'viem';
 export interface Recipient {
 	id: string; // Unique identifier
 	address: Address;
-	amount?: string; // Amount to receive (optional, can be set globally)
+	amount?: string; // Amount to receive (optional, for fungible tokens)
 	label?: string; // Optional label/name for the recipient
+	tokenId?: bigint; // Token ID for ERC721/ERC1155
+	tokenAmount?: string; // Amount of tokens for ERC1155 (defaults to 1)
 }
 
 /**

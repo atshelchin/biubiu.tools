@@ -679,7 +679,8 @@
 						"loading": "Loading NFT information...",
 						"collection_name": "Collection",
 						"total_supply": "Total Supply",
-						"your_balance": "Your Balance"
+						"your_balance": "Your Balance",
+						"invalid_address": "Invalid contract address format"
 					},
 					"amount_mode": {
 						"title": "Distribution Mode",
@@ -701,12 +702,168 @@
 						"max_amount": "Maximum Amount",
 						"min_placeholder": "0.0",
 						"max_placeholder": "0.0",
-						"hint": "Each recipient will receive a random amount between min and max values."
+						"hint": "Each recipient will receive a random amount between min and max values.",
+						"valid_range": "Random amounts will be between {min} and {max} {symbol}",
+						"error_max_less_than_min": "Maximum amount must be greater than minimum amount"
 					}
 				},
 				"footer": {
 					"continue": "Continue to Recipients",
 					"hint": "Select a token and configure amounts to continue"
+				}
+			},
+			"step4": {
+				"sidebar": {
+					"title": "Import Recipients",
+					"description": "Add wallet addresses that will receive the tokens"
+				},
+				"content": {
+					"title": "Add Recipients",
+					"description": "Import wallet addresses that will receive tokens from this distribution",
+					"distributing": "Distributing",
+					"method": {
+						"manual": "Manual Entry",
+						"paste": "Paste List",
+						"csv": "Upload CSV"
+					},
+					"manual": {
+						"title": "Add Recipient Manually",
+						"address": "Wallet Address",
+						"token_id": "Token ID",
+						"token_amount": "Quantity",
+						"amount": "Amount",
+						"label": "Label (optional)",
+						"label_placeholder": "e.g. Alice, Bob",
+						"add_button": "Add Recipient"
+					},
+					"paste": {
+						"title": "Paste Multiple Addresses",
+						"add_button": "Add All"
+					},
+					"paste_hint": {
+						"fungible_equal": "Format: address, label (optional). One per line.",
+						"fungible_custom": "Format: address, label (optional), amount. One per line.",
+						"erc721": "Format: address, tokenId, label (optional). One per line.",
+						"erc1155": "Format: address, tokenId, quantity, label (optional). One per line."
+					},
+					"csv": {
+						"title": "Upload CSV File",
+						"description": "Upload a CSV file with recipient addresses",
+						"upload_button": "Choose File",
+						"hint": "CSV should contain address column. Optional: label, amount/tokenId columns."
+					},
+					"recipients": {
+						"title": "Recipients",
+						"clear_all": "Clear All",
+						"regenerate_random": "Regenerate Amounts",
+						"col_address": "Address",
+						"col_token_id": "Token ID",
+						"col_token_amount": "Qty",
+						"col_amount": "Amount",
+						"col_label": "Label"
+					},
+					"empty_state": "No recipients added yet. Use the form above to add recipient addresses.",
+					"error": {
+						"invalid_address": "Please enter a valid Ethereum address",
+						"invalid_address_line": "Line {line}: Invalid address format",
+						"token_id_required": "Token ID is required for NFT distribution",
+						"invalid_token_id_line": "Line {line}: Invalid or missing token ID"
+					}
+				},
+				"footer": {
+					"continue": "Continue to Review",
+					"hint": "Add at least one recipient to continue"
+				}
+			},
+			"step5": {
+				"sidebar": {
+					"title": "Confirm & Execute",
+					"description": "Review distribution details and execute the transfers"
+				},
+				"mode": {
+					"title": "Execution Mode",
+					"self": {
+						"title": "Self-Execute",
+						"description": "Sign and send each transaction from your wallet. Best for smaller distributions."
+					},
+					"delegated": {
+						"title": "Delegated Execution",
+						"description": "Sign once, let anyone execute batches. Best for large distributions with many recipients.",
+						"info": "Delegated mode uses a smart contract to batch transfers. You sign an authorization, then batches can be executed by anyone (including yourself)."
+					}
+				},
+				"delegated": {
+					"authorize": "Sign Authorization",
+					"authorizing": "Signing...",
+					"execute_batch": "Execute Batch {current}/{total}",
+					"execute_all": "Execute All Batches",
+					"batch_status": "Batch Status",
+					"batch_pending": "Pending",
+					"batch_completed": "Completed",
+					"batch_failed": "Failed",
+					"export_session": "Export Session",
+					"import_session": "Import Session",
+					"session_expired": "Session Expired",
+					"session_info": "Session ID: {id} | Expires: {time}"
+				},
+				"session": {
+					"title": "Distribution Sessions",
+					"empty": "No saved sessions",
+					"import": "Import Session",
+					"export": "Export",
+					"delete": "Delete",
+					"resume": "Resume",
+					"batches": "batches",
+					"expires_in": "Expires in",
+					"expired": "Expired",
+					"status_pending": "Pending",
+					"status_partial": "In Progress",
+					"status_completed": "Completed",
+					"status_expired": "Expired",
+					"import_error": "Failed to import session. Please check the file format.",
+					"importing": "Importing..."
+				},
+				"content": {
+					"title": "Review & Execute Distribution",
+					"description": "Review the distribution summary and execute the token transfers",
+					"executor_wallet": "Executor Wallet",
+					"summary_title": "Distribution Summary",
+					"token": "Token",
+					"mode": "Mode",
+					"mode_equal": "Equal Distribution",
+					"mode_random": "Random Distribution",
+					"mode_custom": "Custom Amounts",
+					"recipients": "Recipients",
+					"total_amount": "Total Amount",
+					"total_nfts": "Total NFTs",
+					"estimated_gas": "Estimated Gas",
+					"network": "Network",
+					"preview_title": "Recipients Preview (first 10)",
+					"more_recipients": "more recipients",
+					"progress_title": "Execution Progress",
+					"successful": "successful",
+					"failed": "failed",
+					"pending": "pending",
+					"execute": "Execute Distribution",
+					"stop": "Stop Execution",
+					"resume": "Resume",
+					"reset": "Reset",
+					"start_new": "Start New Distribution",
+					"completed": "Distribution Completed!",
+					"confirm_continue": "Do you want to continue?",
+					"warning_title": "Important",
+					"warning_message": "Make sure you have sufficient balance and gas fees. Each recipient will receive a separate transaction. Review all details carefully before executing.",
+					"errors": {
+						"invalid_config": "Invalid distribution configuration. Please check previous steps.",
+						"connect_wallet": "Please connect your wallet first",
+						"no_network": "No network selected",
+						"no_token": "No token selected",
+						"no_recipients": "No recipients added"
+					}
+				},
+				"footer": {
+					"back": "Back to Recipients",
+					"execute": "Execute Distribution"
 				}
 			}
 		},

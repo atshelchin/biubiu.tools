@@ -30,6 +30,10 @@ let amountPerRecipient = $state<string>('');
 // Total amount (calculated or input)
 let totalAmount = $state<string>('');
 
+// Random distribution config (for random mode)
+let randomMinAmount = $state<string>('');
+let randomMaxAmount = $state<string>('');
+
 // Custom NFT contract address (for ERC721/ERC1155)
 let customNftAddress = $state<string>('');
 
@@ -39,6 +43,13 @@ let customNftTokenIds = $state<string>('');
 // Custom NFT validation state
 let customNftError = $state<string>('');
 let customNftLoading = $state<boolean>(false);
+
+// Loaded NFT contract info
+let nftContractName = $state<string>('');
+let nftContractSymbol = $state<string>('');
+let nftTotalSupply = $state<bigint | undefined>(undefined);
+let nftUserBalance = $state<bigint | undefined>(undefined);
+let nftInfoLoaded = $state<boolean>(false);
 
 export const step3State = {
 	// Token type getters/setters
@@ -92,6 +103,22 @@ export const step3State = {
 		totalAmount = value;
 	},
 
+	// Random min amount
+	get randomMinAmount() {
+		return randomMinAmount;
+	},
+	set randomMinAmount(value: string) {
+		randomMinAmount = value;
+	},
+
+	// Random max amount
+	get randomMaxAmount() {
+		return randomMaxAmount;
+	},
+	set randomMaxAmount(value: string) {
+		randomMaxAmount = value;
+	},
+
 	// Custom NFT address
 	get customNftAddress() {
 		return customNftAddress;
@@ -125,6 +152,54 @@ export const step3State = {
 		customNftLoading = value;
 	},
 
+	// NFT contract info getters/setters
+	get nftContractName() {
+		return nftContractName;
+	},
+	set nftContractName(value: string) {
+		nftContractName = value;
+	},
+
+	get nftContractSymbol() {
+		return nftContractSymbol;
+	},
+	set nftContractSymbol(value: string) {
+		nftContractSymbol = value;
+	},
+
+	get nftTotalSupply() {
+		return nftTotalSupply;
+	},
+	set nftTotalSupply(value: bigint | undefined) {
+		nftTotalSupply = value;
+	},
+
+	get nftUserBalance() {
+		return nftUserBalance;
+	},
+	set nftUserBalance(value: bigint | undefined) {
+		nftUserBalance = value;
+	},
+
+	get nftInfoLoaded() {
+		return nftInfoLoaded;
+	},
+	set nftInfoLoaded(value: boolean) {
+		nftInfoLoaded = value;
+	},
+
+	/**
+	 * Clear NFT info (called when address changes)
+	 */
+	clearNftInfo() {
+		nftContractName = '';
+		nftContractSymbol = '';
+		nftTotalSupply = undefined;
+		nftUserBalance = undefined;
+		nftInfoLoaded = false;
+		selectedToken = null;
+	},
+
 	/**
 	 * Reset state (called when network changes or step reset)
 	 */
@@ -134,10 +209,17 @@ export const step3State = {
 		amountMode = 'equal';
 		amountPerRecipient = '';
 		totalAmount = '';
+		randomMinAmount = '';
+		randomMaxAmount = '';
 		customNftAddress = '';
 		customNftTokenIds = '';
 		customNftError = '';
 		customNftLoading = false;
+		nftContractName = '';
+		nftContractSymbol = '';
+		nftTotalSupply = undefined;
+		nftUserBalance = undefined;
+		nftInfoLoaded = false;
 	},
 
 	/**
@@ -156,7 +238,13 @@ export const step3State = {
 			return amountPerRecipient !== '' && parseFloat(amountPerRecipient) > 0;
 		}
 
-		// For custom/random mode, amounts are set per recipient in Step 4
+		if (amountMode === 'random') {
+			const min = parseFloat(randomMinAmount);
+			const max = parseFloat(randomMaxAmount);
+			return randomMinAmount !== '' && randomMaxAmount !== '' && min > 0 && max > min;
+		}
+
+		// For custom mode, amounts are set per recipient in Step 4
 		return true;
 	},
 

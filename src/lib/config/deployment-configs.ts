@@ -169,6 +169,66 @@ const NFT_FACTORY_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
 	}
 };
 
+// WETH deployment configuration
+const WETH_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
+	contractName: 'WETH',
+	contractAddress: '0xe3E75C1fe9AE82993FEb6F9CA2e9627aaE1e3d18' as Address,
+	description: 'Wrapped ETH for TokenDistribution delegated mode',
+	canDeploy: true,
+	deployGuideUrl: 'https://github.com/atshelchin/biubiu-contracts',
+
+	// WETH bytecode - from https://github.com/atshelchin/biubiu-contracts commit 8212ca1
+	// Loaded from static/contracts/WETH.json
+	bytecode: undefined, // Will be loaded dynamically from /contracts/WETH.json
+
+	// No constructor arguments needed
+	constructorArgs: [],
+
+	deployFunction: async (context: DeploymentContext) => {
+		// Load bytecode from WETH.json
+		const response = await fetch('/contracts/WETH.json');
+		const data = await response.json();
+		const bytecode = data.bytecode.object as `0x${string}`;
+
+		return createCREATE2Deployment(
+			context,
+			bytecode,
+			{ contractName: 'WETH', gasLimit: BigInt(5000000) },
+			context.t
+		);
+	}
+};
+
+// TokenDistribution deployment configuration
+const TOKEN_DISTRIBUTION_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
+	contractName: 'TokenDistribution',
+	contractAddress: '0xD35cE8751e46D518D4bb650e271696903BaFF70C' as Address,
+	description: 'Batch distribute tokens/NFTs to multiple recipients',
+	canDeploy: true,
+	deployGuideUrl: 'https://github.com/atshelchin/biubiu-contracts',
+
+	// TokenDistribution bytecode - from https://github.com/atshelchin/biubiu-contracts commit 8212ca1
+	// Loaded from static/contracts/TokenDistribution.json
+	bytecode: undefined, // Will be loaded dynamically from /contracts/TokenDistribution.json
+
+	// No constructor arguments needed
+	constructorArgs: [],
+
+	deployFunction: async (context: DeploymentContext) => {
+		// Load bytecode from TokenDistribution.json
+		const response = await fetch('/contracts/TokenDistribution.json');
+		const data = await response.json();
+		const bytecode = data.bytecode.object as `0x${string}`;
+
+		return createCREATE2Deployment(
+			context,
+			bytecode,
+			{ contractName: 'TokenDistribution', gasLimit: BigInt(10000000) },
+			context.t
+		);
+	}
+};
+
 /**
  * Deployment configuration registry
  * Maps contract addresses to their deployment configs
@@ -179,7 +239,9 @@ export const DEPLOYMENT_CONFIGS: DeploymentConfigRegistry = {
 	[BIUBIU_PREMIUM_DEPLOYMENT_CONFIG.contractAddress]: BIUBIU_PREMIUM_DEPLOYMENT_CONFIG,
 	[wallet_sweep_DEPLOYMENT_CONFIG.contractAddress]: wallet_sweep_DEPLOYMENT_CONFIG,
 	[TOKEN_FACTORY_DEPLOYMENT_CONFIG.contractAddress]: TOKEN_FACTORY_DEPLOYMENT_CONFIG,
-	[NFT_FACTORY_DEPLOYMENT_CONFIG.contractAddress]: NFT_FACTORY_DEPLOYMENT_CONFIG
+	[NFT_FACTORY_DEPLOYMENT_CONFIG.contractAddress]: NFT_FACTORY_DEPLOYMENT_CONFIG,
+	[WETH_DEPLOYMENT_CONFIG.contractAddress]: WETH_DEPLOYMENT_CONFIG,
+	[TOKEN_DISTRIBUTION_DEPLOYMENT_CONFIG.contractAddress]: TOKEN_DISTRIBUTION_DEPLOYMENT_CONFIG
 };
 
 /**

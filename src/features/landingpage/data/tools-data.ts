@@ -5,14 +5,11 @@ import {
 	ArrowRightLeft,
 	SendHorizontal,
 	ScanSearch,
-	Globe,
 	TrendingUp,
 	KeyRound,
 	Rocket,
-	Activity,
 	Search,
-	Image,
-	Folder
+	Image
 } from '@lucide/svelte';
 import type { Component } from 'svelte';
 
@@ -75,16 +72,7 @@ export const toolsConfig: Tool[] = [
 		],
 		stage: 'beta'
 	},
-	{
-		icon: Sparkles,
-		titleKey: 'tools.token_deployer.title',
-		descriptionKey: 'tools.token_deployer.description',
-		link: '/apps/token-deployer',
-		status: 'active',
-		color: '#10B981',
-		features: ['Advanced Features', 'Tax & Anti-Bot', 'Instant Deploy'],
-		stage: 'alpha'
-	},
+
 	{
 		icon: Rocket,
 		titleKey: 'tools.contract_deployer.title',
@@ -99,21 +87,6 @@ export const toolsConfig: Tool[] = [
 		],
 		stage: 'alpha'
 	},
-	{
-		icon: Image,
-		titleKey: 'tools.nft_deployer.title',
-		descriptionKey: 'tools.nft_deployer.description',
-		link: '/apps/nft-deployer',
-		status: 'active',
-		color: '#EC4899',
-		featureKeys: [
-			'tools.nft_deployer.feature_1',
-			'tools.nft_deployer.feature_2',
-			'tools.nft_deployer.feature_3'
-		],
-		stage: 'alpha'
-	},
-
 	{
 		icon: Search,
 		titleKey: 'tools.contract_events_scanner.title',
@@ -142,29 +115,6 @@ export const toolsConfig: Tool[] = [
 		stage: 'coming-soon'
 	},
 	{
-		icon: MessageCircle,
-		titleKey: 'tools.feedback_card.title',
-		descriptionKey: 'tools.feedback_card.description',
-		link: TELEGRAM_GROUP_LINK,
-		status: 'active',
-		color: '#06B6D4',
-		featureKeys: [
-			'tools.feedback_card.feature_1',
-			'tools.feedback_card.feature_2',
-			'tools.feedback_card.feature_3'
-		]
-	},
-	{
-		icon: Globe,
-		titleKey: 'tools.ens_scanner.title',
-		descriptionKey: 'tools.ens_scanner.description',
-		link: '/apps/ens-scanner',
-		status: 'active',
-		color: '#EC4899',
-		features: ['Pattern Generation', 'Expiry Tracking', 'Batch Scanning'],
-		stage: 'alpha'
-	},
-	{
 		icon: KeyRound,
 		titleKey: 'tools.wallet_generator.title',
 		descriptionKey: 'tools.wallet_generator.description',
@@ -185,27 +135,77 @@ export const toolsConfig: Tool[] = [
 		stage: 'alpha'
 	},
 	{
-		icon: Folder,
-		titleKey: 'tools.nft_manager.title',
-		descriptionKey: 'tools.nft_manager.description',
-		link: '/apps/nft-manager',
-		status: 'active',
-		color: '#A855F7',
-		features: ['View NFT Collections', 'Owner & Stake Mint', 'Paginated Browsing'],
-		stage: 'alpha'
-	},
-	{
-		icon: Activity,
-		titleKey: 'tools.assets_monitor.title',
-		descriptionKey: 'tools.assets_monitor.description',
-		link: '/apps/assets-monitor',
+		icon: MessageCircle,
+		titleKey: 'tools.feedback_card.title',
+		descriptionKey: 'tools.feedback_card.description',
+		link: TELEGRAM_GROUP_LINK,
 		status: 'active',
 		color: '#06B6D4',
 		featureKeys: [
-			'tools.assets_monitor.feature_1',
-			'tools.assets_monitor.feature_2',
-			'tools.assets_monitor.feature_3'
+			'tools.feedback_card.feature_1',
+			'tools.feedback_card.feature_2',
+			'tools.feedback_card.feature_3'
+		]
+	},
+
+	{
+		icon: Sparkles,
+		titleKey: 'tools.token_deployer.title',
+		descriptionKey: 'tools.token_deployer.description',
+		link: '/apps/token-deployer',
+		status: 'active',
+		color: '#10B981',
+		features: ['Advanced Features', 'Tax & Anti-Bot', 'Instant Deploy'],
+		stage: 'alpha'
+	},
+
+	{
+		icon: Image,
+		titleKey: 'tools.nft_deployer.title',
+		descriptionKey: 'tools.nft_deployer.description',
+		link: '/apps/nft-deployer',
+		status: 'active',
+		color: '#EC4899',
+		featureKeys: [
+			'tools.nft_deployer.feature_1',
+			'tools.nft_deployer.feature_2',
+			'tools.nft_deployer.feature_3'
 		],
 		stage: 'alpha'
 	}
+	// {
+	// 	icon: Globe,
+	// 	titleKey: 'tools.ens_scanner.title',
+	// 	descriptionKey: 'tools.ens_scanner.description',
+	// 	link: '/apps/ens-scanner',
+	// 	status: 'active',
+	// 	color: '#EC4899',
+	// 	features: ['Pattern Generation', 'Expiry Tracking', 'Batch Scanning'],
+	// 	stage: 'alpha'
+	// },
+
+	// {
+	// 	icon: Folder,
+	// 	titleKey: 'tools.nft_manager.title',
+	// 	descriptionKey: 'tools.nft_manager.description',
+	// 	link: '/apps/nft-manager',
+	// 	status: 'active',
+	// 	color: '#A855F7',
+	// 	features: ['View NFT Collections', 'Owner & Stake Mint', 'Paginated Browsing'],
+	// 	stage: 'alpha'
+	// },
+	// {
+	// 	icon: Activity,
+	// 	titleKey: 'tools.assets_monitor.title',
+	// 	descriptionKey: 'tools.assets_monitor.description',
+	// 	link: '/apps/assets-monitor',
+	// 	status: 'active',
+	// 	color: '#06B6D4',
+	// 	featureKeys: [
+	// 		'tools.assets_monitor.feature_1',
+	// 		'tools.assets_monitor.feature_2',
+	// 		'tools.assets_monitor.feature_3'
+	// 	],
+	// 	stage: 'alpha'
+	// }
 ];

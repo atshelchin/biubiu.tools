@@ -5,9 +5,15 @@
 	import StepContent from '$lib/components/step/step-content.svelte';
 	import { step3State } from '@/features/token-distribution/stores/step3-state.svelte';
 	import { PREDEFINED_TOKENS } from '$lib/config/tokens';
-	import type { NativeToken, AnyToken } from '$lib/types/token';
+	import type { NativeToken, AnyToken, ERC721Token, ERC1155Token } from '$lib/types/token';
 	import type { DistributionTokenType } from '@/features/token-distribution/types/distribution';
-	import { Coins, Image, Layers, Wallet } from '@lucide/svelte';
+	import { Coins, Image, Layers, Wallet, Loader2, CheckCircle, AlertCircle } from '@lucide/svelte';
+	import {
+		loadNFTContractInfo,
+		isValidAddress,
+		parseTokenIds
+	} from '@/features/token-distribution/utils/nft-loader';
+	import type { Address } from 'viem';
 
 	const i18n = useI18n();
 	const connectStore = useConnectStore();
@@ -19,6 +25,12 @@
 		{ type: 'erc721', icon: Image },
 		{ type: 'erc1155', icon: Layers }
 	];
+
+	// Get current network RPC URL
+	const currentRpcUrl = $derived(() => {
+		const network = connectStore.networks.find((n) => n.chainId === connectStore.currentChainId);
+		return network?.rpcEndpoints?.[0]?.url ?? '';
+	});
 
 	// Get available tokens for current network based on selected type
 	const availableTokens = $derived(() => {
@@ -78,6 +90,91 @@
 	function getTokenTypeDesc(type: DistributionTokenType): string {
 		return i18n.t(`tools.one_to_many_transfer.step3.content.token_type.${type}_desc`);
 	}
+
+	// Load NFT contract info
+	async function handleLoadNftInfo() {
+		const address = step3State.customNftAddress.trim();
+		const rpcUrl = currentRpcUrl();
+
+		if (!address || !rpcUrl) return;
+
+		if (!isValidAddress(address)) {
+			step3State.customNftError = i18n.t(
+				'tools.one_to_many_transfer.step3.content.nft_config.invalid_address'
+			);
+			return;
+		}
+
+		step3State.customNftLoading = true;
+		step3State.customNftError = '';
+		step3State.clearNftInfo();
+
+		try {
+			const expectedType = step3State.tokenType === 'erc1155' ? 'erc1155' : 'erc721';
+			const info = await loadNFTContractInfo(
+				rpcUrl,
+				address,
+				connectStore.address ?? undefined,
+				expectedType
+			);
+
+			if (!info.isValid) {
+				step3State.customNftError = info.error || 'Failed to load NFT contract';
+				return;
+			}
+
+			// Update state with loaded info
+			step3State.nftContractName = info.name;
+			step3State.nftContractSymbol = info.symbol;
+			step3State.nftTotalSupply = info.totalSupply;
+			step3State.nftUserBalance = info.userBalance;
+			step3State.nftInfoLoaded = true;
+
+			// Create the token object based on type
+			const chainId = connectStore.currentChainId ?? 0;
+			if (info.type === 'erc721') {
+				const erc721Token: ERC721Token = {
+					id: `${chainId}:${address}:erc721`,
+					type: 'erc721',
+					address: address as Address,
+					symbol: info.symbol,
+					name: info.name,
+					decimals: 0,
+					chainId,
+					isCustom: true
+				};
+				step3State.selectedToken = erc721Token;
+			} else {
+				// Parse token IDs for ERC1155
+				const tokenIds = parseTokenIds(step3State.customNftTokenIds);
+				const tokenId = tokenIds.length > 0 ? tokenIds[0] : BigInt(0);
+
+				const erc1155Token: ERC1155Token = {
+					id: `${chainId}:${address}:erc1155:${tokenId.toString()}`,
+					type: 'erc1155',
+					address: address as Address,
+					tokenId,
+					symbol: info.symbol,
+					name: info.name,
+					decimals: 0,
+					chainId,
+					isCustom: true
+				};
+				step3State.selectedToken = erc1155Token;
+			}
+		} catch (error) {
+			step3State.customNftError =
+				error instanceof Error ? error.message : 'Failed to load NFT contract';
+		} finally {
+			step3State.customNftLoading = false;
+		}
+	}
+
+	// Check if address looks valid for enabling load button
+	const canLoadNft = $derived(() => {
+		const address = step3State.customNftAddress.trim();
+		return address.length >= 42 && address.startsWith('0x') && !step3State.customNftLoading;
+	});
 </script>
 
 <StepContent>
@@ -153,25 +250,37 @@
 			</h3>
 			<div class="nft-config">
 				<div class="input-group">
-					<label class="input-label">
+					<label class="input-label" for="nft-contract-address">
 						{i18n.t('tools.one_to_many_transfer.step3.content.nft_config.contract_address')}
 					</label>
-					<input
-						type="text"
-						class="text-input"
-						placeholder={i18n.t(
-							'tools.one_to_many_transfer.step3.content.nft_config.contract_placeholder'
-						)}
-						bind:value={step3State.customNftAddress}
-					/>
+					<div class="input-with-button">
+						<input
+							id="nft-contract-address"
+							type="text"
+							class="text-input"
+							placeholder={i18n.t(
+								'tools.one_to_many_transfer.step3.content.nft_config.contract_placeholder'
+							)}
+							bind:value={step3State.customNftAddress}
+							oninput={() => step3State.clearNftInfo()}
+						/>
+						<button class="load-button" disabled={!canLoadNft()} onclick={handleLoadNftInfo}>
+							{#if step3State.customNftLoading}
+								<Loader2 size={16} class="spin" />
+							{:else}
+								{i18n.t('tools.one_to_many_transfer.step3.content.nft_config.load_button')}
+							{/if}
+						</button>
+					</div>
 				</div>
 
 				{#if step3State.tokenType === 'erc1155'}
 					<div class="input-group">
-						<label class="input-label">
+						<label class="input-label" for="nft-token-ids">
 							{i18n.t('tools.one_to_many_transfer.step3.content.nft_config.token_ids')}
 						</label>
 						<input
+							id="nft-token-ids"
 							type="text"
 							class="text-input"
 							placeholder={i18n.t(
@@ -186,10 +295,47 @@
 				{/if}
 
 				{#if step3State.customNftError}
-					<div class="error-message">{step3State.customNftError}</div>
+					<div class="error-message">
+						<AlertCircle size={16} />
+						<span>{step3State.customNftError}</span>
+					</div>
 				{/if}
 
-				<!-- TODO: Add NFT info loading and display -->
+				<!-- NFT Info Display -->
+				{#if step3State.nftInfoLoaded}
+					<div class="nft-info-card">
+						<div class="nft-info-header">
+							<CheckCircle size={20} class="success-icon" />
+							<span class="nft-info-title">{step3State.nftContractName}</span>
+							<span class="nft-info-symbol">({step3State.nftContractSymbol})</span>
+						</div>
+						<div class="nft-info-details">
+							{#if step3State.nftTotalSupply !== undefined}
+								<div class="nft-info-row">
+									<span class="nft-info-label">
+										{i18n.t('tools.one_to_many_transfer.step3.content.nft_config.total_supply')}:
+									</span>
+									<span class="nft-info-value">{step3State.nftTotalSupply.toString()}</span>
+								</div>
+							{/if}
+							{#if step3State.nftUserBalance !== undefined}
+								<div class="nft-info-row">
+									<span class="nft-info-label">
+										{i18n.t('tools.one_to_many_transfer.step3.content.nft_config.your_balance')}:
+									</span>
+									<span class="nft-info-value">{step3State.nftUserBalance.toString()}</span>
+								</div>
+							{/if}
+						</div>
+					</div>
+				{/if}
+
+				{#if step3State.customNftLoading}
+					<div class="loading-message">
+						<Loader2 size={20} class="spin" />
+						<span>{i18n.t('tools.one_to_many_transfer.step3.content.nft_config.loading')}</span>
+					</div>
+				{/if}
 			</div>
 		</div>
 	{/if}
@@ -276,16 +422,18 @@
 			<div class="section">
 				<div class="random-config">
 					<div class="random-input-group">
-						<label class="input-label">
+						<label class="input-label" for="random-min-amount">
 							{i18n.t('tools.one_to_many_transfer.step3.content.random_mode_config.min_amount')}
 						</label>
 						<div class="amount-input-group">
 							<input
+								id="random-min-amount"
 								type="number"
 								class="amount-input"
 								placeholder={i18n.t(
 									'tools.one_to_many_transfer.step3.content.random_mode_config.min_placeholder'
 								)}
+								bind:value={step3State.randomMinAmount}
 								step="0.000001"
 								min="0"
 							/>
@@ -293,16 +441,18 @@
 						</div>
 					</div>
 					<div class="random-input-group">
-						<label class="input-label">
+						<label class="input-label" for="random-max-amount">
 							{i18n.t('tools.one_to_many_transfer.step3.content.random_mode_config.max_amount')}
 						</label>
 						<div class="amount-input-group">
 							<input
+								id="random-max-amount"
 								type="number"
 								class="amount-input"
 								placeholder={i18n.t(
 									'tools.one_to_many_transfer.step3.content.random_mode_config.max_placeholder'
 								)}
+								bind:value={step3State.randomMaxAmount}
 								step="0.000001"
 								min="0"
 							/>
@@ -310,9 +460,29 @@
 						</div>
 					</div>
 				</div>
-				<p class="input-hint">
-					{i18n.t('tools.one_to_many_transfer.step3.content.random_mode_config.hint')}
-				</p>
+				{#if step3State.randomMinAmount && step3State.randomMaxAmount}
+					{@const min = parseFloat(step3State.randomMinAmount)}
+					{@const max = parseFloat(step3State.randomMaxAmount)}
+					{#if min > 0 && max > min}
+						<p class="input-hint success">
+							{i18n.t('tools.one_to_many_transfer.step3.content.random_mode_config.valid_range', {
+								min: step3State.randomMinAmount,
+								max: step3State.randomMaxAmount,
+								symbol: step3State.selectedToken.symbol
+							})}
+						</p>
+					{:else if max <= min}
+						<p class="input-hint error">
+							{i18n.t(
+								'tools.one_to_many_transfer.step3.content.random_mode_config.error_max_less_than_min'
+							)}
+						</p>
+					{/if}
+				{:else}
+					<p class="input-hint">
+						{i18n.t('tools.one_to_many_transfer.step3.content.random_mode_config.hint')}
+					</p>
+				{/if}
 			</div>
 		{/if}
 	{/if}
@@ -517,6 +687,15 @@
 		color: var(--gray-300);
 	}
 
+	.input-with-button {
+		display: flex;
+		gap: var(--space-2);
+	}
+
+	.input-with-button .text-input {
+		flex: 1;
+	}
+
 	.text-input {
 		padding: var(--space-3) var(--space-4);
 		font-size: var(--text-base);
@@ -536,7 +715,36 @@
 		border-color: var(--color-primary);
 	}
 
+	.load-button {
+		padding: var(--space-3) var(--space-4);
+		font-size: var(--text-base);
+		font-weight: var(--font-medium);
+		background: hsl(210, 100%, 50%);
+		color: white;
+		border: none;
+		border-radius: var(--radius-md);
+		cursor: pointer;
+		transition: all 0.2s ease;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 80px;
+		white-space: nowrap;
+	}
+
+	.load-button:hover:not(:disabled) {
+		background: hsl(210, 100%, 45%);
+	}
+
+	.load-button:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
 	.error-message {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
 		padding: var(--space-3);
 		background: hsla(0, 100%, 95%, 1);
 		border: 1px solid hsla(0, 100%, 80%, 1);
@@ -549,6 +757,116 @@
 		background: hsla(0, 100%, 10%, 0.3);
 		border-color: hsla(0, 100%, 30%, 1);
 		color: hsla(0, 70%, 70%, 1);
+	}
+
+	/* NFT Info Card */
+	.nft-info-card {
+		padding: var(--space-4);
+		background: hsla(120, 100%, 95%, 1);
+		border: 1px solid hsla(120, 100%, 70%, 1);
+		border-radius: var(--radius-md);
+	}
+
+	:global([data-theme='dark']) .nft-info-card {
+		background: hsla(120, 100%, 10%, 0.3);
+		border-color: hsla(120, 100%, 30%, 1);
+	}
+
+	.nft-info-header {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		margin-bottom: var(--space-3);
+	}
+
+	.nft-info-header :global(.success-icon) {
+		color: hsl(120, 70%, 40%);
+	}
+
+	:global([data-theme='dark']) .nft-info-header :global(.success-icon) {
+		color: hsl(120, 70%, 60%);
+	}
+
+	.nft-info-title {
+		font-size: var(--text-lg);
+		font-weight: var(--font-semibold);
+		color: var(--gray-900);
+	}
+
+	:global([data-theme='dark']) .nft-info-title {
+		color: var(--gray-100);
+	}
+
+	.nft-info-symbol {
+		font-size: var(--text-base);
+		color: var(--gray-600);
+	}
+
+	:global([data-theme='dark']) .nft-info-symbol {
+		color: var(--gray-400);
+	}
+
+	.nft-info-details {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-2);
+	}
+
+	.nft-info-row {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		font-size: var(--text-sm);
+	}
+
+	.nft-info-label {
+		color: var(--gray-600);
+	}
+
+	:global([data-theme='dark']) .nft-info-label {
+		color: var(--gray-400);
+	}
+
+	.nft-info-value {
+		font-weight: var(--font-medium);
+		color: var(--gray-900);
+	}
+
+	:global([data-theme='dark']) .nft-info-value {
+		color: var(--gray-100);
+	}
+
+	/* Loading Message */
+	.loading-message {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		padding: var(--space-3);
+		background: hsla(210, 100%, 95%, 1);
+		border: 1px solid hsla(210, 100%, 80%, 1);
+		border-radius: var(--radius-md);
+		color: hsl(210, 70%, 40%);
+		font-size: var(--text-sm);
+	}
+
+	:global([data-theme='dark']) .loading-message {
+		background: hsla(210, 100%, 10%, 0.3);
+		border-color: hsla(210, 100%, 30%, 1);
+		color: hsl(210, 70%, 70%);
+	}
+
+	/* Spin Animation */
+	:global(.spin) {
+		animation: spin 1s linear infinite;
+	}
+
+	@keyframes spin {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
 	}
 
 	/* Mode Selector */
@@ -655,6 +973,22 @@
 
 	:global([data-theme='dark']) .input-hint {
 		color: var(--gray-400);
+	}
+
+	.input-hint.success {
+		color: hsl(120, 70%, 35%);
+	}
+
+	:global([data-theme='dark']) .input-hint.success {
+		color: hsl(120, 70%, 55%);
+	}
+
+	.input-hint.error {
+		color: hsl(0, 70%, 45%);
+	}
+
+	:global([data-theme='dark']) .input-hint.error {
+		color: hsl(0, 70%, 60%);
 	}
 
 	/* Random Config */
