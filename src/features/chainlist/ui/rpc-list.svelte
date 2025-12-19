@@ -222,6 +222,7 @@
 		width: 100%;
 		border-collapse: collapse;
 		font-size: var(--text-sm);
+		table-layout: fixed;
 	}
 
 	.rpc-table th,
@@ -258,8 +259,20 @@
 	}
 
 	.col-url {
-		min-width: 200px;
-		max-width: 400px;
+		width: 50%;
+		overflow: hidden;
+	}
+
+	.col-height {
+		width: 100px;
+	}
+
+	.col-latency {
+		width: 100px;
+	}
+
+	.col-privacy {
+		width: 120px;
 	}
 
 	.url-header {
@@ -309,7 +322,8 @@
 	}
 
 	.url-text {
-		display: block;
+		flex: 1;
+		min-width: 0;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
@@ -331,6 +345,8 @@
 		display: flex;
 		align-items: center;
 		gap: var(--space-2);
+		min-width: 0;
+		overflow: hidden;
 	}
 
 	:global(.rpc-copy-btn) {
@@ -476,19 +492,31 @@
 			align-items: stretch;
 			gap: var(--space-2);
 			max-width: none;
+			width: 100%;
 		}
 
 		.col-url::before {
 			display: none;
 		}
 
+		.col-height,
+		.col-latency,
+		.col-privacy {
+			width: 100%;
+		}
+
 		.url-cell {
 			width: 100%;
+			justify-content: space-between;
 		}
 
 		.url-text {
 			flex: 1;
 			min-width: 0;
+			max-width: calc(100vw - 120px);
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
 		}
 
 		.url-header {
