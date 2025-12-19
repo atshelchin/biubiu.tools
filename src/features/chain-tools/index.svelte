@@ -126,29 +126,28 @@
 	// Filtered tools
 	const filteredTools = $derived.by(() => {
 		let result = toolsData;
+		const hasSearchQuery = debouncedQuery.trim().length > 0;
 
-		// Filter by category
+		// When searching, ignore category filter and search all tools
+		if (hasSearchQuery) {
+			const tokens = tokenizeQuery(debouncedQuery);
+			if (tokens.length > 0) {
+				result = result.filter((tool) => matchesTool(tool, tokens));
+			}
+			return result;
+		}
+
+		// No search query - apply category filter
 		if (selectedCategory === 'featured') {
 			// Show only featured tools
 			result = result.filter((tool) => tool.isFeatured === true);
 		} else if (selectedCategory !== 'all') {
 			// Filter by specific category
 			result = result.filter((tool) => tool.category === selectedCategory);
-		}
-		// 'all' shows everything without filtering
-
-		// Filter by search query
-		if (debouncedQuery.trim()) {
-			const tokens = tokenizeQuery(debouncedQuery);
-			if (tokens.length > 0) {
-				result = result.filter((tool) => matchesTool(tool, tokens));
-			}
-		}
-
-		// Sort BiuBiu tools first when filtering by specific category (not "all" or "featured")
-		if (selectedCategory !== 'all' && selectedCategory !== 'featured') {
+			// Sort BiuBiu tools first when filtering by specific category
 			return sortToolsWithBiubiuFirst(result);
 		}
+		// 'all' shows everything without filtering
 
 		return result;
 	});
