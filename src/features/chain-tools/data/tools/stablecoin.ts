@@ -314,5 +314,217 @@ export const stablecoinTools: ExternalTool[] = [
 		category: 'stablecoin',
 		tags: ['analytics', 'tracking', 'rankings', 'data'],
 		color: '#8DC63F'
+	},
+
+	// ========== Additional Stablecoins ==========
+	{
+		id: 'fdusd',
+		name: 'First Digital USD (FDUSD)',
+		descriptionKey: 'chain_tools.tools.fdusd.description',
+		url: 'https://firstdigitallabs.com',
+		icon: CircleDollarSign,
+		category: 'stablecoin',
+		tags: ['stablecoin', 'usd', 'hong-kong', 'binance'],
+		chains: ['Ethereum', 'BSC'],
+		color: '#00D395'
+	},
+	{
+		id: 'usual-usd0',
+		name: 'USD0 (Usual)',
+		descriptionKey: 'chain_tools.tools.usual_usd0.description',
+		url: 'https://usual.money',
+		icon: CircleDollarSign,
+		category: 'stablecoin',
+		tags: ['stablecoin', 'rwa', 'yield', 'treasury'],
+		chains: ['Ethereum'],
+		color: '#000000',
+		isFeatured: true
+	},
+	{
+		id: 'mountain-usdm',
+		name: 'USDM (Mountain)',
+		descriptionKey: 'chain_tools.tools.mountain_usdm.description',
+		url: 'https://mountainprotocol.com',
+		icon: Percent,
+		category: 'stablecoin',
+		tags: ['stablecoin', 'yield', 'treasury', 'rebasing'],
+		chains: ['Ethereum', 'Polygon', 'Base'],
+		color: '#7C3AED'
+	},
+	{
+		id: 'ageur-angle',
+		name: 'EURA (Angle)',
+		descriptionKey: 'chain_tools.tools.ageur_angle.description',
+		url: 'https://angle.money',
+		icon: Globe,
+		category: 'stablecoin',
+		tags: ['stablecoin', 'euro', 'defi', 'angle'],
+		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism'],
+		color: '#FF6B35'
+	},
+	{
+		id: 'mkusd-prisma',
+		name: 'mkUSD (Prisma)',
+		descriptionKey: 'chain_tools.tools.mkusd_prisma.description',
+		url: 'https://prismafinance.com',
+		icon: Coins,
+		category: 'stablecoin',
+		tags: ['stablecoin', 'lst-backed', 'defi', 'prisma'],
+		chains: ['Ethereum'],
+		color: '#3B82F6'
+	},
+	{
+		id: 'ultra-usd',
+		name: 'Ultra USDu',
+		descriptionKey: 'chain_tools.tools.ultra_usd.description',
+		url: 'https://www.ultraissuance.com',
+		icon: CircleDollarSign,
+		category: 'stablecoin',
+		tags: ['stablecoin', 'usd', 'institutional'],
+		chains: ['Ethereum'],
+		color: '#6366F1'
+	},
+	{
+		id: 'dola-inverse',
+		name: 'DOLA (Inverse)',
+		descriptionKey: 'chain_tools.tools.dola_inverse.description',
+		url: 'https://inverse.finance',
+		icon: Coins,
+		category: 'stablecoin',
+		tags: ['stablecoin', 'defi', 'fed', 'lending'],
+		chains: ['Ethereum', 'Optimism', 'Arbitrum'],
+		color: '#5865F2'
+	},
+	{
+		id: 'hai-reflexer',
+		name: "HAI (Let's Get HAI)",
+		descriptionKey: 'chain_tools.tools.hai_reflexer.description',
+		url: 'https://letsgethai.com',
+		icon: Coins,
+		category: 'stablecoin',
+		tags: ['stablecoin', 'optimism', 'rai-fork', 'defi'],
+		chains: ['Optimism'],
+		color: '#FF0420'
+	},
+	{
+		id: 'usdk-okx',
+		name: 'USDK (OKX)',
+		descriptionKey: 'chain_tools.tools.usdk_okx.description',
+		url: 'https://www.okx.com',
+		icon: CircleDollarSign,
+		category: 'stablecoin',
+		tags: ['stablecoin', 'usd', 'okx', 'regulated'],
+		chains: ['Ethereum'],
+		color: '#000000'
+	},
+	{
+		id: 'zusd-zeta',
+		name: 'ZUSD (Zeta)',
+		descriptionKey: 'chain_tools.tools.zusd_zeta.description',
+		url: 'https://zetachain.com',
+		icon: CircleDollarSign,
+		category: 'stablecoin',
+		tags: ['stablecoin', 'zetachain', 'omnichain'],
+		chains: ['ZetaChain'],
+		color: '#00D395'
+	},
+	{
+		id: 'bob-stablecoin',
+		name: 'BOB',
+		descriptionKey: 'chain_tools.tools.bob_stablecoin.description',
+		url: 'https://bob.money',
+		icon: Coins,
+		category: 'stablecoin',
+		tags: ['stablecoin', 'multichain', 'optimistic'],
+		chains: ['Ethereum', 'Polygon', 'Arbitrum'],
+		color: '#F7931A'
+	},
+	{
+		id: 'usdx-kava',
+		name: 'USDX (Kava)',
+		descriptionKey: 'chain_tools.tools.usdx_kava.description',
+		url: 'https://kava.io',
+		icon: Coins,
+		category: 'stablecoin',
+		tags: ['stablecoin', 'kava', 'cosmos', 'collateralized'],
+		chains: ['Kava'],
+		color: '#FF564F'
+	},
+	{
+		id: 'isc-interest',
+		name: 'ISC (Interest)',
+		descriptionKey: 'chain_tools.tools.isc_interest.description',
+		url: 'https://interestprotocol.io',
+		icon: Percent,
+		category: 'stablecoin',
+		tags: ['stablecoin', 'sui', 'overcollateralized'],
+		chains: ['Sui'],
+		color: '#6FBCF0'
+	},
+	{
+		id: 'cusd-celo',
+		name: 'cUSD (Celo)',
+		descriptionKey: 'chain_tools.tools.cusd_celo.description',
+		url: 'https://celo.org',
+		icon: CircleDollarSign,
+		category: 'stablecoin',
+		tags: ['stablecoin', 'celo', 'mobile', 'emerging'],
+		chains: ['Celo'],
+		color: '#35D07F'
+	},
+	{
+		id: 'ceur-celo',
+		name: 'cEUR (Celo)',
+		descriptionKey: 'chain_tools.tools.ceur_celo.description',
+		url: 'https://celo.org',
+		icon: Globe,
+		category: 'stablecoin',
+		tags: ['stablecoin', 'euro', 'celo', 'mobile'],
+		chains: ['Celo'],
+		color: '#35D07F'
+	},
+	{
+		id: 'flexusd',
+		name: 'flexUSD',
+		descriptionKey: 'chain_tools.tools.flexusd.description',
+		url: 'https://coinflex.com',
+		icon: Percent,
+		category: 'stablecoin',
+		tags: ['stablecoin', 'yield', 'interest'],
+		chains: ['Ethereum', 'BSC'],
+		color: '#3B82F6'
+	},
+	{
+		id: 'alusd-alchemix',
+		name: 'alUSD (Alchemix)',
+		descriptionKey: 'chain_tools.tools.alusd_alchemix.description',
+		url: 'https://alchemix.fi',
+		icon: Zap,
+		category: 'stablecoin',
+		tags: ['stablecoin', 'self-repaying', 'yield', 'defi'],
+		chains: ['Ethereum', 'Optimism', 'Arbitrum'],
+		color: '#F5C400'
+	},
+	{
+		id: 'usd-plus',
+		name: 'USD+ (Overnight)',
+		descriptionKey: 'chain_tools.tools.usd_plus.description',
+		url: 'https://overnight.fi',
+		icon: Percent,
+		category: 'stablecoin',
+		tags: ['stablecoin', 'yield', 'delta-neutral', 'defi'],
+		chains: ['Ethereum', 'Arbitrum', 'Optimism', 'Base', 'Polygon'],
+		color: '#2775CA'
+	},
+	{
+		id: 'ust-wormhole',
+		name: 'UST (Wormhole)',
+		descriptionKey: 'chain_tools.tools.ust_wormhole.description',
+		url: 'https://wormhole.com',
+		icon: CircleDollarSign,
+		category: 'stablecoin',
+		tags: ['stablecoin', 'bridge', 'wormhole', 'wrapped'],
+		chains: ['Ethereum', 'Solana'],
+		color: '#8B5CF6'
 	}
 ];

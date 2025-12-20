@@ -10,17 +10,7 @@
  * - Legal Resources & Research
  * - Compliance Tools
  */
-import {
-	Scale,
-	Landmark,
-	Globe,
-	FileText,
-	Shield,
-	Gavel,
-	BookOpen,
-	Map,
-	Users
-} from '@lucide/svelte';
+import { Scale, Landmark, Globe, FileText, Shield, BookOpen, Map, Users } from '@lucide/svelte';
 import type { ExternalTool } from '../../types';
 
 export const regulationTools: ExternalTool[] = [

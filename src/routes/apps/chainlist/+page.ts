@@ -1,5 +1,4 @@
 import type { PageLoad } from './$types';
-import type { Chain, RpcEndpoint, Explorer } from '@/features/chainlist/types/chain';
 import { createWebAppData, createHowToData, type HowToStepData } from '$lib/utils/structured-data';
 import { I18n } from '@shelchin/i18n';
 import { extractLocaleFromPathname } from '@shelchin/i18n/utils';
@@ -7,18 +6,7 @@ import en from '../../../i18n/locales/en.json';
 import zh from '../../../i18n/locales/zh.json';
 import type { PackageLocales } from '@shelchin/i18n';
 
-// Dedupe arrays by a key field (keep first occurrence)
-function dedupeByKey<T>(items: T[], keyFn: (item: T) => string): T[] {
-	const seen = new Set<string>();
-	return items.filter((item) => {
-		const key = keyFn(item);
-		if (seen.has(key)) return false;
-		seen.add(key);
-		return true;
-	});
-}
-
-export const load: PageLoad = async ({ fetch, url }) => {
+export const load: PageLoad = async ({ url }) => {
 	// Extract locale from URL pathname
 	const locale = extractLocaleFromPathname(url.pathname) || 'en';
 
