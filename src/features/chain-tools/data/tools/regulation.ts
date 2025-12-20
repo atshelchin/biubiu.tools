@@ -18,10 +18,8 @@ import {
 	Shield,
 	Gavel,
 	BookOpen,
-	Building2,
 	Map,
-	Users,
-	AlertTriangle
+	Users
 } from '@lucide/svelte';
 import type { ExternalTool } from '../../types';
 

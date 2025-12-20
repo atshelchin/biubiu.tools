@@ -1438,6 +1438,7 @@
 		"empty_description": "Try different keywords or clear your filters",
 		"clear_filters": "Clear Filters",
 		"showing_count": "Showing {count} of {total} tools",
+		"disclaimer": "Data is AI-generated and may contain inaccuracies. Please verify independently.",
 		"categories": {
 			"all": "All",
 			"featured": "Featured",
@@ -6440,9 +6441,6 @@
 			"kol_cryptohayes": {
 				"description": "BitMEX co-founder, macro analyst"
 			},
-			"kol_raaborhmason": {
-				"description": "Real Vision CEO, macro investor"
-			},
 			"kol_ericryptoguy": {
 				"description": "Altcoin trader and analyst"
 			},
@@ -6491,50 +6489,26 @@
 			"kol_bitwu": {
 				"description": "Chinese trading educator"
 			},
-			"kol_lvdepeng": {
-				"description": "Chinese trading mentor"
-			},
 			"kol_maki": {
 				"description": "SushiSwap contributor, DeFi in Japan"
 			},
 			"kol_ikehaya": {
 				"description": "Japanese NFT creator, crypto educator"
 			},
-			"kol_koji": {
-				"description": "Japanese crypto trader and analyst"
-			},
-			"kol_arata": {
-				"description": "Japanese DeFi and L2 researcher"
-			},
 			"kol_crypto_navi": {
 				"description": "Japanese crypto education YouTube"
-			},
-			"kol_kimchi_premium": {
-				"description": "Korean market analysis and insights"
 			},
 			"kol_cryptoquant_ki": {
 				"description": "CryptoQuant CEO, on-chain expert"
 			},
-			"kol_coinkim": {
-				"description": "Korean crypto analysis and education"
-			},
 			"kol_crypto_god": {
 				"description": "Korean crypto YouTube analyst"
-			},
-			"kol_dalto": {
-				"description": "Spanish DeFi educator and builder"
 			},
 			"kol_cripto247": {
 				"description": "Spanish crypto news for Latin America"
 			},
 			"kol_jorge_crypto": {
 				"description": "Spanish crypto trading YouTube"
-			},
-			"kol_panda_cripto": {
-				"description": "Spanish crypto trading analyst"
-			},
-			"kol_favelado_cripto": {
-				"description": "Brazilian crypto trader"
 			},
 			"kol_criptomaniacos": {
 				"description": "Brazilian crypto education YouTube"
@@ -6554,32 +6528,14 @@
 			"kol_blocktrainer": {
 				"description": "German Bitcoin education YouTube"
 			},
-			"kol_tagebuch": {
-				"description": "German crypto trading analysis"
-			},
 			"kol_julian_hosp": {
 				"description": "German crypto educator, CakeDeFi"
-			},
-			"kol_cryptorofl": {
-				"description": "Russian crypto trader and analyst"
 			},
 			"kol_incrypted": {
 				"description": "Russian crypto news media"
 			},
 			"kol_cryptoins": {
 				"description": "Russian Telegram trading signals"
-			},
-			"kol_arab_crypto": {
-				"description": "Arabic crypto news for MENA"
-			},
-			"kol_bitcoin_ar": {
-				"description": "Arabic Bitcoin education"
-			},
-			"kol_uae_crypto": {
-				"description": "UAE and Dubai crypto community"
-			},
-			"kol_kripto_adam": {
-				"description": "Turkish crypto analysis"
 			},
 			"kol_coin_otag": {
 				"description": "Turkish crypto news media"
@@ -6590,32 +6546,17 @@
 			"kol_coin68": {
 				"description": "Vietnamese crypto news media"
 			},
-			"kol_tien_ao": {
-				"description": "Vietnamese crypto education"
-			},
-			"kol_defi_vn": {
-				"description": "Vietnamese DeFi community"
-			},
 			"kol_coinvestasi": {
 				"description": "Indonesian crypto news and education"
 			},
 			"kol_indodax": {
 				"description": "Indonesian exchange education"
 			},
-			"kol_crypto_id": {
-				"description": "Indonesian crypto community"
-			},
 			"kol_bitkub": {
 				"description": "Thai exchange education"
 			},
 			"kol_siam_block": {
 				"description": "Thai blockchain news"
-			},
-			"kol_crypto_th": {
-				"description": "Thai crypto community"
-			},
-			"kol_crypto_india": {
-				"description": "Indian crypto news"
 			},
 			"kol_pushpendra": {
 				"description": "Indian crypto educator"
@@ -6626,11 +6567,11 @@
 			"kol_bitvavo": {
 				"description": "Dutch exchange education"
 			},
-			"kol_kryptowaluty": {
-				"description": "Polish crypto news"
-			},
 			"kol_cryptonomist": {
 				"description": "Italian crypto news media"
+			},
+			"kol_raoul_pal": {
+				"description": "Real Vision CEO, macro investor"
 			}
 		},
 		"seo": {

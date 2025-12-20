@@ -204,6 +204,7 @@
 				total: toolsData.length
 			})}
 		</p>
+		<p class="disclaimer">{i18n.t('chain_tools.disclaimer')}</p>
 	</div>
 </div>
 
@@ -339,6 +340,13 @@
 	.stats {
 		font-size: var(--text-sm);
 		color: var(--color-description-3);
+	}
+
+	.disclaimer {
+		font-size: var(--text-xs);
+		color: var(--color-description-3);
+		margin-top: var(--space-3);
+		opacity: 0.7;
 	}
 
 	/* Mobile */

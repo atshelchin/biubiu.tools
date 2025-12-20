@@ -17,8 +17,6 @@ import {
 	Briefcase,
 	TrendingUp,
 	Globe,
-	Star,
-	Lightbulb,
 	Target
 } from '@lucide/svelte';
 import type { ExternalTool } from '../../types';

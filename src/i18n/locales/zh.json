@@ -1438,6 +1438,7 @@
 		"empty_description": "试试其他关键词或清除筛选条件",
 		"clear_filters": "清除筛选",
 		"showing_count": "显示 {count} / {total} 个工具",
+		"disclaimer": "数据由 AI 生成，可能存在偏差，请自行验证。",
 		"categories": {
 			"all": "全部",
 			"featured": "精选",
@@ -6431,9 +6432,6 @@
 			"kol_cryptohayes": {
 				"description": "BitMEX联合创始人，宏观分析师"
 			},
-			"kol_raaborhmason": {
-				"description": "Real Vision CEO，宏观投资者"
-			},
 			"kol_ericryptoguy": {
 				"description": "山寨币交易员和分析师"
 			},
@@ -6482,50 +6480,26 @@
 			"kol_bitwu": {
 				"description": "中文交易教育"
 			},
-			"kol_lvdepeng": {
-				"description": "中文交易导师"
-			},
 			"kol_maki": {
 				"description": "SushiSwap贡献者，日本DeFi"
 			},
 			"kol_ikehaya": {
 				"description": "日本NFT创作者，加密教育者"
 			},
-			"kol_koji": {
-				"description": "日本加密交易员和分析师"
-			},
-			"kol_arata": {
-				"description": "日本DeFi和L2研究员"
-			},
 			"kol_crypto_navi": {
 				"description": "日本加密教育YouTube"
-			},
-			"kol_kimchi_premium": {
-				"description": "韩国市场分析和洞察"
 			},
 			"kol_cryptoquant_ki": {
 				"description": "CryptoQuant CEO，链上专家"
 			},
-			"kol_coinkim": {
-				"description": "韩国加密分析和教育"
-			},
 			"kol_crypto_god": {
 				"description": "韩国加密YouTube分析师"
-			},
-			"kol_dalto": {
-				"description": "西班牙语DeFi教育者和建设者"
 			},
 			"kol_cripto247": {
 				"description": "拉丁美洲西班牙语加密新闻"
 			},
 			"kol_jorge_crypto": {
 				"description": "西班牙语加密交易YouTube"
-			},
-			"kol_panda_cripto": {
-				"description": "西班牙语加密交易分析师"
-			},
-			"kol_favelado_cripto": {
-				"description": "巴西加密交易员"
 			},
 			"kol_criptomaniacos": {
 				"description": "巴西加密教育YouTube"
@@ -6545,32 +6519,14 @@
 			"kol_blocktrainer": {
 				"description": "德语比特币教育YouTube"
 			},
-			"kol_tagebuch": {
-				"description": "德语加密交易分析"
-			},
 			"kol_julian_hosp": {
 				"description": "德语加密教育者，CakeDeFi"
-			},
-			"kol_cryptorofl": {
-				"description": "俄语加密交易员和分析师"
 			},
 			"kol_incrypted": {
 				"description": "俄语加密新闻媒体"
 			},
 			"kol_cryptoins": {
 				"description": "俄语Telegram交易信号"
-			},
-			"kol_arab_crypto": {
-				"description": "阿拉伯语中东加密新闻"
-			},
-			"kol_bitcoin_ar": {
-				"description": "阿拉伯语比特币教育"
-			},
-			"kol_uae_crypto": {
-				"description": "阿联酋和迪拜加密社区"
-			},
-			"kol_kripto_adam": {
-				"description": "土耳其语加密分析"
 			},
 			"kol_coin_otag": {
 				"description": "土耳其语加密新闻媒体"
@@ -6581,32 +6537,17 @@
 			"kol_coin68": {
 				"description": "越南语加密新闻媒体"
 			},
-			"kol_tien_ao": {
-				"description": "越南语加密教育"
-			},
-			"kol_defi_vn": {
-				"description": "越南DeFi社区"
-			},
 			"kol_coinvestasi": {
 				"description": "印尼语加密新闻和教育"
 			},
 			"kol_indodax": {
 				"description": "印尼交易所教育"
 			},
-			"kol_crypto_id": {
-				"description": "印尼加密社区"
-			},
 			"kol_bitkub": {
 				"description": "泰国交易所教育"
 			},
 			"kol_siam_block": {
 				"description": "泰国区块链新闻"
-			},
-			"kol_crypto_th": {
-				"description": "泰国加密社区"
-			},
-			"kol_crypto_india": {
-				"description": "印度加密新闻"
 			},
 			"kol_pushpendra": {
 				"description": "印度加密教育者"
@@ -6617,11 +6558,11 @@
 			"kol_bitvavo": {
 				"description": "荷兰交易所教育"
 			},
-			"kol_kryptowaluty": {
-				"description": "波兰语加密新闻"
-			},
 			"kol_cryptonomist": {
 				"description": "意大利语加密新闻媒体"
+			},
+			"kol_raoul_pal": {
+				"description": "Real Vision CEO，宏观投资者"
 			}
 		},
 		"seo": {
@@ -6657,12 +6598,7 @@
 			"price": "$0",
 			"period": "永久",
 			"description": "适合刚开始使用",
-			"features": [
-				"最多 10 个钱包",
-				"基础批量操作",
-				"社区支持",
-				"标准速度"
-			],
+			"features": ["最多 10 个钱包", "基础批量操作", "社区支持", "标准速度"],
 			"cta": "开始使用"
 		},
 		"pro": {
@@ -6670,13 +6606,7 @@
 			"price": "$19",
 			"period": "月",
 			"description": "适合高级用户",
-			"features": [
-				"无限钱包",
-				"高级批量操作",
-				"优先支持",
-				"高速处理",
-				"API 访问"
-			],
+			"features": ["无限钱包", "高级批量操作", "优先支持", "高速处理", "API 访问"],
 			"cta": "开始免费试用"
 		},
 		"enterprise": {
@@ -6684,13 +6614,7 @@
 			"price": "定制",
 			"period": "月",
 			"description": "适合团队和组织",
-			"features": [
-				"包含专业版所有功能",
-				"专属支持",
-				"定制集成",
-				"SLA 保障",
-				"团队管理"
-			],
+			"features": ["包含专业版所有功能", "专属支持", "定制集成", "SLA 保障", "团队管理"],
 			"cta": "联系销售"
 		},
 		"note": "所有计划均包含基础功能和安全保障",

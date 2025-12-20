@@ -38,7 +38,7 @@ export const influencerTools: ExternalTool[] = [
 		id: 'kol-cz-binance',
 		name: 'CZ (Changpeng Zhao)',
 		descriptionKey: 'chain_tools.tools.kol_cz_binance.description',
-		url: 'https://x.com/caborhter0',
+		url: 'https://x.com/cz_binance',
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'binance', 'founder', 'english', 'chinese'],
@@ -60,7 +60,7 @@ export const influencerTools: ExternalTool[] = [
 		id: 'kol-balaji',
 		name: 'Balaji Srinivasan',
 		descriptionKey: 'chain_tools.tools.kol_balaji.description',
-		url: 'https://x.com/balaborhis',
+		url: 'https://x.com/balajis',
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'a16z', 'network-state', 'english'],
@@ -81,7 +81,7 @@ export const influencerTools: ExternalTool[] = [
 		id: 'kol-cobie',
 		name: 'Cobie',
 		descriptionKey: 'chain_tools.tools.kol_cobie.description',
-		url: 'https://x.com/coaborhe',
+		url: 'https://x.com/cobie',
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'trader', 'defi', 'english'],
@@ -163,8 +163,8 @@ export const influencerTools: ExternalTool[] = [
 		isFeatured: true
 	},
 	{
-		id: 'kol-raaborhmason',
-		name: 'Raaborh Mason',
+		id: 'kol-raoul-pal',
+		name: 'Raoul Pal',
 		descriptionKey: 'chain_tools.tools.kol_raaborhmason.description',
 		url: 'https://x.com/RaoulGMI',
 		icon: Twitter,
@@ -186,7 +186,7 @@ export const influencerTools: ExternalTool[] = [
 		id: 'kol-dankrad',
 		name: 'Dankrad Feist',
 		descriptionKey: 'chain_tools.tools.kol_dankrad.description',
-		url: 'https://x.com/daborhradfeist',
+		url: 'https://x.com/dankrad',
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'ethereum', 'researcher', 'english'],
@@ -294,7 +294,7 @@ export const influencerTools: ExternalTool[] = [
 		id: 'kol-mindao',
 		name: '杨民道 (Mindao)',
 		descriptionKey: 'chain_tools.tools.kol_mindao.description',
-		url: 'https://x.com/maborhgdao',
+		url: 'https://x.com/mindaoyang',
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'chinese', 'defi', 'dforce'],
@@ -335,17 +335,7 @@ export const influencerTools: ExternalTool[] = [
 		id: 'kol-bitwu',
 		name: 'BitWu吴子龙',
 		descriptionKey: 'chain_tools.tools.kol_bitwu.description',
-		url: 'https://x.com/biaborhwulong',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'chinese', 'trader', 'education'],
-		color: '#DE2910'
-	},
-	{
-		id: 'kol-lvdepeng',
-		name: '吕德鹏 Trader_Mentor',
-		descriptionKey: 'chain_tools.tools.kol_lvdepeng.description',
-		url: 'https://x.com/2aborhnfei',
+		url: 'https://x.com/BTW0205',
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'chinese', 'trader', 'education'],
@@ -357,7 +347,7 @@ export const influencerTools: ExternalTool[] = [
 		id: 'kol-maki',
 		name: 'マキ (Maki)',
 		descriptionKey: 'chain_tools.tools.kol_maki.description',
-		url: 'https://x.com/maborhisushiswap',
+		url: 'https://x.com/0xMaki',
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'japanese', 'defi', 'sushi'],
@@ -376,26 +366,6 @@ export const influencerTools: ExternalTool[] = [
 		isFeatured: true
 	},
 	{
-		id: 'kol-koji',
-		name: 'Koji (こじ)',
-		descriptionKey: 'chain_tools.tools.kol_koji.description',
-		url: 'https://x.com/KojiCrypto',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'japanese', 'analysis', 'trading'],
-		color: '#BC002D'
-	},
-	{
-		id: 'kol-arata',
-		name: 'Arata (アラタ)',
-		descriptionKey: 'chain_tools.tools.kol_arata.description',
-		url: 'https://x.com/aaborhata_crypto',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'japanese', 'defi', 'l2'],
-		color: '#BC002D'
-	},
-	{
 		id: 'kol-crypto-navi',
 		name: 'クリプトナビ',
 		descriptionKey: 'chain_tools.tools.kol_crypto_navi.description',
@@ -408,36 +378,15 @@ export const influencerTools: ExternalTool[] = [
 
 	// ========== Korean 한국어 KOL ==========
 	{
-		id: 'kol-kimchi-premium',
-		name: '김치프리미엄 (Kimchi Premium)',
-		descriptionKey: 'chain_tools.tools.kol_kimchi_premium.description',
-		url: 'https://x.com/KimchiPremium',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'korean', 'analysis', 'trading'],
-		color: '#003478',
-		isFeatured: true
-	},
-	{
 		id: 'kol-cryptoquant-ki',
 		name: 'Ki Young Ju',
 		descriptionKey: 'chain_tools.tools.kol_cryptoquant_ki.description',
-		url: 'https://x.com/borh_young_ju',
+		url: 'https://x.com/ki_young_ju',
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'korean', 'cryptoquant', 'on-chain'],
 		color: '#003478',
 		isFeatured: true
-	},
-	{
-		id: 'kol-coinkim',
-		name: '코인김 (Coin Kim)',
-		descriptionKey: 'chain_tools.tools.kol_coinkim.description',
-		url: 'https://x.com/coinaborhim_kr',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'korean', 'analysis', 'education'],
-		color: '#003478'
 	},
 	{
 		id: 'kol-crypto-god',
@@ -451,17 +400,6 @@ export const influencerTools: ExternalTool[] = [
 	},
 
 	// ========== Spanish Español KOL ==========
-	{
-		id: 'kol-dalto',
-		name: 'Dalto Domínguez',
-		descriptionKey: 'chain_tools.tools.kol_dalto.description',
-		url: 'https://x.com/dalto_dc',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'spanish', 'education', 'defi'],
-		color: '#F1BF00',
-		isFeatured: true
-	},
 	{
 		id: 'kol-cripto247',
 		name: 'Cripto247',
@@ -482,29 +420,8 @@ export const influencerTools: ExternalTool[] = [
 		tags: ['kol', 'spanish', 'youtube', 'trading'],
 		color: '#F1BF00'
 	},
-	{
-		id: 'kol-panda-cripto',
-		name: 'Panda Cripto',
-		descriptionKey: 'chain_tools.tools.kol_panda_cripto.description',
-		url: 'https://x.com/PandaCripto',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'spanish', 'trading', 'analysis'],
-		color: '#F1BF00'
-	},
 
 	// ========== Portuguese Português KOL ==========
-	{
-		id: 'kol-favelado-cripto',
-		name: 'Favelado Cripto',
-		descriptionKey: 'chain_tools.tools.kol_favelado_cripto.description',
-		url: 'https://x.com/FaveladoCripto',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'portuguese', 'brazil', 'trading'],
-		color: '#009B3A',
-		isFeatured: true
-	},
 	{
 		id: 'kol-criptomaniacos',
 		name: 'Criptomaníacos',
@@ -531,7 +448,7 @@ export const influencerTools: ExternalTool[] = [
 		id: 'kol-hasheur',
 		name: 'Hasheur (Owen Simonin)',
 		descriptionKey: 'chain_tools.tools.kol_hasheur.description',
-		url: 'https://x.com/hashaborhr',
+		url: 'https://x.com/PowerHasheur',
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'french', 'youtube', 'education'],
@@ -552,7 +469,7 @@ export const influencerTools: ExternalTool[] = [
 		id: 'kol-monsieur-tk',
 		name: 'Monsieur TK',
 		descriptionKey: 'chain_tools.tools.kol_monsieur_tk.description',
-		url: 'https://x.com/monsaborhrTK',
+		url: 'https://x.com/MiningTk',
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'french', 'defi', 'analysis'],
@@ -572,20 +489,10 @@ export const influencerTools: ExternalTool[] = [
 		isFeatured: true
 	},
 	{
-		id: 'kol-tagebuch',
-		name: 'Krypto Tagebuch',
-		descriptionKey: 'chain_tools.tools.kol_tagebuch.description',
-		url: 'https://x.com/KryptoTagebuch',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'german', 'trading', 'analysis'],
-		color: '#FFCC00'
-	},
-	{
 		id: 'kol-julian-hosp',
 		name: 'Julian Hosp',
 		descriptionKey: 'chain_tools.tools.kol_julian_hosp.description',
-		url: 'https://x.com/julaborhnhosp',
+		url: 'https://x.com/julianhosp',
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'german', 'defi', 'cakedefi'],
@@ -593,17 +500,6 @@ export const influencerTools: ExternalTool[] = [
 	},
 
 	// ========== Russian Русский KOL ==========
-	{
-		id: 'kol-cryptorofl',
-		name: 'CryptoROFL',
-		descriptionKey: 'chain_tools.tools.kol_cryptorofl.description',
-		url: 'https://x.com/CryptoROFL',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'russian', 'trading', 'analysis'],
-		color: '#D52B1E',
-		isFeatured: true
-	},
 	{
 		id: 'kol-incrypted',
 		name: 'Incrypted',
@@ -626,50 +522,8 @@ export const influencerTools: ExternalTool[] = [
 	},
 
 	// ========== Arabic العربية KOL ==========
-	{
-		id: 'kol-arab-crypto',
-		name: 'عرب كريبتو (Arab Crypto)',
-		descriptionKey: 'chain_tools.tools.kol_arab_crypto.description',
-		url: 'https://x.com/ArabCryptoNews',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'arabic', 'news', 'mena'],
-		color: '#006C35',
-		isFeatured: true
-	},
-	{
-		id: 'kol-bitcoin-ar',
-		name: 'بتكوين العرب (Bitcoin Arabs)',
-		descriptionKey: 'chain_tools.tools.kol_bitcoin_ar.description',
-		url: 'https://x.com/BitcoinArabs',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'arabic', 'bitcoin', 'education'],
-		color: '#006C35'
-	},
-	{
-		id: 'kol-uae-crypto',
-		name: 'UAE Crypto',
-		descriptionKey: 'chain_tools.tools.kol_uae_crypto.description',
-		url: 'https://x.com/UAECryptoAr',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'arabic', 'uae', 'dubai'],
-		color: '#006C35'
-	},
 
 	// ========== Turkish Türkçe KOL ==========
-	{
-		id: 'kol-kripto-adam',
-		name: 'Kripto Adam',
-		descriptionKey: 'chain_tools.tools.kol_kripto_adam.description',
-		url: 'https://x.com/kriptoadam',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'turkish', 'analysis', 'trading'],
-		color: '#E30A17',
-		isFeatured: true
-	},
 	{
 		id: 'kol-coin-otag',
 		name: 'Coin Otag',
@@ -696,32 +550,12 @@ export const influencerTools: ExternalTool[] = [
 		id: 'kol-coin68',
 		name: 'Coin68',
 		descriptionKey: 'chain_tools.tools.kol_coin68.description',
-		url: 'https://x.com/coin68_official',
+		url: 'https://x.com/coin68',
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'vietnamese', 'news', 'media'],
 		color: '#DA251D',
 		isFeatured: true
-	},
-	{
-		id: 'kol-tien-ao',
-		name: 'Tiền Ảo (Crypto VN)',
-		descriptionKey: 'chain_tools.tools.kol_tien_ao.description',
-		url: 'https://x.com/TienAoVN',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'vietnamese', 'education', 'trading'],
-		color: '#DA251D'
-	},
-	{
-		id: 'kol-defi-vn',
-		name: 'DeFi Vietnam',
-		descriptionKey: 'chain_tools.tools.kol_defi_vn.description',
-		url: 'https://x.com/DeFiVietnam',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'vietnamese', 'defi', 'community'],
-		color: '#DA251D'
 	},
 
 	// ========== Indonesian Bahasa KOL ==========
@@ -744,16 +578,6 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'indonesian', 'exchange', 'education'],
-		color: '#FF0000'
-	},
-	{
-		id: 'kol-crypto-id',
-		name: 'Crypto Indonesia',
-		descriptionKey: 'chain_tools.tools.kol_crypto_id.description',
-		url: 'https://x.com/CryptoIDNews',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'indonesian', 'news', 'community'],
 		color: '#FF0000'
 	},
 
@@ -779,34 +603,13 @@ export const influencerTools: ExternalTool[] = [
 		tags: ['kol', 'thai', 'news', 'media'],
 		color: '#FF6C00'
 	},
-	{
-		id: 'kol-crypto-th',
-		name: 'Crypto Thailand',
-		descriptionKey: 'chain_tools.tools.kol_crypto_th.description',
-		url: 'https://x.com/CryptoThailand1',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'thai', 'community', 'analysis'],
-		color: '#FF6C00'
-	},
 
 	// ========== Hindi हिन्दी KOL ==========
-	{
-		id: 'kol-crypto-india',
-		name: 'Crypto India',
-		descriptionKey: 'chain_tools.tools.kol_crypto_india.description',
-		url: 'https://x.com/CryptoIndia_',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'hindi', 'india', 'news'],
-		color: '#FF9933',
-		isFeatured: true
-	},
 	{
 		id: 'kol-pushpendra',
 		name: 'Pushpendra Singh',
 		descriptionKey: 'chain_tools.tools.kol_pushpendra.description',
-		url: 'https://x.com/paborhshpendra',
+		url: 'https://x.com/pushpendrakum',
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'hindi', 'education', 'youtube'],
@@ -828,7 +631,7 @@ export const influencerTools: ExternalTool[] = [
 		id: 'kol-bitvavo',
 		name: 'Bitvavo Academy',
 		descriptionKey: 'chain_tools.tools.kol_bitvavo.description',
-		url: 'https://x.com/BitvavoNL',
+		url: 'https://x.com/bitvavocom',
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'dutch', 'exchange', 'education'],
@@ -836,16 +639,6 @@ export const influencerTools: ExternalTool[] = [
 	},
 
 	// ========== Polish KOL ==========
-	{
-		id: 'kol-kryptowaluty',
-		name: 'Kryptowaluty PL',
-		descriptionKey: 'chain_tools.tools.kol_kryptowaluty.description',
-		url: 'https://x.com/kryptowalutPL',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'polish', 'news', 'education'],
-		color: '#DC143C'
-	},
 
 	// ========== Italian KOL ==========
 	{

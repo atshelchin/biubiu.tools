@@ -132,10 +132,25 @@ export const categories: Category[] = [
 		icon: Wallet
 	},
 	{ id: 'cex', labelKey: 'chain_tools.categories.cex', color: '#3B82F6', icon: Building2 },
-	{ id: 'gas-burner', labelKey: 'chain_tools.categories.gas_burner', color: '#EF4444', icon: Flame },
+	{
+		id: 'gas-burner',
+		labelKey: 'chain_tools.categories.gas_burner',
+		color: '#EF4444',
+		icon: Flame
+	},
 	{ id: 'trends', labelKey: 'chain_tools.categories.trends', color: '#8B5CF6', icon: TrendingUp },
-	{ id: 'web3-teams', labelKey: 'chain_tools.categories.web3_teams', color: '#10B981', icon: Users },
-	{ id: 'regulation', labelKey: 'chain_tools.categories.regulation', color: '#6366F1', icon: Scale },
+	{
+		id: 'web3-teams',
+		labelKey: 'chain_tools.categories.web3_teams',
+		color: '#10B981',
+		icon: Users
+	},
+	{
+		id: 'regulation',
+		labelKey: 'chain_tools.categories.regulation',
+		color: '#6366F1',
+		icon: Scale
+	},
 	{
 		id: 'influencer',
 		labelKey: 'chain_tools.categories.influencer',
