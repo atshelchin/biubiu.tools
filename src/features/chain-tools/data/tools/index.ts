@@ -39,7 +39,6 @@ export { privacyTools } from './privacy';
 export { rwaTools } from './rwa';
 export { aiCryptoTools } from './ai-crypto';
 export { restakingTools } from './restaking';
-export { walletMainstreamTools } from './wallet-mainstream';
 export { cexTools } from './cex';
 export { gasBurnerTools } from './gas-burner';
 export { trendsTools } from './trends';
@@ -82,7 +81,6 @@ import { privacyTools } from './privacy';
 import { rwaTools } from './rwa';
 import { aiCryptoTools } from './ai-crypto';
 import { restakingTools } from './restaking';
-import { walletMainstreamTools } from './wallet-mainstream';
 import { cexTools } from './cex';
 import { gasBurnerTools } from './gas-burner';
 import { trendsTools } from './trends';
@@ -130,7 +128,6 @@ export const allTools: ExternalTool[] = [
 	...rwaTools,
 	...aiCryptoTools,
 	...restakingTools,
-	...walletMainstreamTools,
 	...cexTools,
 	...gasBurnerTools,
 	...trendsTools,

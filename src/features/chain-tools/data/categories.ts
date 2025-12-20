@@ -125,12 +125,6 @@ export const categories: Category[] = [
 	{ id: 'rwa', labelKey: 'chain_tools.categories.rwa', color: '#0EA5E9', icon: Building2 },
 	{ id: 'ai-crypto', labelKey: 'chain_tools.categories.ai_crypto', color: '#8B5CF6', icon: Bot },
 	{ id: 'restaking', labelKey: 'chain_tools.categories.restaking', color: '#6366F1', icon: Repeat },
-	{
-		id: 'wallet-mainstream',
-		labelKey: 'chain_tools.categories.wallet_mainstream',
-		color: '#F59E0B',
-		icon: Wallet
-	},
 	{ id: 'cex', labelKey: 'chain_tools.categories.cex', color: '#3B82F6', icon: Building2 },
 	{
 		id: 'gas-burner',

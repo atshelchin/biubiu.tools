@@ -1479,7 +1479,6 @@
 			"mev": "MEV",
 			"rwa": "RWA",
 			"ai_crypto": "AI Crypto",
-			"wallet_mainstream": "Wallets",
 			"cex": "Exchanges (CEX)",
 			"gas_burner": "Gas Burners",
 			"trends": "Trends & VC",
@@ -2102,12 +2101,6 @@
 			},
 			"chainbase": {
 				"description": "All-in-one data platform"
-			},
-			"coinbase_wallet": {
-				"description": "Self-custody wallet by Coinbase exchange"
-			},
-			"trust_wallet": {
-				"description": "Mobile-first multi-chain wallet by Binance"
 			},
 			"argent": {
 				"description": "Smart wallet with recovery"
@@ -3912,9 +3905,6 @@
 			"moxie": {
 				"description": "Moxie - Decentralized social platform"
 			},
-			"phantom_wallet": {
-				"description": "Multi-chain wallet for Solana, Ethereum & Polygon"
-			},
 			"backpack_wallet": {
 				"description": "Backpack - Crypto wallet"
 			},
@@ -3924,12 +3914,6 @@
 			"solflare": {
 				"description": "Solflare - Crypto wallet"
 			},
-			"keplr_wallet": {
-				"description": "Leading Cosmos ecosystem wallet"
-			},
-			"leap_wallet": {
-				"description": "Multi-chain Cosmos wallet"
-			},
 			"xdefi_wallet": {
 				"description": "XDEFI - Crypto wallet"
 			},
@@ -3938,9 +3922,6 @@
 			},
 			"block_wallet": {
 				"description": "BlockWallet - Crypto wallet"
-			},
-			"okx_wallet": {
-				"description": "Multi-chain Web3 wallet by OKX"
 			},
 			"x_vitalik": {
 				"description": "Ethereum co-founder"
@@ -5802,27 +5783,6 @@
 			"airdrop_swell": {
 				"description": "Swell Network potential airdrop for swETH stakers"
 			},
-			"metamask_wallet": {
-				"description": "Most popular browser wallet for EVM chains"
-			},
-			"rabby_wallet": {
-				"description": "Security-first browser wallet with pre-tx simulation"
-			},
-			"rainbow_wallet": {
-				"description": "User-friendly Ethereum wallet with NFT focus"
-			},
-			"zerion_wallet": {
-				"description": "DeFi portfolio wallet with built-in tracking"
-			},
-			"frame_wallet": {
-				"description": "Desktop system-wide Ethereum wallet"
-			},
-			"ledger_wallet": {
-				"description": "Industry-leading hardware wallet"
-			},
-			"trezor_wallet": {
-				"description": "Open-source hardware wallet pioneer"
-			},
 			"keystone_wallet": {
 				"description": "Air-gapped hardware wallet with QR signing"
 			},
@@ -5832,32 +5792,8 @@
 			"tangem_wallet": {
 				"description": "NFC card-based hardware wallet"
 			},
-			"safe_wallet": {
-				"description": "Multi-sig smart contract wallet for DAOs"
-			},
-			"argent_wallet": {
-				"description": "Smart contract wallet with social recovery"
-			},
-			"sequence_wallet": {
-				"description": "Embedded wallet for gaming apps"
-			},
-			"privy_wallet": {
-				"description": "Embedded wallet with social login"
-			},
-			"dynamic_wallet": {
-				"description": "Multi-wallet aggregator for Web3 apps"
-			},
 			"web3auth_wallet": {
 				"description": "MPC-based wallet with social login"
-			},
-			"particle_wallet": {
-				"description": "Chain abstraction wallet infrastructure"
-			},
-			"zerodev_wallet": {
-				"description": "Account abstraction SDK (ERC-4337)"
-			},
-			"biconomy_wallet": {
-				"description": "Gasless transaction infrastructure"
 			},
 			"unisat_wallet": {
 				"description": "Bitcoin wallet for Ordinals & BRC-20"

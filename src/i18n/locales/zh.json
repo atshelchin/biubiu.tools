@@ -1479,7 +1479,6 @@
 			"mev": "MEV",
 			"rwa": "RWA 资产",
 			"ai_crypto": "AI 加密",
-			"wallet_mainstream": "钱包",
 			"cex": "中心化交易所",
 			"gas_burner": "Gas 消耗榜",
 			"trends": "风口热点",
@@ -2102,12 +2101,6 @@
 			},
 			"chainbase": {
 				"description": "一体化数据平台"
-			},
-			"coinbase_wallet": {
-				"description": "Coinbase交易所的自托管钱包"
-			},
-			"trust_wallet": {
-				"description": "币安旗下的移动端多链钱包"
 			},
 			"argent": {
 				"description": "带恢复的智能钱包"
@@ -3903,9 +3896,6 @@
 			"moxie": {
 				"description": "Moxie - Decentralized social platform"
 			},
-			"phantom_wallet": {
-				"description": "支持Solana、以太坊和Polygon的多链钱包"
-			},
 			"backpack_wallet": {
 				"description": "Backpack - Crypto wallet"
 			},
@@ -3915,12 +3905,6 @@
 			"solflare": {
 				"description": "Solflare - Crypto wallet"
 			},
-			"keplr_wallet": {
-				"description": "领先的Cosmos生态钱包"
-			},
-			"leap_wallet": {
-				"description": "多链Cosmos钱包"
-			},
 			"xdefi_wallet": {
 				"description": "XDEFI - Crypto wallet"
 			},
@@ -3929,9 +3913,6 @@
 			},
 			"block_wallet": {
 				"description": "BlockWallet - Crypto wallet"
-			},
-			"okx_wallet": {
-				"description": "OKX的多链Web3钱包"
 			},
 			"x_vitalik": {
 				"description": "以太坊联合创始人"
@@ -5793,27 +5774,6 @@
 			"airdrop_swell": {
 				"description": "Swell Network对swETH质押者的潜在空投"
 			},
-			"metamask_wallet": {
-				"description": "最流行的EVM链浏览器钱包"
-			},
-			"rabby_wallet": {
-				"description": "安全优先的浏览器钱包，支持交易预模拟"
-			},
-			"rainbow_wallet": {
-				"description": "用户友好的以太坊钱包，专注NFT"
-			},
-			"zerion_wallet": {
-				"description": "内置追踪功能的DeFi投资组合钱包"
-			},
-			"frame_wallet": {
-				"description": "桌面系统级以太坊钱包"
-			},
-			"ledger_wallet": {
-				"description": "行业领先的硬件钱包"
-			},
-			"trezor_wallet": {
-				"description": "开源硬件钱包先驱"
-			},
 			"keystone_wallet": {
 				"description": "离线二维码签名硬件钱包"
 			},
@@ -5823,32 +5783,8 @@
 			"tangem_wallet": {
 				"description": "NFC卡片式硬件钱包"
 			},
-			"safe_wallet": {
-				"description": "DAO多签智能合约钱包"
-			},
-			"argent_wallet": {
-				"description": "支持社交恢复的智能合约钱包"
-			},
-			"sequence_wallet": {
-				"description": "游戏应用嵌入式钱包"
-			},
-			"privy_wallet": {
-				"description": "支持社交登录的嵌入式钱包"
-			},
-			"dynamic_wallet": {
-				"description": "Web3应用多钱包聚合器"
-			},
 			"web3auth_wallet": {
 				"description": "基于MPC的社交登录钱包"
-			},
-			"particle_wallet": {
-				"description": "链抽象钱包基础设施"
-			},
-			"zerodev_wallet": {
-				"description": "账户抽象SDK (ERC-4337)"
-			},
-			"biconomy_wallet": {
-				"description": "无Gas交易基础设施"
 			},
 			"unisat_wallet": {
 				"description": "支持Ordinals和BRC-20的比特币钱包"

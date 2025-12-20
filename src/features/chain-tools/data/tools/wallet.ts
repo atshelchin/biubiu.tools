@@ -1002,5 +1002,145 @@ export const walletTools: ExternalTool[] = [
 		tags: ['starknet', 'browser', 'mobile', 'smart-wallet'],
 		chains: ['StarkNet'],
 		color: '#E69A00'
+	},
+
+	// ========== Additional Hardware Wallets ==========
+	{
+		id: 'keystone-wallet',
+		name: 'Keystone',
+		descriptionKey: 'chain_tools.tools.keystone_wallet.description',
+		url: 'https://keyst.one',
+		icon: Lock,
+		category: 'wallet',
+		tags: ['hardware', 'air-gapped', 'qr-code', 'security'],
+		chains: ['Ethereum', 'Bitcoin', 'Solana'],
+		color: '#2C3E50'
+	},
+	{
+		id: 'gridplus-wallet',
+		name: 'GridPlus Lattice1',
+		descriptionKey: 'chain_tools.tools.gridplus_wallet.description',
+		url: 'https://gridplus.io',
+		icon: Lock,
+		category: 'wallet',
+		tags: ['hardware', 'enterprise', 'lattice', 'security'],
+		chains: ['Ethereum'],
+		color: '#00D395'
+	},
+	{
+		id: 'tangem-wallet',
+		name: 'Tangem',
+		descriptionKey: 'chain_tools.tools.tangem_wallet.description',
+		url: 'https://tangem.com',
+		icon: Lock,
+		category: 'wallet',
+		tags: ['hardware', 'card', 'nfc', 'portable'],
+		chains: ['Ethereum', 'Bitcoin', 'Solana'],
+		color: '#000000'
+	},
+
+	// ========== Additional AA & Embedded Wallets ==========
+	{
+		id: 'web3auth-wallet',
+		name: 'Web3Auth',
+		descriptionKey: 'chain_tools.tools.web3auth_wallet.description',
+		url: 'https://web3auth.io',
+		icon: KeyRound,
+		category: 'wallet',
+		tags: ['mpc', 'social-login', 'key-management', 'embedded'],
+		chains: ['Ethereum', 'Solana', 'Polygon'],
+		color: '#0364FF'
+	},
+
+	// ========== Bitcoin & Ordinals Wallets ==========
+	{
+		id: 'unisat-wallet',
+		name: 'UniSat',
+		descriptionKey: 'chain_tools.tools.unisat_wallet.description',
+		url: 'https://unisat.io',
+		icon: Wallet,
+		category: 'wallet',
+		tags: ['bitcoin', 'ordinals', 'brc20', 'inscriptions'],
+		chains: ['Bitcoin'],
+		color: '#F7931A'
+	},
+	{
+		id: 'xverse-wallet',
+		name: 'Xverse',
+		descriptionKey: 'chain_tools.tools.xverse_wallet.description',
+		url: 'https://www.xverse.app',
+		icon: Wallet,
+		category: 'wallet',
+		tags: ['bitcoin', 'stacks', 'ordinals', 'defi'],
+		chains: ['Bitcoin', 'Stacks'],
+		color: '#EE7A30'
+	},
+	{
+		id: 'leather-wallet',
+		name: 'Leather (Hiro)',
+		descriptionKey: 'chain_tools.tools.leather_wallet.description',
+		url: 'https://leather.io',
+		icon: Wallet,
+		category: 'wallet',
+		tags: ['bitcoin', 'stacks', 'defi', 'browser'],
+		chains: ['Bitcoin', 'Stacks'],
+		color: '#12100F'
+	},
+	{
+		id: 'passport-wallet',
+		name: 'Passport (Foundation)',
+		descriptionKey: 'chain_tools.tools.passport_wallet.description',
+		url: 'https://foundationdevices.com/passport',
+		icon: Lock,
+		category: 'wallet',
+		tags: ['hardware', 'bitcoin', 'open-source', 'air-gapped'],
+		chains: ['Bitcoin'],
+		color: '#000000'
+	},
+	{
+		id: 'seedsigner-wallet',
+		name: 'SeedSigner',
+		descriptionKey: 'chain_tools.tools.seedsigner_wallet.description',
+		url: 'https://seedsigner.com',
+		icon: Lock,
+		category: 'wallet',
+		tags: ['hardware', 'diy', 'bitcoin', 'air-gapped'],
+		chains: ['Bitcoin'],
+		color: '#F7931A'
+	},
+
+	// ========== Institutional & Custody ==========
+	{
+		id: 'fireblocks-wallet',
+		name: 'Fireblocks',
+		descriptionKey: 'chain_tools.tools.fireblocks_wallet.description',
+		url: 'https://www.fireblocks.com',
+		icon: Lock,
+		category: 'wallet',
+		tags: ['institutional', 'mpc', 'custody', 'enterprise'],
+		chains: ['Ethereum', 'Bitcoin', 'Solana'],
+		color: '#FF6B00'
+	},
+	{
+		id: 'anchorage-wallet',
+		name: 'Anchorage Digital',
+		descriptionKey: 'chain_tools.tools.anchorage_wallet.description',
+		url: 'https://www.anchorage.com',
+		icon: Lock,
+		category: 'wallet',
+		tags: ['institutional', 'custody', 'bank', 'regulated'],
+		chains: ['Ethereum', 'Bitcoin', 'Solana'],
+		color: '#5B47DB'
+	},
+	{
+		id: 'bitgo-wallet',
+		name: 'BitGo',
+		descriptionKey: 'chain_tools.tools.bitgo_wallet.description',
+		url: 'https://www.bitgo.com',
+		icon: Lock,
+		category: 'wallet',
+		tags: ['institutional', 'custody', 'multisig', 'enterprise'],
+		chains: ['Ethereum', 'Bitcoin'],
+		color: '#00629B'
 	}
 ];
