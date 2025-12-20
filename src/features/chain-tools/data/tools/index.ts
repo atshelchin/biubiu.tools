@@ -23,9 +23,7 @@ export { gamefiTools } from './gamefi';
 export { paymentsTools } from './payments';
 export { fundingTools } from './funding';
 export { newsTools } from './news';
-export { twitterTools } from './twitter';
-export { discordTools } from './discord';
-export { telegramTools } from './telegram';
+export { communityTools } from './discord';
 export { jobsTools } from './jobs';
 export { stablecoinTools } from './stablecoin';
 export { oracleTools } from './oracle';
@@ -65,9 +63,7 @@ import { gamefiTools } from './gamefi';
 import { paymentsTools } from './payments';
 import { fundingTools } from './funding';
 import { newsTools } from './news';
-import { twitterTools } from './twitter';
-import { discordTools } from './discord';
-import { telegramTools } from './telegram';
+import { communityTools } from './discord';
 import { jobsTools } from './jobs';
 import { stablecoinTools } from './stablecoin';
 import { oracleTools } from './oracle';
@@ -112,9 +108,7 @@ export const allTools: ExternalTool[] = [
 	...paymentsTools,
 	...fundingTools,
 	...newsTools,
-	...twitterTools,
-	...discordTools,
-	...telegramTools,
+	...communityTools,
 	...jobsTools,
 	...stablecoinTools,
 	...oracleTools,

@@ -21,9 +21,7 @@ import {
 	CreditCard,
 	Banknote,
 	Newspaper,
-	Twitter,
 	MessageCircle,
-	Send,
 	Briefcase,
 	CircleDollarSign,
 	Activity,
@@ -84,14 +82,12 @@ export const categories: Category[] = [
 	},
 	{ id: 'funding', labelKey: 'chain_tools.categories.funding', color: '#F59E0B', icon: Banknote },
 	{ id: 'news', labelKey: 'chain_tools.categories.news', color: '#EF4444', icon: Newspaper },
-	{ id: 'twitter', labelKey: 'chain_tools.categories.twitter', color: '#1DA1F2', icon: Twitter },
 	{
-		id: 'discord',
-		labelKey: 'chain_tools.categories.discord',
+		id: 'community',
+		labelKey: 'chain_tools.categories.community',
 		color: '#5865F2',
 		icon: MessageCircle
 	},
-	{ id: 'telegram', labelKey: 'chain_tools.categories.telegram', color: '#0088CC', icon: Send },
 	{ id: 'jobs', labelKey: 'chain_tools.categories.jobs', color: '#22C55E', icon: Briefcase },
 	{
 		id: 'stablecoin',
