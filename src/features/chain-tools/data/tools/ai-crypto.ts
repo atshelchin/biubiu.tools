@@ -33,8 +33,7 @@ export const aiCryptoTools: ExternalTool[] = [
 		category: 'ai-crypto',
 		tags: ['ai', 'agents', 'gaming', 'virtual'],
 		chains: ['Base'],
-		color: '#8B5CF6',
-		isFeatured: true
+		color: '#8B5CF6'
 	},
 	{
 		id: 'ai16z',
@@ -45,8 +44,7 @@ export const aiCryptoTools: ExternalTool[] = [
 		category: 'ai-crypto',
 		tags: ['ai', 'agents', 'eliza', 'framework'],
 		chains: ['Solana'],
-		color: '#000000',
-		isFeatured: true
+		color: '#000000'
 	},
 	{
 		id: 'truth-terminal',
@@ -68,8 +66,7 @@ export const aiCryptoTools: ExternalTool[] = [
 		category: 'ai-crypto',
 		tags: ['ai', 'agents', 'autonomous', 'services'],
 		chains: ['Ethereum', 'Gnosis'],
-		color: '#7C3AED',
-		isFeatured: true
+		color: '#7C3AED'
 	},
 	{
 		id: 'flock-io',
@@ -92,8 +89,7 @@ export const aiCryptoTools: ExternalTool[] = [
 		category: 'ai-crypto',
 		tags: ['ai', 'gpu', 'render', 'compute'],
 		chains: ['Solana'],
-		color: '#8B5CF6',
-		isFeatured: true
+		color: '#8B5CF6'
 	},
 	{
 		id: 'akash-network',
@@ -104,8 +100,7 @@ export const aiCryptoTools: ExternalTool[] = [
 		category: 'ai-crypto',
 		tags: ['ai', 'compute', 'cloud', 'decentralized'],
 		chains: ['Cosmos'],
-		color: '#FF4500',
-		isFeatured: true
+		color: '#FF4500'
 	},
 	{
 		id: 'io-net',
@@ -127,8 +122,7 @@ export const aiCryptoTools: ExternalTool[] = [
 		category: 'ai-crypto',
 		tags: ['ai', 'ml', 'network', 'incentive'],
 		chains: ['Bittensor'],
-		color: '#000000',
-		isFeatured: true
+		color: '#000000'
 	},
 	{
 		id: 'ritual',
@@ -172,8 +166,7 @@ export const aiCryptoTools: ExternalTool[] = [
 		category: 'ai-crypto',
 		tags: ['ai', 'agents', 'data', 'automation'],
 		chains: ['Ethereum', 'Fetch'],
-		color: '#1D1D3B',
-		isFeatured: true
+		color: '#1D1D3B'
 	},
 	{
 		id: 'ocean-protocol',
@@ -272,8 +265,7 @@ export const aiCryptoTools: ExternalTool[] = [
 		icon: Search,
 		category: 'ai-crypto',
 		tags: ['ai', 'agents', 'tracking', 'analytics'],
-		color: '#F59E0B',
-		isFeatured: true
+		color: '#F59E0B'
 	},
 	{
 		id: 'virtuals-terminal',

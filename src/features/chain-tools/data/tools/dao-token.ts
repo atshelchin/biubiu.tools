@@ -35,8 +35,7 @@ export const daoTokenTools: ExternalTool[] = [
 		category: 'dao-token',
 		tags: ['governance', 'defi', 'dex', 'uniswap'],
 		chains: ['Ethereum'],
-		color: '#FF007A',
-		isFeatured: true
+		color: '#FF007A'
 	},
 	{
 		id: 'aave-token',
@@ -47,8 +46,7 @@ export const daoTokenTools: ExternalTool[] = [
 		category: 'dao-token',
 		tags: ['governance', 'defi', 'lending', 'aave'],
 		chains: ['Ethereum'],
-		color: '#B6509E',
-		isFeatured: true
+		color: '#B6509E'
 	},
 	{
 		id: 'mkr-token',
@@ -59,8 +57,7 @@ export const daoTokenTools: ExternalTool[] = [
 		category: 'dao-token',
 		tags: ['governance', 'defi', 'stablecoin', 'maker'],
 		chains: ['Ethereum'],
-		color: '#1AAB9B',
-		isFeatured: true
+		color: '#1AAB9B'
 	},
 	{
 		id: 'crv-token',
@@ -104,8 +101,7 @@ export const daoTokenTools: ExternalTool[] = [
 		category: 'dao-token',
 		tags: ['governance', 'staking', 'liquid-staking', 'lido'],
 		chains: ['Ethereum'],
-		color: '#00A3FF',
-		isFeatured: true
+		color: '#00A3FF'
 	},
 	{
 		id: 'gmx-token',
@@ -193,8 +189,7 @@ export const daoTokenTools: ExternalTool[] = [
 		category: 'dao-token',
 		tags: ['governance', 'defi', 'perps', 'dydx'],
 		chains: ['dYdX'],
-		color: '#6966FF',
-		isFeatured: true
+		color: '#6966FF'
 	},
 	{
 		id: 'cvx-token',
@@ -227,8 +222,7 @@ export const daoTokenTools: ExternalTool[] = [
 		category: 'dao-token',
 		tags: ['governance', 'nft', 'marketplace', 'blur'],
 		chains: ['Ethereum'],
-		color: '#FF6B00',
-		isFeatured: true
+		color: '#FF6B00'
 	},
 	{
 		id: 'ape-token',
@@ -294,8 +288,7 @@ export const daoTokenTools: ExternalTool[] = [
 		category: 'dao-token',
 		tags: ['governance', 'defi', 'solana', 'jupiter'],
 		chains: ['Solana'],
-		color: '#00D395',
-		isFeatured: true
+		color: '#00D395'
 	},
 	{
 		id: 'ray-token',
@@ -340,8 +333,7 @@ export const daoTokenTools: ExternalTool[] = [
 		category: 'dao-token',
 		tags: ['governance', 'l2', 'arbitrum', 'rollup'],
 		chains: ['Arbitrum'],
-		color: '#28A0F0',
-		isFeatured: true
+		color: '#28A0F0'
 	},
 	{
 		id: 'op-token',
@@ -352,8 +344,7 @@ export const daoTokenTools: ExternalTool[] = [
 		category: 'dao-token',
 		tags: ['governance', 'l2', 'optimism', 'rollup'],
 		chains: ['Optimism'],
-		color: '#FF0420',
-		isFeatured: true
+		color: '#FF0420'
 	},
 	{
 		id: 'strk-token',
@@ -475,8 +466,7 @@ export const daoTokenTools: ExternalTool[] = [
 		icon: Vote,
 		category: 'dao-token',
 		tags: ['governance', 'voting', 'platform', 'delegation'],
-		color: '#4F46E5',
-		isFeatured: true
+		color: '#4F46E5'
 	},
 	{
 		id: 'snapshot-governance',
@@ -486,8 +476,7 @@ export const daoTokenTools: ExternalTool[] = [
 		icon: Vote,
 		category: 'dao-token',
 		tags: ['governance', 'voting', 'off-chain', 'gasless'],
-		color: '#F3B04E',
-		isFeatured: true
+		color: '#F3B04E'
 	},
 	{
 		id: 'boardroom',

@@ -34,8 +34,7 @@ export const airdropTokenTools: ExternalTool[] = [
 		category: 'airdrop-token',
 		tags: ['airdrop', 'uniswap', 'defi', '2020', 'legendary'],
 		chains: ['Ethereum'],
-		color: '#FF007A',
-		isFeatured: true
+		color: '#FF007A'
 	},
 	{
 		id: 'airdrop-ens',
@@ -46,8 +45,7 @@ export const airdropTokenTools: ExternalTool[] = [
 		category: 'airdrop-token',
 		tags: ['airdrop', 'ens', 'identity', '2021', 'domains'],
 		chains: ['Ethereum'],
-		color: '#5298FF',
-		isFeatured: true
+		color: '#5298FF'
 	},
 	{
 		id: 'airdrop-dydx',
@@ -92,8 +90,7 @@ export const airdropTokenTools: ExternalTool[] = [
 		category: 'airdrop-token',
 		tags: ['airdrop', 'optimism', 'l2', '2022', 'rollup'],
 		chains: ['Optimism'],
-		color: '#FF0420',
-		isFeatured: true
+		color: '#FF0420'
 	},
 	{
 		id: 'airdrop-arb',
@@ -104,8 +101,7 @@ export const airdropTokenTools: ExternalTool[] = [
 		category: 'airdrop-token',
 		tags: ['airdrop', 'arbitrum', 'l2', '2023', 'rollup'],
 		chains: ['Arbitrum'],
-		color: '#28A0F0',
-		isFeatured: true
+		color: '#28A0F0'
 	},
 	{
 		id: 'airdrop-blur',
@@ -149,8 +145,7 @@ export const airdropTokenTools: ExternalTool[] = [
 		category: 'airdrop-token',
 		tags: ['airdrop', 'jupiter', 'solana', '2024', 'aggregator'],
 		chains: ['Solana'],
-		color: '#00D395',
-		isFeatured: true
+		color: '#00D395'
 	},
 	{
 		id: 'airdrop-w',
@@ -183,8 +178,7 @@ export const airdropTokenTools: ExternalTool[] = [
 		category: 'airdrop-token',
 		tags: ['airdrop', 'eigenlayer', 'restaking', '2024', 'avs'],
 		chains: ['Ethereum'],
-		color: '#1F0047',
-		isFeatured: true
+		color: '#1F0047'
 	},
 	{
 		id: 'airdrop-pyth',
@@ -305,8 +299,7 @@ export const airdropTokenTools: ExternalTool[] = [
 		category: 'airdrop-token',
 		tags: ['airdrop', 'etherfi', 'liquid-staking', '2024', 'restaking'],
 		chains: ['Ethereum'],
-		color: '#735CDD',
-		isFeatured: true
+		color: '#735CDD'
 	},
 	{
 		id: 'airdrop-renzo',
@@ -406,8 +399,7 @@ export const airdropTokenTools: ExternalTool[] = [
 		icon: Search,
 		category: 'airdrop-token',
 		tags: ['airdrop', 'tracking', 'eligibility', 'checker'],
-		color: '#6366F1',
-		isFeatured: true
+		color: '#6366F1'
 	},
 	{
 		id: 'defillama-airdrops',

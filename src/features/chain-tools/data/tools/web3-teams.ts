@@ -32,7 +32,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	// 	category: 'web3-teams',
 	// 	tags: ['vc', 'tier1', 'multi-stage', 'regulatory'],
 	// 	color: '#FF6B35',
-	// 	isFeatured: true
+	//
 	// },
 	{
 		id: 'paradigm-vc',
@@ -42,8 +42,7 @@ export const web3TeamsTools: ExternalTool[] = [
 		icon: Building2,
 		category: 'web3-teams',
 		tags: ['vc', 'tier1', 'research', 'technical'],
-		color: '#000000',
-		isFeatured: true
+		color: '#000000'
 	},
 	{
 		id: 'sequoia-crypto',
@@ -63,8 +62,7 @@ export const web3TeamsTools: ExternalTool[] = [
 		icon: Building2,
 		category: 'web3-teams',
 		tags: ['vc', 'tier1', 'crypto-native', 'early-stage'],
-		color: '#6366F1',
-		isFeatured: true
+		color: '#6366F1'
 	},
 	{
 		id: 'pantera-capital',
@@ -84,8 +82,7 @@ export const web3TeamsTools: ExternalTool[] = [
 		icon: Building2,
 		category: 'web3-teams',
 		tags: ['vc', 'tier1', 'asia', 'global'],
-		color: '#FF6B00',
-		isFeatured: true
+		color: '#FF6B00'
 	},
 	{
 		id: 'multicoin-capital',
@@ -217,8 +214,7 @@ export const web3TeamsTools: ExternalTool[] = [
 		icon: Building2,
 		category: 'web3-teams',
 		tags: ['vc', 'corporate', 'exchange', 'ecosystem'],
-		color: '#0052FF',
-		isFeatured: true
+		color: '#0052FF'
 	},
 	{
 		id: 'binance-labs',
@@ -228,8 +224,7 @@ export const web3TeamsTools: ExternalTool[] = [
 		icon: Building2,
 		category: 'web3-teams',
 		tags: ['vc', 'corporate', 'exchange', 'incubator'],
-		color: '#F0B90B',
-		isFeatured: true
+		color: '#F0B90B'
 	},
 	{
 		id: 'okx-ventures',
@@ -280,8 +275,7 @@ export const web3TeamsTools: ExternalTool[] = [
 		icon: Rocket,
 		category: 'web3-teams',
 		tags: ['accelerator', 'web3', 'mentorship', 'batch'],
-		color: '#000000',
-		isFeatured: true
+		color: '#000000'
 	},
 	{
 		id: 'ycombinator-crypto',
@@ -332,8 +326,7 @@ export const web3TeamsTools: ExternalTool[] = [
 		icon: Users,
 		category: 'web3-teams',
 		tags: ['builder', 'metamask', 'infura', 'ethereum'],
-		color: '#3259A5',
-		isFeatured: true
+		color: '#3259A5'
 	},
 	{
 		id: 'offchain-labs',

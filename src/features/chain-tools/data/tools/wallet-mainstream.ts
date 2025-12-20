@@ -34,8 +34,7 @@ export const walletMainstreamTools: ExternalTool[] = [
 		category: 'wallet-mainstream',
 		tags: ['wallet', 'browser', 'extension', 'evm'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism', 'BSC', 'Avalanche'],
-		color: '#E2761B',
-		isFeatured: true
+		color: '#E2761B'
 	},
 	{
 		id: 'phantom-wallet',
@@ -46,8 +45,7 @@ export const walletMainstreamTools: ExternalTool[] = [
 		category: 'wallet-mainstream',
 		tags: ['wallet', 'solana', 'ethereum', 'polygon'],
 		chains: ['Solana', 'Ethereum', 'Polygon'],
-		color: '#AB9FF2',
-		isFeatured: true
+		color: '#AB9FF2'
 	},
 	{
 		id: 'rabby-wallet',
@@ -58,8 +56,7 @@ export const walletMainstreamTools: ExternalTool[] = [
 		category: 'wallet-mainstream',
 		tags: ['wallet', 'browser', 'security', 'debank'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism'],
-		color: '#7C3AED',
-		isFeatured: true
+		color: '#7C3AED'
 	},
 	{
 		id: 'coinbase-wallet',
@@ -92,7 +89,8 @@ export const walletMainstreamTools: ExternalTool[] = [
 		category: 'wallet-mainstream',
 		tags: ['wallet', 'mobile', 'binance', 'multi-chain'],
 		chains: ['Ethereum', 'BSC', 'Polygon', 'Solana'],
-		color: '#3375BB'
+		color: '#3375BB',
+		isFeatured: true
 	},
 	{
 		id: 'rainbow-wallet',
@@ -137,8 +135,7 @@ export const walletMainstreamTools: ExternalTool[] = [
 		category: 'wallet-mainstream',
 		tags: ['wallet', 'hardware', 'cold-storage', 'security'],
 		chains: ['Ethereum', 'Bitcoin', 'Solana', 'Polygon'],
-		color: '#000000',
-		isFeatured: true
+		color: '#000000'
 	},
 	{
 		id: 'trezor-wallet',
@@ -194,8 +191,7 @@ export const walletMainstreamTools: ExternalTool[] = [
 		category: 'wallet-mainstream',
 		tags: ['wallet', 'multisig', 'smart-contract', 'dao'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism', 'Gnosis'],
-		color: '#12FF80',
-		isFeatured: true
+		color: '#12FF80'
 	},
 	{
 		id: 'argent-wallet',
@@ -206,8 +202,7 @@ export const walletMainstreamTools: ExternalTool[] = [
 		category: 'wallet-mainstream',
 		tags: ['wallet', 'smart-contract', 'social-recovery', 'starknet'],
 		chains: ['Ethereum', 'StarkNet'],
-		color: '#FF875B',
-		isFeatured: true
+		color: '#FF875B'
 	},
 	{
 		id: 'sequence-wallet',
@@ -386,8 +381,7 @@ export const walletMainstreamTools: ExternalTool[] = [
 		category: 'wallet-mainstream',
 		tags: ['wallet', 'institutional', 'mpc', 'custody'],
 		chains: ['Ethereum', 'Bitcoin', 'Solana'],
-		color: '#FF6B00',
-		isFeatured: true
+		color: '#FF6B00'
 	},
 	{
 		id: 'anchorage-wallet',

@@ -14,8 +14,7 @@ export const newsTools: ExternalTool[] = [
 		icon: Newspaper,
 		category: 'news',
 		tags: ['news', 'research', 'funding', 'data'],
-		color: '#000000',
-		isFeatured: true
+		color: '#000000'
 	},
 	{
 		id: 'coindesk',
@@ -25,7 +24,8 @@ export const newsTools: ExternalTool[] = [
 		icon: Newspaper,
 		category: 'news',
 		tags: ['news', 'media', 'crypto', 'bitcoin'],
-		color: '#0052FF'
+		color: '#0052FF',
+		isFeatured: true
 	},
 	{
 		id: 'cointelegraph',
@@ -45,7 +45,8 @@ export const newsTools: ExternalTool[] = [
 		icon: Newspaper,
 		category: 'news',
 		tags: ['news', 'guides', 'crypto', 'web3'],
-		color: '#00DC82'
+		color: '#00DC82',
+		isFeatured: true
 	},
 	{
 		id: 'blockworks',
@@ -77,8 +78,7 @@ export const newsTools: ExternalTool[] = [
 		icon: TrendingUp,
 		category: 'news',
 		tags: ['funding', 'database', 'research', 'web3'],
-		color: '#3B82F6',
-		isFeatured: true
+		color: '#3B82F6'
 	},
 	{
 		id: 'cryptorank',
@@ -130,8 +130,7 @@ export const newsTools: ExternalTool[] = [
 		icon: Rss,
 		category: 'news',
 		tags: ['newsletter', 'podcast', 'defi', 'education'],
-		color: '#FF0420',
-		isFeatured: true
+		color: '#FF0420'
 	},
 	{
 		id: 'defiant',
@@ -235,8 +234,7 @@ export const newsTools: ExternalTool[] = [
 		icon: BookOpen,
 		category: 'news',
 		tags: ['research', 'reports', 'institutional', 'analysis'],
-		color: '#3B82F6',
-		isFeatured: true
+		color: '#3B82F6'
 	},
 	{
 		id: 'galaxy-research',
@@ -522,8 +520,7 @@ export const newsTools: ExternalTool[] = [
 		icon: Newspaper,
 		category: 'news',
 		tags: ['news', 'bitcoin', 'culture', 'education'],
-		color: '#F7931A',
-		isFeatured: true
+		color: '#F7931A'
 	},
 	{
 		id: 'protos',
@@ -713,8 +710,7 @@ export const newsTools: ExternalTool[] = [
 		icon: Rss,
 		category: 'news',
 		tags: ['blog', 'ethereum', 'research', 'philosophy'],
-		color: '#627EEA',
-		isFeatured: true
+		color: '#627EEA'
 	},
 	{
 		id: 'paradigm-blog',
@@ -734,8 +730,7 @@ export const newsTools: ExternalTool[] = [
 		icon: BookOpen,
 		category: 'news',
 		tags: ['research', 'vc', 'crypto', 'reports'],
-		color: '#000000',
-		isFeatured: true
+		color: '#000000'
 	},
 	{
 		id: 'binanceresearch',

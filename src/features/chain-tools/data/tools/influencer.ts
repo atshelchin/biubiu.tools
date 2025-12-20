@@ -31,8 +31,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'ethereum', 'founder', 'english'],
-		color: '#627EEA',
-		isFeatured: true
+		color: '#627EEA'
 	},
 	{
 		id: 'kol-cz-binance',
@@ -42,8 +41,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'binance', 'founder', 'english', 'chinese'],
-		color: '#F0B90B',
-		isFeatured: true
+		color: '#F0B90B'
 	},
 	{
 		id: 'kol-brian-armstrong',
@@ -53,8 +51,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'coinbase', 'ceo', 'english'],
-		color: '#0052FF',
-		isFeatured: true
+		color: '#0052FF'
 	},
 	{
 		id: 'kol-balaji',
@@ -64,8 +61,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'a16z', 'network-state', 'english'],
-		color: '#1DA1F2',
-		isFeatured: true
+		color: '#1DA1F2'
 	},
 	{
 		id: 'kol-naval',
@@ -85,8 +81,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'trader', 'defi', 'english'],
-		color: '#1DA1F2',
-		isFeatured: true
+		color: '#1DA1F2'
 	},
 	{
 		id: 'kol-hsaka',
@@ -116,8 +111,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'on-chain', 'analytics', 'english'],
-		color: '#1DA1F2',
-		isFeatured: true
+		color: '#1DA1F2'
 	},
 	{
 		id: 'kol-defi-dad',
@@ -137,8 +131,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'nft', 'collector', 'english'],
-		color: '#1DA1F2',
-		isFeatured: true
+		color: '#1DA1F2'
 	},
 	{
 		id: 'kol-ansem',
@@ -148,8 +141,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'solana', 'meme', 'english'],
-		color: '#9945FF',
-		isFeatured: true
+		color: '#9945FF'
 	},
 	{
 		id: 'kol-cryptohayes',
@@ -159,8 +151,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'bitmex', 'macro', 'english'],
-		color: '#1DA1F2',
-		isFeatured: true
+		color: '#1DA1F2'
 	},
 	{
 		id: 'kol-raoul-pal',
@@ -170,16 +161,6 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'macro', 'realvision', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'kol-ericryptoguy',
-		name: 'Eric Cryptoman',
-		descriptionKey: 'chain_tools.tools.kol_ericryptoguy.description',
-		url: 'https://x.com/EricCryptoman',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'trader', 'altcoins', 'english'],
 		color: '#1DA1F2'
 	},
 	{
@@ -210,8 +191,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'news', 'china', 'english'],
-		color: '#1DA1F2',
-		isFeatured: true
+		color: '#1DA1F2'
 	},
 	{
 		id: 'kol-tier10k',
@@ -232,8 +212,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'podcast', 'defi', 'english'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'kol-coinbureau',
@@ -243,8 +222,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'education', 'english'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'kol-unchained-yt',
@@ -269,17 +247,6 @@ export const influencerTools: ExternalTool[] = [
 
 	// ========== Chinese 中文 KOL ==========
 	{
-		id: 'kol-bitfish',
-		name: '比特傻 (BitFish)',
-		descriptionKey: 'chain_tools.tools.kol_bitfish.description',
-		url: 'https://x.com/bitfish1',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'chinese', 'analysis', 'macro'],
-		color: '#DE2910',
-		isFeatured: true
-	},
-	{
 		id: 'kol-colin-wu',
 		name: '吴说区块链 (Colin Wu)',
 		descriptionKey: 'chain_tools.tools.kol_colin_wu.description',
@@ -287,8 +254,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'chinese', 'news', 'mining'],
-		color: '#DE2910',
-		isFeatured: true
+		color: '#DE2910'
 	},
 	{
 		id: 'kol-mindao',
@@ -318,8 +284,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'chinese', 'data', 'analysis'],
-		color: '#DE2910',
-		isFeatured: true
+		color: '#DE2910'
 	},
 	{
 		id: 'kol-0xsun',
@@ -329,16 +294,6 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'chinese', 'nft', 'alpha'],
-		color: '#DE2910'
-	},
-	{
-		id: 'kol-bitwu',
-		name: 'BitWu吴子龙',
-		descriptionKey: 'chain_tools.tools.kol_bitwu.description',
-		url: 'https://x.com/BTW0205',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'chinese', 'trader', 'education'],
 		color: '#DE2910'
 	},
 
@@ -351,8 +306,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'japanese', 'defi', 'sushi'],
-		color: '#BC002D',
-		isFeatured: true
+		color: '#BC002D'
 	},
 	{
 		id: 'kol-ikehaya',
@@ -362,17 +316,6 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'japanese', 'nft', 'creator'],
-		color: '#BC002D',
-		isFeatured: true
-	},
-	{
-		id: 'kol-crypto-navi',
-		name: 'クリプトナビ',
-		descriptionKey: 'chain_tools.tools.kol_crypto_navi.description',
-		url: 'https://www.youtube.com/@cryptonavi',
-		icon: Youtube,
-		category: 'influencer',
-		tags: ['kol', 'japanese', 'youtube', 'education'],
 		color: '#BC002D'
 	},
 
@@ -385,31 +328,10 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'korean', 'cryptoquant', 'on-chain'],
-		color: '#003478',
-		isFeatured: true
-	},
-	{
-		id: 'kol-crypto-god',
-		name: '크립토갓 (Crypto God)',
-		descriptionKey: 'chain_tools.tools.kol_crypto_god.description',
-		url: 'https://www.youtube.com/@cryptogod_kr',
-		icon: Youtube,
-		category: 'influencer',
-		tags: ['kol', 'korean', 'youtube', 'analysis'],
 		color: '#003478'
 	},
 
 	// ========== Spanish Español KOL ==========
-	{
-		id: 'kol-cripto247',
-		name: 'Cripto247',
-		descriptionKey: 'chain_tools.tools.kol_cripto247.description',
-		url: 'https://x.com/Cripto247',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'spanish', 'news', 'latam'],
-		color: '#F1BF00'
-	},
 	{
 		id: 'kol-jorge-crypto',
 		name: 'Jorge Crypto',
@@ -422,16 +344,6 @@ export const influencerTools: ExternalTool[] = [
 	},
 
 	// ========== Portuguese Português KOL ==========
-	{
-		id: 'kol-criptomaniacos',
-		name: 'Criptomaníacos',
-		descriptionKey: 'chain_tools.tools.kol_criptomaniacos.description',
-		url: 'https://www.youtube.com/@criptomaniacos',
-		icon: Youtube,
-		category: 'influencer',
-		tags: ['kol', 'portuguese', 'youtube', 'education'],
-		color: '#009B3A'
-	},
 	{
 		id: 'kol-bitboy-br',
 		name: 'Gustavo Cerbasi Crypto',
@@ -452,8 +364,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'french', 'youtube', 'education'],
-		color: '#002654',
-		isFeatured: true
+		color: '#002654'
 	},
 	{
 		id: 'kol-cryptoast',
@@ -485,8 +396,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'german', 'bitcoin', 'education'],
-		color: '#FFCC00',
-		isFeatured: true
+		color: '#FFCC00'
 	},
 	{
 		id: 'kol-julian-hosp',
@@ -546,17 +456,6 @@ export const influencerTools: ExternalTool[] = [
 	},
 
 	// ========== Vietnamese Tiếng Việt KOL ==========
-	{
-		id: 'kol-coin68',
-		name: 'Coin68',
-		descriptionKey: 'chain_tools.tools.kol_coin68.description',
-		url: 'https://x.com/coin68',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'vietnamese', 'news', 'media'],
-		color: '#DA251D',
-		isFeatured: true
-	},
 
 	// ========== Indonesian Bahasa KOL ==========
 	{
@@ -567,8 +466,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'indonesian', 'news', 'education'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'kol-indodax',
@@ -590,8 +488,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'thai', 'exchange', 'education'],
-		color: '#FF6C00',
-		isFeatured: true
+		color: '#FF6C00'
 	},
 	{
 		id: 'kol-siam-block',
@@ -671,8 +568,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'english', 'research', 'flashbots'],
-		color: '#1DA1F2',
-		isFeatured: true
+		color: '#1DA1F2'
 	},
 	{
 		id: 'kol-banteg',
@@ -692,17 +588,6 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'english', 'nft', 'degods'],
-		color: '#1DA1F2',
-		isFeatured: true
-	},
-	{
-		id: 'kol-gametheory',
-		name: 'Game Theory',
-		descriptionKey: 'chain_tools.tools.kol_gametheory.description',
-		url: 'https://x.com/gametheory',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'english', 'analysis', 'macro'],
 		color: '#1DA1F2'
 	},
 	{
@@ -713,8 +598,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'english', 'investigation', 'security'],
-		color: '#1DA1F2',
-		isFeatured: true
+		color: '#1DA1F2'
 	},
 	{
 		id: 'kol-bitcoinmagazine',
@@ -724,8 +608,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'english', 'bitcoin', 'news'],
-		color: '#F7931A',
-		isFeatured: true
+		color: '#F7931A'
 	},
 	{
 		id: 'kol-saylor',
@@ -735,8 +618,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'english', 'bitcoin', 'microstrategy'],
-		color: '#F7931A',
-		isFeatured: true
+		color: '#F7931A'
 	},
 	{
 		id: 'kol-layah',
@@ -756,8 +638,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'english', 'bitcoin', 'investor'],
-		color: '#F7931A',
-		isFeatured: true
+		color: '#F7931A'
 	},
 	{
 		id: 'kol-samczsun',
@@ -767,8 +648,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'english', 'security', 'paradigm'],
-		color: '#1DA1F2',
-		isFeatured: true
+		color: '#1DA1F2'
 	},
 	{
 		id: 'kol-iamDCinvestor',
@@ -798,8 +678,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'english', 'aave', 'lens'],
-		color: '#B6509E',
-		isFeatured: true
+		color: '#B6509E'
 	},
 	{
 		id: 'kol-haydenzadams',
@@ -809,8 +688,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'english', 'uniswap', 'founder'],
-		color: '#FF007A',
-		isFeatured: true
+		color: '#FF007A'
 	},
 	{
 		id: 'kol-defiance',
@@ -820,8 +698,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'english', 'defi', 'research'],
-		color: '#1DA1F2',
-		isFeatured: true
+		color: '#1DA1F2'
 	},
 	{
 		id: 'kol-inversebrah',
@@ -861,8 +738,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'english', 'data', 'analytics'],
-		color: '#1DA1F2',
-		isFeatured: true
+		color: '#1DA1F2'
 	},
 	{
 		id: 'kol-sandymillin',
@@ -914,8 +790,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'education', 'english'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'kol-finematics',
@@ -925,8 +800,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'defi', 'education'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'kol-epicenter',
@@ -956,8 +830,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'live', 'english'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'kol-realvision',
@@ -999,8 +872,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'chinese', 'research', 'defi'],
-		color: '#DE2910',
-		isFeatured: true
+		color: '#DE2910'
 	},
 	{
 		id: 'kol-jamestoken',
@@ -1020,8 +892,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'chinese', 'security', 'research'],
-		color: '#DE2910',
-		isFeatured: true
+		color: '#DE2910'
 	},
 	{
 		id: 'kol-0xtodd',
@@ -1117,8 +988,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'spanish', 'news', 'latam'],
-		color: '#F1BF00',
-		isFeatured: true
+		color: '#F1BF00'
 	},
 	{
 		id: 'kol-bitcobie',
@@ -1150,8 +1020,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'english', 'trading'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-aantonop',
@@ -1161,8 +1030,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'bitcoin', 'education'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-datadash',
@@ -1172,8 +1040,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'analysis', 'english'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-altcoin-daily',
@@ -1183,8 +1050,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'altcoins', 'news'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-crypto-casey',
@@ -1204,8 +1070,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'analysis', 'english'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-ivan-on-tech',
@@ -1215,8 +1080,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'education', 'english'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-the-moon',
@@ -1246,8 +1110,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'analysis', 'macro'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-crypto-zombies',
@@ -1287,8 +1150,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'defi', 'english'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-crypto-daily',
@@ -1348,8 +1210,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'news', 'english'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-paul-barron',
@@ -1429,8 +1290,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'analysis', 'english'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-crypto-crew',
@@ -1460,8 +1320,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'development', 'english'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-eat-the-blocks',
@@ -1491,8 +1350,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'development', 'english'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-moralis',
@@ -1532,8 +1390,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'oracle', 'english'],
-		color: '#375BD2',
-		isFeatured: true
+		color: '#375BD2'
 	},
 	{
 		id: 'yt-lex-fridman',
@@ -1543,8 +1400,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'podcast', 'interview'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-what-bitcoin',
@@ -1554,8 +1410,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'bitcoin', 'podcast'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-crypto-tips-matt',
@@ -1575,8 +1430,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'finance', 'english'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-graham-stephan',
@@ -1596,8 +1450,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'altcoins', 'english'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-coinsider',
@@ -1787,8 +1640,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'bitcoin', 'news'],
-		color: '#F7931A',
-		isFeatured: true
+		color: '#F7931A'
 	},
 	{
 		id: 'yt-wolf-crypto',
@@ -1818,8 +1670,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'defi', 'news'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-coindesk',
@@ -1829,8 +1680,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'news', 'english'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-decrypt',
@@ -1940,8 +1790,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'bitcoin', 'podcast'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-preston-pysh',
@@ -1991,8 +1840,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'altcoins', 'news'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-coinmarketcap',
@@ -2002,8 +1850,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'news', 'data'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-coingecko',
@@ -2033,8 +1880,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Youtube,
 		category: 'influencer',
 		tags: ['kol', 'youtube', 'vc', 'research'],
-		color: '#FF0000',
-		isFeatured: true
+		color: '#FF0000'
 	},
 	{
 		id: 'yt-pantera-capital',
@@ -2056,8 +1902,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Mic,
 		category: 'influencer',
 		tags: ['kol', 'podcast', 'interview', 'english'],
-		color: '#8B5CF6',
-		isFeatured: true
+		color: '#8B5CF6'
 	},
 	{
 		id: 'pod-bankless-pod',
@@ -2067,8 +1912,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Mic,
 		category: 'influencer',
 		tags: ['kol', 'podcast', 'defi', 'english'],
-		color: '#8B5CF6',
-		isFeatured: true
+		color: '#8B5CF6'
 	},
 	{
 		id: 'pod-up-only',
@@ -2108,8 +1952,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Mic,
 		category: 'influencer',
 		tags: ['kol', 'podcast', 'bitcoin', 'english'],
-		color: '#8B5CF6',
-		isFeatured: true
+		color: '#8B5CF6'
 	},
 	{
 		id: 'pod-stephan-livera',
@@ -2169,8 +2012,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Mic,
 		category: 'influencer',
 		tags: ['kol', 'podcast', 'bitcoin', 'english'],
-		color: '#8B5CF6',
-		isFeatured: true
+		color: '#8B5CF6'
 	},
 	{
 		id: 'pod-zero-knowledge',
@@ -2180,8 +2022,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Mic,
 		category: 'influencer',
 		tags: ['kol', 'podcast', 'zk', 'english'],
-		color: '#8B5CF6',
-		isFeatured: true
+		color: '#8B5CF6'
 	},
 	{
 		id: 'pod-epicenter-pod',
@@ -2201,8 +2042,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Mic,
 		category: 'influencer',
 		tags: ['kol', 'podcast', 'macro', 'english'],
-		color: '#8B5CF6',
-		isFeatured: true
+		color: '#8B5CF6'
 	},
 	{
 		id: 'pod-bell-curve-pod',
@@ -2222,8 +2062,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Mic,
 		category: 'influencer',
 		tags: ['kol', 'podcast', 'research', 'english'],
-		color: '#8B5CF6',
-		isFeatured: true
+		color: '#8B5CF6'
 	},
 	{
 		id: 'pod-lightspeed',
@@ -2283,8 +2122,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Mic,
 		category: 'influencer',
 		tags: ['kol', 'podcast', 'vc', 'english'],
-		color: '#8B5CF6',
-		isFeatured: true
+		color: '#8B5CF6'
 	},
 	{
 		id: 'pod-breakdown',
@@ -2516,184 +2354,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'twitter', 'altcoins', 'english'],
-		color: '#1DA1F2',
-		isFeatured: true
-	},
-	{
-		id: 'tw-cryptowendy',
-		name: 'Crypto Wendy O',
-		descriptionKey: 'chain_tools.tools.tw_cryptowendy.description',
-		url: 'https://x.com/CryptoWendyO',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'trading', 'english'],
 		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-austinvirts',
-		name: 'Austin Virts',
-		descriptionKey: 'chain_tools.tools.tw_austinvirts.description',
-		url: 'https://x.com/austinvirts',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'crypto', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-dwr',
-		name: 'Dan Romero (dwr)',
-		descriptionKey: 'chain_tools.tools.tw_dwr.description',
-		url: 'https://x.com/dwr',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'farcaster', 'english'],
-		color: '#1DA1F2',
-		isFeatured: true
-	},
-	{
-		id: 'tw-jessepollak',
-		name: 'Jesse Pollak',
-		descriptionKey: 'chain_tools.tools.tw_jessepollak.description',
-		url: 'https://x.com/jessepollak',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'base', 'english'],
-		color: '#1DA1F2',
-		isFeatured: true
-	},
-	{
-		id: 'tw-degenspartan',
-		name: 'DegenSpartan',
-		descriptionKey: 'chain_tools.tools.tw_degenspartan.description',
-		url: 'https://x.com/DegenSpartan',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'trading', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-pentosh1',
-		name: 'Pentoshi',
-		descriptionKey: 'chain_tools.tools.tw_pentosh1.description',
-		url: 'https://x.com/Pentosh1',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'trading', 'english'],
-		color: '#1DA1F2',
-		isFeatured: true
-	},
-	{
-		id: 'tw-100trillionusd',
-		name: 'PlanB',
-		descriptionKey: 'chain_tools.tools.tw_100trillionusd.description',
-		url: 'https://x.com/100trillionUSD',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'bitcoin', 'english'],
-		color: '#F7931A',
-		isFeatured: true
-	},
-	{
-		id: 'tw-crediblecrypto',
-		name: 'Credible Crypto',
-		descriptionKey: 'chain_tools.tools.tw_crediblecrypto.description',
-		url: 'https://x.com/CredibleCrypto',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'trading', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-icebergnavig',
-		name: 'Ice Berg',
-		descriptionKey: 'chain_tools.tools.tw_icebergnavig.description',
-		url: 'https://x.com/IcebergNavig',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'trading', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-tikibarvc',
-		name: 'Tiki Bar VC',
-		descriptionKey: 'chain_tools.tools.tw_tikibarvc.description',
-		url: 'https://x.com/TikiBarVC',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'vc', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-girlgone_crypto',
-		name: 'Girl Gone Crypto',
-		descriptionKey: 'chain_tools.tools.tw_girlgone_crypto.description',
-		url: 'https://x.com/girlgone_crypto',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'education', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-ratio-finance',
-		name: 'The Ratio',
-		descriptionKey: 'chain_tools.tools.tw_ratio_finance.description',
-		url: 'https://x.com/RatioFinance_',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'defi', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-doomsdayapp',
-		name: 'Doomsday',
-		descriptionKey: 'chain_tools.tools.tw_doomsdayapp.description',
-		url: 'https://x.com/DoomsdayApp',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'alpha', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-route2fi',
-		name: 'Route 2 FI',
-		descriptionKey: 'chain_tools.tools.tw_route2fi.description',
-		url: 'https://x.com/Route2FI',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'defi', 'english'],
-		color: '#1DA1F2',
-		isFeatured: true
-	},
-	{
-		id: 'tw-0xngmi',
-		name: '0xngmi',
-		descriptionKey: 'chain_tools.tools.tw_0xngmi.description',
-		url: 'https://x.com/0xngmi',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'defi', 'development'],
-		color: '#1DA1F2',
-		isFeatured: true
-	},
-	{
-		id: 'tw-scottmelker',
-		name: 'Scott Melker',
-		descriptionKey: 'chain_tools.tools.tw_scottmelker.description',
-		url: 'https://x.com/scottmelker',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'trading', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-martyparty',
-		name: 'Marty Bent',
-		descriptionKey: 'chain_tools.tools.tw_martyparty.description',
-		url: 'https://x.com/MartyBent',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'bitcoin', 'english'],
-		color: '#F7931A'
 	},
 	{
 		id: 'tw-whale_alert',
@@ -2703,249 +2364,6 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'twitter', 'analytics', 'english'],
-		color: '#1DA1F2',
-		isFeatured: true
-	},
-	{
-		id: 'tw-intothegreyzone',
-		name: 'Into The Greyzone',
-		descriptionKey: 'chain_tools.tools.tw_intothegreyzone.description',
-		url: 'https://x.com/IntoTheGreyzone',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'research', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-ryanberckmans',
-		name: 'Ryan Berckmans',
-		descriptionKey: 'chain_tools.tools.tw_ryanberckmans.description',
-		url: 'https://x.com/ryanberckmans',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'ethereum', 'english'],
-		color: '#627EEA'
-	},
-	{
-		id: 'tw-cryptokaleo',
-		name: 'Crypto Kaleo',
-		descriptionKey: 'chain_tools.tools.tw_cryptokaleo.description',
-		url: 'https://x.com/CryptoKaleo',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'trading', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-ceteris',
-		name: 'Ceteris',
-		descriptionKey: 'chain_tools.tools.tw_ceterispar1bus.description',
-		url: 'https://x.com/ceterispar1bus',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'defi', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-smokeycrypto',
-		name: 'Smokey',
-		descriptionKey: 'chain_tools.tools.tw_smokeycrypto.description',
-		url: 'https://x.com/SmokeyTheBera',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'defi', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-cryptopathic',
-		name: 'Crypto Pathic',
-		descriptionKey: 'chain_tools.tools.tw_cryptopathic.description',
-		url: 'https://x.com/CryptoPathic',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'trading', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-naiivememe',
-		name: 'Naiive',
-		descriptionKey: 'chain_tools.tools.tw_naiivememe.description',
-		url: 'https://x.com/NaiiveMeme',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'meme', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-crypto_bitlord',
-		name: 'BitLord',
-		descriptionKey: 'chain_tools.tools.tw_crypto_bitlord.description',
-		url: 'https://x.com/Crypto_Bitlord',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'trading', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-tardigrade',
-		name: 'Tardigrade',
-		descriptionKey: 'chain_tools.tools.tw_tardigrade.description',
-		url: 'https://x.com/Tardigrade',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'research', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-artchick',
-		name: 'ArtChick',
-		descriptionKey: 'chain_tools.tools.tw_artchick.description',
-		url: 'https://x.com/artchick',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'nft', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-pranksy',
-		name: 'Pranksy',
-		descriptionKey: 'chain_tools.tools.tw_pranksy.description',
-		url: 'https://x.com/pranksy',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'nft', 'english'],
-		color: '#1DA1F2',
-		isFeatured: true
-	},
-	{
-		id: 'tw-cobiesgem',
-		name: 'Cobies Gem',
-		descriptionKey: 'chain_tools.tools.tw_cobiesgem.description',
-		url: 'https://x.com/CobiesGem',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'alpha', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-alphaketchum',
-		name: 'Alpha Ketchum',
-		descriptionKey: 'chain_tools.tools.tw_alphaketchum.description',
-		url: 'https://x.com/AlphaKetchum',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'alpha', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-cryptodon_',
-		name: 'CryptoDon',
-		descriptionKey: 'chain_tools.tools.tw_cryptodon.description',
-		url: 'https://x.com/CryptoDon_',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'trading', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-nebraskangooner',
-		name: 'Nebraskan Gooner',
-		descriptionKey: 'chain_tools.tools.tw_nebraskangooner.description',
-		url: 'https://x.com/NebraskanGooner',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'trading', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-cantering_clark',
-		name: 'Cantering Clark',
-		descriptionKey: 'chain_tools.tools.tw_cantering_clark.description',
-		url: 'https://x.com/CanteringClark',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'trading', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-lilyknightcap',
-		name: 'Lily Knight Capital',
-		descriptionKey: 'chain_tools.tools.tw_lilyknightcap.description',
-		url: 'https://x.com/LilyKnightCap',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'trading', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-coldbloodedshiller',
-		name: 'Cold Blooded Shiller',
-		descriptionKey: 'chain_tools.tools.tw_coldbloodedshiller.description',
-		url: 'https://x.com/ColdBloodShill',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'trading', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-blknoiz06',
-		name: 'Blknoiz (Ansem)',
-		descriptionKey: 'chain_tools.tools.tw_blknoiz06.description',
-		url: 'https://x.com/blknoiz06',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'solana', 'english'],
-		color: '#9945FF',
-		isFeatured: true
-	},
-	{
-		id: 'tw-cryptodoggy',
-		name: 'Crypto Doggy',
-		descriptionKey: 'chain_tools.tools.tw_cryptodoggy.description',
-		url: 'https://x.com/CryptoDoggy',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'meme', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-impaulsive',
-		name: 'Impaulsive',
-		descriptionKey: 'chain_tools.tools.tw_impaulsive.description',
-		url: 'https://x.com/imPaulsive',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'mainstream', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-cryptogems555',
-		name: 'Crypto Gems',
-		descriptionKey: 'chain_tools.tools.tw_cryptogems555.description',
-		url: 'https://x.com/CryptoGems555',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'altcoins', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-mrktmeditations',
-		name: 'Markt Meditations',
-		descriptionKey: 'chain_tools.tools.tw_mrktmeditations.description',
-		url: 'https://x.com/MrktMeditations',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'research', 'english'],
-		color: '#1DA1F2'
-	},
-	{
-		id: 'tw-cryptocred',
-		name: 'CryptoCred',
-		descriptionKey: 'chain_tools.tools.tw_cryptocred.description',
-		url: 'https://x.com/CryptoCred',
-		icon: Twitter,
-		category: 'influencer',
-		tags: ['kol', 'twitter', 'trading', 'english'],
 		color: '#1DA1F2'
 	},
 	{
@@ -2976,8 +2394,7 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'twitter', 'ethereum', 'official'],
-		color: '#627EEA',
-		isFeatured: true
+		color: '#627EEA'
 	},
 	{
 		id: 'tw-solana-status',
@@ -2987,7 +2404,6 @@ export const influencerTools: ExternalTool[] = [
 		icon: Twitter,
 		category: 'influencer',
 		tags: ['kol', 'twitter', 'solana', 'official'],
-		color: '#9945FF',
-		isFeatured: true
+		color: '#9945FF'
 	}
 ];

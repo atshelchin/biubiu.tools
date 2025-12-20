@@ -15,8 +15,7 @@ export const l2Tools: ExternalTool[] = [
 		category: 'l2',
 		tags: ['optimistic-rollup', 'ethereum', 'scaling', 'evm'],
 		chains: ['Arbitrum'],
-		color: '#28A0F0',
-		isFeatured: true
+		color: '#28A0F0'
 	},
 	{
 		id: 'optimism',
@@ -27,7 +26,8 @@ export const l2Tools: ExternalTool[] = [
 		category: 'l2',
 		tags: ['optimistic-rollup', 'ethereum', 'superchain', 'op-stack'],
 		chains: ['Optimism'],
-		color: '#FF0420'
+		color: '#FF0420',
+		isFeatured: true
 	},
 	{
 		id: 'base',
@@ -38,7 +38,8 @@ export const l2Tools: ExternalTool[] = [
 		category: 'l2',
 		tags: ['optimistic-rollup', 'coinbase', 'op-stack', 'evm'],
 		chains: ['Base'],
-		color: '#0052FF'
+		color: '#0052FF',
+		isFeatured: true
 	},
 
 	// ========== ZK Rollups ==========
@@ -375,8 +376,7 @@ export const l2Tools: ExternalTool[] = [
 		icon: Layers2,
 		category: 'l2',
 		tags: ['analytics', 'tvl', 'risk', 'research'],
-		color: '#D53A9D',
-		isFeatured: true
+		color: '#D53A9D'
 	},
 	{
 		id: 'superchain',

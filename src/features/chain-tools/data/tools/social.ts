@@ -15,7 +15,8 @@ export const socialTools: ExternalTool[] = [
 		category: 'social',
 		tags: ['social-graph', 'composable', 'polygon', 'decentralized'],
 		chains: ['Polygon'],
-		color: '#00501E'
+		color: '#00501E',
+		isFeatured: true
 	},
 	{
 		id: 'cyberconnect',
@@ -310,8 +311,7 @@ export const socialTools: ExternalTool[] = [
 		category: 'social',
 		tags: ['protocol', 'social', 'decentralized', 'open'],
 		chains: ['Optimism'],
-		color: '#8A63D2',
-		isFeatured: true
+		color: '#8A63D2'
 	},
 	{
 		id: 'xmtp',

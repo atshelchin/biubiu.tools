@@ -23,8 +23,7 @@ export const discordTools: ExternalTool[] = [
 		icon: MessageCircle,
 		category: 'discord',
 		tags: ['protocol', 'ethereum', 'development', 'community'],
-		color: '#627EEA',
-		isFeatured: true
+		color: '#627EEA'
 	},
 	{
 		id: 'discord-uniswap',
@@ -66,8 +65,7 @@ export const discordTools: ExternalTool[] = [
 		icon: Layers2,
 		category: 'discord',
 		tags: ['l2', 'arbitrum', 'ecosystem', 'development'],
-		color: '#28A0F0',
-		isFeatured: true
+		color: '#28A0F0'
 	},
 	{
 		id: 'discord-optimism',
@@ -129,8 +127,7 @@ export const discordTools: ExternalTool[] = [
 		icon: Code,
 		category: 'discord',
 		tags: ['developer', 'hackathon', 'education', 'community'],
-		color: '#000000',
-		isFeatured: true
+		color: '#000000'
 	},
 	{
 		id: 'discord-buildspace',

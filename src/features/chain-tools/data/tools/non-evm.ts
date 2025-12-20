@@ -34,8 +34,7 @@ export const nonEvmTools: ExternalTool[] = [
 		category: 'non-evm',
 		tags: ['solana', 'l1', 'high-performance', 'rust'],
 		chains: ['Solana'],
-		color: '#9945FF',
-		isFeatured: true
+		color: '#9945FF'
 	},
 	{
 		id: 'solana-explorer',
@@ -68,8 +67,7 @@ export const nonEvmTools: ExternalTool[] = [
 		category: 'non-evm',
 		tags: ['solana', 'dex', 'aggregator', 'swap'],
 		chains: ['Solana'],
-		color: '#00D395',
-		isFeatured: true
+		color: '#00D395'
 	},
 	{
 		id: 'raydium',
@@ -102,7 +100,8 @@ export const nonEvmTools: ExternalTool[] = [
 		category: 'non-evm',
 		tags: ['solana', 'wallet', 'browser', 'mobile'],
 		chains: ['Solana', 'Ethereum', 'Polygon'],
-		color: '#AB9FF2'
+		color: '#AB9FF2',
+		isFeatured: true
 	},
 	{
 		id: 'magic-eden-solana',
@@ -147,8 +146,7 @@ export const nonEvmTools: ExternalTool[] = [
 		category: 'non-evm',
 		tags: ['cosmos', 'ibc', 'interchain', 'atom'],
 		chains: ['Cosmos'],
-		color: '#2E3148',
-		isFeatured: true
+		color: '#2E3148'
 	},
 	{
 		id: 'mintscan',
@@ -248,8 +246,7 @@ export const nonEvmTools: ExternalTool[] = [
 		category: 'non-evm',
 		tags: ['sui', 'move', 'parallel', 'l1'],
 		chains: ['Sui'],
-		color: '#6FBCF0',
-		isFeatured: true
+		color: '#6FBCF0'
 	},
 	{
 		id: 'sui-explorer',
@@ -304,8 +301,7 @@ export const nonEvmTools: ExternalTool[] = [
 		category: 'non-evm',
 		tags: ['aptos', 'move', 'l1', 'parallel'],
 		chains: ['Aptos'],
-		color: '#06CEB4',
-		isFeatured: true
+		color: '#06CEB4'
 	},
 	{
 		id: 'aptos-explorer',
@@ -361,8 +357,7 @@ export const nonEvmTools: ExternalTool[] = [
 		category: 'non-evm',
 		tags: ['ton', 'telegram', 'l1', 'sharding'],
 		chains: ['TON'],
-		color: '#0098EA',
-		isFeatured: true
+		color: '#0098EA'
 	},
 	{
 		id: 'tonscan',
@@ -560,7 +555,8 @@ export const nonEvmTools: ExternalTool[] = [
 		icon: Layers,
 		category: 'non-evm',
 		tags: ['cross-chain', 'messaging', 'omnichain', 'interoperability'],
-		color: '#000000'
+		color: '#000000',
+		isFeatured: true
 	},
 	{
 		id: 'axelar-network',

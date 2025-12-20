@@ -14,8 +14,7 @@ export const fundingTools: ExternalTool[] = [
 		icon: Building2,
 		category: 'funding',
 		tags: ['vc', 'venture-capital', 'investment', 'web3'],
-		color: '#000000',
-		isFeatured: true
+		color: '#000000'
 	},
 	{
 		id: 'paradigm',
@@ -201,8 +200,7 @@ export const fundingTools: ExternalTool[] = [
 		icon: Banknote,
 		category: 'funding',
 		tags: ['grants', 'quadratic-funding', 'public-goods', 'open-source'],
-		color: '#02E2AC',
-		isFeatured: true
+		color: '#02E2AC'
 	},
 	{
 		id: 'optimism-rpgf',

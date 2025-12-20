@@ -15,8 +15,7 @@ export const securityTools: ExternalTool[] = [
 		category: 'security',
 		tags: ['approvals', 'revoke', 'security', 'permissions'],
 		chains: ['Ethereum', 'Polygon', 'BSC', 'Arbitrum', 'Optimism'],
-		color: '#E53E3E',
-		isFeatured: true
+		color: '#E53E3E'
 	},
 	{
 		id: 'pocket-universe',
@@ -58,7 +57,8 @@ export const securityTools: ExternalTool[] = [
 		icon: Shield,
 		category: 'security',
 		tags: ['audit', 'security', 'leaderboard', 'skynet'],
-		color: '#00CED1'
+		color: '#00CED1',
+		isFeatured: true
 	},
 	{
 		id: 'hacken',
@@ -88,7 +88,8 @@ export const securityTools: ExternalTool[] = [
 		icon: Shield,
 		category: 'security',
 		tags: ['contracts', 'library', 'audit', 'defender'],
-		color: '#4E5EE4'
+		color: '#4E5EE4',
+		isFeatured: true
 	},
 	{
 		id: 'dedaub',

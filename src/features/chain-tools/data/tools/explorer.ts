@@ -26,7 +26,8 @@ export const explorerTools: ExternalTool[] = [
 		icon: Search,
 		category: 'explorer',
 		tags: ['explorer', 'open-source', 'multi-chain'],
-		color: '#5C6BC0'
+		color: '#5C6BC0',
+		isFeatured: true
 	},
 
 	// ========== L2 Explorers ==========

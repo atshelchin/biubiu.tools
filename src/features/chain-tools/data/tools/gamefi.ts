@@ -25,8 +25,7 @@ export const gamefiTools: ExternalTool[] = [
 		category: 'gamefi',
 		tags: ['gaming', 'nft', 'zkEVM', 'layer2'],
 		chains: ['Immutable X', 'Immutable zkEVM'],
-		color: '#00BFBF',
-		isFeatured: true
+		color: '#00BFBF'
 	},
 	{
 		id: 'ronin',
@@ -456,8 +455,7 @@ export const gamefiTools: ExternalTool[] = [
 		category: 'gamefi',
 		tags: ['move-to-earn', 'fitness', 'nft', 'lifestyle'],
 		chains: ['Solana', 'BNB Chain', 'Ethereum'],
-		color: '#00E676',
-		isFeatured: true
+		color: '#00E676'
 	},
 	{
 		id: 'hero-of-mavia',
@@ -512,8 +510,7 @@ export const gamefiTools: ExternalTool[] = [
 		category: 'gamefi',
 		tags: ['battle-royale', 'shooter', 'cyberpunk', 'aaa'],
 		chains: ['Avalanche'],
-		color: '#00FF87',
-		isFeatured: true
+		color: '#00FF87'
 	},
 	{
 		id: 'maple-story-universe',
@@ -647,8 +644,7 @@ export const gamefiTools: ExternalTool[] = [
 		category: 'gamefi',
 		tags: ['rpg', 'defi', 'dex', 'harmony'],
 		chains: ['DFK Chain', 'Avalanche'],
-		color: '#22C55E',
-		isFeatured: true
+		color: '#22C55E'
 	},
 	{
 		id: 'skyweaver',
@@ -769,8 +765,7 @@ export const gamefiTools: ExternalTool[] = [
 		category: 'gamefi',
 		tags: ['defi', 'nft', 'tamagotchi', 'polygon'],
 		chains: ['Polygon'],
-		color: '#EC4899',
-		isFeatured: true
+		color: '#EC4899'
 	},
 	{
 		id: 'cometh',
@@ -1097,8 +1092,7 @@ export const gamefiTools: ExternalTool[] = [
 		category: 'gamefi',
 		tags: ['casual', 'telegram', 'ton', 'cats'],
 		chains: ['TON'],
-		color: '#FFD700',
-		isFeatured: true
+		color: '#FFD700'
 	},
 	{
 		id: 'hamster-kombat',
@@ -1109,8 +1103,7 @@ export const gamefiTools: ExternalTool[] = [
 		category: 'gamefi',
 		tags: ['tap-to-earn', 'telegram', 'ton', 'viral'],
 		chains: ['TON'],
-		color: '#F59E0B',
-		isFeatured: true
+		color: '#F59E0B'
 	},
 	{
 		id: 'notcoin',
@@ -1121,8 +1114,7 @@ export const gamefiTools: ExternalTool[] = [
 		category: 'gamefi',
 		tags: ['tap-to-earn', 'telegram', 'ton', 'meme'],
 		chains: ['TON'],
-		color: '#1E1E1E',
-		isFeatured: true
+		color: '#1E1E1E'
 	},
 	{
 		id: 'blum',
@@ -1201,8 +1193,7 @@ export const gamefiTools: ExternalTool[] = [
 		category: 'gamefi',
 		tags: ['aaa', 'binance', 'mech', 'strategy'],
 		chains: ['Ethereum', 'Endurance'],
-		color: '#FF6B00',
-		isFeatured: true
+		color: '#FF6B00'
 	},
 	{
 		id: 'xterio',
@@ -1213,8 +1204,7 @@ export const gamefiTools: ExternalTool[] = [
 		category: 'gamefi',
 		tags: ['ai', 'gaming', 'binance-labs', 'publishing'],
 		chains: ['BNB Chain', 'Xterio Chain'],
-		color: '#00D4FF',
-		isFeatured: true
+		color: '#00D4FF'
 	},
 	{
 		id: 'ultiverse',
@@ -1225,8 +1215,7 @@ export const gamefiTools: ExternalTool[] = [
 		category: 'gamefi',
 		tags: ['ai', 'metaverse', 'binance-labs', 'social'],
 		chains: ['BNB Chain'],
-		color: '#8B5CF6',
-		isFeatured: true
+		color: '#8B5CF6'
 	},
 	{
 		id: 'pixelmon',
@@ -1259,8 +1248,7 @@ export const gamefiTools: ExternalTool[] = [
 		category: 'gamefi',
 		tags: ['platform', 'play-to-earn', 'polygon', 'multi-game'],
 		chains: ['Polygon'],
-		color: '#F59E0B',
-		isFeatured: true
+		color: '#F59E0B'
 	},
 	{
 		id: 'gmt-stepn',
@@ -1271,8 +1259,7 @@ export const gamefiTools: ExternalTool[] = [
 		category: 'gamefi',
 		tags: ['move-to-earn', 'binance', 'coinbase', 'lifestyle'],
 		chains: ['Solana', 'BNB Chain', 'Ethereum'],
-		color: '#00E676',
-		isFeatured: true
+		color: '#00E676'
 	},
 	{
 		id: 'magic-square',
@@ -1316,8 +1303,7 @@ export const gamefiTools: ExternalTool[] = [
 		category: 'gamefi',
 		tags: ['identity', 'gaming', 'credentials', 'data'],
 		chains: ['Multi-chain'],
-		color: '#7C3AED',
-		isFeatured: true
+		color: '#7C3AED'
 	},
 	{
 		id: 'gunz',
@@ -1328,8 +1314,7 @@ export const gamefiTools: ExternalTool[] = [
 		category: 'gamefi',
 		tags: ['aaa', 'shooter', 'off-the-grid', 'avalanche'],
 		chains: ['GUNZ'],
-		color: '#00FF87',
-		isFeatured: true
+		color: '#00FF87'
 	},
 	{
 		id: 'bnb-heroes',
@@ -1362,8 +1347,7 @@ export const gamefiTools: ExternalTool[] = [
 		category: 'gamefi',
 		tags: ['survival', 'open-world', 'polygon', 'crafting'],
 		chains: ['Polygon'],
-		color: '#22C55E',
-		isFeatured: true
+		color: '#22C55E'
 	},
 	{
 		id: 'games-for-a-living',
@@ -1385,8 +1369,7 @@ export const gamefiTools: ExternalTool[] = [
 		category: 'gamefi',
 		tags: ['launchpad', 'igo', 'incubator', 'gaming'],
 		chains: ['BNB Chain', 'Ethereum'],
-		color: '#22C55E',
-		isFeatured: true
+		color: '#22C55E'
 	},
 	{
 		id: 'gamestarter',
@@ -1539,8 +1522,7 @@ export const gamefiTools: ExternalTool[] = [
 		category: 'gamefi',
 		tags: ['cyber-dragon', 'igo', 'gaming', 'platform'],
 		chains: ['BNB Chain'],
-		color: '#F0B90B',
-		isFeatured: true
+		color: '#F0B90B'
 	},
 	{
 		id: 'mines-of-dalarnia',
@@ -1551,8 +1533,7 @@ export const gamefiTools: ExternalTool[] = [
 		category: 'gamefi',
 		tags: ['action', 'mining', 'binance', 'platformer'],
 		chains: ['BNB Chain', 'Polygon'],
-		color: '#3B82F6',
-		isFeatured: true
+		color: '#3B82F6'
 	},
 	{
 		id: 'moland-dao',
@@ -1596,8 +1577,7 @@ export const gamefiTools: ExternalTool[] = [
 		category: 'gamefi',
 		tags: ['ai', 'gaming', 'my-pet-hooligan', 'ecosystem'],
 		chains: ['Ethereum'],
-		color: '#EC4899',
-		isFeatured: true
+		color: '#EC4899'
 	},
 	{
 		id: 'portal-fantasy',

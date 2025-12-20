@@ -34,8 +34,7 @@ export const oracleTools: ExternalTool[] = [
 		category: 'oracle',
 		tags: ['oracle', 'price-feed', 'decentralized', 'vrf', 'ccip'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism', 'Avalanche', 'BSC', 'Base'],
-		color: '#375BD2',
-		isFeatured: true
+		color: '#375BD2'
 	},
 	{
 		id: 'chainlink-data-feeds',
@@ -57,8 +56,7 @@ export const oracleTools: ExternalTool[] = [
 		category: 'oracle',
 		tags: ['oracle', 'price-feed', 'high-frequency', 'solana'],
 		chains: ['Solana', 'Ethereum', 'Arbitrum', 'Optimism', 'Base', 'Sui', 'Aptos'],
-		color: '#6941C6',
-		isFeatured: true
+		color: '#6941C6'
 	},
 	{
 		id: 'pyth-price-feeds',

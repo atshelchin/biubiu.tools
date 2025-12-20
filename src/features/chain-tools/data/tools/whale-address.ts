@@ -34,8 +34,7 @@ export const whaleAddressTools: ExternalTool[] = [
 		category: 'whale-address',
 		tags: ['treasury', 'ethereum', 'foundation', 'eth'],
 		chains: ['Ethereum'],
-		color: '#627EEA',
-		isFeatured: true
+		color: '#627EEA'
 	},
 	{
 		id: 'uniswap-treasury',
@@ -169,8 +168,7 @@ export const whaleAddressTools: ExternalTool[] = [
 		category: 'whale-address',
 		tags: ['whale', 'vitalik', 'ethereum', 'founder'],
 		chains: ['Ethereum'],
-		color: '#627EEA',
-		isFeatured: true
+		color: '#627EEA'
 	},
 	{
 		id: 'justin-sun-wallet',
@@ -215,8 +213,7 @@ export const whaleAddressTools: ExternalTool[] = [
 		category: 'whale-address',
 		tags: ['exchange', 'binance', 'hot-wallet', 'bnb'],
 		chains: ['BNB Chain'],
-		color: '#F0B90B',
-		isFeatured: true
+		color: '#F0B90B'
 	},
 	{
 		id: 'pancakeswap-treasury',
@@ -250,8 +247,7 @@ export const whaleAddressTools: ExternalTool[] = [
 		category: 'whale-address',
 		tags: ['bridge', 'base', 'l2', 'coinbase'],
 		chains: ['Base'],
-		color: '#0052FF',
-		isFeatured: true
+		color: '#0052FF'
 	},
 	{
 		id: 'aerodrome-treasury',
@@ -320,8 +316,7 @@ export const whaleAddressTools: ExternalTool[] = [
 		category: 'whale-address',
 		tags: ['foundation', 'solana', 'sol', 'ecosystem'],
 		chains: ['Solana'],
-		color: '#14F195',
-		isFeatured: true
+		color: '#14F195'
 	},
 	{
 		id: 'jupiter-treasury',
@@ -500,8 +495,7 @@ export const whaleAddressTools: ExternalTool[] = [
 		icon: Eye,
 		category: 'whale-address',
 		tags: ['tracking', 'whale', 'analytics', 'alerts'],
-		color: '#6366F1',
-		isFeatured: true
+		color: '#6366F1'
 	},
 	{
 		id: 'whale-alert',
@@ -531,8 +525,7 @@ export const whaleAddressTools: ExternalTool[] = [
 		icon: Search,
 		category: 'whale-address',
 		tags: ['tracking', 'whale', 'intelligence', 'deanon'],
-		color: '#1E1E1E',
-		isFeatured: true
+		color: '#1E1E1E'
 	},
 	{
 		id: 'debank-whales',

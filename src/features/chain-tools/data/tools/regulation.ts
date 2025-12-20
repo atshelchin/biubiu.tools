@@ -23,8 +23,7 @@ export const regulationTools: ExternalTool[] = [
 		icon: Landmark,
 		category: 'regulation',
 		tags: ['us', 'securities', 'enforcement', 'sec'],
-		color: '#002868',
-		isFeatured: true
+		color: '#002868'
 	},
 	{
 		id: 'cftc-crypto',
@@ -34,8 +33,7 @@ export const regulationTools: ExternalTool[] = [
 		icon: Landmark,
 		category: 'regulation',
 		tags: ['us', 'commodities', 'derivatives', 'cftc'],
-		color: '#002868',
-		isFeatured: true
+		color: '#002868'
 	},
 	{
 		id: 'fincen-crypto',
@@ -86,8 +84,7 @@ export const regulationTools: ExternalTool[] = [
 		icon: Scale,
 		category: 'regulation',
 		tags: ['eu', 'mica', 'comprehensive', 'framework'],
-		color: '#003399',
-		isFeatured: true
+		color: '#003399'
 	},
 	{
 		id: 'esma-crypto',
@@ -117,8 +114,7 @@ export const regulationTools: ExternalTool[] = [
 		icon: Landmark,
 		category: 'regulation',
 		tags: ['uk', 'fca', 'registration', 'consumer'],
-		color: '#012169',
-		isFeatured: true
+		color: '#012169'
 	},
 	{
 		id: 'bafin-crypto',
@@ -159,8 +155,7 @@ export const regulationTools: ExternalTool[] = [
 		icon: Landmark,
 		category: 'regulation',
 		tags: ['hong-kong', 'hkma', 'vasp', 'licensing'],
-		color: '#DE2910',
-		isFeatured: true
+		color: '#DE2910'
 	},
 	{
 		id: 'sfc-hk',
@@ -180,8 +175,7 @@ export const regulationTools: ExternalTool[] = [
 		icon: Landmark,
 		category: 'regulation',
 		tags: ['singapore', 'mas', 'psa', 'licensing'],
-		color: '#ED2939',
-		isFeatured: true
+		color: '#ED2939'
 	},
 	{
 		id: 'jfsa-crypto',
@@ -232,8 +226,7 @@ export const regulationTools: ExternalTool[] = [
 		icon: Landmark,
 		category: 'regulation',
 		tags: ['dubai', 'vara', 'vasp', 'comprehensive'],
-		color: '#00732F',
-		isFeatured: true
+		color: '#00732F'
 	},
 	{
 		id: 'adgm-crypto',
@@ -315,8 +308,7 @@ export const regulationTools: ExternalTool[] = [
 		icon: Globe,
 		category: 'regulation',
 		tags: ['global', 'fatf', 'aml', 'travel-rule'],
-		color: '#0033A0',
-		isFeatured: true
+		color: '#0033A0'
 	},
 	{
 		id: 'bis-crypto',
@@ -397,8 +389,7 @@ export const regulationTools: ExternalTool[] = [
 		icon: Map,
 		category: 'regulation',
 		tags: ['cbdc', 'global', 'tracker', 'research'],
-		color: '#1E40AF',
-		isFeatured: true
+		color: '#1E40AF'
 	},
 	{
 		id: 'global-crypto-map',
@@ -419,8 +410,7 @@ export const regulationTools: ExternalTool[] = [
 		icon: Shield,
 		category: 'regulation',
 		tags: ['compliance', 'aml', 'tracing', 'enterprise'],
-		color: '#0052FF',
-		isFeatured: true
+		color: '#0052FF'
 	},
 	{
 		id: 'elliptic-compliance',

@@ -23,8 +23,7 @@ export const paymentsTools: ExternalTool[] = [
 		category: 'payments',
 		tags: ['fiat', 'on-ramp', 'off-ramp', 'card'],
 		chains: ['Ethereum', 'Bitcoin', 'Solana', 'Polygon'],
-		color: '#7D00FF',
-		isFeatured: true
+		color: '#7D00FF'
 	},
 	{
 		id: 'transak',

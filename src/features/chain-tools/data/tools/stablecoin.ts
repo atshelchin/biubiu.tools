@@ -32,8 +32,7 @@ export const stablecoinTools: ExternalTool[] = [
 		category: 'stablecoin',
 		tags: ['stablecoin', 'usd', 'centralized', 'largest'],
 		chains: ['Ethereum', 'Tron', 'BSC', 'Solana', 'Avalanche', 'Polygon', 'Arbitrum', 'Optimism'],
-		color: '#26A17B',
-		isFeatured: true
+		color: '#26A17B'
 	},
 	{
 		id: 'usdc-circle',
@@ -44,8 +43,7 @@ export const stablecoinTools: ExternalTool[] = [
 		category: 'stablecoin',
 		tags: ['stablecoin', 'usd', 'regulated', 'circle'],
 		chains: ['Ethereum', 'Solana', 'Avalanche', 'Polygon', 'Arbitrum', 'Optimism', 'Base'],
-		color: '#2775CA',
-		isFeatured: true
+		color: '#2775CA'
 	},
 	{
 		id: 'dai-makerdao',
@@ -56,8 +54,7 @@ export const stablecoinTools: ExternalTool[] = [
 		category: 'stablecoin',
 		tags: ['stablecoin', 'decentralized', 'collateralized', 'defi'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism', 'Gnosis'],
-		color: '#F5AC37',
-		isFeatured: true
+		color: '#F5AC37'
 	},
 	{
 		id: 'frax',
@@ -79,8 +76,7 @@ export const stablecoinTools: ExternalTool[] = [
 		category: 'stablecoin',
 		tags: ['stablecoin', 'synthetic', 'yield', 'delta-neutral'],
 		chains: ['Ethereum', 'Arbitrum', 'Base'],
-		color: '#1E1E1E',
-		isFeatured: true
+		color: '#1E1E1E'
 	},
 	{
 		id: 'usdd-tron',
@@ -337,8 +333,7 @@ export const stablecoinTools: ExternalTool[] = [
 		category: 'stablecoin',
 		tags: ['stablecoin', 'rwa', 'yield', 'treasury'],
 		chains: ['Ethereum'],
-		color: '#000000',
-		isFeatured: true
+		color: '#000000'
 	},
 	{
 		id: 'mountain-usdm',

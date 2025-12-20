@@ -17,8 +17,7 @@ export const telegramTools: ExternalTool[] = [
 		icon: Newspaper,
 		category: 'telegram',
 		tags: ['news', 'media', 'updates', 'english'],
-		color: '#FFC107',
-		isFeatured: true
+		color: '#FFC107'
 	},
 	{
 		id: 'tg-whale-alert',
@@ -28,8 +27,7 @@ export const telegramTools: ExternalTool[] = [
 		icon: TrendingUp,
 		category: 'telegram',
 		tags: ['alpha', 'whale', 'onchain', 'english'],
-		color: '#3B82F6',
-		isFeatured: true
+		color: '#3B82F6'
 	},
 	{
 		id: 'tg-lookonchain',
@@ -39,8 +37,7 @@ export const telegramTools: ExternalTool[] = [
 		icon: TrendingUp,
 		category: 'telegram',
 		tags: ['alpha', 'onchain', 'analytics', 'english'],
-		color: '#10B981',
-		isFeatured: true
+		color: '#10B981'
 	},
 
 	// ========== Protocol Official Channels (Verified) ==========
@@ -52,8 +49,7 @@ export const telegramTools: ExternalTool[] = [
 		icon: Send,
 		category: 'telegram',
 		tags: ['protocol', 'l1', 'ton', 'community'],
-		color: '#0098EA',
-		isFeatured: true
+		color: '#0098EA'
 	},
 	{
 		id: 'tg-solana',
@@ -85,8 +81,7 @@ export const telegramTools: ExternalTool[] = [
 		icon: Globe,
 		category: 'telegram',
 		tags: ['chinese', 'news', 'research', 'asia'],
-		color: '#8B5CF6',
-		isFeatured: true
+		color: '#8B5CF6'
 	},
 	{
 		id: 'tg-techflow',
@@ -108,7 +103,6 @@ export const telegramTools: ExternalTool[] = [
 		icon: Users,
 		category: 'telegram',
 		tags: ['portuguese', 'brazil', 'community', 'americas'],
-		color: '#22C55E',
-		isFeatured: true
+		color: '#22C55E'
 	}
 ];

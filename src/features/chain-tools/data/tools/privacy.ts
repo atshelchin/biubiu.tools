@@ -32,8 +32,7 @@ export const privacyTools: ExternalTool[] = [
 		category: 'privacy',
 		tags: ['privacy', 'zk-snark', 'shielded', 'chain'],
 		chains: ['Zcash'],
-		color: '#F4B728',
-		isFeatured: true
+		color: '#F4B728'
 	},
 	{
 		id: 'monero',
@@ -44,8 +43,7 @@ export const privacyTools: ExternalTool[] = [
 		category: 'privacy',
 		tags: ['privacy', 'ring-signatures', 'stealth', 'chain'],
 		chains: ['Monero'],
-		color: '#FF6600',
-		isFeatured: true
+		color: '#FF6600'
 	},
 	{
 		id: 'secret-network',
@@ -56,8 +54,7 @@ export const privacyTools: ExternalTool[] = [
 		category: 'privacy',
 		tags: ['privacy', 'secret', 'cosmos', 'tee'],
 		chains: ['Secret Network'],
-		color: '#1B1B1B',
-		isFeatured: true
+		color: '#1B1B1B'
 	},
 	{
 		id: 'oasis-network',
@@ -113,8 +110,7 @@ export const privacyTools: ExternalTool[] = [
 		category: 'privacy',
 		tags: ['privacy', 'zk', 'rollup', 'ethereum'],
 		chains: ['Ethereum'],
-		color: '#5952CC',
-		isFeatured: true
+		color: '#5952CC'
 	},
 	{
 		id: 'railgun',
@@ -125,8 +121,7 @@ export const privacyTools: ExternalTool[] = [
 		category: 'privacy',
 		tags: ['privacy', 'zk', 'defi', 'shielded'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'BSC'],
-		color: '#2C2C2C',
-		isFeatured: true
+		color: '#2C2C2C'
 	},
 	{
 		id: 'umbra-cash',

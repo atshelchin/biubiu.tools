@@ -32,8 +32,7 @@ export const mevTools: ExternalTool[] = [
 		category: 'mev',
 		tags: ['mev', 'protection', 'flashbots', 'private-tx'],
 		chains: ['Ethereum'],
-		color: '#FF6B35',
-		isFeatured: true
+		color: '#FF6B35'
 	},
 	{
 		id: 'mev-blocker',
@@ -44,8 +43,7 @@ export const mevTools: ExternalTool[] = [
 		category: 'mev',
 		tags: ['mev', 'protection', 'cow', 'private-tx'],
 		chains: ['Ethereum'],
-		color: '#65D9FF',
-		isFeatured: true
+		color: '#65D9FF'
 	},
 	{
 		id: 'cow-mev-protection',
@@ -79,8 +77,7 @@ export const mevTools: ExternalTool[] = [
 		category: 'mev',
 		tags: ['mev', 'builder', 'flashbots', 'pbs'],
 		chains: ['Ethereum'],
-		color: '#FF6B35',
-		isFeatured: true
+		color: '#FF6B35'
 	},
 	{
 		id: 'beaverbuild',
@@ -147,8 +144,7 @@ export const mevTools: ExternalTool[] = [
 		category: 'mev',
 		tags: ['mev', 'analytics', 'tracking', 'defi'],
 		chains: ['Ethereum'],
-		color: '#8B5CF6',
-		isFeatured: true
+		color: '#8B5CF6'
 	},
 	{
 		id: 'mev-watch',
@@ -238,8 +234,7 @@ export const mevTools: ExternalTool[] = [
 		category: 'mev',
 		tags: ['mev', 'solana', 'jito', 'tips'],
 		chains: ['Solana'],
-		color: '#14F195',
-		isFeatured: true
+		color: '#14F195'
 	},
 	{
 		id: 'jito-bundles',

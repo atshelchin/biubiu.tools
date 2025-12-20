@@ -42,7 +42,8 @@ export const nftTools: ExternalTool[] = [
 		category: 'nft',
 		tags: ['marketplace', 'nft', 'trading', 'pro-traders'],
 		chains: ['Ethereum', 'Blast'],
-		color: '#FF6B00'
+		color: '#FF6B00',
+		isFeatured: true
 	},
 	{
 		id: 'reservoir',

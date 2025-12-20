@@ -34,8 +34,7 @@ export const trendsTools: ExternalTool[] = [
 		icon: DollarSign,
 		category: 'trends',
 		tags: ['vc', 'funding', 'deals', 'database'],
-		color: '#0288D1',
-		isFeatured: true
+		color: '#0288D1'
 	},
 	{
 		id: 'cryptorank-funding',
@@ -45,8 +44,7 @@ export const trendsTools: ExternalTool[] = [
 		icon: DollarSign,
 		category: 'trends',
 		tags: ['vc', 'funding', 'rounds', 'analytics'],
-		color: '#8B5CF6',
-		isFeatured: true
+		color: '#8B5CF6'
 	},
 	{
 		id: 'rootdata-funding',
@@ -56,8 +54,7 @@ export const trendsTools: ExternalTool[] = [
 		icon: BarChart3,
 		category: 'trends',
 		tags: ['vc', 'funding', 'projects', 'database'],
-		color: '#6366F1',
-		isFeatured: true
+		color: '#6366F1'
 	},
 	{
 		id: 'defilama-raises',
@@ -108,8 +105,7 @@ export const trendsTools: ExternalTool[] = [
 		icon: Flame,
 		category: 'trends',
 		tags: ['ai', 'trends', 'social', 'analytics'],
-		color: '#FF6B35',
-		isFeatured: true
+		color: '#FF6B35'
 	},
 	{
 		id: 'lunarcrush',
@@ -170,8 +166,7 @@ export const trendsTools: ExternalTool[] = [
 		icon: MessageSquare,
 		category: 'trends',
 		tags: ['ethereum', 'eip', 'governance', 'discussion'],
-		color: '#627EEA',
-		isFeatured: true
+		color: '#627EEA'
 	},
 	{
 		id: 'ethresear-ch',
@@ -181,8 +176,7 @@ export const trendsTools: ExternalTool[] = [
 		icon: Lightbulb,
 		category: 'trends',
 		tags: ['ethereum', 'research', 'scaling', 'cryptography'],
-		color: '#1C1C1C',
-		isFeatured: true
+		color: '#1C1C1C'
 	},
 	{
 		id: 'github-trending-sol',
@@ -263,8 +257,7 @@ export const trendsTools: ExternalTool[] = [
 		icon: Globe,
 		category: 'trends',
 		tags: ['depin', 'infrastructure', 'iot', 'narrative'],
-		color: '#10B981',
-		isFeatured: true
+		color: '#10B981'
 	},
 	{
 		id: 'socialfi-narrative',
@@ -296,7 +289,7 @@ export const trendsTools: ExternalTool[] = [
 	// 	category: 'trends',
 	// 	tags: ['research', 'reports', 'institutional', 'deep-dive'],
 	// 	color: '#F97316',
-	// 	isFeatured: true
+	//
 	// },
 	{
 		id: 'bankless-hq',
@@ -368,8 +361,7 @@ export const trendsTools: ExternalTool[] = [
 		icon: BarChart3,
 		category: 'trends',
 		tags: ['developers', 'metrics', 'report', 'annual'],
-		color: '#6366F1',
-		isFeatured: true
+		color: '#6366F1'
 	},
 	{
 		id: 'tokenterminal-dev',

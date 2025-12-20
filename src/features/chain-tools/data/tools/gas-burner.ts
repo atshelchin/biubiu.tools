@@ -32,8 +32,7 @@ export const gasBurnerTools: ExternalTool[] = [
 		category: 'gas-burner',
 		tags: ['gas', 'burn', 'eip1559', 'supply', 'analytics'],
 		chains: ['Ethereum'],
-		color: '#6366F1',
-		isFeatured: true
+		color: '#6366F1'
 	},
 	{
 		id: 'etherscan-gastracker',
@@ -44,8 +43,7 @@ export const gasBurnerTools: ExternalTool[] = [
 		category: 'gas-burner',
 		tags: ['gas', 'tracker', 'gwei', 'ethereum'],
 		chains: ['Ethereum'],
-		color: '#21325B',
-		isFeatured: true
+		color: '#21325B'
 	},
 	{
 		id: 'blocknative-gas',
@@ -101,8 +99,7 @@ export const gasBurnerTools: ExternalTool[] = [
 		category: 'gas-burner',
 		tags: ['dex', 'swap', 'amm', 'high-gas'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism'],
-		color: '#FF007A',
-		isFeatured: true
+		color: '#FF007A'
 	},
 	{
 		id: 'opensea-gas',
@@ -237,8 +234,7 @@ export const gasBurnerTools: ExternalTool[] = [
 		category: 'gas-burner',
 		tags: ['l2', 'fees', 'comparison', 'rollups'],
 		chains: ['Ethereum', 'Arbitrum', 'Optimism', 'zkSync'],
-		color: '#6366F1',
-		isFeatured: true
+		color: '#6366F1'
 	},
 	{
 		id: 'l2beat-gas',

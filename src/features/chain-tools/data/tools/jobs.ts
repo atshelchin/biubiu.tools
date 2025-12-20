@@ -14,8 +14,7 @@ export const jobsTools: ExternalTool[] = [
 		icon: Briefcase,
 		category: 'jobs',
 		tags: ['jobs', 'crypto', 'remote', 'full-time'],
-		color: '#3B82F6',
-		isFeatured: true
+		color: '#3B82F6'
 	},
 	{
 		id: 'jobs-web3career',
@@ -25,8 +24,7 @@ export const jobsTools: ExternalTool[] = [
 		icon: Briefcase,
 		category: 'jobs',
 		tags: ['jobs', 'web3', 'remote', 'developer'],
-		color: '#8B5CF6',
-		isFeatured: true
+		color: '#8B5CF6'
 	},
 	{
 		id: 'jobs-cryptojobslist',
@@ -108,8 +106,7 @@ export const jobsTools: ExternalTool[] = [
 		icon: Users,
 		category: 'jobs',
 		tags: ['bounty', 'dao', 'tasks', 'contributor'],
-		color: '#6366F1',
-		isFeatured: true
+		color: '#6366F1'
 	},
 	{
 		id: 'jobs-layer3',
@@ -181,8 +178,7 @@ export const jobsTools: ExternalTool[] = [
 		icon: Award,
 		category: 'jobs',
 		tags: ['bounty', 'security', 'bug-bounty', 'whitehat'],
-		color: '#00D395',
-		isFeatured: true
+		color: '#00D395'
 	},
 	{
 		id: 'jobs-code4rena',

@@ -21,8 +21,7 @@ export const restakingTools: ExternalTool[] = [
 		category: 'restaking',
 		tags: ['restaking', 'avs', 'ethereum', 'security'],
 		chains: ['Ethereum'],
-		color: '#1F0047',
-		isFeatured: true
+		color: '#1F0047'
 	},
 	{
 		id: 'symbiotic',
@@ -33,8 +32,7 @@ export const restakingTools: ExternalTool[] = [
 		category: 'restaking',
 		tags: ['restaking', 'modular', 'ethereum', 'security'],
 		chains: ['Ethereum'],
-		color: '#000000',
-		isFeatured: true
+		color: '#000000'
 	},
 	{
 		id: 'karak',
@@ -56,8 +54,7 @@ export const restakingTools: ExternalTool[] = [
 		category: 'restaking',
 		tags: ['restaking', 'bitcoin', 'staking', 'security'],
 		chains: ['Bitcoin'],
-		color: '#F7931A',
-		isFeatured: true
+		color: '#F7931A'
 	},
 	// ========== Liquid Restaking Tokens (LRTs) ==========
 	{
@@ -69,8 +66,7 @@ export const restakingTools: ExternalTool[] = [
 		category: 'restaking',
 		tags: ['restaking', 'lrt', 'eeth', 'liquid'],
 		chains: ['Ethereum'],
-		color: '#735CDD',
-		isFeatured: true
+		color: '#735CDD'
 	},
 	{
 		id: 'renzo-protocol',
@@ -81,8 +77,7 @@ export const restakingTools: ExternalTool[] = [
 		category: 'restaking',
 		tags: ['restaking', 'lrt', 'ezeth', 'liquid'],
 		chains: ['Ethereum'],
-		color: '#00D395',
-		isFeatured: true
+		color: '#00D395'
 	},
 	{
 		id: 'puffer-finance',

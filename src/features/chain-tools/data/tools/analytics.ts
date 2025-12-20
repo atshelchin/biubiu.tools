@@ -47,7 +47,8 @@ export const analyticsTools: ExternalTool[] = [
 		icon: Eye,
 		category: 'analytics',
 		tags: ['wallet', 'analytics', 'smart-money', 'labels'],
-		color: '#3861FB'
+		color: '#3861FB',
+		isFeatured: true
 	},
 	{
 		id: 'arkham',
@@ -406,8 +407,7 @@ export const analyticsTools: ExternalTool[] = [
 		category: 'analytics',
 		tags: ['indexing', 'subgraph', 'api', 'decentralized'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism', 'BNB Chain', 'Avalanche'],
-		color: '#6747ED',
-		isFeatured: true
+		color: '#6747ED'
 	},
 	{
 		id: 'space_and_time',

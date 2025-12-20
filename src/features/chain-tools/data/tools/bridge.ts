@@ -15,7 +15,8 @@ export const bridgeTools: ExternalTool[] = [
 		category: 'bridge',
 		tags: ['bridge', 'cross-chain', 'fast', 'cheap'],
 		chains: ['Ethereum', 'Arbitrum', 'Optimism', 'Polygon', 'Base'],
-		color: '#6CF9D8'
+		color: '#6CF9D8',
+		isFeatured: true
 	},
 	{
 		id: 'stargate',
@@ -50,7 +51,8 @@ export const bridgeTools: ExternalTool[] = [
 		category: 'bridge',
 		tags: ['bridge', 'l2', 'rollup', 'fast'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism'],
-		color: '#B32EFF'
+		color: '#B32EFF',
+		isFeatured: true
 	},
 	{
 		id: 'synapse',

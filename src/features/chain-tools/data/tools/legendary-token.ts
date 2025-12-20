@@ -31,8 +31,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 		category: 'legendary-token',
 		tags: ['100x', 'exchange', 'binance', 'ecosystem', 'legendary'],
 		chains: ['BNB Chain'],
-		color: '#F0B90B',
-		isFeatured: true
+		color: '#F0B90B'
 	},
 	{
 		id: 'legend-sol',
@@ -43,8 +42,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 		category: 'legendary-token',
 		tags: ['100x', 'l1', 'solana', 'high-performance', 'legendary'],
 		chains: ['Solana'],
-		color: '#14F195',
-		isFeatured: true
+		color: '#14F195'
 	},
 	{
 		id: 'legend-matic',
@@ -55,8 +53,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 		category: 'legendary-token',
 		tags: ['100x', 'l2', 'polygon', 'scaling', 'legendary'],
 		chains: ['Polygon'],
-		color: '#8247E5',
-		isFeatured: true
+		color: '#8247E5'
 	},
 	{
 		id: 'legend-avax',
@@ -78,8 +75,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 		category: 'legendary-token',
 		tags: ['100x', 'oracle', 'chainlink', 'infrastructure', 'legendary'],
 		chains: ['Ethereum'],
-		color: '#375BD2',
-		isFeatured: true
+		color: '#375BD2'
 	},
 	{
 		id: 'legend-uni',
@@ -145,8 +141,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 		category: 'legendary-token',
 		tags: ['100x', 'defi', 'injective', 'cosmos', 'legendary'],
 		chains: ['Injective'],
-		color: '#00F2FE',
-		isFeatured: true
+		color: '#00F2FE'
 	},
 	{
 		id: 'legend-ton',
@@ -157,8 +152,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 		category: 'legendary-token',
 		tags: ['100x', 'l1', 'ton', 'telegram', 'legendary'],
 		chains: ['TON'],
-		color: '#0098EA',
-		isFeatured: true
+		color: '#0098EA'
 	},
 	{
 		id: 'legend-sui',
@@ -247,8 +241,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 		category: 'legendary-token',
 		tags: ['100x', 'defi', 'yield', 'points', 'legendary'],
 		chains: ['Ethereum', 'Arbitrum'],
-		color: '#31D8A4',
-		isFeatured: true
+		color: '#31D8A4'
 	},
 	{
 		id: 'legend-rune',
@@ -493,8 +486,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 		icon: TrendingUp,
 		category: 'legendary-token',
 		tags: ['analytics', 'gainers', 'tracking', 'data'],
-		color: '#8DC63F',
-		isFeatured: true
+		color: '#8DC63F'
 	},
 	{
 		id: 'dexscreener-trending',

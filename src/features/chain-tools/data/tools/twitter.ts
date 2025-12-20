@@ -128,8 +128,7 @@ export const twitterTools: ExternalTool[] = [
 		icon: Building2,
 		category: 'twitter',
 		tags: ['protocol', 'ethereum', 'official', 'updates'],
-		color: '#627EEA',
-		isFeatured: true
+		color: '#627EEA'
 	},
 	{
 		id: 'x-uniswap',
@@ -233,8 +232,7 @@ export const twitterTools: ExternalTool[] = [
 		icon: TrendingUp,
 		category: 'twitter',
 		tags: ['vc', 'investment', 'research', 'portfolio'],
-		color: '#000000',
-		isFeatured: true
+		color: '#000000'
 	},
 	{
 		id: 'x-paradigm',

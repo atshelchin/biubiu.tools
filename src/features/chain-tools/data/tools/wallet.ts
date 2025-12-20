@@ -23,8 +23,7 @@ export const walletTools: ExternalTool[] = [
 		category: 'wallet',
 		tags: ['sweep', 'batch', 'transfer', 'consolidate', 'biubiu'],
 		chains: ['Ethereum', 'Polygon', 'BSC', 'Base', 'Arbitrum'],
-		color: '#10B981',
-		isFeatured: true
+		color: '#10B981'
 	},
 	{
 		id: 'biubiu-one-to-many',
@@ -35,8 +34,7 @@ export const walletTools: ExternalTool[] = [
 		category: 'wallet',
 		tags: ['airdrop', 'batch', 'transfer', 'distribution', 'biubiu'],
 		chains: ['Ethereum', 'Polygon', 'BSC', 'Base', 'Arbitrum'],
-		color: '#F59E0B',
-		isFeatured: true
+		color: '#F59E0B'
 	},
 	{
 		id: 'biubiu-wallet-generator',
@@ -46,8 +44,7 @@ export const walletTools: ExternalTool[] = [
 		icon: KeyRound,
 		category: 'wallet',
 		tags: ['generator', 'mnemonic', 'hd-wallet', 'batch', 'biubiu'],
-		color: '#8B5CF6',
-		isFeatured: true
+		color: '#8B5CF6'
 	},
 	{
 		id: 'biubiu-balance-scanner',
@@ -58,8 +55,7 @@ export const walletTools: ExternalTool[] = [
 		category: 'wallet',
 		tags: ['balance', 'scanner', 'batch', 'portfolio', 'biubiu'],
 		chains: ['Ethereum', 'Polygon', 'BSC', 'Base', 'Arbitrum'],
-		color: '#3B82F6',
-		isFeatured: true
+		color: '#3B82F6'
 	},
 
 	// ========== Portfolio Trackers ==========
@@ -114,7 +110,8 @@ export const walletTools: ExternalTool[] = [
 		icon: Wallet,
 		category: 'wallet',
 		tags: ['wallet', 'extension', 'multi-chain', 'debank'],
-		color: '#8697FF'
+		color: '#8697FF',
+		isFeatured: true
 	},
 	{
 		id: 'rainbow',
@@ -124,7 +121,8 @@ export const walletTools: ExternalTool[] = [
 		icon: Wallet,
 		category: 'wallet',
 		tags: ['wallet', 'mobile', 'ethereum', 'nft'],
-		color: '#FF4BA6'
+		color: '#FF4BA6',
+		isFeatured: true
 	},
 	{
 		id: 'frame',
@@ -283,7 +281,8 @@ export const walletTools: ExternalTool[] = [
 		icon: Lock,
 		category: 'wallet',
 		tags: ['hardware', 'cold-storage', 'security'],
-		color: '#000000'
+		color: '#000000',
+		isFeatured: true
 	},
 	{
 		id: 'trezor',

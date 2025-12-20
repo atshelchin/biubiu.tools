@@ -33,8 +33,7 @@ export const rwaTools: ExternalTool[] = [
 		category: 'rwa',
 		tags: ['rwa', 'treasuries', 'usdy', 'ousg'],
 		chains: ['Ethereum', 'Solana'],
-		color: '#000000',
-		isFeatured: true
+		color: '#000000'
 	},
 	{
 		id: 'centrifuge',
@@ -45,8 +44,7 @@ export const rwaTools: ExternalTool[] = [
 		category: 'rwa',
 		tags: ['rwa', 'credit', 'tokenization', 'makerdao'],
 		chains: ['Ethereum', 'Centrifuge'],
-		color: '#F9B44C',
-		isFeatured: true
+		color: '#F9B44C'
 	},
 	{
 		id: 'maple-finance',
@@ -57,8 +55,7 @@ export const rwaTools: ExternalTool[] = [
 		category: 'rwa',
 		tags: ['rwa', 'lending', 'institutional', 'credit'],
 		chains: ['Ethereum', 'Solana'],
-		color: '#1E40AF',
-		isFeatured: true
+		color: '#1E40AF'
 	},
 	{
 		id: 'goldfinch',
@@ -103,8 +100,7 @@ export const rwaTools: ExternalTool[] = [
 		category: 'rwa',
 		tags: ['rwa', 'treasuries', 'blackrock', 'institutional'],
 		chains: ['Ethereum'],
-		color: '#000000',
-		isFeatured: true
+		color: '#000000'
 	},
 	{
 		id: 'franklin-benji',
@@ -160,8 +156,7 @@ export const rwaTools: ExternalTool[] = [
 		category: 'rwa',
 		tags: ['rwa', 'real-estate', 'fractional', 'rental'],
 		chains: ['Ethereum', 'Gnosis'],
-		color: '#FF6B35',
-		isFeatured: true
+		color: '#FF6B35'
 	},
 	{
 		id: 'lofty',
@@ -239,8 +234,7 @@ export const rwaTools: ExternalTool[] = [
 		icon: BarChart3,
 		category: 'rwa',
 		tags: ['rwa', 'analytics', 'data', 'tracking'],
-		color: '#6366F1',
-		isFeatured: true
+		color: '#6366F1'
 	},
 	{
 		id: 'defillama-rwa',

@@ -76,7 +76,8 @@ export const defiTools: ExternalTool[] = [
 		category: 'defi',
 		tags: ['stablecoin', 'swap', 'amm', 'yield'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Optimism'],
-		color: '#FF0000'
+		color: '#FF0000',
+		isFeatured: true
 	},
 	{
 		id: 'lido',
@@ -87,7 +88,8 @@ export const defiTools: ExternalTool[] = [
 		category: 'defi',
 		tags: ['staking', 'liquid-staking', 'eth', 'steth'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum'],
-		color: '#00A3FF'
+		color: '#00A3FF',
+		isFeatured: true
 	},
 	{
 		id: 'compound',
@@ -98,7 +100,8 @@ export const defiTools: ExternalTool[] = [
 		category: 'defi',
 		tags: ['lending', 'borrowing', 'defi', 'interest'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Base'],
-		color: '#00D395'
+		color: '#00D395',
+		isFeatured: true
 	},
 	{
 		id: 'maker',
@@ -120,7 +123,8 @@ export const defiTools: ExternalTool[] = [
 		category: 'defi',
 		tags: ['perpetuals', 'trading', 'derivatives', 'leverage'],
 		chains: ['Arbitrum', 'Avalanche'],
-		color: '#2D42FC'
+		color: '#2D42FC',
+		isFeatured: true
 	},
 	{
 		id: 'pancakeswap',
@@ -164,7 +168,8 @@ export const defiTools: ExternalTool[] = [
 		category: 'defi',
 		tags: ['restaking', 'avs', 'security', 'ethereum'],
 		chains: ['Ethereum'],
-		color: '#6C5CE7'
+		color: '#6C5CE7',
+		isFeatured: true
 	},
 
 	// ========== Perpetuals & Derivatives ==========
@@ -210,7 +215,8 @@ export const defiTools: ExternalTool[] = [
 		category: 'defi',
 		tags: ['yield', 'tokenization', 'pt', 'yt'],
 		chains: ['Ethereum', 'Arbitrum'],
-		color: '#26BFBF'
+		color: '#26BFBF',
+		isFeatured: true
 	},
 	{
 		id: 'radiant',
@@ -1196,8 +1202,7 @@ export const defiTools: ExternalTool[] = [
 		category: 'defi',
 		tags: ['liquid-restaking', 'eeth', 'non-custodial', 'defi'],
 		chains: ['Ethereum'],
-		color: '#6366F1',
-		isFeatured: true
+		color: '#6366F1'
 	},
 	{
 		id: 'swell',

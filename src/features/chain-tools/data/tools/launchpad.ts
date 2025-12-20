@@ -15,8 +15,7 @@ export const launchpadTools: ExternalTool[] = [
 		category: 'launchpad',
 		tags: ['fair-launch', 'meme', 'bonding-curve', 'solana'],
 		chains: ['Solana'],
-		color: '#00D181',
-		isFeatured: true
+		color: '#00D181'
 	},
 	{
 		id: 'four_meme',
@@ -27,8 +26,7 @@ export const launchpadTools: ExternalTool[] = [
 		category: 'launchpad',
 		tags: ['meme', 'token-launch', 'bnb', 'fair-launch'],
 		chains: ['BNB Chain'],
-		color: '#FBBF24',
-		isFeatured: true
+		color: '#FBBF24'
 	},
 	{
 		id: 'dao-maker',

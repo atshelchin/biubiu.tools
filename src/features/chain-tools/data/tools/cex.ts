@@ -43,8 +43,7 @@ export const cexTools: ExternalTool[] = [
 		icon: Building2,
 		category: 'cex',
 		tags: ['cex', 'exchange', 'regulated', 'us', 'nasdaq'],
-		color: '#0052FF',
-		isFeatured: true
+		color: '#0052FF'
 	},
 	{
 		id: 'okx-cex',
@@ -54,8 +53,7 @@ export const cexTools: ExternalTool[] = [
 		icon: Building2,
 		category: 'cex',
 		tags: ['cex', 'exchange', 'derivatives', 'web3'],
-		color: '#000000',
-		isFeatured: true
+		color: '#000000'
 	},
 	{
 		id: 'bybit-cex',
@@ -65,8 +63,7 @@ export const cexTools: ExternalTool[] = [
 		icon: TrendingUp,
 		category: 'cex',
 		tags: ['cex', 'exchange', 'derivatives', 'perpetuals'],
-		color: '#F7A600',
-		isFeatured: true
+		color: '#F7A600'
 	},
 	{
 		id: 'kraken-cex',
@@ -137,8 +134,7 @@ export const cexTools: ExternalTool[] = [
 		icon: ArrowUpDown,
 		category: 'cex',
 		tags: ['cex', 'exchange', 'options', 'futures', 'institutional'],
-		color: '#00FF88',
-		isFeatured: true
+		color: '#00FF88'
 	},
 	{
 		id: 'bitfinex-cex',
@@ -240,8 +236,7 @@ export const cexTools: ExternalTool[] = [
 		icon: Star,
 		category: 'cex',
 		tags: ['cex', 'exchange', 'solana', 'regulated', 'dubai'],
-		color: '#E84142',
-		isFeatured: true
+		color: '#E84142'
 	},
 	{
 		id: 'hyperliquid-cex',
@@ -251,8 +246,7 @@ export const cexTools: ExternalTool[] = [
 		icon: Zap,
 		category: 'cex',
 		tags: ['dex', 'perpetuals', 'orderbook', 'l1'],
-		color: '#00D395',
-		isFeatured: true
+		color: '#00D395'
 	},
 	{
 		id: 'cube-cex',

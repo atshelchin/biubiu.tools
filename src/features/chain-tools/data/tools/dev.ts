@@ -32,8 +32,7 @@ export const devTools: ExternalTool[] = [
 		category: 'dev',
 		tags: ['deploy', 'create2', 'deterministic', 'smart-contract', 'biubiu'],
 		chains: ['Ethereum', 'Polygon', 'BSC', 'Base', 'Arbitrum'],
-		color: '#F59E0B',
-		isFeatured: true
+		color: '#F59E0B'
 	},
 	{
 		id: 'biubiu-token-deployer',
@@ -44,8 +43,7 @@ export const devTools: ExternalTool[] = [
 		category: 'dev',
 		tags: ['erc20', 'token', 'deploy', 'create', 'biubiu'],
 		chains: ['Ethereum', 'Polygon', 'BSC', 'Base', 'Arbitrum'],
-		color: '#10B981',
-		isFeatured: true
+		color: '#10B981'
 	},
 	{
 		id: 'biubiu-events-scanner',
@@ -55,8 +53,7 @@ export const devTools: ExternalTool[] = [
 		icon: FileSearch,
 		category: 'dev',
 		tags: ['events', 'logs', 'scanner', 'smart-contract', 'biubiu'],
-		color: '#A855F7',
-		isFeatured: true
+		color: '#A855F7'
 	},
 	{
 		id: 'biubiu-chainlist',
@@ -66,8 +63,7 @@ export const devTools: ExternalTool[] = [
 		icon: Globe,
 		category: 'dev',
 		tags: ['chains', 'rpc', 'networks', 'add-network', 'biubiu'],
-		color: '#6366F1',
-		isFeatured: true
+		color: '#6366F1'
 	},
 
 	// ========== Development Frameworks ==========
@@ -119,7 +115,8 @@ export const devTools: ExternalTool[] = [
 		icon: Cpu,
 		category: 'dev',
 		tags: ['framework', 'testing', 'development', 'ethereum'],
-		color: '#FFF100'
+		color: '#FFF100',
+		isFeatured: true
 	},
 
 	// ========== Contract Utilities ==========
@@ -215,7 +212,8 @@ export const devTools: ExternalTool[] = [
 		icon: Cpu,
 		category: 'dev',
 		tags: ['rpc', 'api', 'node', 'infrastructure'],
-		color: '#4F46E5'
+		color: '#4F46E5',
+		isFeatured: true
 	},
 	{
 		id: 'infura',
@@ -225,7 +223,8 @@ export const devTools: ExternalTool[] = [
 		icon: Globe,
 		category: 'dev',
 		tags: ['rpc', 'api', 'node', 'infrastructure'],
-		color: '#FF6B4A'
+		color: '#FF6B4A',
+		isFeatured: true
 	},
 	{
 		id: 'quicknode',
@@ -279,7 +278,8 @@ export const devTools: ExternalTool[] = [
 		icon: Link2,
 		category: 'dev',
 		tags: ['oracle', 'price-feeds', 'vrf', 'automation'],
-		color: '#375BD2'
+		color: '#375BD2',
+		isFeatured: true
 	},
 	{
 		id: 'pyth',

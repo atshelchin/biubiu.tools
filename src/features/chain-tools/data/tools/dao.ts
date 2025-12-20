@@ -98,7 +98,8 @@ export const daoTools: ExternalTool[] = [
 		icon: Megaphone,
 		category: 'dao',
 		tags: ['social', 'farcaster', 'decentralized', 'frames'],
-		color: '#8465CB'
+		color: '#8465CB',
+		isFeatured: true
 	},
 	{
 		id: 'push',
@@ -390,8 +391,7 @@ export const daoTools: ExternalTool[] = [
 		category: 'dao',
 		tags: ['multisig', 'treasury', 'smart-accounts', 'security'],
 		chains: ['Ethereum', 'Polygon', 'Arbitrum', 'Base'],
-		color: '#12A77F',
-		isFeatured: true
+		color: '#12A77F'
 	},
 	{
 		id: 'orca-pod',
