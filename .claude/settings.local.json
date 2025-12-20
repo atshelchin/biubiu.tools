@@ -22,7 +22,9 @@
       "Bash(node:*)",
       "Bash(for id in across aragon arkham blockscout blur eigenlayer foundry hardhat lido magic-eden mythx nansen orbiter reservoir slither tally tenderly ultrasound)",
       "Bash(do)",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(uniq wc -l /tmp/all_tool_ids_uniq.txt)",
+      "Bash(1 cat /tmp/missing_i18n.json)"
     ],
     "deny": [],
     "ask": []
