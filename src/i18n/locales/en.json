@@ -1466,9 +1466,7 @@
 			"data": "Data",
 			"funding": "Funding",
 			"news": "News",
-			"twitter": "X / Twitter",
-			"discord": "Discord",
-			"telegram": "Telegram",
+			"community": "Community",
 			"jobs": "Jobs",
 			"stablecoin": "Stablecoins",
 			"dao_token": "DAO Governance",
@@ -1841,6 +1839,24 @@
 			"safe": {
 				"description": "Multi-signature smart wallet"
 			},
+			"phantom_wallet": {
+				"description": "Multi-chain wallet for Solana and Ethereum"
+			},
+			"coinbase_wallet": {
+				"description": "Self-custody wallet by Coinbase"
+			},
+			"trust_wallet": {
+				"description": "Multi-chain mobile wallet by Binance"
+			},
+			"keplr_wallet": {
+				"description": "Cosmos ecosystem wallet for IBC chains"
+			},
+			"leap_wallet": {
+				"description": "Cosmos wallet with staking support"
+			},
+			"okx_wallet": {
+				"description": "Multi-chain wallet by OKX exchange"
+			},
 			"zapper": {
 				"description": "DeFi portfolio dashboard"
 			},
@@ -1873,6 +1889,30 @@
 			},
 			"farcaster": {
 				"description": "Decentralized social protocol"
+			},
+			"pod_bankless": {
+				"description": "DeFi podcast covering crypto culture and economics"
+			},
+			"pod_defiant": {
+				"description": "DeFi-focused news and interviews"
+			},
+			"pod_pomp": {
+				"description": "Bitcoin and crypto investing podcast"
+			},
+			"pod_epicenter": {
+				"description": "Blockchain podcast since 2013"
+			},
+			"pod_real_vision": {
+				"description": "Macro investing and crypto insights"
+			},
+			"pod_bell_curve": {
+				"description": "Deep dives into crypto protocols"
+			},
+			"pod_daily_gwei": {
+				"description": "Daily Ethereum news and analysis"
+			},
+			"pod_web3_galaxy": {
+				"description": "Web3 project interviews and insights"
 			},
 			"push": {
 				"description": "Web3 notifications and chat"
@@ -3014,6 +3054,9 @@
 			"railgun": {
 				"description": "Private DeFi with zk-SNARKs on EVM chains"
 			},
+			"privacy_pools": {
+				"description": "Privacy-preserving transaction mixing protocol"
+			},
 			"aztec": {
 				"description": "Programmable privacy with zk-rollup"
 			},
@@ -3763,6 +3806,9 @@
 			},
 			"nft_trader": {
 				"description": "NFT Trader - NFT platform"
+			},
+			"nft_art_generators": {
+				"description": "AI-powered NFT art generation tools"
 			},
 			"snag_solutions": {
 				"description": "Snag Solutions - NFT platform"
@@ -6484,6 +6530,18 @@
 			},
 			"kol_raoul_pal": {
 				"description": "Real Vision CEO, macro investor"
+			},
+			"kol_dcinvestor": {
+				"description": "Ethereum investor, long-term ETH holder"
+			},
+			"kol_stani": {
+				"description": "Stani Kulechov - Aave founder, DeFi pioneer"
+			},
+			"kol_defiignas": {
+				"description": "DeFi Ignas - DeFi researcher and analyst"
+			},
+			"kol_daltonic": {
+				"description": "Daltonic - Smart money on-chain analyst"
 			},
 			"fusionist": {
 				"description": "Binance-listed AAA mech strategy game with ACE token"

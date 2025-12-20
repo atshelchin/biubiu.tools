@@ -1466,9 +1466,7 @@
 			"data": "数据索引",
 			"funding": "融资平台",
 			"news": "资讯媒体",
-			"twitter": "X / 推特",
-			"discord": "Discord",
-			"telegram": "Telegram",
+			"community": "社区",
 			"jobs": "求职招聘",
 			"stablecoin": "稳定币",
 			"dao_token": "DAO 治理代币",
@@ -1841,6 +1839,24 @@
 			"safe": {
 				"description": "多重签名智能钱包"
 			},
+			"phantom_wallet": {
+				"description": "Solana和以太坊多链钱包"
+			},
+			"coinbase_wallet": {
+				"description": "Coinbase自托管钱包"
+			},
+			"trust_wallet": {
+				"description": "币安多链移动钱包"
+			},
+			"keplr_wallet": {
+				"description": "Cosmos生态IBC链钱包"
+			},
+			"leap_wallet": {
+				"description": "支持质押的Cosmos钱包"
+			},
+			"okx_wallet": {
+				"description": "OKX交易所多链钱包"
+			},
 			"zapper": {
 				"description": "DeFi 投资组合仪表板"
 			},
@@ -1873,6 +1889,30 @@
 			},
 			"farcaster": {
 				"description": "去中心化社交协议"
+			},
+			"pod_bankless": {
+				"description": "涵盖加密文化和经济的DeFi播客"
+			},
+			"pod_defiant": {
+				"description": "DeFi新闻和访谈"
+			},
+			"pod_pomp": {
+				"description": "比特币和加密投资播客"
+			},
+			"pod_epicenter": {
+				"description": "2013年创立的区块链播客"
+			},
+			"pod_real_vision": {
+				"description": "宏观投资和加密洞察"
+			},
+			"pod_bell_curve": {
+				"description": "加密协议深度解析"
+			},
+			"pod_daily_gwei": {
+				"description": "每日以太坊新闻和分析"
+			},
+			"pod_web3_galaxy": {
+				"description": "Web3项目访谈和洞察"
 			},
 			"push": {
 				"description": "Web3 通知和聊天"
@@ -3011,6 +3051,9 @@
 			"railgun": {
 				"description": "EVM链zk-SNARKs隐私DeFi"
 			},
+			"privacy_pools": {
+				"description": "隐私保护交易混合协议"
+			},
 			"aztec": {
 				"description": "zk-rollup可编程隐私"
 			},
@@ -3754,6 +3797,9 @@
 			},
 			"nft_trader": {
 				"description": "NFT Trader - NFT platform"
+			},
+			"nft_art_generators": {
+				"description": "AI驱动的NFT艺术生成工具"
 			},
 			"snag_solutions": {
 				"description": "Snag Solutions - NFT platform"
@@ -6475,6 +6521,18 @@
 			},
 			"kol_raoul_pal": {
 				"description": "Real Vision CEO，宏观投资者"
+			},
+			"kol_dcinvestor": {
+				"description": "以太坊投资者，长期ETH持有者"
+			},
+			"kol_stani": {
+				"description": "Stani Kulechov - Aave创始人，DeFi先驱"
+			},
+			"kol_defiignas": {
+				"description": "DeFi Ignas - DeFi研究员和分析师"
+			},
+			"kol_daltonic": {
+				"description": "Daltonic - 链上聪明钱分析师"
 			},
 			"fusionist": {
 				"description": "币安上市的 AAA 级机甲策略游戏，ACE 代币"
