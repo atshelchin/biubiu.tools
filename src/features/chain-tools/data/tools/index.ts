@@ -23,6 +23,22 @@ export { gamefiTools } from './gamefi';
 export { paymentsTools } from './payments';
 export { fundingTools } from './funding';
 export { newsTools } from './news';
+export { twitterTools } from './twitter';
+export { discordTools } from './discord';
+export { telegramTools } from './telegram';
+export { jobsTools } from './jobs';
+export { stablecoinTools } from './stablecoin';
+export { oracleTools } from './oracle';
+export { daoTokenTools } from './dao-token';
+export { whaleAddressTools } from './whale-address';
+export { airdropTokenTools } from './airdrop-token';
+export { nonEvmTools } from './non-evm';
+export { legendaryTokenTools } from './legendary-token';
+export { mevTools } from './mev';
+export { privacyTools } from './privacy';
+export { rwaTools } from './rwa';
+export { aiCryptoTools } from './ai-crypto';
+export { restakingTools } from './restaking';
 
 // Import all for merged array
 import { defiTools } from './defi';
@@ -43,6 +59,22 @@ import { gamefiTools } from './gamefi';
 import { paymentsTools } from './payments';
 import { fundingTools } from './funding';
 import { newsTools } from './news';
+import { twitterTools } from './twitter';
+import { discordTools } from './discord';
+import { telegramTools } from './telegram';
+import { jobsTools } from './jobs';
+import { stablecoinTools } from './stablecoin';
+import { oracleTools } from './oracle';
+import { daoTokenTools } from './dao-token';
+import { whaleAddressTools } from './whale-address';
+import { airdropTokenTools } from './airdrop-token';
+import { nonEvmTools } from './non-evm';
+import { legendaryTokenTools } from './legendary-token';
+import { mevTools } from './mev';
+import { privacyTools } from './privacy';
+import { rwaTools } from './rwa';
+import { aiCryptoTools } from './ai-crypto';
+import { restakingTools } from './restaking';
 
 import type { ExternalTool } from '../../types';
 
@@ -67,7 +99,23 @@ export const allTools: ExternalTool[] = [
 	...gamefiTools,
 	...paymentsTools,
 	...fundingTools,
-	...newsTools
+	...newsTools,
+	...twitterTools,
+	...discordTools,
+	...telegramTools,
+	...jobsTools,
+	...stablecoinTools,
+	...oracleTools,
+	...daoTokenTools,
+	...whaleAddressTools,
+	...airdropTokenTools,
+	...nonEvmTools,
+	...legendaryTokenTools,
+	...mevTools,
+	...privacyTools,
+	...rwaTools,
+	...aiCryptoTools,
+	...restakingTools
 ];
 
 /**

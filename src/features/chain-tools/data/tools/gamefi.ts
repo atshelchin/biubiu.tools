@@ -445,5 +445,195 @@ export const gamefiTools: ExternalTool[] = [
 		tags: ['tcg', 'cards', 'battle', 'play-to-earn'],
 		chains: ['Hive', 'BSC'],
 		color: '#F44336'
+	},
+	// ========== More Popular Games ==========
+	{
+		id: 'stepn',
+		name: 'STEPN',
+		descriptionKey: 'chain_tools.tools.stepn.description',
+		url: 'https://stepn.com',
+		icon: Gamepad2,
+		category: 'gamefi',
+		tags: ['move-to-earn', 'fitness', 'nft', 'lifestyle'],
+		chains: ['Solana', 'BNB Chain', 'Ethereum'],
+		color: '#00E676',
+		isFeatured: true
+	},
+	{
+		id: 'hero-of-mavia',
+		name: 'Heroes of Mavia',
+		descriptionKey: 'chain_tools.tools.hero_of_mavia.description',
+		url: 'https://mavia.com',
+		icon: Sword,
+		category: 'gamefi',
+		tags: ['strategy', 'base-building', 'mobile', 'pvp'],
+		chains: ['Ethereum'],
+		color: '#7C3AED'
+	},
+	{
+		id: 'night-crows',
+		name: 'Night Crows',
+		descriptionKey: 'chain_tools.tools.night_crows.description',
+		url: 'https://nightcrows.com',
+		icon: Sword,
+		category: 'gamefi',
+		tags: ['mmorpg', 'wemix', 'korean', 'aaa'],
+		chains: ['WEMIX'],
+		color: '#1E1E1E'
+	},
+	{
+		id: 'mir4',
+		name: 'MIR4',
+		descriptionKey: 'chain_tools.tools.mir4.description',
+		url: 'https://mir4global.com',
+		icon: Sword,
+		category: 'gamefi',
+		tags: ['mmorpg', 'wemix', 'martial-arts', 'mining'],
+		chains: ['WEMIX'],
+		color: '#C9AA6B'
+	},
+	{
+		id: 'wildcard',
+		name: 'Wildcard',
+		descriptionKey: 'chain_tools.tools.wildcard.description',
+		url: 'https://playwildcard.com',
+		icon: Gamepad2,
+		category: 'gamefi',
+		tags: ['arena', 'strategy', 'competitive', 'esports'],
+		chains: ['Ethereum'],
+		color: '#FF6B00'
+	},
+	{
+		id: 'off-the-grid',
+		name: 'Off the Grid',
+		descriptionKey: 'chain_tools.tools.off_the_grid.description',
+		url: 'https://offthegrid.gg',
+		icon: Gamepad2,
+		category: 'gamefi',
+		tags: ['battle-royale', 'shooter', 'cyberpunk', 'aaa'],
+		chains: ['Avalanche'],
+		color: '#00FF87',
+		isFeatured: true
+	},
+	{
+		id: 'maple-story-universe',
+		name: 'MapleStory Universe',
+		descriptionKey: 'chain_tools.tools.maple_story_universe.description',
+		url: 'https://msu.io',
+		icon: Gamepad2,
+		category: 'gamefi',
+		tags: ['mmorpg', 'nexon', 'korean', 'nostalgic'],
+		chains: ['Polygon'],
+		color: '#FF9800'
+	},
+	{
+		id: 'nyan-heroes',
+		name: 'Nyan Heroes',
+		descriptionKey: 'chain_tools.tools.nyan_heroes.description',
+		url: 'https://nyanheroes.com',
+		icon: Gamepad2,
+		category: 'gamefi',
+		tags: ['shooter', 'hero', 'solana', 'free-to-play'],
+		chains: ['Solana'],
+		color: '#FF6B6B'
+	},
+	{
+		id: 'aurory',
+		name: 'Aurory',
+		descriptionKey: 'chain_tools.tools.aurory.description',
+		url: 'https://aurory.io',
+		icon: Gamepad2,
+		category: 'gamefi',
+		tags: ['jrpg', 'tactics', 'solana', 'nft'],
+		chains: ['Solana'],
+		color: '#8B5CF6'
+	},
+	{
+		id: 'phantom-galaxies',
+		name: 'Phantom Galaxies',
+		descriptionKey: 'chain_tools.tools.phantom_galaxies.description',
+		url: 'https://phantomgalaxies.com',
+		icon: Sparkles,
+		category: 'gamefi',
+		tags: ['mecha', 'space', 'action-rpg', 'polygon'],
+		chains: ['Polygon'],
+		color: '#6366F1'
+	},
+	{
+		id: 'crypto-unicorns',
+		name: 'Crypto Unicorns',
+		descriptionKey: 'chain_tools.tools.crypto_unicorns.description',
+		url: 'https://cryptounicorns.fun',
+		icon: Sparkles,
+		category: 'gamefi',
+		tags: ['breeding', 'farming', 'casual', 'polygon'],
+		chains: ['Polygon'],
+		color: '#EC4899'
+	},
+	{
+		id: 'legends-of-venari',
+		name: 'Legends of Venari',
+		descriptionKey: 'chain_tools.tools.legends_of_venari.description',
+		url: 'https://legendsofvenari.com',
+		icon: Gamepad2,
+		category: 'gamefi',
+		tags: ['creature', 'exploration', 'collection', 'ethereum'],
+		chains: ['Ethereum'],
+		color: '#22C55E'
+	},
+	{
+		id: 'blocklords',
+		name: 'BLOCKLORDS',
+		descriptionKey: 'chain_tools.tools.blocklords.description',
+		url: 'https://blocklords.com',
+		icon: Sword,
+		category: 'gamefi',
+		tags: ['strategy', 'medieval', 'grand-strategy', 'immutable'],
+		chains: ['Immutable X'],
+		color: '#B45309'
+	},
+	{
+		id: 'planet-ix',
+		name: 'Planet IX',
+		descriptionKey: 'chain_tools.tools.planet_ix.description',
+		url: 'https://planetix.com',
+		icon: Box,
+		category: 'gamefi',
+		tags: ['strategy', 'nft', 'polygon', 'land'],
+		chains: ['Polygon'],
+		color: '#3B82F6'
+	},
+	{
+		id: 'sweat-economy',
+		name: 'Sweat Economy',
+		descriptionKey: 'chain_tools.tools.sweat_economy.description',
+		url: 'https://sweateconomy.com',
+		icon: Gamepad2,
+		category: 'gamefi',
+		tags: ['move-to-earn', 'fitness', 'near', 'lifestyle'],
+		chains: ['NEAR'],
+		color: '#F59E0B'
+	},
+	{
+		id: 'superior',
+		name: 'Superior',
+		descriptionKey: 'chain_tools.tools.superior.description',
+		url: 'https://playsuperior.com',
+		icon: Gamepad2,
+		category: 'gamefi',
+		tags: ['roguelike', 'shooter', 'co-op', 'gala'],
+		chains: ['GalaChain'],
+		color: '#EF4444'
+	},
+	{
+		id: 'champions-ascension',
+		name: 'Champions Ascension',
+		descriptionKey: 'chain_tools.tools.champions_ascension.description',
+		url: 'https://championsascension.com',
+		icon: Sword,
+		category: 'gamefi',
+		tags: ['action-rpg', 'arena', 'massively', 'ethereum'],
+		chains: ['Ethereum'],
+		color: '#8B5CF6'
 	}
 ];

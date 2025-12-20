@@ -22,7 +22,23 @@ export type CategoryId =
 	| 'gamefi'
 	| 'payments'
 	| 'funding'
-	| 'news';
+	| 'news'
+	| 'twitter'
+	| 'discord'
+	| 'telegram'
+	| 'jobs'
+	| 'stablecoin'
+	| 'oracle'
+	| 'dao-token'
+	| 'whale-address'
+	| 'airdrop-token'
+	| 'non-evm'
+	| 'legendary-token'
+	| 'mev'
+	| 'privacy'
+	| 'rwa'
+	| 'ai-crypto'
+	| 'restaking';
 
 /**
  * Category definition with i18n keys and styling

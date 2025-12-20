@@ -20,7 +20,23 @@ import {
 	Gamepad2,
 	CreditCard,
 	Banknote,
-	Newspaper
+	Newspaper,
+	Twitter,
+	MessageCircle,
+	Send,
+	Briefcase,
+	CircleDollarSign,
+	Activity,
+	Coins,
+	Landmark,
+	Gift,
+	Globe,
+	Crown,
+	Zap,
+	Lock,
+	Building2,
+	Bot,
+	Repeat
 } from '@lucide/svelte';
 import type { Category, CategoryId } from '../types';
 
@@ -63,7 +79,48 @@ export const categories: Category[] = [
 		icon: CreditCard
 	},
 	{ id: 'funding', labelKey: 'chain_tools.categories.funding', color: '#F59E0B', icon: Banknote },
-	{ id: 'news', labelKey: 'chain_tools.categories.news', color: '#EF4444', icon: Newspaper }
+	{ id: 'news', labelKey: 'chain_tools.categories.news', color: '#EF4444', icon: Newspaper },
+	{ id: 'twitter', labelKey: 'chain_tools.categories.twitter', color: '#1DA1F2', icon: Twitter },
+	{
+		id: 'discord',
+		labelKey: 'chain_tools.categories.discord',
+		color: '#5865F2',
+		icon: MessageCircle
+	},
+	{ id: 'telegram', labelKey: 'chain_tools.categories.telegram', color: '#0088CC', icon: Send },
+	{ id: 'jobs', labelKey: 'chain_tools.categories.jobs', color: '#22C55E', icon: Briefcase },
+	{
+		id: 'stablecoin',
+		labelKey: 'chain_tools.categories.stablecoin',
+		color: '#10B981',
+		icon: CircleDollarSign
+	},
+	{ id: 'oracle', labelKey: 'chain_tools.categories.oracle', color: '#6366F1', icon: Activity },
+	{ id: 'dao-token', labelKey: 'chain_tools.categories.dao_token', color: '#A855F7', icon: Coins },
+	{
+		id: 'whale-address',
+		labelKey: 'chain_tools.categories.whale_address',
+		color: '#0EA5E9',
+		icon: Landmark
+	},
+	{
+		id: 'airdrop-token',
+		labelKey: 'chain_tools.categories.airdrop_token',
+		color: '#F59E0B',
+		icon: Gift
+	},
+	{ id: 'non-evm', labelKey: 'chain_tools.categories.non_evm', color: '#8B5CF6', icon: Globe },
+	{
+		id: 'legendary-token',
+		labelKey: 'chain_tools.categories.legendary_token',
+		color: '#F59E0B',
+		icon: Crown
+	},
+	{ id: 'mev', labelKey: 'chain_tools.categories.mev', color: '#EF4444', icon: Zap },
+	{ id: 'privacy', labelKey: 'chain_tools.categories.privacy', color: '#6B7280', icon: Lock },
+	{ id: 'rwa', labelKey: 'chain_tools.categories.rwa', color: '#0EA5E9', icon: Building2 },
+	{ id: 'ai-crypto', labelKey: 'chain_tools.categories.ai_crypto', color: '#8B5CF6', icon: Bot },
+	{ id: 'restaking', labelKey: 'chain_tools.categories.restaking', color: '#6366F1', icon: Repeat }
 ];
 
 /**

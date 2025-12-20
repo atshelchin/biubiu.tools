@@ -1458,13 +1458,26 @@
 			"gamefi": "GameFi",
 			"payments": "Payments",
 			"meme": "Meme",
-			"oracle": "Oracle",
+			"oracle": "Price Oracles",
 			"restaking": "Restaking",
 			"yield": "Yield",
 			"privacy": "Privacy",
 			"data": "Data",
 			"funding": "Funding",
-			"news": "News"
+			"news": "News",
+			"twitter": "X / Twitter",
+			"discord": "Discord",
+			"telegram": "Telegram",
+			"jobs": "Jobs",
+			"stablecoin": "Stablecoins",
+			"dao_token": "DAO Governance",
+			"whale_address": "Whales & Treasuries",
+			"airdrop_token": "Airdrops",
+			"non_evm": "Non-EVM Chains",
+			"legendary_token": "10x/100x Tokens",
+			"mev": "MEV",
+			"rwa": "RWA",
+			"ai_crypto": "AI Crypto"
 		},
 		"tools": {
 			"uniswap": {
@@ -1642,7 +1655,7 @@
 				"description": "Peer-to-peer lending with optimized rates"
 			},
 			"frax": {
-				"description": "Algorithmic stablecoin ecosystem"
+				"description": "Fractional-algorithmic stablecoin with partial collateralization"
 			},
 			"rocketpool": {
 				"description": "Decentralized Ethereum staking"
@@ -1744,7 +1757,7 @@
 				"description": "Multi-chain DEX analytics"
 			},
 			"bubblemaps": {
-				"description": "Token holder distribution visualization"
+				"description": "Visual token holder and supply distribution analysis"
 			},
 			"certik": {
 				"description": "Security audits and skynet"
@@ -1843,7 +1856,7 @@
 				"description": "NFT trading and analytics"
 			},
 			"boardroom": {
-				"description": "DAO governance dashboard"
+				"description": "Governance aggregator for tracking DAO proposals and voting"
 			},
 			"karma": {
 				"description": "DAO contributor reputation"
@@ -2152,13 +2165,13 @@
 				"description": "Decentralized API platform for Web3 builders"
 			},
 			"chainlink": {
-				"description": "Decentralized oracle network for smart contracts"
+				"description": "Industry-leading decentralized oracle network for price feeds, VRF and automation"
 			},
 			"band_protocol": {
-				"description": "Cross-chain data oracle for Cosmos ecosystem"
+				"description": "Cross-chain oracle with Cosmos SDK integration"
 			},
 			"api3": {
-				"description": "First-party oracle solution with Airnode"
+				"description": "First-party oracle with Airnode for direct API data delivery"
 			},
 			"redstone": {
 				"description": "Modular oracle for DeFi, LSDs, and RWAs"
@@ -2977,7 +2990,7 @@
 				"description": "Transparent and customizable oracle platform"
 			},
 			"tellor": {
-				"description": "Decentralized oracle with dispute mechanism"
+				"description": "Permissionless oracle with dispute mechanism and staking"
 			},
 			"symbiotic_restaking": {
 				"description": "Permissionless modular restaking protocol"
@@ -3070,7 +3083,7 @@
 				"description": "Bitquery - Blockchain analytics"
 			},
 			"whale_alert": {
-				"description": "Whale Alert - Blockchain analytics"
+				"description": "Real-time large transaction alerts across blockchains"
 			},
 			"intotheblock": {
 				"description": "IntoTheBlock - Blockchain analytics"
@@ -3181,7 +3194,7 @@
 				"description": "marginfi - DeFi protocol"
 			},
 			"drift_protocol": {
-				"description": "Drift Protocol - DeFi protocol"
+				"description": "Decentralized perpetual futures exchange on Solana"
 			},
 			"ondo_finance": {
 				"description": "Ondo Finance - DeFi protocol"
@@ -3247,10 +3260,10 @@
 				"description": "Starkli - Developer tool"
 			},
 			"solscan": {
-				"description": "Solscan - Block explorer"
+				"description": "Popular Solana explorer with token analytics and NFT support"
 			},
 			"mintscan": {
-				"description": "Mintscan - Block explorer"
+				"description": "Multi-chain Cosmos ecosystem explorer"
 			},
 			"nearblocks": {
 				"description": "NearBlocks - Block explorer"
@@ -3262,7 +3275,7 @@
 				"description": "AvaScan - Block explorer"
 			},
 			"tonscan": {
-				"description": "TONScan - Block explorer"
+				"description": "TON blockchain explorer for transactions and jettons"
 			},
 			"tronscan": {
 				"description": "TronScan - Block explorer"
@@ -3340,7 +3353,7 @@
 				"description": "Arbitrum Grants - Web3 investment and funding platform"
 			},
 			"ethereum_foundation": {
-				"description": "Ethereum Foundation - Web3 investment and funding platform"
+				"description": "Official Ethereum Foundation treasury holding ETH reserves"
 			},
 			"polygon_grants": {
 				"description": "Polygon Grants - Web3 investment and funding platform"
@@ -3892,7 +3905,7 @@
 				"description": "Moxie - Decentralized social platform"
 			},
 			"phantom_wallet": {
-				"description": "Phantom - Crypto wallet"
+				"description": "Popular multi-chain wallet with Solana focus"
 			},
 			"backpack_wallet": {
 				"description": "Backpack - Crypto wallet"
@@ -3904,7 +3917,7 @@
 				"description": "Solflare - Crypto wallet"
 			},
 			"keplr_wallet": {
-				"description": "Keplr - Crypto wallet"
+				"description": "Interchain wallet for Cosmos ecosystem with staking"
 			},
 			"leap_wallet": {
 				"description": "Leap Wallet - Crypto wallet"
@@ -3920,6 +3933,1866 @@
 			},
 			"okx_wallet": {
 				"description": "OKX Wallet - Crypto wallet"
+			},
+			"x_vitalik": {
+				"description": "Founder and thought leader in the crypto space"
+			},
+			"x_cz_binance": {
+				"description": "Founder and thought leader in the crypto space"
+			},
+			"x_brian_armstrong": {
+				"description": "Founder and thought leader in the crypto space"
+			},
+			"x_hayden_adams": {
+				"description": "Founder and thought leader in the crypto space"
+			},
+			"x_stani_kulechov": {
+				"description": "Founder and thought leader in the crypto space"
+			},
+			"x_sergey_nazarov": {
+				"description": "Founder and thought leader in the crypto space"
+			},
+			"x_hasufl": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_samczsun": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_jon_charbonneau": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_polynya": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_dankrad": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_ethereum": {
+				"description": "Official protocol account with updates and announcements"
+			},
+			"x_uniswap": {
+				"description": "Official protocol account with updates and announcements"
+			},
+			"x_aave": {
+				"description": "Official protocol account with updates and announcements"
+			},
+			"x_arbitrum": {
+				"description": "Official protocol account with updates and announcements"
+			},
+			"x_optimism": {
+				"description": "Official protocol account with updates and announcements"
+			},
+			"x_base": {
+				"description": "Official protocol account with updates and announcements"
+			},
+			"x_transmissions11": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_gakonst": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_austin_griffith": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_patrickalphac": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_a16zcrypto": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_paradigm": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_dragonfly": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_punk6529": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_iamDCinvestor": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_sassal0x": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_evan_van_ness": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_lex_node": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_cygaar": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_0xfoobar": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_twobitidiot": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_matthuang": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_rleshner": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_daaborsebit": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_warcaster": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_balajis": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_cdixon": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_ljxie": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_spaborseencernoon": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_sui414": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_inversebrah": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_teaborsetranode": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_lookonchain": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_thedefiedge": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_defi_made_here": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_0xngmi": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_banteg": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_fubuloubu": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_0xning": {
+				"description": "Chinese Web3 influencer with insights on crypto and DeFi"
+			},
+			"x_tmel0211": {
+				"description": "Chinese Web3 influencer with insights on crypto and DeFi"
+			},
+			"x_phyrex": {
+				"description": "Chinese Web3 influencer with insights on crypto and DeFi"
+			},
+			"x_mindaoyang": {
+				"description": "Chinese Web3 influencer with insights on crypto and DeFi"
+			},
+			"x_jaborsesonjason": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_maborepeng": {
+				"description": "Web3 influencer sharing insights and analysis"
+			},
+			"x_cmdefi": {
+				"description": "Chinese Web3 influencer with insights on crypto and DeFi"
+			},
+			"x_0xtodd": {
+				"description": "Chinese Web3 influencer with insights on crypto and DeFi"
+			},
+			"x_haotian": {
+				"description": "Chinese Web3 influencer with insights on crypto and DeFi"
+			},
+			"discord_ethereum": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_uniswap": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_aave": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_chainlink": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_arbitrum": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_optimism": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_base": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_zksync": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_starknet": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_polygon": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_ethglobal": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_buildspace": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_alchemy": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_hardhat": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_foundry": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_openzeppelin": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_thegraph": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_scaffold_eth": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_immunefi": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_code4rena": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_sherlock": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_secureum": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_opensea": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_blur": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_artblocks": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_foundation": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_nouns": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_punks": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_bayc": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_azuki": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_pudgypenguins": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_axie": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_illuvium": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_immutable": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_loot": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_treasure": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_ronin": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_bankless": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_gitcoin": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_ens": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_farcaster": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_lens": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_friend_tech": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_rabbithole": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_galxe": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_solana": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_avalanche": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_cosmos": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_sui": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_aptos": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_near": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"discord_ton": {
+				"description": "Active Discord community for discussions and networking"
+			},
+			"tg_cointelegraph": {
+				"description": "Crypto news and updates channel"
+			},
+			"tg_coindesk": {
+				"description": "Crypto news and updates channel"
+			},
+			"tg_theblock": {
+				"description": "Crypto news and updates channel"
+			},
+			"tg_bankless": {
+				"description": "Crypto news and updates channel"
+			},
+			"tg_whale_alert": {
+				"description": "On-chain analytics and whale tracking alerts"
+			},
+			"tg_lookonchain": {
+				"description": "On-chain analytics and whale tracking alerts"
+			},
+			"tg_ethereum_ann": {
+				"description": "Developer community for technical discussions"
+			},
+			"tg_solana_ann": {
+				"description": "Official protocol announcements channel"
+			},
+			"tg_arbitrum_ann": {
+				"description": "Official protocol announcements channel"
+			},
+			"tg_ton_official": {
+				"description": "Official protocol announcements channel"
+			},
+			"tg_wu_blockchain": {
+				"description": "Chinese crypto community and news channel"
+			},
+			"tg_odaily": {
+				"description": "Chinese crypto community and news channel"
+			},
+			"tg_blockbeats": {
+				"description": "Chinese crypto community and news channel"
+			},
+			"tg_foresight_news": {
+				"description": "Chinese crypto community and news channel"
+			},
+			"tg_panews": {
+				"description": "Chinese crypto community and news channel"
+			},
+			"tg_techflow": {
+				"description": "Chinese crypto community and news channel"
+			},
+			"tg_chaincatcher": {
+				"description": "Chinese crypto community and news channel"
+			},
+			"tg_defi_cn": {
+				"description": "Chinese crypto community and news channel"
+			},
+			"tg_eth_cn": {
+				"description": "Chinese crypto community and news channel"
+			},
+			"tg_crypto_korea": {
+				"description": "Korean crypto community for trading and discussions"
+			},
+			"tg_korea_defi": {
+				"description": "Korean crypto community for trading and discussions"
+			},
+			"tg_korea_nft": {
+				"description": "Korean crypto community for trading and discussions"
+			},
+			"tg_korea_altcoin": {
+				"description": "Korean crypto community for trading and discussions"
+			},
+			"tg_crypto_japan": {
+				"description": "Japanese crypto community for trading and discussions"
+			},
+			"tg_japan_defi": {
+				"description": "Japanese crypto community for trading and discussions"
+			},
+			"tg_crypto_vietnam": {
+				"description": "Vietnamese crypto community for trading and discussions"
+			},
+			"tg_vietnam_defi": {
+				"description": "Vietnamese crypto community for trading and discussions"
+			},
+			"tg_vietnam_airdrop": {
+				"description": "Vietnamese crypto community for trading and discussions"
+			},
+			"tg_vietnam_gamefi": {
+				"description": "Vietnamese crypto community for trading and discussions"
+			},
+			"tg_crypto_indonesia": {
+				"description": "Indonesian crypto community for trading and discussions"
+			},
+			"tg_indonesia_defi": {
+				"description": "Indonesian crypto community for trading and discussions"
+			},
+			"tg_indonesia_airdrop": {
+				"description": "Indonesian crypto community for trading and discussions"
+			},
+			"tg_crypto_philippines": {
+				"description": "Filipino crypto community for trading and discussions"
+			},
+			"tg_philippines_axie": {
+				"description": "Filipino crypto community for trading and discussions"
+			},
+			"tg_crypto_thailand": {
+				"description": "Thai crypto community for trading and discussions"
+			},
+			"tg_thailand_defi": {
+				"description": "Thai crypto community for trading and discussions"
+			},
+			"tg_crypto_malaysia": {
+				"description": "Malaysian crypto community for trading and discussions"
+			},
+			"tg_crypto_india": {
+				"description": "Indian crypto community for trading and discussions"
+			},
+			"tg_india_defi": {
+				"description": "Indian crypto community for trading and discussions"
+			},
+			"tg_india_web3": {
+				"description": "Indian crypto community for trading and discussions"
+			},
+			"tg_crypto_russia": {
+				"description": "Russian crypto community for trading and discussions"
+			},
+			"tg_russia_defi": {
+				"description": "Russian crypto community for trading and discussions"
+			},
+			"tg_russia_trading": {
+				"description": "Russian crypto community for trading and discussions"
+			},
+			"tg_crypto_ukraine": {
+				"description": "Ukrainian crypto community for trading and discussions"
+			},
+			"tg_crypto_turkey": {
+				"description": "Turkish crypto community for trading and discussions"
+			},
+			"tg_turkey_defi": {
+				"description": "Turkish crypto community for trading and discussions"
+			},
+			"tg_turkey_airdrop": {
+				"description": "Turkish crypto community for trading and discussions"
+			},
+			"tg_crypto_arabic": {
+				"description": "Arabic crypto community for trading and discussions"
+			},
+			"tg_uae_crypto": {
+				"description": "Arabic crypto community for trading and discussions"
+			},
+			"tg_saudi_crypto": {
+				"description": "Arabic crypto community for trading and discussions"
+			},
+			"tg_egypt_crypto": {
+				"description": "Arabic crypto community for trading and discussions"
+			},
+			"tg_crypto_africa": {
+				"description": "African crypto community for trading and discussions"
+			},
+			"tg_crypto_nigeria": {
+				"description": "African crypto community for trading and discussions"
+			},
+			"tg_crypto_southafrica": {
+				"description": "African crypto community for trading and discussions"
+			},
+			"tg_crypto_kenya": {
+				"description": "African crypto community for trading and discussions"
+			},
+			"tg_crypto_ghana": {
+				"description": "African crypto community for trading and discussions"
+			},
+			"tg_crypto_latam": {
+				"description": "Latin American crypto community for trading and discussions"
+			},
+			"tg_crypto_brazil": {
+				"description": "Latin American crypto community for trading and discussions"
+			},
+			"tg_brazil_defi": {
+				"description": "Latin American crypto community for trading and discussions"
+			},
+			"tg_crypto_argentina": {
+				"description": "Latin American crypto community for trading and discussions"
+			},
+			"tg_crypto_mexico": {
+				"description": "Latin American crypto community for trading and discussions"
+			},
+			"tg_crypto_colombia": {
+				"description": "Latin American crypto community for trading and discussions"
+			},
+			"tg_crypto_venezuela": {
+				"description": "Latin American crypto community for trading and discussions"
+			},
+			"tg_crypto_chile": {
+				"description": "Latin American crypto community for trading and discussions"
+			},
+			"tg_crypto_peru": {
+				"description": "Latin American crypto community for trading and discussions"
+			},
+			"tg_crypto_german": {
+				"description": "German crypto community for trading and discussions"
+			},
+			"tg_crypto_france": {
+				"description": "French crypto community for trading and discussions"
+			},
+			"tg_crypto_spain": {
+				"description": "Spanish crypto community for trading and discussions"
+			},
+			"tg_crypto_italy": {
+				"description": "Italian crypto community for trading and discussions"
+			},
+			"tg_crypto_netherlands": {
+				"description": "Dutch crypto community for trading and discussions"
+			},
+			"tg_crypto_poland": {
+				"description": "Polish crypto community for trading and discussions"
+			},
+			"tg_crypto_portugal": {
+				"description": "Portuguese crypto community for trading and discussions"
+			},
+			"tg_crypto_romania": {
+				"description": "Romanian crypto community for trading and discussions"
+			},
+			"tg_crypto_iran": {
+				"description": "Iranian crypto community for trading and discussions"
+			},
+			"tg_crypto_pakistan": {
+				"description": "Pakistani crypto community for trading and discussions"
+			},
+			"tg_crypto_bangladesh": {
+				"description": "Bangladeshi crypto community for trading and discussions"
+			},
+			"tg_crypto_singapore": {
+				"description": "Singaporean crypto community for trading and discussions"
+			},
+			"tg_crypto_hongkong": {
+				"description": "Hong Kong crypto community for trading and discussions"
+			},
+			"tg_crypto_taiwan": {
+				"description": "Taiwanese crypto community for trading and discussions"
+			},
+			"tg_solidity_dev": {
+				"description": "Developer community for technical discussions"
+			},
+			"tg_ethresear_ch": {
+				"description": "Developer community for technical discussions"
+			},
+			"jobs_cryptocurrencyjobs": {
+				"description": "Web3 job board and career platform"
+			},
+			"jobs_web3career": {
+				"description": "Official company careers page"
+			},
+			"jobs_cryptojobslist": {
+				"description": "Web3 job board and career platform"
+			},
+			"jobs_pompcryptojobs": {
+				"description": "Web3 job board and career platform"
+			},
+			"jobs_useweb3": {
+				"description": "Web3 job board and career platform"
+			},
+			"jobs_remoteok_crypto": {
+				"description": "Web3 job board and career platform"
+			},
+			"jobs_blockchaindevjobs": {
+				"description": "Web3 job board and career platform"
+			},
+			"jobs_defi_jobs": {
+				"description": "Web3 job board and career platform"
+			},
+			"jobs_builtin_blockchain": {
+				"description": "Web3 job board and career platform"
+			},
+			"jobs_dework": {
+				"description": "DAO contributor and bounty platform"
+			},
+			"jobs_layer3": {
+				"description": "DAO contributor and bounty platform"
+			},
+			"jobs_gitcoin": {
+				"description": "DAO contributor and bounty platform"
+			},
+			"jobs_coordinape": {
+				"description": "DAO contributor and bounty platform"
+			},
+			"jobs_wonderverse": {
+				"description": "DAO contributor and bounty platform"
+			},
+			"jobs_charmverse": {
+				"description": "DAO contributor and bounty platform"
+			},
+			"jobs_daolens": {
+				"description": "DAO contributor and bounty platform"
+			},
+			"jobs_immunefi": {
+				"description": "Bug bounty and security audit platform"
+			},
+			"jobs_code4rena": {
+				"description": "Bug bounty and security audit platform"
+			},
+			"jobs_sherlock": {
+				"description": "Bug bounty and security audit platform"
+			},
+			"jobs_hackenproof": {
+				"description": "Bug bounty and security audit platform"
+			},
+			"jobs_hats_finance": {
+				"description": "Bug bounty and security audit platform"
+			},
+			"jobs_cantina": {
+				"description": "Bug bounty and security audit platform"
+			},
+			"jobs_ethbounties": {
+				"description": "Web3 job board and career platform"
+			},
+			"jobs_a16z_portfolio": {
+				"description": "VC portfolio company job board"
+			},
+			"jobs_paradigm_portfolio": {
+				"description": "VC portfolio company job board"
+			},
+			"jobs_coinbase": {
+				"description": "Official company careers page"
+			},
+			"jobs_binance": {
+				"description": "Official company careers page"
+			},
+			"jobs_consensys": {
+				"description": "Official company careers page"
+			},
+			"jobs_chainlink_labs": {
+				"description": "Official company careers page"
+			},
+			"jobs_ethereum_foundation": {
+				"description": "Official company careers page"
+			},
+			"jobs_uniswap_labs": {
+				"description": "Official company careers page"
+			},
+			"jobs_opensea": {
+				"description": "Official company careers page"
+			},
+			"jobs_alchemy": {
+				"description": "Official company careers page"
+			},
+			"jobs_encode_club": {
+				"description": "Education and mentorship program for Web3 developers"
+			},
+			"jobs_ethglobal_fellowship": {
+				"description": "Education and mentorship program for Web3 developers"
+			},
+			"jobs_developer_dao": {
+				"description": "DAO contributor and bounty platform"
+			},
+			"jobs_buildspace_n_w": {
+				"description": "Education and mentorship program for Web3 developers"
+			},
+			"jobs_abcde": {
+				"description": "Chinese Web3 job opportunities"
+			},
+			"jobs_foresight_ventures": {
+				"description": "Chinese Web3 job opportunities"
+			},
+			"jobs_hashkey": {
+				"description": "Chinese Web3 job opportunities"
+			},
+			"jobs_okx": {
+				"description": "Chinese Web3 job opportunities"
+			},
+			"jobs_huobi": {
+				"description": "Chinese Web3 job opportunities"
+			},
+			"jobs_crypto_careers": {
+				"description": "Official company careers page"
+			},
+			"jobs_otta_web3": {
+				"description": "Web3 job board and career platform"
+			},
+			"jobs_angellist_crypto": {
+				"description": "Web3 job board and career platform"
+			},
+			"jobs_linkedin_web3": {
+				"description": "Web3 job board and career platform"
+			},
+			"usdt_tether": {
+				"description": "Largest stablecoin by market cap, USD-backed with wide multi-chain support"
+			},
+			"usdc_circle": {
+				"description": "Regulated USD stablecoin by Circle, fully backed and audited"
+			},
+			"dai_makerdao": {
+				"description": "Decentralized overcollateralized stablecoin by MakerDAO"
+			},
+			"usde_ethena": {
+				"description": "Synthetic dollar backed by delta-neutral crypto positions with high yield"
+			},
+			"usdd_tron": {
+				"description": "Algorithmic stablecoin on Tron network"
+			},
+			"tusd": {
+				"description": "Regulated and audited USD-backed stablecoin"
+			},
+			"busd_paxos": {
+				"description": "USD stablecoin issued by Paxos for Binance"
+			},
+			"pyusd_paypal": {
+				"description": "PayPal issued USD stablecoin for payments and transfers"
+			},
+			"gusd_gemini": {
+				"description": "Regulated stablecoin by Gemini exchange"
+			},
+			"usdp_paxos": {
+				"description": "Pax Dollar - regulated USD stablecoin by Paxos"
+			},
+			"sdai_spark": {
+				"description": "Savings DAI with yield from MakerDAO DSR"
+			},
+			"susde_ethena": {
+				"description": "Staked USDe earning yield from Ethena protocol"
+			},
+			"sfrax": {
+				"description": "Staked FRAX earning yield from Frax protocol"
+			},
+			"eurs_stasis": {
+				"description": "Euro-backed stablecoin by STASIS"
+			},
+			"eurc_circle": {
+				"description": "Circle issued Euro stablecoin"
+			},
+			"eurt_tether": {
+				"description": "Tether Euro stablecoin"
+			},
+			"xsgd_straitsx": {
+				"description": "Singapore Dollar stablecoin by StraitsX"
+			},
+			"lusd_liquity": {
+				"description": "Decentralized ETH-backed stablecoin with immutable protocol"
+			},
+			"susd_synthetix": {
+				"description": "Synthetic USD backed by SNX staking"
+			},
+			"rai_reflexer": {
+				"description": "Non-pegged, ETH-backed stable asset with algorithmic stability"
+			},
+			"mim_abracadabra": {
+				"description": "Magic Internet Money - collateralized by interest-bearing tokens"
+			},
+			"crvusd_curve": {
+				"description": "Curve native stablecoin with LLAMMA soft-liquidation mechanism"
+			},
+			"gho_aave": {
+				"description": "Aave native stablecoin backed by Aave deposits"
+			},
+			"defillama_stablecoins": {
+				"description": "Track stablecoin market caps, volumes and peg stability"
+			},
+			"coingecko_stablecoins": {
+				"description": "Stablecoin rankings and market data by CoinGecko"
+			},
+			"chainlink_data_feeds": {
+				"description": "Real-time price feed dashboard and documentation for Chainlink oracles"
+			},
+			"pyth_network": {
+				"description": "High-frequency price oracle with sub-second updates from first-party sources"
+			},
+			"pyth_price_feeds": {
+				"description": "Explore Pyth price feeds across 40+ chains"
+			},
+			"dia_data": {
+				"description": "Open-source oracle for DeFi and NFT data"
+			},
+			"uma_protocol": {
+				"description": "Optimistic oracle with dispute resolution for any verifiable data"
+			},
+			"redstone_oracles": {
+				"description": "Modular oracle with on-demand data delivery and LST support"
+			},
+			"chronicle_labs": {
+				"description": "Scalable oracle originally developed for MakerDAO"
+			},
+			"umbrella_network": {
+				"description": "Layer 2 oracle solution for scalable price feeds"
+			},
+			"flux_protocol": {
+				"description": "Cross-chain oracle built on NEAR Protocol"
+			},
+			"supra_oracles": {
+				"description": "High-speed oracle with DORA protocol for fast finality"
+			},
+			"chainlink_vrf": {
+				"description": "Verifiable random function for provably fair randomness in dApps"
+			},
+			"chainlink_automation": {
+				"description": "Decentralized smart contract automation (formerly Keepers)"
+			},
+			"chainlink_ccip": {
+				"description": "Cross-chain messaging protocol for secure token and data transfers"
+			},
+			"chainlink_functions": {
+				"description": "Serverless compute for connecting smart contracts to any API"
+			},
+			"defillama_oracles": {
+				"description": "Track oracle TVS (Total Value Secured) across protocols"
+			},
+			"oracle_dao": {
+				"description": "Community governance and standards for oracle security"
+			},
+			"uni_token": {
+				"description": "Uniswap governance token for protocol voting and treasury management"
+			},
+			"aave_token": {
+				"description": "Aave governance and safety module staking token"
+			},
+			"mkr_token": {
+				"description": "MakerDAO governance token for DAI stability and protocol decisions"
+			},
+			"crv_token": {
+				"description": "Curve governance token with vote-escrowed (veCRV) mechanism"
+			},
+			"comp_token": {
+				"description": "Compound governance token for lending protocol decisions"
+			},
+			"snx_token": {
+				"description": "Synthetix staking and governance token for synthetic assets"
+			},
+			"ldo_token": {
+				"description": "Lido DAO governance token for liquid staking protocol"
+			},
+			"gmx_token": {
+				"description": "GMX governance and fee-sharing token for perpetual DEX"
+			},
+			"bal_token": {
+				"description": "Balancer governance token with veBAL mechanism"
+			},
+			"sushi_token": {
+				"description": "SushiSwap governance token for DEX protocol"
+			},
+			"yfi_token": {
+				"description": "Yearn governance token with veYFI staking mechanism"
+			},
+			"inch_token": {
+				"description": "1inch governance token for DEX aggregator protocol"
+			},
+			"pendle_token": {
+				"description": "Pendle governance token for yield trading protocol"
+			},
+			"ena_token": {
+				"description": "Ethena governance token for synthetic dollar protocol"
+			},
+			"arb_token": {
+				"description": "Arbitrum DAO governance token for L2 rollup decisions"
+			},
+			"op_token": {
+				"description": "Optimism governance token for L2 and retroactive public goods funding"
+			},
+			"strk_token": {
+				"description": "StarkNet governance token for ZK-rollup network"
+			},
+			"zk_token": {
+				"description": "zkSync governance token for ZK-rollup ecosystem"
+			},
+			"matic_token": {
+				"description": "Polygon governance token (migrating to POL) for network staking"
+			},
+			"mnt_token": {
+				"description": "Mantle governance token for modular L2 network"
+			},
+			"metis_token": {
+				"description": "Metis governance token for optimistic rollup network"
+			},
+			"ens_token": {
+				"description": "ENS governance token for Ethereum naming system"
+			},
+			"gtc_token": {
+				"description": "Gitcoin governance token for public goods funding"
+			},
+			"safe_token": {
+				"description": "Safe (Gnosis Safe) governance token for multisig wallet protocol"
+			},
+			"cow_token": {
+				"description": "CoW Protocol governance token for MEV-protected trading"
+			},
+			"gno_token": {
+				"description": "Gnosis governance token for prediction markets and Gnosis Chain"
+			},
+			"tally_governance": {
+				"description": "On-chain voting platform for DAOs with delegation support"
+			},
+			"snapshot_governance": {
+				"description": "Off-chain gasless voting platform for DAOs"
+			},
+			"karma_dao": {
+				"description": "DAO contributor reputation and delegate analytics platform"
+			},
+			"messari_governance": {
+				"description": "DAO governance research and analytics by Messari"
+			},
+			"uniswap_treasury": {
+				"description": "Uniswap DAO treasury holding UNI governance funds"
+			},
+			"aave_treasury": {
+				"description": "Aave DAO treasury for protocol reserves and grants"
+			},
+			"maker_treasury": {
+				"description": "MakerDAO treasury managing protocol surplus"
+			},
+			"compound_treasury": {
+				"description": "Compound DAO treasury for protocol development"
+			},
+			"lido_treasury": {
+				"description": "Lido DAO treasury for staking protocol governance"
+			},
+			"arbitrum_treasury": {
+				"description": "Arbitrum DAO treasury holding ARB tokens"
+			},
+			"optimism_treasury": {
+				"description": "Optimism treasury for retroactive public goods funding"
+			},
+			"gnosis_treasury": {
+				"description": "Gnosis DAO treasury and ecosystem fund"
+			},
+			"ens_treasury": {
+				"description": "ENS DAO treasury for domain name system governance"
+			},
+			"curve_multisig": {
+				"description": "Curve Emergency DAO multisig for protocol safety"
+			},
+			"yearn_multisig": {
+				"description": "Yearn protocol multisig for treasury management"
+			},
+			"vitalik_wallet": {
+				"description": "Vitalik Buterin personal wallet (vitalik.eth) - Ethereum co-founder"
+			},
+			"justin_sun_wallet": {
+				"description": "Justin Sun wallet - Tron founder and active DeFi trader"
+			},
+			"tetranode_wallet": {
+				"description": "Notable DeFi whale known for large protocol positions"
+			},
+			"hsaka_wallet": {
+				"description": "Prominent crypto trader focused on derivatives"
+			},
+			"a16z_wallet": {
+				"description": "Andreessen Horowitz crypto fund wallet"
+			},
+			"paradigm_wallet": {
+				"description": "Paradigm crypto investment fund wallet"
+			},
+			"jump_trading_wallet": {
+				"description": "Jump Trading crypto market maker wallet"
+			},
+			"wintermute_wallet": {
+				"description": "Wintermute algorithmic trading and market making wallet"
+			},
+			"galaxy_digital_wallet": {
+				"description": "Galaxy Digital institutional investment wallet"
+			},
+			"lookonchain": {
+				"description": "On-chain analytics platform tracking whale movements and smart money"
+			},
+			"nansen_smart_money": {
+				"description": "Smart money tracking and wallet labeling analytics"
+			},
+			"arkham_intelligence": {
+				"description": "Blockchain intelligence platform for entity identification"
+			},
+			"debank_whales": {
+				"description": "Portfolio tracking with whale wallet rankings"
+			},
+			"spot_on_chain": {
+				"description": "AI-powered on-chain analytics and whale alerts"
+			},
+			"etherscan_label": {
+				"description": "Etherscan labeled address database for known entities"
+			},
+			"zerion_whales": {
+				"description": "Explore top portfolios and whale trading activity"
+			},
+			"watchers_pro": {
+				"description": "Real-time whale tracking and smart money alerts"
+			},
+			"airdrop_uni": {
+				"description": "Legendary 400 UNI airdrop to early Uniswap users (Sep 2020)"
+			},
+			"airdrop_ens": {
+				"description": "ENS domain holders received governance tokens based on registration time"
+			},
+			"airdrop_dydx": {
+				"description": "dYdX trading volume-based airdrop for perpetual traders"
+			},
+			"airdrop_1inch": {
+				"description": "Multi-round airdrops for 1inch DEX aggregator users"
+			},
+			"airdrop_ldo": {
+				"description": "Lido early stakers and contributors received LDO tokens"
+			},
+			"airdrop_op": {
+				"description": "Multi-criteria airdrop for Optimism L2 early adopters"
+			},
+			"airdrop_arb": {
+				"description": "Massive airdrop to Arbitrum bridge users and active wallets"
+			},
+			"airdrop_blur": {
+				"description": "Season-based airdrops for NFT traders on Blur marketplace"
+			},
+			"airdrop_strk": {
+				"description": "StarkNet provisions program for early ecosystem participants"
+			},
+			"airdrop_zk": {
+				"description": "zkSync Era airdrop for bridge users and early testnet participants"
+			},
+			"airdrop_jup": {
+				"description": "Jupiter aggregator airdrop for Solana traders"
+			},
+			"airdrop_w": {
+				"description": "Wormhole cross-chain bridge users airdrop"
+			},
+			"airdrop_ena": {
+				"description": "Ethena sats campaign participants received ENA tokens"
+			},
+			"airdrop_eigen": {
+				"description": "EigenLayer restakers and early participants airdrop"
+			},
+			"airdrop_cow": {
+				"description": "CoW Protocol early traders and LP providers airdrop"
+			},
+			"airdrop_hop": {
+				"description": "Hop Protocol L2 bridge users and liquidity providers"
+			},
+			"airdrop_safe": {
+				"description": "Safe (Gnosis Safe) multisig users and signers airdrop"
+			},
+			"airdrop_matic_pol": {
+				"description": "MATIC to POL migration and ecosystem upgrade"
+			},
+			"earndrop": {
+				"description": "Check your eligibility for multiple upcoming and past airdrops"
+			},
+			"defillama_airdrops": {
+				"description": "Track potential and confirmed airdrops across DeFi protocols"
+			},
+			"airdrop_alert": {
+				"description": "Curated list of legitimate upcoming crypto airdrops"
+			},
+			"airdrops_io": {
+				"description": "Comprehensive airdrop guides and eligibility checking"
+			},
+			"airdrop_farmer": {
+				"description": "Complete quests and earn tokens from protocols"
+			},
+			"galxe_campaigns": {
+				"description": "Web3 credential campaigns with token rewards"
+			},
+			"rabbithole_quests": {
+				"description": "Learn crypto protocols and earn rewards"
+			},
+			"zealy_quests": {
+				"description": "Community engagement quests with token incentives"
+			},
+			"potential_scroll": {
+				"description": "Scroll zkEVM L2 - potential airdrop for bridge and activity"
+			},
+			"potential_linea": {
+				"description": "ConsenSys zkEVM L2 - potential airdrop for ecosystem usage"
+			},
+			"potential_blast": {
+				"description": "Blast L2 with native yield - launched points-based airdrop"
+			},
+			"potential_berachain": {
+				"description": "Berachain Proof of Liquidity L1 - testnet and NFT holders"
+			},
+			"potential_monad": {
+				"description": "Monad high-performance EVM L1 - early community participants"
+			},
+			"potential_fuel": {
+				"description": "Fuel modular execution layer - testnet and early users"
+			},
+			"solana_network": {
+				"description": "High-performance blockchain with fast transactions and low fees"
+			},
+			"solana_explorer": {
+				"description": "Official Solana blockchain explorer for transactions and accounts"
+			},
+			"jupiter_solana": {
+				"description": "Leading DEX aggregator on Solana with best price routing"
+			},
+			"raydium": {
+				"description": "Solana AMM and liquidity provider with concentrated pools"
+			},
+			"marinade_finance": {
+				"description": "Liquid staking protocol for SOL with mSOL token"
+			},
+			"magic_eden_solana": {
+				"description": "Leading NFT marketplace across Solana, Bitcoin and Ethereum"
+			},
+			"tensor_nft": {
+				"description": "Professional NFT trading platform on Solana"
+			},
+			"cosmos_network": {
+				"description": "Internet of Blockchains with IBC cross-chain communication"
+			},
+			"osmosis": {
+				"description": "Leading DEX in Cosmos ecosystem with IBC integration"
+			},
+			"stride_zone": {
+				"description": "Liquid staking for Cosmos chains with stATOM"
+			},
+			"injective": {
+				"description": "DeFi-focused Cosmos chain for derivatives trading"
+			},
+			"celestia": {
+				"description": "Modular data availability layer for rollups"
+			},
+			"dymension": {
+				"description": "RollApp hub built on Cosmos for modular rollups"
+			},
+			"sei_network": {
+				"description": "Fastest L1 optimized for trading with parallel processing"
+			},
+			"sui_network": {
+				"description": "Move-based L1 with object-centric model and parallel execution"
+			},
+			"sui_explorer": {
+				"description": "Block explorer for Sui network transactions and objects"
+			},
+			"sui_wallet": {
+				"description": "Official Sui wallet for Move-based blockchain"
+			},
+			"turbos_finance": {
+				"description": "Concentrated liquidity DEX on Sui network"
+			},
+			"cetus_protocol": {
+				"description": "Pioneer DEX and liquidity protocol on Sui and Aptos"
+			},
+			"aptos_network": {
+				"description": "Move-based L1 with Block-STM parallel execution engine"
+			},
+			"aptos_explorer": {
+				"description": "Official Aptos blockchain explorer"
+			},
+			"petra_wallet": {
+				"description": "Official Aptos wallet by Aptos Labs"
+			},
+			"pontem_wallet": {
+				"description": "Multi-chain wallet for Move-based networks"
+			},
+			"liquidswap": {
+				"description": "First AMM DEX on Aptos by Pontem"
+			},
+			"ton_network": {
+				"description": "The Open Network - Telegram-integrated blockchain"
+			},
+			"tonkeeper": {
+				"description": "Popular TON wallet with Telegram integration"
+			},
+			"ston_fi": {
+				"description": "Leading DEX on TON network"
+			},
+			"dedust": {
+				"description": "DEX and DeFi platform on TON"
+			},
+			"near_protocol": {
+				"description": "Sharded PoS blockchain with human-readable accounts"
+			},
+			"near_explorer": {
+				"description": "NEAR blockchain explorer and analytics"
+			},
+			"ref_finance": {
+				"description": "Multi-purpose DeFi platform on NEAR"
+			},
+			"algorand": {
+				"description": "Pure Proof of Stake blockchain with instant finality"
+			},
+			"cardano": {
+				"description": "Research-driven blockchain with peer-reviewed development"
+			},
+			"polkadot": {
+				"description": "Heterogeneous multi-chain network with parachains"
+			},
+			"subscan": {
+				"description": "Multi-chain explorer for Polkadot and Substrate networks"
+			},
+			"tezos": {
+				"description": "Self-amending blockchain with formal verification"
+			},
+			"stacks": {
+				"description": "Bitcoin L2 bringing smart contracts to BTC"
+			},
+			"lightning_network": {
+				"description": "Bitcoin L2 for fast, low-cost payments"
+			},
+			"rsk_rootstock": {
+				"description": "Bitcoin sidechain with EVM-compatible smart contracts"
+			},
+			"ibc_protocol": {
+				"description": "Inter-Blockchain Communication protocol for Cosmos chains"
+			},
+			"wormhole_bridge": {
+				"description": "Cross-chain messaging protocol connecting 30+ blockchains"
+			},
+			"layerzero": {
+				"description": "Omnichain interoperability protocol for trustless messaging"
+			},
+			"axelar_network": {
+				"description": "Cross-chain communication with general message passing"
+			},
+			"legend_bnb": {
+				"description": "Binance Coin - exchange token that grew 1000x+ since 2017 ICO"
+			},
+			"legend_sol": {
+				"description": "Solana - high-performance blockchain reaching $200+ from $0.5 ICO"
+			},
+			"legend_matic": {
+				"description": "Polygon (ex-MATIC) - L2 scaling solution with massive growth since 2019"
+			},
+			"legend_avax": {
+				"description": "Avalanche - fast L1 blockchain with significant gains since launch"
+			},
+			"legend_link": {
+				"description": "Chainlink - leading oracle network with 100x+ growth from ICO"
+			},
+			"legend_uni": {
+				"description": "Uniswap - DEX governance token with legendary airdrop to early users"
+			},
+			"legend_aave": {
+				"description": "Aave - DeFi lending protocol with 50x+ growth from LEND rebranding"
+			},
+			"legend_ftm": {
+				"description": "Fantom - DAG-based L1 with significant price appreciation"
+			},
+			"legend_atom": {
+				"description": "Cosmos - Internet of Blockchains with strong ecosystem growth"
+			},
+			"legend_near": {
+				"description": "NEAR Protocol - sharded L1 with notable growth trajectory"
+			},
+			"legend_inj": {
+				"description": "Injective - DeFi-focused chain with 100x+ gains in 2023"
+			},
+			"legend_ton": {
+				"description": "TON - Telegram-backed chain with rapid adoption"
+			},
+			"legend_sui": {
+				"description": "Sui - Move-based L1 with strong growth since launch"
+			},
+			"legend_apt": {
+				"description": "Aptos - Move-based L1 with significant ecosystem development"
+			},
+			"legend_sei": {
+				"description": "Sei Network - fastest L1 optimized for trading"
+			},
+			"legend_mkr": {
+				"description": "Maker - DeFi OG governance token for DAI stablecoin"
+			},
+			"legend_snx": {
+				"description": "Synthetix - synthetic assets protocol with strong DeFi history"
+			},
+			"legend_crv": {
+				"description": "Curve - stablecoin DEX with powerful tokenomics and veCRV"
+			},
+			"legend_gmx": {
+				"description": "GMX - perpetual DEX with real yield and 30x+ growth"
+			},
+			"legend_pendle": {
+				"description": "Pendle - yield trading protocol with 100x+ growth in 2023-24"
+			},
+			"legend_rune": {
+				"description": "THORChain - cross-chain DEX with native liquidity and strong recovery"
+			},
+			"legend_dydx": {
+				"description": "dYdX - leading decentralized perpetuals exchange"
+			},
+			"legend_shib": {
+				"description": "Shiba Inu - meme coin with legendary million-x potential gains"
+			},
+			"legend_pepe": {
+				"description": "PEPE - frog meme coin reaching $1B+ market cap in 2023"
+			},
+			"legend_bonk": {
+				"description": "BONK - Solana dog meme with massive Christmas 2022 rally"
+			},
+			"legend_wif": {
+				"description": "dogwifhat - Solana meme coin with 100x+ gains in early 2024"
+			},
+			"legend_floki": {
+				"description": "FLOKI - Elon Musk-inspired meme with utility expansion"
+			},
+			"legend_arb": {
+				"description": "Arbitrum - leading L2 rollup with major ecosystem growth"
+			},
+			"legend_op": {
+				"description": "Optimism - Ethereum L2 with Superchain vision"
+			},
+			"legend_stx": {
+				"description": "Stacks - Bitcoin smart contracts layer with strong 2023 rally"
+			},
+			"legend_tia": {
+				"description": "Celestia - modular data availability layer with strong launch"
+			},
+			"legend_jup": {
+				"description": "Jupiter - Solana DEX aggregator dominating the ecosystem"
+			},
+			"legend_pyth": {
+				"description": "Pyth Network - high-frequency oracle with strong adoption"
+			},
+			"legend_render": {
+				"description": "Render Network - decentralized GPU rendering with AI narrative"
+			},
+			"legend_fet": {
+				"description": "Fetch.ai - AI agents and automation on blockchain"
+			},
+			"legend_axs": {
+				"description": "Axie Infinity - P2E pioneer with 100x+ gains in 2021"
+			},
+			"legend_sand": {
+				"description": "The Sandbox - metaverse leader with major partnerships"
+			},
+			"legend_mana": {
+				"description": "Decentraland - virtual world pioneer with significant growth"
+			},
+			"legend_gala": {
+				"description": "Gala Games - gaming ecosystem with multiple titles"
+			},
+			"legend_imx": {
+				"description": "Immutable X - gaming-focused L2 with major game partnerships"
+			},
+			"legend_blur": {
+				"description": "Blur - NFT marketplace disruptor with aggressive incentives"
+			},
+			"coingecko_gainers": {
+				"description": "Track top gaining cryptocurrencies across all timeframes"
+			},
+			"dexscreener_trending": {
+				"description": "Discover trending tokens and new pairs across chains"
+			},
+			"messari_screener": {
+				"description": "Advanced crypto screening with fundamental metrics"
+			},
+			"cow_mev_protection": {
+				"description": "CoW Protocol MEV protection through batch auctions and coincidence of wants"
+			},
+			"merkle_private_pool": {
+				"description": "Private transaction pool for MEV protection on Ethereum"
+			},
+			"flashbots_builder": {
+				"description": "Leading MEV-aware block builder on Ethereum post-merge"
+			},
+			"beaverbuild": {
+				"description": "Top Ethereum block builder with high market share"
+			},
+			"titan_builder": {
+				"description": "Competitive block builder in the PBS ecosystem"
+			},
+			"rsync_builder": {
+				"description": "Block builder focused on fair ordering and MEV extraction"
+			},
+			"flashbots_transparency": {
+				"description": "Dashboard showing MEV extraction and builder statistics"
+			},
+			"mev_explore": {
+				"description": "Explorer for MEV transactions and bundle activity"
+			},
+			"eigenphi_mev": {
+				"description": "MEV analytics tracking arbitrage, liquidations and sandwich attacks"
+			},
+			"mev_watch": {
+				"description": "Monitor OFAC compliance and censorship in block building"
+			},
+			"zeromev": {
+				"description": "Track MEV extraction across Ethereum blocks"
+			},
+			"relayscan": {
+				"description": "Analytics for MEV-Boost relays and builder performance"
+			},
+			"mevboost_pics": {
+				"description": "Visual analytics for MEV-Boost relay and builder market share"
+			},
+			"mev_boost": {
+				"description": "Implementation of proposer-builder separation for validators"
+			},
+			"suave": {
+				"description": "Single Unified Auction for Value Expression - future of MEV"
+			},
+			"mev_share": {
+				"description": "Protocol for redistributing MEV back to users"
+			},
+			"jito_mev": {
+				"description": "Solana MEV infrastructure with bundle tips and priority fees"
+			},
+			"jito_bundles": {
+				"description": "Bundle submission for Solana MEV searchers via Jito"
+			},
+			"monero": {
+				"description": "Leading privacy-focused cryptocurrency with ring signatures and stealth addresses"
+			},
+			"secret_network": {
+				"description": "Privacy-preserving smart contract platform with encrypted computations"
+			},
+			"oasis_network": {
+				"description": "Privacy-enabled blockchain with confidential ParaTimes"
+			},
+			"mina_protocol": {
+				"description": "Lightweight blockchain using zk-SNARKs for constant-size proofs"
+			},
+			"firo": {
+				"description": "Privacy coin using Lelantus protocol for anonymous transactions"
+			},
+			"iron_fish": {
+				"description": "Privacy-first Layer 1 with encrypted transactions by default"
+			},
+			"aztec_connect": {
+				"description": "Private DeFi bridge using zk-rollup technology on Ethereum"
+			},
+			"umbra_cash": {
+				"description": "Stealth address protocol for private Ethereum payments"
+			},
+			"penumbra": {
+				"description": "Privacy-focused Cosmos chain for shielded transactions"
+			},
+			"namada": {
+				"description": "Multi-chain privacy protocol with asset-agnostic shielded transfers"
+			},
+			"frame_privacy": {
+				"description": "Privacy-focused Ethereum wallet with hardware wallet support"
+			},
+			"cake_wallet": {
+				"description": "Multi-asset wallet with native Monero, Bitcoin, and privacy features"
+			},
+			"tornado_cash_classic": {
+				"description": "Decentralized protocol for private ETH transactions (deprecated)"
+			},
+			"zk_email": {
+				"description": "Prove email ownership without revealing content using ZK proofs"
+			},
+			"semaphore": {
+				"description": "Zero-knowledge protocol for anonymous voting and signaling"
+			},
+			"worldcoin_privacy": {
+				"description": "Privacy-preserving proof of personhood using iris scanning"
+			},
+			"centrifuge": {
+				"description": "Real-world asset financing protocol bringing invoices and real estate on-chain"
+			},
+			"maple_finance": {
+				"description": "Institutional DeFi lending with credit underwriting"
+			},
+			"clearpool": {
+				"description": "Decentralized capital markets for unsecured institutional lending"
+			},
+			"blackrock_buidl": {
+				"description": "BlackRock tokenized money market fund on Ethereum"
+			},
+			"franklin_benji": {
+				"description": "Franklin Templeton on-chain US Government Money Fund"
+			},
+			"backed_finance": {
+				"description": "Tokenized securities and ETFs on blockchain"
+			},
+			"matrixdock": {
+				"description": "Tokenized treasury bills with STBT stablecoin"
+			},
+			"openeden": {
+				"description": "Tokenized T-Bills with real-time NAV and 24/7 settlement"
+			},
+			"realt": {
+				"description": "Tokenized real estate investment with fractional ownership"
+			},
+			"lofty": {
+				"description": "Fractional real estate investing on Algorand blockchain"
+			},
+			"propy": {
+				"description": "Blockchain-based real estate transactions and ownership"
+			},
+			"parcl_rwa": {
+				"description": "Synthetic real estate index trading on Solana"
+			},
+			"pax_gold": {
+				"description": "Gold-backed token with each PAXG representing one ounce of gold"
+			},
+			"tether_gold": {
+				"description": "Tether-issued gold-backed stablecoin with physical gold reserves"
+			},
+			"cache_gold": {
+				"description": "Tokenized gold with 1:1 backing stored in vaults"
+			},
+			"rwa_xyz": {
+				"description": "Analytics dashboard for tokenized real-world assets"
+			},
+			"defillama_rwa": {
+				"description": "Track TVL and metrics for RWA protocols on DeFiLlama"
+			},
+			"securitize": {
+				"description": "Security token issuance and lifecycle management platform"
+			},
+			"tokeny": {
+				"description": "Enterprise tokenization platform for compliant securities"
+			},
+			"polymesh": {
+				"description": "Purpose-built blockchain for regulated security tokens"
+			},
+			"virtuals_protocol": {
+				"description": "AI agent launchpad on Base for virtual beings and gaming"
+			},
+			"ai16z": {
+				"description": "AI DAO and Eliza framework for creating autonomous agents"
+			},
+			"truth_terminal": {
+				"description": "Autonomous AI agent that gained crypto wealth independently"
+			},
+			"autonolas": {
+				"description": "Platform for building and running autonomous AI agent services"
+			},
+			"flock_io": {
+				"description": "Federated learning platform for collaborative AI training"
+			},
+			"render_network": {
+				"description": "Decentralized GPU rendering network for AI and graphics"
+			},
+			"akash_network": {
+				"description": "Decentralized cloud compute marketplace with GPU support"
+			},
+			"io_net": {
+				"description": "Decentralized GPU network aggregating compute from data centers"
+			},
+			"bittensor": {
+				"description": "Decentralized AI network with incentivized machine learning"
+			},
+			"ritual": {
+				"description": "AI coprocessor infrastructure for smart contracts"
+			},
+			"gensyn": {
+				"description": "Decentralized protocol for ML training with verification"
+			},
+			"together_ai": {
+				"description": "Fast inference API for open-source AI models"
+			},
+			"fetch_ai": {
+				"description": "Autonomous economic agents for automation and data sharing"
+			},
+			"ocean_protocol": {
+				"description": "Data marketplace for AI training data and compute"
+			},
+			"singularitynet": {
+				"description": "Decentralized marketplace for AI services"
+			},
+			"masa": {
+				"description": "Decentralized data network for AI with identity focus"
+			},
+			"grass": {
+				"description": "Decentralized data scraping network rewarding bandwidth"
+			},
+			"altered_state_machine": {
+				"description": "AI-powered NFTs with evolving capabilities"
+			},
+			"alethea_ai": {
+				"description": "Intelligent NFTs (iNFTs) with AI personalities"
+			},
+			"midjourney_crypto": {
+				"description": "AI art generation tools for NFT creation"
+			},
+			"stability_ai": {
+				"description": "Open-source AI models including Stable Diffusion"
+			},
+			"cookie_ai": {
+				"description": "AI agent tracking and analytics platform"
+			},
+			"virtuals_terminal": {
+				"description": "Launch and trade AI agents on Base network"
+			},
+			"defillama_ai": {
+				"description": "Track AI-focused crypto protocols and TVL"
+			},
+			"symbiotic": {
+				"description": "Permissionless and modular restaking protocol"
+			},
+			"babylon": {
+				"description": "Bitcoin staking protocol securing PoS networks"
+			},
+			"renzo_protocol": {
+				"description": "Liquid restaking protocol issuing ezETH tokens"
+			},
+			"puffer_finance": {
+				"description": "Liquid restaking with anti-slashing technology"
+			},
+			"kelp_dao": {
+				"description": "Multi-asset liquid restaking with rsETH token"
+			},
+			"swell_restaking": {
+				"description": "Liquid restaking with rswETH for EigenLayer"
+			},
+			"eigenpie": {
+				"description": "Magpie liquid restaking with isolated LRT tokens"
+			},
+			"bedrock": {
+				"description": "Universal liquid restaking with uniETH token"
+			},
+			"stakestone": {
+				"description": "Omnichain liquid restaking with STONE token"
+			},
+			"inception": {
+				"description": "Liquid restaking with instant unstaking via inETH"
+			},
+			"eigenda": {
+				"description": "EigenLayer data availability service for rollups"
+			},
+			"lagrange": {
+				"description": "ZK coprocessor AVS for cross-chain proving"
+			},
+			"espresso": {
+				"description": "Shared sequencing AVS for rollups"
+			},
+			"hyperlane_avs": {
+				"description": "Cross-chain messaging infrastructure secured by restaking"
+			},
+			"omni_avs": {
+				"description": "Ethereum rollup interoperability network"
+			},
+			"witness_chain": {
+				"description": "Diligence watchtower AVS for rollup security"
+			},
+			"altlayer_avs": {
+				"description": "MACH fast finality AVS for rollups"
+			},
+			"brevis": {
+				"description": "ZK coprocessor for historical blockchain data"
+			},
+			"eigenlayer_app": {
+				"description": "Official EigenLayer staking and delegation interface"
+			},
+			"dune_eigenlayer": {
+				"description": "Community analytics dashboard for EigenLayer metrics"
+			},
+			"defillama_restaking": {
+				"description": "Track liquid restaking TVL and protocol metrics"
+			},
+			"rated_restaking": {
+				"description": "Operator performance ratings for restaking protocols"
+			},
+			"dydx_token": {
+				"description": "dYdX governance token for decentralized perpetuals exchange"
+			},
+			"cvx_token": {
+				"description": "Convex governance token for boosted Curve yields"
+			},
+			"fxs_token": {
+				"description": "Frax Share governance token for algorithmic stablecoin"
+			},
+			"blur_token": {
+				"description": "Blur NFT marketplace governance and incentive token"
+			},
+			"ape_token": {
+				"description": "ApeCoin governance token for Bored Ape ecosystem"
+			},
+			"rpl_token": {
+				"description": "Rocket Pool governance token for decentralized ETH staking"
+			},
+			"morpho_token": {
+				"description": "Morpho governance token for lending optimization protocol"
+			},
+			"rdnt_token": {
+				"description": "Radiant Capital governance token for cross-chain lending"
+			},
+			"osmo_token": {
+				"description": "Osmosis governance token for Cosmos DEX hub"
+			},
+			"jup_token": {
+				"description": "Jupiter governance token for Solana DEX aggregator"
+			},
+			"ray_token": {
+				"description": "Raydium governance token for Solana AMM"
+			},
+			"jto_token": {
+				"description": "Jito governance token for Solana MEV infrastructure"
+			},
+			"orca_token": {
+				"description": "Orca governance token for Solana concentrated liquidity DEX"
+			},
+			"stepn": {
+				"description": "Move-to-earn fitness app rewarding physical activity with tokens"
+			},
+			"hero_of_mavia": {
+				"description": "Base-building strategy game with NFT heroes and land"
+			},
+			"night_crows": {
+				"description": "AAA MMORPG on WEMIX by Wemade with token economy"
+			},
+			"mir4": {
+				"description": "Cross-platform MMORPG with DRACO token mining mechanics"
+			},
+			"wildcard": {
+				"description": "Competitive arena game with card-based strategy"
+			},
+			"off_the_grid": {
+				"description": "AAA cyberpunk battle royale with NFT integration"
+			},
+			"maple_story_universe": {
+				"description": "Nexon iconic MMORPG expanding into blockchain gaming"
+			},
+			"nyan_heroes": {
+				"description": "Solana hero shooter featuring cat pilots in mech suits"
+			},
+			"aurory": {
+				"description": "Solana JRPG tactics game with NFT creatures"
+			},
+			"phantom_galaxies": {
+				"description": "Mecha action RPG set in space with NFT ships"
+			},
+			"crypto_unicorns": {
+				"description": "Unicorn breeding and farming game on Polygon"
+			},
+			"legends_of_venari": {
+				"description": "Creature collection and exploration game on Ethereum"
+			},
+			"blocklords": {
+				"description": "Medieval grand strategy game with dynasty building"
+			},
+			"planet_ix": {
+				"description": "Strategic NFT game with real estate on Polygon"
+			},
+			"sweat_economy": {
+				"description": "Move-to-earn app from Sweatcoin on NEAR blockchain"
+			},
+			"superior": {
+				"description": "Roguelike co-op shooter on Gala Games platform"
+			},
+			"champions_ascension": {
+				"description": "Massively multiplayer action RPG with champion NFTs"
+			},
+			"binance_hot_wallet": {
+				"description": "Binance exchange hot wallet for BNB Chain operations"
+			},
+			"pancakeswap_treasury": {
+				"description": "PancakeSwap protocol treasury managing CAKE funds"
+			},
+			"venus_treasury": {
+				"description": "Venus lending protocol treasury on BNB Chain"
+			},
+			"base_bridge": {
+				"description": "Official Base L2 bridge contract holding bridged assets"
+			},
+			"aerodrome_treasury": {
+				"description": "Aerodrome DEX treasury managing Base liquidity incentives"
+			},
+			"polygon_ecosystem_fund": {
+				"description": "Polygon foundation ecosystem development fund"
+			},
+			"quickswap_treasury": {
+				"description": "QuickSwap DEX treasury on Polygon network"
+			},
+			"avalanche_foundation": {
+				"description": "Avalanche Foundation treasury and ecosystem fund"
+			},
+			"traderjoe_treasury": {
+				"description": "Trader Joe DEX treasury on Avalanche"
+			},
+			"solana_foundation": {
+				"description": "Solana Foundation treasury managing ecosystem grants"
+			},
+			"jupiter_treasury": {
+				"description": "Jupiter aggregator treasury on Solana"
+			},
+			"raydium_treasury": {
+				"description": "Raydium AMM protocol treasury on Solana"
+			},
+			"ton_foundation": {
+				"description": "TON Foundation treasury for ecosystem development"
+			},
+			"sui_foundation": {
+				"description": "Sui Foundation treasury for network growth"
+			},
+			"aptos_foundation": {
+				"description": "Aptos Foundation treasury and grants program"
+			},
+			"cosmos_hub_pool": {
+				"description": "Cosmos Hub community pool for governance proposals"
+			},
+			"cz_wallet": {
+				"description": "Changpeng Zhao (CZ) personal and Binance-related wallets"
+			},
+			"grayscale_wallet": {
+				"description": "Grayscale institutional fund wallets holding BTC and ETH"
+			},
+			"blackrock_wallet": {
+				"description": "BlackRock iShares Bitcoin ETF custody wallet"
+			},
+			"fidelity_wallet": {
+				"description": "Fidelity Digital Assets custody and ETF wallet"
+			},
+			"airdrop_pyth": {
+				"description": "Pyth Network oracle airdrop to DeFi protocol users"
+			},
+			"airdrop_tnsr": {
+				"description": "Tensor NFT marketplace airdrop to active traders"
+			},
+			"airdrop_kmno": {
+				"description": "Kamino Finance lending airdrop on Solana"
+			},
+			"airdrop_parcl": {
+				"description": "Parcl synthetic real estate airdrop on Solana"
+			},
+			"airdrop_wen": {
+				"description": "WEN meme token airdrop to Jupiter users"
+			},
+			"airdrop_omni": {
+				"description": "Omni Network interoperability airdrop to restakers"
+			},
+			"airdrop_alt": {
+				"description": "AltLayer rollup-as-a-service airdrop to ecosystem users"
+			},
+			"airdrop_manta": {
+				"description": "Manta Pacific L2 airdrop to bridge users"
+			},
+			"airdrop_dym": {
+				"description": "Dymension RollApp hub airdrop to Cosmos stakers"
+			},
+			"airdrop_zetachain": {
+				"description": "ZetaChain omnichain airdrop to testnet participants"
+			},
+			"airdrop_ethfi": {
+				"description": "ether.fi liquid restaking airdrop to depositors"
+			},
+			"airdrop_renzo": {
+				"description": "Renzo restaking airdrop (REZ) to ezETH holders"
+			},
+			"airdrop_puffer": {
+				"description": "Puffer Finance potential airdrop for pufETH stakers"
+			},
+			"airdrop_kelp": {
+				"description": "Kelp DAO potential airdrop for rsETH holders"
+			},
+			"airdrop_swell": {
+				"description": "Swell Network potential airdrop for swETH stakers"
 			}
 		},
 		"seo": {

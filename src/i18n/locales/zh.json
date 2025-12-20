@@ -1458,13 +1458,26 @@
 			"gamefi": "链游",
 			"payments": "支付",
 			"meme": "Meme 币",
-			"oracle": "预言机",
+			"oracle": "价格预言机",
 			"restaking": "再质押",
 			"yield": "收益聚合",
 			"privacy": "隐私",
 			"data": "数据索引",
 			"funding": "融资平台",
-			"news": "资讯媒体"
+			"news": "资讯媒体",
+			"twitter": "X / 推特",
+			"discord": "Discord",
+			"telegram": "Telegram",
+			"jobs": "求职招聘",
+			"stablecoin": "稳定币",
+			"dao_token": "DAO 治理代币",
+			"whale_address": "巨鲸地址 & 金库",
+			"airdrop_token": "空投代币",
+			"non_evm": "异构网络",
+			"legendary_token": "10x/100x 代币",
+			"mev": "MEV",
+			"rwa": "RWA 资产",
+			"ai_crypto": "AI 加密"
 		},
 		"tools": {
 			"uniswap": {
@@ -1642,7 +1655,7 @@
 				"description": "优化的点对点借贷"
 			},
 			"frax": {
-				"description": "算法稳定币生态系统"
+				"description": "部分抵押的分数算法稳定币"
 			},
 			"rocketpool": {
 				"description": "去中心化以太坊质押"
@@ -1744,7 +1757,7 @@
 				"description": "多链 DEX 分析"
 			},
 			"bubblemaps": {
-				"description": "代币持有者分布可视化"
+				"description": "可视化代币持有者和供应分布分析"
 			},
 			"certik": {
 				"description": "安全审计和 Skynet"
@@ -1843,7 +1856,7 @@
 				"description": "NFT 交易和分析"
 			},
 			"boardroom": {
-				"description": "DAO 治理仪表板"
+				"description": "治理聚合器，用于追踪 DAO 提案和投票"
 			},
 			"karma": {
 				"description": "DAO 贡献者声誉"
@@ -2152,13 +2165,13 @@
 				"description": "面向 Web3 开发者的去中心化 API 平台"
 			},
 			"chainlink": {
-				"description": "智能合约的去中心化预言机网络"
+				"description": "行业领先的去中心化预言机网络，提供价格源、VRF 和自动化服务"
 			},
 			"band_protocol": {
-				"description": "跨链数据预言机平台"
+				"description": "集成 Cosmos SDK 的跨链预言机"
 			},
 			"api3": {
-				"description": "第一方预言机解决方案 Airnode"
+				"description": "第一方预言机，使用 Airnode 直接传递 API 数据"
 			},
 			"redstone": {
 				"description": "面向 DeFi、LSD 和 RWA 的模块化预言机"
@@ -2977,7 +2990,7 @@
 				"description": "透明可定制的预言机平台"
 			},
 			"tellor": {
-				"description": "带争议机制的去中心化预言机"
+				"description": "带有争议机制和质押的无许可预言机"
 			},
 			"symbiotic_restaking": {
 				"description": "无许可模块化再质押协议"
@@ -3061,7 +3074,7 @@
 				"description": "Bitquery - Blockchain analytics"
 			},
 			"whale_alert": {
-				"description": "Whale Alert - Blockchain analytics"
+				"description": "跨区块链实时大额交易警报"
 			},
 			"intotheblock": {
 				"description": "IntoTheBlock - Blockchain analytics"
@@ -3172,7 +3185,7 @@
 				"description": "marginfi - DeFi protocol"
 			},
 			"drift_protocol": {
-				"description": "Drift Protocol - DeFi protocol"
+				"description": "Solana 上的去中心化永续期货交易所"
 			},
 			"ondo_finance": {
 				"description": "Ondo Finance - DeFi protocol"
@@ -3238,10 +3251,10 @@
 				"description": "Starkli - Developer tool"
 			},
 			"solscan": {
-				"description": "Solscan - Block explorer"
+				"description": "流行的 Solana 浏览器，支持代币分析和 NFT"
 			},
 			"mintscan": {
-				"description": "Mintscan - Block explorer"
+				"description": "多链 Cosmos 生态系统浏览器"
 			},
 			"nearblocks": {
 				"description": "NearBlocks - Block explorer"
@@ -3253,7 +3266,7 @@
 				"description": "AvaScan - Block explorer"
 			},
 			"tonscan": {
-				"description": "TONScan - Block explorer"
+				"description": "TON 区块链浏览器，用于交易和 jettons"
 			},
 			"tronscan": {
 				"description": "TronScan - Block explorer"
@@ -3331,7 +3344,7 @@
 				"description": "Arbitrum Grants - Web3 investment and funding platform"
 			},
 			"ethereum_foundation": {
-				"description": "Ethereum Foundation - Web3 investment and funding platform"
+				"description": "以太坊基金会官方国库，持有 ETH 储备"
 			},
 			"polygon_grants": {
 				"description": "Polygon Grants - Web3 investment and funding platform"
@@ -3883,7 +3896,7 @@
 				"description": "Moxie - Decentralized social platform"
 			},
 			"phantom_wallet": {
-				"description": "Phantom - Crypto wallet"
+				"description": "流行的多链钱包，专注于 Solana"
 			},
 			"backpack_wallet": {
 				"description": "Backpack - Crypto wallet"
@@ -3895,7 +3908,7 @@
 				"description": "Solflare - Crypto wallet"
 			},
 			"keplr_wallet": {
-				"description": "Keplr - Crypto wallet"
+				"description": "Cosmos 生态系统的跨链钱包，支持质押"
 			},
 			"leap_wallet": {
 				"description": "Leap Wallet - Crypto wallet"
@@ -3911,6 +3924,1866 @@
 			},
 			"okx_wallet": {
 				"description": "OKX Wallet - Crypto wallet"
+			},
+			"x_vitalik": {
+				"description": "加密领域创始人和思想领袖"
+			},
+			"x_cz_binance": {
+				"description": "加密领域创始人和思想领袖"
+			},
+			"x_brian_armstrong": {
+				"description": "加密领域创始人和思想领袖"
+			},
+			"x_hayden_adams": {
+				"description": "加密领域创始人和思想领袖"
+			},
+			"x_stani_kulechov": {
+				"description": "加密领域创始人和思想领袖"
+			},
+			"x_sergey_nazarov": {
+				"description": "加密领域创始人和思想领袖"
+			},
+			"x_hasufl": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_samczsun": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_jon_charbonneau": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_polynya": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_dankrad": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_ethereum": {
+				"description": "协议官方账号，发布更新和公告"
+			},
+			"x_uniswap": {
+				"description": "协议官方账号，发布更新和公告"
+			},
+			"x_aave": {
+				"description": "协议官方账号，发布更新和公告"
+			},
+			"x_arbitrum": {
+				"description": "协议官方账号，发布更新和公告"
+			},
+			"x_optimism": {
+				"description": "协议官方账号，发布更新和公告"
+			},
+			"x_base": {
+				"description": "协议官方账号，发布更新和公告"
+			},
+			"x_transmissions11": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_gakonst": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_austin_griffith": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_patrickalphac": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_a16zcrypto": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_paradigm": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_dragonfly": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_punk6529": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_iamDCinvestor": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_sassal0x": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_evan_van_ness": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_lex_node": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_cygaar": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_0xfoobar": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_twobitidiot": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_matthuang": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_rleshner": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_daaborsebit": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_warcaster": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_balajis": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_cdixon": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_ljxie": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_spaborseencernoon": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_sui414": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_inversebrah": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_teaborsetranode": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_lookonchain": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_thedefiedge": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_defi_made_here": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_0xngmi": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_banteg": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_fubuloubu": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_0xning": {
+				"description": "中文 Web3 影响者，分享加密货币和 DeFi 见解"
+			},
+			"x_tmel0211": {
+				"description": "中文 Web3 影响者，分享加密货币和 DeFi 见解"
+			},
+			"x_phyrex": {
+				"description": "中文 Web3 影响者，分享加密货币和 DeFi 见解"
+			},
+			"x_mindaoyang": {
+				"description": "中文 Web3 影响者，分享加密货币和 DeFi 见解"
+			},
+			"x_jaborsesonjason": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_maborepeng": {
+				"description": "Web3 影响者，分享见解和分析"
+			},
+			"x_cmdefi": {
+				"description": "中文 Web3 影响者，分享加密货币和 DeFi 见解"
+			},
+			"x_0xtodd": {
+				"description": "中文 Web3 影响者，分享加密货币和 DeFi 见解"
+			},
+			"x_haotian": {
+				"description": "中文 Web3 影响者，分享加密货币和 DeFi 见解"
+			},
+			"discord_ethereum": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_uniswap": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_aave": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_chainlink": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_arbitrum": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_optimism": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_base": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_zksync": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_starknet": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_polygon": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_ethglobal": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_buildspace": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_alchemy": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_hardhat": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_foundry": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_openzeppelin": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_thegraph": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_scaffold_eth": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_immunefi": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_code4rena": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_sherlock": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_secureum": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_opensea": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_blur": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_artblocks": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_foundation": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_nouns": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_punks": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_bayc": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_azuki": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_pudgypenguins": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_axie": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_illuvium": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_immutable": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_loot": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_treasure": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_ronin": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_bankless": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_gitcoin": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_ens": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_farcaster": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_lens": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_friend_tech": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_rabbithole": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_galxe": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_solana": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_avalanche": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_cosmos": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_sui": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_aptos": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_near": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"discord_ton": {
+				"description": "活跃的 Discord 社区，用于讨论和交流"
+			},
+			"tg_cointelegraph": {
+				"description": "加密新闻和更新频道"
+			},
+			"tg_coindesk": {
+				"description": "加密新闻和更新频道"
+			},
+			"tg_theblock": {
+				"description": "加密新闻和更新频道"
+			},
+			"tg_bankless": {
+				"description": "加密新闻和更新频道"
+			},
+			"tg_whale_alert": {
+				"description": "链上分析和巨鲸追踪提醒"
+			},
+			"tg_lookonchain": {
+				"description": "链上分析和巨鲸追踪提醒"
+			},
+			"tg_ethereum_ann": {
+				"description": "开发者社区，用于技术讨论"
+			},
+			"tg_solana_ann": {
+				"description": "协议官方公告频道"
+			},
+			"tg_arbitrum_ann": {
+				"description": "协议官方公告频道"
+			},
+			"tg_ton_official": {
+				"description": "协议官方公告频道"
+			},
+			"tg_wu_blockchain": {
+				"description": "中文加密社区和新闻频道"
+			},
+			"tg_odaily": {
+				"description": "中文加密社区和新闻频道"
+			},
+			"tg_blockbeats": {
+				"description": "中文加密社区和新闻频道"
+			},
+			"tg_foresight_news": {
+				"description": "中文加密社区和新闻频道"
+			},
+			"tg_panews": {
+				"description": "中文加密社区和新闻频道"
+			},
+			"tg_techflow": {
+				"description": "中文加密社区和新闻频道"
+			},
+			"tg_chaincatcher": {
+				"description": "中文加密社区和新闻频道"
+			},
+			"tg_defi_cn": {
+				"description": "中文加密社区和新闻频道"
+			},
+			"tg_eth_cn": {
+				"description": "中文加密社区和新闻频道"
+			},
+			"tg_crypto_korea": {
+				"description": "韩国加密社区，用于交易和讨论"
+			},
+			"tg_korea_defi": {
+				"description": "韩国加密社区，用于交易和讨论"
+			},
+			"tg_korea_nft": {
+				"description": "韩国加密社区，用于交易和讨论"
+			},
+			"tg_korea_altcoin": {
+				"description": "韩国加密社区，用于交易和讨论"
+			},
+			"tg_crypto_japan": {
+				"description": "日本加密社区，用于交易和讨论"
+			},
+			"tg_japan_defi": {
+				"description": "日本加密社区，用于交易和讨论"
+			},
+			"tg_crypto_vietnam": {
+				"description": "越南加密社区，用于交易和讨论"
+			},
+			"tg_vietnam_defi": {
+				"description": "越南加密社区，用于交易和讨论"
+			},
+			"tg_vietnam_airdrop": {
+				"description": "越南加密社区，用于交易和讨论"
+			},
+			"tg_vietnam_gamefi": {
+				"description": "越南加密社区，用于交易和讨论"
+			},
+			"tg_crypto_indonesia": {
+				"description": "印尼加密社区，用于交易和讨论"
+			},
+			"tg_indonesia_defi": {
+				"description": "印尼加密社区，用于交易和讨论"
+			},
+			"tg_indonesia_airdrop": {
+				"description": "印尼加密社区，用于交易和讨论"
+			},
+			"tg_crypto_philippines": {
+				"description": "菲律宾加密社区，用于交易和讨论"
+			},
+			"tg_philippines_axie": {
+				"description": "菲律宾加密社区，用于交易和讨论"
+			},
+			"tg_crypto_thailand": {
+				"description": "泰国加密社区，用于交易和讨论"
+			},
+			"tg_thailand_defi": {
+				"description": "泰国加密社区，用于交易和讨论"
+			},
+			"tg_crypto_malaysia": {
+				"description": "马来西亚加密社区，用于交易和讨论"
+			},
+			"tg_crypto_india": {
+				"description": "印度加密社区，用于交易和讨论"
+			},
+			"tg_india_defi": {
+				"description": "印度加密社区，用于交易和讨论"
+			},
+			"tg_india_web3": {
+				"description": "印度加密社区，用于交易和讨论"
+			},
+			"tg_crypto_russia": {
+				"description": "俄罗斯加密社区，用于交易和讨论"
+			},
+			"tg_russia_defi": {
+				"description": "俄罗斯加密社区，用于交易和讨论"
+			},
+			"tg_russia_trading": {
+				"description": "俄罗斯加密社区，用于交易和讨论"
+			},
+			"tg_crypto_ukraine": {
+				"description": "乌克兰加密社区，用于交易和讨论"
+			},
+			"tg_crypto_turkey": {
+				"description": "土耳其加密社区，用于交易和讨论"
+			},
+			"tg_turkey_defi": {
+				"description": "土耳其加密社区，用于交易和讨论"
+			},
+			"tg_turkey_airdrop": {
+				"description": "土耳其加密社区，用于交易和讨论"
+			},
+			"tg_crypto_arabic": {
+				"description": "阿拉伯加密社区，用于交易和讨论"
+			},
+			"tg_uae_crypto": {
+				"description": "阿拉伯加密社区，用于交易和讨论"
+			},
+			"tg_saudi_crypto": {
+				"description": "阿拉伯加密社区，用于交易和讨论"
+			},
+			"tg_egypt_crypto": {
+				"description": "阿拉伯加密社区，用于交易和讨论"
+			},
+			"tg_crypto_africa": {
+				"description": "非洲加密社区，用于交易和讨论"
+			},
+			"tg_crypto_nigeria": {
+				"description": "非洲加密社区，用于交易和讨论"
+			},
+			"tg_crypto_southafrica": {
+				"description": "非洲加密社区，用于交易和讨论"
+			},
+			"tg_crypto_kenya": {
+				"description": "非洲加密社区，用于交易和讨论"
+			},
+			"tg_crypto_ghana": {
+				"description": "非洲加密社区，用于交易和讨论"
+			},
+			"tg_crypto_latam": {
+				"description": "拉美加密社区，用于交易和讨论"
+			},
+			"tg_crypto_brazil": {
+				"description": "拉美加密社区，用于交易和讨论"
+			},
+			"tg_brazil_defi": {
+				"description": "拉美加密社区，用于交易和讨论"
+			},
+			"tg_crypto_argentina": {
+				"description": "拉美加密社区，用于交易和讨论"
+			},
+			"tg_crypto_mexico": {
+				"description": "拉美加密社区，用于交易和讨论"
+			},
+			"tg_crypto_colombia": {
+				"description": "拉美加密社区，用于交易和讨论"
+			},
+			"tg_crypto_venezuela": {
+				"description": "拉美加密社区，用于交易和讨论"
+			},
+			"tg_crypto_chile": {
+				"description": "拉美加密社区，用于交易和讨论"
+			},
+			"tg_crypto_peru": {
+				"description": "拉美加密社区，用于交易和讨论"
+			},
+			"tg_crypto_german": {
+				"description": "德国加密社区，用于交易和讨论"
+			},
+			"tg_crypto_france": {
+				"description": "法国加密社区，用于交易和讨论"
+			},
+			"tg_crypto_spain": {
+				"description": "西班牙加密社区，用于交易和讨论"
+			},
+			"tg_crypto_italy": {
+				"description": "意大利加密社区，用于交易和讨论"
+			},
+			"tg_crypto_netherlands": {
+				"description": "荷兰加密社区，用于交易和讨论"
+			},
+			"tg_crypto_poland": {
+				"description": "波兰加密社区，用于交易和讨论"
+			},
+			"tg_crypto_portugal": {
+				"description": "葡萄牙加密社区，用于交易和讨论"
+			},
+			"tg_crypto_romania": {
+				"description": "罗马尼亚加密社区，用于交易和讨论"
+			},
+			"tg_crypto_iran": {
+				"description": "伊朗加密社区，用于交易和讨论"
+			},
+			"tg_crypto_pakistan": {
+				"description": "巴基斯坦加密社区，用于交易和讨论"
+			},
+			"tg_crypto_bangladesh": {
+				"description": "孟加拉国加密社区，用于交易和讨论"
+			},
+			"tg_crypto_singapore": {
+				"description": "新加坡加密社区，用于交易和讨论"
+			},
+			"tg_crypto_hongkong": {
+				"description": "香港加密社区，用于交易和讨论"
+			},
+			"tg_crypto_taiwan": {
+				"description": "台湾加密社区，用于交易和讨论"
+			},
+			"tg_solidity_dev": {
+				"description": "开发者社区，用于技术讨论"
+			},
+			"tg_ethresear_ch": {
+				"description": "开发者社区，用于技术讨论"
+			},
+			"jobs_cryptocurrencyjobs": {
+				"description": "Web3 招聘板和职业平台"
+			},
+			"jobs_web3career": {
+				"description": "公司官方招聘页面"
+			},
+			"jobs_cryptojobslist": {
+				"description": "Web3 招聘板和职业平台"
+			},
+			"jobs_pompcryptojobs": {
+				"description": "Web3 招聘板和职业平台"
+			},
+			"jobs_useweb3": {
+				"description": "Web3 招聘板和职业平台"
+			},
+			"jobs_remoteok_crypto": {
+				"description": "Web3 招聘板和职业平台"
+			},
+			"jobs_blockchaindevjobs": {
+				"description": "Web3 招聘板和职业平台"
+			},
+			"jobs_defi_jobs": {
+				"description": "Web3 招聘板和职业平台"
+			},
+			"jobs_builtin_blockchain": {
+				"description": "Web3 招聘板和职业平台"
+			},
+			"jobs_dework": {
+				"description": "DAO 贡献者和赏金平台"
+			},
+			"jobs_layer3": {
+				"description": "DAO 贡献者和赏金平台"
+			},
+			"jobs_gitcoin": {
+				"description": "DAO 贡献者和赏金平台"
+			},
+			"jobs_coordinape": {
+				"description": "DAO 贡献者和赏金平台"
+			},
+			"jobs_wonderverse": {
+				"description": "DAO 贡献者和赏金平台"
+			},
+			"jobs_charmverse": {
+				"description": "DAO 贡献者和赏金平台"
+			},
+			"jobs_daolens": {
+				"description": "DAO 贡献者和赏金平台"
+			},
+			"jobs_immunefi": {
+				"description": "漏洞赏金和安全审计平台"
+			},
+			"jobs_code4rena": {
+				"description": "漏洞赏金和安全审计平台"
+			},
+			"jobs_sherlock": {
+				"description": "漏洞赏金和安全审计平台"
+			},
+			"jobs_hackenproof": {
+				"description": "漏洞赏金和安全审计平台"
+			},
+			"jobs_hats_finance": {
+				"description": "漏洞赏金和安全审计平台"
+			},
+			"jobs_cantina": {
+				"description": "漏洞赏金和安全审计平台"
+			},
+			"jobs_ethbounties": {
+				"description": "Web3 招聘板和职业平台"
+			},
+			"jobs_a16z_portfolio": {
+				"description": "VC 投资组合公司招聘板"
+			},
+			"jobs_paradigm_portfolio": {
+				"description": "VC 投资组合公司招聘板"
+			},
+			"jobs_coinbase": {
+				"description": "公司官方招聘页面"
+			},
+			"jobs_binance": {
+				"description": "公司官方招聘页面"
+			},
+			"jobs_consensys": {
+				"description": "公司官方招聘页面"
+			},
+			"jobs_chainlink_labs": {
+				"description": "公司官方招聘页面"
+			},
+			"jobs_ethereum_foundation": {
+				"description": "公司官方招聘页面"
+			},
+			"jobs_uniswap_labs": {
+				"description": "公司官方招聘页面"
+			},
+			"jobs_opensea": {
+				"description": "公司官方招聘页面"
+			},
+			"jobs_alchemy": {
+				"description": "公司官方招聘页面"
+			},
+			"jobs_encode_club": {
+				"description": "Web3 开发者教育和导师计划"
+			},
+			"jobs_ethglobal_fellowship": {
+				"description": "Web3 开发者教育和导师计划"
+			},
+			"jobs_developer_dao": {
+				"description": "DAO 贡献者和赏金平台"
+			},
+			"jobs_buildspace_n_w": {
+				"description": "Web3 开发者教育和导师计划"
+			},
+			"jobs_abcde": {
+				"description": "中文 Web3 工作机会"
+			},
+			"jobs_foresight_ventures": {
+				"description": "中文 Web3 工作机会"
+			},
+			"jobs_hashkey": {
+				"description": "中文 Web3 工作机会"
+			},
+			"jobs_okx": {
+				"description": "中文 Web3 工作机会"
+			},
+			"jobs_huobi": {
+				"description": "中文 Web3 工作机会"
+			},
+			"jobs_crypto_careers": {
+				"description": "公司官方招聘页面"
+			},
+			"jobs_otta_web3": {
+				"description": "Web3 招聘板和职业平台"
+			},
+			"jobs_angellist_crypto": {
+				"description": "Web3 招聘板和职业平台"
+			},
+			"jobs_linkedin_web3": {
+				"description": "Web3 招聘板和职业平台"
+			},
+			"usdt_tether": {
+				"description": "市值最大的稳定币，美元支持，广泛的多链支持"
+			},
+			"usdc_circle": {
+				"description": "Circle 发行的合规美元稳定币，完全储备并经过审计"
+			},
+			"dai_makerdao": {
+				"description": "MakerDAO 发行的去中心化超额抵押稳定币"
+			},
+			"usde_ethena": {
+				"description": "由 delta 中性加密仓位支持的高收益合成美元"
+			},
+			"usdd_tron": {
+				"description": "Tron 网络上的算法稳定币"
+			},
+			"tusd": {
+				"description": "受监管且经过审计的美元稳定币"
+			},
+			"busd_paxos": {
+				"description": "Paxos 为 Binance 发行的美元稳定币"
+			},
+			"pyusd_paypal": {
+				"description": "PayPal 发行的支付和转账用美元稳定币"
+			},
+			"gusd_gemini": {
+				"description": "Gemini 交易所发行的合规稳定币"
+			},
+			"usdp_paxos": {
+				"description": "Paxos 发行的合规美元稳定币"
+			},
+			"sdai_spark": {
+				"description": "带有 MakerDAO DSR 收益的储蓄 DAI"
+			},
+			"susde_ethena": {
+				"description": "在 Ethena 协议中质押赚取收益的 USDe"
+			},
+			"sfrax": {
+				"description": "在 Frax 协议中质押赚取收益的 FRAX"
+			},
+			"eurs_stasis": {
+				"description": "STASIS 发行的欧元稳定币"
+			},
+			"eurc_circle": {
+				"description": "Circle 发行的欧元稳定币"
+			},
+			"eurt_tether": {
+				"description": "Tether 欧元稳定币"
+			},
+			"xsgd_straitsx": {
+				"description": "StraitsX 发行的新加坡元稳定币"
+			},
+			"lusd_liquity": {
+				"description": "不可变协议的去中心化 ETH 抵押稳定币"
+			},
+			"susd_synthetix": {
+				"description": "SNX 质押支持的合成美元"
+			},
+			"rai_reflexer": {
+				"description": "非锚定、ETH 抵押的算法稳定资产"
+			},
+			"mim_abracadabra": {
+				"description": "由生息代币抵押的魔法互联网货币"
+			},
+			"crvusd_curve": {
+				"description": "Curve 原生稳定币，采用 LLAMMA 软清算机制"
+			},
+			"gho_aave": {
+				"description": "Aave 原生稳定币，由 Aave 存款支持"
+			},
+			"defillama_stablecoins": {
+				"description": "追踪稳定币市值、交易量和锚定稳定性"
+			},
+			"coingecko_stablecoins": {
+				"description": "CoinGecko 稳定币排名和市场数据"
+			},
+			"chainlink_data_feeds": {
+				"description": "Chainlink 预言机实时价格源仪表板和文档"
+			},
+			"pyth_network": {
+				"description": "高频价格预言机，来自第一方数据源的亚秒级更新"
+			},
+			"pyth_price_feeds": {
+				"description": "探索 Pyth 在 40 多条链上的价格源"
+			},
+			"dia_data": {
+				"description": "用于 DeFi 和 NFT 数据的开源预言机"
+			},
+			"uma_protocol": {
+				"description": "带有争议解决机制的乐观预言机，适用于任何可验证数据"
+			},
+			"redstone_oracles": {
+				"description": "模块化预言机，支持按需数据传递和 LST"
+			},
+			"chronicle_labs": {
+				"description": "可扩展预言机，最初为 MakerDAO 开发"
+			},
+			"umbrella_network": {
+				"description": "Layer 2 预言机解决方案，提供可扩展的价格源"
+			},
+			"flux_protocol": {
+				"description": "基于 NEAR 协议构建的跨链预言机"
+			},
+			"supra_oracles": {
+				"description": "高速预言机，采用 DORA 协议实现快速最终性"
+			},
+			"chainlink_vrf": {
+				"description": "可验证随机函数，为 dApps 提供可证明公平的随机性"
+			},
+			"chainlink_automation": {
+				"description": "去中心化智能合约自动化（原 Keepers）"
+			},
+			"chainlink_ccip": {
+				"description": "跨链消息协议，用于安全的代币和数据传输"
+			},
+			"chainlink_functions": {
+				"description": "无服务器计算，将智能合约连接到任何 API"
+			},
+			"defillama_oracles": {
+				"description": "追踪各协议的预言机 TVS（总保护价值）"
+			},
+			"oracle_dao": {
+				"description": "预言机安全的社区治理和标准"
+			},
+			"uni_token": {
+				"description": "Uniswap 治理代币，用于协议投票和国库管理"
+			},
+			"aave_token": {
+				"description": "Aave 治理和安全模块质押代币"
+			},
+			"mkr_token": {
+				"description": "MakerDAO 治理代币，用于 DAI 稳定性和协议决策"
+			},
+			"crv_token": {
+				"description": "Curve 治理代币，采用投票托管（veCRV）机制"
+			},
+			"comp_token": {
+				"description": "Compound 治理代币，用于借贷协议决策"
+			},
+			"snx_token": {
+				"description": "Synthetix 质押和治理代币，用于合成资产"
+			},
+			"ldo_token": {
+				"description": "Lido DAO 治理代币，用于流动性质押协议"
+			},
+			"gmx_token": {
+				"description": "GMX 治理和手续费分享代币，用于永续 DEX"
+			},
+			"bal_token": {
+				"description": "Balancer 治理代币，采用 veBAL 机制"
+			},
+			"sushi_token": {
+				"description": "SushiSwap 治理代币，用于 DEX 协议"
+			},
+			"yfi_token": {
+				"description": "Yearn 治理代币，采用 veYFI 质押机制"
+			},
+			"inch_token": {
+				"description": "1inch 治理代币，用于 DEX 聚合器协议"
+			},
+			"pendle_token": {
+				"description": "Pendle 治理代币，用于收益交易协议"
+			},
+			"ena_token": {
+				"description": "Ethena 治理代币，用于合成美元协议"
+			},
+			"arb_token": {
+				"description": "Arbitrum DAO 治理代币，用于 L2 Rollup 决策"
+			},
+			"op_token": {
+				"description": "Optimism 治理代币，用于 L2 和追溯性公共物品资助"
+			},
+			"strk_token": {
+				"description": "StarkNet 治理代币，用于 ZK-rollup 网络"
+			},
+			"zk_token": {
+				"description": "zkSync 治理代币，用于 ZK-rollup 生态系统"
+			},
+			"matic_token": {
+				"description": "Polygon 治理代币（迁移至 POL），用于网络质押"
+			},
+			"mnt_token": {
+				"description": "Mantle 治理代币，用于模块化 L2 网络"
+			},
+			"metis_token": {
+				"description": "Metis 治理代币，用于乐观 Rollup 网络"
+			},
+			"ens_token": {
+				"description": "ENS 治理代币，用于以太坊域名系统"
+			},
+			"gtc_token": {
+				"description": "Gitcoin 治理代币，用于公共物品资助"
+			},
+			"safe_token": {
+				"description": "Safe（Gnosis Safe）治理代币，用于多签钱包协议"
+			},
+			"cow_token": {
+				"description": "CoW 协议治理代币，用于 MEV 保护交易"
+			},
+			"gno_token": {
+				"description": "Gnosis 治理代币，用于预测市场和 Gnosis Chain"
+			},
+			"tally_governance": {
+				"description": "支持委托的 DAO 链上投票平台"
+			},
+			"snapshot_governance": {
+				"description": "DAO 链下无 Gas 投票平台"
+			},
+			"karma_dao": {
+				"description": "DAO 贡献者声誉和委托分析平台"
+			},
+			"messari_governance": {
+				"description": "Messari 的 DAO 治理研究和分析"
+			},
+			"uniswap_treasury": {
+				"description": "Uniswap DAO 国库，持有 UNI 治理资金"
+			},
+			"aave_treasury": {
+				"description": "Aave DAO 国库，用于协议储备和资助"
+			},
+			"maker_treasury": {
+				"description": "MakerDAO 国库，管理协议盈余"
+			},
+			"compound_treasury": {
+				"description": "Compound DAO 国库，用于协议开发"
+			},
+			"lido_treasury": {
+				"description": "Lido DAO 国库，用于质押协议治理"
+			},
+			"arbitrum_treasury": {
+				"description": "Arbitrum DAO 国库，持有 ARB 代币"
+			},
+			"optimism_treasury": {
+				"description": "Optimism 国库，用于追溯性公共物品资助"
+			},
+			"gnosis_treasury": {
+				"description": "Gnosis DAO 国库和生态系统基金"
+			},
+			"ens_treasury": {
+				"description": "ENS DAO 国库，用于域名系统治理"
+			},
+			"curve_multisig": {
+				"description": "Curve 紧急 DAO 多签，用于协议安全"
+			},
+			"yearn_multisig": {
+				"description": "Yearn 协议多签，用于国库管理"
+			},
+			"vitalik_wallet": {
+				"description": "Vitalik Buterin 个人钱包（vitalik.eth）- 以太坊联合创始人"
+			},
+			"justin_sun_wallet": {
+				"description": "Justin Sun 钱包 - Tron 创始人和活跃 DeFi 交易者"
+			},
+			"tetranode_wallet": {
+				"description": "著名 DeFi 巨鲸，以大额协议仓位闻名"
+			},
+			"hsaka_wallet": {
+				"description": "知名加密货币交易者，专注于衍生品"
+			},
+			"a16z_wallet": {
+				"description": "Andreessen Horowitz 加密基金钱包"
+			},
+			"paradigm_wallet": {
+				"description": "Paradigm 加密投资基金钱包"
+			},
+			"jump_trading_wallet": {
+				"description": "Jump Trading 加密做市商钱包"
+			},
+			"wintermute_wallet": {
+				"description": "Wintermute 算法交易和做市钱包"
+			},
+			"galaxy_digital_wallet": {
+				"description": "Galaxy Digital 机构投资钱包"
+			},
+			"lookonchain": {
+				"description": "链上分析平台，追踪巨鲸动向和聪明资金"
+			},
+			"nansen_smart_money": {
+				"description": "聪明资金追踪和钱包标签分析"
+			},
+			"arkham_intelligence": {
+				"description": "区块链情报平台，用于实体识别"
+			},
+			"debank_whales": {
+				"description": "投资组合追踪和巨鲸钱包排名"
+			},
+			"spot_on_chain": {
+				"description": "AI 驱动的链上分析和巨鲸警报"
+			},
+			"etherscan_label": {
+				"description": "Etherscan 标记地址数据库，用于已知实体"
+			},
+			"zerion_whales": {
+				"description": "探索顶级投资组合和巨鲸交易活动"
+			},
+			"watchers_pro": {
+				"description": "实时巨鲸追踪和聪明资金警报"
+			},
+			"airdrop_uni": {
+				"description": "传奇性的 400 UNI 空投给早期 Uniswap 用户（2020年9月）"
+			},
+			"airdrop_ens": {
+				"description": "ENS 域名持有者根据注册时间获得治理代币"
+			},
+			"airdrop_dydx": {
+				"description": "dYdX 基于交易量的空投给永续合约交易者"
+			},
+			"airdrop_1inch": {
+				"description": "1inch DEX 聚合器用户多轮空投"
+			},
+			"airdrop_ldo": {
+				"description": "Lido 早期质押者和贡献者获得 LDO 代币"
+			},
+			"airdrop_op": {
+				"description": "Optimism L2 早期采用者多标准空投"
+			},
+			"airdrop_arb": {
+				"description": "Arbitrum 桥接用户和活跃钱包大规模空投"
+			},
+			"airdrop_blur": {
+				"description": "Blur 市场 NFT 交易者季节性空投"
+			},
+			"airdrop_strk": {
+				"description": "StarkNet 为早期生态参与者提供的 provisions 计划"
+			},
+			"airdrop_zk": {
+				"description": "zkSync Era 桥接用户和早期测试网参与者空投"
+			},
+			"airdrop_jup": {
+				"description": "Jupiter 聚合器对 Solana 交易者的空投"
+			},
+			"airdrop_w": {
+				"description": "Wormhole 跨链桥用户空投"
+			},
+			"airdrop_ena": {
+				"description": "Ethena sats 活动参与者获得 ENA 代币"
+			},
+			"airdrop_eigen": {
+				"description": "EigenLayer 再质押者和早期参与者空投"
+			},
+			"airdrop_cow": {
+				"description": "CoW 协议早期交易者和 LP 提供者空投"
+			},
+			"airdrop_hop": {
+				"description": "Hop 协议 L2 桥接用户和流动性提供者"
+			},
+			"airdrop_safe": {
+				"description": "Safe（Gnosis Safe）多签用户和签名者空投"
+			},
+			"airdrop_matic_pol": {
+				"description": "MATIC 到 POL 迁移和生态系统升级"
+			},
+			"earndrop": {
+				"description": "检查您是否有资格获得多个即将到来和过去的空投"
+			},
+			"defillama_airdrops": {
+				"description": "追踪 DeFi 协议的潜在和已确认空投"
+			},
+			"airdrop_alert": {
+				"description": "精选的合法即将到来的加密空投列表"
+			},
+			"airdrops_io": {
+				"description": "全面的空投指南和资格检查"
+			},
+			"airdrop_farmer": {
+				"description": "完成任务并从协议中赚取代币"
+			},
+			"galxe_campaigns": {
+				"description": "带有代币奖励的 Web3 凭证活动"
+			},
+			"rabbithole_quests": {
+				"description": "学习加密协议并获得奖励"
+			},
+			"zealy_quests": {
+				"description": "带有代币激励的社区参与任务"
+			},
+			"potential_scroll": {
+				"description": "Scroll zkEVM L2 - 潜在的桥接和活动空投"
+			},
+			"potential_linea": {
+				"description": "ConsenSys zkEVM L2 - 潜在的生态系统使用空投"
+			},
+			"potential_blast": {
+				"description": "Blast L2 原生收益 - 已启动基于积分的空投"
+			},
+			"potential_berachain": {
+				"description": "Berachain 流动性证明 L1 - 测试网和 NFT 持有者"
+			},
+			"potential_monad": {
+				"description": "Monad 高性能 EVM L1 - 早期社区参与者"
+			},
+			"potential_fuel": {
+				"description": "Fuel 模块化执行层 - 测试网和早期用户"
+			},
+			"solana_network": {
+				"description": "高性能区块链，快速交易和低费用"
+			},
+			"solana_explorer": {
+				"description": "官方 Solana 区块链浏览器，用于交易和账户"
+			},
+			"jupiter_solana": {
+				"description": "Solana 上领先的 DEX 聚合器，提供最佳价格路由"
+			},
+			"raydium": {
+				"description": "Solana AMM 和流动性提供者，具有集中池"
+			},
+			"marinade_finance": {
+				"description": "SOL 的流动性质押协议，提供 mSOL 代币"
+			},
+			"magic_eden_solana": {
+				"description": "Solana、Bitcoin 和 Ethereum 上领先的 NFT 市场"
+			},
+			"tensor_nft": {
+				"description": "Solana 上的专业 NFT 交易平台"
+			},
+			"cosmos_network": {
+				"description": "区块链互联网，具有 IBC 跨链通信"
+			},
+			"osmosis": {
+				"description": "Cosmos 生态系统中领先的 DEX，集成 IBC"
+			},
+			"stride_zone": {
+				"description": "Cosmos 链的流动性质押，提供 stATOM"
+			},
+			"injective": {
+				"description": "专注于 DeFi 的 Cosmos 链，用于衍生品交易"
+			},
+			"celestia": {
+				"description": "用于 Rollup 的模块化数据可用性层"
+			},
+			"dymension": {
+				"description": "基于 Cosmos 构建的 RollApp 中心，用于模块化 Rollup"
+			},
+			"sei_network": {
+				"description": "最快的 L1，针对交易优化，支持并行处理"
+			},
+			"sui_network": {
+				"description": "基于 Move 的 L1，具有对象中心模型和并行执行"
+			},
+			"sui_explorer": {
+				"description": "Sui 网络交易和对象的区块浏览器"
+			},
+			"sui_wallet": {
+				"description": "官方 Sui 钱包，用于基于 Move 的区块链"
+			},
+			"turbos_finance": {
+				"description": "Sui 网络上的集中流动性 DEX"
+			},
+			"cetus_protocol": {
+				"description": "Sui 和 Aptos 上的先驱 DEX 和流动性协议"
+			},
+			"aptos_network": {
+				"description": "基于 Move 的 L1，具有 Block-STM 并行执行引擎"
+			},
+			"aptos_explorer": {
+				"description": "官方 Aptos 区块链浏览器"
+			},
+			"petra_wallet": {
+				"description": "Aptos Labs 的官方 Aptos 钱包"
+			},
+			"pontem_wallet": {
+				"description": "基于 Move 网络的多链钱包"
+			},
+			"liquidswap": {
+				"description": "Pontem 在 Aptos 上的第一个 AMM DEX"
+			},
+			"ton_network": {
+				"description": "The Open Network - Telegram 集成的区块链"
+			},
+			"tonkeeper": {
+				"description": "流行的 TON 钱包，集成 Telegram"
+			},
+			"ston_fi": {
+				"description": "TON 网络上领先的 DEX"
+			},
+			"dedust": {
+				"description": "TON 上的 DEX 和 DeFi 平台"
+			},
+			"near_protocol": {
+				"description": "分片 PoS 区块链，具有人类可读账户"
+			},
+			"near_explorer": {
+				"description": "NEAR 区块链浏览器和分析"
+			},
+			"ref_finance": {
+				"description": "NEAR 上的多功能 DeFi 平台"
+			},
+			"algorand": {
+				"description": "纯权益证明区块链，具有即时最终性"
+			},
+			"cardano": {
+				"description": "研究驱动的区块链，具有同行评审的开发"
+			},
+			"polkadot": {
+				"description": "具有平行链的异构多链网络"
+			},
+			"subscan": {
+				"description": "Polkadot 和 Substrate 网络的多链浏览器"
+			},
+			"tezos": {
+				"description": "具有形式化验证的自修正区块链"
+			},
+			"stacks": {
+				"description": "Bitcoin L2，将智能合约带入 BTC"
+			},
+			"lightning_network": {
+				"description": "Bitcoin L2，用于快速、低成本支付"
+			},
+			"rsk_rootstock": {
+				"description": "Bitcoin 侧链，具有 EVM 兼容的智能合约"
+			},
+			"ibc_protocol": {
+				"description": "Cosmos 链的跨区块链通信协议"
+			},
+			"wormhole_bridge": {
+				"description": "跨链消息协议，连接 30 多个区块链"
+			},
+			"layerzero": {
+				"description": "全链互操作性协议，用于无信任消息传递"
+			},
+			"axelar_network": {
+				"description": "跨链通信，具有通用消息传递"
+			},
+			"legend_bnb": {
+				"description": "Binance Coin - 2017年ICO以来增长1000倍以上的交易所代币"
+			},
+			"legend_sol": {
+				"description": "Solana - 从$0.5 ICO达到$200+的高性能区块链"
+			},
+			"legend_matic": {
+				"description": "Polygon (原MATIC) - 2019年以来大幅增长的L2扩容方案"
+			},
+			"legend_avax": {
+				"description": "Avalanche - 自上线以来显著增长的快速L1区块链"
+			},
+			"legend_link": {
+				"description": "Chainlink - 从ICO增长100倍以上的领先预言机网络"
+			},
+			"legend_uni": {
+				"description": "Uniswap - 对早期用户进行传奇空投的DEX治理代币"
+			},
+			"legend_aave": {
+				"description": "Aave - 从LEND重塑后增长50倍以上的DeFi借贷协议"
+			},
+			"legend_ftm": {
+				"description": "Fantom - 价格大幅增值的DAG基础L1"
+			},
+			"legend_atom": {
+				"description": "Cosmos - 生态系统强劲增长的区块链互联网"
+			},
+			"legend_near": {
+				"description": "NEAR Protocol - 具有显著增长轨迹的分片L1"
+			},
+			"legend_inj": {
+				"description": "Injective - 2023年增长100倍以上的DeFi专注链"
+			},
+			"legend_ton": {
+				"description": "TON - 快速采用的Telegram支持区块链"
+			},
+			"legend_sui": {
+				"description": "Sui - 自上线以来强劲增长的Move基础L1"
+			},
+			"legend_apt": {
+				"description": "Aptos - 生态系统显著发展的Move基础L1"
+			},
+			"legend_sei": {
+				"description": "Sei Network - 为交易优化的最快L1"
+			},
+			"legend_mkr": {
+				"description": "Maker - DAI稳定币的DeFi OG治理代币"
+			},
+			"legend_snx": {
+				"description": "Synthetix - 具有强大DeFi历史的合成资产协议"
+			},
+			"legend_crv": {
+				"description": "Curve - 具有强大代币经济学和veCRV的稳定币DEX"
+			},
+			"legend_gmx": {
+				"description": "GMX - 具有真实收益和30倍以上增长的永续DEX"
+			},
+			"legend_pendle": {
+				"description": "Pendle - 2023-24年增长100倍以上的收益交易协议"
+			},
+			"legend_rune": {
+				"description": "THORChain - 具有原生流动性和强劲恢复的跨链DEX"
+			},
+			"legend_dydx": {
+				"description": "dYdX - 领先的去中心化永续交易所"
+			},
+			"legend_shib": {
+				"description": "Shiba Inu - 具有百万倍潜在收益的meme币"
+			},
+			"legend_pepe": {
+				"description": "PEPE - 2023年市值达到$1B以上的青蛙meme币"
+			},
+			"legend_bonk": {
+				"description": "BONK - 2022年圣诞节大涨的Solana狗meme"
+			},
+			"legend_wif": {
+				"description": "dogwifhat - 2024年初增长100倍以上的Solana meme币"
+			},
+			"legend_floki": {
+				"description": "FLOKI - 扩展实用性的马斯克灵感meme"
+			},
+			"legend_arb": {
+				"description": "Arbitrum - 生态系统大幅增长的领先L2 rollup"
+			},
+			"legend_op": {
+				"description": "Optimism - 具有Superchain愿景的以太坊L2"
+			},
+			"legend_stx": {
+				"description": "Stacks - 2023年强劲反弹的比特币智能合约层"
+			},
+			"legend_tia": {
+				"description": "Celestia - 强势上线的模块化数据可用性层"
+			},
+			"legend_jup": {
+				"description": "Jupiter - 主导生态的Solana DEX聚合器"
+			},
+			"legend_pyth": {
+				"description": "Pyth Network - 强劲采用的高频预言机"
+			},
+			"legend_render": {
+				"description": "Render Network - 具有AI叙事的去中心化GPU渲染网络"
+			},
+			"legend_fet": {
+				"description": "Fetch.ai - 区块链上的AI代理和自动化"
+			},
+			"legend_axs": {
+				"description": "Axie Infinity - 2021年增长100倍以上的P2E先驱"
+			},
+			"legend_sand": {
+				"description": "The Sandbox - 与重大合作伙伴关系的元宇宙领导者"
+			},
+			"legend_mana": {
+				"description": "Decentraland - 显著增长的虚拟世界先驱"
+			},
+			"legend_gala": {
+				"description": "Gala Games - 拥有多款游戏的游戏生态系统"
+			},
+			"legend_imx": {
+				"description": "Immutable X - 与重大游戏合作的游戏专注L2"
+			},
+			"legend_blur": {
+				"description": "Blur - 具有激进激励的NFT市场颠覆者"
+			},
+			"coingecko_gainers": {
+				"description": "追踪所有时间段内涨幅最大的加密货币"
+			},
+			"dexscreener_trending": {
+				"description": "发现跨链趋势代币和新交易对"
+			},
+			"messari_screener": {
+				"description": "具有基本面指标的高级加密筛选器"
+			},
+			"cow_mev_protection": {
+				"description": "CoW Protocol通过批量拍卖和需求巧合提供MEV保护"
+			},
+			"merkle_private_pool": {
+				"description": "以太坊MEV保护的私有交易池"
+			},
+			"flashbots_builder": {
+				"description": "合并后以太坊领先的MEV感知区块构建器"
+			},
+			"beaverbuild": {
+				"description": "高市场份额的顶级以太坊区块构建器"
+			},
+			"titan_builder": {
+				"description": "PBS生态系统中的竞争性区块构建器"
+			},
+			"rsync_builder": {
+				"description": "专注于公平排序和MEV提取的区块构建器"
+			},
+			"flashbots_transparency": {
+				"description": "显示MEV提取和构建器统计的仪表板"
+			},
+			"mev_explore": {
+				"description": "MEV交易和bundle活动浏览器"
+			},
+			"eigenphi_mev": {
+				"description": "追踪套利、清算和三明治攻击的MEV分析"
+			},
+			"mev_watch": {
+				"description": "监控区块构建中的OFAC合规和审查"
+			},
+			"zeromev": {
+				"description": "追踪以太坊区块中的MEV提取"
+			},
+			"relayscan": {
+				"description": "MEV-Boost中继和构建器性能分析"
+			},
+			"mevboost_pics": {
+				"description": "MEV-Boost中继和构建器市场份额可视化分析"
+			},
+			"mev_boost": {
+				"description": "验证者提议者-构建者分离实现"
+			},
+			"suave": {
+				"description": "价值表达的统一拍卖 - MEV的未来"
+			},
+			"mev_share": {
+				"description": "将MEV重新分配给用户的协议"
+			},
+			"jito_mev": {
+				"description": "具有bundle小费和优先费用的Solana MEV基础设施"
+			},
+			"jito_bundles": {
+				"description": "通过Jito提交Solana MEV搜索者的bundle"
+			},
+			"monero": {
+				"description": "使用环签名和隐身地址的领先隐私加密货币"
+			},
+			"secret_network": {
+				"description": "具有加密计算的隐私保护智能合约平台"
+			},
+			"oasis_network": {
+				"description": "具有机密ParaTimes的隐私启用区块链"
+			},
+			"mina_protocol": {
+				"description": "使用zk-SNARKs实现恒定大小证明的轻量级区块链"
+			},
+			"firo": {
+				"description": "使用Lelantus协议进行匿名交易的隐私币"
+			},
+			"iron_fish": {
+				"description": "默认加密交易的隐私优先Layer 1"
+			},
+			"aztec_connect": {
+				"description": "使用以太坊上的zk-rollup技术的私有DeFi桥"
+			},
+			"umbra_cash": {
+				"description": "以太坊私密支付的隐身地址协议"
+			},
+			"penumbra": {
+				"description": "用于屏蔽交易的隐私专注Cosmos链"
+			},
+			"namada": {
+				"description": "具有资产无关屏蔽转账的多链隐私协议"
+			},
+			"frame_privacy": {
+				"description": "支持硬件钱包的隐私专注以太坊钱包"
+			},
+			"cake_wallet": {
+				"description": "原生支持Monero、比特币和隐私功能的多资产钱包"
+			},
+			"tornado_cash_classic": {
+				"description": "用于私有ETH交易的去中心化协议（已弃用）"
+			},
+			"zk_email": {
+				"description": "使用ZK证明在不透露内容的情况下证明邮件所有权"
+			},
+			"semaphore": {
+				"description": "用于匿名投票和信号的零知识协议"
+			},
+			"worldcoin_privacy": {
+				"description": "使用虹膜扫描的隐私保护身份证明"
+			},
+			"centrifuge": {
+				"description": "将发票和房地产引入链上的现实世界资产融资协议"
+			},
+			"maple_finance": {
+				"description": "具有信用承销的机构DeFi借贷"
+			},
+			"clearpool": {
+				"description": "用于无担保机构借贷的去中心化资本市场"
+			},
+			"blackrock_buidl": {
+				"description": "以太坊上的BlackRock代币化货币市场基金"
+			},
+			"franklin_benji": {
+				"description": "Franklin Templeton链上美国政府货币基金"
+			},
+			"backed_finance": {
+				"description": "区块链上的代币化证券和ETF"
+			},
+			"matrixdock": {
+				"description": "具有STBT稳定币的代币化国库券"
+			},
+			"openeden": {
+				"description": "具有实时NAV和24/7结算的代币化国库券"
+			},
+			"realt": {
+				"description": "具有分数所有权的代币化房地产投资"
+			},
+			"lofty": {
+				"description": "Algorand区块链上的分数房地产投资"
+			},
+			"propy": {
+				"description": "基于区块链的房地产交易和所有权"
+			},
+			"parcl_rwa": {
+				"description": "Solana上的合成房地产指数交易"
+			},
+			"pax_gold": {
+				"description": "每个PAXG代表一盎司黄金的黄金支持代币"
+			},
+			"tether_gold": {
+				"description": "Tether发行的具有实物黄金储备的黄金支持稳定币"
+			},
+			"cache_gold": {
+				"description": "以1:1存储在金库中的代币化黄金"
+			},
+			"rwa_xyz": {
+				"description": "代币化现实世界资产的分析仪表板"
+			},
+			"defillama_rwa": {
+				"description": "在DeFiLlama上追踪RWA协议的TVL和指标"
+			},
+			"securitize": {
+				"description": "证券代币发行和生命周期管理平台"
+			},
+			"tokeny": {
+				"description": "用于合规证券的企业代币化平台"
+			},
+			"polymesh": {
+				"description": "专为受监管证券代币构建的区块链"
+			},
+			"virtuals_protocol": {
+				"description": "Base上用于虚拟存在和游戏的AI代理发射台"
+			},
+			"ai16z": {
+				"description": "用于创建自主代理的AI DAO和Eliza框架"
+			},
+			"truth_terminal": {
+				"description": "独立获得加密财富的自主AI代理"
+			},
+			"autonolas": {
+				"description": "构建和运行自主AI代理服务的平台"
+			},
+			"flock_io": {
+				"description": "用于协作AI训练的联邦学习平台"
+			},
+			"render_network": {
+				"description": "用于AI和图形的去中心化GPU渲染网络"
+			},
+			"akash_network": {
+				"description": "具有GPU支持的去中心化云计算市场"
+			},
+			"io_net": {
+				"description": "聚合数据中心计算的去中心化GPU网络"
+			},
+			"bittensor": {
+				"description": "具有激励机器学习的去中心化AI网络"
+			},
+			"ritual": {
+				"description": "用于智能合约的AI协处理器基础设施"
+			},
+			"gensyn": {
+				"description": "具有验证的ML训练去中心化协议"
+			},
+			"together_ai": {
+				"description": "开源AI模型的快速推理API"
+			},
+			"fetch_ai": {
+				"description": "用于自动化和数据共享的自主经济代理"
+			},
+			"ocean_protocol": {
+				"description": "AI训练数据和计算的数据市场"
+			},
+			"singularitynet": {
+				"description": "AI服务的去中心化市场"
+			},
+			"masa": {
+				"description": "具有身份焦点的AI去中心化数据网络"
+			},
+			"grass": {
+				"description": "奖励带宽的去中心化数据抓取网络"
+			},
+			"altered_state_machine": {
+				"description": "具有进化能力的AI驱动NFT"
+			},
+			"alethea_ai": {
+				"description": "具有AI人格的智能NFT（iNFT）"
+			},
+			"midjourney_crypto": {
+				"description": "用于NFT创作的AI艺术生成工具"
+			},
+			"stability_ai": {
+				"description": "包括Stable Diffusion的开源AI模型"
+			},
+			"cookie_ai": {
+				"description": "AI代理追踪和分析平台"
+			},
+			"virtuals_terminal": {
+				"description": "在Base网络上启动和交易AI代理"
+			},
+			"defillama_ai": {
+				"description": "追踪AI专注加密协议和TVL"
+			},
+			"symbiotic": {
+				"description": "无许可和模块化的重质押协议"
+			},
+			"babylon": {
+				"description": "保护PoS网络的比特币质押协议"
+			},
+			"renzo_protocol": {
+				"description": "发行ezETH代币的流动性重质押协议"
+			},
+			"puffer_finance": {
+				"description": "具有反斜线技术的流动性重质押"
+			},
+			"kelp_dao": {
+				"description": "具有rsETH代币的多资产流动性重质押"
+			},
+			"swell_restaking": {
+				"description": "用于EigenLayer的rswETH流动性重质押"
+			},
+			"eigenpie": {
+				"description": "具有隔离LRT代币的Magpie流动性重质押"
+			},
+			"bedrock": {
+				"description": "具有uniETH代币的通用流动性重质押"
+			},
+			"stakestone": {
+				"description": "具有STONE代币的全链流动性重质押"
+			},
+			"inception": {
+				"description": "通过inETH进行即时解质押的流动性重质押"
+			},
+			"eigenda": {
+				"description": "用于rollup的EigenLayer数据可用性服务"
+			},
+			"lagrange": {
+				"description": "用于跨链证明的ZK协处理器AVS"
+			},
+			"espresso": {
+				"description": "用于rollup的共享排序AVS"
+			},
+			"hyperlane_avs": {
+				"description": "由重质押保护的跨链消息基础设施"
+			},
+			"omni_avs": {
+				"description": "以太坊rollup互操作性网络"
+			},
+			"witness_chain": {
+				"description": "用于rollup安全的尽职调查瞭望塔AVS"
+			},
+			"altlayer_avs": {
+				"description": "用于rollup的MACH快速最终性AVS"
+			},
+			"brevis": {
+				"description": "用于历史区块链数据的ZK协处理器"
+			},
+			"eigenlayer_app": {
+				"description": "官方EigenLayer质押和委托界面"
+			},
+			"dune_eigenlayer": {
+				"description": "EigenLayer指标的社区分析仪表板"
+			},
+			"defillama_restaking": {
+				"description": "追踪流动性重质押TVL和协议指标"
+			},
+			"rated_restaking": {
+				"description": "重质押协议的运营商性能评级"
+			},
+			"dydx_token": {
+				"description": "dYdX去中心化永续交易所的治理代币"
+			},
+			"cvx_token": {
+				"description": "Convex用于提升Curve收益的治理代币"
+			},
+			"fxs_token": {
+				"description": "Frax Share算法稳定币的治理代币"
+			},
+			"blur_token": {
+				"description": "Blur NFT市场治理和激励代币"
+			},
+			"ape_token": {
+				"description": "ApeCoin无聊猿生态系统的治理代币"
+			},
+			"rpl_token": {
+				"description": "Rocket Pool去中心化ETH质押的治理代币"
+			},
+			"morpho_token": {
+				"description": "Morpho借贷优化协议的治理代币"
+			},
+			"rdnt_token": {
+				"description": "Radiant Capital跨链借贷的治理代币"
+			},
+			"osmo_token": {
+				"description": "Osmosis Cosmos DEX中心的治理代币"
+			},
+			"jup_token": {
+				"description": "Jupiter Solana DEX聚合器的治理代币"
+			},
+			"ray_token": {
+				"description": "Raydium Solana AMM的治理代币"
+			},
+			"jto_token": {
+				"description": "Jito Solana MEV基础设施的治理代币"
+			},
+			"orca_token": {
+				"description": "Orca Solana集中流动性DEX的治理代币"
+			},
+			"stepn": {
+				"description": "用代币奖励运动活动的Move-to-earn健身应用"
+			},
+			"hero_of_mavia": {
+				"description": "具有NFT英雄和土地的基地建设策略游戏"
+			},
+			"night_crows": {
+				"description": "Wemade在WEMIX上具有代币经济的AAA MMORPG"
+			},
+			"mir4": {
+				"description": "具有DRACO代币挖矿机制的跨平台MMORPG"
+			},
+			"wildcard": {
+				"description": "具有卡牌策略的竞技场游戏"
+			},
+			"off_the_grid": {
+				"description": "具有NFT集成的AAA赛博朋克大逃杀"
+			},
+			"maple_story_universe": {
+				"description": "Nexon标志性MMORPG扩展到区块链游戏"
+			},
+			"nyan_heroes": {
+				"description": "Solana英雄射击游戏，以猫飞行员驾驶机甲为特色"
+			},
+			"aurory": {
+				"description": "Solana JRPG战术游戏，具有NFT生物"
+			},
+			"phantom_galaxies": {
+				"description": "在太空中设置的机甲动作RPG，具有NFT飞船"
+			},
+			"crypto_unicorns": {
+				"description": "Polygon上的独角兽繁殖和农场游戏"
+			},
+			"legends_of_venari": {
+				"description": "以太坊上的生物收集和探索游戏"
+			},
+			"blocklords": {
+				"description": "具有王朝建设的中世纪大战略游戏"
+			},
+			"planet_ix": {
+				"description": "Polygon上具有房地产的战略NFT游戏"
+			},
+			"sweat_economy": {
+				"description": "NEAR区块链上来自Sweatcoin的Move-to-earn应用"
+			},
+			"superior": {
+				"description": "Gala Games平台上的Roguelike合作射击游戏"
+			},
+			"champions_ascension": {
+				"description": "具有冠军NFT的大型多人动作RPG"
+			},
+			"binance_hot_wallet": {
+				"description": "BNB链操作的Binance交易所热钱包"
+			},
+			"pancakeswap_treasury": {
+				"description": "管理CAKE资金的PancakeSwap协议金库"
+			},
+			"venus_treasury": {
+				"description": "BNB链上的Venus借贷协议金库"
+			},
+			"base_bridge": {
+				"description": "持有桥接资产的官方Base L2桥接合约"
+			},
+			"aerodrome_treasury": {
+				"description": "管理Base流动性激励的Aerodrome DEX金库"
+			},
+			"polygon_ecosystem_fund": {
+				"description": "Polygon基金会生态系统发展基金"
+			},
+			"quickswap_treasury": {
+				"description": "Polygon网络上的QuickSwap DEX金库"
+			},
+			"avalanche_foundation": {
+				"description": "Avalanche基金会金库和生态系统基金"
+			},
+			"traderjoe_treasury": {
+				"description": "Avalanche上的Trader Joe DEX金库"
+			},
+			"solana_foundation": {
+				"description": "管理生态系统资助的Solana基金会金库"
+			},
+			"jupiter_treasury": {
+				"description": "Solana上的Jupiter聚合器金库"
+			},
+			"raydium_treasury": {
+				"description": "Solana上的Raydium AMM协议金库"
+			},
+			"ton_foundation": {
+				"description": "用于生态系统发展的TON基金会金库"
+			},
+			"sui_foundation": {
+				"description": "用于网络增长的Sui基金会金库"
+			},
+			"aptos_foundation": {
+				"description": "Aptos基金会金库和资助项目"
+			},
+			"cosmos_hub_pool": {
+				"description": "用于治理提案的Cosmos Hub社区池"
+			},
+			"cz_wallet": {
+				"description": "赵长鹏（CZ）个人和Binance相关钱包"
+			},
+			"grayscale_wallet": {
+				"description": "持有BTC和ETH的Grayscale机构基金钱包"
+			},
+			"blackrock_wallet": {
+				"description": "BlackRock iShares比特币ETF托管钱包"
+			},
+			"fidelity_wallet": {
+				"description": "Fidelity数字资产托管和ETF钱包"
+			},
+			"airdrop_pyth": {
+				"description": "Pyth Network预言机对DeFi协议用户的空投"
+			},
+			"airdrop_tnsr": {
+				"description": "Tensor NFT市场对活跃交易者的空投"
+			},
+			"airdrop_kmno": {
+				"description": "Kamino Finance Solana借贷空投"
+			},
+			"airdrop_parcl": {
+				"description": "Parcl Solana合成房地产空投"
+			},
+			"airdrop_wen": {
+				"description": "WEN meme代币对Jupiter用户的空投"
+			},
+			"airdrop_omni": {
+				"description": "Omni Network互操作性对重质押者的空投"
+			},
+			"airdrop_alt": {
+				"description": "AltLayer rollup即服务对生态用户的空投"
+			},
+			"airdrop_manta": {
+				"description": "Manta Pacific L2对桥接用户的空投"
+			},
+			"airdrop_dym": {
+				"description": "Dymension RollApp中心对Cosmos质押者的空投"
+			},
+			"airdrop_zetachain": {
+				"description": "ZetaChain全链对测试网参与者的空投"
+			},
+			"airdrop_ethfi": {
+				"description": "ether.fi流动性重质押对存款者的空投"
+			},
+			"airdrop_renzo": {
+				"description": "Renzo重质押空投（REZ）给ezETH持有者"
+			},
+			"airdrop_puffer": {
+				"description": "Puffer Finance对pufETH质押者的潜在空投"
+			},
+			"airdrop_kelp": {
+				"description": "Kelp DAO对rsETH持有者的潜在空投"
+			},
+			"airdrop_swell": {
+				"description": "Swell Network对swETH质押者的潜在空投"
 			}
 		},
 		"seo": {
