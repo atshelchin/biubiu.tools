@@ -1,0 +1,409 @@
+/**
+ * Social Tools - SocialFi, decentralized social, and content platforms
+ */
+import { Share2, MessageCircle, Orbit, Users, Newspaper, Podcast } from '@lucide/svelte';
+import type { ExternalTool } from '../../types';
+
+export const socialTools: ExternalTool[] = [
+	// ========== Social Protocols ==========
+	{
+		id: 'lens-protocol',
+		name: 'Lens Protocol',
+		descriptionKey: 'chain_tools.tools.lens_protocol.description',
+		url: 'https://lens.xyz',
+		icon: Share2,
+		category: 'social',
+		tags: ['social-graph', 'composable', 'polygon', 'decentralized'],
+		chains: ['Polygon'],
+		color: '#00501E'
+	},
+	{
+		id: 'cyberconnect',
+		name: 'CyberConnect',
+		descriptionKey: 'chain_tools.tools.cyberconnect.description',
+		url: 'https://cyber.co',
+		icon: Share2,
+		category: 'social',
+		tags: ['social-graph', 'l2', 'identity'],
+		chains: ['Ethereum', 'BSC', 'Polygon', 'Optimism'],
+		color: '#000000'
+	},
+	{
+		id: 'deso',
+		name: 'DeSo',
+		descriptionKey: 'chain_tools.tools.deso.description',
+		url: 'https://deso.com',
+		icon: Share2,
+		category: 'social',
+		tags: ['l1', 'social', 'decentralized', 'blockchain'],
+		chains: ['DeSo'],
+		color: '#0057FF'
+	},
+
+	// ========== Social Clients ==========
+	{
+		id: 'warpcast',
+		name: 'Warpcast',
+		descriptionKey: 'chain_tools.tools.warpcast.description',
+		url: 'https://warpcast.com',
+		icon: MessageCircle,
+		category: 'social',
+		tags: ['farcaster', 'client', 'social', 'mobile'],
+		chains: ['Optimism'],
+		color: '#8A63D2'
+	},
+	{
+		id: 'hey',
+		name: 'Hey',
+		descriptionKey: 'chain_tools.tools.hey.description',
+		url: 'https://hey.xyz',
+		icon: MessageCircle,
+		category: 'social',
+		tags: ['lens', 'social', 'decentralized', 'client'],
+		chains: ['Polygon'],
+		color: '#FB3A5D'
+	},
+	{
+		id: 'orb',
+		name: 'Orb',
+		descriptionKey: 'chain_tools.tools.orb.description',
+		url: 'https://orb.club',
+		icon: Orbit,
+		category: 'social',
+		tags: ['lens', 'mobile', 'social', 'communities'],
+		chains: ['Polygon'],
+		color: '#6366F1'
+	},
+	{
+		id: 'phaver',
+		name: 'Phaver',
+		descriptionKey: 'chain_tools.tools.phaver.description',
+		url: 'https://phaver.com',
+		icon: MessageCircle,
+		category: 'social',
+		tags: ['lens', 'farcaster', 'social', 'stake-to-post'],
+		chains: ['Polygon', 'Optimism'],
+		color: '#5D5FEF'
+	},
+	{
+		id: 'orb-app',
+		name: 'Orb',
+		descriptionKey: 'chain_tools.tools.orb_app.description',
+		url: 'https://orb.ac',
+		icon: MessageCircle,
+		category: 'social',
+		tags: ['lens', 'social', 'professional', 'web3'],
+		color: '#8B5CF6'
+	},
+	{
+		id: 'buttrfly',
+		name: 'Buttrfly',
+		descriptionKey: 'chain_tools.tools.buttrfly.description',
+		url: 'https://buttrfly.app',
+		icon: MessageCircle,
+		category: 'social',
+		tags: ['lens', 'social', 'aggregator', 'cross-platform'],
+		color: '#EC4899'
+	},
+	{
+		id: 'firefly-social',
+		name: 'Firefly',
+		descriptionKey: 'chain_tools.tools.firefly_social.description',
+		url: 'https://firefly.social',
+		icon: MessageCircle,
+		category: 'social',
+		tags: ['aggregator', 'lens', 'farcaster', 'twitter'],
+		color: '#8B5CF6'
+	},
+
+	// ========== SocialFi ==========
+	{
+		id: 'friend-tech',
+		name: 'Friend.tech',
+		descriptionKey: 'chain_tools.tools.friend_tech.description',
+		url: 'https://www.friend.tech',
+		icon: Users,
+		category: 'social',
+		tags: ['socialfi', 'keys', 'base', 'speculation'],
+		chains: ['Base'],
+		color: '#0052FF'
+	},
+	{
+		id: 'party-app',
+		name: 'Party',
+		descriptionKey: 'chain_tools.tools.party_app.description',
+		url: 'https://party.app',
+		icon: Users,
+		category: 'social',
+		tags: ['crowdfund', 'social', 'group-buying', 'nft'],
+		chains: ['Ethereum', 'Base'],
+		color: '#EC4899'
+	},
+	{
+		id: 'bello-community',
+		name: 'Bello',
+		descriptionKey: 'chain_tools.tools.bello_community.description',
+		url: 'https://bello.lol',
+		icon: Users,
+		category: 'social',
+		tags: ['analytics', 'community', 'insights', 'collectors'],
+		color: '#3B82F6'
+	},
+
+	// ========== Publishing & Writing ==========
+	{
+		id: 'mirror',
+		name: 'Mirror',
+		descriptionKey: 'chain_tools.tools.mirror.description',
+		url: 'https://mirror.xyz',
+		icon: Newspaper,
+		category: 'social',
+		tags: ['writing', 'publishing', 'nft', 'crowdfunding'],
+		chains: ['Ethereum', 'Optimism'],
+		color: '#007AFF'
+	},
+	{
+		id: 'paragraph',
+		name: 'Paragraph',
+		descriptionKey: 'chain_tools.tools.paragraph.description',
+		url: 'https://paragraph.xyz',
+		icon: Newspaper,
+		category: 'social',
+		tags: ['newsletter', 'writing', 'web3', 'publishing'],
+		chains: ['Ethereum', 'Base'],
+		color: '#000000'
+	},
+	{
+		id: 'kiwi-news',
+		name: 'Kiwi News',
+		descriptionKey: 'chain_tools.tools.kiwi_news.description',
+		url: 'https://news.kiwistand.com',
+		icon: Newspaper,
+		category: 'social',
+		tags: ['news', 'curation', 'community', 'web3'],
+		color: '#22C55E'
+	},
+
+	// ========== Video & Streaming ==========
+	{
+		id: 'drakula',
+		name: 'Drakula',
+		descriptionKey: 'chain_tools.tools.drakula.description',
+		url: 'https://drakula.app',
+		icon: Podcast,
+		category: 'social',
+		tags: ['video', 'short-form', 'creator', 'farcaster'],
+		chains: ['Base'],
+		color: '#FF0000'
+	},
+	{
+		id: 'tape',
+		name: 'Tape',
+		descriptionKey: 'chain_tools.tools.tape.description',
+		url: 'https://tape.xyz',
+		icon: Podcast,
+		category: 'social',
+		tags: ['video', 'lens', 'decentralized', 'creator'],
+		color: '#000000'
+	},
+	{
+		id: 'unlonely',
+		name: 'Unlonely',
+		descriptionKey: 'chain_tools.tools.unlonely.description',
+		url: 'https://www.unlonely.app',
+		icon: Podcast,
+		category: 'social',
+		tags: ['streaming', 'live', 'web3', 'community'],
+		color: '#15F5BA'
+	},
+
+	// ========== Social Infrastructure ==========
+	{
+		id: 'link3',
+		name: 'Link3',
+		descriptionKey: 'chain_tools.tools.link3.description',
+		url: 'https://link3.to',
+		icon: Share2,
+		category: 'social',
+		tags: ['events', 'credentials', 'social', 'cyberconnect'],
+		color: '#10B981'
+	},
+	{
+		id: 'debank-hi',
+		name: 'DeBank Hi',
+		descriptionKey: 'chain_tools.tools.debank_hi.description',
+		url: 'https://debank.com/hi',
+		icon: MessageCircle,
+		category: 'social',
+		tags: ['messaging', 'wallet-based', 'social', 'defi'],
+		color: '#FE815F'
+	},
+	{
+		id: 'orbis-protocol',
+		name: 'Orbis',
+		descriptionKey: 'chain_tools.tools.orbis_protocol.description',
+		url: 'https://orbis.club',
+		icon: MessageCircle,
+		category: 'social',
+		tags: ['social', 'ceramic', 'decentralized', 'sdk'],
+		color: '#4F46E5'
+	},
+	{
+		id: 'cyberconnect-link',
+		name: 'CyberConnect',
+		descriptionKey: 'chain_tools.tools.cyberconnect_link.description',
+		url: 'https://link3.to',
+		icon: Share2,
+		category: 'social',
+		tags: ['social-graph', 'profiles', 'web3-social', 'events'],
+		color: '#10B981'
+	},
+	{
+		id: 'context-app',
+		name: 'Context',
+		descriptionKey: 'chain_tools.tools.context_app.description',
+		url: 'https://context.app',
+		icon: MessageCircle,
+		category: 'social',
+		tags: ['nft', 'social', 'discovery', 'following'],
+		color: '#000000'
+	},
+	{
+		id: 'yup-social',
+		name: 'Yup',
+		descriptionKey: 'chain_tools.tools.yup_social.description',
+		url: 'https://yup.io',
+		icon: MessageCircle,
+		category: 'social',
+		tags: ['curation', 'ratings', 'social', 'rewards'],
+		color: '#00D395'
+	},
+	{
+		id: 'zora-social',
+		name: 'Zora Social',
+		descriptionKey: 'chain_tools.tools.zora_social.description',
+		url: 'https://zora.co',
+		icon: MessageCircle,
+		category: 'social',
+		tags: ['creator', 'minting', 'social', 'nft'],
+		chains: ['Zora', 'Base', 'Ethereum'],
+		color: '#000000'
+	},
+	{
+		id: 'interface-social',
+		name: 'Interface',
+		descriptionKey: 'chain_tools.tools.interface_social.description',
+		url: 'https://interface.social',
+		icon: MessageCircle,
+		category: 'social',
+		tags: ['wallet-chat', 'social', 'dms', 'crypto'],
+		color: '#6366F1'
+	},
+
+	// ========== Additional Social Tools ==========
+	{
+		id: 'farcaster',
+		name: 'Farcaster',
+		descriptionKey: 'chain_tools.tools.farcaster.description',
+		url: 'https://farcaster.xyz',
+		icon: Share2,
+		category: 'social',
+		tags: ['protocol', 'social', 'decentralized', 'open'],
+		chains: ['Optimism'],
+		color: '#8A63D2',
+		isFeatured: true
+	},
+	{
+		id: 'xmtp',
+		name: 'XMTP',
+		descriptionKey: 'chain_tools.tools.xmtp.description',
+		url: 'https://xmtp.org',
+		icon: MessageCircle,
+		category: 'social',
+		tags: ['messaging', 'protocol', 'e2ee', 'wallet'],
+		color: '#FC4F37'
+	},
+	{
+		id: 'push-protocol',
+		name: 'Push Protocol',
+		descriptionKey: 'chain_tools.tools.push_protocol.description',
+		url: 'https://push.org',
+		icon: MessageCircle,
+		category: 'social',
+		tags: ['notifications', 'messaging', 'web3', 'protocol'],
+		chains: ['Ethereum', 'Polygon'],
+		color: '#DD44B9'
+	},
+	{
+		id: 'supercast',
+		name: 'Supercast',
+		descriptionKey: 'chain_tools.tools.supercast.description',
+		url: 'https://supercast.xyz',
+		icon: MessageCircle,
+		category: 'social',
+		tags: ['farcaster', 'client', 'premium', 'power-user'],
+		chains: ['Optimism'],
+		color: '#000000'
+	},
+	{
+		id: 'neynar',
+		name: 'Neynar',
+		descriptionKey: 'chain_tools.tools.neynar.description',
+		url: 'https://neynar.com',
+		icon: Share2,
+		category: 'social',
+		tags: ['farcaster', 'api', 'infrastructure', 'developer'],
+		color: '#7C65C1'
+	},
+	{
+		id: 'airstack',
+		name: 'Airstack',
+		descriptionKey: 'chain_tools.tools.airstack.description',
+		url: 'https://airstack.xyz',
+		icon: Share2,
+		category: 'social',
+		tags: ['api', 'social-graph', 'data', 'farcaster'],
+		color: '#0D76FC'
+	},
+	{
+		id: 'pinata-farcaster',
+		name: 'Pinata Farcaster Hub',
+		descriptionKey: 'chain_tools.tools.pinata_farcaster.description',
+		url: 'https://pinata.cloud/farcaster',
+		icon: Share2,
+		category: 'social',
+		tags: ['farcaster', 'hub', 'infrastructure', 'frames'],
+		color: '#6D3DF3'
+	},
+	{
+		id: 'privy-social',
+		name: 'Privy',
+		descriptionKey: 'chain_tools.tools.privy_social.description',
+		url: 'https://privy.io',
+		icon: Users,
+		category: 'social',
+		tags: ['auth', 'embedded-wallets', 'onboarding', 'social-login'],
+		color: '#69E5C2'
+	},
+	{
+		id: 'huddle01',
+		name: 'Huddle01',
+		descriptionKey: 'chain_tools.tools.huddle01.description',
+		url: 'https://huddle01.com',
+		icon: Podcast,
+		category: 'social',
+		tags: ['video', 'meetings', 'decentralized', 'web3'],
+		color: '#246BFD'
+	},
+	{
+		id: 'moxie',
+		name: 'Moxie',
+		descriptionKey: 'chain_tools.tools.moxie.description',
+		url: 'https://moxie.xyz',
+		icon: Users,
+		category: 'social',
+		tags: ['farcaster', 'fan-tokens', 'social-economy', 'creator'],
+		chains: ['Base'],
+		color: '#8B5CF6'
+	}
+];

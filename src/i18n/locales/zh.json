@@ -1462,7 +1462,9 @@
 			"restaking": "再质押",
 			"yield": "收益聚合",
 			"privacy": "隐私",
-			"data": "数据索引"
+			"data": "数据索引",
+			"funding": "融资平台",
+			"news": "资讯媒体"
 		},
 		"tools": {
 			"uniswap": {
@@ -1613,7 +1615,7 @@
 				"description": "加密协议财务指标分析"
 			},
 			"ultrasound": {
-				"description": "ETH 供应量和燃烧追踪"
+				"description": "ETH供应和销毁追踪"
 			},
 			"aragon": {
 				"description": "轻松构建和管理 DAO"
@@ -2031,9 +2033,6 @@
 			},
 			"dappradar": {
 				"description": "DApp排名和追踪"
-			},
-			"ultrasound": {
-				"description": "ETH供应和销毁追踪"
 			},
 			"ethburned": {
 				"description": "以太坊销毁统计"
@@ -3051,6 +3050,867 @@
 			},
 			"sherlock": {
 				"description": "带漏洞保障的审计竞赛"
+			},
+			"cookie3": {
+				"description": "Cookie3 - Blockchain analytics"
+			},
+			"chainbeat": {
+				"description": "ChainBeat - Blockchain analytics"
+			},
+			"bitquery": {
+				"description": "Bitquery - Blockchain analytics"
+			},
+			"whale_alert": {
+				"description": "Whale Alert - Blockchain analytics"
+			},
+			"intotheblock": {
+				"description": "IntoTheBlock - Blockchain analytics"
+			},
+			"laevitas": {
+				"description": "Laevitas - Blockchain analytics"
+			},
+			"kaiko": {
+				"description": "Kaiko - Blockchain analytics"
+			},
+			"amberdata": {
+				"description": "Amberdata - Blockchain analytics"
+			},
+			"blockpour": {
+				"description": "Blockpour - Blockchain analytics"
+			},
+			"debridge_dln": {
+				"description": "deBridge DLN - Cross-chain bridge"
+			},
+			"meson_finance": {
+				"description": "Meson - Cross-chain bridge"
+			},
+			"layerswap": {
+				"description": "Layerswap - Cross-chain bridge"
+			},
+			"router_protocol": {
+				"description": "Router Protocol - Cross-chain bridge"
+			},
+			"nitro_bridge": {
+				"description": "Nitro Bridge - Cross-chain bridge"
+			},
+			"portal_bridge_wormhole": {
+				"description": "Portal Bridge - Cross-chain bridge"
+			},
+			"celer_im": {
+				"description": "Celer IM - Cross-chain bridge"
+			},
+			"multichain_anycall": {
+				"description": "Multichain AnyCall - Cross-chain bridge"
+			},
+			"hyperlane_bridge": {
+				"description": "Hyperlane - Cross-chain bridge"
+			},
+			"connext_amarok": {
+				"description": "Connext Amarok - Cross-chain bridge"
+			},
+			"realms_solana": {
+				"description": "Realms - DAO governance tool"
+			},
+			"squads_protocol": {
+				"description": "Squads - DAO governance tool"
+			},
+			"tribeca_dao": {
+				"description": "Tribeca - DAO governance tool"
+			},
+			"zodiac_gnosis": {
+				"description": "Zodiac - DAO governance tool"
+			},
+			"hedgey_governance": {
+				"description": "Hedgey Governance - DAO governance tool"
+			},
+			"daolens": {
+				"description": "DAOLens - DAO governance tool"
+			},
+			"senate_governance": {
+				"description": "Senate - DAO governance tool"
+			},
+			"kleros": {
+				"description": "Kleros - DAO governance tool"
+			},
+			"prop_house": {
+				"description": "Prop House - DAO governance tool"
+			},
+			"gardens_dao": {
+				"description": "Gardens - DAO governance tool"
+			},
+			"dework": {
+				"description": "Dework - DAO governance tool"
+			},
+			"clarity_dao": {
+				"description": "Clarity - DAO governance tool"
+			},
+			"agora_governance": {
+				"description": "Agora - DAO governance tool"
+			},
+			"safe_dao": {
+				"description": "Safe - DAO governance tool"
+			},
+			"orca_pod": {
+				"description": "Orca Protocol - DAO governance tool"
+			},
+			"layer3_bounties": {
+				"description": "Layer3 Bounties - DAO governance tool"
+			},
+			"snapshot_x": {
+				"description": "Snapshot X - DAO governance tool"
+			},
+			"decent_dao": {
+				"description": "Decent - DAO governance tool"
+			},
+			"otterspace_badges": {
+				"description": "Otterspace - DAO governance tool"
+			},
+			"kamino_finance": {
+				"description": "Kamino Finance - DeFi protocol"
+			},
+			"marginfi": {
+				"description": "marginfi - DeFi protocol"
+			},
+			"drift_protocol": {
+				"description": "Drift Protocol - DeFi protocol"
+			},
+			"ondo_finance": {
+				"description": "Ondo Finance - DeFi protocol"
+			},
+			"morpho_blue": {
+				"description": "Morpho Blue - DeFi protocol"
+			},
+			"gearbox_protocol": {
+				"description": "Gearbox Protocol - DeFi protocol"
+			},
+			"extra_finance": {
+				"description": "Extra Finance - DeFi protocol"
+			},
+			"fluid_protocol": {
+				"description": "Fluid - DeFi protocol"
+			},
+			"reserve_protocol": {
+				"description": "Reserve Protocol - DeFi protocol"
+			},
+			"term_finance": {
+				"description": "Term Finance - DeFi protocol"
+			},
+			"ethereum_signature_db": {
+				"description": "4byte.directory - Developer tool"
+			},
+			"ethers_js": {
+				"description": "Ethers.js - Developer tool"
+			},
+			"solidity_lang": {
+				"description": "Solidity Docs - Developer tool"
+			},
+			"moralis": {
+				"description": "Moralis - Developer tool"
+			},
+			"anchor_lang": {
+				"description": "Anchor - Developer tool"
+			},
+			"move_lang": {
+				"description": "Move Language - Developer tool"
+			},
+			"cairo_lang": {
+				"description": "Cairo - Developer tool"
+			},
+			"noir_lang": {
+				"description": "Noir - Developer tool"
+			},
+			"circom": {
+				"description": "Circom - Developer tool"
+			},
+			"huff_lang": {
+				"description": "Huff - Developer tool"
+			},
+			"vyper_lang": {
+				"description": "Vyper - Developer tool"
+			},
+			"fe_lang": {
+				"description": "Fe - Developer tool"
+			},
+			"protostar": {
+				"description": "Protostar - Developer tool"
+			},
+			"starkli": {
+				"description": "Starkli - Developer tool"
+			},
+			"solscan": {
+				"description": "Solscan - Block explorer"
+			},
+			"mintscan": {
+				"description": "Mintscan - Block explorer"
+			},
+			"nearblocks": {
+				"description": "NearBlocks - Block explorer"
+			},
+			"blockchair": {
+				"description": "Blockchair - Block explorer"
+			},
+			"avascan": {
+				"description": "AvaScan - Block explorer"
+			},
+			"tonscan": {
+				"description": "TONScan - Block explorer"
+			},
+			"tronscan": {
+				"description": "TronScan - Block explorer"
+			},
+			"cardanoscan": {
+				"description": "Cardanoscan - Block explorer"
+			},
+			"viewblock": {
+				"description": "ViewBlock - Block explorer"
+			},
+			"suiscan": {
+				"description": "SuiScan - Block explorer"
+			},
+			"a16z_crypto": {
+				"description": "a16z Crypto - Web3 investment and funding platform"
+			},
+			"paradigm": {
+				"description": "Paradigm - Web3 investment and funding platform"
+			},
+			"polychain": {
+				"description": "Polychain Capital - Web3 investment and funding platform"
+			},
+			"pantera": {
+				"description": "Pantera Capital - Web3 investment and funding platform"
+			},
+			"multicoin": {
+				"description": "Multicoin Capital - Web3 investment and funding platform"
+			},
+			"dragonfly": {
+				"description": "Dragonfly - Web3 investment and funding platform"
+			},
+			"variant": {
+				"description": "Variant - Web3 investment and funding platform"
+			},
+			"framework_ventures": {
+				"description": "Framework Ventures - Web3 investment and funding platform"
+			},
+			"electric_capital": {
+				"description": "Electric Capital - Web3 investment and funding platform"
+			},
+			"placeholder": {
+				"description": "Placeholder - Web3 investment and funding platform"
+			},
+			"angellist_crypto": {
+				"description": "AngelList Crypto - Web3 investment and funding platform"
+			},
+			"republic_crypto": {
+				"description": "Republic Crypto - Web3 investment and funding platform"
+			},
+			"coinlist": {
+				"description": "CoinList - Web3 investment and funding platform"
+			},
+			"echo_xyz": {
+				"description": "Echo - Web3 investment and funding platform"
+			},
+			"syndicate_dao": {
+				"description": "Syndicate - Web3 investment and funding platform"
+			},
+			"crunchbase_crypto": {
+				"description": "Crunchbase - Web3 investment and funding platform"
+			},
+			"pitchbook_crypto": {
+				"description": "PitchBook - Web3 investment and funding platform"
+			},
+			"dealroom_web3": {
+				"description": "Dealroom - Web3 investment and funding platform"
+			},
+			"gitcoin_grants": {
+				"description": "Gitcoin Grants - Web3 investment and funding platform"
+			},
+			"optimism_rpgf": {
+				"description": "Optimism RetroPGF - Web3 investment and funding platform"
+			},
+			"arbitrum_grants": {
+				"description": "Arbitrum Grants - Web3 investment and funding platform"
+			},
+			"ethereum_foundation": {
+				"description": "Ethereum Foundation - Web3 investment and funding platform"
+			},
+			"polygon_grants": {
+				"description": "Polygon Grants - Web3 investment and funding platform"
+			},
+			"solana_grants": {
+				"description": "Solana Grants - Web3 investment and funding platform"
+			},
+			"uniswap_grants": {
+				"description": "Uniswap Grants - Web3 investment and funding platform"
+			},
+			"aave_grants": {
+				"description": "Aave Grants - Web3 investment and funding platform"
+			},
+			"compound_grants": {
+				"description": "Compound Grants - Web3 investment and funding platform"
+			},
+			"alliance_dao": {
+				"description": "Alliance - Web3 investment and funding platform"
+			},
+			"outlier_ventures": {
+				"description": "Outlier Ventures - Web3 investment and funding platform"
+			},
+			"longhash_ventures": {
+				"description": "LongHash Ventures - Web3 investment and funding platform"
+			},
+			"kernel": {
+				"description": "Kernel - Web3 investment and funding platform"
+			},
+			"encode_club": {
+				"description": "Encode Club - Web3 investment and funding platform"
+			},
+			"coinbase_ventures": {
+				"description": "Coinbase Ventures - Web3 investment and funding platform"
+			},
+			"binance_labs": {
+				"description": "Binance Labs - Web3 investment and funding platform"
+			},
+			"galaxy_digital": {
+				"description": "Galaxy Digital - Web3 investment and funding platform"
+			},
+			"hashkey_capital": {
+				"description": "HashKey Capital - Web3 investment and funding platform"
+			},
+			"spartan_group": {
+				"description": "Spartan Group - Web3 investment and funding platform"
+			},
+			"portal_gaming": {
+				"description": "Portal - Web3 gaming platform"
+			},
+			"ronin_gaming": {
+				"description": "Ronin - Web3 gaming platform"
+			},
+			"prime_gaming": {
+				"description": "Prime Gaming - Web3 gaming platform"
+			},
+			"sui_gaming": {
+				"description": "Sui Gaming - Web3 gaming platform"
+			},
+			"fractal_gaming": {
+				"description": "Fractal - Web3 gaming platform"
+			},
+			"playnance": {
+				"description": "Playnance - Web3 gaming platform"
+			},
+			"myria_gaming": {
+				"description": "Myria - Web3 gaming platform"
+			},
+			"oasys_gaming": {
+				"description": "Oasys - Web3 gaming platform"
+			},
+			"xborg_gaming": {
+				"description": "XBorg - Web3 gaming platform"
+			},
+			"beam_gaming": {
+				"description": "Beam - Web3 gaming platform"
+			},
+			"gala_games": {
+				"description": "Gala Games - Web3 gaming platform"
+			},
+			"sandbox": {
+				"description": "The Sandbox - Web3 gaming platform"
+			},
+			"decentraland": {
+				"description": "Decentraland - Web3 gaming platform"
+			},
+			"axie_infinity": {
+				"description": "Axie Infinity - Web3 gaming platform"
+			},
+			"gods_unchained": {
+				"description": "Gods Unchained - Web3 gaming platform"
+			},
+			"bigtime": {
+				"description": "Big Time - Web3 gaming platform"
+			},
+			"guild_of_guardians": {
+				"description": "Guild of Guardians - Web3 gaming platform"
+			},
+			"ember_sword": {
+				"description": "Ember Sword - Web3 gaming platform"
+			},
+			"star_atlas": {
+				"description": "Star Atlas - Web3 gaming platform"
+			},
+			"splinterlands": {
+				"description": "Splinterlands - Web3 gaming platform"
+			},
+			"galxe_passport": {
+				"description": "Galxe Passport - Identity and credentials"
+			},
+			"polygon_id": {
+				"description": "Polygon ID - Identity and credentials"
+			},
+			"sismo_protocol": {
+				"description": "Sismo - Identity and credentials"
+			},
+			"clique_protocol": {
+				"description": "Clique - Identity and credentials"
+			},
+			"masa_protocol": {
+				"description": "Masa - Identity and credentials"
+			},
+			"reclaim_protocol": {
+				"description": "Reclaim Protocol - Identity and credentials"
+			},
+			"humanity_protocol": {
+				"description": "Humanity Protocol - Identity and credentials"
+			},
+			"rarimo": {
+				"description": "Rarimo - Identity and credentials"
+			},
+			"spruce_id": {
+				"description": "SpruceID - Identity and credentials"
+			},
+			"verax": {
+				"description": "Verax - Identity and credentials"
+			},
+			"bns": {
+				"description": "BNS (Base Name Service) - Identity and credentials"
+			},
+			"linea_name_service": {
+				"description": "Linea Name Service - Identity and credentials"
+			},
+			"bonfida_sns": {
+				"description": "Bonfida (SNS) - Identity and credentials"
+			},
+			"eas": {
+				"description": "EAS (Ethereum Attestation Service) - Identity and credentials"
+			},
+			"zkpass": {
+				"description": "zkPass - Identity and credentials"
+			},
+			"clr_fund": {
+				"description": "clr.fund - Identity and credentials"
+			},
+			"privado_id": {
+				"description": "Privado ID - Identity and credentials"
+			},
+			"guild_xyz": {
+				"description": "Guild.xyz - Identity and credentials"
+			},
+			"brightid": {
+				"description": "BrightID - Identity and credentials"
+			},
+			"nomis": {
+				"description": "Nomis - Identity and credentials"
+			},
+			"helius_rpc": {
+				"description": "Helius - Infrastructure provider"
+			},
+			"triton_rpc": {
+				"description": "Triton - Infrastructure provider"
+			},
+			"syndica_rpc": {
+				"description": "Syndica - Infrastructure provider"
+			},
+			"lava_network": {
+				"description": "Lava Network - Infrastructure provider"
+			},
+			"erpc_network": {
+				"description": "eRPC - Infrastructure provider"
+			},
+			"thirdweb_rpc": {
+				"description": "thirdweb RPC - Infrastructure provider"
+			},
+			"tatum_rpc": {
+				"description": "Tatum - Infrastructure provider"
+			},
+			"chainstack_rpc": {
+				"description": "Chainstack - Infrastructure provider"
+			},
+			"blockpi": {
+				"description": "BlockPI - Infrastructure provider"
+			},
+			"nodereal": {
+				"description": "NodeReal - Infrastructure provider"
+			},
+			"taiko_l2": {
+				"description": "Taiko - Layer 2 scaling solution"
+			},
+			"megaeth_l2": {
+				"description": "MegaETH - Layer 2 scaling solution"
+			},
+			"eclipse_l2": {
+				"description": "Eclipse - Layer 2 scaling solution"
+			},
+			"fuel_l2": {
+				"description": "Fuel - Layer 2 scaling solution"
+			},
+			"kinto_l2": {
+				"description": "Kinto - Layer 2 scaling solution"
+			},
+			"morph_l2": {
+				"description": "Morph - Layer 2 scaling solution"
+			},
+			"bob_l2": {
+				"description": "BOB - Layer 2 scaling solution"
+			},
+			"metal_l2": {
+				"description": "Metal L2 - Layer 2 scaling solution"
+			},
+			"cyber_l2": {
+				"description": "Cyber - Layer 2 scaling solution"
+			},
+			"fraxtal_l2": {
+				"description": "Fraxtal - Layer 2 scaling solution"
+			},
+			"zora_l2": {
+				"description": "Zora - Layer 2 scaling solution"
+			},
+			"redstone_l2": {
+				"description": "Redstone - Layer 2 scaling solution"
+			},
+			"mint_l2": {
+				"description": "Mint - Layer 2 scaling solution"
+			},
+			"ancient8_l2": {
+				"description": "Ancient8 - Layer 2 scaling solution"
+			},
+			"degen_l3": {
+				"description": "Degen Chain - Layer 2 scaling solution"
+			},
+			"superchain": {
+				"description": "Superchain - Layer 2 scaling solution"
+			},
+			"world_chain": {
+				"description": "World Chain - Layer 2 scaling solution"
+			},
+			"lisk_l2": {
+				"description": "Lisk - Layer 2 scaling solution"
+			},
+			"ink_l2": {
+				"description": "Ink - Layer 2 scaling solution"
+			},
+			"ape_terminal": {
+				"description": "Ape Terminal - Token launchpad"
+			},
+			"poolside_fi": {
+				"description": "Poolside - Token launchpad"
+			},
+			"echo_launchpad": {
+				"description": "Echo - Token launchpad"
+			},
+			"bonsaidao_launchpad": {
+				"description": "BonsaiDAO - Token launchpad"
+			},
+			"axis_finance": {
+				"description": "Axis Finance - Token launchpad"
+			},
+			"surge_launchpad": {
+				"description": "Surge - Token launchpad"
+			},
+			"blastoff_launchpad": {
+				"description": "Blastoff - Token launchpad"
+			},
+			"daomaker_launchpad": {
+				"description": "DAO Maker Launchpad - Token launchpad"
+			},
+			"seedify_launchpad": {
+				"description": "Seedify Launchpad - Token launchpad"
+			},
+			"coinstarter": {
+				"description": "CoinStarter - Token launchpad"
+			},
+			"theblock": {
+				"description": "The Block - Crypto news and research"
+			},
+			"coindesk": {
+				"description": "CoinDesk - Crypto news and research"
+			},
+			"cointelegraph": {
+				"description": "Cointelegraph - Crypto news and research"
+			},
+			"decrypt": {
+				"description": "Decrypt - Crypto news and research"
+			},
+			"blockworks": {
+				"description": "Blockworks - Crypto news and research"
+			},
+			"dlnews": {
+				"description": "DL News - Crypto news and research"
+			},
+			"rootdata": {
+				"description": "RootData - Crypto news and research"
+			},
+			"cryptorank": {
+				"description": "CryptoRank - Crypto news and research"
+			},
+			"dove_metrics": {
+				"description": "Dove Metrics - Crypto news and research"
+			},
+			"crypto_fundraising": {
+				"description": "Crypto Fundraising - Crypto news and research"
+			},
+			"bankless": {
+				"description": "Bankless - Crypto news and research"
+			},
+			"defiant": {
+				"description": "The Defiant - Crypto news and research"
+			},
+			"week_in_ethereum": {
+				"description": "Week in Ethereum - Crypto news and research"
+			},
+			"rekt_news": {
+				"description": "Rekt - Crypto news and research"
+			},
+			"milk_road": {
+				"description": "Milk Road - Crypto news and research"
+			},
+			"daily_gwei": {
+				"description": "The Daily Gwei - Crypto news and research"
+			},
+			"unchained_podcast": {
+				"description": "Unchained - Crypto news and research"
+			},
+			"epicenter": {
+				"description": "Epicenter - Crypto news and research"
+			},
+			"zero_knowledge": {
+				"description": "Zero Knowledge - Crypto news and research"
+			},
+			"bell_curve": {
+				"description": "Bell Curve - Crypto news and research"
+			},
+			"delphi_digital": {
+				"description": "Delphi Digital - Crypto news and research"
+			},
+			"galaxy_research": {
+				"description": "Galaxy Research - Crypto news and research"
+			},
+			"nansen_research": {
+				"description": "Nansen Research - Crypto news and research"
+			},
+			"glassnode_insights": {
+				"description": "Glassnode Insights - Crypto news and research"
+			},
+			"crypto_panic": {
+				"description": "CryptoPanic - Crypto news and research"
+			},
+			"crypto_slate": {
+				"description": "CryptoSlate - Crypto news and research"
+			},
+			"bitcoinist": {
+				"description": "Bitcoinist - Crypto news and research"
+			},
+			"beincrypto": {
+				"description": "BeInCrypto - Crypto news and research"
+			},
+			"cryptobriefing": {
+				"description": "Crypto Briefing - Crypto news and research"
+			},
+			"foresight_news": {
+				"description": "Foresight News - Crypto news and research"
+			},
+			"odaily": {
+				"description": "Odaily - Crypto news and research"
+			},
+			"panews": {
+				"description": "PANews - Crypto news and research"
+			},
+			"techflow": {
+				"description": "TechFlow - Crypto news and research"
+			},
+			"wu_blockchain": {
+				"description": "Wu Blockchain - Crypto news and research"
+			},
+			"unlockd": {
+				"description": "Unlockd - NFT platform"
+			},
+			"ordinals_market": {
+				"description": "Ordinals Market - NFT platform"
+			},
+			"magic_eden_ordinals": {
+				"description": "Magic Eden Ordinals - NFT platform"
+			},
+			"exchange_art": {
+				"description": "Exchange Art - NFT platform"
+			},
+			"formfunction": {
+				"description": "Formfunction - NFT platform"
+			},
+			"jpg_store": {
+				"description": "JPG Store - NFT platform"
+			},
+			"oncyber": {
+				"description": "Oncyber - NFT platform"
+			},
+			"nft_trader": {
+				"description": "NFT Trader - NFT platform"
+			},
+			"snag_solutions": {
+				"description": "Snag Solutions - NFT platform"
+			},
+			"icy_marketplace": {
+				"description": "Icy.tools Marketplace - NFT platform"
+			},
+			"poko_pay": {
+				"description": "Poko - Crypto payment solution"
+			},
+			"coinbase_commerce": {
+				"description": "Coinbase Commerce - Crypto payment solution"
+			},
+			"nowpayments": {
+				"description": "NOWPayments - Crypto payment solution"
+			},
+			"sphere_pay": {
+				"description": "Sphere - Crypto payment solution"
+			},
+			"helio_pay": {
+				"description": "Helio - Crypto payment solution"
+			},
+			"zebec_pay": {
+				"description": "Zebec - Crypto payment solution"
+			},
+			"mean_finance": {
+				"description": "Mean Finance - Crypto payment solution"
+			},
+			"utila_pay": {
+				"description": "Utila - Crypto payment solution"
+			},
+			"monerium": {
+				"description": "Monerium - Crypto payment solution"
+			},
+			"wyre": {
+				"description": "Wyre - Crypto payment solution"
+			},
+			"banxa": {
+				"description": "Banxa - Crypto payment solution"
+			},
+			"simplex": {
+				"description": "Simplex - Crypto payment solution"
+			},
+			"sardine": {
+				"description": "Sardine - Crypto payment solution"
+			},
+			"coinflow": {
+				"description": "Coinflow - Crypto payment solution"
+			},
+			"slash_fi": {
+				"description": "Slash - Crypto payment solution"
+			},
+			"alchemy_pay": {
+				"description": "Alchemy Pay - Crypto payment solution"
+			},
+			"llamapay": {
+				"description": "LlamaPay - Crypto payment solution"
+			},
+			"parcel": {
+				"description": "Parcel - Crypto payment solution"
+			},
+			"chainsecurity": {
+				"description": "ChainSecurity - Security tool"
+			},
+			"trail_of_bits": {
+				"description": "Trail of Bits - Security tool"
+			},
+			"openzeppelin_defender": {
+				"description": "OpenZeppelin Defender - Security tool"
+			},
+			"halborn": {
+				"description": "Halborn - Security tool"
+			},
+			"zellic": {
+				"description": "Zellic - Security tool"
+			},
+			"veridise": {
+				"description": "Veridise - Security tool"
+			},
+			"pessimistic": {
+				"description": "Pessimistic - Security tool"
+			},
+			"cyfrin": {
+				"description": "Cyfrin - Security tool"
+			},
+			"guardian_audits": {
+				"description": "Guardian Audits - Security tool"
+			},
+			"yaudit": {
+				"description": "yAudit - Security tool"
+			},
+			"firefly_social": {
+				"description": "Firefly - Decentralized social platform"
+			},
+			"party_app": {
+				"description": "Party - Decentralized social platform"
+			},
+			"bello_community": {
+				"description": "Bello - Decentralized social platform"
+			},
+			"debank_hi": {
+				"description": "DeBank Hi - Decentralized social platform"
+			},
+			"orbis_protocol": {
+				"description": "Orbis - Decentralized social platform"
+			},
+			"cyberconnect_link": {
+				"description": "CyberConnect - Decentralized social platform"
+			},
+			"context_app": {
+				"description": "Context - Decentralized social platform"
+			},
+			"yup_social": {
+				"description": "Yup - Decentralized social platform"
+			},
+			"zora_social": {
+				"description": "Zora Social - Decentralized social platform"
+			},
+			"interface_social": {
+				"description": "Interface - Decentralized social platform"
+			},
+			"supercast": {
+				"description": "Supercast - Decentralized social platform"
+			},
+			"neynar": {
+				"description": "Neynar - Decentralized social platform"
+			},
+			"airstack": {
+				"description": "Airstack - Decentralized social platform"
+			},
+			"pinata_farcaster": {
+				"description": "Pinata Farcaster Hub - Decentralized social platform"
+			},
+			"privy_social": {
+				"description": "Privy - Decentralized social platform"
+			},
+			"huddle01": {
+				"description": "Huddle01 - Decentralized social platform"
+			},
+			"moxie": {
+				"description": "Moxie - Decentralized social platform"
+			},
+			"phantom_wallet": {
+				"description": "Phantom - Crypto wallet"
+			},
+			"backpack_wallet": {
+				"description": "Backpack - Crypto wallet"
+			},
+			"exodus_wallet": {
+				"description": "Exodus - Crypto wallet"
+			},
+			"solflare": {
+				"description": "Solflare - Crypto wallet"
+			},
+			"keplr_wallet": {
+				"description": "Keplr - Crypto wallet"
+			},
+			"leap_wallet": {
+				"description": "Leap Wallet - Crypto wallet"
+			},
+			"xdefi_wallet": {
+				"description": "XDEFI - Crypto wallet"
+			},
+			"brave_wallet": {
+				"description": "Brave Wallet - Crypto wallet"
+			},
+			"block_wallet": {
+				"description": "BlockWallet - Crypto wallet"
+			},
+			"okx_wallet": {
+				"description": "OKX Wallet - Crypto wallet"
 			}
 		},
 		"seo": {

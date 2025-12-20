@@ -20,7 +20,9 @@ export type CategoryId =
 	| 'social'
 	| 'l2'
 	| 'gamefi'
-	| 'payments';
+	| 'payments'
+	| 'funding'
+	| 'news';
 
 /**
  * Category definition with i18n keys and styling

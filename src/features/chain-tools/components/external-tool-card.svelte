@@ -2,7 +2,7 @@
 	import { ExternalLink } from '@lucide/svelte';
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import type { ExternalTool } from '../types';
-	import { getCategoryById } from '../data/tools-data';
+	import { getCategoryById } from '../data/categories';
 
 	interface Props {
 		tool: ExternalTool;

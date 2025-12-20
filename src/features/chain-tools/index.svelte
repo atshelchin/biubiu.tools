@@ -4,7 +4,8 @@
 	import SearchBar from './components/search-bar.svelte';
 	import CategoryFilter from './components/category-filter.svelte';
 	import ExternalToolCard from './components/external-tool-card.svelte';
-	import { categories, toolsData } from './data/tools-data';
+	import { categories } from './data/categories';
+	import { allTools as toolsData } from './data/tools';
 	import type { CategoryId, ExternalTool } from './types';
 
 	// Import both locales for bilingual search
