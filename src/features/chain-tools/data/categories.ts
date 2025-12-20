@@ -36,7 +36,11 @@ import {
 	Lock,
 	Building2,
 	Bot,
-	Repeat
+	Repeat,
+	Flame,
+	Scale,
+	Users,
+	Star
 } from '@lucide/svelte';
 import type { Category, CategoryId } from '../types';
 
@@ -120,7 +124,24 @@ export const categories: Category[] = [
 	{ id: 'privacy', labelKey: 'chain_tools.categories.privacy', color: '#6B7280', icon: Lock },
 	{ id: 'rwa', labelKey: 'chain_tools.categories.rwa', color: '#0EA5E9', icon: Building2 },
 	{ id: 'ai-crypto', labelKey: 'chain_tools.categories.ai_crypto', color: '#8B5CF6', icon: Bot },
-	{ id: 'restaking', labelKey: 'chain_tools.categories.restaking', color: '#6366F1', icon: Repeat }
+	{ id: 'restaking', labelKey: 'chain_tools.categories.restaking', color: '#6366F1', icon: Repeat },
+	{
+		id: 'wallet-mainstream',
+		labelKey: 'chain_tools.categories.wallet_mainstream',
+		color: '#F59E0B',
+		icon: Wallet
+	},
+	{ id: 'cex', labelKey: 'chain_tools.categories.cex', color: '#3B82F6', icon: Building2 },
+	{ id: 'gas-burner', labelKey: 'chain_tools.categories.gas_burner', color: '#EF4444', icon: Flame },
+	{ id: 'trends', labelKey: 'chain_tools.categories.trends', color: '#8B5CF6', icon: TrendingUp },
+	{ id: 'web3-teams', labelKey: 'chain_tools.categories.web3_teams', color: '#10B981', icon: Users },
+	{ id: 'regulation', labelKey: 'chain_tools.categories.regulation', color: '#6366F1', icon: Scale },
+	{
+		id: 'influencer',
+		labelKey: 'chain_tools.categories.influencer',
+		color: '#F59E0B',
+		icon: Star
+	}
 ];
 
 /**

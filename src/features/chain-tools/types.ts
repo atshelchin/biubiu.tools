@@ -38,7 +38,14 @@ export type CategoryId =
 	| 'privacy'
 	| 'rwa'
 	| 'ai-crypto'
-	| 'restaking';
+	| 'restaking'
+	| 'wallet-mainstream'
+	| 'cex'
+	| 'gas-burner'
+	| 'trends'
+	| 'web3-teams'
+	| 'regulation'
+	| 'influencer';
 
 /**
  * Category definition with i18n keys and styling

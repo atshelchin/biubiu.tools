@@ -1477,7 +1477,14 @@
 			"legendary_token": "10x/100x Tokens",
 			"mev": "MEV",
 			"rwa": "RWA",
-			"ai_crypto": "AI Crypto"
+			"ai_crypto": "AI Crypto",
+			"wallet_mainstream": "Wallets",
+			"cex": "Exchanges (CEX)",
+			"gas_burner": "Gas Burners",
+			"trends": "Trends & VC",
+			"web3_teams": "Web3 Teams",
+			"regulation": "Regulation",
+			"influencer": "KOL & Influencers"
 		},
 		"tools": {
 			"uniswap": {
@@ -1748,7 +1755,7 @@
 				"description": "On-chain market intelligence"
 			},
 			"santiment": {
-				"description": "On-chain and social analytics"
+				"description": "On-chain and social metrics"
 			},
 			"dexscreener": {
 				"description": "Real-time DEX pair charts"
@@ -2096,10 +2103,10 @@
 				"description": "All-in-one data platform"
 			},
 			"coinbase_wallet": {
-				"description": "Self-custody crypto wallet"
+				"description": "Self-custody wallet by Coinbase exchange"
 			},
 			"trust_wallet": {
-				"description": "Multi-chain mobile wallet"
+				"description": "Mobile-first multi-chain wallet by Binance"
 			},
 			"argent": {
 				"description": "Smart wallet with recovery"
@@ -2561,7 +2568,7 @@
 				"description": "DeFi TVL rankings and protocol analytics"
 			},
 			"l2fees": {
-				"description": "Layer 2 fee comparison and analytics"
+				"description": "Compare L2 transaction fees"
 			},
 			"cryptofees": {
 				"description": "Protocol fee and revenue analytics"
@@ -2720,7 +2727,7 @@
 				"description": "Account abstraction and gasless transaction SDK"
 			},
 			"alchemy_aa": {
-				"description": "Smart wallet SDK and account abstraction toolkit"
+				"description": "Alchemy's account abstraction toolkit"
 			},
 			"zerodev": {
 				"description": "Modular smart wallet SDK with Kernel"
@@ -2786,7 +2793,7 @@
 				"description": "Free public RPC endpoints"
 			},
 			"flashbots_protect": {
-				"description": "MEV protection RPC for private transactions"
+				"description": "MEV protection RPC endpoint"
 			},
 			"mev_blocker": {
 				"description": "MEV protection with rebates for users"
@@ -3290,7 +3297,7 @@
 				"description": "SuiScan - Block explorer"
 			},
 			"a16z_crypto": {
-				"description": "a16z Crypto - Web3 investment and funding platform"
+				"description": "Andreessen Horowitz crypto fund"
 			},
 			"paradigm": {
 				"description": "Paradigm - Web3 investment and funding platform"
@@ -3311,10 +3318,10 @@
 				"description": "Variant - Web3 investment and funding platform"
 			},
 			"framework_ventures": {
-				"description": "Framework Ventures - Web3 investment and funding platform"
+				"description": "Active DeFi and gaming investor"
 			},
 			"electric_capital": {
-				"description": "Electric Capital - Web3 investment and funding platform"
+				"description": "Developer-focused crypto VC"
 			},
 			"placeholder": {
 				"description": "Placeholder - Web3 investment and funding platform"
@@ -3335,10 +3342,10 @@
 				"description": "Syndicate - Web3 investment and funding platform"
 			},
 			"crunchbase_crypto": {
-				"description": "Crunchbase - Web3 investment and funding platform"
+				"description": "Crypto startup funding database"
 			},
 			"pitchbook_crypto": {
-				"description": "PitchBook - Web3 investment and funding platform"
+				"description": "VC and deal database"
 			},
 			"dealroom_web3": {
 				"description": "Dealroom - Web3 investment and funding platform"
@@ -3371,13 +3378,13 @@
 				"description": "Compound Grants - Web3 investment and funding platform"
 			},
 			"alliance_dao": {
-				"description": "Alliance - Web3 investment and funding platform"
+				"description": "Web3 accelerator program"
 			},
 			"outlier_ventures": {
-				"description": "Outlier Ventures - Web3 investment and funding platform"
+				"description": "Web3 accelerator with Base Camp"
 			},
 			"longhash_ventures": {
-				"description": "LongHash Ventures - Web3 investment and funding platform"
+				"description": "Asia Web3 accelerator"
 			},
 			"kernel": {
 				"description": "Kernel - Web3 investment and funding platform"
@@ -3386,10 +3393,10 @@
 				"description": "Encode Club - Web3 investment and funding platform"
 			},
 			"coinbase_ventures": {
-				"description": "Coinbase Ventures - Web3 investment and funding platform"
+				"description": "Coinbase's venture arm"
 			},
 			"binance_labs": {
-				"description": "Binance Labs - Web3 investment and funding platform"
+				"description": "Binance incubator and fund"
 			},
 			"galaxy_digital": {
 				"description": "Galaxy Digital - Web3 investment and funding platform"
@@ -3398,7 +3405,7 @@
 				"description": "HashKey Capital - Web3 investment and funding platform"
 			},
 			"spartan_group": {
-				"description": "Spartan Group - Web3 investment and funding platform"
+				"description": "Asia trading and advisory"
 			},
 			"portal_gaming": {
 				"description": "Portal - Web3 gaming platform"
@@ -3662,10 +3669,10 @@
 				"description": "CryptoRank - Crypto news and research"
 			},
 			"dove_metrics": {
-				"description": "Dove Metrics - Crypto news and research"
+				"description": "VC funding reports and analytics"
 			},
 			"crypto_fundraising": {
-				"description": "Crypto Fundraising - Crypto news and research"
+				"description": "Free funding tracker"
 			},
 			"bankless": {
 				"description": "Bankless - Crypto news and research"
@@ -3698,10 +3705,10 @@
 				"description": "Bell Curve - Crypto news and research"
 			},
 			"delphi_digital": {
-				"description": "Delphi Digital - Crypto news and research"
+				"description": "Deep-dive crypto research"
 			},
 			"galaxy_research": {
-				"description": "Galaxy Research - Crypto news and research"
+				"description": "Institutional crypto research"
 			},
 			"nansen_research": {
 				"description": "Nansen Research - Crypto news and research"
@@ -3905,7 +3912,7 @@
 				"description": "Moxie - Decentralized social platform"
 			},
 			"phantom_wallet": {
-				"description": "Popular multi-chain wallet with Solana focus"
+				"description": "Multi-chain wallet for Solana, Ethereum & Polygon"
 			},
 			"backpack_wallet": {
 				"description": "Backpack - Crypto wallet"
@@ -3917,10 +3924,10 @@
 				"description": "Solflare - Crypto wallet"
 			},
 			"keplr_wallet": {
-				"description": "Interchain wallet for Cosmos ecosystem with staking"
+				"description": "Leading Cosmos ecosystem wallet"
 			},
 			"leap_wallet": {
-				"description": "Leap Wallet - Crypto wallet"
+				"description": "Multi-chain Cosmos wallet"
 			},
 			"xdefi_wallet": {
 				"description": "XDEFI - Crypto wallet"
@@ -3932,7 +3939,7 @@
 				"description": "BlockWallet - Crypto wallet"
 			},
 			"okx_wallet": {
-				"description": "OKX Wallet - Crypto wallet"
+				"description": "Multi-chain Web3 wallet by OKX"
 			},
 			"x_vitalik": {
 				"description": "Founder and thought leader in the crypto space"
@@ -5793,6 +5800,837 @@
 			},
 			"airdrop_swell": {
 				"description": "Swell Network potential airdrop for swETH stakers"
+			},
+			"metamask_wallet": {
+				"description": "Most popular browser wallet for EVM chains"
+			},
+			"rabby_wallet": {
+				"description": "Security-first browser wallet with pre-tx simulation"
+			},
+			"rainbow_wallet": {
+				"description": "User-friendly Ethereum wallet with NFT focus"
+			},
+			"zerion_wallet": {
+				"description": "DeFi portfolio wallet with built-in tracking"
+			},
+			"frame_wallet": {
+				"description": "Desktop system-wide Ethereum wallet"
+			},
+			"ledger_wallet": {
+				"description": "Industry-leading hardware wallet"
+			},
+			"trezor_wallet": {
+				"description": "Open-source hardware wallet pioneer"
+			},
+			"keystone_wallet": {
+				"description": "Air-gapped hardware wallet with QR signing"
+			},
+			"gridplus_wallet": {
+				"description": "Enterprise-grade hardware wallet"
+			},
+			"tangem_wallet": {
+				"description": "NFC card-based hardware wallet"
+			},
+			"safe_wallet": {
+				"description": "Multi-sig smart contract wallet for DAOs"
+			},
+			"argent_wallet": {
+				"description": "Smart contract wallet with social recovery"
+			},
+			"sequence_wallet": {
+				"description": "Embedded wallet for gaming apps"
+			},
+			"privy_wallet": {
+				"description": "Embedded wallet with social login"
+			},
+			"dynamic_wallet": {
+				"description": "Multi-wallet aggregator for Web3 apps"
+			},
+			"web3auth_wallet": {
+				"description": "MPC-based wallet with social login"
+			},
+			"particle_wallet": {
+				"description": "Chain abstraction wallet infrastructure"
+			},
+			"zerodev_wallet": {
+				"description": "Account abstraction SDK (ERC-4337)"
+			},
+			"biconomy_wallet": {
+				"description": "Gasless transaction infrastructure"
+			},
+			"unisat_wallet": {
+				"description": "Bitcoin wallet for Ordinals & BRC-20"
+			},
+			"xverse_wallet": {
+				"description": "Bitcoin & Stacks wallet"
+			},
+			"leather_wallet": {
+				"description": "Bitcoin & Stacks DeFi wallet"
+			},
+			"passport_wallet": {
+				"description": "Open-source Bitcoin hardware wallet"
+			},
+			"seedsigner_wallet": {
+				"description": "DIY air-gapped Bitcoin signing device"
+			},
+			"fireblocks_wallet": {
+				"description": "Institutional MPC custody platform"
+			},
+			"anchorage_wallet": {
+				"description": "Regulated digital asset bank"
+			},
+			"bitgo_wallet": {
+				"description": "Institutional custody with multi-sig"
+			},
+			"binance_cex": {
+				"description": "World's largest crypto exchange by volume"
+			},
+			"coinbase_cex": {
+				"description": "Leading US-regulated crypto exchange"
+			},
+			"okx_cex": {
+				"description": "Global exchange with derivatives & Web3"
+			},
+			"bybit_cex": {
+				"description": "Top derivatives and perpetuals exchange"
+			},
+			"kraken_cex": {
+				"description": "Security-focused US crypto exchange"
+			},
+			"bitget_cex": {
+				"description": "Copy trading focused exchange"
+			},
+			"kucoin_cex": {
+				"description": "Altcoin-rich exchange with trading bots"
+			},
+			"gateio_cex": {
+				"description": "Early altcoin listing exchange"
+			},
+			"htx_cex": {
+				"description": "Global exchange formerly known as Huobi"
+			},
+			"mexc_cex": {
+				"description": "Fast new token listings exchange"
+			},
+			"deribit_cex": {
+				"description": "Leading crypto options exchange"
+			},
+			"bitfinex_cex": {
+				"description": "Exchange with margin and lending"
+			},
+			"bitmex_cex": {
+				"description": "Pioneer of crypto perpetual swaps"
+			},
+			"upbit_cex": {
+				"description": "Largest Korean crypto exchange"
+			},
+			"bithumb_cex": {
+				"description": "Major South Korean exchange"
+			},
+			"bitflyer_cex": {
+				"description": "Leading Japanese regulated exchange"
+			},
+			"coincheck_cex": {
+				"description": "Japanese exchange with NFT marketplace"
+			},
+			"wazirx_cex": {
+				"description": "India's leading crypto exchange"
+			},
+			"bitstamp_cex": {
+				"description": "Europe's oldest crypto exchange"
+			},
+			"lbank_cex": {
+				"description": "Exchange with launchpad and altcoins"
+			},
+			"backpack_cex": {
+				"description": "Dubai-regulated Solana-focused exchange"
+			},
+			"hyperliquid_cex": {
+				"description": "On-chain perpetuals with orderbook"
+			},
+			"cube_cex": {
+				"description": "Hybrid exchange with MPC custody"
+			},
+			"bullish_cex": {
+				"description": "Block.one backed institutional exchange"
+			},
+			"hashkey_cex": {
+				"description": "Hong Kong licensed exchange"
+			},
+			"osl_cex": {
+				"description": "Hong Kong institutional exchange"
+			},
+			"coingecko_exchanges": {
+				"description": "Compare exchanges by trust score"
+			},
+			"cmc_exchanges": {
+				"description": "CoinMarketCap exchange rankings"
+			},
+			"cryptorank_exchanges": {
+				"description": "Exchange analytics and rankings"
+			},
+			"kaiko_data": {
+				"description": "Institutional market data provider"
+			},
+			"ccdata": {
+				"description": "Market indices and data for institutions"
+			},
+			"coinbase_prime": {
+				"description": "Institutional trading and custody"
+			},
+			"binance_institutional": {
+				"description": "Binance VIP and OTC services"
+			},
+			"galaxy_trading": {
+				"description": "Institutional OTC and derivatives"
+			},
+			"cumberland_trading": {
+				"description": "DRW's crypto trading desk"
+			},
+			"moonpay_ramp": {
+				"description": "Crypto on-ramp for apps"
+			},
+			"transak_ramp": {
+				"description": "Global fiat-to-crypto gateway"
+			},
+			"ramp_network": {
+				"description": "On/off-ramp with SDK integration"
+			},
+			"banxa_ramp": {
+				"description": "Regulated payment provider"
+			},
+			"paxful_p2p": {
+				"description": "P2P trading with escrow"
+			},
+			"localbitcoins_p2p": {
+				"description": "Local Bitcoin trading marketplace"
+			},
+			"noones_p2p": {
+				"description": "P2P trading for emerging markets"
+			},
+			"ultrasound_money": {
+				"description": "Track ETH burn and supply changes"
+			},
+			"etherscan_gastracker": {
+				"description": "Real-time Ethereum gas prices"
+			},
+			"blocknative_gas": {
+				"description": "Mempool-based gas prediction"
+			},
+			"gasnow": {
+				"description": "Fast gas price tracker with API"
+			},
+			"ethgas_watch": {
+				"description": "Gas price alerts and notifications"
+			},
+			"owlracle": {
+				"description": "Multi-chain gas oracle with API"
+			},
+			"uniswap_gas": {
+				"description": "Uniswap - top gas consuming DEX"
+			},
+			"opensea_gas": {
+				"description": "OpenSea - NFT marketplace gas leader"
+			},
+			"blur_gas": {
+				"description": "Blur - high volume NFT trading"
+			},
+			"tether_gas": {
+				"description": "USDT - high volume stablecoin transfers"
+			},
+			"1inch_gas": {
+				"description": "1inch - DEX aggregator routing"
+			},
+			"metamask_swap_gas": {
+				"description": "MetaMask swaps gas consumption"
+			},
+			"flashbots_gas": {
+				"description": "Flashbots MEV bundle transactions"
+			},
+			"banana_gun_gas": {
+				"description": "Telegram trading bot gas usage"
+			},
+			"maestro_gas": {
+				"description": "Multi-chain sniper bot"
+			},
+			"unibot_gas": {
+				"description": "Telegram trading and copy bot"
+			},
+			"across_gas": {
+				"description": "Across - fast L2 bridge"
+			},
+			"stargate_gas": {
+				"description": "Stargate - LayerZero bridge"
+			},
+			"l2beat_gas": {
+				"description": "L2 activity and TPS comparison"
+			},
+			"rollup_codes": {
+				"description": "Rollup opcode gas comparison"
+			},
+			"txstreet": {
+				"description": "Live blockchain visualization"
+			},
+			"evm_gas_profiler": {
+				"description": "Tenderly gas profiling tools"
+			},
+			"etherscan_charts": {
+				"description": "Historical gas price charts"
+			},
+			"dune_gas": {
+				"description": "Custom gas analytics dashboards"
+			},
+			"parsec_gas": {
+				"description": "DeFi analytics and monitoring"
+			},
+			"rated_network": {
+				"description": "Validator efficiency metrics"
+			},
+			"cryptorank_funding": {
+				"description": "Crypto funding rounds tracker"
+			},
+			"rootdata_funding": {
+				"description": "Web3 project and funding database"
+			},
+			"defilama_raises": {
+				"description": "DeFi funding rounds timeline"
+			},
+			"messari_funding": {
+				"description": "Crypto research and fundraising"
+			},
+			"kaito_ai": {
+				"description": "AI-powered crypto trend analysis"
+			},
+			"lunarcrush": {
+				"description": "Social sentiment analytics"
+			},
+			"artemis_xyz": {
+				"description": "Fundamental crypto analytics"
+			},
+			"coinglass_trends": {
+				"description": "Derivatives and funding data"
+			},
+			"cryptoquant_trends": {
+				"description": "Exchange flow analytics"
+			},
+			"ethereum_magicians": {
+				"description": "Ethereum governance discussions"
+			},
+			"ethresear_ch": {
+				"description": "Ethereum research forum"
+			},
+			"github_trending_sol": {
+				"description": "Trending Solidity repositories"
+			},
+			"paradigm_research": {
+				"description": "Technical crypto research"
+			},
+			"a16z_research": {
+				"description": "a16z crypto research"
+			},
+			"flashbots_writings": {
+				"description": "MEV and PBS research"
+			},
+			"modular_narrative": {
+				"description": "Modular blockchain ecosystem"
+			},
+			"btcfi_narrative": {
+				"description": "Bitcoin DeFi ecosystem"
+			},
+			"intent_narrative": {
+				"description": "Intents and chain abstraction"
+			},
+			"depin_narrative": {
+				"description": "Decentralized physical infrastructure"
+			},
+			"socialfi_narrative": {
+				"description": "Social finance trends"
+			},
+			"theblock_research": {
+				"description": "The Block data and research"
+			},
+			"bankless_hq": {
+				"description": "Bankless DeFi content"
+			},
+			"unchained_crypto": {
+				"description": "Crypto news and podcasts"
+			},
+			"ethglobal_events": {
+				"description": "Ethereum hackathons worldwide"
+			},
+			"devcon_ethereum": {
+				"description": "Annual Ethereum conference"
+			},
+			"consensus_coindesk": {
+				"description": "Major crypto industry event"
+			},
+			"token2049": {
+				"description": "Asia's premier crypto conference"
+			},
+			"developerreport": {
+				"description": "Annual developer ecosystem report"
+			},
+			"tokenterminal_dev": {
+				"description": "Protocol revenue and metrics"
+			},
+			"paradigm_vc": {
+				"description": "Crypto-native research VC"
+			},
+			"sequoia_crypto": {
+				"description": "Sequoia's crypto investments"
+			},
+			"polychain_capital": {
+				"description": "Early-stage crypto fund"
+			},
+			"pantera_capital": {
+				"description": "Oldest crypto hedge fund"
+			},
+			"dragonfly_capital": {
+				"description": "Global crypto VC with Asia focus"
+			},
+			"multicoin_capital": {
+				"description": "Thesis-driven crypto fund"
+			},
+			"delphi_ventures": {
+				"description": "Research-driven crypto VC"
+			},
+			"placeholder_vc": {
+				"description": "Governance-focused fund"
+			},
+			"variant_fund": {
+				"description": "User ownership focused VC"
+			},
+			"hashed_vc": {
+				"description": "Korean Web3 investor"
+			},
+			"hack_vc": {
+				"description": "Early-stage infra investor"
+			},
+			"bankless_ventures": {
+				"description": "Community-driven VC"
+			},
+			"1kx_capital": {
+				"description": "Token network investor"
+			},
+			"robot_ventures": {
+				"description": "Early DeFi investor (Compound)"
+			},
+			"okx_ventures": {
+				"description": "OKX investment arm"
+			},
+			"kraken_ventures": {
+				"description": "Kraken's venture fund"
+			},
+			"circle_ventures": {
+				"description": "Circle (USDC) ventures"
+			},
+			"galaxy_ventures": {
+				"description": "Galaxy Digital ventures"
+			},
+			"ycombinator_crypto": {
+				"description": "YC startup accelerator"
+			},
+			"techstars_crypto": {
+				"description": "Global startup accelerator"
+			},
+			"consensys_team": {
+				"description": "MetaMask and Infura builder"
+			},
+			"offchain_labs": {
+				"description": "Arbitrum development team"
+			},
+			"matter_labs": {
+				"description": "zkSync development team"
+			},
+			"optimism_team": {
+				"description": "Optimism and Superchain builder"
+			},
+			"alchemy_team": {
+				"description": "Web3 infrastructure provider"
+			},
+			"chainlink_labs": {
+				"description": "Chainlink oracle developer"
+			},
+			"eigenlayer_team": {
+				"description": "EigenLayer restaking protocol"
+			},
+			"uniswap_labs": {
+				"description": "Uniswap protocol developer"
+			},
+			"jump_crypto": {
+				"description": "Crypto trading and infrastructure"
+			},
+			"wintermute_trading": {
+				"description": "Market maker and VC"
+			},
+			"gauntlet_network": {
+				"description": "DeFi risk and simulation"
+			},
+			"dealroom_crypto": {
+				"description": "Startup database and analytics"
+			},
+			"sec_crypto": {
+				"description": "US Securities and Exchange Commission"
+			},
+			"cftc_crypto": {
+				"description": "US Commodity Futures Trading Commission"
+			},
+			"fincen_crypto": {
+				"description": "US Financial Crimes Enforcement"
+			},
+			"occ_crypto": {
+				"description": "US Office of the Comptroller"
+			},
+			"fed_crypto": {
+				"description": "US Federal Reserve CBDC research"
+			},
+			"nydfs_crypto": {
+				"description": "New York BitLicense regulator"
+			},
+			"mica_eu": {
+				"description": "EU Markets in Crypto-Assets regulation"
+			},
+			"esma_crypto": {
+				"description": "EU securities markets authority"
+			},
+			"eba_crypto": {
+				"description": "EU banking authority"
+			},
+			"fca_crypto": {
+				"description": "UK Financial Conduct Authority"
+			},
+			"bafin_crypto": {
+				"description": "German financial regulator"
+			},
+			"amf_crypto": {
+				"description": "French financial markets authority"
+			},
+			"finma_crypto": {
+				"description": "Swiss financial regulator"
+			},
+			"hkma_crypto": {
+				"description": "Hong Kong Monetary Authority"
+			},
+			"sfc_hk": {
+				"description": "Hong Kong Securities and Futures"
+			},
+			"mas_crypto": {
+				"description": "Singapore Monetary Authority"
+			},
+			"jfsa_crypto": {
+				"description": "Japan Financial Services Agency"
+			},
+			"fsc_korea": {
+				"description": "South Korea Financial Services"
+			},
+			"asic_crypto": {
+				"description": "Australian Securities regulator"
+			},
+			"rbi_crypto": {
+				"description": "Reserve Bank of India"
+			},
+			"vara_dubai": {
+				"description": "Dubai Virtual Assets Authority"
+			},
+			"adgm_crypto": {
+				"description": "Abu Dhabi Global Market"
+			},
+			"sama_crypto": {
+				"description": "Saudi Arabian Monetary Authority"
+			},
+			"sarb_crypto": {
+				"description": "South African Reserve Bank"
+			},
+			"csa_crypto": {
+				"description": "Canadian Securities Administrators"
+			},
+			"cnbv_crypto": {
+				"description": "Mexico financial regulator"
+			},
+			"bcra_crypto": {
+				"description": "Argentina Central Bank"
+			},
+			"cvm_brazil": {
+				"description": "Brazil securities regulator"
+			},
+			"fatf_crypto": {
+				"description": "Global AML standards body"
+			},
+			"bis_crypto": {
+				"description": "Bank for International Settlements"
+			},
+			"fsb_crypto": {
+				"description": "Financial Stability Board"
+			},
+			"iosco_crypto": {
+				"description": "Securities regulators organization"
+			},
+			"coinbase_legal": {
+				"description": "Coinbase policy resources"
+			},
+			"a16z_policy": {
+				"description": "a16z crypto policy hub"
+			},
+			"blockchain_association": {
+				"description": "US industry advocacy group"
+			},
+			"coin_center": {
+				"description": "Crypto policy research nonprofit"
+			},
+			"atlanticcouncil_cbdc": {
+				"description": "Global CBDC tracker"
+			},
+			"global_crypto_map": {
+				"description": "Worldwide regulation comparison"
+			},
+			"chainalysis_compliance": {
+				"description": "Blockchain compliance tools"
+			},
+			"elliptic_compliance": {
+				"description": "AML and compliance platform"
+			},
+			"trm_labs": {
+				"description": "Crypto investigation tools"
+			},
+			"merkle_science": {
+				"description": "Risk and compliance for Asia"
+			},
+			"notabene_travel": {
+				"description": "Travel Rule compliance"
+			},
+			"sumsub_kyc": {
+				"description": "KYC verification platform"
+			},
+			"kol_vitalik": {
+				"description": "Ethereum co-founder, blockchain visionary"
+			},
+			"kol_cz_binance": {
+				"description": "Binance founder, crypto industry leader"
+			},
+			"kol_brian_armstrong": {
+				"description": "Coinbase CEO, crypto advocate"
+			},
+			"kol_balaji": {
+				"description": "Former a16z partner, Network State author"
+			},
+			"kol_naval": {
+				"description": "AngelList founder, crypto philosopher"
+			},
+			"kol_cobie": {
+				"description": "Crypto trader, UpOnly podcast host"
+			},
+			"kol_hsaka": {
+				"description": "Crypto trader and market analyst"
+			},
+			"kol_tetranode": {
+				"description": "DeFi whale, yield farming expert"
+			},
+			"kol_lookonchain": {
+				"description": "On-chain data analyst, whale tracker"
+			},
+			"kol_defi_dad": {
+				"description": "DeFi educator and yield farmer"
+			},
+			"kol_punk6529": {
+				"description": "NFT collector, open metaverse advocate"
+			},
+			"kol_ansem": {
+				"description": "Solana ecosystem trader, meme coin hunter"
+			},
+			"kol_cryptohayes": {
+				"description": "BitMEX co-founder, macro analyst"
+			},
+			"kol_raaborhmason": {
+				"description": "Real Vision CEO, macro investor"
+			},
+			"kol_ericryptoguy": {
+				"description": "Altcoin trader and analyst"
+			},
+			"kol_dankrad": {
+				"description": "Ethereum researcher, danksharding inventor"
+			},
+			"kol_sassal": {
+				"description": "Daily Gwei host, ETH educator"
+			},
+			"kol_wublock": {
+				"description": "Chinese crypto news, mining insider"
+			},
+			"kol_tier10k": {
+				"description": "Breaking crypto news account"
+			},
+			"kol_bankless_yt": {
+				"description": "DeFi podcast, Ethereum focused"
+			},
+			"kol_coinbureau": {
+				"description": "Crypto education YouTube channel"
+			},
+			"kol_unchained_yt": {
+				"description": "Crypto interviews and news podcast"
+			},
+			"kol_bell_curve": {
+				"description": "DeFi deep-dive podcast"
+			},
+			"kol_bitfish": {
+				"description": "Chinese crypto analyst, macro insights"
+			},
+			"kol_colin_wu": {
+				"description": "Chinese crypto journalist, mining news"
+			},
+			"kol_mindao": {
+				"description": "dForce founder, DeFi builder"
+			},
+			"kol_bitrun": {
+				"description": "Chinese Bitcoin analyst on Weibo"
+			},
+			"kol_phyrex": {
+				"description": "Chinese data analyst, on-chain insights"
+			},
+			"kol_0xsun": {
+				"description": "Chinese NFT & alpha hunter"
+			},
+			"kol_bitwu": {
+				"description": "Chinese trading educator"
+			},
+			"kol_lvdepeng": {
+				"description": "Chinese trading mentor"
+			},
+			"kol_maki": {
+				"description": "SushiSwap contributor, DeFi in Japan"
+			},
+			"kol_ikehaya": {
+				"description": "Japanese NFT creator, crypto educator"
+			},
+			"kol_koji": {
+				"description": "Japanese crypto trader and analyst"
+			},
+			"kol_arata": {
+				"description": "Japanese DeFi and L2 researcher"
+			},
+			"kol_crypto_navi": {
+				"description": "Japanese crypto education YouTube"
+			},
+			"kol_kimchi_premium": {
+				"description": "Korean market analysis and insights"
+			},
+			"kol_cryptoquant_ki": {
+				"description": "CryptoQuant CEO, on-chain expert"
+			},
+			"kol_coinkim": {
+				"description": "Korean crypto analysis and education"
+			},
+			"kol_crypto_god": {
+				"description": "Korean crypto YouTube analyst"
+			},
+			"kol_dalto": {
+				"description": "Spanish DeFi educator and builder"
+			},
+			"kol_cripto247": {
+				"description": "Spanish crypto news for Latin America"
+			},
+			"kol_jorge_crypto": {
+				"description": "Spanish crypto trading YouTube"
+			},
+			"kol_panda_cripto": {
+				"description": "Spanish crypto trading analyst"
+			},
+			"kol_favelado_cripto": {
+				"description": "Brazilian crypto trader"
+			},
+			"kol_criptomaniacos": {
+				"description": "Brazilian crypto education YouTube"
+			},
+			"kol_bitboy_br": {
+				"description": "Brazilian finance and crypto educator"
+			},
+			"kol_hasheur": {
+				"description": "French crypto YouTube, Owen Simonin"
+			},
+			"kol_cryptoast": {
+				"description": "French crypto news media"
+			},
+			"kol_monsieur_tk": {
+				"description": "French DeFi analysis"
+			},
+			"kol_blocktrainer": {
+				"description": "German Bitcoin education YouTube"
+			},
+			"kol_tagebuch": {
+				"description": "German crypto trading analysis"
+			},
+			"kol_julian_hosp": {
+				"description": "German crypto educator, CakeDeFi"
+			},
+			"kol_cryptorofl": {
+				"description": "Russian crypto trader and analyst"
+			},
+			"kol_incrypted": {
+				"description": "Russian crypto news media"
+			},
+			"kol_cryptoins": {
+				"description": "Russian Telegram trading signals"
+			},
+			"kol_arab_crypto": {
+				"description": "Arabic crypto news for MENA"
+			},
+			"kol_bitcoin_ar": {
+				"description": "Arabic Bitcoin education"
+			},
+			"kol_uae_crypto": {
+				"description": "UAE and Dubai crypto community"
+			},
+			"kol_kripto_adam": {
+				"description": "Turkish crypto analysis"
+			},
+			"kol_coin_otag": {
+				"description": "Turkish crypto news media"
+			},
+			"kol_kripto_tv": {
+				"description": "Turkish crypto YouTube"
+			},
+			"kol_coin68": {
+				"description": "Vietnamese crypto news media"
+			},
+			"kol_tien_ao": {
+				"description": "Vietnamese crypto education"
+			},
+			"kol_defi_vn": {
+				"description": "Vietnamese DeFi community"
+			},
+			"kol_coinvestasi": {
+				"description": "Indonesian crypto news and education"
+			},
+			"kol_indodax": {
+				"description": "Indonesian exchange education"
+			},
+			"kol_crypto_id": {
+				"description": "Indonesian crypto community"
+			},
+			"kol_bitkub": {
+				"description": "Thai exchange education"
+			},
+			"kol_siam_block": {
+				"description": "Thai blockchain news"
+			},
+			"kol_crypto_th": {
+				"description": "Thai crypto community"
+			},
+			"kol_crypto_india": {
+				"description": "Indian crypto news"
+			},
+			"kol_pushpendra": {
+				"description": "Indian crypto educator"
+			},
+			"kol_crypto_gurukul": {
+				"description": "Hindi crypto education YouTube"
+			},
+			"kol_bitvavo": {
+				"description": "Dutch exchange education"
+			},
+			"kol_kryptowaluty": {
+				"description": "Polish crypto news"
+			},
+			"kol_cryptonomist": {
+				"description": "Italian crypto news media"
 			}
 		},
 		"seo": {

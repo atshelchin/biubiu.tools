@@ -39,6 +39,13 @@ export { privacyTools } from './privacy';
 export { rwaTools } from './rwa';
 export { aiCryptoTools } from './ai-crypto';
 export { restakingTools } from './restaking';
+export { walletMainstreamTools } from './wallet-mainstream';
+export { cexTools } from './cex';
+export { gasBurnerTools } from './gas-burner';
+export { trendsTools } from './trends';
+export { web3TeamsTools } from './web3-teams';
+export { regulationTools } from './regulation';
+export { influencerTools } from './influencer';
 
 // Import all for merged array
 import { defiTools } from './defi';
@@ -75,6 +82,13 @@ import { privacyTools } from './privacy';
 import { rwaTools } from './rwa';
 import { aiCryptoTools } from './ai-crypto';
 import { restakingTools } from './restaking';
+import { walletMainstreamTools } from './wallet-mainstream';
+import { cexTools } from './cex';
+import { gasBurnerTools } from './gas-burner';
+import { trendsTools } from './trends';
+import { web3TeamsTools } from './web3-teams';
+import { regulationTools } from './regulation';
+import { influencerTools } from './influencer';
 
 import type { ExternalTool } from '../../types';
 
@@ -115,7 +129,14 @@ export const allTools: ExternalTool[] = [
 	...privacyTools,
 	...rwaTools,
 	...aiCryptoTools,
-	...restakingTools
+	...restakingTools,
+	...walletMainstreamTools,
+	...cexTools,
+	...gasBurnerTools,
+	...trendsTools,
+	...web3TeamsTools,
+	...regulationTools,
+	...influencerTools
 ];
 
 /**

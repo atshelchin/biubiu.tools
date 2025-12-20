@@ -1477,7 +1477,14 @@
 			"legendary_token": "10x/100x 代币",
 			"mev": "MEV",
 			"rwa": "RWA 资产",
-			"ai_crypto": "AI 加密"
+			"ai_crypto": "AI 加密",
+			"wallet_mainstream": "钱包",
+			"cex": "中心化交易所",
+			"gas_burner": "Gas 消耗榜",
+			"trends": "风口热点",
+			"web3_teams": "投资机构",
+			"regulation": "监管政策",
+			"influencer": "网红大V"
 		},
 		"tools": {
 			"uniswap": {
@@ -1748,7 +1755,7 @@
 				"description": "链上市场情报"
 			},
 			"santiment": {
-				"description": "链上和社交分析"
+				"description": "链上和社交指标"
 			},
 			"dexscreener": {
 				"description": "实时 DEX 交易对图表"
@@ -2096,10 +2103,10 @@
 				"description": "一体化数据平台"
 			},
 			"coinbase_wallet": {
-				"description": "自托管加密钱包"
+				"description": "Coinbase交易所的自托管钱包"
 			},
 			"trust_wallet": {
-				"description": "多链移动钱包"
+				"description": "币安旗下的移动端多链钱包"
 			},
 			"argent": {
 				"description": "带恢复的智能钱包"
@@ -2561,7 +2568,7 @@
 				"description": "DeFi TVL排名与追踪"
 			},
 			"l2fees": {
-				"description": "Layer 2实时费用对比"
+				"description": "比较L2交易费用"
 			},
 			"cryptofees": {
 				"description": "协议收入与费用数据追踪"
@@ -2720,7 +2727,7 @@
 				"description": "无Gas交易与账户抽象SDK"
 			},
 			"alchemy_aa": {
-				"description": "Alchemy账户抽象开发套件"
+				"description": "Alchemy账户抽象工具包"
 			},
 			"zerodev": {
 				"description": "智能钱包与会话密钥SDK"
@@ -2786,7 +2793,7 @@
 				"description": "免费公共RPC节点列表"
 			},
 			"flashbots_protect": {
-				"description": "MEV保护隐私交易RPC"
+				"description": "MEV保护RPC端点"
 			},
 			"mev_blocker": {
 				"description": "MEV拦截与退款RPC"
@@ -3281,7 +3288,7 @@
 				"description": "SuiScan - Block explorer"
 			},
 			"a16z_crypto": {
-				"description": "a16z Crypto - Web3 investment and funding platform"
+				"description": "Andreessen Horowitz加密基金"
 			},
 			"paradigm": {
 				"description": "Paradigm - Web3 investment and funding platform"
@@ -3302,10 +3309,10 @@
 				"description": "Variant - Web3 investment and funding platform"
 			},
 			"framework_ventures": {
-				"description": "Framework Ventures - Web3 investment and funding platform"
+				"description": "活跃的DeFi和游戏投资者"
 			},
 			"electric_capital": {
-				"description": "Electric Capital - Web3 investment and funding platform"
+				"description": "开发者聚焦的加密VC"
 			},
 			"placeholder": {
 				"description": "Placeholder - Web3 investment and funding platform"
@@ -3326,10 +3333,10 @@
 				"description": "Syndicate - Web3 investment and funding platform"
 			},
 			"crunchbase_crypto": {
-				"description": "Crunchbase - Web3 investment and funding platform"
+				"description": "加密创业公司融资数据库"
 			},
 			"pitchbook_crypto": {
-				"description": "PitchBook - Web3 investment and funding platform"
+				"description": "VC和交易数据库"
 			},
 			"dealroom_web3": {
 				"description": "Dealroom - Web3 investment and funding platform"
@@ -3362,13 +3369,13 @@
 				"description": "Compound Grants - Web3 investment and funding platform"
 			},
 			"alliance_dao": {
-				"description": "Alliance - Web3 investment and funding platform"
+				"description": "Web3加速器项目"
 			},
 			"outlier_ventures": {
-				"description": "Outlier Ventures - Web3 investment and funding platform"
+				"description": "Web3加速器Base Camp"
 			},
 			"longhash_ventures": {
-				"description": "LongHash Ventures - Web3 investment and funding platform"
+				"description": "亚洲Web3加速器"
 			},
 			"kernel": {
 				"description": "Kernel - Web3 investment and funding platform"
@@ -3377,10 +3384,10 @@
 				"description": "Encode Club - Web3 investment and funding platform"
 			},
 			"coinbase_ventures": {
-				"description": "Coinbase Ventures - Web3 investment and funding platform"
+				"description": "Coinbase风投部门"
 			},
 			"binance_labs": {
-				"description": "Binance Labs - Web3 investment and funding platform"
+				"description": "币安孵化器和基金"
 			},
 			"galaxy_digital": {
 				"description": "Galaxy Digital - Web3 investment and funding platform"
@@ -3389,7 +3396,7 @@
 				"description": "HashKey Capital - Web3 investment and funding platform"
 			},
 			"spartan_group": {
-				"description": "Spartan Group - Web3 investment and funding platform"
+				"description": "亚洲交易和咨询"
 			},
 			"portal_gaming": {
 				"description": "Portal - Web3 gaming platform"
@@ -3653,10 +3660,10 @@
 				"description": "CryptoRank - Crypto news and research"
 			},
 			"dove_metrics": {
-				"description": "Dove Metrics - Crypto news and research"
+				"description": "VC融资报告和分析"
 			},
 			"crypto_fundraising": {
-				"description": "Crypto Fundraising - Crypto news and research"
+				"description": "免费融资追踪器"
 			},
 			"bankless": {
 				"description": "Bankless - Crypto news and research"
@@ -3689,10 +3696,10 @@
 				"description": "Bell Curve - Crypto news and research"
 			},
 			"delphi_digital": {
-				"description": "Delphi Digital - Crypto news and research"
+				"description": "深度加密研究"
 			},
 			"galaxy_research": {
-				"description": "Galaxy Research - Crypto news and research"
+				"description": "机构加密研究"
 			},
 			"nansen_research": {
 				"description": "Nansen Research - Crypto news and research"
@@ -3896,7 +3903,7 @@
 				"description": "Moxie - Decentralized social platform"
 			},
 			"phantom_wallet": {
-				"description": "流行的多链钱包，专注于 Solana"
+				"description": "支持Solana、以太坊和Polygon的多链钱包"
 			},
 			"backpack_wallet": {
 				"description": "Backpack - Crypto wallet"
@@ -3908,10 +3915,10 @@
 				"description": "Solflare - Crypto wallet"
 			},
 			"keplr_wallet": {
-				"description": "Cosmos 生态系统的跨链钱包，支持质押"
+				"description": "领先的Cosmos生态钱包"
 			},
 			"leap_wallet": {
-				"description": "Leap Wallet - Crypto wallet"
+				"description": "多链Cosmos钱包"
 			},
 			"xdefi_wallet": {
 				"description": "XDEFI - Crypto wallet"
@@ -3923,7 +3930,7 @@
 				"description": "BlockWallet - Crypto wallet"
 			},
 			"okx_wallet": {
-				"description": "OKX Wallet - Crypto wallet"
+				"description": "OKX的多链Web3钱包"
 			},
 			"x_vitalik": {
 				"description": "加密领域创始人和思想领袖"
@@ -5784,6 +5791,837 @@
 			},
 			"airdrop_swell": {
 				"description": "Swell Network对swETH质押者的潜在空投"
+			},
+			"metamask_wallet": {
+				"description": "最流行的EVM链浏览器钱包"
+			},
+			"rabby_wallet": {
+				"description": "安全优先的浏览器钱包，支持交易预模拟"
+			},
+			"rainbow_wallet": {
+				"description": "用户友好的以太坊钱包，专注NFT"
+			},
+			"zerion_wallet": {
+				"description": "内置追踪功能的DeFi投资组合钱包"
+			},
+			"frame_wallet": {
+				"description": "桌面系统级以太坊钱包"
+			},
+			"ledger_wallet": {
+				"description": "行业领先的硬件钱包"
+			},
+			"trezor_wallet": {
+				"description": "开源硬件钱包先驱"
+			},
+			"keystone_wallet": {
+				"description": "离线二维码签名硬件钱包"
+			},
+			"gridplus_wallet": {
+				"description": "企业级硬件钱包"
+			},
+			"tangem_wallet": {
+				"description": "NFC卡片式硬件钱包"
+			},
+			"safe_wallet": {
+				"description": "DAO多签智能合约钱包"
+			},
+			"argent_wallet": {
+				"description": "支持社交恢复的智能合约钱包"
+			},
+			"sequence_wallet": {
+				"description": "游戏应用嵌入式钱包"
+			},
+			"privy_wallet": {
+				"description": "支持社交登录的嵌入式钱包"
+			},
+			"dynamic_wallet": {
+				"description": "Web3应用多钱包聚合器"
+			},
+			"web3auth_wallet": {
+				"description": "基于MPC的社交登录钱包"
+			},
+			"particle_wallet": {
+				"description": "链抽象钱包基础设施"
+			},
+			"zerodev_wallet": {
+				"description": "账户抽象SDK (ERC-4337)"
+			},
+			"biconomy_wallet": {
+				"description": "无Gas交易基础设施"
+			},
+			"unisat_wallet": {
+				"description": "支持Ordinals和BRC-20的比特币钱包"
+			},
+			"xverse_wallet": {
+				"description": "比特币和Stacks钱包"
+			},
+			"leather_wallet": {
+				"description": "比特币和Stacks DeFi钱包"
+			},
+			"passport_wallet": {
+				"description": "开源比特币硬件钱包"
+			},
+			"seedsigner_wallet": {
+				"description": "DIY离线比特币签名设备"
+			},
+			"fireblocks_wallet": {
+				"description": "机构级MPC托管平台"
+			},
+			"anchorage_wallet": {
+				"description": "受监管的数字资产银行"
+			},
+			"bitgo_wallet": {
+				"description": "机构级多签托管"
+			},
+			"binance_cex": {
+				"description": "全球交易量最大的加密货币交易所"
+			},
+			"coinbase_cex": {
+				"description": "美国领先的合规加密货币交易所"
+			},
+			"okx_cex": {
+				"description": "全球交易所，提供衍生品和Web3"
+			},
+			"bybit_cex": {
+				"description": "顶级衍生品和永续合约交易所"
+			},
+			"kraken_cex": {
+				"description": "注重安全的美国加密交易所"
+			},
+			"bitget_cex": {
+				"description": "专注跟单交易的交易所"
+			},
+			"kucoin_cex": {
+				"description": "山寨币丰富的交易所，提供交易机器人"
+			},
+			"gateio_cex": {
+				"description": "早期山寨币上市交易所"
+			},
+			"htx_cex": {
+				"description": "原火币全球交易所"
+			},
+			"mexc_cex": {
+				"description": "新币快速上市交易所"
+			},
+			"deribit_cex": {
+				"description": "领先的加密期权交易所"
+			},
+			"bitfinex_cex": {
+				"description": "提供保证金和借贷的交易所"
+			},
+			"bitmex_cex": {
+				"description": "加密永续合约先驱"
+			},
+			"upbit_cex": {
+				"description": "韩国最大的加密货币交易所"
+			},
+			"bithumb_cex": {
+				"description": "韩国主要交易所"
+			},
+			"bitflyer_cex": {
+				"description": "日本领先的合规交易所"
+			},
+			"coincheck_cex": {
+				"description": "日本交易所，提供NFT市场"
+			},
+			"wazirx_cex": {
+				"description": "印度领先的加密交易所"
+			},
+			"bitstamp_cex": {
+				"description": "欧洲最古老的加密交易所"
+			},
+			"lbank_cex": {
+				"description": "提供Launchpad和山寨币的交易所"
+			},
+			"backpack_cex": {
+				"description": "迪拜监管的Solana聚焦交易所"
+			},
+			"hyperliquid_cex": {
+				"description": "链上永续合约订单簿"
+			},
+			"cube_cex": {
+				"description": "MPC托管混合交易所"
+			},
+			"bullish_cex": {
+				"description": "Block.one支持的机构交易所"
+			},
+			"hashkey_cex": {
+				"description": "香港持牌交易所"
+			},
+			"osl_cex": {
+				"description": "香港机构交易所"
+			},
+			"coingecko_exchanges": {
+				"description": "按信任分数比较交易所"
+			},
+			"cmc_exchanges": {
+				"description": "CoinMarketCap交易所排名"
+			},
+			"cryptorank_exchanges": {
+				"description": "交易所分析和排名"
+			},
+			"kaiko_data": {
+				"description": "机构级市场数据提供商"
+			},
+			"ccdata": {
+				"description": "机构市场指数和数据"
+			},
+			"coinbase_prime": {
+				"description": "机构交易和托管"
+			},
+			"binance_institutional": {
+				"description": "币安VIP和OTC服务"
+			},
+			"galaxy_trading": {
+				"description": "机构OTC和衍生品"
+			},
+			"cumberland_trading": {
+				"description": "DRW加密交易台"
+			},
+			"moonpay_ramp": {
+				"description": "应用内加密货币入金"
+			},
+			"transak_ramp": {
+				"description": "全球法币兑换加密货币网关"
+			},
+			"ramp_network": {
+				"description": "SDK集成入金/出金"
+			},
+			"banxa_ramp": {
+				"description": "合规支付提供商"
+			},
+			"paxful_p2p": {
+				"description": "带托管的P2P交易"
+			},
+			"localbitcoins_p2p": {
+				"description": "本地比特币交易市场"
+			},
+			"noones_p2p": {
+				"description": "新兴市场P2P交易"
+			},
+			"ultrasound_money": {
+				"description": "追踪ETH销毁和供应变化"
+			},
+			"etherscan_gastracker": {
+				"description": "实时以太坊Gas价格"
+			},
+			"blocknative_gas": {
+				"description": "基于内存池的Gas预测"
+			},
+			"gasnow": {
+				"description": "快速Gas价格追踪器，提供API"
+			},
+			"ethgas_watch": {
+				"description": "Gas价格警报和通知"
+			},
+			"owlracle": {
+				"description": "多链Gas预言机，提供API"
+			},
+			"uniswap_gas": {
+				"description": "Uniswap - Gas消耗最多的DEX"
+			},
+			"opensea_gas": {
+				"description": "OpenSea - NFT市场Gas领先者"
+			},
+			"blur_gas": {
+				"description": "Blur - 高交易量NFT交易"
+			},
+			"tether_gas": {
+				"description": "USDT - 高交易量稳定币转账"
+			},
+			"1inch_gas": {
+				"description": "1inch - DEX聚合器路由"
+			},
+			"metamask_swap_gas": {
+				"description": "MetaMask交换Gas消耗"
+			},
+			"flashbots_gas": {
+				"description": "Flashbots MEV捆绑交易"
+			},
+			"banana_gun_gas": {
+				"description": "Telegram交易机器人Gas使用"
+			},
+			"maestro_gas": {
+				"description": "多链狙击机器人"
+			},
+			"unibot_gas": {
+				"description": "Telegram交易和跟单机器人"
+			},
+			"across_gas": {
+				"description": "Across - 快速L2跨链桥"
+			},
+			"stargate_gas": {
+				"description": "Stargate - LayerZero跨链桥"
+			},
+			"l2beat_gas": {
+				"description": "L2活动和TPS比较"
+			},
+			"rollup_codes": {
+				"description": "Rollup操作码Gas比较"
+			},
+			"txstreet": {
+				"description": "实时区块链可视化"
+			},
+			"evm_gas_profiler": {
+				"description": "Tenderly Gas分析工具"
+			},
+			"etherscan_charts": {
+				"description": "历史Gas价格图表"
+			},
+			"dune_gas": {
+				"description": "自定义Gas分析仪表板"
+			},
+			"parsec_gas": {
+				"description": "DeFi分析和监控"
+			},
+			"rated_network": {
+				"description": "验证者效率指标"
+			},
+			"cryptorank_funding": {
+				"description": "加密融资轮次追踪器"
+			},
+			"rootdata_funding": {
+				"description": "Web3项目和融资数据库"
+			},
+			"defilama_raises": {
+				"description": "DeFi融资轮次时间线"
+			},
+			"messari_funding": {
+				"description": "加密研究和融资"
+			},
+			"kaito_ai": {
+				"description": "AI驱动的加密趋势分析"
+			},
+			"lunarcrush": {
+				"description": "社交情绪分析"
+			},
+			"artemis_xyz": {
+				"description": "基本面加密分析"
+			},
+			"coinglass_trends": {
+				"description": "衍生品和资金数据"
+			},
+			"cryptoquant_trends": {
+				"description": "交易所资金流分析"
+			},
+			"ethereum_magicians": {
+				"description": "以太坊治理讨论"
+			},
+			"ethresear_ch": {
+				"description": "以太坊研究论坛"
+			},
+			"github_trending_sol": {
+				"description": "热门Solidity仓库"
+			},
+			"paradigm_research": {
+				"description": "技术加密研究"
+			},
+			"a16z_research": {
+				"description": "a16z加密研究"
+			},
+			"flashbots_writings": {
+				"description": "MEV和PBS研究"
+			},
+			"modular_narrative": {
+				"description": "模块化区块链生态"
+			},
+			"btcfi_narrative": {
+				"description": "比特币DeFi生态"
+			},
+			"intent_narrative": {
+				"description": "意图和链抽象"
+			},
+			"depin_narrative": {
+				"description": "去中心化物理基础设施"
+			},
+			"socialfi_narrative": {
+				"description": "社交金融趋势"
+			},
+			"theblock_research": {
+				"description": "The Block数据和研究"
+			},
+			"bankless_hq": {
+				"description": "Bankless DeFi内容"
+			},
+			"unchained_crypto": {
+				"description": "加密新闻和播客"
+			},
+			"ethglobal_events": {
+				"description": "全球以太坊黑客松"
+			},
+			"devcon_ethereum": {
+				"description": "年度以太坊大会"
+			},
+			"consensus_coindesk": {
+				"description": "主要加密行业活动"
+			},
+			"token2049": {
+				"description": "亚洲顶级加密大会"
+			},
+			"developerreport": {
+				"description": "年度开发者生态报告"
+			},
+			"tokenterminal_dev": {
+				"description": "协议收入和指标"
+			},
+			"paradigm_vc": {
+				"description": "加密原生研究型VC"
+			},
+			"sequoia_crypto": {
+				"description": "红杉资本加密投资"
+			},
+			"polychain_capital": {
+				"description": "早期加密基金"
+			},
+			"pantera_capital": {
+				"description": "最早的加密对冲基金"
+			},
+			"dragonfly_capital": {
+				"description": "亚洲聚焦的全球加密VC"
+			},
+			"multicoin_capital": {
+				"description": "论点驱动的加密基金"
+			},
+			"delphi_ventures": {
+				"description": "研究驱动的加密VC"
+			},
+			"placeholder_vc": {
+				"description": "治理聚焦的基金"
+			},
+			"variant_fund": {
+				"description": "用户所有权聚焦的VC"
+			},
+			"hashed_vc": {
+				"description": "韩国Web3投资者"
+			},
+			"hack_vc": {
+				"description": "早期基础设施投资者"
+			},
+			"bankless_ventures": {
+				"description": "社区驱动的VC"
+			},
+			"1kx_capital": {
+				"description": "代币网络投资者"
+			},
+			"robot_ventures": {
+				"description": "早期DeFi投资者(Compound)"
+			},
+			"okx_ventures": {
+				"description": "OKX投资部门"
+			},
+			"kraken_ventures": {
+				"description": "Kraken风投基金"
+			},
+			"circle_ventures": {
+				"description": "Circle(USDC)风投"
+			},
+			"galaxy_ventures": {
+				"description": "Galaxy Digital风投"
+			},
+			"ycombinator_crypto": {
+				"description": "YC创业加速器"
+			},
+			"techstars_crypto": {
+				"description": "全球创业加速器"
+			},
+			"consensys_team": {
+				"description": "MetaMask和Infura开发者"
+			},
+			"offchain_labs": {
+				"description": "Arbitrum开发团队"
+			},
+			"matter_labs": {
+				"description": "zkSync开发团队"
+			},
+			"optimism_team": {
+				"description": "Optimism和Superchain开发者"
+			},
+			"alchemy_team": {
+				"description": "Web3基础设施提供商"
+			},
+			"chainlink_labs": {
+				"description": "Chainlink预言机开发者"
+			},
+			"eigenlayer_team": {
+				"description": "EigenLayer再质押协议"
+			},
+			"uniswap_labs": {
+				"description": "Uniswap协议开发者"
+			},
+			"jump_crypto": {
+				"description": "加密交易和基础设施"
+			},
+			"wintermute_trading": {
+				"description": "做市商和VC"
+			},
+			"gauntlet_network": {
+				"description": "DeFi风险和模拟"
+			},
+			"dealroom_crypto": {
+				"description": "创业公司数据库和分析"
+			},
+			"sec_crypto": {
+				"description": "美国证券交易委员会"
+			},
+			"cftc_crypto": {
+				"description": "美国商品期货交易委员会"
+			},
+			"fincen_crypto": {
+				"description": "美国金融犯罪执法网络"
+			},
+			"occ_crypto": {
+				"description": "美国货币监理署"
+			},
+			"fed_crypto": {
+				"description": "美联储CBDC研究"
+			},
+			"nydfs_crypto": {
+				"description": "纽约BitLicense监管机构"
+			},
+			"mica_eu": {
+				"description": "欧盟加密资产市场法规"
+			},
+			"esma_crypto": {
+				"description": "欧盟证券市场管理局"
+			},
+			"eba_crypto": {
+				"description": "欧洲银行管理局"
+			},
+			"fca_crypto": {
+				"description": "英国金融行为监管局"
+			},
+			"bafin_crypto": {
+				"description": "德国金融监管局"
+			},
+			"amf_crypto": {
+				"description": "法国金融市场管理局"
+			},
+			"finma_crypto": {
+				"description": "瑞士金融市场监管局"
+			},
+			"hkma_crypto": {
+				"description": "香港金融管理局"
+			},
+			"sfc_hk": {
+				"description": "香港证监会"
+			},
+			"mas_crypto": {
+				"description": "新加坡金融管理局"
+			},
+			"jfsa_crypto": {
+				"description": "日本金融厅"
+			},
+			"fsc_korea": {
+				"description": "韩国金融服务委员会"
+			},
+			"asic_crypto": {
+				"description": "澳大利亚证券投资委员会"
+			},
+			"rbi_crypto": {
+				"description": "印度储备银行"
+			},
+			"vara_dubai": {
+				"description": "迪拜虚拟资产监管局"
+			},
+			"adgm_crypto": {
+				"description": "阿布扎比全球市场"
+			},
+			"sama_crypto": {
+				"description": "沙特阿拉伯货币管理局"
+			},
+			"sarb_crypto": {
+				"description": "南非储备银行"
+			},
+			"csa_crypto": {
+				"description": "加拿大证券管理局"
+			},
+			"cnbv_crypto": {
+				"description": "墨西哥金融监管机构"
+			},
+			"bcra_crypto": {
+				"description": "阿根廷中央银行"
+			},
+			"cvm_brazil": {
+				"description": "巴西证券委员会"
+			},
+			"fatf_crypto": {
+				"description": "全球反洗钱标准机构"
+			},
+			"bis_crypto": {
+				"description": "国际清算银行"
+			},
+			"fsb_crypto": {
+				"description": "金融稳定委员会"
+			},
+			"iosco_crypto": {
+				"description": "证券监管机构国际组织"
+			},
+			"coinbase_legal": {
+				"description": "Coinbase政策资源"
+			},
+			"a16z_policy": {
+				"description": "a16z加密政策中心"
+			},
+			"blockchain_association": {
+				"description": "美国行业倡导团体"
+			},
+			"coin_center": {
+				"description": "加密政策研究非营利组织"
+			},
+			"atlanticcouncil_cbdc": {
+				"description": "全球CBDC追踪器"
+			},
+			"global_crypto_map": {
+				"description": "全球监管比较"
+			},
+			"chainalysis_compliance": {
+				"description": "区块链合规工具"
+			},
+			"elliptic_compliance": {
+				"description": "反洗钱和合规平台"
+			},
+			"trm_labs": {
+				"description": "加密调查工具"
+			},
+			"merkle_science": {
+				"description": "亚洲风险和合规"
+			},
+			"notabene_travel": {
+				"description": "Travel Rule合规"
+			},
+			"sumsub_kyc": {
+				"description": "KYC验证平台"
+			},
+			"kol_vitalik": {
+				"description": "以太坊联合创始人，区块链先驱"
+			},
+			"kol_cz_binance": {
+				"description": "币安创始人，加密行业领袖"
+			},
+			"kol_brian_armstrong": {
+				"description": "Coinbase CEO，加密货币倡导者"
+			},
+			"kol_balaji": {
+				"description": "前a16z合伙人，《网络国家》作者"
+			},
+			"kol_naval": {
+				"description": "AngelList创始人，加密哲学家"
+			},
+			"kol_cobie": {
+				"description": "加密交易员，UpOnly播客主持"
+			},
+			"kol_hsaka": {
+				"description": "加密交易员和市场分析师"
+			},
+			"kol_tetranode": {
+				"description": "DeFi巨鲸，挖矿专家"
+			},
+			"kol_lookonchain": {
+				"description": "链上数据分析师，巨鲸追踪者"
+			},
+			"kol_defi_dad": {
+				"description": "DeFi教育者和挖矿玩家"
+			},
+			"kol_punk6529": {
+				"description": "NFT收藏家，开放元宇宙倡导者"
+			},
+			"kol_ansem": {
+				"description": "Solana生态交易员，Meme币猎手"
+			},
+			"kol_cryptohayes": {
+				"description": "BitMEX联合创始人，宏观分析师"
+			},
+			"kol_raaborhmason": {
+				"description": "Real Vision CEO，宏观投资者"
+			},
+			"kol_ericryptoguy": {
+				"description": "山寨币交易员和分析师"
+			},
+			"kol_dankrad": {
+				"description": "以太坊研究员，danksharding发明者"
+			},
+			"kol_sassal": {
+				"description": "Daily Gwei主持人，ETH教育者"
+			},
+			"kol_wublock": {
+				"description": "中国加密新闻，矿业内幕"
+			},
+			"kol_tier10k": {
+				"description": "加密突发新闻账号"
+			},
+			"kol_bankless_yt": {
+				"description": "DeFi播客，专注以太坊"
+			},
+			"kol_coinbureau": {
+				"description": "加密教育YouTube频道"
+			},
+			"kol_unchained_yt": {
+				"description": "加密访谈和新闻播客"
+			},
+			"kol_bell_curve": {
+				"description": "DeFi深度播客"
+			},
+			"kol_bitfish": {
+				"description": "中文加密分析师，宏观洞察"
+			},
+			"kol_colin_wu": {
+				"description": "中文加密记者，矿业新闻"
+			},
+			"kol_mindao": {
+				"description": "dForce创始人，DeFi建设者"
+			},
+			"kol_bitrun": {
+				"description": "微博比特币分析师"
+			},
+			"kol_phyrex": {
+				"description": "中文数据分析师，链上洞察"
+			},
+			"kol_0xsun": {
+				"description": "中文NFT和Alpha猎手"
+			},
+			"kol_bitwu": {
+				"description": "中文交易教育"
+			},
+			"kol_lvdepeng": {
+				"description": "中文交易导师"
+			},
+			"kol_maki": {
+				"description": "SushiSwap贡献者，日本DeFi"
+			},
+			"kol_ikehaya": {
+				"description": "日本NFT创作者，加密教育者"
+			},
+			"kol_koji": {
+				"description": "日本加密交易员和分析师"
+			},
+			"kol_arata": {
+				"description": "日本DeFi和L2研究员"
+			},
+			"kol_crypto_navi": {
+				"description": "日本加密教育YouTube"
+			},
+			"kol_kimchi_premium": {
+				"description": "韩国市场分析和洞察"
+			},
+			"kol_cryptoquant_ki": {
+				"description": "CryptoQuant CEO，链上专家"
+			},
+			"kol_coinkim": {
+				"description": "韩国加密分析和教育"
+			},
+			"kol_crypto_god": {
+				"description": "韩国加密YouTube分析师"
+			},
+			"kol_dalto": {
+				"description": "西班牙语DeFi教育者和建设者"
+			},
+			"kol_cripto247": {
+				"description": "拉丁美洲西班牙语加密新闻"
+			},
+			"kol_jorge_crypto": {
+				"description": "西班牙语加密交易YouTube"
+			},
+			"kol_panda_cripto": {
+				"description": "西班牙语加密交易分析师"
+			},
+			"kol_favelado_cripto": {
+				"description": "巴西加密交易员"
+			},
+			"kol_criptomaniacos": {
+				"description": "巴西加密教育YouTube"
+			},
+			"kol_bitboy_br": {
+				"description": "巴西金融和加密教育者"
+			},
+			"kol_hasheur": {
+				"description": "法语加密YouTube，Owen Simonin"
+			},
+			"kol_cryptoast": {
+				"description": "法语加密新闻媒体"
+			},
+			"kol_monsieur_tk": {
+				"description": "法语DeFi分析"
+			},
+			"kol_blocktrainer": {
+				"description": "德语比特币教育YouTube"
+			},
+			"kol_tagebuch": {
+				"description": "德语加密交易分析"
+			},
+			"kol_julian_hosp": {
+				"description": "德语加密教育者，CakeDeFi"
+			},
+			"kol_cryptorofl": {
+				"description": "俄语加密交易员和分析师"
+			},
+			"kol_incrypted": {
+				"description": "俄语加密新闻媒体"
+			},
+			"kol_cryptoins": {
+				"description": "俄语Telegram交易信号"
+			},
+			"kol_arab_crypto": {
+				"description": "阿拉伯语中东加密新闻"
+			},
+			"kol_bitcoin_ar": {
+				"description": "阿拉伯语比特币教育"
+			},
+			"kol_uae_crypto": {
+				"description": "阿联酋和迪拜加密社区"
+			},
+			"kol_kripto_adam": {
+				"description": "土耳其语加密分析"
+			},
+			"kol_coin_otag": {
+				"description": "土耳其语加密新闻媒体"
+			},
+			"kol_kripto_tv": {
+				"description": "土耳其语加密YouTube"
+			},
+			"kol_coin68": {
+				"description": "越南语加密新闻媒体"
+			},
+			"kol_tien_ao": {
+				"description": "越南语加密教育"
+			},
+			"kol_defi_vn": {
+				"description": "越南DeFi社区"
+			},
+			"kol_coinvestasi": {
+				"description": "印尼语加密新闻和教育"
+			},
+			"kol_indodax": {
+				"description": "印尼交易所教育"
+			},
+			"kol_crypto_id": {
+				"description": "印尼加密社区"
+			},
+			"kol_bitkub": {
+				"description": "泰国交易所教育"
+			},
+			"kol_siam_block": {
+				"description": "泰国区块链新闻"
+			},
+			"kol_crypto_th": {
+				"description": "泰国加密社区"
+			},
+			"kol_crypto_india": {
+				"description": "印度加密新闻"
+			},
+			"kol_pushpendra": {
+				"description": "印度加密教育者"
+			},
+			"kol_crypto_gurukul": {
+				"description": "印地语加密教育YouTube"
+			},
+			"kol_bitvavo": {
+				"description": "荷兰交易所教育"
+			},
+			"kol_kryptowaluty": {
+				"description": "波兰语加密新闻"
+			},
+			"kol_cryptonomist": {
+				"description": "意大利语加密新闻媒体"
 			}
 		},
 		"seo": {
@@ -5819,7 +6657,12 @@
 			"price": "$0",
 			"period": "永久",
 			"description": "适合刚开始使用",
-			"features": ["最多 10 个钱包", "基础批量操作", "社区支持", "标准速度"],
+			"features": [
+				"最多 10 个钱包",
+				"基础批量操作",
+				"社区支持",
+				"标准速度"
+			],
 			"cta": "开始使用"
 		},
 		"pro": {
@@ -5827,7 +6670,13 @@
 			"price": "$19",
 			"period": "月",
 			"description": "适合高级用户",
-			"features": ["无限钱包", "高级批量操作", "优先支持", "高速处理", "API 访问"],
+			"features": [
+				"无限钱包",
+				"高级批量操作",
+				"优先支持",
+				"高速处理",
+				"API 访问"
+			],
 			"cta": "开始免费试用"
 		},
 		"enterprise": {
@@ -5835,7 +6684,13 @@
 			"price": "定制",
 			"period": "月",
 			"description": "适合团队和组织",
-			"features": ["包含专业版所有功能", "专属支持", "定制集成", "SLA 保障", "团队管理"],
+			"features": [
+				"包含专业版所有功能",
+				"专属支持",
+				"定制集成",
+				"SLA 保障",
+				"团队管理"
+			],
 			"cta": "联系销售"
 		},
 		"note": "所有计划均包含基础功能和安全保障",
