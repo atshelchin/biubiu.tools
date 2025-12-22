@@ -32,10 +32,11 @@
 
 	const canDismiss = $derived(environmentType === 'localhost' || environmentType === 'official');
 
-	// Only show banner after mounted and dismissed state is determined
+	// Only show banner after mounted, dismissed state is determined, and delay complete
 	const showBanner = $derived.by(() => {
 		if (!mounted) return false;
 		if (dismissed === null) return false;
+		if (!delayComplete) return false;
 		if (environmentType === 'community') return true;
 		return !dismissed;
 	});
@@ -58,6 +59,7 @@
 		if (!browser) return;
 
 		mounted = true;
+		let shouldDelay = false;
 
 		if (environmentType === 'official') {
 			const dismissedAt = localStorage.getItem(OFFICIAL_DISMISS_KEY);
@@ -65,17 +67,31 @@
 				const daysSinceDismissed = (Date.now() - parseInt(dismissedAt, 10)) / (1000 * 60 * 60 * 24);
 				if (daysSinceDismissed < DISMISS_INTERVAL_DAYS) {
 					dismissed = true;
-					return;
+				} else {
+					// Clear expired dismissal, will show banner after delay
+					localStorage.removeItem(OFFICIAL_DISMISS_KEY);
+					dismissed = false;
+					shouldDelay = true;
 				}
-				// Clear expired dismissal
-				localStorage.removeItem(OFFICIAL_DISMISS_KEY);
+			} else {
+				// First visit - delay banner
+				dismissed = false;
+				shouldDelay = true;
 			}
-			dismissed = false;
 		} else if (environmentType === 'localhost') {
 			dismissed = sessionStorage.getItem(LOCALHOST_DISMISS_KEY) === 'true';
 		} else {
-			// Community - never dismissed
+			// Community - never dismissed, show immediately (important warning)
 			dismissed = false;
+		}
+
+		// Apply delay for first-time or returning visitors (official only)
+		if (shouldDelay) {
+			setTimeout(() => {
+				delayComplete = true;
+			}, FIRST_VISIT_DELAY_MS);
+		} else {
+			delayComplete = true;
 		}
 	});
 </script>

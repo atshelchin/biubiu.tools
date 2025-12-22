@@ -8464,7 +8464,7 @@
 		},
 		"disclaimer": {
 			"title": "Disclaimer of Warranties",
-			"content": "BiuBiu Tools is provided \"AS IS\" and \"AS AVAILABLE\" without warranties of any kind, either express or implied. We do not warrant that the service will be uninterrupted, error-free, or free from viruses or other harmful components. We make no guarantees regarding the accuracy, reliability, or completeness of any information provided."
+			"content": "BiuBiu Tools is provided \"AS IS\" and \"AS AVAILABLE\" without warranties of any kind, either express or implied. Due to the complexity of the internet environment, we cannot guarantee that the service will always run uninterrupted or be completely error-free. We make no guarantees regarding the accuracy, reliability, or completeness of any information provided."
 		},
 		"limitation": {
 			"title": "Limitation of Liability",
@@ -8477,6 +8477,10 @@
 			"item2": "Circumventing economic sanctions or export controls.",
 			"item3": "Exploiting vulnerabilities in smart contracts or blockchain networks for malicious purposes.",
 			"item4": "Any activity that could harm, disable, or impair our services or other users."
+		},
+		"open_source": {
+			"title": "Open Source & Derivative Works",
+			"content": "BiuBiu Tools is an open-source project. You are free to view, fork, modify, and deploy the source code under the applicable license. However, BiuBiu Tools and its developers bear no responsibility for any derivative works, third-party deployments, or modified versions. Any issues arising from non-official deployments are solely the responsibility of the operators of those deployments. The only official website is biubiu.tools."
 		},
 		"modifications": {
 			"title": "Modifications to Terms",
