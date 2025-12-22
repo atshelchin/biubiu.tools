@@ -9,6 +9,7 @@
 
 	const OFFICIAL_DISMISS_KEY = 'env-banner-official-dismissed-at';
 	const LOCALHOST_DISMISS_KEY = 'env-banner-localhost-dismissed';
+	const OFFICIAL_SHOWN_KEY = 'env-banner-official-shown'; // Track if shown this session
 	const DISMISS_INTERVAL_DAYS = 30;
 	const FIRST_VISIT_DELAY_MS = 3000; // 3 seconds delay for first-time visitors
 
@@ -49,10 +50,18 @@
 
 		if (environmentType === 'official') {
 			localStorage.setItem(OFFICIAL_DISMISS_KEY, Date.now().toString());
+			sessionStorage.setItem(OFFICIAL_SHOWN_KEY, 'true');
 		} else if (environmentType === 'localhost') {
 			sessionStorage.setItem(LOCALHOST_DISMISS_KEY, 'true');
 		}
 	}
+
+	// Mark as shown when banner becomes visible (for official site)
+	$effect(() => {
+		if (showBanner && environmentType === 'official' && browser) {
+			sessionStorage.setItem(OFFICIAL_SHOWN_KEY, 'true');
+		}
+	});
 
 	// Check storage on mount - runs once
 	$effect(() => {
@@ -62,21 +71,28 @@
 		let shouldDelay = false;
 
 		if (environmentType === 'official') {
-			const dismissedAt = localStorage.getItem(OFFICIAL_DISMISS_KEY);
-			if (dismissedAt) {
-				const daysSinceDismissed = (Date.now() - parseInt(dismissedAt, 10)) / (1000 * 60 * 60 * 24);
-				if (daysSinceDismissed < DISMISS_INTERVAL_DAYS) {
-					dismissed = true;
+			// Check if already shown this session (prevents re-showing on language switch etc.)
+			const alreadyShownThisSession = sessionStorage.getItem(OFFICIAL_SHOWN_KEY) === 'true';
+			if (alreadyShownThisSession) {
+				dismissed = true;
+			} else {
+				const dismissedAt = localStorage.getItem(OFFICIAL_DISMISS_KEY);
+				if (dismissedAt) {
+					const daysSinceDismissed =
+						(Date.now() - parseInt(dismissedAt, 10)) / (1000 * 60 * 60 * 24);
+					if (daysSinceDismissed < DISMISS_INTERVAL_DAYS) {
+						dismissed = true;
+					} else {
+						// Clear expired dismissal, will show banner after delay
+						localStorage.removeItem(OFFICIAL_DISMISS_KEY);
+						dismissed = false;
+						shouldDelay = true;
+					}
 				} else {
-					// Clear expired dismissal, will show banner after delay
-					localStorage.removeItem(OFFICIAL_DISMISS_KEY);
+					// First visit - delay banner
 					dismissed = false;
 					shouldDelay = true;
 				}
-			} else {
-				// First visit - delay banner
-				dismissed = false;
-				shouldDelay = true;
 			}
 		} else if (environmentType === 'localhost') {
 			dismissed = sessionStorage.getItem(LOCALHOST_DISMISS_KEY) === 'true';
