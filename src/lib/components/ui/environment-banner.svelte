@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { X, AlertTriangle, Wrench } from '@lucide/svelte';
+	import { X, AlertTriangle, Wrench, ShieldCheck } from '@lucide/svelte';
 	import { browser } from '$app/environment';
 	import { useI18n } from '@shelchin/i18n/svelte';
 
@@ -7,7 +7,15 @@
 
 	type EnvironmentType = 'official' | 'localhost' | 'community';
 
-	let dismissed = $state(false);
+	const OFFICIAL_DISMISS_KEY = 'env-banner-official-dismissed-at';
+	const LOCALHOST_DISMISS_KEY = 'env-banner-localhost-dismissed';
+	const DISMISS_INTERVAL_DAYS = 30;
+	const FIRST_VISIT_DELAY_MS = 3000; // 3 seconds delay for first-time visitors
+
+	// Start with null to indicate "not yet determined"
+	let dismissed = $state<boolean | null>(null);
+	let mounted = $state(false);
+	let delayComplete = $state(false);
 
 	const environmentType: EnvironmentType = $derived.by(() => {
 		if (!browser) return 'official';
@@ -22,25 +30,52 @@
 		return 'community';
 	});
 
-	const canDismiss = $derived(environmentType === 'localhost');
-	const showBanner = $derived(environmentType !== 'official' && !dismissed);
+	const canDismiss = $derived(environmentType === 'localhost' || environmentType === 'official');
+
+	// Only show banner after mounted and dismissed state is determined
+	const showBanner = $derived.by(() => {
+		if (!mounted) return false;
+		if (dismissed === null) return false;
+		if (environmentType === 'community') return true;
+		return !dismissed;
+	});
 
 	function handleDismiss() {
-		if (canDismiss) {
-			dismissed = true;
-			if (browser) {
-				sessionStorage.setItem('env-banner-dismissed', 'true');
-			}
+		if (!canDismiss) return;
+
+		dismissed = true;
+		if (!browser) return;
+
+		if (environmentType === 'official') {
+			localStorage.setItem(OFFICIAL_DISMISS_KEY, Date.now().toString());
+		} else if (environmentType === 'localhost') {
+			sessionStorage.setItem(LOCALHOST_DISMISS_KEY, 'true');
 		}
 	}
 
-	// Check sessionStorage on mount
+	// Check storage on mount - runs once
 	$effect(() => {
-		if (browser && environmentType === 'localhost') {
-			const wasDismissed = sessionStorage.getItem('env-banner-dismissed') === 'true';
-			if (wasDismissed) {
-				dismissed = true;
+		if (!browser) return;
+
+		mounted = true;
+
+		if (environmentType === 'official') {
+			const dismissedAt = localStorage.getItem(OFFICIAL_DISMISS_KEY);
+			if (dismissedAt) {
+				const daysSinceDismissed = (Date.now() - parseInt(dismissedAt, 10)) / (1000 * 60 * 60 * 24);
+				if (daysSinceDismissed < DISMISS_INTERVAL_DAYS) {
+					dismissed = true;
+					return;
+				}
+				// Clear expired dismissal
+				localStorage.removeItem(OFFICIAL_DISMISS_KEY);
 			}
+			dismissed = false;
+		} else if (environmentType === 'localhost') {
+			dismissed = sessionStorage.getItem(LOCALHOST_DISMISS_KEY) === 'true';
+		} else {
+			// Community - never dismissed
+			dismissed = false;
 		}
 	});
 </script>
@@ -54,6 +89,9 @@
 			{:else if environmentType === 'localhost'}
 				<Wrench size={18} />
 				<span>{i18n.t('environment_banner.dev_environment')}</span>
+			{:else if environmentType === 'official'}
+				<ShieldCheck size={18} />
+				<span>{i18n.t('environment_banner.official_reminder')}</span>
 			{/if}
 		</div>
 		{#if canDismiss}
@@ -80,6 +118,12 @@
 		display: flex;
 		align-items: center;
 		gap: var(--space-2);
+	}
+
+	/* Official - Brand green (darker for better readability) */
+	.environment-banner.official {
+		background: hsl(var(--brand-hue), var(--brand-saturation), 35%);
+		color: white;
 	}
 
 	/* Community deploy - Orange warning */

@@ -63,9 +63,9 @@
 			<div class="footer-info">
 				<span class="copyright">© {currentYear} biubiu.tools</span>
 				<span class="separator">·</span>
-				<span class="tech">Built with Svelte</span>
+				<a href="/privacy" class="legal-link">{i18n.t('footer.privacy')}</a>
 				<span class="separator">·</span>
-				<span class="tech">Powered by Ethereum</span>
+				<a href="/terms" class="legal-link">{i18n.t('footer.terms')}</a>
 			</div>
 
 			<div class="controls-group">
@@ -181,13 +181,14 @@
 		opacity: 0.3;
 	}
 
-	.tech {
+	.legal-link {
+		color: var(--color-muted-foreground);
+		text-decoration: none;
 		transition: color 0.2s ease;
 	}
 
-	.tech:hover {
+	.legal-link:hover {
 		color: var(--color-primary);
-		cursor: default;
 	}
 
 	.controls-group {
