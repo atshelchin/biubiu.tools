@@ -1,6 +1,5 @@
 <script lang="ts">
-	import LangToggle from '$lib/components/widgets/lang-toggle.svelte';
-	import ThemeToggle from '$lib/components/widgets/theme-toggle.svelte';
+	import GitHubStarButton from '$lib/components/widgets/github-star-button.svelte';
 </script>
 
 <div class="top-toolbar">
@@ -10,8 +9,7 @@
 			<span class="site-title">BiuBiu Tools</span>
 		</a>
 		<div class="toolbar-controls">
-			<LangToggle />
-			<ThemeToggle />
+			<GitHubStarButton />
 		</div>
 	</div>
 </div>
