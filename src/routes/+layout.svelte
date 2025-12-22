@@ -8,6 +8,7 @@
 	import type { LayoutData } from './$types.js';
 	import Footer from '@/lib/components/ui/Footer.svelte';
 	import TopToolbar from '@/features/landingpage/TopToolbar.svelte';
+	import EnvironmentBanner from '$lib/components/ui/environment-banner.svelte';
 	import { PACKAGE_NAME, locales } from '../i18n/i18n.svelte';
 	let { children, data } = $props<{ children: import('svelte').Snippet; data: LayoutData }>();
 
@@ -26,6 +27,7 @@
 	});
 </script>
 
+<EnvironmentBanner />
 <TopToolbar />
 <div class="app">
 	{@render children()}
