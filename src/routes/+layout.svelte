@@ -2,6 +2,7 @@
 	import { createI18nStore, setI18nContext } from '@shelchin/i18n/svelte';
 	import { onMount } from 'svelte';
 	import { createThemeStore } from '$lib/stores/theme.svelte.js';
+	import { createGeoBlockStore } from '$lib/stores/geo-block.svelte.js';
 	import { initializeReferral } from '$lib/utils/referral';
 	import '../design-tokens.css';
 	import '../global.css';
@@ -9,6 +10,7 @@
 	import Footer from '@/lib/components/ui/Footer.svelte';
 	import TopToolbar from '@/features/landingpage/TopToolbar.svelte';
 	import EnvironmentBanner from '$lib/components/ui/environment-banner.svelte';
+	import GeoBlockOverlay from '$lib/components/ui/geo-block-overlay.svelte';
 	import { PACKAGE_NAME, locales } from '../i18n/i18n.svelte';
 	let { children, data } = $props<{ children: import('svelte').Snippet; data: LayoutData }>();
 
@@ -21,12 +23,16 @@
 	// Setup theme with initial value from server
 	createThemeStore(data.theme);
 
+	// Initialize geo-blocking detection (client-side backup)
+	createGeoBlockStore();
+
 	// Initialize referral system once for the entire app
 	onMount(() => {
 		initializeReferral();
 	});
 </script>
 
+<GeoBlockOverlay />
 <EnvironmentBanner />
 <TopToolbar />
 <div class="app">
