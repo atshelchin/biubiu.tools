@@ -105,6 +105,15 @@ The app supports multiple languages:
 
 Language preference is automatically detected and persisted.
 
+## 🍴 Self-Hosting / Fork
+
+Want to run your own instance? Check out our [Fork Guide](docs/FORK_GUIDE.md) ([中文](docs/FORK_GUIDE.zh.md)).
+
+**Requirements:**
+- Solidity development experience
+- Ability to deploy smart contracts
+- Understanding of CREATE2 deployment
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.

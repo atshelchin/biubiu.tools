@@ -105,6 +105,15 @@ biubiu.tools/
 
 语言偏好会自动检测并持久保存。
 
+## 🍴 自托管 / Fork
+
+想要运行自己的实例？请查看我们的 [Fork 指南](docs/FORK_GUIDE.zh.md)（[English](docs/FORK_GUIDE.md)）。
+
+**要求：**
+- Solidity 开发经验
+- 能够部署智能合约
+- 了解 CREATE2 部署
+
 ## 🤝 贡献
 
 欢迎贡献！请随时提交 Pull Request。
