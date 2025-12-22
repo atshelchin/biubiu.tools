@@ -1,5 +1,6 @@
 // Geo-blocking store for client-side region detection
 import { getContext, setContext } from 'svelte';
+import { browser } from '$app/environment';
 
 const GEO_BLOCK_CONTEXT_KEY = 'geo-block-context';
 
@@ -25,47 +26,81 @@ export function createGeoBlockStore() {
 	let countryCode = $state<string | null>(null);
 
 	async function checkRegion() {
-		if (typeof window === 'undefined') {
-			isChecking = false;
-			return;
-		}
+		let detected = false;
 
+		// Try Cloudflare's trace endpoint first (works when deployed to Cloudflare)
 		try {
-			// Use Cloudflare's trace endpoint - most reliable when on Cloudflare
 			const response = await fetch('/cdn-cgi/trace');
-			const text = await response.text();
-
-			// Parse the trace response
-			const lines = text.split('\n');
-			for (const line of lines) {
-				if (line.startsWith('loc=')) {
-					const code = line.substring(4).trim();
-					countryCode = code;
-					isBlocked = BLOCKED_COUNTRIES.has(code);
-					break;
+			if (response.ok) {
+				const text = await response.text();
+				const lines = text.split('\n');
+				for (const line of lines) {
+					if (line.startsWith('loc=')) {
+						const code = line.substring(4).trim();
+						countryCode = code;
+						isBlocked = BLOCKED_COUNTRIES.has(code);
+						detected = true;
+						break;
+					}
 				}
 			}
 		} catch {
-			// Fallback to ip-api.com if Cloudflare trace fails (e.g., local dev)
-			try {
-				const response = await fetch('https://ipapi.co/json/');
-				const data = await response.json();
-				countryCode = data.country_code || null;
-				if (countryCode) {
-					isBlocked = BLOCKED_COUNTRIES.has(countryCode);
-				}
-			} catch {
-				// If all detection fails, don't block (fail open)
-				console.warn('Geo detection failed, allowing access');
-				isBlocked = false;
-			}
-		} finally {
-			isChecking = false;
+			// Cloudflare trace not available
 		}
+
+		// Fallback to external IP detection APIs
+		if (!detected) {
+			// Try multiple APIs in order of reliability
+			const apis = [
+				{
+					url: 'https://api.country.is',
+					getCode: (data: { country?: string }) => data.country
+				},
+				{
+					// ip-api.com only works over HTTP (free tier)
+					url:
+						window.location.protocol === 'http:'
+							? 'http://ip-api.com/json/?fields=countryCode'
+							: null,
+					getCode: (data: { countryCode?: string }) => data.countryCode
+				}
+			];
+
+			for (const api of apis) {
+				if (!api.url) continue;
+				try {
+					const response = await fetch(api.url);
+					if (response.ok) {
+						const data = await response.json();
+						const code = api.getCode(data);
+						if (code) {
+							countryCode = code;
+							isBlocked = BLOCKED_COUNTRIES.has(code);
+							detected = true;
+							break;
+						}
+					}
+				} catch {
+					// Try next API
+				}
+			}
+		}
+
+		// If all detection fails, don't block (fail open)
+		if (!detected) {
+			console.warn('Geo detection failed, allowing access');
+			isBlocked = false;
+		}
+
+		isChecking = false;
 	}
 
-	// Start checking immediately
-	checkRegion();
+	// Only check on client side
+	if (browser) {
+		checkRegion();
+	} else {
+		isChecking = false;
+	}
 
 	const store: GeoBlockContext = {
 		get isBlocked() {
