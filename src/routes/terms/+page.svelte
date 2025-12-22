@@ -74,6 +74,11 @@
 		</section>
 
 		<section>
+			<h2>{i18n.t('terms.open_source.title')}</h2>
+			<p>{i18n.t('terms.open_source.content')}</p>
+		</section>
+
+		<section>
 			<h2>{i18n.t('terms.modifications.title')}</h2>
 			<p>{i18n.t('terms.modifications.content')}</p>
 		</section>
