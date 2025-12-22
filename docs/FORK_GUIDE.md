@@ -53,6 +53,7 @@ address constant FEE_RECIPIENT = 0xYourAddressHere;
 ```
 
 **Files to check:**
+
 - `src/BiuBiuPremium.sol`
 - `src/TokenSweep.sol`
 - `src/TokenDistribution.sol`
@@ -127,15 +128,15 @@ Edit `src/lib/config/deployment-configs.ts`:
 // Replace all contract addresses with your deployed addresses
 
 const BIUBIU_PREMIUM_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
-  contractName: 'BiuBiuPremium',
-  contractAddress: '0xYourBiuBiuPremiumAddress' as Address,
-  // ... rest of config
+	contractName: 'BiuBiuPremium',
+	contractAddress: '0xYourBiuBiuPremiumAddress' as Address
+	// ... rest of config
 };
 
 const wallet_sweep_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
-  contractName: 'TokenSweep',
-  contractAddress: '0xYourTokenSweepAddress' as Address,
-  // ... rest of config
+	contractName: 'TokenSweep',
+	contractAddress: '0xYourTokenSweepAddress' as Address
+	// ... rest of config
 };
 
 // ... update all other contracts
@@ -147,10 +148,10 @@ Edit `src/lib/utils/contract-deployment.ts`:
 
 ```typescript
 export const KNOWN_ADDRESSES = {
-  CREATE2_DEPLOYER: '0x3fab184622dc19b6109349b94811493bf2a45362' as Address,
-  CREATE2_PROXY: '0x4e59b44847b379578588920cA78FbF26c0B4956C' as Address,
-  // Update this to YOUR address
-  FEE_RECIPIENT: '0xYourFeeRecipientAddress' as Address
+	CREATE2_DEPLOYER: '0x3fab184622dc19b6109349b94811493bf2a45362' as Address,
+	CREATE2_PROXY: '0x4e59b44847b379578588920cA78FbF26c0B4956C' as Address,
+	// Update this to YOUR address
+	FEE_RECIPIENT: '0xYourFeeRecipientAddress' as Address
 } as const;
 ```
 
@@ -159,12 +160,14 @@ export const KNOWN_ADDRESSES = {
 If you want completely free usage, update these files:
 
 **`src/features/wallet-sweep/utils/tokensweep-executor.ts`:**
+
 ```typescript
 // Line 261 and 332
 const NON_MEMBER_FEE = parseEther('0'); // Free!
 ```
 
 **`src/features/wallet-sweep/types/fee.ts`:**
+
 ```typescript
 export const SWEEP_FEE_PER_TRANSACTION = 0; // Free!
 ```
@@ -179,6 +182,7 @@ bytecode: '0xYourNewBytecode...' as `0x${string}`,
 ```
 
 Or update the JSON files in `static/contracts/`:
+
 - `TokenSweep.json`
 - `BiuBiuPremium.json`
 - `TokenDistribution.json`
@@ -199,24 +203,27 @@ wrangler pages deploy .svelte-kit/cloudflare
 
 ## File Reference
 
-| Purpose | File Path |
-|---------|-----------|
-| Contract addresses | `src/lib/config/deployment-configs.ts` |
-| Fee recipient | `src/lib/utils/contract-deployment.ts` |
-| Sweep fee logic | `src/features/wallet-sweep/utils/tokensweep-executor.ts` |
-| Fee constants | `src/features/wallet-sweep/types/fee.ts` |
-| Contract ABIs | `static/contracts/*.json` |
-| Referral system | `src/lib/utils/referral.ts` |
+| Purpose            | File Path                                                |
+| ------------------ | -------------------------------------------------------- |
+| Contract addresses | `src/lib/config/deployment-configs.ts`                   |
+| Fee recipient      | `src/lib/utils/contract-deployment.ts`                   |
+| Sweep fee logic    | `src/features/wallet-sweep/utils/tokensweep-executor.ts` |
+| Fee constants      | `src/features/wallet-sweep/types/fee.ts`                 |
+| Contract ABIs      | `static/contracts/*.json`                                |
+| Referral system    | `src/lib/utils/referral.ts`                              |
 
 ## Common Issues
 
 ### Q: Contract deployment fails
+
 **A:** Make sure you have enough ETH for gas, and the CREATE2 proxy is deployed on your target chain.
 
 ### Q: Frontend shows wrong contract address
+
 **A:** Clear browser cache and localStorage. The app caches some blockchain data.
 
 ### Q: Transactions fail with "fee mismatch"
+
 **A:** Make sure the frontend fee matches the contract fee. If you modified the contract, update the frontend constants.
 
 ## Security Considerations

@@ -110,6 +110,7 @@ Language preference is automatically detected and persisted.
 Want to run your own instance? Check out our [Fork Guide](docs/FORK_GUIDE.md) ([中文](docs/FORK_GUIDE.zh.md)).
 
 **Requirements:**
+
 - Solidity development experience
 - Ability to deploy smart contracts
 - Understanding of CREATE2 deployment

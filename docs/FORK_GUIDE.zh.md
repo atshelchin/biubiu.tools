@@ -53,6 +53,7 @@ address constant FEE_RECIPIENT = 0x你的地址;
 ```
 
 **需要检查的文件：**
+
 - `src/BiuBiuPremium.sol`
 - `src/TokenSweep.sol`
 - `src/TokenDistribution.sol`
@@ -127,15 +128,15 @@ bun install
 // 将所有合约地址替换为你部署的地址
 
 const BIUBIU_PREMIUM_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
-  contractName: 'BiuBiuPremium',
-  contractAddress: '0x你的BiuBiuPremium地址' as Address,
-  // ... 其他配置
+	contractName: 'BiuBiuPremium',
+	contractAddress: '0x你的BiuBiuPremium地址' as Address
+	// ... 其他配置
 };
 
 const wallet_sweep_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
-  contractName: 'TokenSweep',
-  contractAddress: '0x你的TokenSweep地址' as Address,
-  // ... 其他配置
+	contractName: 'TokenSweep',
+	contractAddress: '0x你的TokenSweep地址' as Address
+	// ... 其他配置
 };
 
 // ... 更新所有其他合约
@@ -147,10 +148,10 @@ const wallet_sweep_DEPLOYMENT_CONFIG: ContractDeploymentConfig = {
 
 ```typescript
 export const KNOWN_ADDRESSES = {
-  CREATE2_DEPLOYER: '0x3fab184622dc19b6109349b94811493bf2a45362' as Address,
-  CREATE2_PROXY: '0x4e59b44847b379578588920cA78FbF26c0B4956C' as Address,
-  // 更新为你的地址
-  FEE_RECIPIENT: '0x你的收费地址' as Address
+	CREATE2_DEPLOYER: '0x3fab184622dc19b6109349b94811493bf2a45362' as Address,
+	CREATE2_PROXY: '0x4e59b44847b379578588920cA78FbF26c0B4956C' as Address,
+	// 更新为你的地址
+	FEE_RECIPIENT: '0x你的收费地址' as Address
 } as const;
 ```
 
@@ -159,12 +160,14 @@ export const KNOWN_ADDRESSES = {
 如果你想完全免费，更新这些文件：
 
 **`src/features/wallet-sweep/utils/tokensweep-executor.ts`：**
+
 ```typescript
 // 第 261 行和第 332 行
 const NON_MEMBER_FEE = parseEther('0'); // 免费！
 ```
 
 **`src/features/wallet-sweep/types/fee.ts`：**
+
 ```typescript
 export const SWEEP_FEE_PER_TRANSACTION = 0; // 免费！
 ```
@@ -179,6 +182,7 @@ bytecode: '0x你的新字节码...' as `0x${string}`,
 ```
 
 或更新 `static/contracts/` 中的 JSON 文件：
+
 - `TokenSweep.json`
 - `BiuBiuPremium.json`
 - `TokenDistribution.json`
@@ -199,24 +203,27 @@ wrangler pages deploy .svelte-kit/cloudflare
 
 ## 文件参考表
 
-| 用途 | 文件路径 |
-|------|----------|
-| 合约地址配置 | `src/lib/config/deployment-configs.ts` |
-| 收费地址 | `src/lib/utils/contract-deployment.ts` |
+| 用途           | 文件路径                                                 |
+| -------------- | -------------------------------------------------------- |
+| 合约地址配置   | `src/lib/config/deployment-configs.ts`                   |
+| 收费地址       | `src/lib/utils/contract-deployment.ts`                   |
 | Sweep 费用逻辑 | `src/features/wallet-sweep/utils/tokensweep-executor.ts` |
-| 费用常量 | `src/features/wallet-sweep/types/fee.ts` |
-| 合约 ABI | `static/contracts/*.json` |
-| 推荐系统 | `src/lib/utils/referral.ts` |
+| 费用常量       | `src/features/wallet-sweep/types/fee.ts`                 |
+| 合约 ABI       | `static/contracts/*.json`                                |
+| 推荐系统       | `src/lib/utils/referral.ts`                              |
 
 ## 常见问题
 
 ### Q: 合约部署失败
+
 **A:** 确保你有足够的 ETH 支付 gas，并且目标链上已部署 CREATE2 proxy。
 
 ### Q: 前端显示错误的合约地址
+
 **A:** 清除浏览器缓存和 localStorage。应用会缓存一些区块链数据。
 
 ### Q: 交易失败显示 "fee mismatch"
+
 **A:** 确保前端费用与合约费用一致。如果你修改了合约，需要同步更新前端常量。
 
 ## 安全注意事项
