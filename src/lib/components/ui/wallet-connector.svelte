@@ -12,6 +12,7 @@
 	import { useI18n } from '@shelchin/i18n/svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { longPress } from '$lib/utils/long-press';
+	import { checkConsent } from '$lib/stores/cookie-consent.svelte';
 
 	const i18n = useI18n();
 	const t = i18n.t;
@@ -42,7 +43,8 @@
 		accounts = accs || [];
 
 		// 如果有多个账户，检查是否需要恢复之前选择的账户
-		if (accounts.length > 1 && connectStore.address) {
+		// Only check localStorage if functional cookies are consented
+		if (accounts.length > 1 && connectStore.address && checkConsent('functional')) {
 			// 获取持久化的连接信息
 			const storageKey = 'biubiu-tools-wallet-connection';
 			const savedData = localStorage.getItem(storageKey);

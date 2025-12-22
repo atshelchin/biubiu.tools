@@ -1,12 +1,17 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { Cookie } from '@lucide/svelte';
+	import { useI18n } from '@shelchin/i18n/svelte';
 	import { useTheme } from '$lib/stores/theme.svelte';
+	import { checkConsent, useCookieConsent } from '$lib/stores/cookie-consent.svelte';
 	import Socials from '$lib/components/ui/socials.svelte';
 	import LangToggle from '$lib/components/widgets/lang-toggle.svelte';
 	import ThemeToggle from '$lib/components/widgets/theme-toggle.svelte';
 
+	const i18n = useI18n();
 	const currentYear = new Date().getFullYear();
 	const theme = useTheme();
+	const consent = useCookieConsent();
 
 	// Listen to system theme changes
 	onMount(() => {
@@ -15,8 +20,9 @@
 		const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
 		const handleSystemThemeChange = (e: MediaQueryListEvent) => {
-			// Only apply system theme if user hasn't manually set preference
-			const hasUserPreference = localStorage.getItem('theme-user-preference') === 'true';
+			// Only check user preference if functional cookies are consented
+			const hasUserPreference =
+				checkConsent('functional') && localStorage.getItem('theme-user-preference') === 'true';
 
 			if (!hasUserPreference) {
 				const systemTheme = e.matches ? 'dark' : 'light';
@@ -63,6 +69,14 @@
 			</div>
 
 			<div class="controls-group">
+				<button
+					class="cookie-settings-btn"
+					onclick={() => consent.openSettings()}
+					title={i18n.t('cookie_consent.cookie_settings')}
+					aria-label={i18n.t('cookie_consent.cookie_settings')}
+				>
+					<Cookie size={18} />
+				</button>
 				<LangToggle />
 				<ThemeToggle />
 			</div>
@@ -180,6 +194,27 @@
 		display: flex;
 		align-items: center;
 		gap: var(--space-3);
+	}
+
+	.cookie-settings-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 2.5rem;
+		height: 2.5rem;
+		padding: 0;
+		background: var(--color-background);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-full);
+		color: var(--color-muted-foreground);
+		cursor: pointer;
+		transition: all 0.2s ease;
+	}
+
+	.cookie-settings-btn:hover {
+		color: var(--color-primary);
+		border-color: var(--color-primary);
+		background: var(--color-muted);
 	}
 
 	/* Dark mode */

@@ -3,6 +3,8 @@
  * https://github.com/atshelchin/sndra-link
  */
 
+import { checkConsent } from '$lib/stores/cookie-consent.svelte';
+
 export interface ShortLinkResponse {
 	success: boolean;
 	shortUrl?: string;
@@ -245,6 +247,11 @@ function getTrafficSource(): string {
 function getUserType(): string {
 	if (typeof window === 'undefined') return 'unknown';
 
+	// Only track user visits if analytics consent is given
+	if (!checkConsent('analytics')) {
+		return 'unknown';
+	}
+
 	const hasVisited = localStorage.getItem('visited');
 
 	if (!hasVisited) {
@@ -264,8 +271,9 @@ function getUserType(): string {
 /**
  * Generate referral URL with UTM tracking parameters
  * Based on current page URL, preserving path and existing query params
+ * Respects user's analytics consent preferences
  * @param referrerAddress - The referrer's wallet address
- * @returns Full URL with ref param and UTM tracking
+ * @returns Full URL with ref param and UTM tracking (limited if no analytics consent)
  */
 export function generateTrackingUrl(referrerAddress: string): string {
 	if (typeof window === 'undefined') return '';
@@ -281,25 +289,37 @@ export function generateTrackingUrl(referrerAddress: string): string {
 	baseUrl.searchParams.delete('utm_content');
 	baseUrl.searchParams.delete('utm_term');
 
-	// Get user context for better tracking
-	const userLanguage = getUserLanguage();
-	const timezoneOffset = getUserTimezoneOffset();
-	const timezoneName = getUserTimezoneName();
-	const deviceType = getDeviceType();
-	const utcYearWeek = getUTC0YearWeek();
+	// Check if user has consented to analytics tracking
+	const hasAnalyticsConsent = checkConsent('analytics');
 
-	// Combine UTC year-week + timezone offset for source
-	// Example: "2025-W47_+8"
-	const combinedSource = `${utcYearWeek}_${timezoneOffset}_${userLanguage}`;
+	if (hasAnalyticsConsent) {
+		// Full tracking with user context
+		const userLanguage = getUserLanguage();
+		const timezoneOffset = getUserTimezoneOffset();
+		const timezoneName = getUserTimezoneName();
+		const deviceType = getDeviceType();
+		const utcYearWeek = getUTC0YearWeek();
 
-	// Add UTM tracking parameters for referral campaign
-	const trackedUrl = addUTMParams(baseUrl.toString(), {
-		campaign: 'referral_program',
-		source: combinedSource, // Week + timezone (e.g., "2025-W47_+8")
-		medium: `${userLanguage}_${deviceType}`, // Language + device (e.g., "zh-CN_mobile")
-		content: timezoneName + '_' + getTrafficSource() + '_' + getUserType(), // Timezone name (e.g., "Asia/Shanghai")
-		term: 'eth:' + referrerAddress // Full referrer address with prefix
-	});
+		// Combine UTC year-week + timezone offset for source
+		const combinedSource = `${utcYearWeek}_${timezoneOffset}_${userLanguage}`;
 
-	return trackedUrl;
+		// Add UTM tracking parameters for referral campaign
+		const trackedUrl = addUTMParams(baseUrl.toString(), {
+			campaign: 'referral_program',
+			source: combinedSource,
+			medium: `${userLanguage}_${deviceType}`,
+			content: timezoneName + '_' + getTrafficSource() + '_' + getUserType(),
+			term: 'eth:' + referrerAddress
+		});
+
+		return trackedUrl;
+	} else {
+		// Minimal tracking - only referral address (essential for referral program)
+		const trackedUrl = addUTMParams(baseUrl.toString(), {
+			campaign: 'referral_program',
+			term: 'eth:' + referrerAddress
+		});
+
+		return trackedUrl;
+	}
 }

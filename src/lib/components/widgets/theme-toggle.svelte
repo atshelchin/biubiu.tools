@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Sun, Moon } from '@lucide/svelte';
 	import { useTheme } from '$lib/stores/theme.svelte';
+	import { checkConsent } from '$lib/stores/cookie-consent.svelte';
 
 	interface Props {
 		size?: 'sm' | 'md' | 'lg';
@@ -15,7 +16,7 @@
 
 	// Wrapper to mark user preference when toggling
 	function handleToggle() {
-		if (typeof window !== 'undefined') {
+		if (typeof window !== 'undefined' && checkConsent('functional')) {
 			localStorage.setItem('theme-user-preference', 'true');
 		}
 		themeStore.toggleTheme();

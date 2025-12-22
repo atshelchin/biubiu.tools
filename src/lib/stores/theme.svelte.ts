@@ -1,5 +1,6 @@
 // Global theme store using Svelte 5 runes with SSR support
 import { getContext, setContext } from 'svelte';
+import { checkConsent } from '$lib/stores/cookie-consent.svelte';
 
 const THEME_CONTEXT_KEY = 'theme-context';
 
@@ -17,18 +18,20 @@ export function createThemeStore(initialTheme: 'light' | 'dark' = 'light') {
 		currentTheme = newTheme;
 
 		if (typeof window !== 'undefined') {
-			// Update DOM
+			// Update DOM - always applied for current session
 			if (newTheme === 'dark') {
 				document.documentElement.setAttribute('data-theme', 'dark');
 			} else {
 				document.documentElement.removeAttribute('data-theme');
 			}
 
-			// Update cookie (with SameSite and path)
-			document.cookie = `theme=${newTheme}; path=/; max-age=31536000; SameSite=Lax`;
-
-			// Also update localStorage as fallback
-			localStorage.setItem('theme', newTheme);
+			// Only persist preference if user has consented to functional cookies
+			if (checkConsent('functional')) {
+				// Update cookie (with SameSite and path)
+				document.cookie = `theme=${newTheme}; path=/; max-age=31536000; SameSite=Lax`;
+				// Also update localStorage as fallback
+				localStorage.setItem('theme', newTheme);
+			}
 		}
 	}
 
@@ -102,8 +105,11 @@ export function useTheme(): ThemeContext {
 					} else {
 						document.documentElement.removeAttribute('data-theme');
 					}
-					document.cookie = `theme=${newTheme}; path=/; max-age=31536000; SameSite=Lax`;
-					localStorage.setItem('theme', newTheme);
+					// Only persist if functional cookies are consented
+					if (checkConsent('functional')) {
+						document.cookie = `theme=${newTheme}; path=/; max-age=31536000; SameSite=Lax`;
+						localStorage.setItem('theme', newTheme);
+					}
 				}
 			},
 			toggleTheme: () => {
@@ -115,8 +121,11 @@ export function useTheme(): ThemeContext {
 					} else {
 						document.documentElement.removeAttribute('data-theme');
 					}
-					document.cookie = `theme=${newTheme}; path=/; max-age=31536000; SameSite=Lax`;
-					localStorage.setItem('theme', newTheme);
+					// Only persist if functional cookies are consented
+					if (checkConsent('functional')) {
+						document.cookie = `theme=${newTheme}; path=/; max-age=31536000; SameSite=Lax`;
+						localStorage.setItem('theme', newTheme);
+					}
 				}
 			}
 		};

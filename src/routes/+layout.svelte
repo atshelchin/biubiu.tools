@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 	import { createThemeStore } from '$lib/stores/theme.svelte.js';
 	import { createGeoBlockStore } from '$lib/stores/geo-block.svelte.js';
+	import { createCookieConsentStore } from '$lib/stores/cookie-consent.svelte.js';
 	import { initializeReferral } from '$lib/utils/referral';
 	import '../design-tokens.css';
 	import '../global.css';
@@ -11,6 +12,7 @@
 	import TopToolbar from '@/features/landingpage/TopToolbar.svelte';
 	import EnvironmentBanner from '$lib/components/ui/environment-banner.svelte';
 	import GeoBlockOverlay from '$lib/components/ui/geo-block-overlay.svelte';
+	import CookieConsentBanner from '$lib/components/ui/cookie-consent-banner.svelte';
 	import { PACKAGE_NAME, locales } from '../i18n/i18n.svelte';
 	let { children, data } = $props<{ children: import('svelte').Snippet; data: LayoutData }>();
 
@@ -19,6 +21,9 @@
 
 	i18nStore.register(PACKAGE_NAME, locales);
 	setI18nContext(i18nStore);
+
+	// Initialize cookie consent store (must be before theme store)
+	createCookieConsentStore();
 
 	// Setup theme with initial value from server
 	createThemeStore(data.theme);
@@ -39,6 +44,7 @@
 	{@render children()}
 	<Footer />
 </div>
+<CookieConsentBanner />
 
 <style>
 	:global(:root) {

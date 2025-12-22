@@ -8325,5 +8325,88 @@
 	"environment_banner": {
 		"community_warning": "当前版本由社区部署，与 biubiu.tools 官方无关。",
 		"dev_environment": "开发环境"
+	},
+	"cookie_consent": {
+		"title": "我们使用 Cookie",
+		"description": "我们使用必要的 Cookie 来确保基本功能，以及可选的分析 Cookie 来改进服务。您可以选择是否允许分析 Cookie。",
+		"necessary": {
+			"title": "基本功能",
+			"description": "网站基本功能所必需，包括主题偏好、会话数据和 RPC 优化。这些无法禁用。"
+		},
+		"functional": {
+			"title": "功能 Cookie",
+			"description": "已包含在基本功能中。"
+		},
+		"analytics": {
+			"title": "分析 Cookie",
+			"description": "帮助我们通过匿名使用统计和推荐追踪了解访问者如何使用网站。"
+		},
+		"required": "必需",
+		"accept_all": "接受全部",
+		"necessary_only": "仅基本功能",
+		"save_preferences": "保存设置",
+		"show_details": "自定义设置",
+		"hide_details": "隐藏详情",
+		"privacy_notice": "了解更多信息，请查看我们的",
+		"privacy_policy": "隐私政策",
+		"reminder_title": "启用分析 Cookie？",
+		"reminder_description": "启用分析 Cookie 帮助我们改进 BiuBiu Tools。您的数据将保持匿名。",
+		"not_now": "暂不需要",
+		"dismiss": "关闭",
+		"settings_title": "Cookie 设置",
+		"settings_description": "管理您的 Cookie 偏好设置。您可以随时更改这些设置。",
+		"cancel": "取消",
+		"cookie_settings": "Cookie 设置"
+	},
+	"privacy": {
+		"page_title": "隐私政策",
+		"page_description": "了解 BiuBiu Tools 如何收集、使用和保护您的数据。",
+		"title": "隐私政策",
+		"last_updated": "最后更新",
+		"introduction": {
+			"title": "简介",
+			"content": "BiuBiu Tools 致力于保护您的隐私。本隐私政策说明了当您使用我们的 Web3 工具和服务时，我们如何收集、使用和保护您的信息。"
+		},
+		"data_collection": {
+			"title": "我们收集的数据",
+			"intro": "根据您的同意偏好，我们会收集不同类型的数据：",
+			"necessary": {
+				"title": "基本数据（始终收集）",
+				"item1": "网站功能所需的会话数据",
+				"item2": "用于记住您选择的同意偏好",
+				"item3": "主题偏好（浅色/深色模式）",
+				"item4": "语言偏好",
+				"item5": "RPC 性能指标（用于最佳网络选择）"
+			},
+			"analytics": {
+				"title": "分析数据（经您同意）",
+				"item1": "匿名使用统计（页面浏览量、功能使用情况）",
+				"item2": "设备信息（浏览器类型、操作系统）",
+				"item3": "推荐计划的来源追踪"
+			}
+		},
+		"local_storage": {
+			"title": "本地存储（必要）",
+			"content": "我们使用浏览器的本地存储来保存应用程序正常运行所必需的数据。这些数据保留在您的设备上，不会传输到我们的服务器：",
+			"item1": "您添加的自定义代币列表（代币操作所必需）",
+			"item2": "多步骤操作的会话数据（恢复中断任务所必需）",
+			"item3": "存储在 IndexedDB 中的扫描结果（余额扫描功能所必需）",
+			"item4": "您的 Cookie 同意偏好设置"
+		},
+		"third_party": {
+			"title": "第三方分析",
+			"content": "我们使用注重隐私的分析服务来了解访问者如何使用我们的网站。只有在您同意分析 Cookie 的情况下，才会加载此分析脚本。收集的数据是匿名的，不包含个人身份信息。我们会根据工具需要与区块链网络（以太坊、Polygon 等）交互，但我们不会在服务器上存储您的私钥或助记词。"
+		},
+		"your_rights": {
+			"title": "您的权利",
+			"content": "根据 GDPR、CCPA 和类似法规，您拥有以下权利：",
+			"item1": "访问权：您可以请求了解我们拥有的关于您的数据",
+			"item2": "删除权：您可以随时通过浏览器设置清除本地数据",
+			"item3": "撤回同意权：您可以随时更改您的 Cookie 偏好设置"
+		},
+		"contact": {
+			"title": "联系我们",
+			"content": "如果您对本隐私政策或我们的数据实践有任何疑问，请通过我们的 GitHub 仓库或社区渠道与我们联系。"
+		}
 	}
 }

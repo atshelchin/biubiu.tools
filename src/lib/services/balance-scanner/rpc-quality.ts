@@ -3,7 +3,10 @@
  *
  * Tracks RPC endpoint quality metrics (success rate, response time, etc.)
  * and persists them to localStorage for future use.
+ * Respects user cookie consent preferences.
  */
+
+import { checkConsent } from '$lib/stores/cookie-consent.svelte';
 
 /**
  * Quality metrics for a single RPC endpoint
@@ -50,8 +53,14 @@ function getKey(url: string, chainId: number): string {
 
 /**
  * Load quality data from localStorage
+ * Only loads if functional cookies are consented
  */
 function loadQualityData(): StoredQualityData {
+	// Only access localStorage if functional cookies are consented
+	if (!checkConsent('functional')) {
+		return { version: STORAGE_VERSION, metrics: {} };
+	}
+
 	try {
 		const stored = localStorage.getItem(STORAGE_KEY);
 		if (stored) {
@@ -76,8 +85,14 @@ function loadQualityData(): StoredQualityData {
 
 /**
  * Save quality data to localStorage
+ * Only saves if functional cookies are consented
  */
 function saveQualityData(data: StoredQualityData): void {
+	// Only persist to localStorage if functional cookies are consented
+	if (!checkConsent('functional')) {
+		return;
+	}
+
 	try {
 		localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
 	} catch (e) {
