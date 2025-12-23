@@ -9359,5 +9359,48 @@
 			"title": "联系方式",
 			"content": "如果您对本服务条款有任何疑问，请通过我们的 GitHub 仓库或社区渠道与我们联系。"
 		}
+	},
+	"chains": {
+		"title": "EVM 链百科全书",
+		"subtitle": "EVM 兼容区块链网络综合目录",
+		"mainnet": "主网",
+		"testnet": "测试网",
+		"deprecated": "已弃用",
+		"chain_id": "链 ID",
+		"native_currency": "原生代币",
+		"rpc_endpoints": "RPC 端点",
+		"available": "可用",
+		"block_explorers": "区块浏览器",
+		"faucets": "水龙头",
+		"faucets_description": "获取免费测试代币用于开发",
+		"supported_features": "支持的特性",
+		"short_name": "简称",
+		"ens_registry": "ENS 注册表",
+		"official_website": "官方网站",
+		"all_chains": "所有链",
+		"no_tracking": "无追踪",
+		"limited_tracking": "有限追踪",
+		"has_tracking": "有追踪",
+		"unknown_tracking": "未知",
+		"tracking_info": "RPC 端点数据收集策略",
+		"open_source": "开源",
+		"latency_info": "从您的位置的响应时间",
+		"offline": "离线",
+		"online": "在线",
+		"testing_latency": "正在测试延迟",
+		"click_to_test": "点击测试延迟",
+		"retest": "重新测试",
+		"privacy_friendly": "隐私友好",
+		"filter_tracking": "追踪策略",
+		"filter_protocol": "协议",
+		"filter_all": "全部",
+		"filter_no_tracking": "无追踪",
+		"filter_limited": "有限或无",
+		"no_rpc_match": "没有符合筛选条件的 RPC 端点",
+		"showing_rpc": "显示 {count} / {total} 个端点",
+		"data_source": "数据来源",
+		"seo": {
+			"description": "{name} (Chain ID: {chainId}) - 提供 {rpcCount} 个 RPC 端点。原生代币: {symbol}。网络类型: {networkType}。查找公共 RPC URL、区块浏览器和网络信息。"
+		}
 	}
 }
