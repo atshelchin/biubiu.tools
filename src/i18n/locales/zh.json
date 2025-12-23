@@ -9402,5 +9402,119 @@
 		"seo": {
 			"description": "{name} (Chain ID: {chainId}) - 提供 {rpcCount} 个 RPC 端点。原生代币: {symbol}。网络类型: {networkType}。查找公共 RPC URL、区块浏览器和网络信息。"
 		}
+	},
+	"address": {
+		"title": "地址浏览器",
+		"subtitle": "搜索和浏览标记的区块链地址和 ENS 域名",
+		"search_placeholder": "搜索地址、ENS 域名或实体...",
+		"searching": "搜索中...",
+		"no_results": "未找到结果",
+		"all_addresses": "所有地址",
+		"categories": "按类别浏览",
+		"browse_by_label": "按标签浏览",
+		"popular_addresses": "热门地址",
+		"popular_names": "热门域名",
+		"view_on_explorer": "在浏览器中查看",
+		"website": "官网",
+		"related_names": "相关域名",
+		"related_addresses": "相关地址",
+		"data_source": "数据来源",
+		"updated": "更新时间",
+		"source_manual": "手动收录",
+		"source_verified": "已验证",
+		"source_etherscan": "Etherscan",
+		"source_community": "社区贡献",
+		"stats": {
+			"addresses": "地址",
+			"names": "域名",
+			"exchanges": "交易所",
+			"defi": "DeFi",
+			"tokens": "代币",
+			"nft": "NFT",
+			"notable": "知名钱包"
+		},
+		"labels": {
+			"exchange": "交易所",
+			"cex": "中心化交易所",
+			"dex": "去中心化交易所",
+			"defi": "DeFi",
+			"lending": "借贷",
+			"bridge": "跨链桥",
+			"yield": "收益",
+			"derivatives": "衍生品",
+			"liquid-staking": "流动性质押",
+			"token": "代币",
+			"stablecoin": "稳定币",
+			"memecoin": "Meme 币",
+			"wrapped": "封装代币",
+			"nft": "NFT",
+			"nft-marketplace": "NFT 市场",
+			"whale": "巨鲸",
+			"smart-money": "聪明钱",
+			"foundation": "基金会",
+			"dao": "DAO",
+			"multisig": "多签钱包",
+			"deployer": "部署者",
+			"hacker": "黑客",
+			"scam": "诈骗",
+			"sanctioned": "被制裁",
+			"phishing": "钓鱼",
+			"burn": "销毁地址",
+			"null": "空地址",
+			"genesis": "创世",
+			"mev": "MEV",
+			"contract": "合约",
+			"eoa": "EOA"
+		},
+		"risk": {
+			"safe": "安全",
+			"neutral": "中性",
+			"warning": "警告",
+			"danger": "危险"
+		},
+		"seo": {
+			"index_title": "地址浏览器 - 区块链地址和 ENS 查询 | BiuBiu Tools",
+			"index_description": "搜索和浏览 {addressCount} 个标记的区块链地址和 {nameCount} 个 ENS 域名。查找交易所、DeFi 协议、巨鲸钱包等。",
+			"detail_description": "{name} ({entity}) 在 {chain} 上。标签：{labels}。地址：{address}。探索钱包详情和相关信息。"
+		},
+		"faq": {
+			"title": "常见问题",
+			"what_is": "{name} 是什么？",
+			"what_is_answer": "{name} 是 {entity} 在 {chain} 网络上的钱包地址。",
+			"is_safe": "这个地址安全吗？",
+			"is_safe_answer_safe": "{name} 是来自知名实体的已验证安全地址。",
+			"is_safe_answer_neutral": "{name} 的风险等级为中性。请保持正常谨慎。",
+			"is_safe_answer_warning": "警告：{name} 已被标记为存在潜在风险。请谨慎操作。",
+			"is_safe_answer_danger": "危险：{name} 已被标记为危险地址。请勿向此地址发送资金。",
+			"how_to_verify": "如何验证这个地址？",
+			"how_to_verify_answer": "您可以在 {explorer} 区块浏览器上验证此地址，查看交易历史和合约详情。"
+		}
+	},
+	"name": {
+		"owner": "持有者",
+		"resolved_address": "解析地址",
+		"view_address_details": "查看地址详情",
+		"not_resolved": "该域名当前未解析到任何地址",
+		"socials": "社交链接",
+		"view_on": "在 {platform} 上查看",
+		"view_on_etherscan": "在 Etherscan 上查看",
+		"seo": {
+			"suffix": "探索 ENS 域名详情、解析地址和持有者信息。",
+			"detail_description": "{name} 是一个 {type} 域名。解析到：{address}。查找持有者、记录和相关信息。"
+		},
+		"faq": {
+			"title": "常见问题",
+			"what_is": "{name} 是什么？",
+			"what_is_answer": "{name} 是一个 {type} 域名，为区块链地址提供人类可读的标识符。",
+			"how_to_use": "如何使用这个域名？",
+			"how_to_use_answer": "您可以使用 {name} 发送加密货币，而不必使用冗长的十六进制地址。大多数钱包和 dApp 都支持 ENS 域名。",
+			"who_owns": "谁拥有这个域名？",
+			"who_owns_answer": "{name} 解析到地址 {address}。持有者可能与解析地址不同。"
+		}
+	},
+	"helpButton": {
+		"label": "帮助与反馈",
+		"getHelp": "寻求帮助",
+		"reportIssue": "反馈问题"
 	}
 }

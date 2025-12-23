@@ -13,6 +13,7 @@
 	import EnvironmentBanner from '$lib/components/ui/environment-banner.svelte';
 	import GeoBlockOverlay from '$lib/components/ui/geo-block-overlay.svelte';
 	import CookieConsentBanner from '$lib/components/ui/cookie-consent-banner.svelte';
+	import FloatingHelpButton from '$lib/components/ui/floating-help-button.svelte';
 	import { PACKAGE_NAME, locales } from '../i18n/i18n.svelte';
 	let { children, data } = $props<{ children: import('svelte').Snippet; data: LayoutData }>();
 
@@ -45,6 +46,7 @@
 	<Footer />
 </div>
 <CookieConsentBanner />
+<FloatingHelpButton />
 
 <style>
 	:global(:root) {

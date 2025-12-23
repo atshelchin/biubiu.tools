@@ -9430,5 +9430,119 @@
 		"seo": {
 			"description": "{name} (Chain ID: {chainId}) - {rpcCount} RPC endpoints available. Native token: {symbol}. Network type: {networkType}. Find public RPC URLs, block explorers, and network information."
 		}
+	},
+	"address": {
+		"title": "Address Explorer",
+		"subtitle": "Search and explore labeled blockchain addresses and ENS names",
+		"search_placeholder": "Search by address, ENS name, or entity...",
+		"searching": "Searching...",
+		"no_results": "No results found",
+		"all_addresses": "All Addresses",
+		"categories": "Browse by Category",
+		"browse_by_label": "Browse by Label",
+		"popular_addresses": "Popular Addresses",
+		"popular_names": "Popular Names",
+		"view_on_explorer": "View on Explorer",
+		"website": "Website",
+		"related_names": "Related Names",
+		"related_addresses": "Related Addresses",
+		"data_source": "Data Source",
+		"updated": "Updated",
+		"source_manual": "Manual",
+		"source_verified": "Verified",
+		"source_etherscan": "Etherscan",
+		"source_community": "Community",
+		"stats": {
+			"addresses": "Addresses",
+			"names": "Names",
+			"exchanges": "Exchanges",
+			"defi": "DeFi",
+			"tokens": "Tokens",
+			"nft": "NFT",
+			"notable": "Notable"
+		},
+		"labels": {
+			"exchange": "Exchange",
+			"cex": "CEX",
+			"dex": "DEX",
+			"defi": "DeFi",
+			"lending": "Lending",
+			"bridge": "Bridge",
+			"yield": "Yield",
+			"derivatives": "Derivatives",
+			"liquid-staking": "Liquid Staking",
+			"token": "Token",
+			"stablecoin": "Stablecoin",
+			"memecoin": "Memecoin",
+			"wrapped": "Wrapped",
+			"nft": "NFT",
+			"nft-marketplace": "NFT Marketplace",
+			"whale": "Whale",
+			"smart-money": "Smart Money",
+			"foundation": "Foundation",
+			"dao": "DAO",
+			"multisig": "Multisig",
+			"deployer": "Deployer",
+			"hacker": "Hacker",
+			"scam": "Scam",
+			"sanctioned": "Sanctioned",
+			"phishing": "Phishing",
+			"burn": "Burn",
+			"null": "Null",
+			"genesis": "Genesis",
+			"mev": "MEV",
+			"contract": "Contract",
+			"eoa": "EOA"
+		},
+		"risk": {
+			"safe": "Safe",
+			"neutral": "Neutral",
+			"warning": "Warning",
+			"danger": "Danger"
+		},
+		"seo": {
+			"index_title": "Address Explorer - Blockchain Address & ENS Lookup | BiuBiu Tools",
+			"index_description": "Search and explore {addressCount} labeled blockchain addresses and {nameCount} ENS names. Find exchanges, DeFi protocols, whales, and more.",
+			"detail_description": "{name} ({entity}) on {chain}. Labels: {labels}. Address: {address}. Explore wallet details and related information."
+		},
+		"faq": {
+			"title": "Frequently Asked Questions",
+			"what_is": "What is {name}?",
+			"what_is_answer": "{name} is a wallet address belonging to {entity} on the {chain} network.",
+			"is_safe": "Is this address safe to interact with?",
+			"is_safe_answer_safe": "{name} is a verified safe address from a well-known entity.",
+			"is_safe_answer_neutral": "{name} has a neutral risk level. Exercise normal caution.",
+			"is_safe_answer_warning": "Warning: {name} has been flagged for potential risks. Proceed with caution.",
+			"is_safe_answer_danger": "Danger: {name} has been marked as dangerous. Do not send funds to this address.",
+			"how_to_verify": "How can I verify this address?",
+			"how_to_verify_answer": "You can verify this address on {explorer} block explorer to see transaction history and contract details."
+		}
+	},
+	"name": {
+		"owner": "Owner",
+		"resolved_address": "Resolved Address",
+		"view_address_details": "View address details",
+		"not_resolved": "This name is not currently resolved to an address",
+		"socials": "Social Links",
+		"view_on": "View on {platform}",
+		"view_on_etherscan": "View on Etherscan",
+		"seo": {
+			"suffix": "Explore ENS name details, resolved address, and owner information.",
+			"detail_description": "{name} is a {type} domain. Resolved to: {address}. Find owner, records, and related information."
+		},
+		"faq": {
+			"title": "Frequently Asked Questions",
+			"what_is": "What is {name}?",
+			"what_is_answer": "{name} is a {type} domain name that provides a human-readable identifier for blockchain addresses.",
+			"how_to_use": "How do I use this name?",
+			"how_to_use_answer": "You can send cryptocurrency to {name} instead of using the long hexadecimal address. Most wallets and dApps support ENS names.",
+			"who_owns": "Who owns this name?",
+			"who_owns_answer": "{name} resolves to address {address}. The owner may be different from the resolver address."
+		}
+	},
+	"helpButton": {
+		"label": "Help & Feedback",
+		"getHelp": "Get Help",
+		"reportIssue": "Report an Issue"
 	}
 }
