@@ -10,14 +10,33 @@
 		Github,
 		Link2,
 		Calendar,
-		Clock
+		Clock,
+		Mail,
+		MessageCircle,
+		MapPin
+		// User
 	} from '@lucide/svelte';
 	import SeoHead from '$lib/components/seo-head.svelte';
 	import type { PageData } from './$types';
+	// import type { SocialLink } from './+page.server';
 
 	let { data }: { data: PageData } = $props();
 
 	const i18n = useI18n();
+
+	// Get icon component for social platform
+	function getSocialIcon(platform: string) {
+		const icons: Record<string, typeof Twitter> = {
+			Twitter,
+			GitHub: Github,
+			Website: Globe,
+			Email: Mail,
+			Discord: MessageCircle,
+			Telegram: MessageCircle,
+			Reddit: MessageCircle
+		};
+		return icons[platform] || Globe;
+	}
 
 	// Calculate days until expiration or days since expiration
 	function getExpirationInfo(expiresAt: string | undefined): {
@@ -35,7 +54,9 @@
 		};
 	}
 
-	const expirationInfo = $derived(getExpirationInfo(data.name.expiresAt));
+	// Use ENS records expiry if available, otherwise fallback to static data
+	const effectiveExpiresAt = $derived(data.ensRecords?.expiresAt || data.name.expiresAt);
+	const expirationInfo = $derived(getExpirationInfo(effectiveExpiresAt));
 
 	// Copy state
 	let copiedName = $state(false);
@@ -95,8 +116,12 @@
 		<!-- Header -->
 		<div class="card-header">
 			<div class="name-info">
-				{#if data.name.avatar}
-					<img src={data.name.avatar} alt={data.name.name} class="name-avatar" />
+				{#if data.ensRecords?.avatar || data.name.avatar}
+					<img
+						src={data.ensRecords?.avatar || data.name.avatar}
+						alt={data.name.name}
+						class="name-avatar"
+					/>
 				{:else}
 					<div class="name-placeholder">
 						{data.name.name.charAt(0).toUpperCase()}
@@ -118,8 +143,37 @@
 		</div>
 
 		<!-- Description -->
-		{#if data.name.description}
-			<p class="description">{data.name.description}</p>
+		{#if data.ensRecords?.textRecords?.description || data.name.description}
+			<p class="description">
+				{data.ensRecords?.textRecords?.description || data.name.description}
+			</p>
+		{/if}
+
+		<!-- ENS Text Records (Additional info) -->
+		{#if data.ensRecords?.textRecords?.location || data.ensRecords?.textRecords?.keywords || data.ensRecords?.textRecords?.notice}
+			<div class="ens-metadata-section">
+				<h3 class="section-label">{i18n.t('name.ens_records')}</h3>
+				<div class="ens-metadata-grid">
+					{#if data.ensRecords?.textRecords?.location}
+						<div class="ens-metadata-item">
+							<MapPin class="icon-inline" />
+							<span class="ens-metadata-label">{i18n.t('name.location')}</span>
+							<span class="ens-metadata-value">{data.ensRecords.textRecords.location}</span>
+						</div>
+					{/if}
+					{#if data.ensRecords?.textRecords?.keywords}
+						<div class="ens-metadata-item">
+							<span class="ens-metadata-label">{i18n.t('name.keywords')}</span>
+							<span class="ens-metadata-value">{data.ensRecords.textRecords.keywords}</span>
+						</div>
+					{/if}
+					{#if data.ensRecords?.textRecords?.notice}
+						<div class="ens-metadata-item notice">
+							<span class="ens-metadata-value">{data.ensRecords.textRecords.notice}</span>
+						</div>
+					{/if}
+				</div>
+			</div>
 		{/if}
 
 		<!-- Entity Info -->
@@ -136,7 +190,7 @@
 		{/if}
 
 		<!-- Registration Info -->
-		{#if data.name.registrationStatus || data.name.registeredAt || data.name.expiresAt}
+		{#if data.name.registrationStatus || data.name.registeredAt || effectiveExpiresAt}
 			<div class="registration-section">
 				<h3 class="section-label">{i18n.t('name.registration_info')}</h3>
 				<div class="registration-grid">
@@ -159,14 +213,14 @@
 						</div>
 					{/if}
 
-					{#if data.name.expiresAt}
+					{#if effectiveExpiresAt}
 						<div class="registration-item">
 							<span class="registration-label">
 								<Clock class="icon-inline" />
 								{i18n.t('name.expires_at')}
 							</span>
 							<span class="registration-value">
-								{data.name.expiresAt}
+								{new Date(effectiveExpiresAt).toLocaleDateString()}
 								{#if expirationInfo}
 									<span class="expiration-info" class:expired={expirationInfo.isExpired}>
 										{#if expirationInfo.isExpired}
@@ -214,8 +268,22 @@
 			</div>
 		{/if}
 
-		<!-- Social Links -->
-		{#if data.name.socials}
+		<!-- Social Links from ENS Records -->
+		{#if data.socialLinks && data.socialLinks.length > 0}
+			<div class="socials-section">
+				<h3 class="section-label">{i18n.t('name.socials')}</h3>
+				<div class="social-links">
+					{#each data.socialLinks as link (link.platform)}
+						{@const IconComponent = getSocialIcon(link.platform)}
+						<a href={link.url} target="_blank" rel="noopener noreferrer" class="social-link">
+							<IconComponent class="icon" />
+							<span>{link.display}</span>
+						</a>
+					{/each}
+				</div>
+			</div>
+		{:else if data.name.socials}
+			<!-- Fallback to static socials -->
 			<div class="socials-section">
 				<h3 class="section-label">{i18n.t('name.socials')}</h3>
 				<div class="social-links">
@@ -453,6 +521,55 @@
 		padding: var(--space-4);
 		background: var(--color-panel-2);
 		border-radius: var(--radius-lg);
+	}
+
+	/* ENS Metadata Section */
+	.ens-metadata-section {
+		margin-bottom: var(--space-5);
+	}
+
+	.ens-metadata-grid {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-2);
+		padding: var(--space-4);
+		background: var(--color-panel-2);
+		border-radius: var(--radius-md);
+	}
+
+	.ens-metadata-item {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		font-size: var(--text-sm);
+	}
+
+	.ens-metadata-item :global(.icon-inline) {
+		width: 14px;
+		height: 14px;
+		color: var(--color-description-3);
+		flex-shrink: 0;
+	}
+
+	.ens-metadata-label {
+		color: var(--color-description-3);
+		min-width: 80px;
+	}
+
+	.ens-metadata-value {
+		color: var(--color-heading-2);
+	}
+
+	.ens-metadata-item.notice {
+		padding: var(--space-2);
+		background: rgba(245, 158, 11, 0.1);
+		border-radius: var(--radius-sm);
+		border-left: 3px solid #f59e0b;
+	}
+
+	.ens-metadata-item.notice .ens-metadata-value {
+		color: var(--color-description-1);
+		font-style: italic;
 	}
 
 	/* Entity Section */

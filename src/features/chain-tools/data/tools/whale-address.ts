@@ -36,17 +36,7 @@ export const whaleAddressTools: ExternalTool[] = [
 		chains: ['Ethereum'],
 		color: '#627EEA'
 	},
-	{
-		id: 'uniswap-treasury',
-		name: 'Uniswap Treasury',
-		descriptionKey: 'chain_tools.tools.uniswap_treasury.description',
-		url: 'https://etherscan.io/address/0x1a9c8182c09f50c8318d769245bea52c32be35bc',
-		icon: Landmark,
-		category: 'whale-address',
-		tags: ['treasury', 'uniswap', 'defi', 'uni'],
-		chains: ['Ethereum'],
-		color: '#FF007A'
-	},
+
 	{
 		id: 'aave-treasury',
 		name: 'Aave Treasury',
@@ -58,17 +48,7 @@ export const whaleAddressTools: ExternalTool[] = [
 		chains: ['Ethereum'],
 		color: '#B6509E'
 	},
-	{
-		id: 'maker-treasury',
-		name: 'MakerDAO Treasury',
-		descriptionKey: 'chain_tools.tools.maker_treasury.description',
-		url: 'https://etherscan.io/address/0xbe8e3e3618f7474f8cb1d074a26affef007e98fb',
-		icon: Landmark,
-		category: 'whale-address',
-		tags: ['treasury', 'maker', 'dao', 'stablecoin'],
-		chains: ['Ethereum'],
-		color: '#1AAB9B'
-	},
+
 	{
 		id: 'compound-treasury',
 		name: 'Compound Treasury',

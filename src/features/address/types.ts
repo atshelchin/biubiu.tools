@@ -48,6 +48,9 @@ export type AddressLabel =
 	| 'dao'
 	| 'multisig'
 	| 'deployer'
+	| 'notable'
+	// Staking
+	| 'staking'
 	// 风险标记
 	| 'hacker'
 	| 'scam'
@@ -186,6 +189,9 @@ export const LABEL_META: Record<AddressLabel, LabelMeta> = {
 	dao: { id: 'dao', category: 'entity', color: 'amber' },
 	multisig: { id: 'multisig', category: 'entity', color: 'stone' },
 	deployer: { id: 'deployer', category: 'entity', color: 'neutral' },
+	notable: { id: 'notable', category: 'entity', color: 'amber' },
+	// Staking
+	staking: { id: 'staking', category: 'defi', color: 'teal' },
 	// 风险标记
 	hacker: { id: 'hacker', category: 'risk', color: 'red' },
 	scam: { id: 'scam', category: 'risk', color: 'red' },

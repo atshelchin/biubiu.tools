@@ -101,10 +101,6 @@
 
 		return sortToolsWithBiubiuFirst(result);
 	});
-
-	function clearFilters() {
-		// Can't clear search from here, just show message
-	}
 </script>
 
 <SeoHead

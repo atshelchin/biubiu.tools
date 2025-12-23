@@ -9,6 +9,7 @@
 	import type { NetworkFilter } from '@/features/chainlist/types/chain';
 	import type { PageData } from './$types';
 	import { onMount } from 'svelte';
+	import { SvelteSet } from 'svelte/reactivity';
 	import type { Chain, RpcEndpoint, Explorer } from '@/features/chainlist/types/chain';
 
 	let { data }: { data: PageData } = $props();
@@ -126,7 +127,7 @@
 	}
 	// Dedupe arrays by a key field (keep first occurrence)
 	function dedupeByKey<T>(items: T[], keyFn: (item: T) => string): T[] {
-		const seen = new Set<string>();
+		const seen = new SvelteSet<string>();
 		return items.filter((item) => {
 			const key = keyFn(item);
 			if (seen.has(key)) return false;

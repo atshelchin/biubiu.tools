@@ -25,7 +25,12 @@
       "Bash(done)",
       "Bash(uniq wc -l /tmp/all_tool_ids_uniq.txt)",
       "Bash(1 cat /tmp/missing_i18n.json)",
-      "Bash(sort:*)"
+      "Bash(sort:*)",
+      "Bash(timeout 30 bun run dev:*)",
+      "Bash(bunx eslint:*)",
+      "Bash(git remote get-url:*)",
+      "Bash(bun -e:*)",
+      "Bash(bun x vite-bundle-visualizer:*)"
     ],
     "deny": [],
     "ask": []

@@ -9515,7 +9515,51 @@
 			"is_safe_answer_warning": "Warning: {name} has been flagged for potential risks. Proceed with caution.",
 			"is_safe_answer_danger": "Danger: {name} has been marked as dangerous. Do not send funds to this address.",
 			"how_to_verify": "How can I verify this address?",
-			"how_to_verify_answer": "You can verify this address on {explorer} block explorer to see transaction history and contract details."
+			"how_to_verify_answer": "You can verify this address on {explorer} block explorer to see transaction history and contract details.",
+			"cex": {
+				"can_deposit": "Can I deposit funds to this address?",
+				"can_deposit_answer": "{name} is an official deposit address for {entity}. Always verify the address on the exchange's official website before sending funds.",
+				"how_to_withdraw": "How do I withdraw from this exchange?",
+				"how_to_withdraw_answer": "To withdraw from {entity}, log into your account, navigate to the withdrawal section, enter your destination wallet address, and confirm the transaction following the exchange's security procedures."
+			},
+			"dex": {
+				"what_is_contract": "What is this DEX contract?",
+				"what_is_contract_answer": "{name} is a smart contract for {entity} decentralized exchange. It enables permissionless token swaps directly on the blockchain."
+			},
+			"defi": {
+				"what_does_it_do": "What does this DeFi contract do?",
+				"what_does_it_do_answer": "{name} is a smart contract for {entity} that enables decentralized financial services on the blockchain.",
+				"lending_how": "How does lending work on this protocol?",
+				"lending_how_answer": "{entity} allows users to lend assets to earn interest or borrow against collateral. Interest rates are determined algorithmically based on supply and demand.",
+				"bridge_how": "How do I use this bridge?",
+				"bridge_how_answer": "{name} is a bridge contract for {entity}. It allows you to transfer assets between different blockchain networks securely.",
+				"staking_how": "How does liquid staking work?",
+				"staking_how_answer": "{entity} allows you to stake your tokens while receiving a liquid derivative token that can be used in other DeFi protocols."
+			},
+			"token": {
+				"what_is_contract": "What is this token contract?",
+				"what_is_contract_answer": "{name} is the official smart contract for this token. Always verify the contract address before interacting.",
+				"stablecoin_peg": "How is this stablecoin's peg maintained?",
+				"stablecoin_peg_answer": "{name} maintains its peg through a combination of reserves, algorithmic mechanisms, or overcollateralization depending on its design."
+			},
+			"entity": {
+				"whale_activity": "Why is this whale address notable?",
+				"whale_activity_answer": "{name} holds a significant amount of cryptocurrency. Tracking whale movements can provide insights into market trends.",
+				"multisig_what": "What is a multisig wallet?",
+				"multisig_what_answer": "{name} is a multi-signature wallet that requires multiple approvals to execute transactions, providing enhanced security.",
+				"governance": "What is the governance role of this address?",
+				"governance_answer": "{name} belongs to {entity} and may be involved in protocol governance, treasury management, or community decisions."
+			},
+			"risk": {
+				"why_flagged": "Why is this address flagged?",
+				"why_flagged_answer": "{name} has been flagged due to association with malicious activities such as hacks, scams, or sanctions violations. Exercise extreme caution.",
+				"what_to_do": "What should I do if I've interacted with this address?",
+				"what_to_do_answer": "If you've sent funds to this address, recovery may not be possible. Check if the receiving protocol has a recovery mechanism, and consider reporting to relevant authorities."
+			},
+			"contract": {
+				"is_verified": "Is this contract verified?",
+				"is_verified_answer": "You can check if {name} has verified source code on {chain} block explorer. Verified contracts have their source code publicly available for review."
+			}
 		}
 	},
 	"name": {
@@ -9540,6 +9584,10 @@
 			"premium": "Premium",
 			"unknown": "Unknown"
 		},
+		"ens_records": "ENS Records",
+		"location": "Location",
+		"keywords": "Keywords",
+		"social_presence": "Social presence on",
 		"seo": {
 			"suffix": "Explore ENS name details, resolved address, and owner information.",
 			"detail_description": "{name} is a {type} domain. Resolved to: {address}. Find owner, records, and related information."
@@ -9551,7 +9599,23 @@
 			"how_to_use": "How do I use this name?",
 			"how_to_use_answer": "You can send cryptocurrency to {name} instead of using the long hexadecimal address. Most wallets and dApps support ENS names.",
 			"who_owns": "Who owns this name?",
-			"who_owns_answer": "{name} resolves to address {address}. The owner may be different from the resolver address."
+			"who_owns_answer": "{name} resolves to address {address}. The owner may be different from the resolver address.",
+			"how_to_buy": "How can I register a similar domain?",
+			"how_to_buy_answer": "You can register {type} domains through the official registrar. ENS domains are registered at app.ens.domains.",
+			"ens": {
+				"can_expire": "Can this ENS name expire?",
+				"can_expire_answer": "Yes, {name} has an expiration date. The current owner must renew it before expiration to retain ownership.",
+				"how_to_renew": "How do I renew an ENS name?",
+				"how_to_renew_answer": "To renew {name}, visit app.ens.domains, connect your wallet, and extend the registration period by paying the renewal fee.",
+				"how_to_set_records": "How do I set records for my ENS name?",
+				"how_to_set_records_answer": "Visit app.ens.domains, connect the wallet that owns {name}, and you can set various records including addresses, text records, and content hashes.",
+				"what_are_records": "What are ENS text records?",
+				"what_are_records_answer": "ENS text records allow you to attach additional information to your name, such as social media handles, website URLs, email, avatar, and description."
+			},
+			"entity": {
+				"who_is_owner": "Who is the owner of this domain?",
+				"who_is_owner_answer": "{name} is registered by {entity}. This is a verified association based on public records."
+			}
 		}
 	},
 	"helpButton": {

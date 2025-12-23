@@ -5,11 +5,7 @@ import { extractLocaleFromPathname } from '@shelchin/i18n/utils';
 import type { PackageLocales } from '@shelchin/i18n';
 import en from '../../../i18n/locales/en.json';
 import zh from '../../../i18n/locales/zh.json';
-import {
-	getChainBySlug,
-	getChainById,
-	parseRpcEndpoints
-} from '@/features/chains/data/chains';
+import { getChainBySlug, getChainById, parseRpcEndpoints } from '@/features/chains/data/chains';
 import type { ChainPageData } from '@/features/chains/types';
 
 export const load: PageLoad = ({ url, params }): ChainPageData => {

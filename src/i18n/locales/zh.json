@@ -9487,7 +9487,51 @@
 			"is_safe_answer_warning": "警告：{name} 已被标记为存在潜在风险。请谨慎操作。",
 			"is_safe_answer_danger": "危险：{name} 已被标记为危险地址。请勿向此地址发送资金。",
 			"how_to_verify": "如何验证这个地址？",
-			"how_to_verify_answer": "您可以在 {explorer} 区块浏览器上验证此地址，查看交易历史和合约详情。"
+			"how_to_verify_answer": "您可以在 {explorer} 区块浏览器上验证此地址，查看交易历史和合约详情。",
+			"cex": {
+				"can_deposit": "我可以向这个地址充值吗？",
+				"can_deposit_answer": "{name} 是 {entity} 的官方充值地址。在发送资金前，请务必在交易所官网验证地址。",
+				"how_to_withdraw": "如何从这个交易所提币？",
+				"how_to_withdraw_answer": "要从 {entity} 提币，请登录账户，进入提币页面，输入目标钱包地址，并按照交易所安全流程确认交易。"
+			},
+			"dex": {
+				"what_is_contract": "这个 DEX 合约是什么？",
+				"what_is_contract_answer": "{name} 是 {entity} 去中心化交易所的智能合约。它支持在区块链上进行无许可的代币交换。"
+			},
+			"defi": {
+				"what_does_it_do": "这个 DeFi 合约有什么功能？",
+				"what_does_it_do_answer": "{name} 是 {entity} 的智能合约，用于在区块链上提供去中心化金融服务。",
+				"lending_how": "这个协议的借贷是如何运作的？",
+				"lending_how_answer": "{entity} 允许用户存入资产赚取利息，或通过抵押借款。利率根据供需算法动态确定。",
+				"bridge_how": "如何使用这个跨链桥？",
+				"bridge_how_answer": "{name} 是 {entity} 的跨链桥合约。它允许您在不同区块链网络之间安全地转移资产。",
+				"staking_how": "流动性质押是如何运作的？",
+				"staking_how_answer": "{entity} 允许您质押代币的同时获得可在其他 DeFi 协议中使用的流动性衍生代币。"
+			},
+			"token": {
+				"what_is_contract": "这个代币合约是什么？",
+				"what_is_contract_answer": "{name} 是该代币的官方智能合约。在交互前请务必验证合约地址。",
+				"stablecoin_peg": "这个稳定币如何维持锚定？",
+				"stablecoin_peg_answer": "{name} 根据其设计，通过储备金、算法机制或超额抵押的组合来维持其锚定。"
+			},
+			"entity": {
+				"whale_activity": "为什么这个巨鲸地址值得关注？",
+				"whale_activity_answer": "{name} 持有大量加密货币。追踪巨鲸动向可以帮助了解市场趋势。",
+				"multisig_what": "什么是多签钱包？",
+				"multisig_what_answer": "{name} 是一个多签钱包，需要多方批准才能执行交易，提供增强的安全性。",
+				"governance": "这个地址的治理角色是什么？",
+				"governance_answer": "{name} 属于 {entity}，可能参与协议治理、国库管理或社区决策。"
+			},
+			"risk": {
+				"why_flagged": "为什么这个地址被标记？",
+				"why_flagged_answer": "{name} 因与黑客攻击、诈骗或制裁违规等恶意活动相关而被标记。请格外谨慎。",
+				"what_to_do": "如果我与这个地址有过交互怎么办？",
+				"what_to_do_answer": "如果您向此地址发送过资金，可能无法追回。请检查接收协议是否有恢复机制，并考虑向相关部门报告。"
+			},
+			"contract": {
+				"is_verified": "这个合约已验证吗？",
+				"is_verified_answer": "您可以在 {chain} 区块浏览器上查看 {name} 是否有已验证的源代码。已验证的合约其源代码可供公开审查。"
+			}
 		}
 	},
 	"name": {
@@ -9512,6 +9556,10 @@
 			"premium": "溢价期",
 			"unknown": "未知"
 		},
+		"ens_records": "ENS 记录",
+		"location": "位置",
+		"keywords": "关键词",
+		"social_presence": "社交账号",
 		"seo": {
 			"suffix": "探索 ENS 域名详情、解析地址和持有者信息。",
 			"detail_description": "{name} 是一个 {type} 域名。解析到：{address}。查找持有者、记录和相关信息。"
@@ -9523,7 +9571,23 @@
 			"how_to_use": "如何使用这个域名？",
 			"how_to_use_answer": "您可以使用 {name} 发送加密货币，而不必使用冗长的十六进制地址。大多数钱包和 dApp 都支持 ENS 域名。",
 			"who_owns": "谁拥有这个域名？",
-			"who_owns_answer": "{name} 解析到地址 {address}。持有者可能与解析地址不同。"
+			"who_owns_answer": "{name} 解析到地址 {address}。持有者可能与解析地址不同。",
+			"how_to_buy": "如何注册类似的域名？",
+			"how_to_buy_answer": "您可以通过官方注册商注册 {type} 域名。ENS 域名可在 app.ens.domains 注册。",
+			"ens": {
+				"can_expire": "这个 ENS 域名会过期吗？",
+				"can_expire_answer": "是的，{name} 有过期时间。当前持有者必须在过期前续费以保留所有权。",
+				"how_to_renew": "如何续费 ENS 域名？",
+				"how_to_renew_answer": "要续费 {name}，请访问 app.ens.domains，连接钱包，支付续费费用即可延长注册期限。",
+				"how_to_set_records": "如何为我的 ENS 域名设置记录？",
+				"how_to_set_records_answer": "访问 app.ens.domains，连接拥有 {name} 的钱包，即可设置各种记录，包括地址、文本记录和内容哈希。",
+				"what_are_records": "什么是 ENS 文本记录？",
+				"what_are_records_answer": "ENS 文本记录允许您为域名附加额外信息，如社交媒体账号、网站 URL、邮箱、头像和个人简介。"
+			},
+			"entity": {
+				"who_is_owner": "谁是这个域名的持有者？",
+				"who_is_owner_answer": "{name} 由 {entity} 注册。这是基于公开记录的已验证关联。"
+			}
 		}
 	},
 	"helpButton": {
