@@ -38,7 +38,8 @@ import {
 	Flame,
 	Scale,
 	Users,
-	Star
+	Star,
+	Megaphone
 } from '@lucide/svelte';
 import type { Category, CategoryId } from '../types';
 
@@ -146,6 +147,12 @@ export const categories: Category[] = [
 		labelKey: 'chain_tools.categories.influencer',
 		color: '#F59E0B',
 		icon: Star
+	},
+	{
+		id: 'product-hunt',
+		labelKey: 'chain_tools.categories.product_hunt',
+		color: '#DA552F',
+		icon: Megaphone
 	}
 ];
 

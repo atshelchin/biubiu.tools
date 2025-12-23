@@ -1482,7 +1482,8 @@
 			"trends": "Trends & VC",
 			"web3_teams": "Web3 Teams",
 			"regulation": "Regulation",
-			"influencer": "KOL & Influencers"
+			"influencer": "KOL & Influencers",
+			"product_hunt": "Product Launch"
 		},
 		"tools": {
 			"uniswap": {
@@ -7838,6 +7839,183 @@
 			},
 			"braavos_wallet": {
 				"description": "Braavos - Web3 wallet"
+			},
+			"producthunt": {
+				"description": "The go-to platform for launching and discovering new products"
+			},
+			"hackernews": {
+				"description": "Tech community for sharing and discussing new projects (Show HN)"
+			},
+			"betalist": {
+				"description": "Platform for early adopters to discover upcoming startups"
+			},
+			"launchingnext": {
+				"description": "Directory for submitting and discovering new products"
+			},
+			"saashub": {
+				"description": "Software discovery platform for SaaS alternatives"
+			},
+			"alternativeto": {
+				"description": "Find alternatives to any software or app"
+			},
+			"slant": {
+				"description": "Product comparison and recommendation platform"
+			},
+			"theresanaiforthat": {
+				"description": "Comprehensive directory of AI tools and applications"
+			},
+			"futurepedia": {
+				"description": "AI tools directory with daily updates"
+			},
+			"toolify": {
+				"description": "AI tools discovery and comparison platform"
+			},
+			"g2": {
+				"description": "Business software reviews and ratings platform"
+			},
+			"capterra": {
+				"description": "Software comparison and review platform"
+			},
+			"getapp": {
+				"description": "Business software discovery platform"
+			},
+			"trustradius": {
+				"description": "B2B software reviews from verified users"
+			},
+			"indiehackers": {
+				"description": "Community for indie makers and bootstrapped founders"
+			},
+			"devto": {
+				"description": "Developer community for sharing articles and projects"
+			},
+			"hashnode": {
+				"description": "Developer blogging platform with built-in audience"
+			},
+			"reddit_startups": {
+				"description": "Subreddit for startup founders to share and get feedback"
+			},
+			"reddit_sideproject": {
+				"description": "Subreddit for showcasing side projects"
+			},
+			"github_trending": {
+				"description": "Discover trending open source projects"
+			},
+			"lobsters": {
+				"description": "Technology-focused community with curated discussions"
+			},
+			"x_twitter": {
+				"description": "Social platform for product marketing and viral growth"
+			},
+			"linkedin": {
+				"description": "Professional network for B2B marketing and networking"
+			},
+			"medium": {
+				"description": "Publishing platform for content marketing"
+			},
+			"youtube": {
+				"description": "Video platform for product demos and tutorials"
+			},
+			"36kr": {
+				"description": "Leading Chinese tech and startup media platform"
+			},
+			"sspai": {
+				"description": "Chinese platform for quality app recommendations"
+			},
+			"v2ex": {
+				"description": "Chinese developer and tech enthusiast community"
+			},
+			"appinn": {
+				"description": "Chinese platform for discovering niche software"
+			},
+			"okjike": {
+				"description": "Chinese interest-based social community"
+			},
+			"zhihu": {
+				"description": "Chinese Q&A platform for knowledge sharing"
+			},
+			"coolapk": {
+				"description": "Chinese Android app discovery community"
+			},
+			"liqi": {
+				"description": "Chinese platform showcasing creators' favorite tools"
+			},
+			"moongift": {
+				"description": "Japanese open source software introduction site"
+			},
+			"disquiet": {
+				"description": "Korean Product Hunt - product launch community"
+			},
+			"geeknews_korea": {
+				"description": "Korean tech news and discussion community"
+			},
+			"yourstory": {
+				"description": "India's leading startup and entrepreneurship media"
+			},
+			"inc42": {
+				"description": "Indian startup and tech news platform"
+			},
+			"eu_startups": {
+				"description": "European startup news and funding updates"
+			},
+			"tech_eu": {
+				"description": "European tech industry news and analysis"
+			},
+			"sifted": {
+				"description": "European startup news by Financial Times"
+			},
+			"e27": {
+				"description": "Southeast Asian tech startup ecosystem platform"
+			},
+			"techinasia": {
+				"description": "Asian tech and startup news platform"
+			},
+			"krasia": {
+				"description": "36Kr's English platform for Asian tech news"
+			},
+			"startupeable": {
+				"description": "Latin American startup community (Spanish)"
+			},
+			"contxto": {
+				"description": "Latin American tech and startup news"
+			},
+			"alchemy_dapp_store": {
+				"description": "Curated directory of Web3 dApps by Alchemy"
+			},
+			"stateofthedapps": {
+				"description": "Comprehensive dApp directory and rankings"
+			},
+			"web3_career": {
+				"description": "Job board for Web3 and crypto companies"
+			},
+			"cryptorank_ico": {
+				"description": "ICO/IDO calendar and project launches"
+			},
+			"icodrops": {
+				"description": "ICO and IDO calendar with ratings and analysis"
+			},
+			"coinmarketcap_new": {
+				"description": "Discover newly listed cryptocurrencies"
+			},
+			"coingecko_new": {
+				"description": "Track new cryptocurrency listings"
+			},
+			"defillama_protocols": {
+				"description": "Discover and compare DeFi protocols by TVL"
+			},
+			"crypto_twitter": {
+				"description": "Crypto Twitter community for Web3 marketing"
+			},
+			"mirror_xyz": {
+				"description": "Web3 publishing platform with NFT monetization"
+			},
+			"paragraph_xyz": {
+				"description": "Web3-native newsletter and publishing platform"
+			},
+			"quest3": {
+				"description": "Web3 quest and engagement platform (Asia focus)"
+			},
+			"zealy": {
+				"description": "Community quest and reward platform"
 			}
 		},
 		"seo": {

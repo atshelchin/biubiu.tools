@@ -43,6 +43,7 @@ export { trendsTools } from './trends';
 export { web3TeamsTools } from './web3-teams';
 export { regulationTools } from './regulation';
 export { influencerTools } from './influencer';
+export { productHuntTools } from './product-hunt';
 
 // Import all for merged array
 import { defiTools } from './defi';
@@ -83,6 +84,7 @@ import { trendsTools } from './trends';
 import { web3TeamsTools } from './web3-teams';
 import { regulationTools } from './regulation';
 import { influencerTools } from './influencer';
+import { productHuntTools } from './product-hunt';
 
 import type { ExternalTool } from '../../types';
 
@@ -127,7 +129,8 @@ export const allTools: ExternalTool[] = [
 	...trendsTools,
 	...web3TeamsTools,
 	...regulationTools,
-	...influencerTools
+	...influencerTools,
+	...productHuntTools
 ];
 
 /**

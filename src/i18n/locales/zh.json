@@ -1482,7 +1482,8 @@
 			"trends": "风口热点",
 			"web3_teams": "投资机构",
 			"regulation": "监管政策",
-			"influencer": "网红大V"
+			"influencer": "网红大V",
+			"product_hunt": "产品发布"
 		},
 		"tools": {
 			"uniswap": {
@@ -7838,6 +7839,183 @@
 			},
 			"forta": {
 				"description": "实时威胁检测网络"
+			},
+			"producthunt": {
+				"description": "全球最知名的产品发布与发现平台"
+			},
+			"hackernews": {
+				"description": "技术社区，分享和讨论新项目（Show HN）"
+			},
+			"betalist": {
+				"description": "早期产品发布平台，面向尝鲜用户"
+			},
+			"launchingnext": {
+				"description": "新产品提交和发现目录"
+			},
+			"saashub": {
+				"description": "SaaS 软件发现与替代品平台"
+			},
+			"alternativeto": {
+				"description": "查找任何软件或应用的替代品"
+			},
+			"slant": {
+				"description": "产品对比和推荐平台"
+			},
+			"theresanaiforthat": {
+				"description": "全面的 AI 工具和应用目录"
+			},
+			"futurepedia": {
+				"description": "每日更新的 AI 工具目录"
+			},
+			"toolify": {
+				"description": "AI 工具发现和对比平台"
+			},
+			"g2": {
+				"description": "企业软件评测和评分平台"
+			},
+			"capterra": {
+				"description": "软件对比和评测平台"
+			},
+			"getapp": {
+				"description": "企业软件发现平台"
+			},
+			"trustradius": {
+				"description": "来自认证用户的 B2B 软件评测"
+			},
+			"indiehackers": {
+				"description": "独立开发者和自力创业者社区"
+			},
+			"devto": {
+				"description": "开发者社区，分享文章和项目"
+			},
+			"hashnode": {
+				"description": "自带流量的开发者博客平台"
+			},
+			"reddit_startups": {
+				"description": "创业者分享和获取反馈的子版块"
+			},
+			"reddit_sideproject": {
+				"description": "展示副业项目的子版块"
+			},
+			"github_trending": {
+				"description": "发现热门开源项目"
+			},
+			"lobsters": {
+				"description": "精选讨论的技术社区"
+			},
+			"x_twitter": {
+				"description": "产品营销和病毒式传播的社交平台"
+			},
+			"linkedin": {
+				"description": "B2B 营销和职业社交网络"
+			},
+			"medium": {
+				"description": "内容营销的发布平台"
+			},
+			"youtube": {
+				"description": "产品演示和教程的视频平台"
+			},
+			"36kr": {
+				"description": "中国领先的科技创业媒体平台"
+			},
+			"sspai": {
+				"description": "优质应用推荐平台"
+			},
+			"v2ex": {
+				"description": "开发者和技术爱好者社区"
+			},
+			"appinn": {
+				"description": "小众软件发现平台"
+			},
+			"okjike": {
+				"description": "基于兴趣的社交社区"
+			},
+			"zhihu": {
+				"description": "知识分享问答平台"
+			},
+			"coolapk": {
+				"description": "安卓应用发现社区"
+			},
+			"liqi": {
+				"description": "创作者分享工具的平台"
+			},
+			"moongift": {
+				"description": "日本开源软件介绍网站"
+			},
+			"disquiet": {
+				"description": "韩国版 Product Hunt，产品发布社区"
+			},
+			"geeknews_korea": {
+				"description": "韩国技术新闻和讨论社区"
+			},
+			"yourstory": {
+				"description": "印度领先的创业和创业媒体"
+			},
+			"inc42": {
+				"description": "印度创业和科技新闻平台"
+			},
+			"eu_startups": {
+				"description": "欧洲创业新闻和融资动态"
+			},
+			"tech_eu": {
+				"description": "欧洲科技行业新闻和分析"
+			},
+			"sifted": {
+				"description": "英国金融时报旗下欧洲创业新闻"
+			},
+			"e27": {
+				"description": "东南亚科技创业生态平台"
+			},
+			"techinasia": {
+				"description": "亚洲科技和创业新闻平台"
+			},
+			"krasia": {
+				"description": "36氪英文版，亚洲科技新闻"
+			},
+			"startupeable": {
+				"description": "拉丁美洲创业社区（西班牙语）"
+			},
+			"contxto": {
+				"description": "拉丁美洲科技和创业新闻"
+			},
+			"alchemy_dapp_store": {
+				"description": "Alchemy 精选 Web3 DApp 目录"
+			},
+			"stateofthedapps": {
+				"description": "全面的 DApp 目录和排名"
+			},
+			"web3_career": {
+				"description": "Web3 和加密公司招聘平台"
+			},
+			"cryptorank_ico": {
+				"description": "ICO/IDO 日历和项目发布"
+			},
+			"icodrops": {
+				"description": "ICO 和 IDO 日历，含评级和分析"
+			},
+			"coinmarketcap_new": {
+				"description": "发现新上线的加密货币"
+			},
+			"coingecko_new": {
+				"description": "追踪新上线的加密货币"
+			},
+			"defillama_protocols": {
+				"description": "按 TVL 发现和对比 DeFi 协议"
+			},
+			"crypto_twitter": {
+				"description": "加密推特社区，Web3 营销必备"
+			},
+			"mirror_xyz": {
+				"description": "Web3 发布平台，支持 NFT 变现"
+			},
+			"paragraph_xyz": {
+				"description": "Web3 原生 Newsletter 发布平台"
+			},
+			"quest3": {
+				"description": "Web3 任务和互动平台（亚洲为主）"
+			},
+			"zealy": {
+				"description": "社区任务和奖励平台"
 			}
 		},
 		"seo": {

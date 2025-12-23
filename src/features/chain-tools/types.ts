@@ -42,7 +42,8 @@ export type CategoryId =
 	| 'trends'
 	| 'web3-teams'
 	| 'regulation'
-	| 'influencer';
+	| 'influencer'
+	| 'product-hunt';
 
 /**
  * Category definition with i18n keys and styling
