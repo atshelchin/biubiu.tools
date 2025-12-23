@@ -66,6 +66,8 @@
 				<a href="/privacy" class="legal-link">{i18n.t('footer.privacy')}</a>
 				<span class="separator">·</span>
 				<a href="/terms" class="legal-link">{i18n.t('footer.terms')}</a>
+				<span class="separator">·</span>
+				<a href="/sitemap.xml" class="legal-link">Sitemap</a>
 			</div>
 
 			<div class="controls-group">
