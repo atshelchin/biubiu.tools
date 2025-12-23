@@ -1594,6 +1594,600 @@
 						"answer": "可以考虑 Hacker News（技术社区）、Indie Hackers（独立开发者）、BetaList（预发布产品）、Dev.to（开发者工具），以及各地区的本地平台如中国的 V2EX 和 36氪等。"
 					}
 				]
+			},
+			"bridge": {
+				"title": "跨链桥 - 区块链间资产转移 | BiuBiu Tools",
+				"description": "发现最佳跨链桥，在以太坊、Arbitrum、Optimism、Base 等网络间安全转移代币。",
+				"faqs": [
+					{
+						"question": "什么是跨链桥？",
+						"answer": "跨链桥是一种协议，允许你在不同区块链网络之间转移代币和数据。它在源链上锁定资产，并在目标链上铸造等值代币。"
+					},
+					{
+						"question": "哪些跨链桥最安全？",
+						"answer": "L2 的官方桥（如 Arbitrum Bridge、Optimism Bridge）通常最安全但较慢。第三方桥如 Stargate、Across 和 Hop 提供更快的转账，安全性也不错。始终检查桥的审计状态。"
+					},
+					{
+						"question": "跨链转账需要多长时间？",
+						"answer": "官方 L2 桥提款需要 7 天以上（欺诈证明期）。快速桥如 Stargate 或 Across 只需几分钟。理解速度与安全性的权衡很重要。"
+					}
+				]
+			},
+			"explorer": {
+				"title": "区块链浏览器 - 查看交易与智能合约 | BiuBiu Tools",
+				"description": "访问以太坊、BSC、Polygon 等网络的区块链浏览器。查看交易、验证合约、分析链上数据。",
+				"faqs": [
+					{
+						"question": "什么是区块链浏览器？",
+						"answer": "区块链浏览器是区块链数据的搜索引擎。它允许你查看交易、钱包余额、智能合约代码、代币转账和其他链上活动。"
+					},
+					{
+						"question": "如何验证智能合约？",
+						"answer": "在 Etherscan 上，进入合约地址，点击「Contract」标签，然后「Verify and Publish」。提交源代码、编译器版本和构造函数参数。验证后的合约会显示绿色勾号。"
+					},
+					{
+						"question": "最好的多链浏览器有哪些？",
+						"answer": "Blockscout 支持多个 EVM 链且开源。OKLink 覆盖 50+ 条链。对于特定链，使用原生浏览器如 Etherscan（以太坊）、BSCScan（BNB Chain）或 Arbiscan（Arbitrum）。"
+					}
+				]
+			},
+			"dev": {
+				"title": "Web3 开发者工具 - 构建 dApp 与智能合约 | BiuBiu Tools",
+				"description": "在以太坊和其他区块链上构建的必备开发者工具。智能合约框架、测试工具和部署服务。",
+				"faqs": [
+					{
+						"question": "主要的智能合约开发框架有哪些？",
+						"answer": "Foundry 是最快、最流行的 Solidity 框架。Hardhat 提供出色的 JavaScript 集成和插件。Brownie 基于 Python。Anchor 是 Solana 程序的标准。"
+					},
+					{
+						"question": "如何获取测试网代币？",
+						"answer": "使用 Alchemy Faucet、Infura Faucet 或特定链的水龙头。Sepolia 是主要的以太坊测试网。大多数 L2 都有自己的测试网水龙头，可在其文档中找到链接。"
+					},
+					{
+						"question": "应该使用哪些 RPC 提供商？",
+						"answer": "Alchemy 和 Infura 最可靠，免费额度慷慨。QuickNode 性能很快。去中心化选项可考虑 Ankr 或 POKT Network。始终准备备用 RPC 端点。"
+					}
+				]
+			},
+			"dao": {
+				"title": "DAO 工具 - 治理、投票与资金管理 | BiuBiu Tools",
+				"description": "创建和管理 DAO 的工具。治理平台、投票系统、资金管理和贡献者协调。",
+				"faqs": [
+					{
+						"question": "什么是 DAO？",
+						"answer": "DAO（去中心化自治组织）是由智能合约和代币持有者投票管理的组织。成员可以提案和投票决策，无需中央权威。"
+					},
+					{
+						"question": "如何参与 DAO 治理？",
+						"answer": "持有 DAO 的治理代币，然后使用 Snapshot 进行链下投票或 Tally 进行链上投票。某些 DAO 需要先委托代币才能投票。"
+					},
+					{
+						"question": "DAO 使用哪些工具？",
+						"answer": "Snapshot 用于无 Gas 投票，Tally 用于链上治理，Gnosis Safe 用于资金管理，Coordinape 用于贡献者奖励，Discourse/Commonwealth 用于讨论。"
+					}
+				]
+			},
+			"infra": {
+				"title": "区块链基础设施 - RPC 节点、API 与数据服务 | BiuBiu Tools",
+				"description": "Web3 应用的基础设施服务。RPC 节点提供商、索引服务、数据 API 和去中心化存储解决方案。",
+				"faqs": [
+					{
+						"question": "什么是区块链基础设施？",
+						"answer": "区块链基础设施包括用于访问区块链的 RPC 节点、用于查询数据的索引器、IPFS/Arweave 去中心化存储以及用于链下数据的预言机。这些是 dApp 的基础。"
+					},
+					{
+						"question": "应该自己运行节点吗？",
+						"answer": "对于大多数项目，使用 Alchemy 或 Infura 等提供商更实际。只有在需要最大程度去中心化、特定定制需求或归档数据访问时才需要自己运行节点。"
+					},
+					{
+						"question": "The Graph 是做什么的？",
+						"answer": "The Graph 索引区块链数据并提供 GraphQL API。它使链上数据查询快速高效。大多数主要 DeFi 协议都使用 subgraph 为其前端提供数据。"
+					}
+				]
+			},
+			"launchpad": {
+				"title": "代币发射平台 - IDO、IEO 与公平发射 | BiuBiu Tools",
+				"description": "发现新加密项目的代币发射平台。IDO 发射台、IEO 交易所和公平发射协议。",
+				"faqs": [
+					{
+						"question": "什么是代币发射平台？",
+						"answer": "发射平台是新加密项目通过向早期投资者出售代币来筹集资金的平台。类型包括 IDO（DEX）、IEO（交易所）和公平发射平台。"
+					},
+					{
+						"question": "如何参与 IDO？",
+						"answer": "大多数发射平台要求持有其原生代币并完成 KYC。你需要质押代币以获得分配额度。流行的发射平台包括 DAO Maker、Seedify 和 Polkastarter。"
+					},
+					{
+						"question": "发射平台投资有哪些风险？",
+						"answer": "损失风险很高——许多项目会失败。注意锁定代币的归属计划、发射时的低流动性和潜在的跑路风险。始终做好研究，只投资你能承受损失的金额。"
+					}
+				]
+			},
+			"identity": {
+				"title": "Web3 身份 - ENS、Lens 与去中心化身份 | BiuBiu Tools",
+				"description": "Web3 的去中心化身份解决方案。域名（ENS）、社交资料（Lens）、凭证和声誉系统。",
+				"faqs": [
+					{
+						"question": "什么是 Web3 身份？",
+						"answer": "Web3 身份让你在链上拥有自己的数字身份。这包括域名（ENS）、社交资料（Lens）、可验证凭证和跨 dApp 的声誉分数。"
+					},
+					{
+						"question": "应该购买 ENS 域名吗？",
+						"answer": "是的，ENS 域名用可读名称（yourname.eth）替代复杂的钱包地址。它们在钱包和 dApp 之间通用。你还可以将它们用作去中心化网站。"
+					},
+					{
+						"question": "什么是 Lens Protocol？",
+						"answer": "Lens Protocol 是一个去中心化社交图谱，你的个人资料、内容和关注者都是 NFT。基于 Lens 构建的应用包括 Lenster、Hey 和 Orb。"
+					}
+				]
+			},
+			"social": {
+				"title": "Web3 社交 - 去中心化社交网络与社区 | BiuBiu Tools",
+				"description": "去中心化社交平台和社区工具。在 Farcaster、Lens 等平台上构建和参与 Web3 社区。",
+				"faqs": [
+					{
+						"question": "什么是 Web3 社交平台？",
+						"answer": "Web3 社交平台是 Twitter/Facebook 的去中心化替代品。你拥有自己的数据和社交图谱。流行的包括 Farcaster、Lens Protocol 和 DeSo。"
+					},
+					{
+						"question": "什么是 Farcaster？",
+						"answer": "Farcaster 是类似 Twitter 的去中心化社交协议。Warpcast 是主要客户端。它在加密开发者中很受欢迎，有强大的社区文化。"
+					},
+					{
+						"question": "Web3 社区如何协调？",
+						"answer": "Discord 和 Telegram 用于实时聊天，Farcaster/Lens 用于社交，Mirror 用于长文内容，Snapshot 用于治理，Guild.xyz 用于代币门控访问。"
+					}
+				]
+			},
+			"l2": {
+				"title": "Layer 2 解决方案 - 以太坊扩容网络 | BiuBiu Tools",
+				"description": "探索以太坊的 Layer 2 扩容解决方案。Arbitrum、Optimism、Base、zkSync 等 Rollup，费用更低、交易更快。",
+				"faqs": [
+					{
+						"question": "什么是 Layer 2？",
+						"answer": "Layer 2 是在以太坊主链（L1）之外处理交易的扩容解决方案，同时继承其安全性。它们提供更低的费用和更快的交易。类型包括 Optimistic Rollups 和 ZK Rollups。"
+					},
+					{
+						"question": "Optimistic 和 ZK Rollups 有什么区别？",
+						"answer": "Optimistic Rollups（Arbitrum、Optimism）假设交易有效并使用欺诈证明。ZK Rollups（zkSync、Starknet）使用加密证明实现即时最终性，但构建更复杂。"
+					},
+					{
+						"question": "应该使用哪个 L2？",
+						"answer": "Arbitrum 和 Optimism 的 DeFi 活动最多。Base（Coinbase）增长很快。zkSync 和 Starknet 提供 ZK 技术。根据你想使用的 dApp 和费用考虑来选择。"
+					}
+				]
+			},
+			"gamefi": {
+				"title": "GameFi 与 Web3 游戏 - 边玩边赚 | BiuBiu Tools",
+				"description": "发现 Web3 游戏和 GameFi 平台。边玩边赚游戏、NFT 游戏资产和区块链游戏公会。",
+				"faqs": [
+					{
+						"question": "什么是 GameFi？",
+						"answer": "GameFi 将游戏与 DeFi 机制结合。玩家通过玩游戏赚取代币和 NFT。资产真正由玩家拥有，可以交易或在不同游戏中使用。"
+					},
+					{
+						"question": "流行的 Web3 游戏有哪些？",
+						"answer": "Axie Infinity 开创了边玩边赚模式。Illuvium 和 Big Time 是 AAA 级游戏。Gods Unchained 是流行的交易卡牌游戏。这个领域正在向更好的游戏体验演进。"
+					},
+					{
+						"question": "什么是游戏公会？",
+						"answer": "YGG 和 Merit Circle 等游戏公会汇集资源帮助玩家获得昂贵的游戏 NFT。他们为玩家提供奖学金并分享收益。对于高入门成本的游戏很有用。"
+					}
+				]
+			},
+			"payments": {
+				"title": "加密支付 - 支付处理与卡服务 | BiuBiu Tools",
+				"description": "面向企业和个人的加密支付解决方案。支付处理器、加密卡和商户服务。",
+				"faqs": [
+					{
+						"question": "加密支付如何运作？",
+						"answer": "加密支付直接在区块链上转移价值。对于商户，BitPay 等支付处理器将加密货币转换为法币。Coinbase Card 等加密卡让你可以在任何地方消费加密货币。"
+					},
+					{
+						"question": "最好的加密卡有哪些？",
+						"answer": "Coinbase Card 和 Crypto.com Card 可用范围广。Gnosis Pay 提供 DeFi 集成。在选择前比较返现率、支持的国家和费用结构。"
+					},
+					{
+						"question": "企业可以接受加密支付吗？",
+						"answer": "可以，使用 BitPay、Coinbase Commerce 等支付处理器或直接钱包支付。考虑波动性、税务影响以及是否立即转换为法币。"
+					}
+				]
+			},
+			"funding": {
+				"title": "Web3 融资 - 资助、风投与众筹 | BiuBiu Tools",
+				"description": "为 Web3 项目寻找资金来源。生态系统资助、风投、众筹平台和加速器计划。",
+				"faqs": [
+					{
+						"question": "Web3 项目如何获得资金？",
+						"answer": "选项包括生态系统资助（以太坊基金会、L2 资助）、风投融资（a16z、Paradigm）、代币发行（发射平台）和追溯性资助（Optimism RetroPGF）。"
+					},
+					{
+						"question": "什么是生态系统资助？",
+						"answer": "区块链基金会提供的资助用于资助开发。以太坊基金会、Uniswap Grants、Arbitrum Foundation 等为在其生态系统上构建的项目提供资金。"
+					},
+					{
+						"question": "如何向加密风投推介？",
+						"answer": "首先构建一个可运行的产品。加密风投看重技术创始人和开源贡献。在会议上社交，获取warm intro，展示 TVL 或用户等牵引力指标。"
+					}
+				]
+			},
+			"news": {
+				"title": "加密新闻 - 市场动态与行业报道 | BiuBiu Tools",
+				"description": "获取最新加密新闻。市场分析、项目更新、监管新闻和行业趋势。",
+				"faqs": [
+					{
+						"question": "哪些加密新闻来源可靠？",
+						"answer": "The Block 和 CoinDesk 提供机构级报道。Decrypt 新闻易于理解。Bankless 和 The Defiant 专注 DeFi。始终交叉验证信息，警惕赞助内容。"
+					},
+					{
+						"question": "如何跟进加密动态？",
+						"answer": "在 Crypto Twitter/X 上关注关键账号。订阅 Bankless 和 Week in Ethereum 等 Newsletter。使用 CryptoPanic 等聚合器。加入你关注项目的 Discord 社区。"
+					},
+					{
+						"question": "如何识别 FUD 和错误信息？",
+						"answer": "检查多个来源，尽可能在链上验证声明，对匿名来源保持怀疑，理解信息分享者的利益动机。"
+					}
+				]
+			},
+			"community": {
+				"title": "加密社区 - Discord、Telegram 与论坛 | BiuBiu Tools",
+				"description": "查找和加入加密社区。Discord 服务器、Telegram 群组、论坛和 Web3 项目的社区平台。",
+				"faqs": [
+					{
+						"question": "加密社区在哪里聚集？",
+						"answer": "Discord 是大多数项目的中心。Telegram 用于快速更新和交易群。Farcaster 和 Lens 用于 Web3 原生社交。Reddit 用于更广泛的讨论。"
+					},
+					{
+						"question": "如何找到高质量社区？",
+						"answer": "寻找有活跃管理、超越价格的实质性讨论、开发者存在和社区驱动的项目。避免拉盘群和只关注价格投机的社区。"
+					},
+					{
+						"question": "如何避免社区中的诈骗？",
+						"answer": "永远不要相信提供帮助或投资的私信。官方公告来自验证渠道。不要点击随机链接。管理员永远不会要求你的助记词。"
+					}
+				]
+			},
+			"jobs": {
+				"title": "Web3 工作 - 加密职业与远程机会 | BiuBiu Tools",
+				"description": "在加密行业找工作。开发者职位、市场营销、社区管理和远程 Web3 机会。",
+				"faqs": [
+					{
+						"question": "Web3 工作需要什么技能？",
+						"answer": "开发者：Solidity、Rust 或 TypeScript。非技术：社区管理、市场营销、内容创作、BD。所有职位都期望理解区块链基础知识。"
+					},
+					{
+						"question": "在哪里找 Web3 工作？",
+						"answer": "Crypto.jobs 和 Web3.career 是专门的招聘网站。LinkedIn 有越来越多的加密职位。Twitter/X 上的招聘帖子很常见。许多职位在项目 Discord 中发布。"
+					},
+					{
+						"question": "Web3 工作大多是远程吗？",
+						"answer": "是的，大多数 Web3 工作都是远程优先。公司分布在全球各地。时区灵活性各异——有些要求与美国或欧洲时区重叠。"
+					}
+				]
+			},
+			"stablecoin": {
+				"title": "稳定币 - USDC、USDT、DAI 等 | BiuBiu Tools",
+				"description": "了解稳定币及其用例。法币支持、算法和去中心化稳定币，用于 DeFi 和支付。",
+				"faqs": [
+					{
+						"question": "什么是稳定币？",
+						"answer": "稳定币是与美元等稳定资产挂钩的加密货币。类型包括法币支持（USDC、USDT）、加密支持（DAI）和算法稳定币。"
+					},
+					{
+						"question": "哪种稳定币最安全？",
+						"answer": "USDC 监管严格且透明。USDT 流动性最大但透明度较低。DAI 是去中心化的但有智能合约风险。多元化是明智的选择。"
+					},
+					{
+						"question": "UST 发生了什么？",
+						"answer": "UST 是一种算法稳定币，于 2022 年 5 月崩溃，脱钩并导致 400 亿美元以上的损失。这凸显了没有适当抵押品的算法设计的风险。"
+					}
+				]
+			},
+			"oracle": {
+				"title": "区块链预言机 - 价格馈送与链下数据 | BiuBiu Tools",
+				"description": "将真实世界数据带入区块链的预言机服务。为智能合约提供价格馈送、随机数和跨链数据。",
+				"faqs": [
+					{
+						"question": "什么是区块链预言机？",
+						"answer": "预言机将外部数据（价格、天气、体育比分）带入智能合约。它们对于 DeFi、保险和任何需要真实世界信息的 dApp 都是必不可少的。"
+					},
+					{
+						"question": "为什么 Chainlink 如此重要？",
+						"answer": "Chainlink 是主导的预言机网络，保护着数十亿美元的 DeFi 价值。它提供去中心化价格馈送、用于随机数的 VRF 和用于跨链通信的 CCIP。"
+					},
+					{
+						"question": "什么是预言机攻击？",
+						"answer": "预言机攻击操纵价格馈送来利用 DeFi 协议。攻击者可能使用闪电贷操纵预言机读取的 DEX 价格。这已造成数亿美元的损失。"
+					}
+				]
+			},
+			"dao_token": {
+				"title": "DAO 治理代币 - 投票权与代币经济学 | BiuBiu Tools",
+				"description": "了解 DAO 治理代币。主要 DAO 中的投票机制、代币分配和治理参与。",
+				"faqs": [
+					{
+						"question": "什么是治理代币？",
+						"answer": "治理代币赋予持有者在协议决策中的投票权。例如：UNI（Uniswap）、AAVE、COMP。投票权通常与代币持有量成比例。"
+					},
+					{
+						"question": "投票委托如何运作？",
+						"answer": "你可以将投票权委托给他人（代表）同时保留代币。这有助于活跃的社区成员代表被动持有者投票。"
+					},
+					{
+						"question": "治理代币有价值吗？",
+						"answer": "价值来自治理权、潜在的费用分成和投机。一些协议与代币持有者分享收入。其他协议在价值累积方面遇到困难。"
+					}
+				]
+			},
+			"whale_address": {
+				"title": "巨鲸钱包与资金库追踪 - 聪明钱洞察 | BiuBiu Tools",
+				"description": "追踪巨鲸钱包和协议资金库。监控加密货币中的聪明钱动向和机构持仓。",
+				"faqs": [
+					{
+						"question": "什么是加密巨鲸？",
+						"answer": "巨鲸是持有大量加密货币的实体。他们的交易可以影响市场。追踪巨鲸钱包可以提供市场走势的早期信号。"
+					},
+					{
+						"question": "如何追踪巨鲸钱包？",
+						"answer": "使用 Nansen 或 Arkham 进行标记钱包追踪。在 Etherscan 上设置大额转账警报。关注分享巨鲸活动的账号如 @lookonchain。"
+					},
+					{
+						"question": "什么是协议资金库？",
+						"answer": "资金库是由 DAO 或协议控制的资金。用于资助、流动性和开发。大型资金库（如 Uniswap 的）被作为项目健康度的指标来追踪。"
+					}
+				]
+			},
+			"airdrop_token": {
+				"title": "加密空投 - 代币分发与资格 | BiuBiu Tools",
+				"description": "追踪和领取加密空投。查找空投机会、检查资格并学习空投farming策略。",
+				"faqs": [
+					{
+						"question": "什么是加密空投？",
+						"answer": "空投是向早期用户、持有者或社区成员免费分发代币。用于去中心化所有权、奖励用户和为新项目创造知名度。"
+					},
+					{
+						"question": "如何获得空投资格？",
+						"answer": "早期使用协议、长期保持活动、参与测试网、持有相关代币/NFT 并参与社区。女巫检测很常见——质量比数量重要。"
+					},
+					{
+						"question": "空投需要交税吗？",
+						"answer": "在大多数司法管辖区，空投在收到时作为收入征税，出售时作为资本利得征税。记录空投时的公允市场价值。咨询税务专业人士。"
+					}
+				]
+			},
+			"non_evm": {
+				"title": "非 EVM 区块链 - Solana、Bitcoin、Cosmos 等 | BiuBiu Tools",
+				"description": "探索非 EVM 区块链生态系统。Solana、Bitcoin、Cosmos、Aptos、Sui 及其独特的工具和 dApp。",
+				"faqs": [
+					{
+						"question": "什么是非 EVM 链？",
+						"answer": "非 EVM 链不使用以太坊的虚拟机。它们有不同的架构——Solana 使用 Rust，Bitcoin 有自己的脚本，Cosmos 使用 CosmWasm。每个都有独特的权衡。"
+					},
+					{
+						"question": "为什么使用非 EVM 链？",
+						"answer": "不同的链为不同的目标优化。Solana 追求速度和低费用，Bitcoin 追求安全性和去中心化，Cosmos 追求互操作性，Move 链追求安全性。"
+					},
+					{
+						"question": "如何跨链到非 EVM 链？",
+						"answer": "使用特定的跨链桥如 Wormhole（多链）、Portal（Solana）或 IBC（Cosmos）。一些中心化交易所支持直接存取到非 EVM 链。"
+					}
+				]
+			},
+			"legendary_token": {
+				"title": "高潜力代币 - 研究与分析工具 | BiuBiu Tools",
+				"description": "研究高潜力代币的工具。链上分析、社交指标和发现新机会的早期平台。",
+				"faqs": [
+					{
+						"question": "如何发现早期机会？",
+						"answer": "监控新代币部署，追踪聪明钱钱包，在社交媒体上关注开发者和建设者，参与测试网，研究即将到来的发射。"
+					},
+					{
+						"question": "哪些指标表明潜力？",
+						"answer": "关注团队背景、技术创新、代币经济学（供应量、归属）、社区参与度、开发者活动（GitHub）、TVL 增长和聪明钱兴趣。"
+					},
+					{
+						"question": "有哪些风险？",
+						"answer": "高潜力 = 高风险。大多数代币会失败。警惕跑路、糟糕的代币经济学、缺乏实用性和过度炒作的营销。永远不要投资超过你能承受损失的金额。"
+					}
+				]
+			},
+			"mev": {
+				"title": "MEV - 最大可提取价值工具与保护 | BiuBiu Tools",
+				"description": "理解和应对 MEV。保护工具、私密交易和高级用户的 MEV 提取。",
+				"faqs": [
+					{
+						"question": "什么是 MEV？",
+						"answer": "MEV（最大可提取价值）是通过重新排序、插入或审查交易来提取的利润。包括套利、清算和可能影响你交易的三明治攻击。"
+					},
+					{
+						"question": "如何防护 MEV？",
+						"answer": "使用 Flashbots Protect 或 MEV Blocker 进行私密交易。设置低滑点。使用带有 MEV 保护的聚合器如 1inch。避免在流动性稀薄时进行大额交易。"
+					},
+					{
+						"question": "什么是三明治攻击？",
+						"answer": "三明治攻击在你的交换前用买入抢跑，然后用卖出尾随，从你造成的价格影响中获利。使用私密内存池或 MEV 保护可以防止这种情况。"
+					}
+				]
+			},
+			"privacy": {
+				"title": "加密隐私 - 私密交易与工具 | BiuBiu Tools",
+				"description": "加密货币的隐私保护工具。混币器、私密交易和以隐私为重点的协议。",
+				"faqs": [
+					{
+						"question": "为什么加密隐私很重要？",
+						"answer": "区块链交易是公开的。隐私保护可以防止追踪、定向攻击和监控。这关乎安全和金融主权，而不是隐藏不当行为。"
+					},
+					{
+						"question": "有哪些隐私选项？",
+						"answer": "使用隐私币（Zcash、Monero）、隐身地址或隐私协议。Layer 2 解决方案和新的隐私技术正在出现。监管状态因司法管辖区而异。"
+					},
+					{
+						"question": "使用隐私工具合法吗？",
+						"answer": "隐私工具通常是合法的，但法规各异。一些混币器已被制裁。始终遵守当地法律并了解监管环境。"
+					}
+				]
+			},
+			"rwa": {
+				"title": "真实世界资产（RWA）- 代币化资产 | BiuBiu Tools",
+				"description": "探索代币化的真实世界资产。代币化国债、房地产、商品和区块链上的传统金融。",
+				"faqs": [
+					{
+						"question": "什么是 RWA？",
+						"answer": "RWA（真实世界资产）是美国国债、房地产或商品等传统资产在区块链上的代币化。它们将传统金融收益带入 DeFi。"
+					},
+					{
+						"question": "为什么 RWA 很重要？",
+						"answer": "RWA 提供来自实体经济的稳定收益（国债利率）、与加密波动性的多元化，以及传统金融与 DeFi 的桥接。MakerDAO 持有数十亿美元的 RWA。"
+					},
+					{
+						"question": "有哪些 RWA 平台？",
+						"answer": "Ondo Finance 用于代币化国债，RealT 用于房地产，Centrifuge 用于资产融资。主要 DeFi 协议正在整合 RWA 策略以获取收益。"
+					}
+				]
+			},
+			"ai_crypto": {
+				"title": "AI 与加密 - AI 代币与去中心化 AI | BiuBiu Tools",
+				"description": "AI 与区块链的交汇。AI 代币、去中心化算力、AI 代理和链上机器学习。",
+				"faqs": [
+					{
+						"question": "AI 和加密如何关联？",
+						"answer": "AI 和加密通过去中心化算力（Akash、Render）、AI 代理经济、去中心化 AI 训练和 AI 服务代币交汇。"
+					},
+					{
+						"question": "什么是加密中的 AI 代理？",
+						"answer": "AI 代理是可以持有钱包、进行交易并与 DeFi 交互的自主程序。它们正在交易、内容创作和协议管理中崭露头角。"
+					},
+					{
+						"question": "主要的 AI 加密项目有哪些？",
+						"answer": "Render Network 提供 GPU 算力，Akash 提供去中心化云，Bittensor 提供去中心化 AI，以及各种 AI 代理平台。这个领域正在快速发展。"
+					}
+				]
+			},
+			"restaking": {
+				"title": "再质押 - EigenLayer 与流动性再质押 | BiuBiu Tools",
+				"description": "用于额外收益的再质押协议。EigenLayer、流动性再质押代币和 AVS（主动验证服务）。",
+				"faqs": [
+					{
+						"question": "什么是再质押？",
+						"answer": "再质押让你使用已质押的 ETH 来保护额外的协议（AVS）以获得额外收益。EigenLayer 首创了这一模式，允许 ETH 质押者从多个服务中获得奖励。"
+					},
+					{
+						"question": "什么是流动性再质押代币（LRT）？",
+						"answer": "LRT 如 eETH（ether.fi）或 ezETH（Renzo）代表可以在 DeFi 中使用的再质押 ETH。它们是再质押头寸的流动性版本。"
+					},
+					{
+						"question": "再质押有哪些风险？",
+						"answer": "再质押增加了 AVS 失败的削减风险、智能合约风险和复杂性。更高的收益伴随着更高的风险。了解你正在保护的 AVS 是什么。"
+					}
+				]
+			},
+			"cex": {
+				"title": "加密交易所（CEX）- 交易平台 | BiuBiu Tools",
+				"description": "用于交易的中心化加密货币交易所。比较交易所功能、安全性、费用和支持的资产。",
+				"faqs": [
+					{
+						"question": "哪些交易所最安全？",
+						"answer": "Coinbase 和 Kraken 在美国受到良好监管。Binance 全球流动性最大。寻找储备证明、合规性和安全记录。"
+					},
+					{
+						"question": "CEX 还是 DEX - 应该使用哪个？",
+						"answer": "CEX 用于法币出入金、高级交易和新手友好。DEX 用于自托管、无许可交易和访问更多代币。许多人两者都用。"
+					},
+					{
+						"question": "如何保护我的交易所账户？",
+						"answer": "启用 2FA（最好是硬件密钥），使用唯一密码，白名单提款地址，启用提款延迟，不要长期在交易所存放大量资金。"
+					}
+				]
+			},
+			"gas_burner": {
+				"title": "Gas 消耗榜与代币销毁 - 通缩机制 | BiuBiu Tools",
+				"description": "追踪代币销毁和 Gas 消耗。监控通缩机制、销毁率和供应动态。",
+				"faqs": [
+					{
+						"question": "什么是代币销毁？",
+						"answer": "代币销毁通过将代币发送到不可用的地址来永久移除流通中的代币。这创造了通缩压力并可能增加稀缺价值。"
+					},
+					{
+						"question": "ETH 销毁如何运作？",
+						"answer": "自 EIP-1559 以来，基础费用被销毁而不是给矿工。在高活动期间，ETH 可能变得通缩。在 ultrasound.money 上追踪销毁率。"
+					},
+					{
+						"question": "哪些项目有显著的销毁？",
+						"answer": "以太坊（基础费用）、BNB（季度销毁）、SHIB（社区销毁），以及许多带有买入销毁机制的协议。查看代币经济学以了解销毁计划。"
+					}
+				]
+			},
+			"trends": {
+				"title": "加密趋势与风投活动 - 市场情报 | BiuBiu Tools",
+				"description": "追踪加密市场趋势和风险投资活动。投资数据、新兴叙事和市场动向。",
+				"faqs": [
+					{
+						"question": "如何早期识别加密趋势？",
+						"answer": "关注风投投资公告，链上追踪聪明钱，监控社交情绪，观察开发者活动指标，参与建设者社区。"
+					},
+					{
+						"question": "哪些风投在加密领域最活跃？",
+						"answer": "a16z、Paradigm、Polychain 和 Multicoin 是顶级机构。Animoca 和 Spartan 专注游戏。追踪他们的投资组合以了解他们押注的主题。"
+					},
+					{
+						"question": "应该关注哪些当前趋势？",
+						"answer": "AI 代理、再质押、RWA 和比特币 L2 是当前热门主题。趋势会循环——今天热门的明天可能降温。关注基本面而不是炒作。"
+					}
+				]
+			},
+			"web3_teams": {
+				"title": "Web3 团队与风投 - 建设者与投资者 | BiuBiu Tools",
+				"description": "发现 Web3 团队、建设者和投资者。追踪谁在建造什么以及聪明钱在投资哪里。",
+				"faqs": [
+					{
+						"question": "如何研究 Web3 团队？",
+						"answer": "在 LinkedIn 上查看团队背景，验证过去的项目，查看 GitHub 活动，评估社区声誉。匿名团队风险更高。"
+					},
+					{
+						"question": "什么样的 Web3 团队算强？",
+						"answer": "之前成功的项目、技术深度、透明的沟通、对齐的代币激励和真诚的社区参与。过去的表现很重要。"
+					},
+					{
+						"question": "风投如何评估加密项目？",
+						"answer": "团队质量、技术创新、市场规模、代币经济学、竞争定位和牵引力。早期阶段关注团队，后期阶段关注指标。"
+					}
+				]
+			},
+			"regulation": {
+				"title": "加密监管 - 法律与合规资源 | BiuBiu Tools",
+				"description": "了解全球加密监管动态。SEC 更新、MiCA、全球监管发展和合规资源。",
+				"faqs": [
+					{
+						"question": "加密货币如何受监管？",
+						"answer": "监管因国家而异。美国有 SEC（证券）和 CFTC（商品）。欧盟有 MiCA。一些国家禁止加密，另一些则拥抱它。格局正在快速演变。"
+					},
+					{
+						"question": "稳定币正在被监管吗？",
+						"answer": "是的，稳定币面临越来越多的监管。欧盟的 MiCA 要求储备和许可。美国正在制定稳定币立法。预计对发行者的要求会更多。"
+					},
+					{
+						"question": "如何保持合规？",
+						"answer": "记录所有交易，了解你所在司法管辖区的规则，使用合规的交易所，咨询懂加密的法律和税务专业人士。"
+					}
+				]
+			},
+			"influencer": {
+				"title": "加密网红与 KOL - Web3 内容创作者 | BiuBiu Tools",
+				"description": "发现加密网红和内容创作者。在社交媒体上关注关键意见领袖、分析师和建设者。",
+				"faqs": [
+					{
+						"question": "如何找到可靠的加密网红？",
+						"answer": "寻找分享知识而不仅仅是价格预测的建设者。检查过往记录、持仓透明度和分析质量。避免纯粹的喊单者。"
+					},
+					{
+						"question": "加密 KOL 使用哪些平台？",
+						"answer": "Twitter/X 是主要中心。YouTube 用于长视频。Farcaster 用于 Web3 原生内容。Substack/Mirror 用于 Newsletter。TikTok 用于触达主流。"
+					},
+					{
+						"question": "应该跟随交易信号吗？",
+						"answer": "要非常谨慎。许多「信号」是付费推广或拉高出货。网红经常把他们的筹码卖给粉丝。专注于教育而不是交易喊单。"
+					}
+				]
 			}
 		},
 		"tools": {

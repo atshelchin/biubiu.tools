@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { useI18n } from '@shelchin/i18n/svelte';
+	import { SvelteMap } from 'svelte/reactivity';
 	import type { Category, CategoryId } from '../types';
 
 	interface Props {
@@ -11,17 +12,72 @@
 	let { categories, selected, onselect }: Props = $props();
 
 	const i18n = useI18n();
+
+	// Reference to the scroll container
+	let scrollContainer: HTMLDivElement | undefined = $state();
+
+	// Store button references by category id
+	let buttonRefs = new SvelteMap<CategoryId, HTMLButtonElement>();
+
+	function handleSelect(id: CategoryId, button: HTMLButtonElement) {
+		// Scroll the clicked button to center
+		scrollToCenter(button);
+		// Call the parent's onselect
+		onselect(id);
+	}
+
+	function scrollToCenter(button: HTMLButtonElement) {
+		if (!scrollContainer) return;
+
+		const containerRect = scrollContainer.getBoundingClientRect();
+		const buttonRect = button.getBoundingClientRect();
+
+		// Calculate the scroll position to center the button
+		const buttonCenter = buttonRect.left + buttonRect.width / 2;
+		const containerCenter = containerRect.left + containerRect.width / 2;
+		const scrollOffset = buttonCenter - containerCenter;
+
+		scrollContainer.scrollBy({
+			left: scrollOffset,
+			behavior: 'smooth'
+		});
+	}
+
+	// Action to register button reference
+	function registerButton(node: HTMLButtonElement, id: CategoryId) {
+		buttonRefs.set(id, node);
+
+		return {
+			destroy() {
+				buttonRefs.delete(id);
+			}
+		};
+	}
+
+	// Auto-scroll to selected category on mount and when selected changes
+	$effect(() => {
+		if (selected && scrollContainer) {
+			// Small delay to ensure buttons are rendered
+			requestAnimationFrame(() => {
+				const button = buttonRefs.get(selected);
+				if (button) {
+					scrollToCenter(button);
+				}
+			});
+		}
+	});
 </script>
 
 <div class="category-filter">
-	<div class="filter-scroll">
+	<div class="filter-scroll" bind:this={scrollContainer}>
 		{#each categories as category (category.id)}
 			{@const Icon = category.icon}
 			<button
 				class="filter-btn"
 				class:active={selected === category.id}
 				style="--category-color: {category.color}"
-				onclick={() => onselect(category.id)}
+				onclick={(e) => handleSelect(category.id, e.currentTarget)}
+				use:registerButton={category.id}
 			>
 				<Icon class="filter-icon" />
 				<span class="filter-label">{i18n.t(category.labelKey)}</span>

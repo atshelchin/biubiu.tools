@@ -3,6 +3,7 @@
 	import { SearchX } from '@lucide/svelte';
 	import ExternalToolCard from '@/features/chain-tools/components/external-tool-card.svelte';
 	import SeoHead from '$lib/components/seo-head.svelte';
+	import Faqs from '$lib/components/ui/faqs.svelte';
 	import { allTools as toolsData } from '@/features/chain-tools/data/tools';
 	import type { ExternalTool } from '@/features/chain-tools/types';
 	import type { PageData } from './$types';
@@ -72,22 +73,38 @@
 		return tokens.every((token) => combinedText.includes(token));
 	}
 
-	// Filtered tools - show featured tools on main page
-	const filteredTools = $derived.by(() => {
-		const hasSearchQuery = searchQuery.trim().length > 0;
+	/**
+	 * Sort tools: BiuBiu tools first
+	 */
+	function sortToolsWithBiubiuFirst(tools: ExternalTool[]): ExternalTool[] {
+		return [...tools].sort((a, b) => {
+			const aIsBiubiu = a.id.startsWith('biubiu-');
+			const bIsBiubiu = b.id.startsWith('biubiu-');
+			if (aIsBiubiu && !bIsBiubiu) return -1;
+			if (!aIsBiubiu && bIsBiubiu) return 1;
+			return 0;
+		});
+	}
 
-		// When searching, search all tools
-		if (hasSearchQuery) {
+	// Filtered tools
+	const filteredTools = $derived.by(() => {
+		// Filter by category
+		let result = toolsData.filter((tool) => tool.category === data.categoryId);
+
+		// Apply search filter if query exists
+		if (searchQuery.trim().length > 0) {
 			const tokens = tokenizeQuery(searchQuery);
 			if (tokens.length > 0) {
-				return toolsData.filter((tool) => matchesTool(tool, tokens));
+				result = result.filter((tool) => matchesTool(tool, tokens));
 			}
-			return toolsData;
 		}
 
-		// No search - show featured tools
-		return toolsData.filter((tool) => tool.isFeatured === true);
+		return sortToolsWithBiubiuFirst(result);
 	});
+
+	function clearFilters() {
+		// Can't clear search from here, just show message
+	}
 </script>
 
 <SeoHead
@@ -129,6 +146,18 @@
 	</p>
 	<p class="disclaimer">{i18n.t('chain_tools.disclaimer')}</p>
 </div>
+
+<!-- FAQs Section -->
+{#if data.faqs && data.faqs.length > 0}
+	<section class="faqs-section">
+		<Faqs
+			faqs={data.faqs}
+			title={i18n.t('chain_tools.faqs_title', { defaultValue: 'Frequently Asked Questions' })}
+		/>
+	</section>
+{/if}
+
+
 
 <style>
 	/* Grid */
@@ -197,6 +226,13 @@
 		max-width: 320px;
 	}
 
+	/* FAQs Section */
+	.faqs-section {
+		margin-top: var(--space-12);
+		padding-top: var(--space-8);
+		border-top: 1px solid var(--color-panel-border-1);
+	}
+
 	/* Footer */
 	.page-footer {
 		margin-top: var(--space-10);
@@ -235,6 +271,11 @@
 		.empty-icon :global(.icon) {
 			width: 28px;
 			height: 28px;
+		}
+
+		.faqs-section {
+			margin-top: var(--space-8);
+			padding-top: var(--space-6);
 		}
 
 		.page-footer {
