@@ -5,10 +5,15 @@ import { extractLocaleFromPathname } from '@shelchin/i18n/utils';
 import type { PackageLocales } from '@shelchin/i18n';
 import en from '../../../../i18n/locales/en.json';
 import zh from '../../../../i18n/locales/zh.json';
-import { getAddress, getEntity, getAddressesByEntity, allNames } from '@/features/address/data';
+import {
+	getAddress as getAddressData,
+	getEntity,
+	getAddressesByEntity,
+	allNames
+} from '@/features/address/data';
 import { CHAIN_META } from '@/features/address/types';
 import type { LabeledAddress, NameRecord, Entity } from '@/features/address/types';
-import { isAddress } from 'viem';
+import { isAddress, getAddress as toChecksumAddress } from 'viem';
 
 export interface AddressDetailPageData {
 	address: LabeledAddress;
@@ -38,23 +43,32 @@ export const load: PageLoad = ({ url, params }): AddressDetailPageData => {
 		throw error(404, 'Chain not found');
 	}
 
-	// Validate address format
-	if (!isAddress(addressParam)) {
+	// Validate and normalize address format
+	// First convert to lowercase for basic format validation (0x + 40 hex chars)
+	const lowerAddress = addressParam.toLowerCase();
+	if (!isAddress(lowerAddress)) {
 		throw error(404, 'Invalid address format');
 	}
 
-	// Get address data
-	let address = getAddress(addressParam, chainId);
+	// Normalize address to checksum format
+	const normalizedAddress = toChecksumAddress(lowerAddress);
+
+	// Get address data (try original, lowercase, and normalized checksum)
+	let address =
+		getAddressData(addressParam, chainId) ||
+		getAddressData(lowerAddress, chainId) ||
+		getAddressData(normalizedAddress, chainId);
 	let isUnlisted = false;
 
 	// For unlisted addresses, create a dynamic record
 	if (!address) {
 		isUnlisted = true;
 		// Create a minimal address record for unlisted addresses
+		// Use checksum address for display
 		address = {
-			address: addressParam,
+			address: normalizedAddress,
 			chainId,
-			name: `${addressParam.slice(0, 6)}...${addressParam.slice(-4)}`,
+			name: `${normalizedAddress.slice(0, 6)}...${normalizedAddress.slice(-4)}`,
 			labels: ['eoa'],
 			riskLevel: 'neutral',
 			source: 'community',

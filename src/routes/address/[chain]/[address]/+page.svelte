@@ -8,11 +8,18 @@
 		AlertTriangle,
 		Check,
 		Tag,
-		Link2
+		Link2,
+		Wallet,
+		Loader2
 	} from '@lucide/svelte';
 	import SeoHead from '$lib/components/seo-head.svelte';
 	import type { PageData } from './$types';
 	import { CHAIN_META, LABEL_META } from '@/features/address/types';
+	import {
+		fetchBalance,
+		formatBalance,
+		type BalanceResult
+	} from '@/features/address/balance-fetcher';
 
 	let { data }: { data: PageData } = $props();
 
@@ -20,6 +27,22 @@
 
 	// Copy state
 	let copied = $state(false);
+
+	// Balance state
+	let balanceResult = $state<BalanceResult | null>(null);
+	let balanceLoading = $state(true);
+
+	// Fetch balance on mount
+	$effect(() => {
+		const address = data.address.address;
+		const chainId = data.chainId;
+
+		balanceLoading = true;
+		fetchBalance(address, chainId).then((result) => {
+			balanceResult = result;
+			balanceLoading = false;
+		});
+	});
 
 	async function copyAddress() {
 		await navigator.clipboard.writeText(data.address.address);
@@ -98,6 +121,30 @@
 					<Copy class="icon" />
 				{/if}
 			</button>
+		</div>
+
+		<!-- Balance -->
+		<div class="balance-row">
+			<div class="balance-label">
+				<Wallet class="balance-icon" />
+				<span>{i18n.t('address.balance')}</span>
+			</div>
+			<div class="balance-value">
+				{#if balanceLoading}
+					<Loader2 class="loading-icon spin" />
+					<span class="balance-loading">{i18n.t('address.loading_balance')}</span>
+				{:else if balanceResult?.error}
+					<span class="balance-error">{balanceResult.error}</span>
+				{:else if balanceResult}
+					<span class="balance-amount">{formatBalance(balanceResult.balance)}</span>
+					<span class="balance-symbol">{balanceResult.symbol}</span>
+					{#if balanceResult.isContract}
+						<span class="contract-badge">{i18n.t('address.contract')}</span>
+					{/if}
+				{:else}
+					<span class="balance-na">-</span>
+				{/if}
+			</div>
 		</div>
 
 		<!-- Chain & Labels -->
@@ -379,6 +426,93 @@
 	.copy-btn :global(.icon) {
 		width: 16px;
 		height: 16px;
+	}
+
+	/* Balance Row */
+	.balance-row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: var(--space-3) var(--space-4);
+		background: var(--color-panel-2);
+		border-radius: var(--radius-lg);
+		margin-bottom: var(--space-4);
+	}
+
+	.balance-label {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+		font-size: var(--text-sm);
+		color: var(--color-description-2);
+	}
+
+	.balance-label :global(.balance-icon) {
+		width: 16px;
+		height: 16px;
+	}
+
+	.balance-value {
+		display: flex;
+		align-items: center;
+		gap: var(--space-2);
+	}
+
+	.balance-amount {
+		font-family: var(--font-mono);
+		font-size: var(--text-lg);
+		font-weight: var(--font-semibold);
+		color: var(--color-heading-1);
+	}
+
+	.balance-symbol {
+		font-size: var(--text-sm);
+		font-weight: var(--font-medium);
+		color: var(--color-description-2);
+	}
+
+	.balance-loading {
+		font-size: var(--text-sm);
+		color: var(--color-description-3);
+	}
+
+	.balance-error {
+		font-size: var(--text-sm);
+		color: var(--color-danger);
+	}
+
+	.balance-na {
+		font-size: var(--text-sm);
+		color: var(--color-description-3);
+	}
+
+	.contract-badge {
+		padding: var(--space-0-5) var(--space-2);
+		background: color-mix(in srgb, #8b5cf6 15%, transparent);
+		border: 1px solid #8b5cf6;
+		border-radius: var(--radius-sm);
+		font-size: var(--text-xs);
+		font-weight: var(--font-medium);
+		color: #8b5cf6;
+	}
+
+	.balance-value :global(.loading-icon) {
+		width: 14px;
+		height: 14px;
+		color: var(--color-description-3);
+	}
+
+	.balance-value :global(.spin) {
+		animation: spin 1s linear infinite;
+	}
+
+	@keyframes spin {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
 	}
 
 	/* Meta Row */
