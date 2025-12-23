@@ -16,23 +16,13 @@
 				}
 			})();
 
-			// Load analytics script only if user has consented to analytics cookies
+			// Load Rybbit analytics - cookie-free, GDPR compliant, no consent needed
 			(function () {
-				try {
-					const consent = localStorage.getItem('cookie-consent');
-					if (consent) {
-						const data = JSON.parse(consent);
-						if (data.preferences && data.preferences.analytics === true) {
-							const script = document.createElement('script');
-							script.src = 'https://tj.appsdata.org/api/script.js';
-							script.dataset.siteId = 'bec8b40684c3';
-							script.defer = true;
-							document.head.appendChild(script);
-						}
-					}
-				} catch (e) {
-					// Consent not available or parse error - don't load analytics
-				}
+				const script = document.createElement('script');
+				script.src = 'https://tj.appsdata.org/api/script.js';
+				script.dataset.siteId = 'bec8b40684c3';
+				script.defer = true;
+				document.head.appendChild(script);
 			})();
 		</script>
 		%sveltekit.head%

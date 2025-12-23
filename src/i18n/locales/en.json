@@ -8358,7 +8358,7 @@
 		},
 		"analytics": {
 			"title": "Analytics",
-			"description": "Help us understand how visitors use our website through anonymous usage statistics and referral tracking."
+			"description": "Analytics cookies help us understand how visitors use our website through anonymous usage statistics and referral tracking."
 		},
 		"required": "Required",
 		"accept_all": "Accept All",
@@ -8398,9 +8398,9 @@
 				"item5": "RPC performance metrics for optimal network selection"
 			},
 			"analytics": {
-				"title": "Analytics Data (With Your Consent)",
-				"item1": "Anonymous usage statistics (page views, feature usage)",
-				"item2": "Device information (browser type, operating system)",
+				"title": "Analytics Data (Cookie-Free, Always Enabled)",
+				"item1": "Anonymous usage statistics via Rybbit (page views, feature usage)",
+				"item2": "Aggregated, non-identifiable visitor metrics",
 				"item3": "Referral source tracking for our referral program"
 			}
 		},
@@ -8413,8 +8413,8 @@
 			"item4": "Your cookie consent preferences"
 		},
 		"third_party": {
-			"title": "Third-Party Analytics",
-			"content": "We use a privacy-focused analytics service to understand how visitors use our website. This analytics script is only loaded if you consent to analytics cookies. The data collected is anonymous and does not include personally identifiable information. We interact with blockchain networks (Ethereum, Polygon, etc.) as required by our tools, but we do not store your private keys or seed phrases on our servers."
+			"title": "Analytics",
+			"content": "We use Rybbit (tj.appsdata.org), a privacy-focused, cookie-free analytics service to understand how visitors use our website. Rybbit does not use cookies, does not collect personally identifiable information, and is always enabled as it complies with GDPR without requiring consent. If we add additional analytics services in the future that use cookies, they will only be loaded with your consent. We interact with blockchain networks (Ethereum, Polygon, etc.) as required by our tools, but we do not store your private keys or seed phrases on our servers."
 		},
 		"your_rights": {
 			"title": "Your Rights",
