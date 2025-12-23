@@ -638,29 +638,6 @@
 		}
 	}
 
-	.modal-close {
-		position: absolute;
-		top: var(--space-4);
-		right: var(--space-4);
-		width: 32px;
-		height: 32px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background: var(--color-panel-1);
-		border: 1px solid var(--color-panel-border-1);
-		border-radius: var(--radius-md);
-		color: var(--color-text-secondary);
-		cursor: pointer;
-		transition: all 0.2s;
-		z-index: 1;
-	}
-
-	.modal-close:hover {
-		background: var(--color-panel-3);
-		color: var(--color-text-primary);
-	}
-
 	.discovery-content {
 		display: flex;
 		flex-direction: column;
@@ -726,23 +703,6 @@
 		width: 96px;
 		height: 96px;
 		margin-bottom: var(--space-8);
-	}
-
-	.discovery-icon-ring {
-		position: absolute;
-		inset: -8px;
-		border: 2px solid color-mix(in srgb, var(--tool-color) 40%, transparent);
-		border-radius: 20px;
-		animation: ringRotate 8s linear infinite;
-	}
-
-	@keyframes ringRotate {
-		from {
-			transform: rotate(0deg);
-		}
-		to {
-			transform: rotate(360deg);
-		}
 	}
 
 	.discovery-icon-glow {
@@ -935,10 +895,6 @@
 			width: 80px;
 			height: 80px;
 			margin-bottom: var(--space-6);
-		}
-
-		.discovery-icon-ring {
-			inset: -6px;
 		}
 
 		:global(.discovery-icon) {

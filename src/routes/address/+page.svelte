@@ -501,45 +501,9 @@
 		margin: 0 0 var(--space-4);
 	}
 
-	.categories-section,
 	.labels-section,
 	.popular-section {
 		margin-top: var(--space-10);
-	}
-
-	/* Category Grid */
-	.category-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-		gap: var(--space-4);
-	}
-
-	.category-card {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: var(--space-2);
-		padding: var(--space-5);
-		background: var(--color-panel-1);
-		border: 1px solid var(--color-panel-border-2);
-		border-radius: var(--radius-lg);
-	}
-
-	.category-card :global(.category-icon) {
-		width: 24px;
-		height: 24px;
-		color: var(--color-description-3);
-	}
-
-	.category-count {
-		font-size: var(--text-2xl);
-		font-weight: var(--font-bold);
-		color: var(--color-heading-1);
-	}
-
-	.category-label {
-		font-size: var(--text-sm);
-		color: var(--color-description-2);
 	}
 
 	/* Label Grid */

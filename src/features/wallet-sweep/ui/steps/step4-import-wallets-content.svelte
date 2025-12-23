@@ -415,59 +415,6 @@
 		color: var(--gray-300);
 	}
 
-	.scan-section {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: var(--space-3);
-		margin-top: var(--space-4);
-		padding: var(--space-4);
-		background: linear-gradient(135deg, var(--color-muted) 0%, var(--color-background) 100%);
-		border-radius: var(--radius-lg);
-		border: 2px dashed var(--color-border);
-		transition: all 0.3s ease;
-	}
-
-	.scan-section:hover {
-		border-color: var(--color-primary);
-		background: linear-gradient(
-			135deg,
-			color-mix(in srgb, var(--color-primary) 5%, var(--color-muted)) 0%,
-			var(--color-background) 100%
-		);
-	}
-
-	.scan-section.completed {
-		border-style: solid;
-		border-color: var(--color-success, #10b981);
-		background: linear-gradient(
-			135deg,
-			color-mix(in srgb, var(--color-success, #10b981) 5%, var(--color-muted)) 0%,
-			var(--color-background) 100%
-		);
-	}
-
-	.scan-header {
-		display: flex;
-		align-items: center;
-		gap: var(--space-2);
-	}
-
-	.scan-title {
-		font-size: var(--text-sm);
-		font-weight: var(--font-semibold);
-		color: var(--color-foreground);
-	}
-
-	.scan-required-badge {
-		font-size: var(--text-xs);
-		font-weight: var(--font-medium);
-		color: var(--color-warning, #f59e0b);
-		background: color-mix(in srgb, var(--color-warning, #f59e0b) 15%, transparent);
-		padding: var(--space-0-5) var(--space-2);
-		border-radius: var(--radius-full);
-	}
-
 	/* Inline error container within scan section */
 	.scan-error-inline {
 		width: 100%;

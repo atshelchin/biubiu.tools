@@ -29,11 +29,11 @@ export interface NameDetailPageData {
 		description: string;
 		keywords: string;
 		canonical: string;
-		type: string;
+		type: 'website' | 'article';
 		image: string;
 		locale: string;
 	};
-	structuredData: object[];
+	structuredData: Array<Record<string, unknown>>;
 }
 
 export const load: PageServerLoad = async ({ url, params }): Promise<NameDetailPageData> => {
@@ -175,7 +175,7 @@ export const load: PageServerLoad = async ({ url, params }): Promise<NameDetailP
 	};
 
 	// Generate structured data
-	const structuredData: object[] = [
+	const structuredData: Array<Record<string, unknown>> = [
 		{
 			'@context': 'https://schema.org',
 			'@type': 'WebPage',

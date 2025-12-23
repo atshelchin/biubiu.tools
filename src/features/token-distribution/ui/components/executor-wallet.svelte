@@ -39,8 +39,8 @@
 	const i18n = useI18n();
 
 	const explorerUrl = $derived.by(() => {
-		if (!network?.blockExplorerUrl || !showExplorerLink) return null;
-		return `${network.blockExplorerUrl}/address/${address}`;
+		if (!network?.blockExplorer || !showExplorerLink) return null;
+		return `${network.blockExplorer}/address/${address}`;
 	});
 </script>
 
@@ -64,7 +64,7 @@
 		</div>
 
 		<div class="wallet-address">
-			<span class="address-text">{formatAddress(address, compact ? 4 : 6)}</span>
+			<span class="address-text">{formatAddress(address)}</span>
 			{#if explorerUrl}
 				<a
 					href={explorerUrl}

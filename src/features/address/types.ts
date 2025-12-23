@@ -62,7 +62,9 @@ export type AddressLabel =
 	| 'genesis'
 	| 'mev'
 	| 'contract'
-	| 'eoa';
+	| 'eoa'
+	| 'oracle'
+	| 'layer2';
 
 // 风险等级
 export type RiskLevel = 'safe' | 'neutral' | 'warning' | 'danger';
@@ -203,7 +205,9 @@ export const LABEL_META: Record<AddressLabel, LabelMeta> = {
 	genesis: { id: 'genesis', category: 'special', color: 'gold' },
 	mev: { id: 'mev', category: 'special', color: 'zinc' },
 	contract: { id: 'contract', category: 'special', color: 'slate' },
-	eoa: { id: 'eoa', category: 'special', color: 'slate' }
+	eoa: { id: 'eoa', category: 'special', color: 'slate' },
+	oracle: { id: 'oracle', category: 'defi', color: 'amber' },
+	layer2: { id: 'layer2', category: 'defi', color: 'indigo' }
 };
 
 // 链元数据 (使用 chain ID 数字作为 key)

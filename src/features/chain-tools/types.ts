@@ -84,5 +84,5 @@ export interface ChainToolsPageData {
 		image: string;
 		locale: string;
 	};
-	structuredData: object[];
+	structuredData: Array<Record<string, unknown>>;
 }

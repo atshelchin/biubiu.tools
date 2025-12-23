@@ -30,7 +30,7 @@
 	// Constants
 	const BUTTON_SIZE = 52;
 	const EDGE_MARGIN = 12;
-	const BOTTOM_OFFSET = 100;
+	const BOTTOM_OFFSET = 200;
 	const DRAG_THRESHOLD = 5;
 
 	onMount(() => {

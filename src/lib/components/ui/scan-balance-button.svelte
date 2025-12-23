@@ -88,14 +88,6 @@
 		background: linear-gradient(135deg, #10b981, #059669);
 	}
 
-	.progress-badge {
-		background: rgba(255, 255, 255, 0.2);
-		padding: 2px 8px;
-		border-radius: var(--radius-full);
-		font-size: var(--text-xs);
-		font-weight: var(--font-bold);
-	}
-
 	:global(.spinning) {
 		animation: spin 1s linear infinite;
 	}

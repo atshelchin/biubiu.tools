@@ -17,11 +17,11 @@ export interface LabelPageData {
 		description: string;
 		keywords: string;
 		canonical: string;
-		type: string;
+		type: 'website' | 'article';
 		image: string;
 		locale: string;
 	};
-	structuredData: object[];
+	structuredData: Array<Record<string, unknown>>;
 }
 
 export const load: PageLoad = ({ url, params }): LabelPageData => {

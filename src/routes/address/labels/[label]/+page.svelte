@@ -199,10 +199,6 @@
 		color: var(--color-description-2);
 	}
 
-	.chain-badge.more {
-		background: var(--color-panel-3);
-	}
-
 	.address-code {
 		font-family: var(--font-mono);
 		font-size: var(--text-xs);
