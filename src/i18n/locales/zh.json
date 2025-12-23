@@ -9498,6 +9498,20 @@
 		"socials": "社交链接",
 		"view_on": "在 {platform} 上查看",
 		"view_on_etherscan": "在 Etherscan 上查看",
+		"registration_info": "注册信息",
+		"registration_status": "状态",
+		"registered_at": "注册时间",
+		"expires_at": "到期时间",
+		"days_remaining": "剩余 {days} 天",
+		"expired": "已过期",
+		"expired_ago": "已过期 {days} 天",
+		"status": {
+			"registered": "已注册",
+			"available": "可注册",
+			"grace-period": "宽限期",
+			"premium": "溢价期",
+			"unknown": "未知"
+		},
 		"seo": {
 			"suffix": "探索 ENS 域名详情、解析地址和持有者信息。",
 			"detail_description": "{name} 是一个 {type} 域名。解析到：{address}。查找持有者、记录和相关信息。"

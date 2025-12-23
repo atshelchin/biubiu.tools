@@ -9526,6 +9526,20 @@
 		"socials": "Social Links",
 		"view_on": "View on {platform}",
 		"view_on_etherscan": "View on Etherscan",
+		"registration_info": "Registration Info",
+		"registration_status": "Status",
+		"registered_at": "Registered",
+		"expires_at": "Expires",
+		"days_remaining": "{days} days remaining",
+		"expired": "Expired",
+		"expired_ago": "Expired {days} days ago",
+		"status": {
+			"registered": "Registered",
+			"available": "Available",
+			"grace-period": "Grace Period",
+			"premium": "Premium",
+			"unknown": "Unknown"
+		},
 		"seo": {
 			"suffix": "Explore ENS name details, resolved address, and owner information.",
 			"detail_description": "{name} is a {type} domain. Resolved to: {address}. Find owner, records, and related information."

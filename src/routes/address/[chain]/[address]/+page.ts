@@ -1,0 +1,180 @@
+import type { PageLoad } from './$types';
+import { error } from '@sveltejs/kit';
+import { I18n } from '@shelchin/i18n';
+import { extractLocaleFromPathname } from '@shelchin/i18n/utils';
+import type { PackageLocales } from '@shelchin/i18n';
+import en from '../../../../i18n/locales/en.json';
+import zh from '../../../../i18n/locales/zh.json';
+import { getAddress, getEntity, getAddressesByEntity, allNames } from '@/features/address/data';
+import { CHAIN_META } from '@/features/address/types';
+import type { LabeledAddress, NameRecord, Entity } from '@/features/address/types';
+
+export interface AddressDetailPageData {
+	address: LabeledAddress;
+	entity: Entity;
+	chainId: number;
+	relatedAddresses: LabeledAddress[];
+	relatedNames: NameRecord[];
+	meta: {
+		title: string;
+		description: string;
+		keywords: string;
+		canonical: string;
+		type: string;
+		image: string;
+		locale: string;
+	};
+	structuredData: object[];
+}
+
+export const load: PageLoad = ({ url, params }): AddressDetailPageData => {
+	const chainId = parseInt(params.chain, 10);
+	const addressParam = params.address;
+
+	// Validate chain
+	if (!CHAIN_META[chainId]) {
+		throw error(404, 'Chain not found');
+	}
+
+	// Get address data
+	const address = getAddress(addressParam, chainId);
+	if (!address) {
+		throw error(404, 'Address not found');
+	}
+
+	// Check if address exists on this chain
+	if (address.chainId !== chainId) {
+		throw error(404, 'Address not found on this chain');
+	}
+
+	// Get entity info
+	const entity = address.entityId ? getEntity(address.entityId) : getEntity('unknown');
+
+	// Get related addresses (same entity, different addresses)
+	const relatedAddresses = address.entityId
+		? getAddressesByEntity(address.entityId)
+				.filter((a) => a.address.toLowerCase() !== address.address.toLowerCase())
+				.slice(0, 5)
+		: [];
+
+	// Get related names (names that resolve to this address)
+	const relatedNames = allNames
+		.filter((n) => n.address?.toLowerCase() === address.address.toLowerCase())
+		.slice(0, 5);
+
+	// Extract locale from URL pathname
+	const locale = extractLocaleFromPathname(url.pathname) || 'en';
+
+	// Create i18n instance for this request
+	const locales = { en, zh } as unknown as PackageLocales;
+	const i18n = new I18n(locale);
+	i18n.register('__default__', locales);
+	const t = i18n.t.bind(i18n);
+
+	// Build canonical URL
+	const canonical = url.origin + url.pathname;
+	const image = `${url.origin}/og-address.png`;
+
+	// Build SEO metadata
+	const chainName = CHAIN_META[chainId].name;
+	const labelText = address.labels.map((l) => t(`address.labels.${l}`)).join(', ');
+
+	const title = `${address.name} | ${entity.name} - ${chainName} Address | BiuBiu Tools`;
+	const description = t('address.seo.detail_description', {
+		name: address.name,
+		entity: entity.name,
+		chain: chainName,
+		labels: labelText,
+		address: `${address.address.slice(0, 10)}...${address.address.slice(-6)}`
+	});
+
+	const keywords = [
+		address.name,
+		entity.name,
+		address.address,
+		chainName,
+		...address.labels,
+		'ethereum address',
+		'blockchain',
+		'crypto wallet'
+	].join(', ');
+
+	// Map locale to SEO locale format
+	const seoLocaleMap: Record<string, string> = {
+		en: 'en_US',
+		zh: 'zh_CN'
+	};
+
+	// Generate structured data
+	const structuredData = [
+		{
+			'@context': 'https://schema.org',
+			'@type': 'WebPage',
+			name: title,
+			description,
+			url: canonical,
+			inLanguage: locale,
+			isPartOf: {
+				'@type': 'WebSite',
+				name: 'BiuBiu Tools',
+				url: url.origin
+			}
+		},
+		{
+			'@context': 'https://schema.org',
+			'@type': 'Thing',
+			name: address.name,
+			description: address.description || `${entity.name} wallet address on ${chainName}`,
+			identifier: address.address,
+			url: canonical
+		},
+		{
+			'@context': 'https://schema.org',
+			'@type': 'BreadcrumbList',
+			itemListElement: [
+				{
+					'@type': 'ListItem',
+					position: 1,
+					name: 'Home',
+					item: url.origin
+				},
+				{
+					'@type': 'ListItem',
+					position: 2,
+					name: t('address.title'),
+					item: `${url.origin}/address`
+				},
+				{
+					'@type': 'ListItem',
+					position: 3,
+					name: chainName,
+					item: `${url.origin}/address/${chainId}`
+				},
+				{
+					'@type': 'ListItem',
+					position: 4,
+					name: address.name,
+					item: canonical
+				}
+			]
+		}
+	];
+
+	return {
+		address,
+		entity,
+		chainId,
+		relatedAddresses,
+		relatedNames,
+		meta: {
+			title,
+			description,
+			keywords,
+			canonical,
+			type: 'website',
+			image,
+			locale: seoLocaleMap[locale] || 'en_US'
+		},
+		structuredData
+	};
+};
