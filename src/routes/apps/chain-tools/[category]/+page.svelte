@@ -157,8 +157,6 @@
 	</section>
 {/if}
 
-
-
 <style>
 	/* Grid */
 	.tools-grid {
