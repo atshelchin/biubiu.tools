@@ -22,7 +22,7 @@ import { categories } from '../src/features/chain-tools/data/categories';
 import { allAddresses, allNames } from '../src/features/address/data/index';
 
 const SITE = 'https://biubiu.tools';
-const SUPPORTED_LOCALES = ['en', 'zh', 'ja', 'fr'];
+const SUPPORTED_LOCALES = ['en', 'zh'];
 const OUTPUT_DIR = join(process.cwd(), 'static');
 
 // Locale to language code mapping for hreflang
