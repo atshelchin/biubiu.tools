@@ -8,6 +8,7 @@ import zh from '../../../../i18n/locales/zh.json';
 import { getAddress, getEntity, getAddressesByEntity, allNames } from '@/features/address/data';
 import { CHAIN_META } from '@/features/address/types';
 import type { LabeledAddress, NameRecord, Entity } from '@/features/address/types';
+import { isAddress } from 'viem';
 
 export interface AddressDetailPageData {
 	address: LabeledAddress;
@@ -15,6 +16,7 @@ export interface AddressDetailPageData {
 	chainId: number;
 	relatedAddresses: LabeledAddress[];
 	relatedNames: NameRecord[];
+	isUnlisted: boolean;
 	meta: {
 		title: string;
 		description: string;
@@ -36,15 +38,28 @@ export const load: PageLoad = ({ url, params }): AddressDetailPageData => {
 		throw error(404, 'Chain not found');
 	}
 
-	// Get address data
-	const address = getAddress(addressParam, chainId);
-	if (!address) {
-		throw error(404, 'Address not found');
+	// Validate address format
+	if (!isAddress(addressParam)) {
+		throw error(404, 'Invalid address format');
 	}
 
-	// Check if address exists on this chain
-	if (address.chainId !== chainId) {
-		throw error(404, 'Address not found on this chain');
+	// Get address data
+	let address = getAddress(addressParam, chainId);
+	let isUnlisted = false;
+
+	// For unlisted addresses, create a dynamic record
+	if (!address) {
+		isUnlisted = true;
+		// Create a minimal address record for unlisted addresses
+		address = {
+			address: addressParam,
+			chainId,
+			name: `${addressParam.slice(0, 6)}...${addressParam.slice(-4)}`,
+			labels: ['eoa'],
+			riskLevel: 'neutral',
+			source: 'community',
+			updatedAt: new Date().toISOString().split('T')[0]
+		};
 	}
 
 	// Get entity info
@@ -166,6 +181,7 @@ export const load: PageLoad = ({ url, params }): AddressDetailPageData => {
 		chainId,
 		relatedAddresses,
 		relatedNames,
+		isUnlisted,
 		meta: {
 			title,
 			description,

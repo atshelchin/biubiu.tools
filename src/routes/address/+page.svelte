@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { useI18n } from '@shelchin/i18n/svelte';
-	import { Search } from '@lucide/svelte';
+	import { Search, Loader2 } from '@lucide/svelte';
 	import SeoHead from '$lib/components/seo-head.svelte';
 	import type { PageData } from './$types';
 	import { CHAIN_META } from '@/features/address/types';
 	import { getEntity } from '@/features/address/data';
+	import type { LookupResult } from '@/features/address/client-lookup';
 
 	let { data }: { data: PageData } = $props();
 
@@ -13,12 +14,22 @@
 	// Search state
 	let searchQuery = $state('');
 	let searchResults = $state<
-		Array<{ id: string; type: 'address' | 'name'; text: string; chain: number }>
+		Array<{ id: string; type: 'address' | 'name'; text: string; chain?: number }>
 	>([]);
 	let isSearching = $state(false);
 
+	// Dynamic lookup state (for unlisted addresses/ENS)
+	let dynamicLookupResult = $state<LookupResult | null>(null);
+	let isLookingUp = $state(false);
+
+	// Debounce timer for dynamic lookup
+	let lookupTimer: ReturnType<typeof setTimeout> | null = null;
+
 	// Handle search
 	async function handleSearch() {
+		// Clear dynamic lookup
+		dynamicLookupResult = null;
+
 		if (!searchQuery.trim()) {
 			searchResults = [];
 			return;
@@ -27,17 +38,62 @@
 		isSearching = true;
 		// Dynamically import search function
 		const { search } = await import('@/features/address/data');
-		searchResults = search(searchQuery, 10);
-		console.log({ searchResults });
+		const results = search(searchQuery, 10);
+		searchResults = results.map((r) => ({
+			id: r.id,
+			type: r.type,
+			text: r.text,
+			chain: r.chain
+		}));
 		isSearching = false;
+
+		// If no indexed results found, try dynamic lookup
+		if (searchResults.length === 0 && searchQuery.trim().length > 3) {
+			debouncedLookup(searchQuery.trim());
+		}
+	}
+
+	// Debounced dynamic lookup
+	function debouncedLookup(query: string) {
+		if (lookupTimer) {
+			clearTimeout(lookupTimer);
+		}
+		lookupTimer = setTimeout(() => {
+			performDynamicLookup(query);
+		}, 500);
+	}
+
+	// Perform RPC-based lookup for unlisted addresses/ENS
+	async function performDynamicLookup(query: string) {
+		isLookingUp = true;
+		try {
+			const { clientLookup } = await import('@/features/address/client-lookup');
+			dynamicLookupResult = await clientLookup(query);
+		} catch {
+			dynamicLookupResult = null;
+		}
+		isLookingUp = false;
 	}
 
 	// Navigate to result
-	function goToResult(result: { id: string; type: 'address' | 'name' }) {
-		if (result.type === 'address') {
+	function goToResult(result: { id: string; type: 'address' | 'name'; chain?: number }) {
+		if (result.type === 'address' && result.chain) {
 			window.location.href = `/address/${result.chain}/${result.id}`;
+		} else if (result.type === 'address') {
+			// Default to Ethereum mainnet for dynamic results
+			window.location.href = `/address/1/${result.id}`;
 		} else {
 			window.location.href = `/name/${result.id}`;
+		}
+	}
+
+	// Navigate to dynamic lookup result
+	function goToDynamicResult() {
+		if (!dynamicLookupResult) return;
+		if (dynamicLookupResult.ensName) {
+			window.location.href = `/name/${dynamicLookupResult.ensName}`;
+		} else {
+			window.location.href = `/address/1/${dynamicLookupResult.address}`;
 		}
 	}
 
@@ -92,13 +148,9 @@
 							<span class="result-type">⏳</span>
 							<span class="result-id">{i18n.t('address.searching')}</span>
 						</div>
-					{:else if searchResults.length === 0}
-						<div class="result-item no-results">
-							<span class="result-type">🔍</span>
-							<span class="result-id">{i18n.t('address.no_results')}</span>
-						</div>
-					{:else}
-						{#each searchResults as result (result.id + result.chain)}
+					{:else if searchResults.length > 0}
+						<!-- Indexed results -->
+						{#each searchResults as result (result.id + (result.chain || ''))}
 							<button class="result-item" onclick={() => goToResult(result)}>
 								<span class="result-type">{result.type === 'address' ? '📍' : '🔤'}</span>
 								<span class="result-content">
@@ -115,6 +167,51 @@
 								</span>
 							</button>
 						{/each}
+					{:else if isLookingUp}
+						<!-- Dynamic lookup in progress -->
+						<div class="result-item no-results">
+							<Loader2 class="spin-icon" />
+							<span class="result-id">{i18n.t('address.looking_up')}</span>
+						</div>
+					{:else if dynamicLookupResult}
+						<!-- Dynamic lookup result -->
+						{#if dynamicLookupResult.error}
+							<div class="result-item no-results">
+								<span class="result-type">❌</span>
+								<span class="result-id">{dynamicLookupResult.error}</span>
+							</div>
+						{:else}
+							<button class="result-item dynamic-result" onclick={goToDynamicResult}>
+								<span class="result-type">{dynamicLookupResult.type === 'ens' ? '🔤' : '📍'}</span>
+								<span class="result-content">
+									<span class="result-id">
+										{#if dynamicLookupResult.ensName}
+											{dynamicLookupResult.ensName}
+										{:else}
+											{dynamicLookupResult.address.slice(
+												0,
+												10
+											)}...{dynamicLookupResult.address.slice(-8)}
+										{/if}
+									</span>
+									<span class="result-chain">
+										{dynamicLookupResult.balance
+											? `${parseFloat(dynamicLookupResult.balance).toFixed(4)} ETH`
+											: 'Ethereum'}
+									</span>
+									{#if dynamicLookupResult.isContract}
+										<span class="result-badge">Contract</span>
+									{/if}
+								</span>
+								<span class="result-hint">{i18n.t('address.view_details')}</span>
+							</button>
+						{/if}
+					{:else}
+						<!-- No results -->
+						<div class="result-item no-results">
+							<span class="result-type">🔍</span>
+							<span class="result-id">{i18n.t('address.no_results')}</span>
+						</div>
 					{/if}
 				</div>
 			{/if}
@@ -326,6 +423,42 @@
 
 	.no-results:hover {
 		background: transparent;
+	}
+
+	/* Dynamic lookup styles */
+	.result-item :global(.spin-icon) {
+		width: 16px;
+		height: 16px;
+		color: var(--color-description-3);
+		animation: spin 1s linear infinite;
+	}
+
+	@keyframes spin {
+		from {
+			transform: rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	.dynamic-result {
+		background: var(--color-panel-2);
+		border-color: var(--color-panel-border-3);
+	}
+
+	.result-badge {
+		font-size: var(--text-xs);
+		color: var(--color-heading-2);
+		background: var(--color-panel-3);
+		padding: 2px var(--space-2);
+		border-radius: var(--radius-sm);
+	}
+
+	.result-hint {
+		font-size: var(--text-xs);
+		color: #3b82f6;
+		margin-left: auto;
 	}
 
 	/* Stats Row */

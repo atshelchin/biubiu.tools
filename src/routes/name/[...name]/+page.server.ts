@@ -1,5 +1,4 @@
 import type { PageServerLoad } from './$types';
-import { error } from '@sveltejs/kit';
 import { I18n } from '@shelchin/i18n';
 import { extractLocaleFromPathname } from '@shelchin/i18n/utils';
 import type { PackageLocales } from '@shelchin/i18n';
@@ -40,27 +39,52 @@ export interface NameDetailPageData {
 export const load: PageServerLoad = async ({ url, params }): Promise<NameDetailPageData> => {
 	const nameParam = params.name;
 
-	// Get name data
-	const name = getName(nameParam);
+	// Get name data from database
+	let name = getName(nameParam);
+
+	// For unlisted ENS names, create a dynamic record via RPC
+	if (!name && nameParam.endsWith('.eth')) {
+		// Create a minimal name record for unlisted ENS
+		name = {
+			name: nameParam,
+			type: 'ens',
+			notable: false,
+			source: 'community' as const,
+			updatedAt: new Date().toISOString().split('T')[0]
+		};
+	}
+
+	// If still no name found (not an ENS domain), create a generic record
 	if (!name) {
-		throw error(404, 'Name not found');
+		name = {
+			name: nameParam,
+			type: 'ens',
+			notable: false,
+			source: 'community' as const,
+			updatedAt: new Date().toISOString().split('T')[0]
+		};
 	}
 
 	// Get entity if exists
 	const entity = name.entityId ? getEntity(name.entityId) : undefined;
 
-	// Get resolved address if exists
+	// Get resolved address if exists (only for indexed addresses)
 	const resolvedAddress = name.address ? getAddress(name.address, 1) : undefined;
 
 	// Fetch ENS records via RPC (only for .eth domains)
 	let ensRecords: ENSRecords | undefined;
 	const socialLinks: SocialLink[] = [];
 
-	if (name.type === 'ens' && name.name.endsWith('.eth')) {
+	if (name.name.endsWith('.eth')) {
 		try {
 			const records = await fetchENSRecords(name.name);
 			if (records) {
 				ensRecords = records;
+
+				// Update name.address from ENS records if not already set
+				if (!name.address && records.address) {
+					name = { ...name, address: records.address };
+				}
 
 				// Extract social links
 				for (const [key, value] of Object.entries(records.textRecords)) {
