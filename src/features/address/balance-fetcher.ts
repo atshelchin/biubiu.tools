@@ -22,7 +22,7 @@ import {
 	mode,
 	taiko
 } from 'viem/chains';
-import type {Chain} from "viem"
+import type { Chain } from 'viem';
 
 // Chain configs with RPC endpoints
 const CHAIN_CONFIGS: Record<
