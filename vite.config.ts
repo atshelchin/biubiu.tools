@@ -1,8 +1,20 @@
 import { sveltekit } from '@sveltejs/kit/vite';
-import { defineConfig } from 'vite';
+import { visualizer } from 'rollup-plugin-visualizer';
+import { defineConfig } from 'vitest/config';
+
+const isAnalyze = process.env.ANALYZE === 'true';
 
 export default defineConfig({
-	plugins: [sveltekit()],
+	plugins: [
+		sveltekit(),
+		isAnalyze &&
+			visualizer({
+				filename: 'stats.html',
+				open: true,
+				gzipSize: true,
+				brotliSize: true
+			})
+	],
 	server: {
 		fs: {
 			allow: ['packages', 'src', 'static']
