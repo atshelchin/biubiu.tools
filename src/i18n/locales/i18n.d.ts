@@ -2830,11 +2830,6 @@ declare module '@shelchin/i18n' {
 		'common.max_supply': string;
 		'common.mint_price': string;
 		'common.name': string;
-		'common.network_selector.add_custom_network': string;
-		'common.network_selector.enable_network_prompt': string;
-		'common.network_selector.network_not_found': string;
-		'common.network_selector.no_networks_enabled': string;
-		'common.network_selector.open_network_settings': string;
 		'common.next': string;
 		'common.optional': string;
 		'common.passed': string;

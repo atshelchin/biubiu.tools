@@ -73,5 +73,12 @@
 		"beta": "Beta",
 		"stable": "Stable",
 		"new": "New"
+	},
+	"network_selector": {
+		"no_networks_enabled": "No Networks Enabled",
+		"enable_network_prompt": "Please enable at least one network to continue.",
+		"open_network_settings": "Open Network Settings",
+		"network_not_found": "Network not found?",
+		"add_custom_network": "Add custom network"
 	}
 }

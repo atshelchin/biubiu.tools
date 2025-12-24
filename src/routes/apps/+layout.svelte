@@ -6,7 +6,7 @@
 	const i18n = useI18n();
 
 	$effect(() => {
-		console.log(890,i18n.getLoadedNamespaces());
+		console.log(890, i18n.getLoadedNamespaces());
 	});
 </script>
 

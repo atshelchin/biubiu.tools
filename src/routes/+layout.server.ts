@@ -2,13 +2,23 @@ import type { LayoutServerLoad } from './$types.js';
 import type { LocaleData } from '@shelchin/i18n';
 import { createServerLoader } from '@shelchin/i18n';
 
-
 // Auto-scan all locale files and create server loader
 const { load: i18nLoad, localeMetas } = createServerLoader(
 	import.meta.glob<{ default: LocaleData }>('../i18n/locales/**/*.json', { eager: true }),
 	{
 		defaultLocale: 'en',
-		baseNamespaces: ['common', 'components', 'cookie-consent', 'faqs', 'pricing', 'referral', 'security-scanner', 'tools', 'wallet-connection', 'wallet'],
+		baseNamespaces: [
+			'common',
+			'components',
+			'cookie-consent',
+			'faqs',
+			'pricing',
+			'referral',
+			'security-scanner',
+			'tools',
+			'wallet-connection',
+			'wallet'
+		],
 		homeNamespace: 'home'
 	}
 );
