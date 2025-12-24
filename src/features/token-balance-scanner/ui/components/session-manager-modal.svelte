@@ -138,7 +138,13 @@
 <!-- svelte-ignore a11y_no_static_element_interactions -->
 <!-- svelte-ignore a11y_click_events_have_key_events -->
 <div class="modal-overlay" onclick={onClose}>
-	<div class="modal-content" onclick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
+	<div
+		class="modal-content"
+		onclick={(e) => e.stopPropagation()}
+		role="dialog"
+		aria-modal="true"
+		tabindex="-1"
+	>
 		<div class="modal-header">
 			<h2>{i18n.t('tools.token_balance_scanner.session.title') || 'Scan Sessions'}</h2>
 			<button class="close-btn" onclick={onClose} aria-label="Close">
@@ -162,10 +168,11 @@
 			{:else}
 				<div class="session-list">
 					{#each localSessions as session (session.sessionId)}
+						{@const StatusIcon = getStatusIcon(session.status)}
 						<div class="session-card">
 							<div class="session-header">
 								<div class="session-status {getStatusClass(session.status)}">
-									<svelte:component this={getStatusIcon(session.status)} size={14} />
+									<StatusIcon size={14} />
 									<span>{getStatusText(session.status)}</span>
 								</div>
 								<span class="session-chain"

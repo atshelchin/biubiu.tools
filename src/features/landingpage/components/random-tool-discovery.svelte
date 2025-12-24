@@ -374,11 +374,13 @@
 {#if showDiscoveryModal && discoveredTool}
 	{@const DiscoveredIcon = discoveredTool.icon}
 	<div class="discovery-overlay" onclick={closeDiscoveryModal} role="presentation">
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
 		<div
 			class="discovery-modal"
 			onclick={(e) => e.stopPropagation()}
 			role="dialog"
 			aria-modal="true"
+			tabindex="-1"
 			style="--tool-color: {discoveredTool.color};"
 		>
 			<div class="modal-decoration modal-decoration-top-left"></div>

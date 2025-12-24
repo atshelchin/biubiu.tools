@@ -154,7 +154,8 @@
 </script>
 
 <div class="scan-log-panel">
-	<button class="panel-header" onclick={toggleCollapse} type="button">
+	<!-- svelte-ignore a11y_click_events_have_key_events -->
+	<div class="panel-header" onclick={toggleCollapse} role="button" tabindex="0">
 		<div class="header-left">
 			<Terminal size={16} />
 			<span class="panel-title">{title}</span>
@@ -202,7 +203,7 @@
 				<ChevronUp size={16} />
 			{/if}
 		</div>
-	</button>
+	</div>
 
 	{#if !isCollapsed}
 		<div
@@ -211,6 +212,7 @@
 			transition:slide={{ duration: 200 }}
 			onmouseenter={() => (isHovered = true)}
 			onmouseleave={() => (isHovered = false)}
+			role="log"
 		>
 			{#if visibleEvents.length === 0}
 				<div class="empty-state">

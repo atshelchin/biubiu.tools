@@ -18,13 +18,16 @@
 	// Use regular variables for position (no reactivity needed for performance)
 	let currentX = 0;
 	let currentY = 0;
+	// svelte-ignore non_reactive_update
 	let currentSide: 'left' | 'right' = 'right';
 	let dragStartX = 0;
 	let dragStartY = 0;
 	let hasMoved = false;
 
-	// Refs
+	// Refs - using bind:this, reactivity handled by Svelte
+	// svelte-ignore non_reactive_update
 	let buttonRef: HTMLButtonElement | null = null;
+	// svelte-ignore non_reactive_update
 	let menuRef: HTMLDivElement | null = null;
 
 	// Constants
