@@ -1,0 +1,68 @@
+{
+	"_meta": {
+		"code": "zh",
+		"name": "中文",
+		"englishName": "Chinese",
+		"direction": "ltr",
+		"flag": "🇨🇳"
+	},
+	"title": "代币部署器",
+	"description": "快速创建和部署自定义参数的 ERC20 代币",
+	"step2": {
+		"content": {
+			"title": "依赖检查",
+			"description": "确保所需基础设施已就绪",
+			"checking_dependencies_for": "正在检查 {network} 网络环境...",
+			"wallet_not_connected_title": "钱包未连接",
+			"wallet_not_connected_message": "请返回步骤 1 并连接您的钱包",
+			"go_to_step1": "前往步骤 1",
+			"all_dependencies_satisfied": "所有依赖满足",
+			"network_properly_configured": "您的网络已正确配置，可以部署代币",
+			"dependency_issues_found": "发现依赖问题",
+			"resolve_issues_before_continuing": "请先解决上述问题再继续",
+			"recheck_dependencies": "重新检查依赖",
+			"address_label": "地址：",
+			"endpoint_label": "端点：",
+			"resolve_previous_issue": "请先解决前一个问题",
+			"view_deployment_guide": "查看部署指南",
+			"deploy_coming_soon": "部署合约（即将推出）",
+			"deploy_contract": "部署 {contractName}",
+			"checks": {
+				"contract": {
+					"token_factory_description": "支持 CREATE2 的 ERC20 代币部署工厂"
+				},
+				"category": {
+					"network": "网络",
+					"protocol": "协议",
+					"contract": "合约"
+				}
+			}
+		},
+		"footer": {
+			"back": "返回",
+			"continue": "继续配置代币"
+		},
+		"sidebar": {
+			"title": "检查依赖",
+			"description": "在继续部署代币之前，确保所有必需的合约都已部署在您选择的网络上。",
+			"checking": "正在检查依赖...",
+			"total": "总检查数",
+			"passed": "通过",
+			"failed": "失败",
+			"network": "当前网络",
+			"what_is_this": "这是什么？",
+			"what_is_this_desc": "在部署您的代币之前，我们需要验证所选网络上是否有所有必需的智能合约。",
+			"dependencies": "必需依赖",
+			"rpc_endpoint": "RPC 端点",
+			"rpc_endpoint_desc": "用于区块链通信的网络连接",
+			"create2_proxy": "CREATE2 代理",
+			"create2_proxy_desc": "支持跨链确定性合约部署",
+			"multicall3": "Multicall3",
+			"multicall3_desc": "批量合约调用以提高效率",
+			"biubiu_premium": "BiuBiuPremium",
+			"biubiu_premium_desc": "高级功能的会员合约",
+			"token_factory": "TokenFactory",
+			"token_factory_desc": "用于部署您的 ERC20 代币的主合约"
+		}
+	}
+}

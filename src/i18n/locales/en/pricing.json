@@ -1,0 +1,55 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"title": "Simple, Transparent Pricing",
+	"subtitle": "Choose the plan that works best for you",
+	"free": {
+		"name": "Free",
+		"price": "$0",
+		"period": "forever",
+		"description": "Perfect for getting started",
+		"features": [
+			"Up to 10 wallets",
+			"Basic batch operations",
+			"Community support",
+			"Standard speed"
+		],
+		"cta": "Get Started"
+	},
+	"pro": {
+		"name": "Pro",
+		"price": "$19",
+		"period": "month",
+		"description": "For power users",
+		"features": [
+			"Unlimited wallets",
+			"Advanced batch operations",
+			"Priority support",
+			"High-speed processing",
+			"API access"
+		],
+		"cta": "Start Free Trial"
+	},
+	"enterprise": {
+		"name": "Enterprise",
+		"price": "Custom",
+		"period": "month",
+		"description": "For teams and organizations",
+		"features": [
+			"Everything in Pro",
+			"Dedicated support",
+			"Custom integrations",
+			"SLA guarantee",
+			"Team management"
+		],
+		"cta": "Contact Sales"
+	},
+	"note": "All plans include basic features and security",
+	"custom_plan": "Need a custom plan?",
+	"contact_us": "Contact us"
+}

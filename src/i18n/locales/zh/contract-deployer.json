@@ -1,0 +1,121 @@
+{
+	"_meta": {
+		"code": "zh",
+		"name": "中文",
+		"englishName": "Chinese",
+		"direction": "ltr",
+		"flag": "🇨🇳"
+	},
+	"title": "合约部署器",
+	"description": "使用 CREATE2 代理进行确定性智能合约部署",
+	"feature_1": "跨链确定性部署",
+	"feature_2": "所有网络相同合约地址",
+	"feature_3": "简洁开发者友好界面",
+	"faqs": {
+		"what_is_create2": "什么是 CREATE2？",
+		"create2_explanation": "CREATE2 是以太坊的操作码，允许确定性合约部署。它根据字节码和盐值在部署前计算合约地址，确保在不同网络上获得相同地址。",
+		"what_is_deterministic": "什么是确定性部署？",
+		"deterministic_explanation": "确定性部署意味着只要使用相同的字节码、构造函数参数和盐值，合约将始终部署到任何网络上的相同地址。这对于跨链应用非常有用。",
+		"what_is_bytecode": "什么是字节码？",
+		"bytecode_explanation": "字节码是智能合约代码的编译版本。当您编译 Solidity 合约时，会得到字节码，这是在以太坊虚拟机（EVM）上实际运行的代码。",
+		"what_is_abi": "什么是 ABI？",
+		"abi_explanation": "ABI（应用程序二进制接口）定义了如何与合约交互。对于部署，您需要构造函数 ABI 来正确编码构造函数参数。可以提供 JSON 格式或人类可读格式。",
+		"what_is_salt": "什么是盐值？",
+		"salt_explanation": "盐值是 CREATE2 中用于生成合约地址的 32 字节值。不同的盐值会产生不同的地址。您可以使用相同的盐值在不同网络上部署到相同地址。"
+	},
+	"seo": {
+		"page_title": "合约部署器 - 确定性智能合约部署 | BiuBiu 工具",
+		"page_description": "使用 CREATE2 代理进行确定性智能合约部署。所有 EVM 网络相同合约地址。开发者友好的测试和生产界面。",
+		"keywords": "合约部署器，CREATE2, 确定性部署，智能合约，以太坊，Polygon, BSC, Solidity, Web3 工具",
+		"webapp_name": "合约部署器",
+		"webapp_description": "使用 CREATE2 代理在所有 EVM 网络上进行确定性智能合约部署。",
+		"feature_1": "CREATE2 确定性部署",
+		"feature_2": "多网络支持（以太坊、Polygon、BSC 等）",
+		"feature_3": "部署前预览合约地址",
+		"howto_name": "如何使用 CREATE2 进行确定性合约部署",
+		"howto_description": "使用 CREATE2 代理将智能合约部署到多个网络上的相同地址的分步指南。",
+		"howto_tool_1": "CREATE2 代理合约 (0x4e59b44847b379578588920cA78FbF26c0B4956C)",
+		"step_1_name": "连接钱包",
+		"step_1_text": "将您的 Web3 钱包连接到要部署合约的网络。确保您有足够的原生代币用于 Gas 费用。",
+		"step_1_description": "链接您的 Web3 钱包",
+		"step_2_name": "检查依赖项",
+		"step_2_text": "验证所选网络上是否可用 CREATE2 代理合约。系统将检查代理是否存在于标准地址。",
+		"step_2_description": "验证 CREATE2 代理可用性",
+		"step_3_name": "部署合约",
+		"step_3_text": "输入您的合约字节码、构造函数 ABI、构造函数参数和盐值。系统将计算并显示预测的合约地址。点击部署以执行部署交易。",
+		"step_3_description": "配置并部署合约"
+	},
+	"step1": {
+		"sidebar": {
+			"title": "连接钱包",
+			"description": "连接您的 Web3 钱包以使用 CREATE2 代理部署智能合约。"
+		},
+		"content": {
+			"title": "选择网络并连接钱包",
+			"description": "选择要部署合约的区块链网络",
+			"loading": "正在加载网络配置..."
+		},
+		"footer": {
+			"continue": "继续",
+			"hint": "连接您的钱包以继续"
+		}
+	},
+	"step2": {
+		"sidebar": {
+			"title": "检查依赖项",
+			"description": "验证所选网络上是否可用 CREATE2 代理合约。",
+			"required_contracts": "必需的合约"
+		},
+		"content": {
+			"title": "验证依赖项",
+			"description": "检查此网络上是否可用 CREATE2 代理",
+			"checking": "正在检查依赖项...",
+			"available": "可用",
+			"not_available": "不可用",
+			"all_passed": "所有依赖项都可用！您可以继续部署。",
+			"some_failed": "某些依赖项在此网络上不可用。请切换到受支持的网络。",
+			"check_button": "检查依赖项"
+		},
+		"footer": {
+			"continue": "继续",
+			"hint": "所有依赖项必须可用才能继续"
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "部署合约",
+			"description": "配置您的合约部署参数",
+			"bytecode_title": "合约字节码",
+			"bytecode_description": "您的智能合约的编译字节码。您可以从编译器输出中获取。",
+			"abi_title": "构造函数 ABI",
+			"abi_description": "构造函数的 ABI 定义。支持 JSON 和人类可读格式。",
+			"constructor_title": "构造函数参数",
+			"constructor_description": "要传递给合约构造函数的参数，采用 JSON 数组格式。",
+			"salt_title": "盐值",
+			"salt_description": "用于确定性地址生成的 32 字节十六进制值。相同盐值 = 相同地址。"
+		},
+		"content": {
+			"title": "部署您的合约",
+			"description": "输入合约详细信息以通过 CREATE2 代理部署",
+			"bytecode_label": "合约字节码",
+			"bytecode_help": "粘贴您的合约的编译字节码（以 0x 开头）",
+			"abi_label": "构造函数 ABI",
+			"abi_help": "以 JSON 或人类可读格式粘贴构造函数 ABI",
+			"constructor_args_label": "构造函数参数",
+			"constructor_args_help": "将构造函数参数输入为 JSON 数组，例如 [\"MyToken\", \"MTK\", 18]",
+			"salt_label": "盐值",
+			"salt_help": "用于确定性部署的 32 字节十六进制值（0x 后跟 64 个十六进制字符）",
+			"generate_random": "随机",
+			"predicted_address": "预测的合约地址",
+			"deploy_button": "部署合约",
+			"deploying": "正在部署...",
+			"deployment_success": "部署成功！",
+			"deployment_error": "部署失败",
+			"contract_address": "合约地址",
+			"transaction_hash": "交易哈希"
+		},
+		"footer": {
+			"hint": "这是最后一步。准备好后部署您的合约。"
+		}
+	}
+}

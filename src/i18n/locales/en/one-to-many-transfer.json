@@ -1,0 +1,290 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"title": "One-to-Many Transfer",
+	"description": "Send tokens & NFTs from one wallet to multiple addresses in batch",
+	"seo": {
+		"page_title": "One-to-Many Transfer - Batch Send Tokens & NFTs to Multiple Wallets | BiuBiu Tools",
+		"page_description": "Send tokens and NFTs from one wallet to multiple addresses in batch. Support for ETH, ERC20, ERC721, ERC1155 across multiple blockchain networks.",
+		"keywords": "one to many transfer, batch send, airdrop, token transfer, NFT transfer, multi-send, batch transfer, ERC20, ERC721, ERC1155, crypto distribution, web3 tools",
+		"webapp_name": "One-to-Many Transfer",
+		"webapp_description": "Batch send tokens and NFTs from one wallet to multiple recipients across various blockchain networks",
+		"howto_name": "How to Batch Send Tokens & NFTs to Multiple Wallets",
+		"howto_description": "Complete guide to sending tokens and NFTs from one wallet to multiple recipient addresses",
+		"howto_tool_1": "Web3 Wallet (MetaMask, WalletConnect, etc.)",
+		"howto_tool_2": "Sufficient token balance and gas fees",
+		"step_1_name": "Connect Your Wallet",
+		"step_1_text": "Click the \"Connect Wallet\" button and connect your Web3 wallet (MetaMask, WalletConnect, etc.) to the application. This wallet will be the source of tokens for distribution.",
+		"step_1_description": "Link your Web3 wallet as the source wallet",
+		"step_2_name": "Check Dependencies",
+		"step_2_text": "Verify that required smart contracts (WETH and TokenDistribution) are deployed on the selected network. These contracts enable batch distribution functionality.",
+		"step_2_description": "Verify required contracts are deployed",
+		"step_3_name": "Select Token and Amount",
+		"step_3_text": "Choose which token to distribute (native token, ERC20, or NFT), set the distribution mode (equal amounts or custom per recipient), and specify the amount per recipient or total amount.",
+		"step_3_description": "Configure token and distribution amounts",
+		"step_4_name": "Import Recipients",
+		"step_4_text": "Add recipient wallet addresses by manually entering them, uploading a CSV file, or pasting a list. Optionally set custom amounts for each recipient.",
+		"step_4_description": "Add recipient wallet addresses",
+		"step_5_name": "Review and Execute",
+		"step_5_text": "Review the distribution summary including total amount, recipient count, and estimated gas costs. Confirm and execute the batch distribution. Sign each transaction with your wallet.",
+		"step_5_description": "Execute the token distribution",
+		"feature_1": "Connect Web3 wallet (MetaMask, WalletConnect, Coinbase Wallet)",
+		"feature_2": "Support multiple networks (Ethereum, Polygon, BSC, Base, Arbitrum, Optimism)",
+		"feature_3": "Send native tokens (ETH, BNB, MATIC), ERC20 tokens, and NFTs (ERC721, ERC1155)",
+		"feature_4": "Equal distribution or custom amounts per recipient",
+		"feature_5": "Import recipients via CSV, paste, or manual entry"
+	},
+	"faqs": {
+		"what_is_one_to_many": "What is One-to-Many Transfer?",
+		"one_to_many_explanation": "One-to-Many Transfer allows you to send tokens or NFTs from a single wallet to multiple recipient addresses in batch. It's ideal for airdrops, payroll, rewards distribution, and any scenario where you need to send assets to many addresses efficiently.",
+		"what_tokens_supported": "What types of tokens are supported?",
+		"tokens_supported_explanation": "We support native tokens (ETH, BNB, MATIC, etc.), ERC20 tokens (USDT, USDC, etc.), and NFTs including both ERC721 and ERC1155 standards.",
+		"what_is_equal_distribution": "What is equal distribution mode?",
+		"equal_distribution_explanation": "In equal distribution mode, you specify an amount per recipient, and every address receives the same amount. The total is calculated automatically based on the number of recipients.",
+		"what_is_custom_amounts": "What is custom amounts mode?",
+		"custom_amounts_explanation": "In custom amounts mode, you can specify different amounts for each recipient. This is useful when different addresses should receive different quantities.",
+		"how_to_import_recipients": "How can I import recipient addresses?",
+		"import_recipients_explanation": "You can add recipients by: 1) Manual entry one by one, 2) Bulk paste a list of addresses, or 3) Upload a CSV file with addresses and optional amounts.",
+		"what_networks_supported": "Which blockchain networks are supported?",
+		"networks_supported_explanation": "Currently we support Ethereum Mainnet, Polygon, BSC (Binance Smart Chain), Base, Arbitrum, and Optimism. More networks will be added in the future."
+	},
+	"step2": {
+		"content": {
+			"title": "Check Dependencies",
+			"description": "Verify required contracts are deployed on this network",
+			"checks": {
+				"contract": {
+					"weth_description": "WETH contract for delegated execute mode (converts WETH to ETH for distribution)",
+					"token_distribution_description": "TokenDistribution contract for batch distributing tokens and NFTs to multiple recipients"
+				}
+			}
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "Select Token",
+			"description": "Choose the token type and specify which token to distribute"
+		},
+		"content": {
+			"title": "Select Token to Distribute",
+			"description": "Choose the token type and select the specific token you want to send to multiple recipients",
+			"token_type": {
+				"title": "Token Type",
+				"native": "Native Token",
+				"native_desc": "ETH, BNB, MATIC, etc.",
+				"erc20": "ERC20 Token",
+				"erc20_desc": "USDT, USDC, DAI, etc.",
+				"erc721": "ERC721 NFT",
+				"erc721_desc": "Single NFTs (1 per recipient)",
+				"erc1155": "ERC1155 Multi-Token",
+				"erc1155_desc": "Batch NFTs or semi-fungible tokens"
+			},
+			"select_token": {
+				"title": "Select Token",
+				"no_tokens": "No tokens available for this network",
+				"add_custom": "Add Custom Token"
+			},
+			"nft_config": {
+				"title": "NFT Configuration",
+				"contract_address": "Contract Address",
+				"contract_placeholder": "Enter NFT contract address (0x...)",
+				"token_ids": "Token IDs",
+				"token_ids_placeholder": "Enter token IDs (comma-separated for multiple)",
+				"token_ids_hint": "For ERC721: one token ID per recipient. For ERC1155: specify the token ID to distribute.",
+				"load_button": "Load NFT Info",
+				"loading": "Loading NFT information...",
+				"collection_name": "Collection",
+				"total_supply": "Total Supply",
+				"your_balance": "Your Balance",
+				"invalid_address": "Invalid contract address format"
+			},
+			"amount_mode": {
+				"title": "Distribution Mode",
+				"equal": "Equal Distribution",
+				"equal_desc": "Same amount to all recipients",
+				"custom": "Custom Amounts",
+				"custom_desc": "Set individual amounts per recipient (in Step 4)",
+				"random": "Random Amounts",
+				"random_desc": "Random amount within a range for each recipient"
+			},
+			"amount_input": {
+				"title": "Amount Per Recipient",
+				"placeholder": "0.0",
+				"hint": "This amount will be sent to each recipient. Total will be calculated based on number of recipients."
+			},
+			"custom_mode_info": "You've selected custom amounts mode. You'll set individual amounts for each recipient in Step 4.",
+			"random_mode_config": {
+				"min_amount": "Minimum Amount",
+				"max_amount": "Maximum Amount",
+				"min_placeholder": "0.0",
+				"max_placeholder": "0.0",
+				"hint": "Each recipient will receive a random amount between min and max values.",
+				"valid_range": "Random amounts will be between {min} and {max} {symbol}",
+				"error_max_less_than_min": "Maximum amount must be greater than minimum amount"
+			}
+		},
+		"footer": {
+			"continue": "Continue to Recipients",
+			"hint": "Select a token and configure amounts to continue"
+		}
+	},
+	"step4": {
+		"sidebar": {
+			"title": "Import Recipients",
+			"description": "Add wallet addresses that will receive the tokens"
+		},
+		"content": {
+			"title": "Add Recipients",
+			"description": "Import wallet addresses that will receive tokens from this distribution",
+			"distributing": "Distributing",
+			"method": {
+				"manual": "Manual Entry",
+				"paste": "Paste List",
+				"csv": "Upload CSV"
+			},
+			"manual": {
+				"title": "Add Recipient Manually",
+				"address": "Wallet Address",
+				"token_id": "Token ID",
+				"token_amount": "Quantity",
+				"amount": "Amount",
+				"label": "Label (optional)",
+				"label_placeholder": "e.g. Alice, Bob",
+				"add_button": "Add Recipient"
+			},
+			"paste": {
+				"title": "Paste Multiple Addresses",
+				"add_button": "Add All"
+			},
+			"paste_hint": {
+				"fungible_equal": "Format: address, label (optional). One per line.",
+				"fungible_custom": "Format: address, label (optional), amount. One per line.",
+				"erc721": "Format: address, tokenId, label (optional). One per line.",
+				"erc1155": "Format: address, tokenId, quantity, label (optional). One per line."
+			},
+			"csv": {
+				"title": "Upload CSV File",
+				"description": "Upload a CSV file with recipient addresses",
+				"upload_button": "Choose File",
+				"hint": "CSV should contain address column. Optional: label, amount/tokenId columns."
+			},
+			"recipients": {
+				"title": "Recipients",
+				"clear_all": "Clear All",
+				"regenerate_random": "Regenerate Amounts",
+				"col_address": "Address",
+				"col_token_id": "Token ID",
+				"col_token_amount": "Qty",
+				"col_amount": "Amount",
+				"col_label": "Label"
+			},
+			"empty_state": "No recipients added yet. Use the form above to add recipient addresses.",
+			"error": {
+				"invalid_address": "Please enter a valid Ethereum address",
+				"invalid_address_line": "Line {line}: Invalid address format",
+				"token_id_required": "Token ID is required for NFT distribution",
+				"invalid_token_id_line": "Line {line}: Invalid or missing token ID"
+			}
+		},
+		"footer": {
+			"continue": "Continue to Review",
+			"hint": "Add at least one recipient to continue"
+		}
+	},
+	"step5": {
+		"sidebar": {
+			"title": "Confirm & Execute",
+			"description": "Review distribution details and execute the transfers"
+		},
+		"mode": {
+			"title": "Execution Mode",
+			"self": {
+				"title": "Self-Execute",
+				"description": "Sign and send each transaction from your wallet. Best for smaller distributions."
+			},
+			"delegated": {
+				"title": "Delegated Execution",
+				"description": "Sign once, let anyone execute batches. Best for large distributions with many recipients.",
+				"info": "Delegated mode uses a smart contract to batch transfers. You sign an authorization, then batches can be executed by anyone (including yourself)."
+			}
+		},
+		"delegated": {
+			"authorize": "Sign Authorization",
+			"authorizing": "Signing...",
+			"execute_batch": "Execute Batch {current}/{total}",
+			"execute_all": "Execute All Batches",
+			"batch_status": "Batch Status",
+			"batch_pending": "Pending",
+			"batch_completed": "Completed",
+			"batch_failed": "Failed",
+			"export_session": "Export Session",
+			"import_session": "Import Session",
+			"session_expired": "Session Expired",
+			"session_info": "Session ID: {id} | Expires: {time}"
+		},
+		"session": {
+			"title": "Distribution Sessions",
+			"empty": "No saved sessions",
+			"import": "Import Session",
+			"export": "Export",
+			"delete": "Delete",
+			"resume": "Resume",
+			"batches": "batches",
+			"expires_in": "Expires in",
+			"expired": "Expired",
+			"status_pending": "Pending",
+			"status_partial": "In Progress",
+			"status_completed": "Completed",
+			"status_expired": "Expired",
+			"import_error": "Failed to import session. Please check the file format.",
+			"importing": "Importing..."
+		},
+		"content": {
+			"title": "Review & Execute Distribution",
+			"description": "Review the distribution summary and execute the token transfers",
+			"executor_wallet": "Executor Wallet",
+			"summary_title": "Distribution Summary",
+			"token": "Token",
+			"mode": "Mode",
+			"mode_equal": "Equal Distribution",
+			"mode_random": "Random Distribution",
+			"mode_custom": "Custom Amounts",
+			"recipients": "Recipients",
+			"total_amount": "Total Amount",
+			"total_nfts": "Total NFTs",
+			"estimated_gas": "Estimated Gas",
+			"network": "Network",
+			"preview_title": "Recipients Preview (first 10)",
+			"more_recipients": "more recipients",
+			"progress_title": "Execution Progress",
+			"successful": "successful",
+			"failed": "failed",
+			"pending": "pending",
+			"execute": "Execute Distribution",
+			"stop": "Stop Execution",
+			"resume": "Resume",
+			"reset": "Reset",
+			"start_new": "Start New Distribution",
+			"completed": "Distribution Completed!",
+			"confirm_continue": "Do you want to continue?",
+			"warning_title": "Important",
+			"warning_message": "Make sure you have sufficient balance and gas fees. Each recipient will receive a separate transaction. Review all details carefully before executing.",
+			"errors": {
+				"invalid_config": "Invalid distribution configuration. Please check previous steps.",
+				"connect_wallet": "Please connect your wallet first",
+				"no_network": "No network selected",
+				"no_token": "No token selected",
+				"no_recipients": "No recipients added"
+			}
+		},
+		"footer": {
+			"back": "Back to Recipients",
+			"execute": "Execute Distribution"
+		}
+	}
+}

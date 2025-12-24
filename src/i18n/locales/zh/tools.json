@@ -1,0 +1,46 @@
+{
+	"_meta": {
+		"code": "zh",
+		"name": "中文",
+		"englishName": "Chinese",
+		"direction": "ltr",
+		"flag": "🇨🇳"
+	},
+	"section_title": "强大工具",
+	"section_subtitle": "专业的 Web3 批量操作工具，提升您的效率",
+	"badge": "专业 Web3 工具",
+	"feedback_card": {
+		"title": "你的想法很重要！",
+		"description": "缺少你需要的功能？有让工具更好的想法？我们专门做你需要的 - 加入社区告诉我们！",
+		"feature_1": "💡 你的需求可能就是下一个功能",
+		"feature_2": "🚀 我们迭代很快 - 几天就能上线",
+		"feature_3": "🤝 直接和开发团队沟通"
+	},
+	"try_now": "立即试用",
+	"launch_app": "启动应用",
+	"notify_me": "通知我",
+	"coming_soon": "即将推出",
+	"available_now": "现已推出",
+	"join_telegram": "加入 Telegram",
+	"discover_random": "随机发现一个工具",
+	"you_discovered": "恭喜发现！",
+	"try_again": "再摇一次",
+	"actions": {
+		"import_csv": "导入 CSV",
+		"export_results": "导出结果",
+		"clear_all": "清空全部",
+		"share_link": "分享链接",
+		"share_tooltip": "复制分享链接",
+		"settings": "设置",
+		"settings_tooltip": "网络设置"
+	},
+	"notify_modal": {
+		"title": "获取通知",
+		"description": "输入您的邮箱，工具上线时我们会通知您。",
+		"email_placeholder": "your@email.com",
+		"subscribe": "订阅",
+		"cancel": "取消",
+		"success": "谢谢！工具准备好后我们会通知您。",
+		"error": "请输入有效的邮箱地址。"
+	}
+}

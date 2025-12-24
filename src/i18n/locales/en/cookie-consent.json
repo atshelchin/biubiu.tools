@@ -1,0 +1,39 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"title": "We Use Cookies",
+	"description": "We use essential cookies for basic functionality and optional analytics cookies to improve our services. You can choose whether to allow analytics.",
+	"necessary": {
+		"title": "Essential",
+		"description": "Required for basic functionality including theme preferences, session data, and RPC optimization. These cannot be disabled."
+	},
+	"functional": {
+		"title": "Functional",
+		"description": "Included in essential cookies."
+	},
+	"analytics": {
+		"title": "Analytics",
+		"description": "Analytics cookies help us understand how visitors use our website through anonymous usage statistics and referral tracking."
+	},
+	"required": "Required",
+	"accept_all": "Accept All",
+	"necessary_only": "Essential Only",
+	"save_preferences": "Save Preferences",
+	"show_details": "Customize",
+	"hide_details": "Hide Details",
+	"privacy_notice": "For more information, see our",
+	"privacy_policy": "Privacy Policy",
+	"reminder_title": "Enable Analytics?",
+	"reminder_description": "Help us improve BiuBiu Tools by enabling analytics cookies. Your data remains anonymous.",
+	"not_now": "Not Now",
+	"dismiss": "Dismiss",
+	"settings_title": "Cookie Settings",
+	"settings_description": "Manage your cookie preferences. You can change these settings at any time.",
+	"cancel": "Cancel",
+	"cookie_settings": "Cookie Settings"
+}

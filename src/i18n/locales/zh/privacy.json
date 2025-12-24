@@ -1,0 +1,58 @@
+{
+	"_meta": {
+		"code": "zh",
+		"name": "中文",
+		"englishName": "Chinese",
+		"direction": "ltr",
+		"flag": "🇨🇳"
+	},
+	"page_title": "隐私政策",
+	"page_description": "了解 BiuBiu Tools 如何收集、使用和保护您的数据。",
+	"title": "隐私政策",
+	"last_updated": "最后更新",
+	"introduction": {
+		"title": "简介",
+		"content": "BiuBiu Tools 致力于保护您的隐私。本隐私政策说明了当您使用我们的 Web3 工具和服务时，我们如何收集、使用和保护您的信息。"
+	},
+	"data_collection": {
+		"title": "我们收集的数据",
+		"intro": "根据您的同意偏好，我们会收集不同类型的数据：",
+		"necessary": {
+			"title": "基本数据（始终收集）",
+			"item1": "网站功能所需的会话数据",
+			"item2": "用于记住您选择的同意偏好",
+			"item3": "主题偏好（浅色/深色模式）",
+			"item4": "语言偏好",
+			"item5": "RPC 性能指标（用于最佳网络选择）"
+		},
+		"analytics": {
+			"title": "分析数据（无 Cookie，始终启用）",
+			"item1": "通过 Rybbit 收集的匿名使用统计（页面浏览量、功能使用情况）",
+			"item2": "聚合的、不可识别身份的访问者指标",
+			"item3": "推荐计划的来源追踪"
+		}
+	},
+	"local_storage": {
+		"title": "本地存储（必要）",
+		"content": "我们使用浏览器的本地存储来保存应用程序正常运行所必需的数据。这些数据保留在您的设备上，不会传输到我们的服务器：",
+		"item1": "您添加的自定义代币列表（代币操作所必需）",
+		"item2": "多步骤操作的会话数据（恢复中断任务所必需）",
+		"item3": "存储在 IndexedDB 中的扫描结果（余额扫描功能所必需）",
+		"item4": "您的 Cookie 同意偏好设置"
+	},
+	"third_party": {
+		"title": "分析服务",
+		"content": "我们使用 Rybbit（tj.appsdata.org）——一款注重隐私、无需 Cookie 的分析服务来了解访问者如何使用我们的网站。Rybbit 不使用 Cookie，不收集个人身份信息，并且始终启用，因为它无需用户同意即可符合 GDPR。如果我们将来添加其他使用 Cookie 的分析服务，只有在您同意后才会加载。我们会根据工具需要与区块链网络（以太坊、Polygon 等）交互，但我们不会在服务器上存储您的私钥或助记词。"
+	},
+	"your_rights": {
+		"title": "您的权利",
+		"content": "根据 GDPR、CCPA 和类似法规，您拥有以下权利：",
+		"item1": "访问权：您可以请求了解我们拥有的关于您的数据",
+		"item2": "删除权：您可以随时通过浏览器设置清除本地数据",
+		"item3": "撤回同意权：您可以随时更改您的 Cookie 偏好设置"
+	},
+	"contact": {
+		"title": "联系我们",
+		"content": "如果您对本隐私政策或我们的数据实践有任何疑问，请通过我们的 GitHub 仓库或社区渠道与我们联系。"
+	}
+}

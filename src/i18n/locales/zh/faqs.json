@@ -1,0 +1,37 @@
+{
+	"_meta": {
+		"code": "zh",
+		"name": "中文",
+		"englishName": "Chinese",
+		"direction": "ltr",
+		"flag": "🇨🇳"
+	},
+	"title": "常见问题",
+	"subtitle": "关于 biubiu.tools 您需要了解的一切",
+	"items": [
+		{
+			"question": "biubiu.tools 是什么？",
+			"answer": "biubiu.tools 是一个综合性的 Web3 工具包，为以太坊生态系统提供批量操作和多钱包管理功能。"
+		},
+		{
+			"question": "使用安全吗？",
+			"answer": "是的！我们从不存储您的私钥。所有操作都在您的浏览器中使用安全的 Web3 协议本地执行。"
+		},
+		{
+			"question": "支持哪些链？",
+			"answer": "我们支持以太坊主网和主要的 EVM 兼容链，包括 Polygon、BSC、Arbitrum 和 Optimism。"
+		},
+		{
+			"question": "批量钱包归集如何工作？",
+			"answer": "我们的工具允许您在一笔交易中将代币从多个钱包归集到单一地址，节省时间和 gas 费。"
+		},
+		{
+			"question": "可以免费试用吗？",
+			"answer": "当然！我们的免费计划包含基础功能，支持最多 10 个钱包。您可以随时升级以获得更高级的功能。"
+		}
+	],
+	"still_questions": "还有问题？",
+	"contact_text": "我们随时为您提供帮助。请随时联系我们的支持团队。",
+	"join_discord": "加入 Discord",
+	"email_support": "邮件支持"
+}

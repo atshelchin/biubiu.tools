@@ -1,0 +1,38 @@
+{
+	"_meta": {
+		"code": "zh",
+		"name": "中文",
+		"englishName": "Chinese",
+		"direction": "ltr",
+		"flag": "🇨🇳"
+	},
+	"title": "简单透明的定价",
+	"subtitle": "选择最适合您的计划",
+	"free": {
+		"name": "免费版",
+		"price": "$0",
+		"period": "永久",
+		"description": "适合刚开始使用",
+		"features": ["最多 10 个钱包", "基础批量操作", "社区支持", "标准速度"],
+		"cta": "开始使用"
+	},
+	"pro": {
+		"name": "专业版",
+		"price": "$19",
+		"period": "月",
+		"description": "适合高级用户",
+		"features": ["无限钱包", "高级批量操作", "优先支持", "高速处理", "API 访问"],
+		"cta": "开始免费试用"
+	},
+	"enterprise": {
+		"name": "企业版",
+		"price": "定制",
+		"period": "月",
+		"description": "适合团队和组织",
+		"features": ["包含专业版所有功能", "专属支持", "定制集成", "SLA 保障", "团队管理"],
+		"cta": "联系销售"
+	},
+	"note": "所有计划均包含基础功能和安全保障",
+	"custom_plan": "需要定制计划？",
+	"contact_us": "联系我们"
+}

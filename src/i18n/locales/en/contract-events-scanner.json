@@ -1,0 +1,14 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"title": "Contract Events Scanner",
+	"description": "Scan, analyze and export smart contract events from blockchain",
+	"feature_1": "Scan historical event logs from any contract",
+	"feature_2": "Custom event filters and block range selection",
+	"feature_3": "Export event data to CSV, JSON formats"
+}

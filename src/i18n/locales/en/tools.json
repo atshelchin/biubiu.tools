@@ -1,0 +1,46 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"section_title": "Powerful Tools",
+	"section_subtitle": "Professional Web3 batch operation tools to improve your efficiency",
+	"badge": "Professional Web3 Tools",
+	"feedback_card": {
+		"title": "Your Ideas Matter!",
+		"description": "Missing a feature you need? Have an idea to make this better? We build what YOU need - join our community and tell us!",
+		"feature_1": "💡 Your feature request could be next",
+		"feature_2": "🚀 We ship fast - ideas to reality in days",
+		"feature_3": "🤝 Direct line to our dev team"
+	},
+	"try_now": "Try Now",
+	"launch_app": "Launch App",
+	"notify_me": "Notify Me",
+	"coming_soon": "Coming Soon",
+	"available_now": "Available Now",
+	"join_telegram": "Join Telegram",
+	"discover_random": "Discover a random tool",
+	"you_discovered": "You Discovered!",
+	"try_again": "Try Again",
+	"actions": {
+		"import_csv": "Import CSV",
+		"export_results": "Export Results",
+		"clear_all": "Clear All",
+		"share_link": "Share Link",
+		"share_tooltip": "Copy shareable link",
+		"settings": "Settings",
+		"settings_tooltip": "Network settings"
+	},
+	"notify_modal": {
+		"title": "Get Notified",
+		"description": "Enter your email to get notified when this tool is available.",
+		"email_placeholder": "your@email.com",
+		"subscribe": "Subscribe",
+		"cancel": "Cancel",
+		"success": "Thanks! We'll notify you when it's ready.",
+		"error": "Please enter a valid email address."
+	}
+}

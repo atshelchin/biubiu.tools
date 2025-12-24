@@ -1,0 +1,143 @@
+{
+	"_meta": {
+		"code": "zh",
+		"name": "中文",
+		"englishName": "Chinese",
+		"direction": "ltr",
+		"flag": "🇨🇳"
+	},
+	"title": "地址浏览器",
+	"subtitle": "搜索和浏览标记的区块链地址和 ENS 域名",
+	"search_placeholder": "搜索地址、ENS 域名或实体...",
+	"searching": "搜索中...",
+	"looking_up": "正在区块链上查询...",
+	"view_details": "查看详情",
+	"no_results": "未找到结果",
+	"all_addresses": "所有地址",
+	"categories": "按类别浏览",
+	"browse_by_label": "按标签浏览",
+	"popular_addresses": "热门地址",
+	"popular_names": "热门域名",
+	"view_on_explorer": "在浏览器中查看",
+	"website": "官网",
+	"related_names": "相关域名",
+	"related_addresses": "相关地址",
+	"balance": "余额",
+	"loading_balance": "加载中...",
+	"contract": "合约",
+	"data_source": "数据来源",
+	"updated": "更新时间",
+	"source_manual": "手动收录",
+	"source_verified": "已验证",
+	"source_etherscan": "Etherscan",
+	"source_community": "社区贡献",
+	"stats": {
+		"addresses": "地址",
+		"names": "域名",
+		"exchanges": "交易所",
+		"defi": "DeFi",
+		"tokens": "代币",
+		"nft": "NFT",
+		"notable": "知名钱包"
+	},
+	"labels": {
+		"exchange": "交易所",
+		"cex": "中心化交易所",
+		"dex": "去中心化交易所",
+		"defi": "DeFi",
+		"lending": "借贷",
+		"bridge": "跨链桥",
+		"yield": "收益",
+		"derivatives": "衍生品",
+		"liquid-staking": "流动性质押",
+		"token": "代币",
+		"stablecoin": "稳定币",
+		"memecoin": "Meme 币",
+		"wrapped": "封装代币",
+		"nft": "NFT",
+		"nft-marketplace": "NFT 市场",
+		"whale": "巨鲸",
+		"smart-money": "聪明钱",
+		"foundation": "基金会",
+		"dao": "DAO",
+		"multisig": "多签钱包",
+		"deployer": "部署者",
+		"hacker": "黑客",
+		"scam": "诈骗",
+		"sanctioned": "被制裁",
+		"phishing": "钓鱼",
+		"burn": "销毁地址",
+		"null": "空地址",
+		"genesis": "创世",
+		"mev": "MEV",
+		"contract": "合约",
+		"eoa": "EOA"
+	},
+	"risk": {
+		"safe": "安全",
+		"neutral": "中性",
+		"warning": "警告",
+		"danger": "危险"
+	},
+	"seo": {
+		"index_title": "地址浏览器 - 区块链地址和 ENS 查询 | BiuBiu Tools",
+		"index_description": "搜索和浏览 {addressCount} 个标记的区块链地址和 {nameCount} 个 ENS 域名。查找交易所、DeFi 协议、巨鲸钱包等。",
+		"detail_description": "{name} ({entity}) 在 {chain} 上。标签：{labels}。地址：{address}。探索钱包详情和相关信息。"
+	},
+	"faq": {
+		"title": "常见问题",
+		"what_is": "{name} 是什么？",
+		"what_is_answer": "{name} 是 {entity} 在 {chain} 网络上的钱包地址。",
+		"is_safe": "这个地址安全吗？",
+		"is_safe_answer_safe": "{name} 是来自知名实体的已验证安全地址。",
+		"is_safe_answer_neutral": "{name} 的风险等级为中性。请保持正常谨慎。",
+		"is_safe_answer_warning": "警告：{name} 已被标记为存在潜在风险。请谨慎操作。",
+		"is_safe_answer_danger": "危险：{name} 已被标记为危险地址。请勿向此地址发送资金。",
+		"how_to_verify": "如何验证这个地址？",
+		"how_to_verify_answer": "您可以在 {explorer} 区块浏览器上验证此地址，查看交易历史和合约详情。",
+		"cex": {
+			"can_deposit": "我可以向这个地址充值吗？",
+			"can_deposit_answer": "{name} 是 {entity} 的官方充值地址。在发送资金前，请务必在交易所官网验证地址。",
+			"how_to_withdraw": "如何从这个交易所提币？",
+			"how_to_withdraw_answer": "要从 {entity} 提币，请登录账户，进入提币页面，输入目标钱包地址，并按照交易所安全流程确认交易。"
+		},
+		"dex": {
+			"what_is_contract": "这个 DEX 合约是什么？",
+			"what_is_contract_answer": "{name} 是 {entity} 去中心化交易所的智能合约。它支持在区块链上进行无许可的代币交换。"
+		},
+		"defi": {
+			"what_does_it_do": "这个 DeFi 合约有什么功能？",
+			"what_does_it_do_answer": "{name} 是 {entity} 的智能合约，用于在区块链上提供去中心化金融服务。",
+			"lending_how": "这个协议的借贷是如何运作的？",
+			"lending_how_answer": "{entity} 允许用户存入资产赚取利息，或通过抵押借款。利率根据供需算法动态确定。",
+			"bridge_how": "如何使用这个跨链桥？",
+			"bridge_how_answer": "{name} 是 {entity} 的跨链桥合约。它允许您在不同区块链网络之间安全地转移资产。",
+			"staking_how": "流动性质押是如何运作的？",
+			"staking_how_answer": "{entity} 允许您质押代币的同时获得可在其他 DeFi 协议中使用的流动性衍生代币。"
+		},
+		"token": {
+			"what_is_contract": "这个代币合约是什么？",
+			"what_is_contract_answer": "{name} 是该代币的官方智能合约。在交互前请务必验证合约地址。",
+			"stablecoin_peg": "这个稳定币如何维持锚定？",
+			"stablecoin_peg_answer": "{name} 根据其设计，通过储备金、算法机制或超额抵押的组合来维持其锚定。"
+		},
+		"entity": {
+			"whale_activity": "为什么这个巨鲸地址值得关注？",
+			"whale_activity_answer": "{name} 持有大量加密货币。追踪巨鲸动向可以帮助了解市场趋势。",
+			"multisig_what": "什么是多签钱包？",
+			"multisig_what_answer": "{name} 是一个多签钱包，需要多方批准才能执行交易，提供增强的安全性。",
+			"governance": "这个地址的治理角色是什么？",
+			"governance_answer": "{name} 属于 {entity}，可能参与协议治理、国库管理或社区决策。"
+		},
+		"risk": {
+			"why_flagged": "为什么这个地址被标记？",
+			"why_flagged_answer": "{name} 因与黑客攻击、诈骗或制裁违规等恶意活动相关而被标记。请格外谨慎。",
+			"what_to_do": "如果我与这个地址有过交互怎么办？",
+			"what_to_do_answer": "如果您向此地址发送过资金，可能无法追回。请检查接收协议是否有恢复机制，并考虑向相关部门报告。"
+		},
+		"contract": {
+			"is_verified": "这个合约已验证吗？",
+			"is_verified_answer": "您可以在 {chain} 区块浏览器上查看 {name} 是否有已验证的源代码。已验证的合约其源代码可供公开审查。"
+		}
+	}
+}

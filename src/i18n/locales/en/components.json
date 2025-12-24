@@ -1,0 +1,160 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"address_text_import": {
+		"placeholder": "Paste wallet addresses here (one per line)\n0x1234...\n0x5678...\n0xabcd...",
+		"hint": "Enter one address per line",
+		"import_button": "Import Addresses ({count})",
+		"importing": "Importing... {progress}%",
+		"column_label": "Address"
+	},
+	"xpub_import_form": {
+		"placeholder": "Enter your extended public key (xpub, ypub, or zpub)...",
+		"hint": "xpub allows address derivation without exposing private keys",
+		"derivation_path": "Derivation Range",
+		"derive_button": "Derive Addresses",
+		"deriving": "Deriving... {progress}%"
+	},
+	"gas_funding": {
+		"title": "Fund Gas",
+		"target_wallet": "Target Wallet",
+		"estimated_gas": "Estimated Gas",
+		"suggested_amount": "Suggested Amount",
+		"send_amount": "Send Amount",
+		"amount_placeholder": "Enter amount",
+		"tip": "Tip: Pre-filled with suggested amount (2x estimated) to ensure sufficient funds",
+		"security_notice": "💰 Funds sent to the temporary wallet can be transferred out using the private key - your funds are safe",
+		"btn_send": "Send",
+		"sending": "Sending...",
+		"cancel": "Cancel"
+	},
+	"file_upload": {
+		"title": "Upload File",
+		"drop_file": "Drag and drop file here or click to upload",
+		"supported_formats": "Supported formats: TXT, CSV, XLSX, XLS",
+		"choose_file": "Choose File",
+		"remove_file": "Remove file",
+		"processing": "Processing...",
+		"mode_text": "Text Mode",
+		"mode_table": "Table Mode",
+		"preview_title": "File Preview",
+		"select_columns_hint": "Please select {count} column(s) (click header buttons to mark column order)",
+		"select_columns_hint_click": "Please select {count} column(s) (click column headers to stamp, click again to cycle)",
+		"select_single_column_hint": "💡 Click a column header to mark it as the [{label}] column",
+		"click_to_select": "Click to select this column as [{label}]",
+		"click_to_deselect": "Click again to deselect",
+		"click_to_change": "Click to switch to this column",
+		"click_to_cycle": "Click again to cycle to next position",
+		"generated_column": "Column {index}",
+		"column": "Column",
+		"showing_first_rows": "Showing first {count} rows",
+		"cancel": "Cancel",
+		"confirm": "Confirm",
+		"error_unsupported_format": "Unsupported file format",
+		"error_empty_file": "File is empty",
+		"error_incomplete_selection": "Please complete column selection",
+		"error_all_labels_assigned": "All labels are assigned. Please remove a label from another column first"
+	},
+	"quick_rpc_manager": {
+		"title": "Quick RPC Management",
+		"network": "Current Network",
+		"add_new": "Add New RPC",
+		"placeholder": "https://example.com/rpc",
+		"add_button": "Add",
+		"current_rpcs": "Current RPC List",
+		"primary": "Primary",
+		"no_rpcs": "No RPC endpoints",
+		"invalid_url": "Invalid URL, must start with http:// or https://",
+		"duplicate_url": "This RPC endpoint already exists",
+		"at_least_one": "At least one RPC endpoint is required",
+		"hint": "Adding multiple RPC endpoints enables automatic switching when one is rate limited, improving scan success rate.",
+		"recommend_prefix": "Find available RPC endpoints at",
+		"recommend_suffix": "",
+		"cancel": "Cancel",
+		"save": "Save and Continue Scan",
+		"url_format_hint": "Enter RPC URL starting with http:// or https://",
+		"http_warning": "Using http:// (insecure) may be blocked by browsers. To allow in Chrome: Click the icon in address bar → Site settings → Insecure content → Allow"
+	},
+	"address_path_selector": {
+		"sequential": {
+			"label": "Sequential",
+			"description": "0, 1, 2, 3..."
+		},
+		"date": {
+			"label": "Date-based",
+			"description": "20240101, 20240102...",
+			"presets": {
+				"1_year": "Past 1 Year",
+				"10_years": "Past 10 Years",
+				"100_years": "Past 100 Years"
+			}
+		},
+		"quick_select": "Quick Select",
+		"start": "Start",
+		"end": "End",
+		"to": "to",
+		"from_year": "From Year",
+		"to_year": "To Year",
+		"format": "Format",
+		"example": "Example",
+		"will_generate": "Will generate",
+		"estimated_addresses": "Estimated addresses",
+		"addresses": "addresses",
+		"limited_to": "Limited to {max} max",
+		"advanced_settings": "Advanced Settings",
+		"switch_to_advanced": "Switch to advanced settings",
+		"switch_to_quick": "Switch to quick select"
+	},
+	"wallet_list": {
+		"empty_message": "No wallets added yet",
+		"remove_wallet": "Remove wallet",
+		"showing": "Showing {start}-{end} of {total}",
+		"previous_page": "Previous page",
+		"next_page": "Next page"
+	},
+	"token_card": {
+		"native": "Native",
+		"erc20": "ERC20",
+		"decimals_label": "Decimals",
+		"decimals_unit": "decimals",
+		"view_on_explorer": "View on block explorer",
+		"remove_custom_token": "Remove custom token",
+		"remove_dialog_title": "Remove Custom Token",
+		"remove_dialog_message": "Are you sure you want to remove {symbol} ({name})? This action cannot be undone.",
+		"remove_button": "Remove Token"
+	},
+	"token_selector": {
+		"empty_message": "No tokens available",
+		"select_all": "Select All",
+		"deselect_all": "Deselect All"
+	},
+	"add_token_button": {
+		"button_text": "Add Token",
+		"button_subtext": "Add custom ERC20 token"
+	},
+	"add_token_modal": {
+		"title": "Add Custom Token",
+		"token_address_label": "Token Address",
+		"token_symbol_label": "Symbol",
+		"token_name_label": "Name",
+		"decimals_label": "Decimals",
+		"fetching": "Fetching...",
+		"found": "Found",
+		"not_found": "Not Found",
+		"auto_filled": "Auto-filled from blockchain",
+		"address_placeholder": "0x...",
+		"symbol_placeholder": "e.g., USDT",
+		"name_placeholder": "e.g., Tether USD",
+		"address_hint": "The contract address of the ERC20 token",
+		"decimals_hint": "Token decimals (usually 18)",
+		"error_label": "Error:",
+		"success_message": "Token added successfully!",
+		"add_token_button": "Add Token",
+		"adding_button": "Adding..."
+	}
+}

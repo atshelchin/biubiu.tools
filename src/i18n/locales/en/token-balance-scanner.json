@@ -1,0 +1,271 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"title": "Wallet Balance Checker",
+	"description": "Quickly filter wallets with balances, identify non-empty addresses, and aggregate token holdings across multiple wallets",
+	"session": {
+		"title": "Scan Sessions",
+		"status": {
+			"scanning": "Scanning",
+			"paused": "Paused",
+			"completed": "Completed",
+			"abandoned": "Abandoned"
+		},
+		"progress": "Progress",
+		"addresses": "Addresses",
+		"tokens": "Tokens",
+		"last_activity": "Last Activity",
+		"view": "View",
+		"resume": "Resume",
+		"abandon": "Abandon",
+		"delete": "Delete",
+		"start_new": "Start New Scan",
+		"empty": "No active sessions",
+		"error": {
+			"abandon_failed": "Failed to abandon session",
+			"delete_failed": "Failed to delete session",
+			"not_found": "Session not found",
+			"restore_failed": "Failed to restore session"
+		}
+	},
+	"feature_1": "Scan up to 100K addresses",
+	"feature_2": "Filter wallets with balances",
+	"feature_3": "Aggregate holdings statistics",
+	"feature_4": "Export to EXCEL/CSV/JSON",
+	"faqs": {
+		"what_is_balance_checker": "What is Wallet Balance Checker?",
+		"balance_checker_explanation": "A tool to scan multiple wallet addresses and check their token balances. It helps you quickly identify which wallets have assets and aggregate total holdings across all wallets.",
+		"how_many_addresses": "How many addresses can I scan at once?",
+		"how_many_addresses_explanation": "You can scan up to 100,000 wallet addresses in a single batch. The tool uses optimized RPC calls to efficiently query balances.",
+		"what_tokens_supported": "What types of tokens are supported?",
+		"what_tokens_supported_explanation": "We support native tokens (ETH, BNB, MATIC, etc.) and all ERC-20 standard tokens. You can add any token by entering its contract address.",
+		"is_it_free": "Is the balance scanning free?",
+		"is_it_free_explanation": "Yes! Balance scanning is completely free and requires no on-chain transactions. It only reads data from the blockchain.",
+		"what_is_multicall": "What is Multicall3?",
+		"multicall_explanation": "Multicall3 is a smart contract that batches multiple read calls into one request. This dramatically speeds up scanning by reducing the number of RPC calls needed.",
+		"can_export_results": "Can I export the scan results?",
+		"can_export_explanation": "Yes! You can export results to CSV or JSON format for further analysis in spreadsheets or other tools.",
+		"what_networks_supported": "What blockchain networks are supported?",
+		"networks_supported_explanation": "We support Ethereum, Polygon, BSC, Base, Arbitrum, and Optimism. You can also add custom EVM-compatible networks."
+	},
+	"seo": {
+		"page_title": "Wallet Balance Checker - Batch Scan Token Balances | BiuBiu Tools",
+		"page_description": "Quickly scan and filter wallets with balances across multiple addresses. Identify non-empty wallets, aggregate token holdings, and export results to EXCEL/CSV/JSON.",
+		"keywords": "wallet balance checker, batch balance scan, token balance scanner, crypto portfolio, multi-wallet scanner, blockchain balance, web3 tools, ERC20 balance",
+		"webapp_name": "Wallet Balance Checker",
+		"webapp_description": "Quickly filter wallets with balances, identify non-empty addresses, and aggregate token holdings across multiple wallets.",
+		"feature_1": "Scan up to 100,000 wallet addresses at once",
+		"feature_2": "Quickly identify wallets with balances vs empty wallets",
+		"feature_3": "Aggregate total holdings across all scanned wallets",
+		"feature_4": "Support multiple networks (Ethereum, Polygon, BSC, Base, Arbitrum, Optimism)",
+		"feature_5": "Export results to CSV or JSON",
+		"howto_name": "How to Batch Scan Wallet Balances",
+		"howto_description": "Step-by-step guide to scanning and filtering wallet balances across multiple addresses.",
+		"howto_tool_1": "Web3 Wallet (MetaMask, WalletConnect, etc.)",
+		"howto_tool_2": "List of wallet addresses to scan",
+		"step_1_name": "Connect Wallet",
+		"step_1_text": "Click the \"Connect Wallet\" button and select your preferred Web3 wallet provider. This is used to select the blockchain network you want to scan.",
+		"step_1_description": "Link your Web3 wallet",
+		"step_2_name": "Check Dependencies",
+		"step_2_text": "Verify the blockchain network connection and ensure Multicall3 contract is accessible. The system will automatically detect and validate the necessary components.",
+		"step_2_description": "Verify network and contracts",
+		"step_3_name": "Select Tokens",
+		"step_3_text": "Choose which tokens you want to check balances for. You can select native tokens (ETH, BNB, MATIC) and any ERC20 tokens available on the network.",
+		"step_3_description": "Choose tokens to scan",
+		"step_4_name": "Import Addresses",
+		"step_4_text": "Add wallet addresses to scan by pasting them (one per line), uploading a CSV/TXT file, or entering them manually. You can scan up to 100,000 wallets at once.",
+		"step_4_description": "Add wallet addresses",
+		"step_5_name": "Scan & Results",
+		"step_5_text": "Start scanning and view results in real-time. Filter wallets with balances, see aggregate statistics, and export to CSV or JSON.",
+		"step_5_description": "Scan and export results"
+	},
+	"step1": {
+		"content": {
+			"title": "Select Network",
+			"description": "Choose the blockchain network for balance scanning",
+			"loading": "Loading network configuration..."
+		},
+		"footer": {
+			"continue": "Continue",
+			"hint": "Connect your wallet to continue"
+		}
+	},
+	"step3": {
+		"content": {
+			"title": "Select Tokens",
+			"description": "Choose which tokens to scan on {network}",
+			"description_fallback": "Choose which tokens to scan",
+			"wallet_not_connected_title": "Wallet Not Connected",
+			"wallet_not_connected_message": "Please connect your wallet first to select tokens",
+			"empty_message": "Select at least one token to scan"
+		},
+		"sidebar": {
+			"selected_tokens_title": "Selected Tokens",
+			"count_label": "Token Count",
+			"empty_hint": "Select at least one token to continue"
+		},
+		"footer": {
+			"hint": "Select at least one token to continue"
+		}
+	},
+	"step4": {
+		"import_method": {
+			"address": "Addresses",
+			"xpub": "Extended Public Key"
+		},
+		"content": {
+			"title": "Import Wallet Addresses",
+			"description": "Add wallet addresses to scan for token balances",
+			"choose_method": "Choose Import Method",
+			"address_placeholder": "Paste wallet addresses here (one per line)\n0x1234...\n0x5678...",
+			"wallet_list": {
+				"title": "Wallets",
+				"count": "({count})",
+				"clear_all": "Clear All",
+				"empty": "No wallets added yet"
+			}
+		},
+		"sidebar": {
+			"title": "Summary",
+			"description": "Add wallet addresses to scan",
+			"total_label": "Total Wallets",
+			"empty_hint": "No wallets added yet"
+		},
+		"footer": {
+			"hint": "Add at least one wallet to continue"
+		},
+		"dialogs": {
+			"remove_wallet_title": "Remove Wallet",
+			"remove_wallet_message": "Are you sure you want to remove this wallet?\n{address}",
+			"remove_button": "Remove",
+			"clear_all_title": "Clear All Wallets",
+			"clear_all_message": "Are you sure you want to remove all {count} wallets?",
+			"clear_all_button": "Clear All",
+			"long_press_hint": "Hold to confirm",
+			"cancel_button": "Cancel"
+		}
+	},
+	"step5": {
+		"title": "Scan & View Results",
+		"description": "Scan token balances and export data",
+		"start": "Start Scanning",
+		"new_scan": "Start New Scan",
+		"info": "Click \"Start Scanning\" to query token balances for all configured wallets. Multiple RPC endpoints will be used in parallel for faster scanning.",
+		"config": {
+			"network": "Network",
+			"wallets": "Wallets",
+			"tokens": "Tokens",
+			"rpcs": "RPC Endpoints"
+		},
+		"resume": {
+			"title": "Resume Previous Scan?",
+			"info": "Progress: {progress}% ({addresses} addresses, {tokens} tokens)",
+			"last_activity": "Last activity",
+			"continue": "Continue",
+			"discard": "Discard"
+		},
+		"scanning": {
+			"title": "Scanning Balances...",
+			"success": "completed",
+			"failed": "failed",
+			"pending": "pending",
+			"pause": "Pause"
+		},
+		"paused": {
+			"title": "Scan Paused",
+			"message": "The scan has been paused.",
+			"resume": "Resume",
+			"new_scan": "New Scan"
+		},
+		"completed": {
+			"banner": "Scan Complete - {count} wallets scanned"
+		},
+		"export": {
+			"title": "Export Results",
+			"copied": "Copied!",
+			"copy_summary": "Copy Summary"
+		},
+		"totals": {
+			"title": "Total Holdings",
+			"wallets": "{count} wallets",
+			"wallets_short": "wallets"
+		},
+		"filter": {
+			"title": "Filter",
+			"reset": "Reset",
+			"balance_status": "Balance Status",
+			"status_all": "All",
+			"status_has_balance": "Has Balance",
+			"status_no_balance": "No Balance",
+			"token": "Token",
+			"token_all": "All Tokens",
+			"balance_range": "Balance Range",
+			"min": "Min",
+			"max": "Max",
+			"showing": "Showing {filtered} of {total}",
+			"total": "{count} results"
+		},
+		"balances": {
+			"title": "Wallet Balances",
+			"address": "Address",
+			"path": "Path",
+			"label": "Label",
+			"results": "results",
+			"no_results": "No results found"
+		},
+		"error": {
+			"title": "Scan Failed",
+			"unknown": "An unknown error occurred",
+			"retry": "Retry Scan",
+			"no_network": "No network selected",
+			"no_tokens": "No tokens selected",
+			"no_wallets": "No wallets added"
+		},
+		"sidebar": {
+			"title": "Scan & Results",
+			"description": "Scan wallets for token balances and view results",
+			"progress": "Progress",
+			"total": "total",
+			"tasks": "tasks",
+			"failed": "failed",
+			"queries_failed": "queries failed",
+			"logs": "Live Logs",
+			"completed": "Completed",
+			"remaining": "Remaining",
+			"paused": "Paused",
+			"scan_results": "Scan Results",
+			"addresses_scanned": "addresses scanned",
+			"wallets_scanned": "Wallets Scanned",
+			"with_balance": "addresses with balance",
+			"success": "Success",
+			"wallets_to_scan": "Wallets to Scan",
+			"tokens_selected": "Tokens Selected",
+			"export": "Export",
+			"new_scan": "Start New Scan",
+			"ready": "Ready to Scan",
+			"wallets": "wallets",
+			"tokens": "tokens",
+			"info_title": "What's Happening?",
+			"info_1": "Querying blockchain for token balances",
+			"info_2": "Using multiple RPCs in parallel",
+			"info_3": "Auto-retrying failed requests",
+			"tip_completed": "Export to Excel for advanced analysis, or CSV for simple spreadsheets.",
+			"tip_scanning": "You can close the browser - progress is saved automatically.",
+			"tip_idle": "Large scans may take time but can be paused and resumed anytime."
+		},
+		"footer": {
+			"hint_idle": "Click \"Start Scanning\" to begin",
+			"hint_scanning": "Scanning in progress...",
+			"hint_paused": "Scan paused. Resume or start a new scan.",
+			"hint_completed": "Export your results or start a new scan",
+			"hint_error": "Retry the scan or go back to fix the issue",
+			"new_scan": "Start New Scan",
+			"continue": "Continue"
+		}
+	}
+}

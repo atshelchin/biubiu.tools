@@ -1,0 +1,143 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"title": "Address Explorer",
+	"subtitle": "Search and explore labeled blockchain addresses and ENS names",
+	"search_placeholder": "Search by address, ENS name, or entity...",
+	"searching": "Searching...",
+	"looking_up": "Looking up on blockchain...",
+	"view_details": "View details",
+	"no_results": "No results found",
+	"all_addresses": "All Addresses",
+	"categories": "Browse by Category",
+	"browse_by_label": "Browse by Label",
+	"popular_addresses": "Popular Addresses",
+	"popular_names": "Popular Names",
+	"view_on_explorer": "View on Explorer",
+	"website": "Website",
+	"related_names": "Related Names",
+	"related_addresses": "Related Addresses",
+	"balance": "Balance",
+	"loading_balance": "Loading...",
+	"contract": "Contract",
+	"data_source": "Data Source",
+	"updated": "Updated",
+	"source_manual": "Manual",
+	"source_verified": "Verified",
+	"source_etherscan": "Etherscan",
+	"source_community": "Community",
+	"stats": {
+		"addresses": "Addresses",
+		"names": "Names",
+		"exchanges": "Exchanges",
+		"defi": "DeFi",
+		"tokens": "Tokens",
+		"nft": "NFT",
+		"notable": "Notable"
+	},
+	"labels": {
+		"exchange": "Exchange",
+		"cex": "CEX",
+		"dex": "DEX",
+		"defi": "DeFi",
+		"lending": "Lending",
+		"bridge": "Bridge",
+		"yield": "Yield",
+		"derivatives": "Derivatives",
+		"liquid-staking": "Liquid Staking",
+		"token": "Token",
+		"stablecoin": "Stablecoin",
+		"memecoin": "Memecoin",
+		"wrapped": "Wrapped",
+		"nft": "NFT",
+		"nft-marketplace": "NFT Marketplace",
+		"whale": "Whale",
+		"smart-money": "Smart Money",
+		"foundation": "Foundation",
+		"dao": "DAO",
+		"multisig": "Multisig",
+		"deployer": "Deployer",
+		"hacker": "Hacker",
+		"scam": "Scam",
+		"sanctioned": "Sanctioned",
+		"phishing": "Phishing",
+		"burn": "Burn",
+		"null": "Null",
+		"genesis": "Genesis",
+		"mev": "MEV",
+		"contract": "Contract",
+		"eoa": "EOA"
+	},
+	"risk": {
+		"safe": "Safe",
+		"neutral": "Neutral",
+		"warning": "Warning",
+		"danger": "Danger"
+	},
+	"seo": {
+		"index_title": "Address Explorer - Blockchain Address & ENS Lookup | BiuBiu Tools",
+		"index_description": "Search and explore {addressCount} labeled blockchain addresses and {nameCount} ENS names. Find exchanges, DeFi protocols, whales, and more.",
+		"detail_description": "{name} ({entity}) on {chain}. Labels: {labels}. Address: {address}. Explore wallet details and related information."
+	},
+	"faq": {
+		"title": "Frequently Asked Questions",
+		"what_is": "What is {name}?",
+		"what_is_answer": "{name} is a wallet address belonging to {entity} on the {chain} network.",
+		"is_safe": "Is this address safe to interact with?",
+		"is_safe_answer_safe": "{name} is a verified safe address from a well-known entity.",
+		"is_safe_answer_neutral": "{name} has a neutral risk level. Exercise normal caution.",
+		"is_safe_answer_warning": "Warning: {name} has been flagged for potential risks. Proceed with caution.",
+		"is_safe_answer_danger": "Danger: {name} has been marked as dangerous. Do not send funds to this address.",
+		"how_to_verify": "How can I verify this address?",
+		"how_to_verify_answer": "You can verify this address on {explorer} block explorer to see transaction history and contract details.",
+		"cex": {
+			"can_deposit": "Can I deposit funds to this address?",
+			"can_deposit_answer": "{name} is an official deposit address for {entity}. Always verify the address on the exchange's official website before sending funds.",
+			"how_to_withdraw": "How do I withdraw from this exchange?",
+			"how_to_withdraw_answer": "To withdraw from {entity}, log into your account, navigate to the withdrawal section, enter your destination wallet address, and confirm the transaction following the exchange's security procedures."
+		},
+		"dex": {
+			"what_is_contract": "What is this DEX contract?",
+			"what_is_contract_answer": "{name} is a smart contract for {entity} decentralized exchange. It enables permissionless token swaps directly on the blockchain."
+		},
+		"defi": {
+			"what_does_it_do": "What does this DeFi contract do?",
+			"what_does_it_do_answer": "{name} is a smart contract for {entity} that enables decentralized financial services on the blockchain.",
+			"lending_how": "How does lending work on this protocol?",
+			"lending_how_answer": "{entity} allows users to lend assets to earn interest or borrow against collateral. Interest rates are determined algorithmically based on supply and demand.",
+			"bridge_how": "How do I use this bridge?",
+			"bridge_how_answer": "{name} is a bridge contract for {entity}. It allows you to transfer assets between different blockchain networks securely.",
+			"staking_how": "How does liquid staking work?",
+			"staking_how_answer": "{entity} allows you to stake your tokens while receiving a liquid derivative token that can be used in other DeFi protocols."
+		},
+		"token": {
+			"what_is_contract": "What is this token contract?",
+			"what_is_contract_answer": "{name} is the official smart contract for this token. Always verify the contract address before interacting.",
+			"stablecoin_peg": "How is this stablecoin's peg maintained?",
+			"stablecoin_peg_answer": "{name} maintains its peg through a combination of reserves, algorithmic mechanisms, or overcollateralization depending on its design."
+		},
+		"entity": {
+			"whale_activity": "Why is this whale address notable?",
+			"whale_activity_answer": "{name} holds a significant amount of cryptocurrency. Tracking whale movements can provide insights into market trends.",
+			"multisig_what": "What is a multisig wallet?",
+			"multisig_what_answer": "{name} is a multi-signature wallet that requires multiple approvals to execute transactions, providing enhanced security.",
+			"governance": "What is the governance role of this address?",
+			"governance_answer": "{name} belongs to {entity} and may be involved in protocol governance, treasury management, or community decisions."
+		},
+		"risk": {
+			"why_flagged": "Why is this address flagged?",
+			"why_flagged_answer": "{name} has been flagged due to association with malicious activities such as hacks, scams, or sanctions violations. Exercise extreme caution.",
+			"what_to_do": "What should I do if I've interacted with this address?",
+			"what_to_do_answer": "If you've sent funds to this address, recovery may not be possible. Check if the receiving protocol has a recovery mechanism, and consider reporting to relevant authorities."
+		},
+		"contract": {
+			"is_verified": "Is this contract verified?",
+			"is_verified_answer": "You can check if {name} has verified source code on {chain} block explorer. Verified contracts have their source code publicly available for review."
+		}
+	}
+}

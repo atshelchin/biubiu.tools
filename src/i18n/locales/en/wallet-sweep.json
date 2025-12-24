@@ -1,0 +1,463 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"title": "Wallet Sweep",
+	"description": "Transfer balances from multiple wallets to one address",
+	"feature_1": "Complete balance sweep, zero dust left",
+	"feature_2": "Large-scale automation, no per-tx confirmation",
+	"feature_3": "No native token required in source wallets",
+	"feature_4": "Permissionless on any EVM chain",
+	"faqs": {
+		"what_is_network": "What is a blockchain network?",
+		"network_explanation": "A blockchain network is a public ledger system that records who owns what tokens and all transfers. Ethereum, BSC, and Polygon are different ledgers, each independent and separate.",
+		"what_is_wallet": "What is a wallet?",
+		"wallet_explanation": "A Web3 wallet isn't where money is stored - it's the key to manage your blockchain account. Your funds are recorded on the blockchain ledger, and the wallet proves you own the account. Popular: MetaMask, Coinbase Smart Wallet.",
+		"what_is_native_token": "What is a native token?",
+		"native_token_explanation": "Native tokens are used to pay miners who process your transactions. Ethereum uses ETH, BSC uses BNB, Polygon uses POL. Miners record your transaction on the blockchain ledger, and you pay them this fee.",
+		"what_is_eip7702": "What is EIP-7702?",
+		"eip7702_explanation": "Tech that temporarily upgrades regular wallets to smart contract wallets during a transaction. No extra deployment needed.",
+		"why_need_eip7702": "Why require EIP-7702?",
+		"why_need_eip7702_explanation": "Lets wallets with no gas money send tokens. Your main wallet pays gas for them, enabling one-click sweep.",
+		"what_is_create2_proxy": "What is CREATE2 Proxy?",
+		"create2_proxy_explanation": "Deployment tool ensuring same contract address across all chains. Same code = same address everywhere.",
+		"what_is_multicall3": "What is Multicall3?",
+		"multicall3_explanation": "Batches multiple calls into one. Saves gas and time. All-or-nothing execution.",
+		"what_is_biubiu_premium": "What is BiuBiuPremium?",
+		"biubiu_premium_explanation": "Membership contract managing subscriptions, discounts, and access. Fully open source.",
+		"what_is_wallet_sweep": "What is TokenSweep?",
+		"wallet_sweep_explanation": "Core contract for batch transfers. Handles EIP-7702 delegation and approvals. Open source: https://github.com/atshelchin/biubiu-contracts",
+		"can_select_multiple_tokens": "Can I select multiple tokens at once?",
+		"can_select_multiple_tokens_explanation": "Yes! You can select as many tokens as you want. The tool will sweep all selected tokens in one batch operation, making it very efficient.",
+		"what_happens_zero_balance": "What happens if a wallet has zero balance for a token?",
+		"what_happens_zero_balance_explanation": "Smart! The system automatically skips wallets with zero balance for that specific token. This saves you gas costs by not executing unnecessary transfers.",
+		"what_tokens_supported": "What types of tokens are supported?",
+		"what_tokens_supported_explanation": "We support both native tokens (like ETH on Ethereum, BNB on BSC, MATIC on Polygon) and all ERC-20 standard tokens. Most tokens you encounter will work.",
+		"how_add_custom_token": "How do I add a custom token?",
+		"how_add_custom_token_explanation": "Click the '+ Add Token' button, then enter the token's contract address. The system will automatically fetch the token's name, symbol, and decimals from the blockchain."
+	},
+	"seo": {
+		"page_title": "Wallet Sweep - Consolidate Tokens from Multiple Wallets | BiuBiu Tools",
+		"page_description": "Consolidate tokens from multiple wallets to a single destination. Support for Ethereum, Polygon, BSC, Arbitrum, Optimism, and Base networks. Fast, secure, and gas-optimized.",
+		"keywords": "wallet sweep, token consolidation, ERC20 transfer, batch transfer, crypto tools, web3 tools, ethereum tools, polygon tools, DeFi tools",
+		"webapp_name": "Wallet Sweep",
+		"webapp_description": "Consolidate tokens from multiple wallets to a single destination. Support for Ethereum, Polygon, BSC, Arbitrum, Optimism, and Base networks.",
+		"feature_1": "Batch transfer ERC20 tokens",
+		"feature_2": "Multi-network support (Ethereum, Polygon, BSC, Arbitrum, Optimism, Base)",
+		"feature_3": "Gas optimization",
+		"feature_4": "Secure wallet integration",
+		"feature_5": "Real-time transaction tracking",
+		"howto_name": "How to Consolidate Tokens from Multiple Wallets with Wallet Sweep",
+		"howto_description": "Step-by-step guide to consolidate tokens from multiple wallets to a single destination using BiuBiu Wallet Sweep tool.",
+		"howto_tool_1": "Web3 Wallet (MetaMask, WalletConnect, etc.)",
+		"howto_tool_2": "ERC20 Tokens to transfer",
+		"step_1_name": "Connect Your Wallet",
+		"step_1_text": "Click the \"Connect Wallet\" button and select your preferred Web3 wallet provider (MetaMask, WalletConnect, Coinbase Wallet, etc.). Approve the connection request in your wallet.",
+		"step_1_description": "Link your Web3 wallet",
+		"step_2_name": "Check Dependencies",
+		"step_2_text": "Verify the blockchain network connection and ensure all required smart contracts are accessible. The system will automatically detect and validate the necessary components.",
+		"step_2_description": "Verify network and contracts",
+		"step_3_name": "Select Tokens",
+		"step_3_text": "Choose which ERC20 tokens you want to sweep from the available list. You can select multiple tokens to transfer in a single batch operation.",
+		"step_3_description": "Choose tokens to sweep",
+		"step_4_name": "Import Wallets",
+		"step_4_text": "Import the source wallet addresses that contain the tokens you want to sweep. You can add multiple wallet addresses to collect tokens from all of them.",
+		"step_4_description": "Add source addresses",
+		"step_5_name": "Confirm Sweep",
+		"step_5_text": "Review the transaction summary including total tokens, gas fees, and destination address. Click \"Execute Transfer\" and confirm the transaction in your wallet. Wait for blockchain confirmation and view the transaction receipt.",
+		"step_5_description": "Review and execute"
+	},
+	"step1": {
+		"footer": {
+			"continue": "Continue",
+			"hint": "Connect your wallet to continue"
+		},
+		"content": {
+			"title": "Select Network",
+			"description": "Connect wallet to start sweeping",
+			"loading": "Loading network configuration...",
+			"no_networks_enabled": "No Networks Enabled",
+			"enable_network_prompt": "Please enable at least one network to continue.",
+			"open_network_settings": "Open Network Settings",
+			"network_not_found": "Network not found?",
+			"add_custom_network": "Add custom network"
+		},
+		"sidebar": {
+			"title": "Select Network & Connect Wallet",
+			"description": "Choose a blockchain network and connect your wallet to start sweeping tokens.",
+			"what_is_this": "What is this step?",
+			"what_explanation": "You need to:",
+			"what_item1": "Select a blockchain network (Ethereum, BSC, Polygon, etc.)",
+			"what_item2": "Connect your Web3 wallet (MetaMask, etc.)",
+			"why_do_this": "Why do this?",
+			"why_explanation": "Tell the app which network to use, and which wallet's assets to operate on - both are essential.",
+			"beginner_tips": "Tips",
+			"tip1": "✅ Make sure you selected the correct network (choose where your tokens are)",
+			"tip2": "⛽ Ensure you have enough native tokens to pay fees",
+			"tip3": "🌍 Supports any EVM-compatible network - you can add any chain"
+		}
+	},
+	"step2": {
+		"content": {
+			"title": "Dependency Check",
+			"description": "Ensure required infrastructure is ready",
+			"checking_dependencies_for": "Checking {network} network environment...",
+			"wallet_not_connected_title": "Wallet Not Connected",
+			"wallet_not_connected_message": "Please go back to Step 1 and connect your wallet",
+			"go_to_step1": "Go to Step 1",
+			"all_dependencies_satisfied": "All Dependencies Satisfied",
+			"network_properly_configured": "Your network is properly configured for token sweeping",
+			"dependency_issues_found": "Dependency Issues Found",
+			"resolve_issues_before_continuing": "Please resolve the issues above before continuing",
+			"recheck_dependencies": "Re-check Dependencies",
+			"address_label": "Address:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Please resolve the previous issue first",
+			"view_deployment_guide": "View Deployment Guide",
+			"deploy_coming_soon": "Deploy Contract (Coming Soon)",
+			"deploy_contract": "Deploy {contractName}",
+			"deployment": {
+				"modal_title": "Deploy {contractName}",
+				"start_deployment": "Start Deployment",
+				"deploying_contract": "Deploying Contract...",
+				"deployment_steps_heading": "Deployment Steps:",
+				"contract_address_label": "Contract Address:",
+				"network_label": "Network:",
+				"waiting_for_signature": "⏳ Please confirm transaction in your wallet...",
+				"transaction_sent": "⚡ Transaction sent! Waiting for blockchain confirmation...",
+				"finalizing": "✅ Finalizing deployment...",
+				"confirm_in_wallet": "Please confirm transactions in your wallet",
+				"success_title": "Deployment Successful!",
+				"success_description": "The contract has been successfully deployed.",
+				"view_on_explorer": "View on Explorer",
+				"error_title": "Deployment Failed",
+				"errors": {
+					"init_failed": "Failed to initialize deployment configuration",
+					"wallet_not_connected": "Please connect your wallet first",
+					"deployment_failed": "Failed to deploy contract",
+					"metamask_cache": "MetaMask cached old block data. This happens when your test network was reset.",
+					"wallet_cache": "Wallet cache error. Please restart your wallet and try again.",
+					"metamask_internal": "MetaMask internal error. Please try:\n\n1. Clear Activity Tab Data in MetaMask\n   (Settings → Advanced → Clear activity tab data)\n\n2. Update network RPC endpoint\n\n3. Restart MetaMask\n\n4. If deploying Multicall3, ensure CREATE2 Proxy is deployed first",
+					"wallet_internal": "Wallet internal error. Please try:\n\n1. Update network RPC endpoint\n\n2. Restart your wallet\n\n3. If deploying Multicall3, ensure CREATE2 Proxy is deployed first",
+					"connection_failed": "Connection failed. Please check:\n\n1. Your wallet is unlocked\n\n2. Your network connection is stable\n\nIf the issue persists, try updating the network RPC endpoint.",
+					"rpc_unavailable": "RPC service is temporarily unavailable. This is likely because the RPC endpoint configured in your wallet has rate limits or is down.",
+					"insufficient_funds": "Insufficient balance. You need enough funds for deployment and gas fees.",
+					"user_rejected": "Transaction was rejected in your wallet.",
+					"already_deployed": "This contract may already be deployed. Please refresh the dependency check."
+				},
+				"steps": {
+					"create2": {
+						"fund_deployer_title": "Fund Deployer Address",
+						"fund_deployer_description": "Send 0.01 ETH to {address}",
+						"deploy_contract_title": "Deploy Contract",
+						"deploy_contract_description": "Send pre-signed deployment transaction"
+					},
+					"via_create2": {
+						"deploy_title": "Deploy {contractName} Contract",
+						"deploy_description": "Send deployment transaction to Deterministic Deployment Proxy"
+					}
+				}
+			},
+			"checks": {
+				"rpc_endpoint": {
+					"name": "RPC Endpoint",
+					"description": "Check if the current RPC endpoint is available",
+					"chain_id_mismatch": "Chain ID mismatch: expected {expected}, got {actual}",
+					"connected_to_block": "Connected to block #{blockNumber}",
+					"failed_to_connect": "Failed to connect: {error}",
+					"no_rpc_configured": "No RPC endpoint configured for this network",
+					"configure_rpc_button": "Configure RPC"
+				},
+				"eip7702": {
+					"name": "EIP-7702",
+					"description": "Check if the network supports EIP-7702 protocol",
+					"supported": "Network supports EIP-7702 (tested via eth_estimateGas)",
+					"not_supported": "Network does not support EIP-7702 (invalid opcode)",
+					"rpc_not_capable": "Current RPC does not support state override for this check. Try a different RPC endpoint.",
+					"check_failed": "Failed to check EIP-7702 support: {error}"
+				},
+				"contract": {
+					"deployed": "Contract is deployed",
+					"not_deployed": "Contract not deployed at this address",
+					"check_failed": "Failed to check deployment: {error}",
+					"create2_proxy_description": "Deterministic deployment proxy for contract creation",
+					"multicall3_description": "Aggregate multiple contract calls into a single request",
+					"biubiu_premium_description": "Verifies user's premium membership status on the platform",
+					"wallet_sweep_description": "Batch collect tokens scattered across multiple wallets",
+					"biubiu_membership_description": "Biubiu platform membership contract",
+					"wallet_sweep_contract_description": "Main contract for batch token transfer operations"
+				},
+				"category": {
+					"network": "Network",
+					"protocol": "Protocol",
+					"contract": "Contract"
+				}
+			}
+		},
+		"footer": {
+			"checking_dependencies": "Checking dependencies...",
+			"resolve_issues": "Please resolve all dependency issues to continue",
+			"waiting_for_checks": "Waiting for dependency checks..."
+		},
+		"sidebar": {
+			"beginner_tips": "Tips",
+			"tip1": "🔍 The system automatically checks if required contracts are deployed",
+			"tip2": "🚀 If a contract is missing, you can deploy it directly from this page",
+			"tip3": "📋 Must resolve dependency issues in order - fix the first failed check before others"
+		}
+	},
+	"step3": {
+		"content": {
+			"title": "Select Tokens",
+			"description": "Select tokens to sweep on the {network} network",
+			"description_fallback": "Select tokens to sweep on this network",
+			"wallet_not_connected_title": "Wallet Not Connected",
+			"wallet_not_connected_message": "Please go back to Step 1 and connect your wallet",
+			"empty_message": "No tokens available. Add a custom token to get started."
+		},
+		"footer": {
+			"hint": "Please select at least one token to continue"
+		},
+		"sidebar": {
+			"title": "Select Tokens",
+			"description": "Choose which tokens to sweep",
+			"selected_tokens_title": "Selected Tokens",
+			"count_label": "Count:",
+			"empty_hint": "No tokens selected",
+			"beginner_tips": "Tips",
+			"tip1": "✅ You can select multiple tokens to sweep them all in one batch operation",
+			"tip2": "⚡ Wallets with zero balance for a token will be automatically skipped - saving gas costs",
+			"tip3": "🪙 Supports both native tokens (ETH, BNB, etc.) and ERC-20 tokens"
+		}
+	},
+	"step5": {
+		"target_address_label": "Target Address",
+		"target_address_hint": "Tokens will be swept to your connected wallet address",
+		"content": {
+			"title": "Confirm Sweep",
+			"description": "Review your configuration and execute the asset sweep",
+			"selected_network_tokens": "Selected Network & Tokens ({count})",
+			"ready_to_execute": "Ready to execute",
+			"review_carefully": "Please review all information carefully before proceeding.",
+			"progress": {
+				"preparing": "⏳ Preparing...",
+				"building": "🔧 Building Transactions...",
+				"executing": "⚡ Executing Sweep...",
+				"confirming": "⏰ Confirming Transactions...",
+				"completed": "✅ Completed!",
+				"error": "❌ Error",
+				"batch": "Batch {current} / {total}",
+				"wallet": "Wallet {current} / {total}",
+				"results": "Results ({count}):"
+			},
+			"estimate": {
+				"title": "📊 Cost Estimate",
+				"total_transactions": "Total Transactions:",
+				"estimated_gas": "Estimated Gas:",
+				"estimated_cost": "Estimated Cost:",
+				"gas_units": "{amount} units",
+				"cost_eth": "{amount} ETH"
+			},
+			"actions": {
+				"estimate_cost": "💰 Estimate Cost",
+				"estimating": "Estimating...",
+				"execute_sweep": "⚡ Execute Sweep",
+				"executing": "Executing..."
+			},
+			"errors": {
+				"no_network": "No network connected",
+				"no_rpc": "No RPC endpoint available",
+				"complete_fields": "Please complete all required fields",
+				"invalid_address": "Invalid target address",
+				"select_tokens": "Please select at least one token in Step 3",
+				"import_wallets": "Please import at least one wallet in Step 4",
+				"connect_wallet": "Please connect your wallet first",
+				"no_balance": "No wallets with balance to sweep. Please scan balances first in Step 4.",
+				"insufficient_gas": "Temporary wallet has insufficient gas! Requires {required} {symbol}, but only has {current} {symbol}. Please refill and click the button below to continue.",
+				"still_insufficient_gas": "Temporary wallet still has insufficient gas. Please continue refilling."
+			},
+			"gas_insufficient_title": "⛽ Insufficient Gas",
+			"gas_insufficient_message": "Temporary wallet balance is insufficient to cover the estimated gas fee. Requires {required} {symbol}, but only has {current} {symbol}. Please use the [Fund Wallet with Gas] feature above to transfer funds to the temporary wallet, then click the button below to continue.",
+			"check_and_resume": "Check Balance and Resume",
+			"gas_refilled_restart": "Gas refilled! Current balance: {balance} ETH. Please click [Execute Sweep] button again to start."
+		},
+		"sidebar": {
+			"summary_title": "Summary",
+			"selected_tokens": "Selected Tokens:",
+			"total_wallets": "Total Wallets:",
+			"with_balance": "With Balance:",
+			"batches": "Batches"
+		}
+	},
+	"temporary_wallet": {
+		"title": "Temporary Wallet",
+		"description": "Create a random temporary wallet to automate batch transactions. The wallet will be stored in your browser session only.",
+		"important": "Important",
+		"warning_text": "The temporary wallet will be created in your browser. You'll need to:",
+		"step_download": "Download the private key for backup",
+		"step_fund": "Fund it with <strong>{amount} {symbol}</strong> for gas fees",
+		"step_clear": "Clear it after completing your tasks",
+		"btn_create": "Create Temporary Wallet",
+		"creating": "Creating...",
+		"wallet_ready": "Wallet Ready",
+		"created_at": "Created: {time}",
+		"address": "Address",
+		"balance": "Balance (Current Network)",
+		"loading": "Loading...",
+		"private_key": "Private Key",
+		"show": "Show",
+		"hide": "Hide",
+		"copy_address": "Copy address",
+		"copy_private_key": "Copy private key",
+		"show_qr": "Show QR Code",
+		"refresh_balance": "Refresh balance",
+		"qr_hint": "Scan to send gas to this temporary wallet",
+		"fund_title": "Fund Wallet with Gas",
+		"estimated_gas": "Estimated gas needed: {amount} {symbol}",
+		"suggested_amount": "💰 Suggested amount: <strong>{amount} {symbol}</strong> (2x estimated)",
+		"amount_placeholder": "Amount to send",
+		"btn_send": "Send from Connected Wallet",
+		"sending": "Sending...",
+		"tip": "💡 Tip: Suggested amount (2x estimated) is auto-filled to ensure sufficient funds. You can also scan the QR code to send from any wallet.",
+		"btn_download": "Download Private Key",
+		"btn_clear": "Clear Wallet",
+		"error_no_wallet": "Please connect your wallet first",
+		"error_invalid_amount": "Please enter a valid amount",
+		"success_transfer": "✅ Transfer successful! Sent {amount} {symbol} to temporary wallet. TX: {tx}...",
+		"confirm_clear": "Are you sure you want to clear the temporary wallet? Make sure you have downloaded the private key if needed."
+	},
+	"step4": {
+		"import_method": {
+			"mnemonic": {
+				"label": "Mnemonic Phrase",
+				"desc": "Batch derive addresses"
+			},
+			"private_key": {
+				"label": "Private Keys",
+				"desc": "Import one by one"
+			}
+		},
+		"content": {
+			"title": "Import Wallets",
+			"description": "Add source wallets that you want to sweep assets from",
+			"choose_method": "Choose Import Method",
+			"import_wallets_button": "Import Wallets",
+			"mnemonic": {
+				"label": "Enter Mnemonic Phrase",
+				"placeholder": "Enter 12 or 24 words separated by spaces",
+				"security_hint": "🔒 Mnemonic is processed locally in your browser, never sent to any server",
+				"derivation_path": "Derivation Path Configuration",
+				"generate_button": "🔍 Generate Address List",
+				"generating": "Generating... ({progress}%)",
+				"error_empty": "Please enter a mnemonic phrase",
+				"error_invalid": "Invalid mnemonic phrase. Please enter 12 or 24 words.",
+				"error_range": "Invalid address range",
+				"error_max": "Range too large (max 10000 addresses at once)"
+			},
+			"private_key": {
+				"label": "Batch Import Private Keys",
+				"placeholder": "One private key per line (starting with 0x)",
+				"upload_file": "Upload File",
+				"column_label": "Private Key",
+				"address_label": "Address",
+				"import_button": "➕ Batch Add Wallets",
+				"importing": "Importing... ({progress}%)",
+				"error_empty": "Please enter private keys",
+				"error_none": "No valid private keys found",
+				"success_with_invalid": "Imported {valid} wallets. {invalid} invalid keys skipped.",
+				"invalid_keys_found": "Found {count} invalid private keys",
+				"locate": "Locate",
+				"locate_key": "Click to locate error in editor",
+				"error_key_not_found": "Error: Private key has been modified or deleted",
+				"manual_search": "Please manually search line {line}",
+				"security_hint": "🔒 Private keys are processed locally in your browser, never sent to any server"
+			},
+			"wallet_list": {
+				"title": "Imported Wallets",
+				"count": "({count})",
+				"with_balance": "{count} with balance",
+				"scan_button": "Scan Balances",
+				"scanning": "Scanning... {progress}%",
+				"scan_completed": "Scan Completed",
+				"scan_hint": "Scanning balances is required before continuing to the next step",
+				"clear_all": "Clear All",
+				"empty_message": "No wallets imported yet. Use the methods above to import wallets."
+			},
+			"scan_section": {
+				"title": "Balance Scan",
+				"required": "Required"
+			},
+			"errors": {
+				"no_network": "No network connected",
+				"no_wallets": "No wallets to scan",
+				"no_tokens": "Please select tokens in Step 3 first",
+				"no_rpc": "No RPC endpoint available for current network",
+				"no_valid_tokens": "No valid tokens selected for current network",
+				"no_balance": "No wallets have balance for selected tokens",
+				"generate_failed": "Failed to generate addresses",
+				"import_failed": "Failed to import private keys",
+				"scan_failed": "Failed to scan balances"
+			},
+			"rate_limit": {
+				"title": "All RPC Endpoints Rate Limited",
+				"error_native": "Rate limit triggered while scanning native token balances (batch {batch}/{total})",
+				"error_erc20": "Rate limit triggered while scanning token {token} balances (batch {batch}/{total})",
+				"hint": "💡 Please click the button below to add new RPC endpoints, or wait for existing RPCs to recover before retrying. Adding multiple RPCs enables automatic rotation to avoid frequent rate limits.",
+				"recommend_prefix": "Recommended: Find available RPC endpoints at",
+				"recommend_suffix": "",
+				"manage_rpc_button": "Manage RPC",
+				"resume_button": "Resume Scan"
+			},
+			"dialogs": {
+				"remove_wallet_title": "Remove Wallet",
+				"remove_wallet_message": "Are you sure you want to remove this wallet from the import list?\n\nAddress: {address}",
+				"remove_button": "Remove",
+				"clear_all_title": "Clear All Wallets",
+				"clear_all_message": "Are you sure you want to remove all {count} wallets from the import list? This action cannot be undone.",
+				"clear_all_button": "Clear All",
+				"cancel_button": "Cancel",
+				"long_press_hint": "⚠️ This action is irreversible. Please long press the button for 3 seconds to confirm"
+			},
+			"rpc_hint": {
+				"title": "Add More RPCs for Better Reliability",
+				"message": "You only have 1 RPC endpoint configured. Adding multiple RPCs enables automatic rotation when rate limits occur, improving scan reliability.",
+				"add_rpc_button": "Add RPC"
+			}
+		},
+		"footer": {
+			"continue_text": "Continue to Confirm",
+			"hint": "Please import at least one wallet to continue",
+			"hint_scan_required": "Please scan balances before continuing"
+		},
+		"sidebar": {
+			"title": "Imported Wallets",
+			"total_label": "Total:",
+			"with_balance_label": "With Balance:",
+			"scanning_label": "Scanning:",
+			"scan_status_label": "Scan Status:",
+			"scan_completed": "Completed",
+			"scan_pending": "Pending",
+			"no_balance_found": "No balances found after scanning. All wallets have zero balance for the selected tokens.",
+			"empty_hint": "No wallets imported",
+			"performance_tip": {
+				"title": "⚡ Performance Tip",
+				"message": "Large ranges will increase scanning time",
+				"recommended": "Recommended:",
+				"recommended_range": "1,000 - 10,000 addresses"
+			},
+			"token_stats": {
+				"title": "Token Balance Statistics",
+				"wallets_count": "{count} wallets",
+				"total_balance": "Total Balance",
+				"download_title": "Download Excel Report"
+			},
+			"scan_log": {
+				"title": "Scan Log"
+			}
+		}
+	}
+}

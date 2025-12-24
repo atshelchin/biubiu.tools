@@ -1,0 +1,463 @@
+{
+	"_meta": {
+		"code": "zh",
+		"name": "中文",
+		"englishName": "Chinese",
+		"direction": "ltr",
+		"flag": "🇨🇳"
+	},
+	"title": "钱包归集",
+	"description": "将多个钱包的余额一键转移到目标地址",
+	"feature_1": "彻底清空余额，不留尾巴",
+	"feature_2": "大批量自动化，无需逐笔确认",
+	"feature_3": "被归集钱包无需持有原生币",
+	"feature_4": "无许可支持任意 EVM 链",
+	"faqs": {
+		"what_is_network": "什么是区块链网络？",
+		"network_explanation": "区块链网络是一个公开的账本系统，记录了所有代币的归属和转账。以太坊、BSC、Polygon 是不同的账本，各自独立，互不相通。",
+		"what_is_wallet": "什么是钱包？",
+		"wallet_explanation": "Web3 钱包不是存钱的地方，而是管理区块链账户的钥匙。钱记录在区块链账本上，钱包帮你证明账户归你所有并进行操作。常见钱包:MetaMask、Coinbase Smart Wallet。",
+		"what_is_native_token": "什么是原生币？",
+		"native_token_explanation": "原生币是支付给矿工打包交易的费用。以太坊用 ETH,BSC 用 BNB,Polygon 用 POL。矿工把你的交易记录到区块链账本上，你需要付给他们这笔费用。",
+		"what_is_eip7702": "什么是 EIP-7702？",
+		"eip7702_explanation": "让普通钱包临时获得智能合约能力的技术。交易时自动升级，交易后恢复原样，无需额外部署合约。",
+		"why_need_eip7702": "为什么需要 EIP-7702？",
+		"why_need_eip7702_explanation": "让没钱的钱包也能转币。你的主钱包帮它们付 Gas 费，它们就能把代币转出来，实现一键归集。",
+		"what_is_create2_proxy": "什么是 CREATE2 Proxy？",
+		"create2_proxy_explanation": "确保合约在所有链上地址一致的部署工具。相同代码 = 相同地址，跨链操作更简单。",
+		"what_is_multicall3": "什么是 Multicall3？",
+		"multicall3_explanation": "把多次调用打包成一次的批量工具。省 Gas、省时间，要么全成功要么全失败。",
+		"what_is_biubiu_premium": "BiuBiuPremium 是什么？",
+		"biubiu_premium_explanation": "会员管理合约，处理订阅、折扣、权限等。代码完全公开透明。",
+		"what_is_wallet_sweep": "TokenSweep 是什么？",
+		"wallet_sweep_explanation": "批量归集的核心合约，处理授权和转账。开源地址：https://github.com/atshelchin/biubiu-contracts",
+		"can_select_multiple_tokens": "可以同时选择多个代币吗？",
+		"can_select_multiple_tokens_explanation": "当然可以！您可以选择任意数量的代币，工具会在一次批量操作中归集所有选中的代币，非常高效。",
+		"what_happens_zero_balance": "如果某个钱包某个代币余额为零会怎样？",
+		"what_happens_zero_balance_explanation": "系统很智能！会自动跳过该钱包对该代币的归集操作，为您节约 gas 费用，不会执行不必要的转账。",
+		"what_tokens_supported": "支持哪些类型的代币？",
+		"what_tokens_supported_explanation": "同时支持原生代币（如以太坊的 ETH、BSC 的 BNB、Polygon 的 MATIC）和所有 ERC-20 标准代币。您遇到的大多数代币都可以使用。",
+		"how_add_custom_token": "如何添加自定义代币？",
+		"how_add_custom_token_explanation": "点击「+ 添加代币」按钮，然后输入代币的合约地址。系统会自动从区块链获取代币的名称、符号和精度信息。"
+	},
+	"seo": {
+		"page_title": "钱包归集 - 将多个钱包中的代币归集到一个地址 | BiuBiu Tools",
+		"page_description": "将多个钱包中的代币归集到一个目标地址。支持以太坊、Polygon、BSC、Arbitrum、Optimism 和 Base 网络。快速、安全、Gas 费优化。",
+		"keywords": "钱包归集，代币归集，ERC20 转账，批量转账，加密货币工具，Web3 工具，以太坊工具，Polygon 工具，DeFi 工具",
+		"webapp_name": "钱包归集",
+		"webapp_description": "将多个钱包中的代币归集到一个目标地址。支持以太坊、Polygon、BSC、Arbitrum、Optimism 和 Base 网络。",
+		"feature_1": "批量转移 ERC20 代币",
+		"feature_2": "多网络支持（以太坊、Polygon、BSC、Arbitrum、Optimism、Base）",
+		"feature_3": "Gas 费优化",
+		"feature_4": "安全钱包集成",
+		"feature_5": "实时交易追踪",
+		"howto_name": "如何使用钱包归集工具将多个钱包的代币归集到一个地址",
+		"howto_description": "使用 BiuBiu 钱包归集工具将多个钱包中的代币归集到一个目标地址的分步指南。",
+		"howto_tool_1": "Web3 钱包（MetaMask、WalletConnect 等）",
+		"howto_tool_2": "需要转移的 ERC20 代币",
+		"step_1_name": "连接钱包",
+		"step_1_text": "点击\"连接钱包\"按钮，选择您的 Web3 钱包提供商（MetaMask、WalletConnect、Coinbase Wallet 等），在钱包中批准连接请求。",
+		"step_1_description": "连接 Web3 钱包",
+		"step_2_name": "检查依赖项",
+		"step_2_text": "验证区块链网络连接并确保所有必需的智能合约可访问。系统将自动检测和验证必要的组件。",
+		"step_2_description": "验证网络和合约",
+		"step_3_name": "选择代币",
+		"step_3_text": "从可用列表中选择您要归集的 ERC20 代币。您可以在单次批量操作中选择多个代币进行转移。",
+		"step_3_description": "选择要归集的代币",
+		"step_4_name": "导入钱包",
+		"step_4_text": "导入包含您要归集的代币的源钱包地址。您可以添加多个钱包地址以从所有钱包收集代币。",
+		"step_4_description": "添加源地址",
+		"step_5_name": "确认归集",
+		"step_5_text": "查看交易摘要，包括代币总数、Gas 费和目标地址。点击\"执行转账\"并在您的钱包中确认交易。等待区块链确认并查看交易收据。",
+		"step_5_description": "审核并执行"
+	},
+	"step1": {
+		"footer": {
+			"continue": "继续",
+			"hint": "连接钱包后继续"
+		},
+		"content": {
+			"title": "选择网络",
+			"description": "连接钱包并开始归集操作",
+			"loading": "正在加载网络配置...",
+			"no_networks_enabled": "没有启用的网络",
+			"enable_network_prompt": "请至少启用一个网络以继续。",
+			"open_network_settings": "打开网络设置",
+			"network_not_found": "找不到网络？",
+			"add_custom_network": "添加自定义网络"
+		},
+		"sidebar": {
+			"title": "选择网络并连接钱包",
+			"description": "选择区块链网络并连接钱包，开始归集代币。",
+			"what_is_this": "这一步做什么？",
+			"what_explanation": "你需要：",
+			"what_item1": "选择区块链网络 (如以太坊、BSC、Polygon)",
+			"what_item2": "连接 Web3 钱包 (如 MetaMask)",
+			"why_do_this": "为什么要这么做？",
+			"why_explanation": "告诉应用你要操作哪个网络的代币，以及使用哪个钱包的资产 - 两者缺一不可。",
+			"beginner_tips": "新手提示",
+			"tip1": "✅ 确保选对了网络 (代币在哪个网络就选哪个)",
+			"tip2": "⛽ 确保钱包有充足的原生币支付手续费",
+			"tip3": "🌍 支持任意 EVM 兼容网络，可自行添加任何链"
+		}
+	},
+	"step2": {
+		"content": {
+			"title": "依赖检查",
+			"description": "确保所需基础设施已就绪",
+			"checking_dependencies_for": "正在检查 {network} 网络环境...",
+			"wallet_not_connected_title": "钱包未连接",
+			"wallet_not_connected_message": "请返回步骤 1 并连接您的钱包",
+			"go_to_step1": "返回步骤 1",
+			"all_dependencies_satisfied": "所有依赖项已满足",
+			"network_properly_configured": "您的网络已正确配置，可以进行代币归集",
+			"dependency_issues_found": "发现依赖问题",
+			"resolve_issues_before_continuing": "请先解决上述问题再继续",
+			"recheck_dependencies": "重新检查依赖项",
+			"address_label": "地址：",
+			"endpoint_label": "节点：",
+			"resolve_previous_issue": "请先解决前一个问题",
+			"view_deployment_guide": "查看部署指南",
+			"deploy_coming_soon": "部署合约（即将推出）",
+			"deploy_contract": "部署 {contractName}",
+			"deployment": {
+				"modal_title": "部署 {contractName}",
+				"start_deployment": "开始部署",
+				"deploying_contract": "正在部署合约...",
+				"deployment_steps_heading": "部署步骤：",
+				"contract_address_label": "合约地址：",
+				"network_label": "网络：",
+				"waiting_for_signature": "⏳ 请在钱包中确认交易...",
+				"transaction_sent": "⚡ 交易已发送！等待区块链确认...",
+				"finalizing": "✅ 正在完成部署...",
+				"confirm_in_wallet": "请在钱包中确认交易",
+				"success_title": "部署成功！",
+				"success_description": "合约已成功部署。",
+				"view_on_explorer": "在浏览器中查看",
+				"error_title": "部署失败",
+				"errors": {
+					"init_failed": "无法初始化部署配置",
+					"wallet_not_connected": "请先连接钱包",
+					"deployment_failed": "部署合约失败",
+					"metamask_cache": "MetaMask 缓存了旧的区块数据。这通常发生在测试网络被重置后。",
+					"wallet_cache": "钱包缓存错误。请重启钱包并重试。",
+					"metamask_internal": "MetaMask 内部错误。请尝试：\n\n1. 在 MetaMask 中清除活动标签数据\n（设置 → 高级 → 清除活动标签数据）\n\n2. 更新网络 RPC 端点\n\n3. 重启 MetaMask\n\n4. 如果部署 Multicall3，请确保先部署 CREATE2 Proxy",
+					"wallet_internal": "钱包内部错误。请尝试：\n\n1. 更新网络 RPC 端点\n\n2. 重启钱包\n\n3. 如果部署 Multicall3，请确保先部署 CREATE2 Proxy",
+					"connection_failed": "连接失败。请检查：\n\n1. 钱包已解锁\n\n2. 网络连接稳定\n\n如果问题持续，请尝试更新网络 RPC 端点。",
+					"rpc_unavailable": "RPC 服务暂时不可用。这可能是因为钱包中配置的 RPC 端点有速率限制或已关闭。",
+					"insufficient_funds": "余额不足。您需要足够的资金来支付部署和 gas 费用。",
+					"user_rejected": "交易在钱包中被拒绝。",
+					"already_deployed": "该合约可能已部署。请刷新依赖检查。"
+				},
+				"steps": {
+					"create2": {
+						"fund_deployer_title": "为部署者地址充值",
+						"fund_deployer_description": "发送 0.01 ETH 至 {address}",
+						"deploy_contract_title": "部署合约",
+						"deploy_contract_description": "发送预签名的部署交易"
+					},
+					"via_create2": {
+						"deploy_title": "部署 {contractName} 合约",
+						"deploy_description": "向 Deterministic Deployment Proxy 发送部署交易"
+					}
+				}
+			},
+			"checks": {
+				"rpc_endpoint": {
+					"name": "RPC 节点",
+					"description": "检查当前 RPC 节点是否可用",
+					"chain_id_mismatch": "链 ID 不匹配：预期 {expected}，实际 {actual}",
+					"connected_to_block": "已连接到区块 #{blockNumber}",
+					"failed_to_connect": "连接失败：{error}",
+					"no_rpc_configured": "当前网络未配置 RPC 节点",
+					"configure_rpc_button": "配置 RPC"
+				},
+				"eip7702": {
+					"name": "EIP-7702",
+					"description": "检查网络是否支持 EIP-7702 协议",
+					"supported": "网络支持 EIP-7702（已通过 eth_estimateGas 测试）",
+					"not_supported": "网络不支持 EIP-7702（无效操作码）",
+					"rpc_not_capable": "当前 RPC 不支持此检测方法所需的状态覆盖功能，请尝试更换 RPC 节点",
+					"check_failed": "检查 EIP-7702 支持失败：{error}"
+				},
+				"contract": {
+					"deployed": "合约已部署",
+					"not_deployed": "合约未部署在此地址",
+					"check_failed": "检查部署失败：{error}",
+					"create2_proxy_description": "确定性部署代理合约",
+					"multicall3_description": "将多个合约调用聚合为一个请求",
+					"biubiu_premium_description": "验证用户是否拥有平台高级会员权限",
+					"wallet_sweep_description": "用于批量归集分散在多个钱包中的代币",
+					"biubiu_membership_description": "BiuBiu 平台会员合约",
+					"wallet_sweep_contract_description": "批量代币转账操作主合约"
+				},
+				"category": {
+					"network": "网络",
+					"protocol": "协议",
+					"contract": "合约"
+				}
+			}
+		},
+		"footer": {
+			"checking_dependencies": "正在检查依赖项...",
+			"resolve_issues": "请解决所有依赖问题后继续",
+			"waiting_for_checks": "等待依赖检查..."
+		},
+		"sidebar": {
+			"beginner_tips": "新手提示",
+			"tip1": "🔍 系统会自动检查所需的合约是否已部署",
+			"tip2": "🚀 如果缺少合约，可以直接在本页面一键部署",
+			"tip3": "📋 必须按顺序解决依赖问题 - 先修复第一个失败的检查项"
+		}
+	},
+	"step3": {
+		"content": {
+			"title": "选择代币",
+			"description": "选择在 {network} 网络上要归集的代币",
+			"description_fallback": "选择在该网络上要归集的代币",
+			"wallet_not_connected_title": "钱包未连接",
+			"wallet_not_connected_message": "请返回步骤 1 并连接您的钱包",
+			"empty_message": "暂无可用代币。请先添加自定义代币。"
+		},
+		"footer": {
+			"hint": "请至少选择一个代币以继续"
+		},
+		"sidebar": {
+			"title": "选择代币",
+			"description": "选择要归集的代币",
+			"selected_tokens_title": "已选代币",
+			"count_label": "数量：",
+			"empty_hint": "未选择任何代币",
+			"beginner_tips": "新手提示",
+			"tip1": "✅ 可以同时选择多个代币，一次性批量归集",
+			"tip2": "⚡ 某钱包地址某代币余额为零时，自动跳过该归集操作 - 节约 gas 费用",
+			"tip3": "🪙 同时支持原生代币（ETH、BNB 等）和 ERC-20 代币"
+		}
+	},
+	"step5": {
+		"target_address_label": "目标地址",
+		"target_address_hint": "代币将归集到您连接的钱包地址",
+		"content": {
+			"title": "确认归集",
+			"description": "检查您的配置并执行资产归集",
+			"selected_network_tokens": "已选网络和代币（{count}）",
+			"ready_to_execute": "准备执行",
+			"review_carefully": "请在继续之前仔细检查所有信息。",
+			"progress": {
+				"preparing": "⏳ 准备中...",
+				"building": "🔧 构建交易中...",
+				"executing": "⚡ 执行归集中...",
+				"confirming": "⏰ 确认交易中...",
+				"completed": "✅ 已完成！",
+				"error": "❌ 错误",
+				"batch": "批次 {current} / {total}",
+				"wallet": "钱包 {current} / {total}",
+				"results": "结果（{count}）："
+			},
+			"estimate": {
+				"title": "📊 成本估算",
+				"total_transactions": "总交易数：",
+				"estimated_gas": "预估 Gas：",
+				"estimated_cost": "预估费用：",
+				"gas_units": "{amount} 单位",
+				"cost_eth": "{amount} ETH"
+			},
+			"actions": {
+				"estimate_cost": "💰 估算成本",
+				"estimating": "估算中...",
+				"execute_sweep": "⚡ 执行归集",
+				"executing": "执行中..."
+			},
+			"errors": {
+				"no_network": "未连接网络",
+				"no_rpc": "无可用的 RPC 端点",
+				"complete_fields": "请完成所有必填字段",
+				"invalid_address": "无效的目标地址",
+				"select_tokens": "请在步骤 3 中选择至少一个代币",
+				"import_wallets": "请在步骤 4 中导入至少一个钱包",
+				"connect_wallet": "请先连接您的钱包",
+				"no_balance": "没有有余额的钱包可归集。请先在步骤 4 中扫描余额。",
+				"insufficient_gas": "临时钱包 gas 不足！需要 {required} {symbol}，当前仅有 {current} {symbol}。请向临时钱包充值后点击下方按钮继续。",
+				"still_insufficient_gas": "临时钱包 gas 仍然不足，请继续充值。"
+			},
+			"gas_insufficient_title": "⛽ Gas 不足",
+			"gas_insufficient_message": "临时钱包余额不足以支付预估的 gas 费用。需要 {required} {symbol}，当前仅有 {current} {symbol}。请使用上方的【为钱包充值 Gas】功能向临时钱包转账，充值完成后点击下方按钮继续执行。",
+			"check_and_resume": "检查余额并继续执行",
+			"gas_refilled_restart": "Gas 已充值！当前余额：{balance} ETH。请重新点击【执行归集】按钮开始。"
+		},
+		"sidebar": {
+			"summary_title": "汇总",
+			"selected_tokens": "已选代币：",
+			"total_wallets": "总钱包数：",
+			"with_balance": "有余额：",
+			"batches": "批次"
+		}
+	},
+	"temporary_wallet": {
+		"title": "临时钱包",
+		"description": "创建随机临时钱包以自动化批量交易。钱包将仅存储在浏览器会话中。",
+		"important": "重要提示",
+		"warning_text": "临时钱包将在您的浏览器中创建。您需要：",
+		"step_download": "下载私钥备份",
+		"step_fund": "为其充值 <strong>{amount} {symbol}</strong> 作为 gas 费用",
+		"step_clear": "完成任务后清除钱包",
+		"btn_create": "创建临时钱包",
+		"creating": "创建中...",
+		"wallet_ready": "钱包就绪",
+		"created_at": "创建时间：{time}",
+		"address": "地址",
+		"balance": "余额（当前网络）",
+		"loading": "加载中...",
+		"private_key": "私钥",
+		"show": "显示",
+		"hide": "隐藏",
+		"copy_address": "复制地址",
+		"copy_private_key": "复制私钥",
+		"show_qr": "显示二维码",
+		"refresh_balance": "刷新余额",
+		"qr_hint": "扫描向此临时钱包发送 gas",
+		"fund_title": "为钱包充值 Gas",
+		"estimated_gas": "预估所需 gas：{amount} {symbol}",
+		"suggested_amount": "💰 建议充值：<strong>{amount} {symbol}</strong> (2 倍预估值)",
+		"amount_placeholder": "发送金额",
+		"btn_send": "从连接的钱包发送",
+		"sending": "发送中...",
+		"tip": "💡 提示：已自动填充建议金额（2 倍预估值）以确保资金充足。您也可以扫描二维码从任何钱包发送。",
+		"btn_download": "下载私钥",
+		"btn_clear": "清除钱包",
+		"error_no_wallet": "请先连接您的钱包",
+		"error_invalid_amount": "请输入有效金额",
+		"success_transfer": "✅ 转账成功！已发送 {amount} {symbol} 到临时钱包。交易：{tx}...",
+		"confirm_clear": "确定要清除临时钱包吗？如果需要，请确保已下载私钥。"
+	},
+	"step4": {
+		"import_method": {
+			"mnemonic": {
+				"label": "助记词",
+				"desc": "批量派生地址"
+			},
+			"private_key": {
+				"label": "私钥",
+				"desc": "逐一导入"
+			}
+		},
+		"content": {
+			"title": "导入钱包",
+			"description": "添加要清扫资产的源钱包",
+			"choose_method": "选择导入方式",
+			"import_wallets_button": "导入钱包",
+			"mnemonic": {
+				"label": "输入助记词",
+				"placeholder": "输入 12 或 24 个单词，用空格分隔",
+				"security_hint": "🔒 助记词仅在本地浏览器中计算，不会发送到服务器",
+				"derivation_path": "派生路径配置",
+				"generate_button": "🔍 生成地址列表",
+				"generating": "生成中... ({progress}%)",
+				"error_empty": "请输入助记词",
+				"error_invalid": "助记词无效。请输入 12 或 24 个单词。",
+				"error_range": "地址范围无效",
+				"error_max": "范围过大（一次最多 10000 个地址）"
+			},
+			"private_key": {
+				"label": "批量导入私钥",
+				"placeholder": "每行一个私钥（以 0x 开头）",
+				"upload_file": "上传文件",
+				"column_label": "私钥",
+				"address_label": "地址",
+				"import_button": "➕ 批量添加钱包",
+				"importing": "导入中... ({progress}%)",
+				"error_empty": "请输入私钥",
+				"error_none": "未找到有效的私钥",
+				"success_with_invalid": "已导入{valid}个钱包。跳过了{invalid}个无效私钥。",
+				"invalid_keys_found": "发现 {count} 个无效私钥",
+				"locate": "定位",
+				"locate_key": "点击定位到编辑器中的错误位置",
+				"error_key_not_found": "错误：该私钥已被修改或删除",
+				"manual_search": "请手动搜索第 {line} 行",
+				"security_hint": "🔒 私钥仅在本地浏览器中处理，不会发送到服务器"
+			},
+			"wallet_list": {
+				"title": "已导入钱包",
+				"count": "({count})",
+				"with_balance": "{count}个有余额",
+				"scan_button": "扫描余额",
+				"scanning": "扫描中... {progress}%",
+				"scan_completed": "扫描完成",
+				"scan_hint": "需要扫描余额后才能进入下一步",
+				"clear_all": "清除全部",
+				"empty_message": "尚未导入钱包。使用上述方法导入钱包。"
+			},
+			"scan_section": {
+				"title": "余额扫描",
+				"required": "必需"
+			},
+			"errors": {
+				"no_network": "未连接网络",
+				"no_wallets": "没有要扫描的钱包",
+				"no_tokens": "请先在第 3 步选择代币",
+				"no_rpc": "当前网络没有可用的 RPC 端点",
+				"no_valid_tokens": "当前网络没有选择有效的代币",
+				"no_balance": "所选代币在钱包中没有余额",
+				"generate_failed": "生成地址失败",
+				"import_failed": "导入私钥失败",
+				"scan_failed": "扫描余额失败"
+			},
+			"rate_limit": {
+				"title": "所有 RPC 端点均已限流",
+				"error_native": "扫描原生代币余额时触发限流（批次 {batch}/{total}）",
+				"error_erc20": "扫描代币 {token} 余额时触发限流（批次 {batch}/{total}）",
+				"hint": "💡 请点击下方按钮添加新的 RPC 端点，或等待现有 RPC 恢复后重试。添加多个 RPC 可以自动轮换，避免频繁限流。",
+				"recommend_prefix": "推荐从",
+				"recommend_suffix": "查找可用的 RPC 端点",
+				"manage_rpc_button": "管理 RPC",
+				"resume_button": "恢复扫描"
+			},
+			"dialogs": {
+				"remove_wallet_title": "移除钱包",
+				"remove_wallet_message": "确定要从导入列表中移除此钱包吗？\n\n地址：{address}",
+				"remove_button": "移除",
+				"clear_all_title": "清除所有钱包",
+				"clear_all_message": "确定要从导入列表中移除全部{count}个钱包吗？此操作无法撤销。",
+				"clear_all_button": "清除全部",
+				"cancel_button": "取消",
+				"long_press_hint": "⚠️ 此操作不可逆，请长按按钮 3 秒确认"
+			},
+			"rpc_hint": {
+				"title": "添加更多 RPC 以提高可靠性",
+				"message": "您只配置了 1 个 RPC 端点。添加多个 RPC 可以在遇到限流时自动切换，提升扫描稳定性。",
+				"add_rpc_button": "添加 RPC"
+			}
+		},
+		"footer": {
+			"continue_text": "继续确认",
+			"hint": "请至少导入一个钱包以继续",
+			"hint_scan_required": "请先扫描余额后再继续"
+		},
+		"sidebar": {
+			"title": "已导入钱包",
+			"total_label": "总数：",
+			"with_balance_label": "有余额：",
+			"scanning_label": "扫描中：",
+			"scan_status_label": "扫描状态：",
+			"scan_completed": "已完成",
+			"scan_pending": "待扫描",
+			"no_balance_found": "扫描完成后未发现任何余额。所有钱包在所选代币上的余额均为零。",
+			"empty_hint": "未导入任何钱包",
+			"performance_tip": {
+				"title": "⚡ 性能提示",
+				"message": "范围太大会增加扫描时间",
+				"recommended": "推荐范围：",
+				"recommended_range": "1,000 - 10,000 个地址"
+			},
+			"token_stats": {
+				"title": "代币余额统计",
+				"wallets_count": "{count} 个钱包",
+				"total_balance": "总余额",
+				"download_title": "下载 Excel 报告"
+			},
+			"scan_log": {
+				"title": "扫描日志"
+			}
+		}
+	}
+}

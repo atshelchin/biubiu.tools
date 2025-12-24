@@ -1,0 +1,290 @@
+{
+	"_meta": {
+		"code": "zh",
+		"name": "中文",
+		"englishName": "Chinese",
+		"direction": "ltr",
+		"flag": "🇨🇳"
+	},
+	"title": "一对多批量转账",
+	"description": "从单个钱包向多地址分发代币和 NFT，支持所有主流资产标准",
+	"seo": {
+		"page_title": "一对多批量转账 - 批量发送代币和NFT到多个钱包 | BiuBiu Tools",
+		"page_description": "从一个钱包批量发送代币和NFT到多个地址。支持ETH、ERC20、ERC721、ERC1155，覆盖多条区块链网络。",
+		"keywords": "一对多转账, 批量转账, 空投, 代币转账, NFT转账, 多地址发送, 批量发币, ERC20, ERC721, ERC1155, 加密货币分发, web3工具",
+		"webapp_name": "一对多批量转账",
+		"webapp_description": "从一个钱包批量发送代币和NFT到多个收款地址，支持多条区块链网络",
+		"howto_name": "如何批量发送代币和NFT到多个钱包",
+		"howto_description": "从一个钱包向多个收款地址发送代币和NFT的完整指南",
+		"howto_tool_1": "Web3钱包（MetaMask、WalletConnect等）",
+		"howto_tool_2": "足够的代币余额和Gas费",
+		"step_1_name": "连接钱包",
+		"step_1_text": "点击\"连接钱包\"按钮，连接您的Web3钱包（MetaMask、WalletConnect等）。此钱包将作为代币分发的来源。",
+		"step_1_description": "将您的Web3钱包连接为源钱包",
+		"step_2_name": "检查依赖项",
+		"step_2_text": "验证所选网络上是否部署了必需的智能合约（WETH和TokenDistribution）。这些合约用于实现批量分发功能。",
+		"step_2_description": "确认必需合约已部署",
+		"step_3_name": "选择代币和金额",
+		"step_3_text": "选择要分发的代币类型（原生代币、ERC20或NFT），设置分发模式（等额分发或自定义金额），并指定每个收款人的金额或总金额。",
+		"step_3_description": "配置代币和分发金额",
+		"step_4_name": "导入收款地址",
+		"step_4_text": "通过手动输入、上传CSV文件或粘贴列表来添加收款钱包地址。可选择为每个收款人设置自定义金额。",
+		"step_4_description": "添加收款钱包地址",
+		"step_5_name": "确认并执行",
+		"step_5_text": "查看分发摘要，包括总金额、收款人数量和预估Gas费用。确认后执行批量分发，使用钱包签署每笔交易。",
+		"step_5_description": "执行代币分发",
+		"feature_1": "连接Web3钱包（MetaMask、WalletConnect、Coinbase Wallet）",
+		"feature_2": "支持多条网络（Ethereum、Polygon、BSC、Base、Arbitrum、Optimism）",
+		"feature_3": "发送原生代币（ETH、BNB、MATIC）、ERC20代币和NFT（ERC721、ERC1155）",
+		"feature_4": "等额分发或自定义每个收款人的金额",
+		"feature_5": "通过CSV、粘贴或手动输入导入收款地址"
+	},
+	"faqs": {
+		"what_is_one_to_many": "什么是一对多批量转账？",
+		"one_to_many_explanation": "一对多批量转账允许您从单个钱包向多个收款地址批量发送代币或NFT。适用于空投、工资发放、奖励分发等需要向多个地址高效发送资产的场景。",
+		"what_tokens_supported": "支持哪些类型的代币？",
+		"tokens_supported_explanation": "我们支持原生代币（ETH、BNB、MATIC等）、ERC20代币（USDT、USDC等）以及NFT（包括ERC721和ERC1155标准）。",
+		"what_is_equal_distribution": "什么是等额分发模式？",
+		"equal_distribution_explanation": "在等额分发模式下，您指定每个收款人的金额，每个地址都会收到相同的金额。总金额会根据收款人数量自动计算。",
+		"what_is_custom_amounts": "什么是自定义金额模式？",
+		"custom_amounts_explanation": "在自定义金额模式下，您可以为每个收款人指定不同的金额。当不同地址需要收到不同数量时非常有用。",
+		"how_to_import_recipients": "如何导入收款地址？",
+		"import_recipients_explanation": "您可以通过以下方式添加收款人：1）逐个手动输入，2）批量粘贴地址列表，或3）上传包含地址和可选金额的CSV文件。",
+		"what_networks_supported": "支持哪些区块链网络？",
+		"networks_supported_explanation": "目前我们支持Ethereum主网、Polygon、BSC（币安智能链）、Base、Arbitrum和Optimism。未来将添加更多网络。"
+	},
+	"step2": {
+		"content": {
+			"title": "检查依赖",
+			"description": "验证此网络上所需的合约是否已部署",
+			"checks": {
+				"contract": {
+					"weth_description": "WETH合约用于委托执行模式（将WETH转换为ETH进行分发）",
+					"token_distribution_description": "TokenDistribution合约用于批量分发代币和NFT到多个收款人"
+				}
+			}
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "选择代币",
+			"description": "选择代币类型并指定要分发的代币"
+		},
+		"content": {
+			"title": "选择要分发的代币",
+			"description": "选择代币类型并指定要发送给多个收款人的具体代币",
+			"token_type": {
+				"title": "代币类型",
+				"native": "原生代币",
+				"native_desc": "ETH、BNB、MATIC 等",
+				"erc20": "ERC20 代币",
+				"erc20_desc": "USDT、USDC、DAI 等",
+				"erc721": "ERC721 NFT",
+				"erc721_desc": "单个NFT（每个收款人1个）",
+				"erc1155": "ERC1155 多代币",
+				"erc1155_desc": "批量NFT或半同质化代币"
+			},
+			"select_token": {
+				"title": "选择代币",
+				"no_tokens": "此网络暂无可用代币",
+				"add_custom": "添加自定义代币"
+			},
+			"nft_config": {
+				"title": "NFT 配置",
+				"contract_address": "合约地址",
+				"contract_placeholder": "输入NFT合约地址 (0x...)",
+				"token_ids": "Token IDs",
+				"token_ids_placeholder": "输入Token ID（多个用逗号分隔）",
+				"token_ids_hint": "ERC721：每个收款人一个Token ID。ERC1155：指定要分发的Token ID。",
+				"load_button": "加载NFT信息",
+				"loading": "正在加载NFT信息...",
+				"collection_name": "系列名称",
+				"total_supply": "总供应量",
+				"your_balance": "您的余额",
+				"invalid_address": "无效的合约地址格式"
+			},
+			"amount_mode": {
+				"title": "分发模式",
+				"equal": "等额分发",
+				"equal_desc": "每个收款人获得相同数量",
+				"custom": "自定义金额",
+				"custom_desc": "为每个收款人设置不同金额（在步骤4中）",
+				"random": "随机金额",
+				"random_desc": "每个收款人获得随机范围内的金额"
+			},
+			"amount_input": {
+				"title": "每个收款人的金额",
+				"placeholder": "0.0",
+				"hint": "此金额将发送给每个收款人。总金额将根据收款人数量自动计算。"
+			},
+			"custom_mode_info": "您已选择自定义金额模式。将在步骤4中为每个收款人设置具体金额。",
+			"random_mode_config": {
+				"min_amount": "最小金额",
+				"max_amount": "最大金额",
+				"min_placeholder": "0.0",
+				"max_placeholder": "0.0",
+				"hint": "每个收款人将获得最小和最大值之间的随机金额。",
+				"valid_range": "随机金额将在 {min} 到 {max} {symbol} 之间",
+				"error_max_less_than_min": "最大金额必须大于最小金额"
+			}
+		},
+		"footer": {
+			"continue": "继续添加收款人",
+			"hint": "选择代币并配置金额后继续"
+		}
+	},
+	"step4": {
+		"sidebar": {
+			"title": "导入收款人",
+			"description": "添加将接收代币的钱包地址"
+		},
+		"content": {
+			"title": "添加收款人",
+			"description": "导入将从此分发中接收代币的钱包地址",
+			"distributing": "正在分发",
+			"method": {
+				"manual": "手动输入",
+				"paste": "粘贴列表",
+				"csv": "上传CSV"
+			},
+			"manual": {
+				"title": "手动添加收款人",
+				"address": "钱包地址",
+				"token_id": "Token ID",
+				"token_amount": "数量",
+				"amount": "金额",
+				"label": "标签（可选）",
+				"label_placeholder": "例如：Alice, Bob",
+				"add_button": "添加收款人"
+			},
+			"paste": {
+				"title": "粘贴多个地址",
+				"add_button": "全部添加"
+			},
+			"paste_hint": {
+				"fungible_equal": "格式：地址, 标签（可选）。每行一个。",
+				"fungible_custom": "格式：地址, 标签（可选）, 金额。每行一个。",
+				"erc721": "格式：地址, tokenId, 标签（可选）。每行一个。",
+				"erc1155": "格式：地址, tokenId, 数量, 标签（可选）。每行一个。"
+			},
+			"csv": {
+				"title": "上传CSV文件",
+				"description": "上传包含收款地址的CSV文件",
+				"upload_button": "选择文件",
+				"hint": "CSV应包含地址列。可选：标签、金额/tokenId列。"
+			},
+			"recipients": {
+				"title": "收款人列表",
+				"clear_all": "清空全部",
+				"regenerate_random": "重新随机",
+				"col_address": "地址",
+				"col_token_id": "Token ID",
+				"col_token_amount": "数量",
+				"col_amount": "金额",
+				"col_label": "标签"
+			},
+			"empty_state": "暂无收款人。使用上方表单添加收款地址。",
+			"error": {
+				"invalid_address": "请输入有效的以太坊地址",
+				"invalid_address_line": "第 {line} 行：地址格式无效",
+				"token_id_required": "NFT分发需要填写Token ID",
+				"invalid_token_id_line": "第 {line} 行：Token ID无效或缺失"
+			}
+		},
+		"footer": {
+			"continue": "继续确认",
+			"hint": "添加至少一个收款人后继续"
+		}
+	},
+	"step5": {
+		"sidebar": {
+			"title": "确认并执行",
+			"description": "检查分发详情并执行转账"
+		},
+		"mode": {
+			"title": "执行模式",
+			"self": {
+				"title": "自主执行",
+				"description": "从您的钱包签名并发送每笔交易。适合较小规模的分发。"
+			},
+			"delegated": {
+				"title": "委托执行",
+				"description": "签名一次，任何人都可执行批次。适合大量接收者的分发。",
+				"info": "委托模式使用智能合约批量转账。您签署授权后，任何人（包括您自己）都可以执行批次。"
+			}
+		},
+		"delegated": {
+			"authorize": "签署授权",
+			"authorizing": "签名中...",
+			"execute_batch": "执行批次 {current}/{total}",
+			"execute_all": "执行所有批次",
+			"batch_status": "批次状态",
+			"batch_pending": "等待中",
+			"batch_completed": "已完成",
+			"batch_failed": "失败",
+			"export_session": "导出会话",
+			"import_session": "导入会话",
+			"session_expired": "会话已过期",
+			"session_info": "会话ID: {id} | 过期时间: {time}"
+		},
+		"session": {
+			"title": "分发会话",
+			"empty": "暂无保存的会话",
+			"import": "导入会话",
+			"export": "导出",
+			"delete": "删除",
+			"resume": "恢复",
+			"batches": "批次",
+			"expires_in": "剩余时间",
+			"expired": "已过期",
+			"status_pending": "等待中",
+			"status_partial": "进行中",
+			"status_completed": "已完成",
+			"status_expired": "已过期",
+			"import_error": "导入会话失败，请检查文件格式。",
+			"importing": "导入中..."
+		},
+		"content": {
+			"title": "确认并执行分发",
+			"description": "检查分发摘要并执行代币转账",
+			"executor_wallet": "执行钱包",
+			"summary_title": "分发摘要",
+			"token": "代币",
+			"mode": "模式",
+			"mode_equal": "平均分发",
+			"mode_random": "随机分发",
+			"mode_custom": "自定义金额",
+			"recipients": "收款人",
+			"total_amount": "总金额",
+			"total_nfts": "NFT总数",
+			"estimated_gas": "预估Gas",
+			"network": "网络",
+			"preview_title": "收款人预览（前10个）",
+			"more_recipients": "个收款人",
+			"progress_title": "执行进度",
+			"successful": "成功",
+			"failed": "失败",
+			"pending": "待处理",
+			"execute": "执行分发",
+			"stop": "停止执行",
+			"resume": "继续",
+			"reset": "重置",
+			"start_new": "开始新分发",
+			"completed": "分发完成！",
+			"confirm_continue": "是否继续？",
+			"warning_title": "重要提示",
+			"warning_message": "请确保您有足够的余额和Gas费用。每个收款人将收到单独的交易。执行前请仔细检查所有详情。",
+			"errors": {
+				"invalid_config": "分发配置无效，请检查之前的步骤。",
+				"connect_wallet": "请先连接您的钱包",
+				"no_network": "未选择网络",
+				"no_token": "未选择代币",
+				"no_recipients": "未添加收款人"
+			}
+		},
+		"footer": {
+			"back": "返回收款人",
+			"execute": "执行分发"
+		}
+	}
+}

@@ -1,0 +1,155 @@
+{
+	"_meta": {
+		"code": "zh",
+		"name": "中文",
+		"englishName": "Chinese",
+		"direction": "ltr",
+		"flag": "🇨🇳"
+	},
+	"title": "NFT 部署器",
+	"description": "部署 NFT 智能合约，支持 ERC-721、ERC-721A 和 ERC-1155 标准",
+	"feature_1": "支持 ERC-721、ERC-721A、ERC-1155 标准",
+	"feature_2": "可配置版税、供应量、铸造价格",
+	"feature_3": "支持暂停、销毁、揭示等高级功能",
+	"step1": {
+		"sidebar": {
+			"title": "连接钱包",
+			"description": "连接您的 Web3 钱包，在您选择的区块链网络上部署 NFT 合约。",
+			"requirements": "要求",
+			"requirement1": "Web3 钱包（MetaMask、WalletConnect 等）",
+			"requirement2": "足够的原生代币支付 Gas 费用",
+			"requirement3": "选择目标区块链网络",
+			"supported_chains": "支持的网络"
+		},
+		"content": {
+			"title": "选择网络并连接钱包",
+			"description": "选择您的 NFT 合约部署目标区块链网络",
+			"ready_hint": "您的钱包已连接，可以继续操作"
+		}
+	},
+	"step2": {
+		"sidebar": {
+			"title": "检查依赖",
+			"description": "验证所需合约是否已部署",
+			"all_passed": "全部通过",
+			"issues_found": "发现问题",
+			"passed": "已通过",
+			"failed": "失败"
+		},
+		"content": {
+			"title": "检查依赖",
+			"description": "验证网络和合约依赖",
+			"wallet_not_connected_title": "钱包未连接",
+			"wallet_not_connected_message": "请返回步骤 1 并连接您的钱包",
+			"go_to_step1": "前往步骤 1",
+			"all_dependencies_satisfied": "所有依赖满足",
+			"network_properly_configured": "网络已正确配置，可以进行 NFT 部署",
+			"dependency_issues_found": "发现依赖问题",
+			"resolve_issues_before_continuing": "请先解决上述问题再继续",
+			"recheck_dependencies": "重新检查依赖",
+			"address_label": "地址：",
+			"endpoint_label": "端点：",
+			"resolve_previous_issue": "请先解决前一个问题",
+			"view_deployment_guide": "查看部署指南",
+			"deploy_coming_soon": "部署合约（即将推出）",
+			"deploy_contract": "部署 {contractName}",
+			"checks": {
+				"rpc": {
+					"title": "RPC 连接",
+					"description": "验证网络连接"
+				},
+				"contract": {
+					"create2_proxy_description": "CREATE2 代理用于确定性部署",
+					"multicall3_description": "Multicall3 用于批量操作",
+					"biubiu_premium_description": "BiuBiu Premium 提供高级功能",
+					"nft_factory_description": "NFT Factory 用于部署 NFT 合约"
+				},
+				"category": {
+					"network": "网络",
+					"protocol": "协议",
+					"contract": "合约"
+				}
+			}
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "配置 NFT",
+			"description": "设置您的 NFT 集合参数",
+			"progress": "进度",
+			"field_name": "名称",
+			"field_symbol": "符号",
+			"field_base_uri": "基础 URI",
+			"collection_name": "集合名称",
+			"symbol": "符号",
+			"stake_enabled": "质押铸造",
+			"all_required_complete": "所有必填项已完成！",
+			"ready": "就绪",
+			"incomplete": "未完成",
+			"tips": "提示",
+			"tip1": "选择一个独特的集合名称",
+			"tip2": "基础 URI 可以使用 IPFS 或 HTTP",
+			"tip3": "质押铸造为您的代币创造实用性",
+			"preview": "预览"
+		},
+		"content": {
+			"title": "配置 NFT 参数",
+			"description": "设置基本信息和铸造选项",
+			"basic_info": "基本信息",
+			"name_label": "集合名称",
+			"name_placeholder": "我的超棒 NFT",
+			"name_hint": "您的 NFT 集合名称",
+			"symbol_label": "符号",
+			"symbol_placeholder": "AWESOME",
+			"symbol_hint": "简短标识符（例如 BAYC、PUNK）",
+			"base_uri_label": "基础 URI",
+			"base_uri_placeholder": "ipfs://...",
+			"base_uri_hint": "代币元数据的基础 URL",
+			"mint_type_label": "铸造类型",
+			"mint_settings": "铸造选项",
+			"public_mint_enabled": "所有者铸造",
+			"public_mint_hint": "仅合约所有者可以铸造 NFT",
+			"stake_to_mint": "质押铸造",
+			"enable_stake_to_mint": "启用质押铸造",
+			"stake_to_mint_hint": "需要质押代币才能铸造 NFT",
+			"stake_token_label": "质押代币地址",
+			"stake_token_hint": "铸造所需的 ERC20 代币地址",
+			"stake_amount_label": "质押数量",
+			"stake_amount_hint": "需要质押的代币数量（以 wei 为单位）",
+			"preview": "预览"
+		}
+	},
+	"step4": {
+		"sidebar": {
+			"title": "审核并部署",
+			"description": "审核并部署您的 NFT 合约",
+			"success": "NFT 合约部署成功！",
+			"error": "部署失败"
+		},
+		"content": {
+			"title": "审核并部署",
+			"description": "审核配置并部署",
+			"review": {
+				"title": "审核配置",
+				"basic_info": "基本信息",
+				"mint_settings": "铸造设置",
+				"stake_settings": "质押铸造设置"
+			},
+			"deployment": {
+				"title": "部署",
+				"deploy_button": "部署 NFT 合约",
+				"deploying": "部署中...",
+				"please_wait": "请稍候，正在部署您的合约",
+				"success": "部署成功！",
+				"nft_deployed": "您的 NFT 合约已成功部署到区块链",
+				"error": "部署失败",
+				"retry": "重试部署",
+				"contract_address": "合约地址",
+				"transaction_hash": "交易哈希"
+			}
+		},
+		"footer": {
+			"deploy_another": "部署另一个 NFT"
+		}
+	}
+}

@@ -1,0 +1,271 @@
+{
+	"_meta": {
+		"code": "zh",
+		"name": "中文",
+		"englishName": "Chinese",
+		"direction": "ltr",
+		"flag": "🇨🇳"
+	},
+	"title": "钱包余额筛查器",
+	"description": "快速筛查多个钱包的代币余额，找出有资产的地址，汇总统计持仓分布",
+	"session": {
+		"title": "扫描会话",
+		"status": {
+			"scanning": "扫描中",
+			"paused": "已暂停",
+			"completed": "已完成",
+			"abandoned": "已废弃"
+		},
+		"progress": "进度",
+		"addresses": "地址数",
+		"tokens": "代币数",
+		"last_activity": "最后活动",
+		"view": "查看",
+		"resume": "继续",
+		"abandon": "废弃",
+		"delete": "删除",
+		"start_new": "开始新扫描",
+		"empty": "暂无活跃会话",
+		"error": {
+			"abandon_failed": "废弃会话失败",
+			"delete_failed": "删除会话失败",
+			"not_found": "会话未找到",
+			"restore_failed": "恢复会话失败"
+		}
+	},
+	"feature_1": "支持 10 万地址批量查询",
+	"feature_2": "快速筛选有余额的钱包",
+	"feature_3": "汇总统计持仓分布",
+	"feature_4": "导出 EXCEL/CSV/JSON",
+	"faqs": {
+		"what_is_balance_checker": "什么是钱包余额筛查器？",
+		"balance_checker_explanation": "一个用于扫描多个钱包地址并检查代币余额的工具。帮助您快速识别哪些钱包有资产，并汇总所有钱包的总持仓。",
+		"how_many_addresses": "一次可以扫描多少个地址？",
+		"how_many_addresses_explanation": "单次批量扫描最多支持 10 万个钱包地址。工具使用优化的 RPC 调用来高效查询余额。",
+		"what_tokens_supported": "支持哪些类型的代币？",
+		"what_tokens_supported_explanation": "我们支持原生代币（ETH、BNB、MATIC 等）和所有 ERC-20 标准代币。您可以通过输入合约地址添加任何代币。",
+		"is_it_free": "余额扫描是免费的吗？",
+		"is_it_free_explanation": "是的！余额扫描完全免费，不需要任何链上交易。它只从区块链读取数据。",
+		"what_is_multicall": "什么是 Multicall3？",
+		"multicall_explanation": "Multicall3 是一个智能合约，可以将多个读取调用批量合并为一个请求。这大大加快了扫描速度，减少了所需的 RPC 调用次数。",
+		"can_export_results": "可以导出扫描结果吗？",
+		"can_export_explanation": "可以！您可以将结果导出为 CSV 或 JSON 格式，方便在电子表格或其他工具中进一步分析。",
+		"what_networks_supported": "支持哪些区块链网络？",
+		"networks_supported_explanation": "我们支持 Ethereum、Polygon、BSC、Base、Arbitrum 和 Optimism。您也可以添加自定义的 EVM 兼容网络。"
+	},
+	"seo": {
+		"page_title": "批量钱包余额筛查 - 快速找出有资产的地址 | BiuBiu Tools",
+		"page_description": "快速扫描和筛选多个地址的钱包余额。识别有余额的钱包，汇总代币持仓，导出结果为 CSV/JSON。",
+		"keywords": "钱包余额筛查，批量余额扫描，代币余额查询，加密货币组合，多钱包扫描，区块链余额，Web3 工具，ERC20 余额",
+		"webapp_name": "钱包余额筛查器",
+		"webapp_description": "快速筛查多个钱包的代币余额，找出有资产的地址，汇总统计持仓分布。",
+		"feature_1": "单次扫描最多 10 万个钱包地址",
+		"feature_2": "快速识别有余额和空钱包",
+		"feature_3": "汇总所有扫描钱包的总持仓",
+		"feature_4": "支持多个网络（Ethereum、Polygon、BSC、Base、Arbitrum、Optimism）",
+		"feature_5": "导出结果为 CSV 或 JSON",
+		"howto_name": "如何批量扫描钱包余额",
+		"howto_description": "扫描和筛选多个地址钱包余额的分步指南。",
+		"howto_tool_1": "Web3 钱包（MetaMask、WalletConnect 等）",
+		"howto_tool_2": "要扫描的钱包地址列表",
+		"step_1_name": "连接钱包",
+		"step_1_text": "点击「连接钱包」按钮并选择您的 Web3 钱包。这用于选择您要扫描的区块链网络。",
+		"step_1_description": "连接您的 Web3 钱包",
+		"step_2_name": "依赖检查",
+		"step_2_text": "验证区块链网络连接并确保 Multicall3 合约可访问。系统将自动检测和验证必要的组件。",
+		"step_2_description": "验证网络和合约",
+		"step_3_name": "选择代币",
+		"step_3_text": "选择您要查询余额的代币。可以选择原生代币（ETH、BNB、MATIC）和网络上任何可用的 ERC20 代币。",
+		"step_3_description": "选择要扫描的代币",
+		"step_4_name": "导入地址",
+		"step_4_text": "通过粘贴（每行一个）、上传 CSV/TXT 文件或手动输入来添加要扫描的钱包地址。单次最多可扫描 10 万个钱包。",
+		"step_4_description": "添加钱包地址",
+		"step_5_name": "扫描与结果",
+		"step_5_text": "点击「开始扫描」查询所有钱包的代币余额，实时显示进度，筛选有余额的钱包，并将结果导出为 CSV 或 JSON 格式。",
+		"step_5_description": "扫描并导出结果"
+	},
+	"step1": {
+		"content": {
+			"title": "选择网络",
+			"description": "选择要扫描余额的区块链网络",
+			"loading": "正在加载网络配置..."
+		},
+		"footer": {
+			"continue": "继续",
+			"hint": "连接钱包以继续"
+		}
+	},
+	"step3": {
+		"content": {
+			"title": "选择代币",
+			"description": "选择要在 {network} 上扫描的代币",
+			"description_fallback": "选择要扫描的代币",
+			"wallet_not_connected_title": "钱包未连接",
+			"wallet_not_connected_message": "请先连接钱包以选择代币",
+			"empty_message": "请至少选择一个代币进行扫描"
+		},
+		"sidebar": {
+			"selected_tokens_title": "已选代币",
+			"count_label": "代币数量",
+			"empty_hint": "请至少选择一个代币以继续"
+		},
+		"footer": {
+			"hint": "请至少选择一个代币以继续"
+		}
+	},
+	"step4": {
+		"import_method": {
+			"address": "地址",
+			"xpub": "扩展公钥"
+		},
+		"content": {
+			"title": "导入钱包地址",
+			"description": "添加要扫描代币余额的钱包地址",
+			"choose_method": "选择导入方式",
+			"address_placeholder": "在此粘贴钱包地址（每行一个）\n0x1234...\n0x5678...",
+			"wallet_list": {
+				"title": "钱包列表",
+				"count": "({count})",
+				"clear_all": "清空全部",
+				"empty": "暂未添加钱包"
+			}
+		},
+		"sidebar": {
+			"title": "汇总",
+			"description": "添加要扫描的钱包地址",
+			"total_label": "钱包总数",
+			"empty_hint": "暂未添加钱包"
+		},
+		"footer": {
+			"hint": "请至少添加一个钱包地址以继续"
+		},
+		"dialogs": {
+			"remove_wallet_title": "移除钱包",
+			"remove_wallet_message": "确定要移除此钱包吗？\n{address}",
+			"remove_button": "移除",
+			"clear_all_title": "清空所有钱包",
+			"clear_all_message": "确定要移除全部 {count} 个钱包吗？",
+			"clear_all_button": "清空全部",
+			"long_press_hint": "长按确认",
+			"cancel_button": "取消"
+		}
+	},
+	"step5": {
+		"title": "扫描与查看结果",
+		"description": "扫描代币余额并导出数据",
+		"start": "开始扫描",
+		"new_scan": "开始新扫描",
+		"info": "点击「开始扫描」查询所有配置钱包的代币余额。将使用多个 RPC 端点并行扫描以提高速度。",
+		"config": {
+			"network": "网络",
+			"wallets": "钱包数量",
+			"tokens": "代币数量",
+			"rpcs": "RPC 端点"
+		},
+		"resume": {
+			"title": "继续上次扫描？",
+			"info": "进度：{progress}%（{addresses} 个地址，{tokens} 种代币）",
+			"last_activity": "上次活动",
+			"continue": "继续",
+			"discard": "丢弃"
+		},
+		"scanning": {
+			"title": "正在扫描余额...",
+			"success": "已完成",
+			"failed": "失败",
+			"pending": "待处理",
+			"pause": "暂停"
+		},
+		"paused": {
+			"title": "扫描已暂停",
+			"message": "扫描已暂停。",
+			"resume": "继续",
+			"new_scan": "新扫描"
+		},
+		"completed": {
+			"banner": "扫描完成 - 已扫描 {count} 个钱包"
+		},
+		"export": {
+			"title": "导出结果",
+			"copied": "已复制！",
+			"copy_summary": "复制摘要"
+		},
+		"totals": {
+			"title": "持仓汇总",
+			"wallets": "{count} 个钱包",
+			"wallets_short": "个钱包"
+		},
+		"filter": {
+			"title": "筛选",
+			"reset": "重置",
+			"balance_status": "余额状态",
+			"status_all": "全部",
+			"status_has_balance": "有余额",
+			"status_no_balance": "无余额",
+			"token": "代币",
+			"token_all": "所有代币",
+			"balance_range": "余额范围",
+			"min": "最小",
+			"max": "最大",
+			"showing": "显示 {filtered} / {total}",
+			"total": "共 {count} 条"
+		},
+		"balances": {
+			"title": "钱包余额",
+			"address": "地址",
+			"path": "派生路径",
+			"label": "标签",
+			"results": "条结果",
+			"no_results": "未找到结果"
+		},
+		"error": {
+			"title": "扫描失败",
+			"unknown": "发生未知错误",
+			"retry": "重试扫描",
+			"no_network": "未选择网络",
+			"no_tokens": "未选择代币",
+			"no_wallets": "未添加钱包"
+		},
+		"sidebar": {
+			"title": "扫描与结果",
+			"description": "扫描钱包代币余额并查看结果",
+			"progress": "进度",
+			"total": "总计",
+			"tasks": "任务",
+			"failed": "失败",
+			"queries_failed": "次查询失败",
+			"logs": "实时日志",
+			"completed": "已完成",
+			"remaining": "剩余",
+			"paused": "已暂停",
+			"scan_results": "扫描结果",
+			"addresses_scanned": "个地址已扫描",
+			"wallets_scanned": "已扫描钱包",
+			"with_balance": "个地址有余额",
+			"success": "成功",
+			"wallets_to_scan": "待扫描钱包",
+			"tokens_selected": "已选代币",
+			"export": "导出",
+			"new_scan": "开始新扫描",
+			"ready": "准备扫描",
+			"wallets": "个钱包",
+			"tokens": "种代币",
+			"info_title": "正在做什么？",
+			"info_1": "正在查询区块链代币余额",
+			"info_2": "使用多个 RPC 并行查询",
+			"info_3": "自动重试失败的请求",
+			"tip_completed": "导出 Excel 用于高级分析，或导出 CSV 用于简单表格。",
+			"tip_scanning": "您可以关闭浏览器，进度会自动保存。",
+			"tip_idle": "大规模扫描可能需要一些时间，但可以随时暂停和恢复。"
+		},
+		"footer": {
+			"hint_idle": "点击「开始扫描」开始",
+			"hint_scanning": "正在扫描中...",
+			"hint_paused": "扫描已暂停。继续或开始新扫描。",
+			"hint_completed": "导出结果或开始新扫描",
+			"hint_error": "重试扫描或返回修复问题",
+			"new_scan": "开始新扫描",
+			"continue": "继续"
+		}
+	}
+}
