@@ -191,7 +191,13 @@
 						<!-- 状态图标和信息 -->
 						<StatusIcon size={20} class="status-icon {getStatusColor(task.status)}" />
 
-						<div class="task-info" onclick={() => onTaskClick?.(task)} role="button" tabindex="0">
+						<div
+							class="task-info"
+							onclick={() => onTaskClick?.(task)}
+							onkeydown={(e) => e.key === 'Enter' && onTaskClick?.(task)}
+							role="button"
+							tabindex="0"
+						>
 							<h3 class="task-name">{task.name}</h3>
 							<div class="task-meta">
 								<span class="task-status {getStatusColor(task.status)}">

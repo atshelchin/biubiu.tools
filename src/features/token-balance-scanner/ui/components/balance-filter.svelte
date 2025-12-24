@@ -104,10 +104,15 @@
 	<div class="filter-controls">
 		<!-- Balance Status -->
 		<div class="filter-group">
-			<label class="filter-label">
+			<label class="filter-label" for="balance-status-select">
 				{i18n.t('tools.token_balance_scanner.step5.filter.balance_status') || 'Balance Status'}
 			</label>
-			<select class="filter-select" value={filter.balanceStatus} onchange={handleStatusChange}>
+			<select
+				id="balance-status-select"
+				class="filter-select"
+				value={filter.balanceStatus}
+				onchange={handleStatusChange}
+			>
 				{#each balanceStatusOptions as option (option.value)}
 					<option value={option.value}>{option.label}</option>
 				{/each}
@@ -116,10 +121,15 @@
 
 		<!-- Token -->
 		<div class="filter-group">
-			<label class="filter-label">
+			<label class="filter-label" for="token-select">
 				{i18n.t('tools.token_balance_scanner.step5.filter.token') || 'Token'}
 			</label>
-			<select class="filter-select" value={filter.tokenId} onchange={handleTokenChange}>
+			<select
+				id="token-select"
+				class="filter-select"
+				value={filter.tokenId}
+				onchange={handleTokenChange}
+			>
 				{#each tokenOptions as option (option.value)}
 					<option value={option.value}>{option.label}</option>
 				{/each}
@@ -129,9 +139,9 @@
 		<!-- Balance Range (only when specific token selected) -->
 		{#if showRangeInputs}
 			<div class="filter-group range-group">
-				<label class="filter-label">
+				<span class="filter-label">
 					{i18n.t('tools.token_balance_scanner.step5.filter.balance_range') || 'Balance Range'}
-				</label>
+				</span>
 				<div class="range-inputs">
 					<input
 						type="text"
@@ -139,6 +149,7 @@
 						placeholder={i18n.t('tools.token_balance_scanner.step5.filter.min') || 'Min'}
 						value={filter.minBalance || ''}
 						oninput={handleMinBalanceChange}
+						aria-label={i18n.t('tools.token_balance_scanner.step5.filter.min') || 'Min'}
 					/>
 					<span class="range-separator">-</span>
 					<input
@@ -147,6 +158,7 @@
 						placeholder={i18n.t('tools.token_balance_scanner.step5.filter.max') || 'Max'}
 						value={filter.maxBalance || ''}
 						oninput={handleMaxBalanceChange}
+						aria-label={i18n.t('tools.token_balance_scanner.step5.filter.max') || 'Max'}
 					/>
 				</div>
 			</div>

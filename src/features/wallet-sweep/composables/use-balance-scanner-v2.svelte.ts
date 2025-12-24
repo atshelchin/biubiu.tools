@@ -208,7 +208,9 @@ export function useBalanceScannerV2() {
 				startedAt: state.startedAt,
 				lastActivityAt: state.lastActivityAt,
 				isPaused: state.isPaused,
-				pauseReason: state.pauseReason
+				pauseReason: state.pauseReason,
+				status: state.isPaused ? 'paused' : 'scanning',
+				hasDownloaded: false
 			});
 
 			// Save balances in batches

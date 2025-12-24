@@ -136,8 +136,13 @@
 	{:else}
 		{#each tasks() as task (task.id)}
 			{@const StatusIcon = getStatusIcon(task.status)}
-			<!-- svelte-ignore a11y_no_static_element_interactions a11y_click_events_have_key_events -->
-			<div class="task-card" onclick={() => handleTaskClick(task)}>
+			<div
+				class="task-card"
+				onclick={() => handleTaskClick(task)}
+				onkeydown={(e) => e.key === 'Enter' && handleTaskClick(task)}
+				role="button"
+				tabindex="0"
+			>
 				<div class="task-header">
 					<div class="task-title">
 						<StatusIcon size={20} />

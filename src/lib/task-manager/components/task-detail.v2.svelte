@@ -87,8 +87,20 @@
 </script>
 
 {#if isOpen && task}
-	<div class="modal-overlay" onclick={onClose} role="button" tabindex="-1">
-		<div class="modal-content" onclick={(e) => e.stopPropagation()} role="dialog">
+	<div
+		class="modal-overlay"
+		onclick={onClose}
+		onkeydown={(e) => e.key === 'Escape' && onClose()}
+		role="presentation"
+	>
+		<div
+			class="modal-content"
+			onclick={(e) => e.stopPropagation()}
+			onkeydown={(e) => e.stopPropagation()}
+			role="dialog"
+			aria-modal="true"
+			tabindex="-1"
+		>
 			<div class="modal-header">
 				<h2>{task.name}</h2>
 				<button class="btn-close" onclick={onClose} aria-label="关闭">

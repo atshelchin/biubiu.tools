@@ -6,6 +6,7 @@
 	 */
 	import { ChevronRight, ChevronDown, Circle, CheckCircle, XCircle, Pause } from '@lucide/svelte';
 	import type { Task } from '../types.v2';
+	import Self from './task-tree-node.svelte';
 
 	interface Props {
 		task: Task;
@@ -72,6 +73,7 @@
 	<div
 		class="node-header {getStatusClass(task.status)}"
 		onclick={handleClick}
+		onkeydown={(e) => e.key === 'Enter' && handleClick()}
 		role="button"
 		tabindex="0"
 	>
@@ -131,7 +133,7 @@
 	{#if isExpanded && task.children.length > 0}
 		<div class="children">
 			{#each task.children as child (child.id)}
-				<svelte:self task={child} depth={depth + 1} {onTaskClick} />
+				<Self task={child} depth={depth + 1} {onTaskClick} />
 			{/each}
 		</div>
 	{/if}

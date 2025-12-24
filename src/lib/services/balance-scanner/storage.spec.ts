@@ -47,6 +47,8 @@ describe('BalanceScannerStorage', () => {
 		startedAt: Date.now(),
 		lastActivityAt: Date.now(),
 		isPaused: false,
+		status: 'scanning',
+		hasDownloaded: false,
 		...overrides
 	});
 

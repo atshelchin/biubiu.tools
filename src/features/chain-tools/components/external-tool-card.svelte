@@ -213,6 +213,7 @@
 		color: var(--color-description-2);
 		display: -webkit-box;
 		-webkit-line-clamp: 2;
+		line-clamp: 2;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 	}
@@ -316,6 +317,7 @@
 		.tool-description {
 			font-size: var(--text-xs);
 			-webkit-line-clamp: 2;
+			line-clamp: 2;
 		}
 
 		.chains {

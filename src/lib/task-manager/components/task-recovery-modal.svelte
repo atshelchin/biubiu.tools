@@ -78,12 +78,16 @@
 </script>
 
 {#if isOpen}
-	<!-- svelte-ignore a11y_no_static_element_interactions a11y_click_events_have_key_events -->
-	<div class="modal-overlay" onclick={onClose}>
-		<!-- svelte-ignore a11y_click_events_have_key_events -->
+	<div
+		class="modal-overlay"
+		onclick={onClose}
+		onkeydown={(e) => e.key === 'Escape' && onClose()}
+		role="presentation"
+	>
 		<div
 			class="modal-content"
 			onclick={(e) => e.stopPropagation()}
+			onkeydown={(e) => e.stopPropagation()}
 			role="dialog"
 			aria-modal="true"
 			tabindex="-1"

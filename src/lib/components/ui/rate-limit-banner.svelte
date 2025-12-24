@@ -74,12 +74,6 @@
 		border-color: #ea580c;
 	}
 
-	.banner-icon {
-		font-size: 24px;
-		flex-shrink: 0;
-		margin-top: 2px;
-	}
-
 	.banner-content {
 		flex: 1;
 	}

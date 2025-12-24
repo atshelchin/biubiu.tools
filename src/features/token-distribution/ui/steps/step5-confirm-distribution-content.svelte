@@ -53,7 +53,10 @@
 
 	// Initialize the delegated executor composable (for delegated mode)
 	const delegatedExecutor = useDelegatedExecutor({
-		getSignTypedData: () => connectStore.signTypedData.bind(connectStore),
+		getSignTypedData: () => async (params) => {
+			const walletClient = await connectStore.getWalletClient();
+			return walletClient.signTypedData(params);
+		},
 		getSendTransaction: () => connectStore.sendTransaction.bind(connectStore),
 		getWaitForTransaction: () => connectStore.waitForTransaction.bind(connectStore)
 	});
@@ -193,11 +196,7 @@
 			return;
 		}
 
-		const result = await delegatedExecutor.authorize(distributionConfig, {
-			chainId: connectStore.currentChainId,
-			tokenSymbol: step3State.selectedToken?.symbol || 'TOKEN',
-			recipientCount: step4State.totalRecipients
-		});
+		const result = await delegatedExecutor.authorize(distributionConfig);
 
 		if (!result.success) {
 			alert(result.error);

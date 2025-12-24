@@ -115,7 +115,7 @@ const DEFAULT_BATCH_SIZE = 100;
 const DEFAULT_DEADLINE_DURATION = 60 * 60;
 
 interface UseDelegatedExecutorOptions {
-	getContractAddress: () => Address;
+	getContractAddress?: () => Address;
 	getSignTypedData: () => (params: {
 		domain: TypedDataDomain;
 		types: TypedData;
@@ -129,7 +129,7 @@ interface UseDelegatedExecutorOptions {
 		gas?: bigint;
 	}) => Promise<`0x${string}`>;
 	getWaitForTransaction: () => (hash: `0x${string}`) => Promise<{ status: 'success' | 'reverted' }>;
-	getReadContract: () => <T>(params: {
+	getReadContract?: () => <T>(params: {
 		address: Address;
 		abi: typeof TOKEN_DISTRIBUTION_ABI;
 		functionName: string;
@@ -239,6 +239,9 @@ export function useDelegatedExecutor(options: UseDelegatedExecutorOptions) {
 		isAuthorizing = true;
 
 		try {
+			if (!getContractAddress) {
+				return { success: false, error: 'Contract address getter not configured' };
+			}
 			const contractAddress = getContractAddress();
 			const signTypedData = getSignTypedData();
 
@@ -357,6 +360,9 @@ export function useDelegatedExecutor(options: UseDelegatedExecutorOptions) {
 			return { success: true };
 		}
 
+		if (!getContractAddress) {
+			return { success: false, error: 'Contract address getter not configured' };
+		}
 		const contractAddress = getContractAddress();
 		const sendTransaction = getSendTransaction();
 		const waitForTransaction = getWaitForTransaction();
@@ -555,6 +561,7 @@ export function useDelegatedExecutor(options: UseDelegatedExecutorOptions) {
 	 */
 	async function isBatchExecuted(batchId: number): Promise<boolean> {
 		if (!session) return false;
+		if (!getReadContract || !getContractAddress) return false;
 
 		const readContract = getReadContract();
 		const contractAddress = getContractAddress();
@@ -600,6 +607,8 @@ export function useDelegatedExecutor(options: UseDelegatedExecutorOptions) {
 	 * Get non-member fee from contract
 	 */
 	async function getNonMemberFee(): Promise<bigint> {
+		if (!getReadContract || !getContractAddress) return BigInt(0);
+
 		const readContract = getReadContract();
 		const contractAddress = getContractAddress();
 
@@ -625,28 +634,37 @@ export function useDelegatedExecutor(options: UseDelegatedExecutorOptions) {
 	}
 
 	/**
-	 * Import session from exported data
+	 * Import session from exported data (string) or StoredSession object
 	 */
-	function importSession(data: string): boolean {
+	function importSession(
+		data: string | { session: DelegatedSession; meta?: unknown; results?: unknown[] }
+	): boolean {
 		try {
-			const parsed = JSON.parse(data, (key, value) => {
-				// Convert bigint strings back to bigint for known fields
-				if (
-					typeof value === 'string' &&
-					[
-						'tokenId',
-						'totalAmount',
-						'totalBatches',
-						'deadline',
-						'value',
-						'createdAt',
-						'expiresAt'
-					].includes(key)
-				) {
-					return BigInt(value);
-				}
-				return value;
-			}) as DelegatedSession;
+			let parsed: DelegatedSession;
+
+			if (typeof data === 'string') {
+				parsed = JSON.parse(data, (key, value) => {
+					// Convert bigint strings back to bigint for known fields
+					if (
+						typeof value === 'string' &&
+						[
+							'tokenId',
+							'totalAmount',
+							'totalBatches',
+							'deadline',
+							'value',
+							'createdAt',
+							'expiresAt'
+						].includes(key)
+					) {
+						return BigInt(value);
+					}
+					return value;
+				}) as DelegatedSession;
+			} else {
+				// It's a StoredSession object
+				parsed = data.session;
+			}
 
 			// Validate session
 			if (!parsed.auth || !parsed.signature || !parsed.batches) {
@@ -661,13 +679,13 @@ export function useDelegatedExecutor(options: UseDelegatedExecutorOptions) {
 			session = parsed;
 
 			// Initialize step5 state
-			const completedBatches = parsed.batches.filter((b) => b.status === 'completed').length;
+			const completedBatchCount = parsed.batches.filter((b) => b.status === 'completed').length;
 			step5State.initSession(parsed.batches.length);
-			if (completedBatches > 0) {
+			if (completedBatchCount > 0) {
 				step5State.updateProgress(
-					completedBatches,
+					completedBatchCount,
 					parsed.status === 'completed' ? 'completed' : 'paused',
-					`${completedBatches}/${parsed.batches.length} batches completed`
+					`${completedBatchCount}/${parsed.batches.length} batches completed`
 				);
 			}
 
@@ -725,6 +743,14 @@ export function useDelegatedExecutor(options: UseDelegatedExecutorOptions) {
 		},
 		get errorMessage() {
 			return step5State.errorMessage;
+		},
+		get completedBatches() {
+			if (!session) return 0;
+			return session.batches.filter((b) => b.status === 'completed').length;
+		},
+		get pendingBatches() {
+			if (!session) return 0;
+			return session.batches.filter((b) => b.status === 'pending').length;
 		},
 
 		// Methods
