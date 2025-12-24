@@ -32,104 +32,116 @@ export const TELEGRAM_GROUP_LINK = 'https://t.me/+ABMpMG1islA4NTVl';
 export const toolsConfig: Tool[] = [
 	{
 		icon: SendHorizontal,
-		titleKey: 'one-to-many-transfer.title',
-		descriptionKey: 'one-to-many-transfer.description',
+		titleKey: 'home.one-to-many-transfer.title',
+		descriptionKey: 'home.one-to-many-transfer.description',
 		link: '/apps/one-to-many-transfer',
 		status: 'active',
 		color: '#F59E0B',
 		featureKeys: [
-			'one-to-many-transfer.seo.feature_3',
-			'one-to-many-transfer.seo.feature_4',
-			'one-to-many-transfer.seo.feature_5'
+			'home.one-to-many-transfer.features.0',
+			'home.one-to-many-transfer.features.1',
+			'home.one-to-many-transfer.features.2'
 		],
 		stage: 'alpha'
 	},
 	{
 		icon: ScanSearch,
-		titleKey: 'token-balance-scanner.title',
-		descriptionKey: 'token-balance-scanner.description',
+		titleKey: 'home.token-balance-scanner.title',
+		descriptionKey: 'home.token-balance-scanner.description',
 		link: '/apps/token-balance-scanner',
 		status: 'active',
 		color: '#3B82F6',
 		featureKeys: [
-			'token-balance-scanner.feature_1',
-			'token-balance-scanner.feature_2',
-			'token-balance-scanner.feature_3',
-			'token-balance-scanner.feature_4'
+			'home.token-balance-scanner.features.0',
+			'home.token-balance-scanner.features.1',
+			'home.token-balance-scanner.features.2',
+			'home.token-balance-scanner.features.3'
 		],
 		stage: 'alpha'
 	},
 	{
 		icon: ArrowRightLeft,
-		titleKey: 'wallet-sweep.title',
-		descriptionKey: 'wallet-sweep.description',
+		titleKey: 'home.wallet-sweep.title',
+		descriptionKey: 'home.wallet-sweep.description',
 		link: '/apps/wallet-sweep',
 		status: 'active',
 		color: '#10B981',
 		featureKeys: [
-			'wallet-sweep.feature_1',
-			'wallet-sweep.feature_2',
-			'wallet-sweep.feature_3',
-			'wallet-sweep.feature_4'
+			'home.wallet-sweep.features.0',
+			'home.wallet-sweep.features.1',
+			'home.wallet-sweep.features.2',
+			'home.wallet-sweep.features.3'
 		],
 		stage: 'beta'
 	},
 
 	{
 		icon: Rocket,
-		titleKey: 'contract-deployer.title',
-		descriptionKey: 'contract-deployer.description',
+		titleKey: 'home.contract-deployer.title',
+		descriptionKey: 'home.contract-deployer.description',
 		link: '/apps/contract-deployer',
 		status: 'active',
 		color: '#F59E0B',
 		featureKeys: [
-			'contract-deployer.feature_1',
-			'contract-deployer.feature_2',
-			'contract-deployer.feature_3'
+			'home.contract-deployer.features.0',
+			'home.contract-deployer.features.1',
+			'home.contract-deployer.features.2'
 		],
 		stage: 'alpha'
 	},
 	{
 		icon: Search,
-		titleKey: 'contract-events-scanner.title',
-		descriptionKey: 'contract-events-scanner.description',
+		titleKey: 'home.contract-events-scanner.title',
+		descriptionKey: 'home.contract-events-scanner.description',
 		link: '/apps/contract-events-scanner',
 		status: 'active',
 		color: '#A855F7',
 		featureKeys: [
-			'contract-events-scanner.feature_1',
-			'contract-events-scanner.feature_2',
-			'contract-events-scanner.feature_3'
+			'home.contract-events-scanner.features.0',
+			'home.contract-events-scanner.features.1',
+			'home.contract-events-scanner.features.2'
 		],
 		stage: 'alpha'
 	},
 	{
 		icon: Zap,
-		titleKey: 'call-master.title',
-		descriptionKey: 'call-master.description',
+		titleKey: 'home.call-master.title',
+		descriptionKey: 'home.call-master.description',
 		status: 'coming-soon',
 		color: '#8B5CF6',
-		featureKeys: ['call-master.feature_1', 'call-master.feature_2', 'call-master.feature_3'],
+		featureKeys: [
+			'home.call-master.features.0',
+			'home.call-master.features.1',
+			'home.call-master.features.2'
+		],
 		stage: 'coming-soon'
 	},
 	{
 		icon: KeyRound,
-		titleKey: 'wallet-generator.title',
-		descriptionKey: 'wallet-generator.description',
+		titleKey: 'home.wallet-generator.title',
+		descriptionKey: 'home.wallet-generator.description',
 		link: '/apps/wallet-generator',
 		status: 'active',
 		color: '#8B5CF6',
-		features: ['HD Path Support', 'Multiple Chains', 'Export to EXCEL/CSV/JSON'],
+		featureKeys: [
+			'home.wallet-generator.features.0',
+			'home.wallet-generator.features.1',
+			'home.wallet-generator.features.2'
+		],
 		stage: 'alpha'
 	},
 	{
 		icon: TrendingUp,
-		titleKey: 'dex-moonshot-trader.title',
-		descriptionKey: 'dex-moonshot-trader.description',
+		titleKey: 'home.dex-moonshot-trader.title',
+		descriptionKey: 'home.dex-moonshot-trader.description',
 		link: '/apps/dex-moonshot-trader',
 		status: 'active',
 		color: '#EF4444',
-		features: ['Buy & Sell Tokens', 'Adjustable Slippage', 'Multi-Chain Support'],
+		featureKeys: [
+			'home.dex-moonshot-trader.features.0',
+			'home.dex-moonshot-trader.features.1',
+			'home.dex-moonshot-trader.features.2'
+		],
 		stage: 'alpha'
 	},
 	{
@@ -148,46 +160,58 @@ export const toolsConfig: Tool[] = [
 
 	{
 		icon: Sparkles,
-		titleKey: 'token-deployer.title',
-		descriptionKey: 'token-deployer.description',
+		titleKey: 'home.token-deployer.title',
+		descriptionKey: 'home.token-deployer.description',
 		link: '/apps/token-deployer',
 		status: 'active',
 		color: '#10B981',
-		features: ['Advanced Features', 'Tax & Anti-Bot', 'Instant Deploy'],
+		featureKeys: [
+			'home.token-deployer.features.0',
+			'home.token-deployer.features.1',
+			'home.token-deployer.features.2'
+		],
 		stage: 'alpha'
 	},
 
 	{
 		icon: Image,
-		titleKey: 'nft-deployer.title',
-		descriptionKey: 'nft-deployer.description',
+		titleKey: 'home.nft-deployer.title',
+		descriptionKey: 'home.nft-deployer.description',
 		link: '/apps/nft-deployer',
 		status: 'active',
 		color: '#EC4899',
-		featureKeys: ['nft-deployer.feature_1', 'nft-deployer.feature_2', 'nft-deployer.feature_3'],
+		featureKeys: [
+			'home.nft-deployer.features.0',
+			'home.nft-deployer.features.1',
+			'home.nft-deployer.features.2'
+		],
 		stage: 'alpha'
 	},
 	{
 		icon: Globe,
-		titleKey: 'chainlist.title',
-		descriptionKey: 'chainlist.description',
+		titleKey: 'home.chainlist.title',
+		descriptionKey: 'home.chainlist.description',
 		link: '/apps/chainlist',
 		status: 'active',
 		color: '#6366F1',
-		featureKeys: ['chainlist.feature_1', 'chainlist.feature_2', 'chainlist.feature_3'],
+		featureKeys: [
+			'home.chainlist.features.0',
+			'home.chainlist.features.1',
+			'home.chainlist.features.2'
+		],
 		stage: 'alpha'
 	},
 	{
 		icon: Link2,
-		titleKey: 'chain-tools.title',
-		descriptionKey: 'chain-tools.subtitle',
+		titleKey: 'home.chain-tools.title',
+		descriptionKey: 'home.chain-tools.description',
 		link: '/apps/chain-tools',
 		status: 'active',
 		color: '#06B6D4',
 		featureKeys: [
-			'chain-tools.seo.feature_1',
-			'chain-tools.seo.feature_2',
-			'chain-tools.seo.feature_3'
+			'home.chain-tools.features.0',
+			'home.chain-tools.features.1',
+			'home.chain-tools.features.2'
 		],
 		stage: 'new'
 	}

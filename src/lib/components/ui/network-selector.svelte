@@ -105,12 +105,12 @@
 	<!-- Empty State: No Networks Enabled -->
 	<div class="empty-state">
 		<div class="empty-icon">🔗</div>
-		<h3>{i18n.t('wallet-sweep.step1.content.no_networks_enabled')}</h3>
-		<p>{i18n.t('wallet-sweep.step1.content.enable_network_prompt')}</p>
+		<h3>{i18n.t('common.network_selector.no_networks_enabled')}</h3>
+		<p>{i18n.t('common.network_selector.enable_network_prompt')}</p>
 		{#if hasNetworkManagement}
 			<button class="settings-button" onclick={openNetworkSettings}>
 				<Settings size={20} />
-				{i18n.t('wallet-sweep.step1.content.open_network_settings')}
+				{i18n.t('common.network_selector.open_network_settings')}
 			</button>
 		{/if}
 	</div>
@@ -127,8 +127,8 @@
 
 		{#if showAddButton && hasNetworkManagement}
 			<AddCard
-				title={i18n.t('wallet-sweep.step1.content.network_not_found')}
-				subtitle={i18n.t('wallet-sweep.step1.content.add_custom_network')}
+				title={i18n.t('common.network_selector.network_not_found')}
+				subtitle={i18n.t('common.network_selector.add_custom_network')}
 				onclick={openNetworkSettings}
 			/>
 		{/if}

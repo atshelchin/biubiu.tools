@@ -17,12 +17,13 @@
 	const searchQuery = $derived(searchContext?.query || '');
 
 	// Import both locales for bilingual search
-	import enChainTools from '@/i18n/locales/en/chain-tools.json';
-	import zhChainTools from '@/i18n/locales/zh/chain-tools.json';
+	import enChainTools from '@/i18n/locales/en/routes/chain-tools.json';
+	import zhChainTools from '@/i18n/locales/zh/routes/chain-tools.json';
 
 	const enLocale = { chain_tools: enChainTools };
 	const zhLocale = { chain_tools: zhChainTools };
 
+	console.log(890, i18n.getLoadedNamespaces());
 	/**
 	 * Tokenize search query
 	 */

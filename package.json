@@ -21,7 +21,8 @@
 		"test:e2e": "playwright test",
 		"batch-transfer": "bun run scripts/batch-transfer.ts",
 		"batch-transfer-erc20": "bun run scripts/batch-transfer-erc20.ts",
-		"sitemap": "bun run scripts/generate-sitemaps.ts"
+		"sitemap": "bun run scripts/generate-sitemaps.ts",
+		"generate-types": "bunx @shelchin/i18n generate-types --dir src/i18n/locales --output src/i18n/locales/i18n.d.ts "
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",
@@ -65,7 +66,7 @@
 		"@scure/bip32": "^2.0.1",
 		"@scure/bip39": "^2.0.1",
 		"@shelchin/ethereum-connectors": "0.0.1-dev.20251106040039.5fa58a7",
-		"@shelchin/i18n": "2.0.0",
+		"@shelchin/i18n": "2.1.5",
 		"buffer": "^6.0.3",
 		"canvas-confetti": "^1.9.4",
 		"class-variance-authority": "^0.7.1",

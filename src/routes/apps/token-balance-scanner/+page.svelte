@@ -17,6 +17,11 @@
 	let { data }: { data: PageData } = $props();
 	const i18n = useI18n();
 
+	// Inject translations for client-side navigation (before any $t() calls in template)
+	if (data.translations) {
+		i18n._updateLocale(i18n.locale, data.translations);
+	}
+
 	// Session management state
 	let showSessionModal = $state(false);
 	let activeSessions = $state<ScanSession[]>([]);

@@ -170,8 +170,8 @@
 							{network.rpcEndpoints.length}
 
 							{network.rpcEndpoints.length === 1
-								? t('wallet.network_settings.rpc_endpoint')
-								: t('wallet.network_settings.rpc_endpoints_plural')}
+								? i18n.t('wallet.network_settings.rpc_endpoint')
+								: i18n.t('wallet.network_settings.rpc_endpoints_plural')}
 						</div>
 						{#if network.blockExplorer}
 							<a

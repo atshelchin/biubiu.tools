@@ -30,7 +30,8 @@
       "Bash(bunx eslint:*)",
       "Bash(git remote get-url:*)",
       "Bash(bun -e:*)",
-      "Bash(bun x vite-bundle-visualizer:*)"
+      "Bash(bun x vite-bundle-visualizer:*)",
+      "Bash(npx i18n:*)"
     ],
     "deny": [],
     "ask": []

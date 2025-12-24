@@ -7,6 +7,58 @@
 const localeModules = import.meta.glob('./locales/**/*.json', { eager: true });
 
 type TranslationData = Record<string, unknown>;
+type NamespaceData = Record<string, Record<string, unknown>>;
+
+/**
+ * Extract namespace from file path
+ * Supports both flat structure (locales/en/common.json) and nested structure (locales/en/routes/wallet-sweep.json)
+ * @param path - File path like ./locales/en/common.json or ./locales/en/routes/wallet-sweep.json
+ * @param locale - The locale to match
+ * @returns namespace name or null if not matching
+ */
+function extractNamespaceFromPath(path: string, locale: string): string | null {
+	// Match pattern: /locales/{locale}/[subdir/]{namespace}.json
+	const match = path.match(new RegExp(`/locales/${locale}/(.+)\\.json$`));
+	if (!match) return null;
+
+	// Get the last part of the path as namespace (e.g., "routes/wallet-sweep" -> "wallet-sweep")
+	const fullPath = match[1];
+	const parts = fullPath.split('/');
+	return parts[parts.length - 1];
+}
+
+/**
+ * Load specific namespaces for a locale (for SSR preloading)
+ * @param locale - The locale to load (e.g., 'en', 'zh')
+ * @param namespaces - Array of namespace names to load
+ * @returns Object with namespace data
+ */
+export function loadNamespaces(locale: string, namespaces: string[]): NamespaceData {
+	const result: NamespaceData = {};
+
+	for (const [path, module] of Object.entries(localeModules)) {
+		const namespace = extractNamespaceFromPath(path, locale);
+		if (namespace && namespaces.includes(namespace)) {
+			result[namespace] = (module as { default: Record<string, unknown> }).default;
+		}
+	}
+
+	return result;
+}
+
+/**
+ * Get preloaded namespace data for client-side injection
+ * Used in +page.ts to pass translations to components for client-side navigation
+ * @param locale - The locale to load
+ * @param namespaces - Array of namespace names to load
+ * @returns Object in the format { locale: { namespace: data } }
+ */
+export function getPreloadedTranslations(
+	locale: string,
+	namespaces: string[]
+): Record<string, NamespaceData> {
+	return { [locale]: loadNamespaces(locale, namespaces) };
+}
 type InterpolationParams = Record<string, string | number>;
 interface DefaultValueParams {
 	defaultValue: string;
@@ -48,10 +100,8 @@ export function createServerT(locale: string): (key: string, params?: Translatio
 	const translations: Record<string, TranslationData> = {};
 
 	for (const [path, module] of Object.entries(localeModules)) {
-		// Path format: ./locales/en/common.json
-		const match = path.match(/\/locales\/([^/]+)\/([^/]+)\.json$/);
-		if (match && match[1] === locale) {
-			const namespace = match[2];
+		const namespace = extractNamespaceFromPath(path, locale);
+		if (namespace) {
 			translations[namespace] = (module as { default: TranslationData }).default;
 		}
 	}

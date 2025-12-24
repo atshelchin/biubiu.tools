@@ -17,15 +17,39 @@
 	import { localeMetas } from '../i18n/i18n.svelte';
 	let { children, data } = $props<{ children: import('svelte').Snippet; data: LayoutData }>();
 
+	// Initialize i18n with preloaded translations from SSR
 	const i18n = initI18n({
 		locale: data.locale,
 		defaultLocale: 'en',
-		preloadedTranslations: data.translations,
-		localeMetas,
-		devMode: import.meta.env.DEV
+		devMode: import.meta.env.DEV,
+		preloadedTranslations: data.preloadedTranslations,
+		localeMetas: data.localeMetas
 	});
-	registerGlobLoaders(import.meta.glob('../i18n/locales/**/*.json'), i18n);
+
+	// Register all locale files using Vite glob import (for client-side lazy loading)
+	const modules = import.meta.glob('../i18n/locales/**/*.json');
+	registerGlobLoaders(modules, i18n);
+
+	// Set context for child components
 	setI18nContext(i18n);
+
+	// Watch for locale changes from navigation and update i18n
+	$effect(() => {
+		if (data.locale !== i18n.locale) {
+			// Update locale with new translations when navigating to a different locale
+			i18n._updateLocale(data.locale, data.preloadedTranslations);
+		}
+	});
+
+	// Override setLocale to use URL-based navigation
+	i18n.setLocale = async (locale: string) => {
+		// Navigate to the new locale URL
+		const currentPath = page.url.pathname;
+		const pathWithoutLocale = currentPath.replace(/^\/[a-z]{2}(?=\/|$)/, '');
+		const newPath = `/${locale}${pathWithoutLocale || '/'}`;
+		// eslint-disable-next-line svelte/no-navigation-without-resolve -- dynamic locale URL
+		await goto(newPath);
+	};
 
 	// Initialize cookie consent store (must be before theme store)
 	createCookieConsentStore();

@@ -1,0 +1,103 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"one-to-many-transfer": {
+		"title": "One-to-Many Transfer",
+		"description": "Send tokens & NFTs from one wallet to multiple addresses in batch",
+		"features": [
+			"Send native tokens (ETH, BNB, MATIC), ERC20 tokens, and NFTs (ERC721, ERC1155)",
+			"Equal distribution or custom amounts per recipient",
+			"Import recipients via CSV, paste, or manual entry"
+		]
+	},
+	"token-balance-scanner": {
+		"title": "Wallet Balance Checker",
+		"description": "Quickly filter wallets with balances, identify non-empty addresses, and aggregate token holdings across multiple wallets",
+		"features": [
+			"Scan up to 100K addresses",
+			"Filter wallets with balances",
+			"Aggregate holdings statistics",
+			"Export to EXCEL/CSV/JSON"
+		]
+	},
+	"wallet-sweep": {
+		"title": "Wallet Sweep",
+		"description": "Transfer balances from multiple wallets to one address",
+		"features": [
+			"Complete balance sweep, zero dust left",
+			"Large-scale automation, no per-tx confirmation",
+			"No native token required in source wallets",
+			"Permissionless on any EVM chain"
+		]
+	},
+	"contract-deployer": {
+		"title": "Contract Deployer",
+		"description": "Deploy smart contracts deterministically using CREATE2 proxy",
+		"features": [
+			"Deterministic deployment across all chains",
+			"Same contract address on every network",
+			"Simple and developer-friendly interface"
+		]
+	},
+	"contract-events-scanner": {
+		"title": "Contract Events Scanner",
+		"description": "Scan, analyze and export smart contract events from blockchain",
+		"features": [
+			"Scan historical event logs from any contract",
+			"Custom event filters and block range selection",
+			"Export event data to CSV, JSON formats"
+		]
+	},
+	"call-master": {
+		"title": "Call Master",
+		"description": "Execute smart contract calls with advanced features and batch operations.",
+		"features": ["Multi-call Support", "ABI Management", "Transaction Builder"]
+	},
+	"wallet-generator": {
+		"title": "Wallet Factory",
+		"description": "Generate multiple wallets from mnemonic, xpub, or secret text with HD path support",
+		"features": ["HD Path Support", "Multiple Chains", "Export to EXCEL/CSV/JSON"]
+	},
+	"dex-moonshot-trader": {
+		"title": "DEX Moonshot Trader",
+		"description": "Buy and sell tokens from DEXScreener Moonshot with easy web interface",
+		"features": ["Buy & Sell Tokens", "Adjustable Slippage", "Multi-Chain Support"]
+	},
+	"token-deployer": {
+		"title": "Token Deployer",
+		"description": "Create and deploy ERC20 tokens with custom parameters in minutes",
+		"features": ["Advanced Features", "Tax & Anti-Bot", "Instant Deploy"]
+	},
+	"nft-deployer": {
+		"title": "NFT Deployer",
+		"description": "Deploy NFT smart contracts with ERC-721, ERC-721A, and ERC-1155 standards",
+		"features": [
+			"Support ERC-721, ERC-721A, ERC-1155 standards",
+			"Configurable royalties, supply, mint price",
+			"Advanced features: pausable, burnable, revealable"
+		]
+	},
+	"chainlist": {
+		"title": "Chain List",
+		"description": "Search and add EVM-compatible blockchain networks to your wallet",
+		"features": [
+			"Search by Chain ID, Name, Symbol",
+			"Real-time RPC Testing",
+			"One-click Add to Wallet"
+		]
+	},
+	"chain-tools": {
+		"title": "Chain Tools",
+		"description": "Discover quality Web3 tools and DApps",
+		"features": [
+			"Browse 600+ curated Web3 tools",
+			"Filter by category: DeFi, NFT, Analytics, Security",
+			"Search by name, tag, or blockchain"
+		]
+	}
+}

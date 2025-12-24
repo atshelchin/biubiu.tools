@@ -1,0 +1,95 @@
+{
+	"_meta": {
+		"code": "zh",
+		"name": "中文",
+		"englishName": "Chinese",
+		"direction": "ltr",
+		"flag": "🇨🇳"
+	},
+	"one-to-many-transfer": {
+		"title": "一对多批量转账",
+		"description": "从单个钱包向多地址分发代币和 NFT，支持所有主流资产标准",
+		"features": [
+			"发送原生代币（ETH、BNB、MATIC）、ERC20代币和NFT（ERC721、ERC1155）",
+			"等额分发或自定义每个收款人的金额",
+			"通过CSV、粘贴或手动输入导入收款地址"
+		]
+	},
+	"token-balance-scanner": {
+		"title": "钱包余额筛查器",
+		"description": "快速筛查多个钱包的代币余额，找出有资产的地址，汇总统计持仓分布",
+		"features": [
+			"支持 10 万地址批量查询",
+			"快速筛选有余额的钱包",
+			"汇总统计持仓分布",
+			"导出 EXCEL/CSV/JSON"
+		]
+	},
+	"wallet-sweep": {
+		"title": "钱包归集",
+		"description": "将多个钱包的余额一键转移到目标地址",
+		"features": [
+			"彻底清空余额，不留尾巴",
+			"大批量自动化，无需逐笔确认",
+			"被归集钱包无需持有原生币",
+			"无许可支持任意 EVM 链"
+		]
+	},
+	"contract-deployer": {
+		"title": "合约部署器",
+		"description": "使用 CREATE2 代理进行确定性智能合约部署",
+		"features": ["跨链确定性部署", "所有网络相同合约地址", "简洁开发者友好界面"]
+	},
+	"contract-events-scanner": {
+		"title": "智能合约事件扫描",
+		"description": "扫描、分析和导出区块链智能合约事件",
+		"features": [
+			"扫描任意合约的历史事件日志",
+			"支持自定义事件过滤和区块范围",
+			"导出事件数据为 CSV、JSON 格式"
+		]
+	},
+	"call-master": {
+		"title": "调用大师",
+		"description": "执行智能合约调用，支持高级功能和批量操作。",
+		"features": ["多重调用支持", "ABI 管理", "交易构建器"]
+	},
+	"wallet-generator": {
+		"title": "钱包工厂",
+		"description": "从助记词、xpub 或秘密文本生成多个钱包，支持 HD 路径",
+		"features": ["HD 路径支持", "多链支持", "导出 EXCEL/CSV/JSON"]
+	},
+	"dex-moonshot-trader": {
+		"title": "操 DEXScreener Moonshot",
+		"description": "为 DEXScreener Moonshot 代币提供简单的买卖交易界面",
+		"features": ["代币买卖", "滑点调整", "多链支持"]
+	},
+	"token-deployer": {
+		"title": "代币部署器",
+		"description": "快速创建和部署自定义参数的 ERC20 代币",
+		"features": ["高级功能", "税费与反机器人", "即时部署"]
+	},
+	"nft-deployer": {
+		"title": "NFT 部署器",
+		"description": "部署 NFT 智能合约，支持 ERC-721、ERC-721A 和 ERC-1155 标准",
+		"features": [
+			"支持 ERC-721、ERC-721A、ERC-1155 标准",
+			"可配置版税、供应量、铸造价格",
+			"支持暂停、销毁、揭示等高级功能"
+		]
+	},
+	"chainlist": {
+		"title": "链列表",
+		"description": "搜索并添加 EVM 兼容的区块链网络到您的钱包",
+		"features": ["按 Chain ID、名称、符号搜索", "实时 RPC 测试", "一键添加到钱包"]
+	},
+	"chain-tools": {
+		"title": "链上工具集",
+		"description": "发现优质的 Web3 工具和 DApp",
+		"features": [
+			"浏览 600+ 精选 Web3 工具",
+			"按分类筛选：DeFi、NFT、数据分析、安全",
+			"按名称、标签或区块链搜索"
+		]
+	}
+}

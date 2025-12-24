@@ -1,6 +1,6 @@
 import type { PageLoad } from './$types';
 import { createWebAppData, createHowToData, type HowToStepData } from '$lib/utils/structured-data';
-import { createServerT } from '$i18n/server';
+import { createServerT, getPreloadedTranslations } from '$i18n/server';
 import { extractLocaleFromPathname } from '$utils/common';
 
 export const load: PageLoad = ({ url }) => {
@@ -76,6 +76,9 @@ export const load: PageLoad = ({ url }) => {
 		fr: 'fr_FR'
 	};
 
+	// Preload translations for client-side navigation
+	const translations = getPreloadedTranslations(locale, ['token-balance-scanner']);
+
 	return {
 		meta: {
 			title: t('token-balance-scanner.seo.page_title'),
@@ -87,6 +90,7 @@ export const load: PageLoad = ({ url }) => {
 			locale: seoLocaleMap[locale] || 'en_US'
 		},
 		steps,
-		structuredData: [webAppData, howToData]
+		structuredData: [webAppData, howToData],
+		translations
 	};
 };

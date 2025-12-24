@@ -73,5 +73,12 @@
 		"beta": "公测版",
 		"stable": "稳定版",
 		"new": "新推出"
+	},
+	"network_selector": {
+		"no_networks_enabled": "没有启用的网络",
+		"enable_network_prompt": "请至少启用一个网络以继续。",
+		"open_network_settings": "打开网络设置",
+		"network_not_found": "找不到网络？",
+		"add_custom_network": "添加自定义网络"
 	}
 }

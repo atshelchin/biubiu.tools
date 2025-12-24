@@ -1,42 +1,25 @@
 import type { LayoutServerLoad } from './$types.js';
-import { extractLocaleFromPathname, extractLocaleFromCookie } from '$utils/common';
+import type { LocaleData } from '@shelchin/i18n';
+import { createServerLoader } from '@shelchin/i18n';
 
-const supportedLocales = ['en', 'zh'];
 
-// Eager load all translations for SSR
-const localeModules = import.meta.glob('../i18n/locales/**/*.json', { eager: true });
-
-function loadTranslationsForLocale(locale: string): Record<string, Record<string, unknown>> {
-	const translations: Record<string, Record<string, unknown>> = {};
-
-	for (const [path, module] of Object.entries(localeModules)) {
-		// Path format: ../i18n/locales/en/common.json
-		const match = path.match(/\/locales\/([^/]+)\/([^/]+)\.json$/);
-		if (match && match[1] === locale) {
-			const namespace = match[2];
-			translations[namespace] = (module as { default: Record<string, unknown> }).default;
-		}
+// Auto-scan all locale files and create server loader
+const { load: i18nLoad, localeMetas } = createServerLoader(
+	import.meta.glob<{ default: LocaleData }>('../i18n/locales/**/*.json', { eager: true }),
+	{
+		defaultLocale: 'en',
+		baseNamespaces: ['common', 'components', 'cookie-consent', 'faqs', 'pricing', 'referral', 'security-scanner', 'tools', 'wallet-connection', 'wallet'],
+		homeNamespace: 'home'
 	}
-
-	return translations;
-}
+);
 
 export const load: LayoutServerLoad = async ({ cookies, url }) => {
-	const detectedLocale =
-		extractLocaleFromPathname(url.pathname) || extractLocaleFromCookie(cookies) || 'en';
-
-	const locale = supportedLocales.includes(detectedLocale) ? detectedLocale : 'en';
-
-	// Preload translations for SSR - format: { locale: { namespace: data } }
-	const namespaceData = loadTranslationsForLocale(locale);
-	const translations = { [locale]: namespaceData };
-
+	const data = await i18nLoad({ url, cookies });
 	// Read theme from cookie, default to 'light'
 	const theme = (cookies.get('theme') || 'light') as 'light' | 'dark';
 
 	return {
-		locale,
-		translations,
+		...data,
 		theme
 	};
 };
