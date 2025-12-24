@@ -18,9 +18,10 @@ import {
 export { calculateCheckSummary, KNOWN_CONTRACTS };
 
 /**
- * Translation function type
+ * Translation function type - use keyof TranslationKeys for type safety
  */
-type TranslateFn = (key: string, params?: Record<string, string | number>) => string;
+import type { TranslationKeys } from '@shelchin/i18n';
+type TranslateFn = (key: keyof TranslationKeys, params?: Record<string, string | number>) => string;
 
 /**
  * Run all dependency checks for nft-deployer

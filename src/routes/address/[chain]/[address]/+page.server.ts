@@ -11,6 +11,7 @@ import type { LabeledAddress, NameRecord, Entity } from '@/features/address/type
 import { isAddress, getAddress as toChecksumAddress } from 'viem';
 import { createT } from '$i18n/translations';
 import { extractLocaleFromPathname } from '$utils/common';
+import type { TranslationKeys } from '@shelchin/i18n';
 
 export interface AddressDetailPageData {
 	address: LabeledAddress;
@@ -101,7 +102,9 @@ export const load: PageServerLoad = (event): AddressDetailPageData => {
 
 	// Build SEO metadata
 	const chainName = CHAIN_META[chainId].name;
-	const labelText = address.labels.map((l) => t(`address.labels.${l}`)).join(', ');
+	const labelText = address.labels
+		.map((l) => t(`address.labels.${l}` as keyof TranslationKeys))
+		.join(', ');
 
 	const title = `${address.name} | ${entity.name} - ${chainName} Address | BiuBiu Tools`;
 	const description = t('address.seo.detail_description', {

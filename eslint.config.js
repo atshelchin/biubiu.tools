@@ -26,7 +26,9 @@ export default ts.config(
 			'no-undef': 'off',
 			// Allow {@html} for SEO structured data (JSON-LD)
 			// This is safe when used with server-generated JSON.stringify()
-			'svelte/no-at-html-tags': 'off'
+			'svelte/no-at-html-tags': 'off',
+			// Disable non-existent rule to avoid "Definition not found" errors
+			'svelte/no-navigation-without-resolve': 'off'
 		}
 	},
 	{

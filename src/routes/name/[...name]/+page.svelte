@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n';
+	import { useI18n, type TranslationKeys } from '@shelchin/i18n';
 	import {
 		ArrowLeft,
 		Copy,
@@ -198,7 +198,7 @@
 						<div class="registration-item">
 							<span class="registration-label">{i18n.t('name.registration_status')}</span>
 							<span class="registration-status status-{data.name.registrationStatus}">
-								{i18n.t('name.status.' + data.name.registrationStatus)}
+								{i18n.t(('name.status.' + data.name.registrationStatus) as keyof TranslationKeys)}
 							</span>
 						</div>
 					{/if}
@@ -394,7 +394,7 @@
 	<footer class="data-source">
 		<p>
 			{i18n.t('address.data_source')}:
-			{i18n.t('address.source_' + data.name.source)}
+			{i18n.t(('address.source_' + data.name.source) as keyof TranslationKeys)}
 			· {i18n.t('address.updated')}: {data.name.updatedAt}
 		</p>
 	</footer>

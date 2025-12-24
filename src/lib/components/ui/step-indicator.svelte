@@ -98,7 +98,7 @@
 </script>
 
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n';
+	import { useI18n, type TranslationKeys } from '@shelchin/i18n';
 
 	interface Props {
 		manager: StepManager;
@@ -154,7 +154,7 @@
 			<!-- 步骤标签 -->
 			<div class="step-label">
 				<div class="step-title">
-					{manager.useI18nKeys ? i18n.t(step.label) : step.label}
+					{manager.useI18nKeys ? i18n.t(step.label as keyof TranslationKeys) : step.label}
 				</div>
 			</div>
 

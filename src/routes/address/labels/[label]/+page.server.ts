@@ -5,6 +5,7 @@ import { LABEL_META } from '@/features/address/types';
 import type { LabeledAddress, AddressLabel } from '@/features/address/types';
 import { createT } from '$i18n/translations';
 import { extractLocaleFromPathname } from '$utils/common';
+import type { TranslationKeys } from '@shelchin/i18n';
 
 export interface LabelPageData {
 	label: AddressLabel;
@@ -44,7 +45,7 @@ export const load: PageServerLoad = (event): LabelPageData => {
 	const image = `${url.origin}/og-address.png`;
 
 	// Get translated label name
-	const labelName = t(`address.labels.${labelParam}`);
+	const labelName = t(`address.labels.${labelParam}` as keyof TranslationKeys);
 
 	// Build SEO metadata
 	const title = `${labelName} Addresses - Blockchain Address Directory | BiuBiu Tools`;

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ExternalLink } from '@lucide/svelte';
-	import { useI18n } from '@shelchin/i18n';
+	import { useI18n, type TranslationKeys } from '@shelchin/i18n';
 	import type { ExternalTool } from '../types';
 	import { getCategoryById } from '../data/categories';
 
@@ -38,7 +38,7 @@
 	<!-- Content -->
 	<div class="content">
 		<h3 class="tool-name">{tool.name}</h3>
-		<p class="tool-description">{i18n.t(tool.descriptionKey)}</p>
+		<p class="tool-description">{i18n.t(tool.descriptionKey as keyof TranslationKeys)}</p>
 
 		<!-- Tags -->
 		{#if tool.chains && tool.chains.length > 0}
@@ -57,7 +57,7 @@
 	<div class="card-footer">
 		{#if category}
 			<span class="category-badge" style="--category-color: {category.color}">
-				{i18n.t(category.labelKey)}
+				{i18n.t(category.labelKey as keyof TranslationKeys)}
 			</span>
 		{/if}
 		<span class="visit-link">

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n';
+	import { useI18n, type TranslationKeys } from '@shelchin/i18n';
 	import { step3State } from '@/features/wallet-sweep/stores/step3-state.svelte';
 	import { step4State } from '@/features/wallet-sweep/stores/step4-state.svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
@@ -193,7 +193,7 @@
 		);
 
 		if (validationError) {
-			alert(i18n.t(validationError));
+			alert(i18n.t(validationError as keyof TranslationKeys));
 			return;
 		}
 

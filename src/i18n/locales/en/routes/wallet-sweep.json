@@ -98,7 +98,13 @@
 			"beginner_tips": "Tips",
 			"tip1": "✅ Make sure you selected the correct network (choose where your tokens are)",
 			"tip2": "⛽ Ensure you have enough native tokens to pay fees",
-			"tip3": "🌍 Supports any EVM-compatible network - you can add any chain"
+			"tip3": "🌍 Supports any EVM-compatible network - you can add any chain",
+			"what_is_network": "What is a blockchain network?",
+			"network_explanation": "A blockchain network is a public ledger system that records who owns what tokens and all transfers. Ethereum, BSC, and Polygon are different ledgers, each independent and separate.",
+			"what_is_wallet": "What is a wallet?",
+			"wallet_explanation": "A Web3 wallet isn't where money is stored - it's the key to manage your blockchain account. Your funds are recorded on the blockchain ledger, and the wallet proves you own the account. Popular: MetaMask, Coinbase Smart Wallet.",
+			"what_is_native_token": "What is a native token?",
+			"native_token_explanation": "Native tokens are used to pay miners who process your transactions. Ethereum uses ETH, BSC uses BNB, Polygon uses POL. Miners record your transaction on the blockchain ledger, and you pay them this fee."
 		}
 	},
 	"step2": {
@@ -404,6 +410,7 @@
 			},
 			"rate_limit": {
 				"title": "All RPC Endpoints Rate Limited",
+				"error_generic": "Scan paused: {reason}",
 				"error_native": "Rate limit triggered while scanning native token balances (batch {batch}/{total})",
 				"error_erc20": "Rate limit triggered while scanning token {token} balances (batch {batch}/{total})",
 				"hint": "💡 Please click the button below to add new RPC endpoints, or wait for existing RPCs to recover before retrying. Adding multiple RPCs enables automatic rotation to avoid frequent rate limits.",

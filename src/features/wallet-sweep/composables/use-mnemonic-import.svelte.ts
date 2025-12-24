@@ -10,8 +10,10 @@ const getCurrentYear = () => {
 	return date.getFullYear();
 };
 
+import type { TranslationKeys } from '@shelchin/i18n';
+
 export function useMnemonicImport(
-	t: (key: string, params?: Record<string, string | number>) => string
+	t: (key: keyof TranslationKeys, params?: Record<string, string | number>) => string
 ) {
 	const walletGeneration = useWalletGeneration();
 

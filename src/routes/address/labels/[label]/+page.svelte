@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n';
+	import { useI18n, type TranslationKeys } from '@shelchin/i18n';
 	import { ArrowLeft, Tag } from '@lucide/svelte';
 	import SeoHead from '$lib/components/seo-head.svelte';
 	import type { PageData } from './$types';
@@ -38,9 +38,11 @@
 	<header class="page-header">
 		<div class="label-badge" style="--label-color: var(--color-{labelMeta.color}-500, #6b7280)">
 			<Tag class="label-icon" />
-			<span>{i18n.t(`address.labels.${data.label}`)}</span>
+			<span>{i18n.t(`address.labels.${data.label}` as keyof TranslationKeys)}</span>
 		</div>
-		<h1 class="page-title">{i18n.t(`address.labels.${data.label}`)} Addresses</h1>
+		<h1 class="page-title">
+			{i18n.t(`address.labels.${data.label}` as keyof TranslationKeys)} Addresses
+		</h1>
 		<p class="page-subtitle">{data.addresses.length} addresses found</p>
 	</header>
 

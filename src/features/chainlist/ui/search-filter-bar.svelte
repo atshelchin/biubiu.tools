@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Search } from '@lucide/svelte';
-	import { useI18n } from '@shelchin/i18n';
+	import { useI18n, type TranslationKeys } from '@shelchin/i18n';
 	import type { NetworkFilter } from '../types/chain';
 
 	interface Props {
@@ -49,7 +49,7 @@
 					class:active={filter === f.key}
 					onclick={() => onFilterChange(f.key)}
 				>
-					{i18n.t(f.labelKey)}
+					{i18n.t(f.labelKey as keyof TranslationKeys)}
 				</button>
 			{/each}
 		</div>

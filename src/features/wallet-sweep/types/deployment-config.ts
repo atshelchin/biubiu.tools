@@ -14,9 +14,13 @@ export interface ConstructorArg {
 }
 
 /**
- * Translation function type
+ * Translation function type - use keyof TranslationKeys for type safety
  */
-export type TranslateFn = (key: string, params?: Record<string, string | number>) => string;
+import type { TranslationKeys } from '@shelchin/i18n';
+export type TranslateFn = (
+	key: keyof TranslationKeys,
+	params?: Record<string, string | number>
+) => string;
 
 /**
  * Deployment function context

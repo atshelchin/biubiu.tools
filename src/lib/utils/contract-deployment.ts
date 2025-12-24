@@ -55,8 +55,12 @@ export interface DeploymentContext {
 	t: TranslateFn;
 }
 
-// Translation function type
-export type TranslateFn = (key: string, params?: Record<string, string | number>) => string;
+// Translation function type - use keyof TranslationKeys for type safety
+import type { TranslationKeys } from '@shelchin/i18n';
+export type TranslateFn = (
+	key: keyof TranslationKeys,
+	params?: Record<string, string | number>
+) => string;
 
 // Transaction status callback
 export type TransactionStatusCallback = (status: {

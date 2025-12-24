@@ -31,7 +31,8 @@
       "Bash(git remote get-url:*)",
       "Bash(bun -e:*)",
       "Bash(bun x vite-bundle-visualizer:*)",
-      "Bash(npx i18n:*)"
+      "Bash(npx i18n:*)",
+      "Bash(bunx @shelchin/i18n:*)"
     ],
     "deny": [],
     "ask": []

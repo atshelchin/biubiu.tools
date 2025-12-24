@@ -98,7 +98,13 @@
 			"beginner_tips": "新手提示",
 			"tip1": "✅ 确保选对了网络 (代币在哪个网络就选哪个)",
 			"tip2": "⛽ 确保钱包有充足的原生币支付手续费",
-			"tip3": "🌍 支持任意 EVM 兼容网络，可自行添加任何链"
+			"tip3": "🌍 支持任意 EVM 兼容网络，可自行添加任何链",
+			"what_is_network": "什么是区块链网络？",
+			"network_explanation": "区块链网络是一个公共账本系统，记录谁拥有什么代币以及所有转账。以太坊、BSC、Polygon 是不同的账本，各自独立运行。",
+			"what_is_wallet": "什么是钱包？",
+			"wallet_explanation": "Web3 钱包并不是存钱的地方，而是管理区块链账户的钥匙。你的资金记录在区块链账本上，钱包证明你拥有这个账户。常用：MetaMask、Coinbase Smart Wallet。",
+			"what_is_native_token": "什么是原生代币？",
+			"native_token_explanation": "原生代币用于支付处理交易的矿工。以太坊用 ETH，BSC 用 BNB，Polygon 用 POL。矿工将你的交易记录到区块链账本上，你需要支付这笔费用。"
 		}
 	},
 	"step2": {
@@ -404,6 +410,7 @@
 			},
 			"rate_limit": {
 				"title": "所有 RPC 端点均已限流",
+				"error_generic": "扫描已暂停：{reason}",
 				"error_native": "扫描原生代币余额时触发限流（批次 {batch}/{total}）",
 				"error_erc20": "扫描代币 {token} 余额时触发限流（批次 {batch}/{total}）",
 				"hint": "💡 请点击下方按钮添加新的 RPC 端点，或等待现有 RPC 恢复后重试。添加多个 RPC 可以自动轮换，避免频繁限流。",

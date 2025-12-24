@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n';
+	import { useI18n, type TranslationKeys } from '@shelchin/i18n';
 	import {
 		ArrowLeft,
 		Copy,
@@ -107,7 +107,7 @@
 				{:else if data.address.riskLevel === 'warning' || data.address.riskLevel === 'danger'}
 					<AlertTriangle class="risk-icon" />
 				{/if}
-				<span>{i18n.t(`address.risk.${data.address.riskLevel}`)}</span>
+				<span>{i18n.t(`address.risk.${data.address.riskLevel}` as keyof TranslationKeys)}</span>
 			</div>
 		</div>
 
@@ -159,7 +159,7 @@
 						class="label-badge"
 						style="--label-color: var(--color-{LABEL_META[label]?.color || 'gray'}-500)"
 					>
-						{i18n.t(`address.labels.${label}`)}
+						{i18n.t(`address.labels.${label}` as keyof TranslationKeys)}
 					</span>
 				{/each}
 			</div>
@@ -249,7 +249,7 @@
 			<details class="faq-item">
 				<summary class="faq-question">{i18n.t('address.faq.is_safe')}</summary>
 				<p class="faq-answer">
-					{i18n.t(`address.faq.is_safe_answer_${data.address.riskLevel}`, {
+					{i18n.t(`address.faq.is_safe_answer_${data.address.riskLevel}` as keyof TranslationKeys, {
 						name: data.address.name
 					})}
 				</p>
@@ -270,7 +270,7 @@
 	<footer class="data-source">
 		<p>
 			{i18n.t('address.data_source')}:
-			{i18n.t('address.source_' + data.address.source)}
+			{i18n.t(('address.source_' + data.address.source) as keyof TranslationKeys)}
 			· {i18n.t('address.updated')}: {data.address.updatedAt}
 		</p>
 	</footer>

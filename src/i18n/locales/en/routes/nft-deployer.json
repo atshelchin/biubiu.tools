@@ -34,11 +34,18 @@
 			"all_passed": "All Passed",
 			"issues_found": "Issues Found",
 			"passed": "Passed",
-			"failed": "Failed"
+			"failed": "Failed",
+			"selected": "Selected Standard",
+			"comparison": "Standard Comparison",
+			"tips": "Tips",
+			"tip1": "ERC-721 is the original NFT standard with broadest compatibility",
+			"tip2": "ERC-721A offers gas savings for batch minting",
+			"tip3": "ERC-1155 is best for gaming items and multi-edition collections"
 		},
 		"content": {
 			"title": "Check Dependencies",
 			"description": "Verify network and contract dependencies",
+			"checking_dependencies_for": "Checking {network} network environment...",
 			"wallet_not_connected_title": "Wallet Not Connected",
 			"wallet_not_connected_message": "Please go back to Step 1 and connect your wallet",
 			"go_to_step1": "Go to Step 1",
@@ -53,6 +60,7 @@
 			"view_deployment_guide": "View Deployment Guide",
 			"deploy_coming_soon": "Deploy Contract (Coming Soon)",
 			"deploy_contract": "Deploy {contractName}",
+			"selected_confirmation": "You have selected this standard",
 			"checks": {
 				"rpc": {
 					"title": "RPC Connection",
@@ -80,6 +88,7 @@
 			"field_name": "Name",
 			"field_symbol": "Symbol",
 			"field_base_uri": "Base URI",
+			"field_description": "Description",
 			"collection_name": "Collection Name",
 			"symbol": "Symbol",
 			"stake_enabled": "Stake-to-Mint",
@@ -102,6 +111,9 @@
 			"symbol_label": "Symbol",
 			"symbol_placeholder": "AWESOME",
 			"symbol_hint": "Short identifier (e.g., BAYC, PUNK)",
+			"description_label": "Description",
+			"description_placeholder": "A unique collection of digital art...",
+			"description_hint": "Describe your NFT collection",
 			"base_uri_label": "Base URI",
 			"base_uri_placeholder": "ipfs://...",
 			"base_uri_hint": "Base URL for token metadata",
@@ -121,14 +133,56 @@
 	},
 	"step4": {
 		"sidebar": {
-			"title": "Review & Deploy",
-			"description": "Review and deploy your NFT contract",
+			"title": "Configure Settings",
+			"description": "Set advanced options for your NFT",
 			"success": "NFT Contract Deployed Successfully!",
-			"error": "Deployment Failed"
+			"error": "Deployment Failed",
+			"configured": "Configured",
+			"supply_limit": "Supply Limit",
+			"mint_price": "Mint Price",
+			"royalties": "Royalties",
+			"special_features": "Special Features",
+			"recommendations": "Recommendations",
+			"rec1": "Set reasonable supply limits",
+			"rec2": "Consider enabling royalties",
+			"rec3": "Test on testnet first"
 		},
 		"content": {
-			"title": "Review & Deploy",
-			"description": "Review configuration and deploy",
+			"title": "Configure Settings",
+			"description": "Set advanced options and features",
+			"supply_pricing": "Supply & Pricing",
+			"max_supply_label": "Max Supply",
+			"max_supply_hint": "Maximum number of NFTs that can be minted",
+			"mint_price_label": "Mint Price",
+			"mint_price_hint": "Price in native tokens to mint one NFT",
+			"max_per_wallet_label": "Max Per Wallet",
+			"max_per_wallet_hint": "Maximum NFTs one wallet can mint",
+			"royalties": "Royalties",
+			"enable_royalties": "Enable Royalties",
+			"royalty_recipient_label": "Royalty Recipient",
+			"royalty_recipient_hint": "Address that receives royalty payments",
+			"royalty_percentage_label": "Royalty Percentage",
+			"royalty_percentage_hint": "Percentage of sales (0-10%)",
+			"features": "Features",
+			"pausable": "Pausable",
+			"pausable_hint": "Allow pausing all transfers",
+			"burnable": "Burnable",
+			"burnable_hint": "Allow burning NFTs",
+			"revealable": "Revealable",
+			"revealable_hint": "Support delayed reveal of metadata",
+			"fungible": "Fungible",
+			"fungible_hint": "Allow multiple copies of the same NFT",
+			"access_control": "Access Control",
+			"owner_only": "Owner Only",
+			"public_mint": "Public Mint",
+			"whitelist": "Whitelist",
+			"stake_to_mint": "Stake-to-Mint",
+			"stake_to_mint_hint": "Require staking tokens to mint",
+			"enable_stake_to_mint": "Enable Stake-to-Mint",
+			"stake_token_label": "Stake Token Address",
+			"stake_token_hint": "ERC20 token address required for minting",
+			"stake_amount_label": "Stake Amount",
+			"stake_amount_hint": "Amount of tokens to stake (in wei)",
 			"review": {
 				"title": "Review Configuration",
 				"basic_info": "Basic Information",
@@ -150,6 +204,33 @@
 		},
 		"footer": {
 			"deploy_another": "Deploy Another NFT"
+		}
+	},
+	"step5": {
+		"sidebar": {
+			"title": "Review & Deploy",
+			"description": "Review your configuration and deploy",
+			"checklist": "Pre-Deployment Checklist",
+			"check1": "Wallet connected",
+			"check2": "Network dependencies verified",
+			"check3": "NFT parameters configured",
+			"check4": "Settings finalized",
+			"deployment_status": "Deployment Status",
+			"status_ready": "Ready to Deploy",
+			"status_preparing": "Preparing...",
+			"status_deploying": "Deploying...",
+			"status_completed": "Completed",
+			"status_error": "Error"
+		},
+		"content": {
+			"title": "Review & Deploy",
+			"description": "Review your configuration and deploy your NFT contract",
+			"basic_config": "Basic Configuration",
+			"advanced_settings": "Advanced Settings",
+			"nft_standard": "NFT Standard",
+			"deploy_button": "Deploy NFT Contract",
+			"success_title": "Deployment Successful!",
+			"success_message": "Your NFT contract has been deployed to the blockchain"
 		}
 	}
 }

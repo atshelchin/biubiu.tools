@@ -6,8 +6,10 @@ interface InvalidPrivateKey {
 	reason?: string;
 }
 
+import type { TranslationKeys } from '@shelchin/i18n';
+
 export function usePrivateKeyImport(
-	t: (key: string, params?: Record<string, string | number>) => string
+	t: (key: keyof TranslationKeys, params?: Record<string, string | number>) => string
 ) {
 	const walletGeneration = useWalletGeneration();
 

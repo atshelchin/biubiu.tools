@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n';
+	import { useI18n, type TranslationKeys } from '@shelchin/i18n';
 	import { SvelteMap } from 'svelte/reactivity';
 	import type { Category, CategoryId } from '../types';
 
@@ -80,7 +80,7 @@
 				use:registerButton={category.id}
 			>
 				<Icon class="filter-icon" />
-				<span class="filter-label">{i18n.t(category.labelKey)}</span>
+				<span class="filter-label">{i18n.t(category.labelKey as keyof TranslationKeys)}</span>
 			</button>
 		{/each}
 	</div>

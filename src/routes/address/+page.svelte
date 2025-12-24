@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n';
+	import { useI18n, type TranslationKeys } from '@shelchin/i18n';
 	import { Search, Loader2 } from '@lucide/svelte';
 	import SeoHead from '$lib/components/seo-head.svelte';
 	import type { PageData } from './$types';
@@ -252,7 +252,9 @@
 			{#each labelCategories as label (label.id)}
 				<a href="/address/labels/{label.id}" class="label-card">
 					<span class="label-icon">{label.icon}</span>
-					<span class="label-name">{i18n.t(`address.labels.${label.id}`)}</span>
+					<span class="label-name"
+						>{i18n.t(`address.labels.${label.id}` as keyof TranslationKeys)}</span
+					>
 				</a>
 			{/each}
 		</div>

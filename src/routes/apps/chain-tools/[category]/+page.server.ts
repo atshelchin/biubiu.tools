@@ -5,6 +5,7 @@ import { error } from '@sveltejs/kit';
 import type { CategoryId } from '@/features/chain-tools/types';
 import { createT } from '$i18n/translations';
 import { extractLocaleFromPathname } from '$utils/common';
+import type { TranslationKeys } from '@shelchin/i18n';
 
 export const load: PageServerLoad = (event) => {
 	const { url, params } = event;
@@ -26,26 +27,30 @@ export const load: PageServerLoad = (event) => {
 	const image = `${url.origin}/og-chain-tools.png`;
 
 	// Get category-specific SEO data
-	const categoryName = t(category.labelKey);
+	const categoryName = t(category.labelKey as keyof TranslationKeys);
 	const categoryKey = categoryId.replace(/-/g, '_');
 
 	// Try to get category-specific SEO, fallback to generic
 	const seoTitle =
-		t(`chain-tools.category_seo.${categoryKey}.title`, { defaultValue: '' }) ||
-		`${categoryName} - ${t('chain-tools.title')} | BiuBiu Tools`;
+		t(`chain-tools.category_seo.${categoryKey}.title` as keyof TranslationKeys, {
+			defaultValue: ''
+		}) || `${categoryName} - ${t('chain-tools.title')} | BiuBiu Tools`;
 
 	const seoDescription =
-		t(`chain-tools.category_seo.${categoryKey}.description`, { defaultValue: '' }) ||
-		`${t('chain-tools.subtitle')} - ${categoryName}`;
+		t(`chain-tools.category_seo.${categoryKey}.description` as keyof TranslationKeys, {
+			defaultValue: ''
+		}) || `${t('chain-tools.subtitle')} - ${categoryName}`;
 
 	const seoKeywords =
-		t(`chain-tools.category_seo.${categoryKey}.keywords`, { defaultValue: '' }) ||
-		`${categoryName}, web3 tools, crypto, blockchain`;
+		t(`chain-tools.category_seo.${categoryKey}.keywords` as keyof TranslationKeys, {
+			defaultValue: ''
+		}) || `${categoryName}, web3 tools, crypto, blockchain`;
 
 	// Get FAQs for this category - FAQs are not currently supported in namespace structure
 	type FaqItem = { question: string; answer: string };
-	const faqs: FaqItem[] = [];
+	const faqs: FaqItem[] = t<FaqItem[]>(`chain-tools.category_seo.${categoryKey}.faqs` as never);
 
+	console.log({ faqs });
 	// Generate structured data
 	const webAppData = createWebAppData({
 		name: `${categoryName} - ${t('chain-tools.seo.webapp_name')}`,

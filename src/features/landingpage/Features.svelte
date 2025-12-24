@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n';
+	import { useI18n, type TranslationKeys } from '@shelchin/i18n';
 	import { Sparkles, ChevronDown, ChevronUp } from '@lucide/svelte';
 	import { toolsConfig, TELEGRAM_GROUP_LINK } from './data/tools-data';
 	import ToolCard from './components/tool-card.svelte';
@@ -12,9 +12,11 @@
 	const tools = $derived(
 		toolsConfig.map((tool) => ({
 			...tool,
-			title: t(tool.titleKey),
-			description: t(tool.descriptionKey),
-			features: tool.featureKeys ? tool.featureKeys.map((key) => t(key)) : tool.features
+			title: t(tool.titleKey as keyof TranslationKeys),
+			description: t(tool.descriptionKey as keyof TranslationKeys),
+			features: tool.featureKeys
+				? tool.featureKeys.map((key) => t(key as keyof TranslationKeys))
+				: tool.features
 		}))
 	);
 

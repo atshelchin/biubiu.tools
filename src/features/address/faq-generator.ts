@@ -32,11 +32,13 @@ function hasLabel(labels: AddressLabel[], checkLabels: AddressLabel[]): boolean 
 /**
  * Generate FAQs for an address based on its labels and entity
  */
+import type { TranslationKeys } from '@shelchin/i18n';
+
 export function generateAddressFAQs(
 	address: LabeledAddress,
 	entity: Entity,
 	chainName: string,
-	t: (key: string, params?: Record<string, string | number>) => string
+	t: (key: keyof TranslationKeys, params?: Record<string, string | number>) => string
 ): FAQ[] {
 	const faqs: FAQ[] = [];
 	const { labels, riskLevel, name: addressName } = address;
