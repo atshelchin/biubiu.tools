@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 	import StepFooter from '$lib/components/step/step-footer.svelte';
 	import { step3State } from '@/features/token-distribution/stores/step3-state.svelte';
@@ -18,7 +18,7 @@
 
 <StepFooter
 	canContinue={isReadyToContinue}
-	continueText={i18n.t('tools.one_to_many_transfer.step3.footer.continue')}
+	continueText={i18n.t('one-to-many-transfer.step3.footer.continue')}
 	onContinue={handleContinue}
-	hint={i18n.t('tools.one_to_many_transfer.step3.footer.hint')}
+	hint={i18n.t('one-to-many-transfer.step3.footer.hint')}
 />

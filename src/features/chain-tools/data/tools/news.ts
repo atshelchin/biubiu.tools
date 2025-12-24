@@ -9,7 +9,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'theblock',
 		name: 'The Block',
-		descriptionKey: 'chain_tools.tools.theblock.description',
+		descriptionKey: 'chain-tools.tools.theblock.description',
 		url: 'https://www.theblock.co',
 		icon: Newspaper,
 		category: 'news',
@@ -19,7 +19,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'coindesk',
 		name: 'CoinDesk',
-		descriptionKey: 'chain_tools.tools.coindesk.description',
+		descriptionKey: 'chain-tools.tools.coindesk.description',
 		url: 'https://www.coindesk.com',
 		icon: Newspaper,
 		category: 'news',
@@ -30,7 +30,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'cointelegraph',
 		name: 'Cointelegraph',
-		descriptionKey: 'chain_tools.tools.cointelegraph.description',
+		descriptionKey: 'chain-tools.tools.cointelegraph.description',
 		url: 'https://cointelegraph.com',
 		icon: Newspaper,
 		category: 'news',
@@ -40,7 +40,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'decrypt',
 		name: 'Decrypt',
-		descriptionKey: 'chain_tools.tools.decrypt.description',
+		descriptionKey: 'chain-tools.tools.decrypt.description',
 		url: 'https://decrypt.co',
 		icon: Newspaper,
 		category: 'news',
@@ -51,7 +51,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'blockworks',
 		name: 'Blockworks',
-		descriptionKey: 'chain_tools.tools.blockworks.description',
+		descriptionKey: 'chain-tools.tools.blockworks.description',
 		url: 'https://blockworks.co',
 		icon: Newspaper,
 		category: 'news',
@@ -61,7 +61,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'dlnews',
 		name: 'DL News',
-		descriptionKey: 'chain_tools.tools.dlnews.description',
+		descriptionKey: 'chain-tools.tools.dlnews.description',
 		url: 'https://www.dlnews.com',
 		icon: Newspaper,
 		category: 'news',
@@ -73,7 +73,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'rootdata',
 		name: 'RootData',
-		descriptionKey: 'chain_tools.tools.rootdata.description',
+		descriptionKey: 'chain-tools.tools.rootdata.description',
 		url: 'https://www.rootdata.com',
 		icon: TrendingUp,
 		category: 'news',
@@ -83,7 +83,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'cryptorank',
 		name: 'CryptoRank',
-		descriptionKey: 'chain_tools.tools.cryptorank.description',
+		descriptionKey: 'chain-tools.tools.cryptorank.description',
 		url: 'https://cryptorank.io',
 		icon: TrendingUp,
 		category: 'news',
@@ -93,7 +93,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'messari',
 		name: 'Messari',
-		descriptionKey: 'chain_tools.tools.messari.description',
+		descriptionKey: 'chain-tools.tools.messari.description',
 		url: 'https://messari.io',
 		icon: TrendingUp,
 		category: 'news',
@@ -103,7 +103,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'dove-metrics',
 		name: 'Dove Metrics',
-		descriptionKey: 'chain_tools.tools.dove_metrics.description',
+		descriptionKey: 'chain-tools.tools.dove_metrics.description',
 		url: 'https://www.dovemetrics.com',
 		icon: TrendingUp,
 		category: 'news',
@@ -113,7 +113,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'crypto-fundraising',
 		name: 'Crypto Fundraising',
-		descriptionKey: 'chain_tools.tools.crypto_fundraising.description',
+		descriptionKey: 'chain-tools.tools.crypto_fundraising.description',
 		url: 'https://crypto-fundraising.info',
 		icon: TrendingUp,
 		category: 'news',
@@ -125,7 +125,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'bankless',
 		name: 'Bankless',
-		descriptionKey: 'chain_tools.tools.bankless.description',
+		descriptionKey: 'chain-tools.tools.bankless.description',
 		url: 'https://www.bankless.com',
 		icon: Rss,
 		category: 'news',
@@ -135,7 +135,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'defiant',
 		name: 'The Defiant',
-		descriptionKey: 'chain_tools.tools.defiant.description',
+		descriptionKey: 'chain-tools.tools.defiant.description',
 		url: 'https://thedefiant.io',
 		icon: Rss,
 		category: 'news',
@@ -145,7 +145,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'week-in-ethereum',
 		name: 'Week in Ethereum',
-		descriptionKey: 'chain_tools.tools.week_in_ethereum.description',
+		descriptionKey: 'chain-tools.tools.week_in_ethereum.description',
 		url: 'https://weekinethereumnews.com',
 		icon: Rss,
 		category: 'news',
@@ -155,7 +155,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'rekt-news',
 		name: 'Rekt',
-		descriptionKey: 'chain_tools.tools.rekt_news.description',
+		descriptionKey: 'chain-tools.tools.rekt_news.description',
 		url: 'https://rekt.news',
 		icon: Rss,
 		category: 'news',
@@ -165,7 +165,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'milk-road',
 		name: 'Milk Road',
-		descriptionKey: 'chain_tools.tools.milk_road.description',
+		descriptionKey: 'chain-tools.tools.milk_road.description',
 		url: 'https://www.milkroad.com',
 		icon: Rss,
 		category: 'news',
@@ -175,7 +175,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'daily-gwei',
 		name: 'The Daily Gwei',
-		descriptionKey: 'chain_tools.tools.daily_gwei.description',
+		descriptionKey: 'chain-tools.tools.daily_gwei.description',
 		url: 'https://www.thedailygwei.com',
 		icon: Rss,
 		category: 'news',
@@ -187,7 +187,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'unchained-podcast',
 		name: 'Unchained',
-		descriptionKey: 'chain_tools.tools.unchained_podcast.description',
+		descriptionKey: 'chain-tools.tools.unchained_podcast.description',
 		url: 'https://unchainedcrypto.com',
 		icon: Mic2,
 		category: 'news',
@@ -197,7 +197,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'epicenter',
 		name: 'Epicenter',
-		descriptionKey: 'chain_tools.tools.epicenter.description',
+		descriptionKey: 'chain-tools.tools.epicenter.description',
 		url: 'https://epicenter.tv',
 		icon: Mic2,
 		category: 'news',
@@ -207,7 +207,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'zero-knowledge',
 		name: 'Zero Knowledge',
-		descriptionKey: 'chain_tools.tools.zero_knowledge.description',
+		descriptionKey: 'chain-tools.tools.zero_knowledge.description',
 		url: 'https://zeroknowledge.fm',
 		icon: Mic2,
 		category: 'news',
@@ -217,7 +217,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'bell-curve',
 		name: 'Bell Curve',
-		descriptionKey: 'chain_tools.tools.bell_curve.description',
+		descriptionKey: 'chain-tools.tools.bell_curve.description',
 		url: 'https://www.bellcurvepodcast.com',
 		icon: Mic2,
 		category: 'news',
@@ -229,7 +229,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'delphi-digital',
 		name: 'Delphi Digital',
-		descriptionKey: 'chain_tools.tools.delphi_digital.description',
+		descriptionKey: 'chain-tools.tools.delphi_digital.description',
 		url: 'https://delphidigital.io',
 		icon: BookOpen,
 		category: 'news',
@@ -239,7 +239,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'galaxy-research',
 		name: 'Galaxy Research',
-		descriptionKey: 'chain_tools.tools.galaxy_research.description',
+		descriptionKey: 'chain-tools.tools.galaxy_research.description',
 		url: 'https://www.galaxy.com/research',
 		icon: BookOpen,
 		category: 'news',
@@ -249,7 +249,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'nansen-research',
 		name: 'Nansen Research',
-		descriptionKey: 'chain_tools.tools.nansen_research.description',
+		descriptionKey: 'chain-tools.tools.nansen_research.description',
 		url: 'https://research.nansen.ai',
 		icon: BookOpen,
 		category: 'news',
@@ -259,7 +259,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'glassnode-insights',
 		name: 'Glassnode Insights',
-		descriptionKey: 'chain_tools.tools.glassnode_insights.description',
+		descriptionKey: 'chain-tools.tools.glassnode_insights.description',
 		url: 'https://insights.glassnode.com',
 		icon: BookOpen,
 		category: 'news',
@@ -271,7 +271,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'crypto-panic',
 		name: 'CryptoPanic',
-		descriptionKey: 'chain_tools.tools.crypto_panic.description',
+		descriptionKey: 'chain-tools.tools.crypto_panic.description',
 		url: 'https://cryptopanic.com',
 		icon: Radio,
 		category: 'news',
@@ -281,7 +281,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'crypto-slate',
 		name: 'CryptoSlate',
-		descriptionKey: 'chain_tools.tools.crypto_slate.description',
+		descriptionKey: 'chain-tools.tools.crypto_slate.description',
 		url: 'https://cryptoslate.com',
 		icon: Newspaper,
 		category: 'news',
@@ -291,7 +291,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'bitcoinist',
 		name: 'Bitcoinist',
-		descriptionKey: 'chain_tools.tools.bitcoinist.description',
+		descriptionKey: 'chain-tools.tools.bitcoinist.description',
 		url: 'https://bitcoinist.com',
 		icon: Newspaper,
 		category: 'news',
@@ -301,7 +301,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'beincrypto',
 		name: 'BeInCrypto',
-		descriptionKey: 'chain_tools.tools.beincrypto.description',
+		descriptionKey: 'chain-tools.tools.beincrypto.description',
 		url: 'https://beincrypto.com',
 		icon: Newspaper,
 		category: 'news',
@@ -311,7 +311,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'cryptobriefing',
 		name: 'Crypto Briefing',
-		descriptionKey: 'chain_tools.tools.cryptobriefing.description',
+		descriptionKey: 'chain-tools.tools.cryptobriefing.description',
 		url: 'https://cryptobriefing.com',
 		icon: Newspaper,
 		category: 'news',
@@ -323,7 +323,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'foresight-news',
 		name: 'Foresight News',
-		descriptionKey: 'chain_tools.tools.foresight_news.description',
+		descriptionKey: 'chain-tools.tools.foresight_news.description',
 		url: 'https://foresightnews.pro',
 		icon: Newspaper,
 		category: 'news',
@@ -333,7 +333,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'odaily',
 		name: 'Odaily',
-		descriptionKey: 'chain_tools.tools.odaily.description',
+		descriptionKey: 'chain-tools.tools.odaily.description',
 		url: 'https://www.odaily.news',
 		icon: Newspaper,
 		category: 'news',
@@ -343,7 +343,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'panews',
 		name: 'PANews',
-		descriptionKey: 'chain_tools.tools.panews.description',
+		descriptionKey: 'chain-tools.tools.panews.description',
 		url: 'https://www.panewslab.com',
 		icon: Newspaper,
 		category: 'news',
@@ -353,7 +353,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'techflow',
 		name: 'TechFlow',
-		descriptionKey: 'chain_tools.tools.techflow.description',
+		descriptionKey: 'chain-tools.tools.techflow.description',
 		url: 'https://www.techflowpost.com',
 		icon: Newspaper,
 		category: 'news',
@@ -363,7 +363,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'wu-blockchain',
 		name: 'Wu Blockchain',
-		descriptionKey: 'chain_tools.tools.wu_blockchain.description',
+		descriptionKey: 'chain-tools.tools.wu_blockchain.description',
 		url: 'https://wublock.substack.com',
 		icon: Rss,
 		category: 'news',
@@ -375,7 +375,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'chaincatcher',
 		name: 'ChainCatcher',
-		descriptionKey: 'chain_tools.tools.chaincatcher.description',
+		descriptionKey: 'chain-tools.tools.chaincatcher.description',
 		url: 'https://www.chaincatcher.com',
 		icon: Newspaper,
 		category: 'news',
@@ -385,7 +385,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'marsbit',
 		name: 'MarsBit',
-		descriptionKey: 'chain_tools.tools.marsbit.description',
+		descriptionKey: 'chain-tools.tools.marsbit.description',
 		url: 'https://www.marsbit.co',
 		icon: Newspaper,
 		category: 'news',
@@ -395,7 +395,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'blockbeats',
 		name: 'BlockBeats',
-		descriptionKey: 'chain_tools.tools.blockbeats.description',
+		descriptionKey: 'chain-tools.tools.blockbeats.description',
 		url: 'https://www.theblockbeats.info',
 		icon: Newspaper,
 		category: 'news',
@@ -405,7 +405,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'jinse',
 		name: 'Jinse Finance',
-		descriptionKey: 'chain_tools.tools.jinse.description',
+		descriptionKey: 'chain-tools.tools.jinse.description',
 		url: 'https://www.jinse.cn',
 		icon: Newspaper,
 		category: 'news',
@@ -415,7 +415,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'coinpost-jp',
 		name: 'CoinPost',
-		descriptionKey: 'chain_tools.tools.coinpost_jp.description',
+		descriptionKey: 'chain-tools.tools.coinpost_jp.description',
 		url: 'https://coinpost.jp',
 		icon: Newspaper,
 		category: 'news',
@@ -425,7 +425,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'coindeskjapan',
 		name: 'CoinDesk Japan',
-		descriptionKey: 'chain_tools.tools.coindeskjapan.description',
+		descriptionKey: 'chain-tools.tools.coindeskjapan.description',
 		url: 'https://www.coindeskjapan.com',
 		icon: Newspaper,
 		category: 'news',
@@ -435,7 +435,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'coinness-kr',
 		name: 'Coinness Korea',
-		descriptionKey: 'chain_tools.tools.coinness_kr.description',
+		descriptionKey: 'chain-tools.tools.coinness_kr.description',
 		url: 'https://coinness.com',
 		icon: Newspaper,
 		category: 'news',
@@ -445,7 +445,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'blockmedia-kr',
 		name: 'Block Media',
-		descriptionKey: 'chain_tools.tools.blockmedia_kr.description',
+		descriptionKey: 'chain-tools.tools.blockmedia_kr.description',
 		url: 'https://www.blockmedia.co.kr',
 		icon: Newspaper,
 		category: 'news',
@@ -455,7 +455,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'ambcrypto',
 		name: 'AMBCrypto',
-		descriptionKey: 'chain_tools.tools.ambcrypto.description',
+		descriptionKey: 'chain-tools.tools.ambcrypto.description',
 		url: 'https://ambcrypto.com',
 		icon: Newspaper,
 		category: 'news',
@@ -465,7 +465,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'newsbtc',
 		name: 'NewsBTC',
-		descriptionKey: 'chain_tools.tools.newsbtc.description',
+		descriptionKey: 'chain-tools.tools.newsbtc.description',
 		url: 'https://newsbtc.com',
 		icon: Newspaper,
 		category: 'news',
@@ -475,7 +475,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'crypto-news',
 		name: 'Crypto News',
-		descriptionKey: 'chain_tools.tools.crypto_news.description',
+		descriptionKey: 'chain-tools.tools.crypto_news.description',
 		url: 'https://cryptonews.com',
 		icon: Newspaper,
 		category: 'news',
@@ -485,7 +485,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'u-today',
 		name: 'U.Today',
-		descriptionKey: 'chain_tools.tools.u_today.description',
+		descriptionKey: 'chain-tools.tools.u_today.description',
 		url: 'https://u.today',
 		icon: Newspaper,
 		category: 'news',
@@ -495,7 +495,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'dailycoin',
 		name: 'DailyCoin',
-		descriptionKey: 'chain_tools.tools.dailycoin.description',
+		descriptionKey: 'chain-tools.tools.dailycoin.description',
 		url: 'https://dailycoin.com',
 		icon: Newspaper,
 		category: 'news',
@@ -505,7 +505,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'coinspeaker',
 		name: 'Coinspeaker',
-		descriptionKey: 'chain_tools.tools.coinspeaker.description',
+		descriptionKey: 'chain-tools.tools.coinspeaker.description',
 		url: 'https://coinspeaker.com',
 		icon: Newspaper,
 		category: 'news',
@@ -515,7 +515,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'bitcoinmagazine',
 		name: 'Bitcoin Magazine',
-		descriptionKey: 'chain_tools.tools.bitcoinmagazine.description',
+		descriptionKey: 'chain-tools.tools.bitcoinmagazine.description',
 		url: 'https://bitcoinmagazine.com',
 		icon: Newspaper,
 		category: 'news',
@@ -525,7 +525,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'protos',
 		name: 'Protos',
-		descriptionKey: 'chain_tools.tools.protos.description',
+		descriptionKey: 'chain-tools.tools.protos.description',
 		url: 'https://protos.com',
 		icon: Newspaper,
 		category: 'news',
@@ -535,7 +535,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'web3isgoinggreat',
 		name: 'Web3 Is Going Great',
-		descriptionKey: 'chain_tools.tools.web3isgoinggreat.description',
+		descriptionKey: 'chain-tools.tools.web3isgoinggreat.description',
 		url: 'https://web3isgoinggreat.com',
 		icon: Newspaper,
 		category: 'news',
@@ -545,7 +545,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'thedefireport',
 		name: 'The DeFi Report',
-		descriptionKey: 'chain_tools.tools.thedefireport.description',
+		descriptionKey: 'chain-tools.tools.thedefireport.description',
 		url: 'https://thedefireport.io',
 		icon: BookOpen,
 		category: 'news',
@@ -555,7 +555,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'cryptotvplus',
 		name: 'CryptoTVPlus',
-		descriptionKey: 'chain_tools.tools.cryptotvplus.description',
+		descriptionKey: 'chain-tools.tools.cryptotvplus.description',
 		url: 'https://cryptotvplus.com',
 		icon: Newspaper,
 		category: 'news',
@@ -565,7 +565,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'bitcoinke',
 		name: 'BitcoinKE',
-		descriptionKey: 'chain_tools.tools.bitcoinke.description',
+		descriptionKey: 'chain-tools.tools.bitcoinke.description',
 		url: 'https://bitcoinke.io',
 		icon: Newspaper,
 		category: 'news',
@@ -575,7 +575,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'watcher-guru',
 		name: 'Watcher Guru',
-		descriptionKey: 'chain_tools.tools.watcher_guru.description',
+		descriptionKey: 'chain-tools.tools.watcher_guru.description',
 		url: 'https://watcher.guru',
 		icon: Newspaper,
 		category: 'news',
@@ -585,7 +585,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'coinpedia',
 		name: 'Coinpedia',
-		descriptionKey: 'chain_tools.tools.coinpedia.description',
+		descriptionKey: 'chain-tools.tools.coinpedia.description',
 		url: 'https://coinpedia.org',
 		icon: Newspaper,
 		category: 'news',
@@ -595,7 +595,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'cryptopotato',
 		name: 'CryptoPotato',
-		descriptionKey: 'chain_tools.tools.cryptopotato.description',
+		descriptionKey: 'chain-tools.tools.cryptopotato.description',
 		url: 'https://cryptopotato.com',
 		icon: Newspaper,
 		category: 'news',
@@ -605,7 +605,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'btcpulse',
 		name: 'BTC Pulse',
-		descriptionKey: 'chain_tools.tools.btcpulse.description',
+		descriptionKey: 'chain-tools.tools.btcpulse.description',
 		url: 'https://btcpulse.com',
 		icon: Newspaper,
 		category: 'news',
@@ -615,7 +615,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'blockonomi',
 		name: 'Blockonomi',
-		descriptionKey: 'chain_tools.tools.blockonomi.description',
+		descriptionKey: 'chain-tools.tools.blockonomi.description',
 		url: 'https://blockonomi.com',
 		icon: Newspaper,
 		category: 'news',
@@ -625,7 +625,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'coincodex',
 		name: 'CoinCodex',
-		descriptionKey: 'chain_tools.tools.coincodex.description',
+		descriptionKey: 'chain-tools.tools.coincodex.description',
 		url: 'https://coincodex.com',
 		icon: TrendingUp,
 		category: 'news',
@@ -635,7 +635,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'tokeninsight',
 		name: 'TokenInsight',
-		descriptionKey: 'chain_tools.tools.tokeninsight.description',
+		descriptionKey: 'chain-tools.tools.tokeninsight.description',
 		url: 'https://tokeninsight.com',
 		icon: BookOpen,
 		category: 'news',
@@ -645,7 +645,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'artemis-xyz',
 		name: 'Artemis',
-		descriptionKey: 'chain_tools.tools.artemis_xyz.description',
+		descriptionKey: 'chain-tools.tools.artemis_xyz.description',
 		url: 'https://artemis.xyz',
 		icon: BookOpen,
 		category: 'news',
@@ -655,7 +655,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'tokenterminal-blog',
 		name: 'Token Terminal Blog',
-		descriptionKey: 'chain_tools.tools.tokenterminal_blog.description',
+		descriptionKey: 'chain-tools.tools.tokenterminal_blog.description',
 		url: 'https://tokenterminal.com/resources',
 		icon: BookOpen,
 		category: 'news',
@@ -665,7 +665,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'bitbo',
 		name: 'Bitbo',
-		descriptionKey: 'chain_tools.tools.bitbo.description',
+		descriptionKey: 'chain-tools.tools.bitbo.description',
 		url: 'https://bitbo.io',
 		icon: TrendingUp,
 		category: 'news',
@@ -675,7 +675,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'lookintochains',
 		name: 'Look Into Chains',
-		descriptionKey: 'chain_tools.tools.lookintochains.description',
+		descriptionKey: 'chain-tools.tools.lookintochains.description',
 		url: 'https://lookintochains.com',
 		icon: TrendingUp,
 		category: 'news',
@@ -685,7 +685,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'vettafi',
 		name: 'VettaFi',
-		descriptionKey: 'chain_tools.tools.vettafi.description',
+		descriptionKey: 'chain-tools.tools.vettafi.description',
 		url: 'https://vettafi.com/topics/crypto',
 		icon: BookOpen,
 		category: 'news',
@@ -695,7 +695,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'cryptohayes-blog',
 		name: 'Arthur Hayes Blog',
-		descriptionKey: 'chain_tools.tools.cryptohayes_blog.description',
+		descriptionKey: 'chain-tools.tools.cryptohayes_blog.description',
 		url: 'https://cryptohayes.medium.com',
 		icon: Rss,
 		category: 'news',
@@ -705,7 +705,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'vitalik-blog',
 		name: 'Vitalik Blog',
-		descriptionKey: 'chain_tools.tools.vitalik_blog.description',
+		descriptionKey: 'chain-tools.tools.vitalik_blog.description',
 		url: 'https://vitalik.eth.limo',
 		icon: Rss,
 		category: 'news',
@@ -715,7 +715,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'paradigm-blog',
 		name: 'Paradigm Blog',
-		descriptionKey: 'chain_tools.tools.paradigm_blog.description',
+		descriptionKey: 'chain-tools.tools.paradigm_blog.description',
 		url: 'https://www.paradigm.xyz/writing',
 		icon: BookOpen,
 		category: 'news',
@@ -725,7 +725,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'a16zcrypto',
 		name: 'a16z Crypto',
-		descriptionKey: 'chain_tools.tools.a16zcrypto.description',
+		descriptionKey: 'chain-tools.tools.a16zcrypto.description',
 		url: 'https://a16zcrypto.com',
 		icon: BookOpen,
 		category: 'news',
@@ -735,7 +735,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'binanceresearch',
 		name: 'Binance Research',
-		descriptionKey: 'chain_tools.tools.binanceresearch.description',
+		descriptionKey: 'chain-tools.tools.binanceresearch.description',
 		url: 'https://research.binance.com',
 		icon: BookOpen,
 		category: 'news',
@@ -745,7 +745,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'coinbaselearn',
 		name: 'Coinbase Learn',
-		descriptionKey: 'chain_tools.tools.coinbaselearn.description',
+		descriptionKey: 'chain-tools.tools.coinbaselearn.description',
 		url: 'https://www.coinbase.com/learn',
 		icon: BookOpen,
 		category: 'news',
@@ -755,7 +755,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'chainalysis-blog',
 		name: 'Chainalysis Blog',
-		descriptionKey: 'chain_tools.tools.chainalysis_blog.description',
+		descriptionKey: 'chain-tools.tools.chainalysis_blog.description',
 		url: 'https://www.chainalysis.com/blog',
 		icon: BookOpen,
 		category: 'news',
@@ -765,7 +765,7 @@ export const newsTools: ExternalTool[] = [
 	{
 		id: 'ethereum-blog',
 		name: 'Ethereum Foundation Blog',
-		descriptionKey: 'chain_tools.tools.ethereum_blog.description',
+		descriptionKey: 'chain-tools.tools.ethereum_blog.description',
 		url: 'https://blog.ethereum.org',
 		icon: Rss,
 		category: 'news',

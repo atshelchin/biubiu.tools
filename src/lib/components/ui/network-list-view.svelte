@@ -4,7 +4,7 @@
 	import ToggleSwitch from './toggle-switch.svelte';
 	import SegmentedControl from './segmented-control.svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { fade } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 
@@ -27,7 +27,7 @@
 	}: Props = $props();
 
 	const i18n = useI18n();
-	const t = i18n.t;
+	const t = i18n.t.bind(i18n);
 
 	let searchQuery = $state('');
 	let filterStatus = $state<'all' | 'enabled' | 'disabled'>('all');

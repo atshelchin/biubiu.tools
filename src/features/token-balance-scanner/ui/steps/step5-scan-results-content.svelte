@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { step3State } from '../../stores/step3-state.svelte';
 	import { step4State } from '../../stores/step4-state.svelte';
@@ -163,7 +163,7 @@
 
 			if (!session) {
 				step5State.setError(
-					i18n.t('tools.token_balance_scanner.session.error.not_found') || 'Session not found'
+					i18n.t('token-balance-scanner.session.error.not_found') || 'Session not found'
 				);
 				return;
 			}
@@ -278,8 +278,7 @@
 		} catch (err) {
 			console.error('Failed to restore session:', err);
 			step5State.setError(
-				i18n.t('tools.token_balance_scanner.session.error.restore_failed') ||
-					'Failed to restore session'
+				i18n.t('token-balance-scanner.session.error.restore_failed') || 'Failed to restore session'
 			);
 		}
 	}
@@ -288,7 +287,7 @@
 	async function handleStartScan() {
 		if (!currentNetwork || !connectStore.currentChainId) {
 			step5State.setError(
-				i18n.t('tools.token_balance_scanner.step5.error.no_network') || 'No network selected'
+				i18n.t('token-balance-scanner.step5.error.no_network') || 'No network selected'
 			);
 			return;
 		}
@@ -296,14 +295,14 @@
 		const tokens = selectedTokens();
 		if (tokens.length === 0) {
 			step5State.setError(
-				i18n.t('tools.token_balance_scanner.step5.error.no_tokens') || 'No tokens selected'
+				i18n.t('token-balance-scanner.step5.error.no_tokens') || 'No tokens selected'
 			);
 			return;
 		}
 
 		if (step4State.wallets.length === 0) {
 			step5State.setError(
-				i18n.t('tools.token_balance_scanner.step5.error.no_wallets') || 'No wallets added'
+				i18n.t('token-balance-scanner.step5.error.no_wallets') || 'No wallets added'
 			);
 			return;
 		}
@@ -380,8 +379,8 @@
 
 <StepContent>
 	<StepContentHeader
-		title={i18n.t('tools.token_balance_scanner.step5.title') || 'Scan & View Results'}
-		description={i18n.t('tools.token_balance_scanner.step5.description') ||
+		title={i18n.t('token-balance-scanner.step5.title') || 'Scan & View Results'}
+		description={i18n.t('token-balance-scanner.step5.description') ||
 			'Scan token balances and export data'}
 	/>
 

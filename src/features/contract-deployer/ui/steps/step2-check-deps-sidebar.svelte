@@ -1,15 +1,15 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	const i18n = useI18n();
 </script>
 
 <div class="info-card">
-	<h3 class="info-title">{i18n.t('tools.contract_deployer.step2.sidebar.title')}</h3>
+	<h3 class="info-title">{i18n.t('contract-deployer.step2.sidebar.title')}</h3>
 	<div class="info-content">
-		<p>{i18n.t('tools.contract_deployer.step2.sidebar.description')}</p>
+		<p>{i18n.t('contract-deployer.step2.sidebar.description')}</p>
 		<div class="dependency-list">
-			<h4>{i18n.t('tools.contract_deployer.step2.sidebar.required_contracts')}</h4>
+			<h4>{i18n.t('contract-deployer.step2.sidebar.required_contracts')}</h4>
 			<ul>
 				<li>
 					<strong>CREATE2 Proxy</strong>

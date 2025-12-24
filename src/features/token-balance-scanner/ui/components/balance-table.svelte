@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { Copy, Check } from '@lucide/svelte';
 	import { DataTable, type DataTableColumn } from '$lib/components/ui/data-table';
 	import type { BalanceFilter, AddressBalance, SortState } from '../../types/scanner';
@@ -65,14 +65,14 @@
 
 	// Balance status options
 	const statusOptions = [
-		{ value: 'all', label: i18n.t('tools.token_balance_scanner.step5.filter.status_all') || 'All' },
+		{ value: 'all', label: i18n.t('token-balance-scanner.step5.filter.status_all') || 'All' },
 		{
 			value: 'has_balance',
-			label: i18n.t('tools.token_balance_scanner.step5.filter.status_has_balance') || 'Has Balance'
+			label: i18n.t('token-balance-scanner.step5.filter.status_has_balance') || 'Has Balance'
 		},
 		{
 			value: 'no_balance',
-			label: i18n.t('tools.token_balance_scanner.step5.filter.status_no_balance') || 'No Balance'
+			label: i18n.t('token-balance-scanner.step5.filter.status_no_balance') || 'No Balance'
 		}
 	];
 
@@ -80,7 +80,7 @@
 	const tokenOptions = $derived(() => [
 		{
 			value: 'all',
-			label: i18n.t('tools.token_balance_scanner.step5.filter.token_all') || 'All Tokens'
+			label: i18n.t('token-balance-scanner.step5.filter.token_all') || 'All Tokens'
 		},
 		...tokens.map((t) => ({ value: t.id, label: t.symbol || t.id }))
 	]);
@@ -98,7 +98,7 @@
 		const cols: DataTableColumn<AddressBalance>[] = [
 			{
 				id: 'address',
-				header: i18n.t('tools.token_balance_scanner.step5.balances.address') || 'Address',
+				header: i18n.t('token-balance-scanner.step5.balances.address') || 'Address',
 				sortable: true,
 				minWidth: '160px',
 				accessor: (row) => row.address
@@ -198,7 +198,7 @@
 				<input
 					type="text"
 					class="range-input"
-					placeholder={i18n.t('tools.token_balance_scanner.step5.filter.min') || 'Min'}
+					placeholder={i18n.t('token-balance-scanner.step5.filter.min') || 'Min'}
 					value={filter.minBalance || ''}
 					oninput={handleMinChange}
 				/>
@@ -206,7 +206,7 @@
 				<input
 					type="text"
 					class="range-input"
-					placeholder={i18n.t('tools.token_balance_scanner.step5.filter.max') || 'Max'}
+					placeholder={i18n.t('token-balance-scanner.step5.filter.max') || 'Max'}
 					value={filter.maxBalance || ''}
 					oninput={handleMaxChange}
 				/>
@@ -214,7 +214,7 @@
 
 			{#if isFilterActive}
 				<button class="reset-btn" onclick={onFilterReset}>
-					{i18n.t('tools.token_balance_scanner.step5.filter.reset') || 'Reset'}
+					{i18n.t('token-balance-scanner.step5.filter.reset') || 'Reset'}
 				</button>
 			{/if}
 		</div>
@@ -232,8 +232,8 @@
 		{onPageSizeChange}
 		{getRowClass}
 		{filteredCount}
-		resultsLabel={i18n.t('tools.token_balance_scanner.step5.balances.results') || 'results'}
-		emptyMessage={i18n.t('tools.token_balance_scanner.step5.balances.no_results') || 'No results'}
+		resultsLabel={i18n.t('token-balance-scanner.step5.balances.results') || 'results'}
+		emptyMessage={i18n.t('token-balance-scanner.step5.balances.no_results') || 'No results'}
 	>
 		{#snippet cellSnippet({ row, column, value })}
 			{#if column.id === 'address'}

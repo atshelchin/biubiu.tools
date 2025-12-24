@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { Cookie } from '@lucide/svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { useTheme } from '$lib/stores/theme.svelte';
 	import { checkConsent, useCookieConsent } from '$lib/stores/cookie-consent.svelte';
 	import Socials from '$lib/components/ui/socials.svelte';
@@ -63,9 +63,9 @@
 			<div class="footer-info">
 				<span class="copyright">© {currentYear} biubiu.tools</span>
 				<span class="separator">·</span>
-				<a href="/privacy" class="legal-link">{i18n.t('footer.privacy')}</a>
+				<a href="/privacy" class="legal-link">{i18n.t('common.footer.privacy')}</a>
 				<span class="separator">·</span>
-				<a href="/terms" class="legal-link">{i18n.t('footer.terms')}</a>
+				<a href="/terms" class="legal-link">{i18n.t('common.footer.terms')}</a>
 				<span class="separator">·</span>
 				<a href="/sitemap.xml" class="legal-link">Sitemap</a>
 			</div>
@@ -74,8 +74,8 @@
 				<button
 					class="cookie-settings-btn"
 					onclick={() => consent.openSettings()}
-					title={i18n.t('cookie_consent.cookie_settings')}
-					aria-label={i18n.t('cookie_consent.cookie_settings')}
+					title={i18n.t('cookie-consent.cookie_settings')}
+					aria-label={i18n.t('cookie-consent.cookie_settings')}
 				>
 					<Cookie size={18} />
 				</button>

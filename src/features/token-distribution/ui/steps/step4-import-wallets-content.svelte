@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
 	import { step4State } from '@/features/token-distribution/stores/step4-state.svelte';
@@ -63,14 +63,14 @@
 	const pasteFormatHint = $derived(() => {
 		if (isFungible) {
 			if (amountMode === 'custom') {
-				return i18n.t('tools.one_to_many_transfer.step4.content.paste_hint.fungible_custom');
+				return i18n.t('one-to-many-transfer.step4.content.paste_hint.fungible_custom');
 			}
-			return i18n.t('tools.one_to_many_transfer.step4.content.paste_hint.fungible_equal');
+			return i18n.t('one-to-many-transfer.step4.content.paste_hint.fungible_equal');
 		}
 		if (tokenType === 'erc721') {
-			return i18n.t('tools.one_to_many_transfer.step4.content.paste_hint.erc721');
+			return i18n.t('one-to-many-transfer.step4.content.paste_hint.erc721');
 		}
-		return i18n.t('tools.one_to_many_transfer.step4.content.paste_hint.erc1155');
+		return i18n.t('one-to-many-transfer.step4.content.paste_hint.erc1155');
 	});
 
 	// Get paste placeholder example
@@ -97,13 +97,13 @@
 
 	function addManualRecipient() {
 		if (!manualAddress || !isAddress(manualAddress)) {
-			alert(i18n.t('tools.one_to_many_transfer.step4.content.error.invalid_address'));
+			alert(i18n.t('one-to-many-transfer.step4.content.error.invalid_address'));
 			return;
 		}
 
 		// Validate token ID for NFTs
 		if (isNFT && !manualTokenId) {
-			alert(i18n.t('tools.one_to_many_transfer.step4.content.error.token_id_required'));
+			alert(i18n.t('one-to-many-transfer.step4.content.error.token_id_required'));
 			return;
 		}
 
@@ -142,7 +142,7 @@
 
 			if (!isAddress(address)) {
 				errors.push(
-					i18n.t('tools.one_to_many_transfer.step4.content.error.invalid_address_line', {
+					i18n.t('one-to-many-transfer.step4.content.error.invalid_address_line', {
 						line: i + 1
 					})
 				);
@@ -170,7 +170,7 @@
 				const tokenId = parts[1];
 				if (!tokenId || isNaN(Number(tokenId))) {
 					errors.push(
-						i18n.t('tools.one_to_many_transfer.step4.content.error.invalid_token_id_line', {
+						i18n.t('one-to-many-transfer.step4.content.error.invalid_token_id_line', {
 							line: i + 1
 						})
 					);
@@ -188,7 +188,7 @@
 				const tokenAmount = parts[2] || '1';
 				if (!tokenId || isNaN(Number(tokenId))) {
 					errors.push(
-						i18n.t('tools.one_to_many_transfer.step4.content.error.invalid_token_id_line', {
+						i18n.t('one-to-many-transfer.step4.content.error.invalid_token_id_line', {
 							line: i + 1
 						})
 					);
@@ -257,23 +257,21 @@
 
 <StepContent>
 	<StepContentHeader
-		title={i18n.t('tools.one_to_many_transfer.step4.content.title')}
-		description={i18n.t('tools.one_to_many_transfer.step4.content.description')}
+		title={i18n.t('one-to-many-transfer.step4.content.title')}
+		description={i18n.t('one-to-many-transfer.step4.content.description')}
 	/>
 
 	<!-- Token Type Indicator -->
 	{#if selectedToken}
 		<div class="token-indicator">
-			<span class="token-label"
-				>{i18n.t('tools.one_to_many_transfer.step4.content.distributing')}:</span
-			>
+			<span class="token-label">{i18n.t('one-to-many-transfer.step4.content.distributing')}:</span>
 			<span class="token-value">{selectedToken.symbol}</span>
 			<span class="token-type-badge">{tokenType.toUpperCase()}</span>
 			{#if isFungible && amountMode !== 'custom'}
 				<span class="amount-mode-badge">
 					{amountMode === 'equal'
-						? i18n.t('tools.one_to_many_transfer.step3.content.amount_mode.equal')
-						: i18n.t('tools.one_to_many_transfer.step3.content.amount_mode.random')}
+						? i18n.t('one-to-many-transfer.step3.content.amount_mode.equal')
+						: i18n.t('one-to-many-transfer.step3.content.amount_mode.random')}
 				</span>
 			{/if}
 		</div>
@@ -288,7 +286,7 @@
 				onclick={() => (importMethod = 'manual')}
 			>
 				<Plus size={18} />
-				{i18n.t('tools.one_to_many_transfer.step4.content.method.manual')}
+				{i18n.t('one-to-many-transfer.step4.content.method.manual')}
 			</button>
 			<button
 				class="method-button"
@@ -296,7 +294,7 @@
 				onclick={() => (importMethod = 'paste')}
 			>
 				<FileText size={18} />
-				{i18n.t('tools.one_to_many_transfer.step4.content.method.paste')}
+				{i18n.t('one-to-many-transfer.step4.content.method.paste')}
 			</button>
 			<button
 				class="method-button"
@@ -304,7 +302,7 @@
 				onclick={() => (importMethod = 'csv')}
 			>
 				<Upload size={18} />
-				{i18n.t('tools.one_to_many_transfer.step4.content.method.csv')}
+				{i18n.t('one-to-many-transfer.step4.content.method.csv')}
 			</button>
 		</div>
 	</div>
@@ -313,13 +311,13 @@
 	{#if importMethod === 'manual'}
 		<div class="section">
 			<h3 class="section-title">
-				{i18n.t('tools.one_to_many_transfer.step4.content.manual.title')}
+				{i18n.t('one-to-many-transfer.step4.content.manual.title')}
 			</h3>
 			<div class="manual-form">
 				<div class="form-row">
 					<div class="form-field" class:flex-2={!isNFT}>
 						<label for="manual-address">
-							{i18n.t('tools.one_to_many_transfer.step4.content.manual.address')} *
+							{i18n.t('one-to-many-transfer.step4.content.manual.address')} *
 						</label>
 						<input
 							id="manual-address"
@@ -333,7 +331,7 @@
 					{#if needsTokenId}
 						<div class="form-field">
 							<label for="manual-token-id">
-								{i18n.t('tools.one_to_many_transfer.step4.content.manual.token_id')} *
+								{i18n.t('one-to-many-transfer.step4.content.manual.token_id')} *
 							</label>
 							<input
 								id="manual-token-id"
@@ -349,7 +347,7 @@
 					{#if needsTokenAmount}
 						<div class="form-field">
 							<label for="manual-token-amount">
-								{i18n.t('tools.one_to_many_transfer.step4.content.manual.token_amount')}
+								{i18n.t('one-to-many-transfer.step4.content.manual.token_amount')}
 							</label>
 							<input
 								id="manual-token-amount"
@@ -365,7 +363,7 @@
 					{#if needsAmount}
 						<div class="form-field">
 							<label for="manual-amount">
-								{i18n.t('tools.one_to_many_transfer.step4.content.manual.amount')}
+								{i18n.t('one-to-many-transfer.step4.content.manual.amount')}
 							</label>
 							<input
 								id="manual-amount"
@@ -381,14 +379,12 @@
 
 					<div class="form-field">
 						<label for="manual-label">
-							{i18n.t('tools.one_to_many_transfer.step4.content.manual.label')}
+							{i18n.t('one-to-many-transfer.step4.content.manual.label')}
 						</label>
 						<input
 							id="manual-label"
 							type="text"
-							placeholder={i18n.t(
-								'tools.one_to_many_transfer.step4.content.manual.label_placeholder'
-							)}
+							placeholder={i18n.t('one-to-many-transfer.step4.content.manual.label_placeholder')}
 							bind:value={manualLabel}
 							class="form-input"
 						/>
@@ -396,7 +392,7 @@
 				</div>
 				<button class="add-button" onclick={addManualRecipient}>
 					<Plus size={16} />
-					{i18n.t('tools.one_to_many_transfer.step4.content.manual.add_button')}
+					{i18n.t('one-to-many-transfer.step4.content.manual.add_button')}
 				</button>
 			</div>
 		</div>
@@ -406,7 +402,7 @@
 	{#if importMethod === 'paste'}
 		<div class="section">
 			<h3 class="section-title">
-				{i18n.t('tools.one_to_many_transfer.step4.content.paste.title')}
+				{i18n.t('one-to-many-transfer.step4.content.paste.title')}
 			</h3>
 			<div class="paste-area">
 				<p class="paste-hint">{pasteFormatHint()}</p>
@@ -430,7 +426,7 @@
 
 				<button class="add-button" onclick={parseAndAddPastedData} disabled={!pasteText.trim()}>
 					<Plus size={16} />
-					{i18n.t('tools.one_to_many_transfer.step4.content.paste.add_button')}
+					{i18n.t('one-to-many-transfer.step4.content.paste.add_button')}
 				</button>
 			</div>
 		</div>
@@ -440,15 +436,15 @@
 	{#if importMethod === 'csv'}
 		<div class="section">
 			<h3 class="section-title">
-				{i18n.t('tools.one_to_many_transfer.step4.content.csv.title')}
+				{i18n.t('one-to-many-transfer.step4.content.csv.title')}
 			</h3>
 			<div class="csv-upload-area">
 				<Upload size={48} />
-				<p>{i18n.t('tools.one_to_many_transfer.step4.content.csv.description')}</p>
+				<p>{i18n.t('one-to-many-transfer.step4.content.csv.description')}</p>
 				<button class="upload-button">
-					{i18n.t('tools.one_to_many_transfer.step4.content.csv.upload_button')}
+					{i18n.t('one-to-many-transfer.step4.content.csv.upload_button')}
 				</button>
-				<p class="csv-hint">{i18n.t('tools.one_to_many_transfer.step4.content.csv.hint')}</p>
+				<p class="csv-hint">{i18n.t('one-to-many-transfer.step4.content.csv.hint')}</p>
 			</div>
 		</div>
 	{/if}
@@ -458,19 +454,19 @@
 		<div class="section">
 			<div class="section-header">
 				<h3 class="section-title">
-					{i18n.t('tools.one_to_many_transfer.step4.content.recipients.title')} ({step4State
-						.recipients.length})
+					{i18n.t('one-to-many-transfer.step4.content.recipients.title')} ({step4State.recipients
+						.length})
 				</h3>
 				<div class="header-actions">
 					{#if isRandomMode && isFungible}
 						<button class="regenerate-button" onclick={regenerateAllRandomAmounts}>
 							<RefreshCw size={14} />
-							{i18n.t('tools.one_to_many_transfer.step4.content.recipients.regenerate_random')}
+							{i18n.t('one-to-many-transfer.step4.content.recipients.regenerate_random')}
 						</button>
 					{/if}
 					<button class="clear-button" onclick={clearAllRecipients}>
 						<Trash2 size={14} />
-						{i18n.t('tools.one_to_many_transfer.step4.content.recipients.clear_all')}
+						{i18n.t('one-to-many-transfer.step4.content.recipients.clear_all')}
 					</button>
 				</div>
 			</div>
@@ -478,25 +474,25 @@
 			<div class="recipients-table">
 				<div class="table-header">
 					<div class="col-address">
-						{i18n.t('tools.one_to_many_transfer.step4.content.recipients.col_address')}
+						{i18n.t('one-to-many-transfer.step4.content.recipients.col_address')}
 					</div>
 					{#if needsTokenId}
 						<div class="col-token-id">
-							{i18n.t('tools.one_to_many_transfer.step4.content.recipients.col_token_id')}
+							{i18n.t('one-to-many-transfer.step4.content.recipients.col_token_id')}
 						</div>
 					{/if}
 					{#if needsTokenAmount}
 						<div class="col-token-amount">
-							{i18n.t('tools.one_to_many_transfer.step4.content.recipients.col_token_amount')}
+							{i18n.t('one-to-many-transfer.step4.content.recipients.col_token_amount')}
 						</div>
 					{/if}
 					{#if needsAmount}
 						<div class="col-amount">
-							{i18n.t('tools.one_to_many_transfer.step4.content.recipients.col_amount')}
+							{i18n.t('one-to-many-transfer.step4.content.recipients.col_amount')}
 						</div>
 					{/if}
 					<div class="col-label">
-						{i18n.t('tools.one_to_many_transfer.step4.content.recipients.col_label')}
+						{i18n.t('one-to-many-transfer.step4.content.recipients.col_label')}
 					</div>
 					<div class="col-actions"></div>
 				</div>
@@ -571,7 +567,7 @@
 	<!-- Empty State -->
 	{#if step4State.recipients.length === 0 && importMethod !== 'paste' && importMethod !== 'csv'}
 		<div class="empty-state">
-			<p>{i18n.t('tools.one_to_many_transfer.step4.content.empty_state')}</p>
+			<p>{i18n.t('one-to-many-transfer.step4.content.empty_state')}</p>
 		</div>
 	{/if}
 </StepContent>

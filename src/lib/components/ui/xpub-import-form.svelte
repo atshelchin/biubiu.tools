@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import SimpleCodeEditor from '$lib/components/widgets/SimpleCodeEditor.svelte';
 	import AddressPathSelector from '$lib/components/ui/address-path-selector.svelte';
 	import ProgressButton from '$lib/components/ui/progress-button.svelte';

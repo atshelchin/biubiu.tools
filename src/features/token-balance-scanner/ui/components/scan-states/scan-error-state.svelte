@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { AlertCircle, RefreshCw } from '@lucide/svelte';
 
 	interface Props {
@@ -15,17 +15,15 @@
 <div class="error-state">
 	<AlertCircle size={56} />
 
-	<h3>{i18n.t('tools.token_balance_scanner.step5.error.title') || 'Scan Failed'}</h3>
+	<h3>{i18n.t('token-balance-scanner.step5.error.title') || 'Scan Failed'}</h3>
 
 	<p class="error-message">
-		{error ||
-			i18n.t('tools.token_balance_scanner.step5.error.unknown') ||
-			'An unknown error occurred'}
+		{error || i18n.t('token-balance-scanner.step5.error.unknown') || 'An unknown error occurred'}
 	</p>
 
 	<button class="retry-btn" onclick={onRetry}>
 		<RefreshCw size={20} />
-		<span>{i18n.t('tools.token_balance_scanner.step5.error.retry') || 'Retry Scan'}</span>
+		<span>{i18n.t('token-balance-scanner.step5.error.retry') || 'Retry Scan'}</span>
 	</button>
 </div>
 

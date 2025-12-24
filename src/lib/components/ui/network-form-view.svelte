@@ -4,7 +4,7 @@
 	import { ArrowLeft, Plus, Trash2 } from '@lucide/svelte';
 	import InfoHint from './info-hint.svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { SvelteMap } from 'svelte/reactivity';
 	import {
 		useFormState,
@@ -30,7 +30,7 @@
 	let { mode, network, onSave, onCancel }: Props = $props();
 
 	const i18n = useI18n();
-	const t = i18n.t;
+	const t = i18n.t.bind(i18n);
 
 	let newRpcUrl = $state('');
 	let newRpcError = $state<string | null>(null);

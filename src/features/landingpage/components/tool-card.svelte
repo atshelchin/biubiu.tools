@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { Lock, MessageCircle, ArrowRight } from '@lucide/svelte';
 	import ToolStatusBadge from '$lib/components/ui/tool-status-badge.svelte';
 	import type { Component } from 'svelte';
@@ -33,7 +33,7 @@
 	}: Props = $props();
 
 	const i18n = useI18n();
-	const t = i18n.t;
+	const t = i18n.t.bind(i18n);
 
 	function joinTelegramGroup() {
 		window.open(telegramLink, '_blank');

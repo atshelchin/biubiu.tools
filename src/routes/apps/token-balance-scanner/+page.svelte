@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { mainnet, polygon, arbitrum, optimism, base, bsc } from 'viem/chains';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import StepBasedApp from '$lib/components/step-based-app.svelte';
 	import { stepComponents } from '@/features/token-balance-scanner/ui/steps';
 	import SessionManagerModal from '@/features/token-balance-scanner/ui/components/session-manager-modal.svelte';
@@ -73,32 +73,32 @@
 
 	const faqs = $derived([
 		{
-			question: i18n.t('tools.token_balance_scanner.faqs.what_is_balance_checker'),
-			answer: i18n.t('tools.token_balance_scanner.faqs.balance_checker_explanation')
+			question: i18n.t('token-balance-scanner.faqs.what_is_balance_checker'),
+			answer: i18n.t('token-balance-scanner.faqs.balance_checker_explanation')
 		},
 		{
-			question: i18n.t('tools.token_balance_scanner.faqs.how_many_addresses'),
-			answer: i18n.t('tools.token_balance_scanner.faqs.how_many_addresses_explanation')
+			question: i18n.t('token-balance-scanner.faqs.how_many_addresses'),
+			answer: i18n.t('token-balance-scanner.faqs.how_many_addresses_explanation')
 		},
 		{
-			question: i18n.t('tools.token_balance_scanner.faqs.what_tokens_supported'),
-			answer: i18n.t('tools.token_balance_scanner.faqs.what_tokens_supported_explanation')
+			question: i18n.t('token-balance-scanner.faqs.what_tokens_supported'),
+			answer: i18n.t('token-balance-scanner.faqs.what_tokens_supported_explanation')
 		},
 		{
-			question: i18n.t('tools.token_balance_scanner.faqs.is_it_free'),
-			answer: i18n.t('tools.token_balance_scanner.faqs.is_it_free_explanation')
+			question: i18n.t('token-balance-scanner.faqs.is_it_free'),
+			answer: i18n.t('token-balance-scanner.faqs.is_it_free_explanation')
 		},
 		{
-			question: i18n.t('tools.token_balance_scanner.faqs.what_is_multicall'),
-			answer: i18n.t('tools.token_balance_scanner.faqs.multicall_explanation')
+			question: i18n.t('token-balance-scanner.faqs.what_is_multicall'),
+			answer: i18n.t('token-balance-scanner.faqs.multicall_explanation')
 		},
 		{
-			question: i18n.t('tools.token_balance_scanner.faqs.can_export_results'),
-			answer: i18n.t('tools.token_balance_scanner.faqs.can_export_explanation')
+			question: i18n.t('token-balance-scanner.faqs.can_export_results'),
+			answer: i18n.t('token-balance-scanner.faqs.can_export_explanation')
 		},
 		{
-			question: i18n.t('tools.token_balance_scanner.faqs.what_networks_supported'),
-			answer: i18n.t('tools.token_balance_scanner.faqs.networks_supported_explanation')
+			question: i18n.t('token-balance-scanner.faqs.what_networks_supported'),
+			answer: i18n.t('token-balance-scanner.faqs.networks_supported_explanation')
 		}
 	]);
 </script>
@@ -111,29 +111,29 @@
 		structuredData: data.structuredData,
 		steps: [
 			{
-				label: 'tools.token_balance_scanner.seo.step_1_name',
-				description: 'tools.token_balance_scanner.seo.step_1_description'
+				label: 'token-balance-scanner.seo.step_1_name',
+				description: 'token-balance-scanner.seo.step_1_description'
 			},
 			{
-				label: 'tools.token_balance_scanner.seo.step_2_name',
-				description: 'tools.token_balance_scanner.seo.step_2_description'
+				label: 'token-balance-scanner.seo.step_2_name',
+				description: 'token-balance-scanner.seo.step_2_description'
 			},
 			{
-				label: 'tools.token_balance_scanner.seo.step_3_name',
-				description: 'tools.token_balance_scanner.seo.step_3_description'
+				label: 'token-balance-scanner.seo.step_3_name',
+				description: 'token-balance-scanner.seo.step_3_description'
 			},
 			{
-				label: 'tools.token_balance_scanner.seo.step_4_name',
-				description: 'tools.token_balance_scanner.seo.step_4_description'
+				label: 'token-balance-scanner.seo.step_4_name',
+				description: 'token-balance-scanner.seo.step_4_description'
 			},
 			{
-				label: 'tools.token_balance_scanner.seo.step_5_name',
-				description: 'tools.token_balance_scanner.seo.step_5_description'
+				label: 'token-balance-scanner.seo.step_5_name',
+				description: 'token-balance-scanner.seo.step_5_description'
 			}
 		],
 		useI18nKeys: true,
-		appTitle: i18n.t('tools.token_balance_scanner.title'),
-		appDescription: i18n.t('tools.token_balance_scanner.description'),
+		appTitle: i18n.t('token-balance-scanner.title'),
+		appDescription: i18n.t('token-balance-scanner.description'),
 		faqs: {
 			title: i18n.t('common.faqs'),
 			items: faqs

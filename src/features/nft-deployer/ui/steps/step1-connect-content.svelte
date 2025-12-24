@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { useConnectStore } from '$lib/stores/connect.svelte.js';
 	import NetworkSelector from '@/lib/components/ui/network-selector.svelte';
 	import WalletConnectButton from '@/lib/components/ui/wallet-connect-button.svelte';
@@ -25,8 +25,8 @@
 
 <StepContent>
 	<StepContentHeader
-		title={i18n.t('tools.nft_deployer.step1.content.title')}
-		description={i18n.t('tools.nft_deployer.step1.content.description')}
+		title={i18n.t('nft-deployer.step1.content.title')}
+		description={i18n.t('nft-deployer.step1.content.description')}
 	/>
 
 	{#if isLoading}

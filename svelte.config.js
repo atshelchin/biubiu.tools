@@ -11,7 +11,9 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			'@': 'src',
-			'@packages': 'packages'
+			'@packages': 'packages',
+			$i18n: 'src/i18n',
+			$utils: 'src/utils'
 		}
 	},
 	extensions: ['.svelte', '.svx']

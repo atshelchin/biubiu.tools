@@ -65,7 +65,7 @@
 	} from '$lib/components/ui/step-indicator.svelte';
 	import StepControls from '$lib/components/ui/step-controls.svelte';
 	import Faqs from '$lib/components/ui/faqs.svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	interface Props {
 		config: StepBasedAppConfig;

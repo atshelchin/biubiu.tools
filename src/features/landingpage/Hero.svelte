@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	const i18n = useI18n();
-	const t = i18n.t;
+	const t = i18n.t.bind(i18n);
 
 	// Handle CTA click | 处理 CTA 点击
 	// function handleCtaClick(e: Event) {
@@ -59,27 +59,27 @@
 
 		<h1 class="hero-title animate-fade-in-delayed">
 			<span class="title-gradient">
-				{t('hero_title')}
+				{t('common.hero_title')}
 			</span>
 		</h1>
 
 		<!-- Subtitle with enhanced typography | 增强排版的副标题 -->
 		<p class="hero-subtitle animate-fade-in-delayed">
-			{t('hero_subtitle')}
+			{t('common.hero_subtitle')}
 		</p>
 
 		<!-- CTA buttons with premium styling | 高端风格的行动按钮 -->
 		<div class="cta-buttons animate-fade-in-delayed-more">
 			<!-- Primary CTA button | 主要行动按钮 -->
 			<!-- <button onclick={handleCtaClick} class="btn-primary">
-				<span class="btn-text">{t('cta_get_started')}</span>
+				<span class="btn-text">{t('common.cta_get_started')}</span>
 				<div class="btn-glow"></div>
 			</button> -->
 
 			<!-- Secondary CTA button | 次要行动按钮 -->
 
 			<button class="button-secondary" onclick={scrollToFeatures}>
-				{t('cta_learn_more')}
+				{t('common.cta_learn_more')}
 			</button>
 		</div>
 

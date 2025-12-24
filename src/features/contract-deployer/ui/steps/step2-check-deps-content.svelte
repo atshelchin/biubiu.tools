@@ -2,7 +2,7 @@
 	import { useConnectStore } from '$lib/stores/connect.svelte.js';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { checkAllDependencies, type DependencyCheckResult } from '../../utils/dependency-checker';
 	import { CircleCheckBig, CircleX } from '@lucide/svelte';
 
@@ -49,15 +49,15 @@
 
 <StepContent>
 	<StepContentHeader
-		title={i18n.t('tools.contract_deployer.step2.content.title')}
-		description={i18n.t('tools.contract_deployer.step2.content.description')}
+		title={i18n.t('contract-deployer.step2.content.title')}
+		description={i18n.t('contract-deployer.step2.content.description')}
 	/>
 
 	<div class="dependencies-container">
 		{#if isChecking}
 			<div class="checking-state">
 				<div class="spinner"></div>
-				<p>{i18n.t('tools.contract_deployer.step2.content.checking')}</p>
+				<p>{i18n.t('contract-deployer.step2.content.checking')}</p>
 			</div>
 		{:else if hasChecked}
 			<div class="dependencies-list">
@@ -80,11 +80,11 @@
 						<div class="dependency-status">
 							{#if dep.exists}
 								<span class="status-badge success">
-									{i18n.t('tools.contract_deployer.step2.content.available')}
+									{i18n.t('contract-deployer.step2.content.available')}
 								</span>
 							{:else}
 								<span class="status-badge error">
-									{i18n.t('tools.contract_deployer.step2.content.not_available')}
+									{i18n.t('contract-deployer.step2.content.not_available')}
 								</span>
 							{/if}
 						</div>
@@ -95,17 +95,17 @@
 			{#if allPassed}
 				<div class="success-message">
 					<CircleCheckBig size={20} strokeWidth={2} />
-					<p>{i18n.t('tools.contract_deployer.step2.content.all_passed')}</p>
+					<p>{i18n.t('contract-deployer.step2.content.all_passed')}</p>
 				</div>
 			{:else}
 				<div class="error-message-box">
 					<CircleX size={20} strokeWidth={2} />
-					<p>{i18n.t('tools.contract_deployer.step2.content.some_failed')}</p>
+					<p>{i18n.t('contract-deployer.step2.content.some_failed')}</p>
 				</div>
 			{/if}
 		{:else}
 			<button type="button" class="check-button" onclick={handleCheck}>
-				{i18n.t('tools.contract_deployer.step2.content.check_button')}
+				{i18n.t('contract-deployer.step2.content.check_button')}
 			</button>
 		{/if}
 	</div>

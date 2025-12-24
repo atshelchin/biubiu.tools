@@ -6,7 +6,7 @@
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
 	import LoadingState from '$lib/components/ui/loading-state.svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	const connectStore = useConnectStore();
 	const i18n = useI18n();
@@ -25,12 +25,12 @@
 
 <StepContent>
 	<StepContentHeader
-		title={i18n.t('tools.contract_deployer.step1.content.title')}
-		description={i18n.t('tools.contract_deployer.step1.content.description')}
+		title={i18n.t('contract-deployer.step1.content.title')}
+		description={i18n.t('contract-deployer.step1.content.description')}
 	/>
 
 	{#if isLoading}
-		<LoadingState message={i18n.t('tools.contract_deployer.step1.content.loading')} />
+		<LoadingState message={i18n.t('contract-deployer.step1.content.loading')} />
 	{:else}
 		<NetworkSelector {connectStore} {isLoading} bind:selectedChainId bind:selectedNetwork />
 

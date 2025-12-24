@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { SvelteMap } from 'svelte/reactivity';
 	import type { Category, CategoryId } from '../types';
 

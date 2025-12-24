@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { WifiOff, Shield, ShieldAlert, ShieldQuestion, Github, Zap } from '@lucide/svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import CopyButton from '$lib/components/ui/copy-button.svelte';
 	import type { ParsedRpcEndpoint, RpcLatencyResult } from '../types';
 

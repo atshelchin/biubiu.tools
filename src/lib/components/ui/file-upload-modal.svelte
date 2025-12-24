@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Upload, File as FileIcon, X } from '@lucide/svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { SvelteMap, SvelteSet } from 'svelte/reactivity';
 	import Modal from './modal.svelte';
 

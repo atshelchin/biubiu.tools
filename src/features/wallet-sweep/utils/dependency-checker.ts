@@ -37,7 +37,7 @@ async function checkBiubiuMembership(
 		rpcUrl,
 		address,
 		'Biubiu Membership',
-		t('tools.wallet_sweep.step2.content.checks.contract.biubiu_membership_description'),
+		t('wallet-sweep.step2.content.checks.contract.biubiu_membership_description'),
 		t,
 		{
 			canDeploy: false,
@@ -58,7 +58,7 @@ async function checkTokenSweepContract(
 		rpcUrl,
 		address,
 		'Token Sweep Contract',
-		t('tools.wallet_sweep.step2.content.checks.contract.wallet_sweep_contract_description'),
+		t('wallet-sweep.step2.content.checks.contract.wallet_sweep_contract_description'),
 		t,
 		{
 			canDeploy: true,

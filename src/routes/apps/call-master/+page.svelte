@@ -3,7 +3,7 @@
 	import { createConnectStore } from '$lib/stores/connect.svelte';
 	import { mainnet, polygon, arbitrum, optimism, base, bsc } from 'viem/chains';
 	import PageLayout from '$lib/components/page-layout.svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	const i18n = useI18n();
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { Settings } from '@lucide/svelte';
 	import IconButton from './icon-button.svelte';
 	import NetworkSettingsModal from './network-settings-modal.svelte';

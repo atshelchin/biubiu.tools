@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import SegmentedControl from '$lib/components/ui/segmented-control.svelte';
 	import type { ImportMethod } from '../../types/wallet';
 
@@ -15,11 +15,11 @@
 	const options = $derived([
 		{
 			value: 'privateKey' as const,
-			label: i18n.t('tools.wallet_sweep.step4.import_method.private_key.label')
+			label: i18n.t('wallet-sweep.step4.import_method.private_key.label')
 		},
 		{
 			value: 'mnemonic' as const,
-			label: i18n.t('tools.wallet_sweep.step4.import_method.mnemonic.label')
+			label: i18n.t('wallet-sweep.step4.import_method.mnemonic.label')
 		}
 	]);
 

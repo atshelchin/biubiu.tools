@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import StepBasedApp from '$lib/components/step-based-app.svelte';
 	import { stepComponents } from '@/features/wallet-generator/ui/steps';
 	import type { PageData } from './$types';
@@ -13,8 +13,8 @@
 		meta: data.meta,
 		structuredData: data.structuredData,
 		steps: data.steps,
-		appTitle: i18n.t('tools.wallet_generator.title'),
-		appDescription: i18n.t('tools.wallet_generator.description'),
+		appTitle: i18n.t('wallet-generator.title'),
+		appDescription: i18n.t('wallet-generator.description'),
 		stepComponents
 	}}
 />

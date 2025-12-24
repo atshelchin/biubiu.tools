@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { step2CheckDepsState } from '@/features/nft-deployer/stores/step2-check-deps-state.svelte';
 
 	const i18n = useI18n();
@@ -9,9 +9,9 @@
 </script>
 
 <div class="step-sidebar">
-	<h3 class="sidebar-title">{i18n.t('tools.nft_deployer.step2.sidebar.title')}</h3>
+	<h3 class="sidebar-title">{i18n.t('nft-deployer.step2.sidebar.title')}</h3>
 	<p class="sidebar-description">
-		{i18n.t('tools.nft_deployer.step2.sidebar.description')}
+		{i18n.t('nft-deployer.step2.sidebar.description')}
 	</p>
 
 	{#if hasChecked && summary}
@@ -26,9 +26,9 @@
 				</span>
 				<span class="status-text">
 					{#if summary.allPassed}
-						{i18n.t('tools.nft_deployer.step2.sidebar.all_passed')}
+						{i18n.t('nft-deployer.step2.sidebar.all_passed')}
 					{:else}
-						{i18n.t('tools.nft_deployer.step2.sidebar.issues_found')}
+						{i18n.t('nft-deployer.step2.sidebar.issues_found')}
 					{/if}
 				</span>
 			</div>
@@ -36,12 +36,12 @@
 			<div class="status-stats">
 				<div class="stat">
 					<span class="stat-value">{summary.passed}</span>
-					<span class="stat-label">{i18n.t('tools.nft_deployer.step2.sidebar.passed')}</span>
+					<span class="stat-label">{i18n.t('nft-deployer.step2.sidebar.passed')}</span>
 				</div>
 				{#if summary.failed > 0}
 					<div class="stat error">
 						<span class="stat-value">{summary.failed}</span>
-						<span class="stat-label">{i18n.t('tools.nft_deployer.step2.sidebar.failed')}</span>
+						<span class="stat-label">{i18n.t('nft-deployer.step2.sidebar.failed')}</span>
 					</div>
 				{/if}
 			</div>

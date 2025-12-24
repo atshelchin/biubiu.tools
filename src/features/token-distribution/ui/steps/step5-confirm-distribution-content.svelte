@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
@@ -113,11 +113,11 @@
 	const amountModeLabel = $derived.by(() => {
 		switch (step3State.amountMode) {
 			case 'equal':
-				return i18n.t('tools.one_to_many_transfer.step5.content.mode_equal');
+				return i18n.t('one-to-many-transfer.step5.content.mode_equal');
 			case 'random':
-				return i18n.t('tools.one_to_many_transfer.step5.content.mode_random');
+				return i18n.t('one-to-many-transfer.step5.content.mode_random');
 			case 'custom':
-				return i18n.t('tools.one_to_many_transfer.step5.content.mode_custom');
+				return i18n.t('one-to-many-transfer.step5.content.mode_custom');
 			default:
 				return step3State.amountMode;
 		}
@@ -157,7 +157,7 @@
 	// Self-execution handlers
 	async function handleExecute() {
 		if (!distributionConfig) {
-			alert(i18n.t('tools.one_to_many_transfer.step5.content.errors.invalid_config'));
+			alert(i18n.t('one-to-many-transfer.step5.content.errors.invalid_config'));
 			return;
 		}
 
@@ -166,7 +166,7 @@
 		const detailsText = confirmMsg.details.join('\n• ');
 		if (
 			!confirm(
-				`${confirmMsg.title}\n\n• ${detailsText}\n\n${confirmMsg.warning}\n\n${i18n.t('tools.one_to_many_transfer.step5.content.confirm_continue')}`
+				`${confirmMsg.title}\n\n• ${detailsText}\n\n${confirmMsg.warning}\n\n${i18n.t('one-to-many-transfer.step5.content.confirm_continue')}`
 			)
 		) {
 			return;
@@ -192,7 +192,7 @@
 	// Delegated mode handlers
 	async function handleAuthorize() {
 		if (!distributionConfig || !connectStore.currentChainId) {
-			alert(i18n.t('tools.one_to_many_transfer.step5.content.errors.invalid_config'));
+			alert(i18n.t('one-to-many-transfer.step5.content.errors.invalid_config'));
 			return;
 		}
 
@@ -246,8 +246,8 @@
 
 <StepContent>
 	<StepContentHeader
-		title={i18n.t('tools.one_to_many_transfer.step5.content.title')}
-		description={i18n.t('tools.one_to_many_transfer.step5.content.description')}
+		title={i18n.t('one-to-many-transfer.step5.content.title')}
+		description={i18n.t('one-to-many-transfer.step5.content.description')}
 	/>
 
 	<!-- Error Banner -->
@@ -265,7 +265,7 @@
 	{#if activeSessions.length > 0}
 		<button class="session-toggle" onclick={() => (showSessionManager = !showSessionManager)}>
 			<History size={18} />
-			<span>{i18n.t('tools.one_to_many_transfer.step5.session.title')}</span>
+			<span>{i18n.t('one-to-many-transfer.step5.session.title')}</span>
 			<span class="session-badge">{activeSessions.length}</span>
 		</button>
 	{/if}
@@ -280,7 +280,7 @@
 	<!-- Execution Mode Selector -->
 	<div class="mode-section">
 		<h3 class="section-title">
-			{i18n.t('tools.one_to_many_transfer.step5.mode.title')}
+			{i18n.t('one-to-many-transfer.step5.mode.title')}
 		</h3>
 		<ExecutionModeSelector bind:value={executionMode} disabled={isAnyExecutionInProgress} />
 	</div>
@@ -289,7 +289,7 @@
 	{#if connectStore.address && connectStore.currentChainId}
 		<div class="wallet-section">
 			<h3 class="section-title">
-				{i18n.t('tools.one_to_many_transfer.step5.content.executor_wallet')}
+				{i18n.t('one-to-many-transfer.step5.content.executor_wallet')}
 			</h3>
 			<ExecutorWallet
 				address={connectStore.address}
@@ -304,12 +304,12 @@
 	<!-- Distribution Summary -->
 	<div class="summary-section">
 		<h3 class="section-title">
-			{i18n.t('tools.one_to_many_transfer.step5.content.summary_title')}
+			{i18n.t('one-to-many-transfer.step5.content.summary_title')}
 		</h3>
 		<div class="summary-grid">
 			<div class="summary-card">
 				<div class="summary-label">
-					{i18n.t('tools.one_to_many_transfer.step5.content.token')}
+					{i18n.t('one-to-many-transfer.step5.content.token')}
 				</div>
 				<div class="summary-value">
 					{step3State.selectedToken?.symbol} ({step3State.selectedToken?.name})
@@ -317,7 +317,7 @@
 			</div>
 			<div class="summary-card">
 				<div class="summary-label">
-					{i18n.t('tools.one_to_many_transfer.step5.content.mode')}
+					{i18n.t('one-to-many-transfer.step5.content.mode')}
 				</div>
 				<div class="summary-value">
 					{amountModeLabel}
@@ -325,15 +325,15 @@
 			</div>
 			<div class="summary-card">
 				<div class="summary-label">
-					{i18n.t('tools.one_to_many_transfer.step5.content.recipients')}
+					{i18n.t('one-to-many-transfer.step5.content.recipients')}
 				</div>
 				<div class="summary-value">{step4State.totalRecipients}</div>
 			</div>
 			<div class="summary-card">
 				<div class="summary-label">
 					{isNFT
-						? i18n.t('tools.one_to_many_transfer.step5.content.total_nfts')
-						: i18n.t('tools.one_to_many_transfer.step5.content.total_amount')}
+						? i18n.t('one-to-many-transfer.step5.content.total_nfts')
+						: i18n.t('one-to-many-transfer.step5.content.total_amount')}
 				</div>
 				<div class="summary-value highlighted">
 					{totalAmount}
@@ -342,13 +342,13 @@
 			</div>
 			<div class="summary-card">
 				<div class="summary-label">
-					{i18n.t('tools.one_to_many_transfer.step5.content.estimated_gas')}
+					{i18n.t('one-to-many-transfer.step5.content.estimated_gas')}
 				</div>
 				<div class="summary-value">{estimatedGas} {currentNetwork?.symbol || 'ETH'}</div>
 			</div>
 			<div class="summary-card">
 				<div class="summary-label">
-					{i18n.t('tools.one_to_many_transfer.step5.content.network')}
+					{i18n.t('one-to-many-transfer.step5.content.network')}
 				</div>
 				<div class="summary-value">{currentNetwork?.name}</div>
 			</div>
@@ -358,7 +358,7 @@
 	<!-- Recipients Preview -->
 	<div class="recipients-section">
 		<h3 class="section-title">
-			{i18n.t('tools.one_to_many_transfer.step5.content.preview_title')}
+			{i18n.t('one-to-many-transfer.step5.content.preview_title')}
 		</h3>
 		<div class="recipients-preview">
 			{#each step4State.recipients.slice(0, 10) as recipient (recipient.id)}
@@ -389,7 +389,7 @@
 			{#if step4State.totalRecipients > 10}
 				<div class="more-recipients">
 					+{step4State.totalRecipients - 10}
-					{i18n.t('tools.one_to_many_transfer.step5.content.more_recipients')}
+					{i18n.t('one-to-many-transfer.step5.content.more_recipients')}
 				</div>
 			{/if}
 		</div>
@@ -399,7 +399,7 @@
 	{#if executor.isExecuting || executor.progress.phase !== 'idle'}
 		<div class="progress-section" transition:fade>
 			<h3 class="section-title">
-				{i18n.t('tools.one_to_many_transfer.step5.content.progress_title')}
+				{i18n.t('one-to-many-transfer.step5.content.progress_title')}
 			</h3>
 			<div class="progress-bar">
 				<div
@@ -422,19 +422,19 @@
 					<span class="result-item success">
 						<Check size={14} />
 						{executor.summary.success}
-						{i18n.t('tools.one_to_many_transfer.step5.content.successful')}
+						{i18n.t('one-to-many-transfer.step5.content.successful')}
 					</span>
 					{#if executor.summary.failed > 0}
 						<span class="result-item failed">
 							<X size={14} />
 							{executor.summary.failed}
-							{i18n.t('tools.one_to_many_transfer.step5.content.failed')}
+							{i18n.t('one-to-many-transfer.step5.content.failed')}
 						</span>
 					{/if}
 					{#if executor.summary.pending > 0}
 						<span class="result-item pending">
 							{executor.summary.pending}
-							{i18n.t('tools.one_to_many_transfer.step5.content.pending')}
+							{i18n.t('one-to-many-transfer.step5.content.pending')}
 						</span>
 					{/if}
 				</div>
@@ -448,23 +448,23 @@
 			{#if executor.isExecuting}
 				<button class="action-button stop" onclick={handleStop}>
 					<Pause size={20} />
-					{i18n.t('tools.one_to_many_transfer.step5.content.stop')}
+					{i18n.t('one-to-many-transfer.step5.content.stop')}
 				</button>
 			{:else if canResume}
 				<button class="action-button resume" onclick={handleResume}>
 					<RotateCcw size={20} />
-					{i18n.t('tools.one_to_many_transfer.step5.content.resume')}
+					{i18n.t('one-to-many-transfer.step5.content.resume')}
 				</button>
 				<button class="action-button secondary" onclick={handleReset}>
-					{i18n.t('tools.one_to_many_transfer.step5.content.reset')}
+					{i18n.t('one-to-many-transfer.step5.content.reset')}
 				</button>
 			{:else if executor.progress.phase === 'completed'}
 				<div class="completed-banner">
 					<CheckCircle2 size={24} />
-					<span>{i18n.t('tools.one_to_many_transfer.step5.content.completed')}</span>
+					<span>{i18n.t('one-to-many-transfer.step5.content.completed')}</span>
 				</div>
 				<button class="action-button secondary" onclick={handleReset}>
-					{i18n.t('tools.one_to_many_transfer.step5.content.start_new')}
+					{i18n.t('one-to-many-transfer.step5.content.start_new')}
 				</button>
 			{:else}
 				<button class="action-button execute" onclick={handleExecute} disabled={!canExecute}>
@@ -473,7 +473,7 @@
 					{:else}
 						<Play size={20} />
 					{/if}
-					{i18n.t('tools.one_to_many_transfer.step5.content.execute')}
+					{i18n.t('one-to-many-transfer.step5.content.execute')}
 				</button>
 			{/if}
 		</div>
@@ -485,7 +485,7 @@
 		{#if delegatedExecutor.session}
 			<div class="delegated-section" transition:fade>
 				<h3 class="section-title">
-					{i18n.t('tools.one_to_many_transfer.step5.delegated.batch_status')}
+					{i18n.t('one-to-many-transfer.step5.delegated.batch_status')}
 				</h3>
 
 				<!-- Batch Progress List -->
@@ -500,13 +500,13 @@
 							<div class="batch-info">
 								<span class="batch-id">
 									{i18n
-										.t('tools.one_to_many_transfer.step5.delegated.execute_batch')
+										.t('one-to-many-transfer.step5.delegated.execute_batch')
 										.replace('{current}', String(index + 1))
 										.replace('{total}', String(delegatedExecutor.session?.batches.length || 0))}
 								</span>
 								<span class="batch-recipients">
 									{batch.recipients.length}
-									{i18n.t('tools.one_to_many_transfer.step5.content.recipients').toLowerCase()}
+									{i18n.t('one-to-many-transfer.step5.content.recipients').toLowerCase()}
 								</span>
 							</div>
 							<div class="batch-status-indicator">
@@ -531,7 +531,7 @@
 					<span class="summary-stat">
 						<Check size={14} />
 						{delegatedExecutor.completedBatches} / {delegatedExecutor.session.batches.length}
-						{i18n.t('tools.one_to_many_transfer.step5.session.batches')}
+						{i18n.t('one-to-many-transfer.step5.session.batches')}
 					</span>
 				</div>
 			</div>
@@ -544,20 +544,20 @@
 				<button class="action-button execute" onclick={handleAuthorize} disabled={!canAuthorize}>
 					{#if delegatedExecutor.isAuthorizing}
 						<Loader2 size={20} class="spinning" />
-						{i18n.t('tools.one_to_many_transfer.step5.delegated.authorizing')}
+						{i18n.t('one-to-many-transfer.step5.delegated.authorizing')}
 					{:else}
 						<Play size={20} />
-						{i18n.t('tools.one_to_many_transfer.step5.delegated.authorize')}
+						{i18n.t('one-to-many-transfer.step5.delegated.authorize')}
 					{/if}
 				</button>
 			{:else if delegatedExecutor.pendingBatches === 0}
 				<!-- All batches completed -->
 				<div class="completed-banner">
 					<CheckCircle2 size={24} />
-					<span>{i18n.t('tools.one_to_many_transfer.step5.content.completed')}</span>
+					<span>{i18n.t('one-to-many-transfer.step5.content.completed')}</span>
 				</div>
 				<button class="action-button secondary" onclick={handleResetDelegated}>
-					{i18n.t('tools.one_to_many_transfer.step5.content.start_new')}
+					{i18n.t('one-to-many-transfer.step5.content.start_new')}
 				</button>
 			{:else}
 				<!-- Session active with pending batches -->
@@ -571,10 +571,10 @@
 					{:else}
 						<Play size={20} />
 					{/if}
-					{i18n.t('tools.one_to_many_transfer.step5.delegated.execute_all')}
+					{i18n.t('one-to-many-transfer.step5.delegated.execute_all')}
 				</button>
 				<button class="action-button secondary" onclick={handleResetDelegated}>
-					{i18n.t('tools.one_to_many_transfer.step5.content.reset')}
+					{i18n.t('one-to-many-transfer.step5.content.reset')}
 				</button>
 			{/if}
 		</div>
@@ -584,8 +584,8 @@
 	<div class="warning-box">
 		<AlertCircle size={20} />
 		<div>
-			<strong>{i18n.t('tools.one_to_many_transfer.step5.content.warning_title')}</strong>
-			<p>{i18n.t('tools.one_to_many_transfer.step5.content.warning_message')}</p>
+			<strong>{i18n.t('one-to-many-transfer.step5.content.warning_title')}</strong>
+			<p>{i18n.t('one-to-many-transfer.step5.content.warning_message')}</p>
 		</div>
 	</div>
 </StepContent>

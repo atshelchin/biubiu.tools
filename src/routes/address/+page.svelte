@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { Search, Loader2 } from '@lucide/svelte';
 	import SeoHead from '$lib/components/seo-head.svelte';
 	import type { PageData } from './$types';

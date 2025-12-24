@@ -1,32 +1,32 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	const i18n = useI18n();
 </script>
 
 <div class="info-card">
-	<h3 class="info-title">{i18n.t('tools.contract_deployer.step3.sidebar.title')}</h3>
+	<h3 class="info-title">{i18n.t('contract-deployer.step3.sidebar.title')}</h3>
 	<div class="info-content">
-		<p>{i18n.t('tools.contract_deployer.step3.sidebar.description')}</p>
+		<p>{i18n.t('contract-deployer.step3.sidebar.description')}</p>
 
 		<div class="info-section">
-			<h4>{i18n.t('tools.contract_deployer.step3.sidebar.bytecode_title')}</h4>
-			<p>{i18n.t('tools.contract_deployer.step3.sidebar.bytecode_description')}</p>
+			<h4>{i18n.t('contract-deployer.step3.sidebar.bytecode_title')}</h4>
+			<p>{i18n.t('contract-deployer.step3.sidebar.bytecode_description')}</p>
 		</div>
 
 		<div class="info-section">
-			<h4>{i18n.t('tools.contract_deployer.step3.sidebar.abi_title')}</h4>
-			<p>{i18n.t('tools.contract_deployer.step3.sidebar.abi_description')}</p>
+			<h4>{i18n.t('contract-deployer.step3.sidebar.abi_title')}</h4>
+			<p>{i18n.t('contract-deployer.step3.sidebar.abi_description')}</p>
 		</div>
 
 		<div class="info-section">
-			<h4>{i18n.t('tools.contract_deployer.step3.sidebar.constructor_title')}</h4>
-			<p>{i18n.t('tools.contract_deployer.step3.sidebar.constructor_description')}</p>
+			<h4>{i18n.t('contract-deployer.step3.sidebar.constructor_title')}</h4>
+			<p>{i18n.t('contract-deployer.step3.sidebar.constructor_description')}</p>
 		</div>
 
 		<div class="info-section">
-			<h4>{i18n.t('tools.contract_deployer.step3.sidebar.salt_title')}</h4>
-			<p>{i18n.t('tools.contract_deployer.step3.sidebar.salt_description')}</p>
+			<h4>{i18n.t('contract-deployer.step3.sidebar.salt_title')}</h4>
+			<p>{i18n.t('contract-deployer.step3.sidebar.salt_description')}</p>
 		</div>
 	</div>
 </div>

@@ -17,7 +17,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'biubiu-wallet-sweep',
 		name: 'Wallet Sweep',
-		descriptionKey: 'chain_tools.tools.biubiu_wallet_sweep.description',
+		descriptionKey: 'chain-tools.tools.biubiu_wallet_sweep.description',
 		url: '/apps/wallet-sweep',
 		icon: ArrowLeftRight,
 		category: 'wallet',
@@ -28,7 +28,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'biubiu-one-to-many',
 		name: 'One-to-Many Transfer',
-		descriptionKey: 'chain_tools.tools.biubiu_one_to_many.description',
+		descriptionKey: 'chain-tools.tools.biubiu_one_to_many.description',
 		url: '/apps/one-to-many-transfer',
 		icon: SendHorizontal,
 		category: 'wallet',
@@ -39,7 +39,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'biubiu-wallet-generator',
 		name: 'Wallet Generator',
-		descriptionKey: 'chain_tools.tools.biubiu_wallet_generator.description',
+		descriptionKey: 'chain-tools.tools.biubiu_wallet_generator.description',
 		url: '/apps/wallet-generator',
 		icon: KeyRound,
 		category: 'wallet',
@@ -49,7 +49,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'biubiu-balance-scanner',
 		name: 'Balance Scanner',
-		descriptionKey: 'chain_tools.tools.biubiu_balance_scanner.description',
+		descriptionKey: 'chain-tools.tools.biubiu_balance_scanner.description',
 		url: '/apps/token-balance-scanner',
 		icon: ScanSearch,
 		category: 'wallet',
@@ -62,7 +62,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'debank',
 		name: 'DeBank',
-		descriptionKey: 'chain_tools.tools.debank.description',
+		descriptionKey: 'chain-tools.tools.debank.description',
 		url: 'https://debank.com',
 		icon: Wallet,
 		category: 'wallet',
@@ -72,7 +72,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'zapper',
 		name: 'Zapper',
-		descriptionKey: 'chain_tools.tools.zapper.description',
+		descriptionKey: 'chain-tools.tools.zapper.description',
 		url: 'https://zapper.xyz',
 		icon: Wallet,
 		category: 'wallet',
@@ -82,7 +82,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'zerion',
 		name: 'Zerion',
-		descriptionKey: 'chain_tools.tools.zerion.description',
+		descriptionKey: 'chain-tools.tools.zerion.description',
 		url: 'https://zerion.io',
 		icon: Wallet,
 		category: 'wallet',
@@ -94,7 +94,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'metamask',
 		name: 'MetaMask',
-		descriptionKey: 'chain_tools.tools.metamask.description',
+		descriptionKey: 'chain-tools.tools.metamask.description',
 		url: 'https://metamask.io',
 		icon: Wallet,
 		category: 'wallet',
@@ -105,7 +105,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'rabby',
 		name: 'Rabby Wallet',
-		descriptionKey: 'chain_tools.tools.rabby.description',
+		descriptionKey: 'chain-tools.tools.rabby.description',
 		url: 'https://rabby.io',
 		icon: Wallet,
 		category: 'wallet',
@@ -116,7 +116,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'rainbow',
 		name: 'Rainbow',
-		descriptionKey: 'chain_tools.tools.rainbow.description',
+		descriptionKey: 'chain-tools.tools.rainbow.description',
 		url: 'https://rainbow.me',
 		icon: Wallet,
 		category: 'wallet',
@@ -127,7 +127,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'frame',
 		name: 'Frame',
-		descriptionKey: 'chain_tools.tools.frame.description',
+		descriptionKey: 'chain-tools.tools.frame.description',
 		url: 'https://frame.sh',
 		icon: Wallet,
 		category: 'wallet',
@@ -139,7 +139,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'safe',
 		name: 'Safe (Gnosis)',
-		descriptionKey: 'chain_tools.tools.safe.description',
+		descriptionKey: 'chain-tools.tools.safe.description',
 		url: 'https://safe.global',
 		icon: Lock,
 		category: 'wallet',
@@ -150,7 +150,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'ambire',
 		name: 'Ambire Wallet',
-		descriptionKey: 'chain_tools.tools.ambire.description',
+		descriptionKey: 'chain-tools.tools.ambire.description',
 		url: 'https://ambire.com',
 		icon: Wallet,
 		category: 'wallet',
@@ -160,7 +160,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'obvious',
 		name: 'Obvious',
-		descriptionKey: 'chain_tools.tools.obvious.description',
+		descriptionKey: 'chain-tools.tools.obvious.description',
 		url: 'https://obvious.technology',
 		icon: Wallet,
 		category: 'wallet',
@@ -170,7 +170,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'soul-wallet',
 		name: 'Soul Wallet',
-		descriptionKey: 'chain_tools.tools.soul_wallet.description',
+		descriptionKey: 'chain-tools.tools.soul_wallet.description',
 		url: 'https://soulwallet.io',
 		icon: Wallet,
 		category: 'wallet',
@@ -180,7 +180,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'patch-wallet',
 		name: 'Patch Wallet',
-		descriptionKey: 'chain_tools.tools.patch_wallet.description',
+		descriptionKey: 'chain-tools.tools.patch_wallet.description',
 		url: 'https://patchwallet.com',
 		icon: Wallet,
 		category: 'wallet',
@@ -192,7 +192,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'pimlico',
 		name: 'Pimlico',
-		descriptionKey: 'chain_tools.tools.pimlico.description',
+		descriptionKey: 'chain-tools.tools.pimlico.description',
 		url: 'https://pimlico.io',
 		icon: Settings,
 		category: 'wallet',
@@ -202,7 +202,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'stackup',
 		name: 'Stackup',
-		descriptionKey: 'chain_tools.tools.stackup.description',
+		descriptionKey: 'chain-tools.tools.stackup.description',
 		url: 'https://stackup.sh',
 		icon: Settings,
 		category: 'wallet',
@@ -212,7 +212,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'biconomy',
 		name: 'Biconomy',
-		descriptionKey: 'chain_tools.tools.biconomy.description',
+		descriptionKey: 'chain-tools.tools.biconomy.description',
 		url: 'https://biconomy.io',
 		icon: Settings,
 		category: 'wallet',
@@ -222,7 +222,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'alchemy-aa',
 		name: 'Alchemy Account Kit',
-		descriptionKey: 'chain_tools.tools.alchemy_aa.description',
+		descriptionKey: 'chain-tools.tools.alchemy_aa.description',
 		url: 'https://accountkit.alchemy.com',
 		icon: Settings,
 		category: 'wallet',
@@ -232,7 +232,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'zerodev',
 		name: 'ZeroDev',
-		descriptionKey: 'chain_tools.tools.zerodev.description',
+		descriptionKey: 'chain-tools.tools.zerodev.description',
 		url: 'https://zerodev.app',
 		icon: Settings,
 		category: 'wallet',
@@ -242,7 +242,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'particle-network',
 		name: 'Particle Network',
-		descriptionKey: 'chain_tools.tools.particle_network.description',
+		descriptionKey: 'chain-tools.tools.particle_network.description',
 		url: 'https://particle.network',
 		icon: Settings,
 		category: 'wallet',
@@ -254,7 +254,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'privy',
 		name: 'Privy',
-		descriptionKey: 'chain_tools.tools.privy.description',
+		descriptionKey: 'chain-tools.tools.privy.description',
 		url: 'https://www.privy.io',
 		icon: KeyRound,
 		category: 'wallet',
@@ -264,7 +264,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'dynamic',
 		name: 'Dynamic',
-		descriptionKey: 'chain_tools.tools.dynamic.description',
+		descriptionKey: 'chain-tools.tools.dynamic.description',
 		url: 'https://www.dynamic.xyz',
 		icon: KeyRound,
 		category: 'wallet',
@@ -276,7 +276,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'ledger',
 		name: 'Ledger',
-		descriptionKey: 'chain_tools.tools.ledger.description',
+		descriptionKey: 'chain-tools.tools.ledger.description',
 		url: 'https://www.ledger.com',
 		icon: Lock,
 		category: 'wallet',
@@ -287,7 +287,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'trezor',
 		name: 'Trezor',
-		descriptionKey: 'chain_tools.tools.trezor.description',
+		descriptionKey: 'chain-tools.tools.trezor.description',
 		url: 'https://trezor.io',
 		icon: Lock,
 		category: 'wallet',
@@ -299,7 +299,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'coinbase-wallet',
 		name: 'Coinbase Wallet',
-		descriptionKey: 'chain_tools.tools.coinbase_wallet.description',
+		descriptionKey: 'chain-tools.tools.coinbase_wallet.description',
 		url: 'https://www.coinbase.com/wallet',
 		icon: Wallet,
 		category: 'wallet',
@@ -309,7 +309,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'trust-wallet',
 		name: 'Trust Wallet',
-		descriptionKey: 'chain_tools.tools.trust_wallet.description',
+		descriptionKey: 'chain-tools.tools.trust_wallet.description',
 		url: 'https://trustwallet.com',
 		icon: Wallet,
 		category: 'wallet',
@@ -319,7 +319,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'argent',
 		name: 'Argent',
-		descriptionKey: 'chain_tools.tools.argent.description',
+		descriptionKey: 'chain-tools.tools.argent.description',
 		url: 'https://www.argent.xyz',
 		icon: Wallet,
 		category: 'wallet',
@@ -329,7 +329,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'sequence',
 		name: 'Sequence',
-		descriptionKey: 'chain_tools.tools.sequence.description',
+		descriptionKey: 'chain-tools.tools.sequence.description',
 		url: 'https://sequence.xyz',
 		icon: Wallet,
 		category: 'wallet',
@@ -341,7 +341,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'phantom-wallet',
 		name: 'Phantom',
-		descriptionKey: 'chain_tools.tools.phantom_wallet.description',
+		descriptionKey: 'chain-tools.tools.phantom_wallet.description',
 		url: 'https://phantom.app',
 		icon: Wallet,
 		category: 'wallet',
@@ -352,7 +352,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'backpack-wallet',
 		name: 'Backpack',
-		descriptionKey: 'chain_tools.tools.backpack_wallet.description',
+		descriptionKey: 'chain-tools.tools.backpack_wallet.description',
 		url: 'https://backpack.app',
 		icon: Wallet,
 		category: 'wallet',
@@ -363,7 +363,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'exodus-wallet',
 		name: 'Exodus',
-		descriptionKey: 'chain_tools.tools.exodus_wallet.description',
+		descriptionKey: 'chain-tools.tools.exodus_wallet.description',
 		url: 'https://exodus.com',
 		icon: Wallet,
 		category: 'wallet',
@@ -373,7 +373,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'solflare',
 		name: 'Solflare',
-		descriptionKey: 'chain_tools.tools.solflare.description',
+		descriptionKey: 'chain-tools.tools.solflare.description',
 		url: 'https://solflare.com',
 		icon: Wallet,
 		category: 'wallet',
@@ -386,7 +386,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'keplr-wallet',
 		name: 'Keplr',
-		descriptionKey: 'chain_tools.tools.keplr_wallet.description',
+		descriptionKey: 'chain-tools.tools.keplr_wallet.description',
 		url: 'https://keplr.app',
 		icon: Wallet,
 		category: 'wallet',
@@ -397,7 +397,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'leap-wallet',
 		name: 'Leap Wallet',
-		descriptionKey: 'chain_tools.tools.leap_wallet.description',
+		descriptionKey: 'chain-tools.tools.leap_wallet.description',
 		url: 'https://leapwallet.io',
 		icon: Wallet,
 		category: 'wallet',
@@ -410,7 +410,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'xdefi-wallet',
 		name: 'XDEFI',
-		descriptionKey: 'chain_tools.tools.xdefi_wallet.description',
+		descriptionKey: 'chain-tools.tools.xdefi_wallet.description',
 		url: 'https://xdefi.io',
 		icon: Wallet,
 		category: 'wallet',
@@ -421,7 +421,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'brave-wallet',
 		name: 'Brave Wallet',
-		descriptionKey: 'chain_tools.tools.brave_wallet.description',
+		descriptionKey: 'chain-tools.tools.brave_wallet.description',
 		url: 'https://brave.com/wallet',
 		icon: Wallet,
 		category: 'wallet',
@@ -432,7 +432,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'block-wallet',
 		name: 'BlockWallet',
-		descriptionKey: 'chain_tools.tools.block_wallet.description',
+		descriptionKey: 'chain-tools.tools.block_wallet.description',
 		url: 'https://blockwallet.io',
 		icon: Wallet,
 		category: 'wallet',
@@ -443,7 +443,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'okx-wallet',
 		name: 'OKX Wallet',
-		descriptionKey: 'chain_tools.tools.okx_wallet.description',
+		descriptionKey: 'chain-tools.tools.okx_wallet.description',
 		url: 'https://okx.com/web3',
 		icon: Wallet,
 		category: 'wallet',
@@ -456,7 +456,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'core-wallet',
 		name: 'Core Wallet',
-		descriptionKey: 'chain_tools.tools.core_wallet.description',
+		descriptionKey: 'chain-tools.tools.core_wallet.description',
 		url: 'https://core.app',
 		icon: Wallet,
 		category: 'wallet',
@@ -467,7 +467,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'enkrypt-wallet',
 		name: 'Enkrypt',
-		descriptionKey: 'chain_tools.tools.enkrypt_wallet.description',
+		descriptionKey: 'chain-tools.tools.enkrypt_wallet.description',
 		url: 'https://enkrypt.com',
 		icon: Wallet,
 		category: 'wallet',
@@ -478,7 +478,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'talisman-wallet',
 		name: 'Talisman',
-		descriptionKey: 'chain_tools.tools.talisman_wallet.description',
+		descriptionKey: 'chain-tools.tools.talisman_wallet.description',
 		url: 'https://talisman.xyz',
 		icon: Wallet,
 		category: 'wallet',
@@ -489,7 +489,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'subwallet',
 		name: 'SubWallet',
-		descriptionKey: 'chain_tools.tools.subwallet.description',
+		descriptionKey: 'chain-tools.tools.subwallet.description',
 		url: 'https://subwallet.app',
 		icon: Wallet,
 		category: 'wallet',
@@ -500,7 +500,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'polkadot-js',
 		name: 'Polkadot.js',
-		descriptionKey: 'chain_tools.tools.polkadot_js.description',
+		descriptionKey: 'chain-tools.tools.polkadot_js.description',
 		url: 'https://polkadot.js.org/extension',
 		icon: Wallet,
 		category: 'wallet',
@@ -511,7 +511,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'nami-wallet',
 		name: 'Nami',
-		descriptionKey: 'chain_tools.tools.nami_wallet.description',
+		descriptionKey: 'chain-tools.tools.nami_wallet.description',
 		url: 'https://namiwallet.io',
 		icon: Wallet,
 		category: 'wallet',
@@ -522,7 +522,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'eternl-wallet',
 		name: 'Eternl',
-		descriptionKey: 'chain_tools.tools.eternl_wallet.description',
+		descriptionKey: 'chain-tools.tools.eternl_wallet.description',
 		url: 'https://eternl.io',
 		icon: Wallet,
 		category: 'wallet',
@@ -533,7 +533,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'yoroi-wallet',
 		name: 'Yoroi',
-		descriptionKey: 'chain_tools.tools.yoroi_wallet.description',
+		descriptionKey: 'chain-tools.tools.yoroi_wallet.description',
 		url: 'https://yoroi-wallet.com',
 		icon: Wallet,
 		category: 'wallet',
@@ -544,7 +544,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'temple-wallet',
 		name: 'Temple Wallet',
-		descriptionKey: 'chain_tools.tools.temple_wallet.description',
+		descriptionKey: 'chain-tools.tools.temple_wallet.description',
 		url: 'https://templewallet.com',
 		icon: Wallet,
 		category: 'wallet',
@@ -555,7 +555,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'kukai-wallet',
 		name: 'Kukai',
-		descriptionKey: 'chain_tools.tools.kukai_wallet.description',
+		descriptionKey: 'chain-tools.tools.kukai_wallet.description',
 		url: 'https://wallet.kukai.app',
 		icon: Wallet,
 		category: 'wallet',
@@ -566,7 +566,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'petra-wallet',
 		name: 'Petra',
-		descriptionKey: 'chain_tools.tools.petra_wallet.description',
+		descriptionKey: 'chain-tools.tools.petra_wallet.description',
 		url: 'https://petra.app',
 		icon: Wallet,
 		category: 'wallet',
@@ -577,7 +577,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'martian-wallet',
 		name: 'Martian',
-		descriptionKey: 'chain_tools.tools.martian_wallet.description',
+		descriptionKey: 'chain-tools.tools.martian_wallet.description',
 		url: 'https://martianwallet.xyz',
 		icon: Wallet,
 		category: 'wallet',
@@ -588,7 +588,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'sui-wallet',
 		name: 'Sui Wallet',
-		descriptionKey: 'chain_tools.tools.sui_wallet.description',
+		descriptionKey: 'chain-tools.tools.sui_wallet.description',
 		url: 'https://suiwallet.com',
 		icon: Wallet,
 		category: 'wallet',
@@ -599,7 +599,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'suiet-wallet',
 		name: 'Suiet',
-		descriptionKey: 'chain_tools.tools.suiet_wallet.description',
+		descriptionKey: 'chain-tools.tools.suiet_wallet.description',
 		url: 'https://suiet.app',
 		icon: Wallet,
 		category: 'wallet',
@@ -610,7 +610,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'tonkeeper',
 		name: 'Tonkeeper',
-		descriptionKey: 'chain_tools.tools.tonkeeper.description',
+		descriptionKey: 'chain-tools.tools.tonkeeper.description',
 		url: 'https://tonkeeper.com',
 		icon: Wallet,
 		category: 'wallet',
@@ -621,7 +621,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'tonhub',
 		name: 'Tonhub',
-		descriptionKey: 'chain_tools.tools.tonhub.description',
+		descriptionKey: 'chain-tools.tools.tonhub.description',
 		url: 'https://tonhub.com',
 		icon: Wallet,
 		category: 'wallet',
@@ -632,7 +632,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'mytonwallet',
 		name: 'MyTonWallet',
-		descriptionKey: 'chain_tools.tools.mytonwallet.description',
+		descriptionKey: 'chain-tools.tools.mytonwallet.description',
 		url: 'https://mytonwallet.io',
 		icon: Wallet,
 		category: 'wallet',
@@ -643,7 +643,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'sender-wallet',
 		name: 'Sender Wallet',
-		descriptionKey: 'chain_tools.tools.sender_wallet.description',
+		descriptionKey: 'chain-tools.tools.sender_wallet.description',
 		url: 'https://sender.org',
 		icon: Wallet,
 		category: 'wallet',
@@ -654,7 +654,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'meteor-wallet',
 		name: 'Meteor Wallet',
-		descriptionKey: 'chain_tools.tools.meteor_wallet.description',
+		descriptionKey: 'chain-tools.tools.meteor_wallet.description',
 		url: 'https://meteorwallet.app',
 		icon: Wallet,
 		category: 'wallet',
@@ -665,7 +665,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'here-wallet',
 		name: 'HERE Wallet',
-		descriptionKey: 'chain_tools.tools.here_wallet.description',
+		descriptionKey: 'chain-tools.tools.here_wallet.description',
 		url: 'https://herewallet.app',
 		icon: Wallet,
 		category: 'wallet',
@@ -676,7 +676,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'coin98-wallet',
 		name: 'Coin98',
-		descriptionKey: 'chain_tools.tools.coin98_wallet.description',
+		descriptionKey: 'chain-tools.tools.coin98_wallet.description',
 		url: 'https://coin98.com',
 		icon: Wallet,
 		category: 'wallet',
@@ -687,7 +687,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'bitget-wallet',
 		name: 'Bitget Wallet',
-		descriptionKey: 'chain_tools.tools.bitget_wallet.description',
+		descriptionKey: 'chain-tools.tools.bitget_wallet.description',
 		url: 'https://web3.bitget.com',
 		icon: Wallet,
 		category: 'wallet',
@@ -698,7 +698,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'safepal-wallet',
 		name: 'SafePal',
-		descriptionKey: 'chain_tools.tools.safepal_wallet.description',
+		descriptionKey: 'chain-tools.tools.safepal_wallet.description',
 		url: 'https://safepal.com',
 		icon: Lock,
 		category: 'wallet',
@@ -709,7 +709,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'onekey-wallet',
 		name: 'OneKey',
-		descriptionKey: 'chain_tools.tools.onekey_wallet.description',
+		descriptionKey: 'chain-tools.tools.onekey_wallet.description',
 		url: 'https://onekey.so',
 		icon: Lock,
 		category: 'wallet',
@@ -720,7 +720,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'ellipal-wallet',
 		name: 'ELLIPAL',
-		descriptionKey: 'chain_tools.tools.ellipal_wallet.description',
+		descriptionKey: 'chain-tools.tools.ellipal_wallet.description',
 		url: 'https://ellipal.com',
 		icon: Lock,
 		category: 'wallet',
@@ -731,7 +731,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'dcent-wallet',
 		name: "D'CENT",
-		descriptionKey: 'chain_tools.tools.dcent_wallet.description',
+		descriptionKey: 'chain-tools.tools.dcent_wallet.description',
 		url: 'https://dcentwallet.com',
 		icon: Lock,
 		category: 'wallet',
@@ -742,7 +742,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'coolwallet',
 		name: 'CoolWallet',
-		descriptionKey: 'chain_tools.tools.coolwallet.description',
+		descriptionKey: 'chain-tools.tools.coolwallet.description',
 		url: 'https://coolwallet.io',
 		icon: Lock,
 		category: 'wallet',
@@ -753,7 +753,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'imtoken',
 		name: 'imToken',
-		descriptionKey: 'chain_tools.tools.imtoken.description',
+		descriptionKey: 'chain-tools.tools.imtoken.description',
 		url: 'https://token.im',
 		icon: Wallet,
 		category: 'wallet',
@@ -764,7 +764,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'tokenpocket',
 		name: 'TokenPocket',
-		descriptionKey: 'chain_tools.tools.tokenpocket.description',
+		descriptionKey: 'chain-tools.tools.tokenpocket.description',
 		url: 'https://tokenpocket.pro',
 		icon: Wallet,
 		category: 'wallet',
@@ -775,7 +775,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'math-wallet',
 		name: 'Math Wallet',
-		descriptionKey: 'chain_tools.tools.math_wallet.description',
+		descriptionKey: 'chain-tools.tools.math_wallet.description',
 		url: 'https://mathwallet.org',
 		icon: Wallet,
 		category: 'wallet',
@@ -786,7 +786,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'alpha-wallet',
 		name: 'AlphaWallet',
-		descriptionKey: 'chain_tools.tools.alpha_wallet.description',
+		descriptionKey: 'chain-tools.tools.alpha_wallet.description',
 		url: 'https://alphawallet.com',
 		icon: Wallet,
 		category: 'wallet',
@@ -797,7 +797,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'status-wallet',
 		name: 'Status',
-		descriptionKey: 'chain_tools.tools.status_wallet.description',
+		descriptionKey: 'chain-tools.tools.status_wallet.description',
 		url: 'https://status.app',
 		icon: Wallet,
 		category: 'wallet',
@@ -808,7 +808,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'unstoppable-wallet',
 		name: 'Unstoppable Wallet',
-		descriptionKey: 'chain_tools.tools.unstoppable_wallet.description',
+		descriptionKey: 'chain-tools.tools.unstoppable_wallet.description',
 		url: 'https://unstoppable.money',
 		icon: Wallet,
 		category: 'wallet',
@@ -819,7 +819,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'exodus-wallet-ext',
 		name: 'Exodus Extension',
-		descriptionKey: 'chain_tools.tools.exodus_wallet_ext.description',
+		descriptionKey: 'chain-tools.tools.exodus_wallet_ext.description',
 		url: 'https://exodus.com/browser-extension',
 		icon: Wallet,
 		category: 'wallet',
@@ -830,7 +830,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'myetherwallet',
 		name: 'MyEtherWallet',
-		descriptionKey: 'chain_tools.tools.myetherwallet.description',
+		descriptionKey: 'chain-tools.tools.myetherwallet.description',
 		url: 'https://myetherwallet.com',
 		icon: Wallet,
 		category: 'wallet',
@@ -841,7 +841,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'mycrypto',
 		name: 'MyCrypto',
-		descriptionKey: 'chain_tools.tools.mycrypto.description',
+		descriptionKey: 'chain-tools.tools.mycrypto.description',
 		url: 'https://mycrypto.com',
 		icon: Wallet,
 		category: 'wallet',
@@ -852,7 +852,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'atomic-wallet',
 		name: 'Atomic Wallet',
-		descriptionKey: 'chain_tools.tools.atomic_wallet.description',
+		descriptionKey: 'chain-tools.tools.atomic_wallet.description',
 		url: 'https://atomicwallet.io',
 		icon: Wallet,
 		category: 'wallet',
@@ -863,7 +863,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'guarda-wallet',
 		name: 'Guarda',
-		descriptionKey: 'chain_tools.tools.guarda_wallet.description',
+		descriptionKey: 'chain-tools.tools.guarda_wallet.description',
 		url: 'https://guarda.com',
 		icon: Wallet,
 		category: 'wallet',
@@ -874,7 +874,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'edge-wallet',
 		name: 'Edge',
-		descriptionKey: 'chain_tools.tools.edge_wallet.description',
+		descriptionKey: 'chain-tools.tools.edge_wallet.description',
 		url: 'https://edge.app',
 		icon: Wallet,
 		category: 'wallet',
@@ -885,7 +885,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'crypto-com-defi',
 		name: 'Crypto.com DeFi Wallet',
-		descriptionKey: 'chain_tools.tools.crypto_com_defi.description',
+		descriptionKey: 'chain-tools.tools.crypto_com_defi.description',
 		url: 'https://crypto.com/defi-wallet',
 		icon: Wallet,
 		category: 'wallet',
@@ -896,7 +896,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'lobstr-wallet',
 		name: 'LOBSTR',
-		descriptionKey: 'chain_tools.tools.lobstr_wallet.description',
+		descriptionKey: 'chain-tools.tools.lobstr_wallet.description',
 		url: 'https://lobstr.co',
 		icon: Wallet,
 		category: 'wallet',
@@ -907,7 +907,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'freighter-wallet',
 		name: 'Freighter',
-		descriptionKey: 'chain_tools.tools.freighter_wallet.description',
+		descriptionKey: 'chain-tools.tools.freighter_wallet.description',
 		url: 'https://freighter.app',
 		icon: Wallet,
 		category: 'wallet',
@@ -918,7 +918,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'tronlink',
 		name: 'TronLink',
-		descriptionKey: 'chain_tools.tools.tronlink.description',
+		descriptionKey: 'chain-tools.tools.tronlink.description',
 		url: 'https://tronlink.org',
 		icon: Wallet,
 		category: 'wallet',
@@ -929,7 +929,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'multis',
 		name: 'Multis',
-		descriptionKey: 'chain_tools.tools.multis.description',
+		descriptionKey: 'chain-tools.tools.multis.description',
 		url: 'https://multis.co',
 		icon: Lock,
 		category: 'wallet',
@@ -940,7 +940,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'squads',
 		name: 'Squads',
-		descriptionKey: 'chain_tools.tools.squads.description',
+		descriptionKey: 'chain-tools.tools.squads.description',
 		url: 'https://squads.so',
 		icon: Lock,
 		category: 'wallet',
@@ -951,7 +951,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'den-wallet',
 		name: 'Den',
-		descriptionKey: 'chain_tools.tools.den_wallet.description',
+		descriptionKey: 'chain-tools.tools.den_wallet.description',
 		url: 'https://onchainden.com',
 		icon: Lock,
 		category: 'wallet',
@@ -962,7 +962,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'instadapp',
 		name: 'Instadapp',
-		descriptionKey: 'chain_tools.tools.instadapp.description',
+		descriptionKey: 'chain-tools.tools.instadapp.description',
 		url: 'https://instadapp.io',
 		icon: Settings,
 		category: 'wallet',
@@ -973,7 +973,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'fuelet-wallet',
 		name: 'Fuelet',
-		descriptionKey: 'chain_tools.tools.fuelet_wallet.description',
+		descriptionKey: 'chain-tools.tools.fuelet_wallet.description',
 		url: 'https://fuelet.app',
 		icon: Wallet,
 		category: 'wallet',
@@ -984,7 +984,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'fuel-wallet',
 		name: 'Fuel Wallet',
-		descriptionKey: 'chain_tools.tools.fuel_wallet.description',
+		descriptionKey: 'chain-tools.tools.fuel_wallet.description',
 		url: 'https://wallet.fuel.network',
 		icon: Wallet,
 		category: 'wallet',
@@ -995,7 +995,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'braavos-wallet',
 		name: 'Braavos',
-		descriptionKey: 'chain_tools.tools.braavos_wallet.description',
+		descriptionKey: 'chain-tools.tools.braavos_wallet.description',
 		url: 'https://braavos.app',
 		icon: Wallet,
 		category: 'wallet',
@@ -1008,7 +1008,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'keystone-wallet',
 		name: 'Keystone',
-		descriptionKey: 'chain_tools.tools.keystone_wallet.description',
+		descriptionKey: 'chain-tools.tools.keystone_wallet.description',
 		url: 'https://keyst.one',
 		icon: Lock,
 		category: 'wallet',
@@ -1019,7 +1019,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'gridplus-wallet',
 		name: 'GridPlus Lattice1',
-		descriptionKey: 'chain_tools.tools.gridplus_wallet.description',
+		descriptionKey: 'chain-tools.tools.gridplus_wallet.description',
 		url: 'https://gridplus.io',
 		icon: Lock,
 		category: 'wallet',
@@ -1030,7 +1030,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'tangem-wallet',
 		name: 'Tangem',
-		descriptionKey: 'chain_tools.tools.tangem_wallet.description',
+		descriptionKey: 'chain-tools.tools.tangem_wallet.description',
 		url: 'https://tangem.com',
 		icon: Lock,
 		category: 'wallet',
@@ -1043,7 +1043,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'web3auth-wallet',
 		name: 'Web3Auth',
-		descriptionKey: 'chain_tools.tools.web3auth_wallet.description',
+		descriptionKey: 'chain-tools.tools.web3auth_wallet.description',
 		url: 'https://web3auth.io',
 		icon: KeyRound,
 		category: 'wallet',
@@ -1056,7 +1056,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'unisat-wallet',
 		name: 'UniSat',
-		descriptionKey: 'chain_tools.tools.unisat_wallet.description',
+		descriptionKey: 'chain-tools.tools.unisat_wallet.description',
 		url: 'https://unisat.io',
 		icon: Wallet,
 		category: 'wallet',
@@ -1067,7 +1067,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'xverse-wallet',
 		name: 'Xverse',
-		descriptionKey: 'chain_tools.tools.xverse_wallet.description',
+		descriptionKey: 'chain-tools.tools.xverse_wallet.description',
 		url: 'https://www.xverse.app',
 		icon: Wallet,
 		category: 'wallet',
@@ -1078,7 +1078,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'leather-wallet',
 		name: 'Leather (Hiro)',
-		descriptionKey: 'chain_tools.tools.leather_wallet.description',
+		descriptionKey: 'chain-tools.tools.leather_wallet.description',
 		url: 'https://leather.io',
 		icon: Wallet,
 		category: 'wallet',
@@ -1089,7 +1089,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'passport-wallet',
 		name: 'Passport (Foundation)',
-		descriptionKey: 'chain_tools.tools.passport_wallet.description',
+		descriptionKey: 'chain-tools.tools.passport_wallet.description',
 		url: 'https://foundationdevices.com/passport',
 		icon: Lock,
 		category: 'wallet',
@@ -1100,7 +1100,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'seedsigner-wallet',
 		name: 'SeedSigner',
-		descriptionKey: 'chain_tools.tools.seedsigner_wallet.description',
+		descriptionKey: 'chain-tools.tools.seedsigner_wallet.description',
 		url: 'https://seedsigner.com',
 		icon: Lock,
 		category: 'wallet',
@@ -1113,7 +1113,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'fireblocks-wallet',
 		name: 'Fireblocks',
-		descriptionKey: 'chain_tools.tools.fireblocks_wallet.description',
+		descriptionKey: 'chain-tools.tools.fireblocks_wallet.description',
 		url: 'https://www.fireblocks.com',
 		icon: Lock,
 		category: 'wallet',
@@ -1124,7 +1124,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'anchorage-wallet',
 		name: 'Anchorage Digital',
-		descriptionKey: 'chain_tools.tools.anchorage_wallet.description',
+		descriptionKey: 'chain-tools.tools.anchorage_wallet.description',
 		url: 'https://www.anchorage.com',
 		icon: Lock,
 		category: 'wallet',
@@ -1135,7 +1135,7 @@ export const walletTools: ExternalTool[] = [
 	{
 		id: 'bitgo-wallet',
 		name: 'BitGo',
-		descriptionKey: 'chain_tools.tools.bitgo_wallet.description',
+		descriptionKey: 'chain-tools.tools.bitgo_wallet.description',
 		url: 'https://www.bitgo.com',
 		icon: Lock,
 		category: 'wallet',

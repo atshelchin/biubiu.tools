@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Check } from '@lucide/svelte';
 	import { formatAddress } from '$lib/utils/wallet-utils';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import Dropdown from '$lib/components/ui/dropdown.svelte';
 
 	interface Props {

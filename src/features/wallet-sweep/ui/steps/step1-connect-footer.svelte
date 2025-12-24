@@ -2,7 +2,7 @@
 	import { useConnectStore } from '$lib/stores/connect.svelte.js';
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 	import StepFooter from '$lib/components/step/step-footer.svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	const connectStore = useConnectStore();
 	const stepManager = useStepManager();
@@ -24,7 +24,7 @@
 
 <StepFooter
 	canContinue={isReadyToContinue}
-	continueText={i18n.t('tools.wallet_sweep.step1.footer.continue')}
+	continueText={i18n.t('wallet-sweep.step1.footer.continue')}
 	onContinue={handleContinue}
-	hint={i18n.t('tools.wallet_sweep.step1.footer.hint')}
+	hint={i18n.t('wallet-sweep.step1.footer.hint')}
 />

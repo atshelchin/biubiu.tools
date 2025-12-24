@@ -27,7 +27,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'ondo-finance',
 		name: 'Ondo Finance',
-		descriptionKey: 'chain_tools.tools.ondo_finance.description',
+		descriptionKey: 'chain-tools.tools.ondo_finance.description',
 		url: 'https://ondo.finance',
 		icon: Landmark,
 		category: 'rwa',
@@ -38,7 +38,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'centrifuge',
 		name: 'Centrifuge',
-		descriptionKey: 'chain_tools.tools.centrifuge.description',
+		descriptionKey: 'chain-tools.tools.centrifuge.description',
 		url: 'https://centrifuge.io',
 		icon: Building2,
 		category: 'rwa',
@@ -49,7 +49,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'maple-finance',
 		name: 'Maple Finance',
-		descriptionKey: 'chain_tools.tools.maple_finance.description',
+		descriptionKey: 'chain-tools.tools.maple_finance.description',
 		url: 'https://maple.finance',
 		icon: TrendingUp,
 		category: 'rwa',
@@ -60,7 +60,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'goldfinch',
 		name: 'Goldfinch',
-		descriptionKey: 'chain_tools.tools.goldfinch.description',
+		descriptionKey: 'chain-tools.tools.goldfinch.description',
 		url: 'https://goldfinch.finance',
 		icon: Coins,
 		category: 'rwa',
@@ -71,7 +71,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'clearpool',
 		name: 'Clearpool',
-		descriptionKey: 'chain_tools.tools.clearpool.description',
+		descriptionKey: 'chain-tools.tools.clearpool.description',
 		url: 'https://clearpool.finance',
 		icon: Building2,
 		category: 'rwa',
@@ -82,7 +82,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'truefi',
 		name: 'TrueFi',
-		descriptionKey: 'chain_tools.tools.truefi.description',
+		descriptionKey: 'chain-tools.tools.truefi.description',
 		url: 'https://truefi.io',
 		icon: Shield,
 		category: 'rwa',
@@ -94,7 +94,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'blackrock-buidl',
 		name: 'BlackRock BUIDL',
-		descriptionKey: 'chain_tools.tools.blackrock_buidl.description',
+		descriptionKey: 'chain-tools.tools.blackrock_buidl.description',
 		url: 'https://securitize.io/invest/blackrock-buidl',
 		icon: Landmark,
 		category: 'rwa',
@@ -105,7 +105,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'franklin-benji',
 		name: 'Franklin OnChain US Gov Money Fund',
-		descriptionKey: 'chain_tools.tools.franklin_benji.description',
+		descriptionKey: 'chain-tools.tools.franklin_benji.description',
 		url: 'https://www.franklintempleton.com/investments/options/money-market-funds/products/702/SINGLCLASS/franklin-on-chain-u-s-government-money-fund',
 		icon: Landmark,
 		category: 'rwa',
@@ -116,7 +116,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'backed-finance',
 		name: 'Backed Finance',
-		descriptionKey: 'chain_tools.tools.backed_finance.description',
+		descriptionKey: 'chain-tools.tools.backed_finance.description',
 		url: 'https://backed.fi',
 		icon: TrendingUp,
 		category: 'rwa',
@@ -127,7 +127,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'matrixdock',
 		name: 'Matrixdock',
-		descriptionKey: 'chain_tools.tools.matrixdock.description',
+		descriptionKey: 'chain-tools.tools.matrixdock.description',
 		url: 'https://matrixdock.com',
 		icon: Landmark,
 		category: 'rwa',
@@ -138,7 +138,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'openeden',
 		name: 'OpenEden',
-		descriptionKey: 'chain_tools.tools.openeden.description',
+		descriptionKey: 'chain-tools.tools.openeden.description',
 		url: 'https://openeden.com',
 		icon: Landmark,
 		category: 'rwa',
@@ -150,7 +150,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'realt',
 		name: 'RealT',
-		descriptionKey: 'chain_tools.tools.realt.description',
+		descriptionKey: 'chain-tools.tools.realt.description',
 		url: 'https://realt.co',
 		icon: Home,
 		category: 'rwa',
@@ -161,7 +161,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'lofty',
 		name: 'Lofty',
-		descriptionKey: 'chain_tools.tools.lofty.description',
+		descriptionKey: 'chain-tools.tools.lofty.description',
 		url: 'https://lofty.ai',
 		icon: Home,
 		category: 'rwa',
@@ -172,7 +172,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'propy',
 		name: 'Propy',
-		descriptionKey: 'chain_tools.tools.propy.description',
+		descriptionKey: 'chain-tools.tools.propy.description',
 		url: 'https://propy.com',
 		icon: Home,
 		category: 'rwa',
@@ -183,7 +183,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'parcl-rwa',
 		name: 'Parcl',
-		descriptionKey: 'chain_tools.tools.parcl_rwa.description',
+		descriptionKey: 'chain-tools.tools.parcl_rwa.description',
 		url: 'https://parcl.co',
 		icon: Home,
 		category: 'rwa',
@@ -195,7 +195,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'pax-gold',
 		name: 'Paxos Gold (PAXG)',
-		descriptionKey: 'chain_tools.tools.pax_gold.description',
+		descriptionKey: 'chain-tools.tools.pax_gold.description',
 		url: 'https://paxos.com/paxgold',
 		icon: Gem,
 		category: 'rwa',
@@ -206,7 +206,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'tether-gold',
 		name: 'Tether Gold (XAUT)',
-		descriptionKey: 'chain_tools.tools.tether_gold.description',
+		descriptionKey: 'chain-tools.tools.tether_gold.description',
 		url: 'https://gold.tether.to',
 		icon: Gem,
 		category: 'rwa',
@@ -217,7 +217,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'cache-gold',
 		name: 'Cache Gold',
-		descriptionKey: 'chain_tools.tools.cache_gold.description',
+		descriptionKey: 'chain-tools.tools.cache_gold.description',
 		url: 'https://cache.gold',
 		icon: Gem,
 		category: 'rwa',
@@ -229,7 +229,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'rwa-xyz',
 		name: 'RWA.xyz',
-		descriptionKey: 'chain_tools.tools.rwa_xyz.description',
+		descriptionKey: 'chain-tools.tools.rwa_xyz.description',
 		url: 'https://rwa.xyz',
 		icon: BarChart3,
 		category: 'rwa',
@@ -239,7 +239,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'defillama-rwa',
 		name: 'DeFiLlama RWA',
-		descriptionKey: 'chain_tools.tools.defillama_rwa.description',
+		descriptionKey: 'chain-tools.tools.defillama_rwa.description',
 		url: 'https://defillama.com/protocols/RWA',
 		icon: BarChart3,
 		category: 'rwa',
@@ -250,7 +250,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'securitize',
 		name: 'Securitize',
-		descriptionKey: 'chain_tools.tools.securitize.description',
+		descriptionKey: 'chain-tools.tools.securitize.description',
 		url: 'https://securitize.io',
 		icon: FileText,
 		category: 'rwa',
@@ -261,7 +261,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'tokeny',
 		name: 'Tokeny',
-		descriptionKey: 'chain_tools.tools.tokeny.description',
+		descriptionKey: 'chain-tools.tools.tokeny.description',
 		url: 'https://tokeny.com',
 		icon: FileText,
 		category: 'rwa',
@@ -272,7 +272,7 @@ export const rwaTools: ExternalTool[] = [
 	{
 		id: 'polymesh',
 		name: 'Polymesh',
-		descriptionKey: 'chain_tools.tools.polymesh.description',
+		descriptionKey: 'chain-tools.tools.polymesh.description',
 		url: 'https://polymesh.network',
 		icon: Globe,
 		category: 'rwa',

@@ -7,7 +7,7 @@
 	import { scale, fade } from 'svelte/transition';
 	import { Loader2, CheckCircle2, AlertCircle } from '@lucide/svelte';
 	import { SvelteSet } from 'svelte/reactivity';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	interface Props {
 		open: boolean;

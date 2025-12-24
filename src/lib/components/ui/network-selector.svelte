@@ -6,7 +6,7 @@
 	import NetworkCard from './network-card.svelte';
 	import AddCard from './add-card.svelte';
 	import NetworkSettingsModal from './network-settings-modal.svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	interface Props {
 		connectStore: ReturnType<typeof useConnectStore>;
@@ -105,12 +105,12 @@
 	<!-- Empty State: No Networks Enabled -->
 	<div class="empty-state">
 		<div class="empty-icon">🔗</div>
-		<h3>{i18n.t('tools.wallet_sweep.step1.content.no_networks_enabled')}</h3>
-		<p>{i18n.t('tools.wallet_sweep.step1.content.enable_network_prompt')}</p>
+		<h3>{i18n.t('wallet-sweep.step1.content.no_networks_enabled')}</h3>
+		<p>{i18n.t('wallet-sweep.step1.content.enable_network_prompt')}</p>
 		{#if hasNetworkManagement}
 			<button class="settings-button" onclick={openNetworkSettings}>
 				<Settings size={20} />
-				{i18n.t('tools.wallet_sweep.step1.content.open_network_settings')}
+				{i18n.t('wallet-sweep.step1.content.open_network_settings')}
 			</button>
 		{/if}
 	</div>
@@ -127,8 +127,8 @@
 
 		{#if showAddButton && hasNetworkManagement}
 			<AddCard
-				title={i18n.t('tools.wallet_sweep.step1.content.network_not_found')}
-				subtitle={i18n.t('tools.wallet_sweep.step1.content.add_custom_network')}
+				title={i18n.t('wallet-sweep.step1.content.network_not_found')}
+				subtitle={i18n.t('wallet-sweep.step1.content.add_custom_network')}
 				onclick={openNetworkSettings}
 			/>
 		{/if}

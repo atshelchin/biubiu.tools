@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { Sparkles, Lock, Rocket, TestTube, FlaskConical } from '@lucide/svelte';
 
 	interface Props {

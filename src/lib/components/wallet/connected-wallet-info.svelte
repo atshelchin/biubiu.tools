@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Wallet, Copy, LogOut, Check, ChevronDown } from '@lucide/svelte';
 	import { formatAddress } from '$lib/utils/wallet-utils';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import NetworkIcon from '$lib/components/ui/network-icon.svelte';
 	import AccountSelector from './account-selector.svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { SearchX } from '@lucide/svelte';
 	import SearchBar from './components/search-bar.svelte';
 	import CategoryFilter from './components/category-filter.svelte';
@@ -9,8 +9,11 @@
 	import type { CategoryId, ExternalTool } from './types';
 
 	// Import both locales for bilingual search
-	import enLocale from '@/i18n/locales/en.json';
-	import zhLocale from '@/i18n/locales/zh.json';
+	import enChainTools from '@/i18n/locales/en/chain-tools.json';
+	import zhChainTools from '@/i18n/locales/zh/chain-tools.json';
+
+	const enLocale = { chain_tools: enChainTools };
+	const zhLocale = { chain_tools: zhChainTools };
 
 	const i18n = useI18n();
 
@@ -62,7 +65,7 @@
 	function getToolDescriptions(tool: ExternalTool): string[] {
 		const descriptions: string[] = [];
 
-		// Extract tool id from descriptionKey (e.g., "chain_tools.tools.uniswap.description" -> "uniswap")
+		// Extract tool id from descriptionKey (e.g., "chain-tools.tools.uniswap.description" -> "uniswap")
 		const keyParts = tool.descriptionKey.split('.');
 		const toolId = keyParts[keyParts.length - 2]; // Get the tool id part
 
@@ -163,8 +166,8 @@
 		<!-- <div class="header-icon">
 			<Link2 class="icon" />
 		</div> -->
-		<h1 class="page-title">{i18n.t('chain_tools.title')}</h1>
-		<p class="page-subtitle">{i18n.t('chain_tools.subtitle')}</p>
+		<h1 class="page-title">{i18n.t('chain-tools.title')}</h1>
+		<p class="page-subtitle">{i18n.t('chain-tools.subtitle')}</p>
 	</header>
 
 	<!-- Search and Filter -->
@@ -186,11 +189,11 @@
 			<div class="empty-icon">
 				<SearchX class="icon" />
 			</div>
-			<h3 class="empty-title">{i18n.t('chain_tools.empty_title')}</h3>
-			<p class="empty-description">{i18n.t('chain_tools.empty_description')}</p>
+			<h3 class="empty-title">{i18n.t('chain-tools.empty_title')}</h3>
+			<p class="empty-description">{i18n.t('chain-tools.empty_description')}</p>
 			{#if hasActiveFilters}
 				<button class="clear-filters-btn" onclick={clearFilters}>
-					{i18n.t('chain_tools.clear_filters')}
+					{i18n.t('chain-tools.clear_filters')}
 				</button>
 			{/if}
 		</div>
@@ -199,12 +202,12 @@
 	<!-- Footer Stats -->
 	<div class="page-footer">
 		<p class="stats">
-			{i18n.t('chain_tools.showing_count', {
+			{i18n.t('chain-tools.showing_count', {
 				count: filteredTools.length,
 				total: toolsData.length
 			})}
 		</p>
-		<p class="disclaimer">{i18n.t('chain_tools.disclaimer')}</p>
+		<p class="disclaimer">{i18n.t('chain-tools.disclaimer')}</p>
 	</div>
 </div>
 

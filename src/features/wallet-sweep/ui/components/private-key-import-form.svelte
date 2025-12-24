@@ -3,7 +3,7 @@
 	import FileUploadModal from '$lib/components/ui/file-upload-modal.svelte';
 	import ProgressButton from '$lib/components/ui/progress-button.svelte';
 	import { slide } from 'svelte/transition';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	const i18n = useI18n();
 
@@ -46,16 +46,16 @@
 <div transition:slide>
 	<PrivateKeyEditorWithErrors
 		bind:value={privateKeysText}
-		placeholder={i18n.t('tools.wallet_sweep.step4.content.private_key.placeholder')}
+		placeholder={i18n.t('wallet-sweep.step4.content.private_key.placeholder')}
 		rows={20}
 		invalidKeys={invalidPrivateKeys}
 		onUploadClick={handleUploadClick}
 	/>
-	<p class="form-hint">{i18n.t('tools.wallet_sweep.step4.content.private_key.security_hint')}</p>
+	<p class="form-hint">{i18n.t('wallet-sweep.step4.content.private_key.security_hint')}</p>
 	{#if hasContent}
 		<ProgressButton
-			label={i18n.t('tools.wallet_sweep.step4.content.import_wallets_button')}
-			loadingLabel={i18n.t('tools.wallet_sweep.step4.content.private_key.importing', {
+			label={i18n.t('wallet-sweep.step4.content.import_wallets_button')}
+			loadingLabel={i18n.t('wallet-sweep.step4.content.private_key.importing', {
 				progress: Math.round(generationProgress)
 			})}
 			isLoading={isGenerating}
@@ -68,8 +68,8 @@
 	open={showUploadModal}
 	columnCount={1}
 	columnLabels={[
-		i18n.t('tools.wallet_sweep.step4.content.private_key.column_label')
-		// i18n.t('tools.wallet_sweep.step4.content.private_key.address_label')
+		i18n.t('wallet-sweep.step4.content.private_key.column_label')
+		// i18n.t('wallet-sweep.step4.content.private_key.address_label')
 	]}
 	onClose={() => (showUploadModal = false)}
 	onConfirm={handleUploadConfirm}

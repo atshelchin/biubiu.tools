@@ -9,7 +9,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'across',
 		name: 'Across Protocol',
-		descriptionKey: 'chain_tools.tools.across.description',
+		descriptionKey: 'chain-tools.tools.across.description',
 		url: 'https://across.to',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -21,7 +21,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'stargate',
 		name: 'Stargate',
-		descriptionKey: 'chain_tools.tools.stargate.description',
+		descriptionKey: 'chain-tools.tools.stargate.description',
 		url: 'https://stargate.finance',
 		icon: Globe,
 		category: 'bridge',
@@ -32,7 +32,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'orbiter',
 		name: 'Orbiter Finance',
-		descriptionKey: 'chain_tools.tools.orbiter.description',
+		descriptionKey: 'chain-tools.tools.orbiter.description',
 		url: 'https://www.orbiter.finance',
 		icon: RefreshCw,
 		category: 'bridge',
@@ -45,7 +45,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'hop',
 		name: 'Hop Protocol',
-		descriptionKey: 'chain_tools.tools.hop.description',
+		descriptionKey: 'chain-tools.tools.hop.description',
 		url: 'https://hop.exchange',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -57,7 +57,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'synapse',
 		name: 'Synapse',
-		descriptionKey: 'chain_tools.tools.synapse.description',
+		descriptionKey: 'chain-tools.tools.synapse.description',
 		url: 'https://synapseprotocol.com',
 		icon: RefreshCw,
 		category: 'bridge',
@@ -68,7 +68,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'cbridge',
 		name: 'cBridge',
-		descriptionKey: 'chain_tools.tools.cbridge.description',
+		descriptionKey: 'chain-tools.tools.cbridge.description',
 		url: 'https://cbridge.celer.network',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -79,7 +79,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'multichain',
 		name: 'Multichain',
-		descriptionKey: 'chain_tools.tools.multichain.description',
+		descriptionKey: 'chain-tools.tools.multichain.description',
 		url: 'https://multichain.org',
 		icon: Globe,
 		category: 'bridge',
@@ -92,7 +92,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'wormhole',
 		name: 'Wormhole',
-		descriptionKey: 'chain_tools.tools.wormhole.description',
+		descriptionKey: 'chain-tools.tools.wormhole.description',
 		url: 'https://wormhole.com',
 		icon: CircuitBoard,
 		category: 'bridge',
@@ -103,7 +103,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'socket',
 		name: 'Socket (Bungee)',
-		descriptionKey: 'chain_tools.tools.socket.description',
+		descriptionKey: 'chain-tools.tools.socket.description',
 		url: 'https://bungee.exchange',
 		icon: Zap,
 		category: 'bridge',
@@ -114,7 +114,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'rhino',
 		name: 'rhino.fi',
-		descriptionKey: 'chain_tools.tools.rhino.description',
+		descriptionKey: 'chain-tools.tools.rhino.description',
 		url: 'https://rhino.fi',
 		icon: Shield,
 		category: 'bridge',
@@ -127,7 +127,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'li-fi',
 		name: 'LI.FI',
-		descriptionKey: 'chain_tools.tools.li_fi.description',
+		descriptionKey: 'chain-tools.tools.li_fi.description',
 		url: 'https://li.fi',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -138,7 +138,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'bungee',
 		name: 'Bungee',
-		descriptionKey: 'chain_tools.tools.bungee.description',
+		descriptionKey: 'chain-tools.tools.bungee.description',
 		url: 'https://bungee.exchange',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -149,7 +149,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'jumper',
 		name: 'Jumper',
-		descriptionKey: 'chain_tools.tools.jumper.description',
+		descriptionKey: 'chain-tools.tools.jumper.description',
 		url: 'https://jumper.exchange',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -162,7 +162,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'hyphen',
 		name: 'Hyphen (Biconomy)',
-		descriptionKey: 'chain_tools.tools.hyphen.description',
+		descriptionKey: 'chain-tools.tools.hyphen.description',
 		url: 'https://hyphen.biconomy.io',
 		icon: Zap,
 		category: 'bridge',
@@ -173,7 +173,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'connext',
 		name: 'Connext',
-		descriptionKey: 'chain_tools.tools.connext.description',
+		descriptionKey: 'chain-tools.tools.connext.description',
 		url: 'https://bridge.connext.network',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -184,7 +184,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'debridge',
 		name: 'deBridge',
-		descriptionKey: 'chain_tools.tools.debridge.description',
+		descriptionKey: 'chain-tools.tools.debridge.description',
 		url: 'https://debridge.finance',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -195,7 +195,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'allbridge',
 		name: 'Allbridge',
-		descriptionKey: 'chain_tools.tools.allbridge.description',
+		descriptionKey: 'chain-tools.tools.allbridge.description',
 		url: 'https://allbridge.io',
 		icon: Globe,
 		category: 'bridge',
@@ -206,7 +206,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'portal',
 		name: 'Portal Bridge',
-		descriptionKey: 'chain_tools.tools.portal.description',
+		descriptionKey: 'chain-tools.tools.portal.description',
 		url: 'https://portalbridge.com',
 		icon: CircuitBoard,
 		category: 'bridge',
@@ -217,7 +217,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'squid',
 		name: 'Squid Router',
-		descriptionKey: 'chain_tools.tools.squid.description',
+		descriptionKey: 'chain-tools.tools.squid.description',
 		url: 'https://www.squidrouter.com',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -228,7 +228,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'owlto',
 		name: 'Owlto Finance',
-		descriptionKey: 'chain_tools.tools.owlto.description',
+		descriptionKey: 'chain-tools.tools.owlto.description',
 		url: 'https://owlto.finance',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -239,7 +239,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'superbridge',
 		name: 'Superbridge',
-		descriptionKey: 'chain_tools.tools.superbridge.description',
+		descriptionKey: 'chain-tools.tools.superbridge.description',
 		url: 'https://superbridge.app',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -250,7 +250,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'relay',
 		name: 'Relay',
-		descriptionKey: 'chain_tools.tools.relay.description',
+		descriptionKey: 'chain-tools.tools.relay.description',
 		url: 'https://relay.link',
 		icon: Zap,
 		category: 'bridge',
@@ -261,7 +261,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'symbiosis',
 		name: 'Symbiosis',
-		descriptionKey: 'chain_tools.tools.symbiosis.description',
+		descriptionKey: 'chain-tools.tools.symbiosis.description',
 		url: 'https://symbiosis.finance',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -272,7 +272,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'dln',
 		name: 'DLN',
-		descriptionKey: 'chain_tools.tools.dln.description',
+		descriptionKey: 'chain-tools.tools.dln.description',
 		url: 'https://dln.trade',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -283,7 +283,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'circle-cctp',
 		name: 'Circle CCTP',
-		descriptionKey: 'chain_tools.tools.circle_cctp.description',
+		descriptionKey: 'chain-tools.tools.circle_cctp.description',
 		url: 'https://www.circle.com/en/cross-chain-transfer-protocol',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -296,7 +296,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'debridge-dln',
 		name: 'deBridge DLN',
-		descriptionKey: 'chain_tools.tools.debridge_dln.description',
+		descriptionKey: 'chain-tools.tools.debridge_dln.description',
 		url: 'https://dln.trade',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -307,7 +307,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'meson-finance',
 		name: 'Meson',
-		descriptionKey: 'chain_tools.tools.meson_finance.description',
+		descriptionKey: 'chain-tools.tools.meson_finance.description',
 		url: 'https://meson.fi',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -318,7 +318,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'layerswap',
 		name: 'Layerswap',
-		descriptionKey: 'chain_tools.tools.layerswap.description',
+		descriptionKey: 'chain-tools.tools.layerswap.description',
 		url: 'https://layerswap.io',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -329,7 +329,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'router-protocol',
 		name: 'Router Protocol',
-		descriptionKey: 'chain_tools.tools.router_protocol.description',
+		descriptionKey: 'chain-tools.tools.router_protocol.description',
 		url: 'https://routerprotocol.com',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -340,7 +340,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'nitro-bridge',
 		name: 'Nitro Bridge',
-		descriptionKey: 'chain_tools.tools.nitro_bridge.description',
+		descriptionKey: 'chain-tools.tools.nitro_bridge.description',
 		url: 'https://app.routernitro.com',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -351,7 +351,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'portal-bridge-wormhole',
 		name: 'Portal Bridge',
-		descriptionKey: 'chain_tools.tools.portal_bridge_wormhole.description',
+		descriptionKey: 'chain-tools.tools.portal_bridge_wormhole.description',
 		url: 'https://portalbridge.com',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -362,7 +362,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'celer-im',
 		name: 'Celer IM',
-		descriptionKey: 'chain_tools.tools.celer_im.description',
+		descriptionKey: 'chain-tools.tools.celer_im.description',
 		url: 'https://im.celer.network',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -373,7 +373,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'multichain-anycall',
 		name: 'Multichain AnyCall',
-		descriptionKey: 'chain_tools.tools.multichain_anycall.description',
+		descriptionKey: 'chain-tools.tools.multichain_anycall.description',
 		url: 'https://app.multichain.org',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -384,7 +384,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'hyperlane-bridge',
 		name: 'Hyperlane',
-		descriptionKey: 'chain_tools.tools.hyperlane_bridge.description',
+		descriptionKey: 'chain-tools.tools.hyperlane_bridge.description',
 		url: 'https://hyperlane.xyz',
 		icon: ArrowLeftRight,
 		category: 'bridge',
@@ -395,7 +395,7 @@ export const bridgeTools: ExternalTool[] = [
 	{
 		id: 'connext-amarok',
 		name: 'Connext Amarok',
-		descriptionKey: 'chain_tools.tools.connext_amarok.description',
+		descriptionKey: 'chain-tools.tools.connext_amarok.description',
 		url: 'https://bridge.connext.network',
 		icon: ArrowLeftRight,
 		category: 'bridge',

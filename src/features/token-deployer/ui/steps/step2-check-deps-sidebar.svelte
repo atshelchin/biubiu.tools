@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { step2State } from '@/features/token-deployer/stores/step2-state.svelte';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 
@@ -19,13 +19,13 @@
 </script>
 
 <div class="sidebar-content">
-	<h2>{i18n.t('tools.token_deployer.step2.sidebar.title')}</h2>
-	<p class="description">{i18n.t('tools.token_deployer.step2.sidebar.description')}</p>
+	<h2>{i18n.t('token-deployer.step2.sidebar.title')}</h2>
+	<p class="description">{i18n.t('token-deployer.step2.sidebar.description')}</p>
 
 	{#if isChecking}
 		<div class="status-card checking">
 			<div class="spinner"></div>
-			<p>{i18n.t('tools.token_deployer.step2.sidebar.checking')}</p>
+			<p>{i18n.t('token-deployer.step2.sidebar.checking')}</p>
 		</div>
 	{:else if hasChecked && summary}
 		<div class="status-card" class:success={summary.allPassed} class:error={!summary.allPassed}>
@@ -34,16 +34,16 @@
 			</div>
 			<div class="status-details">
 				<div class="status-row">
-					<span class="label">{i18n.t('tools.token_deployer.step2.sidebar.total')}</span>
+					<span class="label">{i18n.t('token-deployer.step2.sidebar.total')}</span>
 					<span class="value">{summary.total}</span>
 				</div>
 				<div class="status-row">
-					<span class="label">{i18n.t('tools.token_deployer.step2.sidebar.passed')}</span>
+					<span class="label">{i18n.t('token-deployer.step2.sidebar.passed')}</span>
 					<span class="value">{summary.passed}</span>
 				</div>
 				{#if summary.failed > 0}
 					<div class="status-row">
-						<span class="label">{i18n.t('tools.token_deployer.step2.sidebar.failed')}</span>
+						<span class="label">{i18n.t('token-deployer.step2.sidebar.failed')}</span>
 						<span class="value error-text">{summary.failed}</span>
 					</div>
 				{/if}
@@ -53,36 +53,36 @@
 
 	{#if currentNetwork}
 		<div class="network-info">
-			<h3>{i18n.t('tools.token_deployer.step2.sidebar.network')}</h3>
+			<h3>{i18n.t('token-deployer.step2.sidebar.network')}</h3>
 			<p class="network-name">{currentNetwork.name}</p>
 		</div>
 	{/if}
 
 	<div class="help-section">
-		<h3>{i18n.t('tools.token_deployer.step2.sidebar.what_is_this')}</h3>
-		<p>{i18n.t('tools.token_deployer.step2.sidebar.what_is_this_desc')}</p>
+		<h3>{i18n.t('token-deployer.step2.sidebar.what_is_this')}</h3>
+		<p>{i18n.t('token-deployer.step2.sidebar.what_is_this_desc')}</p>
 
-		<h3>{i18n.t('tools.token_deployer.step2.sidebar.dependencies')}</h3>
+		<h3>{i18n.t('token-deployer.step2.sidebar.dependencies')}</h3>
 		<ul>
 			<li>
-				<strong>{i18n.t('tools.token_deployer.step2.sidebar.rpc_endpoint')}</strong>
-				{i18n.t('tools.token_deployer.step2.sidebar.rpc_endpoint_desc')}
+				<strong>{i18n.t('token-deployer.step2.sidebar.rpc_endpoint')}</strong>
+				{i18n.t('token-deployer.step2.sidebar.rpc_endpoint_desc')}
 			</li>
 			<li>
-				<strong>{i18n.t('tools.token_deployer.step2.sidebar.create2_proxy')}</strong>
-				{i18n.t('tools.token_deployer.step2.sidebar.create2_proxy_desc')}
+				<strong>{i18n.t('token-deployer.step2.sidebar.create2_proxy')}</strong>
+				{i18n.t('token-deployer.step2.sidebar.create2_proxy_desc')}
 			</li>
 			<li>
-				<strong>{i18n.t('tools.token_deployer.step2.sidebar.multicall3')}</strong>
-				{i18n.t('tools.token_deployer.step2.sidebar.multicall3_desc')}
+				<strong>{i18n.t('token-deployer.step2.sidebar.multicall3')}</strong>
+				{i18n.t('token-deployer.step2.sidebar.multicall3_desc')}
 			</li>
 			<li>
-				<strong>{i18n.t('tools.token_deployer.step2.sidebar.biubiu_premium')}</strong>
-				{i18n.t('tools.token_deployer.step2.sidebar.biubiu_premium_desc')}
+				<strong>{i18n.t('token-deployer.step2.sidebar.biubiu_premium')}</strong>
+				{i18n.t('token-deployer.step2.sidebar.biubiu_premium_desc')}
 			</li>
 			<li>
-				<strong>{i18n.t('tools.token_deployer.step2.sidebar.token_factory')}</strong>
-				{i18n.t('tools.token_deployer.step2.sidebar.token_factory_desc')}
+				<strong>{i18n.t('token-deployer.step2.sidebar.token_factory')}</strong>
+				{i18n.t('token-deployer.step2.sidebar.token_factory_desc')}
 			</li>
 		</ul>
 	</div>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { Filter, RotateCcw } from '@lucide/svelte';
 	import type { BalanceFilter } from '../../types/scanner';
 	import type { TokenConfig } from '$lib/services/balance-scanner/types';
@@ -21,15 +21,15 @@
 	const balanceStatusOptions = $derived([
 		{
 			value: 'all' as const,
-			label: i18n.t('tools.token_balance_scanner.step5.filter.status_all') || 'All'
+			label: i18n.t('token-balance-scanner.step5.filter.status_all') || 'All'
 		},
 		{
 			value: 'has_balance' as const,
-			label: i18n.t('tools.token_balance_scanner.step5.filter.status_has_balance') || 'Has Balance'
+			label: i18n.t('token-balance-scanner.step5.filter.status_has_balance') || 'Has Balance'
 		},
 		{
 			value: 'no_balance' as const,
-			label: i18n.t('tools.token_balance_scanner.step5.filter.status_no_balance') || 'No Balance'
+			label: i18n.t('token-balance-scanner.step5.filter.status_no_balance') || 'No Balance'
 		}
 	]);
 
@@ -37,7 +37,7 @@
 	const tokenOptions = $derived([
 		{
 			value: 'all',
-			label: i18n.t('tools.token_balance_scanner.step5.filter.token_all') || 'All Tokens'
+			label: i18n.t('token-balance-scanner.step5.filter.token_all') || 'All Tokens'
 		},
 		...tokens.map((t) => ({
 			value: t.id,
@@ -91,12 +91,12 @@
 	<div class="filter-header">
 		<div class="filter-title">
 			<Filter size={16} />
-			<span>{i18n.t('tools.token_balance_scanner.step5.filter.title') || 'Filter'}</span>
+			<span>{i18n.t('token-balance-scanner.step5.filter.title') || 'Filter'}</span>
 		</div>
 		{#if isFilterActive}
 			<button class="reset-btn" onclick={onReset}>
 				<RotateCcw size={14} />
-				<span>{i18n.t('tools.token_balance_scanner.step5.filter.reset') || 'Reset'}</span>
+				<span>{i18n.t('token-balance-scanner.step5.filter.reset') || 'Reset'}</span>
 			</button>
 		{/if}
 	</div>
@@ -105,7 +105,7 @@
 		<!-- Balance Status -->
 		<div class="filter-group">
 			<label class="filter-label" for="balance-status-select">
-				{i18n.t('tools.token_balance_scanner.step5.filter.balance_status') || 'Balance Status'}
+				{i18n.t('token-balance-scanner.step5.filter.balance_status') || 'Balance Status'}
 			</label>
 			<select
 				id="balance-status-select"
@@ -122,7 +122,7 @@
 		<!-- Token -->
 		<div class="filter-group">
 			<label class="filter-label" for="token-select">
-				{i18n.t('tools.token_balance_scanner.step5.filter.token') || 'Token'}
+				{i18n.t('token-balance-scanner.step5.filter.token') || 'Token'}
 			</label>
 			<select
 				id="token-select"
@@ -140,25 +140,25 @@
 		{#if showRangeInputs}
 			<div class="filter-group range-group">
 				<span class="filter-label">
-					{i18n.t('tools.token_balance_scanner.step5.filter.balance_range') || 'Balance Range'}
+					{i18n.t('token-balance-scanner.step5.filter.balance_range') || 'Balance Range'}
 				</span>
 				<div class="range-inputs">
 					<input
 						type="text"
 						class="range-input"
-						placeholder={i18n.t('tools.token_balance_scanner.step5.filter.min') || 'Min'}
+						placeholder={i18n.t('token-balance-scanner.step5.filter.min') || 'Min'}
 						value={filter.minBalance || ''}
 						oninput={handleMinBalanceChange}
-						aria-label={i18n.t('tools.token_balance_scanner.step5.filter.min') || 'Min'}
+						aria-label={i18n.t('token-balance-scanner.step5.filter.min') || 'Min'}
 					/>
 					<span class="range-separator">-</span>
 					<input
 						type="text"
 						class="range-input"
-						placeholder={i18n.t('tools.token_balance_scanner.step5.filter.max') || 'Max'}
+						placeholder={i18n.t('token-balance-scanner.step5.filter.max') || 'Max'}
 						value={filter.maxBalance || ''}
 						oninput={handleMaxBalanceChange}
-						aria-label={i18n.t('tools.token_balance_scanner.step5.filter.max') || 'Max'}
+						aria-label={i18n.t('token-balance-scanner.step5.filter.max') || 'Max'}
 					/>
 				</div>
 			</div>
@@ -169,14 +169,14 @@
 	<div class="filter-result">
 		{#if isFilterActive}
 			<span class="result-count">
-				{i18n.t('tools.token_balance_scanner.step5.filter.showing', {
+				{i18n.t('token-balance-scanner.step5.filter.showing', {
 					filtered: filteredCount,
 					total: totalCount
 				}) || `Showing ${filteredCount} of ${totalCount}`}
 			</span>
 		{:else}
 			<span class="result-count">
-				{i18n.t('tools.token_balance_scanner.step5.filter.total', { count: totalCount }) ||
+				{i18n.t('token-balance-scanner.step5.filter.total', { count: totalCount }) ||
 					`${totalCount} results`}
 			</span>
 		{/if}

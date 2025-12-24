@@ -24,7 +24,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'opensea',
 		name: 'OpenSea',
-		descriptionKey: 'chain_tools.tools.opensea.description',
+		descriptionKey: 'chain-tools.tools.opensea.description',
 		url: 'https://opensea.io',
 		icon: Image,
 		category: 'nft',
@@ -36,7 +36,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'blur',
 		name: 'Blur',
-		descriptionKey: 'chain_tools.tools.blur.description',
+		descriptionKey: 'chain-tools.tools.blur.description',
 		url: 'https://blur.io',
 		icon: Image,
 		category: 'nft',
@@ -48,7 +48,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'reservoir',
 		name: 'Reservoir',
-		descriptionKey: 'chain_tools.tools.reservoir.description',
+		descriptionKey: 'chain-tools.tools.reservoir.description',
 		url: 'https://reservoir.tools',
 		icon: Coins,
 		category: 'nft',
@@ -58,7 +58,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'magic-eden',
 		name: 'Magic Eden',
-		descriptionKey: 'chain_tools.tools.magic_eden.description',
+		descriptionKey: 'chain-tools.tools.magic_eden.description',
 		url: 'https://magiceden.io',
 		icon: Gem,
 		category: 'nft',
@@ -69,7 +69,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'rarible',
 		name: 'Rarible',
-		descriptionKey: 'chain_tools.tools.rarible.description',
+		descriptionKey: 'chain-tools.tools.rarible.description',
 		url: 'https://rarible.com',
 		icon: Image,
 		category: 'nft',
@@ -80,7 +80,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'zora',
 		name: 'Zora',
-		descriptionKey: 'chain_tools.tools.zora.description',
+		descriptionKey: 'chain-tools.tools.zora.description',
 		url: 'https://zora.co',
 		icon: Image,
 		category: 'nft',
@@ -91,7 +91,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'foundation',
 		name: 'Foundation',
-		descriptionKey: 'chain_tools.tools.foundation.description',
+		descriptionKey: 'chain-tools.tools.foundation.description',
 		url: 'https://foundation.app',
 		icon: Image,
 		category: 'nft',
@@ -104,7 +104,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'sound-xyz',
 		name: 'Sound.xyz',
-		descriptionKey: 'chain_tools.tools.sound_xyz.description',
+		descriptionKey: 'chain-tools.tools.sound_xyz.description',
 		url: 'https://www.sound.xyz',
 		icon: Radio,
 		category: 'nft',
@@ -117,7 +117,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'manifold',
 		name: 'Manifold',
-		descriptionKey: 'chain_tools.tools.manifold.description',
+		descriptionKey: 'chain-tools.tools.manifold.description',
 		url: 'https://manifold.xyz',
 		icon: Settings,
 		category: 'nft',
@@ -130,7 +130,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'icy-tools',
 		name: 'icy.tools',
-		descriptionKey: 'chain_tools.tools.icy_tools.description',
+		descriptionKey: 'chain-tools.tools.icy_tools.description',
 		url: 'https://icy.tools',
 		icon: Activity,
 		category: 'nft',
@@ -140,7 +140,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'nftnerds',
 		name: 'NFTNerds',
-		descriptionKey: 'chain_tools.tools.nftnerds.description',
+		descriptionKey: 'chain-tools.tools.nftnerds.description',
 		url: 'https://nftnerds.ai',
 		icon: Eye,
 		category: 'nft',
@@ -152,7 +152,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'sudoswap',
 		name: 'Sudoswap',
-		descriptionKey: 'chain_tools.tools.sudoswap.description',
+		descriptionKey: 'chain-tools.tools.sudoswap.description',
 		url: 'https://sudoswap.xyz',
 		icon: Image,
 		category: 'nft',
@@ -163,7 +163,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'caviar',
 		name: 'Caviar',
-		descriptionKey: 'chain_tools.tools.caviar.description',
+		descriptionKey: 'chain-tools.tools.caviar.description',
 		url: 'https://goerli.caviar.sh',
 		icon: Image,
 		category: 'nft',
@@ -174,7 +174,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'nftx',
 		name: 'NFTX',
-		descriptionKey: 'chain_tools.tools.nftx.description',
+		descriptionKey: 'chain-tools.tools.nftx.description',
 		url: 'https://nftx.io',
 		icon: Image,
 		category: 'nft',
@@ -185,7 +185,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'floor-protocol',
 		name: 'Floor Protocol',
-		descriptionKey: 'chain_tools.tools.floor_protocol.description',
+		descriptionKey: 'chain-tools.tools.floor_protocol.description',
 		url: 'https://flooring.io',
 		icon: Image,
 		category: 'nft',
@@ -196,7 +196,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'tessera',
 		name: 'Tessera',
-		descriptionKey: 'chain_tools.tools.tessera.description',
+		descriptionKey: 'chain-tools.tools.tessera.description',
 		url: 'https://tessera.co',
 		icon: Image,
 		category: 'nft',
@@ -209,7 +209,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'nftfi',
 		name: 'NFTfi',
-		descriptionKey: 'chain_tools.tools.nftfi.description',
+		descriptionKey: 'chain-tools.tools.nftfi.description',
 		url: 'https://nftfi.com',
 		icon: Banknote,
 		category: 'nft',
@@ -220,7 +220,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'arcade',
 		name: 'Arcade',
-		descriptionKey: 'chain_tools.tools.arcade.description',
+		descriptionKey: 'chain-tools.tools.arcade.description',
 		url: 'https://arcade.xyz',
 		icon: Banknote,
 		category: 'nft',
@@ -231,7 +231,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'unlockd',
 		name: 'Unlockd',
-		descriptionKey: 'chain_tools.tools.unlockd.description',
+		descriptionKey: 'chain-tools.tools.unlockd.description',
 		url: 'https://unlockd.finance',
 		icon: Lock,
 		category: 'nft',
@@ -244,7 +244,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'premint',
 		name: 'PREMINT',
-		descriptionKey: 'chain_tools.tools.premint.description',
+		descriptionKey: 'chain-tools.tools.premint.description',
 		url: 'https://www.premint.xyz',
 		icon: Image,
 		category: 'nft',
@@ -255,7 +255,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'mintfun',
 		name: 'mint.fun',
-		descriptionKey: 'chain_tools.tools.mintfun.description',
+		descriptionKey: 'chain-tools.tools.mintfun.description',
 		url: 'https://mint.fun',
 		icon: Sparkles,
 		category: 'nft',
@@ -267,7 +267,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'bueno',
 		name: 'Bueno',
-		descriptionKey: 'chain_tools.tools.bueno.description',
+		descriptionKey: 'chain-tools.tools.bueno.description',
 		url: 'https://bueno.art',
 		icon: Image,
 		category: 'nft',
@@ -277,7 +277,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'highlight',
 		name: 'Highlight',
-		descriptionKey: 'chain_tools.tools.highlight.description',
+		descriptionKey: 'chain-tools.tools.highlight.description',
 		url: 'https://highlight.xyz',
 		icon: Image,
 		category: 'nft',
@@ -288,7 +288,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'transient-labs',
 		name: 'Transient Labs',
-		descriptionKey: 'chain_tools.tools.transient_labs.description',
+		descriptionKey: 'chain-tools.tools.transient_labs.description',
 		url: 'https://transientlabs.xyz',
 		icon: Image,
 		category: 'nft',
@@ -299,7 +299,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'decent-xyz',
 		name: 'Decent',
-		descriptionKey: 'chain_tools.tools.decent_xyz.description',
+		descriptionKey: 'chain-tools.tools.decent_xyz.description',
 		url: 'https://decent.xyz',
 		icon: Image,
 		category: 'nft',
@@ -312,7 +312,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'tokenproof',
 		name: 'Tokenproof',
-		descriptionKey: 'chain_tools.tools.tokenproof.description',
+		descriptionKey: 'chain-tools.tools.tokenproof.description',
 		url: 'https://tokenproof.xyz',
 		icon: BadgeCheck,
 		category: 'nft',
@@ -322,7 +322,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'delegate-cash',
 		name: 'Delegate.cash',
-		descriptionKey: 'chain_tools.tools.delegate_cash.description',
+		descriptionKey: 'chain-tools.tools.delegate_cash.description',
 		url: 'https://delegate.cash',
 		icon: Link2,
 		category: 'nft',
@@ -333,7 +333,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'warm-xyz',
 		name: 'Warm.xyz',
-		descriptionKey: 'chain_tools.tools.warm_xyz.description',
+		descriptionKey: 'chain-tools.tools.warm_xyz.description',
 		url: 'https://warm.xyz',
 		icon: Link2,
 		category: 'nft',
@@ -346,7 +346,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'layer3-quests',
 		name: 'Layer3',
-		descriptionKey: 'chain_tools.tools.layer3_quests.description',
+		descriptionKey: 'chain-tools.tools.layer3_quests.description',
 		url: 'https://layer3.xyz',
 		icon: Trophy,
 		category: 'nft',
@@ -357,7 +357,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'rabbithole',
 		name: 'RabbitHole',
-		descriptionKey: 'chain_tools.tools.rabbithole.description',
+		descriptionKey: 'chain-tools.tools.rabbithole.description',
 		url: 'https://rabbithole.gg',
 		icon: Trophy,
 		category: 'nft',
@@ -370,7 +370,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'tensor',
 		name: 'Tensor',
-		descriptionKey: 'chain_tools.tools.tensor.description',
+		descriptionKey: 'chain-tools.tools.tensor.description',
 		url: 'https://tensor.trade',
 		icon: Image,
 		category: 'nft',
@@ -381,7 +381,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'hyperspace',
 		name: 'Hyperspace',
-		descriptionKey: 'chain_tools.tools.hyperspace.description',
+		descriptionKey: 'chain-tools.tools.hyperspace.description',
 		url: 'https://hyperspace.xyz',
 		icon: Image,
 		category: 'nft',
@@ -392,7 +392,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'tradeport',
 		name: 'Tradeport',
-		descriptionKey: 'chain_tools.tools.tradeport.description',
+		descriptionKey: 'chain-tools.tools.tradeport.description',
 		url: 'https://tradeport.xyz',
 		icon: Image,
 		category: 'nft',
@@ -403,7 +403,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'campfire',
 		name: 'Campfire',
-		descriptionKey: 'chain_tools.tools.campfire.description',
+		descriptionKey: 'chain-tools.tools.campfire.description',
 		url: 'https://campfire.exchange',
 		icon: Image,
 		category: 'nft',
@@ -414,7 +414,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'paintswap',
 		name: 'PaintSwap',
-		descriptionKey: 'chain_tools.tools.paintswap.description',
+		descriptionKey: 'chain-tools.tools.paintswap.description',
 		url: 'https://paintswap.finance',
 		icon: Image,
 		category: 'nft',
@@ -427,7 +427,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'ordinals-market',
 		name: 'Ordinals Market',
-		descriptionKey: 'chain_tools.tools.ordinals_market.description',
+		descriptionKey: 'chain-tools.tools.ordinals_market.description',
 		url: 'https://ordinals.market',
 		icon: Image,
 		category: 'nft',
@@ -438,7 +438,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'magic-eden-ordinals',
 		name: 'Magic Eden Ordinals',
-		descriptionKey: 'chain_tools.tools.magic_eden_ordinals.description',
+		descriptionKey: 'chain-tools.tools.magic_eden_ordinals.description',
 		url: 'https://magiceden.io/ordinals',
 		icon: Image,
 		category: 'nft',
@@ -451,7 +451,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'exchange-art',
 		name: 'Exchange Art',
-		descriptionKey: 'chain_tools.tools.exchange_art.description',
+		descriptionKey: 'chain-tools.tools.exchange_art.description',
 		url: 'https://exchange.art',
 		icon: Image,
 		category: 'nft',
@@ -462,7 +462,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'formfunction',
 		name: 'Formfunction',
-		descriptionKey: 'chain_tools.tools.formfunction.description',
+		descriptionKey: 'chain-tools.tools.formfunction.description',
 		url: 'https://formfunction.xyz',
 		icon: Image,
 		category: 'nft',
@@ -473,7 +473,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'jpg-store',
 		name: 'JPG Store',
-		descriptionKey: 'chain_tools.tools.jpg_store.description',
+		descriptionKey: 'chain-tools.tools.jpg_store.description',
 		url: 'https://jpg.store',
 		icon: Image,
 		category: 'nft',
@@ -486,7 +486,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'oncyber',
 		name: 'Oncyber',
-		descriptionKey: 'chain_tools.tools.oncyber.description',
+		descriptionKey: 'chain-tools.tools.oncyber.description',
 		url: 'https://oncyber.io',
 		icon: Globe,
 		category: 'nft',
@@ -498,7 +498,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'nft-trader',
 		name: 'NFT Trader',
-		descriptionKey: 'chain_tools.tools.nft_trader.description',
+		descriptionKey: 'chain-tools.tools.nft_trader.description',
 		url: 'https://nfttrader.io',
 		icon: Image,
 		category: 'nft',
@@ -509,7 +509,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'looksrare',
 		name: 'LooksRare',
-		descriptionKey: 'chain_tools.tools.looksrare.description',
+		descriptionKey: 'chain-tools.tools.looksrare.description',
 		url: 'https://looksrare.org',
 		icon: Image,
 		category: 'nft',
@@ -520,7 +520,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'x2y2',
 		name: 'X2Y2',
-		descriptionKey: 'chain_tools.tools.x2y2.description',
+		descriptionKey: 'chain-tools.tools.x2y2.description',
 		url: 'https://x2y2.io',
 		icon: Image,
 		category: 'nft',
@@ -531,7 +531,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'gem',
 		name: 'Gem (OpenSea Pro)',
-		descriptionKey: 'chain_tools.tools.gem.description',
+		descriptionKey: 'chain-tools.tools.gem.description',
 		url: 'https://pro.opensea.io',
 		icon: Image,
 		category: 'nft',
@@ -544,7 +544,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'snag-solutions',
 		name: 'Snag Solutions',
-		descriptionKey: 'chain_tools.tools.snag_solutions.description',
+		descriptionKey: 'chain-tools.tools.snag_solutions.description',
 		url: 'https://snagsolutions.io',
 		icon: Image,
 		category: 'nft',
@@ -555,7 +555,7 @@ export const nftTools: ExternalTool[] = [
 	{
 		id: 'icy-marketplace',
 		name: 'Icy.tools Marketplace',
-		descriptionKey: 'chain_tools.tools.icy_marketplace.description',
+		descriptionKey: 'chain-tools.tools.icy_marketplace.description',
 		url: 'https://icy.tools',
 		icon: Image,
 		category: 'nft',

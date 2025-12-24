@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { step2State } from '@/features/token-deployer/stores/step2-state.svelte';
 
 	const stepManager = useStepManager();
@@ -23,10 +23,10 @@
 
 <div class="footer-buttons">
 	<button class="button button-secondary" onclick={handleBack}>
-		{i18n.t('tools.token_deployer.step2.footer.back')}
+		{i18n.t('token-deployer.step2.footer.back')}
 	</button>
 	<button class="button button-primary" disabled={!canContinue} onclick={handleContinue}>
-		{i18n.t('tools.token_deployer.step2.footer.continue')}
+		{i18n.t('token-deployer.step2.footer.continue')}
 	</button>
 </div>
 

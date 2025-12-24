@@ -1,20 +1,14 @@
 import type { PageLoad } from './$types';
-import { I18n } from '@shelchin/i18n';
-import { extractLocaleFromPathname } from '@shelchin/i18n/utils';
-import type { PackageLocales } from '@shelchin/i18n';
-import en from '../../i18n/locales/en.json';
-import zh from '../../i18n/locales/zh.json';
 import { allChains, getChainStats } from '@/features/chains/data/chains';
+import { createServerT } from '$i18n/server';
+import { extractLocaleFromPathname } from '$utils/common';
 
 export const load: PageLoad = ({ url }) => {
 	// Extract locale from URL pathname
 	const locale = extractLocaleFromPathname(url.pathname) || 'en';
 
-	// Create i18n instance for this request
-	const locales = { en, zh } as unknown as PackageLocales;
-	const i18n = new I18n(locale);
-	i18n.register('__default__', locales);
-	const t = i18n.t.bind(i18n);
+	// Create translation function for this request
+	const t = createServerT(locale);
 
 	const canonical = url.origin + url.pathname;
 	const image = `${url.origin}/og-chains.png`;

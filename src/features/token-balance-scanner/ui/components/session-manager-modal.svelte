@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import {
 		X,
 		Play,
@@ -57,13 +57,13 @@
 	function getStatusText(status: SessionStatus): string {
 		switch (status) {
 			case 'scanning':
-				return i18n.t('tools.token_balance_scanner.session.status.scanning') || 'Scanning';
+				return i18n.t('token-balance-scanner.session.status.scanning') || 'Scanning';
 			case 'paused':
-				return i18n.t('tools.token_balance_scanner.session.status.paused') || 'Paused';
+				return i18n.t('token-balance-scanner.session.status.paused') || 'Paused';
 			case 'completed':
-				return i18n.t('tools.token_balance_scanner.session.status.completed') || 'Completed';
+				return i18n.t('token-balance-scanner.session.status.completed') || 'Completed';
 			case 'abandoned':
-				return i18n.t('tools.token_balance_scanner.session.status.abandoned') || 'Abandoned';
+				return i18n.t('token-balance-scanner.session.status.abandoned') || 'Abandoned';
 			default:
 				return status;
 		}
@@ -95,8 +95,7 @@
 		} catch (err) {
 			console.error('Failed to abandon session:', err);
 			deleteError =
-				i18n.t('tools.token_balance_scanner.session.error.abandon_failed') ||
-				'Failed to abandon session';
+				i18n.t('token-balance-scanner.session.error.abandon_failed') || 'Failed to abandon session';
 		}
 	}
 
@@ -115,8 +114,7 @@
 		} catch (err) {
 			console.error('Failed to delete session:', err);
 			deleteError =
-				i18n.t('tools.token_balance_scanner.session.error.delete_failed') ||
-				'Failed to delete session';
+				i18n.t('token-balance-scanner.session.error.delete_failed') || 'Failed to delete session';
 		}
 	}
 
@@ -146,7 +144,7 @@
 		tabindex="-1"
 	>
 		<div class="modal-header">
-			<h2>{i18n.t('tools.token_balance_scanner.session.title') || 'Scan Sessions'}</h2>
+			<h2>{i18n.t('token-balance-scanner.session.title') || 'Scan Sessions'}</h2>
 			<button class="close-btn" onclick={onClose} aria-label="Close">
 				<X size={20} />
 			</button>
@@ -163,7 +161,7 @@
 			{#if localSessions.length === 0}
 				<div class="empty-state">
 					<Clock size={48} />
-					<p>{i18n.t('tools.token_balance_scanner.session.empty') || 'No active sessions'}</p>
+					<p>{i18n.t('token-balance-scanner.session.empty') || 'No active sessions'}</p>
 				</div>
 			{:else}
 				<div class="session-list">
@@ -183,25 +181,25 @@
 							<div class="session-info">
 								<div class="info-row">
 									<span class="info-label"
-										>{i18n.t('tools.token_balance_scanner.session.progress') || 'Progress'}:</span
+										>{i18n.t('token-balance-scanner.session.progress') || 'Progress'}:</span
 									>
 									<span class="info-value">{session.stats.progress}%</span>
 								</div>
 								<div class="info-row">
 									<span class="info-label"
-										>{i18n.t('tools.token_balance_scanner.session.addresses') || 'Addresses'}:</span
+										>{i18n.t('token-balance-scanner.session.addresses') || 'Addresses'}:</span
 									>
 									<span class="info-value">{session.addresses.length.toLocaleString()}</span>
 								</div>
 								<div class="info-row">
 									<span class="info-label"
-										>{i18n.t('tools.token_balance_scanner.session.tokens') || 'Tokens'}:</span
+										>{i18n.t('token-balance-scanner.session.tokens') || 'Tokens'}:</span
 									>
 									<span class="info-value">{session.tokens.length}</span>
 								</div>
 								<div class="info-row">
 									<span class="info-label"
-										>{i18n.t('tools.token_balance_scanner.session.last_activity') ||
+										>{i18n.t('token-balance-scanner.session.last_activity') ||
 											'Last Activity'}:</span
 									>
 									<span class="info-value">{formatDate(session.lastActivityAt)}</span>
@@ -217,20 +215,20 @@
 									<button class="action-btn resume-btn" onclick={() => onResumeSession(session)}>
 										<Play size={14} />
 										{session.status === 'completed'
-											? i18n.t('tools.token_balance_scanner.session.view') || 'View'
-											: i18n.t('tools.token_balance_scanner.session.resume') || 'Resume'}
+											? i18n.t('token-balance-scanner.session.view') || 'View'
+											: i18n.t('token-balance-scanner.session.resume') || 'Resume'}
 									</button>
 								{/if}
 								{#if canAbandon(session)}
 									<button class="action-btn abandon-btn" onclick={() => handleAbandon(session)}>
 										<XCircle size={14} />
-										{i18n.t('tools.token_balance_scanner.session.abandon') || 'Abandon'}
+										{i18n.t('token-balance-scanner.session.abandon') || 'Abandon'}
 									</button>
 								{/if}
 								{#if canDelete(session)}
 									<button class="action-btn delete-btn" onclick={() => handleDelete(session)}>
 										<Trash2 size={14} />
-										{i18n.t('tools.token_balance_scanner.session.delete') || 'Delete'}
+										{i18n.t('token-balance-scanner.session.delete') || 'Delete'}
 									</button>
 								{/if}
 							</div>
@@ -243,7 +241,7 @@
 		<div class="modal-footer">
 			<button class="new-scan-btn" onclick={onStartNew}>
 				<Plus size={16} />
-				{i18n.t('tools.token_balance_scanner.session.start_new') || 'Start New Scan'}
+				{i18n.t('token-balance-scanner.session.start_new') || 'Start New Scan'}
 			</button>
 		</div>
 	</div>

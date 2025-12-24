@@ -16,7 +16,7 @@
         "@scure/bip32": "^2.0.1",
         "@scure/bip39": "^2.0.1",
         "@shelchin/ethereum-connectors": "0.0.1-dev.20251106040039.5fa58a7",
-        "@shelchin/i18n": "0.0.4-dev.20251117071547.dab4062",
+        "@shelchin/i18n": "2.0.0",
         "buffer": "^6.0.3",
         "canvas-confetti": "^1.9.4",
         "class-variance-authority": "^0.7.1",
@@ -352,7 +352,7 @@
 
     "@shelchin/ethereum-connectors": ["@shelchin/ethereum-connectors@0.0.1-dev.20251106040039.5fa58a7", "", { "dependencies": { "@base-org/account": "^2.4.0", "@noble/curves": "^2.0.1", "@scure/bip32": "^2.0.1", "@walletconnect/ethereum-provider": "^2.22.4", "qr-code-styling": "^1.9.2", "viem": "^2.38.4" } }, "sha512-LZHwUktO/sEQO+xjh5ZesvjNEQKYgsh8+GLXGXO+A9pkcZNLbpxUcB/Bl63fhBfg7i/AzNoliq4N0jbJl15dbg=="],
 
-    "@shelchin/i18n": ["@shelchin/i18n@0.0.4-dev.20251117071547.dab4062", "", { "peerDependencies": { "svelte": "^5.0.0" } }, "sha512-LRIVFt9+gOiSFvBxdxjGSPMDzOdZfa2ZBUaQzxwCLgceUIBb8jOS5G+kwgvPf07oPrUjOYl0op8M3cbFaWTXvw=="],
+    "@shelchin/i18n": ["@shelchin/i18n@2.0.0", "", { "peerDependencies": { "svelte": "^5.0.0" }, "bin": { "i18n": "dist/cli/generate-types.js" } }, "sha512-pnojUOz+bJf3UskQtImMBdQawrzDAc6gG+hYfqQMXfjEox2Ql6EDiO2nmR45jPXB6oD/YBceXto2v2Aq3ejmaQ=="],
 
     "@sindresorhus/is": ["@sindresorhus/is@7.0.2", "", {}, "sha512-d9xRovfKNz1SKieM0qJdO+PQonjnnIfSNWfHYnBSJ9hkjm0ZPw6HlxscDXYstp3z+7V2GOFHc+J0CYrYTjqCJw=="],
 

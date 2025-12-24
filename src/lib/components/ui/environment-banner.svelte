@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { X, AlertTriangle, Wrench, ShieldCheck } from '@lucide/svelte';
 	import { browser } from '$app/environment';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	const i18n = useI18n();
 
@@ -117,13 +117,13 @@
 		<div class="banner-content">
 			{#if environmentType === 'community'}
 				<AlertTriangle size={18} />
-				<span>{i18n.t('environment_banner.community_warning')}</span>
+				<span>{i18n.t('common.environment_banner.community_warning')}</span>
 			{:else if environmentType === 'localhost'}
 				<Wrench size={18} />
-				<span>{i18n.t('environment_banner.dev_environment')}</span>
+				<span>{i18n.t('common.environment_banner.dev_environment')}</span>
 			{:else if environmentType === 'official'}
 				<ShieldCheck size={18} />
-				<span>{i18n.t('environment_banner.official_reminder')}</span>
+				<span>{i18n.t('common.environment_banner.official_reminder')}</span>
 			{/if}
 		</div>
 		{#if canDismiss}

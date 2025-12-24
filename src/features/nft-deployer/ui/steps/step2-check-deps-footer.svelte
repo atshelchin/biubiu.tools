@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { useStepManager } from '$lib/components/ui/step-context.svelte';
 	import { step2CheckDepsState } from '@/features/nft-deployer/stores/step2-check-deps-state.svelte';
 

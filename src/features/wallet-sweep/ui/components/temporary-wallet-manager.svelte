@@ -163,12 +163,12 @@
 
 	async function handleSendGasFromWallet() {
 		if (!connectStore.address || !temporaryWallet) {
-			errorMessage = i18n.t('tools.wallet_sweep.temporary_wallet.error_no_wallet');
+			errorMessage = i18n.t('wallet-sweep.temporary_wallet.error_no_wallet');
 			return;
 		}
 
 		if (!gasSendAmount || Number(gasSendAmount) <= 0) {
-			errorMessage = i18n.t('tools.wallet_sweep.temporary_wallet.error_invalid_amount');
+			errorMessage = i18n.t('wallet-sweep.temporary_wallet.error_invalid_amount');
 			return;
 		}
 
@@ -188,7 +188,7 @@
 			});
 
 			// Show success message
-			successMessage = i18n.t('tools.wallet_sweep.temporary_wallet.success_transfer', {
+			successMessage = i18n.t('wallet-sweep.temporary_wallet.success_transfer', {
 				amount,
 				symbol: networkSymbol,
 				tx: hash.slice(0, 10)
@@ -225,30 +225,30 @@
 <div class="temporary-wallet-manager">
 	<div class="manager-header">
 		<Key size={20} />
-		<h4>{i18n.t('tools.wallet_sweep.temporary_wallet.title')}</h4>
+		<h4>{i18n.t('wallet-sweep.temporary_wallet.title')}</h4>
 	</div>
 
 	{#if !temporaryWallet}
 		<!-- Create Temporary Wallet -->
 		<div class="create-section">
 			<p class="create-description">
-				{i18n.t('tools.wallet_sweep.temporary_wallet.description')}
+				{i18n.t('wallet-sweep.temporary_wallet.description')}
 			</p>
 
 			<div class="create-warning">
 				<AlertCircle size={18} />
 				<div>
-					<strong>{i18n.t('tools.wallet_sweep.temporary_wallet.important')}:</strong>
-					{i18n.t('tools.wallet_sweep.temporary_wallet.warning_text')}
+					<strong>{i18n.t('wallet-sweep.temporary_wallet.important')}:</strong>
+					{i18n.t('wallet-sweep.temporary_wallet.warning_text')}
 					<ul>
-						<li>{i18n.t('tools.wallet_sweep.temporary_wallet.step_download')}</li>
+						<li>{i18n.t('wallet-sweep.temporary_wallet.step_download')}</li>
 						<li>
-							{i18n.t('tools.wallet_sweep.temporary_wallet.step_fund', {
+							{i18n.t('wallet-sweep.temporary_wallet.step_fund', {
 								amount: formattedGasCost,
 								symbol: networkSymbol
 							})}
 						</li>
-						<li>{i18n.t('tools.wallet_sweep.temporary_wallet.step_clear')}</li>
+						<li>{i18n.t('wallet-sweep.temporary_wallet.step_clear')}</li>
 					</ul>
 				</div>
 			</div>
@@ -256,10 +256,10 @@
 			<button class="btn-create" onclick={handleCreateTemporaryWallet} disabled={isCreating}>
 				{#if isCreating}
 					<Loader2 size={20} class="spinning" />
-					{i18n.t('tools.wallet_sweep.temporary_wallet.creating')}
+					{i18n.t('wallet-sweep.temporary_wallet.creating')}
 				{:else}
 					<Key size={20} />
-					{i18n.t('tools.wallet_sweep.temporary_wallet.btn_create')}
+					{i18n.t('wallet-sweep.temporary_wallet.btn_create')}
 				{/if}
 			</button>
 
@@ -276,10 +276,10 @@
 			<!-- <div class="wallet-status">
 				<div class="status-badge">
 					<Check size={16} />
-					<span>{i18n.t('tools.wallet_sweep.temporary_wallet.wallet_ready')}</span>
+					<span>{i18n.t('wallet-sweep.temporary_wallet.wallet_ready')}</span>
 				</div>
 				<p class="status-info">
-					{i18n.t('tools.wallet_sweep.temporary_wallet.created_at', {
+					{i18n.t('wallet-sweep.temporary_wallet.created_at', {
 						time: new Date(temporaryWallet.createdAt).toLocaleString()
 					})}
 				</p>
@@ -287,13 +287,13 @@
 
 			<!-- Wallet Address -->
 			<div class="wallet-field">
-				<div class="field-label">{i18n.t('tools.wallet_sweep.temporary_wallet.address')}</div>
+				<div class="field-label">{i18n.t('wallet-sweep.temporary_wallet.address')}</div>
 				<div class="field-content">
 					<code class="field-value">{temporaryWallet.address}</code>
 					<button
 						class="btn-icon"
 						onclick={() => handleCopyToClipboard(temporaryWallet?.address || '', 'address')}
-						title={i18n.t('tools.wallet_sweep.temporary_wallet.copy_address')}
+						title={i18n.t('wallet-sweep.temporary_wallet.copy_address')}
 					>
 						{#if copiedField === 'address'}
 							<Check size={16} />
@@ -304,7 +304,7 @@
 					<button
 						class="btn-qr"
 						onclick={toggleQR}
-						title={i18n.t('tools.wallet_sweep.temporary_wallet.show_qr')}
+						title={i18n.t('wallet-sweep.temporary_wallet.show_qr')}
 					>
 						<QrCode size={16} />
 					</button>
@@ -313,12 +313,11 @@
 
 			<!-- Balance Display -->
 			<div class="wallet-field">
-				<div class="field-label">{i18n.t('tools.wallet_sweep.temporary_wallet.balance')}</div>
+				<div class="field-label">{i18n.t('wallet-sweep.temporary_wallet.balance')}</div>
 				<div class="field-content balance-content">
 					{#if isLoadingBalance}
 						<Loader2 size={16} class="spinning" />
-						<span class="balance-text">{i18n.t('tools.wallet_sweep.temporary_wallet.loading')}</span
-						>
+						<span class="balance-text">{i18n.t('wallet-sweep.temporary_wallet.loading')}</span>
 					{:else}
 						<Wallet size={16} />
 						<span class="balance-text">{formatEther(walletBalance)} {networkSymbol}</span>
@@ -327,7 +326,7 @@
 						class="btn-refresh {isLoadingBalance ? 'spinning' : ''}"
 						onclick={loadWalletBalance}
 						disabled={isLoadingBalance}
-						title={i18n.t('tools.wallet_sweep.temporary_wallet.refresh_balance')}
+						title={i18n.t('wallet-sweep.temporary_wallet.refresh_balance')}
 					>
 						<RefreshCw size={16} />
 					</button>
@@ -338,7 +337,7 @@
 			{#if showQR}
 				<div class="qr-display">
 					<QRCodeGenerator data={temporaryWallet.address} size={200} />
-					<p class="qr-hint">{i18n.t('tools.wallet_sweep.temporary_wallet.qr_hint')}</p>
+					<p class="qr-hint">{i18n.t('wallet-sweep.temporary_wallet.qr_hint')}</p>
 				</div>
 			{/if}
 
@@ -346,11 +345,11 @@
 			<div class="wallet-actions">
 				<button class="btn-download" onclick={handleDownloadWallet}>
 					<Download size={16} />
-					{i18n.t('tools.wallet_sweep.temporary_wallet.btn_download')}
+					{i18n.t('wallet-sweep.temporary_wallet.btn_download')}
 				</button>
 				<button class="btn-fund-gas" onclick={openGasFundingModal}>
 					<Send size={16} />
-					{i18n.t('tools.wallet_sweep.temporary_wallet.fund_title')}
+					{i18n.t('wallet-sweep.temporary_wallet.fund_title')}
 				</button>
 			</div>
 

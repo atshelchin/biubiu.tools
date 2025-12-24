@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import Button from '$lib/components/ui/button.svelte';
 	import { ChevronLeft, RefreshCw } from '@lucide/svelte';
 	import { step4DeployState } from '../../stores/step4-deploy-state.svelte';
@@ -36,7 +36,7 @@
 	{#if isDeployed}
 		<Button onclick={handleReset}>
 			<RefreshCw class="mr-2 h-4 w-4" />
-			{i18n.t('tools.nft_deployer.step4.footer.deploy_another')}
+			{i18n.t('nft-deployer.step4.footer.deploy_another')}
 		</Button>
 	{/if}
 </div>

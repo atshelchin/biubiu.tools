@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import confetti from 'canvas-confetti';
 	import { Dices, Sparkles, ArrowRight } from '@lucide/svelte';
 	import Dice3D from '$lib/components/ui/dice-3d.svelte';
@@ -27,7 +27,7 @@
 	let { tools }: Props = $props();
 
 	const i18n = useI18n();
-	const t = i18n.t;
+	const t = i18n.t.bind(i18n);
 
 	// Random tool discovery state
 	let isShaking = $state(false);

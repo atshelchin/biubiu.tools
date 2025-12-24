@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Cookie, Shield, BarChart3, ChevronDown, ChevronUp, X } from '@lucide/svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { useCookieConsent } from '$lib/stores/cookie-consent.svelte';
 	import { browser } from '$app/environment';
 
@@ -58,26 +58,26 @@
 				<button
 					class="dismiss-btn"
 					onclick={handleDismiss}
-					aria-label={i18n.t('cookie_consent.dismiss')}
+					aria-label={i18n.t('cookie-consent.dismiss')}
 				>
 					<X size={18} />
 				</button>
 				<div class="banner-header">
 					<Cookie size={24} class="cookie-icon" />
-					<h2 id="cookie-title">{i18n.t('cookie_consent.reminder_title')}</h2>
+					<h2 id="cookie-title">{i18n.t('cookie-consent.reminder_title')}</h2>
 				</div>
 
 				<p class="banner-description">
-					{i18n.t('cookie_consent.reminder_description')}
+					{i18n.t('cookie-consent.reminder_description')}
 				</p>
 
 				<div class="banner-actions">
 					<div class="action-buttons">
 						<button class="btn-secondary" onclick={handleDismiss}>
-							{i18n.t('cookie_consent.not_now')}
+							{i18n.t('cookie-consent.not_now')}
 						</button>
 						<button class="btn-primary" onclick={handleAcceptAll}>
-							{i18n.t('cookie_consent.accept_all')}
+							{i18n.t('cookie-consent.accept_all')}
 						</button>
 					</div>
 				</div>
@@ -86,17 +86,17 @@
 				<button
 					class="dismiss-btn"
 					onclick={handleDismiss}
-					aria-label={i18n.t('cookie_consent.dismiss')}
+					aria-label={i18n.t('cookie-consent.dismiss')}
 				>
 					<X size={18} />
 				</button>
 				<div class="banner-header">
 					<Cookie size={24} class="cookie-icon" />
-					<h2 id="cookie-title">{i18n.t('cookie_consent.settings_title')}</h2>
+					<h2 id="cookie-title">{i18n.t('cookie-consent.settings_title')}</h2>
 				</div>
 
 				<p class="banner-description">
-					{i18n.t('cookie_consent.settings_description')}
+					{i18n.t('cookie-consent.settings_description')}
 				</p>
 
 				<div class="cookie-categories">
@@ -105,12 +105,12 @@
 						<div class="category-header">
 							<div class="category-info">
 								<Shield size={18} />
-								<span class="category-name">{i18n.t('cookie_consent.necessary.title')}</span>
-								<span class="required-badge">{i18n.t('cookie_consent.required')}</span>
+								<span class="category-name">{i18n.t('cookie-consent.necessary.title')}</span>
+								<span class="required-badge">{i18n.t('cookie-consent.required')}</span>
 							</div>
 							<input type="checkbox" checked disabled class="category-checkbox" />
 						</div>
-						<p class="category-description">{i18n.t('cookie_consent.necessary.description')}</p>
+						<p class="category-description">{i18n.t('cookie-consent.necessary.description')}</p>
 					</div>
 
 					<!-- Analytics Cookies -->
@@ -118,21 +118,21 @@
 						<div class="category-header">
 							<div class="category-info">
 								<BarChart3 size={18} />
-								<span class="category-name">{i18n.t('cookie_consent.analytics.title')}</span>
+								<span class="category-name">{i18n.t('cookie-consent.analytics.title')}</span>
 							</div>
 							<input type="checkbox" bind:checked={analyticsChecked} class="category-checkbox" />
 						</div>
-						<p class="category-description">{i18n.t('cookie_consent.analytics.description')}</p>
+						<p class="category-description">{i18n.t('cookie-consent.analytics.description')}</p>
 					</div>
 				</div>
 
 				<div class="banner-actions">
 					<div class="action-buttons">
 						<button class="btn-secondary" onclick={handleDismiss}>
-							{i18n.t('cookie_consent.cancel')}
+							{i18n.t('cookie-consent.cancel')}
 						</button>
 						<button class="btn-primary" onclick={handleAcceptCustom}>
-							{i18n.t('cookie_consent.save_preferences')}
+							{i18n.t('cookie-consent.save_preferences')}
 						</button>
 					</div>
 				</div>
@@ -140,11 +140,11 @@
 				<!-- Initial consent mode: full banner -->
 				<div class="banner-header">
 					<Cookie size={24} class="cookie-icon" />
-					<h2 id="cookie-title">{i18n.t('cookie_consent.title')}</h2>
+					<h2 id="cookie-title">{i18n.t('cookie-consent.title')}</h2>
 				</div>
 
 				<p class="banner-description">
-					{i18n.t('cookie_consent.description')}
+					{i18n.t('cookie-consent.description')}
 				</p>
 
 				{#if showDetails}
@@ -154,12 +154,12 @@
 							<div class="category-header">
 								<div class="category-info">
 									<Shield size={18} />
-									<span class="category-name">{i18n.t('cookie_consent.necessary.title')}</span>
-									<span class="required-badge">{i18n.t('cookie_consent.required')}</span>
+									<span class="category-name">{i18n.t('cookie-consent.necessary.title')}</span>
+									<span class="required-badge">{i18n.t('cookie-consent.required')}</span>
 								</div>
 								<input type="checkbox" checked disabled class="category-checkbox" />
 							</div>
-							<p class="category-description">{i18n.t('cookie_consent.necessary.description')}</p>
+							<p class="category-description">{i18n.t('cookie-consent.necessary.description')}</p>
 						</div>
 
 						<!-- Analytics Cookies -->
@@ -167,11 +167,11 @@
 							<div class="category-header">
 								<div class="category-info">
 									<BarChart3 size={18} />
-									<span class="category-name">{i18n.t('cookie_consent.analytics.title')}</span>
+									<span class="category-name">{i18n.t('cookie-consent.analytics.title')}</span>
 								</div>
 								<input type="checkbox" bind:checked={analyticsChecked} class="category-checkbox" />
 							</div>
-							<p class="category-description">{i18n.t('cookie_consent.analytics.description')}</p>
+							<p class="category-description">{i18n.t('cookie-consent.analytics.description')}</p>
 						</div>
 					</div>
 				{/if}
@@ -180,31 +180,31 @@
 					<button class="toggle-details" onclick={toggleDetails}>
 						{#if showDetails}
 							<ChevronUp size={16} />
-							{i18n.t('cookie_consent.hide_details')}
+							{i18n.t('cookie-consent.hide_details')}
 						{:else}
 							<ChevronDown size={16} />
-							{i18n.t('cookie_consent.show_details')}
+							{i18n.t('cookie-consent.show_details')}
 						{/if}
 					</button>
 
 					<div class="action-buttons">
 						<button class="btn-secondary" onclick={handleAcceptNecessaryOnly}>
-							{i18n.t('cookie_consent.necessary_only')}
+							{i18n.t('cookie-consent.necessary_only')}
 						</button>
 						{#if showDetails}
 							<button class="btn-secondary" onclick={handleAcceptCustom}>
-								{i18n.t('cookie_consent.save_preferences')}
+								{i18n.t('cookie-consent.save_preferences')}
 							</button>
 						{/if}
 						<button class="btn-primary" onclick={handleAcceptAll}>
-							{i18n.t('cookie_consent.accept_all')}
+							{i18n.t('cookie-consent.accept_all')}
 						</button>
 					</div>
 				</div>
 
 				<p class="privacy-link">
-					{i18n.t('cookie_consent.privacy_notice')}
-					<a href="/privacy">{i18n.t('cookie_consent.privacy_policy')}</a>
+					{i18n.t('cookie-consent.privacy_notice')}
+					<a href="/privacy">{i18n.t('cookie-consent.privacy_policy')}</a>
 				</p>
 			{/if}
 		</div>

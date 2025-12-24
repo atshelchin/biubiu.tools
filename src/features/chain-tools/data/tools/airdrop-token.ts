@@ -28,7 +28,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-uni',
 		name: 'UNI Airdrop (2020)',
-		descriptionKey: 'chain_tools.tools.airdrop_uni.description',
+		descriptionKey: 'chain-tools.tools.airdrop_uni.description',
 		url: 'https://etherscan.io/token/0x1f9840a85d5af5bf1d1762f925bdaddc4201f984',
 		icon: Gift,
 		category: 'airdrop-token',
@@ -39,7 +39,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-ens',
 		name: 'ENS Airdrop (2021)',
-		descriptionKey: 'chain_tools.tools.airdrop_ens.description',
+		descriptionKey: 'chain-tools.tools.airdrop_ens.description',
 		url: 'https://etherscan.io/token/0xc18360217d8f7ab5e7c516566761ea12ce7f9d72',
 		icon: Globe,
 		category: 'airdrop-token',
@@ -50,7 +50,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-dydx',
 		name: 'dYdX Airdrop (2021)',
-		descriptionKey: 'chain_tools.tools.airdrop_dydx.description',
+		descriptionKey: 'chain-tools.tools.airdrop_dydx.description',
 		url: 'https://etherscan.io/token/0x92d6c1e31e14520e676a687f0a93788b716beff5',
 		icon: TrendingUp,
 		category: 'airdrop-token',
@@ -61,7 +61,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-1inch',
 		name: '1inch Airdrop (2020)',
-		descriptionKey: 'chain_tools.tools.airdrop_1inch.description',
+		descriptionKey: 'chain-tools.tools.airdrop_1inch.description',
 		url: 'https://etherscan.io/token/0x111111111117dc0aa78b770fa6a738034120c302',
 		icon: Zap,
 		category: 'airdrop-token',
@@ -72,7 +72,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-ldo',
 		name: 'LDO Airdrop (2022)',
-		descriptionKey: 'chain_tools.tools.airdrop_ldo.description',
+		descriptionKey: 'chain-tools.tools.airdrop_ldo.description',
 		url: 'https://etherscan.io/token/0x5a98fcbea516cf06857215779fd812ca3bef1b32',
 		icon: Coins,
 		category: 'airdrop-token',
@@ -84,7 +84,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-op',
 		name: 'OP Airdrop (2022)',
-		descriptionKey: 'chain_tools.tools.airdrop_op.description',
+		descriptionKey: 'chain-tools.tools.airdrop_op.description',
 		url: 'https://optimistic.etherscan.io/token/0x4200000000000000000000000000000000000042',
 		icon: Layers,
 		category: 'airdrop-token',
@@ -95,7 +95,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-arb',
 		name: 'ARB Airdrop (2023)',
-		descriptionKey: 'chain_tools.tools.airdrop_arb.description',
+		descriptionKey: 'chain-tools.tools.airdrop_arb.description',
 		url: 'https://arbiscan.io/token/0x912CE59144191C1204E64559FE8253a0e49E6548',
 		icon: Layers,
 		category: 'airdrop-token',
@@ -106,7 +106,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-blur',
 		name: 'BLUR Airdrop (2023)',
-		descriptionKey: 'chain_tools.tools.airdrop_blur.description',
+		descriptionKey: 'chain-tools.tools.airdrop_blur.description',
 		url: 'https://etherscan.io/token/0x5283d291dbcf85356a21ba090e6db59121208b44',
 		icon: Star,
 		category: 'airdrop-token',
@@ -117,7 +117,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-strk',
 		name: 'STRK Airdrop (2024)',
-		descriptionKey: 'chain_tools.tools.airdrop_strk.description',
+		descriptionKey: 'chain-tools.tools.airdrop_strk.description',
 		url: 'https://www.starknet.io/en/content/starknet-provisions-program',
 		icon: Layers,
 		category: 'airdrop-token',
@@ -128,7 +128,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-zk',
 		name: 'ZK Airdrop (2024)',
-		descriptionKey: 'chain_tools.tools.airdrop_zk.description',
+		descriptionKey: 'chain-tools.tools.airdrop_zk.description',
 		url: 'https://claim.zknation.io',
 		icon: Layers,
 		category: 'airdrop-token',
@@ -139,7 +139,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-jup',
 		name: 'JUP Airdrop (2024)',
-		descriptionKey: 'chain_tools.tools.airdrop_jup.description',
+		descriptionKey: 'chain-tools.tools.airdrop_jup.description',
 		url: 'https://jup.ag',
 		icon: Zap,
 		category: 'airdrop-token',
@@ -150,7 +150,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-w',
 		name: 'W Airdrop (Wormhole 2024)',
-		descriptionKey: 'chain_tools.tools.airdrop_w.description',
+		descriptionKey: 'chain-tools.tools.airdrop_w.description',
 		url: 'https://wormhole.com',
 		icon: Globe,
 		category: 'airdrop-token',
@@ -161,7 +161,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-ena',
 		name: 'ENA Airdrop (2024)',
-		descriptionKey: 'chain_tools.tools.airdrop_ena.description',
+		descriptionKey: 'chain-tools.tools.airdrop_ena.description',
 		url: 'https://ethena.fi',
 		icon: Coins,
 		category: 'airdrop-token',
@@ -172,7 +172,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-eigen',
 		name: 'EIGEN Airdrop (2024)',
-		descriptionKey: 'chain_tools.tools.airdrop_eigen.description',
+		descriptionKey: 'chain-tools.tools.airdrop_eigen.description',
 		url: 'https://claims.eigenfoundation.org',
 		icon: Layers,
 		category: 'airdrop-token',
@@ -183,7 +183,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-pyth',
 		name: 'PYTH Airdrop (2023)',
-		descriptionKey: 'chain_tools.tools.airdrop_pyth.description',
+		descriptionKey: 'chain-tools.tools.airdrop_pyth.description',
 		url: 'https://pyth.network',
 		icon: Zap,
 		category: 'airdrop-token',
@@ -194,7 +194,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-tnsr',
 		name: 'TNSR Airdrop (2024)',
-		descriptionKey: 'chain_tools.tools.airdrop_tnsr.description',
+		descriptionKey: 'chain-tools.tools.airdrop_tnsr.description',
 		url: 'https://tensor.trade',
 		icon: Star,
 		category: 'airdrop-token',
@@ -205,7 +205,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-kmno',
 		name: 'KMNO Airdrop (2024)',
-		descriptionKey: 'chain_tools.tools.airdrop_kmno.description',
+		descriptionKey: 'chain-tools.tools.airdrop_kmno.description',
 		url: 'https://kamino.finance',
 		icon: Coins,
 		category: 'airdrop-token',
@@ -216,7 +216,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-parcl',
 		name: 'PARCL Airdrop (2024)',
-		descriptionKey: 'chain_tools.tools.airdrop_parcl.description',
+		descriptionKey: 'chain-tools.tools.airdrop_parcl.description',
 		url: 'https://parcl.co',
 		icon: TrendingUp,
 		category: 'airdrop-token',
@@ -227,7 +227,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-wen',
 		name: 'WEN Airdrop (2024)',
-		descriptionKey: 'chain_tools.tools.airdrop_wen.description',
+		descriptionKey: 'chain-tools.tools.airdrop_wen.description',
 		url: 'https://wenwencoin.com',
 		icon: Gift,
 		category: 'airdrop-token',
@@ -238,7 +238,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-omni',
 		name: 'OMNI Airdrop (2024)',
-		descriptionKey: 'chain_tools.tools.airdrop_omni.description',
+		descriptionKey: 'chain-tools.tools.airdrop_omni.description',
 		url: 'https://omni.network',
 		icon: Layers,
 		category: 'airdrop-token',
@@ -249,7 +249,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-alt',
 		name: 'ALT Airdrop (2024)',
-		descriptionKey: 'chain_tools.tools.airdrop_alt.description',
+		descriptionKey: 'chain-tools.tools.airdrop_alt.description',
 		url: 'https://altlayer.io',
 		icon: Layers,
 		category: 'airdrop-token',
@@ -260,7 +260,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-manta',
 		name: 'MANTA Airdrop (2024)',
-		descriptionKey: 'chain_tools.tools.airdrop_manta.description',
+		descriptionKey: 'chain-tools.tools.airdrop_manta.description',
 		url: 'https://manta.network',
 		icon: Layers,
 		category: 'airdrop-token',
@@ -271,7 +271,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-dym',
 		name: 'DYM Airdrop (2024)',
-		descriptionKey: 'chain_tools.tools.airdrop_dym.description',
+		descriptionKey: 'chain-tools.tools.airdrop_dym.description',
 		url: 'https://dymension.xyz',
 		icon: Layers,
 		category: 'airdrop-token',
@@ -282,7 +282,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-zetachain',
 		name: 'ZETA Airdrop (2024)',
-		descriptionKey: 'chain_tools.tools.airdrop_zetachain.description',
+		descriptionKey: 'chain-tools.tools.airdrop_zetachain.description',
 		url: 'https://zetachain.com',
 		icon: Globe,
 		category: 'airdrop-token',
@@ -293,7 +293,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-ethfi',
 		name: 'ETHFI Airdrop (2024)',
-		descriptionKey: 'chain_tools.tools.airdrop_ethfi.description',
+		descriptionKey: 'chain-tools.tools.airdrop_ethfi.description',
 		url: 'https://ether.fi',
 		icon: Coins,
 		category: 'airdrop-token',
@@ -304,7 +304,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-renzo',
 		name: 'REZ Airdrop (2024)',
-		descriptionKey: 'chain_tools.tools.airdrop_renzo.description',
+		descriptionKey: 'chain-tools.tools.airdrop_renzo.description',
 		url: 'https://renzo.xyz',
 		icon: Coins,
 		category: 'airdrop-token',
@@ -315,7 +315,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-puffer',
 		name: 'PUFFER (Potential)',
-		descriptionKey: 'chain_tools.tools.airdrop_puffer.description',
+		descriptionKey: 'chain-tools.tools.airdrop_puffer.description',
 		url: 'https://puffer.fi',
 		icon: Calendar,
 		category: 'airdrop-token',
@@ -326,7 +326,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-kelp',
 		name: 'KELP (Potential)',
-		descriptionKey: 'chain_tools.tools.airdrop_kelp.description',
+		descriptionKey: 'chain-tools.tools.airdrop_kelp.description',
 		url: 'https://kelpdao.xyz',
 		icon: Calendar,
 		category: 'airdrop-token',
@@ -337,7 +337,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-swell',
 		name: 'SWELL (Potential)',
-		descriptionKey: 'chain_tools.tools.airdrop_swell.description',
+		descriptionKey: 'chain-tools.tools.airdrop_swell.description',
 		url: 'https://swellnetwork.io',
 		icon: Calendar,
 		category: 'airdrop-token',
@@ -349,7 +349,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-cow',
 		name: 'COW Airdrop (2022)',
-		descriptionKey: 'chain_tools.tools.airdrop_cow.description',
+		descriptionKey: 'chain-tools.tools.airdrop_cow.description',
 		url: 'https://etherscan.io/token/0xdef1ca1fb7fbcdc777520aa7f396b4e015f497ab',
 		icon: Coins,
 		category: 'airdrop-token',
@@ -360,7 +360,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-hop',
 		name: 'HOP Airdrop (2022)',
-		descriptionKey: 'chain_tools.tools.airdrop_hop.description',
+		descriptionKey: 'chain-tools.tools.airdrop_hop.description',
 		url: 'https://etherscan.io/token/0xc5102fe9359fd9a28f877a67e36b0f050d81a3cc',
 		icon: Gift,
 		category: 'airdrop-token',
@@ -371,7 +371,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-safe',
 		name: 'SAFE Airdrop (2022)',
-		descriptionKey: 'chain_tools.tools.airdrop_safe.description',
+		descriptionKey: 'chain-tools.tools.airdrop_safe.description',
 		url: 'https://etherscan.io/token/0x5afe3855358e112b5647b952709e6165e1c1eeee',
 		icon: Award,
 		category: 'airdrop-token',
@@ -382,7 +382,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-matic-pol',
 		name: 'MATIC/POL Migration',
-		descriptionKey: 'chain_tools.tools.airdrop_matic_pol.description',
+		descriptionKey: 'chain-tools.tools.airdrop_matic_pol.description',
 		url: 'https://polygon.technology/blog/introducing-pol-the-next-generation-of-matic',
 		icon: Layers,
 		category: 'airdrop-token',
@@ -394,7 +394,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'earndrop',
 		name: 'Earndrop',
-		descriptionKey: 'chain_tools.tools.earndrop.description',
+		descriptionKey: 'chain-tools.tools.earndrop.description',
 		url: 'https://earndrop.io',
 		icon: Search,
 		category: 'airdrop-token',
@@ -404,7 +404,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'defillama-airdrops',
 		name: 'DeFiLlama Airdrops',
-		descriptionKey: 'chain_tools.tools.defillama_airdrops.description',
+		descriptionKey: 'chain-tools.tools.defillama_airdrops.description',
 		url: 'https://defillama.com/airdrops',
 		icon: Gift,
 		category: 'airdrop-token',
@@ -414,7 +414,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-alert',
 		name: 'Airdrop Alert',
-		descriptionKey: 'chain_tools.tools.airdrop_alert.description',
+		descriptionKey: 'chain-tools.tools.airdrop_alert.description',
 		url: 'https://airdropalert.com',
 		icon: Bell,
 		category: 'airdrop-token',
@@ -424,7 +424,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrops-io',
 		name: 'Airdrops.io',
-		descriptionKey: 'chain_tools.tools.airdrops_io.description',
+		descriptionKey: 'chain-tools.tools.airdrops_io.description',
 		url: 'https://airdrops.io',
 		icon: Gift,
 		category: 'airdrop-token',
@@ -434,7 +434,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'airdrop-farmer',
 		name: 'Layer3 Quests',
-		descriptionKey: 'chain_tools.tools.airdrop_farmer.description',
+		descriptionKey: 'chain-tools.tools.airdrop_farmer.description',
 		url: 'https://layer3.xyz',
 		icon: Target,
 		category: 'airdrop-token',
@@ -444,7 +444,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'galxe-campaigns',
 		name: 'Galxe Campaigns',
-		descriptionKey: 'chain_tools.tools.galxe_campaigns.description',
+		descriptionKey: 'chain-tools.tools.galxe_campaigns.description',
 		url: 'https://galxe.com',
 		icon: Star,
 		category: 'airdrop-token',
@@ -454,7 +454,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'rabbithole-quests',
 		name: 'RabbitHole',
-		descriptionKey: 'chain_tools.tools.rabbithole_quests.description',
+		descriptionKey: 'chain-tools.tools.rabbithole_quests.description',
 		url: 'https://rabbithole.gg',
 		icon: Target,
 		category: 'airdrop-token',
@@ -464,7 +464,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'zealy-quests',
 		name: 'Zealy',
-		descriptionKey: 'chain_tools.tools.zealy_quests.description',
+		descriptionKey: 'chain-tools.tools.zealy_quests.description',
 		url: 'https://zealy.io',
 		icon: Star,
 		category: 'airdrop-token',
@@ -475,7 +475,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'potential-scroll',
 		name: 'Scroll (Potential)',
-		descriptionKey: 'chain_tools.tools.potential_scroll.description',
+		descriptionKey: 'chain-tools.tools.potential_scroll.description',
 		url: 'https://scroll.io',
 		icon: Calendar,
 		category: 'airdrop-token',
@@ -486,7 +486,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'potential-linea',
 		name: 'Linea (Potential)',
-		descriptionKey: 'chain_tools.tools.potential_linea.description',
+		descriptionKey: 'chain-tools.tools.potential_linea.description',
 		url: 'https://linea.build',
 		icon: Calendar,
 		category: 'airdrop-token',
@@ -497,7 +497,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'potential-blast',
 		name: 'BLAST (Launched)',
-		descriptionKey: 'chain_tools.tools.potential_blast.description',
+		descriptionKey: 'chain-tools.tools.potential_blast.description',
 		url: 'https://blast.io',
 		icon: Zap,
 		category: 'airdrop-token',
@@ -508,7 +508,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'potential-berachain',
 		name: 'Berachain (Potential)',
-		descriptionKey: 'chain_tools.tools.potential_berachain.description',
+		descriptionKey: 'chain-tools.tools.potential_berachain.description',
 		url: 'https://berachain.com',
 		icon: Calendar,
 		category: 'airdrop-token',
@@ -518,7 +518,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'potential-monad',
 		name: 'Monad (Potential)',
-		descriptionKey: 'chain_tools.tools.potential_monad.description',
+		descriptionKey: 'chain-tools.tools.potential_monad.description',
 		url: 'https://monad.xyz',
 		icon: Calendar,
 		category: 'airdrop-token',
@@ -528,7 +528,7 @@ export const airdropTokenTools: ExternalTool[] = [
 	{
 		id: 'potential-fuel',
 		name: 'Fuel (Potential)',
-		descriptionKey: 'chain_tools.tools.potential_fuel.description',
+		descriptionKey: 'chain-tools.tools.potential_fuel.description',
 		url: 'https://fuel.network',
 		icon: Calendar,
 		category: 'airdrop-token',

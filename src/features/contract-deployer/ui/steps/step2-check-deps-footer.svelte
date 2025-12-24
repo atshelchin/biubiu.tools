@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 	import StepFooter from '$lib/components/step/step-footer.svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { getContext } from 'svelte';
 
 	const stepManager = useStepManager();
@@ -36,7 +36,7 @@
 
 <StepFooter
 	canContinue={isReadyToContinue}
-	continueText={i18n.t('tools.contract_deployer.step2.footer.continue')}
+	continueText={i18n.t('contract-deployer.step2.footer.continue')}
 	onContinue={handleContinue}
-	hint={i18n.t('tools.contract_deployer.step2.footer.hint')}
+	hint={i18n.t('contract-deployer.step2.footer.hint')}
 />

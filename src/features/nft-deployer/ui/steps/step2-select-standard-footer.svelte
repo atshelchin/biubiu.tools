@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { useStepManager } from '$lib/components/ui/step-context.svelte';
 	import { step2State } from '../../stores/step2-state.svelte';
 

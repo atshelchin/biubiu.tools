@@ -26,7 +26,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'ultrasound-money',
 		name: 'ultrasound.money',
-		descriptionKey: 'chain_tools.tools.ultrasound_money.description',
+		descriptionKey: 'chain-tools.tools.ultrasound_money.description',
 		url: 'https://ultrasound.money',
 		icon: Flame,
 		category: 'gas-burner',
@@ -37,7 +37,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'etherscan-gastracker',
 		name: 'Etherscan Gas Tracker',
-		descriptionKey: 'chain_tools.tools.etherscan_gastracker.description',
+		descriptionKey: 'chain-tools.tools.etherscan_gastracker.description',
 		url: 'https://etherscan.io/gastracker',
 		icon: Gauge,
 		category: 'gas-burner',
@@ -48,7 +48,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'blocknative-gas',
 		name: 'Blocknative Gas Estimator',
-		descriptionKey: 'chain_tools.tools.blocknative_gas.description',
+		descriptionKey: 'chain-tools.tools.blocknative_gas.description',
 		url: 'https://www.blocknative.com/gas-estimator',
 		icon: Activity,
 		category: 'gas-burner',
@@ -59,7 +59,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'gasnow',
 		name: 'GasNow',
-		descriptionKey: 'chain_tools.tools.gasnow.description',
+		descriptionKey: 'chain-tools.tools.gasnow.description',
 		url: 'https://www.gasnow.org',
 		icon: Zap,
 		category: 'gas-burner',
@@ -70,7 +70,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'ethgas-watch',
 		name: 'ETH Gas.watch',
-		descriptionKey: 'chain_tools.tools.ethgas_watch.description',
+		descriptionKey: 'chain-tools.tools.ethgas_watch.description',
 		url: 'https://ethgas.watch',
 		icon: Clock,
 		category: 'gas-burner',
@@ -81,7 +81,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'owlracle',
 		name: 'Owlracle',
-		descriptionKey: 'chain_tools.tools.owlracle.description',
+		descriptionKey: 'chain-tools.tools.owlracle.description',
 		url: 'https://owlracle.info',
 		icon: Activity,
 		category: 'gas-burner',
@@ -93,7 +93,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'uniswap-gas',
 		name: 'Uniswap (Top Gas Burner)',
-		descriptionKey: 'chain_tools.tools.uniswap_gas.description',
+		descriptionKey: 'chain-tools.tools.uniswap_gas.description',
 		url: 'https://uniswap.org',
 		icon: ArrowUpDown,
 		category: 'gas-burner',
@@ -104,7 +104,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'opensea-gas',
 		name: 'OpenSea (NFT Gas Leader)',
-		descriptionKey: 'chain_tools.tools.opensea_gas.description',
+		descriptionKey: 'chain-tools.tools.opensea_gas.description',
 		url: 'https://opensea.io',
 		icon: Coins,
 		category: 'gas-burner',
@@ -115,7 +115,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'blur-gas',
 		name: 'Blur (NFT Trading Gas)',
-		descriptionKey: 'chain_tools.tools.blur_gas.description',
+		descriptionKey: 'chain-tools.tools.blur_gas.description',
 		url: 'https://blur.io',
 		icon: Coins,
 		category: 'gas-burner',
@@ -126,7 +126,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'tether-gas',
 		name: 'Tether (USDT Transfers)',
-		descriptionKey: 'chain_tools.tools.tether_gas.description',
+		descriptionKey: 'chain-tools.tools.tether_gas.description',
 		url: 'https://tether.to',
 		icon: Coins,
 		category: 'gas-burner',
@@ -137,7 +137,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: '1inch-gas',
 		name: '1inch (Aggregator Gas)',
-		descriptionKey: 'chain_tools.tools.1inch_gas.description',
+		descriptionKey: 'chain-tools.tools.1inch_gas.description',
 		url: 'https://1inch.io',
 		icon: ArrowUpDown,
 		category: 'gas-burner',
@@ -148,7 +148,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'metamask-swap-gas',
 		name: 'MetaMask Swaps',
-		descriptionKey: 'chain_tools.tools.metamask_swap_gas.description',
+		descriptionKey: 'chain-tools.tools.metamask_swap_gas.description',
 		url: 'https://metamask.io/swaps',
 		icon: ArrowUpDown,
 		category: 'gas-burner',
@@ -160,7 +160,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'flashbots-gas',
 		name: 'Flashbots (MEV Gas)',
-		descriptionKey: 'chain_tools.tools.flashbots_gas.description',
+		descriptionKey: 'chain-tools.tools.flashbots_gas.description',
 		url: 'https://flashbots.net',
 		icon: Zap,
 		category: 'gas-burner',
@@ -171,7 +171,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'banana-gun-gas',
 		name: 'Banana Gun',
-		descriptionKey: 'chain_tools.tools.banana_gun_gas.description',
+		descriptionKey: 'chain-tools.tools.banana_gun_gas.description',
 		url: 'https://bananagun.io',
 		icon: Zap,
 		category: 'gas-burner',
@@ -182,7 +182,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'maestro-gas',
 		name: 'Maestro Bot',
-		descriptionKey: 'chain_tools.tools.maestro_gas.description',
+		descriptionKey: 'chain-tools.tools.maestro_gas.description',
 		url: 'https://www.maestrobots.com',
 		icon: Cpu,
 		category: 'gas-burner',
@@ -193,7 +193,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'unibot-gas',
 		name: 'Unibot',
-		descriptionKey: 'chain_tools.tools.unibot_gas.description',
+		descriptionKey: 'chain-tools.tools.unibot_gas.description',
 		url: 'https://unibot.app',
 		icon: Cpu,
 		category: 'gas-burner',
@@ -205,7 +205,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'across-gas',
 		name: 'Across Protocol',
-		descriptionKey: 'chain_tools.tools.across_gas.description',
+		descriptionKey: 'chain-tools.tools.across_gas.description',
 		url: 'https://across.to',
 		icon: ArrowUpDown,
 		category: 'gas-burner',
@@ -216,7 +216,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'stargate-gas',
 		name: 'Stargate Finance',
-		descriptionKey: 'chain_tools.tools.stargate_gas.description',
+		descriptionKey: 'chain-tools.tools.stargate_gas.description',
 		url: 'https://stargate.finance',
 		icon: ArrowUpDown,
 		category: 'gas-burner',
@@ -228,7 +228,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'l2fees',
 		name: 'L2Fees.info',
-		descriptionKey: 'chain_tools.tools.l2fees.description',
+		descriptionKey: 'chain-tools.tools.l2fees.description',
 		url: 'https://l2fees.info',
 		icon: BarChart3,
 		category: 'gas-burner',
@@ -239,7 +239,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'l2beat-gas',
 		name: 'L2BEAT Activity',
-		descriptionKey: 'chain_tools.tools.l2beat_gas.description',
+		descriptionKey: 'chain-tools.tools.l2beat_gas.description',
 		url: 'https://l2beat.com/scaling/activity',
 		icon: Activity,
 		category: 'gas-burner',
@@ -250,7 +250,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'rollup-codes',
 		name: 'Rollup.codes',
-		descriptionKey: 'chain_tools.tools.rollup_codes.description',
+		descriptionKey: 'chain-tools.tools.rollup_codes.description',
 		url: 'https://rollup.codes',
 		icon: Cpu,
 		category: 'gas-burner',
@@ -262,7 +262,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'flashbots-protect',
 		name: 'Flashbots Protect',
-		descriptionKey: 'chain_tools.tools.flashbots_protect.description',
+		descriptionKey: 'chain-tools.tools.flashbots_protect.description',
 		url: 'https://protect.flashbots.net',
 		icon: Zap,
 		category: 'gas-burner',
@@ -273,7 +273,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'txstreet',
 		name: 'TxStreet',
-		descriptionKey: 'chain_tools.tools.txstreet.description',
+		descriptionKey: 'chain-tools.tools.txstreet.description',
 		url: 'https://txstreet.com',
 		icon: Activity,
 		category: 'gas-burner',
@@ -284,7 +284,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'evm-gas-profiler',
 		name: 'Tenderly Gas Profiler',
-		descriptionKey: 'chain_tools.tools.evm_gas_profiler.description',
+		descriptionKey: 'chain-tools.tools.evm_gas_profiler.description',
 		url: 'https://tenderly.co/gas-profiler',
 		icon: Cpu,
 		category: 'gas-burner',
@@ -296,7 +296,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'etherscan-charts',
 		name: 'Etherscan Gas Charts',
-		descriptionKey: 'chain_tools.tools.etherscan_charts.description',
+		descriptionKey: 'chain-tools.tools.etherscan_charts.description',
 		url: 'https://etherscan.io/charts',
 		icon: BarChart3,
 		category: 'gas-burner',
@@ -307,7 +307,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'dune-gas',
 		name: 'Dune Gas Dashboards',
-		descriptionKey: 'chain_tools.tools.dune_gas.description',
+		descriptionKey: 'chain-tools.tools.dune_gas.description',
 		url: 'https://dune.com/browse/dashboards?q=gas',
 		icon: BarChart3,
 		category: 'gas-burner',
@@ -319,7 +319,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'parsec-gas',
 		name: 'Parsec Finance',
-		descriptionKey: 'chain_tools.tools.parsec_gas.description',
+		descriptionKey: 'chain-tools.tools.parsec_gas.description',
 		url: 'https://parsec.finance',
 		icon: TrendingUp,
 		category: 'gas-burner',
@@ -330,7 +330,7 @@ export const gasBurnerTools: ExternalTool[] = [
 	{
 		id: 'rated-network',
 		name: 'Rated Network',
-		descriptionKey: 'chain_tools.tools.rated_network.description',
+		descriptionKey: 'chain-tools.tools.rated_network.description',
 		url: 'https://rated.network',
 		icon: BarChart3,
 		category: 'gas-burner',

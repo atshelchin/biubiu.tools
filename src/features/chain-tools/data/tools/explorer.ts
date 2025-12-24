@@ -9,7 +9,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'etherscan',
 		name: 'Etherscan',
-		descriptionKey: 'chain_tools.tools.etherscan.description',
+		descriptionKey: 'chain-tools.tools.etherscan.description',
 		url: 'https://etherscan.io',
 		icon: Search,
 		category: 'explorer',
@@ -21,7 +21,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'blockscout',
 		name: 'Blockscout',
-		descriptionKey: 'chain_tools.tools.blockscout.description',
+		descriptionKey: 'chain-tools.tools.blockscout.description',
 		url: 'https://www.blockscout.com',
 		icon: Search,
 		category: 'explorer',
@@ -34,7 +34,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'arbiscan',
 		name: 'Arbiscan',
-		descriptionKey: 'chain_tools.tools.arbiscan.description',
+		descriptionKey: 'chain-tools.tools.arbiscan.description',
 		url: 'https://arbiscan.io',
 		icon: Search,
 		category: 'explorer',
@@ -45,7 +45,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'optimistic-scan',
 		name: 'Optimistic Etherscan',
-		descriptionKey: 'chain_tools.tools.optimistic_scan.description',
+		descriptionKey: 'chain-tools.tools.optimistic_scan.description',
 		url: 'https://optimistic.etherscan.io',
 		icon: Search,
 		category: 'explorer',
@@ -56,7 +56,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'basescan',
 		name: 'BaseScan',
-		descriptionKey: 'chain_tools.tools.basescan.description',
+		descriptionKey: 'chain-tools.tools.basescan.description',
 		url: 'https://basescan.org',
 		icon: Search,
 		category: 'explorer',
@@ -67,7 +67,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'zksync-explorer',
 		name: 'zkSync Explorer',
-		descriptionKey: 'chain_tools.tools.zksync_explorer.description',
+		descriptionKey: 'chain-tools.tools.zksync_explorer.description',
 		url: 'https://explorer.zksync.io',
 		icon: Search,
 		category: 'explorer',
@@ -78,7 +78,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'lineascan',
 		name: 'LineaScan',
-		descriptionKey: 'chain_tools.tools.lineascan.description',
+		descriptionKey: 'chain-tools.tools.lineascan.description',
 		url: 'https://lineascan.build',
 		icon: Search,
 		category: 'explorer',
@@ -89,7 +89,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'scrollscan',
 		name: 'Scrollscan',
-		descriptionKey: 'chain_tools.tools.scrollscan.description',
+		descriptionKey: 'chain-tools.tools.scrollscan.description',
 		url: 'https://scrollscan.com',
 		icon: Search,
 		category: 'explorer',
@@ -100,7 +100,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'mantlescan',
 		name: 'Mantle Explorer',
-		descriptionKey: 'chain_tools.tools.mantlescan.description',
+		descriptionKey: 'chain-tools.tools.mantlescan.description',
 		url: 'https://explorer.mantle.xyz',
 		icon: Search,
 		category: 'explorer',
@@ -111,7 +111,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'blastscan',
 		name: 'Blastscan',
-		descriptionKey: 'chain_tools.tools.blastscan.description',
+		descriptionKey: 'chain-tools.tools.blastscan.description',
 		url: 'https://blastscan.io',
 		icon: Search,
 		category: 'explorer',
@@ -122,7 +122,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'modescan',
 		name: 'Mode Explorer',
-		descriptionKey: 'chain_tools.tools.modescan.description',
+		descriptionKey: 'chain-tools.tools.modescan.description',
 		url: 'https://explorer.mode.network',
 		icon: Search,
 		category: 'explorer',
@@ -135,7 +135,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'polygonscan',
 		name: 'PolygonScan',
-		descriptionKey: 'chain_tools.tools.polygonscan.description',
+		descriptionKey: 'chain-tools.tools.polygonscan.description',
 		url: 'https://polygonscan.com',
 		icon: Search,
 		category: 'explorer',
@@ -146,7 +146,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'bscscan',
 		name: 'BscScan',
-		descriptionKey: 'chain_tools.tools.bscscan.description',
+		descriptionKey: 'chain-tools.tools.bscscan.description',
 		url: 'https://bscscan.com',
 		icon: Search,
 		category: 'explorer',
@@ -157,7 +157,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'snowtrace',
 		name: 'Snowtrace',
-		descriptionKey: 'chain_tools.tools.snowtrace.description',
+		descriptionKey: 'chain-tools.tools.snowtrace.description',
 		url: 'https://snowtrace.io',
 		icon: Search,
 		category: 'explorer',
@@ -168,7 +168,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'celoscan',
 		name: 'Celoscan',
-		descriptionKey: 'chain_tools.tools.celoscan.description',
+		descriptionKey: 'chain-tools.tools.celoscan.description',
 		url: 'https://celoscan.io',
 		icon: Search,
 		category: 'explorer',
@@ -179,7 +179,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'ftmscan',
 		name: 'FTMScan',
-		descriptionKey: 'chain_tools.tools.ftmscan.description',
+		descriptionKey: 'chain-tools.tools.ftmscan.description',
 		url: 'https://ftmscan.com',
 		icon: Search,
 		category: 'explorer',
@@ -190,7 +190,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'gnosisscan',
 		name: 'GnosisScan',
-		descriptionKey: 'chain_tools.tools.gnosisscan.description',
+		descriptionKey: 'chain-tools.tools.gnosisscan.description',
 		url: 'https://gnosisscan.io',
 		icon: Search,
 		category: 'explorer',
@@ -201,7 +201,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'cronoscan',
 		name: 'Cronoscan',
-		descriptionKey: 'chain_tools.tools.cronoscan.description',
+		descriptionKey: 'chain-tools.tools.cronoscan.description',
 		url: 'https://cronoscan.com',
 		icon: Search,
 		category: 'explorer',
@@ -212,7 +212,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'moonbeamscan',
 		name: 'Moonscan',
-		descriptionKey: 'chain_tools.tools.moonbeamscan.description',
+		descriptionKey: 'chain-tools.tools.moonbeamscan.description',
 		url: 'https://moonscan.io',
 		icon: Search,
 		category: 'explorer',
@@ -225,7 +225,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'solscan',
 		name: 'Solscan',
-		descriptionKey: 'chain_tools.tools.solscan.description',
+		descriptionKey: 'chain-tools.tools.solscan.description',
 		url: 'https://solscan.io',
 		icon: Search,
 		category: 'explorer',
@@ -236,7 +236,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'mintscan',
 		name: 'Mintscan',
-		descriptionKey: 'chain_tools.tools.mintscan.description',
+		descriptionKey: 'chain-tools.tools.mintscan.description',
 		url: 'https://mintscan.io',
 		icon: Search,
 		category: 'explorer',
@@ -247,7 +247,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'nearblocks',
 		name: 'NearBlocks',
-		descriptionKey: 'chain_tools.tools.nearblocks.description',
+		descriptionKey: 'chain-tools.tools.nearblocks.description',
 		url: 'https://nearblocks.io',
 		icon: Search,
 		category: 'explorer',
@@ -258,7 +258,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'blockchair',
 		name: 'Blockchair',
-		descriptionKey: 'chain_tools.tools.blockchair.description',
+		descriptionKey: 'chain-tools.tools.blockchair.description',
 		url: 'https://blockchair.com',
 		icon: Search,
 		category: 'explorer',
@@ -269,7 +269,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'avascan',
 		name: 'AvaScan',
-		descriptionKey: 'chain_tools.tools.avascan.description',
+		descriptionKey: 'chain-tools.tools.avascan.description',
 		url: 'https://avascan.info',
 		icon: Search,
 		category: 'explorer',
@@ -280,7 +280,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'tonscan',
 		name: 'TONScan',
-		descriptionKey: 'chain_tools.tools.tonscan.description',
+		descriptionKey: 'chain-tools.tools.tonscan.description',
 		url: 'https://tonscan.org',
 		icon: Search,
 		category: 'explorer',
@@ -291,7 +291,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'tronscan',
 		name: 'TronScan',
-		descriptionKey: 'chain_tools.tools.tronscan.description',
+		descriptionKey: 'chain-tools.tools.tronscan.description',
 		url: 'https://tronscan.org',
 		icon: Search,
 		category: 'explorer',
@@ -302,7 +302,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'cardanoscan',
 		name: 'Cardanoscan',
-		descriptionKey: 'chain_tools.tools.cardanoscan.description',
+		descriptionKey: 'chain-tools.tools.cardanoscan.description',
 		url: 'https://cardanoscan.io',
 		icon: Search,
 		category: 'explorer',
@@ -313,7 +313,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'viewblock',
 		name: 'ViewBlock',
-		descriptionKey: 'chain_tools.tools.viewblock.description',
+		descriptionKey: 'chain-tools.tools.viewblock.description',
 		url: 'https://viewblock.io',
 		icon: Search,
 		category: 'explorer',
@@ -324,7 +324,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'suiscan',
 		name: 'SuiScan',
-		descriptionKey: 'chain_tools.tools.suiscan.description',
+		descriptionKey: 'chain-tools.tools.suiscan.description',
 		url: 'https://suiscan.xyz',
 		icon: Search,
 		category: 'explorer',
@@ -337,7 +337,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'oklink',
 		name: 'OKLink',
-		descriptionKey: 'chain_tools.tools.oklink.description',
+		descriptionKey: 'chain-tools.tools.oklink.description',
 		url: 'https://www.oklink.com',
 		icon: Search,
 		category: 'explorer',
@@ -347,7 +347,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'routescan',
 		name: 'Routescan',
-		descriptionKey: 'chain_tools.tools.routescan.description',
+		descriptionKey: 'chain-tools.tools.routescan.description',
 		url: 'https://routescan.io',
 		icon: Search,
 		category: 'explorer',
@@ -357,7 +357,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'onceupon',
 		name: 'Once Upon',
-		descriptionKey: 'chain_tools.tools.onceupon.description',
+		descriptionKey: 'chain-tools.tools.onceupon.description',
 		url: 'https://onceupon.gg',
 		icon: Search,
 		category: 'explorer',
@@ -367,7 +367,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'evm-explorer',
 		name: 'EVM Explorer',
-		descriptionKey: 'chain_tools.tools.evm_explorer.description',
+		descriptionKey: 'chain-tools.tools.evm_explorer.description',
 		url: 'https://evmexplorer.com',
 		icon: Search,
 		category: 'explorer',
@@ -379,7 +379,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'anyabi',
 		name: 'AnyABI',
-		descriptionKey: 'chain_tools.tools.anyabi.description',
+		descriptionKey: 'chain-tools.tools.anyabi.description',
 		url: 'https://anyabi.xyz',
 		icon: FileCode,
 		category: 'explorer',
@@ -389,7 +389,7 @@ export const explorerTools: ExternalTool[] = [
 	{
 		id: 'samczsun-explorer',
 		name: 'sam.wtf',
-		descriptionKey: 'chain_tools.tools.samczsun_explorer.description',
+		descriptionKey: 'chain-tools.tools.samczsun_explorer.description',
 		url: 'https://tx.eth.samczsun.com',
 		icon: Search,
 		category: 'explorer',

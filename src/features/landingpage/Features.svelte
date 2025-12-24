@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { Sparkles, ChevronDown, ChevronUp } from '@lucide/svelte';
 	import { toolsConfig, TELEGRAM_GROUP_LINK } from './data/tools-data';
 	import ToolCard from './components/tool-card.svelte';
 	import RandomToolDiscovery from './components/random-tool-discovery.svelte';
 
 	const i18n = useI18n();
-	const t = i18n.t;
+	const t = i18n.t.bind(i18n);
 
 	// Transform tool config with i18n translations - reactive to language changes
 	const tools = $derived(

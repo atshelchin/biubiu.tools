@@ -7,7 +7,7 @@
 	import MembershipPromo from '@/features/wallet-sweep/ui/components/membership-promo.svelte';
 	import TokenBalanceDisplay from '$lib/components/ui/token-balance-display.svelte';
 	import { useTokenStats } from '@/features/wallet-sweep/composables/use-token-stats.svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { fade } from 'svelte/transition';
 
 	const i18n = useI18n();
@@ -44,13 +44,13 @@
 </script>
 
 <StepSidebar stepNumber={5} title="" description="">
-	<StepSummary title={i18n.t('tools.wallet_sweep.step5.sidebar.summary_title')}>
+	<StepSummary title={i18n.t('wallet-sweep.step5.sidebar.summary_title')}>
 		<div class="summary-item">
-			<span>{i18n.t('tools.wallet_sweep.step5.sidebar.selected_tokens')}</span>
+			<span>{i18n.t('wallet-sweep.step5.sidebar.selected_tokens')}</span>
 			<strong>{selectedTokenCount}</strong>
 		</div>
 		<div class="summary-item">
-			<span>{i18n.t('tools.wallet_sweep.step5.sidebar.total_wallets')}</span>
+			<span>{i18n.t('wallet-sweep.step5.sidebar.total_wallets')}</span>
 			<strong>{walletCount}</strong>
 		</div>
 	</StepSummary>
@@ -59,7 +59,7 @@
 	{#if tokenStatsWithBatch.length > 0}
 		<div class="token-stats" transition:fade>
 			<h4 class="token-stats-title">
-				{i18n.t('tools.wallet_sweep.step4.sidebar.token_stats.title')}
+				{i18n.t('wallet-sweep.step4.sidebar.token_stats.title')}
 			</h4>
 			{#each tokenStatsWithBatch as stat (stat.tokenId)}
 				<div class="token-stat-item">
@@ -67,14 +67,14 @@
 						<div class="token-info">
 							<span class="token-symbol">{stat.symbol}</span>
 							<span class="address-count">
-								{i18n.t('tools.wallet_sweep.step4.sidebar.token_stats.wallets_count', {
+								{i18n.t('wallet-sweep.step4.sidebar.token_stats.wallets_count', {
 									count: stat.addressCount.toLocaleString()
 								})}
 							</span>
 						</div>
 						<span class="batch-info">
 							{stat.batchCount}
-							{i18n.t('tools.wallet_sweep.step5.sidebar.batches')}
+							{i18n.t('wallet-sweep.step5.sidebar.batches')}
 						</span>
 					</div>
 					<div class="token-balance-wrapper">

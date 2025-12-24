@@ -4,7 +4,7 @@
 	import NetworkFormView from './network-form-view.svelte';
 	import { Check } from '@lucide/svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	interface Props {
 		open: boolean;
@@ -43,7 +43,7 @@
 	}: Props = $props();
 
 	const i18n = useI18n();
-	const t = i18n.t;
+	const t = i18n.t.bind(i18n);
 
 	type ViewMode = 'list' | 'edit' | 'add';
 	type SaveStatus = 'idle' | 'saving' | 'success' | 'error';

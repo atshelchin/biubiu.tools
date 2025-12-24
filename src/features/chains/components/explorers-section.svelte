@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { Search, ExternalLink } from '@lucide/svelte';
 	import type { Explorer } from '../types';
 

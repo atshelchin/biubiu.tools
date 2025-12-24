@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { ChevronDown, HelpCircle, MessageCircle, Mail } from '@lucide/svelte';
 	import { SvelteSet } from 'svelte/reactivity';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	const i18n = useI18n();
-	const t = i18n.t;
+	const t = i18n.t.bind(i18n);
 	// FAQ item structure
 	interface FAQItem {
 		question: string;

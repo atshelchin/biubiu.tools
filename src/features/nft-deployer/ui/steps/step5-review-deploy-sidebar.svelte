@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { deploymentState } from '../../stores/deployment-state.svelte';
 
 	const i18n = useI18n();
@@ -8,27 +8,27 @@
 		switch (deploymentState.status) {
 			case 'preparing':
 				return {
-					title: i18n.t('tools.nft_deployer.step5.sidebar.status_preparing'),
+					title: i18n.t('nft-deployer.step5.sidebar.status_preparing'),
 					color: 'var(--yellow-600)'
 				};
 			case 'deploying':
 				return {
-					title: i18n.t('tools.nft_deployer.step5.sidebar.status_deploying'),
+					title: i18n.t('nft-deployer.step5.sidebar.status_deploying'),
 					color: 'var(--blue-600)'
 				};
 			case 'completed':
 				return {
-					title: i18n.t('tools.nft_deployer.step5.sidebar.status_completed'),
+					title: i18n.t('nft-deployer.step5.sidebar.status_completed'),
 					color: 'var(--green-600)'
 				};
 			case 'error':
 				return {
-					title: i18n.t('tools.nft_deployer.step5.sidebar.status_error'),
+					title: i18n.t('nft-deployer.step5.sidebar.status_error'),
 					color: 'var(--red-600)'
 				};
 			default:
 				return {
-					title: i18n.t('tools.nft_deployer.step5.sidebar.status_ready'),
+					title: i18n.t('nft-deployer.step5.sidebar.status_ready'),
 					color: 'var(--gray-600)'
 				};
 		}
@@ -36,14 +36,14 @@
 </script>
 
 <div class="step-sidebar">
-	<h3 class="sidebar-title">{i18n.t('tools.nft_deployer.step5.sidebar.title')}</h3>
+	<h3 class="sidebar-title">{i18n.t('nft-deployer.step5.sidebar.title')}</h3>
 	<p class="sidebar-description">
-		{i18n.t('tools.nft_deployer.step5.sidebar.description')}
+		{i18n.t('nft-deployer.step5.sidebar.description')}
 	</p>
 
 	{#if deploymentState.status !== 'idle'}
 		<div class="status-section">
-			<h4 class="info-title">{i18n.t('tools.nft_deployer.step5.sidebar.deployment_status')}</h4>
+			<h4 class="info-title">{i18n.t('nft-deployer.step5.sidebar.deployment_status')}</h4>
 			<div class="status-card" style="border-color: {statusInfo.color}">
 				<div class="status-indicator" style="background: {statusInfo.color}"></div>
 				<div class="status-content">
@@ -67,12 +67,12 @@
 	{/if}
 
 	<div class="info-section">
-		<h4 class="info-title">{i18n.t('tools.nft_deployer.step5.sidebar.checklist')}</h4>
+		<h4 class="info-title">{i18n.t('nft-deployer.step5.sidebar.checklist')}</h4>
 		<ul class="info-list">
-			<li>{i18n.t('tools.nft_deployer.step5.sidebar.check1')}</li>
-			<li>{i18n.t('tools.nft_deployer.step5.sidebar.check2')}</li>
-			<li>{i18n.t('tools.nft_deployer.step5.sidebar.check3')}</li>
-			<li>{i18n.t('tools.nft_deployer.step5.sidebar.check4')}</li>
+			<li>{i18n.t('nft-deployer.step5.sidebar.check1')}</li>
+			<li>{i18n.t('nft-deployer.step5.sidebar.check2')}</li>
+			<li>{i18n.t('nft-deployer.step5.sidebar.check3')}</li>
+			<li>{i18n.t('nft-deployer.step5.sidebar.check4')}</li>
 		</ul>
 	</div>
 </div>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ExternalLink } from '@lucide/svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import type { ExternalTool } from '../types';
 	import { getCategoryById } from '../data/categories';
 
@@ -61,7 +61,7 @@
 			</span>
 		{/if}
 		<span class="visit-link">
-			<span>{i18n.t('chain_tools.visit')}</span>
+			<span>{i18n.t('chain-tools.visit')}</span>
 			<ExternalLink class="external-icon" />
 		</span>
 	</div>

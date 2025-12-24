@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { mainnet, polygon, arbitrum, optimism, base, bsc } from 'viem/chains';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import StepBasedApp from '$lib/components/step-based-app.svelte';
 	import { stepComponents } from '@/features/nft-deployer/ui/steps';
 	import type { PageData } from './$types';
@@ -15,8 +15,8 @@
 		meta: data.meta,
 		structuredData: data.structuredData,
 		steps: data.steps,
-		appTitle: i18n.t('tools.nft_deployer.title'),
-		appDescription: i18n.t('tools.nft_deployer.description'),
+		appTitle: i18n.t('nft-deployer.title'),
+		appDescription: i18n.t('nft-deployer.description'),
 		walletConnect: {
 			chains: [mainnet, base, bsc, polygon, arbitrum, optimism],
 			storageKey: 'biubiu-tools-nft-deployer'

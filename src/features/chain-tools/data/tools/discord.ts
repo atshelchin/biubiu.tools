@@ -22,7 +22,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-ethereum',
 		name: 'Ethereum',
-		descriptionKey: 'chain_tools.tools.discord_ethereum.description',
+		descriptionKey: 'chain-tools.tools.discord_ethereum.description',
 		url: 'https://discord.gg/ethereum-org',
 		icon: MessageCircle,
 		category: 'community',
@@ -32,7 +32,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-uniswap',
 		name: 'Uniswap',
-		descriptionKey: 'chain_tools.tools.discord_uniswap.description',
+		descriptionKey: 'chain-tools.tools.discord_uniswap.description',
 		url: 'https://discord.gg/uniswap',
 		icon: MessageCircle,
 		category: 'community',
@@ -42,7 +42,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-aave',
 		name: 'Aave',
-		descriptionKey: 'chain_tools.tools.discord_aave.description',
+		descriptionKey: 'chain-tools.tools.discord_aave.description',
 		url: 'https://discord.gg/aave',
 		icon: MessageCircle,
 		category: 'community',
@@ -52,7 +52,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-chainlink',
 		name: 'Chainlink',
-		descriptionKey: 'chain_tools.tools.discord_chainlink.description',
+		descriptionKey: 'chain-tools.tools.discord_chainlink.description',
 		url: 'https://discord.gg/chainlink',
 		icon: MessageCircle,
 		category: 'community',
@@ -64,7 +64,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-arbitrum',
 		name: 'Arbitrum',
-		descriptionKey: 'chain_tools.tools.discord_arbitrum.description',
+		descriptionKey: 'chain-tools.tools.discord_arbitrum.description',
 		url: 'https://discord.gg/arbitrum',
 		icon: Layers2,
 		category: 'community',
@@ -74,7 +74,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-optimism',
 		name: 'Optimism',
-		descriptionKey: 'chain_tools.tools.discord_optimism.description',
+		descriptionKey: 'chain-tools.tools.discord_optimism.description',
 		url: 'https://discord.gg/optimism',
 		icon: Layers2,
 		category: 'community',
@@ -84,7 +84,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-base',
 		name: 'Base',
-		descriptionKey: 'chain_tools.tools.discord_base.description',
+		descriptionKey: 'chain-tools.tools.discord_base.description',
 		url: 'https://discord.gg/base',
 		icon: Layers2,
 		category: 'community',
@@ -94,7 +94,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-zksync',
 		name: 'zkSync',
-		descriptionKey: 'chain_tools.tools.discord_zksync.description',
+		descriptionKey: 'chain-tools.tools.discord_zksync.description',
 		url: 'https://discord.gg/zksync',
 		icon: Layers2,
 		category: 'community',
@@ -104,7 +104,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-starknet',
 		name: 'Starknet',
-		descriptionKey: 'chain_tools.tools.discord_starknet.description',
+		descriptionKey: 'chain-tools.tools.discord_starknet.description',
 		url: 'https://discord.gg/starknet',
 		icon: Layers2,
 		category: 'community',
@@ -114,7 +114,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-polygon',
 		name: 'Polygon',
-		descriptionKey: 'chain_tools.tools.discord_polygon.description',
+		descriptionKey: 'chain-tools.tools.discord_polygon.description',
 		url: 'https://discord.gg/polygon',
 		icon: Layers2,
 		category: 'community',
@@ -126,7 +126,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-ethglobal',
 		name: 'ETHGlobal',
-		descriptionKey: 'chain_tools.tools.discord_ethglobal.description',
+		descriptionKey: 'chain-tools.tools.discord_ethglobal.description',
 		url: 'https://discord.gg/ethglobal',
 		icon: Code,
 		category: 'community',
@@ -136,7 +136,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-buildspace',
 		name: 'Buildspace',
-		descriptionKey: 'chain_tools.tools.discord_buildspace.description',
+		descriptionKey: 'chain-tools.tools.discord_buildspace.description',
 		url: 'https://discord.gg/buildspace',
 		icon: Code,
 		category: 'community',
@@ -146,7 +146,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-alchemy',
 		name: 'Alchemy',
-		descriptionKey: 'chain_tools.tools.discord_alchemy.description',
+		descriptionKey: 'chain-tools.tools.discord_alchemy.description',
 		url: 'https://discord.gg/alchemy',
 		icon: Code,
 		category: 'community',
@@ -156,7 +156,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-hardhat',
 		name: 'Hardhat',
-		descriptionKey: 'chain_tools.tools.discord_hardhat.description',
+		descriptionKey: 'chain-tools.tools.discord_hardhat.description',
 		url: 'https://discord.gg/hardhat',
 		icon: Code,
 		category: 'community',
@@ -166,7 +166,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-foundry',
 		name: 'Foundry',
-		descriptionKey: 'chain_tools.tools.discord_foundry.description',
+		descriptionKey: 'chain-tools.tools.discord_foundry.description',
 		url: 'https://discord.gg/foundry',
 		icon: Code,
 		category: 'community',
@@ -176,7 +176,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-openzeppelin',
 		name: 'OpenZeppelin',
-		descriptionKey: 'chain_tools.tools.discord_openzeppelin.description',
+		descriptionKey: 'chain-tools.tools.discord_openzeppelin.description',
 		url: 'https://discord.gg/openzeppelin',
 		icon: Code,
 		category: 'community',
@@ -186,7 +186,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-thegraph',
 		name: 'The Graph',
-		descriptionKey: 'chain_tools.tools.discord_thegraph.description',
+		descriptionKey: 'chain-tools.tools.discord_thegraph.description',
 		url: 'https://discord.gg/thegraph',
 		icon: Code,
 		category: 'community',
@@ -196,7 +196,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-scaffold-eth',
 		name: 'Scaffold-ETH',
-		descriptionKey: 'chain_tools.tools.discord_scaffold_eth.description',
+		descriptionKey: 'chain-tools.tools.discord_scaffold_eth.description',
 		url: 'https://discord.gg/scaffold-eth',
 		icon: Code,
 		category: 'community',
@@ -208,7 +208,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-immunefi',
 		name: 'Immunefi',
-		descriptionKey: 'chain_tools.tools.discord_immunefi.description',
+		descriptionKey: 'chain-tools.tools.discord_immunefi.description',
 		url: 'https://discord.gg/immunefi',
 		icon: Shield,
 		category: 'community',
@@ -218,7 +218,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-code4rena',
 		name: 'Code4rena',
-		descriptionKey: 'chain_tools.tools.discord_code4rena.description',
+		descriptionKey: 'chain-tools.tools.discord_code4rena.description',
 		url: 'https://discord.gg/code4rena',
 		icon: Shield,
 		category: 'community',
@@ -228,7 +228,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-sherlock',
 		name: 'Sherlock',
-		descriptionKey: 'chain_tools.tools.discord_sherlock.description',
+		descriptionKey: 'chain-tools.tools.discord_sherlock.description',
 		url: 'https://discord.gg/sherlock',
 		icon: Shield,
 		category: 'community',
@@ -238,7 +238,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-secureum',
 		name: 'Secureum',
-		descriptionKey: 'chain_tools.tools.discord_secureum.description',
+		descriptionKey: 'chain-tools.tools.discord_secureum.description',
 		url: 'https://discord.gg/secureum',
 		icon: Shield,
 		category: 'community',
@@ -250,7 +250,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-opensea',
 		name: 'OpenSea',
-		descriptionKey: 'chain_tools.tools.discord_opensea.description',
+		descriptionKey: 'chain-tools.tools.discord_opensea.description',
 		url: 'https://discord.gg/opensea',
 		icon: Palette,
 		category: 'community',
@@ -260,7 +260,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-blur',
 		name: 'Blur',
-		descriptionKey: 'chain_tools.tools.discord_blur.description',
+		descriptionKey: 'chain-tools.tools.discord_blur.description',
 		url: 'https://discord.gg/blur',
 		icon: Palette,
 		category: 'community',
@@ -270,7 +270,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-artblocks',
 		name: 'Art Blocks',
-		descriptionKey: 'chain_tools.tools.discord_artblocks.description',
+		descriptionKey: 'chain-tools.tools.discord_artblocks.description',
 		url: 'https://discord.gg/artblocks',
 		icon: Palette,
 		category: 'community',
@@ -280,7 +280,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-foundation',
 		name: 'Foundation',
-		descriptionKey: 'chain_tools.tools.discord_foundation.description',
+		descriptionKey: 'chain-tools.tools.discord_foundation.description',
 		url: 'https://discord.gg/foundation',
 		icon: Palette,
 		category: 'community',
@@ -290,7 +290,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-nouns',
 		name: 'Nouns DAO',
-		descriptionKey: 'chain_tools.tools.discord_nouns.description',
+		descriptionKey: 'chain-tools.tools.discord_nouns.description',
 		url: 'https://discord.gg/nouns',
 		icon: Palette,
 		category: 'community',
@@ -300,7 +300,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-punks',
 		name: 'CryptoPunks',
-		descriptionKey: 'chain_tools.tools.discord_punks.description',
+		descriptionKey: 'chain-tools.tools.discord_punks.description',
 		url: 'https://discord.gg/cryptopunks',
 		icon: Palette,
 		category: 'community',
@@ -310,7 +310,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-bayc',
 		name: 'BAYC',
-		descriptionKey: 'chain_tools.tools.discord_bayc.description',
+		descriptionKey: 'chain-tools.tools.discord_bayc.description',
 		url: 'https://discord.gg/bayc',
 		icon: Palette,
 		category: 'community',
@@ -320,7 +320,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-azuki',
 		name: 'Azuki',
-		descriptionKey: 'chain_tools.tools.discord_azuki.description',
+		descriptionKey: 'chain-tools.tools.discord_azuki.description',
 		url: 'https://discord.gg/azuki',
 		icon: Palette,
 		category: 'community',
@@ -330,7 +330,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-pudgypenguins',
 		name: 'Pudgy Penguins',
-		descriptionKey: 'chain_tools.tools.discord_pudgypenguins.description',
+		descriptionKey: 'chain-tools.tools.discord_pudgypenguins.description',
 		url: 'https://discord.gg/pudgypenguins',
 		icon: Palette,
 		category: 'community',
@@ -342,7 +342,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-axie',
 		name: 'Axie Infinity',
-		descriptionKey: 'chain_tools.tools.discord_axie.description',
+		descriptionKey: 'chain-tools.tools.discord_axie.description',
 		url: 'https://discord.gg/axie',
 		icon: Gamepad2,
 		category: 'community',
@@ -352,7 +352,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-illuvium',
 		name: 'Illuvium',
-		descriptionKey: 'chain_tools.tools.discord_illuvium.description',
+		descriptionKey: 'chain-tools.tools.discord_illuvium.description',
 		url: 'https://discord.gg/illuvium',
 		icon: Gamepad2,
 		category: 'community',
@@ -362,7 +362,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-immutable',
 		name: 'Immutable',
-		descriptionKey: 'chain_tools.tools.discord_immutable.description',
+		descriptionKey: 'chain-tools.tools.discord_immutable.description',
 		url: 'https://discord.gg/immutable',
 		icon: Gamepad2,
 		category: 'community',
@@ -372,7 +372,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-loot',
 		name: 'Loot',
-		descriptionKey: 'chain_tools.tools.discord_loot.description',
+		descriptionKey: 'chain-tools.tools.discord_loot.description',
 		url: 'https://discord.gg/loot',
 		icon: Gamepad2,
 		category: 'community',
@@ -382,7 +382,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-treasure',
 		name: 'Treasure DAO',
-		descriptionKey: 'chain_tools.tools.discord_treasure.description',
+		descriptionKey: 'chain-tools.tools.discord_treasure.description',
 		url: 'https://discord.gg/treasure',
 		icon: Gamepad2,
 		category: 'community',
@@ -392,7 +392,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-ronin',
 		name: 'Ronin Network',
-		descriptionKey: 'chain_tools.tools.discord_ronin.description',
+		descriptionKey: 'chain-tools.tools.discord_ronin.description',
 		url: 'https://discord.gg/roninnetwork',
 		icon: Gamepad2,
 		category: 'community',
@@ -404,7 +404,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-bankless',
 		name: 'Bankless',
-		descriptionKey: 'chain_tools.tools.discord_bankless.description',
+		descriptionKey: 'chain-tools.tools.discord_bankless.description',
 		url: 'https://discord.gg/bankless',
 		icon: Users,
 		category: 'community',
@@ -414,7 +414,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-gitcoin',
 		name: 'Gitcoin',
-		descriptionKey: 'chain_tools.tools.discord_gitcoin.description',
+		descriptionKey: 'chain-tools.tools.discord_gitcoin.description',
 		url: 'https://discord.gg/gitcoin',
 		icon: Users,
 		category: 'community',
@@ -424,7 +424,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-ens',
 		name: 'ENS',
-		descriptionKey: 'chain_tools.tools.discord_ens.description',
+		descriptionKey: 'chain-tools.tools.discord_ens.description',
 		url: 'https://discord.gg/ens',
 		icon: Users,
 		category: 'community',
@@ -436,7 +436,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-farcaster',
 		name: 'Farcaster',
-		descriptionKey: 'chain_tools.tools.discord_farcaster.description',
+		descriptionKey: 'chain-tools.tools.discord_farcaster.description',
 		url: 'https://discord.gg/farcaster',
 		icon: Sparkles,
 		category: 'community',
@@ -446,7 +446,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-lens',
 		name: 'Lens Protocol',
-		descriptionKey: 'chain_tools.tools.discord_lens.description',
+		descriptionKey: 'chain-tools.tools.discord_lens.description',
 		url: 'https://discord.gg/lens',
 		icon: Sparkles,
 		category: 'community',
@@ -456,7 +456,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-friend-tech',
 		name: 'friend.tech',
-		descriptionKey: 'chain_tools.tools.discord_friend_tech.description',
+		descriptionKey: 'chain-tools.tools.discord_friend_tech.description',
 		url: 'https://discord.gg/friendtech',
 		icon: Sparkles,
 		category: 'community',
@@ -466,7 +466,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-rabbithole',
 		name: 'RabbitHole',
-		descriptionKey: 'chain_tools.tools.discord_rabbithole.description',
+		descriptionKey: 'chain-tools.tools.discord_rabbithole.description',
 		url: 'https://discord.gg/rabbithole',
 		icon: Sparkles,
 		category: 'community',
@@ -476,7 +476,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-galxe',
 		name: 'Galxe',
-		descriptionKey: 'chain_tools.tools.discord_galxe.description',
+		descriptionKey: 'chain-tools.tools.discord_galxe.description',
 		url: 'https://discord.gg/galxe',
 		icon: Sparkles,
 		category: 'community',
@@ -488,7 +488,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-solana',
 		name: 'Solana',
-		descriptionKey: 'chain_tools.tools.discord_solana.description',
+		descriptionKey: 'chain-tools.tools.discord_solana.description',
 		url: 'https://discord.gg/solana',
 		icon: MessageCircle,
 		category: 'community',
@@ -498,7 +498,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-avalanche',
 		name: 'Avalanche',
-		descriptionKey: 'chain_tools.tools.discord_avalanche.description',
+		descriptionKey: 'chain-tools.tools.discord_avalanche.description',
 		url: 'https://discord.gg/avalanche',
 		icon: MessageCircle,
 		category: 'community',
@@ -508,7 +508,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-cosmos',
 		name: 'Cosmos',
-		descriptionKey: 'chain_tools.tools.discord_cosmos.description',
+		descriptionKey: 'chain-tools.tools.discord_cosmos.description',
 		url: 'https://discord.gg/cosmos',
 		icon: MessageCircle,
 		category: 'community',
@@ -518,7 +518,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-sui',
 		name: 'Sui',
-		descriptionKey: 'chain_tools.tools.discord_sui.description',
+		descriptionKey: 'chain-tools.tools.discord_sui.description',
 		url: 'https://discord.gg/sui',
 		icon: MessageCircle,
 		category: 'community',
@@ -528,7 +528,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-aptos',
 		name: 'Aptos',
-		descriptionKey: 'chain_tools.tools.discord_aptos.description',
+		descriptionKey: 'chain-tools.tools.discord_aptos.description',
 		url: 'https://discord.gg/aptos',
 		icon: MessageCircle,
 		category: 'community',
@@ -538,7 +538,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-near',
 		name: 'NEAR Protocol',
-		descriptionKey: 'chain_tools.tools.discord_near.description',
+		descriptionKey: 'chain-tools.tools.discord_near.description',
 		url: 'https://discord.gg/near',
 		icon: MessageCircle,
 		category: 'community',
@@ -548,7 +548,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'discord-ton',
 		name: 'TON',
-		descriptionKey: 'chain_tools.tools.discord_ton.description',
+		descriptionKey: 'chain-tools.tools.discord_ton.description',
 		url: 'https://discord.gg/ton',
 		icon: MessageCircle,
 		category: 'community',
@@ -560,7 +560,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'tg-cointelegraph',
 		name: 'Cointelegraph',
-		descriptionKey: 'chain_tools.tools.tg_cointelegraph.description',
+		descriptionKey: 'chain-tools.tools.tg_cointelegraph.description',
 		url: 'https://t.me/cointelegraph',
 		icon: Newspaper,
 		category: 'community',
@@ -570,7 +570,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'tg-whale-alert',
 		name: 'Whale Alert',
-		descriptionKey: 'chain_tools.tools.tg_whale_alert.description',
+		descriptionKey: 'chain-tools.tools.tg_whale_alert.description',
 		url: 'https://t.me/whale_alert_io',
 		icon: TrendingUp,
 		category: 'community',
@@ -580,7 +580,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'tg-lookonchain',
 		name: 'Lookonchain',
-		descriptionKey: 'chain_tools.tools.tg_lookonchain.description',
+		descriptionKey: 'chain-tools.tools.tg_lookonchain.description',
 		url: 'https://t.me/lookonchain',
 		icon: TrendingUp,
 		category: 'community',
@@ -590,7 +590,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'tg-toncoin',
 		name: 'TON Community',
-		descriptionKey: 'chain_tools.tools.tg_ton_official.description',
+		descriptionKey: 'chain-tools.tools.tg_ton_official.description',
 		url: 'https://t.me/toncoin',
 		icon: Send,
 		category: 'community',
@@ -600,7 +600,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'tg-solana',
 		name: 'Solana',
-		descriptionKey: 'chain_tools.tools.tg_solana_ann.description',
+		descriptionKey: 'chain-tools.tools.tg_solana_ann.description',
 		url: 'https://t.me/solana',
 		icon: Send,
 		category: 'community',
@@ -610,7 +610,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'tg-arbitrum',
 		name: 'Arbitrum',
-		descriptionKey: 'chain_tools.tools.tg_arbitrum_ann.description',
+		descriptionKey: 'chain-tools.tools.tg_arbitrum_ann.description',
 		url: 'https://t.me/arbitrum',
 		icon: Send,
 		category: 'community',
@@ -620,7 +620,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'tg-chaincatcher',
 		name: 'ChainCatcher 链捕手',
-		descriptionKey: 'chain_tools.tools.tg_chaincatcher.description',
+		descriptionKey: 'chain-tools.tools.tg_chaincatcher.description',
 		url: 'https://t.me/ChainCatcher',
 		icon: Globe,
 		category: 'community',
@@ -630,7 +630,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'tg-techflow',
 		name: 'TechFlow 深潮',
-		descriptionKey: 'chain_tools.tools.tg_techflow.description',
+		descriptionKey: 'chain-tools.tools.tg_techflow.description',
 		url: 'https://t.me/TechFlowPost',
 		icon: Globe,
 		category: 'community',
@@ -640,7 +640,7 @@ export const communityTools: ExternalTool[] = [
 	{
 		id: 'tg-crypto-brazil',
 		name: 'Crypto Brasil',
-		descriptionKey: 'chain_tools.tools.tg_crypto_brazil.description',
+		descriptionKey: 'chain-tools.tools.tg_crypto_brazil.description',
 		url: 'https://t.me/CryptoBrasil',
 		icon: Users,
 		category: 'community',

@@ -1,9 +1,18 @@
-import type { PackageLocales } from '@shelchin/i18n';
-import en from './locales/en.json' with { type: 'json' };
-import zh from './locales/zh.json' with { type: 'json' };
+import type { LocaleMeta } from '@shelchin/i18n';
 
-export const PACKAGE_NAME = '__default__';
-export const locales = {
-	en,
-	zh
-} as unknown as PackageLocales;
+export const localeMetas: LocaleMeta[] = [
+	{
+		code: 'en',
+		name: 'English',
+		englishName: 'English',
+		direction: 'ltr',
+		flag: '🇬🇧'
+	},
+	{
+		code: 'zh',
+		name: '中文',
+		englishName: 'Chinese',
+		direction: 'ltr',
+		flag: '🇨🇳'
+	}
+];

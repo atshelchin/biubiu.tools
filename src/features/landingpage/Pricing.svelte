@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { Check, Star, Zap } from '@lucide/svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	const i18n = useI18n();
-	const t = i18n.t;
+	const t = i18n.t.bind(i18n);
 	// Pricing plan structure
 	interface PricingPlan {
 		name: string;

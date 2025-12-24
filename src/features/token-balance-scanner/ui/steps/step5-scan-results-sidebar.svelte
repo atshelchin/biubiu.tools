@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
@@ -97,7 +97,7 @@
 		<div class="section-box">
 			<div class="section-header">
 				<span class="section-title"
-					>{i18n.t('tools.token_balance_scanner.step5.sidebar.progress') || 'Progress'}</span
+					>{i18n.t('token-balance-scanner.step5.sidebar.progress') || 'Progress'}</span
 				>
 				<span class="progress-percent">{progress.percentage}%</span>
 			</div>
@@ -108,14 +108,14 @@
 				<span class="stat-item">
 					<span class="stat-num">{progress.success || 0}</span>
 					<span class="stat-label"
-						>{i18n.t('tools.token_balance_scanner.step5.sidebar.completed') || 'completed'}</span
+						>{i18n.t('token-balance-scanner.step5.sidebar.completed') || 'completed'}</span
 					>
 				</span>
 				<span class="stat-divider">/</span>
 				<span class="stat-item">
 					<span class="stat-num">{progress.total}</span>
 					<span class="stat-label"
-						>{i18n.t('tools.token_balance_scanner.step5.sidebar.total') || 'total'}</span
+						>{i18n.t('token-balance-scanner.step5.sidebar.total') || 'total'}</span
 					>
 				</span>
 			</div>
@@ -124,8 +124,7 @@
 					<AlertTriangle size={14} />
 					<span
 						>{progress.failed}
-						{i18n.t('tools.token_balance_scanner.step5.sidebar.queries_failed') ||
-							'queries failed'}</span
+						{i18n.t('token-balance-scanner.step5.sidebar.queries_failed') || 'queries failed'}</span
 					>
 				</div>
 			{/if}
@@ -135,7 +134,7 @@
 		<div class="logs-section">
 			<button class="logs-toggle" onclick={() => (logsExpanded = !logsExpanded)}>
 				<Terminal size={14} />
-				<span>{i18n.t('tools.token_balance_scanner.step5.sidebar.logs') || 'Live Logs'}</span>
+				<span>{i18n.t('token-balance-scanner.step5.sidebar.logs') || 'Live Logs'}</span>
 				{#if logsExpanded}
 					<ChevronUp size={14} />
 				{:else}
@@ -158,20 +157,20 @@
 		<div class="section-box">
 			<div class="section-header">
 				<span class="section-title"
-					>{i18n.t('tools.token_balance_scanner.step5.sidebar.paused') || 'Paused'}</span
+					>{i18n.t('token-balance-scanner.step5.sidebar.paused') || 'Paused'}</span
 				>
 			</div>
 			<div class="stats-row">
 				<div class="stat-block">
 					<span class="stat-value">{progress.success || 0}</span>
 					<span class="stat-label"
-						>{i18n.t('tools.token_balance_scanner.step5.sidebar.completed') || 'Completed'}</span
+						>{i18n.t('token-balance-scanner.step5.sidebar.completed') || 'Completed'}</span
 					>
 				</div>
 				<div class="stat-block">
 					<span class="stat-value warning">{progress.pending || 0}</span>
 					<span class="stat-label"
-						>{i18n.t('tools.token_balance_scanner.step5.sidebar.remaining') || 'Remaining'}</span
+						>{i18n.t('token-balance-scanner.step5.sidebar.remaining') || 'Remaining'}</span
 					>
 				</div>
 			</div>
@@ -181,22 +180,21 @@
 		<div class="section-box">
 			<div class="section-header">
 				<span class="section-title"
-					>{i18n.t('tools.token_balance_scanner.step5.sidebar.scan_results') ||
-						'Scan Results'}</span
+					>{i18n.t('token-balance-scanner.step5.sidebar.scan_results') || 'Scan Results'}</span
 				>
 			</div>
 			<div class="result-list">
 				<div class="result-item">
 					<span class="result-value">{summary.totalWallets}</span>
 					<span class="result-label"
-						>{i18n.t('tools.token_balance_scanner.step5.sidebar.addresses_scanned') ||
+						>{i18n.t('token-balance-scanner.step5.sidebar.addresses_scanned') ||
 							'addresses scanned'}</span
 					>
 				</div>
 				<div class="result-item highlight">
 					<span class="result-value success">{summary.walletsWithBalance}</span>
 					<span class="result-label"
-						>{i18n.t('tools.token_balance_scanner.step5.sidebar.with_balance') ||
+						>{i18n.t('token-balance-scanner.step5.sidebar.with_balance') ||
 							'addresses with balance'}</span
 					>
 				</div>
@@ -204,7 +202,7 @@
 					<div class="result-item">
 						<span class="result-value warning">{summary.failureCount}</span>
 						<span class="result-label"
-							>{i18n.t('tools.token_balance_scanner.step5.sidebar.queries_failed') ||
+							>{i18n.t('token-balance-scanner.step5.sidebar.queries_failed') ||
 								'queries failed'}</span
 						>
 					</div>
@@ -216,7 +214,7 @@
 		<div class="section-box">
 			<div class="section-header">
 				<span class="section-title"
-					>{i18n.t('tools.token_balance_scanner.step5.sidebar.export') || 'Export'}</span
+					>{i18n.t('token-balance-scanner.step5.sidebar.export') || 'Export'}</span
 				>
 			</div>
 			<div class="action-buttons">
@@ -238,28 +236,27 @@
 		<!-- New Scan -->
 		<button class="new-scan-btn" onclick={handleNewScan}>
 			<RefreshCw size={16} />
-			<span>{i18n.t('tools.token_balance_scanner.step5.sidebar.new_scan') || 'Start New Scan'}</span
-			>
+			<span>{i18n.t('token-balance-scanner.step5.sidebar.new_scan') || 'Start New Scan'}</span>
 		</button>
 	{:else}
 		<!-- Idle: Ready to Scan -->
 		<div class="section-box">
 			<div class="section-header">
 				<span class="section-title"
-					>{i18n.t('tools.token_balance_scanner.step5.sidebar.ready') || 'Ready to Scan'}</span
+					>{i18n.t('token-balance-scanner.step5.sidebar.ready') || 'Ready to Scan'}</span
 				>
 			</div>
 			<div class="result-list">
 				<div class="result-item">
 					<span class="result-value">{step4State.wallets.length}</span>
 					<span class="result-label"
-						>{i18n.t('tools.token_balance_scanner.step5.sidebar.wallets') || 'wallets'}</span
+						>{i18n.t('token-balance-scanner.step5.sidebar.wallets') || 'wallets'}</span
 					>
 				</div>
 				<div class="result-item">
 					<span class="result-value">{step3State.selectedTokens.size}</span>
 					<span class="result-label"
-						>{i18n.t('tools.token_balance_scanner.step5.sidebar.tokens') || 'tokens'}</span
+						>{i18n.t('token-balance-scanner.step5.sidebar.tokens') || 'tokens'}</span
 					>
 				</div>
 			</div>
@@ -268,19 +265,17 @@
 
 	<!-- Info Box -->
 	<div class="info-box">
-		<h4>{i18n.t('tools.token_balance_scanner.step5.sidebar.info_title') || "What's Happening?"}</h4>
+		<h4>{i18n.t('token-balance-scanner.step5.sidebar.info_title') || "What's Happening?"}</h4>
 		<ul class="info-list">
 			<li>
-				{i18n.t('tools.token_balance_scanner.step5.sidebar.info_1') ||
+				{i18n.t('token-balance-scanner.step5.sidebar.info_1') ||
 					'Querying blockchain for token balances'}
 			</li>
 			<li>
-				{i18n.t('tools.token_balance_scanner.step5.sidebar.info_2') ||
-					'Using multiple RPCs in parallel'}
+				{i18n.t('token-balance-scanner.step5.sidebar.info_2') || 'Using multiple RPCs in parallel'}
 			</li>
 			<li>
-				{i18n.t('tools.token_balance_scanner.step5.sidebar.info_3') ||
-					'Auto-retrying failed requests'}
+				{i18n.t('token-balance-scanner.step5.sidebar.info_3') || 'Auto-retrying failed requests'}
 			</li>
 		</ul>
 	</div>
@@ -289,21 +284,21 @@
 	{#if status === 'completed'}
 		<div class="tip-box">
 			<p>
-				{i18n.t('tools.token_balance_scanner.step5.sidebar.tip_completed') ||
+				{i18n.t('token-balance-scanner.step5.sidebar.tip_completed') ||
 					'Export to Excel for advanced analysis, or CSV for simple spreadsheets.'}
 			</p>
 		</div>
 	{:else if status === 'scanning'}
 		<div class="tip-box">
 			<p>
-				{i18n.t('tools.token_balance_scanner.step5.sidebar.tip_scanning') ||
+				{i18n.t('token-balance-scanner.step5.sidebar.tip_scanning') ||
 					'You can close the browser - progress is saved automatically.'}
 			</p>
 		</div>
 	{:else}
 		<div class="tip-box">
 			<p>
-				{i18n.t('tools.token_balance_scanner.step5.sidebar.tip_idle') ||
+				{i18n.t('token-balance-scanner.step5.sidebar.tip_idle') ||
 					'Large scans may take time but can be paused and resumed anytime.'}
 			</p>
 		</div>

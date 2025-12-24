@@ -6,7 +6,7 @@
 	import StepContent from '$lib/components/step/step-content.svelte';
 	import EmptyState from '@/features/wallet-sweep/ui/components/empty-state.svelte';
 	import { SvelteSet } from 'svelte/reactivity';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	const connectStore = useConnectStore();
 	const i18n = useI18n();
@@ -69,17 +69,17 @@
 
 <StepContent>
 	<StepContentHeader
-		title={i18n.t('tools.wallet_sweep.step3.content.title')}
+		title={i18n.t('wallet-sweep.step3.content.title')}
 		description={currentNetwork?.name
-			? i18n.t('tools.wallet_sweep.step3.content.description', { network: currentNetwork.name })
-			: i18n.t('tools.wallet_sweep.step3.content.description_fallback')}
+			? i18n.t('wallet-sweep.step3.content.description', { network: currentNetwork.name })
+			: i18n.t('wallet-sweep.step3.content.description_fallback')}
 	></StepContentHeader>
 
 	{#if !connectStore.isConnected}
 		<EmptyState
 			icon="🔌"
-			title={i18n.t('tools.wallet_sweep.step3.content.wallet_not_connected_title')}
-			message={i18n.t('tools.wallet_sweep.step3.content.wallet_not_connected_message')}
+			title={i18n.t('wallet-sweep.step3.content.wallet_not_connected_title')}
+			message={i18n.t('wallet-sweep.step3.content.wallet_not_connected_message')}
 		/>
 	{:else if currentNetwork && connectStore.currentChainId}
 		{@const rpcUrl = currentNetwork.rpcEndpoints?.[0]?.url || ''}
@@ -96,7 +96,7 @@
 				onSelectionChange={handleSelectionChange}
 				onTokenAdded={handleTokenAdded}
 				onRemoveCustomToken={handleRemoveCustomToken}
-				emptyMessage={i18n.t('tools.wallet_sweep.step3.content.empty_message')}
+				emptyMessage={i18n.t('wallet-sweep.step3.content.empty_message')}
 				multiSelect={true}
 			/>
 		{/if}

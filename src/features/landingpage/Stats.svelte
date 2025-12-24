@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	const i18n = useI18n();
-	const t = i18n.t;
+	const t = i18n.t.bind(i18n);
 
 	// Stats data structure
 	interface Stat {
@@ -21,25 +21,25 @@
 	function getStats(): Stat[] {
 		return [
 			{
-				label: t('stats.registered_users'),
+				label: t('common.stats.registered_users'),
 				value: '10K+',
 				suffix: '',
 				target: 10000
 			},
 			{
-				label: t('stats.transactions'),
+				label: t('common.stats.transactions'),
 				value: '50K+',
 				suffix: '',
 				target: 50000
 			},
 			{
-				label: t('stats.total_volume'),
+				label: t('common.stats.total_volume'),
 				value: '$5M',
 				suffix: '+',
 				target: 5000000
 			},
 			{
-				label: t('stats.chains_supported'),
+				label: t('common.stats.chains_supported'),
 				value: '8',
 				suffix: '',
 				target: 8
@@ -124,7 +124,7 @@
 		<div class="section-header">
 			<h2 class="section-title">
 				<span class="title-gradient">
-					{t('stats.title')}
+					{t('common.stats.title')}
 				</span>
 			</h2>
 			<!-- Trust indicator -->
@@ -136,7 +136,7 @@
 						clip-rule="evenodd"
 					/>
 				</svg>
-				<span class="badge-text">{t('stats.last_updated')}</span>
+				<span class="badge-text">{t('common.stats.last_updated')}</span>
 			</div>
 		</div>
 

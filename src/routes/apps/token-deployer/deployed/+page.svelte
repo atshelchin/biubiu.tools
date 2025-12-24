@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { mainnet, polygon, arbitrum, optimism, base, bsc } from 'viem/chains';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import DeployedTokensList from '@/features/token-deployer/ui/deployed-tokens-list.svelte';
 	import PageLayout from '$lib/components/page-layout.svelte';
 	import { createConnectStore } from '$lib/stores/connect.svelte';

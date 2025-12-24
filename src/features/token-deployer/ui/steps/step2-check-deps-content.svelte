@@ -17,7 +17,7 @@
 	import SummaryBanner from '$lib/components/ui/summary-banner.svelte';
 	import DependencyCheckCard from '$lib/components/ui/dependency-check-card.svelte';
 	import { step2State } from '@/features/token-deployer/stores/step2-state.svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	const i18n = useI18n();
 	const connectStore = useConnectStore();
@@ -126,14 +126,14 @@
 
 <StepContent>
 	<StepContentHeader
-		title={i18n.t('tools.token_deployer.step2.content.title')}
-		description={i18n.t('tools.token_deployer.step2.content.description')}
+		title={i18n.t('token-deployer.step2.content.title')}
+		description={i18n.t('token-deployer.step2.content.description')}
 	/>
 
 	{#if isChecking}
 		<!-- Checking State -->
 		<LoadingState
-			message={i18n.t('tools.token_deployer.step2.content.checking_dependencies_for', {
+			message={i18n.t('token-deployer.step2.content.checking_dependencies_for', {
 				network: currentNetwork?.name ?? ''
 			})}
 		/>
@@ -141,12 +141,12 @@
 		<!-- Not Connected State -->
 		<EmptyState
 			icon="🔌"
-			title={i18n.t('tools.token_deployer.step2.content.wallet_not_connected_title')}
-			message={i18n.t('tools.token_deployer.step2.content.wallet_not_connected_message')}
+			title={i18n.t('token-deployer.step2.content.wallet_not_connected_title')}
+			message={i18n.t('token-deployer.step2.content.wallet_not_connected_message')}
 		>
 			{#snippet action()}
 				<BackButton onclick={goBackToStep1}>
-					{i18n.t('tools.token_deployer.step2.content.go_to_step1')}
+					{i18n.t('token-deployer.step2.content.go_to_step1')}
 				</BackButton>
 			{/snippet}
 		</EmptyState>
@@ -171,19 +171,19 @@
 							}
 						: undefined}
 					deployButtonText={config
-						? i18n.t('tools.token_deployer.step2.content.deploy_contract', {
+						? i18n.t('token-deployer.step2.content.deploy_contract', {
 								contractName: config.contractName
 							})
 						: undefined}
-					blockedHintText={i18n.t('tools.token_deployer.step2.content.resolve_previous_issue')}
-					addressLabel={i18n.t('tools.token_deployer.step2.content.address_label')}
-					endpointLabel={i18n.t('tools.token_deployer.step2.content.endpoint_label')}
-					viewGuideText={i18n.t('tools.token_deployer.step2.content.view_deployment_guide')}
-					deployComingSoonText={i18n.t('tools.token_deployer.step2.content.deploy_coming_soon')}
+					blockedHintText={i18n.t('token-deployer.step2.content.resolve_previous_issue')}
+					addressLabel={i18n.t('token-deployer.step2.content.address_label')}
+					endpointLabel={i18n.t('token-deployer.step2.content.endpoint_label')}
+					viewGuideText={i18n.t('token-deployer.step2.content.view_deployment_guide')}
+					deployComingSoonText={i18n.t('token-deployer.step2.content.deploy_coming_soon')}
 					categoryLabels={{
-						network: i18n.t('tools.token_deployer.step2.content.checks.category.network'),
-						protocol: i18n.t('tools.token_deployer.step2.content.checks.category.protocol'),
-						contract: i18n.t('tools.token_deployer.step2.content.checks.category.contract')
+						network: i18n.t('token-deployer.step2.content.checks.category.network'),
+						protocol: i18n.t('token-deployer.step2.content.checks.category.protocol'),
+						contract: i18n.t('token-deployer.step2.content.checks.category.contract')
 					}}
 				/>
 			{/each}
@@ -192,7 +192,7 @@
 		<!-- Summary and Continue -->
 		{#if summary}
 			<SummaryBanner
-				retryText={i18n.t('tools.token_deployer.step2.content.recheck_dependencies')}
+				retryText={i18n.t('token-deployer.step2.content.recheck_dependencies')}
 				isLoading={isRechecking}
 				onRetry={() => runDependencyChecks(true)}
 			/>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { Settings2 } from '@lucide/svelte';
 	import SegmentedControl from '$lib/components/ui/segmented-control.svelte';
 	import AddressCountHint from '$lib/components/ui/address-count-hint.svelte';

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { step3State } from '../../stores/step3-state.svelte';
 
 	const i18n = useI18n();
@@ -15,37 +15,37 @@
 </script>
 
 <div class="step-sidebar">
-	<h3 class="sidebar-title">{i18n.t('tools.nft_deployer.step3.sidebar.title')}</h3>
+	<h3 class="sidebar-title">{i18n.t('nft-deployer.step3.sidebar.title')}</h3>
 	<p class="sidebar-description">
-		{i18n.t('tools.nft_deployer.step3.sidebar.description')}
+		{i18n.t('nft-deployer.step3.sidebar.description')}
 	</p>
 
 	<div class="progress-section">
-		<h4 class="info-title">{i18n.t('tools.nft_deployer.step3.sidebar.progress')}</h4>
+		<h4 class="info-title">{i18n.t('nft-deployer.step3.sidebar.progress')}</h4>
 		<div class="progress-list">
 			<div class="progress-item" class:complete={progress.name}>
 				<div class="checkbox">
 					{#if progress.name}✓{/if}
 				</div>
-				<span>{i18n.t('tools.nft_deployer.step3.sidebar.field_name')}</span>
+				<span>{i18n.t('nft-deployer.step3.sidebar.field_name')}</span>
 			</div>
 			<div class="progress-item" class:complete={progress.symbol}>
 				<div class="checkbox">
 					{#if progress.symbol}✓{/if}
 				</div>
-				<span>{i18n.t('tools.nft_deployer.step3.sidebar.field_symbol')}</span>
+				<span>{i18n.t('nft-deployer.step3.sidebar.field_symbol')}</span>
 			</div>
 			<div class="progress-item" class:complete={progress.description}>
 				<div class="checkbox">
 					{#if progress.description}✓{/if}
 				</div>
-				<span>{i18n.t('tools.nft_deployer.step3.sidebar.field_description')}</span>
+				<span>{i18n.t('nft-deployer.step3.sidebar.field_description')}</span>
 			</div>
 			<div class="progress-item optional" class:complete={progress.baseUri}>
 				<div class="checkbox">
 					{#if progress.baseUri}✓{/if}
 				</div>
-				<span>{i18n.t('tools.nft_deployer.step3.sidebar.field_base_uri')}</span>
+				<span>{i18n.t('nft-deployer.step3.sidebar.field_base_uri')}</span>
 			</div>
 		</div>
 	</div>
@@ -63,16 +63,16 @@
 				<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
 				<polyline points="22 4 12 14.01 9 11.01" />
 			</svg>
-			<span>{i18n.t('tools.nft_deployer.step3.sidebar.all_required_complete')}</span>
+			<span>{i18n.t('nft-deployer.step3.sidebar.all_required_complete')}</span>
 		</div>
 	{/if}
 
 	<div class="info-section">
-		<h4 class="info-title">{i18n.t('tools.nft_deployer.step3.sidebar.tips')}</h4>
+		<h4 class="info-title">{i18n.t('nft-deployer.step3.sidebar.tips')}</h4>
 		<ul class="info-list">
-			<li>{i18n.t('tools.nft_deployer.step3.sidebar.tip1')}</li>
-			<li>{i18n.t('tools.nft_deployer.step3.sidebar.tip2')}</li>
-			<li>{i18n.t('tools.nft_deployer.step3.sidebar.tip3')}</li>
+			<li>{i18n.t('nft-deployer.step3.sidebar.tip1')}</li>
+			<li>{i18n.t('nft-deployer.step3.sidebar.tip2')}</li>
+			<li>{i18n.t('nft-deployer.step3.sidebar.tip3')}</li>
 		</ul>
 	</div>
 </div>

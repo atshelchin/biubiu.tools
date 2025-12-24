@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ExternalLink, Shield, ShieldAlert, ShieldQuestion } from '@lucide/svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { onMount } from 'svelte';
 	import type { RpcEndpoint, RpcTestResult, Explorer } from '../types/chain';
 	import { formatLatency, formatBlockHeight, getLatencyQuality } from '../utils/rpc-tester';

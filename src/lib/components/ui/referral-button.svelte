@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { Share2 } from '@lucide/svelte';
 	import IconButton from './icon-button.svelte';
 	import ReferralModal from './referral-modal.svelte';

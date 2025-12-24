@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ChevronDown, ChevronUp, Wallet, Copy, Check, ExternalLink } from '@lucide/svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { SvelteMap } from 'svelte/reactivity';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import type { Chain, RpcTestResult } from '../types/chain';

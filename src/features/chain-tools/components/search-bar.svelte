@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Search, X } from '@lucide/svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	interface Props {
 		value: string;
@@ -26,7 +26,7 @@
 	<input
 		type="text"
 		class="search-input"
-		placeholder={i18n.t('chain_tools.search_placeholder')}
+		placeholder={i18n.t('chain-tools.search_placeholder')}
 		{value}
 		oninput={handleInput}
 	/>

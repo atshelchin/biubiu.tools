@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	const i18n = useI18n();
 </script>
 
 <div class="info-card">
-	<h3 class="info-title">{i18n.t('tools.contract_deployer.step1.sidebar.title')}</h3>
+	<h3 class="info-title">{i18n.t('contract-deployer.step1.sidebar.title')}</h3>
 	<div class="info-content">
-		<p>{i18n.t('tools.contract_deployer.step1.sidebar.description')}</p>
+		<p>{i18n.t('contract-deployer.step1.sidebar.description')}</p>
 	</div>
 </div>
 

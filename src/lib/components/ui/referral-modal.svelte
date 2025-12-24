@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { Link, ExternalLink } from '@lucide/svelte';
 	import Modal from './modal.svelte';
 	import GradientButton from './gradient-button.svelte';

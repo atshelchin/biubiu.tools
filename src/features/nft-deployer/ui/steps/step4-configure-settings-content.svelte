@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import { step4State } from '../../stores/step4-state.svelte';
 	import { step2State } from '../../stores/step2-state.svelte';
@@ -11,18 +11,18 @@
 
 <div class="step-content">
 	<StepContentHeader
-		title={i18n.t('tools.nft_deployer.step4.content.title')}
-		description={i18n.t('tools.nft_deployer.step4.content.description')}
+		title={i18n.t('nft-deployer.step4.content.title')}
+		description={i18n.t('nft-deployer.step4.content.description')}
 	/>
 
 	<div class="form-container">
 		<!-- Supply & Pricing Section -->
 		<div class="section-card">
-			<h3 class="section-title">{i18n.t('tools.nft_deployer.step4.content.supply_pricing')}</h3>
+			<h3 class="section-title">{i18n.t('nft-deployer.step4.content.supply_pricing')}</h3>
 
 			<div class="form-field">
 				<label for="max-supply" class="field-label">
-					{i18n.t('tools.nft_deployer.step4.content.max_supply_label')}
+					{i18n.t('nft-deployer.step4.content.max_supply_label')}
 				</label>
 				<input
 					id="max-supply"
@@ -32,12 +32,12 @@
 					bind:value={step4State.maxSupply}
 					min="0"
 				/>
-				<div class="field-hint">{i18n.t('tools.nft_deployer.step4.content.max_supply_hint')}</div>
+				<div class="field-hint">{i18n.t('nft-deployer.step4.content.max_supply_hint')}</div>
 			</div>
 
 			<div class="form-field">
 				<label for="mint-price" class="field-label">
-					{i18n.t('tools.nft_deployer.step4.content.mint_price_label')}
+					{i18n.t('nft-deployer.step4.content.mint_price_label')}
 				</label>
 				<input
 					id="mint-price"
@@ -46,12 +46,12 @@
 					placeholder="0.01"
 					bind:value={step4State.mintPrice}
 				/>
-				<div class="field-hint">{i18n.t('tools.nft_deployer.step4.content.mint_price_hint')}</div>
+				<div class="field-hint">{i18n.t('nft-deployer.step4.content.mint_price_hint')}</div>
 			</div>
 
 			<div class="form-field">
 				<label for="max-per-wallet" class="field-label">
-					{i18n.t('tools.nft_deployer.step4.content.max_per_wallet_label')}
+					{i18n.t('nft-deployer.step4.content.max_per_wallet_label')}
 				</label>
 				<input
 					id="max-per-wallet"
@@ -62,28 +62,26 @@
 					min="0"
 				/>
 				<div class="field-hint">
-					{i18n.t('tools.nft_deployer.step4.content.max_per_wallet_hint')}
+					{i18n.t('nft-deployer.step4.content.max_per_wallet_hint')}
 				</div>
 			</div>
 		</div>
 
 		<!-- Royalties Section -->
 		<div class="section-card">
-			<h3 class="section-title">{i18n.t('tools.nft_deployer.step4.content.royalties')}</h3>
+			<h3 class="section-title">{i18n.t('nft-deployer.step4.content.royalties')}</h3>
 
 			<div class="toggle-field">
 				<label class="toggle-label">
 					<input type="checkbox" bind:checked={step4State.royaltyEnabled} />
-					<span class="toggle-text"
-						>{i18n.t('tools.nft_deployer.step4.content.enable_royalties')}</span
-					>
+					<span class="toggle-text">{i18n.t('nft-deployer.step4.content.enable_royalties')}</span>
 				</label>
 			</div>
 
 			{#if step4State.royaltyEnabled}
 				<div class="form-field">
 					<label for="royalty-recipient" class="field-label">
-						{i18n.t('tools.nft_deployer.step4.content.royalty_recipient_label')}
+						{i18n.t('nft-deployer.step4.content.royalty_recipient_label')}
 						<span class="required">*</span>
 					</label>
 					<input
@@ -94,13 +92,13 @@
 						bind:value={step4State.royaltyRecipient}
 					/>
 					<div class="field-hint">
-						{i18n.t('tools.nft_deployer.step4.content.royalty_recipient_hint')}
+						{i18n.t('nft-deployer.step4.content.royalty_recipient_hint')}
 					</div>
 				</div>
 
 				<div class="form-field">
 					<label for="royalty-percentage" class="field-label">
-						{i18n.t('tools.nft_deployer.step4.content.royalty_percentage_label')}
+						{i18n.t('nft-deployer.step4.content.royalty_percentage_label')}
 					</label>
 					<input
 						id="royalty-percentage"
@@ -113,7 +111,7 @@
 						step="0.1"
 					/>
 					<div class="field-hint">
-						{i18n.t('tools.nft_deployer.step4.content.royalty_percentage_hint')}
+						{i18n.t('nft-deployer.step4.content.royalty_percentage_hint')}
 					</div>
 				</div>
 			{/if}
@@ -121,89 +119,89 @@
 
 		<!-- Access Control Section -->
 		<div class="section-card">
-			<h3 class="section-title">{i18n.t('tools.nft_deployer.step4.content.access_control')}</h3>
+			<h3 class="section-title">{i18n.t('nft-deployer.step4.content.access_control')}</h3>
 
 			<div class="toggle-field">
 				<label class="toggle-label">
 					<input type="checkbox" bind:checked={step4State.ownerMintOnly} />
-					<span class="toggle-text">{i18n.t('tools.nft_deployer.step4.content.owner_only')}</span>
+					<span class="toggle-text">{i18n.t('nft-deployer.step4.content.owner_only')}</span>
 				</label>
 			</div>
 
 			<div class="toggle-field">
 				<label class="toggle-label">
 					<input type="checkbox" bind:checked={step4State.publicMintEnabled} />
-					<span class="toggle-text">{i18n.t('tools.nft_deployer.step4.content.public_mint')}</span>
+					<span class="toggle-text">{i18n.t('nft-deployer.step4.content.public_mint')}</span>
 				</label>
 			</div>
 
 			<div class="toggle-field">
 				<label class="toggle-label">
 					<input type="checkbox" bind:checked={step4State.whitelistEnabled} />
-					<span class="toggle-text">{i18n.t('tools.nft_deployer.step4.content.whitelist')}</span>
+					<span class="toggle-text">{i18n.t('nft-deployer.step4.content.whitelist')}</span>
 				</label>
 			</div>
 		</div>
 
 		<!-- Features Section -->
 		<div class="section-card">
-			<h3 class="section-title">{i18n.t('tools.nft_deployer.step4.content.features')}</h3>
+			<h3 class="section-title">{i18n.t('nft-deployer.step4.content.features')}</h3>
 
 			<div class="toggle-field">
 				<label class="toggle-label">
 					<input type="checkbox" bind:checked={step4State.pausable} />
-					<span class="toggle-text">{i18n.t('tools.nft_deployer.step4.content.pausable')}</span>
+					<span class="toggle-text">{i18n.t('nft-deployer.step4.content.pausable')}</span>
 				</label>
-				<div class="field-hint">{i18n.t('tools.nft_deployer.step4.content.pausable_hint')}</div>
+				<div class="field-hint">{i18n.t('nft-deployer.step4.content.pausable_hint')}</div>
 			</div>
 
 			<div class="toggle-field">
 				<label class="toggle-label">
 					<input type="checkbox" bind:checked={step4State.burnable} />
-					<span class="toggle-text">{i18n.t('tools.nft_deployer.step4.content.burnable')}</span>
+					<span class="toggle-text">{i18n.t('nft-deployer.step4.content.burnable')}</span>
 				</label>
-				<div class="field-hint">{i18n.t('tools.nft_deployer.step4.content.burnable_hint')}</div>
+				<div class="field-hint">{i18n.t('nft-deployer.step4.content.burnable_hint')}</div>
 			</div>
 
 			<div class="toggle-field">
 				<label class="toggle-label">
 					<input type="checkbox" bind:checked={step4State.revealable} />
-					<span class="toggle-text">{i18n.t('tools.nft_deployer.step4.content.revealable')}</span>
+					<span class="toggle-text">{i18n.t('nft-deployer.step4.content.revealable')}</span>
 				</label>
-				<div class="field-hint">{i18n.t('tools.nft_deployer.step4.content.revealable_hint')}</div>
+				<div class="field-hint">{i18n.t('nft-deployer.step4.content.revealable_hint')}</div>
 			</div>
 
 			{#if isERC1155}
 				<div class="toggle-field">
 					<label class="toggle-label">
 						<input type="checkbox" bind:checked={step4State.fungible} />
-						<span class="toggle-text">{i18n.t('tools.nft_deployer.step4.content.fungible')}</span>
+						<span class="toggle-text">{i18n.t('nft-deployer.step4.content.fungible')}</span>
 					</label>
-					<div class="field-hint">{i18n.t('tools.nft_deployer.step4.content.fungible_hint')}</div>
+					<div class="field-hint">{i18n.t('nft-deployer.step4.content.fungible_hint')}</div>
 				</div>
 			{/if}
 		</div>
 
 		<!-- Stake-to-Mint Section -->
 		<div class="section-card">
-			<h3 class="section-title">{i18n.t('tools.nft_deployer.step4.content.stake_to_mint')}</h3>
+			<h3 class="section-title">{i18n.t('nft-deployer.step4.content.stake_to_mint')}</h3>
 
 			<div class="toggle-field">
 				<label class="toggle-label">
 					<input type="checkbox" bind:checked={step4State.stakeToMintEnabled} />
 					<span class="toggle-text"
-						>{i18n.t('tools.nft_deployer.step4.content.enable_stake_to_mint')}</span
+						>{i18n.t('nft-deployer.step4.content.enable_stake_to_mint')}</span
 					>
 				</label>
 				<div class="field-hint">
-					{i18n.t('tools.nft_deployer.step4.content.stake_to_mint_hint')}
+					{i18n.t('nft-deployer.step4.content.stake_to_mint_hint')}
 				</div>
 			</div>
 
 			{#if step4State.stakeToMintEnabled}
 				<div class="form-field">
 					<label for="stake-token" class="field-label">
-						{i18n.t('tools.nft_deployer.step4.content.stake_token_label')}
+						{i18n.t('nft-deployer.step4.content.stake_token_label')}
 						<span class="required">*</span>
 					</label>
 					<input
@@ -214,13 +212,13 @@
 						bind:value={step4State.stakeToken}
 					/>
 					<div class="field-hint">
-						{i18n.t('tools.nft_deployer.step4.content.stake_token_hint')}
+						{i18n.t('nft-deployer.step4.content.stake_token_hint')}
 					</div>
 				</div>
 
 				<div class="form-field">
 					<label for="stake-amount" class="field-label">
-						{i18n.t('tools.nft_deployer.step4.content.stake_amount_label')}
+						{i18n.t('nft-deployer.step4.content.stake_amount_label')}
 						<span class="required">*</span>
 					</label>
 					<input
@@ -231,7 +229,7 @@
 						bind:value={step4State.stakeAmount}
 					/>
 					<div class="field-hint">
-						{i18n.t('tools.nft_deployer.step4.content.stake_amount_hint')}
+						{i18n.t('nft-deployer.step4.content.stake_amount_hint')}
 					</div>
 				</div>
 			{/if}

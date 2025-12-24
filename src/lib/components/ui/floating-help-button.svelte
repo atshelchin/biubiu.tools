@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { LifeBuoy, MessageCircleQuestion, Bug, X } from '@lucide/svelte';
 	import { browser } from '$app/environment';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { onMount } from 'svelte';
 
 	const STORAGE_KEY = 'floating-help-position';
@@ -228,7 +228,7 @@
 			onpointermove={handlePointerMove}
 			onpointerup={handlePointerUp}
 			onpointercancel={handlePointerUp}
-			aria-label={i18n.t('helpButton.label')}
+			aria-label={i18n.t('common.helpButton.label')}
 			aria-expanded={isMenuOpen}
 		>
 			{#if isMenuOpen}
@@ -247,11 +247,11 @@
 			>
 				<button class="menu-item" onclick={handleGetHelp} role="menuitem">
 					<MessageCircleQuestion size={20} />
-					<span>{i18n.t('helpButton.getHelp')}</span>
+					<span>{i18n.t('common.helpButton.getHelp')}</span>
 				</button>
 				<button class="menu-item" onclick={handleReportIssue} role="menuitem">
 					<Bug size={20} />
-					<span>{i18n.t('helpButton.reportIssue')}</span>
+					<span>{i18n.t('common.helpButton.reportIssue')}</span>
 				</button>
 			</div>
 		{/if}

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { useConnectStore } from '$lib/stores/connect.svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
 	import { step3State } from '@/features/token-distribution/stores/step3-state.svelte';
@@ -84,11 +84,11 @@
 
 	// Get translation key for token type
 	function getTokenTypeLabel(type: DistributionTokenType): string {
-		return i18n.t(`tools.one_to_many_transfer.step3.content.token_type.${type}`);
+		return i18n.t(`one-to-many-transfer.step3.content.token_type.${type}`);
 	}
 
 	function getTokenTypeDesc(type: DistributionTokenType): string {
-		return i18n.t(`tools.one_to_many_transfer.step3.content.token_type.${type}_desc`);
+		return i18n.t(`one-to-many-transfer.step3.content.token_type.${type}_desc`);
 	}
 
 	// Load NFT contract info
@@ -100,7 +100,7 @@
 
 		if (!isValidAddress(address)) {
 			step3State.customNftError = i18n.t(
-				'tools.one_to_many_transfer.step3.content.nft_config.invalid_address'
+				'one-to-many-transfer.step3.content.nft_config.invalid_address'
 			);
 			return;
 		}
@@ -179,14 +179,14 @@
 
 <StepContent>
 	<StepContentHeader
-		title={i18n.t('tools.one_to_many_transfer.step3.content.title')}
-		description={i18n.t('tools.one_to_many_transfer.step3.content.description')}
+		title={i18n.t('one-to-many-transfer.step3.content.title')}
+		description={i18n.t('one-to-many-transfer.step3.content.description')}
 	/>
 
 	<!-- Token Type Selector -->
 	<div class="section">
 		<h3 class="section-title">
-			{i18n.t('tools.one_to_many_transfer.step3.content.token_type.title')}
+			{i18n.t('one-to-many-transfer.step3.content.token_type.title')}
 		</h3>
 		<div class="token-type-grid">
 			{#each tokenTypeOptions as option (option.type)}
@@ -214,11 +214,11 @@
 	{#if step3State.tokenType === 'native' || step3State.tokenType === 'erc20'}
 		<div class="section">
 			<h3 class="section-title">
-				{i18n.t('tools.one_to_many_transfer.step3.content.select_token.title')}
+				{i18n.t('one-to-many-transfer.step3.content.select_token.title')}
 			</h3>
 			{#if availableTokens().length === 0}
 				<div class="empty-state">
-					<p>{i18n.t('tools.one_to_many_transfer.step3.content.select_token.no_tokens')}</p>
+					<p>{i18n.t('one-to-many-transfer.step3.content.select_token.no_tokens')}</p>
 				</div>
 			{:else}
 				<div class="token-grid">
@@ -246,12 +246,12 @@
 	{#if step3State.tokenType === 'erc721' || step3State.tokenType === 'erc1155'}
 		<div class="section">
 			<h3 class="section-title">
-				{i18n.t('tools.one_to_many_transfer.step3.content.nft_config.title')}
+				{i18n.t('one-to-many-transfer.step3.content.nft_config.title')}
 			</h3>
 			<div class="nft-config">
 				<div class="input-group">
 					<label class="input-label" for="nft-contract-address">
-						{i18n.t('tools.one_to_many_transfer.step3.content.nft_config.contract_address')}
+						{i18n.t('one-to-many-transfer.step3.content.nft_config.contract_address')}
 					</label>
 					<div class="input-with-button">
 						<input
@@ -259,7 +259,7 @@
 							type="text"
 							class="text-input"
 							placeholder={i18n.t(
-								'tools.one_to_many_transfer.step3.content.nft_config.contract_placeholder'
+								'one-to-many-transfer.step3.content.nft_config.contract_placeholder'
 							)}
 							bind:value={step3State.customNftAddress}
 							oninput={() => step3State.clearNftInfo()}
@@ -268,7 +268,7 @@
 							{#if step3State.customNftLoading}
 								<Loader2 size={16} class="spin" />
 							{:else}
-								{i18n.t('tools.one_to_many_transfer.step3.content.nft_config.load_button')}
+								{i18n.t('one-to-many-transfer.step3.content.nft_config.load_button')}
 							{/if}
 						</button>
 					</div>
@@ -277,19 +277,19 @@
 				{#if step3State.tokenType === 'erc1155'}
 					<div class="input-group">
 						<label class="input-label" for="nft-token-ids">
-							{i18n.t('tools.one_to_many_transfer.step3.content.nft_config.token_ids')}
+							{i18n.t('one-to-many-transfer.step3.content.nft_config.token_ids')}
 						</label>
 						<input
 							id="nft-token-ids"
 							type="text"
 							class="text-input"
 							placeholder={i18n.t(
-								'tools.one_to_many_transfer.step3.content.nft_config.token_ids_placeholder'
+								'one-to-many-transfer.step3.content.nft_config.token_ids_placeholder'
 							)}
 							bind:value={step3State.customNftTokenIds}
 						/>
 						<p class="input-hint">
-							{i18n.t('tools.one_to_many_transfer.step3.content.nft_config.token_ids_hint')}
+							{i18n.t('one-to-many-transfer.step3.content.nft_config.token_ids_hint')}
 						</p>
 					</div>
 				{/if}
@@ -313,7 +313,7 @@
 							{#if step3State.nftTotalSupply !== undefined}
 								<div class="nft-info-row">
 									<span class="nft-info-label">
-										{i18n.t('tools.one_to_many_transfer.step3.content.nft_config.total_supply')}:
+										{i18n.t('one-to-many-transfer.step3.content.nft_config.total_supply')}:
 									</span>
 									<span class="nft-info-value">{step3State.nftTotalSupply.toString()}</span>
 								</div>
@@ -321,7 +321,7 @@
 							{#if step3State.nftUserBalance !== undefined}
 								<div class="nft-info-row">
 									<span class="nft-info-label">
-										{i18n.t('tools.one_to_many_transfer.step3.content.nft_config.your_balance')}:
+										{i18n.t('one-to-many-transfer.step3.content.nft_config.your_balance')}:
 									</span>
 									<span class="nft-info-value">{step3State.nftUserBalance.toString()}</span>
 								</div>
@@ -333,7 +333,7 @@
 				{#if step3State.customNftLoading}
 					<div class="loading-message">
 						<Loader2 size={20} class="spin" />
-						<span>{i18n.t('tools.one_to_many_transfer.step3.content.nft_config.loading')}</span>
+						<span>{i18n.t('one-to-many-transfer.step3.content.nft_config.loading')}</span>
 					</div>
 				{/if}
 			</div>
@@ -344,7 +344,7 @@
 	{#if step3State.isFungible && step3State.selectedToken}
 		<div class="section">
 			<h3 class="section-title">
-				{i18n.t('tools.one_to_many_transfer.step3.content.amount_mode.title')}
+				{i18n.t('one-to-many-transfer.step3.content.amount_mode.title')}
 			</h3>
 			<div class="mode-selector">
 				<button
@@ -354,10 +354,10 @@
 				>
 					<div class="mode-icon">⚖️</div>
 					<div class="mode-label">
-						{i18n.t('tools.one_to_many_transfer.step3.content.amount_mode.equal')}
+						{i18n.t('one-to-many-transfer.step3.content.amount_mode.equal')}
 					</div>
 					<div class="mode-desc">
-						{i18n.t('tools.one_to_many_transfer.step3.content.amount_mode.equal_desc')}
+						{i18n.t('one-to-many-transfer.step3.content.amount_mode.equal_desc')}
 					</div>
 				</button>
 				<button
@@ -367,10 +367,10 @@
 				>
 					<div class="mode-icon">✏️</div>
 					<div class="mode-label">
-						{i18n.t('tools.one_to_many_transfer.step3.content.amount_mode.custom')}
+						{i18n.t('one-to-many-transfer.step3.content.amount_mode.custom')}
 					</div>
 					<div class="mode-desc">
-						{i18n.t('tools.one_to_many_transfer.step3.content.amount_mode.custom_desc')}
+						{i18n.t('one-to-many-transfer.step3.content.amount_mode.custom_desc')}
 					</div>
 				</button>
 				<button
@@ -380,10 +380,10 @@
 				>
 					<div class="mode-icon">🎲</div>
 					<div class="mode-label">
-						{i18n.t('tools.one_to_many_transfer.step3.content.amount_mode.random')}
+						{i18n.t('one-to-many-transfer.step3.content.amount_mode.random')}
 					</div>
 					<div class="mode-desc">
-						{i18n.t('tools.one_to_many_transfer.step3.content.amount_mode.random_desc')}
+						{i18n.t('one-to-many-transfer.step3.content.amount_mode.random_desc')}
 					</div>
 				</button>
 			</div>
@@ -393,15 +393,13 @@
 		{#if step3State.amountMode === 'equal'}
 			<div class="section">
 				<h3 class="section-title">
-					{i18n.t('tools.one_to_many_transfer.step3.content.amount_input.title')}
+					{i18n.t('one-to-many-transfer.step3.content.amount_input.title')}
 				</h3>
 				<div class="amount-input-group">
 					<input
 						type="number"
 						class="amount-input"
-						placeholder={i18n.t(
-							'tools.one_to_many_transfer.step3.content.amount_input.placeholder'
-						)}
+						placeholder={i18n.t('one-to-many-transfer.step3.content.amount_input.placeholder')}
 						bind:value={step3State.amountPerRecipient}
 						step="0.000001"
 						min="0"
@@ -409,13 +407,13 @@
 					<div class="token-suffix">{step3State.selectedToken.symbol}</div>
 				</div>
 				<p class="input-hint">
-					{i18n.t('tools.one_to_many_transfer.step3.content.amount_input.hint')}
+					{i18n.t('one-to-many-transfer.step3.content.amount_input.hint')}
 				</p>
 			</div>
 		{:else if step3State.amountMode === 'custom'}
 			<div class="section">
 				<div class="info-message">
-					<p>{i18n.t('tools.one_to_many_transfer.step3.content.custom_mode_info')}</p>
+					<p>{i18n.t('one-to-many-transfer.step3.content.custom_mode_info')}</p>
 				</div>
 			</div>
 		{:else if step3State.amountMode === 'random'}
@@ -423,7 +421,7 @@
 				<div class="random-config">
 					<div class="random-input-group">
 						<label class="input-label" for="random-min-amount">
-							{i18n.t('tools.one_to_many_transfer.step3.content.random_mode_config.min_amount')}
+							{i18n.t('one-to-many-transfer.step3.content.random_mode_config.min_amount')}
 						</label>
 						<div class="amount-input-group">
 							<input
@@ -431,7 +429,7 @@
 								type="number"
 								class="amount-input"
 								placeholder={i18n.t(
-									'tools.one_to_many_transfer.step3.content.random_mode_config.min_placeholder'
+									'one-to-many-transfer.step3.content.random_mode_config.min_placeholder'
 								)}
 								bind:value={step3State.randomMinAmount}
 								step="0.000001"
@@ -442,7 +440,7 @@
 					</div>
 					<div class="random-input-group">
 						<label class="input-label" for="random-max-amount">
-							{i18n.t('tools.one_to_many_transfer.step3.content.random_mode_config.max_amount')}
+							{i18n.t('one-to-many-transfer.step3.content.random_mode_config.max_amount')}
 						</label>
 						<div class="amount-input-group">
 							<input
@@ -450,7 +448,7 @@
 								type="number"
 								class="amount-input"
 								placeholder={i18n.t(
-									'tools.one_to_many_transfer.step3.content.random_mode_config.max_placeholder'
+									'one-to-many-transfer.step3.content.random_mode_config.max_placeholder'
 								)}
 								bind:value={step3State.randomMaxAmount}
 								step="0.000001"
@@ -465,7 +463,7 @@
 					{@const max = parseFloat(step3State.randomMaxAmount)}
 					{#if min > 0 && max > min}
 						<p class="input-hint success">
-							{i18n.t('tools.one_to_many_transfer.step3.content.random_mode_config.valid_range', {
+							{i18n.t('one-to-many-transfer.step3.content.random_mode_config.valid_range', {
 								min: step3State.randomMinAmount,
 								max: step3State.randomMaxAmount,
 								symbol: step3State.selectedToken.symbol
@@ -474,13 +472,13 @@
 					{:else if max <= min}
 						<p class="input-hint error">
 							{i18n.t(
-								'tools.one_to_many_transfer.step3.content.random_mode_config.error_max_less_than_min'
+								'one-to-many-transfer.step3.content.random_mode_config.error_max_less_than_min'
 							)}
 						</p>
 					{/if}
 				{:else}
 					<p class="input-hint">
-						{i18n.t('tools.one_to_many_transfer.step3.content.random_mode_config.hint')}
+						{i18n.t('one-to-many-transfer.step3.content.random_mode_config.hint')}
 					</p>
 				{/if}
 			</div>

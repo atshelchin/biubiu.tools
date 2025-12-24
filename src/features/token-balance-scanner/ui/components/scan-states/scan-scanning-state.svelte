@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { Loader2, Pause } from '@lucide/svelte';
 	import type { ScanProgress } from '../../../types/scanner';
 
@@ -18,7 +18,7 @@
 		<Loader2 size={56} class="spin" />
 	</div>
 
-	<h3>{i18n.t('tools.token_balance_scanner.step5.scanning.title') || 'Scanning Balances...'}</h3>
+	<h3>{i18n.t('token-balance-scanner.step5.scanning.title') || 'Scanning Balances...'}</h3>
 
 	<div class="scan-progress">
 		<div class="progress-bar">
@@ -28,15 +28,15 @@
 		<div class="progress-stats">
 			<span class="stat success">
 				{progress.success || 0}
-				{i18n.t('tools.token_balance_scanner.step5.scanning.success') || 'completed'}
+				{i18n.t('token-balance-scanner.step5.scanning.success') || 'completed'}
 			</span>
 			<span class="stat failed">
 				{progress.failed || 0}
-				{i18n.t('tools.token_balance_scanner.step5.scanning.failed') || 'failed'}
+				{i18n.t('token-balance-scanner.step5.scanning.failed') || 'failed'}
 			</span>
 			<span class="stat pending">
 				{progress.pending || 0}
-				{i18n.t('tools.token_balance_scanner.step5.scanning.pending') || 'pending'}
+				{i18n.t('token-balance-scanner.step5.scanning.pending') || 'pending'}
 			</span>
 		</div>
 
@@ -45,7 +45,7 @@
 
 	<button class="pause-btn" onclick={onPause}>
 		<Pause size={20} />
-		<span>{i18n.t('tools.token_balance_scanner.step5.scanning.pause') || 'Pause'}</span>
+		<span>{i18n.t('token-balance-scanner.step5.scanning.pause') || 'Pause'}</span>
 	</button>
 </div>
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
 	import SegmentedControl from '$lib/components/ui/segmented-control.svelte';
@@ -35,11 +35,11 @@
 	const importMethodOptions = $derived([
 		{
 			value: 'address' as const,
-			label: i18n.t('tools.token_balance_scanner.step4.import_method.address') || 'Addresses'
+			label: i18n.t('token-balance-scanner.step4.import_method.address') || 'Addresses'
 		},
 		{
 			value: 'xpub' as const,
-			label: i18n.t('tools.token_balance_scanner.step4.import_method.xpub') || 'Extended Public Key'
+			label: i18n.t('token-balance-scanner.step4.import_method.xpub') || 'Extended Public Key'
 		}
 	]);
 
@@ -101,15 +101,15 @@
 
 <StepContent>
 	<StepContentHeader
-		title={i18n.t('tools.token_balance_scanner.step4.content.title') || 'Import Wallet Addresses'}
-		description={i18n.t('tools.token_balance_scanner.step4.content.description') ||
+		title={i18n.t('token-balance-scanner.step4.content.title') || 'Import Wallet Addresses'}
+		description={i18n.t('token-balance-scanner.step4.content.description') ||
 			'Add wallet addresses to scan for token balances'}
 	/>
 
 	<!-- Import Method Selector -->
 	<div>
 		<div class="form-label">
-			{i18n.t('tools.token_balance_scanner.step4.content.choose_method') || 'Choose Import Method'}
+			{i18n.t('token-balance-scanner.step4.content.choose_method') || 'Choose Import Method'}
 		</div>
 		<SegmentedControl
 			options={importMethodOptions}
@@ -123,7 +123,7 @@
 		<AddressTextImport
 			bind:value={addressText}
 			onImport={handleAddressImport}
-			placeholder={i18n.t('tools.token_balance_scanner.step4.content.address_placeholder') ||
+			placeholder={i18n.t('token-balance-scanner.step4.content.address_placeholder') ||
 				'Paste wallet addresses here (one per line)\n0x1234...\n0x5678...'}
 			rows={8}
 		/>
@@ -157,15 +157,15 @@
 		<div class="form-section">
 			<div class="wallet-list-header">
 				<div class="form-label">
-					{i18n.t('tools.token_balance_scanner.step4.content.wallet_list.title') || 'Wallets'}
+					{i18n.t('token-balance-scanner.step4.content.wallet_list.title') || 'Wallets'}
 					<span class="wallet-count">
-						{i18n.t('tools.token_balance_scanner.step4.content.wallet_list.count', {
+						{i18n.t('token-balance-scanner.step4.content.wallet_list.count', {
 							count: walletCount
 						}) || `(${walletCount})`}
 					</span>
 				</div>
 				<button class="btn-text-danger" onclick={handleClearAll}>
-					{i18n.t('tools.token_balance_scanner.step4.content.wallet_list.clear_all') || 'Clear All'}
+					{i18n.t('token-balance-scanner.step4.content.wallet_list.clear_all') || 'Clear All'}
 				</button>
 			</div>
 
@@ -175,7 +175,7 @@
 				showPagination={true}
 				canRemove={true}
 				onRemove={handleRemoveWallet}
-				emptyMessage={i18n.t('tools.token_balance_scanner.step4.content.wallet_list.empty') ||
+				emptyMessage={i18n.t('token-balance-scanner.step4.content.wallet_list.empty') ||
 					'No wallets added yet'}
 				showDerivationPath={importMethod === 'xpub'}
 			/>
@@ -186,12 +186,12 @@
 <!-- Confirm Dialogs -->
 <ConfirmDialog
 	bind:open={showRemoveDialog}
-	title={i18n.t('tools.token_balance_scanner.step4.dialogs.remove_wallet_title') || 'Remove Wallet'}
-	message={i18n.t('tools.token_balance_scanner.step4.dialogs.remove_wallet_message', {
+	title={i18n.t('token-balance-scanner.step4.dialogs.remove_wallet_title') || 'Remove Wallet'}
+	message={i18n.t('token-balance-scanner.step4.dialogs.remove_wallet_message', {
 		address: walletToRemove
 	}) || `Are you sure you want to remove this wallet?\n${walletToRemove}`}
-	confirmText={i18n.t('tools.token_balance_scanner.step4.dialogs.remove_button') || 'Remove'}
-	cancelText={i18n.t('tools.token_balance_scanner.step4.dialogs.cancel_button') || 'Cancel'}
+	confirmText={i18n.t('token-balance-scanner.step4.dialogs.remove_button') || 'Remove'}
+	cancelText={i18n.t('token-balance-scanner.step4.dialogs.cancel_button') || 'Cancel'}
 	variant="danger"
 	requireLongPress={false}
 	onConfirm={confirmRemoveWallet}
@@ -203,14 +203,13 @@
 
 <ConfirmDialog
 	bind:open={showClearAllDialog}
-	title={i18n.t('tools.token_balance_scanner.step4.dialogs.clear_all_title') || 'Clear All Wallets'}
-	message={i18n.t('tools.token_balance_scanner.step4.dialogs.clear_all_message', {
+	title={i18n.t('token-balance-scanner.step4.dialogs.clear_all_title') || 'Clear All Wallets'}
+	message={i18n.t('token-balance-scanner.step4.dialogs.clear_all_message', {
 		count: walletCount
 	}) || `Are you sure you want to remove all ${walletCount} wallets?`}
-	confirmText={i18n.t('tools.token_balance_scanner.step4.dialogs.clear_all_button') || 'Clear All'}
-	confirmHint={i18n.t('tools.token_balance_scanner.step4.dialogs.long_press_hint') ||
-		'Hold to confirm'}
-	cancelText={i18n.t('tools.token_balance_scanner.step4.dialogs.cancel_button') || 'Cancel'}
+	confirmText={i18n.t('token-balance-scanner.step4.dialogs.clear_all_button') || 'Clear All'}
+	confirmHint={i18n.t('token-balance-scanner.step4.dialogs.long_press_hint') || 'Hold to confirm'}
+	cancelText={i18n.t('token-balance-scanner.step4.dialogs.cancel_button') || 'Cancel'}
 	variant="danger"
 	requireLongPress={true}
 	longPressDuration={3000}

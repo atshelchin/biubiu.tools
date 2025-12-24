@@ -27,7 +27,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'binance-cex',
 		name: 'Binance',
-		descriptionKey: 'chain_tools.tools.binance_cex.description',
+		descriptionKey: 'chain-tools.tools.binance_cex.description',
 		url: 'https://www.binance.com',
 		icon: Building2,
 		category: 'cex',
@@ -38,7 +38,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'coinbase-cex',
 		name: 'Coinbase',
-		descriptionKey: 'chain_tools.tools.coinbase_cex.description',
+		descriptionKey: 'chain-tools.tools.coinbase_cex.description',
 		url: 'https://www.coinbase.com',
 		icon: Building2,
 		category: 'cex',
@@ -48,7 +48,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'okx-cex',
 		name: 'OKX',
-		descriptionKey: 'chain_tools.tools.okx_cex.description',
+		descriptionKey: 'chain-tools.tools.okx_cex.description',
 		url: 'https://www.okx.com',
 		icon: Building2,
 		category: 'cex',
@@ -58,7 +58,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'bybit-cex',
 		name: 'Bybit',
-		descriptionKey: 'chain_tools.tools.bybit_cex.description',
+		descriptionKey: 'chain-tools.tools.bybit_cex.description',
 		url: 'https://www.bybit.com',
 		icon: TrendingUp,
 		category: 'cex',
@@ -68,7 +68,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'kraken-cex',
 		name: 'Kraken',
-		descriptionKey: 'chain_tools.tools.kraken_cex.description',
+		descriptionKey: 'chain-tools.tools.kraken_cex.description',
 		url: 'https://www.kraken.com',
 		icon: Building2,
 		category: 'cex',
@@ -78,7 +78,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'bitget-cex',
 		name: 'Bitget',
-		descriptionKey: 'chain_tools.tools.bitget_cex.description',
+		descriptionKey: 'chain-tools.tools.bitget_cex.description',
 		url: 'https://www.bitget.com',
 		icon: TrendingUp,
 		category: 'cex',
@@ -88,7 +88,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'kucoin-cex',
 		name: 'KuCoin',
-		descriptionKey: 'chain_tools.tools.kucoin_cex.description',
+		descriptionKey: 'chain-tools.tools.kucoin_cex.description',
 		url: 'https://www.kucoin.com',
 		icon: Building2,
 		category: 'cex',
@@ -98,7 +98,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'gateio-cex',
 		name: 'Gate.io',
-		descriptionKey: 'chain_tools.tools.gateio_cex.description',
+		descriptionKey: 'chain-tools.tools.gateio_cex.description',
 		url: 'https://www.gate.io',
 		icon: Building2,
 		category: 'cex',
@@ -108,7 +108,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'htx-cex',
 		name: 'HTX (Huobi)',
-		descriptionKey: 'chain_tools.tools.htx_cex.description',
+		descriptionKey: 'chain-tools.tools.htx_cex.description',
 		url: 'https://www.htx.com',
 		icon: Building2,
 		category: 'cex',
@@ -118,7 +118,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'mexc-cex',
 		name: 'MEXC',
-		descriptionKey: 'chain_tools.tools.mexc_cex.description',
+		descriptionKey: 'chain-tools.tools.mexc_cex.description',
 		url: 'https://www.mexc.com',
 		icon: Building2,
 		category: 'cex',
@@ -129,7 +129,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'deribit-cex',
 		name: 'Deribit',
-		descriptionKey: 'chain_tools.tools.deribit_cex.description',
+		descriptionKey: 'chain-tools.tools.deribit_cex.description',
 		url: 'https://www.deribit.com',
 		icon: ArrowUpDown,
 		category: 'cex',
@@ -139,7 +139,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'bitfinex-cex',
 		name: 'Bitfinex',
-		descriptionKey: 'chain_tools.tools.bitfinex_cex.description',
+		descriptionKey: 'chain-tools.tools.bitfinex_cex.description',
 		url: 'https://www.bitfinex.com',
 		icon: Building2,
 		category: 'cex',
@@ -149,7 +149,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'bitmex-cex',
 		name: 'BitMEX',
-		descriptionKey: 'chain_tools.tools.bitmex_cex.description',
+		descriptionKey: 'chain-tools.tools.bitmex_cex.description',
 		url: 'https://www.bitmex.com',
 		icon: Zap,
 		category: 'cex',
@@ -160,7 +160,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'upbit-cex',
 		name: 'Upbit',
-		descriptionKey: 'chain_tools.tools.upbit_cex.description',
+		descriptionKey: 'chain-tools.tools.upbit_cex.description',
 		url: 'https://upbit.com',
 		icon: Globe,
 		category: 'cex',
@@ -170,7 +170,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'bithumb-cex',
 		name: 'Bithumb',
-		descriptionKey: 'chain_tools.tools.bithumb_cex.description',
+		descriptionKey: 'chain-tools.tools.bithumb_cex.description',
 		url: 'https://www.bithumb.com',
 		icon: Globe,
 		category: 'cex',
@@ -180,7 +180,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'bitflyer-cex',
 		name: 'bitFlyer',
-		descriptionKey: 'chain_tools.tools.bitflyer_cex.description',
+		descriptionKey: 'chain-tools.tools.bitflyer_cex.description',
 		url: 'https://bitflyer.com',
 		icon: Globe,
 		category: 'cex',
@@ -190,7 +190,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'coincheck-cex',
 		name: 'Coincheck',
-		descriptionKey: 'chain_tools.tools.coincheck_cex.description',
+		descriptionKey: 'chain-tools.tools.coincheck_cex.description',
 		url: 'https://coincheck.com',
 		icon: Globe,
 		category: 'cex',
@@ -200,7 +200,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'wazirx-cex',
 		name: 'WazirX',
-		descriptionKey: 'chain_tools.tools.wazirx_cex.description',
+		descriptionKey: 'chain-tools.tools.wazirx_cex.description',
 		url: 'https://wazirx.com',
 		icon: Globe,
 		category: 'cex',
@@ -210,7 +210,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'bitstamp-cex',
 		name: 'Bitstamp',
-		descriptionKey: 'chain_tools.tools.bitstamp_cex.description',
+		descriptionKey: 'chain-tools.tools.bitstamp_cex.description',
 		url: 'https://www.bitstamp.net',
 		icon: Building2,
 		category: 'cex',
@@ -220,7 +220,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'lbank-cex',
 		name: 'LBank',
-		descriptionKey: 'chain_tools.tools.lbank_cex.description',
+		descriptionKey: 'chain-tools.tools.lbank_cex.description',
 		url: 'https://www.lbank.com',
 		icon: Building2,
 		category: 'cex',
@@ -231,7 +231,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'backpack-cex',
 		name: 'Backpack Exchange',
-		descriptionKey: 'chain_tools.tools.backpack_cex.description',
+		descriptionKey: 'chain-tools.tools.backpack_cex.description',
 		url: 'https://backpack.exchange',
 		icon: Star,
 		category: 'cex',
@@ -241,7 +241,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'hyperliquid-cex',
 		name: 'Hyperliquid',
-		descriptionKey: 'chain_tools.tools.hyperliquid_cex.description',
+		descriptionKey: 'chain-tools.tools.hyperliquid_cex.description',
 		url: 'https://hyperliquid.xyz',
 		icon: Zap,
 		category: 'cex',
@@ -251,7 +251,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'cube-cex',
 		name: 'Cube Exchange',
-		descriptionKey: 'chain_tools.tools.cube_cex.description',
+		descriptionKey: 'chain-tools.tools.cube_cex.description',
 		url: 'https://cube.exchange',
 		icon: Star,
 		category: 'cex',
@@ -261,7 +261,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'bullish-cex',
 		name: 'Bullish',
-		descriptionKey: 'chain_tools.tools.bullish_cex.description',
+		descriptionKey: 'chain-tools.tools.bullish_cex.description',
 		url: 'https://bullish.com',
 		icon: TrendingUp,
 		category: 'cex',
@@ -271,7 +271,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'hashkey-cex',
 		name: 'HashKey Exchange',
-		descriptionKey: 'chain_tools.tools.hashkey_cex.description',
+		descriptionKey: 'chain-tools.tools.hashkey_cex.description',
 		url: 'https://www.hashkey.com',
 		icon: Shield,
 		category: 'cex',
@@ -281,7 +281,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'osl-cex',
 		name: 'OSL',
-		descriptionKey: 'chain_tools.tools.osl_cex.description',
+		descriptionKey: 'chain-tools.tools.osl_cex.description',
 		url: 'https://osl.com',
 		icon: Shield,
 		category: 'cex',
@@ -292,7 +292,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'coingecko-exchanges',
 		name: 'CoinGecko Exchanges',
-		descriptionKey: 'chain_tools.tools.coingecko_exchanges.description',
+		descriptionKey: 'chain-tools.tools.coingecko_exchanges.description',
 		url: 'https://www.coingecko.com/en/exchanges',
 		icon: BarChart3,
 		category: 'cex',
@@ -302,7 +302,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'cmc-exchanges',
 		name: 'CMC Exchange Ranking',
-		descriptionKey: 'chain_tools.tools.cmc_exchanges.description',
+		descriptionKey: 'chain-tools.tools.cmc_exchanges.description',
 		url: 'https://coinmarketcap.com/rankings/exchanges',
 		icon: BarChart3,
 		category: 'cex',
@@ -312,7 +312,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'cryptorank-exchanges',
 		name: 'CryptoRank Exchanges',
-		descriptionKey: 'chain_tools.tools.cryptorank_exchanges.description',
+		descriptionKey: 'chain-tools.tools.cryptorank_exchanges.description',
 		url: 'https://cryptorank.io/exchanges',
 		icon: BarChart3,
 		category: 'cex',
@@ -322,7 +322,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'kaiko-data',
 		name: 'Kaiko',
-		descriptionKey: 'chain_tools.tools.kaiko_data.description',
+		descriptionKey: 'chain-tools.tools.kaiko_data.description',
 		url: 'https://www.kaiko.com',
 		icon: BarChart3,
 		category: 'cex',
@@ -332,7 +332,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'ccdata',
 		name: 'CCData (CryptoCompare)',
-		descriptionKey: 'chain_tools.tools.ccdata.description',
+		descriptionKey: 'chain-tools.tools.ccdata.description',
 		url: 'https://ccdata.io',
 		icon: BarChart3,
 		category: 'cex',
@@ -343,7 +343,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'coinbase-prime',
 		name: 'Coinbase Prime',
-		descriptionKey: 'chain_tools.tools.coinbase_prime.description',
+		descriptionKey: 'chain-tools.tools.coinbase_prime.description',
 		url: 'https://prime.coinbase.com',
 		icon: Shield,
 		category: 'cex',
@@ -353,7 +353,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'binance-institutional',
 		name: 'Binance Institutional',
-		descriptionKey: 'chain_tools.tools.binance_institutional.description',
+		descriptionKey: 'chain-tools.tools.binance_institutional.description',
 		url: 'https://www.binance.com/en/vip-institutional-services',
 		icon: Building2,
 		category: 'cex',
@@ -363,7 +363,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'galaxy-trading',
 		name: 'Galaxy Trading',
-		descriptionKey: 'chain_tools.tools.galaxy_trading.description',
+		descriptionKey: 'chain-tools.tools.galaxy_trading.description',
 		url: 'https://www.galaxy.com/trading',
 		icon: TrendingUp,
 		category: 'cex',
@@ -373,7 +373,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'cumberland-trading',
 		name: 'Cumberland',
-		descriptionKey: 'chain_tools.tools.cumberland_trading.description',
+		descriptionKey: 'chain-tools.tools.cumberland_trading.description',
 		url: 'https://cumberland.io',
 		icon: Building2,
 		category: 'cex',
@@ -384,7 +384,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'moonpay-ramp',
 		name: 'MoonPay',
-		descriptionKey: 'chain_tools.tools.moonpay_ramp.description',
+		descriptionKey: 'chain-tools.tools.moonpay_ramp.description',
 		url: 'https://www.moonpay.com',
 		icon: Coins,
 		category: 'cex',
@@ -394,7 +394,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'transak-ramp',
 		name: 'Transak',
-		descriptionKey: 'chain_tools.tools.transak_ramp.description',
+		descriptionKey: 'chain-tools.tools.transak_ramp.description',
 		url: 'https://transak.com',
 		icon: Coins,
 		category: 'cex',
@@ -404,7 +404,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'ramp-network',
 		name: 'Ramp Network',
-		descriptionKey: 'chain_tools.tools.ramp_network.description',
+		descriptionKey: 'chain-tools.tools.ramp_network.description',
 		url: 'https://ramp.network',
 		icon: Coins,
 		category: 'cex',
@@ -414,7 +414,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'banxa-ramp',
 		name: 'Banxa',
-		descriptionKey: 'chain_tools.tools.banxa_ramp.description',
+		descriptionKey: 'chain-tools.tools.banxa_ramp.description',
 		url: 'https://banxa.com',
 		icon: Coins,
 		category: 'cex',
@@ -425,7 +425,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'paxful-p2p',
 		name: 'Paxful',
-		descriptionKey: 'chain_tools.tools.paxful_p2p.description',
+		descriptionKey: 'chain-tools.tools.paxful_p2p.description',
 		url: 'https://paxful.com',
 		icon: Users,
 		category: 'cex',
@@ -435,7 +435,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'localbitcoins-p2p',
 		name: 'LocalBitcoins',
-		descriptionKey: 'chain_tools.tools.localbitcoins_p2p.description',
+		descriptionKey: 'chain-tools.tools.localbitcoins_p2p.description',
 		url: 'https://localbitcoins.com',
 		icon: Users,
 		category: 'cex',
@@ -445,7 +445,7 @@ export const cexTools: ExternalTool[] = [
 	{
 		id: 'noones-p2p',
 		name: 'Noones',
-		descriptionKey: 'chain_tools.tools.noones_p2p.description',
+		descriptionKey: 'chain-tools.tools.noones_p2p.description',
 		url: 'https://noones.com',
 		icon: Users,
 		category: 'cex',

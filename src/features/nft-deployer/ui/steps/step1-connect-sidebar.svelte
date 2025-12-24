@@ -1,26 +1,26 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	const i18n = useI18n();
 </script>
 
 <div class="step-sidebar">
-	<h3 class="sidebar-title">{i18n.t('tools.nft_deployer.step1.sidebar.title')}</h3>
+	<h3 class="sidebar-title">{i18n.t('nft-deployer.step1.sidebar.title')}</h3>
 	<p class="sidebar-description">
-		{i18n.t('tools.nft_deployer.step1.sidebar.description')}
+		{i18n.t('nft-deployer.step1.sidebar.description')}
 	</p>
 
 	<div class="info-section">
-		<h4 class="info-title">{i18n.t('tools.nft_deployer.step1.sidebar.requirements')}</h4>
+		<h4 class="info-title">{i18n.t('nft-deployer.step1.sidebar.requirements')}</h4>
 		<ul class="info-list">
-			<li>{i18n.t('tools.nft_deployer.step1.sidebar.requirement1')}</li>
-			<li>{i18n.t('tools.nft_deployer.step1.sidebar.requirement2')}</li>
-			<li>{i18n.t('tools.nft_deployer.step1.sidebar.requirement3')}</li>
+			<li>{i18n.t('nft-deployer.step1.sidebar.requirement1')}</li>
+			<li>{i18n.t('nft-deployer.step1.sidebar.requirement2')}</li>
+			<li>{i18n.t('nft-deployer.step1.sidebar.requirement3')}</li>
 		</ul>
 	</div>
 
 	<div class="info-section">
-		<h4 class="info-title">{i18n.t('tools.nft_deployer.step1.sidebar.supported_chains')}</h4>
+		<h4 class="info-title">{i18n.t('nft-deployer.step1.sidebar.supported_chains')}</h4>
 		<ul class="info-list">
 			<li>Ethereum</li>
 			<li>Polygon</li>

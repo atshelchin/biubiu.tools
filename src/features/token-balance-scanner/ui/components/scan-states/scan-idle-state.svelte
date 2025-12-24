@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { Play } from '@lucide/svelte';
 
 	interface Props {
@@ -19,25 +19,25 @@
 	<div class="scan-config">
 		<div class="config-item">
 			<span class="config-label"
-				>{i18n.t('tools.token_balance_scanner.step5.config.network') || 'Network'}:</span
+				>{i18n.t('token-balance-scanner.step5.config.network') || 'Network'}:</span
 			>
 			<span class="config-value">{networkName}</span>
 		</div>
 		<div class="config-item">
 			<span class="config-label"
-				>{i18n.t('tools.token_balance_scanner.step5.config.wallets') || 'Wallets'}:</span
+				>{i18n.t('token-balance-scanner.step5.config.wallets') || 'Wallets'}:</span
 			>
 			<span class="config-value">{walletCount}</span>
 		</div>
 		<div class="config-item">
 			<span class="config-label"
-				>{i18n.t('tools.token_balance_scanner.step5.config.tokens') || 'Tokens'}:</span
+				>{i18n.t('token-balance-scanner.step5.config.tokens') || 'Tokens'}:</span
 			>
 			<span class="config-value">{tokenCount}</span>
 		</div>
 		<div class="config-item">
 			<span class="config-label"
-				>{i18n.t('tools.token_balance_scanner.step5.config.rpcs') || 'RPC Endpoints'}:</span
+				>{i18n.t('token-balance-scanner.step5.config.rpcs') || 'RPC Endpoints'}:</span
 			>
 			<span class="config-value">{rpcCount}</span>
 		</div>
@@ -45,7 +45,7 @@
 
 	<button class="start-btn" onclick={onStartScan}>
 		<Play size={24} />
-		<span>{i18n.t('tools.token_balance_scanner.step5.start') || 'Start Scanning'}</span>
+		<span>{i18n.t('token-balance-scanner.step5.start') || 'Start Scanning'}</span>
 	</button>
 </div>
 

@@ -19,7 +19,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'immutable',
 		name: 'Immutable',
-		descriptionKey: 'chain_tools.tools.immutable.description',
+		descriptionKey: 'chain-tools.tools.immutable.description',
 		url: 'https://www.immutable.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -30,7 +30,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'ronin',
 		name: 'Ronin',
-		descriptionKey: 'chain_tools.tools.ronin.description',
+		descriptionKey: 'chain-tools.tools.ronin.description',
 		url: 'https://roninchain.com',
 		icon: Sword,
 		category: 'gamefi',
@@ -41,7 +41,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'treasure',
 		name: 'Treasure',
-		descriptionKey: 'chain_tools.tools.treasure.description',
+		descriptionKey: 'chain-tools.tools.treasure.description',
 		url: 'https://treasure.lol',
 		icon: Trophy,
 		category: 'gamefi',
@@ -52,7 +52,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'beam',
 		name: 'Beam',
-		descriptionKey: 'chain_tools.tools.beam.description',
+		descriptionKey: 'chain-tools.tools.beam.description',
 		url: 'https://www.beam.gg',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -63,7 +63,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'xai',
 		name: 'Xai',
-		descriptionKey: 'chain_tools.tools.xai.description',
+		descriptionKey: 'chain-tools.tools.xai.description',
 		url: 'https://xai.games',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -76,7 +76,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'stardust',
 		name: 'Stardust',
-		descriptionKey: 'chain_tools.tools.stardust.description',
+		descriptionKey: 'chain-tools.tools.stardust.description',
 		url: 'https://stardust.gg',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -87,7 +87,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'fractal',
 		name: 'Fractal',
-		descriptionKey: 'chain_tools.tools.fractal.description',
+		descriptionKey: 'chain-tools.tools.fractal.description',
 		url: 'https://www.fractal.is',
 		icon: Hexagon,
 		category: 'gamefi',
@@ -98,7 +98,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'elixir-games',
 		name: 'Elixir Games',
-		descriptionKey: 'chain_tools.tools.elixir_games.description',
+		descriptionKey: 'chain-tools.tools.elixir_games.description',
 		url: 'https://elixir.app',
 		icon: Joystick,
 		category: 'gamefi',
@@ -111,7 +111,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'ygg',
 		name: 'Yield Guild Games',
-		descriptionKey: 'chain_tools.tools.ygg.description',
+		descriptionKey: 'chain-tools.tools.ygg.description',
 		url: 'https://yieldguild.io',
 		icon: Users,
 		category: 'gamefi',
@@ -124,7 +124,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'loot8',
 		name: 'Loot8',
-		descriptionKey: 'chain_tools.tools.loot8.description',
+		descriptionKey: 'chain-tools.tools.loot8.description',
 		url: 'https://loot8.io',
 		icon: Box,
 		category: 'gamefi',
@@ -135,7 +135,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'loot',
 		name: 'Loot',
-		descriptionKey: 'chain_tools.tools.loot.description',
+		descriptionKey: 'chain-tools.tools.loot.description',
 		url: 'https://www.lootproject.com',
 		icon: Sword,
 		category: 'gamefi',
@@ -148,7 +148,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'iskra',
 		name: 'Iskra',
-		descriptionKey: 'chain_tools.tools.iskra.description',
+		descriptionKey: 'chain-tools.tools.iskra.description',
 		url: 'https://iskra.world',
 		icon: Flame,
 		category: 'gamefi',
@@ -159,7 +159,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'portal-gaming',
 		name: 'Portal',
-		descriptionKey: 'chain_tools.tools.portal_gaming.description',
+		descriptionKey: 'chain-tools.tools.portal_gaming.description',
 		url: 'https://portalgaming.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -171,7 +171,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'pixels',
 		name: 'Pixels',
-		descriptionKey: 'chain_tools.tools.pixels.description',
+		descriptionKey: 'chain-tools.tools.pixels.description',
 		url: 'https://www.pixels.xyz',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -182,7 +182,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'parallel',
 		name: 'Parallel',
-		descriptionKey: 'chain_tools.tools.parallel.description',
+		descriptionKey: 'chain-tools.tools.parallel.description',
 		url: 'https://parallel.life',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -193,7 +193,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'pirate-nation',
 		name: 'Pirate Nation',
-		descriptionKey: 'chain_tools.tools.pirate_nation.description',
+		descriptionKey: 'chain-tools.tools.pirate_nation.description',
 		url: 'https://piratenation.game',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -204,7 +204,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'illuvium',
 		name: 'Illuvium',
-		descriptionKey: 'chain_tools.tools.illuvium.description',
+		descriptionKey: 'chain-tools.tools.illuvium.description',
 		url: 'https://illuvium.io',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -215,7 +215,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'shrapnel',
 		name: 'Shrapnel',
-		descriptionKey: 'chain_tools.tools.shrapnel.description',
+		descriptionKey: 'chain-tools.tools.shrapnel.description',
 		url: 'https://www.shrapnel.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -226,7 +226,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'ev-io',
 		name: 'Ev.io',
-		descriptionKey: 'chain_tools.tools.ev_io.description',
+		descriptionKey: 'chain-tools.tools.ev_io.description',
 		url: 'https://ev.io',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -239,7 +239,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'ronin-gaming',
 		name: 'Ronin',
-		descriptionKey: 'chain_tools.tools.ronin_gaming.description',
+		descriptionKey: 'chain-tools.tools.ronin_gaming.description',
 		url: 'https://roninchain.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -250,7 +250,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'prime-gaming',
 		name: 'Prime Gaming',
-		descriptionKey: 'chain_tools.tools.prime_gaming.description',
+		descriptionKey: 'chain-tools.tools.prime_gaming.description',
 		url: 'https://echelon.io',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -261,7 +261,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'sui-gaming',
 		name: 'Sui Gaming',
-		descriptionKey: 'chain_tools.tools.sui_gaming.description',
+		descriptionKey: 'chain-tools.tools.sui_gaming.description',
 		url: 'https://sui.io/gaming',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -272,7 +272,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'fractal-gaming',
 		name: 'Fractal',
-		descriptionKey: 'chain_tools.tools.fractal_gaming.description',
+		descriptionKey: 'chain-tools.tools.fractal_gaming.description',
 		url: 'https://fractal.is',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -283,7 +283,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'playnance',
 		name: 'Playnance',
-		descriptionKey: 'chain_tools.tools.playnance.description',
+		descriptionKey: 'chain-tools.tools.playnance.description',
 		url: 'https://playnance.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -293,7 +293,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'myria-gaming',
 		name: 'Myria',
-		descriptionKey: 'chain_tools.tools.myria_gaming.description',
+		descriptionKey: 'chain-tools.tools.myria_gaming.description',
 		url: 'https://myria.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -304,7 +304,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'oasys-gaming',
 		name: 'Oasys',
-		descriptionKey: 'chain_tools.tools.oasys_gaming.description',
+		descriptionKey: 'chain-tools.tools.oasys_gaming.description',
 		url: 'https://oasys.games',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -315,7 +315,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'xborg-gaming',
 		name: 'XBorg',
-		descriptionKey: 'chain_tools.tools.xborg_gaming.description',
+		descriptionKey: 'chain-tools.tools.xborg_gaming.description',
 		url: 'https://xborg.com',
 		icon: Trophy,
 		category: 'gamefi',
@@ -325,7 +325,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'beam-gaming',
 		name: 'Beam',
-		descriptionKey: 'chain_tools.tools.beam_gaming.description',
+		descriptionKey: 'chain-tools.tools.beam_gaming.description',
 		url: 'https://beam.gg',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -338,7 +338,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'gala-games',
 		name: 'Gala Games',
-		descriptionKey: 'chain_tools.tools.gala_games.description',
+		descriptionKey: 'chain-tools.tools.gala_games.description',
 		url: 'https://gala.games',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -349,7 +349,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'sandbox',
 		name: 'The Sandbox',
-		descriptionKey: 'chain_tools.tools.sandbox.description',
+		descriptionKey: 'chain-tools.tools.sandbox.description',
 		url: 'https://www.sandbox.game',
 		icon: Box,
 		category: 'gamefi',
@@ -360,7 +360,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'decentraland',
 		name: 'Decentraland',
-		descriptionKey: 'chain_tools.tools.decentraland.description',
+		descriptionKey: 'chain-tools.tools.decentraland.description',
 		url: 'https://decentraland.org',
 		icon: Box,
 		category: 'gamefi',
@@ -371,7 +371,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'axie-infinity',
 		name: 'Axie Infinity',
-		descriptionKey: 'chain_tools.tools.axie_infinity.description',
+		descriptionKey: 'chain-tools.tools.axie_infinity.description',
 		url: 'https://axieinfinity.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -382,7 +382,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'gods-unchained',
 		name: 'Gods Unchained',
-		descriptionKey: 'chain_tools.tools.gods_unchained.description',
+		descriptionKey: 'chain-tools.tools.gods_unchained.description',
 		url: 'https://godsunchained.com',
 		icon: Sword,
 		category: 'gamefi',
@@ -393,7 +393,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'bigtime',
 		name: 'Big Time',
-		descriptionKey: 'chain_tools.tools.bigtime.description',
+		descriptionKey: 'chain-tools.tools.bigtime.description',
 		url: 'https://bigtime.gg',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -404,7 +404,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'guild-of-guardians',
 		name: 'Guild of Guardians',
-		descriptionKey: 'chain_tools.tools.guild_of_guardians.description',
+		descriptionKey: 'chain-tools.tools.guild_of_guardians.description',
 		url: 'https://guildofguardians.com',
 		icon: Sword,
 		category: 'gamefi',
@@ -415,7 +415,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'ember-sword',
 		name: 'Ember Sword',
-		descriptionKey: 'chain_tools.tools.ember_sword.description',
+		descriptionKey: 'chain-tools.tools.ember_sword.description',
 		url: 'https://embersword.com',
 		icon: Sword,
 		category: 'gamefi',
@@ -426,7 +426,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'star-atlas',
 		name: 'Star Atlas',
-		descriptionKey: 'chain_tools.tools.star_atlas.description',
+		descriptionKey: 'chain-tools.tools.star_atlas.description',
 		url: 'https://staratlas.com',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -437,7 +437,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'splinterlands',
 		name: 'Splinterlands',
-		descriptionKey: 'chain_tools.tools.splinterlands.description',
+		descriptionKey: 'chain-tools.tools.splinterlands.description',
 		url: 'https://splinterlands.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -449,7 +449,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'stepn',
 		name: 'STEPN',
-		descriptionKey: 'chain_tools.tools.stepn.description',
+		descriptionKey: 'chain-tools.tools.stepn.description',
 		url: 'https://stepn.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -460,7 +460,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'hero-of-mavia',
 		name: 'Heroes of Mavia',
-		descriptionKey: 'chain_tools.tools.hero_of_mavia.description',
+		descriptionKey: 'chain-tools.tools.hero_of_mavia.description',
 		url: 'https://mavia.com',
 		icon: Sword,
 		category: 'gamefi',
@@ -471,7 +471,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'night-crows',
 		name: 'Night Crows',
-		descriptionKey: 'chain_tools.tools.night_crows.description',
+		descriptionKey: 'chain-tools.tools.night_crows.description',
 		url: 'https://nightcrows.com',
 		icon: Sword,
 		category: 'gamefi',
@@ -482,7 +482,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'mir4',
 		name: 'MIR4',
-		descriptionKey: 'chain_tools.tools.mir4.description',
+		descriptionKey: 'chain-tools.tools.mir4.description',
 		url: 'https://mir4global.com',
 		icon: Sword,
 		category: 'gamefi',
@@ -493,7 +493,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'wildcard',
 		name: 'Wildcard',
-		descriptionKey: 'chain_tools.tools.wildcard.description',
+		descriptionKey: 'chain-tools.tools.wildcard.description',
 		url: 'https://playwildcard.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -504,7 +504,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'off-the-grid',
 		name: 'Off the Grid',
-		descriptionKey: 'chain_tools.tools.off_the_grid.description',
+		descriptionKey: 'chain-tools.tools.off_the_grid.description',
 		url: 'https://offthegrid.gg',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -515,7 +515,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'maple-story-universe',
 		name: 'MapleStory Universe',
-		descriptionKey: 'chain_tools.tools.maple_story_universe.description',
+		descriptionKey: 'chain-tools.tools.maple_story_universe.description',
 		url: 'https://msu.io',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -526,7 +526,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'nyan-heroes',
 		name: 'Nyan Heroes',
-		descriptionKey: 'chain_tools.tools.nyan_heroes.description',
+		descriptionKey: 'chain-tools.tools.nyan_heroes.description',
 		url: 'https://nyanheroes.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -537,7 +537,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'aurory',
 		name: 'Aurory',
-		descriptionKey: 'chain_tools.tools.aurory.description',
+		descriptionKey: 'chain-tools.tools.aurory.description',
 		url: 'https://aurory.io',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -548,7 +548,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'phantom-galaxies',
 		name: 'Phantom Galaxies',
-		descriptionKey: 'chain_tools.tools.phantom_galaxies.description',
+		descriptionKey: 'chain-tools.tools.phantom_galaxies.description',
 		url: 'https://phantomgalaxies.com',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -559,7 +559,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'crypto-unicorns',
 		name: 'Crypto Unicorns',
-		descriptionKey: 'chain_tools.tools.crypto_unicorns.description',
+		descriptionKey: 'chain-tools.tools.crypto_unicorns.description',
 		url: 'https://cryptounicorns.fun',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -570,7 +570,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'legends-of-venari',
 		name: 'Legends of Venari',
-		descriptionKey: 'chain_tools.tools.legends_of_venari.description',
+		descriptionKey: 'chain-tools.tools.legends_of_venari.description',
 		url: 'https://legendsofvenari.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -581,7 +581,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'blocklords',
 		name: 'BLOCKLORDS',
-		descriptionKey: 'chain_tools.tools.blocklords.description',
+		descriptionKey: 'chain-tools.tools.blocklords.description',
 		url: 'https://blocklords.com',
 		icon: Sword,
 		category: 'gamefi',
@@ -592,7 +592,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'planet-ix',
 		name: 'Planet IX',
-		descriptionKey: 'chain_tools.tools.planet_ix.description',
+		descriptionKey: 'chain-tools.tools.planet_ix.description',
 		url: 'https://planetix.com',
 		icon: Box,
 		category: 'gamefi',
@@ -603,7 +603,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'sweat-economy',
 		name: 'Sweat Economy',
-		descriptionKey: 'chain_tools.tools.sweat_economy.description',
+		descriptionKey: 'chain-tools.tools.sweat_economy.description',
 		url: 'https://sweateconomy.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -614,7 +614,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'superior',
 		name: 'Superior',
-		descriptionKey: 'chain_tools.tools.superior.description',
+		descriptionKey: 'chain-tools.tools.superior.description',
 		url: 'https://games.gala.com/games/superior',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -625,7 +625,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'champions-ascension',
 		name: 'Champions Ascension',
-		descriptionKey: 'chain_tools.tools.champions_ascension.description',
+		descriptionKey: 'chain-tools.tools.champions_ascension.description',
 		url: 'https://championsascension.com',
 		icon: Sword,
 		category: 'gamefi',
@@ -638,7 +638,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'defi-kingdoms',
 		name: 'DeFi Kingdoms',
-		descriptionKey: 'chain_tools.tools.defi_kingdoms.description',
+		descriptionKey: 'chain-tools.tools.defi_kingdoms.description',
 		url: 'https://defikingdoms.com',
 		icon: Sword,
 		category: 'gamefi',
@@ -649,7 +649,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'skyweaver',
 		name: 'Skyweaver',
-		descriptionKey: 'chain_tools.tools.skyweaver.description',
+		descriptionKey: 'chain-tools.tools.skyweaver.description',
 		url: 'https://www.skyweaver.net',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -660,7 +660,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'cross-the-ages',
 		name: 'Cross The Ages',
-		descriptionKey: 'chain_tools.tools.cross_the_ages.description',
+		descriptionKey: 'chain-tools.tools.cross_the_ages.description',
 		url: 'https://crosstheages.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -671,7 +671,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'treeverse',
 		name: 'Treeverse',
-		descriptionKey: 'chain_tools.tools.treeverse.description',
+		descriptionKey: 'chain-tools.tools.treeverse.description',
 		url: 'https://www.treeverse.net',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -682,7 +682,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'metalcore',
 		name: 'MetalCore',
-		descriptionKey: 'chain_tools.tools.metalcore.description',
+		descriptionKey: 'chain-tools.tools.metalcore.description',
 		url: 'https://metalcore.gg',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -693,7 +693,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'echoes-of-empire',
 		name: 'Echoes of Empire',
-		descriptionKey: 'chain_tools.tools.echoes_of_empire.description',
+		descriptionKey: 'chain-tools.tools.echoes_of_empire.description',
 		url: 'https://games.gala.com/games/echoes-of-empire',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -704,7 +704,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'spider-tanks',
 		name: 'Spider Tanks',
-		descriptionKey: 'chain_tools.tools.spider_tanks.description',
+		descriptionKey: 'chain-tools.tools.spider_tanks.description',
 		url: 'https://www.spidertanks.game',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -715,7 +715,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'mirandus',
 		name: 'Mirandus',
-		descriptionKey: 'chain_tools.tools.mirandus.description',
+		descriptionKey: 'chain-tools.tools.mirandus.description',
 		url: 'https://app.gala.games/games/mirandus',
 		icon: Sword,
 		category: 'gamefi',
@@ -726,7 +726,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'town-star',
 		name: 'Town Star',
-		descriptionKey: 'chain_tools.tools.town_star.description',
+		descriptionKey: 'chain-tools.tools.town_star.description',
 		url: 'https://app.gala.games/games/town-star',
 		icon: Box,
 		category: 'gamefi',
@@ -737,7 +737,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'voxie-tactics',
 		name: 'Voxie Tactics',
-		descriptionKey: 'chain_tools.tools.voxie_tactics.description',
+		descriptionKey: 'chain-tools.tools.voxie_tactics.description',
 		url: 'https://voxies.io',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -748,7 +748,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'camelot-unchained',
 		name: 'Camelot Unchained',
-		descriptionKey: 'chain_tools.tools.camelot_unchained.description',
+		descriptionKey: 'chain-tools.tools.camelot_unchained.description',
 		url: 'https://camelotunchained.com',
 		icon: Sword,
 		category: 'gamefi',
@@ -759,7 +759,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'aavegotchi',
 		name: 'Aavegotchi',
-		descriptionKey: 'chain_tools.tools.aavegotchi.description',
+		descriptionKey: 'chain-tools.tools.aavegotchi.description',
 		url: 'https://aavegotchi.com',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -770,7 +770,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'cometh',
 		name: 'Cometh',
-		descriptionKey: 'chain_tools.tools.cometh.description',
+		descriptionKey: 'chain-tools.tools.cometh.description',
 		url: 'https://www.cometh.io',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -781,7 +781,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'wolf-game',
 		name: 'Wolf Game',
-		descriptionKey: 'chain_tools.tools.wolf_game.description',
+		descriptionKey: 'chain-tools.tools.wolf_game.description',
 		url: 'https://wolf.game',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -792,7 +792,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'forgotten-runiverse',
 		name: 'Forgotten Runiverse',
-		descriptionKey: 'chain_tools.tools.forgotten_runiverse.description',
+		descriptionKey: 'chain-tools.tools.forgotten_runiverse.description',
 		url: 'https://www.forgottenruniverse.com',
 		icon: Sword,
 		category: 'gamefi',
@@ -803,7 +803,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'crypto-raiders',
 		name: 'Crypto Raiders',
-		descriptionKey: 'chain_tools.tools.crypto_raiders.description',
+		descriptionKey: 'chain-tools.tools.crypto_raiders.description',
 		url: 'https://cryptoraiders.xyz',
 		icon: Sword,
 		category: 'gamefi',
@@ -814,7 +814,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'the-beacon',
 		name: 'The Beacon',
-		descriptionKey: 'chain_tools.tools.the_beacon.description',
+		descriptionKey: 'chain-tools.tools.the_beacon.description',
 		url: 'https://thebeacon.gg',
 		icon: Sword,
 		category: 'gamefi',
@@ -825,7 +825,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'realm',
 		name: 'Realm',
-		descriptionKey: 'chain_tools.tools.realm.description',
+		descriptionKey: 'chain-tools.tools.realm.description',
 		url: 'https://www.realm.art',
 		icon: Box,
 		category: 'gamefi',
@@ -836,7 +836,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'mobox',
 		name: 'MOBOX',
-		descriptionKey: 'chain_tools.tools.mobox.description',
+		descriptionKey: 'chain-tools.tools.mobox.description',
 		url: 'https://www.mobox.io',
 		icon: Box,
 		category: 'gamefi',
@@ -847,7 +847,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'alien-worlds',
 		name: 'Alien Worlds',
-		descriptionKey: 'chain_tools.tools.alien_worlds.description',
+		descriptionKey: 'chain-tools.tools.alien_worlds.description',
 		url: 'https://alienworlds.io',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -858,7 +858,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'farmers-world',
 		name: 'Farmers World',
-		descriptionKey: 'chain_tools.tools.farmers_world.description',
+		descriptionKey: 'chain-tools.tools.farmers_world.description',
 		url: 'https://farmersworld.io',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -869,7 +869,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'upland',
 		name: 'Upland',
-		descriptionKey: 'chain_tools.tools.upland.description',
+		descriptionKey: 'chain-tools.tools.upland.description',
 		url: 'https://www.upland.me',
 		icon: Box,
 		category: 'gamefi',
@@ -880,7 +880,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'genopets',
 		name: 'Genopets',
-		descriptionKey: 'chain_tools.tools.genopets.description',
+		descriptionKey: 'chain-tools.tools.genopets.description',
 		url: 'https://www.genopets.me',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -891,7 +891,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'thetan-arena',
 		name: 'Thetan Arena',
-		descriptionKey: 'chain_tools.tools.thetan_arena.description',
+		descriptionKey: 'chain-tools.tools.thetan_arena.description',
 		url: 'https://thetanarena.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -902,7 +902,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'cyball',
 		name: 'CyBall',
-		descriptionKey: 'chain_tools.tools.cyball.description',
+		descriptionKey: 'chain-tools.tools.cyball.description',
 		url: 'https://cyball.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -913,7 +913,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'league-of-kingdoms',
 		name: 'League of Kingdoms',
-		descriptionKey: 'chain_tools.tools.league_of_kingdoms.description',
+		descriptionKey: 'chain-tools.tools.league_of_kingdoms.description',
 		url: 'https://www.leagueofkingdoms.com',
 		icon: Sword,
 		category: 'gamefi',
@@ -924,7 +924,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'revv-racing',
 		name: 'REVV Racing',
-		descriptionKey: 'chain_tools.tools.revv_racing.description',
+		descriptionKey: 'chain-tools.tools.revv_racing.description',
 		url: 'https://revvracing.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -935,7 +935,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'riot-racers',
 		name: 'Riot Racers',
-		descriptionKey: 'chain_tools.tools.riot_racers.description',
+		descriptionKey: 'chain-tools.tools.riot_racers.description',
 		url: 'https://riotracers.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -946,7 +946,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'zed-run',
 		name: 'ZED RUN',
-		descriptionKey: 'chain_tools.tools.zed_run.description',
+		descriptionKey: 'chain-tools.tools.zed_run.description',
 		url: 'https://zed.run',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -957,7 +957,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'pegaxy',
 		name: 'Pegaxy',
-		descriptionKey: 'chain_tools.tools.pegaxy.description',
+		descriptionKey: 'chain-tools.tools.pegaxy.description',
 		url: 'https://pegaxy.io',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -968,7 +968,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'derby-stars',
 		name: 'Derby Stars',
-		descriptionKey: 'chain_tools.tools.derby_stars.description',
+		descriptionKey: 'chain-tools.tools.derby_stars.description',
 		url: 'https://derbystars.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -979,7 +979,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'battle-of-guardians',
 		name: 'Battle of Guardians',
-		descriptionKey: 'chain_tools.tools.battle_of_guardians.description',
+		descriptionKey: 'chain-tools.tools.battle_of_guardians.description',
 		url: 'https://battleofguardians.com',
 		icon: Sword,
 		category: 'gamefi',
@@ -990,7 +990,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'the-machines-arena',
 		name: 'The Machines Arena',
-		descriptionKey: 'chain_tools.tools.the_machines_arena.description',
+		descriptionKey: 'chain-tools.tools.the_machines_arena.description',
 		url: 'https://themachinesarena.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1001,7 +1001,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'apeiron',
 		name: 'Apeiron',
-		descriptionKey: 'chain_tools.tools.apeiron.description',
+		descriptionKey: 'chain-tools.tools.apeiron.description',
 		url: 'https://apeironnft.com',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -1012,7 +1012,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'sipher',
 		name: 'Sipher',
-		descriptionKey: 'chain_tools.tools.sipher.description',
+		descriptionKey: 'chain-tools.tools.sipher.description',
 		url: 'https://playsipher.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1023,7 +1023,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'planet-quest',
 		name: 'PlanetQuest',
-		descriptionKey: 'chain_tools.tools.planet_quest.description',
+		descriptionKey: 'chain-tools.tools.planet_quest.description',
 		url: 'https://planetquest.io',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -1034,7 +1034,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'honeyland',
 		name: 'Honeyland',
-		descriptionKey: 'chain_tools.tools.honeyland.description',
+		descriptionKey: 'chain-tools.tools.honeyland.description',
 		url: 'https://honey.land',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1045,7 +1045,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'rainmaker',
 		name: 'Rainmaker Games',
-		descriptionKey: 'chain_tools.tools.rainmaker.description',
+		descriptionKey: 'chain-tools.tools.rainmaker.description',
 		url: 'https://rainmaker.games',
 		icon: Trophy,
 		category: 'gamefi',
@@ -1055,7 +1055,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'gaimin',
 		name: 'GAIMIN',
-		descriptionKey: 'chain_tools.tools.gaimin.description',
+		descriptionKey: 'chain-tools.tools.gaimin.description',
 		url: 'https://gaimin.io',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1065,7 +1065,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'ready-player-me',
 		name: 'Ready Player Me',
-		descriptionKey: 'chain_tools.tools.ready_player_me.description',
+		descriptionKey: 'chain-tools.tools.ready_player_me.description',
 		url: 'https://readyplayer.me',
 		icon: Users,
 		category: 'gamefi',
@@ -1075,7 +1075,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'momento',
 		name: 'Momento',
-		descriptionKey: 'chain_tools.tools.momento.description',
+		descriptionKey: 'chain-tools.tools.momento.description',
 		url: 'https://momento.games',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1086,7 +1086,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'catizen',
 		name: 'Catizen',
-		descriptionKey: 'chain_tools.tools.catizen.description',
+		descriptionKey: 'chain-tools.tools.catizen.description',
 		url: 'https://catizen.ai',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1097,7 +1097,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'hamster-kombat',
 		name: 'Hamster Kombat',
-		descriptionKey: 'chain_tools.tools.hamster_kombat.description',
+		descriptionKey: 'chain-tools.tools.hamster_kombat.description',
 		url: 'https://hamsterkombat.io',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1108,7 +1108,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'notcoin',
 		name: 'Notcoin',
-		descriptionKey: 'chain_tools.tools.notcoin.description',
+		descriptionKey: 'chain-tools.tools.notcoin.description',
 		url: 'https://notcoin.tg',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1119,7 +1119,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'blum',
 		name: 'Blum',
-		descriptionKey: 'chain_tools.tools.blum.description',
+		descriptionKey: 'chain-tools.tools.blum.description',
 		url: 'https://blum.io',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1130,7 +1130,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'yescoin',
 		name: 'Yescoin',
-		descriptionKey: 'chain_tools.tools.yescoin.description',
+		descriptionKey: 'chain-tools.tools.yescoin.description',
 		url: 'https://www.yescoin.gold',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1141,7 +1141,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'dogs',
 		name: 'DOGS',
-		descriptionKey: 'chain_tools.tools.dogs.description',
+		descriptionKey: 'chain-tools.tools.dogs.description',
 		url: 'https://dogs.community',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1152,7 +1152,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'pixelverse',
 		name: 'Pixelverse',
-		descriptionKey: 'chain_tools.tools.pixelverse.description',
+		descriptionKey: 'chain-tools.tools.pixelverse.description',
 		url: 'https://pixelverse.xyz',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1163,7 +1163,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'meme-fi',
 		name: 'MemeFi',
-		descriptionKey: 'chain_tools.tools.meme_fi.description',
+		descriptionKey: 'chain-tools.tools.meme_fi.description',
 		url: 'https://memefi.club',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1174,7 +1174,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'major',
 		name: 'Major',
-		descriptionKey: 'chain_tools.tools.major.description',
+		descriptionKey: 'chain-tools.tools.major.description',
 		url: 'https://major.bot',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1187,7 +1187,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'fusionist',
 		name: 'Fusionist (ACE)',
-		descriptionKey: 'chain_tools.tools.fusionist.description',
+		descriptionKey: 'chain-tools.tools.fusionist.description',
 		url: 'https://www.fusionist.io',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1198,7 +1198,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'xterio',
 		name: 'Xterio',
-		descriptionKey: 'chain_tools.tools.xterio.description',
+		descriptionKey: 'chain-tools.tools.xterio.description',
 		url: 'https://xter.io',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1209,7 +1209,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'ultiverse',
 		name: 'Ultiverse',
-		descriptionKey: 'chain_tools.tools.ultiverse.description',
+		descriptionKey: 'chain-tools.tools.ultiverse.description',
 		url: 'https://www.ultiverse.io',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -1220,7 +1220,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'pixelmon',
 		name: 'Pixelmon',
-		descriptionKey: 'chain_tools.tools.pixelmon.description',
+		descriptionKey: 'chain-tools.tools.pixelmon.description',
 		url: 'https://www.pixelmon.ai',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -1231,7 +1231,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'my-pet-hooligan',
 		name: 'My Pet Hooligan',
-		descriptionKey: 'chain_tools.tools.my_pet_hooligan.description',
+		descriptionKey: 'chain-tools.tools.my_pet_hooligan.description',
 		url: 'https://mypethooligan.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1242,7 +1242,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'nakamoto-games',
 		name: 'Nakamoto Games',
-		descriptionKey: 'chain_tools.tools.nakamoto_games.description',
+		descriptionKey: 'chain-tools.tools.nakamoto_games.description',
 		url: 'https://nakamoto.games',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1253,7 +1253,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'gmt-stepn',
 		name: 'GMT (STEPN)',
-		descriptionKey: 'chain_tools.tools.gmt_stepn.description',
+		descriptionKey: 'chain-tools.tools.gmt_stepn.description',
 		url: 'https://www.fsl.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1264,7 +1264,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'magic-square',
 		name: 'Magic Square',
-		descriptionKey: 'chain_tools.tools.magic_square.description',
+		descriptionKey: 'chain-tools.tools.magic_square.description',
 		url: 'https://magicsquare.io',
 		icon: Box,
 		category: 'gamefi',
@@ -1275,7 +1275,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'age-of-dino',
 		name: 'Age of Dino',
-		descriptionKey: 'chain_tools.tools.age_of_dino.description',
+		descriptionKey: 'chain-tools.tools.age_of_dino.description',
 		url: 'https://www.ageofdino.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1286,7 +1286,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'xpet',
 		name: 'xPet',
-		descriptionKey: 'chain_tools.tools.xpet.description',
+		descriptionKey: 'chain-tools.tools.xpet.description',
 		url: 'https://xpet.tech',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -1297,7 +1297,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'carv',
 		name: 'CARV',
-		descriptionKey: 'chain_tools.tools.carv.description',
+		descriptionKey: 'chain-tools.tools.carv.description',
 		url: 'https://carv.io',
 		icon: Trophy,
 		category: 'gamefi',
@@ -1308,7 +1308,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'gunz',
 		name: 'GunZ (GUN)',
-		descriptionKey: 'chain_tools.tools.gunz.description',
+		descriptionKey: 'chain-tools.tools.gunz.description',
 		url: 'https://gunzilla.io',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1319,7 +1319,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'bnb-heroes',
 		name: 'BNB Heroes',
-		descriptionKey: 'chain_tools.tools.bnb_heroes.description',
+		descriptionKey: 'chain-tools.tools.bnb_heroes.description',
 		url: 'https://bnbheroes.io',
 		icon: Sword,
 		category: 'gamefi',
@@ -1330,7 +1330,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'elfin-games',
 		name: 'Elfin Games',
-		descriptionKey: 'chain_tools.tools.elfin_games.description',
+		descriptionKey: 'chain-tools.tools.elfin_games.description',
 		url: 'https://elfin.games',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1341,7 +1341,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'lumiterra',
 		name: 'Lumiterra',
-		descriptionKey: 'chain_tools.tools.lumiterra.description',
+		descriptionKey: 'chain-tools.tools.lumiterra.description',
 		url: 'https://lumiterra.net',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -1352,7 +1352,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'games-for-a-living',
 		name: 'Games for a Living',
-		descriptionKey: 'chain_tools.tools.games_for_a_living.description',
+		descriptionKey: 'chain-tools.tools.games_for_a_living.description',
 		url: 'https://gamesforaliving.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1363,7 +1363,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'seedify',
 		name: 'Seedify',
-		descriptionKey: 'chain_tools.tools.seedify.description',
+		descriptionKey: 'chain-tools.tools.seedify.description',
 		url: 'https://seedify.fund',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -1374,7 +1374,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'gamestarter',
 		name: 'GameStarter',
-		descriptionKey: 'chain_tools.tools.gamestarter.description',
+		descriptionKey: 'chain-tools.tools.gamestarter.description',
 		url: 'https://gamestarter.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1385,7 +1385,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'gamegpt',
 		name: 'GameGPT',
-		descriptionKey: 'chain_tools.tools.gamegpt.description',
+		descriptionKey: 'chain-tools.tools.gamegpt.description',
 		url: 'https://gamegpt.co',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -1395,7 +1395,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'wagmi-games',
 		name: 'WAGMI Games',
-		descriptionKey: 'chain_tools.tools.wagmi_games.description',
+		descriptionKey: 'chain-tools.tools.wagmi_games.description',
 		url: 'https://wagmigames.io',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1406,7 +1406,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'sidus-heroes',
 		name: 'SIDUS HEROES',
-		descriptionKey: 'chain_tools.tools.sidus_heroes.description',
+		descriptionKey: 'chain-tools.tools.sidus_heroes.description',
 		url: 'https://sidusheroes.com',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -1417,7 +1417,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'kryptomon',
 		name: 'Kryptomon',
-		descriptionKey: 'chain_tools.tools.kryptomon.description',
+		descriptionKey: 'chain-tools.tools.kryptomon.description',
 		url: 'https://kryptomon.co',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -1428,7 +1428,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'chain-guardians',
 		name: 'Chain Guardians',
-		descriptionKey: 'chain_tools.tools.chain_guardians.description',
+		descriptionKey: 'chain-tools.tools.chain_guardians.description',
 		url: 'https://chainguardians.io',
 		icon: Sword,
 		category: 'gamefi',
@@ -1439,7 +1439,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'revomon',
 		name: 'Revomon',
-		descriptionKey: 'chain_tools.tools.revomon.description',
+		descriptionKey: 'chain-tools.tools.revomon.description',
 		url: 'https://revomon.io',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -1450,7 +1450,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'meta-apes',
 		name: 'Meta Apes',
-		descriptionKey: 'chain_tools.tools.meta_apes.description',
+		descriptionKey: 'chain-tools.tools.meta_apes.description',
 		url: 'https://metaapesgame.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1461,7 +1461,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'second-live',
 		name: 'SecondLive',
-		descriptionKey: 'chain_tools.tools.second_live.description',
+		descriptionKey: 'chain-tools.tools.second_live.description',
 		url: 'https://secondlive.world',
 		icon: Users,
 		category: 'gamefi',
@@ -1472,7 +1472,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'tiny-world',
 		name: 'Tiny World',
-		descriptionKey: 'chain_tools.tools.tiny_world.description',
+		descriptionKey: 'chain-tools.tools.tiny_world.description',
 		url: 'https://tinyworlds.io',
 		icon: Box,
 		category: 'gamefi',
@@ -1483,7 +1483,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'era7',
 		name: 'Era7: Game of Truth',
-		descriptionKey: 'chain_tools.tools.era7.description',
+		descriptionKey: 'chain-tools.tools.era7.description',
 		url: 'https://era7.io',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1494,7 +1494,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'cryptoblades',
 		name: 'CryptoBlades',
-		descriptionKey: 'chain_tools.tools.cryptoblades.description',
+		descriptionKey: 'chain-tools.tools.cryptoblades.description',
 		url: 'https://cryptoblades.io',
 		icon: Sword,
 		category: 'gamefi',
@@ -1505,7 +1505,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'radio-caca',
 		name: 'Radio Caca (RACA)',
-		descriptionKey: 'chain_tools.tools.radio_caca.description',
+		descriptionKey: 'chain-tools.tools.radio_caca.description',
 		url: 'https://www.radiocaca.com',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -1516,7 +1516,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'binary-x',
 		name: 'BinaryX',
-		descriptionKey: 'chain_tools.tools.binary_x.description',
+		descriptionKey: 'chain-tools.tools.binary_x.description',
 		url: 'https://www.binaryx.pro',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1527,7 +1527,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'mines-of-dalarnia',
 		name: 'Mines of Dalarnia',
-		descriptionKey: 'chain_tools.tools.mines_of_dalarnia.description',
+		descriptionKey: 'chain-tools.tools.mines_of_dalarnia.description',
 		url: 'https://www.minesofdalarnia.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1538,7 +1538,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'moland-dao',
 		name: 'Moland DAO',
-		descriptionKey: 'chain_tools.tools.moland_dao.description',
+		descriptionKey: 'chain-tools.tools.moland_dao.description',
 		url: 'https://mola.land',
 		icon: Box,
 		category: 'gamefi',
@@ -1549,7 +1549,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'derace',
 		name: 'DeRace',
-		descriptionKey: 'chain_tools.tools.derace.description',
+		descriptionKey: 'chain-tools.tools.derace.description',
 		url: 'https://derace.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1560,7 +1560,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'superverse',
 		name: 'SuperVerse',
-		descriptionKey: 'chain_tools.tools.superverse.description',
+		descriptionKey: 'chain-tools.tools.superverse.description',
 		url: 'https://superverse.co',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -1571,7 +1571,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'karrat',
 		name: 'Karrat',
-		descriptionKey: 'chain_tools.tools.karrat.description',
+		descriptionKey: 'chain-tools.tools.karrat.description',
 		url: 'https://karratcoin.com',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1582,7 +1582,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'portal-fantasy',
 		name: 'Portal Fantasy',
-		descriptionKey: 'chain_tools.tools.portal_fantasy.description',
+		descriptionKey: 'chain-tools.tools.portal_fantasy.description',
 		url: 'https://portalfantasy.io',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -1593,7 +1593,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'overworld',
 		name: 'Overworld',
-		descriptionKey: 'chain_tools.tools.overworld.description',
+		descriptionKey: 'chain-tools.tools.overworld.description',
 		url: 'https://playoverworld.com',
 		icon: Sword,
 		category: 'gamefi',
@@ -1604,7 +1604,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'mighty-action-heroes',
 		name: 'Mighty Action Heroes',
-		descriptionKey: 'chain_tools.tools.mighty_action_heroes.description',
+		descriptionKey: 'chain-tools.tools.mighty_action_heroes.description',
 		url: 'https://mightynet.xyz',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1615,7 +1615,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'meta-world',
 		name: 'Meta World: My City',
-		descriptionKey: 'chain_tools.tools.meta_world.description',
+		descriptionKey: 'chain-tools.tools.meta_world.description',
 		url: 'https://metaworldnft.io',
 		icon: Box,
 		category: 'gamefi',
@@ -1626,7 +1626,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'syn-city',
 		name: 'SYN CITY',
-		descriptionKey: 'chain_tools.tools.syn_city.description',
+		descriptionKey: 'chain-tools.tools.syn_city.description',
 		url: 'https://syn.city',
 		icon: Gamepad2,
 		category: 'gamefi',
@@ -1637,7 +1637,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'imperium-empires',
 		name: 'Imperium Empires',
-		descriptionKey: 'chain_tools.tools.imperium_empires.description',
+		descriptionKey: 'chain-tools.tools.imperium_empires.description',
 		url: 'https://imperiumempires.com',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -1648,7 +1648,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'monsta-infinite',
 		name: 'Monsta Infinite',
-		descriptionKey: 'chain_tools.tools.monsta_infinite.description',
+		descriptionKey: 'chain-tools.tools.monsta_infinite.description',
 		url: 'https://monstainfinite.com',
 		icon: Sparkles,
 		category: 'gamefi',
@@ -1659,7 +1659,7 @@ export const gamefiTools: ExternalTool[] = [
 	{
 		id: 'drunk-robots',
 		name: 'Drunk Robots',
-		descriptionKey: 'chain_tools.tools.drunk_robots.description',
+		descriptionKey: 'chain-tools.tools.drunk_robots.description',
 		url: 'https://drunkrobots.io',
 		icon: Gamepad2,
 		category: 'gamefi',

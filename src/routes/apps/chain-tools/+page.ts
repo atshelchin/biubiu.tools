@@ -1,34 +1,28 @@
 import type { PageLoad } from './$types';
 import { createWebAppData } from '$lib/utils/structured-data';
-import { I18n } from '@shelchin/i18n';
-import { extractLocaleFromPathname } from '@shelchin/i18n/utils';
-import en from '../../../i18n/locales/en.json';
-import zh from '../../../i18n/locales/zh.json';
-import type { PackageLocales } from '@shelchin/i18n';
+import { createServerT } from '$i18n/server';
+import { extractLocaleFromPathname } from '$utils/common';
 
 export const load: PageLoad = ({ url }) => {
 	// Extract locale from URL pathname
 	const locale = extractLocaleFromPathname(url.pathname) || 'en';
 
-	// Create i18n instance for this request
-	const locales = { en, zh } as unknown as PackageLocales;
-	const i18n = new I18n(locale);
-	i18n.register('__default__', locales);
-	const t = i18n.t.bind(i18n);
+	// Create translation function for this request
+	const t = createServerT(locale);
 
 	const canonical = url.origin + url.pathname;
 	const image = `${url.origin}/og-chain-tools.png`;
 
 	// Generate structured data
 	const webAppData = createWebAppData({
-		name: t('chain_tools.seo.webapp_name'),
-		description: t('chain_tools.seo.webapp_description'),
+		name: t('chain-tools.seo.webapp_name'),
+		description: t('chain-tools.seo.webapp_description'),
 		canonical,
 		features: [
-			t('chain_tools.seo.feature_1'),
-			t('chain_tools.seo.feature_2'),
-			t('chain_tools.seo.feature_3'),
-			t('chain_tools.seo.feature_4')
+			t('chain-tools.seo.feature_1'),
+			t('chain-tools.seo.feature_2'),
+			t('chain-tools.seo.feature_3'),
+			t('chain-tools.seo.feature_4')
 		]
 	});
 
@@ -36,8 +30,8 @@ export const load: PageLoad = ({ url }) => {
 	const itemListData = {
 		'@context': 'https://schema.org',
 		'@type': 'ItemList',
-		name: t('chain_tools.seo.webapp_name'),
-		description: t('chain_tools.seo.webapp_description'),
+		name: t('chain-tools.seo.webapp_name'),
+		description: t('chain-tools.seo.webapp_description'),
 		numberOfItems: 25,
 		itemListElement: [
 			{
@@ -71,9 +65,9 @@ export const load: PageLoad = ({ url }) => {
 
 	return {
 		meta: {
-			title: t('chain_tools.seo.page_title'),
-			description: t('chain_tools.seo.page_description'),
-			keywords: t('chain_tools.seo.keywords'),
+			title: t('chain-tools.seo.page_title'),
+			description: t('chain-tools.seo.page_description'),
+			keywords: t('chain-tools.seo.keywords'),
 			canonical,
 			type: 'website' as const,
 			image,

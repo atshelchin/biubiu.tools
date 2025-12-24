@@ -5,7 +5,7 @@
 	import ConfirmDialog from '$lib/components/ui/confirm-dialog.svelte';
 	import TokenAvatar from '$lib/components/ui/token-avatar.svelte';
 	import CopyButton from '$lib/components/ui/copy-button.svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	interface Props {
 		token: Token;

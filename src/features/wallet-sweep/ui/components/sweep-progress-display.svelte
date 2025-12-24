@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import type { SweepProgress } from '@/features/wallet-sweep/utils/sweep-executor';
 	import { CheckCircle2, AlertCircle } from '@lucide/svelte';
 	import { slide } from 'svelte/transition';
@@ -15,17 +15,17 @@
 <div class="progress-card" transition:slide>
 	<h4>
 		{#if progress.phase === 'preparing'}
-			{i18n.t('tools.wallet_sweep.step5.content.progress.preparing')}
+			{i18n.t('wallet-sweep.step5.content.progress.preparing')}
 		{:else if progress.phase === 'building'}
-			{i18n.t('tools.wallet_sweep.step5.content.progress.building')}
+			{i18n.t('wallet-sweep.step5.content.progress.building')}
 		{:else if progress.phase === 'executing'}
-			{i18n.t('tools.wallet_sweep.step5.content.progress.executing')}
+			{i18n.t('wallet-sweep.step5.content.progress.executing')}
 		{:else if progress.phase === 'confirming'}
-			{i18n.t('tools.wallet_sweep.step5.content.progress.confirming')}
+			{i18n.t('wallet-sweep.step5.content.progress.confirming')}
 		{:else if progress.phase === 'completed'}
-			{i18n.t('tools.wallet_sweep.step5.content.progress.completed')}
+			{i18n.t('wallet-sweep.step5.content.progress.completed')}
 		{:else if progress.phase === 'error'}
-			{i18n.t('tools.wallet_sweep.step5.content.progress.error')}
+			{i18n.t('wallet-sweep.step5.content.progress.error')}
 		{/if}
 	</h4>
 
@@ -37,13 +37,13 @@
 
 	<div class="progress-stats">
 		<span
-			>{i18n.t('tools.wallet_sweep.step5.content.progress.batch', {
+			>{i18n.t('wallet-sweep.step5.content.progress.batch', {
 				current: progress.currentBatch,
 				total: progress.totalBatches
 			})}</span
 		>
 		<span
-			>{i18n.t('tools.wallet_sweep.step5.content.progress.wallet', {
+			>{i18n.t('wallet-sweep.step5.content.progress.wallet', {
 				current: progress.currentWallet,
 				total: progress.totalWallets
 			})}</span
@@ -54,7 +54,7 @@
 	{#if progress.results.length > 0}
 		<div class="progress-results">
 			<h5>
-				{i18n.t('tools.wallet_sweep.step5.content.progress.results', {
+				{i18n.t('wallet-sweep.step5.content.progress.results', {
 					count: progress.results.length
 				})}
 			</h5>

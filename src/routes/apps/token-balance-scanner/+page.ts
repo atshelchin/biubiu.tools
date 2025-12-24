@@ -1,20 +1,14 @@
 import type { PageLoad } from './$types';
 import { createWebAppData, createHowToData, type HowToStepData } from '$lib/utils/structured-data';
-import { I18n } from '@shelchin/i18n';
-import { extractLocaleFromPathname } from '@shelchin/i18n/utils';
-import en from '../../../i18n/locales/en.json';
-import zh from '../../../i18n/locales/zh.json';
-import type { PackageLocales } from '@shelchin/i18n';
+import { createServerT } from '$i18n/server';
+import { extractLocaleFromPathname } from '$utils/common';
 
 export const load: PageLoad = ({ url }) => {
 	// Extract locale from URL pathname (e.g., /zh/apps/token-balance-scanner -> 'zh')
 	const locale = extractLocaleFromPathname(url.pathname) || 'en';
 
-	// Create i18n instance for this request
-	const locales = { en, zh } as unknown as PackageLocales;
-	const i18n = new I18n(locale);
-	i18n.register('__default__', locales);
-	const t = i18n.t.bind(i18n);
+	// Create translation function for this request
+	const t = createServerT(locale);
 
 	const canonical = url.origin + url.pathname;
 	const image = `${url.origin}/og-token-balance-scanner.png`;
@@ -22,55 +16,55 @@ export const load: PageLoad = ({ url }) => {
 	// Define steps with both SEO text and UI description using i18n
 	const steps: HowToStepData[] = [
 		{
-			name: t('tools.token_balance_scanner.seo.step_1_name'),
-			text: t('tools.token_balance_scanner.seo.step_1_text'),
-			description: t('tools.token_balance_scanner.seo.step_1_description')
+			name: t('token-balance-scanner.seo.step_1_name'),
+			text: t('token-balance-scanner.seo.step_1_text'),
+			description: t('token-balance-scanner.seo.step_1_description')
 		},
 		{
-			name: t('tools.token_balance_scanner.seo.step_2_name'),
-			text: t('tools.token_balance_scanner.seo.step_2_text'),
-			description: t('tools.token_balance_scanner.seo.step_2_description')
+			name: t('token-balance-scanner.seo.step_2_name'),
+			text: t('token-balance-scanner.seo.step_2_text'),
+			description: t('token-balance-scanner.seo.step_2_description')
 		},
 		{
-			name: t('tools.token_balance_scanner.seo.step_3_name'),
-			text: t('tools.token_balance_scanner.seo.step_3_text'),
-			description: t('tools.token_balance_scanner.seo.step_3_description')
+			name: t('token-balance-scanner.seo.step_3_name'),
+			text: t('token-balance-scanner.seo.step_3_text'),
+			description: t('token-balance-scanner.seo.step_3_description')
 		},
 		{
-			name: t('tools.token_balance_scanner.seo.step_4_name'),
-			text: t('tools.token_balance_scanner.seo.step_4_text'),
-			description: t('tools.token_balance_scanner.seo.step_4_description')
+			name: t('token-balance-scanner.seo.step_4_name'),
+			text: t('token-balance-scanner.seo.step_4_text'),
+			description: t('token-balance-scanner.seo.step_4_description')
 		},
 		{
-			name: t('tools.token_balance_scanner.seo.step_5_name'),
-			text: t('tools.token_balance_scanner.seo.step_5_text'),
-			description: t('tools.token_balance_scanner.seo.step_5_description')
+			name: t('token-balance-scanner.seo.step_5_name'),
+			text: t('token-balance-scanner.seo.step_5_text'),
+			description: t('token-balance-scanner.seo.step_5_description')
 		}
 	];
 
 	// Generate structured data from steps config
 	const webAppData = createWebAppData({
-		name: t('tools.token_balance_scanner.seo.webapp_name'),
-		description: t('tools.token_balance_scanner.seo.webapp_description'),
+		name: t('token-balance-scanner.seo.webapp_name'),
+		description: t('token-balance-scanner.seo.webapp_description'),
 		canonical,
 		features: [
-			t('tools.token_balance_scanner.seo.feature_1'),
-			t('tools.token_balance_scanner.seo.feature_2'),
-			t('tools.token_balance_scanner.seo.feature_3'),
-			t('tools.token_balance_scanner.seo.feature_4'),
-			t('tools.token_balance_scanner.seo.feature_5')
+			t('token-balance-scanner.seo.feature_1'),
+			t('token-balance-scanner.seo.feature_2'),
+			t('token-balance-scanner.seo.feature_3'),
+			t('token-balance-scanner.seo.feature_4'),
+			t('token-balance-scanner.seo.feature_5')
 		]
 	});
 
 	const howToData = createHowToData({
-		name: t('tools.token_balance_scanner.seo.howto_name'),
-		description: t('tools.token_balance_scanner.seo.howto_description'),
+		name: t('token-balance-scanner.seo.howto_name'),
+		description: t('token-balance-scanner.seo.howto_description'),
 		canonical,
 		image,
 		steps,
 		tools: [
-			t('tools.token_balance_scanner.seo.howto_tool_1'),
-			t('tools.token_balance_scanner.seo.howto_tool_2')
+			t('token-balance-scanner.seo.howto_tool_1'),
+			t('token-balance-scanner.seo.howto_tool_2')
 		]
 	});
 
@@ -84,9 +78,9 @@ export const load: PageLoad = ({ url }) => {
 
 	return {
 		meta: {
-			title: t('tools.token_balance_scanner.seo.page_title'),
-			description: t('tools.token_balance_scanner.seo.page_description'),
-			keywords: t('tools.token_balance_scanner.seo.keywords'),
+			title: t('token-balance-scanner.seo.page_title'),
+			description: t('token-balance-scanner.seo.page_description'),
+			keywords: t('token-balance-scanner.seo.keywords'),
 			canonical,
 			type: 'website' as const,
 			image,

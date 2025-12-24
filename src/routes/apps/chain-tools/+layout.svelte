@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import SearchBar from '@/features/chain-tools/components/search-bar.svelte';
 	import CategoryFilter from '@/features/chain-tools/components/category-filter.svelte';
 	import { categories } from '@/features/chain-tools/data/categories';
@@ -67,8 +67,8 @@
 <div class="chain-tools-page">
 	<!-- Header -->
 	<header class="page-header">
-		<h1 class="page-title">{i18n.t('chain_tools.title')}</h1>
-		<p class="page-subtitle">{i18n.t('chain_tools.subtitle')}</p>
+		<h1 class="page-title">{i18n.t('chain-tools.title')}</h1>
+		<p class="page-subtitle">{i18n.t('chain-tools.subtitle')}</p>
 	</header>
 
 	<!-- Search and Filter -->

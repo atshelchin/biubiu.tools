@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Wallet, ExternalLink } from '@lucide/svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { formatAddress } from '$lib/utils/wallet-utils';
 	import NetworkIcon from '$lib/components/ui/network-icon.svelte';
 	import type { Address } from 'viem';

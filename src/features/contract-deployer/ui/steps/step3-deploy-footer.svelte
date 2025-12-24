@@ -1,6 +1,6 @@
 <script lang="ts">
 	import StepFooter from '$lib/components/step/step-footer.svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	const i18n = useI18n();
 
@@ -8,4 +8,4 @@
 	// Just show a hint about the deployment
 </script>
 
-<StepFooter canContinue={false} hint={i18n.t('tools.contract_deployer.step3.footer.hint')} />
+<StepFooter canContinue={false} hint={i18n.t('contract-deployer.step3.footer.hint')} />

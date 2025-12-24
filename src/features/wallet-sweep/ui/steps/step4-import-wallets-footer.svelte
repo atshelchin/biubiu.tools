@@ -2,7 +2,7 @@
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 	import { step4State } from '@/features/wallet-sweep/stores/step4-state.svelte';
 	import StepFooter from '$lib/components/step/step-footer.svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	const stepManager = useStepManager();
 	const i18n = useI18n();
@@ -18,10 +18,10 @@
 	let hint = $derived.by(() => {
 		if (walletCount === 0) {
 			// No wallets imported yet
-			return i18n.t('tools.wallet_sweep.step4.footer.hint');
+			return i18n.t('wallet-sweep.step4.footer.hint');
 		} else if (!scanCompleted) {
 			// Wallets imported but not scanned
-			return i18n.t('tools.wallet_sweep.step4.footer.hint_scan_required');
+			return i18n.t('wallet-sweep.step4.footer.hint_scan_required');
 		}
 		// All conditions met
 		return '';
@@ -42,7 +42,7 @@
 	showBack={true}
 	onBack={goBack}
 	{canContinue}
-	continueText={i18n.t('tools.wallet_sweep.step4.footer.continue_text')}
+	continueText={i18n.t('wallet-sweep.step4.footer.continue_text')}
 	onContinue={handleContinue}
 	{hint}
 />

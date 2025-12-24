@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { createI18nStore, setI18nContext } from '@shelchin/i18n/svelte';
+	import { initI18n, setI18nContext, registerGlobLoaders } from '@shelchin/i18n';
 	import { onMount } from 'svelte';
 	import { createThemeStore } from '$lib/stores/theme.svelte.js';
 	import { createGeoBlockStore } from '$lib/stores/geo-block.svelte.js';
@@ -14,14 +14,18 @@
 	import GeoBlockOverlay from '$lib/components/ui/geo-block-overlay.svelte';
 	import CookieConsentBanner from '$lib/components/ui/cookie-consent-banner.svelte';
 	import FloatingHelpButton from '$lib/components/ui/floating-help-button.svelte';
-	import { PACKAGE_NAME, locales } from '../i18n/i18n.svelte';
+	import { localeMetas } from '../i18n/i18n.svelte';
 	let { children, data } = $props<{ children: import('svelte').Snippet; data: LayoutData }>();
 
-	console.log({ data });
-	const i18nStore = createI18nStore({ initialLocale: data.locale });
-
-	i18nStore.register(PACKAGE_NAME, locales);
-	setI18nContext(i18nStore);
+	const i18n = initI18n({
+		locale: data.locale,
+		defaultLocale: 'en',
+		preloadedTranslations: data.translations,
+		localeMetas,
+		devMode: import.meta.env.DEV
+	});
+	registerGlobLoaders(import.meta.glob('../i18n/locales/**/*.json'), i18n);
+	setI18nContext(i18n);
 
 	// Initialize cookie consent store (must be before theme store)
 	createCookieConsentStore();

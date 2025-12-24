@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import { getAllNFTStandards } from '../../utils/nft-standards';
 	import { step2State } from '../../stores/step2-state.svelte';
@@ -16,8 +16,8 @@
 
 <div class="step-content">
 	<StepContentHeader
-		title={i18n.t('tools.nft_deployer.step2.content.title')}
-		description={i18n.t('tools.nft_deployer.step2.content.description')}
+		title={i18n.t('nft-deployer.step2.content.title')}
+		description={i18n.t('nft-deployer.step2.content.description')}
 	/>
 
 	<div class="standards-grid">
@@ -43,7 +43,7 @@
 				<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
 				<polyline points="22 4 12 14.01 9 11.01" />
 			</svg>
-			<span>{i18n.t('tools.nft_deployer.step2.content.selected_confirmation')}</span>
+			<span>{i18n.t('nft-deployer.step2.content.selected_confirmation')}</span>
 		</div>
 	{/if}
 </div>

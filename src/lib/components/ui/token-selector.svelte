@@ -6,7 +6,7 @@
 	import AddTokenButton from '$lib/components/ui/add-token-button.svelte';
 	import TokenCard from '$lib/components/ui/token-card.svelte';
 	import { onMount } from 'svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	interface NetworkInfo {
 		chainId: number;

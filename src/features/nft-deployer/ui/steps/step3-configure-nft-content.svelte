@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import { step3NFTConfigState } from '../../stores/step3-nft-config-state.svelte';
 
@@ -8,50 +8,50 @@
 
 <div class="step-content">
 	<StepContentHeader
-		title={i18n.t('tools.nft_deployer.step3.content.title')}
-		description={i18n.t('tools.nft_deployer.step3.content.description')}
+		title={i18n.t('nft-deployer.step3.content.title')}
+		description={i18n.t('nft-deployer.step3.content.description')}
 	/>
 
 	<div class="form-container">
 		<!-- NFT Name -->
 		<div class="form-group">
 			<label for="nft-name" class="form-label">
-				{i18n.t('tools.nft_deployer.step3.content.name_label')}
+				{i18n.t('nft-deployer.step3.content.name_label')}
 				<span class="required">*</span>
 			</label>
 			<input
 				id="nft-name"
 				type="text"
 				class="form-input"
-				placeholder={i18n.t('tools.nft_deployer.step3.content.name_placeholder')}
+				placeholder={i18n.t('nft-deployer.step3.content.name_placeholder')}
 				bind:value={step3NFTConfigState.name}
 				maxlength="50"
 			/>
-			<p class="form-hint">{i18n.t('tools.nft_deployer.step3.content.name_hint')}</p>
+			<p class="form-hint">{i18n.t('nft-deployer.step3.content.name_hint')}</p>
 		</div>
 
 		<!-- NFT Symbol -->
 		<div class="form-group">
 			<label for="nft-symbol" class="form-label">
-				{i18n.t('tools.nft_deployer.step3.content.symbol_label')}
+				{i18n.t('nft-deployer.step3.content.symbol_label')}
 				<span class="required">*</span>
 			</label>
 			<input
 				id="nft-symbol"
 				type="text"
 				class="form-input"
-				placeholder={i18n.t('tools.nft_deployer.step3.content.symbol_placeholder')}
+				placeholder={i18n.t('nft-deployer.step3.content.symbol_placeholder')}
 				bind:value={step3NFTConfigState.symbol}
 				maxlength="10"
 				style="text-transform: uppercase;"
 			/>
-			<p class="form-hint">{i18n.t('tools.nft_deployer.step3.content.symbol_hint')}</p>
+			<p class="form-hint">{i18n.t('nft-deployer.step3.content.symbol_hint')}</p>
 		</div>
 
 		<!-- Mint Type Selection (Radio buttons - must choose one) -->
 		<fieldset class="form-group">
 			<legend class="form-label">
-				{i18n.t('tools.nft_deployer.step3.content.mint_type_label')}
+				{i18n.t('nft-deployer.step3.content.mint_type_label')}
 				<span class="required">*</span>
 			</legend>
 			<div class="radio-group">
@@ -67,9 +67,9 @@
 						}}
 					/>
 					<span class="radio-text">
-						<strong>{i18n.t('tools.nft_deployer.step3.content.public_mint_enabled')}</strong>
+						<strong>{i18n.t('nft-deployer.step3.content.public_mint_enabled')}</strong>
 						<span class="radio-description">
-							{i18n.t('tools.nft_deployer.step3.content.public_mint_hint')}
+							{i18n.t('nft-deployer.step3.content.public_mint_hint')}
 						</span>
 					</span>
 				</label>
@@ -86,9 +86,9 @@
 						}}
 					/>
 					<span class="radio-text">
-						<strong>{i18n.t('tools.nft_deployer.step3.content.enable_stake_to_mint')}</strong>
+						<strong>{i18n.t('nft-deployer.step3.content.enable_stake_to_mint')}</strong>
 						<span class="radio-description">
-							{i18n.t('tools.nft_deployer.step3.content.stake_to_mint_hint')}
+							{i18n.t('nft-deployer.step3.content.stake_to_mint_hint')}
 						</span>
 					</span>
 				</label>
@@ -99,7 +99,7 @@
 		{#if step3NFTConfigState.stakeToMintEnabled}
 			<div class="form-group conditional">
 				<label for="stake-token" class="form-label">
-					{i18n.t('tools.nft_deployer.step3.content.stake_token_label')}
+					{i18n.t('nft-deployer.step3.content.stake_token_label')}
 					<span class="required">*</span>
 				</label>
 				<input
@@ -109,12 +109,12 @@
 					placeholder="0x..."
 					bind:value={step3NFTConfigState.stakeToken}
 				/>
-				<p class="form-hint">{i18n.t('tools.nft_deployer.step3.content.stake_token_hint')}</p>
+				<p class="form-hint">{i18n.t('nft-deployer.step3.content.stake_token_hint')}</p>
 			</div>
 
 			<div class="form-group conditional">
 				<label for="stake-amount" class="form-label">
-					{i18n.t('tools.nft_deployer.step3.content.stake_amount_label')}
+					{i18n.t('nft-deployer.step3.content.stake_amount_label')}
 					<span class="required">*</span>
 				</label>
 				<input
@@ -124,14 +124,14 @@
 					placeholder="1000000000000000000"
 					bind:value={step3NFTConfigState.stakeAmount}
 				/>
-				<p class="form-hint">{i18n.t('tools.nft_deployer.step3.content.stake_amount_hint')}</p>
+				<p class="form-hint">{i18n.t('nft-deployer.step3.content.stake_amount_hint')}</p>
 			</div>
 		{/if}
 
 		<!-- Preview Box -->
 		{#if step3NFTConfigState.name && step3NFTConfigState.symbol}
 			<div class="preview-box">
-				<h4>{i18n.t('tools.nft_deployer.step3.content.preview')}</h4>
+				<h4>{i18n.t('nft-deployer.step3.content.preview')}</h4>
 				<div class="preview-content">
 					<p>
 						<strong>{step3NFTConfigState.name} ({step3NFTConfigState.symbol})</strong>

@@ -5,12 +5,12 @@
 	import QRCode from './qr-code.svelte';
 	import InstructionList from './instruction-list.svelte';
 
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { checkConsent } from '$lib/stores/cookie-consent.svelte';
 
 	const i18n = useI18n();
-	const t = i18n.t;
+	const t = i18n.t.bind(i18n);
 
 	// 从 context 获取 connect store
 	const connectStore = useConnectStore();

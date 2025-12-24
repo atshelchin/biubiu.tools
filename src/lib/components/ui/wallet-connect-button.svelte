@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { parseWalletError } from '$lib/utils/wallet-utils';
 	import { useClipboard } from '$lib/composables/use-clipboard.svelte';
 	import { useWalletBalance } from '$lib/composables/use-wallet-balance.svelte';

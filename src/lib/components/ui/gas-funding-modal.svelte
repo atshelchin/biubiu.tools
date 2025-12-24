@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Send, Loader2 } from '@lucide/svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import Modal from './modal.svelte';
 
 	interface Props {

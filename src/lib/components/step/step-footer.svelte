@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ChevronRight } from '@lucide/svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	interface Props {
 		/** Show back button */

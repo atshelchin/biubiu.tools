@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { History, Trash2, Download, Upload, Play, X, Clock, ChevronRight } from '@lucide/svelte';
 	import {
 		getStoredSessionList,
@@ -90,10 +90,10 @@
 			if (stored) {
 				loadSessions();
 			} else {
-				importError = i18n.t('tools.one_to_many_transfer.step5.session.import_error');
+				importError = i18n.t('one-to-many-transfer.step5.session.import_error');
 			}
 		} catch {
-			importError = i18n.t('tools.one_to_many_transfer.step5.session.import_error');
+			importError = i18n.t('one-to-many-transfer.step5.session.import_error');
 		} finally {
 			isImporting = false;
 			if (fileInput) {
@@ -109,7 +109,7 @@
 	function formatTimeRemaining(expiresAt: number): string {
 		const now = Date.now();
 		const remaining = expiresAt - now;
-		if (remaining <= 0) return i18n.t('tools.one_to_many_transfer.step5.session.expired');
+		if (remaining <= 0) return i18n.t('one-to-many-transfer.step5.session.expired');
 
 		const hours = Math.floor(remaining / (1000 * 60 * 60));
 		const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
@@ -140,13 +140,13 @@
 	<div class="header">
 		<div class="header-title">
 			<History size={20} />
-			<h3>{i18n.t('tools.one_to_many_transfer.step5.session.title')}</h3>
+			<h3>{i18n.t('one-to-many-transfer.step5.session.title')}</h3>
 		</div>
 		<div class="header-actions">
 			<button
 				class="btn-icon"
 				onclick={handleImportClick}
-				title={i18n.t('tools.one_to_many_transfer.step5.session.import')}
+				title={i18n.t('one-to-many-transfer.step5.session.import')}
 			>
 				<Upload size={18} />
 			</button>
@@ -175,7 +175,7 @@
 		{#if sessions.length === 0}
 			<div class="empty-state">
 				<History size={48} strokeWidth={1} />
-				<p>{i18n.t('tools.one_to_many_transfer.step5.session.empty')}</p>
+				<p>{i18n.t('one-to-many-transfer.step5.session.empty')}</p>
 			</div>
 		{:else}
 			{#each sessions as session (session.sessionId)}
@@ -191,17 +191,17 @@
 						<div class="session-header">
 							<span class="session-token">{session.tokenSymbol}</span>
 							<span class="session-status {getStatusColor(session.status)}">
-								{i18n.t(`tools.one_to_many_transfer.step5.session.status_${session.status}`)}
+								{i18n.t(`one-to-many-transfer.step5.session.status_${session.status}`)}
 							</span>
 						</div>
 						<div class="session-info">
 							<span class="session-recipients">
 								{session.recipientCount}
-								{i18n.t('tools.one_to_many_transfer.step5.content.recipients').toLowerCase()}
+								{i18n.t('one-to-many-transfer.step5.content.recipients').toLowerCase()}
 							</span>
 							<span class="session-batches">
 								{session.completedBatches}/{session.totalBatches}
-								{i18n.t('tools.one_to_many_transfer.step5.session.batches')}
+								{i18n.t('one-to-many-transfer.step5.session.batches')}
 							</span>
 						</div>
 						<div class="session-meta">
@@ -210,7 +210,7 @@
 								{#if session.status === 'completed'}
 									{formatDate(session.lastUpdatedAt)}
 								{:else}
-									{i18n.t('tools.one_to_many_transfer.step5.session.expires_in')}
+									{i18n.t('one-to-many-transfer.step5.session.expires_in')}
 									{formatTimeRemaining(session.expiresAt)}
 								{/if}
 							</span>
@@ -226,16 +226,16 @@
 						{#if resumable}
 							<button class="btn-action btn-primary" onclick={() => handleResume(session)}>
 								<Play size={16} />
-								{i18n.t('tools.one_to_many_transfer.step5.session.resume')}
+								{i18n.t('one-to-many-transfer.step5.session.resume')}
 							</button>
 						{/if}
 						<button class="btn-action" onclick={() => handleExport(session.sessionId)}>
 							<Download size={16} />
-							{i18n.t('tools.one_to_many_transfer.step5.session.export')}
+							{i18n.t('one-to-many-transfer.step5.session.export')}
 						</button>
 						<button class="btn-action btn-danger" onclick={() => handleDelete(session.sessionId)}>
 							<Trash2 size={16} />
-							{i18n.t('tools.one_to_many_transfer.step5.session.delete')}
+							{i18n.t('one-to-many-transfer.step5.session.delete')}
 						</button>
 					</div>
 				{/if}
@@ -246,7 +246,7 @@
 	{#if isImporting}
 		<div class="importing-overlay">
 			<div class="spinner"></div>
-			<span>{i18n.t('tools.one_to_many_transfer.step5.session.importing')}</span>
+			<span>{i18n.t('one-to-many-transfer.step5.session.importing')}</span>
 		</div>
 	{/if}
 </div>

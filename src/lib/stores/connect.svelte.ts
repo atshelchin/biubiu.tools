@@ -11,7 +11,7 @@ import { createPublicClient, createWalletClient, custom, http } from 'viem';
 import type { Address, Hash, TransactionReceipt } from 'viem';
 import { createWalletManager } from '$lib/utils/wallet-manager';
 import { getContext, setContext } from 'svelte';
-import type { I18n } from '@shelchin/i18n';
+import type { I18nInstance } from '@shelchin/i18n';
 
 const CONNECT_STORE_KEY = Symbol('connect-store');
 
@@ -22,7 +22,7 @@ interface ConnectStoreConfig {
 	appLogoUrl: string;
 	chains: Chain[];
 	storageKey?: string;
-	i18n: I18n;
+	i18n: I18nInstance;
 }
 
 export function createConnectStore(config: ConnectStoreConfig) {

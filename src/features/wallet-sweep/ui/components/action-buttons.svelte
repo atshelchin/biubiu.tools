@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import { Loader2 } from '@lucide/svelte';
 
 	interface Props {
@@ -20,9 +20,9 @@
 	<button class="btn-secondary" onclick={onEstimate} disabled={isEstimating}>
 		{#if isEstimating}
 			<Loader2 size={18} class="spinning" />
-			{i18n.t('tools.wallet_sweep.step5.content.actions.estimating')}
+			{i18n.t('wallet-sweep.step5.content.actions.estimating')}
 		{:else}
-			{i18n.t('tools.wallet_sweep.step5.content.actions.estimate_cost')}
+			{i18n.t('wallet-sweep.step5.content.actions.estimate_cost')}
 		{/if}
 	</button>
 
@@ -30,9 +30,9 @@
 		<button class="btn-execute" onclick={onExecute} disabled={!canExecute || isExecuting}>
 			{#if isExecuting}
 				<Loader2 size={18} class="spinning" />
-				{i18n.t('tools.wallet_sweep.step5.content.actions.executing')}
+				{i18n.t('wallet-sweep.step5.content.actions.executing')}
 			{:else}
-				{i18n.t('tools.wallet_sweep.step5.content.actions.execute_sweep')}
+				{i18n.t('wallet-sweep.step5.content.actions.execute_sweep')}
 			{/if}
 		</button>
 	{/if}

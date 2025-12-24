@@ -27,7 +27,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'virtuals-protocol',
 		name: 'Virtuals Protocol',
-		descriptionKey: 'chain_tools.tools.virtuals_protocol.description',
+		descriptionKey: 'chain-tools.tools.virtuals_protocol.description',
 		url: 'https://virtuals.io',
 		icon: Bot,
 		category: 'ai-crypto',
@@ -38,7 +38,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'ai16z',
 		name: 'ai16z',
-		descriptionKey: 'chain_tools.tools.ai16z.description',
+		descriptionKey: 'chain-tools.tools.ai16z.description',
 		url: 'https://ai16z.ai',
 		icon: Bot,
 		category: 'ai-crypto',
@@ -49,7 +49,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'truth-terminal',
 		name: 'Truth Terminal',
-		descriptionKey: 'chain_tools.tools.truth_terminal.description',
+		descriptionKey: 'chain-tools.tools.truth_terminal.description',
 		url: 'https://x.com/truth_terminal',
 		icon: MessageSquare,
 		category: 'ai-crypto',
@@ -60,7 +60,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'autonolas',
 		name: 'Autonolas (OLAS)',
-		descriptionKey: 'chain_tools.tools.autonolas.description',
+		descriptionKey: 'chain-tools.tools.autonolas.description',
 		url: 'https://olas.network',
 		icon: Bot,
 		category: 'ai-crypto',
@@ -71,7 +71,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'flock-io',
 		name: 'FLock.io',
-		descriptionKey: 'chain_tools.tools.flock_io.description',
+		descriptionKey: 'chain-tools.tools.flock_io.description',
 		url: 'https://flock.io',
 		icon: Users,
 		category: 'ai-crypto',
@@ -83,7 +83,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'render-network',
 		name: 'Render Network',
-		descriptionKey: 'chain_tools.tools.render_network.description',
+		descriptionKey: 'chain-tools.tools.render_network.description',
 		url: 'https://rendernetwork.com',
 		icon: Cpu,
 		category: 'ai-crypto',
@@ -94,7 +94,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'akash-network',
 		name: 'Akash Network',
-		descriptionKey: 'chain_tools.tools.akash_network.description',
+		descriptionKey: 'chain-tools.tools.akash_network.description',
 		url: 'https://akash.network',
 		icon: Network,
 		category: 'ai-crypto',
@@ -105,7 +105,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'io-net',
 		name: 'io.net',
-		descriptionKey: 'chain_tools.tools.io_net.description',
+		descriptionKey: 'chain-tools.tools.io_net.description',
 		url: 'https://io.net',
 		icon: Cpu,
 		category: 'ai-crypto',
@@ -116,7 +116,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'bittensor',
 		name: 'Bittensor (TAO)',
-		descriptionKey: 'chain_tools.tools.bittensor.description',
+		descriptionKey: 'chain-tools.tools.bittensor.description',
 		url: 'https://bittensor.com',
 		icon: Brain,
 		category: 'ai-crypto',
@@ -127,7 +127,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'ritual',
 		name: 'Ritual',
-		descriptionKey: 'chain_tools.tools.ritual.description',
+		descriptionKey: 'chain-tools.tools.ritual.description',
 		url: 'https://ritual.net',
 		icon: Brain,
 		category: 'ai-crypto',
@@ -138,7 +138,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'gensyn',
 		name: 'Gensyn',
-		descriptionKey: 'chain_tools.tools.gensyn.description',
+		descriptionKey: 'chain-tools.tools.gensyn.description',
 		url: 'https://gensyn.ai',
 		icon: Network,
 		category: 'ai-crypto',
@@ -149,7 +149,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'together-ai',
 		name: 'Together AI',
-		descriptionKey: 'chain_tools.tools.together_ai.description',
+		descriptionKey: 'chain-tools.tools.together_ai.description',
 		url: 'https://together.ai',
 		icon: Cpu,
 		category: 'ai-crypto',
@@ -160,7 +160,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'fetch-ai',
 		name: 'Fetch.ai (FET)',
-		descriptionKey: 'chain_tools.tools.fetch_ai.description',
+		descriptionKey: 'chain-tools.tools.fetch_ai.description',
 		url: 'https://fetch.ai',
 		icon: Bot,
 		category: 'ai-crypto',
@@ -171,7 +171,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'ocean-protocol',
 		name: 'Ocean Protocol',
-		descriptionKey: 'chain_tools.tools.ocean_protocol.description',
+		descriptionKey: 'chain-tools.tools.ocean_protocol.description',
 		url: 'https://oceanprotocol.com',
 		icon: Database,
 		category: 'ai-crypto',
@@ -182,7 +182,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'singularitynet',
 		name: 'SingularityNET (AGIX)',
-		descriptionKey: 'chain_tools.tools.singularitynet.description',
+		descriptionKey: 'chain-tools.tools.singularitynet.description',
 		url: 'https://singularitynet.io',
 		icon: Brain,
 		category: 'ai-crypto',
@@ -193,7 +193,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'masa',
 		name: 'Masa',
-		descriptionKey: 'chain_tools.tools.masa.description',
+		descriptionKey: 'chain-tools.tools.masa.description',
 		url: 'https://masa.ai',
 		icon: Database,
 		category: 'ai-crypto',
@@ -204,7 +204,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'grass',
 		name: 'Grass',
-		descriptionKey: 'chain_tools.tools.grass.description',
+		descriptionKey: 'chain-tools.tools.grass.description',
 		url: 'https://getgrass.io',
 		icon: Network,
 		category: 'ai-crypto',
@@ -216,7 +216,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'altered-state-machine',
 		name: 'Altered State Machine',
-		descriptionKey: 'chain_tools.tools.altered_state_machine.description',
+		descriptionKey: 'chain-tools.tools.altered_state_machine.description',
 		url: 'https://alteredstatemachine.xyz',
 		icon: Sparkles,
 		category: 'ai-crypto',
@@ -227,7 +227,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'alethea-ai',
 		name: 'Alethea AI',
-		descriptionKey: 'chain_tools.tools.alethea_ai.description',
+		descriptionKey: 'chain-tools.tools.alethea_ai.description',
 		url: 'https://alethea.ai',
 		icon: Bot,
 		category: 'ai-crypto',
@@ -239,7 +239,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'midjourney-crypto',
 		name: 'NFT Art Generators',
-		descriptionKey: 'chain_tools.tools.nft_art_generators.description',
+		descriptionKey: 'chain-tools.tools.nft_art_generators.description',
 		url: 'https://nft.ai',
 		icon: Image,
 		category: 'ai-crypto',
@@ -249,7 +249,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'stability-ai',
 		name: 'Stability AI',
-		descriptionKey: 'chain_tools.tools.stability_ai.description',
+		descriptionKey: 'chain-tools.tools.stability_ai.description',
 		url: 'https://stability.ai',
 		icon: Image,
 		category: 'ai-crypto',
@@ -260,7 +260,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'cookie-ai',
 		name: 'Cookie.fun',
-		descriptionKey: 'chain_tools.tools.cookie_ai.description',
+		descriptionKey: 'chain-tools.tools.cookie_ai.description',
 		url: 'https://cookie.fun',
 		icon: Search,
 		category: 'ai-crypto',
@@ -270,7 +270,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'virtuals-terminal',
 		name: 'Virtuals Terminal',
-		descriptionKey: 'chain_tools.tools.virtuals_terminal.description',
+		descriptionKey: 'chain-tools.tools.virtuals_terminal.description',
 		url: 'https://app.virtuals.io',
 		icon: Zap,
 		category: 'ai-crypto',
@@ -281,7 +281,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'defillama-ai',
 		name: 'DeFiLlama AI',
-		descriptionKey: 'chain_tools.tools.defillama_ai.description',
+		descriptionKey: 'chain-tools.tools.defillama_ai.description',
 		url: 'https://defillama.com/protocols/AI',
 		icon: Search,
 		category: 'ai-crypto',
@@ -293,7 +293,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'worldcoin',
 		name: 'Worldcoin',
-		descriptionKey: 'chain_tools.tools.worldcoin.description',
+		descriptionKey: 'chain-tools.tools.worldcoin.description',
 		url: 'https://worldcoin.org',
 		icon: Brain,
 		category: 'ai-crypto',
@@ -305,7 +305,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'morpheus-ai',
 		name: 'Morpheus',
-		descriptionKey: 'chain_tools.tools.morpheus_ai.description',
+		descriptionKey: 'chain-tools.tools.morpheus_ai.description',
 		url: 'https://mor.org',
 		icon: Bot,
 		category: 'ai-crypto',
@@ -316,7 +316,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'spectral-ai',
 		name: 'Spectral',
-		descriptionKey: 'chain_tools.tools.spectral_ai.description',
+		descriptionKey: 'chain-tools.tools.spectral_ai.description',
 		url: 'https://spectral.finance',
 		icon: Brain,
 		category: 'ai-crypto',
@@ -327,7 +327,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'numerai',
 		name: 'Numerai',
-		descriptionKey: 'chain_tools.tools.numerai.description',
+		descriptionKey: 'chain-tools.tools.numerai.description',
 		url: 'https://numer.ai',
 		icon: Brain,
 		category: 'ai-crypto',
@@ -338,7 +338,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'dain-ai',
 		name: 'DAIN',
-		descriptionKey: 'chain_tools.tools.dain_ai.description',
+		descriptionKey: 'chain-tools.tools.dain_ai.description',
 		url: 'https://dain.org',
 		icon: Bot,
 		category: 'ai-crypto',
@@ -349,7 +349,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'vana',
 		name: 'Vana',
-		descriptionKey: 'chain_tools.tools.vana.description',
+		descriptionKey: 'chain-tools.tools.vana.description',
 		url: 'https://vana.org',
 		icon: Database,
 		category: 'ai-crypto',
@@ -359,7 +359,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'phala-network',
 		name: 'Phala Network',
-		descriptionKey: 'chain_tools.tools.phala_network.description',
+		descriptionKey: 'chain-tools.tools.phala_network.description',
 		url: 'https://phala.network',
 		icon: Cpu,
 		category: 'ai-crypto',
@@ -370,7 +370,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'nosana',
 		name: 'Nosana',
-		descriptionKey: 'chain_tools.tools.nosana.description',
+		descriptionKey: 'chain-tools.tools.nosana.description',
 		url: 'https://nosana.io',
 		icon: Cpu,
 		category: 'ai-crypto',
@@ -381,7 +381,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'golem',
 		name: 'Golem',
-		descriptionKey: 'chain_tools.tools.golem.description',
+		descriptionKey: 'chain-tools.tools.golem.description',
 		url: 'https://golem.network',
 		icon: Network,
 		category: 'ai-crypto',
@@ -392,7 +392,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'livepeer',
 		name: 'Livepeer',
-		descriptionKey: 'chain_tools.tools.livepeer.description',
+		descriptionKey: 'chain-tools.tools.livepeer.description',
 		url: 'https://livepeer.org',
 		icon: Cpu,
 		category: 'ai-crypto',
@@ -403,7 +403,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'hyperbolic',
 		name: 'Hyperbolic',
-		descriptionKey: 'chain_tools.tools.hyperbolic.description',
+		descriptionKey: 'chain-tools.tools.hyperbolic.description',
 		url: 'https://hyperbolic.xyz',
 		icon: Cpu,
 		category: 'ai-crypto',
@@ -413,7 +413,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'venice-ai',
 		name: 'Venice AI',
-		descriptionKey: 'chain_tools.tools.venice_ai.description',
+		descriptionKey: 'chain-tools.tools.venice_ai.description',
 		url: 'https://venice.ai',
 		icon: Brain,
 		category: 'ai-crypto',
@@ -423,7 +423,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'myshell',
 		name: 'MyShell',
-		descriptionKey: 'chain_tools.tools.myshell.description',
+		descriptionKey: 'chain-tools.tools.myshell.description',
 		url: 'https://myshell.ai',
 		icon: Bot,
 		category: 'ai-crypto',
@@ -434,7 +434,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'griffain',
 		name: 'Griffain',
-		descriptionKey: 'chain_tools.tools.griffain.description',
+		descriptionKey: 'chain-tools.tools.griffain.description',
 		url: 'https://griffain.com',
 		icon: Bot,
 		category: 'ai-crypto',
@@ -445,7 +445,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'arc-ai',
 		name: 'Arc',
-		descriptionKey: 'chain_tools.tools.arc_ai.description',
+		descriptionKey: 'chain-tools.tools.arc_ai.description',
 		url: 'https://arc.fun',
 		icon: Bot,
 		category: 'ai-crypto',
@@ -456,7 +456,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'zerebro',
 		name: 'Zerebro',
-		descriptionKey: 'chain_tools.tools.zerebro.description',
+		descriptionKey: 'chain-tools.tools.zerebro.description',
 		url: 'https://zerebro.org',
 		icon: Bot,
 		category: 'ai-crypto',
@@ -467,7 +467,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'swarmnode',
 		name: 'SwarmNode',
-		descriptionKey: 'chain_tools.tools.swarmnode.description',
+		descriptionKey: 'chain-tools.tools.swarmnode.description',
 		url: 'https://swarmnode.ai',
 		icon: Network,
 		category: 'ai-crypto',
@@ -477,7 +477,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'sentient-ai',
 		name: 'Sentient',
-		descriptionKey: 'chain_tools.tools.sentient_ai.description',
+		descriptionKey: 'chain-tools.tools.sentient_ai.description',
 		url: 'https://sentient.foundation',
 		icon: Brain,
 		category: 'ai-crypto',
@@ -487,7 +487,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'nous-research',
 		name: 'Nous Research',
-		descriptionKey: 'chain_tools.tools.nous_research.description',
+		descriptionKey: 'chain-tools.tools.nous_research.description',
 		url: 'https://nousresearch.com',
 		icon: Brain,
 		category: 'ai-crypto',
@@ -497,7 +497,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'pond-ai',
 		name: 'Pond',
-		descriptionKey: 'chain_tools.tools.pond_ai.description',
+		descriptionKey: 'chain-tools.tools.pond_ai.description',
 		url: 'https://cryptopond.xyz',
 		icon: Brain,
 		category: 'ai-crypto',
@@ -507,7 +507,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'aioz-network',
 		name: 'AIOZ Network',
-		descriptionKey: 'chain_tools.tools.aioz_network.description',
+		descriptionKey: 'chain-tools.tools.aioz_network.description',
 		url: 'https://aioz.network',
 		icon: Network,
 		category: 'ai-crypto',
@@ -518,7 +518,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'theoriq',
 		name: 'Theoriq',
-		descriptionKey: 'chain_tools.tools.theoriq.description',
+		descriptionKey: 'chain-tools.tools.theoriq.description',
 		url: 'https://theoriq.ai',
 		icon: Bot,
 		category: 'ai-crypto',
@@ -529,7 +529,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'ora-protocol',
 		name: 'ORA Protocol',
-		descriptionKey: 'chain_tools.tools.ora_protocol.description',
+		descriptionKey: 'chain-tools.tools.ora_protocol.description',
 		url: 'https://ora.io',
 		icon: Brain,
 		category: 'ai-crypto',
@@ -540,7 +540,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'modulus-labs',
 		name: 'Modulus Labs',
-		descriptionKey: 'chain_tools.tools.modulus_labs.description',
+		descriptionKey: 'chain-tools.tools.modulus_labs.description',
 		url: 'https://modulus.xyz',
 		icon: Brain,
 		category: 'ai-crypto',
@@ -551,7 +551,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'ezkl',
 		name: 'EZKL',
-		descriptionKey: 'chain_tools.tools.ezkl.description',
+		descriptionKey: 'chain-tools.tools.ezkl.description',
 		url: 'https://ezkl.xyz',
 		icon: Brain,
 		category: 'ai-crypto',
@@ -561,7 +561,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'giza',
 		name: 'Giza',
-		descriptionKey: 'chain_tools.tools.giza.description',
+		descriptionKey: 'chain-tools.tools.giza.description',
 		url: 'https://gizatech.xyz',
 		icon: Brain,
 		category: 'ai-crypto',
@@ -572,7 +572,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'lagrange-dao',
 		name: 'Lagrange DAO',
-		descriptionKey: 'chain_tools.tools.lagrange_dao.description',
+		descriptionKey: 'chain-tools.tools.lagrange_dao.description',
 		url: 'https://lagrangedao.org',
 		icon: Database,
 		category: 'ai-crypto',
@@ -583,7 +583,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'kip-protocol',
 		name: 'KIP Protocol',
-		descriptionKey: 'chain_tools.tools.kip_protocol.description',
+		descriptionKey: 'chain-tools.tools.kip_protocol.description',
 		url: 'https://kip.pro',
 		icon: Database,
 		category: 'ai-crypto',
@@ -593,7 +593,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'sahara-ai',
 		name: 'Sahara AI',
-		descriptionKey: 'chain_tools.tools.sahara_ai.description',
+		descriptionKey: 'chain-tools.tools.sahara_ai.description',
 		url: 'https://saharalabs.ai',
 		icon: Database,
 		category: 'ai-crypto',
@@ -603,7 +603,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'bagel-network',
 		name: 'Bagel Network',
-		descriptionKey: 'chain_tools.tools.bagel_network.description',
+		descriptionKey: 'chain-tools.tools.bagel_network.description',
 		url: 'https://bagel.net',
 		icon: Database,
 		category: 'ai-crypto',
@@ -613,7 +613,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'allora-network',
 		name: 'Allora',
-		descriptionKey: 'chain_tools.tools.allora_network.description',
+		descriptionKey: 'chain-tools.tools.allora_network.description',
 		url: 'https://allora.network',
 		icon: Brain,
 		category: 'ai-crypto',
@@ -623,7 +623,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'nillion',
 		name: 'Nillion',
-		descriptionKey: 'chain_tools.tools.nillion.description',
+		descriptionKey: 'chain-tools.tools.nillion.description',
 		url: 'https://nillion.com',
 		icon: Cpu,
 		category: 'ai-crypto',
@@ -633,7 +633,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'arbius',
 		name: 'Arbius',
-		descriptionKey: 'chain_tools.tools.arbius.description',
+		descriptionKey: 'chain-tools.tools.arbius.description',
 		url: 'https://arbius.ai',
 		icon: Cpu,
 		category: 'ai-crypto',
@@ -644,7 +644,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'crynux',
 		name: 'Crynux',
-		descriptionKey: 'chain_tools.tools.crynux.description',
+		descriptionKey: 'chain-tools.tools.crynux.description',
 		url: 'https://crynux.ai',
 		icon: Network,
 		category: 'ai-crypto',
@@ -654,7 +654,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'gpu-net',
 		name: 'GPU.Net',
-		descriptionKey: 'chain_tools.tools.gpu_net.description',
+		descriptionKey: 'chain-tools.tools.gpu_net.description',
 		url: 'https://gpu.net',
 		icon: Cpu,
 		category: 'ai-crypto',
@@ -664,7 +664,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'aethir',
 		name: 'Aethir',
-		descriptionKey: 'chain_tools.tools.aethir.description',
+		descriptionKey: 'chain-tools.tools.aethir.description',
 		url: 'https://aethir.com',
 		icon: Cpu,
 		category: 'ai-crypto',
@@ -675,7 +675,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'spheron',
 		name: 'Spheron',
-		descriptionKey: 'chain_tools.tools.spheron.description',
+		descriptionKey: 'chain-tools.tools.spheron.description',
 		url: 'https://spheron.network',
 		icon: Network,
 		category: 'ai-crypto',
@@ -685,7 +685,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'clore-ai',
 		name: 'Clore.ai',
-		descriptionKey: 'chain_tools.tools.clore_ai.description',
+		descriptionKey: 'chain-tools.tools.clore_ai.description',
 		url: 'https://clore.ai',
 		icon: Cpu,
 		category: 'ai-crypto',
@@ -695,7 +695,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'theta-edge',
 		name: 'Theta EdgeCloud',
-		descriptionKey: 'chain_tools.tools.theta_edge.description',
+		descriptionKey: 'chain-tools.tools.theta_edge.description',
 		url: 'https://thetatoken.org',
 		icon: Cpu,
 		category: 'ai-crypto',
@@ -706,7 +706,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'nimble-network',
 		name: 'Nimble',
-		descriptionKey: 'chain_tools.tools.nimble_network.description',
+		descriptionKey: 'chain-tools.tools.nimble_network.description',
 		url: 'https://nimble.technology',
 		icon: Brain,
 		category: 'ai-crypto',
@@ -716,7 +716,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'tensorplex',
 		name: 'Tensorplex',
-		descriptionKey: 'chain_tools.tools.tensorplex.description',
+		descriptionKey: 'chain-tools.tools.tensorplex.description',
 		url: 'https://tensorplex.ai',
 		icon: Brain,
 		category: 'ai-crypto',
@@ -727,7 +727,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'taoshi',
 		name: 'Taoshi',
-		descriptionKey: 'chain_tools.tools.taoshi.description',
+		descriptionKey: 'chain-tools.tools.taoshi.description',
 		url: 'https://taoshi.io',
 		icon: Brain,
 		category: 'ai-crypto',
@@ -738,7 +738,7 @@ export const aiCryptoTools: ExternalTool[] = [
 	{
 		id: 'corcel',
 		name: 'Corcel',
-		descriptionKey: 'chain_tools.tools.corcel.description',
+		descriptionKey: 'chain-tools.tools.corcel.description',
 		url: 'https://corcel.io',
 		icon: Bot,
 		category: 'ai-crypto',

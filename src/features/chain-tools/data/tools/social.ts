@@ -9,7 +9,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'lens-protocol',
 		name: 'Lens Protocol',
-		descriptionKey: 'chain_tools.tools.lens_protocol.description',
+		descriptionKey: 'chain-tools.tools.lens_protocol.description',
 		url: 'https://lens.xyz',
 		icon: Share2,
 		category: 'social',
@@ -21,7 +21,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'cyberconnect',
 		name: 'CyberConnect',
-		descriptionKey: 'chain_tools.tools.cyberconnect.description',
+		descriptionKey: 'chain-tools.tools.cyberconnect.description',
 		url: 'https://cyber.co',
 		icon: Share2,
 		category: 'social',
@@ -32,7 +32,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'deso',
 		name: 'DeSo',
-		descriptionKey: 'chain_tools.tools.deso.description',
+		descriptionKey: 'chain-tools.tools.deso.description',
 		url: 'https://deso.com',
 		icon: Share2,
 		category: 'social',
@@ -45,7 +45,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'warpcast',
 		name: 'Warpcast',
-		descriptionKey: 'chain_tools.tools.warpcast.description',
+		descriptionKey: 'chain-tools.tools.warpcast.description',
 		url: 'https://warpcast.com',
 		icon: MessageCircle,
 		category: 'social',
@@ -56,7 +56,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'hey',
 		name: 'Hey',
-		descriptionKey: 'chain_tools.tools.hey.description',
+		descriptionKey: 'chain-tools.tools.hey.description',
 		url: 'https://hey.xyz',
 		icon: MessageCircle,
 		category: 'social',
@@ -67,7 +67,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'orb',
 		name: 'Orb',
-		descriptionKey: 'chain_tools.tools.orb.description',
+		descriptionKey: 'chain-tools.tools.orb.description',
 		url: 'https://orb.club',
 		icon: Orbit,
 		category: 'social',
@@ -78,7 +78,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'phaver',
 		name: 'Phaver',
-		descriptionKey: 'chain_tools.tools.phaver.description',
+		descriptionKey: 'chain-tools.tools.phaver.description',
 		url: 'https://phaver.com',
 		icon: MessageCircle,
 		category: 'social',
@@ -89,7 +89,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'orb-app',
 		name: 'Orb',
-		descriptionKey: 'chain_tools.tools.orb_app.description',
+		descriptionKey: 'chain-tools.tools.orb_app.description',
 		url: 'https://orb.ac',
 		icon: MessageCircle,
 		category: 'social',
@@ -99,7 +99,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'buttrfly',
 		name: 'Buttrfly',
-		descriptionKey: 'chain_tools.tools.buttrfly.description',
+		descriptionKey: 'chain-tools.tools.buttrfly.description',
 		url: 'https://buttrfly.app',
 		icon: MessageCircle,
 		category: 'social',
@@ -109,7 +109,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'firefly-social',
 		name: 'Firefly',
-		descriptionKey: 'chain_tools.tools.firefly_social.description',
+		descriptionKey: 'chain-tools.tools.firefly_social.description',
 		url: 'https://firefly.social',
 		icon: MessageCircle,
 		category: 'social',
@@ -121,7 +121,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'friend-tech',
 		name: 'Friend.tech',
-		descriptionKey: 'chain_tools.tools.friend_tech.description',
+		descriptionKey: 'chain-tools.tools.friend_tech.description',
 		url: 'https://www.friend.tech',
 		icon: Users,
 		category: 'social',
@@ -132,7 +132,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'party-app',
 		name: 'Party',
-		descriptionKey: 'chain_tools.tools.party_app.description',
+		descriptionKey: 'chain-tools.tools.party_app.description',
 		url: 'https://party.app',
 		icon: Users,
 		category: 'social',
@@ -143,7 +143,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'bello-community',
 		name: 'Bello',
-		descriptionKey: 'chain_tools.tools.bello_community.description',
+		descriptionKey: 'chain-tools.tools.bello_community.description',
 		url: 'https://bello.lol',
 		icon: Users,
 		category: 'social',
@@ -155,7 +155,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'mirror',
 		name: 'Mirror',
-		descriptionKey: 'chain_tools.tools.mirror.description',
+		descriptionKey: 'chain-tools.tools.mirror.description',
 		url: 'https://mirror.xyz',
 		icon: Newspaper,
 		category: 'social',
@@ -166,7 +166,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'paragraph',
 		name: 'Paragraph',
-		descriptionKey: 'chain_tools.tools.paragraph.description',
+		descriptionKey: 'chain-tools.tools.paragraph.description',
 		url: 'https://paragraph.xyz',
 		icon: Newspaper,
 		category: 'social',
@@ -177,7 +177,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'kiwi-news',
 		name: 'Kiwi News',
-		descriptionKey: 'chain_tools.tools.kiwi_news.description',
+		descriptionKey: 'chain-tools.tools.kiwi_news.description',
 		url: 'https://news.kiwistand.com',
 		icon: Newspaper,
 		category: 'social',
@@ -189,7 +189,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'drakula',
 		name: 'Drakula',
-		descriptionKey: 'chain_tools.tools.drakula.description',
+		descriptionKey: 'chain-tools.tools.drakula.description',
 		url: 'https://drakula.app',
 		icon: Podcast,
 		category: 'social',
@@ -200,7 +200,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'tape',
 		name: 'Tape',
-		descriptionKey: 'chain_tools.tools.tape.description',
+		descriptionKey: 'chain-tools.tools.tape.description',
 		url: 'https://tape.xyz',
 		icon: Podcast,
 		category: 'social',
@@ -210,7 +210,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'unlonely',
 		name: 'Unlonely',
-		descriptionKey: 'chain_tools.tools.unlonely.description',
+		descriptionKey: 'chain-tools.tools.unlonely.description',
 		url: 'https://www.unlonely.app',
 		icon: Podcast,
 		category: 'social',
@@ -222,7 +222,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'link3',
 		name: 'Link3',
-		descriptionKey: 'chain_tools.tools.link3.description',
+		descriptionKey: 'chain-tools.tools.link3.description',
 		url: 'https://link3.to',
 		icon: Share2,
 		category: 'social',
@@ -232,7 +232,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'debank-hi',
 		name: 'DeBank Hi',
-		descriptionKey: 'chain_tools.tools.debank_hi.description',
+		descriptionKey: 'chain-tools.tools.debank_hi.description',
 		url: 'https://debank.com/hi',
 		icon: MessageCircle,
 		category: 'social',
@@ -242,7 +242,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'orbis-protocol',
 		name: 'Orbis',
-		descriptionKey: 'chain_tools.tools.orbis_protocol.description',
+		descriptionKey: 'chain-tools.tools.orbis_protocol.description',
 		url: 'https://orbis.club',
 		icon: MessageCircle,
 		category: 'social',
@@ -252,7 +252,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'cyberconnect-link',
 		name: 'CyberConnect',
-		descriptionKey: 'chain_tools.tools.cyberconnect_link.description',
+		descriptionKey: 'chain-tools.tools.cyberconnect_link.description',
 		url: 'https://link3.to',
 		icon: Share2,
 		category: 'social',
@@ -262,7 +262,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'context-app',
 		name: 'Context',
-		descriptionKey: 'chain_tools.tools.context_app.description',
+		descriptionKey: 'chain-tools.tools.context_app.description',
 		url: 'https://context.app',
 		icon: MessageCircle,
 		category: 'social',
@@ -272,7 +272,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'yup-social',
 		name: 'Yup',
-		descriptionKey: 'chain_tools.tools.yup_social.description',
+		descriptionKey: 'chain-tools.tools.yup_social.description',
 		url: 'https://yup.io',
 		icon: MessageCircle,
 		category: 'social',
@@ -282,7 +282,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'zora-social',
 		name: 'Zora Social',
-		descriptionKey: 'chain_tools.tools.zora_social.description',
+		descriptionKey: 'chain-tools.tools.zora_social.description',
 		url: 'https://zora.co',
 		icon: MessageCircle,
 		category: 'social',
@@ -293,7 +293,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'interface-social',
 		name: 'Interface',
-		descriptionKey: 'chain_tools.tools.interface_social.description',
+		descriptionKey: 'chain-tools.tools.interface_social.description',
 		url: 'https://interface.social',
 		icon: MessageCircle,
 		category: 'social',
@@ -305,7 +305,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'farcaster',
 		name: 'Farcaster',
-		descriptionKey: 'chain_tools.tools.farcaster.description',
+		descriptionKey: 'chain-tools.tools.farcaster.description',
 		url: 'https://farcaster.xyz',
 		icon: Share2,
 		category: 'social',
@@ -316,7 +316,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'xmtp',
 		name: 'XMTP',
-		descriptionKey: 'chain_tools.tools.xmtp.description',
+		descriptionKey: 'chain-tools.tools.xmtp.description',
 		url: 'https://xmtp.org',
 		icon: MessageCircle,
 		category: 'social',
@@ -326,7 +326,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'push-protocol',
 		name: 'Push Protocol',
-		descriptionKey: 'chain_tools.tools.push_protocol.description',
+		descriptionKey: 'chain-tools.tools.push_protocol.description',
 		url: 'https://push.org',
 		icon: MessageCircle,
 		category: 'social',
@@ -337,7 +337,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'supercast',
 		name: 'Supercast',
-		descriptionKey: 'chain_tools.tools.supercast.description',
+		descriptionKey: 'chain-tools.tools.supercast.description',
 		url: 'https://supercast.xyz',
 		icon: MessageCircle,
 		category: 'social',
@@ -348,7 +348,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'neynar',
 		name: 'Neynar',
-		descriptionKey: 'chain_tools.tools.neynar.description',
+		descriptionKey: 'chain-tools.tools.neynar.description',
 		url: 'https://neynar.com',
 		icon: Share2,
 		category: 'social',
@@ -358,7 +358,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'airstack',
 		name: 'Airstack',
-		descriptionKey: 'chain_tools.tools.airstack.description',
+		descriptionKey: 'chain-tools.tools.airstack.description',
 		url: 'https://airstack.xyz',
 		icon: Share2,
 		category: 'social',
@@ -368,7 +368,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'pinata-farcaster',
 		name: 'Pinata Farcaster Hub',
-		descriptionKey: 'chain_tools.tools.pinata_farcaster.description',
+		descriptionKey: 'chain-tools.tools.pinata_farcaster.description',
 		url: 'https://pinata.cloud/farcaster',
 		icon: Share2,
 		category: 'social',
@@ -378,7 +378,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'privy-social',
 		name: 'Privy',
-		descriptionKey: 'chain_tools.tools.privy_social.description',
+		descriptionKey: 'chain-tools.tools.privy_social.description',
 		url: 'https://privy.io',
 		icon: Users,
 		category: 'social',
@@ -388,7 +388,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'huddle01',
 		name: 'Huddle01',
-		descriptionKey: 'chain_tools.tools.huddle01.description',
+		descriptionKey: 'chain-tools.tools.huddle01.description',
 		url: 'https://huddle01.com',
 		icon: Podcast,
 		category: 'social',
@@ -398,7 +398,7 @@ export const socialTools: ExternalTool[] = [
 	{
 		id: 'moxie',
 		name: 'Moxie',
-		descriptionKey: 'chain_tools.tools.moxie.description',
+		descriptionKey: 'chain-tools.tools.moxie.description',
 		url: 'https://moxie.xyz',
 		icon: Users,
 		category: 'social',

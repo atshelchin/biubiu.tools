@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	const i18n = useI18n();
-	const t = i18n.t;
+	const t = i18n.t.bind(i18n);
 	import { ArrowRight, Sparkles } from '@lucide/svelte';
 </script>
 
@@ -17,18 +17,18 @@
 
 		<!-- Main title with gradient -->
 		<h2 class="cta-title">
-			{t('cta.title')}
+			{t('common.cta.title')}
 		</h2>
 
 		<!-- Subtitle -->
 		<p class="cta-subtitle">
-			{t('cta.subtitle')}
+			{t('common.cta.subtitle')}
 		</p>
 
 		<!-- Action buttons -->
 		<div class="button-group">
 			<a href="/tools" class="btn-primary">
-				<span>{t('cta.button_text')}</span>
+				<span>{t('common.cta.button_text')}</span>
 				<ArrowRight class="btn-icon" />
 			</a>
 			<button class="btn-secondary">

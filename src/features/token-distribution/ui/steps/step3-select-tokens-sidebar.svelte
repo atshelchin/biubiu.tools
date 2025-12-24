@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 	import WalletConnectionStatus from '@/lib/components/ui/wallet-connection-status.svelte';
 	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
@@ -15,8 +15,8 @@
 
 <StepSidebar
 	stepNumber={3}
-	title={i18n.t('tools.one_to_many_transfer.step3.sidebar.title')}
-	description={i18n.t('tools.one_to_many_transfer.step3.sidebar.description')}
+	title={i18n.t('one-to-many-transfer.step3.sidebar.title')}
+	description={i18n.t('one-to-many-transfer.step3.sidebar.description')}
 >
 	<WalletConnectionStatus
 		showChangeButton={true}
@@ -27,7 +27,7 @@
 	<!-- Current Selection Summary -->
 	{#if step3State.selectedToken}
 		<div class="selection-summary">
-			<h4>{i18n.t('tools.one_to_many_transfer.step3.content.select_token.title')}</h4>
+			<h4>{i18n.t('one-to-many-transfer.step3.content.select_token.title')}</h4>
 			<div class="selected-token">
 				<span class="token-symbol">{step3State.selectedToken.symbol}</span>
 				<span class="token-type-badge">{step3State.tokenType.toUpperCase()}</span>
@@ -35,7 +35,7 @@
 			{#if step3State.isFungible && step3State.amountPerRecipient}
 				<div class="amount-info">
 					<span class="label"
-						>{i18n.t('tools.one_to_many_transfer.step3.content.amount_input.title')}:</span
+						>{i18n.t('one-to-many-transfer.step3.content.amount_input.title')}:</span
 					>
 					<span class="value"
 						>{step3State.amountPerRecipient} {step3State.selectedToken.symbol}</span
@@ -46,22 +46,22 @@
 	{/if}
 
 	<div class="help-box">
-		<h4>{i18n.t('tools.one_to_many_transfer.step3.content.token_type.title')}</h4>
+		<h4>{i18n.t('one-to-many-transfer.step3.content.token_type.title')}</h4>
 		<div class="type-info">
-			<strong>{i18n.t('tools.one_to_many_transfer.step3.content.token_type.native')}:</strong>
-			{i18n.t('tools.one_to_many_transfer.step3.content.token_type.native_desc')}
+			<strong>{i18n.t('one-to-many-transfer.step3.content.token_type.native')}:</strong>
+			{i18n.t('one-to-many-transfer.step3.content.token_type.native_desc')}
 		</div>
 		<div class="type-info">
-			<strong>{i18n.t('tools.one_to_many_transfer.step3.content.token_type.erc20')}:</strong>
-			{i18n.t('tools.one_to_many_transfer.step3.content.token_type.erc20_desc')}
+			<strong>{i18n.t('one-to-many-transfer.step3.content.token_type.erc20')}:</strong>
+			{i18n.t('one-to-many-transfer.step3.content.token_type.erc20_desc')}
 		</div>
 		<div class="type-info">
-			<strong>{i18n.t('tools.one_to_many_transfer.step3.content.token_type.erc721')}:</strong>
-			{i18n.t('tools.one_to_many_transfer.step3.content.token_type.erc721_desc')}
+			<strong>{i18n.t('one-to-many-transfer.step3.content.token_type.erc721')}:</strong>
+			{i18n.t('one-to-many-transfer.step3.content.token_type.erc721_desc')}
 		</div>
 		<div class="type-info">
-			<strong>{i18n.t('tools.one_to_many_transfer.step3.content.token_type.erc1155')}:</strong>
-			{i18n.t('tools.one_to_many_transfer.step3.content.token_type.erc1155_desc')}
+			<strong>{i18n.t('one-to-many-transfer.step3.content.token_type.erc1155')}:</strong>
+			{i18n.t('one-to-many-transfer.step3.content.token_type.erc1155_desc')}
 		</div>
 	</div>
 </StepSidebar>

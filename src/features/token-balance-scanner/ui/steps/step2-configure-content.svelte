@@ -5,7 +5,7 @@
 	import { step2State } from '@/features/token-balance-scanner/stores/step2-state.svelte';
 
 	// i18n
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	// Components
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
@@ -130,20 +130,20 @@
 
 <StepContent>
 	<StepContentHeader
-		title={i18n.t('tools.wallet_sweep.step2.content.title')}
-		description={i18n.t('tools.wallet_sweep.step2.content.description')}
+		title={i18n.t('wallet-sweep.step2.content.title')}
+		description={i18n.t('wallet-sweep.step2.content.description')}
 	/>
 
 	{#if !connectStore.isConnected && !checker.isChecking}
 		<!-- Not Connected State -->
 		<EmptyState
 			icon="🔌"
-			title={i18n.t('tools.wallet_sweep.step2.content.wallet_not_connected_title')}
-			message={i18n.t('tools.wallet_sweep.step2.content.wallet_not_connected_message')}
+			title={i18n.t('wallet-sweep.step2.content.wallet_not_connected_title')}
+			message={i18n.t('wallet-sweep.step2.content.wallet_not_connected_message')}
 		>
 			{#snippet action()}
 				<BackButton onclick={goBackToStep1}>
-					{i18n.t('tools.wallet_sweep.step2.content.go_to_step1')}
+					{i18n.t('wallet-sweep.step2.content.go_to_step1')}
 				</BackButton>
 			{/snippet}
 		</EmptyState>
@@ -151,30 +151,28 @@
 		<DependencyChecker
 			{checker}
 			network={networkConfig}
-			loadingMessage={i18n.t('tools.wallet_sweep.step2.content.checking_dependencies_for', {
+			loadingMessage={i18n.t('wallet-sweep.step2.content.checking_dependencies_for', {
 				network: currentNetwork?.name ?? ''
 			})}
-			retryText={i18n.t('tools.wallet_sweep.step2.content.recheck_dependencies')}
-			allPassedTitle={i18n.t('tools.wallet_sweep.step2.content.all_dependencies_satisfied')}
-			allPassedMessage={i18n.t('tools.wallet_sweep.step2.content.network_properly_configured')}
-			issuesFoundTitle={i18n.t('tools.wallet_sweep.step2.content.dependency_issues_found')}
-			issuesFoundMessage={i18n.t(
-				'tools.wallet_sweep.step2.content.resolve_issues_before_continuing'
-			)}
-			resolveHintText={i18n.t('tools.wallet_sweep.step2.content.resolve_previous_issue')}
-			addressLabel={i18n.t('tools.wallet_sweep.step2.content.address_label')}
-			endpointLabel={i18n.t('tools.wallet_sweep.step2.content.endpoint_label')}
-			viewGuideText={i18n.t('tools.wallet_sweep.step2.content.view_deployment_guide')}
-			deployComingSoonText={i18n.t('tools.wallet_sweep.step2.content.deploy_coming_soon')}
+			retryText={i18n.t('wallet-sweep.step2.content.recheck_dependencies')}
+			allPassedTitle={i18n.t('wallet-sweep.step2.content.all_dependencies_satisfied')}
+			allPassedMessage={i18n.t('wallet-sweep.step2.content.network_properly_configured')}
+			issuesFoundTitle={i18n.t('wallet-sweep.step2.content.dependency_issues_found')}
+			issuesFoundMessage={i18n.t('wallet-sweep.step2.content.resolve_issues_before_continuing')}
+			resolveHintText={i18n.t('wallet-sweep.step2.content.resolve_previous_issue')}
+			addressLabel={i18n.t('wallet-sweep.step2.content.address_label')}
+			endpointLabel={i18n.t('wallet-sweep.step2.content.endpoint_label')}
+			viewGuideText={i18n.t('wallet-sweep.step2.content.view_deployment_guide')}
+			deployComingSoonText={i18n.t('wallet-sweep.step2.content.deploy_coming_soon')}
 			configureRpcButtonText={i18n.t(
-				'tools.wallet_sweep.step2.content.checks.rpc_endpoint.configure_rpc_button'
+				'wallet-sweep.step2.content.checks.rpc_endpoint.configure_rpc_button'
 			)}
 			deployButtonText={(contractName) =>
-				i18n.t('tools.wallet_sweep.step2.content.deploy_contract', { contractName })}
+				i18n.t('wallet-sweep.step2.content.deploy_contract', { contractName })}
 			categoryLabels={{
-				network: i18n.t('tools.wallet_sweep.step2.content.checks.category.network'),
-				protocol: i18n.t('tools.wallet_sweep.step2.content.checks.category.protocol'),
-				contract: i18n.t('tools.wallet_sweep.step2.content.checks.category.contract')
+				network: i18n.t('wallet-sweep.step2.content.checks.category.network'),
+				protocol: i18n.t('wallet-sweep.step2.content.checks.category.protocol'),
+				contract: i18n.t('wallet-sweep.step2.content.checks.category.contract')
 			}}
 			onDeploySuccess={handleDeploySuccess}
 			onConfigureRpc={handleConfigureRpc}

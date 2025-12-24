@@ -2,7 +2,7 @@
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 	import StepFooter from '$lib/components/step/step-footer.svelte';
 	import { step2State } from '@/features/wallet-sweep/stores/step2-state.svelte';
-	import { useI18n } from '@shelchin/i18n/svelte';
+	import { useI18n } from '@shelchin/i18n';
 
 	const stepManager = useStepManager();
 	const i18n = useI18n();
@@ -16,10 +16,9 @@
 
 	// Dynamic footer hint based on state
 	const footerHint = $derived.by(() => {
-		if (isChecking) return i18n.t('tools.wallet_sweep.step2.footer.checking_dependencies');
-		if (summary && !summary.allPassed)
-			return i18n.t('tools.wallet_sweep.step2.footer.resolve_issues');
-		return i18n.t('tools.wallet_sweep.step2.footer.waiting_for_checks');
+		if (isChecking) return i18n.t('wallet-sweep.step2.footer.checking_dependencies');
+		if (summary && !summary.allPassed) return i18n.t('wallet-sweep.step2.footer.resolve_issues');
+		return i18n.t('wallet-sweep.step2.footer.waiting_for_checks');
 	});
 
 	// Handle continue to next step
