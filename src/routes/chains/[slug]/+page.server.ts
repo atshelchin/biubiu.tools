@@ -1,11 +1,12 @@
-import type { PageLoad } from './$types';
+import type { PageServerLoad } from './$types';
 import { error } from '@sveltejs/kit';
 import { getChainBySlug, getChainById, parseRpcEndpoints } from '@/features/chains/data/chains';
 import type { ChainPageData } from '@/features/chains/types';
-import { createServerT } from '$i18n/server';
+import { createT } from '$i18n/translations';
 import { extractLocaleFromPathname } from '$utils/common';
 
-export const load: PageLoad = ({ url, params }): ChainPageData => {
+export const load: PageServerLoad = (event): ChainPageData => {
+	const { url, params } = event;
 	const slug = params.slug;
 
 	// Try to find chain by slug or chainId
@@ -26,7 +27,7 @@ export const load: PageLoad = ({ url, params }): ChainPageData => {
 	const locale = extractLocaleFromPathname(url.pathname) || 'en';
 
 	// Create translation function for this request
-	const t = createServerT(locale);
+	const t = createT(event);
 
 	// Parse RPC endpoints
 	const parsedRpcs = parseRpcEndpoints(chain);

@@ -1,4 +1,4 @@
-import type { PageLoad } from './$types';
+import type { PageServerLoad } from './$types';
 import { error } from '@sveltejs/kit';
 import {
 	getAddress as getAddressData,
@@ -9,7 +9,7 @@ import {
 import { CHAIN_META } from '@/features/address/types';
 import type { LabeledAddress, NameRecord, Entity } from '@/features/address/types';
 import { isAddress, getAddress as toChecksumAddress } from 'viem';
-import { createServerT } from '$i18n/server';
+import { createT } from '$i18n/translations';
 import { extractLocaleFromPathname } from '$utils/common';
 
 export interface AddressDetailPageData {
@@ -31,7 +31,8 @@ export interface AddressDetailPageData {
 	structuredData: Array<Record<string, unknown>>;
 }
 
-export const load: PageLoad = ({ url, params }): AddressDetailPageData => {
+export const load: PageServerLoad = (event): AddressDetailPageData => {
+	const { url, params } = event;
 	const chainId = parseInt(params.chain, 10);
 	const addressParam = params.address;
 
@@ -92,7 +93,7 @@ export const load: PageLoad = ({ url, params }): AddressDetailPageData => {
 	const locale = extractLocaleFromPathname(url.pathname) || 'en';
 
 	// Create translation function for this request
-	const t = createServerT(locale);
+	const t = createT(event);
 
 	// Build canonical URL
 	const canonical = url.origin + url.pathname;

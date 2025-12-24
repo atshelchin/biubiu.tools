@@ -1,12 +1,13 @@
-import type { PageLoad } from './$types';
+import type { PageServerLoad } from './$types';
 import { createWebAppData } from '$lib/utils/structured-data';
 import { categories } from '@/features/chain-tools/data/categories';
 import { error } from '@sveltejs/kit';
 import type { CategoryId } from '@/features/chain-tools/types';
-import { createServerT } from '$i18n/server';
+import { createT } from '$i18n/translations';
 import { extractLocaleFromPathname } from '$utils/common';
 
-export const load: PageLoad = ({ url, params }) => {
+export const load: PageServerLoad = (event) => {
+	const { url, params } = event;
 	const categoryId = params.category as CategoryId;
 
 	// Validate category exists (exclude 'featured' as it's handled by main page)
@@ -19,7 +20,7 @@ export const load: PageLoad = ({ url, params }) => {
 	const locale = extractLocaleFromPathname(url.pathname) || 'en';
 
 	// Create translation function for this request
-	const t = createServerT(locale);
+	const t = createT(event);
 
 	const canonical = url.origin + url.pathname;
 	const image = `${url.origin}/og-chain-tools.png`;
@@ -30,15 +31,15 @@ export const load: PageLoad = ({ url, params }) => {
 
 	// Try to get category-specific SEO, fallback to generic
 	const seoTitle =
-		t(`chain_tools.category_seo.${categoryKey}.title`, { defaultValue: '' }) ||
+		t(`chain-tools.category_seo.${categoryKey}.title`, { defaultValue: '' }) ||
 		`${categoryName} - ${t('chain-tools.title')} | BiuBiu Tools`;
 
 	const seoDescription =
-		t(`chain_tools.category_seo.${categoryKey}.description`, { defaultValue: '' }) ||
+		t(`chain-tools.category_seo.${categoryKey}.description`, { defaultValue: '' }) ||
 		`${t('chain-tools.subtitle')} - ${categoryName}`;
 
 	const seoKeywords =
-		t(`chain_tools.category_seo.${categoryKey}.keywords`, { defaultValue: '' }) ||
+		t(`chain-tools.category_seo.${categoryKey}.keywords`, { defaultValue: '' }) ||
 		`${categoryName}, web3 tools, crypto, blockchain`;
 
 	// Get FAQs for this category - FAQs are not currently supported in namespace structure
@@ -90,7 +91,6 @@ export const load: PageLoad = ({ url, params }) => {
 
 	return {
 		categoryId,
-		category,
 		categoryName,
 		faqs,
 		meta: {

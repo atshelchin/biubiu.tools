@@ -23,7 +23,7 @@
 				price: t('pricing.free.price'),
 				period: t('pricing.free.period'),
 				description: t('pricing.free.description'),
-				features: t('pricing.free.features') as unknown as string[],
+				features: i18n.t<string[]>('pricing.free.features'),
 				ctaText: t('pricing.free.cta')
 			},
 			{
@@ -31,7 +31,7 @@
 				price: t('pricing.pro.price'),
 				period: t('pricing.pro.period'),
 				description: t('pricing.pro.description'),
-				features: t('pricing.pro.features') as unknown as string[],
+				features: i18n.t<string[]>('pricing.pro.features'),
 				highlighted: true,
 				ctaText: t('pricing.pro.cta')
 			},
@@ -40,7 +40,7 @@
 				price: t('pricing.enterprise.price'),
 				period: t('pricing.enterprise.period'),
 				description: t('pricing.enterprise.description'),
-				features: t('pricing.enterprise.features') as unknown as string[],
+				features: i18n.t<string[]>('pricing.enterprise.features'),
 				ctaText: t('pricing.enterprise.cta')
 			}
 		];

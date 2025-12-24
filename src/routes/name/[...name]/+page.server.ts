@@ -6,7 +6,7 @@ import {
 	formatSocialLink,
 	type ENSRecords
 } from '@/features/address/ens-resolver';
-import { createServerT } from '$i18n/server';
+import { createT } from '$i18n/translations';
 import { extractLocaleFromPathname } from '$utils/common';
 
 export interface SocialLink {
@@ -33,7 +33,8 @@ export interface NameDetailPageData {
 	structuredData: Array<Record<string, unknown>>;
 }
 
-export const load: PageServerLoad = async ({ url, params }): Promise<NameDetailPageData> => {
+export const load: PageServerLoad = async (event): Promise<NameDetailPageData> => {
+	const { url, params } = event;
 	const nameParam = params.name;
 
 	// Get name data from database
@@ -100,7 +101,7 @@ export const load: PageServerLoad = async ({ url, params }): Promise<NameDetailP
 	const locale = extractLocaleFromPathname(url.pathname) || 'en';
 
 	// Create translation function for this request
-	const t = createServerT(locale);
+	const t = createT(event);
 
 	// Build canonical URL
 	const canonical = url.origin + url.pathname;

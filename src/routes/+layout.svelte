@@ -16,7 +16,6 @@
 	import GeoBlockOverlay from '$lib/components/ui/geo-block-overlay.svelte';
 	import CookieConsentBanner from '$lib/components/ui/cookie-consent-banner.svelte';
 	import FloatingHelpButton from '$lib/components/ui/floating-help-button.svelte';
-	import { localeMetas } from '../i18n/i18n.svelte';
 	let { children, data } = $props<{ children: import('svelte').Snippet; data: LayoutData }>();
 
 	// Initialize i18n with preloaded translations from SSR

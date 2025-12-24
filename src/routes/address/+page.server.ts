@@ -1,7 +1,7 @@
-import type { PageLoad } from './$types';
+import type { PageServerLoad } from './$types';
 import { allAddresses, allNames, stats } from '@/features/address/data';
 import type { LabeledAddress, NameRecord } from '@/features/address/types';
-import { createServerT } from '$i18n/server';
+import { createT } from '$i18n/translations';
 import { extractLocaleFromPathname } from '$utils/common';
 
 export interface AddressIndexPageData {
@@ -20,12 +20,14 @@ export interface AddressIndexPageData {
 	structuredData: Array<Record<string, unknown>>;
 }
 
-export const load: PageLoad = ({ url }): AddressIndexPageData => {
+export const load: PageServerLoad = (event): AddressIndexPageData => {
+	const { url } = event;
+
 	// Extract locale from URL pathname
 	const locale = extractLocaleFromPathname(url.pathname) || 'en';
 
 	// Create translation function for this request
-	const t = createServerT(locale);
+	const t = createT(event);
 
 	// Get popular addresses (safe, verified)
 	const popularAddresses = allAddresses

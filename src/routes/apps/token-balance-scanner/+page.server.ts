@@ -1,14 +1,16 @@
-import type { PageLoad } from './$types';
+import type { PageServerLoad } from './$types';
 import { createWebAppData, createHowToData, type HowToStepData } from '$lib/utils/structured-data';
-import { createServerT, getPreloadedTranslations } from '$i18n/server';
+import { createT } from '$i18n/translations';
 import { extractLocaleFromPathname } from '$utils/common';
 
-export const load: PageLoad = ({ url }) => {
+export const load: PageServerLoad = (event) => {
+	const { url } = event;
+
 	// Extract locale from URL pathname (e.g., /zh/apps/token-balance-scanner -> 'zh')
 	const locale = extractLocaleFromPathname(url.pathname) || 'en';
 
 	// Create translation function for this request
-	const t = createServerT(locale);
+	const t = createT(event);
 
 	const canonical = url.origin + url.pathname;
 	const image = `${url.origin}/og-token-balance-scanner.png`;
@@ -76,9 +78,6 @@ export const load: PageLoad = ({ url }) => {
 		fr: 'fr_FR'
 	};
 
-	// Preload translations for client-side navigation
-	const translations = getPreloadedTranslations(locale, ['token-balance-scanner']);
-
 	return {
 		meta: {
 			title: t('token-balance-scanner.seo.page_title'),
@@ -90,7 +89,6 @@ export const load: PageLoad = ({ url }) => {
 			locale: seoLocaleMap[locale] || 'en_US'
 		},
 		steps,
-		structuredData: [webAppData, howToData],
-		translations
+		structuredData: [webAppData, howToData]
 	};
 };

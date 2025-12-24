@@ -1,14 +1,16 @@
-import type { PageLoad } from './$types';
+import type { PageServerLoad } from './$types';
 import { createWebAppData, createHowToData, type HowToStepData } from '$lib/utils/structured-data';
-import { createServerT } from '$i18n/server';
+import { createT } from '$i18n/translations';
 import { extractLocaleFromPathname } from '$utils/common';
 
-export const load: PageLoad = async ({ url }) => {
+export const load: PageServerLoad = (event) => {
+	const { url } = event;
+
 	// Extract locale from URL pathname
 	const locale = extractLocaleFromPathname(url.pathname) || 'en';
 
 	// Create translation function for this request
-	const t = createServerT(locale);
+	const t = createT(event);
 
 	const canonical = url.origin + url.pathname;
 	const image = `${url.origin}/og-chainlist.png`;

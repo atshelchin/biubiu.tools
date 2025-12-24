@@ -3,7 +3,7 @@ import type { LocaleData } from '@shelchin/i18n';
 import { createServerLoader } from '@shelchin/i18n';
 
 // Auto-scan all locale files and create server loader
-const { load: i18nLoad, localeMetas } = createServerLoader(
+const { load: i18nLoad } = createServerLoader(
 	import.meta.glob<{ default: LocaleData }>('../i18n/locales/**/*.json', { eager: true }),
 	{
 		defaultLocale: 'en',

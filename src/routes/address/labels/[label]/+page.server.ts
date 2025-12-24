@@ -1,9 +1,9 @@
-import type { PageLoad } from './$types';
+import type { PageServerLoad } from './$types';
 import { error } from '@sveltejs/kit';
 import { getAddressesByLabel } from '@/features/address/data';
 import { LABEL_META } from '@/features/address/types';
 import type { LabeledAddress, AddressLabel } from '@/features/address/types';
-import { createServerT } from '$i18n/server';
+import { createT } from '$i18n/translations';
 import { extractLocaleFromPathname } from '$utils/common';
 
 export interface LabelPageData {
@@ -21,7 +21,8 @@ export interface LabelPageData {
 	structuredData: Array<Record<string, unknown>>;
 }
 
-export const load: PageLoad = ({ url, params }): LabelPageData => {
+export const load: PageServerLoad = (event): LabelPageData => {
+	const { url, params } = event;
 	const labelParam = params.label as AddressLabel;
 
 	// Validate label
@@ -36,7 +37,7 @@ export const load: PageLoad = ({ url, params }): LabelPageData => {
 	const locale = extractLocaleFromPathname(url.pathname) || 'en';
 
 	// Create translation function for this request
-	const t = createServerT(locale);
+	const t = createT(event);
 
 	// Build canonical URL
 	const canonical = url.origin + url.pathname;
