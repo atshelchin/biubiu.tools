@@ -6,11 +6,7 @@
 
 // Main classes
 export { RPCManager } from './rpc-manager.js';
-export {
-	RPCQualityTracker,
-	getRPCQualityTracker,
-	createRPCQualityTracker
-} from './rpc-quality.js';
+export { RPCQualityTracker, getRPCQualityTracker, createRPCQualityTracker } from './rpc-quality.js';
 
 // Types
 export type {
