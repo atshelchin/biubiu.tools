@@ -20,7 +20,7 @@
         "@shelchin/drag-sortable": "workspace:*",
         "@shelchin/ethereum-connectors": "0.0.1-dev.20251106040039.5fa58a7",
         "@shelchin/formstate": "workspace:*",
-        "@shelchin/i18n": "2.4.0",
+        "@shelchin/i18n": "2.5.0",
         "@shelchin/paywall": "workspace:*",
         "@shelchin/rpc-manager": "workspace:*",
         "@shelchin/svelte-clipboard": "workspace:*",
@@ -528,7 +528,7 @@
 
     "@shelchin/formstate": ["@shelchin/formstate@workspace:packages/formstate"],
 
-    "@shelchin/i18n": ["@shelchin/i18n@2.4.0", "", { "peerDependencies": { "svelte": "^5.0.0" }, "bin": { "i18n": "dist/cli/generate-types.js" } }, "sha512-VWOwHPR6I2NBR/2f5wd3VIxn/KmI0GAKDxg8t6EBHoe/1LxAkKycSmPfpO2caouyjFojRmvC1yqB/l1Kc7kxzg=="],
+    "@shelchin/i18n": ["@shelchin/i18n@2.5.0", "", { "peerDependencies": { "svelte": "^5.0.0" }, "bin": { "i18n": "dist/cli/generate-types.js" } }, "sha512-RWhG4OSt0wuDyJPT4PsFlhWvYy0ESg3YSytY19L87q7L2XoG6MIbcLcrCbem6zXH9/35FZK6nEx92DKQoL481Q=="],
 
     "@shelchin/paywall": ["@shelchin/paywall@workspace:packages/paywall"],
 
