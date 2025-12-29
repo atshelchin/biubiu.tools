@@ -8,6 +8,7 @@ node_modules
 .wrangler
 /.svelte-kit
 /build
+packages/*/dist
 
 # OS
 .DS_Store
@@ -28,3 +29,4 @@ src/features/token-sweep/ui/batch-collection-assistant (3).html
 
 biubiu-tools-cfworker.*
 stats.html
+.svelte-kit

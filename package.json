@@ -3,6 +3,9 @@
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
+	"workspaces": [
+		"packages/*"
+	],
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -56,6 +59,7 @@
 		"wrangler": "^4.28.0"
 	},
 	"dependencies": {
+		"@shelchin/svelte-clipboard": "workspace:*",
 		"@codemirror/autocomplete": "^6.18.7",
 		"@codemirror/commands": "^6.8.1",
 		"@codemirror/language": "^6.11.3",

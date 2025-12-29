@@ -1,0 +1,49 @@
+{
+	"name": "@shelchin/svelte-clipboard",
+	"version": "0.0.1",
+	"description": "Svelte 5 clipboard composable with copy feedback",
+	"type": "module",
+	"svelte": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"svelte": "./dist/index.js",
+			"default": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "svelte-package -i src",
+		"prepublishOnly": "bun run build"
+	},
+	"peerDependencies": {
+		"svelte": "^5.0.0"
+	},
+	"devDependencies": {
+		"@sveltejs/package": "^2.3.7",
+		"svelte": "^5.0.0",
+		"typescript": "^5.0.0"
+	},
+	"keywords": [
+		"svelte",
+		"svelte5",
+		"clipboard",
+		"copy",
+		"composable",
+		"runes"
+	],
+	"author": "shelchin",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/atshelchin/biubiu.tools.git",
+		"directory": "packages/svelte-clipboard"
+	},
+	"bugs": {
+		"url": "https://github.com/atshelchin/biubiu.tools/issues"
+	},
+	"homepage": "https://github.com/atshelchin/biubiu.tools/tree/main/packages/svelte-clipboard#readme"
+}

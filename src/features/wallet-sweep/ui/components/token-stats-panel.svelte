@@ -2,7 +2,7 @@
 	import { fade } from 'svelte/transition';
 	import { Copy, Check, Download } from '@lucide/svelte';
 	import TokenBalanceDisplay from '$lib/components/ui/token-balance-display.svelte';
-	import { useClipboard } from '$lib/composables/use-clipboard.svelte';
+	import { useClipboard } from '@shelchin/svelte-clipboard';
 	import { formatAddress } from '$lib/utils/wallet-utils';
 	import type { TokenStats } from '@/features/wallet-sweep/composables/use-token-stats.svelte';
 	import type { ImportedWallet } from '@/features/wallet-sweep/types/wallet';

@@ -3,7 +3,7 @@
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
 	import { useI18n } from '@shelchin/i18n';
 	import { parseWalletError } from '$lib/utils/wallet-utils';
-	import { useClipboard } from '$lib/composables/use-clipboard.svelte';
+	import { useClipboard } from '@shelchin/svelte-clipboard';
 	import { useWalletBalance } from '$lib/composables/use-wallet-balance.svelte';
 	import LongPressButton from '$lib/components/wallet/long-press-button.svelte';
 	import NetworkMismatchCard from '$lib/components/wallet/network-mismatch-card.svelte';

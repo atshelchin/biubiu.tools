@@ -8,6 +8,9 @@ bun.lockb
 # Miscellaneous
 /static/
 
+# Package dist folders
+packages/*/dist/
+
 # Documentation with pseudo-code that Prettier can't parse
 packages/formstate/docs/Quick-Maintainer-Guide.md
 packages/formstate/docs/ultra-deep-analysis-v2.md
