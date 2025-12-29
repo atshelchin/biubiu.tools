@@ -1,47 +1,55 @@
-import type { PublicClient, Address } from 'viem';
+/**
+ * Contract-deployer specific dependency checker
+ * Orchestrates the dependency checks for contract-deployer tool
+ */
+
+import type { DependencyCheck } from '$lib/utils/blockchain-checker';
+import {
+	checkRPCEndpoint,
+	checkCREATE2Proxy,
+	calculateCheckSummary,
+	KNOWN_CONTRACTS
+} from '$lib/utils/blockchain-checker';
+
+// Re-export for convenience
+export { calculateCheckSummary, KNOWN_CONTRACTS };
+
+// Re-export types for backwards compatibility
+export type { DependencyCheck };
 
 // CREATE2 Proxy address (deterministic across all networks)
-export const CREATE2_PROXY_ADDRESS = '0x4e59b44847b379578588920cA78FbF26c0B4956C' as Address;
-
-export interface DependencyCheckResult {
-	name: string;
-	address: Address;
-	exists: boolean;
-	error?: string;
-}
+export const CREATE2_PROXY_ADDRESS = KNOWN_CONTRACTS.CREATE2_PROXY;
 
 /**
- * Check if CREATE2 Proxy contract exists on the current network
+ * Translation function type - use keyof TranslationKeys for type safety
  */
-export async function checkCreate2Proxy(
-	publicClient: PublicClient
-): Promise<DependencyCheckResult> {
-	try {
-		const bytecode = await publicClient.getBytecode({
-			address: CREATE2_PROXY_ADDRESS
-		});
-
-		return {
-			name: 'CREATE2 Proxy',
-			address: CREATE2_PROXY_ADDRESS,
-			exists: Boolean(bytecode && bytecode !== '0x')
-		};
-	} catch (error) {
-		return {
-			name: 'CREATE2 Proxy',
-			address: CREATE2_PROXY_ADDRESS,
-			exists: false,
-			error: error instanceof Error ? error.message : String(error)
-		};
-	}
-}
+import type { TranslationKeys } from '@shelchin/i18n';
+type TranslateFn = (key: keyof TranslationKeys, params?: Record<string, string | number>) => string;
 
 /**
- * Check all required dependencies
+ * Run all dependency checks for contract-deployer
+ * This orchestrates the check sequence specific to contract-deployer requirements
  */
 export async function checkAllDependencies(
-	publicClient: PublicClient
-): Promise<DependencyCheckResult[]> {
-	const results = await Promise.all([checkCreate2Proxy(publicClient)]);
-	return results;
+	rpcUrl: string,
+	chainId: number,
+	networkName: string,
+	t: TranslateFn
+): Promise<DependencyCheck[]> {
+	const checks: DependencyCheck[] = [];
+
+	// 1. Check RPC endpoint first
+	const rpcCheck = await checkRPCEndpoint(rpcUrl, chainId, networkName, t);
+	checks.push(rpcCheck);
+
+	// If RPC failed, don't proceed with other checks
+	if (rpcCheck.status === 'error') {
+		return checks;
+	}
+
+	// 2. Check CREATE2 Proxy (required for deterministic deployment)
+	const create2Check = await checkCREATE2Proxy(rpcUrl, t);
+	checks.push(create2Check);
+
+	return checks;
 }

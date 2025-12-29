@@ -1,14 +1,24 @@
 <script lang="ts">
+	/**
+	 * Contract Deployer Step 2: Dependency Check Sidebar
+	 * Uses shared DependencyCheckSidebar component with custom help section
+	 */
+	import { DependencyCheckSidebar } from '$lib/components/step/dependency-check';
+	import { step2State } from '@/features/contract-deployer/stores/step2-state.svelte';
 	import { useI18n } from '@shelchin/i18n';
 
 	const i18n = useI18n();
+
+	// Use $derived to get reactive value from step2State
+	const summary = $derived(step2State.summary);
 </script>
 
-<div class="info-card">
-	<h3 class="info-title">{i18n.t('contract-deployer.step2.sidebar.title')}</h3>
-	<div class="info-content">
+<DependencyCheckSidebar {summary}>
+	<div class="help-section">
+		<h3>{i18n.t('contract-deployer.step2.sidebar.title')}</h3>
 		<p>{i18n.t('contract-deployer.step2.sidebar.description')}</p>
-		<div class="dependency-list">
+
+		<div class="required-contracts">
 			<h4>{i18n.t('contract-deployer.step2.sidebar.required_contracts')}</h4>
 			<ul>
 				<li>
@@ -18,64 +28,65 @@
 			</ul>
 		</div>
 	</div>
-</div>
+</DependencyCheckSidebar>
 
 <style>
-	.info-card {
-		background-color: var(--color-surface);
-		border-radius: var(--border-radius-lg);
-		padding: var(--space-6);
-		border: 1px solid var(--color-border);
+	/* Help Section */
+	.help-section {
+		border-top: 1px solid var(--color-border);
+		padding-top: var(--space-6);
+		margin-top: var(--space-4);
 	}
 
-	.info-title {
-		font-size: var(--font-size-lg);
-		font-weight: var(--font-weight-semibold);
-		margin-bottom: var(--space-4);
+	.help-section h3 {
+		font-size: var(--text-base);
+		font-weight: var(--font-semibold);
 		color: var(--color-text-primary);
+		margin-bottom: var(--space-2);
 	}
 
-	.info-content {
-		font-size: var(--font-size-sm);
+	.help-section p {
+		font-size: var(--text-sm);
 		color: var(--color-text-secondary);
 		line-height: 1.6;
-	}
-
-	.info-content p {
 		margin-bottom: var(--space-4);
 	}
 
-	.dependency-list {
+	.required-contracts {
 		margin-top: var(--space-4);
 		padding: var(--space-4);
-		background-color: var(--color-panel-1);
+		background: var(--color-panel-1);
 		border-radius: var(--border-radius-md);
 	}
 
-	.dependency-list h4 {
-		font-size: var(--font-size-sm);
-		font-weight: var(--font-weight-semibold);
-		margin-bottom: var(--space-3);
+	.required-contracts h4 {
+		font-size: var(--text-sm);
+		font-weight: var(--font-semibold);
 		color: var(--color-text-primary);
+		margin-bottom: var(--space-3);
 	}
 
-	.dependency-list ul {
+	.required-contracts ul {
 		list-style: none;
 		padding: 0;
 		margin: 0;
 	}
 
-	.dependency-list li {
-		margin-bottom: var(--space-2);
+	.required-contracts li {
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-1);
 	}
 
-	.dependency-list code {
+	.required-contracts li strong {
+		color: var(--color-text-primary);
+		font-weight: var(--font-semibold);
+	}
+
+	.required-contracts code {
 		font-family: var(--font-mono);
-		font-size: var(--font-size-xs);
-		background-color: var(--color-panel-2);
+		font-size: var(--text-xs);
+		background: var(--color-panel-2);
 		padding: var(--space-1) var(--space-2);
 		border-radius: var(--border-radius-sm);
 		word-break: break-all;

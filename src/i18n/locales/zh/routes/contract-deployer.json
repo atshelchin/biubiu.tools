@@ -69,16 +69,50 @@
 		"content": {
 			"title": "验证依赖项",
 			"description": "检查此网络上是否可用 CREATE2 代理",
-			"checking": "正在检查依赖项...",
-			"available": "可用",
-			"not_available": "不可用",
-			"all_passed": "所有依赖项都可用！您可以继续部署。",
-			"some_failed": "某些依赖项在此网络上不可用。请切换到受支持的网络。",
-			"check_button": "检查依赖项"
+			"checking_dependencies_for": "正在检查 {network} 网络环境...",
+			"wallet_not_connected_title": "钱包未连接",
+			"wallet_not_connected_message": "请返回步骤 1 并连接您的钱包",
+			"go_to_step1": "返回步骤 1",
+			"all_dependencies_satisfied": "所有依赖项已满足",
+			"network_properly_configured": "CREATE2 代理可用。您可以继续部署。",
+			"dependency_issues_found": "发现依赖问题",
+			"resolve_issues_before_continuing": "CREATE2 代理在此网络上不可用。请切换到受支持的网络。",
+			"recheck_dependencies": "重新检查依赖项",
+			"address_label": "地址：",
+			"endpoint_label": "端点：",
+			"resolve_previous_issue": "请先解决上一个问题",
+			"view_deployment_guide": "查看部署指南",
+			"deploy_coming_soon": "部署合约（即将推出）",
+			"deploy_contract": "部署 {contractName}",
+			"checks": {
+				"category": {
+					"network": "网络",
+					"protocol": "协议",
+					"contract": "合约"
+				},
+				"rpc_endpoint": {
+					"name": "RPC 端点",
+					"description": "连接到 {network} 网络",
+					"chain_id_mismatch": "链 ID 不匹配：预期 {expected}，实际 {actual}",
+					"configure_rpc_button": "配置 RPC",
+					"connected_to_block": "已连接到区块 #{blockNumber}",
+					"failed_to_connect": "无法连接到 RPC 端点",
+					"no_rpc_configured": "未配置 RPC 端点"
+				},
+				"contract": {
+					"create2_proxy_description": "用于确定性部署的 CREATE2 代理",
+					"deployed": "已部署",
+					"not_deployed": "此网络上未部署",
+					"check_failed": "检查合约失败"
+				}
+			}
 		},
 		"footer": {
 			"continue": "继续",
-			"hint": "所有依赖项必须可用才能继续"
+			"hint": "所有依赖项必须可用才能继续",
+			"checking_dependencies": "正在检查依赖项...",
+			"resolve_issues": "请解决上述问题后继续",
+			"waiting_for_checks": "等待依赖项检查完成"
 		}
 	},
 	"step3": {

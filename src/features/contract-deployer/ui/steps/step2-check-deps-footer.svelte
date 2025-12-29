@@ -1,42 +1,14 @@
 <script lang="ts">
-	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
-	import StepFooter from '$lib/components/step/step-footer.svelte';
-	import { useI18n } from '@shelchin/i18n';
-	import { getContext } from 'svelte';
+	/**
+	 * Contract Deployer Step 2: Dependency Check Footer
+	 * Uses shared DependencyCheckFooter component
+	 */
+	import { DependencyCheckFooter } from '$lib/components/step/dependency-check';
+	import { step2State } from '@/features/contract-deployer/stores/step2-state.svelte';
 
-	const stepManager = useStepManager();
-	const i18n = useI18n();
-
-	// Get check result from step2 content component
-	const contentComponent = getContext<{
-		getCheckResult: () => { allPassed: boolean; hasChecked: boolean };
-	}>('step2-content');
-
-	let checkResult = $state({ allPassed: false, hasChecked: false });
-
-	// Poll check result
-	$effect(() => {
-		const interval = setInterval(() => {
-			if (contentComponent?.getCheckResult) {
-				checkResult = contentComponent.getCheckResult();
-			}
-		}, 100);
-
-		return () => clearInterval(interval);
-	});
-
-	const isReadyToContinue = $derived(checkResult.hasChecked && checkResult.allPassed);
-
-	function handleContinue() {
-		if (isReadyToContinue) {
-			stepManager.next();
-		}
-	}
+	// Use $derived to get reactive values from step2State
+	const summary = $derived(step2State.summary);
+	const isChecking = $derived(step2State.isChecking);
 </script>
 
-<StepFooter
-	canContinue={isReadyToContinue}
-	continueText={i18n.t('contract-deployer.step2.footer.continue')}
-	onContinue={handleContinue}
-	hint={i18n.t('contract-deployer.step2.footer.hint')}
-/>
+<DependencyCheckFooter i18nPrefix="contract-deployer" {summary} {isChecking} />

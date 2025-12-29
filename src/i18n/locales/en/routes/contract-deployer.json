@@ -69,16 +69,50 @@
 		"content": {
 			"title": "Verify Dependencies",
 			"description": "Checking if CREATE2 proxy is available on this network",
-			"checking": "Checking dependencies...",
-			"available": "Available",
-			"not_available": "Not Available",
-			"all_passed": "All dependencies are available! You can proceed to deployment.",
-			"some_failed": "Some dependencies are not available on this network. Please switch to a supported network.",
-			"check_button": "Check Dependencies"
+			"checking_dependencies_for": "Checking {network} network environment...",
+			"wallet_not_connected_title": "Wallet Not Connected",
+			"wallet_not_connected_message": "Please go back to Step 1 and connect your wallet",
+			"go_to_step1": "Go to Step 1",
+			"all_dependencies_satisfied": "All Dependencies Satisfied",
+			"network_properly_configured": "CREATE2 proxy is available. You can proceed to deployment.",
+			"dependency_issues_found": "Dependency Issues Found",
+			"resolve_issues_before_continuing": "CREATE2 proxy is not available on this network. Please switch to a supported network.",
+			"recheck_dependencies": "Re-check Dependencies",
+			"address_label": "Address:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Please resolve the previous issue first",
+			"view_deployment_guide": "View Deployment Guide",
+			"deploy_coming_soon": "Deploy Contract (Coming Soon)",
+			"deploy_contract": "Deploy {contractName}",
+			"checks": {
+				"category": {
+					"network": "Network",
+					"protocol": "Protocol",
+					"contract": "Contract"
+				},
+				"rpc_endpoint": {
+					"name": "RPC Endpoint",
+					"description": "Connection to {network} network",
+					"chain_id_mismatch": "Chain ID mismatch: expected {expected}, got {actual}",
+					"configure_rpc_button": "Configure RPC",
+					"connected_to_block": "Connected at block #{blockNumber}",
+					"failed_to_connect": "Failed to connect to RPC endpoint",
+					"no_rpc_configured": "No RPC endpoint configured"
+				},
+				"contract": {
+					"create2_proxy_description": "CREATE2 Proxy for deterministic deployment",
+					"deployed": "Deployed",
+					"not_deployed": "Not deployed on this network",
+					"check_failed": "Failed to check contract"
+				}
+			}
 		},
 		"footer": {
 			"continue": "Continue",
-			"hint": "All dependencies must be available to continue"
+			"hint": "All dependencies must be available to continue",
+			"checking_dependencies": "Checking dependencies...",
+			"resolve_issues": "Please resolve the issues above to continue",
+			"waiting_for_checks": "Waiting for dependency checks to complete"
 		}
 	},
 	"step3": {
