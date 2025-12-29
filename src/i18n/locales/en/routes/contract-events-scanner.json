@@ -10,5 +10,20 @@
 	"description": "Scan, analyze and export smart contract events from blockchain",
 	"feature_1": "Scan historical event logs from any contract",
 	"feature_2": "Custom event filters and block range selection",
-	"feature_3": "Export event data to CSV, JSON formats"
+	"feature_3": "Export event data to CSV, JSON formats",
+	"step1": {
+		"content": {
+			"title": "Select Network",
+			"description": "Choose the blockchain network for event scanning",
+			"loading": "Loading network configuration..."
+		},
+		"sidebar": {
+			"title": "Connect Wallet",
+			"description": "Connect your wallet to start scanning contract events."
+		},
+		"footer": {
+			"continue": "Continue",
+			"hint": "Connect your wallet to continue"
+		}
+	}
 }

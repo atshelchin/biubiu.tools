@@ -1,8 +1,12 @@
 <script lang="ts">
-	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
+	/**
+	 * Assets Monitor Step 1: Connect Wallet Sidebar
+	 * Uses shared ConnectWalletSidebar component with custom help content
+	 */
+	import { ConnectWalletSidebar } from '$lib/components/step/connect-wallet';
 </script>
 
-<StepSidebar stepNumber={1} title="Connect Wallet" description="Connect to start monitoring">
+<ConnectWalletSidebar i18nPrefix="assets-monitor">
 	<div class="features">
 		<ul>
 			<li>📊 Track all asset movements</li>
@@ -10,7 +14,7 @@
 			<li>💾 Store results locally</li>
 		</ul>
 	</div>
-</StepSidebar>
+</ConnectWalletSidebar>
 
 <style>
 	.features {

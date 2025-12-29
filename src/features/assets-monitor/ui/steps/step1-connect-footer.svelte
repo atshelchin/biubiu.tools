@@ -1,11 +1,9 @@
 <script lang="ts">
-	import { useConnectStore } from '$lib/stores/connect.svelte.js';
-	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
-	import StepFooter from '$lib/components/step/step-footer.svelte';
-
-	const connectStore = useConnectStore();
-	const stepManager = useStepManager();
-	const canContinue = $derived(connectStore.isConnected);
+	/**
+	 * Assets Monitor Step 1: Connect Wallet Footer
+	 * Uses shared ConnectWalletFooter component
+	 */
+	import { ConnectWalletFooter } from '$lib/components/step/connect-wallet';
 </script>
 
-<StepFooter {canContinue} continueText="Continue" onContinue={() => stepManager.next()} />
+<ConnectWalletFooter i18nPrefix="assets-monitor" />

@@ -7,5 +7,20 @@
 		"flag": "🇨🇳"
 	},
 	"title": "ENS 域名扫描",
-	"description": "批量扫描 ENS 域名可用性和到期状态"
+	"description": "批量扫描 ENS 域名可用性和到期状态",
+	"step1": {
+		"content": {
+			"title": "连接到以太坊主网",
+			"description": "ENS 域名注册在以太坊主网上",
+			"loading": "正在加载网络配置..."
+		},
+		"sidebar": {
+			"title": "连接钱包",
+			"description": "连接到以太坊主网以扫描 ENS 域名。"
+		},
+		"footer": {
+			"continue": "继续",
+			"hint": "连接到以太坊主网以继续"
+		}
+	}
 }

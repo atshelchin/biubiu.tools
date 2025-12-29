@@ -7,5 +7,20 @@
 		"code": "en"
 	},
 	"title": "ENS Scanner",
-	"description": "Batch scan ENS domain availability and expiry status"
+	"description": "Batch scan ENS domain availability and expiry status",
+	"step1": {
+		"content": {
+			"title": "Connect to Ethereum Mainnet",
+			"description": "ENS names are registered on Ethereum mainnet",
+			"loading": "Loading network configuration..."
+		},
+		"sidebar": {
+			"title": "Connect Wallet",
+			"description": "Connect to Ethereum mainnet to scan ENS domains."
+		},
+		"footer": {
+			"continue": "Continue",
+			"hint": "Connect to Ethereum Mainnet to continue"
+		}
+	}
 }

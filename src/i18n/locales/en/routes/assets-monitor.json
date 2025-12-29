@@ -10,5 +10,20 @@
 	"description": "Track and analyze wallet asset movements across multiple chains",
 	"feature_1": "Real-time monitoring of multiple wallet addresses",
 	"feature_2": "Cross-chain asset aggregation and statistics",
-	"feature_3": "Transaction history and trend analysis"
+	"feature_3": "Transaction history and trend analysis",
+	"step1": {
+		"content": {
+			"title": "Select Network & Connect",
+			"description": "Choose network to monitor",
+			"loading": "Loading network configuration..."
+		},
+		"sidebar": {
+			"title": "Connect Wallet",
+			"description": "Connect your wallet to start monitoring assets."
+		},
+		"footer": {
+			"continue": "Continue",
+			"hint": "Connect your wallet to continue"
+		}
+	}
 }

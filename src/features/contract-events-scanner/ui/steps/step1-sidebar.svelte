@@ -1,12 +1,12 @@
 <script lang="ts">
-	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
+	/**
+	 * Contract Events Scanner Step 1: Connect Wallet Sidebar
+	 * Uses shared ConnectWalletSidebar component with custom help content
+	 */
+	import { ConnectWalletSidebar } from '$lib/components/step/connect-wallet';
 </script>
 
-<StepSidebar
-	stepNumber={1}
-	title="Connect Wallet"
-	description="Connect your Web3 wallet to scan contract events"
->
+<ConnectWalletSidebar i18nPrefix="contract-events-scanner">
 	<div class="feature-highlights">
 		<ul class="feature-list">
 			<li>
@@ -32,7 +32,7 @@
 		<span class="security-icon">🛡️</span>
 		<p>Read-only operations. No transactions will be executed.</p>
 	</div>
-</StepSidebar>
+</ConnectWalletSidebar>
 
 <style>
 	/* Feature Highlights */

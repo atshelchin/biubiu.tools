@@ -17,9 +17,11 @@
 	interface Props {
 		/** i18n prefix for this tool (e.g., 'token-balance-scanner', 'wallet-sweep') */
 		i18nPrefix: string;
+		/** Optional: require a specific chain ID (e.g., 1 for Ethereum mainnet) */
+		requiredChainId?: number;
 	}
 
-	let { i18nPrefix }: Props = $props();
+	let { i18nPrefix, requiredChainId }: Props = $props();
 
 	const connectStore = useConnectStore();
 	const stepManager = useStepManager();
@@ -31,7 +33,11 @@
 	}
 
 	const isReadyToContinue = $derived(
-		Boolean(connectStore.isConnected && connectStore.currentChainId !== null)
+		Boolean(
+			connectStore.isConnected &&
+			connectStore.currentChainId !== null &&
+			(requiredChainId === undefined || connectStore.currentChainId === requiredChainId)
+		)
 	);
 
 	function handleContinue() {
