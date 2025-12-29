@@ -191,32 +191,55 @@ function generateStaticSitemap(): string {
 }
 
 /**
- * Generate chains sitemap
+ * Generate chains sitemap (split into multiple files to stay under 25MB limit)
+ * Returns array of { filename, content } for each sitemap file
  */
-function generateChainsSitemap(): string {
-	const urls: string[] = [];
-
+function generateChainsSitemaps(): { filename: string; content: string }[] {
 	// Filter mainnet chains only
 	const mainnetChains = chains.filter((c) => !c.isTestnet);
 
-	for (const chain of mainnetChains) {
-		const slug = chain.chainSlug || chain.shortName;
-		if (!slug) continue;
+	// Calculate URLs per chain: 1 main + N locales = 1 + 13 = 14 URLs per chain
+	// Each URL with alternates is roughly 1KB
+	// Target max file size: 20MB (safe margin under 25MB limit)
+	// 20MB / 1KB = ~20,000 URLs max per file
+	// 20,000 / 14 = ~1,428 chains per file
+	const CHAINS_PER_FILE = 500; // Conservative: ~500 chains per file
 
-		const path = `/chains/${slug.toLowerCase()}`;
+	const sitemaps: { filename: string; content: string }[] = [];
+	const totalChunks = Math.ceil(mainnetChains.length / CHAINS_PER_FILE);
 
-		// Main route
-		urls.push(generateUrl(path, { priority: 0.7, changefreq: 'weekly', baseRoute: path }));
+	for (let chunkIndex = 0; chunkIndex < totalChunks; chunkIndex++) {
+		const startIdx = chunkIndex * CHAINS_PER_FILE;
+		const endIdx = Math.min(startIdx + CHAINS_PER_FILE, mainnetChains.length);
+		const chunkChains = mainnetChains.slice(startIdx, endIdx);
 
-		// Localized routes
-		for (const locale of SUPPORTED_LOCALES) {
-			urls.push(
-				generateUrl(`/${locale}${path}`, { priority: 0.6, changefreq: 'weekly', baseRoute: path })
-			);
+		const urls: string[] = [];
+
+		for (const chain of chunkChains) {
+			const slug = chain.chainSlug || chain.shortName;
+			if (!slug) continue;
+
+			const path = `/chains/${slug.toLowerCase()}`;
+
+			// Main route
+			urls.push(generateUrl(path, { priority: 0.7, changefreq: 'weekly', baseRoute: path }));
+
+			// Localized routes
+			for (const locale of SUPPORTED_LOCALES) {
+				urls.push(
+					generateUrl(`/${locale}${path}`, { priority: 0.6, changefreq: 'weekly', baseRoute: path })
+				);
+			}
 		}
+
+		const filename = totalChunks === 1 ? 'sitemap-chains.xml' : `sitemap-chains-${chunkIndex + 1}.xml`;
+		sitemaps.push({
+			filename,
+			content: wrapSitemap(urls)
+		});
 	}
 
-	return wrapSitemap(urls);
+	return sitemaps;
 }
 
 /**
@@ -337,13 +360,16 @@ function main() {
 	sitemapFiles.push('sitemap-static.xml');
 	console.log(`   ✓ Static pages sitemap generated`);
 
-	// Generate chains sitemap
-	console.log('🔗 Generating sitemap-chains.xml...');
-	const chainsSitemap = generateChainsSitemap();
-	writeFileSync(join(OUTPUT_DIR, 'sitemap-chains.xml'), chainsSitemap);
-	sitemapFiles.push('sitemap-chains.xml');
+	// Generate chains sitemaps (may be multiple files)
 	const mainnetCount = chains.filter((c) => !c.isTestnet).length;
-	console.log(`   ✓ ${mainnetCount} chains indexed`);
+	console.log(`🔗 Generating chains sitemaps for ${mainnetCount} chains...`);
+	const chainsSitemaps = generateChainsSitemaps();
+	for (const { filename, content } of chainsSitemaps) {
+		writeFileSync(join(OUTPUT_DIR, filename), content);
+		sitemapFiles.push(filename);
+		console.log(`   ✓ ${filename} generated`);
+	}
+	console.log(`   ✓ ${mainnetCount} chains indexed across ${chainsSitemaps.length} file(s)`);
 
 	// Generate addresses sitemap
 	console.log('📬 Generating sitemap-addresses.xml...');
