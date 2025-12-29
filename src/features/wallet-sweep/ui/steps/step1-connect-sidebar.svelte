@@ -1,8 +1,9 @@
 <script lang="ts">
-	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
-	// import InfoCard from '$lib/components/step/info-card.svelte';
-	// import { useI18n } from '@shelchin/i18n';
-	// const i18n = useI18n();
+	/**
+	 * Wallet Sweep Step 1: Sidebar
+	 * Uses shared ConnectWalletSidebar component
+	 */
+	import { ConnectWalletSidebar } from '$lib/components/step/connect-wallet';
 </script>
 
-<StepSidebar stepNumber={1} title="" description=""></StepSidebar>
+<ConnectWalletSidebar />

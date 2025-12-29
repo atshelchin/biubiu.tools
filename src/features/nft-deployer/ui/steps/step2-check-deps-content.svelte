@@ -11,7 +11,7 @@
 	import type { ContractDeploymentConfig } from '$lib/types/deployment-config';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
-	import EmptyState from '@/features/wallet-sweep/ui/components/empty-state.svelte';
+	import EmptyState from '$lib/components/ui/empty-state.svelte';
 	import BackButton from '$lib/components/ui/back-button.svelte';
 	import LoadingState from '$lib/components/ui/loading-state.svelte';
 	import SummaryBanner from '$lib/components/ui/summary-banner.svelte';

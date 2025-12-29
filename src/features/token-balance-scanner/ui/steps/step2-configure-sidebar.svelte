@@ -1,13 +1,13 @@
 <script lang="ts">
-	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
-	import CheckSummary from '$lib/components/ui/check-summary.svelte';
+	/**
+	 * Token Balance Scanner Step 2: Dependency Check Sidebar
+	 * Uses shared DependencyCheckSidebar component
+	 */
+	import { DependencyCheckSidebar } from '$lib/components/step/dependency-check';
 	import { step2State } from '@/features/token-balance-scanner/stores/step2-state.svelte';
-	// Use $derived for easier access in template
-	let summary = $derived(step2State.summary);
+
+	// Use $derived to get reactive value from step2State
+	const summary = $derived(step2State.summary);
 </script>
 
-<StepSidebar stepNumber={2} title="" description="" showWalletConnect={true}>
-	{#if summary}
-		<CheckSummary {summary} />
-	{/if}
-</StepSidebar>
+<DependencyCheckSidebar {summary} />

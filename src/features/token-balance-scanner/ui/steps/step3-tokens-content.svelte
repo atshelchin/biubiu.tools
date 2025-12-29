@@ -4,7 +4,7 @@
 	import TokenSelector from '$lib/components/ui/token-selector.svelte';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
-	import EmptyState from '@/features/wallet-sweep/ui/components/empty-state.svelte';
+	import EmptyState from '$lib/components/ui/empty-state.svelte';
 	import { SvelteSet } from 'svelte/reactivity';
 	import { useI18n } from '@shelchin/i18n';
 
