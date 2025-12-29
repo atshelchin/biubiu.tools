@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "pt",
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷"
+	},
+	"title": "Scanner de Eventos de Contrato",
+	"description": "Escaneie e analise eventos emitidos por contratos inteligentes",
+	"step1": {
+		"content": {
+			"title": "Conectar à Rede",
+			"description": "Selecione a rede onde o contrato está implantado",
+			"loading": "Carregando configuração de rede..."
+		},
+		"sidebar": {
+			"title": "Conectar Carteira",
+			"description": "Conecte-se à rede para escanear eventos do contrato."
+		},
+		"footer": {
+			"continue": "Continuar",
+			"hint": "Conecte-se a uma rede para continuar"
+		}
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "es",
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸"
+	},
+	"title": "Escáner de Eventos de Contrato",
+	"description": "Escanea y analiza eventos emitidos por contratos inteligentes",
+	"step1": {
+		"content": {
+			"title": "Conectar a la Red",
+			"description": "Selecciona la red donde está desplegado el contrato",
+			"loading": "Cargando configuración de red..."
+		},
+		"sidebar": {
+			"title": "Conectar Billetera",
+			"description": "Conéctate a la red para escanear eventos del contrato."
+		},
+		"footer": {
+			"continue": "Continuar",
+			"hint": "Conéctate a una red para continuar"
+		}
+	}
+}

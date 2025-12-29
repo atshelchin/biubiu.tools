@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "it",
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹"
+	},
+	"title": "Scanner ENS",
+	"description": "Scansione batch della disponibilità e dello stato di scadenza dei domini ENS",
+	"step1": {
+		"content": {
+			"title": "Connetti alla Rete Principale Ethereum",
+			"description": "I nomi ENS sono registrati sulla rete principale Ethereum",
+			"loading": "Caricamento configurazione di rete..."
+		},
+		"sidebar": {
+			"title": "Connetti Wallet",
+			"description": "Connettiti alla rete principale Ethereum per scansionare i domini ENS."
+		},
+		"footer": {
+			"continue": "Continua",
+			"hint": "Connettiti alla Rete Principale Ethereum per continuare"
+		}
+	}
+}

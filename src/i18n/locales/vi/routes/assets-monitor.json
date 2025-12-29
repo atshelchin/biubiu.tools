@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "vi",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳"
+	},
+	"title": "Giám Sát Tài Sản",
+	"description": "Giám sát thay đổi tài sản trong địa chỉ ví theo thời gian thực",
+	"step1": {
+		"content": {
+			"title": "Kết Nối với Mạng",
+			"description": "Chọn mạng để giám sát tài sản",
+			"loading": "Đang tải cấu hình mạng..."
+		},
+		"sidebar": {
+			"title": "Kết Nối Ví",
+			"description": "Kết nối với mạng để giám sát tài sản ví."
+		},
+		"footer": {
+			"continue": "Tiếp Tục",
+			"hint": "Kết nối với một mạng để tiếp tục"
+		}
+	}
+}

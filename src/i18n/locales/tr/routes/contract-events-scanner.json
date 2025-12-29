@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "tr",
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷"
+	},
+	"title": "Kontrat Olay Tarayıcı",
+	"description": "Akıllı kontratlar tarafından yayınlanan olayları tara ve analiz et",
+	"step1": {
+		"content": {
+			"title": "Ağa Bağlan",
+			"description": "Kontratın dağıtıldığı ağı seçin",
+			"loading": "Ağ yapılandırması yükleniyor..."
+		},
+		"sidebar": {
+			"title": "Cüzdan Bağla",
+			"description": "Kontrat olaylarını taramak için ağa bağlanın."
+		},
+		"footer": {
+			"continue": "Devam",
+			"hint": "Devam etmek için bir ağa bağlanın"
+		}
+	}
+}

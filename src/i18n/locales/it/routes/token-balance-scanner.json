@@ -1,0 +1,271 @@
+{
+	"_meta": {
+		"code": "it",
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹"
+	},
+	"title": "Verificatore Saldo Wallet",
+	"description": "Filtra rapidamente i wallet con saldi, identifica gli indirizzi non vuoti e aggrega le partecipazioni token su più wallet",
+	"session": {
+		"title": "Sessioni di Scansione",
+		"status": {
+			"scanning": "Scansione",
+			"paused": "In pausa",
+			"completed": "Completato",
+			"abandoned": "Abbandonato"
+		},
+		"progress": "Progresso",
+		"addresses": "Indirizzi",
+		"tokens": "Token",
+		"last_activity": "Ultima Attività",
+		"view": "Visualizza",
+		"resume": "Riprendi",
+		"abandon": "Abbandona",
+		"delete": "Elimina",
+		"start_new": "Avvia Nuova Scansione",
+		"empty": "Nessuna sessione attiva",
+		"error": {
+			"abandon_failed": "Impossibile abbandonare la sessione",
+			"delete_failed": "Impossibile eliminare la sessione",
+			"not_found": "Sessione non trovata",
+			"restore_failed": "Impossibile ripristinare la sessione"
+		}
+	},
+	"feature_1": "Scansiona fino a 100K indirizzi",
+	"feature_2": "Filtra wallet con saldi",
+	"feature_3": "Statistiche partecipazioni aggregate",
+	"feature_4": "Esporta in EXCEL/CSV/JSON",
+	"faqs": {
+		"what_is_balance_checker": "Cos'è il Verificatore Saldo Wallet?",
+		"balance_checker_explanation": "Uno strumento per scansionare più indirizzi wallet e verificare i loro saldi token. Ti aiuta a identificare rapidamente quali wallet hanno asset e aggregare le partecipazioni totali di tutti i wallet.",
+		"how_many_addresses": "Quanti indirizzi posso scansionare contemporaneamente?",
+		"how_many_addresses_explanation": "Puoi scansionare fino a 100.000 indirizzi wallet in un singolo batch. Lo strumento utilizza chiamate RPC ottimizzate per interrogare i saldi in modo efficiente.",
+		"what_tokens_supported": "Quali tipi di token sono supportati?",
+		"what_tokens_supported_explanation": "Supportiamo token nativi (ETH, BNB, MATIC, ecc.) e tutti i token standard ERC-20. Puoi aggiungere qualsiasi token inserendo il suo indirizzo contratto.",
+		"is_it_free": "La scansione dei saldi è gratuita?",
+		"is_it_free_explanation": "Sì! La scansione dei saldi è completamente gratuita e non richiede transazioni on-chain. Legge solo i dati dalla blockchain.",
+		"what_is_multicall": "Cos'è Multicall3?",
+		"multicall_explanation": "Multicall3 è uno smart contract che raggruppa più chiamate di lettura in un'unica richiesta. Questo accelera drasticamente la scansione riducendo il numero di chiamate RPC necessarie.",
+		"can_export_results": "Posso esportare i risultati della scansione?",
+		"can_export_explanation": "Sì! Puoi esportare i risultati in formato CSV o JSON per ulteriori analisi in fogli di calcolo o altri strumenti.",
+		"what_networks_supported": "Quali reti blockchain sono supportate?",
+		"networks_supported_explanation": "Supportiamo Ethereum, Polygon, BSC, Base, Arbitrum e Optimism. Puoi anche aggiungere reti personalizzate compatibili con EVM."
+	},
+	"seo": {
+		"page_title": "Verificatore Saldo Wallet - Scansione Batch Saldi Token | BiuBiu Tools",
+		"page_description": "Scansiona e filtra rapidamente wallet con saldi su più indirizzi. Identifica wallet non vuoti, aggrega partecipazioni token ed esporta risultati in EXCEL/CSV/JSON.",
+		"keywords": "verificatore saldo wallet, scansione batch saldi, scanner saldo token, portafoglio crypto, scanner multi-wallet, saldo blockchain, strumenti web3, saldo ERC20",
+		"webapp_name": "Verificatore Saldo Wallet",
+		"webapp_description": "Filtra rapidamente i wallet con saldi, identifica gli indirizzi non vuoti e aggrega le partecipazioni token su più wallet.",
+		"feature_1": "Scansiona fino a 100.000 indirizzi wallet contemporaneamente",
+		"feature_2": "Identifica rapidamente wallet con saldi vs wallet vuoti",
+		"feature_3": "Aggrega partecipazioni totali di tutti i wallet scansionati",
+		"feature_4": "Supporta più reti (Ethereum, Polygon, BSC, Base, Arbitrum, Optimism)",
+		"feature_5": "Esporta risultati in CSV o JSON",
+		"howto_name": "Come Scansionare Saldi Wallet in Batch",
+		"howto_description": "Guida passo passo per scansionare e filtrare saldi wallet su più indirizzi.",
+		"howto_tool_1": "Wallet Web3 (MetaMask, WalletConnect, ecc.)",
+		"howto_tool_2": "Lista di indirizzi wallet da scansionare",
+		"step_1_name": "Connetti Wallet",
+		"step_1_text": "Clicca sul pulsante \"Connetti Wallet\" e seleziona il tuo provider wallet Web3 preferito. Questo viene utilizzato per selezionare la rete blockchain che vuoi scansionare.",
+		"step_1_description": "Collega il tuo wallet Web3",
+		"step_2_name": "Verifica Dipendenze",
+		"step_2_text": "Verifica la connessione alla rete blockchain e assicurati che il contratto Multicall3 sia accessibile. Il sistema rileverà e validerà automaticamente i componenti necessari.",
+		"step_2_description": "Verifica rete e contratti",
+		"step_3_name": "Seleziona Token",
+		"step_3_text": "Scegli quali token vuoi verificare i saldi. Puoi selezionare token nativi (ETH, BNB, MATIC) e qualsiasi token ERC20 disponibile sulla rete.",
+		"step_3_description": "Scegli token da scansionare",
+		"step_4_name": "Importa Indirizzi",
+		"step_4_text": "Aggiungi indirizzi wallet da scansionare incollandoli (uno per riga), caricando un file CSV/TXT, o inserendoli manualmente. Puoi scansionare fino a 100.000 wallet contemporaneamente.",
+		"step_4_description": "Aggiungi indirizzi wallet",
+		"step_5_name": "Scansiona e Risultati",
+		"step_5_text": "Avvia la scansione e visualizza i risultati in tempo reale. Filtra wallet con saldi, visualizza statistiche aggregate ed esporta in CSV o JSON.",
+		"step_5_description": "Scansiona ed esporta risultati"
+	},
+	"step1": {
+		"content": {
+			"title": "Seleziona Rete",
+			"description": "Scegli la rete blockchain per la scansione dei saldi",
+			"loading": "Caricamento configurazione di rete..."
+		},
+		"footer": {
+			"continue": "Continua",
+			"hint": "Connetti il tuo wallet per continuare"
+		}
+	},
+	"step3": {
+		"content": {
+			"title": "Seleziona Token",
+			"description": "Scegli quali token scansionare su {network}",
+			"description_fallback": "Scegli quali token scansionare",
+			"wallet_not_connected_title": "Wallet Non Connesso",
+			"wallet_not_connected_message": "Per favore connetti prima il tuo wallet per selezionare i token",
+			"empty_message": "Seleziona almeno un token da scansionare"
+		},
+		"sidebar": {
+			"selected_tokens_title": "Token Selezionati",
+			"count_label": "Numero Token",
+			"empty_hint": "Seleziona almeno un token per continuare"
+		},
+		"footer": {
+			"hint": "Seleziona almeno un token per continuare"
+		}
+	},
+	"step4": {
+		"import_method": {
+			"address": "Indirizzi",
+			"xpub": "Chiave Pubblica Estesa"
+		},
+		"content": {
+			"title": "Importa Indirizzi Wallet",
+			"description": "Aggiungi indirizzi wallet per scansionare i saldi token",
+			"choose_method": "Scegli Metodo di Importazione",
+			"address_placeholder": "Incolla gli indirizzi wallet qui (uno per riga)\n0x1234...\n0x5678...",
+			"wallet_list": {
+				"title": "Wallet",
+				"count": "({count})",
+				"clear_all": "Cancella Tutto",
+				"empty": "Nessun wallet aggiunto"
+			}
+		},
+		"sidebar": {
+			"title": "Riepilogo",
+			"description": "Aggiungi indirizzi wallet da scansionare",
+			"total_label": "Totale Wallet",
+			"empty_hint": "Nessun wallet aggiunto"
+		},
+		"footer": {
+			"hint": "Aggiungi almeno un wallet per continuare"
+		},
+		"dialogs": {
+			"remove_wallet_title": "Rimuovi Wallet",
+			"remove_wallet_message": "Sei sicuro di voler rimuovere questo wallet?\n{address}",
+			"remove_button": "Rimuovi",
+			"clear_all_title": "Cancella Tutti i Wallet",
+			"clear_all_message": "Sei sicuro di voler rimuovere tutti i {count} wallet?",
+			"clear_all_button": "Cancella Tutto",
+			"long_press_hint": "Tieni premuto per confermare",
+			"cancel_button": "Annulla"
+		}
+	},
+	"step5": {
+		"title": "Scansiona e Visualizza Risultati",
+		"description": "Scansiona saldi token ed esporta dati",
+		"start": "Avvia Scansione",
+		"new_scan": "Avvia Nuova Scansione",
+		"info": "Clicca \"Avvia Scansione\" per interrogare i saldi token di tutti i wallet configurati. Verranno utilizzati più endpoint RPC in parallelo per una scansione più veloce.",
+		"config": {
+			"network": "Rete",
+			"wallets": "Wallet",
+			"tokens": "Token",
+			"rpcs": "Endpoint RPC"
+		},
+		"resume": {
+			"title": "Riprendere la Scansione Precedente?",
+			"info": "Progresso: {progress}% ({addresses} indirizzi, {tokens} token)",
+			"last_activity": "Ultima attività",
+			"continue": "Continua",
+			"discard": "Scarta"
+		},
+		"scanning": {
+			"title": "Scansione Saldi...",
+			"success": "completato",
+			"failed": "fallito",
+			"pending": "in attesa",
+			"pause": "Pausa"
+		},
+		"paused": {
+			"title": "Scansione in Pausa",
+			"message": "La scansione è stata messa in pausa.",
+			"resume": "Riprendi",
+			"new_scan": "Nuova Scansione"
+		},
+		"completed": {
+			"banner": "Scansione Completata - {count} wallet scansionati"
+		},
+		"export": {
+			"title": "Esporta Risultati",
+			"copied": "Copiato!",
+			"copy_summary": "Copia Riepilogo"
+		},
+		"totals": {
+			"title": "Partecipazioni Totali",
+			"wallets": "{count} wallet",
+			"wallets_short": "wallet"
+		},
+		"filter": {
+			"title": "Filtro",
+			"reset": "Reimposta",
+			"balance_status": "Stato Saldo",
+			"status_all": "Tutti",
+			"status_has_balance": "Con Saldo",
+			"status_no_balance": "Senza Saldo",
+			"token": "Token",
+			"token_all": "Tutti i Token",
+			"balance_range": "Intervallo Saldo",
+			"min": "Min",
+			"max": "Max",
+			"showing": "Visualizzando {filtered} di {total}",
+			"total": "{count} risultati"
+		},
+		"balances": {
+			"title": "Saldi Wallet",
+			"address": "Indirizzo",
+			"path": "Percorso",
+			"label": "Etichetta",
+			"results": "risultati",
+			"no_results": "Nessun risultato trovato"
+		},
+		"error": {
+			"title": "Scansione Fallita",
+			"unknown": "Si è verificato un errore sconosciuto",
+			"retry": "Riprova Scansione",
+			"no_network": "Nessuna rete selezionata",
+			"no_tokens": "Nessun token selezionato",
+			"no_wallets": "Nessun wallet aggiunto"
+		},
+		"sidebar": {
+			"title": "Scansione e Risultati",
+			"description": "Scansiona wallet per saldi token e visualizza risultati",
+			"progress": "Progresso",
+			"total": "totale",
+			"tasks": "attività",
+			"failed": "fallite",
+			"queries_failed": "query fallite",
+			"logs": "Log in Tempo Reale",
+			"completed": "Completato",
+			"remaining": "Rimanente",
+			"paused": "In Pausa",
+			"scan_results": "Risultati Scansione",
+			"addresses_scanned": "indirizzi scansionati",
+			"wallets_scanned": "Wallet Scansionati",
+			"with_balance": "indirizzi con saldo",
+			"success": "Successo",
+			"wallets_to_scan": "Wallet da Scansionare",
+			"tokens_selected": "Token Selezionati",
+			"export": "Esporta",
+			"new_scan": "Avvia Nuova Scansione",
+			"ready": "Pronto per la Scansione",
+			"wallets": "wallet",
+			"tokens": "token",
+			"info_title": "Cosa Sta Succedendo?",
+			"info_1": "Interrogazione blockchain per saldi token",
+			"info_2": "Utilizzo di più RPC in parallelo",
+			"info_3": "Ripetizione automatica delle richieste fallite",
+			"tip_completed": "Esporta in Excel per analisi avanzate, o CSV per semplici fogli di calcolo.",
+			"tip_scanning": "Puoi chiudere il browser - il progresso viene salvato automaticamente.",
+			"tip_idle": "Le scansioni grandi possono richiedere tempo ma possono essere messe in pausa e riprese in qualsiasi momento."
+		},
+		"footer": {
+			"hint_idle": "Clicca \"Avvia Scansione\" per iniziare",
+			"hint_scanning": "Scansione in corso...",
+			"hint_paused": "Scansione in pausa. Riprendi o avvia una nuova scansione.",
+			"hint_completed": "Esporta i tuoi risultati o avvia una nuova scansione",
+			"hint_error": "Riprova la scansione o torna indietro per risolvere il problema",
+			"new_scan": "Avvia Nuova Scansione",
+			"continue": "Continua"
+		}
+	}
+}

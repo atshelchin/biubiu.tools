@@ -1,0 +1,271 @@
+{
+	"_meta": {
+		"code": "fr",
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷"
+	},
+	"title": "Vérificateur de Solde de Portefeuille",
+	"description": "Filtrez rapidement les portefeuilles avec des soldes, identifiez les adresses non vides et agrégez les avoirs en tokens sur plusieurs portefeuilles",
+	"session": {
+		"title": "Sessions de Scan",
+		"status": {
+			"scanning": "Scan en cours",
+			"paused": "En pause",
+			"completed": "Terminé",
+			"abandoned": "Abandonné"
+		},
+		"progress": "Progression",
+		"addresses": "Adresses",
+		"tokens": "Tokens",
+		"last_activity": "Dernière Activité",
+		"view": "Voir",
+		"resume": "Reprendre",
+		"abandon": "Abandonner",
+		"delete": "Supprimer",
+		"start_new": "Démarrer un Nouveau Scan",
+		"empty": "Aucune session active",
+		"error": {
+			"abandon_failed": "Échec de l'abandon de la session",
+			"delete_failed": "Échec de la suppression de la session",
+			"not_found": "Session non trouvée",
+			"restore_failed": "Échec de la restauration de la session"
+		}
+	},
+	"feature_1": "Scannez jusqu'à 100K adresses",
+	"feature_2": "Filtrez les portefeuilles avec soldes",
+	"feature_3": "Statistiques d'avoirs agrégées",
+	"feature_4": "Exportez vers EXCEL/CSV/JSON",
+	"faqs": {
+		"what_is_balance_checker": "Qu'est-ce que le Vérificateur de Solde de Portefeuille ?",
+		"balance_checker_explanation": "Un outil pour scanner plusieurs adresses de portefeuille et vérifier leurs soldes de tokens. Il vous aide à identifier rapidement quels portefeuilles ont des actifs et à agréger les avoirs totaux de tous les portefeuilles.",
+		"how_many_addresses": "Combien d'adresses puis-je scanner à la fois ?",
+		"how_many_addresses_explanation": "Vous pouvez scanner jusqu'à 100 000 adresses de portefeuille en un seul lot. L'outil utilise des appels RPC optimisés pour interroger efficacement les soldes.",
+		"what_tokens_supported": "Quels types de tokens sont pris en charge ?",
+		"what_tokens_supported_explanation": "Nous prenons en charge les tokens natifs (ETH, BNB, MATIC, etc.) et tous les tokens standard ERC-20. Vous pouvez ajouter n'importe quel token en entrant son adresse de contrat.",
+		"is_it_free": "Le scan des soldes est-il gratuit ?",
+		"is_it_free_explanation": "Oui ! Le scan des soldes est entièrement gratuit et ne nécessite aucune transaction on-chain. Il ne fait que lire les données de la blockchain.",
+		"what_is_multicall": "Qu'est-ce que Multicall3 ?",
+		"multicall_explanation": "Multicall3 est un contrat intelligent qui regroupe plusieurs appels de lecture en une seule requête. Cela accélère considérablement le scan en réduisant le nombre d'appels RPC nécessaires.",
+		"can_export_results": "Puis-je exporter les résultats du scan ?",
+		"can_export_explanation": "Oui ! Vous pouvez exporter les résultats au format CSV ou JSON pour une analyse approfondie dans des tableurs ou d'autres outils.",
+		"what_networks_supported": "Quels réseaux blockchain sont pris en charge ?",
+		"networks_supported_explanation": "Nous prenons en charge Ethereum, Polygon, BSC, Base, Arbitrum et Optimism. Vous pouvez également ajouter des réseaux personnalisés compatibles EVM."
+	},
+	"seo": {
+		"page_title": "Vérificateur de Solde de Portefeuille - Scan par Lots des Soldes de Tokens | BiuBiu Tools",
+		"page_description": "Scannez et filtrez rapidement les portefeuilles avec des soldes sur plusieurs adresses. Identifiez les portefeuilles non vides, agrégez les avoirs en tokens et exportez les résultats vers EXCEL/CSV/JSON.",
+		"keywords": "vérificateur solde portefeuille, scan solde par lots, scanner solde token, portefeuille crypto, scanner multi-portefeuille, solde blockchain, outils web3, solde ERC20",
+		"webapp_name": "Vérificateur de Solde de Portefeuille",
+		"webapp_description": "Filtrez rapidement les portefeuilles avec des soldes, identifiez les adresses non vides et agrégez les avoirs en tokens sur plusieurs portefeuilles.",
+		"feature_1": "Scannez jusqu'à 100 000 adresses de portefeuille à la fois",
+		"feature_2": "Identifiez rapidement les portefeuilles avec soldes vs portefeuilles vides",
+		"feature_3": "Agrégez les avoirs totaux de tous les portefeuilles scannés",
+		"feature_4": "Prise en charge de plusieurs réseaux (Ethereum, Polygon, BSC, Base, Arbitrum, Optimism)",
+		"feature_5": "Exportez les résultats vers CSV ou JSON",
+		"howto_name": "Comment Scanner les Soldes de Portefeuille par Lots",
+		"howto_description": "Guide étape par étape pour scanner et filtrer les soldes de portefeuille sur plusieurs adresses.",
+		"howto_tool_1": "Portefeuille Web3 (MetaMask, WalletConnect, etc.)",
+		"howto_tool_2": "Liste d'adresses de portefeuille à scanner",
+		"step_1_name": "Connecter le Portefeuille",
+		"step_1_text": "Cliquez sur le bouton \"Connecter le Portefeuille\" et sélectionnez votre fournisseur de portefeuille Web3 préféré. Ceci est utilisé pour sélectionner le réseau blockchain que vous souhaitez scanner.",
+		"step_1_description": "Liez votre portefeuille Web3",
+		"step_2_name": "Vérifier les Dépendances",
+		"step_2_text": "Vérifiez la connexion au réseau blockchain et assurez-vous que le contrat Multicall3 est accessible. Le système détectera et validera automatiquement les composants nécessaires.",
+		"step_2_description": "Vérifier réseau et contrats",
+		"step_3_name": "Sélectionner les Tokens",
+		"step_3_text": "Choisissez les tokens dont vous souhaitez vérifier les soldes. Vous pouvez sélectionner des tokens natifs (ETH, BNB, MATIC) et tous les tokens ERC20 disponibles sur le réseau.",
+		"step_3_description": "Choisir les tokens à scanner",
+		"step_4_name": "Importer les Adresses",
+		"step_4_text": "Ajoutez des adresses de portefeuille à scanner en les collant (une par ligne), en téléchargeant un fichier CSV/TXT, ou en les entrant manuellement. Vous pouvez scanner jusqu'à 100 000 portefeuilles à la fois.",
+		"step_4_description": "Ajouter des adresses de portefeuille",
+		"step_5_name": "Scanner et Résultats",
+		"step_5_text": "Démarrez le scan et visualisez les résultats en temps réel. Filtrez les portefeuilles avec soldes, consultez les statistiques agrégées et exportez vers CSV ou JSON.",
+		"step_5_description": "Scanner et exporter les résultats"
+	},
+	"step1": {
+		"content": {
+			"title": "Sélectionner le Réseau",
+			"description": "Choisissez le réseau blockchain pour le scan des soldes",
+			"loading": "Chargement de la configuration réseau..."
+		},
+		"footer": {
+			"continue": "Continuer",
+			"hint": "Connectez votre portefeuille pour continuer"
+		}
+	},
+	"step3": {
+		"content": {
+			"title": "Sélectionner les Tokens",
+			"description": "Choisissez les tokens à scanner sur {network}",
+			"description_fallback": "Choisissez les tokens à scanner",
+			"wallet_not_connected_title": "Portefeuille Non Connecté",
+			"wallet_not_connected_message": "Veuillez d'abord connecter votre portefeuille pour sélectionner les tokens",
+			"empty_message": "Sélectionnez au moins un token à scanner"
+		},
+		"sidebar": {
+			"selected_tokens_title": "Tokens Sélectionnés",
+			"count_label": "Nombre de Tokens",
+			"empty_hint": "Sélectionnez au moins un token pour continuer"
+		},
+		"footer": {
+			"hint": "Sélectionnez au moins un token pour continuer"
+		}
+	},
+	"step4": {
+		"import_method": {
+			"address": "Adresses",
+			"xpub": "Clé Publique Étendue"
+		},
+		"content": {
+			"title": "Importer les Adresses de Portefeuille",
+			"description": "Ajoutez des adresses de portefeuille pour scanner les soldes de tokens",
+			"choose_method": "Choisir la Méthode d'Importation",
+			"address_placeholder": "Collez les adresses de portefeuille ici (une par ligne)\n0x1234...\n0x5678...",
+			"wallet_list": {
+				"title": "Portefeuilles",
+				"count": "({count})",
+				"clear_all": "Tout Effacer",
+				"empty": "Aucun portefeuille ajouté"
+			}
+		},
+		"sidebar": {
+			"title": "Résumé",
+			"description": "Ajoutez des adresses de portefeuille à scanner",
+			"total_label": "Total Portefeuilles",
+			"empty_hint": "Aucun portefeuille ajouté"
+		},
+		"footer": {
+			"hint": "Ajoutez au moins un portefeuille pour continuer"
+		},
+		"dialogs": {
+			"remove_wallet_title": "Supprimer le Portefeuille",
+			"remove_wallet_message": "Êtes-vous sûr de vouloir supprimer ce portefeuille ?\n{address}",
+			"remove_button": "Supprimer",
+			"clear_all_title": "Effacer Tous les Portefeuilles",
+			"clear_all_message": "Êtes-vous sûr de vouloir supprimer les {count} portefeuilles ?",
+			"clear_all_button": "Tout Effacer",
+			"long_press_hint": "Maintenez pour confirmer",
+			"cancel_button": "Annuler"
+		}
+	},
+	"step5": {
+		"title": "Scanner et Voir les Résultats",
+		"description": "Scannez les soldes de tokens et exportez les données",
+		"start": "Démarrer le Scan",
+		"new_scan": "Démarrer un Nouveau Scan",
+		"info": "Cliquez sur \"Démarrer le Scan\" pour interroger les soldes de tokens de tous les portefeuilles configurés. Plusieurs endpoints RPC seront utilisés en parallèle pour un scan plus rapide.",
+		"config": {
+			"network": "Réseau",
+			"wallets": "Portefeuilles",
+			"tokens": "Tokens",
+			"rpcs": "Endpoints RPC"
+		},
+		"resume": {
+			"title": "Reprendre le Scan Précédent ?",
+			"info": "Progression : {progress}% ({addresses} adresses, {tokens} tokens)",
+			"last_activity": "Dernière activité",
+			"continue": "Continuer",
+			"discard": "Abandonner"
+		},
+		"scanning": {
+			"title": "Scan des Soldes...",
+			"success": "terminé",
+			"failed": "échoué",
+			"pending": "en attente",
+			"pause": "Pause"
+		},
+		"paused": {
+			"title": "Scan en Pause",
+			"message": "Le scan a été mis en pause.",
+			"resume": "Reprendre",
+			"new_scan": "Nouveau Scan"
+		},
+		"completed": {
+			"banner": "Scan Terminé - {count} portefeuilles scannés"
+		},
+		"export": {
+			"title": "Exporter les Résultats",
+			"copied": "Copié !",
+			"copy_summary": "Copier le Résumé"
+		},
+		"totals": {
+			"title": "Avoirs Totaux",
+			"wallets": "{count} portefeuilles",
+			"wallets_short": "portefeuilles"
+		},
+		"filter": {
+			"title": "Filtrer",
+			"reset": "Réinitialiser",
+			"balance_status": "Statut du Solde",
+			"status_all": "Tous",
+			"status_has_balance": "Avec Solde",
+			"status_no_balance": "Sans Solde",
+			"token": "Token",
+			"token_all": "Tous les Tokens",
+			"balance_range": "Plage de Solde",
+			"min": "Min",
+			"max": "Max",
+			"showing": "Affichage de {filtered} sur {total}",
+			"total": "{count} résultats"
+		},
+		"balances": {
+			"title": "Soldes des Portefeuilles",
+			"address": "Adresse",
+			"path": "Chemin",
+			"label": "Étiquette",
+			"results": "résultats",
+			"no_results": "Aucun résultat trouvé"
+		},
+		"error": {
+			"title": "Échec du Scan",
+			"unknown": "Une erreur inconnue s'est produite",
+			"retry": "Réessayer le Scan",
+			"no_network": "Aucun réseau sélectionné",
+			"no_tokens": "Aucun token sélectionné",
+			"no_wallets": "Aucun portefeuille ajouté"
+		},
+		"sidebar": {
+			"title": "Scan et Résultats",
+			"description": "Scannez les portefeuilles pour les soldes de tokens et visualisez les résultats",
+			"progress": "Progression",
+			"total": "total",
+			"tasks": "tâches",
+			"failed": "échouées",
+			"queries_failed": "requêtes échouées",
+			"logs": "Journaux en Direct",
+			"completed": "Terminé",
+			"remaining": "Restant",
+			"paused": "En Pause",
+			"scan_results": "Résultats du Scan",
+			"addresses_scanned": "adresses scannées",
+			"wallets_scanned": "Portefeuilles Scannés",
+			"with_balance": "adresses avec solde",
+			"success": "Succès",
+			"wallets_to_scan": "Portefeuilles à Scanner",
+			"tokens_selected": "Tokens Sélectionnés",
+			"export": "Exporter",
+			"new_scan": "Démarrer un Nouveau Scan",
+			"ready": "Prêt à Scanner",
+			"wallets": "portefeuilles",
+			"tokens": "tokens",
+			"info_title": "Que Se Passe-t-il ?",
+			"info_1": "Interrogation de la blockchain pour les soldes de tokens",
+			"info_2": "Utilisation de plusieurs RPC en parallèle",
+			"info_3": "Nouvelle tentative automatique des requêtes échouées",
+			"tip_completed": "Exportez vers Excel pour une analyse avancée, ou CSV pour des tableurs simples.",
+			"tip_scanning": "Vous pouvez fermer le navigateur - la progression est sauvegardée automatiquement.",
+			"tip_idle": "Les grands scans peuvent prendre du temps mais peuvent être mis en pause et repris à tout moment."
+		},
+		"footer": {
+			"hint_idle": "Cliquez sur \"Démarrer le Scan\" pour commencer",
+			"hint_scanning": "Scan en cours...",
+			"hint_paused": "Scan en pause. Reprenez ou démarrez un nouveau scan.",
+			"hint_completed": "Exportez vos résultats ou démarrez un nouveau scan",
+			"hint_error": "Réessayez le scan ou revenez pour corriger le problème",
+			"new_scan": "Démarrer un Nouveau Scan",
+			"continue": "Continuer"
+		}
+	}
+}

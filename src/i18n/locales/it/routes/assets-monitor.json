@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "it",
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹"
+	},
+	"title": "Monitor Asset",
+	"description": "Monitora le variazioni degli asset negli indirizzi wallet in tempo reale",
+	"step1": {
+		"content": {
+			"title": "Connetti alla Rete",
+			"description": "Seleziona la rete per monitorare gli asset",
+			"loading": "Caricamento configurazione di rete..."
+		},
+		"sidebar": {
+			"title": "Connetti Wallet",
+			"description": "Connettiti alla rete per monitorare gli asset del wallet."
+		},
+		"footer": {
+			"continue": "Continua",
+			"hint": "Connettiti a una rete per continuare"
+		}
+	}
+}

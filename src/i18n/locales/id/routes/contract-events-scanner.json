@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "id",
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩"
+	},
+	"title": "Pemindai Event Kontrak",
+	"description": "Pindai dan analisis event yang dipancarkan oleh kontrak pintar",
+	"step1": {
+		"content": {
+			"title": "Hubungkan ke Jaringan",
+			"description": "Pilih jaringan tempat kontrak dideploy",
+			"loading": "Memuat konfigurasi jaringan..."
+		},
+		"sidebar": {
+			"title": "Hubungkan Dompet",
+			"description": "Hubungkan ke jaringan untuk memindai event kontrak."
+		},
+		"footer": {
+			"continue": "Lanjutkan",
+			"hint": "Hubungkan ke jaringan untuk melanjutkan"
+		}
+	}
+}

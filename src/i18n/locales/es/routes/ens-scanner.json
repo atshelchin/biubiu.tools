@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "es",
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸"
+	},
+	"title": "Escáner ENS",
+	"description": "Escaneo por lotes de disponibilidad y estado de expiración de dominios ENS",
+	"step1": {
+		"content": {
+			"title": "Conectar a la Red Principal de Ethereum",
+			"description": "Los nombres ENS están registrados en la red principal de Ethereum",
+			"loading": "Cargando configuración de red..."
+		},
+		"sidebar": {
+			"title": "Conectar Billetera",
+			"description": "Conéctate a la red principal de Ethereum para escanear dominios ENS."
+		},
+		"footer": {
+			"continue": "Continuar",
+			"hint": "Conéctate a la Red Principal de Ethereum para continuar"
+		}
+	}
+}

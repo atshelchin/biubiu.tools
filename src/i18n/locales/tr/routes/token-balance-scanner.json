@@ -1,0 +1,271 @@
+{
+	"_meta": {
+		"code": "tr",
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷"
+	},
+	"title": "Cüzdan Bakiye Kontrolcüsü",
+	"description": "Bakiyesi olan cüzdanları hızlıca filtrele, boş olmayan adresleri belirle ve birden fazla cüzdan genelinde token varlıklarını topla",
+	"session": {
+		"title": "Tarama Oturumları",
+		"status": {
+			"scanning": "Taranıyor",
+			"paused": "Duraklatıldı",
+			"completed": "Tamamlandı",
+			"abandoned": "Vazgeçildi"
+		},
+		"progress": "İlerleme",
+		"addresses": "Adresler",
+		"tokens": "Tokenler",
+		"last_activity": "Son Etkinlik",
+		"view": "Görüntüle",
+		"resume": "Devam Et",
+		"abandon": "Vazgeç",
+		"delete": "Sil",
+		"start_new": "Yeni Tarama Başlat",
+		"empty": "Aktif oturum yok",
+		"error": {
+			"abandon_failed": "Oturumdan vazgeçilemedi",
+			"delete_failed": "Oturum silinemedi",
+			"not_found": "Oturum bulunamadı",
+			"restore_failed": "Oturum geri yüklenemedi"
+		}
+	},
+	"feature_1": "100K adrese kadar tara",
+	"feature_2": "Bakiyesi olan cüzdanları filtrele",
+	"feature_3": "Toplam varlık istatistikleri",
+	"feature_4": "EXCEL/CSV/JSON'a aktar",
+	"faqs": {
+		"what_is_balance_checker": "Cüzdan Bakiye Kontrolcüsü nedir?",
+		"balance_checker_explanation": "Birden fazla cüzdan adresini taramak ve token bakiyelerini kontrol etmek için bir araç. Hangi cüzdanların varlık içerdiğini hızlıca belirlemenize ve tüm cüzdanlardaki toplam varlıkları toplamanıza yardımcı olur.",
+		"how_many_addresses": "Bir seferde kaç adres tarayabilirim?",
+		"how_many_addresses_explanation": "Tek bir partide 100.000 cüzdan adresine kadar tarama yapabilirsiniz. Araç, bakiyeleri verimli bir şekilde sorgulamak için optimize edilmiş RPC çağrıları kullanır.",
+		"what_tokens_supported": "Hangi token türleri destekleniyor?",
+		"what_tokens_supported_explanation": "Yerel tokenları (ETH, BNB, MATIC vb.) ve tüm ERC-20 standart tokenlarını destekliyoruz. Kontrat adresini girerek herhangi bir token ekleyebilirsiniz.",
+		"is_it_free": "Bakiye taraması ücretsiz mi?",
+		"is_it_free_explanation": "Evet! Bakiye taraması tamamen ücretsizdir ve zincir üstü işlem gerektirmez. Yalnızca blockchain'den veri okur.",
+		"what_is_multicall": "Multicall3 nedir?",
+		"multicall_explanation": "Multicall3, birden fazla okuma çağrısını tek bir istek halinde gruplandıran bir akıllı kontrattır. Bu, gerekli RPC çağrı sayısını azaltarak taramayı önemli ölçüde hızlandırır.",
+		"can_export_results": "Tarama sonuçlarını dışa aktarabilir miyim?",
+		"can_export_explanation": "Evet! Sonuçları elektronik tablolarda veya diğer araçlarda daha fazla analiz için CSV veya JSON formatına aktarabilirsiniz.",
+		"what_networks_supported": "Hangi blockchain ağları destekleniyor?",
+		"networks_supported_explanation": "Ethereum, Polygon, BSC, Base, Arbitrum ve Optimism'i destekliyoruz. Ayrıca özel EVM uyumlu ağlar da ekleyebilirsiniz."
+	},
+	"seo": {
+		"page_title": "Cüzdan Bakiye Kontrolcüsü - Toplu Token Bakiye Tarama | BiuBiu Tools",
+		"page_description": "Birden fazla adresteki bakiyesi olan cüzdanları hızlıca tarayın ve filtreleyin. Boş olmayan cüzdanları belirleyin, token varlıklarını toplayın ve sonuçları EXCEL/CSV/JSON'a aktarın.",
+		"keywords": "cüzdan bakiye kontrolcüsü, toplu bakiye tarama, token bakiye tarayıcı, kripto portföy, çoklu cüzdan tarayıcı, blockchain bakiye, web3 araçları, ERC20 bakiye",
+		"webapp_name": "Cüzdan Bakiye Kontrolcüsü",
+		"webapp_description": "Bakiyesi olan cüzdanları hızlıca filtrele, boş olmayan adresleri belirle ve birden fazla cüzdan genelinde token varlıklarını topla.",
+		"feature_1": "Bir seferde 100.000 cüzdan adresine kadar tara",
+		"feature_2": "Bakiyesi olan ve boş cüzdanları hızlıca belirle",
+		"feature_3": "Taranan tüm cüzdanlardaki toplam varlıkları topla",
+		"feature_4": "Birden fazla ağ desteği (Ethereum, Polygon, BSC, Base, Arbitrum, Optimism)",
+		"feature_5": "Sonuçları CSV veya JSON'a aktar",
+		"howto_name": "Cüzdan Bakiyelerini Toplu Tarama",
+		"howto_description": "Birden fazla adresteki cüzdan bakiyelerini tarama ve filtreleme için adım adım kılavuz.",
+		"howto_tool_1": "Web3 Cüzdan (MetaMask, WalletConnect vb.)",
+		"howto_tool_2": "Taranacak cüzdan adresleri listesi",
+		"step_1_name": "Cüzdan Bağla",
+		"step_1_text": "\"Cüzdan Bağla\" düğmesine tıklayın ve tercih ettiğiniz Web3 cüzdan sağlayıcısını seçin. Bu, taramak istediğiniz blockchain ağını seçmek için kullanılır.",
+		"step_1_description": "Web3 cüzdanınızı bağlayın",
+		"step_2_name": "Bağımlılıkları Kontrol Et",
+		"step_2_text": "Blockchain ağ bağlantısını doğrulayın ve Multicall3 kontratına erişilebildiğinden emin olun. Sistem gerekli bileşenleri otomatik olarak algılar ve doğrular.",
+		"step_2_description": "Ağ ve kontratları doğrula",
+		"step_3_name": "Tokenleri Seç",
+		"step_3_text": "Bakiyelerini kontrol etmek istediğiniz tokenleri seçin. Yerel tokenları (ETH, BNB, MATIC) ve ağda mevcut herhangi bir ERC20 tokenını seçebilirsiniz.",
+		"step_3_description": "Taranacak tokenleri seç",
+		"step_4_name": "Adresleri İçe Aktar",
+		"step_4_text": "Yapıştırarak (satır başına bir tane), CSV/TXT dosyası yükleyerek veya manuel olarak girerek taranacak cüzdan adresleri ekleyin. Bir seferde 100.000 cüzdana kadar tarama yapabilirsiniz.",
+		"step_4_description": "Cüzdan adresleri ekle",
+		"step_5_name": "Tara ve Sonuçlar",
+		"step_5_text": "Taramayı başlatın ve sonuçları gerçek zamanlı olarak görüntüleyin. Bakiyesi olan cüzdanları filtreleyin, toplam istatistikleri görün ve CSV veya JSON'a aktarın.",
+		"step_5_description": "Tara ve sonuçları aktar"
+	},
+	"step1": {
+		"content": {
+			"title": "Ağ Seç",
+			"description": "Bakiye taraması için blockchain ağını seçin",
+			"loading": "Ağ yapılandırması yükleniyor..."
+		},
+		"footer": {
+			"continue": "Devam",
+			"hint": "Devam etmek için cüzdanınızı bağlayın"
+		}
+	},
+	"step3": {
+		"content": {
+			"title": "Tokenleri Seç",
+			"description": "{network} üzerinde taranacak tokenleri seçin",
+			"description_fallback": "Taranacak tokenleri seçin",
+			"wallet_not_connected_title": "Cüzdan Bağlı Değil",
+			"wallet_not_connected_message": "Token seçmek için önce cüzdanınızı bağlayın",
+			"empty_message": "Taramak için en az bir token seçin"
+		},
+		"sidebar": {
+			"selected_tokens_title": "Seçili Tokenler",
+			"count_label": "Token Sayısı",
+			"empty_hint": "Devam etmek için en az bir token seçin"
+		},
+		"footer": {
+			"hint": "Devam etmek için en az bir token seçin"
+		}
+	},
+	"step4": {
+		"import_method": {
+			"address": "Adresler",
+			"xpub": "Genişletilmiş Açık Anahtar"
+		},
+		"content": {
+			"title": "Cüzdan Adreslerini İçe Aktar",
+			"description": "Token bakiyelerini taramak için cüzdan adresleri ekleyin",
+			"choose_method": "İçe Aktarma Yöntemini Seçin",
+			"address_placeholder": "Cüzdan adreslerini buraya yapıştırın (satır başına bir tane)\n0x1234...\n0x5678...",
+			"wallet_list": {
+				"title": "Cüzdanlar",
+				"count": "({count})",
+				"clear_all": "Tümünü Temizle",
+				"empty": "Henüz cüzdan eklenmedi"
+			}
+		},
+		"sidebar": {
+			"title": "Özet",
+			"description": "Taranacak cüzdan adresleri ekleyin",
+			"total_label": "Toplam Cüzdan",
+			"empty_hint": "Henüz cüzdan eklenmedi"
+		},
+		"footer": {
+			"hint": "Devam etmek için en az bir cüzdan ekleyin"
+		},
+		"dialogs": {
+			"remove_wallet_title": "Cüzdanı Kaldır",
+			"remove_wallet_message": "Bu cüzdanı kaldırmak istediğinizden emin misiniz?\n{address}",
+			"remove_button": "Kaldır",
+			"clear_all_title": "Tüm Cüzdanları Temizle",
+			"clear_all_message": "Tüm {count} cüzdanı kaldırmak istediğinizden emin misiniz?",
+			"clear_all_button": "Tümünü Temizle",
+			"long_press_hint": "Onaylamak için basılı tutun",
+			"cancel_button": "İptal"
+		}
+	},
+	"step5": {
+		"title": "Tara ve Sonuçları Görüntüle",
+		"description": "Token bakiyelerini tara ve veri aktar",
+		"start": "Taramayı Başlat",
+		"new_scan": "Yeni Tarama Başlat",
+		"info": "Yapılandırılmış tüm cüzdanların token bakiyelerini sorgulamak için \"Taramayı Başlat\"a tıklayın. Daha hızlı tarama için paralel olarak birden fazla RPC uç noktası kullanılacaktır.",
+		"config": {
+			"network": "Ağ",
+			"wallets": "Cüzdanlar",
+			"tokens": "Tokenler",
+			"rpcs": "RPC Uç Noktaları"
+		},
+		"resume": {
+			"title": "Önceki Taramaya Devam Edilsin mi?",
+			"info": "İlerleme: %{progress} ({addresses} adres, {tokens} token)",
+			"last_activity": "Son etkinlik",
+			"continue": "Devam Et",
+			"discard": "At"
+		},
+		"scanning": {
+			"title": "Bakiyeler Taranıyor...",
+			"success": "tamamlandı",
+			"failed": "başarısız",
+			"pending": "beklemede",
+			"pause": "Duraklat"
+		},
+		"paused": {
+			"title": "Tarama Duraklatıldı",
+			"message": "Tarama duraklatıldı.",
+			"resume": "Devam Et",
+			"new_scan": "Yeni Tarama"
+		},
+		"completed": {
+			"banner": "Tarama Tamamlandı - {count} cüzdan tarandı"
+		},
+		"export": {
+			"title": "Sonuçları Dışa Aktar",
+			"copied": "Kopyalandı!",
+			"copy_summary": "Özeti Kopyala"
+		},
+		"totals": {
+			"title": "Toplam Varlıklar",
+			"wallets": "{count} cüzdan",
+			"wallets_short": "cüzdan"
+		},
+		"filter": {
+			"title": "Filtre",
+			"reset": "Sıfırla",
+			"balance_status": "Bakiye Durumu",
+			"status_all": "Tümü",
+			"status_has_balance": "Bakiyesi Var",
+			"status_no_balance": "Bakiye Yok",
+			"token": "Token",
+			"token_all": "Tüm Tokenler",
+			"balance_range": "Bakiye Aralığı",
+			"min": "Min",
+			"max": "Maks",
+			"showing": "{total} içinden {filtered} gösteriliyor",
+			"total": "{count} sonuç"
+		},
+		"balances": {
+			"title": "Cüzdan Bakiyeleri",
+			"address": "Adres",
+			"path": "Yol",
+			"label": "Etiket",
+			"results": "sonuç",
+			"no_results": "Sonuç bulunamadı"
+		},
+		"error": {
+			"title": "Tarama Başarısız",
+			"unknown": "Bilinmeyen bir hata oluştu",
+			"retry": "Taramayı Yeniden Dene",
+			"no_network": "Ağ seçilmedi",
+			"no_tokens": "Token seçilmedi",
+			"no_wallets": "Cüzdan eklenmedi"
+		},
+		"sidebar": {
+			"title": "Tarama ve Sonuçlar",
+			"description": "Cüzdanları token bakiyeleri için tara ve sonuçları görüntüle",
+			"progress": "İlerleme",
+			"total": "toplam",
+			"tasks": "görev",
+			"failed": "başarısız",
+			"queries_failed": "sorgu başarısız",
+			"logs": "Canlı Günlükler",
+			"completed": "Tamamlandı",
+			"remaining": "Kalan",
+			"paused": "Duraklatıldı",
+			"scan_results": "Tarama Sonuçları",
+			"addresses_scanned": "adres tarandı",
+			"wallets_scanned": "Taranan Cüzdanlar",
+			"with_balance": "bakiyesi olan adres",
+			"success": "Başarılı",
+			"wallets_to_scan": "Taranacak Cüzdanlar",
+			"tokens_selected": "Seçili Tokenler",
+			"export": "Dışa Aktar",
+			"new_scan": "Yeni Tarama Başlat",
+			"ready": "Taramaya Hazır",
+			"wallets": "cüzdan",
+			"tokens": "token",
+			"info_title": "Ne Oluyor?",
+			"info_1": "Token bakiyeleri için blockchain sorgulanıyor",
+			"info_2": "Paralel olarak birden fazla RPC kullanılıyor",
+			"info_3": "Başarısız istekler otomatik yeniden deneniyor",
+			"tip_completed": "Gelişmiş analiz için Excel'e, basit elektronik tablolar için CSV'ye aktarın.",
+			"tip_scanning": "Tarayıcıyı kapatabilirsiniz - ilerleme otomatik olarak kaydedilir.",
+			"tip_idle": "Büyük taramalar zaman alabilir ancak her zaman duraklatılıp devam edilebilir."
+		},
+		"footer": {
+			"hint_idle": "Başlamak için \"Taramayı Başlat\"a tıklayın",
+			"hint_scanning": "Tarama devam ediyor...",
+			"hint_paused": "Tarama duraklatıldı. Devam edin veya yeni bir tarama başlatın.",
+			"hint_completed": "Sonuçlarınızı dışa aktarın veya yeni bir tarama başlatın",
+			"hint_error": "Taramayı yeniden deneyin veya sorunu düzeltmek için geri dönün",
+			"new_scan": "Yeni Tarama Başlat",
+			"continue": "Devam"
+		}
+	}
+}

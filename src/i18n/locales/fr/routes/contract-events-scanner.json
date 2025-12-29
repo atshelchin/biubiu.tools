@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "fr",
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷"
+	},
+	"title": "Scanner d'Événements de Contrat",
+	"description": "Scannez et analysez les événements émis par les contrats intelligents",
+	"step1": {
+		"content": {
+			"title": "Connecter au Réseau",
+			"description": "Sélectionnez le réseau où le contrat est déployé",
+			"loading": "Chargement de la configuration réseau..."
+		},
+		"sidebar": {
+			"title": "Connecter le Portefeuille",
+			"description": "Connectez-vous au réseau pour scanner les événements du contrat."
+		},
+		"footer": {
+			"continue": "Continuer",
+			"hint": "Connectez-vous à un réseau pour continuer"
+		}
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "fr",
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷"
+	},
+	"title": "Scanner ENS",
+	"description": "Scan par lots de la disponibilité et du statut d'expiration des domaines ENS",
+	"step1": {
+		"content": {
+			"title": "Connecter au Réseau Principal Ethereum",
+			"description": "Les noms ENS sont enregistrés sur le réseau principal Ethereum",
+			"loading": "Chargement de la configuration réseau..."
+		},
+		"sidebar": {
+			"title": "Connecter le Portefeuille",
+			"description": "Connectez-vous au réseau principal Ethereum pour scanner les domaines ENS."
+		},
+		"footer": {
+			"continue": "Continuer",
+			"hint": "Connectez-vous au Réseau Principal Ethereum pour continuer"
+		}
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "id",
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩"
+	},
+	"title": "Pemindai ENS",
+	"description": "Pemindaian batch ketersediaan dan status kedaluwarsa domain ENS",
+	"step1": {
+		"content": {
+			"title": "Hubungkan ke Mainnet Ethereum",
+			"description": "Nama ENS terdaftar di mainnet Ethereum",
+			"loading": "Memuat konfigurasi jaringan..."
+		},
+		"sidebar": {
+			"title": "Hubungkan Dompet",
+			"description": "Hubungkan ke mainnet Ethereum untuk memindai domain ENS."
+		},
+		"footer": {
+			"continue": "Lanjutkan",
+			"hint": "Hubungkan ke Mainnet Ethereum untuk melanjutkan"
+		}
+	}
+}

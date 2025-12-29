@@ -1,0 +1,271 @@
+{
+	"_meta": {
+		"code": "ja",
+		"name": "日本語",
+		"englishName": "Japanese",
+		"direction": "ltr",
+		"flag": "🇯🇵"
+	},
+	"title": "ウォレット残高チェッカー",
+	"description": "残高のあるウォレットを素早くフィルタリングし、空でないアドレスを特定し、複数のウォレットのトークン保有量を集計します",
+	"session": {
+		"title": "スキャンセッション",
+		"status": {
+			"scanning": "スキャン中",
+			"paused": "一時停止",
+			"completed": "完了",
+			"abandoned": "中断"
+		},
+		"progress": "進捗",
+		"addresses": "アドレス",
+		"tokens": "トークン",
+		"last_activity": "最終アクティビティ",
+		"view": "表示",
+		"resume": "再開",
+		"abandon": "中断",
+		"delete": "削除",
+		"start_new": "新規スキャン開始",
+		"empty": "アクティブなセッションなし",
+		"error": {
+			"abandon_failed": "セッションの中断に失敗しました",
+			"delete_failed": "セッションの削除に失敗しました",
+			"not_found": "セッションが見つかりません",
+			"restore_failed": "セッションの復元に失敗しました"
+		}
+	},
+	"feature_1": "最大10万アドレスをスキャン",
+	"feature_2": "残高のあるウォレットをフィルタリング",
+	"feature_3": "保有量統計を集計",
+	"feature_4": "EXCEL/CSV/JSONにエクスポート",
+	"faqs": {
+		"what_is_balance_checker": "ウォレット残高チェッカーとは？",
+		"balance_checker_explanation": "複数のウォレットアドレスをスキャンしてトークン残高を確認するツールです。どのウォレットに資産があるかを素早く特定し、すべてのウォレットの総保有量を集計できます。",
+		"how_many_addresses": "一度にいくつのアドレスをスキャンできますか？",
+		"how_many_addresses_explanation": "1回のバッチで最大100,000のウォレットアドレスをスキャンできます。ツールは最適化されたRPCコールを使用して効率的に残高を照会します。",
+		"what_tokens_supported": "どのタイプのトークンがサポートされていますか？",
+		"what_tokens_supported_explanation": "ネイティブトークン（ETH、BNB、MATICなど）とすべてのERC-20標準トークンをサポートしています。コントラクトアドレスを入力することで任意のトークンを追加できます。",
+		"is_it_free": "残高スキャンは無料ですか？",
+		"is_it_free_explanation": "はい！残高スキャンは完全に無料で、オンチェーントランザクションは必要ありません。ブロックチェーンからデータを読み取るだけです。",
+		"what_is_multicall": "Multicall3とは？",
+		"multicall_explanation": "Multicall3は複数の読み取り呼び出しを1つのリクエストにバッチ処理するスマートコントラクトです。必要なRPCコール数を削減することでスキャンを大幅に高速化します。",
+		"can_export_results": "スキャン結果をエクスポートできますか？",
+		"can_export_explanation": "はい！結果をCSVまたはJSON形式でエクスポートして、スプレッドシートやその他のツールでさらに分析できます。",
+		"what_networks_supported": "どのブロックチェーンネットワークがサポートされていますか？",
+		"networks_supported_explanation": "Ethereum、Polygon、BSC、Base、Arbitrum、Optimismをサポートしています。カスタムのEVM互換ネットワークも追加できます。"
+	},
+	"seo": {
+		"page_title": "ウォレット残高チェッカー - トークン残高一括スキャン | BiuBiu Tools",
+		"page_description": "複数アドレスの残高があるウォレットを素早くスキャン・フィルタリング。空でないウォレットを特定し、トークン保有量を集計し、EXCEL/CSV/JSONに結果をエクスポート。",
+		"keywords": "ウォレット残高チェッカー, バッチ残高スキャン, トークン残高スキャナー, 暗号資産ポートフォリオ, マルチウォレットスキャナー, ブロックチェーン残高, Web3ツール, ERC20残高",
+		"webapp_name": "ウォレット残高チェッカー",
+		"webapp_description": "残高のあるウォレットを素早くフィルタリングし、空でないアドレスを特定し、複数のウォレットのトークン保有量を集計します。",
+		"feature_1": "一度に最大100,000のウォレットアドレスをスキャン",
+		"feature_2": "残高のあるウォレットと空のウォレットを素早く識別",
+		"feature_3": "スキャンしたすべてのウォレットの総保有量を集計",
+		"feature_4": "複数ネットワーク対応（Ethereum、Polygon、BSC、Base、Arbitrum、Optimism）",
+		"feature_5": "結果をCSVまたはJSONにエクスポート",
+		"howto_name": "ウォレット残高を一括スキャンする方法",
+		"howto_description": "複数アドレスのウォレット残高をスキャン・フィルタリングするためのステップバイステップガイド。",
+		"howto_tool_1": "Web3ウォレット（MetaMask、WalletConnectなど）",
+		"howto_tool_2": "スキャンするウォレットアドレスのリスト",
+		"step_1_name": "ウォレット接続",
+		"step_1_text": "「ウォレット接続」ボタンをクリックして、お好みのWeb3ウォレットプロバイダーを選択します。これはスキャンしたいブロックチェーンネットワークを選択するために使用されます。",
+		"step_1_description": "Web3ウォレットをリンク",
+		"step_2_name": "依存関係チェック",
+		"step_2_text": "ブロックチェーンネットワーク接続を確認し、Multicall3コントラクトにアクセスできることを確認します。システムは必要なコンポーネントを自動的に検出・検証します。",
+		"step_2_description": "ネットワークとコントラクトを検証",
+		"step_3_name": "トークン選択",
+		"step_3_text": "残高を確認したいトークンを選択します。ネイティブトークン（ETH、BNB、MATIC）とネットワークで利用可能な任意のERC20トークンを選択できます。",
+		"step_3_description": "スキャンするトークンを選択",
+		"step_4_name": "アドレスインポート",
+		"step_4_text": "貼り付け（1行に1つ）、CSV/TXTファイルのアップロード、または手動入力でスキャンするウォレットアドレスを追加します。一度に最大100,000ウォレットをスキャンできます。",
+		"step_4_description": "ウォレットアドレスを追加",
+		"step_5_name": "スキャンと結果",
+		"step_5_text": "スキャンを開始してリアルタイムで結果を表示します。残高のあるウォレットをフィルタリングし、集計統計を確認し、CSVまたはJSONにエクスポートします。",
+		"step_5_description": "スキャンして結果をエクスポート"
+	},
+	"step1": {
+		"content": {
+			"title": "ネットワーク選択",
+			"description": "残高スキャン用のブロックチェーンネットワークを選択",
+			"loading": "ネットワーク設定を読み込み中..."
+		},
+		"footer": {
+			"continue": "続行",
+			"hint": "続行するにはウォレットを接続してください"
+		}
+	},
+	"step3": {
+		"content": {
+			"title": "トークン選択",
+			"description": "{network}でスキャンするトークンを選択",
+			"description_fallback": "スキャンするトークンを選択",
+			"wallet_not_connected_title": "ウォレット未接続",
+			"wallet_not_connected_message": "トークンを選択するにはまずウォレットを接続してください",
+			"empty_message": "スキャンするトークンを少なくとも1つ選択してください"
+		},
+		"sidebar": {
+			"selected_tokens_title": "選択済みトークン",
+			"count_label": "トークン数",
+			"empty_hint": "続行するにはトークンを少なくとも1つ選択してください"
+		},
+		"footer": {
+			"hint": "続行するにはトークンを少なくとも1つ選択してください"
+		}
+	},
+	"step4": {
+		"import_method": {
+			"address": "アドレス",
+			"xpub": "拡張公開鍵"
+		},
+		"content": {
+			"title": "ウォレットアドレスをインポート",
+			"description": "トークン残高をスキャンするウォレットアドレスを追加",
+			"choose_method": "インポート方法を選択",
+			"address_placeholder": "ウォレットアドレスを貼り付け（1行に1つ）\n0x1234...\n0x5678...",
+			"wallet_list": {
+				"title": "ウォレット",
+				"count": "({count})",
+				"clear_all": "すべてクリア",
+				"empty": "ウォレットがまだ追加されていません"
+			}
+		},
+		"sidebar": {
+			"title": "サマリー",
+			"description": "スキャンするウォレットアドレスを追加",
+			"total_label": "ウォレット総数",
+			"empty_hint": "ウォレットがまだ追加されていません"
+		},
+		"footer": {
+			"hint": "続行するにはウォレットを少なくとも1つ追加してください"
+		},
+		"dialogs": {
+			"remove_wallet_title": "ウォレットを削除",
+			"remove_wallet_message": "このウォレットを削除してもよろしいですか？\n{address}",
+			"remove_button": "削除",
+			"clear_all_title": "すべてのウォレットをクリア",
+			"clear_all_message": "{count}個のウォレットをすべて削除してもよろしいですか？",
+			"clear_all_button": "すべてクリア",
+			"long_press_hint": "長押しで確認",
+			"cancel_button": "キャンセル"
+		}
+	},
+	"step5": {
+		"title": "スキャンと結果表示",
+		"description": "トークン残高をスキャンしてデータをエクスポート",
+		"start": "スキャン開始",
+		"new_scan": "新規スキャン開始",
+		"info": "「スキャン開始」をクリックして、設定したすべてのウォレットのトークン残高を照会します。高速スキャンのために複数のRPCエンドポイントが並行して使用されます。",
+		"config": {
+			"network": "ネットワーク",
+			"wallets": "ウォレット",
+			"tokens": "トークン",
+			"rpcs": "RPCエンドポイント"
+		},
+		"resume": {
+			"title": "前回のスキャンを再開しますか？",
+			"info": "進捗: {progress}%（{addresses}アドレス、{tokens}トークン）",
+			"last_activity": "最終アクティビティ",
+			"continue": "続行",
+			"discard": "破棄"
+		},
+		"scanning": {
+			"title": "残高をスキャン中...",
+			"success": "完了",
+			"failed": "失敗",
+			"pending": "保留中",
+			"pause": "一時停止"
+		},
+		"paused": {
+			"title": "スキャン一時停止",
+			"message": "スキャンは一時停止されています。",
+			"resume": "再開",
+			"new_scan": "新規スキャン"
+		},
+		"completed": {
+			"banner": "スキャン完了 - {count}ウォレットをスキャン済み"
+		},
+		"export": {
+			"title": "結果をエクスポート",
+			"copied": "コピーしました！",
+			"copy_summary": "サマリーをコピー"
+		},
+		"totals": {
+			"title": "総保有量",
+			"wallets": "{count}ウォレット",
+			"wallets_short": "ウォレット"
+		},
+		"filter": {
+			"title": "フィルター",
+			"reset": "リセット",
+			"balance_status": "残高ステータス",
+			"status_all": "すべて",
+			"status_has_balance": "残高あり",
+			"status_no_balance": "残高なし",
+			"token": "トークン",
+			"token_all": "すべてのトークン",
+			"balance_range": "残高範囲",
+			"min": "最小",
+			"max": "最大",
+			"showing": "{total}中{filtered}件表示",
+			"total": "{count}件の結果"
+		},
+		"balances": {
+			"title": "ウォレット残高",
+			"address": "アドレス",
+			"path": "パス",
+			"label": "ラベル",
+			"results": "件の結果",
+			"no_results": "結果が見つかりません"
+		},
+		"error": {
+			"title": "スキャン失敗",
+			"unknown": "不明なエラーが発生しました",
+			"retry": "スキャンを再試行",
+			"no_network": "ネットワークが選択されていません",
+			"no_tokens": "トークンが選択されていません",
+			"no_wallets": "ウォレットが追加されていません"
+		},
+		"sidebar": {
+			"title": "スキャンと結果",
+			"description": "ウォレットのトークン残高をスキャンして結果を表示",
+			"progress": "進捗",
+			"total": "合計",
+			"tasks": "タスク",
+			"failed": "失敗",
+			"queries_failed": "クエリ失敗",
+			"logs": "ライブログ",
+			"completed": "完了",
+			"remaining": "残り",
+			"paused": "一時停止",
+			"scan_results": "スキャン結果",
+			"addresses_scanned": "アドレススキャン済み",
+			"wallets_scanned": "スキャン済みウォレット",
+			"with_balance": "残高のあるアドレス",
+			"success": "成功",
+			"wallets_to_scan": "スキャン対象ウォレット",
+			"tokens_selected": "選択済みトークン",
+			"export": "エクスポート",
+			"new_scan": "新規スキャン開始",
+			"ready": "スキャン準備完了",
+			"wallets": "ウォレット",
+			"tokens": "トークン",
+			"info_title": "何が行われていますか？",
+			"info_1": "ブロックチェーンにトークン残高を照会中",
+			"info_2": "複数のRPCを並行使用",
+			"info_3": "失敗したリクエストを自動リトライ",
+			"tip_completed": "高度な分析にはExcel、シンプルな表計算にはCSVにエクスポートしてください。",
+			"tip_scanning": "ブラウザを閉じても大丈夫です - 進捗は自動保存されます。",
+			"tip_idle": "大規模スキャンには時間がかかる場合がありますが、いつでも一時停止・再開できます。"
+		},
+		"footer": {
+			"hint_idle": "「スキャン開始」をクリックして開始",
+			"hint_scanning": "スキャン進行中...",
+			"hint_paused": "スキャン一時停止中。再開するか新規スキャンを開始してください。",
+			"hint_completed": "結果をエクスポートするか新規スキャンを開始してください",
+			"hint_error": "スキャンを再試行するか戻って問題を修正してください",
+			"new_scan": "新規スキャン開始",
+			"continue": "続行"
+		}
+	}
+}

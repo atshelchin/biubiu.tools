@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "id",
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩"
+	},
+	"title": "Monitor Aset",
+	"description": "Pantau perubahan aset di alamat dompet secara real-time",
+	"step1": {
+		"content": {
+			"title": "Hubungkan ke Jaringan",
+			"description": "Pilih jaringan untuk memantau aset",
+			"loading": "Memuat konfigurasi jaringan..."
+		},
+		"sidebar": {
+			"title": "Hubungkan Dompet",
+			"description": "Hubungkan ke jaringan untuk memantau aset dompet."
+		},
+		"footer": {
+			"continue": "Lanjutkan",
+			"hint": "Hubungkan ke jaringan untuk melanjutkan"
+		}
+	}
+}

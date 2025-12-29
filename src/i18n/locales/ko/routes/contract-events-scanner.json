@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "ko",
+		"name": "한국어",
+		"englishName": "Korean",
+		"direction": "ltr",
+		"flag": "🇰🇷"
+	},
+	"title": "컨트랙트 이벤트 스캐너",
+	"description": "스마트 컨트랙트에서 발생한 이벤트를 스캔하고 분석합니다",
+	"step1": {
+		"content": {
+			"title": "네트워크 연결",
+			"description": "컨트랙트가 배포된 네트워크를 선택하세요",
+			"loading": "네트워크 구성 로딩 중..."
+		},
+		"sidebar": {
+			"title": "지갑 연결",
+			"description": "컨트랙트 이벤트를 스캔하려면 네트워크에 연결하세요."
+		},
+		"footer": {
+			"continue": "계속",
+			"hint": "계속하려면 네트워크에 연결하세요"
+		}
+	}
+}

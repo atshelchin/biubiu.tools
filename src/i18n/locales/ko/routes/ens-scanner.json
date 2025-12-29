@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "ko",
+		"name": "한국어",
+		"englishName": "Korean",
+		"direction": "ltr",
+		"flag": "🇰🇷"
+	},
+	"title": "ENS 스캐너",
+	"description": "ENS 도메인 가용성 및 만료 상태 일괄 스캔",
+	"step1": {
+		"content": {
+			"title": "이더리움 메인넷에 연결",
+			"description": "ENS 이름은 이더리움 메인넷에 등록됩니다",
+			"loading": "네트워크 구성 로딩 중..."
+		},
+		"sidebar": {
+			"title": "지갑 연결",
+			"description": "ENS 도메인을 스캔하려면 이더리움 메인넷에 연결하세요."
+		},
+		"footer": {
+			"continue": "계속",
+			"hint": "계속하려면 이더리움 메인넷에 연결하세요"
+		}
+	}
+}

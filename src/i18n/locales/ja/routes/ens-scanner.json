@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "ja",
+		"name": "日本語",
+		"englishName": "Japanese",
+		"direction": "ltr",
+		"flag": "🇯🇵"
+	},
+	"title": "ENSスキャナー",
+	"description": "ENSドメインの可用性と有効期限ステータスをバッチスキャン",
+	"step1": {
+		"content": {
+			"title": "Ethereumメインネットに接続",
+			"description": "ENS名はEthereumメインネットに登録されています",
+			"loading": "ネットワーク設定を読み込み中..."
+		},
+		"sidebar": {
+			"title": "ウォレットを接続",
+			"description": "ENSドメインをスキャンするにはEthereumメインネットに接続してください。"
+		},
+		"footer": {
+			"continue": "続行",
+			"hint": "続行するにはEthereumメインネットに接続してください"
+		}
+	}
+}

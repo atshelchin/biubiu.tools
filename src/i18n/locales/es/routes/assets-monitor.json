@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "es",
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸"
+	},
+	"title": "Monitor de Activos",
+	"description": "Monitorea los cambios de activos en direcciones de billetera en tiempo real",
+	"step1": {
+		"content": {
+			"title": "Conectar a la Red",
+			"description": "Selecciona la red para monitorear activos",
+			"loading": "Cargando configuración de red..."
+		},
+		"sidebar": {
+			"title": "Conectar Billetera",
+			"description": "Conéctate a la red para monitorear los activos de la billetera."
+		},
+		"footer": {
+			"continue": "Continuar",
+			"hint": "Conéctate a una red para continuar"
+		}
+	}
+}

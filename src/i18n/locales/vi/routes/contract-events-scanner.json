@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "vi",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳"
+	},
+	"title": "Trình Quét Sự Kiện Hợp Đồng",
+	"description": "Quét và phân tích các sự kiện được phát ra bởi hợp đồng thông minh",
+	"step1": {
+		"content": {
+			"title": "Kết Nối với Mạng",
+			"description": "Chọn mạng nơi hợp đồng được triển khai",
+			"loading": "Đang tải cấu hình mạng..."
+		},
+		"sidebar": {
+			"title": "Kết Nối Ví",
+			"description": "Kết nối với mạng để quét sự kiện hợp đồng."
+		},
+		"footer": {
+			"continue": "Tiếp Tục",
+			"hint": "Kết nối với một mạng để tiếp tục"
+		}
+	}
+}

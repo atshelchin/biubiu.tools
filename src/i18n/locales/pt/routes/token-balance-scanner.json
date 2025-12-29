@@ -1,0 +1,271 @@
+{
+	"_meta": {
+		"code": "pt",
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷"
+	},
+	"title": "Verificador de Saldo de Carteira",
+	"description": "Filtre rapidamente carteiras com saldos, identifique endereços não vazios e agregue holdings de tokens em múltiplas carteiras",
+	"session": {
+		"title": "Sessões de Varredura",
+		"status": {
+			"scanning": "Varrendo",
+			"paused": "Pausado",
+			"completed": "Concluído",
+			"abandoned": "Abandonado"
+		},
+		"progress": "Progresso",
+		"addresses": "Endereços",
+		"tokens": "Tokens",
+		"last_activity": "Última Atividade",
+		"view": "Ver",
+		"resume": "Retomar",
+		"abandon": "Abandonar",
+		"delete": "Excluir",
+		"start_new": "Iniciar Nova Varredura",
+		"empty": "Sem sessões ativas",
+		"error": {
+			"abandon_failed": "Falha ao abandonar sessão",
+			"delete_failed": "Falha ao excluir sessão",
+			"not_found": "Sessão não encontrada",
+			"restore_failed": "Falha ao restaurar sessão"
+		}
+	},
+	"feature_1": "Varra até 100K endereços",
+	"feature_2": "Filtre carteiras com saldos",
+	"feature_3": "Estatísticas de holdings agregadas",
+	"feature_4": "Exporte para EXCEL/CSV/JSON",
+	"faqs": {
+		"what_is_balance_checker": "O que é o Verificador de Saldo de Carteira?",
+		"balance_checker_explanation": "Uma ferramenta para varrer múltiplos endereços de carteira e verificar seus saldos de tokens. Ajuda você a identificar rapidamente quais carteiras têm ativos e agregar o total de holdings de todas as carteiras.",
+		"how_many_addresses": "Quantos endereços posso varrer de uma vez?",
+		"how_many_addresses_explanation": "Você pode varrer até 100.000 endereços de carteira em um único lote. A ferramenta usa chamadas RPC otimizadas para consultar saldos eficientemente.",
+		"what_tokens_supported": "Quais tipos de tokens são suportados?",
+		"what_tokens_supported_explanation": "Suportamos tokens nativos (ETH, BNB, MATIC, etc.) e todos os tokens padrão ERC-20. Você pode adicionar qualquer token inserindo seu endereço de contrato.",
+		"is_it_free": "A varredura de saldo é gratuita?",
+		"is_it_free_explanation": "Sim! A varredura de saldo é completamente gratuita e não requer transações on-chain. Apenas lê dados da blockchain.",
+		"what_is_multicall": "O que é Multicall3?",
+		"multicall_explanation": "Multicall3 é um contrato inteligente que agrupa múltiplas chamadas de leitura em uma única requisição. Isso acelera dramaticamente a varredura reduzindo o número de chamadas RPC necessárias.",
+		"can_export_results": "Posso exportar os resultados da varredura?",
+		"can_export_explanation": "Sim! Você pode exportar resultados para formato CSV ou JSON para análise adicional em planilhas ou outras ferramentas.",
+		"what_networks_supported": "Quais redes blockchain são suportadas?",
+		"networks_supported_explanation": "Suportamos Ethereum, Polygon, BSC, Base, Arbitrum e Optimism. Você também pode adicionar redes personalizadas compatíveis com EVM."
+	},
+	"seo": {
+		"page_title": "Verificador de Saldo de Carteira - Varredura de Saldos de Tokens em Lote | BiuBiu Tools",
+		"page_description": "Varra e filtre rapidamente carteiras com saldos em múltiplos endereços. Identifique carteiras não vazias, agregue holdings de tokens e exporte resultados para EXCEL/CSV/JSON.",
+		"keywords": "verificador de saldo de carteira, varredura de saldo em lote, scanner de saldo de tokens, portfólio cripto, scanner multi-carteira, saldo blockchain, ferramentas web3, saldo ERC20",
+		"webapp_name": "Verificador de Saldo de Carteira",
+		"webapp_description": "Filtre rapidamente carteiras com saldos, identifique endereços não vazios e agregue holdings de tokens em múltiplas carteiras.",
+		"feature_1": "Varra até 100.000 endereços de carteira de uma vez",
+		"feature_2": "Identifique rapidamente carteiras com saldos vs carteiras vazias",
+		"feature_3": "Agregue holdings totais de todas as carteiras varridas",
+		"feature_4": "Suporte múltiplas redes (Ethereum, Polygon, BSC, Base, Arbitrum, Optimism)",
+		"feature_5": "Exporte resultados para CSV ou JSON",
+		"howto_name": "Como Varrer Saldos de Carteira em Lote",
+		"howto_description": "Guia passo a passo para varrer e filtrar saldos de carteira em múltiplos endereços.",
+		"howto_tool_1": "Carteira Web3 (MetaMask, WalletConnect, etc.)",
+		"howto_tool_2": "Lista de endereços de carteira para varrer",
+		"step_1_name": "Conectar Carteira",
+		"step_1_text": "Clique no botão \"Conectar Carteira\" e selecione seu provedor de carteira Web3 preferido. Isso é usado para selecionar a rede blockchain que você deseja varrer.",
+		"step_1_description": "Vincule sua carteira Web3",
+		"step_2_name": "Verificar Dependências",
+		"step_2_text": "Verifique a conexão da rede blockchain e certifique-se de que o contrato Multicall3 esteja acessível. O sistema detectará e validará automaticamente os componentes necessários.",
+		"step_2_description": "Verificar rede e contratos",
+		"step_3_name": "Selecionar Tokens",
+		"step_3_text": "Escolha quais tokens você deseja verificar saldos. Você pode selecionar tokens nativos (ETH, BNB, MATIC) e qualquer token ERC20 disponível na rede.",
+		"step_3_description": "Escolher tokens para varrer",
+		"step_4_name": "Importar Endereços",
+		"step_4_text": "Adicione endereços de carteira para varrer colando-os (um por linha), enviando um arquivo CSV/TXT, ou inserindo-os manualmente. Você pode varrer até 100.000 carteiras de uma vez.",
+		"step_4_description": "Adicionar endereços de carteira",
+		"step_5_name": "Varrer e Resultados",
+		"step_5_text": "Inicie a varredura e visualize os resultados em tempo real. Filtre carteiras com saldos, veja estatísticas agregadas e exporte para CSV ou JSON.",
+		"step_5_description": "Varrer e exportar resultados"
+	},
+	"step1": {
+		"content": {
+			"title": "Selecionar Rede",
+			"description": "Escolha a rede blockchain para varredura de saldo",
+			"loading": "Carregando configuração de rede..."
+		},
+		"footer": {
+			"continue": "Continuar",
+			"hint": "Conecte sua carteira para continuar"
+		}
+	},
+	"step3": {
+		"content": {
+			"title": "Selecionar Tokens",
+			"description": "Escolha quais tokens varrer em {network}",
+			"description_fallback": "Escolha quais tokens varrer",
+			"wallet_not_connected_title": "Carteira Não Conectada",
+			"wallet_not_connected_message": "Por favor conecte sua carteira primeiro para selecionar tokens",
+			"empty_message": "Selecione pelo menos um token para varrer"
+		},
+		"sidebar": {
+			"selected_tokens_title": "Tokens Selecionados",
+			"count_label": "Quantidade de Tokens",
+			"empty_hint": "Selecione pelo menos um token para continuar"
+		},
+		"footer": {
+			"hint": "Selecione pelo menos um token para continuar"
+		}
+	},
+	"step4": {
+		"import_method": {
+			"address": "Endereços",
+			"xpub": "Chave Pública Estendida"
+		},
+		"content": {
+			"title": "Importar Endereços de Carteira",
+			"description": "Adicione endereços de carteira para varrer saldos de tokens",
+			"choose_method": "Escolha o Método de Importação",
+			"address_placeholder": "Cole endereços de carteira aqui (um por linha)\n0x1234...\n0x5678...",
+			"wallet_list": {
+				"title": "Carteiras",
+				"count": "({count})",
+				"clear_all": "Limpar Tudo",
+				"empty": "Nenhuma carteira adicionada ainda"
+			}
+		},
+		"sidebar": {
+			"title": "Resumo",
+			"description": "Adicione endereços de carteira para varrer",
+			"total_label": "Total de Carteiras",
+			"empty_hint": "Nenhuma carteira adicionada ainda"
+		},
+		"footer": {
+			"hint": "Adicione pelo menos uma carteira para continuar"
+		},
+		"dialogs": {
+			"remove_wallet_title": "Remover Carteira",
+			"remove_wallet_message": "Tem certeza de que deseja remover esta carteira?\n{address}",
+			"remove_button": "Remover",
+			"clear_all_title": "Limpar Todas as Carteiras",
+			"clear_all_message": "Tem certeza de que deseja remover todas as {count} carteiras?",
+			"clear_all_button": "Limpar Tudo",
+			"long_press_hint": "Segure para confirmar",
+			"cancel_button": "Cancelar"
+		}
+	},
+	"step5": {
+		"title": "Varrer e Ver Resultados",
+		"description": "Varra saldos de tokens e exporte dados",
+		"start": "Iniciar Varredura",
+		"new_scan": "Iniciar Nova Varredura",
+		"info": "Clique em \"Iniciar Varredura\" para consultar saldos de tokens para todas as carteiras configuradas. Múltiplos endpoints RPC serão usados em paralelo para varredura mais rápida.",
+		"config": {
+			"network": "Rede",
+			"wallets": "Carteiras",
+			"tokens": "Tokens",
+			"rpcs": "Endpoints RPC"
+		},
+		"resume": {
+			"title": "Retomar Varredura Anterior?",
+			"info": "Progresso: {progress}% ({addresses} endereços, {tokens} tokens)",
+			"last_activity": "Última atividade",
+			"continue": "Continuar",
+			"discard": "Descartar"
+		},
+		"scanning": {
+			"title": "Varrendo Saldos...",
+			"success": "concluído",
+			"failed": "falhou",
+			"pending": "pendente",
+			"pause": "Pausar"
+		},
+		"paused": {
+			"title": "Varredura Pausada",
+			"message": "A varredura foi pausada.",
+			"resume": "Retomar",
+			"new_scan": "Nova Varredura"
+		},
+		"completed": {
+			"banner": "Varredura Concluída - {count} carteiras varridas"
+		},
+		"export": {
+			"title": "Exportar Resultados",
+			"copied": "Copiado!",
+			"copy_summary": "Copiar Resumo"
+		},
+		"totals": {
+			"title": "Holdings Totais",
+			"wallets": "{count} carteiras",
+			"wallets_short": "carteiras"
+		},
+		"filter": {
+			"title": "Filtrar",
+			"reset": "Redefinir",
+			"balance_status": "Status do Saldo",
+			"status_all": "Todos",
+			"status_has_balance": "Com Saldo",
+			"status_no_balance": "Sem Saldo",
+			"token": "Token",
+			"token_all": "Todos os Tokens",
+			"balance_range": "Faixa de Saldo",
+			"min": "Mín",
+			"max": "Máx",
+			"showing": "Mostrando {filtered} de {total}",
+			"total": "{count} resultados"
+		},
+		"balances": {
+			"title": "Saldos de Carteira",
+			"address": "Endereço",
+			"path": "Caminho",
+			"label": "Rótulo",
+			"results": "resultados",
+			"no_results": "Nenhum resultado encontrado"
+		},
+		"error": {
+			"title": "Varredura Falhou",
+			"unknown": "Ocorreu um erro desconhecido",
+			"retry": "Tentar Novamente",
+			"no_network": "Nenhuma rede selecionada",
+			"no_tokens": "Nenhum token selecionado",
+			"no_wallets": "Nenhuma carteira adicionada"
+		},
+		"sidebar": {
+			"title": "Varredura e Resultados",
+			"description": "Varra carteiras para saldos de tokens e veja resultados",
+			"progress": "Progresso",
+			"total": "total",
+			"tasks": "tarefas",
+			"failed": "falhou",
+			"queries_failed": "consultas falharam",
+			"logs": "Logs em Tempo Real",
+			"completed": "Concluído",
+			"remaining": "Restante",
+			"paused": "Pausado",
+			"scan_results": "Resultados da Varredura",
+			"addresses_scanned": "endereços varridos",
+			"wallets_scanned": "Carteiras Varridas",
+			"with_balance": "endereços com saldo",
+			"success": "Sucesso",
+			"wallets_to_scan": "Carteiras para Varrer",
+			"tokens_selected": "Tokens Selecionados",
+			"export": "Exportar",
+			"new_scan": "Iniciar Nova Varredura",
+			"ready": "Pronto para Varrer",
+			"wallets": "carteiras",
+			"tokens": "tokens",
+			"info_title": "O Que Está Acontecendo?",
+			"info_1": "Consultando blockchain para saldos de tokens",
+			"info_2": "Usando múltiplos RPCs em paralelo",
+			"info_3": "Tentando novamente requisições falhas automaticamente",
+			"tip_completed": "Exporte para Excel para análise avançada, ou CSV para planilhas simples.",
+			"tip_scanning": "Você pode fechar o navegador - o progresso é salvo automaticamente.",
+			"tip_idle": "Varreduras grandes podem levar tempo, mas podem ser pausadas e retomadas a qualquer momento."
+		},
+		"footer": {
+			"hint_idle": "Clique em \"Iniciar Varredura\" para começar",
+			"hint_scanning": "Varredura em progresso...",
+			"hint_paused": "Varredura pausada. Retome ou inicie uma nova varredura.",
+			"hint_completed": "Exporte seus resultados ou inicie uma nova varredura",
+			"hint_error": "Tente novamente a varredura ou volte para corrigir o problema",
+			"new_scan": "Iniciar Nova Varredura",
+			"continue": "Continuar"
+		}
+	}
+}

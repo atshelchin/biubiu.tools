@@ -1,0 +1,271 @@
+{
+	"_meta": {
+		"code": "es",
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸"
+	},
+	"title": "Verificador de Saldos de Billetera",
+	"description": "Filtra rápidamente billeteras con saldos, identifica direcciones no vacías y agrega tenencias de tokens en múltiples billeteras",
+	"session": {
+		"title": "Sesiones de Escaneo",
+		"status": {
+			"scanning": "Escaneando",
+			"paused": "Pausado",
+			"completed": "Completado",
+			"abandoned": "Abandonado"
+		},
+		"progress": "Progreso",
+		"addresses": "Direcciones",
+		"tokens": "Tokens",
+		"last_activity": "Última Actividad",
+		"view": "Ver",
+		"resume": "Reanudar",
+		"abandon": "Abandonar",
+		"delete": "Eliminar",
+		"start_new": "Iniciar Nuevo Escaneo",
+		"empty": "Sin sesiones activas",
+		"error": {
+			"abandon_failed": "Error al abandonar la sesión",
+			"delete_failed": "Error al eliminar la sesión",
+			"not_found": "Sesión no encontrada",
+			"restore_failed": "Error al restaurar la sesión"
+		}
+	},
+	"feature_1": "Escanea hasta 100K direcciones",
+	"feature_2": "Filtra billeteras con saldos",
+	"feature_3": "Estadísticas de tenencias agregadas",
+	"feature_4": "Exporta a EXCEL/CSV/JSON",
+	"faqs": {
+		"what_is_balance_checker": "¿Qué es el Verificador de Saldos de Billetera?",
+		"balance_checker_explanation": "Una herramienta para escanear múltiples direcciones de billetera y verificar sus saldos de tokens. Te ayuda a identificar rápidamente qué billeteras tienen activos y agregar las tenencias totales de todas las billeteras.",
+		"how_many_addresses": "¿Cuántas direcciones puedo escanear a la vez?",
+		"how_many_addresses_explanation": "Puedes escanear hasta 100,000 direcciones de billetera en un solo lote. La herramienta utiliza llamadas RPC optimizadas para consultar saldos de manera eficiente.",
+		"what_tokens_supported": "¿Qué tipos de tokens son compatibles?",
+		"what_tokens_supported_explanation": "Soportamos tokens nativos (ETH, BNB, MATIC, etc.) y todos los tokens estándar ERC-20. Puedes agregar cualquier token ingresando su dirección de contrato.",
+		"is_it_free": "¿El escaneo de saldos es gratuito?",
+		"is_it_free_explanation": "¡Sí! El escaneo de saldos es completamente gratuito y no requiere transacciones en cadena. Solo lee datos de la blockchain.",
+		"what_is_multicall": "¿Qué es Multicall3?",
+		"multicall_explanation": "Multicall3 es un contrato inteligente que agrupa múltiples llamadas de lectura en una sola solicitud. Esto acelera dramáticamente el escaneo al reducir el número de llamadas RPC necesarias.",
+		"can_export_results": "¿Puedo exportar los resultados del escaneo?",
+		"can_export_explanation": "¡Sí! Puedes exportar los resultados a formato CSV o JSON para análisis adicional en hojas de cálculo u otras herramientas.",
+		"what_networks_supported": "¿Qué redes blockchain son compatibles?",
+		"networks_supported_explanation": "Soportamos Ethereum, Polygon, BSC, Base, Arbitrum y Optimism. También puedes agregar redes personalizadas compatibles con EVM."
+	},
+	"seo": {
+		"page_title": "Verificador de Saldos de Billetera - Escaneo de Saldos de Tokens por Lotes | BiuBiu Tools",
+		"page_description": "Escanea y filtra rápidamente billeteras con saldos en múltiples direcciones. Identifica billeteras no vacías, agrega tenencias de tokens y exporta resultados a EXCEL/CSV/JSON.",
+		"keywords": "verificador de saldos de billetera, escaneo de saldos por lotes, escáner de saldos de tokens, portafolio cripto, escáner multi-billetera, saldo blockchain, herramientas web3, saldo ERC20",
+		"webapp_name": "Verificador de Saldos de Billetera",
+		"webapp_description": "Filtra rápidamente billeteras con saldos, identifica direcciones no vacías y agrega tenencias de tokens en múltiples billeteras.",
+		"feature_1": "Escanea hasta 100,000 direcciones de billetera a la vez",
+		"feature_2": "Identifica rápidamente billeteras con saldos vs billeteras vacías",
+		"feature_3": "Agrega tenencias totales de todas las billeteras escaneadas",
+		"feature_4": "Soporta múltiples redes (Ethereum, Polygon, BSC, Base, Arbitrum, Optimism)",
+		"feature_5": "Exporta resultados a CSV o JSON",
+		"howto_name": "Cómo Escanear Saldos de Billetera por Lotes",
+		"howto_description": "Guía paso a paso para escanear y filtrar saldos de billetera en múltiples direcciones.",
+		"howto_tool_1": "Billetera Web3 (MetaMask, WalletConnect, etc.)",
+		"howto_tool_2": "Lista de direcciones de billetera para escanear",
+		"step_1_name": "Conectar Billetera",
+		"step_1_text": "Haz clic en el botón \"Conectar Billetera\" y selecciona tu proveedor de billetera Web3 preferido. Esto se usa para seleccionar la red blockchain que deseas escanear.",
+		"step_1_description": "Vincula tu billetera Web3",
+		"step_2_name": "Verificar Dependencias",
+		"step_2_text": "Verifica la conexión de red blockchain y asegúrate de que el contrato Multicall3 sea accesible. El sistema detectará y validará automáticamente los componentes necesarios.",
+		"step_2_description": "Verificar red y contratos",
+		"step_3_name": "Seleccionar Tokens",
+		"step_3_text": "Elige qué tokens deseas verificar saldos. Puedes seleccionar tokens nativos (ETH, BNB, MATIC) y cualquier token ERC20 disponible en la red.",
+		"step_3_description": "Elegir tokens para escanear",
+		"step_4_name": "Importar Direcciones",
+		"step_4_text": "Agrega direcciones de billetera para escanear pegándolas (una por línea), subiendo un archivo CSV/TXT, o ingresándolas manualmente. Puedes escanear hasta 100,000 billeteras a la vez.",
+		"step_4_description": "Agregar direcciones de billetera",
+		"step_5_name": "Escanear y Resultados",
+		"step_5_text": "Inicia el escaneo y visualiza los resultados en tiempo real. Filtra billeteras con saldos, ve estadísticas agregadas y exporta a CSV o JSON.",
+		"step_5_description": "Escanear y exportar resultados"
+	},
+	"step1": {
+		"content": {
+			"title": "Seleccionar Red",
+			"description": "Elige la red blockchain para escanear saldos",
+			"loading": "Cargando configuración de red..."
+		},
+		"footer": {
+			"continue": "Continuar",
+			"hint": "Conecta tu billetera para continuar"
+		}
+	},
+	"step3": {
+		"content": {
+			"title": "Seleccionar Tokens",
+			"description": "Elige qué tokens escanear en {network}",
+			"description_fallback": "Elige qué tokens escanear",
+			"wallet_not_connected_title": "Billetera No Conectada",
+			"wallet_not_connected_message": "Por favor conecta tu billetera primero para seleccionar tokens",
+			"empty_message": "Selecciona al menos un token para escanear"
+		},
+		"sidebar": {
+			"selected_tokens_title": "Tokens Seleccionados",
+			"count_label": "Cantidad de Tokens",
+			"empty_hint": "Selecciona al menos un token para continuar"
+		},
+		"footer": {
+			"hint": "Selecciona al menos un token para continuar"
+		}
+	},
+	"step4": {
+		"import_method": {
+			"address": "Direcciones",
+			"xpub": "Clave Pública Extendida"
+		},
+		"content": {
+			"title": "Importar Direcciones de Billetera",
+			"description": "Agrega direcciones de billetera para escanear saldos de tokens",
+			"choose_method": "Elige Método de Importación",
+			"address_placeholder": "Pega direcciones de billetera aquí (una por línea)\n0x1234...\n0x5678...",
+			"wallet_list": {
+				"title": "Billeteras",
+				"count": "({count})",
+				"clear_all": "Limpiar Todo",
+				"empty": "Aún no se han agregado billeteras"
+			}
+		},
+		"sidebar": {
+			"title": "Resumen",
+			"description": "Agrega direcciones de billetera para escanear",
+			"total_label": "Total de Billeteras",
+			"empty_hint": "Aún no se han agregado billeteras"
+		},
+		"footer": {
+			"hint": "Agrega al menos una billetera para continuar"
+		},
+		"dialogs": {
+			"remove_wallet_title": "Eliminar Billetera",
+			"remove_wallet_message": "¿Estás seguro de que deseas eliminar esta billetera?\n{address}",
+			"remove_button": "Eliminar",
+			"clear_all_title": "Limpiar Todas las Billeteras",
+			"clear_all_message": "¿Estás seguro de que deseas eliminar las {count} billeteras?",
+			"clear_all_button": "Limpiar Todo",
+			"long_press_hint": "Mantén presionado para confirmar",
+			"cancel_button": "Cancelar"
+		}
+	},
+	"step5": {
+		"title": "Escanear y Ver Resultados",
+		"description": "Escanea saldos de tokens y exporta datos",
+		"start": "Iniciar Escaneo",
+		"new_scan": "Iniciar Nuevo Escaneo",
+		"info": "Haz clic en \"Iniciar Escaneo\" para consultar saldos de tokens para todas las billeteras configuradas. Se usarán múltiples endpoints RPC en paralelo para un escaneo más rápido.",
+		"config": {
+			"network": "Red",
+			"wallets": "Billeteras",
+			"tokens": "Tokens",
+			"rpcs": "Endpoints RPC"
+		},
+		"resume": {
+			"title": "¿Reanudar Escaneo Anterior?",
+			"info": "Progreso: {progress}% ({addresses} direcciones, {tokens} tokens)",
+			"last_activity": "Última actividad",
+			"continue": "Continuar",
+			"discard": "Descartar"
+		},
+		"scanning": {
+			"title": "Escaneando Saldos...",
+			"success": "completado",
+			"failed": "fallido",
+			"pending": "pendiente",
+			"pause": "Pausar"
+		},
+		"paused": {
+			"title": "Escaneo Pausado",
+			"message": "El escaneo ha sido pausado.",
+			"resume": "Reanudar",
+			"new_scan": "Nuevo Escaneo"
+		},
+		"completed": {
+			"banner": "Escaneo Completo - {count} billeteras escaneadas"
+		},
+		"export": {
+			"title": "Exportar Resultados",
+			"copied": "¡Copiado!",
+			"copy_summary": "Copiar Resumen"
+		},
+		"totals": {
+			"title": "Tenencias Totales",
+			"wallets": "{count} billeteras",
+			"wallets_short": "billeteras"
+		},
+		"filter": {
+			"title": "Filtrar",
+			"reset": "Restablecer",
+			"balance_status": "Estado del Saldo",
+			"status_all": "Todos",
+			"status_has_balance": "Con Saldo",
+			"status_no_balance": "Sin Saldo",
+			"token": "Token",
+			"token_all": "Todos los Tokens",
+			"balance_range": "Rango de Saldo",
+			"min": "Mín",
+			"max": "Máx",
+			"showing": "Mostrando {filtered} de {total}",
+			"total": "{count} resultados"
+		},
+		"balances": {
+			"title": "Saldos de Billetera",
+			"address": "Dirección",
+			"path": "Ruta",
+			"label": "Etiqueta",
+			"results": "resultados",
+			"no_results": "No se encontraron resultados"
+		},
+		"error": {
+			"title": "Escaneo Fallido",
+			"unknown": "Ocurrió un error desconocido",
+			"retry": "Reintentar Escaneo",
+			"no_network": "No se seleccionó red",
+			"no_tokens": "No se seleccionaron tokens",
+			"no_wallets": "No se agregaron billeteras"
+		},
+		"sidebar": {
+			"title": "Escaneo y Resultados",
+			"description": "Escanea billeteras para saldos de tokens y ve resultados",
+			"progress": "Progreso",
+			"total": "total",
+			"tasks": "tareas",
+			"failed": "fallidas",
+			"queries_failed": "consultas fallidas",
+			"logs": "Registros en Vivo",
+			"completed": "Completado",
+			"remaining": "Restante",
+			"paused": "Pausado",
+			"scan_results": "Resultados del Escaneo",
+			"addresses_scanned": "direcciones escaneadas",
+			"wallets_scanned": "Billeteras Escaneadas",
+			"with_balance": "direcciones con saldo",
+			"success": "Éxito",
+			"wallets_to_scan": "Billeteras por Escanear",
+			"tokens_selected": "Tokens Seleccionados",
+			"export": "Exportar",
+			"new_scan": "Iniciar Nuevo Escaneo",
+			"ready": "Listo para Escanear",
+			"wallets": "billeteras",
+			"tokens": "tokens",
+			"info_title": "¿Qué Está Pasando?",
+			"info_1": "Consultando blockchain para saldos de tokens",
+			"info_2": "Usando múltiples RPCs en paralelo",
+			"info_3": "Reintentando automáticamente solicitudes fallidas",
+			"tip_completed": "Exporta a Excel para análisis avanzado, o CSV para hojas de cálculo simples.",
+			"tip_scanning": "Puedes cerrar el navegador - el progreso se guarda automáticamente.",
+			"tip_idle": "Los escaneos grandes pueden tomar tiempo pero se pueden pausar y reanudar en cualquier momento."
+		},
+		"footer": {
+			"hint_idle": "Haz clic en \"Iniciar Escaneo\" para comenzar",
+			"hint_scanning": "Escaneo en progreso...",
+			"hint_paused": "Escaneo pausado. Reanuda o inicia un nuevo escaneo.",
+			"hint_completed": "Exporta tus resultados o inicia un nuevo escaneo",
+			"hint_error": "Reintenta el escaneo o regresa para corregir el problema",
+			"new_scan": "Iniciar Nuevo Escaneo",
+			"continue": "Continuar"
+		}
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "ko",
+		"name": "한국어",
+		"englishName": "Korean",
+		"direction": "ltr",
+		"flag": "🇰🇷"
+	},
+	"title": "자산 모니터",
+	"description": "지갑 주소의 자산 변동을 실시간으로 모니터링합니다",
+	"step1": {
+		"content": {
+			"title": "네트워크 연결",
+			"description": "자산을 모니터링할 네트워크를 선택하세요",
+			"loading": "네트워크 구성 로딩 중..."
+		},
+		"sidebar": {
+			"title": "지갑 연결",
+			"description": "지갑 자산을 모니터링하려면 네트워크에 연결하세요."
+		},
+		"footer": {
+			"continue": "계속",
+			"hint": "계속하려면 네트워크에 연결하세요"
+		}
+	}
+}

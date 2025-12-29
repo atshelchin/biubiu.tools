@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "pt",
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷"
+	},
+	"title": "Monitor de Ativos",
+	"description": "Monitore alterações de ativos em endereços de carteira em tempo real",
+	"step1": {
+		"content": {
+			"title": "Conectar à Rede",
+			"description": "Selecione a rede para monitorar ativos",
+			"loading": "Carregando configuração de rede..."
+		},
+		"sidebar": {
+			"title": "Conectar Carteira",
+			"description": "Conecte-se à rede para monitorar os ativos da carteira."
+		},
+		"footer": {
+			"continue": "Continuar",
+			"hint": "Conecte-se a uma rede para continuar"
+		}
+	}
+}

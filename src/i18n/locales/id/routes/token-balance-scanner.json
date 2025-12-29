@@ -1,0 +1,271 @@
+{
+	"_meta": {
+		"code": "id",
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩"
+	},
+	"title": "Pemeriksa Saldo Dompet",
+	"description": "Filter cepat dompet dengan saldo, identifikasi alamat tidak kosong, dan agregasi kepemilikan token di beberapa dompet",
+	"session": {
+		"title": "Sesi Pemindaian",
+		"status": {
+			"scanning": "Memindai",
+			"paused": "Dijeda",
+			"completed": "Selesai",
+			"abandoned": "Ditinggalkan"
+		},
+		"progress": "Progres",
+		"addresses": "Alamat",
+		"tokens": "Token",
+		"last_activity": "Aktivitas Terakhir",
+		"view": "Lihat",
+		"resume": "Lanjutkan",
+		"abandon": "Tinggalkan",
+		"delete": "Hapus",
+		"start_new": "Mulai Pemindaian Baru",
+		"empty": "Tidak ada sesi aktif",
+		"error": {
+			"abandon_failed": "Gagal meninggalkan sesi",
+			"delete_failed": "Gagal menghapus sesi",
+			"not_found": "Sesi tidak ditemukan",
+			"restore_failed": "Gagal memulihkan sesi"
+		}
+	},
+	"feature_1": "Pindai hingga 100K alamat",
+	"feature_2": "Filter dompet dengan saldo",
+	"feature_3": "Statistik kepemilikan agregat",
+	"feature_4": "Ekspor ke EXCEL/CSV/JSON",
+	"faqs": {
+		"what_is_balance_checker": "Apa itu Pemeriksa Saldo Dompet?",
+		"balance_checker_explanation": "Alat untuk memindai beberapa alamat dompet dan memeriksa saldo token mereka. Membantu Anda dengan cepat mengidentifikasi dompet mana yang memiliki aset dan mengagregasi total kepemilikan di semua dompet.",
+		"how_many_addresses": "Berapa banyak alamat yang bisa saya pindai sekaligus?",
+		"how_many_addresses_explanation": "Anda dapat memindai hingga 100.000 alamat dompet dalam satu batch. Alat ini menggunakan panggilan RPC yang dioptimalkan untuk meminta saldo secara efisien.",
+		"what_tokens_supported": "Jenis token apa yang didukung?",
+		"what_tokens_supported_explanation": "Kami mendukung token native (ETH, BNB, MATIC, dll.) dan semua token standar ERC-20. Anda dapat menambahkan token apa pun dengan memasukkan alamat kontraknya.",
+		"is_it_free": "Apakah pemindaian saldo gratis?",
+		"is_it_free_explanation": "Ya! Pemindaian saldo sepenuhnya gratis dan tidak memerlukan transaksi on-chain. Hanya membaca data dari blockchain.",
+		"what_is_multicall": "Apa itu Multicall3?",
+		"multicall_explanation": "Multicall3 adalah kontrak pintar yang mengelompokkan beberapa panggilan baca menjadi satu permintaan. Ini secara dramatis mempercepat pemindaian dengan mengurangi jumlah panggilan RPC yang diperlukan.",
+		"can_export_results": "Bisakah saya mengekspor hasil pemindaian?",
+		"can_export_explanation": "Ya! Anda dapat mengekspor hasil ke format CSV atau JSON untuk analisis lebih lanjut di spreadsheet atau alat lainnya.",
+		"what_networks_supported": "Jaringan blockchain apa yang didukung?",
+		"networks_supported_explanation": "Kami mendukung Ethereum, Polygon, BSC, Base, Arbitrum, dan Optimism. Anda juga dapat menambahkan jaringan kustom yang kompatibel dengan EVM."
+	},
+	"seo": {
+		"page_title": "Pemeriksa Saldo Dompet - Pemindaian Batch Saldo Token | BiuBiu Tools",
+		"page_description": "Pindai dan filter dengan cepat dompet dengan saldo di beberapa alamat. Identifikasi dompet tidak kosong, agregasi kepemilikan token, dan ekspor hasil ke EXCEL/CSV/JSON.",
+		"keywords": "pemeriksa saldo dompet, pemindaian saldo batch, pemindai saldo token, portofolio kripto, pemindai multi-dompet, saldo blockchain, alat web3, saldo ERC20",
+		"webapp_name": "Pemeriksa Saldo Dompet",
+		"webapp_description": "Filter cepat dompet dengan saldo, identifikasi alamat tidak kosong, dan agregasi kepemilikan token di beberapa dompet.",
+		"feature_1": "Pindai hingga 100.000 alamat dompet sekaligus",
+		"feature_2": "Identifikasi dengan cepat dompet dengan saldo vs dompet kosong",
+		"feature_3": "Agregasi total kepemilikan di semua dompet yang dipindai",
+		"feature_4": "Mendukung beberapa jaringan (Ethereum, Polygon, BSC, Base, Arbitrum, Optimism)",
+		"feature_5": "Ekspor hasil ke CSV atau JSON",
+		"howto_name": "Cara Memindai Saldo Dompet Secara Batch",
+		"howto_description": "Panduan langkah demi langkah untuk memindai dan memfilter saldo dompet di beberapa alamat.",
+		"howto_tool_1": "Dompet Web3 (MetaMask, WalletConnect, dll.)",
+		"howto_tool_2": "Daftar alamat dompet untuk dipindai",
+		"step_1_name": "Hubungkan Dompet",
+		"step_1_text": "Klik tombol \"Hubungkan Dompet\" dan pilih penyedia dompet Web3 pilihan Anda. Ini digunakan untuk memilih jaringan blockchain yang ingin Anda pindai.",
+		"step_1_description": "Tautkan dompet Web3 Anda",
+		"step_2_name": "Periksa Dependensi",
+		"step_2_text": "Verifikasi koneksi jaringan blockchain dan pastikan kontrak Multicall3 dapat diakses. Sistem akan secara otomatis mendeteksi dan memvalidasi komponen yang diperlukan.",
+		"step_2_description": "Verifikasi jaringan dan kontrak",
+		"step_3_name": "Pilih Token",
+		"step_3_text": "Pilih token mana yang ingin Anda periksa saldonya. Anda dapat memilih token native (ETH, BNB, MATIC) dan token ERC20 apa pun yang tersedia di jaringan.",
+		"step_3_description": "Pilih token untuk dipindai",
+		"step_4_name": "Impor Alamat",
+		"step_4_text": "Tambahkan alamat dompet untuk dipindai dengan menempelkannya (satu per baris), mengunggah file CSV/TXT, atau memasukkannya secara manual. Anda dapat memindai hingga 100.000 dompet sekaligus.",
+		"step_4_description": "Tambahkan alamat dompet",
+		"step_5_name": "Pindai & Hasil",
+		"step_5_text": "Mulai pemindaian dan lihat hasil secara real-time. Filter dompet dengan saldo, lihat statistik agregat, dan ekspor ke CSV atau JSON.",
+		"step_5_description": "Pindai dan ekspor hasil"
+	},
+	"step1": {
+		"content": {
+			"title": "Pilih Jaringan",
+			"description": "Pilih jaringan blockchain untuk pemindaian saldo",
+			"loading": "Memuat konfigurasi jaringan..."
+		},
+		"footer": {
+			"continue": "Lanjutkan",
+			"hint": "Hubungkan dompet Anda untuk melanjutkan"
+		}
+	},
+	"step3": {
+		"content": {
+			"title": "Pilih Token",
+			"description": "Pilih token mana yang akan dipindai di {network}",
+			"description_fallback": "Pilih token mana yang akan dipindai",
+			"wallet_not_connected_title": "Dompet Tidak Terhubung",
+			"wallet_not_connected_message": "Silakan hubungkan dompet Anda terlebih dahulu untuk memilih token",
+			"empty_message": "Pilih setidaknya satu token untuk dipindai"
+		},
+		"sidebar": {
+			"selected_tokens_title": "Token Terpilih",
+			"count_label": "Jumlah Token",
+			"empty_hint": "Pilih setidaknya satu token untuk melanjutkan"
+		},
+		"footer": {
+			"hint": "Pilih setidaknya satu token untuk melanjutkan"
+		}
+	},
+	"step4": {
+		"import_method": {
+			"address": "Alamat",
+			"xpub": "Kunci Publik Diperluas"
+		},
+		"content": {
+			"title": "Impor Alamat Dompet",
+			"description": "Tambahkan alamat dompet untuk memindai saldo token",
+			"choose_method": "Pilih Metode Impor",
+			"address_placeholder": "Tempel alamat dompet di sini (satu per baris)\n0x1234...\n0x5678...",
+			"wallet_list": {
+				"title": "Dompet",
+				"count": "({count})",
+				"clear_all": "Hapus Semua",
+				"empty": "Belum ada dompet yang ditambahkan"
+			}
+		},
+		"sidebar": {
+			"title": "Ringkasan",
+			"description": "Tambahkan alamat dompet untuk dipindai",
+			"total_label": "Total Dompet",
+			"empty_hint": "Belum ada dompet yang ditambahkan"
+		},
+		"footer": {
+			"hint": "Tambahkan setidaknya satu dompet untuk melanjutkan"
+		},
+		"dialogs": {
+			"remove_wallet_title": "Hapus Dompet",
+			"remove_wallet_message": "Apakah Anda yakin ingin menghapus dompet ini?\n{address}",
+			"remove_button": "Hapus",
+			"clear_all_title": "Hapus Semua Dompet",
+			"clear_all_message": "Apakah Anda yakin ingin menghapus semua {count} dompet?",
+			"clear_all_button": "Hapus Semua",
+			"long_press_hint": "Tahan untuk mengonfirmasi",
+			"cancel_button": "Batal"
+		}
+	},
+	"step5": {
+		"title": "Pindai & Lihat Hasil",
+		"description": "Pindai saldo token dan ekspor data",
+		"start": "Mulai Pemindaian",
+		"new_scan": "Mulai Pemindaian Baru",
+		"info": "Klik \"Mulai Pemindaian\" untuk meminta saldo token untuk semua dompet yang dikonfigurasi. Beberapa endpoint RPC akan digunakan secara paralel untuk pemindaian lebih cepat.",
+		"config": {
+			"network": "Jaringan",
+			"wallets": "Dompet",
+			"tokens": "Token",
+			"rpcs": "Endpoint RPC"
+		},
+		"resume": {
+			"title": "Lanjutkan Pemindaian Sebelumnya?",
+			"info": "Progres: {progress}% ({addresses} alamat, {tokens} token)",
+			"last_activity": "Aktivitas terakhir",
+			"continue": "Lanjutkan",
+			"discard": "Buang"
+		},
+		"scanning": {
+			"title": "Memindai Saldo...",
+			"success": "selesai",
+			"failed": "gagal",
+			"pending": "tertunda",
+			"pause": "Jeda"
+		},
+		"paused": {
+			"title": "Pemindaian Dijeda",
+			"message": "Pemindaian telah dijeda.",
+			"resume": "Lanjutkan",
+			"new_scan": "Pemindaian Baru"
+		},
+		"completed": {
+			"banner": "Pemindaian Selesai - {count} dompet dipindai"
+		},
+		"export": {
+			"title": "Ekspor Hasil",
+			"copied": "Disalin!",
+			"copy_summary": "Salin Ringkasan"
+		},
+		"totals": {
+			"title": "Total Kepemilikan",
+			"wallets": "{count} dompet",
+			"wallets_short": "dompet"
+		},
+		"filter": {
+			"title": "Filter",
+			"reset": "Reset",
+			"balance_status": "Status Saldo",
+			"status_all": "Semua",
+			"status_has_balance": "Memiliki Saldo",
+			"status_no_balance": "Tidak Ada Saldo",
+			"token": "Token",
+			"token_all": "Semua Token",
+			"balance_range": "Rentang Saldo",
+			"min": "Min",
+			"max": "Maks",
+			"showing": "Menampilkan {filtered} dari {total}",
+			"total": "{count} hasil"
+		},
+		"balances": {
+			"title": "Saldo Dompet",
+			"address": "Alamat",
+			"path": "Path",
+			"label": "Label",
+			"results": "hasil",
+			"no_results": "Tidak ada hasil ditemukan"
+		},
+		"error": {
+			"title": "Pemindaian Gagal",
+			"unknown": "Terjadi kesalahan yang tidak diketahui",
+			"retry": "Coba Lagi Pemindaian",
+			"no_network": "Tidak ada jaringan yang dipilih",
+			"no_tokens": "Tidak ada token yang dipilih",
+			"no_wallets": "Tidak ada dompet yang ditambahkan"
+		},
+		"sidebar": {
+			"title": "Pindai & Hasil",
+			"description": "Pindai dompet untuk saldo token dan lihat hasil",
+			"progress": "Progres",
+			"total": "total",
+			"tasks": "tugas",
+			"failed": "gagal",
+			"queries_failed": "kueri gagal",
+			"logs": "Log Langsung",
+			"completed": "Selesai",
+			"remaining": "Tersisa",
+			"paused": "Dijeda",
+			"scan_results": "Hasil Pemindaian",
+			"addresses_scanned": "alamat dipindai",
+			"wallets_scanned": "Dompet Dipindai",
+			"with_balance": "alamat dengan saldo",
+			"success": "Sukses",
+			"wallets_to_scan": "Dompet untuk Dipindai",
+			"tokens_selected": "Token Terpilih",
+			"export": "Ekspor",
+			"new_scan": "Mulai Pemindaian Baru",
+			"ready": "Siap Memindai",
+			"wallets": "dompet",
+			"tokens": "token",
+			"info_title": "Apa yang Sedang Terjadi?",
+			"info_1": "Meminta blockchain untuk saldo token",
+			"info_2": "Menggunakan beberapa RPC secara paralel",
+			"info_3": "Mencoba ulang permintaan yang gagal secara otomatis",
+			"tip_completed": "Ekspor ke Excel untuk analisis lanjutan, atau CSV untuk spreadsheet sederhana.",
+			"tip_scanning": "Anda dapat menutup browser - progres disimpan secara otomatis.",
+			"tip_idle": "Pemindaian besar mungkin memakan waktu tetapi dapat dijeda dan dilanjutkan kapan saja."
+		},
+		"footer": {
+			"hint_idle": "Klik \"Mulai Pemindaian\" untuk memulai",
+			"hint_scanning": "Pemindaian sedang berlangsung...",
+			"hint_paused": "Pemindaian dijeda. Lanjutkan atau mulai pemindaian baru.",
+			"hint_completed": "Ekspor hasil Anda atau mulai pemindaian baru",
+			"hint_error": "Coba lagi pemindaian atau kembali untuk memperbaiki masalah",
+			"new_scan": "Mulai Pemindaian Baru",
+			"continue": "Lanjutkan"
+		}
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "vi",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳"
+	},
+	"title": "Trình Quét ENS",
+	"description": "Quét hàng loạt tính khả dụng và trạng thái hết hạn của tên miền ENS",
+	"step1": {
+		"content": {
+			"title": "Kết Nối với Mạng Chính Ethereum",
+			"description": "Tên ENS được đăng ký trên mạng chính Ethereum",
+			"loading": "Đang tải cấu hình mạng..."
+		},
+		"sidebar": {
+			"title": "Kết Nối Ví",
+			"description": "Kết nối với mạng chính Ethereum để quét tên miền ENS."
+		},
+		"footer": {
+			"continue": "Tiếp Tục",
+			"hint": "Kết nối với Mạng Chính Ethereum để tiếp tục"
+		}
+	}
+}

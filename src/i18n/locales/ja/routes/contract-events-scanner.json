@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "ja",
+		"name": "日本語",
+		"englishName": "Japanese",
+		"direction": "ltr",
+		"flag": "🇯🇵"
+	},
+	"title": "コントラクトイベントスキャナー",
+	"description": "スマートコントラクトが発行したイベントをスキャン・分析",
+	"step1": {
+		"content": {
+			"title": "ネットワークに接続",
+			"description": "コントラクトがデプロイされているネットワークを選択",
+			"loading": "ネットワーク設定を読み込み中..."
+		},
+		"sidebar": {
+			"title": "ウォレットを接続",
+			"description": "コントラクトイベントをスキャンするためにネットワークに接続してください。"
+		},
+		"footer": {
+			"continue": "続行",
+			"hint": "続行するにはネットワークに接続してください"
+		}
+	}
+}

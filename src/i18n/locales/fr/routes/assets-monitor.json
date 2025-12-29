@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "fr",
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷"
+	},
+	"title": "Moniteur d'Actifs",
+	"description": "Surveillez les changements d'actifs dans les adresses de portefeuille en temps réel",
+	"step1": {
+		"content": {
+			"title": "Connecter au Réseau",
+			"description": "Sélectionnez le réseau pour surveiller les actifs",
+			"loading": "Chargement de la configuration réseau..."
+		},
+		"sidebar": {
+			"title": "Connecter le Portefeuille",
+			"description": "Connectez-vous au réseau pour surveiller les actifs du portefeuille."
+		},
+		"footer": {
+			"continue": "Continuer",
+			"hint": "Connectez-vous à un réseau pour continuer"
+		}
+	}
+}

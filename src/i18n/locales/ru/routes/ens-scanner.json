@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "ru",
+		"name": "Русский",
+		"englishName": "Russian",
+		"direction": "ltr",
+		"flag": "🇷🇺"
+	},
+	"title": "Сканер ENS",
+	"description": "Пакетное сканирование доступности и статуса истечения доменов ENS",
+	"step1": {
+		"content": {
+			"title": "Подключиться к основной сети Ethereum",
+			"description": "ENS-имена регистрируются в основной сети Ethereum",
+			"loading": "Загрузка конфигурации сети..."
+		},
+		"sidebar": {
+			"title": "Подключить кошелёк",
+			"description": "Подключитесь к основной сети Ethereum для сканирования доменов ENS."
+		},
+		"footer": {
+			"continue": "Продолжить",
+			"hint": "Подключитесь к основной сети Ethereum для продолжения"
+		}
+	}
+}

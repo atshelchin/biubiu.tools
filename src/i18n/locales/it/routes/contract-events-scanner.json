@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "it",
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹"
+	},
+	"title": "Scanner Eventi Contratto",
+	"description": "Scansiona e analizza gli eventi emessi dai contratti intelligenti",
+	"step1": {
+		"content": {
+			"title": "Connetti alla Rete",
+			"description": "Seleziona la rete dove è distribuito il contratto",
+			"loading": "Caricamento configurazione di rete..."
+		},
+		"sidebar": {
+			"title": "Connetti Wallet",
+			"description": "Connettiti alla rete per scansionare gli eventi del contratto."
+		},
+		"footer": {
+			"continue": "Continua",
+			"hint": "Connettiti a una rete per continuare"
+		}
+	}
+}

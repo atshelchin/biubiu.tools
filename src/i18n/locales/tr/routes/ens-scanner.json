@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "tr",
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷"
+	},
+	"title": "ENS Tarayıcı",
+	"description": "ENS alan adı kullanılabilirliğini ve son kullanma durumunu toplu tarama",
+	"step1": {
+		"content": {
+			"title": "Ethereum Ana Ağına Bağlan",
+			"description": "ENS adları Ethereum ana ağında kayıtlıdır",
+			"loading": "Ağ yapılandırması yükleniyor..."
+		},
+		"sidebar": {
+			"title": "Cüzdan Bağla",
+			"description": "ENS alan adlarını taramak için Ethereum ana ağına bağlanın."
+		},
+		"footer": {
+			"continue": "Devam Et",
+			"hint": "Devam etmek için Ethereum Ana Ağına bağlanın"
+		}
+	}
+}

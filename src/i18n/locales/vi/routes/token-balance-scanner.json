@@ -1,0 +1,271 @@
+{
+	"_meta": {
+		"code": "vi",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳"
+	},
+	"title": "Kiểm Tra Số Dư Ví",
+	"description": "Lọc nhanh các ví có số dư, xác định địa chỉ không trống và tổng hợp số lượng token trên nhiều ví",
+	"session": {
+		"title": "Phiên Quét",
+		"status": {
+			"scanning": "Đang quét",
+			"paused": "Tạm dừng",
+			"completed": "Hoàn thành",
+			"abandoned": "Đã hủy"
+		},
+		"progress": "Tiến độ",
+		"addresses": "Địa chỉ",
+		"tokens": "Token",
+		"last_activity": "Hoạt động cuối",
+		"view": "Xem",
+		"resume": "Tiếp tục",
+		"abandon": "Hủy bỏ",
+		"delete": "Xóa",
+		"start_new": "Bắt đầu Quét Mới",
+		"empty": "Không có phiên hoạt động",
+		"error": {
+			"abandon_failed": "Không thể hủy bỏ phiên",
+			"delete_failed": "Không thể xóa phiên",
+			"not_found": "Không tìm thấy phiên",
+			"restore_failed": "Không thể khôi phục phiên"
+		}
+	},
+	"feature_1": "Quét đến 100K địa chỉ",
+	"feature_2": "Lọc ví có số dư",
+	"feature_3": "Thống kê tài sản tổng hợp",
+	"feature_4": "Xuất ra EXCEL/CSV/JSON",
+	"faqs": {
+		"what_is_balance_checker": "Kiểm Tra Số Dư Ví là gì?",
+		"balance_checker_explanation": "Công cụ để quét nhiều địa chỉ ví và kiểm tra số dư token. Giúp bạn nhanh chóng xác định ví nào có tài sản và tổng hợp tổng số tiền nắm giữ trên tất cả các ví.",
+		"how_many_addresses": "Tôi có thể quét bao nhiêu địa chỉ cùng lúc?",
+		"how_many_addresses_explanation": "Bạn có thể quét đến 100.000 địa chỉ ví trong một lô. Công cụ sử dụng các cuộc gọi RPC được tối ưu hóa để truy vấn số dư hiệu quả.",
+		"what_tokens_supported": "Loại token nào được hỗ trợ?",
+		"what_tokens_supported_explanation": "Chúng tôi hỗ trợ token gốc (ETH, BNB, MATIC, v.v.) và tất cả token tiêu chuẩn ERC-20. Bạn có thể thêm bất kỳ token nào bằng cách nhập địa chỉ hợp đồng của nó.",
+		"is_it_free": "Quét số dư có miễn phí không?",
+		"is_it_free_explanation": "Có! Quét số dư hoàn toàn miễn phí và không yêu cầu giao dịch on-chain. Nó chỉ đọc dữ liệu từ blockchain.",
+		"what_is_multicall": "Multicall3 là gì?",
+		"multicall_explanation": "Multicall3 là hợp đồng thông minh gộp nhiều cuộc gọi đọc thành một yêu cầu. Điều này tăng tốc đáng kể việc quét bằng cách giảm số lượng cuộc gọi RPC cần thiết.",
+		"can_export_results": "Tôi có thể xuất kết quả quét không?",
+		"can_export_explanation": "Có! Bạn có thể xuất kết quả ra định dạng CSV hoặc JSON để phân tích thêm trong bảng tính hoặc các công cụ khác.",
+		"what_networks_supported": "Mạng blockchain nào được hỗ trợ?",
+		"networks_supported_explanation": "Chúng tôi hỗ trợ Ethereum, Polygon, BSC, Base, Arbitrum và Optimism. Bạn cũng có thể thêm mạng tùy chỉnh tương thích EVM."
+	},
+	"seo": {
+		"page_title": "Kiểm Tra Số Dư Ví - Quét Hàng Loạt Số Dư Token | BiuBiu Tools",
+		"page_description": "Quét và lọc nhanh các ví có số dư trên nhiều địa chỉ. Xác định ví không trống, tổng hợp số lượng token và xuất kết quả ra EXCEL/CSV/JSON.",
+		"keywords": "kiểm tra số dư ví, quét số dư hàng loạt, máy quét số dư token, danh mục crypto, máy quét đa ví, số dư blockchain, công cụ web3, số dư ERC20",
+		"webapp_name": "Kiểm Tra Số Dư Ví",
+		"webapp_description": "Lọc nhanh các ví có số dư, xác định địa chỉ không trống và tổng hợp số lượng token trên nhiều ví.",
+		"feature_1": "Quét đến 100.000 địa chỉ ví cùng lúc",
+		"feature_2": "Nhanh chóng xác định ví có số dư so với ví trống",
+		"feature_3": "Tổng hợp tổng số tiền nắm giữ trên tất cả ví đã quét",
+		"feature_4": "Hỗ trợ nhiều mạng (Ethereum, Polygon, BSC, Base, Arbitrum, Optimism)",
+		"feature_5": "Xuất kết quả ra CSV hoặc JSON",
+		"howto_name": "Cách Quét Hàng Loạt Số Dư Ví",
+		"howto_description": "Hướng dẫn từng bước để quét và lọc số dư ví trên nhiều địa chỉ.",
+		"howto_tool_1": "Ví Web3 (MetaMask, WalletConnect, v.v.)",
+		"howto_tool_2": "Danh sách địa chỉ ví để quét",
+		"step_1_name": "Kết Nối Ví",
+		"step_1_text": "Nhấp vào nút \"Kết Nối Ví\" và chọn nhà cung cấp ví Web3 ưa thích của bạn. Điều này được sử dụng để chọn mạng blockchain bạn muốn quét.",
+		"step_1_description": "Liên kết ví Web3 của bạn",
+		"step_2_name": "Kiểm Tra Phụ Thuộc",
+		"step_2_text": "Xác minh kết nối mạng blockchain và đảm bảo hợp đồng Multicall3 có thể truy cập được. Hệ thống sẽ tự động phát hiện và xác nhận các thành phần cần thiết.",
+		"step_2_description": "Xác minh mạng và hợp đồng",
+		"step_3_name": "Chọn Token",
+		"step_3_text": "Chọn token bạn muốn kiểm tra số dư. Bạn có thể chọn token gốc (ETH, BNB, MATIC) và bất kỳ token ERC20 nào có sẵn trên mạng.",
+		"step_3_description": "Chọn token để quét",
+		"step_4_name": "Nhập Địa Chỉ",
+		"step_4_text": "Thêm địa chỉ ví để quét bằng cách dán chúng (mỗi dòng một địa chỉ), tải lên tệp CSV/TXT, hoặc nhập thủ công. Bạn có thể quét đến 100.000 ví cùng lúc.",
+		"step_4_description": "Thêm địa chỉ ví",
+		"step_5_name": "Quét và Kết Quả",
+		"step_5_text": "Bắt đầu quét và xem kết quả theo thời gian thực. Lọc ví có số dư, xem thống kê tổng hợp và xuất ra CSV hoặc JSON.",
+		"step_5_description": "Quét và xuất kết quả"
+	},
+	"step1": {
+		"content": {
+			"title": "Chọn Mạng",
+			"description": "Chọn mạng blockchain để quét số dư",
+			"loading": "Đang tải cấu hình mạng..."
+		},
+		"footer": {
+			"continue": "Tiếp Tục",
+			"hint": "Kết nối ví của bạn để tiếp tục"
+		}
+	},
+	"step3": {
+		"content": {
+			"title": "Chọn Token",
+			"description": "Chọn token để quét trên {network}",
+			"description_fallback": "Chọn token để quét",
+			"wallet_not_connected_title": "Ví Chưa Kết Nối",
+			"wallet_not_connected_message": "Vui lòng kết nối ví trước để chọn token",
+			"empty_message": "Chọn ít nhất một token để quét"
+		},
+		"sidebar": {
+			"selected_tokens_title": "Token Đã Chọn",
+			"count_label": "Số Lượng Token",
+			"empty_hint": "Chọn ít nhất một token để tiếp tục"
+		},
+		"footer": {
+			"hint": "Chọn ít nhất một token để tiếp tục"
+		}
+	},
+	"step4": {
+		"import_method": {
+			"address": "Địa chỉ",
+			"xpub": "Khóa Công Khai Mở Rộng"
+		},
+		"content": {
+			"title": "Nhập Địa Chỉ Ví",
+			"description": "Thêm địa chỉ ví để quét số dư token",
+			"choose_method": "Chọn Phương Thức Nhập",
+			"address_placeholder": "Dán địa chỉ ví vào đây (mỗi dòng một địa chỉ)\n0x1234...\n0x5678...",
+			"wallet_list": {
+				"title": "Ví",
+				"count": "({count})",
+				"clear_all": "Xóa Tất Cả",
+				"empty": "Chưa thêm ví nào"
+			}
+		},
+		"sidebar": {
+			"title": "Tóm Tắt",
+			"description": "Thêm địa chỉ ví để quét",
+			"total_label": "Tổng Số Ví",
+			"empty_hint": "Chưa thêm ví nào"
+		},
+		"footer": {
+			"hint": "Thêm ít nhất một ví để tiếp tục"
+		},
+		"dialogs": {
+			"remove_wallet_title": "Xóa Ví",
+			"remove_wallet_message": "Bạn có chắc muốn xóa ví này không?\n{address}",
+			"remove_button": "Xóa",
+			"clear_all_title": "Xóa Tất Cả Ví",
+			"clear_all_message": "Bạn có chắc muốn xóa tất cả {count} ví không?",
+			"clear_all_button": "Xóa Tất Cả",
+			"long_press_hint": "Giữ để xác nhận",
+			"cancel_button": "Hủy"
+		}
+	},
+	"step5": {
+		"title": "Quét và Xem Kết Quả",
+		"description": "Quét số dư token và xuất dữ liệu",
+		"start": "Bắt Đầu Quét",
+		"new_scan": "Bắt Đầu Quét Mới",
+		"info": "Nhấp \"Bắt Đầu Quét\" để truy vấn số dư token của tất cả ví đã cấu hình. Nhiều điểm cuối RPC sẽ được sử dụng song song để quét nhanh hơn.",
+		"config": {
+			"network": "Mạng",
+			"wallets": "Ví",
+			"tokens": "Token",
+			"rpcs": "Điểm Cuối RPC"
+		},
+		"resume": {
+			"title": "Tiếp Tục Quét Trước?",
+			"info": "Tiến độ: {progress}% ({addresses} địa chỉ, {tokens} token)",
+			"last_activity": "Hoạt động cuối",
+			"continue": "Tiếp Tục",
+			"discard": "Hủy Bỏ"
+		},
+		"scanning": {
+			"title": "Đang Quét Số Dư...",
+			"success": "hoàn thành",
+			"failed": "thất bại",
+			"pending": "đang chờ",
+			"pause": "Tạm Dừng"
+		},
+		"paused": {
+			"title": "Quét Đã Tạm Dừng",
+			"message": "Quá trình quét đã được tạm dừng.",
+			"resume": "Tiếp Tục",
+			"new_scan": "Quét Mới"
+		},
+		"completed": {
+			"banner": "Quét Hoàn Thành - {count} ví đã quét"
+		},
+		"export": {
+			"title": "Xuất Kết Quả",
+			"copied": "Đã Sao Chép!",
+			"copy_summary": "Sao Chép Tóm Tắt"
+		},
+		"totals": {
+			"title": "Tổng Tài Sản",
+			"wallets": "{count} ví",
+			"wallets_short": "ví"
+		},
+		"filter": {
+			"title": "Lọc",
+			"reset": "Đặt Lại",
+			"balance_status": "Trạng Thái Số Dư",
+			"status_all": "Tất Cả",
+			"status_has_balance": "Có Số Dư",
+			"status_no_balance": "Không Có Số Dư",
+			"token": "Token",
+			"token_all": "Tất Cả Token",
+			"balance_range": "Phạm Vi Số Dư",
+			"min": "Tối Thiểu",
+			"max": "Tối Đa",
+			"showing": "Hiển thị {filtered} trong {total}",
+			"total": "{count} kết quả"
+		},
+		"balances": {
+			"title": "Số Dư Ví",
+			"address": "Địa Chỉ",
+			"path": "Đường Dẫn",
+			"label": "Nhãn",
+			"results": "kết quả",
+			"no_results": "Không tìm thấy kết quả"
+		},
+		"error": {
+			"title": "Quét Thất Bại",
+			"unknown": "Đã xảy ra lỗi không xác định",
+			"retry": "Thử Lại Quét",
+			"no_network": "Chưa chọn mạng",
+			"no_tokens": "Chưa chọn token",
+			"no_wallets": "Chưa thêm ví"
+		},
+		"sidebar": {
+			"title": "Quét và Kết Quả",
+			"description": "Quét ví để kiểm tra số dư token và xem kết quả",
+			"progress": "Tiến Độ",
+			"total": "tổng",
+			"tasks": "tác vụ",
+			"failed": "thất bại",
+			"queries_failed": "truy vấn thất bại",
+			"logs": "Nhật Ký Trực Tiếp",
+			"completed": "Hoàn Thành",
+			"remaining": "Còn Lại",
+			"paused": "Tạm Dừng",
+			"scan_results": "Kết Quả Quét",
+			"addresses_scanned": "địa chỉ đã quét",
+			"wallets_scanned": "Ví Đã Quét",
+			"with_balance": "địa chỉ có số dư",
+			"success": "Thành Công",
+			"wallets_to_scan": "Ví Cần Quét",
+			"tokens_selected": "Token Đã Chọn",
+			"export": "Xuất",
+			"new_scan": "Bắt Đầu Quét Mới",
+			"ready": "Sẵn Sàng Quét",
+			"wallets": "ví",
+			"tokens": "token",
+			"info_title": "Đang Diễn Ra Điều Gì?",
+			"info_1": "Đang truy vấn blockchain để kiểm tra số dư token",
+			"info_2": "Sử dụng nhiều RPC song song",
+			"info_3": "Tự động thử lại các yêu cầu thất bại",
+			"tip_completed": "Xuất ra Excel để phân tích nâng cao, hoặc CSV cho bảng tính đơn giản.",
+			"tip_scanning": "Bạn có thể đóng trình duyệt - tiến độ được lưu tự động.",
+			"tip_idle": "Quét lớn có thể mất thời gian nhưng có thể tạm dừng và tiếp tục bất cứ lúc nào."
+		},
+		"footer": {
+			"hint_idle": "Nhấp \"Bắt Đầu Quét\" để bắt đầu",
+			"hint_scanning": "Đang quét...",
+			"hint_paused": "Quét đã tạm dừng. Tiếp tục hoặc bắt đầu quét mới.",
+			"hint_completed": "Xuất kết quả hoặc bắt đầu quét mới",
+			"hint_error": "Thử lại quét hoặc quay lại để khắc phục sự cố",
+			"new_scan": "Bắt Đầu Quét Mới",
+			"continue": "Tiếp Tục"
+		}
+	}
+}

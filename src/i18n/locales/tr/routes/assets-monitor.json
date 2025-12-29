@@ -1,0 +1,26 @@
+{
+	"_meta": {
+		"code": "tr",
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷"
+	},
+	"title": "Varlık İzleyici",
+	"description": "Cüzdan adreslerindeki varlık değişikliklerini gerçek zamanlı izle",
+	"step1": {
+		"content": {
+			"title": "Ağa Bağlan",
+			"description": "Varlıkları izlemek için ağı seçin",
+			"loading": "Ağ yapılandırması yükleniyor..."
+		},
+		"sidebar": {
+			"title": "Cüzdan Bağla",
+			"description": "Cüzdan varlıklarını izlemek için ağa bağlanın."
+		},
+		"footer": {
+			"continue": "Devam",
+			"hint": "Devam etmek için bir ağa bağlanın"
+		}
+	}
+}
