@@ -83,8 +83,9 @@ export interface ScanProgressSerializedState<TResult extends ScanResultItem> {
 /**
  * Public interface for the scan progress module.
  */
-export interface ScanProgressModule<TResult extends ScanResultItem>
-	extends StateModule<ScanProgressSerializedState<TResult>> {
+export interface ScanProgressModule<TResult extends ScanResultItem> extends StateModule<
+	ScanProgressSerializedState<TResult>
+> {
 	// Readonly state
 	readonly status: ScanStatus;
 	readonly progress: ScanProgressInfo;
