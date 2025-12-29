@@ -1,0 +1,64 @@
+title: "[Idea] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Share Your Idea
+
+        We love hearing your ideas for improving BiuBiu Tools!
+
+        This is the place to share suggestions, brainstorm with the community, and discuss potential improvements.
+
+        For well-defined feature requests, consider using our [Feature Request form](https://github.com/atshelchin/biubiu.tools/issues/new?template=feature_request.yml) instead.
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your Idea
+      description: Describe your idea or suggestion.
+      placeholder: |
+        What's your idea? How would it make BiuBiu Tools better?
+        Be as detailed or as brief as you like - this is a space for brainstorming!
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What type of idea is this?
+      options:
+        - New feature
+        - Improvement to existing tool
+        - User experience / Design
+        - New blockchain / Network support
+        - Integration with other services
+        - Documentation / Tutorials
+        - Other
+
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Related Tool
+      description: Which tool does this idea relate to? (if applicable)
+      options:
+        - One-to-Many Transfer
+        - Token Balance Scanner
+        - Wallet Sweep
+        - Wallet Generator
+        - ENS Scanner
+        - Contract Events Scanner
+        - DEX Moonshot Trader
+        - Assets Monitor
+        - Chainlist
+        - Chain Tools
+        - New Tool Idea
+        - General / Platform-wide
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Any mockups, examples, or additional thoughts?
+      placeholder: Add any other context, mockups, or examples here...

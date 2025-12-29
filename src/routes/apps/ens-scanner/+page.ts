@@ -81,6 +81,8 @@ export const load: PageLoad = ({ url }) => {
 			locale
 		},
 		steps: uiSteps,
-		structuredData: [webAppData, howToData]
+		structuredData: [webAppData, howToData],
+		status: 'alpha' as const,
+		toolKey: 'ens-scanner'
 	};
 };

@@ -43,8 +43,6 @@
 			color: '#F59E0B'
 		}
 	};
-	console.log({ status });
-
 	const config = $derived(statusConfig[status]);
 	const Icon = $derived(config.icon);
 </script>

@@ -1,0 +1,58 @@
+title: "[Q&A] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Ask a Question
+
+        Welcome! This is the place to ask questions about BiuBiu Tools.
+
+        Before asking, please:
+        - Search existing discussions to see if your question has been answered
+        - Check our documentation and FAQ sections on the website
+
+        We're happy to help!
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know?
+      placeholder: |
+        Please describe your question in detail.
+        Include any context that might help us understand what you're trying to do.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Related Tool
+      description: Which tool is your question about?
+      options:
+        - One-to-Many Transfer
+        - Token Balance Scanner
+        - Wallet Sweep
+        - Wallet Generator
+        - ENS Scanner
+        - Contract Events Scanner
+        - DEX Moonshot Trader
+        - Assets Monitor
+        - Chainlist
+        - Chain Tools
+        - General / Getting Started
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you tried?
+      description: Tell us what you've already attempted.
+      placeholder: Describe any steps you've already taken to solve this...
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Add any screenshots, error messages, or other relevant information.
+      placeholder: Any additional context that might help...

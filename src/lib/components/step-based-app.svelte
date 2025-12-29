@@ -3,6 +3,7 @@
 	import type { Chain } from 'viem';
 	import type { Step } from '$lib/components/ui/step-indicator.svelte';
 	import type { FAQ } from '$lib/components/ui/faqs.svelte';
+	import type { ToolStatus } from '$lib/components/ui/status-badge.svelte';
 
 	// Generic component type for step components
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -29,6 +30,11 @@
 		// App-specific configuration
 		appTitle: string;
 		appDescription: string;
+
+		// Tool status configuration (optional, defaults to 'beta')
+		status?: ToolStatus;
+		// Unique key for the tool (used for localStorage to remember notice dismissal)
+		toolKey?: string;
 
 		// FAQs configuration (optional)
 		faqs?: {
@@ -65,6 +71,8 @@
 	} from '$lib/components/ui/step-indicator.svelte';
 	import StepControls from '$lib/components/ui/step-controls.svelte';
 	import Faqs from '$lib/components/ui/faqs.svelte';
+	import StatusBadge from '$lib/components/ui/status-badge.svelte';
+	import DevelopmentNotice from '$lib/components/ui/development-notice.svelte';
 	import { useI18n } from '@shelchin/i18n';
 
 	interface Props {
@@ -80,19 +88,18 @@
 
 	const i18n = useI18n();
 
-	// Initialize wallet connect if configured
-	if (config.walletConnect) {
-		const store = createConnectStore(
-			createConnectConfig({
-				chains: config.walletConnect.chains,
-				storageKey: config.walletConnect.storageKey,
-				// eslint-disable-next-line @typescript-eslint/no-explicit-any
-				i18n: i18n as any
-			})
-		);
-		// Initialize the store to load networks and set up wallet detection
-		store.initialize();
-	}
+	// Always create connect store for WalletConnectorModal in PageLayout
+	// Uses custom config if provided, otherwise uses default config
+	const store = createConnectStore(
+		createConnectConfig({
+			chains: config.walletConnect?.chains ?? [],
+			storageKey: config.walletConnect?.storageKey ?? 'biubiu-tools-wallet',
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
+			i18n: i18n as any
+		})
+	);
+	// Initialize the store to load networks and set up wallet detection
+	store.initialize();
 
 	// Create step manager from steps config with i18n keys (auto-sets context internally)
 	const stepManager = createStepManager(config.steps, initialStep, config.useI18nKeys ?? false);
@@ -123,7 +130,12 @@
 <PageLayout>
 	{#snippet toolbar()}
 		<div class="toolbar-content">
-			<AppTitle title={config.appTitle} description={config.appDescription} />
+			<div class="title-with-status">
+				<AppTitle title={config.appTitle} description={config.appDescription} />
+				{#if config.status}
+					<StatusBadge status={config.status} />
+				{/if}
+			</div>
 			<div class="toolbar-actions">
 				{#if toolbarActions}
 					{@render toolbarActions()}
@@ -148,6 +160,10 @@
 
 	<!-- Main content -->
 	<div class="page-content">
+		{#if config.status}
+			<DevelopmentNotice status={config.status} storageKey={config.toolKey} />
+		{/if}
+
 		<div style="padding-bottom:16px">
 			<StepIndicator manager={stepManager} />
 		</div>
@@ -176,6 +192,16 @@
 		position: relative;
 		min-height: 60px;
 		padding-right: var(--space-20);
+	}
+
+	.title-with-status {
+		display: flex;
+		align-items: flex-start;
+		gap: var(--space-2);
+	}
+
+	.title-with-status :global(.status-badge) {
+		margin-top: var(--space-1);
 	}
 
 	.toolbar-actions {

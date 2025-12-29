@@ -2880,6 +2880,7 @@ declare module '@shelchin/i18n' {
     'common.footer.privacy': string;
     'common.footer.terms': string;
     'common.gas_used': string;
+    'common.helpButton.featureRequest': string;
     'common.helpButton.getHelp': string;
     'common.helpButton.label': string;
     'common.helpButton.reportIssue': string;

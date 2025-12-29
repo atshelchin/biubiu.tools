@@ -74,6 +74,8 @@
 			chains: [mainnet, base, bsc, polygon, arbitrum, optimism],
 			storageKey: 'biubiu-tools-one-to-many-transfer'
 		},
-		stepComponents
+		stepComponents,
+		status: 'alpha',
+		toolKey: 'one-to-many-transfer'
 	}}
 />

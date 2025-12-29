@@ -1,12 +1,18 @@
 <script lang="ts">
-	import { LifeBuoy, MessageCircleQuestion, Bug, X } from '@lucide/svelte';
+	import { LifeBuoy, MessageCircle, Bug, Lightbulb, X } from '@lucide/svelte';
 	import { browser } from '$app/environment';
 	import { useI18n } from '@shelchin/i18n';
 	import { onMount } from 'svelte';
 
 	const STORAGE_KEY = 'floating-help-position';
-	const GITHUB_ISSUES_URL = 'https://github.com/atshelchin/biubiu.tools/issues/new';
-	const GITHUB_DISCUSSIONS_URL = 'https://github.com/atshelchin/biubiu.tools/discussions';
+	// Use .yml template format for GitHub Issue forms
+	const GITHUB_BUG_REPORT_URL =
+		'https://github.com/atshelchin/biubiu.tools/issues/new?template=bug_report.yml';
+	const GITHUB_FEATURE_REQUEST_URL =
+		'https://github.com/atshelchin/biubiu.tools/issues/new?template=feature_request.yml';
+	// Q&A discussion category for getting help
+	const GITHUB_DISCUSSIONS_URL =
+		'https://github.com/atshelchin/biubiu.tools/discussions/categories/q-a';
 
 	const i18n = useI18n();
 	let mounted = $state(false);
@@ -103,7 +109,8 @@
 
 	function updateMenuPosition() {
 		if (!menuRef) return;
-		const menuX = currentSide === 'right' ? currentX - 200 : currentX + BUTTON_SIZE + 12;
+		const menuWidth = 200;
+		const menuX = currentSide === 'right' ? currentX - menuWidth - 12 : currentX + BUTTON_SIZE + 12;
 		menuRef.style.transform = `translate3d(${menuX}px, ${currentY}px, 0)`;
 	}
 
@@ -115,7 +122,12 @@
 
 	// Drag handlers - using direct DOM manipulation for performance
 	function handlePointerDown(e: PointerEvent) {
-		if (isMenuOpen) return;
+		// If menu is open, clicking button should close it
+		if (isMenuOpen) {
+			closeMenu();
+			e.preventDefault();
+			return;
+		}
 
 		isDragging = true;
 		hasMoved = false;
@@ -196,7 +208,12 @@
 	}
 
 	function handleReportIssue() {
-		window.open(GITHUB_ISSUES_URL, '_blank');
+		window.open(GITHUB_BUG_REPORT_URL, '_blank');
+		closeMenu();
+	}
+
+	function handleFeatureRequest() {
+		window.open(GITHUB_FEATURE_REQUEST_URL, '_blank');
 		closeMenu();
 	}
 
@@ -246,8 +263,12 @@
 				role="menu"
 			>
 				<button class="menu-item" onclick={handleGetHelp} role="menuitem">
-					<MessageCircleQuestion size={20} />
+					<MessageCircle size={20} />
 					<span>{i18n.t('common.helpButton.getHelp')}</span>
+				</button>
+				<button class="menu-item" onclick={handleFeatureRequest} role="menuitem">
+					<Lightbulb size={20} />
+					<span>{i18n.t('common.helpButton.featureRequest')}</span>
 				</button>
 				<button class="menu-item" onclick={handleReportIssue} role="menuitem">
 					<Bug size={20} />
@@ -328,7 +349,7 @@
 			0 8px 24px rgba(0, 0, 0, 0.12),
 			0 4px 8px rgba(0, 0, 0, 0.06);
 		padding: var(--space-2);
-		min-width: 180px;
+		min-width: 200px;
 		pointer-events: auto;
 		animation: menu-in 0.2s ease;
 		will-change: transform;
@@ -403,7 +424,7 @@
 		}
 
 		.floating-help-menu {
-			min-width: 160px;
+			/* min-width: 160px; */
 		}
 
 		.menu-item {
