@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Sun, Moon } from '@lucide/svelte';
 	import { useTheme } from '$lib/stores/theme.svelte';
-	import { checkConsent } from '$lib/stores/cookie-consent.svelte';
+	import { checkConsent } from '@shelchin/cookie-consent';
 
 	interface Props {
 		size?: 'sm' | 'md' | 'lg';

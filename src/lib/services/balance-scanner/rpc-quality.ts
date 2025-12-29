@@ -6,7 +6,7 @@
  * Respects user cookie consent preferences.
  */
 
-import { checkConsent } from '$lib/stores/cookie-consent.svelte';
+import { checkConsent } from '@shelchin/cookie-consent';
 
 /**
  * Quality metrics for a single RPC endpoint

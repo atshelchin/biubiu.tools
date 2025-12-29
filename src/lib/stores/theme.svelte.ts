@@ -1,6 +1,6 @@
 // Global theme store using Svelte 5 runes with SSR support
 import { getContext, setContext } from 'svelte';
-import { checkConsent } from '$lib/stores/cookie-consent.svelte';
+import { checkConsent } from '@shelchin/cookie-consent';
 
 const THEME_CONTEXT_KEY = 'theme-context';
 

@@ -3,7 +3,7 @@
 	import { Cookie } from '@lucide/svelte';
 	import { useI18n } from '@shelchin/i18n';
 	import { useTheme } from '$lib/stores/theme.svelte';
-	import { checkConsent, useCookieConsent } from '$lib/stores/cookie-consent.svelte';
+	import { checkConsent, useCookieConsent } from '@shelchin/cookie-consent';
 	import Socials from '$lib/components/ui/socials.svelte';
 	import LangToggle from '$lib/components/widgets/lang-toggle.svelte';
 	import ThemeToggle from '$lib/components/widgets/theme-toggle.svelte';

@@ -1,13 +1,16 @@
 /**
- * @deprecated Use `@shelchin/cookie-consent` instead
- * This re-export is kept for backwards compatibility
+ * @shelchin/cookie-consent
+ *
+ * Svelte 5 cookie consent management with GDPR/CCPA compliance
+ * Uses Svelte 5 runes for reactive state management
  */
+
 export {
 	createCookieConsentStore,
 	useCookieConsent,
 	checkConsent,
 	hasConsentInteraction
-} from '@shelchin/cookie-consent';
+} from './cookie-consent.svelte.js';
 
 export type {
 	CookieCategory,
@@ -15,4 +18,4 @@ export type {
 	StoredConsent,
 	CookieConsentContext,
 	CookieConsentOptions
-} from '@shelchin/cookie-consent';
+} from './types.js';

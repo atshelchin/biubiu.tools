@@ -3,7 +3,7 @@
  * https://github.com/atshelchin/sndra-link
  */
 
-import { checkConsent } from '$lib/stores/cookie-consent.svelte';
+import { checkConsent } from '@shelchin/cookie-consent';
 
 export interface ShortLinkResponse {
 	success: boolean;

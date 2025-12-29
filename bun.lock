@@ -15,6 +15,7 @@
         "@noble/curves": "^2.0.1",
         "@scure/bip32": "^2.0.1",
         "@scure/bip39": "^2.0.1",
+        "@shelchin/cookie-consent": "workspace:*",
         "@shelchin/ethereum-connectors": "0.0.1-dev.20251106040039.5fa58a7",
         "@shelchin/i18n": "2.4.0",
         "@shelchin/svelte-clipboard": "workspace:*",
@@ -64,6 +65,18 @@
         "vitest": "^3.2.3",
         "vitest-browser-svelte": "^0.1.0",
         "wrangler": "^4.28.0",
+      },
+    },
+    "packages/cookie-consent": {
+      "name": "@shelchin/cookie-consent",
+      "version": "0.0.1",
+      "devDependencies": {
+        "@sveltejs/package": "^2.3.7",
+        "svelte": "^5.0.0",
+        "typescript": "^5.0.0",
+      },
+      "peerDependencies": {
+        "svelte": "^5.0.0",
       },
     },
     "packages/svelte-clipboard": {
@@ -363,6 +376,8 @@
     "@scure/bip32": ["@scure/bip32@2.0.1", "", { "dependencies": { "@noble/curves": "2.0.1", "@noble/hashes": "2.0.1", "@scure/base": "2.0.0" } }, "sha512-4Md1NI5BzoVP+bhyJaY3K6yMesEFzNS1sE/cP+9nuvE7p/b0kx9XbpDHHFl8dHtufcbdHRUUQdRqLIPHN/s7yA=="],
 
     "@scure/bip39": ["@scure/bip39@2.0.1", "", { "dependencies": { "@noble/hashes": "2.0.1", "@scure/base": "2.0.0" } }, "sha512-PsxdFj/d2AcJcZDX1FXN3dDgitDDTmwf78rKZq1a6c1P1Nan1X/Sxc7667zU3U+AN60g7SxxP0YCVw2H/hBycg=="],
+
+    "@shelchin/cookie-consent": ["@shelchin/cookie-consent@workspace:packages/cookie-consent"],
 
     "@shelchin/ethereum-connectors": ["@shelchin/ethereum-connectors@0.0.1-dev.20251106040039.5fa58a7", "", { "dependencies": { "@base-org/account": "^2.4.0", "@noble/curves": "^2.0.1", "@scure/bip32": "^2.0.1", "@walletconnect/ethereum-provider": "^2.22.4", "qr-code-styling": "^1.9.2", "viem": "^2.38.4" } }, "sha512-LZHwUktO/sEQO+xjh5ZesvjNEQKYgsh8+GLXGXO+A9pkcZNLbpxUcB/Bl63fhBfg7i/AzNoliq4N0jbJl15dbg=="],
 

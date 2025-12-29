@@ -1,0 +1,50 @@
+{
+	"name": "@shelchin/cookie-consent",
+	"version": "0.0.1",
+	"description": "Svelte 5 cookie consent management with GDPR/CCPA compliance",
+	"type": "module",
+	"svelte": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"svelte": "./dist/index.js",
+			"default": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "svelte-package -i src",
+		"prepublishOnly": "bun run build"
+	},
+	"peerDependencies": {
+		"svelte": "^5.0.0"
+	},
+	"devDependencies": {
+		"@sveltejs/package": "^2.3.7",
+		"svelte": "^5.0.0",
+		"typescript": "^5.0.0"
+	},
+	"keywords": [
+		"svelte",
+		"svelte5",
+		"cookie-consent",
+		"gdpr",
+		"ccpa",
+		"privacy",
+		"runes"
+	],
+	"author": "shelchin",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/atshelchin/biubiu.tools.git",
+		"directory": "packages/cookie-consent"
+	},
+	"bugs": {
+		"url": "https://github.com/atshelchin/biubiu.tools/issues"
+	},
+	"homepage": "https://github.com/atshelchin/biubiu.tools/tree/main/packages/cookie-consent#readme"
+}

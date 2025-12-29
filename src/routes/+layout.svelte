@@ -5,7 +5,7 @@
 	import { onMount } from 'svelte';
 	import { createThemeStore } from '$lib/stores/theme.svelte.js';
 	import { createGeoBlockStore } from '$lib/stores/geo-block.svelte.js';
-	import { createCookieConsentStore } from '$lib/stores/cookie-consent.svelte.js';
+	import { createCookieConsentStore } from '@shelchin/cookie-consent';
 	import { initializeReferral } from '$lib/utils/referral';
 	import '../design-tokens.css';
 	import '../global.css';

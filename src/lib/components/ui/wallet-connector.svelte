@@ -12,7 +12,7 @@
 	import { useI18n } from '@shelchin/i18n';
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import { longPress } from '$lib/utils/long-press';
-	import { checkConsent } from '$lib/stores/cookie-consent.svelte';
+	import { checkConsent } from '@shelchin/cookie-consent';
 
 	const i18n = useI18n();
 	const t = i18n.t.bind(i18n);

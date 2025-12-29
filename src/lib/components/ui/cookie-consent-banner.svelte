@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Cookie, Shield, BarChart3, ChevronDown, ChevronUp, X } from '@lucide/svelte';
 	import { useI18n } from '@shelchin/i18n';
-	import { useCookieConsent } from '$lib/stores/cookie-consent.svelte';
+	import { useCookieConsent } from '@shelchin/cookie-consent';
 	import { browser } from '$app/environment';
 
 	const i18n = useI18n();
