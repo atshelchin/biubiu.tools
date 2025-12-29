@@ -140,6 +140,12 @@ declare module '@shelchin/i18n' {
 		'call-master.feature_1': string;
 		'call-master.feature_2': string;
 		'call-master.feature_3': string;
+		'call-master.seo.step_1_description': string;
+		'call-master.seo.step_1_name': string;
+		'call-master.seo.step_2_description': string;
+		'call-master.seo.step_2_name': string;
+		'call-master.seo.step_3_description': string;
+		'call-master.seo.step_3_name': string;
 		'call-master.title': string;
 		'chain-tools.categories.ai_crypto': string;
 		'chain-tools.categories.airdrop_token': string;
