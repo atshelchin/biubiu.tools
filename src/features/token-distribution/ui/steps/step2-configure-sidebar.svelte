@@ -1,25 +1,27 @@
 <script lang="ts">
+	/**
+	 * Token Distribution Step 2: Dependency Check Sidebar
+	 * Uses shared DependencyCheckSidebar component with wallet status
+	 */
+	import { DependencyCheckSidebar } from '$lib/components/step/dependency-check';
+	import { step2State } from '@/features/token-distribution/stores/step2-state.svelte';
 	import WalletConnectionStatus from '@/lib/components/ui/wallet-connection-status.svelte';
-	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 
 	const stepManager = useStepManager();
+
+	// Use $derived to get reactive value from step2State
+	const summary = $derived(step2State.summary);
 
 	function goBackToStep1() {
 		stepManager.goTo(1);
 	}
 </script>
 
-<StepSidebar
-	stepNumber={2}
-	title="Check Source Wallet"
-	description="Verify your wallet balance and connection"
->
-	<WalletConnectionStatus
-		showChangeButton={true}
-		onChangeWallet={goBackToStep1}
-		class="wallet-status-section"
-	/>
+<DependencyCheckSidebar {summary}>
+	<div class="wallet-section">
+		<WalletConnectionStatus showChangeButton={true} onChangeWallet={goBackToStep1} />
+	</div>
 
 	<div class="info-box">
 		<p class="info-text">
@@ -27,10 +29,10 @@
 			for transaction fees.
 		</p>
 	</div>
-</StepSidebar>
+</DependencyCheckSidebar>
 
 <style>
-	:global(.wallet-status-section) {
+	.wallet-section {
 		margin: var(--space-4) 0;
 	}
 
