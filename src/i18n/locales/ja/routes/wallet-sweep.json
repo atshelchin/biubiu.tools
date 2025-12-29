@@ -1,0 +1,470 @@
+{
+	"_meta": {
+		"code": "ja",
+		"name": "日本語",
+		"englishName": "Japanese",
+		"direction": "ltr",
+		"flag": "🇯🇵"
+	},
+	"title": "ウォレット集約",
+	"description": "複数のウォレットの残高を1つのアドレスに転送",
+	"feature_1": "完全な残高転送、残高ゼロに",
+	"feature_2": "大規模自動化、トランザクションごとの確認不要",
+	"feature_3": "ソースウォレットにネイティブトークン不要",
+	"feature_4": "任意のEVMチェーンでパーミッションレス",
+	"faqs": {
+		"what_is_network": "ブロックチェーンネットワークとは？",
+		"network_explanation": "ブロックチェーンネットワークは、誰がどのトークンを所有しているか、すべての転送を記録する公開台帳システムです。Ethereum、BSC、Polygonは異なる台帳で、それぞれ独立して分離されています。",
+		"what_is_wallet": "ウォレットとは？",
+		"wallet_explanation": "Web3ウォレットはお金を保管する場所ではなく、ブロックチェーンアカウントを管理する鍵です。資金はブロックチェーン台帳に記録され、ウォレットはあなたがアカウントの所有者であることを証明します。人気：MetaMask、Coinbase Smart Wallet。",
+		"what_is_native_token": "ネイティブトークンとは？",
+		"native_token_explanation": "ネイティブトークンは、トランザクションを処理するマイナーへの支払いに使用されます。EthereumはETH、BSCはBNB、PolygonはPOLを使用します。マイナーがトランザクションをブロックチェーン台帳に記録し、あなたがこの手数料を支払います。",
+		"what_is_eip7702": "EIP-7702とは？",
+		"eip7702_explanation": "トランザクション中に通常のウォレットを一時的にスマートコントラクトウォレットにアップグレードする技術。追加のデプロイは不要。",
+		"why_need_eip7702": "なぜEIP-7702が必要？",
+		"why_need_eip7702_explanation": "ガスのないウォレットがトークンを送信できるようにします。メインウォレットが代わりにガスを支払い、ワンクリック集約を可能にします。",
+		"what_is_create2_proxy": "CREATE2 Proxyとは？",
+		"create2_proxy_explanation": "すべてのチェーンで同じコントラクトアドレスを保証するデプロイツール。同じコード = どこでも同じアドレス。",
+		"what_is_multicall3": "Multicall3とは？",
+		"multicall3_explanation": "複数の呼び出しを1つにまとめます。ガスと時間を節約。オール・オア・ナッシングの実行。",
+		"what_is_biubiu_premium": "BiuBiuPremiumとは？",
+		"biubiu_premium_explanation": "サブスクリプション、割引、アクセスを管理するメンバーシップコントラクト。完全にオープンソース。",
+		"what_is_wallet_sweep": "TokenSweepとは？",
+		"wallet_sweep_explanation": "バッチ転送のコアコントラクト。EIP-7702委任と承認を処理。オープンソース：https://github.com/atshelchin/biubiu-contracts",
+		"can_select_multiple_tokens": "複数のトークンを一度に選択できますか？",
+		"can_select_multiple_tokens_explanation": "はい！任意の数のトークンを選択できます。ツールは選択したすべてのトークンを1回のバッチ操作で集約し、非常に効率的です。",
+		"what_happens_zero_balance": "ウォレットのトークン残高がゼロの場合はどうなりますか？",
+		"what_happens_zero_balance_explanation": "スマート！システムはその特定のトークンの残高がゼロのウォレットを自動的にスキップします。不要な転送を実行しないことでガスコストを節約します。",
+		"what_tokens_supported": "どのタイプのトークンがサポートされていますか？",
+		"what_tokens_supported_explanation": "ネイティブトークン（EthereumのETH、BSCのBNB、PolygonのMATICなど）とすべてのERC-20標準トークンをサポートしています。遭遇するほとんどのトークンが動作します。",
+		"how_add_custom_token": "カスタムトークンを追加するには？",
+		"how_add_custom_token_explanation": "「+ トークンを追加」ボタンをクリックし、トークンのコントラクトアドレスを入力します。システムがブロックチェーンからトークンの名前、シンボル、小数点を自動的に取得します。"
+	},
+	"seo": {
+		"page_title": "ウォレット集約 - 複数ウォレットからトークンを統合 | BiuBiu Tools",
+		"page_description": "複数のウォレットからトークンを1つの宛先に統合。Ethereum、Polygon、BSC、Arbitrum、Optimism、Baseネットワークをサポート。高速、安全、ガス最適化。",
+		"keywords": "ウォレット集約, トークン統合, ERC20転送, バッチ転送, 暗号ツール, Web3ツール, Ethereumツール, Polygonツール, DeFiツール",
+		"webapp_name": "ウォレット集約",
+		"webapp_description": "複数のウォレットからトークンを1つの宛先に統合。Ethereum、Polygon、BSC、Arbitrum、Optimism、Baseネットワークをサポート。",
+		"feature_1": "ERC20トークンのバッチ転送",
+		"feature_2": "マルチネットワークサポート（Ethereum、Polygon、BSC、Arbitrum、Optimism、Base）",
+		"feature_3": "ガス最適化",
+		"feature_4": "安全なウォレット統合",
+		"feature_5": "リアルタイムトランザクション追跡",
+		"howto_name": "ウォレット集約で複数ウォレットからトークンを統合する方法",
+		"howto_description": "BiuBiuウォレット集約ツールを使用して複数のウォレットからトークンを1つの宛先に統合するためのステップバイステップガイド。",
+		"howto_tool_1": "Web3ウォレット（MetaMask、WalletConnectなど）",
+		"howto_tool_2": "転送するERC20トークン",
+		"step_1_name": "ウォレットを接続",
+		"step_1_text": "「ウォレット接続」ボタンをクリックし、お好みのWeb3ウォレットプロバイダー（MetaMask、WalletConnect、Coinbase Walletなど）を選択します。ウォレットで接続リクエストを承認します。",
+		"step_1_description": "Web3ウォレットをリンク",
+		"step_2_name": "依存関係をチェック",
+		"step_2_text": "ブロックチェーンネットワーク接続を確認し、必要なすべてのスマートコントラクトにアクセスできることを確認します。システムは必要なコンポーネントを自動的に検出して検証します。",
+		"step_2_description": "ネットワークとコントラクトを確認",
+		"step_3_name": "トークンを選択",
+		"step_3_text": "利用可能なリストから集約したいERC20トークンを選択します。単一のバッチ操作で複数のトークンを選択して転送できます。",
+		"step_3_description": "集約するトークンを選択",
+		"step_4_name": "ウォレットをインポート",
+		"step_4_text": "集約したいトークンを含むソースウォレットアドレスをインポートします。複数のウォレットアドレスを追加して、すべてからトークンを収集できます。",
+		"step_4_description": "ソースアドレスを追加",
+		"step_5_name": "集約を確認",
+		"step_5_text": "トークン合計、ガス料金、宛先アドレスを含むトランザクション概要を確認します。「転送を実行」をクリックし、ウォレットでトランザクションを確認します。ブロックチェーンの確認を待ち、トランザクションレシートを表示します。",
+		"step_5_description": "確認して実行"
+	},
+	"step1": {
+		"footer": {
+			"continue": "続行",
+			"hint": "続行するにはウォレットを接続してください"
+		},
+		"content": {
+			"title": "ネットワークを選択",
+			"description": "ウォレットを接続して集約を開始",
+			"loading": "ネットワーク設定を読み込み中...",
+			"no_networks_enabled": "有効なネットワークがありません",
+			"enable_network_prompt": "続行するには少なくとも1つのネットワークを有効にしてください。",
+			"open_network_settings": "ネットワーク設定を開く",
+			"network_not_found": "ネットワークが見つかりませんか？",
+			"add_custom_network": "カスタムネットワークを追加"
+		},
+		"sidebar": {
+			"title": "ネットワークを選択してウォレットを接続",
+			"description": "ブロックチェーンネットワークを選択し、ウォレットを接続してトークンの集約を開始します。",
+			"what_is_this": "このステップは何ですか？",
+			"what_explanation": "必要なこと：",
+			"what_item1": "ブロックチェーンネットワークを選択（Ethereum、BSC、Polygonなど）",
+			"what_item2": "Web3ウォレットを接続（MetaMaskなど）",
+			"why_do_this": "なぜこれをするのですか？",
+			"why_explanation": "どのネットワークを使用するか、どのウォレットの資産を操作するかをアプリに伝えます - 両方が必須です。",
+			"beginner_tips": "ヒント",
+			"tip1": "✅ 正しいネットワークを選択してください（トークンがある場所を選択）",
+			"tip2": "⛽ 手数料を支払うのに十分なネイティブトークンがあることを確認してください",
+			"tip3": "🌍 任意のEVM互換ネットワークをサポート - 任意のチェーンを追加可能",
+			"what_is_network": "ブロックチェーンネットワークとは？",
+			"network_explanation": "ブロックチェーンネットワークは、誰がどのトークンを所有しているか、すべての転送を記録する公開台帳システムです。Ethereum、BSC、Polygonは異なる台帳で、それぞれ独立して分離されています。",
+			"what_is_wallet": "ウォレットとは？",
+			"wallet_explanation": "Web3ウォレットはお金を保管する場所ではなく、ブロックチェーンアカウントを管理する鍵です。資金はブロックチェーン台帳に記録され、ウォレットはあなたがアカウントの所有者であることを証明します。人気：MetaMask、Coinbase Smart Wallet。",
+			"what_is_native_token": "ネイティブトークンとは？",
+			"native_token_explanation": "ネイティブトークンは、トランザクションを処理するマイナーへの支払いに使用されます。EthereumはETH、BSCはBNB、PolygonはPOLを使用します。マイナーがトランザクションをブロックチェーン台帳に記録し、あなたがこの手数料を支払います。"
+		}
+	},
+	"step2": {
+		"content": {
+			"title": "依存関係チェック",
+			"description": "必要なインフラが準備できていることを確認",
+			"checking_dependencies_for": "{network}ネットワーク環境を確認中...",
+			"wallet_not_connected_title": "ウォレット未接続",
+			"wallet_not_connected_message": "ステップ1に戻ってウォレットを接続してください",
+			"go_to_step1": "ステップ1へ",
+			"all_dependencies_satisfied": "すべての依存関係が満たされています",
+			"network_properly_configured": "ネットワークはトークン集約用に正しく設定されています",
+			"dependency_issues_found": "依存関係の問題が見つかりました",
+			"resolve_issues_before_continuing": "続行する前に上記の問題を解決してください",
+			"recheck_dependencies": "依存関係を再チェック",
+			"address_label": "アドレス：",
+			"endpoint_label": "エンドポイント：",
+			"resolve_previous_issue": "まず前の問題を解決してください",
+			"view_deployment_guide": "デプロイガイドを見る",
+			"deploy_coming_soon": "コントラクトをデプロイ（近日公開）",
+			"deploy_contract": "{contractName}をデプロイ",
+			"deployment": {
+				"modal_title": "{contractName}をデプロイ",
+				"start_deployment": "デプロイを開始",
+				"deploying_contract": "コントラクトをデプロイ中...",
+				"deployment_steps_heading": "デプロイステップ：",
+				"contract_address_label": "コントラクトアドレス：",
+				"network_label": "ネットワーク：",
+				"waiting_for_signature": "⏳ ウォレットでトランザクションを確認してください...",
+				"transaction_sent": "⚡ トランザクション送信完了！ブロックチェーン確認待ち...",
+				"finalizing": "✅ デプロイを完了中...",
+				"confirm_in_wallet": "ウォレットでトランザクションを確認してください",
+				"success_title": "デプロイ成功！",
+				"success_description": "コントラクトは正常にデプロイされました。",
+				"view_on_explorer": "エクスプローラーで表示",
+				"error_title": "デプロイ失敗",
+				"errors": {
+					"init_failed": "デプロイ設定の初期化に失敗しました",
+					"wallet_not_connected": "まずウォレットを接続してください",
+					"deployment_failed": "コントラクトのデプロイに失敗しました",
+					"metamask_cache": "MetaMaskが古いブロックデータをキャッシュしました。テストネットワークがリセットされたときに発生します。",
+					"wallet_cache": "ウォレットキャッシュエラー。ウォレットを再起動してもう一度試してください。",
+					"metamask_internal": "MetaMask内部エラー。以下を試してください：\n\n1. MetaMaskでアクティビティタブデータをクリア\n   （設定 → 詳細 → アクティビティタブデータをクリア）\n\n2. ネットワークRPCエンドポイントを更新\n\n3. MetaMaskを再起動\n\n4. Multicall3をデプロイする場合、CREATE2 Proxyが先にデプロイされていることを確認",
+					"wallet_internal": "ウォレット内部エラー。以下を試してください：\n\n1. ネットワークRPCエンドポイントを更新\n\n2. ウォレットを再起動\n\n3. Multicall3をデプロイする場合、CREATE2 Proxyが先にデプロイされていることを確認",
+					"connection_failed": "接続失敗。確認してください：\n\n1. ウォレットがロック解除されている\n\n2. ネットワーク接続が安定している\n\n問題が続く場合は、ネットワークRPCエンドポイントを更新してみてください。",
+					"rpc_unavailable": "RPCサービスが一時的に利用できません。ウォレットに設定されたRPCエンドポイントにレート制限があるか、ダウンしている可能性があります。",
+					"insufficient_funds": "残高不足。デプロイとガス料金のための十分な資金が必要です。",
+					"user_rejected": "トランザクションがウォレットで拒否されました。",
+					"already_deployed": "このコントラクトはすでにデプロイされている可能性があります。依存関係チェックを更新してください。"
+				},
+				"steps": {
+					"create2": {
+						"fund_deployer_title": "デプロイヤーアドレスに資金を送金",
+						"fund_deployer_description": "{address}に0.01 ETHを送金",
+						"deploy_contract_title": "コントラクトをデプロイ",
+						"deploy_contract_description": "事前署名済みデプロイトランザクションを送信"
+					},
+					"via_create2": {
+						"deploy_title": "{contractName}コントラクトをデプロイ",
+						"deploy_description": "Deterministic Deployment Proxyにデプロイトランザクションを送信"
+					}
+				}
+			},
+			"checks": {
+				"rpc_endpoint": {
+					"name": "RPCエンドポイント",
+					"description": "現在のRPCエンドポイントが利用可能か確認",
+					"chain_id_mismatch": "チェーンIDが一致しません：期待 {expected}、取得 {actual}",
+					"connected_to_block": "ブロック#{blockNumber}に接続済み",
+					"failed_to_connect": "接続失敗：{error}",
+					"no_rpc_configured": "このネットワークにRPCエンドポイントが設定されていません",
+					"configure_rpc_button": "RPCを設定"
+				},
+				"eip7702": {
+					"name": "EIP-7702",
+					"description": "ネットワークがEIP-7702プロトコルをサポートしているか確認",
+					"supported": "ネットワークはEIP-7702をサポート（eth_estimateGasでテスト済み）",
+					"not_supported": "ネットワークはEIP-7702をサポートしていません（無効なオペコード）",
+					"rpc_not_capable": "現在のRPCはこのチェックに必要な状態オーバーライドをサポートしていません。別のRPCエンドポイントを試してください。",
+					"check_failed": "EIP-7702サポートの確認に失敗：{error}"
+				},
+				"contract": {
+					"deployed": "コントラクトはデプロイ済み",
+					"not_deployed": "このアドレスにコントラクトがデプロイされていません",
+					"check_failed": "デプロイの確認に失敗：{error}",
+					"create2_proxy_description": "コントラクト作成のための決定論的デプロイプロキシ",
+					"multicall3_description": "複数のコントラクト呼び出しを1つのリクエストに集約",
+					"biubiu_premium_description": "プラットフォームでユーザーのプレミアムメンバーシップステータスを確認",
+					"wallet_sweep_description": "複数のウォレットに分散したトークンをバッチ収集",
+					"biubiu_membership_description": "Biubiuプラットフォームメンバーシップコントラクト",
+					"wallet_sweep_contract_description": "バッチトークン転送操作のメインコントラクト"
+				},
+				"category": {
+					"network": "ネットワーク",
+					"protocol": "プロトコル",
+					"contract": "コントラクト"
+				}
+			}
+		},
+		"footer": {
+			"checking_dependencies": "依存関係を確認中...",
+			"resolve_issues": "続行するにはすべての依存関係の問題を解決してください",
+			"waiting_for_checks": "依存関係チェックを待機中..."
+		},
+		"sidebar": {
+			"beginner_tips": "ヒント",
+			"tip1": "🔍 システムは必要なコントラクトがデプロイされているか自動的にチェックします",
+			"tip2": "🚀 コントラクトが不足している場合、このページから直接デプロイできます",
+			"tip3": "📋 依存関係の問題は順番に解決する必要があります - 最初に失敗したチェックを修正してから次へ"
+		}
+	},
+	"step3": {
+		"content": {
+			"title": "トークンを選択",
+			"description": "{network}ネットワークで集約するトークンを選択",
+			"description_fallback": "このネットワークで集約するトークンを選択",
+			"wallet_not_connected_title": "ウォレット未接続",
+			"wallet_not_connected_message": "ステップ1に戻ってウォレットを接続してください",
+			"empty_message": "利用可能なトークンがありません。カスタムトークンを追加して開始してください。"
+		},
+		"footer": {
+			"hint": "続行するには少なくとも1つのトークンを選択してください"
+		},
+		"sidebar": {
+			"title": "トークンを選択",
+			"description": "集約するトークンを選択",
+			"selected_tokens_title": "選択済みトークン",
+			"count_label": "数量：",
+			"empty_hint": "トークンが選択されていません",
+			"beginner_tips": "ヒント",
+			"tip1": "✅ 複数のトークンを選択して、1回のバッチ操作ですべて集約できます",
+			"tip2": "⚡ トークンの残高がゼロのウォレットは自動的にスキップされます - ガスコストを節約",
+			"tip3": "🪙 ネイティブトークン（ETH、BNBなど）とERC-20トークンの両方をサポート"
+		}
+	},
+	"step5": {
+		"target_address_label": "宛先アドレス",
+		"target_address_hint": "トークンは接続されたウォレットアドレスに集約されます",
+		"content": {
+			"title": "集約を確認",
+			"description": "設定を確認してアセット集約を実行",
+			"selected_network_tokens": "選択したネットワークとトークン ({count})",
+			"ready_to_execute": "実行準備完了",
+			"review_carefully": "続行する前にすべての情報を慎重に確認してください。",
+			"progress": {
+				"preparing": "⏳ 準備中...",
+				"building": "🔧 トランザクションを構築中...",
+				"executing": "⚡ 集約を実行中...",
+				"confirming": "⏰ トランザクションを確認中...",
+				"completed": "✅ 完了！",
+				"error": "❌ エラー",
+				"batch": "バッチ {current} / {total}",
+				"wallet": "ウォレット {current} / {total}",
+				"results": "結果 ({count})："
+			},
+			"estimate": {
+				"title": "📊 コスト見積もり",
+				"total_transactions": "トランザクション合計：",
+				"estimated_gas": "推定ガス：",
+				"estimated_cost": "推定コスト：",
+				"gas_units": "{amount} ユニット",
+				"cost_eth": "{amount} ETH"
+			},
+			"actions": {
+				"estimate_cost": "💰 コストを見積もる",
+				"estimating": "見積もり中...",
+				"execute_sweep": "⚡ 集約を実行",
+				"executing": "実行中..."
+			},
+			"errors": {
+				"no_network": "ネットワークが接続されていません",
+				"no_rpc": "利用可能なRPCエンドポイントがありません",
+				"complete_fields": "すべての必須フィールドを完了してください",
+				"invalid_address": "無効な宛先アドレス",
+				"select_tokens": "ステップ3で少なくとも1つのトークンを選択してください",
+				"import_wallets": "ステップ4で少なくとも1つのウォレットをインポートしてください",
+				"connect_wallet": "まずウォレットを接続してください",
+				"no_balance": "集約する残高のあるウォレットがありません。まずステップ4で残高をスキャンしてください。",
+				"insufficient_gas": "一時ウォレットのガスが不足！{required} {symbol}が必要ですが、{current} {symbol}しかありません。チャージして下のボタンをクリックして続行してください。",
+				"still_insufficient_gas": "一時ウォレットのガスがまだ不足しています。引き続きチャージしてください。"
+			},
+			"gas_insufficient_title": "⛽ ガス不足",
+			"gas_insufficient_message": "一時ウォレットの残高が推定ガス料金をカバーするのに不足しています。{required} {symbol}が必要ですが、{current} {symbol}しかありません。上の[ガスでウォレットに資金を送金]機能を使用して一時ウォレットに資金を転送し、下のボタンをクリックして続行してください。",
+			"check_and_resume": "残高を確認して再開",
+			"gas_refilled_restart": "ガスがチャージされました！現在の残高：{balance} ETH。[集約を実行]ボタンをもう一度クリックして開始してください。"
+		},
+		"sidebar": {
+			"summary_title": "サマリー",
+			"selected_tokens": "選択したトークン：",
+			"total_wallets": "ウォレット合計：",
+			"with_balance": "残高あり：",
+			"batches": "バッチ"
+		}
+	},
+	"temporary_wallet": {
+		"title": "一時ウォレット",
+		"description": "バッチトランザクションを自動化するためのランダムな一時ウォレットを作成します。ウォレットはブラウザセッションにのみ保存されます。",
+		"important": "重要",
+		"warning_text": "一時ウォレットがブラウザに作成されます。必要なこと：",
+		"step_download": "バックアップ用に秘密鍵をダウンロード",
+		"step_fund": "ガス料金用に<strong>{amount} {symbol}</strong>をチャージ",
+		"step_clear": "タスク完了後にクリア",
+		"btn_create": "一時ウォレットを作成",
+		"creating": "作成中...",
+		"wallet_ready": "ウォレット準備完了",
+		"created_at": "作成日時：{time}",
+		"address": "アドレス",
+		"balance": "残高（現在のネットワーク）",
+		"loading": "読み込み中...",
+		"private_key": "秘密鍵",
+		"show": "表示",
+		"hide": "非表示",
+		"copy_address": "アドレスをコピー",
+		"copy_private_key": "秘密鍵をコピー",
+		"show_qr": "QRコードを表示",
+		"refresh_balance": "残高を更新",
+		"qr_hint": "この一時ウォレットにガスを送信するためにスキャン",
+		"fund_title": "ガスでウォレットに資金を送金",
+		"estimated_gas": "推定必要ガス：{amount} {symbol}",
+		"suggested_amount": "💰 推奨金額：<strong>{amount} {symbol}</strong>（推定の2倍）",
+		"amount_placeholder": "送金金額",
+		"btn_send": "接続されたウォレットから送金",
+		"sending": "送信中...",
+		"tip": "💡 ヒント：推奨金額（推定の2倍）は十分な資金を確保するために自動入力されています。QRコードをスキャンして任意のウォレットから送金することもできます。",
+		"btn_download": "秘密鍵をダウンロード",
+		"btn_clear": "ウォレットをクリア",
+		"error_no_wallet": "まずウォレットを接続してください",
+		"error_invalid_amount": "有効な金額を入力してください",
+		"success_transfer": "✅ 転送成功！{amount} {symbol}を一時ウォレットに送金しました。TX：{tx}...",
+		"confirm_clear": "一時ウォレットをクリアしてもよろしいですか？必要に応じて秘密鍵をダウンロードしたことを確認してください。"
+	},
+	"step4": {
+		"import_method": {
+			"mnemonic": {
+				"label": "ニーモニックフレーズ",
+				"desc": "バッチでアドレスを派生"
+			},
+			"private_key": {
+				"label": "秘密鍵",
+				"desc": "1つずつインポート"
+			}
+		},
+		"content": {
+			"title": "ウォレットをインポート",
+			"description": "アセットを集約したいソースウォレットを追加",
+			"choose_method": "インポート方法を選択",
+			"import_wallets_button": "ウォレットをインポート",
+			"mnemonic": {
+				"label": "ニーモニックフレーズを入力",
+				"placeholder": "スペースで区切られた12語または24語を入力",
+				"security_hint": "🔒 ニーモニックはブラウザでローカル処理され、サーバーに送信されることはありません",
+				"derivation_path": "派生パス設定",
+				"generate_button": "🔍 アドレスリストを生成",
+				"generating": "生成中... ({progress}%)",
+				"error_empty": "ニーモニックフレーズを入力してください",
+				"error_invalid": "無効なニーモニックフレーズ。12語または24語を入力してください。",
+				"error_range": "無効なアドレス範囲",
+				"error_max": "範囲が大きすぎます（一度に最大10000アドレス）"
+			},
+			"private_key": {
+				"label": "秘密鍵のバッチインポート",
+				"placeholder": "1行に1つの秘密鍵（0xで始まる）",
+				"upload_file": "ファイルをアップロード",
+				"column_label": "秘密鍵",
+				"address_label": "アドレス",
+				"import_button": "➕ ウォレットをバッチ追加",
+				"importing": "インポート中... ({progress}%)",
+				"error_empty": "秘密鍵を入力してください",
+				"error_none": "有効な秘密鍵が見つかりません",
+				"success_with_invalid": "{valid}個のウォレットをインポートしました。{invalid}個の無効なキーをスキップしました。",
+				"invalid_keys_found": "{count}個の無効な秘密鍵が見つかりました",
+				"locate": "場所を特定",
+				"locate_key": "クリックしてエディタでエラーを特定",
+				"error_key_not_found": "エラー：秘密鍵が変更または削除されました",
+				"manual_search": "{line}行目を手動で検索してください",
+				"security_hint": "🔒 秘密鍵はブラウザでローカル処理され、サーバーに送信されることはありません"
+			},
+			"wallet_list": {
+				"title": "インポートされたウォレット",
+				"count": "({count})",
+				"with_balance": "{count}個が残高あり",
+				"scan_button": "残高をスキャン",
+				"scanning": "スキャン中... {progress}%",
+				"scan_completed": "スキャン完了",
+				"scan_hint": "次のステップに進む前に残高のスキャンが必要です",
+				"clear_all": "すべてクリア",
+				"empty_message": "まだウォレットがインポートされていません。上記の方法でウォレットをインポートしてください。"
+			},
+			"scan_section": {
+				"title": "残高スキャン",
+				"required": "必須"
+			},
+			"errors": {
+				"no_network": "ネットワークが接続されていません",
+				"no_wallets": "スキャンするウォレットがありません",
+				"no_tokens": "まずステップ3でトークンを選択してください",
+				"no_rpc": "現在のネットワークで利用可能なRPCエンドポイントがありません",
+				"no_valid_tokens": "現在のネットワークで有効なトークンが選択されていません",
+				"no_balance": "選択したトークンの残高があるウォレットがありません",
+				"generate_failed": "アドレスの生成に失敗しました",
+				"import_failed": "秘密鍵のインポートに失敗しました",
+				"scan_failed": "残高のスキャンに失敗しました"
+			},
+			"rate_limit": {
+				"title": "すべてのRPCエンドポイントがレート制限されています",
+				"error_generic": "スキャン一時停止：{reason}",
+				"error_native": "ネイティブトークン残高のスキャン中にレート制限がトリガーされました（バッチ {batch}/{total}）",
+				"error_erc20": "トークン {token} 残高のスキャン中にレート制限がトリガーされました（バッチ {batch}/{total}）",
+				"hint": "💡 下のボタンをクリックして新しいRPCエンドポイントを追加するか、既存のRPCが回復するまで待ってから再試行してください。複数のRPCを追加すると、頻繁なレート制限を避けるために自動ローテーションが有効になります。",
+				"recommend_prefix": "推奨：利用可能なRPCエンドポイントはこちらで検索",
+				"recommend_suffix": "",
+				"manage_rpc_button": "RPCを管理",
+				"resume_button": "スキャンを再開"
+			},
+			"dialogs": {
+				"remove_wallet_title": "ウォレットを削除",
+				"remove_wallet_message": "このウォレットをインポートリストから削除してもよろしいですか？\n\nアドレス：{address}",
+				"remove_button": "削除",
+				"clear_all_title": "すべてのウォレットをクリア",
+				"clear_all_message": "{count}個のウォレットをすべてインポートリストから削除してもよろしいですか？この操作は元に戻せません。",
+				"clear_all_button": "すべてクリア",
+				"cancel_button": "キャンセル",
+				"long_press_hint": "⚠️ この操作は不可逆です。確認するにはボタンを3秒間長押ししてください"
+			},
+			"rpc_hint": {
+				"title": "信頼性を向上させるためにRPCを追加",
+				"message": "RPCエンドポイントが1つだけ設定されています。複数のRPCを追加すると、レート制限が発生したときに自動ローテーションが有効になり、スキャンの信頼性が向上します。",
+				"add_rpc_button": "RPCを追加"
+			}
+		},
+		"footer": {
+			"continue_text": "確認に進む",
+			"hint": "続行するには少なくとも1つのウォレットをインポートしてください",
+			"hint_scan_required": "続行する前に残高をスキャンしてください"
+		},
+		"sidebar": {
+			"title": "インポートされたウォレット",
+			"total_label": "合計：",
+			"with_balance_label": "残高あり：",
+			"scanning_label": "スキャン中：",
+			"scan_status_label": "スキャンステータス：",
+			"scan_completed": "完了",
+			"scan_pending": "保留中",
+			"no_balance_found": "スキャン後に残高が見つかりませんでした。選択したトークンのすべてのウォレットの残高がゼロです。",
+			"empty_hint": "ウォレットがインポートされていません",
+			"performance_tip": {
+				"title": "⚡ パフォーマンスのヒント",
+				"message": "大きな範囲はスキャン時間を増加させます",
+				"recommended": "推奨：",
+				"recommended_range": "1,000 - 10,000 アドレス"
+			},
+			"token_stats": {
+				"title": "トークン残高統計",
+				"wallets_count": "{count} ウォレット",
+				"total_balance": "総残高",
+				"download_title": "Excelレポートをダウンロード"
+			},
+			"scan_log": {
+				"title": "スキャンログ"
+			}
+		}
+	}
+}

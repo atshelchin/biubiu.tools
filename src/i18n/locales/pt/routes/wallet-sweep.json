@@ -1,0 +1,470 @@
+{
+	"_meta": {
+		"code": "pt",
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷"
+	},
+	"title": "Consolidação de Carteiras",
+	"description": "Transfira saldos de múltiplas carteiras para um único endereço",
+	"feature_1": "Transferência completa de saldo, sem resíduos",
+	"feature_2": "Automação em larga escala, sem confirmação por transação",
+	"feature_3": "Não requer token nativo nas carteiras de origem",
+	"feature_4": "Sem permissão em qualquer cadeia EVM",
+	"faqs": {
+		"what_is_network": "O que é uma rede blockchain?",
+		"network_explanation": "Uma rede blockchain é um sistema de livro-razão público que registra quem possui quais tokens e todas as transferências. Ethereum, BSC e Polygon são diferentes livros-razão, cada um independente e separado.",
+		"what_is_wallet": "O que é uma carteira?",
+		"wallet_explanation": "Uma carteira Web3 não é onde o dinheiro é armazenado - é a chave para gerenciar sua conta blockchain. Seus fundos são registrados no livro-razão blockchain, e a carteira prova que você é o proprietário da conta. Populares: MetaMask, Coinbase Smart Wallet.",
+		"what_is_native_token": "O que é um token nativo?",
+		"native_token_explanation": "Tokens nativos são usados para pagar mineradores que processam suas transações. Ethereum usa ETH, BSC usa BNB, Polygon usa POL. Mineradores registram sua transação no livro-razão blockchain, e você paga essa taxa a eles.",
+		"what_is_eip7702": "O que é EIP-7702?",
+		"eip7702_explanation": "Tecnologia que atualiza temporariamente carteiras regulares para carteiras de contrato inteligente durante uma transação. Não é necessário implantação adicional.",
+		"why_need_eip7702": "Por que é necessário EIP-7702?",
+		"why_need_eip7702_explanation": "Permite que carteiras sem gas enviem tokens. Sua carteira principal paga o gas por elas, permitindo consolidação com um clique.",
+		"what_is_create2_proxy": "O que é CREATE2 Proxy?",
+		"create2_proxy_explanation": "Ferramenta de implantação que garante o mesmo endereço de contrato em todas as cadeias. Mesmo código = mesmo endereço em todos os lugares.",
+		"what_is_multicall3": "O que é Multicall3?",
+		"multicall3_explanation": "Agrupa múltiplas chamadas em uma. Economiza gas e tempo. Execução tudo-ou-nada.",
+		"what_is_biubiu_premium": "O que é BiuBiuPremium?",
+		"biubiu_premium_explanation": "Contrato de associação que gerencia assinaturas, descontos e acesso. Totalmente de código aberto.",
+		"what_is_wallet_sweep": "O que é TokenSweep?",
+		"wallet_sweep_explanation": "Contrato principal para transferências em lote. Lida com delegação EIP-7702 e aprovações. Código aberto: https://github.com/atshelchin/biubiu-contracts",
+		"can_select_multiple_tokens": "Posso selecionar múltiplos tokens de uma vez?",
+		"can_select_multiple_tokens_explanation": "Sim! Você pode selecionar quantos tokens quiser. A ferramenta consolidará todos os tokens selecionados em uma operação em lote, tornando muito eficiente.",
+		"what_happens_zero_balance": "O que acontece se uma carteira tiver saldo zero para um token?",
+		"what_happens_zero_balance_explanation": "Inteligente! O sistema pula automaticamente carteiras com saldo zero para aquele token específico. Isso economiza custos de gas ao não executar transferências desnecessárias.",
+		"what_tokens_supported": "Quais tipos de tokens são suportados?",
+		"what_tokens_supported_explanation": "Suportamos tokens nativos (como ETH no Ethereum, BNB no BSC, MATIC no Polygon) e todos os tokens padrão ERC-20. A maioria dos tokens que você encontrar funcionará.",
+		"how_add_custom_token": "Como adiciono um token personalizado?",
+		"how_add_custom_token_explanation": "Clique no botão '+ Adicionar Token', depois insira o endereço do contrato do token. O sistema buscará automaticamente o nome, símbolo e decimais do token na blockchain."
+	},
+	"seo": {
+		"page_title": "Consolidação de Carteiras - Consolide Tokens de Múltiplas Carteiras | BiuBiu Tools",
+		"page_description": "Consolide tokens de múltiplas carteiras para um único destino. Suporte para redes Ethereum, Polygon, BSC, Arbitrum, Optimism e Base. Rápido, seguro e otimizado em gas.",
+		"keywords": "consolidação carteira, consolidação tokens, transferência ERC20, transferência lote, ferramentas crypto, ferramentas web3, ferramentas ethereum, ferramentas polygon, ferramentas DeFi",
+		"webapp_name": "Consolidação de Carteiras",
+		"webapp_description": "Consolide tokens de múltiplas carteiras para um único destino. Suporte para redes Ethereum, Polygon, BSC, Arbitrum, Optimism e Base.",
+		"feature_1": "Transferência em lote de tokens ERC20",
+		"feature_2": "Suporte multi-rede (Ethereum, Polygon, BSC, Arbitrum, Optimism, Base)",
+		"feature_3": "Otimização de gas",
+		"feature_4": "Integração segura de carteira",
+		"feature_5": "Rastreamento de transações em tempo real",
+		"howto_name": "Como Consolidar Tokens de Múltiplas Carteiras com Consolidação de Carteiras",
+		"howto_description": "Guia passo a passo para consolidar tokens de múltiplas carteiras para um único destino usando a ferramenta BiuBiu Wallet Sweep.",
+		"howto_tool_1": "Carteira Web3 (MetaMask, WalletConnect, etc.)",
+		"howto_tool_2": "Tokens ERC20 para transferir",
+		"step_1_name": "Conecte Sua Carteira",
+		"step_1_text": "Clique no botão \"Conectar Carteira\" e selecione seu provedor de carteira Web3 preferido (MetaMask, WalletConnect, Coinbase Wallet, etc.). Aprove a solicitação de conexão em sua carteira.",
+		"step_1_description": "Vincule sua carteira Web3",
+		"step_2_name": "Verifique Dependências",
+		"step_2_text": "Verifique a conexão com a rede blockchain e certifique-se de que todos os contratos inteligentes necessários estejam acessíveis. O sistema detectará e validará automaticamente os componentes necessários.",
+		"step_2_description": "Verificar rede e contratos",
+		"step_3_name": "Selecione Tokens",
+		"step_3_text": "Escolha quais tokens ERC20 você deseja consolidar da lista disponível. Você pode selecionar múltiplos tokens para transferir em uma única operação em lote.",
+		"step_3_description": "Escolha tokens para consolidar",
+		"step_4_name": "Importe Carteiras",
+		"step_4_text": "Importe os endereços de carteira de origem que contêm os tokens que você deseja consolidar. Você pode adicionar múltiplos endereços de carteira para coletar tokens de todos eles.",
+		"step_4_description": "Adicione endereços de origem",
+		"step_5_name": "Confirme Consolidação",
+		"step_5_text": "Revise o resumo da transação incluindo total de tokens, taxas de gas e endereço de destino. Clique em \"Executar Transferência\" e confirme a transação em sua carteira. Aguarde a confirmação blockchain e visualize o recibo da transação.",
+		"step_5_description": "Revise e execute"
+	},
+	"step1": {
+		"footer": {
+			"continue": "Continuar",
+			"hint": "Conecte sua carteira para continuar"
+		},
+		"content": {
+			"title": "Selecionar Rede",
+			"description": "Conecte a carteira para começar a consolidação",
+			"loading": "Carregando configuração de rede...",
+			"no_networks_enabled": "Nenhuma Rede Habilitada",
+			"enable_network_prompt": "Por favor habilite pelo menos uma rede para continuar.",
+			"open_network_settings": "Abrir Configurações de Rede",
+			"network_not_found": "Rede não encontrada?",
+			"add_custom_network": "Adicionar rede personalizada"
+		},
+		"sidebar": {
+			"title": "Selecionar Rede e Conectar Carteira",
+			"description": "Escolha uma rede blockchain e conecte sua carteira para começar a consolidar tokens.",
+			"what_is_this": "O que é este passo?",
+			"what_explanation": "Você precisa:",
+			"what_item1": "Selecionar uma rede blockchain (Ethereum, BSC, Polygon, etc.)",
+			"what_item2": "Conectar sua carteira Web3 (MetaMask, etc.)",
+			"why_do_this": "Por que fazer isso?",
+			"why_explanation": "Informe ao app qual rede usar e quais ativos da carteira operar - ambos são essenciais.",
+			"beginner_tips": "Dicas",
+			"tip1": "✅ Certifique-se de selecionar a rede correta (escolha onde seus tokens estão)",
+			"tip2": "⛽ Certifique-se de ter tokens nativos suficientes para pagar taxas",
+			"tip3": "🌍 Suporta qualquer rede compatível com EVM - você pode adicionar qualquer cadeia",
+			"what_is_network": "O que é uma rede blockchain?",
+			"network_explanation": "Uma rede blockchain é um sistema de livro-razão público que registra quem possui quais tokens e todas as transferências. Ethereum, BSC e Polygon são diferentes livros-razão, cada um independente e separado.",
+			"what_is_wallet": "O que é uma carteira?",
+			"wallet_explanation": "Uma carteira Web3 não é onde o dinheiro é armazenado - é a chave para gerenciar sua conta blockchain. Seus fundos são registrados no livro-razão blockchain, e a carteira prova que você é o proprietário da conta. Populares: MetaMask, Coinbase Smart Wallet.",
+			"what_is_native_token": "O que é um token nativo?",
+			"native_token_explanation": "Tokens nativos são usados para pagar mineradores que processam suas transações. Ethereum usa ETH, BSC usa BNB, Polygon usa POL. Mineradores registram sua transação no livro-razão blockchain, e você paga essa taxa a eles."
+		}
+	},
+	"step2": {
+		"content": {
+			"title": "Verificação de Dependências",
+			"description": "Garantir que a infraestrutura necessária esteja pronta",
+			"checking_dependencies_for": "Verificando ambiente de rede {network}...",
+			"wallet_not_connected_title": "Carteira Não Conectada",
+			"wallet_not_connected_message": "Por favor volte ao Passo 1 e conecte sua carteira",
+			"go_to_step1": "Ir para o Passo 1",
+			"all_dependencies_satisfied": "Todas as Dependências Satisfeitas",
+			"network_properly_configured": "Sua rede está corretamente configurada para consolidação de tokens",
+			"dependency_issues_found": "Problemas de Dependências Encontrados",
+			"resolve_issues_before_continuing": "Por favor resolva os problemas acima antes de continuar",
+			"recheck_dependencies": "Re-verificar Dependências",
+			"address_label": "Endereço:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Por favor resolva o problema anterior primeiro",
+			"view_deployment_guide": "Ver Guia de Implantação",
+			"deploy_coming_soon": "Implantar Contrato (Em Breve)",
+			"deploy_contract": "Implantar {contractName}",
+			"deployment": {
+				"modal_title": "Implantar {contractName}",
+				"start_deployment": "Iniciar Implantação",
+				"deploying_contract": "Implantando Contrato...",
+				"deployment_steps_heading": "Passos de Implantação:",
+				"contract_address_label": "Endereço do Contrato:",
+				"network_label": "Rede:",
+				"waiting_for_signature": "⏳ Por favor confirme a transação em sua carteira...",
+				"transaction_sent": "⚡ Transação enviada! Aguardando confirmação blockchain...",
+				"finalizing": "✅ Finalizando implantação...",
+				"confirm_in_wallet": "Por favor confirme as transações em sua carteira",
+				"success_title": "Implantação Bem-sucedida!",
+				"success_description": "O contrato foi implantado com sucesso.",
+				"view_on_explorer": "Ver no Explorador",
+				"error_title": "Implantação Falhou",
+				"errors": {
+					"init_failed": "Falha ao inicializar configuração de implantação",
+					"wallet_not_connected": "Por favor conecte sua carteira primeiro",
+					"deployment_failed": "Falha ao implantar contrato",
+					"metamask_cache": "MetaMask armazenou dados de blocos antigos. Isso acontece quando sua rede de teste foi reiniciada.",
+					"wallet_cache": "Erro de cache da carteira. Por favor reinicie sua carteira e tente novamente.",
+					"metamask_internal": "Erro interno do MetaMask. Por favor tente:\n\n1. Limpar Dados da Aba de Atividade no MetaMask\n   (Configurações → Avançado → Limpar dados da aba de atividade)\n\n2. Atualizar endpoint RPC da rede\n\n3. Reiniciar MetaMask\n\n4. Se implantando Multicall3, certifique-se de que CREATE2 Proxy está implantado primeiro",
+					"wallet_internal": "Erro interno da carteira. Por favor tente:\n\n1. Atualizar endpoint RPC da rede\n\n2. Reiniciar sua carteira\n\n3. Se implantando Multicall3, certifique-se de que CREATE2 Proxy está implantado primeiro",
+					"connection_failed": "Falha na conexão. Por favor verifique:\n\n1. Sua carteira está desbloqueada\n\n2. Sua conexão de rede está estável\n\nSe o problema persistir, tente atualizar o endpoint RPC da rede.",
+					"rpc_unavailable": "Serviço RPC temporariamente indisponível. Isso provavelmente ocorre porque o endpoint RPC configurado em sua carteira tem limites de taxa ou está fora do ar.",
+					"insufficient_funds": "Saldo insuficiente. Você precisa de fundos suficientes para implantação e taxas de gas.",
+					"user_rejected": "A transação foi rejeitada em sua carteira.",
+					"already_deployed": "Este contrato pode já estar implantado. Por favor atualize a verificação de dependências."
+				},
+				"steps": {
+					"create2": {
+						"fund_deployer_title": "Financiar Endereço do Implantador",
+						"fund_deployer_description": "Enviar 0.01 ETH para {address}",
+						"deploy_contract_title": "Implantar Contrato",
+						"deploy_contract_description": "Enviar transação de implantação pré-assinada"
+					},
+					"via_create2": {
+						"deploy_title": "Implantar Contrato {contractName}",
+						"deploy_description": "Enviar transação de implantação para o Proxy de Implantação Determinística"
+					}
+				}
+			},
+			"checks": {
+				"rpc_endpoint": {
+					"name": "Endpoint RPC",
+					"description": "Verificar se o endpoint RPC atual está disponível",
+					"chain_id_mismatch": "ID da cadeia não corresponde: esperado {expected}, obtido {actual}",
+					"connected_to_block": "Conectado ao bloco #{blockNumber}",
+					"failed_to_connect": "Falha ao conectar: {error}",
+					"no_rpc_configured": "Nenhum endpoint RPC configurado para esta rede",
+					"configure_rpc_button": "Configurar RPC"
+				},
+				"eip7702": {
+					"name": "EIP-7702",
+					"description": "Verificar se a rede suporta o protocolo EIP-7702",
+					"supported": "A rede suporta EIP-7702 (testado via eth_estimateGas)",
+					"not_supported": "A rede não suporta EIP-7702 (código de operação inválido)",
+					"rpc_not_capable": "RPC atual não suporta substituição de estado para esta verificação. Tente um endpoint RPC diferente.",
+					"check_failed": "Falha ao verificar suporte EIP-7702: {error}"
+				},
+				"contract": {
+					"deployed": "Contrato está implantado",
+					"not_deployed": "Contrato não implantado neste endereço",
+					"check_failed": "Falha ao verificar implantação: {error}",
+					"create2_proxy_description": "Proxy de implantação determinística para criação de contratos",
+					"multicall3_description": "Agrega múltiplas chamadas de contrato em uma única solicitação",
+					"biubiu_premium_description": "Verifica o status de associação premium do usuário na plataforma",
+					"wallet_sweep_description": "Coleta em lote de tokens dispersos em múltiplas carteiras",
+					"biubiu_membership_description": "Contrato de associação da plataforma Biubiu",
+					"wallet_sweep_contract_description": "Contrato principal para operações de transferência de tokens em lote"
+				},
+				"category": {
+					"network": "Rede",
+					"protocol": "Protocolo",
+					"contract": "Contrato"
+				}
+			}
+		},
+		"footer": {
+			"checking_dependencies": "Verificando dependências...",
+			"resolve_issues": "Por favor resolva todos os problemas de dependências para continuar",
+			"waiting_for_checks": "Aguardando verificação de dependências..."
+		},
+		"sidebar": {
+			"beginner_tips": "Dicas",
+			"tip1": "🔍 O sistema verifica automaticamente se os contratos necessários estão implantados",
+			"tip2": "🚀 Se um contrato estiver faltando, você pode implantá-lo diretamente desta página",
+			"tip3": "📋 Deve resolver problemas de dependências em ordem - corrija a primeira verificação falha antes das outras"
+		}
+	},
+	"step3": {
+		"content": {
+			"title": "Selecionar Tokens",
+			"description": "Selecione tokens para consolidar na rede {network}",
+			"description_fallback": "Selecione tokens para consolidar nesta rede",
+			"wallet_not_connected_title": "Carteira Não Conectada",
+			"wallet_not_connected_message": "Por favor volte ao Passo 1 e conecte sua carteira",
+			"empty_message": "Nenhum token disponível. Adicione um token personalizado para começar."
+		},
+		"footer": {
+			"hint": "Por favor selecione pelo menos um token para continuar"
+		},
+		"sidebar": {
+			"title": "Selecionar Tokens",
+			"description": "Escolha quais tokens consolidar",
+			"selected_tokens_title": "Tokens Selecionados",
+			"count_label": "Quantidade:",
+			"empty_hint": "Nenhum token selecionado",
+			"beginner_tips": "Dicas",
+			"tip1": "✅ Você pode selecionar múltiplos tokens para consolidá-los todos em uma operação em lote",
+			"tip2": "⚡ Carteiras com saldo zero para um token serão automaticamente ignoradas - economizando custos de gas",
+			"tip3": "🪙 Suporta tokens nativos (ETH, BNB, etc.) e tokens ERC-20"
+		}
+	},
+	"step5": {
+		"target_address_label": "Endereço de Destino",
+		"target_address_hint": "Os tokens serão consolidados para o endereço da sua carteira conectada",
+		"content": {
+			"title": "Confirmar Consolidação",
+			"description": "Revise sua configuração e execute a consolidação de ativos",
+			"selected_network_tokens": "Rede e Tokens Selecionados ({count})",
+			"ready_to_execute": "Pronto para executar",
+			"review_carefully": "Por favor revise todas as informações cuidadosamente antes de prosseguir.",
+			"progress": {
+				"preparing": "⏳ Preparando...",
+				"building": "🔧 Construindo Transações...",
+				"executing": "⚡ Executando Consolidação...",
+				"confirming": "⏰ Confirmando Transações...",
+				"completed": "✅ Concluído!",
+				"error": "❌ Erro",
+				"batch": "Lote {current} / {total}",
+				"wallet": "Carteira {current} / {total}",
+				"results": "Resultados ({count}):"
+			},
+			"estimate": {
+				"title": "📊 Estimativa de Custos",
+				"total_transactions": "Total de Transações:",
+				"estimated_gas": "Gas Estimado:",
+				"estimated_cost": "Custo Estimado:",
+				"gas_units": "{amount} unidades",
+				"cost_eth": "{amount} ETH"
+			},
+			"actions": {
+				"estimate_cost": "💰 Estimar Custo",
+				"estimating": "Estimando...",
+				"execute_sweep": "⚡ Executar Consolidação",
+				"executing": "Executando..."
+			},
+			"errors": {
+				"no_network": "Nenhuma rede conectada",
+				"no_rpc": "Nenhum endpoint RPC disponível",
+				"complete_fields": "Por favor complete todos os campos obrigatórios",
+				"invalid_address": "Endereço de destino inválido",
+				"select_tokens": "Por favor selecione pelo menos um token no Passo 3",
+				"import_wallets": "Por favor importe pelo menos uma carteira no Passo 4",
+				"connect_wallet": "Por favor conecte sua carteira primeiro",
+				"no_balance": "Nenhuma carteira com saldo para consolidar. Por favor escaneie saldos primeiro no Passo 4.",
+				"insufficient_gas": "Carteira temporária com gas insuficiente! Requer {required} {symbol}, mas tem apenas {current} {symbol}. Por favor recarregue e clique no botão abaixo para continuar.",
+				"still_insufficient_gas": "Carteira temporária ainda com gas insuficiente. Por favor continue recarregando."
+			},
+			"gas_insufficient_title": "⛽ Gas Insuficiente",
+			"gas_insufficient_message": "O saldo da carteira temporária é insuficiente para cobrir a taxa de gas estimada. Requer {required} {symbol}, mas tem apenas {current} {symbol}. Por favor use a função [Financiar Carteira com Gas] acima para transferir fundos para a carteira temporária, depois clique no botão abaixo para continuar.",
+			"check_and_resume": "Verificar Saldo e Continuar",
+			"gas_refilled_restart": "Gas recarregado! Saldo atual: {balance} ETH. Por favor clique no botão [Executar Consolidação] novamente para começar."
+		},
+		"sidebar": {
+			"summary_title": "Resumo",
+			"selected_tokens": "Tokens Selecionados:",
+			"total_wallets": "Total de Carteiras:",
+			"with_balance": "Com Saldo:",
+			"batches": "Lotes"
+		}
+	},
+	"temporary_wallet": {
+		"title": "Carteira Temporária",
+		"description": "Crie uma carteira temporária aleatória para automatizar transações em lote. A carteira será armazenada apenas na sessão do seu navegador.",
+		"important": "Importante",
+		"warning_text": "A carteira temporária será criada no seu navegador. Você precisará:",
+		"step_download": "Baixar a chave privada para backup",
+		"step_fund": "Financiá-la com <strong>{amount} {symbol}</strong> para taxas de gas",
+		"step_clear": "Limpá-la após completar suas tarefas",
+		"btn_create": "Criar Carteira Temporária",
+		"creating": "Criando...",
+		"wallet_ready": "Carteira Pronta",
+		"created_at": "Criada: {time}",
+		"address": "Endereço",
+		"balance": "Saldo (Rede Atual)",
+		"loading": "Carregando...",
+		"private_key": "Chave Privada",
+		"show": "Mostrar",
+		"hide": "Ocultar",
+		"copy_address": "Copiar endereço",
+		"copy_private_key": "Copiar chave privada",
+		"show_qr": "Mostrar Código QR",
+		"refresh_balance": "Atualizar saldo",
+		"qr_hint": "Escaneie para enviar gas para esta carteira temporária",
+		"fund_title": "Financiar Carteira com Gas",
+		"estimated_gas": "Gas estimado necessário: {amount} {symbol}",
+		"suggested_amount": "💰 Quantidade sugerida: <strong>{amount} {symbol}</strong> (2x estimado)",
+		"amount_placeholder": "Quantidade a enviar",
+		"btn_send": "Enviar da Carteira Conectada",
+		"sending": "Enviando...",
+		"tip": "💡 Dica: A quantidade sugerida (2x estimado) é preenchida automaticamente para garantir fundos suficientes. Você também pode escanear o código QR para enviar de qualquer carteira.",
+		"btn_download": "Baixar Chave Privada",
+		"btn_clear": "Limpar Carteira",
+		"error_no_wallet": "Por favor conecte sua carteira primeiro",
+		"error_invalid_amount": "Por favor insira uma quantidade válida",
+		"success_transfer": "✅ Transferência bem-sucedida! Enviado {amount} {symbol} para carteira temporária. TX: {tx}...",
+		"confirm_clear": "Tem certeza de que deseja limpar a carteira temporária? Certifique-se de ter baixado a chave privada se necessário."
+	},
+	"step4": {
+		"import_method": {
+			"mnemonic": {
+				"label": "Frase Mnemônica",
+				"desc": "Derivar endereços em lote"
+			},
+			"private_key": {
+				"label": "Chaves Privadas",
+				"desc": "Importar uma por uma"
+			}
+		},
+		"content": {
+			"title": "Importar Carteiras",
+			"description": "Adicione carteiras de origem das quais você deseja consolidar ativos",
+			"choose_method": "Escolher Método de Importação",
+			"import_wallets_button": "Importar Carteiras",
+			"mnemonic": {
+				"label": "Inserir Frase Mnemônica",
+				"placeholder": "Insira 12 ou 24 palavras separadas por espaços",
+				"security_hint": "🔒 A frase mnemônica é processada localmente no seu navegador, nunca enviada a nenhum servidor",
+				"derivation_path": "Configuração de Caminho de Derivação",
+				"generate_button": "🔍 Gerar Lista de Endereços",
+				"generating": "Gerando... ({progress}%)",
+				"error_empty": "Por favor insira uma frase mnemônica",
+				"error_invalid": "Frase mnemônica inválida. Por favor insira 12 ou 24 palavras.",
+				"error_range": "Intervalo de endereços inválido",
+				"error_max": "Intervalo muito grande (máximo 10000 endereços por vez)"
+			},
+			"private_key": {
+				"label": "Importação em Lote de Chaves Privadas",
+				"placeholder": "Uma chave privada por linha (começando com 0x)",
+				"upload_file": "Enviar Arquivo",
+				"column_label": "Chave Privada",
+				"address_label": "Endereço",
+				"import_button": "➕ Adicionar Carteiras em Lote",
+				"importing": "Importando... ({progress}%)",
+				"error_empty": "Por favor insira chaves privadas",
+				"error_none": "Nenhuma chave privada válida encontrada",
+				"success_with_invalid": "Importadas {valid} carteiras. {invalid} chaves inválidas ignoradas.",
+				"invalid_keys_found": "Encontradas {count} chaves privadas inválidas",
+				"locate": "Localizar",
+				"locate_key": "Clique para localizar erro no editor",
+				"error_key_not_found": "Erro: A chave privada foi modificada ou excluída",
+				"manual_search": "Por favor pesquise manualmente a linha {line}",
+				"security_hint": "🔒 As chaves privadas são processadas localmente no seu navegador, nunca enviadas a nenhum servidor"
+			},
+			"wallet_list": {
+				"title": "Carteiras Importadas",
+				"count": "({count})",
+				"with_balance": "{count} com saldo",
+				"scan_button": "Escanear Saldos",
+				"scanning": "Escaneando... {progress}%",
+				"scan_completed": "Escaneamento Concluído",
+				"scan_hint": "Escanear saldos é obrigatório antes de continuar para o próximo passo",
+				"clear_all": "Limpar Tudo",
+				"empty_message": "Nenhuma carteira importada ainda. Use os métodos acima para importar carteiras."
+			},
+			"scan_section": {
+				"title": "Escaneamento de Saldos",
+				"required": "Obrigatório"
+			},
+			"errors": {
+				"no_network": "Nenhuma rede conectada",
+				"no_wallets": "Nenhuma carteira para escanear",
+				"no_tokens": "Por favor selecione tokens no Passo 3 primeiro",
+				"no_rpc": "Nenhum endpoint RPC disponível para a rede atual",
+				"no_valid_tokens": "Nenhum token válido selecionado para a rede atual",
+				"no_balance": "Nenhuma carteira tem saldo para os tokens selecionados",
+				"generate_failed": "Falha ao gerar endereços",
+				"import_failed": "Falha ao importar chaves privadas",
+				"scan_failed": "Falha ao escanear saldos"
+			},
+			"rate_limit": {
+				"title": "Todos os Endpoints RPC com Limite de Taxa",
+				"error_generic": "Escaneamento pausado: {reason}",
+				"error_native": "Limite de taxa acionado ao escanear saldos de token nativo (lote {batch}/{total})",
+				"error_erc20": "Limite de taxa acionado ao escanear saldos do token {token} (lote {batch}/{total})",
+				"hint": "💡 Por favor clique no botão abaixo para adicionar novos endpoints RPC, ou aguarde os RPCs existentes se recuperarem antes de tentar novamente. Adicionar múltiplos RPCs habilita rotação automática para evitar limites de taxa frequentes.",
+				"recommend_prefix": "Recomendado: Encontre endpoints RPC disponíveis em",
+				"recommend_suffix": "",
+				"manage_rpc_button": "Gerenciar RPC",
+				"resume_button": "Retomar Escaneamento"
+			},
+			"dialogs": {
+				"remove_wallet_title": "Remover Carteira",
+				"remove_wallet_message": "Tem certeza de que deseja remover esta carteira da lista de importação?\n\nEndereço: {address}",
+				"remove_button": "Remover",
+				"clear_all_title": "Limpar Todas as Carteiras",
+				"clear_all_message": "Tem certeza de que deseja remover todas as {count} carteiras da lista de importação? Esta ação não pode ser desfeita.",
+				"clear_all_button": "Limpar Tudo",
+				"cancel_button": "Cancelar",
+				"long_press_hint": "⚠️ Esta ação é irreversível. Por favor segure o botão por 3 segundos para confirmar"
+			},
+			"rpc_hint": {
+				"title": "Adicione Mais RPCs para Maior Confiabilidade",
+				"message": "Você tem apenas 1 endpoint RPC configurado. Adicionar múltiplos RPCs habilita rotação automática quando limites de taxa ocorrem, melhorando a confiabilidade do escaneamento.",
+				"add_rpc_button": "Adicionar RPC"
+			}
+		},
+		"footer": {
+			"continue_text": "Continuar para Confirmar",
+			"hint": "Por favor importe pelo menos uma carteira para continuar",
+			"hint_scan_required": "Por favor escaneie saldos antes de continuar"
+		},
+		"sidebar": {
+			"title": "Carteiras Importadas",
+			"total_label": "Total:",
+			"with_balance_label": "Com Saldo:",
+			"scanning_label": "Escaneando:",
+			"scan_status_label": "Status do Escaneamento:",
+			"scan_completed": "Concluído",
+			"scan_pending": "Pendente",
+			"no_balance_found": "Nenhum saldo encontrado após escaneamento. Todas as carteiras têm saldo zero para os tokens selecionados.",
+			"empty_hint": "Nenhuma carteira importada",
+			"performance_tip": {
+				"title": "⚡ Dica de Performance",
+				"message": "Intervalos grandes aumentarão o tempo de escaneamento",
+				"recommended": "Recomendado:",
+				"recommended_range": "1.000 - 10.000 endereços"
+			},
+			"token_stats": {
+				"title": "Estatísticas de Saldos de Tokens",
+				"wallets_count": "{count} carteiras",
+				"total_balance": "Saldo Total",
+				"download_title": "Baixar Relatório Excel"
+			},
+			"scan_log": {
+				"title": "Log de Escaneamento"
+			}
+		}
+	}
+}

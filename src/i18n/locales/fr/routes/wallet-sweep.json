@@ -1,0 +1,470 @@
+{
+	"_meta": {
+		"code": "fr",
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷"
+	},
+	"title": "Consolidation de Portefeuilles",
+	"description": "Transférez les soldes de plusieurs portefeuilles vers une seule adresse",
+	"feature_1": "Balayage complet du solde, zéro résidu",
+	"feature_2": "Automatisation à grande échelle, sans confirmation par transaction",
+	"feature_3": "Aucun token natif requis dans les portefeuilles source",
+	"feature_4": "Sans permission sur n'importe quelle chaîne EVM",
+	"faqs": {
+		"what_is_network": "Qu'est-ce qu'un réseau blockchain ?",
+		"network_explanation": "Un réseau blockchain est un système de registre public qui enregistre qui possède quels tokens et tous les transferts. Ethereum, BSC et Polygon sont des registres différents, chacun indépendant et séparé.",
+		"what_is_wallet": "Qu'est-ce qu'un portefeuille ?",
+		"wallet_explanation": "Un portefeuille Web3 n'est pas l'endroit où l'argent est stocké - c'est la clé pour gérer votre compte blockchain. Vos fonds sont enregistrés dans le registre blockchain, et le portefeuille prouve que vous êtes propriétaire du compte. Populaires : MetaMask, Coinbase Smart Wallet.",
+		"what_is_native_token": "Qu'est-ce qu'un token natif ?",
+		"native_token_explanation": "Les tokens natifs servent à payer les mineurs qui traitent vos transactions. Ethereum utilise ETH, BSC utilise BNB, Polygon utilise POL. Les mineurs enregistrent votre transaction dans le registre blockchain, et vous leur payez ces frais.",
+		"what_is_eip7702": "Qu'est-ce que EIP-7702 ?",
+		"eip7702_explanation": "Technologie qui met temporairement à niveau les portefeuilles ordinaires en portefeuilles de contrats intelligents pendant une transaction. Aucun déploiement supplémentaire nécessaire.",
+		"why_need_eip7702": "Pourquoi EIP-7702 est-il nécessaire ?",
+		"why_need_eip7702_explanation": "Permet aux portefeuilles sans gas d'envoyer des tokens. Votre portefeuille principal paie le gas pour eux, permettant une consolidation en un clic.",
+		"what_is_create2_proxy": "Qu'est-ce que CREATE2 Proxy ?",
+		"create2_proxy_explanation": "Outil de déploiement garantissant la même adresse de contrat sur toutes les chaînes. Même code = même adresse partout.",
+		"what_is_multicall3": "Qu'est-ce que Multicall3 ?",
+		"multicall3_explanation": "Regroupe plusieurs appels en un seul. Économise du gas et du temps. Exécution tout-ou-rien.",
+		"what_is_biubiu_premium": "Qu'est-ce que BiuBiuPremium ?",
+		"biubiu_premium_explanation": "Contrat d'adhésion gérant les abonnements, réductions et accès. Entièrement open source.",
+		"what_is_wallet_sweep": "Qu'est-ce que TokenSweep ?",
+		"wallet_sweep_explanation": "Contrat principal pour les transferts par lots. Gère la délégation EIP-7702 et les approbations. Open source : https://github.com/atshelchin/biubiu-contracts",
+		"can_select_multiple_tokens": "Puis-je sélectionner plusieurs tokens à la fois ?",
+		"can_select_multiple_tokens_explanation": "Oui ! Vous pouvez sélectionner autant de tokens que vous voulez. L'outil consolidera tous les tokens sélectionnés en une seule opération par lots, ce qui le rend très efficace.",
+		"what_happens_zero_balance": "Que se passe-t-il si un portefeuille a un solde nul pour un token ?",
+		"what_happens_zero_balance_explanation": "Intelligent ! Le système ignore automatiquement les portefeuilles avec un solde nul pour ce token spécifique. Cela vous fait économiser des frais de gas en n'exécutant pas de transferts inutiles.",
+		"what_tokens_supported": "Quels types de tokens sont pris en charge ?",
+		"what_tokens_supported_explanation": "Nous prenons en charge les tokens natifs (comme ETH sur Ethereum, BNB sur BSC, MATIC sur Polygon) et tous les tokens standard ERC-20. La plupart des tokens que vous rencontrez fonctionneront.",
+		"how_add_custom_token": "Comment ajouter un token personnalisé ?",
+		"how_add_custom_token_explanation": "Cliquez sur le bouton '+ Ajouter Token', puis entrez l'adresse du contrat du token. Le système récupérera automatiquement le nom, le symbole et les décimales du token depuis la blockchain."
+	},
+	"seo": {
+		"page_title": "Consolidation de Portefeuilles - Regroupez les Tokens de Plusieurs Portefeuilles | BiuBiu Tools",
+		"page_description": "Consolidez les tokens de plusieurs portefeuilles vers une seule destination. Support pour les réseaux Ethereum, Polygon, BSC, Arbitrum, Optimism et Base. Rapide, sécurisé et optimisé en gas.",
+		"keywords": "consolidation portefeuille, regroupement tokens, transfert ERC20, transfert par lots, outils crypto, outils web3, outils ethereum, outils polygon, outils DeFi",
+		"webapp_name": "Consolidation de Portefeuilles",
+		"webapp_description": "Consolidez les tokens de plusieurs portefeuilles vers une seule destination. Support pour les réseaux Ethereum, Polygon, BSC, Arbitrum, Optimism et Base.",
+		"feature_1": "Transfert par lots de tokens ERC20",
+		"feature_2": "Support multi-réseau (Ethereum, Polygon, BSC, Arbitrum, Optimism, Base)",
+		"feature_3": "Optimisation du gas",
+		"feature_4": "Intégration sécurisée du portefeuille",
+		"feature_5": "Suivi des transactions en temps réel",
+		"howto_name": "Comment Consolider des Tokens de Plusieurs Portefeuilles",
+		"howto_description": "Guide étape par étape pour consolider des tokens de plusieurs portefeuilles vers une seule destination avec l'outil BiuBiu Consolidation de Portefeuilles.",
+		"howto_tool_1": "Portefeuille Web3 (MetaMask, WalletConnect, etc.)",
+		"howto_tool_2": "Tokens ERC20 à transférer",
+		"step_1_name": "Connectez Votre Portefeuille",
+		"step_1_text": "Cliquez sur le bouton \"Connecter Portefeuille\" et sélectionnez votre fournisseur de portefeuille Web3 préféré (MetaMask, WalletConnect, Coinbase Wallet, etc.). Approuvez la demande de connexion dans votre portefeuille.",
+		"step_1_description": "Liez votre portefeuille Web3",
+		"step_2_name": "Vérifier les Dépendances",
+		"step_2_text": "Vérifiez la connexion au réseau blockchain et assurez-vous que tous les contrats intelligents requis sont accessibles. Le système détectera et validera automatiquement les composants nécessaires.",
+		"step_2_description": "Vérifier le réseau et les contrats",
+		"step_3_name": "Sélectionner les Tokens",
+		"step_3_text": "Choisissez quels tokens ERC20 vous souhaitez balayer dans la liste disponible. Vous pouvez sélectionner plusieurs tokens à transférer en une seule opération par lots.",
+		"step_3_description": "Choisir les tokens à balayer",
+		"step_4_name": "Importer les Portefeuilles",
+		"step_4_text": "Importez les adresses des portefeuilles source contenant les tokens que vous souhaitez balayer. Vous pouvez ajouter plusieurs adresses de portefeuille pour collecter les tokens de tous.",
+		"step_4_description": "Ajouter les adresses source",
+		"step_5_name": "Confirmer le Balayage",
+		"step_5_text": "Examinez le résumé de la transaction incluant le total des tokens, les frais de gas et l'adresse de destination. Cliquez sur \"Exécuter le Transfert\" et confirmez la transaction dans votre portefeuille. Attendez la confirmation blockchain et consultez le reçu de transaction.",
+		"step_5_description": "Examiner et exécuter"
+	},
+	"step1": {
+		"footer": {
+			"continue": "Continuer",
+			"hint": "Connectez votre portefeuille pour continuer"
+		},
+		"content": {
+			"title": "Sélectionner le Réseau",
+			"description": "Connectez votre portefeuille pour commencer le balayage",
+			"loading": "Chargement de la configuration réseau...",
+			"no_networks_enabled": "Aucun Réseau Activé",
+			"enable_network_prompt": "Veuillez activer au moins un réseau pour continuer.",
+			"open_network_settings": "Ouvrir les Paramètres Réseau",
+			"network_not_found": "Réseau introuvable ?",
+			"add_custom_network": "Ajouter un réseau personnalisé"
+		},
+		"sidebar": {
+			"title": "Sélectionner le Réseau et Connecter le Portefeuille",
+			"description": "Choisissez un réseau blockchain et connectez votre portefeuille pour commencer à balayer les tokens.",
+			"what_is_this": "Qu'est-ce que cette étape ?",
+			"what_explanation": "Vous devez :",
+			"what_item1": "Sélectionner un réseau blockchain (Ethereum, BSC, Polygon, etc.)",
+			"what_item2": "Connecter votre portefeuille Web3 (MetaMask, etc.)",
+			"why_do_this": "Pourquoi faire cela ?",
+			"why_explanation": "Indiquez à l'application quel réseau utiliser et sur quels actifs de portefeuille opérer - les deux sont essentiels.",
+			"beginner_tips": "Conseils",
+			"tip1": "✅ Assurez-vous d'avoir sélectionné le bon réseau (choisissez où se trouvent vos tokens)",
+			"tip2": "⛽ Assurez-vous d'avoir suffisamment de tokens natifs pour payer les frais",
+			"tip3": "🌍 Prend en charge tout réseau compatible EVM - vous pouvez ajouter n'importe quelle chaîne",
+			"what_is_network": "Qu'est-ce qu'un réseau blockchain ?",
+			"network_explanation": "Un réseau blockchain est un système de registre public qui enregistre qui possède quels tokens et tous les transferts. Ethereum, BSC et Polygon sont des registres différents, chacun indépendant et séparé.",
+			"what_is_wallet": "Qu'est-ce qu'un portefeuille ?",
+			"wallet_explanation": "Un portefeuille Web3 n'est pas l'endroit où l'argent est stocké - c'est la clé pour gérer votre compte blockchain. Vos fonds sont enregistrés dans le registre blockchain, et le portefeuille prouve que vous êtes propriétaire du compte. Populaires : MetaMask, Coinbase Smart Wallet.",
+			"what_is_native_token": "Qu'est-ce qu'un token natif ?",
+			"native_token_explanation": "Les tokens natifs servent à payer les mineurs qui traitent vos transactions. Ethereum utilise ETH, BSC utilise BNB, Polygon utilise POL."
+		}
+	},
+	"step2": {
+		"content": {
+			"title": "Vérification des Dépendances",
+			"description": "Assurez-vous que l'infrastructure requise est prête",
+			"checking_dependencies_for": "Vérification de l'environnement réseau {network}...",
+			"wallet_not_connected_title": "Portefeuille Non Connecté",
+			"wallet_not_connected_message": "Veuillez revenir à l'Étape 1 et connecter votre portefeuille",
+			"go_to_step1": "Aller à l'Étape 1",
+			"all_dependencies_satisfied": "Toutes les Dépendances Satisfaites",
+			"network_properly_configured": "Votre réseau est correctement configuré pour le balayage de tokens",
+			"dependency_issues_found": "Problèmes de Dépendances Trouvés",
+			"resolve_issues_before_continuing": "Veuillez résoudre les problèmes ci-dessus avant de continuer",
+			"recheck_dependencies": "Revérifier les Dépendances",
+			"address_label": "Adresse :",
+			"endpoint_label": "Point de terminaison :",
+			"resolve_previous_issue": "Veuillez d'abord résoudre le problème précédent",
+			"view_deployment_guide": "Voir le Guide de Déploiement",
+			"deploy_coming_soon": "Déployer le Contrat (Bientôt)",
+			"deploy_contract": "Déployer {contractName}",
+			"deployment": {
+				"modal_title": "Déployer {contractName}",
+				"start_deployment": "Démarrer le Déploiement",
+				"deploying_contract": "Déploiement du Contrat...",
+				"deployment_steps_heading": "Étapes de Déploiement :",
+				"contract_address_label": "Adresse du Contrat :",
+				"network_label": "Réseau :",
+				"waiting_for_signature": "⏳ Veuillez confirmer la transaction dans votre portefeuille...",
+				"transaction_sent": "⚡ Transaction envoyée ! En attente de confirmation blockchain...",
+				"finalizing": "✅ Finalisation du déploiement...",
+				"confirm_in_wallet": "Veuillez confirmer les transactions dans votre portefeuille",
+				"success_title": "Déploiement Réussi !",
+				"success_description": "Le contrat a été déployé avec succès.",
+				"view_on_explorer": "Voir sur l'Explorateur",
+				"error_title": "Échec du Déploiement",
+				"errors": {
+					"init_failed": "Échec de l'initialisation de la configuration du déploiement",
+					"wallet_not_connected": "Veuillez d'abord connecter votre portefeuille",
+					"deployment_failed": "Échec du déploiement du contrat",
+					"metamask_cache": "MetaMask a mis en cache d'anciennes données de bloc. Cela se produit lorsque votre réseau de test a été réinitialisé.",
+					"wallet_cache": "Erreur de cache du portefeuille. Veuillez redémarrer votre portefeuille et réessayer.",
+					"metamask_internal": "Erreur interne MetaMask. Veuillez essayer :\n\n1. Effacer les Données de l'Onglet Activité dans MetaMask\n   (Paramètres → Avancé → Effacer les données de l'onglet activité)\n\n2. Mettre à jour le point de terminaison RPC du réseau\n\n3. Redémarrer MetaMask\n\n4. Si vous déployez Multicall3, assurez-vous que CREATE2 Proxy est déployé en premier",
+					"wallet_internal": "Erreur interne du portefeuille. Veuillez essayer :\n\n1. Mettre à jour le point de terminaison RPC du réseau\n\n2. Redémarrer votre portefeuille\n\n3. Si vous déployez Multicall3, assurez-vous que CREATE2 Proxy est déployé en premier",
+					"connection_failed": "Échec de la connexion. Veuillez vérifier :\n\n1. Votre portefeuille est déverrouillé\n\n2. Votre connexion réseau est stable\n\nSi le problème persiste, essayez de mettre à jour le point de terminaison RPC du réseau.",
+					"rpc_unavailable": "Service RPC temporairement indisponible. Cela est probablement dû au fait que le point de terminaison RPC configuré dans votre portefeuille a des limites de taux ou est en panne.",
+					"insufficient_funds": "Solde insuffisant. Vous avez besoin de fonds suffisants pour le déploiement et les frais de gas.",
+					"user_rejected": "Transaction rejetée dans votre portefeuille.",
+					"already_deployed": "Ce contrat est peut-être déjà déployé. Veuillez actualiser la vérification des dépendances."
+				},
+				"steps": {
+					"create2": {
+						"fund_deployer_title": "Financer l'Adresse du Déployeur",
+						"fund_deployer_description": "Envoyez 0.01 ETH à {address}",
+						"deploy_contract_title": "Déployer le Contrat",
+						"deploy_contract_description": "Envoyer la transaction de déploiement pré-signée"
+					},
+					"via_create2": {
+						"deploy_title": "Déployer le Contrat {contractName}",
+						"deploy_description": "Envoyer la transaction de déploiement au Proxy de Déploiement Déterministe"
+					}
+				}
+			},
+			"checks": {
+				"rpc_endpoint": {
+					"name": "Point de Terminaison RPC",
+					"description": "Vérifier si le point de terminaison RPC actuel est disponible",
+					"chain_id_mismatch": "Incompatibilité de Chain ID : attendu {expected}, obtenu {actual}",
+					"connected_to_block": "Connecté au bloc #{blockNumber}",
+					"failed_to_connect": "Échec de la connexion : {error}",
+					"no_rpc_configured": "Aucun point de terminaison RPC configuré pour ce réseau",
+					"configure_rpc_button": "Configurer RPC"
+				},
+				"eip7702": {
+					"name": "EIP-7702",
+					"description": "Vérifier si le réseau prend en charge le protocole EIP-7702",
+					"supported": "Le réseau prend en charge EIP-7702 (testé via eth_estimateGas)",
+					"not_supported": "Le réseau ne prend pas en charge EIP-7702 (opcode invalide)",
+					"rpc_not_capable": "Le RPC actuel ne prend pas en charge le remplacement d'état pour cette vérification. Essayez un autre point de terminaison RPC.",
+					"check_failed": "Échec de la vérification du support EIP-7702 : {error}"
+				},
+				"contract": {
+					"deployed": "Contrat déployé",
+					"not_deployed": "Contrat non déployé à cette adresse",
+					"check_failed": "Échec de la vérification du déploiement : {error}",
+					"create2_proxy_description": "Proxy de déploiement déterministe pour la création de contrats",
+					"multicall3_description": "Agrège plusieurs appels de contrat en une seule requête",
+					"biubiu_premium_description": "Vérifie le statut d'adhésion premium de l'utilisateur sur la plateforme",
+					"wallet_sweep_description": "Collecte par lots des tokens dispersés sur plusieurs portefeuilles",
+					"biubiu_membership_description": "Contrat d'adhésion de la plateforme Biubiu",
+					"wallet_sweep_contract_description": "Contrat principal pour les opérations de transfert de tokens par lots"
+				},
+				"category": {
+					"network": "Réseau",
+					"protocol": "Protocole",
+					"contract": "Contrat"
+				}
+			}
+		},
+		"footer": {
+			"checking_dependencies": "Vérification des dépendances...",
+			"resolve_issues": "Veuillez résoudre tous les problèmes de dépendances pour continuer",
+			"waiting_for_checks": "En attente des vérifications de dépendances..."
+		},
+		"sidebar": {
+			"beginner_tips": "Conseils",
+			"tip1": "🔍 Le système vérifie automatiquement si les contrats requis sont déployés",
+			"tip2": "🚀 Si un contrat est manquant, vous pouvez le déployer directement depuis cette page",
+			"tip3": "📋 Vous devez résoudre les problèmes de dépendances dans l'ordre - corrigez la première vérification échouée avant les autres"
+		}
+	},
+	"step3": {
+		"content": {
+			"title": "Sélectionner les Tokens",
+			"description": "Sélectionnez les tokens à balayer sur le réseau {network}",
+			"description_fallback": "Sélectionnez les tokens à balayer sur ce réseau",
+			"wallet_not_connected_title": "Portefeuille Non Connecté",
+			"wallet_not_connected_message": "Veuillez revenir à l'Étape 1 et connecter votre portefeuille",
+			"empty_message": "Aucun token disponible. Ajoutez un token personnalisé pour commencer."
+		},
+		"footer": {
+			"hint": "Veuillez sélectionner au moins un token pour continuer"
+		},
+		"sidebar": {
+			"title": "Sélectionner les Tokens",
+			"description": "Choisissez quels tokens balayer",
+			"selected_tokens_title": "Tokens Sélectionnés",
+			"count_label": "Nombre :",
+			"empty_hint": "Aucun token sélectionné",
+			"beginner_tips": "Conseils",
+			"tip1": "✅ Vous pouvez sélectionner plusieurs tokens pour tous les balayer en une seule opération par lots",
+			"tip2": "⚡ Les portefeuilles avec un solde nul pour un token seront automatiquement ignorés - économie de frais de gas",
+			"tip3": "🪙 Prend en charge les tokens natifs (ETH, BNB, etc.) et les tokens ERC-20"
+		}
+	},
+	"step5": {
+		"target_address_label": "Adresse de Destination",
+		"target_address_hint": "Les tokens seront balayés vers l'adresse de votre portefeuille connecté",
+		"content": {
+			"title": "Confirmer le Balayage",
+			"description": "Examinez votre configuration et exécutez le balayage des actifs",
+			"selected_network_tokens": "Réseau et Tokens Sélectionnés ({count})",
+			"ready_to_execute": "Prêt à exécuter",
+			"review_carefully": "Veuillez examiner attentivement toutes les informations avant de continuer.",
+			"progress": {
+				"preparing": "⏳ Préparation...",
+				"building": "🔧 Construction des Transactions...",
+				"executing": "⚡ Exécution du Balayage...",
+				"confirming": "⏰ Confirmation des Transactions...",
+				"completed": "✅ Terminé !",
+				"error": "❌ Erreur",
+				"batch": "Lot {current} / {total}",
+				"wallet": "Portefeuille {current} / {total}",
+				"results": "Résultats ({count}) :"
+			},
+			"estimate": {
+				"title": "📊 Estimation des Coûts",
+				"total_transactions": "Transactions Totales :",
+				"estimated_gas": "Gas Estimé :",
+				"estimated_cost": "Coût Estimé :",
+				"gas_units": "{amount} unités",
+				"cost_eth": "{amount} ETH"
+			},
+			"actions": {
+				"estimate_cost": "💰 Estimer le Coût",
+				"estimating": "Estimation...",
+				"execute_sweep": "⚡ Exécuter le Balayage",
+				"executing": "Exécution..."
+			},
+			"errors": {
+				"no_network": "Aucun réseau connecté",
+				"no_rpc": "Aucun point de terminaison RPC disponible",
+				"complete_fields": "Veuillez compléter tous les champs requis",
+				"invalid_address": "Adresse de destination invalide",
+				"select_tokens": "Veuillez sélectionner au moins un token à l'Étape 3",
+				"import_wallets": "Veuillez importer au moins un portefeuille à l'Étape 4",
+				"connect_wallet": "Veuillez d'abord connecter votre portefeuille",
+				"no_balance": "Aucun portefeuille avec solde à balayer. Veuillez d'abord scanner les soldes à l'Étape 4.",
+				"insufficient_gas": "Gas insuffisant dans le portefeuille temporaire ! Nécessite {required} {symbol}, mais n'a que {current} {symbol}. Veuillez recharger et cliquer sur le bouton ci-dessous pour continuer.",
+				"still_insufficient_gas": "Le portefeuille temporaire a toujours un gas insuffisant. Veuillez continuer à recharger."
+			},
+			"gas_insufficient_title": "⛽ Gas Insuffisant",
+			"gas_insufficient_message": "Le solde du portefeuille temporaire est insuffisant pour couvrir les frais de gas estimés. Nécessite {required} {symbol}, mais n'a que {current} {symbol}. Veuillez utiliser la fonction [Recharger le Portefeuille en Gas] ci-dessus pour transférer des fonds vers le portefeuille temporaire, puis cliquez sur le bouton ci-dessous pour continuer.",
+			"check_and_resume": "Vérifier le Solde et Reprendre",
+			"gas_refilled_restart": "Gas rechargé ! Solde actuel : {balance} ETH. Veuillez cliquer à nouveau sur le bouton [Exécuter le Balayage] pour commencer."
+		},
+		"sidebar": {
+			"summary_title": "Résumé",
+			"selected_tokens": "Tokens Sélectionnés :",
+			"total_wallets": "Total Portefeuilles :",
+			"with_balance": "Avec Solde :",
+			"batches": "Lots"
+		}
+	},
+	"temporary_wallet": {
+		"title": "Portefeuille Temporaire",
+		"description": "Créez un portefeuille temporaire aléatoire pour automatiser les transactions par lots. Le portefeuille sera stocké uniquement dans votre session de navigateur.",
+		"important": "Important",
+		"warning_text": "Le portefeuille temporaire sera créé dans votre navigateur. Vous devrez :",
+		"step_download": "Télécharger la clé privée pour sauvegarde",
+		"step_fund": "Le financer avec <strong>{amount} {symbol}</strong> pour les frais de gas",
+		"step_clear": "L'effacer après avoir terminé vos tâches",
+		"btn_create": "Créer un Portefeuille Temporaire",
+		"creating": "Création...",
+		"wallet_ready": "Portefeuille Prêt",
+		"created_at": "Créé : {time}",
+		"address": "Adresse",
+		"balance": "Solde (Réseau Actuel)",
+		"loading": "Chargement...",
+		"private_key": "Clé Privée",
+		"show": "Afficher",
+		"hide": "Masquer",
+		"copy_address": "Copier l'adresse",
+		"copy_private_key": "Copier la clé privée",
+		"show_qr": "Afficher le Code QR",
+		"refresh_balance": "Actualiser le solde",
+		"qr_hint": "Scannez pour envoyer du gas à ce portefeuille temporaire",
+		"fund_title": "Recharger le Portefeuille en Gas",
+		"estimated_gas": "Gas estimé nécessaire : {amount} {symbol}",
+		"suggested_amount": "💰 Montant suggéré : <strong>{amount} {symbol}</strong> (2x l'estimation)",
+		"amount_placeholder": "Montant à envoyer",
+		"btn_send": "Envoyer depuis le Portefeuille Connecté",
+		"sending": "Envoi...",
+		"tip": "💡 Conseil : Le montant suggéré (2x l'estimation) est pré-rempli pour garantir des fonds suffisants. Vous pouvez aussi scanner le code QR pour envoyer depuis n'importe quel portefeuille.",
+		"btn_download": "Télécharger la Clé Privée",
+		"btn_clear": "Effacer le Portefeuille",
+		"error_no_wallet": "Veuillez d'abord connecter votre portefeuille",
+		"error_invalid_amount": "Veuillez entrer un montant valide",
+		"success_transfer": "✅ Transfert réussi ! {amount} {symbol} envoyés au portefeuille temporaire. TX : {tx}...",
+		"confirm_clear": "Êtes-vous sûr de vouloir effacer le portefeuille temporaire ? Assurez-vous d'avoir téléchargé la clé privée si nécessaire."
+	},
+	"step4": {
+		"import_method": {
+			"mnemonic": {
+				"label": "Phrase Mnémonique",
+				"desc": "Dérivation d'adresses par lots"
+			},
+			"private_key": {
+				"label": "Clés Privées",
+				"desc": "Importer une par une"
+			}
+		},
+		"content": {
+			"title": "Importer les Portefeuilles",
+			"description": "Ajoutez les portefeuilles source dont vous souhaitez balayer les actifs",
+			"choose_method": "Choisir la Méthode d'Import",
+			"import_wallets_button": "Importer les Portefeuilles",
+			"mnemonic": {
+				"label": "Entrez la Phrase Mnémonique",
+				"placeholder": "Entrez 12 ou 24 mots séparés par des espaces",
+				"security_hint": "🔒 La mnémonique est traitée localement dans votre navigateur, jamais envoyée à aucun serveur",
+				"derivation_path": "Configuration du Chemin de Dérivation",
+				"generate_button": "🔍 Générer la Liste d'Adresses",
+				"generating": "Génération... ({progress}%)",
+				"error_empty": "Veuillez entrer une phrase mnémonique",
+				"error_invalid": "Phrase mnémonique invalide. Veuillez entrer 12 ou 24 mots.",
+				"error_range": "Plage d'adresses invalide",
+				"error_max": "Plage trop grande (max 10000 adresses à la fois)"
+			},
+			"private_key": {
+				"label": "Import par Lots de Clés Privées",
+				"placeholder": "Une clé privée par ligne (commençant par 0x)",
+				"upload_file": "Télécharger un Fichier",
+				"column_label": "Clé Privée",
+				"address_label": "Adresse",
+				"import_button": "➕ Ajouter des Portefeuilles par Lots",
+				"importing": "Import... ({progress}%)",
+				"error_empty": "Veuillez entrer des clés privées",
+				"error_none": "Aucune clé privée valide trouvée",
+				"success_with_invalid": "{valid} portefeuilles importés. {invalid} clés invalides ignorées.",
+				"invalid_keys_found": "{count} clés privées invalides trouvées",
+				"locate": "Localiser",
+				"locate_key": "Cliquez pour localiser l'erreur dans l'éditeur",
+				"error_key_not_found": "Erreur : Clé privée modifiée ou supprimée",
+				"manual_search": "Veuillez rechercher manuellement la ligne {line}",
+				"security_hint": "🔒 Les clés privées sont traitées localement dans votre navigateur, jamais envoyées à aucun serveur"
+			},
+			"wallet_list": {
+				"title": "Portefeuilles Importés",
+				"count": "({count})",
+				"with_balance": "{count} avec solde",
+				"scan_button": "Scanner les Soldes",
+				"scanning": "Scan... {progress}%",
+				"scan_completed": "Scan Terminé",
+				"scan_hint": "Le scan des soldes est requis avant de continuer à l'étape suivante",
+				"clear_all": "Tout Effacer",
+				"empty_message": "Aucun portefeuille importé. Utilisez les méthodes ci-dessus pour importer des portefeuilles."
+			},
+			"scan_section": {
+				"title": "Scan des Soldes",
+				"required": "Requis"
+			},
+			"errors": {
+				"no_network": "Aucun réseau connecté",
+				"no_wallets": "Aucun portefeuille à scanner",
+				"no_tokens": "Veuillez d'abord sélectionner des tokens à l'Étape 3",
+				"no_rpc": "Aucun point de terminaison RPC disponible pour le réseau actuel",
+				"no_valid_tokens": "Aucun token valide sélectionné pour le réseau actuel",
+				"no_balance": "Aucun portefeuille n'a de solde pour les tokens sélectionnés",
+				"generate_failed": "Échec de la génération des adresses",
+				"import_failed": "Échec de l'import des clés privées",
+				"scan_failed": "Échec du scan des soldes"
+			},
+			"rate_limit": {
+				"title": "Tous les Points de Terminaison RPC Limités",
+				"error_generic": "Scan en pause : {reason}",
+				"error_native": "Limite de taux déclenchée lors du scan des soldes de tokens natifs (lot {batch}/{total})",
+				"error_erc20": "Limite de taux déclenchée lors du scan des soldes du token {token} (lot {batch}/{total})",
+				"hint": "💡 Veuillez cliquer sur le bouton ci-dessous pour ajouter de nouveaux points de terminaison RPC, ou attendez que les RPC existants récupèrent avant de réessayer. L'ajout de plusieurs RPC permet une rotation automatique pour éviter les limites de taux fréquentes.",
+				"recommend_prefix": "Recommandé : Trouvez des points de terminaison RPC disponibles sur",
+				"recommend_suffix": "",
+				"manage_rpc_button": "Gérer RPC",
+				"resume_button": "Reprendre le Scan"
+			},
+			"dialogs": {
+				"remove_wallet_title": "Supprimer le Portefeuille",
+				"remove_wallet_message": "Êtes-vous sûr de vouloir supprimer ce portefeuille de la liste d'import ?\n\nAdresse : {address}",
+				"remove_button": "Supprimer",
+				"clear_all_title": "Effacer Tous les Portefeuilles",
+				"clear_all_message": "Êtes-vous sûr de vouloir supprimer les {count} portefeuilles de la liste d'import ? Cette action est irréversible.",
+				"clear_all_button": "Tout Effacer",
+				"cancel_button": "Annuler",
+				"long_press_hint": "⚠️ Cette action est irréversible. Veuillez maintenir le bouton enfoncé pendant 3 secondes pour confirmer"
+			},
+			"rpc_hint": {
+				"title": "Ajoutez Plus de RPC pour une Meilleure Fiabilité",
+				"message": "Vous n'avez qu'1 point de terminaison RPC configuré. L'ajout de plusieurs RPC permet une rotation automatique lorsque des limites de taux se produisent, améliorant la fiabilité du scan.",
+				"add_rpc_button": "Ajouter RPC"
+			}
+		},
+		"footer": {
+			"continue_text": "Continuer vers Confirmation",
+			"hint": "Veuillez importer au moins un portefeuille pour continuer",
+			"hint_scan_required": "Veuillez scanner les soldes avant de continuer"
+		},
+		"sidebar": {
+			"title": "Portefeuilles Importés",
+			"total_label": "Total :",
+			"with_balance_label": "Avec Solde :",
+			"scanning_label": "Scan :",
+			"scan_status_label": "Statut du Scan :",
+			"scan_completed": "Terminé",
+			"scan_pending": "En Attente",
+			"no_balance_found": "Aucun solde trouvé après le scan. Tous les portefeuilles ont un solde nul pour les tokens sélectionnés.",
+			"empty_hint": "Aucun portefeuille importé",
+			"performance_tip": {
+				"title": "⚡ Conseil Performance",
+				"message": "Les grandes plages augmenteront le temps de scan",
+				"recommended": "Recommandé :",
+				"recommended_range": "1 000 - 10 000 adresses"
+			},
+			"token_stats": {
+				"title": "Statistiques des Soldes de Tokens",
+				"wallets_count": "{count} portefeuilles",
+				"total_balance": "Solde Total",
+				"download_title": "Télécharger le Rapport Excel"
+			},
+			"scan_log": {
+				"title": "Journal de Scan"
+			}
+		}
+	}
+}

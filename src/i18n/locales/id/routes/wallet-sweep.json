@@ -1,0 +1,470 @@
+{
+	"_meta": {
+		"code": "id",
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩"
+	},
+	"title": "Sweep Dompet",
+	"description": "Transfer saldo dari beberapa dompet ke satu alamat",
+	"feature_1": "Sweep saldo lengkap, nol sisa",
+	"feature_2": "Otomatisasi skala besar, tanpa konfirmasi per transaksi",
+	"feature_3": "Tidak perlu token native di dompet sumber",
+	"feature_4": "Tanpa izin di chain EVM manapun",
+	"faqs": {
+		"what_is_network": "Apa itu jaringan blockchain?",
+		"network_explanation": "Jaringan blockchain adalah sistem buku besar publik yang mencatat siapa memiliki token apa dan semua transfer. Ethereum, BSC, dan Polygon adalah buku besar berbeda, masing-masing independen dan terpisah.",
+		"what_is_wallet": "Apa itu dompet?",
+		"wallet_explanation": "Dompet Web3 bukan tempat menyimpan uang - ini adalah kunci untuk mengelola akun blockchain Anda. Dana Anda dicatat di buku besar blockchain, dan dompet membuktikan Anda pemilik akun. Populer: MetaMask, Coinbase Smart Wallet.",
+		"what_is_native_token": "Apa itu token native?",
+		"native_token_explanation": "Token native digunakan untuk membayar penambang yang memproses transaksi Anda. Ethereum menggunakan ETH, BSC menggunakan BNB, Polygon menggunakan POL. Penambang mencatat transaksi Anda di buku besar blockchain, dan Anda membayar mereka biaya ini.",
+		"what_is_eip7702": "Apa itu EIP-7702?",
+		"eip7702_explanation": "Teknologi yang sementara mengupgrade dompet biasa menjadi dompet smart contract selama transaksi. Tidak perlu deployment tambahan.",
+		"why_need_eip7702": "Mengapa perlu EIP-7702?",
+		"why_need_eip7702_explanation": "Memungkinkan dompet tanpa gas mengirim token. Dompet utama Anda membayar gas untuk mereka, memungkinkan sweep satu klik.",
+		"what_is_create2_proxy": "Apa itu CREATE2 Proxy?",
+		"create2_proxy_explanation": "Alat deployment yang memastikan alamat kontrak sama di semua chain. Kode sama = alamat sama di mana-mana.",
+		"what_is_multicall3": "Apa itu Multicall3?",
+		"multicall3_explanation": "Menggabungkan beberapa panggilan menjadi satu. Menghemat gas dan waktu. Eksekusi semua-atau-tidak-sama-sekali.",
+		"what_is_biubiu_premium": "Apa itu BiuBiuPremium?",
+		"biubiu_premium_explanation": "Kontrak keanggotaan yang mengelola langganan, diskon, dan akses. Sepenuhnya open source.",
+		"what_is_wallet_sweep": "Apa itu TokenSweep?",
+		"wallet_sweep_explanation": "Kontrak inti untuk transfer batch. Menangani delegasi EIP-7702 dan persetujuan. Open source: https://github.com/atshelchin/biubiu-contracts",
+		"can_select_multiple_tokens": "Bisakah saya memilih beberapa token sekaligus?",
+		"can_select_multiple_tokens_explanation": "Ya! Anda dapat memilih token sebanyak yang Anda mau. Alat akan sweep semua token yang dipilih dalam satu operasi batch, membuatnya sangat efisien.",
+		"what_happens_zero_balance": "Apa yang terjadi jika dompet memiliki saldo nol untuk token?",
+		"what_happens_zero_balance_explanation": "Pintar! Sistem otomatis melewati dompet dengan saldo nol untuk token spesifik tersebut. Ini menghemat biaya gas dengan tidak mengeksekusi transfer yang tidak perlu.",
+		"what_tokens_supported": "Jenis token apa yang didukung?",
+		"what_tokens_supported_explanation": "Kami mendukung baik token native (seperti ETH di Ethereum, BNB di BSC, MATIC di Polygon) dan semua token standar ERC-20. Sebagian besar token yang Anda temui akan berfungsi.",
+		"how_add_custom_token": "Bagaimana cara menambah token kustom?",
+		"how_add_custom_token_explanation": "Klik tombol '+ Tambah Token', lalu masukkan alamat kontrak token. Sistem akan otomatis mengambil nama, simbol, dan desimal token dari blockchain."
+	},
+	"seo": {
+		"page_title": "Sweep Dompet - Konsolidasi Token dari Beberapa Dompet | BiuBiu Tools",
+		"page_description": "Konsolidasi token dari beberapa dompet ke satu tujuan. Dukungan untuk jaringan Ethereum, Polygon, BSC, Arbitrum, Optimism, dan Base. Cepat, aman, dan dioptimalkan gas.",
+		"keywords": "sweep dompet, konsolidasi token, transfer ERC20, transfer batch, alat crypto, alat web3, alat ethereum, alat polygon, alat DeFi",
+		"webapp_name": "Sweep Dompet",
+		"webapp_description": "Konsolidasi token dari beberapa dompet ke satu tujuan. Dukungan untuk jaringan Ethereum, Polygon, BSC, Arbitrum, Optimism, dan Base.",
+		"feature_1": "Transfer batch token ERC20",
+		"feature_2": "Dukungan multi-jaringan (Ethereum, Polygon, BSC, Arbitrum, Optimism, Base)",
+		"feature_3": "Optimasi gas",
+		"feature_4": "Integrasi dompet aman",
+		"feature_5": "Pelacakan transaksi real-time",
+		"howto_name": "Cara Konsolidasi Token dari Beberapa Dompet dengan Sweep Dompet",
+		"howto_description": "Panduan langkah demi langkah untuk konsolidasi token dari beberapa dompet ke satu tujuan menggunakan alat BiuBiu Sweep Dompet.",
+		"howto_tool_1": "Dompet Web3 (MetaMask, WalletConnect, dll.)",
+		"howto_tool_2": "Token ERC20 untuk ditransfer",
+		"step_1_name": "Hubungkan Dompet Anda",
+		"step_1_text": "Klik tombol \"Hubungkan Dompet\" dan pilih penyedia dompet Web3 pilihan Anda (MetaMask, WalletConnect, Coinbase Wallet, dll.). Setujui permintaan koneksi di dompet Anda.",
+		"step_1_description": "Tautkan dompet Web3 Anda",
+		"step_2_name": "Periksa Dependensi",
+		"step_2_text": "Verifikasi koneksi jaringan blockchain dan pastikan semua smart contract yang diperlukan dapat diakses. Sistem akan otomatis mendeteksi dan memvalidasi komponen yang diperlukan.",
+		"step_2_description": "Verifikasi jaringan dan kontrak",
+		"step_3_name": "Pilih Token",
+		"step_3_text": "Pilih token ERC20 mana yang ingin Anda sweep dari daftar yang tersedia. Anda dapat memilih beberapa token untuk ditransfer dalam satu operasi batch.",
+		"step_3_description": "Pilih token untuk di-sweep",
+		"step_4_name": "Impor Dompet",
+		"step_4_text": "Impor alamat dompet sumber yang berisi token yang ingin Anda sweep. Anda dapat menambahkan beberapa alamat dompet untuk mengumpulkan token dari semuanya.",
+		"step_4_description": "Tambah alamat sumber",
+		"step_5_name": "Konfirmasi Sweep",
+		"step_5_text": "Tinjau ringkasan transaksi termasuk total token, biaya gas, dan alamat tujuan. Klik \"Eksekusi Transfer\" dan konfirmasi transaksi di dompet Anda. Tunggu konfirmasi blockchain dan lihat tanda terima transaksi.",
+		"step_5_description": "Tinjau dan eksekusi"
+	},
+	"step1": {
+		"footer": {
+			"continue": "Lanjutkan",
+			"hint": "Hubungkan dompet Anda untuk melanjutkan"
+		},
+		"content": {
+			"title": "Pilih Jaringan",
+			"description": "Hubungkan dompet untuk mulai sweep",
+			"loading": "Memuat konfigurasi jaringan...",
+			"no_networks_enabled": "Tidak Ada Jaringan yang Diaktifkan",
+			"enable_network_prompt": "Silakan aktifkan setidaknya satu jaringan untuk melanjutkan.",
+			"open_network_settings": "Buka Pengaturan Jaringan",
+			"network_not_found": "Jaringan tidak ditemukan?",
+			"add_custom_network": "Tambah jaringan kustom"
+		},
+		"sidebar": {
+			"title": "Pilih Jaringan & Hubungkan Dompet",
+			"description": "Pilih jaringan blockchain dan hubungkan dompet Anda untuk mulai sweep token.",
+			"what_is_this": "Apa langkah ini?",
+			"what_explanation": "Anda perlu:",
+			"what_item1": "Pilih jaringan blockchain (Ethereum, BSC, Polygon, dll.)",
+			"what_item2": "Hubungkan dompet Web3 Anda (MetaMask, dll.)",
+			"why_do_this": "Mengapa melakukan ini?",
+			"why_explanation": "Beritahu aplikasi jaringan mana yang digunakan, dan aset dompet mana yang dioperasikan - keduanya penting.",
+			"beginner_tips": "Tips",
+			"tip1": "✅ Pastikan Anda memilih jaringan yang benar (pilih di mana token Anda berada)",
+			"tip2": "⛽ Pastikan Anda memiliki cukup token native untuk membayar biaya",
+			"tip3": "🌍 Mendukung jaringan kompatibel EVM manapun - Anda dapat menambah chain apapun",
+			"what_is_network": "Apa itu jaringan blockchain?",
+			"network_explanation": "Jaringan blockchain adalah sistem buku besar publik yang mencatat siapa memiliki token apa dan semua transfer. Ethereum, BSC, dan Polygon adalah buku besar berbeda, masing-masing independen dan terpisah.",
+			"what_is_wallet": "Apa itu dompet?",
+			"wallet_explanation": "Dompet Web3 bukan tempat menyimpan uang - ini adalah kunci untuk mengelola akun blockchain Anda. Dana Anda dicatat di buku besar blockchain, dan dompet membuktikan Anda pemilik akun. Populer: MetaMask, Coinbase Smart Wallet.",
+			"what_is_native_token": "Apa itu token native?",
+			"native_token_explanation": "Token native digunakan untuk membayar penambang yang memproses transaksi Anda. Ethereum menggunakan ETH, BSC menggunakan BNB, Polygon menggunakan POL."
+		}
+	},
+	"step2": {
+		"content": {
+			"title": "Pemeriksaan Dependensi",
+			"description": "Pastikan infrastruktur yang diperlukan sudah siap",
+			"checking_dependencies_for": "Memeriksa lingkungan jaringan {network}...",
+			"wallet_not_connected_title": "Dompet Tidak Terhubung",
+			"wallet_not_connected_message": "Silakan kembali ke Langkah 1 dan hubungkan dompet Anda",
+			"go_to_step1": "Ke Langkah 1",
+			"all_dependencies_satisfied": "Semua Dependensi Terpenuhi",
+			"network_properly_configured": "Jaringan Anda dikonfigurasi dengan benar untuk sweep token",
+			"dependency_issues_found": "Masalah Dependensi Ditemukan",
+			"resolve_issues_before_continuing": "Silakan selesaikan masalah di atas sebelum melanjutkan",
+			"recheck_dependencies": "Periksa Ulang Dependensi",
+			"address_label": "Alamat:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Silakan selesaikan masalah sebelumnya terlebih dahulu",
+			"view_deployment_guide": "Lihat Panduan Deployment",
+			"deploy_coming_soon": "Deploy Kontrak (Segera Hadir)",
+			"deploy_contract": "Deploy {contractName}",
+			"deployment": {
+				"modal_title": "Deploy {contractName}",
+				"start_deployment": "Mulai Deployment",
+				"deploying_contract": "Mendeploy Kontrak...",
+				"deployment_steps_heading": "Langkah Deployment:",
+				"contract_address_label": "Alamat Kontrak:",
+				"network_label": "Jaringan:",
+				"waiting_for_signature": "⏳ Silakan konfirmasi transaksi di dompet Anda...",
+				"transaction_sent": "⚡ Transaksi terkirim! Menunggu konfirmasi blockchain...",
+				"finalizing": "✅ Menyelesaikan deployment...",
+				"confirm_in_wallet": "Silakan konfirmasi transaksi di dompet Anda",
+				"success_title": "Deployment Berhasil!",
+				"success_description": "Kontrak berhasil dideploy.",
+				"view_on_explorer": "Lihat di Explorer",
+				"error_title": "Deployment Gagal",
+				"errors": {
+					"init_failed": "Gagal menginisialisasi konfigurasi deployment",
+					"wallet_not_connected": "Silakan hubungkan dompet Anda terlebih dahulu",
+					"deployment_failed": "Gagal mendeploy kontrak",
+					"metamask_cache": "MetaMask menyimpan data block lama. Ini terjadi saat jaringan test Anda direset.",
+					"wallet_cache": "Error cache dompet. Silakan restart dompet dan coba lagi.",
+					"metamask_internal": "Error internal MetaMask. Silakan coba:\n\n1. Hapus Data Tab Aktivitas di MetaMask\n   (Pengaturan → Lanjutan → Hapus data tab aktivitas)\n\n2. Update endpoint RPC jaringan\n\n3. Restart MetaMask\n\n4. Jika mendeploy Multicall3, pastikan CREATE2 Proxy dideploy terlebih dahulu",
+					"wallet_internal": "Error internal dompet. Silakan coba:\n\n1. Update endpoint RPC jaringan\n\n2. Restart dompet Anda\n\n3. Jika mendeploy Multicall3, pastikan CREATE2 Proxy dideploy terlebih dahulu",
+					"connection_failed": "Koneksi gagal. Silakan periksa:\n\n1. Dompet Anda tidak terkunci\n\n2. Koneksi jaringan Anda stabil\n\nJika masalah berlanjut, coba update endpoint RPC jaringan.",
+					"rpc_unavailable": "Layanan RPC sementara tidak tersedia. Ini mungkin karena endpoint RPC yang dikonfigurasi di dompet Anda memiliki rate limit atau sedang down.",
+					"insufficient_funds": "Saldo tidak cukup. Anda perlu cukup dana untuk deployment dan biaya gas.",
+					"user_rejected": "Transaksi ditolak di dompet Anda.",
+					"already_deployed": "Kontrak ini mungkin sudah dideploy. Silakan refresh pemeriksaan dependensi."
+				},
+				"steps": {
+					"create2": {
+						"fund_deployer_title": "Dana Alamat Deployer",
+						"fund_deployer_description": "Kirim 0.01 ETH ke {address}",
+						"deploy_contract_title": "Deploy Kontrak",
+						"deploy_contract_description": "Kirim transaksi deployment yang sudah ditandatangani"
+					},
+					"via_create2": {
+						"deploy_title": "Deploy Kontrak {contractName}",
+						"deploy_description": "Kirim transaksi deployment ke Deterministic Deployment Proxy"
+					}
+				}
+			},
+			"checks": {
+				"rpc_endpoint": {
+					"name": "Endpoint RPC",
+					"description": "Periksa apakah endpoint RPC saat ini tersedia",
+					"chain_id_mismatch": "Chain ID tidak cocok: diharapkan {expected}, didapat {actual}",
+					"connected_to_block": "Terhubung ke block #{blockNumber}",
+					"failed_to_connect": "Gagal terhubung: {error}",
+					"no_rpc_configured": "Tidak ada endpoint RPC yang dikonfigurasi untuk jaringan ini",
+					"configure_rpc_button": "Konfigurasi RPC"
+				},
+				"eip7702": {
+					"name": "EIP-7702",
+					"description": "Periksa apakah jaringan mendukung protokol EIP-7702",
+					"supported": "Jaringan mendukung EIP-7702 (diuji via eth_estimateGas)",
+					"not_supported": "Jaringan tidak mendukung EIP-7702 (opcode tidak valid)",
+					"rpc_not_capable": "RPC saat ini tidak mendukung state override untuk pemeriksaan ini. Coba endpoint RPC lain.",
+					"check_failed": "Gagal memeriksa dukungan EIP-7702: {error}"
+				},
+				"contract": {
+					"deployed": "Kontrak sudah dideploy",
+					"not_deployed": "Kontrak tidak dideploy di alamat ini",
+					"check_failed": "Gagal memeriksa deployment: {error}",
+					"create2_proxy_description": "Proxy deployment deterministik untuk pembuatan kontrak",
+					"multicall3_description": "Agregasi beberapa panggilan kontrak dalam satu permintaan",
+					"biubiu_premium_description": "Memverifikasi status keanggotaan premium pengguna di platform",
+					"wallet_sweep_description": "Kumpulkan batch token yang tersebar di beberapa dompet",
+					"biubiu_membership_description": "Kontrak keanggotaan platform Biubiu",
+					"wallet_sweep_contract_description": "Kontrak utama untuk operasi transfer token batch"
+				},
+				"category": {
+					"network": "Jaringan",
+					"protocol": "Protokol",
+					"contract": "Kontrak"
+				}
+			}
+		},
+		"footer": {
+			"checking_dependencies": "Memeriksa dependensi...",
+			"resolve_issues": "Silakan selesaikan semua masalah dependensi untuk melanjutkan",
+			"waiting_for_checks": "Menunggu pemeriksaan dependensi..."
+		},
+		"sidebar": {
+			"beginner_tips": "Tips",
+			"tip1": "🔍 Sistem otomatis memeriksa apakah kontrak yang diperlukan sudah dideploy",
+			"tip2": "🚀 Jika kontrak tidak ada, Anda dapat mendeploy langsung dari halaman ini",
+			"tip3": "📋 Harus menyelesaikan masalah dependensi secara berurutan - perbaiki pemeriksaan gagal pertama sebelum yang lain"
+		}
+	},
+	"step3": {
+		"content": {
+			"title": "Pilih Token",
+			"description": "Pilih token untuk di-sweep di jaringan {network}",
+			"description_fallback": "Pilih token untuk di-sweep di jaringan ini",
+			"wallet_not_connected_title": "Dompet Tidak Terhubung",
+			"wallet_not_connected_message": "Silakan kembali ke Langkah 1 dan hubungkan dompet Anda",
+			"empty_message": "Tidak ada token tersedia. Tambah token kustom untuk memulai."
+		},
+		"footer": {
+			"hint": "Silakan pilih setidaknya satu token untuk melanjutkan"
+		},
+		"sidebar": {
+			"title": "Pilih Token",
+			"description": "Pilih token mana yang akan di-sweep",
+			"selected_tokens_title": "Token Terpilih",
+			"count_label": "Jumlah:",
+			"empty_hint": "Tidak ada token dipilih",
+			"beginner_tips": "Tips",
+			"tip1": "✅ Anda dapat memilih beberapa token untuk sweep semuanya dalam satu operasi batch",
+			"tip2": "⚡ Dompet dengan saldo nol untuk token akan otomatis dilewati - menghemat biaya gas",
+			"tip3": "🪙 Mendukung baik token native (ETH, BNB, dll.) maupun token ERC-20"
+		}
+	},
+	"step5": {
+		"target_address_label": "Alamat Tujuan",
+		"target_address_hint": "Token akan di-sweep ke alamat dompet Anda yang terhubung",
+		"content": {
+			"title": "Konfirmasi Sweep",
+			"description": "Tinjau konfigurasi Anda dan eksekusi sweep aset",
+			"selected_network_tokens": "Jaringan & Token Terpilih ({count})",
+			"ready_to_execute": "Siap untuk dieksekusi",
+			"review_carefully": "Silakan tinjau semua informasi dengan teliti sebelum melanjutkan.",
+			"progress": {
+				"preparing": "⏳ Mempersiapkan...",
+				"building": "🔧 Membangun Transaksi...",
+				"executing": "⚡ Mengeksekusi Sweep...",
+				"confirming": "⏰ Mengkonfirmasi Transaksi...",
+				"completed": "✅ Selesai!",
+				"error": "❌ Error",
+				"batch": "Batch {current} / {total}",
+				"wallet": "Dompet {current} / {total}",
+				"results": "Hasil ({count}):"
+			},
+			"estimate": {
+				"title": "📊 Estimasi Biaya",
+				"total_transactions": "Total Transaksi:",
+				"estimated_gas": "Estimasi Gas:",
+				"estimated_cost": "Estimasi Biaya:",
+				"gas_units": "{amount} unit",
+				"cost_eth": "{amount} ETH"
+			},
+			"actions": {
+				"estimate_cost": "💰 Estimasi Biaya",
+				"estimating": "Mengestimasi...",
+				"execute_sweep": "⚡ Eksekusi Sweep",
+				"executing": "Mengeksekusi..."
+			},
+			"errors": {
+				"no_network": "Tidak ada jaringan terhubung",
+				"no_rpc": "Tidak ada endpoint RPC tersedia",
+				"complete_fields": "Silakan lengkapi semua field yang diperlukan",
+				"invalid_address": "Alamat tujuan tidak valid",
+				"select_tokens": "Silakan pilih setidaknya satu token di Langkah 3",
+				"import_wallets": "Silakan impor setidaknya satu dompet di Langkah 4",
+				"connect_wallet": "Silakan hubungkan dompet Anda terlebih dahulu",
+				"no_balance": "Tidak ada dompet dengan saldo untuk di-sweep. Silakan scan saldo terlebih dahulu di Langkah 4.",
+				"insufficient_gas": "Gas tidak cukup di dompet sementara! Memerlukan {required} {symbol}, tapi hanya memiliki {current} {symbol}. Silakan isi ulang dan klik tombol di bawah untuk melanjutkan.",
+				"still_insufficient_gas": "Dompet sementara masih kekurangan gas. Silakan lanjutkan mengisi ulang."
+			},
+			"gas_insufficient_title": "⛽ Gas Tidak Cukup",
+			"gas_insufficient_message": "Saldo dompet sementara tidak cukup untuk menutupi estimasi biaya gas. Memerlukan {required} {symbol}, tapi hanya memiliki {current} {symbol}. Silakan gunakan fitur [Isi Dompet dengan Gas] di atas untuk transfer dana ke dompet sementara, lalu klik tombol di bawah untuk melanjutkan.",
+			"check_and_resume": "Periksa Saldo dan Lanjutkan",
+			"gas_refilled_restart": "Gas terisi ulang! Saldo saat ini: {balance} ETH. Silakan klik tombol [Eksekusi Sweep] lagi untuk memulai."
+		},
+		"sidebar": {
+			"summary_title": "Ringkasan",
+			"selected_tokens": "Token Terpilih:",
+			"total_wallets": "Total Dompet:",
+			"with_balance": "Dengan Saldo:",
+			"batches": "Batch"
+		}
+	},
+	"temporary_wallet": {
+		"title": "Dompet Sementara",
+		"description": "Buat dompet sementara acak untuk mengotomatisasi transaksi batch. Dompet akan disimpan hanya di sesi browser Anda.",
+		"important": "Penting",
+		"warning_text": "Dompet sementara akan dibuat di browser Anda. Anda perlu:",
+		"step_download": "Download private key untuk backup",
+		"step_fund": "Isi dengan <strong>{amount} {symbol}</strong> untuk biaya gas",
+		"step_clear": "Hapus setelah menyelesaikan tugas Anda",
+		"btn_create": "Buat Dompet Sementara",
+		"creating": "Membuat...",
+		"wallet_ready": "Dompet Siap",
+		"created_at": "Dibuat: {time}",
+		"address": "Alamat",
+		"balance": "Saldo (Jaringan Saat Ini)",
+		"loading": "Memuat...",
+		"private_key": "Private Key",
+		"show": "Tampilkan",
+		"hide": "Sembunyikan",
+		"copy_address": "Salin alamat",
+		"copy_private_key": "Salin private key",
+		"show_qr": "Tampilkan Kode QR",
+		"refresh_balance": "Refresh saldo",
+		"qr_hint": "Scan untuk mengirim gas ke dompet sementara ini",
+		"fund_title": "Isi Dompet dengan Gas",
+		"estimated_gas": "Estimasi gas diperlukan: {amount} {symbol}",
+		"suggested_amount": "💰 Jumlah disarankan: <strong>{amount} {symbol}</strong> (2x estimasi)",
+		"amount_placeholder": "Jumlah untuk dikirim",
+		"btn_send": "Kirim dari Dompet Terhubung",
+		"sending": "Mengirim...",
+		"tip": "💡 Tip: Jumlah disarankan (2x estimasi) diisi otomatis untuk memastikan dana cukup. Anda juga dapat scan kode QR untuk mengirim dari dompet manapun.",
+		"btn_download": "Download Private Key",
+		"btn_clear": "Hapus Dompet",
+		"error_no_wallet": "Silakan hubungkan dompet Anda terlebih dahulu",
+		"error_invalid_amount": "Silakan masukkan jumlah yang valid",
+		"success_transfer": "✅ Transfer berhasil! Terkirim {amount} {symbol} ke dompet sementara. TX: {tx}...",
+		"confirm_clear": "Apakah Anda yakin ingin menghapus dompet sementara? Pastikan Anda telah mendownload private key jika diperlukan."
+	},
+	"step4": {
+		"import_method": {
+			"mnemonic": {
+				"label": "Frasa Mnemonic",
+				"desc": "Derivasi alamat batch"
+			},
+			"private_key": {
+				"label": "Private Key",
+				"desc": "Impor satu per satu"
+			}
+		},
+		"content": {
+			"title": "Impor Dompet",
+			"description": "Tambah dompet sumber yang ingin Anda sweep asetnya",
+			"choose_method": "Pilih Metode Impor",
+			"import_wallets_button": "Impor Dompet",
+			"mnemonic": {
+				"label": "Masukkan Frasa Mnemonic",
+				"placeholder": "Masukkan 12 atau 24 kata dipisahkan spasi",
+				"security_hint": "🔒 Mnemonic diproses secara lokal di browser Anda, tidak pernah dikirim ke server manapun",
+				"derivation_path": "Konfigurasi Derivation Path",
+				"generate_button": "🔍 Generate Daftar Alamat",
+				"generating": "Generating... ({progress}%)",
+				"error_empty": "Silakan masukkan frasa mnemonic",
+				"error_invalid": "Frasa mnemonic tidak valid. Silakan masukkan 12 atau 24 kata.",
+				"error_range": "Range alamat tidak valid",
+				"error_max": "Range terlalu besar (maksimal 10000 alamat sekaligus)"
+			},
+			"private_key": {
+				"label": "Impor Batch Private Key",
+				"placeholder": "Satu private key per baris (dimulai dengan 0x)",
+				"upload_file": "Upload File",
+				"column_label": "Private Key",
+				"address_label": "Alamat",
+				"import_button": "➕ Tambah Dompet Batch",
+				"importing": "Mengimpor... ({progress}%)",
+				"error_empty": "Silakan masukkan private key",
+				"error_none": "Tidak ditemukan private key yang valid",
+				"success_with_invalid": "Berhasil mengimpor {valid} dompet. {invalid} key tidak valid dilewati.",
+				"invalid_keys_found": "Ditemukan {count} private key tidak valid",
+				"locate": "Temukan",
+				"locate_key": "Klik untuk menemukan error di editor",
+				"error_key_not_found": "Error: Private key telah dimodifikasi atau dihapus",
+				"manual_search": "Silakan cari manual baris {line}",
+				"security_hint": "🔒 Private key diproses secara lokal di browser Anda, tidak pernah dikirim ke server manapun"
+			},
+			"wallet_list": {
+				"title": "Dompet yang Diimpor",
+				"count": "({count})",
+				"with_balance": "{count} dengan saldo",
+				"scan_button": "Scan Saldo",
+				"scanning": "Scanning... {progress}%",
+				"scan_completed": "Scan Selesai",
+				"scan_hint": "Scanning saldo diperlukan sebelum melanjutkan ke langkah berikutnya",
+				"clear_all": "Hapus Semua",
+				"empty_message": "Belum ada dompet yang diimpor. Gunakan metode di atas untuk mengimpor dompet."
+			},
+			"scan_section": {
+				"title": "Scan Saldo",
+				"required": "Diperlukan"
+			},
+			"errors": {
+				"no_network": "Tidak ada jaringan terhubung",
+				"no_wallets": "Tidak ada dompet untuk di-scan",
+				"no_tokens": "Silakan pilih token di Langkah 3 terlebih dahulu",
+				"no_rpc": "Tidak ada endpoint RPC tersedia untuk jaringan saat ini",
+				"no_valid_tokens": "Tidak ada token valid yang dipilih untuk jaringan saat ini",
+				"no_balance": "Tidak ada dompet yang memiliki saldo untuk token yang dipilih",
+				"generate_failed": "Gagal generate alamat",
+				"import_failed": "Gagal mengimpor private key",
+				"scan_failed": "Gagal scan saldo"
+			},
+			"rate_limit": {
+				"title": "Semua Endpoint RPC Terkena Rate Limit",
+				"error_generic": "Scan dijeda: {reason}",
+				"error_native": "Rate limit terpicu saat scanning saldo token native (batch {batch}/{total})",
+				"error_erc20": "Rate limit terpicu saat scanning saldo token {token} (batch {batch}/{total})",
+				"hint": "💡 Silakan klik tombol di bawah untuk menambah endpoint RPC baru, atau tunggu RPC yang ada pulih sebelum mencoba lagi. Menambah beberapa RPC memungkinkan rotasi otomatis untuk menghindari rate limit yang sering.",
+				"recommend_prefix": "Direkomendasikan: Temukan endpoint RPC tersedia di",
+				"recommend_suffix": "",
+				"manage_rpc_button": "Kelola RPC",
+				"resume_button": "Lanjutkan Scan"
+			},
+			"dialogs": {
+				"remove_wallet_title": "Hapus Dompet",
+				"remove_wallet_message": "Apakah Anda yakin ingin menghapus dompet ini dari daftar impor?\n\nAlamat: {address}",
+				"remove_button": "Hapus",
+				"clear_all_title": "Hapus Semua Dompet",
+				"clear_all_message": "Apakah Anda yakin ingin menghapus semua {count} dompet dari daftar impor? Tindakan ini tidak dapat dibatalkan.",
+				"clear_all_button": "Hapus Semua",
+				"cancel_button": "Batal",
+				"long_press_hint": "⚠️ Tindakan ini tidak dapat dibatalkan. Silakan tekan tahan tombol selama 3 detik untuk konfirmasi"
+			},
+			"rpc_hint": {
+				"title": "Tambah Lebih Banyak RPC untuk Keandalan Lebih Baik",
+				"message": "Anda hanya memiliki 1 endpoint RPC yang dikonfigurasi. Menambah beberapa RPC memungkinkan rotasi otomatis saat rate limit terjadi, meningkatkan keandalan scan.",
+				"add_rpc_button": "Tambah RPC"
+			}
+		},
+		"footer": {
+			"continue_text": "Lanjut ke Konfirmasi",
+			"hint": "Silakan impor setidaknya satu dompet untuk melanjutkan",
+			"hint_scan_required": "Silakan scan saldo sebelum melanjutkan"
+		},
+		"sidebar": {
+			"title": "Dompet yang Diimpor",
+			"total_label": "Total:",
+			"with_balance_label": "Dengan Saldo:",
+			"scanning_label": "Scanning:",
+			"scan_status_label": "Status Scan:",
+			"scan_completed": "Selesai",
+			"scan_pending": "Menunggu",
+			"no_balance_found": "Tidak ditemukan saldo setelah scanning. Semua dompet memiliki saldo nol untuk token yang dipilih.",
+			"empty_hint": "Tidak ada dompet yang diimpor",
+			"performance_tip": {
+				"title": "⚡ Tip Performa",
+				"message": "Range besar akan meningkatkan waktu scanning",
+				"recommended": "Direkomendasikan:",
+				"recommended_range": "1.000 - 10.000 alamat"
+			},
+			"token_stats": {
+				"title": "Statistik Saldo Token",
+				"wallets_count": "{count} dompet",
+				"total_balance": "Total Saldo",
+				"download_title": "Download Laporan Excel"
+			},
+			"scan_log": {
+				"title": "Log Scan"
+			}
+		}
+	}
+}

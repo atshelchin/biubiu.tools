@@ -1,0 +1,470 @@
+{
+	"_meta": {
+		"code": "vi",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳"
+	},
+	"title": "Thu Gom Ví",
+	"description": "Chuyển số dư từ nhiều ví vào một địa chỉ",
+	"feature_1": "Thu gom toàn bộ số dư, không còn sót",
+	"feature_2": "Tự động hóa quy mô lớn, không cần xác nhận từng giao dịch",
+	"feature_3": "Không cần token gốc trong ví nguồn",
+	"feature_4": "Không cần quyền trên mọi chuỗi EVM",
+	"faqs": {
+		"what_is_network": "Mạng blockchain là gì?",
+		"network_explanation": "Mạng blockchain là hệ thống sổ cái công khai ghi lại ai sở hữu token nào và tất cả các giao dịch chuyển. Ethereum, BSC và Polygon là các sổ cái khác nhau, mỗi cái độc lập và riêng biệt.",
+		"what_is_wallet": "Ví là gì?",
+		"wallet_explanation": "Ví Web3 không phải là nơi lưu trữ tiền - mà là chìa khóa để quản lý tài khoản blockchain của bạn. Tiền của bạn được ghi trên sổ cái blockchain, và ví chứng minh bạn sở hữu tài khoản đó. Phổ biến: MetaMask, Coinbase Smart Wallet.",
+		"what_is_native_token": "Token gốc là gì?",
+		"native_token_explanation": "Token gốc được dùng để trả phí cho thợ đào xử lý giao dịch của bạn. Ethereum dùng ETH, BSC dùng BNB, Polygon dùng POL. Thợ đào ghi giao dịch của bạn lên sổ cái blockchain, và bạn trả họ khoản phí này.",
+		"what_is_eip7702": "EIP-7702 là gì?",
+		"eip7702_explanation": "Công nghệ tạm thời nâng cấp ví thông thường thành ví hợp đồng thông minh trong một giao dịch. Không cần triển khai thêm.",
+		"why_need_eip7702": "Tại sao cần EIP-7702?",
+		"why_need_eip7702_explanation": "Cho phép ví không có gas gửi token. Ví chính của bạn trả gas cho chúng, cho phép thu gom bằng một cú nhấp.",
+		"what_is_create2_proxy": "CREATE2 Proxy là gì?",
+		"create2_proxy_explanation": "Công cụ triển khai đảm bảo cùng địa chỉ hợp đồng trên tất cả các chuỗi. Cùng mã = cùng địa chỉ ở mọi nơi.",
+		"what_is_multicall3": "Multicall3 là gì?",
+		"multicall3_explanation": "Gộp nhiều cuộc gọi thành một. Tiết kiệm gas và thời gian. Thực thi tất-cả-hoặc-không-gì.",
+		"what_is_biubiu_premium": "BiuBiuPremium là gì?",
+		"biubiu_premium_explanation": "Hợp đồng thành viên quản lý đăng ký, giảm giá và quyền truy cập. Hoàn toàn mã nguồn mở.",
+		"what_is_wallet_sweep": "TokenSweep là gì?",
+		"wallet_sweep_explanation": "Hợp đồng cốt lõi cho chuyển khoản hàng loạt. Xử lý ủy quyền EIP-7702 và phê duyệt. Mã nguồn mở: https://github.com/atshelchin/biubiu-contracts",
+		"can_select_multiple_tokens": "Tôi có thể chọn nhiều token cùng lúc không?",
+		"can_select_multiple_tokens_explanation": "Có! Bạn có thể chọn bao nhiêu token tùy thích. Công cụ sẽ thu gom tất cả token đã chọn trong một thao tác hàng loạt, rất hiệu quả.",
+		"what_happens_zero_balance": "Điều gì xảy ra nếu ví có số dư bằng không cho một token?",
+		"what_happens_zero_balance_explanation": "Thông minh! Hệ thống tự động bỏ qua các ví có số dư bằng không cho token cụ thể đó. Điều này tiết kiệm chi phí gas bằng cách không thực hiện các giao dịch không cần thiết.",
+		"what_tokens_supported": "Những loại token nào được hỗ trợ?",
+		"what_tokens_supported_explanation": "Chúng tôi hỗ trợ cả token gốc (như ETH trên Ethereum, BNB trên BSC, MATIC trên Polygon) và tất cả token tiêu chuẩn ERC-20. Hầu hết các token bạn gặp đều hoạt động được.",
+		"how_add_custom_token": "Làm thế nào để thêm token tùy chỉnh?",
+		"how_add_custom_token_explanation": "Nhấp nút '+ Thêm Token', sau đó nhập địa chỉ hợp đồng của token. Hệ thống sẽ tự động lấy tên, ký hiệu và số thập phân của token từ blockchain."
+	},
+	"seo": {
+		"page_title": "Thu Gom Ví - Tập Hợp Token Từ Nhiều Ví | BiuBiu Tools",
+		"page_description": "Tập hợp token từ nhiều ví vào một điểm đến duy nhất. Hỗ trợ mạng Ethereum, Polygon, BSC, Arbitrum, Optimism và Base. Nhanh chóng, an toàn và tối ưu gas.",
+		"keywords": "thu gom ví, tập hợp token, chuyển ERC20, chuyển hàng loạt, công cụ crypto, công cụ web3, công cụ ethereum, công cụ polygon, công cụ DeFi",
+		"webapp_name": "Thu Gom Ví",
+		"webapp_description": "Tập hợp token từ nhiều ví vào một điểm đến duy nhất. Hỗ trợ mạng Ethereum, Polygon, BSC, Arbitrum, Optimism và Base.",
+		"feature_1": "Chuyển token ERC20 hàng loạt",
+		"feature_2": "Hỗ trợ đa mạng (Ethereum, Polygon, BSC, Arbitrum, Optimism, Base)",
+		"feature_3": "Tối ưu hóa gas",
+		"feature_4": "Tích hợp ví an toàn",
+		"feature_5": "Theo dõi giao dịch thời gian thực",
+		"howto_name": "Cách Tập Hợp Token Từ Nhiều Ví Với Thu Gom Ví",
+		"howto_description": "Hướng dẫn từng bước tập hợp token từ nhiều ví vào một điểm đến duy nhất sử dụng công cụ BiuBiu Thu Gom Ví.",
+		"howto_tool_1": "Ví Web3 (MetaMask, WalletConnect, v.v.)",
+		"howto_tool_2": "Token ERC20 để chuyển",
+		"step_1_name": "Kết Nối Ví Của Bạn",
+		"step_1_text": "Nhấp nút \"Kết Nối Ví\" và chọn nhà cung cấp ví Web3 ưa thích của bạn (MetaMask, WalletConnect, Coinbase Wallet, v.v.). Chấp nhận yêu cầu kết nối trong ví của bạn.",
+		"step_1_description": "Liên kết ví Web3 của bạn",
+		"step_2_name": "Kiểm Tra Phụ Thuộc",
+		"step_2_text": "Xác minh kết nối mạng blockchain và đảm bảo tất cả hợp đồng thông minh cần thiết đều có thể truy cập. Hệ thống sẽ tự động phát hiện và xác thực các thành phần cần thiết.",
+		"step_2_description": "Xác minh mạng và hợp đồng",
+		"step_3_name": "Chọn Token",
+		"step_3_text": "Chọn token ERC20 nào bạn muốn thu gom từ danh sách có sẵn. Bạn có thể chọn nhiều token để chuyển trong một thao tác hàng loạt.",
+		"step_3_description": "Chọn token để thu gom",
+		"step_4_name": "Nhập Ví",
+		"step_4_text": "Nhập địa chỉ ví nguồn chứa token bạn muốn thu gom. Bạn có thể thêm nhiều địa chỉ ví để thu thập token từ tất cả chúng.",
+		"step_4_description": "Thêm địa chỉ nguồn",
+		"step_5_name": "Xác Nhận Thu Gom",
+		"step_5_text": "Xem lại tóm tắt giao dịch bao gồm tổng token, phí gas và địa chỉ đích. Nhấp \"Thực Hiện Chuyển\" và xác nhận giao dịch trong ví của bạn. Đợi xác nhận blockchain và xem biên lai giao dịch.",
+		"step_5_description": "Xem lại và thực hiện"
+	},
+	"step1": {
+		"footer": {
+			"continue": "Tiếp Tục",
+			"hint": "Kết nối ví của bạn để tiếp tục"
+		},
+		"content": {
+			"title": "Chọn Mạng",
+			"description": "Kết nối ví để bắt đầu thu gom",
+			"loading": "Đang tải cấu hình mạng...",
+			"no_networks_enabled": "Không Có Mạng Nào Được Bật",
+			"enable_network_prompt": "Vui lòng bật ít nhất một mạng để tiếp tục.",
+			"open_network_settings": "Mở Cài Đặt Mạng",
+			"network_not_found": "Không tìm thấy mạng?",
+			"add_custom_network": "Thêm mạng tùy chỉnh"
+		},
+		"sidebar": {
+			"title": "Chọn Mạng & Kết Nối Ví",
+			"description": "Chọn mạng blockchain và kết nối ví của bạn để bắt đầu thu gom token.",
+			"what_is_this": "Bước này là gì?",
+			"what_explanation": "Bạn cần:",
+			"what_item1": "Chọn mạng blockchain (Ethereum, BSC, Polygon, v.v.)",
+			"what_item2": "Kết nối ví Web3 của bạn (MetaMask, v.v.)",
+			"why_do_this": "Tại sao làm điều này?",
+			"why_explanation": "Cho ứng dụng biết sử dụng mạng nào và vận hành tài sản của ví nào - cả hai đều cần thiết.",
+			"beginner_tips": "Mẹo",
+			"tip1": "✅ Đảm bảo bạn đã chọn đúng mạng (chọn nơi token của bạn đang ở)",
+			"tip2": "⛽ Đảm bảo bạn có đủ token gốc để trả phí",
+			"tip3": "🌍 Hỗ trợ mọi mạng tương thích EVM - bạn có thể thêm bất kỳ chuỗi nào",
+			"what_is_network": "Mạng blockchain là gì?",
+			"network_explanation": "Mạng blockchain là hệ thống sổ cái công khai ghi lại ai sở hữu token nào và tất cả các giao dịch chuyển. Ethereum, BSC và Polygon là các sổ cái khác nhau, mỗi cái độc lập và riêng biệt.",
+			"what_is_wallet": "Ví là gì?",
+			"wallet_explanation": "Ví Web3 không phải là nơi lưu trữ tiền - mà là chìa khóa để quản lý tài khoản blockchain của bạn. Tiền của bạn được ghi trên sổ cái blockchain, và ví chứng minh bạn sở hữu tài khoản đó. Phổ biến: MetaMask, Coinbase Smart Wallet.",
+			"what_is_native_token": "Token gốc là gì?",
+			"native_token_explanation": "Token gốc được dùng để trả phí cho thợ đào xử lý giao dịch của bạn. Ethereum dùng ETH, BSC dùng BNB, Polygon dùng POL. Thợ đào ghi giao dịch của bạn lên sổ cái blockchain, và bạn trả họ khoản phí này."
+		}
+	},
+	"step2": {
+		"content": {
+			"title": "Kiểm Tra Phụ Thuộc",
+			"description": "Đảm bảo cơ sở hạ tầng cần thiết đã sẵn sàng",
+			"checking_dependencies_for": "Đang kiểm tra môi trường mạng {network}...",
+			"wallet_not_connected_title": "Ví Chưa Kết Nối",
+			"wallet_not_connected_message": "Vui lòng quay lại Bước 1 và kết nối ví của bạn",
+			"go_to_step1": "Đến Bước 1",
+			"all_dependencies_satisfied": "Tất Cả Phụ Thuộc Đã Được Đáp Ứng",
+			"network_properly_configured": "Mạng của bạn đã được cấu hình đúng cho việc thu gom token",
+			"dependency_issues_found": "Phát Hiện Vấn Đề Phụ Thuộc",
+			"resolve_issues_before_continuing": "Vui lòng giải quyết các vấn đề trên trước khi tiếp tục",
+			"recheck_dependencies": "Kiểm Tra Lại Phụ Thuộc",
+			"address_label": "Địa chỉ:",
+			"endpoint_label": "Điểm cuối:",
+			"resolve_previous_issue": "Vui lòng giải quyết vấn đề trước đó trước",
+			"view_deployment_guide": "Xem Hướng Dẫn Triển Khai",
+			"deploy_coming_soon": "Triển Khai Hợp Đồng (Sắp Ra Mắt)",
+			"deploy_contract": "Triển Khai {contractName}",
+			"deployment": {
+				"modal_title": "Triển Khai {contractName}",
+				"start_deployment": "Bắt Đầu Triển Khai",
+				"deploying_contract": "Đang Triển Khai Hợp Đồng...",
+				"deployment_steps_heading": "Các Bước Triển Khai:",
+				"contract_address_label": "Địa Chỉ Hợp Đồng:",
+				"network_label": "Mạng:",
+				"waiting_for_signature": "⏳ Vui lòng xác nhận giao dịch trong ví của bạn...",
+				"transaction_sent": "⚡ Giao dịch đã gửi! Đang đợi xác nhận blockchain...",
+				"finalizing": "✅ Đang hoàn tất triển khai...",
+				"confirm_in_wallet": "Vui lòng xác nhận giao dịch trong ví của bạn",
+				"success_title": "Triển Khai Thành Công!",
+				"success_description": "Hợp đồng đã được triển khai thành công.",
+				"view_on_explorer": "Xem trên Explorer",
+				"error_title": "Triển Khai Thất Bại",
+				"errors": {
+					"init_failed": "Không thể khởi tạo cấu hình triển khai",
+					"wallet_not_connected": "Vui lòng kết nối ví của bạn trước",
+					"deployment_failed": "Không thể triển khai hợp đồng",
+					"metamask_cache": "MetaMask đã cache dữ liệu block cũ. Điều này xảy ra khi mạng thử nghiệm của bạn được đặt lại.",
+					"wallet_cache": "Lỗi cache ví. Vui lòng khởi động lại ví và thử lại.",
+					"metamask_internal": "Lỗi nội bộ MetaMask. Vui lòng thử:\n\n1. Xóa Dữ Liệu Tab Hoạt Động trong MetaMask\n   (Cài đặt → Nâng cao → Xóa dữ liệu tab hoạt động)\n\n2. Cập nhật điểm cuối RPC mạng\n\n3. Khởi động lại MetaMask\n\n4. Nếu triển khai Multicall3, đảm bảo CREATE2 Proxy được triển khai trước",
+					"wallet_internal": "Lỗi nội bộ ví. Vui lòng thử:\n\n1. Cập nhật điểm cuối RPC mạng\n\n2. Khởi động lại ví của bạn\n\n3. Nếu triển khai Multicall3, đảm bảo CREATE2 Proxy được triển khai trước",
+					"connection_failed": "Kết nối thất bại. Vui lòng kiểm tra:\n\n1. Ví của bạn đã mở khóa\n\n2. Kết nối mạng của bạn ổn định\n\nNếu vấn đề vẫn tiếp tục, thử cập nhật điểm cuối RPC mạng.",
+					"rpc_unavailable": "Dịch vụ RPC tạm thời không khả dụng. Điều này có thể do điểm cuối RPC được cấu hình trong ví của bạn có giới hạn tốc độ hoặc đang ngừng hoạt động.",
+					"insufficient_funds": "Số dư không đủ. Bạn cần đủ tiền cho triển khai và phí gas.",
+					"user_rejected": "Giao dịch đã bị từ chối trong ví của bạn.",
+					"already_deployed": "Hợp đồng này có thể đã được triển khai. Vui lòng làm mới kiểm tra phụ thuộc."
+				},
+				"steps": {
+					"create2": {
+						"fund_deployer_title": "Nạp Tiền Địa Chỉ Triển Khai",
+						"fund_deployer_description": "Gửi 0.01 ETH đến {address}",
+						"deploy_contract_title": "Triển Khai Hợp Đồng",
+						"deploy_contract_description": "Gửi giao dịch triển khai đã ký trước"
+					},
+					"via_create2": {
+						"deploy_title": "Triển Khai Hợp Đồng {contractName}",
+						"deploy_description": "Gửi giao dịch triển khai đến Proxy Triển Khai Xác Định"
+					}
+				}
+			},
+			"checks": {
+				"rpc_endpoint": {
+					"name": "Điểm Cuối RPC",
+					"description": "Kiểm tra xem điểm cuối RPC hiện tại có khả dụng không",
+					"chain_id_mismatch": "Chain ID không khớp: mong đợi {expected}, nhận được {actual}",
+					"connected_to_block": "Đã kết nối đến block #{blockNumber}",
+					"failed_to_connect": "Kết nối thất bại: {error}",
+					"no_rpc_configured": "Không có điểm cuối RPC được cấu hình cho mạng này",
+					"configure_rpc_button": "Cấu Hình RPC"
+				},
+				"eip7702": {
+					"name": "EIP-7702",
+					"description": "Kiểm tra xem mạng có hỗ trợ giao thức EIP-7702 không",
+					"supported": "Mạng hỗ trợ EIP-7702 (đã kiểm tra qua eth_estimateGas)",
+					"not_supported": "Mạng không hỗ trợ EIP-7702 (opcode không hợp lệ)",
+					"rpc_not_capable": "RPC hiện tại không hỗ trợ ghi đè trạng thái cho kiểm tra này. Thử điểm cuối RPC khác.",
+					"check_failed": "Không thể kiểm tra hỗ trợ EIP-7702: {error}"
+				},
+				"contract": {
+					"deployed": "Hợp đồng đã triển khai",
+					"not_deployed": "Hợp đồng chưa triển khai tại địa chỉ này",
+					"check_failed": "Không thể kiểm tra triển khai: {error}",
+					"create2_proxy_description": "Proxy triển khai xác định cho việc tạo hợp đồng",
+					"multicall3_description": "Gộp nhiều cuộc gọi hợp đồng vào một yêu cầu",
+					"biubiu_premium_description": "Xác minh trạng thái thành viên premium của người dùng trên nền tảng",
+					"wallet_sweep_description": "Thu thập hàng loạt token rải rác trên nhiều ví",
+					"biubiu_membership_description": "Hợp đồng thành viên nền tảng Biubiu",
+					"wallet_sweep_contract_description": "Hợp đồng chính cho các hoạt động chuyển token hàng loạt"
+				},
+				"category": {
+					"network": "Mạng",
+					"protocol": "Giao Thức",
+					"contract": "Hợp Đồng"
+				}
+			}
+		},
+		"footer": {
+			"checking_dependencies": "Đang kiểm tra phụ thuộc...",
+			"resolve_issues": "Vui lòng giải quyết tất cả vấn đề phụ thuộc để tiếp tục",
+			"waiting_for_checks": "Đang đợi kiểm tra phụ thuộc..."
+		},
+		"sidebar": {
+			"beginner_tips": "Mẹo",
+			"tip1": "🔍 Hệ thống tự động kiểm tra xem các hợp đồng cần thiết đã được triển khai chưa",
+			"tip2": "🚀 Nếu một hợp đồng bị thiếu, bạn có thể triển khai trực tiếp từ trang này",
+			"tip3": "📋 Phải giải quyết các vấn đề phụ thuộc theo thứ tự - sửa kiểm tra thất bại đầu tiên trước các kiểm tra khác"
+		}
+	},
+	"step3": {
+		"content": {
+			"title": "Chọn Token",
+			"description": "Chọn token để thu gom trên mạng {network}",
+			"description_fallback": "Chọn token để thu gom trên mạng này",
+			"wallet_not_connected_title": "Ví Chưa Kết Nối",
+			"wallet_not_connected_message": "Vui lòng quay lại Bước 1 và kết nối ví của bạn",
+			"empty_message": "Không có token khả dụng. Thêm token tùy chỉnh để bắt đầu."
+		},
+		"footer": {
+			"hint": "Vui lòng chọn ít nhất một token để tiếp tục"
+		},
+		"sidebar": {
+			"title": "Chọn Token",
+			"description": "Chọn token nào để thu gom",
+			"selected_tokens_title": "Token Đã Chọn",
+			"count_label": "Số lượng:",
+			"empty_hint": "Chưa chọn token nào",
+			"beginner_tips": "Mẹo",
+			"tip1": "✅ Bạn có thể chọn nhiều token để thu gom tất cả trong một thao tác hàng loạt",
+			"tip2": "⚡ Ví có số dư bằng không cho token sẽ tự động bị bỏ qua - tiết kiệm chi phí gas",
+			"tip3": "🪙 Hỗ trợ cả token gốc (ETH, BNB, v.v.) và token ERC-20"
+		}
+	},
+	"step5": {
+		"target_address_label": "Địa Chỉ Đích",
+		"target_address_hint": "Token sẽ được thu gom vào địa chỉ ví đã kết nối của bạn",
+		"content": {
+			"title": "Xác Nhận Thu Gom",
+			"description": "Xem lại cấu hình và thực hiện thu gom tài sản",
+			"selected_network_tokens": "Mạng & Token Đã Chọn ({count})",
+			"ready_to_execute": "Sẵn sàng thực hiện",
+			"review_carefully": "Vui lòng xem lại kỹ tất cả thông tin trước khi tiếp tục.",
+			"progress": {
+				"preparing": "⏳ Đang chuẩn bị...",
+				"building": "🔧 Đang xây dựng giao dịch...",
+				"executing": "⚡ Đang thực hiện thu gom...",
+				"confirming": "⏰ Đang xác nhận giao dịch...",
+				"completed": "✅ Hoàn thành!",
+				"error": "❌ Lỗi",
+				"batch": "Lô {current} / {total}",
+				"wallet": "Ví {current} / {total}",
+				"results": "Kết quả ({count}):"
+			},
+			"estimate": {
+				"title": "📊 Ước Tính Chi Phí",
+				"total_transactions": "Tổng Giao Dịch:",
+				"estimated_gas": "Gas Ước Tính:",
+				"estimated_cost": "Chi Phí Ước Tính:",
+				"gas_units": "{amount} đơn vị",
+				"cost_eth": "{amount} ETH"
+			},
+			"actions": {
+				"estimate_cost": "💰 Ước Tính Chi Phí",
+				"estimating": "Đang ước tính...",
+				"execute_sweep": "⚡ Thực Hiện Thu Gom",
+				"executing": "Đang thực hiện..."
+			},
+			"errors": {
+				"no_network": "Không có mạng nào kết nối",
+				"no_rpc": "Không có điểm cuối RPC khả dụng",
+				"complete_fields": "Vui lòng hoàn thành tất cả các trường bắt buộc",
+				"invalid_address": "Địa chỉ đích không hợp lệ",
+				"select_tokens": "Vui lòng chọn ít nhất một token ở Bước 3",
+				"import_wallets": "Vui lòng nhập ít nhất một ví ở Bước 4",
+				"connect_wallet": "Vui lòng kết nối ví của bạn trước",
+				"no_balance": "Không có ví nào có số dư để thu gom. Vui lòng quét số dư trước ở Bước 4.",
+				"insufficient_gas": "Ví tạm thời không đủ gas! Cần {required} {symbol}, nhưng chỉ có {current} {symbol}. Vui lòng nạp thêm và nhấp nút bên dưới để tiếp tục.",
+				"still_insufficient_gas": "Ví tạm thời vẫn không đủ gas. Vui lòng tiếp tục nạp thêm."
+			},
+			"gas_insufficient_title": "⛽ Không Đủ Gas",
+			"gas_insufficient_message": "Số dư ví tạm thời không đủ để chi trả phí gas ước tính. Cần {required} {symbol}, nhưng chỉ có {current} {symbol}. Vui lòng sử dụng tính năng [Nạp Gas cho Ví] ở trên để chuyển tiền vào ví tạm thời, sau đó nhấp nút bên dưới để tiếp tục.",
+			"check_and_resume": "Kiểm Tra Số Dư và Tiếp Tục",
+			"gas_refilled_restart": "Đã nạp gas! Số dư hiện tại: {balance} ETH. Vui lòng nhấp lại nút [Thực Hiện Thu Gom] để bắt đầu."
+		},
+		"sidebar": {
+			"summary_title": "Tóm Tắt",
+			"selected_tokens": "Token Đã Chọn:",
+			"total_wallets": "Tổng Ví:",
+			"with_balance": "Có Số Dư:",
+			"batches": "Lô"
+		}
+	},
+	"temporary_wallet": {
+		"title": "Ví Tạm Thời",
+		"description": "Tạo ví tạm thời ngẫu nhiên để tự động hóa giao dịch hàng loạt. Ví sẽ chỉ được lưu trong phiên trình duyệt của bạn.",
+		"important": "Quan Trọng",
+		"warning_text": "Ví tạm thời sẽ được tạo trong trình duyệt của bạn. Bạn sẽ cần:",
+		"step_download": "Tải xuống khóa riêng để sao lưu",
+		"step_fund": "Nạp <strong>{amount} {symbol}</strong> cho phí gas",
+		"step_clear": "Xóa sau khi hoàn thành công việc",
+		"btn_create": "Tạo Ví Tạm Thời",
+		"creating": "Đang tạo...",
+		"wallet_ready": "Ví Đã Sẵn Sàng",
+		"created_at": "Đã tạo: {time}",
+		"address": "Địa Chỉ",
+		"balance": "Số Dư (Mạng Hiện Tại)",
+		"loading": "Đang tải...",
+		"private_key": "Khóa Riêng",
+		"show": "Hiện",
+		"hide": "Ẩn",
+		"copy_address": "Sao chép địa chỉ",
+		"copy_private_key": "Sao chép khóa riêng",
+		"show_qr": "Hiện Mã QR",
+		"refresh_balance": "Làm mới số dư",
+		"qr_hint": "Quét để gửi gas đến ví tạm thời này",
+		"fund_title": "Nạp Gas cho Ví",
+		"estimated_gas": "Gas ước tính cần: {amount} {symbol}",
+		"suggested_amount": "💰 Số tiền đề xuất: <strong>{amount} {symbol}</strong> (2x ước tính)",
+		"amount_placeholder": "Số tiền gửi",
+		"btn_send": "Gửi từ Ví Đã Kết Nối",
+		"sending": "Đang gửi...",
+		"tip": "💡 Mẹo: Số tiền đề xuất (2x ước tính) được tự động điền để đảm bảo đủ tiền. Bạn cũng có thể quét mã QR để gửi từ bất kỳ ví nào.",
+		"btn_download": "Tải Xuống Khóa Riêng",
+		"btn_clear": "Xóa Ví",
+		"error_no_wallet": "Vui lòng kết nối ví của bạn trước",
+		"error_invalid_amount": "Vui lòng nhập số tiền hợp lệ",
+		"success_transfer": "✅ Chuyển thành công! Đã gửi {amount} {symbol} đến ví tạm thời. TX: {tx}...",
+		"confirm_clear": "Bạn có chắc muốn xóa ví tạm thời? Hãy đảm bảo bạn đã tải xuống khóa riêng nếu cần."
+	},
+	"step4": {
+		"import_method": {
+			"mnemonic": {
+				"label": "Cụm Từ Gợi Nhớ",
+				"desc": "Tạo địa chỉ hàng loạt"
+			},
+			"private_key": {
+				"label": "Khóa Riêng",
+				"desc": "Nhập từng cái"
+			}
+		},
+		"content": {
+			"title": "Nhập Ví",
+			"description": "Thêm ví nguồn mà bạn muốn thu gom tài sản",
+			"choose_method": "Chọn Phương Thức Nhập",
+			"import_wallets_button": "Nhập Ví",
+			"mnemonic": {
+				"label": "Nhập Cụm Từ Gợi Nhớ",
+				"placeholder": "Nhập 12 hoặc 24 từ cách nhau bằng dấu cách",
+				"security_hint": "🔒 Cụm từ gợi nhớ được xử lý cục bộ trong trình duyệt của bạn, không bao giờ gửi đến bất kỳ máy chủ nào",
+				"derivation_path": "Cấu Hình Đường Dẫn Dẫn Xuất",
+				"generate_button": "🔍 Tạo Danh Sách Địa Chỉ",
+				"generating": "Đang tạo... ({progress}%)",
+				"error_empty": "Vui lòng nhập cụm từ gợi nhớ",
+				"error_invalid": "Cụm từ gợi nhớ không hợp lệ. Vui lòng nhập 12 hoặc 24 từ.",
+				"error_range": "Phạm vi địa chỉ không hợp lệ",
+				"error_max": "Phạm vi quá lớn (tối đa 10000 địa chỉ mỗi lần)"
+			},
+			"private_key": {
+				"label": "Nhập Khóa Riêng Hàng Loạt",
+				"placeholder": "Mỗi khóa riêng một dòng (bắt đầu bằng 0x)",
+				"upload_file": "Tải Lên Tệp",
+				"column_label": "Khóa Riêng",
+				"address_label": "Địa Chỉ",
+				"import_button": "➕ Thêm Ví Hàng Loạt",
+				"importing": "Đang nhập... ({progress}%)",
+				"error_empty": "Vui lòng nhập khóa riêng",
+				"error_none": "Không tìm thấy khóa riêng hợp lệ",
+				"success_with_invalid": "Đã nhập {valid} ví. Bỏ qua {invalid} khóa không hợp lệ.",
+				"invalid_keys_found": "Tìm thấy {count} khóa riêng không hợp lệ",
+				"locate": "Định vị",
+				"locate_key": "Nhấp để định vị lỗi trong trình soạn thảo",
+				"error_key_not_found": "Lỗi: Khóa riêng đã bị sửa đổi hoặc xóa",
+				"manual_search": "Vui lòng tìm kiếm thủ công dòng {line}",
+				"security_hint": "🔒 Khóa riêng được xử lý cục bộ trong trình duyệt của bạn, không bao giờ gửi đến bất kỳ máy chủ nào"
+			},
+			"wallet_list": {
+				"title": "Ví Đã Nhập",
+				"count": "({count})",
+				"with_balance": "{count} có số dư",
+				"scan_button": "Quét Số Dư",
+				"scanning": "Đang quét... {progress}%",
+				"scan_completed": "Quét Hoàn Tất",
+				"scan_hint": "Quét số dư là bắt buộc trước khi tiếp tục bước tiếp theo",
+				"clear_all": "Xóa Tất Cả",
+				"empty_message": "Chưa nhập ví nào. Sử dụng các phương thức ở trên để nhập ví."
+			},
+			"scan_section": {
+				"title": "Quét Số Dư",
+				"required": "Bắt Buộc"
+			},
+			"errors": {
+				"no_network": "Không có mạng nào kết nối",
+				"no_wallets": "Không có ví để quét",
+				"no_tokens": "Vui lòng chọn token ở Bước 3 trước",
+				"no_rpc": "Không có điểm cuối RPC khả dụng cho mạng hiện tại",
+				"no_valid_tokens": "Không có token hợp lệ được chọn cho mạng hiện tại",
+				"no_balance": "Không có ví nào có số dư cho các token đã chọn",
+				"generate_failed": "Không thể tạo địa chỉ",
+				"import_failed": "Không thể nhập khóa riêng",
+				"scan_failed": "Không thể quét số dư"
+			},
+			"rate_limit": {
+				"title": "Tất Cả Điểm Cuối RPC Bị Giới Hạn Tốc Độ",
+				"error_generic": "Quét tạm dừng: {reason}",
+				"error_native": "Đạt giới hạn tốc độ khi quét số dư token gốc (lô {batch}/{total})",
+				"error_erc20": "Đạt giới hạn tốc độ khi quét số dư token {token} (lô {batch}/{total})",
+				"hint": "💡 Vui lòng nhấp nút bên dưới để thêm điểm cuối RPC mới, hoặc đợi các RPC hiện có phục hồi trước khi thử lại. Thêm nhiều RPC cho phép xoay vòng tự động để tránh giới hạn tốc độ thường xuyên.",
+				"recommend_prefix": "Đề xuất: Tìm điểm cuối RPC khả dụng tại",
+				"recommend_suffix": "",
+				"manage_rpc_button": "Quản Lý RPC",
+				"resume_button": "Tiếp Tục Quét"
+			},
+			"dialogs": {
+				"remove_wallet_title": "Xóa Ví",
+				"remove_wallet_message": "Bạn có chắc muốn xóa ví này khỏi danh sách nhập?\n\nĐịa chỉ: {address}",
+				"remove_button": "Xóa",
+				"clear_all_title": "Xóa Tất Cả Ví",
+				"clear_all_message": "Bạn có chắc muốn xóa tất cả {count} ví khỏi danh sách nhập? Hành động này không thể hoàn tác.",
+				"clear_all_button": "Xóa Tất Cả",
+				"cancel_button": "Hủy",
+				"long_press_hint": "⚠️ Hành động này không thể hoàn tác. Vui lòng nhấn giữ nút trong 3 giây để xác nhận"
+			},
+			"rpc_hint": {
+				"title": "Thêm Nhiều RPC để Đáng Tin Cậy Hơn",
+				"message": "Bạn chỉ có 1 điểm cuối RPC được cấu hình. Thêm nhiều RPC cho phép xoay vòng tự động khi đạt giới hạn tốc độ, cải thiện độ tin cậy quét.",
+				"add_rpc_button": "Thêm RPC"
+			}
+		},
+		"footer": {
+			"continue_text": "Tiếp Tục Xác Nhận",
+			"hint": "Vui lòng nhập ít nhất một ví để tiếp tục",
+			"hint_scan_required": "Vui lòng quét số dư trước khi tiếp tục"
+		},
+		"sidebar": {
+			"title": "Ví Đã Nhập",
+			"total_label": "Tổng:",
+			"with_balance_label": "Có Số Dư:",
+			"scanning_label": "Đang Quét:",
+			"scan_status_label": "Trạng Thái Quét:",
+			"scan_completed": "Hoàn Thành",
+			"scan_pending": "Đang Chờ",
+			"no_balance_found": "Không tìm thấy số dư sau khi quét. Tất cả ví có số dư bằng không cho các token đã chọn.",
+			"empty_hint": "Chưa nhập ví nào",
+			"performance_tip": {
+				"title": "⚡ Mẹo Hiệu Suất",
+				"message": "Phạm vi lớn sẽ tăng thời gian quét",
+				"recommended": "Đề xuất:",
+				"recommended_range": "1.000 - 10.000 địa chỉ"
+			},
+			"token_stats": {
+				"title": "Thống Kê Số Dư Token",
+				"wallets_count": "{count} ví",
+				"total_balance": "Tổng Số Dư",
+				"download_title": "Tải Báo Cáo Excel"
+			},
+			"scan_log": {
+				"title": "Nhật Ký Quét"
+			}
+		}
+	}
+}

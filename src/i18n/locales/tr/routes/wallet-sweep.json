@@ -1,0 +1,470 @@
+{
+	"_meta": {
+		"code": "tr",
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷"
+	},
+	"title": "Cüzdan Toplama",
+	"description": "Birden fazla cüzdandan bakiyeleri tek bir adrese aktar",
+	"feature_1": "Tam bakiye toplama, sıfır kalıntı",
+	"feature_2": "Büyük ölçekli otomasyon, işlem başına onay yok",
+	"feature_3": "Kaynak cüzdanlarda yerel token gerekmiyor",
+	"feature_4": "Herhangi bir EVM zincirinde izinsiz çalışır",
+	"faqs": {
+		"what_is_network": "Blockchain ağı nedir?",
+		"network_explanation": "Blockchain ağı, kimin hangi tokenlara sahip olduğunu ve tüm transferleri kaydeden halka açık bir defter sistemidir. Ethereum, BSC ve Polygon farklı defterlerdir, her biri bağımsız ve ayrıdır.",
+		"what_is_wallet": "Cüzdan nedir?",
+		"wallet_explanation": "Web3 cüzdanı paranın depolandığı yer değildir - blockchain hesabınızı yönetmek için anahtardır. Fonlarınız blockchain defterinde kaydedilir ve cüzdan hesabın sahibi olduğunuzu kanıtlar. Popüler: MetaMask, Coinbase Smart Wallet.",
+		"what_is_native_token": "Yerel token nedir?",
+		"native_token_explanation": "Yerel tokenlar, işlemlerinizi işleyen madencilere ödeme yapmak için kullanılır. Ethereum ETH, BSC BNB, Polygon POL kullanır. Madenciler işleminizi blockchain defterine kaydeder ve siz onlara bu ücreti ödersiniz.",
+		"what_is_eip7702": "EIP-7702 nedir?",
+		"eip7702_explanation": "Bir işlem sırasında normal cüzdanları geçici olarak akıllı sözleşme cüzdanlarına yükselten teknoloji. Ekstra dağıtım gerekmez.",
+		"why_need_eip7702": "Neden EIP-7702 gerekli?",
+		"why_need_eip7702_explanation": "Gas parası olmayan cüzdanların token göndermesine izin verir. Ana cüzdanınız onlar için gas öder, tek tıkla toplama sağlar.",
+		"what_is_create2_proxy": "CREATE2 Proxy nedir?",
+		"create2_proxy_explanation": "Tüm zincirlerde aynı sözleşme adresini sağlayan dağıtım aracı. Aynı kod = her yerde aynı adres.",
+		"what_is_multicall3": "Multicall3 nedir?",
+		"multicall3_explanation": "Birden fazla çağrıyı tek bir çağrıda toplar. Gas ve zaman tasarrufu sağlar. Ya hep ya hiç yürütme.",
+		"what_is_biubiu_premium": "BiuBiuPremium nedir?",
+		"biubiu_premium_explanation": "Abonelikleri, indirimleri ve erişimi yöneten üyelik sözleşmesi. Tamamen açık kaynak.",
+		"what_is_wallet_sweep": "TokenSweep nedir?",
+		"wallet_sweep_explanation": "Toplu transferler için temel sözleşme. EIP-7702 yetkisini ve onayları yönetir. Açık kaynak: https://github.com/atshelchin/biubiu-contracts",
+		"can_select_multiple_tokens": "Aynı anda birden fazla token seçebilir miyim?",
+		"can_select_multiple_tokens_explanation": "Evet! İstediğiniz kadar token seçebilirsiniz. Araç, tüm seçili tokenleri tek bir toplu işlemde toplayarak çok verimli hale getirir.",
+		"what_happens_zero_balance": "Bir cüzdanın token bakiyesi sıfırsa ne olur?",
+		"what_happens_zero_balance_explanation": "Akıllıca! Sistem, belirli bir token için sıfır bakiyesi olan cüzdanları otomatik olarak atlar. Bu, gereksiz transferleri yürütmeyerek gas maliyetlerinden tasarruf sağlar.",
+		"what_tokens_supported": "Hangi token türleri desteklenir?",
+		"what_tokens_supported_explanation": "Hem yerel tokenleri (Ethereum'da ETH, BSC'de BNB, Polygon'da MATIC gibi) hem de tüm ERC-20 standart tokenleri destekliyoruz. Karşılaştığınız çoğu token çalışacaktır.",
+		"how_add_custom_token": "Özel token nasıl eklenir?",
+		"how_add_custom_token_explanation": "'+ Token Ekle' düğmesine tıklayın, ardından tokenın sözleşme adresini girin. Sistem, tokenın adını, sembolünü ve ondalık sayısını blockchain'den otomatik olarak alacaktır."
+	},
+	"seo": {
+		"page_title": "Cüzdan Toplama - Birden Fazla Cüzdandan Token Birleştirme | BiuBiu Tools",
+		"page_description": "Birden fazla cüzdandan tokenleri tek bir hedefe birleştirin. Ethereum, Polygon, BSC, Arbitrum, Optimism ve Base ağları desteği. Hızlı, güvenli ve gas optimizasyonlu.",
+		"keywords": "cüzdan toplama, token birleştirme, ERC20 transfer, toplu transfer, kripto araçları, web3 araçları, ethereum araçları, polygon araçları, DeFi araçları",
+		"webapp_name": "Cüzdan Toplama",
+		"webapp_description": "Birden fazla cüzdandan tokenleri tek bir hedefe birleştirin. Ethereum, Polygon, BSC, Arbitrum, Optimism ve Base ağları desteği.",
+		"feature_1": "ERC20 tokenleri toplu transfer et",
+		"feature_2": "Çoklu ağ desteği (Ethereum, Polygon, BSC, Arbitrum, Optimism, Base)",
+		"feature_3": "Gas optimizasyonu",
+		"feature_4": "Güvenli cüzdan entegrasyonu",
+		"feature_5": "Gerçek zamanlı işlem takibi",
+		"howto_name": "Cüzdan Toplama ile Birden Fazla Cüzdandan Tokenleri Nasıl Birleştirirsiniz",
+		"howto_description": "BiuBiu Cüzdan Toplama aracını kullanarak birden fazla cüzdandan tokenleri tek bir hedefe birleştirmek için adım adım kılavuz.",
+		"howto_tool_1": "Web3 Cüzdanı (MetaMask, WalletConnect, vb.)",
+		"howto_tool_2": "Transfer edilecek ERC20 Tokenler",
+		"step_1_name": "Cüzdanınızı Bağlayın",
+		"step_1_text": "\"Cüzdan Bağla\" düğmesine tıklayın ve tercih ettiğiniz Web3 cüzdan sağlayıcısını seçin (MetaMask, WalletConnect, Coinbase Wallet, vb.). Cüzdanınızda bağlantı isteğini onaylayın.",
+		"step_1_description": "Web3 cüzdanınızı bağlayın",
+		"step_2_name": "Bağımlılıkları Kontrol Et",
+		"step_2_text": "Blockchain ağ bağlantısını doğrulayın ve gerekli tüm akıllı sözleşmelerin erişilebilir olduğundan emin olun. Sistem gerekli bileşenleri otomatik olarak algılayacak ve doğrulayacaktır.",
+		"step_2_description": "Ağ ve sözleşmeleri doğrula",
+		"step_3_name": "Tokenleri Seç",
+		"step_3_text": "Mevcut listeden hangi ERC20 tokenlerini toplamak istediğinizi seçin. Tek bir toplu işlemde transfer etmek için birden fazla token seçebilirsiniz.",
+		"step_3_description": "Toplanacak tokenleri seç",
+		"step_4_name": "Cüzdanları İçe Aktar",
+		"step_4_text": "Toplamak istediğiniz tokenleri içeren kaynak cüzdan adreslerini içe aktarın. Hepsinden token toplamak için birden fazla cüzdan adresi ekleyebilirsiniz.",
+		"step_4_description": "Kaynak adresleri ekle",
+		"step_5_name": "Toplamayı Onayla",
+		"step_5_text": "Toplam tokenler, gas ücretleri ve hedef adres dahil işlem özetini inceleyin. \"Transferi Yürüt\" düğmesine tıklayın ve cüzdanınızda işlemi onaylayın. Blockchain onayını bekleyin ve işlem makbuzunu görüntüleyin.",
+		"step_5_description": "İncele ve yürüt"
+	},
+	"step1": {
+		"footer": {
+			"continue": "Devam Et",
+			"hint": "Devam etmek için cüzdanınızı bağlayın"
+		},
+		"content": {
+			"title": "Ağ Seçin",
+			"description": "Toplama başlatmak için cüzdan bağlayın",
+			"loading": "Ağ yapılandırması yükleniyor...",
+			"no_networks_enabled": "Etkin Ağ Yok",
+			"enable_network_prompt": "Devam etmek için lütfen en az bir ağı etkinleştirin.",
+			"open_network_settings": "Ağ Ayarlarını Aç",
+			"network_not_found": "Ağ bulunamadı mı?",
+			"add_custom_network": "Özel ağ ekle"
+		},
+		"sidebar": {
+			"title": "Ağ Seç ve Cüzdan Bağla",
+			"description": "Token toplamaya başlamak için bir blockchain ağı seçin ve cüzdanınızı bağlayın.",
+			"what_is_this": "Bu adım nedir?",
+			"what_explanation": "Yapmanız gerekenler:",
+			"what_item1": "Bir blockchain ağı seçin (Ethereum, BSC, Polygon, vb.)",
+			"what_item2": "Web3 cüzdanınızı bağlayın (MetaMask, vb.)",
+			"why_do_this": "Neden bunu yapmalı?",
+			"why_explanation": "Uygulamaya hangi ağı kullanacağını ve hangi cüzdanın varlıklarını işleteceğini söyleyin - ikisi de gerekli.",
+			"beginner_tips": "İpuçları",
+			"tip1": "✅ Doğru ağı seçtiğinizden emin olun (tokenlerinizin bulunduğu yeri seçin)",
+			"tip2": "⛽ Ücretleri ödemek için yeterli yerel tokenınız olduğundan emin olun",
+			"tip3": "🌍 Herhangi bir EVM uyumlu ağı destekler - herhangi bir zincir ekleyebilirsiniz",
+			"what_is_network": "Blockchain ağı nedir?",
+			"network_explanation": "Blockchain ağı, kimin hangi tokenlara sahip olduğunu ve tüm transferleri kaydeden halka açık bir defter sistemidir. Ethereum, BSC ve Polygon farklı defterlerdir, her biri bağımsız ve ayrıdır.",
+			"what_is_wallet": "Cüzdan nedir?",
+			"wallet_explanation": "Web3 cüzdanı paranın depolandığı yer değildir - blockchain hesabınızı yönetmek için anahtardır. Fonlarınız blockchain defterinde kaydedilir ve cüzdan hesabın sahibi olduğunuzu kanıtlar. Popüler: MetaMask, Coinbase Smart Wallet.",
+			"what_is_native_token": "Yerel token nedir?",
+			"native_token_explanation": "Yerel tokenlar, işlemlerinizi işleyen madencilere ödeme yapmak için kullanılır. Ethereum ETH, BSC BNB, Polygon POL kullanır. Madenciler işleminizi blockchain defterine kaydeder ve siz onlara bu ücreti ödersiniz."
+		}
+	},
+	"step2": {
+		"content": {
+			"title": "Bağımlılık Kontrolü",
+			"description": "Gerekli altyapının hazır olduğundan emin olun",
+			"checking_dependencies_for": "{network} ağ ortamı kontrol ediliyor...",
+			"wallet_not_connected_title": "Cüzdan Bağlı Değil",
+			"wallet_not_connected_message": "Lütfen 1. Adıma geri dönün ve cüzdanınızı bağlayın",
+			"go_to_step1": "1. Adıma Git",
+			"all_dependencies_satisfied": "Tüm Bağımlılıklar Karşılandı",
+			"network_properly_configured": "Ağınız token toplama için düzgün yapılandırılmış",
+			"dependency_issues_found": "Bağımlılık Sorunları Bulundu",
+			"resolve_issues_before_continuing": "Devam etmeden önce lütfen yukarıdaki sorunları çözün",
+			"recheck_dependencies": "Bağımlılıkları Yeniden Kontrol Et",
+			"address_label": "Adres:",
+			"endpoint_label": "Uç Nokta:",
+			"resolve_previous_issue": "Lütfen önce önceki sorunu çözün",
+			"view_deployment_guide": "Dağıtım Kılavuzunu Görüntüle",
+			"deploy_coming_soon": "Sözleşme Dağıt (Yakında)",
+			"deploy_contract": "{contractName} Dağıt",
+			"deployment": {
+				"modal_title": "{contractName} Dağıt",
+				"start_deployment": "Dağıtımı Başlat",
+				"deploying_contract": "Sözleşme Dağıtılıyor...",
+				"deployment_steps_heading": "Dağıtım Adımları:",
+				"contract_address_label": "Sözleşme Adresi:",
+				"network_label": "Ağ:",
+				"waiting_for_signature": "⏳ Lütfen cüzdanınızda işlemi onaylayın...",
+				"transaction_sent": "⚡ İşlem gönderildi! Blockchain onayı bekleniyor...",
+				"finalizing": "✅ Dağıtım tamamlanıyor...",
+				"confirm_in_wallet": "Lütfen cüzdanınızda işlemleri onaylayın",
+				"success_title": "Dağıtım Başarılı!",
+				"success_description": "Sözleşme başarıyla dağıtıldı.",
+				"view_on_explorer": "Gezginde Görüntüle",
+				"error_title": "Dağıtım Başarısız",
+				"errors": {
+					"init_failed": "Dağıtım yapılandırması başlatılamadı",
+					"wallet_not_connected": "Lütfen önce cüzdanınızı bağlayın",
+					"deployment_failed": "Sözleşme dağıtılamadı",
+					"metamask_cache": "MetaMask eski blok verilerini önbelleğe aldı. Bu, test ağınız sıfırlandığında olur.",
+					"wallet_cache": "Cüzdan önbellek hatası. Lütfen cüzdanınızı yeniden başlatın ve tekrar deneyin.",
+					"metamask_internal": "MetaMask iç hatası. Lütfen deneyin:\n\n1. MetaMask'ta Etkinlik Sekmesi Verilerini Temizle\n   (Ayarlar → Gelişmiş → Etkinlik sekmesi verilerini temizle)\n\n2. Ağ RPC uç noktasını güncelleyin\n\n3. MetaMask'ı yeniden başlatın\n\n4. Multicall3 dağıtıyorsanız, önce CREATE2 Proxy'nin dağıtıldığından emin olun",
+					"wallet_internal": "Cüzdan iç hatası. Lütfen deneyin:\n\n1. Ağ RPC uç noktasını güncelleyin\n\n2. Cüzdanınızı yeniden başlatın\n\n3. Multicall3 dağıtıyorsanız, önce CREATE2 Proxy'nin dağıtıldığından emin olun",
+					"connection_failed": "Bağlantı başarısız. Lütfen kontrol edin:\n\n1. Cüzdanınızın kilidi açık\n\n2. Ağ bağlantınız stabil\n\nSorun devam ederse, ağ RPC uç noktasını güncellemeyi deneyin.",
+					"rpc_unavailable": "RPC hizmeti geçici olarak kullanılamıyor. Bu muhtemelen cüzdanınızda yapılandırılmış RPC uç noktasının hız sınırları olduğu veya çalışmadığı içindir.",
+					"insufficient_funds": "Yetersiz bakiye. Dağıtım ve gas ücretleri için yeterli fonunuz olmalı.",
+					"user_rejected": "İşlem cüzdanınızda reddedildi.",
+					"already_deployed": "Bu sözleşme zaten dağıtılmış olabilir. Lütfen bağımlılık kontrolünü yenileyin."
+				},
+				"steps": {
+					"create2": {
+						"fund_deployer_title": "Dağıtıcı Adresini Fonla",
+						"fund_deployer_description": "{address} adresine 0.01 ETH gönderin",
+						"deploy_contract_title": "Sözleşmeyi Dağıt",
+						"deploy_contract_description": "Önceden imzalanmış dağıtım işlemini gönderin"
+					},
+					"via_create2": {
+						"deploy_title": "{contractName} Sözleşmesini Dağıt",
+						"deploy_description": "Deterministik Dağıtım Proxy'sine dağıtım işlemi gönderin"
+					}
+				}
+			},
+			"checks": {
+				"rpc_endpoint": {
+					"name": "RPC Uç Noktası",
+					"description": "Mevcut RPC uç noktasının kullanılabilir olup olmadığını kontrol edin",
+					"chain_id_mismatch": "Zincir ID uyuşmazlığı: beklenen {expected}, alınan {actual}",
+					"connected_to_block": "#{blockNumber} bloğuna bağlı",
+					"failed_to_connect": "Bağlantı başarısız: {error}",
+					"no_rpc_configured": "Bu ağ için yapılandırılmış RPC uç noktası yok",
+					"configure_rpc_button": "RPC Yapılandır"
+				},
+				"eip7702": {
+					"name": "EIP-7702",
+					"description": "Ağın EIP-7702 protokolünü destekleyip desteklemediğini kontrol edin",
+					"supported": "Ağ EIP-7702'yi destekliyor (eth_estimateGas ile test edildi)",
+					"not_supported": "Ağ EIP-7702'yi desteklemiyor (geçersiz opcode)",
+					"rpc_not_capable": "Mevcut RPC bu kontrol için durum geçersiz kılmayı desteklemiyor. Farklı bir RPC uç noktası deneyin.",
+					"check_failed": "EIP-7702 desteği kontrol edilemedi: {error}"
+				},
+				"contract": {
+					"deployed": "Sözleşme dağıtıldı",
+					"not_deployed": "Sözleşme bu adreste dağıtılmamış",
+					"check_failed": "Dağıtım kontrol edilemedi: {error}",
+					"create2_proxy_description": "Sözleşme oluşturma için deterministik dağıtım proxy'si",
+					"multicall3_description": "Birden fazla sözleşme çağrısını tek bir istekte topla",
+					"biubiu_premium_description": "Platformdaki kullanıcının premium üyelik durumunu doğrular",
+					"wallet_sweep_description": "Birden fazla cüzdana dağılmış tokenleri toplu olarak topla",
+					"biubiu_membership_description": "Biubiu platform üyelik sözleşmesi",
+					"wallet_sweep_contract_description": "Toplu token transfer işlemleri için ana sözleşme"
+				},
+				"category": {
+					"network": "Ağ",
+					"protocol": "Protokol",
+					"contract": "Sözleşme"
+				}
+			}
+		},
+		"footer": {
+			"checking_dependencies": "Bağımlılıklar kontrol ediliyor...",
+			"resolve_issues": "Devam etmek için lütfen tüm bağımlılık sorunlarını çözün",
+			"waiting_for_checks": "Bağımlılık kontrolleri bekleniyor..."
+		},
+		"sidebar": {
+			"beginner_tips": "İpuçları",
+			"tip1": "🔍 Sistem gerekli sözleşmelerin dağıtılıp dağıtılmadığını otomatik olarak kontrol eder",
+			"tip2": "🚀 Bir sözleşme eksikse, doğrudan bu sayfadan dağıtabilirsiniz",
+			"tip3": "📋 Bağımlılık sorunlarını sırayla çözmelisiniz - diğerlerinden önce ilk başarısız kontrolü düzeltin"
+		}
+	},
+	"step3": {
+		"content": {
+			"title": "Token Seçin",
+			"description": "{network} ağında toplanacak tokenleri seçin",
+			"description_fallback": "Bu ağda toplanacak tokenleri seçin",
+			"wallet_not_connected_title": "Cüzdan Bağlı Değil",
+			"wallet_not_connected_message": "Lütfen 1. Adıma geri dönün ve cüzdanınızı bağlayın",
+			"empty_message": "Kullanılabilir token yok. Başlamak için özel bir token ekleyin."
+		},
+		"footer": {
+			"hint": "Devam etmek için lütfen en az bir token seçin"
+		},
+		"sidebar": {
+			"title": "Token Seçin",
+			"description": "Hangi tokenlerin toplanacağını seçin",
+			"selected_tokens_title": "Seçili Tokenler",
+			"count_label": "Sayı:",
+			"empty_hint": "Token seçilmedi",
+			"beginner_tips": "İpuçları",
+			"tip1": "✅ Hepsini tek bir toplu işlemde toplamak için birden fazla token seçebilirsiniz",
+			"tip2": "⚡ Bir token için sıfır bakiyesi olan cüzdanlar otomatik olarak atlanır - gas maliyetlerinden tasarruf sağlar",
+			"tip3": "🪙 Hem yerel tokenleri (ETH, BNB, vb.) hem de ERC-20 tokenleri destekler"
+		}
+	},
+	"step5": {
+		"target_address_label": "Hedef Adres",
+		"target_address_hint": "Tokenler bağlı cüzdan adresinize toplanacak",
+		"content": {
+			"title": "Toplamayı Onayla",
+			"description": "Yapılandırmanızı gözden geçirin ve varlık toplamayı yürütün",
+			"selected_network_tokens": "Seçili Ağ ve Tokenler ({count})",
+			"ready_to_execute": "Yürütmeye hazır",
+			"review_carefully": "Devam etmeden önce lütfen tüm bilgileri dikkatlice gözden geçirin.",
+			"progress": {
+				"preparing": "⏳ Hazırlanıyor...",
+				"building": "🔧 İşlemler Oluşturuluyor...",
+				"executing": "⚡ Toplama Yürütülüyor...",
+				"confirming": "⏰ İşlemler Onaylanıyor...",
+				"completed": "✅ Tamamlandı!",
+				"error": "❌ Hata",
+				"batch": "Grup {current} / {total}",
+				"wallet": "Cüzdan {current} / {total}",
+				"results": "Sonuçlar ({count}):"
+			},
+			"estimate": {
+				"title": "📊 Maliyet Tahmini",
+				"total_transactions": "Toplam İşlemler:",
+				"estimated_gas": "Tahmini Gas:",
+				"estimated_cost": "Tahmini Maliyet:",
+				"gas_units": "{amount} birim",
+				"cost_eth": "{amount} ETH"
+			},
+			"actions": {
+				"estimate_cost": "💰 Maliyeti Tahmin Et",
+				"estimating": "Tahmin ediliyor...",
+				"execute_sweep": "⚡ Toplamayı Yürüt",
+				"executing": "Yürütülüyor..."
+			},
+			"errors": {
+				"no_network": "Bağlı ağ yok",
+				"no_rpc": "Kullanılabilir RPC uç noktası yok",
+				"complete_fields": "Lütfen tüm gerekli alanları doldurun",
+				"invalid_address": "Geçersiz hedef adres",
+				"select_tokens": "Lütfen 3. Adımda en az bir token seçin",
+				"import_wallets": "Lütfen 4. Adımda en az bir cüzdan içe aktarın",
+				"connect_wallet": "Lütfen önce cüzdanınızı bağlayın",
+				"no_balance": "Toplanacak bakiyesi olan cüzdan yok. Lütfen önce 4. Adımda bakiyeleri tarayın.",
+				"insufficient_gas": "Geçici cüzdanda yetersiz gas! {required} {symbol} gerekli, ancak sadece {current} {symbol} var. Lütfen yeniden doldurun ve devam etmek için aşağıdaki düğmeye tıklayın.",
+				"still_insufficient_gas": "Geçici cüzdanda hala yetersiz gas. Lütfen doldurmaya devam edin."
+			},
+			"gas_insufficient_title": "⛽ Yetersiz Gas",
+			"gas_insufficient_message": "Geçici cüzdan bakiyesi tahmini gas ücretini karşılamak için yetersiz. {required} {symbol} gerekli, ancak sadece {current} {symbol} var. Lütfen yukarıdaki [Cüzdana Gas Gönder] özelliğini kullanarak geçici cüzdana fon transfer edin, ardından devam etmek için aşağıdaki düğmeye tıklayın.",
+			"check_and_resume": "Bakiyeyi Kontrol Et ve Devam Et",
+			"gas_refilled_restart": "Gas yeniden dolduruldu! Mevcut bakiye: {balance} ETH. Başlamak için lütfen [Toplamayı Yürüt] düğmesine tekrar tıklayın."
+		},
+		"sidebar": {
+			"summary_title": "Özet",
+			"selected_tokens": "Seçili Tokenler:",
+			"total_wallets": "Toplam Cüzdanlar:",
+			"with_balance": "Bakiyeli:",
+			"batches": "Gruplar"
+		}
+	},
+	"temporary_wallet": {
+		"title": "Geçici Cüzdan",
+		"description": "Toplu işlemleri otomatikleştirmek için rastgele bir geçici cüzdan oluşturun. Cüzdan yalnızca tarayıcı oturumunuzda saklanacaktır.",
+		"important": "Önemli",
+		"warning_text": "Geçici cüzdan tarayıcınızda oluşturulacak. Yapmanız gerekenler:",
+		"step_download": "Yedekleme için özel anahtarı indirin",
+		"step_fund": "Gas ücretleri için <strong>{amount} {symbol}</strong> ile fonlayın",
+		"step_clear": "Görevlerinizi tamamladıktan sonra temizleyin",
+		"btn_create": "Geçici Cüzdan Oluştur",
+		"creating": "Oluşturuluyor...",
+		"wallet_ready": "Cüzdan Hazır",
+		"created_at": "Oluşturulma: {time}",
+		"address": "Adres",
+		"balance": "Bakiye (Mevcut Ağ)",
+		"loading": "Yükleniyor...",
+		"private_key": "Özel Anahtar",
+		"show": "Göster",
+		"hide": "Gizle",
+		"copy_address": "Adresi kopyala",
+		"copy_private_key": "Özel anahtarı kopyala",
+		"show_qr": "QR Kodu Göster",
+		"refresh_balance": "Bakiyeyi yenile",
+		"qr_hint": "Bu geçici cüzdana gas göndermek için tarayın",
+		"fund_title": "Cüzdana Gas Gönder",
+		"estimated_gas": "Tahmini gas gereksinimi: {amount} {symbol}",
+		"suggested_amount": "💰 Önerilen miktar: <strong>{amount} {symbol}</strong> (2x tahmini)",
+		"amount_placeholder": "Gönderilecek miktar",
+		"btn_send": "Bağlı Cüzdandan Gönder",
+		"sending": "Gönderiliyor...",
+		"tip": "💡 İpucu: Yeterli fon sağlamak için önerilen miktar (2x tahmini) otomatik olarak doldurulur. QR kodunu tarayarak herhangi bir cüzdandan da gönderebilirsiniz.",
+		"btn_download": "Özel Anahtarı İndir",
+		"btn_clear": "Cüzdanı Temizle",
+		"error_no_wallet": "Lütfen önce cüzdanınızı bağlayın",
+		"error_invalid_amount": "Lütfen geçerli bir miktar girin",
+		"success_transfer": "✅ Transfer başarılı! Geçici cüzdana {amount} {symbol} gönderildi. TX: {tx}...",
+		"confirm_clear": "Geçici cüzdanı temizlemek istediğinizden emin misiniz? Gerekirse özel anahtarı indirdiğinizden emin olun."
+	},
+	"step4": {
+		"import_method": {
+			"mnemonic": {
+				"label": "Anımsatıcı İfade",
+				"desc": "Toplu adres türetme"
+			},
+			"private_key": {
+				"label": "Özel Anahtarlar",
+				"desc": "Tek tek içe aktar"
+			}
+		},
+		"content": {
+			"title": "Cüzdanları İçe Aktar",
+			"description": "Varlıklarını toplamak istediğiniz kaynak cüzdanları ekleyin",
+			"choose_method": "İçe Aktarma Yöntemini Seçin",
+			"import_wallets_button": "Cüzdanları İçe Aktar",
+			"mnemonic": {
+				"label": "Anımsatıcı İfadeyi Girin",
+				"placeholder": "Boşluklarla ayrılmış 12 veya 24 kelime girin",
+				"security_hint": "🔒 Anımsatıcı tarayıcınızda yerel olarak işlenir, asla herhangi bir sunucuya gönderilmez",
+				"derivation_path": "Türetme Yolu Yapılandırması",
+				"generate_button": "🔍 Adres Listesi Oluştur",
+				"generating": "Oluşturuluyor... ({progress}%)",
+				"error_empty": "Lütfen bir anımsatıcı ifade girin",
+				"error_invalid": "Geçersiz anımsatıcı ifade. Lütfen 12 veya 24 kelime girin.",
+				"error_range": "Geçersiz adres aralığı",
+				"error_max": "Aralık çok büyük (bir seferde maksimum 10000 adres)"
+			},
+			"private_key": {
+				"label": "Toplu Özel Anahtar İçe Aktar",
+				"placeholder": "Satır başına bir özel anahtar (0x ile başlayan)",
+				"upload_file": "Dosya Yükle",
+				"column_label": "Özel Anahtar",
+				"address_label": "Adres",
+				"import_button": "➕ Toplu Cüzdan Ekle",
+				"importing": "İçe aktarılıyor... ({progress}%)",
+				"error_empty": "Lütfen özel anahtarları girin",
+				"error_none": "Geçerli özel anahtar bulunamadı",
+				"success_with_invalid": "{valid} cüzdan içe aktarıldı. {invalid} geçersiz anahtar atlandı.",
+				"invalid_keys_found": "{count} geçersiz özel anahtar bulundu",
+				"locate": "Bul",
+				"locate_key": "Editörde hatayı bulmak için tıklayın",
+				"error_key_not_found": "Hata: Özel anahtar değiştirilmiş veya silinmiş",
+				"manual_search": "Lütfen {line} satırını manuel olarak arayın",
+				"security_hint": "🔒 Özel anahtarlar tarayıcınızda yerel olarak işlenir, asla herhangi bir sunucuya gönderilmez"
+			},
+			"wallet_list": {
+				"title": "İçe Aktarılan Cüzdanlar",
+				"count": "({count})",
+				"with_balance": "{count} bakiyeli",
+				"scan_button": "Bakiyeleri Tara",
+				"scanning": "Taranıyor... {progress}%",
+				"scan_completed": "Tarama Tamamlandı",
+				"scan_hint": "Sonraki adıma devam etmeden önce bakiyeleri taramak gereklidir",
+				"clear_all": "Tümünü Temizle",
+				"empty_message": "Henüz cüzdan içe aktarılmadı. Cüzdan içe aktarmak için yukarıdaki yöntemleri kullanın."
+			},
+			"scan_section": {
+				"title": "Bakiye Taraması",
+				"required": "Gerekli"
+			},
+			"errors": {
+				"no_network": "Bağlı ağ yok",
+				"no_wallets": "Taranacak cüzdan yok",
+				"no_tokens": "Lütfen önce 3. Adımda tokenleri seçin",
+				"no_rpc": "Mevcut ağ için kullanılabilir RPC uç noktası yok",
+				"no_valid_tokens": "Mevcut ağ için geçerli token seçilmedi",
+				"no_balance": "Hiçbir cüzdanın seçili tokenler için bakiyesi yok",
+				"generate_failed": "Adresler oluşturulamadı",
+				"import_failed": "Özel anahtarlar içe aktarılamadı",
+				"scan_failed": "Bakiyeler taranamadı"
+			},
+			"rate_limit": {
+				"title": "Tüm RPC Uç Noktaları Hız Sınırlı",
+				"error_generic": "Tarama duraklatıldı: {reason}",
+				"error_native": "Yerel token bakiyeleri taranırken hız sınırı tetiklendi (grup {batch}/{total})",
+				"error_erc20": "{token} token bakiyeleri taranırken hız sınırı tetiklendi (grup {batch}/{total})",
+				"hint": "💡 Lütfen yeni RPC uç noktaları eklemek için aşağıdaki düğmeye tıklayın veya mevcut RPC'lerin kurtarmasını bekleyerek yeniden deneyin. Birden fazla RPC eklemek, sık hız sınırlarından kaçınmak için otomatik rotasyonu sağlar.",
+				"recommend_prefix": "Önerilen: Kullanılabilir RPC uç noktalarını şurada bulun",
+				"recommend_suffix": "",
+				"manage_rpc_button": "RPC Yönet",
+				"resume_button": "Taramaya Devam Et"
+			},
+			"dialogs": {
+				"remove_wallet_title": "Cüzdanı Kaldır",
+				"remove_wallet_message": "Bu cüzdanı içe aktarma listesinden kaldırmak istediğinizden emin misiniz?\n\nAdres: {address}",
+				"remove_button": "Kaldır",
+				"clear_all_title": "Tüm Cüzdanları Temizle",
+				"clear_all_message": "Tüm {count} cüzdanı içe aktarma listesinden kaldırmak istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+				"clear_all_button": "Tümünü Temizle",
+				"cancel_button": "İptal",
+				"long_press_hint": "⚠️ Bu işlem geri alınamaz. Onaylamak için lütfen düğmeyi 3 saniye basılı tutun"
+			},
+			"rpc_hint": {
+				"title": "Daha İyi Güvenilirlik için Daha Fazla RPC Ekleyin",
+				"message": "Sadece 1 RPC uç noktası yapılandırılmış. Birden fazla RPC eklemek, hız sınırları oluştuğunda otomatik rotasyonu sağlayarak tarama güvenilirliğini artırır.",
+				"add_rpc_button": "RPC Ekle"
+			}
+		},
+		"footer": {
+			"continue_text": "Onayla Devam Et",
+			"hint": "Devam etmek için lütfen en az bir cüzdan içe aktarın",
+			"hint_scan_required": "Devam etmeden önce lütfen bakiyeleri tarayın"
+		},
+		"sidebar": {
+			"title": "İçe Aktarılan Cüzdanlar",
+			"total_label": "Toplam:",
+			"with_balance_label": "Bakiyeli:",
+			"scanning_label": "Taranıyor:",
+			"scan_status_label": "Tarama Durumu:",
+			"scan_completed": "Tamamlandı",
+			"scan_pending": "Bekliyor",
+			"no_balance_found": "Taramadan sonra bakiye bulunamadı. Tüm cüzdanların seçili tokenler için sıfır bakiyesi var.",
+			"empty_hint": "Cüzdan içe aktarılmadı",
+			"performance_tip": {
+				"title": "⚡ Performans İpucu",
+				"message": "Büyük aralıklar tarama süresini artıracaktır",
+				"recommended": "Önerilen:",
+				"recommended_range": "1.000 - 10.000 adres"
+			},
+			"token_stats": {
+				"title": "Token Bakiye İstatistikleri",
+				"wallets_count": "{count} cüzdan",
+				"total_balance": "Toplam Bakiye",
+				"download_title": "Excel Raporu İndir"
+			},
+			"scan_log": {
+				"title": "Tarama Günlüğü"
+			}
+		}
+	}
+}

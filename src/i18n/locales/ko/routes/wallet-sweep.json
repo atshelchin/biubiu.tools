@@ -1,0 +1,470 @@
+{
+	"_meta": {
+		"code": "ko",
+		"name": "한국어",
+		"englishName": "Korean",
+		"direction": "ltr",
+		"flag": "🇰🇷"
+	},
+	"title": "지갑 통합",
+	"description": "여러 지갑의 잔액을 하나의 주소로 전송",
+	"feature_1": "완전한 잔액 전송, 잔여 없음",
+	"feature_2": "대규모 자동화, 트랜잭션별 확인 불필요",
+	"feature_3": "소스 지갑에 네이티브 토큰 불필요",
+	"feature_4": "모든 EVM 체인에서 무허가",
+	"faqs": {
+		"what_is_network": "블록체인 네트워크란?",
+		"network_explanation": "블록체인 네트워크는 누가 어떤 토큰을 소유하고 있는지와 모든 전송을 기록하는 공개 원장 시스템입니다. Ethereum, BSC, Polygon은 각각 독립적이고 분리된 다른 원장입니다.",
+		"what_is_wallet": "지갑이란?",
+		"wallet_explanation": "Web3 지갑은 돈이 저장되는 곳이 아닙니다 - 블록체인 계정을 관리하는 열쇠입니다. 자금은 블록체인 원장에 기록되고, 지갑은 당신이 계정 소유자임을 증명합니다. 인기: MetaMask, Coinbase Smart Wallet.",
+		"what_is_native_token": "네이티브 토큰이란?",
+		"native_token_explanation": "네이티브 토큰은 트랜잭션을 처리하는 채굴자에게 지불하는 데 사용됩니다. Ethereum은 ETH, BSC는 BNB, Polygon은 POL을 사용합니다. 채굴자가 블록체인 원장에 트랜잭션을 기록하고 이 수수료를 지불합니다.",
+		"what_is_eip7702": "EIP-7702란?",
+		"eip7702_explanation": "트랜잭션 중에 일반 지갑을 스마트 컨트랙트 지갑으로 임시 업그레이드하는 기술. 추가 배포 불필요.",
+		"why_need_eip7702": "왜 EIP-7702가 필요한가?",
+		"why_need_eip7702_explanation": "가스가 없는 지갑이 토큰을 보낼 수 있게 합니다. 메인 지갑이 대신 가스를 지불하여 원클릭 통합을 가능하게 합니다.",
+		"what_is_create2_proxy": "CREATE2 Proxy란?",
+		"create2_proxy_explanation": "모든 체인에서 동일한 컨트랙트 주소를 보장하는 배포 도구. 같은 코드 = 어디서나 같은 주소.",
+		"what_is_multicall3": "Multicall3란?",
+		"multicall3_explanation": "여러 호출을 하나로 묶습니다. 가스와 시간 절약. 전부 성공 또는 전부 실패 실행.",
+		"what_is_biubiu_premium": "BiuBiuPremium이란?",
+		"biubiu_premium_explanation": "구독, 할인, 액세스를 관리하는 멤버십 컨트랙트. 완전히 오픈소스.",
+		"what_is_wallet_sweep": "TokenSweep이란?",
+		"wallet_sweep_explanation": "배치 전송의 핵심 컨트랙트. EIP-7702 위임과 승인 처리. 오픈소스: https://github.com/atshelchin/biubiu-contracts",
+		"can_select_multiple_tokens": "여러 토큰을 한 번에 선택할 수 있나요?",
+		"can_select_multiple_tokens_explanation": "네! 원하는 만큼 많은 토큰을 선택할 수 있습니다. 도구가 선택한 모든 토큰을 하나의 배치 작업으로 통합하여 매우 효율적입니다.",
+		"what_happens_zero_balance": "지갑의 토큰 잔액이 0이면 어떻게 되나요?",
+		"what_happens_zero_balance_explanation": "스마트합니다! 시스템이 해당 특정 토큰에 대해 잔액이 0인 지갑을 자동으로 건너뜁니다. 불필요한 전송을 실행하지 않아 가스 비용을 절약합니다.",
+		"what_tokens_supported": "어떤 유형의 토큰이 지원되나요?",
+		"what_tokens_supported_explanation": "네이티브 토큰(Ethereum의 ETH, BSC의 BNB, Polygon의 MATIC 등)과 모든 ERC-20 표준 토큰을 지원합니다. 만나는 대부분의 토큰이 작동합니다.",
+		"how_add_custom_token": "커스텀 토큰을 어떻게 추가하나요?",
+		"how_add_custom_token_explanation": "'+ 토큰 추가' 버튼을 클릭한 다음 토큰의 컨트랙트 주소를 입력하세요. 시스템이 블록체인에서 토큰의 이름, 심볼, 소수점을 자동으로 가져옵니다."
+	},
+	"seo": {
+		"page_title": "지갑 통합 - 여러 지갑에서 토큰 통합 | BiuBiu Tools",
+		"page_description": "여러 지갑에서 토큰을 하나의 목적지로 통합. Ethereum, Polygon, BSC, Arbitrum, Optimism, Base 네트워크 지원. 빠르고 안전하며 가스 최적화.",
+		"keywords": "지갑 통합, 토큰 통합, ERC20 전송, 배치 전송, 암호화폐 도구, Web3 도구, Ethereum 도구, Polygon 도구, DeFi 도구",
+		"webapp_name": "지갑 통합",
+		"webapp_description": "여러 지갑에서 토큰을 하나의 목적지로 통합. Ethereum, Polygon, BSC, Arbitrum, Optimism, Base 네트워크 지원.",
+		"feature_1": "ERC20 토큰 배치 전송",
+		"feature_2": "멀티 네트워크 지원 (Ethereum, Polygon, BSC, Arbitrum, Optimism, Base)",
+		"feature_3": "가스 최적화",
+		"feature_4": "안전한 지갑 통합",
+		"feature_5": "실시간 트랜잭션 추적",
+		"howto_name": "지갑 통합으로 여러 지갑에서 토큰을 통합하는 방법",
+		"howto_description": "BiuBiu 지갑 통합 도구를 사용하여 여러 지갑에서 토큰을 하나의 목적지로 통합하는 단계별 가이드.",
+		"howto_tool_1": "Web3 지갑 (MetaMask, WalletConnect 등)",
+		"howto_tool_2": "전송할 ERC20 토큰",
+		"step_1_name": "지갑 연결",
+		"step_1_text": "\"지갑 연결\" 버튼을 클릭하고 선호하는 Web3 지갑 제공자(MetaMask, WalletConnect, Coinbase Wallet 등)를 선택하세요. 지갑에서 연결 요청을 승인하세요.",
+		"step_1_description": "Web3 지갑 연결",
+		"step_2_name": "의존성 확인",
+		"step_2_text": "블록체인 네트워크 연결을 확인하고 모든 필수 스마트 컨트랙트에 액세스할 수 있는지 확인합니다. 시스템이 필요한 구성요소를 자동으로 감지하고 검증합니다.",
+		"step_2_description": "네트워크 및 컨트랙트 확인",
+		"step_3_name": "토큰 선택",
+		"step_3_text": "사용 가능한 목록에서 통합하려는 ERC20 토큰을 선택하세요. 단일 배치 작업으로 여러 토큰을 선택하여 전송할 수 있습니다.",
+		"step_3_description": "통합할 토큰 선택",
+		"step_4_name": "지갑 가져오기",
+		"step_4_text": "통합하려는 토큰이 포함된 소스 지갑 주소를 가져옵니다. 여러 지갑 주소를 추가하여 모든 지갑에서 토큰을 수집할 수 있습니다.",
+		"step_4_description": "소스 주소 추가",
+		"step_5_name": "통합 확인",
+		"step_5_text": "총 토큰, 가스 수수료, 목적지 주소를 포함한 트랜잭션 요약을 검토하세요. \"전송 실행\"을 클릭하고 지갑에서 트랜잭션을 확인하세요. 블록체인 확인을 기다리고 트랜잭션 영수증을 확인하세요.",
+		"step_5_description": "검토 및 실행"
+	},
+	"step1": {
+		"footer": {
+			"continue": "계속",
+			"hint": "계속하려면 지갑을 연결하세요"
+		},
+		"content": {
+			"title": "네트워크 선택",
+			"description": "지갑을 연결하여 통합 시작",
+			"loading": "네트워크 구성 로딩 중...",
+			"no_networks_enabled": "활성화된 네트워크 없음",
+			"enable_network_prompt": "계속하려면 최소 하나의 네트워크를 활성화하세요.",
+			"open_network_settings": "네트워크 설정 열기",
+			"network_not_found": "네트워크를 찾을 수 없나요?",
+			"add_custom_network": "커스텀 네트워크 추가"
+		},
+		"sidebar": {
+			"title": "네트워크 선택 및 지갑 연결",
+			"description": "블록체인 네트워크를 선택하고 지갑을 연결하여 토큰 통합을 시작하세요.",
+			"what_is_this": "이 단계는 무엇인가요?",
+			"what_explanation": "필요한 것:",
+			"what_item1": "블록체인 네트워크 선택 (Ethereum, BSC, Polygon 등)",
+			"what_item2": "Web3 지갑 연결 (MetaMask 등)",
+			"why_do_this": "왜 이렇게 하나요?",
+			"why_explanation": "앱에 어떤 네트워크를 사용할지, 어떤 지갑의 자산을 운영할지 알려줍니다 - 둘 다 필수입니다.",
+			"beginner_tips": "팁",
+			"tip1": "✅ 올바른 네트워크를 선택했는지 확인하세요 (토큰이 있는 곳을 선택)",
+			"tip2": "⛽ 수수료를 지불할 충분한 네이티브 토큰이 있는지 확인하세요",
+			"tip3": "🌍 모든 EVM 호환 네트워크 지원 - 어떤 체인이든 추가 가능",
+			"what_is_network": "블록체인 네트워크란?",
+			"network_explanation": "블록체인 네트워크는 누가 어떤 토큰을 소유하고 있는지와 모든 전송을 기록하는 공개 원장 시스템입니다. Ethereum, BSC, Polygon은 각각 독립적이고 분리된 다른 원장입니다.",
+			"what_is_wallet": "지갑이란?",
+			"wallet_explanation": "Web3 지갑은 돈이 저장되는 곳이 아닙니다 - 블록체인 계정을 관리하는 열쇠입니다. 자금은 블록체인 원장에 기록되고, 지갑은 당신이 계정 소유자임을 증명합니다. 인기: MetaMask, Coinbase Smart Wallet.",
+			"what_is_native_token": "네이티브 토큰이란?",
+			"native_token_explanation": "네이티브 토큰은 트랜잭션을 처리하는 채굴자에게 지불하는 데 사용됩니다. Ethereum은 ETH, BSC는 BNB, Polygon은 POL을 사용합니다. 채굴자가 블록체인 원장에 트랜잭션을 기록하고 이 수수료를 지불합니다."
+		}
+	},
+	"step2": {
+		"content": {
+			"title": "의존성 확인",
+			"description": "필요한 인프라가 준비되었는지 확인",
+			"checking_dependencies_for": "{network} 네트워크 환경 확인 중...",
+			"wallet_not_connected_title": "지갑 연결 안 됨",
+			"wallet_not_connected_message": "1단계로 돌아가서 지갑을 연결하세요",
+			"go_to_step1": "1단계로 이동",
+			"all_dependencies_satisfied": "모든 의존성 충족",
+			"network_properly_configured": "네트워크가 토큰 통합을 위해 올바르게 구성되었습니다",
+			"dependency_issues_found": "의존성 문제 발견",
+			"resolve_issues_before_continuing": "계속하기 전에 위의 문제를 해결하세요",
+			"recheck_dependencies": "의존성 재확인",
+			"address_label": "주소:",
+			"endpoint_label": "엔드포인트:",
+			"resolve_previous_issue": "먼저 이전 문제를 해결하세요",
+			"view_deployment_guide": "배포 가이드 보기",
+			"deploy_coming_soon": "컨트랙트 배포 (곧 출시)",
+			"deploy_contract": "{contractName} 배포",
+			"deployment": {
+				"modal_title": "{contractName} 배포",
+				"start_deployment": "배포 시작",
+				"deploying_contract": "컨트랙트 배포 중...",
+				"deployment_steps_heading": "배포 단계:",
+				"contract_address_label": "컨트랙트 주소:",
+				"network_label": "네트워크:",
+				"waiting_for_signature": "⏳ 지갑에서 트랜잭션을 확인하세요...",
+				"transaction_sent": "⚡ 트랜잭션 전송됨! 블록체인 확인 대기 중...",
+				"finalizing": "✅ 배포 완료 중...",
+				"confirm_in_wallet": "지갑에서 트랜잭션을 확인하세요",
+				"success_title": "배포 성공!",
+				"success_description": "컨트랙트가 성공적으로 배포되었습니다.",
+				"view_on_explorer": "익스플로러에서 보기",
+				"error_title": "배포 실패",
+				"errors": {
+					"init_failed": "배포 구성 초기화 실패",
+					"wallet_not_connected": "먼저 지갑을 연결하세요",
+					"deployment_failed": "컨트랙트 배포 실패",
+					"metamask_cache": "MetaMask가 오래된 블록 데이터를 캐시했습니다. 테스트 네트워크가 리셋되었을 때 발생합니다.",
+					"wallet_cache": "지갑 캐시 오류. 지갑을 재시작하고 다시 시도하세요.",
+					"metamask_internal": "MetaMask 내부 오류. 다음을 시도하세요:\n\n1. MetaMask에서 활동 탭 데이터 지우기\n   (설정 → 고급 → 활동 탭 데이터 지우기)\n\n2. 네트워크 RPC 엔드포인트 업데이트\n\n3. MetaMask 재시작\n\n4. Multicall3 배포 시 CREATE2 Proxy가 먼저 배포되었는지 확인",
+					"wallet_internal": "지갑 내부 오류. 다음을 시도하세요:\n\n1. 네트워크 RPC 엔드포인트 업데이트\n\n2. 지갑 재시작\n\n3. Multicall3 배포 시 CREATE2 Proxy가 먼저 배포되었는지 확인",
+					"connection_failed": "연결 실패. 확인하세요:\n\n1. 지갑이 잠금 해제되었는지\n\n2. 네트워크 연결이 안정적인지\n\n문제가 계속되면 네트워크 RPC 엔드포인트를 업데이트해 보세요.",
+					"rpc_unavailable": "RPC 서비스가 일시적으로 사용 불가합니다. 지갑에 구성된 RPC 엔드포인트에 속도 제한이 있거나 다운되었을 가능성이 있습니다.",
+					"insufficient_funds": "잔액 부족. 배포와 가스 수수료를 위한 충분한 자금이 필요합니다.",
+					"user_rejected": "트랜잭션이 지갑에서 거부되었습니다.",
+					"already_deployed": "이 컨트랙트는 이미 배포되었을 수 있습니다. 의존성 확인을 새로고침하세요."
+				},
+				"steps": {
+					"create2": {
+						"fund_deployer_title": "배포자 주소에 자금 전송",
+						"fund_deployer_description": "{address}로 0.01 ETH 전송",
+						"deploy_contract_title": "컨트랙트 배포",
+						"deploy_contract_description": "사전 서명된 배포 트랜잭션 전송"
+					},
+					"via_create2": {
+						"deploy_title": "{contractName} 컨트랙트 배포",
+						"deploy_description": "결정론적 배포 프록시에 배포 트랜잭션 전송"
+					}
+				}
+			},
+			"checks": {
+				"rpc_endpoint": {
+					"name": "RPC 엔드포인트",
+					"description": "현재 RPC 엔드포인트가 사용 가능한지 확인",
+					"chain_id_mismatch": "체인 ID 불일치: 예상 {expected}, 실제 {actual}",
+					"connected_to_block": "블록 #{blockNumber}에 연결됨",
+					"failed_to_connect": "연결 실패: {error}",
+					"no_rpc_configured": "이 네트워크에 구성된 RPC 엔드포인트가 없습니다",
+					"configure_rpc_button": "RPC 구성"
+				},
+				"eip7702": {
+					"name": "EIP-7702",
+					"description": "네트워크가 EIP-7702 프로토콜을 지원하는지 확인",
+					"supported": "네트워크가 EIP-7702 지원 (eth_estimateGas로 테스트됨)",
+					"not_supported": "네트워크가 EIP-7702 지원 안 함 (유효하지 않은 opcode)",
+					"rpc_not_capable": "현재 RPC가 이 확인에 필요한 상태 오버라이드를 지원하지 않습니다. 다른 RPC 엔드포인트를 시도하세요.",
+					"check_failed": "EIP-7702 지원 확인 실패: {error}"
+				},
+				"contract": {
+					"deployed": "컨트랙트 배포됨",
+					"not_deployed": "이 주소에 컨트랙트가 배포되지 않음",
+					"check_failed": "배포 확인 실패: {error}",
+					"create2_proxy_description": "컨트랙트 생성을 위한 결정론적 배포 프록시",
+					"multicall3_description": "여러 컨트랙트 호출을 단일 요청으로 집계",
+					"biubiu_premium_description": "플랫폼에서 사용자의 프리미엄 멤버십 상태 확인",
+					"wallet_sweep_description": "여러 지갑에 분산된 토큰의 배치 수집",
+					"biubiu_membership_description": "Biubiu 플랫폼 멤버십 컨트랙트",
+					"wallet_sweep_contract_description": "배치 토큰 전송 작업을 위한 메인 컨트랙트"
+				},
+				"category": {
+					"network": "네트워크",
+					"protocol": "프로토콜",
+					"contract": "컨트랙트"
+				}
+			}
+		},
+		"footer": {
+			"checking_dependencies": "의존성 확인 중...",
+			"resolve_issues": "계속하려면 모든 의존성 문제를 해결하세요",
+			"waiting_for_checks": "의존성 확인 대기 중..."
+		},
+		"sidebar": {
+			"beginner_tips": "팁",
+			"tip1": "🔍 시스템이 필요한 컨트랙트가 배포되었는지 자동으로 확인합니다",
+			"tip2": "🚀 컨트랙트가 없으면 이 페이지에서 직접 배포할 수 있습니다",
+			"tip3": "📋 의존성 문제는 순서대로 해결해야 합니다 - 첫 번째 실패한 확인을 먼저 수정하세요"
+		}
+	},
+	"step3": {
+		"content": {
+			"title": "토큰 선택",
+			"description": "{network} 네트워크에서 통합할 토큰 선택",
+			"description_fallback": "이 네트워크에서 통합할 토큰 선택",
+			"wallet_not_connected_title": "지갑 연결 안 됨",
+			"wallet_not_connected_message": "1단계로 돌아가서 지갑을 연결하세요",
+			"empty_message": "사용 가능한 토큰이 없습니다. 커스텀 토큰을 추가하여 시작하세요."
+		},
+		"footer": {
+			"hint": "계속하려면 최소 하나의 토큰을 선택하세요"
+		},
+		"sidebar": {
+			"title": "토큰 선택",
+			"description": "통합할 토큰 선택",
+			"selected_tokens_title": "선택된 토큰",
+			"count_label": "수량:",
+			"empty_hint": "선택된 토큰 없음",
+			"beginner_tips": "팁",
+			"tip1": "✅ 여러 토큰을 선택하여 하나의 배치 작업으로 모두 통합할 수 있습니다",
+			"tip2": "⚡ 토큰 잔액이 0인 지갑은 자동으로 건너뜁니다 - 가스 비용 절약",
+			"tip3": "🪙 네이티브 토큰(ETH, BNB 등)과 ERC-20 토큰 모두 지원"
+		}
+	},
+	"step5": {
+		"target_address_label": "대상 주소",
+		"target_address_hint": "토큰이 연결된 지갑 주소로 통합됩니다",
+		"content": {
+			"title": "통합 확인",
+			"description": "구성을 검토하고 자산 통합 실행",
+			"selected_network_tokens": "선택된 네트워크 및 토큰 ({count})",
+			"ready_to_execute": "실행 준비 완료",
+			"review_carefully": "진행하기 전에 모든 정보를 신중하게 검토하세요.",
+			"progress": {
+				"preparing": "⏳ 준비 중...",
+				"building": "🔧 트랜잭션 구축 중...",
+				"executing": "⚡ 통합 실행 중...",
+				"confirming": "⏰ 트랜잭션 확인 중...",
+				"completed": "✅ 완료!",
+				"error": "❌ 오류",
+				"batch": "배치 {current} / {total}",
+				"wallet": "지갑 {current} / {total}",
+				"results": "결과 ({count}):"
+			},
+			"estimate": {
+				"title": "📊 비용 추정",
+				"total_transactions": "총 트랜잭션:",
+				"estimated_gas": "추정 가스:",
+				"estimated_cost": "추정 비용:",
+				"gas_units": "{amount} 유닛",
+				"cost_eth": "{amount} ETH"
+			},
+			"actions": {
+				"estimate_cost": "💰 비용 추정",
+				"estimating": "추정 중...",
+				"execute_sweep": "⚡ 통합 실행",
+				"executing": "실행 중..."
+			},
+			"errors": {
+				"no_network": "연결된 네트워크 없음",
+				"no_rpc": "사용 가능한 RPC 엔드포인트 없음",
+				"complete_fields": "모든 필수 필드를 완료하세요",
+				"invalid_address": "유효하지 않은 대상 주소",
+				"select_tokens": "3단계에서 최소 하나의 토큰을 선택하세요",
+				"import_wallets": "4단계에서 최소 하나의 지갑을 가져오세요",
+				"connect_wallet": "먼저 지갑을 연결하세요",
+				"no_balance": "통합할 잔액이 있는 지갑이 없습니다. 먼저 4단계에서 잔액을 스캔하세요.",
+				"insufficient_gas": "임시 지갑의 가스가 부족합니다! {required} {symbol}이 필요하지만 {current} {symbol}만 있습니다. 충전하고 아래 버튼을 클릭하여 계속하세요.",
+				"still_insufficient_gas": "임시 지갑의 가스가 여전히 부족합니다. 계속 충전하세요."
+			},
+			"gas_insufficient_title": "⛽ 가스 부족",
+			"gas_insufficient_message": "임시 지갑 잔액이 추정 가스 수수료를 충당하기에 부족합니다. {required} {symbol}이 필요하지만 {current} {symbol}만 있습니다. 위의 [가스로 지갑 충전] 기능을 사용하여 임시 지갑에 자금을 전송한 다음 아래 버튼을 클릭하여 계속하세요.",
+			"check_and_resume": "잔액 확인 및 재개",
+			"gas_refilled_restart": "가스 충전됨! 현재 잔액: {balance} ETH. [통합 실행] 버튼을 다시 클릭하여 시작하세요."
+		},
+		"sidebar": {
+			"summary_title": "요약",
+			"selected_tokens": "선택된 토큰:",
+			"total_wallets": "총 지갑:",
+			"with_balance": "잔액 있음:",
+			"batches": "배치"
+		}
+	},
+	"temporary_wallet": {
+		"title": "임시 지갑",
+		"description": "배치 트랜잭션을 자동화하기 위한 임의의 임시 지갑을 생성합니다. 지갑은 브라우저 세션에만 저장됩니다.",
+		"important": "중요",
+		"warning_text": "임시 지갑이 브라우저에 생성됩니다. 필요한 것:",
+		"step_download": "백업용 개인 키 다운로드",
+		"step_fund": "가스 수수료를 위해 <strong>{amount} {symbol}</strong> 충전",
+		"step_clear": "작업 완료 후 지우기",
+		"btn_create": "임시 지갑 생성",
+		"creating": "생성 중...",
+		"wallet_ready": "지갑 준비 완료",
+		"created_at": "생성됨: {time}",
+		"address": "주소",
+		"balance": "잔액 (현재 네트워크)",
+		"loading": "로딩 중...",
+		"private_key": "개인 키",
+		"show": "표시",
+		"hide": "숨기기",
+		"copy_address": "주소 복사",
+		"copy_private_key": "개인 키 복사",
+		"show_qr": "QR 코드 표시",
+		"refresh_balance": "잔액 새로고침",
+		"qr_hint": "이 임시 지갑에 가스를 보내려면 스캔",
+		"fund_title": "가스로 지갑 충전",
+		"estimated_gas": "추정 필요 가스: {amount} {symbol}",
+		"suggested_amount": "💰 권장 금액: <strong>{amount} {symbol}</strong> (추정의 2배)",
+		"amount_placeholder": "보낼 금액",
+		"btn_send": "연결된 지갑에서 보내기",
+		"sending": "보내는 중...",
+		"tip": "💡 팁: 권장 금액(추정의 2배)이 충분한 자금을 보장하기 위해 자동으로 입력됩니다. QR 코드를 스캔하여 다른 지갑에서 보낼 수도 있습니다.",
+		"btn_download": "개인 키 다운로드",
+		"btn_clear": "지갑 지우기",
+		"error_no_wallet": "먼저 지갑을 연결하세요",
+		"error_invalid_amount": "유효한 금액을 입력하세요",
+		"success_transfer": "✅ 전송 성공! {amount} {symbol}을 임시 지갑으로 보냈습니다. TX: {tx}...",
+		"confirm_clear": "임시 지갑을 지우시겠습니까? 필요하면 개인 키를 다운로드했는지 확인하세요."
+	},
+	"step4": {
+		"import_method": {
+			"mnemonic": {
+				"label": "니모닉 구문",
+				"desc": "배치로 주소 파생"
+			},
+			"private_key": {
+				"label": "개인 키",
+				"desc": "하나씩 가져오기"
+			}
+		},
+		"content": {
+			"title": "지갑 가져오기",
+			"description": "자산을 통합하려는 소스 지갑 추가",
+			"choose_method": "가져오기 방법 선택",
+			"import_wallets_button": "지갑 가져오기",
+			"mnemonic": {
+				"label": "니모닉 구문 입력",
+				"placeholder": "공백으로 구분된 12개 또는 24개 단어 입력",
+				"security_hint": "🔒 니모닉은 브라우저에서 로컬로 처리되며 서버로 전송되지 않습니다",
+				"derivation_path": "파생 경로 구성",
+				"generate_button": "🔍 주소 목록 생성",
+				"generating": "생성 중... ({progress}%)",
+				"error_empty": "니모닉 구문을 입력하세요",
+				"error_invalid": "유효하지 않은 니모닉 구문. 12개 또는 24개 단어를 입력하세요.",
+				"error_range": "유효하지 않은 주소 범위",
+				"error_max": "범위가 너무 큽니다 (한 번에 최대 10000개 주소)"
+			},
+			"private_key": {
+				"label": "개인 키 배치 가져오기",
+				"placeholder": "한 줄에 하나의 개인 키 (0x로 시작)",
+				"upload_file": "파일 업로드",
+				"column_label": "개인 키",
+				"address_label": "주소",
+				"import_button": "➕ 지갑 배치 추가",
+				"importing": "가져오는 중... ({progress}%)",
+				"error_empty": "개인 키를 입력하세요",
+				"error_none": "유효한 개인 키를 찾을 수 없음",
+				"success_with_invalid": "{valid}개의 지갑을 가져왔습니다. {invalid}개의 유효하지 않은 키를 건너뛰었습니다.",
+				"invalid_keys_found": "{count}개의 유효하지 않은 개인 키 발견",
+				"locate": "위치 찾기",
+				"locate_key": "클릭하여 편집기에서 오류 위치 찾기",
+				"error_key_not_found": "오류: 개인 키가 수정되거나 삭제되었습니다",
+				"manual_search": "{line}줄을 수동으로 검색하세요",
+				"security_hint": "🔒 개인 키는 브라우저에서 로컬로 처리되며 서버로 전송되지 않습니다"
+			},
+			"wallet_list": {
+				"title": "가져온 지갑",
+				"count": "({count})",
+				"with_balance": "{count}개 잔액 있음",
+				"scan_button": "잔액 스캔",
+				"scanning": "스캔 중... {progress}%",
+				"scan_completed": "스캔 완료",
+				"scan_hint": "다음 단계로 진행하기 전에 잔액 스캔이 필요합니다",
+				"clear_all": "모두 지우기",
+				"empty_message": "아직 가져온 지갑이 없습니다. 위의 방법을 사용하여 지갑을 가져오세요."
+			},
+			"scan_section": {
+				"title": "잔액 스캔",
+				"required": "필수"
+			},
+			"errors": {
+				"no_network": "연결된 네트워크 없음",
+				"no_wallets": "스캔할 지갑 없음",
+				"no_tokens": "먼저 3단계에서 토큰을 선택하세요",
+				"no_rpc": "현재 네트워크에 사용 가능한 RPC 엔드포인트 없음",
+				"no_valid_tokens": "현재 네트워크에 선택된 유효한 토큰 없음",
+				"no_balance": "선택한 토큰에 잔액이 있는 지갑이 없습니다",
+				"generate_failed": "주소 생성 실패",
+				"import_failed": "개인 키 가져오기 실패",
+				"scan_failed": "잔액 스캔 실패"
+			},
+			"rate_limit": {
+				"title": "모든 RPC 엔드포인트 속도 제한됨",
+				"error_generic": "스캔 일시 중지: {reason}",
+				"error_native": "네이티브 토큰 잔액 스캔 중 속도 제한 트리거됨 (배치 {batch}/{total})",
+				"error_erc20": "토큰 {token} 잔액 스캔 중 속도 제한 트리거됨 (배치 {batch}/{total})",
+				"hint": "💡 아래 버튼을 클릭하여 새 RPC 엔드포인트를 추가하거나 기존 RPC가 복구될 때까지 기다렸다가 다시 시도하세요. 여러 RPC를 추가하면 빈번한 속도 제한을 피하기 위해 자동 로테이션이 활성화됩니다.",
+				"recommend_prefix": "권장: 사용 가능한 RPC 엔드포인트는",
+				"recommend_suffix": "에서 찾으세요",
+				"manage_rpc_button": "RPC 관리",
+				"resume_button": "스캔 재개"
+			},
+			"dialogs": {
+				"remove_wallet_title": "지갑 제거",
+				"remove_wallet_message": "이 지갑을 가져오기 목록에서 제거하시겠습니까?\n\n주소: {address}",
+				"remove_button": "제거",
+				"clear_all_title": "모든 지갑 지우기",
+				"clear_all_message": "{count}개의 지갑을 모두 가져오기 목록에서 제거하시겠습니까? 이 작업은 취소할 수 없습니다.",
+				"clear_all_button": "모두 지우기",
+				"cancel_button": "취소",
+				"long_press_hint": "⚠️ 이 작업은 되돌릴 수 없습니다. 확인하려면 버튼을 3초간 길게 누르세요"
+			},
+			"rpc_hint": {
+				"title": "더 나은 안정성을 위해 RPC 추가",
+				"message": "RPC 엔드포인트가 1개만 구성되어 있습니다. 여러 RPC를 추가하면 속도 제한이 발생할 때 자동 로테이션이 활성화되어 스캔 안정성이 향상됩니다.",
+				"add_rpc_button": "RPC 추가"
+			}
+		},
+		"footer": {
+			"continue_text": "확인으로 계속",
+			"hint": "계속하려면 최소 하나의 지갑을 가져오세요",
+			"hint_scan_required": "계속하기 전에 잔액을 스캔하세요"
+		},
+		"sidebar": {
+			"title": "가져온 지갑",
+			"total_label": "총:",
+			"with_balance_label": "잔액 있음:",
+			"scanning_label": "스캔 중:",
+			"scan_status_label": "스캔 상태:",
+			"scan_completed": "완료",
+			"scan_pending": "대기 중",
+			"no_balance_found": "스캔 후 잔액을 찾을 수 없습니다. 모든 지갑이 선택한 토큰에 대해 잔액이 0입니다.",
+			"empty_hint": "가져온 지갑 없음",
+			"performance_tip": {
+				"title": "⚡ 성능 팁",
+				"message": "큰 범위는 스캔 시간을 증가시킵니다",
+				"recommended": "권장:",
+				"recommended_range": "1,000 - 10,000 주소"
+			},
+			"token_stats": {
+				"title": "토큰 잔액 통계",
+				"wallets_count": "{count} 지갑",
+				"total_balance": "총 잔액",
+				"download_title": "Excel 보고서 다운로드"
+			},
+			"scan_log": {
+				"title": "스캔 로그"
+			}
+		}
+	}
+}

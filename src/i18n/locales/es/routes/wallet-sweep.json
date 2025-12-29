@@ -1,0 +1,470 @@
+{
+	"_meta": {
+		"code": "es",
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸"
+	},
+	"title": "Consolidación de Billeteras",
+	"description": "Transfiere saldos de múltiples billeteras a una sola dirección",
+	"feature_1": "Transferencia completa de saldo, sin residuos",
+	"feature_2": "Automatización a gran escala, sin confirmación por transacción",
+	"feature_3": "No se requiere token nativo en billeteras de origen",
+	"feature_4": "Sin permisos en cualquier cadena EVM",
+	"faqs": {
+		"what_is_network": "¿Qué es una red blockchain?",
+		"network_explanation": "Una red blockchain es un sistema de libro mayor público que registra quién posee qué tokens y todas las transferencias. Ethereum, BSC y Polygon son diferentes libros, cada uno independiente y separado.",
+		"what_is_wallet": "¿Qué es una billetera?",
+		"wallet_explanation": "Una billetera Web3 no es donde se almacena el dinero, es la llave para administrar tu cuenta blockchain. Tus fondos están registrados en el libro blockchain, y la billetera demuestra que eres dueño de la cuenta. Populares: MetaMask, Coinbase Smart Wallet.",
+		"what_is_native_token": "¿Qué es un token nativo?",
+		"native_token_explanation": "Los tokens nativos se usan para pagar a los mineros que procesan tus transacciones. Ethereum usa ETH, BSC usa BNB, Polygon usa POL. Los mineros registran tu transacción en el libro blockchain, y les pagas esta tarifa.",
+		"what_is_eip7702": "¿Qué es EIP-7702?",
+		"eip7702_explanation": "Tecnología que actualiza temporalmente billeteras regulares a billeteras de contrato inteligente durante una transacción. No se necesita despliegue adicional.",
+		"why_need_eip7702": "¿Por qué se requiere EIP-7702?",
+		"why_need_eip7702_explanation": "Permite que billeteras sin gas envíen tokens. Tu billetera principal paga el gas por ellas, permitiendo consolidación con un clic.",
+		"what_is_create2_proxy": "¿Qué es CREATE2 Proxy?",
+		"create2_proxy_explanation": "Herramienta de despliegue que asegura la misma dirección de contrato en todas las cadenas. Mismo código = misma dirección en todas partes.",
+		"what_is_multicall3": "¿Qué es Multicall3?",
+		"multicall3_explanation": "Agrupa múltiples llamadas en una. Ahorra gas y tiempo. Ejecución todo-o-nada.",
+		"what_is_biubiu_premium": "¿Qué es BiuBiuPremium?",
+		"biubiu_premium_explanation": "Contrato de membresía que gestiona suscripciones, descuentos y acceso. Totalmente de código abierto.",
+		"what_is_wallet_sweep": "¿Qué es TokenSweep?",
+		"wallet_sweep_explanation": "Contrato principal para transferencias por lotes. Maneja delegación EIP-7702 y aprobaciones. Código abierto: https://github.com/atshelchin/biubiu-contracts",
+		"can_select_multiple_tokens": "¿Puedo seleccionar múltiples tokens a la vez?",
+		"can_select_multiple_tokens_explanation": "¡Sí! Puedes seleccionar tantos tokens como quieras. La herramienta consolidará todos los tokens seleccionados en una operación por lotes, haciéndolo muy eficiente.",
+		"what_happens_zero_balance": "¿Qué pasa si una billetera tiene saldo cero para un token?",
+		"what_happens_zero_balance_explanation": "¡Inteligente! El sistema omite automáticamente las billeteras con saldo cero para ese token específico. Esto te ahorra costos de gas al no ejecutar transferencias innecesarias.",
+		"what_tokens_supported": "¿Qué tipos de tokens son compatibles?",
+		"what_tokens_supported_explanation": "Soportamos tokens nativos (como ETH en Ethereum, BNB en BSC, MATIC en Polygon) y todos los tokens estándar ERC-20. La mayoría de tokens que encuentres funcionarán.",
+		"how_add_custom_token": "¿Cómo agrego un token personalizado?",
+		"how_add_custom_token_explanation": "Haz clic en el botón '+ Agregar Token', luego ingresa la dirección del contrato del token. El sistema obtendrá automáticamente el nombre, símbolo y decimales del token desde la blockchain."
+	},
+	"seo": {
+		"page_title": "Consolidación de Billeteras - Consolida Tokens de Múltiples Billeteras | BiuBiu Tools",
+		"page_description": "Consolida tokens de múltiples billeteras a un solo destino. Soporte para redes Ethereum, Polygon, BSC, Arbitrum, Optimism y Base. Rápido, seguro y optimizado en gas.",
+		"keywords": "consolidación billetera, consolidación tokens, transferencia ERC20, transferencia lotes, herramientas crypto, herramientas web3, herramientas ethereum, herramientas polygon, herramientas DeFi",
+		"webapp_name": "Consolidación de Billeteras",
+		"webapp_description": "Consolida tokens de múltiples billeteras a un solo destino. Soporte para redes Ethereum, Polygon, BSC, Arbitrum, Optimism y Base.",
+		"feature_1": "Transferencia por lotes de tokens ERC20",
+		"feature_2": "Soporte multi-red (Ethereum, Polygon, BSC, Arbitrum, Optimism, Base)",
+		"feature_3": "Optimización de gas",
+		"feature_4": "Integración segura de billetera",
+		"feature_5": "Seguimiento de transacciones en tiempo real",
+		"howto_name": "Cómo Consolidar Tokens de Múltiples Billeteras con Consolidación de Billeteras",
+		"howto_description": "Guía paso a paso para consolidar tokens de múltiples billeteras a un solo destino usando la herramienta BiuBiu Wallet Sweep.",
+		"howto_tool_1": "Billetera Web3 (MetaMask, WalletConnect, etc.)",
+		"howto_tool_2": "Tokens ERC20 para transferir",
+		"step_1_name": "Conecta Tu Billetera",
+		"step_1_text": "Haz clic en el botón \"Conectar Billetera\" y selecciona tu proveedor de billetera Web3 preferido (MetaMask, WalletConnect, Coinbase Wallet, etc.). Aprueba la solicitud de conexión en tu billetera.",
+		"step_1_description": "Vincula tu billetera Web3",
+		"step_2_name": "Verifica Dependencias",
+		"step_2_text": "Verifica la conexión a la red blockchain y asegúrate de que todos los contratos inteligentes requeridos sean accesibles. El sistema detectará y validará automáticamente los componentes necesarios.",
+		"step_2_description": "Verifica red y contratos",
+		"step_3_name": "Selecciona Tokens",
+		"step_3_text": "Elige qué tokens ERC20 quieres consolidar de la lista disponible. Puedes seleccionar múltiples tokens para transferir en una sola operación por lotes.",
+		"step_3_description": "Elige tokens para consolidar",
+		"step_4_name": "Importa Billeteras",
+		"step_4_text": "Importa las direcciones de billetera de origen que contienen los tokens que quieres consolidar. Puedes agregar múltiples direcciones de billetera para recoger tokens de todas ellas.",
+		"step_4_description": "Agrega direcciones de origen",
+		"step_5_name": "Confirma Consolidación",
+		"step_5_text": "Revisa el resumen de la transacción incluyendo tokens totales, tarifas de gas y dirección de destino. Haz clic en \"Ejecutar Transferencia\" y confirma la transacción en tu billetera. Espera la confirmación blockchain y visualiza el recibo de transacción.",
+		"step_5_description": "Revisa y ejecuta"
+	},
+	"step1": {
+		"footer": {
+			"continue": "Continuar",
+			"hint": "Conecta tu billetera para continuar"
+		},
+		"content": {
+			"title": "Seleccionar Red",
+			"description": "Conecta billetera para comenzar la consolidación",
+			"loading": "Cargando configuración de red...",
+			"no_networks_enabled": "Sin Redes Habilitadas",
+			"enable_network_prompt": "Por favor habilita al menos una red para continuar.",
+			"open_network_settings": "Abrir Configuración de Red",
+			"network_not_found": "¿Red no encontrada?",
+			"add_custom_network": "Agregar red personalizada"
+		},
+		"sidebar": {
+			"title": "Seleccionar Red y Conectar Billetera",
+			"description": "Elige una red blockchain y conecta tu billetera para comenzar a consolidar tokens.",
+			"what_is_this": "¿Qué es este paso?",
+			"what_explanation": "Necesitas:",
+			"what_item1": "Seleccionar una red blockchain (Ethereum, BSC, Polygon, etc.)",
+			"what_item2": "Conectar tu billetera Web3 (MetaMask, etc.)",
+			"why_do_this": "¿Por qué hacer esto?",
+			"why_explanation": "Indica a la app qué red usar y qué activos de billetera operar - ambos son esenciales.",
+			"beginner_tips": "Consejos",
+			"tip1": "✅ Asegúrate de seleccionar la red correcta (elige donde están tus tokens)",
+			"tip2": "⛽ Asegúrate de tener suficientes tokens nativos para pagar tarifas",
+			"tip3": "🌍 Soporta cualquier red compatible con EVM - puedes agregar cualquier cadena",
+			"what_is_network": "¿Qué es una red blockchain?",
+			"network_explanation": "Una red blockchain es un sistema de libro mayor público que registra quién posee qué tokens y todas las transferencias. Ethereum, BSC y Polygon son diferentes libros, cada uno independiente y separado.",
+			"what_is_wallet": "¿Qué es una billetera?",
+			"wallet_explanation": "Una billetera Web3 no es donde se almacena el dinero, es la llave para administrar tu cuenta blockchain. Tus fondos están registrados en el libro blockchain, y la billetera demuestra que eres dueño de la cuenta. Populares: MetaMask, Coinbase Smart Wallet.",
+			"what_is_native_token": "¿Qué es un token nativo?",
+			"native_token_explanation": "Los tokens nativos se usan para pagar a los mineros que procesan tus transacciones. Ethereum usa ETH, BSC usa BNB, Polygon usa POL. Los mineros registran tu transacción en el libro blockchain, y les pagas esta tarifa."
+		}
+	},
+	"step2": {
+		"content": {
+			"title": "Verificación de Dependencias",
+			"description": "Asegurar que la infraestructura requerida esté lista",
+			"checking_dependencies_for": "Verificando entorno de red {network}...",
+			"wallet_not_connected_title": "Billetera No Conectada",
+			"wallet_not_connected_message": "Por favor regresa al Paso 1 y conecta tu billetera",
+			"go_to_step1": "Ir al Paso 1",
+			"all_dependencies_satisfied": "Todas las Dependencias Satisfechas",
+			"network_properly_configured": "Tu red está correctamente configurada para consolidación de tokens",
+			"dependency_issues_found": "Problemas de Dependencias Encontrados",
+			"resolve_issues_before_continuing": "Por favor resuelve los problemas anteriores antes de continuar",
+			"recheck_dependencies": "Re-verificar Dependencias",
+			"address_label": "Dirección:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Por favor resuelve el problema anterior primero",
+			"view_deployment_guide": "Ver Guía de Despliegue",
+			"deploy_coming_soon": "Desplegar Contrato (Próximamente)",
+			"deploy_contract": "Desplegar {contractName}",
+			"deployment": {
+				"modal_title": "Desplegar {contractName}",
+				"start_deployment": "Iniciar Despliegue",
+				"deploying_contract": "Desplegando Contrato...",
+				"deployment_steps_heading": "Pasos de Despliegue:",
+				"contract_address_label": "Dirección del Contrato:",
+				"network_label": "Red:",
+				"waiting_for_signature": "⏳ Por favor confirma la transacción en tu billetera...",
+				"transaction_sent": "⚡ ¡Transacción enviada! Esperando confirmación blockchain...",
+				"finalizing": "✅ Finalizando despliegue...",
+				"confirm_in_wallet": "Por favor confirma las transacciones en tu billetera",
+				"success_title": "¡Despliegue Exitoso!",
+				"success_description": "El contrato ha sido desplegado exitosamente.",
+				"view_on_explorer": "Ver en Explorador",
+				"error_title": "Despliegue Fallido",
+				"errors": {
+					"init_failed": "No se pudo inicializar la configuración de despliegue",
+					"wallet_not_connected": "Por favor conecta tu billetera primero",
+					"deployment_failed": "No se pudo desplegar el contrato",
+					"metamask_cache": "MetaMask almacenó datos de bloques antiguos. Esto sucede cuando tu red de prueba fue reiniciada.",
+					"wallet_cache": "Error de caché de billetera. Por favor reinicia tu billetera e intenta de nuevo.",
+					"metamask_internal": "Error interno de MetaMask. Por favor intenta:\n\n1. Limpiar Datos de Pestaña de Actividad en MetaMask\n   (Configuración → Avanzado → Limpiar datos de pestaña de actividad)\n\n2. Actualizar endpoint RPC de red\n\n3. Reiniciar MetaMask\n\n4. Si despliegas Multicall3, asegúrate de que CREATE2 Proxy esté desplegado primero",
+					"wallet_internal": "Error interno de billetera. Por favor intenta:\n\n1. Actualizar endpoint RPC de red\n\n2. Reiniciar tu billetera\n\n3. Si despliegas Multicall3, asegúrate de que CREATE2 Proxy esté desplegado primero",
+					"connection_failed": "Conexión fallida. Por favor verifica:\n\n1. Tu billetera está desbloqueada\n\n2. Tu conexión de red es estable\n\nSi el problema persiste, intenta actualizar el endpoint RPC de red.",
+					"rpc_unavailable": "Servicio RPC temporalmente no disponible. Esto probablemente se debe a que el endpoint RPC configurado en tu billetera tiene límites de velocidad o está caído.",
+					"insufficient_funds": "Saldo insuficiente. Necesitas fondos suficientes para despliegue y tarifas de gas.",
+					"user_rejected": "La transacción fue rechazada en tu billetera.",
+					"already_deployed": "Este contrato puede ya estar desplegado. Por favor actualiza la verificación de dependencias."
+				},
+				"steps": {
+					"create2": {
+						"fund_deployer_title": "Financiar Dirección de Desplegador",
+						"fund_deployer_description": "Enviar 0.01 ETH a {address}",
+						"deploy_contract_title": "Desplegar Contrato",
+						"deploy_contract_description": "Enviar transacción de despliegue pre-firmada"
+					},
+					"via_create2": {
+						"deploy_title": "Desplegar Contrato {contractName}",
+						"deploy_description": "Enviar transacción de despliegue al Proxy de Despliegue Determinístico"
+					}
+				}
+			},
+			"checks": {
+				"rpc_endpoint": {
+					"name": "Endpoint RPC",
+					"description": "Verificar si el endpoint RPC actual está disponible",
+					"chain_id_mismatch": "ID de cadena no coincide: esperado {expected}, obtenido {actual}",
+					"connected_to_block": "Conectado al bloque #{blockNumber}",
+					"failed_to_connect": "Fallo al conectar: {error}",
+					"no_rpc_configured": "Sin endpoint RPC configurado para esta red",
+					"configure_rpc_button": "Configurar RPC"
+				},
+				"eip7702": {
+					"name": "EIP-7702",
+					"description": "Verificar si la red soporta el protocolo EIP-7702",
+					"supported": "La red soporta EIP-7702 (probado vía eth_estimateGas)",
+					"not_supported": "La red no soporta EIP-7702 (código de operación inválido)",
+					"rpc_not_capable": "RPC actual no soporta anulación de estado para esta verificación. Intenta un endpoint RPC diferente.",
+					"check_failed": "Fallo al verificar soporte EIP-7702: {error}"
+				},
+				"contract": {
+					"deployed": "Contrato está desplegado",
+					"not_deployed": "Contrato no desplegado en esta dirección",
+					"check_failed": "Fallo al verificar despliegue: {error}",
+					"create2_proxy_description": "Proxy de despliegue determinístico para creación de contratos",
+					"multicall3_description": "Agrega múltiples llamadas de contrato en una sola solicitud",
+					"biubiu_premium_description": "Verifica el estado de membresía premium del usuario en la plataforma",
+					"wallet_sweep_description": "Recolección por lotes de tokens dispersos en múltiples billeteras",
+					"biubiu_membership_description": "Contrato de membresía de la plataforma Biubiu",
+					"wallet_sweep_contract_description": "Contrato principal para operaciones de transferencia de tokens por lotes"
+				},
+				"category": {
+					"network": "Red",
+					"protocol": "Protocolo",
+					"contract": "Contrato"
+				}
+			}
+		},
+		"footer": {
+			"checking_dependencies": "Verificando dependencias...",
+			"resolve_issues": "Por favor resuelve todos los problemas de dependencias para continuar",
+			"waiting_for_checks": "Esperando verificación de dependencias..."
+		},
+		"sidebar": {
+			"beginner_tips": "Consejos",
+			"tip1": "🔍 El sistema verifica automáticamente si los contratos requeridos están desplegados",
+			"tip2": "🚀 Si falta un contrato, puedes desplegarlo directamente desde esta página",
+			"tip3": "📋 Debes resolver problemas de dependencias en orden - arregla la primera verificación fallida antes que otras"
+		}
+	},
+	"step3": {
+		"content": {
+			"title": "Seleccionar Tokens",
+			"description": "Selecciona tokens para consolidar en la red {network}",
+			"description_fallback": "Selecciona tokens para consolidar en esta red",
+			"wallet_not_connected_title": "Billetera No Conectada",
+			"wallet_not_connected_message": "Por favor regresa al Paso 1 y conecta tu billetera",
+			"empty_message": "Sin tokens disponibles. Agrega un token personalizado para comenzar."
+		},
+		"footer": {
+			"hint": "Por favor selecciona al menos un token para continuar"
+		},
+		"sidebar": {
+			"title": "Seleccionar Tokens",
+			"description": "Elige qué tokens consolidar",
+			"selected_tokens_title": "Tokens Seleccionados",
+			"count_label": "Cantidad:",
+			"empty_hint": "Sin tokens seleccionados",
+			"beginner_tips": "Consejos",
+			"tip1": "✅ Puedes seleccionar múltiples tokens para consolidarlos todos en una operación por lotes",
+			"tip2": "⚡ Las billeteras con saldo cero para un token serán omitidas automáticamente - ahorrando costos de gas",
+			"tip3": "🪙 Soporta tokens nativos (ETH, BNB, etc.) y tokens ERC-20"
+		}
+	},
+	"step5": {
+		"target_address_label": "Dirección Destino",
+		"target_address_hint": "Los tokens serán consolidados a la dirección de tu billetera conectada",
+		"content": {
+			"title": "Confirmar Consolidación",
+			"description": "Revisa tu configuración y ejecuta la consolidación de activos",
+			"selected_network_tokens": "Red y Tokens Seleccionados ({count})",
+			"ready_to_execute": "Listo para ejecutar",
+			"review_carefully": "Por favor revisa toda la información cuidadosamente antes de proceder.",
+			"progress": {
+				"preparing": "⏳ Preparando...",
+				"building": "🔧 Construyendo Transacciones...",
+				"executing": "⚡ Ejecutando Consolidación...",
+				"confirming": "⏰ Confirmando Transacciones...",
+				"completed": "✅ ¡Completado!",
+				"error": "❌ Error",
+				"batch": "Lote {current} / {total}",
+				"wallet": "Billetera {current} / {total}",
+				"results": "Resultados ({count}):"
+			},
+			"estimate": {
+				"title": "📊 Estimación de Costos",
+				"total_transactions": "Total de Transacciones:",
+				"estimated_gas": "Gas Estimado:",
+				"estimated_cost": "Costo Estimado:",
+				"gas_units": "{amount} unidades",
+				"cost_eth": "{amount} ETH"
+			},
+			"actions": {
+				"estimate_cost": "💰 Estimar Costo",
+				"estimating": "Estimando...",
+				"execute_sweep": "⚡ Ejecutar Consolidación",
+				"executing": "Ejecutando..."
+			},
+			"errors": {
+				"no_network": "Sin red conectada",
+				"no_rpc": "Sin endpoint RPC disponible",
+				"complete_fields": "Por favor completa todos los campos requeridos",
+				"invalid_address": "Dirección destino inválida",
+				"select_tokens": "Por favor selecciona al menos un token en el Paso 3",
+				"import_wallets": "Por favor importa al menos una billetera en el Paso 4",
+				"connect_wallet": "Por favor conecta tu billetera primero",
+				"no_balance": "Sin billeteras con saldo para consolidar. Por favor escanea saldos primero en el Paso 4.",
+				"insufficient_gas": "¡Billetera temporal sin gas suficiente! Requiere {required} {symbol}, pero solo tiene {current} {symbol}. Por favor recarga y haz clic en el botón de abajo para continuar.",
+				"still_insufficient_gas": "Billetera temporal todavía sin gas suficiente. Por favor continúa recargando."
+			},
+			"gas_insufficient_title": "⛽ Gas Insuficiente",
+			"gas_insufficient_message": "El saldo de la billetera temporal es insuficiente para cubrir la tarifa de gas estimada. Requiere {required} {symbol}, pero solo tiene {current} {symbol}. Por favor usa la función [Financiar Billetera con Gas] de arriba para transferir fondos a la billetera temporal, luego haz clic en el botón de abajo para continuar.",
+			"check_and_resume": "Verificar Saldo y Continuar",
+			"gas_refilled_restart": "¡Gas recargado! Saldo actual: {balance} ETH. Por favor haz clic en el botón [Ejecutar Consolidación] de nuevo para comenzar."
+		},
+		"sidebar": {
+			"summary_title": "Resumen",
+			"selected_tokens": "Tokens Seleccionados:",
+			"total_wallets": "Total de Billeteras:",
+			"with_balance": "Con Saldo:",
+			"batches": "Lotes"
+		}
+	},
+	"temporary_wallet": {
+		"title": "Billetera Temporal",
+		"description": "Crea una billetera temporal aleatoria para automatizar transacciones por lotes. La billetera se almacenará solo en la sesión de tu navegador.",
+		"important": "Importante",
+		"warning_text": "La billetera temporal se creará en tu navegador. Necesitarás:",
+		"step_download": "Descargar la clave privada como respaldo",
+		"step_fund": "Financiarla con <strong>{amount} {symbol}</strong> para tarifas de gas",
+		"step_clear": "Limpiarla después de completar tus tareas",
+		"btn_create": "Crear Billetera Temporal",
+		"creating": "Creando...",
+		"wallet_ready": "Billetera Lista",
+		"created_at": "Creada: {time}",
+		"address": "Dirección",
+		"balance": "Saldo (Red Actual)",
+		"loading": "Cargando...",
+		"private_key": "Clave Privada",
+		"show": "Mostrar",
+		"hide": "Ocultar",
+		"copy_address": "Copiar dirección",
+		"copy_private_key": "Copiar clave privada",
+		"show_qr": "Mostrar Código QR",
+		"refresh_balance": "Actualizar saldo",
+		"qr_hint": "Escanea para enviar gas a esta billetera temporal",
+		"fund_title": "Financiar Billetera con Gas",
+		"estimated_gas": "Gas estimado necesario: {amount} {symbol}",
+		"suggested_amount": "💰 Cantidad sugerida: <strong>{amount} {symbol}</strong> (2x estimado)",
+		"amount_placeholder": "Cantidad a enviar",
+		"btn_send": "Enviar desde Billetera Conectada",
+		"sending": "Enviando...",
+		"tip": "💡 Consejo: La cantidad sugerida (2x estimado) se rellena automáticamente para asegurar fondos suficientes. También puedes escanear el código QR para enviar desde cualquier billetera.",
+		"btn_download": "Descargar Clave Privada",
+		"btn_clear": "Limpiar Billetera",
+		"error_no_wallet": "Por favor conecta tu billetera primero",
+		"error_invalid_amount": "Por favor ingresa una cantidad válida",
+		"success_transfer": "✅ ¡Transferencia exitosa! Enviado {amount} {symbol} a billetera temporal. TX: {tx}...",
+		"confirm_clear": "¿Estás seguro de que quieres limpiar la billetera temporal? Asegúrate de haber descargado la clave privada si es necesario."
+	},
+	"step4": {
+		"import_method": {
+			"mnemonic": {
+				"label": "Frase Mnemónica",
+				"desc": "Derivar direcciones por lotes"
+			},
+			"private_key": {
+				"label": "Claves Privadas",
+				"desc": "Importar una por una"
+			}
+		},
+		"content": {
+			"title": "Importar Billeteras",
+			"description": "Agrega billeteras de origen de las que quieres consolidar activos",
+			"choose_method": "Elegir Método de Importación",
+			"import_wallets_button": "Importar Billeteras",
+			"mnemonic": {
+				"label": "Ingresar Frase Mnemónica",
+				"placeholder": "Ingresa 12 o 24 palabras separadas por espacios",
+				"security_hint": "🔒 La frase mnemónica se procesa localmente en tu navegador, nunca se envía a ningún servidor",
+				"derivation_path": "Configuración de Ruta de Derivación",
+				"generate_button": "🔍 Generar Lista de Direcciones",
+				"generating": "Generando... ({progress}%)",
+				"error_empty": "Por favor ingresa una frase mnemónica",
+				"error_invalid": "Frase mnemónica inválida. Por favor ingresa 12 o 24 palabras.",
+				"error_range": "Rango de direcciones inválido",
+				"error_max": "Rango muy grande (máximo 10000 direcciones a la vez)"
+			},
+			"private_key": {
+				"label": "Importación por Lotes de Claves Privadas",
+				"placeholder": "Una clave privada por línea (comenzando con 0x)",
+				"upload_file": "Subir Archivo",
+				"column_label": "Clave Privada",
+				"address_label": "Dirección",
+				"import_button": "➕ Agregar Billeteras por Lotes",
+				"importing": "Importando... ({progress}%)",
+				"error_empty": "Por favor ingresa claves privadas",
+				"error_none": "No se encontraron claves privadas válidas",
+				"success_with_invalid": "Importadas {valid} billeteras. {invalid} claves inválidas omitidas.",
+				"invalid_keys_found": "Encontradas {count} claves privadas inválidas",
+				"locate": "Localizar",
+				"locate_key": "Clic para localizar error en el editor",
+				"error_key_not_found": "Error: La clave privada ha sido modificada o eliminada",
+				"manual_search": "Por favor busca manualmente la línea {line}",
+				"security_hint": "🔒 Las claves privadas se procesan localmente en tu navegador, nunca se envían a ningún servidor"
+			},
+			"wallet_list": {
+				"title": "Billeteras Importadas",
+				"count": "({count})",
+				"with_balance": "{count} con saldo",
+				"scan_button": "Escanear Saldos",
+				"scanning": "Escaneando... {progress}%",
+				"scan_completed": "Escaneo Completado",
+				"scan_hint": "Escanear saldos es requerido antes de continuar al siguiente paso",
+				"clear_all": "Limpiar Todo",
+				"empty_message": "Ninguna billetera importada aún. Usa los métodos de arriba para importar billeteras."
+			},
+			"scan_section": {
+				"title": "Escaneo de Saldos",
+				"required": "Requerido"
+			},
+			"errors": {
+				"no_network": "Sin red conectada",
+				"no_wallets": "Sin billeteras para escanear",
+				"no_tokens": "Por favor selecciona tokens en el Paso 3 primero",
+				"no_rpc": "Sin endpoint RPC disponible para la red actual",
+				"no_valid_tokens": "Sin tokens válidos seleccionados para la red actual",
+				"no_balance": "Ninguna billetera tiene saldo para los tokens seleccionados",
+				"generate_failed": "Fallo al generar direcciones",
+				"import_failed": "Fallo al importar claves privadas",
+				"scan_failed": "Fallo al escanear saldos"
+			},
+			"rate_limit": {
+				"title": "Todos los Endpoints RPC con Límite de Velocidad",
+				"error_generic": "Escaneo pausado: {reason}",
+				"error_native": "Límite de velocidad activado al escanear saldos de token nativo (lote {batch}/{total})",
+				"error_erc20": "Límite de velocidad activado al escanear saldos del token {token} (lote {batch}/{total})",
+				"hint": "💡 Por favor haz clic en el botón de abajo para agregar nuevos endpoints RPC, o espera a que los RPCs existentes se recuperen antes de reintentar. Agregar múltiples RPCs habilita rotación automática para evitar límites de velocidad frecuentes.",
+				"recommend_prefix": "Recomendado: Encuentra endpoints RPC disponibles en",
+				"recommend_suffix": "",
+				"manage_rpc_button": "Administrar RPC",
+				"resume_button": "Reanudar Escaneo"
+			},
+			"dialogs": {
+				"remove_wallet_title": "Eliminar Billetera",
+				"remove_wallet_message": "¿Estás seguro de que quieres eliminar esta billetera de la lista de importación?\n\nDirección: {address}",
+				"remove_button": "Eliminar",
+				"clear_all_title": "Limpiar Todas las Billeteras",
+				"clear_all_message": "¿Estás seguro de que quieres eliminar las {count} billeteras de la lista de importación? Esta acción no se puede deshacer.",
+				"clear_all_button": "Limpiar Todo",
+				"cancel_button": "Cancelar",
+				"long_press_hint": "⚠️ Esta acción es irreversible. Por favor mantén presionado el botón por 3 segundos para confirmar"
+			},
+			"rpc_hint": {
+				"title": "Agrega Más RPCs para Mayor Confiabilidad",
+				"message": "Solo tienes 1 endpoint RPC configurado. Agregar múltiples RPCs habilita rotación automática cuando ocurren límites de velocidad, mejorando la confiabilidad del escaneo.",
+				"add_rpc_button": "Agregar RPC"
+			}
+		},
+		"footer": {
+			"continue_text": "Continuar a Confirmar",
+			"hint": "Por favor importa al menos una billetera para continuar",
+			"hint_scan_required": "Por favor escanea saldos antes de continuar"
+		},
+		"sidebar": {
+			"title": "Billeteras Importadas",
+			"total_label": "Total:",
+			"with_balance_label": "Con Saldo:",
+			"scanning_label": "Escaneando:",
+			"scan_status_label": "Estado de Escaneo:",
+			"scan_completed": "Completado",
+			"scan_pending": "Pendiente",
+			"no_balance_found": "No se encontraron saldos después del escaneo. Todas las billeteras tienen saldo cero para los tokens seleccionados.",
+			"empty_hint": "Sin billeteras importadas",
+			"performance_tip": {
+				"title": "⚡ Consejo de Rendimiento",
+				"message": "Rangos grandes aumentarán el tiempo de escaneo",
+				"recommended": "Recomendado:",
+				"recommended_range": "1,000 - 10,000 direcciones"
+			},
+			"token_stats": {
+				"title": "Estadísticas de Saldos de Tokens",
+				"wallets_count": "{count} billeteras",
+				"total_balance": "Saldo Total",
+				"download_title": "Descargar Informe Excel"
+			},
+			"scan_log": {
+				"title": "Registro de Escaneo"
+			}
+		}
+	}
+}
