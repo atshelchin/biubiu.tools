@@ -1,0 +1,39 @@
+{
+	"_meta": {
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷",
+		"code": "pt"
+	},
+	"title": "Usamos Cookies",
+	"description": "Usamos cookies essenciais para funcionalidade básica e cookies opcionais de análise para melhorar nossos serviços. Você pode escolher se deseja permitir análises.",
+	"necessary": {
+		"title": "Essenciais",
+		"description": "Necessários para funcionalidade básica incluindo preferências de tema, dados de sessão e otimização de RPC. Não podem ser desativados."
+	},
+	"functional": {
+		"title": "Funcionais",
+		"description": "Incluídos nos cookies essenciais."
+	},
+	"analytics": {
+		"title": "Análises",
+		"description": "Cookies de análise nos ajudam a entender como os visitantes usam nosso site através de estatísticas de uso anônimas e rastreamento de referências."
+	},
+	"required": "Obrigatório",
+	"accept_all": "Aceitar Todos",
+	"necessary_only": "Apenas Essenciais",
+	"save_preferences": "Salvar Preferências",
+	"show_details": "Personalizar",
+	"hide_details": "Ocultar Detalhes",
+	"privacy_notice": "Para mais informações, consulte nossa",
+	"privacy_policy": "Política de Privacidade",
+	"reminder_title": "Ativar Análises?",
+	"reminder_description": "Ajude-nos a melhorar o BiuBiu Tools ativando cookies de análise. Seus dados permanecem anônimos.",
+	"not_now": "Agora Não",
+	"dismiss": "Dispensar",
+	"settings_title": "Configurações de Cookies",
+	"settings_description": "Gerencie suas preferências de cookies. Você pode alterar essas configurações a qualquer momento.",
+	"cancel": "Cancelar",
+	"cookie_settings": "Configurações de Cookies"
+}

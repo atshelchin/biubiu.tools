@@ -1,0 +1,58 @@
+{
+	"_meta": {
+		"code": "vi",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳"
+	},
+	"page_title": "Chính sách Bảo mật",
+	"page_description": "Tìm hiểu cách BiuBiu Tools thu thập, sử dụng và bảo vệ dữ liệu của bạn.",
+	"title": "Chính sách Bảo mật",
+	"last_updated": "Cập nhật lần cuối",
+	"introduction": {
+		"title": "Giới thiệu",
+		"content": "BiuBiu Tools cam kết bảo vệ quyền riêng tư của bạn. Chính sách Bảo mật này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ thông tin của bạn khi bạn sử dụng các công cụ và dịch vụ Web3 của chúng tôi."
+	},
+	"data_collection": {
+		"title": "Dữ liệu chúng tôi thu thập",
+		"intro": "Chúng tôi thu thập các loại dữ liệu khác nhau tùy thuộc vào tùy chọn đồng ý của bạn:",
+		"necessary": {
+			"title": "Dữ liệu cần thiết (luôn được thu thập)",
+			"item1": "Dữ liệu phiên cần thiết cho chức năng website",
+			"item2": "Tùy chọn đồng ý để ghi nhớ lựa chọn của bạn",
+			"item3": "Tùy chọn giao diện (chế độ sáng/tối)",
+			"item4": "Tùy chọn ngôn ngữ",
+			"item5": "Số liệu hiệu suất RPC để chọn mạng tối ưu"
+		},
+		"analytics": {
+			"title": "Dữ liệu phân tích (không dùng cookie, luôn bật)",
+			"item1": "Thống kê sử dụng ẩn danh qua Rybbit (lượt xem trang, sử dụng tính năng)",
+			"item2": "Số liệu khách truy cập tổng hợp, không thể nhận dạng",
+			"item3": "Theo dõi nguồn giới thiệu cho chương trình referral của chúng tôi"
+		}
+	},
+	"local_storage": {
+		"title": "Lưu trữ cục bộ (cần thiết)",
+		"content": "Chúng tôi sử dụng bộ nhớ cục bộ của trình duyệt để lưu dữ liệu cần thiết cho hoạt động của ứng dụng. Dữ liệu này được lưu trên thiết bị của bạn và không được truyền đến máy chủ của chúng tôi:",
+		"item1": "Danh sách token tùy chỉnh bạn đã thêm (cần thiết cho các thao tác token)",
+		"item2": "Dữ liệu phiên cho các thao tác nhiều bước (cần thiết để tiếp tục tác vụ bị gián đoạn)",
+		"item3": "Kết quả quét được lưu trong IndexedDB (cần thiết cho tính năng quét số dư)",
+		"item4": "Tùy chọn đồng ý cookie của bạn"
+	},
+	"third_party": {
+		"title": "Phân tích",
+		"content": "Chúng tôi sử dụng Rybbit (tj.appsdata.org), một dịch vụ phân tích không dùng cookie, tập trung vào quyền riêng tư để hiểu cách khách truy cập sử dụng website. Rybbit không sử dụng cookie, không thu thập thông tin nhận dạng cá nhân và luôn được bật vì tuân thủ GDPR mà không cần sự đồng ý. Nếu chúng tôi thêm các dịch vụ phân tích bổ sung sử dụng cookie trong tương lai, chúng sẽ chỉ được tải khi có sự đồng ý của bạn. Chúng tôi tương tác với các mạng blockchain (Ethereum, Polygon, v.v.) theo yêu cầu của các công cụ, nhưng không lưu trữ khóa riêng hoặc cụm từ khôi phục của bạn trên máy chủ."
+	},
+	"your_rights": {
+		"title": "Quyền của bạn",
+		"content": "Theo GDPR, CCPA và các quy định tương tự, bạn có các quyền sau:",
+		"item1": "Quyền truy cập: Bạn có thể yêu cầu thông tin về dữ liệu chúng tôi có về bạn",
+		"item2": "Quyền xóa: Bạn có thể xóa dữ liệu cục bộ bất cứ lúc nào thông qua cài đặt trình duyệt",
+		"item3": "Quyền rút lại sự đồng ý: Bạn có thể thay đổi tùy chọn cookie bất cứ lúc nào"
+	},
+	"contact": {
+		"title": "Liên hệ với chúng tôi",
+		"content": "Nếu bạn có câu hỏi về Chính sách Bảo mật này hoặc các thông lệ dữ liệu của chúng tôi, vui lòng liên hệ qua kho GitHub hoặc các kênh cộng đồng của chúng tôi."
+	}
+}

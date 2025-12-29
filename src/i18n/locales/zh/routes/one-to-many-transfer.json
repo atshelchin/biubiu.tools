@@ -53,16 +53,57 @@
 		"what_networks_supported": "支持哪些区块链网络？",
 		"networks_supported_explanation": "目前我们支持Ethereum主网、Polygon、BSC（币安智能链）、Base、Arbitrum和Optimism。未来将添加更多网络。"
 	},
+	"step1": {
+		"content": {
+			"title": "连接钱包",
+			"description": "连接您的 Web3 钱包以开始代币分发",
+			"loading": "正在加载钱包信息..."
+		},
+		"footer": {
+			"hint": "连接钱包后继续下一步",
+			"continue": "继续检查依赖"
+		}
+	},
 	"step2": {
 		"content": {
 			"title": "检查依赖",
 			"description": "验证此网络上所需的合约是否已部署",
+			"checking_dependencies_for": "正在检查 {network} 的依赖项...",
+			"recheck_dependencies": "重新检查依赖",
+			"all_dependencies_satisfied": "所有依赖项已满足",
+			"network_properly_configured": "网络已正确配置，可以进行代币分发",
+			"dependency_issues_found": "发现依赖问题",
+			"resolve_issues_before_continuing": "请在继续之前解决以下问题",
+			"resolve_previous_issue": "请先解决上一个问题",
+			"address_label": "地址",
+			"endpoint_label": "端点",
+			"view_deployment_guide": "查看部署指南",
+			"deploy_coming_soon": "部署功能即将推出",
+			"deploy_contract": "部署 {contractName}",
+			"wallet_not_connected_title": "钱包未连接",
+			"wallet_not_connected_message": "请连接钱包以检查网络依赖项",
+			"go_to_step1": "返回步骤 1",
 			"checks": {
+				"category": {
+					"network": "网络",
+					"protocol": "协议",
+					"contract": "合约"
+				},
+				"rpc_endpoint": {
+					"configure_rpc_button": "配置 RPC"
+				},
 				"contract": {
-					"weth_description": "WETH合约用于委托执行模式（将WETH转换为ETH进行分发）",
-					"token_distribution_description": "TokenDistribution合约用于批量分发代币和NFT到多个收款人"
+					"weth_description": "WETH 合约用于委托执行模式（将 WETH 转换为 ETH 进行分发）",
+					"token_distribution_description": "TokenDistribution 合约用于批量分发代币和 NFT 到多个收款人"
 				}
 			}
+		},
+		"footer": {
+			"continue": "继续选择代币",
+			"hint": "完成依赖检查后继续",
+			"resolve_issues": "解决问题后继续",
+			"waiting_for_checks": "正在等待依赖检查...",
+			"checking_dependencies": "正在检查依赖项..."
 		}
 	},
 	"step3": {

@@ -1,0 +1,160 @@
+{
+	"_meta": {
+		"code": "ru",
+		"name": "Русский",
+		"englishName": "Russian",
+		"direction": "ltr",
+		"flag": "🇷🇺"
+	},
+	"address_text_import": {
+		"placeholder": "Вставьте адреса кошельков сюда (по одному на строку)\n0x1234...\n0x5678...\n0xabcd...",
+		"hint": "Введите один адрес на строку",
+		"import_button": "Импортировать адреса ({count})",
+		"importing": "Импорт... {progress}%",
+		"column_label": "Адрес"
+	},
+	"xpub_import_form": {
+		"placeholder": "Введите расширенный публичный ключ (xpub, ypub или zpub)...",
+		"hint": "xpub позволяет генерировать адреса без раскрытия приватных ключей",
+		"derivation_path": "Диапазон деривации",
+		"derive_button": "Сгенерировать адреса",
+		"deriving": "Генерация... {progress}%"
+	},
+	"gas_funding": {
+		"title": "Пополнить Gas",
+		"target_wallet": "Целевой кошелёк",
+		"estimated_gas": "Расчётный gas",
+		"suggested_amount": "Рекомендуемая сумма",
+		"send_amount": "Сумма отправки",
+		"amount_placeholder": "Введите сумму",
+		"tip": "Подсказка: Заполнено рекомендуемой суммой (2x расчётной) для обеспечения достаточных средств",
+		"security_notice": "💰 Средства, отправленные на временный кошелёк, можно вывести с помощью приватного ключа - ваши средства в безопасности",
+		"btn_send": "Отправить",
+		"sending": "Отправка...",
+		"cancel": "Отмена"
+	},
+	"file_upload": {
+		"title": "Загрузить файл",
+		"drop_file": "Перетащите файл сюда или нажмите для загрузки",
+		"supported_formats": "Поддерживаемые форматы: TXT, CSV, XLSX, XLS",
+		"choose_file": "Выбрать файл",
+		"remove_file": "Удалить файл",
+		"processing": "Обработка...",
+		"mode_text": "Текстовый режим",
+		"mode_table": "Табличный режим",
+		"preview_title": "Предпросмотр файла",
+		"select_columns_hint": "Выберите {count} столбец(ов) (нажмите кнопки заголовка для отметки порядка столбцов)",
+		"select_columns_hint_click": "Выберите {count} столбец(ов) (нажмите на заголовки столбцов для отметки, нажмите снова для переключения)",
+		"select_single_column_hint": "💡 Нажмите на заголовок столбца, чтобы отметить его как столбец [{label}]",
+		"click_to_select": "Нажмите, чтобы выбрать этот столбец как [{label}]",
+		"click_to_deselect": "Нажмите снова для отмены выбора",
+		"click_to_change": "Нажмите для переключения на этот столбец",
+		"click_to_cycle": "Нажмите снова для перехода к следующей позиции",
+		"generated_column": "Столбец {index}",
+		"column": "Столбец",
+		"showing_first_rows": "Показаны первые {count} строк",
+		"cancel": "Отмена",
+		"confirm": "Подтвердить",
+		"error_unsupported_format": "Неподдерживаемый формат файла",
+		"error_empty_file": "Файл пуст",
+		"error_incomplete_selection": "Завершите выбор столбцов",
+		"error_all_labels_assigned": "Все метки назначены. Сначала удалите метку из другого столбца"
+	},
+	"quick_rpc_manager": {
+		"title": "Быстрое управление RPC",
+		"network": "Текущая сеть",
+		"add_new": "Добавить новый RPC",
+		"placeholder": "https://example.com/rpc",
+		"add_button": "Добавить",
+		"current_rpcs": "Текущий список RPC",
+		"primary": "Основной",
+		"no_rpcs": "Нет RPC-эндпоинтов",
+		"invalid_url": "Неверный URL, должен начинаться с http:// или https://",
+		"duplicate_url": "Этот RPC-эндпоинт уже существует",
+		"at_least_one": "Требуется минимум один RPC-эндпоинт",
+		"hint": "Добавление нескольких RPC-эндпоинтов позволяет автоматически переключаться при ограничении скорости, повышая успешность сканирования.",
+		"recommend_prefix": "Найти доступные RPC-эндпоинты можно на",
+		"recommend_suffix": "",
+		"cancel": "Отмена",
+		"save": "Сохранить и продолжить сканирование",
+		"url_format_hint": "Введите URL RPC, начинающийся с http:// или https://",
+		"http_warning": "Использование http:// (небезопасно) может блокироваться браузерами. Чтобы разрешить в Chrome: Нажмите значок в адресной строке → Настройки сайта → Небезопасный контент → Разрешить"
+	},
+	"address_path_selector": {
+		"sequential": {
+			"label": "Последовательный",
+			"description": "0, 1, 2, 3..."
+		},
+		"date": {
+			"label": "По дате",
+			"description": "20240101, 20240102...",
+			"presets": {
+				"1_year": "За последний год",
+				"10_years": "За последние 10 лет",
+				"100_years": "За последние 100 лет"
+			}
+		},
+		"quick_select": "Быстрый выбор",
+		"start": "Начало",
+		"end": "Конец",
+		"to": "до",
+		"from_year": "С года",
+		"to_year": "По год",
+		"format": "Формат",
+		"example": "Пример",
+		"will_generate": "Будет сгенерировано",
+		"estimated_addresses": "Примерное количество адресов",
+		"addresses": "адресов",
+		"limited_to": "Максимум {max}",
+		"advanced_settings": "Расширенные настройки",
+		"switch_to_advanced": "Перейти к расширенным настройкам",
+		"switch_to_quick": "Перейти к быстрому выбору"
+	},
+	"wallet_list": {
+		"empty_message": "Кошельки ещё не добавлены",
+		"remove_wallet": "Удалить кошелёк",
+		"showing": "Показано {start}-{end} из {total}",
+		"previous_page": "Предыдущая страница",
+		"next_page": "Следующая страница"
+	},
+	"token_card": {
+		"native": "Нативный",
+		"erc20": "ERC20",
+		"decimals_label": "Десятичные",
+		"decimals_unit": "знаков",
+		"view_on_explorer": "Посмотреть в обозревателе блоков",
+		"remove_custom_token": "Удалить пользовательский токен",
+		"remove_dialog_title": "Удалить пользовательский токен",
+		"remove_dialog_message": "Вы уверены, что хотите удалить {symbol} ({name})? Это действие нельзя отменить.",
+		"remove_button": "Удалить токен"
+	},
+	"token_selector": {
+		"empty_message": "Нет доступных токенов",
+		"select_all": "Выбрать все",
+		"deselect_all": "Снять выбор"
+	},
+	"add_token_button": {
+		"button_text": "Добавить токен",
+		"button_subtext": "Добавить пользовательский ERC20 токен"
+	},
+	"add_token_modal": {
+		"title": "Добавить пользовательский токен",
+		"token_address_label": "Адрес токена",
+		"token_symbol_label": "Символ",
+		"token_name_label": "Название",
+		"decimals_label": "Десятичные",
+		"fetching": "Получение...",
+		"found": "Найден",
+		"not_found": "Не найден",
+		"auto_filled": "Автоматически заполнено из блокчейна",
+		"address_placeholder": "0x...",
+		"symbol_placeholder": "напр., USDT",
+		"name_placeholder": "напр., Tether USD",
+		"address_hint": "Адрес контракта токена ERC20",
+		"decimals_hint": "Десятичные знаки токена (обычно 18)",
+		"error_label": "Ошибка:",
+		"success_message": "Токен успешно добавлен!",
+		"add_token_button": "Добавить токен",
+		"adding_button": "Добавление..."
+	}
+}

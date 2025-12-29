@@ -1,0 +1,147 @@
+{
+	"_meta": {
+		"code": "vi",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳"
+	},
+	"title": "Trình khám phá Địa chỉ",
+	"subtitle": "Tìm kiếm và khám phá các địa chỉ blockchain được gán nhãn và tên ENS",
+	"search_placeholder": "Tìm kiếm theo địa chỉ, tên ENS hoặc tổ chức...",
+	"searching": "Đang tìm kiếm...",
+	"looking_up": "Đang tra cứu trên blockchain...",
+	"view_details": "Xem chi tiết",
+	"no_results": "Không tìm thấy kết quả",
+	"all_addresses": "Tất cả Địa chỉ",
+	"categories": "Duyệt theo Danh mục",
+	"browse_by_label": "Duyệt theo Nhãn",
+	"popular_addresses": "Địa chỉ Phổ biến",
+	"popular_names": "Tên Phổ biến",
+	"view_on_explorer": "Xem trên Explorer",
+	"website": "Website",
+	"related_names": "Tên Liên quan",
+	"related_addresses": "Địa chỉ Liên quan",
+	"balance": "Số dư",
+	"loading_balance": "Đang tải...",
+	"contract": "Hợp đồng",
+	"data_source": "Nguồn Dữ liệu",
+	"updated": "Cập nhật",
+	"source_manual": "Thủ công",
+	"source_verified": "Đã xác minh",
+	"source_etherscan": "Etherscan",
+	"source_community": "Cộng đồng",
+	"stats": {
+		"addresses": "Địa chỉ",
+		"names": "Tên",
+		"exchanges": "Sàn giao dịch",
+		"defi": "DeFi",
+		"tokens": "Token",
+		"nft": "NFT",
+		"notable": "Đáng chú ý"
+	},
+	"labels": {
+		"exchange": "Sàn giao dịch",
+		"cex": "CEX",
+		"dex": "DEX",
+		"defi": "DeFi",
+		"lending": "Cho vay",
+		"bridge": "Bridge",
+		"yield": "Lợi nhuận",
+		"derivatives": "Phái sinh",
+		"liquid-staking": "Staking lỏng",
+		"token": "Token",
+		"stablecoin": "Stablecoin",
+		"memecoin": "Memecoin",
+		"wrapped": "Wrapped",
+		"nft": "NFT",
+		"nft-marketplace": "Chợ NFT",
+		"whale": "Cá voi",
+		"smart-money": "Tiền thông minh",
+		"foundation": "Tổ chức",
+		"dao": "DAO",
+		"multisig": "Multisig",
+		"deployer": "Triển khai",
+		"hacker": "Hacker",
+		"scam": "Lừa đảo",
+		"sanctioned": "Bị trừng phạt",
+		"phishing": "Phishing",
+		"burn": "Đốt",
+		"null": "Null",
+		"genesis": "Genesis",
+		"mev": "MEV",
+		"contract": "Hợp đồng",
+		"eoa": "EOA",
+		"notable": "Đáng chú ý",
+		"layer2": "Layer 2",
+		"staking": "Staking",
+		"oracle": "Oracle"
+	},
+	"risk": {
+		"safe": "An toàn",
+		"neutral": "Trung lập",
+		"warning": "Cảnh báo",
+		"danger": "Nguy hiểm"
+	},
+	"seo": {
+		"index_title": "Trình khám phá Địa chỉ - Tra cứu Địa chỉ Blockchain & ENS | BiuBiu Tools",
+		"index_description": "Tìm kiếm và khám phá {addressCount} địa chỉ blockchain được gán nhãn và {nameCount} tên ENS. Tìm sàn giao dịch, giao thức DeFi, cá voi và nhiều hơn nữa.",
+		"detail_description": "{name} ({entity}) trên {chain}. Nhãn: {labels}. Địa chỉ: {address}. Khám phá chi tiết ví và thông tin liên quan."
+	},
+	"faq": {
+		"title": "Câu hỏi Thường gặp",
+		"what_is": "{name} là gì?",
+		"what_is_answer": "{name} là địa chỉ ví thuộc về {entity} trên mạng {chain}.",
+		"is_safe": "Tương tác với địa chỉ này có an toàn không?",
+		"is_safe_answer_safe": "{name} là địa chỉ an toàn đã được xác minh từ một tổ chức nổi tiếng.",
+		"is_safe_answer_neutral": "{name} có mức độ rủi ro trung lập. Hãy thực hiện thận trọng bình thường.",
+		"is_safe_answer_warning": "Cảnh báo: {name} đã bị đánh dấu có rủi ro tiềm ẩn. Hãy tiến hành cẩn thận.",
+		"is_safe_answer_danger": "Nguy hiểm: {name} đã bị đánh dấu là nguy hiểm. Không gửi tiền đến địa chỉ này.",
+		"how_to_verify": "Làm thế nào để xác minh địa chỉ này?",
+		"how_to_verify_answer": "Bạn có thể xác minh địa chỉ này trên trình khám phá khối {explorer} để xem lịch sử giao dịch và chi tiết hợp đồng.",
+		"cex": {
+			"can_deposit": "Tôi có thể nạp tiền vào địa chỉ này không?",
+			"can_deposit_answer": "{name} là địa chỉ nạp tiền chính thức của {entity}. Luôn xác minh địa chỉ trên website chính thức của sàn trước khi gửi tiền.",
+			"how_to_withdraw": "Làm thế nào để rút tiền từ sàn này?",
+			"how_to_withdraw_answer": "Để rút tiền từ {entity}, đăng nhập vào tài khoản, điều hướng đến phần rút tiền, nhập địa chỉ ví đích và xác nhận giao dịch theo quy trình bảo mật của sàn."
+		},
+		"dex": {
+			"what_is_contract": "Hợp đồng DEX này là gì?",
+			"what_is_contract_answer": "{name} là hợp đồng thông minh của sàn phi tập trung {entity}. Nó cho phép hoán đổi token không cần quyền trực tiếp trên blockchain."
+		},
+		"defi": {
+			"what_does_it_do": "Hợp đồng DeFi này làm gì?",
+			"what_does_it_do_answer": "{name} là hợp đồng thông minh của {entity} cung cấp dịch vụ tài chính phi tập trung trên blockchain.",
+			"lending_how": "Cho vay hoạt động như thế nào trên giao thức này?",
+			"lending_how_answer": "{entity} cho phép người dùng cho vay tài sản để kiếm lãi hoặc vay với tài sản thế chấp. Lãi suất được xác định theo thuật toán dựa trên cung và cầu.",
+			"bridge_how": "Làm thế nào để sử dụng bridge này?",
+			"bridge_how_answer": "{name} là hợp đồng bridge của {entity}. Nó cho phép bạn chuyển tài sản giữa các mạng blockchain khác nhau một cách an toàn.",
+			"staking_how": "Staking lỏng hoạt động như thế nào?",
+			"staking_how_answer": "{entity} cho phép bạn stake token trong khi nhận token phái sinh có tính thanh khoản có thể sử dụng trong các giao thức DeFi khác."
+		},
+		"token": {
+			"what_is_contract": "Hợp đồng token này là gì?",
+			"what_is_contract_answer": "{name} là hợp đồng thông minh chính thức của token này. Luôn xác minh địa chỉ hợp đồng trước khi tương tác.",
+			"stablecoin_peg": "Giá neo của stablecoin này được duy trì như thế nào?",
+			"stablecoin_peg_answer": "{name} duy trì giá neo thông qua sự kết hợp của dự trữ, cơ chế thuật toán hoặc thế chấp vượt mức tùy thuộc vào thiết kế."
+		},
+		"entity": {
+			"whale_activity": "Tại sao địa chỉ cá voi này đáng chú ý?",
+			"whale_activity_answer": "{name} nắm giữ một lượng lớn tiền điện tử. Theo dõi chuyển động của cá voi có thể cung cấp thông tin chi tiết về xu hướng thị trường.",
+			"multisig_what": "Ví multisig là gì?",
+			"multisig_what_answer": "{name} là ví đa chữ ký yêu cầu nhiều phê duyệt để thực hiện giao dịch, cung cấp bảo mật nâng cao.",
+			"governance": "Vai trò quản trị của địa chỉ này là gì?",
+			"governance_answer": "{name} thuộc về {entity} và có thể tham gia vào quản trị giao thức, quản lý kho bạc hoặc quyết định của cộng đồng."
+		},
+		"risk": {
+			"why_flagged": "Tại sao địa chỉ này bị đánh dấu?",
+			"why_flagged_answer": "{name} đã bị đánh dấu do liên quan đến các hoạt động độc hại như hack, lừa đảo hoặc vi phạm lệnh trừng phạt. Hãy hết sức thận trọng.",
+			"what_to_do": "Tôi nên làm gì nếu đã tương tác với địa chỉ này?",
+			"what_to_do_answer": "Nếu bạn đã gửi tiền đến địa chỉ này, việc thu hồi có thể không khả thi. Kiểm tra xem giao thức nhận có cơ chế thu hồi không và cân nhắc báo cáo cho cơ quan chức năng liên quan."
+		},
+		"contract": {
+			"is_verified": "Hợp đồng này đã được xác minh chưa?",
+			"is_verified_answer": "Bạn có thể kiểm tra xem {name} có mã nguồn đã xác minh trên trình khám phá khối {chain} không. Các hợp đồng đã xác minh có mã nguồn công khai để xem xét."
+		}
+	}
+}

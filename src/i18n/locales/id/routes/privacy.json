@@ -1,0 +1,58 @@
+{
+	"_meta": {
+		"code": "id",
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩"
+	},
+	"page_title": "Kebijakan Privasi",
+	"page_description": "Pelajari bagaimana BiuBiu Tools mengumpulkan, menggunakan, dan melindungi data Anda.",
+	"title": "Kebijakan Privasi",
+	"last_updated": "Terakhir diperbarui",
+	"introduction": {
+		"title": "Pendahuluan",
+		"content": "BiuBiu Tools berkomitmen untuk melindungi privasi Anda. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi Anda saat menggunakan alat dan layanan Web3 kami."
+	},
+	"data_collection": {
+		"title": "Data yang kami kumpulkan",
+		"intro": "Kami mengumpulkan berbagai jenis data tergantung pada preferensi persetujuan Anda:",
+		"necessary": {
+			"title": "Data penting (selalu dikumpulkan)",
+			"item1": "Data sesi yang diperlukan untuk fungsionalitas website",
+			"item2": "Preferensi persetujuan untuk mengingat pilihan Anda",
+			"item3": "Preferensi tema (mode terang/gelap)",
+			"item4": "Preferensi bahasa",
+			"item5": "Metrik kinerja RPC untuk pemilihan jaringan optimal"
+		},
+		"analytics": {
+			"title": "Data analitik (tanpa cookie, selalu aktif)",
+			"item1": "Statistik penggunaan anonim melalui Rybbit (tampilan halaman, penggunaan fitur)",
+			"item2": "Metrik pengunjung agregat yang tidak dapat diidentifikasi",
+			"item3": "Pelacakan sumber referral untuk program referral kami"
+		}
+	},
+	"local_storage": {
+		"title": "Penyimpanan lokal (diperlukan)",
+		"content": "Kami menggunakan penyimpanan lokal browser Anda untuk menyimpan data yang penting untuk fungsi aplikasi. Data ini tetap di perangkat Anda dan tidak dikirimkan ke server kami:",
+		"item1": "Daftar token kustom yang telah Anda tambahkan (diperlukan untuk operasi token)",
+		"item2": "Data sesi untuk operasi multi-langkah (diperlukan untuk melanjutkan tugas yang terganggu)",
+		"item3": "Hasil pemindaian yang disimpan di IndexedDB (diperlukan untuk fitur pemindaian saldo)",
+		"item4": "Preferensi persetujuan cookie Anda"
+	},
+	"third_party": {
+		"title": "Analitik",
+		"content": "Kami menggunakan Rybbit (tj.appsdata.org), layanan analitik tanpa cookie yang berfokus pada privasi untuk memahami bagaimana pengunjung menggunakan website kami. Rybbit tidak menggunakan cookie, tidak mengumpulkan informasi identitas pribadi, dan selalu aktif karena sesuai dengan GDPR tanpa memerlukan persetujuan. Jika kami menambahkan layanan analitik tambahan yang menggunakan cookie di masa depan, layanan tersebut hanya akan dimuat dengan persetujuan Anda. Kami berinteraksi dengan jaringan blockchain (Ethereum, Polygon, dll.) sesuai yang diperlukan oleh alat kami, tetapi kami tidak menyimpan kunci pribadi atau frasa seed Anda di server kami."
+	},
+	"your_rights": {
+		"title": "Hak Anda",
+		"content": "Berdasarkan GDPR, CCPA, dan peraturan serupa, Anda memiliki hak-hak berikut:",
+		"item1": "Hak akses: Anda dapat meminta informasi tentang data apa yang kami miliki tentang Anda",
+		"item2": "Hak penghapusan: Anda dapat menghapus data lokal Anda kapan saja melalui pengaturan browser",
+		"item3": "Hak menarik persetujuan: Anda dapat mengubah preferensi cookie Anda kapan saja"
+	},
+	"contact": {
+		"title": "Hubungi kami",
+		"content": "Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini atau praktik data kami, silakan hubungi kami melalui repositori GitHub atau saluran komunitas kami."
+	}
+}

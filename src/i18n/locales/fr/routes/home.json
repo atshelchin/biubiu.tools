@@ -1,0 +1,103 @@
+{
+	"_meta": {
+		"code": "fr",
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷"
+	},
+	"one-to-many-transfer": {
+		"title": "Transfert Un vers Plusieurs",
+		"description": "Envoyez des tokens et NFTs d'un portefeuille vers plusieurs adresses en lot",
+		"features": [
+			"Envoyez des tokens natifs (ETH, BNB, MATIC), des tokens ERC20 et des NFTs (ERC721, ERC1155)",
+			"Distribution égale ou montants personnalisés par destinataire",
+			"Importez les destinataires via CSV, collage ou saisie manuelle"
+		]
+	},
+	"token-balance-scanner": {
+		"title": "Vérificateur de Solde de Portefeuilles",
+		"description": "Filtrez rapidement les portefeuilles avec des soldes, identifiez les adresses non vides et agrégez les détentions de tokens sur plusieurs portefeuilles",
+		"features": [
+			"Scannez jusqu'à 100K adresses",
+			"Filtrez les portefeuilles avec soldes",
+			"Statistiques de détention agrégées",
+			"Exportez vers EXCEL/CSV/JSON"
+		]
+	},
+	"wallet-sweep": {
+		"title": "Balayage de Portefeuilles",
+		"description": "Transférez les soldes de plusieurs portefeuilles vers une seule adresse",
+		"features": [
+			"Balayage complet des soldes, zéro poussière restante",
+			"Automatisation à grande échelle, aucune confirmation par transaction",
+			"Pas de token natif requis dans les portefeuilles sources",
+			"Sans permission sur n'importe quelle chaîne EVM"
+		]
+	},
+	"contract-deployer": {
+		"title": "Déployeur de Contrats",
+		"description": "Déployez des contrats intelligents de manière déterministe en utilisant un proxy CREATE2",
+		"features": [
+			"Déploiement déterministe sur toutes les chaînes",
+			"Même adresse de contrat sur chaque réseau",
+			"Interface simple et conviviale pour les développeurs"
+		]
+	},
+	"contract-events-scanner": {
+		"title": "Scanner d'Événements de Contrats",
+		"description": "Scannez, analysez et exportez les événements de contrats intelligents depuis la blockchain",
+		"features": [
+			"Scannez les journaux d'événements historiques de n'importe quel contrat",
+			"Filtres d'événements personnalisés et sélection de plage de blocs",
+			"Exportez les données d'événements aux formats CSV, JSON"
+		]
+	},
+	"call-master": {
+		"title": "Maître des Appels",
+		"description": "Exécutez des appels de contrats intelligents avec des fonctionnalités avancées et des opérations par lots.",
+		"features": ["Support Multi-appel", "Gestion ABI", "Constructeur de Transactions"]
+	},
+	"wallet-generator": {
+		"title": "Usine de Portefeuilles",
+		"description": "Générez plusieurs portefeuilles à partir d'un mnémonique, xpub ou texte secret avec support de chemin HD",
+		"features": ["Support Chemin HD", "Plusieurs Chaînes", "Export vers EXCEL/CSV/JSON"]
+	},
+	"dex-moonshot-trader": {
+		"title": "Trader DEX Moonshot",
+		"description": "Achetez et vendez des tokens de DEXScreener Moonshot avec une interface web facile",
+		"features": ["Acheter & Vendre des Tokens", "Slippage Ajustable", "Support Multi-Chaîne"]
+	},
+	"token-deployer": {
+		"title": "Déployeur de Tokens",
+		"description": "Créez et déployez des tokens ERC20 avec des paramètres personnalisés en quelques minutes",
+		"features": ["Fonctionnalités Avancées", "Taxes & Anti-Bot", "Déploiement Instantané"]
+	},
+	"nft-deployer": {
+		"title": "Déployeur de NFT",
+		"description": "Déployez des contrats intelligents NFT avec les standards ERC-721, ERC-721A et ERC-1155",
+		"features": [
+			"Support des standards ERC-721, ERC-721A, ERC-1155",
+			"Royalties, approvisionnement, prix de mint configurables",
+			"Fonctionnalités avancées : pausable, brûlable, révélable"
+		]
+	},
+	"chainlist": {
+		"title": "Liste des Chaînes",
+		"description": "Recherchez et ajoutez des réseaux blockchain compatibles EVM à votre portefeuille",
+		"features": [
+			"Recherche par Chain ID, Nom, Symbole",
+			"Test RPC en Temps Réel",
+			"Ajout au Portefeuille en Un Clic"
+		]
+	},
+	"chain-tools": {
+		"title": "Outils de Chaîne",
+		"description": "Découvrez des outils Web3 et DApps de qualité",
+		"features": [
+			"Parcourez 600+ outils Web3 sélectionnés",
+			"Filtrez par catégorie : DeFi, NFT, Analytics, Sécurité",
+			"Recherchez par nom, tag ou blockchain"
+		]
+	}
+}

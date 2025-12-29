@@ -1,0 +1,58 @@
+{
+	"_meta": {
+		"code": "tr",
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷"
+	},
+	"page_title": "Gizlilik Politikası",
+	"page_description": "BiuBiu Tools'un verilerinizi nasıl topladığını, kullandığını ve koruduğunu öğrenin.",
+	"title": "Gizlilik Politikası",
+	"last_updated": "Son güncelleme",
+	"introduction": {
+		"title": "Giriş",
+		"content": "BiuBiu Tools gizliliğinizi korumaya kararlıdır. Bu Gizlilik Politikası, Web3 araçlarımızı ve hizmetlerimizi kullandığınızda bilgilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu açıklar."
+	},
+	"data_collection": {
+		"title": "Topladığımız veriler",
+		"intro": "Onay tercihlerinize bağlı olarak farklı türde veriler topluyoruz:",
+		"necessary": {
+			"title": "Temel veriler (her zaman toplanan)",
+			"item1": "Web sitesi işlevselliği için gerekli oturum verileri",
+			"item2": "Seçimlerinizi hatırlamak için onay tercihleri",
+			"item3": "Tema tercihleri (açık/koyu mod)",
+			"item4": "Dil tercihleri",
+			"item5": "Optimum ağ seçimi için RPC performans metrikleri"
+		},
+		"analytics": {
+			"title": "Analiz verileri (çerez kullanmaz, her zaman etkin)",
+			"item1": "Rybbit aracılığıyla anonim kullanım istatistikleri (sayfa görüntüleme, özellik kullanımı)",
+			"item2": "Toplu, tanımlanamayan ziyaretçi metrikleri",
+			"item3": "Referans programımız için kaynak takibi"
+		}
+	},
+	"local_storage": {
+		"title": "Yerel depolama (gerekli)",
+		"content": "Uygulamanın çalışması için gerekli verileri kaydetmek için tarayıcınızın yerel depolamasını kullanıyoruz. Bu veriler cihazınızda kalır ve sunucularımıza iletilmez:",
+		"item1": "Eklediğiniz özel token listeleri (token işlemleri için gerekli)",
+		"item2": "Çok adımlı işlemler için oturum verileri (kesintiye uğrayan görevleri devam ettirmek için gerekli)",
+		"item3": "IndexedDB'de depolanan tarama sonuçları (bakiye tarama özelliği için gerekli)",
+		"item4": "Çerez onay tercihleriniz"
+	},
+	"third_party": {
+		"title": "Analitik",
+		"content": "Ziyaretçilerin web sitemizi nasıl kullandığını anlamak için gizlilik odaklı, çerez kullanmayan bir analiz hizmeti olan Rybbit'i (tj.appsdata.org) kullanıyoruz. Rybbit çerez kullanmaz, kişisel tanımlayıcı bilgi toplamaz ve onay gerektirmeden GDPR'ye uyum sağladığı için her zaman etkindir. Gelecekte çerez kullanan ek analiz hizmetleri eklersek, bunlar yalnızca onayınızla yüklenecektir. Araçlarımızın gerektirdiği şekilde blockchain ağlarıyla (Ethereum, Polygon vb.) etkileşimde bulunuruz, ancak özel anahtarlarınızı veya tohum ifadelerinizi sunucularımızda saklamıyoruz."
+	},
+	"your_rights": {
+		"title": "Haklarınız",
+		"content": "GDPR, CCPA ve benzer düzenlemeler kapsamında aşağıdaki haklara sahipsiniz:",
+		"item1": "Erişim hakkı: Hakkınızda hangi verilere sahip olduğumuz konusunda bilgi talep edebilirsiniz",
+		"item2": "Silme hakkı: Tarayıcı ayarlarınız aracılığıyla yerel verilerinizi istediğiniz zaman temizleyebilirsiniz",
+		"item3": "Onayı geri çekme hakkı: Çerez tercihlerinizi istediğiniz zaman değiştirebilirsiniz"
+	},
+	"contact": {
+		"title": "Bize ulaşın",
+		"content": "Bu Gizlilik Politikası veya veri uygulamalarımız hakkında sorularınız varsa, GitHub deposumuz veya topluluk kanallarımız aracılığıyla bizimle iletişime geçebilirsiniz."
+	}
+}

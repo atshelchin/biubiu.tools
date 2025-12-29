@@ -1,0 +1,14 @@
+{
+	"_meta": {
+		"code": "ko",
+		"name": "한국어",
+		"englishName": "Korean",
+		"direction": "ltr",
+		"flag": "🇰🇷"
+	},
+	"title": "일괄 전송",
+	"description": "단일 트랜잭션으로 여러 주소에 토큰을 전송합니다.",
+	"feature_1": "CSV 가져오기",
+	"feature_2": "스마트 라우팅",
+	"feature_3": "수수료 추정"
+}

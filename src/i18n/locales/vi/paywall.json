@@ -1,0 +1,67 @@
+{
+	"prompt": {
+		"close": "Đóng",
+		"upgrade_membership": "Nâng cấp thành viên",
+		"pay": "Thanh toán {{amount}} {{symbol}}",
+		"recommend_tip": "💡 Nâng cấp thành viên để truy cập miễn phí không giới hạn"
+	},
+	"modal": {
+		"title": "Nâng cấp lên Premium",
+		"subtitle": "Chọn gói phù hợp với nhu cầu của bạn",
+		"benefits": {
+			"title": "Bao gồm",
+			"zero_fees": "Không phí giao dịch trên tất cả công cụ",
+			"unlimited_access": "Truy cập không giới hạn các tính năng premium",
+			"priority_support": "Hỗ trợ khách hàng ưu tiên"
+		},
+		"plans": {
+			"daily": "Ngày",
+			"monthly": "Tháng",
+			"yearly": "Năm",
+			"popular": "Phổ biến",
+			"days": "{{days}} ngày",
+			"per_day": "{{price}} {{symbol}}/ngày"
+		},
+		"referral": {
+			"label": "Người giới thiệu:",
+			"direct": "Truy cập trực tiếp"
+		},
+		"status": {
+			"loading": "Đang tải trạng thái đăng ký...",
+			"active": "Thành viên Premium đang hoạt động",
+			"expires_in": "Hết hạn sau {{days}} ngày"
+		},
+		"cta": "Mua quyền truy cập Premium",
+		"processing": "Đang xử lý...",
+		"footer_note": "Thành viên chỉ có hiệu lực trên {{network}} • Chuyển mạng cần mua mới",
+		"success": {
+			"title": "Mua thành công!",
+			"message": "Bạn đã đăng ký thành công gói {{tier}}!",
+			"tx_label": "Giao dịch:",
+			"auto_close": "Cửa sổ này sẽ tự động đóng sau 5 giây..."
+		},
+		"error": {
+			"connect_wallet": "Vui lòng kết nối ví trước",
+			"invalid_tier": "Gói được chọn không hợp lệ",
+			"tx_failed": "Giao dịch thất bại",
+			"purchase_failed": "Không thể hoàn tất mua hàng"
+		}
+	},
+	"rules": {
+		"membership_required": "Tính năng này yêu cầu thành viên",
+		"quota_exceeded": "Đã vượt hạn mức miễn phí hàng ngày ({{limit}}/{{unit}})",
+		"quota_remaining": "Hạn mức miễn phí còn lại hôm nay: {{remaining}}",
+		"upgrade_hint": "Nâng cấp để truy cập không giới hạn",
+		"upgrade_hint_cheaper": "Nâng cấp thành viên tiết kiệm hơn",
+		"fee_info": "Phí: {{total}} ETH ({{count}} × {{fee}} ETH)",
+		"exceeded_fee_info": "Vượt hạn mức, thanh toán {{total}} ETH",
+		"unit_items": "mục",
+		"unit_requests": "yêu cầu"
+	},
+	"status": {
+		"not_connected": "Vui lòng kết nối ví trước",
+		"member": "Thành viên Premium",
+		"expires_in": "Hết hạn sau {{days}} ngày",
+		"expired": "Thành viên đã hết hạn"
+	}
+}

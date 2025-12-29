@@ -1,0 +1,147 @@
+{
+	"_meta": {
+		"code": "tr",
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷"
+	},
+	"title": "Adres Gezgini",
+	"subtitle": "Etiketli blockchain adreslerini ve ENS isimlerini arayın ve keşfedin",
+	"search_placeholder": "Adres, ENS ismi veya varlık ile arayın...",
+	"searching": "Aranıyor...",
+	"looking_up": "Blockchain'de aranıyor...",
+	"view_details": "Detayları gör",
+	"no_results": "Sonuç bulunamadı",
+	"all_addresses": "Tüm Adresler",
+	"categories": "Kategoriye Göre Gözat",
+	"browse_by_label": "Etikete Göre Gözat",
+	"popular_addresses": "Popüler Adresler",
+	"popular_names": "Popüler İsimler",
+	"view_on_explorer": "Gezgin'de Görüntüle",
+	"website": "Web Sitesi",
+	"related_names": "İlgili İsimler",
+	"related_addresses": "İlgili Adresler",
+	"balance": "Bakiye",
+	"loading_balance": "Yükleniyor...",
+	"contract": "Sözleşme",
+	"data_source": "Veri Kaynağı",
+	"updated": "Güncellendi",
+	"source_manual": "Manuel",
+	"source_verified": "Doğrulanmış",
+	"source_etherscan": "Etherscan",
+	"source_community": "Topluluk",
+	"stats": {
+		"addresses": "Adresler",
+		"names": "İsimler",
+		"exchanges": "Borsalar",
+		"defi": "DeFi",
+		"tokens": "Tokenlar",
+		"nft": "NFT",
+		"notable": "Dikkat Çeken"
+	},
+	"labels": {
+		"exchange": "Borsa",
+		"cex": "CEX",
+		"dex": "DEX",
+		"defi": "DeFi",
+		"lending": "Borç Verme",
+		"bridge": "Köprü",
+		"yield": "Getiri",
+		"derivatives": "Türevler",
+		"liquid-staking": "Likit Staking",
+		"token": "Token",
+		"stablecoin": "Stablecoin",
+		"memecoin": "Memecoin",
+		"wrapped": "Sarılmış",
+		"nft": "NFT",
+		"nft-marketplace": "NFT Pazaryeri",
+		"whale": "Balina",
+		"smart-money": "Akıllı Para",
+		"foundation": "Vakıf",
+		"dao": "DAO",
+		"multisig": "Çoklu İmza",
+		"deployer": "Dağıtıcı",
+		"hacker": "Hacker",
+		"scam": "Dolandırıcılık",
+		"sanctioned": "Yaptırımlı",
+		"phishing": "Oltalama",
+		"burn": "Yakma",
+		"null": "Null",
+		"genesis": "Genesis",
+		"mev": "MEV",
+		"contract": "Sözleşme",
+		"eoa": "EOA",
+		"notable": "Dikkat Çeken",
+		"layer2": "Katman 2",
+		"staking": "Staking",
+		"oracle": "Oracle"
+	},
+	"risk": {
+		"safe": "Güvenli",
+		"neutral": "Nötr",
+		"warning": "Uyarı",
+		"danger": "Tehlike"
+	},
+	"seo": {
+		"index_title": "Adres Gezgini - Blockchain Adresi ve ENS Arama | BiuBiu Tools",
+		"index_description": "{addressCount} etiketli blockchain adresini ve {nameCount} ENS ismini arayın ve keşfedin. Borsaları, DeFi protokollerini, balinaları ve daha fazlasını bulun.",
+		"detail_description": "{name} ({entity}) {chain} üzerinde. Etiketler: {labels}. Adres: {address}. Cüzdan detaylarını ve ilgili bilgileri keşfedin."
+	},
+	"faq": {
+		"title": "Sık Sorulan Sorular",
+		"what_is": "{name} nedir?",
+		"what_is_answer": "{name}, {chain} ağında {entity}'e ait bir cüzdan adresidir.",
+		"is_safe": "Bu adresle etkileşim güvenli mi?",
+		"is_safe_answer_safe": "{name}, tanınmış bir varlıktan doğrulanmış güvenli bir adrestir.",
+		"is_safe_answer_neutral": "{name} nötr risk seviyesine sahip. Normal dikkat gösterin.",
+		"is_safe_answer_warning": "Uyarı: {name} potansiyel riskler için işaretlendi. Dikkatli devam edin.",
+		"is_safe_answer_danger": "Tehlike: {name} tehlikeli olarak işaretlendi. Bu adrese para göndermeyin.",
+		"how_to_verify": "Bu adresi nasıl doğrulayabilirim?",
+		"how_to_verify_answer": "{explorer} blok gezgininde bu adresi doğrulayarak işlem geçmişini ve sözleşme detaylarını görebilirsiniz.",
+		"cex": {
+			"can_deposit": "Bu adrese para yatırabilir miyim?",
+			"can_deposit_answer": "{name}, {entity} için resmi yatırma adresidir. Para göndermeden önce her zaman borsanın resmi web sitesinde adresi doğrulayın.",
+			"how_to_withdraw": "Bu borsadan nasıl çekim yaparım?",
+			"how_to_withdraw_answer": "{entity}'den çekim yapmak için hesabınıza giriş yapın, çekim bölümüne gidin, hedef cüzdan adresinizi girin ve borsanın güvenlik prosedürlerini takip ederek işlemi onaylayın."
+		},
+		"dex": {
+			"what_is_contract": "Bu DEX sözleşmesi nedir?",
+			"what_is_contract_answer": "{name}, {entity} merkezi olmayan borsasının akıllı sözleşmesidir. Blockchain üzerinde izinsiz token takaslarını mümkün kılar."
+		},
+		"defi": {
+			"what_does_it_do": "Bu DeFi sözleşmesi ne yapar?",
+			"what_does_it_do_answer": "{name}, blockchain üzerinde merkezi olmayan finansal hizmetler sağlayan {entity} akıllı sözleşmesidir.",
+			"lending_how": "Bu protokolde borç verme nasıl çalışır?",
+			"lending_how_answer": "{entity}, kullanıcıların faiz kazanmak için varlık ödünç vermesine veya teminat karşılığı borç almasına olanak tanır. Faiz oranları arz ve talebe göre algoritmik olarak belirlenir.",
+			"bridge_how": "Bu köprüyü nasıl kullanırım?",
+			"bridge_how_answer": "{name}, {entity} köprü sözleşmesidir. Farklı blockchain ağları arasında varlıkları güvenli bir şekilde transfer etmenizi sağlar.",
+			"staking_how": "Likit staking nasıl çalışır?",
+			"staking_how_answer": "{entity}, tokenlarınızı stake ederken diğer DeFi protokollerinde kullanılabilecek likit türev token almanızı sağlar."
+		},
+		"token": {
+			"what_is_contract": "Bu token sözleşmesi nedir?",
+			"what_is_contract_answer": "{name}, bu token için resmi akıllı sözleşmedir. Etkileşimden önce her zaman sözleşme adresini doğrulayın.",
+			"stablecoin_peg": "Bu stablecoin'in sabitliği nasıl korunuyor?",
+			"stablecoin_peg_answer": "{name}, tasarımına bağlı olarak rezervler, algoritmik mekanizmalar veya aşırı teminatlandırma kombinasyonu ile sabitliğini korur."
+		},
+		"entity": {
+			"whale_activity": "Bu balina adresi neden dikkat çekici?",
+			"whale_activity_answer": "{name} önemli miktarda kripto para tutuyor. Balina hareketlerini takip etmek piyasa trendleri hakkında bilgi sağlayabilir.",
+			"multisig_what": "Çoklu imza cüzdanı nedir?",
+			"multisig_what_answer": "{name}, işlemleri gerçekleştirmek için birden fazla onay gerektiren ve gelişmiş güvenlik sağlayan çoklu imza cüzdanıdır.",
+			"governance": "Bu adresin yönetişim rolü nedir?",
+			"governance_answer": "{name}, {entity}'e aittir ve protokol yönetişimi, hazine yönetimi veya topluluk kararlarında yer alabilir."
+		},
+		"risk": {
+			"why_flagged": "Bu adres neden işaretlendi?",
+			"why_flagged_answer": "{name}, hackler, dolandırıcılıklar veya yaptırım ihlalleri gibi kötü niyetli faaliyetlerle ilişkilendirildiği için işaretlendi. Son derece dikkatli olun.",
+			"what_to_do": "Bu adresle etkileşime girdiysen ne yapmalıyım?",
+			"what_to_do_answer": "Bu adrese para gönderdiyseniz, kurtarma mümkün olmayabilir. Alıcı protokolün bir kurtarma mekanizması olup olmadığını kontrol edin ve ilgili yetkililere bildirmeyi düşünün."
+		},
+		"contract": {
+			"is_verified": "Bu sözleşme doğrulanmış mı?",
+			"is_verified_answer": "{chain} blok gezgininde {name}'in doğrulanmış kaynak koduna sahip olup olmadığını kontrol edebilirsiniz. Doğrulanmış sözleşmelerin kaynak kodu inceleme için kamuya açıktır."
+		}
+	}
+}

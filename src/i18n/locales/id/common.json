@@ -1,0 +1,86 @@
+{
+	"_meta": {
+		"code": "id",
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩"
+	},
+	"hero_title": "BiuBiu",
+	"hero_subtitle": "Jelajahi Web3 dengan mudah dan aman",
+	"cta_get_started": "Mulai",
+	"cta_learn_more": "Pelajari lebih lanjut",
+	"cta": {
+		"title": "Siap untuk memulai?",
+		"subtitle": "Bergabunglah dengan ribuan pengguna yang sudah menggunakan biubiu.tools untuk menyederhanakan operasi Web3 mereka",
+		"button_text": "Mulai sekarang - Gratis"
+	},
+	"stats": {
+		"title": "Dipercaya oleh pengguna Web3",
+		"registered_users": "Pengguna aktif",
+		"transactions": "Transaksi",
+		"total_volume": "Total volume",
+		"chains_supported": "Chain yang didukung",
+		"last_updated": "Statistik langsung"
+	},
+	"footer": {
+		"privacy": "Privasi",
+		"terms": "Ketentuan"
+	},
+	"helpButton": {
+		"label": "Bantuan & Masukan",
+		"getHelp": "Dapatkan bantuan",
+		"reportIssue": "Laporkan masalah"
+	},
+	"environment_banner": {
+		"community_warning": "Ini adalah versi yang di-deploy oleh komunitas, tidak terafiliasi dengan biubiu.tools resmi.",
+		"dev_environment": "Lingkungan pengembangan",
+		"official_reminder": "Anda berada di situs resmi. Selalu verifikasi domain: biubiu.tools"
+	},
+	"loading": "Memuat...",
+	"continue": "Lanjutkan",
+	"back": "Kembali",
+	"next": "Berikutnya",
+	"previous": "Sebelumnya",
+	"finish": "Selesai",
+	"done": "Selesai",
+	"cancel": "Batal",
+	"optional": "Opsional",
+	"enabled": "Diaktifkan",
+	"disabled": "Dinonaktifkan",
+	"chars_left": "karakter tersisa",
+	"name": "Nama",
+	"symbol": "Simbol",
+	"description": "Deskripsi",
+	"standard": "Standar",
+	"contract_address": "Alamat kontrak",
+	"transaction_hash": "Hash transaksi",
+	"gas_used": "Gas yang digunakan",
+	"deployment_cost": "Biaya deployment",
+	"max_supply": "Suplai maksimum",
+	"mint_price": "Harga mint",
+	"royalty": "Royalti",
+	"show_more": "Tampilkan lebih banyak",
+	"show_less": "Tampilkan lebih sedikit",
+	"back_to_home": "Kembali ke beranda",
+	"faqs": "Pertanyaan yang sering diajukan",
+	"total_checks": "Total pemeriksaan",
+	"passed": "Lulus",
+	"failed": "Gagal",
+	"status": {
+		"coming_soon": "Segera hadir",
+		"alpha": "Alpha",
+		"beta": "Beta",
+		"stable": "Stabil",
+		"new": "Baru"
+	},
+	"network_selector": {
+		"no_networks_enabled": "Tidak ada jaringan yang diaktifkan",
+		"enable_network_prompt": "Silakan aktifkan setidaknya satu jaringan untuk melanjutkan.",
+		"open_network_settings": "Buka pengaturan jaringan",
+		"network_not_found": "Jaringan tidak ditemukan?",
+		"add_custom_network": "Tambahkan jaringan kustom"
+	},
+	"copy_address": "Salin alamat",
+	"copied": "Disalin!"
+}

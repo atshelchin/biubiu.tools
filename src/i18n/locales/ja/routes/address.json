@@ -1,0 +1,147 @@
+{
+	"_meta": {
+		"code": "ja",
+		"name": "日本語",
+		"englishName": "Japanese",
+		"direction": "ltr",
+		"flag": "🇯🇵"
+	},
+	"title": "アドレスエクスプローラー",
+	"subtitle": "ラベル付きブロックチェーンアドレスとENS名を検索・探索",
+	"search_placeholder": "アドレス、ENS名、またはエンティティで検索...",
+	"searching": "検索中...",
+	"looking_up": "ブロックチェーンを検索中...",
+	"view_details": "詳細を見る",
+	"no_results": "結果が見つかりません",
+	"all_addresses": "すべてのアドレス",
+	"categories": "カテゴリで閲覧",
+	"browse_by_label": "ラベルで閲覧",
+	"popular_addresses": "人気のアドレス",
+	"popular_names": "人気の名前",
+	"view_on_explorer": "エクスプローラーで見る",
+	"website": "ウェブサイト",
+	"related_names": "関連する名前",
+	"related_addresses": "関連するアドレス",
+	"balance": "残高",
+	"loading_balance": "読み込み中...",
+	"contract": "コントラクト",
+	"data_source": "データソース",
+	"updated": "更新日",
+	"source_manual": "手動",
+	"source_verified": "検証済み",
+	"source_etherscan": "Etherscan",
+	"source_community": "コミュニティ",
+	"stats": {
+		"addresses": "アドレス",
+		"names": "名前",
+		"exchanges": "取引所",
+		"defi": "DeFi",
+		"tokens": "トークン",
+		"nft": "NFT",
+		"notable": "注目"
+	},
+	"labels": {
+		"exchange": "取引所",
+		"cex": "CEX",
+		"dex": "DEX",
+		"defi": "DeFi",
+		"lending": "レンディング",
+		"bridge": "ブリッジ",
+		"yield": "イールド",
+		"derivatives": "デリバティブ",
+		"liquid-staking": "リキッドステーキング",
+		"token": "トークン",
+		"stablecoin": "ステーブルコイン",
+		"memecoin": "ミームコイン",
+		"wrapped": "ラップド",
+		"nft": "NFT",
+		"nft-marketplace": "NFTマーケットプレイス",
+		"whale": "クジラ",
+		"smart-money": "スマートマネー",
+		"foundation": "財団",
+		"dao": "DAO",
+		"multisig": "マルチシグ",
+		"deployer": "デプロイヤー",
+		"hacker": "ハッカー",
+		"scam": "詐欺",
+		"sanctioned": "制裁対象",
+		"phishing": "フィッシング",
+		"burn": "バーン",
+		"null": "ヌル",
+		"genesis": "ジェネシス",
+		"mev": "MEV",
+		"contract": "コントラクト",
+		"eoa": "EOA",
+		"notable": "注目",
+		"layer2": "レイヤー2",
+		"staking": "ステーキング",
+		"oracle": "オラクル"
+	},
+	"risk": {
+		"safe": "安全",
+		"neutral": "中立",
+		"warning": "警告",
+		"danger": "危険"
+	},
+	"seo": {
+		"index_title": "アドレスエクスプローラー - ブロックチェーンアドレス・ENS検索 | BiuBiu Tools",
+		"index_description": "{addressCount}のラベル付きブロックチェーンアドレスと{nameCount}のENS名を検索・探索。取引所、DeFiプロトコル、クジラなどを発見。",
+		"detail_description": "{name} ({entity}) - {chain}上。ラベル：{labels}。アドレス：{address}。ウォレット詳細と関連情報を探索。"
+	},
+	"faq": {
+		"title": "よくある質問",
+		"what_is": "{name}とは？",
+		"what_is_answer": "{name}は{chain}ネットワーク上の{entity}に属するウォレットアドレスです。",
+		"is_safe": "このアドレスとの取引は安全ですか？",
+		"is_safe_answer_safe": "{name}は有名なエンティティからの検証済み安全アドレスです。",
+		"is_safe_answer_neutral": "{name}のリスクレベルは中立です。通常の注意を払ってください。",
+		"is_safe_answer_warning": "警告：{name}は潜在的なリスクがあるとフラグが立てられています。注意して進めてください。",
+		"is_safe_answer_danger": "危険：{name}は危険とマークされています。このアドレスに資金を送らないでください。",
+		"how_to_verify": "このアドレスを確認するには？",
+		"how_to_verify_answer": "{explorer}ブロックエクスプローラーでこのアドレスを確認し、取引履歴とコントラクト詳細を見ることができます。",
+		"cex": {
+			"can_deposit": "このアドレスに入金できますか？",
+			"can_deposit_answer": "{name}は{entity}の公式入金アドレスです。資金を送る前に、必ず取引所の公式サイトでアドレスを確認してください。",
+			"how_to_withdraw": "この取引所から出金するには？",
+			"how_to_withdraw_answer": "{entity}から出金するには、アカウントにログインし、出金セクションに移動し、送金先のウォレットアドレスを入力し、取引所のセキュリティ手順に従って取引を確認してください。"
+		},
+		"dex": {
+			"what_is_contract": "このDEXコントラクトとは？",
+			"what_is_contract_answer": "{name}は{entity}分散型取引所のスマートコントラクトです。ブロックチェーン上で直接パーミッションレスなトークンスワップを可能にします。"
+		},
+		"defi": {
+			"what_does_it_do": "このDeFiコントラクトは何をしますか？",
+			"what_does_it_do_answer": "{name}は{entity}のスマートコントラクトで、ブロックチェーン上で分散型金融サービスを可能にします。",
+			"lending_how": "このプロトコルでレンディングはどのように機能しますか？",
+			"lending_how_answer": "{entity}はユーザーが資産を貸して利息を得たり、担保に対して借りたりすることを可能にします。金利は需要と供給に基づいてアルゴリズムで決定されます。",
+			"bridge_how": "このブリッジの使い方は？",
+			"bridge_how_answer": "{name}は{entity}のブリッジコントラクトです。異なるブロックチェーンネットワーク間で安全に資産を転送することができます。",
+			"staking_how": "リキッドステーキングはどのように機能しますか？",
+			"staking_how_answer": "{entity}はトークンをステーキングしながら、他のDeFiプロトコルで使用できる流動性のあるデリバティブトークンを受け取ることができます。"
+		},
+		"token": {
+			"what_is_contract": "このトークンコントラクトとは？",
+			"what_is_contract_answer": "{name}はこのトークンの公式スマートコントラクトです。取引前に必ずコントラクトアドレスを確認してください。",
+			"stablecoin_peg": "このステーブルコインのペッグはどのように維持されていますか？",
+			"stablecoin_peg_answer": "{name}はその設計に応じて、準備金、アルゴリズムメカニズム、または過剰担保の組み合わせによってペッグを維持しています。"
+		},
+		"entity": {
+			"whale_activity": "なぜこのクジラアドレスは注目されていますか？",
+			"whale_activity_answer": "{name}は大量の暗号通貨を保有しています。クジラの動きを追跡することで市場トレンドについての洞察を得ることができます。",
+			"multisig_what": "マルチシグウォレットとは？",
+			"multisig_what_answer": "{name}は取引を実行するために複数の承認を必要とするマルチシグウォレットで、セキュリティを強化しています。",
+			"governance": "このアドレスのガバナンスの役割は？",
+			"governance_answer": "{name}は{entity}に属し、プロトコルガバナンス、トレジャリー管理、またはコミュニティの意思決定に関与している可能性があります。"
+		},
+		"risk": {
+			"why_flagged": "このアドレスにフラグが立てられているのはなぜですか？",
+			"why_flagged_answer": "{name}はハッキング、詐欺、制裁違反などの悪意のある活動との関連でフラグが立てられています。細心の注意を払ってください。",
+			"what_to_do": "このアドレスと取引したことがある場合はどうすればいいですか？",
+			"what_to_do_answer": "このアドレスに資金を送った場合、回収は不可能かもしれません。受信プロトコルに回収メカニズムがあるか確認し、関連当局への報告を検討してください。"
+		},
+		"contract": {
+			"is_verified": "このコントラクトは検証されていますか？",
+			"is_verified_answer": "{chain}ブロックエクスプローラーで{name}が検証済みのソースコードを持っているか確認できます。検証済みコントラクトはソースコードが公開されており、レビュー可能です。"
+		}
+	}
+}

@@ -1,0 +1,290 @@
+{
+	"_meta": {
+		"code": "it",
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹"
+	},
+	"title": "Trasferimento Uno a Molti",
+	"description": "Invia token e NFT da un wallet a più indirizzi in batch",
+	"seo": {
+		"page_title": "Trasferimento Uno a Molti - Invio Batch di Token e NFT a Più Wallet | BiuBiu Tools",
+		"page_description": "Invia token e NFT da un wallet a più indirizzi in batch. Supporto per ETH, ERC20, ERC721, ERC1155 su più reti blockchain.",
+		"keywords": "trasferimento uno a molti, invio batch, airdrop, trasferimento token, trasferimento NFT, multi-invio, trasferimento massivo, ERC20, ERC721, ERC1155, distribuzione crypto, strumenti web3",
+		"webapp_name": "Trasferimento Uno a Molti",
+		"webapp_description": "Invio batch di token e NFT da un wallet a più destinatari su varie reti blockchain",
+		"howto_name": "Come Inviare in Batch Token e NFT a Più Wallet",
+		"howto_description": "Guida completa per inviare token e NFT da un wallet a più indirizzi di destinatari",
+		"howto_tool_1": "Wallet Web3 (MetaMask, WalletConnect, ecc.)",
+		"howto_tool_2": "Saldo sufficiente di token e commissioni gas",
+		"step_1_name": "Connetti il Tuo Wallet",
+		"step_1_text": "Clicca sul pulsante \"Connetti Wallet\" e connetti il tuo wallet Web3 (MetaMask, WalletConnect, ecc.) all'applicazione. Questo wallet sarà la fonte dei token per la distribuzione.",
+		"step_1_description": "Collega il tuo wallet Web3 come wallet di origine",
+		"step_2_name": "Verifica Dipendenze",
+		"step_2_text": "Verifica che i contratti smart richiesti (WETH e TokenDistribution) siano distribuiti sulla rete selezionata. Questi contratti abilitano la funzionalità di distribuzione batch.",
+		"step_2_description": "Verifica che i contratti richiesti siano distribuiti",
+		"step_3_name": "Seleziona Token e Importo",
+		"step_3_text": "Scegli quale token distribuire (token nativo, ERC20 o NFT), imposta la modalità di distribuzione (importi uguali o personalizzati per destinatario) e specifica l'importo per destinatario o l'importo totale.",
+		"step_3_description": "Configura token e importi di distribuzione",
+		"step_4_name": "Importa Destinatari",
+		"step_4_text": "Aggiungi indirizzi wallet dei destinatari inserendoli manualmente, caricando un file CSV o incollando una lista. Opzionalmente imposta importi personalizzati per ogni destinatario.",
+		"step_4_description": "Aggiungi indirizzi wallet dei destinatari",
+		"step_5_name": "Rivedi ed Esegui",
+		"step_5_text": "Rivedi il riepilogo della distribuzione inclusi importo totale, numero di destinatari e costi gas stimati. Conferma ed esegui la distribuzione batch. Firma ogni transazione con il tuo wallet.",
+		"step_5_description": "Esegui la distribuzione di token",
+		"feature_1": "Connetti wallet Web3 (MetaMask, WalletConnect, Coinbase Wallet)",
+		"feature_2": "Supporto più reti (Ethereum, Polygon, BSC, Base, Arbitrum, Optimism)",
+		"feature_3": "Invia token nativi (ETH, BNB, MATIC), token ERC20 e NFT (ERC721, ERC1155)",
+		"feature_4": "Distribuzione uguale o importi personalizzati per destinatario",
+		"feature_5": "Importa destinatari via CSV, incolla o inserimento manuale"
+	},
+	"faqs": {
+		"what_is_one_to_many": "Cos'è il Trasferimento Uno a Molti?",
+		"one_to_many_explanation": "Il Trasferimento Uno a Molti ti permette di inviare token o NFT da un singolo wallet a più indirizzi di destinatari in batch. È ideale per airdrop, buste paga, distribuzione di ricompense e qualsiasi scenario in cui devi inviare asset a molti indirizzi in modo efficiente.",
+		"what_tokens_supported": "Quali tipi di token sono supportati?",
+		"tokens_supported_explanation": "Supportiamo token nativi (ETH, BNB, MATIC, ecc.), token ERC20 (USDT, USDC, ecc.) e NFT inclusi gli standard ERC721 ed ERC1155.",
+		"what_is_equal_distribution": "Cos'è la modalità distribuzione uguale?",
+		"equal_distribution_explanation": "Nella modalità distribuzione uguale, specifichi un importo per destinatario e ogni indirizzo riceve lo stesso importo. Il totale viene calcolato automaticamente in base al numero di destinatari.",
+		"what_is_custom_amounts": "Cos'è la modalità importi personalizzati?",
+		"custom_amounts_explanation": "Nella modalità importi personalizzati, puoi specificare importi diversi per ogni destinatario. Questo è utile quando indirizzi diversi devono ricevere quantità diverse.",
+		"how_to_import_recipients": "Come posso importare gli indirizzi dei destinatari?",
+		"import_recipients_explanation": "Puoi aggiungere destinatari tramite: 1) Inserimento manuale uno per uno, 2) Incolla una lista di indirizzi, o 3) Carica un file CSV con indirizzi e importi opzionali.",
+		"what_networks_supported": "Quali reti blockchain sono supportate?",
+		"networks_supported_explanation": "Attualmente supportiamo Ethereum Mainnet, Polygon, BSC (Binance Smart Chain), Base, Arbitrum e Optimism. Altre reti verranno aggiunte in futuro."
+	},
+	"step2": {
+		"content": {
+			"title": "Verifica Dipendenze",
+			"description": "Verifica che i contratti richiesti siano distribuiti su questa rete",
+			"checks": {
+				"contract": {
+					"weth_description": "Contratto WETH per modalità esecuzione delegata (converte WETH in ETH per la distribuzione)",
+					"token_distribution_description": "Contratto TokenDistribution per distribuzione batch di token e NFT a più destinatari"
+				}
+			}
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "Seleziona Token",
+			"description": "Scegli il tipo di token e specifica quale token distribuire"
+		},
+		"content": {
+			"title": "Seleziona Token da Distribuire",
+			"description": "Scegli il tipo di token e seleziona il token specifico che vuoi inviare a più destinatari",
+			"token_type": {
+				"title": "Tipo di Token",
+				"native": "Token Nativo",
+				"native_desc": "ETH, BNB, MATIC, ecc.",
+				"erc20": "Token ERC20",
+				"erc20_desc": "USDT, USDC, DAI, ecc.",
+				"erc721": "NFT ERC721",
+				"erc721_desc": "NFT singoli (1 per destinatario)",
+				"erc1155": "Multi-Token ERC1155",
+				"erc1155_desc": "NFT batch o token semi-fungibili"
+			},
+			"select_token": {
+				"title": "Seleziona Token",
+				"no_tokens": "Nessun token disponibile per questa rete",
+				"add_custom": "Aggiungi Token Personalizzato"
+			},
+			"nft_config": {
+				"title": "Configurazione NFT",
+				"contract_address": "Indirizzo Contratto",
+				"contract_placeholder": "Inserisci l'indirizzo del contratto NFT (0x...)",
+				"token_ids": "Token ID",
+				"token_ids_placeholder": "Inserisci i Token ID (separati da virgola per multipli)",
+				"token_ids_hint": "Per ERC721: un Token ID per destinatario. Per ERC1155: specifica il Token ID da distribuire.",
+				"load_button": "Carica Info NFT",
+				"loading": "Caricamento informazioni NFT...",
+				"collection_name": "Collezione",
+				"total_supply": "Fornitura Totale",
+				"your_balance": "Il Tuo Saldo",
+				"invalid_address": "Formato indirizzo contratto non valido"
+			},
+			"amount_mode": {
+				"title": "Modalità Distribuzione",
+				"equal": "Distribuzione Uguale",
+				"equal_desc": "Stesso importo per tutti i destinatari",
+				"custom": "Importi Personalizzati",
+				"custom_desc": "Imposta importi individuali per destinatario (nel Passaggio 4)",
+				"random": "Importi Casuali",
+				"random_desc": "Importo casuale entro un intervallo per ogni destinatario"
+			},
+			"amount_input": {
+				"title": "Importo Per Destinatario",
+				"placeholder": "0.0",
+				"hint": "Questo importo verrà inviato a ogni destinatario. Il totale sarà calcolato in base al numero di destinatari."
+			},
+			"custom_mode_info": "Hai selezionato la modalità importi personalizzati. Imposterai importi individuali per ogni destinatario nel Passaggio 4.",
+			"random_mode_config": {
+				"min_amount": "Importo Minimo",
+				"max_amount": "Importo Massimo",
+				"min_placeholder": "0.0",
+				"max_placeholder": "0.0",
+				"hint": "Ogni destinatario riceverà un importo casuale tra i valori min e max.",
+				"valid_range": "Gli importi casuali saranno tra {min} e {max} {symbol}",
+				"error_max_less_than_min": "L'importo massimo deve essere maggiore dell'importo minimo"
+			}
+		},
+		"footer": {
+			"continue": "Continua ai Destinatari",
+			"hint": "Seleziona un token e configura gli importi per continuare"
+		}
+	},
+	"step4": {
+		"sidebar": {
+			"title": "Importa Destinatari",
+			"description": "Aggiungi indirizzi wallet che riceveranno i token"
+		},
+		"content": {
+			"title": "Aggiungi Destinatari",
+			"description": "Importa indirizzi wallet che riceveranno token da questa distribuzione",
+			"distributing": "Distribuzione",
+			"method": {
+				"manual": "Inserimento Manuale",
+				"paste": "Incolla Lista",
+				"csv": "Carica CSV"
+			},
+			"manual": {
+				"title": "Aggiungi Destinatario Manualmente",
+				"address": "Indirizzo Wallet",
+				"token_id": "Token ID",
+				"token_amount": "Quantità",
+				"amount": "Importo",
+				"label": "Etichetta (opzionale)",
+				"label_placeholder": "es. Alice, Bob",
+				"add_button": "Aggiungi Destinatario"
+			},
+			"paste": {
+				"title": "Incolla Più Indirizzi",
+				"add_button": "Aggiungi Tutti"
+			},
+			"paste_hint": {
+				"fungible_equal": "Formato: indirizzo, etichetta (opzionale). Uno per riga.",
+				"fungible_custom": "Formato: indirizzo, etichetta (opzionale), importo. Uno per riga.",
+				"erc721": "Formato: indirizzo, tokenId, etichetta (opzionale). Uno per riga.",
+				"erc1155": "Formato: indirizzo, tokenId, quantità, etichetta (opzionale). Uno per riga."
+			},
+			"csv": {
+				"title": "Carica File CSV",
+				"description": "Carica un file CSV con indirizzi dei destinatari",
+				"upload_button": "Scegli File",
+				"hint": "Il CSV deve contenere la colonna indirizzo. Opzionale: colonne etichetta, importo/tokenId."
+			},
+			"recipients": {
+				"title": "Destinatari",
+				"clear_all": "Cancella Tutto",
+				"regenerate_random": "Rigenera Importi",
+				"col_address": "Indirizzo",
+				"col_token_id": "Token ID",
+				"col_token_amount": "Qtà",
+				"col_amount": "Importo",
+				"col_label": "Etichetta"
+			},
+			"empty_state": "Nessun destinatario aggiunto ancora. Usa il modulo sopra per aggiungere indirizzi dei destinatari.",
+			"error": {
+				"invalid_address": "Inserisci un indirizzo Ethereum valido",
+				"invalid_address_line": "Riga {line}: Formato indirizzo non valido",
+				"token_id_required": "Token ID richiesto per la distribuzione NFT",
+				"invalid_token_id_line": "Riga {line}: Token ID non valido o mancante"
+			}
+		},
+		"footer": {
+			"continue": "Continua alla Revisione",
+			"hint": "Aggiungi almeno un destinatario per continuare"
+		}
+	},
+	"step5": {
+		"sidebar": {
+			"title": "Conferma ed Esegui",
+			"description": "Rivedi i dettagli della distribuzione ed esegui i trasferimenti"
+		},
+		"mode": {
+			"title": "Modalità Esecuzione",
+			"self": {
+				"title": "Auto-Esecuzione",
+				"description": "Firma e invia ogni transazione dal tuo wallet. Migliore per distribuzioni più piccole."
+			},
+			"delegated": {
+				"title": "Esecuzione Delegata",
+				"description": "Firma una volta, lascia che chiunque esegua i batch. Migliore per grandi distribuzioni con molti destinatari.",
+				"info": "La modalità delegata usa un contratto smart per raggruppare i trasferimenti. Firmi un'autorizzazione, poi i batch possono essere eseguiti da chiunque (te incluso)."
+			}
+		},
+		"delegated": {
+			"authorize": "Firma Autorizzazione",
+			"authorizing": "Firma in corso...",
+			"execute_batch": "Esegui Batch {current}/{total}",
+			"execute_all": "Esegui Tutti i Batch",
+			"batch_status": "Stato Batch",
+			"batch_pending": "In Attesa",
+			"batch_completed": "Completato",
+			"batch_failed": "Fallito",
+			"export_session": "Esporta Sessione",
+			"import_session": "Importa Sessione",
+			"session_expired": "Sessione Scaduta",
+			"session_info": "ID Sessione: {id} | Scade: {time}"
+		},
+		"session": {
+			"title": "Sessioni di Distribuzione",
+			"empty": "Nessuna sessione salvata",
+			"import": "Importa Sessione",
+			"export": "Esporta",
+			"delete": "Elimina",
+			"resume": "Riprendi",
+			"batches": "batch",
+			"expires_in": "Scade tra",
+			"expired": "Scaduto",
+			"status_pending": "In Attesa",
+			"status_partial": "In Corso",
+			"status_completed": "Completato",
+			"status_expired": "Scaduto",
+			"import_error": "Impossibile importare la sessione. Controlla il formato del file.",
+			"importing": "Importazione..."
+		},
+		"content": {
+			"title": "Rivedi ed Esegui Distribuzione",
+			"description": "Rivedi il riepilogo della distribuzione ed esegui i trasferimenti di token",
+			"executor_wallet": "Wallet Esecutore",
+			"summary_title": "Riepilogo Distribuzione",
+			"token": "Token",
+			"mode": "Modalità",
+			"mode_equal": "Distribuzione Uguale",
+			"mode_random": "Distribuzione Casuale",
+			"mode_custom": "Importi Personalizzati",
+			"recipients": "Destinatari",
+			"total_amount": "Importo Totale",
+			"total_nfts": "NFT Totali",
+			"estimated_gas": "Gas Stimato",
+			"network": "Rete",
+			"preview_title": "Anteprima Destinatari (primi 10)",
+			"more_recipients": "altri destinatari",
+			"progress_title": "Progresso Esecuzione",
+			"successful": "riusciti",
+			"failed": "falliti",
+			"pending": "in attesa",
+			"execute": "Esegui Distribuzione",
+			"stop": "Ferma Esecuzione",
+			"resume": "Riprendi",
+			"reset": "Reimposta",
+			"start_new": "Inizia Nuova Distribuzione",
+			"completed": "Distribuzione Completata!",
+			"confirm_continue": "Vuoi continuare?",
+			"warning_title": "Importante",
+			"warning_message": "Assicurati di avere saldo sufficiente e commissioni gas. Ogni destinatario riceverà una transazione separata. Rivedi attentamente tutti i dettagli prima di eseguire.",
+			"errors": {
+				"invalid_config": "Configurazione distribuzione non valida. Controlla i passaggi precedenti.",
+				"connect_wallet": "Connetti prima il tuo wallet",
+				"no_network": "Nessuna rete selezionata",
+				"no_token": "Nessun token selezionato",
+				"no_recipients": "Nessun destinatario aggiunto"
+			}
+		},
+		"footer": {
+			"back": "Torna ai Destinatari",
+			"execute": "Esegui Distribuzione"
+		}
+	}
+}

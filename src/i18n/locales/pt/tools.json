@@ -1,0 +1,46 @@
+{
+	"_meta": {
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷",
+		"code": "pt"
+	},
+	"section_title": "Ferramentas Poderosas",
+	"section_subtitle": "Ferramentas profissionais de operação em lote Web3 para melhorar sua eficiência",
+	"badge": "Ferramentas Web3 Profissionais",
+	"feedback_card": {
+		"title": "Suas Ideias Importam!",
+		"description": "Falta um recurso de que você precisa? Tem uma ideia para melhorar isso? Construímos o que VOCÊ precisa - junte-se à nossa comunidade e nos conte!",
+		"feature_1": "💡 Sua solicitação de recurso pode ser a próxima",
+		"feature_2": "🚀 Entregamos rápido - ideias para realidade em dias",
+		"feature_3": "🤝 Linha direta com nossa equipe de desenvolvimento"
+	},
+	"try_now": "Experimentar Agora",
+	"launch_app": "Abrir App",
+	"notify_me": "Notificar-me",
+	"coming_soon": "Em Breve",
+	"available_now": "Disponível Agora",
+	"join_telegram": "Entrar no Telegram",
+	"discover_random": "Descobrir uma ferramenta aleatória",
+	"you_discovered": "Você Descobriu!",
+	"try_again": "Tentar Novamente",
+	"actions": {
+		"import_csv": "Importar CSV",
+		"export_results": "Exportar Resultados",
+		"clear_all": "Limpar Tudo",
+		"share_link": "Compartilhar Link",
+		"share_tooltip": "Copiar link compartilhável",
+		"settings": "Configurações",
+		"settings_tooltip": "Configurações de rede"
+	},
+	"notify_modal": {
+		"title": "Receber Notificação",
+		"description": "Insira seu e-mail para ser notificado quando esta ferramenta estiver disponível.",
+		"email_placeholder": "seu@email.com",
+		"subscribe": "Inscrever-se",
+		"cancel": "Cancelar",
+		"success": "Obrigado! Notificaremos você quando estiver pronta.",
+		"error": "Por favor, insira um endereço de e-mail válido."
+	}
+}

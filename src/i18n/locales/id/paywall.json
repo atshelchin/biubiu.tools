@@ -1,0 +1,67 @@
+{
+	"prompt": {
+		"close": "Tutup",
+		"upgrade_membership": "Upgrade Keanggotaan",
+		"pay": "Bayar {{amount}} {{symbol}}",
+		"recommend_tip": "💡 Upgrade keanggotaan untuk akses gratis tanpa batas"
+	},
+	"modal": {
+		"title": "Upgrade ke Premium",
+		"subtitle": "Pilih paket yang sempurna untuk kebutuhan Anda",
+		"benefits": {
+			"title": "Yang Termasuk",
+			"zero_fees": "Nol biaya transaksi di semua alat",
+			"unlimited_access": "Akses tanpa batas ke fitur premium",
+			"priority_support": "Dukungan pelanggan prioritas"
+		},
+		"plans": {
+			"daily": "Harian",
+			"monthly": "Bulanan",
+			"yearly": "Tahunan",
+			"popular": "Populer",
+			"days": "{{days}} hari",
+			"per_day": "{{price}} {{symbol}}/hari"
+		},
+		"referral": {
+			"label": "Direferensikan oleh:",
+			"direct": "Kunjungan langsung"
+		},
+		"status": {
+			"loading": "Memuat status langganan...",
+			"active": "Anggota Premium Aktif",
+			"expires_in": "Berakhir dalam {{days}} hari"
+		},
+		"cta": "Beli Akses Premium",
+		"processing": "Memproses...",
+		"footer_note": "Keanggotaan hanya berlaku di {{network}} • Ganti jaringan memerlukan pembelian baru",
+		"success": {
+			"title": "Pembelian Berhasil!",
+			"message": "Anda telah berhasil berlangganan paket {{tier}}!",
+			"tx_label": "Transaksi:",
+			"auto_close": "Modal ini akan tertutup otomatis dalam 5 detik..."
+		},
+		"error": {
+			"connect_wallet": "Silakan hubungkan wallet Anda terlebih dahulu",
+			"invalid_tier": "Tier yang dipilih tidak valid",
+			"tx_failed": "Transaksi gagal",
+			"purchase_failed": "Gagal menyelesaikan pembelian"
+		}
+	},
+	"rules": {
+		"membership_required": "Fitur ini memerlukan keanggotaan",
+		"quota_exceeded": "Kuota gratis harian terlampaui ({{limit}}/{{unit}})",
+		"quota_remaining": "Sisa kuota gratis hari ini: {{remaining}}",
+		"upgrade_hint": "Upgrade untuk akses tanpa batas",
+		"upgrade_hint_cheaper": "Upgrade keanggotaan lebih hemat biaya",
+		"fee_info": "Biaya: {{total}} ETH ({{count}} × {{fee}} ETH)",
+		"exceeded_fee_info": "Kuota terlampaui, bayar {{total}} ETH",
+		"unit_items": "item",
+		"unit_requests": "permintaan"
+	},
+	"status": {
+		"not_connected": "Silakan hubungkan wallet terlebih dahulu",
+		"member": "Anggota Premium",
+		"expires_in": "Berakhir dalam {{days}} hari",
+		"expired": "Keanggotaan berakhir"
+	}
+}

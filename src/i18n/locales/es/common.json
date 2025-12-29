@@ -1,0 +1,86 @@
+{
+	"_meta": {
+		"code": "es",
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸"
+	},
+	"hero_title": "BiuBiu",
+	"hero_subtitle": "Descubre Web3 de forma fácil y segura",
+	"cta_get_started": "Comenzar",
+	"cta_learn_more": "Más información",
+	"cta": {
+		"title": "¿Listo para empezar?",
+		"subtitle": "Únete a miles de usuarios que ya utilizan biubiu.tools para simplificar sus operaciones Web3",
+		"button_text": "Empieza ahora - Es gratis"
+	},
+	"stats": {
+		"title": "Confianza de usuarios Web3",
+		"registered_users": "Usuarios activos",
+		"transactions": "Transacciones",
+		"total_volume": "Volumen total",
+		"chains_supported": "Cadenas soportadas",
+		"last_updated": "Estadísticas en vivo"
+	},
+	"footer": {
+		"privacy": "Privacidad",
+		"terms": "Términos"
+	},
+	"helpButton": {
+		"label": "Ayuda y comentarios",
+		"getHelp": "Obtener ayuda",
+		"reportIssue": "Reportar un problema"
+	},
+	"environment_banner": {
+		"community_warning": "Esta es una versión desplegada por la comunidad, no afiliada con biubiu.tools oficial.",
+		"dev_environment": "Entorno de desarrollo",
+		"official_reminder": "Estás en el sitio oficial. Siempre verifica el dominio: biubiu.tools"
+	},
+	"loading": "Cargando...",
+	"continue": "Continuar",
+	"back": "Volver",
+	"next": "Siguiente",
+	"previous": "Anterior",
+	"finish": "Finalizar",
+	"done": "Hecho",
+	"cancel": "Cancelar",
+	"optional": "Opcional",
+	"enabled": "Activado",
+	"disabled": "Desactivado",
+	"chars_left": "caracteres restantes",
+	"name": "Nombre",
+	"symbol": "Símbolo",
+	"description": "Descripción",
+	"standard": "Estándar",
+	"contract_address": "Dirección del contrato",
+	"transaction_hash": "Hash de transacción",
+	"gas_used": "Gas utilizado",
+	"deployment_cost": "Costo de despliegue",
+	"max_supply": "Suministro máximo",
+	"mint_price": "Precio de acuñación",
+	"royalty": "Regalía",
+	"show_more": "Ver más",
+	"show_less": "Ver menos",
+	"back_to_home": "Volver al inicio",
+	"faqs": "Preguntas frecuentes",
+	"total_checks": "Total de verificaciones",
+	"passed": "Aprobado",
+	"failed": "Fallido",
+	"status": {
+		"coming_soon": "Próximamente",
+		"alpha": "Alpha",
+		"beta": "Beta",
+		"stable": "Estable",
+		"new": "Nuevo"
+	},
+	"network_selector": {
+		"no_networks_enabled": "No hay redes habilitadas",
+		"enable_network_prompt": "Por favor, habilita al menos una red para continuar.",
+		"open_network_settings": "Abrir configuración de red",
+		"network_not_found": "¿No encuentras la red?",
+		"add_custom_network": "Agregar red personalizada"
+	},
+	"copy_address": "Copiar dirección",
+	"copied": "¡Copiado!"
+}

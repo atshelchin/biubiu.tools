@@ -1,0 +1,46 @@
+{
+	"_meta": {
+		"code": "ja",
+		"name": "日本語",
+		"englishName": "Japanese",
+		"direction": "ltr",
+		"flag": "🇯🇵"
+	},
+	"section_title": "パワフルなツール",
+	"section_subtitle": "効率を向上させるプロフェッショナルなWeb3バッチ操作ツール",
+	"badge": "プロフェッショナルWeb3ツール",
+	"feedback_card": {
+		"title": "あなたのアイデアが重要です！",
+		"description": "必要な機能がありませんか？改善のアイデアがありますか？あなたが必要とするものを作ります - コミュニティに参加して教えてください！",
+		"feature_1": "💡 あなたの機能リクエストが次になるかも",
+		"feature_2": "🚀 迅速な開発 - アイデアから実現まで数日",
+		"feature_3": "🤝 開発チームへの直接ライン"
+	},
+	"try_now": "今すぐ試す",
+	"launch_app": "アプリを起動",
+	"notify_me": "通知する",
+	"coming_soon": "近日公開",
+	"available_now": "利用可能",
+	"join_telegram": "Telegramに参加",
+	"discover_random": "ランダムなツールを発見",
+	"you_discovered": "発見しました！",
+	"try_again": "もう一度試す",
+	"actions": {
+		"import_csv": "CSVをインポート",
+		"export_results": "結果をエクスポート",
+		"clear_all": "すべてクリア",
+		"share_link": "リンクを共有",
+		"share_tooltip": "共有可能なリンクをコピー",
+		"settings": "設定",
+		"settings_tooltip": "ネットワーク設定"
+	},
+	"notify_modal": {
+		"title": "通知を受け取る",
+		"description": "このツールが利用可能になったら通知を受け取るには、メールアドレスを入力してください。",
+		"email_placeholder": "your@email.com",
+		"subscribe": "購読",
+		"cancel": "キャンセル",
+		"success": "ありがとうございます！準備ができたらお知らせします。",
+		"error": "有効なメールアドレスを入力してください。"
+	}
+}

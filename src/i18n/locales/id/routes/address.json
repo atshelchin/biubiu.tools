@@ -1,0 +1,147 @@
+{
+	"_meta": {
+		"code": "id",
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩"
+	},
+	"title": "Penjelajah Alamat",
+	"subtitle": "Cari dan jelajahi alamat blockchain berlabel dan nama ENS",
+	"search_placeholder": "Cari berdasarkan alamat, nama ENS, atau entitas...",
+	"searching": "Mencari...",
+	"looking_up": "Mencari di blockchain...",
+	"view_details": "Lihat detail",
+	"no_results": "Tidak ada hasil ditemukan",
+	"all_addresses": "Semua Alamat",
+	"categories": "Jelajahi berdasarkan Kategori",
+	"browse_by_label": "Jelajahi berdasarkan Label",
+	"popular_addresses": "Alamat Populer",
+	"popular_names": "Nama Populer",
+	"view_on_explorer": "Lihat di Explorer",
+	"website": "Situs Web",
+	"related_names": "Nama Terkait",
+	"related_addresses": "Alamat Terkait",
+	"balance": "Saldo",
+	"loading_balance": "Memuat...",
+	"contract": "Kontrak",
+	"data_source": "Sumber Data",
+	"updated": "Diperbarui",
+	"source_manual": "Manual",
+	"source_verified": "Terverifikasi",
+	"source_etherscan": "Etherscan",
+	"source_community": "Komunitas",
+	"stats": {
+		"addresses": "Alamat",
+		"names": "Nama",
+		"exchanges": "Bursa",
+		"defi": "DeFi",
+		"tokens": "Token",
+		"nft": "NFT",
+		"notable": "Penting"
+	},
+	"labels": {
+		"exchange": "Bursa",
+		"cex": "CEX",
+		"dex": "DEX",
+		"defi": "DeFi",
+		"lending": "Pinjaman",
+		"bridge": "Bridge",
+		"yield": "Hasil",
+		"derivatives": "Derivatif",
+		"liquid-staking": "Staking Likuid",
+		"token": "Token",
+		"stablecoin": "Stablecoin",
+		"memecoin": "Memecoin",
+		"wrapped": "Wrapped",
+		"nft": "NFT",
+		"nft-marketplace": "Marketplace NFT",
+		"whale": "Whale",
+		"smart-money": "Smart Money",
+		"foundation": "Yayasan",
+		"dao": "DAO",
+		"multisig": "Multisig",
+		"deployer": "Deployer",
+		"hacker": "Hacker",
+		"scam": "Penipuan",
+		"sanctioned": "Terkena Sanksi",
+		"phishing": "Phishing",
+		"burn": "Burn",
+		"null": "Null",
+		"genesis": "Genesis",
+		"mev": "MEV",
+		"contract": "Kontrak",
+		"eoa": "EOA",
+		"notable": "Penting",
+		"layer2": "Layer 2",
+		"staking": "Staking",
+		"oracle": "Oracle"
+	},
+	"risk": {
+		"safe": "Aman",
+		"neutral": "Netral",
+		"warning": "Peringatan",
+		"danger": "Bahaya"
+	},
+	"seo": {
+		"index_title": "Penjelajah Alamat - Pencarian Alamat Blockchain & ENS | BiuBiu Tools",
+		"index_description": "Cari dan jelajahi {addressCount} alamat blockchain berlabel dan {nameCount} nama ENS. Temukan bursa, protokol DeFi, whale, dan lainnya.",
+		"detail_description": "{name} ({entity}) di {chain}. Label: {labels}. Alamat: {address}. Jelajahi detail dompet dan informasi terkait."
+	},
+	"faq": {
+		"title": "Pertanyaan yang Sering Diajukan",
+		"what_is": "Apa itu {name}?",
+		"what_is_answer": "{name} adalah alamat dompet milik {entity} di jaringan {chain}.",
+		"is_safe": "Apakah aman berinteraksi dengan alamat ini?",
+		"is_safe_answer_safe": "{name} adalah alamat aman terverifikasi dari entitas terkenal.",
+		"is_safe_answer_neutral": "{name} memiliki tingkat risiko netral. Lakukan kehati-hatian normal.",
+		"is_safe_answer_warning": "Peringatan: {name} telah ditandai karena potensi risiko. Lanjutkan dengan hati-hati.",
+		"is_safe_answer_danger": "Bahaya: {name} telah ditandai sebagai berbahaya. Jangan kirim dana ke alamat ini.",
+		"how_to_verify": "Bagaimana cara memverifikasi alamat ini?",
+		"how_to_verify_answer": "Anda dapat memverifikasi alamat ini di block explorer {explorer} untuk melihat riwayat transaksi dan detail kontrak.",
+		"cex": {
+			"can_deposit": "Bisakah saya menyetor dana ke alamat ini?",
+			"can_deposit_answer": "{name} adalah alamat setoran resmi untuk {entity}. Selalu verifikasi alamat di situs web resmi bursa sebelum mengirim dana.",
+			"how_to_withdraw": "Bagaimana cara menarik dari bursa ini?",
+			"how_to_withdraw_answer": "Untuk menarik dari {entity}, masuk ke akun Anda, navigasi ke bagian penarikan, masukkan alamat dompet tujuan Anda, dan konfirmasi transaksi mengikuti prosedur keamanan bursa."
+		},
+		"dex": {
+			"what_is_contract": "Apa kontrak DEX ini?",
+			"what_is_contract_answer": "{name} adalah kontrak pintar untuk bursa terdesentralisasi {entity}. Ini memungkinkan pertukaran token tanpa izin langsung di blockchain."
+		},
+		"defi": {
+			"what_does_it_do": "Apa yang dilakukan kontrak DeFi ini?",
+			"what_does_it_do_answer": "{name} adalah kontrak pintar untuk {entity} yang memungkinkan layanan keuangan terdesentralisasi di blockchain.",
+			"lending_how": "Bagaimana pinjaman bekerja di protokol ini?",
+			"lending_how_answer": "{entity} memungkinkan pengguna untuk meminjamkan aset untuk mendapatkan bunga atau meminjam dengan jaminan. Suku bunga ditentukan secara algoritmik berdasarkan penawaran dan permintaan.",
+			"bridge_how": "Bagaimana cara menggunakan bridge ini?",
+			"bridge_how_answer": "{name} adalah kontrak bridge untuk {entity}. Ini memungkinkan Anda mentransfer aset antar jaringan blockchain yang berbeda dengan aman.",
+			"staking_how": "Bagaimana staking likuid bekerja?",
+			"staking_how_answer": "{entity} memungkinkan Anda untuk staking token sambil menerima token derivatif likuid yang dapat digunakan di protokol DeFi lainnya."
+		},
+		"token": {
+			"what_is_contract": "Apa kontrak token ini?",
+			"what_is_contract_answer": "{name} adalah kontrak pintar resmi untuk token ini. Selalu verifikasi alamat kontrak sebelum berinteraksi.",
+			"stablecoin_peg": "Bagaimana peg stablecoin ini dipertahankan?",
+			"stablecoin_peg_answer": "{name} mempertahankan peg-nya melalui kombinasi cadangan, mekanisme algoritmik, atau over-collateralization tergantung pada desainnya."
+		},
+		"entity": {
+			"whale_activity": "Mengapa alamat whale ini penting?",
+			"whale_activity_answer": "{name} memegang sejumlah besar cryptocurrency. Melacak pergerakan whale dapat memberikan wawasan tentang tren pasar.",
+			"multisig_what": "Apa itu dompet multisig?",
+			"multisig_what_answer": "{name} adalah dompet multi-tanda tangan yang memerlukan beberapa persetujuan untuk mengeksekusi transaksi, memberikan keamanan yang ditingkatkan.",
+			"governance": "Apa peran governance alamat ini?",
+			"governance_answer": "{name} milik {entity} dan mungkin terlibat dalam governance protokol, manajemen treasury, atau keputusan komunitas."
+		},
+		"risk": {
+			"why_flagged": "Mengapa alamat ini ditandai?",
+			"why_flagged_answer": "{name} telah ditandai karena asosiasi dengan aktivitas jahat seperti peretasan, penipuan, atau pelanggaran sanksi. Berhati-hatilah.",
+			"what_to_do": "Apa yang harus saya lakukan jika saya telah berinteraksi dengan alamat ini?",
+			"what_to_do_answer": "Jika Anda telah mengirim dana ke alamat ini, pemulihan mungkin tidak memungkinkan. Periksa apakah protokol penerima memiliki mekanisme pemulihan, dan pertimbangkan untuk melaporkan ke otoritas terkait."
+		},
+		"contract": {
+			"is_verified": "Apakah kontrak ini terverifikasi?",
+			"is_verified_answer": "Anda dapat memeriksa apakah {name} memiliki kode sumber terverifikasi di block explorer {chain}. Kontrak terverifikasi memiliki kode sumbernya tersedia secara publik untuk ditinjau."
+		}
+	}
+}

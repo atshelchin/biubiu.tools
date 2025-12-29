@@ -1,0 +1,63 @@
+{
+	"_meta": {
+		"code": "ja",
+		"name": "日本語",
+		"englishName": "Japanese",
+		"direction": "ltr",
+		"flag": "🇯🇵"
+	},
+	"owner": "所有者",
+	"resolved_address": "解決済みアドレス",
+	"view_address_details": "アドレス詳細を見る",
+	"not_resolved": "この名前は現在どのアドレスにも解決されていません",
+	"socials": "ソーシャルリンク",
+	"view_on": "{platform}で見る",
+	"view_on_etherscan": "Etherscanで見る",
+	"registration_info": "登録情報",
+	"registration_status": "ステータス",
+	"registered_at": "登録日",
+	"expires_at": "有効期限",
+	"days_remaining": "残り{days}日",
+	"expired": "期限切れ",
+	"expired_ago": "{days}日前に期限切れ",
+	"status": {
+		"registered": "登録済み",
+		"available": "取得可能",
+		"grace-period": "猶予期間",
+		"premium": "プレミアム",
+		"unknown": "不明"
+	},
+	"ens_records": "ENSレコード",
+	"location": "所在地",
+	"keywords": "キーワード",
+	"social_presence": "SNSプレゼンス",
+	"seo": {
+		"suffix": "ENS名の詳細、解決アドレス、所有者情報を探索。",
+		"detail_description": "{name}は{type}ドメインです。解決先：{address}。所有者、レコード、関連情報を確認できます。"
+	},
+	"faq": {
+		"title": "よくある質問",
+		"what_is": "{name}とは？",
+		"what_is_answer": "{name}は、ブロックチェーンアドレスに人間が読める識別子を提供する{type}ドメイン名です。",
+		"how_to_use": "この名前はどう使いますか？",
+		"how_to_use_answer": "長い16進数アドレスの代わりに{name}に暗号通貨を送ることができます。ほとんどのウォレットとdAppはENS名をサポートしています。",
+		"who_owns": "この名前の所有者は誰ですか？",
+		"who_owns_answer": "{name}はアドレス{address}に解決されます。所有者は解決アドレスとは異なる場合があります。",
+		"how_to_buy": "同様のドメインを登録するには？",
+		"how_to_buy_answer": "公式レジストラを通じて{type}ドメインを登録できます。ENSドメインはapp.ens.domainsで登録できます。",
+		"ens": {
+			"can_expire": "このENS名は期限切れになりますか？",
+			"can_expire_answer": "はい、{name}には有効期限があります。現在の所有者は所有権を維持するために期限前に更新する必要があります。",
+			"how_to_renew": "ENS名を更新するには？",
+			"how_to_renew_answer": "{name}を更新するには、app.ens.domainsにアクセスし、ウォレットを接続して、更新料を支払って登録期間を延長します。",
+			"how_to_set_records": "ENS名にレコードを設定するには？",
+			"how_to_set_records_answer": "app.ens.domainsにアクセスし、{name}を所有するウォレットを接続すると、アドレス、テキストレコード、コンテンツハッシュなど、さまざまなレコードを設定できます。",
+			"what_are_records": "ENSテキストレコードとは？",
+			"what_are_records_answer": "ENSテキストレコードを使用すると、SNSアカウント、ウェブサイトURL、メール、アバター、説明などの追加情報を名前に添付できます。"
+		},
+		"entity": {
+			"who_is_owner": "このドメインの所有者は誰ですか？",
+			"who_is_owner_answer": "{name}は{entity}によって登録されています。これは公開記録に基づく検証済みの関連付けです。"
+		}
+	}
+}

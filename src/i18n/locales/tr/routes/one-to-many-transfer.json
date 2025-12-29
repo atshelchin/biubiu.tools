@@ -1,0 +1,290 @@
+{
+	"_meta": {
+		"code": "tr",
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷"
+	},
+	"title": "Birden Çoğa Transfer",
+	"description": "Tek bir cüzdandan birden fazla adrese toplu token ve NFT gönderin",
+	"seo": {
+		"page_title": "Birden Çoğa Transfer - Birden Fazla Cüzdana Toplu Token ve NFT Gönderimi | BiuBiu Tools",
+		"page_description": "Tek bir cüzdandan birden fazla adrese toplu token ve NFT gönderin. Birden fazla blok zinciri ağında ETH, ERC20, ERC721, ERC1155 desteği.",
+		"keywords": "birden çoğa transfer, toplu gönderim, airdrop, token transferi, NFT transferi, çoklu gönderim, toplu transfer, ERC20, ERC721, ERC1155, kripto dağıtım, web3 araçları",
+		"webapp_name": "Birden Çoğa Transfer",
+		"webapp_description": "Çeşitli blok zinciri ağlarında tek cüzdandan birden fazla alıcıya toplu token ve NFT gönderimi",
+		"howto_name": "Birden Fazla Cüzdana Toplu Token ve NFT Nasıl Gönderilir",
+		"howto_description": "Tek cüzdandan birden fazla alıcı adresine token ve NFT gönderme rehberi",
+		"howto_tool_1": "Web3 Cüzdanı (MetaMask, WalletConnect, vb.)",
+		"howto_tool_2": "Yeterli token bakiyesi ve gas ücreti",
+		"step_1_name": "Cüzdanınızı Bağlayın",
+		"step_1_text": "\"Cüzdan Bağla\" düğmesine tıklayın ve Web3 cüzdanınızı (MetaMask, WalletConnect, vb.) uygulamaya bağlayın. Bu cüzdan, dağıtım için token kaynağı olacaktır.",
+		"step_1_description": "Web3 cüzdanınızı kaynak cüzdan olarak bağlayın",
+		"step_2_name": "Bağımlılıkları Kontrol Edin",
+		"step_2_text": "Seçilen ağda gerekli akıllı sözleşmelerin (WETH ve TokenDistribution) dağıtıldığını doğrulayın. Bu sözleşmeler toplu dağıtım işlevselliğini etkinleştirir.",
+		"step_2_description": "Gerekli sözleşmelerin dağıtıldığını doğrulayın",
+		"step_3_name": "Token ve Miktar Seçin",
+		"step_3_text": "Dağıtılacak token türünü (yerel token, ERC20 veya NFT) seçin, dağıtım modunu (eşit miktarlar veya alıcı başına özel miktarlar) ayarlayın ve alıcı başına miktar veya toplam miktarı belirtin.",
+		"step_3_description": "Token ve dağıtım miktarlarını yapılandırın",
+		"step_4_name": "Alıcıları İçe Aktarın",
+		"step_4_text": "Manuel giriş, CSV dosyası yükleme veya liste yapıştırarak alıcı cüzdan adreslerini ekleyin. İsteğe bağlı olarak her alıcı için özel miktarlar ayarlayın.",
+		"step_4_description": "Alıcı cüzdan adreslerini ekleyin",
+		"step_5_name": "İnceleyin ve Yürütün",
+		"step_5_text": "Toplam miktar, alıcı sayısı ve tahmini gas maliyetleri dahil dağıtım özetini inceleyin. Onaylayın ve toplu dağıtımı yürütün. Her işlemi cüzdanınızla imzalayın.",
+		"step_5_description": "Token dağıtımını yürütün",
+		"feature_1": "Web3 cüzdanı bağlayın (MetaMask, WalletConnect, Coinbase Wallet)",
+		"feature_2": "Birden fazla ağ desteği (Ethereum, Polygon, BSC, Base, Arbitrum, Optimism)",
+		"feature_3": "Yerel token (ETH, BNB, MATIC), ERC20 token ve NFT (ERC721, ERC1155) gönderin",
+		"feature_4": "Eşit dağıtım veya alıcı başına özel miktarlar",
+		"feature_5": "CSV, yapıştırma veya manuel giriş ile alıcıları içe aktarın"
+	},
+	"faqs": {
+		"what_is_one_to_many": "Birden Çoğa Transfer Nedir?",
+		"one_to_many_explanation": "Birden Çoğa Transfer, tek bir cüzdandan birden fazla alıcı adresine toplu olarak token veya NFT göndermenizi sağlar. Airdrop'lar, maaş ödemeleri, ödül dağıtımları ve birçok adrese verimli bir şekilde varlık göndermeniz gereken tüm senaryolar için idealdir.",
+		"what_tokens_supported": "Hangi token türleri destekleniyor?",
+		"tokens_supported_explanation": "Yerel tokenları (ETH, BNB, MATIC, vb.), ERC20 tokenları (USDT, USDC, vb.) ve ERC721 ve ERC1155 standartları dahil NFT'leri destekliyoruz.",
+		"what_is_equal_distribution": "Eşit dağıtım modu nedir?",
+		"equal_distribution_explanation": "Eşit dağıtım modunda, alıcı başına miktar belirtirsiniz ve her adres aynı miktarı alır. Toplam, alıcı sayısına göre otomatik olarak hesaplanır.",
+		"what_is_custom_amounts": "Özel miktarlar modu nedir?",
+		"custom_amounts_explanation": "Özel miktarlar modunda, her alıcı için farklı miktarlar belirtebilirsiniz. Farklı adreslerin farklı miktarlar alması gerektiğinde kullanışlıdır.",
+		"how_to_import_recipients": "Alıcı adreslerini nasıl içe aktarabilirim?",
+		"import_recipients_explanation": "Alıcıları şu şekillerde ekleyebilirsiniz: 1) Tek tek manuel giriş, 2) Adres listesi yapıştırma veya 3) Adresler ve isteğe bağlı miktarlar içeren CSV dosyası yükleme.",
+		"what_networks_supported": "Hangi blok zinciri ağları destekleniyor?",
+		"networks_supported_explanation": "Şu anda Ethereum Mainnet, Polygon, BSC (Binance Smart Chain), Base, Arbitrum ve Optimism'i destekliyoruz. Gelecekte daha fazla ağ eklenecektir."
+	},
+	"step2": {
+		"content": {
+			"title": "Bağımlılıkları Kontrol Et",
+			"description": "Bu ağda gerekli sözleşmelerin dağıtıldığını doğrulayın",
+			"checks": {
+				"contract": {
+					"weth_description": "Yetkilendirilmiş yürütme modu için WETH sözleşmesi (dağıtım için WETH'i ETH'ye dönüştürür)",
+					"token_distribution_description": "Birden fazla alıcıya toplu token ve NFT dağıtımı için TokenDistribution sözleşmesi"
+				}
+			}
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "Token Seç",
+			"description": "Token türünü seçin ve dağıtılacak tokeni belirtin"
+		},
+		"content": {
+			"title": "Dağıtılacak Tokeni Seç",
+			"description": "Token türünü seçin ve birden fazla alıcıya göndermek istediğiniz tokeni belirtin",
+			"token_type": {
+				"title": "Token Türü",
+				"native": "Yerel Token",
+				"native_desc": "ETH, BNB, MATIC, vb.",
+				"erc20": "ERC20 Token",
+				"erc20_desc": "USDT, USDC, DAI, vb.",
+				"erc721": "ERC721 NFT",
+				"erc721_desc": "Tekil NFT'ler (alıcı başına 1)",
+				"erc1155": "ERC1155 Çoklu-Token",
+				"erc1155_desc": "Toplu NFT'ler veya yarı-fungible tokenlar"
+			},
+			"select_token": {
+				"title": "Token Seç",
+				"no_tokens": "Bu ağ için mevcut token yok",
+				"add_custom": "Özel Token Ekle"
+			},
+			"nft_config": {
+				"title": "NFT Yapılandırması",
+				"contract_address": "Sözleşme Adresi",
+				"contract_placeholder": "NFT sözleşme adresini girin (0x...)",
+				"token_ids": "Token ID'leri",
+				"token_ids_placeholder": "Token ID'lerini girin (birden fazla için virgülle ayırın)",
+				"token_ids_hint": "ERC721 için: alıcı başına bir token ID. ERC1155 için: dağıtılacak token ID'sini belirtin.",
+				"load_button": "NFT Bilgisi Yükle",
+				"loading": "NFT bilgisi yükleniyor...",
+				"collection_name": "Koleksiyon",
+				"total_supply": "Toplam Arz",
+				"your_balance": "Bakiyeniz",
+				"invalid_address": "Geçersiz sözleşme adresi formatı"
+			},
+			"amount_mode": {
+				"title": "Dağıtım Modu",
+				"equal": "Eşit Dağıtım",
+				"equal_desc": "Tüm alıcılara aynı miktar",
+				"custom": "Özel Miktarlar",
+				"custom_desc": "Alıcı başına bireysel miktarlar ayarla (Adım 4'te)",
+				"random": "Rastgele Miktarlar",
+				"random_desc": "Her alıcı için belirli aralıkta rastgele miktar"
+			},
+			"amount_input": {
+				"title": "Alıcı Başına Miktar",
+				"placeholder": "0.0",
+				"hint": "Bu miktar her alıcıya gönderilecektir. Toplam, alıcı sayısına göre hesaplanacaktır."
+			},
+			"custom_mode_info": "Özel miktarlar modunu seçtiniz. Adım 4'te her alıcı için bireysel miktarlar ayarlayacaksınız.",
+			"random_mode_config": {
+				"min_amount": "Minimum Miktar",
+				"max_amount": "Maksimum Miktar",
+				"min_placeholder": "0.0",
+				"max_placeholder": "0.0",
+				"hint": "Her alıcı min ve maks değerler arasında rastgele bir miktar alacaktır.",
+				"valid_range": "Rastgele miktarlar {min} ile {max} {symbol} arasında olacaktır",
+				"error_max_less_than_min": "Maksimum miktar minimum miktardan büyük olmalıdır"
+			}
+		},
+		"footer": {
+			"continue": "Alıcılara Devam Et",
+			"hint": "Devam etmek için bir token seçin ve miktarları yapılandırın"
+		}
+	},
+	"step4": {
+		"sidebar": {
+			"title": "Alıcıları İçe Aktar",
+			"description": "Tokenları alacak cüzdan adreslerini ekleyin"
+		},
+		"content": {
+			"title": "Alıcı Ekle",
+			"description": "Bu dağıtımdan token alacak cüzdan adreslerini içe aktarın",
+			"distributing": "Dağıtılıyor",
+			"method": {
+				"manual": "Manuel Giriş",
+				"paste": "Liste Yapıştır",
+				"csv": "CSV Yükle"
+			},
+			"manual": {
+				"title": "Manuel Alıcı Ekle",
+				"address": "Cüzdan Adresi",
+				"token_id": "Token ID",
+				"token_amount": "Miktar",
+				"amount": "Tutar",
+				"label": "Etiket (isteğe bağlı)",
+				"label_placeholder": "örn. Alice, Bob",
+				"add_button": "Alıcı Ekle"
+			},
+			"paste": {
+				"title": "Birden Fazla Adres Yapıştır",
+				"add_button": "Tümünü Ekle"
+			},
+			"paste_hint": {
+				"fungible_equal": "Format: adres, etiket (isteğe bağlı). Satır başına bir tane.",
+				"fungible_custom": "Format: adres, etiket (isteğe bağlı), tutar. Satır başına bir tane.",
+				"erc721": "Format: adres, tokenId, etiket (isteğe bağlı). Satır başına bir tane.",
+				"erc1155": "Format: adres, tokenId, miktar, etiket (isteğe bağlı). Satır başına bir tane."
+			},
+			"csv": {
+				"title": "CSV Dosyası Yükle",
+				"description": "Alıcı adresleri içeren bir CSV dosyası yükleyin",
+				"upload_button": "Dosya Seç",
+				"hint": "CSV adres sütunu içermelidir. İsteğe bağlı: etiket, tutar/tokenId sütunları."
+			},
+			"recipients": {
+				"title": "Alıcılar",
+				"clear_all": "Tümünü Temizle",
+				"regenerate_random": "Miktarları Yeniden Oluştur",
+				"col_address": "Adres",
+				"col_token_id": "Token ID",
+				"col_token_amount": "Adet",
+				"col_amount": "Tutar",
+				"col_label": "Etiket"
+			},
+			"empty_state": "Henüz alıcı eklenmedi. Alıcı adresleri eklemek için yukarıdaki formu kullanın.",
+			"error": {
+				"invalid_address": "Lütfen geçerli bir Ethereum adresi girin",
+				"invalid_address_line": "Satır {line}: Geçersiz adres formatı",
+				"token_id_required": "NFT dağıtımı için Token ID gereklidir",
+				"invalid_token_id_line": "Satır {line}: Geçersiz veya eksik Token ID"
+			}
+		},
+		"footer": {
+			"continue": "İncelemeye Devam Et",
+			"hint": "Devam etmek için en az bir alıcı ekleyin"
+		}
+	},
+	"step5": {
+		"sidebar": {
+			"title": "Onayla ve Yürüt",
+			"description": "Dağıtım detaylarını inceleyin ve transferleri yürütün"
+		},
+		"mode": {
+			"title": "Yürütme Modu",
+			"self": {
+				"title": "Kendi Kendine Yürüt",
+				"description": "Her işlemi cüzdanınızdan imzalayın ve gönderin. Daha küçük dağıtımlar için en iyisi."
+			},
+			"delegated": {
+				"title": "Yetkilendirilmiş Yürütme",
+				"description": "Bir kez imzalayın, herkes toplu işlemleri yürütebilsin. Çok sayıda alıcılı büyük dağıtımlar için en iyisi.",
+				"info": "Yetkilendirilmiş mod, transferleri toplu işlemek için akıllı sözleşme kullanır. Bir yetkilendirme imzalarsınız, ardından toplu işlemler herkes (siz dahil) tarafından yürütülebilir."
+			}
+		},
+		"delegated": {
+			"authorize": "Yetkilendirmeyi İmzala",
+			"authorizing": "İmzalanıyor...",
+			"execute_batch": "Toplu İşlemi Yürüt {current}/{total}",
+			"execute_all": "Tüm Toplu İşlemleri Yürüt",
+			"batch_status": "Toplu İşlem Durumu",
+			"batch_pending": "Bekliyor",
+			"batch_completed": "Tamamlandı",
+			"batch_failed": "Başarısız",
+			"export_session": "Oturumu Dışa Aktar",
+			"import_session": "Oturumu İçe Aktar",
+			"session_expired": "Oturum Süresi Doldu",
+			"session_info": "Oturum ID: {id} | Süre Sonu: {time}"
+		},
+		"session": {
+			"title": "Dağıtım Oturumları",
+			"empty": "Kayıtlı oturum yok",
+			"import": "Oturumu İçe Aktar",
+			"export": "Dışa Aktar",
+			"delete": "Sil",
+			"resume": "Devam Et",
+			"batches": "toplu işlem",
+			"expires_in": "Süre",
+			"expired": "Süresi Doldu",
+			"status_pending": "Bekliyor",
+			"status_partial": "Devam Ediyor",
+			"status_completed": "Tamamlandı",
+			"status_expired": "Süresi Doldu",
+			"import_error": "Oturum içe aktarılamadı. Lütfen dosya formatını kontrol edin.",
+			"importing": "İçe aktarılıyor..."
+		},
+		"content": {
+			"title": "Dağıtımı İncele ve Yürüt",
+			"description": "Dağıtım özetini inceleyin ve token transferlerini yürütün",
+			"executor_wallet": "Yürütücü Cüzdan",
+			"summary_title": "Dağıtım Özeti",
+			"token": "Token",
+			"mode": "Mod",
+			"mode_equal": "Eşit Dağıtım",
+			"mode_random": "Rastgele Dağıtım",
+			"mode_custom": "Özel Miktarlar",
+			"recipients": "Alıcılar",
+			"total_amount": "Toplam Tutar",
+			"total_nfts": "Toplam NFT",
+			"estimated_gas": "Tahmini Gas",
+			"network": "Ağ",
+			"preview_title": "Alıcı Önizlemesi (ilk 10)",
+			"more_recipients": "daha fazla alıcı",
+			"progress_title": "Yürütme İlerlemesi",
+			"successful": "başarılı",
+			"failed": "başarısız",
+			"pending": "bekliyor",
+			"execute": "Dağıtımı Yürüt",
+			"stop": "Yürütmeyi Durdur",
+			"resume": "Devam Et",
+			"reset": "Sıfırla",
+			"start_new": "Yeni Dağıtım Başlat",
+			"completed": "Dağıtım Tamamlandı!",
+			"confirm_continue": "Devam etmek istiyor musunuz?",
+			"warning_title": "Önemli",
+			"warning_message": "Yeterli bakiye ve gas ücretiniz olduğundan emin olun. Her alıcı ayrı bir işlem alacaktır. Yürütmeden önce tüm detayları dikkatlice inceleyin.",
+			"errors": {
+				"invalid_config": "Geçersiz dağıtım yapılandırması. Lütfen önceki adımları kontrol edin.",
+				"connect_wallet": "Lütfen önce cüzdanınızı bağlayın",
+				"no_network": "Ağ seçilmedi",
+				"no_token": "Token seçilmedi",
+				"no_recipients": "Alıcı eklenmedi"
+			}
+		},
+		"footer": {
+			"back": "Alıcılara Geri Dön",
+			"execute": "Dağıtımı Yürüt"
+		}
+	}
+}

@@ -1,0 +1,63 @@
+{
+	"_meta": {
+		"code": "vi",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳"
+	},
+	"owner": "Chủ sở hữu",
+	"resolved_address": "Địa chỉ được phân giải",
+	"view_address_details": "Xem chi tiết địa chỉ",
+	"not_resolved": "Tên này hiện không được phân giải đến địa chỉ nào",
+	"socials": "Liên kết mạng xã hội",
+	"view_on": "Xem trên {platform}",
+	"view_on_etherscan": "Xem trên Etherscan",
+	"registration_info": "Thông tin đăng ký",
+	"registration_status": "Trạng thái",
+	"registered_at": "Đã đăng ký",
+	"expires_at": "Hết hạn",
+	"days_remaining": "Còn {days} ngày",
+	"expired": "Đã hết hạn",
+	"expired_ago": "Hết hạn {days} ngày trước",
+	"status": {
+		"registered": "Đã đăng ký",
+		"available": "Có sẵn",
+		"grace-period": "Thời gian gia hạn",
+		"premium": "Cao cấp",
+		"unknown": "Không xác định"
+	},
+	"ens_records": "Bản ghi ENS",
+	"location": "Vị trí",
+	"keywords": "Từ khóa",
+	"social_presence": "Hiện diện trên mạng xã hội",
+	"seo": {
+		"suffix": "Khám phá chi tiết tên ENS, địa chỉ được phân giải và thông tin chủ sở hữu.",
+		"detail_description": "{name} là tên miền {type}. Phân giải đến: {address}. Tìm chủ sở hữu, bản ghi và thông tin liên quan."
+	},
+	"faq": {
+		"title": "Câu hỏi thường gặp",
+		"what_is": "{name} là gì?",
+		"what_is_answer": "{name} là tên miền {type} cung cấp định danh có thể đọc được cho địa chỉ blockchain.",
+		"how_to_use": "Làm thế nào để sử dụng tên này?",
+		"how_to_use_answer": "Bạn có thể gửi tiền điện tử đến {name} thay vì sử dụng địa chỉ thập lục phân dài. Hầu hết các ví và dApp đều hỗ trợ tên ENS.",
+		"who_owns": "Ai sở hữu tên này?",
+		"who_owns_answer": "{name} được phân giải đến địa chỉ {address}. Chủ sở hữu có thể khác với địa chỉ phân giải.",
+		"how_to_buy": "Làm thế nào để đăng ký tên miền tương tự?",
+		"how_to_buy_answer": "Bạn có thể đăng ký tên miền {type} thông qua nhà đăng ký chính thức. Tên miền ENS được đăng ký tại app.ens.domains.",
+		"ens": {
+			"can_expire": "Tên ENS này có hết hạn không?",
+			"can_expire_answer": "Có, {name} có ngày hết hạn. Chủ sở hữu hiện tại phải gia hạn trước khi hết hạn để duy trì quyền sở hữu.",
+			"how_to_renew": "Làm thế nào để gia hạn tên ENS?",
+			"how_to_renew_answer": "Để gia hạn {name}, hãy truy cập app.ens.domains, kết nối ví của bạn và gia hạn thời gian đăng ký bằng cách thanh toán phí gia hạn.",
+			"how_to_set_records": "Làm thế nào để thiết lập bản ghi cho tên ENS của tôi?",
+			"how_to_set_records_answer": "Truy cập app.ens.domains, kết nối ví sở hữu {name}, và bạn có thể thiết lập các bản ghi khác nhau bao gồm địa chỉ, bản ghi văn bản và hash nội dung.",
+			"what_are_records": "Bản ghi văn bản ENS là gì?",
+			"what_are_records_answer": "Bản ghi văn bản ENS cho phép bạn đính kèm thông tin bổ sung vào tên của mình, như tài khoản mạng xã hội, URL trang web, email, ảnh đại diện và mô tả."
+		},
+		"entity": {
+			"who_is_owner": "Ai là chủ sở hữu tên miền này?",
+			"who_is_owner_answer": "{name} được đăng ký bởi {entity}. Đây là liên kết đã được xác minh dựa trên hồ sơ công khai."
+		}
+	}
+}

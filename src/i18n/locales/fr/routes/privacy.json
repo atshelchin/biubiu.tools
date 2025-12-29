@@ -1,0 +1,58 @@
+{
+	"_meta": {
+		"code": "fr",
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷"
+	},
+	"page_title": "Politique de confidentialité",
+	"page_description": "Découvrez comment BiuBiu Tools collecte, utilise et protège vos données.",
+	"title": "Politique de confidentialité",
+	"last_updated": "Dernière mise à jour",
+	"introduction": {
+		"title": "Introduction",
+		"content": "BiuBiu Tools s'engage à protéger votre vie privée. Cette Politique de confidentialité explique comment nous collectons, utilisons et protégeons vos informations lorsque vous utilisez nos outils et services Web3."
+	},
+	"data_collection": {
+		"title": "Données que nous collectons",
+		"intro": "Nous collectons différents types de données selon vos préférences de consentement :",
+		"necessary": {
+			"title": "Données essentielles (toujours collectées)",
+			"item1": "Données de session nécessaires au fonctionnement du site web",
+			"item2": "Préférences de consentement pour mémoriser vos choix",
+			"item3": "Préférences de thème (mode clair/sombre)",
+			"item4": "Préférences de langue",
+			"item5": "Métriques de performance RPC pour une sélection optimale du réseau"
+		},
+		"analytics": {
+			"title": "Données analytiques (sans cookies, toujours activées)",
+			"item1": "Statistiques d'utilisation anonymes via Rybbit (pages vues, utilisation des fonctionnalités)",
+			"item2": "Métriques de visiteurs agrégées et non identifiables",
+			"item3": "Suivi de la source de référence pour notre programme de parrainage"
+		}
+	},
+	"local_storage": {
+		"title": "Stockage local (nécessaire)",
+		"content": "Nous utilisons le stockage local de votre navigateur pour sauvegarder les données essentielles au fonctionnement de l'application. Ces données restent sur votre appareil et ne sont pas transmises à nos serveurs :",
+		"item1": "Listes de tokens personnalisées que vous avez ajoutées (nécessaires pour les opérations sur les tokens)",
+		"item2": "Données de session pour les opérations multi-étapes (nécessaires pour reprendre les tâches interrompues)",
+		"item3": "Résultats de scan stockés dans IndexedDB (nécessaires pour la fonction de scan des soldes)",
+		"item4": "Vos préférences de consentement aux cookies"
+	},
+	"third_party": {
+		"title": "Analytique",
+		"content": "Nous utilisons Rybbit (tj.appsdata.org), un service d'analyse sans cookies axé sur la confidentialité pour comprendre comment les visiteurs utilisent notre site web. Rybbit n'utilise pas de cookies, ne collecte pas d'informations personnellement identifiables et est toujours activé car il est conforme au RGPD sans nécessiter de consentement. Si nous ajoutons des services d'analyse supplémentaires utilisant des cookies à l'avenir, ils ne seront chargés qu'avec votre consentement. Nous interagissons avec les réseaux blockchain (Ethereum, Polygon, etc.) selon les besoins de nos outils, mais nous ne stockons pas vos clés privées ou phrases de récupération sur nos serveurs."
+	},
+	"your_rights": {
+		"title": "Vos droits",
+		"content": "En vertu du RGPD, du CCPA et des réglementations similaires, vous disposez des droits suivants :",
+		"item1": "Droit d'accès : Vous pouvez demander des informations sur les données que nous détenons vous concernant",
+		"item2": "Droit à l'effacement : Vous pouvez effacer vos données locales à tout moment via les paramètres de votre navigateur",
+		"item3": "Droit de retirer le consentement : Vous pouvez modifier vos préférences de cookies à tout moment"
+	},
+	"contact": {
+		"title": "Nous contacter",
+		"content": "Si vous avez des questions concernant cette Politique de confidentialité ou nos pratiques en matière de données, veuillez nous contacter via notre dépôt GitHub ou nos canaux communautaires."
+	}
+}

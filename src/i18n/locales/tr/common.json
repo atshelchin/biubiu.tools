@@ -1,0 +1,86 @@
+{
+	"_meta": {
+		"code": "tr",
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷"
+	},
+	"hero_title": "BiuBiu",
+	"hero_subtitle": "Web3 keşfi kolay ve güvenli",
+	"cta_get_started": "Başla",
+	"cta_learn_more": "Daha fazla bilgi",
+	"cta": {
+		"title": "Başlamaya hazır mısınız?",
+		"subtitle": "Web3 işlemlerini kolaylaştırmak için biubiu.tools kullanan binlerce kullanıcıya katılın",
+		"button_text": "Şimdi başla - Ücretsiz"
+	},
+	"stats": {
+		"title": "Web3 kullanıcıları tarafından güvenilir",
+		"registered_users": "Aktif kullanıcılar",
+		"transactions": "İşlemler",
+		"total_volume": "Toplam hacim",
+		"chains_supported": "Desteklenen zincirler",
+		"last_updated": "Canlı istatistikler"
+	},
+	"footer": {
+		"privacy": "Gizlilik",
+		"terms": "Koşullar"
+	},
+	"helpButton": {
+		"label": "Yardım ve geri bildirim",
+		"getHelp": "Yardım al",
+		"reportIssue": "Sorun bildir"
+	},
+	"environment_banner": {
+		"community_warning": "Bu, topluluk tarafından dağıtılan bir sürümdür, resmi biubiu.tools ile bağlantılı değildir.",
+		"dev_environment": "Geliştirme ortamı",
+		"official_reminder": "Resmi sitede bulunuyorsunuz. Her zaman alan adını doğrulayın: biubiu.tools"
+	},
+	"loading": "Yükleniyor...",
+	"continue": "Devam",
+	"back": "Geri",
+	"next": "İleri",
+	"previous": "Önceki",
+	"finish": "Bitir",
+	"done": "Tamam",
+	"cancel": "İptal",
+	"optional": "İsteğe bağlı",
+	"enabled": "Etkin",
+	"disabled": "Devre dışı",
+	"chars_left": "karakter kaldı",
+	"name": "Ad",
+	"symbol": "Sembol",
+	"description": "Açıklama",
+	"standard": "Standart",
+	"contract_address": "Sözleşme adresi",
+	"transaction_hash": "İşlem hash'i",
+	"gas_used": "Kullanılan gas",
+	"deployment_cost": "Dağıtım maliyeti",
+	"max_supply": "Maksimum arz",
+	"mint_price": "Mint fiyatı",
+	"royalty": "Telif hakkı",
+	"show_more": "Daha fazla göster",
+	"show_less": "Daha az göster",
+	"back_to_home": "Ana sayfaya dön",
+	"faqs": "Sık sorulan sorular",
+	"total_checks": "Toplam kontroller",
+	"passed": "Başarılı",
+	"failed": "Başarısız",
+	"status": {
+		"coming_soon": "Yakında",
+		"alpha": "Alfa",
+		"beta": "Beta",
+		"stable": "Kararlı",
+		"new": "Yeni"
+	},
+	"network_selector": {
+		"no_networks_enabled": "Etkin ağ yok",
+		"enable_network_prompt": "Devam etmek için lütfen en az bir ağı etkinleştirin.",
+		"open_network_settings": "Ağ ayarlarını aç",
+		"network_not_found": "Ağ bulunamadı mı?",
+		"add_custom_network": "Özel ağ ekle"
+	},
+	"copy_address": "Adresi kopyala",
+	"copied": "Kopyalandı!"
+}

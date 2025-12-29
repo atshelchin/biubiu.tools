@@ -1,0 +1,63 @@
+{
+	"_meta": {
+		"code": "id",
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩"
+	},
+	"owner": "Pemilik",
+	"resolved_address": "Alamat Terselesaikan",
+	"view_address_details": "Lihat detail alamat",
+	"not_resolved": "Nama ini saat ini tidak terselesaikan ke alamat manapun",
+	"socials": "Tautan Sosial",
+	"view_on": "Lihat di {platform}",
+	"view_on_etherscan": "Lihat di Etherscan",
+	"registration_info": "Info Pendaftaran",
+	"registration_status": "Status",
+	"registered_at": "Terdaftar",
+	"expires_at": "Kedaluwarsa",
+	"days_remaining": "{days} hari tersisa",
+	"expired": "Kedaluwarsa",
+	"expired_ago": "Kedaluwarsa {days} hari yang lalu",
+	"status": {
+		"registered": "Terdaftar",
+		"available": "Tersedia",
+		"grace-period": "Masa Tenggang",
+		"premium": "Premium",
+		"unknown": "Tidak Diketahui"
+	},
+	"ens_records": "Rekaman ENS",
+	"location": "Lokasi",
+	"keywords": "Kata Kunci",
+	"social_presence": "Kehadiran di media sosial",
+	"seo": {
+		"suffix": "Jelajahi detail nama ENS, alamat terselesaikan, dan informasi pemilik.",
+		"detail_description": "{name} adalah domain {type}. Terselesaikan ke: {address}. Temukan pemilik, rekaman, dan informasi terkait."
+	},
+	"faq": {
+		"title": "Pertanyaan yang Sering Diajukan",
+		"what_is": "Apa itu {name}?",
+		"what_is_answer": "{name} adalah nama domain {type} yang menyediakan pengenal yang dapat dibaca manusia untuk alamat blockchain.",
+		"how_to_use": "Bagaimana cara menggunakan nama ini?",
+		"how_to_use_answer": "Anda dapat mengirim cryptocurrency ke {name} alih-alih menggunakan alamat heksadesimal yang panjang. Kebanyakan dompet dan dApp mendukung nama ENS.",
+		"who_owns": "Siapa yang memiliki nama ini?",
+		"who_owns_answer": "{name} terselesaikan ke alamat {address}. Pemilik mungkin berbeda dari alamat resolusi.",
+		"how_to_buy": "Bagaimana cara mendaftarkan domain serupa?",
+		"how_to_buy_answer": "Anda dapat mendaftarkan domain {type} melalui registrar resmi. Domain ENS didaftarkan di app.ens.domains.",
+		"ens": {
+			"can_expire": "Apakah nama ENS ini bisa kedaluwarsa?",
+			"can_expire_answer": "Ya, {name} memiliki tanggal kedaluwarsa. Pemilik saat ini harus memperpanjangnya sebelum kedaluwarsa untuk mempertahankan kepemilikan.",
+			"how_to_renew": "Bagaimana cara memperpanjang nama ENS?",
+			"how_to_renew_answer": "Untuk memperpanjang {name}, kunjungi app.ens.domains, hubungkan dompet Anda, dan perpanjang periode pendaftaran dengan membayar biaya perpanjangan.",
+			"how_to_set_records": "Bagaimana cara mengatur rekaman untuk nama ENS saya?",
+			"how_to_set_records_answer": "Kunjungi app.ens.domains, hubungkan dompet yang memiliki {name}, dan Anda dapat mengatur berbagai rekaman termasuk alamat, rekaman teks, dan hash konten.",
+			"what_are_records": "Apa itu rekaman teks ENS?",
+			"what_are_records_answer": "Rekaman teks ENS memungkinkan Anda melampirkan informasi tambahan ke nama Anda, seperti akun media sosial, URL situs web, email, avatar, dan deskripsi."
+		},
+		"entity": {
+			"who_is_owner": "Siapa pemilik domain ini?",
+			"who_is_owner_answer": "{name} terdaftar oleh {entity}. Ini adalah asosiasi terverifikasi berdasarkan catatan publik."
+		}
+	}
+}

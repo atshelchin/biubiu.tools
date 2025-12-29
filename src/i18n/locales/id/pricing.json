@@ -1,0 +1,55 @@
+{
+	"_meta": {
+		"code": "id",
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩"
+	},
+	"title": "Harga Sederhana dan Transparan",
+	"subtitle": "Pilih paket yang paling cocok untuk Anda",
+	"free": {
+		"name": "Gratis",
+		"price": "Rp0",
+		"period": "selamanya",
+		"description": "Sempurna untuk memulai",
+		"features": [
+			"Hingga 10 wallet",
+			"Operasi batch dasar",
+			"Dukungan komunitas",
+			"Kecepatan standar"
+		],
+		"cta": "Mulai"
+	},
+	"pro": {
+		"name": "Pro",
+		"price": "Rp299.000",
+		"period": "bulan",
+		"description": "Untuk pengguna profesional",
+		"features": [
+			"Wallet tanpa batas",
+			"Operasi batch lanjutan",
+			"Dukungan prioritas",
+			"Pemrosesan kecepatan tinggi",
+			"Akses API"
+		],
+		"cta": "Mulai Uji Coba Gratis"
+	},
+	"enterprise": {
+		"name": "Enterprise",
+		"price": "Kustom",
+		"period": "bulan",
+		"description": "Untuk tim dan organisasi",
+		"features": [
+			"Semua dari Pro",
+			"Dukungan khusus",
+			"Integrasi kustom",
+			"Jaminan SLA",
+			"Manajemen tim"
+		],
+		"cta": "Hubungi Penjualan"
+	},
+	"note": "Semua paket termasuk fitur dasar dan keamanan",
+	"custom_plan": "Butuh paket kustom?",
+	"contact_us": "Hubungi kami"
+}

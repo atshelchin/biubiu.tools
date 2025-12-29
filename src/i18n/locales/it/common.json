@@ -1,0 +1,86 @@
+{
+	"_meta": {
+		"code": "it",
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹"
+	},
+	"hero_title": "BiuBiu",
+	"hero_subtitle": "Esplora Web3 in modo semplice e sicuro",
+	"cta_get_started": "Inizia",
+	"cta_learn_more": "Scopri di più",
+	"cta": {
+		"title": "Pronto per iniziare?",
+		"subtitle": "Unisciti a migliaia di utenti che già usano biubiu.tools per semplificare le loro operazioni Web3",
+		"button_text": "Inizia ora - È gratis"
+	},
+	"stats": {
+		"title": "Scelto dagli utenti Web3",
+		"registered_users": "Utenti attivi",
+		"transactions": "Transazioni",
+		"total_volume": "Volume totale",
+		"chains_supported": "Chain supportate",
+		"last_updated": "Statistiche in tempo reale"
+	},
+	"footer": {
+		"privacy": "Privacy",
+		"terms": "Termini"
+	},
+	"helpButton": {
+		"label": "Aiuto e feedback",
+		"getHelp": "Ottieni aiuto",
+		"reportIssue": "Segnala un problema"
+	},
+	"environment_banner": {
+		"community_warning": "Questa è una versione distribuita dalla community, non affiliata con biubiu.tools ufficiale.",
+		"dev_environment": "Ambiente di sviluppo",
+		"official_reminder": "Sei sul sito ufficiale. Verifica sempre il dominio: biubiu.tools"
+	},
+	"loading": "Caricamento...",
+	"continue": "Continua",
+	"back": "Indietro",
+	"next": "Avanti",
+	"previous": "Precedente",
+	"finish": "Fine",
+	"done": "Fatto",
+	"cancel": "Annulla",
+	"optional": "Opzionale",
+	"enabled": "Abilitato",
+	"disabled": "Disabilitato",
+	"chars_left": "caratteri rimanenti",
+	"name": "Nome",
+	"symbol": "Simbolo",
+	"description": "Descrizione",
+	"standard": "Standard",
+	"contract_address": "Indirizzo del contratto",
+	"transaction_hash": "Hash della transazione",
+	"gas_used": "Gas utilizzato",
+	"deployment_cost": "Costo di deployment",
+	"max_supply": "Fornitura massima",
+	"mint_price": "Prezzo di mint",
+	"royalty": "Royalty",
+	"show_more": "Mostra di più",
+	"show_less": "Mostra meno",
+	"back_to_home": "Torna alla home",
+	"faqs": "Domande frequenti",
+	"total_checks": "Controlli totali",
+	"passed": "Superato",
+	"failed": "Fallito",
+	"status": {
+		"coming_soon": "Prossimamente",
+		"alpha": "Alpha",
+		"beta": "Beta",
+		"stable": "Stabile",
+		"new": "Nuovo"
+	},
+	"network_selector": {
+		"no_networks_enabled": "Nessuna rete abilitata",
+		"enable_network_prompt": "Abilita almeno una rete per continuare.",
+		"open_network_settings": "Apri impostazioni di rete",
+		"network_not_found": "Rete non trovata?",
+		"add_custom_network": "Aggiungi rete personalizzata"
+	},
+	"copy_address": "Copia indirizzo",
+	"copied": "Copiato!"
+}

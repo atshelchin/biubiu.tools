@@ -1,0 +1,37 @@
+{
+	"_meta": {
+		"code": "fr",
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷"
+	},
+	"title": "Questions fréquentes",
+	"subtitle": "Tout ce que vous devez savoir sur biubiu.tools",
+	"items": [
+		{
+			"question": "Qu'est-ce que biubiu.tools ?",
+			"answer": "biubiu.tools est une boîte à outils Web3 complète qui fournit des opérations par lots et des fonctionnalités de gestion multi-portefeuilles pour l'écosystème Ethereum."
+		},
+		{
+			"question": "Est-ce sûr à utiliser ?",
+			"answer": "Oui ! Nous ne stockons jamais vos clés privées. Toutes les opérations sont effectuées localement dans votre navigateur en utilisant des protocoles Web3 sécurisés."
+		},
+		{
+			"question": "Quelles chaînes sont supportées ?",
+			"answer": "Nous supportons le mainnet Ethereum et les principales chaînes compatibles EVM, dont Polygon, BSC, Arbitrum et Optimism."
+		},
+		{
+			"question": "Comment fonctionne la collecte de portefeuilles par lots ?",
+			"answer": "Notre outil vous permet de collecter des tokens de plusieurs portefeuilles vers une seule adresse en une seule transaction, économisant temps et frais de gas."
+		},
+		{
+			"question": "Puis-je l'essayer gratuitement ?",
+			"answer": "Absolument ! Notre plan gratuit inclut des fonctionnalités de base avec jusqu'à 10 portefeuilles. Vous pouvez passer à la version supérieure à tout moment pour des fonctionnalités plus avancées."
+		}
+	],
+	"still_questions": "Encore des questions ?",
+	"contact_text": "Nous sommes là pour vous aider. Contactez notre équipe de support à tout moment.",
+	"join_discord": "Rejoindre Discord",
+	"email_support": "Support par email"
+}

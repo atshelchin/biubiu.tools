@@ -1,0 +1,103 @@
+{
+	"_meta": {
+		"code": "id",
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩"
+	},
+	"one-to-many-transfer": {
+		"title": "Transfer Satu ke Banyak",
+		"description": "Kirim token & NFT dari satu dompet ke banyak alamat secara batch",
+		"features": [
+			"Kirim token native (ETH, BNB, MATIC), token ERC20, dan NFT (ERC721, ERC1155)",
+			"Distribusi merata atau jumlah kustom per penerima",
+			"Impor penerima via CSV, tempel, atau input manual"
+		]
+	},
+	"token-balance-scanner": {
+		"title": "Pemeriksa Saldo Dompet",
+		"description": "Filter cepat dompet dengan saldo, identifikasi alamat yang tidak kosong, dan agregasi kepemilikan token di beberapa dompet",
+		"features": [
+			"Pindai hingga 100K alamat",
+			"Filter dompet dengan saldo",
+			"Statistik kepemilikan agregat",
+			"Ekspor ke EXCEL/CSV/JSON"
+		]
+	},
+	"wallet-sweep": {
+		"title": "Pembersihan Dompet",
+		"description": "Transfer saldo dari beberapa dompet ke satu alamat",
+		"features": [
+			"Pembersihan saldo lengkap, tidak ada debu tersisa",
+			"Otomatisasi skala besar, tanpa konfirmasi per transaksi",
+			"Tidak perlu token native di dompet sumber",
+			"Tanpa izin di rantai EVM manapun"
+		]
+	},
+	"contract-deployer": {
+		"title": "Penyebar Kontrak",
+		"description": "Sebarkan kontrak pintar secara deterministik menggunakan proxy CREATE2",
+		"features": [
+			"Penyebaran deterministik di semua rantai",
+			"Alamat kontrak sama di setiap jaringan",
+			"Antarmuka sederhana dan ramah pengembang"
+		]
+	},
+	"contract-events-scanner": {
+		"title": "Pemindai Event Kontrak",
+		"description": "Pindai, analisis, dan ekspor event kontrak pintar dari blockchain",
+		"features": [
+			"Pindai log event historis dari kontrak manapun",
+			"Filter event kustom dan pemilihan rentang blok",
+			"Ekspor data event ke format CSV, JSON"
+		]
+	},
+	"call-master": {
+		"title": "Ahli Pemanggilan",
+		"description": "Jalankan panggilan kontrak pintar dengan fitur lanjutan dan operasi batch.",
+		"features": ["Dukungan Multi-call", "Manajemen ABI", "Pembangun Transaksi"]
+	},
+	"wallet-generator": {
+		"title": "Pabrik Dompet",
+		"description": "Buat beberapa dompet dari mnemonic, xpub, atau teks rahasia dengan dukungan jalur HD",
+		"features": ["Dukungan Jalur HD", "Multi Rantai", "Ekspor ke EXCEL/CSV/JSON"]
+	},
+	"dex-moonshot-trader": {
+		"title": "DEX Moonshot Trader",
+		"description": "Beli dan jual token dari DEXScreener Moonshot dengan antarmuka web yang mudah",
+		"features": ["Beli & Jual Token", "Slippage yang Dapat Disesuaikan", "Dukungan Multi-Rantai"]
+	},
+	"token-deployer": {
+		"title": "Penyebar Token",
+		"description": "Buat dan sebarkan token ERC20 dengan parameter kustom dalam hitungan menit",
+		"features": ["Fitur Lanjutan", "Pajak & Anti-Bot", "Penyebaran Instan"]
+	},
+	"nft-deployer": {
+		"title": "Penyebar NFT",
+		"description": "Sebarkan kontrak pintar NFT dengan standar ERC-721, ERC-721A, dan ERC-1155",
+		"features": [
+			"Mendukung standar ERC-721, ERC-721A, ERC-1155",
+			"Royalti, pasokan, harga mint yang dapat dikonfigurasi",
+			"Fitur lanjutan: dapat dijeda, dapat dibakar, dapat diungkap"
+		]
+	},
+	"chainlist": {
+		"title": "Daftar Rantai",
+		"description": "Cari dan tambahkan jaringan blockchain yang kompatibel dengan EVM ke dompet Anda",
+		"features": [
+			"Cari berdasarkan Chain ID, Nama, Simbol",
+			"Pengujian RPC Real-time",
+			"Tambah ke Dompet Satu Klik"
+		]
+	},
+	"chain-tools": {
+		"title": "Alat Rantai",
+		"description": "Temukan alat Web3 dan DApp berkualitas",
+		"features": [
+			"Jelajahi 600+ alat Web3 terkurasi",
+			"Filter berdasarkan kategori: DeFi, NFT, Analitik, Keamanan",
+			"Cari berdasarkan nama, tag, atau blockchain"
+		]
+	}
+}

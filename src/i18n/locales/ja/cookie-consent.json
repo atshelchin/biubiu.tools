@@ -1,0 +1,39 @@
+{
+	"_meta": {
+		"code": "ja",
+		"name": "日本語",
+		"englishName": "Japanese",
+		"direction": "ltr",
+		"flag": "🇯🇵"
+	},
+	"title": "Cookieの使用について",
+	"description": "基本機能のための必須Cookieと、サービス改善のためのオプションの分析Cookieを使用しています。分析を許可するかどうか選択できます。",
+	"necessary": {
+		"title": "必須",
+		"description": "テーマ設定、セッションデータ、RPC最適化など、基本機能に必要です。無効にできません。"
+	},
+	"functional": {
+		"title": "機能",
+		"description": "必須Cookieに含まれています。"
+	},
+	"analytics": {
+		"title": "分析",
+		"description": "分析Cookieは、匿名の利用統計とリファラル追跡を通じて、訪問者がウェブサイトをどのように使用しているかを理解するのに役立ちます。"
+	},
+	"required": "必須",
+	"accept_all": "すべて許可",
+	"necessary_only": "必須のみ",
+	"save_preferences": "設定を保存",
+	"show_details": "カスタマイズ",
+	"hide_details": "詳細を非表示",
+	"privacy_notice": "詳細については、をご覧ください",
+	"privacy_policy": "プライバシーポリシー",
+	"reminder_title": "分析を有効にしますか？",
+	"reminder_description": "分析Cookieを有効にして、BiuBiu Toolsの改善にご協力ください。データは匿名のままです。",
+	"not_now": "今はしない",
+	"dismiss": "閉じる",
+	"settings_title": "Cookie設定",
+	"settings_description": "Cookieの設定を管理できます。いつでも変更可能です。",
+	"cancel": "キャンセル",
+	"cookie_settings": "Cookie設定"
+}

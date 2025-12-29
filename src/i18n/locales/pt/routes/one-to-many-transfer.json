@@ -1,0 +1,290 @@
+{
+	"_meta": {
+		"code": "pt",
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷"
+	},
+	"title": "Transferência Um para Muitos",
+	"description": "Envie tokens e NFTs de uma carteira para múltiplos endereços em lote",
+	"seo": {
+		"page_title": "Transferência Um para Muitos - Envio em Lote de Tokens e NFTs para Múltiplas Carteiras | BiuBiu Tools",
+		"page_description": "Envie tokens e NFTs de uma carteira para múltiplos endereços em lote. Suporte para ETH, ERC20, ERC721, ERC1155 em múltiplas redes blockchain.",
+		"keywords": "transferência um para muitos, envio em lote, airdrop, transferência de tokens, transferência de NFT, multi-envio, transferência em massa, ERC20, ERC721, ERC1155, distribuição crypto, ferramentas web3",
+		"webapp_name": "Transferência Um para Muitos",
+		"webapp_description": "Envio em lote de tokens e NFTs de uma carteira para múltiplos destinatários em várias redes blockchain",
+		"howto_name": "Como Enviar em Lote Tokens e NFTs para Múltiplas Carteiras",
+		"howto_description": "Guia completo para enviar tokens e NFTs de uma carteira para múltiplos endereços de destinatários",
+		"howto_tool_1": "Carteira Web3 (MetaMask, WalletConnect, etc.)",
+		"howto_tool_2": "Saldo suficiente de tokens e taxas de gas",
+		"step_1_name": "Conectar Sua Carteira",
+		"step_1_text": "Clique no botão \"Conectar Carteira\" e conecte sua carteira Web3 (MetaMask, WalletConnect, etc.) ao aplicativo. Esta carteira será a fonte de tokens para distribuição.",
+		"step_1_description": "Vincule sua carteira Web3 como carteira de origem",
+		"step_2_name": "Verificar Dependências",
+		"step_2_text": "Verifique se os contratos inteligentes necessários (WETH e TokenDistribution) estão implantados na rede selecionada. Esses contratos habilitam a funcionalidade de distribuição em lote.",
+		"step_2_description": "Verificar se os contratos necessários estão implantados",
+		"step_3_name": "Selecionar Token e Quantidade",
+		"step_3_text": "Escolha qual token distribuir (token nativo, ERC20 ou NFT), defina o modo de distribuição (quantidades iguais ou personalizadas por destinatário) e especifique a quantidade por destinatário ou quantidade total.",
+		"step_3_description": "Configurar token e quantidades de distribuição",
+		"step_4_name": "Importar Destinatários",
+		"step_4_text": "Adicione endereços de carteira de destinatários inserindo-os manualmente, fazendo upload de um arquivo CSV ou colando uma lista. Opcionalmente defina quantidades personalizadas para cada destinatário.",
+		"step_4_description": "Adicionar endereços de carteira de destinatários",
+		"step_5_name": "Revisar e Executar",
+		"step_5_text": "Revise o resumo da distribuição incluindo quantidade total, número de destinatários e custos de gas estimados. Confirme e execute a distribuição em lote. Assine cada transação com sua carteira.",
+		"step_5_description": "Executar a distribuição de tokens",
+		"feature_1": "Conectar carteira Web3 (MetaMask, WalletConnect, Coinbase Wallet)",
+		"feature_2": "Suporte a múltiplas redes (Ethereum, Polygon, BSC, Base, Arbitrum, Optimism)",
+		"feature_3": "Enviar tokens nativos (ETH, BNB, MATIC), tokens ERC20 e NFTs (ERC721, ERC1155)",
+		"feature_4": "Distribuição igual ou quantidades personalizadas por destinatário",
+		"feature_5": "Importar destinatários via CSV, colar ou entrada manual"
+	},
+	"faqs": {
+		"what_is_one_to_many": "O que é Transferência Um para Muitos?",
+		"one_to_many_explanation": "A Transferência Um para Muitos permite enviar tokens ou NFTs de uma única carteira para múltiplos endereços de destinatários em lote. É ideal para airdrops, folha de pagamento, distribuição de recompensas e qualquer cenário onde você precisa enviar ativos para muitos endereços de forma eficiente.",
+		"what_tokens_supported": "Quais tipos de tokens são suportados?",
+		"tokens_supported_explanation": "Suportamos tokens nativos (ETH, BNB, MATIC, etc.), tokens ERC20 (USDT, USDC, etc.) e NFTs incluindo os padrões ERC721 e ERC1155.",
+		"what_is_equal_distribution": "O que é o modo de distribuição igual?",
+		"equal_distribution_explanation": "No modo de distribuição igual, você especifica uma quantidade por destinatário e cada endereço recebe a mesma quantidade. O total é calculado automaticamente com base no número de destinatários.",
+		"what_is_custom_amounts": "O que é o modo de quantidades personalizadas?",
+		"custom_amounts_explanation": "No modo de quantidades personalizadas, você pode especificar diferentes quantidades para cada destinatário. Isso é útil quando diferentes endereços devem receber diferentes quantidades.",
+		"how_to_import_recipients": "Como posso importar endereços de destinatários?",
+		"import_recipients_explanation": "Você pode adicionar destinatários por: 1) Entrada manual um por um, 2) Colar uma lista de endereços, ou 3) Fazer upload de um arquivo CSV com endereços e quantidades opcionais.",
+		"what_networks_supported": "Quais redes blockchain são suportadas?",
+		"networks_supported_explanation": "Atualmente suportamos Ethereum Mainnet, Polygon, BSC (Binance Smart Chain), Base, Arbitrum e Optimism. Mais redes serão adicionadas no futuro."
+	},
+	"step2": {
+		"content": {
+			"title": "Verificar Dependências",
+			"description": "Verificar se os contratos necessários estão implantados nesta rede",
+			"checks": {
+				"contract": {
+					"weth_description": "Contrato WETH para modo de execução delegada (converte WETH para ETH para distribuição)",
+					"token_distribution_description": "Contrato TokenDistribution para distribuição em lote de tokens e NFTs para múltiplos destinatários"
+				}
+			}
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "Selecionar Token",
+			"description": "Escolha o tipo de token e especifique qual token distribuir"
+		},
+		"content": {
+			"title": "Selecionar Token para Distribuir",
+			"description": "Escolha o tipo de token e selecione o token específico que deseja enviar para múltiplos destinatários",
+			"token_type": {
+				"title": "Tipo de Token",
+				"native": "Token Nativo",
+				"native_desc": "ETH, BNB, MATIC, etc.",
+				"erc20": "Token ERC20",
+				"erc20_desc": "USDT, USDC, DAI, etc.",
+				"erc721": "NFT ERC721",
+				"erc721_desc": "NFTs individuais (1 por destinatário)",
+				"erc1155": "Multi-Token ERC1155",
+				"erc1155_desc": "NFTs em lote ou tokens semi-fungíveis"
+			},
+			"select_token": {
+				"title": "Selecionar Token",
+				"no_tokens": "Nenhum token disponível para esta rede",
+				"add_custom": "Adicionar Token Personalizado"
+			},
+			"nft_config": {
+				"title": "Configuração NFT",
+				"contract_address": "Endereço do Contrato",
+				"contract_placeholder": "Digite o endereço do contrato NFT (0x...)",
+				"token_ids": "Token IDs",
+				"token_ids_placeholder": "Digite os Token IDs (separados por vírgula para múltiplos)",
+				"token_ids_hint": "Para ERC721: um Token ID por destinatário. Para ERC1155: especifique o Token ID a distribuir.",
+				"load_button": "Carregar Info NFT",
+				"loading": "Carregando informações do NFT...",
+				"collection_name": "Coleção",
+				"total_supply": "Fornecimento Total",
+				"your_balance": "Seu Saldo",
+				"invalid_address": "Formato de endereço de contrato inválido"
+			},
+			"amount_mode": {
+				"title": "Modo de Distribuição",
+				"equal": "Distribuição Igual",
+				"equal_desc": "Mesma quantidade para todos os destinatários",
+				"custom": "Quantidades Personalizadas",
+				"custom_desc": "Definir quantidades individuais por destinatário (no Passo 4)",
+				"random": "Quantidades Aleatórias",
+				"random_desc": "Quantidade aleatória dentro de um intervalo para cada destinatário"
+			},
+			"amount_input": {
+				"title": "Quantidade Por Destinatário",
+				"placeholder": "0.0",
+				"hint": "Esta quantidade será enviada a cada destinatário. O total será calculado com base no número de destinatários."
+			},
+			"custom_mode_info": "Você selecionou o modo de quantidades personalizadas. Você definirá quantidades individuais para cada destinatário no Passo 4.",
+			"random_mode_config": {
+				"min_amount": "Quantidade Mínima",
+				"max_amount": "Quantidade Máxima",
+				"min_placeholder": "0.0",
+				"max_placeholder": "0.0",
+				"hint": "Cada destinatário receberá uma quantidade aleatória entre os valores mín e máx.",
+				"valid_range": "Quantidades aleatórias estarão entre {min} e {max} {symbol}",
+				"error_max_less_than_min": "A quantidade máxima deve ser maior que a quantidade mínima"
+			}
+		},
+		"footer": {
+			"continue": "Continuar para Destinatários",
+			"hint": "Selecione um token e configure as quantidades para continuar"
+		}
+	},
+	"step4": {
+		"sidebar": {
+			"title": "Importar Destinatários",
+			"description": "Adicione endereços de carteira que receberão os tokens"
+		},
+		"content": {
+			"title": "Adicionar Destinatários",
+			"description": "Importe endereços de carteira que receberão tokens desta distribuição",
+			"distributing": "Distribuindo",
+			"method": {
+				"manual": "Entrada Manual",
+				"paste": "Colar Lista",
+				"csv": "Upload CSV"
+			},
+			"manual": {
+				"title": "Adicionar Destinatário Manualmente",
+				"address": "Endereço da Carteira",
+				"token_id": "Token ID",
+				"token_amount": "Quantidade",
+				"amount": "Valor",
+				"label": "Rótulo (opcional)",
+				"label_placeholder": "ex. Alice, Bob",
+				"add_button": "Adicionar Destinatário"
+			},
+			"paste": {
+				"title": "Colar Múltiplos Endereços",
+				"add_button": "Adicionar Todos"
+			},
+			"paste_hint": {
+				"fungible_equal": "Formato: endereço, rótulo (opcional). Um por linha.",
+				"fungible_custom": "Formato: endereço, rótulo (opcional), valor. Um por linha.",
+				"erc721": "Formato: endereço, tokenId, rótulo (opcional). Um por linha.",
+				"erc1155": "Formato: endereço, tokenId, quantidade, rótulo (opcional). Um por linha."
+			},
+			"csv": {
+				"title": "Upload de Arquivo CSV",
+				"description": "Faça upload de um arquivo CSV com endereços de destinatários",
+				"upload_button": "Escolher Arquivo",
+				"hint": "O CSV deve conter coluna de endereço. Opcional: colunas de rótulo, valor/tokenId."
+			},
+			"recipients": {
+				"title": "Destinatários",
+				"clear_all": "Limpar Tudo",
+				"regenerate_random": "Regenerar Quantidades",
+				"col_address": "Endereço",
+				"col_token_id": "Token ID",
+				"col_token_amount": "Qtd",
+				"col_amount": "Valor",
+				"col_label": "Rótulo"
+			},
+			"empty_state": "Nenhum destinatário adicionado ainda. Use o formulário acima para adicionar endereços de destinatários.",
+			"error": {
+				"invalid_address": "Por favor digite um endereço Ethereum válido",
+				"invalid_address_line": "Linha {line}: Formato de endereço inválido",
+				"token_id_required": "Token ID é obrigatório para distribuição de NFT",
+				"invalid_token_id_line": "Linha {line}: Token ID inválido ou ausente"
+			}
+		},
+		"footer": {
+			"continue": "Continuar para Revisão",
+			"hint": "Adicione pelo menos um destinatário para continuar"
+		}
+	},
+	"step5": {
+		"sidebar": {
+			"title": "Confirmar e Executar",
+			"description": "Revise os detalhes da distribuição e execute as transferências"
+		},
+		"mode": {
+			"title": "Modo de Execução",
+			"self": {
+				"title": "Auto-Executar",
+				"description": "Assine e envie cada transação da sua carteira. Melhor para distribuições menores."
+			},
+			"delegated": {
+				"title": "Execução Delegada",
+				"description": "Assine uma vez, deixe qualquer um executar os lotes. Melhor para grandes distribuições com muitos destinatários.",
+				"info": "O modo delegado usa um contrato inteligente para agrupar transferências. Você assina uma autorização, então os lotes podem ser executados por qualquer pessoa (incluindo você)."
+			}
+		},
+		"delegated": {
+			"authorize": "Assinar Autorização",
+			"authorizing": "Assinando...",
+			"execute_batch": "Executar Lote {current}/{total}",
+			"execute_all": "Executar Todos os Lotes",
+			"batch_status": "Status do Lote",
+			"batch_pending": "Pendente",
+			"batch_completed": "Concluído",
+			"batch_failed": "Falhou",
+			"export_session": "Exportar Sessão",
+			"import_session": "Importar Sessão",
+			"session_expired": "Sessão Expirada",
+			"session_info": "ID da Sessão: {id} | Expira: {time}"
+		},
+		"session": {
+			"title": "Sessões de Distribuição",
+			"empty": "Nenhuma sessão salva",
+			"import": "Importar Sessão",
+			"export": "Exportar",
+			"delete": "Excluir",
+			"resume": "Retomar",
+			"batches": "lotes",
+			"expires_in": "Expira em",
+			"expired": "Expirado",
+			"status_pending": "Pendente",
+			"status_partial": "Em Progresso",
+			"status_completed": "Concluído",
+			"status_expired": "Expirado",
+			"import_error": "Falha ao importar sessão. Por favor verifique o formato do arquivo.",
+			"importing": "Importando..."
+		},
+		"content": {
+			"title": "Revisar e Executar Distribuição",
+			"description": "Revise o resumo da distribuição e execute as transferências de tokens",
+			"executor_wallet": "Carteira Executora",
+			"summary_title": "Resumo da Distribuição",
+			"token": "Token",
+			"mode": "Modo",
+			"mode_equal": "Distribuição Igual",
+			"mode_random": "Distribuição Aleatória",
+			"mode_custom": "Quantidades Personalizadas",
+			"recipients": "Destinatários",
+			"total_amount": "Valor Total",
+			"total_nfts": "NFTs Totais",
+			"estimated_gas": "Gas Estimado",
+			"network": "Rede",
+			"preview_title": "Prévia dos Destinatários (primeiros 10)",
+			"more_recipients": "mais destinatários",
+			"progress_title": "Progresso da Execução",
+			"successful": "bem-sucedidos",
+			"failed": "falharam",
+			"pending": "pendentes",
+			"execute": "Executar Distribuição",
+			"stop": "Parar Execução",
+			"resume": "Retomar",
+			"reset": "Reiniciar",
+			"start_new": "Iniciar Nova Distribuição",
+			"completed": "Distribuição Concluída!",
+			"confirm_continue": "Deseja continuar?",
+			"warning_title": "Importante",
+			"warning_message": "Certifique-se de ter saldo suficiente e taxas de gas. Cada destinatário receberá uma transação separada. Revise todos os detalhes cuidadosamente antes de executar.",
+			"errors": {
+				"invalid_config": "Configuração de distribuição inválida. Por favor verifique os passos anteriores.",
+				"connect_wallet": "Por favor conecte sua carteira primeiro",
+				"no_network": "Nenhuma rede selecionada",
+				"no_token": "Nenhum token selecionado",
+				"no_recipients": "Nenhum destinatário adicionado"
+			}
+		},
+		"footer": {
+			"back": "Voltar para Destinatários",
+			"execute": "Executar Distribuição"
+		}
+	}
+}

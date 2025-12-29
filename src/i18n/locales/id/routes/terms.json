@@ -1,0 +1,70 @@
+{
+	"_meta": {
+		"code": "id",
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩"
+	},
+	"page_title": "Ketentuan Layanan",
+	"page_description": "Ketentuan Layanan untuk menggunakan aplikasi Web3 BiuBiu Tools.",
+	"title": "Ketentuan Layanan",
+	"last_updated": "Terakhir diperbarui",
+	"acceptance": {
+		"title": "Penerimaan Ketentuan",
+		"content": "Dengan mengakses dan menggunakan BiuBiu Tools, Anda mengakui bahwa Anda telah membaca, memahami, dan setuju untuk terikat oleh Ketentuan Layanan ini. Jika Anda tidak setuju dengan ketentuan ini, harap jangan gunakan layanan kami."
+	},
+	"description": {
+		"title": "Deskripsi Layanan",
+		"content": "BiuBiu Tools menyediakan alat utilitas Web3 untuk berinteraksi dengan jaringan blockchain, termasuk namun tidak terbatas pada manajemen dompet, operasi token, penerapan kontrak, dan transaksi batch. Alat-alat ini disediakan \"apa adanya\" dan ditujukan untuk pengguna berpengalaman yang memahami teknologi blockchain."
+	},
+	"risks": {
+		"title": "Risiko Blockchain",
+		"intro": "Anda mengakui dan menerima risiko berikut yang terkait dengan teknologi blockchain:",
+		"item1": "Transaksi blockchain tidak dapat dibatalkan. Setelah dikonfirmasi, transaksi tidak dapat dibatalkan atau dikembalikan.",
+		"item2": "Nilai cryptocurrency sangat fluktuatif. Anda mungkin mengalami kerugian yang signifikan.",
+		"item3": "Kontrak pintar mungkin mengandung bug atau kerentanan yang dapat mengakibatkan hilangnya dana.",
+		"item4": "Kemacetan jaringan dapat menunda transaksi atau mengakibatkan biaya yang lebih tinggi dari yang diharapkan.",
+		"item5": "Perubahan peraturan dapat memengaruhi legalitas atau kegunaan cryptocurrency di yurisdiksi Anda."
+	},
+	"no_advice": {
+		"title": "Bukan Nasihat Keuangan",
+		"content": "BiuBiu Tools tidak memberikan nasihat keuangan, investasi, hukum, atau pajak. Semua informasi dan alat yang disediakan hanya untuk tujuan informasi dan utilitas. Anda harus berkonsultasi dengan profesional yang berkualifikasi sebelum membuat keputusan keuangan apa pun. Tindakan apa pun yang Anda ambil berdasarkan informasi dari platform kami adalah risiko Anda sendiri."
+	},
+	"user_responsibility": {
+		"title": "Tanggung Jawab Pengguna",
+		"intro": "Anda bertanggung jawab penuh untuk:",
+		"item1": "Menjaga kunci pribadi, frasa seed, dan kata sandi Anda. Kami tidak menyimpan atau memiliki akses ke informasi ini.",
+		"item2": "Memverifikasi semua detail transaksi sebelum menandatangani atau mengirim transaksi.",
+		"item3": "Memahami implikasi dari setiap tindakan yang Anda lakukan di blockchain.",
+		"item4": "Mematuhi semua hukum dan peraturan yang berlaku di yurisdiksi Anda."
+	},
+	"disclaimer": {
+		"title": "Penafian Jaminan",
+		"content": "BiuBiu Tools disediakan \"APA ADANYA\" dan \"SEBAGAIMANA TERSEDIA\" tanpa jaminan apa pun, baik tersurat maupun tersirat. Karena kompleksitas lingkungan internet, kami tidak dapat menjamin bahwa layanan akan selalu berjalan tanpa gangguan atau sepenuhnya bebas dari kesalahan. Kami tidak memberikan jaminan mengenai akurasi, keandalan, atau kelengkapan informasi yang diberikan."
+	},
+	"limitation": {
+		"title": "Batasan Tanggung Jawab",
+		"content": "Sejauh yang diizinkan oleh hukum, BiuBiu Tools dan pengembangnya tidak akan bertanggung jawab atas kerusakan langsung, tidak langsung, insidental, khusus, konsekuensial, atau hukuman, termasuk namun tidak terbatas pada kehilangan keuntungan, data, atau aset cryptocurrency, yang timbul dari penggunaan atau ketidakmampuan Anda untuk menggunakan layanan kami."
+	},
+	"prohibited": {
+		"title": "Penggunaan yang Dilarang",
+		"intro": "Anda setuju untuk tidak menggunakan BiuBiu Tools untuk:",
+		"item1": "Aktivitas ilegal apa pun, termasuk pencucian uang, penipuan, atau pendanaan terorisme.",
+		"item2": "Menghindari sanksi ekonomi atau kontrol ekspor.",
+		"item3": "Mengeksploitasi kerentanan dalam kontrak pintar atau jaringan blockchain untuk tujuan jahat.",
+		"item4": "Aktivitas apa pun yang dapat mengganggu, mengacaukan operasi layanan normal, atau merugikan kepentingan pengguna lain."
+	},
+	"open_source": {
+		"title": "Sumber Terbuka & Karya Turunan",
+		"content": "BiuBiu Tools adalah proyek sumber terbuka. Anda bebas untuk melihat, fork, memodifikasi, dan menyebarkan kode sumber di bawah lisensi yang berlaku. Namun, BiuBiu Tools dan pengembangnya tidak bertanggung jawab atas karya turunan, penerapan pihak ketiga, atau versi yang dimodifikasi. Masalah apa pun yang timbul dari penerapan tidak resmi adalah tanggung jawab operator penerapan tersebut sepenuhnya. Satu-satunya situs web resmi adalah biubiu.tools."
+	},
+	"modifications": {
+		"title": "Modifikasi Ketentuan",
+		"content": "Kami berhak memodifikasi Ketentuan Layanan ini kapan saja. Perubahan akan berlaku segera setelah diposting. Penggunaan berkelanjutan Anda terhadap BiuBiu Tools setelah perubahan merupakan penerimaan terhadap ketentuan yang dimodifikasi."
+	},
+	"contact": {
+		"title": "Kontak",
+		"content": "Jika Anda memiliki pertanyaan tentang Ketentuan Layanan ini, silakan hubungi kami melalui repositori GitHub atau saluran komunitas kami."
+	}
+}

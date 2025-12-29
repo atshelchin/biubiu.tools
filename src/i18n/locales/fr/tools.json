@@ -1,0 +1,46 @@
+{
+	"_meta": {
+		"code": "fr",
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷"
+	},
+	"section_title": "Outils puissants",
+	"section_subtitle": "Outils professionnels d'opérations par lots Web3 pour améliorer votre efficacité",
+	"badge": "Outils Web3 professionnels",
+	"feedback_card": {
+		"title": "Vos idées comptent !",
+		"description": "Une fonctionnalité vous manque ? Une idée pour améliorer ? Nous construisons ce dont VOUS avez besoin - rejoignez notre communauté et dites-le nous !",
+		"feature_1": "💡 Votre demande de fonctionnalité pourrait être la prochaine",
+		"feature_2": "🚀 Nous livrons vite - des idées à la réalité en quelques jours",
+		"feature_3": "🤝 Ligne directe avec notre équipe de développement"
+	},
+	"try_now": "Essayer maintenant",
+	"launch_app": "Lancer l'application",
+	"notify_me": "Me notifier",
+	"coming_soon": "Bientôt disponible",
+	"available_now": "Disponible maintenant",
+	"join_telegram": "Rejoindre Telegram",
+	"discover_random": "Découvrir un outil au hasard",
+	"you_discovered": "Vous avez découvert !",
+	"try_again": "Réessayer",
+	"actions": {
+		"import_csv": "Importer CSV",
+		"export_results": "Exporter les résultats",
+		"clear_all": "Tout effacer",
+		"share_link": "Partager le lien",
+		"share_tooltip": "Copier le lien partageable",
+		"settings": "Paramètres",
+		"settings_tooltip": "Paramètres réseau"
+	},
+	"notify_modal": {
+		"title": "Recevoir une notification",
+		"description": "Entrez votre email pour être notifié lorsque cet outil sera disponible.",
+		"email_placeholder": "votre@email.com",
+		"subscribe": "S'abonner",
+		"cancel": "Annuler",
+		"success": "Merci ! Nous vous notifierons quand ce sera prêt.",
+		"error": "Veuillez entrer une adresse email valide."
+	}
+}

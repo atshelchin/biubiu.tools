@@ -1,0 +1,290 @@
+{
+	"_meta": {
+		"code": "ja",
+		"name": "日本語",
+		"englishName": "Japanese",
+		"direction": "ltr",
+		"flag": "🇯🇵"
+	},
+	"title": "一対多送金",
+	"description": "1つのウォレットから複数アドレスへトークンとNFTをバッチ送信",
+	"seo": {
+		"page_title": "一対多送金 - 複数ウォレットへのトークン＆NFTバッチ送信 | BiuBiu Tools",
+		"page_description": "1つのウォレットから複数アドレスへトークンとNFTをバッチ送信。複数のブロックチェーンネットワークでETH、ERC20、ERC721、ERC1155をサポート。",
+		"keywords": "一対多送金, バッチ送信, エアドロップ, トークン送金, NFT送金, マルチ送信, 一括送金, ERC20, ERC721, ERC1155, 暗号通貨配布, web3ツール",
+		"webapp_name": "一対多送金",
+		"webapp_description": "複数のブロックチェーンネットワークで1つのウォレットから複数受取人へトークンとNFTをバッチ送信",
+		"howto_name": "複数ウォレットへトークン＆NFTをバッチ送信する方法",
+		"howto_description": "1つのウォレットから複数の受取人アドレスへトークンとNFTを送信する完全ガイド",
+		"howto_tool_1": "Web3ウォレット（MetaMask、WalletConnectなど）",
+		"howto_tool_2": "十分なトークン残高とガス代",
+		"step_1_name": "ウォレットを接続",
+		"step_1_text": "「ウォレット接続」ボタンをクリックし、Web3ウォレット（MetaMask、WalletConnectなど）をアプリケーションに接続します。このウォレットが配布するトークンの送信元になります。",
+		"step_1_description": "Web3ウォレットを送信元ウォレットとしてリンク",
+		"step_2_name": "依存関係を確認",
+		"step_2_text": "選択したネットワークに必要なスマートコントラクト（WETHとTokenDistribution）がデプロイされていることを確認します。これらのコントラクトがバッチ配布機能を有効にします。",
+		"step_2_description": "必要なコントラクトがデプロイされていることを確認",
+		"step_3_name": "トークンと数量を選択",
+		"step_3_text": "配布するトークンの種類（ネイティブトークン、ERC20、またはNFT）を選択し、配布モード（均等配布または受取人ごとのカスタム数量）を設定し、受取人ごとの数量または合計数量を指定します。",
+		"step_3_description": "トークンと配布数量を設定",
+		"step_4_name": "受取人をインポート",
+		"step_4_text": "手動入力、CSVファイルのアップロード、またはリストの貼り付けで受取人のウォレットアドレスを追加します。オプションで各受取人にカスタム数量を設定できます。",
+		"step_4_description": "受取人のウォレットアドレスを追加",
+		"step_5_name": "確認して実行",
+		"step_5_text": "合計数量、受取人数、推定ガス代を含む配布の概要を確認します。確認後、バッチ配布を実行します。ウォレットで各トランザクションに署名します。",
+		"step_5_description": "トークン配布を実行",
+		"feature_1": "Web3ウォレット接続（MetaMask、WalletConnect、Coinbase Wallet）",
+		"feature_2": "複数ネットワーク対応（Ethereum、Polygon、BSC、Base、Arbitrum、Optimism）",
+		"feature_3": "ネイティブトークン（ETH、BNB、MATIC）、ERC20トークン、NFT（ERC721、ERC1155）を送信",
+		"feature_4": "均等配布または受取人ごとのカスタム数量",
+		"feature_5": "CSV、貼り付け、または手動入力で受取人をインポート"
+	},
+	"faqs": {
+		"what_is_one_to_many": "一対多送金とは？",
+		"one_to_many_explanation": "一対多送金では、1つのウォレットから複数の受取人アドレスへトークンやNFTをバッチで送信できます。エアドロップ、給与支払い、報酬配布など、多くのアドレスに効率的にアセットを送信する必要があるシナリオに最適です。",
+		"what_tokens_supported": "どのタイプのトークンがサポートされていますか？",
+		"tokens_supported_explanation": "ネイティブトークン（ETH、BNB、MATICなど）、ERC20トークン（USDT、USDCなど）、およびERC721とERC1155規格を含むNFTをサポートしています。",
+		"what_is_equal_distribution": "均等配布モードとは？",
+		"equal_distribution_explanation": "均等配布モードでは、受取人ごとの数量を指定し、すべてのアドレスが同じ数量を受け取ります。合計は受取人数に基づいて自動計算されます。",
+		"what_is_custom_amounts": "カスタム数量モードとは？",
+		"custom_amounts_explanation": "カスタム数量モードでは、各受取人に異なる数量を指定できます。これは異なるアドレスが異なる数量を受け取る必要がある場合に便利です。",
+		"how_to_import_recipients": "受取人アドレスをインポートするには？",
+		"import_recipients_explanation": "受取人は以下の方法で追加できます：1）1つずつ手動入力、2）アドレスリストを貼り付け、または3）アドレスとオプションの数量を含むCSVファイルをアップロード。",
+		"what_networks_supported": "どのブロックチェーンネットワークがサポートされていますか？",
+		"networks_supported_explanation": "現在、Ethereumメインネット、Polygon、BSC（Binance Smart Chain）、Base、Arbitrum、Optimismをサポートしています。将来的にさらに多くのネットワークが追加される予定です。"
+	},
+	"step2": {
+		"content": {
+			"title": "依存関係を確認",
+			"description": "このネットワークに必要なコントラクトがデプロイされていることを確認",
+			"checks": {
+				"contract": {
+					"weth_description": "委託実行モード用のWETHコントラクト（配布のためにWETHをETHに変換）",
+					"token_distribution_description": "複数受取人へのトークンとNFTのバッチ配布用TokenDistributionコントラクト"
+				}
+			}
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "トークンを選択",
+			"description": "トークンの種類を選択し、配布するトークンを指定"
+		},
+		"content": {
+			"title": "配布するトークンを選択",
+			"description": "トークンの種類を選択し、複数の受取人に送信する特定のトークンを選択",
+			"token_type": {
+				"title": "トークンタイプ",
+				"native": "ネイティブトークン",
+				"native_desc": "ETH、BNB、MATICなど",
+				"erc20": "ERC20トークン",
+				"erc20_desc": "USDT、USDC、DAIなど",
+				"erc721": "ERC721 NFT",
+				"erc721_desc": "個別NFT（受取人ごとに1つ）",
+				"erc1155": "ERC1155マルチトークン",
+				"erc1155_desc": "バッチNFTまたはセミファンジブルトークン"
+			},
+			"select_token": {
+				"title": "トークンを選択",
+				"no_tokens": "このネットワークで利用可能なトークンがありません",
+				"add_custom": "カスタムトークンを追加"
+			},
+			"nft_config": {
+				"title": "NFT設定",
+				"contract_address": "コントラクトアドレス",
+				"contract_placeholder": "NFTコントラクトアドレスを入力（0x...）",
+				"token_ids": "トークンID",
+				"token_ids_placeholder": "トークンIDを入力（複数の場合はカンマ区切り）",
+				"token_ids_hint": "ERC721の場合：受取人ごとに1つのトークンID。ERC1155の場合：配布するトークンIDを指定。",
+				"load_button": "NFT情報を読み込み",
+				"loading": "NFT情報を読み込み中...",
+				"collection_name": "コレクション",
+				"total_supply": "総供給量",
+				"your_balance": "あなたの残高",
+				"invalid_address": "無効なコントラクトアドレス形式"
+			},
+			"amount_mode": {
+				"title": "配布モード",
+				"equal": "均等配布",
+				"equal_desc": "すべての受取人に同じ数量",
+				"custom": "カスタム数量",
+				"custom_desc": "受取人ごとに個別の数量を設定（ステップ4で）",
+				"random": "ランダム数量",
+				"random_desc": "各受取人に範囲内でランダムな数量"
+			},
+			"amount_input": {
+				"title": "受取人ごとの数量",
+				"placeholder": "0.0",
+				"hint": "この数量が各受取人に送信されます。合計は受取人数に基づいて計算されます。"
+			},
+			"custom_mode_info": "カスタム数量モードを選択しました。ステップ4で各受取人に個別の数量を設定します。",
+			"random_mode_config": {
+				"min_amount": "最小数量",
+				"max_amount": "最大数量",
+				"min_placeholder": "0.0",
+				"max_placeholder": "0.0",
+				"hint": "各受取人は最小値と最大値の間でランダムな数量を受け取ります。",
+				"valid_range": "ランダム数量は{min}から{max} {symbol}の間になります",
+				"error_max_less_than_min": "最大数量は最小数量より大きくなければなりません"
+			}
+		},
+		"footer": {
+			"continue": "受取人設定へ進む",
+			"hint": "トークンを選択し、数量を設定して続行"
+		}
+	},
+	"step4": {
+		"sidebar": {
+			"title": "受取人をインポート",
+			"description": "トークンを受け取るウォレットアドレスを追加"
+		},
+		"content": {
+			"title": "受取人を追加",
+			"description": "この配布からトークンを受け取るウォレットアドレスをインポート",
+			"distributing": "配布中",
+			"method": {
+				"manual": "手動入力",
+				"paste": "リストを貼り付け",
+				"csv": "CSVアップロード"
+			},
+			"manual": {
+				"title": "手動で受取人を追加",
+				"address": "ウォレットアドレス",
+				"token_id": "トークンID",
+				"token_amount": "数量",
+				"amount": "金額",
+				"label": "ラベル（オプション）",
+				"label_placeholder": "例：Alice, Bob",
+				"add_button": "受取人を追加"
+			},
+			"paste": {
+				"title": "複数アドレスを貼り付け",
+				"add_button": "すべて追加"
+			},
+			"paste_hint": {
+				"fungible_equal": "形式：アドレス, ラベル（オプション）。1行に1つ。",
+				"fungible_custom": "形式：アドレス, ラベル（オプション）, 金額。1行に1つ。",
+				"erc721": "形式：アドレス, トークンID, ラベル（オプション）。1行に1つ。",
+				"erc1155": "形式：アドレス, トークンID, 数量, ラベル（オプション）。1行に1つ。"
+			},
+			"csv": {
+				"title": "CSVファイルをアップロード",
+				"description": "受取人アドレスを含むCSVファイルをアップロード",
+				"upload_button": "ファイルを選択",
+				"hint": "CSVにはアドレス列が必要です。オプション：ラベル、金額/トークンID列。"
+			},
+			"recipients": {
+				"title": "受取人",
+				"clear_all": "すべてクリア",
+				"regenerate_random": "数量を再生成",
+				"col_address": "アドレス",
+				"col_token_id": "トークンID",
+				"col_token_amount": "数量",
+				"col_amount": "金額",
+				"col_label": "ラベル"
+			},
+			"empty_state": "まだ受取人が追加されていません。上のフォームを使用して受取人アドレスを追加してください。",
+			"error": {
+				"invalid_address": "有効なEthereumアドレスを入力してください",
+				"invalid_address_line": "{line}行目：無効なアドレス形式",
+				"token_id_required": "NFT配布にはトークンIDが必要です",
+				"invalid_token_id_line": "{line}行目：無効または欠落したトークンID"
+			}
+		},
+		"footer": {
+			"continue": "確認へ進む",
+			"hint": "続行するには少なくとも1人の受取人を追加してください"
+		}
+	},
+	"step5": {
+		"sidebar": {
+			"title": "確認して実行",
+			"description": "配布の詳細を確認し、送金を実行"
+		},
+		"mode": {
+			"title": "実行モード",
+			"self": {
+				"title": "自己実行",
+				"description": "ウォレットから各トランザクションに署名して送信。小規模な配布に最適。"
+			},
+			"delegated": {
+				"title": "委託実行",
+				"description": "一度署名すれば、誰でもバッチを実行可能。多数の受取人がいる大規模配布に最適。",
+				"info": "委託モードはスマートコントラクトを使用して送金をバッチ処理します。承認に署名すると、バッチは誰でも（あなた自身を含む）実行できます。"
+			}
+		},
+		"delegated": {
+			"authorize": "承認に署名",
+			"authorizing": "署名中...",
+			"execute_batch": "バッチを実行 {current}/{total}",
+			"execute_all": "すべてのバッチを実行",
+			"batch_status": "バッチステータス",
+			"batch_pending": "保留中",
+			"batch_completed": "完了",
+			"batch_failed": "失敗",
+			"export_session": "セッションをエクスポート",
+			"import_session": "セッションをインポート",
+			"session_expired": "セッション期限切れ",
+			"session_info": "セッションID：{id} | 有効期限：{time}"
+		},
+		"session": {
+			"title": "配布セッション",
+			"empty": "保存されたセッションがありません",
+			"import": "セッションをインポート",
+			"export": "エクスポート",
+			"delete": "削除",
+			"resume": "再開",
+			"batches": "バッチ",
+			"expires_in": "有効期限",
+			"expired": "期限切れ",
+			"status_pending": "保留中",
+			"status_partial": "進行中",
+			"status_completed": "完了",
+			"status_expired": "期限切れ",
+			"import_error": "セッションのインポートに失敗しました。ファイル形式を確認してください。",
+			"importing": "インポート中..."
+		},
+		"content": {
+			"title": "配布を確認して実行",
+			"description": "配布の概要を確認し、トークン送金を実行",
+			"executor_wallet": "実行ウォレット",
+			"summary_title": "配布の概要",
+			"token": "トークン",
+			"mode": "モード",
+			"mode_equal": "均等配布",
+			"mode_random": "ランダム配布",
+			"mode_custom": "カスタム数量",
+			"recipients": "受取人",
+			"total_amount": "合計金額",
+			"total_nfts": "NFT合計",
+			"estimated_gas": "推定ガス",
+			"network": "ネットワーク",
+			"preview_title": "受取人プレビュー（最初の10件）",
+			"more_recipients": "人の追加受取人",
+			"progress_title": "実行進捗",
+			"successful": "成功",
+			"failed": "失敗",
+			"pending": "保留中",
+			"execute": "配布を実行",
+			"stop": "実行を停止",
+			"resume": "再開",
+			"reset": "リセット",
+			"start_new": "新しい配布を開始",
+			"completed": "配布完了！",
+			"confirm_continue": "続行しますか？",
+			"warning_title": "重要",
+			"warning_message": "十分な残高とガス代があることを確認してください。各受取人は個別のトランザクションを受け取ります。実行前にすべての詳細を注意深く確認してください。",
+			"errors": {
+				"invalid_config": "配布設定が無効です。前のステップを確認してください。",
+				"connect_wallet": "まずウォレットを接続してください",
+				"no_network": "ネットワークが選択されていません",
+				"no_token": "トークンが選択されていません",
+				"no_recipients": "受取人が追加されていません"
+			}
+		},
+		"footer": {
+			"back": "受取人に戻る",
+			"execute": "配布を実行"
+		}
+	}
+}

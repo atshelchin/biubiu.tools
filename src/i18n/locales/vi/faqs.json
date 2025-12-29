@@ -1,0 +1,37 @@
+{
+	"_meta": {
+		"code": "vi",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳"
+	},
+	"title": "Câu hỏi thường gặp",
+	"subtitle": "Tất cả những gì bạn cần biết về biubiu.tools",
+	"items": [
+		{
+			"question": "biubiu.tools là gì?",
+			"answer": "biubiu.tools là bộ công cụ Web3 toàn diện cung cấp các thao tác hàng loạt và tính năng quản lý đa ví cho hệ sinh thái Ethereum."
+		},
+		{
+			"question": "Sử dụng có an toàn không?",
+			"answer": "Có! Chúng tôi không bao giờ lưu trữ khóa riêng của bạn. Tất cả các thao tác được thực hiện cục bộ trong trình duyệt của bạn bằng các giao thức Web3 an toàn."
+		},
+		{
+			"question": "Những chuỗi nào được hỗ trợ?",
+			"answer": "Chúng tôi hỗ trợ mạng chính Ethereum và các chuỗi tương thích EVM chính bao gồm Polygon, BSC, Arbitrum và Optimism."
+		},
+		{
+			"question": "Thu thập ví hàng loạt hoạt động như thế nào?",
+			"answer": "Công cụ của chúng tôi cho phép bạn thu thập token từ nhiều ví vào một địa chỉ duy nhất trong một giao dịch, tiết kiệm thời gian và phí gas."
+		},
+		{
+			"question": "Tôi có thể dùng thử miễn phí không?",
+			"answer": "Hoàn toàn có thể! Gói miễn phí của chúng tôi bao gồm các tính năng cơ bản với tối đa 10 ví. Bạn có thể nâng cấp bất cứ lúc nào để có thêm tính năng nâng cao."
+		}
+	],
+	"still_questions": "Vẫn còn thắc mắc?",
+	"contact_text": "Chúng tôi luôn sẵn sàng giúp đỡ. Liên hệ đội hỗ trợ bất cứ lúc nào.",
+	"join_discord": "Tham gia Discord",
+	"email_support": "Hỗ trợ qua Email"
+}

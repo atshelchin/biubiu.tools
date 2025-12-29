@@ -1,0 +1,55 @@
+{
+	"_meta": {
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷",
+		"code": "pt"
+	},
+	"title": "Preços Simples e Transparentes",
+	"subtitle": "Escolha o plano que funciona melhor para você",
+	"free": {
+		"name": "Grátis",
+		"price": "$0",
+		"period": "para sempre",
+		"description": "Perfeito para começar",
+		"features": [
+			"Até 10 carteiras",
+			"Operações básicas em lote",
+			"Suporte da comunidade",
+			"Velocidade padrão"
+		],
+		"cta": "Começar"
+	},
+	"pro": {
+		"name": "Pro",
+		"price": "$19",
+		"period": "mês",
+		"description": "Para usuários avançados",
+		"features": [
+			"Carteiras ilimitadas",
+			"Operações avançadas em lote",
+			"Suporte prioritário",
+			"Processamento de alta velocidade",
+			"Acesso à API"
+		],
+		"cta": "Iniciar Teste Grátis"
+	},
+	"enterprise": {
+		"name": "Empresarial",
+		"price": "Personalizado",
+		"period": "mês",
+		"description": "Para equipes e organizações",
+		"features": [
+			"Tudo do Pro",
+			"Suporte dedicado",
+			"Integrações personalizadas",
+			"Garantia de SLA",
+			"Gerenciamento de equipe"
+		],
+		"cta": "Contatar Vendas"
+	},
+	"note": "Todos os planos incluem recursos básicos e segurança",
+	"custom_plan": "Precisa de um plano personalizado?",
+	"contact_us": "Entre em contato"
+}

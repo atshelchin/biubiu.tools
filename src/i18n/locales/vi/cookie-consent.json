@@ -1,0 +1,39 @@
+{
+	"_meta": {
+		"code": "vi",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳"
+	},
+	"title": "Chúng tôi sử dụng Cookie",
+	"description": "Chúng tôi sử dụng cookie cần thiết cho chức năng cơ bản và cookie phân tích tùy chọn để cải thiện dịch vụ. Bạn có thể chọn cho phép phân tích hay không.",
+	"necessary": {
+		"title": "Cần thiết",
+		"description": "Bắt buộc cho chức năng cơ bản bao gồm tùy chọn giao diện, dữ liệu phiên và tối ưu hóa RPC. Không thể tắt."
+	},
+	"functional": {
+		"title": "Chức năng",
+		"description": "Bao gồm trong cookie cần thiết."
+	},
+	"analytics": {
+		"title": "Phân tích",
+		"description": "Cookie phân tích giúp chúng tôi hiểu cách khách truy cập sử dụng trang web thông qua thống kê ẩn danh và theo dõi giới thiệu."
+	},
+	"required": "Bắt buộc",
+	"accept_all": "Chấp nhận tất cả",
+	"necessary_only": "Chỉ cần thiết",
+	"save_preferences": "Lưu tùy chọn",
+	"show_details": "Tùy chỉnh",
+	"hide_details": "Ẩn chi tiết",
+	"privacy_notice": "Để biết thêm thông tin, xem",
+	"privacy_policy": "Chính sách bảo mật",
+	"reminder_title": "Bật phân tích?",
+	"reminder_description": "Giúp chúng tôi cải thiện BiuBiu Tools bằng cách bật cookie phân tích. Dữ liệu của bạn vẫn ẩn danh.",
+	"not_now": "Để sau",
+	"dismiss": "Đóng",
+	"settings_title": "Cài đặt Cookie",
+	"settings_description": "Quản lý tùy chọn cookie của bạn. Bạn có thể thay đổi cài đặt này bất cứ lúc nào.",
+	"cancel": "Hủy",
+	"cookie_settings": "Cài đặt Cookie"
+}

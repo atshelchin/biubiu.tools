@@ -1,0 +1,39 @@
+{
+	"_meta": {
+		"code": "tr",
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷"
+	},
+	"title": "Çerez Kullanıyoruz",
+	"description": "Temel işlevsellik için gerekli çerezler ve hizmetlerimizi geliştirmek için isteğe bağlı analiz çerezleri kullanıyoruz. Analiz çerezlerine izin verip vermemeyi seçebilirsiniz.",
+	"necessary": {
+		"title": "Gerekli",
+		"description": "Tema tercihleri, oturum verileri ve RPC optimizasyonu dahil temel işlevsellik için gereklidir. Devre dışı bırakılamaz."
+	},
+	"functional": {
+		"title": "Fonksiyonel",
+		"description": "Gerekli çerezlere dahildir."
+	},
+	"analytics": {
+		"title": "Analiz",
+		"description": "Analiz çerezleri, anonim kullanım istatistikleri ve yönlendirme takibi aracılığıyla ziyaretçilerin web sitemizi nasıl kullandığını anlamamıza yardımcı olur."
+	},
+	"required": "Gerekli",
+	"accept_all": "Tümünü Kabul Et",
+	"necessary_only": "Sadece Gerekli Olanlar",
+	"save_preferences": "Tercihleri Kaydet",
+	"show_details": "Özelleştir",
+	"hide_details": "Detayları Gizle",
+	"privacy_notice": "Daha fazla bilgi için bakınız",
+	"privacy_policy": "Gizlilik Politikası",
+	"reminder_title": "Analiz Etkinleştirilsin mi?",
+	"reminder_description": "Analiz çerezlerini etkinleştirerek BiuBiu Tools'u geliştirmemize yardımcı olun. Verileriniz anonim kalır.",
+	"not_now": "Şimdi Değil",
+	"dismiss": "Kapat",
+	"settings_title": "Çerez Ayarları",
+	"settings_description": "Çerez tercihlerinizi yönetin. Bu ayarları istediğiniz zaman değiştirebilirsiniz.",
+	"cancel": "İptal",
+	"cookie_settings": "Çerez Ayarları"
+}

@@ -1,0 +1,63 @@
+{
+	"_meta": {
+		"code": "pt",
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷"
+	},
+	"owner": "Proprietário",
+	"resolved_address": "Endereço resolvido",
+	"view_address_details": "Ver detalhes do endereço",
+	"not_resolved": "Este nome não está atualmente resolvido para nenhum endereço",
+	"socials": "Links sociais",
+	"view_on": "Ver em {platform}",
+	"view_on_etherscan": "Ver no Etherscan",
+	"registration_info": "Informações de registro",
+	"registration_status": "Status",
+	"registered_at": "Registrado",
+	"expires_at": "Expira",
+	"days_remaining": "{days} dias restantes",
+	"expired": "Expirado",
+	"expired_ago": "Expirou há {days} dias",
+	"status": {
+		"registered": "Registrado",
+		"available": "Disponível",
+		"grace-period": "Período de carência",
+		"premium": "Premium",
+		"unknown": "Desconhecido"
+	},
+	"ens_records": "Registros ENS",
+	"location": "Localização",
+	"keywords": "Palavras-chave",
+	"social_presence": "Presença nas redes sociais",
+	"seo": {
+		"suffix": "Explore detalhes do nome ENS, endereço resolvido e informações do proprietário.",
+		"detail_description": "{name} é um domínio {type}. Resolve para: {address}. Encontre proprietário, registros e informações relacionadas."
+	},
+	"faq": {
+		"title": "Perguntas frequentes",
+		"what_is": "O que é {name}?",
+		"what_is_answer": "{name} é um nome de domínio {type} que fornece um identificador legível para endereços de blockchain.",
+		"how_to_use": "Como uso este nome?",
+		"how_to_use_answer": "Você pode enviar criptomoedas para {name} em vez de usar o longo endereço hexadecimal. A maioria das carteiras e dApps suporta nomes ENS.",
+		"who_owns": "Quem é o proprietário deste nome?",
+		"who_owns_answer": "{name} resolve para o endereço {address}. O proprietário pode ser diferente do endereço de resolução.",
+		"how_to_buy": "Como posso registrar um domínio similar?",
+		"how_to_buy_answer": "Você pode registrar domínios {type} através do registrador oficial. Domínios ENS são registrados em app.ens.domains.",
+		"ens": {
+			"can_expire": "Este nome ENS pode expirar?",
+			"can_expire_answer": "Sim, {name} tem uma data de expiração. O proprietário atual deve renová-lo antes de expirar para manter a propriedade.",
+			"how_to_renew": "Como renovo um nome ENS?",
+			"how_to_renew_answer": "Para renovar {name}, visite app.ens.domains, conecte sua carteira e estenda o período de registro pagando a taxa de renovação.",
+			"how_to_set_records": "Como configuro registros para meu nome ENS?",
+			"how_to_set_records_answer": "Visite app.ens.domains, conecte a carteira proprietária de {name}, e você poderá configurar vários registros incluindo endereços, registros de texto e hashes de conteúdo.",
+			"what_are_records": "O que são registros de texto ENS?",
+			"what_are_records_answer": "Os registros de texto ENS permitem anexar informações adicionais ao seu nome, como contas de redes sociais, URLs de sites, email, avatar e descrição."
+		},
+		"entity": {
+			"who_is_owner": "Quem é o proprietário deste domínio?",
+			"who_is_owner_answer": "{name} é registrado por {entity}. Esta é uma associação verificada baseada em registros públicos."
+		}
+	}
+}

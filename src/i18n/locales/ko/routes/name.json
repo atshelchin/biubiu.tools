@@ -1,0 +1,63 @@
+{
+	"_meta": {
+		"code": "ko",
+		"name": "한국어",
+		"englishName": "Korean",
+		"direction": "ltr",
+		"flag": "🇰🇷"
+	},
+	"owner": "소유자",
+	"resolved_address": "연결된 주소",
+	"view_address_details": "주소 상세 보기",
+	"not_resolved": "이 이름은 현재 어떤 주소에도 연결되어 있지 않습니다",
+	"socials": "소셜 링크",
+	"view_on": "{platform}에서 보기",
+	"view_on_etherscan": "Etherscan에서 보기",
+	"registration_info": "등록 정보",
+	"registration_status": "상태",
+	"registered_at": "등록일",
+	"expires_at": "만료일",
+	"days_remaining": "{days}일 남음",
+	"expired": "만료됨",
+	"expired_ago": "{days}일 전 만료",
+	"status": {
+		"registered": "등록됨",
+		"available": "등록 가능",
+		"grace-period": "유예 기간",
+		"premium": "프리미엄",
+		"unknown": "알 수 없음"
+	},
+	"ens_records": "ENS 레코드",
+	"location": "위치",
+	"keywords": "키워드",
+	"social_presence": "소셜 미디어 연동",
+	"seo": {
+		"suffix": "ENS 이름 상세 정보, 연결 주소, 소유자 정보를 확인하세요.",
+		"detail_description": "{name}은(는) {type} 도메인입니다. 연결 주소: {address}. 소유자, 레코드, 관련 정보를 확인하세요."
+	},
+	"faq": {
+		"title": "자주 묻는 질문",
+		"what_is": "{name}이(가) 무엇인가요?",
+		"what_is_answer": "{name}은(는) 블록체인 주소에 사람이 읽을 수 있는 식별자를 제공하는 {type} 도메인 이름입니다.",
+		"how_to_use": "이 이름은 어떻게 사용하나요?",
+		"how_to_use_answer": "긴 16진수 주소 대신 {name}으로 암호화폐를 보낼 수 있습니다. 대부분의 지갑과 dApp은 ENS 이름을 지원합니다.",
+		"who_owns": "이 이름의 소유자는 누구인가요?",
+		"who_owns_answer": "{name}은(는) 주소 {address}로 연결됩니다. 소유자는 연결 주소와 다를 수 있습니다.",
+		"how_to_buy": "비슷한 도메인을 등록하려면 어떻게 하나요?",
+		"how_to_buy_answer": "공식 등록기관을 통해 {type} 도메인을 등록할 수 있습니다. ENS 도메인은 app.ens.domains에서 등록됩니다.",
+		"ens": {
+			"can_expire": "이 ENS 이름이 만료될 수 있나요?",
+			"can_expire_answer": "네, {name}에는 만료 날짜가 있습니다. 현재 소유자는 소유권을 유지하려면 만료 전에 갱신해야 합니다.",
+			"how_to_renew": "ENS 이름을 갱신하려면 어떻게 하나요?",
+			"how_to_renew_answer": "{name}을(를) 갱신하려면 app.ens.domains를 방문하고, 지갑을 연결하고, 갱신 수수료를 지불하여 등록 기간을 연장하세요.",
+			"how_to_set_records": "ENS 이름에 레코드를 설정하려면 어떻게 하나요?",
+			"how_to_set_records_answer": "app.ens.domains를 방문하고 {name}을(를) 소유한 지갑을 연결하면 주소, 텍스트 레코드, 콘텐츠 해시 등 다양한 레코드를 설정할 수 있습니다.",
+			"what_are_records": "ENS 텍스트 레코드란 무엇인가요?",
+			"what_are_records_answer": "ENS 텍스트 레코드를 사용하면 소셜 미디어 계정, 웹사이트 URL, 이메일, 아바타, 설명 등의 추가 정보를 이름에 첨부할 수 있습니다."
+		},
+		"entity": {
+			"who_is_owner": "이 도메인의 소유자는 누구인가요?",
+			"who_is_owner_answer": "{name}은(는) {entity}에 의해 등록되었습니다. 이는 공개 기록을 기반으로 한 검증된 연결입니다."
+		}
+	}
+}

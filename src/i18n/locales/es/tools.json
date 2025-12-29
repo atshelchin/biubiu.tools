@@ -1,0 +1,46 @@
+{
+	"_meta": {
+		"code": "es",
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸"
+	},
+	"section_title": "Herramientas potentes",
+	"section_subtitle": "Herramientas profesionales de operaciones por lotes Web3 para mejorar tu eficiencia",
+	"badge": "Herramientas Web3 profesionales",
+	"feedback_card": {
+		"title": "¡Tu opinión importa!",
+		"description": "¿Te falta alguna función que necesitas? ¿Tienes una idea para mejorarlo? ¡Construimos lo que TÚ necesitas - únete a nuestra comunidad y cuéntanos!",
+		"feature_1": "💡 Tu solicitud de función podría ser la próxima",
+		"feature_2": "🚀 Entregamos rápido - de idea a realidad en días",
+		"feature_3": "🤝 Línea directa con nuestro equipo de desarrollo"
+	},
+	"try_now": "Probar ahora",
+	"launch_app": "Lanzar app",
+	"notify_me": "Notificarme",
+	"coming_soon": "Próximamente",
+	"available_now": "Disponible ahora",
+	"join_telegram": "Unirse a Telegram",
+	"discover_random": "Descubre una herramienta aleatoria",
+	"you_discovered": "¡Descubriste!",
+	"try_again": "Intentar de nuevo",
+	"actions": {
+		"import_csv": "Importar CSV",
+		"export_results": "Exportar resultados",
+		"clear_all": "Limpiar todo",
+		"share_link": "Compartir enlace",
+		"share_tooltip": "Copiar enlace compartible",
+		"settings": "Configuración",
+		"settings_tooltip": "Configuración de red"
+	},
+	"notify_modal": {
+		"title": "Recibir notificación",
+		"description": "Ingresa tu email para recibir una notificación cuando esta herramienta esté disponible.",
+		"email_placeholder": "tu@email.com",
+		"subscribe": "Suscribirse",
+		"cancel": "Cancelar",
+		"success": "¡Gracias! Te notificaremos cuando esté listo.",
+		"error": "Por favor ingresa una dirección de email válida."
+	}
+}

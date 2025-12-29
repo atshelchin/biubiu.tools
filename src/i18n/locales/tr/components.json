@@ -1,0 +1,160 @@
+{
+	"_meta": {
+		"code": "tr",
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷"
+	},
+	"address_text_import": {
+		"placeholder": "Cüzdan adreslerini buraya yapıştırın (her satıra bir tane)\n0x1234...\n0x5678...\n0xabcd...",
+		"hint": "Her satıra bir adres girin",
+		"import_button": "Adresleri içe aktar ({count})",
+		"importing": "İçe aktarılıyor... {progress}%",
+		"column_label": "Adres"
+	},
+	"xpub_import_form": {
+		"placeholder": "Genişletilmiş genel anahtarınızı girin (xpub, ypub veya zpub)...",
+		"hint": "xpub, özel anahtarları açığa çıkarmadan adres türetmeye olanak tanır",
+		"derivation_path": "Türetme aralığı",
+		"derive_button": "Adresleri türet",
+		"deriving": "Türetiliyor... {progress}%"
+	},
+	"gas_funding": {
+		"title": "Gas yükle",
+		"target_wallet": "Hedef cüzdan",
+		"estimated_gas": "Tahmini gas",
+		"suggested_amount": "Önerilen miktar",
+		"send_amount": "Gönderilecek miktar",
+		"amount_placeholder": "Miktar girin",
+		"tip": "İpucu: Yeterli fon sağlamak için önerilen miktar (2x tahmini) önceden doldurulmuştur",
+		"security_notice": "💰 Geçici cüzdana gönderilen fonlar özel anahtar kullanılarak çekilebilir - fonlarınız güvende",
+		"btn_send": "Gönder",
+		"sending": "Gönderiliyor...",
+		"cancel": "İptal"
+	},
+	"file_upload": {
+		"title": "Dosya yükle",
+		"drop_file": "Dosyayı buraya sürükleyip bırakın veya yüklemek için tıklayın",
+		"supported_formats": "Desteklenen formatlar: TXT, CSV, XLSX, XLS",
+		"choose_file": "Dosya seç",
+		"remove_file": "Dosyayı kaldır",
+		"processing": "İşleniyor...",
+		"mode_text": "Metin modu",
+		"mode_table": "Tablo modu",
+		"preview_title": "Dosya önizlemesi",
+		"select_columns_hint": "Lütfen {count} sütun seçin (sütun sırasını işaretlemek için başlık düğmelerine tıklayın)",
+		"select_columns_hint_click": "Lütfen {count} sütun seçin (damgalamak için sütun başlıklarına tıklayın, döngü için tekrar tıklayın)",
+		"select_single_column_hint": "💡 [{label}] sütunu olarak işaretlemek için bir sütun başlığına tıklayın",
+		"click_to_select": "Bu sütunu [{label}] olarak seçmek için tıklayın",
+		"click_to_deselect": "Seçimi kaldırmak için tekrar tıklayın",
+		"click_to_change": "Bu sütuna geçmek için tıklayın",
+		"click_to_cycle": "Sonraki konuma döngü yapmak için tekrar tıklayın",
+		"generated_column": "Sütun {index}",
+		"column": "Sütun",
+		"showing_first_rows": "İlk {count} satır gösteriliyor",
+		"cancel": "İptal",
+		"confirm": "Onayla",
+		"error_unsupported_format": "Desteklenmeyen dosya formatı",
+		"error_empty_file": "Dosya boş",
+		"error_incomplete_selection": "Lütfen sütun seçimini tamamlayın",
+		"error_all_labels_assigned": "Tüm etiketler atandı. Lütfen önce başka bir sütundan bir etiketi kaldırın"
+	},
+	"quick_rpc_manager": {
+		"title": "Hızlı RPC yönetimi",
+		"network": "Mevcut ağ",
+		"add_new": "Yeni RPC ekle",
+		"placeholder": "https://ornek.com/rpc",
+		"add_button": "Ekle",
+		"current_rpcs": "Mevcut RPC listesi",
+		"primary": "Birincil",
+		"no_rpcs": "RPC uç noktası yok",
+		"invalid_url": "Geçersiz URL, http:// veya https:// ile başlamalı",
+		"duplicate_url": "Bu RPC uç noktası zaten mevcut",
+		"at_least_one": "En az bir RPC uç noktası gerekli",
+		"hint": "Birden fazla RPC uç noktası eklemek, biri hız sınırına ulaştığında otomatik geçiş yaparak tarama başarı oranını artırır.",
+		"recommend_prefix": "Kullanılabilir RPC uç noktalarını buradan bulun:",
+		"recommend_suffix": "",
+		"cancel": "İptal",
+		"save": "Kaydet ve taramaya devam et",
+		"url_format_hint": "http:// veya https:// ile başlayan RPC URL'si girin",
+		"http_warning": "http:// (güvensiz) kullanmak tarayıcılar tarafından engellenebilir. Chrome'da izin vermek için: Adres çubuğundaki simgeye tıklayın → Site ayarları → Güvensiz içerik → İzin ver"
+	},
+	"address_path_selector": {
+		"sequential": {
+			"label": "Sıralı",
+			"description": "0, 1, 2, 3..."
+		},
+		"date": {
+			"label": "Tarih tabanlı",
+			"description": "20240101, 20240102...",
+			"presets": {
+				"1_year": "Son 1 yıl",
+				"10_years": "Son 10 yıl",
+				"100_years": "Son 100 yıl"
+			}
+		},
+		"quick_select": "Hızlı seçim",
+		"start": "Başlangıç",
+		"end": "Bitiş",
+		"to": "-",
+		"from_year": "Başlangıç yılı",
+		"to_year": "Bitiş yılı",
+		"format": "Format",
+		"example": "Örnek",
+		"will_generate": "Üretilecek",
+		"estimated_addresses": "Tahmini adres sayısı",
+		"addresses": "adres",
+		"limited_to": "Maksimum {max}",
+		"advanced_settings": "Gelişmiş ayarlar",
+		"switch_to_advanced": "Gelişmiş ayarlara geç",
+		"switch_to_quick": "Hızlı seçime geç"
+	},
+	"wallet_list": {
+		"empty_message": "Henüz cüzdan eklenmedi",
+		"remove_wallet": "Cüzdanı kaldır",
+		"showing": "{total} içinden {start}-{end} gösteriliyor",
+		"previous_page": "Önceki sayfa",
+		"next_page": "Sonraki sayfa"
+	},
+	"token_card": {
+		"native": "Yerel",
+		"erc20": "ERC20",
+		"decimals_label": "Ondalık",
+		"decimals_unit": "ondalık",
+		"view_on_explorer": "Blok gezgininde görüntüle",
+		"remove_custom_token": "Özel token'ı kaldır",
+		"remove_dialog_title": "Özel token'ı kaldır",
+		"remove_dialog_message": "{symbol} ({name}) token'ını kaldırmak istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+		"remove_button": "Token'ı kaldır"
+	},
+	"token_selector": {
+		"empty_message": "Kullanılabilir token yok",
+		"select_all": "Tümünü seç",
+		"deselect_all": "Seçimi kaldır"
+	},
+	"add_token_button": {
+		"button_text": "Token ekle",
+		"button_subtext": "Özel ERC20 token ekle"
+	},
+	"add_token_modal": {
+		"title": "Özel token ekle",
+		"token_address_label": "Token adresi",
+		"token_symbol_label": "Sembol",
+		"token_name_label": "Ad",
+		"decimals_label": "Ondalık",
+		"fetching": "Getiriliyor...",
+		"found": "Bulundu",
+		"not_found": "Bulunamadı",
+		"auto_filled": "Blok zincirinden otomatik dolduruldu",
+		"address_placeholder": "0x...",
+		"symbol_placeholder": "örn. USDT",
+		"name_placeholder": "örn. Tether USD",
+		"address_hint": "ERC20 token'ın sözleşme adresi",
+		"decimals_hint": "Token ondalık sayısı (genellikle 18)",
+		"error_label": "Hata:",
+		"success_message": "Token başarıyla eklendi!",
+		"add_token_button": "Token ekle",
+		"adding_button": "Ekleniyor..."
+	}
+}

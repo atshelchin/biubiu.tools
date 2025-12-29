@@ -1,0 +1,46 @@
+{
+	"_meta": {
+		"code": "it",
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹"
+	},
+	"section_title": "Strumenti Potenti",
+	"section_subtitle": "Strumenti professionali per operazioni batch Web3 per migliorare la tua efficienza",
+	"badge": "Strumenti Web3 Professionali",
+	"feedback_card": {
+		"title": "Le Tue Idee Contano!",
+		"description": "Ti manca una funzionalità di cui hai bisogno? Hai un'idea per migliorare? Costruiamo ciò che TU hai bisogno - unisciti alla nostra community e diccelo!",
+		"feature_1": "💡 La tua richiesta potrebbe essere la prossima",
+		"feature_2": "🚀 Consegniamo velocemente - dalle idee alla realtà in giorni",
+		"feature_3": "🤝 Linea diretta con il nostro team di sviluppo"
+	},
+	"try_now": "Prova Ora",
+	"launch_app": "Lancia App",
+	"notify_me": "Avvisami",
+	"coming_soon": "Prossimamente",
+	"available_now": "Disponibile Ora",
+	"join_telegram": "Unisciti a Telegram",
+	"discover_random": "Scopri uno strumento casuale",
+	"you_discovered": "Hai Scoperto!",
+	"try_again": "Riprova",
+	"actions": {
+		"import_csv": "Importa CSV",
+		"export_results": "Esporta Risultati",
+		"clear_all": "Cancella Tutto",
+		"share_link": "Condividi Link",
+		"share_tooltip": "Copia link condivisibile",
+		"settings": "Impostazioni",
+		"settings_tooltip": "Impostazioni di rete"
+	},
+	"notify_modal": {
+		"title": "Ricevi Notifica",
+		"description": "Inserisci la tua email per essere avvisato quando questo strumento sarà disponibile.",
+		"email_placeholder": "tua@email.com",
+		"subscribe": "Iscriviti",
+		"cancel": "Annulla",
+		"success": "Grazie! Ti avviseremo quando sarà pronto.",
+		"error": "Per favore inserisci un indirizzo email valido."
+	}
+}

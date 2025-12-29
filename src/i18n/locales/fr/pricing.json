@@ -1,0 +1,55 @@
+{
+	"_meta": {
+		"code": "fr",
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷"
+	},
+	"title": "Tarification simple et transparente",
+	"subtitle": "Choisissez le plan qui vous convient le mieux",
+	"free": {
+		"name": "Gratuit",
+		"price": "0€",
+		"period": "pour toujours",
+		"description": "Parfait pour commencer",
+		"features": [
+			"Jusqu'à 10 portefeuilles",
+			"Opérations par lots de base",
+			"Support communautaire",
+			"Vitesse standard"
+		],
+		"cta": "Commencer"
+	},
+	"pro": {
+		"name": "Pro",
+		"price": "19€",
+		"period": "mois",
+		"description": "Pour les utilisateurs avancés",
+		"features": [
+			"Portefeuilles illimités",
+			"Opérations par lots avancées",
+			"Support prioritaire",
+			"Traitement haute vitesse",
+			"Accès API"
+		],
+		"cta": "Commencer l'essai gratuit"
+	},
+	"enterprise": {
+		"name": "Entreprise",
+		"price": "Sur mesure",
+		"period": "mois",
+		"description": "Pour les équipes et organisations",
+		"features": [
+			"Tout de Pro",
+			"Support dédié",
+			"Intégrations personnalisées",
+			"Garantie SLA",
+			"Gestion d'équipe"
+		],
+		"cta": "Contacter les ventes"
+	},
+	"note": "Tous les plans incluent les fonctionnalités de base et la sécurité",
+	"custom_plan": "Besoin d'un plan personnalisé ?",
+	"contact_us": "Contactez-nous"
+}

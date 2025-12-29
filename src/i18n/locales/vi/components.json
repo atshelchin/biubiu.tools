@@ -1,0 +1,160 @@
+{
+	"_meta": {
+		"code": "vi",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳"
+	},
+	"address_text_import": {
+		"placeholder": "Dán địa chỉ ví vào đây (mỗi dòng một địa chỉ)\n0x1234...\n0x5678...\n0xabcd...",
+		"hint": "Nhập một địa chỉ mỗi dòng",
+		"import_button": "Nhập địa chỉ ({count})",
+		"importing": "Đang nhập... {progress}%",
+		"column_label": "Địa chỉ"
+	},
+	"xpub_import_form": {
+		"placeholder": "Nhập khóa công khai mở rộng của bạn (xpub, ypub hoặc zpub)...",
+		"hint": "xpub cho phép tạo địa chỉ mà không tiết lộ khóa riêng tư",
+		"derivation_path": "Phạm vi dẫn xuất",
+		"derive_button": "Tạo địa chỉ",
+		"deriving": "Đang tạo... {progress}%"
+	},
+	"gas_funding": {
+		"title": "Nạp Gas",
+		"target_wallet": "Ví đích",
+		"estimated_gas": "Gas ước tính",
+		"suggested_amount": "Số tiền đề xuất",
+		"send_amount": "Số tiền gửi",
+		"amount_placeholder": "Nhập số tiền",
+		"tip": "Mẹo: Đã điền sẵn số tiền đề xuất (2x ước tính) để đảm bảo đủ tiền",
+		"security_notice": "💰 Tiền gửi đến ví tạm thời có thể được rút bằng khóa riêng tư - tiền của bạn an toàn",
+		"btn_send": "Gửi",
+		"sending": "Đang gửi...",
+		"cancel": "Hủy"
+	},
+	"file_upload": {
+		"title": "Tải lên tệp",
+		"drop_file": "Kéo thả tệp vào đây hoặc nhấp để tải lên",
+		"supported_formats": "Định dạng hỗ trợ: TXT, CSV, XLSX, XLS",
+		"choose_file": "Chọn tệp",
+		"remove_file": "Xóa tệp",
+		"processing": "Đang xử lý...",
+		"mode_text": "Chế độ văn bản",
+		"mode_table": "Chế độ bảng",
+		"preview_title": "Xem trước tệp",
+		"select_columns_hint": "Vui lòng chọn {count} cột (nhấp vào nút tiêu đề để đánh dấu thứ tự cột)",
+		"select_columns_hint_click": "Vui lòng chọn {count} cột (nhấp vào tiêu đề cột để đánh dấu, nhấp lại để chuyển đổi)",
+		"select_single_column_hint": "💡 Nhấp vào tiêu đề cột để đánh dấu nó là cột [{label}]",
+		"click_to_select": "Nhấp để chọn cột này là [{label}]",
+		"click_to_deselect": "Nhấp lại để bỏ chọn",
+		"click_to_change": "Nhấp để chuyển sang cột này",
+		"click_to_cycle": "Nhấp lại để chuyển sang vị trí tiếp theo",
+		"generated_column": "Cột {index}",
+		"column": "Cột",
+		"showing_first_rows": "Hiển thị {count} hàng đầu tiên",
+		"cancel": "Hủy",
+		"confirm": "Xác nhận",
+		"error_unsupported_format": "Định dạng tệp không được hỗ trợ",
+		"error_empty_file": "Tệp trống",
+		"error_incomplete_selection": "Vui lòng hoàn thành việc chọn cột",
+		"error_all_labels_assigned": "Tất cả nhãn đã được gán. Vui lòng xóa nhãn từ cột khác trước"
+	},
+	"quick_rpc_manager": {
+		"title": "Quản lý RPC nhanh",
+		"network": "Mạng hiện tại",
+		"add_new": "Thêm RPC mới",
+		"placeholder": "https://example.com/rpc",
+		"add_button": "Thêm",
+		"current_rpcs": "Danh sách RPC hiện tại",
+		"primary": "Chính",
+		"no_rpcs": "Không có điểm cuối RPC",
+		"invalid_url": "URL không hợp lệ, phải bắt đầu bằng http:// hoặc https://",
+		"duplicate_url": "Điểm cuối RPC này đã tồn tại",
+		"at_least_one": "Cần ít nhất một điểm cuối RPC",
+		"hint": "Thêm nhiều điểm cuối RPC cho phép tự động chuyển đổi khi một điểm bị giới hạn tốc độ, cải thiện tỷ lệ quét thành công.",
+		"recommend_prefix": "Tìm các điểm cuối RPC có sẵn tại",
+		"recommend_suffix": "",
+		"cancel": "Hủy",
+		"save": "Lưu và tiếp tục quét",
+		"url_format_hint": "Nhập URL RPC bắt đầu bằng http:// hoặc https://",
+		"http_warning": "Sử dụng http:// (không an toàn) có thể bị trình duyệt chặn. Để cho phép trong Chrome: Nhấp vào biểu tượng trên thanh địa chỉ → Cài đặt trang → Nội dung không an toàn → Cho phép"
+	},
+	"address_path_selector": {
+		"sequential": {
+			"label": "Tuần tự",
+			"description": "0, 1, 2, 3..."
+		},
+		"date": {
+			"label": "Theo ngày",
+			"description": "20240101, 20240102...",
+			"presets": {
+				"1_year": "1 năm qua",
+				"10_years": "10 năm qua",
+				"100_years": "100 năm qua"
+			}
+		},
+		"quick_select": "Chọn nhanh",
+		"start": "Bắt đầu",
+		"end": "Kết thúc",
+		"to": "đến",
+		"from_year": "Từ năm",
+		"to_year": "Đến năm",
+		"format": "Định dạng",
+		"example": "Ví dụ",
+		"will_generate": "Sẽ tạo",
+		"estimated_addresses": "Số địa chỉ ước tính",
+		"addresses": "địa chỉ",
+		"limited_to": "Giới hạn tối đa {max}",
+		"advanced_settings": "Cài đặt nâng cao",
+		"switch_to_advanced": "Chuyển sang cài đặt nâng cao",
+		"switch_to_quick": "Chuyển sang chọn nhanh"
+	},
+	"wallet_list": {
+		"empty_message": "Chưa thêm ví nào",
+		"remove_wallet": "Xóa ví",
+		"showing": "Hiển thị {start}-{end} trong số {total}",
+		"previous_page": "Trang trước",
+		"next_page": "Trang sau"
+	},
+	"token_card": {
+		"native": "Native",
+		"erc20": "ERC20",
+		"decimals_label": "Số thập phân",
+		"decimals_unit": "chữ số",
+		"view_on_explorer": "Xem trên trình duyệt khối",
+		"remove_custom_token": "Xóa token tùy chỉnh",
+		"remove_dialog_title": "Xóa token tùy chỉnh",
+		"remove_dialog_message": "Bạn có chắc muốn xóa {symbol} ({name})? Hành động này không thể hoàn tác.",
+		"remove_button": "Xóa token"
+	},
+	"token_selector": {
+		"empty_message": "Không có token khả dụng",
+		"select_all": "Chọn tất cả",
+		"deselect_all": "Bỏ chọn tất cả"
+	},
+	"add_token_button": {
+		"button_text": "Thêm token",
+		"button_subtext": "Thêm token ERC20 tùy chỉnh"
+	},
+	"add_token_modal": {
+		"title": "Thêm token tùy chỉnh",
+		"token_address_label": "Địa chỉ token",
+		"token_symbol_label": "Ký hiệu",
+		"token_name_label": "Tên",
+		"decimals_label": "Số thập phân",
+		"fetching": "Đang lấy...",
+		"found": "Đã tìm thấy",
+		"not_found": "Không tìm thấy",
+		"auto_filled": "Tự động điền từ blockchain",
+		"address_placeholder": "0x...",
+		"symbol_placeholder": "vd: USDT",
+		"name_placeholder": "vd: Tether USD",
+		"address_hint": "Địa chỉ hợp đồng của token ERC20",
+		"decimals_hint": "Số thập phân của token (thường là 18)",
+		"error_label": "Lỗi:",
+		"success_message": "Thêm token thành công!",
+		"add_token_button": "Thêm token",
+		"adding_button": "Đang thêm..."
+	}
+}

@@ -1,0 +1,39 @@
+{
+	"_meta": {
+		"code": "id",
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩"
+	},
+	"title": "Kami Menggunakan Cookie",
+	"description": "Kami menggunakan cookie esensial untuk fungsionalitas dasar dan cookie analitik opsional untuk meningkatkan layanan kami. Anda dapat memilih apakah akan mengizinkan analitik.",
+	"necessary": {
+		"title": "Esensial",
+		"description": "Diperlukan untuk fungsionalitas dasar termasuk preferensi tema, data sesi, dan optimasi RPC. Tidak dapat dinonaktifkan."
+	},
+	"functional": {
+		"title": "Fungsional",
+		"description": "Termasuk dalam cookie esensial."
+	},
+	"analytics": {
+		"title": "Analitik",
+		"description": "Cookie analitik membantu kami memahami bagaimana pengunjung menggunakan situs web kami melalui statistik anonim dan pelacakan referral."
+	},
+	"required": "Diperlukan",
+	"accept_all": "Terima Semua",
+	"necessary_only": "Hanya Esensial",
+	"save_preferences": "Simpan Preferensi",
+	"show_details": "Kustomisasi",
+	"hide_details": "Sembunyikan Detail",
+	"privacy_notice": "Untuk informasi lebih lanjut, lihat",
+	"privacy_policy": "Kebijakan Privasi",
+	"reminder_title": "Aktifkan Analitik?",
+	"reminder_description": "Bantu kami meningkatkan BiuBiu Tools dengan mengaktifkan cookie analitik. Data Anda tetap anonim.",
+	"not_now": "Nanti Saja",
+	"dismiss": "Tutup",
+	"settings_title": "Pengaturan Cookie",
+	"settings_description": "Kelola preferensi cookie Anda. Anda dapat mengubah pengaturan ini kapan saja.",
+	"cancel": "Batal",
+	"cookie_settings": "Pengaturan Cookie"
+}

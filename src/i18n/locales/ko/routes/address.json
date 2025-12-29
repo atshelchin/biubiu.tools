@@ -1,0 +1,147 @@
+{
+	"_meta": {
+		"code": "ko",
+		"name": "한국어",
+		"englishName": "Korean",
+		"direction": "ltr",
+		"flag": "🇰🇷"
+	},
+	"title": "주소 탐색기",
+	"subtitle": "라벨이 지정된 블록체인 주소와 ENS 이름 검색 및 탐색",
+	"search_placeholder": "주소, ENS 이름 또는 엔터티로 검색...",
+	"searching": "검색 중...",
+	"looking_up": "블록체인에서 조회 중...",
+	"view_details": "상세 보기",
+	"no_results": "결과 없음",
+	"all_addresses": "모든 주소",
+	"categories": "카테고리별 탐색",
+	"browse_by_label": "라벨별 탐색",
+	"popular_addresses": "인기 주소",
+	"popular_names": "인기 이름",
+	"view_on_explorer": "탐색기에서 보기",
+	"website": "웹사이트",
+	"related_names": "관련 이름",
+	"related_addresses": "관련 주소",
+	"balance": "잔액",
+	"loading_balance": "로딩 중...",
+	"contract": "컨트랙트",
+	"data_source": "데이터 소스",
+	"updated": "업데이트",
+	"source_manual": "수동",
+	"source_verified": "검증됨",
+	"source_etherscan": "Etherscan",
+	"source_community": "커뮤니티",
+	"stats": {
+		"addresses": "주소",
+		"names": "이름",
+		"exchanges": "거래소",
+		"defi": "DeFi",
+		"tokens": "토큰",
+		"nft": "NFT",
+		"notable": "주목"
+	},
+	"labels": {
+		"exchange": "거래소",
+		"cex": "CEX",
+		"dex": "DEX",
+		"defi": "DeFi",
+		"lending": "대출",
+		"bridge": "브릿지",
+		"yield": "수익",
+		"derivatives": "파생상품",
+		"liquid-staking": "리퀴드 스테이킹",
+		"token": "토큰",
+		"stablecoin": "스테이블코인",
+		"memecoin": "밈코인",
+		"wrapped": "래핑",
+		"nft": "NFT",
+		"nft-marketplace": "NFT 마켓플레이스",
+		"whale": "고래",
+		"smart-money": "스마트 머니",
+		"foundation": "재단",
+		"dao": "DAO",
+		"multisig": "멀티시그",
+		"deployer": "배포자",
+		"hacker": "해커",
+		"scam": "스캠",
+		"sanctioned": "제재 대상",
+		"phishing": "피싱",
+		"burn": "소각",
+		"null": "Null",
+		"genesis": "제네시스",
+		"mev": "MEV",
+		"contract": "컨트랙트",
+		"eoa": "EOA",
+		"notable": "주목",
+		"layer2": "레이어 2",
+		"staking": "스테이킹",
+		"oracle": "오라클"
+	},
+	"risk": {
+		"safe": "안전",
+		"neutral": "중립",
+		"warning": "경고",
+		"danger": "위험"
+	},
+	"seo": {
+		"index_title": "주소 탐색기 - 블록체인 주소 및 ENS 조회 | BiuBiu Tools",
+		"index_description": "{addressCount}개의 라벨된 블록체인 주소와 {nameCount}개의 ENS 이름을 검색하고 탐색하세요. 거래소, DeFi 프로토콜, 고래 등을 찾아보세요.",
+		"detail_description": "{name} ({entity}) - {chain}. 라벨: {labels}. 주소: {address}. 지갑 상세 정보와 관련 정보를 탐색하세요."
+	},
+	"faq": {
+		"title": "자주 묻는 질문",
+		"what_is": "{name}이(가) 무엇인가요?",
+		"what_is_answer": "{name}은(는) {chain} 네트워크의 {entity}에 속한 지갑 주소입니다.",
+		"is_safe": "이 주소와의 상호작용은 안전한가요?",
+		"is_safe_answer_safe": "{name}은(는) 잘 알려진 엔터티의 검증된 안전 주소입니다.",
+		"is_safe_answer_neutral": "{name}은(는) 중립적인 위험 수준입니다. 일반적인 주의를 기울이세요.",
+		"is_safe_answer_warning": "경고: {name}은(는) 잠재적 위험이 있는 것으로 표시되었습니다. 주의하여 진행하세요.",
+		"is_safe_answer_danger": "위험: {name}은(는) 위험한 것으로 표시되었습니다. 이 주소로 자금을 보내지 마세요.",
+		"how_to_verify": "이 주소를 어떻게 확인하나요?",
+		"how_to_verify_answer": "{explorer} 블록 탐색기에서 이 주소를 확인하여 거래 내역과 컨트랙트 상세 정보를 볼 수 있습니다.",
+		"cex": {
+			"can_deposit": "이 주소에 자금을 입금할 수 있나요?",
+			"can_deposit_answer": "{name}은(는) {entity}의 공식 입금 주소입니다. 자금을 보내기 전에 항상 거래소 공식 웹사이트에서 주소를 확인하세요.",
+			"how_to_withdraw": "이 거래소에서 출금하려면 어떻게 하나요?",
+			"how_to_withdraw_answer": "{entity}에서 출금하려면 계정에 로그인하고 출금 섹션으로 이동하여 대상 지갑 주소를 입력하고 거래소의 보안 절차에 따라 거래를 확인하세요."
+		},
+		"dex": {
+			"what_is_contract": "이 DEX 컨트랙트는 무엇인가요?",
+			"what_is_contract_answer": "{name}은(는) {entity} 탈중앙화 거래소의 스마트 컨트랙트입니다. 블록체인에서 직접 무허가 토큰 스왑을 가능하게 합니다."
+		},
+		"defi": {
+			"what_does_it_do": "이 DeFi 컨트랙트는 무엇을 하나요?",
+			"what_does_it_do_answer": "{name}은(는) {entity}의 스마트 컨트랙트로, 블록체인에서 탈중앙화 금융 서비스를 가능하게 합니다.",
+			"lending_how": "이 프로토콜에서 대출은 어떻게 작동하나요?",
+			"lending_how_answer": "{entity}는 사용자가 자산을 빌려주어 이자를 벌거나 담보로 빌릴 수 있게 합니다. 이자율은 수요와 공급에 따라 알고리즘으로 결정됩니다.",
+			"bridge_how": "이 브릿지는 어떻게 사용하나요?",
+			"bridge_how_answer": "{name}은(는) {entity}의 브릿지 컨트랙트입니다. 서로 다른 블록체인 네트워크 간에 자산을 안전하게 전송할 수 있습니다.",
+			"staking_how": "리퀴드 스테이킹은 어떻게 작동하나요?",
+			"staking_how_answer": "{entity}는 토큰을 스테이킹하면서 다른 DeFi 프로토콜에서 사용할 수 있는 유동성 파생 토큰을 받을 수 있게 합니다."
+		},
+		"token": {
+			"what_is_contract": "이 토큰 컨트랙트는 무엇인가요?",
+			"what_is_contract_answer": "{name}은(는) 이 토큰의 공식 스마트 컨트랙트입니다. 상호작용하기 전에 항상 컨트랙트 주소를 확인하세요.",
+			"stablecoin_peg": "이 스테이블코인의 페그는 어떻게 유지되나요?",
+			"stablecoin_peg_answer": "{name}은(는) 설계에 따라 준비금, 알고리즘 메커니즘 또는 과담보의 조합을 통해 페그를 유지합니다."
+		},
+		"entity": {
+			"whale_activity": "왜 이 고래 주소가 주목받나요?",
+			"whale_activity_answer": "{name}은(는) 상당량의 암호화폐를 보유하고 있습니다. 고래 움직임을 추적하면 시장 트렌드에 대한 통찰을 얻을 수 있습니다.",
+			"multisig_what": "멀티시그 지갑이란 무엇인가요?",
+			"multisig_what_answer": "{name}은(는) 거래를 실행하기 위해 여러 승인이 필요한 다중 서명 지갑으로, 향상된 보안을 제공합니다.",
+			"governance": "이 주소의 거버넌스 역할은 무엇인가요?",
+			"governance_answer": "{name}은(는) {entity}에 속하며 프로토콜 거버넌스, 트레저리 관리 또는 커뮤니티 의사결정에 참여할 수 있습니다."
+		},
+		"risk": {
+			"why_flagged": "왜 이 주소가 표시되었나요?",
+			"why_flagged_answer": "{name}은(는) 해킹, 스캠 또는 제재 위반과 같은 악의적 활동과의 연관으로 인해 표시되었습니다. 극도로 주의하세요.",
+			"what_to_do": "이 주소와 상호작용한 적이 있다면 어떻게 해야 하나요?",
+			"what_to_do_answer": "이 주소로 자금을 보냈다면 복구가 불가능할 수 있습니다. 수신 프로토콜에 복구 메커니즘이 있는지 확인하고 관련 당국에 신고를 고려하세요."
+		},
+		"contract": {
+			"is_verified": "이 컨트랙트는 검증되었나요?",
+			"is_verified_answer": "{chain} 블록 탐색기에서 {name}이(가) 검증된 소스 코드를 가지고 있는지 확인할 수 있습니다. 검증된 컨트랙트는 소스 코드가 공개적으로 검토 가능합니다."
+		}
+	}
+}

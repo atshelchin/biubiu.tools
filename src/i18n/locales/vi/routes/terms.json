@@ -1,0 +1,70 @@
+{
+	"_meta": {
+		"code": "vi",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳"
+	},
+	"page_title": "Điều khoản Dịch vụ",
+	"page_description": "Điều khoản Dịch vụ cho việc sử dụng các ứng dụng Web3 của BiuBiu Tools.",
+	"title": "Điều khoản Dịch vụ",
+	"last_updated": "Cập nhật lần cuối",
+	"acceptance": {
+		"title": "Chấp nhận Điều khoản",
+		"content": "Bằng việc truy cập và sử dụng BiuBiu Tools, bạn xác nhận rằng bạn đã đọc, hiểu và đồng ý bị ràng buộc bởi các Điều khoản Dịch vụ này. Nếu bạn không đồng ý với các điều khoản này, vui lòng không sử dụng dịch vụ của chúng tôi."
+	},
+	"description": {
+		"title": "Mô tả Dịch vụ",
+		"content": "BiuBiu Tools cung cấp các công cụ tiện ích Web3 để tương tác với các mạng blockchain, bao gồm nhưng không giới hạn ở quản lý ví, các thao tác token, triển khai hợp đồng và giao dịch hàng loạt. Các công cụ này được cung cấp \"nguyên trạng\" và dành cho người dùng có kinh nghiệm hiểu biết về công nghệ blockchain."
+	},
+	"risks": {
+		"title": "Rủi ro Blockchain",
+		"intro": "Bạn xác nhận và chấp nhận các rủi ro sau liên quan đến công nghệ blockchain:",
+		"item1": "Giao dịch blockchain không thể đảo ngược. Một khi đã được xác nhận, giao dịch không thể hoàn tác hoặc đảo ngược.",
+		"item2": "Giá trị tiền điện tử biến động rất cao. Bạn có thể chịu tổn thất đáng kể.",
+		"item3": "Hợp đồng thông minh có thể chứa lỗi hoặc lỗ hổng có thể dẫn đến mất tiền.",
+		"item4": "Tắc nghẽn mạng có thể làm chậm giao dịch hoặc dẫn đến phí cao hơn dự kiến.",
+		"item5": "Thay đổi quy định có thể ảnh hưởng đến tính hợp pháp hoặc khả năng sử dụng tiền điện tử tại khu vực pháp lý của bạn."
+	},
+	"no_advice": {
+		"title": "Không phải Tư vấn Tài chính",
+		"content": "BiuBiu Tools không cung cấp tư vấn tài chính, đầu tư, pháp lý hoặc thuế. Tất cả thông tin và công cụ được cung cấp chỉ nhằm mục đích thông tin và tiện ích. Bạn nên tham khảo ý kiến chuyên gia có chuyên môn trước khi đưa ra bất kỳ quyết định tài chính nào. Mọi hành động bạn thực hiện dựa trên thông tin từ nền tảng của chúng tôi đều thuộc rủi ro của bạn."
+	},
+	"user_responsibility": {
+		"title": "Trách nhiệm của Người dùng",
+		"intro": "Bạn hoàn toàn chịu trách nhiệm về:",
+		"item1": "Bảo vệ khóa riêng, cụm từ khôi phục và mật khẩu của bạn. Chúng tôi không lưu trữ hoặc truy cập những thông tin này.",
+		"item2": "Xác minh tất cả chi tiết giao dịch trước khi ký hoặc gửi giao dịch.",
+		"item3": "Hiểu hậu quả của từng hành động bạn thực hiện trên blockchain.",
+		"item4": "Tuân thủ tất cả luật pháp và quy định hiện hành tại khu vực pháp lý của bạn."
+	},
+	"disclaimer": {
+		"title": "Tuyên bố Miễn trừ Bảo đảm",
+		"content": "BiuBiu Tools được cung cấp \"NGUYÊN TRẠNG\" và \"KHẢ DỤNG\" mà không có bất kỳ bảo đảm nào, dù rõ ràng hay ngụ ý. Do tính phức tạp của môi trường internet, chúng tôi không thể đảm bảo rằng dịch vụ sẽ luôn chạy không gián đoạn hoặc hoàn toàn không có lỗi. Chúng tôi không đảm bảo về độ chính xác, độ tin cậy hoặc tính đầy đủ của bất kỳ thông tin nào được cung cấp."
+	},
+	"limitation": {
+		"title": "Giới hạn Trách nhiệm",
+		"content": "Trong phạm vi tối đa được pháp luật cho phép, BiuBiu Tools và các nhà phát triển của nó sẽ không chịu trách nhiệm về bất kỳ thiệt hại trực tiếp, gián tiếp, ngẫu nhiên, đặc biệt, hậu quả hoặc mang tính trừng phạt nào, bao gồm nhưng không giới hạn ở việc mất lợi nhuận, dữ liệu hoặc tài sản tiền điện tử, phát sinh từ việc bạn sử dụng hoặc không thể sử dụng dịch vụ của chúng tôi."
+	},
+	"prohibited": {
+		"title": "Sử dụng Bị cấm",
+		"intro": "Bạn đồng ý không sử dụng BiuBiu Tools cho:",
+		"item1": "Bất kỳ hoạt động bất hợp pháp nào, bao gồm rửa tiền, lừa đảo hoặc tài trợ khủng bố.",
+		"item2": "Lách các lệnh trừng phạt kinh tế hoặc kiểm soát xuất khẩu.",
+		"item3": "Khai thác lỗ hổng trong hợp đồng thông minh hoặc mạng blockchain cho mục đích độc hại.",
+		"item4": "Bất kỳ hoạt động nào có thể can thiệp, làm gián đoạn hoạt động dịch vụ bình thường hoặc gây hại cho lợi ích của người dùng khác."
+	},
+	"open_source": {
+		"title": "Mã nguồn Mở và Sản phẩm Phái sinh",
+		"content": "BiuBiu Tools là một dự án mã nguồn mở. Bạn được tự do xem, fork, sửa đổi và triển khai mã nguồn theo giấy phép áp dụng. Tuy nhiên, BiuBiu Tools và các nhà phát triển của nó không chịu trách nhiệm về bất kỳ sản phẩm phái sinh, triển khai của bên thứ ba hoặc phiên bản đã sửa đổi nào. Mọi vấn đề phát sinh từ các triển khai không chính thức hoàn toàn thuộc trách nhiệm của người vận hành các triển khai đó. Trang web chính thức duy nhất là biubiu.tools."
+	},
+	"modifications": {
+		"title": "Sửa đổi Điều khoản",
+		"content": "Chúng tôi có quyền sửa đổi các Điều khoản Dịch vụ này bất cứ lúc nào. Các thay đổi sẽ có hiệu lực ngay sau khi đăng tải. Việc bạn tiếp tục sử dụng BiuBiu Tools sau các thay đổi đồng nghĩa với việc chấp nhận các điều khoản đã sửa đổi."
+	},
+	"contact": {
+		"title": "Liên hệ",
+		"content": "Nếu bạn có câu hỏi về các Điều khoản Dịch vụ này, vui lòng liên hệ với chúng tôi qua kho GitHub hoặc các kênh cộng đồng của chúng tôi."
+	}
+}

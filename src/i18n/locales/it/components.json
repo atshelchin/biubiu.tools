@@ -1,0 +1,160 @@
+{
+	"_meta": {
+		"code": "it",
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹"
+	},
+	"address_text_import": {
+		"placeholder": "Incolla gli indirizzi del wallet qui (uno per riga)\n0x1234...\n0x5678...\n0xabcd...",
+		"hint": "Inserisci un indirizzo per riga",
+		"import_button": "Importa indirizzi ({count})",
+		"importing": "Importazione... {progress}%",
+		"column_label": "Indirizzo"
+	},
+	"xpub_import_form": {
+		"placeholder": "Inserisci la tua chiave pubblica estesa (xpub, ypub o zpub)...",
+		"hint": "xpub permette di derivare indirizzi senza esporre le chiavi private",
+		"derivation_path": "Intervallo di derivazione",
+		"derive_button": "Deriva indirizzi",
+		"deriving": "Derivazione... {progress}%"
+	},
+	"gas_funding": {
+		"title": "Finanzia Gas",
+		"target_wallet": "Wallet di destinazione",
+		"estimated_gas": "Gas stimato",
+		"suggested_amount": "Importo suggerito",
+		"send_amount": "Importo da inviare",
+		"amount_placeholder": "Inserisci importo",
+		"tip": "Suggerimento: Precompilato con l'importo suggerito (2x stimato) per garantire fondi sufficienti",
+		"security_notice": "💰 I fondi inviati al wallet temporaneo possono essere trasferiti usando la chiave privata - i tuoi fondi sono al sicuro",
+		"btn_send": "Invia",
+		"sending": "Invio...",
+		"cancel": "Annulla"
+	},
+	"file_upload": {
+		"title": "Carica file",
+		"drop_file": "Trascina il file qui o clicca per caricare",
+		"supported_formats": "Formati supportati: TXT, CSV, XLSX, XLS",
+		"choose_file": "Scegli file",
+		"remove_file": "Rimuovi file",
+		"processing": "Elaborazione...",
+		"mode_text": "Modalità testo",
+		"mode_table": "Modalità tabella",
+		"preview_title": "Anteprima file",
+		"select_columns_hint": "Seleziona {count} colonna/e (clicca i pulsanti dell'intestazione per contrassegnare l'ordine delle colonne)",
+		"select_columns_hint_click": "Seleziona {count} colonna/e (clicca sulle intestazioni delle colonne per timbrare, clicca di nuovo per ciclare)",
+		"select_single_column_hint": "💡 Clicca su un'intestazione di colonna per contrassegnarla come colonna [{label}]",
+		"click_to_select": "Clicca per selezionare questa colonna come [{label}]",
+		"click_to_deselect": "Clicca di nuovo per deselezionare",
+		"click_to_change": "Clicca per passare a questa colonna",
+		"click_to_cycle": "Clicca di nuovo per passare alla posizione successiva",
+		"generated_column": "Colonna {index}",
+		"column": "Colonna",
+		"showing_first_rows": "Mostrando le prime {count} righe",
+		"cancel": "Annulla",
+		"confirm": "Conferma",
+		"error_unsupported_format": "Formato file non supportato",
+		"error_empty_file": "Il file è vuoto",
+		"error_incomplete_selection": "Completa la selezione delle colonne",
+		"error_all_labels_assigned": "Tutte le etichette sono assegnate. Rimuovi prima un'etichetta da un'altra colonna"
+	},
+	"quick_rpc_manager": {
+		"title": "Gestione rapida RPC",
+		"network": "Rete corrente",
+		"add_new": "Aggiungi nuovo RPC",
+		"placeholder": "https://esempio.com/rpc",
+		"add_button": "Aggiungi",
+		"current_rpcs": "Lista RPC corrente",
+		"primary": "Primario",
+		"no_rpcs": "Nessun endpoint RPC",
+		"invalid_url": "URL non valido, deve iniziare con http:// o https://",
+		"duplicate_url": "Questo endpoint RPC esiste già",
+		"at_least_one": "È richiesto almeno un endpoint RPC",
+		"hint": "Aggiungere più endpoint RPC consente il passaggio automatico quando uno è limitato, migliorando il tasso di successo della scansione.",
+		"recommend_prefix": "Trova endpoint RPC disponibili su",
+		"recommend_suffix": "",
+		"cancel": "Annulla",
+		"save": "Salva e continua scansione",
+		"url_format_hint": "Inserisci URL RPC che inizia con http:// o https://",
+		"http_warning": "Usare http:// (non sicuro) potrebbe essere bloccato dai browser. Per consentire in Chrome: Clicca l'icona nella barra degli indirizzi → Impostazioni sito → Contenuto non sicuro → Consenti"
+	},
+	"address_path_selector": {
+		"sequential": {
+			"label": "Sequenziale",
+			"description": "0, 1, 2, 3..."
+		},
+		"date": {
+			"label": "Basato su data",
+			"description": "20240101, 20240102...",
+			"presets": {
+				"1_year": "Ultimo anno",
+				"10_years": "Ultimi 10 anni",
+				"100_years": "Ultimi 100 anni"
+			}
+		},
+		"quick_select": "Selezione rapida",
+		"start": "Inizio",
+		"end": "Fine",
+		"to": "a",
+		"from_year": "Dall'anno",
+		"to_year": "All'anno",
+		"format": "Formato",
+		"example": "Esempio",
+		"will_generate": "Genererà",
+		"estimated_addresses": "Indirizzi stimati",
+		"addresses": "indirizzi",
+		"limited_to": "Limitato a {max} max",
+		"advanced_settings": "Impostazioni avanzate",
+		"switch_to_advanced": "Passa alle impostazioni avanzate",
+		"switch_to_quick": "Passa alla selezione rapida"
+	},
+	"wallet_list": {
+		"empty_message": "Nessun wallet aggiunto",
+		"remove_wallet": "Rimuovi wallet",
+		"showing": "Mostrando {start}-{end} di {total}",
+		"previous_page": "Pagina precedente",
+		"next_page": "Pagina successiva"
+	},
+	"token_card": {
+		"native": "Nativo",
+		"erc20": "ERC20",
+		"decimals_label": "Decimali",
+		"decimals_unit": "decimali",
+		"view_on_explorer": "Visualizza su block explorer",
+		"remove_custom_token": "Rimuovi token personalizzato",
+		"remove_dialog_title": "Rimuovi token personalizzato",
+		"remove_dialog_message": "Sei sicuro di voler rimuovere {symbol} ({name})? Questa azione non può essere annullata.",
+		"remove_button": "Rimuovi token"
+	},
+	"token_selector": {
+		"empty_message": "Nessun token disponibile",
+		"select_all": "Seleziona tutto",
+		"deselect_all": "Deseleziona tutto"
+	},
+	"add_token_button": {
+		"button_text": "Aggiungi token",
+		"button_subtext": "Aggiungi token ERC20 personalizzato"
+	},
+	"add_token_modal": {
+		"title": "Aggiungi token personalizzato",
+		"token_address_label": "Indirizzo token",
+		"token_symbol_label": "Simbolo",
+		"token_name_label": "Nome",
+		"decimals_label": "Decimali",
+		"fetching": "Recupero...",
+		"found": "Trovato",
+		"not_found": "Non trovato",
+		"auto_filled": "Compilato automaticamente dalla blockchain",
+		"address_placeholder": "0x...",
+		"symbol_placeholder": "es. USDT",
+		"name_placeholder": "es. Tether USD",
+		"address_hint": "L'indirizzo del contratto del token ERC20",
+		"decimals_hint": "Decimali del token (solitamente 18)",
+		"error_label": "Errore:",
+		"success_message": "Token aggiunto con successo!",
+		"add_token_button": "Aggiungi token",
+		"adding_button": "Aggiunta..."
+	}
+}

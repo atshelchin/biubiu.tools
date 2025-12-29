@@ -1,0 +1,55 @@
+{
+	"_meta": {
+		"code": "ko",
+		"name": "한국어",
+		"englishName": "Korean",
+		"direction": "ltr",
+		"flag": "🇰🇷"
+	},
+	"title": "간단하고 투명한 가격",
+	"subtitle": "나에게 맞는 플랜을 선택하세요",
+	"free": {
+		"name": "무료",
+		"price": "₩0",
+		"period": "영구",
+		"description": "시작하기에 완벽",
+		"features": [
+			"최대 10개 지갑",
+			"기본 일괄 작업",
+			"커뮤니티 지원",
+			"표준 속도"
+		],
+		"cta": "시작하기"
+	},
+	"pro": {
+		"name": "Pro",
+		"price": "₩25,000",
+		"period": "월",
+		"description": "파워 유저를 위한",
+		"features": [
+			"무제한 지갑",
+			"고급 일괄 작업",
+			"우선 지원",
+			"고속 처리",
+			"API 접근"
+		],
+		"cta": "무료 체험 시작"
+	},
+	"enterprise": {
+		"name": "엔터프라이즈",
+		"price": "맞춤",
+		"period": "월",
+		"description": "팀과 조직을 위한",
+		"features": [
+			"Pro의 모든 기능",
+			"전담 지원",
+			"맞춤 통합",
+			"SLA 보장",
+			"팀 관리"
+		],
+		"cta": "영업팀 문의"
+	},
+	"note": "모든 플랜에 기본 기능과 보안이 포함됩니다",
+	"custom_plan": "맞춤 플랜이 필요하신가요?",
+	"contact_us": "문의하기"
+}

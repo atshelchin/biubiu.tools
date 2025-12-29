@@ -1,0 +1,103 @@
+{
+	"_meta": {
+		"code": "tr",
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷"
+	},
+	"one-to-many-transfer": {
+		"title": "Birden Çoğa Transfer",
+		"description": "Tek bir cüzdandan birden fazla adrese toplu token ve NFT gönderin",
+		"features": [
+			"Yerel tokenlar (ETH, BNB, MATIC), ERC20 tokenları ve NFT'ler (ERC721, ERC1155) gönderin",
+			"Eşit dağılım veya alıcı başına özel tutarlar",
+			"CSV, yapıştırma veya manuel giriş ile alıcıları içe aktarın"
+		]
+	},
+	"token-balance-scanner": {
+		"title": "Cüzdan Bakiye Kontrol Aracı",
+		"description": "Bakiyesi olan cüzdanları hızlıca filtreleyin, boş olmayan adresleri belirleyin ve birden fazla cüzdandaki token varlıklarını toplayın",
+		"features": [
+			"100K adrese kadar tarama",
+			"Bakiyeli cüzdanları filtrele",
+			"Toplam varlık istatistikleri",
+			"EXCEL/CSV/JSON'a aktar"
+		]
+	},
+	"wallet-sweep": {
+		"title": "Cüzdan Süpürme",
+		"description": "Birden fazla cüzdanın bakiyelerini tek bir adrese aktarın",
+		"features": [
+			"Tam bakiye süpürme, artık toz kalmaz",
+			"Büyük ölçekli otomasyon, işlem başına onay gerekmez",
+			"Kaynak cüzdanlarda yerel token gerekmez",
+			"Tüm EVM zincirlerinde izinsiz"
+		]
+	},
+	"contract-deployer": {
+		"title": "Sözleşme Dağıtıcı",
+		"description": "CREATE2 proxy kullanarak akıllı sözleşmeleri deterministik olarak dağıtın",
+		"features": [
+			"Tüm zincirlerde deterministik dağıtım",
+			"Her ağda aynı sözleşme adresi",
+			"Basit ve geliştirici dostu arayüz"
+		]
+	},
+	"contract-events-scanner": {
+		"title": "Sözleşme Olay Tarayıcı",
+		"description": "Blockchain'den akıllı sözleşme olaylarını tarayın, analiz edin ve dışa aktarın",
+		"features": [
+			"Herhangi bir sözleşmenin geçmiş olay günlüklerini tarayın",
+			"Özel olay filtreleri ve blok aralığı seçimi",
+			"Olay verilerini CSV, JSON formatlarına aktarın"
+		]
+	},
+	"call-master": {
+		"title": "Çağrı Ustası",
+		"description": "Gelişmiş özellikler ve toplu işlemlerle akıllı sözleşme çağrıları yürütün.",
+		"features": ["Çoklu Çağrı Desteği", "ABI Yönetimi", "İşlem Oluşturucu"]
+	},
+	"wallet-generator": {
+		"title": "Cüzdan Fabrikası",
+		"description": "Anımsatıcı, xpub veya gizli metinden HD yol desteğiyle birden fazla cüzdan oluşturun",
+		"features": ["HD Yol Desteği", "Çoklu Zincir", "EXCEL/CSV/JSON'a Aktar"]
+	},
+	"dex-moonshot-trader": {
+		"title": "DEX Moonshot Trader",
+		"description": "Kolay web arayüzüyle DEXScreener Moonshot tokenlarını alıp satın",
+		"features": ["Token Al & Sat", "Ayarlanabilir Kayma", "Çoklu Zincir Desteği"]
+	},
+	"token-deployer": {
+		"title": "Token Dağıtıcı",
+		"description": "Özel parametrelerle dakikalar içinde ERC20 tokenları oluşturun ve dağıtın",
+		"features": ["Gelişmiş Özellikler", "Vergi & Anti-Bot", "Anında Dağıtım"]
+	},
+	"nft-deployer": {
+		"title": "NFT Dağıtıcı",
+		"description": "ERC-721, ERC-721A ve ERC-1155 standartlarıyla NFT akıllı sözleşmeleri dağıtın",
+		"features": [
+			"ERC-721, ERC-721A, ERC-1155 standartlarını destekler",
+			"Yapılandırılabilir telif hakları, arz, basım fiyatı",
+			"Gelişmiş özellikler: duraklatılabilir, yakılabilir, açıklanabilir"
+		]
+	},
+	"chainlist": {
+		"title": "Zincir Listesi",
+		"description": "EVM uyumlu blockchain ağlarını arayın ve cüzdanınıza ekleyin",
+		"features": [
+			"Chain ID, İsim, Sembol ile arama",
+			"Gerçek Zamanlı RPC Testi",
+			"Tek Tıkla Cüzdana Ekle"
+		]
+	},
+	"chain-tools": {
+		"title": "Zincir Araçları",
+		"description": "Kaliteli Web3 araçlarını ve DApp'leri keşfedin",
+		"features": [
+			"600+ seçilmiş Web3 aracına göz atın",
+			"Kategoriye göre filtreleyin: DeFi, NFT, Analitik, Güvenlik",
+			"İsim, etiket veya blockchain ile arama"
+		]
+	}
+}

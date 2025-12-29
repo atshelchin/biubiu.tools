@@ -1,0 +1,46 @@
+{
+	"_meta": {
+		"code": "id",
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩"
+	},
+	"section_title": "Alat yang Powerful",
+	"section_subtitle": "Alat operasi batch Web3 profesional untuk meningkatkan efisiensi Anda",
+	"badge": "Alat Web3 Profesional",
+	"feedback_card": {
+		"title": "Ide Anda Penting!",
+		"description": "Ada fitur yang Anda butuhkan? Punya ide untuk membuatnya lebih baik? Kami membangun apa yang ANDA butuhkan - bergabunglah dengan komunitas kami dan beritahu kami!",
+		"feature_1": "💡 Permintaan fitur Anda bisa jadi yang berikutnya",
+		"feature_2": "🚀 Kami kirim cepat - ide ke realitas dalam hitungan hari",
+		"feature_3": "🤝 Jalur langsung ke tim dev kami"
+	},
+	"try_now": "Coba Sekarang",
+	"launch_app": "Luncurkan Aplikasi",
+	"notify_me": "Beritahu Saya",
+	"coming_soon": "Segera Hadir",
+	"available_now": "Tersedia Sekarang",
+	"join_telegram": "Gabung Telegram",
+	"discover_random": "Temukan alat acak",
+	"you_discovered": "Anda Menemukan!",
+	"try_again": "Coba Lagi",
+	"actions": {
+		"import_csv": "Impor CSV",
+		"export_results": "Ekspor Hasil",
+		"clear_all": "Hapus Semua",
+		"share_link": "Bagikan Tautan",
+		"share_tooltip": "Salin tautan yang bisa dibagikan",
+		"settings": "Pengaturan",
+		"settings_tooltip": "Pengaturan jaringan"
+	},
+	"notify_modal": {
+		"title": "Dapatkan Notifikasi",
+		"description": "Masukkan email Anda untuk mendapat notifikasi saat alat ini tersedia.",
+		"email_placeholder": "email@anda.com",
+		"subscribe": "Berlangganan",
+		"cancel": "Batal",
+		"success": "Terima kasih! Kami akan memberitahu Anda saat siap.",
+		"error": "Silakan masukkan alamat email yang valid."
+	}
+}

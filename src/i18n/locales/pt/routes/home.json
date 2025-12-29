@@ -1,0 +1,103 @@
+{
+	"_meta": {
+		"code": "pt",
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷"
+	},
+	"one-to-many-transfer": {
+		"title": "Transferência Um para Muitos",
+		"description": "Envie tokens e NFTs de uma carteira para múltiplos endereços em lote",
+		"features": [
+			"Envie tokens nativos (ETH, BNB, MATIC), tokens ERC20 e NFTs (ERC721, ERC1155)",
+			"Distribuição igual ou valores personalizados por destinatário",
+			"Importe destinatários via CSV, colagem ou entrada manual"
+		]
+	},
+	"token-balance-scanner": {
+		"title": "Verificador de Saldo de Carteiras",
+		"description": "Filtre rapidamente carteiras com saldos, identifique endereços não vazios e agregue participações de tokens em múltiplas carteiras",
+		"features": [
+			"Escaneie até 100K endereços",
+			"Filtre carteiras com saldos",
+			"Estatísticas agregadas de participações",
+			"Exporte para EXCEL/CSV/JSON"
+		]
+	},
+	"wallet-sweep": {
+		"title": "Varredura de Carteiras",
+		"description": "Transfira saldos de múltiplas carteiras para um endereço",
+		"features": [
+			"Varredura completa de saldo, zero poeira restante",
+			"Automação em larga escala, sem confirmação por transação",
+			"Sem necessidade de token nativo nas carteiras de origem",
+			"Sem permissão em qualquer cadeia EVM"
+		]
+	},
+	"contract-deployer": {
+		"title": "Implantador de Contratos",
+		"description": "Implante contratos inteligentes deterministicamente usando proxy CREATE2",
+		"features": [
+			"Implantação determinística em todas as cadeias",
+			"Mesmo endereço de contrato em cada rede",
+			"Interface simples e amigável ao desenvolvedor"
+		]
+	},
+	"contract-events-scanner": {
+		"title": "Scanner de Eventos de Contratos",
+		"description": "Escaneie, analise e exporte eventos de contratos inteligentes da blockchain",
+		"features": [
+			"Escaneie logs de eventos históricos de qualquer contrato",
+			"Filtros de eventos personalizados e seleção de intervalo de blocos",
+			"Exporte dados de eventos para formatos CSV, JSON"
+		]
+	},
+	"call-master": {
+		"title": "Mestre de Chamadas",
+		"description": "Execute chamadas de contratos inteligentes com recursos avançados e operações em lote.",
+		"features": ["Suporte Multi-chamada", "Gerenciamento de ABI", "Construtor de Transações"]
+	},
+	"wallet-generator": {
+		"title": "Fábrica de Carteiras",
+		"description": "Gere múltiplas carteiras a partir de mnemônico, xpub ou texto secreto com suporte a caminho HD",
+		"features": ["Suporte a Caminho HD", "Múltiplas Cadeias", "Exporte para EXCEL/CSV/JSON"]
+	},
+	"dex-moonshot-trader": {
+		"title": "Trader DEX Moonshot",
+		"description": "Compre e venda tokens do DEXScreener Moonshot com interface web fácil",
+		"features": ["Comprar & Vender Tokens", "Slippage Ajustável", "Suporte Multi-Cadeia"]
+	},
+	"token-deployer": {
+		"title": "Implantador de Tokens",
+		"description": "Crie e implante tokens ERC20 com parâmetros personalizados em minutos",
+		"features": ["Recursos Avançados", "Taxas & Anti-Bot", "Implantação Instantânea"]
+	},
+	"nft-deployer": {
+		"title": "Implantador de NFT",
+		"description": "Implante contratos inteligentes de NFT com padrões ERC-721, ERC-721A e ERC-1155",
+		"features": [
+			"Suporte aos padrões ERC-721, ERC-721A, ERC-1155",
+			"Royalties, fornecimento, preço de mint configuráveis",
+			"Recursos avançados: pausável, queimável, revelável"
+		]
+	},
+	"chainlist": {
+		"title": "Lista de Cadeias",
+		"description": "Pesquise e adicione redes blockchain compatíveis com EVM à sua carteira",
+		"features": [
+			"Pesquise por Chain ID, Nome, Símbolo",
+			"Teste RPC em Tempo Real",
+			"Adicionar à Carteira com Um Clique"
+		]
+	},
+	"chain-tools": {
+		"title": "Ferramentas de Cadeia",
+		"description": "Descubra ferramentas Web3 e DApps de qualidade",
+		"features": [
+			"Navegue por 600+ ferramentas Web3 curadas",
+			"Filtre por categoria: DeFi, NFT, Analytics, Segurança",
+			"Pesquise por nome, tag ou blockchain"
+		]
+	}
+}

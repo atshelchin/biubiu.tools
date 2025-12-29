@@ -1,0 +1,86 @@
+{
+	"_meta": {
+		"code": "ru",
+		"name": "Русский",
+		"englishName": "Russian",
+		"direction": "ltr",
+		"flag": "🇷🇺"
+	},
+	"hero_title": "BiuBiu",
+	"hero_subtitle": "Web3 просто и безопасно",
+	"cta_get_started": "Начать",
+	"cta_learn_more": "Узнать больше",
+	"cta": {
+		"title": "Готовы начать?",
+		"subtitle": "Присоединяйтесь к тысячам пользователей, которые уже используют biubiu.tools для упрощения операций Web3",
+		"button_text": "Начать сейчас - Бесплатно"
+	},
+	"stats": {
+		"title": "Нам доверяют пользователи Web3",
+		"registered_users": "Активные пользователи",
+		"transactions": "Транзакции",
+		"total_volume": "Общий объём",
+		"chains_supported": "Поддерживаемые сети",
+		"last_updated": "Статистика в реальном времени"
+	},
+	"footer": {
+		"privacy": "Конфиденциальность",
+		"terms": "Условия"
+	},
+	"helpButton": {
+		"label": "Помощь и отзывы",
+		"getHelp": "Получить помощь",
+		"reportIssue": "Сообщить о проблеме"
+	},
+	"environment_banner": {
+		"community_warning": "Это версия, развёрнутая сообществом, не связанная с официальным biubiu.tools.",
+		"dev_environment": "Среда разработки",
+		"official_reminder": "Вы на официальном сайте. Всегда проверяйте домен: biubiu.tools"
+	},
+	"loading": "Загрузка...",
+	"continue": "Продолжить",
+	"back": "Назад",
+	"next": "Далее",
+	"previous": "Предыдущий",
+	"finish": "Завершить",
+	"done": "Готово",
+	"cancel": "Отмена",
+	"optional": "Необязательно",
+	"enabled": "Включено",
+	"disabled": "Отключено",
+	"chars_left": "символов осталось",
+	"name": "Имя",
+	"symbol": "Символ",
+	"description": "Описание",
+	"standard": "Стандарт",
+	"contract_address": "Адрес контракта",
+	"transaction_hash": "Хеш транзакции",
+	"gas_used": "Использовано газа",
+	"deployment_cost": "Стоимость деплоя",
+	"max_supply": "Максимальная эмиссия",
+	"mint_price": "Цена минта",
+	"royalty": "Роялти",
+	"show_more": "Показать больше",
+	"show_less": "Показать меньше",
+	"back_to_home": "На главную",
+	"faqs": "Часто задаваемые вопросы",
+	"total_checks": "Всего проверок",
+	"passed": "Пройдено",
+	"failed": "Ошибка",
+	"status": {
+		"coming_soon": "Скоро",
+		"alpha": "Альфа",
+		"beta": "Бета",
+		"stable": "Стабильная",
+		"new": "Новое"
+	},
+	"network_selector": {
+		"no_networks_enabled": "Нет включённых сетей",
+		"enable_network_prompt": "Пожалуйста, включите хотя бы одну сеть для продолжения.",
+		"open_network_settings": "Открыть настройки сети",
+		"network_not_found": "Сеть не найдена?",
+		"add_custom_network": "Добавить свою сеть"
+	},
+	"copy_address": "Копировать адрес",
+	"copied": "Скопировано!"
+}

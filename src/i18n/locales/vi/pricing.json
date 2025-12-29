@@ -1,0 +1,55 @@
+{
+	"_meta": {
+		"code": "vi",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳"
+	},
+	"title": "Giá đơn giản, minh bạch",
+	"subtitle": "Chọn gói phù hợp nhất với bạn",
+	"free": {
+		"name": "Miễn phí",
+		"price": "0₫",
+		"period": "mãi mãi",
+		"description": "Hoàn hảo để bắt đầu",
+		"features": [
+			"Tối đa 10 ví",
+			"Thao tác hàng loạt cơ bản",
+			"Hỗ trợ cộng đồng",
+			"Tốc độ tiêu chuẩn"
+		],
+		"cta": "Bắt đầu"
+	},
+	"pro": {
+		"name": "Pro",
+		"price": "450.000₫",
+		"period": "tháng",
+		"description": "Cho người dùng chuyên nghiệp",
+		"features": [
+			"Không giới hạn ví",
+			"Thao tác hàng loạt nâng cao",
+			"Hỗ trợ ưu tiên",
+			"Xử lý tốc độ cao",
+			"Truy cập API"
+		],
+		"cta": "Dùng thử miễn phí"
+	},
+	"enterprise": {
+		"name": "Doanh nghiệp",
+		"price": "Tùy chỉnh",
+		"period": "tháng",
+		"description": "Cho nhóm và tổ chức",
+		"features": [
+			"Tất cả tính năng Pro",
+			"Hỗ trợ riêng",
+			"Tích hợp tùy chỉnh",
+			"Bảo đảm SLA",
+			"Quản lý nhóm"
+		],
+		"cta": "Liên hệ bán hàng"
+	},
+	"note": "Tất cả các gói bao gồm tính năng cơ bản và bảo mật",
+	"custom_plan": "Cần gói tùy chỉnh?",
+	"contact_us": "Liên hệ chúng tôi"
+}

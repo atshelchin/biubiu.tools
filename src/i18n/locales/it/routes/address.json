@@ -1,0 +1,147 @@
+{
+	"_meta": {
+		"code": "it",
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹"
+	},
+	"title": "Esploratore Indirizzi",
+	"subtitle": "Cerca ed esplora indirizzi blockchain etichettati e nomi ENS",
+	"search_placeholder": "Cerca per indirizzo, nome ENS o entità...",
+	"searching": "Ricerca in corso...",
+	"looking_up": "Ricerca sulla blockchain...",
+	"view_details": "Visualizza dettagli",
+	"no_results": "Nessun risultato trovato",
+	"all_addresses": "Tutti gli Indirizzi",
+	"categories": "Sfoglia per Categoria",
+	"browse_by_label": "Sfoglia per Etichetta",
+	"popular_addresses": "Indirizzi Popolari",
+	"popular_names": "Nomi Popolari",
+	"view_on_explorer": "Visualizza su Explorer",
+	"website": "Sito Web",
+	"related_names": "Nomi Correlati",
+	"related_addresses": "Indirizzi Correlati",
+	"balance": "Saldo",
+	"loading_balance": "Caricamento...",
+	"contract": "Contratto",
+	"data_source": "Fonte Dati",
+	"updated": "Aggiornato",
+	"source_manual": "Manuale",
+	"source_verified": "Verificato",
+	"source_etherscan": "Etherscan",
+	"source_community": "Community",
+	"stats": {
+		"addresses": "Indirizzi",
+		"names": "Nomi",
+		"exchanges": "Exchange",
+		"defi": "DeFi",
+		"tokens": "Token",
+		"nft": "NFT",
+		"notable": "Notevole"
+	},
+	"labels": {
+		"exchange": "Exchange",
+		"cex": "CEX",
+		"dex": "DEX",
+		"defi": "DeFi",
+		"lending": "Prestiti",
+		"bridge": "Bridge",
+		"yield": "Rendimento",
+		"derivatives": "Derivati",
+		"liquid-staking": "Staking Liquido",
+		"token": "Token",
+		"stablecoin": "Stablecoin",
+		"memecoin": "Memecoin",
+		"wrapped": "Wrapped",
+		"nft": "NFT",
+		"nft-marketplace": "Marketplace NFT",
+		"whale": "Whale",
+		"smart-money": "Smart Money",
+		"foundation": "Fondazione",
+		"dao": "DAO",
+		"multisig": "Multisig",
+		"deployer": "Deployer",
+		"hacker": "Hacker",
+		"scam": "Truffa",
+		"sanctioned": "Sanzionato",
+		"phishing": "Phishing",
+		"burn": "Burn",
+		"null": "Null",
+		"genesis": "Genesis",
+		"mev": "MEV",
+		"contract": "Contratto",
+		"eoa": "EOA",
+		"notable": "Notevole",
+		"layer2": "Layer 2",
+		"staking": "Staking",
+		"oracle": "Oracle"
+	},
+	"risk": {
+		"safe": "Sicuro",
+		"neutral": "Neutrale",
+		"warning": "Attenzione",
+		"danger": "Pericolo"
+	},
+	"seo": {
+		"index_title": "Esploratore Indirizzi - Ricerca Indirizzi Blockchain e ENS | BiuBiu Tools",
+		"index_description": "Cerca ed esplora {addressCount} indirizzi blockchain etichettati e {nameCount} nomi ENS. Trova exchange, protocolli DeFi, whale e altro.",
+		"detail_description": "{name} ({entity}) su {chain}. Etichette: {labels}. Indirizzo: {address}. Esplora dettagli del wallet e informazioni correlate."
+	},
+	"faq": {
+		"title": "Domande Frequenti",
+		"what_is": "Cos'è {name}?",
+		"what_is_answer": "{name} è un indirizzo wallet appartenente a {entity} sulla rete {chain}.",
+		"is_safe": "È sicuro interagire con questo indirizzo?",
+		"is_safe_answer_safe": "{name} è un indirizzo sicuro verificato da un'entità nota.",
+		"is_safe_answer_neutral": "{name} ha un livello di rischio neutrale. Esercita normale cautela.",
+		"is_safe_answer_warning": "Attenzione: {name} è stato segnalato per potenziali rischi. Procedi con cautela.",
+		"is_safe_answer_danger": "Pericolo: {name} è stato contrassegnato come pericoloso. Non inviare fondi a questo indirizzo.",
+		"how_to_verify": "Come posso verificare questo indirizzo?",
+		"how_to_verify_answer": "Puoi verificare questo indirizzo sul block explorer {explorer} per vedere la cronologia delle transazioni e i dettagli del contratto.",
+		"cex": {
+			"can_deposit": "Posso depositare fondi su questo indirizzo?",
+			"can_deposit_answer": "{name} è un indirizzo di deposito ufficiale per {entity}. Verifica sempre l'indirizzo sul sito ufficiale dell'exchange prima di inviare fondi.",
+			"how_to_withdraw": "Come posso prelevare da questo exchange?",
+			"how_to_withdraw_answer": "Per prelevare da {entity}, accedi al tuo account, vai alla sezione prelievi, inserisci l'indirizzo del wallet di destinazione e conferma la transazione seguendo le procedure di sicurezza dell'exchange."
+		},
+		"dex": {
+			"what_is_contract": "Cos'è questo contratto DEX?",
+			"what_is_contract_answer": "{name} è uno smart contract per l'exchange decentralizzato {entity}. Consente scambi di token senza autorizzazione direttamente sulla blockchain."
+		},
+		"defi": {
+			"what_does_it_do": "Cosa fa questo contratto DeFi?",
+			"what_does_it_do_answer": "{name} è uno smart contract per {entity} che abilita servizi finanziari decentralizzati sulla blockchain.",
+			"lending_how": "Come funziona il prestito su questo protocollo?",
+			"lending_how_answer": "{entity} consente agli utenti di prestare asset per guadagnare interessi o prendere in prestito contro collaterale. I tassi di interesse sono determinati algoritmicamente in base a domanda e offerta.",
+			"bridge_how": "Come uso questo bridge?",
+			"bridge_how_answer": "{name} è un contratto bridge per {entity}. Ti consente di trasferire asset tra diverse reti blockchain in modo sicuro.",
+			"staking_how": "Come funziona lo staking liquido?",
+			"staking_how_answer": "{entity} ti consente di fare staking dei tuoi token ricevendo un token derivato liquido che può essere utilizzato in altri protocolli DeFi."
+		},
+		"token": {
+			"what_is_contract": "Cos'è questo contratto token?",
+			"what_is_contract_answer": "{name} è lo smart contract ufficiale per questo token. Verifica sempre l'indirizzo del contratto prima di interagire.",
+			"stablecoin_peg": "Come viene mantenuto il peg di questa stablecoin?",
+			"stablecoin_peg_answer": "{name} mantiene il suo peg attraverso una combinazione di riserve, meccanismi algoritmici o sovra-collateralizzazione a seconda del suo design."
+		},
+		"entity": {
+			"whale_activity": "Perché questo indirizzo whale è notevole?",
+			"whale_activity_answer": "{name} detiene una quantità significativa di criptovalute. Tracciare i movimenti delle whale può fornire informazioni sulle tendenze del mercato.",
+			"multisig_what": "Cos'è un wallet multisig?",
+			"multisig_what_answer": "{name} è un wallet multi-firma che richiede più approvazioni per eseguire transazioni, fornendo maggiore sicurezza.",
+			"governance": "Qual è il ruolo di governance di questo indirizzo?",
+			"governance_answer": "{name} appartiene a {entity} e potrebbe essere coinvolto nella governance del protocollo, gestione del treasury o decisioni della community."
+		},
+		"risk": {
+			"why_flagged": "Perché questo indirizzo è segnalato?",
+			"why_flagged_answer": "{name} è stato segnalato per associazione con attività malevole come hack, truffe o violazioni delle sanzioni. Esercita estrema cautela.",
+			"what_to_do": "Cosa devo fare se ho interagito con questo indirizzo?",
+			"what_to_do_answer": "Se hai inviato fondi a questo indirizzo, il recupero potrebbe non essere possibile. Verifica se il protocollo ricevente ha un meccanismo di recupero e considera di segnalare alle autorità competenti."
+		},
+		"contract": {
+			"is_verified": "Questo contratto è verificato?",
+			"is_verified_answer": "Puoi verificare se {name} ha codice sorgente verificato sul block explorer di {chain}. I contratti verificati hanno il codice sorgente disponibile pubblicamente per la revisione."
+		}
+	}
+}

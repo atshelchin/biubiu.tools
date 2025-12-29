@@ -1,0 +1,103 @@
+{
+	"_meta": {
+		"code": "vi",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳"
+	},
+	"one-to-many-transfer": {
+		"title": "Chuyển một-đến-nhiều",
+		"description": "Gửi token và NFT từ một ví đến nhiều địa chỉ theo lô",
+		"features": [
+			"Gửi token gốc (ETH, BNB, MATIC), token ERC20 và NFT (ERC721, ERC1155)",
+			"Phân phối đều hoặc số tiền tùy chỉnh cho mỗi người nhận",
+			"Nhập người nhận qua CSV, dán hoặc nhập thủ công"
+		]
+	},
+	"token-balance-scanner": {
+		"title": "Kiểm tra Số dư Ví",
+		"description": "Nhanh chóng lọc ví có số dư, xác định địa chỉ không trống và tổng hợp số lượng token nắm giữ trên nhiều ví",
+		"features": [
+			"Quét tới 100K địa chỉ",
+			"Lọc ví có số dư",
+			"Thống kê tổng hợp",
+			"Xuất ra EXCEL/CSV/JSON"
+		]
+	},
+	"wallet-sweep": {
+		"title": "Quét Ví",
+		"description": "Chuyển số dư từ nhiều ví về một địa chỉ",
+		"features": [
+			"Quét số dư hoàn toàn, không còn bụi",
+			"Tự động hóa quy mô lớn, không cần xác nhận từng giao dịch",
+			"Không cần token gốc trong ví nguồn",
+			"Không cần quyền trên bất kỳ chuỗi EVM nào"
+		]
+	},
+	"contract-deployer": {
+		"title": "Triển khai Hợp đồng",
+		"description": "Triển khai hợp đồng thông minh một cách xác định sử dụng proxy CREATE2",
+		"features": [
+			"Triển khai xác định trên tất cả các chuỗi",
+			"Cùng địa chỉ hợp đồng trên mọi mạng",
+			"Giao diện đơn giản và thân thiện với nhà phát triển"
+		]
+	},
+	"contract-events-scanner": {
+		"title": "Quét Sự kiện Hợp đồng",
+		"description": "Quét, phân tích và xuất các sự kiện hợp đồng thông minh từ blockchain",
+		"features": [
+			"Quét nhật ký sự kiện lịch sử từ bất kỳ hợp đồng nào",
+			"Bộ lọc sự kiện tùy chỉnh và chọn phạm vi khối",
+			"Xuất dữ liệu sự kiện sang định dạng CSV, JSON"
+		]
+	},
+	"call-master": {
+		"title": "Bậc thầy Gọi hàm",
+		"description": "Thực thi các cuộc gọi hợp đồng thông minh với các tính năng nâng cao và thao tác hàng loạt.",
+		"features": ["Hỗ trợ Multi-call", "Quản lý ABI", "Trình tạo Giao dịch"]
+	},
+	"wallet-generator": {
+		"title": "Nhà máy Ví",
+		"description": "Tạo nhiều ví từ cụm từ ghi nhớ, xpub hoặc văn bản bí mật với hỗ trợ đường dẫn HD",
+		"features": ["Hỗ trợ Đường dẫn HD", "Nhiều Chuỗi", "Xuất ra EXCEL/CSV/JSON"]
+	},
+	"dex-moonshot-trader": {
+		"title": "DEX Moonshot Trader",
+		"description": "Mua và bán token từ DEXScreener Moonshot với giao diện web dễ dàng",
+		"features": ["Mua & Bán Token", "Trượt giá Có thể điều chỉnh", "Hỗ trợ Nhiều Chuỗi"]
+	},
+	"token-deployer": {
+		"title": "Triển khai Token",
+		"description": "Tạo và triển khai token ERC20 với các tham số tùy chỉnh trong vài phút",
+		"features": ["Tính năng Nâng cao", "Thuế & Chống Bot", "Triển khai Tức thì"]
+	},
+	"nft-deployer": {
+		"title": "Triển khai NFT",
+		"description": "Triển khai hợp đồng thông minh NFT với các tiêu chuẩn ERC-721, ERC-721A và ERC-1155",
+		"features": [
+			"Hỗ trợ tiêu chuẩn ERC-721, ERC-721A, ERC-1155",
+			"Bản quyền, nguồn cung, giá mint có thể cấu hình",
+			"Tính năng nâng cao: tạm dừng, đốt, tiết lộ"
+		]
+	},
+	"chainlist": {
+		"title": "Danh sách Chuỗi",
+		"description": "Tìm kiếm và thêm mạng blockchain tương thích EVM vào ví của bạn",
+		"features": [
+			"Tìm kiếm theo Chain ID, Tên, Ký hiệu",
+			"Kiểm tra RPC Thời gian thực",
+			"Thêm vào Ví Một Nhấp"
+		]
+	},
+	"chain-tools": {
+		"title": "Công cụ Chuỗi",
+		"description": "Khám phá các công cụ Web3 và DApp chất lượng",
+		"features": [
+			"Duyệt 600+ công cụ Web3 được tuyển chọn",
+			"Lọc theo danh mục: DeFi, NFT, Phân tích, Bảo mật",
+			"Tìm kiếm theo tên, thẻ hoặc blockchain"
+		]
+	}
+}

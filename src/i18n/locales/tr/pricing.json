@@ -1,0 +1,55 @@
+{
+	"_meta": {
+		"code": "tr",
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷"
+	},
+	"title": "Basit, Şeffaf Fiyatlandırma",
+	"subtitle": "Size en uygun planı seçin",
+	"free": {
+		"name": "Ücretsiz",
+		"price": "₺0",
+		"period": "sonsuza dek",
+		"description": "Başlamak için mükemmel",
+		"features": [
+			"10 cüzdana kadar",
+			"Temel toplu işlemler",
+			"Topluluk desteği",
+			"Standart hız"
+		],
+		"cta": "Başla"
+	},
+	"pro": {
+		"name": "Pro",
+		"price": "₺599",
+		"period": "ay",
+		"description": "Profesyonel kullanıcılar için",
+		"features": [
+			"Sınırsız cüzdan",
+			"Gelişmiş toplu işlemler",
+			"Öncelikli destek",
+			"Yüksek hızlı işleme",
+			"API erişimi"
+		],
+		"cta": "Ücretsiz Denemeyi Başlat"
+	},
+	"enterprise": {
+		"name": "Kurumsal",
+		"price": "Özel",
+		"period": "ay",
+		"description": "Ekipler ve kuruluşlar için",
+		"features": [
+			"Pro'daki her şey",
+			"Özel destek",
+			"Özel entegrasyonlar",
+			"SLA garantisi",
+			"Ekip yönetimi"
+		],
+		"cta": "Satışla İletişime Geç"
+	},
+	"note": "Tüm planlar temel özellikler ve güvenlik içerir",
+	"custom_plan": "Özel bir plana mı ihtiyacınız var?",
+	"contact_us": "Bize ulaşın"
+}

@@ -1,0 +1,63 @@
+{
+	"_meta": {
+		"code": "tr",
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷"
+	},
+	"owner": "Sahip",
+	"resolved_address": "Çözümlenen Adres",
+	"view_address_details": "Adres detaylarını görüntüle",
+	"not_resolved": "Bu isim şu anda herhangi bir adrese çözümlenmiyor",
+	"socials": "Sosyal Bağlantılar",
+	"view_on": "{platform}'da görüntüle",
+	"view_on_etherscan": "Etherscan'de görüntüle",
+	"registration_info": "Kayıt Bilgisi",
+	"registration_status": "Durum",
+	"registered_at": "Kayıt Tarihi",
+	"expires_at": "Bitiş Tarihi",
+	"days_remaining": "{days} gün kaldı",
+	"expired": "Süresi doldu",
+	"expired_ago": "{days} gün önce süresi doldu",
+	"status": {
+		"registered": "Kayıtlı",
+		"available": "Müsait",
+		"grace-period": "Ek Süre",
+		"premium": "Premium",
+		"unknown": "Bilinmiyor"
+	},
+	"ens_records": "ENS Kayıtları",
+	"location": "Konum",
+	"keywords": "Anahtar Kelimeler",
+	"social_presence": "Sosyal medya hesapları",
+	"seo": {
+		"suffix": "ENS isim detaylarını, çözümlenen adresi ve sahip bilgilerini keşfedin.",
+		"detail_description": "{name}, bir {type} alan adıdır. Çözümlenen: {address}. Sahip, kayıtlar ve ilgili bilgileri bulun."
+	},
+	"faq": {
+		"title": "Sık Sorulan Sorular",
+		"what_is": "{name} nedir?",
+		"what_is_answer": "{name}, blok zinciri adresleri için okunabilir bir tanımlayıcı sağlayan {type} alan adıdır.",
+		"how_to_use": "Bu ismi nasıl kullanırım?",
+		"how_to_use_answer": "Uzun onaltılık adres yerine {name}'e kripto para gönderebilirsiniz. Çoğu cüzdan ve dApp, ENS isimlerini destekler.",
+		"who_owns": "Bu ismin sahibi kim?",
+		"who_owns_answer": "{name}, {address} adresine çözümlenir. Sahip, çözümlenen adresten farklı olabilir.",
+		"how_to_buy": "Benzer bir alan adını nasıl kaydederim?",
+		"how_to_buy_answer": "Resmi kayıt şirketi üzerinden {type} alan adlarını kaydedebilirsiniz. ENS alan adları app.ens.domains'de kayıt edilir.",
+		"ens": {
+			"can_expire": "Bu ENS isminin süresi dolabilir mi?",
+			"can_expire_answer": "Evet, {name}'in bir son kullanma tarihi var. Mevcut sahip, sahipliği korumak için süresi dolmadan yenilemelidir.",
+			"how_to_renew": "ENS ismini nasıl yenilerim?",
+			"how_to_renew_answer": "{name}'i yenilemek için app.ens.domains'i ziyaret edin, cüzdanınızı bağlayın ve yenileme ücretini ödeyerek kayıt süresini uzatın.",
+			"how_to_set_records": "ENS ismine kayıt nasıl ayarlarım?",
+			"how_to_set_records_answer": "app.ens.domains'i ziyaret edin, {name}'in sahibi olan cüzdanı bağlayın ve adresler, metin kayıtları ve içerik hash'leri dahil çeşitli kayıtları ayarlayabilirsiniz.",
+			"what_are_records": "ENS metin kayıtları nedir?",
+			"what_are_records_answer": "ENS metin kayıtları, sosyal medya hesapları, web sitesi URL'leri, e-posta, avatar ve açıklama gibi ek bilgileri isminize eklemenize olanak tanır."
+		},
+		"entity": {
+			"who_is_owner": "Bu alan adının sahibi kim?",
+			"who_is_owner_answer": "{name}, {entity} tarafından kayıtlıdır. Bu, kamuya açık kayıtlara dayalı doğrulanmış bir ilişkidir."
+		}
+	}
+}

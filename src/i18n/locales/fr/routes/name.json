@@ -1,0 +1,63 @@
+{
+	"_meta": {
+		"code": "fr",
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷"
+	},
+	"owner": "Propriétaire",
+	"resolved_address": "Adresse résolue",
+	"view_address_details": "Voir les détails de l'adresse",
+	"not_resolved": "Ce nom n'est actuellement résolu à aucune adresse",
+	"socials": "Liens sociaux",
+	"view_on": "Voir sur {platform}",
+	"view_on_etherscan": "Voir sur Etherscan",
+	"registration_info": "Info d'enregistrement",
+	"registration_status": "Statut",
+	"registered_at": "Enregistré",
+	"expires_at": "Expire",
+	"days_remaining": "{days} jours restants",
+	"expired": "Expiré",
+	"expired_ago": "Expiré il y a {days} jours",
+	"status": {
+		"registered": "Enregistré",
+		"available": "Disponible",
+		"grace-period": "Période de grâce",
+		"premium": "Premium",
+		"unknown": "Inconnu"
+	},
+	"ens_records": "Enregistrements ENS",
+	"location": "Emplacement",
+	"keywords": "Mots-clés",
+	"social_presence": "Présence sur les réseaux sociaux",
+	"seo": {
+		"suffix": "Explorez les détails du nom ENS, l'adresse résolue et les informations du propriétaire.",
+		"detail_description": "{name} est un domaine {type}. Résolu à : {address}. Trouvez le propriétaire, les enregistrements et les informations connexes."
+	},
+	"faq": {
+		"title": "Questions fréquentes",
+		"what_is": "Qu'est-ce que {name} ?",
+		"what_is_answer": "{name} est un nom de domaine {type} qui fournit un identifiant lisible pour les adresses blockchain.",
+		"how_to_use": "Comment utiliser ce nom ?",
+		"how_to_use_answer": "Vous pouvez envoyer des cryptomonnaies à {name} au lieu d'utiliser la longue adresse hexadécimale. La plupart des portefeuilles et dApps supportent les noms ENS.",
+		"who_owns": "Qui possède ce nom ?",
+		"who_owns_answer": "{name} est résolu à l'adresse {address}. Le propriétaire peut être différent de l'adresse de résolution.",
+		"how_to_buy": "Comment puis-je enregistrer un domaine similaire ?",
+		"how_to_buy_answer": "Vous pouvez enregistrer des domaines {type} via le registraire officiel. Les domaines ENS sont enregistrés sur app.ens.domains.",
+		"ens": {
+			"can_expire": "Ce nom ENS peut-il expirer ?",
+			"can_expire_answer": "Oui, {name} a une date d'expiration. Le propriétaire actuel doit le renouveler avant l'expiration pour conserver la propriété.",
+			"how_to_renew": "Comment renouveler un nom ENS ?",
+			"how_to_renew_answer": "Pour renouveler {name}, visitez app.ens.domains, connectez votre portefeuille et prolongez la période d'enregistrement en payant les frais de renouvellement.",
+			"how_to_set_records": "Comment configurer les enregistrements pour mon nom ENS ?",
+			"how_to_set_records_answer": "Visitez app.ens.domains, connectez le portefeuille propriétaire de {name}, et vous pourrez configurer divers enregistrements incluant adresses, enregistrements texte et hachages de contenu.",
+			"what_are_records": "Que sont les enregistrements texte ENS ?",
+			"what_are_records_answer": "Les enregistrements texte ENS vous permettent d'attacher des informations supplémentaires à votre nom, comme des comptes de réseaux sociaux, des URLs de sites web, email, avatar et description."
+		},
+		"entity": {
+			"who_is_owner": "Qui est le propriétaire de ce domaine ?",
+			"who_is_owner_answer": "{name} est enregistré par {entity}. C'est une association vérifiée basée sur des registres publics."
+		}
+	}
+}

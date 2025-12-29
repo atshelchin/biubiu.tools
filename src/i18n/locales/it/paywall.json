@@ -1,0 +1,67 @@
+{
+	"prompt": {
+		"close": "Chiudi",
+		"upgrade_membership": "Aggiorna Abbonamento",
+		"pay": "Paga {{amount}} {{symbol}}",
+		"recommend_tip": "💡 Aggiorna l'abbonamento per accesso illimitato gratuito"
+	},
+	"modal": {
+		"title": "Passa a Premium",
+		"subtitle": "Scegli il piano perfetto per le tue esigenze",
+		"benefits": {
+			"title": "Cosa Include",
+			"zero_fees": "Zero commissioni su tutti gli strumenti",
+			"unlimited_access": "Accesso illimitato alle funzionalità premium",
+			"priority_support": "Supporto clienti prioritario"
+		},
+		"plans": {
+			"daily": "Giornaliero",
+			"monthly": "Mensile",
+			"yearly": "Annuale",
+			"popular": "Popolare",
+			"days": "{{days}} giorni",
+			"per_day": "{{price}} {{symbol}}/giorno"
+		},
+		"referral": {
+			"label": "Riferito da:",
+			"direct": "Visita diretta"
+		},
+		"status": {
+			"loading": "Caricamento stato abbonamento...",
+			"active": "Membro Premium Attivo",
+			"expires_in": "Scade tra {{days}} giorni"
+		},
+		"cta": "Acquista Accesso Premium",
+		"processing": "Elaborazione...",
+		"footer_note": "Abbonamento valido solo su {{network}} • Il cambio rete richiede nuovo acquisto",
+		"success": {
+			"title": "Acquisto Riuscito!",
+			"message": "Ti sei abbonato con successo al piano {{tier}}!",
+			"tx_label": "Transazione:",
+			"auto_close": "Questa finestra si chiuderà automaticamente tra 5 secondi..."
+		},
+		"error": {
+			"connect_wallet": "Per favore connetti prima il tuo wallet",
+			"invalid_tier": "Tier selezionato non valido",
+			"tx_failed": "Transazione fallita",
+			"purchase_failed": "Impossibile completare l'acquisto"
+		}
+	},
+	"rules": {
+		"membership_required": "Questa funzionalità richiede un abbonamento",
+		"quota_exceeded": "Quota giornaliera gratuita superata ({{limit}}/{{unit}})",
+		"quota_remaining": "Quota gratuita rimasta oggi: {{remaining}}",
+		"upgrade_hint": "Aggiorna per accesso illimitato",
+		"upgrade_hint_cheaper": "L'upgrade dell'abbonamento è più conveniente",
+		"fee_info": "Commissione: {{total}} ETH ({{count}} × {{fee}} ETH)",
+		"exceeded_fee_info": "Quota superata, paga {{total}} ETH",
+		"unit_items": "elementi",
+		"unit_requests": "richieste"
+	},
+	"status": {
+		"not_connected": "Per favore connetti prima il wallet",
+		"member": "Membro Premium",
+		"expires_in": "Scade tra {{days}} giorni",
+		"expired": "Abbonamento scaduto"
+	}
+}

@@ -1,0 +1,160 @@
+{
+	"_meta": {
+		"code": "id",
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩"
+	},
+	"address_text_import": {
+		"placeholder": "Tempel alamat wallet di sini (satu per baris)\n0x1234...\n0x5678...\n0xabcd...",
+		"hint": "Masukkan satu alamat per baris",
+		"import_button": "Impor alamat ({count})",
+		"importing": "Mengimpor... {progress}%",
+		"column_label": "Alamat"
+	},
+	"xpub_import_form": {
+		"placeholder": "Masukkan extended public key Anda (xpub, ypub, atau zpub)...",
+		"hint": "xpub memungkinkan derivasi alamat tanpa mengekspos private key",
+		"derivation_path": "Rentang derivasi",
+		"derive_button": "Derivasi alamat",
+		"deriving": "Menderivasi... {progress}%"
+	},
+	"gas_funding": {
+		"title": "Isi Gas",
+		"target_wallet": "Wallet tujuan",
+		"estimated_gas": "Estimasi gas",
+		"suggested_amount": "Jumlah yang disarankan",
+		"send_amount": "Jumlah kirim",
+		"amount_placeholder": "Masukkan jumlah",
+		"tip": "Tips: Sudah terisi dengan jumlah yang disarankan (2x estimasi) untuk memastikan dana mencukupi",
+		"security_notice": "💰 Dana yang dikirim ke wallet sementara dapat ditransfer menggunakan private key - dana Anda aman",
+		"btn_send": "Kirim",
+		"sending": "Mengirim...",
+		"cancel": "Batal"
+	},
+	"file_upload": {
+		"title": "Unggah file",
+		"drop_file": "Seret dan lepas file di sini atau klik untuk mengunggah",
+		"supported_formats": "Format yang didukung: TXT, CSV, XLSX, XLS",
+		"choose_file": "Pilih file",
+		"remove_file": "Hapus file",
+		"processing": "Memproses...",
+		"mode_text": "Mode teks",
+		"mode_table": "Mode tabel",
+		"preview_title": "Pratinjau file",
+		"select_columns_hint": "Silakan pilih {count} kolom (klik tombol header untuk menandai urutan kolom)",
+		"select_columns_hint_click": "Silakan pilih {count} kolom (klik header kolom untuk menandai, klik lagi untuk berganti)",
+		"select_single_column_hint": "💡 Klik header kolom untuk menandainya sebagai kolom [{label}]",
+		"click_to_select": "Klik untuk memilih kolom ini sebagai [{label}]",
+		"click_to_deselect": "Klik lagi untuk membatalkan pilihan",
+		"click_to_change": "Klik untuk beralih ke kolom ini",
+		"click_to_cycle": "Klik lagi untuk berpindah ke posisi berikutnya",
+		"generated_column": "Kolom {index}",
+		"column": "Kolom",
+		"showing_first_rows": "Menampilkan {count} baris pertama",
+		"cancel": "Batal",
+		"confirm": "Konfirmasi",
+		"error_unsupported_format": "Format file tidak didukung",
+		"error_empty_file": "File kosong",
+		"error_incomplete_selection": "Silakan selesaikan pemilihan kolom",
+		"error_all_labels_assigned": "Semua label sudah ditetapkan. Silakan hapus label dari kolom lain terlebih dahulu"
+	},
+	"quick_rpc_manager": {
+		"title": "Manajemen RPC cepat",
+		"network": "Jaringan saat ini",
+		"add_new": "Tambah RPC baru",
+		"placeholder": "https://contoh.com/rpc",
+		"add_button": "Tambah",
+		"current_rpcs": "Daftar RPC saat ini",
+		"primary": "Utama",
+		"no_rpcs": "Tidak ada endpoint RPC",
+		"invalid_url": "URL tidak valid, harus diawali dengan http:// atau https://",
+		"duplicate_url": "Endpoint RPC ini sudah ada",
+		"at_least_one": "Minimal satu endpoint RPC diperlukan",
+		"hint": "Menambahkan beberapa endpoint RPC memungkinkan pergantian otomatis saat satu dibatasi, meningkatkan tingkat keberhasilan pemindaian.",
+		"recommend_prefix": "Temukan endpoint RPC yang tersedia di",
+		"recommend_suffix": "",
+		"cancel": "Batal",
+		"save": "Simpan dan lanjutkan pemindaian",
+		"url_format_hint": "Masukkan URL RPC yang diawali dengan http:// atau https://",
+		"http_warning": "Menggunakan http:// (tidak aman) mungkin diblokir oleh browser. Untuk mengizinkan di Chrome: Klik ikon di address bar → Pengaturan situs → Konten tidak aman → Izinkan"
+	},
+	"address_path_selector": {
+		"sequential": {
+			"label": "Berurutan",
+			"description": "0, 1, 2, 3..."
+		},
+		"date": {
+			"label": "Berbasis tanggal",
+			"description": "20240101, 20240102...",
+			"presets": {
+				"1_year": "1 tahun terakhir",
+				"10_years": "10 tahun terakhir",
+				"100_years": "100 tahun terakhir"
+			}
+		},
+		"quick_select": "Pilih cepat",
+		"start": "Mulai",
+		"end": "Akhir",
+		"to": "sampai",
+		"from_year": "Dari tahun",
+		"to_year": "Sampai tahun",
+		"format": "Format",
+		"example": "Contoh",
+		"will_generate": "Akan menghasilkan",
+		"estimated_addresses": "Estimasi alamat",
+		"addresses": "alamat",
+		"limited_to": "Dibatasi maksimal {max}",
+		"advanced_settings": "Pengaturan lanjutan",
+		"switch_to_advanced": "Beralih ke pengaturan lanjutan",
+		"switch_to_quick": "Beralih ke pilih cepat"
+	},
+	"wallet_list": {
+		"empty_message": "Belum ada wallet yang ditambahkan",
+		"remove_wallet": "Hapus wallet",
+		"showing": "Menampilkan {start}-{end} dari {total}",
+		"previous_page": "Halaman sebelumnya",
+		"next_page": "Halaman berikutnya"
+	},
+	"token_card": {
+		"native": "Native",
+		"erc20": "ERC20",
+		"decimals_label": "Desimal",
+		"decimals_unit": "desimal",
+		"view_on_explorer": "Lihat di block explorer",
+		"remove_custom_token": "Hapus token kustom",
+		"remove_dialog_title": "Hapus token kustom",
+		"remove_dialog_message": "Apakah Anda yakin ingin menghapus {symbol} ({name})? Tindakan ini tidak dapat dibatalkan.",
+		"remove_button": "Hapus token"
+	},
+	"token_selector": {
+		"empty_message": "Tidak ada token tersedia",
+		"select_all": "Pilih semua",
+		"deselect_all": "Batalkan semua"
+	},
+	"add_token_button": {
+		"button_text": "Tambah token",
+		"button_subtext": "Tambah token ERC20 kustom"
+	},
+	"add_token_modal": {
+		"title": "Tambah token kustom",
+		"token_address_label": "Alamat token",
+		"token_symbol_label": "Simbol",
+		"token_name_label": "Nama",
+		"decimals_label": "Desimal",
+		"fetching": "Mengambil...",
+		"found": "Ditemukan",
+		"not_found": "Tidak ditemukan",
+		"auto_filled": "Terisi otomatis dari blockchain",
+		"address_placeholder": "0x...",
+		"symbol_placeholder": "cth. USDT",
+		"name_placeholder": "cth. Tether USD",
+		"address_hint": "Alamat kontrak token ERC20",
+		"decimals_hint": "Desimal token (biasanya 18)",
+		"error_label": "Error:",
+		"success_message": "Token berhasil ditambahkan!",
+		"add_token_button": "Tambah token",
+		"adding_button": "Menambahkan..."
+	}
+}

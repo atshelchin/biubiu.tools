@@ -1,0 +1,55 @@
+{
+	"_meta": {
+		"code": "it",
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹"
+	},
+	"title": "Prezzi Semplici e Trasparenti",
+	"subtitle": "Scegli il piano più adatto a te",
+	"free": {
+		"name": "Gratuito",
+		"price": "€0",
+		"period": "per sempre",
+		"description": "Perfetto per iniziare",
+		"features": [
+			"Fino a 10 wallet",
+			"Operazioni batch di base",
+			"Supporto community",
+			"Velocità standard"
+		],
+		"cta": "Inizia"
+	},
+	"pro": {
+		"name": "Pro",
+		"price": "€19",
+		"period": "mese",
+		"description": "Per utenti esperti",
+		"features": [
+			"Wallet illimitati",
+			"Operazioni batch avanzate",
+			"Supporto prioritario",
+			"Elaborazione ad alta velocità",
+			"Accesso API"
+		],
+		"cta": "Inizia Prova Gratuita"
+	},
+	"enterprise": {
+		"name": "Enterprise",
+		"price": "Personalizzato",
+		"period": "mese",
+		"description": "Per team e organizzazioni",
+		"features": [
+			"Tutto del Pro",
+			"Supporto dedicato",
+			"Integrazioni personalizzate",
+			"Garanzia SLA",
+			"Gestione team"
+		],
+		"cta": "Contatta Vendite"
+	},
+	"note": "Tutti i piani includono funzionalità base e sicurezza",
+	"custom_plan": "Hai bisogno di un piano personalizzato?",
+	"contact_us": "Contattaci"
+}

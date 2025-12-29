@@ -1,0 +1,290 @@
+{
+	"_meta": {
+		"code": "vi",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳"
+	},
+	"title": "Chuyển Một-Sang-Nhiều",
+	"description": "Gửi token và NFT từ một ví đến nhiều địa chỉ theo lô",
+	"seo": {
+		"page_title": "Chuyển Một-Sang-Nhiều - Gửi Hàng loạt Token & NFT đến Nhiều Ví | BiuBiu Tools",
+		"page_description": "Gửi token và NFT từ một ví đến nhiều địa chỉ theo lô. Hỗ trợ ETH, ERC20, ERC721, ERC1155 trên nhiều mạng blockchain.",
+		"keywords": "chuyển một sang nhiều, gửi hàng loạt, airdrop, chuyển token, chuyển NFT, đa gửi, chuyển hàng loạt, ERC20, ERC721, ERC1155, phân phối crypto, công cụ web3",
+		"webapp_name": "Chuyển Một-Sang-Nhiều",
+		"webapp_description": "Gửi hàng loạt token và NFT từ một ví đến nhiều người nhận trên các mạng blockchain khác nhau",
+		"howto_name": "Cách Gửi Hàng loạt Token & NFT đến Nhiều Ví",
+		"howto_description": "Hướng dẫn đầy đủ để gửi token và NFT từ một ví đến nhiều địa chỉ người nhận",
+		"howto_tool_1": "Ví Web3 (MetaMask, WalletConnect, v.v.)",
+		"howto_tool_2": "Số dư token và phí gas đầy đủ",
+		"step_1_name": "Kết nối Ví",
+		"step_1_text": "Nhấp vào nút \"Kết nối Ví\" và kết nối ví Web3 của bạn (MetaMask, WalletConnect, v.v.) với ứng dụng. Ví này sẽ là nguồn token để phân phối.",
+		"step_1_description": "Liên kết ví Web3 của bạn làm ví nguồn",
+		"step_2_name": "Kiểm tra Phụ thuộc",
+		"step_2_text": "Xác minh rằng các hợp đồng thông minh cần thiết (WETH và TokenDistribution) đã được triển khai trên mạng đã chọn. Các hợp đồng này cho phép chức năng phân phối hàng loạt.",
+		"step_2_description": "Xác minh các hợp đồng cần thiết đã được triển khai",
+		"step_3_name": "Chọn Token và Số lượng",
+		"step_3_text": "Chọn loại token để phân phối (token gốc, ERC20 hoặc NFT), đặt chế độ phân phối (số lượng bằng nhau hoặc tùy chỉnh theo người nhận), và chỉ định số lượng mỗi người nhận hoặc tổng số.",
+		"step_3_description": "Cấu hình token và số lượng phân phối",
+		"step_4_name": "Nhập Người nhận",
+		"step_4_text": "Thêm địa chỉ ví người nhận bằng cách nhập thủ công, tải lên tệp CSV hoặc dán danh sách. Tùy chọn đặt số lượng tùy chỉnh cho mỗi người nhận.",
+		"step_4_description": "Thêm địa chỉ ví người nhận",
+		"step_5_name": "Xem lại và Thực hiện",
+		"step_5_text": "Xem lại tóm tắt phân phối bao gồm tổng số, số người nhận và chi phí gas ước tính. Xác nhận và thực hiện phân phối hàng loạt. Ký mỗi giao dịch bằng ví của bạn.",
+		"step_5_description": "Thực hiện phân phối token",
+		"feature_1": "Kết nối ví Web3 (MetaMask, WalletConnect, Coinbase Wallet)",
+		"feature_2": "Hỗ trợ nhiều mạng (Ethereum, Polygon, BSC, Base, Arbitrum, Optimism)",
+		"feature_3": "Gửi token gốc (ETH, BNB, MATIC), token ERC20 và NFT (ERC721, ERC1155)",
+		"feature_4": "Phân phối bằng nhau hoặc số lượng tùy chỉnh theo người nhận",
+		"feature_5": "Nhập người nhận qua CSV, dán hoặc nhập thủ công"
+	},
+	"faqs": {
+		"what_is_one_to_many": "Chuyển Một-Sang-Nhiều là gì?",
+		"one_to_many_explanation": "Chuyển Một-Sang-Nhiều cho phép bạn gửi token hoặc NFT từ một ví đến nhiều địa chỉ người nhận theo lô. Lý tưởng cho airdrop, trả lương, phân phối phần thưởng và bất kỳ tình huống nào bạn cần gửi tài sản đến nhiều địa chỉ một cách hiệu quả.",
+		"what_tokens_supported": "Loại token nào được hỗ trợ?",
+		"tokens_supported_explanation": "Chúng tôi hỗ trợ token gốc (ETH, BNB, MATIC, v.v.), token ERC20 (USDT, USDC, v.v.) và NFT bao gồm cả tiêu chuẩn ERC721 và ERC1155.",
+		"what_is_equal_distribution": "Chế độ phân phối bằng nhau là gì?",
+		"equal_distribution_explanation": "Trong chế độ phân phối bằng nhau, bạn chỉ định số lượng mỗi người nhận và mọi địa chỉ nhận được cùng một số lượng. Tổng được tự động tính dựa trên số người nhận.",
+		"what_is_custom_amounts": "Chế độ số lượng tùy chỉnh là gì?",
+		"custom_amounts_explanation": "Trong chế độ số lượng tùy chỉnh, bạn có thể chỉ định số lượng khác nhau cho mỗi người nhận. Điều này hữu ích khi các địa chỉ khác nhau cần nhận số lượng khác nhau.",
+		"how_to_import_recipients": "Làm thế nào để nhập địa chỉ người nhận?",
+		"import_recipients_explanation": "Bạn có thể thêm người nhận bằng: 1) Nhập thủ công từng cái một, 2) Dán danh sách địa chỉ, hoặc 3) Tải lên tệp CSV với địa chỉ và số lượng tùy chọn.",
+		"what_networks_supported": "Mạng blockchain nào được hỗ trợ?",
+		"networks_supported_explanation": "Hiện tại chúng tôi hỗ trợ Ethereum Mainnet, Polygon, BSC (Binance Smart Chain), Base, Arbitrum và Optimism. Thêm mạng sẽ được bổ sung trong tương lai."
+	},
+	"step2": {
+		"content": {
+			"title": "Kiểm tra Phụ thuộc",
+			"description": "Xác minh các hợp đồng cần thiết đã được triển khai trên mạng này",
+			"checks": {
+				"contract": {
+					"weth_description": "Hợp đồng WETH cho chế độ thực thi ủy quyền (chuyển đổi WETH sang ETH để phân phối)",
+					"token_distribution_description": "Hợp đồng TokenDistribution để phân phối hàng loạt token và NFT đến nhiều người nhận"
+				}
+			}
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "Chọn Token",
+			"description": "Chọn loại token và chỉ định token nào để phân phối"
+		},
+		"content": {
+			"title": "Chọn Token để Phân phối",
+			"description": "Chọn loại token và chọn token cụ thể bạn muốn gửi đến nhiều người nhận",
+			"token_type": {
+				"title": "Loại Token",
+				"native": "Token Gốc",
+				"native_desc": "ETH, BNB, MATIC, v.v.",
+				"erc20": "Token ERC20",
+				"erc20_desc": "USDT, USDC, DAI, v.v.",
+				"erc721": "NFT ERC721",
+				"erc721_desc": "NFT đơn (1 mỗi người nhận)",
+				"erc1155": "Đa-Token ERC1155",
+				"erc1155_desc": "NFT hàng loạt hoặc token bán thay thế"
+			},
+			"select_token": {
+				"title": "Chọn Token",
+				"no_tokens": "Không có token khả dụng cho mạng này",
+				"add_custom": "Thêm Token Tùy chỉnh"
+			},
+			"nft_config": {
+				"title": "Cấu hình NFT",
+				"contract_address": "Địa chỉ Hợp đồng",
+				"contract_placeholder": "Nhập địa chỉ hợp đồng NFT (0x...)",
+				"token_ids": "ID Token",
+				"token_ids_placeholder": "Nhập ID Token (phân cách bằng dấu phẩy cho nhiều ID)",
+				"token_ids_hint": "Cho ERC721: một ID token mỗi người nhận. Cho ERC1155: chỉ định ID token để phân phối.",
+				"load_button": "Tải Thông tin NFT",
+				"loading": "Đang tải thông tin NFT...",
+				"collection_name": "Bộ sưu tập",
+				"total_supply": "Tổng Cung",
+				"your_balance": "Số dư của Bạn",
+				"invalid_address": "Định dạng địa chỉ hợp đồng không hợp lệ"
+			},
+			"amount_mode": {
+				"title": "Chế độ Phân phối",
+				"equal": "Phân phối Bằng nhau",
+				"equal_desc": "Cùng số lượng cho tất cả người nhận",
+				"custom": "Số lượng Tùy chỉnh",
+				"custom_desc": "Đặt số lượng riêng cho mỗi người nhận (ở Bước 4)",
+				"random": "Số lượng Ngẫu nhiên",
+				"random_desc": "Số lượng ngẫu nhiên trong phạm vi cho mỗi người nhận"
+			},
+			"amount_input": {
+				"title": "Số lượng Mỗi Người nhận",
+				"placeholder": "0.0",
+				"hint": "Số lượng này sẽ được gửi đến mỗi người nhận. Tổng sẽ được tính dựa trên số người nhận."
+			},
+			"custom_mode_info": "Bạn đã chọn chế độ số lượng tùy chỉnh. Bạn sẽ đặt số lượng riêng cho mỗi người nhận ở Bước 4.",
+			"random_mode_config": {
+				"min_amount": "Số lượng Tối thiểu",
+				"max_amount": "Số lượng Tối đa",
+				"min_placeholder": "0.0",
+				"max_placeholder": "0.0",
+				"hint": "Mỗi người nhận sẽ nhận số lượng ngẫu nhiên giữa giá trị tối thiểu và tối đa.",
+				"valid_range": "Số lượng ngẫu nhiên sẽ từ {min} đến {max} {symbol}",
+				"error_max_less_than_min": "Số lượng tối đa phải lớn hơn số lượng tối thiểu"
+			}
+		},
+		"footer": {
+			"continue": "Tiếp tục đến Người nhận",
+			"hint": "Chọn token và cấu hình số lượng để tiếp tục"
+		}
+	},
+	"step4": {
+		"sidebar": {
+			"title": "Nhập Người nhận",
+			"description": "Thêm địa chỉ ví sẽ nhận token"
+		},
+		"content": {
+			"title": "Thêm Người nhận",
+			"description": "Nhập địa chỉ ví sẽ nhận token từ phân phối này",
+			"distributing": "Đang phân phối",
+			"method": {
+				"manual": "Nhập Thủ công",
+				"paste": "Dán Danh sách",
+				"csv": "Tải lên CSV"
+			},
+			"manual": {
+				"title": "Thêm Người nhận Thủ công",
+				"address": "Địa chỉ Ví",
+				"token_id": "ID Token",
+				"token_amount": "Số lượng",
+				"amount": "Số tiền",
+				"label": "Nhãn (tùy chọn)",
+				"label_placeholder": "vd. Alice, Bob",
+				"add_button": "Thêm Người nhận"
+			},
+			"paste": {
+				"title": "Dán Nhiều Địa chỉ",
+				"add_button": "Thêm Tất cả"
+			},
+			"paste_hint": {
+				"fungible_equal": "Định dạng: địa chỉ, nhãn (tùy chọn). Mỗi dòng một địa chỉ.",
+				"fungible_custom": "Định dạng: địa chỉ, nhãn (tùy chọn), số tiền. Mỗi dòng một địa chỉ.",
+				"erc721": "Định dạng: địa chỉ, tokenId, nhãn (tùy chọn). Mỗi dòng một địa chỉ.",
+				"erc1155": "Định dạng: địa chỉ, tokenId, số lượng, nhãn (tùy chọn). Mỗi dòng một địa chỉ."
+			},
+			"csv": {
+				"title": "Tải lên Tệp CSV",
+				"description": "Tải lên tệp CSV với địa chỉ người nhận",
+				"upload_button": "Chọn Tệp",
+				"hint": "CSV phải chứa cột địa chỉ. Tùy chọn: cột nhãn, số tiền/tokenId."
+			},
+			"recipients": {
+				"title": "Người nhận",
+				"clear_all": "Xóa Tất cả",
+				"regenerate_random": "Tạo lại Số lượng",
+				"col_address": "Địa chỉ",
+				"col_token_id": "ID Token",
+				"col_token_amount": "SL",
+				"col_amount": "Số tiền",
+				"col_label": "Nhãn"
+			},
+			"empty_state": "Chưa có người nhận nào được thêm. Sử dụng biểu mẫu ở trên để thêm địa chỉ người nhận.",
+			"error": {
+				"invalid_address": "Vui lòng nhập địa chỉ Ethereum hợp lệ",
+				"invalid_address_line": "Dòng {line}: Định dạng địa chỉ không hợp lệ",
+				"token_id_required": "ID Token là bắt buộc cho phân phối NFT",
+				"invalid_token_id_line": "Dòng {line}: ID Token không hợp lệ hoặc bị thiếu"
+			}
+		},
+		"footer": {
+			"continue": "Tiếp tục đến Xem lại",
+			"hint": "Thêm ít nhất một người nhận để tiếp tục"
+		}
+	},
+	"step5": {
+		"sidebar": {
+			"title": "Xác nhận & Thực hiện",
+			"description": "Xem lại chi tiết phân phối và thực hiện các chuyển khoản"
+		},
+		"mode": {
+			"title": "Chế độ Thực hiện",
+			"self": {
+				"title": "Tự Thực hiện",
+				"description": "Ký và gửi mỗi giao dịch từ ví của bạn. Tốt nhất cho các phân phối nhỏ."
+			},
+			"delegated": {
+				"title": "Thực hiện Ủy quyền",
+				"description": "Ký một lần, để bất kỳ ai thực hiện các lô. Tốt nhất cho các phân phối lớn với nhiều người nhận.",
+				"info": "Chế độ ủy quyền sử dụng hợp đồng thông minh để xử lý chuyển khoản theo lô. Bạn ký xác nhận, sau đó các lô có thể được thực hiện bởi bất kỳ ai (bao gồm cả bạn)."
+			}
+		},
+		"delegated": {
+			"authorize": "Ký Xác nhận",
+			"authorizing": "Đang ký...",
+			"execute_batch": "Thực hiện Lô {current}/{total}",
+			"execute_all": "Thực hiện Tất cả Lô",
+			"batch_status": "Trạng thái Lô",
+			"batch_pending": "Đang chờ",
+			"batch_completed": "Hoàn thành",
+			"batch_failed": "Thất bại",
+			"export_session": "Xuất Phiên",
+			"import_session": "Nhập Phiên",
+			"session_expired": "Phiên Hết hạn",
+			"session_info": "ID Phiên: {id} | Hết hạn: {time}"
+		},
+		"session": {
+			"title": "Phiên Phân phối",
+			"empty": "Không có phiên đã lưu",
+			"import": "Nhập Phiên",
+			"export": "Xuất",
+			"delete": "Xóa",
+			"resume": "Tiếp tục",
+			"batches": "lô",
+			"expires_in": "Hết hạn trong",
+			"expired": "Đã hết hạn",
+			"status_pending": "Đang chờ",
+			"status_partial": "Đang tiến hành",
+			"status_completed": "Hoàn thành",
+			"status_expired": "Đã hết hạn",
+			"import_error": "Không thể nhập phiên. Vui lòng kiểm tra định dạng tệp.",
+			"importing": "Đang nhập..."
+		},
+		"content": {
+			"title": "Xem lại & Thực hiện Phân phối",
+			"description": "Xem lại tóm tắt phân phối và thực hiện các chuyển token",
+			"executor_wallet": "Ví Thực thi",
+			"summary_title": "Tóm tắt Phân phối",
+			"token": "Token",
+			"mode": "Chế độ",
+			"mode_equal": "Phân phối Bằng nhau",
+			"mode_random": "Phân phối Ngẫu nhiên",
+			"mode_custom": "Số lượng Tùy chỉnh",
+			"recipients": "Người nhận",
+			"total_amount": "Tổng Số tiền",
+			"total_nfts": "Tổng NFT",
+			"estimated_gas": "Gas Ước tính",
+			"network": "Mạng",
+			"preview_title": "Xem trước Người nhận (10 đầu tiên)",
+			"more_recipients": "người nhận khác",
+			"progress_title": "Tiến độ Thực hiện",
+			"successful": "thành công",
+			"failed": "thất bại",
+			"pending": "đang chờ",
+			"execute": "Thực hiện Phân phối",
+			"stop": "Dừng Thực hiện",
+			"resume": "Tiếp tục",
+			"reset": "Đặt lại",
+			"start_new": "Bắt đầu Phân phối Mới",
+			"completed": "Phân phối Hoàn thành!",
+			"confirm_continue": "Bạn có muốn tiếp tục không?",
+			"warning_title": "Quan trọng",
+			"warning_message": "Đảm bảo bạn có đủ số dư và phí gas. Mỗi người nhận sẽ nhận một giao dịch riêng. Xem lại tất cả chi tiết cẩn thận trước khi thực hiện.",
+			"errors": {
+				"invalid_config": "Cấu hình phân phối không hợp lệ. Vui lòng kiểm tra các bước trước.",
+				"connect_wallet": "Vui lòng kết nối ví của bạn trước",
+				"no_network": "Chưa chọn mạng",
+				"no_token": "Chưa chọn token",
+				"no_recipients": "Chưa thêm người nhận"
+			}
+		},
+		"footer": {
+			"back": "Quay lại Người nhận",
+			"execute": "Thực hiện Phân phối"
+		}
+	}
+}

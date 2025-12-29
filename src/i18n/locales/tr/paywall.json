@@ -1,0 +1,67 @@
+{
+	"prompt": {
+		"close": "Kapat",
+		"upgrade_membership": "Üyeliği Yükselt",
+		"pay": "{{amount}} {{symbol}} Öde",
+		"recommend_tip": "💡 Sınırsız ücretsiz erişim için üyeliği yükseltin"
+	},
+	"modal": {
+		"title": "Premium'a Yükselt",
+		"subtitle": "İhtiyaçlarınıza uygun mükemmel planı seçin",
+		"benefits": {
+			"title": "Dahil Olanlar",
+			"zero_fees": "Tüm araçlarda sıfır işlem ücreti",
+			"unlimited_access": "Premium özelliklere sınırsız erişim",
+			"priority_support": "Öncelikli müşteri desteği"
+		},
+		"plans": {
+			"daily": "Günlük",
+			"monthly": "Aylık",
+			"yearly": "Yıllık",
+			"popular": "Popüler",
+			"days": "{{days}} gün",
+			"per_day": "{{price}} {{symbol}}/gün"
+		},
+		"referral": {
+			"label": "Yönlendiren:",
+			"direct": "Doğrudan ziyaret"
+		},
+		"status": {
+			"loading": "Abonelik durumu yükleniyor...",
+			"active": "Aktif Premium Üye",
+			"expires_in": "{{days}} gün içinde sona eriyor"
+		},
+		"cta": "Premium Erişim Satın Al",
+		"processing": "İşleniyor...",
+		"footer_note": "Üyelik sadece {{network}} üzerinde geçerli • Ağ değişikliği yeni satın alma gerektirir",
+		"success": {
+			"title": "Satın Alma Başarılı!",
+			"message": "{{tier}} planına başarıyla abone oldunuz!",
+			"tx_label": "İşlem:",
+			"auto_close": "Bu pencere 5 saniye içinde otomatik olarak kapanacak..."
+		},
+		"error": {
+			"connect_wallet": "Lütfen önce cüzdanınızı bağlayın",
+			"invalid_tier": "Geçersiz kademe seçildi",
+			"tx_failed": "İşlem başarısız oldu",
+			"purchase_failed": "Satın alma tamamlanamadı"
+		}
+	},
+	"rules": {
+		"membership_required": "Bu özellik üyelik gerektiriyor",
+		"quota_exceeded": "Günlük ücretsiz kota aşıldı ({{limit}}/{{unit}})",
+		"quota_remaining": "Bugün kalan ücretsiz kota: {{remaining}}",
+		"upgrade_hint": "Sınırsız erişim için yükseltin",
+		"upgrade_hint_cheaper": "Üyelik yükseltmek daha ekonomik",
+		"fee_info": "Ücret: {{total}} ETH ({{count}} × {{fee}} ETH)",
+		"exceeded_fee_info": "Kota aşıldı, {{total}} ETH öde",
+		"unit_items": "öğe",
+		"unit_requests": "istek"
+	},
+	"status": {
+		"not_connected": "Lütfen önce cüzdan bağlayın",
+		"member": "Premium Üye",
+		"expires_in": "{{days}} gün içinde sona eriyor",
+		"expired": "Üyelik süresi doldu"
+	}
+}

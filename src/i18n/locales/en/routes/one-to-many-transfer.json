@@ -53,16 +53,57 @@
 		"what_networks_supported": "Which blockchain networks are supported?",
 		"networks_supported_explanation": "Currently we support Ethereum Mainnet, Polygon, BSC (Binance Smart Chain), Base, Arbitrum, and Optimism. More networks will be added in the future."
 	},
+	"step1": {
+		"content": {
+			"title": "Connect Wallet",
+			"description": "Connect your Web3 wallet to start token distribution",
+			"loading": "Loading wallet information..."
+		},
+		"footer": {
+			"hint": "Connect your wallet to continue",
+			"continue": "Continue to Dependencies"
+		}
+	},
 	"step2": {
 		"content": {
 			"title": "Check Dependencies",
 			"description": "Verify required contracts are deployed on this network",
+			"checking_dependencies_for": "Checking dependencies for {network}...",
+			"recheck_dependencies": "Recheck Dependencies",
+			"all_dependencies_satisfied": "All Dependencies Satisfied",
+			"network_properly_configured": "Network is properly configured for token distribution",
+			"dependency_issues_found": "Dependency Issues Found",
+			"resolve_issues_before_continuing": "Please resolve the issues below before continuing",
+			"resolve_previous_issue": "Resolve the previous issue first",
+			"address_label": "Address",
+			"endpoint_label": "Endpoint",
+			"view_deployment_guide": "View Deployment Guide",
+			"deploy_coming_soon": "Deploy coming soon",
+			"deploy_contract": "Deploy {contractName}",
+			"wallet_not_connected_title": "Wallet Not Connected",
+			"wallet_not_connected_message": "Please connect your wallet to check network dependencies",
+			"go_to_step1": "Go to Step 1",
 			"checks": {
+				"category": {
+					"network": "Network",
+					"protocol": "Protocol",
+					"contract": "Contract"
+				},
+				"rpc_endpoint": {
+					"configure_rpc_button": "Configure RPC"
+				},
 				"contract": {
 					"weth_description": "WETH contract for delegated execute mode (converts WETH to ETH for distribution)",
 					"token_distribution_description": "TokenDistribution contract for batch distributing tokens and NFTs to multiple recipients"
 				}
 			}
+		},
+		"footer": {
+			"continue": "Continue to Token Selection",
+			"hint": "Complete dependency checks to continue",
+			"resolve_issues": "Resolve Issues to Continue",
+			"waiting_for_checks": "Waiting for dependency checks...",
+			"checking_dependencies": "Checking dependencies..."
 		}
 	},
 	"step3": {

@@ -1,0 +1,67 @@
+{
+	"prompt": {
+		"close": "閉じる",
+		"upgrade_membership": "メンバーシップをアップグレード",
+		"pay": "{{amount}} {{symbol}}を支払う",
+		"recommend_tip": "💡 メンバーシップをアップグレードして無制限の無料アクセスを"
+	},
+	"modal": {
+		"title": "プレミアムにアップグレード",
+		"subtitle": "ニーズに合った最適なプランを選択",
+		"benefits": {
+			"title": "含まれる内容",
+			"zero_fees": "すべてのツールで取引手数料ゼロ",
+			"unlimited_access": "プレミアム機能への無制限アクセス",
+			"priority_support": "優先カスタマーサポート"
+		},
+		"plans": {
+			"daily": "1日",
+			"monthly": "1ヶ月",
+			"yearly": "1年",
+			"popular": "人気",
+			"days": "{{days}}日間",
+			"per_day": "{{price}} {{symbol}}/日"
+		},
+		"referral": {
+			"label": "紹介者：",
+			"direct": "直接訪問"
+		},
+		"status": {
+			"loading": "サブスクリプション状態を読み込み中...",
+			"active": "アクティブなプレミアム会員",
+			"expires_in": "{{days}}日後に有効期限切れ"
+		},
+		"cta": "プレミアムアクセスを購入",
+		"processing": "処理中...",
+		"footer_note": "メンバーシップは{{network}}のみで有効 • ネットワーク切り替えには新規購入が必要",
+		"success": {
+			"title": "購入成功！",
+			"message": "{{tier}}プランへの登録が完了しました！",
+			"tx_label": "トランザクション：",
+			"auto_close": "このモーダルは5秒後に自動的に閉じます..."
+		},
+		"error": {
+			"connect_wallet": "まずウォレットを接続してください",
+			"invalid_tier": "無効なティアが選択されました",
+			"tx_failed": "トランザクションが失敗しました",
+			"purchase_failed": "購入を完了できませんでした"
+		}
+	},
+	"rules": {
+		"membership_required": "この機能にはメンバーシップが必要です",
+		"quota_exceeded": "1日の無料枠を超過しました（{{limit}}/{{unit}}）",
+		"quota_remaining": "本日の残りの無料枠：{{remaining}}",
+		"upgrade_hint": "無制限アクセスにアップグレード",
+		"upgrade_hint_cheaper": "メンバーシップのアップグレードの方がお得です",
+		"fee_info": "手数料：{{total}} ETH（{{count}} × {{fee}} ETH）",
+		"exceeded_fee_info": "枠超過、{{total}} ETHを支払う",
+		"unit_items": "アイテム",
+		"unit_requests": "リクエスト"
+	},
+	"status": {
+		"not_connected": "まずウォレットを接続してください",
+		"member": "プレミアム会員",
+		"expires_in": "{{days}}日後に有効期限切れ",
+		"expired": "メンバーシップ期限切れ"
+	}
+}

@@ -1,0 +1,86 @@
+{
+	"_meta": {
+		"code": "ja",
+		"name": "日本語",
+		"englishName": "Japanese",
+		"direction": "ltr",
+		"flag": "🇯🇵"
+	},
+	"hero_title": "BiuBiu",
+	"hero_subtitle": "Web3をもっと簡単に、もっと安全に",
+	"cta_get_started": "始める",
+	"cta_learn_more": "詳しく見る",
+	"cta": {
+		"title": "始める準備はできましたか？",
+		"subtitle": "biubiu.toolsでWeb3操作を効率化している数千人のユーザーに参加しましょう",
+		"button_text": "今すぐ始める - 無料"
+	},
+	"stats": {
+		"title": "Web3ユーザーに信頼されています",
+		"registered_users": "アクティブユーザー",
+		"transactions": "取引数",
+		"total_volume": "総取引量",
+		"chains_supported": "対応チェーン",
+		"last_updated": "リアルタイム統計"
+	},
+	"footer": {
+		"privacy": "プライバシー",
+		"terms": "利用規約"
+	},
+	"helpButton": {
+		"label": "ヘルプ＆フィードバック",
+		"getHelp": "ヘルプを見る",
+		"reportIssue": "問題を報告"
+	},
+	"environment_banner": {
+		"community_warning": "これはコミュニティによるデプロイ版であり、biubiu.tools公式とは関係ありません。",
+		"dev_environment": "開発環境",
+		"official_reminder": "公式サイトをご利用中です。ドメインをご確認ください：biubiu.tools"
+	},
+	"loading": "読み込み中...",
+	"continue": "続ける",
+	"back": "戻る",
+	"next": "次へ",
+	"previous": "前へ",
+	"finish": "完了",
+	"done": "完了",
+	"cancel": "キャンセル",
+	"optional": "任意",
+	"enabled": "有効",
+	"disabled": "無効",
+	"chars_left": "文字残り",
+	"name": "名前",
+	"symbol": "シンボル",
+	"description": "説明",
+	"standard": "規格",
+	"contract_address": "コントラクトアドレス",
+	"transaction_hash": "トランザクションハッシュ",
+	"gas_used": "使用ガス",
+	"deployment_cost": "デプロイコスト",
+	"max_supply": "最大供給量",
+	"mint_price": "ミント価格",
+	"royalty": "ロイヤリティ",
+	"show_more": "もっと見る",
+	"show_less": "閉じる",
+	"back_to_home": "ホームに戻る",
+	"faqs": "よくある質問",
+	"total_checks": "総チェック数",
+	"passed": "合格",
+	"failed": "失敗",
+	"status": {
+		"coming_soon": "近日公開",
+		"alpha": "アルファ版",
+		"beta": "ベータ版",
+		"stable": "安定版",
+		"new": "新着"
+	},
+	"network_selector": {
+		"no_networks_enabled": "有効なネットワークがありません",
+		"enable_network_prompt": "続行するには、少なくとも1つのネットワークを有効にしてください。",
+		"open_network_settings": "ネットワーク設定を開く",
+		"network_not_found": "ネットワークが見つかりませんか？",
+		"add_custom_network": "カスタムネットワークを追加"
+	},
+	"copy_address": "アドレスをコピー",
+	"copied": "コピーしました！"
+}

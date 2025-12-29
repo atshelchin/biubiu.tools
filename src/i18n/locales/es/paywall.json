@@ -1,0 +1,67 @@
+{
+	"prompt": {
+		"close": "Cerrar",
+		"upgrade_membership": "Mejorar membresía",
+		"pay": "Pagar {{amount}} {{symbol}}",
+		"recommend_tip": "💡 Mejora tu membresía para acceso ilimitado gratuito"
+	},
+	"modal": {
+		"title": "Actualizar a Premium",
+		"subtitle": "Elige el plan perfecto para tus necesidades",
+		"benefits": {
+			"title": "Qué incluye",
+			"zero_fees": "Cero comisiones de transacción en todas las herramientas",
+			"unlimited_access": "Acceso ilimitado a funciones premium",
+			"priority_support": "Soporte prioritario al cliente"
+		},
+		"plans": {
+			"daily": "Diario",
+			"monthly": "Mensual",
+			"yearly": "Anual",
+			"popular": "Popular",
+			"days": "{{days}} días",
+			"per_day": "{{price}} {{symbol}}/día"
+		},
+		"referral": {
+			"label": "Referido por:",
+			"direct": "Visita directa"
+		},
+		"status": {
+			"loading": "Cargando estado de suscripción...",
+			"active": "Miembro Premium activo",
+			"expires_in": "Expira en {{days}} días"
+		},
+		"cta": "Comprar acceso Premium",
+		"processing": "Procesando...",
+		"footer_note": "Membresía válida solo en {{network}} • Cambiar de red requiere nueva compra",
+		"success": {
+			"title": "¡Compra exitosa!",
+			"message": "¡Te has suscrito exitosamente al plan {{tier}}!",
+			"tx_label": "Transacción:",
+			"auto_close": "Este modal se cerrará automáticamente en 5 segundos..."
+		},
+		"error": {
+			"connect_wallet": "Por favor conecta tu wallet primero",
+			"invalid_tier": "Nivel seleccionado inválido",
+			"tx_failed": "La transacción falló",
+			"purchase_failed": "No se pudo completar la compra"
+		}
+	},
+	"rules": {
+		"membership_required": "Esta función requiere membresía",
+		"quota_exceeded": "Cuota diaria gratuita excedida ({{limit}}/{{unit}})",
+		"quota_remaining": "Cuota gratuita restante hoy: {{remaining}}",
+		"upgrade_hint": "Actualiza para acceso ilimitado",
+		"upgrade_hint_cheaper": "Actualizar la membresía es más económico",
+		"fee_info": "Tarifa: {{total}} ETH ({{count}} × {{fee}} ETH)",
+		"exceeded_fee_info": "Cuota excedida, pagar {{total}} ETH",
+		"unit_items": "elementos",
+		"unit_requests": "solicitudes"
+	},
+	"status": {
+		"not_connected": "Por favor conecta la wallet primero",
+		"member": "Miembro Premium",
+		"expires_in": "Expira en {{days}} días",
+		"expired": "Membresía expirada"
+	}
+}

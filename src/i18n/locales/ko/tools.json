@@ -1,0 +1,46 @@
+{
+	"_meta": {
+		"code": "ko",
+		"name": "한국어",
+		"englishName": "Korean",
+		"direction": "ltr",
+		"flag": "🇰🇷"
+	},
+	"section_title": "강력한 도구",
+	"section_subtitle": "효율성을 높이는 전문 Web3 일괄 작업 도구",
+	"badge": "전문 Web3 도구",
+	"feedback_card": {
+		"title": "여러분의 아이디어가 중요합니다!",
+		"description": "필요한 기능이 없나요? 개선 아이디어가 있나요? 여러분이 필요로 하는 것을 만듭니다 - 커뮤니티에 참여하여 알려주세요!",
+		"feature_1": "💡 여러분의 기능 요청이 다음이 될 수 있습니다",
+		"feature_2": "🚀 빠른 개발 - 아이디어에서 현실로 며칠 만에",
+		"feature_3": "🤝 개발팀과 직접 소통"
+	},
+	"try_now": "지금 사용해보기",
+	"launch_app": "앱 실행",
+	"notify_me": "알림 받기",
+	"coming_soon": "출시 예정",
+	"available_now": "지금 이용 가능",
+	"join_telegram": "텔레그램 참여",
+	"discover_random": "랜덤 도구 발견",
+	"you_discovered": "발견했습니다!",
+	"try_again": "다시 시도",
+	"actions": {
+		"import_csv": "CSV 가져오기",
+		"export_results": "결과 내보내기",
+		"clear_all": "모두 지우기",
+		"share_link": "링크 공유",
+		"share_tooltip": "공유 가능한 링크 복사",
+		"settings": "설정",
+		"settings_tooltip": "네트워크 설정"
+	},
+	"notify_modal": {
+		"title": "알림 받기",
+		"description": "이 도구가 사용 가능해지면 알림을 받으려면 이메일을 입력하세요.",
+		"email_placeholder": "your@email.com",
+		"subscribe": "구독",
+		"cancel": "취소",
+		"success": "감사합니다! 준비되면 알려드리겠습니다.",
+		"error": "유효한 이메일 주소를 입력하세요."
+	}
+}

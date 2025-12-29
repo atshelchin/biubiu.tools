@@ -1,0 +1,46 @@
+{
+	"_meta": {
+		"code": "vi",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳"
+	},
+	"section_title": "Công cụ mạnh mẽ",
+	"section_subtitle": "Công cụ thao tác hàng loạt Web3 chuyên nghiệp để nâng cao hiệu quả của bạn",
+	"badge": "Công cụ Web3 chuyên nghiệp",
+	"feedback_card": {
+		"title": "Ý tưởng của bạn rất quan trọng!",
+		"description": "Thiếu tính năng bạn cần? Có ý tưởng để cải thiện? Chúng tôi xây dựng những gì BẠN cần - tham gia cộng đồng và cho chúng tôi biết!",
+		"feature_1": "💡 Yêu cầu tính năng của bạn có thể là tiếp theo",
+		"feature_2": "🚀 Chúng tôi triển khai nhanh - từ ý tưởng đến thực tế trong vài ngày",
+		"feature_3": "🤝 Liên lạc trực tiếp với đội ngũ phát triển"
+	},
+	"try_now": "Thử ngay",
+	"launch_app": "Khởi chạy ứng dụng",
+	"notify_me": "Thông báo cho tôi",
+	"coming_soon": "Sắp ra mắt",
+	"available_now": "Có sẵn ngay",
+	"join_telegram": "Tham gia Telegram",
+	"discover_random": "Khám phá công cụ ngẫu nhiên",
+	"you_discovered": "Bạn đã khám phá!",
+	"try_again": "Thử lại",
+	"actions": {
+		"import_csv": "Nhập CSV",
+		"export_results": "Xuất kết quả",
+		"clear_all": "Xóa tất cả",
+		"share_link": "Chia sẻ liên kết",
+		"share_tooltip": "Sao chép liên kết chia sẻ",
+		"settings": "Cài đặt",
+		"settings_tooltip": "Cài đặt mạng"
+	},
+	"notify_modal": {
+		"title": "Nhận thông báo",
+		"description": "Nhập email để nhận thông báo khi công cụ này có sẵn.",
+		"email_placeholder": "email@cuaban.com",
+		"subscribe": "Đăng ký",
+		"cancel": "Hủy",
+		"success": "Cảm ơn! Chúng tôi sẽ thông báo khi sẵn sàng.",
+		"error": "Vui lòng nhập địa chỉ email hợp lệ."
+	}
+}

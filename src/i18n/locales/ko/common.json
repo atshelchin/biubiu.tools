@@ -1,0 +1,86 @@
+{
+	"_meta": {
+		"code": "ko",
+		"name": "한국어",
+		"englishName": "Korean",
+		"direction": "ltr",
+		"flag": "🇰🇷"
+	},
+	"hero_title": "BiuBiu",
+	"hero_subtitle": "쉽고 안전한 Web3 탐색",
+	"cta_get_started": "시작하기",
+	"cta_learn_more": "자세히 보기",
+	"cta": {
+		"title": "시작할 준비가 되셨나요?",
+		"subtitle": "이미 biubiu.tools로 Web3 작업을 간소화하고 있는 수천 명의 사용자와 함께하세요",
+		"button_text": "지금 시작하기 - 무료"
+	},
+	"stats": {
+		"title": "Web3 사용자들이 신뢰합니다",
+		"registered_users": "활성 사용자",
+		"transactions": "거래 수",
+		"total_volume": "총 거래량",
+		"chains_supported": "지원 체인",
+		"last_updated": "실시간 통계"
+	},
+	"footer": {
+		"privacy": "개인정보처리방침",
+		"terms": "이용약관"
+	},
+	"helpButton": {
+		"label": "도움말 및 피드백",
+		"getHelp": "도움말 보기",
+		"reportIssue": "문제 신고"
+	},
+	"environment_banner": {
+		"community_warning": "이것은 커뮤니티 배포 버전이며, biubiu.tools 공식과 관련이 없습니다.",
+		"dev_environment": "개발 환경",
+		"official_reminder": "공식 사이트를 이용 중입니다. 도메인을 확인하세요: biubiu.tools"
+	},
+	"loading": "로딩 중...",
+	"continue": "계속",
+	"back": "뒤로",
+	"next": "다음",
+	"previous": "이전",
+	"finish": "완료",
+	"done": "완료",
+	"cancel": "취소",
+	"optional": "선택사항",
+	"enabled": "활성화됨",
+	"disabled": "비활성화됨",
+	"chars_left": "자 남음",
+	"name": "이름",
+	"symbol": "심볼",
+	"description": "설명",
+	"standard": "표준",
+	"contract_address": "컨트랙트 주소",
+	"transaction_hash": "트랜잭션 해시",
+	"gas_used": "사용된 가스",
+	"deployment_cost": "배포 비용",
+	"max_supply": "최대 공급량",
+	"mint_price": "민팅 가격",
+	"royalty": "로열티",
+	"show_more": "더 보기",
+	"show_less": "접기",
+	"back_to_home": "홈으로 돌아가기",
+	"faqs": "자주 묻는 질문",
+	"total_checks": "총 검사 수",
+	"passed": "통과",
+	"failed": "실패",
+	"status": {
+		"coming_soon": "출시 예정",
+		"alpha": "알파",
+		"beta": "베타",
+		"stable": "정식 버전",
+		"new": "신규"
+	},
+	"network_selector": {
+		"no_networks_enabled": "활성화된 네트워크 없음",
+		"enable_network_prompt": "계속하려면 최소 하나의 네트워크를 활성화하세요.",
+		"open_network_settings": "네트워크 설정 열기",
+		"network_not_found": "네트워크를 찾을 수 없나요?",
+		"add_custom_network": "커스텀 네트워크 추가"
+	},
+	"copy_address": "주소 복사",
+	"copied": "복사됨!"
+}

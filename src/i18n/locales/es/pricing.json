@@ -1,0 +1,55 @@
+{
+	"_meta": {
+		"code": "es",
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸"
+	},
+	"title": "Precios simples y transparentes",
+	"subtitle": "Elige el plan que mejor te funcione",
+	"free": {
+		"name": "Gratis",
+		"price": "$0",
+		"period": "para siempre",
+		"description": "Perfecto para empezar",
+		"features": [
+			"Hasta 10 wallets",
+			"Operaciones por lotes básicas",
+			"Soporte comunitario",
+			"Velocidad estándar"
+		],
+		"cta": "Comenzar"
+	},
+	"pro": {
+		"name": "Pro",
+		"price": "$19",
+		"period": "mes",
+		"description": "Para usuarios avanzados",
+		"features": [
+			"Wallets ilimitadas",
+			"Operaciones por lotes avanzadas",
+			"Soporte prioritario",
+			"Procesamiento de alta velocidad",
+			"Acceso a API"
+		],
+		"cta": "Iniciar prueba gratis"
+	},
+	"enterprise": {
+		"name": "Empresarial",
+		"price": "Personalizado",
+		"period": "mes",
+		"description": "Para equipos y organizaciones",
+		"features": [
+			"Todo lo de Pro",
+			"Soporte dedicado",
+			"Integraciones personalizadas",
+			"Garantía SLA",
+			"Gestión de equipos"
+		],
+		"cta": "Contactar ventas"
+	},
+	"note": "Todos los planes incluyen funciones básicas y seguridad",
+	"custom_plan": "¿Necesitas un plan personalizado?",
+	"contact_us": "Contáctanos"
+}

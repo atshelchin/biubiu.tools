@@ -1,0 +1,86 @@
+{
+	"_meta": {
+		"code": "fr",
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷"
+	},
+	"hero_title": "BiuBiu",
+	"hero_subtitle": "Explorez le Web3 facilement et en toute sécurité",
+	"cta_get_started": "Commencer",
+	"cta_learn_more": "En savoir plus",
+	"cta": {
+		"title": "Prêt à commencer ?",
+		"subtitle": "Rejoignez des milliers d'utilisateurs qui utilisent déjà biubiu.tools pour simplifier leurs opérations Web3",
+		"button_text": "Commencer maintenant - C'est gratuit"
+	},
+	"stats": {
+		"title": "Approuvé par les utilisateurs Web3",
+		"registered_users": "Utilisateurs actifs",
+		"transactions": "Transactions",
+		"total_volume": "Volume total",
+		"chains_supported": "Chaînes supportées",
+		"last_updated": "Statistiques en direct"
+	},
+	"footer": {
+		"privacy": "Confidentialité",
+		"terms": "Conditions"
+	},
+	"helpButton": {
+		"label": "Aide et commentaires",
+		"getHelp": "Obtenir de l'aide",
+		"reportIssue": "Signaler un problème"
+	},
+	"environment_banner": {
+		"community_warning": "Ceci est une version déployée par la communauté, non affiliée à biubiu.tools officiel.",
+		"dev_environment": "Environnement de développement",
+		"official_reminder": "Vous êtes sur le site officiel. Vérifiez toujours le domaine : biubiu.tools"
+	},
+	"loading": "Chargement...",
+	"continue": "Continuer",
+	"back": "Retour",
+	"next": "Suivant",
+	"previous": "Précédent",
+	"finish": "Terminer",
+	"done": "Terminé",
+	"cancel": "Annuler",
+	"optional": "Facultatif",
+	"enabled": "Activé",
+	"disabled": "Désactivé",
+	"chars_left": "caractères restants",
+	"name": "Nom",
+	"symbol": "Symbole",
+	"description": "Description",
+	"standard": "Standard",
+	"contract_address": "Adresse du contrat",
+	"transaction_hash": "Hash de transaction",
+	"gas_used": "Gas utilisé",
+	"deployment_cost": "Coût de déploiement",
+	"max_supply": "Offre maximale",
+	"mint_price": "Prix de mint",
+	"royalty": "Royalties",
+	"show_more": "Voir plus",
+	"show_less": "Voir moins",
+	"back_to_home": "Retour à l'accueil",
+	"faqs": "Questions fréquentes",
+	"total_checks": "Total des vérifications",
+	"passed": "Réussi",
+	"failed": "Échoué",
+	"status": {
+		"coming_soon": "Bientôt disponible",
+		"alpha": "Alpha",
+		"beta": "Bêta",
+		"stable": "Stable",
+		"new": "Nouveau"
+	},
+	"network_selector": {
+		"no_networks_enabled": "Aucun réseau activé",
+		"enable_network_prompt": "Veuillez activer au moins un réseau pour continuer.",
+		"open_network_settings": "Ouvrir les paramètres réseau",
+		"network_not_found": "Réseau introuvable ?",
+		"add_custom_network": "Ajouter un réseau personnalisé"
+	},
+	"copy_address": "Copier l'adresse",
+	"copied": "Copié !"
+}

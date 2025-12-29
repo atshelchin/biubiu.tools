@@ -1,0 +1,160 @@
+{
+	"_meta": {
+		"code": "ja",
+		"name": "日本語",
+		"englishName": "Japanese",
+		"direction": "ltr",
+		"flag": "🇯🇵"
+	},
+	"address_text_import": {
+		"placeholder": "ウォレットアドレスをここに貼り付けてください（1行に1つ）\n0x1234...\n0x5678...\n0xabcd...",
+		"hint": "1行に1つのアドレスを入力してください",
+		"import_button": "アドレスをインポート ({count})",
+		"importing": "インポート中... {progress}%",
+		"column_label": "アドレス"
+	},
+	"xpub_import_form": {
+		"placeholder": "拡張公開鍵を入力してください（xpub、ypub、またはzpub）...",
+		"hint": "xpubを使用すると、秘密鍵を公開せずにアドレスを導出できます",
+		"derivation_path": "導出範囲",
+		"derive_button": "アドレスを導出",
+		"deriving": "導出中... {progress}%"
+	},
+	"gas_funding": {
+		"title": "ガス代を送金",
+		"target_wallet": "送金先ウォレット",
+		"estimated_gas": "推定ガス",
+		"suggested_amount": "推奨金額",
+		"send_amount": "送金金額",
+		"amount_placeholder": "金額を入力",
+		"tip": "ヒント: 十分な資金を確保するため、推奨金額（推定の2倍）が自動入力されています",
+		"security_notice": "💰 一時ウォレットに送金された資金は秘密鍵で引き出せます - 資金は安全です",
+		"btn_send": "送金",
+		"sending": "送金中...",
+		"cancel": "キャンセル"
+	},
+	"file_upload": {
+		"title": "ファイルをアップロード",
+		"drop_file": "ここにファイルをドラッグ＆ドロップするか、クリックしてアップロード",
+		"supported_formats": "対応形式: TXT, CSV, XLSX, XLS",
+		"choose_file": "ファイルを選択",
+		"remove_file": "ファイルを削除",
+		"processing": "処理中...",
+		"mode_text": "テキストモード",
+		"mode_table": "テーブルモード",
+		"preview_title": "ファイルプレビュー",
+		"select_columns_hint": "{count}列を選択してください（ヘッダーボタンをクリックして列の順序をマーク）",
+		"select_columns_hint_click": "{count}列を選択してください（列ヘッダーをクリックしてスタンプ、再度クリックでサイクル）",
+		"select_single_column_hint": "💡 列ヘッダーをクリックして[{label}]列としてマークしてください",
+		"click_to_select": "クリックしてこの列を[{label}]として選択",
+		"click_to_deselect": "再度クリックで選択解除",
+		"click_to_change": "クリックしてこの列に切り替え",
+		"click_to_cycle": "再度クリックで次の位置へサイクル",
+		"generated_column": "列 {index}",
+		"column": "列",
+		"showing_first_rows": "最初の{count}行を表示中",
+		"cancel": "キャンセル",
+		"confirm": "確認",
+		"error_unsupported_format": "サポートされていないファイル形式です",
+		"error_empty_file": "ファイルが空です",
+		"error_incomplete_selection": "列の選択を完了してください",
+		"error_all_labels_assigned": "すべてのラベルが割り当てられています。先に他の列からラベルを削除してください"
+	},
+	"quick_rpc_manager": {
+		"title": "クイックRPC管理",
+		"network": "現在のネットワーク",
+		"add_new": "新しいRPCを追加",
+		"placeholder": "https://example.com/rpc",
+		"add_button": "追加",
+		"current_rpcs": "現在のRPCリスト",
+		"primary": "プライマリ",
+		"no_rpcs": "RPCエンドポイントなし",
+		"invalid_url": "無効なURL、http://またはhttps://で始まる必要があります",
+		"duplicate_url": "このRPCエンドポイントは既に存在します",
+		"at_least_one": "少なくとも1つのRPCエンドポイントが必要です",
+		"hint": "複数のRPCエンドポイントを追加すると、レート制限時に自動切り替えができ、スキャン成功率が向上します。",
+		"recommend_prefix": "利用可能なRPCエンドポイントはこちらで見つけられます：",
+		"recommend_suffix": "",
+		"cancel": "キャンセル",
+		"save": "保存してスキャンを続行",
+		"url_format_hint": "http://またはhttps://で始まるRPC URLを入力してください",
+		"http_warning": "http://（非セキュア）を使用するとブラウザでブロックされる可能性があります。Chromeで許可するには：アドレスバーのアイコンをクリック → サイトの設定 → 安全でないコンテンツ → 許可"
+	},
+	"address_path_selector": {
+		"sequential": {
+			"label": "連番",
+			"description": "0, 1, 2, 3..."
+		},
+		"date": {
+			"label": "日付ベース",
+			"description": "20240101, 20240102...",
+			"presets": {
+				"1_year": "過去1年",
+				"10_years": "過去10年",
+				"100_years": "過去100年"
+			}
+		},
+		"quick_select": "クイック選択",
+		"start": "開始",
+		"end": "終了",
+		"to": "〜",
+		"from_year": "開始年",
+		"to_year": "終了年",
+		"format": "形式",
+		"example": "例",
+		"will_generate": "生成されるアドレス",
+		"estimated_addresses": "推定アドレス数",
+		"addresses": "アドレス",
+		"limited_to": "最大{max}件まで",
+		"advanced_settings": "詳細設定",
+		"switch_to_advanced": "詳細設定に切り替え",
+		"switch_to_quick": "クイック選択に切り替え"
+	},
+	"wallet_list": {
+		"empty_message": "まだウォレットが追加されていません",
+		"remove_wallet": "ウォレットを削除",
+		"showing": "{total}件中 {start}-{end}を表示",
+		"previous_page": "前のページ",
+		"next_page": "次のページ"
+	},
+	"token_card": {
+		"native": "ネイティブ",
+		"erc20": "ERC20",
+		"decimals_label": "小数桁",
+		"decimals_unit": "桁",
+		"view_on_explorer": "ブロックエクスプローラーで表示",
+		"remove_custom_token": "カスタムトークンを削除",
+		"remove_dialog_title": "カスタムトークンを削除",
+		"remove_dialog_message": "{symbol}（{name}）を削除してもよろしいですか？この操作は取り消せません。",
+		"remove_button": "トークンを削除"
+	},
+	"token_selector": {
+		"empty_message": "利用可能なトークンがありません",
+		"select_all": "すべて選択",
+		"deselect_all": "すべて解除"
+	},
+	"add_token_button": {
+		"button_text": "トークンを追加",
+		"button_subtext": "カスタムERC20トークンを追加"
+	},
+	"add_token_modal": {
+		"title": "カスタムトークンを追加",
+		"token_address_label": "トークンアドレス",
+		"token_symbol_label": "シンボル",
+		"token_name_label": "名前",
+		"decimals_label": "小数桁",
+		"fetching": "取得中...",
+		"found": "見つかりました",
+		"not_found": "見つかりませんでした",
+		"auto_filled": "ブロックチェーンから自動入力されました",
+		"address_placeholder": "0x...",
+		"symbol_placeholder": "例: USDT",
+		"name_placeholder": "例: Tether USD",
+		"address_hint": "ERC20トークンのコントラクトアドレス",
+		"decimals_hint": "トークンの小数桁（通常18）",
+		"error_label": "エラー:",
+		"success_message": "トークンが正常に追加されました！",
+		"add_token_button": "トークンを追加",
+		"adding_button": "追加中..."
+	}
+}

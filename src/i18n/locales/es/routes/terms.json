@@ -1,0 +1,70 @@
+{
+	"_meta": {
+		"code": "es",
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸"
+	},
+	"page_title": "Términos de Servicio",
+	"page_description": "Términos de Servicio para usar las aplicaciones Web3 de BiuBiu Tools.",
+	"title": "Términos de Servicio",
+	"last_updated": "Última actualización",
+	"acceptance": {
+		"title": "Aceptación de los Términos",
+		"content": "Al acceder y usar BiuBiu Tools, reconoces que has leído, entendido y aceptas estar sujeto a estos Términos de Servicio. Si no estás de acuerdo con estos términos, por favor no uses nuestros servicios."
+	},
+	"description": {
+		"title": "Descripción del Servicio",
+		"content": "BiuBiu Tools proporciona herramientas de utilidad Web3 para interactuar con redes blockchain, incluyendo pero no limitado a gestión de wallets, operaciones con tokens, despliegue de contratos y transacciones por lotes. Estas herramientas se proporcionan \"tal cual\" y están destinadas a usuarios experimentados que entienden la tecnología blockchain."
+	},
+	"risks": {
+		"title": "Riesgos de Blockchain",
+		"intro": "Reconoces y aceptas los siguientes riesgos asociados con la tecnología blockchain:",
+		"item1": "Las transacciones en blockchain son irreversibles. Una vez confirmadas, las transacciones no pueden deshacerse ni revertirse.",
+		"item2": "Los valores de las criptomonedas son altamente volátiles. Puedes experimentar pérdidas significativas.",
+		"item3": "Los contratos inteligentes pueden contener errores o vulnerabilidades que podrían resultar en pérdida de fondos.",
+		"item4": "La congestión de la red puede retrasar transacciones o resultar en comisiones más altas de lo esperado.",
+		"item5": "Los cambios regulatorios pueden afectar la legalidad o usabilidad de las criptomonedas en tu jurisdicción."
+	},
+	"no_advice": {
+		"title": "Sin Asesoramiento Financiero",
+		"content": "BiuBiu Tools no proporciona asesoramiento financiero, de inversión, legal o fiscal. Toda la información y herramientas proporcionadas son solo para fines informativos y de utilidad. Debes consultar con profesionales calificados antes de tomar cualquier decisión financiera. Cualquier acción que tomes basándote en información de nuestra plataforma es bajo tu propio riesgo."
+	},
+	"user_responsibility": {
+		"title": "Responsabilidad del Usuario",
+		"intro": "Eres el único responsable de:",
+		"item1": "Proteger tus claves privadas, frases semilla y contraseñas. No almacenamos ni tenemos acceso a estas.",
+		"item2": "Verificar todos los detalles de la transacción antes de firmar o enviar transacciones.",
+		"item3": "Entender las implicaciones de cada acción que tomes en la blockchain.",
+		"item4": "Cumplir con todas las leyes y regulaciones aplicables en tu jurisdicción."
+	},
+	"disclaimer": {
+		"title": "Descargo de Garantías",
+		"content": "BiuBiu Tools se proporciona \"TAL CUAL\" y \"SEGÚN DISPONIBILIDAD\" sin garantías de ningún tipo, ya sean expresas o implícitas. Debido a la complejidad del entorno de internet, no podemos garantizar que el servicio funcione siempre sin interrupciones o esté completamente libre de errores. No ofrecemos garantías respecto a la exactitud, fiabilidad o completitud de cualquier información proporcionada."
+	},
+	"limitation": {
+		"title": "Limitación de Responsabilidad",
+		"content": "En la máxima medida permitida por la ley, BiuBiu Tools y sus desarrolladores no serán responsables de ningún daño directo, indirecto, incidental, especial, consecuente o punitivo, incluyendo pero no limitado a pérdida de beneficios, datos o activos de criptomonedas, derivados de tu uso o incapacidad de usar nuestros servicios."
+	},
+	"prohibited": {
+		"title": "Usos Prohibidos",
+		"intro": "Aceptas no usar BiuBiu Tools para:",
+		"item1": "Cualquier actividad ilegal, incluyendo lavado de dinero, fraude o financiación del terrorismo.",
+		"item2": "Eludir sanciones económicas o controles de exportación.",
+		"item3": "Explotar vulnerabilidades en contratos inteligentes o redes blockchain con fines maliciosos.",
+		"item4": "Cualquier actividad que pueda interferir, interrumpir las operaciones normales del servicio o perjudicar los intereses de otros usuarios."
+	},
+	"open_source": {
+		"title": "Código Abierto y Obras Derivadas",
+		"content": "BiuBiu Tools es un proyecto de código abierto. Eres libre de ver, bifurcar, modificar y desplegar el código fuente bajo la licencia aplicable. Sin embargo, BiuBiu Tools y sus desarrolladores no asumen ninguna responsabilidad por obras derivadas, despliegues de terceros o versiones modificadas. Cualquier problema derivado de despliegues no oficiales es responsabilidad exclusiva de los operadores de esos despliegues. El único sitio web oficial es biubiu.tools."
+	},
+	"modifications": {
+		"title": "Modificaciones de los Términos",
+		"content": "Nos reservamos el derecho de modificar estos Términos de Servicio en cualquier momento. Los cambios serán efectivos inmediatamente después de su publicación. Tu uso continuado de BiuBiu Tools después de los cambios constituye la aceptación de los términos modificados."
+	},
+	"contact": {
+		"title": "Contacto",
+		"content": "Si tienes preguntas sobre estos Términos de Servicio, contáctanos a través de nuestro repositorio de GitHub o canales de la comunidad."
+	}
+}

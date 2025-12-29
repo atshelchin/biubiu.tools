@@ -1,0 +1,37 @@
+{
+	"_meta": {
+		"code": "id",
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩"
+	},
+	"title": "Pertanyaan yang Sering Diajukan",
+	"subtitle": "Semua yang perlu Anda ketahui tentang biubiu.tools",
+	"items": [
+		{
+			"question": "Apa itu biubiu.tools?",
+			"answer": "biubiu.tools adalah toolkit Web3 komprehensif yang menyediakan operasi batch dan fitur manajemen multi-wallet untuk ekosistem Ethereum."
+		},
+		{
+			"question": "Apakah aman digunakan?",
+			"answer": "Ya! Kami tidak pernah menyimpan private key Anda. Semua operasi dilakukan secara lokal di browser Anda menggunakan protokol Web3 yang aman."
+		},
+		{
+			"question": "Chain apa saja yang didukung?",
+			"answer": "Kami mendukung mainnet Ethereum dan chain EVM-compatible utama termasuk Polygon, BSC, Arbitrum, dan Optimism."
+		},
+		{
+			"question": "Bagaimana cara kerja pengumpulan wallet batch?",
+			"answer": "Alat kami memungkinkan Anda mengumpulkan token dari beberapa wallet ke satu alamat dalam satu transaksi, menghemat waktu dan biaya gas."
+		},
+		{
+			"question": "Bisakah saya mencoba secara gratis?",
+			"answer": "Tentu saja! Paket gratis kami mencakup fitur dasar dengan hingga 10 wallet. Anda dapat upgrade kapan saja untuk fitur lebih lanjut."
+		}
+	],
+	"still_questions": "Masih ada pertanyaan?",
+	"contact_text": "Kami siap membantu. Hubungi tim dukungan kami kapan saja.",
+	"join_discord": "Gabung Discord",
+	"email_support": "Dukungan Email"
+}

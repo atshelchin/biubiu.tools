@@ -1,0 +1,37 @@
+{
+	"_meta": {
+		"code": "tr",
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷"
+	},
+	"title": "Sıkça Sorulan Sorular",
+	"subtitle": "biubiu.tools hakkında bilmeniz gereken her şey",
+	"items": [
+		{
+			"question": "biubiu.tools nedir?",
+			"answer": "biubiu.tools, Ethereum ekosistemi için toplu işlemler ve çoklu cüzdan yönetimi özellikleri sağlayan kapsamlı bir Web3 araç setidir."
+		},
+		{
+			"question": "Kullanımı güvenli mi?",
+			"answer": "Evet! Özel anahtarlarınızı asla saklamıyoruz. Tüm işlemler, güvenli Web3 protokolleri kullanılarak tarayıcınızda yerel olarak gerçekleştirilir."
+		},
+		{
+			"question": "Hangi zincirler destekleniyor?",
+			"answer": "Ethereum ana ağı ve Polygon, BSC, Arbitrum ve Optimism dahil olmak üzere başlıca EVM uyumlu zincirleri destekliyoruz."
+		},
+		{
+			"question": "Toplu cüzdan toplama nasıl çalışır?",
+			"answer": "Aracımız, birden fazla cüzdandan tokenları tek bir işlemde tek bir adrese toplamanıza olanak tanır, zamandan ve gas ücretlerinden tasarruf sağlar."
+		},
+		{
+			"question": "Ücretsiz deneyebilir miyim?",
+			"answer": "Kesinlikle! Ücretsiz planımız, 10 cüzdana kadar temel özellikleri içerir. Daha gelişmiş özellikler için istediğiniz zaman yükseltebilirsiniz."
+		}
+	],
+	"still_questions": "Hala sorularınız mı var?",
+	"contact_text": "Yardım etmek için buradayız. Destek ekibimize istediğiniz zaman ulaşın.",
+	"join_discord": "Discord'a Katıl",
+	"email_support": "E-posta Desteği"
+}

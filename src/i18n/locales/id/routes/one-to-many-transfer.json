@@ -1,0 +1,290 @@
+{
+	"_meta": {
+		"code": "id",
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩"
+	},
+	"title": "Transfer Satu-ke-Banyak",
+	"description": "Kirim token dan NFT dari satu dompet ke banyak alamat secara batch",
+	"seo": {
+		"page_title": "Transfer Satu-ke-Banyak - Kirim Batch Token & NFT ke Banyak Dompet | BiuBiu Tools",
+		"page_description": "Kirim token dan NFT dari satu dompet ke banyak alamat secara batch. Mendukung ETH, ERC20, ERC721, ERC1155 di berbagai jaringan blockchain.",
+		"keywords": "transfer satu ke banyak, kirim batch, airdrop, transfer token, transfer NFT, multi-kirim, transfer massal, ERC20, ERC721, ERC1155, distribusi crypto, alat web3",
+		"webapp_name": "Transfer Satu-ke-Banyak",
+		"webapp_description": "Kirim batch token dan NFT dari satu dompet ke banyak penerima di berbagai jaringan blockchain",
+		"howto_name": "Cara Kirim Batch Token & NFT ke Banyak Dompet",
+		"howto_description": "Panduan lengkap untuk mengirim token dan NFT dari satu dompet ke banyak alamat penerima",
+		"howto_tool_1": "Dompet Web3 (MetaMask, WalletConnect, dll.)",
+		"howto_tool_2": "Saldo token dan biaya gas yang cukup",
+		"step_1_name": "Hubungkan Dompet Anda",
+		"step_1_text": "Klik tombol \"Hubungkan Dompet\" dan hubungkan dompet Web3 Anda (MetaMask, WalletConnect, dll.) ke aplikasi. Dompet ini akan menjadi sumber token untuk distribusi.",
+		"step_1_description": "Tautkan dompet Web3 Anda sebagai dompet sumber",
+		"step_2_name": "Periksa Dependensi",
+		"step_2_text": "Verifikasi bahwa kontrak pintar yang diperlukan (WETH dan TokenDistribution) telah di-deploy di jaringan yang dipilih. Kontrak-kontrak ini memungkinkan fungsionalitas distribusi batch.",
+		"step_2_description": "Verifikasi kontrak yang diperlukan telah di-deploy",
+		"step_3_name": "Pilih Token dan Jumlah",
+		"step_3_text": "Pilih jenis token untuk didistribusikan (token native, ERC20, atau NFT), atur mode distribusi (jumlah sama atau kustom per penerima), dan tentukan jumlah per penerima atau jumlah total.",
+		"step_3_description": "Konfigurasi token dan jumlah distribusi",
+		"step_4_name": "Impor Penerima",
+		"step_4_text": "Tambahkan alamat dompet penerima dengan memasukkan secara manual, mengunggah file CSV, atau menempelkan daftar. Opsional, atur jumlah kustom untuk setiap penerima.",
+		"step_4_description": "Tambahkan alamat dompet penerima",
+		"step_5_name": "Tinjau dan Jalankan",
+		"step_5_text": "Tinjau ringkasan distribusi termasuk jumlah total, jumlah penerima, dan perkiraan biaya gas. Konfirmasi dan jalankan distribusi batch. Tanda tangani setiap transaksi dengan dompet Anda.",
+		"step_5_description": "Jalankan distribusi token",
+		"feature_1": "Hubungkan dompet Web3 (MetaMask, WalletConnect, Coinbase Wallet)",
+		"feature_2": "Mendukung banyak jaringan (Ethereum, Polygon, BSC, Base, Arbitrum, Optimism)",
+		"feature_3": "Kirim token native (ETH, BNB, MATIC), token ERC20, dan NFT (ERC721, ERC1155)",
+		"feature_4": "Distribusi sama atau jumlah kustom per penerima",
+		"feature_5": "Impor penerima via CSV, tempel, atau entri manual"
+	},
+	"faqs": {
+		"what_is_one_to_many": "Apa itu Transfer Satu-ke-Banyak?",
+		"one_to_many_explanation": "Transfer Satu-ke-Banyak memungkinkan Anda mengirim token atau NFT dari satu dompet ke banyak alamat penerima secara batch. Ideal untuk airdrop, penggajian, distribusi hadiah, dan skenario apa pun di mana Anda perlu mengirim aset ke banyak alamat secara efisien.",
+		"what_tokens_supported": "Jenis token apa yang didukung?",
+		"tokens_supported_explanation": "Kami mendukung token native (ETH, BNB, MATIC, dll.), token ERC20 (USDT, USDC, dll.), dan NFT termasuk standar ERC721 dan ERC1155.",
+		"what_is_equal_distribution": "Apa itu mode distribusi sama?",
+		"equal_distribution_explanation": "Dalam mode distribusi sama, Anda menentukan jumlah per penerima, dan setiap alamat menerima jumlah yang sama. Total dihitung secara otomatis berdasarkan jumlah penerima.",
+		"what_is_custom_amounts": "Apa itu mode jumlah kustom?",
+		"custom_amounts_explanation": "Dalam mode jumlah kustom, Anda dapat menentukan jumlah yang berbeda untuk setiap penerima. Ini berguna ketika alamat yang berbeda harus menerima kuantitas yang berbeda.",
+		"how_to_import_recipients": "Bagaimana cara mengimpor alamat penerima?",
+		"import_recipients_explanation": "Anda dapat menambahkan penerima dengan: 1) Entri manual satu per satu, 2) Menempelkan daftar alamat, atau 3) Mengunggah file CSV dengan alamat dan jumlah opsional.",
+		"what_networks_supported": "Jaringan blockchain apa yang didukung?",
+		"networks_supported_explanation": "Saat ini kami mendukung Ethereum Mainnet, Polygon, BSC (Binance Smart Chain), Base, Arbitrum, dan Optimism. Lebih banyak jaringan akan ditambahkan di masa depan."
+	},
+	"step2": {
+		"content": {
+			"title": "Periksa Dependensi",
+			"description": "Verifikasi kontrak yang diperlukan telah di-deploy di jaringan ini",
+			"checks": {
+				"contract": {
+					"weth_description": "Kontrak WETH untuk mode eksekusi terdelegasi (mengonversi WETH ke ETH untuk distribusi)",
+					"token_distribution_description": "Kontrak TokenDistribution untuk distribusi batch token dan NFT ke banyak penerima"
+				}
+			}
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "Pilih Token",
+			"description": "Pilih jenis token dan tentukan token mana yang akan didistribusikan"
+		},
+		"content": {
+			"title": "Pilih Token untuk Didistribusikan",
+			"description": "Pilih jenis token dan pilih token spesifik yang ingin Anda kirim ke banyak penerima",
+			"token_type": {
+				"title": "Jenis Token",
+				"native": "Token Native",
+				"native_desc": "ETH, BNB, MATIC, dll.",
+				"erc20": "Token ERC20",
+				"erc20_desc": "USDT, USDC, DAI, dll.",
+				"erc721": "NFT ERC721",
+				"erc721_desc": "NFT tunggal (1 per penerima)",
+				"erc1155": "Multi-Token ERC1155",
+				"erc1155_desc": "NFT batch atau token semi-fungible"
+			},
+			"select_token": {
+				"title": "Pilih Token",
+				"no_tokens": "Tidak ada token tersedia untuk jaringan ini",
+				"add_custom": "Tambah Token Kustom"
+			},
+			"nft_config": {
+				"title": "Konfigurasi NFT",
+				"contract_address": "Alamat Kontrak",
+				"contract_placeholder": "Masukkan alamat kontrak NFT (0x...)",
+				"token_ids": "ID Token",
+				"token_ids_placeholder": "Masukkan ID token (pisahkan dengan koma untuk banyak)",
+				"token_ids_hint": "Untuk ERC721: satu ID token per penerima. Untuk ERC1155: tentukan ID token untuk didistribusikan.",
+				"load_button": "Muat Info NFT",
+				"loading": "Memuat informasi NFT...",
+				"collection_name": "Koleksi",
+				"total_supply": "Total Pasokan",
+				"your_balance": "Saldo Anda",
+				"invalid_address": "Format alamat kontrak tidak valid"
+			},
+			"amount_mode": {
+				"title": "Mode Distribusi",
+				"equal": "Distribusi Sama",
+				"equal_desc": "Jumlah sama untuk semua penerima",
+				"custom": "Jumlah Kustom",
+				"custom_desc": "Atur jumlah individual per penerima (di Langkah 4)",
+				"random": "Jumlah Acak",
+				"random_desc": "Jumlah acak dalam rentang untuk setiap penerima"
+			},
+			"amount_input": {
+				"title": "Jumlah Per Penerima",
+				"placeholder": "0.0",
+				"hint": "Jumlah ini akan dikirim ke setiap penerima. Total akan dihitung berdasarkan jumlah penerima."
+			},
+			"custom_mode_info": "Anda telah memilih mode jumlah kustom. Anda akan mengatur jumlah individual untuk setiap penerima di Langkah 4.",
+			"random_mode_config": {
+				"min_amount": "Jumlah Minimum",
+				"max_amount": "Jumlah Maksimum",
+				"min_placeholder": "0.0",
+				"max_placeholder": "0.0",
+				"hint": "Setiap penerima akan menerima jumlah acak antara nilai min dan maks.",
+				"valid_range": "Jumlah acak akan antara {min} dan {max} {symbol}",
+				"error_max_less_than_min": "Jumlah maksimum harus lebih besar dari jumlah minimum"
+			}
+		},
+		"footer": {
+			"continue": "Lanjutkan ke Penerima",
+			"hint": "Pilih token dan konfigurasi jumlah untuk melanjutkan"
+		}
+	},
+	"step4": {
+		"sidebar": {
+			"title": "Impor Penerima",
+			"description": "Tambahkan alamat dompet yang akan menerima token"
+		},
+		"content": {
+			"title": "Tambah Penerima",
+			"description": "Impor alamat dompet yang akan menerima token dari distribusi ini",
+			"distributing": "Mendistribusikan",
+			"method": {
+				"manual": "Entri Manual",
+				"paste": "Tempel Daftar",
+				"csv": "Unggah CSV"
+			},
+			"manual": {
+				"title": "Tambah Penerima Secara Manual",
+				"address": "Alamat Dompet",
+				"token_id": "ID Token",
+				"token_amount": "Jumlah",
+				"amount": "Nilai",
+				"label": "Label (opsional)",
+				"label_placeholder": "cth. Alice, Bob",
+				"add_button": "Tambah Penerima"
+			},
+			"paste": {
+				"title": "Tempel Banyak Alamat",
+				"add_button": "Tambah Semua"
+			},
+			"paste_hint": {
+				"fungible_equal": "Format: alamat, label (opsional). Satu per baris.",
+				"fungible_custom": "Format: alamat, label (opsional), nilai. Satu per baris.",
+				"erc721": "Format: alamat, tokenId, label (opsional). Satu per baris.",
+				"erc1155": "Format: alamat, tokenId, jumlah, label (opsional). Satu per baris."
+			},
+			"csv": {
+				"title": "Unggah File CSV",
+				"description": "Unggah file CSV dengan alamat penerima",
+				"upload_button": "Pilih File",
+				"hint": "CSV harus berisi kolom alamat. Opsional: kolom label, nilai/tokenId."
+			},
+			"recipients": {
+				"title": "Penerima",
+				"clear_all": "Hapus Semua",
+				"regenerate_random": "Regenerasi Jumlah",
+				"col_address": "Alamat",
+				"col_token_id": "ID Token",
+				"col_token_amount": "Jml",
+				"col_amount": "Nilai",
+				"col_label": "Label"
+			},
+			"empty_state": "Belum ada penerima yang ditambahkan. Gunakan form di atas untuk menambahkan alamat penerima.",
+			"error": {
+				"invalid_address": "Masukkan alamat Ethereum yang valid",
+				"invalid_address_line": "Baris {line}: Format alamat tidak valid",
+				"token_id_required": "ID Token diperlukan untuk distribusi NFT",
+				"invalid_token_id_line": "Baris {line}: ID Token tidak valid atau hilang"
+			}
+		},
+		"footer": {
+			"continue": "Lanjutkan ke Tinjauan",
+			"hint": "Tambahkan setidaknya satu penerima untuk melanjutkan"
+		}
+	},
+	"step5": {
+		"sidebar": {
+			"title": "Konfirmasi & Jalankan",
+			"description": "Tinjau detail distribusi dan jalankan transfer"
+		},
+		"mode": {
+			"title": "Mode Eksekusi",
+			"self": {
+				"title": "Eksekusi Sendiri",
+				"description": "Tanda tangani dan kirim setiap transaksi dari dompet Anda. Terbaik untuk distribusi kecil."
+			},
+			"delegated": {
+				"title": "Eksekusi Terdelegasi",
+				"description": "Tanda tangani sekali, biarkan siapa pun menjalankan batch. Terbaik untuk distribusi besar dengan banyak penerima.",
+				"info": "Mode terdelegasi menggunakan kontrak pintar untuk membatch transfer. Anda menandatangani otorisasi, kemudian batch dapat dijalankan oleh siapa saja (termasuk Anda sendiri)."
+			}
+		},
+		"delegated": {
+			"authorize": "Tanda Tangani Otorisasi",
+			"authorizing": "Menandatangani...",
+			"execute_batch": "Jalankan Batch {current}/{total}",
+			"execute_all": "Jalankan Semua Batch",
+			"batch_status": "Status Batch",
+			"batch_pending": "Menunggu",
+			"batch_completed": "Selesai",
+			"batch_failed": "Gagal",
+			"export_session": "Ekspor Sesi",
+			"import_session": "Impor Sesi",
+			"session_expired": "Sesi Kedaluwarsa",
+			"session_info": "ID Sesi: {id} | Kedaluwarsa: {time}"
+		},
+		"session": {
+			"title": "Sesi Distribusi",
+			"empty": "Tidak ada sesi tersimpan",
+			"import": "Impor Sesi",
+			"export": "Ekspor",
+			"delete": "Hapus",
+			"resume": "Lanjutkan",
+			"batches": "batch",
+			"expires_in": "Kedaluwarsa dalam",
+			"expired": "Kedaluwarsa",
+			"status_pending": "Menunggu",
+			"status_partial": "Sedang Berlangsung",
+			"status_completed": "Selesai",
+			"status_expired": "Kedaluwarsa",
+			"import_error": "Gagal mengimpor sesi. Periksa format file.",
+			"importing": "Mengimpor..."
+		},
+		"content": {
+			"title": "Tinjau & Jalankan Distribusi",
+			"description": "Tinjau ringkasan distribusi dan jalankan transfer token",
+			"executor_wallet": "Dompet Eksekutor",
+			"summary_title": "Ringkasan Distribusi",
+			"token": "Token",
+			"mode": "Mode",
+			"mode_equal": "Distribusi Sama",
+			"mode_random": "Distribusi Acak",
+			"mode_custom": "Jumlah Kustom",
+			"recipients": "Penerima",
+			"total_amount": "Total Nilai",
+			"total_nfts": "Total NFT",
+			"estimated_gas": "Perkiraan Gas",
+			"network": "Jaringan",
+			"preview_title": "Pratinjau Penerima (10 pertama)",
+			"more_recipients": "penerima lainnya",
+			"progress_title": "Progres Eksekusi",
+			"successful": "berhasil",
+			"failed": "gagal",
+			"pending": "menunggu",
+			"execute": "Jalankan Distribusi",
+			"stop": "Hentikan Eksekusi",
+			"resume": "Lanjutkan",
+			"reset": "Reset",
+			"start_new": "Mulai Distribusi Baru",
+			"completed": "Distribusi Selesai!",
+			"confirm_continue": "Apakah Anda ingin melanjutkan?",
+			"warning_title": "Penting",
+			"warning_message": "Pastikan Anda memiliki saldo dan biaya gas yang cukup. Setiap penerima akan menerima transaksi terpisah. Tinjau semua detail dengan cermat sebelum menjalankan.",
+			"errors": {
+				"invalid_config": "Konfigurasi distribusi tidak valid. Periksa langkah sebelumnya.",
+				"connect_wallet": "Hubungkan dompet Anda terlebih dahulu",
+				"no_network": "Tidak ada jaringan yang dipilih",
+				"no_token": "Tidak ada token yang dipilih",
+				"no_recipients": "Tidak ada penerima yang ditambahkan"
+			}
+		},
+		"footer": {
+			"back": "Kembali ke Penerima",
+			"execute": "Jalankan Distribusi"
+		}
+	}
+}

@@ -1,0 +1,37 @@
+{
+	"_meta": {
+		"code": "es",
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸"
+	},
+	"title": "Preguntas frecuentes",
+	"subtitle": "Todo lo que necesitas saber sobre biubiu.tools",
+	"items": [
+		{
+			"question": "¿Qué es biubiu.tools?",
+			"answer": "biubiu.tools es un conjunto completo de herramientas Web3 que proporciona operaciones por lotes y funciones de gestión de múltiples wallets para el ecosistema Ethereum."
+		},
+		{
+			"question": "¿Es seguro de usar?",
+			"answer": "¡Sí! Nunca almacenamos tus claves privadas. Todas las operaciones se realizan localmente en tu navegador utilizando protocolos Web3 seguros."
+		},
+		{
+			"question": "¿Qué cadenas son compatibles?",
+			"answer": "Soportamos la red principal de Ethereum y las principales cadenas compatibles con EVM, incluyendo Polygon, BSC, Arbitrum y Optimism."
+		},
+		{
+			"question": "¿Cómo funciona la recolección de wallets por lotes?",
+			"answer": "Nuestra herramienta te permite recolectar tokens de múltiples wallets a una sola dirección en una transacción, ahorrando tiempo y comisiones de gas."
+		},
+		{
+			"question": "¿Puedo probarlo gratis?",
+			"answer": "¡Por supuesto! Nuestro plan gratuito incluye funciones básicas con hasta 10 wallets. Puedes actualizar en cualquier momento para funciones más avanzadas."
+		}
+	],
+	"still_questions": "¿Todavía tienes preguntas?",
+	"contact_text": "Estamos aquí para ayudar. Contacta a nuestro equipo de soporte en cualquier momento.",
+	"join_discord": "Unirse a Discord",
+	"email_support": "Soporte por email"
+}

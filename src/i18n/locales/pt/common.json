@@ -1,0 +1,86 @@
+{
+	"_meta": {
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷",
+		"code": "pt"
+	},
+	"hero_title": "BiuBiu",
+	"hero_subtitle": "Descoberta Web3 facilitada e segura para você",
+	"cta_get_started": "Começar",
+	"cta_learn_more": "Saiba Mais",
+	"cta": {
+		"title": "Pronto para Começar?",
+		"subtitle": "Junte-se a milhares de usuários que já estão usando biubiu.tools para otimizar suas operações Web3",
+		"button_text": "Comece Agora - É Grátis"
+	},
+	"stats": {
+		"title": "Confiado por Usuários Web3",
+		"registered_users": "Usuários Ativos",
+		"transactions": "Transações",
+		"total_volume": "Volume Total",
+		"chains_supported": "Redes Suportadas",
+		"last_updated": "Estatísticas ao Vivo"
+	},
+	"footer": {
+		"privacy": "Privacidade",
+		"terms": "Termos"
+	},
+	"helpButton": {
+		"label": "Ajuda & Feedback",
+		"getHelp": "Obter Ajuda",
+		"reportIssue": "Reportar um Problema"
+	},
+	"environment_banner": {
+		"community_warning": "Esta é uma versão implantada pela comunidade, não afiliada com o biubiu.tools oficial.",
+		"dev_environment": "Ambiente de Desenvolvimento",
+		"official_reminder": "Você está no site oficial. Sempre verifique o domínio: biubiu.tools"
+	},
+	"loading": "Carregando...",
+	"continue": "Continuar",
+	"back": "Voltar",
+	"next": "Próximo",
+	"previous": "Anterior",
+	"finish": "Finalizar",
+	"done": "Concluído",
+	"cancel": "Cancelar",
+	"optional": "Opcional",
+	"enabled": "Ativado",
+	"disabled": "Desativado",
+	"chars_left": "caracteres restantes",
+	"name": "Nome",
+	"symbol": "Símbolo",
+	"description": "Descrição",
+	"standard": "Padrão",
+	"contract_address": "Endereço do Contrato",
+	"transaction_hash": "Hash da Transação",
+	"gas_used": "Gas Utilizado",
+	"deployment_cost": "Custo de Implantação",
+	"max_supply": "Fornecimento Máximo",
+	"mint_price": "Preço de Mint",
+	"royalty": "Royalty",
+	"show_more": "Mostrar Mais",
+	"show_less": "Mostrar Menos",
+	"back_to_home": "Voltar ao Início",
+	"faqs": "Perguntas Frequentes",
+	"total_checks": "Total de Verificações",
+	"passed": "Aprovado",
+	"failed": "Falhou",
+	"status": {
+		"coming_soon": "Em Breve",
+		"alpha": "Alpha",
+		"beta": "Beta",
+		"stable": "Estável",
+		"new": "Novo"
+	},
+	"network_selector": {
+		"no_networks_enabled": "Nenhuma Rede Ativada",
+		"enable_network_prompt": "Por favor, ative pelo menos uma rede para continuar.",
+		"open_network_settings": "Abrir Configurações de Rede",
+		"network_not_found": "Rede não encontrada?",
+		"add_custom_network": "Adicionar rede personalizada"
+	},
+	"copy_address": "Copiar Endereço",
+	"copied": "Copiado!"
+}

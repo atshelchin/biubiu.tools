@@ -1,0 +1,67 @@
+{
+	"prompt": {
+		"close": "닫기",
+		"upgrade_membership": "멤버십 업그레이드",
+		"pay": "{{amount}} {{symbol}} 결제",
+		"recommend_tip": "💡 멤버십을 업그레이드하여 무제한 무료 이용"
+	},
+	"modal": {
+		"title": "프리미엄으로 업그레이드",
+		"subtitle": "필요에 맞는 완벽한 플랜을 선택하세요",
+		"benefits": {
+			"title": "포함 내용",
+			"zero_fees": "모든 도구에서 거래 수수료 제로",
+			"unlimited_access": "프리미엄 기능 무제한 이용",
+			"priority_support": "우선 고객 지원"
+		},
+		"plans": {
+			"daily": "일간",
+			"monthly": "월간",
+			"yearly": "연간",
+			"popular": "인기",
+			"days": "{{days}}일",
+			"per_day": "{{price}} {{symbol}}/일"
+		},
+		"referral": {
+			"label": "추천인:",
+			"direct": "직접 방문"
+		},
+		"status": {
+			"loading": "구독 상태 로딩 중...",
+			"active": "활성 프리미엄 회원",
+			"expires_in": "{{days}}일 후 만료"
+		},
+		"cta": "프리미엄 구매",
+		"processing": "처리 중...",
+		"footer_note": "멤버십은 {{network}}에서만 유효 • 네트워크 전환 시 새로 구매 필요",
+		"success": {
+			"title": "구매 성공!",
+			"message": "{{tier}} 플랜 구독이 완료되었습니다!",
+			"tx_label": "트랜잭션:",
+			"auto_close": "이 모달은 5초 후 자동으로 닫힙니다..."
+		},
+		"error": {
+			"connect_wallet": "먼저 지갑을 연결하세요",
+			"invalid_tier": "잘못된 티어 선택됨",
+			"tx_failed": "트랜잭션 실패",
+			"purchase_failed": "구매를 완료할 수 없습니다"
+		}
+	},
+	"rules": {
+		"membership_required": "이 기능에는 멤버십이 필요합니다",
+		"quota_exceeded": "일일 무료 한도 초과 ({{limit}}/{{unit}})",
+		"quota_remaining": "오늘 남은 무료 한도: {{remaining}}",
+		"upgrade_hint": "무제한 이용을 위해 업그레이드",
+		"upgrade_hint_cheaper": "멤버십 업그레이드가 더 경제적입니다",
+		"fee_info": "수수료: {{total}} ETH ({{count}} × {{fee}} ETH)",
+		"exceeded_fee_info": "한도 초과, {{total}} ETH 결제",
+		"unit_items": "항목",
+		"unit_requests": "요청"
+	},
+	"status": {
+		"not_connected": "먼저 지갑을 연결하세요",
+		"member": "프리미엄 회원",
+		"expires_in": "{{days}}일 후 만료",
+		"expired": "멤버십 만료됨"
+	}
+}

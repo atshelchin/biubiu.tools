@@ -1,0 +1,37 @@
+{
+	"_meta": {
+		"code": "ja",
+		"name": "日本語",
+		"englishName": "Japanese",
+		"direction": "ltr",
+		"flag": "🇯🇵"
+	},
+	"title": "よくある質問",
+	"subtitle": "biubiu.toolsについて知っておくべきすべてのこと",
+	"items": [
+		{
+			"question": "biubiu.toolsとは何ですか？",
+			"answer": "biubiu.toolsは、Ethereumエコシステム向けのバッチ操作とマルチウォレット管理機能を提供する包括的なWeb3ツールキットです。"
+		},
+		{
+			"question": "使用は安全ですか？",
+			"answer": "はい！プライベートキーは一切保存しません。すべての操作は、安全なWeb3プロトコルを使用してブラウザでローカルに実行されます。"
+		},
+		{
+			"question": "どのチェーンがサポートされていますか？",
+			"answer": "Ethereumメインネットと、Polygon、BSC、Arbitrum、Optimismを含む主要なEVM互換チェーンをサポートしています。"
+		},
+		{
+			"question": "バッチウォレット収集はどのように機能しますか？",
+			"answer": "このツールを使用すると、複数のウォレットからトークンを1つのトランザクションで単一のアドレスに収集でき、時間とガス代を節約できます。"
+		},
+		{
+			"question": "無料で試せますか？",
+			"answer": "もちろん！無料プランには、最大10ウォレットまでの基本機能が含まれています。より高度な機能が必要な場合は、いつでもアップグレードできます。"
+		}
+	],
+	"still_questions": "まだ質問がありますか？",
+	"contact_text": "いつでもサポートチームにお問い合わせください。",
+	"join_discord": "Discordに参加",
+	"email_support": "メールサポート"
+}

@@ -1,0 +1,86 @@
+{
+	"_meta": {
+		"code": "vi",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳"
+	},
+	"hero_title": "BiuBiu",
+	"hero_subtitle": "Khám phá Web3 dễ dàng và an toàn",
+	"cta_get_started": "Bắt đầu",
+	"cta_learn_more": "Tìm hiểu thêm",
+	"cta": {
+		"title": "Sẵn sàng bắt đầu?",
+		"subtitle": "Tham gia cùng hàng nghìn người dùng đang sử dụng biubiu.tools để tối ưu hóa các hoạt động Web3",
+		"button_text": "Bắt đầu ngay - Miễn phí"
+	},
+	"stats": {
+		"title": "Được tin dùng bởi người dùng Web3",
+		"registered_users": "Người dùng hoạt động",
+		"transactions": "Giao dịch",
+		"total_volume": "Tổng khối lượng",
+		"chains_supported": "Chuỗi được hỗ trợ",
+		"last_updated": "Thống kê trực tiếp"
+	},
+	"footer": {
+		"privacy": "Quyền riêng tư",
+		"terms": "Điều khoản"
+	},
+	"helpButton": {
+		"label": "Trợ giúp & Phản hồi",
+		"getHelp": "Nhận trợ giúp",
+		"reportIssue": "Báo cáo sự cố"
+	},
+	"environment_banner": {
+		"community_warning": "Đây là phiên bản do cộng đồng triển khai, không liên kết với biubiu.tools chính thức.",
+		"dev_environment": "Môi trường phát triển",
+		"official_reminder": "Bạn đang ở trang chính thức. Luôn xác minh tên miền: biubiu.tools"
+	},
+	"loading": "Đang tải...",
+	"continue": "Tiếp tục",
+	"back": "Quay lại",
+	"next": "Tiếp theo",
+	"previous": "Trước đó",
+	"finish": "Hoàn tất",
+	"done": "Xong",
+	"cancel": "Hủy",
+	"optional": "Tùy chọn",
+	"enabled": "Đã bật",
+	"disabled": "Đã tắt",
+	"chars_left": "ký tự còn lại",
+	"name": "Tên",
+	"symbol": "Ký hiệu",
+	"description": "Mô tả",
+	"standard": "Tiêu chuẩn",
+	"contract_address": "Địa chỉ hợp đồng",
+	"transaction_hash": "Hash giao dịch",
+	"gas_used": "Gas đã dùng",
+	"deployment_cost": "Chi phí triển khai",
+	"max_supply": "Cung cấp tối đa",
+	"mint_price": "Giá mint",
+	"royalty": "Phí bản quyền",
+	"show_more": "Xem thêm",
+	"show_less": "Thu gọn",
+	"back_to_home": "Về trang chủ",
+	"faqs": "Câu hỏi thường gặp",
+	"total_checks": "Tổng số kiểm tra",
+	"passed": "Đạt",
+	"failed": "Thất bại",
+	"status": {
+		"coming_soon": "Sắp ra mắt",
+		"alpha": "Alpha",
+		"beta": "Beta",
+		"stable": "Ổn định",
+		"new": "Mới"
+	},
+	"network_selector": {
+		"no_networks_enabled": "Không có mạng nào được bật",
+		"enable_network_prompt": "Vui lòng bật ít nhất một mạng để tiếp tục.",
+		"open_network_settings": "Mở cài đặt mạng",
+		"network_not_found": "Không tìm thấy mạng?",
+		"add_custom_network": "Thêm mạng tùy chỉnh"
+	},
+	"copy_address": "Sao chép địa chỉ",
+	"copied": "Đã sao chép!"
+}

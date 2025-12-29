@@ -1,0 +1,67 @@
+{
+	"prompt": {
+		"close": "Fermer",
+		"upgrade_membership": "Améliorer l'abonnement",
+		"pay": "Payer {{amount}} {{symbol}}",
+		"recommend_tip": "💡 Améliorez votre abonnement pour un accès gratuit illimité"
+	},
+	"modal": {
+		"title": "Passer à Premium",
+		"subtitle": "Choisissez le plan parfait pour vos besoins",
+		"benefits": {
+			"title": "Ce qui est inclus",
+			"zero_fees": "Zéro frais de transaction sur tous les outils",
+			"unlimited_access": "Accès illimité aux fonctionnalités premium",
+			"priority_support": "Support client prioritaire"
+		},
+		"plans": {
+			"daily": "Journalier",
+			"monthly": "Mensuel",
+			"yearly": "Annuel",
+			"popular": "Populaire",
+			"days": "{{days}} jours",
+			"per_day": "{{price}} {{symbol}}/jour"
+		},
+		"referral": {
+			"label": "Référé par :",
+			"direct": "Visite directe"
+		},
+		"status": {
+			"loading": "Chargement du statut de l'abonnement...",
+			"active": "Membre Premium actif",
+			"expires_in": "Expire dans {{days}} jours"
+		},
+		"cta": "Acheter l'accès Premium",
+		"processing": "Traitement...",
+		"footer_note": "Abonnement valide sur {{network}} uniquement • Changer de réseau nécessite un nouvel achat",
+		"success": {
+			"title": "Achat réussi !",
+			"message": "Vous êtes maintenant abonné au plan {{tier}} !",
+			"tx_label": "Transaction :",
+			"auto_close": "Cette fenêtre se fermera automatiquement dans 5 secondes..."
+		},
+		"error": {
+			"connect_wallet": "Veuillez d'abord connecter votre portefeuille",
+			"invalid_tier": "Niveau sélectionné invalide",
+			"tx_failed": "La transaction a échoué",
+			"purchase_failed": "Impossible de finaliser l'achat"
+		}
+	},
+	"rules": {
+		"membership_required": "Cette fonctionnalité nécessite un abonnement",
+		"quota_exceeded": "Quota gratuit journalier dépassé ({{limit}}/{{unit}})",
+		"quota_remaining": "Quota gratuit restant aujourd'hui : {{remaining}}",
+		"upgrade_hint": "Améliorez pour un accès illimité",
+		"upgrade_hint_cheaper": "L'amélioration de l'abonnement est plus économique",
+		"fee_info": "Frais : {{total}} ETH ({{count}} × {{fee}} ETH)",
+		"exceeded_fee_info": "Quota dépassé, payer {{total}} ETH",
+		"unit_items": "éléments",
+		"unit_requests": "requêtes"
+	},
+	"status": {
+		"not_connected": "Veuillez d'abord connecter votre portefeuille",
+		"member": "Membre Premium",
+		"expires_in": "Expire dans {{days}} jours",
+		"expired": "Abonnement expiré"
+	}
+}

@@ -1,0 +1,103 @@
+{
+	"_meta": {
+		"code": "ja",
+		"name": "日本語",
+		"englishName": "Japanese",
+		"direction": "ltr",
+		"flag": "🇯🇵"
+	},
+	"one-to-many-transfer": {
+		"title": "1対多転送",
+		"description": "1つのウォレットから複数のアドレスへトークンとNFTを一括送信",
+		"features": [
+			"ネイティブトークン（ETH、BNB、MATIC）、ERC20トークン、NFT（ERC721、ERC1155）の送信",
+			"均等配分またはカスタム金額で受取人ごとに設定",
+			"CSV、ペースト、手動入力で受取人をインポート"
+		]
+	},
+	"token-balance-scanner": {
+		"title": "ウォレット残高チェッカー",
+		"description": "残高のあるウォレットを素早くフィルタリング、資産を持つアドレスを特定し、複数ウォレットのトークン保有量を集計",
+		"features": [
+			"最大10万アドレスをスキャン",
+			"残高のあるウォレットをフィルタ",
+			"保有統計を集計",
+			"EXCEL/CSV/JSONにエクスポート"
+		]
+	},
+	"wallet-sweep": {
+		"title": "ウォレットスイープ",
+		"description": "複数ウォレットの残高を1つのアドレスに転送",
+		"features": [
+			"完全な残高スイープ、ダストなし",
+			"大規模自動化、トランザクションごとの確認不要",
+			"送金元ウォレットにネイティブトークン不要",
+			"すべてのEVMチェーンでパーミッションレス"
+		]
+	},
+	"contract-deployer": {
+		"title": "コントラクトデプロイヤー",
+		"description": "CREATE2プロキシを使用してスマートコントラクトを決定論的にデプロイ",
+		"features": [
+			"全チェーンで決定論的デプロイ",
+			"すべてのネットワークで同じコントラクトアドレス",
+			"シンプルで開発者フレンドリーなインターフェース"
+		]
+	},
+	"contract-events-scanner": {
+		"title": "コントラクトイベントスキャナー",
+		"description": "ブロックチェーンからスマートコントラクトイベントをスキャン、分析、エクスポート",
+		"features": [
+			"任意のコントラクトの過去のイベントログをスキャン",
+			"カスタムイベントフィルターとブロック範囲選択",
+			"イベントデータをCSV、JSON形式でエクスポート"
+		]
+	},
+	"call-master": {
+		"title": "コールマスター",
+		"description": "高度な機能とバッチ操作でスマートコントラクト呼び出しを実行。",
+		"features": ["マルチコール対応", "ABI管理", "トランザクションビルダー"]
+	},
+	"wallet-generator": {
+		"title": "ウォレットファクトリー",
+		"description": "ニーモニック、xpub、シークレットテキストからHDパスサポートで複数ウォレットを生成",
+		"features": ["HDパス対応", "マルチチェーン", "EXCEL/CSV/JSONエクスポート"]
+	},
+	"dex-moonshot-trader": {
+		"title": "DEX Moonshot トレーダー",
+		"description": "簡単なWebインターフェースでDEXScreener Moonshotトークンを売買",
+		"features": ["トークンの売買", "スリッページ調整可能", "マルチチェーン対応"]
+	},
+	"token-deployer": {
+		"title": "トークンデプロイヤー",
+		"description": "カスタムパラメータでERC20トークンを数分で作成・デプロイ",
+		"features": ["高度な機能", "税金とアンチボット", "即時デプロイ"]
+	},
+	"nft-deployer": {
+		"title": "NFTデプロイヤー",
+		"description": "ERC-721、ERC-721A、ERC-1155標準でNFTスマートコントラクトをデプロイ",
+		"features": [
+			"ERC-721、ERC-721A、ERC-1155標準対応",
+			"ロイヤリティ、供給量、ミント価格を設定可能",
+			"高度な機能：一時停止、バーン、リビール"
+		]
+	},
+	"chainlist": {
+		"title": "チェーンリスト",
+		"description": "EVM互換ブロックチェーンネットワークを検索してウォレットに追加",
+		"features": [
+			"Chain ID、名前、シンボルで検索",
+			"リアルタイムRPCテスト",
+			"ワンクリックでウォレットに追加"
+		]
+	},
+	"chain-tools": {
+		"title": "チェーンツール",
+		"description": "質の高いWeb3ツールとDAppを発見",
+		"features": [
+			"600以上の厳選されたWeb3ツールを閲覧",
+			"カテゴリでフィルタ：DeFi、NFT、分析、セキュリティ",
+			"名前、タグ、ブロックチェーンで検索"
+		]
+	}
+}

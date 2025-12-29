@@ -1,0 +1,103 @@
+{
+	"_meta": {
+		"code": "es",
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸"
+	},
+	"one-to-many-transfer": {
+		"title": "Transferencia Uno a Muchos",
+		"description": "Envía tokens y NFTs desde un wallet a múltiples direcciones en lote",
+		"features": [
+			"Envía tokens nativos (ETH, BNB, MATIC), tokens ERC20 y NFTs (ERC721, ERC1155)",
+			"Distribución equitativa o cantidades personalizadas por destinatario",
+			"Importa destinatarios vía CSV, pegando o entrada manual"
+		]
+	},
+	"token-balance-scanner": {
+		"title": "Verificador de Saldo de Wallets",
+		"description": "Filtra rápidamente wallets con saldos, identifica direcciones con fondos y agrega holdings de tokens en múltiples wallets",
+		"features": [
+			"Escanea hasta 100K direcciones",
+			"Filtra wallets con saldo",
+			"Estadísticas agregadas de holdings",
+			"Exporta a EXCEL/CSV/JSON"
+		]
+	},
+	"wallet-sweep": {
+		"title": "Barrido de Wallets",
+		"description": "Transfiere saldos de múltiples wallets a una dirección",
+		"features": [
+			"Barrido completo de saldos, sin polvo residual",
+			"Automatización a gran escala, sin confirmación por transacción",
+			"No requiere token nativo en wallets origen",
+			"Sin permisos en cualquier cadena EVM"
+		]
+	},
+	"contract-deployer": {
+		"title": "Desplegador de Contratos",
+		"description": "Despliega contratos inteligentes de forma determinística usando proxy CREATE2",
+		"features": [
+			"Despliegue determinístico en todas las cadenas",
+			"Misma dirección de contrato en cada red",
+			"Interfaz simple y amigable para desarrolladores"
+		]
+	},
+	"contract-events-scanner": {
+		"title": "Escáner de Eventos de Contratos",
+		"description": "Escanea, analiza y exporta eventos de contratos inteligentes desde blockchain",
+		"features": [
+			"Escanea logs de eventos históricos de cualquier contrato",
+			"Filtros de eventos personalizados y selección de rango de bloques",
+			"Exporta datos de eventos a formatos CSV, JSON"
+		]
+	},
+	"call-master": {
+		"title": "Maestro de Llamadas",
+		"description": "Ejecuta llamadas a contratos inteligentes con funciones avanzadas y operaciones en lote.",
+		"features": ["Soporte Multi-llamada", "Gestión de ABI", "Constructor de Transacciones"]
+	},
+	"wallet-generator": {
+		"title": "Fábrica de Wallets",
+		"description": "Genera múltiples wallets desde mnemónico, xpub o texto secreto con soporte de ruta HD",
+		"features": ["Soporte de Ruta HD", "Múltiples Cadenas", "Exporta a EXCEL/CSV/JSON"]
+	},
+	"dex-moonshot-trader": {
+		"title": "Trader DEX Moonshot",
+		"description": "Compra y vende tokens de DEXScreener Moonshot con interfaz web fácil",
+		"features": ["Comprar y Vender Tokens", "Deslizamiento Ajustable", "Soporte Multi-Cadena"]
+	},
+	"token-deployer": {
+		"title": "Desplegador de Tokens",
+		"description": "Crea y despliega tokens ERC20 con parámetros personalizados en minutos",
+		"features": ["Funciones Avanzadas", "Impuestos y Anti-Bot", "Despliegue Instantáneo"]
+	},
+	"nft-deployer": {
+		"title": "Desplegador de NFT",
+		"description": "Despliega contratos inteligentes de NFT con estándares ERC-721, ERC-721A y ERC-1155",
+		"features": [
+			"Soporta estándares ERC-721, ERC-721A, ERC-1155",
+			"Regalías, suministro y precio de acuñación configurables",
+			"Funciones avanzadas: pausable, quemable, revelable"
+		]
+	},
+	"chainlist": {
+		"title": "Lista de Cadenas",
+		"description": "Busca y añade redes blockchain compatibles con EVM a tu wallet",
+		"features": [
+			"Busca por Chain ID, Nombre, Símbolo",
+			"Prueba RPC en tiempo real",
+			"Añadir a Wallet con un clic"
+		]
+	},
+	"chain-tools": {
+		"title": "Herramientas de Cadena",
+		"description": "Descubre herramientas Web3 y DApps de calidad",
+		"features": [
+			"Explora más de 600 herramientas Web3 curadas",
+			"Filtra por categoría: DeFi, NFT, Analíticas, Seguridad",
+			"Busca por nombre, etiqueta o blockchain"
+		]
+	}
+}

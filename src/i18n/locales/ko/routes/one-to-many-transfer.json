@@ -1,0 +1,290 @@
+{
+	"_meta": {
+		"code": "ko",
+		"name": "한국어",
+		"englishName": "Korean",
+		"direction": "ltr",
+		"flag": "🇰🇷"
+	},
+	"title": "일대다 전송",
+	"description": "하나의 지갑에서 여러 주소로 토큰과 NFT를 일괄 전송",
+	"seo": {
+		"page_title": "일대다 전송 - 여러 지갑으로 토큰 및 NFT 일괄 전송 | BiuBiu Tools",
+		"page_description": "하나의 지갑에서 여러 주소로 토큰과 NFT를 일괄 전송합니다. 여러 블록체인 네트워크에서 ETH, ERC20, ERC721, ERC1155를 지원합니다.",
+		"keywords": "일대다 전송, 일괄 전송, 에어드롭, 토큰 전송, NFT 전송, 멀티 전송, 대량 전송, ERC20, ERC721, ERC1155, 암호화폐 배포, web3 도구",
+		"webapp_name": "일대다 전송",
+		"webapp_description": "여러 블록체인 네트워크에서 하나의 지갑에서 여러 수신자에게 토큰과 NFT를 일괄 전송",
+		"howto_name": "여러 지갑으로 토큰 및 NFT를 일괄 전송하는 방법",
+		"howto_description": "하나의 지갑에서 여러 수신자 주소로 토큰과 NFT를 전송하는 완전 가이드",
+		"howto_tool_1": "Web3 지갑 (MetaMask, WalletConnect 등)",
+		"howto_tool_2": "충분한 토큰 잔액과 가스비",
+		"step_1_name": "지갑 연결",
+		"step_1_text": "\"지갑 연결\" 버튼을 클릭하고 Web3 지갑(MetaMask, WalletConnect 등)을 애플리케이션에 연결합니다. 이 지갑이 배포할 토큰의 출처가 됩니다.",
+		"step_1_description": "Web3 지갑을 소스 지갑으로 연결",
+		"step_2_name": "종속성 확인",
+		"step_2_text": "선택한 네트워크에 필요한 스마트 계약(WETH 및 TokenDistribution)이 배포되어 있는지 확인합니다. 이러한 계약이 일괄 배포 기능을 활성화합니다.",
+		"step_2_description": "필요한 계약이 배포되었는지 확인",
+		"step_3_name": "토큰 및 수량 선택",
+		"step_3_text": "배포할 토큰 유형(네이티브 토큰, ERC20 또는 NFT)을 선택하고, 배포 모드(균등 배포 또는 수신자별 사용자 정의 수량)를 설정하고, 수신자당 수량 또는 총 수량을 지정합니다.",
+		"step_3_description": "토큰 및 배포 수량 구성",
+		"step_4_name": "수신자 가져오기",
+		"step_4_text": "수동 입력, CSV 파일 업로드 또는 목록 붙여넣기로 수신자 지갑 주소를 추가합니다. 선택적으로 각 수신자에 대해 사용자 정의 수량을 설정할 수 있습니다.",
+		"step_4_description": "수신자 지갑 주소 추가",
+		"step_5_name": "검토 및 실행",
+		"step_5_text": "총 수량, 수신자 수 및 예상 가스 비용을 포함한 배포 요약을 검토합니다. 확인하고 일괄 배포를 실행합니다. 지갑으로 각 트랜잭션에 서명합니다.",
+		"step_5_description": "토큰 배포 실행",
+		"feature_1": "Web3 지갑 연결 (MetaMask, WalletConnect, Coinbase Wallet)",
+		"feature_2": "여러 네트워크 지원 (Ethereum, Polygon, BSC, Base, Arbitrum, Optimism)",
+		"feature_3": "네이티브 토큰 (ETH, BNB, MATIC), ERC20 토큰 및 NFT (ERC721, ERC1155) 전송",
+		"feature_4": "균등 배포 또는 수신자별 사용자 정의 수량",
+		"feature_5": "CSV, 붙여넣기 또는 수동 입력으로 수신자 가져오기"
+	},
+	"faqs": {
+		"what_is_one_to_many": "일대다 전송이란?",
+		"one_to_many_explanation": "일대다 전송을 통해 하나의 지갑에서 여러 수신자 주소로 토큰이나 NFT를 일괄 전송할 수 있습니다. 에어드롭, 급여 지급, 보상 배포 및 많은 주소에 효율적으로 자산을 보내야 하는 모든 시나리오에 이상적입니다.",
+		"what_tokens_supported": "어떤 유형의 토큰이 지원되나요?",
+		"tokens_supported_explanation": "네이티브 토큰 (ETH, BNB, MATIC 등), ERC20 토큰 (USDT, USDC 등) 및 ERC721과 ERC1155 표준을 포함한 NFT를 지원합니다.",
+		"what_is_equal_distribution": "균등 배포 모드란?",
+		"equal_distribution_explanation": "균등 배포 모드에서는 수신자당 수량을 지정하면 모든 주소가 동일한 수량을 받습니다. 총액은 수신자 수에 따라 자동으로 계산됩니다.",
+		"what_is_custom_amounts": "사용자 정의 수량 모드란?",
+		"custom_amounts_explanation": "사용자 정의 수량 모드에서는 각 수신자에 대해 다른 수량을 지정할 수 있습니다. 다른 주소가 다른 수량을 받아야 할 때 유용합니다.",
+		"how_to_import_recipients": "수신자 주소를 어떻게 가져올 수 있나요?",
+		"import_recipients_explanation": "수신자를 추가하는 방법: 1) 하나씩 수동 입력, 2) 주소 목록 붙여넣기, 또는 3) 주소와 선택적 수량이 포함된 CSV 파일 업로드.",
+		"what_networks_supported": "어떤 블록체인 네트워크가 지원되나요?",
+		"networks_supported_explanation": "현재 Ethereum 메인넷, Polygon, BSC (Binance Smart Chain), Base, Arbitrum 및 Optimism을 지원합니다. 향후 더 많은 네트워크가 추가될 예정입니다."
+	},
+	"step2": {
+		"content": {
+			"title": "종속성 확인",
+			"description": "이 네트워크에 필요한 계약이 배포되었는지 확인",
+			"checks": {
+				"contract": {
+					"weth_description": "위임 실행 모드용 WETH 계약 (배포를 위해 WETH를 ETH로 변환)",
+					"token_distribution_description": "여러 수신자에게 토큰과 NFT를 일괄 배포하기 위한 TokenDistribution 계약"
+				}
+			}
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "토큰 선택",
+			"description": "토큰 유형을 선택하고 배포할 토큰을 지정"
+		},
+		"content": {
+			"title": "배포할 토큰 선택",
+			"description": "토큰 유형을 선택하고 여러 수신자에게 보낼 특정 토큰을 선택",
+			"token_type": {
+				"title": "토큰 유형",
+				"native": "네이티브 토큰",
+				"native_desc": "ETH, BNB, MATIC 등",
+				"erc20": "ERC20 토큰",
+				"erc20_desc": "USDT, USDC, DAI 등",
+				"erc721": "ERC721 NFT",
+				"erc721_desc": "개별 NFT (수신자당 1개)",
+				"erc1155": "ERC1155 멀티 토큰",
+				"erc1155_desc": "일괄 NFT 또는 세미 펀저블 토큰"
+			},
+			"select_token": {
+				"title": "토큰 선택",
+				"no_tokens": "이 네트워크에서 사용 가능한 토큰이 없습니다",
+				"add_custom": "사용자 정의 토큰 추가"
+			},
+			"nft_config": {
+				"title": "NFT 구성",
+				"contract_address": "계약 주소",
+				"contract_placeholder": "NFT 계약 주소 입력 (0x...)",
+				"token_ids": "토큰 ID",
+				"token_ids_placeholder": "토큰 ID 입력 (여러 개는 쉼표로 구분)",
+				"token_ids_hint": "ERC721: 수신자당 하나의 토큰 ID. ERC1155: 배포할 토큰 ID를 지정.",
+				"load_button": "NFT 정보 로드",
+				"loading": "NFT 정보 로딩 중...",
+				"collection_name": "컬렉션",
+				"total_supply": "총 공급량",
+				"your_balance": "내 잔액",
+				"invalid_address": "잘못된 계약 주소 형식"
+			},
+			"amount_mode": {
+				"title": "배포 모드",
+				"equal": "균등 배포",
+				"equal_desc": "모든 수신자에게 동일한 수량",
+				"custom": "사용자 정의 수량",
+				"custom_desc": "수신자별 개별 수량 설정 (4단계에서)",
+				"random": "랜덤 수량",
+				"random_desc": "각 수신자에게 범위 내 랜덤 수량"
+			},
+			"amount_input": {
+				"title": "수신자당 수량",
+				"placeholder": "0.0",
+				"hint": "이 수량이 각 수신자에게 전송됩니다. 총액은 수신자 수에 따라 계산됩니다."
+			},
+			"custom_mode_info": "사용자 정의 수량 모드를 선택했습니다. 4단계에서 각 수신자에 대한 개별 수량을 설정합니다.",
+			"random_mode_config": {
+				"min_amount": "최소 수량",
+				"max_amount": "최대 수량",
+				"min_placeholder": "0.0",
+				"max_placeholder": "0.0",
+				"hint": "각 수신자는 최소값과 최대값 사이의 랜덤 수량을 받습니다.",
+				"valid_range": "랜덤 수량은 {min}에서 {max} {symbol} 사이가 됩니다",
+				"error_max_less_than_min": "최대 수량은 최소 수량보다 커야 합니다"
+			}
+		},
+		"footer": {
+			"continue": "수신자로 계속",
+			"hint": "토큰을 선택하고 수량을 구성하여 계속"
+		}
+	},
+	"step4": {
+		"sidebar": {
+			"title": "수신자 가져오기",
+			"description": "토큰을 받을 지갑 주소 추가"
+		},
+		"content": {
+			"title": "수신자 추가",
+			"description": "이 배포에서 토큰을 받을 지갑 주소 가져오기",
+			"distributing": "배포 중",
+			"method": {
+				"manual": "수동 입력",
+				"paste": "목록 붙여넣기",
+				"csv": "CSV 업로드"
+			},
+			"manual": {
+				"title": "수동으로 수신자 추가",
+				"address": "지갑 주소",
+				"token_id": "토큰 ID",
+				"token_amount": "수량",
+				"amount": "금액",
+				"label": "라벨 (선택)",
+				"label_placeholder": "예: Alice, Bob",
+				"add_button": "수신자 추가"
+			},
+			"paste": {
+				"title": "여러 주소 붙여넣기",
+				"add_button": "모두 추가"
+			},
+			"paste_hint": {
+				"fungible_equal": "형식: 주소, 라벨 (선택). 한 줄에 하나씩.",
+				"fungible_custom": "형식: 주소, 라벨 (선택), 금액. 한 줄에 하나씩.",
+				"erc721": "형식: 주소, 토큰ID, 라벨 (선택). 한 줄에 하나씩.",
+				"erc1155": "형식: 주소, 토큰ID, 수량, 라벨 (선택). 한 줄에 하나씩."
+			},
+			"csv": {
+				"title": "CSV 파일 업로드",
+				"description": "수신자 주소가 포함된 CSV 파일 업로드",
+				"upload_button": "파일 선택",
+				"hint": "CSV에는 주소 열이 필요합니다. 선택: 라벨, 금액/토큰ID 열."
+			},
+			"recipients": {
+				"title": "수신자",
+				"clear_all": "모두 지우기",
+				"regenerate_random": "수량 재생성",
+				"col_address": "주소",
+				"col_token_id": "토큰 ID",
+				"col_token_amount": "수량",
+				"col_amount": "금액",
+				"col_label": "라벨"
+			},
+			"empty_state": "아직 추가된 수신자가 없습니다. 위의 양식을 사용하여 수신자 주소를 추가하세요.",
+			"error": {
+				"invalid_address": "유효한 이더리움 주소를 입력하세요",
+				"invalid_address_line": "{line}번째 줄: 잘못된 주소 형식",
+				"token_id_required": "NFT 배포에는 토큰 ID가 필요합니다",
+				"invalid_token_id_line": "{line}번째 줄: 잘못되었거나 누락된 토큰 ID"
+			}
+		},
+		"footer": {
+			"continue": "검토로 계속",
+			"hint": "계속하려면 최소 한 명의 수신자를 추가하세요"
+		}
+	},
+	"step5": {
+		"sidebar": {
+			"title": "확인 및 실행",
+			"description": "배포 세부 정보를 검토하고 전송 실행"
+		},
+		"mode": {
+			"title": "실행 모드",
+			"self": {
+				"title": "자체 실행",
+				"description": "지갑에서 각 트랜잭션에 서명하고 전송합니다. 소규모 배포에 적합합니다."
+			},
+			"delegated": {
+				"title": "위임 실행",
+				"description": "한 번 서명하면 누구나 배치를 실행할 수 있습니다. 많은 수신자가 있는 대규모 배포에 적합합니다.",
+				"info": "위임 모드는 스마트 계약을 사용하여 전송을 일괄 처리합니다. 승인에 서명하면 배치는 누구나 (본인 포함) 실행할 수 있습니다."
+			}
+		},
+		"delegated": {
+			"authorize": "승인 서명",
+			"authorizing": "서명 중...",
+			"execute_batch": "배치 실행 {current}/{total}",
+			"execute_all": "모든 배치 실행",
+			"batch_status": "배치 상태",
+			"batch_pending": "대기 중",
+			"batch_completed": "완료",
+			"batch_failed": "실패",
+			"export_session": "세션 내보내기",
+			"import_session": "세션 가져오기",
+			"session_expired": "세션 만료됨",
+			"session_info": "세션 ID: {id} | 만료: {time}"
+		},
+		"session": {
+			"title": "배포 세션",
+			"empty": "저장된 세션 없음",
+			"import": "세션 가져오기",
+			"export": "내보내기",
+			"delete": "삭제",
+			"resume": "재개",
+			"batches": "배치",
+			"expires_in": "만료까지",
+			"expired": "만료됨",
+			"status_pending": "대기 중",
+			"status_partial": "진행 중",
+			"status_completed": "완료",
+			"status_expired": "만료됨",
+			"import_error": "세션 가져오기 실패. 파일 형식을 확인하세요.",
+			"importing": "가져오는 중..."
+		},
+		"content": {
+			"title": "배포 검토 및 실행",
+			"description": "배포 요약을 검토하고 토큰 전송 실행",
+			"executor_wallet": "실행자 지갑",
+			"summary_title": "배포 요약",
+			"token": "토큰",
+			"mode": "모드",
+			"mode_equal": "균등 배포",
+			"mode_random": "랜덤 배포",
+			"mode_custom": "사용자 정의 수량",
+			"recipients": "수신자",
+			"total_amount": "총 금액",
+			"total_nfts": "총 NFT",
+			"estimated_gas": "예상 가스",
+			"network": "네트워크",
+			"preview_title": "수신자 미리보기 (처음 10개)",
+			"more_recipients": "명의 추가 수신자",
+			"progress_title": "실행 진행 상황",
+			"successful": "성공",
+			"failed": "실패",
+			"pending": "대기 중",
+			"execute": "배포 실행",
+			"stop": "실행 중지",
+			"resume": "재개",
+			"reset": "초기화",
+			"start_new": "새 배포 시작",
+			"completed": "배포 완료!",
+			"confirm_continue": "계속하시겠습니까?",
+			"warning_title": "중요",
+			"warning_message": "충분한 잔액과 가스비가 있는지 확인하세요. 각 수신자는 별도의 트랜잭션을 받습니다. 실행 전에 모든 세부 정보를 주의 깊게 검토하세요.",
+			"errors": {
+				"invalid_config": "배포 구성이 잘못되었습니다. 이전 단계를 확인하세요.",
+				"connect_wallet": "먼저 지갑을 연결하세요",
+				"no_network": "네트워크가 선택되지 않았습니다",
+				"no_token": "토큰이 선택되지 않았습니다",
+				"no_recipients": "수신자가 추가되지 않았습니다"
+			}
+		},
+		"footer": {
+			"back": "수신자로 돌아가기",
+			"execute": "배포 실행"
+		}
+	}
+}

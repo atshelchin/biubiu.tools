@@ -1,0 +1,58 @@
+{
+	"_meta": {
+		"code": "pt",
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷"
+	},
+	"page_title": "Política de Privacidade",
+	"page_description": "Saiba como o BiuBiu Tools coleta, usa e protege seus dados.",
+	"title": "Política de Privacidade",
+	"last_updated": "Última atualização",
+	"introduction": {
+		"title": "Introdução",
+		"content": "O BiuBiu Tools está comprometido em proteger sua privacidade. Esta Política de Privacidade explica como coletamos, usamos e protegemos suas informações quando você usa nossas ferramentas e serviços Web3."
+	},
+	"data_collection": {
+		"title": "Dados que coletamos",
+		"intro": "Coletamos diferentes tipos de dados dependendo das suas preferências de consentimento:",
+		"necessary": {
+			"title": "Dados essenciais (sempre coletados)",
+			"item1": "Dados de sessão necessários para a funcionalidade do site",
+			"item2": "Preferências de consentimento para lembrar suas escolhas",
+			"item3": "Preferências de tema (modo claro/escuro)",
+			"item4": "Preferências de idioma",
+			"item5": "Métricas de desempenho RPC para seleção ideal de rede"
+		},
+		"analytics": {
+			"title": "Dados analíticos (sem cookies, sempre ativados)",
+			"item1": "Estatísticas de uso anônimas via Rybbit (visualizações de página, uso de recursos)",
+			"item2": "Métricas de visitantes agregadas e não identificáveis",
+			"item3": "Rastreamento de fonte de referência para nosso programa de indicação"
+		}
+	},
+	"local_storage": {
+		"title": "Armazenamento local (necessário)",
+		"content": "Usamos o armazenamento local do seu navegador para salvar dados essenciais para o funcionamento do aplicativo. Esses dados permanecem no seu dispositivo e não são transmitidos aos nossos servidores:",
+		"item1": "Listas de tokens personalizadas que você adicionou (necessárias para operações com tokens)",
+		"item2": "Dados de sessão para operações de múltiplas etapas (necessários para retomar tarefas interrompidas)",
+		"item3": "Resultados de varredura armazenados no IndexedDB (necessários para o recurso de varredura de saldos)",
+		"item4": "Suas preferências de consentimento de cookies"
+	},
+	"third_party": {
+		"title": "Analytics",
+		"content": "Usamos o Rybbit (tj.appsdata.org), um serviço de análise sem cookies focado em privacidade para entender como os visitantes usam nosso site. O Rybbit não usa cookies, não coleta informações de identificação pessoal e está sempre ativado, pois está em conformidade com o GDPR sem exigir consentimento. Se adicionarmos serviços de análise adicionais que usem cookies no futuro, eles só serão carregados com seu consentimento. Interagimos com redes blockchain (Ethereum, Polygon, etc.) conforme exigido por nossas ferramentas, mas não armazenamos suas chaves privadas ou frases de recuperação em nossos servidores."
+	},
+	"your_rights": {
+		"title": "Seus direitos",
+		"content": "Sob o GDPR, CCPA e regulamentos similares, você tem os seguintes direitos:",
+		"item1": "Direito de acesso: Você pode solicitar informações sobre quais dados temos sobre você",
+		"item2": "Direito de exclusão: Você pode limpar seus dados locais a qualquer momento através das configurações do navegador",
+		"item3": "Direito de retirar o consentimento: Você pode alterar suas preferências de cookies a qualquer momento"
+	},
+	"contact": {
+		"title": "Entre em contato",
+		"content": "Se você tiver dúvidas sobre esta Política de Privacidade ou nossas práticas de dados, entre em contato conosco através do nosso repositório GitHub ou canais da comunidade."
+	}
+}

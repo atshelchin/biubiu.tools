@@ -1,0 +1,70 @@
+{
+	"_meta": {
+		"code": "tr",
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷"
+	},
+	"page_title": "Hizmet Şartları",
+	"page_description": "BiuBiu Tools Web3 uygulamalarını kullanmak için Hizmet Şartları.",
+	"title": "Hizmet Şartları",
+	"last_updated": "Son güncelleme",
+	"acceptance": {
+		"title": "Şartların Kabulü",
+		"content": "BiuBiu Tools'a erişerek ve kullanarak, bu Hizmet Şartlarını okuduğunuzu, anladığınızı ve bunlara bağlı kalmayı kabul ettiğinizi onaylıyorsunuz. Bu şartları kabul etmiyorsanız, lütfen hizmetlerimizi kullanmayın."
+	},
+	"description": {
+		"title": "Hizmet Açıklaması",
+		"content": "BiuBiu Tools, cüzdan yönetimi, token işlemleri, sözleşme dağıtımı ve toplu işlemler dahil ancak bunlarla sınırlı olmamak üzere blockchain ağlarıyla etkileşim için Web3 yardımcı araçları sağlar. Bu araçlar \"olduğu gibi\" sunulur ve blockchain teknolojisini anlayan deneyimli kullanıcılar için tasarlanmıştır."
+	},
+	"risks": {
+		"title": "Blockchain Riskleri",
+		"intro": "Blockchain teknolojisiyle ilişkili aşağıdaki riskleri kabul ediyor ve onaylıyorsunuz:",
+		"item1": "Blockchain işlemleri geri alınamaz. Onaylandıktan sonra işlemler geri alınamaz veya tersine çevrilemez.",
+		"item2": "Kripto para değerleri oldukça değişkendir. Önemli kayıplar yaşayabilirsiniz.",
+		"item3": "Akıllı sözleşmeler, fon kaybına yol açabilecek hatalar veya güvenlik açıkları içerebilir.",
+		"item4": "Ağ tıkanıklığı işlemleri geciktirebilir veya beklenenden daha yüksek ücretlere neden olabilir.",
+		"item5": "Düzenleyici değişiklikler, bulunduğunuz yargı bölgesinde kripto paraların yasallığını veya kullanılabilirliğini etkileyebilir."
+	},
+	"no_advice": {
+		"title": "Finansal Tavsiye Değildir",
+		"content": "BiuBiu Tools finansal, yatırım, hukuki veya vergi tavsiyesi sağlamaz. Sağlanan tüm bilgiler ve araçlar yalnızca bilgilendirme ve fayda amaçlıdır. Herhangi bir finansal karar vermeden önce nitelikli profesyonellere danışmalısınız. Platformumuzdan edinilen bilgilere dayanarak gerçekleştirdiğiniz tüm eylemler kendi riskiniz altındadır."
+	},
+	"user_responsibility": {
+		"title": "Kullanıcı Sorumluluğu",
+		"intro": "Aşağıdakilerden yalnızca siz sorumlusunuz:",
+		"item1": "Özel anahtarlarınızı, tohum ifadelerinizi ve şifrelerinizi korumak. Bunları saklamıyor veya bunlara erişmiyoruz.",
+		"item2": "İşlemleri imzalamadan veya göndermeden önce tüm işlem ayrıntılarını doğrulamak.",
+		"item3": "Blockchain üzerinde gerçekleştirdiğiniz her eylemin sonuçlarını anlamak.",
+		"item4": "Bulunduğunuz yargı bölgesinde geçerli tüm yasa ve düzenlemelere uymak."
+	},
+	"disclaimer": {
+		"title": "Garanti Reddi",
+		"content": "BiuBiu Tools, açık veya zımni hiçbir garanti olmaksızın \"OLDUĞU GİBİ\" ve \"MEVCUT OLDUĞU ŞEKİLDE\" sağlanır. İnternet ortamının karmaşıklığı nedeniyle, hizmetin her zaman kesintisiz çalışacağını veya tamamen hatasız olacağını garanti edemiyoruz. Sağlanan bilgilerin doğruluğu, güvenilirliği veya eksiksizliği konusunda hiçbir garanti vermiyoruz."
+	},
+	"limitation": {
+		"title": "Sorumluluk Sınırlaması",
+		"content": "Yasaların izin verdiği azami ölçüde, BiuBiu Tools ve geliştiricileri, hizmetlerimizi kullanmanızdan veya kullanamamanızdan kaynaklanan kar, veri veya kripto para varlıkları kaybı dahil ancak bunlarla sınırlı olmamak üzere doğrudan, dolaylı, arızi, özel, sonuç olarak ortaya çıkan veya cezai hiçbir zarardan sorumlu olmayacaktır."
+	},
+	"prohibited": {
+		"title": "Yasaklanan Kullanımlar",
+		"intro": "BiuBiu Tools'u aşağıdaki amaçlarla kullanmamayı kabul ediyorsunuz:",
+		"item1": "Kara para aklama, dolandırıcılık veya terörün finansmanı dahil her türlü yasadışı faaliyet.",
+		"item2": "Ekonomik yaptırımları veya ihracat kontrollerini atlatmak.",
+		"item3": "Kötü niyetli amaçlarla akıllı sözleşmelerdeki veya blockchain ağlarındaki güvenlik açıklarını istismar etmek.",
+		"item4": "Normal hizmet operasyonlarını engelleyebilecek, kesintiye uğratabilecek veya diğer kullanıcıların çıkarlarına zarar verebilecek herhangi bir faaliyet."
+	},
+	"open_source": {
+		"title": "Açık Kaynak ve Türev Çalışmalar",
+		"content": "BiuBiu Tools açık kaynaklı bir projedir. Geçerli lisans altında kaynak kodunu görüntülemek, çatallamak, değiştirmek ve dağıtmakta özgürsünüz. Ancak BiuBiu Tools ve geliştiricileri, herhangi bir türev çalışma, üçüncü taraf dağıtımları veya değiştirilmiş sürümler için hiçbir sorumluluk taşımaz. Resmi olmayan dağıtımlardan kaynaklanan herhangi bir sorun yalnızca bu dağıtımların operatörlerinin sorumluluğundadır. Tek resmi web sitesi biubiu.tools'dur."
+	},
+	"modifications": {
+		"title": "Şartlarda Değişiklikler",
+		"content": "Bu Hizmet Şartlarını herhangi bir zamanda değiştirme hakkını saklı tutuyoruz. Değişiklikler yayınlandıktan hemen sonra yürürlüğe girecektir. Değişikliklerden sonra BiuBiu Tools'u kullanmaya devam etmeniz, değiştirilmiş şartları kabul ettiğiniz anlamına gelir."
+	},
+	"contact": {
+		"title": "İletişim",
+		"content": "Bu Hizmet Şartları hakkında sorularınız varsa, GitHub depomuz veya topluluk kanallarımız aracılığıyla bizimle iletişime geçebilirsiniz."
+	}
+}
