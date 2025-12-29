@@ -1,0 +1,301 @@
+{
+	"_meta": {
+		"code": "ko",
+		"name": "한국어",
+		"englishName": "Korean",
+		"direction": "ltr",
+		"flag": "🇰🇷"
+	},
+	"title": "체인 도구",
+	"subtitle": "고품질 Web3 도구 및 DApp 발견",
+	"search_placeholder": "이름, 태그 또는 체인으로 도구 검색...",
+	"visit": "방문",
+	"empty_title": "일치하는 도구를 찾을 수 없습니다",
+	"empty_description": "다른 키워드를 시도하거나 필터를 지우세요",
+	"clear_filters": "필터 지우기",
+	"showing_count": "전체 {total}개 중 {count}개 도구 표시",
+	"disclaimer": "데이터는 웹에서 가져옵니다. 사용 전 독립적으로 확인하세요.",
+	"faqs_title": "자주 묻는 질문",
+	"categories": {
+		"all": "전체",
+		"featured": "추천",
+		"defi": "DeFi",
+		"nft": "NFT",
+		"analytics": "분석",
+		"security": "보안",
+		"bridge": "브리지",
+		"wallet": "지갑",
+		"explorer": "탐색기",
+		"dev": "개발 도구",
+		"dao": "DAO",
+		"infra": "인프라",
+		"launchpad": "런치패드",
+		"identity": "아이덴티티",
+		"social": "소셜",
+		"l2": "레이어 2",
+		"gamefi": "GameFi",
+		"payments": "결제",
+		"meme": "밈",
+		"oracle": "가격 오라클",
+		"restaking": "리스테이킹",
+		"yield": "수익률",
+		"privacy": "프라이버시",
+		"data": "데이터",
+		"funding": "펀딩",
+		"news": "뉴스",
+		"community": "커뮤니티",
+		"jobs": "채용",
+		"stablecoin": "스테이블코인",
+		"dao_token": "DAO 거버넌스",
+		"whale_address": "고래 및 재무",
+		"airdrop_token": "에어드랍",
+		"non_evm": "Non-EVM 체인",
+		"legendary_token": "10x/100x 토큰",
+		"mev": "MEV",
+		"rwa": "RWA",
+		"ai_crypto": "AI 암호화폐",
+		"cex": "거래소(CEX)",
+		"gas_burner": "가스 소각",
+		"trends": "트렌드 및 VC",
+		"web3_teams": "Web3 팀",
+		"regulation": "규제",
+		"influencer": "KOL 및 인플루언서",
+		"product_hunt": "제품 출시"
+	},
+	"category_seo": {
+		"defi": {
+			"title": "DeFi Tools - Decentralized Finance Protocols & Apps | BiuBiu Tools",
+			"description": "Discover the best DeFi tools for swapping, lending, yield farming, and more. Compare top protocols like Uniswap, Aave, Curve, and Compound.",
+			"keywords": "defi tools, decentralized finance, dex, lending, yield farming, uniswap, aave, compound",
+			"faqs": []
+		},
+		"nft": {
+			"title": "NFT Tools - Marketplaces, Analytics & Creation | BiuBiu Tools",
+			"description": "Find the best NFT marketplaces, analytics tools, and creation platforms. Discover OpenSea, Blur, and other top NFT tools.",
+			"keywords": "nft tools, nft marketplace, opensea, blur, nft analytics, nft creation",
+			"faqs": []
+		},
+		"analytics": {
+			"title": "Blockchain Analytics Tools - On-Chain Data & Insights | BiuBiu Tools",
+			"description": "Explore top blockchain analytics platforms for on-chain data, wallet tracking, and market insights. Tools like Dune, Nansen, and Arkham.",
+			"keywords": "blockchain analytics, on-chain data, dune analytics, nansen, arkham, wallet tracking",
+			"faqs": []
+		},
+		"wallet": {
+			"title": "Crypto Wallets - Hardware, Software & Multi-Chain | BiuBiu Tools",
+			"description": "Compare the best crypto wallets for security and convenience. Hardware wallets, browser extensions, and mobile wallets for all blockchains.",
+			"keywords": "crypto wallet, hardware wallet, metamask, ledger, trezor, multi-chain wallet",
+			"faqs": []
+		},
+		"security": {
+			"title": "Web3 Security Tools - Audit, Monitor & Protect | BiuBiu Tools",
+			"description": "Essential security tools for Web3. Smart contract auditing, transaction simulation, approval management, and real-time threat detection.",
+			"keywords": "web3 security, smart contract audit, revoke approvals, transaction simulation, defi security",
+			"faqs": []
+		},
+		"product_hunt": {
+			"title": "Product Launch Platforms - Discover & Promote New Products | BiuBiu Tools",
+			"description": "Find the best platforms to launch and discover new products. From Product Hunt to regional platforms like 36Kr and Disquiet.",
+			"keywords": "product hunt, product launch, startup, indie hackers, beta list, product discovery",
+			"faqs": []
+		},
+		"bridge": {
+			"title": "Cross-Chain Bridges - Transfer Assets Between Blockchains | BiuBiu Tools",
+			"description": "Find the best cross-chain bridges to transfer tokens between Ethereum, Arbitrum, Optimism, Base, and other networks securely.",
+			"keywords": "",
+			"faqs": []
+		},
+		"explorer": {
+			"title": "Blockchain Explorers - View Transactions & Smart Contracts | BiuBiu Tools",
+			"description": "Access blockchain explorers for Ethereum, BSC, Polygon, and other networks. View transactions, verify contracts, and analyze on-chain data.",
+			"keywords": "",
+			"faqs": []
+		},
+		"dev": {
+			"title": "Web3 Developer Tools - Build dApps & Smart Contracts | BiuBiu Tools",
+			"description": "Essential developer tools for building on Ethereum and other blockchains. Smart contract frameworks, testing tools, and deployment services.",
+			"keywords": "",
+			"faqs": []
+		},
+		"dao": {
+			"title": "DAO Tools - Governance, Voting & Treasury Management | BiuBiu Tools",
+			"description": "Tools for creating and managing DAOs. Governance platforms, voting systems, treasury management, and contributor coordination.",
+			"keywords": "",
+			"faqs": []
+		},
+		"infra": {
+			"title": "Blockchain Infrastructure - RPC Nodes, APIs & Data Services | BiuBiu Tools",
+			"description": "Infrastructure services for Web3 applications. RPC node providers, indexing services, data APIs, and decentralized storage solutions.",
+			"keywords": "",
+			"faqs": []
+		},
+		"launchpad": {
+			"title": "Token Launchpads - IDO, IEO & Fair Launch Platforms | BiuBiu Tools",
+			"description": "Discover token launch platforms for new crypto projects. IDO launchpads, IEO exchanges, and fair launch protocols.",
+			"keywords": "",
+			"faqs": []
+		},
+		"identity": {
+			"title": "Web3 Identity - ENS, Lens & Decentralized Identity | BiuBiu Tools",
+			"description": "Decentralized identity solutions for Web3. Domain names (ENS), social profiles (Lens), credentials, and reputation systems.",
+			"keywords": "",
+			"faqs": []
+		},
+		"social": {
+			"title": "Web3 Social - Decentralized Social Networks & Communities | BiuBiu Tools",
+			"description": "Decentralized social platforms and community tools. Build and engage with Web3 communities on Farcaster, Lens, and more.",
+			"keywords": "",
+			"faqs": []
+		},
+		"l2": {
+			"title": "Layer 2 Solutions - Ethereum Scaling Networks | BiuBiu Tools",
+			"description": "Explore Layer 2 scaling solutions for Ethereum. Arbitrum, Optimism, Base, zkSync, and other rollups with lower fees and faster transactions.",
+			"keywords": "",
+			"faqs": []
+		},
+		"gamefi": {
+			"title": "GameFi & Web3 Gaming - Play-to-Earn Games | BiuBiu Tools",
+			"description": "Discover Web3 games and GameFi platforms. Play-to-earn games, NFT gaming assets, and blockchain gaming guilds.",
+			"keywords": "",
+			"faqs": []
+		},
+		"payments": {
+			"title": "Crypto Payments - Payment Processing & Card Services | BiuBiu Tools",
+			"description": "Crypto payment solutions for businesses and individuals. Payment processors, crypto cards, and merchant services.",
+			"keywords": "",
+			"faqs": []
+		},
+		"funding": {
+			"title": "Web3 Funding - Grants, VCs & Fundraising | BiuBiu Tools",
+			"description": "Find funding sources for Web3 projects. Ecosystem grants, VC investors, crowdfunding platforms, and accelerator programs.",
+			"keywords": "",
+			"faqs": []
+		},
+		"news": {
+			"title": "Crypto News - Market Updates & Industry Coverage | BiuBiu Tools",
+			"description": "Stay informed with crypto news sources. Market analysis, project updates, regulatory news, and industry trends.",
+			"keywords": "",
+			"faqs": []
+		},
+		"community": {
+			"title": "Crypto Communities - Discord, Telegram & Forums | BiuBiu Tools",
+			"description": "Find and join crypto communities. Discord servers, Telegram groups, forums, and community platforms for Web3 projects.",
+			"keywords": "",
+			"faqs": []
+		},
+		"jobs": {
+			"title": "Web3 Jobs - Crypto Careers & Remote Opportunities | BiuBiu Tools",
+			"description": "Find jobs in the crypto industry. Developer roles, marketing, community management, and remote Web3 opportunities.",
+			"keywords": "",
+			"faqs": []
+		},
+		"stablecoin": {
+			"title": "Stablecoins - USDC, USDT, DAI & More | BiuBiu Tools",
+			"description": "Learn about stablecoins and their use cases. Fiat-backed, algorithmic, and decentralized stablecoins for DeFi and payments.",
+			"keywords": "",
+			"faqs": []
+		},
+		"oracle": {
+			"title": "Blockchain Oracles - Price Feeds & Off-Chain Data | BiuBiu Tools",
+			"description": "Oracle services that bring real-world data to blockchain. Price feeds, randomness, and cross-chain data for smart contracts.",
+			"keywords": "",
+			"faqs": []
+		},
+		"dao_token": {
+			"title": "DAO Governance Tokens - Voting Power & Tokenomics | BiuBiu Tools",
+			"description": "Understand DAO governance tokens. Voting mechanisms, token distribution, and governance participation in major DAOs.",
+			"keywords": "",
+			"faqs": []
+		},
+		"whale_address": {
+			"title": "Whale Wallets & Treasury Tracking - Smart Money Insights | BiuBiu Tools",
+			"description": "Track whale wallets and protocol treasuries. Monitor smart money movements and institutional holdings in crypto.",
+			"keywords": "",
+			"faqs": []
+		},
+		"airdrop_token": {
+			"title": "Crypto Airdrops - Token Distributions & Eligibility | BiuBiu Tools",
+			"description": "Track and claim crypto airdrops. Find airdrop opportunities, check eligibility, and learn airdrop farming strategies.",
+			"keywords": "",
+			"faqs": []
+		},
+		"non_evm": {
+			"title": "Non-EVM Blockchains - Solana, Bitcoin, Cosmos & More | BiuBiu Tools",
+			"description": "Explore non-EVM blockchain ecosystems. Solana, Bitcoin, Cosmos, Aptos, Sui, and their unique tools and dApps.",
+			"keywords": "",
+			"faqs": []
+		},
+		"legendary_token": {
+			"title": "High Potential Tokens - Research & Analysis Tools | BiuBiu Tools",
+			"description": "Tools for researching high-potential tokens. On-chain analysis, social metrics, and early discovery platforms for new opportunities.",
+			"keywords": "",
+			"faqs": []
+		},
+		"mev": {
+			"title": "MEV - Maximal Extractable Value Tools & Protection | BiuBiu Tools",
+			"description": "Understand and navigate MEV. Protection tools, private transactions, and MEV extraction for advanced users.",
+			"keywords": "",
+			"faqs": []
+		},
+		"privacy": {
+			"title": "Crypto Privacy - Private Transactions & Tools | BiuBiu Tools",
+			"description": "Privacy-preserving tools for cryptocurrency. Mixers, private transactions, and privacy-focused protocols.",
+			"keywords": "",
+			"faqs": []
+		},
+		"rwa": {
+			"title": "Real World Assets (RWA) - Tokenized Assets | BiuBiu Tools",
+			"description": "Explore tokenized real world assets. Tokenized treasuries, real estate, commodities, and traditional finance on blockchain.",
+			"keywords": "",
+			"faqs": []
+		},
+		"ai_crypto": {
+			"title": "AI & Crypto - AI Tokens & Decentralized AI | BiuBiu Tools",
+			"description": "Intersection of AI and blockchain. AI tokens, decentralized compute, AI agents, and machine learning on-chain.",
+			"keywords": "",
+			"faqs": []
+		},
+		"restaking": {
+			"title": "Restaking - EigenLayer & Liquid Restaking | BiuBiu Tools",
+			"description": "Restaking protocols for additional yield. EigenLayer, liquid restaking tokens, and AVS (Actively Validated Services).",
+			"keywords": "",
+			"faqs": []
+		},
+		"cex": {
+			"title": "Crypto Exchanges (CEX) - Trading Platforms | BiuBiu Tools",
+			"description": "Centralized cryptocurrency exchanges for trading. Compare exchange features, security, fees, and supported assets.",
+			"keywords": "",
+			"faqs": []
+		},
+		"gas_burner": {
+			"title": "Gas Burners & Token Burns - Deflationary Mechanisms | BiuBiu Tools",
+			"description": "Track token burns and gas consumption. Monitor deflationary mechanisms, burn rates, and supply dynamics.",
+			"keywords": "",
+			"faqs": []
+		},
+		"trends": {
+			"title": "Crypto Trends & VC Activity - Market Intelligence | BiuBiu Tools",
+			"description": "Track crypto market trends and venture capital activity. Investment data, emerging narratives, and market movements.",
+			"keywords": "",
+			"faqs": []
+		},
+		"web3_teams": {
+			"title": "Web3 Teams & VCs - Builders & Investors | BiuBiu Tools",
+			"description": "Discover Web3 teams, builders, and investors. Track who's building what and where smart money is investing.",
+			"keywords": "",
+			"faqs": []
+		},
+		"regulation": {
+			"title": "Crypto Regulation - Legal & Compliance Resources | BiuBiu Tools",
+			"description": "Stay informed on crypto regulation worldwide. SEC updates, MiCA, global regulatory developments, and compliance resources.",
+			"keywords": "",
+			"faqs": []
+		},
+		"influencer": {
+			"title": "Crypto Influencers & KOLs - Web3 Content Creators | BiuBiu Tools",
+			"description": "Discover crypto influencers and content creators. Follow key opinion leaders, analysts, and builders on social media.",
+			"keywords": "",
+			"faqs": []
+		}
+	}
+}
