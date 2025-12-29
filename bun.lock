@@ -19,6 +19,7 @@
         "@shelchin/ethereum-connectors": "0.0.1-dev.20251106040039.5fa58a7",
         "@shelchin/i18n": "2.4.0",
         "@shelchin/svelte-clipboard": "workspace:*",
+        "@shelchin/worker-pool": "workspace:*",
         "buffer": "^6.0.3",
         "canvas-confetti": "^1.9.4",
         "class-variance-authority": "^0.7.1",
@@ -89,6 +90,13 @@
       },
       "peerDependencies": {
         "svelte": "^5.0.0",
+      },
+    },
+    "packages/worker-pool": {
+      "name": "@shelchin/worker-pool",
+      "version": "0.0.1",
+      "devDependencies": {
+        "typescript": "^5.0.0",
       },
     },
   },
@@ -384,6 +392,8 @@
     "@shelchin/i18n": ["@shelchin/i18n@2.4.0", "", { "peerDependencies": { "svelte": "^5.0.0" }, "bin": { "i18n": "dist/cli/generate-types.js" } }, "sha512-VWOwHPR6I2NBR/2f5wd3VIxn/KmI0GAKDxg8t6EBHoe/1LxAkKycSmPfpO2caouyjFojRmvC1yqB/l1Kc7kxzg=="],
 
     "@shelchin/svelte-clipboard": ["@shelchin/svelte-clipboard@workspace:packages/svelte-clipboard"],
+
+    "@shelchin/worker-pool": ["@shelchin/worker-pool@workspace:packages/worker-pool"],
 
     "@sindresorhus/is": ["@sindresorhus/is@7.0.2", "", {}, "sha512-d9xRovfKNz1SKieM0qJdO+PQonjnnIfSNWfHYnBSJ9hkjm0ZPw6HlxscDXYstp3z+7V2GOFHc+J0CYrYTjqCJw=="],
 

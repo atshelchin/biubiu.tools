@@ -1,4 +1,4 @@
-import { spawn, spawnPool } from '$lib/utils/worker-pool';
+import { spawn, spawnPool } from '@shelchin/worker-pool';
 import { walletKeysStore } from '@/features/wallet-sweep/stores/wallet-keys-store.svelte';
 import { SvelteDate } from 'svelte/reactivity';
 import type {

@@ -1,0 +1,41 @@
+{
+	"name": "@shelchin/worker-pool",
+	"version": "0.0.1",
+	"description": "Simple and elegant Worker pool for parallel task execution",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"default": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc",
+		"prepublishOnly": "bun run build"
+	},
+	"devDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"keywords": [
+		"worker",
+		"pool",
+		"web-worker",
+		"parallel",
+		"thread",
+		"concurrency",
+		"typescript"
+	],
+	"author": "",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/AmbitionsXXXV/biubiu.tools.git",
+		"directory": "packages/worker-pool"
+	}
+}

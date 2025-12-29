@@ -6,7 +6,7 @@
 import type { DerivationPathType } from '@/features/wallet-sweep/types/wallet';
 import { step4State } from '../stores/step4-state.svelte';
 import type { XpubAddressRequest, XpubAddressResult } from '$lib/workers/xpub-address.worker';
-import { spawn, spawnPool } from '$lib/utils/worker-pool';
+import { spawn, spawnPool } from '@shelchin/worker-pool';
 import XpubAddressWorkerUrl from '$lib/workers/xpub-address.worker?worker&url';
 
 // Threshold for using parallel workers (above this count, use multiple workers)
