@@ -128,7 +128,7 @@
 </script>
 
 <script lang="ts">
-	import { useTheme } from '$lib/stores/theme.svelte';
+	import { useTheme } from '@shelchin/svelte-theme';
 	import type { EditorView as EditorViewType } from 'codemirror';
 
 	interface Props {

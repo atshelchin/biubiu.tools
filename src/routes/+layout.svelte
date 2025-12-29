@@ -3,9 +3,9 @@
 	import { goto } from '$app/navigation';
 	import { initI18n, setI18nContext, registerGlobLoaders } from '@shelchin/i18n';
 	import { onMount } from 'svelte';
-	import { createThemeStore } from '$lib/stores/theme.svelte.js';
+	import { createThemeStore } from '@shelchin/svelte-theme';
 	import { createGeoBlockStore } from '$lib/stores/geo-block.svelte.js';
-	import { createCookieConsentStore } from '@shelchin/cookie-consent';
+	import { createCookieConsentStore, checkConsent } from '@shelchin/cookie-consent';
 	import { initializeReferral } from '$lib/utils/referral';
 	import '../design-tokens.css';
 	import '../global.css';
@@ -54,8 +54,11 @@
 	// Initialize cookie consent store (must be before theme store)
 	createCookieConsentStore();
 
-	// Setup theme with initial value from server
-	createThemeStore(data.theme);
+	// Setup theme with initial value from server (respects cookie consent)
+	createThemeStore({
+		initialTheme: data.theme,
+		canPersist: () => checkConsent('functional')
+	});
 
 	// Initialize geo-blocking detection (client-side backup)
 	createGeoBlockStore();

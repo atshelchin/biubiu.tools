@@ -6,7 +6,7 @@
 	import { validatePrivateKey, getAddressFromPrivateKey } from './utils/wallet';
 	import { SUPPORTED_NETWORKS, COMMON_TOKENS } from './constants/networks';
 	import type { Network, Token, WalletInfo, ExecutionResult } from './types';
-	import { useTheme } from '$lib/stores/theme.svelte';
+	import { useTheme } from '@shelchin/svelte-theme';
 	import { WalletValidator } from './utils/wallet-validator';
 	import { StorageManager } from './utils/storage';
 	import { validateNetwork, validateToken } from './utils/validation';

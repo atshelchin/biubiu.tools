@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Sun, Moon } from '@lucide/svelte';
-	import { useTheme } from '$lib/stores/theme.svelte';
+	import { useTheme } from '@shelchin/svelte-theme';
 	import { checkConsent } from '@shelchin/cookie-consent';
 
 	interface Props {
