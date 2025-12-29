@@ -1,0 +1,67 @@
+{
+	"prompt": {
+		"close": "Close",
+		"upgrade_membership": "Upgrade Membership",
+		"pay": "Pay {{amount}} {{symbol}}",
+		"recommend_tip": "💡 Upgrade membership for unlimited free access"
+	},
+	"modal": {
+		"title": "Upgrade to Premium",
+		"subtitle": "Choose the perfect plan for your needs",
+		"benefits": {
+			"title": "What's Included",
+			"zero_fees": "Zero transaction fees on all tools",
+			"unlimited_access": "Unlimited access to premium features",
+			"priority_support": "Priority customer support"
+		},
+		"plans": {
+			"daily": "Daily",
+			"monthly": "Monthly",
+			"yearly": "Yearly",
+			"popular": "Popular",
+			"days": "{{days}} days",
+			"per_day": "{{price}} {{symbol}}/day"
+		},
+		"referral": {
+			"label": "Referred by:",
+			"direct": "Direct visit"
+		},
+		"status": {
+			"loading": "Loading subscription status...",
+			"active": "Active Premium Member",
+			"expires_in": "Expires in {{days}} days"
+		},
+		"cta": "Purchase Premium Access",
+		"processing": "Processing...",
+		"footer_note": "Membership valid on {{network}} only • Switch networks requires new purchase",
+		"success": {
+			"title": "Purchase Successful!",
+			"message": "You've successfully subscribed to the {{tier}} plan!",
+			"tx_label": "Transaction:",
+			"auto_close": "This modal will close automatically in 5 seconds..."
+		},
+		"error": {
+			"connect_wallet": "Please connect your wallet first",
+			"invalid_tier": "Invalid tier selected",
+			"tx_failed": "Transaction failed",
+			"purchase_failed": "Failed to complete purchase"
+		}
+	},
+	"rules": {
+		"membership_required": "This feature requires membership",
+		"quota_exceeded": "Daily free quota exceeded ({{limit}}/{{unit}})",
+		"quota_remaining": "Free quota remaining today: {{remaining}}",
+		"upgrade_hint": "Upgrade for unlimited access",
+		"upgrade_hint_cheaper": "Upgrading membership is more cost-effective",
+		"fee_info": "Fee: {{total}} ETH ({{count}} × {{fee}} ETH)",
+		"exceeded_fee_info": "Quota exceeded, pay {{total}} ETH",
+		"unit_items": "items",
+		"unit_requests": "requests"
+	},
+	"status": {
+		"not_connected": "Please connect wallet first",
+		"member": "Premium Member",
+		"expires_in": "Expires in {{days}} days",
+		"expired": "Membership expired"
+	}
+}

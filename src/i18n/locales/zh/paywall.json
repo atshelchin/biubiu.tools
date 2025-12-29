@@ -1,0 +1,67 @@
+{
+	"prompt": {
+		"close": "关闭",
+		"upgrade_membership": "升级会员",
+		"pay": "支付 {{amount}} {{symbol}}",
+		"recommend_tip": "💡 升级会员更划算，无限免费使用"
+	},
+	"modal": {
+		"title": "升级高级会员",
+		"subtitle": "选择最适合您的方案",
+		"benefits": {
+			"title": "会员权益",
+			"zero_fees": "所有工具免交易费",
+			"unlimited_access": "无限使用高级功能",
+			"priority_support": "优先客户支持"
+		},
+		"plans": {
+			"daily": "日卡",
+			"monthly": "月卡",
+			"yearly": "年卡",
+			"popular": "热门",
+			"days": "{{days}} 天",
+			"per_day": "{{price}} {{symbol}}/天"
+		},
+		"referral": {
+			"label": "推荐人：",
+			"direct": "直接访问"
+		},
+		"status": {
+			"loading": "正在加载订阅状态...",
+			"active": "高级会员",
+			"expires_in": "{{days}} 天后到期"
+		},
+		"cta": "购买高级会员",
+		"processing": "处理中...",
+		"footer_note": "会员仅在 {{network}} 有效 • 切换网络需重新购买",
+		"success": {
+			"title": "购买成功！",
+			"message": "您已成功订阅 {{tier}} 方案！",
+			"tx_label": "交易哈希：",
+			"auto_close": "此弹窗将在5秒后自动关闭..."
+		},
+		"error": {
+			"connect_wallet": "请先连接钱包",
+			"invalid_tier": "无效的订阅方案",
+			"tx_failed": "交易失败",
+			"purchase_failed": "购买失败"
+		}
+	},
+	"rules": {
+		"membership_required": "此功能需要会员",
+		"quota_exceeded": "今日免费额度已用完 ({{limit}}/{{unit}})",
+		"quota_remaining": "今日剩余免费额度: {{remaining}}",
+		"upgrade_hint": "升级会员可无限使用",
+		"upgrade_hint_cheaper": "升级会员更划算",
+		"fee_info": "本次费用: {{total}} ETH ({{count}} × {{fee}} ETH)",
+		"exceeded_fee_info": "超出免费额度，需付费 {{total}} ETH",
+		"unit_items": "条目",
+		"unit_requests": "次"
+	},
+	"status": {
+		"not_connected": "请先连接钱包",
+		"member": "高级会员",
+		"expires_in": "{{days}} 天后到期",
+		"expired": "会员已过期"
+	}
+}
