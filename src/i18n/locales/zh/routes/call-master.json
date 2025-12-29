@@ -10,5 +10,13 @@
 	"description": "执行智能合约调用，支持高级功能和批量操作。",
 	"feature_1": "多重调用支持",
 	"feature_2": "ABI 管理",
-	"feature_3": "交易构建器"
+	"feature_3": "交易构建器",
+	"seo": {
+		"step_1_name": "连接钱包",
+		"step_1_description": "连接您的钱包以与智能合约交互",
+		"step_2_name": "配置合约",
+		"step_2_description": "加载合约 ABI 并配置函数调用",
+		"step_3_name": "执行调用",
+		"step_3_description": "执行对智能合约的读取或写入调用"
+	}
 }

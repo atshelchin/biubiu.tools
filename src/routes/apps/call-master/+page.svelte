@@ -1,25 +1,27 @@
 <script lang="ts">
-	import CallMaster from '@/features/call-master/index.svelte';
-	import { createConnectStore } from '$lib/stores/connect.svelte';
-	import { mainnet, polygon, arbitrum, optimism, base, bsc } from 'viem/chains';
-	import PageLayout from '$lib/components/page-layout.svelte';
+	import { mainnet, polygon, arbitrum, optimism, base, bsc, sepolia } from 'viem/chains';
 	import { useI18n } from '@shelchin/i18n';
+	import StepBasedApp from '$lib/components/step-based-app.svelte';
+	import { stepComponents } from '@/features/call-master/ui/steps';
+	import type { PageData } from './$types';
 
+	let { data }: { data: PageData } = $props();
 	const i18n = useI18n();
-
-	// 初始化 wallet connect store
-	createConnectStore({
-		projectId: 'e68249e217c8793807b7bb961a2f4297',
-		appName: 'BiuBiu Tools',
-		appUrl: 'https://biubiu.tools',
-		appLogoUrl: 'https://biubiu.tools/logo.svg',
-		chains: [mainnet, base, bsc, polygon, arbitrum, optimism],
-		storageKey: 'biubiu-tools-call-master',
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
-		i18n: i18n as any
-	});
 </script>
 
-<PageLayout>
-	<CallMaster />
-</PageLayout>
+<StepBasedApp
+	config={{
+		meta: data.meta,
+		structuredData: data.structuredData,
+		steps: data.steps,
+		appTitle: i18n.t('call-master.title'),
+		appDescription: i18n.t('call-master.description'),
+		walletConnect: {
+			chains: [mainnet, base, bsc, polygon, arbitrum, optimism, sepolia],
+			storageKey: 'biubiu-tools-call-master'
+		},
+		stepComponents,
+		status: 'alpha',
+		toolKey: 'call-master'
+	}}
+/>

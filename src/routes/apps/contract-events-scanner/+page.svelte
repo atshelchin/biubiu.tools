@@ -20,6 +20,8 @@
 			chains: [mainnet, base, bsc, polygon, arbitrum, optimism],
 			storageKey: 'biubiu-tools-contract-events-scanner'
 		},
-		stepComponents
+		stepComponents,
+		status: 'alpha',
+		toolKey: 'contract-events-scanner'
 	}}
 />

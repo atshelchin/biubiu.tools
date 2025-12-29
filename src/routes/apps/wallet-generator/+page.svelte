@@ -15,6 +15,8 @@
 		steps: data.steps,
 		appTitle: i18n.t('wallet-generator.title'),
 		appDescription: i18n.t('wallet-generator.description'),
-		stepComponents
+		stepComponents,
+		status: 'alpha',
+		toolKey: 'wallet-generator'
 	}}
 />

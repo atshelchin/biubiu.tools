@@ -44,7 +44,9 @@ export const tokenBalanceScannerTool = defineStepTool({
 
 	dependencyChecks: ['rpc', 'multicall3'],
 
-	faqsPrefix: 'token-balance-scanner.faqs'
+	faqsPrefix: 'token-balance-scanner.faqs',
+
+	status: 'alpha'
 });
 
 export default tokenBalanceScannerTool;

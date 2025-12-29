@@ -30,7 +30,9 @@ export const tokenDeployerTool = defineStepTool({
 		storageKey: 'biubiu-tools-token-deployer'
 	},
 
-	dependencyChecks: ['rpc', 'create2', 'multicall3', 'biubiu-premium', 'token-factory']
+	dependencyChecks: ['rpc', 'create2', 'multicall3', 'biubiu-premium', 'token-factory'],
+
+	status: 'alpha'
 });
 
 export default tokenDeployerTool;

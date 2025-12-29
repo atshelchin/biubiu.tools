@@ -20,6 +20,8 @@
 			chains: [mainnet],
 			storageKey: 'biubiu-tools-ens-scanner'
 		},
-		stepComponents
+		stepComponents,
+		status: 'alpha',
+		toolKey: 'ens-scanner'
 	}}
 />

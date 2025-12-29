@@ -44,7 +44,9 @@ export const walletSweepTool = defineStepTool({
 
 	dependencyChecks: ['rpc', 'eip7702', 'create2', 'multicall3', 'biubiu-premium', 'token-sweep'],
 
-	faqsPrefix: 'wallet-sweep.faqs'
+	faqsPrefix: 'wallet-sweep.faqs',
+
+	status: 'alpha'
 });
 
 export default walletSweepTool;

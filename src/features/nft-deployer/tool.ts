@@ -30,7 +30,9 @@ export const nftDeployerTool = defineStepTool({
 		storageKey: 'biubiu-tools-nft-deployer'
 	},
 
-	dependencyChecks: ['rpc', 'create2', 'multicall3', 'biubiu-premium', 'nft-factory']
+	dependencyChecks: ['rpc', 'create2', 'multicall3', 'biubiu-premium', 'nft-factory'],
+
+	status: 'alpha'
 });
 
 export default nftDeployerTool;

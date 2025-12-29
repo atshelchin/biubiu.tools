@@ -10,5 +10,13 @@
 	"description": "Execute smart contract calls with advanced features and batch operations.",
 	"feature_1": "Multi-call Support",
 	"feature_2": "ABI Management",
-	"feature_3": "Transaction Builder"
+	"feature_3": "Transaction Builder",
+	"seo": {
+		"step_1_name": "Connect Wallet",
+		"step_1_description": "Connect your wallet to interact with smart contracts",
+		"step_2_name": "Configure Contract",
+		"step_2_description": "Load contract ABI and configure function calls",
+		"step_3_name": "Execute Calls",
+		"step_3_description": "Execute read or write calls to the smart contract"
+	}
 }

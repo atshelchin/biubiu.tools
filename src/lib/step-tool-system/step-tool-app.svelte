@@ -132,6 +132,8 @@
 					}
 				: undefined,
 		walletConnect: feature.walletConnect,
-		stepComponents: feature.stepComponents
+		stepComponents: feature.stepComponents,
+		status: feature.status,
+		toolKey: feature.toolKey ?? feature.id
 	}}
 />

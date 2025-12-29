@@ -36,7 +36,9 @@ export const contractDeployerTool = defineStepTool({
 
 	dependencyChecks: ['rpc', 'create2'],
 
-	faqsPrefix: 'contract-deployer.faqs'
+	faqsPrefix: 'contract-deployer.faqs',
+
+	status: 'alpha'
 });
 
 export default contractDeployerTool;

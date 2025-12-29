@@ -16,6 +16,7 @@
 import type { Component } from 'svelte';
 import type { Chain } from 'viem';
 import type { CheckType, DependencyConfig } from '$lib/utils/dependency-runner';
+import type { ToolStatus } from '$lib/components/step-based-app.svelte';
 
 // Generic component type for step components (matches step-based-app.svelte)
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -131,6 +132,12 @@ export interface StepToolDefinition {
 
 	/** FAQs i18n key prefix (optional, will load from i18n) */
 	faqsPrefix?: string;
+
+	/** Tool development status (alpha, beta, stable) */
+	status?: ToolStatus;
+
+	/** Tool key for dismissing development notice */
+	toolKey?: string;
 }
 
 /**

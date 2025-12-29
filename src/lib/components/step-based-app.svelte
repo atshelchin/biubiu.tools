@@ -3,7 +3,10 @@
 	import type { Chain } from 'viem';
 	import type { Step } from '$lib/components/ui/step-indicator.svelte';
 	import type { FAQ } from '$lib/components/ui/faqs.svelte';
-	import type { ToolStatus } from '$lib/components/ui/status-badge.svelte';
+
+	// Import and re-export ToolStatus for consumers
+	import type { ToolStatus as _ToolStatus } from '$lib/components/ui/status-badge.svelte';
+	export type ToolStatus = _ToolStatus;
 
 	// Generic component type for step components
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -32,7 +35,7 @@
 		appDescription: string;
 
 		// Tool status configuration (optional, defaults to 'beta')
-		status?: ToolStatus;
+		status?: _ToolStatus;
 		// Unique key for the tool (used for localStorage to remember notice dismissal)
 		toolKey?: string;
 
