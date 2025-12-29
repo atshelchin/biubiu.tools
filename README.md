@@ -107,13 +107,14 @@ Language preference is automatically detected and persisted.
 
 ## 🍴 Self-Hosting / Fork
 
-Want to run your own instance? Check out our [Fork Guide](docs/FORK_GUIDE.md) ([中文](docs/FORK_GUIDE.zh.md)).
+Want to run your own instance? It's simple:
 
-**Requirements:**
+```bash
+bun install
+VITE_SELF_HOSTED=true bun run build
+```
 
-- Solidity development experience
-- Ability to deploy smart contracts
-- Understanding of CREATE2 deployment
+See [Fork Guide](docs/FORK_GUIDE.md) ([中文](docs/FORK_GUIDE.zh.md)) for details.
 
 ## 🤝 Contributing
 

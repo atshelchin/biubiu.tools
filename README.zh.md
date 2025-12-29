@@ -107,13 +107,14 @@ biubiu.tools/
 
 ## 🍴 自托管 / Fork
 
-想要运行自己的实例？请查看我们的 [Fork 指南](docs/FORK_GUIDE.zh.md)（[English](docs/FORK_GUIDE.md)）。
+想要运行自己的实例？很简单：
 
-**要求：**
+```bash
+bun install
+VITE_SELF_HOSTED=true bun run build
+```
 
-- Solidity 开发经验
-- 能够部署智能合约
-- 了解 CREATE2 部署
+详情请查看 [Fork 指南](docs/FORK_GUIDE.zh.md)（[English](docs/FORK_GUIDE.md)）。
 
 ## 🤝 贡献
 

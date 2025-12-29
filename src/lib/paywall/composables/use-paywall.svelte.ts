@@ -8,6 +8,7 @@
 import type { PaywallRule, PaywallResult, PaywallContext } from '../types';
 import { useMembershipStore } from '../stores/membership.svelte';
 import { useUsageQuotaStore } from '../stores/usage-quota.svelte';
+import { SELF_HOSTED_MODE } from '../constants';
 
 interface UsePaywallOptions {
 	/** The paywall rule to apply */
@@ -74,12 +75,20 @@ export function usePaywall(options: UsePaywallOptions): UsePaywallReturn {
 	 * Check if operation is allowed
 	 */
 	async function check(itemCount?: number): Promise<PaywallResult> {
+		// Self-hosted mode: bypass all paywall checks
+		if (SELF_HOSTED_MODE) {
+			return {
+				allowed: true,
+				freeUse: true
+			};
+		}
+
 		// Not connected
 		if (!membership.address || !membership.chainId) {
 			return {
 				allowed: false,
 				reason: 'not_connected',
-				message: '请先连接钱包'
+				messageKey: 'paywall.status.not_connected'
 			};
 		}
 
