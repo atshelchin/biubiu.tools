@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { useI18n } from '@shelchin/i18n';
 	import { page } from '$app/stores';
+	import { localeMetas } from '$i18n/i18n.svelte';
 
 	const i18n = useI18n();
 
@@ -10,10 +11,11 @@
 	let dropdownAlign = $state<'left' | 'right'>('left');
 	let containerRef = $state<HTMLDivElement>();
 
-	const languages = [
-		{ code: 'en', label: 'English', flag: '🇺🇸' },
-		{ code: 'zh', label: '中文', flag: '🇨🇳' }
-	];
+	const languages = localeMetas.map((meta) => ({
+		code: meta.code,
+		label: meta.name,
+		flag: meta.flag
+	}));
 
 	const currentLanguage = $derived(
 		languages.find((lang) => lang.code === selectedLang) || languages[0]
@@ -67,7 +69,7 @@
 		const segments = pathname.split('/').filter(Boolean);
 
 		// Check if first segment is a locale code
-		const supportedLocales = ['en', 'ja', 'zh', 'fr'];
+		const supportedLocales = localeMetas.map((meta) => meta.code);
 		let newPathname: string;
 
 		if (segments.length > 0 && supportedLocales.includes(segments[0])) {
