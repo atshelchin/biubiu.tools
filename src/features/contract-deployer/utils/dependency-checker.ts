@@ -1,34 +1,29 @@
 /**
- * Contract-deployer specific dependency checker
- * Orchestrates the dependency checks for contract-deployer tool
+ * Contract-deployer dependency checker
+ * Uses the shared dependency runner with declarative configuration
  */
 
-import type { DependencyCheck } from '$lib/utils/blockchain-checker';
 import {
-	checkRPCEndpoint,
-	checkCREATE2Proxy,
+	runDependencyChecks,
+	getPresetConfig,
 	calculateCheckSummary,
-	KNOWN_CONTRACTS
-} from '$lib/utils/blockchain-checker';
+	type DependencyCheck,
+	type DependencyCheckContext
+} from '$lib/utils/dependency-runner';
+import { KNOWN_CONTRACTS } from '$lib/utils/blockchain-checker';
+import type { TranslationKeys } from '@shelchin/i18n';
 
 // Re-export for convenience
 export { calculateCheckSummary, KNOWN_CONTRACTS };
-
-// Re-export types for backwards compatibility
 export type { DependencyCheck };
 
 // CREATE2 Proxy address (deterministic across all networks)
 export const CREATE2_PROXY_ADDRESS = KNOWN_CONTRACTS.CREATE2_PROXY;
 
-/**
- * Translation function type - use keyof TranslationKeys for type safety
- */
-import type { TranslationKeys } from '@shelchin/i18n';
 type TranslateFn = (key: keyof TranslationKeys, params?: Record<string, string | number>) => string;
 
 /**
  * Run all dependency checks for contract-deployer
- * This orchestrates the check sequence specific to contract-deployer requirements
  */
 export async function checkAllDependencies(
 	rpcUrl: string,
@@ -36,20 +31,6 @@ export async function checkAllDependencies(
 	networkName: string,
 	t: TranslateFn
 ): Promise<DependencyCheck[]> {
-	const checks: DependencyCheck[] = [];
-
-	// 1. Check RPC endpoint first
-	const rpcCheck = await checkRPCEndpoint(rpcUrl, chainId, networkName, t);
-	checks.push(rpcCheck);
-
-	// If RPC failed, don't proceed with other checks
-	if (rpcCheck.status === 'error') {
-		return checks;
-	}
-
-	// 2. Check CREATE2 Proxy (required for deterministic deployment)
-	const create2Check = await checkCREATE2Proxy(rpcUrl, t);
-	checks.push(create2Check);
-
-	return checks;
+	const context: DependencyCheckContext = { rpcUrl, chainId, networkName, t };
+	return runDependencyChecks(getPresetConfig('contract-deployer'), context);
 }

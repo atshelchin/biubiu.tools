@@ -1,25 +1,8 @@
 /**
- * Step 2 state management for NFT Deployer
- * Manages dependency checks
+ * Step 2 state for dependency checks (NFT Deployer)
+ * Uses the shared createStep2State factory from lib
  */
 
-import type { DependencyCheck, DependencyCheckSummary } from '$lib/utils/blockchain-checker';
+import { createStep2State } from '$lib/stores/modules/dependency-check.svelte';
 
-/**
- * Step 2 state - Dependency checks
- */
-class Step2CheckDepsState {
-	isChecking = $state<boolean>(false);
-	hasChecked = $state<boolean>(false);
-	checks = $state<DependencyCheck[]>([]);
-	summary = $state<DependencyCheckSummary | null>(null);
-
-	reset() {
-		this.isChecking = false;
-		this.hasChecked = false;
-		this.checks = [];
-		this.summary = null;
-	}
-}
-
-export const step2CheckDepsState = new Step2CheckDepsState();
+export const step2CheckDepsState = createStep2State();

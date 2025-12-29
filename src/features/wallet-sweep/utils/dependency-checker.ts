@@ -1,76 +1,64 @@
 /**
- * Wallet-sweep specific dependency checker
- * Orchestrates the dependency checks for wallet-sweep tool
+ * Wallet-sweep dependency checker
+ * Uses the shared dependency runner with declarative configuration
  */
 
 import type { Address } from 'viem';
-import type { DependencyCheck, ContractCheck } from '../types/dependencies';
 import {
-	checkRPCEndpoint,
-	checkEIP7702Support,
-	checkCREATE2Proxy,
-	checkMulticall3,
-	checkBiuBiuPremium,
-	checkTokenSweep,
-	checkContractDeployment,
+	runDependencyChecks,
+	getPresetConfig,
 	calculateCheckSummary,
-	KNOWN_CONTRACTS
+	type DependencyCheck,
+	type DependencyCheckContext,
+	type CustomCheckFn,
+	type ExtendedDependencyConfig
+} from '$lib/utils/dependency-runner';
+import {
+	checkContractDeployment,
+	KNOWN_CONTRACTS,
+	type ContractCheck
 } from '$lib/utils/blockchain-checker';
+import type { TranslationKeys } from '@shelchin/i18n';
 
 // Re-export for convenience
 export { calculateCheckSummary, KNOWN_CONTRACTS };
 
-/**
- * Translation function type - use keyof TranslationKeys for type safety
- */
-import type { TranslationKeys } from '@shelchin/i18n';
 type TranslateFn = (key: keyof TranslationKeys, params?: Record<string, string | number>) => string;
 
 /**
- * Check custom biubiu membership contract (if provided)
+ * Create a custom check for biubiu membership contract
  */
-async function checkBiubiuMembership(
-	rpcUrl: string,
-	address: Address,
-	t: TranslateFn
-): Promise<ContractCheck> {
-	return checkContractDeployment(
-		rpcUrl,
-		address,
-		'Biubiu Membership',
-		t('wallet-sweep.step2.content.checks.contract.biubiu_membership_description'),
-		t,
-		{
-			canDeploy: false,
-			deployGuideUrl: undefined
-		}
-	);
+function createMembershipCheck(address: Address): CustomCheckFn {
+	return async (rpcUrl, t): Promise<ContractCheck> => {
+		return checkContractDeployment(
+			rpcUrl,
+			address,
+			'Biubiu Membership',
+			t('wallet-sweep.step2.content.checks.contract.biubiu_membership_description'),
+			t,
+			{ canDeploy: false }
+		);
+	};
 }
 
 /**
- * Check custom wallet-sweep operation contract (if provided)
+ * Create a custom check for token sweep contract
  */
-async function checkTokenSweepContract(
-	rpcUrl: string,
-	address: Address,
-	t: TranslateFn
-): Promise<ContractCheck> {
-	return checkContractDeployment(
-		rpcUrl,
-		address,
-		'Token Sweep Contract',
-		t('wallet-sweep.step2.content.checks.contract.wallet_sweep_contract_description'),
-		t,
-		{
-			canDeploy: true,
-			deployGuideUrl: undefined // Will be added when contract is ready
-		}
-	);
+function createSweepContractCheck(address: Address): CustomCheckFn {
+	return async (rpcUrl, t): Promise<ContractCheck> => {
+		return checkContractDeployment(
+			rpcUrl,
+			address,
+			'Token Sweep Contract',
+			t('wallet-sweep.step2.content.checks.contract.wallet_sweep_contract_description'),
+			t,
+			{ canDeploy: true }
+		);
+	};
 }
 
 /**
  * Run all dependency checks for wallet-sweep
- * This orchestrates the check sequence specific to wallet-sweep requirements
  */
 export async function checkAllDependencies(
 	rpcUrl: string,
@@ -80,54 +68,21 @@ export async function checkAllDependencies(
 	membershipContractAddress?: Address,
 	sweepContractAddress?: Address
 ): Promise<DependencyCheck[]> {
-	const checks: DependencyCheck[] = [];
+	const context: DependencyCheckContext = { rpcUrl, chainId, networkName, t };
 
-	// 1. Check RPC endpoint first
-	const rpcCheck = await checkRPCEndpoint(rpcUrl, chainId, networkName, t);
-	checks.push(rpcCheck);
-
-	// If RPC failed, don't proceed with other checks
-	if (rpcCheck.status === 'error') {
-		return checks;
-	}
-
-	// 2. Check EIP-7702 support (CRITICAL - required for token sweep functionality)
-	const eip7702Check = await checkEIP7702Support(rpcUrl, t);
-	checks.push(eip7702Check);
-
-	// If EIP-7702 is not supported, don't proceed with contract checks
-	// as deployment and subsequent operations depend on this feature
-	if (eip7702Check.status === 'error') {
-		return checks;
-	}
-
-	// 3. Check CREATE2 Proxy
-	const create2Check = await checkCREATE2Proxy(rpcUrl, t);
-	checks.push(create2Check);
-
-	// 4. Check Multicall3
-	const multicallCheck = await checkMulticall3(rpcUrl, t);
-	checks.push(multicallCheck);
-
-	// 5. Check BiuBiuPremium
-	const biubiuPremiumCheck = await checkBiuBiuPremium(rpcUrl, t);
-	checks.push(biubiuPremiumCheck);
-
-	// 6. Check TokenSweep
-	const tokenSweepCheck = await checkTokenSweep(rpcUrl, t);
-	checks.push(tokenSweepCheck);
-
-	// 7. Check Biubiu Membership (if custom address provided)
+	// Build custom checks based on provided addresses
+	const customChecks: CustomCheckFn[] = [];
 	if (membershipContractAddress) {
-		const membershipCheck = await checkBiubiuMembership(rpcUrl, membershipContractAddress, t);
-		checks.push(membershipCheck);
+		customChecks.push(createMembershipCheck(membershipContractAddress));
 	}
-
-	// 8. Check Token Sweep Contract (if custom address provided)
 	if (sweepContractAddress) {
-		const sweepCheck = await checkTokenSweepContract(rpcUrl, sweepContractAddress, t);
-		checks.push(sweepCheck);
+		customChecks.push(createSweepContractCheck(sweepContractAddress));
 	}
 
-	return checks;
+	const config: ExtendedDependencyConfig = {
+		...getPresetConfig('wallet-sweep'),
+		customChecks: customChecks.length > 0 ? customChecks : undefined
+	};
+
+	return runDependencyChecks(config, context);
 }

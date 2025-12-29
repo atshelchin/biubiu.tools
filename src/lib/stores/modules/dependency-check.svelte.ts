@@ -68,6 +68,71 @@ export interface DependencyCheckModule extends StateModule<DependencyCheckSerial
 }
 
 /**
+ * Legacy step2State interface for backwards compatibility.
+ * This matches the interface used by existing feature step2-state files.
+ */
+export interface Step2State {
+	checks: DependencyCheck[];
+	summary: DependencyCheckSummary | null;
+	isChecking: boolean;
+	hasChecked: boolean;
+	reset(): void;
+}
+
+/**
+ * Create a step2State instance for dependency checking.
+ * This is a simplified factory for features that only need basic dependency check state.
+ *
+ * @example
+ * ```typescript
+ * // In feature's stores/step2-state.svelte.ts
+ * import { createStep2State } from '$lib/stores/modules/dependency-check.svelte';
+ * export const step2State = createStep2State();
+ * ```
+ *
+ * @returns A Step2State instance with reactive state
+ */
+export function createStep2State(): Step2State {
+	let checks = $state<DependencyCheck[]>([]);
+	let summary = $state<DependencyCheckSummary | null>(null);
+	let isChecking = $state(false);
+	let hasChecked = $state(false);
+
+	return {
+		get checks() {
+			return checks;
+		},
+		set checks(value: DependencyCheck[]) {
+			checks = value;
+		},
+		get summary() {
+			return summary;
+		},
+		set summary(value: DependencyCheckSummary | null) {
+			summary = value;
+		},
+		get isChecking() {
+			return isChecking;
+		},
+		set isChecking(value: boolean) {
+			isChecking = value;
+		},
+		get hasChecked() {
+			return hasChecked;
+		},
+		set hasChecked(value: boolean) {
+			hasChecked = value;
+		},
+		reset() {
+			checks = [];
+			summary = null;
+			isChecking = false;
+			hasChecked = false;
+		}
+	};
+}
+
+/**
  * Create a new dependency check module instance.
  *
  * @returns A new DependencyCheckModule instance
