@@ -6,4 +6,4 @@
 	import { ConnectWalletSidebar } from '$lib/components/step/connect-wallet';
 </script>
 
-<ConnectWalletSidebar />
+<ConnectWalletSidebar i18nPrefix="wallet-sweep" />

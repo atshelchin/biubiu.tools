@@ -63,9 +63,24 @@ const task = await createTask({
 	type: 'batch-process',
 	name: 'Process 3 batches',
 	children: [
-		{ type: 'batch', name: 'Batch 1', executionData: { items: [1, 2, 3] }, executor: 'processBatch' },
-		{ type: 'batch', name: 'Batch 2', executionData: { items: [4, 5, 6] }, executor: 'processBatch' },
-		{ type: 'batch', name: 'Batch 3', executionData: { items: [7, 8, 9] }, executor: 'processBatch' }
+		{
+			type: 'batch',
+			name: 'Batch 1',
+			executionData: { items: [1, 2, 3] },
+			executor: 'processBatch'
+		},
+		{
+			type: 'batch',
+			name: 'Batch 2',
+			executionData: { items: [4, 5, 6] },
+			executor: 'processBatch'
+		},
+		{
+			type: 'batch',
+			name: 'Batch 3',
+			executionData: { items: [7, 8, 9] },
+			executor: 'processBatch'
+		}
 	]
 });
 ```
