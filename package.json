@@ -8,7 +8,8 @@
 	],
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build:packages": "for pkg in packages/*/; do (cd $pkg && bun run build 2>/dev/null || true); done",
+		"build": "bun run build:packages && vite build",
 		"build:analyze": "ANALYZE=true vite build",
 		"preview": "bun run build && wrangler dev",
 		"deploy": "bun run build && wrangler deploy",
