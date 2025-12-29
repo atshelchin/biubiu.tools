@@ -1,29 +1,12 @@
 <script lang="ts">
-	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
-	import StepFooter from '$lib/components/step/step-footer.svelte';
+	/**
+	 * Token Balance Scanner Step 3: Select Tokens Footer
+	 * Uses shared TokenSelectionFooter component
+	 */
+	import { TokenSelectionFooter } from '$lib/components/step/token-selection';
 	import { step3State } from '../../stores/step3-state.svelte';
-	import { useI18n } from '@shelchin/i18n';
 
-	const stepManager = useStepManager();
-	const i18n = useI18n();
-
-	const canContinue = $derived(step3State.selectedTokens.size > 0);
-
-	function handleContinue() {
-		if (canContinue) {
-			stepManager.next();
-		}
-	}
-
-	function goBack() {
-		stepManager.prev();
-	}
+	let selectedCount = $derived(step3State.selectedTokens.size);
 </script>
 
-<StepFooter
-	showBack={true}
-	onBack={goBack}
-	{canContinue}
-	onContinue={handleContinue}
-	hint={i18n.t('token-balance-scanner.step3.footer.hint')}
-/>
+<TokenSelectionFooter i18nPrefix="token-balance-scanner" {selectedCount} />
