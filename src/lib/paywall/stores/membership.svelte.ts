@@ -4,22 +4,29 @@
  * Manages membership status with IndexedDB caching.
  * - Each chainId has independent membership status
  * - Cached until expiry (no periodic refresh needed)
- * - Protected with checksum to prevent tampering
+ * - Protected with checksum + signature + fingerprint to prevent tampering
+ *
+ * Security layers:
+ * 1. SHA-256 checksum for data integrity
+ * 2. Wallet signature as personalized salt
+ * 3. Browser fingerprint prevents cross-device copying
  */
 
 import { get, set, del } from 'idb-keyval';
 import { getContext, setContext } from 'svelte';
 import type { Address, PublicClient } from 'viem';
 import type { MembershipCache, MembershipStoreState } from '../types';
-import { generateChecksum, verifyChecksum, createMembershipChecksumData } from '../utils/checksum';
+import { generateSecureChecksum, verifySecureChecksum } from '../utils/signature';
 import { readMembershipStatus } from '../utils/contract';
 import { verifyMembership } from '../composables/use-membership-verifier';
+import {
+	CACHE_KEY_PREFIX,
+	VERIFY_INTERVAL_MS,
+	INITIAL_VERIFY_DELAY_MS,
+	SECONDS_PER_DAY
+} from '../constants';
 
 const MEMBERSHIP_STORE_KEY = Symbol('membership-store');
-const CACHE_KEY_PREFIX = 'biubiu-membership';
-
-// Background verification interval (5 minutes)
-const VERIFY_INTERVAL_MS = 5 * 60 * 1000;
 
 /**
  * Generate cache key for IndexedDB
@@ -57,18 +64,20 @@ export function createMembershipStore() {
 
 			if (!cached) return null;
 
-			// Verify checksum
-			const checksumData = createMembershipChecksumData(
+			// Verify checksum with signature + fingerprint
+			const isValid = await verifySecureChecksum(
 				cached.address,
 				cached.chainId,
 				cached.isMember,
 				cached.expiresAt,
-				cached.cachedAt
+				cached.cachedAt,
+				cached.checksum
 			);
-			const isValid = await verifyChecksum(checksumData, cached.checksum);
 
 			if (!isValid) {
-				console.warn('Membership cache integrity check failed - possible tampering');
+				console.warn(
+					'[Membership] Cache integrity check failed - possible tampering or device change'
+				);
 				await del(key);
 				return null;
 			}
@@ -98,14 +107,14 @@ export function createMembershipStore() {
 			const key = getCacheKey(address, chainId);
 			const cachedAt = Date.now();
 
-			const checksumData = createMembershipChecksumData(
+			// Generate checksum with signature + fingerprint
+			const checksum = await generateSecureChecksum(
 				address,
 				chainId,
 				data.isMember,
 				data.expiresAt,
 				cachedAt
 			);
-			const checksum = await generateChecksum(checksumData);
 
 			const cache: MembershipCache = {
 				address,
@@ -144,9 +153,13 @@ export function createMembershipStore() {
 			});
 		} catch (error) {
 			console.error('Failed to fetch membership from contract:', error);
-			isMember = false;
-			expiresAt = null;
-			remainingDays = 0;
+			// DON'T reset state on RPC failure if we have cached data
+			// This prevents valid members from losing access due to network issues
+			if (!isMember) {
+				isMember = false;
+				expiresAt = null;
+				remainingDays = 0;
+			}
 		} finally {
 			isLoading = false;
 		}
@@ -191,7 +204,7 @@ export function createMembershipStore() {
 				isMember = cached.isMember;
 				expiresAt = cached.expiresAt;
 				const now = Math.floor(Date.now() / 1000);
-				remainingDays = Math.max(0, Math.ceil((cached.expiresAt - now) / 86400));
+				remainingDays = Math.max(0, Math.ceil((cached.expiresAt - now) / SECONDS_PER_DAY));
 
 				// Start background verification to validate cache
 				if (rpcUrl) {
@@ -213,6 +226,11 @@ export function createMembershipStore() {
 
 	/**
 	 * Verify cached membership against on-chain data using Web Worker
+	 *
+	 * IMPORTANT: This is a "safe" verification - it will NOT delete valid cache
+	 * on RPC failures. It only updates/clears cache when:
+	 * 1. On-chain data explicitly shows membership expired
+	 * 2. Checksum verification failed (tampering detected)
 	 */
 	async function verifyWithWorker(): Promise<boolean> {
 		if (!address || !chainId || !rpcUrl) return true;
@@ -232,23 +250,24 @@ export function createMembershipStore() {
 			if (!result.isValid) {
 				console.warn('[Membership] Verification failed:', result.error);
 
-				// Update state from on-chain data if available
+				// Only update state if we have on-chain data
+				// If verification failed due to RPC error, keep current state
 				if (result.onChainStatus) {
 					isMember = result.onChainStatus.isMember;
 					expiresAt = result.onChainStatus.expiresAt;
 					remainingDays = result.onChainStatus.remainingDays;
-				} else if (result.cacheCleared) {
-					// Cache was cleared, fetch fresh
-					await fetchFromContract();
 				}
+				// Note: We don't call fetchFromContract here on RPC failure
+				// to prevent cascading failures
 
 				return false;
 			}
 
 			return true;
 		} catch (error) {
-			console.error('[Membership] Verification error:', error);
-			return false;
+			// On verification error, keep current state (safe mode)
+			console.error('[Membership] Verification error (keeping current state):', error);
+			return true; // Return true to indicate "no change needed"
 		} finally {
 			isVerifying = false;
 		}
@@ -263,7 +282,7 @@ export function createMembershipStore() {
 		// Initial verification after short delay
 		setTimeout(() => {
 			verifyWithWorker();
-		}, 5000);
+		}, INITIAL_VERIFY_DELAY_MS);
 
 		// Periodic verification
 		verifyIntervalId = setInterval(() => {

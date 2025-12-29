@@ -6,7 +6,6 @@
 
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { get, del } from 'idb-keyval';
-import { generateChecksum, createMembershipChecksumData } from '../utils/checksum';
 
 // Mock idb-keyval
 vi.mock('idb-keyval', () => ({
@@ -30,6 +29,30 @@ vi.mock('../utils/contract', () => ({
 vi.mock('../composables/use-membership-verifier', () => ({
 	verifyMembership: vi.fn()
 }));
+
+// Mock signature utilities - use deterministic salt for testing
+vi.mock('../utils/signature', () => ({
+	generateSecureChecksum: vi.fn(async (address, chainId, isMember, expiresAt, cachedAt) => {
+		// Simple deterministic checksum for testing
+		const data = `test:${address}:${chainId}:${isMember}:${expiresAt}:${cachedAt}`;
+		const encoder = new TextEncoder();
+		const hashBuffer = await crypto.subtle.digest('SHA-256', encoder.encode(data));
+		const hashArray = Array.from(new Uint8Array(hashBuffer));
+		return hashArray.map((b) => b.toString(16).padStart(2, '0')).join('');
+	}),
+	verifySecureChecksum: vi.fn(async (address, chainId, isMember, expiresAt, cachedAt, checksum) => {
+		// Generate expected checksum and compare
+		const data = `test:${address}:${chainId}:${isMember}:${expiresAt}:${cachedAt}`;
+		const encoder = new TextEncoder();
+		const hashBuffer = await crypto.subtle.digest('SHA-256', encoder.encode(data));
+		const hashArray = Array.from(new Uint8Array(hashBuffer));
+		const expected = hashArray.map((b) => b.toString(16).padStart(2, '0')).join('');
+		return expected === checksum;
+	})
+}));
+
+// Import mocked functions for generating test checksums
+import { generateSecureChecksum } from '../utils/signature';
 
 // Import after mocking
 import { createMembershipStore } from './membership.svelte';
@@ -91,14 +114,14 @@ describe('MembershipStore', () => {
 			const expiresAt = Math.floor(Date.now() / 1000) + 86400 * 30;
 			const cachedAt = Date.now() - 1000;
 
-			const checksumData = createMembershipChecksumData(
+			// Use mocked generateSecureChecksum to create a valid checksum
+			const checksum = await generateSecureChecksum(
 				mockAddress,
 				chainId,
 				true,
 				expiresAt,
 				cachedAt
 			);
-			const checksum = await generateChecksum(checksumData);
 
 			vi.mocked(get).mockResolvedValue({
 				address: mockAddress,
@@ -136,14 +159,14 @@ describe('MembershipStore', () => {
 			const expiresAt = 0;
 			const cachedAt = Date.now() - 1000;
 
-			const checksumData = createMembershipChecksumData(
+			// Use mocked generateSecureChecksum to create a valid checksum
+			const checksum = await generateSecureChecksum(
 				mockAddress,
 				chainId,
 				false,
 				expiresAt,
 				cachedAt
 			);
-			const checksum = await generateChecksum(checksumData);
 
 			vi.mocked(get).mockResolvedValue({
 				address: mockAddress,
@@ -193,14 +216,14 @@ describe('MembershipStore', () => {
 			const expiresAt = Math.floor(Date.now() / 1000) - 86400; // Expired yesterday
 			const cachedAt = Date.now() - 86400 * 2 * 1000;
 
-			const checksumData = createMembershipChecksumData(
+			// Use mocked generateSecureChecksum to create a valid checksum
+			const checksum = await generateSecureChecksum(
 				mockAddress,
 				chainId,
 				true,
 				expiresAt,
 				cachedAt
 			);
-			const checksum = await generateChecksum(checksumData);
 
 			vi.mocked(get).mockResolvedValue({
 				address: mockAddress,
@@ -355,8 +378,8 @@ describe('MembershipStore', () => {
 			await store.verifyWithWorker();
 			expect(verifyMembership).toHaveBeenCalledTimes(1);
 
-			// Advance time past interval
-			vi.advanceTimersByTime(5 * 60 * 1000 + 1000);
+			// Advance time past interval (3 minutes = 180000ms)
+			vi.advanceTimersByTime(3 * 60 * 1000 + 1000);
 
 			// Third verification - should run
 			await store.verifyWithWorker();

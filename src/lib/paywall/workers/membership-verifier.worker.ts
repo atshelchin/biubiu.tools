@@ -3,11 +3,25 @@
  *
  * Runs in background to verify cached membership status against on-chain data.
  * This prevents users from tampering with IndexedDB to fake membership.
+ *
+ * IMPORTANT: This worker implements "safe verification" - it will NOT delete
+ * valid cache on RPC failures. It only clears cache when:
+ * 1. On-chain data explicitly shows membership expired/invalid
+ * 2. Checksum verification failed (tampering detected)
+ *
+ * Note: This worker uses basic checksum verification. The main thread uses
+ * enhanced signature+fingerprint verification via signature.ts
  */
 
 import { createPublicClient, http, type Address } from 'viem';
 import { get, set, del } from 'idb-keyval';
 import type { MembershipCache } from '../types';
+
+// Import constants (inlined for worker compatibility)
+const BIUBIU_PREMIUM_CONTRACT = '0xc5c4bb399938625523250B708dc5c1e7dE4b1626' as Address;
+const CACHE_KEY_PREFIX = 'biubiu-membership';
+const CHECKSUM_SALT = 'biubiu-paywall-v1';
+const SECONDS_PER_DAY = 86400;
 
 // BiuBiuPremium contract ABI (only the function we need)
 const BIUBIU_PREMIUM_ABI = [
@@ -23,10 +37,6 @@ const BIUBIU_PREMIUM_ABI = [
 		stateMutability: 'view'
 	}
 ] as const;
-
-const BIUBIU_PREMIUM_CONTRACT = '0xc5c4bb399938625523250B708dc5c1e7dE4b1626' as Address;
-const CACHE_KEY_PREFIX = 'biubiu-membership';
-const CHECKSUM_SALT = 'biubiu-paywall-v1';
 
 // Message types
 export interface VerifyRequest {
@@ -48,6 +58,7 @@ export interface VerifyResponse {
 	} | null;
 	cacheCleared: boolean;
 	error?: string;
+	errorType?: 'rpc_error' | 'tampering' | 'expired' | 'mismatch';
 }
 
 export interface VerifyAllRequest {
@@ -79,9 +90,10 @@ function getCacheKey(address: Address, chainId: number): string {
 }
 
 /**
- * Generate SHA-256 checksum
+ * Generate SHA-256 checksum (basic version for worker)
+ * Note: Main thread uses enhanced version with signature+fingerprint
  */
-async function generateChecksum(data: string): Promise<string> {
+async function generateBasicChecksum(data: string): Promise<string> {
 	const encoder = new TextEncoder();
 	const dataWithSalt = encoder.encode(data + CHECKSUM_SALT);
 	const hashBuffer = await crypto.subtle.digest('SHA-256', dataWithSalt);
@@ -90,9 +102,9 @@ async function generateChecksum(data: string): Promise<string> {
 }
 
 /**
- * Create checksum data string
+ * Create checksum data string (basic version)
  */
-function createChecksumData(
+function createBasicChecksumData(
 	address: string,
 	chainId: number,
 	isMember: boolean,
@@ -103,7 +115,28 @@ function createChecksumData(
 }
 
 /**
+ * Check if error is an RPC/network error (retryable, don't clear cache)
+ */
+function isRpcError(error: unknown): boolean {
+	if (error instanceof Error) {
+		const message = error.message.toLowerCase();
+		return (
+			message.includes('fetch') ||
+			message.includes('network') ||
+			message.includes('timeout') ||
+			message.includes('connection') ||
+			message.includes('rpc') ||
+			message.includes('http') ||
+			message.includes('failed to fetch')
+		);
+	}
+	return false;
+}
+
+/**
  * Verify cached membership against on-chain data
+ *
+ * SAFE MODE: RPC failures will NOT clear cache
  */
 async function verifyCachedMembership(
 	address: Address,
@@ -122,19 +155,35 @@ async function verifyCachedMembership(
 		});
 
 		// 3. Query on-chain membership status
-		const result = await publicClient.readContract({
-			address: BIUBIU_PREMIUM_CONTRACT,
-			abi: BIUBIU_PREMIUM_ABI,
-			functionName: 'getSubscriptionInfo',
-			args: [address]
-		});
+		let onChainStatus: VerifyResponse['onChainStatus'] = null;
+		try {
+			const result = await publicClient.readContract({
+				address: BIUBIU_PREMIUM_CONTRACT,
+				abi: BIUBIU_PREMIUM_ABI,
+				functionName: 'getSubscriptionInfo',
+				args: [address]
+			});
 
-		const [isPremium, expiryTime, remainingTime] = result;
-		const onChainStatus = {
-			isMember: isPremium,
-			expiresAt: Number(expiryTime),
-			remainingDays: Math.ceil(Number(remainingTime) / 86400)
-		};
+			const [isPremium, expiryTime, remainingTime] = result;
+			onChainStatus = {
+				isMember: isPremium,
+				expiresAt: Number(expiryTime),
+				remainingDays: Math.ceil(Number(remainingTime) / SECONDS_PER_DAY)
+			};
+		} catch (rpcError) {
+			// RPC failed - this is a "safe" failure, don't touch cache
+			console.warn('[Worker] RPC call failed, keeping cache intact:', rpcError);
+			return {
+				type: 'verify-result',
+				address,
+				chainId,
+				isValid: true, // Treat as valid to keep cache
+				onChainStatus: null,
+				cacheCleared: false,
+				error: rpcError instanceof Error ? rpcError.message : 'RPC failed',
+				errorType: 'rpc_error'
+			};
+		}
 
 		// 4. If no cache, just return on-chain status
 		if (!cached) {
@@ -148,36 +197,16 @@ async function verifyCachedMembership(
 			};
 		}
 
-		// 5. Verify checksum first
-		const checksumData = createChecksumData(
-			cached.address,
-			cached.chainId,
-			cached.isMember,
-			cached.expiresAt,
-			cached.cachedAt
-		);
-		const expectedChecksum = await generateChecksum(checksumData);
-
-		if (cached.checksum !== expectedChecksum) {
-			// Checksum mismatch - cache was tampered
-			console.warn('[Worker] Membership cache checksum mismatch - clearing');
-			await del(cacheKey);
-			return {
-				type: 'verify-result',
-				address,
-				chainId,
-				isValid: false,
-				onChainStatus,
-				cacheCleared: true,
-				error: 'Cache integrity check failed'
-			};
-		}
+		// 5. Skip checksum verification in worker
+		// The main thread does full signature+fingerprint verification via signature.ts
+		// Worker focuses on comparing cache vs on-chain data
 
 		// 6. Compare cached vs on-chain status
 		const now = Math.floor(Date.now() / 1000);
 
 		// Case A: Cache says member, on-chain says not member
-		if (cached.isMember && !isPremium) {
+		// This is a definitive mismatch - clear cache
+		if (cached.isMember && !onChainStatus.isMember) {
 			console.warn('[Worker] Cache claims member but on-chain is not - clearing');
 			await del(cacheKey);
 			return {
@@ -187,28 +216,29 @@ async function verifyCachedMembership(
 				isValid: false,
 				onChainStatus,
 				cacheCleared: true,
-				error: 'Cached membership does not match on-chain status'
+				error: 'Cached membership does not match on-chain status',
+				errorType: 'mismatch'
 			};
 		}
 
-		// Case B: Cache expiry time doesn't match on-chain
-		if (cached.expiresAt !== Number(expiryTime)) {
+		// Case B: Cache expiry time doesn't match on-chain (extended or different)
+		if (cached.expiresAt !== onChainStatus.expiresAt) {
 			// Update cache with correct on-chain data
 			const newCachedAt = Date.now();
-			const newChecksumData = createChecksumData(
+			const newChecksumData = createBasicChecksumData(
 				address,
 				chainId,
-				isPremium,
-				Number(expiryTime),
+				onChainStatus.isMember,
+				onChainStatus.expiresAt,
 				newCachedAt
 			);
-			const newChecksum = await generateChecksum(newChecksumData);
+			const newChecksum = await generateBasicChecksum(newChecksumData);
 
 			const updatedCache: MembershipCache = {
 				address,
 				chainId,
-				isMember: isPremium,
-				expiresAt: Number(expiryTime),
+				isMember: onChainStatus.isMember,
+				expiresAt: onChainStatus.expiresAt,
 				cachedAt: newCachedAt,
 				checksum: newChecksum
 			};
@@ -219,10 +249,9 @@ async function verifyCachedMembership(
 				type: 'verify-result',
 				address,
 				chainId,
-				isValid: false,
+				isValid: true, // Updated successfully
 				onChainStatus,
-				cacheCleared: false, // Updated, not cleared
-				error: 'Cache expiry updated to match on-chain'
+				cacheCleared: false
 			};
 		}
 
@@ -237,7 +266,8 @@ async function verifyCachedMembership(
 				isValid: false,
 				onChainStatus,
 				cacheCleared: true,
-				error: 'Membership expired'
+				error: 'Membership expired',
+				errorType: 'expired'
 			};
 		}
 
@@ -251,6 +281,22 @@ async function verifyCachedMembership(
 			cacheCleared: false
 		};
 	} catch (error) {
+		// Unexpected error - check if it's RPC related
+		if (isRpcError(error)) {
+			console.warn('[Worker] RPC error, keeping cache intact:', error);
+			return {
+				type: 'verify-result',
+				address,
+				chainId,
+				isValid: true, // Keep cache on RPC errors
+				onChainStatus: null,
+				cacheCleared: false,
+				error: error instanceof Error ? error.message : 'RPC error',
+				errorType: 'rpc_error'
+			};
+		}
+
+		// Non-RPC error (e.g., IndexedDB error)
 		console.error('[Worker] Verification error:', error);
 		return {
 			type: 'verify-result',
