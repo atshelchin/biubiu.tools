@@ -33,7 +33,14 @@
       "Bash(bun x vite-bundle-visualizer:*)",
       "Bash(npx i18n:*)",
       "Bash(bunx @shelchin/i18n:*)",
-      "Bash(bun x eslint:*)"
+      "Bash(bun x eslint:*)",
+      "Bash(for lang in es pt ja ko tr it ru vi id fr)",
+      "Bash(file=\"/Users/shelchin/ai-repo2025/biubiu.tools/src/i18n/locales/$lang/routes/chain-tools.json\")",
+      "Bash(if [ -f \"$file\" ])",
+      "Bash(then)",
+      "Bash(else)",
+      "Bash(fi)",
+      "Bash(python3:*)"
     ],
     "deny": [],
     "ask": []
