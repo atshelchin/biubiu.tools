@@ -93,10 +93,18 @@
 		}
 	});
 
-	// Load accounts when connected
+	// Track if we've already loaded accounts to prevent re-loading on every render
+	let loadedForAddress = $state<string | null>(null);
+
+	// Load accounts when connected - only once per unique address
 	$effect(() => {
-		if (isWalletConnected) {
+		const currentAddress = connectStore.address;
+		if (isWalletConnected && currentAddress && currentAddress !== loadedForAddress) {
+			loadedForAddress = currentAddress;
 			loadAccounts();
+		} else if (!isWalletConnected) {
+			// Reset when disconnected
+			loadedForAddress = null;
 		}
 	});
 </script>

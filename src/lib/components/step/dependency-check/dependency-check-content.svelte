@@ -22,6 +22,7 @@
 
 	// i18n
 	import { useI18n, type TranslationKeys } from '@shelchin/i18n';
+	import { untrack } from 'svelte';
 
 	// Components
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
@@ -157,28 +158,50 @@
 	// EFFECTS
 	// ============================================================================
 
-	// Auto-run checks when wallet is connected and network is selected
+	// Track the chain ID that we're currently checking or have checked
+	let checkedForChainId = $state<number | null>(null);
+
+	// Effect: Auto-run checks when wallet is connected and network is selected
+	// Uses checkedForChainId to prevent re-running for the same network
 	$effect(() => {
-		if (connectStore.isConnected && currentNetwork && !checker.hasChecked) {
+		const chainId = connectStore.currentChainId;
+		const isConnected = connectStore.isConnected;
+		const network = currentNetwork;
+
+		// Skip if no chain selected
+		if (!chainId || !isConnected || !network) {
+			return;
+		}
+
+		// If this is a different chain than we've checked, reset and run
+		if (chainId !== checkedForChainId) {
+			// Update tracking FIRST to prevent re-triggering
+			checkedForChainId = chainId;
+			// Reset previous results
+			checker.reset();
+			// Run new checks
 			checker.setCheckerFactory(createChecker);
 			checker.runChecks(createChecker());
 		}
 	});
 
-	// Reset checks when network changes
-	$effect(() => {
-		if (connectStore.currentChainId) {
-			checker.reset();
-		}
-	});
-
 	// Sync checker state via callback
+	// Use untrack for the callback to prevent infinite loops
 	$effect(() => {
-		onStateChange?.({
-			checks: checker.checks,
-			summary: checker.summary,
-			isChecking: checker.isChecking,
-			hasChecked: checker.hasChecked
+		// Read values to track dependencies
+		const currentChecks = checker.checks;
+		const currentSummary = checker.summary;
+		const currentIsChecking = checker.isChecking;
+		const currentHasChecked = checker.hasChecked;
+
+		// Call onStateChange without tracking to prevent loops
+		untrack(() => {
+			onStateChange?.({
+				checks: currentChecks,
+				summary: currentSummary,
+				isChecking: currentIsChecking,
+				hasChecked: currentHasChecked
+			});
 		});
 	});
 </script>
