@@ -152,6 +152,11 @@
 				>
 					<span class="flag">{lang.flag}</span>
 					<span class="label">{lang.label}</span>
+					{#if lang.code === 'en'}
+						<span class="recommended-badge" title={i18n.t('common.language.english_most_complete')}>
+							{i18n.t('common.language.recommended')}
+						</span>
+					{/if}
 				</button>
 			{/each}
 		</div>
@@ -290,6 +295,16 @@
 
 	.dropdown-item .label {
 		flex: 1;
+	}
+
+	.recommended-badge {
+		font-size: var(--text-xs);
+		padding: 0.125rem 0.375rem;
+		background: hsla(var(--brand-hue), var(--brand-saturation), 50%, 0.15);
+		color: var(--color-primary);
+		border-radius: var(--radius-sm);
+		font-weight: var(--font-medium);
+		white-space: nowrap;
 	}
 
 	@keyframes slideDown {

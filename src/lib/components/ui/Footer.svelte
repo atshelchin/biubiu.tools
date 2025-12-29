@@ -68,6 +68,8 @@
 				<a href="/terms" class="legal-link">{i18n.t('common.footer.terms')}</a>
 				<span class="separator">·</span>
 				<a href="/sitemap.xml" class="legal-link">Sitemap</a>
+				<span class="separator">·</span>
+				<span class="english-hint">{i18n.t('common.language.english_most_complete')}</span>
 			</div>
 
 			<div class="controls-group">
@@ -191,6 +193,10 @@
 
 	.legal-link:hover {
 		color: var(--color-primary);
+	}
+
+	.english-hint {
+		font-style: italic;
 	}
 
 	.controls-group {

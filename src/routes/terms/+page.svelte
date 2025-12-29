@@ -14,6 +14,10 @@
 		<h1>{i18n.t('terms.title')}</h1>
 		<p class="last-updated">{i18n.t('terms.last_updated')}: 2025-12-22</p>
 
+		<div class="authoritative-notice">
+			{i18n.t('terms.authoritative_notice')}
+		</div>
+
 		<section>
 			<h2>{i18n.t('terms.acceptance.title')}</h2>
 			<p>{i18n.t('terms.acceptance.content')}</p>
@@ -112,6 +116,16 @@
 	.last-updated {
 		font-size: var(--text-sm);
 		color: var(--color-muted-foreground);
+		margin-bottom: var(--space-4);
+	}
+
+	.authoritative-notice {
+		font-size: var(--text-sm);
+		color: var(--color-muted-foreground);
+		background: hsla(var(--brand-hue), var(--brand-saturation), 50%, 0.08);
+		border: 1px solid hsla(var(--brand-hue), var(--brand-saturation), 50%, 0.2);
+		border-radius: var(--radius-md);
+		padding: var(--space-3) var(--space-4);
 		margin-bottom: var(--space-8);
 	}
 
