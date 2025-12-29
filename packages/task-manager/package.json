@@ -1,0 +1,60 @@
+{
+	"name": "@shelchin/task-manager",
+	"version": "0.0.1",
+	"description": "Universal task management system with tree structure, persistence, pause/resume, and progress tracking for Svelte 5",
+	"type": "module",
+	"svelte": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"svelte": "./dist/index.js",
+			"default": "./dist/index.js"
+		},
+		"./components": {
+			"types": "./dist/components/index.d.ts",
+			"svelte": "./dist/components/index.js",
+			"default": "./dist/components/index.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "svelte-package -i src",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"prepublishOnly": "bun run build"
+	},
+	"peerDependencies": {
+		"svelte": "^5.0.0"
+	},
+	"devDependencies": {
+		"@sveltejs/package": "^2.3.7",
+		"@sveltejs/vite-plugin-svelte": "^5.0.3",
+		"@testing-library/svelte": "^5.2.0",
+		"@vitest/browser": "^3.0.0",
+		"fake-indexeddb": "^6.0.0",
+		"jsdom": "^26.0.0",
+		"svelte": "^5.0.0",
+		"typescript": "^5.0.0",
+		"vitest": "^3.0.0"
+	},
+	"keywords": [
+		"svelte",
+		"svelte5",
+		"task-manager",
+		"task-queue",
+		"progress-tracking",
+		"pause-resume",
+		"indexeddb",
+		"persistence"
+	],
+	"author": "",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/atshelchin/biubiu.tools.git",
+		"directory": "packages/task-manager"
+	}
+}
