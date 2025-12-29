@@ -8,7 +8,7 @@ import type {
 import type {
 	DistributionAmountMode,
 	DistributionTokenType
-} from '@/features/token-distribution/types/distribution';
+} from '@/features/one-to-many-transfer/types/distribution';
 
 /**
  * Module-level state for Step 3 (Select Token Type & Token)

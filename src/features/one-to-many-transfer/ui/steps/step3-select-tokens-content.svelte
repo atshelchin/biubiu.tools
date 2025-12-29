@@ -3,16 +3,16 @@
 	import { useI18n } from '@shelchin/i18n';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
-	import { step3State } from '@/features/token-distribution/stores/step3-state.svelte';
+	import { step3State } from '@/features/one-to-many-transfer/stores/step3-state.svelte';
 	import { PREDEFINED_TOKENS } from '$lib/config/tokens';
 	import type { NativeToken, AnyToken, ERC721Token, ERC1155Token } from '$lib/types/token';
-	import type { DistributionTokenType } from '@/features/token-distribution/types/distribution';
+	import type { DistributionTokenType } from '@/features/one-to-many-transfer/types/distribution';
 	import { Coins, Image, Layers, Wallet, Loader2, CheckCircle, AlertCircle } from '@lucide/svelte';
 	import {
 		loadNFTContractInfo,
 		isValidAddress,
 		parseTokenIds
-	} from '@/features/token-distribution/utils/nft-loader';
+	} from '@/features/one-to-many-transfer/utils/nft-loader';
 	import type { Address } from 'viem';
 
 	const i18n = useI18n();

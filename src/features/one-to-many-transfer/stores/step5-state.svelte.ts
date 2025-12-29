@@ -1,4 +1,4 @@
-import type { DistributionStatus } from '@/features/token-distribution/types/distribution';
+import type { DistributionStatus } from '@/features/one-to-many-transfer/types/distribution';
 import type { Address } from 'viem';
 
 /**

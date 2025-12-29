@@ -2,7 +2,7 @@
 	import { mainnet, polygon, arbitrum, optimism, base, bsc } from 'viem/chains';
 	import { useI18n } from '@shelchin/i18n';
 	import StepBasedApp from '$lib/components/step-based-app.svelte';
-	import { stepComponents } from '@/features/token-distribution/ui/steps';
+	import { stepComponents } from '@/features/one-to-many-transfer/ui/steps';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();

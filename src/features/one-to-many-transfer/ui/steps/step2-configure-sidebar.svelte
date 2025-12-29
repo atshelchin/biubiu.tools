@@ -4,7 +4,7 @@
 	 * Uses shared DependencyCheckSidebar component with wallet status
 	 */
 	import { DependencyCheckSidebar } from '$lib/components/step/dependency-check';
-	import { step2State } from '@/features/token-distribution/stores/step2-state.svelte';
+	import { step2State } from '@/features/one-to-many-transfer/stores/step2-state.svelte';
 	import WalletConnectionStatus from '@/lib/components/ui/wallet-connection-status.svelte';
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
 

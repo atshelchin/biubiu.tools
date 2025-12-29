@@ -1,4 +1,4 @@
-import type { Recipient } from '@/features/token-distribution/types/recipient';
+import type { Recipient } from '@/features/one-to-many-transfer/types/recipient';
 import { SvelteSet } from 'svelte/reactivity';
 
 /**

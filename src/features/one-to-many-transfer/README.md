@@ -99,7 +99,7 @@ src/routes/apps/token-distribution/
 <script lang="ts">
 	import { mainnet, polygon, base } from 'viem/chains';
 	import StepBasedApp from '$lib/components/step-based-app.svelte';
-	import { stepComponents } from '@/features/token-distribution/ui/steps';
+	import { stepComponents } from '@/features/one-to-many-transfer/ui/steps';
 
 	const meta = {
 		title: 'Token Distribution',
@@ -133,8 +133,8 @@ src/routes/apps/token-distribution/
 The feature uses module-level Svelte 5 stores:
 
 ```typescript
-import { step3State } from '@/features/token-distribution/stores/step3-state.svelte';
-import { step4State } from '@/features/token-distribution/stores/step4-state.svelte';
+import { step3State } from '@/features/one-to-many-transfer/stores/step3-state.svelte';
+import { step4State } from '@/features/one-to-many-transfer/stores/step4-state.svelte';
 
 // Access token selection
 console.log(step3State.selectedToken);
@@ -150,7 +150,7 @@ console.log(step4State.totalRecipients);
 ### Distribution Transaction Builder
 
 ```typescript
-import { buildDistributionTransactions } from '@/features/token-distribution/utils/distribution-builder';
+import { buildDistributionTransactions } from '@/features/one-to-many-transfer/utils/distribution-builder';
 
 const config: DistributionConfig = {
 	sourceWallet: '0x...',

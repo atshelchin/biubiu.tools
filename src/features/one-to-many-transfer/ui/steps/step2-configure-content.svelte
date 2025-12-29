@@ -4,8 +4,8 @@
 	 * Uses shared DependencyCheckContent component with token-distribution specific checker
 	 */
 	import { DependencyCheckContent } from '$lib/components/step/dependency-check';
-	import { step2State } from '@/features/token-distribution/stores/step2-state.svelte';
-	import { checkAllDependencies } from '@/features/token-distribution/utils/dependency-checker';
+	import { step2State } from '@/features/one-to-many-transfer/stores/step2-state.svelte';
+	import { checkAllDependencies } from '@/features/one-to-many-transfer/utils/dependency-checker';
 	import type { TranslationKeys } from '@shelchin/i18n';
 
 	/**

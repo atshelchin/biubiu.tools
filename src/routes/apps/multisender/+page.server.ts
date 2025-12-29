@@ -2,5 +2,5 @@ import { redirect } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = () => {
-	redirect(301, '/apps/token-distribution');
+	redirect(301, '/apps/one-to-many-transfer');
 };

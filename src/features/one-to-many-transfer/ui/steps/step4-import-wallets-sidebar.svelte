@@ -2,7 +2,7 @@
 	import WalletConnectionStatus from '@/lib/components/ui/wallet-connection-status.svelte';
 	import StepSidebar from '$lib/components/step/step-sidebar.svelte';
 	import { useStepManager } from '@/lib/components/ui/step-context.svelte';
-	import { step4State } from '@/features/token-distribution/stores/step4-state.svelte';
+	import { step4State } from '@/features/one-to-many-transfer/stores/step4-state.svelte';
 
 	const stepManager = useStepManager();
 

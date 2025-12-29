@@ -3,24 +3,24 @@
 	import { useConnectStore } from '$lib/stores/connect.svelte';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
-	import { step3State } from '@/features/token-distribution/stores/step3-state.svelte';
-	import { step4State } from '@/features/token-distribution/stores/step4-state.svelte';
-	import { useDistributionExecutor } from '@/features/token-distribution/composables/use-distribution-executor.svelte';
-	import { useDelegatedExecutor } from '@/features/token-distribution/composables/use-delegated-executor.svelte';
+	import { step3State } from '@/features/one-to-many-transfer/stores/step3-state.svelte';
+	import { step4State } from '@/features/one-to-many-transfer/stores/step4-state.svelte';
+	import { useDistributionExecutor } from '@/features/one-to-many-transfer/composables/use-distribution-executor.svelte';
+	import { useDelegatedExecutor } from '@/features/one-to-many-transfer/composables/use-delegated-executor.svelte';
 	import {
 		buildDistributionTransactions,
 		calculateTotalAmount,
 		estimateTotalGas,
 		getGasLimitForTokenType
-	} from '@/features/token-distribution/utils/distribution-builder';
-	import { getActiveSessions } from '@/features/token-distribution/utils/session-storage';
-	import type { StoredSession } from '@/features/token-distribution/utils/session-storage';
+	} from '@/features/one-to-many-transfer/utils/distribution-builder';
+	import { getActiveSessions } from '@/features/one-to-many-transfer/utils/session-storage';
+	import type { StoredSession } from '@/features/one-to-many-transfer/utils/session-storage';
 	import { formatUnits } from 'viem';
 	import type { Address } from 'viem';
 	import type {
 		DistributionConfig,
 		ExecutionMode
-	} from '@/features/token-distribution/types/distribution';
+	} from '@/features/one-to-many-transfer/types/distribution';
 	import {
 		AlertCircle,
 		CheckCircle2,
@@ -33,9 +33,9 @@
 		History
 	} from '@lucide/svelte';
 	import { fade } from 'svelte/transition';
-	import ExecutorWallet from '@/features/token-distribution/ui/components/executor-wallet.svelte';
-	import ExecutionModeSelector from '@/features/token-distribution/ui/components/execution-mode-selector.svelte';
-	import SessionManager from '@/features/token-distribution/ui/components/session-manager.svelte';
+	import ExecutorWallet from '@/features/one-to-many-transfer/ui/components/executor-wallet.svelte';
+	import ExecutionModeSelector from '@/features/one-to-many-transfer/ui/components/execution-mode-selector.svelte';
+	import SessionManager from '@/features/one-to-many-transfer/ui/components/session-manager.svelte';
 
 	const i18n = useI18n();
 	const connectStore = useConnectStore();

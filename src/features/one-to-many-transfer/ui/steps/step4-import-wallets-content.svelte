@@ -2,9 +2,9 @@
 	import { useI18n } from '@shelchin/i18n';
 	import StepContentHeader from '$lib/components/step/step-content-header.svelte';
 	import StepContent from '$lib/components/step/step-content.svelte';
-	import { step4State } from '@/features/token-distribution/stores/step4-state.svelte';
-	import { step3State } from '@/features/token-distribution/stores/step3-state.svelte';
-	import type { Recipient } from '@/features/token-distribution/types/recipient';
+	import { step4State } from '@/features/one-to-many-transfer/stores/step4-state.svelte';
+	import { step3State } from '@/features/one-to-many-transfer/stores/step3-state.svelte';
+	import type { Recipient } from '@/features/one-to-many-transfer/types/recipient';
 	import { isAddress } from 'viem';
 	import type { Address } from 'viem';
 	import { Trash2, Upload, Plus, AlertCircle, FileText, RefreshCw } from '@lucide/svelte';

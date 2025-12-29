@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { useI18n } from '@shelchin/i18n';
 	import { Wallet, Users, Info } from '@lucide/svelte';
-	import type { ExecutionMode } from '@/features/token-distribution/types/distribution';
+	import type { ExecutionMode } from '@/features/one-to-many-transfer/types/distribution';
 
 	interface Props {
 		value: ExecutionMode;
