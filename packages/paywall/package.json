@@ -1,0 +1,57 @@
+{
+	"name": "@shelchin/paywall",
+	"version": "0.0.1",
+	"description": "Flexible paywall system for membership and usage quota management with blockchain verification",
+	"type": "module",
+	"svelte": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"svelte": "./dist/index.js",
+			"default": "./dist/index.js"
+		},
+		"./components": {
+			"types": "./dist/components/index.d.ts",
+			"svelte": "./dist/components/index.js",
+			"default": "./dist/components/index.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "svelte-package -i src",
+		"prepublishOnly": "bun run build"
+	},
+	"peerDependencies": {
+		"svelte": "^5.0.0",
+		"viem": "^2.0.0"
+	},
+	"dependencies": {
+		"idb-keyval": "^6.2.0"
+	},
+	"devDependencies": {
+		"@sveltejs/package": "^2.3.7",
+		"@sveltejs/vite-plugin-svelte": "^5.0.3",
+		"svelte": "^5.0.0",
+		"typescript": "^5.0.0",
+		"viem": "^2.0.0"
+	},
+	"keywords": [
+		"svelte",
+		"svelte5",
+		"paywall",
+		"membership",
+		"quota",
+		"blockchain",
+		"web3"
+	],
+	"author": "",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/atshelchin/biubiu.tools.git",
+		"directory": "packages/paywall"
+	}
+}

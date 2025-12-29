@@ -1,58 +1,56 @@
 /**
- * Paywall System
- *
- * A flexible paywall system for managing membership and usage quotas.
- *
- * Security features:
- * - SHA-256 checksum for data integrity
- * - Wallet signature as personalized salt (prevents checksum forgery)
- * - Browser fingerprint (prevents cross-device copying)
- * - Safe verification (RPC failures don't delete valid cache)
- *
- * @example
- * ```ts
- * // In a feature's paywall.ts
- * import { createMembershipOnlyRule } from '$lib/paywall';
- *
- * export const myFeaturePaywall = createMembershipOnlyRule('my-feature', {
- *   daily: 100,
- *   countBy: 'items'
- * });
- *
- * // In a component
- * import { usePaywall } from '$lib/paywall';
- * import { myFeaturePaywall } from './paywall';
- *
- * const paywall = usePaywall({ rule: myFeaturePaywall });
- *
- * async function handleAction() {
- *   const result = await paywall.check(itemCount);
- *   if (!result.allowed) {
- *     // Show upgrade modal
- *     return;
- *   }
- *   // Proceed with action
- * }
- * ```
+ * @deprecated Use `@shelchin/paywall` instead
+ * This re-export is kept for backwards compatibility
  */
-
-// Types
-export type {
-	MembershipStatus,
-	MembershipCache,
-	UsageRecord,
-	QuotaConfig,
-	PaywallType,
-	PaywallContext,
-	PaywallDenyReason,
-	PaywallResult,
-	PaywallRule,
-	MembershipStoreState,
-	UsageQuotaStoreState
-} from './types';
-
-// Error types
 export {
+	// Configuration
+	initPaywall,
+	getConfig,
+	isPaywallInitialized,
+	resetConfig,
+	DEFAULT_CONFIG,
+	// Stores
+	createMembershipStore,
+	useMembershipStore,
+	createUsageQuotaStore,
+	useUsageQuotaStore,
+	// Composables
+	usePaywall,
+	verifyMembership,
+	verifyAllMemberships,
+	terminateVerifier,
+	// Rule helpers
+	createMembershipOnlyRule,
+	createPayPerUseRule,
+	createHybridRule,
+	createFreeRule,
+	// Contract utilities
+	readMembershipStatus,
+	// Checksum utilities
+	generateChecksum,
+	verifyChecksum,
+	createMembershipChecksumData,
+	createUsageChecksumData,
+	// Signature-based security
+	requestSignature,
+	hasValidSignature,
+	getCachedSignature,
+	clearSignature,
+	getPersonalizedSalt,
+	generateSecureChecksum,
+	verifySecureChecksum,
+	// Browser fingerprint
+	generateFingerprint,
+	verifyFingerprint,
+	getFingerprintShort,
+	// Retry utilities
+	withRetry,
+	createRetryableRpc,
+	withRetryAll,
+	// Date utilities
+	getTodayDate,
+	getCutoffDate,
+	// Error classes
 	PaywallError,
 	NetworkError,
 	RpcError,
@@ -63,11 +61,39 @@ export {
 	isPaywallError,
 	isRetryableError,
 	toPaywallError
-} from './errors';
-export type { PaywallErrorCode } from './errors';
+} from '@shelchin/paywall';
 
-// Constants
+export type {
+	// Configuration types
+	PaywallConfig,
+	ContractConfig,
+	CacheConfig,
+	TimingConfig,
+	ResolvedConfig,
+	// Types
+	MembershipStatus,
+	MembershipCache,
+	UsageRecord,
+	QuotaConfig,
+	PaywallType,
+	PaywallContext,
+	PaywallDenyReason,
+	PaywallResult,
+	PaywallRule,
+	MembershipStoreState,
+	UsageQuotaStoreState,
+	// Error types
+	PaywallErrorCode,
+	// Signature types
+	SignatureCache,
+	// Retry types
+	RetryOptions
+} from '@shelchin/paywall';
+
+// Re-export app-specific constants from the local constants file
+// These are specific to biubiu.tools and should not be in the package
 export {
+	SELF_HOSTED_MODE,
 	VERIFY_INTERVAL_MS,
 	INITIAL_VERIFY_DELAY_MS,
 	SECONDS_PER_DAY,
@@ -79,48 +105,3 @@ export {
 	CHECKSUM_SALT,
 	BIUBIU_PREMIUM_CONTRACT
 } from './constants';
-
-// Stores
-export { createMembershipStore, useMembershipStore } from './stores/membership.svelte';
-export { createUsageQuotaStore, useUsageQuotaStore } from './stores/usage-quota.svelte';
-
-// Composables
-export { usePaywall } from './composables/use-paywall.svelte';
-export {
-	verifyMembership,
-	verifyAllMemberships,
-	terminateVerifier
-} from './composables/use-membership-verifier';
-
-// Rule helpers
-export {
-	createMembershipOnlyRule,
-	createPayPerUseRule,
-	createHybridRule,
-	createFreeRule
-} from './utils/rules';
-
-// Contract utilities
-export { readMembershipStatus } from './utils/contract';
-
-// Checksum utilities (legacy, use signature.ts for new code)
-export { generateChecksum, verifyChecksum } from './utils/checksum';
-
-// Signature-based security (recommended)
-export {
-	requestSignature,
-	hasValidSignature,
-	getCachedSignature,
-	clearSignature,
-	getPersonalizedSalt,
-	generateSecureChecksum,
-	verifySecureChecksum
-} from './utils/signature';
-export type { SignatureCache } from './utils/signature';
-
-// Browser fingerprint
-export { generateFingerprint, verifyFingerprint, getFingerprintShort } from './utils/fingerprint';
-
-// Retry utilities
-export { withRetry, createRetryableRpc, withRetryAll } from './utils/retry';
-export type { RetryOptions } from './utils/retry';
