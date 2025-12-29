@@ -1,0 +1,155 @@
+{
+	"_meta": {
+		"code": "fr",
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷"
+	},
+	"title": "Déployeur de Contrats",
+	"description": "Déployez des contrats intelligents de manière déterministe en utilisant le proxy CREATE2",
+	"feature_1": "Déploiement déterministe sur toutes les chaînes",
+	"feature_2": "Même adresse de contrat sur chaque réseau",
+	"feature_3": "Interface simple et conviviale pour les développeurs",
+	"faqs": {
+		"what_is_create2": "Qu'est-ce que CREATE2 ?",
+		"create2_explanation": "CREATE2 est un opcode Ethereum qui permet le déploiement déterministe de contrats. Il calcule l'adresse du contrat avant le déploiement en fonction du bytecode et du sel, garantissant la même adresse sur différents réseaux.",
+		"what_is_deterministic": "Qu'est-ce que le déploiement déterministe ?",
+		"deterministic_explanation": "Le déploiement déterministe signifie que le contrat sera toujours déployé à la même adresse sur n'importe quel réseau, tant que vous utilisez le même bytecode, les mêmes arguments de constructeur et le même sel. C'est extrêmement utile pour les applications cross-chain.",
+		"what_is_bytecode": "Qu'est-ce que le bytecode ?",
+		"bytecode_explanation": "Le bytecode est la version compilée du code de votre contrat intelligent. Lorsque vous compilez votre contrat Solidity, vous obtenez du bytecode qui est le code réel qui s'exécute sur la Machine Virtuelle Ethereum (EVM).",
+		"what_is_abi": "Qu'est-ce que l'ABI ?",
+		"abi_explanation": "L'ABI (Application Binary Interface) définit comment interagir avec votre contrat. Pour le déploiement, vous avez besoin de l'ABI du constructeur pour encoder correctement les arguments du constructeur. Vous pouvez le fournir au format JSON ou au format lisible.",
+		"what_is_salt": "Qu'est-ce que le sel ?",
+		"salt_explanation": "Le sel est une valeur de 32 octets utilisée dans CREATE2 pour générer l'adresse du contrat. Différents sels produisent différentes adresses. Vous pouvez utiliser le même sel pour déployer à la même adresse sur différents réseaux."
+	},
+	"seo": {
+		"page_title": "Déployeur de Contrats - Déploiement Déterministe de Contrats Intelligents | BiuBiu Tools",
+		"page_description": "Déployez des contrats intelligents de manière déterministe en utilisant le proxy CREATE2. Même adresse de contrat sur tous les réseaux EVM. Interface conviviale pour les développeurs pour les tests et la production.",
+		"keywords": "déployeur de contrats, CREATE2, déploiement déterministe, contrat intelligent, ethereum, polygon, BSC, solidity, outils web3",
+		"webapp_name": "Déployeur de Contrats",
+		"webapp_description": "Déployez des contrats intelligents de manière déterministe en utilisant le proxy CREATE2 sur tous les réseaux EVM.",
+		"feature_1": "Déploiement déterministe avec CREATE2",
+		"feature_2": "Support multi-réseau (Ethereum, Polygon, BSC, etc.)",
+		"feature_3": "Prévisualisez l'adresse du contrat avant le déploiement",
+		"howto_name": "Comment Déployer des Contrats de Manière Déterministe avec CREATE2",
+		"howto_description": "Guide étape par étape pour déployer des contrats intelligents à la même adresse sur plusieurs réseaux en utilisant le proxy CREATE2.",
+		"howto_tool_1": "Contrat Proxy CREATE2 (0x4e59b44847b379578588920cA78FbF26c0B4956C)",
+		"step_1_name": "Connectez Votre Portefeuille",
+		"step_1_text": "Connectez votre portefeuille Web3 au réseau où vous souhaitez déployer le contrat. Assurez-vous d'avoir suffisamment de tokens natifs pour les frais de gas.",
+		"step_1_description": "Liez votre portefeuille Web3",
+		"step_2_name": "Vérifiez les Dépendances",
+		"step_2_text": "Vérifiez que le contrat proxy CREATE2 est disponible sur le réseau sélectionné. Le système vérifiera si le proxy existe à l'adresse standard.",
+		"step_2_description": "Vérifiez la disponibilité du proxy CREATE2",
+		"step_3_name": "Déployez le Contrat",
+		"step_3_text": "Entrez le bytecode de votre contrat, l'ABI du constructeur, les arguments du constructeur et le sel. Le système calculera et affichera l'adresse du contrat prédite. Cliquez sur déployer pour exécuter la transaction de déploiement.",
+		"step_3_description": "Configurez et déployez le contrat"
+	},
+	"step1": {
+		"sidebar": {
+			"title": "Connecter le Portefeuille",
+			"description": "Connectez votre portefeuille Web3 pour déployer des contrats intelligents en utilisant le proxy CREATE2."
+		},
+		"content": {
+			"title": "Sélectionnez le Réseau et Connectez le Portefeuille",
+			"description": "Choisissez le réseau blockchain où vous souhaitez déployer votre contrat",
+			"loading": "Chargement de la configuration du réseau..."
+		},
+		"footer": {
+			"continue": "Continuer",
+			"hint": "Connectez votre portefeuille pour continuer"
+		}
+	},
+	"step2": {
+		"sidebar": {
+			"title": "Vérifier les Dépendances",
+			"description": "Vérifiez que le contrat proxy CREATE2 est disponible sur le réseau sélectionné.",
+			"required_contracts": "Contrats Requis"
+		},
+		"content": {
+			"title": "Vérifier les Dépendances",
+			"description": "Vérification de la disponibilité du proxy CREATE2 sur ce réseau",
+			"checking_dependencies_for": "Vérification de l'environnement réseau {network}...",
+			"wallet_not_connected_title": "Portefeuille Non Connecté",
+			"wallet_not_connected_message": "Veuillez retourner à l'Étape 1 et connecter votre portefeuille",
+			"go_to_step1": "Aller à l'Étape 1",
+			"all_dependencies_satisfied": "Toutes les Dépendances Satisfaites",
+			"network_properly_configured": "Le proxy CREATE2 est disponible. Vous pouvez procéder au déploiement.",
+			"dependency_issues_found": "Problèmes de Dépendance Détectés",
+			"resolve_issues_before_continuing": "Le proxy CREATE2 n'est pas disponible sur ce réseau. Veuillez passer à un réseau pris en charge.",
+			"recheck_dependencies": "Revérifier les Dépendances",
+			"address_label": "Adresse :",
+			"endpoint_label": "Endpoint :",
+			"resolve_previous_issue": "Veuillez d'abord résoudre le problème précédent",
+			"view_deployment_guide": "Voir le Guide de Déploiement",
+			"deploy_coming_soon": "Déployer le Contrat (Bientôt)",
+			"deploy_contract": "Déployer {contractName}",
+			"checks": {
+				"category": {
+					"network": "Réseau",
+					"protocol": "Protocole",
+					"contract": "Contrat"
+				},
+				"rpc_endpoint": {
+					"name": "Endpoint RPC",
+					"description": "Connexion au réseau {network}",
+					"chain_id_mismatch": "Chain ID non correspondant : attendu {expected}, obtenu {actual}",
+					"configure_rpc_button": "Configurer RPC",
+					"connected_to_block": "Connecté au bloc #{blockNumber}",
+					"failed_to_connect": "Impossible de se connecter à l'endpoint RPC",
+					"no_rpc_configured": "Aucun endpoint RPC configuré"
+				},
+				"contract": {
+					"create2_proxy_description": "Proxy CREATE2 pour déploiement déterministe",
+					"deployed": "Déployé",
+					"not_deployed": "Non déployé sur ce réseau",
+					"check_failed": "Échec de la vérification du contrat"
+				}
+			}
+		},
+		"footer": {
+			"continue": "Continuer",
+			"hint": "Toutes les dépendances doivent être disponibles pour continuer",
+			"checking_dependencies": "Vérification des dépendances...",
+			"resolve_issues": "Veuillez résoudre les problèmes ci-dessus pour continuer",
+			"waiting_for_checks": "En attente de la fin des vérifications des dépendances"
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "Déployer le Contrat",
+			"description": "Configurez les paramètres de déploiement de votre contrat",
+			"bytecode_title": "Bytecode du Contrat",
+			"bytecode_description": "Le bytecode compilé de votre contrat intelligent. Vous pouvez l'obtenir de la sortie de votre compilateur.",
+			"abi_title": "ABI du Constructeur",
+			"abi_description": "La définition ABI de votre constructeur. Supporte le format JSON et le format lisible.",
+			"constructor_title": "Arguments du Constructeur",
+			"constructor_description": "Les arguments à passer au constructeur de votre contrat, au format tableau JSON.",
+			"salt_title": "Sel",
+			"salt_description": "Une valeur hexadécimale de 32 octets pour la génération déterministe d'adresses. Même sel = même adresse."
+		},
+		"content": {
+			"title": "Déployez Votre Contrat",
+			"description": "Entrez les détails du contrat pour déployer via le proxy CREATE2",
+			"bytecode_label": "Bytecode du Contrat",
+			"bytecode_help": "Collez le bytecode compilé de votre contrat (commence par 0x)",
+			"abi_label": "ABI du Constructeur",
+			"abi_help": "Collez l'ABI du constructeur au format JSON ou lisible",
+			"constructor_args_label": "Arguments du Constructeur",
+			"constructor_args_help": "Entrez les arguments du constructeur comme tableau JSON, ex. [\"MyToken\", \"MTK\", 18]",
+			"salt_label": "Sel",
+			"salt_help": "Une valeur hexadécimale de 32 octets pour déploiement déterministe (0x suivi de 64 caractères hexadécimaux)",
+			"generate_random": "Aléatoire",
+			"predicted_address": "Adresse du Contrat Prédite",
+			"deploy_button": "Déployer le Contrat",
+			"deploying": "Déploiement en cours...",
+			"deployment_success": "Déploiement Réussi !",
+			"deployment_error": "Déploiement Échoué",
+			"contract_address": "Adresse du Contrat",
+			"transaction_hash": "Hash de Transaction"
+		},
+		"footer": {
+			"hint": "C'est l'étape finale. Déployez votre contrat quand vous êtes prêt."
+		}
+	}
+}

@@ -1,0 +1,236 @@
+{
+	"_meta": {
+		"code": "it",
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹"
+	},
+	"title": "Deployer NFT",
+	"description": "Distribuisci smart contract NFT con standard ERC-721, ERC-721A ed ERC-1155",
+	"feature_1": "Supporto per standard ERC-721, ERC-721A, ERC-1155",
+	"feature_2": "Royalty, fornitura e prezzo di conio configurabili",
+	"feature_3": "Funzionalità avanzate: pausabile, bruciabile, rivelabile",
+	"step1": {
+		"sidebar": {
+			"title": "Connetti Wallet",
+			"description": "Connetti il tuo wallet Web3 per distribuire contratti NFT sulla rete blockchain scelta.",
+			"requirements": "Requisiti",
+			"requirement1": "Wallet Web3 (MetaMask, WalletConnect, ecc.)",
+			"requirement2": "Token nativi sufficienti per le commissioni gas",
+			"requirement3": "Seleziona la rete blockchain di destinazione",
+			"supported_chains": "Reti Supportate"
+		},
+		"content": {
+			"title": "Seleziona Rete e Connetti Wallet",
+			"description": "Scegli la rete blockchain per il deploy del tuo contratto NFT",
+			"ready_hint": "Il tuo wallet è connesso e pronto a procedere"
+		}
+	},
+	"step2": {
+		"sidebar": {
+			"title": "Verifica Dipendenze",
+			"description": "Verifica che i contratti richiesti siano distribuiti",
+			"all_passed": "Tutto Superato",
+			"issues_found": "Problemi Trovati",
+			"passed": "Superato",
+			"failed": "Fallito",
+			"selected": "Standard Selezionato",
+			"comparison": "Confronto Standard",
+			"tips": "Suggerimenti",
+			"tip1": "ERC-721 è lo standard NFT originale con la più ampia compatibilità",
+			"tip2": "ERC-721A offre risparmio di gas per il conio in batch",
+			"tip3": "ERC-1155 è migliore per oggetti di gioco e collezioni multi-edizione"
+		},
+		"content": {
+			"title": "Verifica Dipendenze",
+			"description": "Verifica le dipendenze di rete e contratto",
+			"checking_dependencies_for": "Verifica ambiente di rete {network}...",
+			"wallet_not_connected_title": "Wallet Non Connesso",
+			"wallet_not_connected_message": "Torna al Passo 1 e connetti il tuo wallet",
+			"go_to_step1": "Vai al Passo 1",
+			"all_dependencies_satisfied": "Tutte le Dipendenze Soddisfatte",
+			"network_properly_configured": "La rete è correttamente configurata per il deploy NFT",
+			"dependency_issues_found": "Problemi di Dipendenza Trovati",
+			"resolve_issues_before_continuing": "Risolvi i problemi prima di continuare",
+			"recheck_dependencies": "Ricontrolla le Dipendenze",
+			"address_label": "Indirizzo:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Risolvi prima il problema precedente",
+			"view_deployment_guide": "Visualizza Guida al Deploy",
+			"deploy_coming_soon": "Deploy Contratto (Prossimamente)",
+			"deploy_contract": "Deploy {contractName}",
+			"selected_confirmation": "Hai selezionato questo standard",
+			"checks": {
+				"rpc": {
+					"title": "Connessione RPC",
+					"description": "Verifica la connettività di rete"
+				},
+				"contract": {
+					"create2_proxy_description": "Proxy CREATE2 per deploy deterministico",
+					"multicall3_description": "Multicall3 per operazioni batch",
+					"biubiu_premium_description": "BiuBiu Premium per funzionalità avanzate",
+					"nft_factory_description": "NFT Factory per distribuire contratti NFT"
+				},
+				"category": {
+					"network": "Rete",
+					"protocol": "Protocollo",
+					"contract": "Contratto"
+				}
+			}
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "Configura NFT",
+			"description": "Imposta i parametri della tua collezione NFT",
+			"progress": "Progresso",
+			"field_name": "Nome",
+			"field_symbol": "Simbolo",
+			"field_base_uri": "URI Base",
+			"field_description": "Descrizione",
+			"collection_name": "Nome Collezione",
+			"symbol": "Simbolo",
+			"stake_enabled": "Stake-to-Mint",
+			"all_required_complete": "Tutti i campi obbligatori completati!",
+			"ready": "Pronto",
+			"incomplete": "Incompleto",
+			"tips": "Suggerimenti",
+			"tip1": "Scegli un nome di collezione unico",
+			"tip2": "L'URI base può usare IPFS o HTTP",
+			"tip3": "Stake-to-mint crea utilità per il tuo token",
+			"preview": "Anteprima"
+		},
+		"content": {
+			"title": "Configura Parametri NFT",
+			"description": "Imposta le informazioni di base e le opzioni di conio",
+			"basic_info": "Informazioni di Base",
+			"name_label": "Nome Collezione",
+			"name_placeholder": "Il Mio Fantastico NFT",
+			"name_hint": "Il nome della tua collezione NFT",
+			"symbol_label": "Simbolo",
+			"symbol_placeholder": "AWESOME",
+			"symbol_hint": "Identificatore breve (es., BAYC, PUNK)",
+			"description_label": "Descrizione",
+			"description_placeholder": "Una collezione unica di arte digitale...",
+			"description_hint": "Descrivi la tua collezione NFT",
+			"base_uri_label": "URI Base",
+			"base_uri_placeholder": "ipfs://...",
+			"base_uri_hint": "URL base per i metadati del token",
+			"mint_type_label": "Tipo di Conio",
+			"mint_settings": "Opzioni di Conio",
+			"public_mint_enabled": "Conio del Proprietario",
+			"public_mint_hint": "Solo il proprietario del contratto può coniare NFT",
+			"stake_to_mint": "Stake-to-Mint",
+			"enable_stake_to_mint": "Abilita Stake-to-Mint",
+			"stake_to_mint_hint": "Richiede lo staking di token per coniare NFT",
+			"stake_token_label": "Indirizzo Token di Stake",
+			"stake_token_hint": "Indirizzo del token ERC20 richiesto per il conio",
+			"stake_amount_label": "Importo Stake",
+			"stake_amount_hint": "Quantità di token da mettere in stake (in wei)",
+			"preview": "Anteprima"
+		}
+	},
+	"step4": {
+		"sidebar": {
+			"title": "Configura Impostazioni",
+			"description": "Imposta le opzioni avanzate per il tuo NFT",
+			"success": "Contratto NFT Distribuito con Successo!",
+			"error": "Deploy Fallito",
+			"configured": "Configurato",
+			"supply_limit": "Limite di Fornitura",
+			"mint_price": "Prezzo di Conio",
+			"royalties": "Royalty",
+			"special_features": "Funzionalità Speciali",
+			"recommendations": "Raccomandazioni",
+			"rec1": "Imposta limiti di fornitura ragionevoli",
+			"rec2": "Considera di abilitare le royalty",
+			"rec3": "Testa prima sulla testnet"
+		},
+		"content": {
+			"title": "Configura Impostazioni",
+			"description": "Imposta opzioni e funzionalità avanzate",
+			"supply_pricing": "Fornitura e Prezzi",
+			"max_supply_label": "Fornitura Massima",
+			"max_supply_hint": "Numero massimo di NFT che possono essere coniati",
+			"mint_price_label": "Prezzo di Conio",
+			"mint_price_hint": "Prezzo in token nativi per coniare un NFT",
+			"max_per_wallet_label": "Massimo per Wallet",
+			"max_per_wallet_hint": "Massimo NFT che un wallet può coniare",
+			"royalties": "Royalty",
+			"enable_royalties": "Abilita Royalty",
+			"royalty_recipient_label": "Destinatario Royalty",
+			"royalty_recipient_hint": "Indirizzo che riceve i pagamenti delle royalty",
+			"royalty_percentage_label": "Percentuale Royalty",
+			"royalty_percentage_hint": "Percentuale delle vendite (0-10%)",
+			"features": "Funzionalità",
+			"pausable": "Pausabile",
+			"pausable_hint": "Consenti di mettere in pausa tutti i trasferimenti",
+			"burnable": "Bruciabile",
+			"burnable_hint": "Consenti di bruciare gli NFT",
+			"revealable": "Rivelabile",
+			"revealable_hint": "Supporta la rivelazione ritardata dei metadati",
+			"fungible": "Fungibile",
+			"fungible_hint": "Consenti più copie dello stesso NFT",
+			"access_control": "Controllo Accessi",
+			"owner_only": "Solo Proprietario",
+			"public_mint": "Conio Pubblico",
+			"whitelist": "Whitelist",
+			"stake_to_mint": "Stake-to-Mint",
+			"stake_to_mint_hint": "Richiede lo staking di token per coniare",
+			"enable_stake_to_mint": "Abilita Stake-to-Mint",
+			"stake_token_label": "Indirizzo Token di Stake",
+			"stake_token_hint": "Indirizzo del token ERC20 richiesto per il conio",
+			"stake_amount_label": "Importo Stake",
+			"stake_amount_hint": "Quantità di token da mettere in stake (in wei)",
+			"review": {
+				"title": "Rivedi Configurazione",
+				"basic_info": "Informazioni di Base",
+				"mint_settings": "Impostazioni di Conio",
+				"stake_settings": "Impostazioni Stake-to-Mint"
+			},
+			"deployment": {
+				"title": "Deploy",
+				"deploy_button": "Distribuisci Contratto NFT",
+				"deploying": "Distribuzione in corso...",
+				"please_wait": "Attendi mentre il tuo contratto viene distribuito",
+				"success": "Deploy Riuscito!",
+				"nft_deployed": "Il tuo contratto NFT è stato distribuito sulla blockchain",
+				"error": "Deploy Fallito",
+				"retry": "Riprova",
+				"contract_address": "Indirizzo Contratto",
+				"transaction_hash": "Hash Transazione"
+			}
+		},
+		"footer": {
+			"deploy_another": "Distribuisci un Altro NFT"
+		}
+	},
+	"step5": {
+		"sidebar": {
+			"title": "Rivedi e Distribuisci",
+			"description": "Rivedi la tua configurazione e distribuisci",
+			"checklist": "Checklist Pre-Deploy",
+			"check1": "Wallet connesso",
+			"check2": "Dipendenze di rete verificate",
+			"check3": "Parametri NFT configurati",
+			"check4": "Impostazioni finalizzate",
+			"deployment_status": "Stato Deploy",
+			"status_ready": "Pronto per il Deploy",
+			"status_preparing": "Preparazione...",
+			"status_deploying": "Distribuzione...",
+			"status_completed": "Completato",
+			"status_error": "Errore"
+		},
+		"content": {
+			"title": "Rivedi e Distribuisci",
+			"description": "Rivedi la tua configurazione e distribuisci il tuo contratto NFT",
+			"basic_config": "Configurazione di Base",
+			"advanced_settings": "Impostazioni Avanzate",
+			"nft_standard": "Standard NFT",
+			"deploy_button": "Distribuisci Contratto NFT",
+			"success_title": "Deploy Riuscito!",
+			"success_message": "Il tuo contratto NFT è stato distribuito sulla blockchain"
+		}
+	}
+}

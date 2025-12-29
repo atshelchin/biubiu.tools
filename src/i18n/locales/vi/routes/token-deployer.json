@@ -1,0 +1,68 @@
+{
+	"_meta": {
+		"code": "vi",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳"
+	},
+	"title": "Trình Triển Khai Token",
+	"description": "Tạo và triển khai token ERC20 với các tham số tùy chỉnh trong vài phút",
+	"step2": {
+		"content": {
+			"title": "Kiểm Tra Phụ Thuộc",
+			"description": "Đảm bảo cơ sở hạ tầng cần thiết đã sẵn sàng",
+			"checking_dependencies_for": "Đang kiểm tra môi trường mạng {network}...",
+			"wallet_not_connected_title": "Ví Chưa Kết Nối",
+			"wallet_not_connected_message": "Vui lòng quay lại Bước 1 và kết nối ví của bạn",
+			"go_to_step1": "Đến Bước 1",
+			"all_dependencies_satisfied": "Tất Cả Phụ Thuộc Đã Thỏa Mãn",
+			"network_properly_configured": "Mạng của bạn đã được cấu hình đúng để triển khai token",
+			"dependency_issues_found": "Phát Hiện Vấn Đề Phụ Thuộc",
+			"resolve_issues_before_continuing": "Vui lòng giải quyết các vấn đề trên trước khi tiếp tục",
+			"recheck_dependencies": "Kiểm Tra Lại Phụ Thuộc",
+			"address_label": "Địa chỉ:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Vui lòng giải quyết vấn đề trước đó trước",
+			"view_deployment_guide": "Xem Hướng Dẫn Triển Khai",
+			"deploy_coming_soon": "Triển Khai Hợp Đồng (Sắp Ra Mắt)",
+			"deploy_contract": "Triển Khai {contractName}",
+			"checks": {
+				"contract": {
+					"token_factory_description": "Nhà máy triển khai token ERC20 với hỗ trợ CREATE2"
+				},
+				"category": {
+					"network": "Mạng",
+					"protocol": "Giao Thức",
+					"contract": "Hợp Đồng"
+				}
+			}
+		},
+		"footer": {
+			"back": "Quay Lại",
+			"continue": "Tiếp Tục Cấu Hình Token"
+		},
+		"sidebar": {
+			"title": "Kiểm Tra Phụ Thuộc",
+			"description": "Đảm bảo tất cả các hợp đồng cần thiết đã được triển khai trên mạng đã chọn trước khi tiến hành triển khai token.",
+			"checking": "Đang kiểm tra phụ thuộc...",
+			"total": "Tổng Số Kiểm Tra",
+			"passed": "Đạt",
+			"failed": "Thất Bại",
+			"network": "Mạng Hiện Tại",
+			"what_is_this": "Đây là gì?",
+			"what_is_this_desc": "Trước khi triển khai token của bạn, chúng tôi cần xác minh rằng tất cả các hợp đồng thông minh cần thiết đều có sẵn trên mạng đã chọn.",
+			"dependencies": "Phụ Thuộc Cần Thiết",
+			"rpc_endpoint": "RPC Endpoint",
+			"rpc_endpoint_desc": "Kết nối mạng để giao tiếp blockchain",
+			"create2_proxy": "Proxy CREATE2",
+			"create2_proxy_desc": "Cho phép triển khai hợp đồng xác định xuyên chuỗi",
+			"multicall3": "Multicall3",
+			"multicall3_desc": "Gộp nhiều cuộc gọi hợp đồng để tăng hiệu quả",
+			"biubiu_premium": "BiuBiuPremium",
+			"biubiu_premium_desc": "Hợp đồng thành viên cho các tính năng cao cấp",
+			"token_factory": "TokenFactory",
+			"token_factory_desc": "Hợp đồng chính để triển khai token ERC20 của bạn"
+		}
+	}
+}

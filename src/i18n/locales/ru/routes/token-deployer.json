@@ -1,0 +1,68 @@
+{
+	"_meta": {
+		"code": "ru",
+		"name": "Русский",
+		"englishName": "Russian",
+		"direction": "ltr",
+		"flag": "🇷🇺"
+	},
+	"title": "Развёртыватель токенов",
+	"description": "Создавайте и развёртывайте токены ERC20 с пользовательскими параметрами за минуты",
+	"step2": {
+		"content": {
+			"title": "Проверка зависимостей",
+			"description": "Убедитесь, что необходимая инфраструктура готова",
+			"checking_dependencies_for": "Проверка сетевой среды {network}...",
+			"wallet_not_connected_title": "Кошелёк не подключён",
+			"wallet_not_connected_message": "Пожалуйста, вернитесь к шагу 1 и подключите кошелёк",
+			"go_to_step1": "Перейти к шагу 1",
+			"all_dependencies_satisfied": "Все зависимости удовлетворены",
+			"network_properly_configured": "Ваша сеть правильно настроена для развёртывания токенов",
+			"dependency_issues_found": "Обнаружены проблемы с зависимостями",
+			"resolve_issues_before_continuing": "Пожалуйста, решите вышеуказанные проблемы перед продолжением",
+			"recheck_dependencies": "Перепроверить зависимости",
+			"address_label": "Адрес:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Сначала решите предыдущую проблему",
+			"view_deployment_guide": "Просмотр руководства по развёртыванию",
+			"deploy_coming_soon": "Развернуть контракт (Скоро)",
+			"deploy_contract": "Развернуть {contractName}",
+			"checks": {
+				"contract": {
+					"token_factory_description": "Фабрика развёртывания токенов ERC20 с поддержкой CREATE2"
+				},
+				"category": {
+					"network": "Сеть",
+					"protocol": "Протокол",
+					"contract": "Контракт"
+				}
+			}
+		},
+		"footer": {
+			"back": "Назад",
+			"continue": "Продолжить к настройке токена"
+		},
+		"sidebar": {
+			"title": "Проверка зависимостей",
+			"description": "Убедитесь, что все необходимые контракты развёрнуты в выбранной сети перед продолжением развёртывания токена.",
+			"checking": "Проверка зависимостей...",
+			"total": "Всего проверок",
+			"passed": "Пройдено",
+			"failed": "Не пройдено",
+			"network": "Текущая сеть",
+			"what_is_this": "Что это?",
+			"what_is_this_desc": "Перед развёртыванием токена нам нужно проверить, что все необходимые смарт-контракты доступны в выбранной сети.",
+			"dependencies": "Необходимые зависимости",
+			"rpc_endpoint": "RPC Endpoint",
+			"rpc_endpoint_desc": "Сетевое подключение для блокчейн-коммуникации",
+			"create2_proxy": "Прокси CREATE2",
+			"create2_proxy_desc": "Обеспечивает детерминированное развёртывание контрактов между сетями",
+			"multicall3": "Multicall3",
+			"multicall3_desc": "Группирует несколько вызовов контракта для эффективности",
+			"biubiu_premium": "BiuBiuPremium",
+			"biubiu_premium_desc": "Членский контракт для премиум-функций",
+			"token_factory": "TokenFactory",
+			"token_factory_desc": "Основной контракт для развёртывания ваших токенов ERC20"
+		}
+	}
+}

@@ -1,0 +1,68 @@
+{
+	"_meta": {
+		"code": "fr",
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷"
+	},
+	"title": "Déployeur de Tokens",
+	"description": "Créez et déployez des tokens ERC20 avec des paramètres personnalisés en quelques minutes",
+	"step2": {
+		"content": {
+			"title": "Vérification des Dépendances",
+			"description": "Assurez-vous que l'infrastructure requise est prête",
+			"checking_dependencies_for": "Vérification de l'environnement réseau {network}...",
+			"wallet_not_connected_title": "Portefeuille Non Connecté",
+			"wallet_not_connected_message": "Veuillez retourner à l'Étape 1 et connecter votre portefeuille",
+			"go_to_step1": "Aller à l'Étape 1",
+			"all_dependencies_satisfied": "Toutes les Dépendances Satisfaites",
+			"network_properly_configured": "Votre réseau est correctement configuré pour le déploiement de tokens",
+			"dependency_issues_found": "Problèmes de Dépendance Détectés",
+			"resolve_issues_before_continuing": "Veuillez résoudre les problèmes ci-dessus avant de continuer",
+			"recheck_dependencies": "Revérifier les Dépendances",
+			"address_label": "Adresse :",
+			"endpoint_label": "Endpoint :",
+			"resolve_previous_issue": "Veuillez d'abord résoudre le problème précédent",
+			"view_deployment_guide": "Voir le Guide de Déploiement",
+			"deploy_coming_soon": "Déployer le Contrat (Bientôt)",
+			"deploy_contract": "Déployer {contractName}",
+			"checks": {
+				"contract": {
+					"token_factory_description": "Usine de déploiement de tokens ERC20 avec support CREATE2"
+				},
+				"category": {
+					"network": "Réseau",
+					"protocol": "Protocole",
+					"contract": "Contrat"
+				}
+			}
+		},
+		"footer": {
+			"back": "Retour",
+			"continue": "Continuer vers la Configuration du Token"
+		},
+		"sidebar": {
+			"title": "Vérifier les Dépendances",
+			"description": "Assurez-vous que tous les contrats requis sont déployés sur le réseau sélectionné avant de procéder au déploiement du token.",
+			"checking": "Vérification des dépendances...",
+			"total": "Total des Vérifications",
+			"passed": "Réussies",
+			"failed": "Échouées",
+			"network": "Réseau Actuel",
+			"what_is_this": "Qu'est-ce que c'est ?",
+			"what_is_this_desc": "Avant de déployer votre token, nous devons vérifier que tous les contrats intelligents requis sont disponibles sur le réseau sélectionné.",
+			"dependencies": "Dépendances Requises",
+			"rpc_endpoint": "Endpoint RPC",
+			"rpc_endpoint_desc": "Connexion réseau pour la communication blockchain",
+			"create2_proxy": "Proxy CREATE2",
+			"create2_proxy_desc": "Permet le déploiement déterministe de contrats entre les chaînes",
+			"multicall3": "Multicall3",
+			"multicall3_desc": "Regroupe plusieurs appels de contrat pour plus d'efficacité",
+			"biubiu_premium": "BiuBiuPremium",
+			"biubiu_premium_desc": "Contrat d'adhésion pour les fonctionnalités premium",
+			"token_factory": "TokenFactory",
+			"token_factory_desc": "Contrat principal pour déployer vos tokens ERC20"
+		}
+	}
+}

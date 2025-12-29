@@ -1,0 +1,68 @@
+{
+	"_meta": {
+		"code": "pt",
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷"
+	},
+	"title": "Implantador de Tokens",
+	"description": "Crie e implante tokens ERC20 com parâmetros personalizados em minutos",
+	"step2": {
+		"content": {
+			"title": "Verificação de Dependências",
+			"description": "Certifique-se de que a infraestrutura necessária está pronta",
+			"checking_dependencies_for": "Verificando ambiente de rede {network}...",
+			"wallet_not_connected_title": "Carteira Não Conectada",
+			"wallet_not_connected_message": "Por favor, volte ao Passo 1 e conecte sua carteira",
+			"go_to_step1": "Ir para o Passo 1",
+			"all_dependencies_satisfied": "Todas as Dependências Satisfeitas",
+			"network_properly_configured": "Sua rede está corretamente configurada para implantação de tokens",
+			"dependency_issues_found": "Problemas de Dependência Encontrados",
+			"resolve_issues_before_continuing": "Por favor, resolva os problemas acima antes de continuar",
+			"recheck_dependencies": "Verificar Dependências Novamente",
+			"address_label": "Endereço:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Por favor, resolva o problema anterior primeiro",
+			"view_deployment_guide": "Ver Guia de Implantação",
+			"deploy_coming_soon": "Implantar Contrato (Em Breve)",
+			"deploy_contract": "Implantar {contractName}",
+			"checks": {
+				"contract": {
+					"token_factory_description": "Fábrica de implantação de tokens ERC20 com suporte CREATE2"
+				},
+				"category": {
+					"network": "Rede",
+					"protocol": "Protocolo",
+					"contract": "Contrato"
+				}
+			}
+		},
+		"footer": {
+			"back": "Voltar",
+			"continue": "Continuar para Configuração do Token"
+		},
+		"sidebar": {
+			"title": "Verificar Dependências",
+			"description": "Certifique-se de que todos os contratos necessários estão implantados na rede selecionada antes de prosseguir com a implantação do token.",
+			"checking": "Verificando dependências...",
+			"total": "Total de Verificações",
+			"passed": "Aprovadas",
+			"failed": "Falharam",
+			"network": "Rede Atual",
+			"what_is_this": "O que é isso?",
+			"what_is_this_desc": "Antes de implantar seu token, precisamos verificar se todos os contratos inteligentes necessários estão disponíveis na rede selecionada.",
+			"dependencies": "Dependências Necessárias",
+			"rpc_endpoint": "Endpoint RPC",
+			"rpc_endpoint_desc": "Conexão de rede para comunicação blockchain",
+			"create2_proxy": "Proxy CREATE2",
+			"create2_proxy_desc": "Permite implantação determinística de contratos entre cadeias",
+			"multicall3": "Multicall3",
+			"multicall3_desc": "Agrupa múltiplas chamadas de contrato para eficiência",
+			"biubiu_premium": "BiuBiuPremium",
+			"biubiu_premium_desc": "Contrato de associação para recursos premium",
+			"token_factory": "TokenFactory",
+			"token_factory_desc": "Contrato principal para implantar seus tokens ERC20"
+		}
+	}
+}

@@ -72,7 +72,17 @@
 		"alpha": "内测版",
 		"beta": "公测版",
 		"stable": "稳定版",
-		"new": "新推出"
+		"new": "新推出",
+		"deprecated": "已弃用"
+	},
+	"development_notice": {
+		"coming_soon": "此工具即将推出，敬请期待！",
+		"alpha": "此工具处于内测阶段，功能可能不完整或有较大变动。",
+		"beta": "此工具处于公测阶段，部分功能仍在开发中。",
+		"new": "这是一个新工具，欢迎提供反馈！",
+		"deprecated": "此工具已弃用，可能在未来版本中移除。",
+		"feedback_prompt": "有建议或发现问题？",
+		"github_issues": "在 GitHub 上提交 Issue"
 	},
 	"network_selector": {
 		"no_networks_enabled": "没有启用的网络",

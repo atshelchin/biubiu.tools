@@ -1,0 +1,155 @@
+{
+	"_meta": {
+		"code": "id",
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩"
+	},
+	"title": "Pengirim Kontrak",
+	"description": "Deploy smart contract secara deterministik menggunakan proxy CREATE2",
+	"feature_1": "Deployment deterministik di semua chain",
+	"feature_2": "Alamat kontrak yang sama di setiap jaringan",
+	"feature_3": "Antarmuka sederhana dan ramah developer",
+	"faqs": {
+		"what_is_create2": "Apa itu CREATE2?",
+		"create2_explanation": "CREATE2 adalah opcode Ethereum yang memungkinkan deployment kontrak deterministik. Ini menghitung alamat kontrak sebelum deployment berdasarkan bytecode dan salt, memastikan alamat yang sama di berbagai jaringan.",
+		"what_is_deterministic": "Apa itu deployment deterministik?",
+		"deterministic_explanation": "Deployment deterministik berarti kontrak akan selalu di-deploy ke alamat yang sama di jaringan mana pun, selama Anda menggunakan bytecode, argumen constructor, dan salt yang sama. Ini sangat berguna untuk aplikasi cross-chain.",
+		"what_is_bytecode": "Apa itu bytecode?",
+		"bytecode_explanation": "Bytecode adalah versi terkompilasi dari kode smart contract Anda. Ketika Anda mengompilasi kontrak Solidity, Anda mendapatkan bytecode yang merupakan kode aktual yang berjalan di Ethereum Virtual Machine (EVM).",
+		"what_is_abi": "Apa itu ABI?",
+		"abi_explanation": "ABI (Application Binary Interface) mendefinisikan cara berinteraksi dengan kontrak Anda. Untuk deployment, Anda memerlukan ABI constructor untuk mengenkode argumen constructor dengan benar. Anda dapat menyediakannya dalam format JSON atau format yang dapat dibaca manusia.",
+		"what_is_salt": "Apa itu salt?",
+		"salt_explanation": "Salt adalah nilai 32 byte yang digunakan dalam CREATE2 untuk menghasilkan alamat kontrak. Salt yang berbeda menghasilkan alamat yang berbeda. Anda dapat menggunakan salt yang sama untuk men-deploy ke alamat yang sama di jaringan yang berbeda."
+	},
+	"seo": {
+		"page_title": "Pengirim Kontrak - Deployment Smart Contract Deterministik | BiuBiu Tools",
+		"page_description": "Deploy smart contract secara deterministik menggunakan proxy CREATE2. Alamat kontrak yang sama di semua jaringan EVM. Antarmuka ramah developer untuk pengujian dan produksi.",
+		"keywords": "pengirim kontrak, CREATE2, deployment deterministik, smart contract, ethereum, polygon, BSC, solidity, alat web3",
+		"webapp_name": "Pengirim Kontrak",
+		"webapp_description": "Deploy smart contract secara deterministik menggunakan proxy CREATE2 di semua jaringan EVM.",
+		"feature_1": "Deployment deterministik dengan CREATE2",
+		"feature_2": "Dukungan multi-jaringan (Ethereum, Polygon, BSC, dll.)",
+		"feature_3": "Pratinjau alamat kontrak sebelum deployment",
+		"howto_name": "Cara Men-deploy Kontrak Secara Deterministik dengan CREATE2",
+		"howto_description": "Panduan langkah demi langkah untuk men-deploy smart contract ke alamat yang sama di beberapa jaringan menggunakan proxy CREATE2.",
+		"howto_tool_1": "Kontrak Proxy CREATE2 (0x4e59b44847b379578588920cA78FbF26c0B4956C)",
+		"step_1_name": "Hubungkan Dompet Anda",
+		"step_1_text": "Hubungkan dompet Web3 Anda ke jaringan tempat Anda ingin men-deploy kontrak. Pastikan Anda memiliki cukup token native untuk biaya gas.",
+		"step_1_description": "Tautkan dompet Web3 Anda",
+		"step_2_name": "Periksa Dependensi",
+		"step_2_text": "Verifikasi bahwa kontrak proxy CREATE2 tersedia di jaringan yang dipilih. Sistem akan memeriksa apakah proxy ada di alamat standar.",
+		"step_2_description": "Verifikasi ketersediaan proxy CREATE2",
+		"step_3_name": "Deploy Kontrak",
+		"step_3_text": "Masukkan bytecode kontrak, ABI constructor, argumen constructor, dan salt Anda. Sistem akan menghitung dan menampilkan alamat kontrak yang diprediksi. Klik deploy untuk menjalankan transaksi deployment.",
+		"step_3_description": "Konfigurasi dan deploy kontrak"
+	},
+	"step1": {
+		"sidebar": {
+			"title": "Hubungkan Dompet",
+			"description": "Hubungkan dompet Web3 Anda untuk men-deploy smart contract menggunakan proxy CREATE2."
+		},
+		"content": {
+			"title": "Pilih Jaringan & Hubungkan Dompet",
+			"description": "Pilih jaringan blockchain tempat Anda ingin men-deploy kontrak",
+			"loading": "Memuat konfigurasi jaringan..."
+		},
+		"footer": {
+			"continue": "Lanjutkan",
+			"hint": "Hubungkan dompet Anda untuk melanjutkan"
+		}
+	},
+	"step2": {
+		"sidebar": {
+			"title": "Periksa Dependensi",
+			"description": "Verifikasi bahwa kontrak proxy CREATE2 tersedia di jaringan yang dipilih.",
+			"required_contracts": "Kontrak yang Diperlukan"
+		},
+		"content": {
+			"title": "Verifikasi Dependensi",
+			"description": "Memeriksa apakah proxy CREATE2 tersedia di jaringan ini",
+			"checking_dependencies_for": "Memeriksa lingkungan jaringan {network}...",
+			"wallet_not_connected_title": "Dompet Tidak Terhubung",
+			"wallet_not_connected_message": "Silakan kembali ke Langkah 1 dan hubungkan dompet Anda",
+			"go_to_step1": "Ke Langkah 1",
+			"all_dependencies_satisfied": "Semua Dependensi Terpenuhi",
+			"network_properly_configured": "Proxy CREATE2 tersedia. Anda dapat melanjutkan ke deployment.",
+			"dependency_issues_found": "Masalah Dependensi Ditemukan",
+			"resolve_issues_before_continuing": "Proxy CREATE2 tidak tersedia di jaringan ini. Silakan beralih ke jaringan yang didukung.",
+			"recheck_dependencies": "Periksa Ulang Dependensi",
+			"address_label": "Alamat:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Silakan selesaikan masalah sebelumnya terlebih dahulu",
+			"view_deployment_guide": "Lihat Panduan Deployment",
+			"deploy_coming_soon": "Deploy Kontrak (Segera Hadir)",
+			"deploy_contract": "Deploy {contractName}",
+			"checks": {
+				"category": {
+					"network": "Jaringan",
+					"protocol": "Protokol",
+					"contract": "Kontrak"
+				},
+				"rpc_endpoint": {
+					"name": "RPC Endpoint",
+					"description": "Koneksi ke jaringan {network}",
+					"chain_id_mismatch": "Chain ID tidak cocok: diharapkan {expected}, diterima {actual}",
+					"configure_rpc_button": "Konfigurasi RPC",
+					"connected_to_block": "Terhubung di blok #{blockNumber}",
+					"failed_to_connect": "Gagal terhubung ke RPC endpoint",
+					"no_rpc_configured": "Tidak ada RPC endpoint yang dikonfigurasi"
+				},
+				"contract": {
+					"create2_proxy_description": "Proxy CREATE2 untuk deployment deterministik",
+					"deployed": "Sudah Di-deploy",
+					"not_deployed": "Belum di-deploy di jaringan ini",
+					"check_failed": "Gagal memeriksa kontrak"
+				}
+			}
+		},
+		"footer": {
+			"continue": "Lanjutkan",
+			"hint": "Semua dependensi harus tersedia untuk melanjutkan",
+			"checking_dependencies": "Memeriksa dependensi...",
+			"resolve_issues": "Silakan selesaikan masalah di atas untuk melanjutkan",
+			"waiting_for_checks": "Menunggu pemeriksaan dependensi selesai"
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "Deploy Kontrak",
+			"description": "Konfigurasi parameter deployment kontrak Anda",
+			"bytecode_title": "Bytecode Kontrak",
+			"bytecode_description": "Bytecode terkompilasi dari smart contract Anda. Anda dapat mendapatkannya dari output compiler.",
+			"abi_title": "ABI Constructor",
+			"abi_description": "Definisi ABI dari constructor Anda. Mendukung format JSON dan format yang dapat dibaca manusia.",
+			"constructor_title": "Argumen Constructor",
+			"constructor_description": "Argumen yang akan diteruskan ke constructor kontrak Anda, dalam format array JSON.",
+			"salt_title": "Salt",
+			"salt_description": "Nilai hex 32 byte untuk pembuatan alamat deterministik. Salt sama = alamat sama."
+		},
+		"content": {
+			"title": "Deploy Kontrak Anda",
+			"description": "Masukkan detail kontrak untuk men-deploy melalui proxy CREATE2",
+			"bytecode_label": "Bytecode Kontrak",
+			"bytecode_help": "Tempel bytecode terkompilasi dari kontrak Anda (dimulai dengan 0x)",
+			"abi_label": "ABI Constructor",
+			"abi_help": "Tempel ABI constructor dalam format JSON atau format yang dapat dibaca manusia",
+			"constructor_args_label": "Argumen Constructor",
+			"constructor_args_help": "Masukkan argumen constructor sebagai array JSON, mis. [\"MyToken\", \"MTK\", 18]",
+			"salt_label": "Salt",
+			"salt_help": "Nilai hex 32 byte untuk deployment deterministik (0x diikuti 64 karakter hex)",
+			"generate_random": "Acak",
+			"predicted_address": "Alamat Kontrak yang Diprediksi",
+			"deploy_button": "Deploy Kontrak",
+			"deploying": "Sedang men-deploy...",
+			"deployment_success": "Deployment Berhasil!",
+			"deployment_error": "Deployment Gagal",
+			"contract_address": "Alamat Kontrak",
+			"transaction_hash": "Hash Transaksi"
+		},
+		"footer": {
+			"hint": "Ini adalah langkah terakhir. Deploy kontrak Anda ketika siap."
+		}
+	}
+}

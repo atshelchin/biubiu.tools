@@ -1,0 +1,68 @@
+{
+	"_meta": {
+		"code": "ja",
+		"name": "日本語",
+		"englishName": "Japanese",
+		"direction": "ltr",
+		"flag": "🇯🇵"
+	},
+	"title": "トークンデプロイヤー",
+	"description": "カスタムパラメータでERC20トークンを数分で作成・デプロイ",
+	"step2": {
+		"content": {
+			"title": "依存関係チェック",
+			"description": "必要なインフラストラクチャの準備を確認",
+			"checking_dependencies_for": "{network}ネットワーク環境を確認中...",
+			"wallet_not_connected_title": "ウォレット未接続",
+			"wallet_not_connected_message": "ステップ1に戻り、ウォレットを接続してください",
+			"go_to_step1": "ステップ1へ",
+			"all_dependencies_satisfied": "すべての依存関係を満たしています",
+			"network_properly_configured": "ネットワークはトークンデプロイの準備ができています",
+			"dependency_issues_found": "依存関係の問題が見つかりました",
+			"resolve_issues_before_continuing": "続行する前に上記の問題を解決してください",
+			"recheck_dependencies": "依存関係を再チェック",
+			"address_label": "アドレス：",
+			"endpoint_label": "エンドポイント：",
+			"resolve_previous_issue": "前の問題を先に解決してください",
+			"view_deployment_guide": "デプロイガイドを表示",
+			"deploy_coming_soon": "コントラクトをデプロイ（近日公開）",
+			"deploy_contract": "{contractName}をデプロイ",
+			"checks": {
+				"contract": {
+					"token_factory_description": "CREATE2対応のERC20トークンデプロイファクトリー"
+				},
+				"category": {
+					"network": "ネットワーク",
+					"protocol": "プロトコル",
+					"contract": "コントラクト"
+				}
+			}
+		},
+		"footer": {
+			"back": "戻る",
+			"continue": "トークン設定へ進む"
+		},
+		"sidebar": {
+			"title": "依存関係をチェック",
+			"description": "トークンデプロイを進める前に、選択したネットワークに必要なコントラクトがすべてデプロイされていることを確認してください。",
+			"checking": "依存関係を確認中...",
+			"total": "合計チェック数",
+			"passed": "合格",
+			"failed": "失敗",
+			"network": "現在のネットワーク",
+			"what_is_this": "これは何ですか？",
+			"what_is_this_desc": "トークンをデプロイする前に、選択したネットワークで必要なスマートコントラクトがすべて利用可能かどうかを確認する必要があります。",
+			"dependencies": "必要な依存関係",
+			"rpc_endpoint": "RPCエンドポイント",
+			"rpc_endpoint_desc": "ブロックチェーン通信用のネットワーク接続",
+			"create2_proxy": "CREATE2プロキシ",
+			"create2_proxy_desc": "チェーン間で決定論的なコントラクトデプロイを可能にします",
+			"multicall3": "Multicall3",
+			"multicall3_desc": "効率化のため複数のコントラクト呼び出しをバッチ処理",
+			"biubiu_premium": "BiuBiuPremium",
+			"biubiu_premium_desc": "プレミアム機能用のメンバーシップコントラクト",
+			"token_factory": "TokenFactory",
+			"token_factory_desc": "ERC20トークンをデプロイするためのメインコントラクト"
+		}
+	}
+}

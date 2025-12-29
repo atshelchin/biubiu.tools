@@ -72,7 +72,17 @@
 		"alpha": "Alpha",
 		"beta": "Beta",
 		"stable": "Stable",
-		"new": "New"
+		"new": "New",
+		"deprecated": "Deprecated"
+	},
+	"development_notice": {
+		"coming_soon": "This tool is coming soon. Stay tuned for updates!",
+		"alpha": "This tool is in alpha stage. Features may be incomplete or change significantly.",
+		"beta": "This tool is in beta. Some features may still be under development.",
+		"new": "This is a new tool. We'd love to hear your feedback!",
+		"deprecated": "This tool is deprecated and may be removed in a future update.",
+		"feedback_prompt": "Have suggestions or found an issue?",
+		"github_issues": "Open an issue on GitHub"
 	},
 	"network_selector": {
 		"no_networks_enabled": "No Networks Enabled",

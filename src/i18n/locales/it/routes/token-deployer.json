@@ -1,0 +1,68 @@
+{
+	"_meta": {
+		"code": "it",
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹"
+	},
+	"title": "Deployer di Token",
+	"description": "Crea e distribuisci token ERC20 con parametri personalizzati in pochi minuti",
+	"step2": {
+		"content": {
+			"title": "Verifica Dipendenze",
+			"description": "Assicurati che l'infrastruttura richiesta sia pronta",
+			"checking_dependencies_for": "Verifica ambiente di rete {network}...",
+			"wallet_not_connected_title": "Wallet Non Connesso",
+			"wallet_not_connected_message": "Torna al Passo 1 e connetti il tuo wallet",
+			"go_to_step1": "Vai al Passo 1",
+			"all_dependencies_satisfied": "Tutte le Dipendenze Soddisfatte",
+			"network_properly_configured": "La tua rete è correttamente configurata per il deploy dei token",
+			"dependency_issues_found": "Problemi di Dipendenza Trovati",
+			"resolve_issues_before_continuing": "Risolvi i problemi sopra prima di continuare",
+			"recheck_dependencies": "Ricontrolla le Dipendenze",
+			"address_label": "Indirizzo:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Risolvi prima il problema precedente",
+			"view_deployment_guide": "Visualizza Guida al Deploy",
+			"deploy_coming_soon": "Deploy Contratto (Prossimamente)",
+			"deploy_contract": "Deploy {contractName}",
+			"checks": {
+				"contract": {
+					"token_factory_description": "Factory di deploy token ERC20 con supporto CREATE2"
+				},
+				"category": {
+					"network": "Rete",
+					"protocol": "Protocollo",
+					"contract": "Contratto"
+				}
+			}
+		},
+		"footer": {
+			"back": "Indietro",
+			"continue": "Continua alla Configurazione Token"
+		},
+		"sidebar": {
+			"title": "Verifica Dipendenze",
+			"description": "Assicurati che tutti i contratti richiesti siano distribuiti sulla rete selezionata prima di procedere con il deploy del token.",
+			"checking": "Verifica dipendenze...",
+			"total": "Verifiche Totali",
+			"passed": "Superate",
+			"failed": "Fallite",
+			"network": "Rete Attuale",
+			"what_is_this": "Cos'è questo?",
+			"what_is_this_desc": "Prima di distribuire il tuo token, dobbiamo verificare che tutti gli smart contract richiesti siano disponibili sulla rete selezionata.",
+			"dependencies": "Dipendenze Richieste",
+			"rpc_endpoint": "Endpoint RPC",
+			"rpc_endpoint_desc": "Connessione di rete per la comunicazione blockchain",
+			"create2_proxy": "Proxy CREATE2",
+			"create2_proxy_desc": "Abilita il deploy deterministico dei contratti tra le catene",
+			"multicall3": "Multicall3",
+			"multicall3_desc": "Raggruppa più chiamate di contratto per efficienza",
+			"biubiu_premium": "BiuBiuPremium",
+			"biubiu_premium_desc": "Contratto di membership per funzionalità premium",
+			"token_factory": "TokenFactory",
+			"token_factory_desc": "Contratto principale per distribuire i tuoi token ERC20"
+		}
+	}
+}

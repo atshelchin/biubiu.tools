@@ -1,0 +1,236 @@
+{
+	"_meta": {
+		"code": "id",
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩"
+	},
+	"title": "Pengirim NFT",
+	"description": "Deploy smart contract NFT dengan standar ERC-721, ERC-721A, dan ERC-1155",
+	"feature_1": "Mendukung standar ERC-721, ERC-721A, ERC-1155",
+	"feature_2": "Royalti, pasokan, harga mint dapat dikonfigurasi",
+	"feature_3": "Fitur lanjutan: dapat dijeda, dapat dibakar, dapat diungkap",
+	"step1": {
+		"sidebar": {
+			"title": "Hubungkan Dompet",
+			"description": "Hubungkan dompet Web3 Anda untuk men-deploy kontrak NFT di jaringan blockchain pilihan Anda.",
+			"requirements": "Persyaratan",
+			"requirement1": "Dompet Web3 (MetaMask, WalletConnect, dll.)",
+			"requirement2": "Token native yang cukup untuk biaya gas",
+			"requirement3": "Pilih jaringan blockchain target",
+			"supported_chains": "Jaringan yang Didukung"
+		},
+		"content": {
+			"title": "Pilih Jaringan & Hubungkan Dompet",
+			"description": "Pilih jaringan blockchain untuk deployment kontrak NFT Anda",
+			"ready_hint": "Dompet Anda terhubung dan siap melanjutkan"
+		}
+	},
+	"step2": {
+		"sidebar": {
+			"title": "Periksa Dependensi",
+			"description": "Verifikasi bahwa kontrak yang diperlukan sudah di-deploy",
+			"all_passed": "Semua Lolos",
+			"issues_found": "Masalah Ditemukan",
+			"passed": "Lolos",
+			"failed": "Gagal",
+			"selected": "Standar yang Dipilih",
+			"comparison": "Perbandingan Standar",
+			"tips": "Tips",
+			"tip1": "ERC-721 adalah standar NFT asli dengan kompatibilitas terluas",
+			"tip2": "ERC-721A menawarkan penghematan gas untuk minting batch",
+			"tip3": "ERC-1155 terbaik untuk item game dan koleksi multi-edisi"
+		},
+		"content": {
+			"title": "Periksa Dependensi",
+			"description": "Verifikasi dependensi jaringan dan kontrak",
+			"checking_dependencies_for": "Memeriksa lingkungan jaringan {network}...",
+			"wallet_not_connected_title": "Dompet Tidak Terhubung",
+			"wallet_not_connected_message": "Silakan kembali ke Langkah 1 dan hubungkan dompet Anda",
+			"go_to_step1": "Ke Langkah 1",
+			"all_dependencies_satisfied": "Semua Dependensi Terpenuhi",
+			"network_properly_configured": "Jaringan dikonfigurasi dengan benar untuk deployment NFT",
+			"dependency_issues_found": "Masalah Dependensi Ditemukan",
+			"resolve_issues_before_continuing": "Silakan selesaikan masalah sebelum melanjutkan",
+			"recheck_dependencies": "Periksa Ulang Dependensi",
+			"address_label": "Alamat:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Silakan selesaikan masalah sebelumnya terlebih dahulu",
+			"view_deployment_guide": "Lihat Panduan Deployment",
+			"deploy_coming_soon": "Deploy Kontrak (Segera Hadir)",
+			"deploy_contract": "Deploy {contractName}",
+			"selected_confirmation": "Anda telah memilih standar ini",
+			"checks": {
+				"rpc": {
+					"title": "Koneksi RPC",
+					"description": "Verifikasi konektivitas jaringan"
+				},
+				"contract": {
+					"create2_proxy_description": "Proxy CREATE2 untuk deployment deterministik",
+					"multicall3_description": "Multicall3 untuk operasi batch",
+					"biubiu_premium_description": "BiuBiu Premium untuk fitur lanjutan",
+					"nft_factory_description": "NFT Factory untuk men-deploy kontrak NFT"
+				},
+				"category": {
+					"network": "Jaringan",
+					"protocol": "Protokol",
+					"contract": "Kontrak"
+				}
+			}
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "Konfigurasi NFT",
+			"description": "Atur parameter koleksi NFT Anda",
+			"progress": "Progres",
+			"field_name": "Nama",
+			"field_symbol": "Simbol",
+			"field_base_uri": "URI Dasar",
+			"field_description": "Deskripsi",
+			"collection_name": "Nama Koleksi",
+			"symbol": "Simbol",
+			"stake_enabled": "Stake-to-Mint",
+			"all_required_complete": "Semua bidang wajib telah selesai!",
+			"ready": "Siap",
+			"incomplete": "Belum Lengkap",
+			"tips": "Tips",
+			"tip1": "Pilih nama koleksi yang unik",
+			"tip2": "URI dasar dapat menggunakan IPFS atau HTTP",
+			"tip3": "Stake-to-mint menciptakan utilitas untuk token Anda",
+			"preview": "Pratinjau"
+		},
+		"content": {
+			"title": "Konfigurasi Parameter NFT",
+			"description": "Atur informasi dasar dan opsi minting",
+			"basic_info": "Informasi Dasar",
+			"name_label": "Nama Koleksi",
+			"name_placeholder": "NFT Keren Saya",
+			"name_hint": "Nama koleksi NFT Anda",
+			"symbol_label": "Simbol",
+			"symbol_placeholder": "AWESOME",
+			"symbol_hint": "Identifier singkat (mis., BAYC, PUNK)",
+			"description_label": "Deskripsi",
+			"description_placeholder": "Koleksi seni digital yang unik...",
+			"description_hint": "Jelaskan koleksi NFT Anda",
+			"base_uri_label": "URI Dasar",
+			"base_uri_placeholder": "ipfs://...",
+			"base_uri_hint": "URL dasar untuk metadata token",
+			"mint_type_label": "Tipe Minting",
+			"mint_settings": "Opsi Minting",
+			"public_mint_enabled": "Mint Pemilik",
+			"public_mint_hint": "Hanya pemilik kontrak yang dapat mint NFT",
+			"stake_to_mint": "Stake-to-Mint",
+			"enable_stake_to_mint": "Aktifkan Stake-to-Mint",
+			"stake_to_mint_hint": "Memerlukan staking token untuk mint NFT",
+			"stake_token_label": "Alamat Token Stake",
+			"stake_token_hint": "Alamat token ERC20 yang diperlukan untuk minting",
+			"stake_amount_label": "Jumlah Stake",
+			"stake_amount_hint": "Jumlah token untuk di-stake (dalam wei)",
+			"preview": "Pratinjau"
+		}
+	},
+	"step4": {
+		"sidebar": {
+			"title": "Konfigurasi Pengaturan",
+			"description": "Atur opsi lanjutan untuk NFT Anda",
+			"success": "Kontrak NFT Berhasil Di-deploy!",
+			"error": "Deployment Gagal",
+			"configured": "Dikonfigurasi",
+			"supply_limit": "Batas Pasokan",
+			"mint_price": "Harga Mint",
+			"royalties": "Royalti",
+			"special_features": "Fitur Khusus",
+			"recommendations": "Rekomendasi",
+			"rec1": "Tetapkan batas pasokan yang wajar",
+			"rec2": "Pertimbangkan untuk mengaktifkan royalti",
+			"rec3": "Uji di testnet terlebih dahulu"
+		},
+		"content": {
+			"title": "Konfigurasi Pengaturan",
+			"description": "Atur opsi dan fitur lanjutan",
+			"supply_pricing": "Pasokan & Harga",
+			"max_supply_label": "Pasokan Maksimum",
+			"max_supply_hint": "Jumlah maksimum NFT yang dapat di-mint",
+			"mint_price_label": "Harga Mint",
+			"mint_price_hint": "Harga dalam token native untuk mint satu NFT",
+			"max_per_wallet_label": "Maksimum Per Dompet",
+			"max_per_wallet_hint": "Maksimum NFT yang dapat di-mint satu dompet",
+			"royalties": "Royalti",
+			"enable_royalties": "Aktifkan Royalti",
+			"royalty_recipient_label": "Penerima Royalti",
+			"royalty_recipient_hint": "Alamat yang menerima pembayaran royalti",
+			"royalty_percentage_label": "Persentase Royalti",
+			"royalty_percentage_hint": "Persentase penjualan (0-10%)",
+			"features": "Fitur",
+			"pausable": "Dapat Dijeda",
+			"pausable_hint": "Izinkan menjeda semua transfer",
+			"burnable": "Dapat Dibakar",
+			"burnable_hint": "Izinkan membakar NFT",
+			"revealable": "Dapat Diungkap",
+			"revealable_hint": "Mendukung pengungkapan metadata tertunda",
+			"fungible": "Dapat Dipertukarkan",
+			"fungible_hint": "Izinkan beberapa salinan NFT yang sama",
+			"access_control": "Kontrol Akses",
+			"owner_only": "Hanya Pemilik",
+			"public_mint": "Mint Publik",
+			"whitelist": "Daftar Putih",
+			"stake_to_mint": "Stake-to-Mint",
+			"stake_to_mint_hint": "Memerlukan staking token untuk mint",
+			"enable_stake_to_mint": "Aktifkan Stake-to-Mint",
+			"stake_token_label": "Alamat Token Stake",
+			"stake_token_hint": "Alamat token ERC20 yang diperlukan untuk minting",
+			"stake_amount_label": "Jumlah Stake",
+			"stake_amount_hint": "Jumlah token untuk di-stake (dalam wei)",
+			"review": {
+				"title": "Tinjau Konfigurasi",
+				"basic_info": "Informasi Dasar",
+				"mint_settings": "Pengaturan Minting",
+				"stake_settings": "Pengaturan Stake-to-Mint"
+			},
+			"deployment": {
+				"title": "Deployment",
+				"deploy_button": "Deploy Kontrak NFT",
+				"deploying": "Sedang men-deploy...",
+				"please_wait": "Mohon tunggu sementara kontrak Anda sedang di-deploy",
+				"success": "Deployment Berhasil!",
+				"nft_deployed": "Kontrak NFT Anda telah di-deploy ke blockchain",
+				"error": "Deployment Gagal",
+				"retry": "Coba Lagi",
+				"contract_address": "Alamat Kontrak",
+				"transaction_hash": "Hash Transaksi"
+			}
+		},
+		"footer": {
+			"deploy_another": "Deploy NFT Lain"
+		}
+	},
+	"step5": {
+		"sidebar": {
+			"title": "Tinjau & Deploy",
+			"description": "Tinjau konfigurasi Anda dan deploy",
+			"checklist": "Checklist Pra-Deployment",
+			"check1": "Dompet terhubung",
+			"check2": "Dependensi jaringan terverifikasi",
+			"check3": "Parameter NFT dikonfigurasi",
+			"check4": "Pengaturan selesai",
+			"deployment_status": "Status Deployment",
+			"status_ready": "Siap Deploy",
+			"status_preparing": "Mempersiapkan...",
+			"status_deploying": "Men-deploy...",
+			"status_completed": "Selesai",
+			"status_error": "Error"
+		},
+		"content": {
+			"title": "Tinjau & Deploy",
+			"description": "Tinjau konfigurasi Anda dan deploy kontrak NFT Anda",
+			"basic_config": "Konfigurasi Dasar",
+			"advanced_settings": "Pengaturan Lanjutan",
+			"nft_standard": "Standar NFT",
+			"deploy_button": "Deploy Kontrak NFT",
+			"success_title": "Deployment Berhasil!",
+			"success_message": "Kontrak NFT Anda telah di-deploy ke blockchain"
+		}
+	}
+}

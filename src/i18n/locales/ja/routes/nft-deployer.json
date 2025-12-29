@@ -1,0 +1,236 @@
+{
+	"_meta": {
+		"code": "ja",
+		"name": "日本語",
+		"englishName": "Japanese",
+		"direction": "ltr",
+		"flag": "🇯🇵"
+	},
+	"title": "NFTデプロイヤー",
+	"description": "ERC-721、ERC-721A、ERC-1155規格でNFTスマートコントラクトをデプロイ",
+	"feature_1": "ERC-721、ERC-721A、ERC-1155規格をサポート",
+	"feature_2": "ロイヤリティ、供給量、ミント価格を設定可能",
+	"feature_3": "高度な機能：一時停止、バーン、リビール対応",
+	"step1": {
+		"sidebar": {
+			"title": "ウォレットを接続",
+			"description": "選択したブロックチェーンネットワークにNFTコントラクトをデプロイするためにWeb3ウォレットを接続します。",
+			"requirements": "要件",
+			"requirement1": "Web3ウォレット（MetaMask、WalletConnectなど）",
+			"requirement2": "ガス代に十分なネイティブトークン",
+			"requirement3": "ターゲットブロックチェーンネットワークを選択",
+			"supported_chains": "サポートされているネットワーク"
+		},
+		"content": {
+			"title": "ネットワークを選択してウォレットを接続",
+			"description": "NFTコントラクトデプロイのためのブロックチェーンネットワークを選択",
+			"ready_hint": "ウォレットは接続され、続行する準備ができています"
+		}
+	},
+	"step2": {
+		"sidebar": {
+			"title": "依存関係を確認",
+			"description": "必要なコントラクトがデプロイされているか確認",
+			"all_passed": "すべて合格",
+			"issues_found": "問題が見つかりました",
+			"passed": "合格",
+			"failed": "失敗",
+			"selected": "選択された規格",
+			"comparison": "規格の比較",
+			"tips": "ヒント",
+			"tip1": "ERC-721は最も互換性の高いオリジナルNFT規格です",
+			"tip2": "ERC-721Aはバッチミントでガス節約を提供します",
+			"tip3": "ERC-1155はゲームアイテムやマルチエディションコレクションに最適です"
+		},
+		"content": {
+			"title": "依存関係を確認",
+			"description": "ネットワークとコントラクトの依存関係を確認",
+			"checking_dependencies_for": "{network}ネットワーク環境を確認中...",
+			"wallet_not_connected_title": "ウォレット未接続",
+			"wallet_not_connected_message": "ステップ1に戻り、ウォレットを接続してください",
+			"go_to_step1": "ステップ1へ",
+			"all_dependencies_satisfied": "すべての依存関係を満たしています",
+			"network_properly_configured": "ネットワークはNFTデプロイの準備ができています",
+			"dependency_issues_found": "依存関係の問題が見つかりました",
+			"resolve_issues_before_continuing": "続行する前に問題を解決してください",
+			"recheck_dependencies": "依存関係を再確認",
+			"address_label": "アドレス：",
+			"endpoint_label": "エンドポイント：",
+			"resolve_previous_issue": "前の問題を先に解決してください",
+			"view_deployment_guide": "デプロイガイドを表示",
+			"deploy_coming_soon": "コントラクトをデプロイ（近日公開）",
+			"deploy_contract": "{contractName}をデプロイ",
+			"selected_confirmation": "この規格を選択しました",
+			"checks": {
+				"rpc": {
+					"title": "RPC接続",
+					"description": "ネットワーク接続を確認"
+				},
+				"contract": {
+					"create2_proxy_description": "決定論的デプロイのためのCREATE2プロキシ",
+					"multicall3_description": "バッチ操作のためのMulticall3",
+					"biubiu_premium_description": "高度な機能のためのBiuBiu Premium",
+					"nft_factory_description": "NFTコントラクトデプロイのためのNFT Factory"
+				},
+				"category": {
+					"network": "ネットワーク",
+					"protocol": "プロトコル",
+					"contract": "コントラクト"
+				}
+			}
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "NFTを設定",
+			"description": "NFTコレクションのパラメータを設定",
+			"progress": "進捗",
+			"field_name": "名前",
+			"field_symbol": "シンボル",
+			"field_base_uri": "ベースURI",
+			"field_description": "説明",
+			"collection_name": "コレクション名",
+			"symbol": "シンボル",
+			"stake_enabled": "ステーク・トゥ・ミント",
+			"all_required_complete": "すべての必須項目が完了しました！",
+			"ready": "準備完了",
+			"incomplete": "未完了",
+			"tips": "ヒント",
+			"tip1": "ユニークなコレクション名を選択",
+			"tip2": "ベースURIはIPFSまたはHTTPを使用可能",
+			"tip3": "ステーク・トゥ・ミントはトークンに実用性を与えます",
+			"preview": "プレビュー"
+		},
+		"content": {
+			"title": "NFTパラメータを設定",
+			"description": "基本情報とミントオプションを設定",
+			"basic_info": "基本情報",
+			"name_label": "コレクション名",
+			"name_placeholder": "素晴らしいNFT",
+			"name_hint": "NFTコレクションの名前",
+			"symbol_label": "シンボル",
+			"symbol_placeholder": "AWESOME",
+			"symbol_hint": "短い識別子（例：BAYC、PUNK）",
+			"description_label": "説明",
+			"description_placeholder": "ユニークなデジタルアートコレクション...",
+			"description_hint": "NFTコレクションの説明",
+			"base_uri_label": "ベースURI",
+			"base_uri_placeholder": "ipfs://...",
+			"base_uri_hint": "トークンメタデータのベースURL",
+			"mint_type_label": "ミントタイプ",
+			"mint_settings": "ミントオプション",
+			"public_mint_enabled": "オーナーミント",
+			"public_mint_hint": "コントラクトオーナーのみがNFTをミント可能",
+			"stake_to_mint": "ステーク・トゥ・ミント",
+			"enable_stake_to_mint": "ステーク・トゥ・ミントを有効化",
+			"stake_to_mint_hint": "NFTミントにトークンのステーキングが必要",
+			"stake_token_label": "ステークトークンアドレス",
+			"stake_token_hint": "ミントに必要なERC20トークンアドレス",
+			"stake_amount_label": "ステーク量",
+			"stake_amount_hint": "ステークするトークン量（wei単位）",
+			"preview": "プレビュー"
+		}
+	},
+	"step4": {
+		"sidebar": {
+			"title": "設定を構成",
+			"description": "NFTの高度なオプションを設定",
+			"success": "NFTコントラクトのデプロイに成功しました！",
+			"error": "デプロイ失敗",
+			"configured": "設定済み",
+			"supply_limit": "供給制限",
+			"mint_price": "ミント価格",
+			"royalties": "ロイヤリティ",
+			"special_features": "特別機能",
+			"recommendations": "推奨事項",
+			"rec1": "適切な供給制限を設定",
+			"rec2": "ロイヤリティの有効化を検討",
+			"rec3": "まずテストネットでテスト"
+		},
+		"content": {
+			"title": "設定を構成",
+			"description": "高度なオプションと機能を設定",
+			"supply_pricing": "供給と価格設定",
+			"max_supply_label": "最大供給量",
+			"max_supply_hint": "ミント可能なNFTの最大数",
+			"mint_price_label": "ミント価格",
+			"mint_price_hint": "NFT1つをミントするためのネイティブトークン価格",
+			"max_per_wallet_label": "ウォレットごとの最大数",
+			"max_per_wallet_hint": "1つのウォレットがミントできるNFTの最大数",
+			"royalties": "ロイヤリティ",
+			"enable_royalties": "ロイヤリティを有効化",
+			"royalty_recipient_label": "ロイヤリティ受取人",
+			"royalty_recipient_hint": "ロイヤリティ支払いを受け取るアドレス",
+			"royalty_percentage_label": "ロイヤリティ率",
+			"royalty_percentage_hint": "販売額のパーセンテージ（0-10%）",
+			"features": "機能",
+			"pausable": "一時停止可能",
+			"pausable_hint": "すべての転送を一時停止可能",
+			"burnable": "バーン可能",
+			"burnable_hint": "NFTのバーンを許可",
+			"revealable": "リビール可能",
+			"revealable_hint": "メタデータの遅延リビールをサポート",
+			"fungible": "代替可能",
+			"fungible_hint": "同じNFTの複数コピーを許可",
+			"access_control": "アクセス制御",
+			"owner_only": "オーナーのみ",
+			"public_mint": "パブリックミント",
+			"whitelist": "ホワイトリスト",
+			"stake_to_mint": "ステーク・トゥ・ミント",
+			"stake_to_mint_hint": "ミントにトークンのステーキングが必要",
+			"enable_stake_to_mint": "ステーク・トゥ・ミントを有効化",
+			"stake_token_label": "ステークトークンアドレス",
+			"stake_token_hint": "ミントに必要なERC20トークンアドレス",
+			"stake_amount_label": "ステーク量",
+			"stake_amount_hint": "ステークするトークン量（wei単位）",
+			"review": {
+				"title": "設定を確認",
+				"basic_info": "基本情報",
+				"mint_settings": "ミント設定",
+				"stake_settings": "ステーク・トゥ・ミント設定"
+			},
+			"deployment": {
+				"title": "デプロイ",
+				"deploy_button": "NFTコントラクトをデプロイ",
+				"deploying": "デプロイ中...",
+				"please_wait": "コントラクトがデプロイされるまでお待ちください",
+				"success": "デプロイ成功！",
+				"nft_deployed": "NFTコントラクトがブロックチェーンにデプロイされました",
+				"error": "デプロイ失敗",
+				"retry": "再試行",
+				"contract_address": "コントラクトアドレス",
+				"transaction_hash": "トランザクションハッシュ"
+			}
+		},
+		"footer": {
+			"deploy_another": "別のNFTをデプロイ"
+		}
+	},
+	"step5": {
+		"sidebar": {
+			"title": "確認してデプロイ",
+			"description": "設定を確認してデプロイ",
+			"checklist": "デプロイ前チェックリスト",
+			"check1": "ウォレット接続済み",
+			"check2": "ネットワーク依存関係確認済み",
+			"check3": "NFTパラメータ設定済み",
+			"check4": "設定完了",
+			"deployment_status": "デプロイ状態",
+			"status_ready": "デプロイ準備完了",
+			"status_preparing": "準備中...",
+			"status_deploying": "デプロイ中...",
+			"status_completed": "完了",
+			"status_error": "エラー"
+		},
+		"content": {
+			"title": "確認してデプロイ",
+			"description": "設定を確認してNFTコントラクトをデプロイ",
+			"basic_config": "基本設定",
+			"advanced_settings": "詳細設定",
+			"nft_standard": "NFT規格",
+			"deploy_button": "NFTコントラクトをデプロイ",
+			"success_title": "デプロイ成功！",
+			"success_message": "NFTコントラクトがブロックチェーンにデプロイされました"
+		}
+	}
+}

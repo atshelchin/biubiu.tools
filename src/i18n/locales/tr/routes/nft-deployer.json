@@ -1,0 +1,236 @@
+{
+	"_meta": {
+		"code": "tr",
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷"
+	},
+	"title": "NFT Dağıtıcı",
+	"description": "ERC-721, ERC-721A ve ERC-1155 standartlarıyla NFT akıllı sözleşmeleri dağıtın",
+	"feature_1": "ERC-721, ERC-721A, ERC-1155 standartlarını destekler",
+	"feature_2": "Yapılandırılabilir telif hakları, arz, basım fiyatı",
+	"feature_3": "Gelişmiş özellikler: duraklatılabilir, yakılabilir, açılabilir",
+	"step1": {
+		"sidebar": {
+			"title": "Cüzdan Bağla",
+			"description": "Seçtiğiniz blockchain ağında NFT sözleşmeleri dağıtmak için Web3 cüzdanınızı bağlayın.",
+			"requirements": "Gereksinimler",
+			"requirement1": "Web3 cüzdanı (MetaMask, WalletConnect, vb.)",
+			"requirement2": "Gas ücretleri için yeterli yerel token",
+			"requirement3": "Hedef blockchain ağını seçin",
+			"supported_chains": "Desteklenen Ağlar"
+		},
+		"content": {
+			"title": "Ağ Seçin ve Cüzdan Bağlayın",
+			"description": "NFT sözleşme dağıtımı için blockchain ağını seçin",
+			"ready_hint": "Cüzdanınız bağlı ve devam etmeye hazır"
+		}
+	},
+	"step2": {
+		"sidebar": {
+			"title": "Bağımlılıkları Kontrol Et",
+			"description": "Gerekli sözleşmelerin dağıtıldığını doğrulayın",
+			"all_passed": "Hepsi Geçti",
+			"issues_found": "Sorunlar Bulundu",
+			"passed": "Geçti",
+			"failed": "Başarısız",
+			"selected": "Seçilen Standart",
+			"comparison": "Standart Karşılaştırması",
+			"tips": "İpuçları",
+			"tip1": "ERC-721 en geniş uyumluluğa sahip orijinal NFT standardıdır",
+			"tip2": "ERC-721A toplu basımda gas tasarrufu sağlar",
+			"tip3": "ERC-1155 oyun öğeleri ve çoklu baskı koleksiyonları için en iyisidir"
+		},
+		"content": {
+			"title": "Bağımlılıkları Kontrol Et",
+			"description": "Ağ ve sözleşme bağımlılıklarını doğrulayın",
+			"checking_dependencies_for": "{network} ağ ortamı kontrol ediliyor...",
+			"wallet_not_connected_title": "Cüzdan Bağlı Değil",
+			"wallet_not_connected_message": "Lütfen Adım 1'e dönün ve cüzdanınızı bağlayın",
+			"go_to_step1": "Adım 1'e Git",
+			"all_dependencies_satisfied": "Tüm Bağımlılıklar Karşılandı",
+			"network_properly_configured": "Ağ, NFT dağıtımı için düzgün yapılandırıldı",
+			"dependency_issues_found": "Bağımlılık Sorunları Bulundu",
+			"resolve_issues_before_continuing": "Devam etmeden önce lütfen sorunları çözün",
+			"recheck_dependencies": "Bağımlılıkları Yeniden Kontrol Et",
+			"address_label": "Adres:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Lütfen önce önceki sorunu çözün",
+			"view_deployment_guide": "Dağıtım Kılavuzunu Görüntüle",
+			"deploy_coming_soon": "Sözleşme Dağıt (Yakında)",
+			"deploy_contract": "{contractName} Dağıt",
+			"selected_confirmation": "Bu standardı seçtiniz",
+			"checks": {
+				"rpc": {
+					"title": "RPC Bağlantısı",
+					"description": "Ağ bağlantısını doğrulayın"
+				},
+				"contract": {
+					"create2_proxy_description": "Deterministik dağıtım için CREATE2 Proxy",
+					"multicall3_description": "Toplu işlemler için Multicall3",
+					"biubiu_premium_description": "Gelişmiş özellikler için BiuBiu Premium",
+					"nft_factory_description": "NFT sözleşmeleri dağıtmak için NFT Factory"
+				},
+				"category": {
+					"network": "Ağ",
+					"protocol": "Protokol",
+					"contract": "Sözleşme"
+				}
+			}
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "NFT Yapılandır",
+			"description": "NFT koleksiyon parametrelerinizi ayarlayın",
+			"progress": "İlerleme",
+			"field_name": "İsim",
+			"field_symbol": "Sembol",
+			"field_base_uri": "Temel URI",
+			"field_description": "Açıklama",
+			"collection_name": "Koleksiyon Adı",
+			"symbol": "Sembol",
+			"stake_enabled": "Stake-to-Mint",
+			"all_required_complete": "Tüm gerekli alanlar tamamlandı!",
+			"ready": "Hazır",
+			"incomplete": "Tamamlanmadı",
+			"tips": "İpuçları",
+			"tip1": "Benzersiz bir koleksiyon adı seçin",
+			"tip2": "Temel URI, IPFS veya HTTP kullanabilir",
+			"tip3": "Stake-to-mint token'ınıza kullanım alanı yaratır",
+			"preview": "Önizleme"
+		},
+		"content": {
+			"title": "NFT Parametrelerini Yapılandır",
+			"description": "Temel bilgileri ve basım seçeneklerini ayarlayın",
+			"basic_info": "Temel Bilgiler",
+			"name_label": "Koleksiyon Adı",
+			"name_placeholder": "Harika NFT'im",
+			"name_hint": "NFT koleksiyonunuzun adı",
+			"symbol_label": "Sembol",
+			"symbol_placeholder": "AWESOME",
+			"symbol_hint": "Kısa tanımlayıcı (örn., BAYC, PUNK)",
+			"description_label": "Açıklama",
+			"description_placeholder": "Benzersiz bir dijital sanat koleksiyonu...",
+			"description_hint": "NFT koleksiyonunuzu açıklayın",
+			"base_uri_label": "Temel URI",
+			"base_uri_placeholder": "ipfs://...",
+			"base_uri_hint": "Token meta verileri için temel URL",
+			"mint_type_label": "Basım Türü",
+			"mint_settings": "Basım Seçenekleri",
+			"public_mint_enabled": "Sahip Basımı",
+			"public_mint_hint": "Sadece sözleşme sahibi NFT basabilir",
+			"stake_to_mint": "Stake-to-Mint",
+			"enable_stake_to_mint": "Stake-to-Mint'i Etkinleştir",
+			"stake_to_mint_hint": "NFT basmak için token staking gerektirir",
+			"stake_token_label": "Stake Token Adresi",
+			"stake_token_hint": "Basım için gerekli ERC20 token adresi",
+			"stake_amount_label": "Stake Miktarı",
+			"stake_amount_hint": "Stake edilecek token miktarı (wei cinsinden)",
+			"preview": "Önizleme"
+		}
+	},
+	"step4": {
+		"sidebar": {
+			"title": "Ayarları Yapılandır",
+			"description": "NFT'niz için gelişmiş seçenekleri ayarlayın",
+			"success": "NFT Sözleşmesi Başarıyla Dağıtıldı!",
+			"error": "Dağıtım Başarısız",
+			"configured": "Yapılandırıldı",
+			"supply_limit": "Arz Limiti",
+			"mint_price": "Basım Fiyatı",
+			"royalties": "Telif Hakları",
+			"special_features": "Özel Özellikler",
+			"recommendations": "Öneriler",
+			"rec1": "Makul arz limitleri belirleyin",
+			"rec2": "Telif haklarını etkinleştirmeyi düşünün",
+			"rec3": "Önce testnet'te test edin"
+		},
+		"content": {
+			"title": "Ayarları Yapılandır",
+			"description": "Gelişmiş seçenekleri ve özellikleri ayarlayın",
+			"supply_pricing": "Arz ve Fiyatlandırma",
+			"max_supply_label": "Maksimum Arz",
+			"max_supply_hint": "Basılabilecek maksimum NFT sayısı",
+			"mint_price_label": "Basım Fiyatı",
+			"mint_price_hint": "Bir NFT basmak için yerel token fiyatı",
+			"max_per_wallet_label": "Cüzdan Başına Maksimum",
+			"max_per_wallet_hint": "Bir cüzdanın basabileceği maksimum NFT",
+			"royalties": "Telif Hakları",
+			"enable_royalties": "Telif Haklarını Etkinleştir",
+			"royalty_recipient_label": "Telif Hakkı Alıcısı",
+			"royalty_recipient_hint": "Telif ödemelerini alan adres",
+			"royalty_percentage_label": "Telif Yüzdesi",
+			"royalty_percentage_hint": "Satış yüzdesi (0-10%)",
+			"features": "Özellikler",
+			"pausable": "Duraklatılabilir",
+			"pausable_hint": "Tüm transferleri duraklatmaya izin ver",
+			"burnable": "Yakılabilir",
+			"burnable_hint": "NFT yakmaya izin ver",
+			"revealable": "Açılabilir",
+			"revealable_hint": "Gecikmeli meta veri açıklamasını destekle",
+			"fungible": "Değiştirilebilir",
+			"fungible_hint": "Aynı NFT'nin birden fazla kopyasına izin ver",
+			"access_control": "Erişim Kontrolü",
+			"owner_only": "Sadece Sahip",
+			"public_mint": "Halka Açık Basım",
+			"whitelist": "Beyaz Liste",
+			"stake_to_mint": "Stake-to-Mint",
+			"stake_to_mint_hint": "Basım için token staking gerektirir",
+			"enable_stake_to_mint": "Stake-to-Mint'i Etkinleştir",
+			"stake_token_label": "Stake Token Adresi",
+			"stake_token_hint": "Basım için gerekli ERC20 token adresi",
+			"stake_amount_label": "Stake Miktarı",
+			"stake_amount_hint": "Stake edilecek token miktarı (wei cinsinden)",
+			"review": {
+				"title": "Yapılandırmayı İncele",
+				"basic_info": "Temel Bilgiler",
+				"mint_settings": "Basım Ayarları",
+				"stake_settings": "Stake-to-Mint Ayarları"
+			},
+			"deployment": {
+				"title": "Dağıtım",
+				"deploy_button": "NFT Sözleşmesi Dağıt",
+				"deploying": "Dağıtılıyor...",
+				"please_wait": "Sözleşmeniz dağıtılırken lütfen bekleyin",
+				"success": "Dağıtım Başarılı!",
+				"nft_deployed": "NFT sözleşmeniz blockchain'e dağıtıldı",
+				"error": "Dağıtım Başarısız",
+				"retry": "Yeniden Dene",
+				"contract_address": "Sözleşme Adresi",
+				"transaction_hash": "İşlem Hash"
+			}
+		},
+		"footer": {
+			"deploy_another": "Başka NFT Dağıt"
+		}
+	},
+	"step5": {
+		"sidebar": {
+			"title": "İncele ve Dağıt",
+			"description": "Yapılandırmanızı inceleyin ve dağıtın",
+			"checklist": "Dağıtım Öncesi Kontrol Listesi",
+			"check1": "Cüzdan bağlı",
+			"check2": "Ağ bağımlılıkları doğrulandı",
+			"check3": "NFT parametreleri yapılandırıldı",
+			"check4": "Ayarlar tamamlandı",
+			"deployment_status": "Dağıtım Durumu",
+			"status_ready": "Dağıtıma Hazır",
+			"status_preparing": "Hazırlanıyor...",
+			"status_deploying": "Dağıtılıyor...",
+			"status_completed": "Tamamlandı",
+			"status_error": "Hata"
+		},
+		"content": {
+			"title": "İncele ve Dağıt",
+			"description": "Yapılandırmanızı inceleyin ve NFT sözleşmenizi dağıtın",
+			"basic_config": "Temel Yapılandırma",
+			"advanced_settings": "Gelişmiş Ayarlar",
+			"nft_standard": "NFT Standardı",
+			"deploy_button": "NFT Sözleşmesi Dağıt",
+			"success_title": "Dağıtım Başarılı!",
+			"success_message": "NFT sözleşmeniz blockchain'e dağıtıldı"
+		}
+	}
+}

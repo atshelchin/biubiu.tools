@@ -1,0 +1,155 @@
+{
+	"_meta": {
+		"code": "vi",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳"
+	},
+	"title": "Trình Triển Khai Hợp Đồng",
+	"description": "Triển khai hợp đồng thông minh một cách xác định bằng proxy CREATE2",
+	"feature_1": "Triển khai xác định trên tất cả các chuỗi",
+	"feature_2": "Cùng một địa chỉ hợp đồng trên mọi mạng",
+	"feature_3": "Giao diện đơn giản và thân thiện với nhà phát triển",
+	"faqs": {
+		"what_is_create2": "CREATE2 là gì?",
+		"create2_explanation": "CREATE2 là một opcode của Ethereum cho phép triển khai hợp đồng xác định. Nó tính toán địa chỉ hợp đồng trước khi triển khai dựa trên bytecode và salt, đảm bảo cùng một địa chỉ trên các mạng khác nhau.",
+		"what_is_deterministic": "Triển khai xác định là gì?",
+		"deterministic_explanation": "Triển khai xác định có nghĩa là hợp đồng sẽ luôn được triển khai đến cùng một địa chỉ trên bất kỳ mạng nào, miễn là bạn sử dụng cùng bytecode, đối số constructor và salt. Điều này cực kỳ hữu ích cho các ứng dụng cross-chain.",
+		"what_is_bytecode": "Bytecode là gì?",
+		"bytecode_explanation": "Bytecode là phiên bản đã biên dịch của mã hợp đồng thông minh của bạn. Khi bạn biên dịch hợp đồng Solidity, bạn nhận được bytecode là mã thực sự chạy trên Máy Ảo Ethereum (EVM).",
+		"what_is_abi": "ABI là gì?",
+		"abi_explanation": "ABI (Application Binary Interface) định nghĩa cách tương tác với hợp đồng của bạn. Để triển khai, bạn cần ABI constructor để mã hóa đúng các đối số constructor. Bạn có thể cung cấp nó ở định dạng JSON hoặc định dạng dễ đọc.",
+		"what_is_salt": "Salt là gì?",
+		"salt_explanation": "Salt là một giá trị 32 byte được sử dụng trong CREATE2 để tạo địa chỉ hợp đồng. Các salt khác nhau sẽ cho ra các địa chỉ khác nhau. Bạn có thể sử dụng cùng một salt để triển khai đến cùng một địa chỉ trên các mạng khác nhau."
+	},
+	"seo": {
+		"page_title": "Trình Triển Khai Hợp Đồng - Triển Khai Hợp Đồng Thông Minh Xác Định | BiuBiu Tools",
+		"page_description": "Triển khai hợp đồng thông minh một cách xác định bằng proxy CREATE2. Cùng một địa chỉ hợp đồng trên tất cả các mạng EVM. Giao diện thân thiện với nhà phát triển cho kiểm thử và sản xuất.",
+		"keywords": "trình triển khai hợp đồng, CREATE2, triển khai xác định, hợp đồng thông minh, ethereum, polygon, BSC, solidity, công cụ web3",
+		"webapp_name": "Trình Triển Khai Hợp Đồng",
+		"webapp_description": "Triển khai hợp đồng thông minh một cách xác định bằng proxy CREATE2 trên tất cả các mạng EVM.",
+		"feature_1": "Triển khai xác định với CREATE2",
+		"feature_2": "Hỗ trợ đa mạng (Ethereum, Polygon, BSC, v.v.)",
+		"feature_3": "Xem trước địa chỉ hợp đồng trước khi triển khai",
+		"howto_name": "Cách Triển Khai Hợp Đồng Xác Định với CREATE2",
+		"howto_description": "Hướng dẫn từng bước để triển khai hợp đồng thông minh đến cùng một địa chỉ trên nhiều mạng bằng proxy CREATE2.",
+		"howto_tool_1": "Hợp Đồng Proxy CREATE2 (0x4e59b44847b379578588920cA78FbF26c0B4956C)",
+		"step_1_name": "Kết Nối Ví",
+		"step_1_text": "Kết nối ví Web3 của bạn với mạng nơi bạn muốn triển khai hợp đồng. Đảm bảo bạn có đủ token gốc để trả phí gas.",
+		"step_1_description": "Liên kết ví Web3 của bạn",
+		"step_2_name": "Kiểm Tra Phụ Thuộc",
+		"step_2_text": "Xác minh rằng hợp đồng proxy CREATE2 có sẵn trên mạng đã chọn. Hệ thống sẽ kiểm tra xem proxy có tồn tại tại địa chỉ tiêu chuẩn không.",
+		"step_2_description": "Xác minh tính khả dụng của proxy CREATE2",
+		"step_3_name": "Triển Khai Hợp Đồng",
+		"step_3_text": "Nhập bytecode hợp đồng, ABI constructor, đối số constructor và salt. Hệ thống sẽ tính toán và hiển thị địa chỉ hợp đồng dự kiến. Nhấp triển khai để thực hiện giao dịch triển khai.",
+		"step_3_description": "Cấu hình và triển khai hợp đồng"
+	},
+	"step1": {
+		"sidebar": {
+			"title": "Kết Nối Ví",
+			"description": "Kết nối ví Web3 của bạn để triển khai hợp đồng thông minh bằng proxy CREATE2."
+		},
+		"content": {
+			"title": "Chọn Mạng & Kết Nối Ví",
+			"description": "Chọn mạng blockchain nơi bạn muốn triển khai hợp đồng",
+			"loading": "Đang tải cấu hình mạng..."
+		},
+		"footer": {
+			"continue": "Tiếp Tục",
+			"hint": "Kết nối ví của bạn để tiếp tục"
+		}
+	},
+	"step2": {
+		"sidebar": {
+			"title": "Kiểm Tra Phụ Thuộc",
+			"description": "Xác minh rằng hợp đồng proxy CREATE2 có sẵn trên mạng đã chọn.",
+			"required_contracts": "Hợp Đồng Cần Thiết"
+		},
+		"content": {
+			"title": "Xác Minh Phụ Thuộc",
+			"description": "Đang kiểm tra xem proxy CREATE2 có sẵn trên mạng này không",
+			"checking_dependencies_for": "Đang kiểm tra môi trường mạng {network}...",
+			"wallet_not_connected_title": "Ví Chưa Kết Nối",
+			"wallet_not_connected_message": "Vui lòng quay lại Bước 1 và kết nối ví của bạn",
+			"go_to_step1": "Đến Bước 1",
+			"all_dependencies_satisfied": "Tất Cả Phụ Thuộc Đã Thỏa Mãn",
+			"network_properly_configured": "Proxy CREATE2 có sẵn. Bạn có thể tiến hành triển khai.",
+			"dependency_issues_found": "Phát Hiện Vấn Đề Phụ Thuộc",
+			"resolve_issues_before_continuing": "Proxy CREATE2 không có sẵn trên mạng này. Vui lòng chuyển sang mạng được hỗ trợ.",
+			"recheck_dependencies": "Kiểm Tra Lại Phụ Thuộc",
+			"address_label": "Địa chỉ:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Vui lòng giải quyết vấn đề trước đó trước",
+			"view_deployment_guide": "Xem Hướng Dẫn Triển Khai",
+			"deploy_coming_soon": "Triển Khai Hợp Đồng (Sắp Ra Mắt)",
+			"deploy_contract": "Triển Khai {contractName}",
+			"checks": {
+				"category": {
+					"network": "Mạng",
+					"protocol": "Giao Thức",
+					"contract": "Hợp Đồng"
+				},
+				"rpc_endpoint": {
+					"name": "RPC Endpoint",
+					"description": "Kết nối đến mạng {network}",
+					"chain_id_mismatch": "Chain ID không khớp: mong đợi {expected}, nhận được {actual}",
+					"configure_rpc_button": "Cấu Hình RPC",
+					"connected_to_block": "Đã kết nối tại block #{blockNumber}",
+					"failed_to_connect": "Không thể kết nối đến RPC endpoint",
+					"no_rpc_configured": "Chưa cấu hình RPC endpoint"
+				},
+				"contract": {
+					"create2_proxy_description": "Proxy CREATE2 cho triển khai xác định",
+					"deployed": "Đã Triển Khai",
+					"not_deployed": "Chưa triển khai trên mạng này",
+					"check_failed": "Kiểm tra hợp đồng thất bại"
+				}
+			}
+		},
+		"footer": {
+			"continue": "Tiếp Tục",
+			"hint": "Tất cả phụ thuộc phải có sẵn để tiếp tục",
+			"checking_dependencies": "Đang kiểm tra phụ thuộc...",
+			"resolve_issues": "Vui lòng giải quyết các vấn đề trên để tiếp tục",
+			"waiting_for_checks": "Đang chờ kiểm tra phụ thuộc hoàn thành"
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "Triển Khai Hợp Đồng",
+			"description": "Cấu hình các tham số triển khai hợp đồng của bạn",
+			"bytecode_title": "Bytecode Hợp Đồng",
+			"bytecode_description": "Bytecode đã biên dịch của hợp đồng thông minh. Bạn có thể lấy nó từ đầu ra của trình biên dịch.",
+			"abi_title": "ABI Constructor",
+			"abi_description": "Định nghĩa ABI của constructor. Hỗ trợ cả định dạng JSON và định dạng dễ đọc.",
+			"constructor_title": "Đối Số Constructor",
+			"constructor_description": "Các đối số để truyền vào constructor của hợp đồng, ở định dạng mảng JSON.",
+			"salt_title": "Salt",
+			"salt_description": "Giá trị hex 32 byte để tạo địa chỉ xác định. Cùng salt = cùng địa chỉ."
+		},
+		"content": {
+			"title": "Triển Khai Hợp Đồng Của Bạn",
+			"description": "Nhập chi tiết hợp đồng để triển khai qua proxy CREATE2",
+			"bytecode_label": "Bytecode Hợp Đồng",
+			"bytecode_help": "Dán bytecode đã biên dịch của hợp đồng (bắt đầu bằng 0x)",
+			"abi_label": "ABI Constructor",
+			"abi_help": "Dán ABI constructor ở định dạng JSON hoặc định dạng dễ đọc",
+			"constructor_args_label": "Đối Số Constructor",
+			"constructor_args_help": "Nhập đối số constructor dưới dạng mảng JSON, ví dụ [\"MyToken\", \"MTK\", 18]",
+			"salt_label": "Salt",
+			"salt_help": "Giá trị hex 32 byte để triển khai xác định (0x theo sau bởi 64 ký tự hex)",
+			"generate_random": "Ngẫu Nhiên",
+			"predicted_address": "Địa Chỉ Hợp Đồng Dự Kiến",
+			"deploy_button": "Triển Khai Hợp Đồng",
+			"deploying": "Đang triển khai...",
+			"deployment_success": "Triển Khai Thành Công!",
+			"deployment_error": "Triển Khai Thất Bại",
+			"contract_address": "Địa Chỉ Hợp Đồng",
+			"transaction_hash": "Hash Giao Dịch"
+		},
+		"footer": {
+			"hint": "Đây là bước cuối cùng. Triển khai hợp đồng khi bạn sẵn sàng."
+		}
+	}
+}

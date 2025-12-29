@@ -1,0 +1,236 @@
+{
+	"_meta": {
+		"code": "fr",
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷"
+	},
+	"title": "Déployeur NFT",
+	"description": "Déployez des contrats intelligents NFT avec les standards ERC-721, ERC-721A et ERC-1155",
+	"feature_1": "Support des standards ERC-721, ERC-721A, ERC-1155",
+	"feature_2": "Royalties, approvisionnement et prix de frappe configurables",
+	"feature_3": "Fonctionnalités avancées : pausable, brûlable, révélable",
+	"step1": {
+		"sidebar": {
+			"title": "Connecter le Portefeuille",
+			"description": "Connectez votre portefeuille Web3 pour déployer des contrats NFT sur le réseau blockchain choisi.",
+			"requirements": "Exigences",
+			"requirement1": "Portefeuille Web3 (MetaMask, WalletConnect, etc.)",
+			"requirement2": "Tokens natifs suffisants pour les frais de gas",
+			"requirement3": "Sélectionner le réseau blockchain cible",
+			"supported_chains": "Réseaux Supportés"
+		},
+		"content": {
+			"title": "Sélectionnez le Réseau et Connectez le Portefeuille",
+			"description": "Choisissez le réseau blockchain pour le déploiement de votre contrat NFT",
+			"ready_hint": "Votre portefeuille est connecté et prêt à continuer"
+		}
+	},
+	"step2": {
+		"sidebar": {
+			"title": "Vérifier les Dépendances",
+			"description": "Vérifiez que les contrats requis sont déployés",
+			"all_passed": "Tout Réussi",
+			"issues_found": "Problèmes Détectés",
+			"passed": "Réussi",
+			"failed": "Échoué",
+			"selected": "Standard Sélectionné",
+			"comparison": "Comparaison des Standards",
+			"tips": "Conseils",
+			"tip1": "ERC-721 est le standard NFT original avec la plus large compatibilité",
+			"tip2": "ERC-721A offre des économies de gas pour la frappe en lot",
+			"tip3": "ERC-1155 est meilleur pour les objets de jeu et les collections multi-éditions"
+		},
+		"content": {
+			"title": "Vérifier les Dépendances",
+			"description": "Vérifier les dépendances réseau et contrat",
+			"checking_dependencies_for": "Vérification de l'environnement réseau {network}...",
+			"wallet_not_connected_title": "Portefeuille Non Connecté",
+			"wallet_not_connected_message": "Veuillez retourner à l'Étape 1 et connecter votre portefeuille",
+			"go_to_step1": "Aller à l'Étape 1",
+			"all_dependencies_satisfied": "Toutes les Dépendances Satisfaites",
+			"network_properly_configured": "Le réseau est correctement configuré pour le déploiement NFT",
+			"dependency_issues_found": "Problèmes de Dépendance Détectés",
+			"resolve_issues_before_continuing": "Veuillez résoudre les problèmes avant de continuer",
+			"recheck_dependencies": "Revérifier les Dépendances",
+			"address_label": "Adresse :",
+			"endpoint_label": "Endpoint :",
+			"resolve_previous_issue": "Veuillez d'abord résoudre le problème précédent",
+			"view_deployment_guide": "Voir le Guide de Déploiement",
+			"deploy_coming_soon": "Déployer le Contrat (Bientôt)",
+			"deploy_contract": "Déployer {contractName}",
+			"selected_confirmation": "Vous avez sélectionné ce standard",
+			"checks": {
+				"rpc": {
+					"title": "Connexion RPC",
+					"description": "Vérifier la connectivité réseau"
+				},
+				"contract": {
+					"create2_proxy_description": "Proxy CREATE2 pour déploiement déterministe",
+					"multicall3_description": "Multicall3 pour opérations en lot",
+					"biubiu_premium_description": "BiuBiu Premium pour fonctionnalités avancées",
+					"nft_factory_description": "NFT Factory pour déployer des contrats NFT"
+				},
+				"category": {
+					"network": "Réseau",
+					"protocol": "Protocole",
+					"contract": "Contrat"
+				}
+			}
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "Configurer NFT",
+			"description": "Configurez les paramètres de votre collection NFT",
+			"progress": "Progression",
+			"field_name": "Nom",
+			"field_symbol": "Symbole",
+			"field_base_uri": "URI de Base",
+			"field_description": "Description",
+			"collection_name": "Nom de la Collection",
+			"symbol": "Symbole",
+			"stake_enabled": "Stake-to-Mint",
+			"all_required_complete": "Tous les champs requis sont remplis !",
+			"ready": "Prêt",
+			"incomplete": "Incomplet",
+			"tips": "Conseils",
+			"tip1": "Choisissez un nom de collection unique",
+			"tip2": "L'URI de base peut utiliser IPFS ou HTTP",
+			"tip3": "Stake-to-mint crée une utilité pour votre token",
+			"preview": "Aperçu"
+		},
+		"content": {
+			"title": "Configurer les Paramètres NFT",
+			"description": "Configurez les informations de base et les options de frappe",
+			"basic_info": "Informations de Base",
+			"name_label": "Nom de la Collection",
+			"name_placeholder": "Mon Super NFT",
+			"name_hint": "Le nom de votre collection NFT",
+			"symbol_label": "Symbole",
+			"symbol_placeholder": "AWESOME",
+			"symbol_hint": "Identifiant court (ex., BAYC, PUNK)",
+			"description_label": "Description",
+			"description_placeholder": "Une collection unique d'art numérique...",
+			"description_hint": "Décrivez votre collection NFT",
+			"base_uri_label": "URI de Base",
+			"base_uri_placeholder": "ipfs://...",
+			"base_uri_hint": "URL de base pour les métadonnées du token",
+			"mint_type_label": "Type de Frappe",
+			"mint_settings": "Options de Frappe",
+			"public_mint_enabled": "Frappe du Propriétaire",
+			"public_mint_hint": "Seul le propriétaire du contrat peut frapper des NFT",
+			"stake_to_mint": "Stake-to-Mint",
+			"enable_stake_to_mint": "Activer Stake-to-Mint",
+			"stake_to_mint_hint": "Requiert le staking de tokens pour frapper des NFT",
+			"stake_token_label": "Adresse du Token de Stake",
+			"stake_token_hint": "Adresse du token ERC20 requis pour la frappe",
+			"stake_amount_label": "Montant du Stake",
+			"stake_amount_hint": "Quantité de tokens à staker (en wei)",
+			"preview": "Aperçu"
+		}
+	},
+	"step4": {
+		"sidebar": {
+			"title": "Configurer les Paramètres",
+			"description": "Définissez les options avancées pour votre NFT",
+			"success": "Contrat NFT Déployé avec Succès !",
+			"error": "Déploiement Échoué",
+			"configured": "Configuré",
+			"supply_limit": "Limite d'Approvisionnement",
+			"mint_price": "Prix de Frappe",
+			"royalties": "Royalties",
+			"special_features": "Fonctionnalités Spéciales",
+			"recommendations": "Recommandations",
+			"rec1": "Définissez des limites d'approvisionnement raisonnables",
+			"rec2": "Envisagez d'activer les royalties",
+			"rec3": "Testez d'abord sur testnet"
+		},
+		"content": {
+			"title": "Configurer les Paramètres",
+			"description": "Définissez les options et fonctionnalités avancées",
+			"supply_pricing": "Approvisionnement et Prix",
+			"max_supply_label": "Approvisionnement Maximum",
+			"max_supply_hint": "Nombre maximum de NFT pouvant être frappés",
+			"mint_price_label": "Prix de Frappe",
+			"mint_price_hint": "Prix en tokens natifs pour frapper un NFT",
+			"max_per_wallet_label": "Maximum par Portefeuille",
+			"max_per_wallet_hint": "Maximum de NFT qu'un portefeuille peut frapper",
+			"royalties": "Royalties",
+			"enable_royalties": "Activer les Royalties",
+			"royalty_recipient_label": "Destinataire des Royalties",
+			"royalty_recipient_hint": "Adresse recevant les paiements de royalties",
+			"royalty_percentage_label": "Pourcentage des Royalties",
+			"royalty_percentage_hint": "Pourcentage des ventes (0-10%)",
+			"features": "Fonctionnalités",
+			"pausable": "Pausable",
+			"pausable_hint": "Permettre de mettre en pause tous les transferts",
+			"burnable": "Brûlable",
+			"burnable_hint": "Permettre de brûler les NFT",
+			"revealable": "Révélable",
+			"revealable_hint": "Support de la révélation différée des métadonnées",
+			"fungible": "Fongible",
+			"fungible_hint": "Permettre plusieurs copies du même NFT",
+			"access_control": "Contrôle d'Accès",
+			"owner_only": "Propriétaire Uniquement",
+			"public_mint": "Frappe Publique",
+			"whitelist": "Liste Blanche",
+			"stake_to_mint": "Stake-to-Mint",
+			"stake_to_mint_hint": "Requiert le staking de tokens pour frapper",
+			"enable_stake_to_mint": "Activer Stake-to-Mint",
+			"stake_token_label": "Adresse du Token de Stake",
+			"stake_token_hint": "Adresse du token ERC20 requis pour la frappe",
+			"stake_amount_label": "Montant du Stake",
+			"stake_amount_hint": "Quantité de tokens à staker (en wei)",
+			"review": {
+				"title": "Réviser la Configuration",
+				"basic_info": "Informations de Base",
+				"mint_settings": "Paramètres de Frappe",
+				"stake_settings": "Paramètres Stake-to-Mint"
+			},
+			"deployment": {
+				"title": "Déploiement",
+				"deploy_button": "Déployer le Contrat NFT",
+				"deploying": "Déploiement en cours...",
+				"please_wait": "Veuillez patienter pendant le déploiement de votre contrat",
+				"success": "Déploiement Réussi !",
+				"nft_deployed": "Votre contrat NFT a été déployé sur la blockchain",
+				"error": "Déploiement Échoué",
+				"retry": "Réessayer",
+				"contract_address": "Adresse du Contrat",
+				"transaction_hash": "Hash de Transaction"
+			}
+		},
+		"footer": {
+			"deploy_another": "Déployer un Autre NFT"
+		}
+	},
+	"step5": {
+		"sidebar": {
+			"title": "Réviser et Déployer",
+			"description": "Révisez votre configuration et déployez",
+			"checklist": "Checklist Pré-Déploiement",
+			"check1": "Portefeuille connecté",
+			"check2": "Dépendances réseau vérifiées",
+			"check3": "Paramètres NFT configurés",
+			"check4": "Paramètres finalisés",
+			"deployment_status": "Statut du Déploiement",
+			"status_ready": "Prêt à Déployer",
+			"status_preparing": "Préparation...",
+			"status_deploying": "Déploiement...",
+			"status_completed": "Terminé",
+			"status_error": "Erreur"
+		},
+		"content": {
+			"title": "Réviser et Déployer",
+			"description": "Révisez votre configuration et déployez votre contrat NFT",
+			"basic_config": "Configuration de Base",
+			"advanced_settings": "Paramètres Avancés",
+			"nft_standard": "Standard NFT",
+			"deploy_button": "Déployer le Contrat NFT",
+			"success_title": "Déploiement Réussi !",
+			"success_message": "Votre contrat NFT a été déployé sur la blockchain"
+		}
+	}
+}

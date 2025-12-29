@@ -1,0 +1,68 @@
+{
+	"_meta": {
+		"code": "id",
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩"
+	},
+	"title": "Pengirim Token",
+	"description": "Buat dan deploy token ERC20 dengan parameter kustom dalam hitungan menit",
+	"step2": {
+		"content": {
+			"title": "Pemeriksaan Dependensi",
+			"description": "Pastikan infrastruktur yang diperlukan sudah siap",
+			"checking_dependencies_for": "Memeriksa lingkungan jaringan {network}...",
+			"wallet_not_connected_title": "Dompet Tidak Terhubung",
+			"wallet_not_connected_message": "Silakan kembali ke Langkah 1 dan hubungkan dompet Anda",
+			"go_to_step1": "Ke Langkah 1",
+			"all_dependencies_satisfied": "Semua Dependensi Terpenuhi",
+			"network_properly_configured": "Jaringan Anda telah dikonfigurasi dengan benar untuk deployment token",
+			"dependency_issues_found": "Masalah Dependensi Ditemukan",
+			"resolve_issues_before_continuing": "Silakan selesaikan masalah di atas sebelum melanjutkan",
+			"recheck_dependencies": "Periksa Ulang Dependensi",
+			"address_label": "Alamat:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Silakan selesaikan masalah sebelumnya terlebih dahulu",
+			"view_deployment_guide": "Lihat Panduan Deployment",
+			"deploy_coming_soon": "Deploy Kontrak (Segera Hadir)",
+			"deploy_contract": "Deploy {contractName}",
+			"checks": {
+				"contract": {
+					"token_factory_description": "Factory deployment token ERC20 dengan dukungan CREATE2"
+				},
+				"category": {
+					"network": "Jaringan",
+					"protocol": "Protokol",
+					"contract": "Kontrak"
+				}
+			}
+		},
+		"footer": {
+			"back": "Kembali",
+			"continue": "Lanjut ke Konfigurasi Token"
+		},
+		"sidebar": {
+			"title": "Periksa Dependensi",
+			"description": "Pastikan semua kontrak yang diperlukan sudah di-deploy di jaringan yang dipilih sebelum melanjutkan deployment token.",
+			"checking": "Memeriksa dependensi...",
+			"total": "Total Pemeriksaan",
+			"passed": "Berhasil",
+			"failed": "Gagal",
+			"network": "Jaringan Saat Ini",
+			"what_is_this": "Apa ini?",
+			"what_is_this_desc": "Sebelum men-deploy token Anda, kami perlu memverifikasi bahwa semua smart contract yang diperlukan tersedia di jaringan yang dipilih.",
+			"dependencies": "Dependensi yang Diperlukan",
+			"rpc_endpoint": "RPC Endpoint",
+			"rpc_endpoint_desc": "Koneksi jaringan untuk komunikasi blockchain",
+			"create2_proxy": "Proxy CREATE2",
+			"create2_proxy_desc": "Memungkinkan deployment kontrak deterministik lintas rantai",
+			"multicall3": "Multicall3",
+			"multicall3_desc": "Mengelompokkan beberapa panggilan kontrak untuk efisiensi",
+			"biubiu_premium": "BiuBiuPremium",
+			"biubiu_premium_desc": "Kontrak keanggotaan untuk fitur premium",
+			"token_factory": "TokenFactory",
+			"token_factory_desc": "Kontrak utama untuk men-deploy token ERC20 Anda"
+		}
+	}
+}

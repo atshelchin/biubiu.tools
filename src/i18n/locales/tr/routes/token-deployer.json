@@ -1,0 +1,68 @@
+{
+	"_meta": {
+		"code": "tr",
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷"
+	},
+	"title": "Token Dağıtıcı",
+	"description": "Özel parametrelerle dakikalar içinde ERC20 token'ları oluşturun ve dağıtın",
+	"step2": {
+		"content": {
+			"title": "Bağımlılık Kontrolü",
+			"description": "Gerekli altyapının hazır olduğundan emin olun",
+			"checking_dependencies_for": "{network} ağ ortamı kontrol ediliyor...",
+			"wallet_not_connected_title": "Cüzdan Bağlı Değil",
+			"wallet_not_connected_message": "Lütfen Adım 1'e dönün ve cüzdanınızı bağlayın",
+			"go_to_step1": "Adım 1'e Git",
+			"all_dependencies_satisfied": "Tüm Bağımlılıklar Karşılandı",
+			"network_properly_configured": "Ağınız token dağıtımı için doğru şekilde yapılandırıldı",
+			"dependency_issues_found": "Bağımlılık Sorunları Bulundu",
+			"resolve_issues_before_continuing": "Devam etmeden önce lütfen yukarıdaki sorunları çözün",
+			"recheck_dependencies": "Bağımlılıkları Yeniden Kontrol Et",
+			"address_label": "Adres:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Lütfen önce önceki sorunu çözün",
+			"view_deployment_guide": "Dağıtım Kılavuzunu Görüntüle",
+			"deploy_coming_soon": "Sözleşme Dağıt (Yakında)",
+			"deploy_contract": "{contractName} Dağıt",
+			"checks": {
+				"contract": {
+					"token_factory_description": "CREATE2 destekli ERC20 token dağıtım fabrikası"
+				},
+				"category": {
+					"network": "Ağ",
+					"protocol": "Protokol",
+					"contract": "Sözleşme"
+				}
+			}
+		},
+		"footer": {
+			"back": "Geri",
+			"continue": "Token Yapılandırmasına Devam Et"
+		},
+		"sidebar": {
+			"title": "Bağımlılıkları Kontrol Et",
+			"description": "Token dağıtımına devam etmeden önce, seçilen ağda tüm gerekli sözleşmelerin dağıtıldığından emin olun.",
+			"checking": "Bağımlılıklar kontrol ediliyor...",
+			"total": "Toplam Kontroller",
+			"passed": "Başarılı",
+			"failed": "Başarısız",
+			"network": "Mevcut Ağ",
+			"what_is_this": "Bu nedir?",
+			"what_is_this_desc": "Token'ınızı dağıtmadan önce, seçilen ağda tüm gerekli akıllı sözleşmelerin mevcut olduğunu doğrulamamız gerekiyor.",
+			"dependencies": "Gerekli Bağımlılıklar",
+			"rpc_endpoint": "RPC Endpoint",
+			"rpc_endpoint_desc": "Blockchain iletişimi için ağ bağlantısı",
+			"create2_proxy": "CREATE2 Proxy",
+			"create2_proxy_desc": "Zincirler arası deterministik sözleşme dağıtımını sağlar",
+			"multicall3": "Multicall3",
+			"multicall3_desc": "Verimlilik için birden fazla sözleşme çağrısını toplar",
+			"biubiu_premium": "BiuBiuPremium",
+			"biubiu_premium_desc": "Premium özellikler için üyelik sözleşmesi",
+			"token_factory": "TokenFactory",
+			"token_factory_desc": "ERC20 token'larınızı dağıtmak için ana sözleşme"
+		}
+	}
+}

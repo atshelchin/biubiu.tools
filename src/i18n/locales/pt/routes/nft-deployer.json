@@ -1,0 +1,236 @@
+{
+	"_meta": {
+		"code": "pt",
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷"
+	},
+	"title": "Implantador de NFT",
+	"description": "Implante contratos inteligentes NFT com padrões ERC-721, ERC-721A e ERC-1155",
+	"feature_1": "Suporte para padrões ERC-721, ERC-721A, ERC-1155",
+	"feature_2": "Royalties, fornecimento e preço de cunhagem configuráveis",
+	"feature_3": "Recursos avançados: pausável, queimável, revelável",
+	"step1": {
+		"sidebar": {
+			"title": "Conectar Carteira",
+			"description": "Conecte sua carteira Web3 para implantar contratos NFT na rede blockchain escolhida.",
+			"requirements": "Requisitos",
+			"requirement1": "Carteira Web3 (MetaMask, WalletConnect, etc.)",
+			"requirement2": "Tokens nativos suficientes para taxas de gas",
+			"requirement3": "Selecionar rede blockchain alvo",
+			"supported_chains": "Redes Suportadas"
+		},
+		"content": {
+			"title": "Selecione Rede e Conecte Carteira",
+			"description": "Escolha a rede blockchain para implantação do seu contrato NFT",
+			"ready_hint": "Sua carteira está conectada e pronta para continuar"
+		}
+	},
+	"step2": {
+		"sidebar": {
+			"title": "Verificar Dependências",
+			"description": "Verifique se os contratos necessários estão implantados",
+			"all_passed": "Tudo Aprovado",
+			"issues_found": "Problemas Encontrados",
+			"passed": "Aprovado",
+			"failed": "Falhou",
+			"selected": "Padrão Selecionado",
+			"comparison": "Comparação de Padrões",
+			"tips": "Dicas",
+			"tip1": "ERC-721 é o padrão NFT original com maior compatibilidade",
+			"tip2": "ERC-721A oferece economia de gas para cunhagem em lote",
+			"tip3": "ERC-1155 é melhor para itens de jogos e coleções multi-edição"
+		},
+		"content": {
+			"title": "Verificar Dependências",
+			"description": "Verificar dependências de rede e contrato",
+			"checking_dependencies_for": "Verificando ambiente de rede {network}...",
+			"wallet_not_connected_title": "Carteira Não Conectada",
+			"wallet_not_connected_message": "Por favor, volte ao Passo 1 e conecte sua carteira",
+			"go_to_step1": "Ir para o Passo 1",
+			"all_dependencies_satisfied": "Todas as Dependências Satisfeitas",
+			"network_properly_configured": "A rede está corretamente configurada para implantação de NFT",
+			"dependency_issues_found": "Problemas de Dependência Encontrados",
+			"resolve_issues_before_continuing": "Por favor, resolva os problemas antes de continuar",
+			"recheck_dependencies": "Verificar Dependências Novamente",
+			"address_label": "Endereço:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Por favor, resolva o problema anterior primeiro",
+			"view_deployment_guide": "Ver Guia de Implantação",
+			"deploy_coming_soon": "Implantar Contrato (Em Breve)",
+			"deploy_contract": "Implantar {contractName}",
+			"selected_confirmation": "Você selecionou este padrão",
+			"checks": {
+				"rpc": {
+					"title": "Conexão RPC",
+					"description": "Verificar conectividade de rede"
+				},
+				"contract": {
+					"create2_proxy_description": "Proxy CREATE2 para implantação determinística",
+					"multicall3_description": "Multicall3 para operações em lote",
+					"biubiu_premium_description": "BiuBiu Premium para recursos avançados",
+					"nft_factory_description": "NFT Factory para implantar contratos NFT"
+				},
+				"category": {
+					"network": "Rede",
+					"protocol": "Protocolo",
+					"contract": "Contrato"
+				}
+			}
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "Configurar NFT",
+			"description": "Configure os parâmetros da sua coleção NFT",
+			"progress": "Progresso",
+			"field_name": "Nome",
+			"field_symbol": "Símbolo",
+			"field_base_uri": "URI Base",
+			"field_description": "Descrição",
+			"collection_name": "Nome da Coleção",
+			"symbol": "Símbolo",
+			"stake_enabled": "Stake-para-Cunhar",
+			"all_required_complete": "Todos os campos obrigatórios preenchidos!",
+			"ready": "Pronto",
+			"incomplete": "Incompleto",
+			"tips": "Dicas",
+			"tip1": "Escolha um nome de coleção único",
+			"tip2": "A URI base pode usar IPFS ou HTTP",
+			"tip3": "Stake-para-cunhar cria utilidade para seu token",
+			"preview": "Visualização"
+		},
+		"content": {
+			"title": "Configurar Parâmetros NFT",
+			"description": "Configure informações básicas e opções de cunhagem",
+			"basic_info": "Informações Básicas",
+			"name_label": "Nome da Coleção",
+			"name_placeholder": "Meu NFT Incrível",
+			"name_hint": "O nome da sua coleção NFT",
+			"symbol_label": "Símbolo",
+			"symbol_placeholder": "AWESOME",
+			"symbol_hint": "Identificador curto (ex., BAYC, PUNK)",
+			"description_label": "Descrição",
+			"description_placeholder": "Uma coleção única de arte digital...",
+			"description_hint": "Descreva sua coleção NFT",
+			"base_uri_label": "URI Base",
+			"base_uri_placeholder": "ipfs://...",
+			"base_uri_hint": "URL base para metadados de token",
+			"mint_type_label": "Tipo de Cunhagem",
+			"mint_settings": "Opções de Cunhagem",
+			"public_mint_enabled": "Cunhagem do Proprietário",
+			"public_mint_hint": "Apenas o proprietário do contrato pode cunhar NFTs",
+			"stake_to_mint": "Stake-para-Cunhar",
+			"enable_stake_to_mint": "Habilitar Stake-para-Cunhar",
+			"stake_to_mint_hint": "Requer fazer staking de tokens para cunhar NFTs",
+			"stake_token_label": "Endereço do Token de Stake",
+			"stake_token_hint": "Endereço do token ERC20 necessário para cunhagem",
+			"stake_amount_label": "Quantidade de Stake",
+			"stake_amount_hint": "Quantidade de tokens para fazer stake (em wei)",
+			"preview": "Visualização"
+		}
+	},
+	"step4": {
+		"sidebar": {
+			"title": "Configurar Definições",
+			"description": "Defina opções avançadas para seu NFT",
+			"success": "Contrato NFT Implantado com Sucesso!",
+			"error": "Implantação Falhou",
+			"configured": "Configurado",
+			"supply_limit": "Limite de Fornecimento",
+			"mint_price": "Preço de Cunhagem",
+			"royalties": "Royalties",
+			"special_features": "Recursos Especiais",
+			"recommendations": "Recomendações",
+			"rec1": "Defina limites de fornecimento razoáveis",
+			"rec2": "Considere habilitar royalties",
+			"rec3": "Teste primeiro na testnet"
+		},
+		"content": {
+			"title": "Configurar Definições",
+			"description": "Defina opções e recursos avançados",
+			"supply_pricing": "Fornecimento e Preços",
+			"max_supply_label": "Fornecimento Máximo",
+			"max_supply_hint": "Número máximo de NFTs que podem ser cunhados",
+			"mint_price_label": "Preço de Cunhagem",
+			"mint_price_hint": "Preço em tokens nativos para cunhar um NFT",
+			"max_per_wallet_label": "Máximo por Carteira",
+			"max_per_wallet_hint": "Máximo de NFTs que uma carteira pode cunhar",
+			"royalties": "Royalties",
+			"enable_royalties": "Habilitar Royalties",
+			"royalty_recipient_label": "Receptor de Royalties",
+			"royalty_recipient_hint": "Endereço que recebe pagamentos de royalties",
+			"royalty_percentage_label": "Porcentagem de Royalties",
+			"royalty_percentage_hint": "Porcentagem das vendas (0-10%)",
+			"features": "Recursos",
+			"pausable": "Pausável",
+			"pausable_hint": "Permitir pausar todas as transferências",
+			"burnable": "Queimável",
+			"burnable_hint": "Permitir queimar NFTs",
+			"revealable": "Revelável",
+			"revealable_hint": "Suportar revelação atrasada de metadados",
+			"fungible": "Fungível",
+			"fungible_hint": "Permitir múltiplas cópias do mesmo NFT",
+			"access_control": "Controle de Acesso",
+			"owner_only": "Apenas Proprietário",
+			"public_mint": "Cunhagem Pública",
+			"whitelist": "Lista Branca",
+			"stake_to_mint": "Stake-para-Cunhar",
+			"stake_to_mint_hint": "Requer fazer staking de tokens para cunhar",
+			"enable_stake_to_mint": "Habilitar Stake-para-Cunhar",
+			"stake_token_label": "Endereço do Token de Stake",
+			"stake_token_hint": "Endereço do token ERC20 necessário para cunhagem",
+			"stake_amount_label": "Quantidade de Stake",
+			"stake_amount_hint": "Quantidade de tokens para fazer stake (em wei)",
+			"review": {
+				"title": "Revisar Configuração",
+				"basic_info": "Informações Básicas",
+				"mint_settings": "Configurações de Cunhagem",
+				"stake_settings": "Configurações de Stake-para-Cunhar"
+			},
+			"deployment": {
+				"title": "Implantação",
+				"deploy_button": "Implantar Contrato NFT",
+				"deploying": "Implantando...",
+				"please_wait": "Por favor, aguarde enquanto seu contrato está sendo implantado",
+				"success": "Implantação Bem-sucedida!",
+				"nft_deployed": "Seu contrato NFT foi implantado na blockchain",
+				"error": "Implantação Falhou",
+				"retry": "Tentar Novamente",
+				"contract_address": "Endereço do Contrato",
+				"transaction_hash": "Hash da Transação"
+			}
+		},
+		"footer": {
+			"deploy_another": "Implantar Outro NFT"
+		}
+	},
+	"step5": {
+		"sidebar": {
+			"title": "Revisar e Implantar",
+			"description": "Revise sua configuração e implante",
+			"checklist": "Lista de Verificação Pré-Implantação",
+			"check1": "Carteira conectada",
+			"check2": "Dependências de rede verificadas",
+			"check3": "Parâmetros NFT configurados",
+			"check4": "Definições finalizadas",
+			"deployment_status": "Status da Implantação",
+			"status_ready": "Pronto para Implantar",
+			"status_preparing": "Preparando...",
+			"status_deploying": "Implantando...",
+			"status_completed": "Concluído",
+			"status_error": "Erro"
+		},
+		"content": {
+			"title": "Revisar e Implantar",
+			"description": "Revise sua configuração e implante seu contrato NFT",
+			"basic_config": "Configuração Básica",
+			"advanced_settings": "Configurações Avançadas",
+			"nft_standard": "Padrão NFT",
+			"deploy_button": "Implantar Contrato NFT",
+			"success_title": "Implantação Bem-sucedida!",
+			"success_message": "Seu contrato NFT foi implantado na blockchain"
+		}
+	}
+}

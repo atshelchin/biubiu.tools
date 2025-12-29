@@ -1,0 +1,155 @@
+{
+	"_meta": {
+		"code": "ko",
+		"name": "한국어",
+		"englishName": "Korean",
+		"direction": "ltr",
+		"flag": "🇰🇷"
+	},
+	"title": "컨트랙트 배포기",
+	"description": "CREATE2 프록시를 사용하여 결정론적으로 스마트 컨트랙트 배포",
+	"feature_1": "모든 체인에서 결정론적 배포",
+	"feature_2": "모든 네트워크에서 동일한 컨트랙트 주소",
+	"feature_3": "간단하고 개발자 친화적인 인터페이스",
+	"faqs": {
+		"what_is_create2": "CREATE2란 무엇인가요?",
+		"create2_explanation": "CREATE2는 결정론적 컨트랙트 배포를 가능하게 하는 이더리움 옵코드입니다. 바이트코드와 솔트를 기반으로 배포 전에 컨트랙트 주소를 계산하여 다른 네트워크에서도 동일한 주소를 보장합니다.",
+		"what_is_deterministic": "결정론적 배포란 무엇인가요?",
+		"deterministic_explanation": "결정론적 배포란 동일한 바이트코드, 생성자 인수 및 솔트를 사용하는 한 컨트랙트가 항상 모든 네트워크에서 동일한 주소에 배포됨을 의미합니다. 이는 크로스체인 애플리케이션에 매우 유용합니다.",
+		"what_is_bytecode": "바이트코드란 무엇인가요?",
+		"bytecode_explanation": "바이트코드는 스마트 컨트랙트 코드의 컴파일된 버전입니다. Solidity 컨트랙트를 컴파일하면 이더리움 가상 머신(EVM)에서 실제로 실행되는 바이트코드를 얻습니다.",
+		"what_is_abi": "ABI란 무엇인가요?",
+		"abi_explanation": "ABI(Application Binary Interface)는 컨트랙트와 상호 작용하는 방법을 정의합니다. 배포를 위해서는 생성자 인수를 올바르게 인코딩하기 위한 생성자 ABI가 필요합니다. JSON 형식 또는 사람이 읽을 수 있는 형식으로 제공할 수 있습니다.",
+		"what_is_salt": "솔트란 무엇인가요?",
+		"salt_explanation": "솔트는 CREATE2에서 컨트랙트 주소를 생성하는 데 사용되는 32바이트 값입니다. 다른 솔트는 다른 주소를 생성합니다. 동일한 솔트를 사용하여 다른 네트워크에서 동일한 주소에 배포할 수 있습니다."
+	},
+	"seo": {
+		"page_title": "컨트랙트 배포기 - 결정론적 스마트 컨트랙트 배포 | BiuBiu Tools",
+		"page_description": "CREATE2 프록시를 사용하여 결정론적으로 스마트 컨트랙트를 배포합니다. 모든 EVM 네트워크에서 동일한 컨트랙트 주소. 테스트 및 프로덕션을 위한 개발자 친화적 인터페이스.",
+		"keywords": "컨트랙트 배포기, CREATE2, 결정론적 배포, 스마트 컨트랙트, 이더리움, polygon, BSC, solidity, web3 도구",
+		"webapp_name": "컨트랙트 배포기",
+		"webapp_description": "CREATE2 프록시를 사용하여 모든 EVM 네트워크에서 결정론적으로 스마트 컨트랙트를 배포합니다.",
+		"feature_1": "CREATE2를 통한 결정론적 배포",
+		"feature_2": "멀티 네트워크 지원 (Ethereum, Polygon, BSC 등)",
+		"feature_3": "배포 전 컨트랙트 주소 미리보기",
+		"howto_name": "CREATE2로 결정론적으로 컨트랙트를 배포하는 방법",
+		"howto_description": "CREATE2 프록시를 사용하여 여러 네트워크에서 동일한 주소에 스마트 컨트랙트를 배포하는 단계별 가이드.",
+		"howto_tool_1": "CREATE2 프록시 컨트랙트 (0x4e59b44847b379578588920cA78FbF26c0B4956C)",
+		"step_1_name": "지갑 연결",
+		"step_1_text": "컨트랙트를 배포하려는 네트워크에 Web3 지갑을 연결하세요. 가스비에 충분한 네이티브 토큰이 있는지 확인하세요.",
+		"step_1_description": "Web3 지갑 연결",
+		"step_2_name": "의존성 확인",
+		"step_2_text": "선택한 네트워크에서 CREATE2 프록시 컨트랙트를 사용할 수 있는지 확인합니다. 시스템이 표준 주소에 프록시가 있는지 확인합니다.",
+		"step_2_description": "CREATE2 프록시 가용성 확인",
+		"step_3_name": "컨트랙트 배포",
+		"step_3_text": "컨트랙트 바이트코드, 생성자 ABI, 생성자 인수 및 솔트를 입력합니다. 시스템이 예상 컨트랙트 주소를 계산하고 표시합니다. 배포를 클릭하여 배포 트랜잭션을 실행합니다.",
+		"step_3_description": "컨트랙트 구성 및 배포"
+	},
+	"step1": {
+		"sidebar": {
+			"title": "지갑 연결",
+			"description": "CREATE2 프록시를 사용하여 스마트 컨트랙트를 배포하려면 Web3 지갑을 연결하세요."
+		},
+		"content": {
+			"title": "네트워크 선택 및 지갑 연결",
+			"description": "컨트랙트를 배포할 블록체인 네트워크를 선택하세요",
+			"loading": "네트워크 구성 로딩 중..."
+		},
+		"footer": {
+			"continue": "계속",
+			"hint": "계속하려면 지갑을 연결하세요"
+		}
+	},
+	"step2": {
+		"sidebar": {
+			"title": "의존성 확인",
+			"description": "선택한 네트워크에서 CREATE2 프록시 컨트랙트를 사용할 수 있는지 확인합니다.",
+			"required_contracts": "필수 컨트랙트"
+		},
+		"content": {
+			"title": "의존성 확인",
+			"description": "이 네트워크에서 CREATE2 프록시를 사용할 수 있는지 확인 중",
+			"checking_dependencies_for": "{network} 네트워크 환경 확인 중...",
+			"wallet_not_connected_title": "지갑 연결 안됨",
+			"wallet_not_connected_message": "1단계로 돌아가 지갑을 연결해 주세요",
+			"go_to_step1": "1단계로 이동",
+			"all_dependencies_satisfied": "모든 의존성 충족",
+			"network_properly_configured": "CREATE2 프록시를 사용할 수 있습니다. 배포를 진행할 수 있습니다.",
+			"dependency_issues_found": "의존성 문제 발견",
+			"resolve_issues_before_continuing": "이 네트워크에서는 CREATE2 프록시를 사용할 수 없습니다. 지원되는 네트워크로 전환해 주세요.",
+			"recheck_dependencies": "의존성 재확인",
+			"address_label": "주소:",
+			"endpoint_label": "엔드포인트:",
+			"resolve_previous_issue": "이전 문제를 먼저 해결해 주세요",
+			"view_deployment_guide": "배포 가이드 보기",
+			"deploy_coming_soon": "컨트랙트 배포 (곧 출시)",
+			"deploy_contract": "{contractName} 배포",
+			"checks": {
+				"category": {
+					"network": "네트워크",
+					"protocol": "프로토콜",
+					"contract": "컨트랙트"
+				},
+				"rpc_endpoint": {
+					"name": "RPC 엔드포인트",
+					"description": "{network} 네트워크 연결",
+					"chain_id_mismatch": "Chain ID 불일치: 예상 {expected}, 실제 {actual}",
+					"configure_rpc_button": "RPC 구성",
+					"connected_to_block": "블록 #{blockNumber}에 연결됨",
+					"failed_to_connect": "RPC 엔드포인트 연결 실패",
+					"no_rpc_configured": "RPC 엔드포인트가 구성되지 않음"
+				},
+				"contract": {
+					"create2_proxy_description": "결정론적 배포를 위한 CREATE2 프록시",
+					"deployed": "배포됨",
+					"not_deployed": "이 네트워크에 배포되지 않음",
+					"check_failed": "컨트랙트 확인 실패"
+				}
+			}
+		},
+		"footer": {
+			"continue": "계속",
+			"hint": "계속하려면 모든 의존성이 사용 가능해야 합니다",
+			"checking_dependencies": "의존성 확인 중...",
+			"resolve_issues": "계속하려면 위의 문제를 해결해 주세요",
+			"waiting_for_checks": "의존성 확인 완료 대기 중"
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "컨트랙트 배포",
+			"description": "컨트랙트 배포 매개변수를 구성하세요",
+			"bytecode_title": "컨트랙트 바이트코드",
+			"bytecode_description": "스마트 컨트랙트의 컴파일된 바이트코드. 컴파일러 출력에서 얻을 수 있습니다.",
+			"abi_title": "생성자 ABI",
+			"abi_description": "생성자의 ABI 정의. JSON 및 사람이 읽을 수 있는 형식 모두 지원.",
+			"constructor_title": "생성자 인수",
+			"constructor_description": "컨트랙트 생성자에 전달할 인수(JSON 배열 형식).",
+			"salt_title": "솔트",
+			"salt_description": "결정론적 주소 생성을 위한 32바이트 16진수 값. 동일한 솔트 = 동일한 주소."
+		},
+		"content": {
+			"title": "컨트랙트 배포",
+			"description": "CREATE2 프록시를 통해 배포할 컨트랙트 세부 정보를 입력하세요",
+			"bytecode_label": "컨트랙트 바이트코드",
+			"bytecode_help": "컨트랙트의 컴파일된 바이트코드를 붙여넣기 (0x로 시작)",
+			"abi_label": "생성자 ABI",
+			"abi_help": "JSON 또는 사람이 읽을 수 있는 형식으로 생성자 ABI를 붙여넣기",
+			"constructor_args_label": "생성자 인수",
+			"constructor_args_help": "생성자 인수를 JSON 배열로 입력, 예: [\"MyToken\", \"MTK\", 18]",
+			"salt_label": "솔트",
+			"salt_help": "결정론적 배포를 위한 32바이트 16진수 값 (0x 다음에 64개의 16진수 문자)",
+			"generate_random": "무작위",
+			"predicted_address": "예상 컨트랙트 주소",
+			"deploy_button": "컨트랙트 배포",
+			"deploying": "배포 중...",
+			"deployment_success": "배포 성공!",
+			"deployment_error": "배포 실패",
+			"contract_address": "컨트랙트 주소",
+			"transaction_hash": "트랜잭션 해시"
+		},
+		"footer": {
+			"hint": "이것이 마지막 단계입니다. 준비가 되면 컨트랙트를 배포하세요."
+		}
+	}
+}

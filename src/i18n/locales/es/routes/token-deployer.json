@@ -1,0 +1,68 @@
+{
+	"_meta": {
+		"code": "es",
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸"
+	},
+	"title": "Desplegador de Tokens",
+	"description": "Crea y despliega tokens ERC20 con parámetros personalizados en minutos",
+	"step2": {
+		"content": {
+			"title": "Verificación de Dependencias",
+			"description": "Asegúrese de que la infraestructura requerida esté lista",
+			"checking_dependencies_for": "Verificando entorno de red {network}...",
+			"wallet_not_connected_title": "Billetera No Conectada",
+			"wallet_not_connected_message": "Por favor, vuelva al Paso 1 y conecte su billetera",
+			"go_to_step1": "Ir al Paso 1",
+			"all_dependencies_satisfied": "Todas las Dependencias Satisfechas",
+			"network_properly_configured": "Su red está correctamente configurada para el despliegue de tokens",
+			"dependency_issues_found": "Problemas de Dependencia Encontrados",
+			"resolve_issues_before_continuing": "Por favor, resuelva los problemas anteriores antes de continuar",
+			"recheck_dependencies": "Volver a Verificar Dependencias",
+			"address_label": "Dirección:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Por favor, resuelva el problema anterior primero",
+			"view_deployment_guide": "Ver Guía de Despliegue",
+			"deploy_coming_soon": "Desplegar Contrato (Próximamente)",
+			"deploy_contract": "Desplegar {contractName}",
+			"checks": {
+				"contract": {
+					"token_factory_description": "Fábrica de despliegue de tokens ERC20 con soporte CREATE2"
+				},
+				"category": {
+					"network": "Red",
+					"protocol": "Protocolo",
+					"contract": "Contrato"
+				}
+			}
+		},
+		"footer": {
+			"back": "Atrás",
+			"continue": "Continuar a Configuración de Token"
+		},
+		"sidebar": {
+			"title": "Verificar Dependencias",
+			"description": "Asegúrese de que todos los contratos requeridos estén desplegados en la red seleccionada antes de proceder con el despliegue del token.",
+			"checking": "Verificando dependencias...",
+			"total": "Total de Verificaciones",
+			"passed": "Aprobadas",
+			"failed": "Fallidas",
+			"network": "Red Actual",
+			"what_is_this": "¿Qué es esto?",
+			"what_is_this_desc": "Antes de desplegar su token, necesitamos verificar que todos los contratos inteligentes requeridos estén disponibles en la red seleccionada.",
+			"dependencies": "Dependencias Requeridas",
+			"rpc_endpoint": "Endpoint RPC",
+			"rpc_endpoint_desc": "Conexión de red para comunicación blockchain",
+			"create2_proxy": "Proxy CREATE2",
+			"create2_proxy_desc": "Permite el despliegue determinístico de contratos entre cadenas",
+			"multicall3": "Multicall3",
+			"multicall3_desc": "Agrupa múltiples llamadas de contrato para mayor eficiencia",
+			"biubiu_premium": "BiuBiuPremium",
+			"biubiu_premium_desc": "Contrato de membresía para funciones premium",
+			"token_factory": "TokenFactory",
+			"token_factory_desc": "Contrato principal para desplegar sus tokens ERC20"
+		}
+	}
+}

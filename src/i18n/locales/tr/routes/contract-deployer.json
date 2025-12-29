@@ -1,0 +1,155 @@
+{
+	"_meta": {
+		"code": "tr",
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷"
+	},
+	"title": "Sözleşme Dağıtıcı",
+	"description": "CREATE2 proxy kullanarak akıllı sözleşmeleri deterministik olarak dağıtın",
+	"feature_1": "Tüm zincirlerde deterministik dağıtım",
+	"feature_2": "Her ağda aynı sözleşme adresi",
+	"feature_3": "Basit ve geliştirici dostu arayüz",
+	"faqs": {
+		"what_is_create2": "CREATE2 nedir?",
+		"create2_explanation": "CREATE2, deterministik sözleşme dağıtımına olanak tanıyan bir Ethereum opcode'udur. Bytecode ve salt'a dayalı olarak dağıtımdan önce sözleşme adresini hesaplar, farklı ağlarda aynı adresi garanti eder.",
+		"what_is_deterministic": "Deterministik dağıtım nedir?",
+		"deterministic_explanation": "Deterministik dağıtım, aynı bytecode, constructor argümanları ve salt kullandığınız sürece sözleşmenin her zaman herhangi bir ağda aynı adrese dağıtılacağı anlamına gelir. Bu, cross-chain uygulamalar için son derece kullanışlıdır.",
+		"what_is_bytecode": "Bytecode nedir?",
+		"bytecode_explanation": "Bytecode, akıllı sözleşme kodunuzun derlenmiş versiyonudur. Solidity sözleşmenizi derlediğinizde, Ethereum Sanal Makinesinde (EVM) gerçekte çalışan kod olan bytecode'u elde edersiniz.",
+		"what_is_abi": "ABI nedir?",
+		"abi_explanation": "ABI (Application Binary Interface), sözleşmenizle nasıl etkileşim kurulacağını tanımlar. Dağıtım için, constructor argümanlarını düzgün bir şekilde kodlamak için constructor ABI'ye ihtiyacınız var. JSON formatında veya insan tarafından okunabilir formatta sağlayabilirsiniz.",
+		"what_is_salt": "Salt nedir?",
+		"salt_explanation": "Salt, CREATE2'de sözleşme adresini oluşturmak için kullanılan 32 baytlık bir değerdir. Farklı salt'lar farklı adreslerle sonuçlanır. Farklı ağlarda aynı adrese dağıtmak için aynı salt'ı kullanabilirsiniz."
+	},
+	"seo": {
+		"page_title": "Sözleşme Dağıtıcı - Deterministik Akıllı Sözleşme Dağıtımı | BiuBiu Tools",
+		"page_description": "CREATE2 proxy kullanarak akıllı sözleşmeleri deterministik olarak dağıtın. Tüm EVM ağlarında aynı sözleşme adresi. Test ve üretim için geliştirici dostu arayüz.",
+		"keywords": "sözleşme dağıtıcı, CREATE2, deterministik dağıtım, akıllı sözleşme, ethereum, polygon, BSC, solidity, web3 araçları",
+		"webapp_name": "Sözleşme Dağıtıcı",
+		"webapp_description": "CREATE2 proxy kullanarak tüm EVM ağlarında akıllı sözleşmeleri deterministik olarak dağıtın.",
+		"feature_1": "CREATE2 ile deterministik dağıtım",
+		"feature_2": "Çoklu ağ desteği (Ethereum, Polygon, BSC, vb.)",
+		"feature_3": "Dağıtımdan önce sözleşme adresini önizleyin",
+		"howto_name": "CREATE2 ile Sözleşmeleri Deterministik Olarak Nasıl Dağıtılır",
+		"howto_description": "CREATE2 proxy kullanarak akıllı sözleşmeleri birden fazla ağda aynı adrese dağıtmak için adım adım kılavuz.",
+		"howto_tool_1": "CREATE2 Proxy Sözleşmesi (0x4e59b44847b379578588920cA78FbF26c0B4956C)",
+		"step_1_name": "Cüzdanınızı Bağlayın",
+		"step_1_text": "Web3 cüzdanınızı sözleşmeyi dağıtmak istediğiniz ağa bağlayın. Gas ücretleri için yeterli yerel token'ınız olduğundan emin olun.",
+		"step_1_description": "Web3 cüzdanınızı bağlayın",
+		"step_2_name": "Bağımlılıkları Kontrol Edin",
+		"step_2_text": "Seçtiğiniz ağda CREATE2 proxy sözleşmesinin mevcut olduğunu doğrulayın. Sistem, proxy'nin standart adreste var olup olmadığını kontrol edecektir.",
+		"step_2_description": "CREATE2 proxy kullanılabilirliğini doğrulayın",
+		"step_3_name": "Sözleşmeyi Dağıtın",
+		"step_3_text": "Sözleşme bytecode'unuzu, constructor ABI'nizi, constructor argümanlarınızı ve salt'ınızı girin. Sistem tahmin edilen sözleşme adresini hesaplayacak ve gösterecektir. Dağıtım işlemini yürütmek için dağıt'a tıklayın.",
+		"step_3_description": "Sözleşmeyi yapılandırın ve dağıtın"
+	},
+	"step1": {
+		"sidebar": {
+			"title": "Cüzdan Bağla",
+			"description": "CREATE2 proxy kullanarak akıllı sözleşmeleri dağıtmak için Web3 cüzdanınızı bağlayın."
+		},
+		"content": {
+			"title": "Ağ Seçin ve Cüzdan Bağlayın",
+			"description": "Sözleşmenizi dağıtmak istediğiniz blockchain ağını seçin",
+			"loading": "Ağ yapılandırması yükleniyor..."
+		},
+		"footer": {
+			"continue": "Devam Et",
+			"hint": "Devam etmek için cüzdanınızı bağlayın"
+		}
+	},
+	"step2": {
+		"sidebar": {
+			"title": "Bağımlılıkları Kontrol Et",
+			"description": "Seçilen ağda CREATE2 proxy sözleşmesinin mevcut olduğunu doğrulayın.",
+			"required_contracts": "Gerekli Sözleşmeler"
+		},
+		"content": {
+			"title": "Bağımlılıkları Doğrula",
+			"description": "Bu ağda CREATE2 proxy'nin mevcut olup olmadığı kontrol ediliyor",
+			"checking_dependencies_for": "{network} ağ ortamı kontrol ediliyor...",
+			"wallet_not_connected_title": "Cüzdan Bağlı Değil",
+			"wallet_not_connected_message": "Lütfen Adım 1'e dönün ve cüzdanınızı bağlayın",
+			"go_to_step1": "Adım 1'e Git",
+			"all_dependencies_satisfied": "Tüm Bağımlılıklar Karşılandı",
+			"network_properly_configured": "CREATE2 proxy mevcut. Dağıtıma devam edebilirsiniz.",
+			"dependency_issues_found": "Bağımlılık Sorunları Bulundu",
+			"resolve_issues_before_continuing": "CREATE2 proxy bu ağda mevcut değil. Lütfen desteklenen bir ağa geçin.",
+			"recheck_dependencies": "Bağımlılıkları Yeniden Kontrol Et",
+			"address_label": "Adres:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Lütfen önce önceki sorunu çözün",
+			"view_deployment_guide": "Dağıtım Kılavuzunu Görüntüle",
+			"deploy_coming_soon": "Sözleşme Dağıt (Yakında)",
+			"deploy_contract": "{contractName} Dağıt",
+			"checks": {
+				"category": {
+					"network": "Ağ",
+					"protocol": "Protokol",
+					"contract": "Sözleşme"
+				},
+				"rpc_endpoint": {
+					"name": "RPC Endpoint",
+					"description": "{network} ağına bağlantı",
+					"chain_id_mismatch": "Chain ID uyuşmazlığı: beklenen {expected}, alınan {actual}",
+					"configure_rpc_button": "RPC Yapılandır",
+					"connected_to_block": "#{blockNumber} bloğuna bağlı",
+					"failed_to_connect": "RPC endpoint'e bağlanılamadı",
+					"no_rpc_configured": "RPC endpoint yapılandırılmamış"
+				},
+				"contract": {
+					"create2_proxy_description": "Deterministik dağıtım için CREATE2 Proxy",
+					"deployed": "Dağıtıldı",
+					"not_deployed": "Bu ağda dağıtılmadı",
+					"check_failed": "Sözleşme kontrolü başarısız"
+				}
+			}
+		},
+		"footer": {
+			"continue": "Devam Et",
+			"hint": "Devam etmek için tüm bağımlılıklar mevcut olmalıdır",
+			"checking_dependencies": "Bağımlılıklar kontrol ediliyor...",
+			"resolve_issues": "Devam etmek için lütfen yukarıdaki sorunları çözün",
+			"waiting_for_checks": "Bağımlılık kontrollerinin tamamlanması bekleniyor"
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "Sözleşme Dağıt",
+			"description": "Sözleşme dağıtım parametrelerinizi yapılandırın",
+			"bytecode_title": "Sözleşme Bytecode",
+			"bytecode_description": "Akıllı sözleşmenizin derlenmiş bytecode'u. Bunu derleyici çıktınızdan alabilirsiniz.",
+			"abi_title": "Constructor ABI",
+			"abi_description": "Constructor'ınızın ABI tanımı. Hem JSON hem de insan tarafından okunabilir formatı destekler.",
+			"constructor_title": "Constructor Argümanları",
+			"constructor_description": "Sözleşme constructor'ınıza iletilecek argümanlar, JSON dizisi formatında.",
+			"salt_title": "Salt",
+			"salt_description": "Deterministik adres oluşturma için 32 baytlık hex değeri. Aynı salt = aynı adres."
+		},
+		"content": {
+			"title": "Sözleşmenizi Dağıtın",
+			"description": "CREATE2 proxy aracılığıyla dağıtmak için sözleşme ayrıntılarını girin",
+			"bytecode_label": "Sözleşme Bytecode",
+			"bytecode_help": "Sözleşmenizin derlenmiş bytecode'unu yapıştırın (0x ile başlar)",
+			"abi_label": "Constructor ABI",
+			"abi_help": "Constructor ABI'yi JSON veya insan tarafından okunabilir formatta yapıştırın",
+			"constructor_args_label": "Constructor Argümanları",
+			"constructor_args_help": "Constructor argümanlarını JSON dizisi olarak girin, örn. [\"MyToken\", \"MTK\", 18]",
+			"salt_label": "Salt",
+			"salt_help": "Deterministik dağıtım için 32 baytlık hex değeri (0x ardından 64 hex karakter)",
+			"generate_random": "Rastgele",
+			"predicted_address": "Tahmin Edilen Sözleşme Adresi",
+			"deploy_button": "Sözleşme Dağıt",
+			"deploying": "Dağıtılıyor...",
+			"deployment_success": "Dağıtım Başarılı!",
+			"deployment_error": "Dağıtım Başarısız",
+			"contract_address": "Sözleşme Adresi",
+			"transaction_hash": "İşlem Hash"
+		},
+		"footer": {
+			"hint": "Bu son adım. Hazır olduğunuzda sözleşmenizi dağıtın."
+		}
+	}
+}

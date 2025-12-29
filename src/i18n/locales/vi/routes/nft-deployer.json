@@ -1,0 +1,236 @@
+{
+	"_meta": {
+		"code": "vi",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳"
+	},
+	"title": "Trình Triển Khai NFT",
+	"description": "Triển khai hợp đồng thông minh NFT với các tiêu chuẩn ERC-721, ERC-721A và ERC-1155",
+	"feature_1": "Hỗ trợ tiêu chuẩn ERC-721, ERC-721A, ERC-1155",
+	"feature_2": "Tiền bản quyền, nguồn cung, giá mint có thể cấu hình",
+	"feature_3": "Tính năng nâng cao: tạm dừng, đốt, tiết lộ",
+	"step1": {
+		"sidebar": {
+			"title": "Kết Nối Ví",
+			"description": "Kết nối ví Web3 của bạn để triển khai hợp đồng NFT trên mạng blockchain đã chọn.",
+			"requirements": "Yêu Cầu",
+			"requirement1": "Ví Web3 (MetaMask, WalletConnect, v.v.)",
+			"requirement2": "Đủ token gốc cho phí gas",
+			"requirement3": "Chọn mạng blockchain đích",
+			"supported_chains": "Mạng Được Hỗ Trợ"
+		},
+		"content": {
+			"title": "Chọn Mạng & Kết Nối Ví",
+			"description": "Chọn mạng blockchain để triển khai hợp đồng NFT của bạn",
+			"ready_hint": "Ví của bạn đã được kết nối và sẵn sàng tiếp tục"
+		}
+	},
+	"step2": {
+		"sidebar": {
+			"title": "Kiểm Tra Phụ Thuộc",
+			"description": "Xác minh các hợp đồng cần thiết đã được triển khai",
+			"all_passed": "Tất Cả Đạt",
+			"issues_found": "Phát Hiện Vấn Đề",
+			"passed": "Đạt",
+			"failed": "Thất Bại",
+			"selected": "Tiêu Chuẩn Đã Chọn",
+			"comparison": "So Sánh Tiêu Chuẩn",
+			"tips": "Mẹo",
+			"tip1": "ERC-721 là tiêu chuẩn NFT gốc với khả năng tương thích rộng nhất",
+			"tip2": "ERC-721A tiết kiệm gas cho mint hàng loạt",
+			"tip3": "ERC-1155 tốt nhất cho vật phẩm game và bộ sưu tập đa phiên bản"
+		},
+		"content": {
+			"title": "Kiểm Tra Phụ Thuộc",
+			"description": "Xác minh phụ thuộc mạng và hợp đồng",
+			"checking_dependencies_for": "Đang kiểm tra môi trường mạng {network}...",
+			"wallet_not_connected_title": "Ví Chưa Kết Nối",
+			"wallet_not_connected_message": "Vui lòng quay lại Bước 1 và kết nối ví của bạn",
+			"go_to_step1": "Đến Bước 1",
+			"all_dependencies_satisfied": "Tất Cả Phụ Thuộc Đã Thỏa Mãn",
+			"network_properly_configured": "Mạng được cấu hình đúng cho triển khai NFT",
+			"dependency_issues_found": "Phát Hiện Vấn Đề Phụ Thuộc",
+			"resolve_issues_before_continuing": "Vui lòng giải quyết các vấn đề trước khi tiếp tục",
+			"recheck_dependencies": "Kiểm Tra Lại Phụ Thuộc",
+			"address_label": "Địa chỉ:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Vui lòng giải quyết vấn đề trước đó trước",
+			"view_deployment_guide": "Xem Hướng Dẫn Triển Khai",
+			"deploy_coming_soon": "Triển Khai Hợp Đồng (Sắp Ra Mắt)",
+			"deploy_contract": "Triển Khai {contractName}",
+			"selected_confirmation": "Bạn đã chọn tiêu chuẩn này",
+			"checks": {
+				"rpc": {
+					"title": "Kết Nối RPC",
+					"description": "Xác minh kết nối mạng"
+				},
+				"contract": {
+					"create2_proxy_description": "Proxy CREATE2 cho triển khai xác định",
+					"multicall3_description": "Multicall3 cho các hoạt động hàng loạt",
+					"biubiu_premium_description": "BiuBiu Premium cho các tính năng nâng cao",
+					"nft_factory_description": "NFT Factory để triển khai hợp đồng NFT"
+				},
+				"category": {
+					"network": "Mạng",
+					"protocol": "Giao Thức",
+					"contract": "Hợp Đồng"
+				}
+			}
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "Cấu Hình NFT",
+			"description": "Thiết lập các tham số bộ sưu tập NFT của bạn",
+			"progress": "Tiến Độ",
+			"field_name": "Tên",
+			"field_symbol": "Ký Hiệu",
+			"field_base_uri": "URI Cơ Sở",
+			"field_description": "Mô Tả",
+			"collection_name": "Tên Bộ Sưu Tập",
+			"symbol": "Ký Hiệu",
+			"stake_enabled": "Stake-to-Mint",
+			"all_required_complete": "Tất cả các trường bắt buộc đã hoàn thành!",
+			"ready": "Sẵn Sàng",
+			"incomplete": "Chưa Hoàn Thành",
+			"tips": "Mẹo",
+			"tip1": "Chọn tên bộ sưu tập độc đáo",
+			"tip2": "URI cơ sở có thể sử dụng IPFS hoặc HTTP",
+			"tip3": "Stake-to-mint tạo tiện ích cho token của bạn",
+			"preview": "Xem Trước"
+		},
+		"content": {
+			"title": "Cấu Hình Tham Số NFT",
+			"description": "Thiết lập thông tin cơ bản và tùy chọn mint",
+			"basic_info": "Thông Tin Cơ Bản",
+			"name_label": "Tên Bộ Sưu Tập",
+			"name_placeholder": "NFT Tuyệt Vời Của Tôi",
+			"name_hint": "Tên của bộ sưu tập NFT của bạn",
+			"symbol_label": "Ký Hiệu",
+			"symbol_placeholder": "AWESOME",
+			"symbol_hint": "Mã định danh ngắn (ví dụ: BAYC, PUNK)",
+			"description_label": "Mô Tả",
+			"description_placeholder": "Một bộ sưu tập nghệ thuật số độc đáo...",
+			"description_hint": "Mô tả bộ sưu tập NFT của bạn",
+			"base_uri_label": "URI Cơ Sở",
+			"base_uri_placeholder": "ipfs://...",
+			"base_uri_hint": "URL cơ sở cho siêu dữ liệu token",
+			"mint_type_label": "Loại Mint",
+			"mint_settings": "Tùy Chọn Mint",
+			"public_mint_enabled": "Mint Chủ Sở Hữu",
+			"public_mint_hint": "Chỉ chủ sở hữu hợp đồng có thể mint NFT",
+			"stake_to_mint": "Stake-to-Mint",
+			"enable_stake_to_mint": "Bật Stake-to-Mint",
+			"stake_to_mint_hint": "Yêu cầu stake token để mint NFT",
+			"stake_token_label": "Địa Chỉ Token Stake",
+			"stake_token_hint": "Địa chỉ token ERC20 cần thiết để mint",
+			"stake_amount_label": "Số Lượng Stake",
+			"stake_amount_hint": "Số lượng token để stake (tính bằng wei)",
+			"preview": "Xem Trước"
+		}
+	},
+	"step4": {
+		"sidebar": {
+			"title": "Cấu Hình Cài Đặt",
+			"description": "Thiết lập các tùy chọn nâng cao cho NFT của bạn",
+			"success": "Hợp Đồng NFT Đã Triển Khai Thành Công!",
+			"error": "Triển Khai Thất Bại",
+			"configured": "Đã Cấu Hình",
+			"supply_limit": "Giới Hạn Nguồn Cung",
+			"mint_price": "Giá Mint",
+			"royalties": "Tiền Bản Quyền",
+			"special_features": "Tính Năng Đặc Biệt",
+			"recommendations": "Khuyến Nghị",
+			"rec1": "Đặt giới hạn nguồn cung hợp lý",
+			"rec2": "Xem xét bật tiền bản quyền",
+			"rec3": "Kiểm tra trên testnet trước"
+		},
+		"content": {
+			"title": "Cấu Hình Cài Đặt",
+			"description": "Thiết lập các tùy chọn và tính năng nâng cao",
+			"supply_pricing": "Nguồn Cung & Giá",
+			"max_supply_label": "Nguồn Cung Tối Đa",
+			"max_supply_hint": "Số lượng NFT tối đa có thể mint",
+			"mint_price_label": "Giá Mint",
+			"mint_price_hint": "Giá bằng token gốc để mint một NFT",
+			"max_per_wallet_label": "Tối Đa Mỗi Ví",
+			"max_per_wallet_hint": "Số NFT tối đa một ví có thể mint",
+			"royalties": "Tiền Bản Quyền",
+			"enable_royalties": "Bật Tiền Bản Quyền",
+			"royalty_recipient_label": "Người Nhận Bản Quyền",
+			"royalty_recipient_hint": "Địa chỉ nhận thanh toán bản quyền",
+			"royalty_percentage_label": "Phần Trăm Bản Quyền",
+			"royalty_percentage_hint": "Phần trăm doanh số (0-10%)",
+			"features": "Tính Năng",
+			"pausable": "Có Thể Tạm Dừng",
+			"pausable_hint": "Cho phép tạm dừng tất cả giao dịch chuyển",
+			"burnable": "Có Thể Đốt",
+			"burnable_hint": "Cho phép đốt NFT",
+			"revealable": "Có Thể Tiết Lộ",
+			"revealable_hint": "Hỗ trợ tiết lộ siêu dữ liệu trì hoãn",
+			"fungible": "Có Thể Thay Thế",
+			"fungible_hint": "Cho phép nhiều bản sao của cùng một NFT",
+			"access_control": "Kiểm Soát Truy Cập",
+			"owner_only": "Chỉ Chủ Sở Hữu",
+			"public_mint": "Mint Công Khai",
+			"whitelist": "Danh Sách Trắng",
+			"stake_to_mint": "Stake-to-Mint",
+			"stake_to_mint_hint": "Yêu cầu stake token để mint",
+			"enable_stake_to_mint": "Bật Stake-to-Mint",
+			"stake_token_label": "Địa Chỉ Token Stake",
+			"stake_token_hint": "Địa chỉ token ERC20 cần thiết để mint",
+			"stake_amount_label": "Số Lượng Stake",
+			"stake_amount_hint": "Số lượng token để stake (tính bằng wei)",
+			"review": {
+				"title": "Xem Lại Cấu Hình",
+				"basic_info": "Thông Tin Cơ Bản",
+				"mint_settings": "Cài Đặt Mint",
+				"stake_settings": "Cài Đặt Stake-to-Mint"
+			},
+			"deployment": {
+				"title": "Triển Khai",
+				"deploy_button": "Triển Khai Hợp Đồng NFT",
+				"deploying": "Đang triển khai...",
+				"please_wait": "Vui lòng chờ trong khi hợp đồng đang được triển khai",
+				"success": "Triển Khai Thành Công!",
+				"nft_deployed": "Hợp đồng NFT của bạn đã được triển khai lên blockchain",
+				"error": "Triển Khai Thất Bại",
+				"retry": "Thử Lại",
+				"contract_address": "Địa Chỉ Hợp Đồng",
+				"transaction_hash": "Hash Giao Dịch"
+			}
+		},
+		"footer": {
+			"deploy_another": "Triển Khai NFT Khác"
+		}
+	},
+	"step5": {
+		"sidebar": {
+			"title": "Xem Lại & Triển Khai",
+			"description": "Xem lại cấu hình và triển khai",
+			"checklist": "Danh Sách Kiểm Tra Trước Triển Khai",
+			"check1": "Ví đã kết nối",
+			"check2": "Phụ thuộc mạng đã xác minh",
+			"check3": "Tham số NFT đã cấu hình",
+			"check4": "Cài đặt đã hoàn tất",
+			"deployment_status": "Trạng Thái Triển Khai",
+			"status_ready": "Sẵn Sàng Triển Khai",
+			"status_preparing": "Đang chuẩn bị...",
+			"status_deploying": "Đang triển khai...",
+			"status_completed": "Hoàn Thành",
+			"status_error": "Lỗi"
+		},
+		"content": {
+			"title": "Xem Lại & Triển Khai",
+			"description": "Xem lại cấu hình và triển khai hợp đồng NFT của bạn",
+			"basic_config": "Cấu Hình Cơ Bản",
+			"advanced_settings": "Cài Đặt Nâng Cao",
+			"nft_standard": "Tiêu Chuẩn NFT",
+			"deploy_button": "Triển Khai Hợp Đồng NFT",
+			"success_title": "Triển Khai Thành Công!",
+			"success_message": "Hợp đồng NFT của bạn đã được triển khai lên blockchain"
+		}
+	}
+}

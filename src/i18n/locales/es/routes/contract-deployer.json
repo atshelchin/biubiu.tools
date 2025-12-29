@@ -1,0 +1,155 @@
+{
+	"_meta": {
+		"code": "es",
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸"
+	},
+	"title": "Desplegador de Contratos",
+	"description": "Despliega contratos inteligentes de forma determinística usando el proxy CREATE2",
+	"feature_1": "Despliegue determinístico en todas las cadenas",
+	"feature_2": "Misma dirección de contrato en cada red",
+	"feature_3": "Interfaz simple y amigable para desarrolladores",
+	"faqs": {
+		"what_is_create2": "¿Qué es CREATE2?",
+		"create2_explanation": "CREATE2 es un opcode de Ethereum que permite el despliegue determinístico de contratos. Calcula la dirección del contrato antes del despliegue basándose en el bytecode y el salt, asegurando la misma dirección en diferentes redes.",
+		"what_is_deterministic": "¿Qué es el despliegue determinístico?",
+		"deterministic_explanation": "El despliegue determinístico significa que el contrato siempre se desplegará en la misma dirección en cualquier red, siempre que uses el mismo bytecode, argumentos del constructor y salt. Esto es extremadamente útil para aplicaciones cross-chain.",
+		"what_is_bytecode": "¿Qué es el bytecode?",
+		"bytecode_explanation": "El bytecode es la versión compilada del código de tu contrato inteligente. Cuando compilas tu contrato Solidity, obtienes bytecode que es el código real que se ejecuta en la Máquina Virtual de Ethereum (EVM).",
+		"what_is_abi": "¿Qué es el ABI?",
+		"abi_explanation": "ABI (Interfaz Binaria de Aplicación) define cómo interactuar con tu contrato. Para el despliegue, necesitas el ABI del constructor para codificar correctamente los argumentos del constructor. Puedes proporcionarlo en formato JSON o formato legible para humanos.",
+		"what_is_salt": "¿Qué es el salt?",
+		"salt_explanation": "El salt es un valor de 32 bytes utilizado en CREATE2 para generar la dirección del contrato. Diferentes salts resultan en diferentes direcciones. Puedes usar el mismo salt para desplegar en la misma dirección en diferentes redes."
+	},
+	"seo": {
+		"page_title": "Desplegador de Contratos - Despliegue Determinístico de Contratos Inteligentes | BiuBiu Tools",
+		"page_description": "Despliega contratos inteligentes de forma determinística usando el proxy CREATE2. Misma dirección de contrato en todas las redes EVM. Interfaz amigable para desarrolladores para pruebas y producción.",
+		"keywords": "desplegador de contratos, CREATE2, despliegue determinístico, contrato inteligente, ethereum, polygon, BSC, solidity, herramientas web3",
+		"webapp_name": "Desplegador de Contratos",
+		"webapp_description": "Despliega contratos inteligentes de forma determinística usando el proxy CREATE2 en todas las redes EVM.",
+		"feature_1": "Despliegue determinístico con CREATE2",
+		"feature_2": "Soporte multi-red (Ethereum, Polygon, BSC, etc.)",
+		"feature_3": "Previsualiza la dirección del contrato antes del despliegue",
+		"howto_name": "Cómo Desplegar Contratos de Forma Determinística con CREATE2",
+		"howto_description": "Guía paso a paso para desplegar contratos inteligentes a la misma dirección en múltiples redes usando el proxy CREATE2.",
+		"howto_tool_1": "Contrato Proxy CREATE2 (0x4e59b44847b379578588920cA78FbF26c0B4956C)",
+		"step_1_name": "Conecta Tu Billetera",
+		"step_1_text": "Conecta tu billetera Web3 a la red donde quieres desplegar el contrato. Asegúrate de tener suficientes tokens nativos para las tarifas de gas.",
+		"step_1_description": "Vincula tu billetera Web3",
+		"step_2_name": "Verifica Dependencias",
+		"step_2_text": "Verifica que el contrato proxy CREATE2 esté disponible en tu red seleccionada. El sistema verificará si el proxy existe en la dirección estándar.",
+		"step_2_description": "Verifica la disponibilidad del proxy CREATE2",
+		"step_3_name": "Despliega el Contrato",
+		"step_3_text": "Ingresa el bytecode de tu contrato, el ABI del constructor, los argumentos del constructor y el salt. El sistema calculará y mostrará la dirección del contrato predicha. Haz clic en desplegar para ejecutar la transacción de despliegue.",
+		"step_3_description": "Configura y despliega el contrato"
+	},
+	"step1": {
+		"sidebar": {
+			"title": "Conectar Billetera",
+			"description": "Conecta tu billetera Web3 para desplegar contratos inteligentes usando el proxy CREATE2."
+		},
+		"content": {
+			"title": "Selecciona Red y Conecta Billetera",
+			"description": "Elige la red blockchain donde quieres desplegar tu contrato",
+			"loading": "Cargando configuración de red..."
+		},
+		"footer": {
+			"continue": "Continuar",
+			"hint": "Conecta tu billetera para continuar"
+		}
+	},
+	"step2": {
+		"sidebar": {
+			"title": "Verificar Dependencias",
+			"description": "Verifica que el contrato proxy CREATE2 esté disponible en la red seleccionada.",
+			"required_contracts": "Contratos Requeridos"
+		},
+		"content": {
+			"title": "Verificar Dependencias",
+			"description": "Comprobando si el proxy CREATE2 está disponible en esta red",
+			"checking_dependencies_for": "Verificando entorno de red {network}...",
+			"wallet_not_connected_title": "Billetera No Conectada",
+			"wallet_not_connected_message": "Por favor, vuelve al Paso 1 y conecta tu billetera",
+			"go_to_step1": "Ir al Paso 1",
+			"all_dependencies_satisfied": "Todas las Dependencias Satisfechas",
+			"network_properly_configured": "El proxy CREATE2 está disponible. Puedes proceder con el despliegue.",
+			"dependency_issues_found": "Problemas de Dependencia Encontrados",
+			"resolve_issues_before_continuing": "El proxy CREATE2 no está disponible en esta red. Por favor, cambia a una red soportada.",
+			"recheck_dependencies": "Volver a Verificar Dependencias",
+			"address_label": "Dirección:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Por favor, resuelve el problema anterior primero",
+			"view_deployment_guide": "Ver Guía de Despliegue",
+			"deploy_coming_soon": "Desplegar Contrato (Próximamente)",
+			"deploy_contract": "Desplegar {contractName}",
+			"checks": {
+				"category": {
+					"network": "Red",
+					"protocol": "Protocolo",
+					"contract": "Contrato"
+				},
+				"rpc_endpoint": {
+					"name": "Endpoint RPC",
+					"description": "Conexión a la red {network}",
+					"chain_id_mismatch": "Chain ID no coincide: esperado {expected}, obtenido {actual}",
+					"configure_rpc_button": "Configurar RPC",
+					"connected_to_block": "Conectado al bloque #{blockNumber}",
+					"failed_to_connect": "Error al conectar al endpoint RPC",
+					"no_rpc_configured": "No hay endpoint RPC configurado"
+				},
+				"contract": {
+					"create2_proxy_description": "Proxy CREATE2 para despliegue determinístico",
+					"deployed": "Desplegado",
+					"not_deployed": "No desplegado en esta red",
+					"check_failed": "Error al verificar el contrato"
+				}
+			}
+		},
+		"footer": {
+			"continue": "Continuar",
+			"hint": "Todas las dependencias deben estar disponibles para continuar",
+			"checking_dependencies": "Verificando dependencias...",
+			"resolve_issues": "Por favor, resuelve los problemas anteriores para continuar",
+			"waiting_for_checks": "Esperando a que se completen las verificaciones de dependencias"
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "Desplegar Contrato",
+			"description": "Configura los parámetros de despliegue de tu contrato",
+			"bytecode_title": "Bytecode del Contrato",
+			"bytecode_description": "El bytecode compilado de tu contrato inteligente. Puedes obtenerlo de la salida de tu compilador.",
+			"abi_title": "ABI del Constructor",
+			"abi_description": "La definición ABI de tu constructor. Soporta formato JSON y formato legible para humanos.",
+			"constructor_title": "Argumentos del Constructor",
+			"constructor_description": "Los argumentos a pasar al constructor de tu contrato, en formato de array JSON.",
+			"salt_title": "Salt",
+			"salt_description": "Un valor hexadecimal de 32 bytes para la generación determinística de direcciones. Mismo salt = misma dirección."
+		},
+		"content": {
+			"title": "Despliega Tu Contrato",
+			"description": "Ingresa los detalles del contrato para desplegar vía proxy CREATE2",
+			"bytecode_label": "Bytecode del Contrato",
+			"bytecode_help": "Pega el bytecode compilado de tu contrato (comienza con 0x)",
+			"abi_label": "ABI del Constructor",
+			"abi_help": "Pega el ABI del constructor en formato JSON o legible para humanos",
+			"constructor_args_label": "Argumentos del Constructor",
+			"constructor_args_help": "Ingresa los argumentos del constructor como array JSON, ej. [\"MyToken\", \"MTK\", 18]",
+			"salt_label": "Salt",
+			"salt_help": "Un valor hexadecimal de 32 bytes para despliegue determinístico (0x seguido de 64 caracteres hexadecimales)",
+			"generate_random": "Aleatorio",
+			"predicted_address": "Dirección del Contrato Predicha",
+			"deploy_button": "Desplegar Contrato",
+			"deploying": "Desplegando...",
+			"deployment_success": "¡Despliegue Exitoso!",
+			"deployment_error": "Despliegue Fallido",
+			"contract_address": "Dirección del Contrato",
+			"transaction_hash": "Hash de Transacción"
+		},
+		"footer": {
+			"hint": "Este es el paso final. Despliega tu contrato cuando estés listo."
+		}
+	}
+}

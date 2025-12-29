@@ -1,0 +1,236 @@
+{
+	"_meta": {
+		"code": "es",
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸"
+	},
+	"title": "Desplegador de NFT",
+	"description": "Despliega contratos inteligentes NFT con estándares ERC-721, ERC-721A y ERC-1155",
+	"feature_1": "Soporte para estándares ERC-721, ERC-721A, ERC-1155",
+	"feature_2": "Regalías, suministro y precio de acuñación configurables",
+	"feature_3": "Funciones avanzadas: pausable, quemable, revelable",
+	"step1": {
+		"sidebar": {
+			"title": "Conectar Billetera",
+			"description": "Conecta tu billetera Web3 para desplegar contratos NFT en la red blockchain que elijas.",
+			"requirements": "Requisitos",
+			"requirement1": "Billetera Web3 (MetaMask, WalletConnect, etc.)",
+			"requirement2": "Tokens nativos suficientes para tarifas de gas",
+			"requirement3": "Seleccionar red blockchain objetivo",
+			"supported_chains": "Redes Soportadas"
+		},
+		"content": {
+			"title": "Selecciona Red y Conecta Billetera",
+			"description": "Elige la red blockchain para el despliegue de tu contrato NFT",
+			"ready_hint": "Tu billetera está conectada y lista para continuar"
+		}
+	},
+	"step2": {
+		"sidebar": {
+			"title": "Verificar Dependencias",
+			"description": "Verifica que los contratos requeridos estén desplegados",
+			"all_passed": "Todo Aprobado",
+			"issues_found": "Problemas Encontrados",
+			"passed": "Aprobado",
+			"failed": "Fallido",
+			"selected": "Estándar Seleccionado",
+			"comparison": "Comparación de Estándares",
+			"tips": "Consejos",
+			"tip1": "ERC-721 es el estándar NFT original con la mayor compatibilidad",
+			"tip2": "ERC-721A ofrece ahorro de gas para acuñación por lotes",
+			"tip3": "ERC-1155 es mejor para objetos de juegos y colecciones multi-edición"
+		},
+		"content": {
+			"title": "Verificar Dependencias",
+			"description": "Verificar dependencias de red y contrato",
+			"checking_dependencies_for": "Verificando entorno de red {network}...",
+			"wallet_not_connected_title": "Billetera No Conectada",
+			"wallet_not_connected_message": "Por favor, vuelve al Paso 1 y conecta tu billetera",
+			"go_to_step1": "Ir al Paso 1",
+			"all_dependencies_satisfied": "Todas las Dependencias Satisfechas",
+			"network_properly_configured": "La red está correctamente configurada para el despliegue de NFT",
+			"dependency_issues_found": "Problemas de Dependencia Encontrados",
+			"resolve_issues_before_continuing": "Por favor, resuelve los problemas antes de continuar",
+			"recheck_dependencies": "Volver a Verificar Dependencias",
+			"address_label": "Dirección:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Por favor, resuelve el problema anterior primero",
+			"view_deployment_guide": "Ver Guía de Despliegue",
+			"deploy_coming_soon": "Desplegar Contrato (Próximamente)",
+			"deploy_contract": "Desplegar {contractName}",
+			"selected_confirmation": "Has seleccionado este estándar",
+			"checks": {
+				"rpc": {
+					"title": "Conexión RPC",
+					"description": "Verificar conectividad de red"
+				},
+				"contract": {
+					"create2_proxy_description": "Proxy CREATE2 para despliegue determinístico",
+					"multicall3_description": "Multicall3 para operaciones por lotes",
+					"biubiu_premium_description": "BiuBiu Premium para funciones avanzadas",
+					"nft_factory_description": "NFT Factory para desplegar contratos NFT"
+				},
+				"category": {
+					"network": "Red",
+					"protocol": "Protocolo",
+					"contract": "Contrato"
+				}
+			}
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "Configurar NFT",
+			"description": "Configura los parámetros de tu colección NFT",
+			"progress": "Progreso",
+			"field_name": "Nombre",
+			"field_symbol": "Símbolo",
+			"field_base_uri": "URI Base",
+			"field_description": "Descripción",
+			"collection_name": "Nombre de la Colección",
+			"symbol": "Símbolo",
+			"stake_enabled": "Stake-para-Acuñar",
+			"all_required_complete": "¡Todos los campos requeridos completados!",
+			"ready": "Listo",
+			"incomplete": "Incompleto",
+			"tips": "Consejos",
+			"tip1": "Elige un nombre de colección único",
+			"tip2": "La URI base puede usar IPFS o HTTP",
+			"tip3": "Stake-para-acuñar crea utilidad para tu token",
+			"preview": "Vista Previa"
+		},
+		"content": {
+			"title": "Configurar Parámetros NFT",
+			"description": "Configura la información básica y las opciones de acuñación",
+			"basic_info": "Información Básica",
+			"name_label": "Nombre de la Colección",
+			"name_placeholder": "Mi NFT Impresionante",
+			"name_hint": "El nombre de tu colección NFT",
+			"symbol_label": "Símbolo",
+			"symbol_placeholder": "AWESOME",
+			"symbol_hint": "Identificador corto (ej., BAYC, PUNK)",
+			"description_label": "Descripción",
+			"description_placeholder": "Una colección única de arte digital...",
+			"description_hint": "Describe tu colección NFT",
+			"base_uri_label": "URI Base",
+			"base_uri_placeholder": "ipfs://...",
+			"base_uri_hint": "URL base para metadatos de token",
+			"mint_type_label": "Tipo de Acuñación",
+			"mint_settings": "Opciones de Acuñación",
+			"public_mint_enabled": "Acuñación del Propietario",
+			"public_mint_hint": "Solo el propietario del contrato puede acuñar NFTs",
+			"stake_to_mint": "Stake-para-Acuñar",
+			"enable_stake_to_mint": "Habilitar Stake-para-Acuñar",
+			"stake_to_mint_hint": "Requiere hacer staking de tokens para acuñar NFTs",
+			"stake_token_label": "Dirección del Token de Stake",
+			"stake_token_hint": "Dirección del token ERC20 requerido para acuñar",
+			"stake_amount_label": "Cantidad de Stake",
+			"stake_amount_hint": "Cantidad de tokens a stakear (en wei)",
+			"preview": "Vista Previa"
+		}
+	},
+	"step4": {
+		"sidebar": {
+			"title": "Configurar Ajustes",
+			"description": "Establece opciones avanzadas para tu NFT",
+			"success": "¡Contrato NFT Desplegado Exitosamente!",
+			"error": "Despliegue Fallido",
+			"configured": "Configurado",
+			"supply_limit": "Límite de Suministro",
+			"mint_price": "Precio de Acuñación",
+			"royalties": "Regalías",
+			"special_features": "Funciones Especiales",
+			"recommendations": "Recomendaciones",
+			"rec1": "Establece límites de suministro razonables",
+			"rec2": "Considera habilitar regalías",
+			"rec3": "Prueba primero en testnet"
+		},
+		"content": {
+			"title": "Configurar Ajustes",
+			"description": "Establece opciones y funciones avanzadas",
+			"supply_pricing": "Suministro y Precios",
+			"max_supply_label": "Suministro Máximo",
+			"max_supply_hint": "Número máximo de NFTs que se pueden acuñar",
+			"mint_price_label": "Precio de Acuñación",
+			"mint_price_hint": "Precio en tokens nativos para acuñar un NFT",
+			"max_per_wallet_label": "Máximo por Billetera",
+			"max_per_wallet_hint": "Máximo de NFTs que una billetera puede acuñar",
+			"royalties": "Regalías",
+			"enable_royalties": "Habilitar Regalías",
+			"royalty_recipient_label": "Receptor de Regalías",
+			"royalty_recipient_hint": "Dirección que recibe los pagos de regalías",
+			"royalty_percentage_label": "Porcentaje de Regalías",
+			"royalty_percentage_hint": "Porcentaje de ventas (0-10%)",
+			"features": "Funciones",
+			"pausable": "Pausable",
+			"pausable_hint": "Permitir pausar todas las transferencias",
+			"burnable": "Quemable",
+			"burnable_hint": "Permitir quemar NFTs",
+			"revealable": "Revelable",
+			"revealable_hint": "Soportar revelación diferida de metadatos",
+			"fungible": "Fungible",
+			"fungible_hint": "Permitir múltiples copias del mismo NFT",
+			"access_control": "Control de Acceso",
+			"owner_only": "Solo Propietario",
+			"public_mint": "Acuñación Pública",
+			"whitelist": "Lista Blanca",
+			"stake_to_mint": "Stake-para-Acuñar",
+			"stake_to_mint_hint": "Requiere hacer staking de tokens para acuñar",
+			"enable_stake_to_mint": "Habilitar Stake-para-Acuñar",
+			"stake_token_label": "Dirección del Token de Stake",
+			"stake_token_hint": "Dirección del token ERC20 requerido para acuñar",
+			"stake_amount_label": "Cantidad de Stake",
+			"stake_amount_hint": "Cantidad de tokens a stakear (en wei)",
+			"review": {
+				"title": "Revisar Configuración",
+				"basic_info": "Información Básica",
+				"mint_settings": "Configuración de Acuñación",
+				"stake_settings": "Configuración de Stake-para-Acuñar"
+			},
+			"deployment": {
+				"title": "Despliegue",
+				"deploy_button": "Desplegar Contrato NFT",
+				"deploying": "Desplegando...",
+				"please_wait": "Por favor espera mientras se despliega tu contrato",
+				"success": "¡Despliegue Exitoso!",
+				"nft_deployed": "Tu contrato NFT ha sido desplegado en la blockchain",
+				"error": "Despliegue Fallido",
+				"retry": "Reintentar Despliegue",
+				"contract_address": "Dirección del Contrato",
+				"transaction_hash": "Hash de Transacción"
+			}
+		},
+		"footer": {
+			"deploy_another": "Desplegar Otro NFT"
+		}
+	},
+	"step5": {
+		"sidebar": {
+			"title": "Revisar y Desplegar",
+			"description": "Revisa tu configuración y despliega",
+			"checklist": "Lista de Verificación Pre-Despliegue",
+			"check1": "Billetera conectada",
+			"check2": "Dependencias de red verificadas",
+			"check3": "Parámetros NFT configurados",
+			"check4": "Ajustes finalizados",
+			"deployment_status": "Estado del Despliegue",
+			"status_ready": "Listo para Desplegar",
+			"status_preparing": "Preparando...",
+			"status_deploying": "Desplegando...",
+			"status_completed": "Completado",
+			"status_error": "Error"
+		},
+		"content": {
+			"title": "Revisar y Desplegar",
+			"description": "Revisa tu configuración y despliega tu contrato NFT",
+			"basic_config": "Configuración Básica",
+			"advanced_settings": "Ajustes Avanzados",
+			"nft_standard": "Estándar NFT",
+			"deploy_button": "Desplegar Contrato NFT",
+			"success_title": "¡Despliegue Exitoso!",
+			"success_message": "Tu contrato NFT ha sido desplegado en la blockchain"
+		}
+	}
+}

@@ -1,0 +1,155 @@
+{
+	"_meta": {
+		"code": "ja",
+		"name": "日本語",
+		"englishName": "Japanese",
+		"direction": "ltr",
+		"flag": "🇯🇵"
+	},
+	"title": "コントラクトデプロイヤー",
+	"description": "CREATE2プロキシを使用して決定論的にスマートコントラクトをデプロイ",
+	"feature_1": "すべてのチェーンで決定論的デプロイ",
+	"feature_2": "すべてのネットワークで同じコントラクトアドレス",
+	"feature_3": "シンプルで開発者フレンドリーなインターフェース",
+	"faqs": {
+		"what_is_create2": "CREATE2とは何ですか？",
+		"create2_explanation": "CREATE2は、決定論的なコントラクトデプロイを可能にするEthereumのオペコードです。バイトコードとソルトに基づいてデプロイ前にコントラクトアドレスを計算し、異なるネットワークでも同じアドレスを保証します。",
+		"what_is_deterministic": "決定論的デプロイとは何ですか？",
+		"deterministic_explanation": "決定論的デプロイとは、同じバイトコード、コンストラクタ引数、ソルトを使用する限り、どのネットワークでもコントラクトが常に同じアドレスにデプロイされることを意味します。これはクロスチェーンアプリケーションに非常に有用です。",
+		"what_is_bytecode": "バイトコードとは何ですか？",
+		"bytecode_explanation": "バイトコードは、スマートコントラクトコードのコンパイル済みバージョンです。Solidityコントラクトをコンパイルすると、Ethereum仮想マシン（EVM）で実際に実行されるバイトコードが得られます。",
+		"what_is_abi": "ABIとは何ですか？",
+		"abi_explanation": "ABI（Application Binary Interface）は、コントラクトとの対話方法を定義します。デプロイには、コンストラクタ引数を正しくエンコードするためにコンストラクタABIが必要です。JSON形式または人間が読める形式で提供できます。",
+		"what_is_salt": "ソルトとは何ですか？",
+		"salt_explanation": "ソルトは、CREATE2でコントラクトアドレスを生成するために使用される32バイトの値です。異なるソルトは異なるアドレスになります。同じソルトを使用して、異なるネットワークで同じアドレスにデプロイできます。"
+	},
+	"seo": {
+		"page_title": "コントラクトデプロイヤー - 決定論的スマートコントラクトデプロイ | BiuBiu Tools",
+		"page_description": "CREATE2プロキシを使用して決定論的にスマートコントラクトをデプロイ。すべてのEVMネットワークで同じコントラクトアドレス。テストと本番用の開発者フレンドリーなインターフェース。",
+		"keywords": "コントラクトデプロイヤー, CREATE2, 決定論的デプロイ, スマートコントラクト, イーサリアム, polygon, BSC, solidity, web3ツール",
+		"webapp_name": "コントラクトデプロイヤー",
+		"webapp_description": "CREATE2プロキシを使用してすべてのEVMネットワークで決定論的にスマートコントラクトをデプロイ。",
+		"feature_1": "CREATE2による決定論的デプロイ",
+		"feature_2": "マルチネットワークサポート（Ethereum、Polygon、BSCなど）",
+		"feature_3": "デプロイ前にコントラクトアドレスをプレビュー",
+		"howto_name": "CREATE2で決定論的にコントラクトをデプロイする方法",
+		"howto_description": "CREATE2プロキシを使用して複数のネットワークで同じアドレスにスマートコントラクトをデプロイするためのステップバイステップガイド。",
+		"howto_tool_1": "CREATE2プロキシコントラクト (0x4e59b44847b379578588920cA78FbF26c0B4956C)",
+		"step_1_name": "ウォレットを接続",
+		"step_1_text": "コントラクトをデプロイしたいネットワークにWeb3ウォレットを接続します。ガス代に十分なネイティブトークンがあることを確認してください。",
+		"step_1_description": "Web3ウォレットをリンク",
+		"step_2_name": "依存関係を確認",
+		"step_2_text": "選択したネットワークでCREATE2プロキシコントラクトが利用可能か確認します。システムは標準アドレスにプロキシが存在するかチェックします。",
+		"step_2_description": "CREATE2プロキシの可用性を確認",
+		"step_3_name": "コントラクトをデプロイ",
+		"step_3_text": "コントラクトのバイトコード、コンストラクタABI、コンストラクタ引数、ソルトを入力します。システムは予測されるコントラクトアドレスを計算して表示します。デプロイをクリックしてデプロイトランザクションを実行します。",
+		"step_3_description": "コントラクトを設定してデプロイ"
+	},
+	"step1": {
+		"sidebar": {
+			"title": "ウォレットを接続",
+			"description": "CREATE2プロキシを使用してスマートコントラクトをデプロイするためにWeb3ウォレットを接続します。"
+		},
+		"content": {
+			"title": "ネットワークを選択してウォレットを接続",
+			"description": "コントラクトをデプロイしたいブロックチェーンネットワークを選択",
+			"loading": "ネットワーク設定を読み込み中..."
+		},
+		"footer": {
+			"continue": "続行",
+			"hint": "続行するにはウォレットを接続してください"
+		}
+	},
+	"step2": {
+		"sidebar": {
+			"title": "依存関係を確認",
+			"description": "選択したネットワークでCREATE2プロキシコントラクトが利用可能か確認します。",
+			"required_contracts": "必要なコントラクト"
+		},
+		"content": {
+			"title": "依存関係を確認",
+			"description": "このネットワークでCREATE2プロキシが利用可能か確認中",
+			"checking_dependencies_for": "{network}ネットワーク環境を確認中...",
+			"wallet_not_connected_title": "ウォレット未接続",
+			"wallet_not_connected_message": "ステップ1に戻り、ウォレットを接続してください",
+			"go_to_step1": "ステップ1へ",
+			"all_dependencies_satisfied": "すべての依存関係を満たしています",
+			"network_properly_configured": "CREATE2プロキシが利用可能です。デプロイを進めることができます。",
+			"dependency_issues_found": "依存関係の問題が見つかりました",
+			"resolve_issues_before_continuing": "このネットワークではCREATE2プロキシが利用できません。サポートされているネットワークに切り替えてください。",
+			"recheck_dependencies": "依存関係を再確認",
+			"address_label": "アドレス：",
+			"endpoint_label": "エンドポイント：",
+			"resolve_previous_issue": "前の問題を先に解決してください",
+			"view_deployment_guide": "デプロイガイドを表示",
+			"deploy_coming_soon": "コントラクトをデプロイ（近日公開）",
+			"deploy_contract": "{contractName}をデプロイ",
+			"checks": {
+				"category": {
+					"network": "ネットワーク",
+					"protocol": "プロトコル",
+					"contract": "コントラクト"
+				},
+				"rpc_endpoint": {
+					"name": "RPCエンドポイント",
+					"description": "{network}ネットワークへの接続",
+					"chain_id_mismatch": "Chain IDが一致しません：期待値 {expected}、実際 {actual}",
+					"configure_rpc_button": "RPCを設定",
+					"connected_to_block": "ブロック #{blockNumber} に接続済み",
+					"failed_to_connect": "RPCエンドポイントへの接続に失敗",
+					"no_rpc_configured": "RPCエンドポイントが設定されていません"
+				},
+				"contract": {
+					"create2_proxy_description": "決定論的デプロイのためのCREATE2プロキシ",
+					"deployed": "デプロイ済み",
+					"not_deployed": "このネットワークにはデプロイされていません",
+					"check_failed": "コントラクトの確認に失敗"
+				}
+			}
+		},
+		"footer": {
+			"continue": "続行",
+			"hint": "続行するにはすべての依存関係が利用可能である必要があります",
+			"checking_dependencies": "依存関係を確認中...",
+			"resolve_issues": "続行するには上記の問題を解決してください",
+			"waiting_for_checks": "依存関係チェックの完了を待っています"
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "コントラクトをデプロイ",
+			"description": "コントラクトデプロイのパラメータを設定",
+			"bytecode_title": "コントラクトバイトコード",
+			"bytecode_description": "スマートコントラクトのコンパイル済みバイトコード。コンパイラ出力から取得できます。",
+			"abi_title": "コンストラクタABI",
+			"abi_description": "コンストラクタのABI定義。JSONおよび人間が読める形式の両方をサポート。",
+			"constructor_title": "コンストラクタ引数",
+			"constructor_description": "コントラクトのコンストラクタに渡す引数（JSON配列形式）。",
+			"salt_title": "ソルト",
+			"salt_description": "決定論的アドレス生成のための32バイト16進値。同じソルト = 同じアドレス。"
+		},
+		"content": {
+			"title": "コントラクトをデプロイ",
+			"description": "CREATE2プロキシ経由でデプロイするためにコントラクトの詳細を入力",
+			"bytecode_label": "コントラクトバイトコード",
+			"bytecode_help": "コントラクトのコンパイル済みバイトコードを貼り付け（0xで始まる）",
+			"abi_label": "コンストラクタABI",
+			"abi_help": "JSONまたは人間が読める形式でコンストラクタABIを貼り付け",
+			"constructor_args_label": "コンストラクタ引数",
+			"constructor_args_help": "コンストラクタ引数をJSON配列として入力、例: [\"MyToken\", \"MTK\", 18]",
+			"salt_label": "ソルト",
+			"salt_help": "決定論的デプロイのための32バイト16進値（0xの後に64文字の16進数）",
+			"generate_random": "ランダム",
+			"predicted_address": "予測されるコントラクトアドレス",
+			"deploy_button": "コントラクトをデプロイ",
+			"deploying": "デプロイ中...",
+			"deployment_success": "デプロイ成功！",
+			"deployment_error": "デプロイ失敗",
+			"contract_address": "コントラクトアドレス",
+			"transaction_hash": "トランザクションハッシュ"
+		},
+		"footer": {
+			"hint": "これが最終ステップです。準備ができたらコントラクトをデプロイしてください。"
+		}
+	}
+}

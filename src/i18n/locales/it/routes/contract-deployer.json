@@ -1,0 +1,155 @@
+{
+	"_meta": {
+		"code": "it",
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹"
+	},
+	"title": "Deployer di Contratti",
+	"description": "Distribuisci contratti smart in modo deterministico usando il proxy CREATE2",
+	"feature_1": "Deploy deterministico su tutte le catene",
+	"feature_2": "Stesso indirizzo di contratto su ogni rete",
+	"feature_3": "Interfaccia semplice e developer-friendly",
+	"faqs": {
+		"what_is_create2": "Cos'è CREATE2?",
+		"create2_explanation": "CREATE2 è un opcode di Ethereum che consente il deploy deterministico dei contratti. Calcola l'indirizzo del contratto prima del deploy basandosi sul bytecode e sul salt, garantendo lo stesso indirizzo su diverse reti.",
+		"what_is_deterministic": "Cos'è il deploy deterministico?",
+		"deterministic_explanation": "Il deploy deterministico significa che il contratto sarà sempre distribuito allo stesso indirizzo su qualsiasi rete, purché si utilizzi lo stesso bytecode, argomenti del costruttore e salt. Questo è estremamente utile per le applicazioni cross-chain.",
+		"what_is_bytecode": "Cos'è il bytecode?",
+		"bytecode_explanation": "Il bytecode è la versione compilata del codice del tuo smart contract. Quando compili il tuo contratto Solidity, ottieni il bytecode che è il codice effettivo che gira sulla Ethereum Virtual Machine (EVM).",
+		"what_is_abi": "Cos'è l'ABI?",
+		"abi_explanation": "ABI (Application Binary Interface) definisce come interagire con il tuo contratto. Per il deploy, hai bisogno dell'ABI del costruttore per codificare correttamente gli argomenti del costruttore. Puoi fornirlo in formato JSON o in formato leggibile.",
+		"what_is_salt": "Cos'è il salt?",
+		"salt_explanation": "Il salt è un valore di 32 byte usato in CREATE2 per generare l'indirizzo del contratto. Salt diversi producono indirizzi diversi. Puoi usare lo stesso salt per distribuire allo stesso indirizzo su reti diverse."
+	},
+	"seo": {
+		"page_title": "Deployer di Contratti - Deploy Deterministico di Smart Contract | BiuBiu Tools",
+		"page_description": "Distribuisci smart contract in modo deterministico usando il proxy CREATE2. Stesso indirizzo di contratto su tutte le reti EVM. Interfaccia developer-friendly per test e produzione.",
+		"keywords": "deployer contratti, CREATE2, deploy deterministico, smart contract, ethereum, polygon, BSC, solidity, strumenti web3",
+		"webapp_name": "Deployer di Contratti",
+		"webapp_description": "Distribuisci smart contract in modo deterministico usando il proxy CREATE2 su tutte le reti EVM.",
+		"feature_1": "Deploy deterministico con CREATE2",
+		"feature_2": "Supporto multi-rete (Ethereum, Polygon, BSC, ecc.)",
+		"feature_3": "Anteprima dell'indirizzo del contratto prima del deploy",
+		"howto_name": "Come Distribuire Contratti in Modo Deterministico con CREATE2",
+		"howto_description": "Guida passo-passo per distribuire smart contract allo stesso indirizzo su più reti usando il proxy CREATE2.",
+		"howto_tool_1": "Contratto Proxy CREATE2 (0x4e59b44847b379578588920cA78FbF26c0B4956C)",
+		"step_1_name": "Connetti il Tuo Wallet",
+		"step_1_text": "Connetti il tuo wallet Web3 alla rete dove vuoi distribuire il contratto. Assicurati di avere abbastanza token nativi per le commissioni gas.",
+		"step_1_description": "Collega il tuo wallet Web3",
+		"step_2_name": "Verifica le Dipendenze",
+		"step_2_text": "Verifica che il contratto proxy CREATE2 sia disponibile sulla rete selezionata. Il sistema controllerà se il proxy esiste all'indirizzo standard.",
+		"step_2_description": "Verifica la disponibilità del proxy CREATE2",
+		"step_3_name": "Distribuisci il Contratto",
+		"step_3_text": "Inserisci il bytecode del contratto, l'ABI del costruttore, gli argomenti del costruttore e il salt. Il sistema calcolerà e mostrerà l'indirizzo del contratto previsto. Clicca deploy per eseguire la transazione di distribuzione.",
+		"step_3_description": "Configura e distribuisci il contratto"
+	},
+	"step1": {
+		"sidebar": {
+			"title": "Connetti Wallet",
+			"description": "Connetti il tuo wallet Web3 per distribuire smart contract usando il proxy CREATE2."
+		},
+		"content": {
+			"title": "Seleziona Rete e Connetti Wallet",
+			"description": "Scegli la rete blockchain dove vuoi distribuire il tuo contratto",
+			"loading": "Caricamento configurazione di rete..."
+		},
+		"footer": {
+			"continue": "Continua",
+			"hint": "Connetti il tuo wallet per continuare"
+		}
+	},
+	"step2": {
+		"sidebar": {
+			"title": "Verifica Dipendenze",
+			"description": "Verifica che il contratto proxy CREATE2 sia disponibile sulla rete selezionata.",
+			"required_contracts": "Contratti Richiesti"
+		},
+		"content": {
+			"title": "Verifica Dipendenze",
+			"description": "Controllo della disponibilità del proxy CREATE2 su questa rete",
+			"checking_dependencies_for": "Verifica ambiente di rete {network}...",
+			"wallet_not_connected_title": "Wallet Non Connesso",
+			"wallet_not_connected_message": "Torna al Passo 1 e connetti il tuo wallet",
+			"go_to_step1": "Vai al Passo 1",
+			"all_dependencies_satisfied": "Tutte le Dipendenze Soddisfatte",
+			"network_properly_configured": "Il proxy CREATE2 è disponibile. Puoi procedere con il deploy.",
+			"dependency_issues_found": "Problemi di Dipendenza Trovati",
+			"resolve_issues_before_continuing": "Il proxy CREATE2 non è disponibile su questa rete. Passa a una rete supportata.",
+			"recheck_dependencies": "Ricontrolla le Dipendenze",
+			"address_label": "Indirizzo:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Risolvi prima il problema precedente",
+			"view_deployment_guide": "Visualizza Guida al Deploy",
+			"deploy_coming_soon": "Deploy Contratto (Prossimamente)",
+			"deploy_contract": "Deploy {contractName}",
+			"checks": {
+				"category": {
+					"network": "Rete",
+					"protocol": "Protocollo",
+					"contract": "Contratto"
+				},
+				"rpc_endpoint": {
+					"name": "Endpoint RPC",
+					"description": "Connessione alla rete {network}",
+					"chain_id_mismatch": "Chain ID non corrispondente: atteso {expected}, ottenuto {actual}",
+					"configure_rpc_button": "Configura RPC",
+					"connected_to_block": "Connesso al blocco #{blockNumber}",
+					"failed_to_connect": "Impossibile connettersi all'endpoint RPC",
+					"no_rpc_configured": "Nessun endpoint RPC configurato"
+				},
+				"contract": {
+					"create2_proxy_description": "Proxy CREATE2 per deploy deterministico",
+					"deployed": "Distribuito",
+					"not_deployed": "Non distribuito su questa rete",
+					"check_failed": "Verifica del contratto fallita"
+				}
+			}
+		},
+		"footer": {
+			"continue": "Continua",
+			"hint": "Tutte le dipendenze devono essere disponibili per continuare",
+			"checking_dependencies": "Verifica dipendenze...",
+			"resolve_issues": "Risolvi i problemi sopra per continuare",
+			"waiting_for_checks": "In attesa del completamento delle verifiche delle dipendenze"
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "Deploy Contratto",
+			"description": "Configura i parametri di deploy del tuo contratto",
+			"bytecode_title": "Bytecode del Contratto",
+			"bytecode_description": "Il bytecode compilato del tuo smart contract. Puoi ottenerlo dall'output del compilatore.",
+			"abi_title": "ABI del Costruttore",
+			"abi_description": "La definizione ABI del tuo costruttore. Supporta sia formato JSON che formato leggibile.",
+			"constructor_title": "Argomenti del Costruttore",
+			"constructor_description": "Gli argomenti da passare al costruttore del contratto, in formato array JSON.",
+			"salt_title": "Salt",
+			"salt_description": "Un valore esadecimale di 32 byte per la generazione deterministica dell'indirizzo. Stesso salt = stesso indirizzo."
+		},
+		"content": {
+			"title": "Distribuisci il Tuo Contratto",
+			"description": "Inserisci i dettagli del contratto per distribuire tramite proxy CREATE2",
+			"bytecode_label": "Bytecode del Contratto",
+			"bytecode_help": "Incolla il bytecode compilato del tuo contratto (inizia con 0x)",
+			"abi_label": "ABI del Costruttore",
+			"abi_help": "Incolla l'ABI del costruttore in formato JSON o leggibile",
+			"constructor_args_label": "Argomenti del Costruttore",
+			"constructor_args_help": "Inserisci gli argomenti del costruttore come array JSON, es. [\"MyToken\", \"MTK\", 18]",
+			"salt_label": "Salt",
+			"salt_help": "Un valore esadecimale di 32 byte per deploy deterministico (0x seguito da 64 caratteri esadecimali)",
+			"generate_random": "Casuale",
+			"predicted_address": "Indirizzo del Contratto Previsto",
+			"deploy_button": "Distribuisci Contratto",
+			"deploying": "Distribuzione in corso...",
+			"deployment_success": "Deploy Riuscito!",
+			"deployment_error": "Deploy Fallito",
+			"contract_address": "Indirizzo del Contratto",
+			"transaction_hash": "Hash della Transazione"
+		},
+		"footer": {
+			"hint": "Questo è il passo finale. Distribuisci il tuo contratto quando sei pronto."
+		}
+	}
+}

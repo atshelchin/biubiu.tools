@@ -1,0 +1,236 @@
+{
+	"_meta": {
+		"code": "ru",
+		"name": "Русский",
+		"englishName": "Russian",
+		"direction": "ltr",
+		"flag": "🇷🇺"
+	},
+	"title": "Развёртыватель NFT",
+	"description": "Развёртывайте NFT смарт-контракты со стандартами ERC-721, ERC-721A и ERC-1155",
+	"feature_1": "Поддержка стандартов ERC-721, ERC-721A, ERC-1155",
+	"feature_2": "Настраиваемые роялти, предложение, цена минта",
+	"feature_3": "Продвинутые функции: приостанавливаемый, сжигаемый, раскрываемый",
+	"step1": {
+		"sidebar": {
+			"title": "Подключить кошелёк",
+			"description": "Подключите ваш Web3 кошелёк для развёртывания NFT контрактов в выбранной блокчейн-сети.",
+			"requirements": "Требования",
+			"requirement1": "Web3 кошелёк (MetaMask, WalletConnect и др.)",
+			"requirement2": "Достаточно нативных токенов для оплаты газа",
+			"requirement3": "Выбрать целевую блокчейн-сеть",
+			"supported_chains": "Поддерживаемые сети"
+		},
+		"content": {
+			"title": "Выберите сеть и подключите кошелёк",
+			"description": "Выберите блокчейн-сеть для развёртывания вашего NFT контракта",
+			"ready_hint": "Ваш кошелёк подключён и готов к продолжению"
+		}
+	},
+	"step2": {
+		"sidebar": {
+			"title": "Проверить зависимости",
+			"description": "Убедитесь, что необходимые контракты развёрнуты",
+			"all_passed": "Всё пройдено",
+			"issues_found": "Обнаружены проблемы",
+			"passed": "Пройдено",
+			"failed": "Не пройдено",
+			"selected": "Выбранный стандарт",
+			"comparison": "Сравнение стандартов",
+			"tips": "Советы",
+			"tip1": "ERC-721 — оригинальный стандарт NFT с наибольшей совместимостью",
+			"tip2": "ERC-721A предлагает экономию газа при пакетном минте",
+			"tip3": "ERC-1155 лучше всего подходит для игровых предметов и многотиражных коллекций"
+		},
+		"content": {
+			"title": "Проверить зависимости",
+			"description": "Проверка сетевых и контрактных зависимостей",
+			"checking_dependencies_for": "Проверка сетевой среды {network}...",
+			"wallet_not_connected_title": "Кошелёк не подключён",
+			"wallet_not_connected_message": "Пожалуйста, вернитесь к шагу 1 и подключите кошелёк",
+			"go_to_step1": "Перейти к шагу 1",
+			"all_dependencies_satisfied": "Все зависимости удовлетворены",
+			"network_properly_configured": "Сеть правильно настроена для развёртывания NFT",
+			"dependency_issues_found": "Обнаружены проблемы с зависимостями",
+			"resolve_issues_before_continuing": "Решите проблемы перед продолжением",
+			"recheck_dependencies": "Перепроверить зависимости",
+			"address_label": "Адрес:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Сначала решите предыдущую проблему",
+			"view_deployment_guide": "Просмотр руководства по развёртыванию",
+			"deploy_coming_soon": "Развернуть контракт (Скоро)",
+			"deploy_contract": "Развернуть {contractName}",
+			"selected_confirmation": "Вы выбрали этот стандарт",
+			"checks": {
+				"rpc": {
+					"title": "RPC соединение",
+					"description": "Проверка сетевого подключения"
+				},
+				"contract": {
+					"create2_proxy_description": "Прокси CREATE2 для детерминированного развёртывания",
+					"multicall3_description": "Multicall3 для пакетных операций",
+					"biubiu_premium_description": "BiuBiu Premium для продвинутых функций",
+					"nft_factory_description": "NFT Factory для развёртывания NFT контрактов"
+				},
+				"category": {
+					"network": "Сеть",
+					"protocol": "Протокол",
+					"contract": "Контракт"
+				}
+			}
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "Настроить NFT",
+			"description": "Установите параметры вашей NFT коллекции",
+			"progress": "Прогресс",
+			"field_name": "Название",
+			"field_symbol": "Символ",
+			"field_base_uri": "Базовый URI",
+			"field_description": "Описание",
+			"collection_name": "Название коллекции",
+			"symbol": "Символ",
+			"stake_enabled": "Стейк-для-минта",
+			"all_required_complete": "Все обязательные поля заполнены!",
+			"ready": "Готово",
+			"incomplete": "Не завершено",
+			"tips": "Советы",
+			"tip1": "Выберите уникальное название коллекции",
+			"tip2": "Базовый URI может использовать IPFS или HTTP",
+			"tip3": "Стейк-для-минта создаёт полезность для вашего токена",
+			"preview": "Предпросмотр"
+		},
+		"content": {
+			"title": "Настроить параметры NFT",
+			"description": "Установите базовую информацию и опции минта",
+			"basic_info": "Базовая информация",
+			"name_label": "Название коллекции",
+			"name_placeholder": "Мой Потрясающий NFT",
+			"name_hint": "Название вашей NFT коллекции",
+			"symbol_label": "Символ",
+			"symbol_placeholder": "AWESOME",
+			"symbol_hint": "Короткий идентификатор (напр., BAYC, PUNK)",
+			"description_label": "Описание",
+			"description_placeholder": "Уникальная коллекция цифрового искусства...",
+			"description_hint": "Опишите вашу NFT коллекцию",
+			"base_uri_label": "Базовый URI",
+			"base_uri_placeholder": "ipfs://...",
+			"base_uri_hint": "Базовый URL для метаданных токена",
+			"mint_type_label": "Тип минта",
+			"mint_settings": "Опции минта",
+			"public_mint_enabled": "Минт владельца",
+			"public_mint_hint": "Только владелец контракта может минтить NFT",
+			"stake_to_mint": "Стейк-для-минта",
+			"enable_stake_to_mint": "Включить стейк-для-минта",
+			"stake_to_mint_hint": "Требуется стейкинг токенов для минта NFT",
+			"stake_token_label": "Адрес стейк-токена",
+			"stake_token_hint": "Адрес ERC20 токена, необходимого для минта",
+			"stake_amount_label": "Сумма стейка",
+			"stake_amount_hint": "Количество токенов для стейкинга (в wei)",
+			"preview": "Предпросмотр"
+		}
+	},
+	"step4": {
+		"sidebar": {
+			"title": "Настроить параметры",
+			"description": "Установите продвинутые опции для вашего NFT",
+			"success": "NFT контракт успешно развёрнут!",
+			"error": "Развёртывание не удалось",
+			"configured": "Настроено",
+			"supply_limit": "Лимит предложения",
+			"mint_price": "Цена минта",
+			"royalties": "Роялти",
+			"special_features": "Специальные функции",
+			"recommendations": "Рекомендации",
+			"rec1": "Установите разумные лимиты предложения",
+			"rec2": "Рассмотрите включение роялти",
+			"rec3": "Сначала протестируйте в тестнете"
+		},
+		"content": {
+			"title": "Настроить параметры",
+			"description": "Установите продвинутые опции и функции",
+			"supply_pricing": "Предложение и цены",
+			"max_supply_label": "Максимальное предложение",
+			"max_supply_hint": "Максимальное количество NFT, которые можно заминтить",
+			"mint_price_label": "Цена минта",
+			"mint_price_hint": "Цена в нативных токенах для минта одного NFT",
+			"max_per_wallet_label": "Максимум на кошелёк",
+			"max_per_wallet_hint": "Максимум NFT, которые может заминтить один кошелёк",
+			"royalties": "Роялти",
+			"enable_royalties": "Включить роялти",
+			"royalty_recipient_label": "Получатель роялти",
+			"royalty_recipient_hint": "Адрес, получающий выплаты роялти",
+			"royalty_percentage_label": "Процент роялти",
+			"royalty_percentage_hint": "Процент от продаж (0-10%)",
+			"features": "Функции",
+			"pausable": "Приостанавливаемый",
+			"pausable_hint": "Разрешить приостановку всех переводов",
+			"burnable": "Сжигаемый",
+			"burnable_hint": "Разрешить сжигание NFT",
+			"revealable": "Раскрываемый",
+			"revealable_hint": "Поддержка отложенного раскрытия метаданных",
+			"fungible": "Взаимозаменяемый",
+			"fungible_hint": "Разрешить несколько копий одного NFT",
+			"access_control": "Контроль доступа",
+			"owner_only": "Только владелец",
+			"public_mint": "Публичный минт",
+			"whitelist": "Белый список",
+			"stake_to_mint": "Стейк-для-минта",
+			"stake_to_mint_hint": "Требуется стейкинг токенов для минта",
+			"enable_stake_to_mint": "Включить стейк-для-минта",
+			"stake_token_label": "Адрес стейк-токена",
+			"stake_token_hint": "Адрес ERC20 токена, необходимого для минта",
+			"stake_amount_label": "Сумма стейка",
+			"stake_amount_hint": "Количество токенов для стейкинга (в wei)",
+			"review": {
+				"title": "Проверить конфигурацию",
+				"basic_info": "Базовая информация",
+				"mint_settings": "Настройки минта",
+				"stake_settings": "Настройки стейк-для-минта"
+			},
+			"deployment": {
+				"title": "Развёртывание",
+				"deploy_button": "Развернуть NFT контракт",
+				"deploying": "Развёртывание...",
+				"please_wait": "Подождите, пока ваш контракт развёртывается",
+				"success": "Развёртывание успешно!",
+				"nft_deployed": "Ваш NFT контракт развёрнут в блокчейне",
+				"error": "Развёртывание не удалось",
+				"retry": "Повторить",
+				"contract_address": "Адрес контракта",
+				"transaction_hash": "Хеш транзакции"
+			}
+		},
+		"footer": {
+			"deploy_another": "Развернуть ещё один NFT"
+		}
+	},
+	"step5": {
+		"sidebar": {
+			"title": "Проверить и развернуть",
+			"description": "Проверьте конфигурацию и разверните",
+			"checklist": "Чек-лист перед развёртыванием",
+			"check1": "Кошелёк подключён",
+			"check2": "Сетевые зависимости проверены",
+			"check3": "Параметры NFT настроены",
+			"check4": "Настройки завершены",
+			"deployment_status": "Статус развёртывания",
+			"status_ready": "Готов к развёртыванию",
+			"status_preparing": "Подготовка...",
+			"status_deploying": "Развёртывание...",
+			"status_completed": "Завершено",
+			"status_error": "Ошибка"
+		},
+		"content": {
+			"title": "Проверить и развернуть",
+			"description": "Проверьте конфигурацию и разверните ваш NFT контракт",
+			"basic_config": "Базовая конфигурация",
+			"advanced_settings": "Расширенные настройки",
+			"nft_standard": "Стандарт NFT",
+			"deploy_button": "Развернуть NFT контракт",
+			"success_title": "Развёртывание успешно!",
+			"success_message": "Ваш NFT контракт развёрнут в блокчейне"
+		}
+	}
+}

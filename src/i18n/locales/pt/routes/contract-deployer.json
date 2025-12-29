@@ -1,0 +1,155 @@
+{
+	"_meta": {
+		"code": "pt",
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷"
+	},
+	"title": "Implantador de Contratos",
+	"description": "Implante contratos inteligentes de forma determinística usando o proxy CREATE2",
+	"feature_1": "Implantação determinística em todas as cadeias",
+	"feature_2": "Mesmo endereço de contrato em cada rede",
+	"feature_3": "Interface simples e amigável para desenvolvedores",
+	"faqs": {
+		"what_is_create2": "O que é CREATE2?",
+		"create2_explanation": "CREATE2 é um opcode do Ethereum que permite implantação determinística de contratos. Ele calcula o endereço do contrato antes da implantação com base no bytecode e salt, garantindo o mesmo endereço em diferentes redes.",
+		"what_is_deterministic": "O que é implantação determinística?",
+		"deterministic_explanation": "Implantação determinística significa que o contrato sempre será implantado no mesmo endereço em qualquer rede, desde que você use o mesmo bytecode, argumentos do construtor e salt. Isso é extremamente útil para aplicações cross-chain.",
+		"what_is_bytecode": "O que é bytecode?",
+		"bytecode_explanation": "Bytecode é a versão compilada do código do seu contrato inteligente. Quando você compila seu contrato Solidity, obtém bytecode que é o código real que roda na Máquina Virtual Ethereum (EVM).",
+		"what_is_abi": "O que é ABI?",
+		"abi_explanation": "ABI (Interface Binária de Aplicação) define como interagir com seu contrato. Para implantação, você precisa do ABI do construtor para codificar corretamente os argumentos do construtor. Você pode fornecê-lo em formato JSON ou formato legível por humanos.",
+		"what_is_salt": "O que é salt?",
+		"salt_explanation": "Salt é um valor de 32 bytes usado no CREATE2 para gerar o endereço do contrato. Diferentes salts resultam em diferentes endereços. Você pode usar o mesmo salt para implantar no mesmo endereço em diferentes redes."
+	},
+	"seo": {
+		"page_title": "Implantador de Contratos - Implantação Determinística de Contratos Inteligentes | BiuBiu Tools",
+		"page_description": "Implante contratos inteligentes de forma determinística usando o proxy CREATE2. Mesmo endereço de contrato em todas as redes EVM. Interface amigável para desenvolvedores para testes e produção.",
+		"keywords": "implantador de contratos, CREATE2, implantação determinística, contrato inteligente, ethereum, polygon, BSC, solidity, ferramentas web3",
+		"webapp_name": "Implantador de Contratos",
+		"webapp_description": "Implante contratos inteligentes de forma determinística usando o proxy CREATE2 em todas as redes EVM.",
+		"feature_1": "Implantação determinística com CREATE2",
+		"feature_2": "Suporte multi-rede (Ethereum, Polygon, BSC, etc.)",
+		"feature_3": "Visualize o endereço do contrato antes da implantação",
+		"howto_name": "Como Implantar Contratos de Forma Determinística com CREATE2",
+		"howto_description": "Guia passo a passo para implantar contratos inteligentes no mesmo endereço em múltiplas redes usando o proxy CREATE2.",
+		"howto_tool_1": "Contrato Proxy CREATE2 (0x4e59b44847b379578588920cA78FbF26c0B4956C)",
+		"step_1_name": "Conecte Sua Carteira",
+		"step_1_text": "Conecte sua carteira Web3 à rede onde você deseja implantar o contrato. Certifique-se de ter tokens nativos suficientes para taxas de gas.",
+		"step_1_description": "Vincule sua carteira Web3",
+		"step_2_name": "Verifique Dependências",
+		"step_2_text": "Verifique se o contrato proxy CREATE2 está disponível na rede selecionada. O sistema verificará se o proxy existe no endereço padrão.",
+		"step_2_description": "Verifique a disponibilidade do proxy CREATE2",
+		"step_3_name": "Implante o Contrato",
+		"step_3_text": "Digite o bytecode do seu contrato, ABI do construtor, argumentos do construtor e salt. O sistema calculará e mostrará o endereço do contrato previsto. Clique em implantar para executar a transação de implantação.",
+		"step_3_description": "Configure e implante o contrato"
+	},
+	"step1": {
+		"sidebar": {
+			"title": "Conectar Carteira",
+			"description": "Conecte sua carteira Web3 para implantar contratos inteligentes usando o proxy CREATE2."
+		},
+		"content": {
+			"title": "Selecione Rede e Conecte Carteira",
+			"description": "Escolha a rede blockchain onde você deseja implantar seu contrato",
+			"loading": "Carregando configuração de rede..."
+		},
+		"footer": {
+			"continue": "Continuar",
+			"hint": "Conecte sua carteira para continuar"
+		}
+	},
+	"step2": {
+		"sidebar": {
+			"title": "Verificar Dependências",
+			"description": "Verifique se o contrato proxy CREATE2 está disponível na rede selecionada.",
+			"required_contracts": "Contratos Necessários"
+		},
+		"content": {
+			"title": "Verificar Dependências",
+			"description": "Verificando se o proxy CREATE2 está disponível nesta rede",
+			"checking_dependencies_for": "Verificando ambiente de rede {network}...",
+			"wallet_not_connected_title": "Carteira Não Conectada",
+			"wallet_not_connected_message": "Por favor, volte ao Passo 1 e conecte sua carteira",
+			"go_to_step1": "Ir para o Passo 1",
+			"all_dependencies_satisfied": "Todas as Dependências Satisfeitas",
+			"network_properly_configured": "O proxy CREATE2 está disponível. Você pode prosseguir com a implantação.",
+			"dependency_issues_found": "Problemas de Dependência Encontrados",
+			"resolve_issues_before_continuing": "O proxy CREATE2 não está disponível nesta rede. Por favor, mude para uma rede suportada.",
+			"recheck_dependencies": "Verificar Dependências Novamente",
+			"address_label": "Endereço:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Por favor, resolva o problema anterior primeiro",
+			"view_deployment_guide": "Ver Guia de Implantação",
+			"deploy_coming_soon": "Implantar Contrato (Em Breve)",
+			"deploy_contract": "Implantar {contractName}",
+			"checks": {
+				"category": {
+					"network": "Rede",
+					"protocol": "Protocolo",
+					"contract": "Contrato"
+				},
+				"rpc_endpoint": {
+					"name": "Endpoint RPC",
+					"description": "Conexão com a rede {network}",
+					"chain_id_mismatch": "Chain ID não corresponde: esperado {expected}, obtido {actual}",
+					"configure_rpc_button": "Configurar RPC",
+					"connected_to_block": "Conectado ao bloco #{blockNumber}",
+					"failed_to_connect": "Falha ao conectar ao endpoint RPC",
+					"no_rpc_configured": "Nenhum endpoint RPC configurado"
+				},
+				"contract": {
+					"create2_proxy_description": "Proxy CREATE2 para implantação determinística",
+					"deployed": "Implantado",
+					"not_deployed": "Não implantado nesta rede",
+					"check_failed": "Falha ao verificar o contrato"
+				}
+			}
+		},
+		"footer": {
+			"continue": "Continuar",
+			"hint": "Todas as dependências devem estar disponíveis para continuar",
+			"checking_dependencies": "Verificando dependências...",
+			"resolve_issues": "Por favor, resolva os problemas acima para continuar",
+			"waiting_for_checks": "Aguardando a conclusão das verificações de dependência"
+		}
+	},
+	"step3": {
+		"sidebar": {
+			"title": "Implantar Contrato",
+			"description": "Configure os parâmetros de implantação do seu contrato",
+			"bytecode_title": "Bytecode do Contrato",
+			"bytecode_description": "O bytecode compilado do seu contrato inteligente. Você pode obtê-lo da saída do seu compilador.",
+			"abi_title": "ABI do Construtor",
+			"abi_description": "A definição ABI do seu construtor. Suporta formato JSON e formato legível por humanos.",
+			"constructor_title": "Argumentos do Construtor",
+			"constructor_description": "Os argumentos a passar para o construtor do seu contrato, em formato de array JSON.",
+			"salt_title": "Salt",
+			"salt_description": "Um valor hexadecimal de 32 bytes para geração determinística de endereços. Mesmo salt = mesmo endereço."
+		},
+		"content": {
+			"title": "Implante Seu Contrato",
+			"description": "Digite os detalhes do contrato para implantar via proxy CREATE2",
+			"bytecode_label": "Bytecode do Contrato",
+			"bytecode_help": "Cole o bytecode compilado do seu contrato (começa com 0x)",
+			"abi_label": "ABI do Construtor",
+			"abi_help": "Cole o ABI do construtor em formato JSON ou legível por humanos",
+			"constructor_args_label": "Argumentos do Construtor",
+			"constructor_args_help": "Digite os argumentos do construtor como array JSON, ex. [\"MyToken\", \"MTK\", 18]",
+			"salt_label": "Salt",
+			"salt_help": "Um valor hexadecimal de 32 bytes para implantação determinística (0x seguido de 64 caracteres hexadecimais)",
+			"generate_random": "Aleatório",
+			"predicted_address": "Endereço do Contrato Previsto",
+			"deploy_button": "Implantar Contrato",
+			"deploying": "Implantando...",
+			"deployment_success": "Implantação Bem-sucedida!",
+			"deployment_error": "Implantação Falhou",
+			"contract_address": "Endereço do Contrato",
+			"transaction_hash": "Hash da Transação"
+		},
+		"footer": {
+			"hint": "Este é o passo final. Implante seu contrato quando estiver pronto."
+		}
+	}
+}

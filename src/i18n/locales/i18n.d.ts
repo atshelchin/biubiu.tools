@@ -2861,6 +2861,13 @@ declare module '@shelchin/i18n' {
     'common.cta_learn_more': string;
     'common.deployment_cost': string;
     'common.description': string;
+    'common.development_notice.alpha': string;
+    'common.development_notice.beta': string;
+    'common.development_notice.coming_soon': string;
+    'common.development_notice.deprecated': string;
+    'common.development_notice.feedback_prompt': string;
+    'common.development_notice.github_issues': string;
+    'common.development_notice.new': string;
     'common.disabled': string;
     'common.done': string;
     'common.enabled': string;
@@ -2906,6 +2913,7 @@ declare module '@shelchin/i18n' {
     'common.status.alpha': string;
     'common.status.beta': string;
     'common.status.coming_soon': string;
+    'common.status.deprecated': string;
     'common.status.new': string;
     'common.status.stable': string;
     'common.symbol': string;
