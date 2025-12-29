@@ -20,18 +20,19 @@ import { join } from 'path';
 import rawChains from '../static/rpcs.json';
 import { categories } from '../src/features/chain-tools/data/categories';
 import { allAddresses, allNames } from '../src/features/address/data/index';
+import { localeMetas } from '../src/i18n/i18n.svelte';
 
 const SITE = 'https://biubiu.tools';
-const SUPPORTED_LOCALES = ['en', 'zh'];
 const OUTPUT_DIR = join(process.cwd(), 'static');
 
+// Generate supported locales from localeMetas
+const SUPPORTED_LOCALES = localeMetas.map((meta) => meta.code);
+
 // Locale to language code mapping for hreflang
-const LOCALE_TO_LANG: Record<string, string> = {
-	en: 'en',
-	zh: 'zh-CN',
-	ja: 'ja',
-	fr: 'fr'
-};
+// Special cases: zh -> zh-CN, others use the locale code directly
+const LOCALE_TO_LANG: Record<string, string> = Object.fromEntries(
+	localeMetas.map((meta) => [meta.code, meta.code])
+);
 
 interface Chain {
 	chainId: number;
