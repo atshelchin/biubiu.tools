@@ -1,35 +1,34 @@
 {
 	"_meta": {
-		"code": "es",
 		"name": "Español",
 		"englishName": "Spanish",
 		"direction": "ltr",
-		"flag": "🇪🇸"
+		"flag": "🇪🇸",
+		"code": "es"
 	},
-	"title": "Herramientas de Cadena",
+	"title": "Herramientas de Cadenas",
 	"subtitle": "Descubre herramientas y DApps Web3 de calidad",
 	"search_placeholder": "Buscar herramientas por nombre, etiqueta o cadena...",
 	"visit": "Visitar",
-	"empty_title": "No se encontraron herramientas",
-	"empty_description": "Intenta con diferentes palabras clave o limpia tus filtros",
+	"empty_title": "No se encontraron herramientas coincidentes",
+	"empty_description": "Prueba diferentes palabras clave o limpia tus filtros",
 	"clear_filters": "Limpiar Filtros",
 	"showing_count": "Mostrando {count} de {total} herramientas",
-	"disclaimer": "Datos obtenidos de la web. Por favor verifica de forma independiente antes de usar.",
-	"faqs_title": "Preguntas Frecuentes",
+	"disclaimer": "Datos obtenidos de la web. Por favor, verifica independientemente antes de usar.",
 	"categories": {
-		"all": "Todos",
-		"featured": "Destacados",
+		"all": "Todas",
+		"featured": "Destacadas",
 		"defi": "DeFi",
 		"nft": "NFT",
-		"analytics": "Analítica",
+		"analytics": "Analíticas",
 		"security": "Seguridad",
 		"bridge": "Puente",
 		"wallet": "Billetera",
 		"explorer": "Explorador",
-		"dev": "Herramientas Dev",
+		"dev": "Herram. Desarrollo",
 		"dao": "DAO",
 		"infra": "Infraestructura",
-		"launchpad": "Lanzamiento",
+		"launchpad": "Plataforma Lanzamiento",
 		"identity": "Identidad",
 		"social": "Social",
 		"l2": "Capa 2",
@@ -41,7 +40,7 @@
 		"yield": "Rendimiento",
 		"privacy": "Privacidad",
 		"data": "Datos",
-		"funding": "Financiación",
+		"funding": "Financiamiento",
 		"news": "Noticias",
 		"community": "Comunidad",
 		"jobs": "Empleos",
@@ -49,766 +48,767 @@
 		"dao_token": "Gobernanza DAO",
 		"whale_address": "Ballenas y Tesorerías",
 		"airdrop_token": "Airdrops",
-		"non_evm": "Cadenas Non-EVM",
+		"non_evm": "Cadenas No-EVM",
 		"legendary_token": "Tokens 10x/100x",
 		"mev": "MEV",
 		"rwa": "RWA",
-		"ai_crypto": "IA Crypto",
+		"ai_crypto": "Cripto IA",
 		"cex": "Exchanges (CEX)",
 		"gas_burner": "Quemadores de Gas",
 		"trends": "Tendencias y VC",
 		"web3_teams": "Equipos Web3",
 		"regulation": "Regulación",
 		"influencer": "KOL e Influencers",
-		"product_hunt": "Lanzamiento de Producto"
+		"product_hunt": "Lanzamiento Producto"
 	},
+	"faqs_title": "Preguntas Frecuentes",
 	"category_seo": {
 		"defi": {
-			"title": "DeFi Tools - Decentralized Finance Protocols & Apps | BiuBiu Tools",
-			"description": "Discover the best DeFi tools for swapping, lending, yield farming, and more. Compare top protocols like Uniswap, Aave, Curve, and Compound.",
-			"keywords": "defi tools, decentralized finance, dex, lending, yield farming, uniswap, aave, compound",
+			"title": "Herramientas DeFi - Protocolos y Apps de Finanzas Descentralizadas | BiuBiu Tools",
+			"description": "Descubre las mejores herramientas DeFi para intercambiar, prestar, farming de rendimiento y más. Compara los principales protocolos como Uniswap, Aave, Curve y Compound.",
+			"keywords": "herramientas defi, finanzas descentralizadas, dex, préstamos, yield farming, uniswap, aave, compound",
 			"faqs": [
 				{
-					"question": "What is DeFi?",
-					"answer": "DeFi (Decentralized Finance) refers to financial services built on blockchain technology that operate without traditional intermediaries like banks. It includes lending, borrowing, trading, and earning interest on crypto assets."
+					"question": "¿Qué es DeFi?",
+					"answer": "DeFi (Finanzas Descentralizadas) se refiere a servicios financieros construidos sobre tecnología blockchain que operan sin intermediarios tradicionales como los bancos. Incluye préstamos, empréstitos, comercio y generación de intereses sobre activos cripto."
 				},
 				{
-					"question": "What are the risks of using DeFi?",
-					"answer": "DeFi risks include smart contract vulnerabilities, impermanent loss in liquidity pools, market volatility, and potential rug pulls. Always do your research and only invest what you can afford to lose."
+					"question": "¿Cuáles son los riesgos de usar DeFi?",
+					"answer": "Los riesgos de DeFi incluyen vulnerabilidades en contratos inteligentes, pérdida impermanente en pools de liquidez, volatilidad del mercado y posibles rug pulls. Siempre investiga y solo invierte lo que puedas permitirte perder."
 				},
 				{
-					"question": "How do I get started with DeFi?",
-					"answer": "To start with DeFi: 1) Set up a crypto wallet like MetaMask, 2) Purchase some ETH or other crypto, 3) Connect your wallet to a DeFi platform, 4) Start with simple swaps before trying advanced features."
+					"question": "¿Cómo empiezo con DeFi?",
+					"answer": "Para comenzar con DeFi: 1) Configura una billetera cripto como MetaMask, 2) Compra algo de ETH u otra cripto, 3) Conecta tu billetera a una plataforma DeFi, 4) Comienza con intercambios simples antes de probar características avanzadas."
 				},
 				{
-					"question": "What is TVL in DeFi?",
-					"answer": "TVL (Total Value Locked) represents the total amount of assets deposited in a DeFi protocol. It's a key metric for measuring a protocol's popularity and security level."
+					"question": "¿Qué es TVL en DeFi?",
+					"answer": "TVL (Valor Total Bloqueado) representa la cantidad total de activos depositados en un protocolo DeFi. Es una métrica clave para medir la popularidad y nivel de seguridad de un protocolo."
 				}
 			]
 		},
 		"nft": {
-			"title": "NFT Tools - Marketplaces, Analytics & Creation | BiuBiu Tools",
-			"description": "Find the best NFT marketplaces, analytics tools, and creation platforms. Discover OpenSea, Blur, and other top NFT tools.",
-			"keywords": "nft tools, nft marketplace, opensea, blur, nft analytics, nft creation",
+			"title": "Herramientas NFT - Mercados, Analíticas y Creación | BiuBiu Tools",
+			"description": "Encuentra los mejores mercados NFT, herramientas de analíticas y plataformas de creación. Descubre OpenSea, Blur y otras herramientas NFT destacadas.",
+			"keywords": "herramientas nft, mercado nft, opensea, blur, analíticas nft, creación nft",
 			"faqs": [
 				{
-					"question": "What is an NFT?",
-					"answer": "NFT (Non-Fungible Token) is a unique digital asset on the blockchain representing ownership of items like art, music, collectibles, and virtual real estate. Each NFT is unique and cannot be replicated."
+					"question": "¿Qué es un NFT?",
+					"answer": "NFT (Token No Fungible) es un activo digital único en blockchain que representa la propiedad de elementos como arte, música, coleccionables y bienes raíces virtuales. Cada NFT es único y no puede replicarse."
 				},
 				{
-					"question": "Where can I buy NFTs?",
-					"answer": "Popular NFT marketplaces include OpenSea (largest general marketplace), Blur (for traders), Magic Eden (Solana), and Foundation (curated art). Each platform has different fees and features."
+					"question": "¿Dónde puedo comprar NFTs?",
+					"answer": "Los mercados NFT populares incluyen OpenSea (mercado general más grande), Blur (para traders), Magic Eden (Solana) y Foundation (arte curado). Cada plataforma tiene diferentes tarifas y características."
 				},
 				{
-					"question": "How do I create an NFT?",
-					"answer": "To create an NFT: 1) Create digital artwork or content, 2) Choose a blockchain (Ethereum, Solana, etc.), 3) Select a marketplace like OpenSea, 4) Connect your wallet and upload your content, 5) Set pricing and list for sale."
+					"question": "¿Cómo creo mi propio NFT?",
+					"answer": "Para crear un NFT: 1) Elige una blockchain (Ethereum, Polygon, etc.), 2) Configura una billetera, 3) Selecciona un mercado que soporte la creación, 4) Sube tu archivo digital, 5) Agrega metadatos, 6) Paga la tarifa de acuñación si es necesaria."
 				}
 			]
 		},
 		"analytics": {
-			"title": "Blockchain Analytics Tools - On-Chain Data & Insights | BiuBiu Tools",
-			"description": "Explore top blockchain analytics platforms for on-chain data, wallet tracking, and market insights. Tools like Dune, Nansen, and Arkham.",
-			"keywords": "blockchain analytics, on-chain data, dune analytics, nansen, arkham, wallet tracking",
+			"title": "Herramientas de Analíticas Blockchain - Seguimiento de Datos On-Chain | BiuBiu Tools",
+			"description": "Explora potentes herramientas de analíticas blockchain para rastrear transacciones, billeteras, protocolos y tendencias del mercado. Incluye Dune, Nansen, Glassnode y más.",
+			"keywords": "analíticas blockchain, datos on-chain, dune analytics, nansen, glassnode, rastreador de billeteras",
 			"faqs": [
 				{
-					"question": "What is on-chain analytics?",
-					"answer": "On-chain analytics involves analyzing blockchain transaction data to gain insights about wallet behavior, fund flows, protocol usage, and market trends. It helps traders and researchers make informed decisions."
+					"question": "¿Qué son las analíticas blockchain?",
+					"answer": "Las analíticas blockchain involucran el análisis de datos on-chain para obtener conocimientos sobre transacciones, comportamiento de billeteras, actividad de protocolos y tendencias del mercado. Ayudan a traders e investigadores a tomar decisiones informadas."
 				},
 				{
-					"question": "What is smart money tracking?",
-					"answer": "Smart money tracking monitors wallets of successful traders, whales, and institutions to understand their trading patterns and potentially follow their strategies."
+					"question": "¿Por qué son importantes las herramientas de analíticas?",
+					"answer": "Las herramientas de analíticas ayudan a rastrear movimientos de ballenas, identificar oportunidades de inversión, monitorear la salud de protocolos, detectar manipulación de mercado y entender tendencias cripto más amplias a través de datos transparentes on-chain."
 				},
 				{
-					"question": "Which analytics tool should I use?",
-					"answer": "Dune is great for custom SQL queries, Nansen for smart money tracking, Arkham for entity labeling, and DefiLlama for TVL data. Choose based on your specific needs."
+					"question": "¿Qué es Dune Analytics?",
+					"answer": "Dune Analytics es una plataforma donde los usuarios pueden consultar datos blockchain usando SQL, crear visualizaciones y compartir conocimientos. Es popular para crear dashboards personalizados que rastrean métricas de protocolos y DeFi."
 				}
 			]
 		},
 		"wallet": {
-			"title": "Crypto Wallets - Hardware, Software & Multi-Chain | BiuBiu Tools",
-			"description": "Compare the best crypto wallets for security and convenience. Hardware wallets, browser extensions, and mobile wallets for all blockchains.",
-			"keywords": "crypto wallet, hardware wallet, metamask, ledger, trezor, multi-chain wallet",
+			"title": "Billeteras Cripto - Billeteras Seguras Web3 y DeFi | BiuBiu Tools",
+			"description": "Encuentra las mejores billeteras cripto incluyendo MetaMask, Ledger, Trust Wallet y más. Compara billeteras de hardware, software y móviles para almacenamiento seguro.",
+			"keywords": "billetera cripto, metamask, ledger, billetera hardware, billetera web3, trust wallet",
 			"faqs": [
 				{
-					"question": "What is a crypto wallet?",
-					"answer": "A crypto wallet is software or hardware that stores your private keys and allows you to send, receive, and manage cryptocurrencies. It doesn't actually store crypto - the assets remain on the blockchain."
+					"question": "¿Qué es una billetera cripto?",
+					"answer": "Una billetera cripto es una herramienta digital que te permite almacenar, enviar y recibir criptomonedas. Administra tus claves privadas, que dan acceso a tus fondos en la blockchain."
 				},
 				{
-					"question": "Hardware wallet vs software wallet?",
-					"answer": "Hardware wallets (Ledger, Trezor) store keys offline for maximum security, ideal for large holdings. Software wallets (MetaMask, Rainbow) are more convenient for daily use but are connected to the internet."
+					"question": "¿Billetera de hardware vs software?",
+					"answer": "Las billeteras de hardware (como Ledger, Trezor) almacenan claves offline para máxima seguridad. Las billeteras de software (como MetaMask) son más convenientes para el uso diario y interacción DeFi pero son más vulnerables a hacks."
 				},
 				{
-					"question": "How do I keep my wallet safe?",
-					"answer": "Never share your seed phrase, use hardware wallets for large amounts, enable 2FA where possible, verify transaction details before signing, and be cautious of phishing sites."
+					"question": "¿Es seguro MetaMask?",
+					"answer": "MetaMask es generalmente seguro cuando se usa correctamente. Nunca compartas tu frase semilla, verifica las URLs cuidadosamente, usa billetera de hardware para grandes cantidades y ten cuidado con firmar transacciones de sitios desconocidos."
 				}
 			]
 		},
 		"security": {
-			"title": "Web3 Security Tools - Audit, Monitor & Protect | BiuBiu Tools",
-			"description": "Essential security tools for Web3. Smart contract auditing, transaction simulation, approval management, and real-time threat detection.",
-			"keywords": "web3 security, smart contract audit, revoke approvals, transaction simulation, defi security",
+			"title": "Herramientas de Seguridad Blockchain - Auditoría y Protección | BiuBiu Tools",
+			"description": "Herramientas de seguridad esenciales para auditorías de contratos inteligentes, detección de scams, comprobación de aprobaciones de tokens y protección de billeteras en Web3.",
+			"keywords": "seguridad blockchain, auditoría contrato inteligente, detector scam, comprobador aprobaciones token, seguridad web3",
 			"faqs": [
 				{
-					"question": "How do I revoke token approvals?",
-					"answer": "Use tools like Revoke.cash to view and revoke unlimited token approvals you've granted to smart contracts. This prevents potential exploits if a contract gets compromised."
+					"question": "¿Por qué es importante la seguridad blockchain?",
+					"answer": "Con miles de millones en valor en blockchains, la seguridad es crítica. Las vulnerabilidades en contratos inteligentes, proyectos scam y hacks de billeteras son comunes. Las herramientas de seguridad ayudan a proteger tus activos y verificar proyectos."
 				},
 				{
-					"question": "What is transaction simulation?",
-					"answer": "Transaction simulation (tools like Pocket Universe) previews what will happen before you sign a transaction, helping you avoid scams and unexpected outcomes."
+					"question": "¿Qué es una auditoría de contrato inteligente?",
+					"answer": "Una auditoría de contrato inteligente es una revisión exhaustiva del código por expertos en seguridad para identificar vulnerabilidades, errores y riesgos potenciales antes del despliegue. Los proyectos auditados generalmente se consideran más seguros."
 				},
 				{
-					"question": "How do I verify a smart contract is safe?",
-					"answer": "Check if the contract is audited by reputable firms, verify the code on Etherscan, look for bug bounty programs, and check the protocol's track record and TVL."
+					"question": "¿Cómo revoco las aprobaciones de tokens?",
+					"answer": "Usa herramientas como Revoke.cash o Etherscan para ver y revocar aprobaciones de tokens. Esto previene que contratos maliciosos gasten tokens que aprobaste previamente. Revisa y revoca aprobaciones no utilizadas regularmente."
 				}
 			]
 		},
 		"product_hunt": {
-			"title": "Product Launch Platforms - Discover & Promote New Products | BiuBiu Tools",
-			"description": "Find the best platforms to launch and discover new products. From Product Hunt to regional platforms like 36Kr and Disquiet.",
-			"keywords": "product hunt, product launch, startup, indie hackers, beta list, product discovery",
+			"title": "Lanzamiento de Productos Web3 - Plataformas de Launch y Promoción | BiuBiu Tools",
+			"description": "Lanza productos Web3, dApps y herramientas cripto. Descubre plataformas de lanzamiento, comunidades y estrategias de marketing para proyectos blockchain.",
+			"keywords": "lanzamiento producto web3, lanzamiento dapp, marketing cripto, promocion blockchain, comunidades lanzamiento",
 			"faqs": [
 				{
-					"question": "What is Product Hunt?",
-					"answer": "Product Hunt is the leading platform for discovering and launching new tech products. Makers can showcase their products to a community of early adopters, investors, and tech enthusiasts."
+					"question": "¿Dónde lanzo productos Web3?",
+					"answer": "Lanza en plataformas como Product Hunt (general), BetaList, ShowHN (Hacker News), comunidades cripto (Twitter CT, Discord, Reddit), directorios específicos de nicho y a través de partnerships con proyectos establecidos. Construye anticipación a través de desarrollo público."
 				},
 				{
-					"question": "When is the best time to launch on Product Hunt?",
-					"answer": "Launch at 12:01 AM PST (San Francisco time) to maximize exposure. Tuesdays and Wednesdays typically see more engagement. Avoid weekends and holidays."
+					"question": "¿Cómo comercializo productos Web3?",
+					"answer": "Estrategias efectivas: desarrollo público y actualizaciones, engagement con la comunidad, partnerships con protocolos, contenido educativo, presencia en Twitter, programas de grants, participación en hackathons, PR en publicaciones cripto y marketing de influencers."
 				},
 				{
-					"question": "What are alternatives to Product Hunt?",
-					"answer": "Alternatives include Hacker News (Show HN), BetaList for early-stage startups, Indie Hackers for bootstrapped products, and regional platforms like 36Kr (China), Disquiet (Korea), and EU-Startups (Europe)."
+					"question": "¿Cuándo debería lanzar mi producto Web3?",
+					"answer": "Lanza cuando tengas: MVP funcional con características core, auditorías de seguridad completadas, comunidad temprana construida, documentación lista, feedback de alpha testers incorporado y canales de soporte configurados. Los lanzamientos tempranos ayudan a recibir feedback pero aseguran que las funcionalidades core sean sólidas."
 				},
 				{
-					"question": "How do I promote a Web3 product?",
-					"answer": "For Web3 products, use Crypto Twitter, Farcaster, Mirror for content, and platforms like Galxe and Zealy for community campaigns. Also list on DappRadar and ICO Drops for visibility."
+					"question": "¿Qué hace exitoso un lanzamiento Web3?",
+					"answer": "Los lanzamientos exitosos combinan: problema real resuelto, UX fuerte, código auditado, beneficios claros de valor, estrategia de lanzamiento, engagement de comunidad, cobertura de medios, partnerships y a menudo incentivos (airdrops, programas de recompensas) para impulsar adopción inicial."
 				}
 			]
 		},
 		"bridge": {
-			"title": "Cross-Chain Bridges - Transfer Assets Between Blockchains | BiuBiu Tools",
-			"description": "Find the best cross-chain bridges to transfer tokens between Ethereum, Arbitrum, Optimism, Base, and other networks securely.",
-			"keywords": "",
+			"title": "Puentes Cross-Chain - Transferir Activos Entre Blockchains | BiuBiu Tools",
+			"description": "Encuentra los mejores puentes cross-chain para transferir tokens entre Ethereum, Arbitrum, Optimism, Base y otras redes de forma segura.",
+			"keywords": "puente cross-chain, puente blockchain, transferencia entre cadenas, arbitrum bridge, optimism bridge",
 			"faqs": [
 				{
-					"question": "What is a cross-chain bridge?",
-					"answer": "A cross-chain bridge is a protocol that allows you to transfer tokens and data between different blockchain networks. It locks assets on the source chain and mints equivalent tokens on the destination chain."
+					"question": "¿Qué es un puente cross-chain?",
+					"answer": "Un puente cross-chain es un protocolo que te permite transferir tokens y datos entre diferentes blockchains. Por ejemplo, mover ETH de Ethereum a Arbitrum o USDC de Polygon a Optimism."
 				},
 				{
-					"question": "Which bridges are the safest?",
-					"answer": "Native bridges from L2s (like Arbitrum Bridge, Optimism Bridge) are generally safest but slower. Third-party bridges like Stargate, Across, and Hop offer faster transfers with reasonable security. Always check bridge audit status."
+					"question": "¿Qué puentes son los más seguros?",
+					"answer": "Los puentes nativos de L2s (como Arbitrum Bridge, Optimism Bridge) son generalmente los más seguros pero más lentos. Los puentes de terceros como Stargate y Hop son más rápidos pero conllevan riesgos adicionales de contratos inteligentes."
 				},
 				{
-					"question": "How long do bridge transfers take?",
-					"answer": "Native L2 bridges take 7+ days for withdrawals due to fraud proof periods. Fast bridges like Stargate or Across complete in minutes. The speed-security tradeoff is important to understand."
+					"question": "¿Cuánto tiempo toman las transferencias de puentes?",
+					"answer": "Los puentes nativos pueden tomar 7 días para retiros de L2 a Ethereum debido a los períodos de desafío de seguridad. Los puentes de terceros suelen ser instantáneos o toman minutos, pero con mayores tarifas y riesgos."
 				}
 			]
 		},
 		"explorer": {
-			"title": "Blockchain Explorers - View Transactions & Smart Contracts | BiuBiu Tools",
-			"description": "Access blockchain explorers for Ethereum, BSC, Polygon, and other networks. View transactions, verify contracts, and analyze on-chain data.",
-			"keywords": "",
+			"title": "Exploradores de Blockchain - Rastreadores de Transacciones y Bloques | BiuBiu Tools",
+			"description": "Explora blockchains con Etherscan, BscScan, Polygonscan y otros exploradores de bloques. Rastrea transacciones, billeteras, contratos y más.",
+			"keywords": "explorador blockchain, etherscan, bscscan, polygonscan, rastreador transacciones, explorador bloques",
 			"faqs": [
 				{
-					"question": "What is a blockchain explorer?",
-					"answer": "A blockchain explorer is a search engine for blockchain data. It allows you to view transactions, wallet balances, smart contract code, token transfers, and other on-chain activity."
+					"question": "¿Qué es un explorador de blockchain?",
+					"answer": "Un explorador de blockchain es un motor de búsqueda para blockchains que te permite ver transacciones, billeteras, contratos inteligentes, bloques y otra información on-chain. Etherscan es el más popular para Ethereum."
 				},
 				{
-					"question": "How do I verify a smart contract?",
-					"answer": "On Etherscan, go to the contract address, click 'Contract' tab, then 'Verify and Publish'. Submit the source code, compiler version, and constructor arguments. Verified contracts show a green checkmark."
+					"question": "¿Cómo uso un explorador de bloques?",
+					"answer": "Ingresa una dirección de billetera, hash de transacción o dirección de contrato en la barra de búsqueda para ver detalles. Puedes rastrear el historial de transacciones, saldos de tokens, interacciones con contratos y datos de bloques."
 				},
 				{
-					"question": "What are the best multi-chain explorers?",
-					"answer": "Blockscout supports many EVM chains and is open-source. OKLink covers 50+ chains. For specific chains, use native explorers like Etherscan (Ethereum), BSCScan (BNB Chain), or Arbiscan (Arbitrum)."
+					"question": "¿Son privadas mis transacciones?",
+					"answer": "No, todas las transacciones en blockchains públicas son visibles para cualquiera a través de exploradores de bloques. Las direcciones de billeteras son pseudónimas pero pueden ser rastreadas. Usa billeteras de privacidad si necesitas anonimato."
 				}
 			]
 		},
 		"dev": {
-			"title": "Web3 Developer Tools - Build dApps & Smart Contracts | BiuBiu Tools",
-			"description": "Essential developer tools for building on Ethereum and other blockchains. Smart contract frameworks, testing tools, and deployment services.",
-			"keywords": "",
+			"title": "Herramientas para Desarrolladores Web3 - Construye en Blockchain | BiuBiu Tools",
+			"description": "Herramientas esenciales de desarrollo para construir dApps: Hardhat, Foundry, Remix, The Graph, APIs de nodos y más frameworks de contratos inteligentes.",
+			"keywords": "herramientas dev web3, desarrollo blockchain, hardhat, foundry, remix, the graph, desarrollo contrato inteligente",
 			"faqs": [
 				{
-					"question": "What are the main smart contract development frameworks?",
-					"answer": "Foundry is the fastest and most popular for Solidity. Hardhat offers great JavaScript integration and plugins. Brownie is Python-based. Anchor is the standard for Solana programs."
+					"question": "¿Qué herramientas necesito para desarrollar en Web3?",
+					"answer": "Las herramientas esenciales incluyen: frameworks de contratos inteligentes (Hardhat/Foundry), IDE (Remix/VS Code), proveedores de nodos (Alchemy/Infura), bibliotecas Web3 (ethers.js/viem) y servicios de indexación (The Graph)."
 				},
 				{
-					"question": "How do I get testnet tokens?",
-					"answer": "Use faucets like Alchemy Faucet, Infura Faucet, or chain-specific faucets. Sepolia is the main Ethereum testnet. Most L2s have their own testnet faucets linked from their documentation."
+					"question": "¿Hardhat vs Foundry?",
+					"answer": "Hardhat es un framework JavaScript maduro y con gran ecosistema de plugins. Foundry es más rápido, usa Solidity para tests y es preferido para contratos complejos. Muchos desarrolladores usan ambos dependiendo del proyecto."
 				},
 				{
-					"question": "What RPC providers should I use?",
-					"answer": "Alchemy and Infura are the most reliable with generous free tiers. QuickNode offers fast performance. For decentralized options, consider Ankr or POKT Network. Always have backup RPC endpoints."
+					"question": "¿Cómo pruebo contratos inteligentes?",
+					"answer": "Escribe pruebas unitarias usando frameworks de testing (Hardhat/Foundry), despliega en redes de prueba (Sepolia/Goerli), usa redes locales (Anvil/Ganache) y considera auditorías de seguridad antes del despliegue en mainnet."
 				}
 			]
 		},
 		"dao": {
-			"title": "DAO Tools - Governance, Voting & Treasury Management | BiuBiu Tools",
-			"description": "Tools for creating and managing DAOs. Governance platforms, voting systems, treasury management, and contributor coordination.",
-			"keywords": "",
+			"title": "Herramientas DAO - Plataformas de Gobernanza Descentralizada | BiuBiu Tools",
+			"description": "Descubre herramientas DAO para gobernanza, votación, gestión de tesorerías y coordinación de la comunidad. Incluye Snapshot, Tally, Aragon y más.",
+			"keywords": "herramientas dao, gobernanza descentralizada, snapshot, tally, aragon, votación dao",
 			"faqs": [
 				{
-					"question": "What is a DAO?",
-					"answer": "A DAO (Decentralized Autonomous Organization) is an organization governed by smart contracts and token holder votes. Members propose and vote on decisions without central authority."
+					"question": "¿Qué es una DAO?",
+					"answer": "Una DAO (Organización Autónoma Descentralizada) es una organización gobernada por contratos inteligentes y votación de miembros en lugar de liderazgo centralizado. Los holders de tokens votan en propuestas para dirigir la organización."
 				},
 				{
-					"question": "How do I participate in DAO governance?",
-					"answer": "Hold the DAO's governance token, then use platforms like Snapshot for off-chain voting or Tally for on-chain voting. Some DAOs require token delegation before voting."
+					"question": "¿Cómo participo en una DAO?",
+					"answer": "Primero, adquiere los tokens de gobernanza de la DAO. Luego únete a su Discord/foros, lee propuestas en plataformas como Snapshot o Tally, y vota según tus holdings de tokens. Algunas DAOs requieren delegación."
 				},
 				{
-					"question": "What tools do DAOs use?",
-					"answer": "Snapshot for gasless voting, Tally for on-chain governance, Gnosis Safe for treasury management, Coordinape for contributor rewards, and Discourse/Commonwealth for discussions."
+					"question": "¿Qué es Snapshot?",
+					"answer": "Snapshot es la plataforma de votación DAO más popular. Permite votación gasless off-chain mientras usa holdings on-chain de tokens para calcular el poder de voto. Es usado por miles de DAOs para gobernanza."
 				}
 			]
 		},
 		"infra": {
-			"title": "Blockchain Infrastructure - RPC Nodes, APIs & Data Services | BiuBiu Tools",
-			"description": "Infrastructure services for Web3 applications. RPC node providers, indexing services, data APIs, and decentralized storage solutions.",
-			"keywords": "",
+			"title": "Infraestructura Blockchain - Nodos, RPCs y Servicios de Datos | BiuBiu Tools",
+			"description": "Servicios esenciales de infraestructura incluyendo proveedores de nodos (Alchemy, Infura), RPCs, indexadores y herramientas de datos blockchain.",
+			"keywords": "infraestructura blockchain, proveedor nodos, alchemy, infura, rpc endpoints, indexación blockchain",
 			"faqs": [
 				{
-					"question": "What is blockchain infrastructure?",
-					"answer": "Blockchain infrastructure includes RPC nodes for blockchain access, indexers for querying data, IPFS/Arweave for decentralized storage, and oracles for off-chain data. These are the backbone of dApps."
+					"question": "¿Qué es un proveedor de nodos?",
+					"answer": "Un proveedor de nodos ofrece acceso a nodos blockchain via APIs sin necesidad de ejecutar tu propio nodo. Los servicios populares como Alchemy e Infura proporcionan endpoints RPC confiables para que las dApps interactúen con blockchains."
 				},
 				{
-					"question": "Should I run my own node?",
-					"answer": "For most projects, using a provider like Alchemy or Infura is more practical. Run your own node for maximum decentralization, specific customization needs, or archive data access."
+					"question": "¿Por qué usar Alchemy o Infura?",
+					"answer": "Ejecutar tu propio nodo blockchain requiere hardware significativo, mantenimiento y experiencia técnica. Los proveedores de nodos ofrecen infraestructura confiable y escalable, APIs mejoradas, herramientas de desarrollo y soporte."
 				},
 				{
-					"question": "What is The Graph used for?",
-					"answer": "The Graph indexes blockchain data and provides GraphQL APIs. It makes querying on-chain data fast and efficient. Most major DeFi protocols use subgraphs for their frontends."
+					"question": "¿Son gratuitos los servicios RPC?",
+					"answer": "La mayoría de proveedores ofrecen niveles gratuitos para desarrollo y aplicaciones pequeñas. Para aplicaciones en producción con alto tráfico, necesitarás planes de pago basados en solicitudes de API, unidades de computación o ancho de banda."
 				}
 			]
 		},
 		"launchpad": {
-			"title": "Token Launchpads - IDO, IEO & Fair Launch Platforms | BiuBiu Tools",
-			"description": "Discover token launch platforms for new crypto projects. IDO launchpads, IEO exchanges, and fair launch protocols.",
-			"keywords": "",
+			"title": "Launchpads de Cripto - Plataformas IDO y Token Launch | BiuBiu Tools",
+			"description": "Descubre los mejores launchpads cripto para inversiones tempranas en tokens. Compara IDO, IEO y plataformas de lanzamiento de tokens.",
+			"keywords": "crypto launchpad, ido platform, token launch, early investment, pinksale, dao maker",
 			"faqs": [
 				{
-					"question": "What is a token launchpad?",
-					"answer": "A launchpad is a platform where new crypto projects raise funds by selling tokens to early investors. Types include IDO (DEX), IEO (exchange), and fair launch platforms."
+					"question": "¿Qué es un crypto launchpad?",
+					"answer": "Un crypto launchpad es una plataforma donde nuevos proyectos cripto lanzan sus tokens al público. Ofrece a inversores tempranos acceso a tokens antes de que se listen en exchanges, generalmente con descuentos o bonificaciones."
 				},
 				{
-					"question": "How do I participate in IDOs?",
-					"answer": "Most launchpads require holding their native token and completing KYC. You'll need to stake tokens to get allocation tiers. Popular launchpads include DAO Maker, Seedify, and Polkastarter."
+					"question": "¿Cómo participo en un IDO?",
+					"answer": "Típicamente: 1) Posee tokens del launchpad, 2) Completa KYC si es requerido, 3) Regístrate o participa en loteríaque la asignación, 4) Compra tokens durante la venta, 5) Reclama tokens después del lanzamiento. Cada plataforma tiene reglas específicas."
 				},
 				{
-					"question": "What are the risks of launchpad investments?",
-					"answer": "High risk of loss - many projects fail. Watch for vesting schedules that lock tokens, low liquidity at launch, and potential rug pulls. Always DYOR and only invest what you can lose."
+					"question": "¿Los launchpads son seguros?",
+					"answer": "Los launchpads reputados (como DAO Maker, TrustPad) verifican proyectos, pero el riesgo permanece. Siempre investiga: verifica el equipo del proyecto, auditorías, tokenomics y comunidad. Muchos lanzamientos pierden valor después del hype inicial."
 				}
 			]
 		},
 		"identity": {
-			"title": "Web3 Identity - ENS, Lens & Decentralized Identity | BiuBiu Tools",
-			"description": "Decentralized identity solutions for Web3. Domain names (ENS), social profiles (Lens), credentials, and reputation systems.",
-			"keywords": "",
+			"title": "Identidad Web3 - ENS, Credenciales On-Chain y Reputación | BiuBiu Tools",
+			"description": "Herramientas de identidad Web3 incluyendo Ethereum Name Service (ENS), credenciales verificables, sistemas de reputación y servicios de identidad descentralizada.",
+			"keywords": "identidad web3, ens, ethereum name service, credenciales on-chain, identidad descentralizada, did",
 			"faqs": [
 				{
-					"question": "What is Web3 identity?",
-					"answer": "Web3 identity lets you own your digital identity on-chain. This includes domain names (ENS), social profiles (Lens), verifiable credentials, and reputation scores across dApps."
+					"question": "¿Qué es un nombre ENS?",
+					"answer": "ENS (Ethereum Name Service) convierte largas direcciones de billetera (0x123...) en nombres legibles como 'alice.eth'. Es como DNS para blockchain, haciendo más fácil enviar cripto y construir tu identidad Web3."
 				},
 				{
-					"question": "Should I get an ENS domain?",
-					"answer": "Yes, ENS domains replace complex wallet addresses with readable names (yourname.eth). They work across wallets and dApps. You can also use them as decentralized websites."
+					"question": "¿Por qué necesito identidad Web3?",
+					"answer": "La identidad Web3 te ayuda a construir reputación on-chain, poseer tu identidad digital, verificar credenciales sin intermediarios y tener portabilidad entre plataformas. Es esencial para redes sociales descentralizadas y futuras aplicaciones Web3."
 				},
 				{
-					"question": "What is Lens Protocol?",
-					"answer": "Lens Protocol is a decentralized social graph where you own your profile, content, and followers as NFTs. Apps built on Lens include Lenster, Hey, and Orb."
+					"question": "¿Qué son las credenciales verificables?",
+					"answer": "Las credenciales verificables son logros o atributos digitales (como asistencia a eventos, certificaciones, membresías) emitidos on-chain que puedes probar sin revelar información innecesaria. Se usan para pruebas de asistencia, control de acceso y reputación."
 				}
 			]
 		},
 		"social": {
-			"title": "Web3 Social - Decentralized Social Networks & Communities | BiuBiu Tools",
-			"description": "Decentralized social platforms and community tools. Build and engage with Web3 communities on Farcaster, Lens, and more.",
-			"keywords": "",
+			"title": "Redes Sociales Web3 - Plataformas Sociales Descentralizadas | BiuBiu Tools",
+			"description": "Explora redes sociales descentralizadas como Lens Protocol, Farcaster y otras plataformas SocialFi donde posees tus datos y conexiones.",
+			"keywords": "redes sociales web3, socialfi, lens protocol, farcaster, redes sociales descentralizadas",
 			"faqs": [
 				{
-					"question": "What are Web3 social platforms?",
-					"answer": "Web3 social platforms are decentralized alternatives to Twitter/Facebook. You own your data and social graph. Popular ones include Farcaster, Lens Protocol, and DeSo."
+					"question": "¿Qué son las redes sociales Web3?",
+					"answer": "Las redes sociales Web3 son plataformas descentralizadas donde posees tu perfil, contenido y conexiones sociales en lugar de que las compañías las controlen. Tu gráfico social es portable entre aplicaciones construidas en el mismo protocolo."
 				},
 				{
-					"question": "What is Farcaster?",
-					"answer": "Farcaster is a decentralized social protocol similar to Twitter. Warpcast is the main client. It's popular among crypto developers and has a strong community culture."
+					"question": "¿Lens Protocol vs Farcaster?",
+					"answer": "Ambos son protocolos de redes sociales descentralizadas en Ethereum/L2s. Lens se enfoca en un gráfico social modular con múltiples aplicaciones cliente. Farcaster prioriza resistencia a la censura con almacenamiento híbrido on-chain/off-chain."
 				},
 				{
-					"question": "How do Web3 communities coordinate?",
-					"answer": "Discord and Telegram for real-time chat, Farcaster/Lens for social, Mirror for long-form content, Snapshot for governance, and Guild.xyz for token-gated access."
+					"question": "¿Puedo monetizar en redes sociales Web3?",
+					"answer": "Sí, muchas plataformas sociales Web3 permiten monetización directa a través de: posts tokenizados (NFTs), propinas en cripto, tokens sociales, contenido gated con acceso por membresía y modelos de compartir ingresos con creadores."
 				}
 			]
 		},
 		"l2": {
-			"title": "Layer 2 Solutions - Ethereum Scaling Networks | BiuBiu Tools",
-			"description": "Explore Layer 2 scaling solutions for Ethereum. Arbitrum, Optimism, Base, zkSync, and other rollups with lower fees and faster transactions.",
-			"keywords": "",
+			"title": "Soluciones Layer 2 - Scaling de Ethereum y Sidechains | BiuBiu Tools",
+			"description": "Descubre soluciones Layer 2 como Arbitrum, Optimism, Base, zkSync y otras tecnologías de scaling para transacciones más rápidas y baratas.",
+			"keywords": "layer 2, l2, arbitrum, optimism, base, zksync, ethereum scaling, rollups",
 			"faqs": [
 				{
-					"question": "What is Layer 2?",
-					"answer": "Layer 2s are scaling solutions that process transactions off the main Ethereum chain (L1) while inheriting its security. They offer lower fees and faster transactions. Types include Optimistic Rollups and ZK Rollups."
+					"question": "¿Qué es Layer 2?",
+					"answer": "Layer 2 se refiere a soluciones de scaling construidas sobre Ethereum (Layer 1) que procesan transacciones más rápido y barato mientras heredan la seguridad de Ethereum. Los ejemplos incluyen Optimistic Rollups (Arbitrum, Optimism) y ZK Rollups (zkSync)."
 				},
 				{
-					"question": "What's the difference between Optimistic and ZK Rollups?",
-					"answer": "Optimistic Rollups (Arbitrum, Optimism) assume transactions are valid and use fraud proofs. ZK Rollups (zkSync, Starknet) use cryptographic proofs for instant finality but are more complex to build."
+					"question": "¿Por qué usar Layer 2?",
+					"answer": "Los L2s ofrecen tarifas de transacción significativamente más bajas (a menudo <$0.01) y confirmaciones más rápidas que Ethereum mainnet mientras mantienen fuerte seguridad. Son ideales para DeFi, NFTs, juegos y transacciones frecuentes."
 				},
 				{
-					"question": "Which L2 should I use?",
-					"answer": "Arbitrum and Optimism have the most DeFi activity. Base (Coinbase) is growing fast. zkSync and Starknet offer ZK technology. Choose based on the dApps you want to use and fee considerations."
+					"question": "¿Optimistic vs ZK Rollups?",
+					"answer": "Los Optimistic Rollups (Arbitrum, Optimism) asumen que las transacciones son válidas con un período de desafío de 7 días. Los ZK Rollups (zkSync, StarkNet) prueban la validez criptográficamente para retiros más rápidos pero son más complejos de desarrollar."
 				}
 			]
 		},
 		"gamefi": {
-			"title": "GameFi & Web3 Gaming - Play-to-Earn Games | BiuBiu Tools",
-			"description": "Discover Web3 games and GameFi platforms. Play-to-earn games, NFT gaming assets, and blockchain gaming guilds.",
-			"keywords": "",
+			"title": "GameFi - Blockchain Gaming y Juegos Play-to-Earn | BiuBiu Tools",
+			"description": "Descubre juegos blockchain, plataformas play-to-earn, metaversos y herramientas de GameFi. Encuentra los mejores juegos cripto y oportunidades de gaming NFT.",
+			"keywords": "gamefi, blockchain gaming, play to earn, metaverse, nft games, crypto games",
 			"faqs": [
 				{
-					"question": "What is GameFi?",
-					"answer": "GameFi combines gaming with DeFi mechanics. Players earn tokens and NFTs by playing games. Assets are truly owned by players and can be traded or used across games."
+					"question": "¿Qué es GameFi?",
+					"answer": "GameFi combina gaming con finanzas descentralizadas, permitiendo a los jugadores ganar criptomonedas y NFTs a través del juego. Los jugadores realmente poseen activos del juego (personajes, ítems, tierra) como NFTs que pueden comerciar o vender."
 				},
 				{
-					"question": "What are the popular Web3 games?",
-					"answer": "Axie Infinity pioneered play-to-earn. Illuvium and Big Time are AAA-quality games. Gods Unchained is a popular trading card game. The space is evolving with better gameplay focus."
+					"question": "¿Puedo realmente ganar dinero jugando?",
+					"answer": "Sí, pero depende del juego, economía y tiempo invertido. Los modelos play-to-earn pueden generar ingresos a través de recompensas de tokens, venta de NFTs y actividades del juego. Sin embargo, muchos juegos requieren inversión inicial y los retornos varían ampliamente."
 				},
 				{
-					"question": "What are gaming guilds?",
-					"answer": "Gaming guilds like YGG and Merit Circle pool resources to help players access expensive game NFTs. They scholarship players and share earnings. Useful for high-entry-cost games."
+					"question": "¿Cuáles son los mejores juegos blockchain?",
+					"answer": "Los juegos populares de GameFi incluyen Axie Infinity (battles por turnos), The Sandbox (metaverso), Illuvium (RPG), Gods Unchained (juego de cartas) y muchos más. Cada uno ofrece mecánicas de juego únicas y modelos económicos."
 				}
 			]
 		},
 		"payments": {
-			"title": "Crypto Payments - Payment Processing & Card Services | BiuBiu Tools",
-			"description": "Crypto payment solutions for businesses and individuals. Payment processors, crypto cards, and merchant services.",
-			"keywords": "",
+			"title": "Pagos Cripto - Procesadores de Pago Blockchain y Gateways | BiuBiu Tools",
+			"description": "Soluciones de pago cripto para negocios y comerciantes. Acepta Bitcoin, Ethereum y otras cripto con procesadores de pago y plataformas de facturación.",
+			"keywords": "pagos cripto, procesador pago blockchain, gateway pago, pagos bitcoin, pagos merchant cripto",
 			"faqs": [
 				{
-					"question": "How do crypto payments work?",
-					"answer": "Crypto payments transfer value directly on blockchain. For merchants, payment processors like BitPay convert crypto to fiat. Crypto cards like Coinbase Card let you spend crypto anywhere."
+					"question": "¿Cómo acepto pagos cripto?",
+					"answer": "Integra procesadores de pago cripto como BitPay, Coinbase Commerce o NOWPayments en tu sitio web o tienda. Estos servicios manejan conversiones cripto-fiat, facturación y proveen APIs para integración de comercio electrónico."
 				},
 				{
-					"question": "Which crypto cards are best?",
-					"answer": "Coinbase Card and Crypto.com Card are widely available. Gnosis Pay offers DeFi integration. Compare cashback rates, supported countries, and fee structures before choosing."
+					"question": "¿Cuáles son las ventajas de los pagos cripto?",
+					"answer": "Los pagos cripto ofrecen tarifas más bajas que tarjetas de crédito, alcance global sin barreras bancarias, liquidación más rápida (especialmente internacional), sin chargebacks y acceso a clientes nativos de cripto."
 				},
 				{
-					"question": "Can businesses accept crypto payments?",
-					"answer": "Yes, using payment processors like BitPay, Coinbase Commerce, or direct wallet payments. Consider volatility, tax implications, and whether to convert to fiat immediately."
+					"question": "¿Necesito guardar cripto?",
+					"answer": "No, la mayoría de procesadores de pago ofrecen conversión instantánea a fiat. Los clientes pagan en cripto, pero recibes moneda tradicional en tu cuenta bancaria. Alternativamente, puedes elegir recibir pagos parciales o totales en cripto."
 				}
 			]
 		},
 		"funding": {
-			"title": "Web3 Funding - Grants, VCs & Fundraising | BiuBiu Tools",
-			"description": "Find funding sources for Web3 projects. Ecosystem grants, VC investors, crowdfunding platforms, and accelerator programs.",
-			"keywords": "",
+			"title": "Financiamiento Cripto - VC, Grants y Crowdfunding | BiuBiu Tools",
+			"description": "Encuentra oportunidades de financiamiento para proyectos cripto: capital de riesgo, grants, crowdfunding, plataformas de inversión DAOs y aceleradoras.",
+			"keywords": "financiamiento cripto, grants web3, vc blockchain, crowdfunding cripto, financiamiento dao",
 			"faqs": [
 				{
-					"question": "How do Web3 projects get funded?",
-					"answer": "Options include ecosystem grants (Ethereum Foundation, L2 grants), VC funding (a16z, Paradigm), token launches (launchpads), and retroactive funding (Optimism RetroPGF)."
+					"question": "¿Dónde puedo obtener financiamiento para mi proyecto cripto?",
+					"answer": "Opciones de financiamiento incluyen: firmas VC enfocadas en cripto (a16z crypto, Paradigm), programas de grants (Ethereum Foundation, Gitcoin), DAOs de inversión, plataformas de crowdfunding y aceleradoras blockchain."
 				},
 				{
-					"question": "What are ecosystem grants?",
-					"answer": "Grants from blockchain foundations to fund development. Ethereum Foundation, Uniswap Grants, Arbitrum Foundation, and others fund projects building on their ecosystems."
+					"question": "¿Qué son los grants cripto?",
+					"answer": "Los grants cripto son fondos no-dilutivos otorgados a proyectos que contribuyen al ecosistema. Los principales protocolos (Ethereum, Uniswap, Aave) ofrecen grants a través de sus fundaciones o DAOs. Gitcoin también facilita financiamiento cuadrático de la comunidad."
 				},
 				{
-					"question": "How do I pitch to crypto VCs?",
-					"answer": "Build a working product first. Crypto VCs value technical founders and open-source contributions. Network at conferences, get warm intros, and show traction metrics like TVL or users."
+					"question": "¿Cómo funciona el crowdfunding en Web3?",
+					"answer": "El crowdfunding Web3 puede ocurrir a través de ventas de tokens (IDO/ICO), plataformas como Mirror para NFT crowdfunding, Gitcoin grants con matching cuadrático o financiamiento de DAOs donde la comunidad vota para financiar proyectos."
 				}
 			]
 		},
 		"news": {
-			"title": "Crypto News - Market Updates & Industry Coverage | BiuBiu Tools",
-			"description": "Stay informed with crypto news sources. Market analysis, project updates, regulatory news, and industry trends.",
-			"keywords": "",
+			"title": "Noticias Cripto - Fuentes de Noticias y Análisis Blockchain | BiuBiu Tools",
+			"description": "Mantente actualizado con fuentes de noticias cripto, análisis de mercado, alertas on-chain y cobertura de la industria blockchain de fuentes confiables.",
+			"keywords": "noticias cripto, noticias blockchain, análisis mercado cripto, noticias bitcoin, noticias ethereum",
 			"faqs": [
 				{
-					"question": "What are reliable crypto news sources?",
-					"answer": "The Block and CoinDesk for institutional coverage. Decrypt for accessible news. Bankless and The Defiant for DeFi focus. Always cross-reference and be wary of sponsored content."
+					"question": "¿Dónde encuentro noticias cripto confiables?",
+					"answer": "Las fuentes de noticias cripto reputadas incluyen CoinDesk, The Block, Decrypt, Cointelegraph y DeFi Llama para datos. Para cobertura técnica profunda, revisa publicaciones especializadas en protocolos y blogs de investigadores."
 				},
 				{
-					"question": "How do I stay updated on crypto?",
-					"answer": "Follow key accounts on Crypto Twitter/X. Subscribe to newsletters like Bankless and Week in Ethereum. Use aggregators like CryptoPanic. Join Discord communities of projects you follow."
+					"question": "¿Cómo me mantengo actualizado con mercados cripto?",
+					"answer": "Sigue agregadores de noticias, únete a Twitter Cripto y Discord, usa servicios de alerta on-chain (Nansen, Arkham), suscríbete a newsletters (Bankless, The Defiant) y monitorea análisis de mercado de plataformas de datos."
 				},
 				{
-					"question": "How do I identify FUD and misinformation?",
-					"answer": "Check multiple sources, verify claims on-chain when possible, be skeptical of anonymous sources, and understand the incentives of who's sharing information."
+					"question": "¿Hay información privilegiada en cripto?",
+					"answer": "Aunque la información privilegiada tradicional no aplica a cripto, la información asimétrica existe. Los grandes inversores a menudo aprenden sobre proyectos antes. Sin embargo, muchos datos on-chain son públicos - las herramientas de analíticas pueden ayudar a nivelar el campo de juego."
 				}
 			]
 		},
 		"community": {
-			"title": "Crypto Communities - Discord, Telegram & Forums | BiuBiu Tools",
-			"description": "Find and join crypto communities. Discord servers, Telegram groups, forums, and community platforms for Web3 projects.",
-			"keywords": "",
+			"title": "Comunidades Cripto - Foros, Discord y Redes Sociales | BiuBiu Tools",
+			"description": "Únete a las mejores comunidades cripto, foros de discusión, servidores Discord y plataformas sociales para aprender, conectar y mantenerte informado.",
+			"keywords": "comunidad cripto, discord cripto, foros blockchain, twitter cripto, comunidad web3",
 			"faqs": [
 				{
-					"question": "Where do crypto communities gather?",
-					"answer": "Discord is the hub for most projects. Telegram for quick updates and trading groups. Farcaster and Lens for Web3 native social. Reddit for broader discussions."
+					"question": "¿Dónde encuentro comunidades cripto?",
+					"answer": "Las comunidades cripto prosperan en Discord (servidores específicos de proyectos), Twitter Cripto (CT), Reddit (r/cryptocurrency, r/ethereum), Telegram, Farcaster y foros tradicionales como BitcoinTalk. Cada protocolo principal tiene sus propios canales de comunidad."
 				},
 				{
-					"question": "How do I find quality communities?",
-					"answer": "Look for active moderation, substantive discussions beyond price, developer presence, and community-driven initiatives. Avoid pump groups and communities focused only on price speculation."
+					"question": "¿Cómo identifico comunidades genuinas vs scams?",
+					"answer": "Las comunidades genuinas tienen: desarrollo activo, comunicación transparente del equipo, discussiones técnicas, verificación oficial, sin promesas de rendimientos garantizados y canales moderados. Evita grupos que promuevan esquemas pump, mensajes de DM agresivos o garantías irrealistas."
 				},
 				{
-					"question": "How do I avoid scams in communities?",
-					"answer": "Never trust DMs offering help or investments. Official announcements come through verified channels. Don't click random links. Admins will never ask for your seed phrase."
+					"question": "¿Vale la pena participar en comunidades cripto?",
+					"answer": "Sí, las comunidades proveen conocimientos tempranos sobre proyectos, soporte de aprendizaje, oportunidades de networking, eligibilidad para airdrops y mejor comprensión de tecnología blockchain. El engagement activo a menudo lleva a mejores decisiones de inversión."
 				}
 			]
 		},
 		"jobs": {
-			"title": "Web3 Jobs - Crypto Careers & Remote Opportunities | BiuBiu Tools",
-			"description": "Find jobs in the crypto industry. Developer roles, marketing, community management, and remote Web3 opportunities.",
-			"keywords": "",
+			"title": "Empleos Cripto - Carreras y Oportunidades Blockchain | BiuBiu Tools",
+			"description": "Encuentra empleos en Web3, oportunidades cripto y carreras blockchain. Conecta con empresas que contratan desarrolladores, marketers y profesionales de la industria.",
+			"keywords": "empleos cripto, empleos web3, carreras blockchain, empleos desarrollador blockchain, trabajos remotos cripto",
 			"faqs": [
 				{
-					"question": "What skills are needed for Web3 jobs?",
-					"answer": "Developers: Solidity, Rust, or TypeScript. Non-technical: community management, marketing, content creation, BD. Understanding of blockchain fundamentals is expected for all roles."
+					"question": "¿Cómo encuentro empleos cripto?",
+					"answer": "Los tableros de empleos especializados en Web3 incluyen Crypto Jobs List, Web3 Career, Cryptocurrency Jobs y AngelList (filtro cripto). Muchos proyectos publican openings en Discord, Twitter y LinkedIn. El networking en eventos cripto también ayuda."
 				},
 				{
-					"question": "Where can I find Web3 jobs?",
-					"answer": "Crypto.jobs and Web3.career are dedicated job boards. LinkedIn has increasing crypto listings. Twitter/X job postings are common. Many roles are posted in project Discords."
+					"question": "¿Qué habilidades se necesitan para empleos Web3?",
+					"answer": "Las habilidades técnicas incluyen desarrollo de contratos inteligentes (Solidity, Rust), desarrollo frontend (React, ethers.js), seguridad blockchain. Los roles no-técnicos requieren marketing cripto, manejo de comunidad, desarrollo de negocios, diseño de productos y experiencia en finanzas."
 				},
 				{
-					"question": "Are Web3 jobs mostly remote?",
-					"answer": "Yes, the majority of Web3 jobs are remote-first. Companies are globally distributed. Time zone flexibility varies - some require overlap with US or EU hours."
+					"question": "¿Los empleos cripto son bien remunerados?",
+					"answer": "Generalmente sí, especialmente para desarrolladores de contratos inteligentes y roles de seguridad. Muchas posiciones Web3 ofrecen compensación competitiva, trabajo remoto, equidad de tokens y beneficios únicos. Los salarios varían según experiencia, habilidades y etapa de la empresa."
 				}
 			]
 		},
 		"stablecoin": {
-			"title": "Stablecoins - USDC, USDT, DAI & More | BiuBiu Tools",
-			"description": "Learn about stablecoins and their use cases. Fiat-backed, algorithmic, and decentralized stablecoins for DeFi and payments.",
-			"keywords": "",
+			"title": "Stablecoins - Criptomonedas Vinculadas a Dólares | BiuBiu Tools",
+			"description": "Aprende sobre stablecoins como USDT, USDC, DAI y otros activos cripto estables. Compara tipos, respaldos y casos de uso.",
+			"keywords": "stablecoins, usdt, usdc, dai, criptomonedas estables, stablecoins fiat",
 			"faqs": [
 				{
-					"question": "What are stablecoins?",
-					"answer": "Stablecoins are cryptocurrencies pegged to stable assets like USD. Types include fiat-backed (USDC, USDT), crypto-backed (DAI), and algorithmic stablecoins."
+					"question": "¿Qué son las stablecoins?",
+					"answer": "Las stablecoins son criptomonedas diseñadas para mantener valor estable, usualmente vinculadas 1:1 a monedas fiat como el USD. Proveen la velocidad y beneficios de cripto sin volatilidad de precios, haciéndolas ideales para pagos y comercio DeFi."
 				},
 				{
-					"question": "Which stablecoin is safest?",
-					"answer": "USDC is highly regulated and transparent. USDT has the most liquidity but less transparency. DAI is decentralized but has smart contract risk. Diversification is wise."
+					"question": "¿USDT vs USDC vs DAI?",
+					"answer": "USDT (Tether) es la stablecoin más grande pero menos transparente. USDC (Circle) es regulada en EE.UU. con auditorías regulares. DAI (MakerDAO) es descentralizada, respaldada por cripto y gobernada por DAO. Cada una tiene diferentes niveles de confianza/descentralización."
 				},
 				{
-					"question": "What happened to UST?",
-					"answer": "UST was an algorithmic stablecoin that collapsed in May 2022, losing its peg and causing $40B+ in losses. It highlighted the risks of algorithmic designs without proper collateral."
+					"question": "¿Las stablecoins son seguras?",
+					"answer": "El riesgo depende del tipo: las stablecoins centralizadas enfrentan riesgo de contraparte y regulatorio. Las stablecoins descentralizadas enfrentan riesgos de contratos inteligentes y colateralización. Las stablecoins algorítmicas han mostrado ser propensas a colapsos (ver UST/LUNA)."
 				}
 			]
 		},
 		"oracle": {
-			"title": "Blockchain Oracles - Price Feeds & Off-Chain Data | BiuBiu Tools",
-			"description": "Oracle services that bring real-world data to blockchain. Price feeds, randomness, and cross-chain data for smart contracts.",
-			"keywords": "",
+			"title": "Oráculos de Precio - Feeds de Datos Blockchain | BiuBiu Tools",
+			"description": "Oráculos descentralizados que proveen datos de precio confiables para contratos inteligentes. Aprende sobre Chainlink, Pyth Network y otras redes de oráculos.",
+			"keywords": "oráculos precio, chainlink, pyth network, oracle blockchain, feeds datos descentralizados",
 			"faqs": [
 				{
-					"question": "What are blockchain oracles?",
-					"answer": "Oracles bring external data (prices, weather, sports scores) to smart contracts. They're essential for DeFi, insurance, and any dApp needing real-world information."
+					"question": "¿Qué son los oráculos blockchain?",
+					"answer": "Los oráculos blockchain son servicios que proveen datos del mundo real (precios, clima, resultados deportivos) a contratos inteligentes. Los contratos no pueden acceder datos externos directamente, así que los oráculos hacen de puente entre blockchains y sistemas off-chain."
 				},
 				{
-					"question": "Why is Chainlink so important?",
-					"answer": "Chainlink is the dominant oracle network, securing billions in DeFi value. It provides decentralized price feeds, VRF for randomness, and CCIP for cross-chain communication."
+					"question": "¿Por qué son importantes los oráculos?",
+					"answer": "Los oráculos permiten a los contratos inteligentes reaccionar a eventos del mundo real. Son críticos para protocolos DeFi (feeds de precio para préstamos/liquidaciones), seguros descentralizados (verificación de reclamos), predicción de mercados y cualquier aplicación que necesite datos externos."
 				},
 				{
-					"question": "What are oracle attacks?",
-					"answer": "Oracle attacks manipulate price feeds to exploit DeFi protocols. Attackers may flash loan to manipulate DEX prices that oracles read. This has caused hundreds of millions in losses."
+					"question": "¿Qué es Chainlink?",
+					"answer": "Chainlink es la red de oráculos descentralizada más grande, proveyendo feeds de datos seguros para miles de proyectos. Usa múltiples nodos de datos independientes y agregación on-chain para prevenir puntos únicos de fallo y manipulación de datos."
 				}
 			]
 		},
 		"dao_token": {
-			"title": "DAO Governance Tokens - Voting Power & Tokenomics | BiuBiu Tools",
-			"description": "Understand DAO governance tokens. Voting mechanisms, token distribution, and governance participation in major DAOs.",
-			"keywords": "",
+			"title": "Tokens de Gobernanza DAO - Votación y Governance Tokens | BiuBiu Tools",
+			"description": "Descubre tokens de gobernanza para DAOs principales. Aprende sobre mecanismos de votación, delegación y participación en gobernanza descentralizada.",
+			"keywords": "tokens gobernanza dao, votación dao, delegación tokens, gobernanza descentralizada, tokens governance",
 			"faqs": [
 				{
-					"question": "What are governance tokens?",
-					"answer": "Governance tokens give holders voting rights in a protocol's decisions. Examples: UNI (Uniswap), AAVE, COMP. Voting power typically scales with token holdings."
+					"question": "¿Qué son los tokens de gobernanza?",
+					"answer": "Los tokens de gobernanza dan a los holders derechos de votación sobre decisiones del protocolo. Los ejemplos incluyen UNI (Uniswap), AAVE (Aave) y COMP (Compound). Usualmente, más tokens = más poder de voto, aunque algunos sistemas usan cuadrático o delegación."
 				},
 				{
-					"question": "How does vote delegation work?",
-					"answer": "You can delegate your voting power to others (delegates) while keeping your tokens. This helps active community members vote on behalf of passive holders."
+					"question": "¿Cómo participo en gobernanza?",
+					"answer": "Mantén tokens de gobernanza en tu billetera, luego vota en propuestas a través de plataformas como Snapshot, Tally o sistemas de gobernanza on-chain del protocolo. Alternativamente, delega tus votos a participantes confiables de la gobernanza si no tienes tiempo de investigar propuestas."
 				},
 				{
-					"question": "Do governance tokens have value?",
-					"answer": "Value comes from governance rights, potential fee sharing, and speculation. Some protocols share revenue with token holders. Others have struggled to accrue value."
+					"question": "¿Los tokens de gobernanza tienen valor?",
+					"answer": "Sí, a menudo se comercian en exchanges. El valor viene de derechos de gobernanza, potencial de reparto de ingresos, acceso a características del protocolo y demanda especulativa. Algunos protocolos están añadiendo acumulación de valor a los tokens de gobernanza."
 				}
 			]
 		},
 		"whale_address": {
-			"title": "Whale Wallets & Treasury Tracking - Smart Money Insights | BiuBiu Tools",
-			"description": "Track whale wallets and protocol treasuries. Monitor smart money movements and institutional holdings in crypto.",
-			"keywords": "",
+			"title": "Rastreador de Ballenas - Monitorea Billeteras Grandes y Tesorerías | BiuBiu Tools",
+			"description": "Rastrea direcciones de ballenas, monitorea grandes billeteras y sigue movimientos de tesorerías cripto. Identifica traders influyentes y comportamiento institucional.",
+			"keywords": "rastreador ballenas, monitor ballenas cripto, billeteras grandes, movimientos ballenas, rastreador tesorería",
 			"faqs": [
 				{
-					"question": "What is a crypto whale?",
-					"answer": "A whale is an entity holding large amounts of cryptocurrency. Their trades can move markets. Tracking whale wallets can provide early signals of market movements."
+					"question": "¿Qué son las ballenas cripto?",
+					"answer": "Las ballenas cripto son individuos o entidades que poseen grandes cantidades de criptomonedas. Sus transacciones pueden impactar significativamente los precios del mercado, por lo que los traders monitorean actividad de ballenas para conocimientos sobre tendencias potenciales del mercado."
 				},
 				{
-					"question": "How do I track whale wallets?",
-					"answer": "Use Nansen or Arkham for labeled wallet tracking. Set up alerts for large transfers on Etherscan. Follow accounts like @lookonchain that share whale activity."
+					"question": "¿Cómo rastrea la actividad de ballenas?",
+					"answer": "Usa herramientas de rastreo de ballenas que monitorean grandes transacciones, siguen billeteras conocidas de ballenas en analíticas on-chain, configura alertas para movimientos significativos de tokens y analiza patrones de actividad de ballenas a través de plataformas como Whale Alert o Nansen."
 				},
 				{
-					"question": "What are protocol treasuries?",
-					"answer": "Treasuries are funds controlled by DAOs or protocols. They're used for grants, liquidity, and development. Large treasuries (like Uniswap's) are tracked as indicators of project health."
+					"question": "¿Es confiable el seguimiento de ballenas para trading?",
+					"answer": "El rastreo de ballenas provee conocimientos valiosos pero no debería ser tu única estrategia. Las ballenas pueden ejecutar estrategias complejas, movimientos pueden ser para no-trading (gestión de tesorería), y los scammers a veces imitan actividad de ballenas. Usa como una métrica entre muchas."
 				}
 			]
 		},
 		"airdrop_token": {
-			"title": "Crypto Airdrops - Token Distributions & Eligibility | BiuBiu Tools",
-			"description": "Track and claim crypto airdrops. Find airdrop opportunities, check eligibility, and learn airdrop farming strategies.",
-			"keywords": "",
+			"title": "Rastreador de Airdrops Cripto - Airdrops de Tokens Gratis | BiuBiu Tools",
+			"description": "Descubre airdrops de cripto y distribuaciones de tokens gratis. Aprende sobre criteria de eligibilidad, hunting de airdrops y oportunidades de farming de airdrops.",
+			"keywords": "airdrops cripto, tokens gratis, caza airdrops, farming airdrops, distribución tokens",
 			"faqs": [
 				{
-					"question": "What are crypto airdrops?",
-					"answer": "Airdrops are free token distributions to early users, holders, or community members. They're used to decentralize ownership, reward users, and create awareness for new projects."
+					"question": "¿Qué son los airdrops cripto?",
+					"answer": "Los airdrops son distribuciones gratuitas de tokens a billeteras que cumplen ciertos criteria (usar un protocolo, mantener tokens específicos, completar tareas). Los proyectos usan airdrops para distribución de tokens, recompensar early adopters y construir comunidades."
 				},
 				{
-					"question": "How do I qualify for airdrops?",
-					"answer": "Use protocols early, maintain activity over time, participate in testnets, hold relevant tokens/NFTs, and engage with communities. Sybil detection is common - quality over quantity matters."
+					"question": "¿Cómo califico para airdrops?",
+					"answer": "Los criterios comunes incluyen: usar un protocolo antes de una fecha (Uniswap, dYdX), mantener tokens específicos, completar tareas sociales, interactuar con testnet o proveer liquidez. Sigue anuncios de proyectos y participa auténticamente en el ecosistema."
 				},
 				{
-					"question": "Are airdrops taxable?",
-					"answer": "In most jurisdictions, airdrops are taxable as income at receipt and capital gains when sold. Keep records of fair market value at time of airdrop. Consult a tax professional."
+					"question": "¿Es el farming de airdrops rentable?",
+					"answer": "Puede serlo, pero requiere estrategia, costos de gas y no hay garantías. Los airdrops históricos (UNI, dYdX, Arbitrum) valieron miles. Sin embargo, muchos airdrops tienen poco valor, y algunos proyectos nunca lanzan. Diversifica tus actividades y gestiona expectativas."
 				}
 			]
 		},
 		"non_evm": {
-			"title": "Non-EVM Blockchains - Solana, Bitcoin, Cosmos & More | BiuBiu Tools",
-			"description": "Explore non-EVM blockchain ecosystems. Solana, Bitcoin, Cosmos, Aptos, Sui, and their unique tools and dApps.",
-			"keywords": "",
+			"title": "Cadenas No-EVM - Solana, Cosmos, Polkadot y Más | BiuBiu Tools",
+			"description": "Explora blockchains no-EVM: Solana, Cosmos, Polkadot, Aptos y otras arquitecturas blockchain alternativas con características únicas.",
+			"keywords": "cadenas no evm, solana, cosmos, polkadot, blockchain alternativa, non ethereum",
 			"faqs": [
 				{
-					"question": "What are non-EVM chains?",
-					"answer": "Non-EVM chains don't use Ethereum's virtual machine. They have different architectures - Solana uses Rust, Bitcoin has its own script, Cosmos uses CosmWasm. Each has unique tradeoffs."
+					"question": "¿Qué son las cadenas no-EVM?",
+					"answer": "Las cadenas no-EVM son blockchains que no usan la Ethereum Virtual Machine. Incluyen Solana (Rust/Sealevel), Cosmos (Tendermint), Polkadot (Substrate) y otras. A menudo tienen diferentes modelos de programación, características de rendimiento y filosofías de diseño."
 				},
 				{
-					"question": "Why use non-EVM chains?",
-					"answer": "Different chains optimize for different things. Solana for speed and low fees, Bitcoin for security and decentralization, Cosmos for interoperability, Move chains for safety."
+					"question": "¿Por qué usar cadenas no-EVM?",
+					"answer": "Las cadenas no-EVM a menudo ofrecen throughput mayor (Solana), personalización específica para apps (Cosmos SDK), interoperabilidad (Polkadot) o diferentes modelos de seguridad. Algunos desarrolladores prefieren lenguajes de programación alternativos como Rust o Move."
 				},
 				{
-					"question": "How do I bridge to non-EVM chains?",
-					"answer": "Use specific bridges like Wormhole (multi-chain), Portal (Solana), or IBC (Cosmos). Some centralized exchanges support direct deposits/withdrawals to non-EVM chains."
+					"question": "¿Son las cadenas no-EVM compatibles con Ethereum?",
+					"answer": "Generalmente no directamente, aunque algunas ofrecen máquinas virtuales EVM (como Polkadot's Moonbeam) o puentes a Ethereum. Cada ecosistema tiene sus propias billeteras, dApps y herramientas de desarrollo, aunque conceptos como DeFi y NFTs son similares entre cadenas."
 				}
 			]
 		},
 		"legendary_token": {
-			"title": "High Potential Tokens - Research & Analysis Tools | BiuBiu Tools",
-			"description": "Tools for researching high-potential tokens. On-chain analysis, social metrics, and early discovery platforms for new opportunities.",
-			"keywords": "",
+			"title": "Tokens 10x/100x - Gemas Cripto de Alto Potencial | BiuBiu Tools",
+			"description": "Descubre gemas cripto de potencial alto y oportunidades de tokens 10x/100x. Aprende sobre investigación de tokens, evaluación de riesgos y inversión temprana.",
+			"keywords": "tokens 10x, tokens 100x, gemas cripto, inversión temprana, tokens alto potencial, moonshots cripto",
 			"faqs": [
 				{
-					"question": "How do I find early opportunities?",
-					"answer": "Monitor new token deployments, track smart money wallets, follow developers and builders on social, participate in testnets, and research upcoming launches."
+					"question": "¿Cómo encuentro tokens 10x/100x?",
+					"answer": "Investiga proyectos tempranos con: equipos fuertes, problemas reales resueltos, demanda de mercado, tokenomics únicos y comunidades activas. Mira plataformas launchpad, foros cripto y analíticas on-chain. Sin embargo, recuerda que la mayoría de los proyectos fallan - los retornos altos vienen con alto riesgo."
 				},
 				{
-					"question": "What metrics indicate potential?",
-					"answer": "Look at team background, technology innovation, tokenomics (supply, vesting), community engagement, developer activity (GitHub), TVL growth, and smart money interest."
+					"question": "¿Qué hace un buen proyecto de inversión temprana?",
+					"answer": "Señales clave: equipo experimentado con track record, problema claro del mercado, innovación técnica, tokenomics sostenibles, crecimiento de comunidad, respaldo de VCs reputados, desarrollo activo y propuesta de valor única. Las auditorías de seguridad y transparencia también son críticas."
 				},
 				{
-					"question": "What are the risks?",
-					"answer": "High potential = high risk. Most tokens fail. Watch for rug pulls, poor tokenomics, lack of utility, and overhyped marketing. Never invest more than you can lose."
+					"question": "¿Cuáles son los riesgos de inversión en tokens tempranos?",
+					"answer": "Los riesgos incluyen: pérdida total de inversión, rug pulls/scams, fallidos técnicos, cambios regulatorios, competencia, pobre ejecución y presión de venta de inversores tempranos. Solo invierte lo que puedas perder y diversifica entre múltiples proyectos."
 				}
 			]
 		},
 		"mev": {
-			"title": "MEV - Maximal Extractable Value Tools & Protection | BiuBiu Tools",
-			"description": "Understand and navigate MEV. Protection tools, private transactions, and MEV extraction for advanced users.",
-			"keywords": "",
+			"title": "MEV - Valor Extraíble Máximo en Blockchain | BiuBiu Tools",
+			"description": "Entiende MEV (Valor Extraíble Máximo): front-running, back-running, arbitraje sandwich y protección MEV para transacciones blockchain.",
+			"keywords": "mev, valor extraible maximo, front running, sandwich attack, flashbots, mev protection",
 			"faqs": [
 				{
-					"question": "What is MEV?",
-					"answer": "MEV (Maximal Extractable Value) is profit extracted by reordering, inserting, or censoring transactions. It includes arbitrage, liquidations, and sandwich attacks that can affect your trades."
+					"question": "¿Qué es MEV?",
+					"answer": "MEV (Valor Extraíble Máximo, antes Minero) se refiere a la ganancia que validadores/buscadores pueden extraer de usuarios al reordenar, incluir o excluir transacciones en bloques. Los ejemplos comunes incluyen arbitraje, liquidaciones y ataques sandwich en intercambios DEX."
 				},
 				{
-					"question": "How do I protect against MEV?",
-					"answer": "Use Flashbots Protect or MEV Blocker for private transactions. Set low slippage. Use aggregators like 1inch with MEV protection. Avoid large trades on thin liquidity."
+					"question": "¿Cómo me afecta MEV?",
+					"answer": "MEV puede resultar en peor ejecución de precio para tus intercambios (slippage del front-running), transacciones fallidas debido a competencia de bots y mayores tarifas de gas. Los ataques sandwich específicamente te compran antes y venden después de tu trade, extrayendo valor."
 				},
 				{
-					"question": "What are sandwich attacks?",
-					"answer": "A sandwich attack front-runs your swap with a buy, then back-runs with a sell, profiting from the price impact you cause. Using private mempools or MEV protection prevents this."
+					"question": "¿Cómo me protejo de MEV?",
+					"answer": "Usa RPCs de protección MEV (como Flashbots Protect), setea slippage apropiado, evita grandes trades en pools de baja liquidez, considera agregadores DEX con protección MEV incorporada (CowSwap), o divide trades grandes en partes más pequeñas."
 				}
 			]
 		},
 		"privacy": {
-			"title": "Crypto Privacy - Private Transactions & Tools | BiuBiu Tools",
-			"description": "Privacy-preserving tools for cryptocurrency. Mixers, private transactions, and privacy-focused protocols.",
-			"keywords": "",
+			"title": "Herramientas de Privacidad Cripto - Transacciones Anónimas | BiuBiu Tools",
+			"description": "Herramientas de privacidad blockchain para transacciones anónimas, mixers, privacy coins y protocolos de preservación de privacidad.",
+			"keywords": "privacidad cripto, transacciones anonimas, privacy coins, mixers cripto, privacidad blockchain",
 			"faqs": [
 				{
-					"question": "Why does crypto privacy matter?",
-					"answer": "Blockchain transactions are public. Privacy protects against tracking, targeted attacks, and surveillance. It's about security and financial sovereignty, not hiding wrongdoing."
+					"question": "¿Son privadas las transacciones blockchain?",
+					"answer": "No por defecto. La mayoría de blockchains son públicas - cualquiera puede ver transacciones, saldos y actividad de billeteras. Las direcciones son pseudónimas pero pueden ser vinculadas a identidades reales a través de análisis, exchanges e interacciones on-chain."
 				},
 				{
-					"question": "What privacy options exist?",
-					"answer": "Use privacy coins (Zcash, Monero), stealth addresses, or privacy protocols. Layer 2 solutions and new privacy tech are emerging. Regulatory status varies by jurisdiction."
+					"question": "¿Cómo logro privacidad en cripto?",
+					"answer": "Opciones incluyen: privacy coins (Monero, Zcash), protocolos de privacidad (Tornado Cash - nota: sancionado), nuevas direcciones para cada transacción, no reutilizar direcciones de depósito de exchange, y billeteras enfocadas en privacidad. Entiende las implicaciones legales en tu jurisdicción."
 				},
 				{
-					"question": "Is using privacy tools legal?",
-					"answer": "Privacy tools are generally legal, but regulations vary. Some mixers have been sanctioned. Always comply with local laws and understand the regulatory environment."
+					"question": "¿Las herramientas de privacidad son legales?",
+					"answer": "Varía por jurisdicción. Mientras la privacidad es un derecho fundamental, algunas herramientas han sido sancionadas (Tornado Cash) o enfrentado escrutinio regulatorio debido a uso en lavado de dinero. Siempre cumple con leyes locales y usa herramientas de privacidad responsablemente."
 				}
 			]
 		},
 		"rwa": {
-			"title": "Real World Assets (RWA) - Tokenized Assets | BiuBiu Tools",
-			"description": "Explore tokenized real world assets. Tokenized treasuries, real estate, commodities, and traditional finance on blockchain.",
-			"keywords": "",
+			"title": "RWA - Tokenización de Activos del Mundo Real | BiuBiu Tools",
+			"description": "Explora la tokenización RWA (Activos del Mundo Real): bienes raíces, bonos, commodities y otros activos tradicionales en blockchain.",
+			"keywords": "rwa, tokenizacion activos mundo real, bienes raices blockchain, bonos tokenizados, activos tokenizados",
 			"faqs": [
 				{
-					"question": "What are RWAs?",
-					"answer": "RWAs (Real World Assets) are traditional assets like US Treasuries, real estate, or commodities tokenized on blockchain. They bring traditional finance yields to DeFi."
+					"question": "¿Qué son los RWAs?",
+					"answer": "RWAs (Activos del Mundo Real) son activos tradicionales como bienes raíces, bonos, commodities o arte que están tokenizados en blockchain. Esto permite propiedad fraccionada, mercados 24/7, liquidación más rápida y acceso global a inversiones tradicionalmente ilíquidas."
 				},
 				{
-					"question": "Why are RWAs important?",
-					"answer": "RWAs provide stable yields from real economy (Treasury rates), diversification from crypto volatility, and bridge traditional finance with DeFi. MakerDAO holds billions in RWAs."
+					"question": "¿Cómo funciona la tokenización RWA?",
+					"answer": "Los activos se representan legalmente como tokens on-chain, a menudo con custodia off-chain del activo real. Los tokens representan propiedad, reclamos o derechos económicos. Esto requiere marcos legales, servicios de custodia confiables y mecanismos de verificación."
 				},
 				{
-					"question": "What RWA platforms exist?",
-					"answer": "Ondo Finance for tokenized treasuries, RealT for real estate, Centrifuge for asset financing. Major DeFi protocols are integrating RWA strategies for yield."
+					"question": "¿Cuáles son los casos de uso de RWA?",
+					"answer": "Los RWAs permiten inversión fraccionada en bienes raíces, mercados de bonos descentralizados, préstamos respaldados por activos tradicionales, colaterales del mundo real para DeFi y transferencias globales eficientes de activos. MakerDAO, Centrifuge y Ondo Finance son pioneros RWA."
 				}
 			]
 		},
 		"ai_crypto": {
-			"title": "AI & Crypto - AI Tokens & Decentralized AI | BiuBiu Tools",
-			"description": "Intersection of AI and blockchain. AI tokens, decentralized compute, AI agents, and machine learning on-chain.",
-			"keywords": "",
+			"title": "IA Cripto - Proyectos Blockchain de Inteligencia Artificial | BiuBiu Tools",
+			"description": "Descubre proyectos de IA cripto combinando inteligencia artificial y blockchain. Explora mercados de IA descentralizada, computación IA y tokens IA.",
+			"keywords": "ia cripto, blockchain inteligencia artificial, tokens ia, mercados ia descentralizados, proyectos ai blockchain",
 			"faqs": [
 				{
-					"question": "How are AI and crypto connected?",
-					"answer": "AI and crypto intersect through decentralized compute (Akash, Render), AI agent economies, decentralized AI training, and tokens for AI services."
+					"question": "¿Qué es IA Cripto?",
+					"answer": "IA Cripto se refiere a proyectos que combinan inteligencia artificial y tecnología blockchain. Esto incluye mercados descentralizados de IA, redes de computación IA, training de modelos impulsado por blockchain, agentes IA usando cripto y tokens gobernando protocolos IA."
 				},
 				{
-					"question": "What are AI agents in crypto?",
-					"answer": "AI agents are autonomous programs that can hold wallets, make transactions, and interact with DeFi. They're emerging for trading, content creation, and protocol management."
+					"question": "¿Cómo ayuda blockchain a la IA?",
+					"answer": "Blockchain puede proveer: datos de training verificables y transparentes, mercados descentralizados de modelos IA, computación distribuida para IA, mecanismos de pago para servicios IA, trazabilidad de modelos IA y gobernanza de sistemas IA."
 				},
 				{
-					"question": "What are the main AI crypto projects?",
-					"answer": "Render Network for GPU compute, Akash for decentralized cloud, Bittensor for decentralized AI, and various AI agent platforms. The space is rapidly evolving."
+					"question": "¿Cuáles son proyectos populares de IA Cripto?",
+					"answer": "Los proyectos principales incluyen: Fetch.ai (agentes IA autónomos), SingularityNET (mercado IA descentralizado), Ocean Protocol (intercambio datos IA), Render (renderizado GPU/IA) y Bittensor (redes IA descentralizadas)."
 				}
 			]
 		},
 		"restaking": {
-			"title": "Restaking - EigenLayer & Liquid Restaking | BiuBiu Tools",
-			"description": "Restaking protocols for additional yield. EigenLayer, liquid restaking tokens, and AVS (Actively Validated Services).",
-			"keywords": "",
+			"title": "Protocolos de Restaking - Capitaliza Tu ETH Stakeado | BiuBiu Tools",
+			"description": "Aprende sobre restaking con EigenLayer y protocolos similares. Capitaliza ETH stakeado para seguridad adicional y recompensas.",
+			"keywords": "restaking, eigenlayer, liquid restaking, staking eth, restaking capitalizacion",
 			"faqs": [
 				{
-					"question": "What is restaking?",
-					"answer": "Restaking lets you use staked ETH to secure additional protocols (AVS) for extra yield. EigenLayer pioneered this, allowing ETH stakers to earn rewards from multiple services."
+					"question": "¿Qué es el restaking?",
+					"answer": "El restaking te permite usar tu ETH ya stakeado para asegurar protocolos adicionales simultáneamente, ganando recompensas de staking de múltiples fuentes. EigenLayer pioneriza esto permitiendo que los stakers validen servicios mientras mantienen seguridad de Ethereum."
 				},
 				{
-					"question": "What are liquid restaking tokens (LRTs)?",
-					"answer": "LRTs like eETH (ether.fi) or ezETH (Renzo) represent restaked ETH that you can use in DeFi. They're liquid versions of restaked positions."
+					"question": "¿Restaking vs Staking normal?",
+					"answer": "El staking normal asegura Ethereum y gana ~4% APR. El restaking permite que el mismo ETH asegure servicios adicionales (oráculos, bridges, L2s) por recompensas extras. Sin embargo, el restaking añade riesgos como condiciones de slashing adicionales y complejidad de contratos inteligentes."
 				},
 				{
-					"question": "What are the risks of restaking?",
-					"answer": "Restaking adds slashing risk from AVS failures, smart contract risk, and complexity. Higher yields come with higher risk. Understand what AVS you're securing."
+					"question": "¿Cuáles son los riesgos del restaking?",
+					"answer": "Los riesgos incluyen: condiciones de slashing compuestas (perder ETH por mal comportamiento en múltiples protocolos), vulnerabilidades de contratos inteligentes, riesgos de liquidez en tokens de restaking líquido y centralización potencial si pocos operadores dominan el restaking."
 				}
 			]
 		},
 		"cex": {
-			"title": "Crypto Exchanges (CEX) - Trading Platforms | BiuBiu Tools",
-			"description": "Centralized cryptocurrency exchanges for trading. Compare exchange features, security, fees, and supported assets.",
-			"keywords": "",
+			"title": "Exchanges Cripto (CEX) - Plataformas Centralizadas de Trading | BiuBiu Tools",
+			"description": "Compara los principales exchanges de criptomonedas centralizados (CEX) como Binance, Coinbase, Kraken. Encuentra las mejores plataformas de trading cripto.",
+			"keywords": "exchange cripto, cex, binance, coinbase, kraken, plataforma trading cripto",
 			"faqs": [
 				{
-					"question": "Which exchanges are safest?",
-					"answer": "Coinbase and Kraken are well-regulated in the US. Binance has the most liquidity globally. Look for proof of reserves, regulatory compliance, and security track record."
+					"question": "¿Qué es un CEX?",
+					"answer": "Un CEX (Exchange Centralizado) es una plataforma donde puedes comprar, vender e intercambiar criptomonedas. A diferencia de los DEXs, los CEXs son operados por empresas, requieren KYC, custodian tus fondos y ofrecen fiat on-ramps, trading avanzado y soporte al cliente."
 				},
 				{
-					"question": "CEX vs DEX - which should I use?",
-					"answer": "CEX for fiat on/off ramps, advanced trading, and beginner-friendliness. DEX for self-custody, permissionless trading, and access to more tokens. Many use both."
+					"question": "¿CEX vs DEX?",
+					"answer": "Los CEXs ofrecen mejor liquidez, pares fiat, trading más rápido, soporte al cliente y características avanzadas. Los DEXs proveen autocustodia, sin KYC, resistencia a censura y listados de tokens más amplios. Muchos usuarios utilizan ambos para diferentes propósitos."
 				},
 				{
-					"question": "How do I secure my exchange account?",
-					"answer": "Enable 2FA (preferably hardware key), use unique passwords, whitelist withdrawal addresses, enable withdrawal delays, and don't keep large amounts on exchanges long-term."
+					"question": "¿Son seguros los exchanges centralizados?",
+					"answer": "Los CEXs reputados implementan fuerte seguridad (almacenamiento frío, 2FA, seguros), pero custodian tus fondos - creas riesgo de contraparte. Los eventos históricos (Mt. Gox, FTX) muestran que ningún exchange es 100% seguro. Solo mantén en exchanges lo que estás tradeando activamente."
 				}
 			]
 		},
 		"gas_burner": {
-			"title": "Gas Burners & Token Burns - Deflationary Mechanisms | BiuBiu Tools",
-			"description": "Track token burns and gas consumption. Monitor deflationary mechanisms, burn rates, and supply dynamics.",
-			"keywords": "",
+			"title": "Direcciones Quemadoras de Gas - Optimización de Tarifas Blockchain | BiuBiu Tools",
+			"description": "Identifica quemadores de gas principales y optimiza el uso de gas en blockchain. Aprende sobre consumo de gas, optimización y trackers de tarifas.",
+			"keywords": "quemadores gas, optimizacion gas ethereum, tarifas gas, rastreador gas, consumo gas blockchain",
 			"faqs": [
 				{
-					"question": "What are token burns?",
-					"answer": "Token burns permanently remove tokens from circulation by sending them to an unusable address. This creates deflationary pressure and can increase scarcity value."
+					"question": "¿Qué son los quemadores de gas?",
+					"answer": "Los quemadores de gas se refieren a contratos o entidades que consumen grandes cantidades de gas blockchain, a menudo impactando las tarifas de red. Los mayores consumidores típicamente incluyen exchanges populares, protocolos DeFi y aplicaciones de alto volumen como NFT marketplaces."
 				},
 				{
-					"question": "How does ETH burning work?",
-					"answer": "Since EIP-1559, base fees are burned instead of going to miners. During high activity, ETH can become deflationary. Track burn rates on ultrasound.money."
+					"question": "¿Por qué rastrear el uso de gas?",
+					"answer": "Rastrear quemadores de gas ayuda a entender la demanda de red, identificar aplicaciones populares, predecir picos de tarifas y optimizar el timing de transacciones. Los desarrolladores también monitorean el gas para optimizar la eficiencia de contratos inteligentes."
 				},
 				{
-					"question": "What projects have significant burns?",
-					"answer": "Ethereum (base fee), BNB (quarterly burns), SHIB (community burns), and many protocols with buy-and-burn mechanisms. Check tokenomics to understand burn schedules."
+					"question": "¿Cómo reduzco costos de gas?",
+					"answer": "Estrategias: transar durante períodos de bajo tráfico (fines de semana, horas nocturnas), usar L2s para transacciones más baratas, optimizar configuraciones de gas, agrupar transacciones, usar funcionalidades de contratos más eficientes en gas y considerar cadenas alternativas."
 				}
 			]
 		},
 		"trends": {
-			"title": "Crypto Trends & VC Activity - Market Intelligence | BiuBiu Tools",
-			"description": "Track crypto market trends and venture capital activity. Investment data, emerging narratives, and market movements.",
-			"keywords": "",
+			"title": "Tendencias Cripto y VC - Analítica de Inversión Blockchain | BiuBiu Tools",
+			"description": "Rastrea tendencias cripto, actividad de capital de riesgo, financiamiento de proyectos y señales de inversión en el espacio blockchain.",
+			"keywords": "tendencias cripto, vc blockchain, analisis inversion cripto, financiamiento blockchain, tendencias mercado",
 			"faqs": [
 				{
-					"question": "How do I identify crypto trends early?",
-					"answer": "Follow VC investment announcements, track smart money on-chain, monitor social sentiment, watch developer activity metrics, and participate in builder communities."
+					"question": "¿Cómo rastreas tendencias cripto?",
+					"answer": "Monitorea actividad de financiamiento VC, rastreo de volumen DEX, crecimiento de TVL de protocolos, trending en redes sociales, engagement de desarrolladores GitHub, métricas on-chain y cobertura de medios. Plataformas como Messari, Artemis y The Block proveen analíticas completas de tendencias."
 				},
 				{
-					"question": "Which VCs are most active in crypto?",
-					"answer": "a16z, Paradigm, Polychain, and Multicoin are top-tier. Animoca and Spartan for gaming. Track their portfolios for themes they're betting on."
+					"question": "¿Por qué es importante el financiamiento VC?",
+					"answer": "El financiamiento VC señala confianza institucional, valida ideas de proyectos, provee recursos para desarrollo y a menudo precede el éxito del protocolo. Rastrear inversiones VC ayuda a identificar narrativas emergentes y oportunidades potenciales de inversión antes de la atención mainstream."
 				},
 				{
-					"question": "What current trends should I watch?",
-					"answer": "AI agents, restaking, RWAs, and Bitcoin L2s are current hot themes. Trends cycle - what's hot today may cool off. Focus on fundamentals over hype."
+					"question": "¿Qué narrativas están tendiendo en cripto?",
+					"answer": "Las narrativas actuales incluyen: soluciones L2 y scaling, infraestructura IA+cripto, tokenización RWA, finanzas descentralizadas (DeFi), restaking y seguridad compartida, protocolos de privacidad y redes sociales descentralizadas. Las narrativas evolucionan - mantente actualizado con fuentes de noticias y investigación."
 				}
 			]
 		},
 		"web3_teams": {
-			"title": "Web3 Teams & VCs - Builders & Investors | BiuBiu Tools",
-			"description": "Discover Web3 teams, builders, and investors. Track who's building what and where smart money is investing.",
-			"keywords": "",
+			"title": "Equipos Web3 - Colaboración y Gestión de Proyectos | BiuBiu Tools",
+			"description": "Herramientas para equipos Web3, colaboración DAO, gestión de proyectos y flujo de trabajo de desarrollo descentralizado.",
+			"keywords": "equipos web3, colaboracion dao, gestion proyectos blockchain, herramientas equipos descentralizados",
 			"faqs": [
 				{
-					"question": "How do I research Web3 teams?",
-					"answer": "Check team backgrounds on LinkedIn, verify past projects, look for GitHub activity, and assess community reputation. Anonymous teams carry higher risk."
+					"question": "¿Cómo trabajan juntos los equipos Web3?",
+					"answer": "Los equipos Web3 a menudo trabajan remotamente y descentralizadamente usando: Discord/Telegram para comunicación, Notion/GitBook para documentación, GitHub para código, herramientas de gobernanza DAO para decisiones, coordinación on-chain y cripto para pagos."
 				},
 				{
-					"question": "What makes a strong Web3 team?",
-					"answer": "Previous successful projects, technical depth, transparent communication, aligned token incentives, and genuine community engagement. Past performance matters."
+					"question": "¿Qué herramientas son esenciales para equipos Web3?",
+					"answer": "Las herramientas esenciales incluyen: plataformas de comunicación (Discord, Telegram), software de gestión de proyectos (Notion, Linear), control de versiones (GitHub), dashboards de gobernanza (Snapshot, Tally), gestión de tesorería (Gnosis Safe) y plataformas de pago (Sablier, Utopia)."
 				},
 				{
-					"question": "How do VCs evaluate crypto projects?",
-					"answer": "Team quality, technology innovation, market size, tokenomics, competitive positioning, and traction. Early stage focuses on team, later stage on metrics."
+					"question": "¿En qué se diferencian los equipos Web3 de los tradicionales?",
+					"answer": "Los equipos Web3 típicamente enfatizan: descentralización (sin jerarquías estrictas), transparencia (trabajo público, gobernanza on-chain), alineación de incentivos (tokens, equidad), trabajo remoto-first, colaboración asíncrona global y uso de herramientas cripto-native para coordinación."
 				}
 			]
 		},
 		"regulation": {
-			"title": "Crypto Regulation - Legal & Compliance Resources | BiuBiu Tools",
-			"description": "Stay informed on crypto regulation worldwide. SEC updates, MiCA, global regulatory developments, and compliance resources.",
-			"keywords": "",
+			"title": "Regulación Cripto - Cumplimiento y Noticias Legales Blockchain | BiuBiu Tools",
+			"description": "Mantente actualizado con regulación cripto, desarrollos de cumplimiento, noticias legales y marcos regulatorios de blockchain por jurisdicción.",
+			"keywords": "regulacion cripto, cumplimiento blockchain, leyes cripto, regulacion legal, noticias regulatorias",
 			"faqs": [
 				{
-					"question": "How is crypto regulated?",
-					"answer": "Regulation varies by country. US has SEC (securities) and CFTC (commodities). EU has MiCA. Some countries ban crypto, others embrace it. The landscape is evolving rapidly."
+					"question": "¿Cómo se regula la cripto?",
+					"answer": "La regulación cripto varía globalmente: EE.UU. trata la mayoría como valores (SEC) o commodities (CFTC), la UE implementa MiCA, algunos países prohíben cripto completamente, otros la abrazan. Las áreas reguladas incluyen valores/commodities, AML/KYC, impuestos, protección al consumidor y stablecoins."
 				},
 				{
-					"question": "Are stablecoins being regulated?",
-					"answer": "Yes, stablecoins face increasing regulation. MiCA in EU requires reserves and licensing. US is working on stablecoin legislation. Expect more requirements for issuers."
+					"question": "¿Necesito reportar transacciones cripto?",
+					"answer": "En la mayoría de jurisdicciones, sí. Las transacciones cripto a menudo son eventos imponibles (ganancias de capital), los exchanges reportan a autoridades fiscales y las regulaciones AML requieren KYC. Consulta a profesionales fiscales locales - las leyes cripto evolucionan rápidamente y las penalidades por incumplimiento pueden ser severas."
 				},
 				{
-					"question": "How do I stay compliant?",
-					"answer": "Keep records of all transactions, understand your jurisdiction's rules, use compliant exchanges, and consult crypto-savvy legal and tax professionals."
+					"question": "¿Cómo me mantengo actualizado con regulación?",
+					"answer": "Sigue publicaciones de derecho cripto, monitorea anuncios de agencias regulatorias (SEC, CFTC, FCA), únete a comunidades de cumplimiento cripto, suscríbete a newsletters legales (The Block Regulatory, CoinDesk Policy) y consulta a asesores legales familiarizados con cripto."
 				}
 			]
 		},
 		"influencer": {
-			"title": "Crypto Influencers & KOLs - Web3 Content Creators | BiuBiu Tools",
-			"description": "Discover crypto influencers and content creators. Follow key opinion leaders, analysts, and builders on social media.",
-			"keywords": "",
+			"title": "KOL e Influencers Cripto - Líderes de Opinión Blockchain | BiuBiu Tools",
+			"description": "Descubre influencers cripto, KOLs (Líderes de Opinión Clave), educadores blockchain y creadores de contenido para insights de mercado y educación.",
+			"keywords": "influencers cripto, kol blockchain, twitter cripto, educadores cripto, lideres opinion",
 			"faqs": [
 				{
-					"question": "How do I find reliable crypto influencers?",
-					"answer": "Look for builders who share knowledge, not just price predictions. Check track records, transparency about holdings, and quality of analysis. Avoid pure shillers."
+					"question": "¿Quiénes son los KOLs cripto?",
+					"answer": "Los KOLs (Líderes de Opinión Clave) cripto son individuos influyentes con grandes seguidores que comparten análisis de mercado, insights de proyectos, contenido educativo y opiniones. Incluyen traders, desarrolladores, investigadores, VCs y educadores en plataformas como Twitter, YouTube y podcasts."
 				},
 				{
-					"question": "What platforms do crypto KOLs use?",
-					"answer": "Twitter/X is the main hub. YouTube for long-form. Farcaster for Web3 native. Substack/Mirror for newsletters. TikTok for mainstream reach."
+					"question": "¿Debería confiar en influencers cripto?",
+					"answer": "Usa cautela: muchos influencers proveen conocimientos valiosos, pero algunos promocionan proyectos por pago, tienen bolsas posicionadas o carecen de experiencia. Siempre investiga independientemente (DYOR), verifica reclamos, entiende incentivos y diversifica tus fuentes de información."
 				},
 				{
-					"question": "Should I follow trading signals?",
-					"answer": "Be very cautious. Many 'signals' are paid promotions or pump-and-dumps. Influencers often sell their bags to followers. Focus on education over trading calls."
+					"question": "¿Cómo identifico influencers confiables?",
+					"answer": "Busca: historial consistente de contenido preciso, transparencia sobre inversiones/partnerships, experiencia/credenciales técnicas, engagement de comunidad genuino, disposición a admitir errores y enfoque educativo sobre promoción. Verifica reputación en comunidades cripto."
 				}
 			]
 		}
@@ -7345,5 +7345,16 @@
 		"zealy": {
 			"description": "Community quest and reward platform"
 		}
+	},
+	"seo": {
+		"page_title": "Chain Tools - Web3 Tools Directory | BiuBiu Tools",
+		"page_description": "Discover the best Web3 tools and DApps. Browse curated DeFi, NFT, Analytics, Security, Bridge, and Developer tools across multiple blockchains.",
+		"keywords": "web3 tools, dapp directory, defi tools, nft marketplace, blockchain explorer, crypto tools, ethereum tools, web3 resources",
+		"webapp_name": "Chain Tools",
+		"webapp_description": "Curated directory of quality Web3 tools and DApps for DeFi, NFT, Analytics, Security, and more.",
+		"feature_1": "Browse 600+ curated Web3 tools",
+		"feature_2": "Filter by category: DeFi, NFT, Analytics, Security",
+		"feature_3": "Search by name, tag, or blockchain",
+		"feature_4": "Direct links to official tool websites"
 	}
 }
