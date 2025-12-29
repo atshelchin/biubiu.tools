@@ -1,6 +1,6 @@
 <script lang="ts">
 	import SimpleCodeEditor from '$lib/components/widgets/SimpleCodeEditor.svelte';
-	import VirtualList from '$lib/components/ui/virtual-list.svelte';
+	import { VirtualList } from '@shelchin/virtual-list';
 	import { AlertCircle, Upload } from '@lucide/svelte';
 	import { slide } from 'svelte/transition';
 	import { useI18n } from '@shelchin/i18n';

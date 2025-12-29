@@ -11,7 +11,7 @@
 		Validators,
 		type FormState
 	} from '@packages/formstate/src';
-	import { dragSortable } from '$lib/utils/drag-sortable';
+	import { dragSortable } from '@shelchin/drag-sortable';
 
 	// 创建表单状态
 	const form: FormState = useFormState({

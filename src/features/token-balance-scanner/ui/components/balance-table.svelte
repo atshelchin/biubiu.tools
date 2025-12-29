@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { useI18n } from '@shelchin/i18n';
 	import { Copy, Check } from '@lucide/svelte';
-	import { DataTable, type DataTableColumn } from '$lib/components/ui/data-table';
+	import { DataTable, type DataTableColumn } from '@shelchin/data-table';
 	import type { BalanceFilter, AddressBalance, SortState } from '../../types/scanner';
 	import type { TokenConfig } from '$lib/services/balance-scanner/types';
 	import { formatUnits } from 'viem';
