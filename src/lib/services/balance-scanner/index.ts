@@ -79,5 +79,6 @@ export {
 // Scanner
 export { BalanceScanner, createScanner } from './scanner';
 
-// RPC Manager
-export { RPCManager } from './rpc-manager';
+// RPC Manager (re-exported from @shelchin/rpc-manager)
+export { RPCManager, RPCQualityTracker, getRPCQualityTracker } from '@shelchin/rpc-manager';
+export type { RPCManagerConfig, RPCQualityTrackerConfig } from '@shelchin/rpc-manager';

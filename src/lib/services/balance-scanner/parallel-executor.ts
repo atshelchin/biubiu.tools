@@ -12,7 +12,7 @@ import {
 	decodeFunctionResult,
 	type Address
 } from 'viem';
-import { getRPCQualityTracker, type RPCQualityTracker } from './rpc-quality';
+import { getRPCQualityTracker, type RPCQualityTracker } from '@shelchin/rpc-manager';
 import type { RPCEndpoint, TokenConfig, ParallelScanConfig, ScanEvent } from './types';
 
 // Multicall3 contract address (same on all EVM chains)

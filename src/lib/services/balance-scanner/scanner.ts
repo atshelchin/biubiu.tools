@@ -16,8 +16,7 @@ import {
 	decodeFunctionResult,
 	type Address
 } from 'viem';
-import { RPCManager } from './rpc-manager';
-import { getRPCQualityTracker, type RPCQualityTracker } from './rpc-quality';
+import { RPCManager, getRPCQualityTracker, type RPCQualityTracker } from '@shelchin/rpc-manager';
 import { ParallelRPCExecutor } from './parallel-executor';
 import {
 	type ScanState,

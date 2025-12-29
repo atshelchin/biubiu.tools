@@ -18,6 +18,7 @@
         "@shelchin/cookie-consent": "workspace:*",
         "@shelchin/ethereum-connectors": "0.0.1-dev.20251106040039.5fa58a7",
         "@shelchin/i18n": "2.4.0",
+        "@shelchin/rpc-manager": "workspace:*",
         "@shelchin/svelte-clipboard": "workspace:*",
         "@shelchin/svelte-theme": "workspace:*",
         "@shelchin/worker-pool": "workspace:*",
@@ -79,6 +80,13 @@
       },
       "peerDependencies": {
         "svelte": "^5.0.0",
+      },
+    },
+    "packages/rpc-manager": {
+      "name": "@shelchin/rpc-manager",
+      "version": "0.0.1",
+      "devDependencies": {
+        "typescript": "^5.0.0",
       },
     },
     "packages/svelte-clipboard": {
@@ -404,6 +412,8 @@
     "@shelchin/ethereum-connectors": ["@shelchin/ethereum-connectors@0.0.1-dev.20251106040039.5fa58a7", "", { "dependencies": { "@base-org/account": "^2.4.0", "@noble/curves": "^2.0.1", "@scure/bip32": "^2.0.1", "@walletconnect/ethereum-provider": "^2.22.4", "qr-code-styling": "^1.9.2", "viem": "^2.38.4" } }, "sha512-LZHwUktO/sEQO+xjh5ZesvjNEQKYgsh8+GLXGXO+A9pkcZNLbpxUcB/Bl63fhBfg7i/AzNoliq4N0jbJl15dbg=="],
 
     "@shelchin/i18n": ["@shelchin/i18n@2.4.0", "", { "peerDependencies": { "svelte": "^5.0.0" }, "bin": { "i18n": "dist/cli/generate-types.js" } }, "sha512-VWOwHPR6I2NBR/2f5wd3VIxn/KmI0GAKDxg8t6EBHoe/1LxAkKycSmPfpO2caouyjFojRmvC1yqB/l1Kc7kxzg=="],
+
+    "@shelchin/rpc-manager": ["@shelchin/rpc-manager@workspace:packages/rpc-manager"],
 
     "@shelchin/svelte-clipboard": ["@shelchin/svelte-clipboard@workspace:packages/svelte-clipboard"],
 

@@ -1,0 +1,39 @@
+{
+	"name": "@shelchin/rpc-manager",
+	"version": "0.0.1",
+	"description": "RPC endpoint manager with rotation, rate limiting, health tracking, and quality metrics",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc",
+		"prepublishOnly": "bun run build"
+	},
+	"devDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"keywords": [
+		"rpc",
+		"load-balancer",
+		"rate-limit",
+		"health-check",
+		"ethereum",
+		"blockchain"
+	],
+	"author": "",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/AmbitionsXXXV/biubiu.tools.git",
+		"directory": "packages/rpc-manager"
+	}
+}
