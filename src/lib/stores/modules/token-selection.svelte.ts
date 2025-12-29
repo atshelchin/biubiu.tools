@@ -76,7 +76,7 @@ export interface TokenSelectionModule extends StateModule<TokenSelectionSerializ
  */
 export function createTokenSelectionModule(): TokenSelectionModule {
 	// Internal state - SvelteSet is already reactive, no need for $state wrapper
-	let selectedIds = new SvelteSet<string>();
+	const selectedIds = new SvelteSet<string>();
 	let tokens = $state<Token[]>([]);
 
 	return {
@@ -106,9 +106,9 @@ export function createTokenSelectionModule(): TokenSelectionModule {
 		setTokens(newTokens: Token[]) {
 			tokens = newTokens;
 			// Clear selections that are no longer valid
-			const validIds = new SvelteSet(newTokens.map((t) => t.id));
+			const validIds = newTokens.map((t) => t.id);
 			for (const id of selectedIds) {
-				if (!validIds.has(id)) {
+				if (!validIds.includes(id)) {
 					selectedIds.delete(id);
 				}
 			}
@@ -131,11 +131,17 @@ export function createTokenSelectionModule(): TokenSelectionModule {
 		},
 
 		selectAll() {
-			selectedIds = new SvelteSet(tokens.map((t) => t.id));
+			selectedIds.clear();
+			for (const token of tokens) {
+				selectedIds.add(token.id);
+			}
 		},
 
 		selectByIds(ids: string[]) {
-			selectedIds = new SvelteSet(ids);
+			selectedIds.clear();
+			for (const id of ids) {
+				selectedIds.add(id);
+			}
 		},
 
 		clear() {
@@ -144,7 +150,7 @@ export function createTokenSelectionModule(): TokenSelectionModule {
 
 		// StateModule implementation
 		reset() {
-			selectedIds = new SvelteSet<string>();
+			selectedIds.clear();
 			tokens = [];
 		},
 
@@ -158,7 +164,10 @@ export function createTokenSelectionModule(): TokenSelectionModule {
 		deserialize(data: TokenSelectionSerializedState) {
 			if (!data) return;
 			tokens = data.tokens ?? [];
-			selectedIds = new SvelteSet(data.selectedIds ?? []);
+			selectedIds.clear();
+			for (const id of data.selectedIds ?? []) {
+				selectedIds.add(id);
+			}
 		}
 	};
 }

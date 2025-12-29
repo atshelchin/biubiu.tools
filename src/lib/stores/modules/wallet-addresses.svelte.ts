@@ -28,7 +28,7 @@
  * @module
  */
 
-import { SvelteMap, SvelteSet } from 'svelte/reactivity';
+import { SvelteMap } from 'svelte/reactivity';
 import type { Address } from 'viem';
 import type { StateModule } from '../types';
 
@@ -78,7 +78,7 @@ export interface WalletAddressesModule extends StateModule<WalletAddressesSerial
 export function createWalletAddressesModule(): WalletAddressesModule {
 	// Internal state - SvelteMap is already reactive, no need for $state wrapper
 	let addresses = $state<Address[]>([]);
-	let labels = new SvelteMap<Address, string>();
+	const labels = new SvelteMap<Address, string>();
 
 	return {
 		// Getters for readonly access
@@ -114,9 +114,8 @@ export function createWalletAddressesModule(): WalletAddressesModule {
 		},
 
 		addWallets(wallets: WalletEntry[]) {
-			// Filter out duplicates
-			const existingSet = new SvelteSet(addresses);
-			const newWallets = wallets.filter((w) => !existingSet.has(w.address));
+			// Filter out duplicates - using Array.includes for simplicity
+			const newWallets = wallets.filter((w) => !addresses.includes(w.address));
 
 			if (newWallets.length === 0) return;
 
@@ -158,7 +157,7 @@ export function createWalletAddressesModule(): WalletAddressesModule {
 		// StateModule implementation
 		reset() {
 			addresses = [];
-			labels = new SvelteMap<Address, string>();
+			labels.clear();
 		},
 
 		serialize(): WalletAddressesSerializedState {
@@ -174,7 +173,12 @@ export function createWalletAddressesModule(): WalletAddressesModule {
 			if (!data) return;
 			const wallets = data.wallets ?? [];
 			addresses = wallets.map((w) => w.address);
-			labels = new SvelteMap(wallets.filter((w) => w.label).map((w) => [w.address, w.label!]));
+			labels.clear();
+			for (const w of wallets) {
+				if (w.label) {
+					labels.set(w.address, w.label);
+				}
+			}
 		}
 	};
 }
