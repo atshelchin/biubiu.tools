@@ -32,7 +32,8 @@
       "Bash(bun -e:*)",
       "Bash(bun x vite-bundle-visualizer:*)",
       "Bash(npx i18n:*)",
-      "Bash(bunx @shelchin/i18n:*)"
+      "Bash(bunx @shelchin/i18n:*)",
+      "Bash(bun x eslint:*)"
     ],
     "deny": [],
     "ask": []
