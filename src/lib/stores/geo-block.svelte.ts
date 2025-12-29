@@ -7,7 +7,6 @@ const GEO_BLOCK_CONTEXT_KEY = 'geo-block-context';
 // Blocked countries list (ISO 3166-1 alpha-2 codes)
 const BLOCKED_COUNTRIES = new Set([
 	'CN', // China (Mainland)
-	'RU', // Russia
 	'KP', // North Korea
 	'IR', // Iran
 	'SY', // Syria

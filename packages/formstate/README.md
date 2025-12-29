@@ -120,7 +120,7 @@ bun add @shelchin/formstate
 				<div class="address-item">
 					<FormField name="{field.name}.street" label="Street">
 						{#snippet children({ value, onInput, onBlur })}
-							<input value={value} oninput={(e) => onInput(e.currentTarget.value)} onblur={onBlur} />
+							<input {value} oninput={(e) => onInput(e.currentTarget.value)} onblur={onBlur} />
 						{/snippet}
 					</FormField>
 					<button type="button" onclick={() => remove(field.index)}>Remove</button>
@@ -322,17 +322,17 @@ const form = useFormState({
 
 ## Components
 
-| Component           | Description                        |
-| ------------------- | ---------------------------------- |
-| `Form`              | Form root, provides context        |
-| `Field`             | Headless field component           |
-| `FormField`         | Styled field component             |
-| `FieldArray`        | Dynamic array field management     |
-| `SchemaRenderer`    | Schema-driven form renderer        |
-| `FieldLabel`        | Label component                    |
-| `FieldErrorDisplay` | Error message display              |
-| `FieldDescription`  | Help text/description              |
-| `FieldValidating`   | Loading indicator during async     |
+| Component           | Description                    |
+| ------------------- | ------------------------------ |
+| `Form`              | Form root, provides context    |
+| `Field`             | Headless field component       |
+| `FormField`         | Styled field component         |
+| `FieldArray`        | Dynamic array field management |
+| `SchemaRenderer`    | Schema-driven form renderer    |
+| `FieldLabel`        | Label component                |
+| `FieldErrorDisplay` | Error message display          |
+| `FieldDescription`  | Help text/description          |
+| `FieldValidating`   | Loading indicator during async |
 
 ## Testing
 
@@ -345,6 +345,7 @@ bun run test:watch
 ```
 
 The package includes comprehensive tests for:
+
 - FormStateManager (69 tests)
 - Validators (34 tests)
 - Transformers (18 tests)
