@@ -1,34 +1,36 @@
-# FormState
+# @shelchin/formstate
 
-一个功能强大、类型安全的表单状态管理库，支持递归嵌套、动态字段、异步验证。
+A powerful, type-safe form state management library with support for recursive nesting, dynamic fields, and async validation.
 
-## 特性
+## Features
 
-✅ **接口先行** - 面向接口编程，易于扩展和测试
-✅ **框架适配** - 核心逻辑框架无关，提供 Svelte 5 适配器
-✅ **Svelte 5 Runes** - 使用最新的 Svelte 5 响应式 API
-✅ **递归嵌套** - 支持深层对象和数组（`user.addresses[0].street`）
-✅ **动态字段** - 运行时添加/删除字段
-✅ **异步验证** - 支持异步验证器，自动防抖和取消
-✅ **可组合 UI** - Headless 组件 + 可选 UI 组件
-✅ **Schema 驱动** - 支持配置驱动的表单渲染
-✅ **TypeScript** - 完整的类型支持
+- **Interface-first design** - Program against interfaces for easy extension and testing
+- **Framework adapters** - Core logic is framework-agnostic, with Svelte 5 adapter included
+- **Svelte 5 Runes** - Uses the latest Svelte 5 reactive API
+- **Recursive nesting** - Deep object and array paths (`user.addresses[0].street`)
+- **Dynamic fields** - Add/remove fields at runtime
+- **Async validation** - Support for async validators with auto-debounce and cancellation
+- **Composable UI** - Headless components + optional UI components
+- **Schema-driven** - Support for configuration-driven form rendering
+- **TypeScript** - Full type support
+- **Batch updates** - Efficient batch updates to prevent multiple re-renders
+- **Serialization** - Safe serialization supporting BigInt, Date, Map, Set
 
-## 安装
+## Installation
 
 ```bash
-npm install @biubiu/formstate
+npm install @shelchin/formstate
+# or
+bun add @shelchin/formstate
 ```
 
-## 基础用法
+## Quick Start
 
-### 1. 手动控制字段（推荐）
-
-用户完全控制渲染哪些字段，最灵活：
+### Basic Usage with FormField
 
 ```svelte
 <script lang="ts">
-	import { useFormState, Form, FormField, Validators } from '@biubiu/formstate';
+	import { useFormState, Form, FormField, Validators } from '@shelchin/formstate';
 
 	const form = useFormState({
 		fields: {
@@ -70,9 +72,7 @@ npm install @biubiu/formstate
 </Form>
 ```
 
-### 2. Headless 组件（完全自定义 UI）
-
-使用 `Field` 组件获得完全的 UI 控制权：
+### Headless Components (Full UI Control)
 
 ```svelte
 <script lang="ts">
@@ -81,9 +81,9 @@ npm install @biubiu/formstate
 		Form,
 		Field,
 		FieldLabel,
-		FieldError,
+		FieldErrorDisplay,
 		FieldValidating
-	} from '@biubiu/formstate';
+	} from '@shelchin/formstate';
 
 	const form = useFormState();
 </script>
@@ -102,7 +102,7 @@ npm install @biubiu/formstate
 					onblur={() => setTouched()}
 				/>
 
-				<FieldError {error} show={touched} />
+				<FieldErrorDisplay {error} show={touched} />
 				<FieldValidating show={validating} />
 			</div>
 		{/snippet}
@@ -110,215 +110,266 @@ npm install @biubiu/formstate
 </Form>
 ```
 
-### 3. 动态数组字段
-
-使用 `FieldArray` 管理动态列表：
+### Dynamic Array Fields
 
 ```svelte
-<script lang="ts">
-	import { Form, FieldArray, FormField } from '@biubiu/formstate';
-</script>
-
 <Form {form}>
 	<FieldArray name="addresses">
 		{#snippet children({ fields, append, remove })}
-			<div class="addresses-list">
-				<h3>Addresses</h3>
-
-				{#each fields as field (field.key)}
-					<div class="address-item">
-						<FormField name="{field.name}.street" label="Street">
-							{#snippet children({ value, onInput, onBlur })}
-								<input
-									type="text"
-									{value}
-									oninput={(e) => onInput(e.currentTarget.value)}
-									onblur={onBlur}
-								/>
-							{/snippet}
-						</FormField>
-
-						<FormField name="{field.name}.city" label="City">
-							{#snippet children({ value, onInput, onBlur })}
-								<input
-									type="text"
-									{value}
-									oninput={(e) => onInput(e.currentTarget.value)}
-									onblur={onBlur}
-								/>
-							{/snippet}
-						</FormField>
-
-						<button type="button" onclick={() => remove(field.index)}>Remove</button>
-					</div>
-				{/each}
-
-				<button type="button" onclick={() => append({ street: '', city: '' })}>
-					Add Address
-				</button>
-			</div>
+			{#each fields as field (field.key)}
+				<div class="address-item">
+					<FormField name="{field.name}.street" label="Street">
+						{#snippet children({ value, onInput, onBlur })}
+							<input value={value} oninput={(e) => onInput(e.currentTarget.value)} onblur={onBlur} />
+						{/snippet}
+					</FormField>
+					<button type="button" onclick={() => remove(field.index)}>Remove</button>
+				</div>
+			{/each}
+			<button type="button" onclick={() => append({ street: '', city: '' })}>Add Address</button>
 		{/snippet}
 	</FieldArray>
 </Form>
 ```
 
-### 4. Schema 驱动（可选）
+## Core API
 
-使用配置自动渲染表单：
+### FormStateManager
 
-```svelte
-<script lang="ts">
-	import { Form, Validators } from '@biubiu/formstate';
-	import type { FormSchema } from '@biubiu/formstate';
-
-	const schema: FormSchema = {
-		layout: 'vertical',
-		fields: [
-			{
-				name: 'name',
-				type: 'text',
-				label: 'Full Name',
-				required: true,
-				validator: Validators.required()
-			},
-			{
-				name: 'email',
-				type: 'email',
-				label: 'Email',
-				required: true,
-				validator: Validators.compose(Validators.required(), Validators.email())
-			},
-			{
-				name: 'role',
-				type: 'select',
-				label: 'Role',
-				options: [
-					{ label: 'User', value: 'user' },
-					{ label: 'Admin', value: 'admin' }
-				]
-			},
-			{
-				name: 'addresses',
-				type: 'array',
-				label: 'Addresses',
-				itemSchema: {
-					name: 'address',
-					type: 'group',
-					fields: [
-						{ name: 'street', type: 'text', label: 'Street' },
-						{ name: 'city', type: 'text', label: 'City' }
-					]
-				}
-			}
-		]
-	};
-</script>
-
-<Form {schema} onSubmit={handleSubmit} />
-```
-
-## 自定义验证器
+The core state manager handles all form logic.
 
 ```typescript
-import { createValidator, createCustomValidator, Validators } from '@biubiu/formstate';
+import { FormStateManager, Validators } from '@shelchin/formstate';
 
-// 简单自定义验证
-const passwordMatch = createValidator((value, allValues) => {
-	if (value !== allValues.password) {
-		return 'Passwords do not match';
+const manager = new FormStateManager({
+	validateOnChange: true,
+	validateOnBlur: true,
+	fields: {
+		email: {
+			defaultValue: '',
+			validator: Validators.email()
+		}
 	}
-	return null;
 });
 
-// 异步验证（如检查用户名是否可用）
+// Set values
+manager.setValue('email', 'test@example.com');
+
+// Get values
+manager.getValue('email'); // 'test@example.com'
+manager.getValues(); // { email: 'test@example.com' }
+
+// Validation
+await manager.validateField('email');
+await manager.validateForm();
+
+// State queries
+manager.isDirty(); // true if any field changed
+manager.isValid(); // true if no errors
+manager.isValidating(); // true if validation in progress
+manager.getErrors(); // { field: 'error message', ... }
+manager.getDirtyFields(); // ['email', ...]
+manager.getDirtyValues(); // { email: '...' }
+
+// Submit
+const success = await manager.submit(async (values) => {
+	await saveToServer(values);
+});
+
+// Reset
+manager.reset();
+manager.reset({ email: 'new@example.com' }); // Reset with new initial values
+```
+
+### Batch Updates
+
+Batch multiple updates to prevent multiple re-renders:
+
+```typescript
+manager.batchUpdate(() => {
+	manager.setValue('firstName', 'John', false);
+	manager.setValue('lastName', 'Doe', false);
+	manager.setValue('email', 'john@example.com', false);
+}); // Only triggers one UI update
+```
+
+### Validators
+
+Built-in validators and composition:
+
+```typescript
+import { Validators, createValidator, createCustomValidator } from '@shelchin/formstate';
+
+// Built-in validators
+Validators.required('Custom message');
+Validators.email();
+Validators.minLength(3);
+Validators.maxLength(100);
+Validators.min(0);
+Validators.max(100);
+Validators.pattern(/^[A-Z]+$/);
+
+// Compose validators
+const emailValidator = Validators.compose(
+	Validators.required(),
+	Validators.email(),
+	Validators.maxLength(255)
+);
+
+// Custom validator
+const passwordMatch = createValidator((value, allValues) => {
+	return value === allValues.password ? null : 'Passwords must match';
+});
+
+// Async custom validator
 const usernameAvailable = createCustomValidator(async (value) => {
-	const response = await fetch(`/api/check-username?username=${value}`);
-	const data = await response.json();
-	return data.available;
+	const res = await fetch(`/api/check-username?name=${value}`);
+	return (await res.json()).available;
 }, 'Username is already taken');
 
-// 使用
+// Use with dependencies
 const form = useFormState({
 	fields: {
-		username: {
-			validator: Validators.compose(
-				Validators.required(),
-				Validators.minLength(3),
-				usernameAvailable
-			)
-		},
 		confirmPassword: {
 			validator: passwordMatch,
-			dependencies: ['password'] // 当 password 变化时重新验证
+			dependencies: ['password'] // Re-validate when password changes
 		}
 	}
 });
 ```
 
-## API
+### Transformers
 
-### useFormState(config)
+Transform values on input:
 
-创建表单状态管理器。
+```typescript
+import { Transformers } from '@shelchin/formstate';
 
-**响应式状态:**
+const form = useFormState({
+	fields: {
+		username: {
+			transformer: Transformers.trim
+		},
+		code: {
+			transformer: Transformers.toUpperCase
+		},
+		amount: {
+			transformer: Transformers.toNumber
+		},
+		email: {
+			transformer: Transformers.compose(Transformers.trim, Transformers.toLowerCase)
+		}
+	}
+});
+```
 
-- `form.values` - 所有字段值
-- `form.errors` - 所有错误
-- `form.isDirty` - 是否有修改
-- `form.isValid` - 是否验证通过
-- `form.isValidating` - 是否验证中
+### PathUtils
 
-**方法:**
+Utility for working with nested paths:
 
-- `form.setValue(path, value)` - 设置字段值
-- `form.getValue(path)` - 获取字段值
-- `form.validateField(path)` - 验证单个字段
-- `form.validateForm()` - 验证整个表单
-- `form.submit(onSubmit)` - 提交表单
-- `form.reset()` - 重置表单
+```typescript
+import { PathUtils } from '@shelchin/formstate';
 
-### 组件
+const obj = { user: { addresses: [{ city: 'NYC' }] } };
 
-- **Form** - 表单根组件，提供上下文
-- **Field** - Headless 字段组件（无样式）
-- **FormField** - 带样式的字段组件
-- **FieldArray** - 动态数组字段
-- **SchemaRenderer** - Schema 驱动渲染器
+PathUtils.get(obj, 'user.addresses[0].city'); // 'NYC'
+PathUtils.set(obj, 'user.addresses[0].city', 'LA'); // Immutable update
+PathUtils.delete(obj, 'user.addresses[0]'); // Remove array element
+PathUtils.push(obj, 'user.addresses', { city: 'Boston' }); // Add to array
+PathUtils.move(obj, 'user.addresses', 0, 1); // Reorder array
+```
 
-### UI 组件
+### Serialization
 
-- **FieldLabel** - 标签组件
-- **FieldError** - 错误提示组件
-- **FieldDescription** - 描述文本组件
-- **FieldValidating** - 验证中指示器（带动画）
+Safe serialization with BigInt, Date, Map, Set support:
 
-## 架构设计
+```typescript
+import { safeStringify, safeParse, cloneViaSerialization } from '@shelchin/formstate';
+
+const data = {
+	amount: 123456789012345678901234567890n,
+	createdAt: new Date(),
+	tags: new Set(['a', 'b']),
+	metadata: new Map([['key', 'value']])
+};
+
+const json = safeStringify(data);
+const restored = safeParse(json);
+
+// Deep clone
+const clone = cloneViaSerialization(data);
+```
+
+### Debounced Validation
+
+Validate after input completion:
+
+```typescript
+const form = useFormState({
+	fields: {
+		search: {
+			validateOnComplete: true,
+			debounceMs: 300,
+			completeCondition: (value) => value.length >= 3,
+			validator: async (value) => {
+				// Only runs after user stops typing for 300ms
+				// and input is at least 3 characters
+			}
+		}
+	}
+});
+```
+
+## Components
+
+| Component           | Description                        |
+| ------------------- | ---------------------------------- |
+| `Form`              | Form root, provides context        |
+| `Field`             | Headless field component           |
+| `FormField`         | Styled field component             |
+| `FieldArray`        | Dynamic array field management     |
+| `SchemaRenderer`    | Schema-driven form renderer        |
+| `FieldLabel`        | Label component                    |
+| `FieldErrorDisplay` | Error message display              |
+| `FieldDescription`  | Help text/description              |
+| `FieldValidating`   | Loading indicator during async     |
+
+## Testing
+
+```bash
+# Run tests
+bun run test
+
+# Watch mode
+bun run test:watch
+```
+
+The package includes comprehensive tests for:
+- FormStateManager (69 tests)
+- Validators (34 tests)
+- Transformers (18 tests)
+- PathUtils (27 tests)
+- Serialization (25 tests)
+
+## Architecture
 
 ```
 packages/formstate/
 ├── src/
-│   ├── core/                    # 框架无关的核心逻辑
-│   │   ├── interfaces.ts        # 接口定义（接口先行）
-│   │   ├── FormStateManager.ts  # 状态管理器实现
-│   │   ├── Validators.ts        # 验证器系统
-│   │   └── Transformers.ts      # 值转换器
+│   ├── core/                    # Framework-agnostic core
+│   │   ├── interfaces.ts        # Type definitions
+│   │   ├── FormStateManager.ts  # State management
+│   │   ├── Validators.ts        # Validation system
+│   │   └── Transformers.ts      # Value transformers
 │   ├── utils/
-│   │   └── PathUtils.ts         # 路径工具（支持递归）
+│   │   ├── PathUtils.ts         # Path utilities
+│   │   └── serialize.ts         # Safe serialization
 │   └── adapters/
-│       └── svelte/              # Svelte 5 适配器
-│           ├── useFormState.svelte.ts  # Runes API
-│           ├── schema.ts        # Schema 定义
-│           └── components/      # Svelte 组件
-│               ├── Form.svelte
-│               ├── Field.svelte
-│               ├── FormField.svelte
-│               ├── FieldArray.svelte
-│               └── ui/          # 可组合 UI 组件
-│                   ├── FieldLabel.svelte
-│                   ├── FieldError.svelte
-│                   ├── FieldDescription.svelte
-│                   └── FieldValidating.svelte
+│       └── svelte/              # Svelte 5 adapter
+│           ├── useFormState.svelte.ts
+│           ├── schema.ts
+│           └── components/
+└── examples/                    # Example implementations
 ```
 
 ## License

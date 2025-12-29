@@ -1,0 +1,35 @@
+{
+	"name": "@shelchin/formstate",
+	"version": "0.0.1",
+	"description": "Interface-first form state management with headless components for Svelte 5",
+	"type": "module",
+	"svelte": "./src/index.ts",
+	"main": "./src/index.ts",
+	"exports": {
+		".": {
+			"types": "./src/index.ts",
+			"svelte": "./src/index.ts",
+			"default": "./src/index.ts"
+		}
+	},
+	"files": [
+		"src",
+		"!src/**/*.test.ts"
+	],
+	"scripts": {
+		"build": "svelte-package -i src",
+		"test": "vitest run",
+		"test:watch": "vitest"
+	},
+	"peerDependencies": {
+		"svelte": "^5.0.0"
+	},
+	"dependencies": {
+		"immer": "^10.2.0"
+	},
+	"devDependencies": {
+		"@sveltejs/package": "^2.3.10",
+		"@sveltejs/vite-plugin-svelte": "^6.0.0",
+		"vitest": "^3.2.3"
+	}
+}
