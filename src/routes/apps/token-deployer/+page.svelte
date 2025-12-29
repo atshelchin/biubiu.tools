@@ -1,30 +1,19 @@
 <script lang="ts">
-	import { mainnet, polygon, arbitrum, optimism, base, bsc } from 'viem/chains';
-	import { useI18n } from '@shelchin/i18n';
 	import { ListIcon } from '@lucide/svelte';
-	import StepBasedApp from '$lib/components/step-based-app.svelte';
-	import { stepComponents } from '@/features/token-deployer/ui/steps';
+	import { StepToolApp } from '$lib/step-tool-system';
+	import { tokenDeployerTool } from '@/features/token-deployer/tool';
 	import NetworkSettingsButton from '$lib/components/ui/network-settings-button.svelte';
 	import ReferralButton from '$lib/components/ui/referral-button.svelte';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
-	const i18n = useI18n();
 </script>
 
-<StepBasedApp
-	config={{
-		meta: data.meta,
-		structuredData: data.structuredData,
-		steps: data.steps,
-		appTitle: i18n.t('token-deployer.title'),
-		appDescription: i18n.t('token-deployer.description'),
-		walletConnect: {
-			chains: [mainnet, base, bsc, polygon, arbitrum, optimism],
-			storageKey: 'biubiu-tools-token-deployer'
-		},
-		stepComponents
-	}}
+<StepToolApp
+	feature={tokenDeployerTool}
+	meta={data.meta}
+	structuredData={data.structuredData}
+	steps={data.steps}
 >
 	{#snippet toolbarActions()}
 		<a href="/apps/token-deployer/deployed" class="deployed-tokens-link">
@@ -34,7 +23,7 @@
 		<NetworkSettingsButton variant="ghost" size="sm" />
 		<ReferralButton variant="ghost" size="sm" />
 	{/snippet}
-</StepBasedApp>
+</StepToolApp>
 
 <style>
 	.deployed-tokens-link {

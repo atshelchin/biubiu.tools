@@ -17,6 +17,10 @@ import type { Component } from 'svelte';
 import type { Chain } from 'viem';
 import type { CheckType, DependencyConfig } from '$lib/utils/dependency-runner';
 
+// Generic component type for step components (matches step-based-app.svelte)
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type StepComponent = Component<any, any>;
+
 /**
  * Step configuration
  */
@@ -96,14 +100,24 @@ export interface StepToolDefinition {
 	/** i18n prefix for all translations */
 	i18nPrefix: string;
 
-	/** Step configuration (i18n keys for labels and descriptions) */
+	/**
+	 * Step configuration
+	 * - If useI18nSteps is true (default), labels/descriptions are i18n keys
+	 * - If useI18nSteps is false, they are literal strings
+	 */
 	steps: StepConfig[];
+
+	/**
+	 * Whether steps use i18n keys (default: true)
+	 * Set to false if steps are defined with literal strings (e.g., from +page.ts)
+	 */
+	useI18nSteps?: boolean;
 
 	/** Step components mapping */
 	stepComponents: {
-		readonly sidebar: readonly Component[];
-		readonly content: readonly Component[];
-		readonly footer: readonly Component[];
+		readonly sidebar: readonly StepComponent[];
+		readonly content: readonly StepComponent[];
+		readonly footer: readonly StepComponent[];
 	};
 
 	/** Wallet connection config (optional) */

@@ -30,6 +30,8 @@
 		};
 		/** Structured data for SEO */
 		structuredData: Record<string, unknown>[];
+		/** Override steps from page data (for tools that define steps in +page.ts) */
+		steps?: { label: string; description?: string }[];
 		/** Initial step (1-based, defaults to 1) */
 		initialStep?: number;
 		/** Callback when step manager is ready */
@@ -42,10 +44,14 @@
 		feature,
 		meta,
 		structuredData,
+		steps,
 		initialStep = 1,
 		onStepManagerReady,
 		toolbarActions
 	}: Props = $props();
+
+	// Use provided steps or fall back to feature definition
+	const resolvedSteps = $derived(steps ?? feature.steps);
 
 	const i18n = useI18n();
 
@@ -114,8 +120,8 @@
 	config={{
 		meta,
 		structuredData,
-		steps: feature.steps,
-		useI18nKeys: true,
+		steps: resolvedSteps,
+		useI18nKeys: steps ? false : feature.useI18nSteps !== false,
 		appTitle: i18n.t(`${feature.i18nPrefix}.title` as never),
 		appDescription: i18n.t(`${feature.i18nPrefix}.description` as never),
 		faqs:

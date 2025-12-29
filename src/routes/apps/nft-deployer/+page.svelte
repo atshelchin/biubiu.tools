@@ -1,26 +1,14 @@
 <script lang="ts">
-	import { mainnet, polygon, arbitrum, optimism, base, bsc } from 'viem/chains';
-	import { useI18n } from '@shelchin/i18n';
-	import StepBasedApp from '$lib/components/step-based-app.svelte';
-	import { stepComponents } from '@/features/nft-deployer/ui/steps';
+	import { StepToolApp } from '$lib/step-tool-system';
+	import { nftDeployerTool } from '@/features/nft-deployer/tool';
 	import type { PageData } from './$types';
 
 	let { data }: { data: PageData } = $props();
-
-	const i18n = useI18n();
 </script>
 
-<StepBasedApp
-	config={{
-		meta: data.meta,
-		structuredData: data.structuredData,
-		steps: data.steps,
-		appTitle: i18n.t('nft-deployer.title'),
-		appDescription: i18n.t('nft-deployer.description'),
-		walletConnect: {
-			chains: [mainnet, base, bsc, polygon, arbitrum, optimism],
-			storageKey: 'biubiu-tools-nft-deployer'
-		},
-		stepComponents
-	}}
+<StepToolApp
+	feature={nftDeployerTool}
+	meta={data.meta}
+	structuredData={data.structuredData}
+	steps={data.steps}
 />
