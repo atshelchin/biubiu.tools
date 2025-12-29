@@ -76,8 +76,8 @@ describe('Transformers', () => {
 	describe('compose', () => {
 		it('should compose multiple transformers', () => {
 			const transformer = Transformers.compose(
-				Transformers.trim,
-				Transformers.toLowerCase
+				Transformers.trim as (value: unknown) => unknown,
+				Transformers.toLowerCase as (value: unknown) => unknown
 			);
 
 			expect(transformer('  HELLO  ')).toBe('hello');
@@ -85,8 +85,8 @@ describe('Transformers', () => {
 
 		it('should apply transformers in order', () => {
 			const transformer = Transformers.compose(
-				Transformers.trim,
-				Transformers.toUpperCase,
+				Transformers.trim as (value: unknown) => unknown,
+				Transformers.toUpperCase as (value: unknown) => unknown,
 				(s) => (s as string).replace('HELLO', 'HI')
 			);
 
@@ -108,7 +108,9 @@ describe('Transformers', () => {
 		});
 
 		it('should handle single transformer', () => {
-			const transformer = Transformers.compose(Transformers.toUpperCase);
+			const transformer = Transformers.compose(
+				Transformers.toUpperCase as (value: unknown) => unknown
+			);
 			expect(transformer('hello')).toBe('HELLO');
 		});
 	});

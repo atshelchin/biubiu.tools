@@ -1,5 +1,5 @@
 import 'fake-indexeddb/auto';
-import { vi } from 'vitest';
+import { vi, beforeEach } from 'vitest';
 
 // Mock window if not available
 if (typeof window === 'undefined') {
