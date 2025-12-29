@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import {
 	initTaskManager,
 	resetConfig,
@@ -144,7 +144,7 @@ describe('Task Manager', () => {
 
 	describe('getRecoverableTasks', () => {
 		it('should return pending, running, and paused tasks', async () => {
-			const task1 = await createTask({
+			await createTask({
 				type: 'test',
 				name: 'Pending',
 				executionData: {},

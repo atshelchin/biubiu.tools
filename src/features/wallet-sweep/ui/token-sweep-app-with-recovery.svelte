@@ -7,8 +7,8 @@
 	 */
 	import { onMount } from 'svelte';
 	import StepBasedApp, { type StepBasedAppConfig } from '$lib/components/step-based-app.svelte';
-	import TaskRecoveryModal from '$lib/task-manager/components/task-recovery-modal.svelte';
-	import { taskStore, type Task } from '$lib/task-manager';
+	import TaskRecoveryModal from '@shelchin/task-manager/components/task-recovery-modal.svelte';
+	import { taskStore, type Task } from '@shelchin/task-manager';
 
 	interface Props {
 		config: StepBasedAppConfig;

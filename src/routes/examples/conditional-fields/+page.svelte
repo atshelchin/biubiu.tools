@@ -3,7 +3,7 @@
 	 * 条件字段示例 - 配置驱动
 	 * 演示：完全通过 Schema 配置实现条件显示，无需手动 if 判断
 	 */
-	import { useFormState, Form, Validators, type FormSchema } from '@packages/formstate/src';
+	import { useFormState, Form, Validators, type FormSchema } from '@shelchin/formstate';
 
 	// 完全配置驱动的表单 Schema
 	const orderFormSchema: FormSchema = {

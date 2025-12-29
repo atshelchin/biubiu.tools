@@ -125,10 +125,14 @@ export function createTokenBalanceScannerState(): TokenBalanceScannerState {
 
 		deserializeAll(data: Record<string, unknown>) {
 			if (data.dependencyCheck) {
-				dependencyCheck.deserialize(data.dependencyCheck as Parameters<typeof dependencyCheck.deserialize>[0]);
+				dependencyCheck.deserialize(
+					data.dependencyCheck as Parameters<typeof dependencyCheck.deserialize>[0]
+				);
 			}
 			if (data.tokenSelection) {
-				tokenSelection.deserialize(data.tokenSelection as Parameters<typeof tokenSelection.deserialize>[0]);
+				tokenSelection.deserialize(
+					data.tokenSelection as Parameters<typeof tokenSelection.deserialize>[0]
+				);
 			}
 			if (data.wallets) {
 				wallets.deserialize(data.wallets as Parameters<typeof wallets.deserialize>[0]);
@@ -162,7 +166,7 @@ export function getTokenBalanceScannerState(): TokenBalanceScannerState {
 	if (!state) {
 		throw new Error(
 			'[TokenBalanceScannerState] Context not found. ' +
-			'Make sure createTokenBalanceScannerState() is called in a parent component.'
+				'Make sure createTokenBalanceScannerState() is called in a parent component.'
 		);
 	}
 	return state;

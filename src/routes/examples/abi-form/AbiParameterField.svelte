@@ -7,7 +7,7 @@
 	 * - 结构体 (tuple)
 	 * - 嵌套结构 (tuple[], tuple 中有 array, array 中有 tuple)
 	 */
-	import { FormField, FieldArray } from '@packages/formstate/src';
+	import { FormField, FieldArray } from '@shelchin/formstate';
 	import Self from './AbiParameterField.svelte';
 
 	interface AbiParameter {

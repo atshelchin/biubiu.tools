@@ -128,7 +128,7 @@
 										<div class="meta-item">
 											<span class="label">进度：</span>
 											<span class="value"
-												>{task.completedSubTasks}/{task.totalSubTasks} 子任务 ({task.progress}%)</span
+												>{task.completedLeaves}/{task.totalLeaves} 子任务 ({task.progress}%)</span
 											>
 										</div>
 										{#if task.pauseReason}

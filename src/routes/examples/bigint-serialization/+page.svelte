@@ -3,7 +3,7 @@
 	 * BigInt & 特殊类型序列化测试
 	 * 验证 serialize/deserialize 可以正确处理 BigInt、Date、Map、Set 等
 	 */
-	import { useFormState, safeStringify, safeParse } from '@packages/formstate/src';
+	import { useFormState, safeStringify, safeParse } from '@shelchin/formstate';
 	import { onDestroy } from 'svelte';
 
 	// 包含各种特殊类型的表单
@@ -275,7 +275,7 @@ const json = JSON.stringify(form._manager.getValues());`}</code
 		<div class="code-example">
 			<h4>✅ 正确做法：</h4>
 			<pre><code
-					>{`import { useFormState, safeStringify, safeParse } from '@packages/formstate/src';
+					>{`import { useFormState, safeStringify, safeParse } from '@shelchin/formstate';
 
 const form = useFormState({
   fields: {

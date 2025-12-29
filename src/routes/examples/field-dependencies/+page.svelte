@@ -3,14 +3,8 @@
 	 * 字段依赖示例 - Field Dependencies
 	 * 展示如何在一个字段变化时自动重新验证依赖它的其他字段
 	 */
-	import {
-		useFormState,
-		Form,
-		FormField,
-		Validators,
-		createValidator
-	} from '@packages/formstate/src';
-	import type { FormState } from '@packages/formstate/src';
+	import { useFormState, Form, FormField, Validators, createValidator } from '@shelchin/formstate';
+	import type { FormState } from '@shelchin/formstate';
 
 	// 自定义验证器：密码确认
 	const passwordMatchValidator = createValidator(

@@ -150,6 +150,7 @@ export interface TaskExecutionContext<TData = Record<string, unknown>, TResult =
 	// Control methods
 	isPaused: () => boolean;
 	checkCondition?: () => Promise<boolean>;
+	checkGasBalance?: () => Promise<boolean>; // Optional custom gas check
 
 	// Progress methods
 	updateProgress: (progress: number, message?: string) => Promise<void>;

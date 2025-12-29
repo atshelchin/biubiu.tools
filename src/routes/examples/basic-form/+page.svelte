@@ -3,13 +3,7 @@
 	 * 基础表单示例 - 登录表单
 	 * 演示：基础用法、字段验证、错误提示
 	 */
-	import {
-		useFormState,
-		Form,
-		FormField,
-		Validators,
-		type FormState
-	} from '@packages/formstate/src';
+	import { useFormState, Form, FormField, Validators, type FormState } from '@shelchin/formstate';
 
 	// 创建表单状态
 	const form: FormState = useFormState({

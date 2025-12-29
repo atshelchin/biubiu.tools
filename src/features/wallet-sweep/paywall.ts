@@ -5,7 +5,7 @@
  * - Non-members: 0.005 ETH per transaction (collected in contract)
  */
 
-import { createPayPerUseRule } from '$lib/paywall';
+import { createPayPerUseRule } from '@shelchin/paywall';
 
 export const walletSweepPaywall = createPayPerUseRule(
 	'wallet-sweep',

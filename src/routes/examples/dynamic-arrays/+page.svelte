@@ -10,7 +10,7 @@
 		FieldArray,
 		Validators,
 		type FormState
-	} from '@packages/formstate/src';
+	} from '@shelchin/formstate';
 	import { dragSortable } from '@shelchin/drag-sortable';
 
 	// 创建表单状态

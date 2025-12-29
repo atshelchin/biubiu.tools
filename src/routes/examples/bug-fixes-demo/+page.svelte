@@ -5,7 +5,7 @@
 	 * 2. 依赖字段 onChange 触发（Bug 4）
 	 * 3. 动态字段自动注销（Bug 2）
 	 */
-	import { useFormState, Form, FormField, FieldArray, Validators } from '@packages/formstate/src';
+	import { useFormState, Form, FormField, FieldArray, Validators } from '@shelchin/formstate';
 
 	// Bug 3 测试：FieldArray 删除中间项后路径正确性
 	const arrayForm = useFormState({
@@ -53,7 +53,8 @@
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	function captureFieldStates(form: ReturnType<typeof useFormState>) {
 		const manager = form._manager;
-		const states = Array.from(manager['fieldStates'].entries()).map(([path, state]) => ({
+		const entries = Array.from(manager['fieldStates'].entries()) as [string, { value: unknown }][];
+		const states = entries.map(([path, state]) => ({
 			path,
 			value: state.value
 		}));

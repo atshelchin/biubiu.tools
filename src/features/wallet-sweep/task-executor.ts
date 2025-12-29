@@ -4,7 +4,7 @@
  * 执行 Token 归集子任务（每个批次）
  */
 
-import type { TaskExecutionContext } from '$lib/task-manager';
+import type { TaskExecutionContext } from '@shelchin/task-manager';
 import type { Address } from 'viem';
 
 export interface SweepSubTaskData {
@@ -33,12 +33,12 @@ export interface SweepResult {
  * 执行单个归集批次
  */
 export async function executeSweepSubTask(ctx: TaskExecutionContext) {
-	const data = ctx.subTask.data as unknown as SweepSubTaskData;
+	const data = ctx.task.executionData as unknown as SweepSubTaskData;
 
 	try {
 		// 检查是否暂停
 		if (ctx.isPaused()) {
-			await ctx.pauseTask('user', '用户暂停');
+			await ctx.pauseParent('user', '用户暂停');
 			return;
 		}
 
@@ -46,7 +46,7 @@ export async function executeSweepSubTask(ctx: TaskExecutionContext) {
 		if (ctx.checkGasBalance) {
 			const hasGas = await ctx.checkGasBalance();
 			if (!hasGas) {
-				await ctx.pauseTask('insufficient_gas', 'Gas 余额不足，请充值后继续');
+				await ctx.pauseParent('insufficient_gas', 'Gas 余额不足，请充值后继续');
 				return;
 			}
 		}
@@ -71,7 +71,7 @@ export async function executeSweepSubTask(ctx: TaskExecutionContext) {
 					lastProcessedIndex: i,
 					processedResults: results
 				});
-				await ctx.pauseTask('user', '用户暂停');
+				await ctx.pauseParent('user', '用户暂停');
 				return;
 			}
 
@@ -123,10 +123,10 @@ export async function executeSweepSubTask(ctx: TaskExecutionContext) {
 		const failCount = results.filter((r) => !r.success).length;
 
 		if (successCount === 0) {
-			await ctx.failSubTask(`所有 ${totalWallets} 个钱包转账均失败`);
+			await ctx.failTask(`所有 ${totalWallets} 个钱包转账均失败`);
 		} else {
 			await ctx.updateProgress(100, `完成：${successCount} 成功，${failCount} 失败`);
-			await ctx.completeSubTask({
+			await ctx.completeTask({
 				results,
 				successCount,
 				failCount,
@@ -134,7 +134,7 @@ export async function executeSweepSubTask(ctx: TaskExecutionContext) {
 			});
 		}
 	} catch (error) {
-		await ctx.failSubTask(error instanceof Error ? error.message : String(error));
+		await ctx.failTask(error instanceof Error ? error.message : String(error));
 	}
 }
 

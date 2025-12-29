@@ -5,7 +5,7 @@
  * - Non-members: 1000 addresses per day free
  */
 
-import { createMembershipOnlyRule } from '$lib/paywall';
+import { createMembershipOnlyRule } from '@shelchin/paywall';
 
 export const balanceScannerPaywall = createMembershipOnlyRule(
 	'balance-scanner',

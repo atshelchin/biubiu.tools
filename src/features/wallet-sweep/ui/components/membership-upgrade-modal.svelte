@@ -361,8 +361,8 @@
 					{/if}
 				</button>
 				<p class="footer-note">
-					⚠️ Membership valid on <strong>{currentNetwork?.name || 'current network'}</strong> only •
-					Switch networks requires new purchase
+					⚠️ Membership valid on <strong>{currentNetwork?.name || 'current network'}</strong> only • Switch
+					networks requires new purchase
 				</p>
 			</div>
 		{/if}

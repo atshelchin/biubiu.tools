@@ -3,8 +3,8 @@
 	 * 表单持久化示例 - Form Persistence
 	 * 展示如何使用 serialize/deserialize 和 localStorage 实现表单自动保存与恢复
 	 */
-	import { useFormState, Form, FormField, Validators } from '@packages/formstate/src';
-	import type { FormState } from '@packages/formstate/src';
+	import { useFormState, Form, FormField, Validators } from '@shelchin/formstate';
+	import type { FormState } from '@shelchin/formstate';
 	import { onMount } from 'svelte';
 
 	const STORAGE_KEY = 'formstate-demo-data';

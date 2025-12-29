@@ -3,7 +3,7 @@
 	 * 复杂嵌套的 Solidity ABI 表单
 	 * 展示：tuple 中有数组，数组中有 tuple，多层递归嵌套
 	 */
-	import { useFormState, Form, type FormState } from '@packages/formstate/src';
+	import { useFormState, Form, type FormState } from '@shelchin/formstate';
 	import AbiParameterField from '../abi-form/AbiParameterField.svelte';
 
 	// 复杂的 Solidity 函数 ABI - 包含多层嵌套

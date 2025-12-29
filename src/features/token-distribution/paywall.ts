@@ -5,7 +5,7 @@
  * - Non-members: 10 addresses per day free, then pay per use
  */
 
-import { createHybridRule } from '$lib/paywall';
+import { createHybridRule } from '@shelchin/paywall';
 
 export const batchTransferPaywall = createHybridRule('batch-transfer', {
 	freeQuota: {

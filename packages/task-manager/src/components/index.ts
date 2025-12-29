@@ -1,11 +1,9 @@
 /**
  * Components barrel export
- *
- * Note: UI components will be added here in future iterations.
- * For now, this is a placeholder to maintain the package structure.
  */
 
-// Components will be exported here when migrated
-// export { default as TaskList } from './TaskList.svelte';
-// export { default as TaskDetail } from './TaskDetail.svelte';
-// export { default as TaskRecoveryModal } from './TaskRecoveryModal.svelte';
+export { default as TaskDebugger } from './task-debugger.svelte';
+export { default as TaskRecoveryModal } from './task-recovery-modal.svelte';
+export { default as TaskRecoveryModalV2 } from './task-recovery-modal.v2.svelte';
+export { default as TaskListV2 } from './task-list.v2.svelte';
+export { default as TaskDetailV2 } from './task-detail.v2.svelte';

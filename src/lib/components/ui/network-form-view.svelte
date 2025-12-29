@@ -6,13 +6,7 @@
 	import type { NetworkConfig } from '@shelchin/ethereum-connectors';
 	import { useI18n } from '@shelchin/i18n';
 	import { SvelteMap } from 'svelte/reactivity';
-	import {
-		useFormState,
-		Form,
-		FormField,
-		Validators,
-		type FormState
-	} from '@packages/formstate/src';
+	import { useFormState, Form, FormField, Validators, type FormState } from '@shelchin/formstate';
 
 	interface Props {
 		mode: 'add' | 'edit';

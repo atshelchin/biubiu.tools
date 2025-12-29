@@ -8,7 +8,9 @@ import { vi } from 'vitest';
 /**
  * Create a mock connect store for testing.
  */
-export function createMockConnectStore(overrides: Partial<MockConnectStore> = {}): MockConnectStore {
+export function createMockConnectStore(
+	overrides: Partial<MockConnectStore> = {}
+): MockConnectStore {
 	return {
 		isConnected: false,
 		currentChainId: null,

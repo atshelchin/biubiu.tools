@@ -3,9 +3,9 @@
 	 * 值转换器示例 - Transformers
 	 * 展示如何使用内置和自定义转换器处理用户输入
 	 */
-	import { useFormState, Form, FormField, Validators, Transformers } from '@packages/formstate/src';
-	import type { FormState } from '@packages/formstate/src';
-	import type { ITransformer } from '@packages/formstate/src';
+	import { useFormState, Form, FormField, Validators, Transformers } from '@shelchin/formstate';
+	import type { FormState } from '@shelchin/formstate';
+	import type { ITransformer } from '@shelchin/formstate';
 
 	// 自定义转换器：格式化电话号码
 	const phoneFormatter: ITransformer<string, string> = {

@@ -10,7 +10,7 @@
 		Validators,
 		createValidator,
 		createCustomValidator
-	} from '@packages/formstate/src';
+	} from '@shelchin/formstate';
 
 	// 模拟 API 检查用户名是否可用
 	async function checkUsernameAvailable(username: string): Promise<boolean> {

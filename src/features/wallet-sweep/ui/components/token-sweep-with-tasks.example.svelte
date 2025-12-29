@@ -12,18 +12,18 @@
 		pauseTask,
 		resumeTask,
 		cancelTask
-	} from '$lib/task-manager/task-manager.v2';
-	import { taskStore } from '$lib/task-manager/task-store.v2.svelte';
+	} from '@shelchin/task-manager/task-manager.v2';
+	import { taskStore } from '@shelchin/task-manager/task-store.v2.svelte';
 	import {
 		tokenSweepExecutors,
 		buildTokenSweepTaskTree
 	} from '@/features/wallet-sweep/task-executor.v2';
 	import type { TokenSweepConfig } from '@/features/wallet-sweep/task-executor.v2';
 
-	import TaskList from '$lib/task-manager/components/task-list.v2.svelte';
-	import TaskDetail from '$lib/task-manager/components/task-detail.v2.svelte';
-	import TaskRecoveryModal from '$lib/task-manager/components/task-recovery-modal.v2.svelte';
-	import type { Task } from '$lib/task-manager/types.v2';
+	import TaskList from '@shelchin/task-manager/components/task-list.v2.svelte';
+	import TaskDetail from '@shelchin/task-manager/components/task-detail.v2.svelte';
+	import TaskRecoveryModal from '@shelchin/task-manager/components/task-recovery-modal.v2.svelte';
+	import type { Task } from '@shelchin/task-manager/types.v2';
 
 	// Example configuration
 	const exampleConfig: TokenSweepConfig = {

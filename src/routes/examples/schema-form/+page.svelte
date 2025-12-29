@@ -3,7 +3,7 @@
 	 * Schema 配置渲染示例
 	 * 演示：配置驱动表单、自定义输入组件注册、递归渲染
 	 */
-	import { useFormState, Form, Validators, type FormSchema } from '@packages/formstate/src';
+	import { useFormState, Form, Validators, type FormSchema } from '@shelchin/formstate';
 	import ColorPicker from './components/ColorPicker.svelte';
 	import TagsInput from './components/TagsInput.svelte';
 	import RichTextEditor from './components/RichTextEditor.svelte';

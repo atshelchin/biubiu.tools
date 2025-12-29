@@ -15,6 +15,44 @@
 			"types": "./dist/components/index.d.ts",
 			"svelte": "./dist/components/index.js",
 			"default": "./dist/components/index.js"
+		},
+		"./components/task-debugger.svelte": {
+			"types": "./dist/components/task-debugger.svelte.d.ts",
+			"svelte": "./dist/components/task-debugger.svelte",
+			"default": "./dist/components/task-debugger.svelte"
+		},
+		"./components/task-recovery-modal.svelte": {
+			"types": "./dist/components/task-recovery-modal.svelte.d.ts",
+			"svelte": "./dist/components/task-recovery-modal.svelte",
+			"default": "./dist/components/task-recovery-modal.svelte"
+		},
+		"./components/task-list.v2.svelte": {
+			"types": "./dist/components/task-list.v2.svelte.d.ts",
+			"svelte": "./dist/components/task-list.v2.svelte",
+			"default": "./dist/components/task-list.v2.svelte"
+		},
+		"./components/task-detail.v2.svelte": {
+			"types": "./dist/components/task-detail.v2.svelte.d.ts",
+			"svelte": "./dist/components/task-detail.v2.svelte",
+			"default": "./dist/components/task-detail.v2.svelte"
+		},
+		"./components/task-recovery-modal.v2.svelte": {
+			"types": "./dist/components/task-recovery-modal.v2.svelte.d.ts",
+			"svelte": "./dist/components/task-recovery-modal.v2.svelte",
+			"default": "./dist/components/task-recovery-modal.v2.svelte"
+		},
+		"./types.v2": {
+			"types": "./dist/types.v2.d.ts",
+			"default": "./dist/types.v2.js"
+		},
+		"./task-manager.v2": {
+			"types": "./dist/task-manager.v2.d.ts",
+			"default": "./dist/task-manager.v2.js"
+		},
+		"./task-store.v2.svelte": {
+			"types": "./dist/task-store.v2.svelte.d.ts",
+			"svelte": "./dist/task-store.v2.svelte.js",
+			"default": "./dist/task-store.v2.svelte.js"
 		}
 	},
 	"files": [

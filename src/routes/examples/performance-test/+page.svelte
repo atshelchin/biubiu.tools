@@ -7,7 +7,7 @@
 	 * - Perf 1 优化：简单路径跳过 Immer (10x faster)
 	 * - Feature 1：批量更新 API
 	 */
-	import { useFormState } from '@packages/formstate/src';
+	import { useFormState } from '@shelchin/formstate';
 	import { onDestroy } from 'svelte';
 
 	// 生成大表单（100 个字段）

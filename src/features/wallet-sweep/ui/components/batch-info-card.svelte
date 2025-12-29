@@ -15,8 +15,8 @@
 		<h4>Batch Processing</h4>
 	</div>
 	<p>
-		Your {walletCount} wallet(s) will be processed in {batchCount} batch(es). Each batch can process
-		up to 100 wallets.
+		Your {walletCount} wallet(s) will be processed in {batchCount} batch(es). Each batch can process up
+		to 100 wallets.
 	</p>
 	<div class="batch-list">
 		{#each Array.from({ length: batchCount }, (_, i) => i) as batchIndex (batchIndex)}

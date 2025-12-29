@@ -4,7 +4,7 @@
  * 执行 Token 归集叶子任务（每个批次）
  */
 
-import type { TaskExecutionContext, TaskExecutorRegistry } from '$lib/task-manager/types.v2';
+import type { TaskExecutionContext, TaskExecutorRegistry } from '@shelchin/task-manager/types.v2';
 import type { Address } from 'viem';
 
 /**

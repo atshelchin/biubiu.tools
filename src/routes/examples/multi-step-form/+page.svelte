@@ -3,8 +3,8 @@
 	 * 多步表单示例 - Multi-Step Form
 	 * 展示如何使用 validateFields 实现分步验证和导航
 	 */
-	import { useFormState, Form, FormField, Validators } from '@packages/formstate/src';
-	import type { FormState } from '@packages/formstate/src';
+	import { useFormState, Form, FormField, Validators } from '@shelchin/formstate';
+	import type { FormState } from '@shelchin/formstate';
 
 	// 步骤定义
 	const STEPS = [

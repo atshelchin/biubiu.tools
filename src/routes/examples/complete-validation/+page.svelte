@@ -9,8 +9,8 @@
 		FormField,
 		Validators,
 		createCustomValidator
-	} from '@packages/formstate/src';
-	import type { FormState } from '@packages/formstate/src';
+	} from '@shelchin/formstate';
+	import type { FormState } from '@shelchin/formstate';
 
 	// 模拟异步验证：检查用户名是否可用
 	const usernameAvailableValidator = createCustomValidator(async (value: unknown) => {

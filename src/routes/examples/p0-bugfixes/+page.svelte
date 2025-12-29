@@ -3,8 +3,8 @@
 	 * P0 Bug 修复演示
 	 * 展示5个致命Bug的修复效果
 	 */
-	import { useFormState } from '@packages/formstate/src/adapters/svelte/useFormState.svelte';
-	import { Validators } from '@packages/formstate/src/core/Validators';
+	import { useFormState } from '@shelchin/formstate';
+	import { Validators } from '@shelchin/formstate';
 	import { onDestroy } from 'svelte';
 
 	// ========== Bug 7: reset() 清理状态 ==========

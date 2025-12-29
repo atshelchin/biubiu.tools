@@ -10,7 +10,7 @@
 		Validators,
 		FieldArray,
 		type FormState
-	} from '@packages/formstate/src';
+	} from '@shelchin/formstate';
 
 	// Solidity 函数 ABI 定义
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
