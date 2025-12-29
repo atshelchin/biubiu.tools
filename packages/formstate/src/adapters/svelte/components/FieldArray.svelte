@@ -111,8 +111,8 @@
 		const fieldConfigs = manager['fieldConfigs'];
 
 		// 找出所有受影响的字段路径
-		const allPaths = Array.from(fieldStates.keys());
-		const affectedPaths = allPaths.filter((path) => {
+		const allPaths = Array.from(fieldStates.keys()) as string[];
+		const affectedPaths = allPaths.filter((path: string) => {
 			// 匹配 name[index] 或 name[index].nested.path
 			const regex = new RegExp(`^${escapeRegex(name)}\\[(\\d+)\\]`);
 			const match = path.match(regex);
@@ -122,7 +122,7 @@
 		});
 
 		// 按索引降序排序，避免覆盖问题
-		affectedPaths.sort((a, b) => {
+		affectedPaths.sort((a: string, b: string) => {
 			const aIndex = parseInt(a.match(/\[(\d+)\]/)?.[1] || '0');
 			const bIndex = parseInt(b.match(/\[(\d+)\]/)?.[1] || '0');
 			return bIndex - aIndex;
@@ -134,8 +134,8 @@
 			{ oldPath: string; newPath: string; newIndex: number }
 		>();
 
-		for (const oldPath of affectedPaths) {
-			const oldIndex = parseInt(oldPath.match(/\[(\d+)\]/)?.[1] || '0');
+		for (const oldPath of affectedPaths as string[]) {
+			const oldIndex = parseInt((oldPath as string).match(/\[(\d+)\]/)?.[1] || '0');
 			let newIndex = oldIndex;
 
 			if (operation === 'remove') {
@@ -165,8 +165,8 @@
 				}
 			}
 
-			const newPath = oldPath.replace(/\[\d+\]/, `[${newIndex}]`);
-			remapped.set(oldPath, { oldPath, newPath, newIndex });
+			const newPath = (oldPath as string).replace(/\[\d+\]/, `[${newIndex}]`);
+			remapped.set(oldPath as string, { oldPath: oldPath as string, newPath, newIndex });
 		}
 
 		// 执行重新映射（降序处理避免覆盖）
@@ -190,10 +190,10 @@
 
 		// 清理超出范围的索引
 		const arrayLength = arrayValue.length;
-		const allPathsAfterRemap = Array.from(fieldStates.keys());
+		const allPathsAfterRemap = Array.from(fieldStates.keys()) as string[];
 		for (const path of allPathsAfterRemap) {
 			const regex = new RegExp(`^${escapeRegex(name)}\\[(\\d+)\\]`);
-			const match = path.match(regex);
+			const match = (path as string).match(regex);
 			if (match) {
 				const pathIndex = parseInt(match[1]);
 				if (pathIndex >= arrayLength) {
