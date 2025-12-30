@@ -6,6 +6,7 @@
 	import { CheckCircle2, XCircle, Loader2 } from '@lucide/svelte';
 	import { encodeFunctionData, type Address } from 'viem';
 	import { KNOWN_CONTRACTS } from '$lib/utils/blockchain-checker';
+	import { getContractMethod } from '$lib/utils/contract-method';
 
 	const connectStore = useConnectStore();
 
@@ -32,10 +33,10 @@
 			// Convert stakeAmount to BigInt
 			const stakeAmountBigInt = BigInt(config.stakeAmount || '0');
 
-			// Encode function call to NFTFactory.createERC721
+			// Encode function call to NFTFactory.createERC721 (or createERC721Free in self-hosted mode)
 			const data = encodeFunctionData({
 				abi,
-				functionName: 'createERC721',
+				functionName: getContractMethod('createERC721'),
 				args: [
 					config.name,
 					config.symbol,

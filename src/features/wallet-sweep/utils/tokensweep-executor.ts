@@ -10,6 +10,7 @@ import {
 	encodeFunctionData,
 	parseEther
 } from 'viem';
+import { getContractMethod } from '$lib/utils/contract-method';
 import type { ImportedWallet } from '../types/wallet';
 import type { ERC20Token, NativeToken } from '$lib/types/token';
 import TokenSweepABI from '../../../../static/contracts/TokenSweep.json';
@@ -235,7 +236,7 @@ export async function executeTokenSweep(
 
 		const data = encodeFunctionData({
 			abi: TokenSweepABI.abi,
-			functionName: 'multicall',
+			functionName: getContractMethod('multicall'),
 			args: [
 				walletSignatures, // Array of { wallet, signature }
 				config.targetAddress, // Recipient

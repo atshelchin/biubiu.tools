@@ -6,6 +6,7 @@
 	import { CheckCircle2, XCircle, Loader2 } from '@lucide/svelte';
 	import { encodeFunctionData, type Address } from 'viem';
 	import { KNOWN_CONTRACTS } from '$lib/utils/blockchain-checker';
+	import { getContractMethod } from '$lib/utils/contract-method';
 
 	const connectStore = useConnectStore();
 
@@ -32,10 +33,10 @@
 				Math.floor(parseFloat(step3State.initialSupply)) * 10 ** step3State.decimals
 			);
 
-			// Encode function call to TokenFactory.createToken
+			// Encode function call to TokenFactory.createToken (or createTokenFree in self-hosted mode)
 			const data = encodeFunctionData({
 				abi,
-				functionName: 'createToken',
+				functionName: getContractMethod('createToken'),
 				args: [
 					step3State.name, // string name
 					step3State.symbol, // string symbol
