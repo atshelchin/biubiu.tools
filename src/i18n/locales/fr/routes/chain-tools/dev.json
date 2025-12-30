@@ -1,0 +1,126 @@
+{
+	"category_seo": {
+		"title": "Outils de Développement Blockchain - Framework et API | BiuBiu Tools",
+		"description": "Accédez à des outils essentiels de développement blockchain. Trouvez des framework, API, SDK et outils de test pour construire des dApps et smart contracts.",
+		"keywords": "outils de développement blockchain, api ethereum, framework web3, développement de smart contracts",
+		"faqs": [
+			{
+				"question": "Comment commencer le développement blockchain ?",
+				"answer": "Commencez par apprendre Solidity pour les smart contracts Ethereum, familiarisez-vous avec Web3.js ou Ethers.js, configurez un environnement de développement avec Hardhat ou Foundry et pratiquez en déployant des contracts simples sur des testnets."
+			},
+			{
+				"question": "Quels langages de programmation sont utilisés dans la blockchain ?",
+				"answer": "Les langages courants incluent : Solidity (Ethereum), Rust (Solana, Near), Go (Hyperledger, Cosmos), JavaScript/TypeScript (développement frontend), et Python (scripts et analyse)."
+			},
+			{
+				"question": "Que sont les testnets ?",
+				"answer": "Les testnets sont des environnements blockchain utilisés pour tester les dApps et smart contracts sans utiliser de vraie crypto. Les testnets populaires incluent Goerli, Sepolia pour Ethereum et équivalents pour d'autres chaînes."
+			},
+			{
+				"question": "Comment obtenir des tokens de testnet ?",
+				"answer": "Obtenez des tokens de testnet depuis des faucets - sites web gratuits qui distribuent de petites quantités de tokens de testnet. Recherchez '[nom de la chaîne] faucet' pour trouver des sources de testnet."
+			}
+		]
+	},
+	"tools": {
+		"tenderly": {
+			"description": "Débogage et surveillance de smart contracts"
+		},
+		"chainlist": {
+			"description": "Ajoutez des réseaux EVM à votre portefeuille"
+		},
+		"remix": {
+			"description": "IDE Solidity basé sur navigateur"
+		},
+		"foundry": {
+			"description": "Boîte à outils Solidity ultra-rapide"
+		},
+		"hardhat": {
+			"description": "Environnement de développement Ethereum"
+		},
+		"viem": {
+			"description": "Bibliothèque Ethereum TypeScript"
+		},
+		"wagmi": {
+			"description": "Hooks React pour Ethereum"
+		},
+		"rainbowkit": {
+			"description": "Interface de connexion de portefeuille React"
+		},
+		"web3modal": {
+			"description": "Connexion de portefeuille multi-framework"
+		},
+		"thirdweb": {
+			"description": "Développement Web3 full-stack"
+		},
+		"alchemy": {
+			"description": "Plateforme de développement Web3 et APIs"
+		},
+		"infura": {
+			"description": "Infrastructure API Ethereum"
+		},
+		"quicknode": {
+			"description": "Infrastructure de nœuds multi-chaînes"
+		},
+		"sourcify": {
+			"description": "Vérification décentralisée de contracts"
+		},
+		"brownie": {
+			"description": "Framework Python pour smart contracts"
+		},
+		"ape": {
+			"description": "Framework Python modulaire"
+		},
+		"pyth": {
+			"description": "Oracle de prix en temps réel"
+		},
+		"goldsky": {
+			"description": "Streaming et indexation de données blockchain en temps réel"
+		},
+		"envio": {
+			"description": "HyperSync pour indexation blockchain ultra-rapide"
+		},
+		"covalent": {
+			"description": "API de données blockchain unifiée"
+		},
+		"transpose": {
+			"description": "Données blockchain en temps réel avec API SQL"
+		},
+		"chainbase": {
+			"description": "Plateforme de données tout-en-un"
+		},
+		"useweb3": {
+			"description": "Ressources d'apprentissage Web3 sélectionnées"
+		},
+		"buildspace": {
+			"description": "Communauté d'apprentissage Web3 basée sur projets"
+		},
+		"pointer": {
+			"description": "Apprenez le développement Web3 et gagnez de la crypto"
+		},
+		"chainide": {
+			"description": "IDE de développement multi-chaînes basé sur cloud"
+		},
+		"constructor": {
+			"description": "Constructeur de smart contracts visuel sans code"
+		},
+		"bunzz": {
+			"description": "Marketplace de déploiement de smart contracts"
+		},
+		"crossmint": {
+			"description": "API de minting NFT avec paiements fiat"
+		},
+		"moralis": {
+			"description": "APIs et SDK de développement blockchain"
+		},
+		"circom": {
+			"description": "Langage de circuits pour preuves zero-knowledge"
+		},
+		"protostar": {
+			"description": "Framework de développement Cairo pour StarkNet"
+		},
+		"starkli": {
+			"description": "Interface en ligne de commande pour StarkNet"
+		}
+	}
+}

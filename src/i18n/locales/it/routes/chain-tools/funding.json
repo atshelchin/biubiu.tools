@@ -1,0 +1,49 @@
+{
+	"category_seo": {
+		"title": "Finanziamenti Web3 - Grant, VC e Fundraising | BiuBiu Tools",
+		"description": "Trova fonti di finanziamento per progetti Web3. Grant di ecosistema, investitori VC, piattaforme di crowdfunding e programmi di accelerazione.",
+		"faqs": [
+			{
+				"question": "Come vengono finanziati i progetti Web3?",
+				"answer": "Le opzioni includono grant di ecosistema (Ethereum Foundation, grant L2), finanziamenti VC (a16z, Paradigm), lanci di token (launchpad) e finanziamenti retroattivi (Optimism RetroPGF)."
+			},
+			{
+				"question": "Cosa sono i grant di ecosistema?",
+				"answer": "Grant da fondazioni blockchain per finanziare lo sviluppo. Ethereum Foundation, Uniswap Grants, Arbitrum Foundation e altri finanziano progetti che costruiscono sui loro ecosistemi."
+			},
+			{
+				"question": "Come presento a VC crypto?",
+				"answer": "Costruisci prima un prodotto funzionante. I VC crypto apprezzano i founder tecnici e i contributi open-source. Fai networking a conferenze, ottieni presentazioni calde e mostra metriche di trazione come TVL o utenti."
+			}
+		]
+	},
+	"tools": {
+		"paradigm": {
+			"description": "Fondo venture capital crypto leader"
+		},
+		"polychain": {
+			"description": "Gestore asset blockchain"
+		},
+		"pantera": {
+			"description": "Fondo investimento blockchain"
+		},
+		"multicoin": {
+			"description": "Fondo hedge crypto"
+		},
+		"dragonfly": {
+			"description": "Fondo venture capital cross-border"
+		},
+		"variant": {
+			"description": "Fondo venture applicazioni crypto"
+		},
+		"placeholder": {
+			"description": "Fondo venture protocolli"
+		},
+		"coinlist": {
+			"description": "Piattaforma vendita token e raccolta capitali"
+		},
+		"kernel": {
+			"description": "Acceleratore e community Web3"
+		}
+	}
+}

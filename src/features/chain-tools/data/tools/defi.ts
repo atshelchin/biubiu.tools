@@ -35,7 +35,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'uniswap',
 		name: 'Uniswap',
-		descriptionKey: 'chain-tools.defi.tools.uniswap.description',
+		descriptionKey: 'defi.tools.uniswap.description',
 		url: 'https://app.uniswap.org',
 		icon: Repeat,
 		category: 'defi',
@@ -47,7 +47,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'aave',
 		name: 'Aave',
-		descriptionKey: 'chain-tools.defi.tools.aave.description',
+		descriptionKey: 'defi.tools.aave.description',
 		url: 'https://app.aave.com',
 		icon: Landmark,
 		category: 'defi',
@@ -59,7 +59,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: '1inch',
 		name: '1inch',
-		descriptionKey: 'chain-tools.defi.tools.1inch.description',
+		descriptionKey: 'defi.tools.1inch.description',
 		url: 'https://app.1inch.io',
 		icon: Zap,
 		category: 'defi',
@@ -70,7 +70,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'curve',
 		name: 'Curve',
-		descriptionKey: 'chain-tools.defi.tools.curve.description',
+		descriptionKey: 'defi.tools.curve.description',
 		url: 'https://curve.fi',
 		icon: Activity,
 		category: 'defi',
@@ -82,7 +82,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'lido',
 		name: 'Lido',
-		descriptionKey: 'chain-tools.defi.tools.lido.description',
+		descriptionKey: 'defi.tools.lido.description',
 		url: 'https://lido.fi',
 		icon: Droplets,
 		category: 'defi',
@@ -94,7 +94,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'compound',
 		name: 'Compound',
-		descriptionKey: 'chain-tools.defi.tools.compound.description',
+		descriptionKey: 'defi.tools.compound.description',
 		url: 'https://compound.finance',
 		icon: CircleDollarSign,
 		category: 'defi',
@@ -106,7 +106,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'maker',
 		name: 'MakerDAO',
-		descriptionKey: 'chain-tools.defi.tools.maker.description',
+		descriptionKey: 'defi.tools.maker.description',
 		url: 'https://makerdao.com',
 		icon: Banknote,
 		category: 'defi',
@@ -117,7 +117,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'gmx',
 		name: 'GMX',
-		descriptionKey: 'chain-tools.defi.tools.gmx.description',
+		descriptionKey: 'defi.tools.gmx.description',
 		url: 'https://gmx.io',
 		icon: LineChart,
 		category: 'defi',
@@ -129,7 +129,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'pancakeswap',
 		name: 'PancakeSwap',
-		descriptionKey: 'chain-tools.defi.tools.pancakeswap.description',
+		descriptionKey: 'defi.tools.pancakeswap.description',
 		url: 'https://pancakeswap.finance',
 		icon: Repeat,
 		category: 'defi',
@@ -140,7 +140,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'sushiswap',
 		name: 'SushiSwap',
-		descriptionKey: 'chain-tools.defi.tools.sushiswap.description',
+		descriptionKey: 'defi.tools.sushiswap.description',
 		url: 'https://www.sushi.com',
 		icon: Repeat,
 		category: 'defi',
@@ -151,7 +151,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'balancer',
 		name: 'Balancer',
-		descriptionKey: 'chain-tools.defi.tools.balancer.description',
+		descriptionKey: 'defi.tools.balancer.description',
 		url: 'https://balancer.fi',
 		icon: Activity,
 		category: 'defi',
@@ -162,7 +162,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'eigenlayer',
 		name: 'EigenLayer',
-		descriptionKey: 'chain-tools.defi.tools.eigenlayer.description',
+		descriptionKey: 'defi.tools.eigenlayer.description',
 		url: 'https://eigenlayer.xyz',
 		icon: Layers,
 		category: 'defi',
@@ -176,7 +176,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'dydx',
 		name: 'dYdX',
-		descriptionKey: 'chain-tools.defi.tools.dydx.description',
+		descriptionKey: 'defi.tools.dydx.description',
 		url: 'https://dydx.exchange',
 		icon: LineChart,
 		category: 'defi',
@@ -187,7 +187,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'convex',
 		name: 'Convex Finance',
-		descriptionKey: 'chain-tools.defi.tools.convex.description',
+		descriptionKey: 'defi.tools.convex.description',
 		url: 'https://www.convexfinance.com',
 		icon: TrendingUp,
 		category: 'defi',
@@ -198,7 +198,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'yearn',
 		name: 'Yearn Finance',
-		descriptionKey: 'chain-tools.defi.tools.yearn.description',
+		descriptionKey: 'defi.tools.yearn.description',
 		url: 'https://yearn.fi',
 		icon: Target,
 		category: 'defi',
@@ -209,7 +209,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'pendle',
 		name: 'Pendle',
-		descriptionKey: 'chain-tools.defi.tools.pendle.description',
+		descriptionKey: 'defi.tools.pendle.description',
 		url: 'https://www.pendle.finance',
 		icon: Percent,
 		category: 'defi',
@@ -221,7 +221,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'radiant',
 		name: 'Radiant Capital',
-		descriptionKey: 'chain-tools.defi.tools.radiant.description',
+		descriptionKey: 'defi.tools.radiant.description',
 		url: 'https://radiant.capital',
 		icon: Flame,
 		category: 'defi',
@@ -232,7 +232,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'morpho',
 		name: 'Morpho',
-		descriptionKey: 'chain-tools.defi.tools.morpho.description',
+		descriptionKey: 'defi.tools.morpho.description',
 		url: 'https://morpho.org',
 		icon: Hexagon,
 		category: 'defi',
@@ -243,7 +243,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'frax',
 		name: 'Frax Finance',
-		descriptionKey: 'chain-tools.defi.tools.frax.description',
+		descriptionKey: 'defi.tools.frax.description',
 		url: 'https://frax.finance',
 		icon: DollarSign,
 		category: 'defi',
@@ -254,7 +254,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'rocketpool',
 		name: 'Rocket Pool',
-		descriptionKey: 'chain-tools.defi.tools.rocketpool.description',
+		descriptionKey: 'defi.tools.rocketpool.description',
 		url: 'https://rocketpool.net',
 		icon: Sparkles,
 		category: 'defi',
@@ -265,7 +265,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'venus',
 		name: 'Venus Protocol',
-		descriptionKey: 'chain-tools.defi.tools.venus.description',
+		descriptionKey: 'defi.tools.venus.description',
 		url: 'https://venus.io',
 		icon: CircleDollarSign,
 		category: 'defi',
@@ -276,7 +276,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'trader-joe',
 		name: 'Trader Joe',
-		descriptionKey: 'chain-tools.defi.tools.trader_joe.description',
+		descriptionKey: 'defi.tools.trader_joe.description',
 		url: 'https://traderjoexyz.com',
 		icon: Repeat,
 		category: 'defi',
@@ -287,7 +287,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'camelot',
 		name: 'Camelot',
-		descriptionKey: 'chain-tools.defi.tools.camelot.description',
+		descriptionKey: 'defi.tools.camelot.description',
 		url: 'https://camelot.exchange',
 		icon: Award,
 		category: 'defi',
@@ -298,7 +298,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'velodrome',
 		name: 'Velodrome',
-		descriptionKey: 'chain-tools.defi.tools.velodrome.description',
+		descriptionKey: 'defi.tools.velodrome.description',
 		url: 'https://velodrome.finance',
 		icon: Gauge,
 		category: 'defi',
@@ -309,7 +309,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'aerodrome',
 		name: 'Aerodrome',
-		descriptionKey: 'chain-tools.defi.tools.aerodrome.description',
+		descriptionKey: 'defi.tools.aerodrome.description',
 		url: 'https://aerodrome.finance',
 		icon: Gauge,
 		category: 'defi',
@@ -320,7 +320,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'maverick',
 		name: 'Maverick',
-		descriptionKey: 'chain-tools.defi.tools.maverick.description',
+		descriptionKey: 'defi.tools.maverick.description',
 		url: 'https://mav.xyz',
 		icon: Activity,
 		category: 'defi',
@@ -331,7 +331,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'spark',
 		name: 'Spark Protocol',
-		descriptionKey: 'chain-tools.defi.tools.spark.description',
+		descriptionKey: 'defi.tools.spark.description',
 		url: 'https://spark.fi',
 		icon: Sparkles,
 		category: 'defi',
@@ -342,7 +342,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'instadapp',
 		name: 'Instadapp',
-		descriptionKey: 'chain-tools.defi.tools.instadapp.description',
+		descriptionKey: 'defi.tools.instadapp.description',
 		url: 'https://instadapp.io',
 		icon: Box,
 		category: 'defi',
@@ -353,7 +353,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'sommelier',
 		name: 'Sommelier',
-		descriptionKey: 'chain-tools.defi.tools.sommelier.description',
+		descriptionKey: 'defi.tools.sommelier.description',
 		url: 'https://www.sommelier.finance',
 		icon: Target,
 		category: 'defi',
@@ -366,7 +366,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'euler',
 		name: 'Euler Finance',
-		descriptionKey: 'chain-tools.defi.tools.euler.description',
+		descriptionKey: 'defi.tools.euler.description',
 		url: 'https://www.euler.finance',
 		icon: CircleDollarSign,
 		category: 'defi',
@@ -377,7 +377,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'benqi',
 		name: 'BENQI',
-		descriptionKey: 'chain-tools.defi.tools.benqi.description',
+		descriptionKey: 'defi.tools.benqi.description',
 		url: 'https://benqi.fi',
 		icon: Banknote,
 		category: 'defi',
@@ -388,7 +388,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'silo',
 		name: 'Silo Finance',
-		descriptionKey: 'chain-tools.defi.tools.silo.description',
+		descriptionKey: 'defi.tools.silo.description',
 		url: 'https://www.silo.finance',
 		icon: Box,
 		category: 'defi',
@@ -399,7 +399,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'abracadabra',
 		name: 'Abracadabra',
-		descriptionKey: 'chain-tools.defi.tools.abracadabra.description',
+		descriptionKey: 'defi.tools.abracadabra.description',
 		url: 'https://abracadabra.money',
 		icon: Sparkles,
 		category: 'defi',
@@ -410,7 +410,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'alchemix',
 		name: 'Alchemix',
-		descriptionKey: 'chain-tools.defi.tools.alchemix.description',
+		descriptionKey: 'defi.tools.alchemix.description',
 		url: 'https://alchemix.fi',
 		icon: Flame,
 		category: 'defi',
@@ -421,7 +421,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'exactly',
 		name: 'Exactly Protocol',
-		descriptionKey: 'chain-tools.defi.tools.exactly.description',
+		descriptionKey: 'defi.tools.exactly.description',
 		url: 'https://exact.ly',
 		icon: Target,
 		category: 'defi',
@@ -434,7 +434,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'kyberswap',
 		name: 'KyberSwap',
-		descriptionKey: 'chain-tools.defi.tools.kyberswap.description',
+		descriptionKey: 'defi.tools.kyberswap.description',
 		url: 'https://kyberswap.com',
 		icon: Repeat,
 		category: 'defi',
@@ -445,7 +445,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'odos',
 		name: 'Odos',
-		descriptionKey: 'chain-tools.defi.tools.odos.description',
+		descriptionKey: 'defi.tools.odos.description',
 		url: 'https://odos.xyz',
 		icon: GitBranch,
 		category: 'defi',
@@ -456,7 +456,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'openocean',
 		name: 'OpenOcean',
-		descriptionKey: 'chain-tools.defi.tools.openocean.description',
+		descriptionKey: 'defi.tools.openocean.description',
 		url: 'https://openocean.finance',
 		icon: Globe,
 		category: 'defi',
@@ -467,7 +467,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'hashflow',
 		name: 'Hashflow',
-		descriptionKey: 'chain-tools.defi.tools.hashflow.description',
+		descriptionKey: 'defi.tools.hashflow.description',
 		url: 'https://www.hashflow.com',
 		icon: Hash,
 		category: 'defi',
@@ -478,7 +478,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'syncswap',
 		name: 'SyncSwap',
-		descriptionKey: 'chain-tools.defi.tools.syncswap.description',
+		descriptionKey: 'defi.tools.syncswap.description',
 		url: 'https://syncswap.xyz',
 		icon: RefreshCw,
 		category: 'defi',
@@ -489,7 +489,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'mute',
 		name: 'Mute.io',
-		descriptionKey: 'chain-tools.defi.tools.mute.description',
+		descriptionKey: 'defi.tools.mute.description',
 		url: 'https://mute.io',
 		icon: Activity,
 		category: 'defi',
@@ -500,7 +500,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'spacefi',
 		name: 'SpaceFi',
-		descriptionKey: 'chain-tools.defi.tools.spacefi.description',
+		descriptionKey: 'defi.tools.spacefi.description',
 		url: 'https://spacefi.io',
 		icon: Sparkles,
 		category: 'defi',
@@ -511,7 +511,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'ramses',
 		name: 'Ramses Exchange',
-		descriptionKey: 'chain-tools.defi.tools.ramses.description',
+		descriptionKey: 'defi.tools.ramses.description',
 		url: 'https://www.ramses.exchange',
 		icon: Gauge,
 		category: 'defi',
@@ -522,7 +522,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'thena',
 		name: 'THENA',
-		descriptionKey: 'chain-tools.defi.tools.thena.description',
+		descriptionKey: 'defi.tools.thena.description',
 		url: 'https://thena.fi',
 		icon: Gauge,
 		category: 'defi',
@@ -533,7 +533,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'baseswap',
 		name: 'BaseSwap',
-		descriptionKey: 'chain-tools.defi.tools.baseswap.description',
+		descriptionKey: 'defi.tools.baseswap.description',
 		url: 'https://baseswap.fi',
 		icon: Repeat,
 		category: 'defi',
@@ -544,7 +544,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'woofi',
 		name: 'WOOFi',
-		descriptionKey: 'chain-tools.defi.tools.woofi.description',
+		descriptionKey: 'defi.tools.woofi.description',
 		url: 'https://fi.woo.org',
 		icon: TrendingUp,
 		category: 'defi',
@@ -557,7 +557,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'gains',
 		name: 'Gains Network',
-		descriptionKey: 'chain-tools.defi.tools.gains.description',
+		descriptionKey: 'defi.tools.gains.description',
 		url: 'https://gains.trade',
 		icon: LineChart,
 		category: 'defi',
@@ -568,7 +568,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'level',
 		name: 'Level Finance',
-		descriptionKey: 'chain-tools.defi.tools.level.description',
+		descriptionKey: 'defi.tools.level.description',
 		url: 'https://level.finance',
 		icon: LineChart,
 		category: 'defi',
@@ -579,7 +579,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'mux',
 		name: 'MUX Protocol',
-		descriptionKey: 'chain-tools.defi.tools.mux.description',
+		descriptionKey: 'defi.tools.mux.description',
 		url: 'https://mux.network',
 		icon: LineChart,
 		category: 'defi',
@@ -590,7 +590,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'vertex',
 		name: 'Vertex Protocol',
-		descriptionKey: 'chain-tools.defi.tools.vertex.description',
+		descriptionKey: 'defi.tools.vertex.description',
 		url: 'https://vertexprotocol.com',
 		icon: Activity,
 		category: 'defi',
@@ -601,7 +601,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'hyperliquid',
 		name: 'Hyperliquid',
-		descriptionKey: 'chain-tools.defi.tools.hyperliquid.description',
+		descriptionKey: 'defi.tools.hyperliquid.description',
 		url: 'https://hyperliquid.xyz',
 		icon: Zap,
 		category: 'defi',
@@ -612,7 +612,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'aevo',
 		name: 'Aevo',
-		descriptionKey: 'chain-tools.defi.tools.aevo.description',
+		descriptionKey: 'defi.tools.aevo.description',
 		url: 'https://www.aevo.xyz',
 		icon: LineChart,
 		category: 'defi',
@@ -623,7 +623,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'lyra',
 		name: 'Lyra Finance',
-		descriptionKey: 'chain-tools.defi.tools.lyra.description',
+		descriptionKey: 'defi.tools.lyra.description',
 		url: 'https://www.lyra.finance',
 		icon: LineChart,
 		category: 'defi',
@@ -634,7 +634,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'dopex',
 		name: 'Dopex',
-		descriptionKey: 'chain-tools.defi.tools.dopex.description',
+		descriptionKey: 'defi.tools.dopex.description',
 		url: 'https://www.dopex.io',
 		icon: Target,
 		category: 'defi',
@@ -645,7 +645,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'premia',
 		name: 'Premia',
-		descriptionKey: 'chain-tools.defi.tools.premia.description',
+		descriptionKey: 'defi.tools.premia.description',
 		url: 'https://premia.blue',
 		icon: LineChart,
 		category: 'defi',
@@ -658,7 +658,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'beefy',
 		name: 'Beefy Finance',
-		descriptionKey: 'chain-tools.defi.tools.beefy.description',
+		descriptionKey: 'defi.tools.beefy.description',
 		url: 'https://beefy.com',
 		icon: TrendingUp,
 		category: 'defi',
@@ -669,7 +669,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'harvest',
 		name: 'Harvest Finance',
-		descriptionKey: 'chain-tools.defi.tools.harvest.description',
+		descriptionKey: 'defi.tools.harvest.description',
 		url: 'https://harvest.finance',
 		icon: TrendingUp,
 		category: 'defi',
@@ -680,7 +680,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'pickle',
 		name: 'Pickle Finance',
-		descriptionKey: 'chain-tools.defi.tools.pickle.description',
+		descriptionKey: 'defi.tools.pickle.description',
 		url: 'https://pickle.finance',
 		icon: TrendingUp,
 		category: 'defi',
@@ -691,7 +691,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'concentrator',
 		name: 'Concentrator',
-		descriptionKey: 'chain-tools.defi.tools.concentrator.description',
+		descriptionKey: 'defi.tools.concentrator.description',
 		url: 'https://concentrator.aladdin.club',
 		icon: Target,
 		category: 'defi',
@@ -702,7 +702,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'conic',
 		name: 'Conic Finance',
-		descriptionKey: 'chain-tools.defi.tools.conic.description',
+		descriptionKey: 'defi.tools.conic.description',
 		url: 'https://conic.finance',
 		icon: Activity,
 		category: 'defi',
@@ -713,7 +713,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'sturdy',
 		name: 'Sturdy Finance',
-		descriptionKey: 'chain-tools.defi.tools.sturdy.description',
+		descriptionKey: 'defi.tools.sturdy.description',
 		url: 'https://sturdy.finance',
 		icon: Shield,
 		category: 'defi',
@@ -726,7 +726,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'stakewise',
 		name: 'StakeWise',
-		descriptionKey: 'chain-tools.defi.tools.stakewise.description',
+		descriptionKey: 'defi.tools.stakewise.description',
 		url: 'https://stakewise.io',
 		icon: TrendingUp,
 		category: 'defi',
@@ -737,7 +737,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'frax-ether',
 		name: 'Frax Ether',
-		descriptionKey: 'chain-tools.defi.tools.frax_ether.description',
+		descriptionKey: 'defi.tools.frax_ether.description',
 		url: 'https://frax.finance/frxeth',
 		icon: TrendingUp,
 		category: 'defi',
@@ -748,7 +748,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'stader',
 		name: 'Stader Labs',
-		descriptionKey: 'chain-tools.defi.tools.stader.description',
+		descriptionKey: 'defi.tools.stader.description',
 		url: 'https://www.staderlabs.com',
 		icon: TrendingUp,
 		category: 'defi',
@@ -759,7 +759,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'mantle-lsp',
 		name: 'Mantle LSP',
-		descriptionKey: 'chain-tools.defi.tools.mantle_lsp.description',
+		descriptionKey: 'defi.tools.mantle_lsp.description',
 		url: 'https://meth.mantle.xyz',
 		icon: TrendingUp,
 		category: 'defi',
@@ -770,7 +770,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'renzo',
 		name: 'Renzo Protocol',
-		descriptionKey: 'chain-tools.defi.tools.renzo.description',
+		descriptionKey: 'defi.tools.renzo.description',
 		url: 'https://www.renzoprotocol.com',
 		icon: Layers,
 		category: 'defi',
@@ -781,7 +781,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'etherfi',
 		name: 'ether.fi',
-		descriptionKey: 'chain-tools.defi.tools.etherfi.description',
+		descriptionKey: 'defi.tools.etherfi.description',
 		url: 'https://www.ether.fi',
 		icon: Layers,
 		category: 'defi',
@@ -792,7 +792,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'puffer',
 		name: 'Puffer Finance',
-		descriptionKey: 'chain-tools.defi.tools.puffer.description',
+		descriptionKey: 'defi.tools.puffer.description',
 		url: 'https://www.puffer.fi',
 		icon: Shield,
 		category: 'defi',
@@ -803,7 +803,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'kelp',
 		name: 'Kelp DAO',
-		descriptionKey: 'chain-tools.defi.tools.kelp.description',
+		descriptionKey: 'defi.tools.kelp.description',
 		url: 'https://kelpdao.xyz',
 		icon: Layers,
 		category: 'defi',
@@ -816,7 +816,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'liquity',
 		name: 'Liquity',
-		descriptionKey: 'chain-tools.defi.tools.liquity.description',
+		descriptionKey: 'defi.tools.liquity.description',
 		url: 'https://www.liquity.org',
 		icon: CircleDollarSign,
 		category: 'defi',
@@ -827,7 +827,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'reflexer',
 		name: 'Reflexer',
-		descriptionKey: 'chain-tools.defi.tools.reflexer.description',
+		descriptionKey: 'defi.tools.reflexer.description',
 		url: 'https://reflexer.finance',
 		icon: RefreshCw,
 		category: 'defi',
@@ -838,7 +838,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'mstable',
 		name: 'mStable',
-		descriptionKey: 'chain-tools.defi.tools.mstable.description',
+		descriptionKey: 'defi.tools.mstable.description',
 		url: 'https://mstable.org',
 		icon: Coins,
 		category: 'defi',
@@ -849,7 +849,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'raft',
 		name: 'Raft',
-		descriptionKey: 'chain-tools.defi.tools.raft.description',
+		descriptionKey: 'defi.tools.raft.description',
 		url: 'https://raft.fi',
 		icon: CircleDollarSign,
 		category: 'defi',
@@ -860,7 +860,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'prisma',
 		name: 'Prisma Finance',
-		descriptionKey: 'chain-tools.defi.tools.prisma.description',
+		descriptionKey: 'defi.tools.prisma.description',
 		url: 'https://prismafinance.com',
 		icon: Hexagon,
 		category: 'defi',
@@ -871,7 +871,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'gravita',
 		name: 'Gravita Protocol',
-		descriptionKey: 'chain-tools.defi.tools.gravita.description',
+		descriptionKey: 'defi.tools.gravita.description',
 		url: 'https://www.gravitaprotocol.com',
 		icon: CircleDollarSign,
 		category: 'defi',
@@ -882,7 +882,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'gyroscope',
 		name: 'Gyroscope',
-		descriptionKey: 'chain-tools.defi.tools.gyroscope.description',
+		descriptionKey: 'defi.tools.gyroscope.description',
 		url: 'https://gyro.finance',
 		icon: RefreshCw,
 		category: 'defi',
@@ -893,7 +893,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'origin-dollar',
 		name: 'Origin Dollar',
-		descriptionKey: 'chain-tools.defi.tools.origin_dollar.description',
+		descriptionKey: 'defi.tools.origin_dollar.description',
 		url: 'https://www.ousd.com',
 		icon: CircleDollarSign,
 		category: 'defi',
@@ -904,7 +904,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'angle',
 		name: 'Angle Protocol',
-		descriptionKey: 'chain-tools.defi.tools.angle.description',
+		descriptionKey: 'defi.tools.angle.description',
 		url: 'https://angle.money',
 		icon: Coins,
 		category: 'defi',
@@ -917,7 +917,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'paraswap',
 		name: 'ParaSwap',
-		descriptionKey: 'chain-tools.defi.tools.paraswap.description',
+		descriptionKey: 'defi.tools.paraswap.description',
 		url: 'https://paraswap.io',
 		icon: Repeat,
 		category: 'defi',
@@ -928,7 +928,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'matcha',
 		name: 'Matcha',
-		descriptionKey: 'chain-tools.defi.tools.matcha.description',
+		descriptionKey: 'defi.tools.matcha.description',
 		url: 'https://matcha.xyz',
 		icon: Repeat,
 		category: 'defi',
@@ -939,7 +939,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'cowswap',
 		name: 'CoW Swap',
-		descriptionKey: 'chain-tools.defi.tools.cowswap.description',
+		descriptionKey: 'defi.tools.cowswap.description',
 		url: 'https://swap.cow.fi',
 		icon: Repeat,
 		category: 'defi',
@@ -950,7 +950,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'bebop',
 		name: 'Bebop',
-		descriptionKey: 'chain-tools.defi.tools.bebop.description',
+		descriptionKey: 'defi.tools.bebop.description',
 		url: 'https://bebop.xyz',
 		icon: Repeat,
 		category: 'defi',
@@ -961,7 +961,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'dodo',
 		name: 'DODO',
-		descriptionKey: 'chain-tools.defi.tools.dodo.description',
+		descriptionKey: 'defi.tools.dodo.description',
 		url: 'https://dodoex.io',
 		icon: Repeat,
 		category: 'defi',
@@ -972,7 +972,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'clipper',
 		name: 'Clipper',
-		descriptionKey: 'chain-tools.defi.tools.clipper.description',
+		descriptionKey: 'defi.tools.clipper.description',
 		url: 'https://clipper.exchange',
 		icon: Repeat,
 		category: 'defi',
@@ -983,7 +983,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'woofi-pro',
 		name: 'WOOFi Pro',
-		descriptionKey: 'chain-tools.defi.tools.woofi_pro.description',
+		descriptionKey: 'defi.tools.woofi_pro.description',
 		url: 'https://pro.woo.org',
 		icon: LineChart,
 		category: 'defi',
@@ -996,7 +996,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'bentobox',
 		name: 'BentoBox',
-		descriptionKey: 'chain-tools.defi.tools.bentobox.description',
+		descriptionKey: 'defi.tools.bentobox.description',
 		url: 'https://app.sushi.com/bentobox',
 		icon: Box,
 		category: 'defi',
@@ -1007,7 +1007,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'ribbon',
 		name: 'Ribbon Finance',
-		descriptionKey: 'chain-tools.defi.tools.ribbon.description',
+		descriptionKey: 'defi.tools.ribbon.description',
 		url: 'https://app.ribbon.finance',
 		icon: TrendingUp,
 		category: 'defi',
@@ -1018,7 +1018,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'opyn',
 		name: 'Opyn',
-		descriptionKey: 'chain-tools.defi.tools.opyn.description',
+		descriptionKey: 'defi.tools.opyn.description',
 		url: 'https://www.opyn.co',
 		icon: Target,
 		category: 'defi',
@@ -1029,7 +1029,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'notional',
 		name: 'Notional Finance',
-		descriptionKey: 'chain-tools.defi.tools.notional.description',
+		descriptionKey: 'defi.tools.notional.description',
 		url: 'https://notional.finance',
 		icon: Percent,
 		category: 'defi',
@@ -1040,7 +1040,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'goldfinch',
 		name: 'Goldfinch',
-		descriptionKey: 'chain-tools.defi.tools.goldfinch.description',
+		descriptionKey: 'defi.tools.goldfinch.description',
 		url: 'https://goldfinch.finance',
 		icon: Coins,
 		category: 'defi',
@@ -1051,7 +1051,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'maple',
 		name: 'Maple Finance',
-		descriptionKey: 'chain-tools.defi.tools.maple.description',
+		descriptionKey: 'defi.tools.maple.description',
 		url: 'https://maple.finance',
 		icon: Landmark,
 		category: 'defi',
@@ -1062,7 +1062,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'truefi',
 		name: 'TrueFi',
-		descriptionKey: 'chain-tools.defi.tools.truefi.description',
+		descriptionKey: 'defi.tools.truefi.description',
 		url: 'https://truefi.io',
 		icon: CircleDollarSign,
 		category: 'defi',
@@ -1073,7 +1073,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'tokemak',
 		name: 'Tokemak',
-		descriptionKey: 'chain-tools.defi.tools.tokemak.description',
+		descriptionKey: 'defi.tools.tokemak.description',
 		url: 'https://www.tokemak.xyz',
 		icon: Droplets,
 		category: 'defi',
@@ -1084,7 +1084,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'olympus',
 		name: 'Olympus DAO',
-		descriptionKey: 'chain-tools.defi.tools.olympus.description',
+		descriptionKey: 'defi.tools.olympus.description',
 		url: 'https://app.olympusdao.finance',
 		icon: Landmark,
 		category: 'defi',
@@ -1095,7 +1095,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'jones-dao',
 		name: 'Jones DAO',
-		descriptionKey: 'chain-tools.defi.tools.jones_dao.description',
+		descriptionKey: 'defi.tools.jones_dao.description',
 		url: 'https://www.jonesdao.io',
 		icon: TrendingUp,
 		category: 'defi',
@@ -1106,7 +1106,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'umami',
 		name: 'Umami Finance',
-		descriptionKey: 'chain-tools.defi.tools.umami.description',
+		descriptionKey: 'defi.tools.umami.description',
 		url: 'https://umami.finance',
 		icon: Activity,
 		category: 'defi',
@@ -1117,7 +1117,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'rage-trade',
 		name: 'Rage Trade',
-		descriptionKey: 'chain-tools.defi.tools.rage_trade.description',
+		descriptionKey: 'defi.tools.rage_trade.description',
 		url: 'https://www.rage.trade',
 		icon: Flame,
 		category: 'defi',
@@ -1128,7 +1128,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'vela',
 		name: 'Vela Exchange',
-		descriptionKey: 'chain-tools.defi.tools.vela.description',
+		descriptionKey: 'defi.tools.vela.description',
 		url: 'https://www.vela.exchange',
 		icon: LineChart,
 		category: 'defi',
@@ -1139,7 +1139,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'y2k',
 		name: 'Y2K Finance',
-		descriptionKey: 'chain-tools.defi.tools.y2k.description',
+		descriptionKey: 'defi.tools.y2k.description',
 		url: 'https://www.y2k.finance',
 		icon: Shield,
 		category: 'defi',
@@ -1150,7 +1150,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'kwenta',
 		name: 'Kwenta',
-		descriptionKey: 'chain-tools.defi.tools.kwenta.description',
+		descriptionKey: 'defi.tools.kwenta.description',
 		url: 'https://kwenta.io',
 		icon: TrendingUp,
 		category: 'defi',
@@ -1161,7 +1161,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'polynomial',
 		name: 'Polynomial',
-		descriptionKey: 'chain-tools.defi.tools.polynomial.description',
+		descriptionKey: 'defi.tools.polynomial.description',
 		url: 'https://polynomial.fi',
 		icon: Activity,
 		category: 'defi',
@@ -1174,7 +1174,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'symbiotic_restaking',
 		name: 'Symbiotic',
-		descriptionKey: 'chain-tools.defi.tools.symbiotic_restaking.description',
+		descriptionKey: 'defi.tools.symbiotic_restaking.description',
 		url: 'https://symbiotic.fi',
 		icon: TrendingUp,
 		category: 'defi',
@@ -1185,7 +1185,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'karak',
 		name: 'Karak',
-		descriptionKey: 'chain-tools.defi.tools.karak.description',
+		descriptionKey: 'defi.tools.karak.description',
 		url: 'https://karak.network',
 		icon: TrendingUp,
 		category: 'defi',
@@ -1196,7 +1196,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'ether_fi',
 		name: 'Ether.fi',
-		descriptionKey: 'chain-tools.defi.tools.ether_fi.description',
+		descriptionKey: 'defi.tools.ether_fi.description',
 		url: 'https://ether.fi',
 		icon: TrendingUp,
 		category: 'defi',
@@ -1207,7 +1207,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'swell',
 		name: 'Swell',
-		descriptionKey: 'chain-tools.defi.tools.swell.description',
+		descriptionKey: 'defi.tools.swell.description',
 		url: 'https://swellnetwork.io',
 		icon: TrendingUp,
 		category: 'defi',
@@ -1220,7 +1220,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'equilibria',
 		name: 'Equilibria',
-		descriptionKey: 'chain-tools.defi.tools.equilibria.description',
+		descriptionKey: 'defi.tools.equilibria.description',
 		url: 'https://equilibria.fi',
 		icon: TrendingUp,
 		category: 'defi',
@@ -1233,7 +1233,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'kamino-finance',
 		name: 'Kamino Finance',
-		descriptionKey: 'chain-tools.defi.tools.kamino_finance.description',
+		descriptionKey: 'defi.tools.kamino_finance.description',
 		url: 'https://kamino.finance',
 		icon: TrendingUp,
 		category: 'defi',
@@ -1244,7 +1244,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'marginfi',
 		name: 'marginfi',
-		descriptionKey: 'chain-tools.defi.tools.marginfi.description',
+		descriptionKey: 'defi.tools.marginfi.description',
 		url: 'https://marginfi.com',
 		icon: TrendingUp,
 		category: 'defi',
@@ -1255,7 +1255,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'drift-protocol',
 		name: 'Drift Protocol',
-		descriptionKey: 'chain-tools.defi.tools.drift_protocol.description',
+		descriptionKey: 'defi.tools.drift_protocol.description',
 		url: 'https://drift.trade',
 		icon: TrendingUp,
 		category: 'defi',
@@ -1268,7 +1268,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'ondo-finance',
 		name: 'Ondo Finance',
-		descriptionKey: 'chain-tools.defi.tools.ondo_finance.description',
+		descriptionKey: 'defi.tools.ondo_finance.description',
 		url: 'https://ondo.finance',
 		icon: Landmark,
 		category: 'defi',
@@ -1279,7 +1279,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'morpho-blue',
 		name: 'Morpho Blue',
-		descriptionKey: 'chain-tools.defi.tools.morpho_blue.description',
+		descriptionKey: 'defi.tools.morpho_blue.description',
 		url: 'https://morpho.org',
 		icon: Landmark,
 		category: 'defi',
@@ -1290,7 +1290,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'gearbox-protocol',
 		name: 'Gearbox Protocol',
-		descriptionKey: 'chain-tools.defi.tools.gearbox_protocol.description',
+		descriptionKey: 'defi.tools.gearbox_protocol.description',
 		url: 'https://gearbox.fi',
 		icon: TrendingUp,
 		category: 'defi',
@@ -1301,7 +1301,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'extra-finance',
 		name: 'Extra Finance',
-		descriptionKey: 'chain-tools.defi.tools.extra_finance.description',
+		descriptionKey: 'defi.tools.extra_finance.description',
 		url: 'https://extra.finance',
 		icon: TrendingUp,
 		category: 'defi',
@@ -1312,7 +1312,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'fluid-protocol',
 		name: 'Fluid',
-		descriptionKey: 'chain-tools.defi.tools.fluid_protocol.description',
+		descriptionKey: 'defi.tools.fluid_protocol.description',
 		url: 'https://fluid.instadapp.io',
 		icon: Droplets,
 		category: 'defi',
@@ -1323,7 +1323,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'reserve-protocol',
 		name: 'Reserve Protocol',
-		descriptionKey: 'chain-tools.defi.tools.reserve_protocol.description',
+		descriptionKey: 'defi.tools.reserve_protocol.description',
 		url: 'https://reserve.org',
 		icon: Coins,
 		category: 'defi',
@@ -1334,7 +1334,7 @@ export const defiTools: ExternalTool[] = [
 	{
 		id: 'term-finance',
 		name: 'Term Finance',
-		descriptionKey: 'chain-tools.defi.tools.term_finance.description',
+		descriptionKey: 'defi.tools.term_finance.description',
 		url: 'https://term.finance',
 		icon: Landmark,
 		category: 'defi',

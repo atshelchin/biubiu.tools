@@ -1,0 +1,309 @@
+{
+	"category_seo": {
+		"title": "Công Cụ DeFi - Giao Thức Tài Chính Phi Tập Trung | BiuBiu Tools",
+		"description": "Khám phá các công cụ DeFi tốt nhất cho swap, cho vay, yield farming và nhiều hơn nữa. So sánh các giao thức hàng đầu như Uniswap, Aave, Curve và Compound.",
+		"keywords": "defi tools, decentralized finance, dex, lending, yield farming, uniswap, aave, compound",
+		"faqs": [
+			{
+				"question": "DeFi là gì?",
+				"answer": "DeFi (Tài chính Phi tập trung) là các dịch vụ tài chính được xây dựng trên công nghệ blockchain hoạt động mà không cần trung gian truyền thống như ngân hàng. Nó bao gồm cho vay, vay mượn, giao dịch và kiếm lãi từ tài sản crypto."
+			},
+			{
+				"question": "Rủi ro khi sử dụng DeFi là gì?",
+				"answer": "Rủi ro DeFi bao gồm lỗ hổng smart contract, tổn thất vô thường trong liquidity pool, biến động thị trường và khả năng rug pull. Luôn nghiên cứu kỹ và chỉ đầu tư số tiền bạn có thể mất."
+			},
+			{
+				"question": "Làm thế nào để bắt đầu với DeFi?",
+				"answer": "Để bắt đầu với DeFi: 1) Thiết lập ví crypto như MetaMask, 2) Mua một số ETH hoặc crypto khác, 3) Kết nối ví của bạn với nền tảng DeFi, 4) Bắt đầu với các swap đơn giản trước khi thử các tính năng nâng cao."
+			},
+			{
+				"question": "TVL trong DeFi là gì?",
+				"answer": "TVL (Tổng Giá Trị Khóa) đại diện cho tổng số tài sản được gửi vào một giao thức DeFi. Đây là chỉ số quan trọng để đo lường mức độ phổ biến và bảo mật của giao thức."
+			}
+		]
+	},
+	"tools": {
+		"uniswap": {
+			"description": "Sàn giao dịch phi tập trung hàng đầu cho hoán đổi token"
+		},
+		"aave": {
+			"description": "Giao thức cho vay và đi vay phi tập trung"
+		},
+		"1inch": {
+			"description": "Bộ tổng hợp DEX để có giá hoán đổi tốt nhất"
+		},
+		"curve": {
+			"description": "AMM tập trung vào stablecoin với độ trượt giá thấp"
+		},
+		"lido": {
+			"description": "Staking thanh khoản cho Ethereum và nhiều hơn"
+		},
+		"compound": {
+			"description": "Giao thức thị trường tiền tệ thuật toán"
+		},
+		"maker": {
+			"description": "Stablecoin DAI và giao thức cho vay"
+		},
+		"gmx": {
+			"description": "Sàn giao dịch vĩnh viễn phi tập trung"
+		},
+		"pancakeswap": {
+			"description": "DEX hàng đầu trên BNB Chain"
+		},
+		"sushiswap": {
+			"description": "AMM đa chuỗi và nền tảng DeFi"
+		},
+		"balancer": {
+			"description": "Trình quản lý danh mục đầu tư tự động và DEX"
+		},
+		"dydx": {
+			"description": "Sàn giao dịch vĩnh viễn phi tập trung"
+		},
+		"convex": {
+			"description": "Lợi suất Curve được tăng cường mà không cần khóa CRV"
+		},
+		"yearn": {
+			"description": "Vault tối ưu hóa lợi suất tự động"
+		},
+		"pendle": {
+			"description": "Token hóa và giao dịch lợi suất"
+		},
+		"radiant": {
+			"description": "Thị trường tiền tệ omnichain"
+		},
+		"morpho": {
+			"description": "Cho vay ngang hàng với lãi suất được tối ưu hóa"
+		},
+		"rocketpool": {
+			"description": "Staking Ethereum phi tập trung"
+		},
+		"venus": {
+			"description": "Cho vay và đi vay BSC"
+		},
+		"camelot": {
+			"description": "DEX và launchpad gốc Arbitrum"
+		},
+		"velodrome": {
+			"description": "Trung tâm thanh khoản Optimism"
+		},
+		"aerodrome": {
+			"description": "Trung tâm thanh khoản trung tâm cho mạng Base"
+		},
+		"maverick": {
+			"description": "AMM phân phối động cho thanh khoản"
+		},
+		"spark": {
+			"description": "Giao thức cho vay DAI bởi MakerDAO"
+		},
+		"instadapp": {
+			"description": "Bộ tổng hợp tài khoản thông minh DeFi"
+		},
+		"sommelier": {
+			"description": "Chiến lược vault DeFi được quản lý tích cực"
+		},
+		"euler": {
+			"description": "Giao thức cho vay không cần phép"
+		},
+		"benqi": {
+			"description": "Cho vay và staking thanh khoản trên Avalanche"
+		},
+		"silo": {
+			"description": "Thị trường cho vay rủi ro cô lập"
+		},
+		"abracadabra": {
+			"description": "Cho vay token sinh lãi"
+		},
+		"alchemix": {
+			"description": "Giao thức vay tự trả"
+		},
+		"exactly": {
+			"description": "Cho vay lãi suất cố định và thay đổi"
+		},
+		"kyberswap": {
+			"description": "Bộ tổng hợp DEX với elastic pools"
+		},
+		"odos": {
+			"description": "Bộ tổng hợp định tuyến đơn hàng thông minh"
+		},
+		"openocean": {
+			"description": "Bộ tổng hợp DEX đa chuỗi"
+		},
+		"hashflow": {
+			"description": "Giao dịch RFQ được bảo vệ MEV"
+		},
+		"syncswap": {
+			"description": "DEX gốc zkSync Era"
+		},
+		"mute": {
+			"description": "DEX zkSync với amplifier"
+		},
+		"spacefi": {
+			"description": "DEX và yield farm trên zkSync"
+		},
+		"ramses": {
+			"description": "DEX ve(3,3) trên Arbitrum"
+		},
+		"thena": {
+			"description": "DEX ve(3,3) trên BNB Chain"
+		},
+		"baseswap": {
+			"description": "DEX và farm gốc Base"
+		},
+		"woofi": {
+			"description": "DEX đa chuỗi độ trượt giá thấp"
+		},
+		"gains": {
+			"description": "Giao dịch đòn bẩy phi tập trung"
+		},
+		"level": {
+			"description": "Nền tảng giao dịch vĩnh viễn"
+		},
+		"mux": {
+			"description": "Bộ tổng hợp giao dịch đòn bẩy"
+		},
+		"vertex": {
+			"description": "DEX giao dịch vĩnh viễn và spot"
+		},
+		"hyperliquid": {
+			"description": "DEX sổ lệnh vĩnh viễn on-chain"
+		},
+		"aevo": {
+			"description": "Sàn giao dịch quyền chọn và vĩnh viễn"
+		},
+		"lyra": {
+			"description": "Giao thức AMM quyền chọn"
+		},
+		"dopex": {
+			"description": "Giao thức quyền chọn phi tập trung"
+		},
+		"premia": {
+			"description": "Vault và giao dịch quyền chọn"
+		},
+		"harvest": {
+			"description": "Bộ tổng hợp yield farming DeFi"
+		},
+		"pickle": {
+			"description": "Jar tối ưu hóa lợi suất"
+		},
+		"concentrator": {
+			"description": "Tự động ghép lãi cho Curve và Convex"
+		},
+		"conic": {
+			"description": "Nền tảng omnipool Curve"
+		},
+		"sturdy": {
+			"description": "Giao thức cho vay không lãi suất"
+		},
+		"stakewise": {
+			"description": "Staking ETH không giữ hộ"
+		},
+		"stader": {
+			"description": "Staking thanh khoản đa chuỗi"
+		},
+		"renzo": {
+			"description": "Liquid restaking trên EigenLayer"
+		},
+		"puffer": {
+			"description": "Liquid restaking với công nghệ chống slashing"
+		},
+		"kelp": {
+			"description": "Liquid restaking với rsETH trên EigenLayer"
+		},
+		"bentobox": {
+			"description": "Vault token của Sushi với flash loan và cho vay"
+		},
+		"ribbon": {
+			"description": "Sản phẩm có cấu trúc và vault quyền chọn cho lợi suất bền vững"
+		},
+		"opyn": {
+			"description": "Giao thức quyền chọn với chiến lược vĩnh viễn squeeth"
+		},
+		"notional": {
+			"description": "Giao thức cho vay và đi vay lãi suất cố định"
+		},
+		"maple": {
+			"description": "Thị trường cho vay thiếu tài sản thế chấp cho tổ chức"
+		},
+		"tokemak": {
+			"description": "Lò phản ứng thanh khoản cho thanh khoản DeFi bền vững"
+		},
+		"olympus": {
+			"description": "Giao thức tiền dự trữ phi tập trung với token OHM"
+		},
+		"umami": {
+			"description": "Vault lợi suất bền vững sử dụng GLP trên Arbitrum"
+		},
+		"vela": {
+			"description": "DEX vĩnh viễn với tính năng giao dịch nâng cao"
+		},
+		"y2k": {
+			"description": "Bảo hiểm và phòng ngừa depeg stablecoin"
+		},
+		"kwenta": {
+			"description": "Giao dịch hợp đồng tương lai vĩnh viễn trên Synthetix"
+		},
+		"polynomial": {
+			"description": "Vault quyền chọn được cung cấp bởi Synthetix trên Optimism"
+		},
+		"angle": {
+			"description": "Stablecoin Euro và giao thức DeFi forex"
+		},
+		"liquity": {
+			"description": "Vay không lãi suất đối với ETH với stablecoin LUSD"
+		},
+		"reflexer": {
+			"description": "Stablecoin RAI không neo với bộ điều khiển PID"
+		},
+		"mstable": {
+			"description": "Nền tảng meta-stablecoin với tiết kiệm lợi suất"
+		},
+		"raft": {
+			"description": "Giao thức vay stablecoin được hỗ trợ bởi LSD"
+		},
+		"prisma": {
+			"description": "Stablecoin mkUSD được hỗ trợ bởi LSD với tích hợp Curve"
+		},
+		"gravita": {
+			"description": "Vay stablecoin GRAI được hỗ trợ bởi LSD"
+		},
+		"gyroscope": {
+			"description": "Stablecoin mọi thời tiết với dự trữ đa dạng hóa"
+		},
+		"paraswap": {
+			"description": "Bộ tổng hợp DEX cho tỷ giá hoán đổi tốt nhất đa chuỗi"
+		},
+		"matcha": {
+			"description": "Bộ tổng hợp DEX được cung cấp bởi giao thức 0x"
+		},
+		"cowswap": {
+			"description": "Hoán đổi được bảo vệ MEV với đấu giá hàng loạt"
+		},
+		"bebop": {
+			"description": "Hoán đổi đa token với giao dịch không phí gas"
+		},
+		"dodo": {
+			"description": "DEX tạo thị trường chủ động với crowdpooling"
+		},
+		"clipper": {
+			"description": "DEX được tối ưu hóa cho nhà giao dịch bán lẻ và giao dịch nhỏ"
+		},
+		"symbiotic_restaking": {
+			"description": "Giao thức restaking mô-đun không cần phép"
+		},
+		"ether_fi": {
+			"description": "Liquid restaking không giữ hộ với eETH"
+		},
+		"swell": {
+			"description": "Liquid staking và restaking với swETH"
+		},
+		"beefy": {
+			"description": "Trình tối ưu hóa lợi suất tự ghép lãi đa chuỗi"
+		},
+		"equilibria": {
+			"description": "Lợi suất được tăng cường cho pool Pendle"
+		},
+		"marginfi": {
+			"description": "Giao thức DeFi trên Solana"
+		}
+	}
+}

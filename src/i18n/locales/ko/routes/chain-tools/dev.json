@@ -1,0 +1,122 @@
+{
+	"category_seo": {
+		"title": "Web3 Developer Tools - Build dApps & Smart Contracts | BiuBiu Tools",
+		"description": "Essential developer tools for building on Ethereum and other blockchains. Smart contract frameworks, testing tools, and deployment services.",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "What are the main smart contract development frameworks?",
+				"answer": "Foundry is the fastest and most popular for Solidity. Hardhat offers great JavaScript integration and plugins. Brownie is Python-based. Anchor is the standard for Solana programs."
+			},
+			{
+				"question": "How do I get testnet tokens?",
+				"answer": "Use faucets like Alchemy Faucet, Infura Faucet, or chain-specific faucets. Sepolia is the main Ethereum testnet. Most L2s have their own testnet faucets linked from their documentation."
+			},
+			{
+				"question": "What RPC providers should I use?",
+				"answer": "Alchemy and Infura are the most reliable with generous free tiers. QuickNode offers fast performance. For decentralized options, consider Ankr or POKT Network. Always have backup RPC endpoints."
+			}
+		]
+	},
+	"tools": {
+		"tenderly": {
+			"description": "Tenderly - 스마트 컨트랙트 디버깅 및 모니터링"
+		},
+		"chainlist": {
+			"description": "지갑에 EVM 네트워크 추가"
+		},
+		"remix": {
+			"description": "브라우저 기반 Solidity IDE"
+		},
+		"foundry": {
+			"description": "초고속 Solidity 툴킷"
+		},
+		"hardhat": {
+			"description": "이더리움 개발 환경"
+		},
+		"viem": {
+			"description": "TypeScript 이더리움 라이브러리"
+		},
+		"wagmi": {
+			"description": "이더리움용 React 훅"
+		},
+		"rainbowkit": {
+			"description": "React 지갑 연결 UI"
+		},
+		"web3modal": {
+			"description": "멀티 프레임워크 지갑 연결"
+		},
+		"thirdweb": {
+			"description": "풀스택 Web3 개발"
+		},
+		"alchemy": {
+			"description": "Web3 개발 플랫폼 및 API"
+		},
+		"infura": {
+			"description": "이더리움 API 인프라"
+		},
+		"quicknode": {
+			"description": "멀티체인 노드 인프라"
+		},
+		"sourcify": {
+			"description": "탈중앙화 컨트랙트 검증"
+		},
+		"brownie": {
+			"description": "Python 스마트 컨트랙트 프레임워크"
+		},
+		"ape": {
+			"description": "모듈식 Python 프레임워크"
+		},
+		"pyth": {
+			"description": "실시간 가격 오라클"
+		},
+		"goldsky": {
+			"description": "실시간 블록체인 데이터 스트리밍 및 인덱싱"
+		},
+		"envio": {
+			"description": "초고속 블록체인 인덱싱을 위한 HyperSync"
+		},
+		"covalent": {
+			"description": "통합 블록체인 데이터 API"
+		},
+		"transpose": {
+			"description": "SQL API를 갖춘 실시간 블록체인 데이터"
+		},
+		"chainbase": {
+			"description": "올인원 데이터 플랫폼"
+		},
+		"useweb3": {
+			"description": "큐레이팅된 Web3 학습 리소스"
+		},
+		"buildspace": {
+			"description": "프로젝트 기반 Web3 학습 커뮤니티"
+		},
+		"pointer": {
+			"description": "Web3 개발을 배우고 암호화폐 획득"
+		},
+		"chainide": {
+			"description": "클라우드 기반 멀티체인 개발 IDE"
+		},
+		"constructor": {
+			"description": "시각적 노코드 스마트 컨트랙트 빌더"
+		},
+		"bunzz": {
+			"description": "스마트 컨트랙트 배포 마켓플레이스"
+		},
+		"crossmint": {
+			"description": "법정화폐 결제를 갖춘 NFT 민팅 API"
+		},
+		"moralis": {
+			"description": "Web3 개발 플랫폼 및 API"
+		},
+		"circom": {
+			"description": "영지식 증명 회로 언어"
+		},
+		"protostar": {
+			"description": "Starknet 개발 프레임워크"
+		},
+		"starkli": {
+			"description": "Starknet CLI 도구"
+		}
+	}
+}

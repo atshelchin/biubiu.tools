@@ -18,7 +18,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'sec-crypto',
 		name: 'SEC (US)',
-		descriptionKey: 'chain-tools.regulation.tools.sec_crypto.description',
+		descriptionKey: 'regulation.tools.sec_crypto.description',
 		url: 'https://www.sec.gov/spotlight/cybersecurity',
 		icon: Landmark,
 		category: 'regulation',
@@ -28,7 +28,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'cftc-crypto',
 		name: 'CFTC (US)',
-		descriptionKey: 'chain-tools.regulation.tools.cftc_crypto.description',
+		descriptionKey: 'regulation.tools.cftc_crypto.description',
 		url: 'https://www.cftc.gov/digitalassets',
 		icon: Landmark,
 		category: 'regulation',
@@ -38,7 +38,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'fincen-crypto',
 		name: 'FinCEN (US)',
-		descriptionKey: 'chain-tools.regulation.tools.fincen_crypto.description',
+		descriptionKey: 'regulation.tools.fincen_crypto.description',
 		url: 'https://www.fincen.gov/resources/statutes-and-regulations/guidance',
 		icon: Shield,
 		category: 'regulation',
@@ -48,7 +48,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'occ-crypto',
 		name: 'OCC (US)',
-		descriptionKey: 'chain-tools.regulation.tools.occ_crypto.description',
+		descriptionKey: 'regulation.tools.occ_crypto.description',
 		url: 'https://www.occ.gov/topics/digital-assets/index.html',
 		icon: Landmark,
 		category: 'regulation',
@@ -58,7 +58,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'fed-crypto',
 		name: 'Federal Reserve',
-		descriptionKey: 'chain-tools.regulation.tools.fed_crypto.description',
+		descriptionKey: 'regulation.tools.fed_crypto.description',
 		url: 'https://www.federalreserve.gov/central-bank-digital-currency.htm',
 		icon: Landmark,
 		category: 'regulation',
@@ -68,7 +68,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'nydfs-crypto',
 		name: 'NYDFS BitLicense',
-		descriptionKey: 'chain-tools.regulation.tools.nydfs_crypto.description',
+		descriptionKey: 'regulation.tools.nydfs_crypto.description',
 		url: 'https://www.dfs.ny.gov/virtual_currency_businesses',
 		icon: FileText,
 		category: 'regulation',
@@ -79,7 +79,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'mica-eu',
 		name: 'MiCA (EU)',
-		descriptionKey: 'chain-tools.regulation.tools.mica_eu.description',
+		descriptionKey: 'regulation.tools.mica_eu.description',
 		url: 'https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica',
 		icon: Scale,
 		category: 'regulation',
@@ -89,7 +89,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'esma-crypto',
 		name: 'ESMA (EU)',
-		descriptionKey: 'chain-tools.regulation.tools.esma_crypto.description',
+		descriptionKey: 'regulation.tools.esma_crypto.description',
 		url: 'https://www.esma.europa.eu',
 		icon: Landmark,
 		category: 'regulation',
@@ -99,7 +99,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'eba-crypto',
 		name: 'EBA (EU)',
-		descriptionKey: 'chain-tools.regulation.tools.eba_crypto.description',
+		descriptionKey: 'regulation.tools.eba_crypto.description',
 		url: 'https://www.eba.europa.eu/regulation-and-policy/crypto-assets',
 		icon: Landmark,
 		category: 'regulation',
@@ -109,7 +109,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'fca-crypto',
 		name: 'FCA (UK)',
-		descriptionKey: 'chain-tools.regulation.tools.fca_crypto.description',
+		descriptionKey: 'regulation.tools.fca_crypto.description',
 		url: 'https://www.fca.org.uk/consumers/cryptoassets',
 		icon: Landmark,
 		category: 'regulation',
@@ -119,7 +119,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'bafin-crypto',
 		name: 'BaFin (Germany)',
-		descriptionKey: 'chain-tools.regulation.tools.bafin_crypto.description',
+		descriptionKey: 'regulation.tools.bafin_crypto.description',
 		url: 'https://www.bafin.de/EN/Aufsicht/FinTech/VirtualCurrency/virtual_currency_node_en.html',
 		icon: Landmark,
 		category: 'regulation',
@@ -129,7 +129,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'amf-crypto',
 		name: 'AMF (France)',
-		descriptionKey: 'chain-tools.regulation.tools.amf_crypto.description',
+		descriptionKey: 'regulation.tools.amf_crypto.description',
 		url: 'https://www.amf-france.org/en/news-publications/dossiers-thematiques/digital-finance',
 		icon: Landmark,
 		category: 'regulation',
@@ -139,7 +139,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'finma-crypto',
 		name: 'FINMA (Switzerland)',
-		descriptionKey: 'chain-tools.regulation.tools.finma_crypto.description',
+		descriptionKey: 'regulation.tools.finma_crypto.description',
 		url: 'https://www.finma.ch/en/finma-public/fintech/',
 		icon: Landmark,
 		category: 'regulation',
@@ -150,7 +150,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'hkma-crypto',
 		name: 'HKMA (Hong Kong)',
-		descriptionKey: 'chain-tools.regulation.tools.hkma_crypto.description',
+		descriptionKey: 'regulation.tools.hkma_crypto.description',
 		url: 'https://www.hkma.gov.hk/eng/key-functions/international-financial-centre/fintech/',
 		icon: Landmark,
 		category: 'regulation',
@@ -160,7 +160,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'sfc-hk',
 		name: 'SFC (Hong Kong)',
-		descriptionKey: 'chain-tools.regulation.tools.sfc_hk.description',
+		descriptionKey: 'regulation.tools.sfc_hk.description',
 		url: 'https://www.sfc.hk/en/Welcome-to-the-Fintech-Contact-Point/Virtual-assets',
 		icon: Landmark,
 		category: 'regulation',
@@ -170,7 +170,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'mas-crypto',
 		name: 'MAS (Singapore)',
-		descriptionKey: 'chain-tools.regulation.tools.mas_crypto.description',
+		descriptionKey: 'regulation.tools.mas_crypto.description',
 		url: 'https://www.mas.gov.sg/regulation/digital-token-offerings',
 		icon: Landmark,
 		category: 'regulation',
@@ -180,7 +180,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'jfsa-crypto',
 		name: 'JFSA (Japan)',
-		descriptionKey: 'chain-tools.regulation.tools.jfsa_crypto.description',
+		descriptionKey: 'regulation.tools.jfsa_crypto.description',
 		url: 'https://www.fsa.go.jp/en/policy/virtual_currency/index.html',
 		icon: Landmark,
 		category: 'regulation',
@@ -190,7 +190,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'fsc-korea',
 		name: 'FSC (South Korea)',
-		descriptionKey: 'chain-tools.regulation.tools.fsc_korea.description',
+		descriptionKey: 'regulation.tools.fsc_korea.description',
 		url: 'https://www.fsc.go.kr/eng/index.do',
 		icon: Landmark,
 		category: 'regulation',
@@ -200,7 +200,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'asic-crypto',
 		name: 'ASIC (Australia)',
-		descriptionKey: 'chain-tools.regulation.tools.asic_crypto.description',
+		descriptionKey: 'regulation.tools.asic_crypto.description',
 		url: 'https://asic.gov.au/regulatory-resources/digital-assets/',
 		icon: Landmark,
 		category: 'regulation',
@@ -210,7 +210,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'rbi-crypto',
 		name: 'RBI (India)',
-		descriptionKey: 'chain-tools.regulation.tools.rbi_crypto.description',
+		descriptionKey: 'regulation.tools.rbi_crypto.description',
 		url: 'https://www.rbi.org.in',
 		icon: Landmark,
 		category: 'regulation',
@@ -221,7 +221,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'vara-dubai',
 		name: 'VARA (Dubai)',
-		descriptionKey: 'chain-tools.regulation.tools.vara_dubai.description',
+		descriptionKey: 'regulation.tools.vara_dubai.description',
 		url: 'https://vara.ae',
 		icon: Landmark,
 		category: 'regulation',
@@ -231,7 +231,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'adgm-crypto',
 		name: 'ADGM (Abu Dhabi)',
-		descriptionKey: 'chain-tools.regulation.tools.adgm_crypto.description',
+		descriptionKey: 'regulation.tools.adgm_crypto.description',
 		url: 'https://www.adgm.com/setting-up/digital-assets',
 		icon: Landmark,
 		category: 'regulation',
@@ -241,7 +241,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'sama-crypto',
 		name: 'SAMA (Saudi Arabia)',
-		descriptionKey: 'chain-tools.regulation.tools.sama_crypto.description',
+		descriptionKey: 'regulation.tools.sama_crypto.description',
 		url: 'https://www.sama.gov.sa/en-US/pages/default.aspx',
 		icon: Landmark,
 		category: 'regulation',
@@ -251,7 +251,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'sarb-crypto',
 		name: 'SARB (South Africa)',
-		descriptionKey: 'chain-tools.regulation.tools.sarb_crypto.description',
+		descriptionKey: 'regulation.tools.sarb_crypto.description',
 		url: 'https://www.resbank.co.za/en/home/what-we-do/fintech',
 		icon: Landmark,
 		category: 'regulation',
@@ -262,7 +262,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'csa-crypto',
 		name: 'CSA (Canada)',
-		descriptionKey: 'chain-tools.regulation.tools.csa_crypto.description',
+		descriptionKey: 'regulation.tools.csa_crypto.description',
 		url: 'https://www.securities-administrators.ca/crypto-assets/',
 		icon: Landmark,
 		category: 'regulation',
@@ -272,7 +272,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'cnbv-crypto',
 		name: 'CNBV (Mexico)',
-		descriptionKey: 'chain-tools.regulation.tools.cnbv_crypto.description',
+		descriptionKey: 'regulation.tools.cnbv_crypto.description',
 		url: 'https://www.gob.mx/cnbv',
 		icon: Landmark,
 		category: 'regulation',
@@ -282,7 +282,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'bcra-crypto',
 		name: 'BCRA (Argentina)',
-		descriptionKey: 'chain-tools.regulation.tools.bcra_crypto.description',
+		descriptionKey: 'regulation.tools.bcra_crypto.description',
 		url: 'https://www.bcra.gob.ar',
 		icon: Landmark,
 		category: 'regulation',
@@ -292,7 +292,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'cvm-brazil',
 		name: 'CVM (Brazil)',
-		descriptionKey: 'chain-tools.regulation.tools.cvm_brazil.description',
+		descriptionKey: 'regulation.tools.cvm_brazil.description',
 		url: 'https://www.gov.br/cvm/pt-br',
 		icon: Landmark,
 		category: 'regulation',
@@ -303,7 +303,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'fatf-crypto',
 		name: 'FATF',
-		descriptionKey: 'chain-tools.regulation.tools.fatf_crypto.description',
+		descriptionKey: 'regulation.tools.fatf_crypto.description',
 		url: 'https://www.fatf-gafi.org/en/topics/virtual-assets.html',
 		icon: Globe,
 		category: 'regulation',
@@ -313,7 +313,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'bis-crypto',
 		name: 'BIS',
-		descriptionKey: 'chain-tools.regulation.tools.bis_crypto.description',
+		descriptionKey: 'regulation.tools.bis_crypto.description',
 		url: 'https://www.bis.org/topics/fintech.htm',
 		icon: Globe,
 		category: 'regulation',
@@ -323,7 +323,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'fsb-crypto',
 		name: 'FSB',
-		descriptionKey: 'chain-tools.regulation.tools.fsb_crypto.description',
+		descriptionKey: 'regulation.tools.fsb_crypto.description',
 		url: 'https://www.fsb.org/work-of-the-fsb/financial-innovation-and-structural-change/crypto-assets/',
 		icon: Globe,
 		category: 'regulation',
@@ -333,7 +333,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'iosco-crypto',
 		name: 'IOSCO',
-		descriptionKey: 'chain-tools.regulation.tools.iosco_crypto.description',
+		descriptionKey: 'regulation.tools.iosco_crypto.description',
 		url: 'https://www.iosco.org/publications/?subsection=crypto_assets',
 		icon: Globe,
 		category: 'regulation',
@@ -344,7 +344,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'coinbase-legal',
 		name: 'Coinbase Legal Hub',
-		descriptionKey: 'chain-tools.regulation.tools.coinbase_legal.description',
+		descriptionKey: 'regulation.tools.coinbase_legal.description',
 		url: 'https://www.coinbase.com/legal',
 		icon: BookOpen,
 		category: 'regulation',
@@ -354,7 +354,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'a16z-policy',
 		name: 'a16z Policy Hub',
-		descriptionKey: 'chain-tools.regulation.tools.a16z_policy.description',
+		descriptionKey: 'regulation.tools.a16z_policy.description',
 		url: 'https://a16zcrypto.com/posts/category/policy',
 		icon: BookOpen,
 		category: 'regulation',
@@ -364,7 +364,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'blockchain-association',
 		name: 'Blockchain Association',
-		descriptionKey: 'chain-tools.regulation.tools.blockchain_association.description',
+		descriptionKey: 'regulation.tools.blockchain_association.description',
 		url: 'https://theblockchainassociation.org',
 		icon: Users,
 		category: 'regulation',
@@ -374,7 +374,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'coin-center',
 		name: 'Coin Center',
-		descriptionKey: 'chain-tools.regulation.tools.coin_center.description',
+		descriptionKey: 'regulation.tools.coin_center.description',
 		url: 'https://www.coincenter.org',
 		icon: BookOpen,
 		category: 'regulation',
@@ -384,7 +384,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'atlanticcouncil-cbdc',
 		name: 'CBDC Tracker',
-		descriptionKey: 'chain-tools.regulation.tools.atlanticcouncil_cbdc.description',
+		descriptionKey: 'regulation.tools.atlanticcouncil_cbdc.description',
 		url: 'https://www.atlanticcouncil.org/cbdctracker/',
 		icon: Map,
 		category: 'regulation',
@@ -394,7 +394,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'global-crypto-map',
 		name: 'Global Crypto Regulation Map',
-		descriptionKey: 'chain-tools.regulation.tools.global_crypto_map.description',
+		descriptionKey: 'regulation.tools.global_crypto_map.description',
 		url: 'https://www.complyadvantage.com/insights/cryptocurrency-regulations-around-world/',
 		icon: Map,
 		category: 'regulation',
@@ -405,7 +405,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'chainalysis-compliance',
 		name: 'Chainalysis',
-		descriptionKey: 'chain-tools.regulation.tools.chainalysis_compliance.description',
+		descriptionKey: 'regulation.tools.chainalysis_compliance.description',
 		url: 'https://www.chainalysis.com',
 		icon: Shield,
 		category: 'regulation',
@@ -415,7 +415,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'elliptic-compliance',
 		name: 'Elliptic',
-		descriptionKey: 'chain-tools.regulation.tools.elliptic_compliance.description',
+		descriptionKey: 'regulation.tools.elliptic_compliance.description',
 		url: 'https://www.elliptic.co',
 		icon: Shield,
 		category: 'regulation',
@@ -425,7 +425,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'trm-labs',
 		name: 'TRM Labs',
-		descriptionKey: 'chain-tools.regulation.tools.trm_labs.description',
+		descriptionKey: 'regulation.tools.trm_labs.description',
 		url: 'https://www.trmlabs.com',
 		icon: Shield,
 		category: 'regulation',
@@ -435,7 +435,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'merkle-science',
 		name: 'Merkle Science',
-		descriptionKey: 'chain-tools.regulation.tools.merkle_science.description',
+		descriptionKey: 'regulation.tools.merkle_science.description',
 		url: 'https://www.merklescience.com',
 		icon: Shield,
 		category: 'regulation',
@@ -445,7 +445,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'notabene-travel',
 		name: 'Notabene',
-		descriptionKey: 'chain-tools.regulation.tools.notabene_travel.description',
+		descriptionKey: 'regulation.tools.notabene_travel.description',
 		url: 'https://notabene.id',
 		icon: FileText,
 		category: 'regulation',
@@ -455,7 +455,7 @@ export const regulationTools: ExternalTool[] = [
 	{
 		id: 'sumsub-kyc',
 		name: 'Sumsub',
-		descriptionKey: 'chain-tools.regulation.tools.sumsub_kyc.description',
+		descriptionKey: 'regulation.tools.sumsub_kyc.description',
 		url: 'https://sumsub.com',
 		icon: Shield,
 		category: 'regulation',

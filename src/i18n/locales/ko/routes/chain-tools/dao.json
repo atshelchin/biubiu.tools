@@ -1,0 +1,80 @@
+{
+	"category_seo": {
+		"title": "DAO Tools - Governance, Voting & Treasury Management | BiuBiu Tools",
+		"description": "Tools for creating and managing DAOs. Governance platforms, voting systems, treasury management, and contributor coordination.",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "What is a DAO?",
+				"answer": "A DAO (Decentralized Autonomous Organization) is an organization governed by smart contracts and token holder votes. Members propose and vote on decisions without central authority."
+			},
+			{
+				"question": "How do I participate in DAO governance?",
+				"answer": "Hold the DAO's governance token, then use platforms like Snapshot for off-chain voting or Tally for on-chain voting. Some DAOs require token delegation before voting."
+			},
+			{
+				"question": "What tools do DAOs use?",
+				"answer": "Snapshot for gasless voting, Tally for on-chain governance, Gnosis Safe for treasury management, Coordinape for contributor rewards, and Discourse/Commonwealth for discussions."
+			}
+		]
+	},
+	"tools": {
+		"snapshot": {
+			"description": "오프체인 무가스 거버넌스 투표"
+		},
+		"tally": {
+			"description": "온체인 거버넌스 및 DAO 관리"
+		},
+		"aragon": {
+			"description": "쉽게 DAO 구축 및 관리"
+		},
+		"colony": {
+			"description": "DAO 인프라 및 급여 관리"
+		},
+		"karma": {
+			"description": "DAO 기여자 평판"
+		},
+		"lenster": {
+			"description": "Lens 기반 탈중앙화 소셜"
+		},
+		"push": {
+			"description": "Web3 알림 및 채팅"
+		},
+		"daohaus": {
+			"description": "Moloch DAO 런처"
+		},
+		"charmverse": {
+			"description": "Web3 워크스페이스 플랫폼"
+		},
+		"wonderverse": {
+			"description": "DAO 작업 관리 플랫폼"
+		},
+		"coordinape": {
+			"description": "탈중앙화 보상"
+		},
+		"guild": {
+			"description": "토큰 게이트 커뮤니티"
+		},
+		"jokerace": {
+			"description": "온체인 투표 대회"
+		},
+		"commonwealth": {
+			"description": "거버넌스 토론 및 커뮤니티 포럼"
+		},
+		"jokedao": {
+			"description": "온체인 투표 대회 및 거버넌스 게임"
+		},
+		"llama": {
+			"description": "DAO 거버넌스 및 재무 운영"
+		},
+		"daolens": {
+			"description": "DAO 분석 및 인사이트"
+		},
+		"kleros": {
+			"description": "탈중앙화 분쟁 해결"
+		},
+		"dework": {
+			"description": "DAO 작업 및 기여 관리"
+		}
+	}
+}

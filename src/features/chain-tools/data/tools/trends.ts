@@ -29,7 +29,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'crunchbase-crypto',
 		name: 'Crunchbase Crypto',
-		descriptionKey: 'chain-tools.trends.tools.crunchbase_crypto.description',
+		descriptionKey: 'trends.tools.crunchbase_crypto.description',
 		url: 'https://www.crunchbase.com/hub/crypto-companies',
 		icon: DollarSign,
 		category: 'trends',
@@ -39,7 +39,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'cryptorank-funding',
 		name: 'CryptoRank Funding',
-		descriptionKey: 'chain-tools.trends.tools.cryptorank_funding.description',
+		descriptionKey: 'trends.tools.cryptorank_funding.description',
 		url: 'https://cryptorank.io/funding-rounds',
 		icon: DollarSign,
 		category: 'trends',
@@ -49,7 +49,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'rootdata-funding',
 		name: 'RootData',
-		descriptionKey: 'chain-tools.trends.tools.rootdata_funding.description',
+		descriptionKey: 'trends.tools.rootdata_funding.description',
 		url: 'https://www.rootdata.com',
 		icon: BarChart3,
 		category: 'trends',
@@ -59,7 +59,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'defilama-raises',
 		name: 'DefiLlama Raises',
-		descriptionKey: 'chain-tools.trends.tools.defilama_raises.description',
+		descriptionKey: 'trends.tools.defilama_raises.description',
 		url: 'https://defillama.com/raises',
 		icon: DollarSign,
 		category: 'trends',
@@ -69,7 +69,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'messari-funding',
 		name: 'Messari Fundraising',
-		descriptionKey: 'chain-tools.trends.tools.messari_funding.description',
+		descriptionKey: 'trends.tools.messari_funding.description',
 		url: 'https://messari.io/research/fundraising',
 		icon: FileText,
 		category: 'trends',
@@ -79,7 +79,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'dove-metrics',
 		name: 'Dove Metrics',
-		descriptionKey: 'chain-tools.trends.tools.dove_metrics.description',
+		descriptionKey: 'trends.tools.dove_metrics.description',
 		url: 'https://www.dovemetrics.com',
 		icon: BarChart3,
 		category: 'trends',
@@ -89,7 +89,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'galaxy-research',
 		name: 'Galaxy Research',
-		descriptionKey: 'chain-tools.trends.tools.galaxy_research.description',
+		descriptionKey: 'trends.tools.galaxy_research.description',
 		url: 'https://www.galaxy.com/research',
 		icon: FileText,
 		category: 'trends',
@@ -100,7 +100,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'kaito-ai',
 		name: 'Kaito AI',
-		descriptionKey: 'chain-tools.trends.tools.kaito_ai.description',
+		descriptionKey: 'trends.tools.kaito_ai.description',
 		url: 'https://kaito.ai',
 		icon: Flame,
 		category: 'trends',
@@ -110,7 +110,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'lunarcrush',
 		name: 'LunarCrush',
-		descriptionKey: 'chain-tools.trends.tools.lunarcrush.description',
+		descriptionKey: 'trends.tools.lunarcrush.description',
 		url: 'https://lunarcrush.com',
 		icon: Globe,
 		category: 'trends',
@@ -120,7 +120,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'santiment',
 		name: 'Santiment',
-		descriptionKey: 'chain-tools.trends.tools.santiment.description',
+		descriptionKey: 'trends.tools.santiment.description',
 		url: 'https://santiment.net',
 		icon: BarChart3,
 		category: 'trends',
@@ -130,7 +130,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'artemis-xyz',
 		name: 'Artemis',
-		descriptionKey: 'chain-tools.trends.tools.artemis_xyz.description',
+		descriptionKey: 'trends.tools.artemis_xyz.description',
 		url: 'https://artemis.xyz',
 		icon: TrendingUp,
 		category: 'trends',
@@ -140,7 +140,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'coinglass-trends',
 		name: 'CoinGlass',
-		descriptionKey: 'chain-tools.trends.tools.coinglass_trends.description',
+		descriptionKey: 'trends.tools.coinglass_trends.description',
 		url: 'https://www.coinglass.com',
 		icon: BarChart3,
 		category: 'trends',
@@ -150,7 +150,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'cryptoquant-trends',
 		name: 'CryptoQuant',
-		descriptionKey: 'chain-tools.trends.tools.cryptoquant_trends.description',
+		descriptionKey: 'trends.tools.cryptoquant_trends.description',
 		url: 'https://cryptoquant.com',
 		icon: BarChart3,
 		category: 'trends',
@@ -161,7 +161,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'ethereum-magicians',
 		name: 'Ethereum Magicians',
-		descriptionKey: 'chain-tools.trends.tools.ethereum_magicians.description',
+		descriptionKey: 'trends.tools.ethereum_magicians.description',
 		url: 'https://ethereum-magicians.org',
 		icon: MessageSquare,
 		category: 'trends',
@@ -171,7 +171,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'ethresear-ch',
 		name: 'ethresear.ch',
-		descriptionKey: 'chain-tools.trends.tools.ethresear_ch.description',
+		descriptionKey: 'trends.tools.ethresear_ch.description',
 		url: 'https://ethresear.ch',
 		icon: Lightbulb,
 		category: 'trends',
@@ -181,7 +181,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'github-trending-sol',
 		name: 'GitHub Trending (Solidity)',
-		descriptionKey: 'chain-tools.trends.tools.github_trending_sol.description',
+		descriptionKey: 'trends.tools.github_trending_sol.description',
 		url: 'https://github.com/trending/solidity',
 		icon: TrendingUp,
 		category: 'trends',
@@ -191,7 +191,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'paradigm-research',
 		name: 'Paradigm Research',
-		descriptionKey: 'chain-tools.trends.tools.paradigm_research.description',
+		descriptionKey: 'trends.tools.paradigm_research.description',
 		url: 'https://www.paradigm.xyz/writing',
 		icon: FileText,
 		category: 'trends',
@@ -201,7 +201,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'a16z-research',
 		name: 'a16z crypto Research',
-		descriptionKey: 'chain-tools.trends.tools.a16z_research.description',
+		descriptionKey: 'trends.tools.a16z_research.description',
 		url: 'https://a16zcrypto.com/research',
 		icon: FileText,
 		category: 'trends',
@@ -211,7 +211,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'flashbots-writings',
 		name: 'Flashbots Writings',
-		descriptionKey: 'chain-tools.trends.tools.flashbots_writings.description',
+		descriptionKey: 'trends.tools.flashbots_writings.description',
 		url: 'https://writings.flashbots.net',
 		icon: Lightbulb,
 		category: 'trends',
@@ -222,7 +222,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'modular-narrative',
 		name: 'Modular Stack',
-		descriptionKey: 'chain-tools.trends.tools.modular_narrative.description',
+		descriptionKey: 'trends.tools.modular_narrative.description',
 		url: 'https://celestia.org',
 		icon: Target,
 		category: 'trends',
@@ -232,7 +232,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'btcfi-narrative',
 		name: 'BTCFi Ecosystem',
-		descriptionKey: 'chain-tools.trends.tools.btcfi_narrative.description',
+		descriptionKey: 'trends.tools.btcfi_narrative.description',
 		url: 'https://stacks.co',
 		icon: Flame,
 		category: 'trends',
@@ -242,7 +242,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'intent-narrative',
 		name: 'Intents & Chain Abstraction',
-		descriptionKey: 'chain-tools.trends.tools.intent_narrative.description',
+		descriptionKey: 'trends.tools.intent_narrative.description',
 		url: 'https://www.anoma.net',
 		icon: Lightbulb,
 		category: 'trends',
@@ -252,7 +252,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'depin-narrative',
 		name: 'DePIN Ecosystem',
-		descriptionKey: 'chain-tools.trends.tools.depin_narrative.description',
+		descriptionKey: 'trends.tools.depin_narrative.description',
 		url: 'https://www.depindd.com',
 		icon: Globe,
 		category: 'trends',
@@ -262,7 +262,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'socialfi-narrative',
 		name: 'SocialFi Trends',
-		descriptionKey: 'chain-tools.trends.tools.socialfi_narrative.description',
+		descriptionKey: 'trends.tools.socialfi_narrative.description',
 		url: 'https://farcaster.xyz',
 		icon: Users,
 		category: 'trends',
@@ -273,7 +273,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'theblock-research',
 		name: 'The Block Research',
-		descriptionKey: 'chain-tools.trends.tools.theblock_research.description',
+		descriptionKey: 'trends.tools.theblock_research.description',
 		url: 'https://www.theblock.co/research',
 		icon: Newspaper,
 		category: 'trends',
@@ -283,7 +283,7 @@ export const trendsTools: ExternalTool[] = [
 	// {
 	// 	id: 'delphi-digital',
 	// 	name: 'Delphi Digital',
-	// 	descriptionKey: 'chain-tools.trends.tools.delphi_digital.description',
+	// 	descriptionKey: 'trends.tools.delphi_digital.description',
 	// 	url: 'https://delphidigital.io',
 	// 	icon: FileText,
 	// 	category: 'trends',
@@ -294,7 +294,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'bankless-hq',
 		name: 'Bankless',
-		descriptionKey: 'chain-tools.trends.tools.bankless_hq.description',
+		descriptionKey: 'trends.tools.bankless_hq.description',
 		url: 'https://www.bankless.com',
 		icon: Newspaper,
 		category: 'trends',
@@ -304,7 +304,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'unchained-crypto',
 		name: 'Unchained',
-		descriptionKey: 'chain-tools.trends.tools.unchained_crypto.description',
+		descriptionKey: 'trends.tools.unchained_crypto.description',
 		url: 'https://unchainedcrypto.com',
 		icon: Newspaper,
 		category: 'trends',
@@ -315,7 +315,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'ethglobal-events',
 		name: 'ETHGlobal',
-		descriptionKey: 'chain-tools.trends.tools.ethglobal_events.description',
+		descriptionKey: 'trends.tools.ethglobal_events.description',
 		url: 'https://ethglobal.com',
 		icon: Calendar,
 		category: 'trends',
@@ -325,7 +325,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'devcon-ethereum',
 		name: 'Devcon',
-		descriptionKey: 'chain-tools.trends.tools.devcon_ethereum.description',
+		descriptionKey: 'trends.tools.devcon_ethereum.description',
 		url: 'https://devcon.org',
 		icon: Calendar,
 		category: 'trends',
@@ -335,7 +335,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'consensus-coindesk',
 		name: 'Consensus',
-		descriptionKey: 'chain-tools.trends.tools.consensus_coindesk.description',
+		descriptionKey: 'trends.tools.consensus_coindesk.description',
 		url: 'https://consensus.coindesk.com',
 		icon: Calendar,
 		category: 'trends',
@@ -345,7 +345,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'token2049',
 		name: 'TOKEN2049',
-		descriptionKey: 'chain-tools.trends.tools.token2049.description',
+		descriptionKey: 'trends.tools.token2049.description',
 		url: 'https://token2049.com',
 		icon: Calendar,
 		category: 'trends',
@@ -356,7 +356,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'developerreport',
 		name: 'Electric Capital Dev Report',
-		descriptionKey: 'chain-tools.trends.tools.developerreport.description',
+		descriptionKey: 'trends.tools.developerreport.description',
 		url: 'https://www.developerreport.com',
 		icon: BarChart3,
 		category: 'trends',
@@ -366,7 +366,7 @@ export const trendsTools: ExternalTool[] = [
 	{
 		id: 'tokenterminal-dev',
 		name: 'Token Terminal',
-		descriptionKey: 'chain-tools.trends.tools.tokenterminal_dev.description',
+		descriptionKey: 'trends.tools.tokenterminal_dev.description',
 		url: 'https://tokenterminal.com',
 		icon: BarChart3,
 		category: 'trends',

@@ -1,0 +1,82 @@
+{
+	"category_seo": {
+		"title": "Sosial Web3 - Jaringan Sosial & Komunitas Terdesentralisasi | BiuBiu Tools",
+		"description": "Platform sosial terdesentralisasi dan alat komunitas. Bangun dan libatkan dengan komunitas Web3 di Farcaster, Lens, dan lainnya.",
+		"faqs": [
+			{
+				"question": "Apa itu platform sosial Web3?",
+				"answer": "Platform sosial Web3 adalah alternatif terdesentralisasi untuk Twitter/Facebook. Anda memiliki data dan social graph Anda. Yang populer termasuk Farcaster, Lens Protocol, dan DeSo."
+			},
+			{
+				"question": "Apa itu Farcaster?",
+				"answer": "Farcaster adalah protokol sosial terdesentralisasi mirip Twitter. Warpcast adalah klien utama. Ini populer di kalangan developer kripto dan memiliki budaya komunitas yang kuat."
+			},
+			{
+				"question": "Bagaimana komunitas Web3 berkoordinasi?",
+				"answer": "Discord dan Telegram untuk chat real-time, Farcaster/Lens untuk sosial, Mirror untuk konten long-form, Snapshot untuk governance, dan Guild.xyz untuk akses token-gated."
+			}
+		]
+	},
+	"tools": {
+		"farcaster": {
+			"description": "Protokol sosial terdesentralisasi"
+		},
+		"xmtp": {
+			"description": "Protokol messaging wallet-ke-wallet yang aman"
+		},
+		"warpcast": {
+			"description": "Klien utama untuk jaringan sosial Farcaster"
+		},
+		"hey": {
+			"description": "Aplikasi sosial terdesentralisasi di Lens Protocol"
+		},
+		"orb": {
+			"description": "Klien Lens Protocol yang mengutamakan mobile"
+		},
+		"cyberconnect": {
+			"description": "Protokol social graph dengan identitas Web3"
+		},
+		"mirror": {
+			"description": "Platform publishing dan crowdfunding Web3"
+		},
+		"paragraph": {
+			"description": "Newsletter dan publishing native Web3"
+		},
+		"deso": {
+			"description": "Blockchain Layer 1 yang dibangun untuk aplikasi sosial"
+		},
+		"phaver": {
+			"description": "Aplikasi sosial Web3 cross-platform"
+		},
+		"drakula": {
+			"description": "Platform video bentuk pendek di Farcaster"
+		},
+		"link3": {
+			"description": "Acara dan kredensial Web3 oleh CyberConnect"
+		},
+		"buttrfly": {
+			"description": "Agregator sosial cross-platform untuk Lens"
+		},
+		"tape": {
+			"description": "Platform video terdesentralisasi di Lens"
+		},
+		"unlonely": {
+			"description": "Platform komunitas live streaming Web3"
+		},
+		"supercast": {
+			"description": "Klien Farcaster premium dengan fitur lanjutan"
+		},
+		"neynar": {
+			"description": "Infrastruktur dan API untuk developer Farcaster"
+		},
+		"airstack": {
+			"description": "API data sosial Web3 untuk social graph"
+		},
+		"huddle01": {
+			"description": "Platform video conference terdesentralisasi"
+		},
+		"moxie": {
+			"description": "Protokol ekonomi sosial untuk Farcaster"
+		}
+	}
+}

@@ -1,0 +1,140 @@
+{
+	"category_seo": {
+		"title": "Công Cụ Phân Tích Blockchain - Dữ Liệu On-Chain & Insights | BiuBiu Tools",
+		"description": "Khám phá các nền tảng phân tích blockchain hàng đầu cho dữ liệu on-chain, theo dõi ví và thông tin thị trường. Các công cụ như Dune, Nansen và Arkham.",
+		"keywords": "blockchain analytics, on-chain data, dune analytics, nansen, arkham, wallet tracking",
+		"faqs": [
+			{
+				"question": "Phân tích on-chain là gì?",
+				"answer": "Phân tích on-chain liên quan đến việc phân tích dữ liệu giao dịch blockchain để có được thông tin chi tiết về hành vi ví, luồng vốn, việc sử dụng giao thức và xu hướng thị trường. Nó giúp trader và nhà nghiên cứu đưa ra quyết định sáng suốt."
+			},
+			{
+				"question": "Theo dõi smart money là gì?",
+				"answer": "Theo dõi smart money giám sát ví của các trader thành công, whale và tổ chức để hiểu mô hình giao dịch của họ và có khả năng theo dõi chiến lược của họ."
+			},
+			{
+				"question": "Tôi nên sử dụng công cụ phân tích nào?",
+				"answer": "Dune rất tốt cho truy vấn SQL tùy chỉnh, Nansen cho theo dõi smart money, Arkham cho gắn nhãn thực thể và DefiLlama cho dữ liệu TVL. Chọn dựa trên nhu cầu cụ thể của bạn."
+			}
+		]
+	},
+	"tools": {
+		"dune": {
+			"description": "Phân tích blockchain với truy vấn SQL tùy chỉnh"
+		},
+		"defillama": {
+			"description": "Bộ tổng hợp TVL DeFi và phân tích giao thức"
+		},
+		"nansen": {
+			"description": "Phân tích on-chain với theo dõi smart money"
+		},
+		"arkham": {
+			"description": "Nền tảng thông tin blockchain"
+		},
+		"ultrasound": {
+			"description": "Theo dõi cung và đốt ETH"
+		},
+		"messari": {
+			"description": "Nền tảng nghiên cứu và dữ liệu crypto"
+		},
+		"coingecko": {
+			"description": "Giá tiền điện tử và dữ liệu thị trường"
+		},
+		"coinmarketcap": {
+			"description": "Xếp hạng vốn hóa thị trường crypto"
+		},
+		"glassnode": {
+			"description": "Thông tin thị trường on-chain"
+		},
+		"dexscreener": {
+			"description": "Biểu đồ cặp DEX theo thời gian thực"
+		},
+		"defined": {
+			"description": "Phân tích DEX đa chuỗi"
+		},
+		"tokenterminal": {
+			"description": "Tài chính giao thức và chỉ số doanh thu"
+		},
+		"artemis": {
+			"description": "Phân tích và nghiên cứu crypto cơ bản"
+		},
+		"growthepie": {
+			"description": "Phân tích và so sánh L2"
+		},
+		"dappradar": {
+			"description": "Xếp hạng và theo dõi DApp"
+		},
+		"ethburned": {
+			"description": "Thống kê đốt Ethereum"
+		},
+		"parsec": {
+			"description": "Bảng điều khiển phân tích DeFi"
+		},
+		"eigenexplorer": {
+			"description": "Trình khám phá phân tích EigenLayer"
+		},
+		"the_graph": {
+			"description": "Giao thức phi tập trung để lập chỉ mục dữ liệu blockchain"
+		},
+		"flipside": {
+			"description": "Phân tích blockchain với truy vấn SQL"
+		},
+		"footprint": {
+			"description": "Nền tảng phân tích dữ liệu blockchain không cần code"
+		},
+		"cryptofees": {
+			"description": "Phân tích phí và doanh thu giao thức"
+		},
+		"openbb": {
+			"description": "Terminal nghiên cứu đầu tư mã nguồn mở"
+		},
+		"watchers": {
+			"description": "Theo dõi và cảnh báo ví cá voi"
+		},
+		"cielo": {
+			"description": "Theo dõi ví xã hội và nguồn cấp giao dịch"
+		},
+		"space_and_time": {
+			"description": "Kho dữ liệu có thể kiểm chứng với bằng chứng ZK"
+		},
+		"allium": {
+			"description": "Nền tảng dữ liệu blockchain doanh nghiệp"
+		},
+		"sentio": {
+			"description": "Quan sát và giám sát đa chuỗi"
+		},
+		"defillama_yields": {
+			"description": "So sánh yield farming đa chuỗi"
+		},
+		"defilabs": {
+			"description": "Theo dõi cá voi và smart money"
+		},
+		"chainanalytics": {
+			"description": "Bảng điều khiển dữ liệu blockchain tùy chỉnh"
+		},
+		"cookie3": {
+			"description": "Nền tảng phân tích dữ liệu Web3"
+		},
+		"chainbeat": {
+			"description": "Phân tích on-chain theo thời gian thực"
+		},
+		"bitquery": {
+			"description": "API dữ liệu blockchain với GraphQL"
+		},
+		"intotheblock": {
+			"description": "Phân tích on-chain và chỉ số thị trường"
+		},
+		"laevitas": {
+			"description": "Phân tích thị trường phái sinh crypto"
+		},
+		"kaiko": {
+			"description": "Dữ liệu thị trường crypto cấp tổ chức"
+		},
+		"amberdata": {
+			"description": "Nền tảng dữ liệu tài sản kỹ thuật số"
+		},
+		"blockpour": {
+			"description": "Phân tích và dữ liệu blockchain"
+		}
+	}
+}

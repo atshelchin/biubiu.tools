@@ -1,0 +1,59 @@
+{
+	"category_seo": {
+		"title": "実世界資産（RWA）- トークン化された資産 | BiuBiu Tools",
+		"description": "トークン化された実世界資産を探索。トークン化された国債、不動産、商品、ブロックチェーン上の伝統的金融。",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "RWAとは何ですか？",
+				"answer": "RWA（実世界資産）は、米国債、不動産、商品などの伝統的資産がブロックチェーン上でトークン化されたものです。伝統的金融の利回りをDeFiにもたらします。"
+			},
+			{
+				"question": "RWAがなぜ重要なのですか？",
+				"answer": "RWAは実体経済からの安定した利回り（国債金利）、暗号資産のボラティリティからの分散、伝統的金融とDeFiの架け橋を提供します。MakerDAOは数十億ドルのRWAを保有しています。"
+			},
+			{
+				"question": "どのようなRWAプラットフォームが存在しますか？",
+				"answer": "トークン化された国債にはOndo Finance、不動産にはRealT、資産ファイナンスにはCentrifugeがあります。主要なDeFiプロトコルは利回りのためにRWA戦略を統合しています。"
+			}
+		]
+	},
+	"tools": {
+		"goldfinch": {
+			"description": "新興市場の実世界信用向け暗号資産レンディング"
+		},
+		"truefi": {
+			"description": "機関投資家借入者向け無担保レンディング"
+		},
+		"centrifuge": {
+			"description": "請求書と不動産をオンチェーンにもたらす実世界資産ファイナンシングプロトコル"
+		},
+		"clearpool": {
+			"description": "無担保機関レンディング向け分散型資本市場"
+		},
+		"matrixdock": {
+			"description": "STBTステーブルコイン付きトークン化国債"
+		},
+		"openeden": {
+			"description": "リアルタイムNAVと24/7決済付きトークン化国債"
+		},
+		"realt": {
+			"description": "分割所有権付きトークン化不動産投資"
+		},
+		"lofty": {
+			"description": "Algorandブロックチェーン上の分割不動産投資"
+		},
+		"propy": {
+			"description": "ブロックチェーンベース不動産取引と所有権"
+		},
+		"securitize": {
+			"description": "セキュリティトークン発行とライフサイクル管理プラットフォーム"
+		},
+		"tokeny": {
+			"description": "コンプライアント証券向けエンタープライズトークン化プラットフォーム"
+		},
+		"polymesh": {
+			"description": "規制されたセキュリティトークン向け専用ブロックチェーン"
+		}
+	}
+}

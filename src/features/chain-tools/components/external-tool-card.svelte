@@ -1,26 +1,36 @@
 <script lang="ts">
-	import { ExternalLink } from '@lucide/svelte';
+	import { ExternalLink, ArrowRight } from '@lucide/svelte';
 	import { useI18n, type TranslationKeys } from '@shelchin/i18n';
-	import type { ExternalTool } from '../types';
+	import type { ExternalTool, SerializableExternalTool } from '../types';
 	import { getCategoryById } from '../data/categories';
+	import { hasDetailPage } from '../data/tool-details';
+	import { getToolById } from '../data/tools';
 
 	interface Props {
-		tool: ExternalTool;
+		tool: ExternalTool | SerializableExternalTool;
 		index: number;
 	}
 
 	let { tool, index }: Props = $props();
 
 	const i18n = useI18n();
-	const Icon = tool.icon;
+
+	// Get icon - either from tool directly or lookup from registry
+	const Icon = $derived('icon' in tool ? tool.icon : getToolById(tool.id)?.icon);
 	const category = $derived(getCategoryById(tool.category));
+
+	// Check if this tool has a detail page
+	const hasDetail = $derived(hasDetailPage(tool.id));
+	const href = $derived(hasDetail ? `/apps/chain-tools/tool/${tool.id}` : tool.url);
+	const isExternal = $derived(!hasDetail);
 </script>
 
 <a
-	href={tool.url}
-	target="_blank"
-	rel="noopener noreferrer"
+	{href}
+	target={isExternal ? '_blank' : undefined}
+	rel={isExternal ? 'noopener noreferrer' : undefined}
 	class="tool-card"
+	class:has-detail={hasDetail}
 	style="--index: {index}; --tool-color: {tool.color}"
 >
 	<!-- Card background -->
@@ -31,7 +41,9 @@
 	<div class="icon-wrapper">
 		<div class="icon-glow"></div>
 		<div class="icon-box">
-			<Icon class="tool-icon" />
+			{#if Icon}
+				<Icon class="tool-icon" />
+			{/if}
 		</div>
 	</div>
 
@@ -61,8 +73,17 @@
 			</span>
 		{/if}
 		<span class="visit-link">
-			<span>{i18n.t('chain-tools.visit')}</span>
-			<ExternalLink class="external-icon" />
+			{#if hasDetail}
+				<span
+					>{i18n.t('chain-tools.learn_more' as keyof TranslationKeys, {
+						defaultValue: 'Learn more'
+					})}</span
+				>
+				<ArrowRight class="arrow-icon" />
+			{:else}
+				<span>{i18n.t('chain-tools.visit')}</span>
+				<ExternalLink class="external-icon" />
+			{/if}
 		</span>
 	</div>
 </a>
@@ -292,6 +313,16 @@
 
 	.tool-card:hover :global(.external-icon) {
 		transform: translate(2px, -2px);
+	}
+
+	:global(.arrow-icon) {
+		width: 14px;
+		height: 14px;
+		transition: transform 0.2s ease;
+	}
+
+	.tool-card:hover :global(.arrow-icon) {
+		transform: translateX(3px);
 	}
 
 	@media (max-width: 768px) {

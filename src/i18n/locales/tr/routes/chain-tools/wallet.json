@@ -1,0 +1,119 @@
+{
+	"category_seo": {
+		"title": "Kripto Cüzdanlar - Donanım, Yazılım ve Çoklu Zincir | BiuBiu Tools",
+		"description": "Güvenlik ve kolaylık için en iyi kripto cüzdanları karşılaştırın. Tüm blokzincirler için donanım cüzdanları, tarayıcı uzantıları ve mobil cüzdanlar.",
+		"keywords": "kripto cüzdanı, donanım cüzdanı, metamask, ledger, trezor, çoklu zincir cüzdanı",
+		"faqs": [
+			{
+				"question": "Kripto cüzdanı nedir?",
+				"answer": "Kripto cüzdanı, özel anahtarlarınızı saklayan ve kripto paraları göndermenize, almanıza ve yönetmenize olanak tanıyan yazılım veya donanımdır. Aslında kripto saklamaz - varlıklar blokzincirde kalır."
+			},
+			{
+				"question": "Donanım cüzdanı mı yoksa yazılım cüzdanı mı?",
+				"answer": "Donanım cüzdanları (Ledger, Trezor) anahtarları maksimum güvenlik için çevrimdışı saklar, büyük tutarlar için idealdir. Yazılım cüzdanları (MetaMask, Rainbow) günlük kullanım için daha kullanışlıdır ancak internete bağlıdır."
+			},
+			{
+				"question": "Cüzdanımı nasıl güvende tutarım?",
+				"answer": "Tohum kelime dizinizi asla paylaşmayın, büyük miktarlar için donanım cüzdanları kullanın, mümkün olan yerlerde 2FA'yı etkinleştirin, imzalamadan önce işlem detaylarını doğrulayın ve kimlik avı sitelerine karşı dikkatli olun."
+			}
+		]
+	},
+	"tools": {
+		"debank": {
+			"description": "Çoklu zincir portföy takipçisi ve sosyal platform"
+		},
+		"ambire": {
+			"description": "E-posta girişi ve gazsız işlemlerle akıllı cüzdan"
+		},
+		"argent": {
+			"description": "Kurtarma özellikli akıllı cüzdan"
+		},
+		"biconomy": {
+			"description": "Hesap soyutlama ve gazsız işlem SDK"
+		},
+		"coolwallet": {
+			"description": "Mobil donanım cüzdanı"
+		},
+		"dynamic": {
+			"description": "Çoklu cüzdan kimlik doğrulama"
+		},
+		"frame": {
+			"description": "Gizlilik odaklı masaüstü cüzdan"
+		},
+		"imtoken": {
+			"description": "Çoklu zincir mobil cüzdan"
+		},
+		"ledger": {
+			"description": "Donanım cüzdan güvenliği"
+		},
+		"metamask": {
+			"description": "En popüler Web3 cüzdan"
+		},
+		"multis": {
+			"description": "Kurumsal kripto cüzdan"
+		},
+		"mycrypto": {
+			"description": "Ethereum cüzdan arayüzü"
+		},
+		"myetherwallet": {
+			"description": "Ethereum cüzdan arayüzü"
+		},
+		"mytonwallet": {
+			"description": "TON blokzincir cüzdanı"
+		},
+		"obvious": {
+			"description": "Hesap soyutlama ile akıllı cüzdan"
+		},
+		"pimlico": {
+			"description": "ERC-4337 toplayıcı ve ödeme yöneticisi altyapısı"
+		},
+		"privy": {
+			"description": "Gömülü cüzdan çözümü"
+		},
+		"rabby": {
+			"description": "Çoklu zincir tarayıcı cüzdanı"
+		},
+		"rainbow": {
+			"description": "Güzel Ethereum cüzdanı"
+		},
+		"safe": {
+			"description": "Çoklu imzalı akıllı cüzdan"
+		},
+		"sequence": {
+			"description": "Oyun için akıllı cüzdan"
+		},
+		"solflare": {
+			"description": "Solana cüzdanı"
+		},
+		"squads": {
+			"description": "Solana çoklu imza cüzdanı"
+		},
+		"stackup": {
+			"description": "Hesap soyutlama toplayıcısı ve SDK"
+		},
+		"subwallet": {
+			"description": "Polkadot ekosistem cüzdanı"
+		},
+		"tokenpocket": {
+			"description": "Çoklu zincir mobil cüzdan"
+		},
+		"tonhub": {
+			"description": "TON blokzincir cüzdanı"
+		},
+		"trezor": {
+			"description": "Donanım cüzdan öncüsü"
+		},
+		"tronlink": {
+			"description": "Tron blokzincir cüzdanı"
+		},
+		"zapper": {
+			"description": "DeFi portföy kontrol paneli"
+		},
+		"zerion": {
+			"description": "DeFi portföyü ve cüzdan"
+		},
+		"zerodev": {
+			"description": "Kernel ile modüler akıllı cüzdan SDK"
+		}
+	}
+}

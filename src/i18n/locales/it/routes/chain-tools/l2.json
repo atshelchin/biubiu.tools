@@ -1,0 +1,49 @@
+{
+	"category_seo": {
+		"title": "Soluzioni Layer 2 - Reti di Scaling Ethereum | BiuBiu Tools",
+		"description": "Esplora le soluzioni di scaling Layer 2 per Ethereum. Arbitrum, Optimism, Base, zkSync e altri rollup con commissioni più basse e transazioni più veloci.",
+		"faqs": [
+			{
+				"question": "Cos'è Layer 2?",
+				"answer": "I Layer 2 sono soluzioni di scaling che elaborano transazioni fuori dalla chain Ethereum principale (L1) ereditandone la sicurezza. Offrono commissioni più basse e transazioni più veloci. I tipi includono Optimistic Rollup e ZK Rollup."
+			},
+			{
+				"question": "Qual è la differenza tra Optimistic e ZK Rollups?",
+				"answer": "Gli Optimistic Rollup (Arbitrum, Optimism) assumono che le transazioni siano valide e usano fraud proof. I ZK Rollup (zkSync, Starknet) usano prove crittografiche per finalità istantanea ma sono più complessi da costruire."
+			},
+			{
+				"question": "Quale L2 dovrei usare?",
+				"answer": "Arbitrum e Optimism hanno la maggior attività DeFi. Base (Coinbase) sta crescendo velocemente. zkSync e Starknet offrono tecnologia ZK. Scegli in base alle dApp che vuoi usare e alle considerazioni sulle commissioni."
+			}
+		]
+	},
+	"tools": {
+		"l2beat": {
+			"description": "Analisi rischio e TVL Layer 2"
+		},
+		"optimism": {
+			"description": "L2 Ethereum alimentato da OP Stack con visione Superchain"
+		},
+		"base": {
+			"description": "L2 di Coinbase costruito su OP Stack"
+		},
+		"starknet": {
+			"description": "ZK rollup usando Cairo per validity proof"
+		},
+		"scroll": {
+			"description": "Rollup zkEVM equivalente-EVM"
+		},
+		"linea": {
+			"description": "Soluzione L2 zkEVM di ConsenSys"
+		},
+		"mode": {
+			"description": "L2 OP Stack con focus DeFi"
+		},
+		"mantle": {
+			"description": "L2 modulare con layer disponibilità dati"
+		},
+		"superchain": {
+			"description": "Rete di L2 interoperabili OP Stack"
+		}
+	}
+}

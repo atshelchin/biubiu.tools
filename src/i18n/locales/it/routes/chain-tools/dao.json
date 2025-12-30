@@ -1,0 +1,80 @@
+{
+	"category_seo": {
+		"title": "Strumenti DAO - Governance, Votazione e Gestione Treasury | BiuBiu Tools",
+		"description": "Strumenti per creare e gestire DAO. Piattaforme di governance, sistemi di votazione, gestione treasury e coordinamento contributori.",
+		"keywords": "strumenti dao, governance, snapshot, tally, gnosis safe, votazione",
+		"faqs": [
+			{
+				"question": "Cos'è un DAO?",
+				"answer": "Un DAO (Decentralized Autonomous Organization) è un'organizzazione governata da smart contract e voti dei possessori di token. I membri propongono e votano sulle decisioni senza autorità centrale."
+			},
+			{
+				"question": "Come partecipo alla governance DAO?",
+				"answer": "Possiedi il token di governance del DAO, poi usa piattaforme come Snapshot per votazioni off-chain o Tally per votazioni on-chain. Alcuni DAO richiedono la delega dei token prima del voto."
+			},
+			{
+				"question": "Quali strumenti usano i DAO?",
+				"answer": "Snapshot per votazioni senza gas, Tally per governance on-chain, Gnosis Safe per gestione treasury, Coordinape per ricompense contributori e Discourse/Commonwealth per discussioni."
+			}
+		]
+	},
+	"tools": {
+		"snapshot": {
+			"description": "Votazione governance off-chain senza gas"
+		},
+		"tally": {
+			"description": "Governance on-chain e gestione DAO"
+		},
+		"aragon": {
+			"description": "Costruisci e gestisci DAO facilmente"
+		},
+		"colony": {
+			"description": "Infrastruttura DAO e gestione stipendi"
+		},
+		"karma": {
+			"description": "Reputazione contributori DAO"
+		},
+		"lenster": {
+			"description": "Social decentralizzato su Lens"
+		},
+		"push": {
+			"description": "Notifiche e chat Web3"
+		},
+		"daohaus": {
+			"description": "Launcher DAO Moloch"
+		},
+		"charmverse": {
+			"description": "Piattaforma workspace Web3"
+		},
+		"wonderverse": {
+			"description": "Gestione task DAO"
+		},
+		"coordinape": {
+			"description": "Compensazione decentralizzata"
+		},
+		"guild": {
+			"description": "Community token-gated"
+		},
+		"jokerace": {
+			"description": "Contest votazione on-chain"
+		},
+		"commonwealth": {
+			"description": "Discussione governance e forum community"
+		},
+		"jokedao": {
+			"description": "Contest votazione on-chain e giochi governance"
+		},
+		"llama": {
+			"description": "Governance DAO e operazioni treasury"
+		},
+		"daolens": {
+			"description": "Analisi e insight DAO"
+		},
+		"kleros": {
+			"description": "Risoluzione dispute decentralizzata"
+		},
+		"dework": {
+			"description": "Gestione task e bounty DAO"
+		}
+	}
+}

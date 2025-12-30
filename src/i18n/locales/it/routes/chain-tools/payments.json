@@ -1,0 +1,91 @@
+{
+	"category_seo": {
+		"title": "Pagamenti Crypto - Elaborazione Pagamenti e Servizi Carta | BiuBiu Tools",
+		"description": "Soluzioni di pagamento crypto per aziende e privati. Processori di pagamento, carte crypto e servizi per commercianti.",
+		"faqs": [
+			{
+				"question": "Come funzionano i pagamenti crypto?",
+				"answer": "I pagamenti crypto trasferiscono valore direttamente su blockchain. Per i commercianti, i processori di pagamento come BitPay convertono crypto in fiat. Le carte crypto come Coinbase Card ti permettono di spendere crypto ovunque."
+			},
+			{
+				"question": "Quali carte crypto sono le migliori?",
+				"answer": "Coinbase Card e Crypto.com Card sono ampiamente disponibili. Gnosis Pay offre integrazione DeFi. Confronta i tassi di cashback, i paesi supportati e le strutture delle commissioni prima di scegliere."
+			},
+			{
+				"question": "Le aziende possono accettare pagamenti crypto?",
+				"answer": "Sì, usando processori di pagamento come BitPay, Coinbase Commerce o pagamenti diretti su wallet. Considera la volatilità, le implicazioni fiscali e se convertire in fiat immediatamente."
+			}
+		]
+	},
+	"tools": {
+		"moonpay": {
+			"description": "On-ramp e off-ramp fiat per crypto"
+		},
+		"transak": {
+			"description": "Infrastruttura pagamenti fiat-to-crypto"
+		},
+		"ramp": {
+			"description": "SDK on-ramp fiat non custodiale"
+		},
+		"onmeta": {
+			"description": "On-ramp fiat per utenti indiani"
+		},
+		"superfluid": {
+			"description": "Streaming token in tempo reale per pagamenti"
+		},
+		"sablier": {
+			"description": "Streaming token per vesting e stipendi"
+		},
+		"coinshift": {
+			"description": "Gestione treasury e operazioni multi-firma"
+		},
+		"spritz": {
+			"description": "Paga bollette con crypto via ACH"
+		},
+		"bitpay": {
+			"description": "Elaborazione pagamenti crypto per commercianti"
+		},
+		"holyheld": {
+			"description": "Carta debito DeFi con funzionalità rendimento"
+		},
+		"fusepay": {
+			"description": "Carta spesa crypto su rete Fuse"
+		},
+		"loopcrypto": {
+			"description": "Fatturazione e abbonamenti crypto ricorrenti"
+		},
+		"reveel": {
+			"description": "Condivisione revenue automatizzata e split royalty"
+		},
+		"splits": {
+			"description": "Protocollo splitting pagamenti on-chain"
+		},
+		"nowpayments": {
+			"description": "Gateway pagamenti crypto"
+		},
+		"monerium": {
+			"description": "Euro elettronici on-chain"
+		},
+		"wyre": {
+			"description": "On-ramp e pagamenti fiat"
+		},
+		"banxa": {
+			"description": "Gateway on-ramp fiat"
+		},
+		"simplex": {
+			"description": "Processore pagamenti fiat"
+		},
+		"sardine": {
+			"description": "Prevenzione frodi e pagamenti"
+		},
+		"coinflow": {
+			"description": "Checkout crypto unificato"
+		},
+		"llamapay": {
+			"description": "Streaming pagamenti automatizzato"
+		},
+		"parcel": {
+			"description": "Gestione masse salariali crypto"
+		}
+	}
+}

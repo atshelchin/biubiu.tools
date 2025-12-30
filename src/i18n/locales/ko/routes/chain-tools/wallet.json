@@ -1,0 +1,119 @@
+{
+	"category_seo": {
+		"title": "Crypto Wallets - Hardware, Software & Multi-Chain | BiuBiu Tools",
+		"description": "Compare the best crypto wallets for security and convenience. Hardware wallets, browser extensions, and mobile wallets for all blockchains.",
+		"keywords": "crypto wallet, hardware wallet, metamask, ledger, trezor, multi-chain wallet",
+		"faqs": [
+			{
+				"question": "What is a crypto wallet?",
+				"answer": "A crypto wallet is software or hardware that stores your private keys and allows you to send, receive, and manage cryptocurrencies. It doesn't actually store crypto - the assets remain on the blockchain."
+			},
+			{
+				"question": "Hardware wallet vs software wallet?",
+				"answer": "Hardware wallets (Ledger, Trezor) store keys offline for maximum security, ideal for large holdings. Software wallets (MetaMask, Rainbow) are more convenient for daily use but are connected to the internet."
+			},
+			{
+				"question": "How do I keep my wallet safe?",
+				"answer": "Never share your seed phrase, use hardware wallets for large amounts, enable 2FA where possible, verify transaction details before signing, and be cautious of phishing sites."
+			}
+		]
+	},
+	"tools": {
+		"debank": {
+			"description": "멀티체인 포트폴리오 추적 및 소셜 플랫폼"
+		},
+		"rabby": {
+			"description": "멀티체인 브라우저 지갑"
+		},
+		"rainbow": {
+			"description": "아름다운 이더리움 지갑"
+		},
+		"metamask": {
+			"description": "가장 인기 있는 Web3 지갑"
+		},
+		"frame": {
+			"description": "프라이버시 중심 데스크톱 지갑"
+		},
+		"zerion": {
+			"description": "DeFi 포트폴리오 및 지갑"
+		},
+		"safe": {
+			"description": "다중 서명 스마트 지갑"
+		},
+		"zapper": {
+			"description": "DeFi 포트폴리오 대시보드"
+		},
+		"argent": {
+			"description": "복구 기능을 갖춘 스마트 지갑"
+		},
+		"sequence": {
+			"description": "게이밍용 스마트 지갑"
+		},
+		"ledger": {
+			"description": "하드웨어 지갑 보안"
+		},
+		"trezor": {
+			"description": "하드웨어 지갑 선구자"
+		},
+		"privy": {
+			"description": "임베디드 지갑 솔루션"
+		},
+		"dynamic": {
+			"description": "멀티 지갑 인증"
+		},
+		"ambire": {
+			"description": "이메일 로그인 및 무가스 거래를 갖춘 스마트 지갑"
+		},
+		"obvious": {
+			"description": "계정 추상화를 갖춘 스마트 지갑"
+		},
+		"pimlico": {
+			"description": "ERC-4337 번들러 및 페이마스터 인프라"
+		},
+		"stackup": {
+			"description": "계정 추상화 번들러 및 SDK"
+		},
+		"biconomy": {
+			"description": "계정 추상화 및 무가스 거래 SDK"
+		},
+		"zerodev": {
+			"description": "Kernel을 갖춘 모듈식 스마트 지갑 SDK"
+		},
+		"solflare": {
+			"description": "Solana 브라우저 지갑"
+		},
+		"subwallet": {
+			"description": "Polkadot 생태계 Web3 지갑"
+		},
+		"tonhub": {
+			"description": "TON 블록체인 지갑"
+		},
+		"mytonwallet": {
+			"description": "TON용 Web3 지갑"
+		},
+		"coolwallet": {
+			"description": "모바일 하드웨어 지갑"
+		},
+		"imtoken": {
+			"description": "멀티체인 모바일 지갑"
+		},
+		"tokenpocket": {
+			"description": "멀티체인 Web3 지갑"
+		},
+		"myetherwallet": {
+			"description": "이더리움 Web3 지갑"
+		},
+		"mycrypto": {
+			"description": "이더리움 지갑 및 인터페이스"
+		},
+		"tronlink": {
+			"description": "TRON 블록체인 지갑"
+		},
+		"multis": {
+			"description": "기업용 다중 서명 지갑"
+		},
+		"squads": {
+			"description": "Solana 다중 서명 지갑"
+		}
+	}
+}

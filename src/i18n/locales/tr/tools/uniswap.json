@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "Uniswap - En Büyük Merkeziyetsiz Borsa | DeFi Araç İncelemesi",
+		"description": "Dünyanın en büyük merkeziyetsiz borsası Uniswap'ı keşfedin. Otomatik piyasa yapıcı, likidite havuzları, çoklu zincir desteği ve güvenli token takası hakkında bilgi edinin.",
+		"keywords": "Uniswap, DEX, merkeziyetsiz borsa, token takası, AMM, likidite havuzu, DeFi, Ethereum, kripto ticaret"
+	},
+	"overview": "Uniswap, dünyanın en büyük merkeziyetsiz borsasıdır (DEX) ve merkeziyetsiz ticaretin standardı haline gelen otomatik piyasa yapıcı (AMM) modelinin öncüsüdür. Kasım 2018'de eski bir makine mühendisi olan Hayden Adams tarafından başlatılan Uniswap, geleneksel emir defterleri ve merkezi aracılara olan ihtiyacı ortadan kaldırarak kullanıcıların kripto para ticareti yapma şeklini devrimleştirdi.\n\nProtokol, Ethereum ve birden fazla Katman 2 ağı üzerindeki akıllı sözleşmeler aracılığıyla çalışır ve herkesin hesap oluşturmadan veya fonlarını üçüncü bir tarafa emanet etmeden anında token takası yapmasını sağlar. 2024 itibarıyla Uniswap, 2 trilyon doların üzerinde kümülatif işlem hacmi işlemiş ve 5 milyar doların üzerinde Kilitli Toplam Değer (TVL) sürdürmektedir.\n\nUniswap'ın izinsiz tasarımı, herhangi bir ERC-20 tokenının merkezi bir ekibin onayı olmadan listelenmesini ve ticaretini mümkün kılar. Bu açıklık, onu yeni tokenleri keşfetmek ve ticaret yapmak için başvurulan platform haline getirirken, savaşta test edilmiş akıllı sözleşmeleri dünya çapında milyonlarca kullanıcının güvenini kazanan güvenlik sağlar.",
+	"features": {
+		"1": {
+			"title": "Otomatik Piyasa Yapıcı (AMM)",
+			"description": "Emir defterleri yerine likidite havuzları kullanarak anında token ticareti, fiyatlar matematiksel formüllerle belirlenir"
+		},
+		"2": {
+			"title": "Saklama Dışı Ticaret",
+			"description": "Fonlarınız takas anına kadar cüzdanınızda kalır - para yatırma yok, hesap oluşturma yok, güven gerektirmez"
+		},
+		"3": {
+			"title": "İzinsiz Token Listesi",
+			"description": "Herhangi bir ERC-20 token onay olmadan işlem görebilir, yeni projelere erken erişim sağlar"
+		},
+		"4": {
+			"title": "Çoklu Zincir Desteği",
+			"description": "Ethereum, Arbitrum, Optimism, Polygon, Base ve daha fazlasında mevcut - gas ücretlerine uygun yerde takas yapın"
+		},
+		"5": {
+			"title": "Yoğunlaştırılmış Likidite (V3)",
+			"description": "Likidite sağlayıcıları sermayeyi belirli fiyat aralıklarında yoğunlaştırarak daha yüksek sermaye verimliliği elde edebilir"
+		},
+		"6": {
+			"title": "Hook'lar ve Özelleştirme (V4)",
+			"description": "En yeni sürüm, benzersiz ticaret mekanikleri ve stratejiler için özelleştirilebilir eklentiler sunar"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Token Takası",
+			"description": "Rekabetçi oranlar ve minimum kayma ile herhangi bir tokeni anında başka biriyle değiştirin"
+		},
+		"2": {
+			"title": "Likidite Sağlama",
+			"description": "Token çiftlerine likidite sağlayarak işlem ücreti kazanın - kendi piyasa yapıcınız olun"
+		},
+		"3": {
+			"title": "Yeni Token Keşfi",
+			"description": "Merkezi borsalarda görünmeden önce yeni başlatılan tokenleri bulun ve işlem yapın"
+		},
+		"4": {
+			"title": "DeFi Portföy Yönetimi",
+			"description": "Kripto portföyünüzü yeniden dengeleyin veya piyasa oynaklığı sırasında stablecoin'lere geçin"
+		},
+		"5": {
+			"title": "Zincirler Arası Ticaret",
+			"description": "Ethereum güvenliğini korurken gas ücretlerinden tasarruf etmek için Katman 2 ağlarında işlem yapın"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Uniswap nedir ve nasıl çalışır?",
+			"answer": "Uniswap, otomatik piyasa yapıcı (AMM) modeli kullanan merkeziyetsiz bir borsadır. Alıcıları satıcılarla eşleştirmek yerine likidite havuzları - token çiftlerini tutan akıllı sözleşmeler - kullanır. Takas yaptığınızda bu havuzlara karşı işlem yaparsınız ve fiyatlar arz ve talebe göre otomatik olarak ayarlanır."
+		},
+		"2": {
+			"question": "Uniswap kullanmak güvenli mi?",
+			"answer": "Uniswap'ın temel akıllı sözleşmeleri kapsamlı bir şekilde denetlenmiş ve büyük bir istismar olmadan milyarlarca doları korumuştur. Ancak, her zaman resmi arayüzü (app.uniswap.org) kullandığınızdan emin olun, dolandırıcı tokenlere karşı dikkatli olun ve likidite sağlıyorsanız kalıcı olmayan kayıp risklerini anlayın."
+		},
+		"3": {
+			"question": "Uniswap'ta ücretler nelerdir?",
+			"answer": "Uniswap, çoğu havuzda likidite sağlayıcılarına giden %0.3 takas ücreti alır. Uniswap Labs ayrıca arayüzleri üzerinden belirli tokenlerde ek %0.15 ücret alır. Ayrıca ağ yoğunluğuna göre değişen gas ücretleri de ödeyeceksiniz."
+		},
+		"4": {
+			"question": "Kalıcı olmayan kayıp nedir?",
+			"answer": "Kalıcı olmayan kayıp, likidite sağlarken ve yatırdığınız tokenlerin fiyat oranı değiştiğinde oluşur. Tokenleri sadece tutmuş olsaydınız, havuzda olandan daha fazla değere sahip olabilirdiniz. Kazanılan işlem ücretleri bunu telafi edebilir, ancak anlaşılması gereken önemli bir risktir."
+		},
+		"5": {
+			"question": "Uniswap'ta hangi ağı kullanmalıyım?",
+			"answer": "Ethereum ana ağı en derin likiditeye sahiptir ancak gas ücretleri daha yüksektir. Daha küçük işlemler için Arbitrum, Optimism veya Base gibi Katman 2 ağları güvenliği korurken çok daha düşük ücretler sunar. İşlem yapmak istediğiniz tokenlere ve işlem boyutunuza göre seçim yapın."
+		}
+	},
+	"cta": {
+		"ready": "Ticarete başlamaya hazır mısınız?",
+		"button": "Uniswap'ı Aç",
+		"note": "Saklama dışı ticaret - anahtarlarınız, kriptonuz"
+	}
+}

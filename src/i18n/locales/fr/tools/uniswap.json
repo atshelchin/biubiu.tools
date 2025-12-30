@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷",
+		"code": "fr"
+	},
+	"seo": {
+		"title": "Uniswap - Le Plus Grand Exchange Décentralisé | Revue d'Outil DeFi",
+		"description": "Découvrez Uniswap, le plus grand exchange décentralisé au monde. Apprenez sur son market maker automatisé, les pools de liquidité, le support multi-chaînes et comment échanger des tokens en toute sécurité.",
+		"keywords": "Uniswap, DEX, exchange décentralisé, échange de tokens, AMM, pool de liquidité, DeFi, Ethereum, trading crypto"
+	},
+	"overview": "Uniswap est le plus grand exchange décentralisé (DEX) au monde, pionnier du modèle de market maker automatisé (AMM) qui est devenu la norme pour le trading décentralisé. Lancé en novembre 2018 par Hayden Adams, un ancien ingénieur mécanique, Uniswap a révolutionné la façon dont les utilisateurs échangent des cryptomonnaies en éliminant le besoin de carnets d'ordres traditionnels et d'intermédiaires centralisés.\n\nLe protocole fonctionne via des contrats intelligents sur Ethereum et plusieurs réseaux Layer 2, permettant à quiconque d'échanger des tokens instantanément sans créer de compte ni confier ses fonds à un tiers. En 2024, Uniswap a traité plus de 2 billions de dollars en volume de trading cumulé et maintient une Valeur Totale Verrouillée (TVL) dépassant 5 milliards de dollars.\n\nLa conception sans permission d'Uniswap signifie que n'importe quel token ERC-20 peut être listé et échangé sans approbation d'une équipe centralisée. Cette ouverture en a fait la plateforme de référence pour découvrir et échanger de nouveaux tokens, tandis que ses contrats intelligents éprouvés offrent une sécurité qui a gagné la confiance de millions d'utilisateurs dans le monde.",
+	"features": {
+		"1": {
+			"title": "Market Maker Automatisé (AMM)",
+			"description": "Échangez des tokens instantanément en utilisant des pools de liquidité au lieu de carnets d'ordres, avec des prix déterminés par des formules mathématiques"
+		},
+		"2": {
+			"title": "Trading Non-Custodial",
+			"description": "Vos fonds restent dans votre portefeuille jusqu'au moment de l'échange - pas de dépôts, pas de création de compte, pas besoin de faire confiance"
+		},
+		"3": {
+			"title": "Listing de Tokens Sans Permission",
+			"description": "N'importe quel token ERC-20 peut être échangé sans approbation, permettant un accès anticipé aux nouveaux projets"
+		},
+		"4": {
+			"title": "Support Multi-Chaînes",
+			"description": "Disponible sur Ethereum, Arbitrum, Optimism, Polygon, Base et plus - échangez là où les frais de gas vous conviennent"
+		},
+		"5": {
+			"title": "Liquidité Concentrée (V3)",
+			"description": "Les fournisseurs de liquidité peuvent concentrer leur capital dans des plages de prix spécifiques pour une meilleure efficacité du capital"
+		},
+		"6": {
+			"title": "Hooks et Personnalisation (V4)",
+			"description": "La dernière version introduit des plugins personnalisables pour des mécaniques de trading et stratégies uniques"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Échange de Tokens",
+			"description": "Échangez n'importe quel token contre un autre instantanément avec des taux compétitifs et un slippage minimal"
+		},
+		"2": {
+			"title": "Fourniture de Liquidité",
+			"description": "Gagnez des frais de trading en fournissant de la liquidité aux paires de tokens - devenez votre propre market maker"
+		},
+		"3": {
+			"title": "Découverte de Nouveaux Tokens",
+			"description": "Trouvez et échangez des tokens nouvellement lancés avant qu'ils n'apparaissent sur les exchanges centralisés"
+		},
+		"4": {
+			"title": "Gestion de Portefeuille DeFi",
+			"description": "Rééquilibrez votre portefeuille crypto ou échangez vers des stablecoins pendant la volatilité du marché"
+		},
+		"5": {
+			"title": "Trading Cross-Chain",
+			"description": "Tradez sur les réseaux Layer 2 pour économiser sur les frais de gas tout en maintenant la sécurité d'Ethereum"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Qu'est-ce qu'Uniswap et comment ça fonctionne?",
+			"answer": "Uniswap est un exchange décentralisé qui utilise un modèle de market maker automatisé (AMM). Au lieu de faire correspondre acheteurs et vendeurs, il utilise des pools de liquidité - des contrats intelligents détenant des paires de tokens. Lorsque vous échangez, vous tradez contre ces pools, et les prix s'ajustent automatiquement en fonction de l'offre et de la demande."
+		},
+		"2": {
+			"question": "Uniswap est-il sûr à utiliser?",
+			"answer": "Les contrats intelligents principaux d'Uniswap ont été extensivement audités et ont sécurisé des milliards de dollars sans exploits majeurs. Cependant, vérifiez toujours que vous utilisez l'interface officielle (app.uniswap.org), méfiez-vous des tokens frauduleux et comprenez les risques de perte impermanente si vous fournissez de la liquidité."
+		},
+		"3": {
+			"question": "Quels sont les frais sur Uniswap?",
+			"answer": "Uniswap facture des frais d'échange de 0.3% sur la plupart des pools, qui vont aux fournisseurs de liquidité. Uniswap Labs facture également des frais supplémentaires de 0.15% sur certains tokens via leur interface. Vous paierez aussi des frais de gas du réseau, qui varient selon la congestion du réseau."
+		},
+		"4": {
+			"question": "Qu'est-ce que la perte impermanente?",
+			"answer": "La perte impermanente se produit lors de la fourniture de liquidité et lorsque le ratio de prix de vos tokens déposés change. Si vous aviez simplement gardé les tokens, vous pourriez avoir plus de valeur que ce que vous avez dans le pool. Les frais de trading gagnés peuvent compenser cela, mais c'est un risque important à comprendre."
+		},
+		"5": {
+			"question": "Quel réseau devrais-je utiliser sur Uniswap?",
+			"answer": "Le mainnet Ethereum a la liquidité la plus profonde mais des frais de gas plus élevés. Pour les petites transactions, les réseaux Layer 2 comme Arbitrum, Optimism ou Base offrent des frais beaucoup plus bas tout en maintenant la sécurité. Choisissez en fonction des tokens que vous voulez échanger et de la taille de votre transaction."
+		}
+	},
+	"cta": {
+		"ready": "Prêt à commencer à trader?",
+		"button": "Ouvrir Uniswap",
+		"note": "Trading non-custodial - vos clés, vos cryptos"
+	}
+}

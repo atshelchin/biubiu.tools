@@ -1,0 +1,95 @@
+{
+	"category_seo": {
+		"title": "Bridge Cross-Chain - Trasferisci Asset tra Blockchain | BiuBiu Tools",
+		"description": "Trova i migliori bridge cross-chain per trasferire token tra Ethereum, Arbitrum, Optimism, Base e altre reti in modo sicuro.",
+		"keywords": "bridge cross-chain, trasferimento asset, arbitrum bridge, optimism bridge, stargate",
+		"faqs": [
+			{
+				"question": "Cos'è un bridge cross-chain?",
+				"answer": "Un bridge cross-chain è un protocollo che ti permette di trasferire token e dati tra diverse reti blockchain. Blocca gli asset sulla chain di origine e conia token equivalenti sulla chain di destinazione."
+			},
+			{
+				"question": "Quali bridge sono i più sicuri?",
+				"answer": "I bridge nativi dai L2 (come Arbitrum Bridge, Optimism Bridge) sono generalmente i più sicuri ma più lenti. Bridge di terze parti come Stargate, Across e Hop offrono trasferimenti più veloci con sicurezza ragionevole. Verifica sempre lo stato dell'audit del bridge."
+			},
+			{
+				"question": "Quanto tempo richiedono i trasferimenti bridge?",
+				"answer": "I bridge L2 nativi richiedono 7+ giorni per i prelievi a causa dei periodi di fraud proof. I bridge veloci come Stargate o Across completano in minuti. È importante comprendere il compromesso tra velocità e sicurezza."
+			}
+		]
+	},
+	"tools": {
+		"across": {
+			"description": "Bridge cross-chain veloce ed economico"
+		},
+		"stargate": {
+			"description": "Bridge omnichain alimentato da LayerZero"
+		},
+		"orbiter": {
+			"description": "Bridge cross-rollup L2"
+		},
+		"hop": {
+			"description": "Bridge token da L2 a L2"
+		},
+		"synapse": {
+			"description": "Bridge e swap cross-chain"
+		},
+		"cbridge": {
+			"description": "Bridge cross-chain Celer"
+		},
+		"multichain": {
+			"description": "Protocollo router multi-chain"
+		},
+		"wormhole": {
+			"description": "Protocollo messaggistica cross-chain"
+		},
+		"socket": {
+			"description": "Aggregatore bridge per rotte migliori"
+		},
+		"rhino": {
+			"description": "Aggregatore bridge auto-custodiale"
+		},
+		"hyphen": {
+			"description": "Trasferimenti cross-chain istantanei"
+		},
+		"connext": {
+			"description": "Bridge cross-chain trustless"
+		},
+		"debridge": {
+			"description": "Interoperabilità cross-chain"
+		},
+		"allbridge": {
+			"description": "Bridge stablecoin multi-chain"
+		},
+		"portal": {
+			"description": "Bridge Wormhole Portal"
+		},
+		"squid": {
+			"description": "Router swap cross-chain"
+		},
+		"owlto": {
+			"description": "Bridge L2 veloce ed economico"
+		},
+		"bungee": {
+			"description": "Aggregatore bridge con funzione rifornimento gas"
+		},
+		"jumper": {
+			"description": "Aggregatore bridge multi-chain da LI.FI"
+		},
+		"superbridge": {
+			"description": "Bridge nativo per Optimism e Base"
+		},
+		"relay": {
+			"description": "Soluzione bridging cross-chain istantaneo"
+		},
+		"symbiosis": {
+			"description": "Protocollo liquidità cross-chain e DEX"
+		},
+		"dln": {
+			"description": "Trading cross-chain con ordini limit DeBridge"
+		},
+		"layerswap": {
+			"description": "Bridge CEX-to-L2 e L2-to-L2"
+		}
+	}
+}

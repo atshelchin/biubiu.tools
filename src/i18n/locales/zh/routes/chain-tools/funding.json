@@ -1,0 +1,49 @@
+{
+	"category_seo": {
+		"title": "Web3 融资 - 资助、风投与众筹 | BiuBiu Tools",
+		"description": "为 Web3 项目寻找资金来源。生态系统资助、风投、众筹平台和加速器计划。",
+		"faqs": [
+			{
+				"question": "Web3 项目如何获得资金？",
+				"answer": "选项包括生态系统资助（以太坊基金会、L2 资助）、风投融资（a16z、Paradigm）、代币发行（发射平台）和追溯性资助（Optimism RetroPGF）。"
+			},
+			{
+				"question": "什么是生态系统资助？",
+				"answer": "区块链基金会提供的资助用于资助开发。以太坊基金会、Uniswap Grants、Arbitrum Foundation 等为在其生态系统上构建的项目提供资金。"
+			},
+			{
+				"question": "如何向加密风投推介？",
+				"answer": "首先构建一个可运行的产品。加密风投看重技术创始人和开源贡献。在会议上社交，获取warm intro，展示 TVL 或用户等牵引力指标。"
+			}
+		]
+	},
+	"tools": {
+		"paradigm": {
+			"description": "Paradigm - Web3 investment and funding platform"
+		},
+		"polychain": {
+			"description": "Polychain Capital - Web3 investment and funding platform"
+		},
+		"pantera": {
+			"description": "Pantera Capital - Web3 investment and funding platform"
+		},
+		"multicoin": {
+			"description": "Multicoin Capital - Web3 investment and funding platform"
+		},
+		"dragonfly": {
+			"description": "Dragonfly - Web3 investment and funding platform"
+		},
+		"variant": {
+			"description": "Variant - Web3 investment and funding platform"
+		},
+		"placeholder": {
+			"description": "Placeholder - Web3 investment and funding platform"
+		},
+		"coinlist": {
+			"description": "CoinList - Web3 investment and funding platform"
+		},
+		"kernel": {
+			"description": "Kernel - Web3 investment and funding platform"
+		}
+	}
+}

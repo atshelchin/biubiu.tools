@@ -1,0 +1,140 @@
+{
+	"category_seo": {
+		"title": "Alat Analytics Blockchain - Data & Wawasan On-Chain | BiuBiu Tools",
+		"description": "Jelajahi platform analytics blockchain teratas untuk data on-chain, pelacakan wallet, dan wawasan pasar. Alat seperti Dune, Nansen, dan Arkham.",
+		"keywords": "analytics blockchain, data on-chain, dune analytics, nansen, arkham, pelacakan wallet",
+		"faqs": [
+			{
+				"question": "Apa itu analytics on-chain?",
+				"answer": "Analytics on-chain melibatkan analisis data transaksi blockchain untuk mendapatkan wawasan tentang perilaku wallet, aliran dana, penggunaan protokol, dan tren pasar. Ini membantu trader dan peneliti membuat keputusan yang tepat."
+			},
+			{
+				"question": "Apa itu pelacakan smart money?",
+				"answer": "Pelacakan smart money memantau wallet trader sukses, whale, dan institusi untuk memahami pola trading mereka dan berpotensi mengikuti strategi mereka."
+			},
+			{
+				"question": "Alat analytics mana yang harus saya gunakan?",
+				"answer": "Dune bagus untuk query SQL kustom, Nansen untuk pelacakan smart money, Arkham untuk pelabelan entitas, dan DefiLlama untuk data TVL. Pilih berdasarkan kebutuhan spesifik Anda."
+			}
+		]
+	},
+	"tools": {
+		"dune": {
+			"description": "Analitik blockchain dengan query SQL kustom"
+		},
+		"defillama": {
+			"description": "Agregator TVL DeFi dan analitik protokol"
+		},
+		"nansen": {
+			"description": "Analitik on-chain dengan pelacakan smart money"
+		},
+		"arkham": {
+			"description": "Platform intelijen blockchain"
+		},
+		"ultrasound": {
+			"description": "Pelacak pasokan dan pembakaran ETH"
+		},
+		"messari": {
+			"description": "Platform riset dan data kripto"
+		},
+		"coingecko": {
+			"description": "Harga cryptocurrency dan data pasar"
+		},
+		"coinmarketcap": {
+			"description": "Peringkat kapitalisasi pasar kripto"
+		},
+		"glassnode": {
+			"description": "Intelijen pasar on-chain"
+		},
+		"dexscreener": {
+			"description": "Chart pasangan DEX real-time"
+		},
+		"defined": {
+			"description": "Analitik DEX multi-chain"
+		},
+		"tokenterminal": {
+			"description": "Keuangan protokol dan metrik pendapatan"
+		},
+		"artemis": {
+			"description": "Analitik dan riset kripto fundamental"
+		},
+		"growthepie": {
+			"description": "Analitik dan perbandingan L2"
+		},
+		"dappradar": {
+			"description": "Peringkat dan pelacakan DApp"
+		},
+		"ethburned": {
+			"description": "Statistik pembakaran Ethereum"
+		},
+		"parsec": {
+			"description": "Dashboard analitik DeFi"
+		},
+		"eigenexplorer": {
+			"description": "Explorer analitik EigenLayer"
+		},
+		"the_graph": {
+			"description": "Protokol terdesentralisasi untuk mengindeks data blockchain"
+		},
+		"flipside": {
+			"description": "Analitik blockchain dengan query SQL"
+		},
+		"footprint": {
+			"description": "Platform analisis data blockchain tanpa kode"
+		},
+		"cryptofees": {
+			"description": "Analitik biaya dan pendapatan protokol"
+		},
+		"openbb": {
+			"description": "Terminal riset investasi open-source"
+		},
+		"watchers": {
+			"description": "Pelacakan wallet whale dan alert"
+		},
+		"cielo": {
+			"description": "Pelacakan wallet sosial dan feed transaksi"
+		},
+		"space_and_time": {
+			"description": "Data warehouse yang dapat diverifikasi dengan bukti ZK"
+		},
+		"allium": {
+			"description": "Platform data blockchain enterprise"
+		},
+		"sentio": {
+			"description": "Observabilitas dan pemantauan multi-chain"
+		},
+		"defillama_yields": {
+			"description": "Perbandingan yield farming cross-chain"
+		},
+		"defilabs": {
+			"description": "Pelacakan whale dan smart money"
+		},
+		"chainanalytics": {
+			"description": "Dashboard data blockchain kustom"
+		},
+		"cookie3": {
+			"description": "Platform analitik Web3 dan marketing"
+		},
+		"chainbeat": {
+			"description": "Intelijen pasar blockchain real-time"
+		},
+		"bitquery": {
+			"description": "API data blockchain untuk query multi-chain"
+		},
+		"intotheblock": {
+			"description": "Analitik on-chain berbasis AI"
+		},
+		"laevitas": {
+			"description": "Platform analitik derivatif kripto"
+		},
+		"kaiko": {
+			"description": "Data pasar cryptocurrency enterprise"
+		},
+		"amberdata": {
+			"description": "Platform data dan analitik blockchain"
+		},
+		"blockpour": {
+			"description": "Platform intelijen data blockchain"
+		}
+	}
+}

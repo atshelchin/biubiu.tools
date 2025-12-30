@@ -19,7 +19,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'snapshot',
 		name: 'Snapshot',
-		descriptionKey: 'chain-tools.dao.tools.snapshot.description',
+		descriptionKey: 'dao.tools.snapshot.description',
 		url: 'https://snapshot.org',
 		icon: Vote,
 		category: 'dao',
@@ -29,7 +29,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'tally',
 		name: 'Tally',
-		descriptionKey: 'chain-tools.dao.tools.tally.description',
+		descriptionKey: 'dao.tools.tally.description',
 		url: 'https://www.tally.xyz',
 		icon: Vote,
 		category: 'dao',
@@ -39,7 +39,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'aragon',
 		name: 'Aragon',
-		descriptionKey: 'chain-tools.dao.tools.aragon.description',
+		descriptionKey: 'dao.tools.aragon.description',
 		url: 'https://aragon.org',
 		icon: Building2,
 		category: 'dao',
@@ -49,7 +49,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'colony',
 		name: 'Colony',
-		descriptionKey: 'chain-tools.dao.tools.colony.description',
+		descriptionKey: 'dao.tools.colony.description',
 		url: 'https://colony.io',
 		icon: Users,
 		category: 'dao',
@@ -61,7 +61,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'boardroom',
 		name: 'Boardroom',
-		descriptionKey: 'chain-tools.dao.tools.boardroom.description',
+		descriptionKey: 'dao.tools.boardroom.description',
 		url: 'https://boardroom.io',
 		icon: Building2,
 		category: 'dao',
@@ -71,7 +71,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'karma',
 		name: 'Karma',
-		descriptionKey: 'chain-tools.dao.tools.karma.description',
+		descriptionKey: 'dao.tools.karma.description',
 		url: 'https://www.karmahq.xyz',
 		icon: Users,
 		category: 'dao',
@@ -83,7 +83,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'lenster',
 		name: 'Hey (Lenster)',
-		descriptionKey: 'chain-tools.dao.tools.lenster.description',
+		descriptionKey: 'dao.tools.lenster.description',
 		url: 'https://hey.xyz',
 		icon: MessageSquare,
 		category: 'dao',
@@ -93,7 +93,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'farcaster',
 		name: 'Warpcast (Farcaster)',
-		descriptionKey: 'chain-tools.dao.tools.farcaster.description',
+		descriptionKey: 'dao.tools.farcaster.description',
 		url: 'https://warpcast.com',
 		icon: Megaphone,
 		category: 'dao',
@@ -104,7 +104,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'push',
 		name: 'Push Protocol',
-		descriptionKey: 'chain-tools.dao.tools.push.description',
+		descriptionKey: 'dao.tools.push.description',
 		url: 'https://push.org',
 		icon: Bell,
 		category: 'dao',
@@ -116,7 +116,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'daohaus',
 		name: 'DAOhaus',
-		descriptionKey: 'chain-tools.dao.tools.daohaus.description',
+		descriptionKey: 'dao.tools.daohaus.description',
 		url: 'https://daohaus.club',
 		icon: Building2,
 		category: 'dao',
@@ -126,7 +126,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'charmverse',
 		name: 'CharmVerse',
-		descriptionKey: 'chain-tools.dao.tools.charmverse.description',
+		descriptionKey: 'dao.tools.charmverse.description',
 		url: 'https://www.charmverse.io',
 		icon: ScrollText,
 		category: 'dao',
@@ -136,7 +136,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'wonderverse',
 		name: 'Wonderverse',
-		descriptionKey: 'chain-tools.dao.tools.wonderverse.description',
+		descriptionKey: 'dao.tools.wonderverse.description',
 		url: 'https://www.wonderverse.xyz',
 		icon: Users,
 		category: 'dao',
@@ -146,7 +146,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'coordinape',
 		name: 'Coordinape',
-		descriptionKey: 'chain-tools.dao.tools.coordinape.description',
+		descriptionKey: 'dao.tools.coordinape.description',
 		url: 'https://coordinape.com',
 		icon: Users,
 		category: 'dao',
@@ -156,7 +156,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'guild',
 		name: 'Guild.xyz',
-		descriptionKey: 'chain-tools.dao.tools.guild.description',
+		descriptionKey: 'dao.tools.guild.description',
 		url: 'https://guild.xyz',
 		icon: Users,
 		category: 'dao',
@@ -166,7 +166,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'jokerace',
 		name: 'JokeRace',
-		descriptionKey: 'chain-tools.dao.tools.jokerace.description',
+		descriptionKey: 'dao.tools.jokerace.description',
 		url: 'https://jokerace.xyz',
 		icon: Award,
 		category: 'dao',
@@ -178,7 +178,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'commonwealth',
 		name: 'Commonwealth',
-		descriptionKey: 'chain-tools.dao.tools.commonwealth.description',
+		descriptionKey: 'dao.tools.commonwealth.description',
 		url: 'https://commonwealth.im',
 		icon: Users,
 		category: 'dao',
@@ -188,7 +188,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'jokedao',
 		name: 'JokeDAO',
-		descriptionKey: 'chain-tools.dao.tools.jokedao.description',
+		descriptionKey: 'dao.tools.jokedao.description',
 		url: 'https://www.jokedao.io',
 		icon: Vote,
 		category: 'dao',
@@ -198,7 +198,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'nouns-builder',
 		name: 'Nouns Builder',
-		descriptionKey: 'chain-tools.dao.tools.nouns_builder.description',
+		descriptionKey: 'dao.tools.nouns_builder.description',
 		url: 'https://nouns.build',
 		icon: Vote,
 		category: 'dao',
@@ -209,7 +209,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'hats-protocol',
 		name: 'Hats Protocol',
-		descriptionKey: 'chain-tools.dao.tools.hats_protocol.description',
+		descriptionKey: 'dao.tools.hats_protocol.description',
 		url: 'https://www.hatsprotocol.xyz',
 		icon: Users,
 		category: 'dao',
@@ -219,7 +219,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'llama',
 		name: 'Llama',
-		descriptionKey: 'chain-tools.dao.tools.llama.description',
+		descriptionKey: 'dao.tools.llama.description',
 		url: 'https://llama.xyz',
 		icon: Building2,
 		category: 'dao',
@@ -229,7 +229,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'utopia-dao',
 		name: 'Utopia',
-		descriptionKey: 'chain-tools.dao.tools.utopia_dao.description',
+		descriptionKey: 'dao.tools.utopia_dao.description',
 		url: 'https://www.utopialabs.com',
 		icon: Building2,
 		category: 'dao',
@@ -241,7 +241,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'realms-solana',
 		name: 'Realms',
-		descriptionKey: 'chain-tools.dao.tools.realms_solana.description',
+		descriptionKey: 'dao.tools.realms_solana.description',
 		url: 'https://realms.today',
 		icon: Vote,
 		category: 'dao',
@@ -252,7 +252,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'squads-protocol',
 		name: 'Squads',
-		descriptionKey: 'chain-tools.dao.tools.squads_protocol.description',
+		descriptionKey: 'dao.tools.squads_protocol.description',
 		url: 'https://squads.so',
 		icon: Users,
 		category: 'dao',
@@ -263,7 +263,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'tribeca-dao',
 		name: 'Tribeca',
-		descriptionKey: 'chain-tools.dao.tools.tribeca_dao.description',
+		descriptionKey: 'dao.tools.tribeca_dao.description',
 		url: 'https://tribeca.so',
 		icon: Vote,
 		category: 'dao',
@@ -276,7 +276,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'zodiac-gnosis',
 		name: 'Zodiac',
-		descriptionKey: 'chain-tools.dao.tools.zodiac_gnosis.description',
+		descriptionKey: 'dao.tools.zodiac_gnosis.description',
 		url: 'https://zodiac.wiki',
 		icon: Settings,
 		category: 'dao',
@@ -287,7 +287,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'hedgey-governance',
 		name: 'Hedgey Governance',
-		descriptionKey: 'chain-tools.dao.tools.hedgey_governance.description',
+		descriptionKey: 'dao.tools.hedgey_governance.description',
 		url: 'https://hedgey.finance/governance',
 		icon: Vote,
 		category: 'dao',
@@ -300,7 +300,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'daolens',
 		name: 'DAOLens',
-		descriptionKey: 'chain-tools.dao.tools.daolens.description',
+		descriptionKey: 'dao.tools.daolens.description',
 		url: 'https://daolens.com',
 		icon: Users,
 		category: 'dao',
@@ -310,7 +310,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'senate-governance',
 		name: 'Senate',
-		descriptionKey: 'chain-tools.dao.tools.senate_governance.description',
+		descriptionKey: 'dao.tools.senate_governance.description',
 		url: 'https://senate.io',
 		icon: Vote,
 		category: 'dao',
@@ -320,7 +320,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'kleros',
 		name: 'Kleros',
-		descriptionKey: 'chain-tools.dao.tools.kleros.description',
+		descriptionKey: 'dao.tools.kleros.description',
 		url: 'https://kleros.io',
 		icon: Vote,
 		category: 'dao',
@@ -331,7 +331,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'prop-house',
 		name: 'Prop House',
-		descriptionKey: 'chain-tools.dao.tools.prop_house.description',
+		descriptionKey: 'dao.tools.prop_house.description',
 		url: 'https://prop.house',
 		icon: Vote,
 		category: 'dao',
@@ -344,7 +344,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'gardens-dao',
 		name: 'Gardens',
-		descriptionKey: 'chain-tools.dao.tools.gardens_dao.description',
+		descriptionKey: 'dao.tools.gardens_dao.description',
 		url: 'https://gardens.fund',
 		icon: Vote,
 		category: 'dao',
@@ -355,7 +355,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'dework',
 		name: 'Dework',
-		descriptionKey: 'chain-tools.dao.tools.dework.description',
+		descriptionKey: 'dao.tools.dework.description',
 		url: 'https://dework.xyz',
 		icon: Users,
 		category: 'dao',
@@ -365,7 +365,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'clarity-dao',
 		name: 'Clarity',
-		descriptionKey: 'chain-tools.dao.tools.clarity_dao.description',
+		descriptionKey: 'dao.tools.clarity_dao.description',
 		url: 'https://www.clarity.so',
 		icon: ScrollText,
 		category: 'dao',
@@ -375,7 +375,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'agora-governance',
 		name: 'Agora',
-		descriptionKey: 'chain-tools.dao.tools.agora_governance.description',
+		descriptionKey: 'dao.tools.agora_governance.description',
 		url: 'https://www.agora.xyz',
 		icon: Vote,
 		category: 'dao',
@@ -385,7 +385,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'safe-dao',
 		name: 'Safe',
-		descriptionKey: 'chain-tools.dao.tools.safe_dao.description',
+		descriptionKey: 'dao.tools.safe_dao.description',
 		url: 'https://safe.global',
 		icon: Building2,
 		category: 'dao',
@@ -396,7 +396,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'orca-pod',
 		name: 'Orca Protocol',
-		descriptionKey: 'chain-tools.dao.tools.orca_pod.description',
+		descriptionKey: 'dao.tools.orca_pod.description',
 		url: 'https://www.orcaprotocol.org',
 		icon: Users,
 		category: 'dao',
@@ -407,7 +407,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'layer3-bounties',
 		name: 'Layer3 Bounties',
-		descriptionKey: 'chain-tools.dao.tools.layer3_bounties.description',
+		descriptionKey: 'dao.tools.layer3_bounties.description',
 		url: 'https://layer3.xyz',
 		icon: Award,
 		category: 'dao',
@@ -417,7 +417,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'snapshot-x',
 		name: 'Snapshot X',
-		descriptionKey: 'chain-tools.dao.tools.snapshot_x.description',
+		descriptionKey: 'dao.tools.snapshot_x.description',
 		url: 'https://snapshotx.xyz',
 		icon: Vote,
 		category: 'dao',
@@ -428,7 +428,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'decent-dao',
 		name: 'Decent',
-		descriptionKey: 'chain-tools.dao.tools.decent_dao.description',
+		descriptionKey: 'dao.tools.decent_dao.description',
 		url: 'https://www.decent-dao.org',
 		icon: Building2,
 		category: 'dao',
@@ -439,7 +439,7 @@ export const daoTools: ExternalTool[] = [
 	{
 		id: 'otterspace-badges',
 		name: 'Otterspace',
-		descriptionKey: 'chain-tools.dao.tools.otterspace_badges.description',
+		descriptionKey: 'dao.tools.otterspace_badges.description',
 		url: 'https://www.otterspace.xyz',
 		icon: Award,
 		category: 'dao',

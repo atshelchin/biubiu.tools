@@ -1,0 +1,83 @@
+{
+	"category_seo": {
+		"title": "Web3 Social - Decentralized Social Networks & Communities | BiuBiu Tools",
+		"description": "Decentralized social platforms and community tools. Build and engage with Web3 communities on Farcaster, Lens, and more.",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "What are Web3 social platforms?",
+				"answer": "Web3 social platforms are decentralized alternatives to Twitter/Facebook. You own your data and social graph. Popular ones include Farcaster, Lens Protocol, and DeSo."
+			},
+			{
+				"question": "What is Farcaster?",
+				"answer": "Farcaster is a decentralized social protocol similar to Twitter. Warpcast is the main client. It's popular among crypto developers and has a strong community culture."
+			},
+			{
+				"question": "How do Web3 communities coordinate?",
+				"answer": "Discord and Telegram for real-time chat, Farcaster/Lens for social, Mirror for long-form content, Snapshot for governance, and Guild.xyz for token-gated access."
+			}
+		]
+	},
+	"tools": {
+		"farcaster": {
+			"description": "탈중앙화 소셜 프로토콜"
+		},
+		"xmtp": {
+			"description": "보안 지갑 간 메시징 프로토콜"
+		},
+		"warpcast": {
+			"description": "Farcaster 소셜 네트워크를 위한 주요 클라이언트"
+		},
+		"hey": {
+			"description": "Lens Protocol 기반 탈중앙화 소셜 앱"
+		},
+		"orb": {
+			"description": "모바일 우선 Lens Protocol 클라이언트"
+		},
+		"cyberconnect": {
+			"description": "Web3 신원을 갖춘 소셜 그래프 프로토콜"
+		},
+		"mirror": {
+			"description": "Web3 퍼블리싱 및 크라우드펀딩 플랫폼"
+		},
+		"paragraph": {
+			"description": "Web3 네이티브 뉴스레터 및 퍼블리싱"
+		},
+		"deso": {
+			"description": "소셜 애플리케이션을 위해 구축된 레이어 1 블록체인"
+		},
+		"phaver": {
+			"description": "크로스 플랫폼 Web3 소셜 앱"
+		},
+		"drakula": {
+			"description": "Farcaster의 숏폼 비디오 플랫폼"
+		},
+		"link3": {
+			"description": "CyberConnect의 Web3 이벤트 및 자격 증명"
+		},
+		"buttrfly": {
+			"description": "Lens를 위한 크로스 플랫폼 소셜 수집기"
+		},
+		"tape": {
+			"description": "Lens 기반 탈중앙화 비디오 플랫폼"
+		},
+		"unlonely": {
+			"description": "Web3 라이브 스트리밍 커뮤니티 플랫폼"
+		},
+		"supercast": {
+			"description": "Farcaster 고급 클라이언트"
+		},
+		"neynar": {
+			"description": "Farcaster 인프라 및 API"
+		},
+		"airstack": {
+			"description": "Web3 소셜 데이터 API"
+		},
+		"huddle01": {
+			"description": "탈중앙화 비디오 회의"
+		},
+		"moxie": {
+			"description": "Farcaster 보상 프로토콜"
+		}
+	}
+}

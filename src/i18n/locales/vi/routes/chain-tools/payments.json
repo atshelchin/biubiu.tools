@@ -1,0 +1,91 @@
+{
+	"category_seo": {
+		"title": "Thanh Toán Crypto - Xử Lý Thanh Toán & Dịch Vụ Thẻ | BiuBiu Tools",
+		"description": "Giải pháp thanh toán crypto cho doanh nghiệp và cá nhân. Bộ xử lý thanh toán, thẻ crypto và dịch vụ thương mại.",
+		"faqs": [
+			{
+				"question": "Thanh toán crypto hoạt động như thế nào?",
+				"answer": "Thanh toán crypto chuyển giá trị trực tiếp trên blockchain. Đối với người bán, các bộ xử lý thanh toán như BitPay chuyển đổi crypto sang fiat. Thẻ crypto như Coinbase Card cho phép bạn chi tiêu crypto ở mọi nơi."
+			},
+			{
+				"question": "Thẻ crypto nào tốt nhất?",
+				"answer": "Coinbase Card và Crypto.com Card có sẵn rộng rãi. Gnosis Pay cung cấp tích hợp DeFi. So sánh tỷ lệ hoàn tiền, quốc gia được hỗ trợ và cấu trúc phí trước khi chọn."
+			},
+			{
+				"question": "Doanh nghiệp có thể nhận thanh toán crypto không?",
+				"answer": "Có, sử dụng bộ xử lý thanh toán như BitPay, Coinbase Commerce hoặc thanh toán ví trực tiếp. Cân nhắc biến động, tác động thuế và liệu có nên chuyển đổi sang fiat ngay lập tức."
+			}
+		]
+	},
+	"tools": {
+		"moonpay": {
+			"description": "Cổng nạp và rút fiat cho crypto"
+		},
+		"transak": {
+			"description": "Cơ sở hạ tầng thanh toán fiat-sang-crypto"
+		},
+		"ramp": {
+			"description": "SDK cổng nạp fiat không giữ hộ"
+		},
+		"onmeta": {
+			"description": "Cổng nạp fiat cho người dùng Ấn Độ"
+		},
+		"superfluid": {
+			"description": "Streaming token theo thời gian thực cho thanh toán"
+		},
+		"sablier": {
+			"description": "Streaming token cho vesting và bảng lương"
+		},
+		"coinshift": {
+			"description": "Quản lý ngân quỹ và hoạt động đa chữ ký"
+		},
+		"spritz": {
+			"description": "Thanh toán hóa đơn bằng crypto qua ACH"
+		},
+		"bitpay": {
+			"description": "Xử lý thanh toán crypto cho người bán"
+		},
+		"holyheld": {
+			"description": "Thẻ ghi nợ DeFi với tính năng lợi suất"
+		},
+		"fusepay": {
+			"description": "Thẻ chi tiêu crypto trên mạng Fuse"
+		},
+		"loopcrypto": {
+			"description": "Thanh toán định kỳ và đăng ký crypto"
+		},
+		"reveel": {
+			"description": "Chia sẻ doanh thu và chia royalty tự động"
+		},
+		"splits": {
+			"description": "Giao thức chia thanh toán on-chain"
+		},
+		"nowpayments": {
+			"description": "Cổng thanh toán crypto cho doanh nghiệp"
+		},
+		"monerium": {
+			"description": "Tiền điện tử Euro trên blockchain"
+		},
+		"wyre": {
+			"description": "API thanh toán fiat-sang-crypto"
+		},
+		"banxa": {
+			"description": "Cổng nạp fiat tuân thủ"
+		},
+		"simplex": {
+			"description": "Xử lý thanh toán fiat-sang-crypto"
+		},
+		"sardine": {
+			"description": "Phòng chống gian lận thanh toán crypto"
+		},
+		"coinflow": {
+			"description": "SDK thanh toán Web3"
+		},
+		"llamapay": {
+			"description": "Streaming thanh toán tự động"
+		},
+		"parcel": {
+			"description": "Quản lý thanh toán hàng loạt"
+		}
+	}
+}

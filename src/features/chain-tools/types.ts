@@ -116,7 +116,7 @@ export interface ToolDetail {
 	id: string; // Matches ExternalTool.id
 
 	// i18n key prefix for this tool's content
-	// e.g., 'chain-tools-detail.tools.uniswap'
+	// e.g., 'chain-tools.tools.uniswap'
 	i18nKeyPrefix: string;
 
 	// Number of content items (for rendering)
@@ -140,13 +140,25 @@ export interface ToolDetail {
 }
 
 /**
+ * Serializable version of ExternalTool (without Svelte component icon)
+ * Used for server-side data that needs to be serialized
+ */
+export type SerializableExternalTool = Omit<ExternalTool, 'icon'>;
+
+/**
+ * Serializable version of Category (without Svelte component icon)
+ */
+export type SerializableCategory = Omit<Category, 'icon'>;
+
+/**
  * Tool detail page data for SSR
+ * Uses serializable versions of types to avoid Svelte component serialization issues
  */
 export interface ToolDetailPageData {
-	tool: ExternalTool;
+	tool: SerializableExternalTool;
 	detail: ToolDetail;
-	category: Category;
-	relatedToolsData: ExternalTool[];
+	category: SerializableCategory;
+	relatedToolsData: SerializableExternalTool[];
 	meta: {
 		title: string;
 		description: string;

@@ -1,0 +1,79 @@
+{
+	"category_seo": {
+		"title": "Alat DAO - Governance, Voting & Manajemen Treasury | BiuBiu Tools",
+		"description": "Alat untuk membuat dan mengelola DAO. Platform governance, sistem voting, manajemen treasury, dan koordinasi kontributor.",
+		"faqs": [
+			{
+				"question": "Apa itu DAO?",
+				"answer": "DAO (Decentralized Autonomous Organization) adalah organisasi yang diatur oleh smart contract dan voting pemegang token. Anggota mengusulkan dan memilih keputusan tanpa otoritas pusat."
+			},
+			{
+				"question": "Bagaimana cara berpartisipasi dalam governance DAO?",
+				"answer": "Pegang token governance DAO, lalu gunakan platform seperti Snapshot untuk voting off-chain atau Tally untuk voting on-chain. Beberapa DAO memerlukan delegasi token sebelum voting."
+			},
+			{
+				"question": "Alat apa yang digunakan DAO?",
+				"answer": "Snapshot untuk voting tanpa gas, Tally untuk governance on-chain, Gnosis Safe untuk manajemen treasury, Coordinape untuk reward kontributor, dan Discourse/Commonwealth untuk diskusi."
+			}
+		]
+	},
+	"tools": {
+		"snapshot": {
+			"description": "Pemungutan suara tata kelola off-chain tanpa gas"
+		},
+		"tally": {
+			"description": "Tata kelola on-chain dan manajemen DAO"
+		},
+		"aragon": {
+			"description": "Bangun dan kelola DAO dengan mudah"
+		},
+		"colony": {
+			"description": "Infrastruktur DAO dan penggajian"
+		},
+		"karma": {
+			"description": "Reputasi kontributor DAO"
+		},
+		"lenster": {
+			"description": "Sosial terdesentralisasi di Lens"
+		},
+		"push": {
+			"description": "Notifikasi dan chat Web3"
+		},
+		"daohaus": {
+			"description": "Peluncur Moloch DAO"
+		},
+		"charmverse": {
+			"description": "Platform workspace Web3"
+		},
+		"wonderverse": {
+			"description": "Platform manajemen tugas dan bounty DAO"
+		},
+		"coordinape": {
+			"description": "Kompensasi terdesentralisasi"
+		},
+		"guild": {
+			"description": "Komunitas dengan akses berbasis token"
+		},
+		"jokerace": {
+			"description": "Kontes voting on-chain"
+		},
+		"commonwealth": {
+			"description": "Diskusi governance dan forum komunitas"
+		},
+		"jokedao": {
+			"description": "Kontes voting on-chain dan game governance"
+		},
+		"llama": {
+			"description": "Governance DAO dan operasi treasury"
+		},
+		"daolens": {
+			"description": "Analitik dan wawasan DAO"
+		},
+		"kleros": {
+			"description": "Protokol arbitrase terdesentralisasi"
+		},
+		"dework": {
+			"description": "Platform manajemen tugas dan bounty Web3"
+		}
+	}
+}

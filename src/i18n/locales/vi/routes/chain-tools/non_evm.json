@@ -1,0 +1,76 @@
+{
+	"category_seo": {
+		"title": "Blockchain Non-EVM - Solana, Bitcoin, Cosmos & Hơn Thế | BiuBiu Tools",
+		"description": "Khám phá hệ sinh thái blockchain non-EVM. Solana, Bitcoin, Cosmos, Aptos, Sui và các công cụ và dApp độc đáo của chúng.",
+		"faqs": [
+			{
+				"question": "Chuỗi non-EVM là gì?",
+				"answer": "Chuỗi non-EVM không sử dụng máy ảo của Ethereum. Chúng có kiến trúc khác nhau - Solana sử dụng Rust, Bitcoin có script riêng, Cosmos sử dụng CosmWasm. Mỗi chuỗi có sự đánh đổi độc đáo."
+			},
+			{
+				"question": "Tại sao sử dụng chuỗi non-EVM?",
+				"answer": "Các chuỗi khác nhau tối ưu hóa cho những thứ khác nhau. Solana cho tốc độ và phí thấp, Bitcoin cho bảo mật và phi tập trung, Cosmos cho khả năng tương tác, chuỗi Move cho an toàn."
+			},
+			{
+				"question": "Làm thế nào để bridge sang chuỗi non-EVM?",
+				"answer": "Sử dụng bridge cụ thể như Wormhole (đa chuỗi), Portal (Solana) hoặc IBC (Cosmos). Một số sàn tập trung hỗ trợ nạp/rút trực tiếp sang chuỗi non-EVM."
+			}
+		]
+	},
+	"tools": {
+		"solscan": {
+			"description": "Trình khám phá Solana phổ biến với phân tích token và hỗ trợ NFT"
+		},
+		"mintscan": {
+			"description": "Trình khám phá hệ sinh thái Cosmos đa chuỗi"
+		},
+		"tonscan": {
+			"description": "Trình khám phá blockchain TON cho giao dịch và jettons"
+		},
+		"raydium": {
+			"description": "AMM Solana và nhà cung cấp thanh khoản với pool tập trung"
+		},
+		"osmosis": {
+			"description": "DEX hàng đầu trong hệ sinh thái Cosmos với tích hợp IBC"
+		},
+		"injective": {
+			"description": "Chuỗi Cosmos tập trung DeFi cho giao dịch phái sinh"
+		},
+		"celestia": {
+			"description": "Lớp khả dụng dữ liệu mô-đun cho rollups"
+		},
+		"dymension": {
+			"description": "Trung tâm RollApp được xây dựng trên Cosmos cho rollup mô-đun"
+		},
+		"liquidswap": {
+			"description": "AMM DEX đầu tiên trên Aptos bởi Pontem"
+		},
+		"tonkeeper": {
+			"description": "Ví TON phổ biến với tích hợp Telegram"
+		},
+		"dedust": {
+			"description": "DEX và nền tảng DeFi trên TON"
+		},
+		"algorand": {
+			"description": "Blockchain Pure Proof of Stake với tính cuối cùng tức thì"
+		},
+		"cardano": {
+			"description": "Blockchain hướng nghiên cứu với phát triển được đánh giá ngang hàng"
+		},
+		"polkadot": {
+			"description": "Mạng đa chuỗi không đồng nhất với parachain"
+		},
+		"subscan": {
+			"description": "Trình khám phá đa chuỗi cho mạng Polkadot và Substrate"
+		},
+		"tezos": {
+			"description": "Blockchain tự sửa đổi với xác minh chính thức"
+		},
+		"stacks": {
+			"description": "Bitcoin L2 mang smart contract đến BTC"
+		},
+		"layerzero": {
+			"description": "Giao thức tương tác omnichain cho nhắn tin không cần tin cậy"
+		}
+	}
+}

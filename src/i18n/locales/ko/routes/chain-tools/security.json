@@ -1,0 +1,146 @@
+{
+	"category_seo": {
+		"title": "Web3 Security Tools - Audit, Monitor & Protect | BiuBiu Tools",
+		"description": "Essential security tools for Web3. Smart contract auditing, transaction simulation, approval management, and real-time threat detection.",
+		"keywords": "web3 security, smart contract audit, revoke approvals, transaction simulation, defi security",
+		"faqs": [
+			{
+				"question": "How do I revoke token approvals?",
+				"answer": "Use tools like Revoke.cash to view and revoke unlimited token approvals you've granted to smart contracts. This prevents potential exploits if a contract gets compromised."
+			},
+			{
+				"question": "What is transaction simulation?",
+				"answer": "Transaction simulation (tools like Pocket Universe) previews what will happen before you sign a transaction, helping you avoid scams and unexpected outcomes."
+			},
+			{
+				"question": "How do I verify a smart contract is safe?",
+				"answer": "Check if the contract is audited by reputable firms, verify the code on Etherscan, look for bug bounty programs, and check the protocol's track record and TVL."
+			}
+		]
+	},
+	"tools": {
+		"revoke": {
+			"description": "토큰 승인 관리 및 철회"
+		},
+		"slither": {
+			"description": "정적 분석 프레임워크"
+		},
+		"mythx": {
+			"description": "스마트 컨트랙트 보안 API"
+		},
+		"certik": {
+			"description": "보안 감사 및 Skynet"
+		},
+		"hacken": {
+			"description": "블록체인 보안 감사"
+		},
+		"immunefi": {
+			"description": "Web3 버그 바운티 플랫폼"
+		},
+		"openzeppelin": {
+			"description": "스마트 컨트랙트 보안 라이브러리"
+		},
+		"dedaub": {
+			"description": "스마트 컨트랙트 보안 도구 및 디컴파일러"
+		},
+		"honeypot": {
+			"description": "토큰 허니팟 탐지"
+		},
+		"phalcon": {
+			"description": "거래 분석 탐색기"
+		},
+		"chainalysis": {
+			"description": "블록체인 컴플라이언스 플랫폼"
+		},
+		"hexagate": {
+			"description": "실시간 스마트 컨트랙트 위협 모니터링"
+		},
+		"hypernative": {
+			"description": "AI 기반 보안 모니터링 및 예방"
+		},
+		"chainalert": {
+			"description": "블록체인 보안 알림 및 알림"
+		},
+		"webacy": {
+			"description": "지갑 안전 백업 및 암호화폐 상속"
+		},
+		"harpie": {
+			"description": "온체인 방화벽 및 사기 보호"
+		},
+		"blowfish": {
+			"description": "거래 시뮬레이션 및 위협 예방"
+		},
+		"stelo": {
+			"description": "사람이 읽을 수 있는 거래 미리보기"
+		},
+		"fire": {
+			"description": "지갑 보호를 위한 거래 시뮬레이션"
+		},
+		"scamsniffer": {
+			"description": "사기 및 피싱 탐지 서비스"
+		},
+		"peckshield": {
+			"description": "블록체인 보안 감사 및 리서치 기업"
+		},
+		"slowmist": {
+			"description": "보안 감사 및 사고 조사"
+		},
+		"quantstamp": {
+			"description": "기업용 블록체인 보안 감사"
+		},
+		"spearbit": {
+			"description": "전문 보안 연구원 네트워크"
+		},
+		"railgun": {
+			"description": "EVM 체인의 zk-SNARK 기반 프라이빗 DeFi"
+		},
+		"aztec": {
+			"description": "zk-롤업을 이용한 프로그래밍 가능한 프라이버시"
+		},
+		"nocturne": {
+			"description": "이더리움을 위한 프라이빗 계정 레이어"
+		},
+		"umbra": {
+			"description": "EVM 체인의 스텔스 주소 결제"
+		},
+		"labyrinth": {
+			"description": "기관용 컴플라이언트 프라이버시"
+		},
+		"elusiv": {
+			"description": "Solana의 컴플라이언트 프라이버시 결제"
+		},
+		"zcash": {
+			"description": "차폐 거래를 갖춘 네이티브 프라이버시 블록체인"
+		},
+		"forta": {
+			"description": "실시간 위협 탐지 네트워크"
+		},
+		"code4rena": {
+			"description": "커뮤니티 주도 감사 대회"
+		},
+		"sherlock": {
+			"description": "익스플로잇 커버리지를 갖춘 감사 대회"
+		},
+		"chainsecurity": {
+			"description": "스마트 컨트랙트 보안 감사 전문 기업"
+		},
+		"halborn": {
+			"description": "블록체인 보안 감사 및 컨설팅"
+		},
+		"zellic": {
+			"description": "Web3 보안 감사 및 리서치"
+		},
+		"veridise": {
+			"description": "형식적 검증 보안 감사"
+		},
+		"pessimistic": {
+			"description": "보안 감사 및 모니터링"
+		},
+		"cyfrin": {
+			"description": "스마트 컨트랙트 보안 교육 및 감사"
+		},
+		"yaudit": {
+			"description": "DeFi 전문 보안 감사"
+		}
+	}
+}

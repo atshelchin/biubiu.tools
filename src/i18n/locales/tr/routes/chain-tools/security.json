@@ -1,0 +1,146 @@
+{
+	"category_seo": {
+		"title": "Web3 Güvenlik Araçları - Denetim, İzleme ve Koruma | BiuBiu Tools",
+		"description": "Web3 için temel güvenlik araçları. Akıllı sözleşme denetimi, işlem simülasyonu, onay yönetimi ve gerçek zamanlı tehdit tespiti.",
+		"keywords": "web3 güvenlik, akıllı sözleşme denetimi, onayları iptal et, işlem simülasyonu, defi güvenlik",
+		"faqs": [
+			{
+				"question": "Token onaylarını nasıl iptal ederim?",
+				"answer": "Akıllı sözleşmelere verdiğiniz sınırsız token onaylarını görüntülemek ve iptal etmek için Revoke.cash gibi araçları kullanın. Bu, bir sözleşme tehlikeye girerse potansiyel istismarları önler."
+			},
+			{
+				"question": "İşlem simülasyonu nedir?",
+				"answer": "İşlem simülasyonu (Pocket Universe gibi araçlar), bir işlemi imzalamadan önce ne olacağını önceden gösterir, dolandırıcılıklardan ve beklenmeyen sonuçlardan kaçınmanıza yardımcı olur."
+			},
+			{
+				"question": "Akıllı bir sözleşmenin güvenli olduğunu nasıl doğrularım?",
+				"answer": "Sözleşmenin saygın firmalar tarafından denetlenip denetlenmediğini kontrol edin, Etherscan'de kodu doğrulayın, hata ödül programlarını arayın ve protokolün geçmişini ve TVL'sini kontrol edin."
+			}
+		]
+	},
+	"tools": {
+		"revoke": {
+			"description": "Token onaylarını yönetin ve iptal edin"
+		},
+		"slither": {
+			"description": "Statik analiz çerçevesi"
+		},
+		"mythx": {
+			"description": "Akıllı sözleşme güvenlik API'si"
+		},
+		"aztec": {
+			"description": "Programlanabilir gizlilik ile zk-rollup"
+		},
+		"blowfish": {
+			"description": "İşlem simülasyonu ve tehdit önleme"
+		},
+		"certik": {
+			"description": "Güvenlik denetimleri ve SkyNet"
+		},
+		"chainalert": {
+			"description": "Blokzincir güvenlik uyarıları ve bildirimleri"
+		},
+		"chainalysis": {
+			"description": "Blokzincir uyumluluk platformu"
+		},
+		"chainsecurity": {
+			"description": "Akıllı sözleşme güvenlik denetim firması"
+		},
+		"code4rena": {
+			"description": "Topluluk odaklı denetim yarışmaları"
+		},
+		"cyfrin": {
+			"description": "Güvenlik denetimi ve eğitim platformu"
+		},
+		"dedaub": {
+			"description": "Akıllı sözleşme güvenlik araçları ve derleyici çözücü"
+		},
+		"elusiv": {
+			"description": "Solana üzerinde uyumlu gizlilik ödemeleri"
+		},
+		"fire": {
+			"description": "İşlem simülasyonu için cüzdan koruması"
+		},
+		"forta": {
+			"description": "Gerçek zamanlı tehdit tespit ağı"
+		},
+		"hacken": {
+			"description": "Blokzincir güvenlik denetimi"
+		},
+		"halborn": {
+			"description": "Siber güvenlik denetim firması"
+		},
+		"harpie": {
+			"description": "Zincir üstü güvenlik duvarı ve dolandırıcılık koruması"
+		},
+		"hexagate": {
+			"description": "Gerçek zamanlı akıllı sözleşme tehdit izleme"
+		},
+		"honeypot": {
+			"description": "Token honeypot tespiti"
+		},
+		"hypernative": {
+			"description": "AI destekli güvenlik izleme ve önleme"
+		},
+		"immunefi": {
+			"description": "Web3 hata ödülü platformu"
+		},
+		"labyrinth": {
+			"description": "Kurumlar için uyumlu gizlilik"
+		},
+		"nocturne": {
+			"description": "Ethereum için özel hesap katmanı"
+		},
+		"openzeppelin": {
+			"description": "Akıllı sözleşme güvenlik kütüphanesi"
+		},
+		"peckshield": {
+			"description": "Blokzincir güvenlik denetimi ve araştırma firması"
+		},
+		"pessimistic": {
+			"description": "Proaktif güvenlik izleme hizmeti"
+		},
+		"phalcon": {
+			"description": "İşlem analizi gezgini"
+		},
+		"quantstamp": {
+			"description": "Kurumsal blokzincir güvenlik denetimi"
+		},
+		"railgun": {
+			"description": "EVM zincirlerde zk-SNARKs ile özel DeFi"
+		},
+		"scamsniffer": {
+			"description": "Dolandırıcılık ve kimlik avı tespit hizmeti"
+		},
+		"sherlock": {
+			"description": "İstismar kapsamı ile denetim yarışmaları"
+		},
+		"slowmist": {
+			"description": "Güvenlik denetimi ve olay soruşturması"
+		},
+		"spearbit": {
+			"description": "Uzman güvenlik araştırmacıları ağı"
+		},
+		"stelo": {
+			"description": "İnsan tarafından okunabilir işlem önizlemeleri"
+		},
+		"umbra": {
+			"description": "EVM zincirlerinde stealth adres ödemeleri"
+		},
+		"veridise": {
+			"description": "Biçimsel doğrulama güvenlik firması"
+		},
+		"webacy": {
+			"description": "Cüzdan güvenlik yedeklemesi ve kripto mirası"
+		},
+		"yaudit": {
+			"description": "Yearn güvenlik denetim ekibi"
+		},
+		"zcash": {
+			"description": "Korumalı işlemlerle yerel gizlilik blokzinciri"
+		},
+		"zellic": {
+			"description": "Akıllı sözleşme güvenlik denetim firması"
+		}
+	}
+}

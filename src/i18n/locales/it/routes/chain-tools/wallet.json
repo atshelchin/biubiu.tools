@@ -1,0 +1,119 @@
+{
+	"category_seo": {
+		"title": "Wallet Crypto - Hardware, Software e Multi-Chain | BiuBiu Tools",
+		"description": "Confronta i migliori wallet crypto per sicurezza e comodità. Wallet hardware, estensioni browser e wallet mobile per tutte le blockchain.",
+		"keywords": "wallet crypto, wallet hardware, metamask, ledger, trezor, wallet multi-chain",
+		"faqs": [
+			{
+				"question": "Cos'è un wallet crypto?",
+				"answer": "Un wallet crypto è un software o hardware che conserva le tue chiavi private e ti permette di inviare, ricevere e gestire criptovalute. Non conserva effettivamente le crypto - gli asset rimangono sulla blockchain."
+			},
+			{
+				"question": "Wallet hardware vs wallet software?",
+				"answer": "I wallet hardware (Ledger, Trezor) conservano le chiavi offline per la massima sicurezza, ideali per grandi somme. I wallet software (MetaMask, Rainbow) sono più comodi per l'uso quotidiano ma sono connessi a internet."
+			},
+			{
+				"question": "Come mantengo sicuro il mio wallet?",
+				"answer": "Non condividere mai la tua seed phrase, usa wallet hardware per grandi importi, abilita la 2FA dove possibile, verifica i dettagli delle transazioni prima di firmare e fai attenzione ai siti di phishing."
+			}
+		]
+	},
+	"tools": {
+		"debank": {
+			"description": "Tracker di portafoglio multi-chain e piattaforma social"
+		},
+		"rabby": {
+			"description": "Multi-chain browser wallet"
+		},
+		"rainbow": {
+			"description": "Wallet Ethereum elegante"
+		},
+		"metamask": {
+			"description": "Wallet Web3 più popolare"
+		},
+		"frame": {
+			"description": "Wallet desktop focalizzato sulla privacy"
+		},
+		"zerion": {
+			"description": "Portfolio DeFi e wallet"
+		},
+		"safe": {
+			"description": "Smart wallet multi-firma"
+		},
+		"zapper": {
+			"description": "Dashboard portfolio DeFi"
+		},
+		"argent": {
+			"description": "Smart wallet con recovery"
+		},
+		"sequence": {
+			"description": "Smart wallet per gaming"
+		},
+		"ledger": {
+			"description": "Wallet hardware per sicurezza"
+		},
+		"trezor": {
+			"description": "Pioniere wallet hardware"
+		},
+		"privy": {
+			"description": "Soluzione wallet embedded"
+		},
+		"dynamic": {
+			"description": "Autenticazione multi-wallet"
+		},
+		"ambire": {
+			"description": "Smart wallet con login email e transazioni senza gas"
+		},
+		"obvious": {
+			"description": "Smart wallet con account abstraction"
+		},
+		"pimlico": {
+			"description": "Infrastruttura bundler e paymaster ERC-4337"
+		},
+		"stackup": {
+			"description": "Bundler account abstraction e SDK"
+		},
+		"biconomy": {
+			"description": "SDK account abstraction e transazioni senza gas"
+		},
+		"zerodev": {
+			"description": "SDK smart wallet modulare con Kernel"
+		},
+		"solflare": {
+			"description": "Wallet Solana popolare"
+		},
+		"subwallet": {
+			"description": "Wallet multi-chain per Polkadot"
+		},
+		"tonhub": {
+			"description": "Wallet TON mobile"
+		},
+		"mytonwallet": {
+			"description": "Wallet TON open-source"
+		},
+		"coolwallet": {
+			"description": "Wallet hardware con carta"
+		},
+		"imtoken": {
+			"description": "Wallet multi-chain popolare"
+		},
+		"tokenpocket": {
+			"description": "Wallet multi-chain decentralizzato"
+		},
+		"myetherwallet": {
+			"description": "Wallet Ethereum open-source"
+		},
+		"mycrypto": {
+			"description": "Wallet Ethereum e gestione account"
+		},
+		"tronlink": {
+			"description": "Wallet ufficiale Tron"
+		},
+		"multis": {
+			"description": "Wallet multi-firma per aziende"
+		},
+		"squads": {
+			"description": "Multi-firma su Solana"
+		}
+	}
+}

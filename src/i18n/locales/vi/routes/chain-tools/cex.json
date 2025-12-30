@@ -1,0 +1,25 @@
+{
+	"category_seo": {
+		"title": "Sàn Giao Dịch Crypto (CEX) - Nền Tảng Giao Dịch | BiuBiu Tools",
+		"description": "Sàn giao dịch tiền điện tử tập trung để giao dịch. So sánh tính năng sàn, bảo mật, phí và tài sản được hỗ trợ.",
+		"faqs": [
+			{
+				"question": "Sàn giao dịch nào an toàn nhất?",
+				"answer": "Coinbase và Kraken được quản lý tốt ở Mỹ. Binance có thanh khoản cao nhất toàn cầu. Tìm kiếm bằng chứng dự trữ, tuân thủ quy định và lịch sử bảo mật."
+			},
+			{
+				"question": "CEX vs DEX - nên sử dụng cái nào?",
+				"answer": "CEX cho nạp/rút fiat, giao dịch nâng cao và thân thiện với người mới. DEX cho tự quản tài sản, giao dịch không cần phép và truy cập nhiều token hơn. Nhiều người sử dụng cả hai."
+			},
+			{
+				"question": "Làm thế nào để bảo mật tài khoản sàn giao dịch?",
+				"answer": "Bật 2FA (tốt nhất là khóa phần cứng), sử dụng mật khẩu duy nhất, đưa địa chỉ rút vào danh sách trắng, bật độ trễ rút tiền và không giữ số lượng lớn trên sàn lâu dài."
+			}
+		]
+	},
+	"tools": {
+		"ccdata": {
+			"description": "Chỉ số thị trường và dữ liệu cho tổ chức"
+		}
+	}
+}

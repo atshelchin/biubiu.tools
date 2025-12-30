@@ -1,0 +1,34 @@
+{
+	"category_seo": {
+		"title": "Gas Burner & Token Burn - Mekanisme Deflasi | BiuBiu Tools",
+		"description": "Lacak token burn dan konsumsi gas. Pantau mekanisme deflasi, tingkat burn, dan dinamika supply.",
+		"faqs": [
+			{
+				"question": "Apa itu token burn?",
+				"answer": "Token burn secara permanen menghapus token dari sirkulasi dengan mengirimkannya ke alamat yang tidak dapat digunakan. Ini menciptakan tekanan deflasi dan dapat meningkatkan nilai kelangkaan."
+			},
+			{
+				"question": "Bagaimana cara kerja burning ETH?",
+				"answer": "Sejak EIP-1559, base fee dibakar daripada pergi ke miner. Selama aktivitas tinggi, ETH bisa menjadi deflasi. Lacak tingkat burn di ultrasound.money."
+			},
+			{
+				"question": "Proyek apa yang memiliki burn signifikan?",
+				"answer": "Ethereum (base fee), BNB (burn kuartalan), SHIB (burn komunitas), dan banyak protokol dengan mekanisme buy-and-burn. Periksa tokenomik untuk memahami jadwal burn."
+			}
+		]
+	},
+	"tools": {
+		"l2fees": {
+			"description": "Bandingkan biaya transaksi L2"
+		},
+		"gasnow": {
+			"description": "Pelacak harga gas cepat dengan API"
+		},
+		"owlracle": {
+			"description": "Oracle gas multi-chain dengan API"
+		},
+		"txstreet": {
+			"description": "Visualisasi blockchain live"
+		}
+	}
+}

@@ -1,0 +1,61 @@
+{
+	"category_seo": {
+		"title": "Restaking - EigenLayer & Liquid Restaking | BiuBiu Tools",
+		"description": "Protokol restaking untuk yield tambahan. EigenLayer, token liquid restaking, dan AVS (Actively Validated Services).",
+		"faqs": [
+			{
+				"question": "Apa itu restaking?",
+				"answer": "Restaking memungkinkan Anda menggunakan ETH yang distake untuk mengamankan protokol tambahan (AVS) untuk yield ekstra. EigenLayer mempelopori ini, memungkinkan staker ETH mendapatkan reward dari beberapa layanan."
+			},
+			{
+				"question": "Apa itu token liquid restaking (LRT)?",
+				"answer": "LRT seperti eETH (ether.fi) atau ezETH (Renzo) mewakili ETH yang direstake yang dapat Anda gunakan di DeFi. Mereka adalah versi liquid dari posisi restaked."
+			},
+			{
+				"question": "Apa risiko restaking?",
+				"answer": "Restaking menambahkan risiko slashing dari kegagalan AVS, risiko smart contract, dan kompleksitas. Yield lebih tinggi datang dengan risiko lebih tinggi. Pahami AVS apa yang Anda amankan."
+			}
+		]
+	},
+	"tools": {
+		"eigenlayer": {
+			"description": "Protokol restaking untuk keamanan Ethereum"
+		},
+		"etherfi": {
+			"description": "Decentralized staking protocol"
+		},
+		"karak": {
+			"description": "Restaking universal untuk keamanan multi-chain"
+		},
+		"symbiotic": {
+			"description": "Protokol restaking tanpa izin dan modular"
+		},
+		"babylon": {
+			"description": "Protokol staking Bitcoin yang mengamankan jaringan PoS"
+		},
+		"eigenpie": {
+			"description": "Liquid restaking Magpie dengan token LRT terisolasi"
+		},
+		"bedrock": {
+			"description": "Liquid restaking universal dengan token uniETH"
+		},
+		"stakestone": {
+			"description": "Liquid restaking omnichain dengan token STONE"
+		},
+		"inception": {
+			"description": "Liquid restaking dengan unstaking instan via inETH"
+		},
+		"eigenda": {
+			"description": "Layanan ketersediaan data EigenLayer untuk rollup"
+		},
+		"lagrange": {
+			"description": "AVS coprocessor ZK untuk proving cross-chain"
+		},
+		"espresso": {
+			"description": "AVS shared sequencing untuk rollup"
+		},
+		"brevis": {
+			"description": "Coprocessor ZK untuk data blockchain historis"
+		}
+	}
+}

@@ -1,0 +1,146 @@
+{
+	"category_seo": {
+		"title": "Web3セキュリティツール - 監査、モニタリング、保護 | BiuBiu Tools",
+		"description": "Web3に不可欠なセキュリティツール。スマートコントラクト監査、トランザクションシミュレーション、承認管理、リアルタイム脅威検出。",
+		"keywords": "web3 security, smart contract audit, revoke approvals, transaction simulation, defi security",
+		"faqs": [
+			{
+				"question": "トークン承認を取り消すにはどうすればよいですか？",
+				"answer": "Revoke.cashのようなツールを使用して、スマートコントラクトに付与した無制限のトークン承認を表示および取り消します。これにより、コントラクトが侵害された場合の潜在的な悪用を防ぎます。"
+			},
+			{
+				"question": "トランザクションシミュレーションとは何ですか？",
+				"answer": "トランザクションシミュレーション(Pocket Universeのようなツール)は、トランザクションに署名する前に何が起こるかをプレビューし、詐欺や予期しない結果を回避するのに役立ちます。"
+			},
+			{
+				"question": "スマートコントラクトが安全であることを確認するにはどうすればよいですか？",
+				"answer": "評判の良い企業による監査があるか確認し、Etherscanでコードを検証し、バグバウンティプログラムを探し、プロトコルの実績とTVLを確認します。"
+			}
+		]
+	},
+	"tools": {
+		"revoke": {
+			"description": "トークン承認の管理と取り消し"
+		},
+		"slither": {
+			"description": "静的分析フレームワーク"
+		},
+		"mythx": {
+			"description": "スマートコントラクトセキュリティAPI"
+		},
+		"certik": {
+			"description": "セキュリティ監査とSkynet"
+		},
+		"hacken": {
+			"description": "ブロックチェーンセキュリティ監査"
+		},
+		"immunefi": {
+			"description": "Web3バグバウンティプラットフォーム"
+		},
+		"openzeppelin": {
+			"description": "スマートコントラクトセキュリティライブラリ"
+		},
+		"dedaub": {
+			"description": "スマートコントラクトセキュリティツールとデコンパイラ"
+		},
+		"honeypot": {
+			"description": "トークンハニーポット検出"
+		},
+		"phalcon": {
+			"description": "トランザクション分析エクスプローラー"
+		},
+		"chainalysis": {
+			"description": "ブロックチェーンコンプライアンスプラットフォーム"
+		},
+		"hexagate": {
+			"description": "リアルタイムスマートコントラクト脅威監視"
+		},
+		"hypernative": {
+			"description": "AI駆動セキュリティ監視と防止"
+		},
+		"chainalert": {
+			"description": "ブロックチェーンセキュリティアラートと通知"
+		},
+		"webacy": {
+			"description": "ウォレット安全バックアップと暗号資産相続"
+		},
+		"harpie": {
+			"description": "オンチェーンファイアウォールと詐欺防止"
+		},
+		"blowfish": {
+			"description": "トランザクションシミュレーションと脅威防止"
+		},
+		"stelo": {
+			"description": "人間が読めるトランザクションプレビュー"
+		},
+		"fire": {
+			"description": "ウォレット保護のためのトランザクションシミュレーション"
+		},
+		"scamsniffer": {
+			"description": "詐欺とフィッシング検出サービス"
+		},
+		"peckshield": {
+			"description": "ブロックチェーンセキュリティ監査と研究会社"
+		},
+		"slowmist": {
+			"description": "セキュリティ監査とインシデント調査"
+		},
+		"quantstamp": {
+			"description": "エンタープライズブロックチェーンセキュリティ監査"
+		},
+		"spearbit": {
+			"description": "専門セキュリティ研究者ネットワーク"
+		},
+		"railgun": {
+			"description": "EVMチェーン上のzk-SNARKsによるプライベートDeFi"
+		},
+		"aztec": {
+			"description": "zk-rollupによるプログラマブルプライバシー"
+		},
+		"nocturne": {
+			"description": "Ethereumのプライベートアカウントレイヤー"
+		},
+		"umbra": {
+			"description": "EVMチェーン上のステルスアドレス支払い"
+		},
+		"labyrinth": {
+			"description": "機関向けコンプライアント・プライバシー"
+		},
+		"elusiv": {
+			"description": "Solana上のコンプライアント・プライバシー支払い"
+		},
+		"zcash": {
+			"description": "シールドトランザクション付きネイティブプライバシーブロックチェーン"
+		},
+		"forta": {
+			"description": "リアルタイム脅威検出ネットワーク"
+		},
+		"code4rena": {
+			"description": "コミュニティ主導監査コンテスト"
+		},
+		"sherlock": {
+			"description": "エクスプロイトカバレッジ付き監査コンテスト"
+		},
+		"chainsecurity": {
+			"description": "ChainSecurity - セキュリティツール"
+		},
+		"halborn": {
+			"description": "Halborn - セキュリティツール"
+		},
+		"zellic": {
+			"description": "Zellic - セキュリティツール"
+		},
+		"veridise": {
+			"description": "Veridise - セキュリティツール"
+		},
+		"pessimistic": {
+			"description": "Pessimistic - セキュリティツール"
+		},
+		"cyfrin": {
+			"description": "Cyfrin - セキュリティツール"
+		},
+		"yaudit": {
+			"description": "yAudit - セキュリティツール"
+		}
+	}
+}

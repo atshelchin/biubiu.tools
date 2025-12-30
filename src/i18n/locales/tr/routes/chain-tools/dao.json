@@ -1,0 +1,80 @@
+{
+	"category_seo": {
+		"title": "DAO Araçları - Yönetişim, Oylama ve Hazine Yönetimi | BiuBiu Tools",
+		"description": "DAO oluşturma ve yönetme araçları. Yönetişim platformları, oylama sistemleri, hazine yönetimi ve katkıda bulunan koordinasyonu.",
+		"keywords": "dao araçları, yönetişim, oylama, dao hazinesi, merkezi olmayan organizasyon",
+		"faqs": [
+			{
+				"question": "DAO nedir?",
+				"answer": "DAO (Merkezi Olmayan Otonom Organizasyon), akıllı sözleşmeler ve token sahibi oylarıyla yönetilen bir organizasyondur. Üyeler merkezi otorite olmadan kararları önerir ve oylar."
+			},
+			{
+				"question": "DAO yönetimine nasıl katılırım?",
+				"answer": "DAO'nun yönetişim token'ına sahip olun, ardından zincir dışı oylama için Snapshot veya zincir üstü oylama için Tally gibi platformları kullanın. Bazı DAO'lar oylamadan önce token delegasyonu gerektirir."
+			},
+			{
+				"question": "DAO'lar hangi araçları kullanır?",
+				"answer": "Gazsız oylama için Snapshot, zincir üstü yönetişim için Tally, hazine yönetimi için Gnosis Safe, katkıda bulunan ödülleri için Coordinape ve tartışmalar için Discourse/Commonwealth."
+			}
+		]
+	},
+	"tools": {
+		"snapshot": {
+			"description": "Yönetişim için zincir dışı gazsız oylama"
+		},
+		"tally": {
+			"description": "Zincir üstü yönetişim ve DAO yönetimi"
+		},
+		"aragon": {
+			"description": "Kolayca DAO oluşturun ve yönetin"
+		},
+		"colony": {
+			"description": "DAO altyapısı ve bordro"
+		},
+		"charmverse": {
+			"description": "Web3 çalışma alanı platformu"
+		},
+		"commonwealth": {
+			"description": "Yönetişim tartışması ve topluluk forumu"
+		},
+		"coordinape": {
+			"description": "Merkezi olmayan tazminat"
+		},
+		"daohaus": {
+			"description": "Moloch DAO başlatıcı"
+		},
+		"daolens": {
+			"description": "DAO analitik ve yönetişim platformu"
+		},
+		"dework": {
+			"description": "DAO görev yönetimi ve ödüller"
+		},
+		"guild": {
+			"description": "Token kapılı topluluklar"
+		},
+		"jokedao": {
+			"description": "Zincir üstü oylama yarışmaları ve yönetişim oyunları"
+		},
+		"jokerace": {
+			"description": "Zincir üstü oylama yarışmaları"
+		},
+		"karma": {
+			"description": "DAO katkıcı itibarı"
+		},
+		"kleros": {
+			"description": "Merkezi olmayan anlaşmazlık çözüm protokolü"
+		},
+		"lenster": {
+			"description": "Lens üzerinde merkezi olmayan sosyal"
+		},
+		"llama": {
+			"description": "DAO yönetişimi ve hazine operasyonları"
+		},
+		"push": {
+			"description": "Web3 bildirimleri ve sohbet"
+		},
+		"wonderverse": {
+			"description": "DAO görev yönetimi"
+		}
+	}
+}

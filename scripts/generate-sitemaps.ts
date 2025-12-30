@@ -19,6 +19,7 @@ import { join } from 'path';
 // Import data sources
 import rawChains from '../static/rpcs.json';
 import { categories } from '../src/features/chain-tools/data/categories';
+import { getToolIdsWithDetailPages } from '../src/features/chain-tools/data/tool-details';
 import { allAddresses, allNames } from '../src/features/address/data/index';
 import { localeMetas } from '../src/i18n/i18n.svelte';
 
@@ -324,6 +325,7 @@ function generateNamesSitemap(): string {
 function generateToolsSitemap(): string {
 	const urls: string[] = [];
 
+	// Category pages
 	for (const category of categories) {
 		const path = `/apps/chain-tools/${category.id}`;
 
@@ -334,6 +336,22 @@ function generateToolsSitemap(): string {
 		for (const locale of SUPPORTED_LOCALES) {
 			urls.push(
 				generateUrl(`/${locale}${path}`, { priority: 0.6, changefreq: 'weekly', baseRoute: path })
+			);
+		}
+	}
+
+	// Tool detail pages
+	const toolIds = getToolIdsWithDetailPages();
+	for (const toolId of toolIds) {
+		const path = `/apps/chain-tools/tool/${toolId}`;
+
+		// Main route
+		urls.push(generateUrl(path, { priority: 0.8, changefreq: 'weekly', baseRoute: path }));
+
+		// Localized routes
+		for (const locale of SUPPORTED_LOCALES) {
+			urls.push(
+				generateUrl(`/${locale}${path}`, { priority: 0.7, changefreq: 'weekly', baseRoute: path })
 			);
 		}
 	}
@@ -387,11 +405,14 @@ function main() {
 	console.log(`   ✓ ${allNames.length} names indexed`);
 
 	// Generate tools sitemap
+	const toolDetailIds = getToolIdsWithDetailPages();
 	console.log('🔧 Generating sitemap-tools.xml...');
 	const toolsSitemap = generateToolsSitemap();
 	writeFileSync(join(OUTPUT_DIR, 'sitemap-tools.xml'), toolsSitemap);
 	sitemapFiles.push('sitemap-tools.xml');
-	console.log(`   ✓ ${categories.length} tool categories indexed`);
+	console.log(
+		`   ✓ ${categories.length} tool categories + ${toolDetailIds.length} tool detail pages indexed`
+	);
 
 	// Generate sitemap index
 	console.log('\n📑 Generating sitemap.xml (index)...');

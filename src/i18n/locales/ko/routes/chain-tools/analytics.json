@@ -1,0 +1,140 @@
+{
+	"category_seo": {
+		"title": "Blockchain Analytics Tools - On-Chain Data & Insights | BiuBiu Tools",
+		"description": "Explore top blockchain analytics platforms for on-chain data, wallet tracking, and market insights. Tools like Dune, Nansen, and Arkham.",
+		"keywords": "blockchain analytics, on-chain data, dune analytics, nansen, arkham, wallet tracking",
+		"faqs": [
+			{
+				"question": "What is on-chain analytics?",
+				"answer": "On-chain analytics involves analyzing blockchain transaction data to gain insights about wallet behavior, fund flows, protocol usage, and market trends. It helps traders and researchers make informed decisions."
+			},
+			{
+				"question": "What is smart money tracking?",
+				"answer": "Smart money tracking monitors wallets of successful traders, whales, and institutions to understand their trading patterns and potentially follow their strategies."
+			},
+			{
+				"question": "Which analytics tool should I use?",
+				"answer": "Dune is great for custom SQL queries, Nansen for smart money tracking, Arkham for entity labeling, and DefiLlama for TVL data. Choose based on your specific needs."
+			}
+		]
+	},
+	"tools": {
+		"dune": {
+			"description": "맞춤형 SQL 쿼리로 블록체인 분석"
+		},
+		"defillama": {
+			"description": "DeFi TVL 수집기 및 프로토콜 분석"
+		},
+		"nansen": {
+			"description": "스마트 머니 추적 기능을 갖춘 온체인 분석"
+		},
+		"arkham": {
+			"description": "블록체인 인텔리전스 플랫폼"
+		},
+		"ultrasound": {
+			"description": "ETH 공급 및 소각 추적기"
+		},
+		"messari": {
+			"description": "암호화폐 리서치 및 데이터 플랫폼"
+		},
+		"coingecko": {
+			"description": "암호화폐 가격 및 시장 데이터"
+		},
+		"coinmarketcap": {
+			"description": "암호화폐 시가총액 순위"
+		},
+		"glassnode": {
+			"description": "온체인 시장 인텔리전스"
+		},
+		"dexscreener": {
+			"description": "실시간 DEX 페어 차트"
+		},
+		"defined": {
+			"description": "멀티체인 DEX 분석"
+		},
+		"tokenterminal": {
+			"description": "프로토콜 재무 및 수익 지표"
+		},
+		"artemis": {
+			"description": "펀더멘털 암호화폐 분석 및 리서치"
+		},
+		"growthepie": {
+			"description": "L2 분석 및 비교"
+		},
+		"dappradar": {
+			"description": "DApp 순위 및 추적"
+		},
+		"ethburned": {
+			"description": "이더리움 소각 통계"
+		},
+		"parsec": {
+			"description": "DeFi 분석 대시보드"
+		},
+		"eigenexplorer": {
+			"description": "EigenLayer 분석 탐색기"
+		},
+		"the_graph": {
+			"description": "블록체인 데이터 인덱싱을 위한 탈중앙화 프로토콜"
+		},
+		"flipside": {
+			"description": "SQL 쿼리를 이용한 블록체인 분석"
+		},
+		"footprint": {
+			"description": "노코드 블록체인 데이터 분석 플랫폼"
+		},
+		"cryptofees": {
+			"description": "프로토콜 수수료 및 수익 분석"
+		},
+		"openbb": {
+			"description": "오픈소스 투자 리서치 터미널"
+		},
+		"watchers": {
+			"description": "고래 지갑 추적 및 알림"
+		},
+		"cielo": {
+			"description": "소셜 지갑 추적 및 거래 피드"
+		},
+		"space_and_time": {
+			"description": "ZK 증명을 이용한 검증 가능한 데이터 웨어하우스"
+		},
+		"allium": {
+			"description": "기업용 블록체인 데이터 플랫폼"
+		},
+		"sentio": {
+			"description": "멀티체인 관측성 및 모니터링"
+		},
+		"defillama_yields": {
+			"description": "크로스체인 이자 농사 비교"
+		},
+		"defilabs": {
+			"description": "고래 및 스마트 머니 추적"
+		},
+		"chainanalytics": {
+			"description": "맞춤형 블록체인 데이터 대시보드"
+		},
+		"cookie3": {
+			"description": "Web3 마케팅 분석 플랫폼"
+		},
+		"chainbeat": {
+			"description": "블록체인 데이터 분석 플랫폼"
+		},
+		"bitquery": {
+			"description": "블록체인 데이터 API 및 분석"
+		},
+		"intotheblock": {
+			"description": "AI 기반 암호화폐 시장 인텔리전스"
+		},
+		"laevitas": {
+			"description": "암호화폐 파생상품 분석 플랫폼"
+		},
+		"kaiko": {
+			"description": "기관용 암호화폐 시장 데이터"
+		},
+		"amberdata": {
+			"description": "블록체인 및 암호화폐 데이터 인프라"
+		},
+		"blockpour": {
+			"description": "블록체인 분석 및 모니터링"
+		}
+	}
+}

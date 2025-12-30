@@ -1,0 +1,116 @@
+{
+	"category_seo": {
+		"title": "NFT Tools - Marketplaces, Analytics & Creation | BiuBiu Tools",
+		"description": "Find the best NFT marketplaces, analytics tools, and creation platforms. Discover OpenSea, Blur, and other top NFT tools.",
+		"keywords": "nft tools, nft marketplace, opensea, blur, nft analytics, nft creation",
+		"faqs": [
+			{
+				"question": "What is an NFT?",
+				"answer": "NFT (Non-Fungible Token) is a unique digital asset on the blockchain representing ownership of items like art, music, collectibles, and virtual real estate. Each NFT is unique and cannot be replicated."
+			},
+			{
+				"question": "Where can I buy NFTs?",
+				"answer": "Popular NFT marketplaces include OpenSea (largest general marketplace), Blur (for traders), Magic Eden (Solana), and Foundation (curated art). Each platform has different fees and features."
+			},
+			{
+				"question": "How do I create an NFT?",
+				"answer": "To create an NFT: 1) Create digital artwork or content, 2) Choose a blockchain (Ethereum, Solana, etc.), 3) Select a marketplace like OpenSea, 4) Connect your wallet and upload your content, 5) Set pricing and list for sale."
+			}
+		]
+	},
+	"tools": {
+		"opensea": {
+			"description": "최대 규모 NFT 마켓플레이스"
+		},
+		"blur": {
+			"description": "트레이더를 위한 프로 NFT 마켓플레이스"
+		},
+		"reservoir": {
+			"description": "NFT 유동성 인프라"
+		},
+		"rarible": {
+			"description": "모든 체인에서 NFT 생성 및 거래"
+		},
+		"zora": {
+			"description": "NFT 생성 및 마켓플레이스"
+		},
+		"foundation": {
+			"description": "큐레이팅된 디지털 아트 마켓플레이스"
+		},
+		"manifold": {
+			"description": "NFT 크리에이터 도구 및 컨트랙트"
+		},
+		"nftnerds": {
+			"description": "NFT 거래 및 분석"
+		},
+		"looksrare": {
+			"description": "커뮤니티 NFT 마켓플레이스"
+		},
+		"x2y2": {
+			"description": "낮은 수수료 NFT 마켓플레이스"
+		},
+		"gem": {
+			"description": "NFT 수집기 및 스위퍼"
+		},
+		"nftfi": {
+			"description": "NFT 담보 대출"
+		},
+		"arcade": {
+			"description": "NFT 대출 프로토콜"
+		},
+		"mintfun": {
+			"description": "NFT 민팅 발견 플랫폼"
+		},
+		"sudoswap": {
+			"description": "즉시 유동성 및 거래를 위한 NFT AMM"
+		},
+		"caviar": {
+			"description": "NFT 분할화 및 AMM 프로토콜"
+		},
+		"nftx": {
+			"description": "금고형 플로어 가격을 갖춘 NFT 유동성 프로토콜"
+		},
+		"tessera": {
+			"description": "분할화를 통한 집합적 NFT 소유권"
+		},
+		"premint": {
+			"description": "NFT 허용 목록 및 화이트리스트 관리 도구"
+		},
+		"bueno": {
+			"description": "노코드 생성형 NFT 아트 제작 도구"
+		},
+		"highlight": {
+			"description": "NFT 민팅 및 배포를 위한 크리에이터 도구"
+		},
+		"tokenproof": {
+			"description": "NFT 검증 및 토큰 게이트 경험"
+		},
+		"rabbithole": {
+			"description": "온체인 퀘스트 및 자격 증명 획득"
+		},
+		"tensor": {
+			"description": "Solana의 전문 NFT 거래"
+		},
+		"hyperspace": {
+			"description": "Solana의 NFT 수집기 및 마켓플레이스"
+		},
+		"tradeport": {
+			"description": "Sui 및 Aptos를 위한 NFT 마켓플레이스"
+		},
+		"campfire": {
+			"description": "Avalanche의 NFT 마켓플레이스"
+		},
+		"paintswap": {
+			"description": "Fantom 및 Sonic의 NFT 마켓플레이스"
+		},
+		"unlockd": {
+			"description": "NFT 담보 대출 플랫폼"
+		},
+		"formfunction": {
+			"description": "Solana NFT 마켓플레이스"
+		},
+		"oncyber": {
+			"description": "메타버스 NFT 갤러리 플랫폼"
+		}
+	}
+}

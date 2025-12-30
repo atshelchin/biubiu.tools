@@ -1,0 +1,76 @@
+{
+	"category_seo": {
+		"title": "Infrastruktur Blockchain - Node RPC, API & Layanan Data | BiuBiu Tools",
+		"description": "Layanan infrastruktur untuk aplikasi Web3. Provider node RPC, layanan indexing, API data, dan solusi penyimpanan terdesentralisasi.",
+		"faqs": [
+			{
+				"question": "Apa itu infrastruktur blockchain?",
+				"answer": "Infrastruktur blockchain mencakup node RPC untuk akses blockchain, indexer untuk query data, IPFS/Arweave untuk penyimpanan terdesentralisasi, dan oracle untuk data off-chain. Ini adalah tulang punggung dApp."
+			},
+			{
+				"question": "Haruskah saya menjalankan node sendiri?",
+				"answer": "Untuk sebagian besar proyek, menggunakan provider seperti Alchemy atau Infura lebih praktis. Jalankan node sendiri untuk desentralisasi maksimum, kebutuhan kustomisasi spesifik, atau akses data arsip."
+			},
+			{
+				"question": "Untuk apa The Graph digunakan?",
+				"answer": "The Graph mengindeks data blockchain dan menyediakan API GraphQL. Ini membuat query data on-chain cepat dan efisien. Sebagian besar protokol DeFi utama menggunakan subgraph untuk frontend mereka."
+			}
+		]
+	},
+	"tools": {
+		"ankr": {
+			"description": "Endpoint RPC multi-chain dan infrastruktur staking"
+		},
+		"chainstack": {
+			"description": "Infrastruktur blockchain terkelola untuk enterprise"
+		},
+		"band_protocol": {
+			"description": "Oracle cross-chain dengan integrasi Cosmos SDK"
+		},
+		"ipfs": {
+			"description": "Penyimpanan file terdesentralisasi dan pengalamatan konten"
+		},
+		"arweave": {
+			"description": "Penyimpanan data terdesentralisasi permanen"
+		},
+		"filecoin": {
+			"description": "Jaringan penyimpanan terdesentralisasi dengan insentif"
+		},
+		"ceramic": {
+			"description": "Stream data terdesentralisasi dan data composable"
+		},
+		"walletconnect": {
+			"description": "Protokol terbuka untuk menghubungkan wallet ke DApp"
+		},
+		"grove": {
+			"description": "Relay RPC terdesentralisasi didukung POKT"
+		},
+		"drpc": {
+			"description": "Provider RPC multi-chain terdesentralisasi"
+		},
+		"nodies": {
+			"description": "Infrastruktur node RPC multi-chain"
+		},
+		"llamanodes": {
+			"description": "RPC fokus privasi dengan perlindungan MEV"
+		},
+		"getblock": {
+			"description": "Akses node multi-chain dan provider RPC"
+		},
+		"switchboard": {
+			"description": "Oracle terdesentralisasi untuk Solana dan chain Move"
+		},
+		"dia": {
+			"description": "Platform oracle transparan dan dapat disesuaikan"
+		},
+		"tellor": {
+			"description": "Oracle tanpa izin dengan mekanisme sengketa dan staking"
+		},
+		"blockpi": {
+			"description": "Provider infrastruktur RPC multi-chain"
+		},
+		"nodereal": {
+			"description": "Platform layanan node blockchain enterprise"
+		}
+	}
+}

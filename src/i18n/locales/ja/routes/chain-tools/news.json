@@ -1,0 +1,155 @@
+{
+	"category_seo": {
+		"title": "暗号資産ニュース - 市場動向と業界報道 | BiuBiu Tools",
+		"description": "暗号資産ニュースソースで情報を入手。市場分析、プロジェクト更新、規制ニュース、業界トレンド。",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "信頼できる暗号資産ニュースソースは何ですか？",
+				"answer": "機関投資家向けはThe BlockとCoinDesk。アクセシブルなニュースはDecrypt。DeFi重視はBanklessとThe Defiant。常に相互参照し、スポンサードコンテンツに注意してください。"
+			},
+			{
+				"question": "暗号資産の最新情報をどのように入手しますか？",
+				"answer": "Crypto Twitter/Xで主要アカウントをフォローしてください。BanklessやWeek in Ethereumなどのニュースレターを購読してください。CryptoPanicなどのアグリゲーターを使用してください。フォローしているプロジェクトのDiscordコミュニティに参加してください。"
+			},
+			{
+				"question": "FUDと誤情報をどのように識別しますか？",
+				"answer": "複数のソースを確認し、可能な限りオンチェーンで主張を検証し、匿名ソースに懐疑的になり、情報を共有している人の動機を理解してください。"
+			}
+		]
+	},
+	"tools": {
+		"theblock": {
+			"description": "The Block - 暗号資産ニュースとリサーチ"
+		},
+		"coindesk": {
+			"description": "CoinDesk - 暗号資産ニュースとリサーチ"
+		},
+		"cointelegraph": {
+			"description": "Cointelegraph - 暗号資産ニュースとリサーチ"
+		},
+		"decrypt": {
+			"description": "Decrypt - 暗号資産ニュースとリサーチ"
+		},
+		"blockworks": {
+			"description": "Blockworks - 暗号資産ニュースとリサーチ"
+		},
+		"dlnews": {
+			"description": "DL News - 暗号資産ニュースとリサーチ"
+		},
+		"rootdata": {
+			"description": "RootData - 暗号資産ニュースとリサーチ"
+		},
+		"cryptorank": {
+			"description": "CryptoRank - 暗号資産ニュースとリサーチ"
+		},
+		"bankless": {
+			"description": "Bankless - 暗号資産ニュースとリサーチ"
+		},
+		"defiant": {
+			"description": "The Defiant - 暗号資産ニュースとリサーチ"
+		},
+		"epicenter": {
+			"description": "Epicenter - 暗号資産ニュースとリサーチ"
+		},
+		"bitcoinist": {
+			"description": "Bitcoinist - 暗号資産ニュースとリサーチ"
+		},
+		"beincrypto": {
+			"description": "BeInCrypto - 暗号資産ニュースとリサーチ"
+		},
+		"cryptobriefing": {
+			"description": "Crypto Briefing - 暗号資産ニュースとリサーチ"
+		},
+		"odaily": {
+			"description": "Odaily - 暗号資産ニュースとリサーチ"
+		},
+		"panews": {
+			"description": "PANews - 暗号資産ニュースとリサーチ"
+		},
+		"techflow": {
+			"description": "TechFlow - 暗号資産ニュースとリサーチ"
+		},
+		"chaincatcher": {
+			"description": "ChainCatcher - 暗号資産ニュースとメディア"
+		},
+		"marsbit": {
+			"description": "MarsBit - 暗号資産ニュースとメディア"
+		},
+		"blockbeats": {
+			"description": "BlockBeats - 暗号資産ニュースとメディア"
+		},
+		"jinse": {
+			"description": "Jinse Finance - 暗号資産ニュースとメディア"
+		},
+		"coindeskjapan": {
+			"description": "CoinDesk Japan - 暗号資産ニュースとメディア"
+		},
+		"ambcrypto": {
+			"description": "AMBCrypto - 暗号資産ニュースとメディア"
+		},
+		"newsbtc": {
+			"description": "NewsBTC - 暗号資産ニュースとメディア"
+		},
+		"dailycoin": {
+			"description": "DailyCoin - 暗号資産ニュースとメディア"
+		},
+		"coinspeaker": {
+			"description": "Coinspeaker - 暗号資産ニュースとメディア"
+		},
+		"bitcoinmagazine": {
+			"description": "Bitcoin Magazine - 暗号資産ニュースとメディア"
+		},
+		"protos": {
+			"description": "Protos - 暗号資産ニュースとメディア"
+		},
+		"web3isgoinggreat": {
+			"description": "Web3 Is Going Great - 暗号資産ニュースとメディア"
+		},
+		"thedefireport": {
+			"description": "The DeFi Report - 暗号資産ニュースとメディア"
+		},
+		"cryptotvplus": {
+			"description": "CryptoTVPlus - 暗号資産ニュースとメディア"
+		},
+		"bitcoinke": {
+			"description": "BitcoinKE - 暗号資産ニュースとメディア"
+		},
+		"coinpedia": {
+			"description": "Coinpedia - 暗号資産ニュースとメディア"
+		},
+		"cryptopotato": {
+			"description": "CryptoPotato - 暗号資産ニュースとメディア"
+		},
+		"btcpulse": {
+			"description": "BTC Pulse - 暗号資産ニュースとメディア"
+		},
+		"blockonomi": {
+			"description": "Blockonomi - 暗号資産ニュースとメディア"
+		},
+		"coincodex": {
+			"description": "CoinCodex - 暗号資産ニュースとメディア"
+		},
+		"tokeninsight": {
+			"description": "TokenInsight - 暗号資産ニュースとメディア"
+		},
+		"bitbo": {
+			"description": "Bitbo - 暗号資産ニュースとメディア"
+		},
+		"lookintochains": {
+			"description": "Look Into Chains - 暗号資産ニュースとメディア"
+		},
+		"vettafi": {
+			"description": "VettaFi - 暗号資産ニュースとメディア"
+		},
+		"a16zcrypto": {
+			"description": "a16z Crypto - 暗号資産ニュースとメディア"
+		},
+		"binanceresearch": {
+			"description": "Binance Research - 暗号資産ニュースとメディア"
+		},
+		"coinbaselearn": {
+			"description": "Coinbase Learn - 暗号資産ニュースとメディア"
+		}
+	}
+}

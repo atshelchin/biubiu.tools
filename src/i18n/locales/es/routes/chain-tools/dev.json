@@ -1,0 +1,122 @@
+{
+	"category_seo": {
+		"title": "Herramientas para Desarrolladores Web3 - Construye en Blockchain | BiuBiu Tools",
+		"description": "Herramientas esenciales de desarrollo para construir dApps: Hardhat, Foundry, Remix, The Graph, APIs de nodos y más frameworks de contratos inteligentes.",
+		"keywords": "herramientas dev web3, desarrollo blockchain, hardhat, foundry, remix, the graph, desarrollo contrato inteligente",
+		"faqs": [
+			{
+				"question": "¿Qué herramientas necesito para desarrollar en Web3?",
+				"answer": "Las herramientas esenciales incluyen: frameworks de contratos inteligentes (Hardhat/Foundry), IDE (Remix/VS Code), proveedores de nodos (Alchemy/Infura), bibliotecas Web3 (ethers.js/viem) y servicios de indexación (The Graph)."
+			},
+			{
+				"question": "¿Hardhat vs Foundry?",
+				"answer": "Hardhat es un framework JavaScript maduro y con gran ecosistema de plugins. Foundry es más rápido, usa Solidity para tests y es preferido para contratos complejos. Muchos desarrolladores usan ambos dependiendo del proyecto."
+			},
+			{
+				"question": "¿Cómo pruebo contratos inteligentes?",
+				"answer": "Escribe pruebas unitarias usando frameworks de testing (Hardhat/Foundry), despliega en redes de prueba (Sepolia/Goerli), usa redes locales (Anvil/Ganache) y considera auditorías de seguridad antes del despliegue en mainnet."
+			}
+		]
+	},
+	"tools": {
+		"tenderly": {
+			"description": "Tenderly - Depuración y monitoreo de contratos inteligentes"
+		},
+		"chainlist": {
+			"description": "Agregar redes EVM a tu billetera"
+		},
+		"remix": {
+			"description": "IDE de Solidity basado en navegador"
+		},
+		"foundry": {
+			"description": "Toolkit de Solidity ultra rápido"
+		},
+		"hardhat": {
+			"description": "Entorno de desarrollo Ethereum"
+		},
+		"viem": {
+			"description": "Biblioteca Ethereum para TypeScript"
+		},
+		"wagmi": {
+			"description": "Hooks de React para Ethereum"
+		},
+		"rainbowkit": {
+			"description": "UI de conexión de billetera para React"
+		},
+		"web3modal": {
+			"description": "Conexión de billetera multi-framework"
+		},
+		"thirdweb": {
+			"description": "Desarrollo Web3 full-stack"
+		},
+		"alchemy": {
+			"description": "Alchemy - Plataforma de desarrollo Web3 y APIs"
+		},
+		"infura": {
+			"description": "Infraestructura de API Ethereum"
+		},
+		"quicknode": {
+			"description": "Infraestructura de nodos multi-cadena"
+		},
+		"sourcify": {
+			"description": "Verificación descentralizada de contratos"
+		},
+		"brownie": {
+			"description": "Framework de contratos inteligentes en Python"
+		},
+		"ape": {
+			"description": "Framework modular de Python"
+		},
+		"pyth": {
+			"description": "Oráculo de precios en tiempo real"
+		},
+		"goldsky": {
+			"description": "Streaming e indexación de datos blockchain en tiempo real"
+		},
+		"envio": {
+			"description": "HyperSync para indexación blockchain ultra rápida"
+		},
+		"covalent": {
+			"description": "API unificada de datos blockchain"
+		},
+		"transpose": {
+			"description": "Datos blockchain en tiempo real con API SQL"
+		},
+		"chainbase": {
+			"description": "Plataforma de datos todo en uno"
+		},
+		"useweb3": {
+			"description": "Recursos curados de aprendizaje Web3"
+		},
+		"buildspace": {
+			"description": "Comunidad de aprendizaje Web3 basado en proyectos"
+		},
+		"pointer": {
+			"description": "Aprender desarrollo Web3 y ganar crypto"
+		},
+		"chainide": {
+			"description": "IDE de desarrollo multi-cadena basado en la nube"
+		},
+		"constructor": {
+			"description": "Constructor visual de contratos inteligentes sin código"
+		},
+		"bunzz": {
+			"description": "Mercado de despliegue de contratos inteligentes"
+		},
+		"crossmint": {
+			"description": "API de minteo NFT con pagos fiat"
+		},
+		"moralis": {
+			"description": "APIs Web3 para desarrollo de DApps"
+		},
+		"circom": {
+			"description": "Lenguaje de circuitos para pruebas zero-knowledge"
+		},
+		"protostar": {
+			"description": "Framework de Cairo para Starknet"
+		},
+		"starkli": {
+			"description": "Herramienta CLI para Starknet"
+		}
+	}
+}

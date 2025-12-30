@@ -1,0 +1,95 @@
+{
+	"category_seo": {
+		"title": "Zincirler Arası Köprüler - Blokzincirler Arasında Varlık Transferi | BiuBiu Tools",
+		"description": "Ethereum, Arbitrum, Optimism, Base ve diğer ağlar arasında token'ları güvenli bir şekilde transfer etmek için en iyi zincirler arası köprüleri bulun.",
+		"keywords": "zincirler arası köprüler, blokzincir köprüleri, layer 2 köprüler, kripto transferi",
+		"faqs": [
+			{
+				"question": "Zincirler arası köprü nedir?",
+				"answer": "Zincirler arası köprü, farklı blokzincir ağları arasında token ve veri transfer etmenizi sağlayan bir protokoldür. Kaynak zincirde varlıkları kilitler ve hedef zincirde eşdeğer token'lar oluşturur."
+			},
+			{
+				"question": "Hangi köprüler en güvenlidir?",
+				"answer": "L2'lerden gelen yerel köprüler (Arbitrum Bridge, Optimism Bridge gibi) genellikle en güvenlidir ancak daha yavaştır. Stargate, Across ve Hop gibi üçüncü taraf köprüler makul güvenlikle daha hızlı transferler sunar. Her zaman köprü denetim durumunu kontrol edin."
+			},
+			{
+				"question": "Köprü transferleri ne kadar sürer?",
+				"answer": "Yerel L2 köprüleri, sahtekarlık kanıtı dönemleri nedeniyle çekimler için 7+ gün sürer. Stargate veya Across gibi hızlı köprüler dakikalar içinde tamamlanır. Hız-güvenlik değiş tokuşunu anlamak önemlidir."
+			}
+		]
+	},
+	"tools": {
+		"across": {
+			"description": "Hızlı ve ucuz zincirler arası köprü"
+		},
+		"stargate": {
+			"description": "LayerZero destekli omnchain köprü"
+		},
+		"orbiter": {
+			"description": "L2 çapraz rollup köprüsü"
+		},
+		"allbridge": {
+			"description": "Çoklu zincir stablecoin köprüsü"
+		},
+		"bungee": {
+			"description": "Gaz doldurma özelliği ile köprü toplayıcısı"
+		},
+		"cbridge": {
+			"description": "Celer zincirler arası köprü"
+		},
+		"connext": {
+			"description": "Güvensiz zincirler arası köprü"
+		},
+		"debridge": {
+			"description": "Zincirler arası birlikte çalışabilirlik"
+		},
+		"dln": {
+			"description": "DeBridge limit emir zincirler arası ticaret"
+		},
+		"hop": {
+			"description": "L2'den L2'ye token köprüsü"
+		},
+		"hyphen": {
+			"description": "Anında zincirler arası transferler"
+		},
+		"jumper": {
+			"description": "LI.FI tarafından çoklu zincir köprü toplayıcısı"
+		},
+		"layerswap": {
+			"description": "CEX'ten L2'ye hızlı köprü"
+		},
+		"multichain": {
+			"description": "Çoklu zincir router protokolü"
+		},
+		"owlto": {
+			"description": "Hızlı ve ucuz L2 köprüsü"
+		},
+		"portal": {
+			"description": "Wormhole Portal köprüsü"
+		},
+		"relay": {
+			"description": "Anında zincirler arası köprüleme çözümü"
+		},
+		"rhino": {
+			"description": "Kendi saklamalı köprü toplayıcısı"
+		},
+		"socket": {
+			"description": "En iyi rotalar için köprü toplayıcısı"
+		},
+		"squid": {
+			"description": "Zincirler arası takas yönlendiricisi"
+		},
+		"superbridge": {
+			"description": "Optimism ve Base için yerel köprü"
+		},
+		"symbiosis": {
+			"description": "Zincirler arası likidite protokolü ve DEX"
+		},
+		"synapse": {
+			"description": "Zincirler arası köprü ve takas"
+		},
+		"wormhole": {
+			"description": "Zincirler arası mesajlaşma protokolü"
+		}
+	}
+}

@@ -1,0 +1,50 @@
+{
+	"category_seo": {
+		"title": "Web3 Funding - Grants, VCs & Fundraising | BiuBiu Tools",
+		"description": "Find funding sources for Web3 projects. Ecosystem grants, VC investors, crowdfunding platforms, and accelerator programs.",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "How do Web3 projects get funded?",
+				"answer": "Options include ecosystem grants (Ethereum Foundation, L2 grants), VC funding (a16z, Paradigm), token launches (launchpads), and retroactive funding (Optimism RetroPGF)."
+			},
+			{
+				"question": "What are ecosystem grants?",
+				"answer": "Grants from blockchain foundations to fund development. Ethereum Foundation, Uniswap Grants, Arbitrum Foundation, and others fund projects building on their ecosystems."
+			},
+			{
+				"question": "How do I pitch to crypto VCs?",
+				"answer": "Build a working product first. Crypto VCs value technical founders and open-source contributions. Network at conferences, get warm intros, and show traction metrics like TVL or users."
+			}
+		]
+	},
+	"tools": {
+		"paradigm": {
+			"description": "대표 암호화폐 벤처 캐피탈"
+		},
+		"polychain": {
+			"description": "블록체인 투자 펀드"
+		},
+		"pantera": {
+			"description": "암호화폐 헤지 펀드"
+		},
+		"multicoin": {
+			"description": "암호화폐 투자 펀드"
+		},
+		"dragonfly": {
+			"description": "크로스보더 Web3 VC"
+		},
+		"variant": {
+			"description": "Web3 벤처 캐피탈"
+		},
+		"placeholder": {
+			"description": "암호화폐 투자 펀드"
+		},
+		"coinlist": {
+			"description": "토큰 세일 및 투자 플랫폼"
+		},
+		"kernel": {
+			"description": "Web3 학습 커뮤니티"
+		}
+	}
+}

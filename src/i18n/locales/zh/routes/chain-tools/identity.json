@@ -1,0 +1,79 @@
+{
+	"category_seo": {
+		"title": "Web3 身份 - ENS、Lens 与去中心化身份 | BiuBiu Tools",
+		"description": "Web3 的去中心化身份解决方案。域名（ENS）、社交资料（Lens）、凭证和声誉系统。",
+		"faqs": [
+			{
+				"question": "什么是 Web3 身份？",
+				"answer": "Web3 身份让你在链上拥有自己的数字身份。这包括域名（ENS）、社交资料（Lens）、可验证凭证和跨 dApp 的声誉分数。"
+			},
+			{
+				"question": "应该购买 ENS 域名吗？",
+				"answer": "是的，ENS 域名用可读名称（yourname.eth）替代复杂的钱包地址。它们在钱包和 dApp 之间通用。你还可以将它们用作去中心化网站。"
+			},
+			{
+				"question": "什么是 Lens Protocol？",
+				"answer": "Lens Protocol 是一个去中心化社交图谱，你的个人资料、内容和关注者都是 NFT。基于 Lens 构建的应用包括 Lenster、Hey 和 Orb。"
+			}
+		]
+	},
+	"tools": {
+		"ens": {
+			"description": "以太坊域名服务，人类可读地址"
+		},
+		"dotbit": {
+			"description": "跨链去中心化身份协议"
+		},
+		"galxe": {
+			"description": "Web3 凭证和活动平台"
+		},
+		"layer3": {
+			"description": "学习赚钱任务和 Web3 入门"
+		},
+		"degenscore": {
+			"description": "链上声誉和 DeFi 评分"
+		},
+		"civic": {
+			"description": "身份验证和 KYC 解决方案"
+		},
+		"poap": {
+			"description": "活动出席证明徽章协议"
+		},
+		"phi": {
+			"description": "链上身份可视化土地"
+		},
+		"otterspace": {
+			"description": "不可转让徽章凭证协议"
+		},
+		"disco": {
+			"description": "去中心化身份数据背包"
+		},
+		"holonym": {
+			"description": "零知识人格证明协议"
+		},
+		"anima": {
+			"description": "生物识别身份验证"
+		},
+		"rarimo": {
+			"description": "Rarimo - Identity and credentials"
+		},
+		"verax": {
+			"description": "Verax - Identity and credentials"
+		},
+		"bns": {
+			"description": "BNS (Base Name Service) - Identity and credentials"
+		},
+		"eas": {
+			"description": "EAS (Ethereum Attestation Service) - Identity and credentials"
+		},
+		"zkpass": {
+			"description": "zkPass - Identity and credentials"
+		},
+		"brightid": {
+			"description": "BrightID - Identity and credentials"
+		},
+		"nomis": {
+			"description": "Nomis - Identity and credentials"
+		}
+	}
+}

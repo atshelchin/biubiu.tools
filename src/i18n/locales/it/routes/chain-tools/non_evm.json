@@ -1,0 +1,76 @@
+{
+	"category_seo": {
+		"title": "Blockchain Non-EVM - Solana, Bitcoin, Cosmos e Altre | BiuBiu Tools",
+		"description": "Esplora ecosistemi blockchain non-EVM. Solana, Bitcoin, Cosmos, Aptos, Sui e i loro strumenti e dApp unici.",
+		"faqs": [
+			{
+				"question": "Cosa sono le chain non-EVM?",
+				"answer": "Le chain non-EVM non usano la macchina virtuale di Ethereum. Hanno architetture diverse - Solana usa Rust, Bitcoin ha il suo script, Cosmos usa CosmWasm. Ognuna ha compromessi unici."
+			},
+			{
+				"question": "Perché usare chain non-EVM?",
+				"answer": "Chain diverse ottimizzano per cose diverse. Solana per velocità e basse commissioni, Bitcoin per sicurezza e decentralizzazione, Cosmos per interoperabilità, chain Move per sicurezza."
+			},
+			{
+				"question": "Come faccio bridge verso chain non-EVM?",
+				"answer": "Usa bridge specifici come Wormhole (multi-chain), Portal (Solana) o IBC (Cosmos). Alcuni exchange centralizzati supportano depositi/prelievi diretti verso chain non-EVM."
+			}
+		]
+	},
+	"tools": {
+		"solscan": {
+			"description": "Explorer Solana popolare con analisi token e supporto NFT"
+		},
+		"mintscan": {
+			"description": "Explorer ecosistema Cosmos multi-chain"
+		},
+		"tonscan": {
+			"description": "Explorer blockchain TON per transazioni e jetton"
+		},
+		"raydium": {
+			"description": "AMM Solana e provider liquidità con pool concentrate"
+		},
+		"osmosis": {
+			"description": "DEX leader in ecosistema Cosmos con integrazione IBC"
+		},
+		"injective": {
+			"description": "Chain Cosmos focalizzata su DeFi per trading derivati"
+		},
+		"celestia": {
+			"description": "Layer disponibilità dati modulare per rollup"
+		},
+		"dymension": {
+			"description": "Hub RollApp costruito su Cosmos per rollup modulari"
+		},
+		"liquidswap": {
+			"description": "Primo AMM DEX su Aptos da Pontem"
+		},
+		"tonkeeper": {
+			"description": "Wallet TON popolare con integrazione Telegram"
+		},
+		"dedust": {
+			"description": "DEX e piattaforma DeFi su TON"
+		},
+		"algorand": {
+			"description": "Blockchain Pure Proof of Stake con finalità istantanea"
+		},
+		"cardano": {
+			"description": "Blockchain guidata da ricerca con sviluppo peer-reviewed"
+		},
+		"polkadot": {
+			"description": "Rete multi-chain eterogenea con parachain"
+		},
+		"subscan": {
+			"description": "Explorer multi-chain per reti Polkadot e Substrate"
+		},
+		"tezos": {
+			"description": "Blockchain auto-modificante con verifica formale"
+		},
+		"stacks": {
+			"description": "L2 Bitcoin portando smart contract a BTC"
+		},
+		"layerzero": {
+			"description": "Protocollo interoperabilità omnichain per messaggistica trustless"
+		}
+	}
+}

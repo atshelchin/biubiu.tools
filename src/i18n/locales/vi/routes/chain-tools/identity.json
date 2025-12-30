@@ -1,0 +1,79 @@
+{
+	"category_seo": {
+		"title": "Danh Tính Web3 - ENS, Lens & Decentralized Identity | BiuBiu Tools",
+		"description": "Giải pháp danh tính phi tập trung cho Web3. Tên miền (ENS), hồ sơ xã hội (Lens), thông tin xác thực và hệ thống uy tín.",
+		"faqs": [
+			{
+				"question": "Danh tính Web3 là gì?",
+				"answer": "Danh tính Web3 cho phép bạn sở hữu danh tính kỹ thuật số của mình on-chain. Điều này bao gồm tên miền (ENS), hồ sơ xã hội (Lens), thông tin xác thực có thể kiểm chứng và điểm uy tín trên các dApp."
+			},
+			{
+				"question": "Tôi có nên mua tên miền ENS không?",
+				"answer": "Có, tên miền ENS thay thế địa chỉ ví phức tạp bằng tên dễ đọc (yourname.eth). Chúng hoạt động trên các ví và dApp. Bạn cũng có thể sử dụng chúng như trang web phi tập trung."
+			},
+			{
+				"question": "Lens Protocol là gì?",
+				"answer": "Lens Protocol là biểu đồ xã hội phi tập trung nơi bạn sở hữu hồ sơ, nội dung và người theo dõi của mình dưới dạng NFT. Các ứng dụng được xây dựng trên Lens bao gồm Lenster, Hey và Orb."
+			}
+		]
+	},
+	"tools": {
+		"ens": {
+			"description": "Dịch vụ tên miền Ethereum cho địa chỉ dễ đọc"
+		},
+		"dotbit": {
+			"description": "Giao thức danh tính phi tập trung đa chuỗi"
+		},
+		"galxe": {
+			"description": "Nền tảng thông tin xác thực và chiến dịch Web3"
+		},
+		"layer3": {
+			"description": "Nhiệm vụ học để kiếm và onboarding Web3"
+		},
+		"degenscore": {
+			"description": "Uy tín on-chain và điểm DeFi"
+		},
+		"civic": {
+			"description": "Xác minh danh tính và giải pháp KYC"
+		},
+		"poap": {
+			"description": "Giao thức bằng chứng tham dự cho huy hiệu sự kiện"
+		},
+		"phi": {
+			"description": "Danh tính metaverse và vùng đất thông tin xác thực"
+		},
+		"otterspace": {
+			"description": "Huy hiệu soulbound cho thành viên DAO"
+		},
+		"disco": {
+			"description": "Ba lô dữ liệu thông tin xác thực có thể kiểm chứng"
+		},
+		"holonym": {
+			"description": "Xác minh danh tính bảo vệ quyền riêng tư với ZK"
+		},
+		"anima": {
+			"description": "Danh tính sinh trắc học để chống sybil"
+		},
+		"rarimo": {
+			"description": "Giao thức danh tính đa chuỗi"
+		},
+		"verax": {
+			"description": "Đăng ký xác thực on-chain"
+		},
+		"bns": {
+			"description": "Dịch vụ tên miền Base"
+		},
+		"eas": {
+			"description": "Dịch vụ xác thực Ethereum"
+		},
+		"zkpass": {
+			"description": "Xác minh dữ liệu riêng tư với ZK"
+		},
+		"brightid": {
+			"description": "Mạng xác minh danh tính xã hội"
+		},
+		"nomis": {
+			"description": "Điểm uy tín on-chain đa chuỗi"
+		}
+	}
+}

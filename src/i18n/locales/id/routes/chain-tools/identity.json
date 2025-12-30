@@ -1,0 +1,79 @@
+{
+	"category_seo": {
+		"title": "Identitas Web3 - ENS, Lens & Identitas Terdesentralisasi | BiuBiu Tools",
+		"description": "Solusi identitas terdesentralisasi untuk Web3. Nama domain (ENS), profil sosial (Lens), kredensial, dan sistem reputasi.",
+		"faqs": [
+			{
+				"question": "Apa itu identitas Web3?",
+				"answer": "Identitas Web3 memungkinkan Anda memiliki identitas digital on-chain. Ini mencakup nama domain (ENS), profil sosial (Lens), kredensial terverifikasi, dan skor reputasi di seluruh dApp."
+			},
+			{
+				"question": "Haruskah saya mendapatkan domain ENS?",
+				"answer": "Ya, domain ENS mengganti alamat wallet yang kompleks dengan nama yang dapat dibaca (namakamu.eth). Mereka bekerja di seluruh wallet dan dApp. Anda juga dapat menggunakannya sebagai website terdesentralisasi."
+			},
+			{
+				"question": "Apa itu Lens Protocol?",
+				"answer": "Lens Protocol adalah social graph terdesentralisasi di mana Anda memiliki profil, konten, dan follower sebagai NFT. Aplikasi yang dibangun di Lens termasuk Lenster, Hey, dan Orb."
+			}
+		]
+	},
+	"tools": {
+		"ens": {
+			"description": "Layanan nama Ethereum untuk alamat yang mudah dibaca"
+		},
+		"dotbit": {
+			"description": "Protokol identitas terdesentralisasi cross-chain"
+		},
+		"galxe": {
+			"description": "Platform kredensial dan kampanye Web3"
+		},
+		"layer3": {
+			"description": "Quest learn-to-earn dan onboarding Web3"
+		},
+		"degenscore": {
+			"description": "Reputasi on-chain dan skor DeFi"
+		},
+		"civic": {
+			"description": "Solusi verifikasi identitas dan KYC"
+		},
+		"poap": {
+			"description": "Proof of Attendance Protocol untuk badge acara"
+		},
+		"phi": {
+			"description": "Metaverse identitas dan tanah kredensial"
+		},
+		"otterspace": {
+			"description": "Badge soulbound untuk keanggotaan DAO"
+		},
+		"disco": {
+			"description": "Data backpack kredensial yang dapat diverifikasi"
+		},
+		"holonym": {
+			"description": "Verifikasi identitas yang menjaga privasi dengan ZK"
+		},
+		"anima": {
+			"description": "Identitas biometrik untuk resistensi sybil"
+		},
+		"rarimo": {
+			"description": "Protokol identitas privasi cross-chain"
+		},
+		"verax": {
+			"description": "Registry atestasi on-chain untuk kredensial"
+		},
+		"bns": {
+			"description": "Base Name Service untuk identitas di Base"
+		},
+		"eas": {
+			"description": "Layanan atestasi Ethereum untuk kredensial on-chain"
+		},
+		"zkpass": {
+			"description": "Verifikasi data privat dengan zero-knowledge proof"
+		},
+		"brightid": {
+			"description": "Jaringan identitas sosial untuk verifikasi proof-of-uniqueness"
+		},
+		"nomis": {
+			"description": "Protokol skor reputasi multi-chain"
+		}
+	}
+}

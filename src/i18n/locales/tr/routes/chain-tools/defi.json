@@ -1,0 +1,309 @@
+{
+	"category_seo": {
+		"title": "DeFi Araçları - Merkezi Olmayan Finans Protokolleri ve Uygulamaları | BiuBiu Tools",
+		"description": "Token takası, kredi verme, yield farming ve daha fazlası için en iyi DeFi araçlarını keşfedin. Uniswap, Aave, Curve ve Compound gibi  önde gelen protokolleri karşılaştırın.",
+		"keywords": "defi araçları, merkezi olmayan finans, dex, kredi verme, yield farming, uniswap, aave, compound",
+		"faqs": [
+			{
+				"question": "DeFi nedir?",
+				"answer": "DeFi (Merkezi Olmayan Finans), bankalar gibi geleneksel aracılar olmadan çalışan, blokzincir teknolojisi üzerine inşa edilmiş finansal hizmetleri ifade eder. Kripto varlıklar üzerinde kredi verme, borçlanma, ticaret ve faiz kazanmayı içerir."
+			},
+			{
+				"question": "DeFi kullanmanın riskleri nelerdir?",
+				"answer": "DeFi riskleri arasında akıllı sözleşme güvenlik açıkları, likidite havuzlarındaki kalıcı kayıplar, piyasa volatilitesi ve potansiyel rug pull'lar bulunur. Her zaman kendi araştırmanızı yapın ve sadece kaybetmeyi göze alabileceğiniz kadar yatırım yapın."
+			},
+			{
+				"question": "DeFi ile nasıl başlarım?",
+				"answer": "DeFi ile başlamak için: 1) MetaMask gibi bir kripto cüzdanı kurun, 2) Bir miktar ETH veya başka kripto satın alın, 3) Cüzdanınızı bir DeFi platformuna bağlayın, 4) Gelişmiş özellikleri denemeden önce basit takaslarla başlayın."
+			},
+			{
+				"question": "DeFi'de TVL nedir?",
+				"answer": "TVL (Toplam Kilitli Değer), bir DeFi protokolüne yatırılan varlıkların toplam miktarını temsil eder. Bir protokolün popülaritesini ve güvenlik seviyesini ölçmek için önemli bir metriktir."
+			}
+		]
+	},
+	"tools": {
+		"uniswap": {
+			"description": "Token takası için önde gelen merkezi olmayan borsa"
+		},
+		"aave": {
+			"description": "Merkezi olmayan kredi verme ve borçlanma protokolü"
+		},
+		"1inch": {
+			"description": "En iyi takas fiyatları için DEX toplayıcısı"
+		},
+		"curve": {
+			"description": "Düşük slippage ile stablecoin odaklı AMM"
+		},
+		"lido": {
+			"description": "Ethereum ve diğerleri için likit stake"
+		},
+		"compound": {
+			"description": "Algoritmik para piyasası protokolü"
+		},
+		"maker": {
+			"description": "DAI stablecoin ve kredi protokolü"
+		},
+		"gmx": {
+			"description": "Merkezi olmayan kalıcı borsa"
+		},
+		"pancakeswap": {
+			"description": "BNB Chain'de önde gelen DEX"
+		},
+		"sushiswap": {
+			"description": "Çoklu zincir AMM ve DeFi platformu"
+		},
+		"balancer": {
+			"description": "Otomatik portföy yöneticisi ve DEX"
+		},
+		"dydx": {
+			"description": "Merkezi olmayan kalıcı ticaret borsası"
+		},
+		"convex": {
+			"description": "CRV kilitleme olmadan güçlendirilmiş Curve getirileri"
+		},
+		"yearn": {
+			"description": "Otomatik getiri optimizasyonu kasaları"
+		},
+		"pendle": {
+			"description": "Getiri tokenizasyonu ve ticareti"
+		},
+		"radiant": {
+			"description": "Omnchain para piyasası"
+		},
+		"morpho": {
+			"description": "Optimize edilmiş oranlarla P2P kredi"
+		},
+		"rocketpool": {
+			"description": "Merkezi olmayan Ethereum stake"
+		},
+		"venus": {
+			"description": "BSC kredi verme ve borçlanma"
+		},
+		"camelot": {
+			"description": "Arbitrum yerel DEX ve başlatma platformu"
+		},
+		"velodrome": {
+			"description": "Optimism likidite merkezi"
+		},
+		"aerodrome": {
+			"description": "Base ağı için merkezi likidite merkezi"
+		},
+		"maverick": {
+			"description": "Likidite için dinamik dağıtım AMM"
+		},
+		"spark": {
+			"description": "MakerDAO tarafından DAI kredi protokolü"
+		},
+		"instadapp": {
+			"description": "DeFi akıllı hesap toplayıcısı"
+		},
+		"sommelier": {
+			"description": "Aktif olarak yönetilen DeFi kasa stratejileri"
+		},
+		"abracadabra": {
+			"description": "Faiz getiren token kredilendirme"
+		},
+		"aevo": {
+			"description": "Opsiyonlar ve kalıcı borsa"
+		},
+		"alchemix": {
+			"description": "Kendi kendini geri ödeyen krediler protokolü"
+		},
+		"angle": {
+			"description": "Euro stablecoin ve yerel DeFi protokolü"
+		},
+		"baseswap": {
+			"description": "Base yerel DEX ve farm"
+		},
+		"bebop": {
+			"description": "Çoklu token takasları ile gazsız işlem"
+		},
+		"beefy": {
+			"description": "Çoklu zincir otomatik bileşik getiri optimize edici"
+		},
+		"benqi": {
+			"description": "Avalanche kredilendirme ve likit stake"
+		},
+		"bentobox": {
+			"description": "Sushi'nin flash loan ve kredilendirme özellikleriyle token kasası"
+		},
+		"clipper": {
+			"description": "Perakende tüccarlar ve küçük işlemler için optimize edilmiş DEX"
+		},
+		"concentrator": {
+			"description": "Curve ve Convex için otomatik bileşik"
+		},
+		"conic": {
+			"description": "Curve omnipool platformu"
+		},
+		"cowswap": {
+			"description": "MEV korumalı takaslar ile toplu açık artırmalar"
+		},
+		"dodo": {
+			"description": "Kitle havuzlama ile proaktif piyasa yapıcı DEX"
+		},
+		"dopex": {
+			"description": "Merkezi olmayan opsiyonlar protokolü"
+		},
+		"equilibria": {
+			"description": "Pendle havuzları için artırılmış getiriler"
+		},
+		"ether_fi": {
+			"description": "eETH ile saklama dışı likit yeniden stake"
+		},
+		"euler": {
+			"description": "İzinsiz kredilendirme protokolü"
+		},
+		"exactly": {
+			"description": "Sabit ve değişken oranlı kredilendirme"
+		},
+		"gains": {
+			"description": "Merkezi olmayan kaldıraçlı işlem"
+		},
+		"gravita": {
+			"description": "LSD destekli GRAI stablecoin borçlanması"
+		},
+		"gyroscope": {
+			"description": "Çeşitlendirilmiş rezervlerle her hava stablecoin"
+		},
+		"harvest": {
+			"description": "DeFi yield farming toplayıcısı"
+		},
+		"hashflow": {
+			"description": "MEV korumalı RFQ ticareti"
+		},
+		"hyperliquid": {
+			"description": "Zincir üstü kalıcı emir defteri DEX"
+		},
+		"kelp": {
+			"description": "EigenLayer üzerinde rsETH ile likit yeniden stake"
+		},
+		"kwenta": {
+			"description": "Synthetix üzerinde kalıcı vadeli işlem ticareti"
+		},
+		"kyberswap": {
+			"description": "Elastik havuzlarla DEX toplayıcısı"
+		},
+		"level": {
+			"description": "Kalıcı işlem platformu"
+		},
+		"liquity": {
+			"description": "ETH karşılığında faizsiz borçlanma ve LUSD stablecoin"
+		},
+		"lyra": {
+			"description": "Opsiyonlar AMM protokolü"
+		},
+		"maple": {
+			"description": "Kurumsal yetersiz teminatlı kredilendirme pazaryeri"
+		},
+		"marginfi": {
+			"description": "MarginFi kredilendirme protokolü"
+		},
+		"matcha": {
+			"description": "0x protokolü ile desteklenen DEX toplayıcısı"
+		},
+		"mstable": {
+			"description": "Getiri tasarrufu ile meta-stablecoin platformu"
+		},
+		"mute": {
+			"description": "Amplifikatör ile zkSync DEX"
+		},
+		"mux": {
+			"description": "Kaldıraçlı işlem toplayıcısı"
+		},
+		"notional": {
+			"description": "Sabit oranlı kredilendirme ve borçlanma protokolü"
+		},
+		"odos": {
+			"description": "Akıllı emir yönlendirme toplayıcısı"
+		},
+		"olympus": {
+			"description": "OHM token ile merkezi olmayan rezerv para birimi protokolü"
+		},
+		"openocean": {
+			"description": "Zincirler arası DEX toplayıcısı"
+		},
+		"opyn": {
+			"description": "Squeeth kalıcı stratejisi ile opsiyonlar protokolü"
+		},
+		"paraswap": {
+			"description": "Zincirler arası en iyi takas oranları için DEX toplayıcısı"
+		},
+		"pickle": {
+			"description": "Getiri optimizasyon kavanozları"
+		},
+		"polynomial": {
+			"description": "Optimism üzerinde Synthetix destekli opsiyonlar kasaları"
+		},
+		"premia": {
+			"description": "Opsiyonlar kasaları ve ticaret"
+		},
+		"prisma": {
+			"description": "Curve entegrasyonu ile LSD destekli mkUSD stablecoin"
+		},
+		"puffer": {
+			"description": "Anti-slashing teknolojisi ile likit yeniden stake"
+		},
+		"raft": {
+			"description": "LSD destekli stablecoin borçlanma protokolü"
+		},
+		"ramses": {
+			"description": "Arbitrum ve(3,3) DEX"
+		},
+		"reflexer": {
+			"description": "PID kontrolcüsü ile sabitlenmemiş RAI stablecoin"
+		},
+		"renzo": {
+			"description": "EigenLayer likit yeniden stake"
+		},
+		"ribbon": {
+			"description": "Sürdürülebilir getiri için yapılandırılmış ürünler ve opsiyonlar kasaları"
+		},
+		"silo": {
+			"description": "İzole risk kredilendirme pazarları"
+		},
+		"spacefi": {
+			"description": "zkSync DEX ve getiri farm"
+		},
+		"stader": {
+			"description": "Çoklu zincir likit stake"
+		},
+		"stakewise": {
+			"description": "Saklama dışı ETH stake"
+		},
+		"sturdy": {
+			"description": "Faizsiz kredilendirme protokolü"
+		},
+		"swell": {
+			"description": "swETH ile likit stake ve yeniden stake"
+		},
+		"symbiotic_restaking": {
+			"description": "İzinsiz modüler yeniden stake protokolü"
+		},
+		"syncswap": {
+			"description": "zkSync Era yerel DEX"
+		},
+		"thena": {
+			"description": "BNB Chain ve(3,3) DEX"
+		},
+		"tokemak": {
+			"description": "Sürdürülebilir DeFi likiditesi için likidite reaktörü"
+		},
+		"umami": {
+			"description": "Arbitrum üzerinde GLP kullanan sürdürülebilir getiri kasaları"
+		},
+		"vela": {
+			"description": "Gelişmiş işlem özellikleri ile kalıcı DEX"
+		},
+		"vertex": {
+			"description": "Kalıcı ve spot DEX"
+		},
+		"woofi": {
+			"description": "Düşük slippage zincirler arası DEX"
+		},
+		"y2k": {
+			"description": "Stablecoin depeg sigortası ve hedging protokolü"
+		}
+	}
+}

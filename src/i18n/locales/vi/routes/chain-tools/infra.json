@@ -1,0 +1,76 @@
+{
+	"category_seo": {
+		"title": "Cơ Sở Hạ Tầng Blockchain - Node RPC, API & Dịch Vụ Dữ Liệu | BiuBiu Tools",
+		"description": "Dịch vụ cơ sở hạ tầng cho ứng dụng Web3. Nhà cung cấp node RPC, dịch vụ lập chỉ mục, API dữ liệu và giải pháp lưu trữ phi tập trung.",
+		"faqs": [
+			{
+				"question": "Cơ sở hạ tầng blockchain là gì?",
+				"answer": "Cơ sở hạ tầng blockchain bao gồm node RPC để truy cập blockchain, indexer để truy vấn dữ liệu, IPFS/Arweave để lưu trữ phi tập trung và oracle cho dữ liệu off-chain. Đây là xương sống của dApp."
+			},
+			{
+				"question": "Tôi có nên chạy node riêng không?",
+				"answer": "Đối với hầu hết các dự án, sử dụng nhà cung cấp như Alchemy hoặc Infura thực tế hơn. Chạy node riêng để có phi tập trung tối đa, nhu cầu tùy chỉnh cụ thể hoặc truy cập dữ liệu lưu trữ."
+			},
+			{
+				"question": "The Graph được sử dụng để làm gì?",
+				"answer": "The Graph lập chỉ mục dữ liệu blockchain và cung cấp API GraphQL. Nó làm cho truy vấn dữ liệu on-chain nhanh chóng và hiệu quả. Hầu hết các giao thức DeFi lớn sử dụng subgraph cho frontend của họ."
+			}
+		]
+	},
+	"tools": {
+		"ankr": {
+			"description": "Điểm cuối RPC đa chuỗi và cơ sở hạ tầng staking"
+		},
+		"chainstack": {
+			"description": "Cơ sở hạ tầng blockchain được quản lý cho doanh nghiệp"
+		},
+		"band_protocol": {
+			"description": "Oracle đa chuỗi với tích hợp Cosmos SDK"
+		},
+		"ipfs": {
+			"description": "Lưu trữ tệp phi tập trung và địa chỉ nội dung"
+		},
+		"arweave": {
+			"description": "Lưu trữ dữ liệu phi tập trung vĩnh viễn"
+		},
+		"filecoin": {
+			"description": "Mạng lưu trữ phi tập trung với khuyến khích"
+		},
+		"ceramic": {
+			"description": "Luồng dữ liệu phi tập trung và dữ liệu có thể kết hợp"
+		},
+		"walletconnect": {
+			"description": "Giao thức mở để kết nối ví với DApp"
+		},
+		"grove": {
+			"description": "Relay RPC phi tập trung được cung cấp bởi POKT"
+		},
+		"drpc": {
+			"description": "Nhà cung cấp RPC đa chuỗi phi tập trung"
+		},
+		"nodies": {
+			"description": "Cơ sở hạ tầng node RPC đa chuỗi"
+		},
+		"llamanodes": {
+			"description": "RPC tập trung quyền riêng tư với bảo vệ MEV"
+		},
+		"getblock": {
+			"description": "Truy cập node đa chuỗi và nhà cung cấp RPC"
+		},
+		"switchboard": {
+			"description": "Oracle phi tập trung cho Solana và chuỗi Move"
+		},
+		"dia": {
+			"description": "Nền tảng oracle minh bạch và tùy chỉnh"
+		},
+		"tellor": {
+			"description": "Oracle không cần phép với cơ chế tranh chấp và staking"
+		},
+		"blockpi": {
+			"description": "Nhà cung cấp cơ sở hạ tầng RPC đa chuỗi"
+		},
+		"nodereal": {
+			"description": "Cơ sở hạ tầng node và API blockchain"
+		}
+	}
+}

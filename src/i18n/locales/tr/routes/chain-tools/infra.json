@@ -1,0 +1,77 @@
+{
+	"category_seo": {
+		"title": "Blokzincir Altyapısı - RPC Düğümleri, API'lar ve Veri Hizmetleri | BiuBiu Tools",
+		"description": "Web3 uygulamaları için altyapı hizmetleri. RPC düğüm sağlayıcıları, indeksleme hizmetleri, veri API'leri ve merkezi olmayan depolama çözümleri.",
+		"keywords": "blokzincir altyapısı, rpc düğümleri, ethereum api, web3 veri hizmetleri",
+		"faqs": [
+			{
+				"question": "Blokzincir altyapısı nedir?",
+				"answer": "Blokzincir altyapısı, blokzincir erişimi için RPC düğümleri, veri sorgulamak için indeksleyiciler, IPFS/Arweave için merkezi olmayan depolama ve zincir dışı veri için oracle'ları içerir. Bunlar dApp'lerin omurgasıdır."
+			},
+			{
+				"question": "Kendi düğümümü çalıştırmalı mıyım?",
+				"answer": "Çoğu proje için Alchemy veya Infura gibi bir sağlayıcı kullanmak daha pratiktir. Maksimum merkeziyetsizlik, belirli özelleştirme ihtiyaçları veya arşiv veri erişimi için kendi düğümünüzü çalıştırın."
+			},
+			{
+				"question": "The Graph ne için kullanılır?",
+				"answer": "The Graph blokzincir verilerini indeksler ve GraphQL API'leri sağlar. Zincir üstü verileri sorgulamayı hızlı ve verimli hale getirir. Çoğu büyük DeFi protokolü, ön yüzleri için subgraph'lar kullanır."
+			}
+		]
+	},
+	"tools": {
+		"ankr": {
+			"description": "Çoklu zincir RPC uç noktaları ve stake altyapısı"
+		},
+		"arweave": {
+			"description": "Kalıcı merkezi olmayan veri depolama"
+		},
+		"band_protocol": {
+			"description": "Cosmos SDK entegrasyonu ile zincirler arası oracle"
+		},
+		"blockpi": {
+			"description": "Çoklu zincir RPC altyapı sağlayıcısı"
+		},
+		"ceramic": {
+			"description": "Merkezi olmayan veri akışları ve birleştirilebilir veri"
+		},
+		"chainstack": {
+			"description": "Kurumlar için yönetilen blokzincir altyapısı"
+		},
+		"dia": {
+			"description": "Şeffaf ve özelleştirilebilir oracle platformu"
+		},
+		"drpc": {
+			"description": "Merkezi olmayan çoklu zincir RPC sağlayıcısı"
+		},
+		"filecoin": {
+			"description": "Teşviklerle merkezi olmayan depolama ağı"
+		},
+		"getblock": {
+			"description": "Çoklu zincir düğüm erişimi ve RPC sağlayıcısı"
+		},
+		"grove": {
+			"description": "POKT destekli merkezi olmayan RPC aktarımı"
+		},
+		"ipfs": {
+			"description": "Merkezi olmayan dosya depolama ve içerik adresleme"
+		},
+		"llamanodes": {
+			"description": "MEV koruması ile gizlilik odaklı RPC"
+		},
+		"nodereal": {
+			"description": "Çoklu zincir RPC altyapı sağlayıcısı"
+		},
+		"nodies": {
+			"description": "Çoklu zincir RPC düğüm altyapısı"
+		},
+		"switchboard": {
+			"description": "Solana ve Move zincirleri için merkezi olmayan oracle"
+		},
+		"tellor": {
+			"description": "Anlaşmazlık mekanizması ve stake ile izinsiz oracle"
+		},
+		"walletconnect": {
+			"description": "Cüzdanları DApp'lere bağlamak için açık protokol"
+		}
+	}
+}

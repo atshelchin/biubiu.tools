@@ -1,0 +1,58 @@
+{
+	"category_seo": {
+		"title": "Tài Sản Thế Giới Thực (RWA) - Tài Sản Token Hóa | BiuBiu Tools",
+		"description": "Khám phá tài sản thế giới thực được token hóa. Trái phiếu kho bạc, bất động sản, hàng hóa và tài chính truyền thống trên blockchain.",
+		"faqs": [
+			{
+				"question": "RWA là gì?",
+				"answer": "RWA (Real World Assets) là tài sản truyền thống như Trái phiếu Kho bạc Mỹ, bất động sản hoặc hàng hóa được token hóa trên blockchain. Chúng mang lợi suất tài chính truyền thống vào DeFi."
+			},
+			{
+				"question": "Tại sao RWA lại quan trọng?",
+				"answer": "RWA cung cấp lợi suất ổn định từ nền kinh tế thực (lãi suất kho bạc), đa dạng hóa từ biến động crypto và kết nối tài chính truyền thống với DeFi. MakerDAO nắm giữ hàng tỷ USD trong RWA."
+			},
+			{
+				"question": "Nền tảng RWA nào tồn tại?",
+				"answer": "Ondo Finance cho trái phiếu kho bạc token hóa, RealT cho bất động sản, Centrifuge cho tài trợ tài sản. Các giao thức DeFi lớn đang tích hợp chiến lược RWA để tạo lợi suất."
+			}
+		]
+	},
+	"tools": {
+		"goldfinch": {
+			"description": "Cho vay crypto cho tín dụng thế giới thực ở thị trường mới nổi"
+		},
+		"truefi": {
+			"description": "Cho vay không thế chấp cho người vay tổ chức"
+		},
+		"centrifuge": {
+			"description": "Giao thức tài trợ tài sản thế giới thực đưa hóa đơn và bất động sản lên chuỗi"
+		},
+		"clearpool": {
+			"description": "Thị trường vốn phi tập trung cho cho vay tổ chức không bảo đảm"
+		},
+		"matrixdock": {
+			"description": "Trái phiếu kho bạc token hóa với stablecoin STBT"
+		},
+		"openeden": {
+			"description": "T-Bills token hóa với NAV thời gian thực và thanh toán 24/7"
+		},
+		"realt": {
+			"description": "Đầu tư bất động sản token hóa với quyền sở hữu phân mảnh"
+		},
+		"lofty": {
+			"description": "Đầu tư bất động sản phân mảnh trên blockchain Algorand"
+		},
+		"propy": {
+			"description": "Giao dịch và quyền sở hữu bất động sản dựa trên blockchain"
+		},
+		"securitize": {
+			"description": "Nền tảng phát hành và quản lý vòng đời security token"
+		},
+		"tokeny": {
+			"description": "Nền tảng token hóa doanh nghiệp cho chứng khoán tuân thủ"
+		},
+		"polymesh": {
+			"description": "Blockchain được xây dựng chuyên dụng cho security token được quản lý"
+		}
+	}
+}

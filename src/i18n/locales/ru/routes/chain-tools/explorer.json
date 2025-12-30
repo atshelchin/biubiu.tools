@@ -1,0 +1,107 @@
+{
+	"category_seo": {
+		"title": "Обозреватели блокчейна - Просмотр транзакций и смарт-контрактов | BiuBiu Tools",
+		"description": "Доступ к обозревателям блокчейна для Ethereum, BSC, Polygon и других сетей. Просматривайте транзакции, проверяйте контракты и анализируйте данные он-чейн.",
+		"keywords": "обозреватель блокчейна, etherscan, просмотр транзакций, проверка контрактов",
+		"faqs": [
+			{
+				"question": "Что такое обозреватель блокчейна?",
+				"answer": "Обозреватель блокчейна — это поисковая система для данных блокчейна. Он позволяет просматривать транзакции, балансы кошельков, код смарт-контрактов, переводы токенов и другую активность он-чейн."
+			},
+			{
+				"question": "Как проверить смарт-контракт?",
+				"answer": "На Etherscan перейдите к адресу контракта, нажмите вкладку 'Contract', затем 'Verify and Publish'. Отправьте исходный код, версию компилятора и аргументы конструктора. Проверенные контракты показывают зеленую галочку."
+			},
+			{
+				"question": "Какие лучшие мультичейн обозреватели?",
+				"answer": "Blockscout поддерживает много EVM-цепей и имеет открытый исходный код. OKLink покрывает 50+ цепей. Для конкретных цепей используйте нативные обозреватели, такие как Etherscan (Ethereum), BSCScan (BNB Chain) или Arbiscan (Arbitrum)."
+			}
+		]
+	},
+	"tools": {
+		"etherscan": {
+			"description": "Обозреватель блокчейна Ethereum"
+		},
+		"blockscout": {
+			"description": "Обозреватель блоков с открытым исходным кодом"
+		},
+		"arbiscan": {
+			"description": "Обозреватель блокчейна Arbitrum"
+		},
+		"polygonscan": {
+			"description": "Обозреватель блокчейна Polygon"
+		},
+		"bscscan": {
+			"description": "Обозреватель блокчейна BNB Chain"
+		},
+		"basescan": {
+			"description": "Обозреватель блокчейна Base"
+		},
+		"snowtrace": {
+			"description": "Обозреватель блокчейна Avalanche"
+		},
+		"lineascan": {
+			"description": "Обозреватель блокчейна Linea"
+		},
+		"scrollscan": {
+			"description": "Обозреватель сети Scroll"
+		},
+		"mantlescan": {
+			"description": "Обозреватель сети Mantle"
+		},
+		"blastscan": {
+			"description": "Обозреватель сети Blast"
+		},
+		"modescan": {
+			"description": "Обозреватель сети Mode"
+		},
+		"celoscan": {
+			"description": "Обозреватель блокчейна Celo"
+		},
+		"ftmscan": {
+			"description": "Обозреватель сети Fantom"
+		},
+		"gnosisscan": {
+			"description": "Обозреватель цепи Gnosis"
+		},
+		"cronoscan": {
+			"description": "Обозреватель сети Cronos"
+		},
+		"moonbeamscan": {
+			"description": "Обозреватель Moonbeam и Moonriver"
+		},
+		"anyabi": {
+			"description": "Поиск и декодер ABI смарт-контрактов"
+		},
+		"avascan": {
+			"description": "Обозреватель блокчейна Avalanche"
+		},
+		"blockchair": {
+			"description": "Универсальный обозреватель блокчейна"
+		},
+		"cardanoscan": {
+			"description": "Обозреватель блокчейна Cardano"
+		},
+		"nearblocks": {
+			"description": "Обозреватель блокчейна NEAR"
+		},
+		"oklink": {
+			"description": "Мультичейн обозреватель блокчейна от OKX"
+		},
+		"onceupon": {
+			"description": "Читабельный обозреватель транзакций блокчейна"
+		},
+		"routescan": {
+			"description": "Унифицированный мультичейн обозреватель блоков"
+		},
+		"suiscan": {
+			"description": "Обозреватель блокчейна Sui"
+		},
+		"tronscan": {
+			"description": "Обозреватель блокчейна Tron"
+		},
+		"viewblock": {
+			"description": "Мультичейн обозреватель блоков"
+		}
+	}
+}

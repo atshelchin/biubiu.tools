@@ -1,0 +1,80 @@
+{
+	"category_seo": {
+		"title": "Web3 Identity - ENS, Lens & Decentralized Identity | BiuBiu Tools",
+		"description": "Decentralized identity solutions for Web3. Domain names (ENS), social profiles (Lens), credentials, and reputation systems.",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "What is Web3 identity?",
+				"answer": "Web3 identity lets you own your digital identity on-chain. This includes domain names (ENS), social profiles (Lens), verifiable credentials, and reputation scores across dApps."
+			},
+			{
+				"question": "Should I get an ENS domain?",
+				"answer": "Yes, ENS domains replace complex wallet addresses with readable names (yourname.eth). They work across wallets and dApps. You can also use them as decentralized websites."
+			},
+			{
+				"question": "What is Lens Protocol?",
+				"answer": "Lens Protocol is a decentralized social graph where you own your profile, content, and followers as NFTs. Apps built on Lens include Lenster, Hey, and Orb."
+			}
+		]
+	},
+	"tools": {
+		"ens": {
+			"description": "사람이 읽을 수 있는 주소를 위한 이더리움 네임 서비스"
+		},
+		"dotbit": {
+			"description": "크로스체인 탈중앙화 신원 프로토콜"
+		},
+		"galxe": {
+			"description": "Web3 자격 증명 및 캠페인 플랫폼"
+		},
+		"layer3": {
+			"description": "학습하며 보상 받는 퀘스트 및 Web3 온보딩"
+		},
+		"degenscore": {
+			"description": "온체인 평판 및 DeFi 점수"
+		},
+		"civic": {
+			"description": "신원 확인 및 KYC 솔루션"
+		},
+		"poap": {
+			"description": "이벤트 배지를 위한 출석 증명 프로토콜"
+		},
+		"phi": {
+			"description": "메타버스 신원 및 자격 증명 랜드"
+		},
+		"otterspace": {
+			"description": "DAO 멤버십을 위한 소울바운드 배지"
+		},
+		"disco": {
+			"description": "검증 가능한 자격 증명 데이터 백팩"
+		},
+		"holonym": {
+			"description": "ZK를 이용한 프라이버시 보존 신원 확인"
+		},
+		"anima": {
+			"description": "시빌 저항을 위한 생체 인식 신원"
+		},
+		"rarimo": {
+			"description": "크로스체인 신원 및 자격 증명"
+		},
+		"verax": {
+			"description": "온체인 증명 레지스트리"
+		},
+		"bns": {
+			"description": "Base 네임 서비스"
+		},
+		"eas": {
+			"description": "이더리움 증명 서비스"
+		},
+		"zkpass": {
+			"description": "영지식 증명 기반 신원 확인"
+		},
+		"brightid": {
+			"description": "소셜 신원 네트워크"
+		},
+		"nomis": {
+			"description": "Web3 평판 점수"
+		}
+	}
+}

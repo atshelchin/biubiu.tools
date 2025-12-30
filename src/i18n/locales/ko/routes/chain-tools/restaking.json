@@ -1,0 +1,62 @@
+{
+	"category_seo": {
+		"title": "Restaking - EigenLayer & Liquid Restaking | BiuBiu Tools",
+		"description": "Restaking protocols for additional yield. EigenLayer, liquid restaking tokens, and AVS (Actively Validated Services).",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "What is restaking?",
+				"answer": "Restaking lets you use staked ETH to secure additional protocols (AVS) for extra yield. EigenLayer pioneered this, allowing ETH stakers to earn rewards from multiple services."
+			},
+			{
+				"question": "What are liquid restaking tokens (LRTs)?",
+				"answer": "LRTs like eETH (ether.fi) or ezETH (Renzo) represent restaked ETH that you can use in DeFi. They're liquid versions of restaked positions."
+			},
+			{
+				"question": "What are the risks of restaking?",
+				"answer": "Restaking adds slashing risk from AVS failures, smart contract risk, and complexity. Higher yields come with higher risk. Understand what AVS you're securing."
+			}
+		]
+	},
+	"tools": {
+		"eigenlayer": {
+			"description": "이더리움 보안을 위한 리스테이킹 프로토콜"
+		},
+		"etherfi": {
+			"description": "탈중앙화 스테이킹 프로토콜"
+		},
+		"karak": {
+			"description": "멀티체인 보안을 위한 범용 리스테이킹"
+		},
+		"symbiotic": {
+			"description": "무허가 및 모듈식 리스테이킹 프로토콜"
+		},
+		"babylon": {
+			"description": "PoS 네트워크를 보호하는 비트코인 스테이킹 프로토콜"
+		},
+		"eigenpie": {
+			"description": "격리된 LRT 토큰을 갖춘 Magpie 리퀴드 리스테이킹"
+		},
+		"bedrock": {
+			"description": "uniETH 토큰을 갖춘 범용 리퀴드 리스테이킹"
+		},
+		"stakestone": {
+			"description": "STONE 토큰을 갖춘 옴니체인 리퀴드 리스테이킹"
+		},
+		"inception": {
+			"description": "inETH를 통한 즉시 언스테이킹을 갖춘 리퀴드 리스테이킹"
+		},
+		"eigenda": {
+			"description": "롤업을 위한 EigenLayer 데이터 가용성 서비스"
+		},
+		"lagrange": {
+			"description": "크로스체인 증명을 위한 ZK 코프로세서 AVS"
+		},
+		"espresso": {
+			"description": "롤업을 위한 공유 시퀀싱 AVS"
+		},
+		"brevis": {
+			"description": "과거 블록체인 데이터를 위한 ZK 코프로세서"
+		}
+	}
+}

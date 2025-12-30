@@ -1,0 +1,80 @@
+{
+	"category_seo": {
+		"title": "Identidad Web3 - ENS, Credenciales On-Chain y Reputación | BiuBiu Tools",
+		"description": "Herramientas de identidad Web3 incluyendo Ethereum Name Service (ENS), credenciales verificables, sistemas de reputación y servicios de identidad descentralizada.",
+		"keywords": "identidad web3, ens, ethereum name service, credenciales on-chain, identidad descentralizada, did",
+		"faqs": [
+			{
+				"question": "¿Qué es un nombre ENS?",
+				"answer": "ENS (Ethereum Name Service) convierte largas direcciones de billetera (0x123...) en nombres legibles como 'alice.eth'. Es como DNS para blockchain, haciendo más fácil enviar cripto y construir tu identidad Web3."
+			},
+			{
+				"question": "¿Por qué necesito identidad Web3?",
+				"answer": "La identidad Web3 te ayuda a construir reputación on-chain, poseer tu identidad digital, verificar credenciales sin intermediarios y tener portabilidad entre plataformas. Es esencial para redes sociales descentralizadas y futuras aplicaciones Web3."
+			},
+			{
+				"question": "¿Qué son las credenciales verificables?",
+				"answer": "Las credenciales verificables son logros o atributos digitales (como asistencia a eventos, certificaciones, membresías) emitidos on-chain que puedes probar sin revelar información innecesaria. Se usan para pruebas de asistencia, control de acceso y reputación."
+			}
+		]
+	},
+	"tools": {
+		"ens": {
+			"description": "Servicio de Nombres Ethereum para direcciones legibles"
+		},
+		"dotbit": {
+			"description": "Protocolo de identidad descentralizada cross-chain"
+		},
+		"galxe": {
+			"description": "Plataforma de credenciales y campañas Web3"
+		},
+		"layer3": {
+			"description": "Misiones learn-to-earn e incorporación Web3"
+		},
+		"degenscore": {
+			"description": "Reputación on-chain y puntuación DeFi"
+		},
+		"civic": {
+			"description": "Verificación de identidad y soluciones KYC"
+		},
+		"poap": {
+			"description": "Protocolo de Prueba de Asistencia para insignias de eventos"
+		},
+		"phi": {
+			"description": "Identidad metaverso y tierra de credenciales"
+		},
+		"otterspace": {
+			"description": "Insignias soulbound para membresía DAO"
+		},
+		"disco": {
+			"description": "Mochila de datos de credenciales verificables"
+		},
+		"holonym": {
+			"description": "Verificación de identidad que preserva privacidad con ZK"
+		},
+		"anima": {
+			"description": "Identidad biométrica para resistencia sybil"
+		},
+		"rarimo": {
+			"description": "Protocolo de identidad cross-chain con privacidad ZK"
+		},
+		"verax": {
+			"description": "Registro compartido de atestaciones on-chain"
+		},
+		"bns": {
+			"description": "Servicio de nombres descentralizado para Base"
+		},
+		"eas": {
+			"description": "Protocolo de atestación de Ethereum"
+		},
+		"zkpass": {
+			"description": "Verificación de identidad privada con protocolos ZK"
+		},
+		"brightid": {
+			"description": "Red de identidad social resistente a sybil"
+		},
+		"nomis": {
+			"description": "Puntuación de reputación on-chain multichain"
+		}
+	}
+}

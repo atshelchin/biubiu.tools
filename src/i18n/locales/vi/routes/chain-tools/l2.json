@@ -1,0 +1,49 @@
+{
+	"category_seo": {
+		"title": "Giải Pháp Layer 2 - Mạng Mở Rộng Ethereum | BiuBiu Tools",
+		"description": "Khám phá các giải pháp mở rộng Layer 2 cho Ethereum. Arbitrum, Optimism, Base, zkSync và các rollup khác với phí thấp hơn và giao dịch nhanh hơn.",
+		"faqs": [
+			{
+				"question": "Layer 2 là gì?",
+				"answer": "Layer 2 là các giải pháp mở rộng xử lý giao dịch ngoài chuỗi Ethereum chính (L1) trong khi vẫn kế thừa bảo mật của nó. Chúng cung cấp phí thấp hơn và giao dịch nhanh hơn. Các loại bao gồm Optimistic Rollups và ZK Rollups."
+			},
+			{
+				"question": "Sự khác biệt giữa Optimistic và ZK Rollups là gì?",
+				"answer": "Optimistic Rollups (Arbitrum, Optimism) giả định giao dịch hợp lệ và sử dụng fraud proof. ZK Rollups (zkSync, Starknet) sử dụng bằng chứng mật mã để có tính cuối cùng tức thì nhưng phức tạp hơn để xây dựng."
+			},
+			{
+				"question": "Tôi nên sử dụng L2 nào?",
+				"answer": "Arbitrum và Optimism có hoạt động DeFi nhiều nhất. Base (Coinbase) đang phát triển nhanh. zkSync và Starknet cung cấp công nghệ ZK. Chọn dựa trên các dApp bạn muốn sử dụng và cân nhắc phí."
+			}
+		]
+	},
+	"tools": {
+		"l2beat": {
+			"description": "Phân tích rủi ro và TVL Layer 2"
+		},
+		"optimism": {
+			"description": "L2 Ethereum được cung cấp bởi OP Stack với tầm nhìn Superchain"
+		},
+		"base": {
+			"description": "L2 của Coinbase được xây dựng trên OP Stack"
+		},
+		"starknet": {
+			"description": "ZK rollup sử dụng Cairo cho bằng chứng hợp lệ"
+		},
+		"scroll": {
+			"description": "ZkEVM rollup tương đương EVM"
+		},
+		"linea": {
+			"description": "Giải pháp zkEVM L2 của ConsenSys"
+		},
+		"mode": {
+			"description": "OP Stack L2 tập trung DeFi"
+		},
+		"mantle": {
+			"description": "L2 mô-đun với lớp khả dụng dữ liệu"
+		},
+		"superchain": {
+			"description": "Hệ sinh thái L2 chia sẻ bảo mật"
+		}
+	}
+}

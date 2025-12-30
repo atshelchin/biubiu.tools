@@ -1,0 +1,94 @@
+{
+	"category_seo": {
+		"title": "Bridge Cross-Chain - Transfer Aset Antar Blockchain | BiuBiu Tools",
+		"description": "Temukan bridge cross-chain terbaik untuk mentransfer token antara Ethereum, Arbitrum, Optimism, Base, dan jaringan lainnya dengan aman.",
+		"faqs": [
+			{
+				"question": "Apa itu bridge cross-chain?",
+				"answer": "Bridge cross-chain adalah protokol yang memungkinkan Anda mentransfer token dan data antara jaringan blockchain yang berbeda. Ini mengunci aset di chain sumber dan mencetak token setara di chain tujuan."
+			},
+			{
+				"question": "Bridge mana yang paling aman?",
+				"answer": "Bridge native dari L2 (seperti Arbitrum Bridge, Optimism Bridge) umumnya paling aman tetapi lebih lambat. Bridge pihak ketiga seperti Stargate, Across, dan Hop menawarkan transfer lebih cepat dengan keamanan yang wajar. Selalu periksa status audit bridge."
+			},
+			{
+				"question": "Berapa lama transfer bridge memakan waktu?",
+				"answer": "Bridge L2 native memakan waktu 7+ hari untuk penarikan karena periode fraud proof. Bridge cepat seperti Stargate atau Across selesai dalam hitungan menit. Tradeoff kecepatan-keamanan penting untuk dipahami."
+			}
+		]
+	},
+	"tools": {
+		"across": {
+			"description": "Jembatan lintas rantai cepat dan murah"
+		},
+		"stargate": {
+			"description": "Jembatan omnichain didukung oleh LayerZero"
+		},
+		"orbiter": {
+			"description": "Jembatan L2 lintas rollup"
+		},
+		"hop": {
+			"description": "Jembatan token L2 ke L2"
+		},
+		"synapse": {
+			"description": "Jembatan dan swap lintas rantai"
+		},
+		"cbridge": {
+			"description": "Jembatan lintas rantai Celer"
+		},
+		"multichain": {
+			"description": "Protokol router multi-chain"
+		},
+		"wormhole": {
+			"description": "Protokol pesan lintas rantai"
+		},
+		"socket": {
+			"description": "Agregator jembatan untuk rute terbaik"
+		},
+		"rhino": {
+			"description": "Agregator jembatan self-custodial"
+		},
+		"hyphen": {
+			"description": "Transfer lintas rantai instan"
+		},
+		"connext": {
+			"description": "Jembatan lintas rantai tanpa kepercayaan"
+		},
+		"debridge": {
+			"description": "Interoperabilitas lintas rantai"
+		},
+		"allbridge": {
+			"description": "Jembatan stablecoin multi-chain"
+		},
+		"portal": {
+			"description": "Jembatan Wormhole Portal"
+		},
+		"squid": {
+			"description": "Router swap lintas rantai"
+		},
+		"owlto": {
+			"description": "Jembatan L2 cepat dan murah"
+		},
+		"bungee": {
+			"description": "Agregator jembatan dengan fitur pengisian ulang gas"
+		},
+		"jumper": {
+			"description": "Agregator jembatan multi-chain oleh LI.FI"
+		},
+		"superbridge": {
+			"description": "Jembatan native untuk Optimism dan Base"
+		},
+		"relay": {
+			"description": "Solusi bridging lintas rantai instan"
+		},
+		"symbiosis": {
+			"description": "Protokol likuiditas lintas rantai dan DEX"
+		},
+		"dln": {
+			"description": "Trading lintas rantai limit order DeBridge"
+		},
+		"layerswap": {
+			"description": "Jembatan CEX ke L2 dengan biaya rendah"
+		}
+	}
+}

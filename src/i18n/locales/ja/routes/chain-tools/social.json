@@ -1,0 +1,83 @@
+{
+	"category_seo": {
+		"title": "Web3ソーシャル - 分散型ソーシャルネットワークとコミュニティ | BiuBiu Tools",
+		"description": "分散型ソーシャルプラットフォームとコミュニティツール。Farcaster、Lensなどでの Web3コミュニティの構築とエンゲージメント。",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "Web3ソーシャルプラットフォームとは何ですか？",
+				"answer": "Web3ソーシャルプラットフォームは、Twitter/Facebookの分散型代替品です。データとソーシャルグラフを自分で所有します。人気のものには、Farcaster、Lens Protocol、DeSoがあります。"
+			},
+			{
+				"question": "Farcasterとは何ですか？",
+				"answer": "Farcasterは、Twitterに似た分散型ソーシャルプロトコルです。Warpcastがメインクライアントです。暗号開発者の間で人気があり、強力なコミュニティ文化があります。"
+			},
+			{
+				"question": "Web3コミュニティはどのように調整しますか？",
+				"answer": "リアルタイムチャットにDiscordとTelegram、ソーシャルにFarcaster/Lens、長文コンテンツにMirror、ガバナンスにSnapshot、トークンゲートアクセスにGuild.xyzを使用します。"
+			}
+		]
+	},
+	"tools": {
+		"farcaster": {
+			"description": "分散型ソーシャルプロトコル"
+		},
+		"xmtp": {
+			"description": "安全なウォレット間メッセージングプロトコル"
+		},
+		"warpcast": {
+			"description": "Farcasterソーシャルネットワークのプライマリクライアント"
+		},
+		"hey": {
+			"description": "Lens Protocol上の分散型ソーシャルアプリ"
+		},
+		"orb": {
+			"description": "モバイルファーストLens Protocolクライアント"
+		},
+		"cyberconnect": {
+			"description": "Web3アイデンティティ付きソーシャルグラフプロトコル"
+		},
+		"mirror": {
+			"description": "Web3パブリッシングとクラウドファンディングプラットフォーム"
+		},
+		"paragraph": {
+			"description": "Web3ネイティブニュースレターとパブリッシング"
+		},
+		"deso": {
+			"description": "ソーシャルアプリケーション向けLayer 1ブロックチェーン"
+		},
+		"phaver": {
+			"description": "クロスプラットフォームWeb3ソーシャルアプリ"
+		},
+		"drakula": {
+			"description": "Farcaster上の短編動画プラットフォーム"
+		},
+		"link3": {
+			"description": "CyberConnectによるWeb3イベントとクレデンシャル"
+		},
+		"buttrfly": {
+			"description": "Lens向けクロスプラットフォームソーシャルアグリゲーター"
+		},
+		"tape": {
+			"description": "Lens上の分散型動画プラットフォーム"
+		},
+		"unlonely": {
+			"description": "Web3ライブストリーミングコミュニティプラットフォーム"
+		},
+		"supercast": {
+			"description": "Supercast - 分散型ソーシャルプラットフォーム"
+		},
+		"neynar": {
+			"description": "Neynar - 分散型ソーシャルプラットフォーム"
+		},
+		"airstack": {
+			"description": "Airstack - 分散型ソーシャルプラットフォーム"
+		},
+		"huddle01": {
+			"description": "Huddle01 - 分散型ソーシャルプラットフォーム"
+		},
+		"moxie": {
+			"description": "Moxie - 分散型ソーシャルプラットフォーム"
+		}
+	}
+}

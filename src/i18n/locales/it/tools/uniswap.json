@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹",
+		"code": "it"
+	},
+	"seo": {
+		"title": "Uniswap - Il Più Grande Exchange Decentralizzato | Recensione Strumento DeFi",
+		"description": "Scopri Uniswap, il più grande exchange decentralizzato al mondo. Scopri il suo market maker automatizzato, pool di liquidità, supporto multi-chain e come scambiare token in sicurezza.",
+		"keywords": "Uniswap, DEX, exchange decentralizzato, scambio token, AMM, pool di liquidità, DeFi, Ethereum, trading crypto"
+	},
+	"overview": "Uniswap è il più grande exchange decentralizzato (DEX) al mondo, pioniere del modello di market maker automatizzato (AMM) che è diventato lo standard per il trading decentralizzato. Lanciato nel novembre 2018 da Hayden Adams, un ex ingegnere meccanico, Uniswap ha rivoluzionato il modo in cui gli utenti scambiano criptovalute eliminando la necessità di order book tradizionali e intermediari centralizzati.\n\nIl protocollo opera attraverso smart contract su Ethereum e molteplici reti Layer 2, permettendo a chiunque di scambiare token istantaneamente senza creare un account o affidare i propri fondi a terzi. Nel 2024, Uniswap ha elaborato oltre 2 trilioni di dollari in volume di trading cumulativo e mantiene un Total Value Locked (TVL) superiore a 5 miliardi di dollari.\n\nIl design permissionless di Uniswap significa che qualsiasi token ERC-20 può essere listato e scambiato senza l'approvazione di un team centralizzato. Questa apertura lo ha reso la piattaforma di riferimento per scoprire e scambiare nuovi token, mentre i suoi smart contract testati in battaglia forniscono sicurezza che ha guadagnato la fiducia di milioni di utenti in tutto il mondo.",
+	"features": {
+		"1": {
+			"title": "Market Maker Automatizzato (AMM)",
+			"description": "Scambia token istantaneamente usando pool di liquidità invece di order book, con prezzi determinati da formule matematiche"
+		},
+		"2": {
+			"title": "Trading Non-Custodial",
+			"description": "I tuoi fondi rimangono nel tuo wallet fino al momento dello swap - nessun deposito, nessuna creazione account, nessuna fiducia richiesta"
+		},
+		"3": {
+			"title": "Listing Token Permissionless",
+			"description": "Qualsiasi token ERC-20 può essere scambiato senza approvazione, consentendo accesso anticipato a nuovi progetti"
+		},
+		"4": {
+			"title": "Supporto Multi-Chain",
+			"description": "Disponibile su Ethereum, Arbitrum, Optimism, Polygon, Base e altro - scambia dove le fee del gas ti convengono"
+		},
+		"5": {
+			"title": "Liquidità Concentrata (V3)",
+			"description": "I fornitori di liquidità possono concentrare il capitale in range di prezzo specifici per una maggiore efficienza del capitale"
+		},
+		"6": {
+			"title": "Hooks e Personalizzazione (V4)",
+			"description": "La versione più recente introduce plugin personalizzabili per meccaniche di trading e strategie uniche"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Scambio Token",
+			"description": "Scambia qualsiasi token con un altro istantaneamente con tassi competitivi e slippage minimo"
+		},
+		"2": {
+			"title": "Fornitura di Liquidità",
+			"description": "Guadagna fee di trading fornendo liquidità a coppie di token - diventa il tuo market maker"
+		},
+		"3": {
+			"title": "Scoperta Nuovi Token",
+			"description": "Trova e scambia token appena lanciati prima che appaiano su exchange centralizzati"
+		},
+		"4": {
+			"title": "Gestione Portfolio DeFi",
+			"description": "Ribilancia il tuo portfolio crypto o scambia in stablecoin durante la volatilità del mercato"
+		},
+		"5": {
+			"title": "Trading Cross-Chain",
+			"description": "Fai trading su reti Layer 2 per risparmiare sulle fee del gas mantenendo la sicurezza di Ethereum"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Cos'è Uniswap e come funziona?",
+			"answer": "Uniswap è un exchange decentralizzato che usa un modello di market maker automatizzato (AMM). Invece di abbinare compratori con venditori, usa pool di liquidità - smart contract che detengono coppie di token. Quando scambi, stai tradando contro questi pool, e i prezzi si aggiustano automaticamente in base a domanda e offerta."
+		},
+		"2": {
+			"question": "Uniswap è sicuro da usare?",
+			"answer": "Gli smart contract principali di Uniswap sono stati ampiamente verificati e hanno protetto miliardi di dollari senza exploit maggiori. Tuttavia, verifica sempre di usare l'interfaccia ufficiale (app.uniswap.org), fai attenzione ai token truffa e comprendi i rischi di impermanent loss se fornisci liquidità."
+		},
+		"3": {
+			"question": "Quali sono le fee su Uniswap?",
+			"answer": "Uniswap addebita una fee di swap dello 0.3% sulla maggior parte dei pool, che va ai fornitori di liquidità. Uniswap Labs addebita anche una fee aggiuntiva dello 0.15% su alcuni token attraverso la loro interfaccia. Pagherai anche fee del gas della rete, che variano in base alla congestione della rete."
+		},
+		"4": {
+			"question": "Cos'è l'impermanent loss?",
+			"answer": "L'impermanent loss si verifica quando fornisci liquidità e il rapporto di prezzo dei tuoi token depositati cambia. Se avessi semplicemente tenuto i token, potresti avere più valore di quello che hai nel pool. Le fee di trading guadagnate possono compensare questo, ma è un rischio importante da comprendere."
+		},
+		"5": {
+			"question": "Quale rete dovrei usare su Uniswap?",
+			"answer": "La mainnet di Ethereum ha la liquidità più profonda ma fee del gas più alte. Per trade più piccoli, le reti Layer 2 come Arbitrum, Optimism o Base offrono fee molto più basse mantenendo la sicurezza. Scegli in base ai token che vuoi scambiare e alla dimensione della tua transazione."
+		}
+	},
+	"cta": {
+		"ready": "Pronto per iniziare a fare trading?",
+		"button": "Apri Uniswap",
+		"note": "Trading non-custodial - le tue chiavi, le tue crypto"
+	}
+}

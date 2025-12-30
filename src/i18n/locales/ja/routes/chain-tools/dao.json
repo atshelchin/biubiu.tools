@@ -1,0 +1,80 @@
+{
+	"category_seo": {
+		"title": "DAOツール - ガバナンス、投票、資金管理 | BiuBiu Tools",
+		"description": "DAOを作成・管理するためのツール。ガバナンスプラットフォーム、投票システム、資金管理、コントリビューター調整。",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "DAOとは何ですか？",
+				"answer": "DAO(分散型自律組織)は、スマートコントラクトとトークンホルダーの投票によって管理される組織です。メンバーは中央権力なしで提案と決定に投票します。"
+			},
+			{
+				"question": "DAOガバナンスに参加するにはどうすればよいですか？",
+				"answer": "DAOのガバナンストークンを保有し、オフチェーン投票にはSnapshotのようなプラットフォーム、オンチェーン投票にはTallyを使用します。一部のDAOは投票前にトークンの委任が必要です。"
+			},
+			{
+				"question": "DAOはどのようなツールを使用しますか？",
+				"answer": "ガスレス投票にSnapshot、オンチェーンガバナンスにTally、資金管理にGnosis Safe、コントリビューター報酬にCoordinape、議論にDiscourse/Commonwealthを使用します。"
+			}
+		]
+	},
+	"tools": {
+		"snapshot": {
+			"description": "オフチェーンガスレスガバナンス投票"
+		},
+		"tally": {
+			"description": "オンチェーンガバナンスとDAO管理"
+		},
+		"aragon": {
+			"description": "簡単にDAOを構築・管理"
+		},
+		"colony": {
+			"description": "DAOインフラと給与支払い"
+		},
+		"karma": {
+			"description": "DAOコントリビューターレピュテーション"
+		},
+		"lenster": {
+			"description": "Lens上の分散型ソーシャル"
+		},
+		"push": {
+			"description": "Web3通知とチャット"
+		},
+		"daohaus": {
+			"description": "Moloch DAOランチャー"
+		},
+		"charmverse": {
+			"description": "Web3ワークスペースプラットフォーム"
+		},
+		"wonderverse": {
+			"description": "Wonderverse - DAOタスク管理"
+		},
+		"coordinape": {
+			"description": "分散型報酬"
+		},
+		"guild": {
+			"description": "トークンゲートコミュニティ"
+		},
+		"jokerace": {
+			"description": "オンチェーン投票コンテスト"
+		},
+		"commonwealth": {
+			"description": "ガバナンス議論とコミュニティフォーラム"
+		},
+		"jokedao": {
+			"description": "オンチェーン投票コンテストとガバナンスゲーム"
+		},
+		"llama": {
+			"description": "DAOガバナンスと資金庫運用"
+		},
+		"daolens": {
+			"description": "DAOLens - DAOガバナンスツール"
+		},
+		"kleros": {
+			"description": "Kleros - DAOガバナンスツール"
+		},
+		"dework": {
+			"description": "Dework - DAOガバナンスツール"
+		}
+	}
+}

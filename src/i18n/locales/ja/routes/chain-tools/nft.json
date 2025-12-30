@@ -1,0 +1,116 @@
+{
+	"category_seo": {
+		"title": "NFTツール - マーケットプレイス、分析、作成 | BiuBiu Tools",
+		"description": "最高のNFTマーケットプレイス、分析ツール、作成プラットフォームを発見。OpenSea、Blurなどのトップレベルなツールを探す。",
+		"keywords": "nft tools, nft marketplace, opensea, blur, nft analytics, nft creation",
+		"faqs": [
+			{
+				"question": "NFTとは何ですか？",
+				"answer": "NFT(非代替性トークン)は、アート、音楽、コレクティブル、バーチャル不動産などのアイテムの所有権を表すブロックチェーン上のユニークなデジタル資産です。各NFTは固有であり、複製できません。"
+			},
+			{
+				"question": "NFTはどこで購入できますか？",
+				"answer": "人気のNFTマーケットプレイスには、OpenSea(最大の総合マーケットプレイス)、Blur(トレーダー向け)、Magic Eden(Solana)、Foundation(キュレートされたアート)などがあります。各プラットフォームには異なる手数料と機能があります。"
+			},
+			{
+				"question": "NFTを作成するにはどうすればよいですか？",
+				"answer": "NFTを作成するには: 1) デジタルアートワークまたはコンテンツを作成、2) ブロックチェーンを選択(Ethereum、Solanaなど)、3) OpenSeaなどのマーケットプレイスを選択、4) ウォレットを接続してコンテンツをアップロード、5) 価格を設定して販売リストに掲載。"
+			}
+		]
+	},
+	"tools": {
+		"opensea": {
+			"description": "最大のNFTマーケットプレイス"
+		},
+		"blur": {
+			"description": "トレーダー向けプロNFTマーケットプレイス"
+		},
+		"reservoir": {
+			"description": "NFT流動性インフラストラクチャ"
+		},
+		"rarible": {
+			"description": "あらゆるチェーンでNFTを作成・取引"
+		},
+		"zora": {
+			"description": "NFT作成とマーケットプレイス"
+		},
+		"foundation": {
+			"description": "キュレートされたデジタルアートマーケットプレイス"
+		},
+		"manifold": {
+			"description": "NFTクリエイターツールとコントラクト"
+		},
+		"nftnerds": {
+			"description": "NFTトレーディングと分析"
+		},
+		"looksrare": {
+			"description": "コミュニティNFTマーケットプレイス"
+		},
+		"x2y2": {
+			"description": "低手数料NFTマーケットプレイス"
+		},
+		"gem": {
+			"description": "NFTアグリゲーターとスイーパー"
+		},
+		"nftfi": {
+			"description": "NFT担保ローン"
+		},
+		"arcade": {
+			"description": "NFTレンディングプロトコル"
+		},
+		"mintfun": {
+			"description": "NFTミント発見"
+		},
+		"sudoswap": {
+			"description": "即時流動性と取引のためのNFT AMM"
+		},
+		"caviar": {
+			"description": "NFTフラクショナル化とAMMプロトコル"
+		},
+		"nftx": {
+			"description": "保管フロア価格付きNFT流動性プロトコル"
+		},
+		"tessera": {
+			"description": "フラクショナル化による集団NFT所有権"
+		},
+		"premint": {
+			"description": "NFTアローリストとホワイトリスト管理ツール"
+		},
+		"bueno": {
+			"description": "ノーコードジェネラティブNFTアート作成ツール"
+		},
+		"highlight": {
+			"description": "NFTミントと配布のためのクリエイターツール"
+		},
+		"tokenproof": {
+			"description": "NFT検証とトークンゲート体験"
+		},
+		"rabbithole": {
+			"description": "オンチェーンクエストとクレデンシャル獲得"
+		},
+		"tensor": {
+			"description": "Solana上のプロフェッショナルNFTトレーディング"
+		},
+		"hyperspace": {
+			"description": "Solana上のNFTアグリゲーターとマーケットプレイス"
+		},
+		"tradeport": {
+			"description": "SuiとAptos向けNFTマーケットプレイス"
+		},
+		"campfire": {
+			"description": "Avalanche上のNFTマーケットプレイス"
+		},
+		"paintswap": {
+			"description": "FantomとSonic上のNFTマーケットプレイス"
+		},
+		"unlockd": {
+			"description": "Unlockd - NFTプラットフォーム"
+		},
+		"formfunction": {
+			"description": "Formfunction - NFTプラットフォーム"
+		},
+		"oncyber": {
+			"description": "Oncyber - NFTプラットフォーム"
+		}
+	}
+}

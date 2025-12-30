@@ -1,0 +1,139 @@
+{
+	"category_seo": {
+		"title": "区块链分析工具 - 链上数据与市场情报 | BiuBiu Tools",
+		"description": "使用区块链分析平台获取链上洞察。追踪巨鲸钱包、分析协议指标，利用数据做出更明智的投资决策。",
+		"faqs": [
+			{
+				"question": "为什么区块链分析很重要？",
+				"answer": "区块链分析帮助你理解市场趋势、追踪聪明钱动向、识别新兴机会，并在交易和投资中做出数据驱动的决策。它提供了传统金融分析无法获得的透明度。"
+			},
+			{
+				"question": "流行的区块链分析工具有哪些？",
+				"answer": "Dune Analytics 提供自定义 SQL 查询，Nansen 追踪聪明钱标签，DefiLlama 聚合 TVL 数据，Arkham 提供实体标签和警报，Glassnode 专注于市场指标和链上指标。"
+			},
+			{
+				"question": "如何追踪巨鲸钱包活动？",
+				"answer": "使用 Nansen 或 Arkham 等工具识别标记钱包，设置大额交易和资金流动警报，关注专注于巨鲸活动的社交账号，或在 Dune 上创建自定义仪表板监控特定地址。"
+			}
+		]
+	},
+	"tools": {
+		"dune": {
+			"description": "区块链数据分析，支持自定义 SQL 查询"
+		},
+		"defillama": {
+			"description": "DeFi TVL 聚合器和协议分析"
+		},
+		"nansen": {
+			"description": "链上分析，追踪聪明钱"
+		},
+		"arkham": {
+			"description": "钱包追踪情报平台"
+		},
+		"ultrasound": {
+			"description": "ETH供应和销毁追踪"
+		},
+		"messari": {
+			"description": "加密研究和数据平台"
+		},
+		"coingecko": {
+			"description": "加密货币价格和市场数据"
+		},
+		"coinmarketcap": {
+			"description": "加密市值排名"
+		},
+		"glassnode": {
+			"description": "链上市场情报"
+		},
+		"dexscreener": {
+			"description": "实时 DEX 交易对图表"
+		},
+		"defined": {
+			"description": "多链 DEX 分析"
+		},
+		"tokenterminal": {
+			"description": "协议财务指标"
+		},
+		"artemis": {
+			"description": "基本面加密分析"
+		},
+		"growthepie": {
+			"description": "L2分析和对比"
+		},
+		"dappradar": {
+			"description": "DApp排名和追踪"
+		},
+		"ethburned": {
+			"description": "以太坊销毁统计"
+		},
+		"parsec": {
+			"description": "DeFi分析仪表盘"
+		},
+		"eigenexplorer": {
+			"description": "EigenLayer分析浏览器"
+		},
+		"the_graph": {
+			"description": "区块链数据索引"
+		},
+		"flipside": {
+			"description": "社区驱动的区块链数据分析"
+		},
+		"footprint": {
+			"description": "无代码区块链数据分析平台"
+		},
+		"cryptofees": {
+			"description": "协议收入与费用数据追踪"
+		},
+		"openbb": {
+			"description": "开源加密金融终端"
+		},
+		"watchers": {
+			"description": "NFT市场与藏品追踪"
+		},
+		"cielo": {
+			"description": "多链钱包追踪信息流"
+		},
+		"space_and_time": {
+			"description": "ZK证明可验证数据仓库"
+		},
+		"allium": {
+			"description": "企业级区块链数据平台"
+		},
+		"sentio": {
+			"description": "多链可观测性与监控"
+		},
+		"defillama_yields": {
+			"description": "跨链收益农场对比"
+		},
+		"defilabs": {
+			"description": "鲸鱼与聪明钱追踪"
+		},
+		"chainanalytics": {
+			"description": "自定义区块链数据仪表盘"
+		},
+		"cookie3": {
+			"description": "Cookie3 - Blockchain analytics"
+		},
+		"chainbeat": {
+			"description": "ChainBeat - Blockchain analytics"
+		},
+		"bitquery": {
+			"description": "Bitquery - Blockchain analytics"
+		},
+		"intotheblock": {
+			"description": "IntoTheBlock - Blockchain analytics"
+		},
+		"laevitas": {
+			"description": "Laevitas - Blockchain analytics"
+		},
+		"kaiko": {
+			"description": "Kaiko - Blockchain analytics"
+		},
+		"amberdata": {
+			"description": "Amberdata - Blockchain analytics"
+		},
+		"blockpour": {
+			"description": "Blockpour - Blockchain analytics"
+		}
+	}
+}

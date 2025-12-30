@@ -1,0 +1,119 @@
+{
+	"category_seo": {
+		"title": "Wallet Kripto - Hardware, Software & Multi-Chain | BiuBiu Tools",
+		"description": "Bandingkan wallet kripto terbaik untuk keamanan dan kenyamanan. Wallet hardware, ekstensi browser, dan wallet mobile untuk semua blockchain.",
+		"keywords": "wallet kripto, wallet hardware, metamask, ledger, trezor, wallet multi-chain",
+		"faqs": [
+			{
+				"question": "Apa itu wallet kripto?",
+				"answer": "Wallet kripto adalah software atau hardware yang menyimpan private key Anda dan memungkinkan Anda mengirim, menerima, dan mengelola cryptocurrency. Wallet tidak benar-benar menyimpan kripto - aset tetap di blockchain."
+			},
+			{
+				"question": "Wallet hardware vs wallet software?",
+				"answer": "Wallet hardware (Ledger, Trezor) menyimpan key secara offline untuk keamanan maksimum, ideal untuk kepemilikan besar. Wallet software (MetaMask, Rainbow) lebih nyaman untuk penggunaan sehari-hari tetapi terhubung ke internet."
+			},
+			{
+				"question": "Bagaimana cara menjaga wallet saya tetap aman?",
+				"answer": "Jangan pernah bagikan seed phrase Anda, gunakan wallet hardware untuk jumlah besar, aktifkan 2FA jika memungkinkan, verifikasi detail transaksi sebelum menandatangani, dan berhati-hati terhadap situs phishing."
+			}
+		]
+	},
+	"tools": {
+		"debank": {
+			"description": "Pelacak portofolio multi-chain dan platform sosial"
+		},
+		"rabby": {
+			"description": "Wallet browser multi-chain"
+		},
+		"rainbow": {
+			"description": "Wallet Ethereum yang indah"
+		},
+		"metamask": {
+			"description": "Wallet Web3 paling populer"
+		},
+		"frame": {
+			"description": "Wallet desktop fokus privasi"
+		},
+		"zerion": {
+			"description": "Portofolio dan wallet DeFi"
+		},
+		"safe": {
+			"description": "Smart wallet multi-signature"
+		},
+		"zapper": {
+			"description": "Dashboard portofolio DeFi"
+		},
+		"argent": {
+			"description": "Smart wallet dengan pemulihan"
+		},
+		"sequence": {
+			"description": "Smart wallet untuk gaming"
+		},
+		"ledger": {
+			"description": "Keamanan hardware wallet"
+		},
+		"trezor": {
+			"description": "Pelopor hardware wallet"
+		},
+		"privy": {
+			"description": "Solusi embedded wallet"
+		},
+		"dynamic": {
+			"description": "Autentikasi multi-wallet"
+		},
+		"ambire": {
+			"description": "Smart wallet dengan login email dan transaksi tanpa gas"
+		},
+		"obvious": {
+			"description": "Smart wallet dengan account abstraction"
+		},
+		"pimlico": {
+			"description": "Infrastruktur bundler dan paymaster ERC-4337"
+		},
+		"stackup": {
+			"description": "Bundler dan SDK account abstraction"
+		},
+		"biconomy": {
+			"description": "SDK account abstraction dan transaksi tanpa gas"
+		},
+		"zerodev": {
+			"description": "SDK smart wallet modular dengan Kernel"
+		},
+		"solflare": {
+			"description": "Wallet Solana dengan staking dan NFT"
+		},
+		"subwallet": {
+			"description": "Wallet Polkadot dan ekosistem Substrate"
+		},
+		"tonhub": {
+			"description": "Wallet TON dengan integrasi Telegram"
+		},
+		"mytonwallet": {
+			"description": "Wallet TON open-source"
+		},
+		"coolwallet": {
+			"description": "Hardware wallet kartu Bluetooth"
+		},
+		"imtoken": {
+			"description": "Wallet multi-chain populer"
+		},
+		"tokenpocket": {
+			"description": "Wallet multi-chain dengan dApp browser"
+		},
+		"myetherwallet": {
+			"description": "Wallet Ethereum open-source"
+		},
+		"mycrypto": {
+			"description": "Wallet dan manajemen aset Ethereum"
+		},
+		"tronlink": {
+			"description": "Wallet resmi Tron"
+		},
+		"multis": {
+			"description": "Platform treasury multi-sig untuk bisnis"
+		},
+		"squads": {
+			"description": "Smart wallet multi-sig untuk Solana"
+		}
+	}
+}

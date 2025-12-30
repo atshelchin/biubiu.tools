@@ -1,0 +1,77 @@
+{
+	"category_seo": {
+		"title": "Infrastruttura Blockchain - Nodi RPC, API e Servizi Dati | BiuBiu Tools",
+		"description": "Servizi di infrastruttura per applicazioni Web3. Provider di nodi RPC, servizi di indicizzazione, API dati e soluzioni di storage decentralizzato.",
+		"keywords": "infrastruttura blockchain, nodi rpc, alchemy, infura, the graph, ipfs, arweave",
+		"faqs": [
+			{
+				"question": "Cos'è l'infrastruttura blockchain?",
+				"answer": "L'infrastruttura blockchain include nodi RPC per l'accesso blockchain, indexer per interrogare dati, IPFS/Arweave per storage decentralizzato e oracle per dati off-chain. Questi sono la spina dorsale delle dApp."
+			},
+			{
+				"question": "Dovrei eseguire il mio nodo?",
+				"answer": "Per la maggior parte dei progetti, usare un provider come Alchemy o Infura è più pratico. Esegui il tuo nodo per massima decentralizzazione, esigenze di personalizzazione specifiche o accesso ai dati archivio."
+			},
+			{
+				"question": "A cosa serve The Graph?",
+				"answer": "The Graph indicizza i dati blockchain e fornisce API GraphQL. Rende le query sui dati on-chain veloci ed efficienti. La maggior parte dei protocolli DeFi principali usa subgraph per i loro frontend."
+			}
+		]
+	},
+	"tools": {
+		"ankr": {
+			"description": "Endpoint RPC multi-chain e infrastruttura staking"
+		},
+		"chainstack": {
+			"description": "Infrastruttura blockchain gestita per enterprise"
+		},
+		"band_protocol": {
+			"description": "Oracle cross-chain con integrazione Cosmos SDK"
+		},
+		"ipfs": {
+			"description": "Storage file decentralizzato e indirizzamento contenuto"
+		},
+		"arweave": {
+			"description": "Storage dati permanente decentralizzato"
+		},
+		"filecoin": {
+			"description": "Rete storage decentralizzata con incentivi"
+		},
+		"ceramic": {
+			"description": "Stream dati decentralizzati e dati componibili"
+		},
+		"walletconnect": {
+			"description": "Protocollo aperto per connettere wallet a DApp"
+		},
+		"grove": {
+			"description": "Relay RPC decentralizzato alimentato da POKT"
+		},
+		"drpc": {
+			"description": "Provider RPC multi-chain decentralizzato"
+		},
+		"nodies": {
+			"description": "Infrastruttura nodi RPC multi-chain"
+		},
+		"llamanodes": {
+			"description": "RPC focalizzato su privacy con protezione MEV"
+		},
+		"getblock": {
+			"description": "Accesso nodi multi-chain e provider RPC"
+		},
+		"switchboard": {
+			"description": "Oracle decentralizzato per Solana e chain Move"
+		},
+		"dia": {
+			"description": "Piattaforma oracle trasparente e personalizzabile"
+		},
+		"tellor": {
+			"description": "Oracle permissionless con meccanismo dispute e staking"
+		},
+		"blockpi": {
+			"description": "Provider infrastruttura RPC"
+		},
+		"nodereal": {
+			"description": "Servizi infrastruttura blockchain"
+		}
+	}
+}

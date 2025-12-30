@@ -1,0 +1,26 @@
+{
+	"category_seo": {
+		"title": "Exchanges Cripto (CEX) - Plataformas Centralizadas de Trading | BiuBiu Tools",
+		"description": "Compara los principales exchanges de criptomonedas centralizados (CEX) como Binance, Coinbase, Kraken. Encuentra las mejores plataformas de trading cripto.",
+		"keywords": "exchange cripto, cex, binance, coinbase, kraken, plataforma trading cripto",
+		"faqs": [
+			{
+				"question": "¿Qué es un CEX?",
+				"answer": "Un CEX (Exchange Centralizado) es una plataforma donde puedes comprar, vender e intercambiar criptomonedas. A diferencia de los DEXs, los CEXs son operados por empresas, requieren KYC, custodian tus fondos y ofrecen fiat on-ramps, trading avanzado y soporte al cliente."
+			},
+			{
+				"question": "¿CEX vs DEX?",
+				"answer": "Los CEXs ofrecen mejor liquidez, pares fiat, trading más rápido, soporte al cliente y características avanzadas. Los DEXs proveen autocustodia, sin KYC, resistencia a censura y listados de tokens más amplios. Muchos usuarios utilizan ambos para diferentes propósitos."
+			},
+			{
+				"question": "¿Son seguros los exchanges centralizados?",
+				"answer": "Los CEXs reputados implementan fuerte seguridad (almacenamiento frío, 2FA, seguros), pero custodian tus fondos - creas riesgo de contraparte. Los eventos históricos (Mt. Gox, FTX) muestran que ningún exchange es 100% seguro. Solo mantén en exchanges lo que estás tradeando activamente."
+			}
+		]
+	},
+	"tools": {
+		"ccdata": {
+			"description": "Índices de mercado y datos para instituciones"
+		}
+	}
+}

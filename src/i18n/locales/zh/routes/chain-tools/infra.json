@@ -1,0 +1,76 @@
+{
+	"category_seo": {
+		"title": "区块链基础设施 - RPC 节点、API 与数据服务 | BiuBiu Tools",
+		"description": "Web3 应用的基础设施服务。RPC 节点提供商、索引服务、数据 API 和去中心化存储解决方案。",
+		"faqs": [
+			{
+				"question": "什么是区块链基础设施？",
+				"answer": "区块链基础设施包括用于访问区块链的 RPC 节点、用于查询数据的索引器、IPFS/Arweave 去中心化存储以及用于链下数据的预言机。这些是 dApp 的基础。"
+			},
+			{
+				"question": "应该自己运行节点吗？",
+				"answer": "对于大多数项目，使用 Alchemy 或 Infura 等提供商更实际。只有在需要最大程度去中心化、特定定制需求或归档数据访问时才需要自己运行节点。"
+			},
+			{
+				"question": "The Graph 是做什么的？",
+				"answer": "The Graph 索引区块链数据并提供 GraphQL API。它使链上数据查询快速高效。大多数主要 DeFi 协议都使用 subgraph 为其前端提供数据。"
+			}
+		]
+	},
+	"tools": {
+		"ankr": {
+			"description": "多链 RPC 端点和质押基础设施"
+		},
+		"chainstack": {
+			"description": "面向企业的托管区块链基础设施"
+		},
+		"band_protocol": {
+			"description": "集成 Cosmos SDK 的跨链预言机"
+		},
+		"ipfs": {
+			"description": "去中心化文件存储和内容寻址"
+		},
+		"arweave": {
+			"description": "永久去中心化数据存储"
+		},
+		"filecoin": {
+			"description": "带激励机制的去中心化存储网络"
+		},
+		"ceramic": {
+			"description": "去中心化数据流和可组合数据"
+		},
+		"walletconnect": {
+			"description": "连接钱包和 DApp 的开放协议"
+		},
+		"grove": {
+			"description": "去中心化RPC网关网络"
+		},
+		"drpc": {
+			"description": "分布式多链RPC网络"
+		},
+		"nodies": {
+			"description": "边缘优化RPC基础设施"
+		},
+		"llamanodes": {
+			"description": "隐私优先公共RPC节点"
+		},
+		"getblock": {
+			"description": "多链节点API服务商"
+		},
+		"switchboard": {
+			"description": "Solana与Move链去中心化预言机"
+		},
+		"dia": {
+			"description": "透明可定制的预言机平台"
+		},
+		"tellor": {
+			"description": "带有争议机制和质押的无许可预言机"
+		},
+		"blockpi": {
+			"description": "BlockPI - Infrastructure provider"
+		},
+		"nodereal": {
+			"description": "NodeReal - Infrastructure provider"
+		}
+	}
+}

@@ -1,0 +1,92 @@
+{
+	"category_seo": {
+		"title": "暗号資産決済 - 決済処理とカードサービス | BiuBiu Tools",
+		"description": "企業と個人向けの暗号資産決済ソリューション。決済プロセッサ、暗号資産カード、マーチャントサービス。",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "暗号資産決済はどのように機能しますか？",
+				"answer": "暗号資産決済はブロックチェーン上で直接価値を転送します。マーチャント向けには、BitPayなどの決済プロセッサが暗号資産を法定通貨に変換します。Coinbase Cardなどの暗号資産カードを使えば、どこでも暗号資産を使用できます。"
+			},
+			{
+				"question": "最適な暗号資産カードは何ですか？",
+				"answer": "Coinbase CardとCrypto.com Cardは広く利用可能です。Gnosis PayはDeFi統合を提供します。選択する前にキャッシュバック率、対応国、手数料体系を比較してください。"
+			},
+			{
+				"question": "企業は暗号資産決済を受け付けられますか？",
+				"answer": "はい、BitPay、Coinbase Commerceなどの決済プロセッサや直接ウォレット決済を使用できます。ボラティリティ、税務上の影響、即座に法定通貨に変換するかどうかを検討してください。"
+			}
+		]
+	},
+	"tools": {
+		"moonpay": {
+			"description": "暗号資産の法定通貨オンランプとオフランプ"
+		},
+		"transak": {
+			"description": "法定通貨から暗号資産への決済インフラ"
+		},
+		"ramp": {
+			"description": "ノンカストディアル法定通貨オンランプSDK"
+		},
+		"onmeta": {
+			"description": "インドユーザー向け法定通貨オンランプ"
+		},
+		"superfluid": {
+			"description": "決済向けリアルタイムトークンストリーミング"
+		},
+		"sablier": {
+			"description": "ベスティングと給与向けトークンストリーミング"
+		},
+		"coinshift": {
+			"description": "資金庫管理とマルチシグ操作"
+		},
+		"spritz": {
+			"description": "ACH経由の暗号資産による請求書支払い"
+		},
+		"bitpay": {
+			"description": "マーチャント向け暗号資産決済処理"
+		},
+		"holyheld": {
+			"description": "イールド機能付きDeFiデビットカード"
+		},
+		"fusepay": {
+			"description": "Fuseネットワーク上の暗号資産支出カード"
+		},
+		"loopcrypto": {
+			"description": "定期暗号資産請求とサブスクリプション"
+		},
+		"reveel": {
+			"description": "自動化された収益分配とロイヤリティ分割"
+		},
+		"splits": {
+			"description": "オンチェーン支払い分割プロトコル"
+		},
+		"nowpayments": {
+			"description": "NOWPayments - 暗号資産決済ソリューション"
+		},
+		"monerium": {
+			"description": "Monerium - 暗号資産決済ソリューション"
+		},
+		"wyre": {
+			"description": "Wyre - 暗号資産決済ソリューション"
+		},
+		"banxa": {
+			"description": "Banxa - 暗号資産決済ソリューション"
+		},
+		"simplex": {
+			"description": "Simplex - 暗号資産決済ソリューション"
+		},
+		"sardine": {
+			"description": "Sardine - 暗号資産決済ソリューション"
+		},
+		"coinflow": {
+			"description": "Coinflow - 暗号資産決済ソリューション"
+		},
+		"llamapay": {
+			"description": "LlamaPay - 暗号資産決済ソリューション"
+		},
+		"parcel": {
+			"description": "Parcel - 暗号資産決済ソリューション"
+		}
+	}
+}

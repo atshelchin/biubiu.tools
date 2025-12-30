@@ -1,0 +1,146 @@
+{
+	"category_seo": {
+		"title": "Alat Keamanan Web3 - Audit, Monitor & Lindungi | BiuBiu Tools",
+		"description": "Alat keamanan penting untuk Web3. Audit smart contract, simulasi transaksi, manajemen approval, dan deteksi ancaman real-time.",
+		"keywords": "keamanan web3, audit smart contract, revoke approval, simulasi transaksi, keamanan defi",
+		"faqs": [
+			{
+				"question": "Bagaimana cara mencabut approval token?",
+				"answer": "Gunakan alat seperti Revoke.cash untuk melihat dan mencabut approval token unlimited yang telah Anda berikan ke smart contract. Ini mencegah eksploitasi potensial jika contract dikompromikan."
+			},
+			{
+				"question": "Apa itu simulasi transaksi?",
+				"answer": "Simulasi transaksi (alat seperti Pocket Universe) mempratinjau apa yang akan terjadi sebelum Anda menandatangani transaksi, membantu Anda menghindari scam dan hasil yang tidak terduga."
+			},
+			{
+				"question": "Bagaimana cara memverifikasi smart contract aman?",
+				"answer": "Periksa apakah contract diaudit oleh firma terkemuka, verifikasi kode di Etherscan, cari program bug bounty, dan periksa track record protokol dan TVL."
+			}
+		]
+	},
+	"tools": {
+		"revoke": {
+			"description": "Kelola dan cabut persetujuan token"
+		},
+		"slither": {
+			"description": "Framework analisis statis"
+		},
+		"mythx": {
+			"description": "API keamanan kontrak pintar"
+		},
+		"certik": {
+			"description": "Audit keamanan dan skynet"
+		},
+		"hacken": {
+			"description": "Audit keamanan blockchain"
+		},
+		"immunefi": {
+			"description": "Platform bug bounty Web3"
+		},
+		"openzeppelin": {
+			"description": "Library keamanan smart contract"
+		},
+		"dedaub": {
+			"description": "Alat keamanan smart contract dan decompiler"
+		},
+		"honeypot": {
+			"description": "Deteksi honeypot token"
+		},
+		"phalcon": {
+			"description": "Explorer analisis transaksi"
+		},
+		"chainalysis": {
+			"description": "Platform kepatuhan blockchain"
+		},
+		"hexagate": {
+			"description": "Pemantauan ancaman smart contract real-time"
+		},
+		"hypernative": {
+			"description": "Pemantauan dan pencegahan keamanan berbasis AI"
+		},
+		"chainalert": {
+			"description": "Alert dan notifikasi keamanan blockchain"
+		},
+		"webacy": {
+			"description": "Backup keamanan wallet dan warisan kripto"
+		},
+		"harpie": {
+			"description": "Firewall on-chain dan perlindungan scam"
+		},
+		"blowfish": {
+			"description": "Simulasi transaksi dan pencegahan ancaman"
+		},
+		"stelo": {
+			"description": "Pratinjau transaksi yang mudah dibaca"
+		},
+		"fire": {
+			"description": "Simulasi transaksi untuk perlindungan wallet"
+		},
+		"scamsniffer": {
+			"description": "Layanan deteksi scam dan phishing"
+		},
+		"peckshield": {
+			"description": "Firma audit keamanan blockchain dan riset"
+		},
+		"slowmist": {
+			"description": "Audit keamanan dan investigasi insiden"
+		},
+		"quantstamp": {
+			"description": "Audit keamanan blockchain enterprise"
+		},
+		"spearbit": {
+			"description": "Jaringan peneliti keamanan ahli"
+		},
+		"railgun": {
+			"description": "DeFi privat dengan zk-SNARK di chain EVM"
+		},
+		"aztec": {
+			"description": "Privasi yang dapat diprogram dengan zk-rollup"
+		},
+		"nocturne": {
+			"description": "Layer akun privat untuk Ethereum"
+		},
+		"umbra": {
+			"description": "Pembayaran stealth address di chain EVM"
+		},
+		"labyrinth": {
+			"description": "Privasi yang patuh untuk institusi"
+		},
+		"elusiv": {
+			"description": "Pembayaran privat yang patuh di Solana"
+		},
+		"zcash": {
+			"description": "Blockchain privasi native dengan transaksi shielded"
+		},
+		"forta": {
+			"description": "Jaringan deteksi ancaman real-time"
+		},
+		"code4rena": {
+			"description": "Kontes audit yang digerakkan komunitas"
+		},
+		"sherlock": {
+			"description": "Kontes audit dengan cakupan exploit"
+		},
+		"chainsecurity": {
+			"description": "Firma audit keamanan smart contract"
+		},
+		"halborn": {
+			"description": "Layanan keamanan blockchain komprehensif"
+		},
+		"zellic": {
+			"description": "Audit keamanan smart contract dan riset"
+		},
+		"veridise": {
+			"description": "Verifikasi formal dan audit keamanan"
+		},
+		"pessimistic": {
+			"description": "Audit keamanan dan pemantauan real-time"
+		},
+		"cyfrin": {
+			"description": "Audit keamanan dan edukasi smart contract"
+		},
+		"yaudit": {
+			"description": "Kolektif audit keamanan independen"
+		}
+	}
+}

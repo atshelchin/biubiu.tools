@@ -1,0 +1,107 @@
+{
+	"category_seo": {
+		"title": "Blockchain Explorers - View Transactions & Smart Contracts | BiuBiu Tools",
+		"description": "Access blockchain explorers for Ethereum, BSC, Polygon, and other networks. View transactions, verify contracts, and analyze on-chain data.",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "What is a blockchain explorer?",
+				"answer": "A blockchain explorer is a search engine for blockchain data. It allows you to view transactions, wallet balances, smart contract code, token transfers, and other on-chain activity."
+			},
+			{
+				"question": "How do I verify a smart contract?",
+				"answer": "On Etherscan, go to the contract address, click 'Contract' tab, then 'Verify and Publish'. Submit the source code, compiler version, and constructor arguments. Verified contracts show a green checkmark."
+			},
+			{
+				"question": "What are the best multi-chain explorers?",
+				"answer": "Blockscout supports many EVM chains and is open-source. OKLink covers 50+ chains. For specific chains, use native explorers like Etherscan (Ethereum), BSCScan (BNB Chain), or Arbiscan (Arbitrum)."
+			}
+		]
+	},
+	"tools": {
+		"etherscan": {
+			"description": "이더리움 블록체인 탐색기"
+		},
+		"blockscout": {
+			"description": "오픈소스 블록 탐색기"
+		},
+		"arbiscan": {
+			"description": "Arbitrum 블록체인 탐색기"
+		},
+		"polygonscan": {
+			"description": "Polygon 블록체인 탐색기"
+		},
+		"bscscan": {
+			"description": "BNB 체인 블록체인 탐색기"
+		},
+		"basescan": {
+			"description": "Base 블록체인 탐색기"
+		},
+		"snowtrace": {
+			"description": "Avalanche 블록체인 탐색기"
+		},
+		"lineascan": {
+			"description": "Linea 블록체인 탐색기"
+		},
+		"scrollscan": {
+			"description": "Scroll 네트워크 탐색기"
+		},
+		"mantlescan": {
+			"description": "Mantle 네트워크 탐색기"
+		},
+		"blastscan": {
+			"description": "Blast 네트워크 탐색기"
+		},
+		"modescan": {
+			"description": "Mode 네트워크 탐색기"
+		},
+		"celoscan": {
+			"description": "Celo 블록체인 탐색기"
+		},
+		"ftmscan": {
+			"description": "Fantom 네트워크 탐색기"
+		},
+		"gnosisscan": {
+			"description": "Gnosis 체인 탐색기"
+		},
+		"cronoscan": {
+			"description": "Cronos 네트워크 탐색기"
+		},
+		"moonbeamscan": {
+			"description": "Moonbeam 및 Moonriver 탐색기"
+		},
+		"oklink": {
+			"description": "OKX의 멀티체인 블록체인 탐색기"
+		},
+		"routescan": {
+			"description": "통합 멀티체인 블록 탐색기"
+		},
+		"onceupon": {
+			"description": "사람이 읽을 수 있는 블록체인 거래 탐색기"
+		},
+		"anyabi": {
+			"description": "스마트 컨트랙트 ABI 조회 및 디코더"
+		},
+		"nearblocks": {
+			"description": "NEAR 프로토콜 블록 탐색기"
+		},
+		"blockchair": {
+			"description": "멀티체인 블록 탐색기"
+		},
+		"avascan": {
+			"description": "Avalanche 서브넷 탐색기"
+		},
+		"tronscan": {
+			"description": "TRON 블록체인 탐색기"
+		},
+		"cardanoscan": {
+			"description": "Cardano 블록체인 탐색기"
+		},
+		"viewblock": {
+			"description": "멀티체인 블록 탐색기"
+		},
+		"suiscan": {
+			"description": "Sui 블록체인 탐색기"
+		}
+	}
+}

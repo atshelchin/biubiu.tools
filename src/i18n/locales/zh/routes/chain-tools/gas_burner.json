@@ -1,0 +1,34 @@
+{
+	"category_seo": {
+		"title": "Gas 消耗榜与代币销毁 - 通缩机制 | BiuBiu Tools",
+		"description": "追踪代币销毁和 Gas 消耗。监控通缩机制、销毁率和供应动态。",
+		"faqs": [
+			{
+				"question": "什么是代币销毁？",
+				"answer": "代币销毁通过将代币发送到不可用的地址来永久移除流通中的代币。这创造了通缩压力并可能增加稀缺价值。"
+			},
+			{
+				"question": "ETH 销毁如何运作？",
+				"answer": "自 EIP-1559 以来，基础费用被销毁而不是给矿工。在高活动期间，ETH 可能变得通缩。在 ultrasound.money 上追踪销毁率。"
+			},
+			{
+				"question": "哪些项目有显著的销毁？",
+				"answer": "以太坊（基础费用）、BNB（季度销毁）、SHIB（社区销毁），以及许多带有买入销毁机制的协议。查看代币经济学以了解销毁计划。"
+			}
+		]
+	},
+	"tools": {
+		"l2fees": {
+			"description": "比较L2交易费用"
+		},
+		"gasnow": {
+			"description": "快速Gas价格追踪器，提供API"
+		},
+		"owlracle": {
+			"description": "多链Gas预言机，提供API"
+		},
+		"txstreet": {
+			"description": "实时区块链可视化"
+		}
+	}
+}

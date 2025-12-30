@@ -1,0 +1,38 @@
+{
+	"category_seo": {
+		"title": "Stablecoins - Criptomonedas Vinculadas a Dólares | BiuBiu Tools",
+		"description": "Aprende sobre stablecoins como USDT, USDC, DAI y otros activos cripto estables. Compara tipos, respaldos y casos de uso.",
+		"keywords": "stablecoins, usdt, usdc, dai, criptomonedas estables, stablecoins fiat",
+		"faqs": [
+			{
+				"question": "¿Qué son las stablecoins?",
+				"answer": "Las stablecoins son criptomonedas diseñadas para mantener valor estable, usualmente vinculadas 1:1 a monedas fiat como el USD. Proveen la velocidad y beneficios de cripto sin volatilidad de precios, haciéndolas ideales para pagos y comercio DeFi."
+			},
+			{
+				"question": "¿USDT vs USDC vs DAI?",
+				"answer": "USDT (Tether) es la stablecoin más grande pero menos transparente. USDC (Circle) es regulada en EE.UU. con auditorías regulares. DAI (MakerDAO) es descentralizada, respaldada por cripto y gobernada por DAO. Cada una tiene diferentes niveles de confianza/descentralización."
+			},
+			{
+				"question": "¿Las stablecoins son seguras?",
+				"answer": "El riesgo depende del tipo: las stablecoins centralizadas enfrentan riesgo de contraparte y regulatorio. Las stablecoins descentralizadas enfrentan riesgos de contratos inteligentes y colateralización. Las stablecoins algorítmicas han mostrado ser propensas a colapsos (ver UST/LUNA)."
+			}
+		]
+	},
+	"tools": {
+		"frax": {
+			"description": "Stablecoin fraccional-algorítmica con colateralización parcial"
+		},
+		"tusd": {
+			"description": "Stablecoin respaldada por USD regulada y auditada"
+		},
+		"sfrax": {
+			"description": "FRAX stakeado ganando rendimiento del protocolo Frax"
+		},
+		"fdusd": {
+			"description": "Stablecoin First Digital USD regulada en Hong Kong"
+		},
+		"flexusd": {
+			"description": "Stablecoin descentralizada sobre-colateralizada"
+		}
+	}
+}

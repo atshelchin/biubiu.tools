@@ -1,0 +1,62 @@
+{
+	"category_seo": {
+		"title": "Protocolos de Restaking - Capitaliza Tu ETH Stakeado | BiuBiu Tools",
+		"description": "Aprende sobre restaking con EigenLayer y protocolos similares. Capitaliza ETH stakeado para seguridad adicional y recompensas.",
+		"keywords": "restaking, eigenlayer, liquid restaking, staking eth, restaking capitalizacion",
+		"faqs": [
+			{
+				"question": "¿Qué es el restaking?",
+				"answer": "El restaking te permite usar tu ETH ya stakeado para asegurar protocolos adicionales simultáneamente, ganando recompensas de staking de múltiples fuentes. EigenLayer pioneriza esto permitiendo que los stakers validen servicios mientras mantienen seguridad de Ethereum."
+			},
+			{
+				"question": "¿Restaking vs Staking normal?",
+				"answer": "El staking normal asegura Ethereum y gana ~4% APR. El restaking permite que el mismo ETH asegure servicios adicionales (oráculos, bridges, L2s) por recompensas extras. Sin embargo, el restaking añade riesgos como condiciones de slashing adicionales y complejidad de contratos inteligentes."
+			},
+			{
+				"question": "¿Cuáles son los riesgos del restaking?",
+				"answer": "Los riesgos incluyen: condiciones de slashing compuestas (perder ETH por mal comportamiento en múltiples protocolos), vulnerabilidades de contratos inteligentes, riesgos de liquidez en tokens de restaking líquido y centralización potencial si pocos operadores dominan el restaking."
+			}
+		]
+	},
+	"tools": {
+		"eigenlayer": {
+			"description": "Protocolo de restaking para seguridad de Ethereum"
+		},
+		"etherfi": {
+			"description": "Protocolo de staking descentralizado"
+		},
+		"karak": {
+			"description": "Restaking universal para seguridad multi-cadena"
+		},
+		"symbiotic": {
+			"description": "Protocolo de restaking modular sin permisos"
+		},
+		"babylon": {
+			"description": "Protocolo de staking Bitcoin asegurando redes PoS"
+		},
+		"eigenpie": {
+			"description": "Restaking líquido Magpie con tokens LRT aislados"
+		},
+		"bedrock": {
+			"description": "Restaking líquido universal con token uniETH"
+		},
+		"stakestone": {
+			"description": "Restaking líquido omnichain con token STONE"
+		},
+		"inception": {
+			"description": "Restaking líquido con unstaking instantáneo vía inETH"
+		},
+		"eigenda": {
+			"description": "Servicio de disponibilidad de datos EigenLayer para rollups"
+		},
+		"lagrange": {
+			"description": "Coprocesador ZK AVS para pruebas cross-chain"
+		},
+		"espresso": {
+			"description": "AVS de secuenciamiento compartido para rollups"
+		},
+		"brevis": {
+			"description": "Coprocesador ZK para datos históricos blockchain"
+		}
+	}
+}

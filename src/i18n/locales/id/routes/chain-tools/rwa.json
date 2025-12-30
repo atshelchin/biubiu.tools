@@ -1,0 +1,58 @@
+{
+	"category_seo": {
+		"title": "Real World Asset (RWA) - Aset Tokenisasi | BiuBiu Tools",
+		"description": "Jelajahi aset dunia nyata yang ditokenisasi. Treasury tokenisasi, real estat, komoditas, dan keuangan tradisional di blockchain.",
+		"faqs": [
+			{
+				"question": "Apa itu RWA?",
+				"answer": "RWA (Real World Asset) adalah aset tradisional seperti Treasury AS, real estat, atau komoditas yang ditokenisasi di blockchain. Mereka membawa yield keuangan tradisional ke DeFi."
+			},
+			{
+				"question": "Mengapa RWA penting?",
+				"answer": "RWA menyediakan yield stabil dari ekonomi riil (tarif Treasury), diversifikasi dari volatilitas kripto, dan menjembatani keuangan tradisional dengan DeFi. MakerDAO memegang miliaran dalam RWA."
+			},
+			{
+				"question": "Platform RWA apa yang ada?",
+				"answer": "Ondo Finance untuk treasury tokenisasi, RealT untuk real estat, Centrifuge untuk pembiayaan aset. Protokol DeFi utama mengintegrasikan strategi RWA untuk yield."
+			}
+		]
+	},
+	"tools": {
+		"goldfinch": {
+			"description": "Lending kripto untuk kredit dunia nyata di pasar berkembang"
+		},
+		"truefi": {
+			"description": "Lending tanpa kolateral untuk peminjam institusional"
+		},
+		"centrifuge": {
+			"description": "Protokol pembiayaan aset dunia nyata yang membawa invoice dan real estat on-chain"
+		},
+		"clearpool": {
+			"description": "Pasar modal terdesentralisasi untuk lending institusional tanpa jaminan"
+		},
+		"matrixdock": {
+			"description": "Treasury bill yang ditokenisasi dengan stablecoin STBT"
+		},
+		"openeden": {
+			"description": "T-Bills yang ditokenisasi dengan NAV real-time dan settlement 24/7"
+		},
+		"realt": {
+			"description": "Investasi real estat yang ditokenisasi dengan kepemilikan fraksional"
+		},
+		"lofty": {
+			"description": "Investasi real estat fraksional di blockchain Algorand"
+		},
+		"propy": {
+			"description": "Transaksi dan kepemilikan real estat berbasis blockchain"
+		},
+		"securitize": {
+			"description": "Platform penerbitan dan manajemen siklus hidup security token"
+		},
+		"tokeny": {
+			"description": "Platform tokenisasi enterprise untuk sekuritas yang patuh"
+		},
+		"polymesh": {
+			"description": "Blockchain yang dibangun khusus untuk security token yang diregulasi"
+		}
+	}
+}

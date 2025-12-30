@@ -1,0 +1,34 @@
+{
+	"category_seo": {
+		"title": "MEV - Công Cụ & Bảo Vệ Giá Trị Có Thể Trích Xuất Tối Đa | BiuBiu Tools",
+		"description": "Hiểu và điều hướng MEV. Công cụ bảo vệ, giao dịch riêng tư và trích xuất MEV cho người dùng nâng cao.",
+		"faqs": [
+			{
+				"question": "MEV là gì?",
+				"answer": "MEV (Maximal Extractable Value) là lợi nhuận được trích xuất bằng cách sắp xếp lại, chèn hoặc kiểm duyệt giao dịch. Nó bao gồm chênh lệch giá, thanh lý và tấn công sandwich có thể ảnh hưởng đến giao dịch của bạn."
+			},
+			{
+				"question": "Làm thế nào để bảo vệ chống lại MEV?",
+				"answer": "Sử dụng Flashbots Protect hoặc MEV Blocker cho giao dịch riêng tư. Đặt slippage thấp. Sử dụng bộ tổng hợp như 1inch với bảo vệ MEV. Tránh giao dịch lớn trên thanh khoản mỏng."
+			},
+			{
+				"question": "Tấn công sandwich là gì?",
+				"answer": "Tấn công sandwich chạy trước giao dịch hoán đổi của bạn bằng lệnh mua, sau đó chạy sau bằng lệnh bán, kiếm lợi từ tác động giá bạn gây ra. Sử dụng mempool riêng hoặc bảo vệ MEV ngăn chặn điều này."
+			}
+		]
+	},
+	"tools": {
+		"beaverbuild": {
+			"description": "Trình xây dựng khối Ethereum hàng đầu với thị phần cao"
+		},
+		"zeromev": {
+			"description": "Theo dõi trích xuất MEV trên các khối Ethereum"
+		},
+		"relayscan": {
+			"description": "Phân tích cho relay MEV-Boost và hiệu suất builder"
+		},
+		"suave": {
+			"description": "Đấu giá thống nhất duy nhất cho biểu hiện giá trị - tương lai của MEV"
+		}
+	}
+}

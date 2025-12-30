@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "Uniswap - Bursa Terdesentralisasi Terbesar | Ulasan Alat DeFi",
+		"description": "Temukan Uniswap, bursa terdesentralisasi terbesar di dunia. Pelajari tentang automated market maker, pool likuiditas, dukungan multi-chain, dan cara menukar token dengan aman.",
+		"keywords": "Uniswap, DEX, bursa terdesentralisasi, pertukaran token, AMM, pool likuiditas, DeFi, Ethereum, trading kripto"
+	},
+	"overview": "Uniswap adalah bursa terdesentralisasi (DEX) terbesar di dunia, merintis model automated market maker (AMM) yang telah menjadi standar untuk perdagangan terdesentralisasi. Diluncurkan pada November 2018 oleh Hayden Adams, seorang mantan insinyur mekanik, Uniswap merevolusi cara pengguna memperdagangkan cryptocurrency dengan menghilangkan kebutuhan akan order book tradisional dan perantara terpusat.\n\nProtokol ini beroperasi melalui smart contract di Ethereum dan beberapa jaringan Layer 2, memungkinkan siapa saja untuk menukar token secara instan tanpa membuat akun atau mempercayakan dana mereka kepada pihak ketiga. Pada tahun 2024, Uniswap telah memproses lebih dari 2 triliun dolar dalam volume perdagangan kumulatif dan mempertahankan Total Value Locked (TVL) melebihi 5 miliar dolar.\n\nDesain tanpa izin Uniswap berarti token ERC-20 apa pun dapat didaftarkan dan diperdagangkan tanpa persetujuan dari tim terpusat. Keterbukaan ini telah menjadikannya platform pilihan untuk menemukan dan memperdagangkan token baru, sementara smart contract yang telah teruji memberikan keamanan yang telah mendapatkan kepercayaan jutaan pengguna di seluruh dunia.",
+	"features": {
+		"1": {
+			"title": "Automated Market Maker (AMM)",
+			"description": "Perdagangkan token secara instan menggunakan pool likuiditas alih-alih order book, dengan harga ditentukan oleh rumus matematika"
+		},
+		"2": {
+			"title": "Perdagangan Non-Custodial",
+			"description": "Dana Anda tetap di dompet Anda hingga saat pertukaran - tanpa deposit, tanpa pembuatan akun, tanpa kepercayaan yang diperlukan"
+		},
+		"3": {
+			"title": "Listing Token Tanpa Izin",
+			"description": "Token ERC-20 apa pun dapat diperdagangkan tanpa persetujuan, memungkinkan akses awal ke proyek baru"
+		},
+		"4": {
+			"title": "Dukungan Multi-Chain",
+			"description": "Tersedia di Ethereum, Arbitrum, Optimism, Polygon, Base, dan lainnya - tukar di mana biaya gas cocok untuk Anda"
+		},
+		"5": {
+			"title": "Likuiditas Terkonsentrasi (V3)",
+			"description": "Penyedia likuiditas dapat memfokuskan modal dalam rentang harga tertentu untuk efisiensi modal yang lebih tinggi"
+		},
+		"6": {
+			"title": "Hooks & Kustomisasi (V4)",
+			"description": "Versi terbaru memperkenalkan plugin yang dapat disesuaikan untuk mekanisme dan strategi perdagangan unik"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Pertukaran Token",
+			"description": "Tukar token apa pun dengan yang lain secara instan dengan rate kompetitif dan slippage minimal"
+		},
+		"2": {
+			"title": "Penyediaan Likuiditas",
+			"description": "Dapatkan biaya perdagangan dengan menyediakan likuiditas ke pasangan token - jadilah market maker Anda sendiri"
+		},
+		"3": {
+			"title": "Penemuan Token Baru",
+			"description": "Temukan dan perdagangkan token yang baru diluncurkan sebelum muncul di bursa terpusat"
+		},
+		"4": {
+			"title": "Manajemen Portofolio DeFi",
+			"description": "Rebalance portofolio kripto Anda atau tukar ke stablecoin selama volatilitas pasar"
+		},
+		"5": {
+			"title": "Perdagangan Cross-Chain",
+			"description": "Berdagang di jaringan Layer 2 untuk menghemat biaya gas sambil mempertahankan keamanan Ethereum"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu Uniswap dan bagaimana cara kerjanya?",
+			"answer": "Uniswap adalah bursa terdesentralisasi yang menggunakan model automated market maker (AMM). Alih-alih mencocokkan pembeli dengan penjual, ia menggunakan pool likuiditas - smart contract yang menyimpan pasangan token. Saat Anda menukar, Anda berdagang melawan pool ini, dan harga menyesuaikan secara otomatis berdasarkan penawaran dan permintaan."
+		},
+		"2": {
+			"question": "Apakah Uniswap aman digunakan?",
+			"answer": "Smart contract inti Uniswap telah diaudit secara ekstensif dan telah mengamankan miliaran dolar tanpa eksploitasi besar. Namun, selalu verifikasi bahwa Anda menggunakan antarmuka resmi (app.uniswap.org), waspada terhadap token penipuan, dan pahami risiko impermanent loss jika menyediakan likuiditas."
+		},
+		"3": {
+			"question": "Berapa biaya di Uniswap?",
+			"answer": "Uniswap membebankan biaya swap 0.3% di sebagian besar pool, yang diberikan kepada penyedia likuiditas. Uniswap Labs juga membebankan biaya tambahan 0.15% pada token tertentu melalui antarmuka mereka. Anda juga akan membayar biaya gas jaringan, yang bervariasi berdasarkan kemacetan jaringan."
+		},
+		"4": {
+			"question": "Apa itu impermanent loss?",
+			"answer": "Impermanent loss terjadi saat menyediakan likuiditas dan rasio harga token yang Anda depositkan berubah. Jika Anda hanya memegang token, Anda mungkin memiliki nilai lebih dari yang ada di pool. Biaya perdagangan yang diperoleh dapat mengimbangi ini, tetapi ini adalah risiko penting untuk dipahami."
+		},
+		"5": {
+			"question": "Jaringan mana yang harus saya gunakan di Uniswap?",
+			"answer": "Mainnet Ethereum memiliki likuiditas terdalam tetapi biaya gas lebih tinggi. Untuk perdagangan yang lebih kecil, jaringan Layer 2 seperti Arbitrum, Optimism, atau Base menawarkan biaya yang jauh lebih rendah sambil mempertahankan keamanan. Pilih berdasarkan token yang ingin Anda perdagangkan dan ukuran transaksi Anda."
+		}
+	},
+	"cta": {
+		"ready": "Siap untuk mulai trading?",
+		"button": "Buka Uniswap",
+		"note": "Perdagangan non-custodial - kunci Anda, kripto Anda"
+	}
+}

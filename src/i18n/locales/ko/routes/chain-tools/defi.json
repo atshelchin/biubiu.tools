@@ -1,0 +1,309 @@
+{
+	"category_seo": {
+		"title": "DeFi Tools - Decentralized Finance Protocols & Apps | BiuBiu Tools",
+		"description": "Discover the best DeFi tools for swapping, lending, yield farming, and more. Compare top protocols like Uniswap, Aave, Curve, and Compound.",
+		"keywords": "defi tools, decentralized finance, dex, lending, yield farming, uniswap, aave, compound",
+		"faqs": [
+			{
+				"question": "What is DeFi?",
+				"answer": "DeFi (Decentralized Finance) refers to financial services built on blockchain technology that operate without traditional intermediaries like banks. It includes lending, borrowing, trading, and earning interest on crypto assets."
+			},
+			{
+				"question": "What are the risks of using DeFi?",
+				"answer": "DeFi risks include smart contract vulnerabilities, impermanent loss in liquidity pools, market volatility, and potential rug pulls. Always do your research and only invest what you can afford to lose."
+			},
+			{
+				"question": "How do I get started with DeFi?",
+				"answer": "To start with DeFi: 1) Set up a crypto wallet like MetaMask, 2) Purchase some ETH or other crypto, 3) Connect your wallet to a DeFi platform, 4) Start with simple swaps before trying advanced features."
+			},
+			{
+				"question": "What is TVL in DeFi?",
+				"answer": "TVL (Total Value Locked) represents the total amount of assets deposited in a DeFi protocol. It's a key metric for measuring a protocol's popularity and security level."
+			}
+		]
+	},
+	"tools": {
+		"uniswap": {
+			"description": "토큰 swap을 위한 선도적인 탈중앙화 거래소"
+		},
+		"aave": {
+			"description": "탈중앙화 대출 및 차입 프로토콜"
+		},
+		"1inch": {
+			"description": "최적의 swap 가격을 위한 DEX 수집기"
+		},
+		"curve": {
+			"description": "낮은 슬리피지의 스테이블코인 중심 AMM"
+		},
+		"lido": {
+			"description": "이더리움 및 기타 체인을 위한 리퀴드 스테이킹"
+		},
+		"compound": {
+			"description": "알고리즘 기반 머니 마켓 프로토콜"
+		},
+		"maker": {
+			"description": "DAI 스테이블코인 및 대출 프로토콜"
+		},
+		"gmx": {
+			"description": "탈중앙화 무기한 거래소"
+		},
+		"pancakeswap": {
+			"description": "BNB 체인의 대표 DEX"
+		},
+		"sushiswap": {
+			"description": "멀티체인 AMM 및 DeFi 플랫폼"
+		},
+		"balancer": {
+			"description": "자동화된 포트폴리오 관리자 및 DEX"
+		},
+		"dydx": {
+			"description": "탈중앙화 무기한 거래 거래소"
+		},
+		"convex": {
+			"description": "CRV 잠금 없이 Curve 수익률 부스팅"
+		},
+		"yearn": {
+			"description": "자동화된 수익률 최적화 볼트"
+		},
+		"pendle": {
+			"description": "수익률 토큰화 및 거래"
+		},
+		"radiant": {
+			"description": "옴니체인 머니 마켓"
+		},
+		"morpho": {
+			"description": "최적화된 이자율로 P2P 대출"
+		},
+		"rocketpool": {
+			"description": "탈중앙화 이더리움 스테이킹"
+		},
+		"venus": {
+			"description": "BSC 대출 및 차입"
+		},
+		"camelot": {
+			"description": "Arbitrum 네이티브 DEX 및 런치패드"
+		},
+		"velodrome": {
+			"description": "Optimism 유동성 허브"
+		},
+		"aerodrome": {
+			"description": "Base 네트워크의 중앙 유동성 허브"
+		},
+		"maverick": {
+			"description": "유동성을 위한 동적 분산 AMM"
+		},
+		"spark": {
+			"description": "MakerDAO의 DAI 대출 프로토콜"
+		},
+		"instadapp": {
+			"description": "DeFi 스마트 계정 수집기"
+		},
+		"sommelier": {
+			"description": "능동적으로 관리되는 DeFi 볼트 전략"
+		},
+		"euler": {
+			"description": "무허가 대출 프로토콜"
+		},
+		"benqi": {
+			"description": "Avalanche 대출 및 리퀴드 스테이킹"
+		},
+		"silo": {
+			"description": "격리된 리스크 대출 시장"
+		},
+		"abracadabra": {
+			"description": "이자 발생 토큰 대출"
+		},
+		"alchemix": {
+			"description": "자기 상환 대출 프로토콜"
+		},
+		"exactly": {
+			"description": "고정 및 변동 금리 대출"
+		},
+		"kyberswap": {
+			"description": "탄력적 풀이 있는 DEX 수집기"
+		},
+		"odos": {
+			"description": "스마트 주문 라우팅 수집기"
+		},
+		"openocean": {
+			"description": "크로스체인 DEX 수집기"
+		},
+		"hashflow": {
+			"description": "MEV 보호 RFQ 거래"
+		},
+		"syncswap": {
+			"description": "zkSync Era 네이티브 DEX"
+		},
+		"mute": {
+			"description": "증폭기가 있는 zkSync DEX"
+		},
+		"spacefi": {
+			"description": "zkSync DEX 및 이자 농사"
+		},
+		"ramses": {
+			"description": "Arbitrum ve(3,3) DEX"
+		},
+		"thena": {
+			"description": "BNB 체인 ve(3,3) DEX"
+		},
+		"baseswap": {
+			"description": "Base 네이티브 DEX 및 농장"
+		},
+		"woofi": {
+			"description": "낮은 슬리피지 크로스체인 DEX"
+		},
+		"gains": {
+			"description": "탈중앙화 레버리지 거래"
+		},
+		"level": {
+			"description": "무기한 거래 플랫폼"
+		},
+		"mux": {
+			"description": "레버리지 거래 수집기"
+		},
+		"vertex": {
+			"description": "무기한 및 현물 DEX"
+		},
+		"hyperliquid": {
+			"description": "온체인 무기한 오더북 DEX"
+		},
+		"aevo": {
+			"description": "옵션 및 무기한 거래소"
+		},
+		"lyra": {
+			"description": "옵션 AMM 프로토콜"
+		},
+		"dopex": {
+			"description": "탈중앙화 옵션 프로토콜"
+		},
+		"premia": {
+			"description": "옵션 볼트 및 거래"
+		},
+		"harvest": {
+			"description": "DeFi 이자 농사 수집기"
+		},
+		"pickle": {
+			"description": "수익률 최적화 항아리"
+		},
+		"concentrator": {
+			"description": "Curve 및 Convex를 위한 자동 복리"
+		},
+		"conic": {
+			"description": "Curve 옴니풀 플랫폼"
+		},
+		"sturdy": {
+			"description": "무이자 대출 프로토콜"
+		},
+		"stakewise": {
+			"description": "비수탁형 ETH 스테이킹"
+		},
+		"stader": {
+			"description": "멀티체인 리퀴드 스테이킹"
+		},
+		"renzo": {
+			"description": "EigenLayer 리퀴드 리스테이킹"
+		},
+		"puffer": {
+			"description": "슬래싱 방지 기술을 갖춘 리퀴드 리스테이킹"
+		},
+		"kelp": {
+			"description": "EigenLayer의 rsETH를 이용한 리퀴드 리스테이킹"
+		},
+		"bentobox": {
+			"description": "플래시 론 및 대출 기능을 갖춘 Sushi의 토큰 볼트"
+		},
+		"ribbon": {
+			"description": "지속 가능한 수익을 위한 구조화 상품 및 옵션 볼트"
+		},
+		"opyn": {
+			"description": "squeeth 무기한 전략을 갖춘 옵션 프로토콜"
+		},
+		"notional": {
+			"description": "고정 금리 대출 및 차입 프로토콜"
+		},
+		"maple": {
+			"description": "기관용 저담보 대출 마켓플레이스"
+		},
+		"tokemak": {
+			"description": "지속 가능한 DeFi 유동성을 위한 유동성 리액터"
+		},
+		"olympus": {
+			"description": "OHM 토큰을 갖춘 탈중앙화 준비 통화 프로토콜"
+		},
+		"umami": {
+			"description": "Arbitrum의 GLP를 사용한 지속 가능한 수익 볼트"
+		},
+		"vela": {
+			"description": "고급 거래 기능을 갖춘 무기한 DEX"
+		},
+		"y2k": {
+			"description": "스테이블코인 디페그 보험 및 헤징 프로토콜"
+		},
+		"kwenta": {
+			"description": "Synthetix 기반 무기한 선물 거래"
+		},
+		"polynomial": {
+			"description": "Optimism의 Synthetix 기반 옵션 볼트"
+		},
+		"angle": {
+			"description": "유로 스테이블코인 및 외환 DeFi 프로토콜"
+		},
+		"liquity": {
+			"description": "LUSD 스테이블코인을 이용한 ETH 담보 무이자 차입"
+		},
+		"reflexer": {
+			"description": "PID 컨트롤러를 갖춘 비페그 스테이블코인 RAI"
+		},
+		"mstable": {
+			"description": "수익 저축 기능을 갖춘 메타 스테이블코인 플랫폼"
+		},
+		"raft": {
+			"description": "LSD 담보 스테이블코인 차입 프로토콜"
+		},
+		"prisma": {
+			"description": "Curve 통합을 갖춘 LSD 담보 mkUSD 스테이블코인"
+		},
+		"gravita": {
+			"description": "LSD 담보 GRAI 스테이블코인 차입"
+		},
+		"gyroscope": {
+			"description": "다각화된 준비금을 갖춘 전천후 스테이블코인"
+		},
+		"paraswap": {
+			"description": "체인 간 최적 swap 가격을 위한 DEX 수집기"
+		},
+		"matcha": {
+			"description": "0x 프로토콜 기반 DEX 수집기"
+		},
+		"cowswap": {
+			"description": "배치 경매를 이용한 MEV 보호 스왑"
+		},
+		"bebop": {
+			"description": "무가스 거래를 갖춘 멀티 토큰 스왑"
+		},
+		"dodo": {
+			"description": "크라우드풀링을 갖춘 능동형 마켓 메이커 DEX"
+		},
+		"clipper": {
+			"description": "소매 거래자 및 소액 거래에 최적화된 DEX"
+		},
+		"symbiotic_restaking": {
+			"description": "무허가 모듈식 리스테이킹 프로토콜"
+		},
+		"ether_fi": {
+			"description": "eETH를 이용한 비수탁형 리퀴드 리스테이킹"
+		},
+		"swell": {
+			"description": "swETH를 이용한 리퀴드 스테이킹 및 리스테이킹"
+		},
+		"beefy": {
+			"description": "멀티체인 자동 복리 수익률 최적화 도구"
+		},
+		"equilibria": {
+			"description": "Pendle 풀을 위한 부스트된 수익률"
+		},
+		"marginfi": {
+			"description": "Solana DeFi 대출 프로토콜"
+		}
+	}
+}

@@ -1,0 +1,116 @@
+{
+	"category_seo": {
+		"title": "Công Cụ NFT - Thị Trường, Phân Tích & Tạo NFT | BiuBiu Tools",
+		"description": "Tìm thị trường NFT, công cụ phân tích và nền tảng tạo NFT tốt nhất. Khám phá OpenSea, Blur và các công cụ NFT hàng đầu khác.",
+		"keywords": "nft tools, nft marketplace, opensea, blur, nft analytics, nft creation",
+		"faqs": [
+			{
+				"question": "NFT là gì?",
+				"answer": "NFT (Non-Fungible Token) là tài sản kỹ thuật số độc nhất trên blockchain đại diện cho quyền sở hữu các vật phẩm như nghệ thuật, âm nhạc, sưu tầm và bất động sản ảo. Mỗi NFT là duy nhất và không thể sao chép."
+			},
+			{
+				"question": "Tôi có thể mua NFT ở đâu?",
+				"answer": "Các thị trường NFT phổ biến bao gồm OpenSea (thị trường tổng hợp lớn nhất), Blur (cho trader), Magic Eden (Solana) và Foundation (nghệ thuật được tuyển chọn). Mỗi nền tảng có phí và tính năng khác nhau."
+			},
+			{
+				"question": "Làm thế nào để tạo NFT?",
+				"answer": "Để tạo NFT: 1) Tạo tác phẩm nghệ thuật hoặc nội dung kỹ thuật số, 2) Chọn blockchain (Ethereum, Solana, v.v.), 3) Chọn thị trường như OpenSea, 4) Kết nối ví và tải nội dung lên, 5) Đặt giá và niêm yết để bán."
+			}
+		]
+	},
+	"tools": {
+		"opensea": {
+			"description": "Thị trường NFT lớn nhất"
+		},
+		"blur": {
+			"description": "Thị trường NFT chuyên nghiệp cho nhà giao dịch"
+		},
+		"reservoir": {
+			"description": "Cơ sở hạ tầng thanh khoản NFT"
+		},
+		"rarible": {
+			"description": "Tạo và giao dịch NFT trên bất kỳ chuỗi nào"
+		},
+		"zora": {
+			"description": "Tạo NFT và thị trường"
+		},
+		"foundation": {
+			"description": "Thị trường nghệ thuật kỹ thuật số được tuyển chọn"
+		},
+		"manifold": {
+			"description": "Công cụ và hợp đồng cho nhà sáng tạo NFT"
+		},
+		"nftnerds": {
+			"description": "Giao dịch và phân tích NFT"
+		},
+		"looksrare": {
+			"description": "Thị trường NFT cộng đồng"
+		},
+		"x2y2": {
+			"description": "Thị trường NFT phí thấp"
+		},
+		"gem": {
+			"description": "Bộ tổng hợp và quét NFT"
+		},
+		"nftfi": {
+			"description": "Vay thế chấp NFT"
+		},
+		"arcade": {
+			"description": "Giao thức cho vay NFT"
+		},
+		"mintfun": {
+			"description": "Khám phá mint NFT"
+		},
+		"sudoswap": {
+			"description": "AMM NFT cho thanh khoản và giao dịch tức thì"
+		},
+		"caviar": {
+			"description": "Phân mảnh NFT và giao thức AMM"
+		},
+		"nftx": {
+			"description": "Giao thức thanh khoản NFT với giá sàn vault"
+		},
+		"tessera": {
+			"description": "Sở hữu NFT tập thể thông qua phân mảnh"
+		},
+		"premint": {
+			"description": "Công cụ quản lý danh sách cho phép và whitelist NFT"
+		},
+		"bueno": {
+			"description": "Công cụ tạo nghệ thuật NFT generative không cần code"
+		},
+		"highlight": {
+			"description": "Công cụ cho nhà sáng tạo để mint và phân phối NFT"
+		},
+		"tokenproof": {
+			"description": "Xác minh NFT và trải nghiệm có cổng token"
+		},
+		"rabbithole": {
+			"description": "Nhiệm vụ on-chain và kiếm thông tin xác thực"
+		},
+		"tensor": {
+			"description": "Giao dịch NFT chuyên nghiệp trên Solana"
+		},
+		"hyperspace": {
+			"description": "Bộ tổng hợp và thị trường NFT trên Solana"
+		},
+		"tradeport": {
+			"description": "Thị trường NFT cho Sui và Aptos"
+		},
+		"campfire": {
+			"description": "Thị trường NFT trên Avalanche"
+		},
+		"paintswap": {
+			"description": "Thị trường NFT trên Fantom và Sonic"
+		},
+		"unlockd": {
+			"description": "Nền tảng cho vay NFT"
+		},
+		"formfunction": {
+			"description": "Nền tảng NFT cho nhà sáng tạo"
+		},
+		"oncyber": {
+			"description": "Triển lãm NFT ảo 3D"
+		}
+	}
+}

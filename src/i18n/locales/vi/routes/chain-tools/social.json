@@ -1,0 +1,82 @@
+{
+	"category_seo": {
+		"title": "Mạng Xã Hội Web3 - Nền Tảng Xã Hội Phi Tập Trung | BiuBiu Tools",
+		"description": "Nền tảng xã hội phi tập trung và công cụ cộng đồng. Xây dựng và tham gia cộng đồng Web3 trên Farcaster, Lens và nhiều hơn nữa.",
+		"faqs": [
+			{
+				"question": "Nền tảng xã hội Web3 là gì?",
+				"answer": "Nền tảng xã hội Web3 là lựa chọn thay thế phi tập trung cho Twitter/Facebook. Bạn sở hữu dữ liệu và biểu đồ xã hội của mình. Các nền tảng phổ biến bao gồm Farcaster, Lens Protocol và DeSo."
+			},
+			{
+				"question": "Farcaster là gì?",
+				"answer": "Farcaster là giao thức xã hội phi tập trung tương tự Twitter. Warpcast là client chính. Nó phổ biến trong số các nhà phát triển crypto và có văn hóa cộng đồng mạnh mẽ."
+			},
+			{
+				"question": "Cộng đồng Web3 phối hợp như thế nào?",
+				"answer": "Discord và Telegram cho trò chuyện thời gian thực, Farcaster/Lens cho xã hội, Mirror cho nội dung dài, Snapshot cho quản trị và Guild.xyz cho quyền truy cập có cổng token."
+			}
+		]
+	},
+	"tools": {
+		"farcaster": {
+			"description": "Giao thức xã hội phi tập trung"
+		},
+		"xmtp": {
+			"description": "Giao thức nhắn tin ví-sang-ví an toàn"
+		},
+		"warpcast": {
+			"description": "Client chính cho mạng xã hội Farcaster"
+		},
+		"hey": {
+			"description": "Ứng dụng xã hội phi tập trung trên Lens Protocol"
+		},
+		"orb": {
+			"description": "Client Lens Protocol ưu tiên di động"
+		},
+		"cyberconnect": {
+			"description": "Giao thức biểu đồ xã hội với danh tính Web3"
+		},
+		"mirror": {
+			"description": "Nền tảng xuất bản và gọi vốn cộng đồng Web3"
+		},
+		"paragraph": {
+			"description": "Bản tin và xuất bản gốc Web3"
+		},
+		"deso": {
+			"description": "Blockchain Layer 1 được xây dựng cho ứng dụng xã hội"
+		},
+		"phaver": {
+			"description": "Ứng dụng xã hội Web3 đa nền tảng"
+		},
+		"drakula": {
+			"description": "Nền tảng video ngắn trên Farcaster"
+		},
+		"link3": {
+			"description": "Sự kiện Web3 và thông tin xác thực bởi CyberConnect"
+		},
+		"buttrfly": {
+			"description": "Bộ tổng hợp xã hội đa nền tảng cho Lens"
+		},
+		"tape": {
+			"description": "Nền tảng video phi tập trung trên Lens"
+		},
+		"unlonely": {
+			"description": "Nền tảng cộng đồng phát trực tiếp Web3"
+		},
+		"supercast": {
+			"description": "Client Farcaster nâng cao"
+		},
+		"neynar": {
+			"description": "Cơ sở hạ tầng và API Farcaster"
+		},
+		"airstack": {
+			"description": "API biểu đồ xã hội Web3"
+		},
+		"huddle01": {
+			"description": "Video phi tập trung cho Web3"
+		},
+		"moxie": {
+			"description": "Token kinh tế Farcaster"
+		}
+	}
+}

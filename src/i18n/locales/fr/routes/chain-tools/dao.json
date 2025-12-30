@@ -1,0 +1,84 @@
+{
+	"category_seo": {
+		"title": "Outils DAO - Plateformes de Gouvernance et Gestion | BiuBiu Tools",
+		"description": "Découvrez les meilleurs outils DAO pour la gouvernance décentralisée. Gérez les propositions, les votes et la trésorerie avec des plateformes comme Snapshot et Tally.",
+		"keywords": "outils dao, gouvernance décentralisée, snapshot, vote dao, gestion dao",
+		"faqs": [
+			{
+				"question": "Qu'est-ce qu'une DAO ?",
+				"answer": "DAO (Decentralized Autonomous Organization) est une organisation gouvernée par des smart contracts et dirigée par ses membres via le vote. Les DAO n'ont pas de direction centralisée et les décisions sont prises collectivement."
+			},
+			{
+				"question": "Comment rejoindre une DAO ?",
+				"answer": "Pour rejoindre une DAO : 1) Trouvez des DAO alignées avec vos intérêts, 2) Acquérez leurs tokens de gouvernance, 3) Rejoignez leur communauté Discord/forum, 4) Participez aux discussions et votes. Certaines DAO ont des processus d'adhésion spécifiques."
+			},
+			{
+				"question": "Comment fonctionne le vote DAO ?",
+				"answer": "Le vote DAO permet généralement aux détenteurs de tokens de voter sur les propositions. Le pouvoir de vote est généralement proportionnel aux tokens détenus. Des plateformes comme Snapshot facilitent le vote off-chain sans frais de gas."
+			},
+			{
+				"question": "Quels sont les avantages des DAO ?",
+				"answer": "Les DAO offrent une gouvernance transparente, pas de point de contrôle unique, une prise de décision communautaire, une propriété programmable et une gestion globale et sans permission."
+			}
+		]
+	},
+	"tools": {
+		"snapshot": {
+			"description": "Vote de gouvernance off-chain sans frais de gas"
+		},
+		"tally": {
+			"description": "Gouvernance on-chain et gestion de DAO"
+		},
+		"aragon": {
+			"description": "Créez et gérez facilement des DAO"
+		},
+		"colony": {
+			"description": "Infrastructure DAO et paie"
+		},
+		"karma": {
+			"description": "Réputation des contributeurs DAO"
+		},
+		"lenster": {
+			"description": "Réseau social décentralisé sur Lens"
+		},
+		"push": {
+			"description": "Notifications et chat Web3"
+		},
+		"daohaus": {
+			"description": "Lanceur de DAO Moloch"
+		},
+		"charmverse": {
+			"description": "Plateforme d'espace de travail Web3"
+		},
+		"wonderverse": {
+			"description": "Gestion de tâches et bounties pour DAO"
+		},
+		"coordinape": {
+			"description": "Rémunération décentralisée"
+		},
+		"guild": {
+			"description": "Communautés à accès par token"
+		},
+		"jokerace": {
+			"description": "Concours de vote on-chain"
+		},
+		"commonwealth": {
+			"description": "Forum de discussion et communauté de gouvernance"
+		},
+		"jokedao": {
+			"description": "Concours de vote on-chain et jeux de gouvernance"
+		},
+		"llama": {
+			"description": "Gouvernance DAO et opérations de trésorerie"
+		},
+		"daolens": {
+			"description": "Analytique et surveillance DAO"
+		},
+		"kleros": {
+			"description": "Protocole de résolution de litiges décentralisé"
+		},
+		"dework": {
+			"description": "Plateforme de gestion de tâches et coordination DAO"
+		}
+	}
+}

@@ -1,0 +1,38 @@
+{
+	"category_seo": {
+		"title": "Crypto Privacy - Private Transactions & Tools | BiuBiu Tools",
+		"description": "Privacy-preserving tools for cryptocurrency. Mixers, private transactions, and privacy-focused protocols.",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "Why does crypto privacy matter?",
+				"answer": "Blockchain transactions are public. Privacy protects against tracking, targeted attacks, and surveillance. It's about security and financial sovereignty, not hiding wrongdoing."
+			},
+			{
+				"question": "What privacy options exist?",
+				"answer": "Use privacy coins (Zcash, Monero), stealth addresses, or privacy protocols. Layer 2 solutions and new privacy tech are emerging. Regulatory status varies by jurisdiction."
+			},
+			{
+				"question": "Is using privacy tools legal?",
+				"answer": "Privacy tools are generally legal, but regulations vary. Some mixers have been sanctioned. Always comply with local laws and understand the regulatory environment."
+			}
+		]
+	},
+	"tools": {
+		"monero": {
+			"description": "링 서명 및 스텔스 주소를 갖춘 대표 프라이버시 중심 암호화폐"
+		},
+		"firo": {
+			"description": "익명 거래를 위한 Lelantus 프로토콜을 사용하는 프라이버시 코인"
+		},
+		"penumbra": {
+			"description": "차폐 거래를 위한 프라이버시 중심 Cosmos 체인"
+		},
+		"namada": {
+			"description": "자산 불가지론적 차폐 전송을 갖춘 멀티체인 프라이버시 프로토콜"
+		},
+		"semaphore": {
+			"description": "익명 투표 및 신호 전송을 위한 영지식 프로토콜"
+		}
+	}
+}

@@ -1,0 +1,49 @@
+{
+	"category_seo": {
+		"title": "Solusi Layer 2 - Jaringan Scaling Ethereum | BiuBiu Tools",
+		"description": "Jelajahi solusi scaling Layer 2 untuk Ethereum. Arbitrum, Optimism, Base, zkSync, dan rollup lainnya dengan biaya lebih rendah dan transaksi lebih cepat.",
+		"faqs": [
+			{
+				"question": "Apa itu Layer 2?",
+				"answer": "Layer 2 adalah solusi scaling yang memproses transaksi di luar chain Ethereum utama (L1) sambil mewarisi keamanannya. Mereka menawarkan biaya lebih rendah dan transaksi lebih cepat. Jenisnya termasuk Optimistic Rollup dan ZK Rollup."
+			},
+			{
+				"question": "Apa perbedaan antara Optimistic dan ZK Rollup?",
+				"answer": "Optimistic Rollup (Arbitrum, Optimism) mengasumsikan transaksi valid dan menggunakan fraud proof. ZK Rollup (zkSync, Starknet) menggunakan bukti kriptografi untuk finalitas instan tetapi lebih kompleks untuk dibangun."
+			},
+			{
+				"question": "L2 mana yang harus saya gunakan?",
+				"answer": "Arbitrum dan Optimism memiliki aktivitas DeFi paling banyak. Base (Coinbase) berkembang pesat. zkSync dan Starknet menawarkan teknologi ZK. Pilih berdasarkan dApp yang ingin Anda gunakan dan pertimbangan biaya."
+			}
+		]
+	},
+	"tools": {
+		"l2beat": {
+			"description": "Analisis risiko dan TVL Layer 2"
+		},
+		"optimism": {
+			"description": "L2 Ethereum berbasis OP Stack dengan visi Superchain"
+		},
+		"base": {
+			"description": "L2 Coinbase dibangun di OP Stack"
+		},
+		"starknet": {
+			"description": "ZK rollup menggunakan Cairo untuk bukti validitas"
+		},
+		"scroll": {
+			"description": "zkEVM rollup yang setara dengan EVM"
+		},
+		"linea": {
+			"description": "Solusi L2 zkEVM oleh ConsenSys"
+		},
+		"mode": {
+			"description": "L2 OP Stack dengan fokus DeFi"
+		},
+		"mantle": {
+			"description": "L2 modular dengan layer ketersediaan data"
+		},
+		"superchain": {
+			"description": "Jaringan L2 yang saling terhubung dengan OP Stack"
+		}
+	}
+}

@@ -1,0 +1,50 @@
+{
+	"category_seo": {
+		"title": "Layer 2ソリューション - Ethereumスケーリングネットワーク | BiuBiu Tools",
+		"description": "Ethereum向けのLayer 2スケーリングソリューションを探索。Arbitrum、Optimism、Base、zkSyncなどのRollupで、より低い手数料とより速いトランザクション。",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "Layer 2とは何ですか？",
+				"answer": "Layer 2は、メインのEthereumチェーン(L1)の外でトランザクションを処理しながら、そのセキュリティを継承するスケーリングソリューションです。より低い手数料とより速いトランザクションを提供します。タイプには、Optimistic RollupsとZK Rollupsがあります。"
+			},
+			{
+				"question": "OptimisticとZK Rollupsの違いは何ですか？",
+				"answer": "Optimistic Rollups(Arbitrum、Optimism)はトランザクションが有効であると仮定し、不正証明を使用します。ZK Rollups(zkSync、Starknet)は暗号化証明を使用して即座のファイナリティを実現しますが、構築がより複雑です。"
+			},
+			{
+				"question": "どのL2を使用すべきですか？",
+				"answer": "ArbitrumとOptimismが最も多くのDeFiアクティビティを持っています。Base(Coinbase)は急速に成長しています。zkSyncとStarknetはZK技術を提供します。使用したいdAppと手数料の考慮事項に基づいて選択してください。"
+			}
+		]
+	},
+	"tools": {
+		"l2beat": {
+			"description": "Layer 2リスクとTVL分析"
+		},
+		"optimism": {
+			"description": "Superchainビジョン付きOP Stack駆動Ethereum L2"
+		},
+		"base": {
+			"description": "OP Stack上に構築されたCoinbaseのL2"
+		},
+		"starknet": {
+			"description": "有効性証明のためにCairoを使用するZK rollup"
+		},
+		"scroll": {
+			"description": "EVM等価zkEVM rollup"
+		},
+		"linea": {
+			"description": "ConsenSys zkEVM L2ソリューション"
+		},
+		"mode": {
+			"description": "DeFi重視のOP Stack L2"
+		},
+		"mantle": {
+			"description": "データ可用性レイヤー付きモジュラーL2"
+		},
+		"superchain": {
+			"description": "Superchain - Layer 2スケーリングソリューション"
+		}
+	}
+}

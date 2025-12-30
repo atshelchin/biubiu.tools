@@ -1,0 +1,94 @@
+{
+	"category_seo": {
+		"title": "Cầu Nối Cross-Chain - Chuyển Tài Sản Giữa Các Blockchain | BiuBiu Tools",
+		"description": "Tìm các cầu nối cross-chain tốt nhất để chuyển token giữa Ethereum, Arbitrum, Optimism, Base và các mạng khác một cách an toàn.",
+		"faqs": [
+			{
+				"question": "Cầu nối cross-chain là gì?",
+				"answer": "Cầu nối cross-chain là giao thức cho phép bạn chuyển token và dữ liệu giữa các mạng blockchain khác nhau. Nó khóa tài sản trên chuỗi nguồn và đúc token tương đương trên chuỗi đích."
+			},
+			{
+				"question": "Cầu nối nào an toàn nhất?",
+				"answer": "Cầu nối gốc từ L2 (như Arbitrum Bridge, Optimism Bridge) thường an toàn nhất nhưng chậm hơn. Cầu nối bên thứ ba như Stargate, Across và Hop cung cấp chuyển nhanh hơn với bảo mật hợp lý. Luôn kiểm tra trạng thái kiểm toán của cầu nối."
+			},
+			{
+				"question": "Chuyển qua cầu nối mất bao lâu?",
+				"answer": "Cầu nối L2 gốc mất 7+ ngày để rút do thời gian fraud proof. Cầu nối nhanh như Stargate hoặc Across hoàn thành trong vài phút. Quan trọng là hiểu sự đánh đổi giữa tốc độ và bảo mật."
+			}
+		]
+	},
+	"tools": {
+		"across": {
+			"description": "Cầu nối chuỗi chéo nhanh và rẻ"
+		},
+		"stargate": {
+			"description": "Cầu nối omnichain được hỗ trợ bởi LayerZero"
+		},
+		"orbiter": {
+			"description": "Cầu nối L2 chuỗi chéo rollup"
+		},
+		"hop": {
+			"description": "Cầu nối token L2 đến L2"
+		},
+		"synapse": {
+			"description": "Cầu nối và hoán đổi chuỗi chéo"
+		},
+		"cbridge": {
+			"description": "Cầu nối chuỗi chéo Celer"
+		},
+		"multichain": {
+			"description": "Giao thức bộ định tuyến đa chuỗi"
+		},
+		"wormhole": {
+			"description": "Giao thức nhắn tin chuỗi chéo"
+		},
+		"socket": {
+			"description": "Bộ tổng hợp cầu nối cho tuyến đường tốt nhất"
+		},
+		"rhino": {
+			"description": "Bộ tổng hợp cầu nối tự quản lý"
+		},
+		"hyphen": {
+			"description": "Chuyển khoản đa chuỗi tức thì"
+		},
+		"connext": {
+			"description": "Cầu nối đa chuỗi không cần tin cậy"
+		},
+		"debridge": {
+			"description": "Khả năng tương tác đa chuỗi"
+		},
+		"allbridge": {
+			"description": "Cầu nối stablecoin đa chuỗi"
+		},
+		"portal": {
+			"description": "Cầu nối Wormhole Portal"
+		},
+		"squid": {
+			"description": "Bộ định tuyến hoán đổi đa chuỗi"
+		},
+		"owlto": {
+			"description": "Cầu nối L2 nhanh và rẻ"
+		},
+		"bungee": {
+			"description": "Bộ tổng hợp cầu nối với tính năng nạp gas"
+		},
+		"jumper": {
+			"description": "Bộ tổng hợp cầu nối đa chuỗi bởi LI.FI"
+		},
+		"superbridge": {
+			"description": "Cầu nối gốc cho Optimism và Base"
+		},
+		"relay": {
+			"description": "Giải pháp cầu nối đa chuỗi tức thì"
+		},
+		"symbiosis": {
+			"description": "Giao thức thanh khoản đa chuỗi và DEX"
+		},
+		"dln": {
+			"description": "Giao dịch đa chuỗi lệnh giới hạn DeBridge"
+		},
+		"layerswap": {
+			"description": "Cầu nối từ CEX sang L2"
+		}
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"category_seo": {
+		"title": "Blockchain Oracles - Price Feeds & Off-Chain Data | BiuBiu Tools",
+		"description": "Oracle services that bring real-world data to blockchain. Price feeds, randomness, and cross-chain data for smart contracts.",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "What are blockchain oracles?",
+				"answer": "Oracles bring external data (prices, weather, sports scores) to smart contracts. They're essential for DeFi, insurance, and any dApp needing real-world information."
+			},
+			{
+				"question": "Why is Chainlink so important?",
+				"answer": "Chainlink is the dominant oracle network, securing billions in DeFi value. It provides decentralized price feeds, VRF for randomness, and CCIP for cross-chain communication."
+			},
+			{
+				"question": "What are oracle attacks?",
+				"answer": "Oracle attacks manipulate price feeds to exploit DeFi protocols. Attackers may flash loan to manipulate DEX prices that oracles read. This has caused hundreds of millions in losses."
+			}
+		]
+	},
+	"tools": {
+		"chainlink": {
+			"description": "가격 피드, VRF 및 자동화를 위한 업계 선도 탈중앙화 오라클 네트워크"
+		},
+		"api3": {
+			"description": "직접 API 데이터 전달을 위한 Airnode를 갖춘 퍼스트 파티 오라클"
+		}
+	}
+}

@@ -1,0 +1,76 @@
+{
+	"category_seo": {
+		"title": "Blockchain Non-EVM - Solana, Bitcoin, Cosmos & Lainnya | BiuBiu Tools",
+		"description": "Jelajahi ekosistem blockchain non-EVM. Solana, Bitcoin, Cosmos, Aptos, Sui, dan alat serta dApp unik mereka.",
+		"faqs": [
+			{
+				"question": "Apa itu chain non-EVM?",
+				"answer": "Chain non-EVM tidak menggunakan virtual machine Ethereum. Mereka memiliki arsitektur berbeda - Solana menggunakan Rust, Bitcoin memiliki script sendiri, Cosmos menggunakan CosmWasm. Masing-masing memiliki tradeoff unik."
+			},
+			{
+				"question": "Mengapa menggunakan chain non-EVM?",
+				"answer": "Chain yang berbeda mengoptimalkan hal yang berbeda. Solana untuk kecepatan dan biaya rendah, Bitcoin untuk keamanan dan desentralisasi, Cosmos untuk interoperabilitas, chain Move untuk keamanan."
+			},
+			{
+				"question": "Bagaimana cara bridge ke chain non-EVM?",
+				"answer": "Gunakan bridge spesifik seperti Wormhole (multi-chain), Portal (Solana), atau IBC (Cosmos). Beberapa exchange terpusat mendukung deposit/withdrawal langsung ke chain non-EVM."
+			}
+		]
+	},
+	"tools": {
+		"solscan": {
+			"description": "Explorer Solana populer dengan analitik token dan dukungan NFT"
+		},
+		"mintscan": {
+			"description": "Explorer ekosistem Cosmos multi-chain"
+		},
+		"tonscan": {
+			"description": "Explorer blockchain TON untuk transaksi dan jetton"
+		},
+		"raydium": {
+			"description": "AMM Solana dan penyedia likuiditas dengan pool terkonsentrasi"
+		},
+		"osmosis": {
+			"description": "DEX terkemuka di ekosistem Cosmos dengan integrasi IBC"
+		},
+		"injective": {
+			"description": "Chain Cosmos fokus DeFi untuk trading derivatif"
+		},
+		"celestia": {
+			"description": "Layer ketersediaan data modular untuk rollup"
+		},
+		"dymension": {
+			"description": "Hub RollApp dibangun di Cosmos untuk rollup modular"
+		},
+		"liquidswap": {
+			"description": "DEX AMM pertama di Aptos oleh Pontem"
+		},
+		"tonkeeper": {
+			"description": "Wallet TON populer dengan integrasi Telegram"
+		},
+		"dedust": {
+			"description": "Platform DEX dan DeFi di TON"
+		},
+		"algorand": {
+			"description": "Blockchain Pure Proof of Stake dengan finalitas instan"
+		},
+		"cardano": {
+			"description": "Blockchain berbasis riset dengan pengembangan peer-reviewed"
+		},
+		"polkadot": {
+			"description": "Jaringan multi-chain heterogen dengan parachain"
+		},
+		"subscan": {
+			"description": "Explorer multi-chain untuk Polkadot dan jaringan Substrate"
+		},
+		"tezos": {
+			"description": "Blockchain self-amending dengan verifikasi formal"
+		},
+		"stacks": {
+			"description": "L2 Bitcoin yang membawa smart contract ke BTC"
+		},
+		"layerzero": {
+			"description": "Protokol interoperabilitas omnichain untuk messaging tanpa kepercayaan"
+		}
+	}
+}

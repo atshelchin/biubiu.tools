@@ -1,0 +1,121 @@
+{
+	"category_seo": {
+		"title": "Alat Developer Web3 - Bangun dApp & Smart Contract | BiuBiu Tools",
+		"description": "Alat developer penting untuk membangun di Ethereum dan blockchain lainnya. Framework smart contract, alat testing, dan layanan deployment.",
+		"faqs": [
+			{
+				"question": "Apa framework pengembangan smart contract utama?",
+				"answer": "Foundry adalah yang tercepat dan paling populer untuk Solidity. Hardhat menawarkan integrasi JavaScript yang bagus dan plugin. Brownie berbasis Python. Anchor adalah standar untuk program Solana."
+			},
+			{
+				"question": "Bagaimana cara mendapatkan token testnet?",
+				"answer": "Gunakan faucet seperti Alchemy Faucet, Infura Faucet, atau faucet spesifik chain. Sepolia adalah testnet Ethereum utama. Sebagian besar L2 memiliki faucet testnet mereka sendiri yang ditautkan dari dokumentasi."
+			},
+			{
+				"question": "Provider RPC mana yang harus saya gunakan?",
+				"answer": "Alchemy dan Infura adalah yang paling andal dengan tier gratis yang murah hati. QuickNode menawarkan performa cepat. Untuk opsi terdesentralisasi, pertimbangkan Ankr atau POKT Network. Selalu miliki endpoint RPC cadangan."
+			}
+		]
+	},
+	"tools": {
+		"tenderly": {
+			"description": "Tenderly - Debugging dan pemantauan kontrak pintar"
+		},
+		"chainlist": {
+			"description": "Tambahkan jaringan EVM ke dompet Anda"
+		},
+		"remix": {
+			"description": "IDE Solidity berbasis browser"
+		},
+		"foundry": {
+			"description": "Toolkit Solidity super cepat"
+		},
+		"hardhat": {
+			"description": "Lingkungan pengembangan Ethereum"
+		},
+		"viem": {
+			"description": "Library TypeScript untuk Ethereum"
+		},
+		"wagmi": {
+			"description": "React hooks untuk Ethereum"
+		},
+		"rainbowkit": {
+			"description": "UI koneksi wallet untuk React"
+		},
+		"web3modal": {
+			"description": "Koneksi wallet multi-framework"
+		},
+		"thirdweb": {
+			"description": "Pengembangan Web3 full-stack"
+		},
+		"alchemy": {
+			"description": "Platform pengembangan Web3 dan API"
+		},
+		"infura": {
+			"description": "Infrastruktur API Ethereum"
+		},
+		"quicknode": {
+			"description": "Infrastruktur node multi-chain"
+		},
+		"sourcify": {
+			"description": "Verifikasi kontrak terdesentralisasi"
+		},
+		"brownie": {
+			"description": "Framework smart contract Python"
+		},
+		"ape": {
+			"description": "Framework Python modular"
+		},
+		"pyth": {
+			"description": "Oracle harga real-time"
+		},
+		"goldsky": {
+			"description": "Streaming dan indexing data blockchain real-time"
+		},
+		"envio": {
+			"description": "HyperSync untuk indexing blockchain super cepat"
+		},
+		"covalent": {
+			"description": "API data blockchain terpadu"
+		},
+		"transpose": {
+			"description": "Data blockchain real-time dengan SQL API"
+		},
+		"chainbase": {
+			"description": "Platform data all-in-one"
+		},
+		"useweb3": {
+			"description": "Sumber pembelajaran Web3 yang dikurasi"
+		},
+		"buildspace": {
+			"description": "Komunitas pembelajaran Web3 berbasis proyek"
+		},
+		"pointer": {
+			"description": "Belajar pengembangan Web3 dan dapatkan kripto"
+		},
+		"chainide": {
+			"description": "IDE pengembangan multi-chain berbasis cloud"
+		},
+		"constructor": {
+			"description": "Builder smart contract visual tanpa kode"
+		},
+		"bunzz": {
+			"description": "Marketplace deployment smart contract"
+		},
+		"crossmint": {
+			"description": "API minting NFT dengan pembayaran fiat"
+		},
+		"moralis": {
+			"description": "Platform pengembangan Web3 dengan API"
+		},
+		"circom": {
+			"description": "Bahasa circuit untuk zero-knowledge proof"
+		},
+		"protostar": {
+			"description": "Framework pengembangan Cairo untuk Starknet"
+		},
+		"starkli": {
+			"description": "CLI untuk interaksi Starknet"
+		}
+	}
+}

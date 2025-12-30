@@ -26,7 +26,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'biubiu-contract-deployer',
 		name: 'Contract Deployer',
-		descriptionKey: 'chain-tools.dev.tools.biubiu_contract_deployer.description',
+		descriptionKey: 'dev.tools.biubiu_contract_deployer.description',
 		url: '/apps/contract-deployer',
 		icon: Rocket,
 		category: 'dev',
@@ -37,7 +37,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'biubiu-token-deployer',
 		name: 'Token Deployer',
-		descriptionKey: 'chain-tools.dev.tools.biubiu_token_deployer.description',
+		descriptionKey: 'dev.tools.biubiu_token_deployer.description',
 		url: '/apps/token-deployer',
 		icon: Sparkles,
 		category: 'dev',
@@ -48,7 +48,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'biubiu-events-scanner',
 		name: 'Events Scanner',
-		descriptionKey: 'chain-tools.dev.tools.biubiu_events_scanner.description',
+		descriptionKey: 'dev.tools.biubiu_events_scanner.description',
 		url: '/apps/contract-events-scanner',
 		icon: FileSearch,
 		category: 'dev',
@@ -58,7 +58,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'biubiu-chainlist',
 		name: 'Chainlist',
-		descriptionKey: 'chain-tools.dev.tools.biubiu_chainlist.description',
+		descriptionKey: 'dev.tools.biubiu_chainlist.description',
 		url: '/apps/chainlist',
 		icon: Globe,
 		category: 'dev',
@@ -70,7 +70,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'tenderly',
 		name: 'Tenderly',
-		descriptionKey: 'chain-tools.dev.tools.tenderly.description',
+		descriptionKey: 'dev.tools.tenderly.description',
 		url: 'https://tenderly.co',
 		icon: Terminal,
 		category: 'dev',
@@ -80,7 +80,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'chainlist',
 		name: 'Chainlist',
-		descriptionKey: 'chain-tools.dev.tools.chainlist.description',
+		descriptionKey: 'dev.tools.chainlist.description',
 		url: 'https://chainlist.org',
 		icon: Link2,
 		category: 'dev',
@@ -90,7 +90,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'remix',
 		name: 'Remix IDE',
-		descriptionKey: 'chain-tools.dev.tools.remix.description',
+		descriptionKey: 'dev.tools.remix.description',
 		url: 'https://remix.ethereum.org',
 		icon: FileCode,
 		category: 'dev',
@@ -100,7 +100,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'foundry',
 		name: 'Foundry',
-		descriptionKey: 'chain-tools.dev.tools.foundry.description',
+		descriptionKey: 'dev.tools.foundry.description',
 		url: 'https://getfoundry.sh',
 		icon: Terminal,
 		category: 'dev',
@@ -110,7 +110,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'hardhat',
 		name: 'Hardhat',
-		descriptionKey: 'chain-tools.dev.tools.hardhat.description',
+		descriptionKey: 'dev.tools.hardhat.description',
 		url: 'https://hardhat.org',
 		icon: Cpu,
 		category: 'dev',
@@ -123,7 +123,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'abi-ninja',
 		name: 'ABI Ninja',
-		descriptionKey: 'chain-tools.dev.tools.abi_ninja.description',
+		descriptionKey: 'dev.tools.abi_ninja.description',
 		url: 'https://abi.ninja',
 		icon: Braces,
 		category: 'dev',
@@ -133,7 +133,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'ethereum-signature-db',
 		name: '4byte.directory',
-		descriptionKey: 'chain-tools.dev.tools.4byte.description',
+		descriptionKey: 'dev.tools.4byte.description',
 		url: 'https://www.4byte.directory',
 		icon: Hash,
 		category: 'dev',
@@ -145,7 +145,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'ethers-js',
 		name: 'Ethers.js',
-		descriptionKey: 'chain-tools.dev.tools.ethers.description',
+		descriptionKey: 'dev.tools.ethers.description',
 		url: 'https://ethers.org',
 		icon: Code,
 		category: 'dev',
@@ -155,7 +155,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'viem',
 		name: 'Viem',
-		descriptionKey: 'chain-tools.dev.tools.viem.description',
+		descriptionKey: 'dev.tools.viem.description',
 		url: 'https://viem.sh',
 		icon: Code,
 		category: 'dev',
@@ -165,7 +165,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'wagmi',
 		name: 'Wagmi',
-		descriptionKey: 'chain-tools.dev.tools.wagmi.description',
+		descriptionKey: 'dev.tools.wagmi.description',
 		url: 'https://wagmi.sh',
 		icon: Code,
 		category: 'dev',
@@ -175,7 +175,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'rainbowkit',
 		name: 'RainbowKit',
-		descriptionKey: 'chain-tools.dev.tools.rainbowkit.description',
+		descriptionKey: 'dev.tools.rainbowkit.description',
 		url: 'https://www.rainbowkit.com',
 		icon: Wallet,
 		category: 'dev',
@@ -185,7 +185,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'web3modal',
 		name: 'Web3Modal',
-		descriptionKey: 'chain-tools.dev.tools.web3modal.description',
+		descriptionKey: 'dev.tools.web3modal.description',
 		url: 'https://web3modal.com',
 		icon: Wallet,
 		category: 'dev',
@@ -195,7 +195,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'thirdweb',
 		name: 'thirdweb',
-		descriptionKey: 'chain-tools.dev.tools.thirdweb.description',
+		descriptionKey: 'dev.tools.thirdweb.description',
 		url: 'https://thirdweb.com',
 		icon: Box,
 		category: 'dev',
@@ -207,7 +207,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'alchemy',
 		name: 'Alchemy',
-		descriptionKey: 'chain-tools.dev.tools.alchemy.description',
+		descriptionKey: 'dev.tools.alchemy.description',
 		url: 'https://www.alchemy.com',
 		icon: Cpu,
 		category: 'dev',
@@ -218,7 +218,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'infura',
 		name: 'Infura',
-		descriptionKey: 'chain-tools.dev.tools.infura.description',
+		descriptionKey: 'dev.tools.infura.description',
 		url: 'https://www.infura.io',
 		icon: Globe,
 		category: 'dev',
@@ -229,7 +229,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'quicknode',
 		name: 'QuickNode',
-		descriptionKey: 'chain-tools.dev.tools.quicknode.description',
+		descriptionKey: 'dev.tools.quicknode.description',
 		url: 'https://www.quicknode.com',
 		icon: Zap,
 		category: 'dev',
@@ -241,7 +241,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'solidity-lang',
 		name: 'Solidity Docs',
-		descriptionKey: 'chain-tools.dev.tools.solidity.description',
+		descriptionKey: 'dev.tools.solidity.description',
 		url: 'https://soliditylang.org',
 		icon: BookOpen,
 		category: 'dev',
@@ -251,7 +251,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'evm-codes',
 		name: 'EVM Codes',
-		descriptionKey: 'chain-tools.dev.tools.evm_codes.description',
+		descriptionKey: 'dev.tools.evm_codes.description',
 		url: 'https://www.evm.codes',
 		icon: Hash,
 		category: 'dev',
@@ -261,7 +261,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'sourcify',
 		name: 'Sourcify',
-		descriptionKey: 'chain-tools.dev.tools.sourcify.description',
+		descriptionKey: 'dev.tools.sourcify.description',
 		url: 'https://sourcify.dev',
 		icon: FileCode,
 		category: 'dev',
@@ -273,7 +273,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'chainlink',
 		name: 'Chainlink',
-		descriptionKey: 'chain-tools.dev.tools.chainlink.description',
+		descriptionKey: 'dev.tools.chainlink.description',
 		url: 'https://chain.link',
 		icon: Link2,
 		category: 'dev',
@@ -284,7 +284,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'pyth',
 		name: 'Pyth Network',
-		descriptionKey: 'chain-tools.dev.tools.pyth.description',
+		descriptionKey: 'dev.tools.pyth.description',
 		url: 'https://pyth.network',
 		icon: Zap,
 		category: 'dev',
@@ -296,7 +296,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'the-graph',
 		name: 'The Graph',
-		descriptionKey: 'chain-tools.dev.tools.the_graph.description',
+		descriptionKey: 'dev.tools.the_graph.description',
 		url: 'https://thegraph.com',
 		icon: Database,
 		category: 'dev',
@@ -306,7 +306,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'goldsky',
 		name: 'Goldsky',
-		descriptionKey: 'chain-tools.dev.tools.goldsky.description',
+		descriptionKey: 'dev.tools.goldsky.description',
 		url: 'https://goldsky.com',
 		icon: Database,
 		category: 'dev',
@@ -316,7 +316,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'envio',
 		name: 'Envio',
-		descriptionKey: 'chain-tools.dev.tools.envio.description',
+		descriptionKey: 'dev.tools.envio.description',
 		url: 'https://envio.dev',
 		icon: Database,
 		category: 'dev',
@@ -328,7 +328,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'moralis',
 		name: 'Moralis',
-		descriptionKey: 'chain-tools.dev.tools.moralis.description',
+		descriptionKey: 'dev.tools.moralis.description',
 		url: 'https://moralis.io',
 		icon: Cpu,
 		category: 'dev',
@@ -338,7 +338,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'covalent',
 		name: 'Covalent',
-		descriptionKey: 'chain-tools.dev.tools.covalent.description',
+		descriptionKey: 'dev.tools.covalent.description',
 		url: 'https://www.covalenthq.com',
 		icon: Database,
 		category: 'dev',
@@ -348,7 +348,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'transpose',
 		name: 'Transpose',
-		descriptionKey: 'chain-tools.dev.tools.transpose.description',
+		descriptionKey: 'dev.tools.transpose.description',
 		url: 'https://www.transpose.io',
 		icon: Database,
 		category: 'dev',
@@ -358,7 +358,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'chainbase',
 		name: 'Chainbase',
-		descriptionKey: 'chain-tools.dev.tools.chainbase.description',
+		descriptionKey: 'dev.tools.chainbase.description',
 		url: 'https://chainbase.com',
 		icon: Database,
 		category: 'dev',
@@ -370,7 +370,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'scaffold-eth',
 		name: 'Scaffold-ETH',
-		descriptionKey: 'chain-tools.dev.tools.scaffold_eth.description',
+		descriptionKey: 'dev.tools.scaffold_eth.description',
 		url: 'https://scaffoldeth.io',
 		icon: Terminal,
 		category: 'dev',
@@ -380,7 +380,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'create-eth-app',
 		name: 'Create Eth App',
-		descriptionKey: 'chain-tools.dev.tools.create_eth_app.description',
+		descriptionKey: 'dev.tools.create_eth_app.description',
 		url: 'https://github.com/WalletConnect/create-eth-app',
 		icon: Terminal,
 		category: 'dev',
@@ -390,7 +390,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'cookbook-dev',
 		name: 'Cookbook.dev',
-		descriptionKey: 'chain-tools.dev.tools.cookbook_dev.description',
+		descriptionKey: 'dev.tools.cookbook_dev.description',
 		url: 'https://www.cookbook.dev',
 		icon: BookOpen,
 		category: 'dev',
@@ -400,7 +400,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'solidity-by-example',
 		name: 'Solidity by Example',
-		descriptionKey: 'chain-tools.dev.tools.solidity_by_example.description',
+		descriptionKey: 'dev.tools.solidity_by_example.description',
 		url: 'https://solidity-by-example.org',
 		icon: BookOpen,
 		category: 'dev',
@@ -410,7 +410,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'speedrun-ethereum',
 		name: 'SpeedRunEthereum',
-		descriptionKey: 'chain-tools.dev.tools.speedrun_ethereum.description',
+		descriptionKey: 'dev.tools.speedrun_ethereum.description',
 		url: 'https://speedrunethereum.com',
 		icon: Zap,
 		category: 'dev',
@@ -420,7 +420,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'eth-build',
 		name: 'ETH.Build',
-		descriptionKey: 'chain-tools.dev.tools.eth_build.description',
+		descriptionKey: 'dev.tools.eth_build.description',
 		url: 'https://eth.build',
 		icon: Braces,
 		category: 'dev',
@@ -430,7 +430,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'crypto-zombies',
 		name: 'CryptoZombies',
-		descriptionKey: 'chain-tools.dev.tools.crypto_zombies.description',
+		descriptionKey: 'dev.tools.crypto_zombies.description',
 		url: 'https://cryptozombies.io',
 		icon: BookOpen,
 		category: 'dev',
@@ -440,7 +440,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'useweb3',
 		name: 'useWeb3',
-		descriptionKey: 'chain-tools.dev.tools.useweb3.description',
+		descriptionKey: 'dev.tools.useweb3.description',
 		url: 'https://www.useweb3.xyz',
 		icon: BookOpen,
 		category: 'dev',
@@ -450,7 +450,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'buildspace',
 		name: 'Buildspace',
-		descriptionKey: 'chain-tools.dev.tools.buildspace.description',
+		descriptionKey: 'dev.tools.buildspace.description',
 		url: 'https://buildspace.so',
 		icon: Rocket,
 		category: 'dev',
@@ -460,7 +460,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'pointer',
 		name: 'Pointer',
-		descriptionKey: 'chain-tools.dev.tools.pointer.description',
+		descriptionKey: 'dev.tools.pointer.description',
 		url: 'https://www.pointer.gg',
 		icon: BookOpen,
 		category: 'dev',
@@ -472,7 +472,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'chainide',
 		name: 'ChainIDE',
-		descriptionKey: 'chain-tools.dev.tools.chainide.description',
+		descriptionKey: 'dev.tools.chainide.description',
 		url: 'https://chainide.com',
 		icon: Code,
 		category: 'dev',
@@ -482,7 +482,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'atlas-ide',
 		name: 'Atlas',
-		descriptionKey: 'chain-tools.dev.tools.atlas_ide.description',
+		descriptionKey: 'dev.tools.atlas_ide.description',
 		url: 'https://www.atlaszk.com',
 		icon: Code,
 		category: 'dev',
@@ -492,7 +492,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'constructor',
 		name: 'Constructor',
-		descriptionKey: 'chain-tools.dev.tools.constructor.description',
+		descriptionKey: 'dev.tools.constructor.description',
 		url: 'https://constructor.tech',
 		icon: Code,
 		category: 'dev',
@@ -502,7 +502,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'bunzz',
 		name: 'Bunzz',
-		descriptionKey: 'chain-tools.dev.tools.bunzz.description',
+		descriptionKey: 'dev.tools.bunzz.description',
 		url: 'https://bunzz.dev',
 		icon: Code,
 		category: 'dev',
@@ -514,7 +514,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'crossmint',
 		name: 'Crossmint',
-		descriptionKey: 'chain-tools.dev.tools.crossmint.description',
+		descriptionKey: 'dev.tools.crossmint.description',
 		url: 'https://crossmint.com',
 		icon: Wallet,
 		category: 'dev',
@@ -525,7 +525,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'paper-xyz',
 		name: 'Paper',
-		descriptionKey: 'chain-tools.dev.tools.paper_xyz.description',
+		descriptionKey: 'dev.tools.paper_xyz.description',
 		url: 'https://paper.xyz',
 		icon: Wallet,
 		category: 'dev',
@@ -538,7 +538,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'brownie',
 		name: 'Brownie',
-		descriptionKey: 'chain-tools.dev.tools.brownie.description',
+		descriptionKey: 'dev.tools.brownie.description',
 		url: 'https://eth-brownie.readthedocs.io',
 		icon: Code,
 		category: 'dev',
@@ -548,7 +548,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'ape',
 		name: 'Ape Framework',
-		descriptionKey: 'chain-tools.dev.tools.ape.description',
+		descriptionKey: 'dev.tools.ape.description',
 		url: 'https://apeworx.io',
 		icon: Code,
 		category: 'dev',
@@ -558,7 +558,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'anchor-lang',
 		name: 'Anchor',
-		descriptionKey: 'chain-tools.dev.tools.anchor_lang.description',
+		descriptionKey: 'dev.tools.anchor_lang.description',
 		url: 'https://anchor-lang.com',
 		icon: Code,
 		category: 'dev',
@@ -569,7 +569,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'move-lang',
 		name: 'Move Language',
-		descriptionKey: 'chain-tools.dev.tools.move_lang.description',
+		descriptionKey: 'dev.tools.move_lang.description',
 		url: 'https://move-language.github.io/move',
 		icon: Code,
 		category: 'dev',
@@ -580,7 +580,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'cairo-lang',
 		name: 'Cairo',
-		descriptionKey: 'chain-tools.dev.tools.cairo_lang.description',
+		descriptionKey: 'dev.tools.cairo_lang.description',
 		url: 'https://cairo-lang.org',
 		icon: Code,
 		category: 'dev',
@@ -591,7 +591,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'noir-lang',
 		name: 'Noir',
-		descriptionKey: 'chain-tools.dev.tools.noir_lang.description',
+		descriptionKey: 'dev.tools.noir_lang.description',
 		url: 'https://noir-lang.org',
 		icon: Code,
 		category: 'dev',
@@ -601,7 +601,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'circom',
 		name: 'Circom',
-		descriptionKey: 'chain-tools.dev.tools.circom.description',
+		descriptionKey: 'dev.tools.circom.description',
 		url: 'https://docs.circom.io',
 		icon: Code,
 		category: 'dev',
@@ -611,7 +611,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'huff-lang',
 		name: 'Huff',
-		descriptionKey: 'chain-tools.dev.tools.huff_lang.description',
+		descriptionKey: 'dev.tools.huff_lang.description',
 		url: 'https://huff.sh',
 		icon: Code,
 		category: 'dev',
@@ -622,7 +622,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'vyper-lang',
 		name: 'Vyper',
-		descriptionKey: 'chain-tools.dev.tools.vyper_lang.description',
+		descriptionKey: 'dev.tools.vyper_lang.description',
 		url: 'https://vyper.readthedocs.io',
 		icon: Code,
 		category: 'dev',
@@ -633,7 +633,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'fe-lang',
 		name: 'Fe',
-		descriptionKey: 'chain-tools.dev.tools.fe_lang.description',
+		descriptionKey: 'dev.tools.fe_lang.description',
 		url: 'https://fe-lang.org',
 		icon: Code,
 		category: 'dev',
@@ -646,7 +646,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'protostar',
 		name: 'Protostar',
-		descriptionKey: 'chain-tools.dev.tools.protostar.description',
+		descriptionKey: 'dev.tools.protostar.description',
 		url: 'https://docs.swmansion.com/protostar',
 		icon: Terminal,
 		category: 'dev',
@@ -657,7 +657,7 @@ export const devTools: ExternalTool[] = [
 	{
 		id: 'starkli',
 		name: 'Starkli',
-		descriptionKey: 'chain-tools.dev.tools.starkli.description',
+		descriptionKey: 'dev.tools.starkli.description',
 		url: 'https://book.starkli.rs',
 		icon: Terminal,
 		category: 'dev',

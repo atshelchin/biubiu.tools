@@ -1,0 +1,77 @@
+{
+	"category_seo": {
+		"title": "Blockchain Infrastructure - RPC Nodes, APIs & Data Services | BiuBiu Tools",
+		"description": "Infrastructure services for Web3 applications. RPC node providers, indexing services, data APIs, and decentralized storage solutions.",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "What is blockchain infrastructure?",
+				"answer": "Blockchain infrastructure includes RPC nodes for blockchain access, indexers for querying data, IPFS/Arweave for decentralized storage, and oracles for off-chain data. These are the backbone of dApps."
+			},
+			{
+				"question": "Should I run my own node?",
+				"answer": "For most projects, using a provider like Alchemy or Infura is more practical. Run your own node for maximum decentralization, specific customization needs, or archive data access."
+			},
+			{
+				"question": "What is The Graph used for?",
+				"answer": "The Graph indexes blockchain data and provides GraphQL APIs. It makes querying on-chain data fast and efficient. Most major DeFi protocols use subgraphs for their frontends."
+			}
+		]
+	},
+	"tools": {
+		"ankr": {
+			"description": "멀티체인 RPC 엔드포인트 및 스테이킹 인프라"
+		},
+		"chainstack": {
+			"description": "기업용 관리형 블록체인 인프라"
+		},
+		"band_protocol": {
+			"description": "Cosmos SDK 통합 크로스체인 오라클"
+		},
+		"ipfs": {
+			"description": "탈중앙화 파일 저장 및 콘텐츠 주소 지정"
+		},
+		"arweave": {
+			"description": "영구적인 탈중앙화 데이터 저장소"
+		},
+		"filecoin": {
+			"description": "인센티브가 있는 탈중앙화 저장소 네트워크"
+		},
+		"ceramic": {
+			"description": "탈중앙화 데이터 스트림 및 구성 가능한 데이터"
+		},
+		"walletconnect": {
+			"description": "DApp에 지갑을 연결하는 오픈 프로토콜"
+		},
+		"grove": {
+			"description": "POKT 기반 탈중앙화 RPC 릴레이"
+		},
+		"drpc": {
+			"description": "탈중앙화 멀티체인 RPC 제공업체"
+		},
+		"nodies": {
+			"description": "멀티체인 RPC 노드 인프라"
+		},
+		"llamanodes": {
+			"description": "MEV 보호를 갖춘 프라이버시 중심 RPC"
+		},
+		"getblock": {
+			"description": "멀티체인 노드 액세스 및 RPC 제공업체"
+		},
+		"switchboard": {
+			"description": "Solana 및 Move 체인을 위한 탈중앙화 오라클"
+		},
+		"dia": {
+			"description": "투명하고 맞춤 가능한 오라클 플랫폼"
+		},
+		"tellor": {
+			"description": "분쟁 메커니즘 및 스테이킹을 갖춘 무허가 오라클"
+		},
+		"blockpi": {
+			"description": "멀티체인 RPC 및 데이터 인프라"
+		},
+		"nodereal": {
+			"description": "블록체인 개발 인프라 제공업체"
+		}
+	}
+}

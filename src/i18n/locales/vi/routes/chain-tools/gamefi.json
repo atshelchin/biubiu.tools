@@ -1,0 +1,229 @@
+{
+	"category_seo": {
+		"title": "GameFi & Web3 Gaming - Trò Chơi Play-to-Earn | BiuBiu Tools",
+		"description": "Khám phá trò chơi Web3 và nền tảng GameFi. Trò chơi play-to-earn, tài sản game NFT và guild game blockchain.",
+		"faqs": [
+			{
+				"question": "GameFi là gì?",
+				"answer": "GameFi kết hợp game với cơ chế DeFi. Người chơi kiếm token và NFT bằng cách chơi game. Tài sản thực sự thuộc sở hữu của người chơi và có thể được giao dịch hoặc sử dụng trên nhiều game."
+			},
+			{
+				"question": "Các trò chơi Web3 phổ biến là gì?",
+				"answer": "Axie Infinity tiên phong play-to-earn. Illuvium và Big Time là game chất lượng AAA. Gods Unchained là game thẻ bài giao dịch phổ biến. Không gian đang phát triển với trọng tâm vào gameplay tốt hơn."
+			},
+			{
+				"question": "Guild game là gì?",
+				"answer": "Guild game như YGG và Merit Circle tập hợp tài nguyên để giúp người chơi tiếp cận NFT game đắt đỏ. Họ cấp học bổng cho người chơi và chia sẻ thu nhập. Hữu ích cho các game có chi phí đầu vào cao."
+			}
+		]
+	},
+	"tools": {
+		"immutable": {
+			"description": "L2 tập trung game với zkEVM"
+		},
+		"ronin": {
+			"description": "Sidechain game cho hệ sinh thái Axie Infinity"
+		},
+		"treasure": {
+			"description": "Hệ sinh thái game phi tập trung trên Arbitrum"
+		},
+		"beam": {
+			"description": "Subnet game trên Avalanche"
+		},
+		"stardust": {
+			"description": "SDK game Web3 và giải pháp ví"
+		},
+		"fractal": {
+			"description": "Thị trường và khám phá NFT game"
+		},
+		"xai": {
+			"description": "Gaming L3 được xây dựng trên Arbitrum Orbit"
+		},
+		"ygg": {
+			"description": "Guild game với chương trình học bổng"
+		},
+		"loot8": {
+			"description": "Nền tảng sưu tầm NFT game"
+		},
+		"iskra": {
+			"description": "Nền tảng và cộng đồng game Web3"
+		},
+		"loot": {
+			"description": "Dự án trang bị phiêu lưu NFT có thể kết hợp"
+		},
+		"pixels": {
+			"description": "Game farming xã hội trên Ronin"
+		},
+		"parallel": {
+			"description": "Game thẻ bài khoa học viễn tưởng trên Ethereum"
+		},
+		"illuvium": {
+			"description": "RPG auto-battler AAA trên Immutable X"
+		},
+		"shrapnel": {
+			"description": "FPS extraction có thể mod trên Avalanche"
+		},
+		"playnance": {
+			"description": "Nền tảng game Web3"
+		},
+		"sandbox": {
+			"description": "Metaverse game do người chơi tạo"
+		},
+		"decentraland": {
+			"description": "Metaverse ảo phi tập trung"
+		},
+		"bigtime": {
+			"description": "MMORPG AAA với NFT"
+		},
+		"splinterlands": {
+			"description": "Game thẻ bài giao dịch"
+		},
+		"stepn": {
+			"description": "Ứng dụng thể dục move-to-earn thưởng hoạt động thể chất bằng token"
+		},
+		"mir4": {
+			"description": "MMORPG đa nền tảng với cơ chế đào token DRACO"
+		},
+		"wildcard": {
+			"description": "Game đấu trường cạnh tranh với chiến lược dựa trên thẻ"
+		},
+		"aurory": {
+			"description": "Game chiến thuật JRPG Solana với sinh vật NFT"
+		},
+		"blocklords": {
+			"description": "Game chiến lược lớn thời trung cổ với xây dựng triều đại"
+		},
+		"superior": {
+			"description": "Trò bắn súng roguelike hợp tác trên nền tảng Gala Games"
+		},
+		"fusionist": {
+			"description": "Game chiến lược mech AAA niêm yết Binance với token ACE"
+		},
+		"xterio": {
+			"description": "Nền tảng game AI được hỗ trợ bởi Binance Labs"
+		},
+		"ultiverse": {
+			"description": "Nền tảng game metaverse được hỗ trợ AI đầu tư Binance Labs"
+		},
+		"pixelmon": {
+			"description": "RPG thu thập sinh vật thế giới mở với NFT tiến hóa"
+		},
+		"xpet": {
+			"description": "Game thú cưng giao dịch xã hội trên Arbitrum"
+		},
+		"carv": {
+			"description": "Giao thức danh tính và thông tin xác thực game cho Web3"
+		},
+		"gunz": {
+			"description": "Trò bắn súng battle royale AAA từ Gunzilla Games"
+		},
+		"lumiterra": {
+			"description": "Game chế tạo sinh tồn thế giới mở trên Polygon"
+		},
+		"gamestarter": {
+			"description": "Launchpad và nhà xuất bản game cho game Web3"
+		},
+		"gamegpt": {
+			"description": "Nền tảng tạo nội dung game được hỗ trợ AI"
+		},
+		"kryptomon": {
+			"description": "Game di động nhân giống sinh vật trên BNB Chain"
+		},
+		"revomon": {
+			"description": "Game chiến đấu quái vật VR lấy cảm hứng từ Pokemon"
+		},
+		"era7": {
+			"description": "Game chiến lược thẻ bài giao dịch trên BNB Chain"
+		},
+		"cryptoblades": {
+			"description": "RPG Web3 với cơ chế play-to-earn"
+		},
+		"derace": {
+			"description": "Đua ngựa NFT với nhân giống và cá cược"
+		},
+		"superverse": {
+			"description": "Thị trường và hệ sinh thái game NFT"
+		},
+		"karrat": {
+			"description": "Hệ sinh thái game AI cung cấp My Pet Hooligan"
+		},
+		"overworld": {
+			"description": "RPG hành động với hệ thống loot trên Immutable X"
+		},
+		"skyweaver": {
+			"description": "Game thẻ bài giao dịch free-to-play bởi Horizon"
+		},
+		"treeverse": {
+			"description": "MMORPG metaverse lấy cảm hứng từ anime"
+		},
+		"metalcore": {
+			"description": "Game chiến đấu mech trên Immutable X"
+		},
+		"mirandus": {
+			"description": "RPG giả tưởng trong thế giới sử thi bởi Gala Games"
+		},
+		"aavegotchi": {
+			"description": "Game NFT được cung cấp DeFi trên Polygon"
+		},
+		"cometh": {
+			"description": "Game chiến lược tàu vũ trụ với yếu tố DeFi"
+		},
+		"realm": {
+			"description": "RPG giả tưởng với đất đai và tài nguyên trên Polygon"
+		},
+		"mobox": {
+			"description": "Nền tảng GameFi với farming NFT trên BNB Chain"
+		},
+		"upland": {
+			"description": "Metaverse giao dịch bất động sản được lập bản đồ theo thế giới thực"
+		},
+		"genopets": {
+			"description": "Game thú cưng move-to-earn trên Solana"
+		},
+		"cyball": {
+			"description": "Game quản lý bóng đá trên BNB Chain"
+		},
+		"pegaxy": {
+			"description": "Game đua ngựa PvP trên Polygon"
+		},
+		"apeiron": {
+			"description": "God-game với yếu tố roguelike trên Polygon"
+		},
+		"sipher": {
+			"description": "Trò bắn súng nhiều người chơi AAA trên Ethereum"
+		},
+		"honeyland": {
+			"description": "Game chiến lược chủ đề ong trên Solana"
+		},
+		"rainmaker": {
+			"description": "Game dự đoán crypto dựa trên thời tiết"
+		},
+		"gaimin": {
+			"description": "Nền tảng thưởng game với chia sẻ GPU"
+		},
+		"momento": {
+			"description": "Khoảnh khắc và điểm nhấn game được hỗ trợ AI"
+		},
+		"catizen": {
+			"description": "Game Telegram chủ đề mèo trên blockchain TON"
+		},
+		"notcoin": {
+			"description": "Game tap Telegram đã ra mắt token NOT"
+		},
+		"blum": {
+			"description": "Sàn giao dịch và nền tảng game mini-app Telegram"
+		},
+		"yescoin": {
+			"description": "Game tap-to-earn Telegram trên TON"
+		},
+		"dogs": {
+			"description": "Game Telegram chủ đề chó trên TON"
+		},
+		"pixelverse": {
+			"description": "Game Telegram cyberpunk với chiến đấu"
+		},
+		"major": {
+			"description": "Game Telegram xếp hạng xã hội trên TON"
+		}
+	}
+}

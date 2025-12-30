@@ -1,0 +1,58 @@
+{
+	"category_seo": {
+		"title": "Asset Reali (RWA) - Asset Tokenizzati | BiuBiu Tools",
+		"description": "Esplora asset del mondo reale tokenizzati. Treasury tokenizzati, immobili, commodities e finanza tradizionale su blockchain.",
+		"faqs": [
+			{
+				"question": "Cosa sono gli RWA?",
+				"answer": "Gli RWA (Real World Asset) sono asset tradizionali come Treasury USA, immobili o commodities tokenizzati su blockchain. Portano rendimenti della finanza tradizionale in DeFi."
+			},
+			{
+				"question": "Perché gli RWA sono importanti?",
+				"answer": "Gli RWA forniscono rendimenti stabili dall'economia reale (tassi Treasury), diversificazione dalla volatilità crypto e collegano la finanza tradizionale con DeFi. MakerDAO detiene miliardi in RWA."
+			},
+			{
+				"question": "Quali piattaforme RWA esistono?",
+				"answer": "Ondo Finance per treasury tokenizzati, RealT per immobili, Centrifuge per finanziamento asset. I principali protocolli DeFi stanno integrando strategie RWA per rendimenti."
+			}
+		]
+	},
+	"tools": {
+		"goldfinch": {
+			"description": "Prestito crypto per credito mondo reale in mercati emergenti"
+		},
+		"truefi": {
+			"description": "Prestito non collateralizzato per mutuatari istituzionali"
+		},
+		"centrifuge": {
+			"description": "Protocollo finanziamento asset mondo reale portando fatture e immobili on-chain"
+		},
+		"clearpool": {
+			"description": "Mercati capitali decentralizzati per prestito istituzionale non garantito"
+		},
+		"matrixdock": {
+			"description": "Treasury bill tokenizzati con stablecoin STBT"
+		},
+		"openeden": {
+			"description": "T-Bill tokenizzati con NAV real-time e settlement 24/7"
+		},
+		"realt": {
+			"description": "Investimento immobiliare tokenizzato con proprietà frazionata"
+		},
+		"lofty": {
+			"description": "Investimento immobiliare frazionato su blockchain Algorand"
+		},
+		"propy": {
+			"description": "Transazioni e proprietà immobiliare basate su blockchain"
+		},
+		"securitize": {
+			"description": "Piattaforma emissione security token e gestione lifecycle"
+		},
+		"tokeny": {
+			"description": "Piattaforma tokenizzazione enterprise per security conformi"
+		},
+		"polymesh": {
+			"description": "Blockchain costruita appositamente per security token regolamentati"
+		}
+	}
+}

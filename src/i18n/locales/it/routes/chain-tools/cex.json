@@ -1,0 +1,25 @@
+{
+	"category_seo": {
+		"title": "Exchange Crypto (CEX) - Piattaforme di Trading | BiuBiu Tools",
+		"description": "Exchange di criptovalute centralizzati per trading. Confronta funzionalità exchange, sicurezza, commissioni e asset supportati.",
+		"faqs": [
+			{
+				"question": "Quali exchange sono i più sicuri?",
+				"answer": "Coinbase e Kraken sono ben regolamentati negli USA. Binance ha la maggior liquidità a livello globale. Cerca proof of reserves, conformità normativa e track record di sicurezza."
+			},
+			{
+				"question": "CEX vs DEX - quale dovrei usare?",
+				"answer": "CEX per rampe fiat on/off, trading avanzato e facilità per principianti. DEX per auto-custodia, trading permissionless e accesso a più token. Molti usano entrambi."
+			},
+			{
+				"question": "Come proteggo il mio account exchange?",
+				"answer": "Abilita 2FA (preferibilmente chiave hardware), usa password uniche, metti in whitelist gli indirizzi di prelievo, abilita ritardi nei prelievi e non tenere grandi quantità sugli exchange a lungo termine."
+			}
+		]
+	},
+	"tools": {
+		"ccdata": {
+			"description": "Indici di mercato e dati per istituzioni"
+		}
+	}
+}

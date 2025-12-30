@@ -1,0 +1,79 @@
+{
+	"category_seo": {
+		"title": "Công Cụ DAO - Quản Trị, Bỏ Phiếu & Quản Lý Ngân Quỹ | BiuBiu Tools",
+		"description": "Công cụ để tạo và quản lý DAO. Nền tảng quản trị, hệ thống bỏ phiếu, quản lý ngân quỹ và điều phối người đóng góp.",
+		"faqs": [
+			{
+				"question": "DAO là gì?",
+				"answer": "DAO (Tổ chức Tự trị Phi tập trung) là tổ chức được quản trị bởi smart contract và phiếu bầu của người nắm giữ token. Các thành viên đề xuất và bỏ phiếu về các quyết định mà không có cơ quan trung ương."
+			},
+			{
+				"question": "Làm thế nào để tham gia quản trị DAO?",
+				"answer": "Nắm giữ token quản trị của DAO, sau đó sử dụng các nền tảng như Snapshot cho bỏ phiếu off-chain hoặc Tally cho bỏ phiếu on-chain. Một số DAO yêu cầu ủy quyền token trước khi bỏ phiếu."
+			},
+			{
+				"question": "DAO sử dụng công cụ nào?",
+				"answer": "Snapshot cho bỏ phiếu không tốn gas, Tally cho quản trị on-chain, Gnosis Safe cho quản lý ngân quỹ, Coordinape cho phần thưởng người đóng góp và Discourse/Commonwealth cho thảo luận."
+			}
+		]
+	},
+	"tools": {
+		"snapshot": {
+			"description": "Bỏ phiếu quản trị off-chain không phí gas"
+		},
+		"tally": {
+			"description": "Quản trị on-chain và quản lý DAO"
+		},
+		"aragon": {
+			"description": "Xây dựng và quản lý DAO dễ dàng"
+		},
+		"colony": {
+			"description": "Cơ sở hạ tầng DAO và bảng lương"
+		},
+		"karma": {
+			"description": "Uy tín người đóng góp DAO"
+		},
+		"lenster": {
+			"description": "Mạng xã hội phi tập trung trên Lens"
+		},
+		"push": {
+			"description": "Thông báo và chat Web3"
+		},
+		"daohaus": {
+			"description": "Trình khởi chạy Moloch DAO"
+		},
+		"charmverse": {
+			"description": "Nền tảng không gian làm việc Web3"
+		},
+		"wonderverse": {
+			"description": "Quản lý nhiệm vụ DAO"
+		},
+		"coordinape": {
+			"description": "Bồi thường phi tập trung"
+		},
+		"guild": {
+			"description": "Cộng đồng có cổng token"
+		},
+		"jokerace": {
+			"description": "Cuộc thi bỏ phiếu on-chain"
+		},
+		"commonwealth": {
+			"description": "Thảo luận quản trị và diễn đàn cộng đồng"
+		},
+		"jokedao": {
+			"description": "Cuộc thi bỏ phiếu on-chain và game quản trị"
+		},
+		"llama": {
+			"description": "Quản trị DAO và vận hành ngân quỹ"
+		},
+		"daolens": {
+			"description": "Phân tích và dashboard DAO"
+		},
+		"kleros": {
+			"description": "Mạng trọng tài phi tập trung"
+		},
+		"dework": {
+			"description": "Quản lý nhiệm vụ và tiền thưởng DAO"
+		}
+	}
+}

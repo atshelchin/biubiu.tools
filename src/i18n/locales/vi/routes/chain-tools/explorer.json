@@ -1,0 +1,106 @@
+{
+	"category_seo": {
+		"title": "Trình Khám Phá Blockchain - Xem Giao Dịch & Smart Contract | BiuBiu Tools",
+		"description": "Truy cập trình khám phá blockchain cho Ethereum, BSC, Polygon và các mạng khác. Xem giao dịch, xác minh hợp đồng và phân tích dữ liệu on-chain.",
+		"faqs": [
+			{
+				"question": "Trình khám phá blockchain là gì?",
+				"answer": "Trình khám phá blockchain là công cụ tìm kiếm cho dữ liệu blockchain. Nó cho phép bạn xem giao dịch, số dư ví, mã smart contract, chuyển token và hoạt động on-chain khác."
+			},
+			{
+				"question": "Làm thế nào để xác minh smart contract?",
+				"answer": "Trên Etherscan, đi đến địa chỉ hợp đồng, nhấp vào tab 'Contract', sau đó 'Verify and Publish'. Gửi mã nguồn, phiên bản trình biên dịch và đối số constructor. Hợp đồng đã xác minh hiển thị dấu kiểm màu xanh."
+			},
+			{
+				"question": "Trình khám phá đa chuỗi tốt nhất là gì?",
+				"answer": "Blockscout hỗ trợ nhiều chuỗi EVM và là mã nguồn mở. OKLink bao phủ hơn 50 chuỗi. Đối với chuỗi cụ thể, sử dụng trình khám phá gốc như Etherscan (Ethereum), BSCScan (BNB Chain) hoặc Arbiscan (Arbitrum)."
+			}
+		]
+	},
+	"tools": {
+		"etherscan": {
+			"description": "Trình khám phá blockchain Ethereum"
+		},
+		"blockscout": {
+			"description": "Trình khám phá khối mã nguồn mở"
+		},
+		"arbiscan": {
+			"description": "Trình khám phá blockchain Arbitrum"
+		},
+		"polygonscan": {
+			"description": "Trình khám phá blockchain Polygon"
+		},
+		"bscscan": {
+			"description": "Trình khám phá blockchain BNB Chain"
+		},
+		"basescan": {
+			"description": "Trình khám phá blockchain Base"
+		},
+		"snowtrace": {
+			"description": "Trình khám phá blockchain Avalanche"
+		},
+		"lineascan": {
+			"description": "Trình khám phá blockchain Linea"
+		},
+		"scrollscan": {
+			"description": "Trình khám phá mạng Scroll"
+		},
+		"mantlescan": {
+			"description": "Trình khám phá mạng Mantle"
+		},
+		"blastscan": {
+			"description": "Trình khám phá mạng Blast"
+		},
+		"modescan": {
+			"description": "Trình khám phá mạng Mode"
+		},
+		"celoscan": {
+			"description": "Trình khám phá blockchain Celo"
+		},
+		"ftmscan": {
+			"description": "Trình khám phá mạng Fantom"
+		},
+		"gnosisscan": {
+			"description": "Trình khám phá Gnosis Chain"
+		},
+		"cronoscan": {
+			"description": "Trình khám phá mạng Cronos"
+		},
+		"moonbeamscan": {
+			"description": "Trình khám phá Moonbeam và Moonriver"
+		},
+		"oklink": {
+			"description": "Trình khám phá blockchain đa chuỗi bởi OKX"
+		},
+		"routescan": {
+			"description": "Trình khám phá khối đa chuỗi thống nhất"
+		},
+		"onceupon": {
+			"description": "Trình khám phá giao dịch blockchain có thể đọc được"
+		},
+		"anyabi": {
+			"description": "Tra cứu và giải mã ABI smart contract"
+		},
+		"nearblocks": {
+			"description": "Trình khám phá NEAR Protocol"
+		},
+		"blockchair": {
+			"description": "Trình khám phá đa blockchain"
+		},
+		"avascan": {
+			"description": "Trình khám phá Avalanche"
+		},
+		"tronscan": {
+			"description": "Trình khám phá Tron"
+		},
+		"cardanoscan": {
+			"description": "Trình khám phá Cardano"
+		},
+		"viewblock": {
+			"description": "Trình khám phá đa chuỗi"
+		},
+		"suiscan": {
+			"description": "Trình khám phá Sui"
+		}
+	}
+}

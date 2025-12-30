@@ -1,0 +1,122 @@
+{
+	"category_seo": {
+		"title": "Web3開発ツール - dAppとスマートコントラクトの構築 | BiuBiu Tools",
+		"description": "Ethereumや他のブロックチェーン上で構築するための必須開発ツール。スマートコントラクトフレームワーク、テストツール、デプロイサービス。",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "主要なスマートコントラクト開発フレームワークは何ですか？",
+				"answer": "FoundryはSolidityで最も高速で人気があります。HardhatはJavaScript統合とプラグインが優れています。BrownieはPythonベース。AnchorはSolanaプログラムの標準です。"
+			},
+			{
+				"question": "テストネットトークンを取得するにはどうすればよいですか？",
+				"answer": "Alchemy Faucet、Infura Faucet、またはチェーン固有のフォーセットを使用します。SepoliaはメインのEthereumテストネットです。ほとんどのL2には、ドキュメントからリンクされた独自のテストネットフォーセットがあります。"
+			},
+			{
+				"question": "どのRPCプロバイダーを使用すべきですか？",
+				"answer": "AlchemyとInfuraは無料枠が充実しており最も信頼性があります。QuickNodeは高速なパフォーマンスを提供します。分散型オプションにはAnkrまたはPOKT Networkを検討してください。常にバックアップRPCエンドポイントを用意してください。"
+			}
+		]
+	},
+	"tools": {
+		"tenderly": {
+			"description": "Tenderly - スマートコントラクトデバッグとモニタリング"
+		},
+		"chainlist": {
+			"description": "ウォレットにEVMネットワークを追加"
+		},
+		"remix": {
+			"description": "ブラウザベースSolidity IDE"
+		},
+		"foundry": {
+			"description": "超高速Solidityツールキット"
+		},
+		"hardhat": {
+			"description": "Ethereum開発環境"
+		},
+		"viem": {
+			"description": "TypeScript Ethereumライブラリ"
+		},
+		"wagmi": {
+			"description": "Ethereum用Reactフック"
+		},
+		"rainbowkit": {
+			"description": "Reactウォレット接続UI"
+		},
+		"web3modal": {
+			"description": "マルチフレームワークウォレット接続"
+		},
+		"thirdweb": {
+			"description": "フルスタックWeb3開発"
+		},
+		"alchemy": {
+			"description": "Alchemy - Web3開発プラットフォームとAPI"
+		},
+		"infura": {
+			"description": "Ethereum APIインフラ"
+		},
+		"quicknode": {
+			"description": "マルチチェーンノードインフラ"
+		},
+		"sourcify": {
+			"description": "分散型コントラクト検証"
+		},
+		"brownie": {
+			"description": "Pythonスマートコントラクトフレームワーク"
+		},
+		"ape": {
+			"description": "モジュラーPythonフレームワーク"
+		},
+		"pyth": {
+			"description": "リアルタイム価格オラクル"
+		},
+		"goldsky": {
+			"description": "リアルタイムブロックチェーンデータストリーミングとインデックス"
+		},
+		"envio": {
+			"description": "超高速ブロックチェーンインデックス用HyperSync"
+		},
+		"covalent": {
+			"description": "統合ブロックチェーンデータAPI"
+		},
+		"transpose": {
+			"description": "SQL API付きリアルタイムブロックチェーンデータ"
+		},
+		"chainbase": {
+			"description": "オールインワンデータプラットフォーム"
+		},
+		"useweb3": {
+			"description": "キュレートされたWeb3学習リソース"
+		},
+		"buildspace": {
+			"description": "プロジェクトベースWeb3学習コミュニティ"
+		},
+		"pointer": {
+			"description": "Web3開発を学んで暗号資産を獲得"
+		},
+		"chainide": {
+			"description": "クラウドベースマルチチェーン開発IDE"
+		},
+		"constructor": {
+			"description": "ビジュアルノーコードスマートコントラクトビルダー"
+		},
+		"bunzz": {
+			"description": "Bunzz - スマートコントラクトデプロイマーケットプレイス"
+		},
+		"crossmint": {
+			"description": "法定通貨決済付きNFTミントAPI"
+		},
+		"moralis": {
+			"description": "Moralis - 開発者ツール"
+		},
+		"circom": {
+			"description": "Circom - 開発者ツール"
+		},
+		"protostar": {
+			"description": "Protostar - 開発者ツール"
+		},
+		"starkli": {
+			"description": "Starkli - 開発者ツール"
+		}
+	}
+}

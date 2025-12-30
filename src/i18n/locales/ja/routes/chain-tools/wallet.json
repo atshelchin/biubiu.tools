@@ -1,0 +1,119 @@
+{
+	"category_seo": {
+		"title": "暗号ウォレット - ハードウェア、ソフトウェア、マルチチェーン | BiuBiu Tools",
+		"description": "セキュリティと利便性に優れた最高の暗号ウォレットを比較。すべてのブロックチェーン向けのハードウェアウォレット、ブラウザ拡張機能、モバイルウォレット。",
+		"keywords": "crypto wallet, hardware wallet, metamask, ledger, trezor, multi-chain wallet",
+		"faqs": [
+			{
+				"question": "暗号ウォレットとは何ですか？",
+				"answer": "暗号ウォレットは、秘密鍵を保存し、暗号通貨の送受信と管理を可能にするソフトウェアまたはハードウェアです。実際には暗号通貨を保存しません - 資産はブロックチェーン上に残ります。"
+			},
+			{
+				"question": "ハードウェアウォレット vs ソフトウェアウォレット?",
+				"answer": "ハードウェアウォレット(Ledger、Trezor)は最大限のセキュリティのため鍵をオフラインで保存し、大きな保有に適しています。ソフトウェアウォレット(MetaMask、Rainbow)は日常使用により便利ですが、インターネットに接続されています。"
+			},
+			{
+				"question": "ウォレットを安全に保つにはどうすればよいですか？",
+				"answer": "シードフレーズを決して共有しない、大きな金額にはハードウェアウォレットを使用する、可能な場合は2FAを有効にする、署名前に取引の詳細を確認する、フィッシングサイトに注意する。"
+			}
+		]
+	},
+	"tools": {
+		"debank": {
+			"description": "マルチチェーンポートフォリオトラッカーとソーシャルプラットフォーム"
+		},
+		"rabby": {
+			"description": "マルチチェーンブラウザウォレット"
+		},
+		"rainbow": {
+			"description": "美しいEthereumウォレット"
+		},
+		"metamask": {
+			"description": "最も人気のあるWeb3ウォレット"
+		},
+		"frame": {
+			"description": "プライバシー重視デスクトップウォレット"
+		},
+		"zerion": {
+			"description": "DeFiポートフォリオとウォレット"
+		},
+		"safe": {
+			"description": "マルチシグネチャスマートウォレット"
+		},
+		"zapper": {
+			"description": "DeFiポートフォリオダッシュボード"
+		},
+		"argent": {
+			"description": "リカバリー機能付きスマートウォレット"
+		},
+		"sequence": {
+			"description": "ゲーミング向けスマートウォレット"
+		},
+		"ledger": {
+			"description": "ハードウェアウォレットセキュリティ"
+		},
+		"trezor": {
+			"description": "ハードウェアウォレットのパイオニア"
+		},
+		"privy": {
+			"description": "埋め込みウォレットソリューション"
+		},
+		"dynamic": {
+			"description": "マルチウォレット認証"
+		},
+		"ambire": {
+			"description": "メールログインとガスレストランザクション付きスマートウォレット"
+		},
+		"obvious": {
+			"description": "アカウント抽象化付きスマートウォレット"
+		},
+		"pimlico": {
+			"description": "ERC-4337バンドラーとペイマスターインフラ"
+		},
+		"stackup": {
+			"description": "アカウント抽象化バンドラーとSDK"
+		},
+		"biconomy": {
+			"description": "アカウント抽象化とガスレストランザクションSDK"
+		},
+		"zerodev": {
+			"description": "Kernel付きモジュラースマートウォレットSDK"
+		},
+		"solflare": {
+			"description": "Solflare - 暗号資産ウォレット"
+		},
+		"subwallet": {
+			"description": "SubWallet - Web3ウォレット"
+		},
+		"tonhub": {
+			"description": "Tonhub - Web3ウォレット"
+		},
+		"mytonwallet": {
+			"description": "MyTonWallet - Web3ウォレット"
+		},
+		"coolwallet": {
+			"description": "coolwallet - Web3ウォレット"
+		},
+		"imtoken": {
+			"description": "imToken - Web3ウォレット"
+		},
+		"tokenpocket": {
+			"description": "TokenPocket - Web3ウォレット"
+		},
+		"myetherwallet": {
+			"description": "MyEtherWallet - Web3ウォレット"
+		},
+		"mycrypto": {
+			"description": "MyCrypto - Web3ウォレット"
+		},
+		"tronlink": {
+			"description": "TronLink - Web3ウォレット"
+		},
+		"multis": {
+			"description": "Multis - Web3ウォレット"
+		},
+		"squads": {
+			"description": "Squads - Web3ウォレット"
+		}
+	}
+}

@@ -1,0 +1,80 @@
+{
+	"category_seo": {
+		"title": "Web3アイデンティティ - ENS、Lens、分散型ID | BiuBiu Tools",
+		"description": "Web3向けの分散型アイデンティティソリューション。ドメイン名(ENS)、ソーシャルプロフィール(Lens)、クレデンシャル、レピュテーションシステム。",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "Web3アイデンティティとは何ですか？",
+				"answer": "Web3アイデンティティを使用すると、オンチェーンでデジタルアイデンティティを所有できます。これには、ドメイン名(ENS)、ソーシャルプロフィール(Lens)、検証可能なクレデンシャル、dApp全体のレピュテーションスコアが含まれます。"
+			},
+			{
+				"question": "ENSドメインを取得すべきですか？",
+				"answer": "はい、ENSドメインは複雑なウォレットアドレスを読みやすい名前(yourname.eth)に置き換えます。ウォレットやdApp全体で機能します。分散型ウェブサイトとしても使用できます。"
+			},
+			{
+				"question": "Lens Protocolとは何ですか？",
+				"answer": "Lens Protocolは、プロフィール、コンテンツ、フォロワーをNFTとして所有できる分散型ソーシャルグラフです。Lens上に構築されたアプリには、Lenster、Hey、Orbがあります。"
+			}
+		]
+	},
+	"tools": {
+		"ens": {
+			"description": "人間が読めるアドレス用Ethereum Name Service"
+		},
+		"dotbit": {
+			"description": "クロスチェーン分散型アイデンティティプロトコル"
+		},
+		"galxe": {
+			"description": "Web3クレデンシャルとキャンペーンプラットフォーム"
+		},
+		"layer3": {
+			"description": "学んで稼ぐクエストとWeb3オンボーディング"
+		},
+		"degenscore": {
+			"description": "オンチェーンレピュテーションとDeFiスコア"
+		},
+		"civic": {
+			"description": "本人確認とKYCソリューション"
+		},
+		"poap": {
+			"description": "イベントバッジ用出席証明プロトコル"
+		},
+		"phi": {
+			"description": "メタバースアイデンティティとクレデンシャルランド"
+		},
+		"otterspace": {
+			"description": "DAOメンバーシップ用ソウルバウンドバッジ"
+		},
+		"disco": {
+			"description": "検証可能クレデンシャルデータバックパック"
+		},
+		"holonym": {
+			"description": "ZKによるプライバシー保護本人確認"
+		},
+		"anima": {
+			"description": "シビル耐性用バイオメトリックアイデンティティ"
+		},
+		"rarimo": {
+			"description": "Rarimo - アイデンティティとクレデンシャル"
+		},
+		"verax": {
+			"description": "Verax - アイデンティティとクレデンシャル"
+		},
+		"bns": {
+			"description": "BNS (Base Name Service) - アイデンティティとクレデンシャル"
+		},
+		"eas": {
+			"description": "EAS (Ethereum Attestation Service) - アイデンティティとクレデンシャル"
+		},
+		"zkpass": {
+			"description": "zkPass - アイデンティティとクレデンシャル"
+		},
+		"brightid": {
+			"description": "BrightID - アイデンティティとクレデンシャル"
+		},
+		"nomis": {
+			"description": "Nomis - アイデンティティとクレデンシャル"
+		}
+	}
+}

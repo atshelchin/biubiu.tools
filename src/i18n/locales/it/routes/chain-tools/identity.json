@@ -1,0 +1,79 @@
+{
+	"category_seo": {
+		"title": "Identità Web3 - ENS, Lens e Identità Decentralizzata | BiuBiu Tools",
+		"description": "Soluzioni di identità decentralizzata per Web3. Nomi di dominio (ENS), profili social (Lens), credenziali e sistemi di reputazione.",
+		"faqs": [
+			{
+				"question": "Cos'è l'identità Web3?",
+				"answer": "L'identità Web3 ti permette di possedere la tua identità digitale on-chain. Questo include nomi di dominio (ENS), profili social (Lens), credenziali verificabili e punteggi di reputazione tra dApp."
+			},
+			{
+				"question": "Dovrei ottenere un dominio ENS?",
+				"answer": "Sì, i domini ENS sostituiscono gli indirizzi wallet complessi con nomi leggibili (tuonome.eth). Funzionano tra wallet e dApp. Puoi anche usarli come siti web decentralizzati."
+			},
+			{
+				"question": "Cos'è Lens Protocol?",
+				"answer": "Lens Protocol è un social graph decentralizzato dove possiedi il tuo profilo, contenuti e follower come NFT. Le app costruite su Lens includono Lenster, Hey e Orb."
+			}
+		]
+	},
+	"tools": {
+		"ens": {
+			"description": "Ethereum Name Service per indirizzi leggibili"
+		},
+		"dotbit": {
+			"description": "Protocollo identità decentralizzato cross-chain"
+		},
+		"galxe": {
+			"description": "Piattaforma credenziali e campagne Web3"
+		},
+		"layer3": {
+			"description": "Quest learn-to-earn e onboarding Web3"
+		},
+		"degenscore": {
+			"description": "Reputazione on-chain e punteggio DeFi"
+		},
+		"civic": {
+			"description": "Soluzioni verifica identità e KYC"
+		},
+		"poap": {
+			"description": "Protocollo Proof of Attendance per badge eventi"
+		},
+		"phi": {
+			"description": "Identità metaverse e terra credenziali"
+		},
+		"otterspace": {
+			"description": "Badge soulbound per membership DAO"
+		},
+		"disco": {
+			"description": "Zaino dati credenziali verificabili"
+		},
+		"holonym": {
+			"description": "Verifica identità privacy-preserving con ZK"
+		},
+		"anima": {
+			"description": "Identità biometrica per resistenza sybil"
+		},
+		"rarimo": {
+			"description": "Protocollo identità cross-chain"
+		},
+		"verax": {
+			"description": "Registro attestazioni on-chain"
+		},
+		"bns": {
+			"description": "Base Name Service per Base"
+		},
+		"eas": {
+			"description": "Servizio attestazioni Ethereum"
+		},
+		"zkpass": {
+			"description": "Verifica privacy con ZK"
+		},
+		"brightid": {
+			"description": "Rete identità sociale"
+		},
+		"nomis": {
+			"description": "Protocollo punteggio reputazione"
+		}
+	}
+}

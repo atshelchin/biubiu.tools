@@ -1,0 +1,140 @@
+{
+	"category_seo": {
+		"title": "Ferramentas de Análise Blockchain - Rastreamento de Dados On-Chain | BiuBiu Tools",
+		"description": "Explore poderosas ferramentas de análise blockchain para rastrear transações, carteiras, protocolos e tendências do mercado. Inclui Dune, Nansen, Glassnode e mais.",
+		"keywords": "análise blockchain, dados on-chain, dune analytics, nansen, glassnode, rastreador de carteiras",
+		"faqs": [
+			{
+				"question": "O que são análises blockchain?",
+				"answer": "As análises blockchain envolvem a análise de dados on-chain para obter conhecimentos sobre transações, comportamento de carteiras, atividade de protocolos e tendências do mercado. Ajudam traders e pesquisadores a tomar decisões informadas."
+			},
+			{
+				"question": "Por que as ferramentas de análise são importantes?",
+				"answer": "As ferramentas de análise ajudam a rastrear movimentos de baleias, identificar oportunidades de investimento, monitorar a saúde de protocolos, detectar manipulação de mercado e entender tendências cripto mais amplas através de dados transparentes on-chain."
+			},
+			{
+				"question": "O que é Dune Analytics?",
+				"answer": "Dune Analytics é uma plataforma onde os usuários podem consultar dados blockchain usando SQL, criar visualizações e compartilhar conhecimentos. É popular para criar dashboards personalizados que rastreiam métricas de protocolos e DeFi."
+			}
+		]
+	},
+	"tools": {
+		"dune": {
+			"description": "Análises blockchain com queries SQL personalizadas"
+		},
+		"defillama": {
+			"description": "Agregador de TVL DeFi e análises de protocolos"
+		},
+		"nansen": {
+			"description": "Análises on-chain com rastreamento de smart money"
+		},
+		"arkham": {
+			"description": "Plataforma de inteligência blockchain"
+		},
+		"ultrasound": {
+			"description": "Rastreador de fornecimento e queima de ETH"
+		},
+		"messari": {
+			"description": "Plataforma de pesquisa e dados cripto"
+		},
+		"coingecko": {
+			"description": "Preços de criptomoedas e dados de mercado"
+		},
+		"coinmarketcap": {
+			"description": "Rankings de capitalização de mercado cripto"
+		},
+		"glassnode": {
+			"description": "Inteligência de mercado on-chain"
+		},
+		"dexscreener": {
+			"description": "Gráficos de pares DEX em tempo real"
+		},
+		"defined": {
+			"description": "Análises DEX multi-chain"
+		},
+		"tokenterminal": {
+			"description": "Métricas financeiras e de receita de protocolos"
+		},
+		"artemis": {
+			"description": "Análises cripto fundamentais e pesquisa"
+		},
+		"growthepie": {
+			"description": "Análises e comparação de L2"
+		},
+		"dappradar": {
+			"description": "Ranking e rastreamento de DApps"
+		},
+		"ethburned": {
+			"description": "Estatísticas de queima de Ethereum"
+		},
+		"parsec": {
+			"description": "Dashboard de análises DeFi"
+		},
+		"eigenexplorer": {
+			"description": "Explorador de análises EigenLayer"
+		},
+		"the_graph": {
+			"description": "Protocolo descentralizado para indexação de dados blockchain"
+		},
+		"flipside": {
+			"description": "Análises blockchain com queries SQL"
+		},
+		"footprint": {
+			"description": "Plataforma de análise de dados blockchain sem código"
+		},
+		"cryptofees": {
+			"description": "Análises de taxas e receitas de protocolos"
+		},
+		"openbb": {
+			"description": "Terminal de pesquisa de investimentos open-source"
+		},
+		"watchers": {
+			"description": "Rastreamento de carteiras baleia e alertas"
+		},
+		"cielo": {
+			"description": "Rastreamento social de carteiras e feed de transações"
+		},
+		"space_and_time": {
+			"description": "Data warehouse verificável com provas ZK"
+		},
+		"allium": {
+			"description": "Plataforma de dados blockchain empresarial"
+		},
+		"sentio": {
+			"description": "Observabilidade e monitoramento multi-chain"
+		},
+		"defillama_yields": {
+			"description": "Comparação de yield farming cross-chain"
+		},
+		"defilabs": {
+			"description": "Rastreamento de baleias e smart money"
+		},
+		"chainanalytics": {
+			"description": "Dashboards de dados blockchain personalizados"
+		},
+		"cookie3": {
+			"description": "Análises blockchain Cookie3"
+		},
+		"chainbeat": {
+			"description": "Análises blockchain ChainBeat"
+		},
+		"bitquery": {
+			"description": "Análises blockchain Bitquery"
+		},
+		"intotheblock": {
+			"description": "Análises blockchain IntoTheBlock"
+		},
+		"laevitas": {
+			"description": "Análises blockchain Laevitas"
+		},
+		"kaiko": {
+			"description": "Análises blockchain Kaiko"
+		},
+		"amberdata": {
+			"description": "Análises blockchain Amberdata"
+		},
+		"blockpour": {
+			"description": "Análises blockchain Blockpour"
+		}
+	}
+}

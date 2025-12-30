@@ -1,0 +1,140 @@
+{
+	"category_seo": {
+		"title": "Blokzincir Analitik Araçları - Zincir Üstü Veriler ve İçgörüler | BiuBiu Tools",
+		"description": "Zincir üstü veriler, cüzdan takibi ve piyasa içgörüleri için önde gelen blokzincir analitik platformlarını keşfedin. Dune, Nansen ve Arkham gibi araçlar.",
+		"keywords": "blokzincir analitik, zincir üstü veri, dune analytics, nansen, arkham, cüzdan takibi",
+		"faqs": [
+			{
+				"question": "Zincir üstü analitik nedir?",
+				"answer": "Zincir üstü analitik, cüzdan davranışı, fon akışları, protokol kullanımı ve piyasa trendleri hakkında içgörü kazanmak için blokzincir işlem verilerini analiz etmeyi içerir. Tüccarlara ve araştırmacılara bilinçli kararlar almada yardımcı olur."
+			},
+			{
+				"question": "Akıllı para takibi nedir?",
+				"answer": "Akıllı para takibi, başarılı tüccarların, balinaların ve kurumların cüzdanlarını izleyerek ticaret modellerini anlamak ve potansiyel olarak stratejilerini takip etmektir."
+			},
+			{
+				"question": "Hangi analitik aracını kullanmalıyım?",
+				"answer": "Dune özel SQL sorguları için harika, Nansen akıllı para takibi için, Arkham varlık etiketleme için ve DefiLlama TVL verileri için. Özel ihtiyaçlarınıza göre seçin."
+			}
+		]
+	},
+	"tools": {
+		"dune": {
+			"description": "Özel SQL sorguları ile blokzincir analitik"
+		},
+		"defillama": {
+			"description": "DeFi TVL toplayıcısı ve protokol analitiği"
+		},
+		"nansen": {
+			"description": "Akıllı para takibi ile zincir üstü analitik"
+		},
+		"arkham": {
+			"description": "Blokzincir istihbarat platformu"
+		},
+		"ultrasound": {
+			"description": "ETH arz ve yakma takipçisi"
+		},
+		"allium": {
+			"description": "Kurumsal blokzincir veri platformu"
+		},
+		"amberdata": {
+			"description": "Kurumsal blokzincir veri ve analitik platformu"
+		},
+		"artemis": {
+			"description": "Temel kripto analitik ve araştırma"
+		},
+		"bitquery": {
+			"description": "Blokzincir veri API ve sorgu platformu"
+		},
+		"blockpour": {
+			"description": "Blokzincir veri görselleştirme aracı"
+		},
+		"chainanalytics": {
+			"description": "Özel blokzincir veri kontrol panelleri"
+		},
+		"chainbeat": {
+			"description": "Zincir üstü veri izleme platformu"
+		},
+		"cielo": {
+			"description": "Sosyal cüzdan takibi ve işlem akışı"
+		},
+		"coingecko": {
+			"description": "Kripto para fiyatları ve piyasa verisi"
+		},
+		"coinmarketcap": {
+			"description": "Kripto piyasa değeri sıralamaları"
+		},
+		"cookie3": {
+			"description": "Web3 pazarlama analitik platformu"
+		},
+		"cryptofees": {
+			"description": "Protokol ücreti ve gelir analitiği"
+		},
+		"dappradar": {
+			"description": "DApp sıralaması ve takibi"
+		},
+		"defilabs": {
+			"description": "Balina ve akıllı para takibi"
+		},
+		"defillama_yields": {
+			"description": "Zincirler arası yield farming karşılaştırması"
+		},
+		"defined": {
+			"description": "Çoklu zincir DEX analitiği"
+		},
+		"dexscreener": {
+			"description": "Gerçek zamanlı DEX çift grafikleri"
+		},
+		"eigenexplorer": {
+			"description": "EigenLayer analitik gezgini"
+		},
+		"ethburned": {
+			"description": "Ethereum yakma istatistikleri"
+		},
+		"flipside": {
+			"description": "SQL sorguları ile blokzincir analitiği"
+		},
+		"footprint": {
+			"description": "Kod gerektirmeyen blokzincir veri analiz platformu"
+		},
+		"glassnode": {
+			"description": "Zincir üstü piyasa istihbaratı"
+		},
+		"growthepie": {
+			"description": "L2 analitiği ve karşılaştırması"
+		},
+		"intotheblock": {
+			"description": "Zincir üstü veri analitik platformu"
+		},
+		"kaiko": {
+			"description": "Kurumsal kripto piyasa verisi"
+		},
+		"laevitas": {
+			"description": "Türev piyasası analitik platformu"
+		},
+		"messari": {
+			"description": "Kripto araştırma ve veri platformu"
+		},
+		"openbb": {
+			"description": "Açık kaynak yatırım araştırma terminali"
+		},
+		"parsec": {
+			"description": "DeFi analitik kontrol paneli"
+		},
+		"sentio": {
+			"description": "Çoklu zincir gözlemlenebilirlik ve izleme"
+		},
+		"space_and_time": {
+			"description": "ZK kanıtları ile doğrulanabilir veri ambarı"
+		},
+		"the_graph": {
+			"description": "Blokzincir veri indeksleme için merkezi olmayan protokol"
+		},
+		"tokenterminal": {
+			"description": "Protokol finansalları ve gelir metrikleri"
+		},
+		"watchers": {
+			"description": "Balina cüzdan takibi ve uyarıları"
+		}
+	}
+}

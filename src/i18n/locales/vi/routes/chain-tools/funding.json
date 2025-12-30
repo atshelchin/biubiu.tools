@@ -1,0 +1,49 @@
+{
+	"category_seo": {
+		"title": "Nguồn Vốn Web3 - Grant, VC & Gây Quỹ | BiuBiu Tools",
+		"description": "Tìm nguồn tài trợ cho các dự án Web3. Grant hệ sinh thái, nhà đầu tư VC, nền tảng gọi vốn cộng đồng và chương trình tăng tốc.",
+		"faqs": [
+			{
+				"question": "Các dự án Web3 được tài trợ như thế nào?",
+				"answer": "Các lựa chọn bao gồm grant hệ sinh thái (Ethereum Foundation, grant L2), tài trợ VC (a16z, Paradigm), phát hành token (launchpad) và tài trợ hồi tố (Optimism RetroPGF)."
+			},
+			{
+				"question": "Grant hệ sinh thái là gì?",
+				"answer": "Grant từ các quỹ blockchain để tài trợ phát triển. Ethereum Foundation, Uniswap Grants, Arbitrum Foundation và những nơi khác tài trợ các dự án xây dựng trên hệ sinh thái của họ."
+			},
+			{
+				"question": "Làm thế nào để thuyết trình với VC crypto?",
+				"answer": "Xây dựng sản phẩm hoạt động trước. VC crypto đánh giá cao những người sáng lập kỹ thuật và đóng góp mã nguồn mở. Giao lưu tại hội nghị, nhận giới thiệu và hiển thị chỉ số tăng trưởng như TVL hoặc người dùng."
+			}
+		]
+	},
+	"tools": {
+		"paradigm": {
+			"description": "Quỹ đầu tư crypto hàng đầu"
+		},
+		"polychain": {
+			"description": "Quỹ đầu tư blockchain toàn cầu"
+		},
+		"pantera": {
+			"description": "Quỹ đầu tư tài sản kỹ thuật số"
+		},
+		"multicoin": {
+			"description": "Quỹ đầu tư Web3 lý thuyết hướng"
+		},
+		"dragonfly": {
+			"description": "Quỹ đầu tư crypto đa giai đoạn"
+		},
+		"variant": {
+			"description": "Quỹ đầu tư Web3 giai đoạn đầu"
+		},
+		"placeholder": {
+			"description": "Quỹ đầu tư protocol và infrastructure"
+		},
+		"coinlist": {
+			"description": "Nền tảng phân phối token và fundraising"
+		},
+		"kernel": {
+			"description": "Cộng đồng học và xây dựng Web3"
+		}
+	}
+}

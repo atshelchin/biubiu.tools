@@ -1,0 +1,35 @@
+{
+	"category_seo": {
+		"title": "Direcciones Quemadoras de Gas - Optimización de Tarifas Blockchain | BiuBiu Tools",
+		"description": "Identifica quemadores de gas principales y optimiza el uso de gas en blockchain. Aprende sobre consumo de gas, optimización y trackers de tarifas.",
+		"keywords": "quemadores gas, optimizacion gas ethereum, tarifas gas, rastreador gas, consumo gas blockchain",
+		"faqs": [
+			{
+				"question": "¿Qué son los quemadores de gas?",
+				"answer": "Los quemadores de gas se refieren a contratos o entidades que consumen grandes cantidades de gas blockchain, a menudo impactando las tarifas de red. Los mayores consumidores típicamente incluyen exchanges populares, protocolos DeFi y aplicaciones de alto volumen como NFT marketplaces."
+			},
+			{
+				"question": "¿Por qué rastrear el uso de gas?",
+				"answer": "Rastrear quemadores de gas ayuda a entender la demanda de red, identificar aplicaciones populares, predecir picos de tarifas y optimizar el timing de transacciones. Los desarrolladores también monitorean el gas para optimizar la eficiencia de contratos inteligentes."
+			},
+			{
+				"question": "¿Cómo reduzco costos de gas?",
+				"answer": "Estrategias: transar durante períodos de bajo tráfico (fines de semana, horas nocturnas), usar L2s para transacciones más baratas, optimizar configuraciones de gas, agrupar transacciones, usar funcionalidades de contratos más eficientes en gas y considerar cadenas alternativas."
+			}
+		]
+	},
+	"tools": {
+		"l2fees": {
+			"description": "Comparar tarifas de transacción L2"
+		},
+		"gasnow": {
+			"description": "Rastreador rápido de precios de gas con API"
+		},
+		"owlracle": {
+			"description": "Oráculo de gas multi-cadena con API"
+		},
+		"txstreet": {
+			"description": "Visualización blockchain en vivo"
+		}
+	}
+}

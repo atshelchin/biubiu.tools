@@ -1,0 +1,146 @@
+{
+	"category_seo": {
+		"title": "Công Cụ Bảo Mật Web3 - Kiểm Toán, Giám Sát & Bảo Vệ | BiuBiu Tools",
+		"description": "Công cụ bảo mật thiết yếu cho Web3. Kiểm toán smart contract, mô phỏng giao dịch, quản lý phê duyệt và phát hiện mối đe dọa thời gian thực.",
+		"keywords": "web3 security, smart contract audit, revoke approvals, transaction simulation, defi security",
+		"faqs": [
+			{
+				"question": "Làm thế nào để thu hồi phê duyệt token?",
+				"answer": "Sử dụng các công cụ như Revoke.cash để xem và thu hồi các phê duyệt token không giới hạn mà bạn đã cấp cho smart contract. Điều này ngăn chặn các khai thác tiềm năng nếu một hợp đồng bị xâm phạm."
+			},
+			{
+				"question": "Mô phỏng giao dịch là gì?",
+				"answer": "Mô phỏng giao dịch (các công cụ như Pocket Universe) xem trước những gì sẽ xảy ra trước khi bạn ký giao dịch, giúp bạn tránh lừa đảo và kết quả không mong muốn."
+			},
+			{
+				"question": "Làm thế nào để xác minh smart contract an toàn?",
+				"answer": "Kiểm tra xem hợp đồng có được kiểm toán bởi các công ty uy tín không, xác minh mã trên Etherscan, tìm các chương trình bug bounty và kiểm tra lịch sử và TVL của giao thức."
+			}
+		]
+	},
+	"tools": {
+		"revoke": {
+			"description": "Quản lý và thu hồi phê duyệt token"
+		},
+		"slither": {
+			"description": "Framework phân tích tĩnh"
+		},
+		"mythx": {
+			"description": "API bảo mật hợp đồng thông minh"
+		},
+		"certik": {
+			"description": "Kiểm toán bảo mật và mạng Skynet"
+		},
+		"hacken": {
+			"description": "Kiểm toán bảo mật blockchain"
+		},
+		"immunefi": {
+			"description": "Nền tảng săn lỗi Web3"
+		},
+		"openzeppelin": {
+			"description": "Thư viện bảo mật smart contract"
+		},
+		"dedaub": {
+			"description": "Công cụ bảo mật và decompiler smart contract"
+		},
+		"honeypot": {
+			"description": "Phát hiện honeypot token"
+		},
+		"phalcon": {
+			"description": "Trình khám phá phân tích giao dịch"
+		},
+		"chainalysis": {
+			"description": "Nền tảng tuân thủ blockchain"
+		},
+		"hexagate": {
+			"description": "Giám sát mối đe dọa smart contract theo thời gian thực"
+		},
+		"hypernative": {
+			"description": "Giám sát và phòng ngừa bảo mật được hỗ trợ AI"
+		},
+		"chainalert": {
+			"description": "Cảnh báo và thông báo bảo mật blockchain"
+		},
+		"webacy": {
+			"description": "Sao lưu ví an toàn và thừa kế crypto"
+		},
+		"harpie": {
+			"description": "Tường lửa on-chain và bảo vệ lừa đảo"
+		},
+		"blowfish": {
+			"description": "Mô phỏng giao dịch và phòng ngừa mối đe dọa"
+		},
+		"stelo": {
+			"description": "Xem trước giao dịch có thể đọc được"
+		},
+		"fire": {
+			"description": "Mô phỏng giao dịch để bảo vệ ví"
+		},
+		"scamsniffer": {
+			"description": "Dịch vụ phát hiện lừa đảo và lừa đảo"
+		},
+		"peckshield": {
+			"description": "Công ty kiểm toán và nghiên cứu bảo mật blockchain"
+		},
+		"slowmist": {
+			"description": "Kiểm toán bảo mật và điều tra sự cố"
+		},
+		"quantstamp": {
+			"description": "Kiểm toán bảo mật blockchain doanh nghiệp"
+		},
+		"spearbit": {
+			"description": "Mạng lưới nhà nghiên cứu bảo mật chuyên gia"
+		},
+		"railgun": {
+			"description": "DeFi riêng tư với zk-SNARKs trên chuỗi EVM"
+		},
+		"aztec": {
+			"description": "Quyền riêng tư có thể lập trình với zk-rollup"
+		},
+		"nocturne": {
+			"description": "Lớp tài khoản riêng tư cho Ethereum"
+		},
+		"umbra": {
+			"description": "Thanh toán địa chỉ ẩn danh trên chuỗi EVM"
+		},
+		"labyrinth": {
+			"description": "Quyền riêng tư tuân thủ cho tổ chức"
+		},
+		"elusiv": {
+			"description": "Thanh toán riêng tư tuân thủ trên Solana"
+		},
+		"zcash": {
+			"description": "Blockchain quyền riêng tư gốc với giao dịch được bảo vệ"
+		},
+		"forta": {
+			"description": "Mạng phát hiện mối đe dọa theo thời gian thực"
+		},
+		"code4rena": {
+			"description": "Cuộc thi kiểm toán do cộng đồng điều hành"
+		},
+		"sherlock": {
+			"description": "Cuộc thi kiểm toán với bảo hiểm khai thác"
+		},
+		"chainsecurity": {
+			"description": "Kiểm toán bảo mật smart contract"
+		},
+		"halborn": {
+			"description": "Dịch vụ bảo mật blockchain toàn diện"
+		},
+		"zellic": {
+			"description": "Kiểm toán bảo mật cho Web3"
+		},
+		"veridise": {
+			"description": "Xác minh chính thức smart contract"
+		},
+		"pessimistic": {
+			"description": "Giám sát bảo mật on-chain"
+		},
+		"cyfrin": {
+			"description": "Kiểm toán và đào tạo bảo mật Web3"
+		},
+		"yaudit": {
+			"description": "Kiểm toán bảo mật độc lập"
+		}
+	}
+}

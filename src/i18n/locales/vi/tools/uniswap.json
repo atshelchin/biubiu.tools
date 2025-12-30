@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "Uniswap - Sàn Giao Dịch Phi Tập Trung Lớn Nhất | Đánh Giá Công Cụ DeFi",
+		"description": "Khám phá Uniswap, sàn giao dịch phi tập trung lớn nhất thế giới. Tìm hiểu về nhà tạo lập thị trường tự động, pool thanh khoản, hỗ trợ đa chuỗi và cách hoán đổi token an toàn.",
+		"keywords": "Uniswap, DEX, sàn giao dịch phi tập trung, hoán đổi token, AMM, pool thanh khoản, DeFi, Ethereum, giao dịch crypto"
+	},
+	"overview": "Uniswap là sàn giao dịch phi tập trung (DEX) lớn nhất thế giới, tiên phong trong mô hình nhà tạo lập thị trường tự động (AMM) đã trở thành tiêu chuẩn cho giao dịch phi tập trung. Ra mắt vào tháng 11 năm 2018 bởi Hayden Adams, một cựu kỹ sư cơ khí, Uniswap đã cách mạng hóa cách người dùng giao dịch tiền điện tử bằng cách loại bỏ nhu cầu về sổ lệnh truyền thống và các trung gian tập trung.\n\nGiao thức hoạt động thông qua hợp đồng thông minh trên Ethereum và nhiều mạng Layer 2, cho phép bất kỳ ai hoán đổi token ngay lập tức mà không cần tạo tài khoản hoặc ủy thác tiền cho bên thứ ba. Tính đến năm 2024, Uniswap đã xử lý hơn 2 nghìn tỷ đô la khối lượng giao dịch tích lũy và duy trì Tổng Giá Trị Khóa (TVL) vượt quá 5 tỷ đô la.\n\nThiết kế không cần cấp phép của Uniswap có nghĩa là bất kỳ token ERC-20 nào cũng có thể được niêm yết và giao dịch mà không cần sự chấp thuận của đội ngũ tập trung. Sự cởi mở này đã biến nó thành nền tảng được ưa chuộng để khám phá và giao dịch token mới, trong khi các hợp đồng thông minh đã được thử nghiệm trong thực tế cung cấp bảo mật đã giành được sự tin tưởng của hàng triệu người dùng trên toàn thế giới.",
+	"features": {
+		"1": {
+			"title": "Nhà Tạo Lập Thị Trường Tự Động (AMM)",
+			"description": "Giao dịch token ngay lập tức sử dụng pool thanh khoản thay vì sổ lệnh, với giá được xác định bởi các công thức toán học"
+		},
+		"2": {
+			"title": "Giao Dịch Không Lưu Ký",
+			"description": "Tiền của bạn ở trong ví cho đến thời điểm hoán đổi - không cần nạp tiền, không cần tạo tài khoản, không cần tin tưởng"
+		},
+		"3": {
+			"title": "Niêm Yết Token Không Cần Phép",
+			"description": "Bất kỳ token ERC-20 nào cũng có thể được giao dịch mà không cần phê duyệt, cho phép truy cập sớm vào các dự án mới"
+		},
+		"4": {
+			"title": "Hỗ Trợ Đa Chuỗi",
+			"description": "Có sẵn trên Ethereum, Arbitrum, Optimism, Polygon, Base và hơn thế nữa - hoán đổi nơi phí gas phù hợp với bạn"
+		},
+		"5": {
+			"title": "Thanh Khoản Tập Trung (V3)",
+			"description": "Nhà cung cấp thanh khoản có thể tập trung vốn trong các phạm vi giá cụ thể để đạt hiệu quả vốn cao hơn"
+		},
+		"6": {
+			"title": "Hooks & Tùy Chỉnh (V4)",
+			"description": "Phiên bản mới nhất giới thiệu các plugin có thể tùy chỉnh cho cơ chế và chiến lược giao dịch độc đáo"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Hoán Đổi Token",
+			"description": "Trao đổi bất kỳ token nào với token khác ngay lập tức với tỷ giá cạnh tranh và trượt giá tối thiểu"
+		},
+		"2": {
+			"title": "Cung Cấp Thanh Khoản",
+			"description": "Kiếm phí giao dịch bằng cách cung cấp thanh khoản cho các cặp token - trở thành nhà tạo lập thị trường của riêng bạn"
+		},
+		"3": {
+			"title": "Khám Phá Token Mới",
+			"description": "Tìm và giao dịch các token mới ra mắt trước khi chúng xuất hiện trên các sàn giao dịch tập trung"
+		},
+		"4": {
+			"title": "Quản Lý Danh Mục DeFi",
+			"description": "Cân bằng lại danh mục crypto của bạn hoặc chuyển sang stablecoin trong thời kỳ biến động thị trường"
+		},
+		"5": {
+			"title": "Giao Dịch Đa Chuỗi",
+			"description": "Giao dịch trên các mạng Layer 2 để tiết kiệm phí gas trong khi vẫn duy trì bảo mật Ethereum"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Uniswap là gì và hoạt động như thế nào?",
+			"answer": "Uniswap là một sàn giao dịch phi tập trung sử dụng mô hình nhà tạo lập thị trường tự động (AMM). Thay vì ghép cặp người mua với người bán, nó sử dụng pool thanh khoản - các hợp đồng thông minh chứa các cặp token. Khi bạn hoán đổi, bạn đang giao dịch với các pool này, và giá tự động điều chỉnh dựa trên cung và cầu."
+		},
+		"2": {
+			"question": "Uniswap có an toàn để sử dụng không?",
+			"answer": "Các hợp đồng thông minh cốt lõi của Uniswap đã được kiểm toán rộng rãi và đã bảo vệ hàng tỷ đô la mà không có exploit lớn nào. Tuy nhiên, luôn xác minh rằng bạn đang sử dụng giao diện chính thức (app.uniswap.org), cẩn thận với các token lừa đảo, và hiểu rủi ro tổn thất vô thường nếu cung cấp thanh khoản."
+		},
+		"3": {
+			"question": "Phí trên Uniswap là bao nhiêu?",
+			"answer": "Uniswap thu phí hoán đổi 0.3% trên hầu hết các pool, phí này được trả cho các nhà cung cấp thanh khoản. Uniswap Labs cũng thu thêm phí 0.15% trên một số token thông qua giao diện của họ. Bạn cũng sẽ trả phí gas mạng, thay đổi dựa trên tình trạng tắc nghẽn mạng."
+		},
+		"4": {
+			"question": "Tổn thất vô thường là gì?",
+			"answer": "Tổn thất vô thường xảy ra khi cung cấp thanh khoản và tỷ lệ giá của các token đã nạp thay đổi. Nếu bạn chỉ đơn giản giữ các token, bạn có thể có nhiều giá trị hơn so với những gì bạn có trong pool. Phí giao dịch kiếm được có thể bù đắp điều này, nhưng đây là rủi ro quan trọng cần hiểu."
+		},
+		"5": {
+			"question": "Tôi nên sử dụng mạng nào trên Uniswap?",
+			"answer": "Mainnet Ethereum có thanh khoản sâu nhất nhưng phí gas cao hơn. Đối với các giao dịch nhỏ hơn, các mạng Layer 2 như Arbitrum, Optimism hoặc Base cung cấp phí thấp hơn nhiều trong khi vẫn duy trì bảo mật. Chọn dựa trên các token bạn muốn giao dịch và quy mô giao dịch của bạn."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng bắt đầu giao dịch?",
+		"button": "Mở Uniswap",
+		"note": "Giao dịch không lưu ký - chìa khóa của bạn, crypto của bạn"
+	}
+}

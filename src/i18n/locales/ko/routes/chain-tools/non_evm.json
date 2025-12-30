@@ -1,0 +1,77 @@
+{
+	"category_seo": {
+		"title": "Non-EVM Blockchains - Solana, Bitcoin, Cosmos & More | BiuBiu Tools",
+		"description": "Explore non-EVM blockchain ecosystems. Solana, Bitcoin, Cosmos, Aptos, Sui, and their unique tools and dApps.",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "What are non-EVM chains?",
+				"answer": "Non-EVM chains don't use Ethereum's virtual machine. They have different architectures - Solana uses Rust, Bitcoin has its own script, Cosmos uses CosmWasm. Each has unique tradeoffs."
+			},
+			{
+				"question": "Why use non-EVM chains?",
+				"answer": "Different chains optimize for different things. Solana for speed and low fees, Bitcoin for security and decentralization, Cosmos for interoperability, Move chains for safety."
+			},
+			{
+				"question": "How do I bridge to non-EVM chains?",
+				"answer": "Use specific bridges like Wormhole (multi-chain), Portal (Solana), or IBC (Cosmos). Some centralized exchanges support direct deposits/withdrawals to non-EVM chains."
+			}
+		]
+	},
+	"tools": {
+		"solscan": {
+			"description": "토큰 분석 및 NFT 지원을 갖춘 인기 Solana 탐색기"
+		},
+		"mintscan": {
+			"description": "멀티체인 Cosmos 생태계 탐색기"
+		},
+		"tonscan": {
+			"description": "거래 및 제톤을 위한 TON 블록체인 탐색기"
+		},
+		"raydium": {
+			"description": "집중 풀을 갖춘 Solana AMM 및 유동성 제공자"
+		},
+		"osmosis": {
+			"description": "IBC 통합을 갖춘 Cosmos 생태계의 대표 DEX"
+		},
+		"injective": {
+			"description": "파생상품 거래를 위한 DeFi 중심 Cosmos 체인"
+		},
+		"celestia": {
+			"description": "롤업을 위한 모듈식 데이터 가용성 레이어"
+		},
+		"dymension": {
+			"description": "모듈식 롤업을 위해 Cosmos에 구축된 RollApp 허브"
+		},
+		"liquidswap": {
+			"description": "Pontem의 Aptos 첫 AMM DEX"
+		},
+		"tonkeeper": {
+			"description": "텔레그램 통합을 갖춘 인기 TON 지갑"
+		},
+		"dedust": {
+			"description": "TON의 DEX 및 DeFi 플랫폼"
+		},
+		"algorand": {
+			"description": "즉시 최종성을 갖춘 순수 PoS 블록체인"
+		},
+		"cardano": {
+			"description": "동료 검토 개발을 갖춘 연구 주도 블록체인"
+		},
+		"polkadot": {
+			"description": "파라체인을 갖춘 이종 멀티체인 네트워크"
+		},
+		"subscan": {
+			"description": "Polkadot 및 Substrate 네트워크를 위한 멀티체인 탐색기"
+		},
+		"tezos": {
+			"description": "형식적 검증을 갖춘 자기 수정 블록체인"
+		},
+		"stacks": {
+			"description": "BTC에 스마트 컨트랙트를 가져오는 비트코인 L2"
+		},
+		"layerzero": {
+			"description": "무신뢰 메시징을 위한 옴니체인 상호 운용성 프로토콜"
+		}
+	}
+}

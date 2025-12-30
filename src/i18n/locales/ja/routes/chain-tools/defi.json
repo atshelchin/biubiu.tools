@@ -1,0 +1,309 @@
+{
+	"category_seo": {
+		"title": "DeFiツール - 分散型金融プロトコルとアプリ | BiuBiu Tools",
+		"description": "スワップ、レンディング、イールドファーミングなどに最適なDeFiツールを発見。Uniswap、Aave、Curve、Compoundなどの主要プロトコルを比較。",
+		"keywords": "defi tools, decentralized finance, dex, lending, yield farming, uniswap, aave, compound",
+		"faqs": [
+			{
+				"question": "DeFiとは何ですか？",
+				"answer": "DeFi(分散型金融)とは、銀行などの従来の仲介者なしで機能するブロックチェーン上の金融サービスを指します。貸借、取引、暗号資産の利息獲得などが含まれます。"
+			},
+			{
+				"question": "DeFi利用のリスクは何ですか？",
+				"answer": "DeFiのリスクには、スマートコントラクトの脆弱性、流動性プールにおける変動損失、市場のボラティリティ、潜在的なラグプルなどがあります。必ず自分で調査し、失っても良い金額のみを投資してください。"
+			},
+			{
+				"question": "DeFiを始めるにはどうすればよいですか？",
+				"answer": "DeFiを始めるには: 1) MetaMaskなどの暗号ウォレットを設定、2) ETHまたは他の暗号通貨を購入、3) ウォレットをDeFiプラットフォームに接続、4) 高度な機能を試す前にシンプルなスワップから始める。"
+			},
+			{
+				"question": "DeFiにおけるTVLとは何ですか？",
+				"answer": "TVL(Total Value Locked)は、DeFiプロトコルに預けられた資産の総額を表します。プロトコルの人気度とセキュリティレベルを測る重要な指標です。"
+			}
+		]
+	},
+	"tools": {
+		"uniswap": {
+			"description": "トークンスワップのための大手分散型取引所"
+		},
+		"aave": {
+			"description": "分散型レンディング・ボローイングプロトコル"
+		},
+		"1inch": {
+			"description": "最良のスワップ価格のためのDEXアグリゲーター"
+		},
+		"curve": {
+			"description": "低スリッページのステーブルコイン特化AMM"
+		},
+		"lido": {
+			"description": "Ethereum等のリキッドステーキング"
+		},
+		"compound": {
+			"description": "アルゴリズミックマネーマーケットプロトコル"
+		},
+		"maker": {
+			"description": "DAIステーブルコインとレンディングプロトコル"
+		},
+		"gmx": {
+			"description": "分散型パーペチュアル取引所"
+		},
+		"pancakeswap": {
+			"description": "BNB Chain上の大手DEX"
+		},
+		"sushiswap": {
+			"description": "マルチチェーンAMMとDeFiプラットフォーム"
+		},
+		"balancer": {
+			"description": "自動化されたポートフォリオマネージャーとDEX"
+		},
+		"dydx": {
+			"description": "分散型パーペチュアルトレーディング取引所"
+		},
+		"convex": {
+			"description": "CRVをロックせずにCurveの利回りを増加"
+		},
+		"yearn": {
+			"description": "自動化されたイールド最適化ボルト"
+		},
+		"pendle": {
+			"description": "イールドのトークン化と取引"
+		},
+		"radiant": {
+			"description": "オムニチェーンマネーマーケット"
+		},
+		"morpho": {
+			"description": "最適化されたレートのP2Pレンディング"
+		},
+		"rocketpool": {
+			"description": "分散型Ethereumステーキング"
+		},
+		"venus": {
+			"description": "BSCレンディングとボローイング"
+		},
+		"camelot": {
+			"description": "ArbitrumネイティブのDEXとローンチパッド"
+		},
+		"velodrome": {
+			"description": "Optimismの流動性ハブ"
+		},
+		"aerodrome": {
+			"description": "Baseネットワークの中央流動性ハブ"
+		},
+		"maverick": {
+			"description": "流動性のための動的配分AMM"
+		},
+		"spark": {
+			"description": "MakerDAOによるDAIレンディングプロトコル"
+		},
+		"instadapp": {
+			"description": "DeFiスマートアカウントアグリゲーター"
+		},
+		"sommelier": {
+			"description": "アクティブ運用DeFiボルト戦略"
+		},
+		"euler": {
+			"description": "パーミッションレスレンディングプロトコル"
+		},
+		"benqi": {
+			"description": "Avalancheレンディングとリキッドステーキング"
+		},
+		"silo": {
+			"description": "分離リスクレンディングマーケット"
+		},
+		"abracadabra": {
+			"description": "利息付きトークンレンディング"
+		},
+		"alchemix": {
+			"description": "自己返済型ローンプロトコル"
+		},
+		"exactly": {
+			"description": "固定および変動金利レンディング"
+		},
+		"kyberswap": {
+			"description": "エラスティックプール付きDEXアグリゲーター"
+		},
+		"odos": {
+			"description": "スマートオーダールーティングアグリゲーター"
+		},
+		"openocean": {
+			"description": "クロスチェーンDEXアグリゲーター"
+		},
+		"hashflow": {
+			"description": "MEV保護付きRFQトレーディング"
+		},
+		"syncswap": {
+			"description": "zkSync EraネイティブDEX"
+		},
+		"mute": {
+			"description": "アンプリファイア付きzkSync DEX"
+		},
+		"spacefi": {
+			"description": "zkSync DEXとイールドファーム"
+		},
+		"ramses": {
+			"description": "Arbitrum ve(3,3) DEX"
+		},
+		"thena": {
+			"description": "BNB Chain ve(3,3) DEX"
+		},
+		"baseswap": {
+			"description": "BaseネイティブDEXとファーム"
+		},
+		"woofi": {
+			"description": "低スリッページクロスチェーンDEX"
+		},
+		"gains": {
+			"description": "分散型レバレッジトレーディング"
+		},
+		"level": {
+			"description": "パーペチュアルトレーディングプラットフォーム"
+		},
+		"mux": {
+			"description": "レバレッジトレーディングアグリゲーター"
+		},
+		"vertex": {
+			"description": "パーペチュアルとスポットDEX"
+		},
+		"hyperliquid": {
+			"description": "オンチェーンパーペチュアルオーダーブックDEX"
+		},
+		"aevo": {
+			"description": "オプションとパーペチュアル取引所"
+		},
+		"lyra": {
+			"description": "オプションAMMプロトコル"
+		},
+		"dopex": {
+			"description": "分散型オプションプロトコル"
+		},
+		"premia": {
+			"description": "オプションボルトと取引"
+		},
+		"harvest": {
+			"description": "DeFiイールドファーミングアグリゲーター"
+		},
+		"pickle": {
+			"description": "イールド最適化ジャー"
+		},
+		"concentrator": {
+			"description": "CurveとConvexの自動複利"
+		},
+		"conic": {
+			"description": "Curveオムニプールプラットフォーム"
+		},
+		"sturdy": {
+			"description": "無利息レンディングプロトコル"
+		},
+		"stakewise": {
+			"description": "ノンカストディアルETHステーキング"
+		},
+		"stader": {
+			"description": "マルチチェーンリキッドステーキング"
+		},
+		"renzo": {
+			"description": "EigenLayerリキッドリステーキング"
+		},
+		"puffer": {
+			"description": "アンチスラッシング技術付きリキッドリステーキング"
+		},
+		"kelp": {
+			"description": "EigenLayer上のrsETHによるリキッドリステーキング"
+		},
+		"bentobox": {
+			"description": "フラッシュローンとレンディング機能を備えたSushiのトークンボルト"
+		},
+		"ribbon": {
+			"description": "持続可能な利回りのためのストラクチャード商品とオプションボルト"
+		},
+		"opyn": {
+			"description": "スクイースパーペチュアル戦略を持つオプションプロトコル"
+		},
+		"notional": {
+			"description": "固定金利レンディングとボローイングプロトコル"
+		},
+		"maple": {
+			"description": "機関向け低担保レンディングマーケットプレイス"
+		},
+		"tokemak": {
+			"description": "持続可能なDeFi流動性のためのリキッディティリアクター"
+		},
+		"olympus": {
+			"description": "OHMトークンを持つ分散型準備通貨プロトコル"
+		},
+		"umami": {
+			"description": "Arbitrum上のGLPを使用した持続可能な利回りボルト"
+		},
+		"vela": {
+			"description": "高度なトレーディング機能を持つパーペチュアルDEX"
+		},
+		"y2k": {
+			"description": "ステーブルコインのデペッグ保険とヘッジプロトコル"
+		},
+		"kwenta": {
+			"description": "Synthetix上のパーペチュアル先物取引"
+		},
+		"polynomial": {
+			"description": "Optimism上のSynthetix駆動オプションボルト"
+		},
+		"angle": {
+			"description": "ユーロステーブルコインと外国為替DeFiプロトコル"
+		},
+		"liquity": {
+			"description": "LUSDステーブルコインによるETH担保無利息ボローイング"
+		},
+		"reflexer": {
+			"description": "PIDコントローラー付き非ペッグステーブルコインRAI"
+		},
+		"mstable": {
+			"description": "イールド貯蓄機能付きメタステーブルコインプラットフォーム"
+		},
+		"raft": {
+			"description": "LSD担保ステーブルコインボローイングプロトコル"
+		},
+		"prisma": {
+			"description": "Curve統合付きLSD担保mkUSDステーブルコイン"
+		},
+		"gravita": {
+			"description": "LSD担保GRAIステーブルコインボローイング"
+		},
+		"gyroscope": {
+			"description": "分散準備金付き全天候型ステーブルコイン"
+		},
+		"paraswap": {
+			"description": "クロスチェーン最良スワップレートのDEXアグリゲーター"
+		},
+		"matcha": {
+			"description": "0xプロトコル駆動DEXアグリゲーター"
+		},
+		"cowswap": {
+			"description": "バッチオークション付きMEV保護スワップ"
+		},
+		"bebop": {
+			"description": "ガスレストレーディング付きマルチトークンスワップ"
+		},
+		"dodo": {
+			"description": "クラウドプーリング付きプロアクティブマーケットメーカーDEX"
+		},
+		"clipper": {
+			"description": "小売トレーダーと小額取引に最適化されたDEX"
+		},
+		"symbiotic_restaking": {
+			"description": "パーミッションレスモジュラーリステーキングプロトコル"
+		},
+		"ether_fi": {
+			"description": "eETHを使ったノンカストディアルリキッドリステーキング"
+		},
+		"swell": {
+			"description": "swETHによるリキッドステーキングとリステーキング"
+		},
+		"beefy": {
+			"description": "マルチチェーン自動複利イールドオプティマイザー"
+		},
+		"equilibria": {
+			"description": "Pendleプールの増強利回り"
+		},
+		"marginfi": {
+			"description": "marginfi - DeFiプロトコル"
+		}
+	}
+}

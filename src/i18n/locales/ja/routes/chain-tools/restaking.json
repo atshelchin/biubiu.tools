@@ -1,0 +1,62 @@
+{
+	"category_seo": {
+		"title": "リステーキング - EigenLayerとリキッドリステーキング | BiuBiu Tools",
+		"description": "追加利回りのためのリステーキングプロトコル。EigenLayer、リキッドリステーキングトークン、AVS（アクティブ検証サービス）。",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "リステーキングとは何ですか？",
+				"answer": "リステーキングは、ステーキングされたETHを使用して追加のプロトコル（AVS）を保護し、追加利回りを得ることができます。EigenLayerがこれを開拓し、ETHステーカーが複数のサービスから報酬を得られるようにしました。"
+			},
+			{
+				"question": "リキッドリステーキングトークン（LRT）とは何ですか？",
+				"answer": "eETH（ether.fi）やezETH（Renzo）などのLRTは、DeFiで使用できるリステーキングされたETHを表します。これらはリステーキングポジションの流動的なバージョンです。"
+			},
+			{
+				"question": "リステーキングのリスクは何ですか？",
+				"answer": "リステーキングはAVS障害によるスラッシングリスク、スマートコントラクトリスク、複雑性を追加します。より高い利回りはより高いリスクを伴います。保護しているAVSが何かを理解してください。"
+			}
+		]
+	},
+	"tools": {
+		"eigenlayer": {
+			"description": "Ethereumセキュリティ向けリステーキングプロトコル"
+		},
+		"etherfi": {
+			"description": "分散型ステーキングプロトコル"
+		},
+		"karak": {
+			"description": "マルチチェーンセキュリティ向けユニバーサルリステーキング"
+		},
+		"symbiotic": {
+			"description": "パーミッションレスでモジュラーなリステーキングプロトコル"
+		},
+		"babylon": {
+			"description": "PoSネットワークを保護するBitcoinステーキングプロトコル"
+		},
+		"eigenpie": {
+			"description": "分離LRTトークン付きMagpieリキッドリステーキング"
+		},
+		"bedrock": {
+			"description": "uniETHトークン付きユニバーサルリキッドリステーキング"
+		},
+		"stakestone": {
+			"description": "STONEトークン付きオムニチェーンリキッドリステーキング"
+		},
+		"inception": {
+			"description": "inETH経由即時アンステーキング付きリキッドリステーキング"
+		},
+		"eigenda": {
+			"description": "ロールアップ向けEigenLayerデータ可用性サービス"
+		},
+		"lagrange": {
+			"description": "クロスチェーン証明用ZKコプロセッサAVS"
+		},
+		"espresso": {
+			"description": "ロールアップ向け共有シーケンシングAVS"
+		},
+		"brevis": {
+			"description": "履歴ブロックチェーンデータ用ZKコプロセッサ"
+		}
+	}
+}

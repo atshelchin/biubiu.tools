@@ -1,0 +1,95 @@
+{
+	"category_seo": {
+		"title": "Cross-Chain Bridges - Transfer Assets Between Blockchains | BiuBiu Tools",
+		"description": "Find the best cross-chain bridges to transfer tokens between Ethereum, Arbitrum, Optimism, Base, and other networks securely.",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "What is a cross-chain bridge?",
+				"answer": "A cross-chain bridge is a protocol that allows you to transfer tokens and data between different blockchain networks. It locks assets on the source chain and mints equivalent tokens on the destination chain."
+			},
+			{
+				"question": "Which bridges are the safest?",
+				"answer": "Native bridges from L2s (like Arbitrum Bridge, Optimism Bridge) are generally safest but slower. Third-party bridges like Stargate, Across, and Hop offer faster transfers with reasonable security. Always check bridge audit status."
+			},
+			{
+				"question": "How long do bridge transfers take?",
+				"answer": "Native L2 bridges take 7+ days for withdrawals due to fraud proof periods. Fast bridges like Stargate or Across complete in minutes. The speed-security tradeoff is important to understand."
+			}
+		]
+	},
+	"tools": {
+		"across": {
+			"description": "빠르고 저렴한 크로스체인 브리지"
+		},
+		"stargate": {
+			"description": "LayerZero 기반의 옴니체인 브리지"
+		},
+		"orbiter": {
+			"description": "L2 크로스 롤업 브리지"
+		},
+		"hop": {
+			"description": "L2 간 토큰 브리지"
+		},
+		"synapse": {
+			"description": "크로스체인 브리지 및 스왑"
+		},
+		"cbridge": {
+			"description": "Celer 크로스체인 브리지"
+		},
+		"multichain": {
+			"description": "멀티체인 라우터 프로토콜"
+		},
+		"wormhole": {
+			"description": "크로스체인 메시징 프로토콜"
+		},
+		"socket": {
+			"description": "최적 경로를 위한 브리지 수집기"
+		},
+		"rhino": {
+			"description": "자가 수탁형 브리지 수집기"
+		},
+		"hyphen": {
+			"description": "즉시 크로스체인 전송"
+		},
+		"connext": {
+			"description": "무신뢰 크로스체인 브리지"
+		},
+		"debridge": {
+			"description": "크로스체인 상호 운용성"
+		},
+		"allbridge": {
+			"description": "멀티체인 스테이블코인 브리지"
+		},
+		"portal": {
+			"description": "Wormhole Portal 브리지"
+		},
+		"squid": {
+			"description": "크로스체인 스왑 라우터"
+		},
+		"owlto": {
+			"description": "빠르고 저렴한 L2 브리지"
+		},
+		"bungee": {
+			"description": "가스 리필 기능을 갖춘 브리지 수집기"
+		},
+		"jumper": {
+			"description": "LI.FI의 멀티체인 브리지 수집기"
+		},
+		"superbridge": {
+			"description": "Optimism 및 Base를 위한 네이티브 브리지"
+		},
+		"relay": {
+			"description": "즉시 크로스체인 브리징 솔루션"
+		},
+		"symbiosis": {
+			"description": "크로스체인 유동성 프로토콜 및 DEX"
+		},
+		"dln": {
+			"description": "DeBridge 지정가 크로스체인 거래"
+		},
+		"layerswap": {
+			"description": "CEX 및 L2 간 브리지"
+		}
+	}
+}

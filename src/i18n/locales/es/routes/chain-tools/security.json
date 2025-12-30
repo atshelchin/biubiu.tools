@@ -1,0 +1,146 @@
+{
+	"category_seo": {
+		"title": "Herramientas de Seguridad Blockchain - Auditoría y Protección | BiuBiu Tools",
+		"description": "Herramientas de seguridad esenciales para auditorías de contratos inteligentes, detección de scams, comprobación de aprobaciones de tokens y protección de billeteras en Web3.",
+		"keywords": "seguridad blockchain, auditoría contrato inteligente, detector scam, comprobador aprobaciones token, seguridad web3",
+		"faqs": [
+			{
+				"question": "¿Por qué es importante la seguridad blockchain?",
+				"answer": "Con miles de millones en valor en blockchains, la seguridad es crítica. Las vulnerabilidades en contratos inteligentes, proyectos scam y hacks de billeteras son comunes. Las herramientas de seguridad ayudan a proteger tus activos y verificar proyectos."
+			},
+			{
+				"question": "¿Qué es una auditoría de contrato inteligente?",
+				"answer": "Una auditoría de contrato inteligente es una revisión exhaustiva del código por expertos en seguridad para identificar vulnerabilidades, errores y riesgos potenciales antes del despliegue. Los proyectos auditados generalmente se consideran más seguros."
+			},
+			{
+				"question": "¿Cómo revoco las aprobaciones de tokens?",
+				"answer": "Usa herramientas como Revoke.cash o Etherscan para ver y revocar aprobaciones de tokens. Esto previene que contratos maliciosos gasten tokens que aprobaste previamente. Revisa y revoca aprobaciones no utilizadas regularmente."
+			}
+		]
+	},
+	"tools": {
+		"revoke": {
+			"description": "Gestionar y revocar aprobaciones de tokens"
+		},
+		"slither": {
+			"description": "Framework de análisis estático"
+		},
+		"mythx": {
+			"description": "API de seguridad para contratos inteligentes"
+		},
+		"certik": {
+			"description": "Auditorías de seguridad y skynet"
+		},
+		"hacken": {
+			"description": "Auditoría de seguridad blockchain"
+		},
+		"immunefi": {
+			"description": "Plataforma de bug bounty Web3"
+		},
+		"openzeppelin": {
+			"description": "Biblioteca de seguridad para contratos inteligentes"
+		},
+		"dedaub": {
+			"description": "Herramientas de seguridad y decompilador de contratos inteligentes"
+		},
+		"honeypot": {
+			"description": "Detección de honeypots de tokens"
+		},
+		"phalcon": {
+			"description": "Explorador de análisis de transacciones"
+		},
+		"chainalysis": {
+			"description": "Plataforma de cumplimiento blockchain"
+		},
+		"hexagate": {
+			"description": "Monitoreo de amenazas de contratos inteligentes en tiempo real"
+		},
+		"hypernative": {
+			"description": "Monitoreo y prevención de seguridad impulsado por IA"
+		},
+		"chainalert": {
+			"description": "Alertas y notificaciones de seguridad blockchain"
+		},
+		"webacy": {
+			"description": "Respaldo de seguridad de billetera y herencia crypto"
+		},
+		"harpie": {
+			"description": "Firewall on-chain y protección contra estafas"
+		},
+		"blowfish": {
+			"description": "Simulación de transacciones y prevención de amenazas"
+		},
+		"stelo": {
+			"description": "Vistas previas de transacciones legibles para humanos"
+		},
+		"fire": {
+			"description": "Simulación de transacciones para protección de billetera"
+		},
+		"scamsniffer": {
+			"description": "Servicio de detección de estafas y phishing"
+		},
+		"peckshield": {
+			"description": "Firma de auditoría de seguridad blockchain e investigación"
+		},
+		"slowmist": {
+			"description": "Auditoría de seguridad e investigación de incidentes"
+		},
+		"quantstamp": {
+			"description": "Auditoría de seguridad blockchain empresarial"
+		},
+		"spearbit": {
+			"description": "Red de investigadores expertos en seguridad"
+		},
+		"railgun": {
+			"description": "DeFi privado con zk-SNARKs en cadenas EVM"
+		},
+		"aztec": {
+			"description": "Privacidad programable con zk-rollup"
+		},
+		"nocturne": {
+			"description": "Capa de cuenta privada para Ethereum"
+		},
+		"umbra": {
+			"description": "Pagos con direcciones sigilosas en cadenas EVM"
+		},
+		"labyrinth": {
+			"description": "Privacidad conforme para instituciones"
+		},
+		"elusiv": {
+			"description": "Pagos privados conformes en Solana"
+		},
+		"zcash": {
+			"description": "Blockchain de privacidad nativa con transacciones protegidas"
+		},
+		"forta": {
+			"description": "Red de detección de amenazas en tiempo real"
+		},
+		"code4rena": {
+			"description": "Concursos de auditoría impulsados por la comunidad"
+		},
+		"sherlock": {
+			"description": "Concursos de auditoría con cobertura de exploits"
+		},
+		"chainsecurity": {
+			"description": "Auditoría y análisis formal de seguridad"
+		},
+		"halborn": {
+			"description": "Servicios de ciberseguridad blockchain"
+		},
+		"zellic": {
+			"description": "Auditorías de seguridad de contratos inteligentes"
+		},
+		"veridise": {
+			"description": "Verificación formal y auditoría de contratos"
+		},
+		"pessimistic": {
+			"description": "Auditoría de seguridad y monitoreo on-chain"
+		},
+		"cyfrin": {
+			"description": "Auditorías de seguridad y educación Web3"
+		},
+		"yaudit": {
+			"description": "Colectivo de auditores de seguridad independientes"
+		}
+	}
+}

@@ -31,37 +31,36 @@ export const load: PageServerLoad = (event) => {
 	const categoryKey = categoryId.replace(/-/g, '_');
 
 	// Try to get category-specific SEO, fallback to generic
-	// Namespace: chain-tools.{category} contains category_seo and tools
+	// Namespace: {category}.json contains category_seo and tools
 	const seoTitle =
-		t(`chain-tools.${categoryKey}.category_seo.title` as keyof TranslationKeys, {
+		t(`${categoryKey}.category_seo.title` as never, {
 			defaultValue: ''
-		}) || `${categoryName} - ${t('chain-tools.title')} | BiuBiu Tools`;
+		}) || `${categoryName} - ${t('_base.title' as never)} | BiuBiu Tools`;
 
 	const seoDescription =
-		t(`chain-tools.${categoryKey}.category_seo.description` as keyof TranslationKeys, {
+		t(`${categoryKey}.category_seo.description` as never, {
 			defaultValue: ''
-		}) || `${t('chain-tools.subtitle')} - ${categoryName}`;
+		}) || `${t('_base.subtitle' as never)} - ${categoryName}`;
 
 	const seoKeywords =
-		t(`chain-tools.${categoryKey}.category_seo.keywords` as keyof TranslationKeys, {
+		t(`${categoryKey}.category_seo.keywords` as never, {
 			defaultValue: ''
 		}) || `${categoryName}, web3 tools, crypto, blockchain`;
 
-	// Get FAQs for this category from chain-tools.{category}.category_seo.faqs
+	// Get FAQs for this category from {category}.category_seo.faqs
 	type FaqItem = { question: string; answer: string };
-	const faqs: FaqItem[] = t<FaqItem[]>(`chain-tools.${categoryKey}.category_seo.faqs` as never);
+	const faqs: FaqItem[] = t<FaqItem[]>(`${categoryKey}.category_seo.faqs` as never);
 
-	console.log({ faqs });
 	// Generate structured data
 	const webAppData = createWebAppData({
-		name: `${categoryName} - ${t('chain-tools.seo.webapp_name')}`,
+		name: `${categoryName} - ${t('_base.seo.webapp_name' as never)}`,
 		description: seoDescription,
 		canonical,
 		features: [
-			t('chain-tools.seo.feature_1'),
-			t('chain-tools.seo.feature_2'),
-			t('chain-tools.seo.feature_3'),
-			t('chain-tools.seo.feature_4')
+			t('_base.seo.feature_1' as never),
+			t('_base.seo.feature_2' as never),
+			t('_base.seo.feature_3' as never),
+			t('_base.seo.feature_4' as never)
 		]
 	});
 

@@ -1,0 +1,121 @@
+{
+	"category_seo": {
+		"title": "Công Cụ Phát Triển Web3 - Xây Dựng dApp & Smart Contract | BiuBiu Tools",
+		"description": "Công cụ phát triển thiết yếu để xây dựng trên Ethereum và các blockchain khác. Framework smart contract, công cụ kiểm thử và dịch vụ triển khai.",
+		"faqs": [
+			{
+				"question": "Các framework phát triển smart contract chính là gì?",
+				"answer": "Foundry là nhanh nhất và phổ biến nhất cho Solidity. Hardhat cung cấp tích hợp JavaScript và plugin tuyệt vời. Brownie dựa trên Python. Anchor là tiêu chuẩn cho chương trình Solana."
+			},
+			{
+				"question": "Làm thế nào để nhận token testnet?",
+				"answer": "Sử dụng faucet như Alchemy Faucet, Infura Faucet hoặc faucet riêng của chuỗi. Sepolia là testnet Ethereum chính. Hầu hết các L2 đều có faucet testnet riêng được liên kết từ tài liệu của họ."
+			},
+			{
+				"question": "Tôi nên sử dụng nhà cung cấp RPC nào?",
+				"answer": "Alchemy và Infura đáng tin cậy nhất với gói miễn phí hào phóng. QuickNode cung cấp hiệu suất nhanh. Đối với tùy chọn phi tập trung, hãy xem xét Ankr hoặc POKT Network. Luôn có điểm cuối RPC dự phòng."
+			}
+		]
+	},
+	"tools": {
+		"tenderly": {
+			"description": "Tenderly - Gỡ lỗi và giám sát hợp đồng thông minh"
+		},
+		"chainlist": {
+			"description": "Thêm mạng EVM vào ví của bạn"
+		},
+		"remix": {
+			"description": "IDE Solidity dựa trên trình duyệt"
+		},
+		"foundry": {
+			"description": "Bộ công cụ Solidity cực nhanh"
+		},
+		"hardhat": {
+			"description": "Môi trường phát triển Ethereum"
+		},
+		"viem": {
+			"description": "Thư viện TypeScript cho Ethereum"
+		},
+		"wagmi": {
+			"description": "React hooks cho Ethereum"
+		},
+		"rainbowkit": {
+			"description": "Giao diện kết nối ví React"
+		},
+		"web3modal": {
+			"description": "Kết nối ví đa framework"
+		},
+		"thirdweb": {
+			"description": "Phát triển Web3 toàn diện"
+		},
+		"alchemy": {
+			"description": "Nền tảng phát triển và API Web3"
+		},
+		"infura": {
+			"description": "Cơ sở hạ tầng API Ethereum"
+		},
+		"quicknode": {
+			"description": "Cơ sở hạ tầng node đa chuỗi"
+		},
+		"sourcify": {
+			"description": "Xác minh hợp đồng phi tập trung"
+		},
+		"brownie": {
+			"description": "Framework smart contract Python"
+		},
+		"ape": {
+			"description": "Framework Python mô-đun"
+		},
+		"pyth": {
+			"description": "Oracle giá theo thời gian thực"
+		},
+		"goldsky": {
+			"description": "Streaming và lập chỉ mục dữ liệu blockchain theo thời gian thực"
+		},
+		"envio": {
+			"description": "HyperSync cho lập chỉ mục blockchain cực nhanh"
+		},
+		"covalent": {
+			"description": "API dữ liệu blockchain thống nhất"
+		},
+		"transpose": {
+			"description": "Dữ liệu blockchain theo thời gian thực với SQL API"
+		},
+		"chainbase": {
+			"description": "Nền tảng dữ liệu tất cả trong một"
+		},
+		"useweb3": {
+			"description": "Tài nguyên học Web3 được tuyển chọn"
+		},
+		"buildspace": {
+			"description": "Cộng đồng học Web3 dựa trên dự án"
+		},
+		"pointer": {
+			"description": "Học phát triển Web3 và kiếm crypto"
+		},
+		"chainide": {
+			"description": "IDE phát triển đa chuỗi trên đám mây"
+		},
+		"constructor": {
+			"description": "Trình xây dựng smart contract không cần code"
+		},
+		"bunzz": {
+			"description": "Thị trường triển khai smart contract"
+		},
+		"crossmint": {
+			"description": "API mint NFT với thanh toán fiat"
+		},
+		"moralis": {
+			"description": "Nền tảng phát triển Web3"
+		},
+		"circom": {
+			"description": "Ngôn ngữ lập trình mạch ZK"
+		},
+		"protostar": {
+			"description": "Framework Starknet"
+		},
+		"starkli": {
+			"description": "CLI Starknet"
+		}
+	}
+}

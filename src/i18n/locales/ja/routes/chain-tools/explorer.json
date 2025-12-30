@@ -1,0 +1,107 @@
+{
+	"category_seo": {
+		"title": "ブロックチェーンエクスプローラー - トランザクションとスマートコントラクトの表示 | BiuBiu Tools",
+		"description": "Ethereum、BSC、Polygonなどのネットワーク向けのブロックチェーンエクスプローラーにアクセス。トランザクションの表示、コントラクトの検証、オンチェーンデータの分析。",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "ブロックチェーンエクスプローラーとは何ですか？",
+				"answer": "ブロックチェーンエクスプローラーは、ブロックチェーンデータの検索エンジンです。トランザクション、ウォレット残高、スマートコントラクトコード、トークン転送、その他のオンチェーンアクティビティを表示できます。"
+			},
+			{
+				"question": "スマートコントラクトを検証するにはどうすればよいですか？",
+				"answer": "Etherscanで、コントラクトアドレスに移動し、「Contract」タブをクリックしてから「Verify and Publish」をクリックします。ソースコード、コンパイラバージョン、コンストラクタ引数を提出します。検証されたコントラクトには緑のチェックマークが表示されます。"
+			},
+			{
+				"question": "最高のマルチチェーンエクスプローラーは何ですか？",
+				"answer": "Blockscoutは多くのEVMチェーンをサポートしており、オープンソースです。OKLinkは50以上のチェーンをカバーしています。特定のチェーンには、Etherscan(Ethereum)、BSCScan(BNB Chain)、Arbiscan(Arbitrum)などのネイティブエクスプローラーを使用してください。"
+			}
+		]
+	},
+	"tools": {
+		"etherscan": {
+			"description": "Ethereumブロックチェーンエクスプローラー"
+		},
+		"blockscout": {
+			"description": "オープンソースブロックエクスプローラー"
+		},
+		"arbiscan": {
+			"description": "Arbitrumブロックチェーンエクスプローラー"
+		},
+		"polygonscan": {
+			"description": "Polygonブロックチェーンエクスプローラー"
+		},
+		"bscscan": {
+			"description": "BNB Chainブロックチェーンエクスプローラー"
+		},
+		"basescan": {
+			"description": "Baseブロックチェーンエクスプローラー"
+		},
+		"snowtrace": {
+			"description": "Avalancheブロックチェーンエクスプローラー"
+		},
+		"lineascan": {
+			"description": "Lineaブロックチェーンエクスプローラー"
+		},
+		"scrollscan": {
+			"description": "Scrollネットワークエクスプローラー"
+		},
+		"mantlescan": {
+			"description": "Mantleネットワークエクスプローラー"
+		},
+		"blastscan": {
+			"description": "Blastネットワークエクスプローラー"
+		},
+		"modescan": {
+			"description": "Modeネットワークエクスプローラー"
+		},
+		"celoscan": {
+			"description": "Celoブロックチェーンエクスプローラー"
+		},
+		"ftmscan": {
+			"description": "Fantomネットワークエクスプローラー"
+		},
+		"gnosisscan": {
+			"description": "Gnosis Chainエクスプローラー"
+		},
+		"cronoscan": {
+			"description": "Cronosネットワークエクスプローラー"
+		},
+		"moonbeamscan": {
+			"description": "MoonbeamとMoonriverエクスプローラー"
+		},
+		"oklink": {
+			"description": "OKXによるマルチチェーンブロックチェーンエクスプローラー"
+		},
+		"routescan": {
+			"description": "統合マルチチェーンブロックエクスプローラー"
+		},
+		"onceupon": {
+			"description": "人間が読めるブロックチェーントランザクションエクスプローラー"
+		},
+		"anyabi": {
+			"description": "スマートコントラクトABI検索とデコーダー"
+		},
+		"nearblocks": {
+			"description": "NearBlocks - ブロックエクスプローラー"
+		},
+		"blockchair": {
+			"description": "Blockchair - ブロックエクスプローラー"
+		},
+		"avascan": {
+			"description": "AvaScan - ブロックエクスプローラー"
+		},
+		"tronscan": {
+			"description": "TronScan - ブロックエクスプローラー"
+		},
+		"cardanoscan": {
+			"description": "Cardanoscan - ブロックエクスプローラー"
+		},
+		"viewblock": {
+			"description": "ViewBlock - ブロックエクスプローラー"
+		},
+		"suiscan": {
+			"description": "SuiScan - ブロックエクスプローラー"
+		}
+	}
+}

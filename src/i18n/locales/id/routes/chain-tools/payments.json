@@ -1,0 +1,91 @@
+{
+	"category_seo": {
+		"title": "Pembayaran Kripto - Pemrosesan Pembayaran & Layanan Kartu | BiuBiu Tools",
+		"description": "Solusi pembayaran kripto untuk bisnis dan individu. Prosesor pembayaran, kartu kripto, dan layanan merchant.",
+		"faqs": [
+			{
+				"question": "Bagaimana cara kerja pembayaran kripto?",
+				"answer": "Pembayaran kripto mentransfer nilai langsung di blockchain. Untuk merchant, prosesor pembayaran seperti BitPay mengonversi kripto ke fiat. Kartu kripto seperti Coinbase Card memungkinkan Anda menghabiskan kripto di mana saja."
+			},
+			{
+				"question": "Kartu kripto mana yang terbaik?",
+				"answer": "Coinbase Card dan Crypto.com Card tersedia secara luas. Gnosis Pay menawarkan integrasi DeFi. Bandingkan tarif cashback, negara yang didukung, dan struktur biaya sebelum memilih."
+			},
+			{
+				"question": "Bisakah bisnis menerima pembayaran kripto?",
+				"answer": "Ya, menggunakan prosesor pembayaran seperti BitPay, Coinbase Commerce, atau pembayaran wallet langsung. Pertimbangkan volatilitas, implikasi pajak, dan apakah akan mengonversi ke fiat segera."
+			}
+		]
+	},
+	"tools": {
+		"moonpay": {
+			"description": "On-ramp dan off-ramp fiat untuk kripto"
+		},
+		"transak": {
+			"description": "Infrastruktur pembayaran fiat-ke-kripto"
+		},
+		"ramp": {
+			"description": "SDK on-ramp fiat non-custodial"
+		},
+		"onmeta": {
+			"description": "On-ramp fiat untuk pengguna India"
+		},
+		"superfluid": {
+			"description": "Streaming token real-time untuk pembayaran"
+		},
+		"sablier": {
+			"description": "Streaming token untuk vesting dan payroll"
+		},
+		"coinshift": {
+			"description": "Manajemen treasury dan operasi multi-sig"
+		},
+		"spritz": {
+			"description": "Bayar tagihan dengan kripto via ACH"
+		},
+		"bitpay": {
+			"description": "Pemrosesan pembayaran kripto untuk merchant"
+		},
+		"holyheld": {
+			"description": "Kartu debit DeFi dengan fitur yield"
+		},
+		"fusepay": {
+			"description": "Kartu spending kripto di jaringan Fuse"
+		},
+		"loopcrypto": {
+			"description": "Penagihan kripto berulang dan langganan"
+		},
+		"reveel": {
+			"description": "Pembagian pendapatan dan royalti otomatis"
+		},
+		"splits": {
+			"description": "Protokol pembagian pembayaran on-chain"
+		},
+		"nowpayments": {
+			"description": "Gateway pembayaran kripto untuk merchant"
+		},
+		"monerium": {
+			"description": "E-money on-chain yang diregulasi untuk pembayaran"
+		},
+		"wyre": {
+			"description": "Infrastruktur pembayaran fiat-ke-kripto"
+		},
+		"banxa": {
+			"description": "On-ramp fiat global yang patuh"
+		},
+		"simplex": {
+			"description": "Pemrosesan pembayaran fiat-ke-kripto"
+		},
+		"sardine": {
+			"description": "Platform pembayaran kripto dengan deteksi fraud"
+		},
+		"coinflow": {
+			"description": "Checkout kripto untuk NFT dan pembayaran"
+		},
+		"llamapay": {
+			"description": "Streaming pembayaran on-chain"
+		},
+		"parcel": {
+			"description": "Platform pembayaran batch multi-chain"
+		}
+	}
+}

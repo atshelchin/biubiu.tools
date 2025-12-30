@@ -1,0 +1,144 @@
+{
+	"category_seo": {
+		"title": "Outils d'Analyse Crypto - Données On-Chain et Analyse de Marché | BiuBiu Tools",
+		"description": "Accédez à de puissants outils d'analyse pour les données on-chain, les métriques DeFi et les tendances du marché. Utilisez des plateformes comme Dune Analytics, Nansen et Glassnode.",
+		"keywords": "analyse crypto, données on-chain, analyse defi, dune analytics, nansen, glassnode",
+		"faqs": [
+			{
+				"question": "Que sont les données on-chain ?",
+				"answer": "Les données on-chain font référence aux informations stockées directement sur la blockchain, incluant les transactions, les soldes des adresses, les interactions avec les smart contracts et d'autres activités. Ces données sont publiques et transparentes."
+			},
+			{
+				"question": "Pourquoi l'analyse crypto est-elle importante ?",
+				"answer": "L'analyse crypto aide à comprendre les tendances du marché, le comportement des utilisateurs, la santé des protocoles et les opportunités d'investissement potentielles. Elle fournit des informations basées sur des données pour prendre de meilleures décisions."
+			},
+			{
+				"question": "Quels sont les outils d'analyse populaires ?",
+				"answer": "Les outils d'analyse crypto populaires incluent Dune Analytics pour les requêtes personnalisées, Nansen pour le suivi des smart money, Glassnode pour les métriques Bitcoin/Ethereum et DeFiLlama pour les données DeFi."
+			},
+			{
+				"question": "Comment lire les métriques on-chain ?",
+				"answer": "Les métriques on-chain clés incluent le volume de transactions, les adresses actives, le TVL, les frais de gas et le comportement des baleines. Combinez plusieurs métriques pour obtenir une image complète de l'activité du réseau."
+			}
+		]
+	},
+	"tools": {
+		"dune": {
+			"description": "Analytique blockchain avec requêtes SQL personnalisées"
+		},
+		"defillama": {
+			"description": "Agrégateur TVL DeFi et analytique des protocoles"
+		},
+		"nansen": {
+			"description": "Analytique sur-chain avec suivi des smart money"
+		},
+		"arkham": {
+			"description": "Plateforme d'intelligence blockchain"
+		},
+		"ultrasound": {
+			"description": "ETH supply et burn tracker"
+		},
+		"messari": {
+			"description": "Plateforme de recherche et données crypto"
+		},
+		"coingecko": {
+			"description": "Prix des cryptomonnaies et données de marché"
+		},
+		"coinmarketcap": {
+			"description": "Classement par capitalisation boursière crypto"
+		},
+		"glassnode": {
+			"description": "Intelligence de marché on-chain"
+		},
+		"dexscreener": {
+			"description": "Graphiques en temps réel des paires DEX"
+		},
+		"defined": {
+			"description": "Analytique DEX multi-chaînes"
+		},
+		"tokenterminal": {
+			"description": "Finances de protocoles et métriques de revenus"
+		},
+		"artemis": {
+			"description": "Analytique crypto fondamentale et recherche"
+		},
+		"growthepie": {
+			"description": "Analytique et comparaison L2"
+		},
+		"dappradar": {
+			"description": "Classement et suivi des DApps"
+		},
+		"ethburned": {
+			"description": "Statistiques de brûlage Ethereum"
+		},
+		"parsec": {
+			"description": "Tableau de bord analytique DeFi"
+		},
+		"eigenexplorer": {
+			"description": "Explorateur analytique EigenLayer"
+		},
+		"the_graph": {
+			"description": "Protocole décentralisé pour l'indexation de données blockchain"
+		},
+		"flipside": {
+			"description": "Analytique blockchain avec requêtes SQL"
+		},
+		"footprint": {
+			"description": "Plateforme d'analyse de données blockchain sans code"
+		},
+		"cryptofees": {
+			"description": "Analytique des frais et revenus de protocoles"
+		},
+		"openbb": {
+			"description": "Terminal de recherche d'investissement open-source"
+		},
+		"watchers": {
+			"description": "Suivi des portefeuilles baleines et alertes"
+		},
+		"cielo": {
+			"description": "Suivi social de portefeuilles et flux de transactions"
+		},
+		"space_and_time": {
+			"description": "Entrepôt de données vérifiable avec preuves ZK"
+		},
+		"allium": {
+			"description": "Plateforme de données blockchain pour entreprises"
+		},
+		"sentio": {
+			"description": "Observabilité et monitoring multi-chaînes"
+		},
+		"defillama_yields": {
+			"description": "Comparaison de yield farming cross-chain"
+		},
+		"defilabs": {
+			"description": "Suivi des baleines et smart money"
+		},
+		"chainanalytics": {
+			"description": "Tableaux de bord de données blockchain personnalisés"
+		},
+		"cookie3": {
+			"description": "Analytique marketing Web3 et attribution"
+		},
+		"chainbeat": {
+			"description": "Monitoring et analytique de protocoles DeFi"
+		},
+		"bitquery": {
+			"description": "API de données blockchain et explorateur"
+		},
+		"intotheblock": {
+			"description": "Analytique et intelligence de marché on-chain"
+		},
+		"laevitas": {
+			"description": "Analytique de marchés dérivés crypto"
+		},
+		"kaiko": {
+			"description": "Données de marché crypto institutionnelles"
+		},
+		"amberdata": {
+			"description": "Infrastructure de données blockchain pour entreprises"
+		},
+		"blockpour": {
+			"description": "Plateforme d'analytique et visualisation blockchain"
+		}
+	}
+}

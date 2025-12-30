@@ -1,0 +1,59 @@
+{
+	"category_seo": {
+		"title": "Real World Assets (RWA) - Tokenized Assets | BiuBiu Tools",
+		"description": "Explore tokenized real world assets. Tokenized treasuries, real estate, commodities, and traditional finance on blockchain.",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "What are RWAs?",
+				"answer": "RWAs (Real World Assets) are traditional assets like US Treasuries, real estate, or commodities tokenized on blockchain. They bring traditional finance yields to DeFi."
+			},
+			{
+				"question": "Why are RWAs important?",
+				"answer": "RWAs provide stable yields from real economy (Treasury rates), diversification from crypto volatility, and bridge traditional finance with DeFi. MakerDAO holds billions in RWAs."
+			},
+			{
+				"question": "What RWA platforms exist?",
+				"answer": "Ondo Finance for tokenized treasuries, RealT for real estate, Centrifuge for asset financing. Major DeFi protocols are integrating RWA strategies for yield."
+			}
+		]
+	},
+	"tools": {
+		"goldfinch": {
+			"description": "신흥 시장의 실물 신용을 위한 암호화폐 대출"
+		},
+		"truefi": {
+			"description": "기관 차용자를 위한 무담보 대출"
+		},
+		"centrifuge": {
+			"description": "송장 및 부동산을 온체인으로 가져오는 실물 자산 금융 프로토콜"
+		},
+		"clearpool": {
+			"description": "무담보 기관 대출을 위한 탈중앙화 자본 시장"
+		},
+		"matrixdock": {
+			"description": "STBT 스테이블코인을 갖춘 토큰화된 국채"
+		},
+		"openeden": {
+			"description": "실시간 NAV 및 연중무휴 결제를 갖춘 토큰화된 미국채"
+		},
+		"realt": {
+			"description": "분할 소유권을 갖춘 토큰화된 부동산 투자"
+		},
+		"lofty": {
+			"description": "Algorand 블록체인의 분할 부동산 투자"
+		},
+		"propy": {
+			"description": "블록체인 기반 부동산 거래 및 소유권"
+		},
+		"securitize": {
+			"description": "증권 토큰 발행 및 라이프사이클 관리 플랫폼"
+		},
+		"tokeny": {
+			"description": "컴플라이언트 증권을 위한 기업 토큰화 플랫폼"
+		},
+		"polymesh": {
+			"description": "규제 증권 토큰을 위해 특별히 구축된 블록체인"
+		}
+	}
+}
