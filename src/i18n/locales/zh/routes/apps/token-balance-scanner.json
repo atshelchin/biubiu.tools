@@ -95,6 +95,103 @@
 			"hint": "连接钱包以继续"
 		}
 	},
+	"step2": {
+		"content": {
+			"title": "依赖检查",
+			"description": "确保所需基础设施已就绪",
+			"checking_dependencies_for": "正在检查 {network} 网络环境...",
+			"wallet_not_connected_title": "钱包未连接",
+			"wallet_not_connected_message": "请返回第 1 步连接钱包",
+			"go_to_step1": "前往第 1 步",
+			"all_dependencies_satisfied": "所有依赖已满足",
+			"network_properly_configured": "网络已正确配置，可以进行余额扫描",
+			"dependency_issues_found": "发现依赖问题",
+			"resolve_issues_before_continuing": "请先解决上述问题后再继续",
+			"recheck_dependencies": "重新检查依赖",
+			"address_label": "地址：",
+			"endpoint_label": "端点：",
+			"resolve_previous_issue": "请先解决前一个问题",
+			"view_deployment_guide": "查看部署指南",
+			"deploy_coming_soon": "部署合约（即将推出）",
+			"deploy_contract": "部署 {contractName}",
+			"deployment": {
+				"modal_title": "部署 {contractName}",
+				"start_deployment": "开始部署",
+				"deploying_contract": "正在部署合约...",
+				"deployment_steps_heading": "部署步骤：",
+				"contract_address_label": "合约地址：",
+				"network_label": "网络：",
+				"waiting_for_signature": "请在钱包中确认交易...",
+				"transaction_sent": "交易已发送！等待区块链确认...",
+				"finalizing": "正在完成部署...",
+				"confirm_in_wallet": "请在钱包中确认交易",
+				"success_title": "部署成功！",
+				"success_description": "合约已成功部署。",
+				"view_on_explorer": "在区块浏览器查看",
+				"error_title": "部署失败",
+				"errors": {
+					"init_failed": "初始化部署配置失败",
+					"wallet_not_connected": "请先连接钱包",
+					"deployment_failed": "合约部署失败",
+					"metamask_cache": "MetaMask 缓存了旧的区块数据。这通常发生在测试网络重置后。",
+					"wallet_cache": "钱包缓存错误。请重启钱包后重试。",
+					"metamask_internal": "MetaMask 内部错误。请尝试：\n\n1. 清除 MetaMask 活动标签数据\n   （设置 → 高级 → 清除活动标签数据）\n\n2. 更新网络 RPC 端点\n\n3. 重启 MetaMask",
+					"wallet_internal": "钱包内部错误。请尝试：\n\n1. 更新网络 RPC 端点\n\n2. 重启钱包",
+					"connection_failed": "连接失败。请检查：\n\n1. 钱包已解锁\n\n2. 网络连接稳定",
+					"rpc_unavailable": "RPC 服务暂时不可用。",
+					"insufficient_funds": "余额不足，无法支付部署和 Gas 费用。",
+					"user_rejected": "交易在钱包中被拒绝。",
+					"already_deployed": "该合约可能已经部署。请刷新依赖检查。"
+				},
+				"steps": {
+					"create2": {
+						"fund_deployer_title": "为部署地址充值",
+						"fund_deployer_description": "发送 0.01 ETH 到 {address}",
+						"deploy_contract_title": "部署合约",
+						"deploy_contract_description": "发送预签名的部署交易"
+					},
+					"via_create2": {
+						"deploy_title": "部署 {contractName} 合约",
+						"deploy_description": "向确定性部署代理发送部署交易"
+					}
+				}
+			},
+			"checks": {
+				"rpc_endpoint": {
+					"name": "RPC 端点",
+					"description": "检查当前 RPC 端点是否可用",
+					"chain_id_mismatch": "链 ID 不匹配：期望 {expected}，实际 {actual}",
+					"connected_to_block": "已连接到区块 #{blockNumber}",
+					"failed_to_connect": "连接失败：{error}",
+					"no_rpc_configured": "该网络未配置 RPC 端点",
+					"configure_rpc_button": "配置 RPC"
+				},
+				"contract": {
+					"deployed": "合约已部署",
+					"not_deployed": "该地址未部署合约",
+					"check_failed": "检查部署失败：{error}",
+					"create2_proxy_description": "用于合约创建的确定性部署代理",
+					"multicall3_description": "将多个合约调用聚合为单个请求"
+				},
+				"category": {
+					"network": "网络",
+					"protocol": "协议",
+					"contract": "合约"
+				}
+			}
+		},
+		"footer": {
+			"checking_dependencies": "正在检查依赖...",
+			"resolve_issues": "请解决所有依赖问题后继续",
+			"waiting_for_checks": "等待依赖检查..."
+		},
+		"sidebar": {
+			"beginner_tips": "提示",
+			"tip1": "系统会自动检查所需合约是否已部署",
+			"tip2": "如果合约缺失，可以直接从此页面部署",
+			"tip3": "必须按顺序解决依赖问题"
+		}
+	},
 	"step3": {
 		"content": {
 			"title": "选择代币",

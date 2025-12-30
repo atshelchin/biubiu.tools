@@ -95,6 +95,103 @@
 			"hint": "Connect your wallet to continue"
 		}
 	},
+	"step2": {
+		"content": {
+			"title": "Dependency Check",
+			"description": "Ensure required infrastructure is ready",
+			"checking_dependencies_for": "Checking {network} network environment...",
+			"wallet_not_connected_title": "Wallet Not Connected",
+			"wallet_not_connected_message": "Please go back to Step 1 and connect your wallet",
+			"go_to_step1": "Go to Step 1",
+			"all_dependencies_satisfied": "All Dependencies Satisfied",
+			"network_properly_configured": "Your network is properly configured for balance scanning",
+			"dependency_issues_found": "Dependency Issues Found",
+			"resolve_issues_before_continuing": "Please resolve the issues above before continuing",
+			"recheck_dependencies": "Re-check Dependencies",
+			"address_label": "Address:",
+			"endpoint_label": "Endpoint:",
+			"resolve_previous_issue": "Please resolve the previous issue first",
+			"view_deployment_guide": "View Deployment Guide",
+			"deploy_coming_soon": "Deploy Contract (Coming Soon)",
+			"deploy_contract": "Deploy {contractName}",
+			"deployment": {
+				"modal_title": "Deploy {contractName}",
+				"start_deployment": "Start Deployment",
+				"deploying_contract": "Deploying Contract...",
+				"deployment_steps_heading": "Deployment Steps:",
+				"contract_address_label": "Contract Address:",
+				"network_label": "Network:",
+				"waiting_for_signature": "Please confirm transaction in your wallet...",
+				"transaction_sent": "Transaction sent! Waiting for blockchain confirmation...",
+				"finalizing": "Finalizing deployment...",
+				"confirm_in_wallet": "Please confirm transactions in your wallet",
+				"success_title": "Deployment Successful!",
+				"success_description": "The contract has been successfully deployed.",
+				"view_on_explorer": "View on Explorer",
+				"error_title": "Deployment Failed",
+				"errors": {
+					"init_failed": "Failed to initialize deployment configuration",
+					"wallet_not_connected": "Please connect your wallet first",
+					"deployment_failed": "Failed to deploy contract",
+					"metamask_cache": "MetaMask cached old block data. This happens when your test network was reset.",
+					"wallet_cache": "Wallet cache error. Please restart your wallet and try again.",
+					"metamask_internal": "MetaMask internal error. Please try:\n\n1. Clear Activity Tab Data in MetaMask\n   (Settings → Advanced → Clear activity tab data)\n\n2. Update network RPC endpoint\n\n3. Restart MetaMask",
+					"wallet_internal": "Wallet internal error. Please try:\n\n1. Update network RPC endpoint\n\n2. Restart your wallet",
+					"connection_failed": "Connection failed. Please check:\n\n1. Your wallet is unlocked\n\n2. Your network connection is stable",
+					"rpc_unavailable": "RPC service is temporarily unavailable.",
+					"insufficient_funds": "Insufficient balance for deployment and gas fees.",
+					"user_rejected": "Transaction was rejected in your wallet.",
+					"already_deployed": "This contract may already be deployed. Please refresh the dependency check."
+				},
+				"steps": {
+					"create2": {
+						"fund_deployer_title": "Fund Deployer Address",
+						"fund_deployer_description": "Send 0.01 ETH to {address}",
+						"deploy_contract_title": "Deploy Contract",
+						"deploy_contract_description": "Send pre-signed deployment transaction"
+					},
+					"via_create2": {
+						"deploy_title": "Deploy {contractName} Contract",
+						"deploy_description": "Send deployment transaction to Deterministic Deployment Proxy"
+					}
+				}
+			},
+			"checks": {
+				"rpc_endpoint": {
+					"name": "RPC Endpoint",
+					"description": "Check if the current RPC endpoint is available",
+					"chain_id_mismatch": "Chain ID mismatch: expected {expected}, got {actual}",
+					"connected_to_block": "Connected to block #{blockNumber}",
+					"failed_to_connect": "Failed to connect: {error}",
+					"no_rpc_configured": "No RPC endpoint configured for this network",
+					"configure_rpc_button": "Configure RPC"
+				},
+				"contract": {
+					"deployed": "Contract is deployed",
+					"not_deployed": "Contract not deployed at this address",
+					"check_failed": "Failed to check deployment: {error}",
+					"create2_proxy_description": "Deterministic deployment proxy for contract creation",
+					"multicall3_description": "Aggregate multiple contract calls into a single request"
+				},
+				"category": {
+					"network": "Network",
+					"protocol": "Protocol",
+					"contract": "Contract"
+				}
+			}
+		},
+		"footer": {
+			"checking_dependencies": "Checking dependencies...",
+			"resolve_issues": "Please resolve all dependency issues to continue",
+			"waiting_for_checks": "Waiting for dependency checks..."
+		},
+		"sidebar": {
+			"beginner_tips": "Tips",
+			"tip1": "The system automatically checks if required contracts are deployed",
+			"tip2": "If a contract is missing, you can deploy it directly from this page",
+			"tip3": "Must resolve dependency issues in order"
+		}
+	},
 	"step3": {
 		"content": {
 			"title": "Select Tokens",
