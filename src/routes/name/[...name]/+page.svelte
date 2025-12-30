@@ -198,7 +198,9 @@
 						<div class="registration-item">
 							<span class="registration-label">{i18n.t('routes/name.registration_status')}</span>
 							<span class="registration-status status-{data.name.registrationStatus}">
-								{i18n.t(('routes/name.status.' + data.name.registrationStatus) as keyof TranslationKeys)}
+								{i18n.t(
+									('routes/name.status.' + data.name.registrationStatus) as keyof TranslationKeys
+								)}
 							</span>
 						</div>
 					{/if}
@@ -226,7 +228,9 @@
 										{#if expirationInfo.isExpired}
 											({i18n.t('routes/name.expired_ago', { days: expirationInfo.daysRemaining })})
 										{:else}
-											({i18n.t('routes/name.days_remaining', { days: expirationInfo.daysRemaining })})
+											({i18n.t('routes/name.days_remaining', {
+												days: expirationInfo.daysRemaining
+											})})
 										{/if}
 									</span>
 								{/if}

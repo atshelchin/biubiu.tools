@@ -95,7 +95,8 @@
 		{#if endpoint.isOpenSource}
 			<div class="status-item">
 				<Github class="status-icon" style="color: #a855f7" />
-				<span class="status-text" style="color: #a855f7">{i18n.t('routes/chains.open_source')}</span>
+				<span class="status-text" style="color: #a855f7">{i18n.t('routes/chains.open_source')}</span
+				>
 			</div>
 		{/if}
 
@@ -107,7 +108,8 @@
 					<span class="status-text" style="color: {latencyColor()}">{latencyResult.latency}ms</span>
 				{:else}
 					<WifiOff class="status-icon" style="color: {latencyColor()}" />
-					<span class="status-text" style="color: {latencyColor()}">{i18n.t('routes/chains.offline')}</span
+					<span class="status-text" style="color: {latencyColor()}"
+						>{i18n.t('routes/chains.offline')}</span
 					>
 				{/if}
 			</div>

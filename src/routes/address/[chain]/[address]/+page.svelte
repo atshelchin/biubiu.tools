@@ -107,7 +107,9 @@
 				{:else if data.address.riskLevel === 'warning' || data.address.riskLevel === 'danger'}
 					<AlertTriangle class="risk-icon" />
 				{/if}
-				<span>{i18n.t(`routes/address.risk.${data.address.riskLevel}` as keyof TranslationKeys)}</span>
+				<span
+					>{i18n.t(`routes/address.risk.${data.address.riskLevel}` as keyof TranslationKeys)}</span
+				>
 			</div>
 		</div>
 
@@ -249,9 +251,12 @@
 			<details class="faq-item">
 				<summary class="faq-question">{i18n.t('routes/address.faq.is_safe')}</summary>
 				<p class="faq-answer">
-					{i18n.t(`routes/address.faq.is_safe_answer_${data.address.riskLevel}` as keyof TranslationKeys, {
-						name: data.address.name
-					})}
+					{i18n.t(
+						`routes/address.faq.is_safe_answer_${data.address.riskLevel}` as keyof TranslationKeys,
+						{
+							name: data.address.name
+						}
+					)}
 				</p>
 			</details>
 

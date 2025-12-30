@@ -142,7 +142,9 @@
 				<span class="divider">|</span>
 				<span class="stat">{wsCount} WSS</span>
 				<span class="divider">|</span>
-				<span class="stat privacy">{noTrackingCount} {i18n.t('routes/chains.privacy_friendly')}</span>
+				<span class="stat privacy"
+					>{noTrackingCount} {i18n.t('routes/chains.privacy_friendly')}</span
+				>
 			</div>
 		</div>
 
