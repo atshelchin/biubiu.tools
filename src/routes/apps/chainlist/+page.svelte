@@ -19,24 +19,24 @@
 	// FAQs for SEO
 	const faqs = $derived([
 		{
-			question: i18n.t('chainlist.faq.q1'),
-			answer: i18n.t('chainlist.faq.a1')
+			question: i18n.t('routes/apps/chainlist.faq.q1'),
+			answer: i18n.t('routes/apps/chainlist.faq.a1')
 		},
 		{
-			question: i18n.t('chainlist.faq.q2'),
-			answer: i18n.t('chainlist.faq.a2')
+			question: i18n.t('routes/apps/chainlist.faq.q2'),
+			answer: i18n.t('routes/apps/chainlist.faq.a2')
 		},
 		{
-			question: i18n.t('chainlist.faq.q3'),
-			answer: i18n.t('chainlist.faq.a3')
+			question: i18n.t('routes/apps/chainlist.faq.q3'),
+			answer: i18n.t('routes/apps/chainlist.faq.a3')
 		},
 		{
-			question: i18n.t('chainlist.faq.q4'),
-			answer: i18n.t('chainlist.faq.a4')
+			question: i18n.t('routes/apps/chainlist.faq.q4'),
+			answer: i18n.t('routes/apps/chainlist.faq.a4')
 		},
 		{
-			question: i18n.t('chainlist.faq.q5'),
-			answer: i18n.t('chainlist.faq.a5')
+			question: i18n.t('routes/apps/chainlist.faq.q5'),
+			answer: i18n.t('routes/apps/chainlist.faq.a5')
 		}
 	]);
 
@@ -158,8 +158,8 @@
 <PageLayout>
 	<div class="chainlist-page">
 		<header class="page-header">
-			<h1 class="page-title">{i18n.t('chainlist.title')}</h1>
-			<p class="page-description">{i18n.t('chainlist.description')}</p>
+			<h1 class="page-title">{i18n.t('routes/apps/chainlist.title')}</h1>
+			<p class="page-description">{i18n.t('routes/apps/chainlist.description')}</p>
 		</header>
 
 		<SearchFilterBar
@@ -183,27 +183,27 @@
 
 		{#if paginatedChains.length === 0}
 			<div class="empty-state">
-				<p>{i18n.t('chainlist.no_results')}</p>
+				<p>{i18n.t('routes/apps/chainlist.no_results')}</p>
 			</div>
 		{/if}
 
 		{#if hasMore}
 			<div class="load-more-container">
 				<button class="load-more-btn" onclick={loadMore}>
-					{i18n.t('chainlist.load_more')}
+					{i18n.t('routes/apps/chainlist.load_more')}
 					<span class="remaining-count">
 						({filteredChains.length - paginatedChains.length}
-						{i18n.t('chainlist.remaining')})
+						{i18n.t('routes/apps/chainlist.remaining')})
 					</span>
 				</button>
 			</div>
 		{/if}
 
 		<!-- FAQ Section for SEO -->
-		<FAQs {faqs} title={i18n.t('chainlist.faq.title')} />
+		<FAQs {faqs} title={i18n.t('routes/apps/chainlist.faq.title')} />
 
 		<footer class="data-source">
-			{i18n.t('chainlist.data_source')}
+			{i18n.t('routes/apps/chainlist.data_source')}
 			<a href="https://chainlist.org" target="_blank" rel="noopener noreferrer">chainlist.org</a>
 		</footer>
 	</div>

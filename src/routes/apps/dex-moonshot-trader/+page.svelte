@@ -14,8 +14,8 @@
 		meta: data.meta,
 		structuredData: data.structuredData,
 		steps: data.steps,
-		appTitle: i18n.t('dex-moonshot-trader.title'),
-		appDescription: i18n.t('dex-moonshot-trader.description'),
+		appTitle: i18n.t('routes/apps/dex-moonshot-trader.title'),
+		appDescription: i18n.t('routes/apps/dex-moonshot-trader.description'),
 		walletConnect: {
 			chains: [mainnet, base, bsc, polygon, arbitrum, optimism],
 			storageKey: 'biubiu-tools-dex-moonshot-trader'

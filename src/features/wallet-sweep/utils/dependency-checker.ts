@@ -34,7 +34,7 @@ function createMembershipCheck(address: Address): CustomCheckFn {
 			rpcUrl,
 			address,
 			'Biubiu Membership',
-			t('wallet-sweep.step2.content.checks.contract.biubiu_membership_description'),
+			t('routes/apps/wallet-sweep.step2.content.checks.contract.biubiu_membership_description'),
 			t,
 			{ canDeploy: false }
 		);
@@ -50,7 +50,7 @@ function createSweepContractCheck(address: Address): CustomCheckFn {
 			rpcUrl,
 			address,
 			'Token Sweep Contract',
-			t('wallet-sweep.step2.content.checks.contract.wallet_sweep_contract_description'),
+			t('routes/apps/wallet-sweep.step2.content.checks.contract.wallet_sweep_contract_description'),
 			t,
 			{ canDeploy: true }
 		);

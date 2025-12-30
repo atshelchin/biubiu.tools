@@ -10,20 +10,20 @@ import { stepComponents } from './ui/steps';
 
 export const contractDeployerTool = defineStepTool({
 	id: 'contract-deployer',
-	i18nPrefix: 'contract-deployer',
+	i18nPrefix: 'routes/apps/contract-deployer',
 
 	steps: [
 		{
-			label: 'contract-deployer.seo.step_1_name',
-			description: 'contract-deployer.seo.step_1_description'
+			label: 'routes/apps/contract-deployer.seo.step_1_name',
+			description: 'routes/apps/contract-deployer.seo.step_1_description'
 		},
 		{
-			label: 'contract-deployer.seo.step_2_name',
-			description: 'contract-deployer.seo.step_2_description'
+			label: 'routes/apps/contract-deployer.seo.step_2_name',
+			description: 'routes/apps/contract-deployer.seo.step_2_description'
 		},
 		{
-			label: 'contract-deployer.seo.step_3_name',
-			description: 'contract-deployer.seo.step_3_description'
+			label: 'routes/apps/contract-deployer.seo.step_3_name',
+			description: 'routes/apps/contract-deployer.seo.step_3_description'
 		}
 	],
 
@@ -36,7 +36,7 @@ export const contractDeployerTool = defineStepTool({
 
 	dependencyChecks: ['rpc', 'create2'],
 
-	faqsPrefix: 'contract-deployer.faqs',
+	faqsPrefix: 'routes/apps/contract-deployer.faqs',
 
 	status: 'alpha'
 });

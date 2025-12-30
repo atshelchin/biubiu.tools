@@ -10,28 +10,28 @@ import { stepComponents } from './ui/steps';
 
 export const walletSweepTool = defineStepTool({
 	id: 'wallet-sweep',
-	i18nPrefix: 'wallet-sweep',
+	i18nPrefix: 'routes/apps/wallet-sweep',
 
 	steps: [
 		{
-			label: 'wallet-sweep.seo.step_1_name',
-			description: 'wallet-sweep.seo.step_1_description'
+			label: 'routes/apps/wallet-sweep.seo.step_1_name',
+			description: 'routes/apps/wallet-sweep.seo.step_1_description'
 		},
 		{
-			label: 'wallet-sweep.seo.step_2_name',
-			description: 'wallet-sweep.seo.step_2_description'
+			label: 'routes/apps/wallet-sweep.seo.step_2_name',
+			description: 'routes/apps/wallet-sweep.seo.step_2_description'
 		},
 		{
-			label: 'wallet-sweep.seo.step_3_name',
-			description: 'wallet-sweep.seo.step_3_description'
+			label: 'routes/apps/wallet-sweep.seo.step_3_name',
+			description: 'routes/apps/wallet-sweep.seo.step_3_description'
 		},
 		{
-			label: 'wallet-sweep.seo.step_4_name',
-			description: 'wallet-sweep.seo.step_4_description'
+			label: 'routes/apps/wallet-sweep.seo.step_4_name',
+			description: 'routes/apps/wallet-sweep.seo.step_4_description'
 		},
 		{
-			label: 'wallet-sweep.seo.step_5_name',
-			description: 'wallet-sweep.seo.step_5_description'
+			label: 'routes/apps/wallet-sweep.seo.step_5_name',
+			description: 'routes/apps/wallet-sweep.seo.step_5_description'
 		}
 	],
 
@@ -44,7 +44,7 @@ export const walletSweepTool = defineStepTool({
 
 	dependencyChecks: ['rpc', 'eip7702', 'create2', 'multicall3', 'biubiu-premium', 'token-sweep'],
 
-	faqsPrefix: 'wallet-sweep.faqs',
+	faqsPrefix: 'routes/apps/wallet-sweep.faqs',
 
 	status: 'alpha'
 });

@@ -18,42 +18,45 @@ export const load: PageServerLoad = (event) => {
 	// Define HowTo steps for SEO
 	const steps: HowToStepData[] = [
 		{
-			name: t('chainlist.seo.step_1_name'),
-			text: t('chainlist.seo.step_1_text'),
-			description: t('chainlist.seo.step_1_description')
+			name: t('routes/apps/chainlist.seo.step_1_name'),
+			text: t('routes/apps/chainlist.seo.step_1_text'),
+			description: t('routes/apps/chainlist.seo.step_1_description')
 		},
 		{
-			name: t('chainlist.seo.step_2_name'),
-			text: t('chainlist.seo.step_2_text'),
-			description: t('chainlist.seo.step_2_description')
+			name: t('routes/apps/chainlist.seo.step_2_name'),
+			text: t('routes/apps/chainlist.seo.step_2_text'),
+			description: t('routes/apps/chainlist.seo.step_2_description')
 		},
 		{
-			name: t('chainlist.seo.step_3_name'),
-			text: t('chainlist.seo.step_3_text'),
-			description: t('chainlist.seo.step_3_description')
+			name: t('routes/apps/chainlist.seo.step_3_name'),
+			text: t('routes/apps/chainlist.seo.step_3_text'),
+			description: t('routes/apps/chainlist.seo.step_3_description')
 		}
 	];
 
 	// Generate structured data
 	const webAppData = createWebAppData({
-		name: t('chainlist.seo.webapp_name'),
-		description: t('chainlist.seo.webapp_description'),
+		name: t('routes/apps/chainlist.seo.webapp_name'),
+		description: t('routes/apps/chainlist.seo.webapp_description'),
 		canonical,
 		features: [
-			t('chainlist.seo.feature_1'),
-			t('chainlist.seo.feature_2'),
-			t('chainlist.seo.feature_3'),
-			t('chainlist.seo.feature_4')
+			t('routes/apps/chainlist.seo.feature_1'),
+			t('routes/apps/chainlist.seo.feature_2'),
+			t('routes/apps/chainlist.seo.feature_3'),
+			t('routes/apps/chainlist.seo.feature_4')
 		]
 	});
 
 	const howToData = createHowToData({
-		name: t('chainlist.seo.howto_name'),
-		description: t('chainlist.seo.howto_description'),
+		name: t('routes/apps/chainlist.seo.howto_name'),
+		description: t('routes/apps/chainlist.seo.howto_description'),
 		canonical,
 		image,
 		steps,
-		tools: [t('chainlist.seo.howto_tool_1'), t('chainlist.seo.howto_tool_2')]
+		tools: [
+			t('routes/apps/chainlist.seo.howto_tool_1'),
+			t('routes/apps/chainlist.seo.howto_tool_2')
+		]
 	});
 
 	// Map locale to SEO locale format
@@ -65,9 +68,9 @@ export const load: PageServerLoad = (event) => {
 	return {
 		// chains: processedChains,
 		meta: {
-			title: t('chainlist.seo.page_title'),
-			description: t('chainlist.seo.page_description'),
-			keywords: t('chainlist.seo.keywords'),
+			title: t('routes/apps/chainlist.seo.page_title'),
+			description: t('routes/apps/chainlist.seo.page_description'),
+			keywords: t('routes/apps/chainlist.seo.keywords'),
 			canonical,
 			type: 'website' as const,
 			image,

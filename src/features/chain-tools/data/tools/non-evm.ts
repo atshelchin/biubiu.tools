@@ -28,7 +28,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'solana-network',
 		name: 'Solana',
-		descriptionKey: 'non_evm.tools.solana_network.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.solana_network.description',
 		url: 'https://solana.com',
 		icon: Zap,
 		category: 'non-evm',
@@ -39,7 +39,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'solana-explorer',
 		name: 'Solana Explorer',
-		descriptionKey: 'non_evm.tools.solana_explorer.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.solana_explorer.description',
 		url: 'https://explorer.solana.com',
 		icon: Search,
 		category: 'non-evm',
@@ -50,7 +50,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'solscan',
 		name: 'Solscan',
-		descriptionKey: 'non_evm.tools.solscan.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.solscan.description',
 		url: 'https://solscan.io',
 		icon: Search,
 		category: 'non-evm',
@@ -61,7 +61,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'jupiter-solana',
 		name: 'Jupiter (Solana)',
-		descriptionKey: 'non_evm.tools.jupiter_solana.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.jupiter_solana.description',
 		url: 'https://jup.ag',
 		icon: Zap,
 		category: 'non-evm',
@@ -72,7 +72,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'raydium',
 		name: 'Raydium',
-		descriptionKey: 'non_evm.tools.raydium.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.raydium.description',
 		url: 'https://raydium.io',
 		icon: TrendingUp,
 		category: 'non-evm',
@@ -83,7 +83,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'marinade-finance',
 		name: 'Marinade Finance',
-		descriptionKey: 'non_evm.tools.marinade_finance.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.marinade_finance.description',
 		url: 'https://marinade.finance',
 		icon: Coins,
 		category: 'non-evm',
@@ -94,7 +94,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'phantom-wallet',
 		name: 'Phantom Wallet',
-		descriptionKey: 'non_evm.tools.phantom_wallet.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.phantom_wallet.description',
 		url: 'https://phantom.app',
 		icon: Wallet,
 		category: 'non-evm',
@@ -106,7 +106,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'magic-eden-solana',
 		name: 'Magic Eden',
-		descriptionKey: 'non_evm.tools.magic_eden_solana.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.magic_eden_solana.description',
 		url: 'https://magiceden.io',
 		icon: Globe,
 		category: 'non-evm',
@@ -117,7 +117,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'tensor-nft',
 		name: 'Tensor',
-		descriptionKey: 'non_evm.tools.tensor_nft.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.tensor_nft.description',
 		url: 'https://tensor.trade',
 		icon: TrendingUp,
 		category: 'non-evm',
@@ -128,7 +128,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'drift-protocol',
 		name: 'Drift Protocol',
-		descriptionKey: 'non_evm.tools.drift_protocol.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.drift_protocol.description',
 		url: 'https://drift.trade',
 		icon: TrendingUp,
 		category: 'non-evm',
@@ -140,7 +140,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'cosmos-network',
 		name: 'Cosmos Hub',
-		descriptionKey: 'non_evm.tools.cosmos_network.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.cosmos_network.description',
 		url: 'https://cosmos.network',
 		icon: Network,
 		category: 'non-evm',
@@ -151,7 +151,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'mintscan',
 		name: 'Mintscan',
-		descriptionKey: 'non_evm.tools.mintscan.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.mintscan.description',
 		url: 'https://mintscan.io',
 		icon: Search,
 		category: 'non-evm',
@@ -162,7 +162,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'osmosis',
 		name: 'Osmosis',
-		descriptionKey: 'non_evm.tools.osmosis.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.osmosis.description',
 		url: 'https://osmosis.zone',
 		icon: Coins,
 		category: 'non-evm',
@@ -173,7 +173,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'keplr-wallet',
 		name: 'Keplr Wallet',
-		descriptionKey: 'non_evm.tools.keplr_wallet.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.keplr_wallet.description',
 		url: 'https://keplr.app',
 		icon: Wallet,
 		category: 'non-evm',
@@ -184,7 +184,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'stride-zone',
 		name: 'Stride',
-		descriptionKey: 'non_evm.tools.stride_zone.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.stride_zone.description',
 		url: 'https://stride.zone',
 		icon: Coins,
 		category: 'non-evm',
@@ -195,7 +195,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'injective',
 		name: 'Injective',
-		descriptionKey: 'non_evm.tools.injective.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.injective.description',
 		url: 'https://injective.com',
 		icon: TrendingUp,
 		category: 'non-evm',
@@ -206,7 +206,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'celestia',
 		name: 'Celestia',
-		descriptionKey: 'non_evm.tools.celestia.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.celestia.description',
 		url: 'https://celestia.org',
 		icon: Layers,
 		category: 'non-evm',
@@ -217,7 +217,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'dymension',
 		name: 'Dymension',
-		descriptionKey: 'non_evm.tools.dymension.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.dymension.description',
 		url: 'https://dymension.xyz',
 		icon: Layers,
 		category: 'non-evm',
@@ -228,7 +228,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'sei-network',
 		name: 'Sei Network',
-		descriptionKey: 'non_evm.tools.sei_network.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.sei_network.description',
 		url: 'https://sei.io',
 		icon: Zap,
 		category: 'non-evm',
@@ -240,7 +240,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'sui-network',
 		name: 'Sui',
-		descriptionKey: 'non_evm.tools.sui_network.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.sui_network.description',
 		url: 'https://sui.io',
 		icon: Zap,
 		category: 'non-evm',
@@ -251,7 +251,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'sui-explorer',
 		name: 'SuiScan',
-		descriptionKey: 'non_evm.tools.sui_explorer.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.sui_explorer.description',
 		url: 'https://suiscan.xyz',
 		icon: Search,
 		category: 'non-evm',
@@ -262,7 +262,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'sui-wallet',
 		name: 'Sui Wallet',
-		descriptionKey: 'non_evm.tools.sui_wallet.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.sui_wallet.description',
 		url: 'https://suiwallet.com',
 		icon: Wallet,
 		category: 'non-evm',
@@ -273,7 +273,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'turbos-finance',
 		name: 'Turbos Finance',
-		descriptionKey: 'non_evm.tools.turbos_finance.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.turbos_finance.description',
 		url: 'https://turbos.finance',
 		icon: TrendingUp,
 		category: 'non-evm',
@@ -284,7 +284,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'cetus-protocol',
 		name: 'Cetus Protocol',
-		descriptionKey: 'non_evm.tools.cetus_protocol.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.cetus_protocol.description',
 		url: 'https://cetus.zone',
 		icon: Coins,
 		category: 'non-evm',
@@ -295,7 +295,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'aptos-network',
 		name: 'Aptos',
-		descriptionKey: 'non_evm.tools.aptos_network.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.aptos_network.description',
 		url: 'https://aptos.dev',
 		icon: Globe,
 		category: 'non-evm',
@@ -306,7 +306,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'aptos-explorer',
 		name: 'Aptos Explorer',
-		descriptionKey: 'non_evm.tools.aptos_explorer.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.aptos_explorer.description',
 		url: 'https://explorer.aptoslabs.com',
 		icon: Search,
 		category: 'non-evm',
@@ -317,7 +317,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'petra-wallet',
 		name: 'Petra Wallet',
-		descriptionKey: 'non_evm.tools.petra_wallet.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.petra_wallet.description',
 		url: 'https://petra.app',
 		icon: Wallet,
 		category: 'non-evm',
@@ -328,7 +328,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'pontem-wallet',
 		name: 'Pontem Wallet',
-		descriptionKey: 'non_evm.tools.pontem_wallet.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.pontem_wallet.description',
 		url: 'https://pontem.network',
 		icon: Wallet,
 		category: 'non-evm',
@@ -339,7 +339,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'liquidswap',
 		name: 'LiquidSwap',
-		descriptionKey: 'non_evm.tools.liquidswap.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.liquidswap.description',
 		url: 'https://liquidswap.com',
 		icon: TrendingUp,
 		category: 'non-evm',
@@ -351,7 +351,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'ton-network',
 		name: 'TON (The Open Network)',
-		descriptionKey: 'non_evm.tools.ton_network.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.ton_network.description',
 		url: 'https://ton.org',
 		icon: Globe,
 		category: 'non-evm',
@@ -362,7 +362,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'tonscan',
 		name: 'Tonscan',
-		descriptionKey: 'non_evm.tools.tonscan.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.tonscan.description',
 		url: 'https://tonscan.org',
 		icon: Search,
 		category: 'non-evm',
@@ -373,7 +373,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'tonkeeper',
 		name: 'Tonkeeper',
-		descriptionKey: 'non_evm.tools.tonkeeper.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.tonkeeper.description',
 		url: 'https://tonkeeper.com',
 		icon: Wallet,
 		category: 'non-evm',
@@ -384,7 +384,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'ston-fi',
 		name: 'STON.fi',
-		descriptionKey: 'non_evm.tools.ston_fi.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.ston_fi.description',
 		url: 'https://ston.fi',
 		icon: TrendingUp,
 		category: 'non-evm',
@@ -395,7 +395,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'dedust',
 		name: 'DeDust',
-		descriptionKey: 'non_evm.tools.dedust.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.dedust.description',
 		url: 'https://dedust.io',
 		icon: Coins,
 		category: 'non-evm',
@@ -407,7 +407,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'near-protocol',
 		name: 'NEAR Protocol',
-		descriptionKey: 'non_evm.tools.near_protocol.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.near_protocol.description',
 		url: 'https://near.org',
 		icon: Globe,
 		category: 'non-evm',
@@ -418,7 +418,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'near-explorer',
 		name: 'NEAR Explorer',
-		descriptionKey: 'non_evm.tools.near_explorer.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.near_explorer.description',
 		url: 'https://nearblocks.io',
 		icon: Search,
 		category: 'non-evm',
@@ -429,7 +429,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'ref-finance',
 		name: 'Ref Finance',
-		descriptionKey: 'non_evm.tools.ref_finance.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.ref_finance.description',
 		url: 'https://ref.finance',
 		icon: TrendingUp,
 		category: 'non-evm',
@@ -440,7 +440,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'algorand',
 		name: 'Algorand',
-		descriptionKey: 'non_evm.tools.algorand.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.algorand.description',
 		url: 'https://algorand.com',
 		icon: Shield,
 		category: 'non-evm',
@@ -451,7 +451,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'cardano',
 		name: 'Cardano',
-		descriptionKey: 'non_evm.tools.cardano.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.cardano.description',
 		url: 'https://cardano.org',
 		icon: Globe,
 		category: 'non-evm',
@@ -462,7 +462,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'polkadot',
 		name: 'Polkadot',
-		descriptionKey: 'non_evm.tools.polkadot.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.polkadot.description',
 		url: 'https://polkadot.network',
 		icon: Network,
 		category: 'non-evm',
@@ -473,7 +473,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'subscan',
 		name: 'Subscan',
-		descriptionKey: 'non_evm.tools.subscan.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.subscan.description',
 		url: 'https://subscan.io',
 		icon: Search,
 		category: 'non-evm',
@@ -484,7 +484,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'tezos',
 		name: 'Tezos',
-		descriptionKey: 'non_evm.tools.tezos.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.tezos.description',
 		url: 'https://tezos.com',
 		icon: Code,
 		category: 'non-evm',
@@ -496,7 +496,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'stacks',
 		name: 'Stacks',
-		descriptionKey: 'non_evm.tools.stacks.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.stacks.description',
 		url: 'https://stacks.co',
 		icon: Layers,
 		category: 'non-evm',
@@ -507,7 +507,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'lightning-network',
 		name: 'Lightning Network',
-		descriptionKey: 'non_evm.tools.lightning_network.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.lightning_network.description',
 		url: 'https://lightning.network',
 		icon: Zap,
 		category: 'non-evm',
@@ -518,7 +518,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'rsk-rootstock',
 		name: 'Rootstock (RSK)',
-		descriptionKey: 'non_evm.tools.rsk_rootstock.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.rsk_rootstock.description',
 		url: 'https://rootstock.io',
 		icon: ArrowLeftRight,
 		category: 'non-evm',
@@ -530,7 +530,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'ibc-protocol',
 		name: 'IBC Protocol',
-		descriptionKey: 'non_evm.tools.ibc_protocol.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.ibc_protocol.description',
 		url: 'https://ibcprotocol.dev',
 		icon: Network,
 		category: 'non-evm',
@@ -540,7 +540,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'wormhole-bridge',
 		name: 'Wormhole',
-		descriptionKey: 'non_evm.tools.wormhole_bridge.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.wormhole_bridge.description',
 		url: 'https://wormhole.com',
 		icon: ArrowLeftRight,
 		category: 'non-evm',
@@ -550,7 +550,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'layerzero',
 		name: 'LayerZero',
-		descriptionKey: 'non_evm.tools.layerzero.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.layerzero.description',
 		url: 'https://layerzero.network',
 		icon: Layers,
 		category: 'non-evm',
@@ -561,7 +561,7 @@ export const nonEvmTools: ExternalTool[] = [
 	{
 		id: 'axelar-network',
 		name: 'Axelar',
-		descriptionKey: 'non_evm.tools.axelar_network.description',
+		descriptionKey: 'routes/apps/chain-tools/non_evm.tools.axelar_network.description',
 		url: 'https://axelar.network',
 		icon: Network,
 		category: 'non-evm',

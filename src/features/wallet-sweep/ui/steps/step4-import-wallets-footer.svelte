@@ -18,10 +18,10 @@
 	let hint = $derived.by(() => {
 		if (walletCount === 0) {
 			// No wallets imported yet
-			return i18n.t('wallet-sweep.step4.footer.hint');
+			return i18n.t('routes/apps/wallet-sweep.step4.footer.hint');
 		} else if (!scanCompleted) {
 			// Wallets imported but not scanned
-			return i18n.t('wallet-sweep.step4.footer.hint_scan_required');
+			return i18n.t('routes/apps/wallet-sweep.step4.footer.hint_scan_required');
 		}
 		// All conditions met
 		return '';
@@ -42,7 +42,7 @@
 	showBack={true}
 	onBack={goBack}
 	{canContinue}
-	continueText={i18n.t('wallet-sweep.step4.footer.continue_text')}
+	continueText={i18n.t('routes/apps/wallet-sweep.step4.footer.continue_text')}
 	onContinue={handleContinue}
 	{hint}
 />

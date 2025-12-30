@@ -67,8 +67,8 @@
 <div class="chain-tools-page">
 	<!-- Header -->
 	<header class="page-header">
-		<h1 class="page-title">{i18n.t('chain-tools.title')}</h1>
-		<p class="page-subtitle">{i18n.t('chain-tools.subtitle')}</p>
+		<h1 class="page-title">{i18n.t('routes/apps/chain-tools/chain-tools.title')}</h1>
+		<p class="page-subtitle">{i18n.t('routes/apps/chain-tools/chain-tools.subtitle')}</p>
 	</header>
 
 	<!-- Search and Filter -->

@@ -59,7 +59,7 @@ export function usePrivateKeyImport(
 
 	async function importPrivateKeys() {
 		if (!privateKeysText.trim()) {
-			errorMessage = t('wallet-sweep.step4.content.private_key.error_empty');
+			errorMessage = t('routes/apps/wallet-sweep.step4.content.private_key.error_empty');
 			return { success: false };
 		}
 
@@ -69,7 +69,7 @@ export function usePrivateKeyImport(
 			.filter((line) => line.length > 0);
 
 		if (lines.length === 0) {
-			errorMessage = t('wallet-sweep.step4.content.private_key.error_none');
+			errorMessage = t('routes/apps/wallet-sweep.step4.content.private_key.error_none');
 			return { success: false };
 		}
 
@@ -98,10 +98,13 @@ export function usePrivateKeyImport(
 
 				if (result.invalidKeys.length > 0) {
 					invalidPrivateKeys = result.invalidKeys.map((key) => ({ key }));
-					errorMessage = t('wallet-sweep.step4.content.private_key.success_with_invalid', {
-						valid: result.wallets.length,
-						invalid: result.invalidKeys.length
-					});
+					errorMessage = t(
+						'routes/apps/wallet-sweep.step4.content.private_key.success_with_invalid',
+						{
+							valid: result.wallets.length,
+							invalid: result.invalidKeys.length
+						}
+					);
 				}
 
 				return { success: true, walletCount: result.wallets.length };
@@ -110,7 +113,7 @@ export function usePrivateKeyImport(
 			errorMessage =
 				error instanceof Error
 					? error.message
-					: t('wallet-sweep.step4.content.errors.import_failed');
+					: t('routes/apps/wallet-sweep.step4.content.errors.import_failed');
 			return { success: false };
 		} finally {
 			isGenerating = false;

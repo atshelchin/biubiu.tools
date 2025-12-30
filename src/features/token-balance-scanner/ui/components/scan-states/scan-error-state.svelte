@@ -15,15 +15,17 @@
 <div class="error-state">
 	<AlertCircle size={56} />
 
-	<h3>{i18n.t('token-balance-scanner.step5.error.title') || 'Scan Failed'}</h3>
+	<h3>{i18n.t('routes/apps/token-balance-scanner.step5.error.title') || 'Scan Failed'}</h3>
 
 	<p class="error-message">
-		{error || i18n.t('token-balance-scanner.step5.error.unknown') || 'An unknown error occurred'}
+		{error ||
+			i18n.t('routes/apps/token-balance-scanner.step5.error.unknown') ||
+			'An unknown error occurred'}
 	</p>
 
 	<button class="retry-btn" onclick={onRetry}>
 		<RefreshCw size={20} />
-		<span>{i18n.t('token-balance-scanner.step5.error.retry') || 'Retry Scan'}</span>
+		<span>{i18n.t('routes/apps/token-balance-scanner.step5.error.retry') || 'Retry Scan'}</span>
 	</button>
 </div>
 

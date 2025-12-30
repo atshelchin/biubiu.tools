@@ -11,28 +11,28 @@
 
 	const faqs = $derived([
 		{
-			question: i18n.t('one-to-many-transfer.faqs.what_is_one_to_many'),
-			answer: i18n.t('one-to-many-transfer.faqs.one_to_many_explanation')
+			question: i18n.t('routes/apps/one-to-many-transfer.faqs.what_is_one_to_many'),
+			answer: i18n.t('routes/apps/one-to-many-transfer.faqs.one_to_many_explanation')
 		},
 		{
-			question: i18n.t('one-to-many-transfer.faqs.what_tokens_supported'),
-			answer: i18n.t('one-to-many-transfer.faqs.tokens_supported_explanation')
+			question: i18n.t('routes/apps/one-to-many-transfer.faqs.what_tokens_supported'),
+			answer: i18n.t('routes/apps/one-to-many-transfer.faqs.tokens_supported_explanation')
 		},
 		{
-			question: i18n.t('one-to-many-transfer.faqs.what_is_equal_distribution'),
-			answer: i18n.t('one-to-many-transfer.faqs.equal_distribution_explanation')
+			question: i18n.t('routes/apps/one-to-many-transfer.faqs.what_is_equal_distribution'),
+			answer: i18n.t('routes/apps/one-to-many-transfer.faqs.equal_distribution_explanation')
 		},
 		{
-			question: i18n.t('one-to-many-transfer.faqs.what_is_custom_amounts'),
-			answer: i18n.t('one-to-many-transfer.faqs.custom_amounts_explanation')
+			question: i18n.t('routes/apps/one-to-many-transfer.faqs.what_is_custom_amounts'),
+			answer: i18n.t('routes/apps/one-to-many-transfer.faqs.custom_amounts_explanation')
 		},
 		{
-			question: i18n.t('one-to-many-transfer.faqs.how_to_import_recipients'),
-			answer: i18n.t('one-to-many-transfer.faqs.import_recipients_explanation')
+			question: i18n.t('routes/apps/one-to-many-transfer.faqs.how_to_import_recipients'),
+			answer: i18n.t('routes/apps/one-to-many-transfer.faqs.import_recipients_explanation')
 		},
 		{
-			question: i18n.t('one-to-many-transfer.faqs.what_networks_supported'),
-			answer: i18n.t('one-to-many-transfer.faqs.networks_supported_explanation')
+			question: i18n.t('routes/apps/one-to-many-transfer.faqs.what_networks_supported'),
+			answer: i18n.t('routes/apps/one-to-many-transfer.faqs.networks_supported_explanation')
 		}
 	]);
 </script>
@@ -43,29 +43,29 @@
 		structuredData: data.structuredData,
 		steps: [
 			{
-				label: 'one-to-many-transfer.seo.step_1_name',
-				description: 'one-to-many-transfer.seo.step_1_description'
+				label: 'routes/apps/one-to-many-transfer.seo.step_1_name',
+				description: 'routes/apps/one-to-many-transfer.seo.step_1_description'
 			},
 			{
-				label: 'one-to-many-transfer.seo.step_2_name',
-				description: 'one-to-many-transfer.seo.step_2_description'
+				label: 'routes/apps/one-to-many-transfer.seo.step_2_name',
+				description: 'routes/apps/one-to-many-transfer.seo.step_2_description'
 			},
 			{
-				label: 'one-to-many-transfer.seo.step_3_name',
-				description: 'one-to-many-transfer.seo.step_3_description'
+				label: 'routes/apps/one-to-many-transfer.seo.step_3_name',
+				description: 'routes/apps/one-to-many-transfer.seo.step_3_description'
 			},
 			{
-				label: 'one-to-many-transfer.seo.step_4_name',
-				description: 'one-to-many-transfer.seo.step_4_description'
+				label: 'routes/apps/one-to-many-transfer.seo.step_4_name',
+				description: 'routes/apps/one-to-many-transfer.seo.step_4_description'
 			},
 			{
-				label: 'one-to-many-transfer.seo.step_5_name',
-				description: 'one-to-many-transfer.seo.step_5_description'
+				label: 'routes/apps/one-to-many-transfer.seo.step_5_name',
+				description: 'routes/apps/one-to-many-transfer.seo.step_5_description'
 			}
 		],
 		useI18nKeys: true,
-		appTitle: i18n.t('one-to-many-transfer.title'),
-		appDescription: i18n.t('one-to-many-transfer.description'),
+		appTitle: i18n.t('routes/apps/one-to-many-transfer.title'),
+		appDescription: i18n.t('routes/apps/one-to-many-transfer.description'),
 		faqs: {
 			title: i18n.t('common.faqs'),
 			items: faqs

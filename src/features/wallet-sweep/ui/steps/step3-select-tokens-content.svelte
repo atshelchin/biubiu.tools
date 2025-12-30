@@ -29,7 +29,7 @@
 </script>
 
 <TokenSelectionContent
-	i18nPrefix="wallet-sweep"
+	i18nPrefix="routes/apps/wallet-sweep"
 	selectedTokenIds={step3State.selectedTokenIds}
 	onSelectionChange={handleSelectionChange}
 	onTokenAdded={handleTokenAdded}

@@ -8,4 +8,4 @@
 	// Just show a hint about the deployment
 </script>
 
-<StepFooter canContinue={false} hint={i18n.t('contract-deployer.step3.footer.hint')} />
+<StepFooter canContinue={false} hint={i18n.t('routes/apps/contract-deployer.step3.footer.hint')} />

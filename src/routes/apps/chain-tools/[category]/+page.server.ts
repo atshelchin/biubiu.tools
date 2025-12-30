@@ -31,36 +31,38 @@ export const load: PageServerLoad = (event) => {
 	const categoryKey = categoryId.replace(/-/g, '_');
 
 	// Try to get category-specific SEO, fallback to generic
-	// Namespace: {category}.json contains category_seo and tools
+	// Namespace: routes/apps/chain-tools/{category}.json contains category_seo and tools
 	const seoTitle =
-		t(`${categoryKey}.category_seo.title` as never, {
+		t(`routes/apps/chain-tools/${categoryKey}.category_seo.title` as never, {
 			defaultValue: ''
-		}) || `${categoryName} - ${t('_base.title' as never)} | BiuBiu Tools`;
+		}) || `${categoryName} - ${t('routes/apps/chain-tools.title' as never)} | BiuBiu Tools`;
 
 	const seoDescription =
-		t(`${categoryKey}.category_seo.description` as never, {
+		t(`routes/apps/chain-tools/${categoryKey}.category_seo.description` as never, {
 			defaultValue: ''
-		}) || `${t('_base.subtitle' as never)} - ${categoryName}`;
+		}) || `${t('routes/apps/chain-tools.subtitle' as never)} - ${categoryName}`;
 
 	const seoKeywords =
-		t(`${categoryKey}.category_seo.keywords` as never, {
+		t(`routes/apps/chain-tools/${categoryKey}.category_seo.keywords` as never, {
 			defaultValue: ''
 		}) || `${categoryName}, web3 tools, crypto, blockchain`;
 
-	// Get FAQs for this category from {category}.category_seo.faqs
+	// Get FAQs for this category from routes/apps/chain-tools/{category}.category_seo.faqs
 	type FaqItem = { question: string; answer: string };
-	const faqs: FaqItem[] = t<FaqItem[]>(`${categoryKey}.category_seo.faqs` as never);
+	const faqs: FaqItem[] = t<FaqItem[]>(
+		`routes/apps/chain-tools/${categoryKey}.category_seo.faqs` as never
+	);
 
 	// Generate structured data
 	const webAppData = createWebAppData({
-		name: `${categoryName} - ${t('_base.seo.webapp_name' as never)}`,
+		name: `${categoryName} - ${t('routes/apps/chain-tools.seo.webapp_name' as never)}`,
 		description: seoDescription,
 		canonical,
 		features: [
-			t('_base.seo.feature_1' as never),
-			t('_base.seo.feature_2' as never),
-			t('_base.seo.feature_3' as never),
-			t('_base.seo.feature_4' as never)
+			t('routes/apps/chain-tools.seo.feature_1' as never),
+			t('routes/apps/chain-tools.seo.feature_2' as never),
+			t('routes/apps/chain-tools.seo.feature_3' as never),
+			t('routes/apps/chain-tools.seo.feature_4' as never)
 		]
 	});
 

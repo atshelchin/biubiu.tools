@@ -20,7 +20,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'dune',
 		name: 'Dune Analytics',
-		descriptionKey: 'analytics.tools.dune.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.dune.description',
 		url: 'https://dune.com',
 		icon: BarChart3,
 		category: 'analytics',
@@ -31,7 +31,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'defillama',
 		name: 'DefiLlama',
-		descriptionKey: 'analytics.tools.defillama.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.defillama.description',
 		url: 'https://defillama.com',
 		icon: PieChart,
 		category: 'analytics',
@@ -42,7 +42,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'nansen',
 		name: 'Nansen',
-		descriptionKey: 'analytics.tools.nansen.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.nansen.description',
 		url: 'https://www.nansen.ai',
 		icon: Eye,
 		category: 'analytics',
@@ -53,7 +53,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'arkham',
 		name: 'Arkham Intelligence',
-		descriptionKey: 'analytics.tools.arkham.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.arkham.description',
 		url: 'https://platform.arkhamintelligence.com',
 		icon: Database,
 		category: 'analytics',
@@ -65,7 +65,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'token-terminal',
 		name: 'Token Terminal',
-		descriptionKey: 'analytics.tools.token_terminal.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.token_terminal.description',
 		url: 'https://tokenterminal.com',
 		icon: BarChart3,
 		category: 'analytics',
@@ -75,7 +75,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'ultrasound',
 		name: 'ultrasound.money',
-		descriptionKey: 'analytics.tools.ultrasound.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.ultrasound.description',
 		url: 'https://ultrasound.money',
 		icon: Activity,
 		category: 'analytics',
@@ -85,7 +85,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'coingecko',
 		name: 'CoinGecko',
-		descriptionKey: 'analytics.tools.coingecko.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.coingecko.description',
 		url: 'https://www.coingecko.com',
 		icon: PieChart,
 		category: 'analytics',
@@ -95,7 +95,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'coinmarketcap',
 		name: 'CoinMarketCap',
-		descriptionKey: 'analytics.tools.coinmarketcap.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.coinmarketcap.description',
 		url: 'https://coinmarketcap.com',
 		icon: LineChart,
 		category: 'analytics',
@@ -107,7 +107,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'glassnode',
 		name: 'Glassnode',
-		descriptionKey: 'analytics.tools.glassnode.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.glassnode.description',
 		url: 'https://glassnode.com',
 		icon: Database,
 		category: 'analytics',
@@ -117,7 +117,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'santiment',
 		name: 'Santiment',
-		descriptionKey: 'analytics.tools.santiment.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.santiment.description',
 		url: 'https://santiment.net',
 		icon: Activity,
 		category: 'analytics',
@@ -129,7 +129,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'dexscreener',
 		name: 'DEX Screener',
-		descriptionKey: 'analytics.tools.dexscreener.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.dexscreener.description',
 		url: 'https://dexscreener.com',
 		icon: Scan,
 		category: 'analytics',
@@ -139,7 +139,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'defined',
 		name: 'Defined.fi',
-		descriptionKey: 'analytics.tools.defined.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.defined.description',
 		url: 'https://www.defined.fi',
 		icon: BarChart3,
 		category: 'analytics',
@@ -149,7 +149,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'bubblemaps',
 		name: 'Bubblemaps',
-		descriptionKey: 'analytics.tools.bubblemaps.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.bubblemaps.description',
 		url: 'https://bubblemaps.io',
 		icon: PieChart,
 		category: 'analytics',
@@ -161,7 +161,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'l2beat',
 		name: 'L2BEAT',
-		descriptionKey: 'analytics.tools.l2beat.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.l2beat.description',
 		url: 'https://l2beat.com',
 		icon: BarChart3,
 		category: 'analytics',
@@ -171,7 +171,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'growthepie',
 		name: 'growthepie',
-		descriptionKey: 'analytics.tools.growthepie.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.growthepie.description',
 		url: 'https://growthepie.xyz',
 		icon: PieChart,
 		category: 'analytics',
@@ -183,7 +183,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'messari',
 		name: 'Messari',
-		descriptionKey: 'analytics.tools.messari.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.messari.description',
 		url: 'https://messari.io',
 		icon: FileText,
 		category: 'analytics',
@@ -195,7 +195,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'tokenterminal',
 		name: 'Token Terminal',
-		descriptionKey: 'analytics.tools.tokenterminal.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.tokenterminal.description',
 		url: 'https://tokenterminal.com',
 		icon: BarChart3,
 		category: 'analytics',
@@ -205,7 +205,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'artemis',
 		name: 'Artemis',
-		descriptionKey: 'analytics.tools.artemis.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.artemis.description',
 		url: 'https://app.artemis.xyz',
 		icon: BarChart3,
 		category: 'analytics',
@@ -215,7 +215,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'dappradar',
 		name: 'DappRadar',
-		descriptionKey: 'analytics.tools.dappradar.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.dappradar.description',
 		url: 'https://dappradar.com',
 		icon: BarChart3,
 		category: 'analytics',
@@ -225,7 +225,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'ethburned',
 		name: 'Watch The Burn',
-		descriptionKey: 'analytics.tools.ethburned.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.ethburned.description',
 		url: 'https://watchtheburn.com',
 		icon: Flame,
 		category: 'analytics',
@@ -235,7 +235,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'parsec',
 		name: 'Parsec Finance',
-		descriptionKey: 'analytics.tools.parsec.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.parsec.description',
 		url: 'https://parsec.fi',
 		icon: BarChart3,
 		category: 'analytics',
@@ -245,7 +245,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'eigenexplorer',
 		name: 'EigenExplorer',
-		descriptionKey: 'analytics.tools.eigenexplorer.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.eigenexplorer.description',
 		url: 'https://eigenexplorer.com',
 		icon: Layers,
 		category: 'analytics',
@@ -257,7 +257,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'flipside',
 		name: 'Flipside Crypto',
-		descriptionKey: 'analytics.tools.flipside.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.flipside.description',
 		url: 'https://flipsidecrypto.xyz',
 		icon: BarChart3,
 		category: 'analytics',
@@ -267,7 +267,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'footprint',
 		name: 'Footprint Analytics',
-		descriptionKey: 'analytics.tools.footprint.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.footprint.description',
 		url: 'https://www.footprint.network',
 		icon: BarChart3,
 		category: 'analytics',
@@ -277,7 +277,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'defi-pulse',
 		name: 'DeFi Pulse',
-		descriptionKey: 'analytics.tools.defi_pulse.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.defi_pulse.description',
 		url: 'https://defipulse.com',
 		icon: Activity,
 		category: 'analytics',
@@ -289,7 +289,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'l2fees',
 		name: 'L2Fees',
-		descriptionKey: 'analytics.tools.l2fees.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.l2fees.description',
 		url: 'https://l2fees.info',
 		icon: BarChart3,
 		category: 'analytics',
@@ -299,7 +299,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'cryptofees',
 		name: 'CryptoFees',
-		descriptionKey: 'analytics.tools.cryptofees.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.cryptofees.description',
 		url: 'https://cryptofees.info',
 		icon: BarChart3,
 		category: 'analytics',
@@ -311,7 +311,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'watchers',
 		name: 'Watchers',
-		descriptionKey: 'analytics.tools.watchers.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.watchers.description',
 		url: 'https://watchers.pro',
 		icon: Eye,
 		category: 'analytics',
@@ -321,7 +321,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'cielo',
 		name: 'Cielo',
-		descriptionKey: 'analytics.tools.cielo.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.cielo.description',
 		url: 'https://cielo.finance',
 		icon: Eye,
 		category: 'analytics',
@@ -334,7 +334,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'zerion-api',
 		name: 'Zerion DeFi SDK',
-		descriptionKey: 'analytics.tools.zerion_api.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.zerion_api.description',
 		url: 'https://developers.zerion.io',
 		icon: BarChart3,
 		category: 'analytics',
@@ -344,7 +344,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'sim-farm',
 		name: 'DeFi Simulator',
-		descriptionKey: 'analytics.tools.sim_farm.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.sim_farm.description',
 		url: 'https://simfarm.co',
 		icon: Activity,
 		category: 'analytics',
@@ -354,7 +354,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'openbb',
 		name: 'OpenBB',
-		descriptionKey: 'analytics.tools.openbb.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.openbb.description',
 		url: 'https://openbb.co',
 		icon: BarChart3,
 		category: 'analytics',
@@ -366,7 +366,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'defillama_yields',
 		name: 'DefiLlama Yields',
-		descriptionKey: 'analytics.tools.defillama_yields.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.defillama_yields.description',
 		url: 'https://defillama.com/yields',
 		icon: BarChart3,
 		category: 'analytics',
@@ -377,7 +377,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'defilabs',
 		name: 'DeFi Labs',
-		descriptionKey: 'analytics.tools.defilabs.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.defilabs.description',
 		url: 'https://defilabs.gg',
 		icon: BarChart3,
 		category: 'analytics',
@@ -388,7 +388,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'chainanalytics',
 		name: 'Chain Analytics',
-		descriptionKey: 'analytics.tools.chainanalytics.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.chainanalytics.description',
 		url: 'https://chainanalytics.xyz',
 		icon: BarChart3,
 		category: 'analytics',
@@ -401,7 +401,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'the_graph',
 		name: 'The Graph',
-		descriptionKey: 'analytics.tools.the_graph.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.the_graph.description',
 		url: 'https://thegraph.com',
 		icon: BarChart3,
 		category: 'analytics',
@@ -412,7 +412,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'space_and_time',
 		name: 'Space and Time',
-		descriptionKey: 'analytics.tools.space_and_time.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.space_and_time.description',
 		url: 'https://spaceandtime.io',
 		icon: BarChart3,
 		category: 'analytics',
@@ -423,7 +423,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'allium',
 		name: 'Allium',
-		descriptionKey: 'analytics.tools.allium.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.allium.description',
 		url: 'https://allium.so',
 		icon: BarChart3,
 		category: 'analytics',
@@ -434,7 +434,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'sentio',
 		name: 'Sentio',
-		descriptionKey: 'analytics.tools.sentio.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.sentio.description',
 		url: 'https://sentio.xyz',
 		icon: BarChart3,
 		category: 'analytics',
@@ -447,7 +447,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'cookie3',
 		name: 'Cookie3',
-		descriptionKey: 'analytics.tools.cookie3.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.cookie3.description',
 		url: 'https://cookie3.com',
 		icon: BarChart3,
 		category: 'analytics',
@@ -457,7 +457,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'chainbeat',
 		name: 'ChainBeat',
-		descriptionKey: 'analytics.tools.chainbeat.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.chainbeat.description',
 		url: 'https://chainbeat.io',
 		icon: BarChart3,
 		category: 'analytics',
@@ -467,7 +467,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'bitquery',
 		name: 'Bitquery',
-		descriptionKey: 'analytics.tools.bitquery.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.bitquery.description',
 		url: 'https://bitquery.io',
 		icon: BarChart3,
 		category: 'analytics',
@@ -477,7 +477,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'whale-alert',
 		name: 'Whale Alert',
-		descriptionKey: 'analytics.tools.whale_alert.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.whale_alert.description',
 		url: 'https://whale-alert.io',
 		icon: BarChart3,
 		category: 'analytics',
@@ -487,7 +487,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'intotheblock',
 		name: 'IntoTheBlock',
-		descriptionKey: 'analytics.tools.intotheblock.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.intotheblock.description',
 		url: 'https://intotheblock.com',
 		icon: BarChart3,
 		category: 'analytics',
@@ -497,7 +497,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'laevitas',
 		name: 'Laevitas',
-		descriptionKey: 'analytics.tools.laevitas.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.laevitas.description',
 		url: 'https://laevitas.ch',
 		icon: LineChart,
 		category: 'analytics',
@@ -507,7 +507,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'kaiko',
 		name: 'Kaiko',
-		descriptionKey: 'analytics.tools.kaiko.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.kaiko.description',
 		url: 'https://kaiko.com',
 		icon: BarChart3,
 		category: 'analytics',
@@ -517,7 +517,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'amberdata',
 		name: 'Amberdata',
-		descriptionKey: 'analytics.tools.amberdata.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.amberdata.description',
 		url: 'https://amberdata.io',
 		icon: BarChart3,
 		category: 'analytics',
@@ -527,7 +527,7 @@ export const analyticsTools: ExternalTool[] = [
 	{
 		id: 'blockpour',
 		name: 'Blockpour',
-		descriptionKey: 'analytics.tools.blockpour.description',
+		descriptionKey: 'routes/apps/chain-tools/analytics.tools.blockpour.description',
 		url: 'https://blockpour.com',
 		icon: BarChart3,
 		category: 'analytics',

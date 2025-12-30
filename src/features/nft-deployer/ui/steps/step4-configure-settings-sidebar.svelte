@@ -13,39 +13,39 @@
 </script>
 
 <div class="step-sidebar">
-	<h3 class="sidebar-title">{i18n.t('nft-deployer.step4.sidebar.title')}</h3>
+	<h3 class="sidebar-title">{i18n.t('routes/apps/nft-deployer.step4.sidebar.title')}</h3>
 	<p class="sidebar-description">
-		{i18n.t('nft-deployer.step4.sidebar.description')}
+		{i18n.t('routes/apps/nft-deployer.step4.sidebar.description')}
 	</p>
 
 	<div class="settings-summary">
-		<h4 class="info-title">{i18n.t('nft-deployer.step4.sidebar.configured')}</h4>
+		<h4 class="info-title">{i18n.t('routes/apps/nft-deployer.step4.sidebar.configured')}</h4>
 		<div class="summary-list">
 			<div class="summary-item" class:active={settings.supply}>
 				<div class="indicator"></div>
-				<span>{i18n.t('nft-deployer.step4.sidebar.supply_limit')}</span>
+				<span>{i18n.t('routes/apps/nft-deployer.step4.sidebar.supply_limit')}</span>
 			</div>
 			<div class="summary-item" class:active={settings.pricing}>
 				<div class="indicator"></div>
-				<span>{i18n.t('nft-deployer.step4.sidebar.mint_price')}</span>
+				<span>{i18n.t('routes/apps/nft-deployer.step4.sidebar.mint_price')}</span>
 			</div>
 			<div class="summary-item" class:active={settings.royalty}>
 				<div class="indicator"></div>
-				<span>{i18n.t('nft-deployer.step4.sidebar.royalties')}</span>
+				<span>{i18n.t('routes/apps/nft-deployer.step4.sidebar.royalties')}</span>
 			</div>
 			<div class="summary-item" class:active={settings.features}>
 				<div class="indicator"></div>
-				<span>{i18n.t('nft-deployer.step4.sidebar.special_features')}</span>
+				<span>{i18n.t('routes/apps/nft-deployer.step4.sidebar.special_features')}</span>
 			</div>
 		</div>
 	</div>
 
 	<div class="info-section">
-		<h4 class="info-title">{i18n.t('nft-deployer.step4.sidebar.recommendations')}</h4>
+		<h4 class="info-title">{i18n.t('routes/apps/nft-deployer.step4.sidebar.recommendations')}</h4>
 		<ul class="info-list">
-			<li>{i18n.t('nft-deployer.step4.sidebar.rec1')}</li>
-			<li>{i18n.t('nft-deployer.step4.sidebar.rec2')}</li>
-			<li>{i18n.t('nft-deployer.step4.sidebar.rec3')}</li>
+			<li>{i18n.t('routes/apps/nft-deployer.step4.sidebar.rec1')}</li>
+			<li>{i18n.t('routes/apps/nft-deployer.step4.sidebar.rec2')}</li>
+			<li>{i18n.t('routes/apps/nft-deployer.step4.sidebar.rec3')}</li>
 		</ul>
 	</div>
 </div>

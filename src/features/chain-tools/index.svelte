@@ -147,8 +147,8 @@
 		<!-- <div class="header-icon">
 			<Link2 class="icon" />
 		</div> -->
-		<h1 class="page-title">{i18n.t('chain-tools.title')}</h1>
-		<p class="page-subtitle">{i18n.t('chain-tools.subtitle')}</p>
+		<h1 class="page-title">{i18n.t('routes/apps/chain-tools/chain-tools.title')}</h1>
+		<p class="page-subtitle">{i18n.t('routes/apps/chain-tools/chain-tools.subtitle')}</p>
 	</header>
 
 	<!-- Search and Filter -->
@@ -170,11 +170,13 @@
 			<div class="empty-icon">
 				<SearchX class="icon" />
 			</div>
-			<h3 class="empty-title">{i18n.t('chain-tools.empty_title')}</h3>
-			<p class="empty-description">{i18n.t('chain-tools.empty_description')}</p>
+			<h3 class="empty-title">{i18n.t('routes/apps/chain-tools/chain-tools.empty_title')}</h3>
+			<p class="empty-description">
+				{i18n.t('routes/apps/chain-tools/chain-tools.empty_description')}
+			</p>
 			{#if hasActiveFilters}
 				<button class="clear-filters-btn" onclick={clearFilters}>
-					{i18n.t('chain-tools.clear_filters')}
+					{i18n.t('routes/apps/chain-tools/chain-tools.clear_filters')}
 				</button>
 			{/if}
 		</div>
@@ -183,12 +185,12 @@
 	<!-- Footer Stats -->
 	<div class="page-footer">
 		<p class="stats">
-			{i18n.t('chain-tools.showing_count', {
+			{i18n.t('routes/apps/chain-tools/chain-tools.showing_count', {
 				count: filteredTools.length,
 				total: toolsData.length
 			})}
 		</p>
-		<p class="disclaimer">{i18n.t('chain-tools.disclaimer')}</p>
+		<p class="disclaimer">{i18n.t('routes/apps/chain-tools/chain-tools.disclaimer')}</p>
 	</div>
 </div>
 

@@ -14,8 +14,8 @@
 		meta: data.meta,
 		structuredData: data.structuredData,
 		steps: data.steps,
-		appTitle: i18n.t('ens-scanner.title'),
-		appDescription: i18n.t('ens-scanner.description'),
+		appTitle: i18n.t('routes/apps/ens-scanner.title'),
+		appDescription: i18n.t('routes/apps/ens-scanner.description'),
 		walletConnect: {
 			chains: [mainnet],
 			storageKey: 'biubiu-tools-ens-scanner'

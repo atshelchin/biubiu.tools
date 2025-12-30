@@ -56,15 +56,15 @@
 <div class="form-section">
 	<div class="wallet-list-header">
 		<div class="form-label">
-			{i18n.t('wallet-sweep.step4.content.wallet_list.title')}
+			{i18n.t('routes/apps/wallet-sweep.step4.content.wallet_list.title')}
 			<span class="wallet-count"
-				>{i18n.t('wallet-sweep.step4.content.wallet_list.count', {
+				>{i18n.t('routes/apps/wallet-sweep.step4.content.wallet_list.count', {
 					count: walletCount
 				})}</span
 			>
 			<!-- {#if hasScanned}
 				<span class="balance-badge"
-					>{i18n.t('wallet-sweep.step4.content.wallet_list.with_balance', {
+					>{i18n.t('routes/apps/wallet-sweep.step4.content.wallet_list.with_balance', {
 						count: walletsWithBalance
 					})}</span
 				>
@@ -73,7 +73,7 @@
 		<div class="wallet-actions">
 			{#if walletCount > 0}
 				<button class="btn-text-danger" onclick={handleClearAll}
-					>{i18n.t('wallet-sweep.step4.content.wallet_list.clear_all')}</button
+					>{i18n.t('routes/apps/wallet-sweep.step4.content.wallet_list.clear_all')}</button
 				>
 			{/if}
 		</div>
@@ -85,7 +85,7 @@
 		showPagination={true}
 		canRemove={true}
 		onRemove={handleRemoveWallet}
-		emptyMessage={i18n.t('wallet-sweep.step4.content.wallet_list.empty_message')}
+		emptyMessage={i18n.t('routes/apps/wallet-sweep.step4.content.wallet_list.empty_message')}
 		showDerivationPath={true}
 	/>
 </div>
@@ -93,12 +93,12 @@
 <!-- Confirm Dialogs -->
 <ConfirmDialog
 	bind:open={showRemoveDialog}
-	title={i18n.t('wallet-sweep.step4.content.dialogs.remove_wallet_title')}
-	message={i18n.t('wallet-sweep.step4.content.dialogs.remove_wallet_message', {
+	title={i18n.t('routes/apps/wallet-sweep.step4.content.dialogs.remove_wallet_title')}
+	message={i18n.t('routes/apps/wallet-sweep.step4.content.dialogs.remove_wallet_message', {
 		address: walletToRemove
 	})}
-	confirmText={i18n.t('wallet-sweep.step4.content.dialogs.remove_button')}
-	cancelText={i18n.t('wallet-sweep.step4.content.dialogs.cancel_button')}
+	confirmText={i18n.t('routes/apps/wallet-sweep.step4.content.dialogs.remove_button')}
+	cancelText={i18n.t('routes/apps/wallet-sweep.step4.content.dialogs.cancel_button')}
 	variant="danger"
 	requireLongPress={false}
 	onConfirm={confirmRemoveWallet}
@@ -107,13 +107,13 @@
 
 <ConfirmDialog
 	bind:open={showClearAllDialog}
-	title={i18n.t('wallet-sweep.step4.content.dialogs.clear_all_title')}
-	message={i18n.t('wallet-sweep.step4.content.dialogs.clear_all_message', {
+	title={i18n.t('routes/apps/wallet-sweep.step4.content.dialogs.clear_all_title')}
+	message={i18n.t('routes/apps/wallet-sweep.step4.content.dialogs.clear_all_message', {
 		count: walletCount.toLocaleString()
 	})}
-	confirmText={i18n.t('wallet-sweep.step4.content.dialogs.clear_all_button')}
-	confirmHint={i18n.t('wallet-sweep.step4.content.dialogs.long_press_hint')}
-	cancelText={i18n.t('wallet-sweep.step4.content.dialogs.cancel_button')}
+	confirmText={i18n.t('routes/apps/wallet-sweep.step4.content.dialogs.clear_all_button')}
+	confirmHint={i18n.t('routes/apps/wallet-sweep.step4.content.dialogs.long_press_hint')}
+	cancelText={i18n.t('routes/apps/wallet-sweep.step4.content.dialogs.cancel_button')}
 	variant="danger"
 	requireLongPress={true}
 	longPressDuration={3000}

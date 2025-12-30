@@ -43,7 +43,7 @@
 </script>
 
 <DependencyCheckContent
-	i18nPrefix="token-deployer"
+	i18nPrefix="routes/apps/token-deployer"
 	{checkDependencies}
 	onStateChange={handleStateChange}
 />

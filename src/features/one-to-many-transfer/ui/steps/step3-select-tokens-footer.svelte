@@ -18,7 +18,7 @@
 
 <StepFooter
 	canContinue={isReadyToContinue}
-	continueText={i18n.t('one-to-many-transfer.step3.footer.continue')}
+	continueText={i18n.t('routes/apps/one-to-many-transfer.step3.footer.continue')}
 	onContinue={handleContinue}
-	hint={i18n.t('one-to-many-transfer.step3.footer.hint')}
+	hint={i18n.t('routes/apps/one-to-many-transfer.step3.footer.hint')}
 />

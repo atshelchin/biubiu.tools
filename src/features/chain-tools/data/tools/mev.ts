@@ -26,7 +26,7 @@ export const mevTools: ExternalTool[] = [
 	{
 		id: 'flashbots-protect',
 		name: 'Flashbots Protect',
-		descriptionKey: 'mev.tools.flashbots_protect.description',
+		descriptionKey: 'routes/apps/chain-tools/mev.tools.flashbots_protect.description',
 		url: 'https://protect.flashbots.net',
 		icon: Shield,
 		category: 'mev',
@@ -37,7 +37,7 @@ export const mevTools: ExternalTool[] = [
 	{
 		id: 'mev-blocker',
 		name: 'MEV Blocker',
-		descriptionKey: 'mev.tools.mev_blocker.description',
+		descriptionKey: 'routes/apps/chain-tools/mev.tools.mev_blocker.description',
 		url: 'https://mevblocker.io',
 		icon: Lock,
 		category: 'mev',
@@ -48,7 +48,7 @@ export const mevTools: ExternalTool[] = [
 	{
 		id: 'cow-mev-protection',
 		name: 'CoW Protocol MEV Protection',
-		descriptionKey: 'mev.tools.cow_mev_protection.description',
+		descriptionKey: 'routes/apps/chain-tools/mev.tools.cow_mev_protection.description',
 		url: 'https://swap.cow.fi',
 		icon: Shield,
 		category: 'mev',
@@ -59,7 +59,7 @@ export const mevTools: ExternalTool[] = [
 	{
 		id: 'merkle-private-pool',
 		name: 'Merkle Private Pool',
-		descriptionKey: 'mev.tools.merkle_private_pool.description',
+		descriptionKey: 'routes/apps/chain-tools/mev.tools.merkle_private_pool.description',
 		url: 'https://merkle.io',
 		icon: Lock,
 		category: 'mev',
@@ -71,7 +71,7 @@ export const mevTools: ExternalTool[] = [
 	{
 		id: 'flashbots-builder',
 		name: 'Flashbots Builder',
-		descriptionKey: 'mev.tools.flashbots_builder.description',
+		descriptionKey: 'routes/apps/chain-tools/mev.tools.flashbots_builder.description',
 		url: 'https://flashbots.net',
 		icon: Rocket,
 		category: 'mev',
@@ -82,7 +82,7 @@ export const mevTools: ExternalTool[] = [
 	{
 		id: 'beaverbuild',
 		name: 'Beaverbuild',
-		descriptionKey: 'mev.tools.beaverbuild.description',
+		descriptionKey: 'routes/apps/chain-tools/mev.tools.beaverbuild.description',
 		url: 'https://beaverbuild.org',
 		icon: Rocket,
 		category: 'mev',
@@ -93,7 +93,7 @@ export const mevTools: ExternalTool[] = [
 	{
 		id: 'titan-builder',
 		name: 'Titan Builder',
-		descriptionKey: 'mev.tools.titan_builder.description',
+		descriptionKey: 'routes/apps/chain-tools/mev.tools.titan_builder.description',
 		url: 'https://titanbuilder.xyz',
 		icon: Rocket,
 		category: 'mev',
@@ -104,7 +104,7 @@ export const mevTools: ExternalTool[] = [
 	{
 		id: 'rsync-builder',
 		name: 'rsync Builder',
-		descriptionKey: 'mev.tools.rsync_builder.description',
+		descriptionKey: 'routes/apps/chain-tools/mev.tools.rsync_builder.description',
 		url: 'https://rsync.xyz',
 		icon: Rocket,
 		category: 'mev',
@@ -116,7 +116,7 @@ export const mevTools: ExternalTool[] = [
 	{
 		id: 'flashbots-transparency',
 		name: 'Flashbots Transparency Dashboard',
-		descriptionKey: 'mev.tools.flashbots_transparency.description',
+		descriptionKey: 'routes/apps/chain-tools/mev.tools.flashbots_transparency.description',
 		url: 'https://transparency.flashbots.net',
 		icon: BarChart3,
 		category: 'mev',
@@ -127,7 +127,7 @@ export const mevTools: ExternalTool[] = [
 	{
 		id: 'mev-explore',
 		name: 'MEV-Explore',
-		descriptionKey: 'mev.tools.mev_explore.description',
+		descriptionKey: 'routes/apps/chain-tools/mev.tools.mev_explore.description',
 		url: 'https://explore.flashbots.net',
 		icon: Search,
 		category: 'mev',
@@ -138,7 +138,7 @@ export const mevTools: ExternalTool[] = [
 	{
 		id: 'eigenphi-mev',
 		name: 'EigenPhi MEV',
-		descriptionKey: 'mev.tools.eigenphi_mev.description',
+		descriptionKey: 'routes/apps/chain-tools/mev.tools.eigenphi_mev.description',
 		url: 'https://eigenphi.io',
 		icon: Eye,
 		category: 'mev',
@@ -149,7 +149,7 @@ export const mevTools: ExternalTool[] = [
 	{
 		id: 'mev-watch',
 		name: 'MEV Watch',
-		descriptionKey: 'mev.tools.mev_watch.description',
+		descriptionKey: 'routes/apps/chain-tools/mev.tools.mev_watch.description',
 		url: 'https://mevwatch.info',
 		icon: Eye,
 		category: 'mev',
@@ -160,7 +160,7 @@ export const mevTools: ExternalTool[] = [
 	{
 		id: 'zeromev',
 		name: 'ZeroMEV',
-		descriptionKey: 'mev.tools.zeromev.description',
+		descriptionKey: 'routes/apps/chain-tools/mev.tools.zeromev.description',
 		url: 'https://zeromev.org',
 		icon: Activity,
 		category: 'mev',
@@ -171,7 +171,7 @@ export const mevTools: ExternalTool[] = [
 	{
 		id: 'relayscan',
 		name: 'Relayscan',
-		descriptionKey: 'mev.tools.relayscan.description',
+		descriptionKey: 'routes/apps/chain-tools/mev.tools.relayscan.description',
 		url: 'https://relayscan.io',
 		icon: Network,
 		category: 'mev',
@@ -182,7 +182,7 @@ export const mevTools: ExternalTool[] = [
 	{
 		id: 'mevboost-pics',
 		name: 'mevboost.pics',
-		descriptionKey: 'mev.tools.mevboost_pics.description',
+		descriptionKey: 'routes/apps/chain-tools/mev.tools.mevboost_pics.description',
 		url: 'https://mevboost.pics',
 		icon: BarChart3,
 		category: 'mev',
@@ -194,7 +194,7 @@ export const mevTools: ExternalTool[] = [
 	{
 		id: 'mev-boost',
 		name: 'MEV-Boost',
-		descriptionKey: 'mev.tools.mev_boost.description',
+		descriptionKey: 'routes/apps/chain-tools/mev.tools.mev_boost.description',
 		url: 'https://boost.flashbots.net',
 		icon: Zap,
 		category: 'mev',
@@ -205,7 +205,7 @@ export const mevTools: ExternalTool[] = [
 	{
 		id: 'suave',
 		name: 'SUAVE',
-		descriptionKey: 'mev.tools.suave.description',
+		descriptionKey: 'routes/apps/chain-tools/mev.tools.suave.description',
 		url: 'https://suave.flashbots.net',
 		icon: Network,
 		category: 'mev',
@@ -216,7 +216,7 @@ export const mevTools: ExternalTool[] = [
 	{
 		id: 'mev-share',
 		name: 'MEV-Share',
-		descriptionKey: 'mev.tools.mev_share.description',
+		descriptionKey: 'routes/apps/chain-tools/mev.tools.mev_share.description',
 		url: 'https://docs.flashbots.net/flashbots-mev-share/overview',
 		icon: Zap,
 		category: 'mev',
@@ -228,7 +228,7 @@ export const mevTools: ExternalTool[] = [
 	{
 		id: 'jito-mev',
 		name: 'Jito MEV',
-		descriptionKey: 'mev.tools.jito_mev.description',
+		descriptionKey: 'routes/apps/chain-tools/mev.tools.jito_mev.description',
 		url: 'https://jito.wtf',
 		icon: Zap,
 		category: 'mev',
@@ -239,7 +239,7 @@ export const mevTools: ExternalTool[] = [
 	{
 		id: 'jito-bundles',
 		name: 'Jito Bundles',
-		descriptionKey: 'mev.tools.jito_bundles.description',
+		descriptionKey: 'routes/apps/chain-tools/mev.tools.jito_bundles.description',
 		url: 'https://jito-labs.gitbook.io/mev',
 		icon: Code,
 		category: 'mev',

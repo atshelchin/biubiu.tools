@@ -136,15 +136,15 @@
 
 <StepContent>
 	<StepContentHeader
-		title={i18n.t('contract-deployer.step3.content.title')}
-		description={i18n.t('contract-deployer.step3.content.description')}
+		title={i18n.t('routes/apps/contract-deployer.step3.content.title')}
+		description={i18n.t('routes/apps/contract-deployer.step3.content.description')}
 	/>
 
 	<div class="deploy-form">
 		<!-- Bytecode Input -->
 		<div class="form-group">
 			<label for="bytecode">
-				{i18n.t('contract-deployer.step3.content.bytecode_label')}
+				{i18n.t('routes/apps/contract-deployer.step3.content.bytecode_label')}
 				<span class="required">*</span>
 			</label>
 			<textarea
@@ -153,13 +153,13 @@
 				placeholder="0x608060405234801561001057600080fd5b5060405161..."
 				rows={4}
 			></textarea>
-			<p class="help-text">{i18n.t('contract-deployer.step3.content.bytecode_help')}</p>
+			<p class="help-text">{i18n.t('routes/apps/contract-deployer.step3.content.bytecode_help')}</p>
 		</div>
 
 		<!-- ABI Input -->
 		<div class="form-group">
 			<label for="abi">
-				{i18n.t('contract-deployer.step3.content.abi_label')}
+				{i18n.t('routes/apps/contract-deployer.step3.content.abi_label')}
 				<span class="required">*</span>
 			</label>
 			<textarea
@@ -168,13 +168,13 @@
 				placeholder={'[{"inputs":[{"name":"_name","type":"string"}],"stateMutability":"nonpayable","type":"constructor"}]'}
 				rows={6}
 			></textarea>
-			<p class="help-text">{i18n.t('contract-deployer.step3.content.abi_help')}</p>
+			<p class="help-text">{i18n.t('routes/apps/contract-deployer.step3.content.abi_help')}</p>
 		</div>
 
 		<!-- Constructor Args Input -->
 		<div class="form-group">
 			<label for="constructor-args">
-				{i18n.t('contract-deployer.step3.content.constructor_args_label')}
+				{i18n.t('routes/apps/contract-deployer.step3.content.constructor_args_label')}
 			</label>
 			<textarea
 				id="constructor-args"
@@ -183,14 +183,14 @@
 				rows={3}
 			></textarea>
 			<p class="help-text">
-				{i18n.t('contract-deployer.step3.content.constructor_args_help')}
+				{i18n.t('routes/apps/contract-deployer.step3.content.constructor_args_help')}
 			</p>
 		</div>
 
 		<!-- Salt Input -->
 		<div class="form-group">
 			<label for="salt">
-				{i18n.t('contract-deployer.step3.content.salt_label')}
+				{i18n.t('routes/apps/contract-deployer.step3.content.salt_label')}
 				<span class="required">*</span>
 			</label>
 			<div class="salt-input-group">
@@ -201,16 +201,16 @@
 					placeholder="0x0000000000000000000000000000000000000000000000000000000000000000"
 				/>
 				<button type="button" class="random-button" onclick={generateRandomSalt}>
-					{i18n.t('contract-deployer.step3.content.generate_random')}
+					{i18n.t('routes/apps/contract-deployer.step3.content.generate_random')}
 				</button>
 			</div>
-			<p class="help-text">{i18n.t('contract-deployer.step3.content.salt_help')}</p>
+			<p class="help-text">{i18n.t('routes/apps/contract-deployer.step3.content.salt_help')}</p>
 		</div>
 
 		<!-- Predicted Address -->
 		{#if predictedAddress}
 			<div class="predicted-address">
-				<h4>{i18n.t('contract-deployer.step3.content.predicted_address')}</h4>
+				<h4>{i18n.t('routes/apps/contract-deployer.step3.content.predicted_address')}</h4>
 				<div class="address-display">
 					<code>{predictedAddress}</code>
 					<button
@@ -243,18 +243,18 @@
 		>
 			{#if isDeploying}
 				<Loader2 size={20} class="spin" />
-				{i18n.t('contract-deployer.step3.content.deploying')}
+				{i18n.t('routes/apps/contract-deployer.step3.content.deploying')}
 			{:else}
-				{i18n.t('contract-deployer.step3.content.deploy_button')}
+				{i18n.t('routes/apps/contract-deployer.step3.content.deploy_button')}
 			{/if}
 		</button>
 
 		<!-- Deployment Result -->
 		{#if deploymentResult}
 			<div class="success-box">
-				<h4>{i18n.t('contract-deployer.step3.content.deployment_success')}</h4>
+				<h4>{i18n.t('routes/apps/contract-deployer.step3.content.deployment_success')}</h4>
 				<div class="result-item">
-					<span>{i18n.t('contract-deployer.step3.content.contract_address')}:</span>
+					<span>{i18n.t('routes/apps/contract-deployer.step3.content.contract_address')}:</span>
 					<div class="address-display">
 						<code>{deploymentResult.address}</code>
 						<button
@@ -277,7 +277,7 @@
 					</div>
 				</div>
 				<div class="result-item">
-					<span>{i18n.t('contract-deployer.step3.content.transaction_hash')}:</span>
+					<span>{i18n.t('routes/apps/contract-deployer.step3.content.transaction_hash')}:</span>
 					<div class="address-display">
 						<code>{deploymentResult.txHash}</code>
 						<button
@@ -304,7 +304,7 @@
 
 		{#if deploymentError}
 			<div class="error-box">
-				<h4>{i18n.t('contract-deployer.step3.content.deployment_error')}</h4>
+				<h4>{i18n.t('routes/apps/contract-deployer.step3.content.deployment_error')}</h4>
 				<p>{deploymentError}</p>
 			</div>
 		{/if}

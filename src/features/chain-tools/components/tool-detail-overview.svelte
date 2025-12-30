@@ -24,7 +24,9 @@
 		<h2 class="section-title">
 			<BookOpen class="section-icon" />
 			<span
-				>{i18n.t('chain-tools.about' as keyof TranslationKeys, { defaultValue: 'About' })}
+				>{i18n.t('routes/apps/chain-tools/chain-tools.about' as keyof TranslationKeys, {
+					defaultValue: 'About'
+				})}
 				{toolId.charAt(0).toUpperCase() + toolId.slice(1)}</span
 			>
 		</h2>

@@ -55,7 +55,7 @@
 	<div class="success-banner">
 		<CheckCircle2 size={20} />
 		<span>
-			{i18n.t('token-balance-scanner.step5.completed.banner', {
+			{i18n.t('routes/apps/token-balance-scanner.step5.completed.banner', {
 				count: results.length
 			}) || `Scan Complete - ${results.length} wallets scanned`}
 		</span>
@@ -64,7 +64,7 @@
 	<!-- Token Totals -->
 	{#if summary && summary.tokenTotals.length > 0}
 		<div class="totals-section">
-			<h3>{i18n.t('token-balance-scanner.step5.totals.title') || 'Total Holdings'}</h3>
+			<h3>{i18n.t('routes/apps/token-balance-scanner.step5.totals.title') || 'Total Holdings'}</h3>
 			<div class="totals-grid">
 				{#each summary.tokenTotals as tokenTotal (tokenTotal.tokenId)}
 					<div class="total-card">
@@ -72,7 +72,8 @@
 							<span class="token-symbol">{tokenTotal.symbol}</span>
 							<span class="token-wallets">
 								{tokenTotal.walletsWithBalance}
-								{i18n.t('token-balance-scanner.step5.totals.wallets_short') || 'wallets'}
+								{i18n.t('routes/apps/token-balance-scanner.step5.totals.wallets_short') ||
+									'wallets'}
 							</span>
 						</div>
 						<div class="total-amount">{tokenTotal.formattedTotal}</div>

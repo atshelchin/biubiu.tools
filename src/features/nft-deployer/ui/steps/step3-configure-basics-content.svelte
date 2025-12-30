@@ -22,27 +22,27 @@
 
 <div class="step-content">
 	<StepContentHeader
-		title={i18n.t('nft-deployer.step3.content.title')}
-		description={i18n.t('nft-deployer.step3.content.description')}
+		title={i18n.t('routes/apps/nft-deployer.step3.content.title')}
+		description={i18n.t('routes/apps/nft-deployer.step3.content.description')}
 	/>
 
 	<div class="form-container">
 		<!-- Collection Name -->
 		<div class="form-field">
 			<label for="nft-name" class="field-label">
-				{i18n.t('nft-deployer.step3.content.name_label')}
+				{i18n.t('routes/apps/nft-deployer.step3.content.name_label')}
 				<span class="required">*</span>
 			</label>
 			<input
 				id="nft-name"
 				type="text"
 				class="field-input"
-				placeholder={i18n.t('nft-deployer.step3.content.name_placeholder')}
+				placeholder={i18n.t('routes/apps/nft-deployer.step3.content.name_placeholder')}
 				bind:value={step3State.name}
 				maxlength={NAME_MAX}
 			/>
 			<div class="field-hint">
-				<span>{i18n.t('nft-deployer.step3.content.name_hint')}</span>
+				<span>{i18n.t('routes/apps/nft-deployer.step3.content.name_hint')}</span>
 				<span class="char-count">{nameCharsLeft} {i18n.t('common.chars_left')}</span>
 			</div>
 		</div>
@@ -50,20 +50,20 @@
 		<!-- Symbol -->
 		<div class="form-field">
 			<label for="nft-symbol" class="field-label">
-				{i18n.t('nft-deployer.step3.content.symbol_label')}
+				{i18n.t('routes/apps/nft-deployer.step3.content.symbol_label')}
 				<span class="required">*</span>
 			</label>
 			<input
 				id="nft-symbol"
 				type="text"
 				class="field-input symbol-input"
-				placeholder={i18n.t('nft-deployer.step3.content.symbol_placeholder')}
+				placeholder={i18n.t('routes/apps/nft-deployer.step3.content.symbol_placeholder')}
 				value={step3State.symbol}
 				oninput={handleSymbolInput}
 				maxlength={SYMBOL_MAX}
 			/>
 			<div class="field-hint">
-				<span>{i18n.t('nft-deployer.step3.content.symbol_hint')}</span>
+				<span>{i18n.t('routes/apps/nft-deployer.step3.content.symbol_hint')}</span>
 				<span class="char-count">{symbolCharsLeft} {i18n.t('common.chars_left')}</span>
 			</div>
 		</div>
@@ -71,19 +71,19 @@
 		<!-- Description -->
 		<div class="form-field">
 			<label for="nft-description" class="field-label">
-				{i18n.t('nft-deployer.step3.content.description_label')}
+				{i18n.t('routes/apps/nft-deployer.step3.content.description_label')}
 				<span class="required">*</span>
 			</label>
 			<textarea
 				id="nft-description"
 				class="field-textarea"
-				placeholder={i18n.t('nft-deployer.step3.content.description_placeholder')}
+				placeholder={i18n.t('routes/apps/nft-deployer.step3.content.description_placeholder')}
 				bind:value={step3State.description}
 				maxlength={DESCRIPTION_MAX}
 				rows="4"
 			></textarea>
 			<div class="field-hint">
-				<span>{i18n.t('nft-deployer.step3.content.description_hint')}</span>
+				<span>{i18n.t('routes/apps/nft-deployer.step3.content.description_hint')}</span>
 				<span class="char-count">{descriptionCharsLeft} {i18n.t('common.chars_left')}</span>
 			</div>
 		</div>
@@ -91,25 +91,25 @@
 		<!-- Base URI (Optional) -->
 		<div class="form-field">
 			<label for="nft-base-uri" class="field-label">
-				{i18n.t('nft-deployer.step3.content.base_uri_label')}
+				{i18n.t('routes/apps/nft-deployer.step3.content.base_uri_label')}
 				<span class="optional">{i18n.t('common.optional')}</span>
 			</label>
 			<input
 				id="nft-base-uri"
 				type="url"
 				class="field-input"
-				placeholder={i18n.t('nft-deployer.step3.content.base_uri_placeholder')}
+				placeholder={i18n.t('routes/apps/nft-deployer.step3.content.base_uri_placeholder')}
 				bind:value={step3State.baseUri}
 			/>
 			<div class="field-hint">
-				{i18n.t('nft-deployer.step3.content.base_uri_hint')}
+				{i18n.t('routes/apps/nft-deployer.step3.content.base_uri_hint')}
 			</div>
 		</div>
 
 		<!-- Preview Card -->
 		{#if step3State.isValid()}
 			<div class="preview-card">
-				<h4 class="preview-title">{i18n.t('nft-deployer.step3.content.preview')}</h4>
+				<h4 class="preview-title">{i18n.t('routes/apps/nft-deployer.step3.content.preview')}</h4>
 				<div class="preview-content">
 					<div class="preview-row">
 						<span class="preview-label">{i18n.t('common.name')}:</span>

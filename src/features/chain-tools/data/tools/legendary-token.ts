@@ -25,7 +25,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-bnb',
 		name: 'BNB (Binance)',
-		descriptionKey: 'legendary_token.tools.legend_bnb.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_bnb.description',
 		url: 'https://www.binance.com/en/bnb',
 		icon: Crown,
 		category: 'legendary-token',
@@ -36,7 +36,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-sol',
 		name: 'SOL (Solana)',
-		descriptionKey: 'legendary_token.tools.legend_sol.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_sol.description',
 		url: 'https://solana.com',
 		icon: Rocket,
 		category: 'legendary-token',
@@ -47,7 +47,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-matic',
 		name: 'MATIC/POL (Polygon)',
-		descriptionKey: 'legendary_token.tools.legend_matic.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_matic.description',
 		url: 'https://polygon.technology',
 		icon: Gem,
 		category: 'legendary-token',
@@ -58,7 +58,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-avax',
 		name: 'AVAX (Avalanche)',
-		descriptionKey: 'legendary_token.tools.legend_avax.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_avax.description',
 		url: 'https://www.avax.network',
 		icon: TrendingUp,
 		category: 'legendary-token',
@@ -69,7 +69,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-link',
 		name: 'LINK (Chainlink)',
-		descriptionKey: 'legendary_token.tools.legend_link.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_link.description',
 		url: 'https://chain.link',
 		icon: Star,
 		category: 'legendary-token',
@@ -80,7 +80,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-uni',
 		name: 'UNI (Uniswap)',
-		descriptionKey: 'legendary_token.tools.legend_uni.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_uni.description',
 		url: 'https://uniswap.org',
 		icon: Sparkles,
 		category: 'legendary-token',
@@ -91,7 +91,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-aave',
 		name: 'AAVE (Aave)',
-		descriptionKey: 'legendary_token.tools.legend_aave.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_aave.description',
 		url: 'https://aave.com',
 		icon: TrendingUp,
 		category: 'legendary-token',
@@ -102,7 +102,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-ftm',
 		name: 'FTM (Fantom)',
-		descriptionKey: 'legendary_token.tools.legend_ftm.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_ftm.description',
 		url: 'https://fantom.foundation',
 		icon: Flame,
 		category: 'legendary-token',
@@ -113,7 +113,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-atom',
 		name: 'ATOM (Cosmos)',
-		descriptionKey: 'legendary_token.tools.legend_atom.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_atom.description',
 		url: 'https://cosmos.network',
 		icon: Star,
 		category: 'legendary-token',
@@ -124,7 +124,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-near',
 		name: 'NEAR (NEAR Protocol)',
-		descriptionKey: 'legendary_token.tools.legend_near.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_near.description',
 		url: 'https://near.org',
 		icon: Gem,
 		category: 'legendary-token',
@@ -135,7 +135,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-inj',
 		name: 'INJ (Injective)',
-		descriptionKey: 'legendary_token.tools.legend_inj.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_inj.description',
 		url: 'https://injective.com',
 		icon: Rocket,
 		category: 'legendary-token',
@@ -146,7 +146,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-ton',
 		name: 'TON (Toncoin)',
-		descriptionKey: 'legendary_token.tools.legend_ton.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_ton.description',
 		url: 'https://ton.org',
 		icon: Zap,
 		category: 'legendary-token',
@@ -157,7 +157,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-sui',
 		name: 'SUI (Sui)',
-		descriptionKey: 'legendary_token.tools.legend_sui.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_sui.description',
 		url: 'https://sui.io',
 		icon: Star,
 		category: 'legendary-token',
@@ -168,7 +168,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-apt',
 		name: 'APT (Aptos)',
-		descriptionKey: 'legendary_token.tools.legend_apt.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_apt.description',
 		url: 'https://aptosfoundation.org',
 		icon: Gem,
 		category: 'legendary-token',
@@ -179,7 +179,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-sei',
 		name: 'SEI (Sei)',
-		descriptionKey: 'legendary_token.tools.legend_sei.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_sei.description',
 		url: 'https://sei.io',
 		icon: Zap,
 		category: 'legendary-token',
@@ -191,7 +191,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-mkr',
 		name: 'MKR (MakerDAO)',
-		descriptionKey: 'legendary_token.tools.legend_mkr.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_mkr.description',
 		url: 'https://makerdao.com',
 		icon: Award,
 		category: 'legendary-token',
@@ -202,7 +202,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-snx',
 		name: 'SNX (Synthetix)',
-		descriptionKey: 'legendary_token.tools.legend_snx.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_snx.description',
 		url: 'https://synthetix.io',
 		icon: TrendingUp,
 		category: 'legendary-token',
@@ -213,7 +213,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-crv',
 		name: 'CRV (Curve)',
-		descriptionKey: 'legendary_token.tools.legend_crv.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_crv.description',
 		url: 'https://curve.fi',
 		icon: Star,
 		category: 'legendary-token',
@@ -224,7 +224,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-gmx',
 		name: 'GMX (GMX)',
-		descriptionKey: 'legendary_token.tools.legend_gmx.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_gmx.description',
 		url: 'https://gmx.io',
 		icon: Rocket,
 		category: 'legendary-token',
@@ -235,7 +235,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-pendle',
 		name: 'PENDLE (Pendle)',
-		descriptionKey: 'legendary_token.tools.legend_pendle.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_pendle.description',
 		url: 'https://pendle.finance',
 		icon: Flame,
 		category: 'legendary-token',
@@ -246,7 +246,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-rune',
 		name: 'RUNE (THORChain)',
-		descriptionKey: 'legendary_token.tools.legend_rune.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_rune.description',
 		url: 'https://thorchain.org',
 		icon: Zap,
 		category: 'legendary-token',
@@ -257,7 +257,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-dydx',
 		name: 'DYDX (dYdX)',
-		descriptionKey: 'legendary_token.tools.legend_dydx.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_dydx.description',
 		url: 'https://dydx.exchange',
 		icon: TrendingUp,
 		category: 'legendary-token',
@@ -269,7 +269,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-shib',
 		name: 'SHIB (Shiba Inu)',
-		descriptionKey: 'legendary_token.tools.legend_shib.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_shib.description',
 		url: 'https://shibatoken.com',
 		icon: Flame,
 		category: 'legendary-token',
@@ -280,7 +280,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-pepe',
 		name: 'PEPE',
-		descriptionKey: 'legendary_token.tools.legend_pepe.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_pepe.description',
 		url: 'https://www.pepe.vip',
 		icon: Sparkles,
 		category: 'legendary-token',
@@ -291,7 +291,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-bonk',
 		name: 'BONK',
-		descriptionKey: 'legendary_token.tools.legend_bonk.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_bonk.description',
 		url: 'https://bonkcoin.com',
 		icon: Rocket,
 		category: 'legendary-token',
@@ -302,7 +302,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-wif',
 		name: 'WIF (dogwifhat)',
-		descriptionKey: 'legendary_token.tools.legend_wif.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_wif.description',
 		url: 'https://dogwifcoin.org',
 		icon: Sparkles,
 		category: 'legendary-token',
@@ -313,7 +313,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-floki',
 		name: 'FLOKI',
-		descriptionKey: 'legendary_token.tools.legend_floki.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_floki.description',
 		url: 'https://floki.com',
 		icon: Flame,
 		category: 'legendary-token',
@@ -325,7 +325,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-arb',
 		name: 'ARB (Arbitrum)',
-		descriptionKey: 'legendary_token.tools.legend_arb.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_arb.description',
 		url: 'https://arbitrum.io',
 		icon: Gem,
 		category: 'legendary-token',
@@ -336,7 +336,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-op',
 		name: 'OP (Optimism)',
-		descriptionKey: 'legendary_token.tools.legend_op.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_op.description',
 		url: 'https://optimism.io',
 		icon: Star,
 		category: 'legendary-token',
@@ -347,7 +347,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-stx',
 		name: 'STX (Stacks)',
-		descriptionKey: 'legendary_token.tools.legend_stx.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_stx.description',
 		url: 'https://stacks.co',
 		icon: Zap,
 		category: 'legendary-token',
@@ -358,7 +358,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-tia',
 		name: 'TIA (Celestia)',
-		descriptionKey: 'legendary_token.tools.legend_tia.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_tia.description',
 		url: 'https://celestia.org',
 		icon: Star,
 		category: 'legendary-token',
@@ -369,7 +369,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-jup',
 		name: 'JUP (Jupiter)',
-		descriptionKey: 'legendary_token.tools.legend_jup.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_jup.description',
 		url: 'https://jup.ag',
 		icon: Rocket,
 		category: 'legendary-token',
@@ -380,7 +380,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-pyth',
 		name: 'PYTH (Pyth Network)',
-		descriptionKey: 'legendary_token.tools.legend_pyth.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_pyth.description',
 		url: 'https://pyth.network',
 		icon: Target,
 		category: 'legendary-token',
@@ -391,7 +391,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-render',
 		name: 'RNDR (Render)',
-		descriptionKey: 'legendary_token.tools.legend_render.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_render.description',
 		url: 'https://rendernetwork.com',
 		icon: Sparkles,
 		category: 'legendary-token',
@@ -402,7 +402,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-fet',
 		name: 'FET (Fetch.ai)',
-		descriptionKey: 'legendary_token.tools.legend_fet.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_fet.description',
 		url: 'https://fetch.ai',
 		icon: Zap,
 		category: 'legendary-token',
@@ -414,7 +414,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-axs',
 		name: 'AXS (Axie Infinity)',
-		descriptionKey: 'legendary_token.tools.legend_axs.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_axs.description',
 		url: 'https://axieinfinity.com',
 		icon: Flame,
 		category: 'legendary-token',
@@ -425,7 +425,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-sand',
 		name: 'SAND (Sandbox)',
-		descriptionKey: 'legendary_token.tools.legend_sand.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_sand.description',
 		url: 'https://sandbox.game',
 		icon: Star,
 		category: 'legendary-token',
@@ -436,7 +436,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-mana',
 		name: 'MANA (Decentraland)',
-		descriptionKey: 'legendary_token.tools.legend_mana.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_mana.description',
 		url: 'https://decentraland.org',
 		icon: Gem,
 		category: 'legendary-token',
@@ -447,7 +447,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-gala',
 		name: 'GALA (Gala Games)',
-		descriptionKey: 'legendary_token.tools.legend_gala.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_gala.description',
 		url: 'https://gala.games',
 		icon: Sparkles,
 		category: 'legendary-token',
@@ -458,7 +458,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-imx',
 		name: 'IMX (Immutable)',
-		descriptionKey: 'legendary_token.tools.legend_imx.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_imx.description',
 		url: 'https://immutable.com',
 		icon: Rocket,
 		category: 'legendary-token',
@@ -469,7 +469,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'legend-blur',
 		name: 'BLUR (Blur)',
-		descriptionKey: 'legendary_token.tools.legend_blur.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.legend_blur.description',
 		url: 'https://blur.io',
 		icon: Flame,
 		category: 'legendary-token',
@@ -481,7 +481,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'coingecko-gainers',
 		name: 'CoinGecko Top Gainers',
-		descriptionKey: 'legendary_token.tools.coingecko_gainers.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.coingecko_gainers.description',
 		url: 'https://www.coingecko.com/en/crypto-gainers-losers',
 		icon: TrendingUp,
 		category: 'legendary-token',
@@ -491,7 +491,8 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'dexscreener-trending',
 		name: 'DEXScreener Trending',
-		descriptionKey: 'legendary_token.tools.dexscreener_trending.description',
+		descriptionKey:
+			'routes/apps/chain-tools/legendary_token.tools.dexscreener_trending.description',
 		url: 'https://dexscreener.com/trending',
 		icon: Flame,
 		category: 'legendary-token',
@@ -501,7 +502,7 @@ export const legendaryTokenTools: ExternalTool[] = [
 	{
 		id: 'messari-screener',
 		name: 'Messari Screener',
-		descriptionKey: 'legendary_token.tools.messari_screener.description',
+		descriptionKey: 'routes/apps/chain-tools/legendary_token.tools.messari_screener.description',
 		url: 'https://messari.io/screener',
 		icon: Target,
 		category: 'legendary-token',

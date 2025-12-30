@@ -104,17 +104,19 @@
 
 <div class="step-content">
 	<StepContentHeader
-		title={i18n.t('nft-deployer.step5.content.title')}
-		description={i18n.t('nft-deployer.step5.content.description')}
+		title={i18n.t('routes/apps/nft-deployer.step5.content.title')}
+		description={i18n.t('routes/apps/nft-deployer.step5.content.description')}
 	/>
 
 	{#if deploymentState.isCompleted && deploymentState.result?.success}
 		<!-- Success State -->
 		<div class="success-card">
 			<div class="success-icon">✓</div>
-			<h3 class="success-title">{i18n.t('nft-deployer.step5.content.success_title')}</h3>
+			<h3 class="success-title">
+				{i18n.t('routes/apps/nft-deployer.step5.content.success_title')}
+			</h3>
 			<p class="success-message">
-				{i18n.t('nft-deployer.step5.content.success_message')}
+				{i18n.t('routes/apps/nft-deployer.step5.content.success_message')}
 			</p>
 
 			<div class="result-details">
@@ -142,7 +144,9 @@
 			<!-- Standard -->
 			{#if standard}
 				<div class="review-section">
-					<h3 class="section-title">{i18n.t('nft-deployer.step5.content.nft_standard')}</h3>
+					<h3 class="section-title">
+						{i18n.t('routes/apps/nft-deployer.step5.content.nft_standard')}
+					</h3>
 					<div class="review-card">
 						<div class="review-item">
 							<span class="item-label">{i18n.t('common.standard')}:</span>
@@ -158,7 +162,9 @@
 
 			<!-- Basic Configuration -->
 			<div class="review-section">
-				<h3 class="section-title">{i18n.t('nft-deployer.step5.content.basic_config')}</h3>
+				<h3 class="section-title">
+					{i18n.t('routes/apps/nft-deployer.step5.content.basic_config')}
+				</h3>
 				<div class="review-card">
 					<div class="review-item">
 						<span class="item-label">{i18n.t('common.name')}:</span>
@@ -184,7 +190,7 @@
 			<!-- Advanced Settings -->
 			<div class="review-section">
 				<h3 class="section-title">
-					{i18n.t('nft-deployer.step5.content.advanced_settings')}
+					{i18n.t('routes/apps/nft-deployer.step5.content.advanced_settings')}
 				</h3>
 				<div class="review-card">
 					{#if advancedSettings.maxSupply}
@@ -241,7 +247,7 @@
 						<polyline points="3.27 6.96 12 12.01 20.73 6.96" />
 						<line x1="12" y1="22.08" x2="12" y2="12" />
 					</svg>
-					<span>{i18n.t('nft-deployer.step5.content.deploy_button')}</span>
+					<span>{i18n.t('routes/apps/nft-deployer.step5.content.deploy_button')}</span>
 				</button>
 			{/if}
 		</div>

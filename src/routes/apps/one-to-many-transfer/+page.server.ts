@@ -18,53 +18,56 @@ export const load: PageServerLoad = (event) => {
 	// Define steps with both SEO text and UI description using i18n
 	const steps: HowToStepData[] = [
 		{
-			name: t('one-to-many-transfer.seo.step_1_name'),
-			text: t('one-to-many-transfer.seo.step_1_text'),
-			description: t('one-to-many-transfer.seo.step_1_description')
+			name: t('routes/apps/one-to-many-transfer.seo.step_1_name'),
+			text: t('routes/apps/one-to-many-transfer.seo.step_1_text'),
+			description: t('routes/apps/one-to-many-transfer.seo.step_1_description')
 		},
 		{
-			name: t('one-to-many-transfer.seo.step_2_name'),
-			text: t('one-to-many-transfer.seo.step_2_text'),
-			description: t('one-to-many-transfer.seo.step_2_description')
+			name: t('routes/apps/one-to-many-transfer.seo.step_2_name'),
+			text: t('routes/apps/one-to-many-transfer.seo.step_2_text'),
+			description: t('routes/apps/one-to-many-transfer.seo.step_2_description')
 		},
 		{
-			name: t('one-to-many-transfer.seo.step_3_name'),
-			text: t('one-to-many-transfer.seo.step_3_text'),
-			description: t('one-to-many-transfer.seo.step_3_description')
+			name: t('routes/apps/one-to-many-transfer.seo.step_3_name'),
+			text: t('routes/apps/one-to-many-transfer.seo.step_3_text'),
+			description: t('routes/apps/one-to-many-transfer.seo.step_3_description')
 		},
 		{
-			name: t('one-to-many-transfer.seo.step_4_name'),
-			text: t('one-to-many-transfer.seo.step_4_text'),
-			description: t('one-to-many-transfer.seo.step_4_description')
+			name: t('routes/apps/one-to-many-transfer.seo.step_4_name'),
+			text: t('routes/apps/one-to-many-transfer.seo.step_4_text'),
+			description: t('routes/apps/one-to-many-transfer.seo.step_4_description')
 		},
 		{
-			name: t('one-to-many-transfer.seo.step_5_name'),
-			text: t('one-to-many-transfer.seo.step_5_text'),
-			description: t('one-to-many-transfer.seo.step_5_description')
+			name: t('routes/apps/one-to-many-transfer.seo.step_5_name'),
+			text: t('routes/apps/one-to-many-transfer.seo.step_5_text'),
+			description: t('routes/apps/one-to-many-transfer.seo.step_5_description')
 		}
 	];
 
 	// Generate structured data from steps config
 	const webAppData = createWebAppData({
-		name: t('one-to-many-transfer.seo.webapp_name'),
-		description: t('one-to-many-transfer.seo.webapp_description'),
+		name: t('routes/apps/one-to-many-transfer.seo.webapp_name'),
+		description: t('routes/apps/one-to-many-transfer.seo.webapp_description'),
 		canonical,
 		features: [
-			t('one-to-many-transfer.seo.feature_1'),
-			t('one-to-many-transfer.seo.feature_2'),
-			t('one-to-many-transfer.seo.feature_3'),
-			t('one-to-many-transfer.seo.feature_4'),
-			t('one-to-many-transfer.seo.feature_5')
+			t('routes/apps/one-to-many-transfer.seo.feature_1'),
+			t('routes/apps/one-to-many-transfer.seo.feature_2'),
+			t('routes/apps/one-to-many-transfer.seo.feature_3'),
+			t('routes/apps/one-to-many-transfer.seo.feature_4'),
+			t('routes/apps/one-to-many-transfer.seo.feature_5')
 		]
 	});
 
 	const howToData = createHowToData({
-		name: t('one-to-many-transfer.seo.howto_name'),
-		description: t('one-to-many-transfer.seo.howto_description'),
+		name: t('routes/apps/one-to-many-transfer.seo.howto_name'),
+		description: t('routes/apps/one-to-many-transfer.seo.howto_description'),
 		canonical,
 		image,
 		steps,
-		tools: [t('one-to-many-transfer.seo.howto_tool_1'), t('one-to-many-transfer.seo.howto_tool_2')]
+		tools: [
+			t('routes/apps/one-to-many-transfer.seo.howto_tool_1'),
+			t('routes/apps/one-to-many-transfer.seo.howto_tool_2')
+		]
 	});
 
 	// Map locale to SEO locale format (e.g., 'zh' -> 'zh_CN', 'en' -> 'en_US')
@@ -77,9 +80,9 @@ export const load: PageServerLoad = (event) => {
 
 	return {
 		meta: {
-			title: t('one-to-many-transfer.seo.page_title'),
-			description: t('one-to-many-transfer.seo.page_description'),
-			keywords: t('one-to-many-transfer.seo.keywords'),
+			title: t('routes/apps/one-to-many-transfer.seo.page_title'),
+			description: t('routes/apps/one-to-many-transfer.seo.page_description'),
+			keywords: t('routes/apps/one-to-many-transfer.seo.keywords'),
 			canonical,
 			type: 'website' as const,
 			image,

@@ -11,7 +11,7 @@ import { stepComponents } from './ui/steps';
 
 export const nftDeployerTool = defineStepTool({
 	id: 'nft-deployer',
-	i18nPrefix: 'nft-deployer',
+	i18nPrefix: 'routes/apps/nft-deployer',
 
 	// Steps are provided by +page.ts for SEO structured data
 	// These are placeholder steps that will be overridden

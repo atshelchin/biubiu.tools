@@ -6,7 +6,7 @@
 	 *
 	 * @example
 	 * ```svelte
-	 * <ConnectWalletFooter i18nPrefix="token-balance-scanner" />
+	 * <ConnectWalletFooter i18nPrefix="routes/apps/token-balance-scanner" />
 	 * ```
 	 */
 	import { useConnectStore } from '$lib/stores/connect.svelte.js';

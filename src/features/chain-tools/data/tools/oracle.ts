@@ -28,7 +28,7 @@ export const oracleTools: ExternalTool[] = [
 	{
 		id: 'chainlink',
 		name: 'Chainlink',
-		descriptionKey: 'oracle.tools.chainlink.description',
+		descriptionKey: 'routes/apps/chain-tools/oracle.tools.chainlink.description',
 		url: 'https://chain.link',
 		icon: Link,
 		category: 'oracle',
@@ -39,7 +39,7 @@ export const oracleTools: ExternalTool[] = [
 	{
 		id: 'chainlink-data-feeds',
 		name: 'Chainlink Data Feeds',
-		descriptionKey: 'oracle.tools.chainlink_data_feeds.description',
+		descriptionKey: 'routes/apps/chain-tools/oracle.tools.chainlink_data_feeds.description',
 		url: 'https://data.chain.link',
 		icon: BarChart3,
 		category: 'oracle',
@@ -50,7 +50,7 @@ export const oracleTools: ExternalTool[] = [
 	{
 		id: 'pyth-network',
 		name: 'Pyth Network',
-		descriptionKey: 'oracle.tools.pyth_network.description',
+		descriptionKey: 'routes/apps/chain-tools/oracle.tools.pyth_network.description',
 		url: 'https://pyth.network',
 		icon: Activity,
 		category: 'oracle',
@@ -61,7 +61,7 @@ export const oracleTools: ExternalTool[] = [
 	{
 		id: 'pyth-price-feeds',
 		name: 'Pyth Price Feeds',
-		descriptionKey: 'oracle.tools.pyth_price_feeds.description',
+		descriptionKey: 'routes/apps/chain-tools/oracle.tools.pyth_price_feeds.description',
 		url: 'https://pyth.network/price-feeds',
 		icon: BarChart3,
 		category: 'oracle',
@@ -72,7 +72,7 @@ export const oracleTools: ExternalTool[] = [
 	{
 		id: 'band-protocol',
 		name: 'Band Protocol',
-		descriptionKey: 'oracle.tools.band_protocol.description',
+		descriptionKey: 'routes/apps/chain-tools/oracle.tools.band_protocol.description',
 		url: 'https://bandprotocol.com',
 		icon: Radio,
 		category: 'oracle',
@@ -83,7 +83,7 @@ export const oracleTools: ExternalTool[] = [
 	{
 		id: 'api3',
 		name: 'API3',
-		descriptionKey: 'oracle.tools.api3.description',
+		descriptionKey: 'routes/apps/chain-tools/oracle.tools.api3.description',
 		url: 'https://api3.org',
 		icon: Cpu,
 		category: 'oracle',
@@ -94,7 +94,7 @@ export const oracleTools: ExternalTool[] = [
 	{
 		id: 'dia-data',
 		name: 'DIA Data',
-		descriptionKey: 'oracle.tools.dia_data.description',
+		descriptionKey: 'routes/apps/chain-tools/oracle.tools.dia_data.description',
 		url: 'https://diadata.org',
 		icon: Database,
 		category: 'oracle',
@@ -105,7 +105,7 @@ export const oracleTools: ExternalTool[] = [
 	{
 		id: 'tellor',
 		name: 'Tellor',
-		descriptionKey: 'oracle.tools.tellor.description',
+		descriptionKey: 'routes/apps/chain-tools/oracle.tools.tellor.description',
 		url: 'https://tellor.io',
 		icon: Shield,
 		category: 'oracle',
@@ -116,7 +116,7 @@ export const oracleTools: ExternalTool[] = [
 	{
 		id: 'uma-protocol',
 		name: 'UMA Protocol',
-		descriptionKey: 'oracle.tools.uma_protocol.description',
+		descriptionKey: 'routes/apps/chain-tools/oracle.tools.uma_protocol.description',
 		url: 'https://uma.xyz',
 		icon: Globe,
 		category: 'oracle',
@@ -127,7 +127,7 @@ export const oracleTools: ExternalTool[] = [
 	{
 		id: 'redstone-oracles',
 		name: 'RedStone Oracles',
-		descriptionKey: 'oracle.tools.redstone_oracles.description',
+		descriptionKey: 'routes/apps/chain-tools/oracle.tools.redstone_oracles.description',
 		url: 'https://redstone.finance',
 		icon: Zap,
 		category: 'oracle',
@@ -138,7 +138,7 @@ export const oracleTools: ExternalTool[] = [
 	{
 		id: 'chronicle-labs',
 		name: 'Chronicle Labs',
-		descriptionKey: 'oracle.tools.chronicle_labs.description',
+		descriptionKey: 'routes/apps/chain-tools/oracle.tools.chronicle_labs.description',
 		url: 'https://chroniclelabs.org',
 		icon: Timer,
 		category: 'oracle',
@@ -149,7 +149,7 @@ export const oracleTools: ExternalTool[] = [
 	{
 		id: 'umbrella-network',
 		name: 'Umbrella Network',
-		descriptionKey: 'oracle.tools.umbrella_network.description',
+		descriptionKey: 'routes/apps/chain-tools/oracle.tools.umbrella_network.description',
 		url: 'https://umb.network',
 		icon: Shield,
 		category: 'oracle',
@@ -160,7 +160,7 @@ export const oracleTools: ExternalTool[] = [
 	{
 		id: 'flux-protocol',
 		name: 'Flux Protocol',
-		descriptionKey: 'oracle.tools.flux_protocol.description',
+		descriptionKey: 'routes/apps/chain-tools/oracle.tools.flux_protocol.description',
 		url: 'https://fluxprotocol.org',
 		icon: Network,
 		category: 'oracle',
@@ -171,7 +171,7 @@ export const oracleTools: ExternalTool[] = [
 	{
 		id: 'supra-oracles',
 		name: 'Supra Oracles',
-		descriptionKey: 'oracle.tools.supra_oracles.description',
+		descriptionKey: 'routes/apps/chain-tools/oracle.tools.supra_oracles.description',
 		url: 'https://supra.com',
 		icon: Zap,
 		category: 'oracle',
@@ -183,7 +183,7 @@ export const oracleTools: ExternalTool[] = [
 	{
 		id: 'chainlink-vrf',
 		name: 'Chainlink VRF',
-		descriptionKey: 'oracle.tools.chainlink_vrf.description',
+		descriptionKey: 'routes/apps/chain-tools/oracle.tools.chainlink_vrf.description',
 		url: 'https://chain.link/vrf',
 		icon: Shield,
 		category: 'oracle',
@@ -194,7 +194,7 @@ export const oracleTools: ExternalTool[] = [
 	{
 		id: 'chainlink-automation',
 		name: 'Chainlink Automation',
-		descriptionKey: 'oracle.tools.chainlink_automation.description',
+		descriptionKey: 'routes/apps/chain-tools/oracle.tools.chainlink_automation.description',
 		url: 'https://chain.link/automation',
 		icon: Cpu,
 		category: 'oracle',
@@ -205,7 +205,7 @@ export const oracleTools: ExternalTool[] = [
 	{
 		id: 'chainlink-ccip',
 		name: 'Chainlink CCIP',
-		descriptionKey: 'oracle.tools.chainlink_ccip.description',
+		descriptionKey: 'routes/apps/chain-tools/oracle.tools.chainlink_ccip.description',
 		url: 'https://chain.link/cross-chain',
 		icon: Network,
 		category: 'oracle',
@@ -216,7 +216,7 @@ export const oracleTools: ExternalTool[] = [
 	{
 		id: 'chainlink-functions',
 		name: 'Chainlink Functions',
-		descriptionKey: 'oracle.tools.chainlink_functions.description',
+		descriptionKey: 'routes/apps/chain-tools/oracle.tools.chainlink_functions.description',
 		url: 'https://chain.link/functions',
 		icon: Cpu,
 		category: 'oracle',
@@ -228,7 +228,7 @@ export const oracleTools: ExternalTool[] = [
 	{
 		id: 'defillama-oracles',
 		name: 'DeFiLlama Oracles',
-		descriptionKey: 'oracle.tools.defillama_oracles.description',
+		descriptionKey: 'routes/apps/chain-tools/oracle.tools.defillama_oracles.description',
 		url: 'https://defillama.com/oracles',
 		icon: Eye,
 		category: 'oracle',
@@ -238,7 +238,7 @@ export const oracleTools: ExternalTool[] = [
 	{
 		id: 'oracle-dao',
 		name: 'Oracle DAO',
-		descriptionKey: 'oracle.tools.oracle_dao.description',
+		descriptionKey: 'routes/apps/chain-tools/oracle.tools.oracle_dao.description',
 		url: 'https://oracle.io',
 		icon: Shield,
 		category: 'oracle',

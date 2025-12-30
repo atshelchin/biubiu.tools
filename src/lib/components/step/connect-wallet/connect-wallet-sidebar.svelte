@@ -7,7 +7,7 @@
 	 *
 	 * @example
 	 * ```svelte
-	 * <ConnectWalletSidebar i18nPrefix="contract-deployer" />
+	 * <ConnectWalletSidebar i18nPrefix="routes/apps/contract-deployer" />
 	 *
 	 * <!-- With custom content -->
 	 * <ConnectWalletSidebar i18nPrefix="ens-scanner">

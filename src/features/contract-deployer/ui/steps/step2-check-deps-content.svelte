@@ -42,7 +42,7 @@
 </script>
 
 <DependencyCheckContent
-	i18nPrefix="contract-deployer"
+	i18nPrefix="routes/apps/contract-deployer"
 	{checkDependencies}
 	onStateChange={handleStateChange}
 />

@@ -24,9 +24,11 @@
 	</div>
 
 	<div class="resume-content">
-		<h4>{i18n.t('token-balance-scanner.step5.resume.title') || 'Resume Previous Scan?'}</h4>
+		<h4>
+			{i18n.t('routes/apps/token-balance-scanner.step5.resume.title') || 'Resume Previous Scan?'}
+		</h4>
 		<p class="resume-info">
-			{i18n.t('token-balance-scanner.step5.resume.info', {
+			{i18n.t('routes/apps/token-balance-scanner.step5.resume.info', {
 				progress: session.progress,
 				addresses: session.addressCount,
 				tokens: session.tokenCount
@@ -34,7 +36,7 @@
 				`Progress: ${session.progress}% (${session.addressCount} addresses, ${session.tokenCount} tokens)`}
 		</p>
 		<p class="resume-date">
-			{i18n.t('token-balance-scanner.step5.resume.last_activity') || 'Last activity'}: {formatDate(
+			{i18n.t('routes/apps/token-balance-scanner.step5.resume.last_activity') || 'Last activity'}: {formatDate(
 				session.lastActivityAt
 			)}
 		</p>
@@ -43,11 +45,11 @@
 	<div class="resume-actions">
 		<button class="resume-btn" onclick={onResume}>
 			<Play size={16} />
-			{i18n.t('token-balance-scanner.step5.resume.continue') || 'Continue'}
+			{i18n.t('routes/apps/token-balance-scanner.step5.resume.continue') || 'Continue'}
 		</button>
 		<button class="delete-btn" onclick={onDiscard}>
 			<Trash2 size={16} />
-			{i18n.t('token-balance-scanner.step5.resume.discard') || 'Discard'}
+			{i18n.t('routes/apps/token-balance-scanner.step5.resume.discard') || 'Discard'}
 		</button>
 	</div>
 </div>

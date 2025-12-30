@@ -14,8 +14,8 @@
 		meta: data.meta,
 		structuredData: data.structuredData,
 		steps: data.steps,
-		appTitle: i18n.t('assets-monitor.title'),
-		appDescription: i18n.t('assets-monitor.description'),
+		appTitle: i18n.t('routes/apps/assets-monitor.title'),
+		appDescription: i18n.t('routes/apps/assets-monitor.description'),
 		walletConnect: {
 			chains: [mainnet, base, bsc, polygon, arbitrum, optimism],
 			storageKey: 'biubiu-tools-assets-monitor'

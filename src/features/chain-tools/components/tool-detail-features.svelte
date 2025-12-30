@@ -34,7 +34,7 @@
 		<h2 class="section-title">
 			<Sparkles class="section-icon" />
 			<span
-				>{i18n.t('chain-tools.key_features' as keyof TranslationKeys, {
+				>{i18n.t('routes/apps/chain-tools/chain-tools.key_features' as keyof TranslationKeys, {
 					defaultValue: 'Key Features'
 				})}</span
 			>

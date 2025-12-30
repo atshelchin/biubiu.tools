@@ -42,7 +42,7 @@
 </script>
 
 <DependencyCheckContent
-	i18nPrefix="token-balance-scanner"
+	i18nPrefix="routes/apps/token-balance-scanner"
 	{checkDependencies}
 	onStateChange={handleStateChange}
 />

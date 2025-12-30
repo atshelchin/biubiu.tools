@@ -17,14 +17,14 @@ export const load: PageServerLoad = (event) => {
 
 	// Generate structured data
 	const webAppData = createWebAppData({
-		name: t('chain-tools.seo.webapp_name'),
-		description: t('chain-tools.seo.webapp_description'),
+		name: t('routes/apps/chain-tools/chain-tools.seo.webapp_name'),
+		description: t('routes/apps/chain-tools/chain-tools.seo.webapp_description'),
 		canonical,
 		features: [
-			t('chain-tools.seo.feature_1'),
-			t('chain-tools.seo.feature_2'),
-			t('chain-tools.seo.feature_3'),
-			t('chain-tools.seo.feature_4')
+			t('routes/apps/chain-tools/chain-tools.seo.feature_1'),
+			t('routes/apps/chain-tools/chain-tools.seo.feature_2'),
+			t('routes/apps/chain-tools/chain-tools.seo.feature_3'),
+			t('routes/apps/chain-tools/chain-tools.seo.feature_4')
 		]
 	});
 
@@ -32,8 +32,8 @@ export const load: PageServerLoad = (event) => {
 	const itemListData = {
 		'@context': 'https://schema.org',
 		'@type': 'ItemList',
-		name: t('chain-tools.seo.webapp_name'),
-		description: t('chain-tools.seo.webapp_description'),
+		name: t('routes/apps/chain-tools/chain-tools.seo.webapp_name'),
+		description: t('routes/apps/chain-tools/chain-tools.seo.webapp_description'),
 		numberOfItems: 25,
 		itemListElement: [
 			{
@@ -67,9 +67,9 @@ export const load: PageServerLoad = (event) => {
 
 	return {
 		meta: {
-			title: t('chain-tools.seo.page_title'),
-			description: t('chain-tools.seo.page_description'),
-			keywords: t('chain-tools.seo.keywords'),
+			title: t('routes/apps/chain-tools/chain-tools.seo.page_title'),
+			description: t('routes/apps/chain-tools/chain-tools.seo.page_description'),
+			keywords: t('routes/apps/chain-tools/chain-tools.seo.keywords'),
 			canonical,
 			type: 'website' as const,
 			image,

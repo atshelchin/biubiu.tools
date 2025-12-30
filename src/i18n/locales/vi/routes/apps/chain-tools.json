@@ -1,20 +1,20 @@
 {
 	"_meta": {
-		"name": "Bahasa Indonesia",
-		"englishName": "Indonesian",
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
 		"direction": "ltr",
-		"flag": "🇮🇩",
-		"code": "id"
+		"flag": "🇻🇳",
+		"code": "vi"
 	},
-	"title": "Alat Blockchain",
-	"subtitle": "Temukan alat Web3 dan DApp berkualitas",
-	"search_placeholder": "Cari alat berdasarkan nama, tag, atau chain...",
-	"visit": "Kunjungi",
-	"empty_title": "Tidak ada alat yang cocok ditemukan",
-	"empty_description": "Coba kata kunci berbeda atau hapus filter Anda",
-	"clear_filters": "Hapus Filter",
-	"showing_count": "Menampilkan {count} dari {total} alat",
-	"disclaimer": "Data bersumber dari web. Harap verifikasi secara independen sebelum digunakan.",
+	"title": "Công Cụ Blockchain",
+	"subtitle": "Khám phá các công cụ Web3 và DApp chất lượng",
+	"search_placeholder": "Tìm kiếm công cụ theo tên, thẻ hoặc chuỗi...",
+	"visit": "Truy cập",
+	"empty_title": "Không tìm thấy công cụ phù hợp",
+	"empty_description": "Thử từ khóa khác hoặc xóa bộ lọc của bạn",
+	"clear_filters": "Xóa Bộ Lọc",
+	"showing_count": "Hiển thị {count} trong số {total} công cụ",
+	"disclaimer": "Dữ liệu được lấy từ web. Vui lòng xác minh độc lập trước khi sử dụng.",
 	"categories": {
 		"all": "All",
 		"featured": "Featured",
@@ -61,5 +61,5 @@
 		"influencer": "KOL & Influencers",
 		"product_hunt": "Product Launch"
 	},
-	"faqs_title": "Pertanyaan yang Sering Diajukan"
+	"faqs_title": "Câu Hỏi Thường Gặp"
 }

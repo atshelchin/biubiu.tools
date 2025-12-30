@@ -122,7 +122,7 @@
 	// Find and scroll to a key in the editor
 	function jumpToKey(key: string) {
 		if (!editorView) {
-			alert(i18n.t('wallet-sweep.step4.content.private_key.error_key_not_found'));
+			alert(i18n.t('routes/apps/wallet-sweep.step4.content.private_key.error_key_not_found'));
 			return;
 		}
 
@@ -130,7 +130,7 @@
 		const lineIndex = lines.findIndex((line) => line.trim() === key.trim());
 
 		if (lineIndex === -1) {
-			alert(i18n.t('wallet-sweep.step4.content.private_key.error_key_not_found'));
+			alert(i18n.t('routes/apps/wallet-sweep.step4.content.private_key.error_key_not_found'));
 			return;
 		}
 
@@ -161,7 +161,7 @@
 			<button
 				class="btn-upload-float"
 				onclick={onUploadClick}
-				title={i18n.t('wallet-sweep.step4.content.private_key.upload_file')}
+				title={i18n.t('routes/apps/wallet-sweep.step4.content.private_key.upload_file')}
 			>
 				<Upload size={16} />
 			</button>
@@ -173,7 +173,7 @@
 			<div class="error-header">
 				<AlertCircle size={18} />
 				<span
-					>{i18n.t('wallet-sweep.step4.content.private_key.invalid_keys_found', {
+					>{i18n.t('routes/apps/wallet-sweep.step4.content.private_key.invalid_keys_found', {
 						count: displayedInvalidKeys.length
 					})}</span
 				>
@@ -195,10 +195,10 @@
 							<button
 								class="btn-locate"
 								onclick={() => jumpToKey(invalidKey.key)}
-								title={i18n.t('wallet-sweep.step4.content.private_key.locate_key')}
+								title={i18n.t('routes/apps/wallet-sweep.step4.content.private_key.locate_key')}
 							>
 								<AlertCircle size={16} />
-								{i18n.t('wallet-sweep.step4.content.private_key.locate')}
+								{i18n.t('routes/apps/wallet-sweep.step4.content.private_key.locate')}
 							</button>
 						</div>
 					{/snippet}
@@ -219,10 +219,10 @@
 							<button
 								class="btn-locate"
 								onclick={() => jumpToKey(invalidKey.key)}
-								title={i18n.t('wallet-sweep.step4.content.private_key.locate_key')}
+								title={i18n.t('routes/apps/wallet-sweep.step4.content.private_key.locate_key')}
 							>
 								<AlertCircle size={16} />
-								{i18n.t('wallet-sweep.step4.content.private_key.locate')}
+								{i18n.t('routes/apps/wallet-sweep.step4.content.private_key.locate')}
 							</button>
 						</div>
 					{/each}

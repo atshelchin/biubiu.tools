@@ -18,41 +18,41 @@ export const load: PageServerLoad = (event) => {
 	// Define steps with both SEO text and UI description using i18n
 	const steps: HowToStepData[] = [
 		{
-			name: t('contract-deployer.seo.step_1_name'),
-			text: t('contract-deployer.seo.step_1_text'),
-			description: t('contract-deployer.seo.step_1_description')
+			name: t('routes/apps/contract-deployer.seo.step_1_name'),
+			text: t('routes/apps/contract-deployer.seo.step_1_text'),
+			description: t('routes/apps/contract-deployer.seo.step_1_description')
 		},
 		{
-			name: t('contract-deployer.seo.step_2_name'),
-			text: t('contract-deployer.seo.step_2_text'),
-			description: t('contract-deployer.seo.step_2_description')
+			name: t('routes/apps/contract-deployer.seo.step_2_name'),
+			text: t('routes/apps/contract-deployer.seo.step_2_text'),
+			description: t('routes/apps/contract-deployer.seo.step_2_description')
 		},
 		{
-			name: t('contract-deployer.seo.step_3_name'),
-			text: t('contract-deployer.seo.step_3_text'),
-			description: t('contract-deployer.seo.step_3_description')
+			name: t('routes/apps/contract-deployer.seo.step_3_name'),
+			text: t('routes/apps/contract-deployer.seo.step_3_text'),
+			description: t('routes/apps/contract-deployer.seo.step_3_description')
 		}
 	];
 
 	// Generate structured data from steps config
 	const webAppData = createWebAppData({
-		name: t('contract-deployer.seo.webapp_name'),
-		description: t('contract-deployer.seo.webapp_description'),
+		name: t('routes/apps/contract-deployer.seo.webapp_name'),
+		description: t('routes/apps/contract-deployer.seo.webapp_description'),
 		canonical,
 		features: [
-			t('contract-deployer.seo.feature_1'),
-			t('contract-deployer.seo.feature_2'),
-			t('contract-deployer.seo.feature_3')
+			t('routes/apps/contract-deployer.seo.feature_1'),
+			t('routes/apps/contract-deployer.seo.feature_2'),
+			t('routes/apps/contract-deployer.seo.feature_3')
 		]
 	});
 
 	const howToData = createHowToData({
-		name: t('contract-deployer.seo.howto_name'),
-		description: t('contract-deployer.seo.howto_description'),
+		name: t('routes/apps/contract-deployer.seo.howto_name'),
+		description: t('routes/apps/contract-deployer.seo.howto_description'),
 		canonical,
 		image,
 		steps,
-		tools: [t('contract-deployer.seo.howto_tool_1')]
+		tools: [t('routes/apps/contract-deployer.seo.howto_tool_1')]
 	});
 
 	// Map locale to SEO locale format
@@ -65,9 +65,9 @@ export const load: PageServerLoad = (event) => {
 
 	return {
 		meta: {
-			title: t('contract-deployer.seo.page_title'),
-			description: t('contract-deployer.seo.page_description'),
-			keywords: t('contract-deployer.seo.keywords'),
+			title: t('routes/apps/contract-deployer.seo.page_title'),
+			description: t('routes/apps/contract-deployer.seo.page_description'),
+			keywords: t('routes/apps/contract-deployer.seo.keywords'),
 			canonical,
 			type: 'website' as const,
 			image,

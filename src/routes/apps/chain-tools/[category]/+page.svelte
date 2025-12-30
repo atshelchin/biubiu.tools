@@ -115,20 +115,22 @@
 		<div class="empty-icon">
 			<SearchX class="icon" />
 		</div>
-		<h3 class="empty-title">{i18n.t('chain-tools.empty_title')}</h3>
-		<p class="empty-description">{i18n.t('chain-tools.empty_description')}</p>
+		<h3 class="empty-title">{i18n.t('routes/apps/chain-tools/chain-tools.empty_title')}</h3>
+		<p class="empty-description">
+			{i18n.t('routes/apps/chain-tools/chain-tools.empty_description')}
+		</p>
 	</div>
 {/if}
 
 <!-- Footer Stats -->
 <div class="page-footer">
 	<p class="stats">
-		{i18n.t('chain-tools.showing_count', {
+		{i18n.t('routes/apps/chain-tools/chain-tools.showing_count', {
 			count: filteredTools.length,
 			total: toolsData.length
 		})}
 	</p>
-	<p class="disclaimer">{i18n.t('chain-tools.disclaimer')}</p>
+	<p class="disclaimer">{i18n.t('routes/apps/chain-tools/chain-tools.disclaimer')}</p>
 </div>
 
 <!-- FAQs Section -->
@@ -136,7 +138,9 @@
 	<section class="faqs-section">
 		<Faqs
 			faqs={data.faqs}
-			title={i18n.t('chain-tools.faqs_title', { defaultValue: 'Frequently Asked Questions' })}
+			title={i18n.t('routes/apps/chain-tools/chain-tools.faqs_title', {
+				defaultValue: 'Frequently Asked Questions'
+			})}
 		/>
 	</section>
 {/if}

@@ -73,26 +73,26 @@
 	async function handleScanBalances() {
 		// Validate prerequisites
 		if (!connectStore.currentChainId) {
-			step4State.errorMessage = i18n.t('wallet-sweep.step4.content.errors.no_network');
+			step4State.errorMessage = i18n.t('routes/apps/wallet-sweep.step4.content.errors.no_network');
 			return;
 		}
 
 		if (importedWallets.length === 0) {
-			step4State.errorMessage = i18n.t('wallet-sweep.step4.content.errors.no_wallets');
+			step4State.errorMessage = i18n.t('routes/apps/wallet-sweep.step4.content.errors.no_wallets');
 			return;
 		}
 
 		// Get selected tokens from step3
 		const selectedTokenIds = Array.from(step3State.selectedTokenIds);
 		if (selectedTokenIds.length === 0) {
-			step4State.errorMessage = i18n.t('wallet-sweep.step4.content.errors.no_tokens');
+			step4State.errorMessage = i18n.t('routes/apps/wallet-sweep.step4.content.errors.no_tokens');
 			return;
 		}
 
 		// Get current network configuration
 		const currentNetwork = rpcManager.currentNetwork;
 		if (!currentNetwork || currentNetwork.rpcEndpoints.length === 0) {
-			step4State.errorMessage = i18n.t('wallet-sweep.step4.content.errors.no_rpc');
+			step4State.errorMessage = i18n.t('routes/apps/wallet-sweep.step4.content.errors.no_rpc');
 			return;
 		}
 
@@ -105,7 +105,9 @@
 		const selectedTokens = allTokens.filter((token) => selectedTokenIds.includes(token.id));
 
 		if (selectedTokens.length === 0) {
-			step4State.errorMessage = i18n.t('wallet-sweep.step4.content.errors.no_valid_tokens');
+			step4State.errorMessage = i18n.t(
+				'routes/apps/wallet-sweep.step4.content.errors.no_valid_tokens'
+			);
 			return;
 		}
 
@@ -144,9 +146,12 @@
 					step4State.canResumeScan = true;
 				},
 				onPause: (reason, scanState) => {
-					const errorMessage = i18n.t('wallet-sweep.step4.content.rate_limit.error_generic', {
-						reason
-					});
+					const errorMessage = i18n.t(
+						'routes/apps/wallet-sweep.step4.content.rate_limit.error_generic',
+						{
+							reason
+						}
+					);
 					step4State.handleRateLimitError(errorMessage, scanState);
 				},
 				initialState: step4State.canResumeScan ? (step4State.scanState ?? undefined) : undefined
@@ -164,14 +169,16 @@
 			// Show summary
 			const walletsWithBalance = step4State.getWalletsWithBalance().length;
 			if (walletsWithBalance === 0 && completed) {
-				step4State.errorMessage = i18n.t('wallet-sweep.step4.content.errors.no_balance');
+				step4State.errorMessage = i18n.t(
+					'routes/apps/wallet-sweep.step4.content.errors.no_balance'
+				);
 				step4State.isInfoMessage = true; // This is info, not an error
 			}
 		} catch (error) {
 			step4State.errorMessage =
 				error instanceof Error
 					? error.message
-					: i18n.t('wallet-sweep.step4.content.errors.scan_failed');
+					: i18n.t('routes/apps/wallet-sweep.step4.content.errors.scan_failed');
 			step4State.isInfoMessage = false; // This is an actual error
 		} finally {
 			step4State.isScanning = false;
@@ -180,12 +187,15 @@
 </script>
 
 <StepContent>
-	<!-- i18n.t('wallet-sweep.step4.content.description') -->
-	<StepContentHeader title={i18n.t('wallet-sweep.step4.content.title')} description="" />
+	<!-- i18n.t('routes/apps/wallet-sweep.step4.content.description') -->
+	<StepContentHeader
+		title={i18n.t('routes/apps/wallet-sweep.step4.content.title')}
+		description=""
+	/>
 
 	<!-- Import Method Selector -->
 	<div>
-		<div class="form-label">{i18n.t('wallet-sweep.step4.content.choose_method')}</div>
+		<div class="form-label">{i18n.t('routes/apps/wallet-sweep.step4.content.choose_method')}</div>
 		<ImportMethodSelector selected={importMethod} onSelect={handleMethodSelect} />
 	</div>
 
@@ -239,9 +249,11 @@
 				<div class="rpc-hint">
 					<InlineAlert
 						variant="info"
-						title={i18n.t('wallet-sweep.step4.content.rpc_hint.title')}
-						message={i18n.t('wallet-sweep.step4.content.rpc_hint.message')}
-						primaryButtonText={i18n.t('wallet-sweep.step4.content.rpc_hint.add_rpc_button')}
+						title={i18n.t('routes/apps/wallet-sweep.step4.content.rpc_hint.title')}
+						message={i18n.t('routes/apps/wallet-sweep.step4.content.rpc_hint.message')}
+						primaryButtonText={i18n.t(
+							'routes/apps/wallet-sweep.step4.content.rpc_hint.add_rpc_button'
+						)}
 						onPrimaryClick={rpcManager.openRpcManager}
 					/>
 				</div>
@@ -252,11 +264,11 @@
 				{scanProgress}
 				{scanCompleted}
 				disabled={importedWallets.length === 0}
-				scanningText={i18n.t('wallet-sweep.step4.content.wallet_list.scanning', {
+				scanningText={i18n.t('routes/apps/wallet-sweep.step4.content.wallet_list.scanning', {
 					progress: scanProgress
 				})}
-				scanButtonText={i18n.t('wallet-sweep.step4.content.wallet_list.scan_button')}
-				completedText={i18n.t('wallet-sweep.step4.content.wallet_list.scan_completed')}
+				scanButtonText={i18n.t('routes/apps/wallet-sweep.step4.content.wallet_list.scan_button')}
+				completedText={i18n.t('routes/apps/wallet-sweep.step4.content.wallet_list.scan_completed')}
 				onScan={handleScanBalances}
 			/>
 
@@ -276,11 +288,15 @@
 				<div class="scan-error-inline">
 					<InlineAlert
 						variant="warning"
-						title={i18n.t('wallet-sweep.step4.content.rate_limit.title')}
+						title={i18n.t('routes/apps/wallet-sweep.step4.content.rate_limit.title')}
 						message={step4State.rateLimitMessage}
-						hint={i18n.t('wallet-sweep.step4.content.rate_limit.hint')}
-						primaryButtonText={i18n.t('wallet-sweep.step4.content.rate_limit.manage_rpc_button')}
-						secondaryButtonText={i18n.t('wallet-sweep.step4.content.rate_limit.resume_button')}
+						hint={i18n.t('routes/apps/wallet-sweep.step4.content.rate_limit.hint')}
+						primaryButtonText={i18n.t(
+							'routes/apps/wallet-sweep.step4.content.rate_limit.manage_rpc_button'
+						)}
+						secondaryButtonText={i18n.t(
+							'routes/apps/wallet-sweep.step4.content.rate_limit.resume_button'
+						)}
 						onPrimaryClick={rpcManager.openRpcManager}
 						onSecondaryClick={handleScanBalances}
 					/>

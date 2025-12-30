@@ -11,4 +11,4 @@
 	const isChecking = $derived(step2State.isChecking);
 </script>
 
-<DependencyCheckFooter i18nPrefix="wallet-sweep" {summary} {isChecking} />
+<DependencyCheckFooter i18nPrefix="routes/apps/wallet-sweep" {summary} {isChecking} />

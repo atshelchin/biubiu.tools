@@ -124,12 +124,12 @@
 		const canResume = await gasMonitor.tryResume(temporaryWallet, feeCalculator.feeBreakdown);
 		if (!canResume) {
 			sweepExecutor.clearError();
-			alert(i18n.t('wallet-sweep.step5.content.errors.still_insufficient_gas'));
+			alert(i18n.t('routes/apps/wallet-sweep.step5.content.errors.still_insufficient_gas'));
 			return;
 		}
 
 		alert(
-			i18n.t('wallet-sweep.step5.content.gas_refilled_restart', {
+			i18n.t('routes/apps/wallet-sweep.step5.content.gas_refilled_restart', {
 				balance: gasMonitor.formatGasAmount(gasMonitor.currentGasBalance)
 			})
 		);
@@ -198,7 +198,7 @@
 		}
 
 		if (!currentNetwork || currentNetwork.rpcEndpoints.length === 0) {
-			alert(i18n.t('wallet-sweep.step5.content.errors.no_rpc'));
+			alert(i18n.t('routes/apps/wallet-sweep.step5.content.errors.no_rpc'));
 			return;
 		}
 
@@ -240,15 +240,15 @@
 
 <StepContent>
 	<StepContentHeader
-		title={i18n.t('wallet-sweep.step5.content.title')}
-		description={i18n.t('wallet-sweep.step5.content.description')}
+		title={i18n.t('routes/apps/wallet-sweep.step5.content.title')}
+		description={i18n.t('routes/apps/wallet-sweep.step5.content.description')}
 	/>
 
 	<!-- Target Address -->
 	<TargetAddressInfo
-		label={i18n.t('wallet-sweep.step5.target_address_label')}
+		label={i18n.t('routes/apps/wallet-sweep.step5.target_address_label')}
 		address={targetAddress}
-		hint={i18n.t('wallet-sweep.step5.target_address_hint')}
+		hint={i18n.t('routes/apps/wallet-sweep.step5.target_address_hint')}
 	/>
 
 	<!-- Temporary Wallet Manager -->
@@ -272,13 +272,13 @@
 	<!-- Gas Insufficient Warning -->
 	{#if gasMonitor.isPausedForGas}
 		<GasWarningBanner
-			title={i18n.t('wallet-sweep.step5.content.gas_insufficient_title')}
-			message={i18n.t('wallet-sweep.step5.content.gas_insufficient_message', {
+			title={i18n.t('routes/apps/wallet-sweep.step5.content.gas_insufficient_title')}
+			message={i18n.t('routes/apps/wallet-sweep.step5.content.gas_insufficient_message', {
 				required: gasMonitor.formatGasAmount(gasMonitor.requiredGas),
 				current: gasMonitor.formatGasAmount(gasMonitor.currentGasBalance),
 				symbol: currentNetwork?.symbol || 'ETH'
 			})}
-			buttonText={i18n.t('wallet-sweep.step5.content.check_and_resume')}
+			buttonText={i18n.t('routes/apps/wallet-sweep.step5.content.check_and_resume')}
 			onResume={handleResumeAfterGasRefill}
 		/>
 	{/if}
@@ -295,8 +295,8 @@
 	<div class="warning-card">
 		<CheckCircle2 size={20} />
 		<div>
-			<strong>{i18n.t('wallet-sweep.step5.content.ready_to_execute')}</strong>
-			<p>{i18n.t('wallet-sweep.step5.content.review_carefully')}</p>
+			<strong>{i18n.t('routes/apps/wallet-sweep.step5.content.ready_to_execute')}</strong>
+			<p>{i18n.t('routes/apps/wallet-sweep.step5.content.review_carefully')}</p>
 		</div>
 	</div>
 

@@ -116,7 +116,7 @@ export interface ToolDetail {
 	id: string; // Matches ExternalTool.id
 
 	// i18n key prefix for this tool's content
-	// e.g., 'chain-tools.tools.uniswap'
+	// e.g., 'routes/apps/chain-tools/chain-tools.tools.uniswap'
 	i18nKeyPrefix: string;
 
 	// Number of content items (for rendering)

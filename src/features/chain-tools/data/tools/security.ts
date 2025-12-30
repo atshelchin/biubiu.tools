@@ -9,7 +9,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'revoke',
 		name: 'Revoke.cash',
-		descriptionKey: 'security.tools.revoke.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.revoke.description',
 		url: 'https://revoke.cash',
 		icon: Shield,
 		category: 'security',
@@ -20,7 +20,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'pocket-universe',
 		name: 'Pocket Universe',
-		descriptionKey: 'security.tools.pocket_universe.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.pocket_universe.description',
 		url: 'https://www.pocketuniverse.app',
 		icon: Lock,
 		category: 'security',
@@ -32,7 +32,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'slither',
 		name: 'Slither',
-		descriptionKey: 'security.tools.slither.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.slither.description',
 		url: 'https://github.com/crytic/slither',
 		icon: Bug,
 		category: 'security',
@@ -42,7 +42,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'mythx',
 		name: 'MythX',
-		descriptionKey: 'security.tools.mythx.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.mythx.description',
 		url: 'https://mythx.io',
 		icon: Shield,
 		category: 'security',
@@ -52,7 +52,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'certik',
 		name: 'CertiK',
-		descriptionKey: 'security.tools.certik.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.certik.description',
 		url: 'https://www.certik.com',
 		icon: Shield,
 		category: 'security',
@@ -63,7 +63,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'hacken',
 		name: 'Hacken',
-		descriptionKey: 'security.tools.hacken.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.hacken.description',
 		url: 'https://hacken.io',
 		icon: Shield,
 		category: 'security',
@@ -73,7 +73,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'immunefi',
 		name: 'Immunefi',
-		descriptionKey: 'security.tools.immunefi.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.immunefi.description',
 		url: 'https://immunefi.com',
 		icon: Bug,
 		category: 'security',
@@ -83,7 +83,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'openzeppelin',
 		name: 'OpenZeppelin',
-		descriptionKey: 'security.tools.openzeppelin.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.openzeppelin.description',
 		url: 'https://www.openzeppelin.com',
 		icon: Shield,
 		category: 'security',
@@ -94,7 +94,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'dedaub',
 		name: 'Dedaub',
-		descriptionKey: 'security.tools.dedaub.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.dedaub.description',
 		url: 'https://library.dedaub.com',
 		icon: Code,
 		category: 'security',
@@ -106,7 +106,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'de-fi',
 		name: 'De.Fi',
-		descriptionKey: 'security.tools.de_fi.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.de_fi.description',
 		url: 'https://de.fi',
 		icon: Shield,
 		category: 'security',
@@ -116,7 +116,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'honeypot',
 		name: 'Honeypot.is',
-		descriptionKey: 'security.tools.honeypot.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.honeypot.description',
 		url: 'https://honeypot.is',
 		icon: Lock,
 		category: 'security',
@@ -128,7 +128,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'phalcon',
 		name: 'Phalcon (BlockSec)',
-		descriptionKey: 'security.tools.phalcon.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.phalcon.description',
 		url: 'https://phalcon.blocksec.com',
 		icon: Eye,
 		category: 'security',
@@ -138,7 +138,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'tx-tracer',
 		name: 'Tx Tracer',
-		descriptionKey: 'security.tools.tx_tracer.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.tx_tracer.description',
 		url: 'https://openchain.xyz/trace',
 		icon: FileSearch,
 		category: 'security',
@@ -148,7 +148,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'contract-diff',
 		name: 'Contract Diff',
-		descriptionKey: 'security.tools.contract_diff.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.contract_diff.description',
 		url: 'https://www.contract-diff.xyz',
 		icon: FileCode,
 		category: 'security',
@@ -160,7 +160,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'forta',
 		name: 'Forta',
-		descriptionKey: 'security.tools.forta.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.forta.description',
 		url: 'https://forta.org',
 		icon: Bell,
 		category: 'security',
@@ -170,7 +170,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'chainalysis',
 		name: 'Chainalysis',
-		descriptionKey: 'security.tools.chainalysis.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.chainalysis.description',
 		url: 'https://www.chainalysis.com',
 		icon: Eye,
 		category: 'security',
@@ -180,7 +180,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'hexagate',
 		name: 'Hexagate',
-		descriptionKey: 'security.tools.hexagate.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.hexagate.description',
 		url: 'https://www.hexagate.com',
 		icon: Shield,
 		category: 'security',
@@ -190,7 +190,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'hypernative',
 		name: 'Hypernative',
-		descriptionKey: 'security.tools.hypernative.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.hypernative.description',
 		url: 'https://www.hypernative.io',
 		icon: Shield,
 		category: 'security',
@@ -200,7 +200,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'chainalert',
 		name: 'ChainAlert',
-		descriptionKey: 'security.tools.chainalert.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.chainalert.description',
 		url: 'https://chainalert.io',
 		icon: Bell,
 		category: 'security',
@@ -212,7 +212,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'webacy',
 		name: 'Webacy',
-		descriptionKey: 'security.tools.webacy.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.webacy.description',
 		url: 'https://webacy.com',
 		icon: Shield,
 		category: 'security',
@@ -222,7 +222,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'harpie',
 		name: 'Harpie',
-		descriptionKey: 'security.tools.harpie.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.harpie.description',
 		url: 'https://harpie.io',
 		icon: Shield,
 		category: 'security',
@@ -232,7 +232,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'blowfish',
 		name: 'Blowfish',
-		descriptionKey: 'security.tools.blowfish.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.blowfish.description',
 		url: 'https://blowfish.xyz',
 		icon: Shield,
 		category: 'security',
@@ -242,7 +242,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'stelo',
 		name: 'Stelo',
-		descriptionKey: 'security.tools.stelo.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.stelo.description',
 		url: 'https://stelolabs.com',
 		icon: Shield,
 		category: 'security',
@@ -252,7 +252,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'fire',
 		name: 'Fire',
-		descriptionKey: 'security.tools.fire.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.fire.description',
 		url: 'https://www.joinfire.xyz',
 		icon: Shield,
 		category: 'security',
@@ -262,7 +262,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'wallet-guard',
 		name: 'Wallet Guard',
-		descriptionKey: 'security.tools.wallet_guard.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.wallet_guard.description',
 		url: 'https://www.walletguard.app',
 		icon: Shield,
 		category: 'security',
@@ -272,7 +272,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'scamsniffer',
 		name: 'ScamSniffer',
-		descriptionKey: 'security.tools.scamsniffer.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.scamsniffer.description',
 		url: 'https://scamsniffer.io',
 		icon: Bug,
 		category: 'security',
@@ -284,7 +284,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'peckshield',
 		name: 'PeckShield',
-		descriptionKey: 'security.tools.peckshield.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.peckshield.description',
 		url: 'https://peckshield.com',
 		icon: Shield,
 		category: 'security',
@@ -294,7 +294,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'slowmist',
 		name: 'SlowMist',
-		descriptionKey: 'security.tools.slowmist.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.slowmist.description',
 		url: 'https://www.slowmist.com',
 		icon: Shield,
 		category: 'security',
@@ -304,7 +304,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'quantstamp',
 		name: 'Quantstamp',
-		descriptionKey: 'security.tools.quantstamp.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.quantstamp.description',
 		url: 'https://quantstamp.com',
 		icon: Shield,
 		category: 'security',
@@ -314,7 +314,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'consensys-diligence',
 		name: 'ConsenSys Diligence',
-		descriptionKey: 'security.tools.consensys_diligence.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.consensys_diligence.description',
 		url: 'https://consensys.io/diligence',
 		icon: Shield,
 		category: 'security',
@@ -324,7 +324,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'spearbit',
 		name: 'Spearbit',
-		descriptionKey: 'security.tools.spearbit.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.spearbit.description',
 		url: 'https://spearbit.com',
 		icon: Shield,
 		category: 'security',
@@ -336,7 +336,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'railgun',
 		name: 'Railgun',
-		descriptionKey: 'security.tools.railgun.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.railgun.description',
 		url: 'https://railgun.org',
 		icon: Shield,
 		category: 'security',
@@ -347,7 +347,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'aztec',
 		name: 'Aztec',
-		descriptionKey: 'security.tools.aztec.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.aztec.description',
 		url: 'https://aztec.network',
 		icon: Shield,
 		category: 'security',
@@ -358,7 +358,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'nocturne',
 		name: 'Nocturne',
-		descriptionKey: 'security.tools.nocturne.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.nocturne.description',
 		url: 'https://nocturne.xyz',
 		icon: Shield,
 		category: 'security',
@@ -369,7 +369,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'umbra',
 		name: 'Umbra',
-		descriptionKey: 'security.tools.umbra.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.umbra.description',
 		url: 'https://umbra.cash',
 		icon: Shield,
 		category: 'security',
@@ -380,7 +380,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'labyrinth',
 		name: 'Labyrinth',
-		descriptionKey: 'security.tools.labyrinth.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.labyrinth.description',
 		url: 'https://labyrinth.technology',
 		icon: Shield,
 		category: 'security',
@@ -391,7 +391,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'elusiv',
 		name: 'Elusiv',
-		descriptionKey: 'security.tools.elusiv.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.elusiv.description',
 		url: 'https://elusiv.io',
 		icon: Shield,
 		category: 'security',
@@ -402,7 +402,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'zcash',
 		name: 'Zcash',
-		descriptionKey: 'security.tools.zcash.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.zcash.description',
 		url: 'https://z.cash',
 		icon: Shield,
 		category: 'security',
@@ -415,7 +415,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'code4rena',
 		name: 'Code4rena',
-		descriptionKey: 'security.tools.code4rena.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.code4rena.description',
 		url: 'https://code4rena.com',
 		icon: Shield,
 		category: 'security',
@@ -426,7 +426,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'sherlock',
 		name: 'Sherlock',
-		descriptionKey: 'security.tools.sherlock.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.sherlock.description',
 		url: 'https://sherlock.xyz',
 		icon: Shield,
 		category: 'security',
@@ -439,7 +439,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'chainsecurity',
 		name: 'ChainSecurity',
-		descriptionKey: 'security.tools.chainsecurity.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.chainsecurity.description',
 		url: 'https://chainsecurity.com',
 		icon: Shield,
 		category: 'security',
@@ -449,7 +449,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'trail-of-bits',
 		name: 'Trail of Bits',
-		descriptionKey: 'security.tools.trail_of_bits.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.trail_of_bits.description',
 		url: 'https://trailofbits.com',
 		icon: Shield,
 		category: 'security',
@@ -459,7 +459,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'openzeppelin-defender',
 		name: 'OpenZeppelin Defender',
-		descriptionKey: 'security.tools.openzeppelin_defender.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.openzeppelin_defender.description',
 		url: 'https://defender.openzeppelin.com',
 		icon: Shield,
 		category: 'security',
@@ -470,7 +470,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'halborn',
 		name: 'Halborn',
-		descriptionKey: 'security.tools.halborn.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.halborn.description',
 		url: 'https://halborn.com',
 		icon: Shield,
 		category: 'security',
@@ -480,7 +480,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'zellic',
 		name: 'Zellic',
-		descriptionKey: 'security.tools.zellic.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.zellic.description',
 		url: 'https://zellic.io',
 		icon: Shield,
 		category: 'security',
@@ -490,7 +490,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'veridise',
 		name: 'Veridise',
-		descriptionKey: 'security.tools.veridise.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.veridise.description',
 		url: 'https://veridise.com',
 		icon: Shield,
 		category: 'security',
@@ -500,7 +500,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'pessimistic',
 		name: 'Pessimistic',
-		descriptionKey: 'security.tools.pessimistic.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.pessimistic.description',
 		url: 'https://pessimistic.io',
 		icon: Shield,
 		category: 'security',
@@ -510,7 +510,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'cyfrin',
 		name: 'Cyfrin',
-		descriptionKey: 'security.tools.cyfrin.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.cyfrin.description',
 		url: 'https://cyfrin.io',
 		icon: Shield,
 		category: 'security',
@@ -520,7 +520,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'guardian-audits',
 		name: 'Guardian Audits',
-		descriptionKey: 'security.tools.guardian_audits.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.guardian_audits.description',
 		url: 'https://guardianaudits.com',
 		icon: Shield,
 		category: 'security',
@@ -530,7 +530,7 @@ export const securityTools: ExternalTool[] = [
 	{
 		id: 'yaudit',
 		name: 'yAudit',
-		descriptionKey: 'security.tools.yaudit.description',
+		descriptionKey: 'routes/apps/chain-tools/security.tools.yaudit.description',
 		url: 'https://yaudit.dev',
 		icon: Shield,
 		category: 'security',

@@ -26,7 +26,7 @@
 	<input
 		type="text"
 		class="search-input"
-		placeholder={i18n.t('chain-tools.search_placeholder')}
+		placeholder={i18n.t('routes/apps/chain-tools/chain-tools.search_placeholder')}
 		{value}
 		oninput={handleInput}
 	/>

@@ -8,7 +8,7 @@
 	 * @example
 	 * ```svelte
 	 * <DependencyCheckContent
-	 *   i18nPrefix="token-balance-scanner"
+	 *   i18nPrefix="routes/apps/token-balance-scanner"
 	 *   checkDependencies={(network, t) => checkAllDependencies(network, t)}
 	 *   onStateChange={(state) => { step2State.checks = state.checks; }}
 	 * />

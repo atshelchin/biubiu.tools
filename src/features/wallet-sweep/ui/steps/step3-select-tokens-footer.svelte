@@ -9,4 +9,4 @@
 	let selectedCount = $derived(step3State.selectedTokenIds.size);
 </script>
 
-<TokenSelectionFooter i18nPrefix="wallet-sweep" {selectedCount} />
+<TokenSelectionFooter i18nPrefix="routes/apps/wallet-sweep" {selectedCount} />

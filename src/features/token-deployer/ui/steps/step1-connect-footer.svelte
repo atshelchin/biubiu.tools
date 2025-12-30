@@ -6,4 +6,4 @@
 	import { ConnectWalletFooter } from '$lib/components/step/connect-wallet';
 </script>
 
-<ConnectWalletFooter i18nPrefix="token-deployer" />
+<ConnectWalletFooter i18nPrefix="routes/apps/token-deployer" />

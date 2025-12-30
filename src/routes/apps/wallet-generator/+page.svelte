@@ -13,8 +13,8 @@
 		meta: data.meta,
 		structuredData: data.structuredData,
 		steps: data.steps,
-		appTitle: i18n.t('wallet-generator.title'),
-		appDescription: i18n.t('wallet-generator.description'),
+		appTitle: i18n.t('routes/apps/wallet-generator.title'),
+		appDescription: i18n.t('routes/apps/wallet-generator.description'),
 		stepComponents,
 		status: 'alpha',
 		toolKey: 'wallet-generator'

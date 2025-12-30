@@ -12,7 +12,6 @@
 	let { tool, category }: Props = $props();
 
 	const i18n = useI18n();
-	console.log(789, { tool });
 
 	// Get icon from tool registry (client-side)
 	const toolWithIcon = getToolById(tool.id);
@@ -42,7 +41,8 @@
 
 			<!-- CTA Button -->
 			<a href={tool.url} target="_blank" rel="noopener noreferrer" class="cta-button">
-				<span>{i18n.t('chain-tools.visit', { defaultValue: 'Visit' })}</span>
+				<span>{i18n.t('routes/apps/chain-tools/chain-tools.visit', { defaultValue: 'Visit' })}</span
+				>
 				<ExternalLink class="cta-icon" />
 			</a>
 		</div>
@@ -51,9 +51,12 @@
 		{#if tool.chains && tool.chains.length > 0}
 			<div class="chains-section">
 				<span class="section-label"
-					>{i18n.t('chain-tools.supported_chains' as keyof TranslationKeys, {
-						defaultValue: 'Supported Chains'
-					})}:</span
+					>{i18n.t(
+						'routes/apps/chain-tools/chain-tools.supported_chains' as keyof TranslationKeys,
+						{
+							defaultValue: 'Supported Chains'
+						}
+					)}:</span
 				>
 				<div class="chains-list">
 					{#each tool.chains as chain (chain)}

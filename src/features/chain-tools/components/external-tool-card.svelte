@@ -75,13 +75,13 @@
 		<span class="visit-link">
 			{#if hasDetail}
 				<span
-					>{i18n.t('chain-tools.learn_more' as keyof TranslationKeys, {
+					>{i18n.t('routes/apps/chain-tools/chain-tools.learn_more' as keyof TranslationKeys, {
 						defaultValue: 'Learn more'
 					})}</span
 				>
 				<ArrowRight class="arrow-icon" />
 			{:else}
-				<span>{i18n.t('chain-tools.visit')}</span>
+				<span>{i18n.t('routes/apps/chain-tools/chain-tools.visit')}</span>
 				<ExternalLink class="external-icon" />
 			{/if}
 		</span>

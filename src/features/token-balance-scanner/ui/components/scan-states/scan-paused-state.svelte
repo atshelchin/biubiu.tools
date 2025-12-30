@@ -20,31 +20,33 @@
 		<Pause size={56} />
 	</div>
 
-	<h3>{i18n.t('token-balance-scanner.step5.paused.title') || 'Scan Paused'}</h3>
+	<h3>{i18n.t('routes/apps/token-balance-scanner.step5.paused.title') || 'Scan Paused'}</h3>
 
 	<p class="paused-message">
-		{error || i18n.t('token-balance-scanner.step5.paused.message') || 'The scan has been paused.'}
+		{error ||
+			i18n.t('routes/apps/token-balance-scanner.step5.paused.message') ||
+			'The scan has been paused.'}
 	</p>
 
 	<div class="progress-stats">
 		<span class="stat success">
 			{progress.success || 0}
-			{i18n.t('token-balance-scanner.step5.scanning.success') || 'completed'}
+			{i18n.t('routes/apps/token-balance-scanner.step5.scanning.success') || 'completed'}
 		</span>
 		<span class="stat pending">
 			{progress.pending || 0}
-			{i18n.t('token-balance-scanner.step5.scanning.pending') || 'remaining'}
+			{i18n.t('routes/apps/token-balance-scanner.step5.scanning.pending') || 'remaining'}
 		</span>
 	</div>
 
 	<div class="paused-actions">
 		<button class="resume-btn" onclick={onResume}>
 			<Play size={20} />
-			<span>{i18n.t('token-balance-scanner.step5.paused.resume') || 'Resume'}</span>
+			<span>{i18n.t('routes/apps/token-balance-scanner.step5.paused.resume') || 'Resume'}</span>
 		</button>
 		<button class="reset-btn" onclick={onNewScan}>
 			<RefreshCw size={20} />
-			<span>{i18n.t('token-balance-scanner.step5.paused.new_scan') || 'New Scan'}</span>
+			<span>{i18n.t('routes/apps/token-balance-scanner.step5.paused.new_scan') || 'New Scan'}</span>
 		</button>
 	</div>
 </div>

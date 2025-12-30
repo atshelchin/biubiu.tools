@@ -26,7 +26,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'usdt-tether',
 		name: 'Tether (USDT)',
-		descriptionKey: 'stablecoin.tools.usdt_tether.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.usdt_tether.description',
 		url: 'https://tether.to',
 		icon: CircleDollarSign,
 		category: 'stablecoin',
@@ -37,7 +37,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'usdc-circle',
 		name: 'USD Coin (USDC)',
-		descriptionKey: 'stablecoin.tools.usdc_circle.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.usdc_circle.description',
 		url: 'https://www.circle.com/usdc',
 		icon: CircleDollarSign,
 		category: 'stablecoin',
@@ -48,7 +48,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'dai-makerdao',
 		name: 'DAI (MakerDAO)',
-		descriptionKey: 'stablecoin.tools.dai_makerdao.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.dai_makerdao.description',
 		url: 'https://makerdao.com',
 		icon: Landmark,
 		category: 'stablecoin',
@@ -59,7 +59,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'frax',
 		name: 'Frax (FRAX)',
-		descriptionKey: 'stablecoin.tools.frax.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.frax.description',
 		url: 'https://frax.finance',
 		icon: Coins,
 		category: 'stablecoin',
@@ -70,7 +70,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'usde-ethena',
 		name: 'USDe (Ethena)',
-		descriptionKey: 'stablecoin.tools.usde_ethena.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.usde_ethena.description',
 		url: 'https://ethena.fi',
 		icon: TrendingUp,
 		category: 'stablecoin',
@@ -81,7 +81,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'usdd-tron',
 		name: 'USDD (Tron)',
-		descriptionKey: 'stablecoin.tools.usdd_tron.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.usdd_tron.description',
 		url: 'https://usdd.io',
 		icon: CircleDollarSign,
 		category: 'stablecoin',
@@ -92,7 +92,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'tusd',
 		name: 'TrueUSD (TUSD)',
-		descriptionKey: 'stablecoin.tools.tusd.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.tusd.description',
 		url: 'https://trueusd.com',
 		icon: Shield,
 		category: 'stablecoin',
@@ -103,7 +103,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'busd-paxos',
 		name: 'Binance USD (BUSD)',
-		descriptionKey: 'stablecoin.tools.busd_paxos.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.busd_paxos.description',
 		url: 'https://paxos.com/busd',
 		icon: Building2,
 		category: 'stablecoin',
@@ -114,7 +114,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'pyusd-paypal',
 		name: 'PayPal USD (PYUSD)',
-		descriptionKey: 'stablecoin.tools.pyusd_paypal.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.pyusd_paypal.description',
 		url: 'https://www.paypal.com/pyusd',
 		icon: Globe,
 		category: 'stablecoin',
@@ -125,7 +125,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'gusd-gemini',
 		name: 'Gemini Dollar (GUSD)',
-		descriptionKey: 'stablecoin.tools.gusd_gemini.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.gusd_gemini.description',
 		url: 'https://www.gemini.com/dollar',
 		icon: Shield,
 		category: 'stablecoin',
@@ -136,7 +136,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'usdp-paxos',
 		name: 'Pax Dollar (USDP)',
-		descriptionKey: 'stablecoin.tools.usdp_paxos.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.usdp_paxos.description',
 		url: 'https://paxos.com/usdp',
 		icon: Shield,
 		category: 'stablecoin',
@@ -148,7 +148,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'sdai-spark',
 		name: 'sDAI (Spark)',
-		descriptionKey: 'stablecoin.tools.sdai_spark.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.sdai_spark.description',
 		url: 'https://spark.fi',
 		icon: Percent,
 		category: 'stablecoin',
@@ -159,7 +159,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'susde-ethena',
 		name: 'sUSDe (Ethena)',
-		descriptionKey: 'stablecoin.tools.susde_ethena.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.susde_ethena.description',
 		url: 'https://ethena.fi',
 		icon: Percent,
 		category: 'stablecoin',
@@ -170,7 +170,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'sfrax',
 		name: 'sFRAX (Frax)',
-		descriptionKey: 'stablecoin.tools.sfrax.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.sfrax.description',
 		url: 'https://app.frax.finance/sfrax',
 		icon: Percent,
 		category: 'stablecoin',
@@ -182,7 +182,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'eurs-stasis',
 		name: 'STASIS EURO (EURS)',
-		descriptionKey: 'stablecoin.tools.eurs_stasis.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.eurs_stasis.description',
 		url: 'https://stasis.net',
 		icon: Globe,
 		category: 'stablecoin',
@@ -193,7 +193,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'eurc-circle',
 		name: 'Euro Coin (EURC)',
-		descriptionKey: 'stablecoin.tools.eurc_circle.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.eurc_circle.description',
 		url: 'https://www.circle.com/eurc',
 		icon: Globe,
 		category: 'stablecoin',
@@ -204,7 +204,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'eurt-tether',
 		name: 'Tether EURt',
-		descriptionKey: 'stablecoin.tools.eurt_tether.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.eurt_tether.description',
 		url: 'https://tether.to/eurt',
 		icon: Globe,
 		category: 'stablecoin',
@@ -215,7 +215,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'xsgd-straitsx',
 		name: 'XSGD (StraitsX)',
-		descriptionKey: 'stablecoin.tools.xsgd_straitsx.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.xsgd_straitsx.description',
 		url: 'https://www.straitsx.com/xsgd',
 		icon: Globe,
 		category: 'stablecoin',
@@ -227,7 +227,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'lusd-liquity',
 		name: 'LUSD (Liquity)',
-		descriptionKey: 'stablecoin.tools.lusd_liquity.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.lusd_liquity.description',
 		url: 'https://www.liquity.org',
 		icon: Lock,
 		category: 'stablecoin',
@@ -238,7 +238,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'susd-synthetix',
 		name: 'sUSD (Synthetix)',
-		descriptionKey: 'stablecoin.tools.susd_synthetix.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.susd_synthetix.description',
 		url: 'https://synthetix.io',
 		icon: Zap,
 		category: 'stablecoin',
@@ -249,7 +249,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'rai-reflexer',
 		name: 'RAI (Reflexer)',
-		descriptionKey: 'stablecoin.tools.rai_reflexer.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.rai_reflexer.description',
 		url: 'https://reflexer.finance',
 		icon: Coins,
 		category: 'stablecoin',
@@ -260,7 +260,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'mim-abracadabra',
 		name: 'MIM (Abracadabra)',
-		descriptionKey: 'stablecoin.tools.mim_abracadabra.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.mim_abracadabra.description',
 		url: 'https://abracadabra.money',
 		icon: Coins,
 		category: 'stablecoin',
@@ -271,7 +271,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'crvusd-curve',
 		name: 'crvUSD (Curve)',
-		descriptionKey: 'stablecoin.tools.crvusd_curve.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.crvusd_curve.description',
 		url: 'https://crvusd.curve.fi',
 		icon: Coins,
 		category: 'stablecoin',
@@ -282,7 +282,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'gho-aave',
 		name: 'GHO (Aave)',
-		descriptionKey: 'stablecoin.tools.gho_aave.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.gho_aave.description',
 		url: 'https://gho.aave.com',
 		icon: Landmark,
 		category: 'stablecoin',
@@ -294,7 +294,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'defillama-stablecoins',
 		name: 'DeFiLlama Stablecoins',
-		descriptionKey: 'stablecoin.tools.defillama_stablecoins.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.defillama_stablecoins.description',
 		url: 'https://defillama.com/stablecoins',
 		icon: TrendingUp,
 		category: 'stablecoin',
@@ -304,7 +304,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'coingecko-stablecoins',
 		name: 'CoinGecko Stablecoins',
-		descriptionKey: 'stablecoin.tools.coingecko_stablecoins.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.coingecko_stablecoins.description',
 		url: 'https://www.coingecko.com/en/categories/stablecoins',
 		icon: TrendingUp,
 		category: 'stablecoin',
@@ -316,7 +316,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'fdusd',
 		name: 'First Digital USD (FDUSD)',
-		descriptionKey: 'stablecoin.tools.fdusd.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.fdusd.description',
 		url: 'https://firstdigitallabs.com',
 		icon: CircleDollarSign,
 		category: 'stablecoin',
@@ -327,7 +327,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'usual-usd0',
 		name: 'USD0 (Usual)',
-		descriptionKey: 'stablecoin.tools.usual_usd0.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.usual_usd0.description',
 		url: 'https://usual.money',
 		icon: CircleDollarSign,
 		category: 'stablecoin',
@@ -338,7 +338,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'mountain-usdm',
 		name: 'USDM (Mountain)',
-		descriptionKey: 'stablecoin.tools.mountain_usdm.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.mountain_usdm.description',
 		url: 'https://mountainprotocol.com',
 		icon: Percent,
 		category: 'stablecoin',
@@ -349,7 +349,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'ageur-angle',
 		name: 'EURA (Angle)',
-		descriptionKey: 'stablecoin.tools.ageur_angle.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.ageur_angle.description',
 		url: 'https://angle.money',
 		icon: Globe,
 		category: 'stablecoin',
@@ -360,7 +360,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'mkusd-prisma',
 		name: 'mkUSD (Prisma)',
-		descriptionKey: 'stablecoin.tools.mkusd_prisma.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.mkusd_prisma.description',
 		url: 'https://prismafinance.com',
 		icon: Coins,
 		category: 'stablecoin',
@@ -371,7 +371,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'ultra-usd',
 		name: 'Ultra USDu',
-		descriptionKey: 'stablecoin.tools.ultra_usd.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.ultra_usd.description',
 		url: 'https://www.ultraissuance.com',
 		icon: CircleDollarSign,
 		category: 'stablecoin',
@@ -382,7 +382,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'dola-inverse',
 		name: 'DOLA (Inverse)',
-		descriptionKey: 'stablecoin.tools.dola_inverse.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.dola_inverse.description',
 		url: 'https://inverse.finance',
 		icon: Coins,
 		category: 'stablecoin',
@@ -393,7 +393,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'hai-reflexer',
 		name: "HAI (Let's Get HAI)",
-		descriptionKey: 'stablecoin.tools.hai_reflexer.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.hai_reflexer.description',
 		url: 'https://letsgethai.com',
 		icon: Coins,
 		category: 'stablecoin',
@@ -404,7 +404,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'usdk-okx',
 		name: 'USDK (OKX)',
-		descriptionKey: 'stablecoin.tools.usdk_okx.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.usdk_okx.description',
 		url: 'https://www.okx.com',
 		icon: CircleDollarSign,
 		category: 'stablecoin',
@@ -415,7 +415,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'zusd-zeta',
 		name: 'ZUSD (Zeta)',
-		descriptionKey: 'stablecoin.tools.zusd_zeta.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.zusd_zeta.description',
 		url: 'https://zetachain.com',
 		icon: CircleDollarSign,
 		category: 'stablecoin',
@@ -426,7 +426,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'bob-stablecoin',
 		name: 'BOB',
-		descriptionKey: 'stablecoin.tools.bob_stablecoin.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.bob_stablecoin.description',
 		url: 'https://bob.money',
 		icon: Coins,
 		category: 'stablecoin',
@@ -437,7 +437,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'usdx-kava',
 		name: 'USDX (Kava)',
-		descriptionKey: 'stablecoin.tools.usdx_kava.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.usdx_kava.description',
 		url: 'https://kava.io',
 		icon: Coins,
 		category: 'stablecoin',
@@ -448,7 +448,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'isc-interest',
 		name: 'ISC (Interest)',
-		descriptionKey: 'stablecoin.tools.isc_interest.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.isc_interest.description',
 		url: 'https://interestprotocol.io',
 		icon: Percent,
 		category: 'stablecoin',
@@ -459,7 +459,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'cusd-celo',
 		name: 'cUSD (Celo)',
-		descriptionKey: 'stablecoin.tools.cusd_celo.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.cusd_celo.description',
 		url: 'https://celo.org',
 		icon: CircleDollarSign,
 		category: 'stablecoin',
@@ -470,7 +470,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'ceur-celo',
 		name: 'cEUR (Celo)',
-		descriptionKey: 'stablecoin.tools.ceur_celo.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.ceur_celo.description',
 		url: 'https://celo.org',
 		icon: Globe,
 		category: 'stablecoin',
@@ -481,7 +481,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'flexusd',
 		name: 'flexUSD',
-		descriptionKey: 'stablecoin.tools.flexusd.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.flexusd.description',
 		url: 'https://coinflex.com',
 		icon: Percent,
 		category: 'stablecoin',
@@ -492,7 +492,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'alusd-alchemix',
 		name: 'alUSD (Alchemix)',
-		descriptionKey: 'stablecoin.tools.alusd_alchemix.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.alusd_alchemix.description',
 		url: 'https://alchemix.fi',
 		icon: Zap,
 		category: 'stablecoin',
@@ -503,7 +503,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'usd-plus',
 		name: 'USD+ (Overnight)',
-		descriptionKey: 'stablecoin.tools.usd_plus.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.usd_plus.description',
 		url: 'https://overnight.fi',
 		icon: Percent,
 		category: 'stablecoin',
@@ -514,7 +514,7 @@ export const stablecoinTools: ExternalTool[] = [
 	{
 		id: 'ust-wormhole',
 		name: 'UST (Wormhole)',
-		descriptionKey: 'stablecoin.tools.ust_wormhole.description',
+		descriptionKey: 'routes/apps/chain-tools/stablecoin.tools.ust_wormhole.description',
 		url: 'https://wormhole.com',
 		icon: CircleDollarSign,
 		category: 'stablecoin',

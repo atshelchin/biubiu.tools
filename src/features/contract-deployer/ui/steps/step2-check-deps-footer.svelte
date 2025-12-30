@@ -11,4 +11,4 @@
 	const isChecking = $derived(step2State.isChecking);
 </script>
 
-<DependencyCheckFooter i18nPrefix="contract-deployer" {summary} {isChecking} />
+<DependencyCheckFooter i18nPrefix="routes/apps/contract-deployer" {summary} {isChecking} />

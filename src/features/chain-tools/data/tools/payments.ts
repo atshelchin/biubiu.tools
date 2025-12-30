@@ -17,7 +17,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'moonpay',
 		name: 'MoonPay',
-		descriptionKey: 'payments.tools.moonpay.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.moonpay.description',
 		url: 'https://www.moonpay.com',
 		icon: CreditCard,
 		category: 'payments',
@@ -28,7 +28,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'transak',
 		name: 'Transak',
-		descriptionKey: 'payments.tools.transak.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.transak.description',
 		url: 'https://transak.com',
 		icon: CreditCard,
 		category: 'payments',
@@ -39,7 +39,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'ramp',
 		name: 'Ramp',
-		descriptionKey: 'payments.tools.ramp.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.ramp.description',
 		url: 'https://ramp.network',
 		icon: ArrowUpDown,
 		category: 'payments',
@@ -50,7 +50,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'onmeta',
 		name: 'Onmeta',
-		descriptionKey: 'payments.tools.onmeta.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.onmeta.description',
 		url: 'https://onmeta.in',
 		icon: CreditCard,
 		category: 'payments',
@@ -61,7 +61,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'poko-pay',
 		name: 'Poko',
-		descriptionKey: 'payments.tools.poko_pay.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.poko_pay.description',
 		url: 'https://poko.com',
 		icon: CreditCard,
 		category: 'payments',
@@ -73,7 +73,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'coinbase-commerce',
 		name: 'Coinbase Commerce',
-		descriptionKey: 'payments.tools.coinbase_commerce.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.coinbase_commerce.description',
 		url: 'https://commerce.coinbase.com',
 		icon: CreditCard,
 		category: 'payments',
@@ -83,7 +83,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'bitpay',
 		name: 'BitPay',
-		descriptionKey: 'payments.tools.bitpay.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.bitpay.description',
 		url: 'https://bitpay.com',
 		icon: CreditCard,
 		category: 'payments',
@@ -94,7 +94,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'nowpayments',
 		name: 'NOWPayments',
-		descriptionKey: 'payments.tools.nowpayments.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.nowpayments.description',
 		url: 'https://nowpayments.io',
 		icon: CreditCard,
 		category: 'payments',
@@ -104,7 +104,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'sphere-pay',
 		name: 'Sphere',
-		descriptionKey: 'payments.tools.sphere_pay.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.sphere_pay.description',
 		url: 'https://spherepay.co',
 		icon: CreditCard,
 		category: 'payments',
@@ -115,7 +115,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'helio-pay',
 		name: 'Helio',
-		descriptionKey: 'payments.tools.helio_pay.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.helio_pay.description',
 		url: 'https://hel.io',
 		icon: CreditCard,
 		category: 'payments',
@@ -128,7 +128,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'request-network',
 		name: 'Request Network',
-		descriptionKey: 'payments.tools.request_network.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.request_network.description',
 		url: 'https://request.network',
 		icon: Receipt,
 		category: 'payments',
@@ -139,7 +139,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'loopcrypto',
 		name: 'Loop Crypto',
-		descriptionKey: 'payments.tools.loopcrypto.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.loopcrypto.description',
 		url: 'https://loopcrypto.xyz',
 		icon: Receipt,
 		category: 'payments',
@@ -152,7 +152,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'superfluid',
 		name: 'Superfluid',
-		descriptionKey: 'payments.tools.superfluid.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.superfluid.description',
 		url: 'https://superfluid.finance',
 		icon: Droplets,
 		category: 'payments',
@@ -163,7 +163,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'sablier',
 		name: 'Sablier',
-		descriptionKey: 'payments.tools.sablier.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.sablier.description',
 		url: 'https://sablier.com',
 		icon: Droplets,
 		category: 'payments',
@@ -174,7 +174,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'zebec-pay',
 		name: 'Zebec',
-		descriptionKey: 'payments.tools.zebec_pay.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.zebec_pay.description',
 		url: 'https://zebec.io',
 		icon: CreditCard,
 		category: 'payments',
@@ -185,7 +185,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'mean-finance',
 		name: 'Mean Finance',
-		descriptionKey: 'payments.tools.mean_finance.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.mean_finance.description',
 		url: 'https://mean.finance',
 		icon: RefreshCw,
 		category: 'payments',
@@ -198,7 +198,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'coinshift',
 		name: 'Coinshift',
-		descriptionKey: 'payments.tools.coinshift.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.coinshift.description',
 		url: 'https://coinshift.xyz',
 		icon: Building2,
 		category: 'payments',
@@ -209,7 +209,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'utopia-labs',
 		name: 'Utopia Labs',
-		descriptionKey: 'payments.tools.utopia_labs.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.utopia_labs.description',
 		url: 'https://www.utopialabs.com',
 		icon: Building2,
 		category: 'payments',
@@ -220,7 +220,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'utila-pay',
 		name: 'Utila',
-		descriptionKey: 'payments.tools.utila_pay.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.utila_pay.description',
 		url: 'https://utila.io',
 		icon: CreditCard,
 		category: 'payments',
@@ -232,7 +232,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'gnosis-pay',
 		name: 'Gnosis Pay',
-		descriptionKey: 'payments.tools.gnosis_pay.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.gnosis_pay.description',
 		url: 'https://gnosispay.com',
 		icon: CreditCard,
 		category: 'payments',
@@ -243,7 +243,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'gnosis-card',
 		name: 'Gnosis Card',
-		descriptionKey: 'payments.tools.gnosis_card.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.gnosis_card.description',
 		url: 'https://gnosispay.com',
 		icon: CreditCard,
 		category: 'payments',
@@ -254,7 +254,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'holyheld',
 		name: 'Holyheld',
-		descriptionKey: 'payments.tools.holyheld.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.holyheld.description',
 		url: 'https://holyheld.com',
 		icon: CreditCard,
 		category: 'payments',
@@ -264,7 +264,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'fusepay',
 		name: 'Fuse Pay',
-		descriptionKey: 'payments.tools.fusepay.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.fusepay.description',
 		url: 'https://fuse.io/fuse-pay',
 		icon: CreditCard,
 		category: 'payments',
@@ -277,7 +277,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'spritz',
 		name: 'Spritz',
-		descriptionKey: 'payments.tools.spritz.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.spritz.description',
 		url: 'https://spritz.finance',
 		icon: Banknote,
 		category: 'payments',
@@ -288,7 +288,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'monerium',
 		name: 'Monerium',
-		descriptionKey: 'payments.tools.monerium.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.monerium.description',
 		url: 'https://monerium.com',
 		icon: Banknote,
 		category: 'payments',
@@ -301,7 +301,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'reveel',
 		name: 'Reveel',
-		descriptionKey: 'payments.tools.reveel.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.reveel.description',
 		url: 'https://reveel.co',
 		icon: Banknote,
 		category: 'payments',
@@ -312,7 +312,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'splits',
 		name: '0xSplits',
-		descriptionKey: 'payments.tools.splits.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.splits.description',
 		url: 'https://splits.org',
 		icon: Banknote,
 		category: 'payments',
@@ -325,7 +325,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'wyre',
 		name: 'Wyre',
-		descriptionKey: 'payments.tools.wyre.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.wyre.description',
 		url: 'https://www.sendwyre.com',
 		icon: CreditCard,
 		category: 'payments',
@@ -336,7 +336,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'banxa',
 		name: 'Banxa',
-		descriptionKey: 'payments.tools.banxa.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.banxa.description',
 		url: 'https://banxa.com',
 		icon: CreditCard,
 		category: 'payments',
@@ -347,7 +347,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'simplex',
 		name: 'Simplex',
-		descriptionKey: 'payments.tools.simplex.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.simplex.description',
 		url: 'https://www.simplex.com',
 		icon: CreditCard,
 		category: 'payments',
@@ -358,7 +358,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'sardine',
 		name: 'Sardine',
-		descriptionKey: 'payments.tools.sardine.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.sardine.description',
 		url: 'https://sardine.ai',
 		icon: CreditCard,
 		category: 'payments',
@@ -368,7 +368,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'coinflow',
 		name: 'Coinflow',
-		descriptionKey: 'payments.tools.coinflow.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.coinflow.description',
 		url: 'https://coinflow.cash',
 		icon: CreditCard,
 		category: 'payments',
@@ -379,7 +379,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'slash-fi',
 		name: 'Slash',
-		descriptionKey: 'payments.tools.slash_fi.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.slash_fi.description',
 		url: 'https://slash.fi',
 		icon: CreditCard,
 		category: 'payments',
@@ -390,7 +390,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'alchemy-pay',
 		name: 'Alchemy Pay',
-		descriptionKey: 'payments.tools.alchemy_pay.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.alchemy_pay.description',
 		url: 'https://alchemypay.org',
 		icon: CreditCard,
 		category: 'payments',
@@ -401,7 +401,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'llamapay',
 		name: 'LlamaPay',
-		descriptionKey: 'payments.tools.llamapay.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.llamapay.description',
 		url: 'https://llamapay.io',
 		icon: Droplets,
 		category: 'payments',
@@ -412,7 +412,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'hedgey',
 		name: 'Hedgey',
-		descriptionKey: 'payments.tools.hedgey.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.hedgey.description',
 		url: 'https://hedgey.finance',
 		icon: Droplets,
 		category: 'payments',
@@ -423,7 +423,7 @@ export const paymentsTools: ExternalTool[] = [
 	{
 		id: 'parcel',
 		name: 'Parcel',
-		descriptionKey: 'payments.tools.parcel.description',
+		descriptionKey: 'routes/apps/chain-tools/payments.tools.parcel.description',
 		url: 'https://parcel.money',
 		icon: Building2,
 		category: 'payments',

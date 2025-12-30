@@ -14,8 +14,8 @@
 		meta: data.meta,
 		structuredData: data.structuredData,
 		steps: data.steps,
-		appTitle: i18n.t('contract-events-scanner.title'),
-		appDescription: i18n.t('contract-events-scanner.description'),
+		appTitle: i18n.t('routes/apps/contract-events-scanner.title'),
+		appDescription: i18n.t('routes/apps/contract-events-scanner.description'),
 		walletConnect: {
 			chains: [mainnet, base, bsc, polygon, arbitrum, optimism],
 			storageKey: 'biubiu-tools-contract-events-scanner'

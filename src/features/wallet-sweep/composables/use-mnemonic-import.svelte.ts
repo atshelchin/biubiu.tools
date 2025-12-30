@@ -33,12 +33,12 @@ export function useMnemonicImport(
 
 	async function generateAddresses() {
 		if (!mnemonicText.trim()) {
-			errorMessage = t('wallet-sweep.step4.content.mnemonic.error_empty');
+			errorMessage = t('routes/apps/wallet-sweep.step4.content.mnemonic.error_empty');
 			return { success: false };
 		}
 
 		if (!validateMnemonicPhrase(mnemonicText.trim())) {
-			errorMessage = t('wallet-sweep.step4.content.mnemonic.error_invalid');
+			errorMessage = t('routes/apps/wallet-sweep.step4.content.mnemonic.error_invalid');
 			return { success: false };
 		}
 
@@ -57,7 +57,7 @@ export function useMnemonicImport(
 			if (pathType === 'sequential') {
 				// Sequential mode validation
 				if (startIndex < 0 || endIndex < startIndex) {
-					errorMessage = t('wallet-sweep.step4.content.mnemonic.error_range');
+					errorMessage = t('routes/apps/wallet-sweep.step4.content.mnemonic.error_range');
 					isGenerating = false;
 					return { success: false };
 				}
@@ -124,7 +124,7 @@ export function useMnemonicImport(
 			errorMessage =
 				error instanceof Error
 					? error.message
-					: t('wallet-sweep.step4.content.errors.generate_failed');
+					: t('routes/apps/wallet-sweep.step4.content.errors.generate_failed');
 			return { success: false };
 		} finally {
 			isGenerating = false;

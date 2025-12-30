@@ -20,7 +20,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'ankr',
 		name: 'Ankr',
-		descriptionKey: 'infra.tools.ankr.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.ankr.description',
 		url: 'https://www.ankr.com',
 		icon: Network,
 		category: 'infra',
@@ -31,7 +31,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'chainstack',
 		name: 'Chainstack',
-		descriptionKey: 'infra.tools.chainstack.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.chainstack.description',
 		url: 'https://chainstack.com',
 		icon: HardDrive,
 		category: 'infra',
@@ -42,7 +42,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'blast-api',
 		name: 'Blast API',
-		descriptionKey: 'infra.tools.blast_api.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.blast_api.description',
 		url: 'https://blastapi.io',
 		icon: Zap,
 		category: 'infra',
@@ -53,7 +53,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'grove',
 		name: 'Grove (POKT)',
-		descriptionKey: 'infra.tools.grove.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.grove.description',
 		url: 'https://grove.city',
 		icon: Server,
 		category: 'infra',
@@ -64,7 +64,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'drpc',
 		name: 'dRPC',
-		descriptionKey: 'infra.tools.drpc.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.drpc.description',
 		url: 'https://drpc.org',
 		icon: Server,
 		category: 'infra',
@@ -75,7 +75,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'nodies',
 		name: 'Nodies',
-		descriptionKey: 'infra.tools.nodies.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.nodies.description',
 		url: 'https://nodies.app',
 		icon: Server,
 		category: 'infra',
@@ -86,7 +86,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'llamanodes',
 		name: 'LlamaNodes',
-		descriptionKey: 'infra.tools.llamanodes.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.llamanodes.description',
 		url: 'https://llamanodes.com',
 		icon: Server,
 		category: 'infra',
@@ -97,7 +97,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'tenderly-node',
 		name: 'Tenderly Node',
-		descriptionKey: 'infra.tools.tenderly_node.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.tenderly_node.description',
 		url: 'https://tenderly.co/web3-gateway',
 		icon: Server,
 		category: 'infra',
@@ -108,7 +108,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'getblock',
 		name: 'GetBlock',
-		descriptionKey: 'infra.tools.getblock.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.getblock.description',
 		url: 'https://getblock.io',
 		icon: Server,
 		category: 'infra',
@@ -118,7 +118,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'public-node',
 		name: 'PublicNode',
-		descriptionKey: 'infra.tools.public_node.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.public_node.description',
 		url: 'https://publicnode.com',
 		icon: Server,
 		category: 'infra',
@@ -130,7 +130,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'helius-rpc',
 		name: 'Helius',
-		descriptionKey: 'infra.tools.helius_rpc.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.helius_rpc.description',
 		url: 'https://helius.dev',
 		icon: Server,
 		category: 'infra',
@@ -141,7 +141,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'triton-rpc',
 		name: 'Triton',
-		descriptionKey: 'infra.tools.triton_rpc.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.triton_rpc.description',
 		url: 'https://triton.one',
 		icon: Server,
 		category: 'infra',
@@ -152,7 +152,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'syndica-rpc',
 		name: 'Syndica',
-		descriptionKey: 'infra.tools.syndica_rpc.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.syndica_rpc.description',
 		url: 'https://syndica.io',
 		icon: Server,
 		category: 'infra',
@@ -165,7 +165,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'lava-network',
 		name: 'Lava Network',
-		descriptionKey: 'infra.tools.lava_network.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.lava_network.description',
 		url: 'https://lavanet.xyz',
 		icon: Server,
 		category: 'infra',
@@ -175,7 +175,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'erpc-network',
 		name: 'eRPC',
-		descriptionKey: 'infra.tools.erpc_network.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.erpc_network.description',
 		url: 'https://erpc.cloud',
 		icon: Server,
 		category: 'infra',
@@ -185,7 +185,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'thirdweb-rpc',
 		name: 'thirdweb RPC',
-		descriptionKey: 'infra.tools.thirdweb_rpc.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.thirdweb_rpc.description',
 		url: 'https://thirdweb.com/rpc',
 		icon: Server,
 		category: 'infra',
@@ -195,7 +195,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'tatum-rpc',
 		name: 'Tatum',
-		descriptionKey: 'infra.tools.tatum_rpc.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.tatum_rpc.description',
 		url: 'https://tatum.io',
 		icon: Server,
 		category: 'infra',
@@ -205,7 +205,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'chainstack-rpc',
 		name: 'Chainstack',
-		descriptionKey: 'infra.tools.chainstack_rpc.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.chainstack_rpc.description',
 		url: 'https://chainstack.com',
 		icon: Server,
 		category: 'infra',
@@ -215,7 +215,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'blockpi',
 		name: 'BlockPI',
-		descriptionKey: 'infra.tools.blockpi.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.blockpi.description',
 		url: 'https://blockpi.io',
 		icon: Server,
 		category: 'infra',
@@ -225,7 +225,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'nodereal',
 		name: 'NodeReal',
-		descriptionKey: 'infra.tools.nodereal.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.nodereal.description',
 		url: 'https://nodereal.io',
 		icon: Server,
 		category: 'infra',
@@ -238,7 +238,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'ipfs',
 		name: 'IPFS',
-		descriptionKey: 'infra.tools.ipfs.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.ipfs.description',
 		url: 'https://ipfs.tech',
 		icon: Globe,
 		category: 'infra',
@@ -248,7 +248,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'arweave',
 		name: 'Arweave',
-		descriptionKey: 'infra.tools.arweave.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.arweave.description',
 		url: 'https://www.arweave.org',
 		icon: HardDrive,
 		category: 'infra',
@@ -258,7 +258,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'filecoin',
 		name: 'Filecoin',
-		descriptionKey: 'infra.tools.filecoin.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.filecoin.description',
 		url: 'https://filecoin.io',
 		icon: HardDrive,
 		category: 'infra',
@@ -268,7 +268,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'ceramic',
 		name: 'Ceramic',
-		descriptionKey: 'infra.tools.ceramic.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.ceramic.description',
 		url: 'https://ceramic.network',
 		icon: Database,
 		category: 'infra',
@@ -280,7 +280,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'push-protocol',
 		name: 'Push Protocol',
-		descriptionKey: 'infra.tools.push_protocol.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.push_protocol.description',
 		url: 'https://push.org',
 		icon: Bell,
 		category: 'infra',
@@ -291,7 +291,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'xmtp',
 		name: 'XMTP',
-		descriptionKey: 'infra.tools.xmtp.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.xmtp.description',
 		url: 'https://xmtp.org',
 		icon: MessageSquare,
 		category: 'infra',
@@ -302,7 +302,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'walletconnect',
 		name: 'WalletConnect',
-		descriptionKey: 'infra.tools.walletconnect.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.walletconnect.description',
 		url: 'https://walletconnect.com',
 		icon: Link2,
 		category: 'infra',
@@ -315,7 +315,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'flashbots-protect',
 		name: 'Flashbots Protect',
-		descriptionKey: 'infra.tools.flashbots_protect.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.flashbots_protect.description',
 		url: 'https://protect.flashbots.net',
 		icon: Shield,
 		category: 'infra',
@@ -326,7 +326,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'mev-blocker',
 		name: 'MEV Blocker',
-		descriptionKey: 'infra.tools.mev_blocker.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.mev_blocker.description',
 		url: 'https://mevblocker.io',
 		icon: Shield,
 		category: 'infra',
@@ -339,7 +339,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'switchboard',
 		name: 'Switchboard',
-		descriptionKey: 'infra.tools.switchboard.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.switchboard.description',
 		url: 'https://switchboard.xyz',
 		icon: Server,
 		category: 'infra',
@@ -350,7 +350,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'dia',
 		name: 'DIA',
-		descriptionKey: 'infra.tools.dia.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.dia.description',
 		url: 'https://diadata.org',
 		icon: Server,
 		category: 'infra',
@@ -361,7 +361,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'band_protocol',
 		name: 'Band Protocol',
-		descriptionKey: 'infra.tools.band_protocol.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.band_protocol.description',
 		url: 'https://bandprotocol.com',
 		icon: Server,
 		category: 'infra',
@@ -372,7 +372,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'tellor',
 		name: 'Tellor',
-		descriptionKey: 'infra.tools.tellor.description',
+		descriptionKey: 'routes/apps/chain-tools/infra.tools.tellor.description',
 		url: 'https://tellor.io',
 		icon: Server,
 		category: 'infra',

@@ -11,7 +11,7 @@ import { stepComponents } from './ui/steps';
 
 export const tokenDeployerTool = defineStepTool({
 	id: 'token-deployer',
-	i18nPrefix: 'token-deployer',
+	i18nPrefix: 'routes/apps/token-deployer',
 
 	// Steps are provided by +page.ts for SEO structured data
 	// These are placeholder steps that will be overridden

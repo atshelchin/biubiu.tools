@@ -33,10 +33,10 @@
 		</div>
 		<div class="mode-content">
 			<h4 class="mode-title">
-				{i18n.t('one-to-many-transfer.step5.mode.self.title')}
+				{i18n.t('routes/apps/one-to-many-transfer.step5.mode.self.title')}
 			</h4>
 			<p class="mode-description">
-				{i18n.t('one-to-many-transfer.step5.mode.self.description')}
+				{i18n.t('routes/apps/one-to-many-transfer.step5.mode.self.description')}
 			</p>
 		</div>
 		<div class="mode-indicator">
@@ -56,10 +56,10 @@
 		</div>
 		<div class="mode-content">
 			<h4 class="mode-title">
-				{i18n.t('one-to-many-transfer.step5.mode.delegated.title')}
+				{i18n.t('routes/apps/one-to-many-transfer.step5.mode.delegated.title')}
 			</h4>
 			<p class="mode-description">
-				{i18n.t('one-to-many-transfer.step5.mode.delegated.description')}
+				{i18n.t('routes/apps/one-to-many-transfer.step5.mode.delegated.description')}
 			</p>
 		</div>
 		<div class="mode-indicator">
@@ -70,7 +70,7 @@
 	{#if value === 'delegated'}
 		<div class="info-banner">
 			<Info size={16} />
-			<span>{i18n.t('one-to-many-transfer.step5.mode.delegated.info')}</span>
+			<span>{i18n.t('routes/apps/one-to-many-transfer.step5.mode.delegated.info')}</span>
 		</div>
 	{/if}
 </div>

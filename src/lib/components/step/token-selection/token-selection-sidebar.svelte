@@ -7,7 +7,7 @@
 	 * @example
 	 * ```svelte
 	 * <TokenSelectionSidebar
-	 *   i18nPrefix="wallet-sweep"
+	 *   i18nPrefix="routes/apps/wallet-sweep"
 	 *   selectedCount={state.selectedTokenIds.size}
 	 * />
 	 * ```

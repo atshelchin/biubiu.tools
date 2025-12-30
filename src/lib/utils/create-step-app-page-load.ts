@@ -127,38 +127,41 @@ export function createStepAppPageLoad(config: StepAppPageConfig) {
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		const t = (key: string): string => serverT(key as any);
 
+		// i18n key prefix - translations are now in routes/apps/{toolId}.json
+		const i18nPrefix = `routes/apps/${toolId}`;
+
 		const canonical = url.origin + url.pathname;
 		const image = `${url.origin}/${ogImage}`;
 
 		// Generate step data from i18n
 		const steps: HowToStepData[] = Array.from({ length: stepCount }, (_, i) => ({
-			name: t(`${toolId}.seo.step_${i + 1}_name`),
-			text: t(`${toolId}.seo.step_${i + 1}_text`),
-			description: t(`${toolId}.seo.step_${i + 1}_description`)
+			name: t(`${i18nPrefix}.seo.step_${i + 1}_name`),
+			text: t(`${i18nPrefix}.seo.step_${i + 1}_text`),
+			description: t(`${i18nPrefix}.seo.step_${i + 1}_description`)
 		}));
 
 		// Generate features list from i18n
 		const features = Array.from({ length: featureCount }, (_, i) =>
-			t(`${toolId}.seo.feature_${i + 1}`)
+			t(`${i18nPrefix}.seo.feature_${i + 1}`)
 		);
 
 		// Generate howTo tools list from i18n
 		const tools = Array.from({ length: howToToolCount }, (_, i) =>
-			t(`${toolId}.seo.howto_tool_${i + 1}`)
+			t(`${i18nPrefix}.seo.howto_tool_${i + 1}`)
 		);
 
 		// Create WebApp structured data
 		const webAppData = createWebAppData({
-			name: t(`${toolId}.seo.webapp_name`),
-			description: t(`${toolId}.seo.webapp_description`),
+			name: t(`${i18nPrefix}.seo.webapp_name`),
+			description: t(`${i18nPrefix}.seo.webapp_description`),
 			canonical,
 			features
 		});
 
 		// Create HowTo structured data
 		const howToData = createHowToData({
-			name: t(`${toolId}.seo.howto_name`),
-			description: t(`${toolId}.seo.howto_description`),
+			name: t(`${i18nPrefix}.seo.howto_name`),
+			description: t(`${i18nPrefix}.seo.howto_description`),
 			canonical,
 			image,
 			steps,
@@ -176,9 +179,9 @@ export function createStepAppPageLoad(config: StepAppPageConfig) {
 
 		return {
 			meta: {
-				title: t(`${toolId}.seo.page_title`),
-				description: t(`${toolId}.seo.page_description`),
-				keywords: t(`${toolId}.seo.keywords`),
+				title: t(`${i18nPrefix}.seo.page_title`),
+				description: t(`${i18nPrefix}.seo.page_description`),
+				keywords: t(`${i18nPrefix}.seo.keywords`),
 				canonical,
 				type: 'website' as const,
 				image,

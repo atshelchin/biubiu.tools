@@ -68,13 +68,13 @@
 	function getPrivacyLabel(tracking: RpcEndpoint['tracking']): string {
 		switch (tracking) {
 			case 'none':
-				return i18n.t('chainlist.rpc.privacy_none');
+				return i18n.t('routes/apps/chainlist.rpc.privacy_none');
 			case 'limited':
-				return i18n.t('chainlist.rpc.privacy_limited');
+				return i18n.t('routes/apps/chainlist.rpc.privacy_limited');
 			case 'yes':
-				return i18n.t('chainlist.rpc.privacy_yes');
+				return i18n.t('routes/apps/chainlist.rpc.privacy_yes');
 			default:
-				return i18n.t('chainlist.rpc.privacy_unknown');
+				return i18n.t('routes/apps/chainlist.rpc.privacy_unknown');
 		}
 	}
 
@@ -121,7 +121,7 @@
 <div class="rpc-list-container">
 	{#if explorers && explorers.length > 0}
 		<div class="explorers-section">
-			<span class="explorers-label">{i18n.t('chainlist.explorers')}:</span>
+			<span class="explorers-label">{i18n.t('routes/apps/chainlist.explorers')}:</span>
 			<div class="explorers-list">
 				{#each explorers as explorer (explorer.url)}
 					<a href={explorer.url} target="_blank" rel="noopener noreferrer" class="explorer-link">
@@ -139,7 +139,7 @@
 				<tr>
 					<th class="col-url">
 						<div class="url-header">
-							<span>{i18n.t('chainlist.rpc.url')}</span>
+							<span>{i18n.t('routes/apps/chainlist.rpc.url')}</span>
 							<div class="protocol-toggle">
 								<button
 									class="protocol-btn"
@@ -164,9 +164,9 @@
 							</div>
 						</div>
 					</th>
-					<th class="col-height">{i18n.t('chainlist.rpc.height')}</th>
-					<th class="col-latency">{i18n.t('chainlist.rpc.latency')}</th>
-					<th class="col-privacy">{i18n.t('chainlist.rpc.privacy')}</th>
+					<th class="col-height">{i18n.t('routes/apps/chainlist.rpc.height')}</th>
+					<th class="col-latency">{i18n.t('routes/apps/chainlist.rpc.latency')}</th>
+					<th class="col-privacy">{i18n.t('routes/apps/chainlist.rpc.privacy')}</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -182,7 +182,7 @@
 								<CopyButton value={endpoint.url} size={14} class="rpc-copy-btn" />
 							</div>
 						</td>
-						<td class="col-height" data-label={i18n.t('chainlist.rpc.height')}>
+						<td class="col-height" data-label={i18n.t('routes/apps/chainlist.rpc.height')}>
 							{#if isTesting && !result}
 								<span class="testing-indicator"></span>
 							{:else if result?.status === 'success'}
@@ -193,7 +193,7 @@
 								-
 							{/if}
 						</td>
-						<td class="col-latency" data-label={i18n.t('chainlist.rpc.latency')}>
+						<td class="col-latency" data-label={i18n.t('routes/apps/chainlist.rpc.latency')}>
 							{#if isTesting && !result}
 								<span class="testing-indicator"></span>
 							{:else if result?.status === 'success'}
@@ -202,13 +202,13 @@
 								</span>
 							{:else if result?.status === 'failed'}
 								<span class="failed-text" title={result.error}
-									>{i18n.t('chainlist.rpc.failed')}</span
+									>{i18n.t('routes/apps/chainlist.rpc.failed')}</span
 								>
 							{:else}
 								-
 							{/if}
 						</td>
-						<td class="col-privacy" data-label={i18n.t('chainlist.rpc.privacy')}>
+						<td class="col-privacy" data-label={i18n.t('routes/apps/chainlist.rpc.privacy')}>
 							<span
 								class="privacy-badge privacy-{endpoint.tracking}"
 								title={getPrivacyLabel(endpoint.tracking)}

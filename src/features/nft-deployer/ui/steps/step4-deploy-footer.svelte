@@ -36,7 +36,7 @@
 	{#if isDeployed}
 		<Button onclick={handleReset}>
 			<RefreshCw class="mr-2 h-4 w-4" />
-			{i18n.t('nft-deployer.step4.footer.deploy_another')}
+			{i18n.t('routes/apps/nft-deployer.step4.footer.deploy_another')}
 		</Button>
 	{/if}
 </div>

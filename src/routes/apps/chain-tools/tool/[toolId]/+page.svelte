@@ -74,10 +74,14 @@
 		i18n.t(`chain-tools.categories.${data.tool.category}` as any, { defaultValue: 'Back' })
 	);
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	const faqsTitle = $derived(i18n.t('chain-tools.faqs_title' as any, { defaultValue: 'FAQ' }));
+	const faqsTitle = $derived(
+		i18n.t('routes/apps/chain-tools/chain-tools.faqs_title' as any, { defaultValue: 'FAQ' })
+	);
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const lastUpdatedLabel = $derived(
-		i18n.t('chain-tools.last_updated' as any, { defaultValue: 'Last updated' })
+		i18n.t('routes/apps/chain-tools/chain-tools.last_updated' as any, {
+			defaultValue: 'Last updated'
+		})
 	);
 </script>
 

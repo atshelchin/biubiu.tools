@@ -77,12 +77,12 @@ export async function checkRPCEndpoint(
 			return {
 				id: 'rpc-endpoint',
 				type: 'network-service',
-				name: t('wallet-sweep.step2.content.checks.rpc_endpoint.name'),
-				description: t('wallet-sweep.step2.content.checks.rpc_endpoint.description', {
+				name: t('routes/apps/wallet-sweep.step2.content.checks.rpc_endpoint.name'),
+				description: t('routes/apps/wallet-sweep.step2.content.checks.rpc_endpoint.description', {
 					network: networkName
 				}),
 				status: 'error',
-				message: t('wallet-sweep.step2.content.checks.rpc_endpoint.chain_id_mismatch', {
+				message: t('routes/apps/wallet-sweep.step2.content.checks.rpc_endpoint.chain_id_mismatch', {
 					expected: chainId,
 					actual: actualChainId
 				}),
@@ -95,12 +95,12 @@ export async function checkRPCEndpoint(
 		return {
 			id: 'rpc-endpoint',
 			type: 'network-service',
-			name: t('wallet-sweep.step2.content.checks.rpc_endpoint.name'),
-			description: t('wallet-sweep.step2.content.checks.rpc_endpoint.description', {
+			name: t('routes/apps/wallet-sweep.step2.content.checks.rpc_endpoint.name'),
+			description: t('routes/apps/wallet-sweep.step2.content.checks.rpc_endpoint.description', {
 				network: networkName
 			}),
 			status: 'success',
-			message: t('wallet-sweep.step2.content.checks.rpc_endpoint.connected_to_block', {
+			message: t('routes/apps/wallet-sweep.step2.content.checks.rpc_endpoint.connected_to_block', {
 				blockNumber: Number(blockNumber)
 			}),
 			endpoint: rpcUrl,
@@ -121,16 +121,16 @@ export async function checkRPCEndpoint(
 
 		// Use specific message for missing RPC config vs connection failure
 		const message = isNoRpcConfigured
-			? t('wallet-sweep.step2.content.checks.rpc_endpoint.no_rpc_configured')
-			: t('wallet-sweep.step2.content.checks.rpc_endpoint.failed_to_connect', {
+			? t('routes/apps/wallet-sweep.step2.content.checks.rpc_endpoint.no_rpc_configured')
+			: t('routes/apps/wallet-sweep.step2.content.checks.rpc_endpoint.failed_to_connect', {
 					error: errorMessage
 				});
 
 		return {
 			id: 'rpc-endpoint',
 			type: 'network-service',
-			name: t('wallet-sweep.step2.content.checks.rpc_endpoint.name'),
-			description: t('wallet-sweep.step2.content.checks.rpc_endpoint.description', {
+			name: t('routes/apps/wallet-sweep.step2.content.checks.rpc_endpoint.name'),
+			description: t('routes/apps/wallet-sweep.step2.content.checks.rpc_endpoint.description', {
 				network: networkName
 			}),
 			status: 'error',
@@ -181,10 +181,10 @@ export async function checkEIP7702Support(
 		return {
 			id: 'eip-7702-support',
 			type: 'network-service',
-			name: t('wallet-sweep.step2.content.checks.eip7702.name'),
-			description: t('wallet-sweep.step2.content.checks.eip7702.description'),
+			name: t('routes/apps/wallet-sweep.step2.content.checks.eip7702.name'),
+			description: t('routes/apps/wallet-sweep.step2.content.checks.eip7702.description'),
 			status: 'success',
-			message: t('wallet-sweep.step2.content.checks.eip7702.supported'),
+			message: t('routes/apps/wallet-sweep.step2.content.checks.eip7702.supported'),
 			// endpoint: rpcUrl,
 			responseTime,
 			docUrl: 'https://eips.ethereum.org/EIPS/eip-7702'
@@ -199,10 +199,10 @@ export async function checkEIP7702Support(
 			return {
 				id: 'eip-7702-support',
 				type: 'network-service',
-				name: t('wallet-sweep.step2.content.checks.eip7702.name'),
-				description: t('wallet-sweep.step2.content.checks.eip7702.description'),
+				name: t('routes/apps/wallet-sweep.step2.content.checks.eip7702.name'),
+				description: t('routes/apps/wallet-sweep.step2.content.checks.eip7702.description'),
 				status: 'error',
-				message: t('wallet-sweep.step2.content.checks.eip7702.not_supported'),
+				message: t('routes/apps/wallet-sweep.step2.content.checks.eip7702.not_supported'),
 				endpoint: rpcUrl,
 				responseTime
 				// needsRpcConfig: false - chain doesn't support, changing RPC won't help
@@ -222,10 +222,10 @@ export async function checkEIP7702Support(
 			return {
 				id: 'eip-7702-support',
 				type: 'network-service',
-				name: t('wallet-sweep.step2.content.checks.eip7702.name'),
-				description: t('wallet-sweep.step2.content.checks.eip7702.description'),
+				name: t('routes/apps/wallet-sweep.step2.content.checks.eip7702.name'),
+				description: t('routes/apps/wallet-sweep.step2.content.checks.eip7702.description'),
 				status: 'error',
-				message: t('wallet-sweep.step2.content.checks.eip7702.rpc_not_capable'),
+				message: t('routes/apps/wallet-sweep.step2.content.checks.eip7702.rpc_not_capable'),
 				endpoint: rpcUrl,
 				responseTime,
 				needsRpcConfig: true // User should try a different RPC
@@ -236,10 +236,10 @@ export async function checkEIP7702Support(
 		return {
 			id: 'eip-7702-support',
 			type: 'network-service',
-			name: t('wallet-sweep.step2.content.checks.eip7702.name'),
-			description: t('wallet-sweep.step2.content.checks.eip7702.description'),
+			name: t('routes/apps/wallet-sweep.step2.content.checks.eip7702.name'),
+			description: t('routes/apps/wallet-sweep.step2.content.checks.eip7702.description'),
 			status: 'error',
-			message: t('wallet-sweep.step2.content.checks.eip7702.check_failed', {
+			message: t('routes/apps/wallet-sweep.step2.content.checks.eip7702.check_failed', {
 				error: errorMessage
 			}),
 			endpoint: rpcUrl,
@@ -289,7 +289,7 @@ export async function checkContractDeployment(
 				name: contractName,
 				description,
 				status: 'success',
-				message: t('wallet-sweep.step2.content.checks.contract.deployed'),
+				message: t('routes/apps/wallet-sweep.step2.content.checks.contract.deployed'),
 				address,
 				isDeployed: true,
 				blockNumber: Number(currentBlockNumber),
@@ -303,7 +303,7 @@ export async function checkContractDeployment(
 				name: contractName,
 				description,
 				status: 'error',
-				message: t('wallet-sweep.step2.content.checks.contract.not_deployed'),
+				message: t('routes/apps/wallet-sweep.step2.content.checks.contract.not_deployed'),
 				address,
 				isDeployed: false,
 				...options
@@ -318,7 +318,7 @@ export async function checkContractDeployment(
 			name: contractName,
 			description,
 			status: 'error',
-			message: t('wallet-sweep.step2.content.checks.contract.check_failed', {
+			message: t('routes/apps/wallet-sweep.step2.content.checks.contract.check_failed', {
 				error: errorMessage
 			}),
 			address,
@@ -379,7 +379,7 @@ export async function checkCREATE2Proxy(rpcUrl: string, t: TranslateFn): Promise
 		rpcUrl,
 		KNOWN_CONTRACTS.CREATE2_PROXY,
 		'Deterministic Deployment Proxy',
-		t('wallet-sweep.step2.content.checks.contract.create2_proxy_description'),
+		t('routes/apps/wallet-sweep.step2.content.checks.contract.create2_proxy_description'),
 		t,
 		{
 			canDeploy: true,
@@ -397,7 +397,7 @@ export async function checkMulticall3(rpcUrl: string, t: TranslateFn): Promise<C
 		rpcUrl,
 		KNOWN_CONTRACTS.MULTICALL3,
 		'Multicall3',
-		t('wallet-sweep.step2.content.checks.contract.multicall3_description'),
+		t('routes/apps/wallet-sweep.step2.content.checks.contract.multicall3_description'),
 		t,
 		{
 			canDeploy: true,
@@ -415,7 +415,7 @@ export async function checkBiuBiuPremium(rpcUrl: string, t: TranslateFn): Promis
 		rpcUrl,
 		KNOWN_CONTRACTS.BIUBIU_PREMIUM,
 		'BiuBiuPremium',
-		t('wallet-sweep.step2.content.checks.contract.biubiu_premium_description'),
+		t('routes/apps/wallet-sweep.step2.content.checks.contract.biubiu_premium_description'),
 		t,
 		{
 			canDeploy: true,
@@ -433,7 +433,7 @@ export async function checkTokenSweep(rpcUrl: string, t: TranslateFn): Promise<C
 		rpcUrl,
 		KNOWN_CONTRACTS.wallet_sweep,
 		'TokenSweep',
-		t('wallet-sweep.step2.content.checks.contract.wallet_sweep_description'),
+		t('routes/apps/wallet-sweep.step2.content.checks.contract.wallet_sweep_description'),
 		t,
 		{
 			canDeploy: true,
@@ -451,7 +451,7 @@ export async function checkTokenFactory(rpcUrl: string, t: TranslateFn): Promise
 		rpcUrl,
 		KNOWN_CONTRACTS.TOKEN_FACTORY,
 		'TokenFactory',
-		t('token-deployer.step2.content.checks.contract.token_factory_description'),
+		t('routes/apps/token-deployer.step2.content.checks.contract.token_factory_description'),
 		t,
 		{
 			canDeploy: true,
@@ -485,7 +485,7 @@ export async function checkNFTFactory(rpcUrl: string, t: TranslateFn): Promise<C
 		rpcUrl,
 		KNOWN_CONTRACTS.NFT_FACTORY,
 		'NFTFactory',
-		t('nft-deployer.step2.content.checks.contract.nft_factory_description'),
+		t('routes/apps/nft-deployer.step2.content.checks.contract.nft_factory_description'),
 		t,
 		{
 			canDeploy: true,
@@ -502,7 +502,7 @@ export async function checkWETH(rpcUrl: string, t: TranslateFn): Promise<Contrac
 		rpcUrl,
 		KNOWN_CONTRACTS.WETH,
 		'WETH',
-		t('one-to-many-transfer.step2.content.checks.contract.weth_description'),
+		t('routes/apps/one-to-many-transfer.step2.content.checks.contract.weth_description'),
 		t,
 		{
 			canDeploy: true,
@@ -523,7 +523,9 @@ export async function checkTokenDistribution(
 		rpcUrl,
 		KNOWN_CONTRACTS.TOKEN_DISTRIBUTION,
 		'TokenDistribution',
-		t('one-to-many-transfer.step2.content.checks.contract.token_distribution_description'),
+		t(
+			'routes/apps/one-to-many-transfer.step2.content.checks.contract.token_distribution_description'
+		),
 		t,
 		{
 			canDeploy: true,

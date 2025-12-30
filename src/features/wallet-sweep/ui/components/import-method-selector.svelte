@@ -15,11 +15,11 @@
 	const options = $derived([
 		{
 			value: 'privateKey' as const,
-			label: i18n.t('wallet-sweep.step4.import_method.private_key.label')
+			label: i18n.t('routes/apps/wallet-sweep.step4.import_method.private_key.label')
 		},
 		{
 			value: 'mnemonic' as const,
-			label: i18n.t('wallet-sweep.step4.import_method.mnemonic.label')
+			label: i18n.t('routes/apps/wallet-sweep.step4.import_method.mnemonic.label')
 		}
 	]);
 

@@ -9,41 +9,47 @@
 </script>
 
 <div class="step-sidebar">
-	<h3 class="sidebar-title">{i18n.t('nft-deployer.step3.sidebar.title')}</h3>
+	<h3 class="sidebar-title">{i18n.t('routes/apps/nft-deployer.step3.sidebar.title')}</h3>
 	<p class="sidebar-description">
-		{i18n.t('nft-deployer.step3.sidebar.description')}
+		{i18n.t('routes/apps/nft-deployer.step3.sidebar.description')}
 	</p>
 
 	{#if config.name || config.symbol}
 		<div class="preview-card">
-			<h4 class="preview-title">{i18n.t('nft-deployer.step3.sidebar.preview')}</h4>
+			<h4 class="preview-title">{i18n.t('routes/apps/nft-deployer.step3.sidebar.preview')}</h4>
 
 			{#if config.name}
 				<div class="preview-item">
-					<span class="preview-label">{i18n.t('nft-deployer.step3.sidebar.collection_name')}:</span>
+					<span class="preview-label"
+						>{i18n.t('routes/apps/nft-deployer.step3.sidebar.collection_name')}:</span
+					>
 					<span class="preview-value">{config.name}</span>
 				</div>
 			{/if}
 
 			{#if config.symbol}
 				<div class="preview-item">
-					<span class="preview-label">{i18n.t('nft-deployer.step3.sidebar.symbol')}:</span>
+					<span class="preview-label"
+						>{i18n.t('routes/apps/nft-deployer.step3.sidebar.symbol')}:</span
+					>
 					<span class="preview-value">{config.symbol}</span>
 				</div>
 			{/if}
 
 			{#if config.stakeToMintEnabled}
 				<div class="preview-item highlight">
-					<span class="preview-label">{i18n.t('nft-deployer.step3.sidebar.stake_enabled')}</span>
+					<span class="preview-label"
+						>{i18n.t('routes/apps/nft-deployer.step3.sidebar.stake_enabled')}</span
+					>
 					<span class="preview-icon">✓</span>
 				</div>
 			{/if}
 
 			<div class="status-indicator" class:valid={isValid} class:invalid={!isValid}>
 				{#if isValid}
-					✓ {i18n.t('nft-deployer.step3.sidebar.ready')}
+					✓ {i18n.t('routes/apps/nft-deployer.step3.sidebar.ready')}
 				{:else}
-					⚠ {i18n.t('nft-deployer.step3.sidebar.incomplete')}
+					⚠ {i18n.t('routes/apps/nft-deployer.step3.sidebar.incomplete')}
 				{/if}
 			</div>
 		</div>

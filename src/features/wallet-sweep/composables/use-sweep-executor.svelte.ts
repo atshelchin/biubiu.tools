@@ -56,27 +56,27 @@ export function useSweepExecutor(options: UseSweepExecutorOptions) {
 		temporaryWallet: TemporaryWallet | null
 	): string | null {
 		if (!connectedAddress) {
-			return 'wallet-sweep.step5.content.errors.connect_wallet';
+			return 'routes/apps/wallet-sweep.step5.content.errors.connect_wallet';
 		}
 
 		if (!chainId) {
-			return 'wallet-sweep.step5.content.errors.no_network';
+			return 'routes/apps/wallet-sweep.step5.content.errors.no_network';
 		}
 
 		if (!targetAddress.match(/^0x[a-fA-F0-9]{40}$/)) {
-			return 'wallet-sweep.step5.content.errors.invalid_address';
+			return 'routes/apps/wallet-sweep.step5.content.errors.invalid_address';
 		}
 
 		if (selectedTokenCount === 0) {
-			return 'wallet-sweep.step5.content.errors.select_tokens';
+			return 'routes/apps/wallet-sweep.step5.content.errors.select_tokens';
 		}
 
 		if (walletCount === 0) {
-			return 'wallet-sweep.step5.content.errors.import_wallets';
+			return 'routes/apps/wallet-sweep.step5.content.errors.import_wallets';
 		}
 
 		if (!temporaryWallet) {
-			return 'wallet-sweep.step5.content.errors.complete_fields';
+			return 'routes/apps/wallet-sweep.step5.content.errors.complete_fields';
 		}
 
 		return null;

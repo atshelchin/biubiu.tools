@@ -6,4 +6,4 @@
 	import { ConnectWalletContent } from '$lib/components/step/connect-wallet';
 </script>
 
-<ConnectWalletContent i18nPrefix="contract-deployer" />
+<ConnectWalletContent i18nPrefix="routes/apps/contract-deployer" />

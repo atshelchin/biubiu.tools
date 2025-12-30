@@ -27,7 +27,7 @@
 </script>
 
 <TokenSelectionContent
-	i18nPrefix="token-balance-scanner"
+	i18nPrefix="routes/apps/token-balance-scanner"
 	selectedTokenIds={step3State.selectedTokens}
 	onSelectionChange={handleSelectionChange}
 	onTokenAdded={handleTokenAdded}

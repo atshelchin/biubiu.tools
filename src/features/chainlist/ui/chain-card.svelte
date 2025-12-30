@@ -110,7 +110,7 @@
 				<div class="chain-name-row">
 					<h3 class="chain-name">{chain.name}</h3>
 					{#if chain.isTestnet}
-						<span class="testnet-badge">{i18n.t('chainlist.testnet')}</span>
+						<span class="testnet-badge">{i18n.t('routes/apps/chainlist.testnet')}</span>
 					{/if}
 				</div>
 				<div class="chain-meta">
@@ -144,25 +144,25 @@
 					<button class="action-btn primary" onclick={handleAddToWallet} disabled={addingToWallet}>
 						<Wallet size={16} />
 						{#if addingToWallet}
-							{i18n.t('chainlist.actions.adding')}
+							{i18n.t('routes/apps/chainlist.actions.adding')}
 						{:else}
-							{i18n.t('chainlist.actions.add_to_wallet')}
+							{i18n.t('routes/apps/chainlist.actions.add_to_wallet')}
 						{/if}
 					</button>
 				{:else}
 					<button class="action-btn primary" onclick={() => connectStore.openConnectorModal()}>
 						<Wallet size={16} />
-						{i18n.t('chainlist.actions.connect_wallet')}
+						{i18n.t('routes/apps/chainlist.actions.connect_wallet')}
 					</button>
 				{/if}
 
 				<button class="action-btn secondary" onclick={copyChainId}>
 					{#if copiedChainId}
 						<Check size={16} />
-						{i18n.t('chainlist.actions.copied')}
+						{i18n.t('routes/apps/chainlist.actions.copied')}
 					{:else}
 						<Copy size={16} />
-						{i18n.t('chainlist.actions.copy_chain_id')}
+						{i18n.t('routes/apps/chainlist.actions.copy_chain_id')}
 					{/if}
 				</button>
 
@@ -174,7 +174,7 @@
 						class="action-btn secondary"
 					>
 						<ExternalLink size={16} />
-						{i18n.t('chainlist.actions.website')}
+						{i18n.t('routes/apps/chainlist.actions.website')}
 					</a>
 				{/if}
 			</div>

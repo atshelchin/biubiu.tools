@@ -15,7 +15,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'eigenlayer',
 		name: 'EigenLayer',
-		descriptionKey: 'restaking.tools.eigenlayer.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.eigenlayer.description',
 		url: 'https://eigenlayer.xyz',
 		icon: Layers,
 		category: 'restaking',
@@ -26,7 +26,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'symbiotic',
 		name: 'Symbiotic',
-		descriptionKey: 'restaking.tools.symbiotic.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.symbiotic.description',
 		url: 'https://symbiotic.fi',
 		icon: Network,
 		category: 'restaking',
@@ -37,7 +37,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'karak',
 		name: 'Karak',
-		descriptionKey: 'restaking.tools.karak.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.karak.description',
 		url: 'https://karak.network',
 		icon: Shield,
 		category: 'restaking',
@@ -48,7 +48,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'babylon',
 		name: 'Babylon',
-		descriptionKey: 'restaking.tools.babylon.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.babylon.description',
 		url: 'https://babylonchain.io',
 		icon: Shield,
 		category: 'restaking',
@@ -60,7 +60,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'etherfi',
 		name: 'ether.fi (eETH)',
-		descriptionKey: 'restaking.tools.etherfi.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.etherfi.description',
 		url: 'https://ether.fi',
 		icon: Coins,
 		category: 'restaking',
@@ -71,7 +71,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'renzo-protocol',
 		name: 'Renzo (ezETH)',
-		descriptionKey: 'restaking.tools.renzo_protocol.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.renzo_protocol.description',
 		url: 'https://renzo.xyz',
 		icon: Coins,
 		category: 'restaking',
@@ -82,7 +82,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'puffer-finance',
 		name: 'Puffer Finance (pufETH)',
-		descriptionKey: 'restaking.tools.puffer_finance.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.puffer_finance.description',
 		url: 'https://puffer.fi',
 		icon: Coins,
 		category: 'restaking',
@@ -93,7 +93,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'kelp-dao',
 		name: 'Kelp DAO (rsETH)',
-		descriptionKey: 'restaking.tools.kelp_dao.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.kelp_dao.description',
 		url: 'https://kelpdao.xyz',
 		icon: Coins,
 		category: 'restaking',
@@ -104,7 +104,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'swell-restaking',
 		name: 'Swell (rswETH)',
-		descriptionKey: 'restaking.tools.swell_restaking.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.swell_restaking.description',
 		url: 'https://swellnetwork.io',
 		icon: Coins,
 		category: 'restaking',
@@ -115,7 +115,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'eigenpie',
 		name: 'Eigenpie',
-		descriptionKey: 'restaking.tools.eigenpie.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.eigenpie.description',
 		url: 'https://eigenpie.io',
 		icon: Coins,
 		category: 'restaking',
@@ -126,7 +126,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'bedrock',
 		name: 'Bedrock (uniETH)',
-		descriptionKey: 'restaking.tools.bedrock.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.bedrock.description',
 		url: 'https://bedrock.rockx.com',
 		icon: Coins,
 		category: 'restaking',
@@ -137,7 +137,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'stakestone',
 		name: 'StakeStone (STONE)',
-		descriptionKey: 'restaking.tools.stakestone.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.stakestone.description',
 		url: 'https://stakestone.io',
 		icon: Coins,
 		category: 'restaking',
@@ -148,7 +148,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'inception',
 		name: 'Inception (inETH)',
-		descriptionKey: 'restaking.tools.inception.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.inception.description',
 		url: 'https://inceptionlrt.com',
 		icon: Coins,
 		category: 'restaking',
@@ -160,7 +160,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'eigenda',
 		name: 'EigenDA',
-		descriptionKey: 'restaking.tools.eigenda.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.eigenda.description',
 		url: 'https://eigenda.xyz',
 		icon: Network,
 		category: 'restaking',
@@ -171,7 +171,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'lagrange',
 		name: 'Lagrange',
-		descriptionKey: 'restaking.tools.lagrange.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.lagrange.description',
 		url: 'https://lagrange.dev',
 		icon: Zap,
 		category: 'restaking',
@@ -182,7 +182,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'espresso',
 		name: 'Espresso',
-		descriptionKey: 'restaking.tools.espresso.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.espresso.description',
 		url: 'https://espressosys.com',
 		icon: Network,
 		category: 'restaking',
@@ -193,7 +193,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'hyperlane-avs',
 		name: 'Hyperlane',
-		descriptionKey: 'restaking.tools.hyperlane_avs.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.hyperlane_avs.description',
 		url: 'https://hyperlane.xyz',
 		icon: Globe,
 		category: 'restaking',
@@ -204,7 +204,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'omni-avs',
 		name: 'Omni Network',
-		descriptionKey: 'restaking.tools.omni_avs.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.omni_avs.description',
 		url: 'https://omni.network',
 		icon: Network,
 		category: 'restaking',
@@ -215,7 +215,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'witness-chain',
 		name: 'Witness Chain',
-		descriptionKey: 'restaking.tools.witness_chain.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.witness_chain.description',
 		url: 'https://witnesschain.com',
 		icon: Shield,
 		category: 'restaking',
@@ -226,7 +226,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'altlayer-avs',
 		name: 'AltLayer MACH',
-		descriptionKey: 'restaking.tools.altlayer_avs.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.altlayer_avs.description',
 		url: 'https://altlayer.io',
 		icon: Layers,
 		category: 'restaking',
@@ -237,7 +237,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'brevis',
 		name: 'Brevis',
-		descriptionKey: 'restaking.tools.brevis.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.brevis.description',
 		url: 'https://brevis.network',
 		icon: Zap,
 		category: 'restaking',
@@ -249,7 +249,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'eigenlayer-app',
 		name: 'EigenLayer App',
-		descriptionKey: 'restaking.tools.eigenlayer_app.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.eigenlayer_app.description',
 		url: 'https://app.eigenlayer.xyz',
 		icon: BarChart3,
 		category: 'restaking',
@@ -260,7 +260,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'dune-eigenlayer',
 		name: 'EigenLayer Dune Dashboard',
-		descriptionKey: 'restaking.tools.dune_eigenlayer.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.dune_eigenlayer.description',
 		url: 'https://dune.com/hahahash/eigenlayer',
 		icon: BarChart3,
 		category: 'restaking',
@@ -270,7 +270,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'defillama-restaking',
 		name: 'DeFiLlama Restaking',
-		descriptionKey: 'restaking.tools.defillama_restaking.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.defillama_restaking.description',
 		url: 'https://defillama.com/protocols/Liquid%20Restaking',
 		icon: BarChart3,
 		category: 'restaking',
@@ -280,7 +280,7 @@ export const restakingTools: ExternalTool[] = [
 	{
 		id: 'rated-restaking',
 		name: 'Rated Restaking',
-		descriptionKey: 'restaking.tools.rated_restaking.description',
+		descriptionKey: 'routes/apps/chain-tools/restaking.tools.rated_restaking.description',
 		url: 'https://rated.network',
 		icon: TrendingUp,
 		category: 'restaking',

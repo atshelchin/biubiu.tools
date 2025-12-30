@@ -26,7 +26,7 @@ export const privacyTools: ExternalTool[] = [
 	{
 		id: 'zcash',
 		name: 'Zcash',
-		descriptionKey: 'privacy.tools.zcash.description',
+		descriptionKey: 'routes/apps/chain-tools/privacy.tools.zcash.description',
 		url: 'https://z.cash',
 		icon: Shield,
 		category: 'privacy',
@@ -37,7 +37,7 @@ export const privacyTools: ExternalTool[] = [
 	{
 		id: 'monero',
 		name: 'Monero',
-		descriptionKey: 'privacy.tools.monero.description',
+		descriptionKey: 'routes/apps/chain-tools/privacy.tools.monero.description',
 		url: 'https://getmonero.org',
 		icon: Lock,
 		category: 'privacy',
@@ -48,7 +48,7 @@ export const privacyTools: ExternalTool[] = [
 	{
 		id: 'secret-network',
 		name: 'Secret Network',
-		descriptionKey: 'privacy.tools.secret_network.description',
+		descriptionKey: 'routes/apps/chain-tools/privacy.tools.secret_network.description',
 		url: 'https://scrt.network',
 		icon: Key,
 		category: 'privacy',
@@ -59,7 +59,7 @@ export const privacyTools: ExternalTool[] = [
 	{
 		id: 'oasis-network',
 		name: 'Oasis Network',
-		descriptionKey: 'privacy.tools.oasis_network.description',
+		descriptionKey: 'routes/apps/chain-tools/privacy.tools.oasis_network.description',
 		url: 'https://oasisprotocol.org',
 		icon: Globe,
 		category: 'privacy',
@@ -70,7 +70,7 @@ export const privacyTools: ExternalTool[] = [
 	{
 		id: 'mina-protocol',
 		name: 'Mina Protocol',
-		descriptionKey: 'privacy.tools.mina_protocol.description',
+		descriptionKey: 'routes/apps/chain-tools/privacy.tools.mina_protocol.description',
 		url: 'https://minaprotocol.com',
 		icon: Shield,
 		category: 'privacy',
@@ -81,7 +81,7 @@ export const privacyTools: ExternalTool[] = [
 	{
 		id: 'firo',
 		name: 'Firo',
-		descriptionKey: 'privacy.tools.firo.description',
+		descriptionKey: 'routes/apps/chain-tools/privacy.tools.firo.description',
 		url: 'https://firo.org',
 		icon: Lock,
 		category: 'privacy',
@@ -92,7 +92,7 @@ export const privacyTools: ExternalTool[] = [
 	{
 		id: 'iron-fish',
 		name: 'Iron Fish',
-		descriptionKey: 'privacy.tools.iron_fish.description',
+		descriptionKey: 'routes/apps/chain-tools/privacy.tools.iron_fish.description',
 		url: 'https://ironfish.network',
 		icon: Shield,
 		category: 'privacy',
@@ -104,7 +104,7 @@ export const privacyTools: ExternalTool[] = [
 	{
 		id: 'aztec-connect',
 		name: 'Aztec',
-		descriptionKey: 'privacy.tools.aztec_connect.description',
+		descriptionKey: 'routes/apps/chain-tools/privacy.tools.aztec_connect.description',
 		url: 'https://aztec.network',
 		icon: Shield,
 		category: 'privacy',
@@ -115,7 +115,7 @@ export const privacyTools: ExternalTool[] = [
 	{
 		id: 'railgun',
 		name: 'Railgun',
-		descriptionKey: 'privacy.tools.railgun.description',
+		descriptionKey: 'routes/apps/chain-tools/privacy.tools.railgun.description',
 		url: 'https://railgun.org',
 		icon: Lock,
 		category: 'privacy',
@@ -126,7 +126,7 @@ export const privacyTools: ExternalTool[] = [
 	{
 		id: 'umbra-cash',
 		name: 'Umbra',
-		descriptionKey: 'privacy.tools.umbra_cash.description',
+		descriptionKey: 'routes/apps/chain-tools/privacy.tools.umbra_cash.description',
 		url: 'https://app.umbra.cash',
 		icon: EyeOff,
 		category: 'privacy',
@@ -137,7 +137,7 @@ export const privacyTools: ExternalTool[] = [
 	{
 		id: 'nocturne',
 		name: 'Nocturne',
-		descriptionKey: 'privacy.tools.nocturne.description',
+		descriptionKey: 'routes/apps/chain-tools/privacy.tools.nocturne.description',
 		url: 'https://nocturne.xyz',
 		icon: EyeOff,
 		category: 'privacy',
@@ -148,7 +148,7 @@ export const privacyTools: ExternalTool[] = [
 	{
 		id: 'penumbra',
 		name: 'Penumbra',
-		descriptionKey: 'privacy.tools.penumbra.description',
+		descriptionKey: 'routes/apps/chain-tools/privacy.tools.penumbra.description',
 		url: 'https://penumbra.zone',
 		icon: Shield,
 		category: 'privacy',
@@ -159,7 +159,7 @@ export const privacyTools: ExternalTool[] = [
 	{
 		id: 'namada',
 		name: 'Namada',
-		descriptionKey: 'privacy.tools.namada.description',
+		descriptionKey: 'routes/apps/chain-tools/privacy.tools.namada.description',
 		url: 'https://namada.net',
 		icon: Shield,
 		category: 'privacy',
@@ -171,7 +171,7 @@ export const privacyTools: ExternalTool[] = [
 	{
 		id: 'frame-privacy',
 		name: 'Frame',
-		descriptionKey: 'privacy.tools.frame_privacy.description',
+		descriptionKey: 'routes/apps/chain-tools/privacy.tools.frame_privacy.description',
 		url: 'https://frame.sh',
 		icon: Wallet,
 		category: 'privacy',
@@ -182,7 +182,7 @@ export const privacyTools: ExternalTool[] = [
 	{
 		id: 'brave-wallet',
 		name: 'Brave Wallet',
-		descriptionKey: 'privacy.tools.brave_wallet.description',
+		descriptionKey: 'routes/apps/chain-tools/privacy.tools.brave_wallet.description',
 		url: 'https://brave.com/wallet',
 		icon: Wallet,
 		category: 'privacy',
@@ -193,7 +193,7 @@ export const privacyTools: ExternalTool[] = [
 	{
 		id: 'cake-wallet',
 		name: 'Cake Wallet',
-		descriptionKey: 'privacy.tools.cake_wallet.description',
+		descriptionKey: 'routes/apps/chain-tools/privacy.tools.cake_wallet.description',
 		url: 'https://cakewallet.com',
 		icon: Wallet,
 		category: 'privacy',
@@ -205,7 +205,7 @@ export const privacyTools: ExternalTool[] = [
 	{
 		id: 'tornado-cash-classic',
 		name: 'Privacy Pools',
-		descriptionKey: 'privacy.tools.privacy_pools.description',
+		descriptionKey: 'routes/apps/chain-tools/privacy.tools.privacy_pools.description',
 		url: 'https://privacypools.com',
 		icon: Network,
 		category: 'privacy',
@@ -216,7 +216,7 @@ export const privacyTools: ExternalTool[] = [
 	{
 		id: 'zk-email',
 		name: 'ZK Email',
-		descriptionKey: 'privacy.tools.zk_email.description',
+		descriptionKey: 'routes/apps/chain-tools/privacy.tools.zk_email.description',
 		url: 'https://prove.email',
 		icon: FileKey,
 		category: 'privacy',
@@ -227,7 +227,7 @@ export const privacyTools: ExternalTool[] = [
 	{
 		id: 'semaphore',
 		name: 'Semaphore',
-		descriptionKey: 'privacy.tools.semaphore.description',
+		descriptionKey: 'routes/apps/chain-tools/privacy.tools.semaphore.description',
 		url: 'https://semaphore.pse.dev',
 		icon: Fingerprint,
 		category: 'privacy',
@@ -238,7 +238,7 @@ export const privacyTools: ExternalTool[] = [
 	{
 		id: 'worldcoin-privacy',
 		name: 'World ID',
-		descriptionKey: 'privacy.tools.worldcoin_privacy.description',
+		descriptionKey: 'routes/apps/chain-tools/privacy.tools.worldcoin_privacy.description',
 		url: 'https://worldcoin.org/world-id',
 		icon: Eye,
 		category: 'privacy',

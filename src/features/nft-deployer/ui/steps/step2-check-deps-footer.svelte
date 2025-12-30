@@ -11,4 +11,4 @@
 	const isChecking = $derived(step2CheckDepsState.isChecking);
 </script>
 
-<DependencyCheckFooter i18nPrefix="nft-deployer" {summary} {isChecking} />
+<DependencyCheckFooter i18nPrefix="routes/apps/nft-deployer" {summary} {isChecking} />

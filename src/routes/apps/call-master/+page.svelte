@@ -14,8 +14,8 @@
 		meta: data.meta,
 		structuredData: data.structuredData,
 		steps: data.steps,
-		appTitle: i18n.t('call-master.title'),
-		appDescription: i18n.t('call-master.description'),
+		appTitle: i18n.t('routes/apps/call-master.title'),
+		appDescription: i18n.t('routes/apps/call-master.description'),
 		walletConnect: {
 			chains: [mainnet, base, bsc, polygon, arbitrum, optimism, sepolia],
 			storageKey: 'biubiu-tools-call-master'

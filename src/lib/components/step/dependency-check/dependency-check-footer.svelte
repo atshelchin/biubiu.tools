@@ -8,7 +8,7 @@
 	 * @example
 	 * ```svelte
 	 * <DependencyCheckFooter
-	 *   i18nPrefix="token-balance-scanner"
+	 *   i18nPrefix="routes/apps/token-balance-scanner"
 	 *   summary={step2State.summary}
 	 *   isChecking={step2State.isChecking}
 	 * />

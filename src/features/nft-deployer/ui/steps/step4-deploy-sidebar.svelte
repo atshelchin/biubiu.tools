@@ -19,23 +19,23 @@
 		{:else if status === 'error'}
 			<XCircle class="h-5 w-5 text-red-600" />
 		{/if}
-		<h3 class="font-semibold">{i18n.t('nft-deployer.step4.sidebar.title')}</h3>
+		<h3 class="font-semibold">{i18n.t('routes/apps/nft-deployer.step4.sidebar.title')}</h3>
 	</div>
 
 	<p class="text-sm text-muted-foreground">
-		{i18n.t('nft-deployer.step4.sidebar.description')}
+		{i18n.t('routes/apps/nft-deployer.step4.sidebar.description')}
 	</p>
 
 	{#if status === 'completed' && step4DeployState.nftAddress}
 		<div class="p-3 bg-green-50 dark:bg-green-950/20 rounded-lg">
 			<p class="text-sm font-medium text-green-900 dark:text-green-100">
-				{i18n.t('nft-deployer.step4.sidebar.success')}
+				{i18n.t('routes/apps/nft-deployer.step4.sidebar.success')}
 			</p>
 		</div>
 	{:else if status === 'error'}
 		<div class="p-3 bg-red-50 dark:bg-red-950/20 rounded-lg">
 			<p class="text-sm font-medium text-red-900 dark:text-red-100">
-				{i18n.t('nft-deployer.step4.sidebar.error')}
+				{i18n.t('routes/apps/nft-deployer.step4.sidebar.error')}
 			</p>
 		</div>
 	{/if}

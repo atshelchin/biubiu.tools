@@ -43,7 +43,7 @@
 </script>
 
 <DependencyCheckContent
-	i18nPrefix="nft-deployer"
+	i18nPrefix="routes/apps/nft-deployer"
 	{checkDependencies}
 	onStateChange={handleStateChange}
 />

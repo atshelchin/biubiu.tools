@@ -11,14 +11,14 @@
 </script>
 
 <div class="step-sidebar">
-	<h3 class="sidebar-title">{i18n.t('nft-deployer.step2.sidebar.title')}</h3>
+	<h3 class="sidebar-title">{i18n.t('routes/apps/nft-deployer.step2.sidebar.title')}</h3>
 	<p class="sidebar-description">
-		{i18n.t('nft-deployer.step2.sidebar.description')}
+		{i18n.t('routes/apps/nft-deployer.step2.sidebar.description')}
 	</p>
 
 	{#if selectedStandard}
 		<div class="selected-info">
-			<h4 class="info-title">{i18n.t('nft-deployer.step2.sidebar.selected')}</h4>
+			<h4 class="info-title">{i18n.t('routes/apps/nft-deployer.step2.sidebar.selected')}</h4>
 			<div class="selected-standard">
 				<div class="standard-name">{selectedStandard.name}</div>
 				<div class="standard-desc">{selectedStandard.description}</div>
@@ -27,7 +27,7 @@
 	{/if}
 
 	<div class="info-section">
-		<h4 class="info-title">{i18n.t('nft-deployer.step2.sidebar.comparison')}</h4>
+		<h4 class="info-title">{i18n.t('routes/apps/nft-deployer.step2.sidebar.comparison')}</h4>
 		<div class="comparison-grid">
 			<div class="comparison-item">
 				<span class="label">ERC-721:</span>
@@ -45,11 +45,11 @@
 	</div>
 
 	<div class="info-section">
-		<h4 class="info-title">{i18n.t('nft-deployer.step2.sidebar.tips')}</h4>
+		<h4 class="info-title">{i18n.t('routes/apps/nft-deployer.step2.sidebar.tips')}</h4>
 		<ul class="info-list">
-			<li>{i18n.t('nft-deployer.step2.sidebar.tip1')}</li>
-			<li>{i18n.t('nft-deployer.step2.sidebar.tip2')}</li>
-			<li>{i18n.t('nft-deployer.step2.sidebar.tip3')}</li>
+			<li>{i18n.t('routes/apps/nft-deployer.step2.sidebar.tip1')}</li>
+			<li>{i18n.t('routes/apps/nft-deployer.step2.sidebar.tip2')}</li>
+			<li>{i18n.t('routes/apps/nft-deployer.step2.sidebar.tip3')}</li>
 		</ul>
 	</div>
 </div>

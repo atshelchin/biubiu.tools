@@ -9,7 +9,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'pump-fun',
 		name: 'Pump.fun',
-		descriptionKey: 'launchpad.tools.pump_fun.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.pump_fun.description',
 		url: 'https://pump.fun',
 		icon: Rocket,
 		category: 'launchpad',
@@ -20,7 +20,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'four_meme',
 		name: 'Four.meme',
-		descriptionKey: 'launchpad.tools.four_meme.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.four_meme.description',
 		url: 'https://four.meme',
 		icon: Rocket,
 		category: 'launchpad',
@@ -31,7 +31,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'dao-maker',
 		name: 'DAO Maker',
-		descriptionKey: 'launchpad.tools.dao_maker.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.dao_maker.description',
 		url: 'https://daomaker.com',
 		icon: Rocket,
 		category: 'launchpad',
@@ -42,7 +42,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'fjord-foundry',
 		name: 'Fjord Foundry',
-		descriptionKey: 'launchpad.tools.fjord_foundry.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.fjord_foundry.description',
 		url: 'https://fjordfoundry.com',
 		icon: Droplets,
 		category: 'launchpad',
@@ -53,7 +53,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'camelot-launchpad',
 		name: 'Camelot Launchpad',
-		descriptionKey: 'launchpad.tools.camelot_launchpad.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.camelot_launchpad.description',
 		url: 'https://camelot.exchange',
 		icon: Rocket,
 		category: 'launchpad',
@@ -66,7 +66,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'pinksale',
 		name: 'PinkSale',
-		descriptionKey: 'launchpad.tools.pinksale.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.pinksale.description',
 		url: 'https://www.pinksale.finance',
 		icon: Rocket,
 		category: 'launchpad',
@@ -77,7 +77,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'gempad',
 		name: 'GemPad',
-		descriptionKey: 'launchpad.tools.gempad.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.gempad.description',
 		url: 'https://gempad.app',
 		icon: Gem,
 		category: 'launchpad',
@@ -90,7 +90,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'mint-fun',
 		name: 'Mint.fun',
-		descriptionKey: 'launchpad.tools.mint_fun.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.mint_fun.description',
 		url: 'https://mint.fun',
 		icon: Sparkles,
 		category: 'launchpad',
@@ -101,7 +101,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'zora-create',
 		name: 'Zora Create',
-		descriptionKey: 'launchpad.tools.zora_create.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.zora_create.description',
 		url: 'https://zora.co/create',
 		icon: Sparkles,
 		category: 'launchpad',
@@ -112,7 +112,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'thirdweb-deploy',
 		name: 'Thirdweb Deploy',
-		descriptionKey: 'launchpad.tools.thirdweb_deploy.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.thirdweb_deploy.description',
 		url: 'https://thirdweb.com/deploy',
 		icon: Rocket,
 		category: 'launchpad',
@@ -125,7 +125,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'seedify',
 		name: 'Seedify',
-		descriptionKey: 'launchpad.tools.seedify.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.seedify.description',
 		url: 'https://seedify.fund',
 		icon: Rocket,
 		category: 'launchpad',
@@ -136,7 +136,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'polkastarter',
 		name: 'Polkastarter',
-		descriptionKey: 'launchpad.tools.polkastarter.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.polkastarter.description',
 		url: 'https://polkastarter.com',
 		icon: Rocket,
 		category: 'launchpad',
@@ -147,7 +147,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'gamefi_launchpad',
 		name: 'GameFi Launchpad',
-		descriptionKey: 'launchpad.tools.gamefi_launchpad.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.gamefi_launchpad.description',
 		url: 'https://gamefi.org/launchpad',
 		icon: Gamepad2,
 		category: 'launchpad',
@@ -158,7 +158,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'enjinstarter',
 		name: 'Enjinstarter',
-		descriptionKey: 'launchpad.tools.enjinstarter.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.enjinstarter.description',
 		url: 'https://enjinstarter.com',
 		icon: Rocket,
 		category: 'launchpad',
@@ -171,7 +171,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'sunpump',
 		name: 'SunPump',
-		descriptionKey: 'launchpad.tools.sunpump.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.sunpump.description',
 		url: 'https://sunpump.meme',
 		icon: Rocket,
 		category: 'launchpad',
@@ -182,7 +182,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'moonshot',
 		name: 'Moonshot',
-		descriptionKey: 'launchpad.tools.moonshot.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.moonshot.description',
 		url: 'https://moonshot.money',
 		icon: Rocket,
 		category: 'launchpad',
@@ -193,7 +193,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'ape_store',
 		name: 'Ape.Store',
-		descriptionKey: 'launchpad.tools.ape_store.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.ape_store.description',
 		url: 'https://ape.store',
 		icon: Rocket,
 		category: 'launchpad',
@@ -204,7 +204,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'believe',
 		name: 'Believe',
-		descriptionKey: 'launchpad.tools.believe.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.believe.description',
 		url: 'https://believe.app',
 		icon: Sparkles,
 		category: 'launchpad',
@@ -215,7 +215,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'virtuals',
 		name: 'Virtuals Protocol',
-		descriptionKey: 'launchpad.tools.virtuals.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.virtuals.description',
 		url: 'https://virtuals.io',
 		icon: Cpu,
 		category: 'launchpad',
@@ -226,7 +226,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'clanker',
 		name: 'Clanker',
-		descriptionKey: 'launchpad.tools.clanker.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.clanker.description',
 		url: 'https://clanker.world',
 		icon: Rocket,
 		category: 'launchpad',
@@ -237,7 +237,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'dexscreener_moonshot',
 		name: 'DEXScreener Moonshot',
-		descriptionKey: 'launchpad.tools.dexscreener_moonshot.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.dexscreener_moonshot.description',
 		url: 'https://dexscreener.com/moonshot',
 		icon: TrendingUp,
 		category: 'launchpad',
@@ -250,7 +250,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'bounce',
 		name: 'Bounce',
-		descriptionKey: 'launchpad.tools.bounce.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.bounce.description',
 		url: 'https://bounce.finance',
 		icon: Rocket,
 		category: 'launchpad',
@@ -261,7 +261,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'tokensoft',
 		name: 'Tokensoft',
-		descriptionKey: 'launchpad.tools.tokensoft.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.tokensoft.description',
 		url: 'https://tokensoft.io',
 		icon: Rocket,
 		category: 'launchpad',
@@ -271,7 +271,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'starter',
 		name: 'Starter',
-		descriptionKey: 'launchpad.tools.starter.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.starter.description',
 		url: 'https://starter.xyz',
 		icon: Rocket,
 		category: 'launchpad',
@@ -282,7 +282,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'impossible_finance',
 		name: 'Impossible Finance',
-		descriptionKey: 'launchpad.tools.impossible_finance.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.impossible_finance.description',
 		url: 'https://impossible.finance',
 		icon: Rocket,
 		category: 'launchpad',
@@ -293,7 +293,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'kommunitas',
 		name: 'Kommunitas',
-		descriptionKey: 'launchpad.tools.kommunitas.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.kommunitas.description',
 		url: 'https://kommunitas.net',
 		icon: Rocket,
 		category: 'launchpad',
@@ -304,7 +304,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'red_kite',
 		name: 'Red Kite',
-		descriptionKey: 'launchpad.tools.red_kite.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.red_kite.description',
 		url: 'https://redkite.polkafoundry.com',
 		icon: Rocket,
 		category: 'launchpad',
@@ -315,7 +315,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'trustpad',
 		name: 'TrustPad',
-		descriptionKey: 'launchpad.tools.trustpad.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.trustpad.description',
 		url: 'https://trustpad.io',
 		icon: Rocket,
 		category: 'launchpad',
@@ -326,7 +326,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'spores',
 		name: 'Spores Network',
-		descriptionKey: 'launchpad.tools.spores.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.spores.description',
 		url: 'https://spores.app',
 		icon: Rocket,
 		category: 'launchpad',
@@ -337,7 +337,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'bullperks',
 		name: 'BullPerks',
-		descriptionKey: 'launchpad.tools.bullperks.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.bullperks.description',
 		url: 'https://bullperks.com',
 		icon: Rocket,
 		category: 'launchpad',
@@ -348,7 +348,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'decubate',
 		name: 'Decubate',
-		descriptionKey: 'launchpad.tools.decubate.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.decubate.description',
 		url: 'https://decubate.com',
 		icon: Rocket,
 		category: 'launchpad',
@@ -359,7 +359,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'ape-terminal',
 		name: 'Ape Terminal',
-		descriptionKey: 'launchpad.tools.ape_terminal.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.ape_terminal.description',
 		url: 'https://apeterminal.io',
 		icon: Rocket,
 		category: 'launchpad',
@@ -372,7 +372,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'gagarin',
 		name: 'Gagarin Launchpad',
-		descriptionKey: 'launchpad.tools.gagarin.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.gagarin.description',
 		url: 'https://gagarin.world',
 		icon: Rocket,
 		category: 'launchpad',
@@ -383,7 +383,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'tonstarter',
 		name: 'TONStarter',
-		descriptionKey: 'launchpad.tools.tonstarter.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.tonstarter.description',
 		url: 'https://tonstarter.com',
 		icon: Rocket,
 		category: 'launchpad',
@@ -396,7 +396,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'lfg_launchpad',
 		name: 'LFG Launchpad',
-		descriptionKey: 'launchpad.tools.lfg_launchpad.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.lfg_launchpad.description',
 		url: 'https://lfg.jup.ag',
 		icon: Rocket,
 		category: 'launchpad',
@@ -407,7 +407,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'raydium_acceleraytor',
 		name: 'AcceleRaytor',
-		descriptionKey: 'launchpad.tools.raydium_acceleraytor.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.raydium_acceleraytor.description',
 		url: 'https://raydium.io/acceleraytor',
 		icon: Rocket,
 		category: 'launchpad',
@@ -418,7 +418,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'meteora_dlmm',
 		name: 'Meteora DLMM',
-		descriptionKey: 'launchpad.tools.meteora_dlmm.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.meteora_dlmm.description',
 		url: 'https://app.meteora.ag',
 		icon: Droplets,
 		category: 'launchpad',
@@ -429,7 +429,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'orca_whirlpools',
 		name: 'Orca Whirlpools',
-		descriptionKey: 'launchpad.tools.orca_whirlpools.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.orca_whirlpools.description',
 		url: 'https://orca.so',
 		icon: Droplets,
 		category: 'launchpad',
@@ -440,7 +440,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'legion',
 		name: 'Legion',
-		descriptionKey: 'launchpad.tools.legion.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.legion.description',
 		url: 'https://legion.cc',
 		icon: Rocket,
 		category: 'launchpad',
@@ -451,7 +451,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'armada',
 		name: 'Armada',
-		descriptionKey: 'launchpad.tools.armada.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.armada.description',
 		url: 'https://armada.so',
 		icon: Rocket,
 		category: 'launchpad',
@@ -462,7 +462,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'poolside-fi',
 		name: 'Poolside',
-		descriptionKey: 'launchpad.tools.poolside_fi.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.poolside_fi.description',
 		url: 'https://poolside.fi',
 		icon: Rocket,
 		category: 'launchpad',
@@ -475,7 +475,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'hedgey',
 		name: 'Hedgey',
-		descriptionKey: 'launchpad.tools.hedgey.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.hedgey.description',
 		url: 'https://hedgey.finance',
 		icon: Lock,
 		category: 'launchpad',
@@ -486,7 +486,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'magna',
 		name: 'Magna',
-		descriptionKey: 'launchpad.tools.magna.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.magna.description',
 		url: 'https://magna.so',
 		icon: Lock,
 		category: 'launchpad',
@@ -496,7 +496,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'superfluid-vesting',
 		name: 'Superfluid Vesting',
-		descriptionKey: 'launchpad.tools.superfluid_vesting.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.superfluid_vesting.description',
 		url: 'https://www.superfluid.finance/vesting',
 		icon: Lock,
 		category: 'launchpad',
@@ -507,7 +507,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'streamflow',
 		name: 'Streamflow',
-		descriptionKey: 'launchpad.tools.streamflow.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.streamflow.description',
 		url: 'https://streamflow.finance',
 		icon: Lock,
 		category: 'launchpad',
@@ -518,7 +518,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'vestinglab',
 		name: 'VestingLab',
-		descriptionKey: 'launchpad.tools.vestinglab.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.vestinglab.description',
 		url: 'https://vestinglab.io',
 		icon: Lock,
 		category: 'launchpad',
@@ -531,7 +531,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'echo-launchpad',
 		name: 'Echo',
-		descriptionKey: 'launchpad.tools.echo_launchpad.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.echo_launchpad.description',
 		url: 'https://echo.xyz',
 		icon: Rocket,
 		category: 'launchpad',
@@ -541,7 +541,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'bonsaidao-launchpad',
 		name: 'BonsaiDAO',
-		descriptionKey: 'launchpad.tools.bonsaidao_launchpad.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.bonsaidao_launchpad.description',
 		url: 'https://bonsaidao.xyz',
 		icon: Rocket,
 		category: 'launchpad',
@@ -552,7 +552,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'axis-finance',
 		name: 'Axis Finance',
-		descriptionKey: 'launchpad.tools.axis_finance.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.axis_finance.description',
 		url: 'https://axis.finance',
 		icon: Rocket,
 		category: 'launchpad',
@@ -563,7 +563,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'surge-launchpad',
 		name: 'Surge',
-		descriptionKey: 'launchpad.tools.surge_launchpad.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.surge_launchpad.description',
 		url: 'https://surge.build',
 		icon: Rocket,
 		category: 'launchpad',
@@ -574,7 +574,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'blastoff-launchpad',
 		name: 'Blastoff',
-		descriptionKey: 'launchpad.tools.blastoff_launchpad.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.blastoff_launchpad.description',
 		url: 'https://blastoff.zone',
 		icon: Rocket,
 		category: 'launchpad',
@@ -585,7 +585,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'daomaker-launchpad',
 		name: 'DAO Maker Launchpad',
-		descriptionKey: 'launchpad.tools.daomaker_launchpad.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.daomaker_launchpad.description',
 		url: 'https://daomaker.com/launchpad',
 		icon: Rocket,
 		category: 'launchpad',
@@ -596,7 +596,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'seedify-launchpad',
 		name: 'Seedify Launchpad',
-		descriptionKey: 'launchpad.tools.seedify_launchpad.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.seedify_launchpad.description',
 		url: 'https://launchpad.seedify.fund',
 		icon: Rocket,
 		category: 'launchpad',
@@ -607,7 +607,7 @@ export const launchpadTools: ExternalTool[] = [
 	{
 		id: 'coinstarter',
 		name: 'CoinStarter',
-		descriptionKey: 'launchpad.tools.coinstarter.description',
+		descriptionKey: 'routes/apps/chain-tools/launchpad.tools.coinstarter.description',
 		url: 'https://coinstarter.com',
 		icon: Rocket,
 		category: 'launchpad',

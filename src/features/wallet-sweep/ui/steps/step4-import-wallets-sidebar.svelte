@@ -47,56 +47,58 @@
 <StepSidebar stepNumber={4} title="" description="">
 	{#if walletCount > 0}
 		<div transition:fade>
-			<StepSummary title={i18n.t('wallet-sweep.step4.sidebar.title')}>
+			<StepSummary title={i18n.t('routes/apps/wallet-sweep.step4.sidebar.title')}>
 				<div class="summary-item">
-					<span>{i18n.t('wallet-sweep.step4.sidebar.total_label')}</span>
+					<span>{i18n.t('routes/apps/wallet-sweep.step4.sidebar.total_label')}</span>
 					<strong>{walletCount.toLocaleString()}</strong>
 				</div>
 				{#if isScanning}
 					<div class="summary-item">
-						<span>{i18n.t('wallet-sweep.step4.sidebar.scanning_label')}</span>
+						<span>{i18n.t('routes/apps/wallet-sweep.step4.sidebar.scanning_label')}</span>
 						<strong>{scanProgress}%</strong>
 					</div>
 				{:else if scanCompleted}
 					<div class="summary-item scan-status-completed">
-						<span>{i18n.t('wallet-sweep.step4.sidebar.scan_status_label')}</span>
-						<strong>{i18n.t('wallet-sweep.step4.sidebar.scan_completed')}</strong>
+						<span>{i18n.t('routes/apps/wallet-sweep.step4.sidebar.scan_status_label')}</span>
+						<strong>{i18n.t('routes/apps/wallet-sweep.step4.sidebar.scan_completed')}</strong>
 					</div>
 				{:else}
 					<div class="summary-item scan-status-pending">
-						<span>{i18n.t('wallet-sweep.step4.sidebar.scan_status_label')}</span>
-						<strong>{i18n.t('wallet-sweep.step4.sidebar.scan_pending')}</strong>
+						<span>{i18n.t('routes/apps/wallet-sweep.step4.sidebar.scan_status_label')}</span>
+						<strong>{i18n.t('routes/apps/wallet-sweep.step4.sidebar.scan_pending')}</strong>
 					</div>
 				{/if}
 			</StepSummary>
 
 			{#if hasScanned && tokenStats.length > 0}
 				<TokenStatsPanel
-					title={i18n.t('wallet-sweep.step4.sidebar.token_stats.title')}
+					title={i18n.t('routes/apps/wallet-sweep.step4.sidebar.token_stats.title')}
 					stats={tokenStats}
 					walletsCountLabel={(count) =>
-						i18n.t('wallet-sweep.step4.sidebar.token_stats.wallets_count', { count })}
+						i18n.t('routes/apps/wallet-sweep.step4.sidebar.token_stats.wallets_count', { count })}
 					copyAddressTitle={i18n.t('common.copy_address')}
 					copiedTitle={i18n.t('common.copied')}
 					wallets={importedWallets}
 					{networkName}
-					downloadTitle={i18n.t('wallet-sweep.step4.sidebar.token_stats.download_title')}
+					downloadTitle={i18n.t(
+						'routes/apps/wallet-sweep.step4.sidebar.token_stats.download_title'
+					)}
 				/>
 			{:else if hasScanned}
 				<div class="no-balance-hint" transition:fade>
-					{i18n.t('wallet-sweep.step4.sidebar.no_balance_found')}
+					{i18n.t('routes/apps/wallet-sweep.step4.sidebar.no_balance_found')}
 				</div>
 			{/if}
 		</div>
 	{:else}
-		<EmptyHint message={i18n.t('wallet-sweep.step4.sidebar.empty_hint')} />
+		<EmptyHint message={i18n.t('routes/apps/wallet-sweep.step4.sidebar.empty_hint')} />
 	{/if}
 
 	<!-- Scan Log Panel - show when scanning or has events -->
 	{#if isScanning || scanEvents.length > 0}
 		<ScanLogPanel
 			events={scanEvents}
-			title={i18n.t('wallet-sweep.step4.sidebar.scan_log.title')}
+			title={i18n.t('routes/apps/wallet-sweep.step4.sidebar.scan_log.title')}
 			collapsed={!isScanning}
 			onClear={() => step4State.clearScanEvents()}
 			{scanRate}

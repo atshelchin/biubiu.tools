@@ -9,4 +9,4 @@
 	let selectedCount = $derived(step3State.selectedTokens.size);
 </script>
 
-<TokenSelectionSidebar i18nPrefix="token-balance-scanner" {selectedCount} />
+<TokenSelectionSidebar i18nPrefix="routes/apps/token-balance-scanner" {selectedCount} />

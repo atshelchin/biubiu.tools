@@ -96,14 +96,16 @@
 			}));
 		} catch (error) {
 			console.error('Failed to initialize deployment:', error);
-			errorMessage = i18n.t('wallet-sweep.step2.content.deployment.errors.init_failed');
+			errorMessage = i18n.t('routes/apps/wallet-sweep.step2.content.deployment.errors.init_failed');
 			status = 'error';
 		}
 	}
 
 	async function handleDeploy() {
 		if (!config.deployFunction || !connectStore.isConnected || !connectStore.address) {
-			errorMessage = i18n.t('wallet-sweep.step2.content.deployment.errors.wallet_not_connected');
+			errorMessage = i18n.t(
+				'routes/apps/wallet-sweep.step2.content.deployment.errors.wallet_not_connected'
+			);
 			return;
 		}
 
@@ -194,7 +196,9 @@
 			status = 'error';
 
 			// Handle different error types
-			let message = i18n.t('wallet-sweep.step2.content.deployment.errors.deployment_failed');
+			let message = i18n.t(
+				'routes/apps/wallet-sweep.step2.content.deployment.errors.deployment_failed'
+			);
 			if (error instanceof Error) {
 				if (
 					error.message.includes('BlockOutOfRangeError') ||
@@ -202,40 +206,58 @@
 					error.message.includes('nonce too high')
 				) {
 					if (isMetaMask()) {
-						message = i18n.t('wallet-sweep.step2.content.deployment.errors.metamask_cache');
+						message = i18n.t(
+							'routes/apps/wallet-sweep.step2.content.deployment.errors.metamask_cache'
+						);
 						showClearCacheSteps = true;
 					} else {
-						message = i18n.t('wallet-sweep.step2.content.deployment.errors.wallet_cache');
+						message = i18n.t(
+							'routes/apps/wallet-sweep.step2.content.deployment.errors.wallet_cache'
+						);
 					}
 				} else if (
 					error.message.includes('Internal JSON-RPC error') ||
 					error.message.includes('internal error was received')
 				) {
 					if (isMetaMask()) {
-						message = i18n.t('wallet-sweep.step2.content.deployment.errors.metamask_internal');
+						message = i18n.t(
+							'routes/apps/wallet-sweep.step2.content.deployment.errors.metamask_internal'
+						);
 					} else {
-						message = i18n.t('wallet-sweep.step2.content.deployment.errors.wallet_internal');
+						message = i18n.t(
+							'routes/apps/wallet-sweep.step2.content.deployment.errors.wallet_internal'
+						);
 					}
 				} else if (
 					error.message.includes('Failed to fetch') ||
 					error.message.includes('fetch failed') ||
 					error.message.includes('NetworkError')
 				) {
-					message = i18n.t('wallet-sweep.step2.content.deployment.errors.connection_failed');
+					message = i18n.t(
+						'routes/apps/wallet-sweep.step2.content.deployment.errors.connection_failed'
+					);
 				} else if (error.message.includes('circuit breaker is open')) {
-					message = i18n.t('wallet-sweep.step2.content.deployment.errors.rpc_unavailable');
+					message = i18n.t(
+						'routes/apps/wallet-sweep.step2.content.deployment.errors.rpc_unavailable'
+					);
 				} else if (error.message.includes('insufficient funds')) {
-					message = i18n.t('wallet-sweep.step2.content.deployment.errors.insufficient_funds');
+					message = i18n.t(
+						'routes/apps/wallet-sweep.step2.content.deployment.errors.insufficient_funds'
+					);
 				} else if (
 					error.message.includes('user rejected') ||
 					error.message.includes('User rejected')
 				) {
-					message = i18n.t('wallet-sweep.step2.content.deployment.errors.user_rejected');
+					message = i18n.t(
+						'routes/apps/wallet-sweep.step2.content.deployment.errors.user_rejected'
+					);
 				} else if (
 					error.message.includes('nonce too low') ||
 					error.message.includes('already known')
 				) {
-					message = i18n.t('wallet-sweep.step2.content.deployment.errors.already_deployed');
+					message = i18n.t(
+						'routes/apps/wallet-sweep.step2.content.deployment.errors.already_deployed'
+					);
 				} else {
 					message = error.message;
 				}
@@ -264,7 +286,7 @@
 <Modal
 	open={show}
 	onClose={handleClose}
-	title={i18n.t('wallet-sweep.step2.content.deployment.modal_title', {
+	title={i18n.t('routes/apps/wallet-sweep.step2.content.deployment.modal_title', {
 		contractName: config.contractName
 	})}
 	maxWidth="600px"
@@ -275,11 +297,13 @@
 			<!-- <p class="contract-description">{config.description}</p> -->
 			<ContractDetails
 				contractAddress={config.contractAddress}
-				addressLabel={i18n.t('wallet-sweep.step2.content.deployment.contract_address_label')}
+				addressLabel={i18n.t(
+					'routes/apps/wallet-sweep.step2.content.deployment.contract_address_label'
+				)}
 				{blockExplorer}
 				details={[
 					{
-						label: i18n.t('wallet-sweep.step2.content.deployment.network_label'),
+						label: i18n.t('routes/apps/wallet-sweep.step2.content.deployment.network_label'),
 						value: networkName
 					}
 				]}
@@ -288,32 +312,44 @@
 			{#if steps.length > 0}
 				<DeploymentSteps
 					{steps}
-					heading={i18n.t('wallet-sweep.step2.content.deployment.deployment_steps_heading')}
+					heading={i18n.t(
+						'routes/apps/wallet-sweep.step2.content.deployment.deployment_steps_heading'
+					)}
 				/>
 			{/if}
 
 			<ActionButton onclick={handleDeploy}
-				>{i18n.t('wallet-sweep.step2.content.deployment.start_deployment')}</ActionButton
+				>{i18n.t(
+					'routes/apps/wallet-sweep.step2.content.deployment.start_deployment'
+				)}</ActionButton
 			>
 		</div>
 	{:else if status === 'deploying'}
 		<DeploymentProgress
 			{steps}
 			{isWaitingForSignature}
-			title={i18n.t('wallet-sweep.step2.content.deployment.deploying_contract')}
+			title={i18n.t('routes/apps/wallet-sweep.step2.content.deployment.deploying_contract')}
 			messages={{
-				waitingForSignature: i18n.t('wallet-sweep.step2.content.deployment.waiting_for_signature'),
-				transactionSent: i18n.t('wallet-sweep.step2.content.deployment.transaction_sent'),
-				finalizing: i18n.t('wallet-sweep.step2.content.deployment.finalizing'),
-				confirmInWallet: i18n.t('wallet-sweep.step2.content.deployment.confirm_in_wallet')
+				waitingForSignature: i18n.t(
+					'routes/apps/wallet-sweep.step2.content.deployment.waiting_for_signature'
+				),
+				transactionSent: i18n.t(
+					'routes/apps/wallet-sweep.step2.content.deployment.transaction_sent'
+				),
+				finalizing: i18n.t('routes/apps/wallet-sweep.step2.content.deployment.finalizing'),
+				confirmInWallet: i18n.t(
+					'routes/apps/wallet-sweep.step2.content.deployment.confirm_in_wallet'
+				)
 			}}
 		/>
 	{:else if status === 'success'}
 		<DeploymentSuccess
 			contractAddress={config.contractAddress}
 			{blockExplorer}
-			title={i18n.t('wallet-sweep.step2.content.deployment.success_title')}
-			viewOnExplorerText={i18n.t('wallet-sweep.step2.content.deployment.view_on_explorer')}
+			title={i18n.t('routes/apps/wallet-sweep.step2.content.deployment.success_title')}
+			viewOnExplorerText={i18n.t(
+				'routes/apps/wallet-sweep.step2.content.deployment.view_on_explorer'
+			)}
 		/>
 		<div class="success-actions">
 			<ActionButton variant="primary" onclick={handleClose}>{i18n.t('common.done')}</ActionButton>
@@ -323,7 +359,7 @@
 			errorMessage={errorMessage ?? undefined}
 			showClearCacheGuide={showClearCacheSteps}
 			onRetry={handleRetry}
-			title={i18n.t('wallet-sweep.step2.content.deployment.error_title')}
+			title={i18n.t('routes/apps/wallet-sweep.step2.content.deployment.error_title')}
 		/>
 	{/if}
 </Modal>

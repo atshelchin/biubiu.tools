@@ -15,30 +15,30 @@
 
 <DependencyCheckSidebar {summary}>
 	<div class="help-section">
-		<h3>{i18n.t('token-deployer.step2.sidebar.what_is_this')}</h3>
-		<p>{i18n.t('token-deployer.step2.sidebar.what_is_this_desc')}</p>
+		<h3>{i18n.t('routes/apps/token-deployer.step2.sidebar.what_is_this')}</h3>
+		<p>{i18n.t('routes/apps/token-deployer.step2.sidebar.what_is_this_desc')}</p>
 
-		<h3>{i18n.t('token-deployer.step2.sidebar.dependencies')}</h3>
+		<h3>{i18n.t('routes/apps/token-deployer.step2.sidebar.dependencies')}</h3>
 		<ul>
 			<li>
-				<strong>{i18n.t('token-deployer.step2.sidebar.rpc_endpoint')}</strong>
-				{i18n.t('token-deployer.step2.sidebar.rpc_endpoint_desc')}
+				<strong>{i18n.t('routes/apps/token-deployer.step2.sidebar.rpc_endpoint')}</strong>
+				{i18n.t('routes/apps/token-deployer.step2.sidebar.rpc_endpoint_desc')}
 			</li>
 			<li>
-				<strong>{i18n.t('token-deployer.step2.sidebar.create2_proxy')}</strong>
-				{i18n.t('token-deployer.step2.sidebar.create2_proxy_desc')}
+				<strong>{i18n.t('routes/apps/token-deployer.step2.sidebar.create2_proxy')}</strong>
+				{i18n.t('routes/apps/token-deployer.step2.sidebar.create2_proxy_desc')}
 			</li>
 			<li>
-				<strong>{i18n.t('token-deployer.step2.sidebar.multicall3')}</strong>
-				{i18n.t('token-deployer.step2.sidebar.multicall3_desc')}
+				<strong>{i18n.t('routes/apps/token-deployer.step2.sidebar.multicall3')}</strong>
+				{i18n.t('routes/apps/token-deployer.step2.sidebar.multicall3_desc')}
 			</li>
 			<li>
-				<strong>{i18n.t('token-deployer.step2.sidebar.biubiu_premium')}</strong>
-				{i18n.t('token-deployer.step2.sidebar.biubiu_premium_desc')}
+				<strong>{i18n.t('routes/apps/token-deployer.step2.sidebar.biubiu_premium')}</strong>
+				{i18n.t('routes/apps/token-deployer.step2.sidebar.biubiu_premium_desc')}
 			</li>
 			<li>
-				<strong>{i18n.t('token-deployer.step2.sidebar.token_factory')}</strong>
-				{i18n.t('token-deployer.step2.sidebar.token_factory_desc')}
+				<strong>{i18n.t('routes/apps/token-deployer.step2.sidebar.token_factory')}</strong>
+				{i18n.t('routes/apps/token-deployer.step2.sidebar.token_factory_desc')}
 			</li>
 		</ul>
 	</div>

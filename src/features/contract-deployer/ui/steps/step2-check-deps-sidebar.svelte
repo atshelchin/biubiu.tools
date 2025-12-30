@@ -15,11 +15,11 @@
 
 <DependencyCheckSidebar {summary}>
 	<div class="help-section">
-		<h3>{i18n.t('contract-deployer.step2.sidebar.title')}</h3>
-		<p>{i18n.t('contract-deployer.step2.sidebar.description')}</p>
+		<h3>{i18n.t('routes/apps/contract-deployer.step2.sidebar.title')}</h3>
+		<p>{i18n.t('routes/apps/contract-deployer.step2.sidebar.description')}</p>
 
 		<div class="required-contracts">
-			<h4>{i18n.t('contract-deployer.step2.sidebar.required_contracts')}</h4>
+			<h4>{i18n.t('routes/apps/contract-deployer.step2.sidebar.required_contracts')}</h4>
 			<ul>
 				<li>
 					<strong>CREATE2 Proxy</strong>

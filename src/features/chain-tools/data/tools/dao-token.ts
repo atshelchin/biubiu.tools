@@ -29,7 +29,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'uni-token',
 		name: 'UNI (Uniswap)',
-		descriptionKey: 'dao_token.tools.uni_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.uni_token.description',
 		url: 'https://app.uniswap.org/vote',
 		icon: Repeat,
 		category: 'dao-token',
@@ -40,7 +40,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'aave-token',
 		name: 'AAVE (Aave)',
-		descriptionKey: 'dao_token.tools.aave_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.aave_token.description',
 		url: 'https://governance.aave.com',
 		icon: Landmark,
 		category: 'dao-token',
@@ -51,7 +51,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'mkr-token',
 		name: 'MKR (MakerDAO)',
-		descriptionKey: 'dao_token.tools.mkr_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.mkr_token.description',
 		url: 'https://vote.makerdao.com',
 		icon: Landmark,
 		category: 'dao-token',
@@ -62,7 +62,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'crv-token',
 		name: 'CRV (Curve)',
-		descriptionKey: 'dao_token.tools.crv_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.crv_token.description',
 		url: 'https://dao.curve.fi',
 		icon: TrendingUp,
 		category: 'dao-token',
@@ -73,7 +73,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'comp-token',
 		name: 'COMP (Compound)',
-		descriptionKey: 'dao_token.tools.comp_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.comp_token.description',
 		url: 'https://compound.finance/governance',
 		icon: Landmark,
 		category: 'dao-token',
@@ -84,7 +84,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'snx-token',
 		name: 'SNX (Synthetix)',
-		descriptionKey: 'dao_token.tools.snx_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.snx_token.description',
 		url: 'https://staking.synthetix.io',
 		icon: Zap,
 		category: 'dao-token',
@@ -95,7 +95,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'ldo-token',
 		name: 'LDO (Lido)',
-		descriptionKey: 'dao_token.tools.ldo_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.ldo_token.description',
 		url: 'https://lido.fi/governance',
 		icon: Shield,
 		category: 'dao-token',
@@ -106,7 +106,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'gmx-token',
 		name: 'GMX (GMX)',
-		descriptionKey: 'dao_token.tools.gmx_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.gmx_token.description',
 		url: 'https://app.gmx.io/#/earn',
 		icon: TrendingUp,
 		category: 'dao-token',
@@ -117,7 +117,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'bal-token',
 		name: 'BAL (Balancer)',
-		descriptionKey: 'dao_token.tools.bal_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.bal_token.description',
 		url: 'https://vote.balancer.fi',
 		icon: Layers,
 		category: 'dao-token',
@@ -128,7 +128,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'sushi-token',
 		name: 'SUSHI (SushiSwap)',
-		descriptionKey: 'dao_token.tools.sushi_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.sushi_token.description',
 		url: 'https://forum.sushi.com',
 		icon: Repeat,
 		category: 'dao-token',
@@ -139,7 +139,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'yfi-token',
 		name: 'YFI (Yearn)',
-		descriptionKey: 'dao_token.tools.yfi_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.yfi_token.description',
 		url: 'https://yearn.fi/veyfi',
 		icon: Award,
 		category: 'dao-token',
@@ -150,7 +150,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'inch-token',
 		name: '1INCH (1inch)',
-		descriptionKey: 'dao_token.tools.inch_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.inch_token.description',
 		url: 'https://app.1inch.io/#/1/dao/governance',
 		icon: Zap,
 		category: 'dao-token',
@@ -161,7 +161,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'pendle-token',
 		name: 'PENDLE (Pendle)',
-		descriptionKey: 'dao_token.tools.pendle_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.pendle_token.description',
 		url: 'https://app.pendle.finance/vependle',
 		icon: TrendingUp,
 		category: 'dao-token',
@@ -172,7 +172,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'ena-token',
 		name: 'ENA (Ethena)',
-		descriptionKey: 'dao_token.tools.ena_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.ena_token.description',
 		url: 'https://app.ethena.fi/earn',
 		icon: Coins,
 		category: 'dao-token',
@@ -183,7 +183,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'dydx-token',
 		name: 'DYDX (dYdX)',
-		descriptionKey: 'dao_token.tools.dydx_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.dydx_token.description',
 		url: 'https://dydx.community',
 		icon: TrendingUp,
 		category: 'dao-token',
@@ -194,7 +194,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'cvx-token',
 		name: 'CVX (Convex)',
-		descriptionKey: 'dao_token.tools.cvx_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.cvx_token.description',
 		url: 'https://www.convexfinance.com/vote',
 		icon: TrendingUp,
 		category: 'dao-token',
@@ -205,7 +205,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'fxs-token',
 		name: 'FXS (Frax)',
-		descriptionKey: 'dao_token.tools.fxs_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.fxs_token.description',
 		url: 'https://app.frax.finance/governance',
 		icon: Coins,
 		category: 'dao-token',
@@ -216,7 +216,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'blur-token',
 		name: 'BLUR (Blur)',
-		descriptionKey: 'dao_token.tools.blur_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.blur_token.description',
 		url: 'https://blur.io',
 		icon: Zap,
 		category: 'dao-token',
@@ -227,7 +227,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'ape-token',
 		name: 'APE (ApeCoin)',
-		descriptionKey: 'dao_token.tools.ape_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.ape_token.description',
 		url: 'https://apecoin.com/governance',
 		icon: Award,
 		category: 'dao-token',
@@ -238,7 +238,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'rpl-token',
 		name: 'RPL (Rocket Pool)',
-		descriptionKey: 'dao_token.tools.rpl_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.rpl_token.description',
 		url: 'https://vote.rocketpool.net',
 		icon: Shield,
 		category: 'dao-token',
@@ -249,7 +249,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'morpho-token',
 		name: 'MORPHO (Morpho)',
-		descriptionKey: 'dao_token.tools.morpho_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.morpho_token.description',
 		url: 'https://app.morpho.org/governance',
 		icon: Landmark,
 		category: 'dao-token',
@@ -260,7 +260,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'rdnt-token',
 		name: 'RDNT (Radiant)',
-		descriptionKey: 'dao_token.tools.rdnt_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.rdnt_token.description',
 		url: 'https://radiant.capital',
 		icon: Landmark,
 		category: 'dao-token',
@@ -271,7 +271,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'osmo-token',
 		name: 'OSMO (Osmosis)',
-		descriptionKey: 'dao_token.tools.osmo_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.osmo_token.description',
 		url: 'https://wallet.keplr.app/chains/osmosis',
 		icon: Repeat,
 		category: 'dao-token',
@@ -282,7 +282,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'jup-token',
 		name: 'JUP (Jupiter)',
-		descriptionKey: 'dao_token.tools.jup_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.jup_token.description',
 		url: 'https://vote.jup.ag',
 		icon: Zap,
 		category: 'dao-token',
@@ -293,7 +293,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'ray-token',
 		name: 'RAY (Raydium)',
-		descriptionKey: 'dao_token.tools.ray_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.ray_token.description',
 		url: 'https://raydium.io/staking',
 		icon: Repeat,
 		category: 'dao-token',
@@ -304,7 +304,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'jto-token',
 		name: 'JTO (Jito)',
-		descriptionKey: 'dao_token.tools.jto_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.jto_token.description',
 		url: 'https://gov.jito.network',
 		icon: Shield,
 		category: 'dao-token',
@@ -315,7 +315,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'orca-token',
 		name: 'ORCA (Orca)',
-		descriptionKey: 'dao_token.tools.orca_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.orca_token.description',
 		url: 'https://www.orca.so',
 		icon: Repeat,
 		category: 'dao-token',
@@ -327,7 +327,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'arb-token',
 		name: 'ARB (Arbitrum)',
-		descriptionKey: 'dao_token.tools.arb_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.arb_token.description',
 		url: 'https://www.tally.xyz/gov/arbitrum',
 		icon: Layers,
 		category: 'dao-token',
@@ -338,7 +338,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'op-token',
 		name: 'OP (Optimism)',
-		descriptionKey: 'dao_token.tools.op_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.op_token.description',
 		url: 'https://vote.optimism.io',
 		icon: Layers,
 		category: 'dao-token',
@@ -349,7 +349,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'strk-token',
 		name: 'STRK (StarkNet)',
-		descriptionKey: 'dao_token.tools.strk_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.strk_token.description',
 		url: 'https://governance.starknet.io',
 		icon: Layers,
 		category: 'dao-token',
@@ -360,7 +360,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'zk-token',
 		name: 'ZK (zkSync)',
-		descriptionKey: 'dao_token.tools.zk_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.zk_token.description',
 		url: 'https://portal.zksync.io/governance',
 		icon: Layers,
 		category: 'dao-token',
@@ -371,7 +371,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'matic-token',
 		name: 'MATIC/POL (Polygon)',
-		descriptionKey: 'dao_token.tools.matic_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.matic_token.description',
 		url: 'https://polygon.technology/governance',
 		icon: Layers,
 		category: 'dao-token',
@@ -382,7 +382,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'mnt-token',
 		name: 'MNT (Mantle)',
-		descriptionKey: 'dao_token.tools.mnt_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.mnt_token.description',
 		url: 'https://governance.mantle.xyz',
 		icon: Layers,
 		category: 'dao-token',
@@ -393,7 +393,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'metis-token',
 		name: 'METIS (Metis)',
-		descriptionKey: 'dao_token.tools.metis_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.metis_token.description',
 		url: 'https://metis.io',
 		icon: Layers,
 		category: 'dao-token',
@@ -405,7 +405,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'ens-token',
 		name: 'ENS (Ethereum Name Service)',
-		descriptionKey: 'dao_token.tools.ens_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.ens_token.description',
 		url: 'https://vote.ens.domains',
 		icon: Globe,
 		category: 'dao-token',
@@ -416,7 +416,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'gtc-token',
 		name: 'GTC (Gitcoin)',
-		descriptionKey: 'dao_token.tools.gtc_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.gtc_token.description',
 		url: 'https://www.tally.xyz/gov/gitcoin',
 		icon: Users,
 		category: 'dao-token',
@@ -427,7 +427,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'safe-token',
 		name: 'SAFE (Safe)',
-		descriptionKey: 'dao_token.tools.safe_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.safe_token.description',
 		url: 'https://forum.safe.global',
 		icon: Shield,
 		category: 'dao-token',
@@ -438,7 +438,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'cow-token',
 		name: 'COW (CoW Protocol)',
-		descriptionKey: 'dao_token.tools.cow_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.cow_token.description',
 		url: 'https://swap.cow.fi/#/1/all-tokens/WETH/COW',
 		icon: Repeat,
 		category: 'dao-token',
@@ -449,7 +449,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'gno-token',
 		name: 'GNO (Gnosis)',
-		descriptionKey: 'dao_token.tools.gno_token.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.gno_token.description',
 		url: 'https://www.gnosis.io',
 		icon: Shield,
 		category: 'dao-token',
@@ -461,7 +461,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'tally-governance',
 		name: 'Tally',
-		descriptionKey: 'dao_token.tools.tally_governance.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.tally_governance.description',
 		url: 'https://www.tally.xyz',
 		icon: Vote,
 		category: 'dao-token',
@@ -471,7 +471,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'snapshot-governance',
 		name: 'Snapshot',
-		descriptionKey: 'dao_token.tools.snapshot_governance.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.snapshot_governance.description',
 		url: 'https://snapshot.org',
 		icon: Vote,
 		category: 'dao-token',
@@ -481,7 +481,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'boardroom',
 		name: 'Boardroom',
-		descriptionKey: 'dao_token.tools.boardroom.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.boardroom.description',
 		url: 'https://boardroom.io',
 		icon: Building2,
 		category: 'dao-token',
@@ -491,7 +491,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'karma-dao',
 		name: 'Karma',
-		descriptionKey: 'dao_token.tools.karma_dao.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.karma_dao.description',
 		url: 'https://www.karmahq.xyz',
 		icon: Users,
 		category: 'dao-token',
@@ -501,7 +501,7 @@ export const daoTokenTools: ExternalTool[] = [
 	{
 		id: 'messari-governance',
 		name: 'Messari Governor',
-		descriptionKey: 'dao_token.tools.messari_governance.description',
+		descriptionKey: 'routes/apps/chain-tools/dao_token.tools.messari_governance.description',
 		url: 'https://messari.io/governor/daos',
 		icon: BarChart3,
 		category: 'dao-token',

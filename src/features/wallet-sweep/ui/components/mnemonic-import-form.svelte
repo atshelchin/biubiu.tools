@@ -46,18 +46,18 @@
 </script>
 
 <div transition:slide>
-	<!-- <div class="form-label">{i18n.t('wallet-sweep.step4.content.mnemonic.label')}</div> -->
+	<!-- <div class="form-label">{i18n.t('routes/apps/wallet-sweep.step4.content.mnemonic.label')}</div> -->
 	<SimpleCodeEditor
 		bind:value={mnemonicText}
-		placeholder={i18n.t('wallet-sweep.step4.content.mnemonic.placeholder')}
+		placeholder={i18n.t('routes/apps/wallet-sweep.step4.content.mnemonic.placeholder')}
 		rows={6}
 	/>
-	<p class="form-hint">{i18n.t('wallet-sweep.step4.content.mnemonic.security_hint')}</p>
+	<p class="form-hint">{i18n.t('routes/apps/wallet-sweep.step4.content.mnemonic.security_hint')}</p>
 
 	{#if isMnemonicValid}
 		<div style="margin-top: var(--space-4);" transition:slide={{ duration: 200 }}>
 			<div class="form-label">
-				{i18n.t('wallet-sweep.step4.content.mnemonic.derivation_path')}
+				{i18n.t('routes/apps/wallet-sweep.step4.content.mnemonic.derivation_path')}
 			</div>
 			<AddressPathSelector
 				bind:pathType
@@ -73,8 +73,8 @@
 		</div>
 
 		<ProgressButton
-			label={i18n.t('wallet-sweep.step4.content.import_wallets_button')}
-			loadingLabel={i18n.t('wallet-sweep.step4.content.mnemonic.generating', {
+			label={i18n.t('routes/apps/wallet-sweep.step4.content.import_wallets_button')}
+			loadingLabel={i18n.t('routes/apps/wallet-sweep.step4.content.mnemonic.generating', {
 				progress: Math.round(generationProgress)
 			})}
 			isLoading={isGenerating}

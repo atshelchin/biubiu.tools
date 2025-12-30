@@ -18,9 +18,9 @@
 	const i18n = useI18n();
 
 	const filters: { key: NetworkFilter; labelKey: string }[] = [
-		{ key: 'all', labelKey: 'chainlist.filter.all' },
-		{ key: 'mainnet', labelKey: 'chainlist.filter.mainnet' },
-		{ key: 'testnet', labelKey: 'chainlist.filter.testnet' }
+		{ key: 'all', labelKey: 'routes/apps/chainlist.filter.all' },
+		{ key: 'mainnet', labelKey: 'routes/apps/chainlist.filter.mainnet' },
+		{ key: 'testnet', labelKey: 'routes/apps/chainlist.filter.testnet' }
 	];
 </script>
 
@@ -30,7 +30,7 @@
 		<input
 			type="text"
 			class="search-input"
-			placeholder={i18n.t('chainlist.search_placeholder')}
+			placeholder={i18n.t('routes/apps/chainlist.search_placeholder')}
 			value={searchQuery}
 			oninput={(e) => onSearchChange(e.currentTarget.value)}
 		/>
@@ -55,7 +55,7 @@
 		</div>
 
 		<div class="result-count">
-			{i18n.t('chainlist.showing_results', { count: filteredCount, total: totalCount })}
+			{i18n.t('routes/apps/chainlist.showing_results', { count: filteredCount, total: totalCount })}
 		</div>
 	</div>
 </div>

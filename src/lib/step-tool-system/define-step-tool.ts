@@ -25,8 +25,8 @@ import type { StepToolDefinition } from './types';
  *   id: 'wallet-sweep',
  *   i18nPrefix: 'wallet-sweep',
  *   steps: [
- *     { label: 'wallet-sweep.seo.step_1_name', description: 'wallet-sweep.seo.step_1_description' },
- *     { label: 'wallet-sweep.seo.step_2_name', description: 'wallet-sweep.seo.step_2_description' },
+ *     { label: 'routes/apps/wallet-sweep.seo.step_1_name', description: 'routes/apps/wallet-sweep.seo.step_1_description' },
+ *     { label: 'routes/apps/wallet-sweep.seo.step_2_name', description: 'routes/apps/wallet-sweep.seo.step_2_description' },
  *     // ...
  *   ],
  *   stepComponents,

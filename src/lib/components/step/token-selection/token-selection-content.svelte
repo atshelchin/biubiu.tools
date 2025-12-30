@@ -8,7 +8,7 @@
 	 * @example
 	 * ```svelte
 	 * <TokenSelectionContent
-	 *   i18nPrefix="wallet-sweep"
+	 *   i18nPrefix="routes/apps/wallet-sweep"
 	 *   selectedTokenIds={state.selectedTokenIds}
 	 *   onSelectionChange={(ids) => state.selectedTokenIds = ids}
 	 *   onTokenAdded={(id) => state.selectedTokenIds.add(id)}
