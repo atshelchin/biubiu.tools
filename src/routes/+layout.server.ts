@@ -18,7 +18,8 @@ const { load: i18nLoad } = createServerLoader(
 			'security-scanner',
 			'tools',
 			'wallet-connection',
-			'wallet'
+			'wallet',
+			"routes/apps/chain-tools"
 		],
 		homeNamespace: 'home',
 		namespacePrefix: 'routes'
