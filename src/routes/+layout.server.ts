@@ -14,6 +14,7 @@ const { load: i18nLoad } = createServerLoader(
 			'faqs',
 			'pricing',
 			'referral',
+			'routes/home',
 			'security-scanner',
 			'tools',
 			'wallet-connection',
