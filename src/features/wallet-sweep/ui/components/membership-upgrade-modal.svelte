@@ -16,7 +16,7 @@
 	const connectStore = useConnectStore();
 
 	// BiuBiuPremium contract address
-	const BIUBIU_PREMIUM_CONTRACT = '0xc5c4bb399938625523250B708dc5c1e7dE4b1626' as Address;
+	const BIUBIU_PREMIUM_CONTRACT = '0x61Ae52Bb677847853DB30091ccc32d9b68878B71' as Address;
 
 	// Current network
 	let currentNetwork = $derived.by(() => {

@@ -342,29 +342,33 @@ export const KNOWN_CONTRACTS = {
 
 	// BiuBiuPremium (membership management contract)
 	// https://github.com/atshelchin/biubiu-contracts
-	BIUBIU_PREMIUM: '0xc5c4bb399938625523250B708dc5c1e7dE4b1626' as Address,
+	BIUBIU_PREMIUM: '0x61Ae52Bb677847853DB30091ccc32d9b68878B71' as Address,
 
 	// TokenSweep (batch token transfer contract)
 	// https://github.com/atshelchin/biubiu-contracts
-	wallet_sweep: '0x28ab612a3a871EA203aDff9a7b0846C395529239' as Address,
+	wallet_sweep: '0x34bb5CE9B48bEb31ed3763e80DD0d93cb7C8842b' as Address,
 
 	// TokenFactory (ERC20 token deployment factory)
 	// https://github.com/atshelchin/biubiu-contracts
-	TOKEN_FACTORY: '0xd53219D61e6F7305d5D6e23F29197F3AD58521E1' as Address,
+	TOKEN_FACTORY: '0xe731602Ff2C355Ca0e6CE68932AFaA6ff973aE79' as Address,
+
+	// NFTMetadata (on-chain NFT metadata library, required before NFTFactory)
+	// https://github.com/atshelchin/biubiu-contracts
+	NFT_METADATA: '0xF68B52ceEAFb4eDB2320E44Efa0be2EBe7a715A6' as Address,
 
 	// NFTFactory (ERC721 NFT deployment factory with stake-to-mint support)
 	// https://github.com/atshelchin/biubiu-contracts
-	NFT_FACTORY: '0xB003AdCD063aAAe88A634aC65257820c1322751D' as Address,
+	NFT_FACTORY: '0x917e63eD2FA8BF71d11BAF6cAdcaC65098a68499' as Address,
 
 	// WETH (Wrapped ETH for TokenDistribution delegated mode)
 	// Custom CREATE2 deployed, same address on all chains
 	// https://github.com/atshelchin/biubiu-contracts
-	WETH: '0xe3E75C1fe9AE82993FEb6F9CA2e9627aaE1e3d18' as Address,
+	WETH: '0xFe7291380b8Dc405fEf345222f2De2408A6CA18e' as Address,
 
 	// TokenDistribution (batch distribute tokens/NFTs to multiple recipients)
 	// Custom CREATE2 deployed, same address on all chains
-	// https://github.com/atshelchin/biubiu-contracts commit 8212ca1
-	TOKEN_DISTRIBUTION: '0xD35cE8751e46D518D4bb650e271696903BaFF70C' as Address
+	// https://github.com/atshelchin/biubiu-contracts
+	TOKEN_DISTRIBUTION: '0x57A2dB6B6cf17a1b9B7F1B9e269e88A180291221' as Address
 } as const;
 
 /**
@@ -448,6 +452,23 @@ export async function checkTokenFactory(rpcUrl: string, t: TranslateFn): Promise
 		KNOWN_CONTRACTS.TOKEN_FACTORY,
 		'TokenFactory',
 		t('token-deployer.step2.content.checks.contract.token_factory_description'),
+		t,
+		{
+			canDeploy: true,
+			deployGuideUrl: 'https://github.com/atshelchin/biubiu-contracts'
+		}
+	);
+}
+
+/**
+ * Create a contract checker for NFTMetadata (required before NFTFactory)
+ */
+export async function checkNFTMetadata(rpcUrl: string, t: TranslateFn): Promise<ContractCheck> {
+	return checkContractDeployment(
+		rpcUrl,
+		KNOWN_CONTRACTS.NFT_METADATA,
+		'NFTMetadata',
+		'On-chain NFT metadata library used by NFTFactory',
 		t,
 		{
 			canDeploy: true,

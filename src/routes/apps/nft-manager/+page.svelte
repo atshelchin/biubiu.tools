@@ -33,7 +33,7 @@
 	store.initialize();
 
 	// NFTFactory address - you should configure this per chain
-	const NFT_FACTORY_ADDRESS = '0xB003AdCD063aAAe88A634aC65257820c1322751D' as Address;
+	const NFT_FACTORY_ADDRESS = '0x917e63eD2FA8BF71d11BAF6cAdcaC65098a68499' as Address;
 
 	let selectedNFT = $state<NFTInfo | null>(null);
 	let showMintModal = $state(false);
