@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "Pendle - Giao thức Token hóa Lợi nhuận | Giao dịch Lợi nhuận Tương lai",
+		"description": "Khám phá Pendle, giao thức giao dịch lợi nhuận tương lai. Tìm hiểu cách khóa lãi suất cố định, đầu cơ lợi nhuận và tối đa hóa lợi nhuận DeFi thông qua token PT và YT.",
+		"keywords": "Pendle, yield tokenization, PT, YT, fixed yield, DeFi, yield trading, interest rates"
+	},
+	"overview": "Pendle là giao thức token hóa lợi nhuận cho phép người dùng giao dịch lợi nhuận tương lai, khóa lãi suất cố định hoặc đầu cơ về thay đổi lợi nhuận. Ra mắt vào năm 2021 và được thiết kế lại trong Pendle V2 (2023), nó đã trở thành nền tảng của thị trường lợi nhuận DeFi, đặc biệt cho các token staking thanh khoản và tài sản mang điểm.\n\nĐổi mới cốt lõi là tách tài sản sinh lợi nhuận thành Principal Token (PT) và Yield Token (YT). Nếu bạn giữ stETH với lợi nhuận 4% APY, Pendle cho phép bạn tách nó: PT đại diện cho khoản gốc có thể đổi khi đáo hạn cho tài sản cơ bản, trong khi YT đại diện cho tất cả lợi nhuận cho đến đáo hạn. Sự tách biệt này cho phép các chiến lược mới—mua PT để có lợi nhuận cố định được đảm bảo, hoặc mua YT để tận dụng tiếp xúc lợi nhuận của bạn.\n\nAMM của Pendle được thiết kế đặc biệt cho giao dịch lợi nhuận, với cơ chế phân rã theo thời gian đảm bảo thanh khoản vẫn hiệu quả khi gần đến thời điểm hết hạn. Giao thức đã chứng kiến tăng trưởng bùng nổ thông qua tích hợp với restaking (điểm EigenLayer), tài sản lợi nhuận thực và hệ sinh thái LST rộng hơn. Với hơn 5 tỷ đô la TVL ở đỉnh, Pendle chứng minh rằng chính lợi nhuận là một loại tài sản có thể giao dịch.",
+	"features": {
+		"1": {
+			"title": "Token Hóa Lợi Nhuận",
+			"description": "Tách tài sản sinh lợi nhuận thành thành phần Principal (PT) và Yield (YT)"
+		},
+		"2": {
+			"title": "Lợi Nhuận Cố Định qua PT",
+			"description": "Mua PT với giảm giá để khóa lợi nhuận cố định được đảm bảo cho đến đáo hạn"
+		},
+		"3": {
+			"title": "Đầu Cơ Lợi Nhuận qua YT",
+			"description": "Giao dịch YT để có tiếp xúc đòn bẩy với lợi nhuận và điểm mà không cần gốc"
+		},
+		"4": {
+			"title": "AMM Tối Ưu Theo Thời Gian",
+			"description": "AMM tùy chỉnh được thiết kế cho giao dịch lợi nhuận với cơ chế phân rã theo thời gian"
+		},
+		"5": {
+			"title": "Nhân Điểm",
+			"description": "Người giữ YT nhận điểm nhân lên từ các giao thức cơ bản (EigenLayer, v.v.)"
+		},
+		"6": {
+			"title": "Triển Khai Đa Chuỗi",
+			"description": "Có sẵn trên Ethereum, Arbitrum và các mạng khác với tài sản lợi nhuận đa dạng"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Khóa Lợi Nhuận Cố Định",
+			"description": "Mua PT để đảm bảo lợi nhuận được đảm bảo—loại bỏ biến động lợi nhuận"
+		},
+		"2": {
+			"title": "Đầu Cơ Về Lợi Nhuận",
+			"description": "Mua YT nếu bạn nghĩ lợi nhuận sẽ tăng—chỉ mất chi phí YT nếu sai"
+		},
+		"3": {
+			"title": "Farming Điểm",
+			"description": "Sử dụng YT để có tiếp xúc đòn bẩy với điểm từ các giao thức như EigenLayer"
+		},
+		"4": {
+			"title": "Kinh Doanh Chênh Lệch Lợi Nhuận",
+			"description": "Giao dịch khi lợi nhuận ngụ ý khác với lợi nhuận thực tế trên các thị trường"
+		},
+		"5": {
+			"title": "Phòng Ngừa Danh Mục",
+			"description": "Phòng ngừa tiếp xúc lợi nhuận hoặc cân bằng vị thế lãi suất cố định và biến đổi"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Pendle là gì và token hóa lợi nhuận hoạt động như thế nào?",
+			"answer": "Pendle tách token sinh lợi nhuận (như stETH) thành Principal Token (PT) và Yield Token (YT). PT có giá trị bằng tài sản cơ bản khi đáo hạn—mua nó với giảm giá để khóa lợi nhuận cố định. YT nhận tất cả lợi nhuận cho đến đáo hạn—giữ nó để nắm bắt lợi nhuận biến đổi. Sự tách biệt này cho phép giao dịch lợi nhuận như một tài sản riêng biệt, cho phép lãi suất cố định và đầu cơ lợi nhuận."
+		},
+		"2": {
+			"question": "Sự khác biệt giữa PT và YT là gì?",
+			"answer": "PT (Principal Token) đại diện cho tài sản cơ bản khi đáo hạn. Mua PT với giảm giá (ví dụ: 0.95 ETH cho 1 PT-stETH) và đổi lấy 1 ETH khi hết hạn—khoản giảm giá là lợi nhuận cố định của bạn. YT (Yield Token) nhận tất cả lợi nhuận cho đến đáo hạn. Nếu stETH cho lợi nhuận 5% và bạn giữ 10 YT, bạn kiếm lợi nhuận trên 10 stETH. YT phân rã về 0 khi đáo hạn."
+		},
+		"3": {
+			"question": "Làm thế nào để kiếm lợi nhuận cố định với Pendle?",
+			"answer": "Mua PT cho tài sản sinh lợi nhuận. Ví dụ, nếu PT-stETH đáo hạn trong 6 tháng giao dịch ở mức 0.97 ETH, bạn đang khóa khoảng 6% lợi nhuận hàng năm. Khi đáo hạn, PT của bạn có thể đổi lấy số lượng cơ bản đầy đủ. Lợi nhuận cố định bằng khoản giảm giá bạn mua PT, được chuyển đổi thành APY."
+		},
+		"4": {
+			"question": "Cơ chế nhân điểm của Pendle hoạt động như thế nào?",
+			"answer": "Khi bạn giữ YT, bạn nhận tất cả lợi nhuận VÀ điểm từ tài sản cơ bản. Đối với tài sản mang điểm như eETH hoặc ezETH, giữ YT cho bạn tiếp xúc điểm nhân lên. Nếu bạn mua 10 YT-eETH, bạn kiếm điểm như thể giữ 10 eETH. Điều này đã làm cho Pendle phổ biến cho farming điểm EigenLayer và restaking."
+		},
+		"5": {
+			"question": "Điều gì xảy ra khi đáo hạn?",
+			"answer": "Khi đáo hạn: PT có thể đổi 1:1 cho tài sản cơ bản. YT trở nên vô giá trị (nó không có giá trị gốc). Trước khi đáo hạn, bạn có thể giao dịch cả hai trên AMM của Pendle. Sau khi đáo hạn, PT có thể được đổi bất cứ lúc nào. Pendle thường xuyên ra mắt các pool mới với thời hạn đáo hạn khác nhau."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng giao dịch lợi nhuận tương lai?",
+		"button": "Mở Pendle",
+		"note": "Khóa lãi suất cố định hoặc đầu cơ về thay đổi lợi nhuận"
+	}
+}

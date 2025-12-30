@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹",
+		"code": "it"
+	},
+	"seo": {
+		"title": "Pendle - Protocollo di Tokenizzazione del Rendimento | Scambia Rendimento Futuro",
+		"description": "Scopri Pendle, il protocollo per scambiare rendimenti futuri. Impara come bloccare tassi fissi, speculare sui rendimenti e massimizzare i ritorni DeFi attraverso token PT e YT.",
+		"keywords": "Pendle, tokenizzazione rendimento, PT, YT, rendimento fisso, DeFi, trading rendimento, tassi di interesse"
+	},
+	"overview": "Pendle è un protocollo di tokenizzazione del rendimento che consente agli utenti di scambiare rendimenti futuri, bloccare tassi fissi o speculare su cambiamenti di rendimento. Lanciato nel 2021 e riprogettato in Pendle V2 (2023), è diventato una pietra angolare dei mercati di rendimento DeFi, in particolare per token di liquid staking e asset generatori di punti.\n\nL'innovazione centrale è separare asset generatori di rendimento in Principal Token (PT) e Yield Token (YT). Se detieni stETH che rende il 4% APY, Pendle ti permette di dividerlo: PT rappresenta il principale rimborsabile alla scadenza per il sottostante, mentre YT rappresenta tutto il rendimento fino alla scadenza. Questa separazione abilita nuove strategie—compra PT per ritorni fissi garantiti, o compra YT per sfruttare la tua esposizione al rendimento.\n\nL'AMM di Pendle è specificamente progettato per il trading di rendimento, con meccaniche di decadimento temporale che assicurano che la liquidità rimanga efficiente man mano che la scadenza si avvicina. Il protocollo ha visto una crescita esplosiva attraverso integrazioni con restaking (punti EigenLayer), asset a rendimento reale e l'ecosistema LST più ampio. Con oltre 5 miliardi di dollari in TVL al picco, Pendle dimostra che il rendimento stesso è una classe di asset scambiabile.",
+	"features": {
+		"1": {
+			"title": "Tokenizzazione del Rendimento",
+			"description": "Dividi asset generatori di rendimento in componenti Principal (PT) e Yield (YT)"
+		},
+		"2": {
+			"title": "Rendimento Fisso via PT",
+			"description": "Compra PT con sconto per bloccare ritorni fissi garantiti fino alla scadenza"
+		},
+		"3": {
+			"title": "Speculazione sul Rendimento via YT",
+			"description": "Scambia YT per ottenere esposizione con leva al rendimento e ai punti senza principale"
+		},
+		"4": {
+			"title": "AMM Ottimizzato per il Tempo",
+			"description": "AMM personalizzato progettato per il trading di rendimento con meccaniche di decadimento temporale"
+		},
+		"5": {
+			"title": "Moltiplicatore di Punti",
+			"description": "I detentori di YT ricevono punti moltiplicati dai protocolli sottostanti (EigenLayer, ecc.)"
+		},
+		"6": {
+			"title": "Distribuzione Multi-Chain",
+			"description": "Disponibile su Ethereum, Arbitrum e altre reti con asset di rendimento diversificati"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Blocca Rendimenti Fissi",
+			"description": "Compra PT per garantire ritorni garantiti—elimina la variabilità del rendimento"
+		},
+		"2": {
+			"title": "Specula sui Rendimenti",
+			"description": "Compra YT se pensi che i rendimenti aumenteranno—perdi solo il costo di YT se sbagli"
+		},
+		"3": {
+			"title": "Farming di Punti",
+			"description": "Usa YT per esposizione con leva ai punti da protocolli come EigenLayer"
+		},
+		"4": {
+			"title": "Arbitraggio di Rendimento",
+			"description": "Scambia quando i rendimenti impliciti divergono dai rendimenti effettivi tra mercati"
+		},
+		"5": {
+			"title": "Hedging del Portfolio",
+			"description": "Copri l'esposizione al rendimento o bilancia posizioni a tasso fisso vs. variabile"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Cos'è Pendle e come funziona la tokenizzazione del rendimento?",
+			"answer": "Pendle divide token generatori di rendimento (come stETH) in Principal Token (PT) e Yield Token (YT). PT vale l'asset sottostante alla scadenza—compralo con sconto per bloccare rendimento fisso. YT riceve tutto il rendimento fino alla scadenza—tienilo per catturare rendimenti variabili. Questa separazione consente di scambiare il rendimento come asset separato, abilitando tassi fissi e speculazione sul rendimento."
+		},
+		"2": {
+			"question": "Qual è la differenza tra PT e YT?",
+			"answer": "PT (Principal Token) rappresenta l'asset sottostante alla scadenza. Compra PT con sconto (es. 0,95 ETH per 1 PT-stETH) e riscatta per 1 ETH alla scadenza—lo sconto è il tuo rendimento fisso. YT (Yield Token) riceve tutto il rendimento fino alla scadenza. Se stETH rende il 5% e detieni 10 YT, guadagni il rendimento su 10 stETH. YT decade a zero alla scadenza."
+		},
+		"3": {
+			"question": "Come guadagno rendimento fisso con Pendle?",
+			"answer": "Compra PT per un asset generatore di rendimento. Ad esempio, se PT-stETH con scadenza in 6 mesi viene scambiato a 0,97 ETH, stai bloccando circa il 6% di rendimento annualizzato. Alla scadenza, il tuo PT è rimborsabile per l'intero importo sottostante. Il rendimento fisso equivale allo sconto a cui compri PT, convertito in APY."
+		},
+		"4": {
+			"question": "Come funziona il moltiplicatore di punti di Pendle?",
+			"answer": "Quando detieni YT, ricevi tutto il rendimento E i punti dall'asset sottostante. Per asset generatori di punti come eETH o ezETH, detenere YT ti dà esposizione moltiplicata ai punti. Se compri 10 YT-eETH, guadagni punti come se detenessi 10 eETH. Questo ha reso Pendle popolare per il farming di punti EigenLayer e restaking."
+		},
+		"5": {
+			"question": "Cosa succede alla scadenza?",
+			"answer": "Alla scadenza: PT diventa rimborsabile 1:1 per l'asset sottostante. YT diventa senza valore (non ha valore principale). Prima della scadenza, puoi scambiare entrambi sull'AMM di Pendle. Dopo la scadenza, PT può essere riscattato in qualsiasi momento. Pendle lancia regolarmente nuovi pool con scadenze diverse."
+		}
+	},
+	"cta": {
+		"ready": "Pronto a scambiare rendimenti futuri?",
+		"button": "Apri Pendle",
+		"note": "Blocca tassi fissi o specula su cambiamenti di rendimento"
+	}
+}

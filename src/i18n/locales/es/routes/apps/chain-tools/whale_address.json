@@ -19,152 +19,152 @@
 		]
 	},
 	"tools": {
-		"bubblemaps": {
-			"description": "Análisis visual de tenedores de tokens y distribución de suministro"
+		"ethereum_foundation": {
+			"description": "Billetera de tesorería de Ethereum Foundation financiando desarrollo e investigación del ecosistema"
+		},
+		"aave_treasury": {
+			"description": "Tesorería del protocolo Aave gestionando fondos DAO para desarrollo del protocolo de préstamos"
+		},
+		"compound_treasury": {
+			"description": "Tesorería del protocolo Compound manteniendo fondos para gobernanza de préstamos DeFi"
+		},
+		"lido_treasury": {
+			"description": "Tesorería Lido DAO gestionando fondos del protocolo de staking líquido"
+		},
+		"arbitrum_treasury": {
+			"description": "Tesorería Arbitrum DAO financiando grants y desarrollo del ecosistema L2"
+		},
+		"optimism_treasury": {
+			"description": "Tesorería Optimism Collective para financiamiento del ecosistema Superchain"
+		},
+		"gnosis_treasury": {
+			"description": "Tesorería Gnosis DAO gestionando ecosistema Safe y fondos GNO"
+		},
+		"ens_treasury": {
+			"description": "Tesorería ENS DAO para gobernanza y grants de Ethereum Name Service"
+		},
+		"curve_multisig": {
+			"description": "Multisig del DAO de emergencia de Curve Finance para acciones de seguridad del protocolo"
+		},
+		"yearn_multisig": {
+			"description": "Billetera multisig de Yearn Finance gestionando operaciones del protocolo de rendimiento"
+		},
+		"vitalik_wallet": {
+			"description": "Billetera pública de Vitalik Buterin - Co-fundador de Ethereum y figura influyente"
+		},
+		"justin_sun_wallet": {
+			"description": "Billetera de Justin Sun - Fundador de TRON conocido por grandes posiciones DeFi"
+		},
+		"tetranode_wallet": {
+			"description": "Billetera de Tetranode - Ballena DeFi influyente e inversor temprano de protocolos"
+		},
+		"hsaka_wallet": {
+			"description": "Billetera Hsaka Trades - Trader prominente de perpetuos en GMX y dYdX"
+		},
+		"binance_hot_wallet": {
+			"description": "Hot wallet del exchange Binance para operaciones de BNB Chain"
+		},
+		"pancakeswap_treasury": {
+			"description": "Tesorería PancakeSwap gestionando token CAKE y fondos del protocolo DEX"
+		},
+		"venus_treasury": {
+			"description": "Tesorería del protocolo Venus para gobernanza de plataforma de préstamos en BNB Chain"
+		},
+		"base_bridge": {
+			"description": "Contrato puente Base L2 manteniendo activos bridgeados desde Ethereum"
+		},
+		"aerodrome_treasury": {
+			"description": "Tesorería Aerodrome Finance para el DEX líder de Base chain"
+		},
+		"polygon_ecosystem_fund": {
+			"description": "Fondo del ecosistema Polygon apoyando grants y desarrollo del ecosistema"
+		},
+		"quickswap_treasury": {
+			"description": "Tesorería QuickSwap para protocolo DEX nativo de Polygon"
+		},
+		"avalanche_foundation": {
+			"description": "Billetera de Avalanche Foundation financiando crecimiento del ecosistema AVAX"
+		},
+		"traderjoe_treasury": {
+			"description": "Tesorería Trader Joe para el DEX líder y hub DeFi de Avalanche"
+		},
+		"solana_foundation": {
+			"description": "Billetera de Solana Foundation apoyando desarrollo del ecosistema y grants"
+		},
+		"jupiter_treasury": {
+			"description": "Tesorería del agregador Jupiter para la plataforma de swap líder de Solana"
+		},
+		"raydium_treasury": {
+			"description": "Tesorería Raydium para el AMM y protocolo de liquidez de Solana"
+		},
+		"ton_foundation": {
+			"description": "Billetera TON Foundation apoyando el ecosistema blockchain de Telegram"
+		},
+		"sui_foundation": {
+			"description": "Tesorería Sui Foundation financiando desarrollo L1 basado en Move"
+		},
+		"aptos_foundation": {
+			"description": "Billetera Aptos Foundation para ecosistema blockchain impulsado por Move"
+		},
+		"cosmos_hub_pool": {
+			"description": "Pool comunitario de Cosmos Hub para financiamiento de gobernanza del ecosistema ATOM"
+		},
+		"cz_wallet": {
+			"description": "Billetera CZ (Changpeng Zhao) - Fundador de Binance y líder de la industria cripto"
+		},
+		"grayscale_wallet": {
+			"description": "Billetera institucional Grayscale gestionando holdings de ETF de Bitcoin y Ethereum"
+		},
+		"blackrock_wallet": {
+			"description": "Billetera BlackRock iShares para custodia institucional de ETF cripto"
+		},
+		"fidelity_wallet": {
+			"description": "Billetera institucional Fidelity para gestión de activos cripto"
+		},
+		"a16z_wallet": {
+			"description": "Billetera del fondo cripto Andreessen Horowitz - VC líder en Web3"
+		},
+		"paradigm_wallet": {
+			"description": "Billetera VC Paradigm - Principal fondo de inversión cripto-nativo"
+		},
+		"jump_trading_wallet": {
+			"description": "Billetera Jump Trading - Market maker institucional y firma de trading"
+		},
+		"wintermute_wallet": {
+			"description": "Billetera Wintermute - Market maker líder y proveedor de liquidez cripto"
+		},
+		"galaxy_digital_wallet": {
+			"description": "Billetera Galaxy Digital - Inversión y trading institucional cripto"
 		},
 		"lookonchain": {
-			"description": "Plataforma de analíticas on-chain rastreando ballenas y smart money"
+			"description": "Plataforma de analíticas on-chain rastreando movimientos de ballenas y smart money"
 		},
-		"ethereum-foundation": {
-			"description": "Ethereum Foundation - Tool"
+		"whale_alert": {
+			"description": "Alertas en tiempo real de grandes transacciones en principales criptomonedas"
 		},
-		"aave-treasury": {
-			"description": "Aave Treasury - Tool"
+		"nansen_smart_money": {
+			"description": "Rastreo de Smart Money de Nansen para análisis de billeteras etiquetadas"
 		},
-		"compound-treasury": {
-			"description": "Compound Treasury - Tool"
+		"arkham_intelligence": {
+			"description": "Plataforma de inteligencia blockchain para des-anonimización y rastreo de billeteras"
 		},
-		"lido-treasury": {
-			"description": "Lido DAO Treasury - Tool"
+		"debank_whales": {
+			"description": "Ranking de ballenas DeBank mostrando los mayores holders de portfolios multi-chain"
 		},
-		"arbitrum-treasury": {
-			"description": "Arbitrum DAO Treasury - Tool"
+		"spot_on_chain": {
+			"description": "Analíticas on-chain impulsadas por IA para rastreo de ballenas e insights de mercado"
 		},
-		"optimism-treasury": {
-			"description": "Optimism Treasury - Tool"
+		"bubblemaps": {
+			"description": "Análisis visual de holders de tokens y distribución de supply"
 		},
-		"gnosis-treasury": {
-			"description": "Gnosis Treasury - Tool"
+		"etherscan_label": {
+			"description": "Base de datos de direcciones etiquetadas de Etherscan para identificación de billeteras conocidas"
 		},
-		"ens-treasury": {
-			"description": "ENS DAO Treasury - Tool"
+		"zerion_whales": {
+			"description": "Función de exploración Zerion para descubrimiento y rastreo de portfolios de ballenas"
 		},
-		"curve-multisig": {
-			"description": "Curve Emergency DAO - Tool"
-		},
-		"yearn-multisig": {
-			"description": "Yearn Multisig - Tool"
-		},
-		"vitalik-wallet": {
-			"description": "vitalik.eth - Tool"
-		},
-		"justin-sun-wallet": {
-			"description": "Justin Sun Wallet - Tool"
-		},
-		"tetranode-wallet": {
-			"description": "Tetranode - Tool"
-		},
-		"hsaka-wallet": {
-			"description": "Hsaka Trades - Tool"
-		},
-		"binance-hot-wallet": {
-			"description": "Binance Hot Wallet - Tool"
-		},
-		"pancakeswap-treasury": {
-			"description": "PancakeSwap Treasury - Tool"
-		},
-		"venus-treasury": {
-			"description": "Venus Treasury - Tool"
-		},
-		"base-bridge": {
-			"description": "Base Bridge - Tool"
-		},
-		"aerodrome-treasury": {
-			"description": "Aerodrome Treasury - Tool"
-		},
-		"polygon-ecosystem-fund": {
-			"description": "Polygon Ecosystem Fund - Tool"
-		},
-		"quickswap-treasury": {
-			"description": "QuickSwap Treasury - Tool"
-		},
-		"avalanche-foundation": {
-			"description": "Avalanche Foundation - Tool"
-		},
-		"traderjoe-treasury": {
-			"description": "Trader Joe Treasury - Tool"
-		},
-		"solana-foundation": {
-			"description": "Solana Foundation - Tool"
-		},
-		"jupiter-treasury": {
-			"description": "Jupiter Treasury - Tool"
-		},
-		"raydium-treasury": {
-			"description": "Raydium Treasury - Tool"
-		},
-		"ton-foundation": {
-			"description": "TON Foundation - Tool"
-		},
-		"sui-foundation": {
-			"description": "Sui Foundation - Tool"
-		},
-		"aptos-foundation": {
-			"description": "Aptos Foundation - Tool"
-		},
-		"cosmos-hub-pool": {
-			"description": "Cosmos Hub Community Pool - Tool"
-		},
-		"cz-wallet": {
-			"description": "CZ (Changpeng Zhao) - Tool"
-		},
-		"grayscale-wallet": {
-			"description": "Grayscale - Tool"
-		},
-		"blackrock-wallet": {
-			"description": "BlackRock iShares - Tool"
-		},
-		"fidelity-wallet": {
-			"description": "Fidelity - Tool"
-		},
-		"a16z-wallet": {
-			"description": "a16z Crypto - Tool"
-		},
-		"paradigm-wallet": {
-			"description": "Paradigm - Tool"
-		},
-		"jump-trading-wallet": {
-			"description": "Jump Trading - Tool"
-		},
-		"wintermute-wallet": {
-			"description": "Wintermute - Tool"
-		},
-		"galaxy-digital-wallet": {
-			"description": "Galaxy Digital - Tool"
-		},
-		"whale-alert": {
-			"description": "Whale Alert - Tool"
-		},
-		"nansen-smart-money": {
-			"description": "Nansen Smart Money - Tool"
-		},
-		"arkham-intelligence": {
-			"description": "Arkham Intelligence - Tool"
-		},
-		"debank-whales": {
-			"description": "DeBank Whales - Tool"
-		},
-		"spot-on-chain": {
-			"description": "Spot On Chain - Tool"
-		},
-		"etherscan-label": {
-			"description": "Etherscan Label Cloud - Tool"
-		},
-		"zerion-whales": {
-			"description": "Zerion Whale Tracker - Tool"
-		},
-		"watchers-pro": {
-			"description": "Watchers Pro - Tool"
+		"watchers_pro": {
+			"description": "Plataforma de rastreo de smart money con alertas de actividad de billeteras ballena"
 		}
 	}
 }

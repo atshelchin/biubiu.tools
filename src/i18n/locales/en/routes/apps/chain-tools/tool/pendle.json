@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Pendle - Yield Tokenization Protocol | Trade Future Yield",
+		"description": "Discover Pendle, the protocol for trading future yield. Learn how to lock in fixed rates, speculate on yields, and maximize DeFi returns through PT and YT tokens.",
+		"keywords": "Pendle, yield tokenization, PT, YT, fixed yield, DeFi, yield trading, interest rates"
+	},
+	"overview": "Pendle is a yield tokenization protocol that enables users to trade future yield, lock in fixed rates, or speculate on yield changes. Launched in 2021 and redesigned in Pendle V2 (2023), it has become a cornerstone of DeFi yield markets, particularly for liquid staking tokens and points-bearing assets.\n\nThe core innovation is separating yield-bearing assets into Principal Tokens (PT) and Yield Tokens (YT). If you hold stETH yielding 4% APY, Pendle lets you split it: PT represents the principal redeemable at maturity for the underlying, while YT represents all yield until maturity. This separation enables new strategies—buy PT for guaranteed fixed returns, or buy YT to leverage your yield exposure.\n\nPendle's AMM is specifically designed for yield trading, with time-decay mechanics that ensure liquidity remains efficient as expiry approaches. The protocol has seen explosive growth through integrations with restaking (EigenLayer points), real yield assets, and the broader LST ecosystem. With over $5 billion in TVL at peak, Pendle demonstrates that yield itself is a tradable asset class.",
+	"features": {
+		"1": {
+			"title": "Yield Tokenization",
+			"description": "Split yield-bearing assets into Principal (PT) and Yield (YT) components"
+		},
+		"2": {
+			"title": "Fixed Yield via PT",
+			"description": "Buy PT at a discount to lock in guaranteed fixed returns until maturity"
+		},
+		"3": {
+			"title": "Yield Speculation via YT",
+			"description": "Trade YT to gain leveraged exposure to yield and points without principal"
+		},
+		"4": {
+			"title": "Time-Optimized AMM",
+			"description": "Custom AMM designed for yield trading with time-decay mechanics"
+		},
+		"5": {
+			"title": "Points Multiplier",
+			"description": "YT holders receive multiplied points from underlying protocols (EigenLayer, etc.)"
+		},
+		"6": {
+			"title": "Multi-Chain Deployment",
+			"description": "Available on Ethereum, Arbitrum, and other networks with diverse yield assets"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Lock In Fixed Yields",
+			"description": "Buy PT to secure guaranteed returns—eliminate yield variability"
+		},
+		"2": {
+			"title": "Speculate on Yields",
+			"description": "Buy YT if you think yields will increase—lose only YT cost if wrong"
+		},
+		"3": {
+			"title": "Points Farming",
+			"description": "Use YT for leveraged exposure to points from protocols like EigenLayer"
+		},
+		"4": {
+			"title": "Yield Arbitrage",
+			"description": "Trade when implied yields diverge from actual yields across markets"
+		},
+		"5": {
+			"title": "Portfolio Hedging",
+			"description": "Hedge yield exposure or balance fixed vs. variable rate positions"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Pendle and how does yield tokenization work?",
+			"answer": "Pendle splits yield-bearing tokens (like stETH) into Principal Tokens (PT) and Yield Tokens (YT). PT is worth the underlying asset at maturity—buy it at a discount to lock in fixed yield. YT receives all yield until maturity—hold it to capture variable yields. This separation allows trading yield as a separate asset, enabling fixed rates and yield speculation."
+		},
+		"2": {
+			"question": "What is the difference between PT and YT?",
+			"answer": "PT (Principal Token) represents the underlying asset at maturity. Buy PT at a discount (e.g., 0.95 ETH for 1 PT-stETH) and redeem for 1 ETH at expiry—the discount is your fixed yield. YT (Yield Token) receives all yield until maturity. If stETH yields 5% and you hold 10 YT, you earn the yield on 10 stETH. YT decays to zero at maturity."
+		},
+		"3": {
+			"question": "How do I earn fixed yield with Pendle?",
+			"answer": "Buy PT for a yield-bearing asset. For example, if PT-stETH maturing in 6 months trades at 0.97 ETH, you're locking in approximately 6% annualized yield. At maturity, your PT is redeemable for the full underlying amount. The fixed yield equals the discount you buy PT at, converted to APY."
+		},
+		"4": {
+			"question": "How does Pendle's points multiplier work?",
+			"answer": "When you hold YT, you receive all yield AND points from the underlying asset. For points-bearing assets like eETH or ezETH, holding YT gives you multiplied points exposure. If you buy 10 YT-eETH, you earn points as if holding 10 eETH. This has made Pendle popular for farming EigenLayer and restaking points."
+		},
+		"5": {
+			"question": "What happens at maturity?",
+			"answer": "At maturity: PT becomes redeemable 1:1 for the underlying asset. YT becomes worthless (it has no principal value). Before maturity, you can trade both on Pendle's AMM. After maturity, PT can be redeemed anytime. Pendle regularly launches new pools with different maturities."
+		}
+	},
+	"cta": {
+		"ready": "Ready to trade future yields?",
+		"button": "Open Pendle",
+		"note": "Lock in fixed rates or speculate on yield changes"
+	}
+}

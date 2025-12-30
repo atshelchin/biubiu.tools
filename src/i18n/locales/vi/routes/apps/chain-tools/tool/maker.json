@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "MakerDAO - Giao thức Stablecoin Phi tập trung | DAI",
+		"description": "Khám phá MakerDAO, giao thức đằng sau DAI—stablecoin phi tập trung hàng đầu. Tìm hiểu cách tạo DAI, quản lý vault và tham gia quản trị.",
+		"keywords": "MakerDAO, DAI, stablecoin, DeFi, CDP, vault, MKR, decentralized"
+	},
+	"overview": "MakerDAO là tổ chức tự trị phi tập trung đằng sau DAI, stablecoin phi tập trung lớn nhất theo lưu thông. Ra mắt vào tháng 12/2017 bởi Rune Christensen, Maker tiên phong khái niệm stablecoin được thế chấp bằng crypto, cho phép người dùng khóa tài sản như ETH và tạo DAI—một stablecoin neo với đô la—dựa trên tài sản thế chấp đó.\n\nGiao thức hoạt động thông qua \"Vault\" (trước đây là CDP—Vị thế Nợ Có Thế Chấp) nơi người dùng gửi tài sản thế chấp và đúc DAI. Mỗi vault có tỷ lệ thanh lý; nếu giá trị tài sản thế chấp giảm xuống dưới ngưỡng này, vị thế sẽ bị thanh lý để bảo vệ hệ thống. DAI duy trì neo giá thông qua sự kết hợp của thế chấp dư thừa, phí ổn định (lãi suất trên DAI đã vay) và Tỷ lệ Tiết kiệm DAI (DSR) khuyến khích nắm giữ DAI.\n\nMakerDAO đã trải qua chuyển đổi đáng kể thông qua kế hoạch \"Endgame\", phát triển thành Sky Protocol với DAI trở thành USDS và MKR trở thành SKY. Giao thức hiện hỗ trợ tài sản thế giới thực (RWA) làm tài sản thế chấp và đã mở rộng phạm vi thông qua quan hệ đối tác với tài chính truyền thống. Với hơn 5 tỷ đô la TVL, Maker vẫn là cơ sở hạ tầng DeFi nền tảng.",
+	"features": {
+		"1": {
+			"title": "Stablecoin DAI",
+			"description": "Tạo stablecoin USD phi tập trung, neo mềm được hỗ trợ bởi tài sản thế chấp crypto"
+		},
+		"2": {
+			"title": "Hệ Thống Vault",
+			"description": "Khóa tài sản thế chấp (ETH, WBTC, stablecoin) để đúc DAI với quy tắc thanh lý minh bạch"
+		},
+		"3": {
+			"title": "Tỷ Lệ Tiết Kiệm DAI (DSR)",
+			"description": "Kiếm lợi nhuận từ DAI bằng cách gửi vào hợp đồng DSR—không khóa, rút ngay lập tức"
+		},
+		"4": {
+			"title": "Hỗ Trợ Đa Tài Sản Thế Chấp",
+			"description": "Sử dụng các tài sản khác nhau làm tài sản thế chấp bao gồm ETH, WBTC, stETH và tài sản thế giới thực"
+		},
+		"5": {
+			"title": "Quản Trị MKR",
+			"description": "Người nắm giữ token MKR bỏ phiếu về các tham số rủi ro, loại tài sản thế chấp và nâng cấp giao thức"
+		},
+		"6": {
+			"title": "Tài Sản Thế Giới Thực",
+			"description": "Tiên phong tích hợp RWA với tiếp xúc với Trái phiếu Kho bạc Mỹ và quan hệ đối tác tổ chức"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Tạo Thanh Khoản Stablecoin",
+			"description": "Tạo DAI từ crypto mà không cần bán—tiếp cận đô la trong khi giữ lợi thế tăng giá"
+		},
+		"2": {
+			"title": "Kiếm Lợi Nhuận Tiết Kiệm",
+			"description": "Gửi DAI vào DSR để kiếm lợi nhuận cạnh tranh trên stablecoin của bạn"
+		},
+		"3": {
+			"title": "Vị Thế Long Đòn Bẩy",
+			"description": "Tạo DAI dựa trên ETH, mua thêm ETH, lặp lại—tăng cường tiếp xúc ETH của bạn"
+		},
+		"4": {
+			"title": "Đơn Vị Tiền Tệ Cơ Sở DeFi",
+			"description": "Sử dụng DAI trong DeFi—nó được tích hợp trong các giao thức cho vay, DEX và yield farm"
+		},
+		"5": {
+			"title": "Tiết Kiệm Phi Tập Trung",
+			"description": "Giữ giá trị trong stablecoin chống kiểm duyệt không bị kiểm soát bởi bất kỳ công ty nào"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "MakerDAO là gì và DAI hoạt động như thế nào?",
+			"answer": "MakerDAO là giao thức phi tập trung phát hành DAI, một stablecoin neo với 1 đô la. Người dùng gửi tài sản thế chấp crypto vào Vault và có thể vay DAI dựa trên nó. Hệ thống duy trì neo giá thông qua thế chấp dư thừa (bạn phải gửi nhiều tài sản thế chấp hơn DAI đã vay), thanh lý khi giá trị tài sản thế chấp giảm và điều chỉnh lãi suất thông qua phí ổn định và DSR."
+		},
+		"2": {
+			"question": "DAI có an toàn không? Rủi ro là gì?",
+			"answer": "DAI là một trong những stablecoin được thử nghiệm kỹ lưỡng nhất, hoạt động từ năm 2017. Rủi ro bao gồm lỗ hổng hợp đồng thông minh, thanh lý hàng loạt trong biến động cực độ (như tháng 3/2020), lỗi oracle và tấn công quản trị. DAI cũng có tiếp xúc với stablecoin tập trung như USDC trong tài sản thế chấp, giảm tính phi tập trung thuần túy."
+		},
+		"3": {
+			"question": "Tỷ Lệ Tiết Kiệm DAI (DSR) là gì?",
+			"answer": "DSR là lợi nhuận bạn kiếm được khi gửi DAI vào hợp đồng tiết kiệm của Maker. Tỷ lệ được đặt bởi quản trị MKR và được tài trợ bởi phí ổn định mà chủ sở hữu vault trả. Không có tiền gửi tối thiểu, không khóa và bạn có thể rút bất cứ lúc nào. Về cơ bản đây là lãi suất phi rủi ro trong hệ sinh thái Maker."
+		},
+		"4": {
+			"question": "Điều gì xảy ra nếu vault của tôi bị thanh lý?",
+			"answer": "Nếu tỷ lệ tài sản thế chấp của vault giảm xuống dưới ngưỡng thanh lý, bất kỳ ai cũng có thể kích hoạt thanh lý. Tài sản thế chấp của bạn được đấu giá để trang trải nợ DAI cộng với phạt thanh lý (thường là 13%). Bất kỳ tài sản thế chấp còn lại nào được trả lại cho bạn. Theo dõi sức khỏe vault và thêm tài sản thế chấp hoặc trả DAI khi tỷ lệ chật chội."
+		},
+		"5": {
+			"question": "Maker Endgame và Sky Protocol là gì?",
+			"answer": "Endgame là kế hoạch dài hạn của Maker để phát triển thành giao thức kiên cường hơn. Nó bao gồm đổi tên DAI thành USDS và MKR thành SKY, tạo SubDAO cho các chức năng khác nhau, mở rộng tiếp xúc RWA và có khả năng ra mắt blockchain chuyên dụng. Quá trình chuyển đổi là từ từ, với cả token cũ và mới vẫn có thể sử dụng."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng tạo stablecoin phi tập trung?",
+		"button": "Mở MakerDAO",
+		"note": "Giao thức đằng sau DAI—stablecoin phi tập trung hàng đầu của DeFi"
+	}
+}

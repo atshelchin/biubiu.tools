@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "Compound - Protokol Pasar Uang Algoritmik | Dapatkan Bunga dari Kripto",
+		"description": "Temukan Compound, protokol lending DeFi perintis. Pelajari cara menyediakan aset untuk mendapatkan bunga, meminjam dengan jaminan, dan berpartisipasi dalam governance.",
+		"keywords": "Compound, DeFi lending, money market, COMP, bunga kripto, peminjaman, jaminan"
+	},
+	"overview": "Compound adalah protokol pasar uang terdesentralisasi perintis yang memungkinkan pengguna menyediakan aset kripto untuk mendapatkan bunga atau meminjam dengan jaminan mereka. Diluncurkan pada September 2018 oleh Compound Labs milik Robert Leshner, ini menjadi salah satu protokol pertama yang mendemonstrasikan bahwa suku bunga algoritmik dapat secara efisien mencocokkan penawaran dan permintaan lending tanpa perantara.\n\nProtokol ini beroperasi melalui pasar lending yang terisolasi di mana supplier mendepositkan aset ke dalam liquidity pool dan menerima cToken yang mewakili posisi mereka. cToken ini secara terus-menerus mengakumulasi bunga, dengan suku bunga ditentukan secara algoritmik berdasarkan utilisasi—rasio aset yang dipinjam terhadap yang disediakan. Ketika utilisasi tinggi, suku bunga meningkat untuk mendorong lebih banyak penawaran; ketika rendah, suku bunga menurun untuk mendorong peminjaman.\n\nIntroduksi token governance COMP oleh Compound pada tahun 2020 mengkatalisis fenomena \"DeFi Summer\", mempopulerkan liquidity mining dan mendemonstrasikan bagaimana insentif token dapat mendorong adopsi protokol. Saat ini, Compound V3 (Comet) merepresentasikan desain yang disederhanakan dan lebih efisien dengan manajemen risiko yang ditingkatkan dan deployment cross-chain di Ethereum, Polygon, Arbitrum, dan Base.",
+	"features": {
+		"1": {
+			"title": "Suku Bunga Algoritmik",
+			"description": "Suku bunga menyesuaikan secara otomatis berdasarkan penawaran dan permintaan melalui kurva utilisasi"
+		},
+		"2": {
+			"title": "Sistem cToken",
+			"description": "Terima cToken saat menyediakan aset—mereka mengakumulasi bunga dan dapat digunakan di seluruh DeFi"
+		},
+		"3": {
+			"title": "Peminjaman Overcollateralized",
+			"description": "Pinjam aset dengan jaminan yang Anda sediakan dengan threshold likuidasi yang transparan"
+		},
+		"4": {
+			"title": "Governance COMP",
+			"description": "Pemegang token COMP mengatur parameter protokol, listing aset, dan upgrade"
+		},
+		"5": {
+			"title": "Compound V3 (Comet)",
+			"description": "Peminjaman aset tunggal yang disederhanakan dengan efisiensi modal dan isolasi risiko yang ditingkatkan"
+		},
+		"6": {
+			"title": "Deployment Multi-Chain",
+			"description": "Tersedia di Ethereum, Polygon, Arbitrum, dan Base dengan dukungan cross-chain native"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Dapatkan Pendapatan Pasif",
+			"description": "Sediakan stablecoin atau aset kripto untuk mendapatkan bunga variabel tanpa lockup"
+		},
+		"2": {
+			"title": "Akses Likuiditas",
+			"description": "Pinjam dengan kepemilikan kripto Anda tanpa menjual—berguna untuk pengeluaran atau peluang"
+		},
+		"3": {
+			"title": "Posisi Leverage",
+			"description": "Sediakan jaminan, pinjam, dan ulangi untuk memperbesar eksposur ke aset yang Anda bullish"
+		},
+		"4": {
+			"title": "Manajemen Treasury",
+			"description": "DAO dan protokol menggunakan Compound untuk mendapatkan yield dari aset treasury yang idle"
+		},
+		"5": {
+			"title": "Komposabilitas DeFi",
+			"description": "Gunakan cToken di protokol lain—mereka menghasilkan yield dan terintegrasi secara luas"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu Compound dan bagaimana cara kerjanya?",
+			"answer": "Compound adalah protokol lending terdesentralisasi di mana Anda dapat menyediakan aset kripto untuk mendapatkan bunga atau meminjam dengan jaminan. Ketika Anda menyediakan aset, Anda menerima cToken yang mewakili deposit Anda plus bunga yang terakumulasi. Suku bunga ditentukan secara algoritmik—ketika permintaan peminjaman tinggi relatif terhadap penawaran, suku bunga meningkat, dan sebaliknya."
+		},
+		"2": {
+			"question": "Apakah Compound aman digunakan?",
+			"answer": "Compound adalah salah satu protokol DeFi tertua dan paling teruji, telah mengamankan miliaran aset sejak 2018. Protokol ini telah menjalani banyak audit keamanan dan beroperasi secara transparan on-chain. Namun, risiko termasuk kerentanan smart contract, likuidasi selama volatilitas pasar, dan manipulasi oracle. Jangan pernah mendepositkan lebih dari yang mampu Anda kehilangan."
+		},
+		"3": {
+			"question": "Apa itu cToken dan bagaimana cara kerjanya?",
+			"answer": "cToken (seperti cUSDC, cETH) adalah token yang menghasilkan bunga yang Anda terima saat menyediakan ke Compound. Mereka mewakili klaim Anda atas aset dasar plus bunga yang terakumulasi. Nilai tukar antara cToken dan aset dasar terus meningkat seiring bunga terakumulasi. Anda dapat mentransfer, memperdagangkan, atau menggunakan cToken di protokol DeFi lainnya."
+		},
+		"4": {
+			"question": "Apa yang terjadi jika saya dilikuidasi?",
+			"answer": "Jika jumlah pinjaman Anda melebihi nilai jaminan Anda (dengan memperhitungkan faktor jaminan), likuidator dapat membayar sebagian utang Anda dan mengklaim jaminan Anda dengan diskon. Compound V3 telah meningkatkan ini dengan mekanik likuidasi yang lebih bertahap. Pantau faktor kesehatan Anda dan pertahankan jaminan yang cukup untuk menghindari likuidasi."
+		},
+		"5": {
+			"question": "Apa perbedaan antara Compound V2 dan V3?",
+			"answer": "Compound V3 (Comet) adalah versi yang didesain ulang yang berfokus pada aset yang dapat dipinjam tunggal per pasar (misalnya, USDC), membuatnya lebih sederhana dan lebih efisien modal. Ini memiliki isolasi risiko yang lebih baik, tidak ada cToken untuk peminjam, dan mekanik likuidasi yang ditingkatkan. V2 tetap aktif tetapi V3 adalah versi yang direkomendasikan untuk pengguna baru."
+		}
+	},
+	"cta": {
+		"ready": "Siap mendapatkan bunga dari kripto Anda?",
+		"button": "Buka Compound",
+		"note": "Mulai mendapatkan bunga dengan suku bunga algoritmik"
+	}
+}

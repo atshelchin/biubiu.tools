@@ -1,20 +1,206 @@
 {
 	"category_seo": {
-		"title": "加密社区 - Discord、Telegram 与论坛 | BiuBiu Tools",
-		"description": "查找和加入加密社区。Discord 服务器、Telegram 群组、论坛和 Web3 项目的社区平台。",
+		"title": "Crypto Communities - Discord, Telegram & Forums | BiuBiu Tools",
+		"description": "Find and join crypto communities. Discord servers, Telegram groups, forums and community platforms for Web3 projects.",
+		"keywords": "crypto community, discord crypto, telegram crypto, web3 community, blockchain forums",
 		"faqs": [
 			{
-				"question": "加密社区在哪里聚集？",
-				"answer": "Discord 是大多数项目的中心。Telegram 用于快速更新和交易群。Farcaster 和 Lens 用于 Web3 原生社交。Reddit 用于更广泛的讨论。"
+				"question": "Where do crypto communities gather?",
+				"answer": "Discord is the hub for most projects. Telegram for quick updates and trading groups. Farcaster and Lens for Web3 native social. Reddit for broader discussions."
 			},
 			{
-				"question": "如何找到高质量社区？",
-				"answer": "寻找有活跃管理、超越价格的实质性讨论、开发者存在和社区驱动的项目。避免拉盘群和只关注价格投机的社区。"
+				"question": "How do I find quality communities?",
+				"answer": "Look for active moderation, substantive discussions beyond price, developer presence, and community-driven initiatives. Avoid pump groups and communities focused only on price speculation."
 			},
 			{
-				"question": "如何避免社区中的诈骗？",
-				"answer": "永远不要相信提供帮助或投资的私信。官方公告来自验证渠道。不要点击随机链接。管理员永远不会要求你的助记词。"
+				"question": "How do I avoid scams in communities?",
+				"answer": "Never trust DMs offering help or investments. Official announcements come through verified channels. Don't click random links. Admins will never ask for your seed phrase."
 			}
 		]
+	},
+	"tools": {
+		"discord_ethereum": {
+			"description": "Official Ethereum community Discord for protocol discussions and development"
+		},
+		"discord_uniswap": {
+			"description": "Uniswap community Discord for DEX governance and DeFi discussions"
+		},
+		"discord_aave": {
+			"description": "Aave community Discord for lending protocol and governance discussions"
+		},
+		"discord_chainlink": {
+			"description": "Chainlink community Discord for oracle infrastructure and developer support"
+		},
+		"discord_arbitrum": {
+			"description": "Arbitrum L2 community Discord for ecosystem and development discussions"
+		},
+		"discord_optimism": {
+			"description": "Optimism community Discord for Superchain ecosystem and governance"
+		},
+		"discord_base": {
+			"description": "Coinbase Base L2 community Discord for ecosystem building"
+		},
+		"discord_zksync": {
+			"description": "zkSync community Discord for zk-rollup development and ecosystem"
+		},
+		"discord_starknet": {
+			"description": "Starknet community Discord for Cairo development and zk scaling"
+		},
+		"discord_polygon": {
+			"description": "Polygon community Discord for L2 scaling and zkEVM development"
+		},
+		"discord_ethglobal": {
+			"description": "ETHGlobal Discord for hackathon participants and Web3 builders"
+		},
+		"discord_buildspace": {
+			"description": "Buildspace community Discord for learning Web3 development"
+		},
+		"discord_alchemy": {
+			"description": "Alchemy developer Discord for API support and Web3 infrastructure"
+		},
+		"discord_hardhat": {
+			"description": "Hardhat community Discord for Solidity development and tooling"
+		},
+		"discord_foundry": {
+			"description": "Foundry community Discord for Solidity testing framework support"
+		},
+		"discord_openzeppelin": {
+			"description": "OpenZeppelin Discord for smart contract security and standards"
+		},
+		"discord_thegraph": {
+			"description": "The Graph community Discord for subgraph development and indexing"
+		},
+		"discord_scaffold_eth": {
+			"description": "Scaffold-ETH Discord for rapid dApp prototyping and BuidlGuidl"
+		},
+		"discord_immunefi": {
+			"description": "Immunefi Discord for bug bounty hunters and Web3 security"
+		},
+		"discord_code4rena": {
+			"description": "Code4rena community Discord for competitive security audits"
+		},
+		"discord_sherlock": {
+			"description": "Sherlock community Discord for security audits and coverage"
+		},
+		"discord_secureum": {
+			"description": "Secureum Discord for smart contract security education and research"
+		},
+		"discord_opensea": {
+			"description": "OpenSea community Discord for NFT marketplace discussions"
+		},
+		"discord_blur": {
+			"description": "Blur community Discord for pro NFT traders and marketplace"
+		},
+		"discord_artblocks": {
+			"description": "Art Blocks Discord for generative art collectors and artists"
+		},
+		"discord_foundation": {
+			"description": "Foundation Discord for digital art creators and collectors"
+		},
+		"discord_nouns": {
+			"description": "Nouns DAO Discord for CC0 NFT governance and community building"
+		},
+		"discord_punks": {
+			"description": "CryptoPunks community Discord for OG NFT collectors"
+		},
+		"discord_bayc": {
+			"description": "Bored Ape Yacht Club Discord for BAYC holders and Yuga ecosystem"
+		},
+		"discord_azuki": {
+			"description": "Azuki community Discord for anime NFT culture and community"
+		},
+		"discord_pudgypenguins": {
+			"description": "Pudgy Penguins Discord for community and IP initiatives"
+		},
+		"discord_axie": {
+			"description": "Axie Infinity community Discord for play-to-earn gaming"
+		},
+		"discord_illuvium": {
+			"description": "Illuvium community Discord for AAA Web3 gaming"
+		},
+		"discord_immutable": {
+			"description": "Immutable Discord for Web3 gaming infrastructure and zkEVM"
+		},
+		"discord_loot": {
+			"description": "Loot community Discord for CC0 gaming primitives and builders"
+		},
+		"discord_treasure": {
+			"description": "Treasure DAO Discord for gaming metaverse on Arbitrum"
+		},
+		"discord_ronin": {
+			"description": "Ronin Network Discord for gaming-focused L2 ecosystem"
+		},
+		"discord_bankless": {
+			"description": "Bankless DAO Discord for crypto media and education community"
+		},
+		"discord_gitcoin": {
+			"description": "Gitcoin community Discord for public goods funding and grants"
+		},
+		"discord_ens": {
+			"description": "ENS DAO Discord for Ethereum Name Service governance"
+		},
+		"discord_farcaster": {
+			"description": "Farcaster community Discord for decentralized social protocol"
+		},
+		"discord_lens": {
+			"description": "Lens Protocol Discord for decentralized social graph builders"
+		},
+		"discord_friend_tech": {
+			"description": "friend.tech community Discord for SocialFi on Base"
+		},
+		"discord_rabbithole": {
+			"description": "RabbitHole Discord for learn-to-earn quests and education"
+		},
+		"discord_galxe": {
+			"description": "Galxe community Discord for Web3 credentials and campaigns"
+		},
+		"discord_solana": {
+			"description": "Solana community Discord for high-performance L1 ecosystem"
+		},
+		"discord_avalanche": {
+			"description": "Avalanche community Discord for subnets and L1 development"
+		},
+		"discord_cosmos": {
+			"description": "Cosmos community Discord for IBC and appchain ecosystem"
+		},
+		"discord_sui": {
+			"description": "Sui community Discord for Move language development"
+		},
+		"discord_aptos": {
+			"description": "Aptos community Discord for Move-based L1 ecosystem"
+		},
+		"discord_near": {
+			"description": "NEAR Protocol Discord for sharded L1 development"
+		},
+		"discord_ton": {
+			"description": "TON community Discord for Telegram-integrated blockchain"
+		},
+		"tg_cointelegraph": {
+			"description": "Cointelegraph Telegram channel for crypto news and updates"
+		},
+		"tg_whale_alert": {
+			"description": "Whale Alert Telegram for large crypto transaction tracking"
+		},
+		"tg_lookonchain": {
+			"description": "Lookonchain Telegram for on-chain analysis and whale watching"
+		},
+		"tg_ton_official": {
+			"description": "Official TON Community Telegram for ecosystem updates"
+		},
+		"tg_solana_ann": {
+			"description": "Solana official Telegram for announcements and updates"
+		},
+		"tg_arbitrum_ann": {
+			"description": "Arbitrum official Telegram for L2 announcements"
+		},
+		"tg_chaincatcher": {
+			"description": "ChainCatcher Telegram for Chinese crypto news and research"
+		},
+		"tg_techflow": {
+			"description": "TechFlow Telegram for Chinese Web3 news and analysis"
+		},
+		"tg_crypto_brazil": {
+			"description": "Crypto Brasil Telegram for Brazilian crypto community"
+		}
 	}
 }

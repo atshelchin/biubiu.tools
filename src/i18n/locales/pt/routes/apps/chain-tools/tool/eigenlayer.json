@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷",
+		"code": "pt"
+	},
+	"seo": {
+		"title": "EigenLayer - Protocolo de Restaking do Ethereum | Segurança Compartilhada",
+		"description": "Descubra o EigenLayer, o protocolo que permite restaking de ETH para proteger múltiplos serviços. Aprenda sobre AVS, recompensas de restaking e extensão da segurança do Ethereum.",
+		"keywords": "EigenLayer, restaking, AVS, segurança Ethereum, staking, rendimento cripto, segurança compartilhada"
+	},
+	"overview": "EigenLayer é um protocolo de restaking que permite aos stakers do Ethereum optar por proteger serviços adicionais além do consenso do Ethereum, ganhando recompensas extras enquanto estendem o modelo de segurança da rede. Fundado por Sreeram Kannan em 2021 e lançado em 2023, EigenLayer tornou-se uma das inovações mais significativas na arquitetura de segurança do Ethereum.\n\nA percepção central é que o ETH em stake do Ethereum (valendo dezenas de bilhões) fornece segurança criptoeconômica que poderia ser estendida a outros protocolos. Em vez de cada novo serviço inicializar seu próprio conjunto de validadores, eles podem aproveitar a segurança existente do Ethereum através de \"Serviços Ativamente Validados\" (AVS). Stakers que fazem restaking com EigenLayer podem validar esses AVS e ganhar recompensas adicionais, mas também enfrentam slashing se se comportarem mal.\n\nEigenLayer suporta tanto restaking nativo (validadores apontando suas credenciais de retirada para o EigenLayer) quanto restaking líquido através de LSTs como stETH. O protocolo atraiu mais de $15 bilhões em depósitos e possibilitou um novo ecossistema de AVS incluindo oráculos, pontes, sequenciadores e camadas de disponibilidade de dados. O token EIGEN adiciona um mecanismo adicional de slashing para falhas intersubjetivas.",
+	"features": {
+		"1": {
+			"title": "Restaking de ETH",
+			"description": "Faça restaking de seu ETH ou LSTs para ganhar rendimento adicional enquanto protege novos serviços"
+		},
+		"2": {
+			"title": "Serviços Ativamente Validados (AVS)",
+			"description": "Novos protocolos podem inicializar segurança aproveitando o ETH em stake do Ethereum"
+		},
+		"3": {
+			"title": "Restaking Nativo e Líquido",
+			"description": "Faça restaking diretamente como validador ou através de tokens de staking líquido como stETH"
+		},
+		"4": {
+			"title": "Delegação de Operador",
+			"description": "Delegue seus ativos em restaking a operadores profissionais que executam infraestrutura AVS"
+		},
+		"5": {
+			"title": "Token EIGEN",
+			"description": "Token de governança que pode ser posto em stake e sofrer slashing por falhas intersubjetivas"
+		},
+		"6": {
+			"title": "Modelo de Segurança Compartilhada",
+			"description": "Múltiplos serviços compartilham a segurança do Ethereum, reduzindo fragmentação e custos"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Rendimento de Staking Aprimorado",
+			"description": "Ganhe recompensas adicionais além do staking de ETH protegendo AVS"
+		},
+		"2": {
+			"title": "Lançar Serviços Seguros",
+			"description": "Novos protocolos podem acessar segurança de nível Ethereum sem construir um conjunto de validadores"
+		},
+		"3": {
+			"title": "Tokens de Restaking Líquido",
+			"description": "Mantenha LRTs (eETH, ezETH, rsETH) que representam posições em restaking com rendimento composto"
+		},
+		"4": {
+			"title": "Negócio de Operador",
+			"description": "Execute infraestrutura para AVS e ganhe taxas de delegadores"
+		},
+		"5": {
+			"title": "Pooling de Segurança",
+			"description": "Projetos podem compartilhar custos de segurança em vez de cada um construir infraestrutura independente"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "O que é EigenLayer e como funciona o restaking?",
+			"answer": "EigenLayer permite que stakers de ETH 'refaçam stake' de seus ativos para proteger serviços adicionais chamados AVS (Serviços Ativamente Validados). Você faz stake de ETH com validadores Ethereum normalmente, mas também se compromete a validar outros protocolos. Em troca, você ganha recompensas extras. No entanto, se você se comportar mal, pode sofrer slashing tanto pelo Ethereum quanto pelos AVS que está protegendo."
+		},
+		"2": {
+			"question": "Quais são os riscos do restaking?",
+			"answer": "Restaking adiciona riscos adicionais de slashing—se AVS nos quais você optou detectarem comportamento inadequado, seu ETH em stake pode sofrer slashing. Há também risco de smart contract no próprio EigenLayer e complexidade em entender todos os serviços que você está protegendo. Comece com operadores e AVS respeitáveis e não faça restaking de mais do que está disposto a potencialmente perder."
+		},
+		"3": {
+			"question": "O que são Tokens de Restaking Líquido (LRTs)?",
+			"answer": "LRTs (como eETH da ether.fi, ezETH da Renzo, rsETH da Kelp) representam posições em restaking na forma líquida. Em vez de fazer restaking diretamente, você deposita ETH com um protocolo LRT que faz restaking em seu nome. Você recebe um token líquido que pode usar no DeFi enquanto ganha recompensas de restaking. LRTs simplificam a experiência de restaking."
+		},
+		"4": {
+			"question": "O que são AVS e quais estão ativos?",
+			"answer": "AVS (Serviços Ativamente Validados) são protocolos protegidos por restakers do EigenLayer. AVS ativos incluem EigenDA (disponibilidade de dados), Brevis (zkCoprocessor), Lagrange e outros. Mais estão sendo lançados regularmente. Cada AVS tem sua própria estrutura de recompensas e perfil de risco. Como restaker, você pode escolher quais AVS proteger através do seu operador."
+		},
+		"5": {
+			"question": "Para que serve o token EIGEN?",
+			"answer": "EIGEN é o token de governança do EigenLayer que também pode ser posto em stake. Sua característica única é o 'staking intersubjetivo'—pode sofrer slashing por falhas que exigem consenso social para detectar (ao contrário do slashing on-chain objetivo). Stakers de EIGEN essencialmente sustentam o sistema contra ataques que não podem ser provados algoritmicamente."
+		}
+	},
+	"cta": {
+		"ready": "Pronto para ganhar rendimento extra através do restaking?",
+		"button": "Abrir EigenLayer",
+		"note": "Estenda a segurança do Ethereum e ganhe recompensas adicionais"
+	}
+}

@@ -2,7 +2,7 @@
 	"category_seo": {
 		"title": "暗号資産エアドロップ - トークン配布と資格 | BiuBiu Tools",
 		"description": "暗号資産エアドロップを追跡して請求。エアドロップ機会を見つけ、資格を確認し、エアドロップファーミング戦略を学ぶ。",
-		"keywords": "",
+		"keywords": "暗号資産エアドロップ, トークン配布, エアドロップ資格, 無料暗号資産, エアドロップファーミング",
 		"faqs": [
 			{
 				"question": "暗号資産エアドロップとは何ですか？",
@@ -14,151 +14,151 @@
 			},
 			{
 				"question": "エアドロップは課税対象ですか？",
-				"answer": "ほとんどの管轄区域では、エアドロップは受領時に所得として、売却時にキャピタルゲインとして課税されます。エアドロップ時の公正市場価値の記録を保管してください。税務専門家に相談してください。"
+				"answer": "ほとんどの管轄区域では、エアドロップは受領時に所得として、売却時にキャピタルゲインとして課税されます。エアドロップ時の公正市場価値を記録してください。税務専門家に相談してください。"
 			}
 		]
 	},
 	"tools": {
+		"airdrop_uni": {
+			"description": "伝説のUniswapエアドロップ - 早期DEXユーザーに400 UNIを配布、DeFiトークン配布の基準を確立"
+		},
+		"airdrop_ens": {
+			"description": "ドメイン保有者へのENSガバナンストークンエアドロップ - 早期Ethereum Name Service採用者に報酬"
+		},
+		"airdrop_dydx": {
+			"description": "dYdX永久取引プラットフォームエアドロップ - 取引量と活動に基づいてトレーダーに報酬"
+		},
+		"airdrop_1inch": {
+			"description": "1inch DEXアグリゲーターエアドロップ - アグリゲーター経由でスワップしたユーザーに配布"
+		},
+		"airdrop_ldo": {
+			"description": "Lido DAOガバナンストークン - 早期リキッドステーキングユーザーとstETH保有者に報酬"
+		},
+		"airdrop_op": {
+			"description": "Optimism L2エアドロップ - 早期ブリッジユーザー、DAO投票者、アクティブなEthereumユーザーに報酬"
+		},
+		"airdrop_arb": {
+			"description": "Arbitrum L2エアドロップ - ブリッジユーザーとエコシステム参加者に報酬する最大のL2エアドロップ"
+		},
+		"airdrop_blur": {
+			"description": "Blur NFTマーケットプレイスエアドロップ - ロイヤルティポイントシステムでプロトレーダーに報酬"
+		},
+		"airdrop_strk": {
+			"description": "Starknetプロビジョンプログラム - 早期ユーザーとエコシステム貢献者へのzk-rollupエアドロップ"
+		},
+		"airdrop_zk": {
+			"description": "zkSync Eraエアドロップ - 早期ブリッジユーザーとメインネット活動参加者に報酬"
+		},
+		"airdrop_jup": {
+			"description": "Jupiterアグリゲーターエアドロップ - スワップユーザーへのSolana最大DEXエアドロップ"
+		},
+		"airdrop_w": {
+			"description": "Wormholeクロスチェーンブリッジエアドロップ - 複数チェーンのブリッジユーザーに報酬"
+		},
+		"airdrop_ena": {
+			"description": "Ethena合成ドルプロトコルエアドロップ - シャード保有者と早期USDe発行者に報酬"
+		},
+		"airdrop_eigen": {
+			"description": "EigenLayerリステーキングプロトコルエアドロップ - 早期リステーカーとポイント獲得者に報酬"
+		},
+		"airdrop_pyth": {
+			"description": "Pyth Networkオラクルエアドロップ - 27以上のブロックチェーンのDeFiユーザーに配布"
+		},
+		"airdrop_tnsr": {
+			"description": "Tensor NFTマーケットプレイスエアドロップ - シーズンポイントでSolana NFTトレーダーに報酬"
+		},
+		"airdrop_kmno": {
+			"description": "Kamino Financeエアドロップ - 流動性提供者とユーザーに報酬するSolana DeFiプロトコル"
+		},
+		"airdrop_parcl": {
+			"description": "Parcl不動産取引エアドロップ - 合成不動産取引のためのSolanaプロトコル"
+		},
+		"airdrop_wen": {
+			"description": "WENミームトークンエアドロップ - Jupiterの詩NFT保有者が無料WENトークンを受け取り"
+		},
+		"airdrop_omni": {
+			"description": "Omni Network相互運用性エアドロップ - EigenLayerリステーカーとテストネットユーザーに報酬"
+		},
+		"airdrop_alt": {
+			"description": "AltLayer Rollup-as-a-Serviceエアドロップ - リステーカーとエコシステム参加者に報酬"
+		},
+		"airdrop_manta": {
+			"description": "Manta PacificモジュラーL2エアドロップ - ブリッジユーザーとNew Paradigm参加者に報酬"
+		},
+		"airdrop_dym": {
+			"description": "Dymension RollAppハブエアドロップ - Cosmosステーカーと早期genesisローラーに配布"
+		},
+		"airdrop_zetachain": {
+			"description": "ZetaChainオムニチェーンエアドロップ - テストネット参加者と早期メインネットユーザーに報酬"
+		},
+		"airdrop_ethfi": {
+			"description": "Ether.fiリキッドリステーキングエアドロップ - eETH保有者とロイヤルティポイント獲得者に報酬"
+		},
+		"airdrop_renzo": {
+			"description": "Renzoリステーキングプロトコルエアドロップ - ezETH保有者とポイント獲得者に配布"
+		},
+		"airdrop_puffer": {
+			"description": "Puffer Finance潜在エアドロップ - pufETHポイントシステムを持つリキッドリステーキングプロトコル"
+		},
+		"airdrop_kelp": {
+			"description": "Kelp DAO潜在エアドロップ - Kelp Miles報酬を持つrsETHリキッドリステーキング"
+		},
+		"airdrop_swell": {
+			"description": "Swell Network潜在エアドロップ - パールポイントプログラムを持つリキッドステーキング"
+		},
+		"airdrop_cow": {
+			"description": "CoW Protocol MEV保護エアドロップ - バッチオークション取引ユーザーに報酬"
+		},
+		"airdrop_hop": {
+			"description": "Hop Protocol L2ブリッジエアドロップ - 早期クロスL2ブリッジユーザーに報酬"
+		},
+		"airdrop_safe": {
+			"description": "Safeマルチシグウォレットエアドロップ - Safeユーザーとエコシステム参加者に配布"
+		},
+		"airdrop_matic_pol": {
+			"description": "Polygon MATIC to POLトークン移行 - 新ネイティブトークンへの1:1アップグレード"
+		},
 		"earndrop": {
-			"description": "複数の今後および過去のエアドロップの資格を確認"
+			"description": "マルチプロトコルエアドロップ資格チェッカー - 複数エアドロップの資格を確認"
 		},
-		"airdrop-uni": {
-			"description": "UNI Airdrop (2020) - Tool"
+		"defillama_airdrops": {
+			"description": "DeFiLlamaエアドロップトラッカー - 今後およびアクティブなトークン配布の包括的リスト"
 		},
-		"airdrop-ens": {
-			"description": "ENS Airdrop (2021) - Tool"
+		"airdrop_alert": {
+			"description": "エアドロップアラートのニュースと通知 - 新しいエアドロップ機会の最新情報を入手"
 		},
-		"airdrop-dydx": {
-			"description": "dYdX Airdrop (2021) - Tool"
+		"airdrops_io": {
+			"description": "Airdrops.ioアグリゲーター - ガイド付きの厳選された合法エアドロップリスト"
 		},
-		"airdrop-1inch": {
-			"description": "1inch Airdrop (2020) - Tool"
+		"airdrop_farmer": {
+			"description": "Layer3クエストプラットフォーム - オンチェーンクエストを完了して報酬と潜在エアドロップを獲得"
 		},
-		"airdrop-ldo": {
-			"description": "LDO Airdrop (2022) - Tool"
+		"galxe_campaigns": {
+			"description": "Galxe Web3クレデンシャルキャンペーン - NFTとポイントを獲得して潜在エアドロップを取得"
 		},
-		"airdrop-op": {
-			"description": "OP Airdrop (2022) - Tool"
+		"rabbithole_quests": {
+			"description": "RabbitHole学んで稼ぐプラットフォーム - クエストを完了してDeFiを学び報酬を獲得"
 		},
-		"airdrop-arb": {
-			"description": "ARB Airdrop (2023) - Tool"
+		"zealy_quests": {
+			"description": "Zealyコミュニティクエストプラットフォーム - ソーシャルとオンチェーンタスクを完了してプロジェクト報酬を獲得"
 		},
-		"airdrop-blur": {
-			"description": "BLUR Airdrop (2023) - Tool"
+		"potential_scroll": {
+			"description": "Scroll zkEVM潜在エアドロップ - L2を使用してエコシステムに参加"
 		},
-		"airdrop-strk": {
-			"description": "STRK Airdrop (2024) - Tool"
+		"potential_linea": {
+			"description": "Linea zkEVM潜在エアドロップ - Voyageポイントプログラムを持つConsenSys L2"
 		},
-		"airdrop-zk": {
-			"description": "ZK Airdrop (2024) - Tool"
+		"potential_blast": {
+			"description": "Blast L2ネイティブイールドエアドロップ - 早期預金者とエコシステムユーザーに報酬"
 		},
-		"airdrop-jup": {
-			"description": "JUP Airdrop (2024) - Tool"
+		"potential_berachain": {
+			"description": "Berachain潜在エアドロップ - テストネット参加を持つProof-of-Liquidity L1"
 		},
-		"airdrop-w": {
-			"description": "W Airdrop (Wormhole 2024) - Tool"
+		"potential_monad": {
+			"description": "Monad潜在エアドロップ - 現在開発中の高性能EVM L1"
 		},
-		"airdrop-ena": {
-			"description": "ENA Airdrop (2024) - Tool"
-		},
-		"airdrop-eigen": {
-			"description": "EIGEN Airdrop (2024) - Tool"
-		},
-		"airdrop-pyth": {
-			"description": "PYTH Airdrop (2023) - Tool"
-		},
-		"airdrop-tnsr": {
-			"description": "TNSR Airdrop (2024) - Tool"
-		},
-		"airdrop-kmno": {
-			"description": "KMNO Airdrop (2024) - Tool"
-		},
-		"airdrop-parcl": {
-			"description": "PARCL Airdrop (2024) - Tool"
-		},
-		"airdrop-wen": {
-			"description": "WEN Airdrop (2024) - Tool"
-		},
-		"airdrop-omni": {
-			"description": "OMNI Airdrop (2024) - Tool"
-		},
-		"airdrop-alt": {
-			"description": "ALT Airdrop (2024) - Tool"
-		},
-		"airdrop-manta": {
-			"description": "MANTA Airdrop (2024) - Tool"
-		},
-		"airdrop-dym": {
-			"description": "DYM Airdrop (2024) - Tool"
-		},
-		"airdrop-zetachain": {
-			"description": "ZETA Airdrop (2024) - Tool"
-		},
-		"airdrop-ethfi": {
-			"description": "ETHFI Airdrop (2024) - Tool"
-		},
-		"airdrop-renzo": {
-			"description": "REZ Airdrop (2024) - Tool"
-		},
-		"airdrop-puffer": {
-			"description": "PUFFER (Potential) - Tool"
-		},
-		"airdrop-kelp": {
-			"description": "KELP (Potential) - Tool"
-		},
-		"airdrop-swell": {
-			"description": "SWELL (Potential) - Tool"
-		},
-		"airdrop-cow": {
-			"description": "COW Airdrop (2022) - Tool"
-		},
-		"airdrop-hop": {
-			"description": "HOP Airdrop (2022) - Tool"
-		},
-		"airdrop-safe": {
-			"description": "SAFE Airdrop (2022) - Tool"
-		},
-		"airdrop-matic-pol": {
-			"description": "MATIC/POL Migration - Tool"
-		},
-		"defillama-airdrops": {
-			"description": "DeFiLlama Airdrops - Tool"
-		},
-		"airdrop-alert": {
-			"description": "Airdrop Alert - Tool"
-		},
-		"airdrops-io": {
-			"description": "Airdrops.io - Tool"
-		},
-		"airdrop-farmer": {
-			"description": "Layer3 Quests - Tool"
-		},
-		"galxe-campaigns": {
-			"description": "Galxe Campaigns - Tool"
-		},
-		"rabbithole-quests": {
-			"description": "RabbitHole - Tool"
-		},
-		"zealy-quests": {
-			"description": "Zealy - Tool"
-		},
-		"potential-scroll": {
-			"description": "Scroll (Potential) - Tool"
-		},
-		"potential-linea": {
-			"description": "Linea (Potential) - Tool"
-		},
-		"potential-blast": {
-			"description": "BLAST (Launched) - Tool"
-		},
-		"potential-berachain": {
-			"description": "Berachain (Potential) - Tool"
-		},
-		"potential-monad": {
-			"description": "Monad (Potential) - Tool"
-		},
-		"potential-fuel": {
-			"description": "Fuel (Potential) - Tool"
+		"potential_fuel": {
+			"description": "Fuel Network潜在エアドロップ - ベータテストネットを持つモジュラー実行レイヤー"
 		}
 	}
 }

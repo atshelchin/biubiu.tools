@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Compound - Algorithmic Money Market Protocol | Earn Interest on Crypto",
+		"description": "Discover Compound, the pioneering DeFi lending protocol. Learn how to supply assets to earn interest, borrow against collateral, and participate in governance.",
+		"keywords": "Compound, DeFi lending, money market, COMP, crypto interest, borrowing, collateral"
+	},
+	"overview": "Compound is a pioneering decentralized money market protocol that enables users to supply crypto assets to earn interest or borrow against their collateral. Launched in September 2018 by Robert Leshner's Compound Labs, it became one of the first protocols to demonstrate that algorithmic interest rates could efficiently match lending supply and demand without intermediaries.\n\nThe protocol operates through isolated lending markets where suppliers deposit assets into liquidity pools and receive cTokens representing their position. These cTokens continuously accrue interest, with rates determined algorithmically based on utilization—the ratio of borrowed to supplied assets. When utilization is high, interest rates increase to incentivize more supply; when low, rates decrease to encourage borrowing.\n\nCompound's 2020 introduction of the COMP governance token catalyzed the \"DeFi Summer\" phenomenon, popularizing liquidity mining and demonstrating how token incentives could bootstrap protocol adoption. Today, Compound V3 (Comet) represents a simplified, more efficient design with improved risk management and cross-chain deployment on Ethereum, Polygon, Arbitrum, and Base.",
+	"features": {
+		"1": {
+			"title": "Algorithmic Interest Rates",
+			"description": "Interest rates adjust automatically based on supply and demand through utilization curves"
+		},
+		"2": {
+			"title": "cToken System",
+			"description": "Receive cTokens when supplying assets—they accrue interest and are usable across DeFi"
+		},
+		"3": {
+			"title": "Overcollateralized Borrowing",
+			"description": "Borrow assets against your supplied collateral with transparent liquidation thresholds"
+		},
+		"4": {
+			"title": "COMP Governance",
+			"description": "COMP token holders govern protocol parameters, asset listings, and upgrades"
+		},
+		"5": {
+			"title": "Compound V3 (Comet)",
+			"description": "Simplified single-asset borrowing with improved capital efficiency and risk isolation"
+		},
+		"6": {
+			"title": "Multi-Chain Deployment",
+			"description": "Available on Ethereum, Polygon, Arbitrum, and Base with native cross-chain support"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Earn Passive Income",
+			"description": "Supply stablecoins or crypto assets to earn variable interest without lockups"
+		},
+		"2": {
+			"title": "Access Liquidity",
+			"description": "Borrow against your crypto holdings without selling—useful for expenses or opportunities"
+		},
+		"3": {
+			"title": "Leveraged Positions",
+			"description": "Supply collateral, borrow, and repeat to amplify exposure to assets you're bullish on"
+		},
+		"4": {
+			"title": "Treasury Management",
+			"description": "DAOs and protocols use Compound to earn yield on idle treasury assets"
+		},
+		"5": {
+			"title": "DeFi Composability",
+			"description": "Use cTokens in other protocols—they're yield-bearing and widely integrated"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Compound and how does it work?",
+			"answer": "Compound is a decentralized lending protocol where you can supply crypto assets to earn interest or borrow against collateral. When you supply assets, you receive cTokens that represent your deposit plus accruing interest. Interest rates are determined algorithmically—when borrowing demand is high relative to supply, rates increase, and vice versa."
+		},
+		"2": {
+			"question": "Is Compound safe to use?",
+			"answer": "Compound is one of the oldest and most battle-tested DeFi protocols, having secured billions in assets since 2018. It has undergone multiple security audits and operates transparently on-chain. However, risks include smart contract vulnerabilities, liquidation during market volatility, and oracle manipulation. Never deposit more than you can afford to lose."
+		},
+		"3": {
+			"question": "What are cTokens and how do they work?",
+			"answer": "cTokens (like cUSDC, cETH) are interest-bearing tokens you receive when supplying to Compound. They represent your claim on the underlying assets plus accrued interest. The exchange rate between cTokens and the underlying asset continuously increases as interest accrues. You can transfer, trade, or use cTokens in other DeFi protocols."
+		},
+		"4": {
+			"question": "What happens if I get liquidated?",
+			"answer": "If your borrowed amount exceeds your collateral value (accounting for collateral factors), liquidators can repay part of your debt and claim your collateral at a discount. Compound V3 has improved this with more gradual liquidation mechanics. Monitor your health factor and maintain sufficient collateral to avoid liquidation."
+		},
+		"5": {
+			"question": "What is the difference between Compound V2 and V3?",
+			"answer": "Compound V3 (Comet) is a redesigned version focusing on a single borrowable asset per market (e.g., USDC), making it simpler and more capital efficient. It features better risk isolation, no cTokens for borrowers, and improved liquidation mechanics. V2 remains active but V3 is the recommended version for new users."
+		}
+	},
+	"cta": {
+		"ready": "Ready to earn interest on your crypto?",
+		"button": "Open Compound",
+		"note": "Start earning with algorithmic interest rates"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷",
+		"code": "fr"
+	},
+	"seo": {
+		"title": "Compound - Protocole de Marché Monétaire Algorithmique | Gagnez des Intérêts sur vos Cryptos",
+		"description": "Découvrez Compound, le protocole DeFi de prêt pionnier. Apprenez à fournir des actifs pour gagner des intérêts, emprunter contre des garanties et participer à la gouvernance.",
+		"keywords": "Compound, prêt DeFi, marché monétaire, COMP, intérêts crypto, emprunt, garantie"
+	},
+	"overview": "Compound est un protocole de marché monétaire décentralisé pionnier qui permet aux utilisateurs de fournir des actifs crypto pour gagner des intérêts ou d'emprunter contre leurs garanties. Lancé en septembre 2018 par Compound Labs de Robert Leshner, il est devenu l'un des premiers protocoles à démontrer que des taux d'intérêt algorithmiques pouvaient efficacement équilibrer l'offre et la demande de prêts sans intermédiaires.\n\nLe protocole fonctionne à travers des marchés de prêt isolés où les fournisseurs déposent des actifs dans des pools de liquidité et reçoivent des cTokens représentant leur position. Ces cTokens accumulent continuellement des intérêts, avec des taux déterminés algorithmiquement en fonction de l'utilisation - le ratio entre les actifs empruntés et fournis. Lorsque l'utilisation est élevée, les taux d'intérêt augmentent pour inciter à plus d'offre ; lorsqu'elle est faible, les taux diminuent pour encourager l'emprunt.\n\nL'introduction en 2020 du token de gouvernance COMP par Compound a catalysé le phénomène du \"DeFi Summer\", popularisant le liquidity mining et démontrant comment les incitations par tokens pouvaient stimuler l'adoption des protocoles. Aujourd'hui, Compound V3 (Comet) représente une conception simplifiée et plus efficace avec une gestion des risques améliorée et un déploiement multi-chaînes sur Ethereum, Polygon, Arbitrum et Base.",
+	"features": {
+		"1": {
+			"title": "Taux d'Intérêt Algorithmiques",
+			"description": "Les taux d'intérêt s'ajustent automatiquement en fonction de l'offre et de la demande via des courbes d'utilisation"
+		},
+		"2": {
+			"title": "Système cToken",
+			"description": "Recevez des cTokens en fournissant des actifs - ils accumulent des intérêts et sont utilisables dans DeFi"
+		},
+		"3": {
+			"title": "Emprunt Sur-Collatéralisé",
+			"description": "Empruntez des actifs contre vos garanties fournies avec des seuils de liquidation transparents"
+		},
+		"4": {
+			"title": "Gouvernance COMP",
+			"description": "Les détenteurs de tokens COMP gouvernent les paramètres du protocole, les listes d'actifs et les mises à niveau"
+		},
+		"5": {
+			"title": "Compound V3 (Comet)",
+			"description": "Emprunt simplifié d'un seul actif avec efficacité du capital et isolation des risques améliorées"
+		},
+		"6": {
+			"title": "Déploiement Multi-Chaînes",
+			"description": "Disponible sur Ethereum, Polygon, Arbitrum et Base avec support natif multi-chaînes"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Gagnez un Revenu Passif",
+			"description": "Fournissez des stablecoins ou des actifs crypto pour gagner des intérêts variables sans période de blocage"
+		},
+		"2": {
+			"title": "Accédez à la Liquidité",
+			"description": "Empruntez contre vos avoirs crypto sans vendre - utile pour les dépenses ou les opportunités"
+		},
+		"3": {
+			"title": "Positions à Effet de Levier",
+			"description": "Fournissez des garanties, empruntez et répétez pour amplifier votre exposition aux actifs que vous anticipez haussiers"
+		},
+		"4": {
+			"title": "Gestion de Trésorerie",
+			"description": "Les DAOs et protocoles utilisent Compound pour générer du rendement sur leurs actifs de trésorerie inactifs"
+		},
+		"5": {
+			"title": "Composabilité DeFi",
+			"description": "Utilisez les cTokens dans d'autres protocoles - ils génèrent des rendements et sont largement intégrés"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Qu'est-ce que Compound et comment fonctionne-t-il ?",
+			"answer": "Compound est un protocole de prêt décentralisé où vous pouvez fournir des actifs crypto pour gagner des intérêts ou emprunter contre des garanties. Lorsque vous fournissez des actifs, vous recevez des cTokens qui représentent votre dépôt plus les intérêts accumulés. Les taux d'intérêt sont déterminés algorithmiquement - lorsque la demande d'emprunt est élevée par rapport à l'offre, les taux augmentent, et vice versa."
+		},
+		"2": {
+			"question": "Est-il sûr d'utiliser Compound ?",
+			"answer": "Compound est l'un des protocoles DeFi les plus anciens et les plus éprouvés, ayant sécurisé des milliards d'actifs depuis 2018. Il a fait l'objet de multiples audits de sécurité et fonctionne de manière transparente on-chain. Cependant, les risques incluent les vulnérabilités des smart contracts, la liquidation pendant la volatilité du marché et la manipulation d'oracles. Ne déposez jamais plus que ce que vous pouvez vous permettre de perdre."
+		},
+		"3": {
+			"question": "Que sont les cTokens et comment fonctionnent-ils ?",
+			"answer": "Les cTokens (comme cUSDC, cETH) sont des tokens portant intérêts que vous recevez lorsque vous fournissez à Compound. Ils représentent votre créance sur les actifs sous-jacents plus les intérêts accumulés. Le taux de change entre les cTokens et l'actif sous-jacent augmente continuellement à mesure que les intérêts s'accumulent. Vous pouvez transférer, échanger ou utiliser les cTokens dans d'autres protocoles DeFi."
+		},
+		"4": {
+			"question": "Que se passe-t-il si je suis liquidé ?",
+			"answer": "Si votre montant emprunté dépasse la valeur de votre garantie (en tenant compte des facteurs de garantie), les liquidateurs peuvent rembourser une partie de votre dette et réclamer votre garantie avec une décote. Compound V3 a amélioré cela avec des mécaniques de liquidation plus progressives. Surveillez votre facteur de santé et maintenez une garantie suffisante pour éviter la liquidation."
+		},
+		"5": {
+			"question": "Quelle est la différence entre Compound V2 et V3 ?",
+			"answer": "Compound V3 (Comet) est une version repensée se concentrant sur un seul actif empruntable par marché (par exemple, USDC), le rendant plus simple et plus efficace en capital. Il offre une meilleure isolation des risques, pas de cTokens pour les emprunteurs et des mécaniques de liquidation améliorées. V2 reste actif mais V3 est la version recommandée pour les nouveaux utilisateurs."
+		}
+	},
+	"cta": {
+		"ready": "Prêt à gagner des intérêts sur vos cryptos ?",
+		"button": "Ouvrir Compound",
+		"note": "Commencez à gagner avec des taux d'intérêt algorithmiques"
+	}
+}

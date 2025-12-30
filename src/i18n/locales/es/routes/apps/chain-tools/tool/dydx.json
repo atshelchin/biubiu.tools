@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸",
+		"code": "es"
+	},
+	"seo": {
+		"title": "dYdX - Exchange Descentralizado de Perpetuos | Comercio de Derivados Cripto",
+		"description": "Descubre dYdX, el exchange líder de perpetuos descentralizados. Comercia con hasta 20x apalancamiento, sin KYC, y benefíciate de liquidez profunda en dYdX Chain.",
+		"keywords": "dYdX, comercio de perpetuos, exchange descentralizado, derivados cripto, comercio apalancado, DeFi"
+	},
+	"overview": "dYdX es un exchange descentralizado líder para contratos perpetuos, permitiendo a los traders ir largo o corto en activos cripto con apalancamiento. Fundado por Antonio Juliano en 2017 y originalmente construido en Ethereum, dYdX ha evolucionado hacia una blockchain Layer 1 independiente optimizada para comercio de derivados.\n\nLa plataforma fue pionera en perpetuos descentralizados a escala, procesando miles de millones en volumen diario durante períodos pico. A diferencia de DEXs de perpetuos basados en AMM, dYdX usa un modelo de libro de órdenes que iguala la experiencia de exchanges centralizados pero con beneficios de autocustodia. dYdX Chain, construida con Cosmos SDK y lanzada en 2023, proporciona tiempos de bloque sub-segundo y sin tarifas de gas para comerciar.\n\nLos diferenciadores clave incluyen liquidez profunda a través de market makers, hasta 20x apalancamiento en pares principales y una interfaz de comercio sofisticada con tipos de órdenes avanzadas. El protocolo es gobernado por poseedores del token DYDX y distribuye ingresos por tarifas de comercio a stakers. Con su propia cadena, dYdX ha logrado descentralización completa sin operadores centrales controlando el libro de órdenes o motor de matching.",
+	"features": {
+		"1": {
+			"title": "Contratos Perpetuos",
+			"description": "Comercia BTC, ETH y más de 100 activos con contratos perpetuos y hasta 20x apalancamiento"
+		},
+		"2": {
+			"title": "Comercio de Libro de Órdenes",
+			"description": "Experiencia de comercio profesional con órdenes límite, stop-loss y liquidez profunda"
+		},
+		"3": {
+			"title": "dYdX Chain",
+			"description": "Blockchain L1 construida con propósito con finalidad sub-segundo y cero tarifas de gas para comerciar"
+		},
+		"4": {
+			"title": "Autocustodia",
+			"description": "Comercia sin depositar a una entidad centralizada—los fondos permanecen bajo tu control"
+		},
+		"5": {
+			"title": "Sin KYC Requerido",
+			"description": "Acceso sin permisos al comercio de derivados desde cualquier wallet"
+		},
+		"6": {
+			"title": "Staking de DYDX",
+			"description": "Apuesta DYDX para asegurar la cadena y ganar una parte de las tarifas de comercio"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Comercio Apalancado",
+			"description": "Amplifica ganancias (y pérdidas) en movimientos de precio cripto con apalancamiento"
+		},
+		"2": {
+			"title": "Cobertura de Posiciones",
+			"description": "Posiciónate corto para proteger tenencias spot contra caídas de precio sin vender"
+		},
+		"3": {
+			"title": "Market Making",
+			"description": "Provee liquidez en el libro de órdenes y gana del spread bid-ask"
+		},
+		"4": {
+			"title": "Arbitraje",
+			"description": "Comercia diferencias de precio entre dYdX y otros venues"
+		},
+		"5": {
+			"title": "Rendimiento de Staking",
+			"description": "Apuesta DYDX para ganar ingresos por tarifas de comercio distribuidos a stakers"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es dYdX y cómo funciona?",
+			"answer": "dYdX es un exchange de futuros perpetuos descentralizado que corre en su propia blockchain (dYdX Chain). Depositas fondos, comercias contratos perpetuos con apalancamiento y retiras—todo sin KYC o un intermediario centralizado. El libro de órdenes y motor de matching están completamente on-chain, operados por validadores descentralizados."
+		},
+		"2": {
+			"question": "¿Cuál es la diferencia entre dYdX v3 y v4?",
+			"answer": "v3 corría en StarkEx (Ethereum L2) con un libro de órdenes centralizado operado por dYdX Trading Inc. v4 (dYdX Chain) está completamente descentralizado—una blockchain Cosmos dedicada donde los validadores ejecutan el libro de órdenes. v4 tiene más mercados, sin tarifas de gas, y las tarifas de comercio van a stakers. v3 está deprecado; todo el nuevo comercio es en v4."
+		},
+		"3": {
+			"question": "¿Es seguro usar dYdX?",
+			"answer": "dYdX es uno de los DEXs de perpetuos más establecidos con miles de millones en volumen de comercio. Los fondos están asegurados por validadores de Cosmos con stake sustancial. Los riesgos incluyen bugs de contratos inteligentes, colusión de validadores (teórica) y liquidación por comercio apalancado. Siempre usa gestión de riesgo apropiada y nunca comercies más de lo que puedas permitirte perder."
+		},
+		"4": {
+			"question": "¿Cómo funcionan las tarifas en dYdX?",
+			"answer": "dYdX usa un modelo de tarifas maker-taker. Los makers (órdenes límite que añaden liquidez) típicamente pagan 0.02% o menos; los takers (órdenes de mercado) pagan alrededor de 0.05%. Los traders de alto volumen obtienen descuentos. No hay tarifas de gas para comerciar—solo pagas tarifas de red al depositar/retirar. Las tarifas de comercio se distribuyen a stakers de DYDX."
+		},
+		"5": {
+			"question": "¿Cómo obtengo fondos en dYdX Chain?",
+			"answer": "Puedes puentear USDC desde varias cadenas usando el puente integrado o puentes de terceros como Squid. Deposita USDC, que sirve como garantía para todos los comercios. Los retiros funcionan de la misma manera—solicita retiro y puentea de vuelta a tu cadena preferida. El proceso típicamente toma minutos."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para comerciar perpetuos?",
+		"button": "Abrir dYdX",
+		"note": "Comercio de derivados descentralizado con hasta 20x apalancamiento"
+	}
+}

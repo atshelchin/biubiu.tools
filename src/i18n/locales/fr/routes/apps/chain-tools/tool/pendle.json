@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷",
+		"code": "fr"
+	},
+	"seo": {
+		"title": "Pendle - Protocole de Tokenisation de Rendement | Tradez le Rendement Futur",
+		"description": "Découvrez Pendle, le protocole pour trader le rendement futur. Apprenez à verrouiller des taux fixes, spéculer sur les rendements et maximiser les retours DeFi via les tokens PT et YT.",
+		"keywords": "Pendle, tokenisation de rendement, PT, YT, rendement fixe, DeFi, trading de rendement, taux d'intérêt"
+	},
+	"overview": "Pendle est un protocole de tokenisation de rendement qui permet aux utilisateurs de trader le rendement futur, de verrouiller des taux fixes ou de spéculer sur les changements de rendement. Lancé en 2021 et repensé dans Pendle V2 (2023), il est devenu une pierre angulaire des marchés de rendement DeFi, particulièrement pour les tokens de staking liquide et les actifs portant des points.\n\nL'innovation fondamentale est la séparation des actifs portant rendement en Principal Tokens (PT) et Yield Tokens (YT). Si vous détenez du stETH générant 4% APY, Pendle vous permet de le diviser : PT représente le principal échangeable à maturité contre l'actif sous-jacent, tandis que YT représente tout le rendement jusqu'à maturité. Cette séparation permet de nouvelles stratégies - achetez PT pour des retours fixes garantis, ou achetez YT pour tirer parti de votre exposition au rendement.\n\nL'AMM de Pendle est spécifiquement conçu pour le trading de rendement, avec des mécaniques de décroissance temporelle qui garantissent que la liquidité reste efficace à l'approche de l'expiration. Le protocole a connu une croissance explosive grâce aux intégrations avec le restaking (points EigenLayer), les actifs à rendement réel et l'écosystème LST plus large. Avec plus de 5 milliards de dollars de TVL au pic, Pendle démontre que le rendement lui-même est une classe d'actifs négociables.",
+	"features": {
+		"1": {
+			"title": "Tokenisation de Rendement",
+			"description": "Divisez les actifs portant rendement en composants Principal (PT) et Yield (YT)"
+		},
+		"2": {
+			"title": "Rendement Fixe via PT",
+			"description": "Achetez PT avec une décote pour verrouiller des retours fixes garantis jusqu'à maturité"
+		},
+		"3": {
+			"title": "Spéculation sur Rendement via YT",
+			"description": "Tradez YT pour obtenir une exposition avec effet de levier au rendement et aux points sans le principal"
+		},
+		"4": {
+			"title": "AMM Optimisé Temporellement",
+			"description": "AMM personnalisé conçu pour le trading de rendement avec mécaniques de décroissance temporelle"
+		},
+		"5": {
+			"title": "Multiplicateur de Points",
+			"description": "Les détenteurs de YT reçoivent des points multipliés des protocoles sous-jacents (EigenLayer, etc.)"
+		},
+		"6": {
+			"title": "Déploiement Multi-Chaînes",
+			"description": "Disponible sur Ethereum, Arbitrum et autres réseaux avec divers actifs de rendement"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Verrouillez des Rendements Fixes",
+			"description": "Achetez PT pour sécuriser des retours garantis - éliminez la variabilité du rendement"
+		},
+		"2": {
+			"title": "Spéculez sur les Rendements",
+			"description": "Achetez YT si vous pensez que les rendements vont augmenter - ne perdez que le coût de YT si vous avez tort"
+		},
+		"3": {
+			"title": "Farming de Points",
+			"description": "Utilisez YT pour une exposition avec effet de levier aux points de protocoles comme EigenLayer"
+		},
+		"4": {
+			"title": "Arbitrage de Rendement",
+			"description": "Tradez quand les rendements implicites divergent des rendements réels entre marchés"
+		},
+		"5": {
+			"title": "Couverture de Portefeuille",
+			"description": "Couvrez l'exposition au rendement ou équilibrez les positions à taux fixe vs. variable"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Qu'est-ce que Pendle et comment fonctionne la tokenisation de rendement ?",
+			"answer": "Pendle divise les tokens portant rendement (comme stETH) en Principal Tokens (PT) et Yield Tokens (YT). PT vaut l'actif sous-jacent à maturité - achetez-le avec une décote pour verrouiller un rendement fixe. YT reçoit tout le rendement jusqu'à maturité - détenez-le pour capturer les rendements variables. Cette séparation permet de trader le rendement comme un actif séparé, permettant des taux fixes et la spéculation sur rendement."
+		},
+		"2": {
+			"question": "Quelle est la différence entre PT et YT ?",
+			"answer": "PT (Principal Token) représente l'actif sous-jacent à maturité. Achetez PT avec une décote (par ex., 0,95 ETH pour 1 PT-stETH) et échangez contre 1 ETH à expiration - la décote est votre rendement fixe. YT (Yield Token) reçoit tout le rendement jusqu'à maturité. Si stETH génère 5% et vous détenez 10 YT, vous gagnez le rendement sur 10 stETH. YT décroît à zéro à maturité."
+		},
+		"3": {
+			"question": "Comment gagner un rendement fixe avec Pendle ?",
+			"answer": "Achetez PT pour un actif portant rendement. Par exemple, si PT-stETH arrivant à échéance dans 6 mois se trade à 0,97 ETH, vous verrouillez approximativement 6% de rendement annualisé. À maturité, votre PT est échangeable contre le montant sous-jacent complet. Le rendement fixe égale la décote à laquelle vous achetez PT, convertie en APY."
+		},
+		"4": {
+			"question": "Comment fonctionne le multiplicateur de points de Pendle ?",
+			"answer": "Lorsque vous détenez YT, vous recevez tout le rendement ET les points de l'actif sous-jacent. Pour les actifs portant points comme eETH ou ezETH, détenir YT vous donne une exposition multipliée aux points. Si vous achetez 10 YT-eETH, vous gagnez des points comme si vous déteniez 10 eETH. Cela a rendu Pendle populaire pour farmer les points EigenLayer et de restaking."
+		},
+		"5": {
+			"question": "Que se passe-t-il à maturité ?",
+			"answer": "À maturité : PT devient échangeable 1:1 contre l'actif sous-jacent. YT devient sans valeur (il n'a pas de valeur principale). Avant maturité, vous pouvez trader les deux sur l'AMM de Pendle. Après maturité, PT peut être échangé à tout moment. Pendle lance régulièrement de nouveaux pools avec différentes maturités."
+		}
+	},
+	"cta": {
+		"ready": "Prêt à trader les rendements futurs ?",
+		"button": "Ouvrir Pendle",
+		"note": "Verrouillez des taux fixes ou spéculez sur les changements de rendement"
+	}
+}

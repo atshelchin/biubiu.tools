@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸",
+		"code": "es"
+	},
+	"seo": {
+		"title": "MakerDAO - Protocolo de Stablecoin Descentralizada | DAI",
+		"description": "Descubre MakerDAO, el protocolo detrás de DAI—la principal stablecoin descentralizada. Aprende cómo generar DAI, gestionar vaults y participar en la gobernanza.",
+		"keywords": "MakerDAO, DAI, stablecoin, DeFi, CDP, vault, MKR, descentralizado"
+	},
+	"overview": "MakerDAO es la organización autónoma descentralizada detrás de DAI, la stablecoin descentralizada más grande por circulación. Lanzado en diciembre de 2017 por Rune Christensen, Maker fue pionero en el concepto de stablecoins colateralizadas con cripto, permitiendo a los usuarios bloquear activos como ETH y generar DAI—una stablecoin vinculada al dólar—contra esa garantía.\n\nEl protocolo opera a través de \"Vaults\" (anteriormente CDPs—Posiciones de Deuda Colateralizada) donde los usuarios depositan garantías y acuñan DAI. Cada vault tiene una relación de liquidación; si el valor de la garantía cae por debajo de este umbral, la posición se liquida para proteger el sistema. DAI mantiene su vinculación mediante una combinación de sobrecolateralización, tarifas de estabilidad (interés sobre DAI prestado) y la Tasa de Ahorro DAI (DSR) que incentiva la tenencia de DAI.\n\nMakerDAO experimentó una transformación significativa a través de su plan \"Endgame\", evolucionando al Sky Protocol con DAI convirtiéndose en USDS y MKR en SKY. El protocolo ahora soporta activos del mundo real (RWA) como garantía y ha expandido su alcance mediante asociaciones con finanzas tradicionales. Con más de $5 mil millones en TVL, Maker sigue siendo infraestructura fundamental de DeFi.",
+	"features": {
+		"1": {
+			"title": "Stablecoin DAI",
+			"description": "Genera stablecoin descentralizada vinculada suavemente al USD respaldada por garantía cripto"
+		},
+		"2": {
+			"title": "Sistema Vault",
+			"description": "Bloquea garantía (ETH, WBTC, stablecoins) para acuñar DAI con reglas de liquidación transparentes"
+		},
+		"3": {
+			"title": "Tasa de Ahorro DAI (DSR)",
+			"description": "Gana rendimiento en DAI depositando en el contrato DSR—sin bloqueo, retiro instantáneo"
+		},
+		"4": {
+			"title": "Soporte Multi-Garantía",
+			"description": "Usa varios activos como garantía incluyendo ETH, WBTC, stETH y activos del mundo real"
+		},
+		"5": {
+			"title": "Gobernanza MKR",
+			"description": "Los poseedores del token MKR votan sobre parámetros de riesgo, tipos de garantía y actualizaciones del protocolo"
+		},
+		"6": {
+			"title": "Activos del Mundo Real",
+			"description": "Integración pionera de RWA con exposición a bonos del Tesoro de EE.UU. y asociaciones institucionales"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Generar Liquidez en Stablecoin",
+			"description": "Crea DAI desde tus tenencias cripto sin vender—accede a dólares mientras mantienes el potencial alcista"
+		},
+		"2": {
+			"title": "Ganar Rendimiento de Ahorro",
+			"description": "Deposita DAI en el DSR para ganar rendimiento competitivo en tus tenencias de stablecoin"
+		},
+		"3": {
+			"title": "Apalancar Posiciones Largas",
+			"description": "Genera DAI contra ETH, compra más ETH, repite—amplifica tu exposición a ETH"
+		},
+		"4": {
+			"title": "Moneda Base DeFi",
+			"description": "Usa DAI en todo DeFi—está integrado en protocolos de préstamos, DEXs y farms de rendimiento"
+		},
+		"5": {
+			"title": "Ahorros Descentralizados",
+			"description": "Mantén valor en una stablecoin resistente a la censura no controlada por ninguna empresa"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es MakerDAO y cómo funciona DAI?",
+			"answer": "MakerDAO es un protocolo descentralizado que emite DAI, una stablecoin vinculada a $1. Los usuarios depositan garantía cripto en Vaults y pueden pedir prestado DAI contra ella. El sistema mantiene la vinculación mediante sobrecolateralización (debes depositar más garantía que DAI prestado), liquidaciones cuando los valores de garantía caen, y ajustes de tasas de interés mediante tarifas de estabilidad y el DSR."
+		},
+		"2": {
+			"question": "¿Es seguro DAI? ¿Cuáles son los riesgos?",
+			"answer": "DAI es una de las stablecoins más probadas en batalla, operando desde 2017. Los riesgos incluyen vulnerabilidades de contratos inteligentes, liquidaciones masivas durante volatilidad extrema (como marzo 2020), fallas de oráculos y ataques de gobernanza. DAI también tiene exposición a stablecoins centralizadas como USDC en su garantía, reduciendo la descentralización pura."
+		},
+		"3": {
+			"question": "¿Qué es la Tasa de Ahorro DAI (DSR)?",
+			"answer": "El DSR es un rendimiento que ganas al depositar DAI en el contrato de ahorro de Maker. La tasa es establecida por la gobernanza de MKR y es financiada por las tarifas de estabilidad pagadas por los propietarios de vaults. No hay depósito mínimo, sin bloqueo, y puedes retirar en cualquier momento. Es esencialmente una tasa libre de riesgo dentro del ecosistema Maker."
+		},
+		"4": {
+			"question": "¿Qué sucede si mi vault es liquidado?",
+			"answer": "Si la relación de garantía de tu vault cae por debajo del umbral de liquidación, cualquiera puede activar la liquidación. Tu garantía se subasta para cubrir tu deuda DAI más una penalización de liquidación (típicamente 13%). Cualquier garantía restante te es devuelta. Monitorea la salud de tu vault y añade garantía o paga DAI cuando las relaciones se ajusten."
+		},
+		"5": {
+			"question": "¿Qué es el Maker Endgame y Sky Protocol?",
+			"answer": "Endgame es el plan a largo plazo de Maker para evolucionar hacia un protocolo más resiliente. Incluye el cambio de marca de DAI a USDS y MKR a SKY, creación de SubDAOs para diferentes funciones, expansión de exposición RWA, y potencialmente lanzar una blockchain dedicada. La transición es gradual, con ambos tokens antiguos y nuevos permaneciendo utilizables."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para generar stablecoins descentralizadas?",
+		"button": "Abrir MakerDAO",
+		"note": "El protocolo detrás de DAI—la stablecoin descentralizada líder de DeFi"
+	}
+}

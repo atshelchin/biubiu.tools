@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷",
+		"code": "pt"
+	},
+	"seo": {
+		"title": "Pendle - Protocolo de Tokenização de Rendimento | Negocie Rendimento Futuro",
+		"description": "Descubra o Pendle, o protocolo para negociar rendimento futuro. Aprenda a travar taxas fixas, especular sobre rendimentos e maximizar retornos DeFi através de tokens PT e YT.",
+		"keywords": "Pendle, tokenização de rendimento, PT, YT, rendimento fixo, DeFi, negociação de rendimento, taxas de juros"
+	},
+	"overview": "Pendle é um protocolo de tokenização de rendimento que permite aos usuários negociar rendimento futuro, travar taxas fixas ou especular sobre mudanças de rendimento. Lançado em 2021 e redesenhado no Pendle V2 (2023), tornou-se uma pedra angular dos mercados de rendimento DeFi, particularmente para tokens de staking líquido e ativos que geram pontos.\n\nA inovação central é separar ativos que geram rendimento em Tokens Principais (PT) e Tokens de Rendimento (YT). Se você possui stETH rendendo 4% APY, o Pendle permite dividí-lo: PT representa o principal resgatável no vencimento pelo ativo subjacente, enquanto YT representa todo o rendimento até o vencimento. Essa separação possibilita novas estratégias—compre PT para retornos fixos garantidos, ou compre YT para alavancar sua exposição ao rendimento.\n\nO AMM do Pendle é especificamente projetado para negociação de rendimento, com mecânicas de decaimento temporal que garantem que a liquidez permaneça eficiente à medida que o vencimento se aproxima. O protocolo viu crescimento explosivo através de integrações com restaking (pontos EigenLayer), ativos de rendimento real e o ecossistema LST mais amplo. Com mais de $5 bilhões em TVL no pico, o Pendle demonstra que o rendimento em si é uma classe de ativo negociável.",
+	"features": {
+		"1": {
+			"title": "Tokenização de Rendimento",
+			"description": "Divida ativos que geram rendimento em componentes Principal (PT) e Rendimento (YT)"
+		},
+		"2": {
+			"title": "Rendimento Fixo via PT",
+			"description": "Compre PT com desconto para travar retornos fixos garantidos até o vencimento"
+		},
+		"3": {
+			"title": "Especulação de Rendimento via YT",
+			"description": "Negocie YT para ganhar exposição alavancada a rendimento e pontos sem principal"
+		},
+		"4": {
+			"title": "AMM Otimizado por Tempo",
+			"description": "AMM customizado projetado para negociação de rendimento com mecânicas de decaimento temporal"
+		},
+		"5": {
+			"title": "Multiplicador de Pontos",
+			"description": "Detentores de YT recebem pontos multiplicados dos protocolos subjacentes (EigenLayer, etc.)"
+		},
+		"6": {
+			"title": "Implantação Multi-Chain",
+			"description": "Disponível no Ethereum, Arbitrum e outras redes com diversos ativos de rendimento"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Trave Rendimentos Fixos",
+			"description": "Compre PT para garantir retornos—elimine variabilidade de rendimento"
+		},
+		"2": {
+			"title": "Especule sobre Rendimentos",
+			"description": "Compre YT se você acha que os rendimentos aumentarão—perca apenas o custo do YT se errar"
+		},
+		"3": {
+			"title": "Farming de Pontos",
+			"description": "Use YT para exposição alavancada a pontos de protocolos como EigenLayer"
+		},
+		"4": {
+			"title": "Arbitragem de Rendimento",
+			"description": "Negocie quando rendimentos implícitos divergirem de rendimentos reais entre mercados"
+		},
+		"5": {
+			"title": "Hedge de Portfólio",
+			"description": "Faça hedge de exposição a rendimento ou balance posições de taxa fixa vs. variável"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "O que é Pendle e como funciona a tokenização de rendimento?",
+			"answer": "Pendle divide tokens que geram rendimento (como stETH) em Tokens Principais (PT) e Tokens de Rendimento (YT). PT vale o ativo subjacente no vencimento—compre com desconto para travar rendimento fixo. YT recebe todo o rendimento até o vencimento—mantenha para capturar rendimentos variáveis. Essa separação permite negociar rendimento como um ativo separado, possibilitando taxas fixas e especulação de rendimento."
+		},
+		"2": {
+			"question": "Qual é a diferença entre PT e YT?",
+			"answer": "PT (Token Principal) representa o ativo subjacente no vencimento. Compre PT com desconto (ex: 0,95 ETH por 1 PT-stETH) e resgate por 1 ETH no vencimento—o desconto é seu rendimento fixo. YT (Token de Rendimento) recebe todo o rendimento até o vencimento. Se stETH rende 5% e você possui 10 YT, você ganha o rendimento de 10 stETH. YT decai a zero no vencimento."
+		},
+		"3": {
+			"question": "Como ganho rendimento fixo com Pendle?",
+			"answer": "Compre PT para um ativo que gera rendimento. Por exemplo, se PT-stETH com vencimento em 6 meses é negociado a 0,97 ETH, você está travando aproximadamente 6% de rendimento anualizado. No vencimento, seu PT é resgatável pelo valor total subjacente. O rendimento fixo é igual ao desconto pelo qual você compra PT, convertido para APY."
+		},
+		"4": {
+			"question": "Como funciona o multiplicador de pontos do Pendle?",
+			"answer": "Quando você possui YT, recebe todo o rendimento E pontos do ativo subjacente. Para ativos que geram pontos como eETH ou ezETH, possuir YT lhe dá exposição multiplicada a pontos. Se você comprar 10 YT-eETH, ganha pontos como se possuísse 10 eETH. Isso tornou o Pendle popular para farming de pontos EigenLayer e restaking."
+		},
+		"5": {
+			"question": "O que acontece no vencimento?",
+			"answer": "No vencimento: PT torna-se resgatável 1:1 pelo ativo subjacente. YT torna-se sem valor (não tem valor principal). Antes do vencimento, você pode negociar ambos no AMM do Pendle. Após o vencimento, PT pode ser resgatado a qualquer momento. O Pendle lança regularmente novos pools com diferentes vencimentos."
+		}
+	},
+	"cta": {
+		"ready": "Pronto para negociar rendimentos futuros?",
+		"button": "Abrir Pendle",
+		"note": "Trave taxas fixas ou especule sobre mudanças de rendimento"
+	}
+}

@@ -1,21 +1,206 @@
 {
 	"category_seo": {
-		"title": "Comunidades Cripto - Fóruns, Discord e Redes Sociais | BiuBiu Tools",
-		"description": "Junte-se às melhores comunidades cripto, fóruns de discussão, servidores Discord e plataformas sociais para aprender, conectar e manter-se informado.",
-		"keywords": "comunidade cripto, discord cripto, fóruns blockchain, twitter cripto, comunidade web3",
+		"title": "Comunidades Cripto - Discord, Telegram e Fóruns | BiuBiu Tools",
+		"description": "Encontre e participe de comunidades cripto. Servidores Discord, grupos Telegram, fóruns e plataformas de comunidade para projetos Web3.",
+		"keywords": "comunidade cripto, discord cripto, telegram cripto, comunidade web3, fóruns blockchain",
 		"faqs": [
 			{
-				"question": "Onde encontro comunidades cripto?",
-				"answer": "As comunidades cripto prosperam no Discord (servidores específicos de projetos), Twitter Cripto (CT), Reddit (r/cryptocurrency, r/ethereum), Telegram, Farcaster e fóruns tradicionais como BitcoinTalk. Cada protocolo principal tem seus próprios canais de comunidade."
+				"question": "Onde as comunidades cripto se reúnem?",
+				"answer": "Discord é o hub para a maioria dos projetos. Telegram para atualizações rápidas e grupos de trading. Farcaster e Lens para social nativo Web3. Reddit para discussões mais amplas."
 			},
 			{
-				"question": "Como identifico comunidades genuínas vs scams?",
-				"answer": "As comunidades genuínas têm: desenvolvimento ativo, comunicação transparente da equipe, discussões técnicas, verificação oficial, sem promessas de retornos garantidos e canais moderados. Evite grupos que promovam esquemas pump, mensagens de DM agressivas ou garantias irrealistas."
+				"question": "Como encontro comunidades de qualidade?",
+				"answer": "Procure moderação ativa, discussões substantivas além do preço, presença de desenvolvedores e iniciativas impulsionadas pela comunidade. Evite grupos pump e comunidades focadas apenas em especulação de preço."
 			},
 			{
-				"question": "Vale a pena participar de comunidades cripto?",
-				"answer": "Sim, as comunidades fornecem conhecimentos iniciais sobre projetos, suporte de aprendizado, oportunidades de networking, elegibilidade para airdrops e melhor compreensão de tecnologia blockchain. O engajamento ativo frequentemente leva a melhores decisões de investimento."
+				"question": "Como evito golpes em comunidades?",
+				"answer": "Nunca confie em DMs oferecendo ajuda ou investimentos. Anúncios oficiais vêm por canais verificados. Não clique em links aleatórios. Admins nunca pedirão sua frase semente."
 			}
 		]
+	},
+	"tools": {
+		"discord_ethereum": {
+			"description": "Discord oficial da comunidade Ethereum para discussões de protocolo e desenvolvimento"
+		},
+		"discord_uniswap": {
+			"description": "Discord da comunidade Uniswap para governança DEX e discussões DeFi"
+		},
+		"discord_aave": {
+			"description": "Discord da comunidade Aave para protocolo de empréstimo e discussões de governança"
+		},
+		"discord_chainlink": {
+			"description": "Discord da comunidade Chainlink para infraestrutura de oráculos e suporte a desenvolvedores"
+		},
+		"discord_arbitrum": {
+			"description": "Discord da comunidade Arbitrum L2 para ecossistema e discussões de desenvolvimento"
+		},
+		"discord_optimism": {
+			"description": "Discord da comunidade Optimism para ecossistema Superchain e governança"
+		},
+		"discord_base": {
+			"description": "Discord da comunidade Base L2 da Coinbase para construção do ecossistema"
+		},
+		"discord_zksync": {
+			"description": "Discord da comunidade zkSync para desenvolvimento e ecossistema zk-rollup"
+		},
+		"discord_starknet": {
+			"description": "Discord da comunidade Starknet para desenvolvimento Cairo e escalonamento zk"
+		},
+		"discord_polygon": {
+			"description": "Discord da comunidade Polygon para escalonamento L2 e desenvolvimento zkEVM"
+		},
+		"discord_ethglobal": {
+			"description": "Discord ETHGlobal para participantes de hackathon e construtores Web3"
+		},
+		"discord_buildspace": {
+			"description": "Discord da comunidade Buildspace para aprender desenvolvimento Web3"
+		},
+		"discord_alchemy": {
+			"description": "Discord de desenvolvedores Alchemy para suporte API e infraestrutura Web3"
+		},
+		"discord_hardhat": {
+			"description": "Discord da comunidade Hardhat para desenvolvimento Solidity e ferramentas"
+		},
+		"discord_foundry": {
+			"description": "Discord da comunidade Foundry para suporte ao framework de testes Solidity"
+		},
+		"discord_openzeppelin": {
+			"description": "Discord OpenZeppelin para segurança e padrões de contratos inteligentes"
+		},
+		"discord_thegraph": {
+			"description": "Discord da comunidade The Graph para desenvolvimento de subgrafos e indexação"
+		},
+		"discord_scaffold_eth": {
+			"description": "Discord Scaffold-ETH para prototipagem rápida de dApps e BuidlGuidl"
+		},
+		"discord_immunefi": {
+			"description": "Discord Immunefi para caçadores de bugs e segurança Web3"
+		},
+		"discord_code4rena": {
+			"description": "Discord da comunidade Code4rena para auditorias de segurança competitivas"
+		},
+		"discord_sherlock": {
+			"description": "Discord da comunidade Sherlock para auditorias de segurança e cobertura"
+		},
+		"discord_secureum": {
+			"description": "Discord Secureum para educação e pesquisa em segurança de contratos inteligentes"
+		},
+		"discord_opensea": {
+			"description": "Discord da comunidade OpenSea para discussões do marketplace NFT"
+		},
+		"discord_blur": {
+			"description": "Discord da comunidade Blur para traders profissionais de NFT e marketplace"
+		},
+		"discord_artblocks": {
+			"description": "Discord Art Blocks para colecionadores e artistas de arte generativa"
+		},
+		"discord_foundation": {
+			"description": "Discord Foundation para criadores e colecionadores de arte digital"
+		},
+		"discord_nouns": {
+			"description": "Discord Nouns DAO para governança NFT CC0 e construção de comunidade"
+		},
+		"discord_punks": {
+			"description": "Discord da comunidade CryptoPunks para colecionadores OG de NFT"
+		},
+		"discord_bayc": {
+			"description": "Discord Bored Ape Yacht Club para holders BAYC e ecossistema Yuga"
+		},
+		"discord_azuki": {
+			"description": "Discord da comunidade Azuki para cultura NFT anime e comunidade"
+		},
+		"discord_pudgypenguins": {
+			"description": "Discord Pudgy Penguins para comunidade e iniciativas de IP"
+		},
+		"discord_axie": {
+			"description": "Discord da comunidade Axie Infinity para jogos play-to-earn"
+		},
+		"discord_illuvium": {
+			"description": "Discord da comunidade Illuvium para gaming Web3 AAA"
+		},
+		"discord_immutable": {
+			"description": "Discord Immutable para infraestrutura de gaming Web3 e zkEVM"
+		},
+		"discord_loot": {
+			"description": "Discord da comunidade Loot para primitivos de gaming CC0 e construtores"
+		},
+		"discord_treasure": {
+			"description": "Discord Treasure DAO para metaverso de gaming no Arbitrum"
+		},
+		"discord_ronin": {
+			"description": "Discord Ronin Network para ecossistema L2 focado em gaming"
+		},
+		"discord_bankless": {
+			"description": "Discord Bankless DAO para comunidade de mídia e educação cripto"
+		},
+		"discord_gitcoin": {
+			"description": "Discord da comunidade Gitcoin para financiamento de bens públicos e grants"
+		},
+		"discord_ens": {
+			"description": "Discord ENS DAO para governança do Ethereum Name Service"
+		},
+		"discord_farcaster": {
+			"description": "Discord da comunidade Farcaster para protocolo social descentralizado"
+		},
+		"discord_lens": {
+			"description": "Discord Lens Protocol para construtores do grafo social descentralizado"
+		},
+		"discord_friend_tech": {
+			"description": "Discord da comunidade friend.tech para SocialFi na Base"
+		},
+		"discord_rabbithole": {
+			"description": "Discord RabbitHole para missões learn-to-earn e educação"
+		},
+		"discord_galxe": {
+			"description": "Discord da comunidade Galxe para credenciais e campanhas Web3"
+		},
+		"discord_solana": {
+			"description": "Discord da comunidade Solana para ecossistema L1 de alto desempenho"
+		},
+		"discord_avalanche": {
+			"description": "Discord da comunidade Avalanche para subnets e desenvolvimento L1"
+		},
+		"discord_cosmos": {
+			"description": "Discord da comunidade Cosmos para ecossistema IBC e appchains"
+		},
+		"discord_sui": {
+			"description": "Discord da comunidade Sui para desenvolvimento em linguagem Move"
+		},
+		"discord_aptos": {
+			"description": "Discord da comunidade Aptos para ecossistema L1 baseado em Move"
+		},
+		"discord_near": {
+			"description": "Discord NEAR Protocol para desenvolvimento L1 fragmentado"
+		},
+		"discord_ton": {
+			"description": "Discord da comunidade TON para blockchain integrada ao Telegram"
+		},
+		"tg_cointelegraph": {
+			"description": "Canal Telegram Cointelegraph para notícias e atualizações cripto"
+		},
+		"tg_whale_alert": {
+			"description": "Telegram Whale Alert para rastreamento de grandes transações cripto"
+		},
+		"tg_lookonchain": {
+			"description": "Telegram Lookonchain para análise on-chain e observação de baleias"
+		},
+		"tg_ton_official": {
+			"description": "Telegram oficial da comunidade TON para atualizações do ecossistema"
+		},
+		"tg_solana_ann": {
+			"description": "Telegram oficial da Solana para anúncios e atualizações"
+		},
+		"tg_arbitrum_ann": {
+			"description": "Telegram oficial do Arbitrum para anúncios L2"
+		},
+		"tg_chaincatcher": {
+			"description": "Telegram ChainCatcher para notícias e pesquisa cripto em chinês"
+		},
+		"tg_techflow": {
+			"description": "Telegram TechFlow para notícias e análise Web3 em chinês"
+		},
+		"tg_crypto_brazil": {
+			"description": "Telegram Crypto Brasil para a comunidade cripto brasileira"
+		}
 	}
 }

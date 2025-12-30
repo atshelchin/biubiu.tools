@@ -2,7 +2,7 @@
 	"category_seo": {
 		"title": "暗号資産コミュニティ - Discord、Telegramとフォーラム | BiuBiu Tools",
 		"description": "暗号資産コミュニティを見つけて参加。Discordサーバー、Telegramグループ、フォーラム、Web3プロジェクトのコミュニティプラットフォーム。",
-		"keywords": "",
+		"keywords": "暗号コミュニティ, discord暗号, telegram暗号, web3コミュニティ, ブロックチェーンフォーラム",
 		"faqs": [
 			{
 				"question": "暗号資産コミュニティはどこに集まりますか？",
@@ -17,5 +17,190 @@
 				"answer": "ヘルプや投資を提供するDMを決して信用しないでください。公式発表は検証済みチャネルを通じて行われます。ランダムなリンクをクリックしないでください。管理者はシードフレーズを尋ねることはありません。"
 			}
 		]
+	},
+	"tools": {
+		"discord_ethereum": {
+			"description": "プロトコル議論と開発のためのイーサリアム公式コミュニティDiscord"
+		},
+		"discord_uniswap": {
+			"description": "DEXガバナンスとDeFi議論のためのUniswapコミュニティDiscord"
+		},
+		"discord_aave": {
+			"description": "レンディングプロトコルとガバナンス議論のためのAaveコミュニティDiscord"
+		},
+		"discord_chainlink": {
+			"description": "オラクルインフラと開発者サポートのためのChainlinkコミュニティDiscord"
+		},
+		"discord_arbitrum": {
+			"description": "エコシステムと開発議論のためのArbitrum L2コミュニティDiscord"
+		},
+		"discord_optimism": {
+			"description": "Superchainエコシステムとガバナンスのための OptimismコミュニティDiscord"
+		},
+		"discord_base": {
+			"description": "エコシステム構築のためのCoinbase Base L2コミュニティDiscord"
+		},
+		"discord_zksync": {
+			"description": "zk-rollup開発とエコシステムのためのzkSyncコミュニティDiscord"
+		},
+		"discord_starknet": {
+			"description": "Cairo開発とzkスケーリングのためのStarknetコミュニティDiscord"
+		},
+		"discord_polygon": {
+			"description": "L2スケーリングとzkEVM開発のためのPolygonコミュニティDiscord"
+		},
+		"discord_ethglobal": {
+			"description": "ハッカソン参加者とWeb3ビルダーのためのETHGlobal Discord"
+		},
+		"discord_buildspace": {
+			"description": "Web3開発学習のためのBuildspaceコミュニティDiscord"
+		},
+		"discord_alchemy": {
+			"description": "APIサポートとWeb3インフラのためのAlchemy開発者Discord"
+		},
+		"discord_hardhat": {
+			"description": "Solidity開発とツーリングのためのHardhatコミュニティDiscord"
+		},
+		"discord_foundry": {
+			"description": "SolidityテストフレームワークサポートのためのFoundryコミュニティDiscord"
+		},
+		"discord_openzeppelin": {
+			"description": "スマートコントラクトセキュリティと標準のためのOpenZeppelin Discord"
+		},
+		"discord_thegraph": {
+			"description": "サブグラフ開発とインデキシングのためのThe GraphコミュニティDiscord"
+		},
+		"discord_scaffold_eth": {
+			"description": "迅速なdAppプロトタイピングとBuidlGuidlのためのScaffold-ETH Discord"
+		},
+		"discord_immunefi": {
+			"description": "バグバウンティハンターとWeb3セキュリティのためのImmunefi Discord"
+		},
+		"discord_code4rena": {
+			"description": "競争的セキュリティ監査のためのCode4renaコミュニティDiscord"
+		},
+		"discord_sherlock": {
+			"description": "セキュリティ監査とカバレッジのためのSherlockコミュニティDiscord"
+		},
+		"discord_secureum": {
+			"description": "スマートコントラクトセキュリティ教育と研究のためのSecureum Discord"
+		},
+		"discord_opensea": {
+			"description": "NFTマーケットプレイス議論のためのOpenSeaコミュニティDiscord"
+		},
+		"discord_blur": {
+			"description": "プロNFTトレーダーとマーケットプレイスのためのBlurコミュニティDiscord"
+		},
+		"discord_artblocks": {
+			"description": "ジェネラティブアートコレクターとアーティストのためのArt Blocks Discord"
+		},
+		"discord_foundation": {
+			"description": "デジタルアートクリエイターとコレクターのためのFoundation Discord"
+		},
+		"discord_nouns": {
+			"description": "CC0 NFTガバナンスとコミュニティ構築のためのNouns DAO Discord"
+		},
+		"discord_punks": {
+			"description": "OG NFTコレクターのためのCryptoPunksコミュニティDiscord"
+		},
+		"discord_bayc": {
+			"description": "BAYCホルダーとYugaエコシステムのためのBored Ape Yacht Club Discord"
+		},
+		"discord_azuki": {
+			"description": "アニメNFT文化とコミュニティのためのAzukiコミュニティDiscord"
+		},
+		"discord_pudgypenguins": {
+			"description": "コミュニティとIPイニシアチブのためのPudgy Penguins Discord"
+		},
+		"discord_axie": {
+			"description": "Play-to-earnゲームのためのAxie InfinityコミュニティDiscord"
+		},
+		"discord_illuvium": {
+			"description": "AAA Web3ゲームのためのIlluviumコミュニティDiscord"
+		},
+		"discord_immutable": {
+			"description": "Web3ゲームインフラとzkEVMのためのImmutable Discord"
+		},
+		"discord_loot": {
+			"description": "CC0ゲームプリミティブとビルダーのためのLootコミュニティDiscord"
+		},
+		"discord_treasure": {
+			"description": "Arbitrum上のゲームメタバースのためのTreasure DAO Discord"
+		},
+		"discord_ronin": {
+			"description": "ゲーム特化L2エコシステムのためのRonin Network Discord"
+		},
+		"discord_bankless": {
+			"description": "暗号メディアと教育コミュニティのためのBankless DAO Discord"
+		},
+		"discord_gitcoin": {
+			"description": "公共財資金調達とグラントのためのGitcoinコミュニティDiscord"
+		},
+		"discord_ens": {
+			"description": "Ethereum Name ServiceガバナンスのためのENS DAO Discord"
+		},
+		"discord_farcaster": {
+			"description": "分散型ソーシャルプロトコルのためのFarcasterコミュニティDiscord"
+		},
+		"discord_lens": {
+			"description": "分散型ソーシャルグラフビルダーのためのLens Protocol Discord"
+		},
+		"discord_friend_tech": {
+			"description": "Base上のSocialFiのためのfriend.techコミュニティDiscord"
+		},
+		"discord_rabbithole": {
+			"description": "Learn-to-earnクエストと教育のためのRabbitHole Discord"
+		},
+		"discord_galxe": {
+			"description": "Web3クレデンシャルとキャンペーンのためのGalxeコミュニティDiscord"
+		},
+		"discord_solana": {
+			"description": "高性能L1エコシステムのためのSolanaコミュニティDiscord"
+		},
+		"discord_avalanche": {
+			"description": "サブネットとL1開発のためのAvalancheコミュニティDiscord"
+		},
+		"discord_cosmos": {
+			"description": "IBCとアップチェーンエコシステムのためのCosmosコミュニティDiscord"
+		},
+		"discord_sui": {
+			"description": "Move言語開発のためのSuiコミュニティDiscord"
+		},
+		"discord_aptos": {
+			"description": "MoveベースL1エコシステムのためのAptosコミュニティDiscord"
+		},
+		"discord_near": {
+			"description": "シャーディングL1開発のためのNEAR Protocol Discord"
+		},
+		"discord_ton": {
+			"description": "Telegram統合ブロックチェーンのためのTONコミュニティDiscord"
+		},
+		"tg_cointelegraph": {
+			"description": "暗号ニュースと更新のためのCointelegraph Telegramチャンネル"
+		},
+		"tg_whale_alert": {
+			"description": "大規模暗号取引追跡のためのWhale Alert Telegram"
+		},
+		"tg_lookonchain": {
+			"description": "オンチェーン分析とホエールウォッチングのためのLookonchain Telegram"
+		},
+		"tg_ton_official": {
+			"description": "エコシステム更新のための公式TONコミュニティTelegram"
+		},
+		"tg_solana_ann": {
+			"description": "アナウンスと更新のためのSolana公式Telegram"
+		},
+		"tg_arbitrum_ann": {
+			"description": "L2アナウンスのためのArbitrum公式Telegram"
+		},
+		"tg_chaincatcher": {
+			"description": "中国語暗号ニュースとリサーチのためのChainCatcher Telegram"
+		},
+		"tg_techflow": {
+			"description": "中国語Web3ニュースと分析のためのTechFlow Telegram"
+		},
+		"tg_crypto_brazil": {
+			"description": "ブラジル暗号コミュニティのためのCrypto Brasil Telegram"
+		}
 	}
 }

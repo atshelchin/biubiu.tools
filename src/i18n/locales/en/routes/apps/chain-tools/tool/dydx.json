@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "dYdX - Decentralized Perpetual Exchange | Crypto Derivatives Trading",
+		"description": "Discover dYdX, the leading decentralized perpetuals exchange. Trade with up to 20x leverage, no KYC, and benefit from deep liquidity on the dYdX Chain.",
+		"keywords": "dYdX, perpetual trading, decentralized exchange, crypto derivatives, leverage trading, DeFi"
+	},
+	"overview": "dYdX is a leading decentralized exchange for perpetual contracts, enabling traders to go long or short on crypto assets with leverage. Founded by Antonio Juliano in 2017 and originally built on Ethereum, dYdX has evolved into a standalone Layer 1 blockchain optimized for derivatives trading.\n\nThe platform pioneered decentralized perpetuals at scale, processing billions in daily volume during peak periods. Unlike AMM-based perp DEXs, dYdX uses an orderbook model matching the experience of centralized exchanges but with self-custody benefits. The dYdX Chain, built with Cosmos SDK and launched in 2023, provides sub-second block times and no gas fees for trading.\n\nKey differentiators include deep liquidity through market makers, up to 20x leverage on major pairs, and a sophisticated trading interface with advanced order types. The protocol is governed by DYDX token holders and distributes trading fee revenue to stakers. With its own chain, dYdX has achieved full decentralization with no central operators controlling the orderbook or matching engine.",
+	"features": {
+		"1": {
+			"title": "Perpetual Contracts",
+			"description": "Trade BTC, ETH, and 100+ assets with perpetual contracts and up to 20x leverage"
+		},
+		"2": {
+			"title": "Orderbook Trading",
+			"description": "Professional trading experience with limit orders, stop-losses, and deep liquidity"
+		},
+		"3": {
+			"title": "dYdX Chain",
+			"description": "Purpose-built L1 blockchain with sub-second finality and zero gas fees for trading"
+		},
+		"4": {
+			"title": "Self-Custody",
+			"description": "Trade without depositing to a centralized entity—funds remain in your control"
+		},
+		"5": {
+			"title": "No KYC Required",
+			"description": "Permissionless access to derivatives trading from any wallet"
+		},
+		"6": {
+			"title": "DYDX Staking",
+			"description": "Stake DYDX to secure the chain and earn a share of trading fees"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Leveraged Trading",
+			"description": "Amplify gains (and losses) on crypto price movements with leverage"
+		},
+		"2": {
+			"title": "Hedging Positions",
+			"description": "Short to protect spot holdings against price drops without selling"
+		},
+		"3": {
+			"title": "Market Making",
+			"description": "Provide liquidity on the orderbook and earn from bid-ask spreads"
+		},
+		"4": {
+			"title": "Arbitrage",
+			"description": "Trade price differences between dYdX and other venues"
+		},
+		"5": {
+			"title": "Staking Yield",
+			"description": "Stake DYDX to earn trading fee revenue distributed to stakers"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is dYdX and how does it work?",
+			"answer": "dYdX is a decentralized perpetual futures exchange running on its own blockchain (dYdX Chain). You deposit funds, trade perpetual contracts with leverage, and withdraw—all without KYC or a centralized intermediary. The orderbook and matching engine are fully on-chain, operated by decentralized validators."
+		},
+		"2": {
+			"question": "What is the difference between dYdX v3 and v4?",
+			"answer": "v3 ran on StarkEx (Ethereum L2) with a centralized orderbook operated by dYdX Trading Inc. v4 (dYdX Chain) is fully decentralized—a dedicated Cosmos blockchain where validators run the orderbook. v4 has more markets, no gas fees, and trading fees go to stakers. v3 is deprecated; all new trading is on v4."
+		},
+		"3": {
+			"question": "Is dYdX safe to use?",
+			"answer": "dYdX is one of the most established perp DEXs with billions in trading volume. Funds are secured by Cosmos validators with substantial stake. Risks include smart contract bugs, validator collusion (theoretical), and liquidation from leveraged trading. Always use proper risk management and never trade more than you can afford to lose."
+		},
+		"4": {
+			"question": "How do fees work on dYdX?",
+			"answer": "dYdX uses a maker-taker fee model. Makers (limit orders that add liquidity) typically pay 0.02% or less; takers (market orders) pay around 0.05%. High-volume traders get discounts. There are no gas fees for trading—you only pay network fees when depositing/withdrawing. Trading fees are distributed to DYDX stakers."
+		},
+		"5": {
+			"question": "How do I get funds onto dYdX Chain?",
+			"answer": "You can bridge USDC from various chains using the built-in bridge or third-party bridges like Squid. Deposit USDC, which serves as the collateral for all trades. Withdrawals work the same way—request withdrawal and bridge back to your preferred chain. The process typically takes minutes."
+		}
+	},
+	"cta": {
+		"ready": "Ready to trade perpetuals?",
+		"button": "Open dYdX",
+		"note": "Decentralized derivatives trading with up to 20x leverage"
+	}
+}

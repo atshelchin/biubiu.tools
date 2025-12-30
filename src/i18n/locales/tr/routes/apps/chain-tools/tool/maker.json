@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "MakerDAO - Merkezi Olmayan Stablecoin Protokolü | DAI",
+		"description": "Lider merkezi olmayan stablecoin DAI'nin arkasındaki protokol MakerDAO'yu keşfedin. DAI oluşturmayı, vault'ları yönetmeyi ve yönetişime katılmayı öğrenin.",
+		"keywords": "MakerDAO, DAI, stablecoin, DeFi, CDP, vault, MKR, merkezi olmayan"
+	},
+	"overview": "MakerDAO, dolaşımdaki en büyük merkezi olmayan stablecoin olan DAI'nin arkasındaki merkezi olmayan otonom organizasyondur. Aralık 2017'de Rune Christensen tarafından başlatılan Maker, kullanıcıların ETH gibi varlıkları kilitleyip bu teminat karşılığında dolara sabitlenmiş bir stablecoin olan DAI oluşturmasına olanak tanıyan kripto-teminatlı stablecoin'ler kavramına öncülük etti.\n\nProtokol, kullanıcıların teminat yatırdığı ve DAI oluşturduğu \"Vault'lar\" (eski adıyla CDP'ler—Teminatlı Borç Pozisyonları) aracılığıyla çalışır. Her vault'un bir tasfiye oranı vardır; teminat değeri bu eşiğin altına düşerse, sistemi korumak için pozisyon tasfiye edilir. DAI, aşırı teminatlandırma, stabilite ücretleri (ödünç alınan DAI üzerinden faiz) ve DAI tutmayı teşvik eden DAI Tasarruf Oranı (DSR) kombinasyonu ile sabit paritesini korur.\n\nMakerDAO, \"Endgame\" planı aracılığıyla önemli bir dönüşüm geçirerek DAI'nin USDS'ye ve MKR'nin SKY'a dönüştüğü Sky Protocol'e evrildi. Protokol artık teminat olarak gerçek dünya varlıklarını (RWA) destekliyor ve geleneksel finans ile ortaklıklar aracılığıyla erişimini genişletti. 5 milyar doların üzerinde TVL ile Maker, temel DeFi altyapısı olmaya devam ediyor.",
+	"features": {
+		"1": {
+			"title": "DAI Stablecoin",
+			"description": "Kripto teminatla desteklenen merkezi olmayan, yumuşak sabitlenmiş USD stablecoin oluşturun"
+		},
+		"2": {
+			"title": "Vault Sistemi",
+			"description": "Şeffaf tasfiye kuralları ile DAI oluşturmak için teminat kilitleyin (ETH, WBTC, stablecoin'ler)"
+		},
+		"3": {
+			"title": "DAI Tasarruf Oranı (DSR)",
+			"description": "DSR sözleşmesine DAI yatırarak getiri kazanın—kilitlenme yok, anında çekim"
+		},
+		"4": {
+			"title": "Çoklu Teminat Desteği",
+			"description": "ETH, WBTC, stETH ve gerçek dünya varlıkları dahil çeşitli varlıkları teminat olarak kullanın"
+		},
+		"5": {
+			"title": "MKR Yönetişimi",
+			"description": "MKR token sahipleri risk parametreleri, teminat türleri ve protokol yükseltmeleri hakkında oy kullanır"
+		},
+		"6": {
+			"title": "Gerçek Dünya Varlıkları",
+			"description": "ABD Hazine tahvili maruziyeti ve kurumsal ortaklıklarla RWA entegrasyonunda öncülük"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Stablecoin Likiditesi Oluşturma",
+			"description": "Satmadan kripto varlıklarınızdan DAI oluşturun—yükseliş potansiyelini korurken dolara erişin"
+		},
+		"2": {
+			"title": "Tasarruf Getirisi Kazanma",
+			"description": "Stablecoin varlıklarınız üzerinden rekabetçi getiri kazanmak için DAI'yi DSR'ye yatırın"
+		},
+		"3": {
+			"title": "Uzun Pozisyonları Kaldıraçlama",
+			"description": "ETH karşılığında DAI oluşturun, daha fazla ETH satın alın, tekrarlayın—ETH maruziyetinizi artırın"
+		},
+		"4": {
+			"title": "DeFi Temel Para Birimi",
+			"description": "DAI'yi DeFi genelinde kullanın—ödünç verme protokolleri, DEX'ler ve verim çiftliklerine entegre edilmiştir"
+		},
+		"5": {
+			"title": "Merkezi Olmayan Tasarruf",
+			"description": "Herhangi bir şirket tarafından kontrol edilmeyen sansüre dirençli bir stablecoin'de değer tutun"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "MakerDAO nedir ve DAI nasıl çalışır?",
+			"answer": "MakerDAO, 1$'a sabitlenmiş bir stablecoin olan DAI'yi çıkaran merkezi olmayan bir protokoldür. Kullanıcılar Vault'lara kripto teminat yatırır ve buna karşı DAI ödünç alabilir. Sistem, aşırı teminatlandırma (yatırılan teminat ödünç alınan DAI'den fazla olmalıdır), teminat değerleri düştüğünde tasfiyeler ve stabilite ücretleri ile DSR aracılığıyla faiz oranı ayarlamaları yoluyla paritesini korur."
+		},
+		"2": {
+			"question": "DAI güvenli mi? Riskler nelerdir?",
+			"answer": "DAI, 2017'den beri faaliyet gösteren en test edilmiş stablecoin'lerden biridir. Riskler arasında akıllı sözleşme güvenlik açıkları, aşırı oynaklık sırasında toplu tasfiyeler (Mart 2020 gibi), oracle arızaları ve yönetişim saldırıları bulunur. DAI'nin teminatında USDC gibi merkezi stablecoin'lere de maruziyeti vardır, bu da saf merkeziyetsizliği azaltır."
+		},
+		"3": {
+			"question": "DAI Tasarruf Oranı (DSR) nedir?",
+			"answer": "DSR, DAI'yi Maker'ın tasarruf sözleşmesine yatırarak kazandığınız bir getiridir. Oran MKR yönetişimi tarafından belirlenir ve vault sahipleri tarafından ödenen stabilite ücretleri ile finanse edilir. Minimum depozito yok, kilitlenme yok ve istediğiniz zaman çekebilirsiniz. Maker ekosisteminde esasen risksiz bir orandır."
+		},
+		"4": {
+			"question": "Vault'um tasfiye edilirse ne olur?",
+			"answer": "Vault'unuzun teminat oranı tasfiye eşiğinin altına düşerse, herkes tasfiye başlatabilir. Teminatınız, DAI borcunuzu artı bir tasfiye cezasını (tipik olarak %13) karşılamak için açık artırmaya çıkarılır. Kalan teminat size iade edilir. Vault'unuzun sağlığını izleyin ve oranlar daraldığında teminat ekleyin veya DAI ödeyin."
+		},
+		"5": {
+			"question": "Maker Endgame ve Sky Protocol nedir?",
+			"answer": "Endgame, Maker'ın daha dayanıklı bir protokole evrilme uzun vadeli planıdır. DAI'nin USDS'ye ve MKR'nin SKY'a yeniden markalanmasını, farklı işlevler için SubDAO'lar oluşturmayı, RWA maruziyetini genişletmeyi ve potansiyel olarak özel bir blockchain başlatmayı içerir. Geçiş kademeli olup hem eski hem de yeni token'lar kullanılabilir durumda kalacak."
+		}
+	},
+	"cta": {
+		"ready": "Merkezi olmayan stablecoin'ler oluşturmaya hazır mısınız?",
+		"button": "MakerDAO'yu Aç",
+		"note": "DeFi'nin lider merkezi olmayan stablecoin'i DAI'nin arkasındaki protokol"
+	}
+}

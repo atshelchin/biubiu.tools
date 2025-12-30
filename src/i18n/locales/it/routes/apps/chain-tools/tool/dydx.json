@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹",
+		"code": "it"
+	},
+	"seo": {
+		"title": "dYdX - Exchange Decentralizzato di Perpetual | Trading Derivati Crypto",
+		"description": "Scopri dYdX, l'exchange di perpetual decentralizzato leader. Scambia con leva fino a 20x, senza KYC e beneficia di liquidità profonda sulla dYdX Chain.",
+		"keywords": "dYdX, trading perpetual, exchange decentralizzato, derivati crypto, trading con leva, DeFi"
+	},
+	"overview": "dYdX è un exchange decentralizzato leader per contratti perpetui, che consente ai trader di andare long o short su asset crypto con leva. Fondato da Antonio Juliano nel 2017 e originariamente costruito su Ethereum, dYdX si è evoluto in una blockchain Layer 1 autonoma ottimizzata per il trading di derivati.\n\nLa piattaforma ha pionerato i perpetual decentralizzati su larga scala, processando miliardi in volume giornaliero durante i periodi di picco. A differenza dei DEX perpetual basati su AMM, dYdX usa un modello di orderbook che rispecchia l'esperienza degli exchange centralizzati ma con i benefici dell'auto-custodia. La dYdX Chain, costruita con Cosmos SDK e lanciata nel 2023, fornisce tempi di blocco sub-secondo e nessuna commissione gas per il trading.\n\nI differenziatori chiave includono liquidità profonda attraverso market maker, leva fino a 20x su coppie principali e un'interfaccia di trading sofisticata con tipi di ordine avanzati. Il protocollo è governato dai detentori del token DYDX e distribuisce i ricavi delle commissioni di trading agli staker. Con la sua propria chain, dYdX ha raggiunto la piena decentralizzazione senza operatori centrali che controllano l'orderbook o il motore di matching.",
+	"features": {
+		"1": {
+			"title": "Contratti Perpetui",
+			"description": "Scambia BTC, ETH e oltre 100 asset con contratti perpetui e leva fino a 20x"
+		},
+		"2": {
+			"title": "Trading con Orderbook",
+			"description": "Esperienza di trading professionale con ordini limite, stop-loss e liquidità profonda"
+		},
+		"3": {
+			"title": "dYdX Chain",
+			"description": "Blockchain L1 dedicata con finalità sub-secondo e zero commissioni gas per il trading"
+		},
+		"4": {
+			"title": "Auto-Custodia",
+			"description": "Scambia senza depositare a un'entità centralizzata—i fondi rimangono sotto il tuo controllo"
+		},
+		"5": {
+			"title": "Nessun KYC Richiesto",
+			"description": "Accesso senza permessi al trading di derivati da qualsiasi wallet"
+		},
+		"6": {
+			"title": "Staking DYDX",
+			"description": "Metti in staking DYDX per proteggere la chain e guadagna una quota delle commissioni di trading"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Trading con Leva",
+			"description": "Amplifica i guadagni (e le perdite) sui movimenti di prezzo crypto con leva"
+		},
+		"2": {
+			"title": "Hedging delle Posizioni",
+			"description": "Vai short per proteggere le partecipazioni spot contro cali di prezzo senza vendere"
+		},
+		"3": {
+			"title": "Market Making",
+			"description": "Fornisci liquidità sull'orderbook e guadagna dagli spread bid-ask"
+		},
+		"4": {
+			"title": "Arbitraggio",
+			"description": "Scambia differenze di prezzo tra dYdX e altre piattaforme"
+		},
+		"5": {
+			"title": "Rendimento da Staking",
+			"description": "Metti in staking DYDX per guadagnare ricavi dalle commissioni di trading distribuiti agli staker"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Cos'è dYdX e come funziona?",
+			"answer": "dYdX è un exchange di futures perpetui decentralizzato che opera sulla propria blockchain (dYdX Chain). Depositi fondi, scambi contratti perpetui con leva e prelevi—tutto senza KYC o un intermediario centralizzato. L'orderbook e il motore di matching sono completamente on-chain, operati da validatori decentralizzati."
+		},
+		"2": {
+			"question": "Qual è la differenza tra dYdX v3 e v4?",
+			"answer": "v3 operava su StarkEx (Ethereum L2) con un orderbook centralizzato operato da dYdX Trading Inc. v4 (dYdX Chain) è completamente decentralizzata—una blockchain Cosmos dedicata dove i validatori gestiscono l'orderbook. v4 ha più mercati, nessuna commissione gas e le commissioni di trading vanno agli staker. v3 è deprecato; tutto il nuovo trading è su v4."
+		},
+		"3": {
+			"question": "È sicuro usare dYdX?",
+			"answer": "dYdX è uno dei DEX perpetual più affermati con miliardi in volume di trading. I fondi sono protetti dai validatori Cosmos con stake sostanziale. I rischi includono bug degli smart contract, collusione dei validatori (teorica) e liquidazione dal trading con leva. Usa sempre una gestione del rischio appropriata e non scambiare mai più di quanto puoi permetterti di perdere."
+		},
+		"4": {
+			"question": "Come funzionano le commissioni su dYdX?",
+			"answer": "dYdX usa un modello di commissioni maker-taker. I maker (ordini limite che aggiungono liquidità) pagano tipicamente 0,02% o meno; i taker (ordini di mercato) pagano circa 0,05%. I trader ad alto volume ottengono sconti. Non ci sono commissioni gas per il trading—paghi solo commissioni di rete quando depositi/prelevi. Le commissioni di trading sono distribuite agli staker DYDX."
+		},
+		"5": {
+			"question": "Come ottengo fondi sulla dYdX Chain?",
+			"answer": "Puoi trasferire USDC da varie chain usando il bridge integrato o bridge di terze parti come Squid. Deposita USDC, che serve come collaterale per tutti gli scambi. I prelievi funzionano allo stesso modo—richiedi il prelievo e trasferisci di nuovo alla tua chain preferita. Il processo richiede tipicamente minuti."
+		}
+	},
+	"cta": {
+		"ready": "Pronto a scambiare perpetual?",
+		"button": "Apri dYdX",
+		"note": "Trading di derivati decentralizzato con leva fino a 20x"
+	}
+}

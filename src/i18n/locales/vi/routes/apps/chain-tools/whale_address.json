@@ -18,152 +18,152 @@
 		]
 	},
 	"tools": {
-		"bubblemaps": {
-			"description": "Phân tích phân phối người nắm giữ token và cung trực quan"
+		"ethereum_foundation": {
+			"description": "Ví kho bạc Ethereum Foundation tài trợ phát triển và nghiên cứu hệ sinh thái"
+		},
+		"aave_treasury": {
+			"description": "Kho bạc giao thức Aave quản lý quỹ DAO cho phát triển giao thức cho vay"
+		},
+		"compound_treasury": {
+			"description": "Kho bạc giao thức Compound giữ quỹ cho quản trị cho vay DeFi"
+		},
+		"lido_treasury": {
+			"description": "Kho bạc Lido DAO quản lý quỹ giao thức staking lỏng"
+		},
+		"arbitrum_treasury": {
+			"description": "Kho bạc Arbitrum DAO tài trợ grants và phát triển hệ sinh thái L2"
+		},
+		"optimism_treasury": {
+			"description": "Kho bạc Optimism Collective cho tài trợ hệ sinh thái Superchain"
+		},
+		"gnosis_treasury": {
+			"description": "Kho bạc Gnosis DAO quản lý hệ sinh thái Safe và quỹ GNO"
+		},
+		"ens_treasury": {
+			"description": "Kho bạc ENS DAO cho quản trị và grants Ethereum Name Service"
+		},
+		"curve_multisig": {
+			"description": "Multisig DAO khẩn cấp Curve Finance cho các hành động bảo mật giao thức"
+		},
+		"yearn_multisig": {
+			"description": "Ví multisig Yearn Finance quản lý hoạt động giao thức yield"
+		},
+		"vitalik_wallet": {
+			"description": "Ví công khai của Vitalik Buterin - Đồng sáng lập Ethereum và nhân vật có ảnh hưởng"
+		},
+		"justin_sun_wallet": {
+			"description": "Ví Justin Sun - Nhà sáng lập TRON nổi tiếng với vị thế DeFi lớn"
+		},
+		"tetranode_wallet": {
+			"description": "Ví Tetranode - Cá voi DeFi có ảnh hưởng và nhà đầu tư giao thức sớm"
+		},
+		"hsaka_wallet": {
+			"description": "Ví Hsaka Trades - Trader perpetual nổi bật trên GMX và dYdX"
+		},
+		"binance_hot_wallet": {
+			"description": "Hot wallet sàn Binance cho hoạt động BNB Chain"
+		},
+		"pancakeswap_treasury": {
+			"description": "Kho bạc PancakeSwap quản lý token CAKE và quỹ giao thức DEX"
+		},
+		"venus_treasury": {
+			"description": "Kho bạc giao thức Venus cho quản trị nền tảng cho vay BNB Chain"
+		},
+		"base_bridge": {
+			"description": "Hợp đồng bridge Base L2 giữ tài sản được bridge từ Ethereum"
+		},
+		"aerodrome_treasury": {
+			"description": "Kho bạc Aerodrome Finance cho DEX hàng đầu Base chain"
+		},
+		"polygon_ecosystem_fund": {
+			"description": "Quỹ hệ sinh thái Polygon hỗ trợ grants và phát triển hệ sinh thái"
+		},
+		"quickswap_treasury": {
+			"description": "Kho bạc QuickSwap cho giao thức DEX gốc Polygon"
+		},
+		"avalanche_foundation": {
+			"description": "Ví Avalanche Foundation tài trợ tăng trưởng hệ sinh thái AVAX"
+		},
+		"traderjoe_treasury": {
+			"description": "Kho bạc Trader Joe cho DEX hàng đầu và trung tâm DeFi của Avalanche"
+		},
+		"solana_foundation": {
+			"description": "Ví Solana Foundation hỗ trợ phát triển hệ sinh thái và grants"
+		},
+		"jupiter_treasury": {
+			"description": "Kho bạc aggregator Jupiter cho nền tảng swap hàng đầu của Solana"
+		},
+		"raydium_treasury": {
+			"description": "Kho bạc Raydium cho AMM và giao thức thanh khoản của Solana"
+		},
+		"ton_foundation": {
+			"description": "Ví TON Foundation hỗ trợ hệ sinh thái blockchain Telegram"
+		},
+		"sui_foundation": {
+			"description": "Kho bạc Sui Foundation tài trợ phát triển L1 dựa trên Move"
+		},
+		"aptos_foundation": {
+			"description": "Ví Aptos Foundation cho hệ sinh thái blockchain chạy bằng Move"
+		},
+		"cosmos_hub_pool": {
+			"description": "Community pool Cosmos Hub cho tài trợ quản trị hệ sinh thái ATOM"
+		},
+		"cz_wallet": {
+			"description": "Ví CZ (Changpeng Zhao) - Nhà sáng lập Binance và lãnh đạo ngành crypto"
+		},
+		"grayscale_wallet": {
+			"description": "Ví tổ chức Grayscale quản lý nắm giữ ETF Bitcoin và Ethereum"
+		},
+		"blackrock_wallet": {
+			"description": "Ví BlackRock iShares cho lưu ký ETF crypto tổ chức"
+		},
+		"fidelity_wallet": {
+			"description": "Ví tổ chức Fidelity cho quản lý tài sản crypto"
+		},
+		"a16z_wallet": {
+			"description": "Ví quỹ crypto Andreessen Horowitz - VC Web3 hàng đầu"
+		},
+		"paradigm_wallet": {
+			"description": "Ví VC Paradigm - Quỹ đầu tư crypto-native hàng đầu"
+		},
+		"jump_trading_wallet": {
+			"description": "Ví Jump Trading - Market maker tổ chức và công ty giao dịch"
+		},
+		"wintermute_wallet": {
+			"description": "Ví Wintermute - Market maker crypto hàng đầu và nhà cung cấp thanh khoản"
+		},
+		"galaxy_digital_wallet": {
+			"description": "Ví Galaxy Digital - Đầu tư và giao dịch crypto tổ chức"
 		},
 		"lookonchain": {
 			"description": "Nền tảng phân tích on-chain theo dõi chuyển động cá voi và smart money"
 		},
-		"ethereum-foundation": {
-			"description": "Ethereum Foundation - Tool"
+		"whale_alert": {
+			"description": "Cảnh báo thời gian thực cho giao dịch lớn trong các crypto chính"
 		},
-		"aave-treasury": {
-			"description": "Aave Treasury - Tool"
+		"nansen_smart_money": {
+			"description": "Theo dõi Smart Money của Nansen cho phân tích ví được gắn nhãn"
 		},
-		"compound-treasury": {
-			"description": "Compound Treasury - Tool"
+		"arkham_intelligence": {
+			"description": "Nền tảng tình báo blockchain cho de-ẩn danh và theo dõi ví"
 		},
-		"lido-treasury": {
-			"description": "Lido DAO Treasury - Tool"
+		"debank_whales": {
+			"description": "Xếp hạng cá voi DeBank hiển thị người nắm giữ portfolio đa chuỗi lớn nhất"
 		},
-		"arbitrum-treasury": {
-			"description": "Arbitrum DAO Treasury - Tool"
+		"spot_on_chain": {
+			"description": "Phân tích on-chain chạy bằng AI cho theo dõi cá voi và thông tin thị trường"
 		},
-		"optimism-treasury": {
-			"description": "Optimism Treasury - Tool"
+		"bubblemaps": {
+			"description": "Phân tích phân phối người nắm giữ token và cung trực quan"
 		},
-		"gnosis-treasury": {
-			"description": "Gnosis Treasury - Tool"
+		"etherscan_label": {
+			"description": "Cơ sở dữ liệu địa chỉ được gắn nhãn của Etherscan cho nhận dạng ví đã biết"
 		},
-		"ens-treasury": {
-			"description": "ENS DAO Treasury - Tool"
+		"zerion_whales": {
+			"description": "Tính năng khám phá Zerion cho khám phá và theo dõi portfolio cá voi"
 		},
-		"curve-multisig": {
-			"description": "Curve Emergency DAO - Tool"
-		},
-		"yearn-multisig": {
-			"description": "Yearn Multisig - Tool"
-		},
-		"vitalik-wallet": {
-			"description": "vitalik.eth - Tool"
-		},
-		"justin-sun-wallet": {
-			"description": "Justin Sun Wallet - Tool"
-		},
-		"tetranode-wallet": {
-			"description": "Tetranode - Tool"
-		},
-		"hsaka-wallet": {
-			"description": "Hsaka Trades - Tool"
-		},
-		"binance-hot-wallet": {
-			"description": "Binance Hot Wallet - Tool"
-		},
-		"pancakeswap-treasury": {
-			"description": "PancakeSwap Treasury - Tool"
-		},
-		"venus-treasury": {
-			"description": "Venus Treasury - Tool"
-		},
-		"base-bridge": {
-			"description": "Base Bridge - Tool"
-		},
-		"aerodrome-treasury": {
-			"description": "Aerodrome Treasury - Tool"
-		},
-		"polygon-ecosystem-fund": {
-			"description": "Polygon Ecosystem Fund - Tool"
-		},
-		"quickswap-treasury": {
-			"description": "QuickSwap Treasury - Tool"
-		},
-		"avalanche-foundation": {
-			"description": "Avalanche Foundation - Tool"
-		},
-		"traderjoe-treasury": {
-			"description": "Trader Joe Treasury - Tool"
-		},
-		"solana-foundation": {
-			"description": "Solana Foundation - Tool"
-		},
-		"jupiter-treasury": {
-			"description": "Jupiter Treasury - Tool"
-		},
-		"raydium-treasury": {
-			"description": "Raydium Treasury - Tool"
-		},
-		"ton-foundation": {
-			"description": "TON Foundation - Tool"
-		},
-		"sui-foundation": {
-			"description": "Sui Foundation - Tool"
-		},
-		"aptos-foundation": {
-			"description": "Aptos Foundation - Tool"
-		},
-		"cosmos-hub-pool": {
-			"description": "Cosmos Hub Community Pool - Tool"
-		},
-		"cz-wallet": {
-			"description": "CZ (Changpeng Zhao) - Tool"
-		},
-		"grayscale-wallet": {
-			"description": "Grayscale - Tool"
-		},
-		"blackrock-wallet": {
-			"description": "BlackRock iShares - Tool"
-		},
-		"fidelity-wallet": {
-			"description": "Fidelity - Tool"
-		},
-		"a16z-wallet": {
-			"description": "a16z Crypto - Tool"
-		},
-		"paradigm-wallet": {
-			"description": "Paradigm - Tool"
-		},
-		"jump-trading-wallet": {
-			"description": "Jump Trading - Tool"
-		},
-		"wintermute-wallet": {
-			"description": "Wintermute - Tool"
-		},
-		"galaxy-digital-wallet": {
-			"description": "Galaxy Digital - Tool"
-		},
-		"whale-alert": {
-			"description": "Whale Alert - Tool"
-		},
-		"nansen-smart-money": {
-			"description": "Nansen Smart Money - Tool"
-		},
-		"arkham-intelligence": {
-			"description": "Arkham Intelligence - Tool"
-		},
-		"debank-whales": {
-			"description": "DeBank Whales - Tool"
-		},
-		"spot-on-chain": {
-			"description": "Spot On Chain - Tool"
-		},
-		"etherscan-label": {
-			"description": "Etherscan Label Cloud - Tool"
-		},
-		"zerion-whales": {
-			"description": "Zerion Whale Tracker - Tool"
-		},
-		"watchers-pro": {
-			"description": "Watchers Pro - Tool"
+		"watchers_pro": {
+			"description": "Nền tảng theo dõi smart money với cảnh báo hoạt động ví cá voi"
 		}
 	}
 }

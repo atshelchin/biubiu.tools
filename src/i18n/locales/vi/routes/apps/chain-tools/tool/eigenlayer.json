@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "EigenLayer - Giao thức Restaking Ethereum | Bảo Mật Chia Sẻ",
+		"description": "Khám phá EigenLayer, giao thức cho phép restaking ETH để bảo mật nhiều dịch vụ. Tìm hiểu về AVS, phần thưởng restaking và mở rộng bảo mật Ethereum.",
+		"keywords": "EigenLayer, restaking, AVS, Ethereum security, staking, crypto yield, shared security"
+	},
+	"overview": "EigenLayer là giao thức restaking cho phép người stake Ethereum tham gia bảo mật các dịch vụ bổ sung ngoài đồng thuận Ethereum, kiếm thêm phần thưởng trong khi mở rộng mô hình bảo mật của mạng. Được thành lập bởi Sreeram Kannan vào năm 2021 và ra mắt vào năm 2023, EigenLayer đã trở thành một trong những đổi mới quan trọng nhất trong kiến trúc bảo mật của Ethereum.\n\nThông tin cốt lõi là ETH đã stake của Ethereum (trị giá hàng chục tỷ đô la) cung cấp bảo mật kinh tế mật mã có thể được mở rộng cho các giao thức khác. Thay vì mỗi dịch vụ mới khởi động bộ validator riêng, họ có thể tận dụng bảo mật hiện có của Ethereum thông qua \"Actively Validated Services\" (AVS). Người stake restake với EigenLayer có thể xác thực các AVS này và kiếm thêm phần thưởng, nhưng cũng phải đối mặt với slashing nếu hành vi xấu.\n\nEigenLayer hỗ trợ cả restaking gốc (validator trỏ thông tin rút về EigenLayer) và restaking thanh khoản thông qua LST như stETH. Giao thức đã thu hút hơn 15 tỷ đô la tiền gửi và cho phép hệ sinh thái AVS mới bao gồm oracle, bridge, sequencer và lớp khả dụng dữ liệu. Token EIGEN thêm cơ chế slashing bổ sung cho lỗi chủ quan.",
+	"features": {
+		"1": {
+			"title": "ETH Restaking",
+			"description": "Restake ETH hoặc LST của bạn để kiếm lợi nhuận bổ sung trong khi bảo mật dịch vụ mới"
+		},
+		"2": {
+			"title": "Actively Validated Services (AVS)",
+			"description": "Các giao thức mới có thể khởi động bảo mật bằng cách tận dụng ETH đã stake của Ethereum"
+		},
+		"3": {
+			"title": "Restaking Gốc & Thanh Khoản",
+			"description": "Restake trực tiếp như validator hoặc thông qua token staking thanh khoản như stETH"
+		},
+		"4": {
+			"title": "Ủy Quyền Operator",
+			"description": "Ủy quyền tài sản restake của bạn cho các operator chuyên nghiệp chạy cơ sở hạ tầng AVS"
+		},
+		"5": {
+			"title": "Token EIGEN",
+			"description": "Token quản trị có thể được stake và slashing cho lỗi chủ quan"
+		},
+		"6": {
+			"title": "Mô Hình Bảo Mật Chia Sẻ",
+			"description": "Nhiều dịch vụ chia sẻ bảo mật của Ethereum, giảm phân mảnh và chi phí"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Lợi Nhuận Staking Nâng Cao",
+			"description": "Kiếm thêm phần thưởng trên staking ETH bằng cách bảo mật AVS"
+		},
+		"2": {
+			"title": "Ra Mắt Dịch Vụ An Toàn",
+			"description": "Các giao thức mới có thể truy cập bảo mật cấp Ethereum mà không cần xây dựng bộ validator"
+		},
+		"3": {
+			"title": "Token Restaking Thanh Khoản",
+			"description": "Giữ LRT (eETH, ezETH, rsETH) đại diện cho vị thế restake với lợi nhuận kép"
+		},
+		"4": {
+			"title": "Kinh Doanh Operator",
+			"description": "Chạy cơ sở hạ tầng cho AVS và kiếm phí từ người ủy quyền"
+		},
+		"5": {
+			"title": "Gộp Bảo Mật",
+			"description": "Các dự án có thể chia sẻ chi phí bảo mật thay vì mỗi dự án xây dựng cơ sở hạ tầng độc lập"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "EigenLayer là gì và restaking hoạt động như thế nào?",
+			"answer": "EigenLayer cho phép người stake ETH 'restake' tài sản của họ để bảo mật các dịch vụ bổ sung gọi là AVS (Actively Validated Services). Bạn stake ETH với validator Ethereum như bình thường, nhưng cũng cam kết xác thực các giao thức khác. Đổi lại, bạn kiếm thêm phần thưởng. Tuy nhiên, nếu bạn có hành vi xấu, bạn có thể bị slashing bởi cả Ethereum và AVS bạn đang bảo mật."
+		},
+		"2": {
+			"question": "Rủi ro của restaking là gì?",
+			"answer": "Restaking thêm rủi ro slashing bổ sung—nếu AVS bạn đã tham gia phát hiện hành vi xấu, ETH đã stake của bạn có thể bị slashing. Ngoài ra còn có rủi ro hợp đồng thông minh trong chính EigenLayer và sự phức tạp trong việc hiểu tất cả các dịch vụ bạn đang bảo mật. Bắt đầu với các operator và AVS có uy tín, và không restake nhiều hơn số tiền bạn sẵn sàng mất."
+		},
+		"3": {
+			"question": "Token Restaking Thanh Khoản (LRT) là gì?",
+			"answer": "LRT (như eETH từ ether.fi, ezETH từ Renzo, rsETH từ Kelp) đại diện cho vị thế restake ở dạng thanh khoản. Thay vì restake trực tiếp, bạn gửi ETH với giao thức LRT restake thay mặt bạn. Bạn nhận một token thanh khoản có thể sử dụng trong DeFi trong khi kiếm phần thưởng restaking. LRT đơn giản hóa trải nghiệm restaking."
+		},
+		"4": {
+			"question": "AVS là gì và những AVS nào đang hoạt động?",
+			"answer": "AVS (Actively Validated Services) là các giao thức được bảo mật bởi người restake EigenLayer. AVS đang hoạt động bao gồm EigenDA (khả dụng dữ liệu), Brevis (zkCoprocessor), Lagrange và những dịch vụ khác. Ngày càng có nhiều AVS được ra mắt thường xuyên. Mỗi AVS có cấu trúc phần thưởng và hồ sơ rủi ro riêng. Là người restake, bạn có thể chọn AVS nào để bảo mật thông qua operator của mình."
+		},
+		"5": {
+			"question": "Token EIGEN được sử dụng để làm gì?",
+			"answer": "EIGEN là token quản trị của EigenLayer cũng có thể được stake. Tính năng độc đáo của nó là 'staking chủ quan'—nó có thể bị slashing cho các lỗi đòi hỏi đồng thuận xã hội để phát hiện (không giống như slashing khách quan trên chuỗi). Người stake EIGEN về cơ bản hỗ trợ hệ thống chống lại các cuộc tấn công không thể được chứng minh bằng thuật toán."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng kiếm thêm lợi nhuận thông qua restaking?",
+		"button": "Mở EigenLayer",
+		"note": "Mở rộng bảo mật Ethereum và kiếm thêm phần thưởng"
+	}
+}

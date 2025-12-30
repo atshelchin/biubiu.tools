@@ -17,5 +17,190 @@
 				"answer": "Никогда не доверяйте личным сообщениям с предложениями помощи или инвестиций. Официальные объявления приходят через проверенные каналы. Не кликайте на случайные ссылки. Администраторы никогда не попросят вашу seed-фразу."
 			}
 		]
+	},
+	"tools": {
+		"discord_ethereum": {
+			"description": "Официальный Discord сообщества Ethereum для обсуждения протокола и разработки"
+		},
+		"discord_uniswap": {
+			"description": "Discord сообщества Uniswap для управления DEX и обсуждений DeFi"
+		},
+		"discord_aave": {
+			"description": "Discord сообщества Aave для протокола кредитования и обсуждений управления"
+		},
+		"discord_chainlink": {
+			"description": "Discord сообщества Chainlink для инфраструктуры оракулов и поддержки разработчиков"
+		},
+		"discord_arbitrum": {
+			"description": "Discord сообщества Arbitrum L2 для экосистемы и обсуждений разработки"
+		},
+		"discord_optimism": {
+			"description": "Discord сообщества Optimism для экосистемы Superchain и управления"
+		},
+		"discord_base": {
+			"description": "Discord сообщества Coinbase Base L2 для построения экосистемы"
+		},
+		"discord_zksync": {
+			"description": "Discord сообщества zkSync для разработки и экосистемы zk-rollup"
+		},
+		"discord_starknet": {
+			"description": "Discord сообщества Starknet для разработки на Cairo и zk-масштабирования"
+		},
+		"discord_polygon": {
+			"description": "Discord сообщества Polygon для масштабирования L2 и разработки zkEVM"
+		},
+		"discord_ethglobal": {
+			"description": "Discord ETHGlobal для участников хакатонов и Web3-разработчиков"
+		},
+		"discord_buildspace": {
+			"description": "Discord сообщества Buildspace для изучения Web3-разработки"
+		},
+		"discord_alchemy": {
+			"description": "Discord разработчиков Alchemy для поддержки API и Web3-инфраструктуры"
+		},
+		"discord_hardhat": {
+			"description": "Discord сообщества Hardhat для разработки на Solidity и инструментов"
+		},
+		"discord_foundry": {
+			"description": "Discord сообщества Foundry для поддержки фреймворка тестирования Solidity"
+		},
+		"discord_openzeppelin": {
+			"description": "Discord OpenZeppelin для безопасности и стандартов смарт-контрактов"
+		},
+		"discord_thegraph": {
+			"description": "Discord сообщества The Graph для разработки субграфов и индексирования"
+		},
+		"discord_scaffold_eth": {
+			"description": "Discord Scaffold-ETH для быстрого прототипирования dApp и BuidlGuidl"
+		},
+		"discord_immunefi": {
+			"description": "Discord Immunefi для охотников за багами и Web3-безопасности"
+		},
+		"discord_code4rena": {
+			"description": "Discord сообщества Code4rena для соревновательных аудитов безопасности"
+		},
+		"discord_sherlock": {
+			"description": "Discord сообщества Sherlock для аудитов безопасности и покрытия"
+		},
+		"discord_secureum": {
+			"description": "Discord Secureum для образования и исследований безопасности смарт-контрактов"
+		},
+		"discord_opensea": {
+			"description": "Discord сообщества OpenSea для обсуждений NFT-маркетплейса"
+		},
+		"discord_blur": {
+			"description": "Discord сообщества Blur для профессиональных NFT-трейдеров и маркетплейса"
+		},
+		"discord_artblocks": {
+			"description": "Discord Art Blocks для коллекционеров и художников генеративного искусства"
+		},
+		"discord_foundation": {
+			"description": "Discord Foundation для создателей и коллекционеров цифрового искусства"
+		},
+		"discord_nouns": {
+			"description": "Discord Nouns DAO для управления CC0 NFT и построения сообщества"
+		},
+		"discord_punks": {
+			"description": "Discord сообщества CryptoPunks для OG-коллекционеров NFT"
+		},
+		"discord_bayc": {
+			"description": "Discord Bored Ape Yacht Club для держателей BAYC и экосистемы Yuga"
+		},
+		"discord_azuki": {
+			"description": "Discord сообщества Azuki для аниме NFT-культуры и сообщества"
+		},
+		"discord_pudgypenguins": {
+			"description": "Discord Pudgy Penguins для сообщества и IP-инициатив"
+		},
+		"discord_axie": {
+			"description": "Discord сообщества Axie Infinity для play-to-earn игр"
+		},
+		"discord_illuvium": {
+			"description": "Discord сообщества Illuvium для AAA Web3-игр"
+		},
+		"discord_immutable": {
+			"description": "Discord Immutable для игровой Web3-инфраструктуры и zkEVM"
+		},
+		"discord_loot": {
+			"description": "Discord сообщества Loot для CC0 игровых примитивов и разработчиков"
+		},
+		"discord_treasure": {
+			"description": "Discord Treasure DAO для игровой метавселенной на Arbitrum"
+		},
+		"discord_ronin": {
+			"description": "Discord Ronin Network для игровой L2-экосистемы"
+		},
+		"discord_bankless": {
+			"description": "Discord Bankless DAO для крипто-медиа и образовательного сообщества"
+		},
+		"discord_gitcoin": {
+			"description": "Discord сообщества Gitcoin для финансирования общественных благ и грантов"
+		},
+		"discord_ens": {
+			"description": "Discord ENS DAO для управления Ethereum Name Service"
+		},
+		"discord_farcaster": {
+			"description": "Discord сообщества Farcaster для децентрализованного социального протокола"
+		},
+		"discord_lens": {
+			"description": "Discord Lens Protocol для разработчиков децентрализованного социального графа"
+		},
+		"discord_friend_tech": {
+			"description": "Discord сообщества friend.tech для SocialFi на Base"
+		},
+		"discord_rabbithole": {
+			"description": "Discord RabbitHole для learn-to-earn квестов и образования"
+		},
+		"discord_galxe": {
+			"description": "Discord сообщества Galxe для Web3-учетных данных и кампаний"
+		},
+		"discord_solana": {
+			"description": "Discord сообщества Solana для высокопроизводительной L1-экосистемы"
+		},
+		"discord_avalanche": {
+			"description": "Discord сообщества Avalanche для подсетей и L1-разработки"
+		},
+		"discord_cosmos": {
+			"description": "Discord сообщества Cosmos для IBC и экосистемы аппчейнов"
+		},
+		"discord_sui": {
+			"description": "Discord сообщества Sui для разработки на языке Move"
+		},
+		"discord_aptos": {
+			"description": "Discord сообщества Aptos для L1-экосистемы на базе Move"
+		},
+		"discord_near": {
+			"description": "Discord NEAR Protocol для разработки шардированного L1"
+		},
+		"discord_ton": {
+			"description": "Discord сообщества TON для блокчейна с интеграцией Telegram"
+		},
+		"tg_cointelegraph": {
+			"description": "Telegram-канал Cointelegraph для крипто-новостей и обновлений"
+		},
+		"tg_whale_alert": {
+			"description": "Telegram Whale Alert для отслеживания крупных крипто-транзакций"
+		},
+		"tg_lookonchain": {
+			"description": "Telegram Lookonchain для ончейн-анализа и наблюдения за китами"
+		},
+		"tg_ton_official": {
+			"description": "Официальный Telegram сообщества TON для обновлений экосистемы"
+		},
+		"tg_solana_ann": {
+			"description": "Официальный Telegram Solana для объявлений и обновлений"
+		},
+		"tg_arbitrum_ann": {
+			"description": "Официальный Telegram Arbitrum для L2-объявлений"
+		},
+		"tg_chaincatcher": {
+			"description": "Telegram ChainCatcher для крипто-новостей и исследований на китайском"
+		},
+		"tg_techflow": {
+			"description": "Telegram TechFlow для Web3-новостей и аналитики на китайском"
+		},
+		"tg_crypto_brazil": {
+			"description": "Telegram Crypto Brasil для бразильского крипто-сообщества"
+		}
 	}
 }

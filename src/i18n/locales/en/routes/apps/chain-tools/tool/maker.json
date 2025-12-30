@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "MakerDAO - Decentralized Stablecoin Protocol | DAI",
+		"description": "Discover MakerDAO, the protocol behind DAI—the leading decentralized stablecoin. Learn how to generate DAI, manage vaults, and participate in governance.",
+		"keywords": "MakerDAO, DAI, stablecoin, DeFi, CDP, vault, MKR, decentralized"
+	},
+	"overview": "MakerDAO is the decentralized autonomous organization behind DAI, the largest decentralized stablecoin by circulation. Launched in December 2017 by Rune Christensen, Maker pioneered the concept of crypto-collateralized stablecoins, allowing users to lock up assets like ETH and generate DAI—a dollar-pegged stablecoin—against that collateral.\n\nThe protocol operates through \"Vaults\" (formerly CDPs—Collateralized Debt Positions) where users deposit collateral and mint DAI. Each vault has a liquidation ratio; if the collateral value drops below this threshold, the position is liquidated to protect the system. DAI maintains its peg through a combination of over-collateralization, stability fees (interest on borrowed DAI), and the DAI Savings Rate (DSR) which incentivizes DAI holding.\n\nMakerDAO underwent significant transformation through its \"Endgame\" plan, evolving into Sky Protocol with DAI becoming USDS and MKR becoming SKY. The protocol now supports real-world assets (RWA) as collateral and has expanded its reach through partnerships with traditional finance. With over $5 billion in TVL, Maker remains foundational DeFi infrastructure.",
+	"features": {
+		"1": {
+			"title": "DAI Stablecoin",
+			"description": "Generate decentralized, soft-pegged USD stablecoin backed by crypto collateral"
+		},
+		"2": {
+			"title": "Vault System",
+			"description": "Lock collateral (ETH, WBTC, stablecoins) to mint DAI with transparent liquidation rules"
+		},
+		"3": {
+			"title": "DAI Savings Rate (DSR)",
+			"description": "Earn yield on DAI by depositing into the DSR contract—no lockup, instant withdrawal"
+		},
+		"4": {
+			"title": "Multi-Collateral Support",
+			"description": "Use various assets as collateral including ETH, WBTC, stETH, and real-world assets"
+		},
+		"5": {
+			"title": "MKR Governance",
+			"description": "MKR token holders vote on risk parameters, collateral types, and protocol upgrades"
+		},
+		"6": {
+			"title": "Real-World Assets",
+			"description": "Pioneering RWA integration with US Treasury exposure and institutional partnerships"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Generate Stablecoin Liquidity",
+			"description": "Create DAI from your crypto holdings without selling—access dollars while keeping upside"
+		},
+		"2": {
+			"title": "Earn Savings Yield",
+			"description": "Deposit DAI into the DSR to earn competitive yield on your stablecoin holdings"
+		},
+		"3": {
+			"title": "Leverage Long Positions",
+			"description": "Generate DAI against ETH, buy more ETH, repeat—amplify your ETH exposure"
+		},
+		"4": {
+			"title": "DeFi Base Currency",
+			"description": "Use DAI across DeFi—it's integrated in lending protocols, DEXs, and yield farms"
+		},
+		"5": {
+			"title": "Decentralized Savings",
+			"description": "Hold value in a censorship-resistant stablecoin not controlled by any company"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is MakerDAO and how does DAI work?",
+			"answer": "MakerDAO is a decentralized protocol that issues DAI, a stablecoin pegged to $1. Users deposit crypto collateral into Vaults and can borrow DAI against it. The system maintains the peg through over-collateralization (you must deposit more collateral than DAI borrowed), liquidations when collateral values drop, and interest rate adjustments via stability fees and the DSR."
+		},
+		"2": {
+			"question": "Is DAI safe? What are the risks?",
+			"answer": "DAI is one of the most battle-tested stablecoins, operating since 2017. Risks include smart contract vulnerabilities, mass liquidations during extreme volatility (like March 2020), oracle failures, and governance attacks. DAI also has exposure to centralized stablecoins like USDC in its collateral, reducing pure decentralization."
+		},
+		"3": {
+			"question": "What is the DAI Savings Rate (DSR)?",
+			"answer": "The DSR is a yield you earn by depositing DAI into Maker's savings contract. The rate is set by MKR governance and is funded by stability fees paid by vault owners. There's no minimum deposit, no lockup, and you can withdraw anytime. It's essentially a risk-free rate within the Maker ecosystem."
+		},
+		"4": {
+			"question": "What happens if my vault gets liquidated?",
+			"answer": "If your vault's collateral ratio falls below the liquidation threshold, anyone can trigger liquidation. Your collateral is auctioned to cover your DAI debt plus a liquidation penalty (typically 13%). Any remaining collateral is returned to you. Monitor your vault's health and add collateral or repay DAI when ratios get tight."
+		},
+		"5": {
+			"question": "What is the Maker Endgame and Sky Protocol?",
+			"answer": "Endgame is Maker's long-term plan to evolve into a more resilient protocol. It includes rebranding DAI to USDS and MKR to SKY, creating SubDAOs for different functions, expanding RWA exposure, and potentially launching a dedicated blockchain. The transition is gradual, with both old and new tokens remaining usable."
+		}
+	},
+	"cta": {
+		"ready": "Ready to generate decentralized stablecoins?",
+		"button": "Open MakerDAO",
+		"note": "The protocol behind DAI—DeFi's leading decentralized stablecoin"
+	}
+}

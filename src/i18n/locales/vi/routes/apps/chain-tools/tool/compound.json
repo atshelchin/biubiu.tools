@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "Compound - Giao thức Thị trường Tiền tệ Thuật toán | Kiếm Lãi từ Crypto",
+		"description": "Khám phá Compound, giao thức cho vay DeFi tiên phong. Tìm hiểu cách cung cấp tài sản để kiếm lãi, vay với tài sản thế chấp và tham gia quản trị.",
+		"keywords": "Compound, DeFi lending, money market, COMP, crypto interest, borrowing, collateral"
+	},
+	"overview": "Compound là giao thức thị trường tiền tệ phi tập trung tiên phong cho phép người dùng cung cấp tài sản crypto để kiếm lãi hoặc vay dựa trên tài sản thế chấp. Ra mắt vào tháng 9/2018 bởi Compound Labs của Robert Leshner, nó trở thành một trong những giao thức đầu tiên chứng minh rằng lãi suất thuật toán có thể kết hợp hiệu quả nguồn cung và cầu cho vay mà không cần trung gian.\n\nGiao thức hoạt động thông qua các thị trường cho vay độc lập, nơi người cung cấp gửi tài sản vào các pool thanh khoản và nhận cToken đại diện cho vị thế của họ. Các cToken này liên tục tích lũy lãi, với lãi suất được xác định bằng thuật toán dựa trên tỷ lệ sử dụng—tỷ lệ giữa tài sản được vay và tài sản được cung cấp. Khi tỷ lệ sử dụng cao, lãi suất tăng để khuyến khích nhiều nguồn cung hơn; khi thấp, lãi suất giảm để khuyến khích vay.\n\nViệc Compound giới thiệu token quản trị COMP vào năm 2020 đã thúc đẩy hiện tượng \"DeFi Summer\", phổ biến liquidity mining và chứng minh cách các token incentive có thể thúc đẩy việc áp dụng giao thức. Ngày nay, Compound V3 (Comet) đại diện cho thiết kế đơn giản hóa, hiệu quả hơn với quản lý rủi ro được cải thiện và triển khai đa chuỗi trên Ethereum, Polygon, Arbitrum và Base.",
+	"features": {
+		"1": {
+			"title": "Lãi Suất Thuật Toán",
+			"description": "Lãi suất tự động điều chỉnh dựa trên cung và cầu thông qua đường cong tỷ lệ sử dụng"
+		},
+		"2": {
+			"title": "Hệ Thống cToken",
+			"description": "Nhận cToken khi cung cấp tài sản—chúng tích lũy lãi và có thể sử dụng trong DeFi"
+		},
+		"3": {
+			"title": "Vay Với Thế Chấp Dư Thừa",
+			"description": "Vay tài sản dựa trên tài sản thế chấp với ngưỡng thanh lý minh bạch"
+		},
+		"4": {
+			"title": "Quản Trị COMP",
+			"description": "Người nắm giữ token COMP quản trị các tham số giao thức, danh sách tài sản và nâng cấp"
+		},
+		"5": {
+			"title": "Compound V3 (Comet)",
+			"description": "Vay tài sản đơn giản hóa với hiệu quả vốn được cải thiện và phân tách rủi ro"
+		},
+		"6": {
+			"title": "Triển Khai Đa Chuỗi",
+			"description": "Có sẵn trên Ethereum, Polygon, Arbitrum và Base với hỗ trợ đa chuỗi tự nhiên"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Kiếm Thu Nhập Thụ Động",
+			"description": "Cung cấp stablecoin hoặc tài sản crypto để kiếm lãi biến đổi không cần khóa"
+		},
+		"2": {
+			"title": "Tiếp Cận Thanh Khoản",
+			"description": "Vay dựa trên crypto mà không cần bán—hữu ích cho chi phí hoặc cơ hội"
+		},
+		"3": {
+			"title": "Vị Thế Đòn Bẩy",
+			"description": "Cung cấp tài sản thế chấp, vay và lặp lại để tăng cường tiếp xúc với tài sản bạn lạc quan"
+		},
+		"4": {
+			"title": "Quản Lý Ngân Khố",
+			"description": "DAO và các giao thức sử dụng Compound để kiếm lợi nhuận từ tài sản ngân khố nhàn rỗi"
+		},
+		"5": {
+			"title": "Khả Năng Kết Hợp DeFi",
+			"description": "Sử dụng cToken trong các giao thức khác—chúng mang lại lợi nhuận và được tích hợp rộng rãi"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Compound là gì và nó hoạt động như thế nào?",
+			"answer": "Compound là giao thức cho vay phi tập trung nơi bạn có thể cung cấp tài sản crypto để kiếm lãi hoặc vay dựa trên tài sản thế chấp. Khi bạn cung cấp tài sản, bạn nhận được cToken đại diện cho khoản tiền gửi cộng với lãi tích lũy. Lãi suất được xác định bằng thuật toán—khi nhu cầu vay cao so với nguồn cung, lãi suất tăng, và ngược lại."
+		},
+		"2": {
+			"question": "Compound có an toàn để sử dụng không?",
+			"answer": "Compound là một trong những giao thức DeFi lâu đời nhất và được thử nghiệm kỹ lưỡng nhất, bảo mật hàng tỷ đô la tài sản từ năm 2018. Nó đã trải qua nhiều cuộc kiểm toán bảo mật và hoạt động minh bạch trên chuỗi. Tuy nhiên, rủi ro bao gồm lỗ hổng hợp đồng thông minh, thanh lý trong biến động thị trường và thao túng oracle. Không bao giờ gửi nhiều hơn số tiền bạn có thể mất."
+		},
+		"3": {
+			"question": "cToken là gì và chúng hoạt động như thế nào?",
+			"answer": "cToken (như cUSDC, cETH) là các token sinh lãi bạn nhận được khi cung cấp cho Compound. Chúng đại diện cho quyền yêu cầu của bạn đối với tài sản cơ bản cộng với lãi tích lũy. Tỷ giá hối đoái giữa cToken và tài sản cơ bản liên tục tăng khi lãi tích lũy. Bạn có thể chuyển, giao dịch hoặc sử dụng cToken trong các giao thức DeFi khác."
+		},
+		"4": {
+			"question": "Điều gì xảy ra nếu tôi bị thanh lý?",
+			"answer": "Nếu số tiền bạn vay vượt quá giá trị tài sản thế chấp (tính đến các yếu tố thế chấp), người thanh lý có thể trả một phần nợ của bạn và yêu cầu tài sản thế chấp với giảm giá. Compound V3 đã cải thiện điều này với cơ chế thanh lý dần dần hơn. Theo dõi hệ số sức khỏe của bạn và duy trì đủ tài sản thế chấp để tránh thanh lý."
+		},
+		"5": {
+			"question": "Sự khác biệt giữa Compound V2 và V3 là gì?",
+			"answer": "Compound V3 (Comet) là phiên bản được thiết kế lại tập trung vào một tài sản có thể vay duy nhất cho mỗi thị trường (ví dụ: USDC), làm cho nó đơn giản hơn và hiệu quả vốn hơn. Nó có tính năng phân tách rủi ro tốt hơn, không có cToken cho người vay và cơ chế thanh lý được cải thiện. V2 vẫn hoạt động nhưng V3 được khuyến nghị cho người dùng mới."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng kiếm lãi từ crypto của bạn?",
+		"button": "Mở Compound",
+		"note": "Bắt đầu kiếm tiền với lãi suất thuật toán"
+	}
+}

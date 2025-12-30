@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "Pendle - Protokol Tokenisasi Yield | Trading Yield Masa Depan",
+		"description": "Temukan Pendle, protokol untuk trading yield masa depan. Pelajari cara mengunci suku bunga tetap, spekulasi yield, dan memaksimalkan return DeFi melalui token PT dan YT.",
+		"keywords": "Pendle, tokenisasi yield, PT, YT, fixed yield, DeFi, yield trading, suku bunga"
+	},
+	"overview": "Pendle adalah protokol tokenisasi yield yang memungkinkan pengguna untuk trading yield masa depan, mengunci suku bunga tetap, atau spekulasi perubahan yield. Diluncurkan pada tahun 2021 dan didesain ulang dalam Pendle V2 (2023), ini telah menjadi landasan pasar yield DeFi, khususnya untuk liquid staking token dan aset yang menghasilkan points.\n\nInovasi inti adalah memisahkan aset yang menghasilkan yield menjadi Principal Token (PT) dan Yield Token (YT). Jika Anda memegang stETH yang menghasilkan 4% APY, Pendle memungkinkan Anda memisahkannya: PT mewakili principal yang dapat ditebus pada saat jatuh tempo untuk aset dasar, sementara YT mewakili semua yield hingga jatuh tempo. Pemisahan ini memungkinkan strategi baru—beli PT untuk return tetap yang terjamin, atau beli YT untuk leverage eksposur yield Anda.\n\nAMM Pendle dirancang khusus untuk trading yield, dengan mekanik time-decay yang memastikan likuiditas tetap efisien saat mendekati expiry. Protokol ini telah mengalami pertumbuhan eksplosif melalui integrasi dengan restaking (points EigenLayer), aset yield riil, dan ekosistem LST yang lebih luas. Dengan lebih dari $5 miliar dalam TVL pada puncaknya, Pendle mendemonstrasikan bahwa yield itu sendiri adalah kelas aset yang dapat diperdagangkan.",
+	"features": {
+		"1": {
+			"title": "Tokenisasi Yield",
+			"description": "Pisahkan aset yang menghasilkan yield menjadi komponen Principal (PT) dan Yield (YT)"
+		},
+		"2": {
+			"title": "Fixed Yield via PT",
+			"description": "Beli PT dengan diskon untuk mengunci return tetap yang terjamin hingga jatuh tempo"
+		},
+		"3": {
+			"title": "Spekulasi Yield via YT",
+			"description": "Trading YT untuk mendapatkan eksposur leverage ke yield dan points tanpa principal"
+		},
+		"4": {
+			"title": "AMM yang Dioptimalkan Waktu",
+			"description": "AMM khusus yang dirancang untuk trading yield dengan mekanik time-decay"
+		},
+		"5": {
+			"title": "Multiplier Points",
+			"description": "Pemegang YT menerima points yang dikalikan dari protokol dasar (EigenLayer, dll.)"
+		},
+		"6": {
+			"title": "Deployment Multi-Chain",
+			"description": "Tersedia di Ethereum, Arbitrum, dan jaringan lain dengan aset yield yang beragam"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Kunci Fixed Yield",
+			"description": "Beli PT untuk mengamankan return yang terjamin—hilangkan variabilitas yield"
+		},
+		"2": {
+			"title": "Spekulasi Yield",
+			"description": "Beli YT jika Anda pikir yield akan meningkat—hanya kehilangan biaya YT jika salah"
+		},
+		"3": {
+			"title": "Farming Points",
+			"description": "Gunakan YT untuk eksposur leverage ke points dari protokol seperti EigenLayer"
+		},
+		"4": {
+			"title": "Arbitrase Yield",
+			"description": "Trading ketika implied yield berbeda dari yield aktual di berbagai pasar"
+		},
+		"5": {
+			"title": "Hedging Portfolio",
+			"description": "Hedge eksposur yield atau seimbangkan posisi suku bunga tetap vs. variabel"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu Pendle dan bagaimana cara kerja tokenisasi yield?",
+			"answer": "Pendle memisahkan token yang menghasilkan yield (seperti stETH) menjadi Principal Token (PT) dan Yield Token (YT). PT bernilai aset dasar pada saat jatuh tempo—beli dengan diskon untuk mengunci fixed yield. YT menerima semua yield hingga jatuh tempo—tahan untuk menangkap yield variabel. Pemisahan ini memungkinkan trading yield sebagai aset terpisah, memungkinkan suku bunga tetap dan spekulasi yield."
+		},
+		"2": {
+			"question": "Apa perbedaan antara PT dan YT?",
+			"answer": "PT (Principal Token) mewakili aset dasar pada saat jatuh tempo. Beli PT dengan diskon (misalnya, 0,95 ETH untuk 1 PT-stETH) dan tebus untuk 1 ETH pada expiry—diskon adalah fixed yield Anda. YT (Yield Token) menerima semua yield hingga jatuh tempo. Jika stETH menghasilkan 5% dan Anda memegang 10 YT, Anda mendapatkan yield dari 10 stETH. YT meluruh menjadi nol pada saat jatuh tempo."
+		},
+		"3": {
+			"question": "Bagaimana cara mendapatkan fixed yield dengan Pendle?",
+			"answer": "Beli PT untuk aset yang menghasilkan yield. Misalnya, jika PT-stETH yang jatuh tempo dalam 6 bulan diperdagangkan pada 0,97 ETH, Anda mengunci yield tahunan sekitar 6%. Pada saat jatuh tempo, PT Anda dapat ditebus untuk jumlah dasar penuh. Fixed yield sama dengan diskon yang Anda beli PT, dikonversi ke APY."
+		},
+		"4": {
+			"question": "Bagaimana cara kerja multiplier points Pendle?",
+			"answer": "Ketika Anda memegang YT, Anda menerima semua yield DAN points dari aset dasar. Untuk aset yang menghasilkan points seperti eETH atau ezETH, memegang YT memberi Anda eksposur points yang dikalikan. Jika Anda membeli 10 YT-eETH, Anda mendapatkan points seolah-olah memegang 10 eETH. Ini telah membuat Pendle populer untuk farming points EigenLayer dan restaking."
+		},
+		"5": {
+			"question": "Apa yang terjadi pada saat jatuh tempo?",
+			"answer": "Pada saat jatuh tempo: PT menjadi dapat ditebus 1:1 untuk aset dasar. YT menjadi tidak berharga (tidak memiliki nilai principal). Sebelum jatuh tempo, Anda dapat trading keduanya di AMM Pendle. Setelah jatuh tempo, PT dapat ditebus kapan saja. Pendle secara teratur meluncurkan pool baru dengan jatuh tempo yang berbeda."
+		}
+	},
+	"cta": {
+		"ready": "Siap trading yield masa depan?",
+		"button": "Buka Pendle",
+		"note": "Kunci suku bunga tetap atau spekulasi perubahan yield"
+	}
+}

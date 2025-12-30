@@ -2,7 +2,7 @@
 	"category_seo": {
 		"title": "クジラウォレットと資金庫追跡 - スマートマネーインサイト | BiuBiu Tools",
 		"description": "クジラウォレットとプロトコル資金庫を追跡。暗号資産におけるスマートマネーの動きと機関保有を監視。",
-		"keywords": "",
+		"keywords": "クジラウォレット, 暗号資産クジラ, 資金庫追跡, スマートマネー, 機関暗号資産",
 		"faqs": [
 			{
 				"question": "暗号資産クジラとは何ですか？",
@@ -19,152 +19,152 @@
 		]
 	},
 	"tools": {
-		"bubblemaps": {
-			"description": "ビジュアルトークンホルダーと供給配分分析"
+		"ethereum_foundation": {
+			"description": "エコシステム開発と研究に資金を提供するイーサリアム財団資金庫ウォレット"
+		},
+		"aave_treasury": {
+			"description": "レンディングプロトコル開発のためのDAO資金を管理するAaveプロトコル資金庫"
+		},
+		"compound_treasury": {
+			"description": "DeFiレンディングガバナンスのための資金を保有するCompoundプロトコル資金庫"
+		},
+		"lido_treasury": {
+			"description": "リキッドステーキングプロトコル資金を管理するLido DAO資金庫"
+		},
+		"arbitrum_treasury": {
+			"description": "L2エコシステムグラントと開発に資金を提供するArbitrum DAO資金庫"
+		},
+		"optimism_treasury": {
+			"description": "Superchainエコシステム資金提供のためのOptimism Collective資金庫"
+		},
+		"gnosis_treasury": {
+			"description": "Safeエコシステムと GNO資金を管理するGnosis DAO資金庫"
+		},
+		"ens_treasury": {
+			"description": "Ethereum Name Serviceガバナンスとグラントのための ENS DAO資金庫"
+		},
+		"curve_multisig": {
+			"description": "プロトコルセキュリティアクションのためのCurve Finance緊急DAOマルチシグ"
+		},
+		"yearn_multisig": {
+			"description": "イールドプロトコル運営を管理するYearn Financeマルチシグウォレット"
+		},
+		"vitalik_wallet": {
+			"description": "Vitalik Buterinの公開ウォレット - イーサリアム共同創設者と影響力のある人物"
+		},
+		"justin_sun_wallet": {
+			"description": "Justin Sunのウォレット - 大規模DeFiポジションで知られるTRON創設者"
+		},
+		"tetranode_wallet": {
+			"description": "Tetranodeのウォレット - 影響力のあるDeFiクジラと初期プロトコル投資家"
+		},
+		"hsaka_wallet": {
+			"description": "Hsaka Tradesウォレット - GMXとdYdXの著名な無期限先物トレーダー"
+		},
+		"binance_hot_wallet": {
+			"description": "BNB Chain運営のためのBinance取引所ホットウォレット"
+		},
+		"pancakeswap_treasury": {
+			"description": "CAKEトークンとDEXプロトコル資金を管理するPancakeSwap資金庫"
+		},
+		"venus_treasury": {
+			"description": "BNB Chainレンディングプラットフォームガバナンスのための Venusプロトコル資金庫"
+		},
+		"base_bridge": {
+			"description": "イーサリアムからブリッジされた資産を保有するBase L2ブリッジコントラクト"
+		},
+		"aerodrome_treasury": {
+			"description": "Baseチェーンのリーディング DEXのためのAerodrome Finance資金庫"
+		},
+		"polygon_ecosystem_fund": {
+			"description": "グラントとエコシステム開発を支援するPolygonエコシステムファンド"
+		},
+		"quickswap_treasury": {
+			"description": "Polygonネイティブ DEXプロトコルのためのQuickSwap資金庫"
+		},
+		"avalanche_foundation": {
+			"description": "AVAXエコシステム成長に資金を提供するAvalanche財団ウォレット"
+		},
+		"traderjoe_treasury": {
+			"description": "Avalancheのリーディング DEXとDeFiハブのためのTrader Joe資金庫"
+		},
+		"solana_foundation": {
+			"description": "エコシステム開発とグラントを支援するSolana財団ウォレット"
+		},
+		"jupiter_treasury": {
+			"description": "Solanaのリーディングスワッププラットフォームのためのjupiterアグリゲーター資金庫"
+		},
+		"raydium_treasury": {
+			"description": "SolanaのAMMと流動性プロトコルのためのRaydium資金庫"
+		},
+		"ton_foundation": {
+			"description": "Telegramブロックチェーンエコシステムを支援するTON財団ウォレット"
+		},
+		"sui_foundation": {
+			"description": "MoveベースL1開発に資金を提供するSui財団資金庫"
+		},
+		"aptos_foundation": {
+			"description": "Move駆動ブロックチェーンエコシステムのためのAptos財団ウォレット"
+		},
+		"cosmos_hub_pool": {
+			"description": "ATOMエコシステムガバナンス資金提供のためのCosmos Hubコミュニティプール"
+		},
+		"cz_wallet": {
+			"description": "CZ（Changpeng Zhao）ウォレット - Binance創設者と暗号資産業界リーダー"
+		},
+		"grayscale_wallet": {
+			"description": "ビットコインとイーサリアムETF保有を管理するGrayscale機関ウォレット"
+		},
+		"blackrock_wallet": {
+			"description": "機関暗号資産ETFカストディのためのBlackRock iSharesウォレット"
+		},
+		"fidelity_wallet": {
+			"description": "暗号資産資産管理のためのFidelity機関ウォレット"
+		},
+		"a16z_wallet": {
+			"description": "Andreessen Horowitz暗号資産ファンドウォレット - リーディングWeb3ベンチャーキャピタル"
+		},
+		"paradigm_wallet": {
+			"description": "Paradigm VCウォレット - 主要な暗号資産ネイティブ投資ファンド"
+		},
+		"jump_trading_wallet": {
+			"description": "Jump Tradingウォレット - 機関マーケットメーカーとトレーディング会社"
+		},
+		"wintermute_wallet": {
+			"description": "Wintermuteウォレット - リーディング暗号資産マーケットメーカーと流動性提供者"
+		},
+		"galaxy_digital_wallet": {
+			"description": "Galaxy Digitalウォレット - 機関暗号資産投資とトレーディング"
 		},
 		"lookonchain": {
 			"description": "クジラの動きとスマートマネーを追跡するオンチェーン分析プラットフォーム"
 		},
-		"ethereum-foundation": {
-			"description": "Ethereum Foundation - Tool"
+		"whale_alert": {
+			"description": "主要な暗号資産の大規模取引のリアルタイムアラート"
 		},
-		"aave-treasury": {
-			"description": "Aave Treasury - Tool"
+		"nansen_smart_money": {
+			"description": "ラベル付けされたウォレット分析のためのNansenのスマートマネー追跡"
 		},
-		"compound-treasury": {
-			"description": "Compound Treasury - Tool"
+		"arkham_intelligence": {
+			"description": "ウォレットの匿名性解除と追跡のためのブロックチェーンインテリジェンスプラットフォーム"
 		},
-		"lido-treasury": {
-			"description": "Lido DAO Treasury - Tool"
+		"debank_whales": {
+			"description": "最大のマルチチェーンポートフォリオ保有者を表示するDeBankクジラランキング"
 		},
-		"arbitrum-treasury": {
-			"description": "Arbitrum DAO Treasury - Tool"
+		"spot_on_chain": {
+			"description": "クジラ追跡と市場インサイトのためのAI駆動オンチェーン分析"
 		},
-		"optimism-treasury": {
-			"description": "Optimism Treasury - Tool"
+		"bubblemaps": {
+			"description": "ビジュアルトークンホルダーと供給配分分析"
 		},
-		"gnosis-treasury": {
-			"description": "Gnosis Treasury - Tool"
+		"etherscan_label": {
+			"description": "既知のウォレット識別のためのEtherscanのラベル付けアドレスデータベース"
 		},
-		"ens-treasury": {
-			"description": "ENS DAO Treasury - Tool"
+		"zerion_whales": {
+			"description": "クジラポートフォリオの発見と追跡のためのZerion探索機能"
 		},
-		"curve-multisig": {
-			"description": "Curve Emergency DAO - Tool"
-		},
-		"yearn-multisig": {
-			"description": "Yearn Multisig - Tool"
-		},
-		"vitalik-wallet": {
-			"description": "vitalik.eth - Tool"
-		},
-		"justin-sun-wallet": {
-			"description": "Justin Sun Wallet - Tool"
-		},
-		"tetranode-wallet": {
-			"description": "Tetranode - Tool"
-		},
-		"hsaka-wallet": {
-			"description": "Hsaka Trades - Tool"
-		},
-		"binance-hot-wallet": {
-			"description": "Binance Hot Wallet - Tool"
-		},
-		"pancakeswap-treasury": {
-			"description": "PancakeSwap Treasury - Tool"
-		},
-		"venus-treasury": {
-			"description": "Venus Treasury - Tool"
-		},
-		"base-bridge": {
-			"description": "Base Bridge - Tool"
-		},
-		"aerodrome-treasury": {
-			"description": "Aerodrome Treasury - Tool"
-		},
-		"polygon-ecosystem-fund": {
-			"description": "Polygon Ecosystem Fund - Tool"
-		},
-		"quickswap-treasury": {
-			"description": "QuickSwap Treasury - Tool"
-		},
-		"avalanche-foundation": {
-			"description": "Avalanche Foundation - Tool"
-		},
-		"traderjoe-treasury": {
-			"description": "Trader Joe Treasury - Tool"
-		},
-		"solana-foundation": {
-			"description": "Solana Foundation - Tool"
-		},
-		"jupiter-treasury": {
-			"description": "Jupiter Treasury - Tool"
-		},
-		"raydium-treasury": {
-			"description": "Raydium Treasury - Tool"
-		},
-		"ton-foundation": {
-			"description": "TON Foundation - Tool"
-		},
-		"sui-foundation": {
-			"description": "Sui Foundation - Tool"
-		},
-		"aptos-foundation": {
-			"description": "Aptos Foundation - Tool"
-		},
-		"cosmos-hub-pool": {
-			"description": "Cosmos Hub Community Pool - Tool"
-		},
-		"cz-wallet": {
-			"description": "CZ (Changpeng Zhao) - Tool"
-		},
-		"grayscale-wallet": {
-			"description": "Grayscale - Tool"
-		},
-		"blackrock-wallet": {
-			"description": "BlackRock iShares - Tool"
-		},
-		"fidelity-wallet": {
-			"description": "Fidelity - Tool"
-		},
-		"a16z-wallet": {
-			"description": "a16z Crypto - Tool"
-		},
-		"paradigm-wallet": {
-			"description": "Paradigm - Tool"
-		},
-		"jump-trading-wallet": {
-			"description": "Jump Trading - Tool"
-		},
-		"wintermute-wallet": {
-			"description": "Wintermute - Tool"
-		},
-		"galaxy-digital-wallet": {
-			"description": "Galaxy Digital - Tool"
-		},
-		"whale-alert": {
-			"description": "Whale Alert - Tool"
-		},
-		"nansen-smart-money": {
-			"description": "Nansen Smart Money - Tool"
-		},
-		"arkham-intelligence": {
-			"description": "Arkham Intelligence - Tool"
-		},
-		"debank-whales": {
-			"description": "DeBank Whales - Tool"
-		},
-		"spot-on-chain": {
-			"description": "Spot On Chain - Tool"
-		},
-		"etherscan-label": {
-			"description": "Etherscan Label Cloud - Tool"
-		},
-		"zerion-whales": {
-			"description": "Zerion Whale Tracker - Tool"
-		},
-		"watchers-pro": {
-			"description": "Watchers Pro - Tool"
+		"watchers_pro": {
+			"description": "クジラウォレット活動のアラート付きスマートマネー追跡プラットフォーム"
 		}
 	}
 }

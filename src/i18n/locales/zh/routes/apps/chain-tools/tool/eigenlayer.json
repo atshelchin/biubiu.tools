@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "中文",
+		"englishName": "Chinese",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "EigenLayer - 以太坊再质押协议 | 共享安全",
+		"description": "了解 EigenLayer，一个允许重新质押 ETH 以保护多个服务的协议。了解 AVS、再质押奖励以及扩展以太坊安全性。",
+		"keywords": "EigenLayer, 再质押，AVS, 以太坊安全，质押，加密收益，共享安全"
+	},
+	"overview": "EigenLayer 是一个再质押协议，允许以太坊质押者选择保护以太坊共识之外的其他服务，在扩展网络安全模型的同时赚取额外奖励。由 Sreeram Kannan 于 2021 年创立并于 2023 年推出，EigenLayer 已成为以太坊安全架构中最重要的创新之一。\n\n核心洞察是，以太坊质押的 ETH（价值数百亿美元）提供的加密经济安全可以扩展到其他协议。新服务不必自己引导验证者集，而是可以通过 \"主动验证服务\"（AVS）利用以太坊现有的安全性。使用 EigenLayer 再质押的质押者可以验证这些 AVS 并赚取额外奖励，但如果行为不当也面临罚没。\n\nEigenLayer 支持原生再质押（验证者将提款凭证指向 EigenLayer）和通过 stETH 等 LST 的流动再质押。该协议已吸引超过 150 亿美元的存款，并启用了新的 AVS 生态系统，包括预言机、跨链桥、排序器和数据可用性层。EIGEN 代币为主体间故障添加了额外的罚没机制。",
+	"features": {
+		"1": {
+			"title": "ETH 再质押",
+			"description": "重新质押您的 ETH 或 LST 以赚取额外收益，同时保护新服务"
+		},
+		"2": {
+			"title": "主动验证服务（AVS）",
+			"description": "新协议可以通过利用以太坊质押的 ETH 来引导安全性"
+		},
+		"3": {
+			"title": "原生和流动再质押",
+			"description": "直接作为验证者再质押或通过 stETH 等流动质押代币"
+		},
+		"4": {
+			"title": "运营商委托",
+			"description": "将您的再质押资产委托给运行 AVS 基础设施的专业运营商"
+		},
+		"5": {
+			"title": "EIGEN 代币",
+			"description": "治理代币，可以质押并因主体间故障被罚没"
+		},
+		"6": {
+			"title": "共享安全模型",
+			"description": "多个服务共享以太坊的安全性，减少碎片化和成本"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "增强质押收益",
+			"description": "通过保护 AVS 在 ETH 质押之上赚取额外奖励"
+		},
+		"2": {
+			"title": "启动安全服务",
+			"description": "新协议无需建立验证者集即可获得以太坊级别的安全性"
+		},
+		"3": {
+			"title": "流动再质押代币",
+			"description": "持有代表再质押头寸的 LRT（eETH、ezETH、rsETH），具有复合收益"
+		},
+		"4": {
+			"title": "运营商业务",
+			"description": "为 AVS 运行基础设施并从委托人处赚取费用"
+		},
+		"5": {
+			"title": "安全池化",
+			"description": "项目可以共享安全成本，而不是各自建立独立基础设施"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 EigenLayer，再质押如何运作？",
+			"answer": "EigenLayer 允许 ETH 质押者 '再质押' 其资产以保护称为 AVS（主动验证服务）的附加服务。您像往常一样与以太坊验证者质押 ETH，但也承诺验证其他协议。作为回报，您赚取额外奖励。但是，如果您行为不当，您可能会被以太坊和您正在保护的 AVS 同时罚没。"
+		},
+		"2": {
+			"question": "再质押有什么风险？",
+			"answer": "再质押增加了额外的罚没风险——如果您选择加入的 AVS 检测到不当行为，您质押的 ETH 可能会被罚没。EigenLayer 本身也存在智能合约风险，以及理解您正在保护的所有服务的复杂性。从信誉良好的运营商和 AVS 开始，不要再质押超过您愿意可能损失的金额。"
+		},
+		"3": {
+			"question": "什么是流动再质押代币（LRT）？",
+			"answer": "LRT（如 ether.fi 的 eETH、Renzo 的 ezETH、Kelp 的 rsETH）以流动形式代表再质押头寸。您不直接再质押，而是将 ETH 存入 LRT 协议，由其代表您再质押。您收到可以在 DeFi 中使用的流动代币，同时赚取再质押奖励。LRT 简化了再质押体验。"
+		},
+		"4": {
+			"question": "什么是 AVS，哪些已经上线？",
+			"answer": "AVS（主动验证服务）是由 EigenLayer 再质押者保护的协议。已上线的 AVS 包括 EigenDA（数据可用性）、Brevis（zkCoprocessor）、Lagrange 等。更多正在定期推出。每个 AVS 都有自己的奖励结构和风险概况。作为再质押者，您可以通过运营商选择保护哪些 AVS。"
+		},
+		"5": {
+			"question": "EIGEN 代币用于什么？",
+			"answer": "EIGEN 是 EigenLayer 的治理代币，也可以质押。其独特功能是 '主体间质押'——它可以因需要社会共识才能检测的故障而被罚没（与客观的链上罚没不同）。EIGEN 质押者本质上为系统提供了针对无法用算法证明的攻击的后盾。"
+		}
+	},
+	"cta": {
+		"ready": "准备好通过再质押赚取额外收益了吗？",
+		"button": "打开 EigenLayer",
+		"note": "扩展以太坊的安全性并赚取额外奖励"
+	}
+}

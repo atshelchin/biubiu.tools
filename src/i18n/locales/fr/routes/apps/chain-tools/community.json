@@ -1,25 +1,206 @@
 {
 	"category_seo": {
-		"title": "Communautés Crypto - Forums et Groupes de Discussion | BiuBiu Tools",
-		"description": "Rejoignez les principales communautés crypto. Connectez-vous avec d'autres passionnés via forums, Discord, Reddit et groupes sociaux.",
-		"keywords": "communauté crypto, forums crypto, discord crypto, communauté blockchain",
+		"title": "Communautés Crypto - Discord, Telegram et Forums | BiuBiu Tools",
+		"description": "Trouvez et rejoignez des communautés crypto. Serveurs Discord, groupes Telegram, forums et plateformes communautaires pour les projets Web3.",
+		"keywords": "communauté crypto, discord crypto, telegram crypto, communauté web3, forums blockchain",
 		"faqs": [
 			{
-				"question": "Où puis-je trouver des communautés crypto ?",
-				"answer": "Les communautés crypto prospèrent sur Discord, Telegram, Reddit (r/cryptocurrency, r/bitcoin), Twitter Crypto, forums de projets spécifiques et plateformes sociales Web3. Chaque projet majeur a généralement ses propres canaux communautaires."
+				"question": "Où se rassemblent les communautés crypto ?",
+				"answer": "Discord est le hub pour la plupart des projets. Telegram pour les mises à jour rapides et les groupes de trading. Farcaster et Lens pour le social natif Web3. Reddit pour les discussions plus larges."
 			},
 			{
-				"question": "Comment identifier les vraies communautés crypto ?",
-				"answer": "Les vraies communautés ont des discussions techniques actives, des membres vérifiés, une modération claire et un focus sur l'éducation. Méfiez-vous des groupes promettant des rendements garantis ou poussant agressivement des tokens spécifiques."
+				"question": "Comment trouver des communautés de qualité ?",
+				"answer": "Recherchez une modération active, des discussions substantielles au-delà du prix, la présence de développeurs et des initiatives menées par la communauté. Évitez les groupes pump et les communautés focalisées uniquement sur la spéculation des prix."
 			},
 			{
-				"question": "Dois-je rejoindre des communautés crypto ?",
-				"answer": "Oui, les communautés fournissent un apprentissage précieux, un soutien et des opportunités de réseautage. Vous pouvez rester à jour avec les tendances, obtenir des conseils de membres expérimentés et découvrir de nouveaux projets tôt."
-			},
-			{
-				"question": "Comment contribuer aux communautés crypto ?",
-				"answer": "Contribuez en partageant des connaissances, aidant les débutants, participant aux discussions de gouvernance, rapportant des bugs, créant du contenu ou contribuant au code open-source. De nombreux projets récompensent les contributeurs actifs."
+				"question": "Comment éviter les arnaques dans les communautés ?",
+				"answer": "Ne faites jamais confiance aux DM offrant aide ou investissements. Les annonces officielles viennent par des canaux vérifiés. Ne cliquez pas sur des liens aléatoires. Les admins ne demanderont jamais votre phrase de récupération."
 			}
 		]
+	},
+	"tools": {
+		"discord_ethereum": {
+			"description": "Discord officiel de la communauté Ethereum pour les discussions de protocole et le développement"
+		},
+		"discord_uniswap": {
+			"description": "Discord de la communauté Uniswap pour la gouvernance DEX et les discussions DeFi"
+		},
+		"discord_aave": {
+			"description": "Discord de la communauté Aave pour le protocole de prêt et les discussions de gouvernance"
+		},
+		"discord_chainlink": {
+			"description": "Discord de la communauté Chainlink pour l'infrastructure oracle et le support développeur"
+		},
+		"discord_arbitrum": {
+			"description": "Discord de la communauté Arbitrum L2 pour l'écosystème et les discussions de développement"
+		},
+		"discord_optimism": {
+			"description": "Discord de la communauté Optimism pour l'écosystème Superchain et la gouvernance"
+		},
+		"discord_base": {
+			"description": "Discord de la communauté Coinbase Base L2 pour la construction de l'écosystème"
+		},
+		"discord_zksync": {
+			"description": "Discord de la communauté zkSync pour le développement et l'écosystème zk-rollup"
+		},
+		"discord_starknet": {
+			"description": "Discord de la communauté Starknet pour le développement Cairo et le scaling zk"
+		},
+		"discord_polygon": {
+			"description": "Discord de la communauté Polygon pour le scaling L2 et le développement zkEVM"
+		},
+		"discord_ethglobal": {
+			"description": "Discord ETHGlobal pour les participants de hackathon et les builders Web3"
+		},
+		"discord_buildspace": {
+			"description": "Discord de la communauté Buildspace pour apprendre le développement Web3"
+		},
+		"discord_alchemy": {
+			"description": "Discord développeurs Alchemy pour le support API et l'infrastructure Web3"
+		},
+		"discord_hardhat": {
+			"description": "Discord de la communauté Hardhat pour le développement Solidity et les outils"
+		},
+		"discord_foundry": {
+			"description": "Discord de la communauté Foundry pour le support du framework de test Solidity"
+		},
+		"discord_openzeppelin": {
+			"description": "Discord OpenZeppelin pour la sécurité et les standards des smart contracts"
+		},
+		"discord_thegraph": {
+			"description": "Discord de la communauté The Graph pour le développement de subgraphs et l'indexation"
+		},
+		"discord_scaffold_eth": {
+			"description": "Discord Scaffold-ETH pour le prototypage rapide de dApps et BuidlGuidl"
+		},
+		"discord_immunefi": {
+			"description": "Discord Immunefi pour les chasseurs de bug bounty et la sécurité Web3"
+		},
+		"discord_code4rena": {
+			"description": "Discord de la communauté Code4rena pour les audits de sécurité compétitifs"
+		},
+		"discord_sherlock": {
+			"description": "Discord de la communauté Sherlock pour les audits de sécurité et la couverture"
+		},
+		"discord_secureum": {
+			"description": "Discord Secureum pour l'éducation et la recherche en sécurité des smart contracts"
+		},
+		"discord_opensea": {
+			"description": "Discord de la communauté OpenSea pour les discussions marketplace NFT"
+		},
+		"discord_blur": {
+			"description": "Discord de la communauté Blur pour les traders NFT pro et le marketplace"
+		},
+		"discord_artblocks": {
+			"description": "Discord Art Blocks pour les collectionneurs et artistes d'art génératif"
+		},
+		"discord_foundation": {
+			"description": "Discord Foundation pour les créateurs et collectionneurs d'art numérique"
+		},
+		"discord_nouns": {
+			"description": "Discord Nouns DAO pour la gouvernance NFT CC0 et la construction communautaire"
+		},
+		"discord_punks": {
+			"description": "Discord de la communauté CryptoPunks pour les collectionneurs NFT OG"
+		},
+		"discord_bayc": {
+			"description": "Discord Bored Ape Yacht Club pour les holders BAYC et l'écosystème Yuga"
+		},
+		"discord_azuki": {
+			"description": "Discord de la communauté Azuki pour la culture NFT anime et la communauté"
+		},
+		"discord_pudgypenguins": {
+			"description": "Discord Pudgy Penguins pour la communauté et les initiatives IP"
+		},
+		"discord_axie": {
+			"description": "Discord de la communauté Axie Infinity pour le gaming play-to-earn"
+		},
+		"discord_illuvium": {
+			"description": "Discord de la communauté Illuvium pour le gaming Web3 AAA"
+		},
+		"discord_immutable": {
+			"description": "Discord Immutable pour l'infrastructure gaming Web3 et zkEVM"
+		},
+		"discord_loot": {
+			"description": "Discord de la communauté Loot pour les primitifs gaming CC0 et les builders"
+		},
+		"discord_treasure": {
+			"description": "Discord Treasure DAO pour le metaverse gaming sur Arbitrum"
+		},
+		"discord_ronin": {
+			"description": "Discord Ronin Network pour l'écosystème L2 orienté gaming"
+		},
+		"discord_bankless": {
+			"description": "Discord Bankless DAO pour la communauté média et éducation crypto"
+		},
+		"discord_gitcoin": {
+			"description": "Discord de la communauté Gitcoin pour le financement des biens publics et les grants"
+		},
+		"discord_ens": {
+			"description": "Discord ENS DAO pour la gouvernance Ethereum Name Service"
+		},
+		"discord_farcaster": {
+			"description": "Discord de la communauté Farcaster pour le protocole social décentralisé"
+		},
+		"discord_lens": {
+			"description": "Discord Lens Protocol pour les builders du graphe social décentralisé"
+		},
+		"discord_friend_tech": {
+			"description": "Discord de la communauté friend.tech pour SocialFi sur Base"
+		},
+		"discord_rabbithole": {
+			"description": "Discord RabbitHole pour les quêtes learn-to-earn et l'éducation"
+		},
+		"discord_galxe": {
+			"description": "Discord de la communauté Galxe pour les credentials Web3 et les campagnes"
+		},
+		"discord_solana": {
+			"description": "Discord de la communauté Solana pour l'écosystème L1 haute performance"
+		},
+		"discord_avalanche": {
+			"description": "Discord de la communauté Avalanche pour les subnets et le développement L1"
+		},
+		"discord_cosmos": {
+			"description": "Discord de la communauté Cosmos pour l'écosystème IBC et appchain"
+		},
+		"discord_sui": {
+			"description": "Discord de la communauté Sui pour le développement en langage Move"
+		},
+		"discord_aptos": {
+			"description": "Discord de la communauté Aptos pour l'écosystème L1 basé sur Move"
+		},
+		"discord_near": {
+			"description": "Discord NEAR Protocol pour le développement L1 shardé"
+		},
+		"discord_ton": {
+			"description": "Discord de la communauté TON pour la blockchain intégrée à Telegram"
+		},
+		"tg_cointelegraph": {
+			"description": "Canal Telegram Cointelegraph pour les actualités et mises à jour crypto"
+		},
+		"tg_whale_alert": {
+			"description": "Telegram Whale Alert pour le suivi des grandes transactions crypto"
+		},
+		"tg_lookonchain": {
+			"description": "Telegram Lookonchain pour l'analyse on-chain et la surveillance des baleines"
+		},
+		"tg_ton_official": {
+			"description": "Telegram officiel de la communauté TON pour les mises à jour de l'écosystème"
+		},
+		"tg_solana_ann": {
+			"description": "Telegram officiel Solana pour les annonces et mises à jour"
+		},
+		"tg_arbitrum_ann": {
+			"description": "Telegram officiel Arbitrum pour les annonces L2"
+		},
+		"tg_chaincatcher": {
+			"description": "Telegram ChainCatcher pour les actualités et recherches crypto en chinois"
+		},
+		"tg_techflow": {
+			"description": "Telegram TechFlow pour les actualités et analyses Web3 en chinois"
+		},
+		"tg_crypto_brazil": {
+			"description": "Telegram Crypto Brasil pour la communauté crypto brésilienne"
+		}
 	}
 }

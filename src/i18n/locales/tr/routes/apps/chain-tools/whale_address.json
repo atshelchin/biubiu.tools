@@ -2,7 +2,7 @@
 	"category_seo": {
 		"title": "Balina Cüzdanları ve Hazine Takibi - Akıllı Para İçgörüleri | BiuBiu Tools",
 		"description": "Balina cüzdanlarını ve protokol hazinelerini takip edin. Kriptoda akıllı para hareketlerini ve kurumsal varlıkları izleyin.",
-		"keywords": "kripto balinaları, balina takibi, protokol haziheleri, akıllı para",
+		"keywords": "kripto balinaları, balina takibi, protokol hazineleri, akıllı para",
 		"faqs": [
 			{
 				"question": "Kripto balinası nedir?",
@@ -13,158 +13,158 @@
 				"answer": "Etiketlenmiş cüzdan takibi için Nansen veya Arkham kullanın. Etherscan'de büyük transferler için uyarılar ayarlayın. Balina aktivitesini paylaşan @lookonchain gibi hesapları takip edin."
 			},
 			{
-				"question": "Protokol haziheleri nelerdir?",
+				"question": "Protokol hazineleri nelerdir?",
 				"answer": "Hazineler, DAO'lar veya protokoller tarafından kontrol edilen fonlardır. Hibeler, likidite ve geliştirme için kullanılır. Büyük hazineler (Uniswap'inki gibi) proje sağlığının göstergeleri olarak izlenir."
 			}
 		]
 	},
 	"tools": {
-		"bubblemaps": {
-			"description": "Visual token holder ve supply distributiüzerinde analysis"
+		"ethereum_foundation": {
+			"description": "Ekosistem geliştirme ve araştırmayı finanse eden Ethereum Vakfı hazine cüzdanı"
+		},
+		"aave_treasury": {
+			"description": "Borç verme protokolü geliştirme için DAO fonlarını yöneten Aave protokol hazinesi"
+		},
+		"compound_treasury": {
+			"description": "DeFi borç verme yönetişimi için fon tutan Compound protokol hazinesi"
+		},
+		"lido_treasury": {
+			"description": "Likit staking protokol fonlarını yöneten Lido DAO hazinesi"
+		},
+		"arbitrum_treasury": {
+			"description": "L2 ekosistem hibeleri ve geliştirmeyi finanse eden Arbitrum DAO hazinesi"
+		},
+		"optimism_treasury": {
+			"description": "Superchain ekosistem finansmanı için Optimism Collective hazinesi"
+		},
+		"gnosis_treasury": {
+			"description": "Safe ekosistemi ve GNO fonlarını yöneten Gnosis DAO hazinesi"
+		},
+		"ens_treasury": {
+			"description": "Ethereum Name Service yönetişimi ve hibeleri için ENS DAO hazinesi"
+		},
+		"curve_multisig": {
+			"description": "Protokol güvenlik eylemleri için Curve Finance acil durum DAO multisig"
+		},
+		"yearn_multisig": {
+			"description": "Getiri protokolü operasyonlarını yöneten Yearn Finance multisig cüzdanı"
+		},
+		"vitalik_wallet": {
+			"description": "Vitalik Buterin'in halka açık cüzdanı - Ethereum kurucu ortağı ve etkili figür"
+		},
+		"justin_sun_wallet": {
+			"description": "Justin Sun cüzdanı - Büyük DeFi pozisyonlarıyla tanınan TRON kurucusu"
+		},
+		"tetranode_wallet": {
+			"description": "Tetranode cüzdanı - Etkili DeFi balinası ve erken protokol yatırımcısı"
+		},
+		"hsaka_wallet": {
+			"description": "Hsaka Trades cüzdanı - GMX ve dYdX'te önde gelen perpetual trader"
+		},
+		"binance_hot_wallet": {
+			"description": "BNB Chain operasyonları için Binance borsası hot wallet"
+		},
+		"pancakeswap_treasury": {
+			"description": "CAKE token ve DEX protokol fonlarını yöneten PancakeSwap hazinesi"
+		},
+		"venus_treasury": {
+			"description": "BNB Chain borç verme platformu yönetişimi için Venus protokol hazinesi"
+		},
+		"base_bridge": {
+			"description": "Ethereum'dan köprülenen varlıkları tutan Base L2 köprü kontratı"
+		},
+		"aerodrome_treasury": {
+			"description": "Base chain'in önde gelen DEX'i için Aerodrome Finance hazinesi"
+		},
+		"polygon_ecosystem_fund": {
+			"description": "Hibe ve ekosistem geliştirmeyi destekleyen Polygon ekosistem fonu"
+		},
+		"quickswap_treasury": {
+			"description": "Polygon yerel DEX protokolü için QuickSwap hazinesi"
+		},
+		"avalanche_foundation": {
+			"description": "AVAX ekosistem büyümesini finanse eden Avalanche Vakfı cüzdanı"
+		},
+		"traderjoe_treasury": {
+			"description": "Avalanche'ın önde gelen DEX ve DeFi hub'ı için Trader Joe hazinesi"
+		},
+		"solana_foundation": {
+			"description": "Ekosistem geliştirme ve hibeleri destekleyen Solana Vakfı cüzdanı"
+		},
+		"jupiter_treasury": {
+			"description": "Solana'nın önde gelen swap platformu için Jupiter agregator hazinesi"
+		},
+		"raydium_treasury": {
+			"description": "Solana'nın AMM ve likidite protokolü için Raydium hazinesi"
+		},
+		"ton_foundation": {
+			"description": "Telegram blockchain ekosistemini destekleyen TON Vakfı cüzdanı"
+		},
+		"sui_foundation": {
+			"description": "Move tabanlı L1 geliştirmeyi finanse eden Sui Vakfı hazinesi"
+		},
+		"aptos_foundation": {
+			"description": "Move destekli blockchain ekosistemi için Aptos Vakfı cüzdanı"
+		},
+		"cosmos_hub_pool": {
+			"description": "ATOM ekosistem yönetişim finansmanı için Cosmos Hub topluluk havuzu"
+		},
+		"cz_wallet": {
+			"description": "CZ (Changpeng Zhao) cüzdanı - Binance kurucusu ve kripto endüstri lideri"
+		},
+		"grayscale_wallet": {
+			"description": "Bitcoin ve Ethereum ETF varlıklarını yöneten Grayscale kurumsal cüzdanı"
+		},
+		"blackrock_wallet": {
+			"description": "Kurumsal kripto ETF saklama için BlackRock iShares cüzdanı"
+		},
+		"fidelity_wallet": {
+			"description": "Kripto varlık yönetimi için Fidelity kurumsal cüzdanı"
+		},
+		"a16z_wallet": {
+			"description": "Andreessen Horowitz kripto fon cüzdanı - Önde gelen Web3 risk sermayesi"
+		},
+		"paradigm_wallet": {
+			"description": "Paradigm VC cüzdanı - Önde gelen kripto-yerli yatırım fonu"
+		},
+		"jump_trading_wallet": {
+			"description": "Jump Trading cüzdanı - Kurumsal piyasa yapıcı ve ticaret firması"
+		},
+		"wintermute_wallet": {
+			"description": "Wintermute cüzdanı - Önde gelen kripto piyasa yapıcı ve likidite sağlayıcı"
+		},
+		"galaxy_digital_wallet": {
+			"description": "Galaxy Digital cüzdanı - Kurumsal kripto yatırım ve ticaret"
 		},
 		"lookonchain": {
-			"description": "On-zincir analitik platiçinm takip whale movements ve smart müzerindeey"
+			"description": "Balina hareketlerini ve akıllı parayı izleyen zincir üstü analitik platformu"
 		},
-		"ethereum-foundation": {
-			"description": "Ethereum Foundation - Tool"
+		"whale_alert": {
+			"description": "Büyük kripto para birimlerinde büyük işlemler için gerçek zamanlı uyarılar"
 		},
-		"aave-treasury": {
-			"description": "Aave Treasury - Tool"
+		"nansen_smart_money": {
+			"description": "Etiketli cüzdan analizi için Nansen'in akıllı para takibi"
 		},
-		"compound-treasury": {
-			"description": "Compound Treasury - Tool"
+		"arkham_intelligence": {
+			"description": "Cüzdan de-anonimleştirme ve takibi için blockchain istihbarat platformu"
 		},
-		"lido-treasury": {
-			"description": "Lido DAO Treasury - Tool"
+		"debank_whales": {
+			"description": "En büyük çoklu zincir portföy sahiplerini gösteren DeBank balina sıralaması"
 		},
-		"arbitrum-treasury": {
-			"description": "Arbitrum DAO Treasury - Tool"
+		"spot_on_chain": {
+			"description": "Balina takibi ve piyasa içgörüleri için yapay zeka destekli zincir üstü analitik"
 		},
-		"optimism-treasury": {
-			"description": "Optimism Treasury - Tool"
+		"bubblemaps": {
+			"description": "Görsel token sahibi ve arz dağılımı analizi"
 		},
-		"gnosis-treasury": {
-			"description": "Gnosis Treasury - Tool"
+		"etherscan_label": {
+			"description": "Bilinen cüzdan tanımlama için Etherscan'in etiketli adres veritabanı"
 		},
-		"ens-treasury": {
-			"description": "ENS DAO Treasury - Tool"
+		"zerion_whales": {
+			"description": "Balina portföy keşfi ve takibi için Zerion keşfet özelliği"
 		},
-		"curve-multisig": {
-			"description": "Curve Emergency DAO - Tool"
-		},
-		"yearn-multisig": {
-			"description": "Yearn Multisig - Tool"
-		},
-		"vitalik-wallet": {
-			"description": "vitalik.eth - Tool"
-		},
-		"justin-sun-wallet": {
-			"description": "Justin Sun Wallet - Tool"
-		},
-		"tetranode-wallet": {
-			"description": "Tetranode - Tool"
-		},
-		"hsaka-wallet": {
-			"description": "Hsaka Trades - Tool"
-		},
-		"binance-hot-wallet": {
-			"description": "Binance Hot Wallet - Tool"
-		},
-		"pancakeswap-treasury": {
-			"description": "PancakeSwap Treasury - Tool"
-		},
-		"venus-treasury": {
-			"description": "Venus Treasury - Tool"
-		},
-		"base-bridge": {
-			"description": "Base Bridge - Tool"
-		},
-		"aerodrome-treasury": {
-			"description": "Aerodrome Treasury - Tool"
-		},
-		"polygon-ecosystem-fund": {
-			"description": "Polygon Ecosystem Fund - Tool"
-		},
-		"quickswap-treasury": {
-			"description": "QuickSwap Treasury - Tool"
-		},
-		"avalanche-foundation": {
-			"description": "Avalanche Foundation - Tool"
-		},
-		"traderjoe-treasury": {
-			"description": "Trader Joe Treasury - Tool"
-		},
-		"solana-foundation": {
-			"description": "Solana Foundation - Tool"
-		},
-		"jupiter-treasury": {
-			"description": "Jupiter Treasury - Tool"
-		},
-		"raydium-treasury": {
-			"description": "Raydium Treasury - Tool"
-		},
-		"ton-foundation": {
-			"description": "TON Foundation - Tool"
-		},
-		"sui-foundation": {
-			"description": "Sui Foundation - Tool"
-		},
-		"aptos-foundation": {
-			"description": "Aptos Foundation - Tool"
-		},
-		"cosmos-hub-pool": {
-			"description": "Cosmos Hub Community Pool - Tool"
-		},
-		"cz-wallet": {
-			"description": "CZ (Changpeng Zhao) - Tool"
-		},
-		"grayscale-wallet": {
-			"description": "Grayscale - Tool"
-		},
-		"blackrock-wallet": {
-			"description": "BlackRock iShares - Tool"
-		},
-		"fidelity-wallet": {
-			"description": "Fidelity - Tool"
-		},
-		"a16z-wallet": {
-			"description": "a16z Crypto - Tool"
-		},
-		"paradigm-wallet": {
-			"description": "Paradigm - Tool"
-		},
-		"jump-trading-wallet": {
-			"description": "Jump Trading - Tool"
-		},
-		"wintermute-wallet": {
-			"description": "Wintermute - Tool"
-		},
-		"galaxy-digital-wallet": {
-			"description": "Galaxy Digital - Tool"
-		},
-		"whale-alert": {
-			"description": "Whale Alert - Tool"
-		},
-		"nansen-smart-money": {
-			"description": "Nansen Smart Money - Tool"
-		},
-		"arkham-intelligence": {
-			"description": "Arkham Intelligence - Tool"
-		},
-		"debank-whales": {
-			"description": "DeBank Whales - Tool"
-		},
-		"spot-on-chain": {
-			"description": "Spot On Chain - Tool"
-		},
-		"etherscan-label": {
-			"description": "Etherscan Label Cloud - Tool"
-		},
-		"zerion-whales": {
-			"description": "Zerion Whale Tracker - Tool"
-		},
-		"watchers-pro": {
-			"description": "Watchers Pro - Tool"
+		"watchers_pro": {
+			"description": "Balina cüzdan aktivite uyarıları ile akıllı para takip platformu"
 		}
 	}
 }

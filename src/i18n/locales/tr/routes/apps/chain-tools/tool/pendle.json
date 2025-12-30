@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "Pendle - Getiri Tokenizasyon Protokolü | Gelecekteki Getiriyi Takas Edin",
+		"description": "Gelecekteki getiriyi takas etme protokolü Pendle'ı keşfedin. PT ve YT token'ları aracılığıyla sabit oranları kilitlemeyi, getiriler üzerine spekülasyon yapmayı ve DeFi getirilerini maksimize etmeyi öğrenin.",
+		"keywords": "Pendle, getiri tokenizasyonu, PT, YT, sabit getiri, DeFi, getiri ticareti, faiz oranları"
+	},
+	"overview": "Pendle, kullanıcıların gelecekteki getiriyi takas etmelerine, sabit oranları kilitlemelerine veya getiri değişimleri üzerine spekülasyon yapmalarına olanak tanıyan bir getiri tokenizasyon protokolüdür. 2021'de başlatılan ve Pendle V2'de (2023) yeniden tasarlanan protokol, özellikle likit staking token'ları ve puan taşıyan varlıklar için DeFi getiri piyasalarının temel taşı haline geldi.\n\nTemel yenilik, getiri sağlayan varlıkları Ana Token'lara (PT) ve Getiri Token'larına (YT) ayırmaktır. %4 APY getiren stETH'niz varsa, Pendle bunu ayırmanıza izin verir: PT, vade sonunda temel varlık için itfa edilebilir anayı temsil ederken, YT vadeye kadar tüm getiriyi temsil eder. Bu ayrım yeni stratejiler sağlar—garantili sabit getiriler için PT satın alın veya getiri maruziyetinizi kaldıraçlamak için YT satın alın.\n\nPendle'ın AMM'si özellikle getiri ticareti için tasarlanmıştır ve vade yaklaştıkça likiditenin verimli kalmasını sağlayan zaman-azalma mekanikleri içerir. Protokol, restaking (EigenLayer puanları), gerçek getiri varlıkları ve daha geniş LST ekosistemi ile entegrasyonlar sayesinde patlayıcı bir büyüme gördü. Zirve dönemde 5 milyar doların üzerinde TVL ile Pendle, getirinin kendisinin takas edilebilir bir varlık sınıfı olduğunu gösteriyor.",
+	"features": {
+		"1": {
+			"title": "Getiri Tokenizasyonu",
+			"description": "Getiri sağlayan varlıkları Ana (PT) ve Getiri (YT) bileşenlerine ayırın"
+		},
+		"2": {
+			"title": "PT ile Sabit Getiri",
+			"description": "Vadeye kadar garantili sabit getiriyi kilitlemek için PT'yi indirimli satın alın"
+		},
+		"3": {
+			"title": "YT ile Getiri Spekülasyonu",
+			"description": "Ana para olmadan getiri ve puanlara kaldıraçlı maruziyete sahip olmak için YT alım satımı yapın"
+		},
+		"4": {
+			"title": "Zamana Optimize AMM",
+			"description": "Zaman-azalma mekanikleri ile getiri ticareti için tasarlanmış özel AMM"
+		},
+		"5": {
+			"title": "Puan Çarpanı",
+			"description": "YT sahipleri, temel protokollerden (EigenLayer vb.) çarpılmış puanlar alır"
+		},
+		"6": {
+			"title": "Çoklu Zincir Dağıtımı",
+			"description": "Çeşitli getiri varlıkları ile Ethereum, Arbitrum ve diğer ağlarda mevcut"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Sabit Getirileri Kilitleme",
+			"description": "Garantili getiriler elde etmek için PT satın alın—getiri değişkenliğini ortadan kaldırın"
+		},
+		"2": {
+			"title": "Getiriler Üzerine Spekülasyon",
+			"description": "Getirilerin artacağını düşünüyorsanız YT satın alın—yanlışsanız sadece YT maliyetini kaybedersiniz"
+		},
+		"3": {
+			"title": "Puan Madenciliği",
+			"description": "EigenLayer gibi protokollerden puanlara kaldıraçlı maruziyete için YT kullanın"
+		},
+		"4": {
+			"title": "Getiri Arbitrajı",
+			"description": "Ima edilen getiriler piyasalar arasında gerçek getirilerden ayrıldığında takas yapın"
+		},
+		"5": {
+			"title": "Portföy Koruması",
+			"description": "Getiri maruziyetini koruyun veya sabit ile değişken faiz pozisyonlarını dengeleyin"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Pendle nedir ve getiri tokenizasyonu nasıl çalışır?",
+			"answer": "Pendle, getiri sağlayan token'ları (stETH gibi) Ana Token'lara (PT) ve Getiri Token'larına (YT) ayırır. PT, vade sonunda temel varlığın değerindedir—sabit getiriyi kilitlemek için indirimli satın alın. YT, vadeye kadar tüm getiriyi alır—değişken getirileri yakalamak için tutun. Bu ayrım, getiriyi ayrı bir varlık olarak takas etmeyi sağlayarak sabit oranlar ve getiri spekülasyonuna olanak tanır."
+		},
+		"2": {
+			"question": "PT ve YT arasındaki fark nedir?",
+			"answer": "PT (Ana Token), vade sonunda temel varlığı temsil eder. PT'yi indirimli satın alın (örn. 1 PT-stETH için 0,95 ETH) ve vade sonunda 1 ETH için itfa edin—indirim sizin sabit getirinizdir. YT (Getiri Token), vadeye kadar tüm getiriyi alır. 10 YT tutuyorsanız ve stETH %5 getiri sağlıyorsa, 10 stETH'lik getiri kazanırsınız. YT, vade sonunda sıfıra düşer."
+		},
+		"3": {
+			"question": "Pendle ile nasıl sabit getiri kazanırım?",
+			"answer": "Getiri sağlayan bir varlık için PT satın alın. Örneğin, 6 ay içinde vadesi dolan PT-stETH 0,97 ETH'de işlem görüyorsa, yaklaşık %6 yıllık getiri kilitlemiş olursunuz. Vade sonunda, PT'niz tam temel miktar için itfa edilebilir. Sabit getiri, PT satın aldığınız indirimin APY'ye dönüştürülmesine eşittir."
+		},
+		"4": {
+			"question": "Pendle'ın puan çarpanı nasıl çalışır?",
+			"answer": "YT tuttuğunuzda, temel varlıktan gelen tüm getiri VE puanları alırsınız. eETH veya ezETH gibi puan taşıyan varlıklar için YT tutmak size çarpılmış puan maruziyeti verir. 10 YT-eETH satın alırsanız, 10 eETH tutuyormuş gibi puan kazanırsınız. Bu, Pendle'ı EigenLayer ve restaking puanları madenciliği için popüler hale getirmiştir."
+		},
+		"5": {
+			"question": "Vade sonunda ne olur?",
+			"answer": "Vade sonunda: PT, temel varlık için 1:1 itfa edilebilir hale gelir. YT değersiz hale gelir (ana değeri yoktur). Vade öncesinde, her ikisini de Pendle'ın AMM'sinde takas edebilirsiniz. Vade sonrasında, PT istediğiniz zaman itfa edilebilir. Pendle düzenli olarak farklı vade tarihleri ile yeni havuzlar başlatır."
+		}
+	},
+	"cta": {
+		"ready": "Gelecekteki getirileri takas etmeye hazır mısınız?",
+		"button": "Pendle'ı Aç",
+		"note": "Sabit oranları kilitleyin veya getiri değişimleri üzerine spekülasyon yapın"
+	}
+}

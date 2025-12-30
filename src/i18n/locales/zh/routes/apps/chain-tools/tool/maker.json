@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "中文",
+		"englishName": "Chinese",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "MakerDAO - 去中心化稳定币协议 | DAI",
+		"description": "了解 MakerDAO，DAI 背后的协议——领先的去中心化稳定币。学习如何生成 DAI、管理金库并参与治理。",
+		"keywords": "MakerDAO, DAI, 稳定币，DeFi, CDP, 金库，MKR, 去中心化"
+	},
+	"overview": "MakerDAO 是 DAI 背后的去中心化自治组织，DAI 是流通量最大的去中心化稳定币。由 Rune Christensen 于 2017 年 12 月推出，Maker 开创了加密抵押稳定币的概念，允许用户锁定 ETH 等资产并以该抵押品生成 DAI——一种锚定美元的稳定币。\n\n该协议通过 \"金库\"（以前称为 CDP——抵押债务头寸）运作，用户存入抵押品并铸造 DAI。每个金库都有清算比率；如果抵押品价值跌破此阈值，头寸将被清算以保护系统。DAI 通过超额抵押、稳定费（借入 DAI 的利息）和 DAI 储蓄利率（DSR，激励持有 DAI）的组合维持其锚定。\n\nMakerDAO 通过其 \"Endgame\" 计划经历了重大转型，演变为 Sky 协议，DAI 变为 USDS，MKR 变为 SKY。该协议现在支持实物资产（RWA）作为抵押品，并通过与传统金融的合作扩大了其影响力。凭借超过 50 亿美元的 TVL，Maker 仍然是基础性的 DeFi 基础设施。",
+	"features": {
+		"1": {
+			"title": "DAI 稳定币",
+			"description": "生成由加密抵押品支持的去中心化、软锚定美元的稳定币"
+		},
+		"2": {
+			"title": "金库系统",
+			"description": "锁定抵押品（ETH、WBTC、稳定币）以铸造 DAI，具有透明的清算规则"
+		},
+		"3": {
+			"title": "DAI 储蓄利率（DSR）",
+			"description": "通过将 DAI 存入 DSR 合约赚取收益——无锁定，即时提取"
+		},
+		"4": {
+			"title": "多抵押品支持",
+			"description": "使用各种资产作为抵押品，包括 ETH、WBTC、stETH 和实物资产"
+		},
+		"5": {
+			"title": "MKR 治理",
+			"description": "MKR 代币持有者对风险参数、抵押品类型和协议升级进行投票"
+		},
+		"6": {
+			"title": "实物资产",
+			"description": "率先整合 RWA，拥有美国国债敞口和机构合作伙伴关系"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "生成稳定币流动性",
+			"description": "从您的加密资产创建 DAI 而不卖出——在保留上涨空间的同时获取美元"
+		},
+		"2": {
+			"title": "赚取储蓄收益",
+			"description": "将 DAI 存入 DSR 以在您的稳定币持有上赚取有竞争力的收益"
+		},
+		"3": {
+			"title": "杠杆做多",
+			"description": "以 ETH 生成 DAI，购买更多 ETH，重复——放大您的 ETH 敞口"
+		},
+		"4": {
+			"title": "DeFi 基础货币",
+			"description": "在 DeFi 中广泛使用 DAI——它集成在借贷协议、DEX 和收益农场中"
+		},
+		"5": {
+			"title": "去中心化储蓄",
+			"description": "以抗审查的稳定币持有价值，不受任何公司控制"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 MakerDAO，DAI 如何运作？",
+			"answer": "MakerDAO 是发行 DAI 的去中心化协议，DAI 是锚定 1 美元的稳定币。用户将加密抵押品存入金库，可以以此借入 DAI。系统通过超额抵押（您必须存入比借入 DAI 更多的抵押品）、抵押品价值下跌时的清算，以及通过稳定费和 DSR 的利率调整来维持锚定。"
+		},
+		"2": {
+			"question": "DAI 安全吗？有什么风险？",
+			"answer": "DAI 是经过最多考验的稳定币之一，自 2017 年以来运行。风险包括智能合约漏洞、极端波动期间的大规模清算（如 2020 年 3 月）、预言机故障和治理攻击。DAI 的抵押品中也有 USDC 等中心化稳定币的敞口，降低了纯粹的去中心化程度。"
+		},
+		"3": {
+			"question": "什么是 DAI 储蓄利率（DSR）？",
+			"answer": "DSR 是您通过将 DAI 存入 Maker 储蓄合约赚取的收益。利率由 MKR 治理设定，由金库所有者支付的稳定费资助。没有最低存款额，没有锁定期，您可以随时提取。它本质上是 Maker 生态系统内的无风险利率。"
+		},
+		"4": {
+			"question": "如果我的金库被清算会怎样？",
+			"answer": "如果您金库的抵押率低于清算阈值，任何人都可以触发清算。您的抵押品被拍卖以偿还您的 DAI 债务加清算罚款（通常为 13%）。任何剩余的抵押品将归还给您。监控您金库的健康状况，当比率紧张时增加抵押品或偿还 DAI。"
+		},
+		"5": {
+			"question": "什么是 Maker Endgame 和 Sky 协议？",
+			"answer": "Endgame 是 Maker 的长期计划，旨在演变为更具弹性的协议。它包括将 DAI 更名为 USDS、MKR 更名为 SKY，为不同功能创建 SubDAO，扩大 RWA 敞口，以及可能推出专用区块链。过渡是渐进的，新旧代币都将继续可用。"
+		}
+	},
+	"cta": {
+		"ready": "准备好生成去中心化稳定币了吗？",
+		"button": "打开 MakerDAO",
+		"note": "DAI 背后的协议——DeFi 领先的去中心化稳定币"
+	}
+}

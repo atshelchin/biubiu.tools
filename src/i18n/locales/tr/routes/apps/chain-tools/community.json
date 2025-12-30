@@ -17,5 +17,190 @@
 				"answer": "Yardım veya yatırım sunan DM'lere asla güvenmeyin. Resmi duyurular doğrulanmış kanallardan gelir. Rastgele linklere tıklamayın. Yöneticiler asla tohum kelime dizinizi istemez."
 			}
 		]
+	},
+	"tools": {
+		"discord_ethereum": {
+			"description": "Protokol tartışmaları ve geliştirme için resmi Ethereum topluluk Discord'u"
+		},
+		"discord_uniswap": {
+			"description": "DEX yönetişimi ve DeFi tartışmaları için Uniswap topluluk Discord'u"
+		},
+		"discord_aave": {
+			"description": "Borç verme protokolü ve yönetişim tartışmaları için Aave topluluk Discord'u"
+		},
+		"discord_chainlink": {
+			"description": "Oracle altyapısı ve geliştirici desteği için Chainlink topluluk Discord'u"
+		},
+		"discord_arbitrum": {
+			"description": "Ekosistem ve geliştirme tartışmaları için Arbitrum L2 topluluk Discord'u"
+		},
+		"discord_optimism": {
+			"description": "Superchain ekosistemi ve yönetişim için Optimism topluluk Discord'u"
+		},
+		"discord_base": {
+			"description": "Ekosistem inşası için Coinbase Base L2 topluluk Discord'u"
+		},
+		"discord_zksync": {
+			"description": "zk-rollup geliştirme ve ekosistem için zkSync topluluk Discord'u"
+		},
+		"discord_starknet": {
+			"description": "Cairo geliştirme ve zk ölçeklendirme için Starknet topluluk Discord'u"
+		},
+		"discord_polygon": {
+			"description": "L2 ölçeklendirme ve zkEVM geliştirme için Polygon topluluk Discord'u"
+		},
+		"discord_ethglobal": {
+			"description": "Hackathon katılımcıları ve Web3 inşacıları için ETHGlobal Discord"
+		},
+		"discord_buildspace": {
+			"description": "Web3 geliştirme öğrenimi için Buildspace topluluk Discord'u"
+		},
+		"discord_alchemy": {
+			"description": "API desteği ve Web3 altyapısı için Alchemy geliştirici Discord'u"
+		},
+		"discord_hardhat": {
+			"description": "Solidity geliştirme ve araçlar için Hardhat topluluk Discord'u"
+		},
+		"discord_foundry": {
+			"description": "Solidity test framework desteği için Foundry topluluk Discord'u"
+		},
+		"discord_openzeppelin": {
+			"description": "Akıllı kontrat güvenliği ve standartları için OpenZeppelin Discord"
+		},
+		"discord_thegraph": {
+			"description": "Subgraph geliştirme ve indeksleme için The Graph topluluk Discord'u"
+		},
+		"discord_scaffold_eth": {
+			"description": "Hızlı dApp prototipleme ve BuidlGuidl için Scaffold-ETH Discord"
+		},
+		"discord_immunefi": {
+			"description": "Bug bounty avcıları ve Web3 güvenliği için Immunefi Discord"
+		},
+		"discord_code4rena": {
+			"description": "Rekabetçi güvenlik denetimleri için Code4rena topluluk Discord'u"
+		},
+		"discord_sherlock": {
+			"description": "Güvenlik denetimleri ve kapsam için Sherlock topluluk Discord'u"
+		},
+		"discord_secureum": {
+			"description": "Akıllı kontrat güvenlik eğitimi ve araştırması için Secureum Discord"
+		},
+		"discord_opensea": {
+			"description": "NFT pazar yeri tartışmaları için OpenSea topluluk Discord'u"
+		},
+		"discord_blur": {
+			"description": "Profesyonel NFT trader'ları ve pazar yeri için Blur topluluk Discord'u"
+		},
+		"discord_artblocks": {
+			"description": "Generatif sanat koleksiyoncuları ve sanatçıları için Art Blocks Discord"
+		},
+		"discord_foundation": {
+			"description": "Dijital sanat yaratıcıları ve koleksiyoncuları için Foundation Discord"
+		},
+		"discord_nouns": {
+			"description": "CC0 NFT yönetişimi ve topluluk inşası için Nouns DAO Discord"
+		},
+		"discord_punks": {
+			"description": "OG NFT koleksiyoncuları için CryptoPunks topluluk Discord'u"
+		},
+		"discord_bayc": {
+			"description": "BAYC sahipleri ve Yuga ekosistemi için Bored Ape Yacht Club Discord"
+		},
+		"discord_azuki": {
+			"description": "Anime NFT kültürü ve topluluk için Azuki topluluk Discord'u"
+		},
+		"discord_pudgypenguins": {
+			"description": "Topluluk ve IP girişimleri için Pudgy Penguins Discord"
+		},
+		"discord_axie": {
+			"description": "Play-to-earn oyunları için Axie Infinity topluluk Discord'u"
+		},
+		"discord_illuvium": {
+			"description": "AAA Web3 oyunları için Illuvium topluluk Discord'u"
+		},
+		"discord_immutable": {
+			"description": "Web3 oyun altyapısı ve zkEVM için Immutable Discord"
+		},
+		"discord_loot": {
+			"description": "CC0 oyun primitifleri ve inşacılar için Loot topluluk Discord'u"
+		},
+		"discord_treasure": {
+			"description": "Arbitrum'da oyun metaverse'i için Treasure DAO Discord"
+		},
+		"discord_ronin": {
+			"description": "Oyun odaklı L2 ekosistemi için Ronin Network Discord"
+		},
+		"discord_bankless": {
+			"description": "Kripto medya ve eğitim topluluğu için Bankless DAO Discord"
+		},
+		"discord_gitcoin": {
+			"description": "Kamu malları finansmanı ve hibeler için Gitcoin topluluk Discord'u"
+		},
+		"discord_ens": {
+			"description": "Ethereum Name Service yönetişimi için ENS DAO Discord"
+		},
+		"discord_farcaster": {
+			"description": "Merkeziyetsiz sosyal protokol için Farcaster topluluk Discord'u"
+		},
+		"discord_lens": {
+			"description": "Merkeziyetsiz sosyal grafik inşacıları için Lens Protocol Discord"
+		},
+		"discord_friend_tech": {
+			"description": "Base'de SocialFi için friend.tech topluluk Discord'u"
+		},
+		"discord_rabbithole": {
+			"description": "Learn-to-earn görevleri ve eğitim için RabbitHole Discord"
+		},
+		"discord_galxe": {
+			"description": "Web3 kimlik bilgileri ve kampanyalar için Galxe topluluk Discord'u"
+		},
+		"discord_solana": {
+			"description": "Yüksek performanslı L1 ekosistemi için Solana topluluk Discord'u"
+		},
+		"discord_avalanche": {
+			"description": "Subnet'ler ve L1 geliştirme için Avalanche topluluk Discord'u"
+		},
+		"discord_cosmos": {
+			"description": "IBC ve appchain ekosistemi için Cosmos topluluk Discord'u"
+		},
+		"discord_sui": {
+			"description": "Move dili geliştirme için Sui topluluk Discord'u"
+		},
+		"discord_aptos": {
+			"description": "Move tabanlı L1 ekosistemi için Aptos topluluk Discord'u"
+		},
+		"discord_near": {
+			"description": "Sharded L1 geliştirme için NEAR Protocol Discord"
+		},
+		"discord_ton": {
+			"description": "Telegram entegreli blockchain için TON topluluk Discord'u"
+		},
+		"tg_cointelegraph": {
+			"description": "Kripto haberleri ve güncellemeler için Cointelegraph Telegram kanalı"
+		},
+		"tg_whale_alert": {
+			"description": "Büyük kripto işlem takibi için Whale Alert Telegram"
+		},
+		"tg_lookonchain": {
+			"description": "On-chain analiz ve balina izleme için Lookonchain Telegram"
+		},
+		"tg_ton_official": {
+			"description": "Ekosistem güncellemeleri için resmi TON Topluluk Telegram"
+		},
+		"tg_solana_ann": {
+			"description": "Duyurular ve güncellemeler için Solana resmi Telegram"
+		},
+		"tg_arbitrum_ann": {
+			"description": "L2 duyuruları için Arbitrum resmi Telegram"
+		},
+		"tg_chaincatcher": {
+			"description": "Çince kripto haberleri ve araştırma için ChainCatcher Telegram"
+		},
+		"tg_techflow": {
+			"description": "Çince Web3 haberleri ve analizi için TechFlow Telegram"
+		},
+		"tg_crypto_brazil": {
+			"description": "Brezilya kripto topluluğu için Crypto Brasil Telegram"
+		}
 	}
 }

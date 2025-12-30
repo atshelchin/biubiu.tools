@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "EigenLayer - Protokol Restaking Ethereum | Keamanan Bersama",
+		"description": "Temukan EigenLayer, protokol yang memungkinkan restaking ETH untuk mengamankan berbagai layanan. Pelajari tentang AVS, reward restaking, dan memperluas keamanan Ethereum.",
+		"keywords": "EigenLayer, restaking, AVS, keamanan Ethereum, staking, yield kripto, shared security"
+	},
+	"overview": "EigenLayer adalah protokol restaking yang memungkinkan staker Ethereum untuk opt-in mengamankan layanan tambahan di luar konsensus Ethereum, mendapatkan reward ekstra sambil memperluas model keamanan jaringan. Didirikan oleh Sreeram Kannan pada tahun 2021 dan diluncurkan pada tahun 2023, EigenLayer telah menjadi salah satu inovasi paling signifikan dalam arsitektur keamanan Ethereum.\n\nInsight inti adalah bahwa ETH yang di-stake Ethereum (bernilai puluhan miliar) menyediakan keamanan cryptoeconomic yang dapat diperluas ke protokol lain. Daripada setiap layanan baru mem-bootstrap set validator mereka sendiri, mereka dapat memanfaatkan keamanan Ethereum yang ada melalui \"Actively Validated Services\" (AVS). Staker yang restake dengan EigenLayer dapat memvalidasi AVS ini dan mendapatkan reward tambahan, tetapi juga menghadapi slashing jika mereka berperilaku buruk.\n\nEigenLayer mendukung restaking native (validator mengarahkan withdrawal credential mereka ke EigenLayer) dan liquid restaking melalui LST seperti stETH. Protokol ini telah menarik lebih dari $15 miliar dalam deposit dan memungkinkan ekosistem baru AVS termasuk oracle, bridge, sequencer, dan layer ketersediaan data. Token EIGEN menambahkan mekanisme slashing tambahan untuk kesalahan intersubjective.",
+	"features": {
+		"1": {
+			"title": "Restaking ETH",
+			"description": "Restake ETH atau LST Anda untuk mendapatkan yield tambahan sambil mengamankan layanan baru"
+		},
+		"2": {
+			"title": "Actively Validated Services (AVS)",
+			"description": "Protokol baru dapat mem-bootstrap keamanan dengan memanfaatkan ETH yang di-stake Ethereum"
+		},
+		"3": {
+			"title": "Native & Liquid Restaking",
+			"description": "Restake langsung sebagai validator atau melalui liquid staking token seperti stETH"
+		},
+		"4": {
+			"title": "Delegasi Operator",
+			"description": "Delegasikan aset restaked Anda ke operator profesional yang menjalankan infrastruktur AVS"
+		},
+		"5": {
+			"title": "Token EIGEN",
+			"description": "Token governance yang dapat di-stake dan di-slash untuk kesalahan intersubjective"
+		},
+		"6": {
+			"title": "Model Shared Security",
+			"description": "Berbagai layanan berbagi keamanan Ethereum, mengurangi fragmentasi dan biaya"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Yield Staking yang Ditingkatkan",
+			"description": "Dapatkan reward tambahan di atas staking ETH dengan mengamankan AVS"
+		},
+		"2": {
+			"title": "Luncurkan Layanan yang Aman",
+			"description": "Protokol baru dapat mengakses keamanan grade Ethereum tanpa membangun set validator"
+		},
+		"3": {
+			"title": "Liquid Restaking Token",
+			"description": "Tahan LRT (eETH, ezETH, rsETH) yang mewakili posisi restaked dengan yield yang digabungkan"
+		},
+		"4": {
+			"title": "Bisnis Operator",
+			"description": "Jalankan infrastruktur untuk AVS dan dapatkan biaya dari delegator"
+		},
+		"5": {
+			"title": "Pooling Keamanan",
+			"description": "Proyek dapat berbagi biaya keamanan daripada masing-masing membangun infrastruktur independen"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu EigenLayer dan bagaimana cara kerja restaking?",
+			"answer": "EigenLayer memungkinkan staker ETH untuk 'restake' aset mereka untuk mengamankan layanan tambahan yang disebut AVS (Actively Validated Services). Anda stake ETH dengan validator Ethereum seperti biasa, tetapi juga berkomitmen untuk memvalidasi protokol lain. Sebagai imbalannya, Anda mendapatkan reward ekstra. Namun, jika Anda berperilaku buruk, Anda dapat di-slash oleh Ethereum dan AVS yang Anda amankan."
+		},
+		"2": {
+			"question": "Apa risiko restaking?",
+			"answer": "Restaking menambahkan risiko slashing tambahan—jika AVS yang telah Anda opt-in mendeteksi perilaku buruk, ETH yang Anda stake dapat di-slash. Ada juga risiko smart contract dalam EigenLayer itu sendiri dan kompleksitas dalam memahami semua layanan yang Anda amankan. Mulailah dengan operator dan AVS yang bereputasi baik, dan jangan restake lebih dari yang bersedia Anda kehilangan."
+		},
+		"3": {
+			"question": "Apa itu Liquid Restaking Token (LRT)?",
+			"answer": "LRT (seperti eETH dari ether.fi, ezETH dari Renzo, rsETH dari Kelp) mewakili posisi restaked dalam bentuk liquid. Alih-alih restaking langsung, Anda mendepositkan ETH dengan protokol LRT yang restake atas nama Anda. Anda menerima token liquid yang dapat Anda gunakan di DeFi sambil mendapatkan reward restaking. LRT menyederhanakan pengalaman restaking."
+		},
+		"4": {
+			"question": "Apa itu AVS dan mana yang sudah live?",
+			"answer": "AVS (Actively Validated Services) adalah protokol yang diamankan oleh restaker EigenLayer. AVS live termasuk EigenDA (ketersediaan data), Brevis (zkCoprocessor), Lagrange, dan lainnya. Lebih banyak diluncurkan secara teratur. Setiap AVS memiliki struktur reward dan profil risiko sendiri. Sebagai restaker, Anda dapat memilih AVS mana yang akan diamankan melalui operator Anda."
+		},
+		"5": {
+			"question": "Untuk apa token EIGEN digunakan?",
+			"answer": "EIGEN adalah token governance EigenLayer yang juga dapat di-stake. Fitur uniknya adalah 'intersubjective staking'—dapat di-slash untuk kesalahan yang memerlukan konsensus sosial untuk mendeteksi (tidak seperti slashing on-chain objektif). Staker EIGEN pada dasarnya mendukung sistem terhadap serangan yang tidak dapat dibuktikan secara algoritmik."
+		}
+	},
+	"cta": {
+		"ready": "Siap mendapatkan yield ekstra melalui restaking?",
+		"button": "Buka EigenLayer",
+		"note": "Perluas keamanan Ethereum dan dapatkan reward tambahan"
+	}
+}

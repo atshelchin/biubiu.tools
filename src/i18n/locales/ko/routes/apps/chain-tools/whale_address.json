@@ -1,170 +1,170 @@
 {
 	"category_seo": {
-		"title": "Whale Wallets & Treasury Tracking - Smart Money Insights | BiuBiu Tools",
-		"description": "Track whale wallets and protocol treasuries. Monitor smart money movements and institutional holdings in crypto.",
-		"keywords": "",
+		"title": "고래 지갑 및 트레저리 추적 - 스마트 머니 인사이트 | BiuBiu Tools",
+		"description": "고래 지갑과 프로토콜 트레저리를 추적하세요. 암호화폐의 스마트 머니 움직임과 기관 보유량을 모니터링합니다.",
+		"keywords": "암호화폐 고래, 고래 추적, 프로토콜 트레저리, 스마트 머니",
 		"faqs": [
 			{
-				"question": "What is a crypto whale?",
-				"answer": "A whale is an entity holding large amounts of cryptocurrency. Their trades can move markets. Tracking whale wallets can provide early signals of market movements."
+				"question": "암호화폐 고래란 무엇인가요?",
+				"answer": "고래는 대량의 암호화폐를 보유한 주체입니다. 그들의 거래는 시장을 움직일 수 있습니다. 고래 지갑 추적은 시장 움직임의 초기 신호를 제공할 수 있습니다."
 			},
 			{
-				"question": "How do I track whale wallets?",
-				"answer": "Use Nansen or Arkham for labeled wallet tracking. Set up alerts for large transfers on Etherscan. Follow accounts like @lookonchain that share whale activity."
+				"question": "고래 지갑을 어떻게 추적하나요?",
+				"answer": "레이블된 지갑 추적을 위해 Nansen 또는 Arkham을 사용하세요. Etherscan에서 대규모 전송에 대한 알림을 설정하세요. 고래 활동을 공유하는 @lookonchain 같은 계정을 팔로우하세요."
 			},
 			{
-				"question": "What are protocol treasuries?",
-				"answer": "Treasuries are funds controlled by DAOs or protocols. They're used for grants, liquidity, and development. Large treasuries (like Uniswap's) are tracked as indicators of project health."
+				"question": "프로토콜 트레저리란 무엇인가요?",
+				"answer": "트레저리는 DAO 또는 프로토콜이 관리하는 자금입니다. 보조금, 유동성 및 개발에 사용됩니다. 대규모 트레저리(예: Uniswap)는 프로젝트 건강 지표로 추적됩니다."
 			}
 		]
 	},
 	"tools": {
-		"bubblemaps": {
-			"description": "시각적 토큰 보유자 및 공급 분포 분석"
+		"ethereum_foundation": {
+			"description": "생태계 개발 및 연구 자금을 지원하는 이더리움 재단 트레저리 지갑"
+		},
+		"aave_treasury": {
+			"description": "대출 프로토콜 개발을 위한 DAO 자금을 관리하는 Aave 프로토콜 트레저리"
+		},
+		"compound_treasury": {
+			"description": "DeFi 대출 거버넌스 자금을 보유하는 Compound 프로토콜 트레저리"
+		},
+		"lido_treasury": {
+			"description": "리퀴드 스테이킹 프로토콜 자금을 관리하는 Lido DAO 트레저리"
+		},
+		"arbitrum_treasury": {
+			"description": "L2 생태계 보조금 및 개발 자금을 지원하는 Arbitrum DAO 트레저리"
+		},
+		"optimism_treasury": {
+			"description": "Superchain 생태계 펀딩을 위한 Optimism Collective 트레저리"
+		},
+		"gnosis_treasury": {
+			"description": "Safe 생태계 및 GNO 자금을 관리하는 Gnosis DAO 트레저리"
+		},
+		"ens_treasury": {
+			"description": "이더리움 네임 서비스 거버넌스 및 보조금을 위한 ENS DAO 트레저리"
+		},
+		"curve_multisig": {
+			"description": "프로토콜 보안 조치를 위한 Curve Finance 긴급 DAO 멀티시그"
+		},
+		"yearn_multisig": {
+			"description": "수익 프로토콜 운영을 관리하는 Yearn Finance 멀티시그 지갑"
+		},
+		"vitalik_wallet": {
+			"description": "Vitalik Buterin의 공개 지갑 - 이더리움 공동 창립자 및 영향력 있는 인물"
+		},
+		"justin_sun_wallet": {
+			"description": "Justin Sun 지갑 - 대규모 DeFi 포지션으로 유명한 TRON 창립자"
+		},
+		"tetranode_wallet": {
+			"description": "Tetranode 지갑 - 영향력 있는 DeFi 고래 및 초기 프로토콜 투자자"
+		},
+		"hsaka_wallet": {
+			"description": "Hsaka Trades 지갑 - GMX 및 dYdX의 저명한 퍼페츄얼 트레이더"
+		},
+		"binance_hot_wallet": {
+			"description": "BNB Chain 운영을 위한 바이낸스 거래소 핫 월렛"
+		},
+		"pancakeswap_treasury": {
+			"description": "CAKE 토큰 및 DEX 프로토콜 자금을 관리하는 PancakeSwap 트레저리"
+		},
+		"venus_treasury": {
+			"description": "BNB Chain 대출 플랫폼 거버넌스를 위한 Venus 프로토콜 트레저리"
+		},
+		"base_bridge": {
+			"description": "이더리움에서 브릿지된 자산을 보유하는 Base L2 브릿지 컨트랙트"
+		},
+		"aerodrome_treasury": {
+			"description": "Base 체인의 선도적 DEX를 위한 Aerodrome Finance 트레저리"
+		},
+		"polygon_ecosystem_fund": {
+			"description": "보조금 및 생태계 개발을 지원하는 Polygon 생태계 펀드"
+		},
+		"quickswap_treasury": {
+			"description": "Polygon 네이티브 DEX 프로토콜을 위한 QuickSwap 트레저리"
+		},
+		"avalanche_foundation": {
+			"description": "AVAX 생태계 성장 자금을 지원하는 Avalanche 재단 지갑"
+		},
+		"traderjoe_treasury": {
+			"description": "Avalanche의 선도적 DEX 및 DeFi 허브를 위한 Trader Joe 트레저리"
+		},
+		"solana_foundation": {
+			"description": "생태계 개발 및 보조금을 지원하는 솔라나 재단 지갑"
+		},
+		"jupiter_treasury": {
+			"description": "솔라나의 선도적 스왑 플랫폼을 위한 Jupiter 어그리게이터 트레저리"
+		},
+		"raydium_treasury": {
+			"description": "솔라나의 AMM 및 유동성 프로토콜을 위한 Raydium 트레저리"
+		},
+		"ton_foundation": {
+			"description": "텔레그램 블록체인 생태계를 지원하는 TON 재단 지갑"
+		},
+		"sui_foundation": {
+			"description": "Move 기반 L1 개발 자금을 지원하는 Sui 재단 트레저리"
+		},
+		"aptos_foundation": {
+			"description": "Move 기반 블록체인 생태계를 위한 Aptos 재단 지갑"
+		},
+		"cosmos_hub_pool": {
+			"description": "ATOM 생태계 거버넌스 펀딩을 위한 Cosmos Hub 커뮤니티 풀"
+		},
+		"cz_wallet": {
+			"description": "CZ (창펑 자오) 지갑 - 바이낸스 창립자 및 암호화폐 업계 리더"
+		},
+		"grayscale_wallet": {
+			"description": "비트코인 및 이더리움 ETF 보유량을 관리하는 Grayscale 기관 지갑"
+		},
+		"blackrock_wallet": {
+			"description": "기관 암호화폐 ETF 수탁을 위한 BlackRock iShares 지갑"
+		},
+		"fidelity_wallet": {
+			"description": "암호화폐 자산 관리를 위한 Fidelity 기관 지갑"
+		},
+		"a16z_wallet": {
+			"description": "Andreessen Horowitz 암호화폐 펀드 지갑 - 선도적 Web3 벤처 캐피탈"
+		},
+		"paradigm_wallet": {
+			"description": "Paradigm VC 지갑 - 주요 암호화폐 네이티브 투자 펀드"
+		},
+		"jump_trading_wallet": {
+			"description": "Jump Trading 지갑 - 기관 마켓 메이커 및 트레이딩 회사"
+		},
+		"wintermute_wallet": {
+			"description": "Wintermute 지갑 - 선도적 암호화폐 마켓 메이커 및 유동성 제공자"
+		},
+		"galaxy_digital_wallet": {
+			"description": "Galaxy Digital 지갑 - 기관 암호화폐 투자 및 트레이딩"
 		},
 		"lookonchain": {
 			"description": "고래 움직임 및 스마트 머니를 추적하는 온체인 분석 플랫폼"
 		},
-		"ethereum-foundation": {
-			"description": "Ethereum Foundation - Tool"
+		"whale_alert": {
+			"description": "주요 암호화폐의 대규모 거래에 대한 실시간 알림"
 		},
-		"aave-treasury": {
-			"description": "Aave Treasury - Tool"
+		"nansen_smart_money": {
+			"description": "레이블된 지갑 분석을 위한 Nansen의 스마트 머니 추적"
 		},
-		"compound-treasury": {
-			"description": "Compound Treasury - Tool"
+		"arkham_intelligence": {
+			"description": "지갑 익명화 해제 및 추적을 위한 블록체인 인텔리전스 플랫폼"
 		},
-		"lido-treasury": {
-			"description": "Lido DAO Treasury - Tool"
+		"debank_whales": {
+			"description": "최대 멀티체인 포트폴리오 보유자를 보여주는 DeBank 고래 랭킹"
 		},
-		"arbitrum-treasury": {
-			"description": "Arbitrum DAO Treasury - Tool"
+		"spot_on_chain": {
+			"description": "고래 추적 및 시장 인사이트를 위한 AI 기반 온체인 분석"
 		},
-		"optimism-treasury": {
-			"description": "Optimism Treasury - Tool"
+		"bubblemaps": {
+			"description": "시각적 토큰 보유자 및 공급 분포 분석"
 		},
-		"gnosis-treasury": {
-			"description": "Gnosis Treasury - Tool"
+		"etherscan_label": {
+			"description": "알려진 지갑 식별을 위한 Etherscan의 레이블된 주소 데이터베이스"
 		},
-		"ens-treasury": {
-			"description": "ENS DAO Treasury - Tool"
+		"zerion_whales": {
+			"description": "고래 포트폴리오 발견 및 추적을 위한 Zerion 탐색 기능"
 		},
-		"curve-multisig": {
-			"description": "Curve Emergency DAO - Tool"
-		},
-		"yearn-multisig": {
-			"description": "Yearn Multisig - Tool"
-		},
-		"vitalik-wallet": {
-			"description": "vitalik.eth - Tool"
-		},
-		"justin-sun-wallet": {
-			"description": "Justin Sun Wallet - Tool"
-		},
-		"tetranode-wallet": {
-			"description": "Tetranode - Tool"
-		},
-		"hsaka-wallet": {
-			"description": "Hsaka Trades - Tool"
-		},
-		"binance-hot-wallet": {
-			"description": "Binance Hot Wallet - Tool"
-		},
-		"pancakeswap-treasury": {
-			"description": "PancakeSwap Treasury - Tool"
-		},
-		"venus-treasury": {
-			"description": "Venus Treasury - Tool"
-		},
-		"base-bridge": {
-			"description": "Base Bridge - Tool"
-		},
-		"aerodrome-treasury": {
-			"description": "Aerodrome Treasury - Tool"
-		},
-		"polygon-ecosystem-fund": {
-			"description": "Polygon Ecosystem Fund - Tool"
-		},
-		"quickswap-treasury": {
-			"description": "QuickSwap Treasury - Tool"
-		},
-		"avalanche-foundation": {
-			"description": "Avalanche Foundation - Tool"
-		},
-		"traderjoe-treasury": {
-			"description": "Trader Joe Treasury - Tool"
-		},
-		"solana-foundation": {
-			"description": "Solana Foundation - Tool"
-		},
-		"jupiter-treasury": {
-			"description": "Jupiter Treasury - Tool"
-		},
-		"raydium-treasury": {
-			"description": "Raydium Treasury - Tool"
-		},
-		"ton-foundation": {
-			"description": "TON Foundation - Tool"
-		},
-		"sui-foundation": {
-			"description": "Sui Foundation - Tool"
-		},
-		"aptos-foundation": {
-			"description": "Aptos Foundation - Tool"
-		},
-		"cosmos-hub-pool": {
-			"description": "Cosmos Hub Community Pool - Tool"
-		},
-		"cz-wallet": {
-			"description": "CZ (Changpeng Zhao) - Tool"
-		},
-		"grayscale-wallet": {
-			"description": "Grayscale - Tool"
-		},
-		"blackrock-wallet": {
-			"description": "BlackRock iShares - Tool"
-		},
-		"fidelity-wallet": {
-			"description": "Fidelity - Tool"
-		},
-		"a16z-wallet": {
-			"description": "a16z Crypto - Tool"
-		},
-		"paradigm-wallet": {
-			"description": "Paradigm - Tool"
-		},
-		"jump-trading-wallet": {
-			"description": "Jump Trading - Tool"
-		},
-		"wintermute-wallet": {
-			"description": "Wintermute - Tool"
-		},
-		"galaxy-digital-wallet": {
-			"description": "Galaxy Digital - Tool"
-		},
-		"whale-alert": {
-			"description": "Whale Alert - Tool"
-		},
-		"nansen-smart-money": {
-			"description": "Nansen Smart Money - Tool"
-		},
-		"arkham-intelligence": {
-			"description": "Arkham Intelligence - Tool"
-		},
-		"debank-whales": {
-			"description": "DeBank Whales - Tool"
-		},
-		"spot-on-chain": {
-			"description": "Spot On Chain - Tool"
-		},
-		"etherscan-label": {
-			"description": "Etherscan Label Cloud - Tool"
-		},
-		"zerion-whales": {
-			"description": "Zerion Whale Tracker - Tool"
-		},
-		"watchers-pro": {
-			"description": "Watchers Pro - Tool"
+		"watchers_pro": {
+			"description": "고래 지갑 활동 알림이 있는 스마트 머니 추적 플랫폼"
 		}
 	}
 }

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "dYdX - Exchange Perpetual Terdesentralisasi | Trading Derivatif Kripto",
+		"description": "Temukan dYdX, exchange perpetual terdesentralisasi terkemuka. Trading dengan leverage hingga 20x, tanpa KYC, dan manfaatkan likuiditas mendalam di dYdX Chain.",
+		"keywords": "dYdX, perpetual trading, decentralized exchange, derivatif kripto, leverage trading, DeFi"
+	},
+	"overview": "dYdX adalah exchange terdesentralisasi terkemuka untuk kontrak perpetual, memungkinkan trader untuk long atau short aset kripto dengan leverage. Didirikan oleh Antonio Juliano pada tahun 2017 dan awalnya dibangun di Ethereum, dYdX telah berevolusi menjadi blockchain Layer 1 standalone yang dioptimalkan untuk trading derivatif.\n\nPlatform ini memelopori perpetual terdesentralisasi dalam skala besar, memproses miliaran volume harian selama periode puncak. Tidak seperti perp DEX berbasis AMM, dYdX menggunakan model orderbook yang mencocokkan pengalaman exchange terpusat tetapi dengan manfaat self-custody. dYdX Chain, dibangun dengan Cosmos SDK dan diluncurkan pada tahun 2023, menyediakan waktu blok sub-detik dan tanpa biaya gas untuk trading.\n\nDiferensiator kunci termasuk likuiditas mendalam melalui market maker, leverage hingga 20x pada pair utama, dan antarmuka trading canggih dengan tipe order lanjutan. Protokol diatur oleh pemegang token DYDX dan mendistribusikan pendapatan biaya trading ke staker. Dengan chain sendiri, dYdX telah mencapai desentralisasi penuh tanpa operator pusat yang mengontrol orderbook atau matching engine.",
+	"features": {
+		"1": {
+			"title": "Kontrak Perpetual",
+			"description": "Trading BTC, ETH, dan 100+ aset dengan kontrak perpetual dan leverage hingga 20x"
+		},
+		"2": {
+			"title": "Trading Orderbook",
+			"description": "Pengalaman trading profesional dengan limit order, stop-loss, dan likuiditas mendalam"
+		},
+		"3": {
+			"title": "dYdX Chain",
+			"description": "Blockchain L1 yang dibuat khusus dengan finalitas sub-detik dan tanpa biaya gas untuk trading"
+		},
+		"4": {
+			"title": "Self-Custody",
+			"description": "Trading tanpa mendepositkan ke entitas terpusat—dana tetap dalam kontrol Anda"
+		},
+		"5": {
+			"title": "Tanpa KYC",
+			"description": "Akses permissionless ke trading derivatif dari wallet mana pun"
+		},
+		"6": {
+			"title": "Staking DYDX",
+			"description": "Stake DYDX untuk mengamankan chain dan dapatkan bagian dari biaya trading"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Trading Leverage",
+			"description": "Perbesar keuntungan (dan kerugian) pada pergerakan harga kripto dengan leverage"
+		},
+		"2": {
+			"title": "Hedging Posisi",
+			"description": "Short untuk melindungi kepemilikan spot dari penurunan harga tanpa menjual"
+		},
+		"3": {
+			"title": "Market Making",
+			"description": "Sediakan likuiditas di orderbook dan dapatkan dari spread bid-ask"
+		},
+		"4": {
+			"title": "Arbitrase",
+			"description": "Trading perbedaan harga antara dYdX dan venue lainnya"
+		},
+		"5": {
+			"title": "Yield Staking",
+			"description": "Stake DYDX untuk mendapatkan pendapatan biaya trading yang didistribusikan ke staker"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu dYdX dan bagaimana cara kerjanya?",
+			"answer": "dYdX adalah exchange perpetual futures terdesentralisasi yang berjalan di blockchain sendiri (dYdX Chain). Anda mendepositkan dana, trading kontrak perpetual dengan leverage, dan menarik—semua tanpa KYC atau perantara terpusat. Orderbook dan matching engine sepenuhnya on-chain, dioperasikan oleh validator terdesentralisasi."
+		},
+		"2": {
+			"question": "Apa perbedaan antara dYdX v3 dan v4?",
+			"answer": "v3 berjalan di StarkEx (Ethereum L2) dengan orderbook terpusat yang dioperasikan oleh dYdX Trading Inc. v4 (dYdX Chain) sepenuhnya terdesentralisasi—blockchain Cosmos khusus di mana validator menjalankan orderbook. v4 memiliki lebih banyak pasar, tanpa biaya gas, dan biaya trading pergi ke staker. v3 sudah deprecated; semua trading baru di v4."
+		},
+		"3": {
+			"question": "Apakah dYdX aman digunakan?",
+			"answer": "dYdX adalah salah satu perp DEX yang paling mapan dengan miliaran volume trading. Dana diamankan oleh validator Cosmos dengan stake yang substansial. Risiko termasuk bug smart contract, kolusi validator (teoritis), dan likuidasi dari trading leverage. Selalu gunakan manajemen risiko yang tepat dan jangan pernah trading lebih dari yang mampu Anda kehilangan."
+		},
+		"4": {
+			"question": "Bagaimana cara kerja biaya di dYdX?",
+			"answer": "dYdX menggunakan model biaya maker-taker. Maker (limit order yang menambahkan likuiditas) biasanya membayar 0,02% atau kurang; taker (market order) membayar sekitar 0,05%. Trader volume tinggi mendapat diskon. Tidak ada biaya gas untuk trading—Anda hanya membayar biaya jaringan saat deposit/withdraw. Biaya trading didistribusikan ke staker DYDX."
+		},
+		"5": {
+			"question": "Bagaimana cara mendapatkan dana ke dYdX Chain?",
+			"answer": "Anda dapat bridge USDC dari berbagai chain menggunakan bridge bawaan atau bridge pihak ketiga seperti Squid. Depositkan USDC, yang berfungsi sebagai jaminan untuk semua trading. Penarikan bekerja dengan cara yang sama—minta penarikan dan bridge kembali ke chain pilihan Anda. Prosesnya biasanya memakan waktu beberapa menit."
+		}
+	},
+	"cta": {
+		"ready": "Siap trading perpetual?",
+		"button": "Buka dYdX",
+		"note": "Trading derivatif terdesentralisasi dengan leverage hingga 20x"
+	}
+}

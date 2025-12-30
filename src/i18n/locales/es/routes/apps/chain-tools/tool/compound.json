@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸",
+		"code": "es"
+	},
+	"seo": {
+		"title": "Compound - Protocolo de Mercado Monetario Algorítmico | Gana Intereses en Cripto",
+		"description": "Descubre Compound, el protocolo pionero de préstamos DeFi. Aprende cómo suministrar activos para ganar intereses, pedir prestado contra garantías y participar en la gobernanza.",
+		"keywords": "Compound, préstamos DeFi, mercado monetario, COMP, intereses cripto, préstamos, garantías"
+	},
+	"overview": "Compound es un protocolo pionero de mercado monetario descentralizado que permite a los usuarios suministrar activos cripto para ganar intereses o pedir prestado contra sus garantías. Lanzado en septiembre de 2018 por Compound Labs de Robert Leshner, se convirtió en uno de los primeros protocolos en demostrar que las tasas de interés algorítmicas podían equilibrar eficientemente la oferta y demanda de préstamos sin intermediarios.\n\nEl protocolo opera a través de mercados de préstamos aislados donde los proveedores depositan activos en pools de liquidez y reciben cTokens que representan su posición. Estos cTokens acumulan intereses continuamente, con tasas determinadas algorítmicamente según la utilización—la relación entre activos prestados y suministrados. Cuando la utilización es alta, las tasas de interés aumentan para incentivar más oferta; cuando es baja, las tasas disminuyen para fomentar préstamos.\n\nLa introducción del token de gobernanza COMP por Compound en 2020 catalizó el fenómeno del \"DeFi Summer\", popularizando el liquidity mining y demostrando cómo los incentivos de tokens podían impulsar la adopción del protocolo. Hoy, Compound V3 (Comet) representa un diseño simplificado y más eficiente con mejor gestión de riesgos y despliegue cross-chain en Ethereum, Polygon, Arbitrum y Base.",
+	"features": {
+		"1": {
+			"title": "Tasas de Interés Algorítmicas",
+			"description": "Las tasas de interés se ajustan automáticamente según la oferta y demanda mediante curvas de utilización"
+		},
+		"2": {
+			"title": "Sistema cToken",
+			"description": "Recibe cTokens al suministrar activos—acumulan intereses y son utilizables en DeFi"
+		},
+		"3": {
+			"title": "Préstamos Sobrecolateralizados",
+			"description": "Pide prestado activos contra tus garantías suministradas con umbrales de liquidación transparentes"
+		},
+		"4": {
+			"title": "Gobernanza COMP",
+			"description": "Los poseedores del token COMP gobiernan parámetros del protocolo, listados de activos y actualizaciones"
+		},
+		"5": {
+			"title": "Compound V3 (Comet)",
+			"description": "Préstamos simplificados de un solo activo con mayor eficiencia de capital y aislamiento de riesgos"
+		},
+		"6": {
+			"title": "Despliegue Multi-Cadena",
+			"description": "Disponible en Ethereum, Polygon, Arbitrum y Base con soporte nativo cross-chain"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Gana Ingresos Pasivos",
+			"description": "Suministra stablecoins o activos cripto para ganar intereses variables sin bloqueos"
+		},
+		"2": {
+			"title": "Accede a Liquidez",
+			"description": "Pide prestado contra tus tenencias cripto sin vender—útil para gastos u oportunidades"
+		},
+		"3": {
+			"title": "Posiciones Apalancadas",
+			"description": "Suministra garantía, pide prestado y repite para amplificar exposición a activos alcistas"
+		},
+		"4": {
+			"title": "Gestión de Tesorería",
+			"description": "DAOs y protocolos usan Compound para obtener rendimiento en activos ociosos de tesorería"
+		},
+		"5": {
+			"title": "Composabilidad DeFi",
+			"description": "Usa cTokens en otros protocolos—generan rendimiento y están ampliamente integrados"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es Compound y cómo funciona?",
+			"answer": "Compound es un protocolo de préstamos descentralizado donde puedes suministrar activos cripto para ganar intereses o pedir prestado contra garantías. Cuando suministras activos, recibes cTokens que representan tu depósito más los intereses acumulados. Las tasas de interés se determinan algorítmicamente—cuando la demanda de préstamos es alta en relación con la oferta, las tasas aumentan, y viceversa."
+		},
+		"2": {
+			"question": "¿Es seguro usar Compound?",
+			"answer": "Compound es uno de los protocolos DeFi más antiguos y probados en batalla, habiendo asegurado miles de millones en activos desde 2018. Ha pasado múltiples auditorías de seguridad y opera de forma transparente on-chain. Sin embargo, los riesgos incluyen vulnerabilidades de contratos inteligentes, liquidación durante volatilidad del mercado y manipulación de oráculos. Nunca deposites más de lo que puedas permitirte perder."
+		},
+		"3": {
+			"question": "¿Qué son los cTokens y cómo funcionan?",
+			"answer": "Los cTokens (como cUSDC, cETH) son tokens que generan intereses y que recibes al suministrar a Compound. Representan tu reclamo sobre los activos subyacentes más los intereses acumulados. La tasa de cambio entre cTokens y el activo subyacente aumenta continuamente a medida que se acumulan intereses. Puedes transferir, intercambiar o usar cTokens en otros protocolos DeFi."
+		},
+		"4": {
+			"question": "¿Qué sucede si me liquidan?",
+			"answer": "Si tu monto prestado excede el valor de tu garantía (considerando los factores de garantía), los liquidadores pueden pagar parte de tu deuda y reclamar tu garantía con descuento. Compound V3 ha mejorado esto con mecánicas de liquidación más graduales. Monitorea tu factor de salud y mantén suficiente garantía para evitar liquidación."
+		},
+		"5": {
+			"question": "¿Cuál es la diferencia entre Compound V2 y V3?",
+			"answer": "Compound V3 (Comet) es una versión rediseñada que se enfoca en un solo activo prestable por mercado (ej. USDC), haciéndolo más simple y eficiente en capital. Cuenta con mejor aislamiento de riesgos, sin cTokens para prestatarios y mecánicas de liquidación mejoradas. V2 permanece activo pero V3 es la versión recomendada para nuevos usuarios."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para ganar intereses en tus criptomonedas?",
+		"button": "Abrir Compound",
+		"note": "Comienza a ganar con tasas de interés algorítmicas"
+	}
+}

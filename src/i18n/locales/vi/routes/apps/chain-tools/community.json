@@ -2,6 +2,7 @@
 	"category_seo": {
 		"title": "Cộng Đồng Crypto - Discord, Telegram & Diễn Đàn | BiuBiu Tools",
 		"description": "Tìm và tham gia cộng đồng crypto. Máy chủ Discord, nhóm Telegram, diễn đàn và nền tảng cộng đồng cho các dự án Web3.",
+		"keywords": "cộng đồng crypto, discord crypto, telegram crypto, cộng đồng web3, diễn đàn blockchain",
 		"faqs": [
 			{
 				"question": "Cộng đồng crypto tụ tập ở đâu?",
@@ -16,5 +17,190 @@
 				"answer": "Không bao giờ tin DM cung cấp trợ giúp hoặc đầu tư. Thông báo chính thức đến qua các kênh đã xác minh. Đừng nhấp vào liên kết ngẫu nhiên. Admin sẽ không bao giờ yêu cầu seed phrase của bạn."
 			}
 		]
+	},
+	"tools": {
+		"discord_ethereum": {
+			"description": "Discord cộng đồng Ethereum chính thức cho thảo luận giao thức và phát triển"
+		},
+		"discord_uniswap": {
+			"description": "Discord cộng đồng Uniswap cho quản trị DEX và thảo luận DeFi"
+		},
+		"discord_aave": {
+			"description": "Discord cộng đồng Aave cho giao thức cho vay và thảo luận quản trị"
+		},
+		"discord_chainlink": {
+			"description": "Discord cộng đồng Chainlink cho hạ tầng oracle và hỗ trợ nhà phát triển"
+		},
+		"discord_arbitrum": {
+			"description": "Discord cộng đồng Arbitrum L2 cho hệ sinh thái và thảo luận phát triển"
+		},
+		"discord_optimism": {
+			"description": "Discord cộng đồng Optimism cho hệ sinh thái Superchain và quản trị"
+		},
+		"discord_base": {
+			"description": "Discord cộng đồng Coinbase Base L2 cho xây dựng hệ sinh thái"
+		},
+		"discord_zksync": {
+			"description": "Discord cộng đồng zkSync cho phát triển và hệ sinh thái zk-rollup"
+		},
+		"discord_starknet": {
+			"description": "Discord cộng đồng Starknet cho phát triển Cairo và mở rộng zk"
+		},
+		"discord_polygon": {
+			"description": "Discord cộng đồng Polygon cho mở rộng L2 và phát triển zkEVM"
+		},
+		"discord_ethglobal": {
+			"description": "Discord ETHGlobal cho người tham gia hackathon và nhà xây dựng Web3"
+		},
+		"discord_buildspace": {
+			"description": "Discord cộng đồng Buildspace cho học phát triển Web3"
+		},
+		"discord_alchemy": {
+			"description": "Discord nhà phát triển Alchemy cho hỗ trợ API và hạ tầng Web3"
+		},
+		"discord_hardhat": {
+			"description": "Discord cộng đồng Hardhat cho phát triển Solidity và công cụ"
+		},
+		"discord_foundry": {
+			"description": "Discord cộng đồng Foundry cho hỗ trợ framework kiểm thử Solidity"
+		},
+		"discord_openzeppelin": {
+			"description": "Discord OpenZeppelin cho bảo mật và tiêu chuẩn hợp đồng thông minh"
+		},
+		"discord_thegraph": {
+			"description": "Discord cộng đồng The Graph cho phát triển subgraph và lập chỉ mục"
+		},
+		"discord_scaffold_eth": {
+			"description": "Discord Scaffold-ETH cho tạo mẫu dApp nhanh và BuidlGuidl"
+		},
+		"discord_immunefi": {
+			"description": "Discord Immunefi cho thợ săn bug bounty và bảo mật Web3"
+		},
+		"discord_code4rena": {
+			"description": "Discord cộng đồng Code4rena cho kiểm toán bảo mật cạnh tranh"
+		},
+		"discord_sherlock": {
+			"description": "Discord cộng đồng Sherlock cho kiểm toán bảo mật và bảo hiểm"
+		},
+		"discord_secureum": {
+			"description": "Discord Secureum cho giáo dục và nghiên cứu bảo mật hợp đồng thông minh"
+		},
+		"discord_opensea": {
+			"description": "Discord cộng đồng OpenSea cho thảo luận marketplace NFT"
+		},
+		"discord_blur": {
+			"description": "Discord cộng đồng Blur cho trader NFT chuyên nghiệp và marketplace"
+		},
+		"discord_artblocks": {
+			"description": "Discord Art Blocks cho nhà sưu tập và nghệ sĩ nghệ thuật sinh thành"
+		},
+		"discord_foundation": {
+			"description": "Discord Foundation cho nhà sáng tạo và nhà sưu tập nghệ thuật số"
+		},
+		"discord_nouns": {
+			"description": "Discord Nouns DAO cho quản trị NFT CC0 và xây dựng cộng đồng"
+		},
+		"discord_punks": {
+			"description": "Discord cộng đồng CryptoPunks cho nhà sưu tập NFT OG"
+		},
+		"discord_bayc": {
+			"description": "Discord Bored Ape Yacht Club cho holder BAYC và hệ sinh thái Yuga"
+		},
+		"discord_azuki": {
+			"description": "Discord cộng đồng Azuki cho văn hóa NFT anime và cộng đồng"
+		},
+		"discord_pudgypenguins": {
+			"description": "Discord Pudgy Penguins cho cộng đồng và sáng kiến IP"
+		},
+		"discord_axie": {
+			"description": "Discord cộng đồng Axie Infinity cho game play-to-earn"
+		},
+		"discord_illuvium": {
+			"description": "Discord cộng đồng Illuvium cho game Web3 AAA"
+		},
+		"discord_immutable": {
+			"description": "Discord Immutable cho hạ tầng game Web3 và zkEVM"
+		},
+		"discord_loot": {
+			"description": "Discord cộng đồng Loot cho primitive game CC0 và nhà xây dựng"
+		},
+		"discord_treasure": {
+			"description": "Discord Treasure DAO cho metaverse game trên Arbitrum"
+		},
+		"discord_ronin": {
+			"description": "Discord Ronin Network cho hệ sinh thái L2 tập trung game"
+		},
+		"discord_bankless": {
+			"description": "Discord Bankless DAO cho cộng đồng truyền thông và giáo dục crypto"
+		},
+		"discord_gitcoin": {
+			"description": "Discord cộng đồng Gitcoin cho tài trợ hàng hóa công và grants"
+		},
+		"discord_ens": {
+			"description": "Discord ENS DAO cho quản trị Ethereum Name Service"
+		},
+		"discord_farcaster": {
+			"description": "Discord cộng đồng Farcaster cho giao thức xã hội phi tập trung"
+		},
+		"discord_lens": {
+			"description": "Discord Lens Protocol cho nhà xây dựng đồ thị xã hội phi tập trung"
+		},
+		"discord_friend_tech": {
+			"description": "Discord cộng đồng friend.tech cho SocialFi trên Base"
+		},
+		"discord_rabbithole": {
+			"description": "Discord RabbitHole cho nhiệm vụ learn-to-earn và giáo dục"
+		},
+		"discord_galxe": {
+			"description": "Discord cộng đồng Galxe cho chứng chỉ Web3 và chiến dịch"
+		},
+		"discord_solana": {
+			"description": "Discord cộng đồng Solana cho hệ sinh thái L1 hiệu suất cao"
+		},
+		"discord_avalanche": {
+			"description": "Discord cộng đồng Avalanche cho subnet và phát triển L1"
+		},
+		"discord_cosmos": {
+			"description": "Discord cộng đồng Cosmos cho hệ sinh thái IBC và appchain"
+		},
+		"discord_sui": {
+			"description": "Discord cộng đồng Sui cho phát triển ngôn ngữ Move"
+		},
+		"discord_aptos": {
+			"description": "Discord cộng đồng Aptos cho hệ sinh thái L1 dựa trên Move"
+		},
+		"discord_near": {
+			"description": "Discord NEAR Protocol cho phát triển L1 sharded"
+		},
+		"discord_ton": {
+			"description": "Discord cộng đồng TON cho blockchain tích hợp Telegram"
+		},
+		"tg_cointelegraph": {
+			"description": "Kênh Telegram Cointelegraph cho tin tức và cập nhật crypto"
+		},
+		"tg_whale_alert": {
+			"description": "Telegram Whale Alert cho theo dõi giao dịch crypto lớn"
+		},
+		"tg_lookonchain": {
+			"description": "Telegram Lookonchain cho phân tích on-chain và theo dõi cá voi"
+		},
+		"tg_ton_official": {
+			"description": "Telegram chính thức cộng đồng TON cho cập nhật hệ sinh thái"
+		},
+		"tg_solana_ann": {
+			"description": "Telegram chính thức Solana cho thông báo và cập nhật"
+		},
+		"tg_arbitrum_ann": {
+			"description": "Telegram chính thức Arbitrum cho thông báo L2"
+		},
+		"tg_chaincatcher": {
+			"description": "Telegram ChainCatcher cho tin tức và nghiên cứu crypto tiếng Trung"
+		},
+		"tg_techflow": {
+			"description": "Telegram TechFlow cho tin tức và phân tích Web3 tiếng Trung"
+		},
+		"tg_crypto_brazil": {
+			"description": "Telegram Crypto Brasil cho cộng đồng crypto Brazil"
+		}
 	}
 }

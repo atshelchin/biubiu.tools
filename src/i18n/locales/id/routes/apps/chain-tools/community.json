@@ -2,6 +2,7 @@
 	"category_seo": {
 		"title": "Komunitas Kripto - Discord, Telegram & Forum | BiuBiu Tools",
 		"description": "Temukan dan bergabung dengan komunitas kripto. Server Discord, grup Telegram, forum, dan platform komunitas untuk proyek Web3.",
+		"keywords": "komunitas kripto, discord kripto, telegram kripto, komunitas web3, forum blockchain",
 		"faqs": [
 			{
 				"question": "Di mana komunitas kripto berkumpul?",
@@ -16,5 +17,190 @@
 				"answer": "Jangan pernah percaya DM yang menawarkan bantuan atau investasi. Pengumuman resmi datang melalui saluran terverifikasi. Jangan klik link acak. Admin tidak akan pernah meminta seed phrase Anda."
 			}
 		]
+	},
+	"tools": {
+		"discord_ethereum": {
+			"description": "Discord komunitas Ethereum resmi untuk diskusi protokol dan pengembangan"
+		},
+		"discord_uniswap": {
+			"description": "Discord komunitas Uniswap untuk tata kelola DEX dan diskusi DeFi"
+		},
+		"discord_aave": {
+			"description": "Discord komunitas Aave untuk protokol lending dan diskusi tata kelola"
+		},
+		"discord_chainlink": {
+			"description": "Discord komunitas Chainlink untuk infrastruktur oracle dan dukungan developer"
+		},
+		"discord_arbitrum": {
+			"description": "Discord komunitas Arbitrum L2 untuk ekosistem dan diskusi pengembangan"
+		},
+		"discord_optimism": {
+			"description": "Discord komunitas Optimism untuk ekosistem Superchain dan tata kelola"
+		},
+		"discord_base": {
+			"description": "Discord komunitas Coinbase Base L2 untuk pembangunan ekosistem"
+		},
+		"discord_zksync": {
+			"description": "Discord komunitas zkSync untuk pengembangan dan ekosistem zk-rollup"
+		},
+		"discord_starknet": {
+			"description": "Discord komunitas Starknet untuk pengembangan Cairo dan scaling zk"
+		},
+		"discord_polygon": {
+			"description": "Discord komunitas Polygon untuk scaling L2 dan pengembangan zkEVM"
+		},
+		"discord_ethglobal": {
+			"description": "Discord ETHGlobal untuk peserta hackathon dan builder Web3"
+		},
+		"discord_buildspace": {
+			"description": "Discord komunitas Buildspace untuk belajar pengembangan Web3"
+		},
+		"discord_alchemy": {
+			"description": "Discord developer Alchemy untuk dukungan API dan infrastruktur Web3"
+		},
+		"discord_hardhat": {
+			"description": "Discord komunitas Hardhat untuk pengembangan Solidity dan tooling"
+		},
+		"discord_foundry": {
+			"description": "Discord komunitas Foundry untuk dukungan framework testing Solidity"
+		},
+		"discord_openzeppelin": {
+			"description": "Discord OpenZeppelin untuk keamanan dan standar smart contract"
+		},
+		"discord_thegraph": {
+			"description": "Discord komunitas The Graph untuk pengembangan subgraph dan indexing"
+		},
+		"discord_scaffold_eth": {
+			"description": "Discord Scaffold-ETH untuk prototyping dApp cepat dan BuidlGuidl"
+		},
+		"discord_immunefi": {
+			"description": "Discord Immunefi untuk pemburu bug bounty dan keamanan Web3"
+		},
+		"discord_code4rena": {
+			"description": "Discord komunitas Code4rena untuk audit keamanan kompetitif"
+		},
+		"discord_sherlock": {
+			"description": "Discord komunitas Sherlock untuk audit keamanan dan coverage"
+		},
+		"discord_secureum": {
+			"description": "Discord Secureum untuk edukasi dan riset keamanan smart contract"
+		},
+		"discord_opensea": {
+			"description": "Discord komunitas OpenSea untuk diskusi marketplace NFT"
+		},
+		"discord_blur": {
+			"description": "Discord komunitas Blur untuk trader NFT pro dan marketplace"
+		},
+		"discord_artblocks": {
+			"description": "Discord Art Blocks untuk kolektor dan seniman seni generatif"
+		},
+		"discord_foundation": {
+			"description": "Discord Foundation untuk kreator dan kolektor seni digital"
+		},
+		"discord_nouns": {
+			"description": "Discord Nouns DAO untuk tata kelola NFT CC0 dan pembangunan komunitas"
+		},
+		"discord_punks": {
+			"description": "Discord komunitas CryptoPunks untuk kolektor NFT OG"
+		},
+		"discord_bayc": {
+			"description": "Discord Bored Ape Yacht Club untuk holder BAYC dan ekosistem Yuga"
+		},
+		"discord_azuki": {
+			"description": "Discord komunitas Azuki untuk budaya NFT anime dan komunitas"
+		},
+		"discord_pudgypenguins": {
+			"description": "Discord Pudgy Penguins untuk komunitas dan inisiatif IP"
+		},
+		"discord_axie": {
+			"description": "Discord komunitas Axie Infinity untuk gaming play-to-earn"
+		},
+		"discord_illuvium": {
+			"description": "Discord komunitas Illuvium untuk gaming Web3 AAA"
+		},
+		"discord_immutable": {
+			"description": "Discord Immutable untuk infrastruktur gaming Web3 dan zkEVM"
+		},
+		"discord_loot": {
+			"description": "Discord komunitas Loot untuk primitif gaming CC0 dan builder"
+		},
+		"discord_treasure": {
+			"description": "Discord Treasure DAO untuk metaverse gaming di Arbitrum"
+		},
+		"discord_ronin": {
+			"description": "Discord Ronin Network untuk ekosistem L2 fokus gaming"
+		},
+		"discord_bankless": {
+			"description": "Discord Bankless DAO untuk komunitas media dan edukasi kripto"
+		},
+		"discord_gitcoin": {
+			"description": "Discord komunitas Gitcoin untuk pendanaan barang publik dan grants"
+		},
+		"discord_ens": {
+			"description": "Discord ENS DAO untuk tata kelola Ethereum Name Service"
+		},
+		"discord_farcaster": {
+			"description": "Discord komunitas Farcaster untuk protokol sosial terdesentralisasi"
+		},
+		"discord_lens": {
+			"description": "Discord Lens Protocol untuk builder graf sosial terdesentralisasi"
+		},
+		"discord_friend_tech": {
+			"description": "Discord komunitas friend.tech untuk SocialFi di Base"
+		},
+		"discord_rabbithole": {
+			"description": "Discord RabbitHole untuk quest learn-to-earn dan edukasi"
+		},
+		"discord_galxe": {
+			"description": "Discord komunitas Galxe untuk kredensial Web3 dan kampanye"
+		},
+		"discord_solana": {
+			"description": "Discord komunitas Solana untuk ekosistem L1 berkinerja tinggi"
+		},
+		"discord_avalanche": {
+			"description": "Discord komunitas Avalanche untuk subnet dan pengembangan L1"
+		},
+		"discord_cosmos": {
+			"description": "Discord komunitas Cosmos untuk ekosistem IBC dan appchain"
+		},
+		"discord_sui": {
+			"description": "Discord komunitas Sui untuk pengembangan bahasa Move"
+		},
+		"discord_aptos": {
+			"description": "Discord komunitas Aptos untuk ekosistem L1 berbasis Move"
+		},
+		"discord_near": {
+			"description": "Discord NEAR Protocol untuk pengembangan L1 sharded"
+		},
+		"discord_ton": {
+			"description": "Discord komunitas TON untuk blockchain terintegrasi Telegram"
+		},
+		"tg_cointelegraph": {
+			"description": "Kanal Telegram Cointelegraph untuk berita dan update kripto"
+		},
+		"tg_whale_alert": {
+			"description": "Telegram Whale Alert untuk pelacakan transaksi kripto besar"
+		},
+		"tg_lookonchain": {
+			"description": "Telegram Lookonchain untuk analisis on-chain dan pemantauan whale"
+		},
+		"tg_ton_official": {
+			"description": "Telegram resmi komunitas TON untuk update ekosistem"
+		},
+		"tg_solana_ann": {
+			"description": "Telegram resmi Solana untuk pengumuman dan update"
+		},
+		"tg_arbitrum_ann": {
+			"description": "Telegram resmi Arbitrum untuk pengumuman L2"
+		},
+		"tg_chaincatcher": {
+			"description": "Telegram ChainCatcher untuk berita dan riset kripto berbahasa Mandarin"
+		},
+		"tg_techflow": {
+			"description": "Telegram TechFlow untuk berita dan analisis Web3 berbahasa Mandarin"
+		},
+		"tg_crypto_brazil": {
+			"description": "Telegram Crypto Brasil untuk komunitas kripto Brasil"
+		}
 	}
 }

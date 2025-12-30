@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "Compound - Algoritmik Para Piyasası Protokolü | Kripto ile Faiz Kazan",
+		"description": "Öncü DeFi ödünç verme protokolü Compound'u keşfedin. Varlıkları sağlayarak faiz kazanmayı, teminat karşılığı borçlanmayı ve yönetişime katılmayı öğrenin.",
+		"keywords": "Compound, DeFi ödünç verme, para piyasası, COMP, kripto faiz, borçlanma, teminat"
+	},
+	"overview": "Compound, kullanıcıların kripto varlıklarını faiz kazanmak için sağlamasına veya teminatları karşılığında borçlanmasına olanak tanıyan öncü bir merkezi olmayan para piyasası protokolüdür. Robert Leshner'ın Compound Labs tarafından Eylül 2018'de başlatılan protokol, algoritmik faiz oranlarının aracılar olmadan ödünç verme arz ve talebini verimli bir şekilde eşleştirebileceğini gösteren ilk protokollerden biri oldu.\n\nProtokol, sağlayıcıların likidite havuzlarına varlık yatırdığı ve pozisyonlarını temsil eden cToken'lar aldığı izole ödünç verme piyasaları aracılığıyla çalışır. Bu cToken'lar, kullanım oranına (ödünç alınan ve sağlanan varlıkların oranı) göre algoritmik olarak belirlenen oranlarla sürekli faiz tahakkuk eder. Kullanım yüksek olduğunda, faiz oranları daha fazla arzı teşvik etmek için artar; düşük olduğunda, borçlanmayı teşvik etmek için oranlar azalır.\n\nCompound'un 2020'de COMP yönetişim token'ını piyasaya sürmesi \"DeFi Yazı\" olgusunu katalize etti, likidite madenciliğini popülerleştirdi ve token teşviklerinin protokol benimsemesini nasıl hızlandırabileceğini gösterdi. Bugün, Compound V3 (Comet), Ethereum, Polygon, Arbitrum ve Base üzerinde çapraz zincir dağıtımı ile geliştirilmiş risk yönetimi ve daha basit, daha verimli bir tasarımı temsil ediyor.",
+	"features": {
+		"1": {
+			"title": "Algoritmik Faiz Oranları",
+			"description": "Faiz oranları, kullanım eğrileri aracılığıyla arz ve talebe göre otomatik olarak ayarlanır"
+		},
+		"2": {
+			"title": "cToken Sistemi",
+			"description": "Varlık sağladığınızda cToken'lar alırsınız—faiz tahakkuk ederler ve DeFi'de kullanılabilirler"
+		},
+		"3": {
+			"title": "Aşırı Teminatlı Borçlanma",
+			"description": "Şeffaf tasfiye eşikleri ile sağlanan teminatınıza karşı varlık ödünç alın"
+		},
+		"4": {
+			"title": "COMP Yönetişimi",
+			"description": "COMP token sahipleri protokol parametrelerini, varlık listelerini ve yükseltmeleri yönetir"
+		},
+		"5": {
+			"title": "Compound V3 (Comet)",
+			"description": "Geliştirilmiş sermaye verimliliği ve risk izolasyonu ile basitleştirilmiş tek varlık borçlanma"
+		},
+		"6": {
+			"title": "Çoklu Zincir Dağıtımı",
+			"description": "Yerel çapraz zincir desteği ile Ethereum, Polygon, Arbitrum ve Base'de mevcut"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Pasif Gelir Elde Etme",
+			"description": "Kilitlenmeler olmadan değişken faiz kazanmak için stablecoin'ler veya kripto varlıklar sağlayın"
+		},
+		"2": {
+			"title": "Likiditeye Erişim",
+			"description": "Satmadan kripto varlıklarınıza karşı borç alın—harcamalar veya fırsatlar için kullanışlıdır"
+		},
+		"3": {
+			"title": "Kaldıraçlı Pozisyonlar",
+			"description": "Teminat sağlayın, borç alın ve yükselişe inandığınız varlıklara maruziyetinizi artırmak için tekrarlayın"
+		},
+		"4": {
+			"title": "Hazine Yönetimi",
+			"description": "DAO'lar ve protokoller boşta duran hazine varlıkları üzerinden getiri elde etmek için Compound kullanır"
+		},
+		"5": {
+			"title": "DeFi Birleştirilebilirliği",
+			"description": "cToken'ları diğer protokollerde kullanın—getiri sağlarlar ve yaygın olarak entegre edilmişlerdir"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Compound nedir ve nasıl çalışır?",
+			"answer": "Compound, kripto varlıkları sağlayarak faiz kazanabileceğiniz veya teminat karşılığında borçlanabileceğiniz merkezi olmayan bir ödünç verme protokolüdür. Varlık sağladığınızda, depozitonuzu artı tahakkuk eden faizi temsil eden cToken'lar alırsınız. Faiz oranları algoritmik olarak belirlenir—borçlanma talebi arza göre yüksek olduğunda oranlar artar, tersi durumda azalır."
+		},
+		"2": {
+			"question": "Compound kullanımı güvenli mi?",
+			"answer": "Compound, 2018'den beri milyarlarca dolarlık varlığı güvence altına alan en eski ve en test edilmiş DeFi protokollerinden biridir. Birden fazla güvenlik denetiminden geçmiştir ve zincir üzerinde şeffaf bir şekilde çalışır. Ancak, riskler arasında akıllı sözleşme güvenlik açıkları, piyasa oynaklığı sırasında tasfiye ve oracle manipülasyonu bulunur. Kaybetmeyi göze alabileceğinizden fazlasını asla yatırmayın."
+		},
+		"3": {
+			"question": "cToken'lar nedir ve nasıl çalışırlar?",
+			"answer": "cToken'lar (cUSDC, cETH gibi), Compound'a sağladığınızda aldığınız faiz getiren token'lardır. Temel varlıklar artı tahakkuk eden faiz üzerindeki hak talebinizi temsil ederler. cToken'lar ile temel varlık arasındaki döviz kuru, faiz tahakkuk ettikçe sürekli artar. cToken'ları transfer edebilir, takas edebilir veya diğer DeFi protokollerinde kullanabilirsiniz."
+		},
+		"4": {
+			"question": "Tasfiye edildiğimde ne olur?",
+			"answer": "Ödünç aldığınız miktar teminat değerinizi (teminat faktörlerini hesaba katarak) aşarsa, tasfiye ediciler borcunuzun bir kısmını ödeyebilir ve teminatınızı indirimli olarak talep edebilir. Compound V3, daha kademeli tasfiye mekanikleri ile bunu geliştirmiştir. Sağlık faktörünüzü izleyin ve tasfiye edilmemek için yeterli teminat tutun."
+		},
+		"5": {
+			"question": "Compound V2 ve V3 arasındaki fark nedir?",
+			"answer": "Compound V3 (Comet), piyasa başına tek bir ödünç alınabilir varlığa (örn. USDC) odaklanan yeniden tasarlanmış bir versiyondur ve bu da onu daha basit ve daha sermaye verimli hale getirir. Daha iyi risk izolasyonu, borç alanlar için cToken yok ve geliştirilmiş tasfiye mekanikleri içerir. V2 aktif kalır ancak yeni kullanıcılar için V3 önerilir."
+		}
+	},
+	"cta": {
+		"ready": "Kriptonuzda faiz kazanmaya hazır mısınız?",
+		"button": "Compound'u Aç",
+		"note": "Algoritmik faiz oranları ile kazanmaya başlayın"
+	}
+}

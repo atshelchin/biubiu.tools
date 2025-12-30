@@ -42,7 +42,12 @@
       "Bash(fi)",
       "Bash(python3:*)",
       "Bash(for f in static/contracts/*.json)",
-      "Bash(do echo \"=== $f ===\")"
+      "Bash(do echo \"=== $f ===\")",
+      "Bash(for file in /Users/shelchin/ai-repo2025/biubiu.tools/src/i18n/locales/ko/routes/apps/chain-tools/tool/{aave,1inch,curve,lido,gmx}.json)",
+      "Bash(do echo \"Checking $file...\")",
+      "Bash(for file in src/i18n/locales/vi/routes/apps/chain-tools/tool/{aave,1inch,curve,lido,gmx}.json)",
+      "Bash(for file in compound maker eigenlayer pendle dydx)",
+      "Bash(do python3 -m json.tool /Users/shelchin/ai-repo2025/biubiu.tools/src/i18n/locales/es/routes/apps/chain-tools/tool/$file.json)"
     ],
     "deny": [],
     "ask": []

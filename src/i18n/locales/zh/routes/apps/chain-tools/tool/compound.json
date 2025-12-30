@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "中文",
+		"englishName": "Chinese",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Compound - 算法货币市场协议 | 加密资产生息",
+		"description": "了解 Compound，开创性的 DeFi 借贷协议。学习如何存入资产赚取利息、以抵押品借款并参与治理。",
+		"keywords": "Compound, DeFi 借贷，货币市场，COMP, 加密利息，借款，抵押品"
+	},
+	"overview": "Compound 是开创性的去中心化货币市场协议，用户可以存入加密资产赚取利息，或以抵押品借款。该协议由 Robert Leshner 的 Compound Labs 于 2018 年 9 月推出，是最早证明算法利率可以在没有中介的情况下有效匹配借贷供需的协议之一。\n\n该协议通过隔离的借贷市场运作，存款人将资产存入流动性池并收到代表其头寸的 cToken。这些 cToken 持续累积利息，利率根据利用率（借入资产与存入资产的比率）通过算法确定。当利用率高时，利率上升以激励更多存款；当利用率低时，利率下降以鼓励借款。\n\nCompound 在 2020 年推出 COMP 治理代币，催生了 \"DeFi 之夏\" 现象，普及了流动性挖矿，并展示了代币激励如何引导协议采用。如今，Compound V3（Comet）代表了一种简化、更高效的设计，具有改进的风险管理，并在以太坊、Polygon、Arbitrum 和 Base 上跨链部署。",
+	"features": {
+		"1": {
+			"title": "算法利率",
+			"description": "利率根据供需通过利用率曲线自动调整"
+		},
+		"2": {
+			"title": "cToken 系统",
+			"description": "存入资产时收到 cToken——它们累积利息并可在 DeFi 中使用"
+		},
+		"3": {
+			"title": "超额抵押借款",
+			"description": "以您存入的抵押品借入资产，具有透明的清算阈值"
+		},
+		"4": {
+			"title": "COMP 治理",
+			"description": "COMP 代币持有者管理协议参数、资产上架和升级"
+		},
+		"5": {
+			"title": "Compound V3 (Comet)",
+			"description": "简化的单一资产借款，提高资本效率和风险隔离"
+		},
+		"6": {
+			"title": "多链部署",
+			"description": "在以太坊、Polygon、Arbitrum 和 Base 上可用，原生支持跨链"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "赚取被动收入",
+			"description": "存入稳定币或加密资产赚取浮动利息，无需锁定"
+		},
+		"2": {
+			"title": "获取流动性",
+			"description": "以您的加密资产为抵押借款而不卖出——用于支出或把握机会"
+		},
+		"3": {
+			"title": "杠杆仓位",
+			"description": "存入抵押品、借款、重复——放大您看好资产的敞口"
+		},
+		"4": {
+			"title": "金库管理",
+			"description": "DAO 和协议使用 Compound 为闲置金库资产赚取收益"
+		},
+		"5": {
+			"title": "DeFi 可组合性",
+			"description": "在其他协议中使用 cToken——它们是生息的且广泛集成"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 Compound，它如何运作？",
+			"answer": "Compound 是一个去中心化借贷协议，您可以存入加密资产赚取利息或以抵押品借款。当您存入资产时，您会收到代表您存款加累积利息的 cToken。利率通过算法确定——当借款需求相对于供应较高时，利率上升，反之亦然。"
+		},
+		"2": {
+			"question": "使用 Compound 安全吗？",
+			"answer": "Compound 是最古老和经过最多考验的 DeFi 协议之一，自 2018 年以来保护了数十亿资产。它经过多次安全审计，并在链上透明运行。然而，风险包括智能合约漏洞、市场波动期间的清算和预言机操纵。永远不要存入超过您能承受损失的金额。"
+		},
+		"3": {
+			"question": "什么是 cToken，它们如何运作？",
+			"answer": "cToken（如 cUSDC、cETH）是您存入 Compound 时收到的生息代币。它们代表您对基础资产加累积利息的索取权。cToken 与基础资产之间的汇率随着利息累积而持续增加。您可以转移、交易或在其他 DeFi 协议中使用 cToken。"
+		},
+		"4": {
+			"question": "如果我被清算会怎样？",
+			"answer": "如果您的借款金额超过抵押品价值（考虑抵押因子），清算人可以偿还您部分债务并以折扣价获取您的抵押品。Compound V3 通过更渐进的清算机制改进了这一点。监控您的健康因子，保持足够的抵押品以避免清算。"
+		},
+		"5": {
+			"question": "Compound V2 和 V3 有什么区别？",
+			"answer": "Compound V3（Comet）是重新设计的版本，专注于每个市场单一可借资产（例如 USDC），使其更简单、更有资本效率。它具有更好的风险隔离、借款人无需 cToken，以及改进的清算机制。V2 仍在运行，但建议新用户使用 V3。"
+		}
+	},
+	"cta": {
+		"ready": "准备好用您的加密资产赚取利息了吗？",
+		"button": "打开 Compound",
+		"note": "开始使用算法利率赚取收益"
+	}
+}

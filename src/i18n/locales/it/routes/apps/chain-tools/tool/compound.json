@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹",
+		"code": "it"
+	},
+	"seo": {
+		"title": "Compound - Protocollo di Mercato Monetario Algoritmico | Guadagna Interessi su Crypto",
+		"description": "Scopri Compound, il protocollo DeFi di prestito pionieristico. Impara come fornire asset per guadagnare interessi, prendere in prestito contro collaterale e partecipare alla governance.",
+		"keywords": "Compound, DeFi lending, money market, COMP, interessi crypto, prestito, collaterale"
+	},
+	"overview": "Compound è un protocollo di mercato monetario decentralizzato pionieristico che consente agli utenti di fornire asset crypto per guadagnare interessi o prendere in prestito contro il proprio collaterale. Lanciato nel settembre 2018 da Compound Labs di Robert Leshner, è diventato uno dei primi protocolli a dimostrare che i tassi di interesse algoritmici possono efficacemente abbinare domanda e offerta di prestito senza intermediari.\n\nIl protocollo opera attraverso mercati di prestito isolati dove i fornitori depositano asset in pool di liquidità e ricevono cToken che rappresentano la loro posizione. Questi cToken accumulano continuamente interessi, con tassi determinati algoritmicamente in base all'utilizzo—il rapporto tra asset presi in prestito e forniti. Quando l'utilizzo è alto, i tassi di interesse aumentano per incentivare maggiore offerta; quando è basso, i tassi diminuiscono per incoraggiare il prestito.\n\nL'introduzione nel 2020 del token di governance COMP da parte di Compound ha catalizzato il fenomeno del \"DeFi Summer\", rendendo popolare il liquidity mining e dimostrando come gli incentivi tokenizzati possano stimolare l'adozione del protocollo. Oggi, Compound V3 (Comet) rappresenta un design semplificato e più efficiente con una migliore gestione del rischio e distribuzione cross-chain su Ethereum, Polygon, Arbitrum e Base.",
+	"features": {
+		"1": {
+			"title": "Tassi di Interesse Algoritmici",
+			"description": "I tassi di interesse si adattano automaticamente in base a domanda e offerta attraverso curve di utilizzo"
+		},
+		"2": {
+			"title": "Sistema cToken",
+			"description": "Ricevi cToken quando fornisci asset—accumulano interessi e sono utilizzabili in tutto DeFi"
+		},
+		"3": {
+			"title": "Prestito Sovracollateralizzato",
+			"description": "Prendi in prestito asset contro il tuo collaterale fornito con soglie di liquidazione trasparenti"
+		},
+		"4": {
+			"title": "Governance COMP",
+			"description": "I detentori del token COMP governano parametri del protocollo, listing di asset e aggiornamenti"
+		},
+		"5": {
+			"title": "Compound V3 (Comet)",
+			"description": "Prestito semplificato di un singolo asset con maggiore efficienza del capitale e isolamento del rischio"
+		},
+		"6": {
+			"title": "Distribuzione Multi-Chain",
+			"description": "Disponibile su Ethereum, Polygon, Arbitrum e Base con supporto nativo cross-chain"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Guadagna Reddito Passivo",
+			"description": "Fornisci stablecoin o asset crypto per guadagnare interessi variabili senza blocchi"
+		},
+		"2": {
+			"title": "Accedi alla Liquidità",
+			"description": "Prendi in prestito contro le tue partecipazioni crypto senza vendere—utile per spese o opportunità"
+		},
+		"3": {
+			"title": "Posizioni con Leva",
+			"description": "Fornisci collaterale, prendi in prestito e ripeti per amplificare l'esposizione ad asset su cui sei rialzista"
+		},
+		"4": {
+			"title": "Gestione del Tesoro",
+			"description": "DAO e protocolli usano Compound per guadagnare rendimenti su asset di tesoro inattivi"
+		},
+		"5": {
+			"title": "Componibilità DeFi",
+			"description": "Usa cToken in altri protocolli—sono token generatori di rendimento e ampiamente integrati"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Cos'è Compound e come funziona?",
+			"answer": "Compound è un protocollo di prestito decentralizzato dove puoi fornire asset crypto per guadagnare interessi o prendere in prestito contro collaterale. Quando fornisci asset, ricevi cToken che rappresentano il tuo deposito più interessi accumulati. I tassi di interesse sono determinati algoritmicamente—quando la domanda di prestito è alta rispetto all'offerta, i tassi aumentano, e viceversa."
+		},
+		"2": {
+			"question": "È sicuro usare Compound?",
+			"answer": "Compound è uno dei protocolli DeFi più vecchi e testati in battaglia, avendo protetto miliardi di asset dal 2018. Ha subito molteplici audit di sicurezza e opera in modo trasparente on-chain. Tuttavia, i rischi includono vulnerabilità degli smart contract, liquidazione durante volatilità di mercato e manipolazione degli oracoli. Non depositare mai più di quanto puoi permetterti di perdere."
+		},
+		"3": {
+			"question": "Cosa sono i cToken e come funzionano?",
+			"answer": "I cToken (come cUSDC, cETH) sono token generatori di interessi che ricevi quando fornisci a Compound. Rappresentano il tuo diritto sugli asset sottostanti più interessi accumulati. Il tasso di cambio tra cToken e l'asset sottostante aumenta continuamente man mano che gli interessi si accumulano. Puoi trasferire, scambiare o usare cToken in altri protocolli DeFi."
+		},
+		"4": {
+			"question": "Cosa succede se vengo liquidato?",
+			"answer": "Se il tuo importo preso in prestito supera il valore del tuo collaterale (tenendo conto dei fattori di collaterale), i liquidatori possono ripagare parte del tuo debito e richiedere il tuo collaterale con uno sconto. Compound V3 ha migliorato questo con meccaniche di liquidazione più graduali. Monitora il tuo fattore di salute e mantieni collaterale sufficiente per evitare la liquidazione."
+		},
+		"5": {
+			"question": "Qual è la differenza tra Compound V2 e V3?",
+			"answer": "Compound V3 (Comet) è una versione riprogettata che si concentra su un singolo asset prendibile in prestito per mercato (ad es. USDC), rendendolo più semplice e più efficiente in termini di capitale. Presenta un migliore isolamento del rischio, nessun cToken per i mutuatari e meccaniche di liquidazione migliorate. V2 rimane attivo ma V3 è la versione consigliata per i nuovi utenti."
+		}
+	},
+	"cta": {
+		"ready": "Pronto a guadagnare interessi sulle tue crypto?",
+		"button": "Apri Compound",
+		"note": "Inizia a guadagnare con tassi di interesse algoritmici"
+	}
+}

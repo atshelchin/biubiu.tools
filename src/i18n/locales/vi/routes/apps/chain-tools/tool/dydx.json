@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "dYdX - Sàn Giao dịch Perpetual Phi tập trung | Giao dịch Phái sinh Crypto",
+		"description": "Khám phá dYdX, sàn giao dịch perpetual phi tập trung hàng đầu. Giao dịch với đòn bẩy lên đến 20x, không cần KYC và hưởng lợi từ thanh khoản sâu trên dYdX Chain.",
+		"keywords": "dYdX, perpetual trading, decentralized exchange, crypto derivatives, leverage trading, DeFi"
+	},
+	"overview": "dYdX là sàn giao dịch phi tập trung hàng đầu cho hợp đồng perpetual, cho phép trader đi long hoặc short trên tài sản crypto với đòn bẩy. Được thành lập bởi Antonio Juliano vào năm 2017 và ban đầu được xây dựng trên Ethereum, dYdX đã phát triển thành blockchain Layer 1 độc lập được tối ưu hóa cho giao dịch phái sinh.\n\nNền tảng tiên phong perpetual phi tập trung ở quy mô lớn, xử lý hàng tỷ đô la khối lượng giao dịch hàng ngày trong các giai đoạn cao điểm. Không giống như các perp DEX dựa trên AMM, dYdX sử dụng mô hình sổ lệnh phù hợp với trải nghiệm của sàn giao dịch tập trung nhưng với lợi ích tự quản lý. dYdX Chain, được xây dựng với Cosmos SDK và ra mắt vào năm 2023, cung cấp thời gian block dưới một giây và không có phí gas cho giao dịch.\n\nĐiểm khác biệt chính bao gồm thanh khoản sâu thông qua các nhà tạo lập thị trường, đòn bẩy lên đến 20x trên các cặp chính và giao diện giao dịch tinh vi với các loại lệnh nâng cao. Giao thức được quản trị bởi người nắm giữ token DYDX và phân phối doanh thu phí giao dịch cho người stake. Với chuỗi riêng, dYdX đã đạt được phi tập trung hoàn toàn mà không có operator trung tâm kiểm soát sổ lệnh hoặc công cụ khớp lệnh.",
+	"features": {
+		"1": {
+			"title": "Hợp Đồng Perpetual",
+			"description": "Giao dịch BTC, ETH và hơn 100 tài sản với hợp đồng perpetual và đòn bẩy lên đến 20x"
+		},
+		"2": {
+			"title": "Giao Dịch Sổ Lệnh",
+			"description": "Trải nghiệm giao dịch chuyên nghiệp với lệnh giới hạn, cắt lỗ và thanh khoản sâu"
+		},
+		"3": {
+			"title": "dYdX Chain",
+			"description": "Blockchain L1 chuyên dụng với tính hoàn thiện dưới một giây và không phí gas cho giao dịch"
+		},
+		"4": {
+			"title": "Tự Quản Lý",
+			"description": "Giao dịch mà không cần gửi vào thực thể tập trung—tiền vẫn trong quyền kiểm soát của bạn"
+		},
+		"5": {
+			"title": "Không Cần KYC",
+			"description": "Truy cập không cần phép vào giao dịch phái sinh từ bất kỳ ví nào"
+		},
+		"6": {
+			"title": "DYDX Staking",
+			"description": "Stake DYDX để bảo mật chuỗi và kiếm phần chia sẻ phí giao dịch"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Giao Dịch Đòn Bẩy",
+			"description": "Khuếch đại lợi nhuận (và thua lỗ) từ biến động giá crypto với đòn bẩy"
+		},
+		"2": {
+			"title": "Phòng Ngừa Vị Thế",
+			"description": "Short để bảo vệ nắm giữ spot chống lại giảm giá mà không cần bán"
+		},
+		"3": {
+			"title": "Tạo Lập Thị Trường",
+			"description": "Cung cấp thanh khoản trên sổ lệnh và kiếm từ chênh lệch mua-bán"
+		},
+		"4": {
+			"title": "Kinh Doanh Chênh Lệch Giá",
+			"description": "Giao dịch chênh lệch giá giữa dYdX và các địa điểm khác"
+		},
+		"5": {
+			"title": "Lợi Nhuận Staking",
+			"description": "Stake DYDX để kiếm doanh thu phí giao dịch được phân phối cho người stake"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "dYdX là gì và nó hoạt động như thế nào?",
+			"answer": "dYdX là sàn giao dịch perpetual futures phi tập trung chạy trên blockchain riêng (dYdX Chain). Bạn gửi tiền, giao dịch hợp đồng perpetual với đòn bẩy và rút—tất cả mà không cần KYC hoặc trung gian tập trung. Sổ lệnh và công cụ khớp lệnh hoàn toàn trên chuỗi, được vận hành bởi các validator phi tập trung."
+		},
+		"2": {
+			"question": "Sự khác biệt giữa dYdX v3 và v4 là gì?",
+			"answer": "v3 chạy trên StarkEx (Ethereum L2) với sổ lệnh tập trung do dYdX Trading Inc vận hành. v4 (dYdX Chain) hoàn toàn phi tập trung—một blockchain Cosmos chuyên dụng nơi các validator chạy sổ lệnh. v4 có nhiều thị trường hơn, không phí gas và phí giao dịch đến người stake. v3 đã lỗi thời; tất cả giao dịch mới đều trên v4."
+		},
+		"3": {
+			"question": "dYdX có an toàn để sử dụng không?",
+			"answer": "dYdX là một trong những perp DEX được thiết lập nhất với hàng tỷ đô la khối lượng giao dịch. Tiền được bảo mật bởi các validator Cosmos với stake đáng kể. Rủi ro bao gồm lỗi hợp đồng thông minh, thông đồng validator (lý thuyết) và thanh lý từ giao dịch đòn bẩy. Luôn sử dụng quản lý rủi ro phù hợp và không bao giờ giao dịch nhiều hơn số tiền bạn có thể mất."
+		},
+		"4": {
+			"question": "Phí hoạt động như thế nào trên dYdX?",
+			"answer": "dYdX sử dụng mô hình phí maker-taker. Maker (lệnh giới hạn thêm thanh khoản) thường trả 0.02% hoặc ít hơn; taker (lệnh thị trường) trả khoảng 0.05%. Trader khối lượng cao được giảm giá. Không có phí gas cho giao dịch—bạn chỉ trả phí mạng khi gửi/rút. Phí giao dịch được phân phối cho người stake DYDX."
+		},
+		"5": {
+			"question": "Làm thế nào để đưa tiền lên dYdX Chain?",
+			"answer": "Bạn có thể bridge USDC từ các chuỗi khác nhau bằng bridge tích hợp sẵn hoặc bridge của bên thứ ba như Squid. Gửi USDC, nó đóng vai trò là tài sản thế chấp cho tất cả giao dịch. Rút tiền hoạt động tương tự—yêu cầu rút và bridge lại về chuỗi bạn ưa thích. Quá trình thường mất vài phút."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng giao dịch perpetual?",
+		"button": "Mở dYdX",
+		"note": "Giao dịch phái sinh phi tập trung với đòn bẩy lên đến 20x"
+	}
+}

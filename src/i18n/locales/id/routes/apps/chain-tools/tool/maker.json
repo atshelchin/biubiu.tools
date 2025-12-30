@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "MakerDAO - Protokol Stablecoin Terdesentralisasi | DAI",
+		"description": "Temukan MakerDAO, protokol di balik DAI—stablecoin terdesentralisasi terkemuka. Pelajari cara menghasilkan DAI, mengelola vault, dan berpartisipasi dalam governance.",
+		"keywords": "MakerDAO, DAI, stablecoin, DeFi, CDP, vault, MKR, terdesentralisasi"
+	},
+	"overview": "MakerDAO adalah organisasi otonom terdesentralisasi di balik DAI, stablecoin terdesentralisasi terbesar berdasarkan sirkulasi. Diluncurkan pada Desember 2017 oleh Rune Christensen, Maker memelopori konsep stablecoin yang dijaminkan kripto, memungkinkan pengguna mengunci aset seperti ETH dan menghasilkan DAI—stablecoin yang dipatok pada dolar—dengan jaminan tersebut.\n\nProtokol ini beroperasi melalui \"Vault\" (sebelumnya CDP—Collateralized Debt Position) di mana pengguna mendepositkan jaminan dan mencetak DAI. Setiap vault memiliki rasio likuidasi; jika nilai jaminan turun di bawah threshold ini, posisi dilikuidasi untuk melindungi sistem. DAI mempertahankan peg-nya melalui kombinasi overcollateralization, biaya stabilitas (bunga atas DAI yang dipinjam), dan DAI Savings Rate (DSR) yang mendorong kepemilikan DAI.\n\nMakerDAO mengalami transformasi signifikan melalui rencana \"Endgame\"-nya, berevolusi menjadi Sky Protocol dengan DAI menjadi USDS dan MKR menjadi SKY. Protokol ini sekarang mendukung aset dunia nyata (RWA) sebagai jaminan dan telah memperluas jangkauannya melalui kemitraan dengan keuangan tradisional. Dengan lebih dari $5 miliar dalam TVL, Maker tetap menjadi infrastruktur DeFi yang fundamental.",
+	"features": {
+		"1": {
+			"title": "Stablecoin DAI",
+			"description": "Hasilkan stablecoin USD terdesentralisasi yang soft-pegged didukung oleh jaminan kripto"
+		},
+		"2": {
+			"title": "Sistem Vault",
+			"description": "Kunci jaminan (ETH, WBTC, stablecoin) untuk mencetak DAI dengan aturan likuidasi yang transparan"
+		},
+		"3": {
+			"title": "DAI Savings Rate (DSR)",
+			"description": "Dapatkan yield dari DAI dengan mendepositkan ke dalam kontrak DSR—tanpa lockup, penarikan instan"
+		},
+		"4": {
+			"title": "Dukungan Multi-Collateral",
+			"description": "Gunakan berbagai aset sebagai jaminan termasuk ETH, WBTC, stETH, dan aset dunia nyata"
+		},
+		"5": {
+			"title": "Governance MKR",
+			"description": "Pemegang token MKR memilih parameter risiko, jenis jaminan, dan upgrade protokol"
+		},
+		"6": {
+			"title": "Aset Dunia Nyata",
+			"description": "Memelopori integrasi RWA dengan eksposur US Treasury dan kemitraan institusional"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Hasilkan Likuiditas Stablecoin",
+			"description": "Buat DAI dari kepemilikan kripto Anda tanpa menjual—akses dolar sambil mempertahankan upside"
+		},
+		"2": {
+			"title": "Dapatkan Yield Tabungan",
+			"description": "Depositkan DAI ke dalam DSR untuk mendapatkan yield kompetitif dari kepemilikan stablecoin Anda"
+		},
+		"3": {
+			"title": "Posisi Long Leverage",
+			"description": "Hasilkan DAI dengan ETH, beli lebih banyak ETH, ulangi—perbesar eksposur ETH Anda"
+		},
+		"4": {
+			"title": "Mata Uang Basis DeFi",
+			"description": "Gunakan DAI di seluruh DeFi—terintegrasi dalam protokol lending, DEX, dan yield farm"
+		},
+		"5": {
+			"title": "Tabungan Terdesentralisasi",
+			"description": "Tahan nilai dalam stablecoin yang tahan sensor dan tidak dikontrol oleh perusahaan manapun"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu MakerDAO dan bagaimana cara kerja DAI?",
+			"answer": "MakerDAO adalah protokol terdesentralisasi yang menerbitkan DAI, stablecoin yang dipatok pada $1. Pengguna mendepositkan jaminan kripto ke dalam Vault dan dapat meminjam DAI dengan itu. Sistem mempertahankan peg melalui overcollateralization (Anda harus mendepositkan lebih banyak jaminan daripada DAI yang dipinjam), likuidasi ketika nilai jaminan turun, dan penyesuaian suku bunga melalui biaya stabilitas dan DSR."
+		},
+		"2": {
+			"question": "Apakah DAI aman? Apa risikonya?",
+			"answer": "DAI adalah salah satu stablecoin yang paling teruji, beroperasi sejak 2017. Risiko termasuk kerentanan smart contract, likuidasi massal selama volatilitas ekstrem (seperti Maret 2020), kegagalan oracle, dan serangan governance. DAI juga memiliki eksposur ke stablecoin terpusat seperti USDC dalam jaminannya, mengurangi desentralisasi murni."
+		},
+		"3": {
+			"question": "Apa itu DAI Savings Rate (DSR)?",
+			"answer": "DSR adalah yield yang Anda dapatkan dengan mendepositkan DAI ke dalam kontrak tabungan Maker. Suku bunga ditetapkan oleh governance MKR dan didanai oleh biaya stabilitas yang dibayar oleh pemilik vault. Tidak ada deposit minimum, tidak ada lockup, dan Anda dapat menarik kapan saja. Ini pada dasarnya adalah suku bunga bebas risiko dalam ekosistem Maker."
+		},
+		"4": {
+			"question": "Apa yang terjadi jika vault saya dilikuidasi?",
+			"answer": "Jika rasio jaminan vault Anda turun di bawah threshold likuidasi, siapa pun dapat memicu likuidasi. Jaminan Anda dilelang untuk menutupi utang DAI Anda plus penalti likuidasi (biasanya 13%). Jaminan yang tersisa dikembalikan kepada Anda. Pantau kesehatan vault Anda dan tambahkan jaminan atau bayar DAI ketika rasio menjadi ketat."
+		},
+		"5": {
+			"question": "Apa itu Maker Endgame dan Sky Protocol?",
+			"answer": "Endgame adalah rencana jangka panjang Maker untuk berevolusi menjadi protokol yang lebih tangguh. Ini termasuk rebranding DAI menjadi USDS dan MKR menjadi SKY, menciptakan SubDAO untuk fungsi yang berbeda, memperluas eksposur RWA, dan berpotensi meluncurkan blockchain khusus. Transisi ini bertahap, dengan token lama dan baru tetap dapat digunakan."
+		}
+	},
+	"cta": {
+		"ready": "Siap menghasilkan stablecoin terdesentralisasi?",
+		"button": "Buka MakerDAO",
+		"note": "Protokol di balik DAI—stablecoin terdesentralisasi terkemuka DeFi"
+	}
+}

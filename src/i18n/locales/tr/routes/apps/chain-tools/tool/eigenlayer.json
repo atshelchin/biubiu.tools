@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "EigenLayer - Ethereum Restaking Protokolü | Paylaşılan Güvenlik",
+		"description": "Birden fazla hizmeti güvence altına almak için ETH restaking'ine olanak tanıyan protokol EigenLayer'ı keşfedin. AVS, restaking ödülleri ve Ethereum güvenliğinin genişletilmesi hakkında bilgi edinin.",
+		"keywords": "EigenLayer, restaking, AVS, Ethereum güvenlik, staking, kripto getiri, paylaşılan güvenlik"
+	},
+	"overview": "EigenLayer, Ethereum stake sahiplerinin Ethereum konsensüsünün ötesinde ek hizmetleri güvence altına almayı tercih etmelerine, ekstra ödüller kazanırken ağın güvenlik modelini genişletmelerine olanak tanıyan bir restaking protokolüdür. 2021'de Sreeram Kannan tarafından kurulan ve 2023'te başlatılan EigenLayer, Ethereum'un güvenlik mimarisindeki en önemli yeniliklerden biri haline geldi.\n\nTemel fikir, Ethereum'un stake edilmiş ETH'sinin (onlarca milyar dolar değerinde) diğer protokollere genişletilebilecek kriptoekonomik güvenlik sağladığıdır. Her yeni hizmetin kendi validatör setini başlatması yerine, \"Aktif Olarak Doğrulanan Hizmetler\" (AVS) aracılığıyla Ethereum'un mevcut güvenliğinden yararlanabilirler. EigenLayer ile restaking yapan stake sahipleri bu AVS'leri doğrulayabilir ve ek ödüller kazanabilir, ancak kötü davranırlarsa slashing riskiyle karşı karşıya kalırlar.\n\nEigenLayer hem yerel restaking'i (validatörlerin çekim kimlik bilgilerini EigenLayer'a yönlendirmesi) hem de stETH gibi LST'ler aracılığıyla likit restaking'i destekler. Protokol 15 milyar doların üzerinde depozito çekmiş ve oracle'lar, köprüler, sequencer'lar ve veri kullanılabilirliği katmanları dahil olmak üzere yeni bir AVS ekosistemini mümkün kılmıştır. EIGEN token, öznel hatalar için ek bir slashing mekanizması ekler.",
+	"features": {
+		"1": {
+			"title": "ETH Restaking",
+			"description": "Yeni hizmetleri güvence altına alırken ek getiri kazanmak için ETH'nizi veya LST'lerinizi yeniden stake edin"
+		},
+		"2": {
+			"title": "Aktif Olarak Doğrulanan Hizmetler (AVS)",
+			"description": "Yeni protokoller, Ethereum'un stake edilmiş ETH'sinden yararlanarak güvenliği başlatabilir"
+		},
+		"3": {
+			"title": "Yerel ve Likit Restaking",
+			"description": "Doğrudan validatör olarak veya stETH gibi likit staking token'ları aracılığıyla restaking yapın"
+		},
+		"4": {
+			"title": "Operatör Delegasyonu",
+			"description": "Yeniden stake edilmiş varlıklarınızı AVS altyapısını çalıştıran profesyonel operatörlere delege edin"
+		},
+		"5": {
+			"title": "EIGEN Token",
+			"description": "Öznel hatalar için stake edilebilen ve slash edilebilen yönetişim token'ı"
+		},
+		"6": {
+			"title": "Paylaşılan Güvenlik Modeli",
+			"description": "Birden fazla hizmet Ethereum'un güvenliğini paylaşır, parçalanmayı ve maliyetleri azaltır"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Geliştirilmiş Staking Getirisi",
+			"description": "AVS'leri güvence altına alarak ETH staking'inin üstünde ek ödüller kazanın"
+		},
+		"2": {
+			"title": "Güvenli Hizmetler Başlatma",
+			"description": "Yeni protokoller, validatör seti oluşturmadan Ethereum düzeyinde güvenliğe erişebilir"
+		},
+		"3": {
+			"title": "Likit Restaking Token'ları",
+			"description": "Bileşik getiri ile restaking yapılmış pozisyonları temsil eden LRT'leri (eETH, ezETH, rsETH) tutun"
+		},
+		"4": {
+			"title": "Operatör İşi",
+			"description": "AVS için altyapı çalıştırın ve delegatörlerden ücret kazanın"
+		},
+		"5": {
+			"title": "Güvenlik Havuzlaması",
+			"description": "Projeler, her biri bağımsız altyapı oluşturmak yerine güvenlik maliyetlerini paylaşabilir"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "EigenLayer nedir ve restaking nasıl çalışır?",
+			"answer": "EigenLayer, ETH stake sahiplerinin varlıklarını AVS (Aktif Olarak Doğrulanan Hizmetler) adı verilen ek hizmetleri güvence altına almak için 'restake' etmelerine olanak tanır. ETH'nizi Ethereum validatörleri ile normal şekilde stake edersiniz, ancak aynı zamanda diğer protokolleri doğrulamayı da taahhüt edersiniz. Karşılığında ekstra ödüller kazanırsınız. Ancak, kötü davranırsanız hem Ethereum hem de güvence altına aldığınız AVS tarafından slash edilebilirsiniz."
+		},
+		"2": {
+			"question": "Restaking'in riskleri nelerdir?",
+			"answer": "Restaking ek slashing riskleri ekler—katıldığınız AVS'ler kötü davranış tespit ederse, stake edilmiş ETH'niz slash edilebilir. Ayrıca EigenLayer'ın kendisinde akıllı sözleşme riski ve güvence altına aldığınız tüm hizmetleri anlamadaki karmaşıklık vardır. Saygın operatörler ve AVS'lerle başlayın ve potansiyel olarak kaybetmeyi göze alabileceğinizden fazlasını restake etmeyin."
+		},
+		"3": {
+			"question": "Likit Restaking Token'ları (LRT) nedir?",
+			"answer": "LRT'ler (ether.fi'den eETH, Renzo'dan ezETH, Kelp'den rsETH gibi), likit formda restaking yapılmış pozisyonları temsil eder. Doğrudan restaking yapmak yerine, sizin adınıza restaking yapan bir LRT protokolüne ETH yatırırsınız. Restaking ödülleri kazanırken DeFi'de kullanabileceğiniz likit bir token alırsınız. LRT'ler restaking deneyimini basitleştirir."
+		},
+		"4": {
+			"question": "AVS nedir ve hangileri canlı?",
+			"answer": "AVS (Aktif Olarak Doğrulanan Hizmetler), EigenLayer restaker'ları tarafından güvence altına alınan protokollerdir. Canlı AVS'ler arasında EigenDA (veri kullanılabilirliği), Brevis (zkCoprocessor), Lagrange ve diğerleri bulunur. Düzenli olarak daha fazlası başlatılıyor. Her AVS'nin kendi ödül yapısı ve risk profili vardır. Bir restaker olarak, operatörünüz aracılığıyla hangi AVS'leri güvence altına alacağınızı seçebilirsiniz."
+		},
+		"5": {
+			"question": "EIGEN token ne için kullanılır?",
+			"answer": "EIGEN, EigenLayer'ın aynı zamanda stake edilebilen yönetişim token'ıdır. Benzersiz özelliği 'öznel staking'dir—tespit etmek için sosyal konsensüs gerektiren hatalar için slash edilebilir (zincir üzerinde nesnel slashing'in aksine). EIGEN stake sahipleri esasen algoritmik olarak kanıtlanamayan saldırılara karşı sistemi destekler."
+		}
+	},
+	"cta": {
+		"ready": "Restaking yoluyla ekstra getiri kazanmaya hazır mısınız?",
+		"button": "EigenLayer'ı Aç",
+		"note": "Ethereum'un güvenliğini genişletin ve ek ödüller kazanın"
+	}
+}

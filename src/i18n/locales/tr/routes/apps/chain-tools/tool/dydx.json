@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "dYdX - Merkezi Olmayan Perpetual Borsası | Kripto Türev Ticareti",
+		"description": "Lider merkezi olmayan perpetual borsası dYdX'i keşfedin. 20x'e kadar kaldıraçla, KYC olmadan ticaret yapın ve dYdX Chain'de derin likiditten faydalanın.",
+		"keywords": "dYdX, perpetual ticaret, merkezi olmayan borsa, kripto türevler, kaldıraçlı ticaret, DeFi"
+	},
+	"overview": "dYdX, yatırımcıların kripto varlıklarda kaldıraçla uzun veya kısa pozisyon almalarını sağlayan önde gelen bir merkezi olmayan perpetual kontrat borsasıdır. Antonio Juliano tarafından 2017'de kurulan ve başlangıçta Ethereum üzerine inşa edilen dYdX, türev ticareti için optimize edilmiş bağımsız bir Layer 1 blokzincire evrildi.\n\nPlatform, zirve dönemlerde günlük milyarlarca dolar hacim işleyerek merkezi olmayan perpetual'ları ölçekte öncülük etti. AMM tabanlı perpetual DEX'lerinin aksine, dYdX, merkezi borsaların deneyimini eşleştiren ancak kendi emanetli yararlar sunan bir emir defteri modeli kullanır. Cosmos SDK ile oluşturulan ve 2023'te başlatılan dYdX Chain, saniyenin altında blok süreleri ve ticaret için gaz ücreti olmaması sağlar.\n\nTemel farklılaştırıcılar arasında piyasa yapıcıları aracılığıyla derin likidite, büyük pariteler üzerinde 20x'e kadar kaldıraç ve gelişmiş emir türleri ile sofistike bir ticaret arayüzü bulunur. Protokol, DYDX token sahipleri tarafından yönetilir ve ticaret ücreti gelirini stake sahiplerine dağıtır. Kendi zincirine sahip olarak, dYdX, emir defterini veya eşleştirme motorunu kontrol eden merkezi operatörler olmadan tam merkeziyetsizlik elde etmiştir.",
+	"features": {
+		"1": {
+			"title": "Perpetual Kontratlar",
+			"description": "BTC, ETH ve 100+ varlıkta perpetual kontratlar ve 20x'e kadar kaldıraçla ticaret yapın"
+		},
+		"2": {
+			"title": "Emir Defteri Ticareti",
+			"description": "Limit emirleri, stop-loss'lar ve derin likidite ile profesyonel ticaret deneyimi"
+		},
+		"3": {
+			"title": "dYdX Chain",
+			"description": "Saniyenin altında kesinlik ve ticaret için sıfır gaz ücreti ile amaca özel L1 blokzincir"
+		},
+		"4": {
+			"title": "Kendi Emaneti",
+			"description": "Merkezi bir kuruluşa yatırım yapmadan ticaret yapın—fonlar kontrolünüzde kalır"
+		},
+		"5": {
+			"title": "KYC Gerekli Değil",
+			"description": "Herhangi bir cüzdandan türev ticaretine izinsiz erişim"
+		},
+		"6": {
+			"title": "DYDX Staking",
+			"description": "Zinciri güvence altına almak ve ticaret ücretlerinden pay kazanmak için DYDX stake edin"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Kaldıraçlı Ticaret",
+			"description": "Kaldıraçla kripto fiyat hareketlerinde kazançları (ve kayıpları) artırın"
+		},
+		"2": {
+			"title": "Pozisyonları Koruma",
+			"description": "Satmadan spot varlıklarınızı fiyat düşüşlerine karşı korumak için kısa pozisyon alın"
+		},
+		"3": {
+			"title": "Piyasa Yapıcılığı",
+			"description": "Emir defterinde likidite sağlayın ve alış-satış spreadlerinden kazanın"
+		},
+		"4": {
+			"title": "Arbitraj",
+			"description": "dYdX ve diğer platformlar arasındaki fiyat farklarını takas edin"
+		},
+		"5": {
+			"title": "Staking Getirisi",
+			"description": "Stake sahiplerine dağıtılan ticaret ücreti geliri kazanmak için DYDX stake edin"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "dYdX nedir ve nasıl çalışır?",
+			"answer": "dYdX, kendi blokzincirinde (dYdX Chain) çalışan merkezi olmayan bir perpetual vadeli işlem borsasıdır. Fon yatırırsınız, kaldıraçla perpetual kontratlar alım satımı yaparsınız ve çekersiniz—hepsi KYC veya merkezi bir aracı olmadan. Emir defteri ve eşleştirme motoru tamamen zincir üzerindedir ve merkezi olmayan validatörler tarafından işletilir."
+		},
+		"2": {
+			"question": "dYdX v3 ve v4 arasındaki fark nedir?",
+			"answer": "v3, dYdX Trading Inc. tarafından işletilen merkezi bir emir defteri ile StarkEx (Ethereum L2) üzerinde çalışıyordu. v4 (dYdX Chain) tamamen merkezi değildir—validatörlerin emir defterini çalıştırdığı özel bir Cosmos blokzinciridir. v4 daha fazla piyasaya, gaz ücreti olmamasına sahiptir ve ticaret ücretleri stake sahiplerine gider. v3 kullanımdan kaldırıldı; tüm yeni ticaret v4'tedir."
+		},
+		"3": {
+			"question": "dYdX kullanımı güvenli mi?",
+			"answer": "dYdX, milyarlarca dolarlık ticaret hacmi ile en köklü perpetual DEX'lerden biridir. Fonlar, önemli stake'e sahip Cosmos validatörleri tarafından güvence altına alınır. Riskler arasında akıllı sözleşme hataları, validatör iş birliği (teorik) ve kaldıraçlı ticaretten tasfiye bulunur. Her zaman uygun risk yönetimini kullanın ve kaybetmeyi göze alabileceğinizden fazlasını asla takas etmeyin."
+		},
+		"4": {
+			"question": "dYdX'te ücretler nasıl çalışır?",
+			"answer": "dYdX, bir maker-taker ücreti modeli kullanır. Maker'lar (likidite ekleyen limit emirleri) genellikle %0,02 veya daha az öder; taker'lar (piyasa emirleri) yaklaşık %0,05 öder. Yüksek hacimli yatırımcılar indirimler alır. Ticaret için gaz ücreti yoktur—sadece para yatırırken/çekerken ağ ücretleri ödersiniz. Ticaret ücretleri DYDX stake sahiplerine dağıtılır."
+		},
+		"5": {
+			"question": "dYdX Chain'e fonları nasıl aktarırım?",
+			"answer": "Yerleşik köprü veya Squid gibi üçüncü taraf köprüleri kullanarak çeşitli zincirlerden USDC köprüleyebilirsiniz. Tüm ticaretler için teminat olarak hizmet veren USDC yatırın. Çekimler aynı şekilde çalışır—çekim talebinde bulunun ve tercih ettiğiniz zincire geri köprüleyin. İşlem genellikle birkaç dakika sürer."
+		}
+	},
+	"cta": {
+		"ready": "Perpetual ticaret yapmaya hazır mısınız?",
+		"button": "dYdX'i Aç",
+		"note": "20x'e kadar kaldıraçla merkezi olmayan türev ticareti"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷",
+		"code": "pt"
+	},
+	"seo": {
+		"title": "Compound - Protocolo de Mercado Monetário Algorítmico | Ganhe Juros em Cripto",
+		"description": "Descubra o Compound, o protocolo pioneiro de empréstimos DeFi. Aprenda a fornecer ativos para ganhar juros, pedir emprestado contra garantias e participar da governança.",
+		"keywords": "Compound, empréstimos DeFi, mercado monetário, COMP, juros cripto, empréstimos, garantia"
+	},
+	"overview": "Compound é um protocolo pioneiro de mercado monetário descentralizado que permite aos usuários fornecer ativos cripto para ganhar juros ou pedir emprestado contra suas garantias. Lançado em setembro de 2018 pelo Compound Labs de Robert Leshner, tornou-se um dos primeiros protocolos a demonstrar que taxas de juros algorítmicas poderiam combinar eficientemente a oferta e demanda de empréstimos sem intermediários.\n\nO protocolo opera através de mercados de empréstimos isolados onde fornecedores depositam ativos em pools de liquidez e recebem cTokens representando sua posição. Esses cTokens acumulam juros continuamente, com taxas determinadas algoritmicamente com base na utilização—a proporção de ativos emprestados versus fornecidos. Quando a utilização é alta, as taxas de juros aumentam para incentivar mais fornecimento; quando baixa, as taxas diminuem para encorajar empréstimos.\n\nA introdução do token de governança COMP pelo Compound em 2020 catalisou o fenômeno do \"DeFi Summer\", popularizando a mineração de liquidez e demonstrando como incentivos de tokens poderiam impulsionar a adoção de protocolos. Hoje, o Compound V3 (Comet) representa um design simplificado e mais eficiente com gerenciamento de risco aprimorado e implantação multi-chain no Ethereum, Polygon, Arbitrum e Base.",
+	"features": {
+		"1": {
+			"title": "Taxas de Juros Algorítmicas",
+			"description": "Taxas de juros se ajustam automaticamente com base na oferta e demanda através de curvas de utilização"
+		},
+		"2": {
+			"title": "Sistema cToken",
+			"description": "Receba cTokens ao fornecer ativos—eles acumulam juros e são utilizáveis em todo o DeFi"
+		},
+		"3": {
+			"title": "Empréstimos Supercolateralizados",
+			"description": "Peça emprestado ativos contra sua garantia fornecida com limites de liquidação transparentes"
+		},
+		"4": {
+			"title": "Governança COMP",
+			"description": "Detentores de tokens COMP governam parâmetros do protocolo, listagens de ativos e atualizações"
+		},
+		"5": {
+			"title": "Compound V3 (Comet)",
+			"description": "Empréstimos simplificados de ativo único com eficiência de capital e isolamento de risco aprimorados"
+		},
+		"6": {
+			"title": "Implantação Multi-Chain",
+			"description": "Disponível no Ethereum, Polygon, Arbitrum e Base com suporte nativo cross-chain"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Ganhe Renda Passiva",
+			"description": "Forneça stablecoins ou ativos cripto para ganhar juros variáveis sem bloqueios"
+		},
+		"2": {
+			"title": "Acesse Liquidez",
+			"description": "Peça emprestado contra suas participações cripto sem vender—útil para despesas ou oportunidades"
+		},
+		"3": {
+			"title": "Posições Alavancadas",
+			"description": "Forneça garantia, pegue emprestado e repita para amplificar exposição a ativos nos quais você acredita"
+		},
+		"4": {
+			"title": "Gestão de Tesouraria",
+			"description": "DAOs e protocolos usam o Compound para ganhar rendimento em ativos ociosos da tesouraria"
+		},
+		"5": {
+			"title": "Composabilidade DeFi",
+			"description": "Use cTokens em outros protocolos—eles geram rendimento e são amplamente integrados"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "O que é Compound e como funciona?",
+			"answer": "Compound é um protocolo de empréstimos descentralizado onde você pode fornecer ativos cripto para ganhar juros ou pedir emprestado contra garantias. Quando você fornece ativos, recebe cTokens que representam seu depósito mais os juros acumulados. As taxas de juros são determinadas algoritmicamente—quando a demanda de empréstimos é alta em relação à oferta, as taxas aumentam, e vice-versa."
+		},
+		"2": {
+			"question": "É seguro usar o Compound?",
+			"answer": "Compound é um dos protocolos DeFi mais antigos e testados em batalha, tendo protegido bilhões em ativos desde 2018. Passou por múltiplas auditorias de segurança e opera de forma transparente on-chain. No entanto, os riscos incluem vulnerabilidades de smart contracts, liquidação durante volatilidade do mercado e manipulação de oráculos. Nunca deposite mais do que você pode perder."
+		},
+		"3": {
+			"question": "O que são cTokens e como funcionam?",
+			"answer": "cTokens (como cUSDC, cETH) são tokens que geram juros recebidos ao fornecer ao Compound. Eles representam sua reivindicação sobre os ativos subjacentes mais os juros acumulados. A taxa de câmbio entre cTokens e o ativo subjacente aumenta continuamente conforme os juros são acumulados. Você pode transferir, negociar ou usar cTokens em outros protocolos DeFi."
+		},
+		"4": {
+			"question": "O que acontece se eu for liquidado?",
+			"answer": "Se o valor emprestado exceder o valor da sua garantia (considerando os fatores de garantia), liquidadores podem pagar parte de sua dívida e reivindicar sua garantia com desconto. O Compound V3 melhorou isso com mecânicas de liquidação mais graduais. Monitore seu fator de saúde e mantenha garantia suficiente para evitar liquidação."
+		},
+		"5": {
+			"question": "Qual é a diferença entre Compound V2 e V3?",
+			"answer": "Compound V3 (Comet) é uma versão redesenhada focando em um único ativo emprestável por mercado (ex: USDC), tornando-o mais simples e eficiente em capital. Apresenta melhor isolamento de risco, sem cTokens para tomadores de empréstimo e mecânicas de liquidação aprimoradas. V2 permanece ativo, mas V3 é a versão recomendada para novos usuários."
+		}
+	},
+	"cta": {
+		"ready": "Pronto para ganhar juros em suas criptos?",
+		"button": "Abrir Compound",
+		"note": "Comece a ganhar com taxas de juros algorítmicas"
+	}
+}

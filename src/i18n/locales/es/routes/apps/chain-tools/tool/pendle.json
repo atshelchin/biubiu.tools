@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸",
+		"code": "es"
+	},
+	"seo": {
+		"title": "Pendle - Protocolo de Tokenización de Rendimiento | Comercia Rendimiento Futuro",
+		"description": "Descubre Pendle, el protocolo para comerciar rendimiento futuro. Aprende cómo asegurar tasas fijas, especular en rendimientos y maximizar retornos DeFi mediante tokens PT y YT.",
+		"keywords": "Pendle, tokenización de rendimiento, PT, YT, rendimiento fijo, DeFi, comercio de rendimiento, tasas de interés"
+	},
+	"overview": "Pendle es un protocolo de tokenización de rendimiento que permite a los usuarios comerciar rendimiento futuro, asegurar tasas fijas o especular sobre cambios de rendimiento. Lanzado en 2021 y rediseñado en Pendle V2 (2023), se ha convertido en una piedra angular de los mercados de rendimiento DeFi, particularmente para tokens de staking líquido y activos que generan puntos.\n\nLa innovación central es separar activos que generan rendimiento en Tokens Principales (PT) y Tokens de Rendimiento (YT). Si tienes stETH con rendimiento de 4% APY, Pendle te permite dividirlo: PT representa el principal redimible al vencimiento por el subyacente, mientras que YT representa todo el rendimiento hasta el vencimiento. Esta separación habilita nuevas estrategias—compra PT para retornos fijos garantizados, o compra YT para apalancar tu exposición al rendimiento.\n\nEl AMM de Pendle está específicamente diseñado para comercio de rendimiento, con mecánicas de decay temporal que aseguran que la liquidez permanezca eficiente a medida que se acerca el vencimiento. El protocolo ha visto un crecimiento explosivo mediante integraciones con restaking (puntos EigenLayer), activos de rendimiento real y el ecosistema LST más amplio. Con más de $5 mil millones en TVL en su pico, Pendle demuestra que el rendimiento mismo es una clase de activo comerciable.",
+	"features": {
+		"1": {
+			"title": "Tokenización de Rendimiento",
+			"description": "Divide activos que generan rendimiento en componentes Principal (PT) y Rendimiento (YT)"
+		},
+		"2": {
+			"title": "Rendimiento Fijo vía PT",
+			"description": "Compra PT con descuento para asegurar retornos fijos garantizados hasta el vencimiento"
+		},
+		"3": {
+			"title": "Especulación de Rendimiento vía YT",
+			"description": "Comercia YT para obtener exposición apalancada a rendimiento y puntos sin principal"
+		},
+		"4": {
+			"title": "AMM Optimizado por Tiempo",
+			"description": "AMM personalizado diseñado para comercio de rendimiento con mecánicas de decay temporal"
+		},
+		"5": {
+			"title": "Multiplicador de Puntos",
+			"description": "Los poseedores de YT reciben puntos multiplicados de protocolos subyacentes (EigenLayer, etc.)"
+		},
+		"6": {
+			"title": "Despliegue Multi-Cadena",
+			"description": "Disponible en Ethereum, Arbitrum y otras redes con diversos activos de rendimiento"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Asegurar Rendimientos Fijos",
+			"description": "Compra PT para asegurar retornos garantizados—elimina la variabilidad del rendimiento"
+		},
+		"2": {
+			"title": "Especular sobre Rendimientos",
+			"description": "Compra YT si crees que los rendimientos aumentarán—pierdes solo el costo de YT si te equivocas"
+		},
+		"3": {
+			"title": "Farming de Puntos",
+			"description": "Usa YT para exposición apalancada a puntos de protocolos como EigenLayer"
+		},
+		"4": {
+			"title": "Arbitraje de Rendimiento",
+			"description": "Comercia cuando los rendimientos implícitos divergen de los rendimientos reales entre mercados"
+		},
+		"5": {
+			"title": "Cobertura de Portafolio",
+			"description": "Cubre exposición al rendimiento o equilibra posiciones de tasa fija vs. variable"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es Pendle y cómo funciona la tokenización de rendimiento?",
+			"answer": "Pendle divide tokens que generan rendimiento (como stETH) en Tokens Principales (PT) y Tokens de Rendimiento (YT). PT vale el activo subyacente al vencimiento—cómpralo con descuento para asegurar rendimiento fijo. YT recibe todo el rendimiento hasta el vencimiento—mantenlo para capturar rendimientos variables. Esta separación permite comerciar rendimiento como un activo separado, habilitando tasas fijas y especulación de rendimiento."
+		},
+		"2": {
+			"question": "¿Cuál es la diferencia entre PT y YT?",
+			"answer": "PT (Token Principal) representa el activo subyacente al vencimiento. Compra PT con descuento (ej. 0.95 ETH por 1 PT-stETH) y redime por 1 ETH al vencimiento—el descuento es tu rendimiento fijo. YT (Token de Rendimiento) recibe todo el rendimiento hasta el vencimiento. Si stETH rinde 5% y tienes 10 YT, ganas el rendimiento sobre 10 stETH. YT decae a cero al vencimiento."
+		},
+		"3": {
+			"question": "¿Cómo gano rendimiento fijo con Pendle?",
+			"answer": "Compra PT para un activo que genera rendimiento. Por ejemplo, si PT-stETH con vencimiento en 6 meses se comercia a 0.97 ETH, estás asegurando aproximadamente 6% de rendimiento anualizado. Al vencimiento, tu PT es redimible por el monto subyacente completo. El rendimiento fijo es igual al descuento al que compras PT, convertido a APY."
+		},
+		"4": {
+			"question": "¿Cómo funciona el multiplicador de puntos de Pendle?",
+			"answer": "Cuando tienes YT, recibes todo el rendimiento Y puntos del activo subyacente. Para activos que generan puntos como eETH o ezETH, tener YT te da exposición multiplicada a puntos. Si compras 10 YT-eETH, ganas puntos como si tuvieras 10 eETH. Esto ha hecho popular a Pendle para farming de puntos de EigenLayer y restaking."
+		},
+		"5": {
+			"question": "¿Qué sucede al vencimiento?",
+			"answer": "Al vencimiento: PT se vuelve redimible 1:1 por el activo subyacente. YT se vuelve sin valor (no tiene valor principal). Antes del vencimiento, puedes comerciar ambos en el AMM de Pendle. Después del vencimiento, PT puede redimirse en cualquier momento. Pendle regularmente lanza nuevos pools con diferentes vencimientos."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para comerciar rendimientos futuros?",
+		"button": "Abrir Pendle",
+		"note": "Asegura tasas fijas o especula sobre cambios de rendimiento"
+	}
+}

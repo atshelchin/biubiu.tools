@@ -1,164 +1,164 @@
 {
 	"category_seo": {
-		"title": "Crypto Airdrops - Token Distributions & Eligibility | BiuBiu Tools",
-		"description": "Track and claim crypto airdrops. Find airdrop opportunities, check eligibility, and learn airdrop farming strategies.",
-		"keywords": "",
+		"title": "암호화폐 에어드롭 - 토큰 배포 및 자격 | BiuBiu Tools",
+		"description": "암호화폐 에어드롭을 추적하고 청구하세요. 에어드롭 기회를 찾고, 자격을 확인하고, 에어드롭 파밍 전략을 배우세요.",
+		"keywords": "암호화폐 에어드롭, 토큰 배포, 에어드롭 자격, 무료 암호화폐, 에어드롭 파밍",
 		"faqs": [
 			{
-				"question": "What are crypto airdrops?",
-				"answer": "Airdrops are free token distributions to early users, holders, or community members. They're used to decentralize ownership, reward users, and create awareness for new projects."
+				"question": "암호화폐 에어드롭이란 무엇인가요?",
+				"answer": "에어드롭은 초기 사용자, 보유자 또는 커뮤니티 구성원에게 무료로 토큰을 배포하는 것입니다. 소유권 분산화, 사용자 보상, 새 프로젝트 인지도 향상에 사용됩니다."
 			},
 			{
-				"question": "How do I qualify for airdrops?",
-				"answer": "Use protocols early, maintain activity over time, participate in testnets, hold relevant tokens/NFTs, and engage with communities. Sybil detection is common - quality over quantity matters."
+				"question": "에어드롭 자격을 얻으려면 어떻게 해야 하나요?",
+				"answer": "프로토콜을 일찍 사용하고, 시간이 지나도 활동을 유지하고, 테스트넷에 참여하고, 관련 토큰/NFT를 보유하고, 커뮤니티에 참여하세요. 시빌 감지가 일반적입니다 - 양보다 질이 중요합니다."
 			},
 			{
-				"question": "Are airdrops taxable?",
-				"answer": "In most jurisdictions, airdrops are taxable as income at receipt and capital gains when sold. Keep records of fair market value at time of airdrop. Consult a tax professional."
+				"question": "에어드롭에 세금이 부과되나요?",
+				"answer": "대부분의 관할권에서 에어드롭은 수령 시 소득으로, 판매 시 자본 이득으로 과세됩니다. 에어드롭 시점의 공정 시장 가치를 기록하세요. 세무 전문가와 상담하세요."
 			}
 		]
 	},
 	"tools": {
+		"airdrop_uni": {
+			"description": "전설적인 Uniswap 에어드롭 - 초기 DEX 사용자에게 400 UNI 지급, DeFi 토큰 배포의 표준 설정"
+		},
+		"airdrop_ens": {
+			"description": "도메인 보유자에게 ENS 거버넌스 토큰 에어드롭 - 초기 이더리움 네임 서비스 채택자 보상"
+		},
+		"airdrop_dydx": {
+			"description": "dYdX 영구 거래 플랫폼 에어드롭 - 거래량과 활동에 따라 트레이더 보상"
+		},
+		"airdrop_1inch": {
+			"description": "1inch DEX 어그리게이터 에어드롭 - 어그리게이터를 통해 스왑한 사용자에게 배포"
+		},
+		"airdrop_ldo": {
+			"description": "Lido DAO 거버넌스 토큰 - 초기 리퀴드 스테이킹 사용자와 stETH 보유자 보상"
+		},
+		"airdrop_op": {
+			"description": "Optimism L2 에어드롭 - 초기 브릿지 사용자, DAO 투표자, 활성 이더리움 사용자 보상"
+		},
+		"airdrop_arb": {
+			"description": "Arbitrum L2 에어드롭 - 브릿지 사용자와 생태계 참여자를 보상하는 최대 L2 에어드롭"
+		},
+		"airdrop_blur": {
+			"description": "Blur NFT 마켓플레이스 에어드롭 - 로열티 포인트 시스템으로 프로 트레이더 보상"
+		},
+		"airdrop_strk": {
+			"description": "Starknet 프로비전 프로그램 - 초기 사용자와 생태계 기여자에게 zk-rollup 에어드롭"
+		},
+		"airdrop_zk": {
+			"description": "zkSync Era 에어드롭 - 초기 브릿지 사용자와 메인넷 활동 참여자 보상"
+		},
+		"airdrop_jup": {
+			"description": "Jupiter 어그리게이터 에어드롭 - 스왑 사용자에게 솔라나 최대 DEX 에어드롭"
+		},
+		"airdrop_w": {
+			"description": "Wormhole 크로스체인 브릿지 에어드롭 - 여러 체인의 브릿지 사용자 보상"
+		},
+		"airdrop_ena": {
+			"description": "Ethena 합성 달러 프로토콜 에어드롭 - 샤드 보유자와 초기 USDe 민터 보상"
+		},
+		"airdrop_eigen": {
+			"description": "EigenLayer 리스테이킹 프로토콜 에어드롭 - 초기 리스테이커와 포인트 획득자 보상"
+		},
+		"airdrop_pyth": {
+			"description": "Pyth Network 오라클 에어드롭 - 27개 이상 블록체인의 DeFi 사용자에게 배포"
+		},
+		"airdrop_tnsr": {
+			"description": "Tensor NFT 마켓플레이스 에어드롭 - 시즌 포인트로 솔라나 NFT 트레이더 보상"
+		},
+		"airdrop_kmno": {
+			"description": "Kamino Finance 에어드롭 - 유동성 제공자와 사용자를 보상하는 솔라나 DeFi 프로토콜"
+		},
+		"airdrop_parcl": {
+			"description": "Parcl 부동산 거래 에어드롭 - 합성 부동산 거래를 위한 솔라나 프로토콜"
+		},
+		"airdrop_wen": {
+			"description": "WEN 밈 토큰 에어드롭 - Jupiter 시 NFT 보유자가 무료 WEN 토큰 수령"
+		},
+		"airdrop_omni": {
+			"description": "Omni Network 상호운용성 에어드롭 - EigenLayer 리스테이커와 테스트넷 사용자 보상"
+		},
+		"airdrop_alt": {
+			"description": "AltLayer 롤업 서비스 에어드롭 - 리스테이커와 생태계 참여자 보상"
+		},
+		"airdrop_manta": {
+			"description": "Manta Pacific 모듈러 L2 에어드롭 - 브릿지 사용자와 New Paradigm 참여자 보상"
+		},
+		"airdrop_dym": {
+			"description": "Dymension RollApp 허브 에어드롭 - 코스모스 스테이커와 초기 제네시스 롤러에게 배포"
+		},
+		"airdrop_zetachain": {
+			"description": "ZetaChain 옴니체인 에어드롭 - 테스트넷 참여자와 초기 메인넷 사용자 보상"
+		},
+		"airdrop_ethfi": {
+			"description": "Ether.fi 리퀴드 리스테이킹 에어드롭 - eETH 보유자와 로열티 포인트 획득자 보상"
+		},
+		"airdrop_renzo": {
+			"description": "Renzo 리스테이킹 프로토콜 에어드롭 - ezETH 보유자와 포인트 획득자에게 배포"
+		},
+		"airdrop_puffer": {
+			"description": "Puffer Finance 잠재 에어드롭 - pufETH 포인트 시스템을 가진 리퀴드 리스테이킹 프로토콜"
+		},
+		"airdrop_kelp": {
+			"description": "Kelp DAO 잠재 에어드롭 - Kelp Miles 보상을 가진 rsETH 리퀴드 리스테이킹"
+		},
+		"airdrop_swell": {
+			"description": "Swell Network 잠재 에어드롭 - 펄 포인트 프로그램을 가진 리퀴드 스테이킹"
+		},
+		"airdrop_cow": {
+			"description": "CoW Protocol MEV 보호 에어드롭 - 배치 옥션 거래 사용자 보상"
+		},
+		"airdrop_hop": {
+			"description": "Hop Protocol L2 브릿지 에어드롭 - 초기 크로스 L2 브릿지 사용자 보상"
+		},
+		"airdrop_safe": {
+			"description": "Safe 멀티시그 지갑 에어드롭 - Safe 사용자와 생태계 참여자에게 배포"
+		},
+		"airdrop_matic_pol": {
+			"description": "Polygon MATIC에서 POL 토큰 마이그레이션 - 새 네이티브 토큰으로 1:1 업그레이드"
+		},
 		"earndrop": {
-			"description": "다수의 예정 및 과거 에어드롭 자격 확인"
+			"description": "다중 프로토콜 에어드롭 자격 확인기 - 여러 에어드롭의 자격 확인"
 		},
-		"airdrop-uni": {
-			"description": "UNI Airdrop (2020) - Tool"
+		"defillama_airdrops": {
+			"description": "DeFiLlama 에어드롭 추적기 - 예정된 활성 토큰 배포의 종합 목록"
 		},
-		"airdrop-ens": {
-			"description": "ENS Airdrop (2021) - Tool"
+		"airdrop_alert": {
+			"description": "에어드롭 알림 뉴스 및 알림 - 새로운 에어드롭 기회에 대한 최신 정보"
 		},
-		"airdrop-dydx": {
-			"description": "dYdX Airdrop (2021) - Tool"
+		"airdrops_io": {
+			"description": "Airdrops.io 어그리게이터 - 가이드가 포함된 합법적인 에어드롭 큐레이션 목록"
 		},
-		"airdrop-1inch": {
-			"description": "1inch Airdrop (2020) - Tool"
+		"airdrop_farmer": {
+			"description": "Layer3 퀘스트 플랫폼 - 온체인 퀘스트를 완료하여 보상과 잠재 에어드롭 획득"
 		},
-		"airdrop-ldo": {
-			"description": "LDO Airdrop (2022) - Tool"
+		"galxe_campaigns": {
+			"description": "Galxe Web3 자격 증명 캠페인 - NFT와 포인트를 획득하여 잠재 에어드롭 획득"
 		},
-		"airdrop-op": {
-			"description": "OP Airdrop (2022) - Tool"
+		"rabbithole_quests": {
+			"description": "RabbitHole 배우며 얻기 플랫폼 - 퀘스트를 완료하여 DeFi를 배우고 보상 획득"
 		},
-		"airdrop-arb": {
-			"description": "ARB Airdrop (2023) - Tool"
+		"zealy_quests": {
+			"description": "Zealy 커뮤니티 퀘스트 플랫폼 - 소셜 및 온체인 작업을 완료하여 프로젝트 보상 획득"
 		},
-		"airdrop-blur": {
-			"description": "BLUR Airdrop (2023) - Tool"
+		"potential_scroll": {
+			"description": "Scroll zkEVM 잠재 에어드롭 - L2를 사용하고 생태계에 참여"
 		},
-		"airdrop-strk": {
-			"description": "STRK Airdrop (2024) - Tool"
+		"potential_linea": {
+			"description": "Linea zkEVM 잠재 에어드롭 - Voyage 포인트 프로그램을 가진 ConsenSys L2"
 		},
-		"airdrop-zk": {
-			"description": "ZK Airdrop (2024) - Tool"
+		"potential_blast": {
+			"description": "Blast L2 네이티브 수익 에어드롭 - 초기 예금자와 생태계 사용자 보상"
 		},
-		"airdrop-jup": {
-			"description": "JUP Airdrop (2024) - Tool"
+		"potential_berachain": {
+			"description": "Berachain 잠재 에어드롭 - 테스트넷 참여가 있는 유동성 증명 L1"
 		},
-		"airdrop-w": {
-			"description": "W Airdrop (Wormhole 2024) - Tool"
+		"potential_monad": {
+			"description": "Monad 잠재 에어드롭 - 현재 개발 중인 고성능 EVM L1"
 		},
-		"airdrop-ena": {
-			"description": "ENA Airdrop (2024) - Tool"
-		},
-		"airdrop-eigen": {
-			"description": "EIGEN Airdrop (2024) - Tool"
-		},
-		"airdrop-pyth": {
-			"description": "PYTH Airdrop (2023) - Tool"
-		},
-		"airdrop-tnsr": {
-			"description": "TNSR Airdrop (2024) - Tool"
-		},
-		"airdrop-kmno": {
-			"description": "KMNO Airdrop (2024) - Tool"
-		},
-		"airdrop-parcl": {
-			"description": "PARCL Airdrop (2024) - Tool"
-		},
-		"airdrop-wen": {
-			"description": "WEN Airdrop (2024) - Tool"
-		},
-		"airdrop-omni": {
-			"description": "OMNI Airdrop (2024) - Tool"
-		},
-		"airdrop-alt": {
-			"description": "ALT Airdrop (2024) - Tool"
-		},
-		"airdrop-manta": {
-			"description": "MANTA Airdrop (2024) - Tool"
-		},
-		"airdrop-dym": {
-			"description": "DYM Airdrop (2024) - Tool"
-		},
-		"airdrop-zetachain": {
-			"description": "ZETA Airdrop (2024) - Tool"
-		},
-		"airdrop-ethfi": {
-			"description": "ETHFI Airdrop (2024) - Tool"
-		},
-		"airdrop-renzo": {
-			"description": "REZ Airdrop (2024) - Tool"
-		},
-		"airdrop-puffer": {
-			"description": "PUFFER (Potential) - Tool"
-		},
-		"airdrop-kelp": {
-			"description": "KELP (Potential) - Tool"
-		},
-		"airdrop-swell": {
-			"description": "SWELL (Potential) - Tool"
-		},
-		"airdrop-cow": {
-			"description": "COW Airdrop (2022) - Tool"
-		},
-		"airdrop-hop": {
-			"description": "HOP Airdrop (2022) - Tool"
-		},
-		"airdrop-safe": {
-			"description": "SAFE Airdrop (2022) - Tool"
-		},
-		"airdrop-matic-pol": {
-			"description": "MATIC/POL Migration - Tool"
-		},
-		"defillama-airdrops": {
-			"description": "DeFiLlama Airdrops - Tool"
-		},
-		"airdrop-alert": {
-			"description": "Airdrop Alert - Tool"
-		},
-		"airdrops-io": {
-			"description": "Airdrops.io - Tool"
-		},
-		"airdrop-farmer": {
-			"description": "Layer3 Quests - Tool"
-		},
-		"galxe-campaigns": {
-			"description": "Galxe Campaigns - Tool"
-		},
-		"rabbithole-quests": {
-			"description": "RabbitHole - Tool"
-		},
-		"zealy-quests": {
-			"description": "Zealy - Tool"
-		},
-		"potential-scroll": {
-			"description": "Scroll (Potential) - Tool"
-		},
-		"potential-linea": {
-			"description": "Linea (Potential) - Tool"
-		},
-		"potential-blast": {
-			"description": "BLAST (Launched) - Tool"
-		},
-		"potential-berachain": {
-			"description": "Berachain (Potential) - Tool"
-		},
-		"potential-monad": {
-			"description": "Monad (Potential) - Tool"
-		},
-		"potential-fuel": {
-			"description": "Fuel (Potential) - Tool"
+		"potential_fuel": {
+			"description": "Fuel Network 잠재 에어드롭 - 베타 테스트넷을 가진 모듈러 실행 레이어"
 		}
 	}
 }

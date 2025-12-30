@@ -1,21 +1,206 @@
 {
 	"category_seo": {
-		"title": "Crypto Communities - Discord, Telegram & Forums | BiuBiu Tools",
-		"description": "Find and join crypto communities. Discord servers, Telegram groups, forums, and community platforms for Web3 projects.",
-		"keywords": "",
+		"title": "암호화폐 커뮤니티 - Discord, Telegram 및 포럼 | BiuBiu Tools",
+		"description": "암호화폐 커뮤니티를 찾고 참여하세요. Web3 프로젝트를 위한 Discord 서버, Telegram 그룹, 포럼 및 커뮤니티 플랫폼.",
+		"keywords": "암호화폐 커뮤니티, discord 암호화폐, telegram 암호화폐, web3 커뮤니티, 블록체인 포럼",
 		"faqs": [
 			{
-				"question": "Where do crypto communities gather?",
-				"answer": "Discord is the hub for most projects. Telegram for quick updates and trading groups. Farcaster and Lens for Web3 native social. Reddit for broader discussions."
+				"question": "암호화폐 커뮤니티는 어디에 모이나요?",
+				"answer": "Discord는 대부분의 프로젝트 허브입니다. Telegram은 빠른 업데이트와 트레이딩 그룹용. Farcaster와 Lens는 Web3 네이티브 소셜용. Reddit은 더 넓은 논의용입니다."
 			},
 			{
-				"question": "How do I find quality communities?",
-				"answer": "Look for active moderation, substantive discussions beyond price, developer presence, and community-driven initiatives. Avoid pump groups and communities focused only on price speculation."
+				"question": "질 좋은 커뮤니티를 어떻게 찾나요?",
+				"answer": "활발한 모더레이션, 가격을 넘어선 실질적인 논의, 개발자 존재, 커뮤니티 주도 이니셔티브를 찾으세요. 펌프 그룹과 가격 투기에만 집중하는 커뮤니티는 피하세요."
 			},
 			{
-				"question": "How do I avoid scams in communities?",
-				"answer": "Never trust DMs offering help or investments. Official announcements come through verified channels. Don't click random links. Admins will never ask for your seed phrase."
+				"question": "커뮤니티에서 사기를 어떻게 피하나요?",
+				"answer": "도움이나 투자를 제안하는 DM을 절대 믿지 마세요. 공식 공지는 검증된 채널을 통해 옵니다. 무작위 링크를 클릭하지 마세요. 관리자는 절대 시드 문구를 요청하지 않습니다."
 			}
 		]
+	},
+	"tools": {
+		"discord_ethereum": {
+			"description": "프로토콜 논의 및 개발을 위한 이더리움 공식 커뮤니티 Discord"
+		},
+		"discord_uniswap": {
+			"description": "DEX 거버넌스 및 DeFi 논의를 위한 Uniswap 커뮤니티 Discord"
+		},
+		"discord_aave": {
+			"description": "대출 프로토콜 및 거버넌스 논의를 위한 Aave 커뮤니티 Discord"
+		},
+		"discord_chainlink": {
+			"description": "오라클 인프라 및 개발자 지원을 위한 Chainlink 커뮤니티 Discord"
+		},
+		"discord_arbitrum": {
+			"description": "생태계 및 개발 논의를 위한 Arbitrum L2 커뮤니티 Discord"
+		},
+		"discord_optimism": {
+			"description": "Superchain 생태계 및 거버넌스를 위한 Optimism 커뮤니티 Discord"
+		},
+		"discord_base": {
+			"description": "생태계 구축을 위한 Coinbase Base L2 커뮤니티 Discord"
+		},
+		"discord_zksync": {
+			"description": "zk-rollup 개발 및 생태계를 위한 zkSync 커뮤니티 Discord"
+		},
+		"discord_starknet": {
+			"description": "Cairo 개발 및 zk 스케일링을 위한 Starknet 커뮤니티 Discord"
+		},
+		"discord_polygon": {
+			"description": "L2 스케일링 및 zkEVM 개발을 위한 Polygon 커뮤니티 Discord"
+		},
+		"discord_ethglobal": {
+			"description": "해커톤 참가자 및 Web3 빌더를 위한 ETHGlobal Discord"
+		},
+		"discord_buildspace": {
+			"description": "Web3 개발 학습을 위한 Buildspace 커뮤니티 Discord"
+		},
+		"discord_alchemy": {
+			"description": "API 지원 및 Web3 인프라를 위한 Alchemy 개발자 Discord"
+		},
+		"discord_hardhat": {
+			"description": "Solidity 개발 및 툴링을 위한 Hardhat 커뮤니티 Discord"
+		},
+		"discord_foundry": {
+			"description": "Solidity 테스트 프레임워크 지원을 위한 Foundry 커뮤니티 Discord"
+		},
+		"discord_openzeppelin": {
+			"description": "스마트 컨트랙트 보안 및 표준을 위한 OpenZeppelin Discord"
+		},
+		"discord_thegraph": {
+			"description": "서브그래프 개발 및 인덱싱을 위한 The Graph 커뮤니티 Discord"
+		},
+		"discord_scaffold_eth": {
+			"description": "빠른 dApp 프로토타이핑 및 BuidlGuidl을 위한 Scaffold-ETH Discord"
+		},
+		"discord_immunefi": {
+			"description": "버그 바운티 헌터 및 Web3 보안을 위한 Immunefi Discord"
+		},
+		"discord_code4rena": {
+			"description": "경쟁적 보안 감사를 위한 Code4rena 커뮤니티 Discord"
+		},
+		"discord_sherlock": {
+			"description": "보안 감사 및 커버리지를 위한 Sherlock 커뮤니티 Discord"
+		},
+		"discord_secureum": {
+			"description": "스마트 컨트랙트 보안 교육 및 연구를 위한 Secureum Discord"
+		},
+		"discord_opensea": {
+			"description": "NFT 마켓플레이스 논의를 위한 OpenSea 커뮤니티 Discord"
+		},
+		"discord_blur": {
+			"description": "프로 NFT 트레이더 및 마켓플레이스를 위한 Blur 커뮤니티 Discord"
+		},
+		"discord_artblocks": {
+			"description": "제너러티브 아트 수집가 및 아티스트를 위한 Art Blocks Discord"
+		},
+		"discord_foundation": {
+			"description": "디지털 아트 크리에이터 및 수집가를 위한 Foundation Discord"
+		},
+		"discord_nouns": {
+			"description": "CC0 NFT 거버넌스 및 커뮤니티 구축을 위한 Nouns DAO Discord"
+		},
+		"discord_punks": {
+			"description": "OG NFT 수집가를 위한 CryptoPunks 커뮤니티 Discord"
+		},
+		"discord_bayc": {
+			"description": "BAYC 홀더 및 Yuga 생태계를 위한 Bored Ape Yacht Club Discord"
+		},
+		"discord_azuki": {
+			"description": "애니메 NFT 문화 및 커뮤니티를 위한 Azuki 커뮤니티 Discord"
+		},
+		"discord_pudgypenguins": {
+			"description": "커뮤니티 및 IP 이니셔티브를 위한 Pudgy Penguins Discord"
+		},
+		"discord_axie": {
+			"description": "Play-to-earn 게임을 위한 Axie Infinity 커뮤니티 Discord"
+		},
+		"discord_illuvium": {
+			"description": "AAA Web3 게임을 위한 Illuvium 커뮤니티 Discord"
+		},
+		"discord_immutable": {
+			"description": "Web3 게임 인프라 및 zkEVM을 위한 Immutable Discord"
+		},
+		"discord_loot": {
+			"description": "CC0 게임 프리미티브 및 빌더를 위한 Loot 커뮤니티 Discord"
+		},
+		"discord_treasure": {
+			"description": "Arbitrum 게임 메타버스를 위한 Treasure DAO Discord"
+		},
+		"discord_ronin": {
+			"description": "게임 중심 L2 생태계를 위한 Ronin Network Discord"
+		},
+		"discord_bankless": {
+			"description": "암호화폐 미디어 및 교육 커뮤니티를 위한 Bankless DAO Discord"
+		},
+		"discord_gitcoin": {
+			"description": "공공재 펀딩 및 그랜트를 위한 Gitcoin 커뮤니티 Discord"
+		},
+		"discord_ens": {
+			"description": "이더리움 네임 서비스 거버넌스를 위한 ENS DAO Discord"
+		},
+		"discord_farcaster": {
+			"description": "탈중앙화 소셜 프로토콜을 위한 Farcaster 커뮤니티 Discord"
+		},
+		"discord_lens": {
+			"description": "탈중앙화 소셜 그래프 빌더를 위한 Lens Protocol Discord"
+		},
+		"discord_friend_tech": {
+			"description": "Base의 SocialFi를 위한 friend.tech 커뮤니티 Discord"
+		},
+		"discord_rabbithole": {
+			"description": "Learn-to-earn 퀘스트 및 교육을 위한 RabbitHole Discord"
+		},
+		"discord_galxe": {
+			"description": "Web3 크레덴셜 및 캠페인을 위한 Galxe 커뮤니티 Discord"
+		},
+		"discord_solana": {
+			"description": "고성능 L1 생태계를 위한 Solana 커뮤니티 Discord"
+		},
+		"discord_avalanche": {
+			"description": "서브넷 및 L1 개발을 위한 Avalanche 커뮤니티 Discord"
+		},
+		"discord_cosmos": {
+			"description": "IBC 및 앱체인 생태계를 위한 Cosmos 커뮤니티 Discord"
+		},
+		"discord_sui": {
+			"description": "Move 언어 개발을 위한 Sui 커뮤니티 Discord"
+		},
+		"discord_aptos": {
+			"description": "Move 기반 L1 생태계를 위한 Aptos 커뮤니티 Discord"
+		},
+		"discord_near": {
+			"description": "샤딩 L1 개발을 위한 NEAR Protocol Discord"
+		},
+		"discord_ton": {
+			"description": "Telegram 통합 블록체인을 위한 TON 커뮤니티 Discord"
+		},
+		"tg_cointelegraph": {
+			"description": "암호화폐 뉴스 및 업데이트를 위한 Cointelegraph Telegram 채널"
+		},
+		"tg_whale_alert": {
+			"description": "대규모 암호화폐 거래 추적을 위한 Whale Alert Telegram"
+		},
+		"tg_lookonchain": {
+			"description": "온체인 분석 및 고래 관찰을 위한 Lookonchain Telegram"
+		},
+		"tg_ton_official": {
+			"description": "생태계 업데이트를 위한 공식 TON 커뮤니티 Telegram"
+		},
+		"tg_solana_ann": {
+			"description": "공지 및 업데이트를 위한 Solana 공식 Telegram"
+		},
+		"tg_arbitrum_ann": {
+			"description": "L2 공지를 위한 Arbitrum 공식 Telegram"
+		},
+		"tg_chaincatcher": {
+			"description": "중국어 암호화폐 뉴스 및 리서치를 위한 ChainCatcher Telegram"
+		},
+		"tg_techflow": {
+			"description": "중국어 Web3 뉴스 및 분석을 위한 TechFlow Telegram"
+		},
+		"tg_crypto_brazil": {
+			"description": "브라질 암호화폐 커뮤니티를 위한 Crypto Brasil Telegram"
+		}
 	}
 }
