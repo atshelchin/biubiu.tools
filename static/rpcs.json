@@ -48399,6 +48399,29 @@
     "name": "Martian Chain",
     "chain": "EROL",
     "rpc": [
+     
+       {
+        "url":"https://rpc1.martianchain.com"
+      },
+         {
+        "url":"https://rpc2.martianchain.com"
+      },
+         {
+        "url":"https://rpc3.martianchain.com"
+      },
+         {
+        "url":"https://rpc4.martianchain.com"
+      },
+         {
+        "url":"https://rpc5.martianchain.com"
+      },
+
+      {"url":"wss://rpc-ws1.martianchain.com"},
+      {"url":"wss://rpc-ws2.martianchain.com"},
+      {"url":"wss://rpc-ws3.martianchain.com"},
+      {"url":"wss://rpc-ws4.martianchain.com"},
+      {"url":"wss://rpc-ws5.martianchain.com"},
+      
       {
         "url": "https://martian-rpc1.martianchain.com"
       },
