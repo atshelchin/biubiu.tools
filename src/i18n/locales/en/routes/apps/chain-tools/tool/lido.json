@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Lido - Leading Liquid Staking Protocol | Stake ETH, Get stETH",
+		"description": "Discover Lido, the largest liquid staking protocol. Learn how to stake ETH and receive stETH, earn staking rewards, and use your staked assets in DeFi.",
+		"keywords": "Lido, liquid staking, stETH, ETH staking, Ethereum, DeFi, staking rewards"
+	},
+	"overview": "Lido is the largest liquid staking protocol in DeFi, enabling users to stake their ETH and receive stETH (staked ETH) in return - a liquid token that represents their staked position and accrues staking rewards automatically. Launched in December 2020 just before the Ethereum Beacon Chain went live, Lido solved a critical problem: allowing users to earn staking rewards without locking up their ETH.\n\nWhen you stake ETH through Lido, you receive stETH at a 1:1 ratio. This stETH balance increases daily as staking rewards accrue, and can be freely traded, used as collateral in lending protocols, or provided as liquidity in DeFi. This 'liquid' nature means stakers don't have to choose between earning staking yield and participating in DeFi.\n\nLido has become foundational DeFi infrastructure, with over $20 billion in staked ETH and stETH integrated across hundreds of protocols. The protocol is governed by LDO token holders through the Lido DAO, which oversees node operator selection, fee structures, and protocol upgrades.",
+	"features": {
+		"1": {
+			"title": "Liquid Staking",
+			"description": "Stake ETH and receive stETH, a liquid token that accrues staking rewards automatically"
+		},
+		"2": {
+			"title": "No Minimum Stake",
+			"description": "Stake any amount of ETH - no need for the 32 ETH required for solo staking"
+		},
+		"3": {
+			"title": "DeFi Composability",
+			"description": "Use stETH across DeFi - as collateral, in liquidity pools, or for yield strategies"
+		},
+		"4": {
+			"title": "Daily Rewards",
+			"description": "stETH balance increases daily to reflect earned staking rewards"
+		},
+		"5": {
+			"title": "Withdrawals",
+			"description": "Request withdrawals to convert stETH back to ETH through the protocol"
+		},
+		"6": {
+			"title": "wstETH",
+			"description": "Wrapped stETH with a constant balance - rewards accrue through value appreciation"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Earn Staking Rewards",
+			"description": "Earn Ethereum staking yield (~3-4% APY) while maintaining liquidity"
+		},
+		"2": {
+			"title": "DeFi Collateral",
+			"description": "Use stETH as collateral on Aave, MakerDAO, and other lending protocols"
+		},
+		"3": {
+			"title": "Liquidity Provision",
+			"description": "Provide stETH-ETH liquidity on Curve and earn additional trading fees"
+		},
+		"4": {
+			"title": "Leveraged Staking",
+			"description": "Borrow against stETH to buy more ETH and amplify staking returns"
+		},
+		"5": {
+			"title": "Portfolio Diversification",
+			"description": "Hold stETH as a yield-bearing ETH alternative in your portfolio"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Lido and how does liquid staking work?",
+			"answer": "Lido is a liquid staking protocol that lets you stake ETH and receive stETH in return. When you stake through Lido, your ETH is delegated to professional node operators who run validators. You receive stETH representing your stake, which automatically increases in balance as rewards accrue. This means you can use stETH in DeFi while still earning staking rewards."
+		},
+		"2": {
+			"question": "Is Lido safe to use?",
+			"answer": "Lido is the largest and most battle-tested liquid staking protocol with multiple security audits. However, risks include smart contract vulnerabilities, slashing penalties if node operators misbehave, and stETH potentially trading at a discount to ETH during market stress. Lido uses a diverse set of node operators to reduce centralization risk."
+		},
+		"3": {
+			"question": "What is the difference between stETH and wstETH?",
+			"answer": "stETH is a rebasing token - your balance increases daily as rewards accrue. wstETH (wrapped stETH) has a constant balance, with rewards reflected in its increasing value relative to stETH. wstETH is better for DeFi integrations that don't support rebasing tokens and for tax reporting purposes."
+		},
+		"4": {
+			"question": "What fees does Lido charge?",
+			"answer": "Lido charges a 10% fee on staking rewards, split between node operators and the Lido DAO treasury. This fee is automatically deducted - you simply receive your net staking rewards reflected in your stETH balance. There are no fees for staking or unstaking."
+		},
+		"5": {
+			"question": "How do I unstake from Lido?",
+			"answer": "You can request withdrawals through Lido's withdrawal queue, which processes requests as validator exits complete (typically 1-5 days). Alternatively, you can swap stETH for ETH on DEXs like Curve for immediate liquidity, though you may receive slightly less than 1:1 depending on market conditions."
+		}
+	},
+	"cta": {
+		"ready": "Ready to start staking?",
+		"button": "Open Lido",
+		"note": "Earn ETH staking rewards while staying liquid"
+	}
+}

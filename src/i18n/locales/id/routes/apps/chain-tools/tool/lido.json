@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "Lido - Protokol Liquid Staking Terkemuka | Stake ETH, Dapatkan stETH",
+		"description": "Temukan Lido, protokol liquid staking terbesar. Pelajari cara stake ETH dan terima stETH, hasilkan staking reward, dan gunakan aset staked Anda di DeFi.",
+		"keywords": "Lido, liquid staking, stETH, ETH staking, Ethereum, DeFi, staking reward"
+	},
+	"overview": "Lido adalah protokol liquid staking terbesar di DeFi, memungkinkan pengguna untuk stake ETH mereka dan menerima stETH (staked ETH) sebagai gantinya - token likuid yang mewakili posisi staked mereka dan mengakumulasi staking reward secara otomatis. Diluncurkan pada Desember 2020 tepat sebelum Ethereum Beacon Chain aktif, Lido memecahkan masalah kritis: memungkinkan pengguna untuk menghasilkan staking reward tanpa mengunci ETH mereka.\n\nSaat Anda stake ETH melalui Lido, Anda menerima stETH dengan rasio 1:1. Saldo stETH ini meningkat setiap hari saat staking reward terakumulasi, dan dapat diperdagangkan dengan bebas, digunakan sebagai jaminan dalam protokol lending, atau disediakan sebagai likuiditas di DeFi. Sifat 'likuid' ini berarti staker tidak perlu memilih antara menghasilkan staking yield dan berpartisipasi di DeFi.\n\nLido telah menjadi infrastruktur DeFi fundamental, dengan lebih dari $20 miliar dalam staked ETH dan stETH terintegrasi di ratusan protokol. Protokol ini dikelola oleh pemegang token LDO melalui Lido DAO, yang mengawasi pemilihan node operator, struktur biaya, dan upgrade protokol.",
+	"features": {
+		"1": {
+			"title": "Liquid Staking",
+			"description": "Stake ETH dan terima stETH, token likuid yang mengakumulasi staking reward secara otomatis"
+		},
+		"2": {
+			"title": "Tanpa Minimum Stake",
+			"description": "Stake jumlah ETH berapa pun - tidak perlu 32 ETH yang diperlukan untuk solo staking"
+		},
+		"3": {
+			"title": "Komposabilitas DeFi",
+			"description": "Gunakan stETH di DeFi - sebagai jaminan, dalam liquidity pool, atau untuk strategi yield"
+		},
+		"4": {
+			"title": "Reward Harian",
+			"description": "Saldo stETH meningkat setiap hari untuk mencerminkan staking reward yang dihasilkan"
+		},
+		"5": {
+			"title": "Penarikan",
+			"description": "Minta penarikan untuk mengonversi stETH kembali ke ETH melalui protokol"
+		},
+		"6": {
+			"title": "wstETH",
+			"description": "Wrapped stETH dengan saldo konstan - reward terakumulasi melalui apresiasi nilai"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Hasilkan Staking Reward",
+			"description": "Hasilkan Ethereum staking yield (~3-4% APY) sambil mempertahankan likuiditas"
+		},
+		"2": {
+			"title": "Jaminan DeFi",
+			"description": "Gunakan stETH sebagai jaminan di Aave, MakerDAO, dan protokol lending lainnya"
+		},
+		"3": {
+			"title": "Penyediaan Likuiditas",
+			"description": "Sediakan likuiditas stETH-ETH di Curve dan hasilkan biaya trading tambahan"
+		},
+		"4": {
+			"title": "Staking Leveraged",
+			"description": "Pinjam terhadap stETH untuk membeli lebih banyak ETH dan memperkuat staking return"
+		},
+		"5": {
+			"title": "Diversifikasi Portfolio",
+			"description": "Pegang stETH sebagai alternatif ETH yang menghasilkan yield dalam portfolio Anda"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu Lido dan bagaimana liquid staking bekerja?",
+			"answer": "Lido adalah protokol liquid staking yang memungkinkan Anda stake ETH dan menerima stETH sebagai gantinya. Saat Anda stake melalui Lido, ETH Anda didelegasikan ke node operator profesional yang menjalankan validator. Anda menerima stETH yang mewakili stake Anda, yang secara otomatis meningkat dalam saldo saat reward terakumulasi. Ini berarti Anda dapat menggunakan stETH di DeFi sambil tetap menghasilkan staking reward."
+		},
+		"2": {
+			"question": "Apakah Lido aman digunakan?",
+			"answer": "Lido adalah protokol liquid staking terbesar dan paling teruji dengan beberapa audit keamanan. Namun, risiko termasuk kerentanan smart contract, penalti slashing jika node operator tidak berperilaku baik, dan stETH berpotensi diperdagangkan dengan diskon terhadap ETH selama tekanan pasar. Lido menggunakan set node operator yang beragam untuk mengurangi risiko sentralisasi."
+		},
+		"3": {
+			"question": "Apa perbedaan antara stETH dan wstETH?",
+			"answer": "stETH adalah token rebasing - saldo Anda meningkat setiap hari saat reward terakumulasi. wstETH (wrapped stETH) memiliki saldo konstan, dengan reward tercermin dalam nilainya yang meningkat relatif terhadap stETH. wstETH lebih baik untuk integrasi DeFi yang tidak mendukung token rebasing dan untuk tujuan pelaporan pajak."
+		},
+		"4": {
+			"question": "Berapa biaya yang dikenakan Lido?",
+			"answer": "Lido mengenakan biaya 10% pada staking reward, dibagi antara node operator dan treasury Lido DAO. Biaya ini secara otomatis dikurangkan - Anda hanya menerima staking reward bersih yang tercermin dalam saldo stETH Anda. Tidak ada biaya untuk staking atau unstaking."
+		},
+		"5": {
+			"question": "Bagaimana cara unstake dari Lido?",
+			"answer": "Anda dapat meminta penarikan melalui antrian penarikan Lido, yang memproses permintaan saat exit validator selesai (biasanya 1-5 hari). Alternatifnya, Anda dapat menukar stETH dengan ETH di DEX seperti Curve untuk likuiditas segera, meskipun Anda mungkin menerima sedikit kurang dari 1:1 tergantung pada kondisi pasar."
+		}
+	},
+	"cta": {
+		"ready": "Siap untuk mulai staking?",
+		"button": "Buka Lido",
+		"note": "Hasilkan ETH staking reward sambil tetap likuid"
+	}
+}

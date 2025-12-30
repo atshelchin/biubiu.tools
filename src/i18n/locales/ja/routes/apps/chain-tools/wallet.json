@@ -2,7 +2,7 @@
 	"category_seo": {
 		"title": "暗号ウォレット - ハードウェア、ソフトウェア、マルチチェーン | BiuBiu Tools",
 		"description": "セキュリティと利便性に優れた最高の暗号ウォレットを比較。すべてのブロックチェーン向けのハードウェアウォレット、ブラウザ拡張機能、モバイルウォレット。",
-		"keywords": "crypto wallet, hardware wallet, metamask, ledger, trezor, multi-chain wallet",
+		"keywords": "暗号ウォレット, ハードウェアウォレット, metamask, ledger, trezor, マルチチェーンウォレット",
 		"faqs": [
 			{
 				"question": "暗号ウォレットとは何ですか？",
@@ -19,311 +19,311 @@
 		]
 	},
 	"tools": {
+		"biubiu_wallet_sweep": {
+			"description": "複数ウォレットからトークンを1つのアドレスにバッチ統合"
+		},
+		"biubiu_one_to_many": {
+			"description": "1つのウォレットから複数の受取人にトークンを分配"
+		},
+		"biubiu_wallet_generator": {
+			"description": "ニーモニックフレーズ付きHDウォレットをバッチ生成"
+		},
+		"biubiu_balance_scanner": {
+			"description": "複数ウォレットのトークン残高を同時スキャン"
+		},
 		"debank": {
-			"description": "マルチチェーンポートフォリオトラッカーとソーシャルプラットフォーム"
-		},
-		"rabby": {
-			"description": "マルチチェーンブラウザウォレット"
-		},
-		"rainbow": {
-			"description": "美しいEthereumウォレット"
-		},
-		"metamask": {
-			"description": "最も人気のあるWeb3ウォレット"
-		},
-		"frame": {
-			"description": "プライバシー重視デスクトップウォレット"
-		},
-		"zerion": {
-			"description": "DeFiポートフォリオとウォレット"
-		},
-		"safe": {
-			"description": "マルチシグネチャスマートウォレット"
+			"description": "DeFiポジション分析とソーシャル機能付きマルチチェーンポートフォリオトラッカー"
 		},
 		"zapper": {
-			"description": "DeFiポートフォリオダッシュボード"
+			"description": "ポートフォリオ追跡、NFT、イールド管理のためのDeFiダッシュボード"
 		},
-		"argent": {
-			"description": "リカバリー機能付きスマートウォレット"
+		"zerion": {
+			"description": "ポートフォリオ追跡とマルチチェーン取引機能付きスマートDeFiウォレット"
 		},
-		"sequence": {
-			"description": "ゲーミング向けスマートウォレット"
+		"metamask": {
+			"description": "イーサリアムとEVMチェーン向け最も人気のブラウザ拡張ウォレット"
 		},
-		"ledger": {
-			"description": "ハードウェアウォレットセキュリティ"
+		"rabby": {
+			"description": "取引前リスクスキャン機能付きセキュリティ重視ブラウザウォレット"
 		},
-		"trezor": {
-			"description": "ハードウェアウォレットのパイオニア"
+		"rainbow": {
+			"description": "美しいNFT表示を備えたユーザーフレンドリーなイーサリアムウォレット"
 		},
-		"privy": {
-			"description": "埋め込みウォレットソリューション"
+		"frame": {
+			"description": "ハードウェアウォレット統合付きプライバシー重視デスクトップウォレット"
 		},
-		"dynamic": {
-			"description": "マルチウォレット認証"
+		"safe": {
+			"description": "チームとDAO向けマルチシグスマートコントラクトウォレット"
 		},
 		"ambire": {
-			"description": "メールログインとガスレストランザクション付きスマートウォレット"
+			"description": "メールログインとガスレストランザクション対応スマートウォレット"
 		},
 		"obvious": {
-			"description": "アカウント抽象化付きスマートウォレット"
+			"description": "ソーシャルリカバリー機能付きアカウント抽象化ウォレット"
+		},
+		"soul_wallet": {
+			"description": "プラグインシステム付きモジュラーERC-4337スマートウォレット"
+		},
+		"patch_wallet": {
+			"description": "Web3アプリ向けソーシャルログイン埋め込みウォレット"
 		},
 		"pimlico": {
-			"description": "ERC-4337バンドラーとペイマスターインフラ"
+			"description": "アカウント抽象化のためのERC-4337バンドラー・ペイマスターインフラ"
 		},
 		"stackup": {
-			"description": "アカウント抽象化バンドラーとSDK"
+			"description": "アカウント抽象化バンドラーサービスと開発者SDK"
 		},
 		"biconomy": {
-			"description": "アカウント抽象化とガスレストランザクションSDK"
+			"description": "ガスレストランザクションSDKとアカウント抽象化インフラ"
+		},
+		"alchemy_aa": {
+			"description": "スマートウォレットアプリ構築のためのAccount Kit SDK"
 		},
 		"zerodev": {
-			"description": "Kernel付きモジュラースマートウォレットSDK"
+			"description": "Kernelアカウント実装付きモジュラースマートウォレットSDK"
+		},
+		"particle_network": {
+			"description": "ソーシャルログインとチェーン抽象化対応ウォレット・アズ・ア・サービス"
+		},
+		"privy": {
+			"description": "シームレスなWeb3ユーザーオンボーディングのための埋め込みウォレットSDK"
+		},
+		"dynamic": {
+			"description": "マルチウォレット認証とオンボーディングプラットフォーム"
+		},
+		"ledger": {
+			"description": "安全なコールドストレージのための業界トップハードウェアウォレット"
+		},
+		"trezor": {
+			"description": "実績あるセキュリティを持つオープンソースハードウェアウォレットの先駆者"
+		},
+		"coinbase_wallet": {
+			"description": "DeFiとNFTサポート付きCoinbaseセルフカストディウォレット"
+		},
+		"trust_wallet": {
+			"description": "数百万の資産をサポートするマルチチェーンモバイルウォレット"
+		},
+		"argent": {
+			"description": "ガーディアンとStarkNetサポート付きスマートコントラクトウォレット"
+		},
+		"sequence": {
+			"description": "ゲームアプリ向け最適化スマートウォレットSDK"
+		},
+		"phantom_wallet": {
+			"description": "Solana、イーサリアム、ビットコイン対応マルチチェーンウォレット"
+		},
+		"backpack_wallet": {
+			"description": "SolanaとイーサリアムエコシステムのxNFT対応ウォレット"
+		},
+		"exodus_wallet": {
+			"description": "内蔵取引機能付きデスクトップ・モバイルウォレット"
 		},
 		"solflare": {
-			"description": "Solflare - 暗号資産ウォレット"
+			"description": "ステーキングとNFTサポート付き機能豊富なSolanaウォレット"
+		},
+		"keplr_wallet": {
+			"description": "CosmosエコシステムとIBC転送のリーディングウォレット"
+		},
+		"leap_wallet": {
+			"description": "DeFi統合付きマルチチェーンCosmosウォレット"
+		},
+		"xdefi_wallet": {
+			"description": "ネイティブスワップ機能付きクロスチェーンブラウザウォレット"
+		},
+		"brave_wallet": {
+			"description": "プライバシーファースト設計の内蔵ブラウザウォレット"
+		},
+		"block_wallet": {
+			"description": "フィッシング保護付きプライバシー強化ブラウザウォレット"
+		},
+		"okx_wallet": {
+			"description": "DEXとNFTマーケットプレイス付きマルチチェーンWeb3ウォレット"
+		},
+		"core_wallet": {
+			"description": "ビットコインとイーサリアムサポート付きAvalancheエコシステムウォレット"
+		},
+		"enkrypt_wallet": {
+			"description": "MyEtherWalletチームによるマルチチェーンブラウザウォレット"
+		},
+		"talisman_wallet": {
+			"description": "ポートフォリオダッシュボード付きPolkadot・イーサリアムウォレット"
 		},
 		"subwallet": {
-			"description": "SubWallet - Web3ウォレット"
+			"description": "PolkadotとSubstrateチェーンの総合ウォレット"
 		},
-		"tonhub": {
-			"description": "Tonhub - Web3ウォレット"
+		"polkadot_js": {
+			"description": "Polkadotエコシステムの公式ブラウザ拡張機能"
 		},
-		"mytonwallet": {
-			"description": "MyTonWallet - Web3ウォレット"
+		"nami_wallet": {
+			"description": "dAppとNFT向け軽量Cardanoブラウザウォレット"
 		},
-		"coolwallet": {
-			"description": "coolwallet - Web3ウォレット"
+		"eternl_wallet": {
+			"description": "ステーキングとDeFiツール付き機能豊富なCardanoウォレット"
 		},
-		"imtoken": {
-			"description": "imToken - Web3ウォレット"
+		"yoroi_wallet": {
+			"description": "EMURGO開発のCardano公式ライトウォレット"
 		},
-		"tokenpocket": {
-			"description": "TokenPocket - Web3ウォレット"
+		"temple_wallet": {
+			"description": "Tezos DeFiとNFTアプリ向けブラウザウォレット"
 		},
-		"myetherwallet": {
-			"description": "MyEtherWallet - Web3ウォレット"
+		"kukai_wallet": {
+			"description": "ソーシャルログインとDirectAuthサポート付きTezosウォレット"
 		},
-		"mycrypto": {
-			"description": "MyCrypto - Web3ウォレット"
+		"petra_wallet": {
+			"description": "Aptosブロックチェーンエコシステムの公式ウォレット"
 		},
-		"tronlink": {
-			"description": "TronLink - Web3ウォレット"
+		"martian_wallet": {
+			"description": "AptosとSuiネットワーク向けマルチチェーンウォレット"
 		},
-		"multis": {
-			"description": "Multis - Web3ウォレット"
+		"sui_wallet": {
+			"description": "Suiブロックチェーンの公式ブラウザウォレット"
 		},
-		"squads": {
-			"description": "Squads - Web3ウォレット"
-		},
-		"biubiu-wallet-sweep": {
-			"description": "Wallet Sweep - Tool"
-		},
-		"biubiu-one-to-many": {
-			"description": "One-to-Many Transfer - Tool"
-		},
-		"biubiu-wallet-generator": {
-			"description": "Wallet Generator - Tool"
-		},
-		"biubiu-balance-scanner": {
-			"description": "Balance Scanner - Tool"
-		},
-		"soul-wallet": {
-			"description": "Soul Wallet - Tool"
-		},
-		"patch-wallet": {
-			"description": "Patch Wallet - Tool"
-		},
-		"alchemy-aa": {
-			"description": "Alchemy Account Kit - Tool"
-		},
-		"particle-network": {
-			"description": "Particle Network - Tool"
-		},
-		"coinbase-wallet": {
-			"description": "Coinbase Wallet - Tool"
-		},
-		"trust-wallet": {
-			"description": "Trust Wallet - Tool"
-		},
-		"phantom-wallet": {
-			"description": "Phantom - Tool"
-		},
-		"backpack-wallet": {
-			"description": "Backpack - Tool"
-		},
-		"exodus-wallet": {
-			"description": "Exodus - Tool"
-		},
-		"keplr-wallet": {
-			"description": "Keplr - Tool"
-		},
-		"leap-wallet": {
-			"description": "Leap Wallet - Tool"
-		},
-		"xdefi-wallet": {
-			"description": "XDEFI - Tool"
-		},
-		"brave-wallet": {
-			"description": "Brave Wallet - Tool"
-		},
-		"block-wallet": {
-			"description": "BlockWallet - Tool"
-		},
-		"okx-wallet": {
-			"description": "OKX Wallet - Tool"
-		},
-		"core-wallet": {
-			"description": "Core Wallet - Tool"
-		},
-		"enkrypt-wallet": {
-			"description": "Enkrypt - Tool"
-		},
-		"talisman-wallet": {
-			"description": "Talisman - Tool"
-		},
-		"polkadot-js": {
-			"description": "Polkadot.js - Tool"
-		},
-		"nami-wallet": {
-			"description": "Nami - Tool"
-		},
-		"eternl-wallet": {
-			"description": "Eternl - Tool"
-		},
-		"yoroi-wallet": {
-			"description": "Yoroi - Tool"
-		},
-		"temple-wallet": {
-			"description": "Temple Wallet - Tool"
-		},
-		"kukai-wallet": {
-			"description": "Kukai - Tool"
-		},
-		"petra-wallet": {
-			"description": "Petra - Tool"
-		},
-		"martian-wallet": {
-			"description": "Martian - Tool"
-		},
-		"sui-wallet": {
-			"description": "Sui Wallet - Tool"
-		},
-		"suiet-wallet": {
-			"description": "Suiet - Tool"
+		"suiet_wallet": {
+			"description": "開発者向け機能付きオープンソースSuiウォレット"
 		},
 		"tonkeeper": {
-			"description": "Tonkeeper - Tool"
+			"description": "ステーキングとJettonサポート付き人気TONウォレット"
 		},
-		"sender-wallet": {
-			"description": "Sender Wallet - Tool"
+		"tonhub": {
+			"description": "Whalesステーキングプール統合付きTONウォレット"
 		},
-		"meteor-wallet": {
-			"description": "Meteor Wallet - Tool"
+		"mytonwallet": {
+			"description": "デスクトップとブラウザ向けオープンソースTONウォレット"
 		},
-		"here-wallet": {
-			"description": "HERE Wallet - Tool"
+		"sender_wallet": {
+			"description": "DeFiとNFT機能付きNEAR Protocolウォレット"
 		},
-		"coin98-wallet": {
-			"description": "Coin98 - Tool"
+		"meteor_wallet": {
+			"description": "高度なポートフォリオ追跡付きNEARウォレット"
 		},
-		"bitget-wallet": {
-			"description": "Bitget Wallet - Tool"
+		"here_wallet": {
+			"description": "ステーキング報酬付きモバイルファーストNEARウォレット"
 		},
-		"safepal-wallet": {
-			"description": "SafePal - Tool"
+		"coin98_wallet": {
+			"description": "90以上のブロックチェーンサポート付きマルチチェーンDeFiゲートウェイ"
 		},
-		"onekey-wallet": {
-			"description": "OneKey - Tool"
+		"bitget_wallet": {
+			"description": "スワップアグリゲーターとローンチパッド付きマルチチェーンウォレット"
 		},
-		"ellipal-wallet": {
-			"description": "ELLIPAL - Tool"
+		"safepal_wallet": {
+			"description": "Binance出資のハードウェア・ソフトウェアウォレットコンボ"
 		},
-		"dcent-wallet": {
-			"description": "D - Tool"
+		"onekey_wallet": {
+			"description": "マルチチェーンサポート付きオープンソースハードウェアウォレット"
 		},
-		"math-wallet": {
-			"description": "Math Wallet - Tool"
+		"ellipal_wallet": {
+			"description": "タッチスクリーンインターフェース付きエアギャップハードウェアウォレット"
 		},
-		"alpha-wallet": {
-			"description": "AlphaWallet - Tool"
+		"dcent_wallet": {
+			"description": "指紋認証付き生体認証ハードウェアウォレット"
 		},
-		"status-wallet": {
-			"description": "Status - Tool"
+		"coolwallet": {
+			"description": "Bluetooth接続付きクレジットカードサイズハードウェアウォレット"
 		},
-		"unstoppable-wallet": {
-			"description": "Unstoppable Wallet - Tool"
+		"imtoken": {
+			"description": "マルチチェーンDeFiサポート付きアジアで人気のモバイルウォレット"
 		},
-		"exodus-wallet-ext": {
-			"description": "Exodus Extension - Tool"
+		"tokenpocket": {
+			"description": "内蔵dAppブラウザ付きマルチチェーンモバイルウォレット"
 		},
-		"atomic-wallet": {
-			"description": "Atomic Wallet - Tool"
+		"math_wallet": {
+			"description": "100以上のブロックチェーンサポート付きマルチプラットフォームウォレット"
 		},
-		"guarda-wallet": {
-			"description": "Guarda - Tool"
+		"alpha_wallet": {
+			"description": "TokenScriptサポート付きオープンソースモバイルウォレット"
 		},
-		"edge-wallet": {
-			"description": "Edge - Tool"
+		"status_wallet": {
+			"description": "内蔵イーサリアムウォレット付きプライバシーメッセンジャーアプリ"
 		},
-		"crypto-com-defi": {
-			"description": "Crypto.com DeFi Wallet - Tool"
+		"unstoppable_wallet": {
+			"description": "DeFi分析付きプライバシー重視モバイルウォレット"
 		},
-		"lobstr-wallet": {
-			"description": "LOBSTR - Tool"
+		"exodus_wallet_ext": {
+			"description": "Exodusマルチチェーンウォレットのブラウザ拡張版"
 		},
-		"freighter-wallet": {
-			"description": "Freighter - Tool"
+		"myetherwallet": {
+			"description": "イーサリアムウォレット管理の元祖Webインターフェース"
 		},
-		"den-wallet": {
-			"description": "Den - Tool"
+		"mycrypto": {
+			"description": "安全なイーサリアム管理のためのデスクトップ・Webウォレット"
+		},
+		"atomic_wallet": {
+			"description": "アトミックスワップとステーキング機能付きデスクトップウォレット"
+		},
+		"guarda_wallet": {
+			"description": "内蔵取引所とステーキング付きマルチプラットフォームウォレット"
+		},
+		"edge_wallet": {
+			"description": "ユーザー名ベースログイン付きプライバシー重視モバイルウォレット"
+		},
+		"crypto_com_defi": {
+			"description": "Cronosチェーンとクロスチェーンブリッジ付きDeFiウォレット"
+		},
+		"lobstr_wallet": {
+			"description": "取引機能付きユーザーフレンドリーStellarウォレット"
+		},
+		"freighter_wallet": {
+			"description": "StellarとSorobanスマートコントラクト向けブラウザウォレット"
+		},
+		"tronlink": {
+			"description": "TRONブロックチェーンエコシステムの公式ウォレット"
+		},
+		"multis": {
+			"description": "給与支払い機能付きビジネス向けマルチシグウォレット"
+		},
+		"squads": {
+			"description": "Solana向けマルチシグトレジャリーとプロトコル管理"
+		},
+		"den_wallet": {
+			"description": "DeFi自動化とトランザクションバッチング付きスマートウォレット"
 		},
 		"instadapp": {
-			"description": "Instadapp - Tool"
+			"description": "プロトコルアグリゲーションと自動化付きDeFiスマートアカウント"
 		},
-		"fuelet-wallet": {
-			"description": "Fuelet - Tool"
+		"fuelet_wallet": {
+			"description": "Fuelモジュラー実行層向けウォレット"
 		},
-		"fuel-wallet": {
-			"description": "Fuel Wallet - Tool"
+		"fuel_wallet": {
+			"description": "Fuel Networkの公式ブラウザウォレット"
 		},
-		"braavos-wallet": {
-			"description": "Braavos - Tool"
+		"braavos_wallet": {
+			"description": "ハードウェアサイナーサポート付きStarkNetスマートウォレット"
 		},
-		"keystone-wallet": {
-			"description": "Keystone - Tool"
+		"keystone_wallet": {
+			"description": "QRコード署名付きエアギャップハードウェアウォレット"
 		},
-		"gridplus-wallet": {
-			"description": "GridPlus Lattice1 - Tool"
+		"gridplus_wallet": {
+			"description": "SafeCardストレージ付きエンタープライズハードウェアウォレット"
 		},
-		"tangem-wallet": {
-			"description": "Tangem - Tool"
+		"tangem_wallet": {
+			"description": "モバイル使用向けNFCカードベースハードウェアウォレット"
 		},
-		"web3auth-wallet": {
-			"description": "Web3Auth - Tool"
+		"web3auth_wallet": {
+			"description": "ソーシャルログインサポート付きMPCベースキー管理"
 		},
-		"unisat-wallet": {
-			"description": "UniSat - Tool"
+		"unisat_wallet": {
+			"description": "Ordinals、BRC-20、インスクリプション向けビットコインウォレット"
 		},
-		"xverse-wallet": {
-			"description": "Xverse - Tool"
+		"xverse_wallet": {
+			"description": "Ordinalsサポート付きビットコイン・Stacksウォレット"
 		},
-		"leather-wallet": {
-			"description": "Leather (Hiro) - Tool"
+		"leather_wallet": {
+			"description": "旧Hiro Walletのビットコイン・Stacksウォレット"
 		},
-		"passport-wallet": {
-			"description": "Passport (Foundation) - Tool"
+		"passport_wallet": {
+			"description": "オープンソースエアギャップビットコインハードウェアウォレット"
 		},
-		"seedsigner-wallet": {
-			"description": "SeedSigner - Tool"
+		"seedsigner_wallet": {
+			"description": "DIYエアギャップビットコイン署名デバイスプロジェクト"
 		},
-		"fireblocks-wallet": {
-			"description": "Fireblocks - Tool"
+		"fireblocks_wallet": {
+			"description": "デジタル資産向け機関投資家MPCカストディプラットフォーム"
 		},
-		"anchorage-wallet": {
-			"description": "Anchorage Digital - Tool"
+		"anchorage_wallet": {
+			"description": "連邦認可デジタル資産銀行・カストディアン"
 		},
-		"bitgo-wallet": {
-			"description": "BitGo - Tool"
+		"bitgo_wallet": {
+			"description": "マルチシグと保険付き機関投資家カストディ"
 		}
 	}
 }

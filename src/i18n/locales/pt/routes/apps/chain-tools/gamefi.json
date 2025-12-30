@@ -1,470 +1,469 @@
 {
 	"category_seo": {
-		"title": "GameFi - Blockchain Gaming e Jogos Play-to-Earn | BiuBiu Tools",
-		"description": "Descubra jogos blockchain, plataformas play-to-earn, metaversos e ferramentas GameFi. Encontre os melhores jogos cripto e oportunidades de gaming NFT.",
-		"keywords": "gamefi, blockchain gaming, play to earn, metaverse, nft games, crypto games",
+		"title": "GameFi & Gaming Web3 - Jogos Play-to-Earn | BiuBiu Tools",
+		"description": "Descubra jogos Web3 e plataformas GameFi. Jogos play-to-earn, ativos de jogos NFT e guildas de jogos blockchain.",
 		"faqs": [
 			{
 				"question": "O que é GameFi?",
-				"answer": "GameFi combina gaming com finanças descentralizadas, permitindo que os jogadores ganhem criptomoedas e NFTs através do jogo. Os jogadores realmente possuem ativos do jogo (personagens, itens, terra) como NFTs que podem negociar ou vender."
+				"answer": "GameFi combina jogos com mecânicas DeFi. Jogadores ganham tokens e NFTs jogando. Os ativos são verdadeiramente de propriedade dos jogadores e podem ser negociados ou usados em diferentes jogos."
 			},
 			{
-				"question": "Posso realmente ganhar dinheiro jogando?",
-				"answer": "Sim, mas depende do jogo, economia e tempo investido. Os modelos play-to-earn podem gerar renda através de recompensas de tokens, venda de NFTs e atividades do jogo. No entanto, muitos jogos requerem investimento inicial e os retornos variam amplamente."
+				"question": "Quais são os jogos Web3 populares?",
+				"answer": "Axie Infinity foi pioneiro no play-to-earn. Illuvium e Big Time são jogos de qualidade AAA. Gods Unchained é um popular jogo de cartas colecionáveis. O espaço está evoluindo com maior foco na jogabilidade."
 			},
 			{
-				"question": "Quais são os melhores jogos blockchain?",
-				"answer": "Os jogos populares de GameFi incluem Axie Infinity (batalhas por turnos), The Sandbox (metaverso), Illuvium (RPG), Gods Unchained (jogo de cartas) e muitos mais. Cada um oferece mecânicas de jogo únicas e modelos econômicos."
+				"question": "O que são guildas de jogos?",
+				"answer": "Guildas de jogos como YGG e Merit Circle reúnem recursos para ajudar jogadores a acessar NFTs de jogos caros. Elas dão bolsas aos jogadores e compartilham rendimentos. Útil para jogos com altos custos de entrada."
 			}
 		]
 	},
 	"tools": {
 		"immutable": {
-			"description": "Gaming-focused L2 with zkEVM"
+			"description": "L2 focado em jogos com zkEVM para negociação de NFT sem gas"
 		},
 		"ronin": {
-			"description": "Gaming sidechain for Axie Infinity ecosystem"
+			"description": "Sidechain de jogos que alimenta o ecossistema Axie Infinity"
 		},
 		"treasure": {
-			"description": "Decentralized gaming ecosystem on Arbitrum"
+			"description": "Ecossistema de jogos descentralizado no Arbitrum com token MAGIC"
 		},
 		"beam": {
-			"description": "Gaming subnet on Avalanche"
+			"description": "Subnet de jogos no Avalanche pela Merit Circle"
 		},
 		"stardust": {
-			"description": "Web3 gaming SDK and wallet solution"
+			"description": "SDK de jogos Web3 e infraestrutura de carteira para desenvolvedores"
 		},
 		"fractal": {
-			"description": "Gaming NFT marketplace and discovery"
+			"description": "Marketplace de NFT de jogos e plataforma de descoberta no Solana"
 		},
 		"xai": {
-			"description": "Gaming L3 built on Arbitrum Orbit"
+			"description": "L3 de jogos construído no Arbitrum Orbit para jogos escaláveis"
 		},
 		"ygg": {
-			"description": "Gaming guild with scholarship programs"
+			"description": "Guilda de jogos com programas de bolsas para play-to-earn"
 		},
 		"loot8": {
-			"description": "NFT gaming collectibles platform"
+			"description": "Plataforma de colecionáveis NFT de jogos para marcas"
 		},
 		"iskra": {
-			"description": "Web3 gaming platform and community"
+			"description": "Plataforma de jogos Web3 e hub comunitário"
 		},
 		"loot": {
-			"description": "Composable NFT adventure gear project"
+			"description": "NFTs de equipamento de aventura composíveis para construtores de jogos"
 		},
 		"pixels": {
-			"description": "Social farming game on Ronin chain"
+			"description": "Jogo social de fazenda on-chain no Ronin"
 		},
 		"parallel": {
-			"description": "Sci-fi trading card game on Ethereum"
+			"description": "Jogo de cartas colecionáveis de ficção científica com jogabilidade competitiva"
 		},
 		"illuvium": {
-			"description": "AAA auto-battler RPG on Immutable X"
+			"description": "RPG AAA de mundo aberto com mecânicas de auto-battler"
 		},
 		"shrapnel": {
-			"description": "Moddable extraction FPS on Avalanche"
+			"description": "Shooter de extração AAA modificável no Avalanche"
 		},
 		"playnance": {
-			"description": "Playnance - Web3 gaming platform"
+			"description": "Plataforma de previsões de esports e jogos com recompensas cripto"
 		},
 		"sandbox": {
-			"description": "The Sandbox - Web3 gaming platform"
+			"description": "Metaverso de mundo virtual com conteúdo gerado pelo usuário e NFTs LAND"
 		},
 		"decentraland": {
-			"description": "Decentraland - Web3 gaming platform"
+			"description": "Mundo virtual descentralizado com propriedade de LAND e governança DAO"
 		},
 		"bigtime": {
-			"description": "Big Time - Web3 gaming platform"
+			"description": "RPG de ação AAA multiplayer com viagem no tempo e loot"
 		},
 		"splinterlands": {
-			"description": "Splinterlands - Web3 gaming platform"
+			"description": "Jogo de batalha de cartas estratégico com recompensas play-to-earn"
 		},
 		"stepn": {
-			"description": "Move-to-earn fitness app rewarding physical activity with tokens"
+			"description": "App fitness move-to-earn recompensando atividade física com tokens"
 		},
 		"mir4": {
-			"description": "Cross-platform MMORPG with DRACO token mining mechanics"
+			"description": "MMORPG cross-platform com mecânicas de mineração do token DRACO"
 		},
 		"wildcard": {
-			"description": "Competitive arena game with card-based strategy"
+			"description": "Jogo de arena competitivo com elementos de estratégia de cartas"
 		},
 		"aurory": {
-			"description": "Solana JRPG tactics game with NFT creatures"
+			"description": "Jogo tático JRPG no Solana com criaturas NFT"
 		},
 		"blocklords": {
-			"description": "Medieval grand strategy game with dynasty building"
+			"description": "Jogo de grande estratégia medieval com construção de dinastias"
 		},
 		"superior": {
-			"description": "Roguelike co-op shooter on Gala Games platform"
+			"description": "Shooter co-op roguelike na plataforma Gala Games"
 		},
 		"fusionist": {
-			"description": "Binance-listed AAA mech strategy game with ACE token"
+			"description": "Jogo de estratégia mech AAA listado na Binance com token ACE"
 		},
 		"xterio": {
-			"description": "Binance Labs-backed AI gaming platform and publisher"
+			"description": "Plataforma de jogos AI e publisher apoiada pela Binance Labs"
 		},
 		"ultiverse": {
-			"description": "Binance Labs-invested AI-powered metaverse gaming platform"
+			"description": "Plataforma de jogos metaverso alimentada por AI apoiada pela Binance Labs"
 		},
 		"pixelmon": {
-			"description": "Open-world creature collection RPG with evolving NFTs"
+			"description": "RPG de coleção de criaturas em mundo aberto com NFTs evolutivos"
 		},
 		"xpet": {
-			"description": "Social trading pet game on Arbitrum"
+			"description": "Jogo social de trading de pets no Arbitrum"
 		},
 		"carv": {
-			"description": "Gaming identity and credential protocol for Web3"
+			"description": "Protocolo de identidade e credenciais de jogos Web3"
 		},
 		"gunz": {
-			"description": "AAA battle royale shooter from Gunzilla Games"
+			"description": "Shooter battle royale AAA pela Gunzilla Games"
 		},
 		"lumiterra": {
-			"description": "Open-world survival crafting game on Polygon"
+			"description": "Jogo de sobrevivência e crafting em mundo aberto no Polygon"
 		},
 		"gamestarter": {
-			"description": "Gaming launchpad and publisher for Web3 games"
+			"description": "Launchpad e publisher de jogos Web3"
 		},
 		"gamegpt": {
-			"description": "AI-powered gaming content generation platform"
+			"description": "Plataforma de geração de conteúdo de jogos alimentada por AI"
 		},
 		"kryptomon": {
-			"description": "Creature breeding mobile game on BNB Chain"
+			"description": "Jogo mobile de criação de criaturas na BNB Chain"
 		},
 		"revomon": {
-			"description": "VR monster battling game inspired by Pokemon"
+			"description": "Jogo de batalha de monstros VR inspirado em Pokemon"
 		},
 		"era7": {
-			"description": "Trading card strategy game on BNB Chain"
+			"description": "Jogo de estratégia de cartas colecionáveis na BNB Chain"
 		},
 		"cryptoblades": {
-			"description": "Web3 RPG with play-to-earn mechanics"
+			"description": "RPG Web3 com mecânicas play-to-earn"
 		},
 		"derace": {
-			"description": "NFT horse racing with breeding and betting"
+			"description": "Corrida de cavalos NFT com criação e apostas"
 		},
 		"superverse": {
-			"description": "NFT gaming marketplace and ecosystem"
+			"description": "Marketplace e ecossistema de jogos NFT"
 		},
 		"karrat": {
-			"description": "AI gaming ecosystem powering My Pet Hooligan"
+			"description": "Ecossistema de jogos AI alimentando My Pet Hooligan"
 		},
 		"overworld": {
-			"description": "Action RPG with loot system on Immutable X"
+			"description": "RPG de ação com sistema de loot no Immutable X"
 		},
 		"skyweaver": {
-			"description": "Free-to-play trading card game by Horizon"
+			"description": "Jogo de cartas colecionáveis free-to-play pela Horizon"
 		},
 		"treeverse": {
-			"description": "Anime-inspired MMORPG metaverse"
+			"description": "Metaverso MMORPG estilo anime"
 		},
 		"metalcore": {
-			"description": "Mech combat game on Immutable X"
+			"description": "Jogo de combate mech no Immutable X"
 		},
 		"mirandus": {
-			"description": "Fantasy RPG in an epic world by Gala Games"
+			"description": "RPG de fantasia épica pela Gala Games"
 		},
 		"aavegotchi": {
-			"description": "DeFi-powered NFT gaming on Polygon"
+			"description": "Jogo NFT alimentado por DeFi no Polygon"
 		},
 		"cometh": {
-			"description": "Spaceship strategy game with DeFi elements"
+			"description": "Jogo de estratégia espacial com elementos DeFi"
 		},
 		"realm": {
-			"description": "Fantasy RPG with land and resources on Polygon"
+			"description": "RPG de fantasia com terras e recursos no Polygon"
 		},
 		"mobox": {
-			"description": "GameFi platform with NFT farming on BNB Chain"
+			"description": "Plataforma GameFi de farming NFT na BNB Chain"
 		},
 		"upland": {
-			"description": "Property trading metaverse mapped to real world"
+			"description": "Metaverso de imóveis virtuais mapeado para o mundo real"
 		},
 		"genopets": {
-			"description": "Move-to-earn pet game on Solana"
+			"description": "Jogo de pets move-to-earn no Solana"
 		},
 		"cyball": {
-			"description": "Football management game on BNB Chain"
+			"description": "Jogo de gerenciamento de futebol na BNB Chain"
 		},
 		"pegaxy": {
-			"description": "PvP horse racing game on Polygon"
+			"description": "Jogo de corrida de cavalos PvP no Polygon"
 		},
 		"apeiron": {
-			"description": "God-game with roguelike elements on Polygon"
+			"description": "God game com elementos roguelike no Polygon"
 		},
 		"sipher": {
-			"description": "AAA multiplayer shooter on Ethereum"
+			"description": "Shooter multiplayer AAA no Ethereum"
 		},
 		"honeyland": {
-			"description": "Bee-themed strategy game on Solana"
+			"description": "Jogo de estratégia temática de abelhas no Solana"
 		},
 		"rainmaker": {
-			"description": "Weather-based crypto prediction game"
+			"description": "Plataforma agregadora de descoberta e analytics GameFi"
 		},
 		"gaimin": {
-			"description": "Gaming rewards platform with GPU sharing"
+			"description": "Plataforma de recompensas de jogos com rede de compartilhamento de GPU"
 		},
 		"momento": {
-			"description": "AI-powered gaming moments and highlights"
+			"description": "Jogo casual hiper Telegram na blockchain TON"
 		},
 		"catizen": {
-			"description": "Cat-themed Telegram game on TON blockchain"
+			"description": "Jogo Telegram temática de gatos na blockchain TON"
 		},
 		"notcoin": {
-			"description": "Telegram tap game that launched NOT token"
+			"description": "Jogo tap-to-earn Telegram com token NOT"
 		},
 		"blum": {
-			"description": "Telegram mini-app exchange and gaming platform"
+			"description": "Mini-app Telegram DEX e plataforma de jogos"
 		},
 		"yescoin": {
-			"description": "Telegram tap-to-earn game on TON"
+			"description": "Jogo tap-to-earn Telegram no TON"
 		},
 		"dogs": {
-			"description": "Dog-themed Telegram game on TON"
+			"description": "Jogo Telegram meme de cachorro no TON"
 		},
 		"pixelverse": {
-			"description": "Cyberpunk Telegram game with battles"
+			"description": "Jogo Telegram cyberpunk com batalhas"
 		},
 		"major": {
-			"description": "Social ranking Telegram game on TON"
+			"description": "Jogo Telegram de ranking social no TON"
 		},
-		"elixir-games": {
-			"description": "Elixir Games - Tool"
+		"elixir_games": {
+			"description": "Launcher de jogos desktop para descoberta de jogos Web3"
 		},
-		"portal-gaming": {
-			"description": "Portal - Tool"
+		"portal_gaming": {
+			"description": "Carteira de jogos cross-chain e plataforma de descoberta"
 		},
-		"pirate-nation": {
-			"description": "Pirate Nation - Tool"
+		"pirate_nation": {
+			"description": "RPG de aventura pirata totalmente on-chain no Arbitrum L3"
 		},
-		"ev-io": {
-			"description": "Ev.io - Tool"
+		"ev_io": {
+			"description": "Shooter FPS baseado em navegador com play-to-earn no Solana"
 		},
-		"ronin-gaming": {
-			"description": "Ronin - Tool"
+		"ronin_gaming": {
+			"description": "Blockchain de jogos alimentando Axie e jogos Sky Mavis"
 		},
-		"prime-gaming": {
-			"description": "Prime Gaming - Tool"
+		"prime_gaming": {
+			"description": "Ecossistema de jogos Echelon Prime com token PRIME"
 		},
-		"sui-gaming": {
-			"description": "Sui Gaming - Tool"
+		"sui_gaming": {
+			"description": "Hub de jogos na blockchain Sui com objetos baseados em Move"
 		},
-		"fractal-gaming": {
-			"description": "Fractal - Tool"
+		"fractal_gaming": {
+			"description": "Marketplace de NFT de jogos e descoberta no Solana"
 		},
-		"myria-gaming": {
-			"description": "Myria - Tool"
+		"myria_gaming": {
+			"description": "L2 de jogos com infraestrutura NFT e estúdio de jogos"
 		},
-		"oasys-gaming": {
-			"description": "Oasys - Tool"
+		"oasys_gaming": {
+			"description": "Blockchain de jogos japonesa apoiada por grandes estúdios de jogos"
 		},
-		"xborg-gaming": {
-			"description": "XBorg - Tool"
+		"xborg_gaming": {
+			"description": "Plataforma de identidade de jogos e credenciais de esports"
 		},
-		"beam-gaming": {
-			"description": "Beam - Tool"
+		"beam_gaming": {
+			"description": "Subnet de jogos no Avalanche pela Merit Circle"
 		},
-		"gala-games": {
-			"description": "Gala Games - Tool"
+		"gala_games": {
+			"description": "Ecossistema de jogos com múltiplos títulos play-to-earn"
 		},
-		"axie-infinity": {
-			"description": "Axie Infinity - Tool"
+		"axie_infinity": {
+			"description": "Jogo pioneiro play-to-earn com criaturas NFT e batalhas"
 		},
-		"gods-unchained": {
-			"description": "Gods Unchained - Tool"
+		"gods_unchained": {
+			"description": "Jogo de cartas colecionáveis competitivo free-to-play no Immutable X"
 		},
-		"guild-of-guardians": {
-			"description": "Guild of Guardians - Tool"
+		"guild_of_guardians": {
+			"description": "RPG mobile de esquadrões no Immutable X"
 		},
-		"ember-sword": {
-			"description": "Ember Sword - Tool"
+		"ember_sword": {
+			"description": "MMORPG sandbox free-to-play no Immutable zkEVM"
 		},
-		"star-atlas": {
-			"description": "Star Atlas - Tool"
+		"star_atlas": {
+			"description": "Metaverso de exploração espacial e jogo de estratégia no Solana"
 		},
-		"hero-of-mavia": {
-			"description": "Heroes of Mavia - Tool"
+		"hero_of_mavia": {
+			"description": "Jogo mobile de estratégia de construção de base com batalhas PvP"
 		},
-		"night-crows": {
-			"description": "Night Crows - Tool"
+		"night_crows": {
+			"description": "MMORPG coreano AAA na blockchain WEMIX"
 		},
-		"off-the-grid": {
-			"description": "Off the Grid - Tool"
+		"off_the_grid": {
+			"description": "Shooter battle royale AAA cyberpunk no Avalanche"
 		},
-		"maple-story-universe": {
-			"description": "MapleStory Universe - Tool"
+		"maple_story_universe": {
+			"description": "Versão blockchain do clássico MMORPG MapleStory pela Nexon"
 		},
-		"nyan-heroes": {
-			"description": "Nyan Heroes - Tool"
+		"nyan_heroes": {
+			"description": "Jogo de shooter com heróis gato no Solana"
 		},
-		"phantom-galaxies": {
-			"description": "Phantom Galaxies - Tool"
+		"phantom_galaxies": {
+			"description": "RPG de ação espacial mecha no Polygon"
 		},
-		"crypto-unicorns": {
-			"description": "Crypto Unicorns - Tool"
+		"crypto_unicorns": {
+			"description": "Jogo de criação e fazenda de unicórnios no Polygon"
 		},
-		"legends-of-venari": {
-			"description": "Legends of Venari - Tool"
+		"legends_of_venari": {
+			"description": "Jogo de coleção e exploração de criaturas no Ethereum"
 		},
-		"planet-ix": {
-			"description": "Planet IX - Tool"
+		"planet_ix": {
+			"description": "Jogo de estratégia NFT com propriedade de terras no Polygon"
 		},
-		"sweat-economy": {
-			"description": "Sweat Economy - Tool"
+		"sweat_economy": {
+			"description": "App move-to-earn convertendo passos em tokens SWEAT no NEAR"
 		},
-		"champions-ascension": {
-			"description": "Champions Ascension - Tool"
+		"champions_ascension": {
+			"description": "RPG de arena de ação massivamente multiplayer no Ethereum"
 		},
-		"defi-kingdoms": {
-			"description": "DeFi Kingdoms - Tool"
+		"defi_kingdoms": {
+			"description": "DeFi encontra RPG com heróis, quests e DEX"
 		},
-		"cross-the-ages": {
-			"description": "Cross The Ages - Tool"
+		"cross_the_ages": {
+			"description": "Jogo de cartas colecionáveis com AR no Immutable X"
 		},
-		"echoes-of-empire": {
-			"description": "Echoes of Empire - Tool"
+		"echoes_of_empire": {
+			"description": "Jogo de estratégia espacial 4X no Gala Games"
 		},
-		"spider-tanks": {
-			"description": "Spider Tanks - Tool"
+		"spider_tanks": {
+			"description": "Jogo brawler esports PvP no Gala Games"
 		},
-		"town-star": {
-			"description": "Town Star - Tool"
+		"town_star": {
+			"description": "Jogo de simulação de fazenda no Gala Games"
 		},
-		"voxie-tactics": {
-			"description": "Voxie Tactics - Tool"
+		"voxie_tactics": {
+			"description": "Jogo tático por turnos com arte voxel no Polygon"
 		},
-		"camelot-unchained": {
-			"description": "Camelot Unchained - Tool"
+		"camelot_unchained": {
+			"description": "MMORPG PvP focado em RvR com crafting profundo"
 		},
-		"wolf-game": {
-			"description": "Wolf Game - Tool"
+		"wolf_game": {
+			"description": "Jogo de staking NFT baseado em risco no Ethereum"
 		},
-		"forgotten-runiverse": {
-			"description": "Forgotten Runiverse - Tool"
+		"forgotten_runiverse": {
+			"description": "MMORPG construído na comunidade Forgotten Runes Wizards"
 		},
-		"crypto-raiders": {
-			"description": "Crypto Raiders - Tool"
+		"crypto_raiders": {
+			"description": "RPG de exploração de dungeons no Polygon"
 		},
-		"the-beacon": {
-			"description": "The Beacon - Tool"
+		"the_beacon": {
+			"description": "Roguelike dungeon crawler no Arbitrum pela Treasure"
 		},
-		"alien-worlds": {
-			"description": "Alien Worlds - Tool"
+		"alien_worlds": {
+			"description": "Metaverso de mineração NFT na blockchain WAX"
 		},
-		"farmers-world": {
-			"description": "Farmers World - Tool"
+		"farmers_world": {
+			"description": "Jogo NFT de fazenda na blockchain WAX"
 		},
-		"thetan-arena": {
-			"description": "Thetan Arena - Tool"
+		"thetan_arena": {
+			"description": "Jogo MOBA e battle royale esports na BNB Chain"
 		},
-		"league-of-kingdoms": {
-			"description": "League of Kingdoms - Tool"
+		"league_of_kingdoms": {
+			"description": "Jogo de estratégia MMO com NFTs de terras no Polygon"
 		},
-		"revv-racing": {
-			"description": "REVV Racing - Tool"
+		"revv_racing": {
+			"description": "Jogo de corrida motorsport com elementos de Fórmula 1"
 		},
-		"riot-racers": {
-			"description": "Riot Racers - Tool"
+		"riot_racers": {
+			"description": "Jogo de corrida idle play-to-earn no Polygon"
 		},
-		"zed-run": {
-			"description": "ZED RUN - Tool"
+		"zed_run": {
+			"description": "Corrida e criação de cavalos digitais no Polygon"
 		},
-		"derby-stars": {
-			"description": "Derby Stars - Tool"
+		"derby_stars": {
+			"description": "Jogo de corrida e criação de cavalos no Polygon"
 		},
-		"battle-of-guardians": {
-			"description": "Battle of Guardians - Tool"
+		"battle_of_guardians": {
+			"description": "Jogo de luta PvP esports na BNB Chain"
 		},
-		"the-machines-arena": {
-			"description": "The Machines Arena - Tool"
+		"the_machines_arena": {
+			"description": "Hero shooter competitivo na blockchain Ronin"
 		},
-		"planet-quest": {
-			"description": "PlanetQuest - Tool"
+		"planet_quest": {
+			"description": "Jogo de exploração e sobrevivência sci-fi no Polygon"
 		},
-		"ready-player-me": {
-			"description": "Ready Player Me - Tool"
+		"ready_player_me": {
+			"description": "Criação de avatares cross-platform para metaverso e jogos"
 		},
-		"hamster-kombat": {
-			"description": "Hamster Kombat - Tool"
+		"hamster_kombat": {
+			"description": "Jogo viral tap-to-earn Telegram no TON"
 		},
-		"meme-fi": {
-			"description": "MemeFi - Tool"
+		"meme_fi": {
+			"description": "Jogo tap-to-earn de memes na blockchain Sui"
 		},
-		"my-pet-hooligan": {
-			"description": "My Pet Hooligan - Tool"
+		"my_pet_hooligan": {
+			"description": "Jogo shooter UGC com NFTs de coelhos no metaverso"
 		},
-		"nakamoto-games": {
-			"description": "Nakamoto Games - Tool"
+		"nakamoto_games": {
+			"description": "Plataforma multi-jogos play-to-earn no Polygon"
 		},
-		"gmt-stepn": {
-			"description": "GMT (STEPN) - Tool"
+		"gmt_stepn": {
+			"description": "Token do ecossistema FSL para app move-to-earn STEPN"
 		},
-		"magic-square": {
-			"description": "Magic Square - Tool"
+		"magic_square": {
+			"description": "App store e plataforma de descoberta Web3"
 		},
-		"age-of-dino": {
-			"description": "Age of Dino - Tool"
+		"age_of_dino": {
+			"description": "Jogo de estratégia play-to-earn de dinossauros na BNB Chain"
 		},
-		"bnb-heroes": {
-			"description": "BNB Heroes - Tool"
+		"bnb_heroes": {
+			"description": "Jogo RPG idle na BNB Chain"
 		},
-		"elfin-games": {
-			"description": "Elfin Games - Tool"
+		"elfin_games": {
+			"description": "Jogo de coleção NFT estilo Pokemon na BNB Chain"
 		},
-		"games-for-a-living": {
-			"description": "Games for a Living - Tool"
+		"games_for_a_living": {
+			"description": "Jogos mobile casuais play-to-earn no Polygon"
 		},
 		"seedify": {
-			"description": "Seedify - Tool"
+			"description": "Launchpad e incubadora de jogos para jogos blockchain"
 		},
-		"wagmi-games": {
-			"description": "WAGMI Games - Tool"
+		"wagmi_games": {
+			"description": "Jogo PvP competitivo de tower defense no Ethereum"
 		},
-		"sidus-heroes": {
-			"description": "SIDUS HEROES - Tool"
+		"sidus_heroes": {
+			"description": "MMORPG espacial com mecânicas play-to-earn"
 		},
-		"chain-guardians": {
-			"description": "Chain Guardians - Tool"
+		"chain_guardians": {
+			"description": "RPG com mecânicas de mineração na BNB Chain"
 		},
-		"meta-apes": {
-			"description": "Meta Apes - Tool"
+		"meta_apes": {
+			"description": "Jogo de estratégia MMO mobile na BNB Chain"
 		},
-		"second-live": {
-			"description": "SecondLive - Tool"
+		"second_live": {
+			"description": "Metaverso social com customização de avatares na Binance"
 		},
-		"tiny-world": {
-			"description": "Tiny World - Tool"
+		"tiny_world": {
+			"description": "Jogo DeFi idle com NFTs na BNB Chain"
 		},
-		"radio-caca": {
-			"description": "Radio Caca (RACA) - Tool"
+		"radio_caca": {
+			"description": "Metaverso USM e ecossistema de jogos NFT"
 		},
-		"binary-x": {
-			"description": "BinaryX - Tool"
+		"binary_x": {
+			"description": "Plataforma de jogos com Cyber Dragon e launchpad IGO"
 		},
-		"mines-of-dalarnia": {
-			"description": "Mines of Dalarnia - Tool"
+		"mines_of_dalarnia": {
+			"description": "Jogo platformer de ação e mineração listado na Binance"
 		},
-		"moland-dao": {
-			"description": "Moland DAO - Tool"
+		"moland_dao": {
+			"description": "Comunidade DAO de metaverso baseada em terras"
 		},
-		"portal-fantasy": {
-			"description": "Portal Fantasy - Tool"
+		"portal_fantasy": {
+			"description": "Jogo de aventura com criaturas JRPG no Avalanche"
 		},
-		"mighty-action-heroes": {
-			"description": "Mighty Action Heroes - Tool"
+		"mighty_action_heroes": {
+			"description": "Jogo battle royale casual no Polygon"
 		},
-		"meta-world": {
-			"description": "Meta World: My City - Tool"
+		"meta_world": {
+			"description": "Metaverso de imóveis e social na BNB Chain"
 		},
-		"syn-city": {
-			"description": "SYN CITY - Tool"
+		"syn_city": {
+			"description": "Jogo de estratégia social temática máfia na BNB Chain"
 		},
-		"imperium-empires": {
-			"description": "Imperium Empires - Tool"
+		"imperium_empires": {
+			"description": "Jogo de estratégia MMO espacial na BNB Chain"
 		},
-		"monsta-infinite": {
-			"description": "Monsta Infinite - Tool"
+		"monsta_infinite": {
+			"description": "Jogo de batalha de criaturas play-to-earn na BNB Chain"
 		},
-		"drunk-robots": {
-			"description": "Drunk Robots - Tool"
+		"drunk_robots": {
+			"description": "Jogo shooter PvP de robôs na BNB Chain"
 		}
 	}
 }

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "中文",
+		"englishName": "Chinese",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Lido - 领先的流动质押协议 | 质押ETH，获取stETH",
+		"description": "了解Lido，最大的流动质押协议。探索如何质押ETH并获得stETH，赚取质押奖励，并在DeFi中使用您的质押资产。",
+		"keywords": "Lido, 流动质押, stETH, ETH质押, 以太坊, DeFi, 质押奖励"
+	},
+	"overview": "Lido是DeFi中最大的流动质押协议，用户可以质押ETH并获得stETH（质押ETH）作为回报——这是一种流动代币，代表其质押头寸并自动累积质押奖励。Lido于2020年12月推出，正好在以太坊信标链上线之前，解决了一个关键问题：让用户在不锁定ETH的情况下赚取质押奖励。\n\n当您通过Lido质押ETH时，您会按1:1的比例收到stETH。这个stETH余额会随着质押奖励的累积而每天增加，并且可以自由交易、用作借贷协议的抵押品或在DeFi中提供流动性。这种"流动"特性意味着质押者不必在赚取质押收益和参与DeFi之间做选择。\n\nLido已成为基础性的DeFi基础设施，质押了超过200亿美元的ETH，stETH集成在数百个协议中。该协议由LDO代币持有者通过Lido DAO治理，负责监督节点运营商选择、费用结构和协议升级。",
+	"features": {
+		"1": {
+			"title": "流动质押",
+			"description": "质押ETH并获得stETH，一种自动累积质押奖励的流动代币"
+		},
+		"2": {
+			"title": "无最低质押要求",
+			"description": "质押任意数量的ETH——无需单独质押所需的32 ETH"
+		},
+		"3": {
+			"title": "DeFi可组合性",
+			"description": "在DeFi中使用stETH——作为抵押品、在流动性池中或用于收益策略"
+		},
+		"4": {
+			"title": "每日奖励",
+			"description": "stETH余额每天增加以反映赚取的质押奖励"
+		},
+		"5": {
+			"title": "提款",
+			"description": "请求提款以通过协议将stETH转换回ETH"
+		},
+		"6": {
+			"title": "wstETH",
+			"description": "包装的stETH，余额恒定——奖励通过价值增值累积"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "赚取质押奖励",
+			"description": "在保持流动性的同时赚取以太坊质押收益（约3-4% APY）"
+		},
+		"2": {
+			"title": "DeFi抵押品",
+			"description": "在Aave、MakerDAO和其他借贷协议上使用stETH作为抵押品"
+		},
+		"3": {
+			"title": "流动性提供",
+			"description": "在Curve上提供stETH-ETH流动性并赚取额外交易费用"
+		},
+		"4": {
+			"title": "杠杆质押",
+			"description": "以stETH为抵押借款购买更多ETH，放大质押收益"
+		},
+		"5": {
+			"title": "投资组合多元化",
+			"description": "在您的投资组合中持有stETH作为生息ETH替代品"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是Lido，流动质押如何运作？",
+			"answer": "Lido是一个流动质押协议，让您质押ETH并获得stETH作为回报。当您通过Lido质押时，您的ETH被委托给专业节点运营商运行验证器。您收到代表您质押的stETH，它会随着奖励累积自动增加余额。这意味着您可以在DeFi中使用stETH，同时仍然赚取质押奖励。"
+		},
+		"2": {
+			"question": "使用Lido安全吗？",
+			"answer": "Lido是最大且经过最多考验的流动质押协议，经过多次安全审计。然而，风险包括智能合约漏洞、节点运营商行为不当时的罚没惩罚，以及市场压力期间stETH可能以低于ETH的价格交易。Lido使用多样化的节点运营商组合来降低中心化风险。"
+		},
+		"3": {
+			"question": "stETH和wstETH有什么区别？",
+			"answer": "stETH是变基代币——您的余额随着奖励累积每天增加。wstETH（包装的stETH）余额恒定，奖励反映在其相对于stETH的价值增加中。wstETH更适合不支持变基代币的DeFi集成和税务报告目的。"
+		},
+		"4": {
+			"question": "Lido收取什么费用？",
+			"answer": "Lido对质押奖励收取10%的费用，由节点运营商和Lido DAO金库分成。这笔费用是自动扣除的——您只需在stETH余额中收到净质押奖励。质押或取消质押没有费用。"
+		},
+		"5": {
+			"question": "如何从Lido取消质押？",
+			"answer": "您可以通过Lido的提款队列请求提款，该队列在验证器退出完成时处理请求（通常1-5天）。或者，您可以在Curve等DEX上将stETH兑换为ETH以获得即时流动性，尽管根据市场条件，您可能收到略低于1:1的金额。"
+		}
+	},
+	"cta": {
+		"ready": "准备开始质押了吗？",
+		"button": "打开Lido",
+		"note": "在保持流动性的同时赚取ETH质押奖励"
+	}
+}

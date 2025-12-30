@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "Curve Finance - Önde Gelen Stablecoin DEX | Düşük Kayma Swapları",
+		"description": "Stablecoin ve sabitlenmiş varlık ticareti için önde gelen DEX olan Curve Finance'i keşfedin. Düşük kayma swapları, likidite sağlama ve CRV tokenomikleri hakkında bilgi edinin.",
+		"keywords": "Curve Finance, stablecoin swap, DeFi, düşük kayma, CRV, likidite havuzu, yield farming"
+	},
+	"overview": "Curve Finance, stablecoin'ler ve sabitlenmiş varlıklar arasında verimli ticaret için özel olarak tasarlanmış merkezi olmayan bir borsadır. 2020'de bir fizikçi ve seri girişimci olan Michael Egorov tarafından başlatılan Curve, benzer fiyatlarla işlem görmesi gereken varlıklar için optimize edilmiş bir bonding eğrisi olan StableSwap invariant'ına öncülük etti.\n\nUniswap gibi genel amaçlı AMM'lerin aksine, Curve'ün havuzları USDC/USDT/DAI gibi ilişkili varlıklar veya Bitcoin'in farklı wrapped versiyonları arasındaki ticaret için minimum kayma için optimize edilmiştir. Bu uzmanlaşma, Curve'ü DeFi likiditesinin omurgası haline getirmiş ve birçok protokol stablecoin ve liquid staking token ticareti için Curve havuzlarına güvenmiştir.\n\nProtokolün veCRV tokenomikleri, kullanıcıların oy gücü kazanmak ve likidite madenciliği ödüllerini artırmak için CRV tokenlarını kilitledikleri vote-escrowed yönetişimini tanıttı. Bu model DeFi genelinde yaygın olarak kopyalanmış ve 'Curve Savaşları'nı başlatmıştır - protokollerin havuzlarına emisyon yönlendirmek için CRV oy gücünü biriktirmek için yarışması.",
+	"features": {
+		"1": {
+			"title": "StableSwap AMM",
+			"description": "Sabitlenmiş varlıklar arasında son derece düşük kayma swapları sağlayan özel bonding eğrisi"
+		},
+		"2": {
+			"title": "Likidite Sağlama",
+			"description": "Havuzlara likidite sağlayın ve işlem ücretleri artı CRV token teşvikleri kazanın"
+		},
+		"3": {
+			"title": "veCRV Yönetişimi",
+			"description": "Gauge ağırlıklarına oy vermek ve likidite madenciliği ödüllerinizi artırmak için CRV tokenlarını kilitleyin"
+		},
+		"4": {
+			"title": "Çoklu Varlık Havuzları",
+			"description": "Tek bir havuzda birden fazla stablecoin veya sabitlenmiş varlık arasında ticaret yapın"
+		},
+		"5": {
+			"title": "Tricrypto Havuzları",
+			"description": "ETH, BTC ve stablecoin'ler gibi değişken varlıklar arasında ticaret için V2 havuzları"
+		},
+		"6": {
+			"title": "crvUSD",
+			"description": "Yumuşak likidite mekanizmasına sahip kripto teminatla desteklenen Curve'ün yerel stablecoin'i"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Stablecoin Swapları",
+			"description": "USDC, USDT, DAI ve diğer stablecoin'ler arasında minimum kayma ile ticaret yapın"
+		},
+		"2": {
+			"title": "Yield Farming",
+			"description": "veCRV tarafından artırılan işlem ücretleri ve CRV ödülleri kazanmak için likidite sağlayın"
+		},
+		"3": {
+			"title": "Büyük İşlemler",
+			"description": "Sabitlenmiş varlıklar arasında minimum fiyat etkisiyle milyonlarca dolarlık işlemler gerçekleştirin"
+		},
+		"4": {
+			"title": "LST Ticareti",
+			"description": "stETH, rETH ve cbETH gibi liquid staking tokenları arasında verimli swap yapın"
+		},
+		"5": {
+			"title": "Protokol Likiditesi",
+			"description": "Protokoller, tokenları için birincil likidite mekanları olarak Curve havuzlarını kullanır"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Curve Finance nedir ve nasıl çalışır?",
+			"answer": "Curve, stablecoin'ler ve sabitlenmiş varlıklar arasındaki ticaret için optimize edilmiş bir DEX'tir. StableSwap algoritması, bir havuzdaki varlıkların kabaca aynı değerde olması gerektiğini varsayarak son derece düşük kayma işlemlerine olanak tanır. Likidite sağlayıcıları, işlemlerden ücretler artı CRV token teşvikleri kazanır."
+		},
+		"2": {
+			"question": "Stablecoin swapları için neden Uniswap yerine Curve kullanmalı?",
+			"answer": "Curve'ün özel bonding eğrisi, stablecoin işlemleri için çok daha düşük kayma sağlar. Curve'de 1 milyon dolarlık USDC'den USDT'ye swap %0.01 kaymaya sahip olabilirken, Uniswap'ta aynı işlem %0.3 veya daha fazla olabilir. Büyük işlemler için bu fark önemli tasarruflara dönüşür."
+		},
+		"3": {
+			"question": "veCRV nedir ve neden önemlidir?",
+			"answer": "veCRV (vote-escrowed CRV), CRV tokenlarının 4 yıla kadar kilitlenmesiyle elde edilir. veCRV sahipleri, belirli havuzlara CRV emisyonlarını yönlendirmek için oy kullanabilir, kendi LP ödüllerini 2.5 kata kadar artırabilir ve protokol ücretleri kazanabilir. Bu, protokolle uzun vadeli uyum için teşvikler yaratır."
+		},
+		"4": {
+			"question": "Curve Savaşları nedir?",
+			"answer": "Curve Savaşları, protokollerin veCRV oy gücünü biriktirmek için yarışmasını ifade eder. Convex, Yearn ve diğerleri gibi protokoller, likidite fayda sağlamak için CRV emisyonlarını kontrol etmeye çalışır. Özellikle Convex, veCRV'nin büyük bir payını biriktirerek CVX sahiplerinin Curve yönetişimini etkilemesine olanak tanımıştır."
+		},
+		"5": {
+			"question": "crvUSD nedir?",
+			"answer": "crvUSD, kullanıcıların kripto teminatı yatırarak mint edebilecekleri Curve'ün yerel stablecoin'idir. Fiyatlar düştükçe teminatı kademeli olarak crvUSD'ye dönüştüren LLAMMA adlı benzersiz bir 'yumuşak likidite' mekanizmasına sahiptir ve geleneksel borç verme protokollerine kıyasla ani likidite riskini azaltır."
+		}
+	},
+	"cta": {
+		"ready": "Minimum kayma ile swap yapmaya hazır mısınız?",
+		"button": "Curve'ü Aç",
+		"note": "Stablecoin likiditesinin evi"
+	}
+}

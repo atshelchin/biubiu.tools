@@ -19,311 +19,311 @@
 		]
 	},
 	"tools": {
+		"biubiu_wallet_sweep": {
+			"description": "Konsolidasi batch token dari beberapa wallet ke satu alamat"
+		},
+		"biubiu_one_to_many": {
+			"description": "Distribusi token dari satu wallet ke banyak penerima"
+		},
+		"biubiu_wallet_generator": {
+			"description": "Generate batch wallet HD dengan frase mnemonik"
+		},
+		"biubiu_balance_scanner": {
+			"description": "Scan saldo token di beberapa wallet secara bersamaan"
+		},
 		"debank": {
-			"description": "Pelacak portofolio multi-chain dan platform sosial"
-		},
-		"rabby": {
-			"description": "Wallet browser multi-chain"
-		},
-		"rainbow": {
-			"description": "Wallet Ethereum yang indah"
-		},
-		"metamask": {
-			"description": "Wallet Web3 paling populer"
-		},
-		"frame": {
-			"description": "Wallet desktop fokus privasi"
-		},
-		"zerion": {
-			"description": "Portofolio dan wallet DeFi"
-		},
-		"safe": {
-			"description": "Smart wallet multi-signature"
+			"description": "Pelacak portofolio multi-chain dengan analisis DeFi dan fitur sosial"
 		},
 		"zapper": {
-			"description": "Dashboard portofolio DeFi"
+			"description": "Dashboard DeFi untuk tracking portofolio, NFT, dan manajemen yield"
 		},
-		"argent": {
-			"description": "Smart wallet dengan pemulihan"
+		"zerion": {
+			"description": "Wallet DeFi pintar dengan tracking portofolio dan trading multi-chain"
 		},
-		"sequence": {
-			"description": "Smart wallet untuk gaming"
+		"metamask": {
+			"description": "Ekstensi browser paling populer untuk Ethereum dan chain EVM"
 		},
-		"ledger": {
-			"description": "Keamanan hardware wallet"
+		"rabby": {
+			"description": "Wallet browser fokus keamanan dengan verifikasi risiko pra-transaksi"
 		},
-		"trezor": {
-			"description": "Pelopor hardware wallet"
+		"rainbow": {
+			"description": "Wallet Ethereum ramah pengguna dengan tampilan NFT yang indah"
 		},
-		"privy": {
-			"description": "Solusi embedded wallet"
+		"frame": {
+			"description": "Wallet desktop fokus privasi dengan integrasi hardware"
 		},
-		"dynamic": {
-			"description": "Autentikasi multi-wallet"
+		"safe": {
+			"description": "Wallet smart contract multi-signature untuk tim dan DAO"
 		},
 		"ambire": {
-			"description": "Smart wallet dengan login email dan transaksi tanpa gas"
+			"description": "Wallet pintar dengan login email dan transaksi tanpa gas"
 		},
 		"obvious": {
-			"description": "Smart wallet dengan account abstraction"
+			"description": "Wallet account abstraction dengan pemulihan sosial"
+		},
+		"soul_wallet": {
+			"description": "Wallet pintar ERC-4337 modular dengan sistem plugin"
+		},
+		"patch_wallet": {
+			"description": "Wallet tertanam dengan login sosial untuk aplikasi Web3"
 		},
 		"pimlico": {
-			"description": "Infrastruktur bundler dan paymaster ERC-4337"
+			"description": "Infrastruktur bundler dan paymaster ERC-4337 untuk account abstraction"
 		},
 		"stackup": {
-			"description": "Bundler dan SDK account abstraction"
+			"description": "Layanan bundler account abstraction dan SDK untuk developer"
 		},
 		"biconomy": {
-			"description": "SDK account abstraction dan transaksi tanpa gas"
+			"description": "SDK transaksi tanpa gas dan infrastruktur account abstraction"
+		},
+		"alchemy_aa": {
+			"description": "SDK Account Kit untuk membangun aplikasi smart wallet"
 		},
 		"zerodev": {
-			"description": "SDK smart wallet modular dengan Kernel"
+			"description": "SDK smart wallet modular dengan implementasi akun Kernel"
+		},
+		"particle_network": {
+			"description": "Wallet-as-a-service dengan login sosial dan chain abstraction"
+		},
+		"privy": {
+			"description": "SDK wallet tertanam untuk onboarding Web3 tanpa hambatan"
+		},
+		"dynamic": {
+			"description": "Platform autentikasi dan onboarding multi-wallet"
+		},
+		"ledger": {
+			"description": "Wallet hardware terkemuka untuk penyimpanan dingin yang aman"
+		},
+		"trezor": {
+			"description": "Pelopor wallet hardware open source dengan keamanan terbukti"
+		},
+		"coinbase_wallet": {
+			"description": "Wallet self-custody Coinbase dengan dukungan DeFi dan NFT"
+		},
+		"trust_wallet": {
+			"description": "Wallet mobile multi-chain yang mendukung jutaan aset"
+		},
+		"argent": {
+			"description": "Wallet smart contract dengan guardian dan dukungan StarkNet"
+		},
+		"sequence": {
+			"description": "SDK smart wallet dioptimalkan untuk aplikasi gaming"
+		},
+		"phantom_wallet": {
+			"description": "Wallet multi-chain untuk Solana, Ethereum, dan Bitcoin"
+		},
+		"backpack_wallet": {
+			"description": "Wallet dengan dukungan xNFT untuk ekosistem Solana dan Ethereum"
+		},
+		"exodus_wallet": {
+			"description": "Wallet desktop dan mobile dengan fitur swap bawaan"
 		},
 		"solflare": {
-			"description": "Wallet Solana dengan staking dan NFT"
+			"description": "Wallet Solana kaya fitur dengan dukungan staking dan NFT"
+		},
+		"keplr_wallet": {
+			"description": "Wallet terkemuka untuk ekosistem Cosmos dan transfer IBC"
+		},
+		"leap_wallet": {
+			"description": "Wallet Cosmos multi-chain dengan integrasi DeFi"
+		},
+		"xdefi_wallet": {
+			"description": "Wallet browser cross-chain dengan fungsionalitas swap native"
+		},
+		"brave_wallet": {
+			"description": "Wallet terintegrasi browser dengan desain privacy-first"
+		},
+		"block_wallet": {
+			"description": "Wallet browser dengan privasi ditingkatkan dan perlindungan anti-phishing"
+		},
+		"okx_wallet": {
+			"description": "Wallet Web3 multi-chain dengan DEX dan marketplace NFT"
+		},
+		"core_wallet": {
+			"description": "Wallet ekosistem Avalanche dengan dukungan Bitcoin dan Ethereum"
+		},
+		"enkrypt_wallet": {
+			"description": "Wallet browser multi-chain dari tim MyEtherWallet"
+		},
+		"talisman_wallet": {
+			"description": "Wallet Polkadot dan Ethereum dengan dashboard portofolio"
 		},
 		"subwallet": {
-			"description": "Wallet Polkadot dan ekosistem Substrate"
+			"description": "Wallet komprehensif untuk Polkadot dan chain Substrate"
 		},
-		"tonhub": {
-			"description": "Wallet TON dengan integrasi Telegram"
+		"polkadot_js": {
+			"description": "Ekstensi browser resmi untuk ekosistem Polkadot"
 		},
-		"mytonwallet": {
-			"description": "Wallet TON open-source"
+		"nami_wallet": {
+			"description": "Wallet browser Cardano ringan untuk dApp dan NFT"
 		},
-		"coolwallet": {
-			"description": "Hardware wallet kartu Bluetooth"
+		"eternl_wallet": {
+			"description": "Wallet Cardano kaya fitur dengan alat staking dan DeFi"
 		},
-		"imtoken": {
-			"description": "Wallet multi-chain populer"
+		"yoroi_wallet": {
+			"description": "Wallet ringan resmi untuk Cardano dari EMURGO"
 		},
-		"tokenpocket": {
-			"description": "Wallet multi-chain dengan dApp browser"
+		"temple_wallet": {
+			"description": "Wallet browser untuk aplikasi Tezos DeFi dan NFT"
 		},
-		"myetherwallet": {
-			"description": "Wallet Ethereum open-source"
+		"kukai_wallet": {
+			"description": "Wallet Tezos dengan login sosial dan dukungan DirectAuth"
 		},
-		"mycrypto": {
-			"description": "Wallet dan manajemen aset Ethereum"
+		"petra_wallet": {
+			"description": "Wallet resmi untuk ekosistem blockchain Aptos"
 		},
-		"tronlink": {
-			"description": "Wallet resmi Tron"
+		"martian_wallet": {
+			"description": "Wallet multi-chain untuk jaringan Aptos dan Sui"
 		},
-		"multis": {
-			"description": "Platform treasury multi-sig untuk bisnis"
+		"sui_wallet": {
+			"description": "Wallet browser resmi untuk blockchain Sui"
 		},
-		"squads": {
-			"description": "Smart wallet multi-sig untuk Solana"
-		},
-		"biubiu-wallet-sweep": {
-			"description": "Wallet Sweep - Tool"
-		},
-		"biubiu-one-to-many": {
-			"description": "One-to-Many Transfer - Tool"
-		},
-		"biubiu-wallet-generator": {
-			"description": "Wallet Generator - Tool"
-		},
-		"biubiu-balance-scanner": {
-			"description": "Balance Scanner - Tool"
-		},
-		"soul-wallet": {
-			"description": "Soul Wallet - Tool"
-		},
-		"patch-wallet": {
-			"description": "Patch Wallet - Tool"
-		},
-		"alchemy-aa": {
-			"description": "Alchemy Account Kit - Tool"
-		},
-		"particle-network": {
-			"description": "Particle Network - Tool"
-		},
-		"coinbase-wallet": {
-			"description": "Coinbase Wallet - Tool"
-		},
-		"trust-wallet": {
-			"description": "Trust Wallet - Tool"
-		},
-		"phantom-wallet": {
-			"description": "Phantom - Tool"
-		},
-		"backpack-wallet": {
-			"description": "Backpack - Tool"
-		},
-		"exodus-wallet": {
-			"description": "Exodus - Tool"
-		},
-		"keplr-wallet": {
-			"description": "Keplr - Tool"
-		},
-		"leap-wallet": {
-			"description": "Leap Wallet - Tool"
-		},
-		"xdefi-wallet": {
-			"description": "XDEFI - Tool"
-		},
-		"brave-wallet": {
-			"description": "Brave Wallet - Tool"
-		},
-		"block-wallet": {
-			"description": "BlockWallet - Tool"
-		},
-		"okx-wallet": {
-			"description": "OKX Wallet - Tool"
-		},
-		"core-wallet": {
-			"description": "Core Wallet - Tool"
-		},
-		"enkrypt-wallet": {
-			"description": "Enkrypt - Tool"
-		},
-		"talisman-wallet": {
-			"description": "Talisman - Tool"
-		},
-		"polkadot-js": {
-			"description": "Polkadot.js - Tool"
-		},
-		"nami-wallet": {
-			"description": "Nami - Tool"
-		},
-		"eternl-wallet": {
-			"description": "Eternl - Tool"
-		},
-		"yoroi-wallet": {
-			"description": "Yoroi - Tool"
-		},
-		"temple-wallet": {
-			"description": "Temple Wallet - Tool"
-		},
-		"kukai-wallet": {
-			"description": "Kukai - Tool"
-		},
-		"petra-wallet": {
-			"description": "Petra - Tool"
-		},
-		"martian-wallet": {
-			"description": "Martian - Tool"
-		},
-		"sui-wallet": {
-			"description": "Sui Wallet - Tool"
-		},
-		"suiet-wallet": {
-			"description": "Suiet - Tool"
+		"suiet_wallet": {
+			"description": "Wallet Sui open source dengan fitur ramah developer"
 		},
 		"tonkeeper": {
-			"description": "Tonkeeper - Tool"
+			"description": "Wallet TON populer dengan dukungan staking dan Jetton"
 		},
-		"sender-wallet": {
-			"description": "Sender Wallet - Tool"
+		"tonhub": {
+			"description": "Wallet TON dengan integrasi pool staking Whales"
 		},
-		"meteor-wallet": {
-			"description": "Meteor Wallet - Tool"
+		"mytonwallet": {
+			"description": "Wallet TON open source untuk desktop dan browser"
 		},
-		"here-wallet": {
-			"description": "HERE Wallet - Tool"
+		"sender_wallet": {
+			"description": "Wallet NEAR Protocol dengan fitur DeFi dan NFT"
 		},
-		"coin98-wallet": {
-			"description": "Coin98 - Tool"
+		"meteor_wallet": {
+			"description": "Wallet NEAR dengan tracking portofolio lanjutan"
 		},
-		"bitget-wallet": {
-			"description": "Bitget Wallet - Tool"
+		"here_wallet": {
+			"description": "Wallet NEAR mobile-first dengan hadiah staking"
 		},
-		"safepal-wallet": {
-			"description": "SafePal - Tool"
+		"coin98_wallet": {
+			"description": "Portal DeFi multi-chain dengan dukungan 90+ blockchain"
 		},
-		"onekey-wallet": {
-			"description": "OneKey - Tool"
+		"bitget_wallet": {
+			"description": "Wallet multi-chain dengan agregator swap dan launchpad"
 		},
-		"ellipal-wallet": {
-			"description": "ELLIPAL - Tool"
+		"safepal_wallet": {
+			"description": "Kombinasi wallet hardware dan software didukung Binance"
 		},
-		"dcent-wallet": {
-			"description": "D - Tool"
+		"onekey_wallet": {
+			"description": "Wallet hardware open source dengan dukungan multi-chain"
 		},
-		"math-wallet": {
-			"description": "Math Wallet - Tool"
+		"ellipal_wallet": {
+			"description": "Wallet hardware air-gapped dengan antarmuka touchscreen"
 		},
-		"alpha-wallet": {
-			"description": "AlphaWallet - Tool"
+		"dcent_wallet": {
+			"description": "Wallet hardware biometrik dengan autentikasi sidik jari"
 		},
-		"status-wallet": {
-			"description": "Status - Tool"
+		"coolwallet": {
+			"description": "Wallet hardware ukuran kartu kredit dengan koneksi Bluetooth"
 		},
-		"unstoppable-wallet": {
-			"description": "Unstoppable Wallet - Tool"
+		"imtoken": {
+			"description": "Wallet mobile populer di Asia dengan dukungan DeFi multi-chain"
 		},
-		"exodus-wallet-ext": {
-			"description": "Exodus Extension - Tool"
+		"tokenpocket": {
+			"description": "Wallet mobile multi-chain dengan browser dApp bawaan"
 		},
-		"atomic-wallet": {
-			"description": "Atomic Wallet - Tool"
+		"math_wallet": {
+			"description": "Wallet multi-platform yang mendukung 100+ blockchain"
 		},
-		"guarda-wallet": {
-			"description": "Guarda - Tool"
+		"alpha_wallet": {
+			"description": "Wallet mobile open source dengan dukungan TokenScript"
 		},
-		"edge-wallet": {
-			"description": "Edge - Tool"
+		"status_wallet": {
+			"description": "Aplikasi pesan pribadi dengan wallet Ethereum terintegrasi"
 		},
-		"crypto-com-defi": {
-			"description": "Crypto.com DeFi Wallet - Tool"
+		"unstoppable_wallet": {
+			"description": "Wallet mobile fokus privasi dengan analitik DeFi"
 		},
-		"lobstr-wallet": {
-			"description": "LOBSTR - Tool"
+		"exodus_wallet_ext": {
+			"description": "Versi ekstensi browser dari wallet multi-chain Exodus"
 		},
-		"freighter-wallet": {
-			"description": "Freighter - Tool"
+		"myetherwallet": {
+			"description": "Antarmuka web asli untuk manajemen wallet Ethereum"
 		},
-		"den-wallet": {
-			"description": "Den - Tool"
+		"mycrypto": {
+			"description": "Wallet desktop dan web untuk manajemen Ethereum yang aman"
+		},
+		"atomic_wallet": {
+			"description": "Wallet desktop dengan atomic swap dan fitur staking"
+		},
+		"guarda_wallet": {
+			"description": "Wallet multi-platform dengan exchange dan staking bawaan"
+		},
+		"edge_wallet": {
+			"description": "Wallet mobile fokus privasi dengan login berbasis pengguna"
+		},
+		"crypto_com_defi": {
+			"description": "Wallet DeFi dengan chain Cronos dan bridge cross-chain"
+		},
+		"lobstr_wallet": {
+			"description": "Wallet Stellar ramah pengguna dengan fitur trading"
+		},
+		"freighter_wallet": {
+			"description": "Wallet browser untuk Stellar dan smart contract Soroban"
+		},
+		"tronlink": {
+			"description": "Wallet resmi untuk ekosistem blockchain TRON"
+		},
+		"multis": {
+			"description": "Wallet multi-sig fokus bisnis dengan fitur payroll"
+		},
+		"squads": {
+			"description": "Treasury multi-sig dan manajemen protokol untuk Solana"
+		},
+		"den_wallet": {
+			"description": "Wallet pintar dengan otomasi DeFi dan pengelompokan transaksi"
 		},
 		"instadapp": {
-			"description": "Instadapp - Tool"
+			"description": "Akun pintar DeFi dengan agregasi protokol dan otomasi"
 		},
-		"fuelet-wallet": {
-			"description": "Fuelet - Tool"
+		"fuelet_wallet": {
+			"description": "Wallet untuk layer eksekusi modular Fuel"
 		},
-		"fuel-wallet": {
-			"description": "Fuel Wallet - Tool"
+		"fuel_wallet": {
+			"description": "Wallet browser resmi untuk Fuel Network"
 		},
-		"braavos-wallet": {
-			"description": "Braavos - Tool"
+		"braavos_wallet": {
+			"description": "Wallet pintar untuk StarkNet dengan dukungan hardware signer"
 		},
-		"keystone-wallet": {
-			"description": "Keystone - Tool"
+		"keystone_wallet": {
+			"description": "Wallet hardware air-gapped dengan tanda tangan kode QR"
 		},
-		"gridplus-wallet": {
-			"description": "GridPlus Lattice1 - Tool"
+		"gridplus_wallet": {
+			"description": "Wallet hardware tingkat enterprise dengan penyimpanan SafeCard"
 		},
-		"tangem-wallet": {
-			"description": "Tangem - Tool"
+		"tangem_wallet": {
+			"description": "Wallet hardware berbasis kartu NFC untuk penggunaan mobile"
 		},
-		"web3auth-wallet": {
-			"description": "Web3Auth - Tool"
+		"web3auth_wallet": {
+			"description": "Manajemen key berbasis MPC dengan dukungan login sosial"
 		},
-		"unisat-wallet": {
-			"description": "UniSat - Tool"
+		"unisat_wallet": {
+			"description": "Wallet Bitcoin untuk Ordinals, BRC-20, dan inscriptions"
 		},
-		"xverse-wallet": {
-			"description": "Xverse - Tool"
+		"xverse_wallet": {
+			"description": "Wallet Bitcoin dan Stacks dengan dukungan Ordinals"
 		},
-		"leather-wallet": {
-			"description": "Leather (Hiro) - Tool"
+		"leather_wallet": {
+			"description": "Wallet Bitcoin dan Stacks sebelumnya dikenal sebagai Hiro Wallet"
 		},
-		"passport-wallet": {
-			"description": "Passport (Foundation) - Tool"
+		"passport_wallet": {
+			"description": "Wallet hardware Bitcoin air-gapped open source"
 		},
-		"seedsigner-wallet": {
-			"description": "SeedSigner - Tool"
+		"seedsigner_wallet": {
+			"description": "Proyek perangkat penandatangan Bitcoin air-gapped DIY"
 		},
-		"fireblocks-wallet": {
-			"description": "Fireblocks - Tool"
+		"fireblocks_wallet": {
+			"description": "Platform kustodi MPC institusional untuk aset digital"
 		},
-		"anchorage-wallet": {
-			"description": "Anchorage Digital - Tool"
+		"anchorage_wallet": {
+			"description": "Bank aset digital berlisensi federal dan kustodian"
 		},
-		"bitgo-wallet": {
-			"description": "BitGo - Tool"
+		"bitgo_wallet": {
+			"description": "Kustodi institusional dengan multi-sig dan asuransi"
 		}
 	}
 }

@@ -19,85 +19,85 @@
 	},
 	"tools": {
 		"immutable": {
-			"description": "专注游戏的 L2，带 zkEVM"
+			"description": "专注游戏的 L2，支持零 Gas NFT 交易的 zkEVM"
 		},
 		"ronin": {
-			"description": "Axie Infinity 生态的游戏侧链"
+			"description": "驱动 Axie Infinity 生态系统的游戏侧链"
 		},
 		"treasure": {
-			"description": "Arbitrum 上的去中心化游戏生态"
+			"description": "Arbitrum 上的去中心化游戏生态系统，MAGIC 代币"
 		},
 		"beam": {
-			"description": "Avalanche 上的游戏子网"
+			"description": "Merit Circle 打造的 Avalanche 游戏子网"
 		},
 		"stardust": {
-			"description": "Web3 游戏 SDK 和钱包解决方案"
+			"description": "面向开发者的 Web3 游戏 SDK 和钱包基础设施"
 		},
 		"fractal": {
-			"description": "游戏 NFT 市场和发现平台"
+			"description": "Solana 上的游戏 NFT 市场和发现平台"
 		},
 		"xai": {
-			"description": "基于 Arbitrum Orbit 的游戏 L3"
+			"description": "基于 Arbitrum Orbit 构建的可扩展游戏 L3"
 		},
 		"ygg": {
-			"description": "带奖学金计划的游戏公会"
+			"description": "提供奖学金计划的边玩边赚游戏公会"
 		},
 		"loot8": {
-			"description": "NFT 游戏收藏品平台"
+			"description": "面向品牌的 NFT 游戏收藏品平台"
 		},
 		"iskra": {
-			"description": "Web3 游戏平台和社区"
+			"description": "Web3 游戏平台和社区中心"
 		},
 		"loot": {
-			"description": "可组合冒险NFT装备"
+			"description": "为游戏开发者设计的可组合冒险装备 NFT"
 		},
 		"pixels": {
-			"description": "链上农业社交游戏"
+			"description": "Ronin 上的链上社交农场游戏"
 		},
 		"parallel": {
-			"description": "科幻卡牌对战游戏"
+			"description": "具有竞技玩法的科幻交易卡牌游戏"
 		},
 		"illuvium": {
-			"description": "3A级链上战斗RPG"
+			"description": "带自动战斗机制的 AAA 开放世界 RPG"
 		},
 		"shrapnel": {
-			"description": "3A级射击GameFi"
+			"description": "Avalanche 上的 AAA 可改装萃取射击游戏"
 		},
 		"playnance": {
-			"description": "Playnance - Web3 gaming platform"
+			"description": "带加密奖励的电竞预测和游戏平台"
 		},
 		"sandbox": {
-			"description": "The Sandbox - Web3 gaming platform"
+			"description": "用户生成内容和 LAND NFT 的虚拟世界元宇宙"
 		},
 		"decentraland": {
-			"description": "Decentraland - Web3 gaming platform"
+			"description": "支持 LAND 所有权和 DAO 治理的去中心化虚拟世界"
 		},
 		"bigtime": {
-			"description": "Big Time - Web3 gaming platform"
+			"description": "带时空穿越和战利品的 AAA 多人动作 RPG"
 		},
 		"splinterlands": {
-			"description": "Splinterlands - Web3 gaming platform"
+			"description": "带边玩边赚奖励的策略卡牌对战游戏"
 		},
 		"stepn": {
-			"description": "用代币奖励运动活动的Move-to-earn健身应用"
+			"description": "用代币奖励运动活动的 Move-to-earn 健身应用"
 		},
 		"mir4": {
-			"description": "具有DRACO代币挖矿机制的跨平台MMORPG"
+			"description": "具有 DRACO 代币挖矿机制的跨平台 MMORPG"
 		},
 		"wildcard": {
-			"description": "具有卡牌策略的竞技场游戏"
+			"description": "具有卡牌策略元素的竞技场游戏"
 		},
 		"aurory": {
-			"description": "Solana JRPG战术游戏，具有NFT生物"
+			"description": "Solana 上带 NFT 生物的 JRPG 战术游戏"
 		},
 		"blocklords": {
 			"description": "具有王朝建设的中世纪大战略游戏"
 		},
 		"superior": {
-			"description": "Gala Games平台上的Roguelike合作射击游戏"
+			"description": "Gala Games 平台上的 Roguelike 合作射击游戏"
 		},
 		"fusionist": {
-			"description": "币安上市的 AAA 级机甲策略游戏，ACE 代币"
+			"description": "币安上市的 AAA 机甲策略游戏，ACE 代币"
 		},
 		"xterio": {
 			"description": "Binance Labs 投资的 AI 游戏平台与发行商"
@@ -196,13 +196,13 @@
 			"description": "Solana 上的蜜蜂主题策略游戏"
 		},
 		"rainmaker": {
-			"description": "基于天气的加密预测游戏"
+			"description": "GameFi 发现和分析聚合平台"
 		},
 		"gaimin": {
-			"description": "带 GPU 共享的游戏奖励平台"
+			"description": "带 GPU 共享网络的游戏奖励平台"
 		},
 		"momento": {
-			"description": "AI 驱动的游戏精彩时刻"
+			"description": "TON 区块链上的超休闲 Telegram 游戏"
 		},
 		"catizen": {
 			"description": "TON 区块链上的猫主题 Telegram 游戏"
@@ -211,13 +211,13 @@
 			"description": "发行 NOT 代币的 Telegram 点击游戏"
 		},
 		"blum": {
-			"description": "Telegram 小程序交易所与游戏平台"
+			"description": "Telegram 小程序 DEX 和游戏平台"
 		},
 		"yescoin": {
 			"description": "TON 上的 Telegram 点击赚币游戏"
 		},
 		"dogs": {
-			"description": "TON 上的狗主题 Telegram 游戏"
+			"description": "TON 上的狗主题 Telegram meme 游戏"
 		},
 		"pixelverse": {
 			"description": "带战斗的赛博朋克 Telegram 游戏"
@@ -225,245 +225,245 @@
 		"major": {
 			"description": "TON 上的社交排名 Telegram 游戏"
 		},
-		"elixir-games": {
-			"description": "Elixir Games - Tool"
+		"elixir_games": {
+			"description": "Web3 游戏发现桌面启动器"
 		},
-		"portal-gaming": {
-			"description": "Portal - Tool"
+		"portal_gaming": {
+			"description": "跨链游戏钱包和发现平台"
 		},
-		"pirate-nation": {
-			"description": "Pirate Nation - Tool"
+		"pirate_nation": {
+			"description": "Arbitrum L3 上的全链海盗冒险 RPG"
 		},
-		"ev-io": {
-			"description": "Ev.io - Tool"
+		"ev_io": {
+			"description": "Solana 上带边玩边赚的浏览器 FPS 射击游戏"
 		},
-		"ronin-gaming": {
-			"description": "Ronin - Tool"
+		"ronin_gaming": {
+			"description": "驱动 Axie 和 Sky Mavis 游戏的游戏区块链"
 		},
-		"prime-gaming": {
-			"description": "Prime Gaming - Tool"
+		"prime_gaming": {
+			"description": "带 PRIME 代币的 Echelon Prime 游戏生态系统"
 		},
-		"sui-gaming": {
-			"description": "Sui Gaming - Tool"
+		"sui_gaming": {
+			"description": "Sui 区块链上基于 Move 对象的游戏中心"
 		},
-		"fractal-gaming": {
-			"description": "Fractal - Tool"
+		"fractal_gaming": {
+			"description": "Solana 上的游戏 NFT 市场和发现"
 		},
-		"myria-gaming": {
-			"description": "Myria - Tool"
+		"myria_gaming": {
+			"description": "带 NFT 基础设施和游戏工作室的游戏 L2"
 		},
-		"oasys-gaming": {
-			"description": "Oasys - Tool"
+		"oasys_gaming": {
+			"description": "日本主要游戏工作室支持的游戏区块链"
 		},
-		"xborg-gaming": {
-			"description": "XBorg - Tool"
+		"xborg_gaming": {
+			"description": "游戏身份和电竞凭证平台"
 		},
-		"beam-gaming": {
-			"description": "Beam - Tool"
+		"beam_gaming": {
+			"description": "Merit Circle 打造的 Avalanche 游戏子网"
 		},
-		"gala-games": {
-			"description": "Gala Games - Tool"
+		"gala_games": {
+			"description": "拥有多款边玩边赚游戏的游戏生态系统"
 		},
-		"axie-infinity": {
-			"description": "Axie Infinity - Tool"
+		"axie_infinity": {
+			"description": "带 NFT 生物和战斗的先驱边玩边赚游戏"
 		},
-		"gods-unchained": {
-			"description": "Gods Unchained - Tool"
+		"gods_unchained": {
+			"description": "Immutable X 上的免费竞技交易卡牌游戏"
 		},
-		"guild-of-guardians": {
-			"description": "Guild of Guardians - Tool"
+		"guild_of_guardians": {
+			"description": "Immutable X 上的移动端小队 RPG"
 		},
-		"ember-sword": {
-			"description": "Ember Sword - Tool"
+		"ember_sword": {
+			"description": "Immutable zkEVM 上的免费沙盒 MMORPG"
 		},
-		"star-atlas": {
-			"description": "Star Atlas - Tool"
+		"star_atlas": {
+			"description": "Solana 上的太空探索元宇宙和策略游戏"
 		},
-		"hero-of-mavia": {
-			"description": "Heroes of Mavia - Tool"
+		"hero_of_mavia": {
+			"description": "带 PvP 战斗的移动端基地建设策略游戏"
 		},
-		"night-crows": {
-			"description": "Night Crows - Tool"
+		"night_crows": {
+			"description": "WEMIX 区块链上的 AAA 韩国 MMORPG"
 		},
-		"off-the-grid": {
-			"description": "Off the Grid - Tool"
+		"off_the_grid": {
+			"description": "Avalanche 上的 AAA 赛博朋克大逃杀射击游戏"
 		},
-		"maple-story-universe": {
-			"description": "MapleStory Universe - Tool"
+		"maple_story_universe": {
+			"description": "Nexon 开发的经典 MapleStory MMORPG 区块链版"
 		},
-		"nyan-heroes": {
-			"description": "Nyan Heroes - Tool"
+		"nyan_heroes": {
+			"description": "Solana 上的猫英雄射击游戏"
 		},
-		"phantom-galaxies": {
-			"description": "Phantom Galaxies - Tool"
+		"phantom_galaxies": {
+			"description": "Polygon 上的机甲太空动作 RPG"
 		},
-		"crypto-unicorns": {
-			"description": "Crypto Unicorns - Tool"
+		"crypto_unicorns": {
+			"description": "Polygon 上的独角兽繁殖和农场游戏"
 		},
-		"legends-of-venari": {
-			"description": "Legends of Venari - Tool"
+		"legends_of_venari": {
+			"description": "以太坊上的生物收集和探索游戏"
 		},
-		"planet-ix": {
-			"description": "Planet IX - Tool"
+		"planet_ix": {
+			"description": "Polygon 上带土地所有权的 NFT 策略游戏"
 		},
-		"sweat-economy": {
-			"description": "Sweat Economy - Tool"
+		"sweat_economy": {
+			"description": "NEAR 上将步数转换为 SWEAT 代币的运动赚币应用"
 		},
-		"champions-ascension": {
-			"description": "Champions Ascension - Tool"
+		"champions_ascension": {
+			"description": "以太坊上的大型多人动作 RPG 竞技场"
 		},
-		"defi-kingdoms": {
-			"description": "DeFi Kingdoms - Tool"
+		"defi_kingdoms": {
+			"description": "DeFi 与 RPG 的结合，包含英雄、任务和 DEX"
 		},
-		"cross-the-ages": {
-			"description": "Cross The Ages - Tool"
+		"cross_the_ages": {
+			"description": "Immutable X 上支持 AR 的收藏交易卡牌游戏"
 		},
-		"echoes-of-empire": {
-			"description": "Echoes of Empire - Tool"
+		"echoes_of_empire": {
+			"description": "Gala Games 上的 4X 太空策略游戏"
 		},
-		"spider-tanks": {
-			"description": "Spider Tanks - Tool"
+		"spider_tanks": {
+			"description": "Gala Games 上的 PvP 格斗电竞游戏"
 		},
-		"town-star": {
-			"description": "Town Star - Tool"
+		"town_star": {
+			"description": "Gala Games 上的农场模拟游戏"
 		},
-		"voxie-tactics": {
-			"description": "Voxie Tactics - Tool"
+		"voxie_tactics": {
+			"description": "Polygon 上带像素艺术的回合制战术游戏"
 		},
-		"camelot-unchained": {
-			"description": "Camelot Unchained - Tool"
+		"camelot_unchained": {
+			"description": "以 RvR 为核心的 PvP MMORPG，深度制作系统"
 		},
-		"wolf-game": {
-			"description": "Wolf Game - Tool"
+		"wolf_game": {
+			"description": "以太坊上的风险型 NFT 质押游戏"
 		},
-		"forgotten-runiverse": {
-			"description": "Forgotten Runiverse - Tool"
+		"forgotten_runiverse": {
+			"description": "基于 Forgotten Runes Wizards 社区构建的 MMORPG"
 		},
-		"crypto-raiders": {
-			"description": "Crypto Raiders - Tool"
+		"crypto_raiders": {
+			"description": "Polygon 上的地牢探险 RPG"
 		},
-		"the-beacon": {
-			"description": "The Beacon - Tool"
+		"the_beacon": {
+			"description": "Treasure 在 Arbitrum 上的 Roguelike 地牢爬行游戏"
 		},
-		"alien-worlds": {
-			"description": "Alien Worlds - Tool"
+		"alien_worlds": {
+			"description": "WAX 区块链上的 NFT 挖矿元宇宙"
 		},
-		"farmers-world": {
-			"description": "Farmers World - Tool"
+		"farmers_world": {
+			"description": "WAX 区块链上的农场 NFT 游戏"
 		},
-		"thetan-arena": {
-			"description": "Thetan Arena - Tool"
+		"thetan_arena": {
+			"description": "BNB Chain 上的 MOBA 和大逃杀电竞游戏"
 		},
-		"league-of-kingdoms": {
-			"description": "League of Kingdoms - Tool"
+		"league_of_kingdoms": {
+			"description": "Polygon 上带土地 NFT 的 MMO 策略游戏"
 		},
-		"revv-racing": {
-			"description": "REVV Racing - Tool"
+		"revv_racing": {
+			"description": "带 F1 元素的赛车运动游戏"
 		},
-		"riot-racers": {
-			"description": "Riot Racers - Tool"
+		"riot_racers": {
+			"description": "Polygon 上的放置赛车边玩边赚游戏"
 		},
-		"zed-run": {
-			"description": "ZED RUN - Tool"
+		"zed_run": {
+			"description": "Polygon 上的数字赛马和繁殖"
 		},
-		"derby-stars": {
-			"description": "Derby Stars - Tool"
+		"derby_stars": {
+			"description": "Polygon 上的赛马和繁殖游戏"
 		},
-		"battle-of-guardians": {
-			"description": "Battle of Guardians - Tool"
+		"battle_of_guardians": {
+			"description": "BNB Chain 上的格斗 PvP 电竞游戏"
 		},
-		"the-machines-arena": {
-			"description": "The Machines Arena - Tool"
+		"the_machines_arena": {
+			"description": "Ronin 区块链上的竞技英雄射击游戏"
 		},
-		"planet-quest": {
-			"description": "PlanetQuest - Tool"
+		"planet_quest": {
+			"description": "Polygon 上的科幻探索和生存游戏"
 		},
-		"ready-player-me": {
-			"description": "Ready Player Me - Tool"
+		"ready_player_me": {
+			"description": "元宇宙和游戏的跨平台虚拟形象创建"
 		},
-		"hamster-kombat": {
-			"description": "Hamster Kombat - Tool"
+		"hamster_kombat": {
+			"description": "TON 上的病毒式点击赚币 Telegram 游戏"
 		},
-		"meme-fi": {
-			"description": "MemeFi - Tool"
+		"meme_fi": {
+			"description": "Sui 区块链上的点击赚币 meme 游戏"
 		},
-		"my-pet-hooligan": {
-			"description": "My Pet Hooligan - Tool"
+		"my_pet_hooligan": {
+			"description": "元宇宙中带兔子 NFT 的 UGC 射击游戏"
 		},
-		"nakamoto-games": {
-			"description": "Nakamoto Games - Tool"
+		"nakamoto_games": {
+			"description": "Polygon 上的多游戏边玩边赚平台"
 		},
-		"gmt-stepn": {
-			"description": "GMT (STEPN) - Tool"
+		"gmt_stepn": {
+			"description": "STEPN 运动赚币应用的 FSL 生态系统代币"
 		},
-		"magic-square": {
-			"description": "Magic Square - Tool"
+		"magic_square": {
+			"description": "Web3 应用商店和发现平台"
 		},
-		"age-of-dino": {
-			"description": "Age of Dino - Tool"
+		"age_of_dino": {
+			"description": "BNB Chain 上的恐龙策略边玩边赚游戏"
 		},
-		"bnb-heroes": {
-			"description": "BNB Heroes - Tool"
+		"bnb_heroes": {
+			"description": "BNB Chain 上的放置 RPG 游戏"
 		},
-		"elfin-games": {
-			"description": "Elfin Games - Tool"
+		"elfin_games": {
+			"description": "BNB Chain 上的类宝可梦 NFT 收集游戏"
 		},
-		"games-for-a-living": {
-			"description": "Games for a Living - Tool"
+		"games_for_a_living": {
+			"description": "Polygon 上的移动休闲边玩边赚游戏"
 		},
 		"seedify": {
-			"description": "Seedify - Tool"
+			"description": "区块链游戏发射台和孵化器"
 		},
-		"wagmi-games": {
-			"description": "WAGMI Games - Tool"
+		"wagmi_games": {
+			"description": "以太坊上的竞技塔防 PvP 游戏"
 		},
-		"sidus-heroes": {
-			"description": "SIDUS HEROES - Tool"
+		"sidus_heroes": {
+			"description": "带边玩边赚机制的太空 MMORPG"
 		},
-		"chain-guardians": {
-			"description": "Chain Guardians - Tool"
+		"chain_guardians": {
+			"description": "BNB Chain 上带挖矿机制的 RPG"
 		},
-		"meta-apes": {
-			"description": "Meta Apes - Tool"
+		"meta_apes": {
+			"description": "BNB Chain 上的移动 MMO 策略游戏"
 		},
-		"second-live": {
-			"description": "SecondLive - Tool"
+		"second_live": {
+			"description": "币安上带虚拟形象定制的社交元宇宙"
 		},
-		"tiny-world": {
-			"description": "Tiny World - Tool"
+		"tiny_world": {
+			"description": "BNB Chain 上带 NFT 的放置 DeFi 游戏"
 		},
-		"radio-caca": {
-			"description": "Radio Caca (RACA) - Tool"
+		"radio_caca": {
+			"description": "USM 元宇宙和 NFT 游戏生态系统"
 		},
-		"binary-x": {
-			"description": "BinaryX - Tool"
+		"binary_x": {
+			"description": "带 Cyber Dragon 和 IGO 发射台的游戏平台"
 		},
-		"mines-of-dalarnia": {
-			"description": "Mines of Dalarnia - Tool"
+		"mines_of_dalarnia": {
+			"description": "币安上市的动作挖矿平台跳跃游戏"
 		},
-		"moland-dao": {
-			"description": "Moland DAO - Tool"
+		"moland_dao": {
+			"description": "基于土地的元宇宙 DAO 社区"
 		},
-		"portal-fantasy": {
-			"description": "Portal Fantasy - Tool"
+		"portal_fantasy": {
+			"description": "Avalanche 上的 JRPG 生物冒险游戏"
 		},
-		"mighty-action-heroes": {
-			"description": "Mighty Action Heroes - Tool"
+		"mighty_action_heroes": {
+			"description": "Polygon 上的休闲大逃杀游戏"
 		},
-		"meta-world": {
-			"description": "Meta World: My City - Tool"
+		"meta_world": {
+			"description": "BNB Chain 上的房地产和社交元宇宙"
 		},
-		"syn-city": {
-			"description": "SYN CITY - Tool"
+		"syn_city": {
+			"description": "BNB Chain 上的黑帮主题社交策略游戏"
 		},
-		"imperium-empires": {
-			"description": "Imperium Empires - Tool"
+		"imperium_empires": {
+			"description": "BNB Chain 上的太空 MMO 策略游戏"
 		},
-		"monsta-infinite": {
-			"description": "Monsta Infinite - Tool"
+		"monsta_infinite": {
+			"description": "BNB Chain 上的生物对战边玩边赚游戏"
 		},
-		"drunk-robots": {
-			"description": "Drunk Robots - Tool"
+		"drunk_robots": {
+			"description": "BNB Chain 上的机器人射击 PvP 游戏"
 		}
 	}
 }

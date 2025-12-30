@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "GMX - Decentralized Perpetual Exchange | Trade dengan Leverage",
+		"description": "Temukan GMX, decentralized perpetual exchange terkemuka. Pelajari tentang leverage trading, penyediaan likuiditas GLP, dan swap perpetual dengan biaya rendah di Arbitrum dan Avalanche.",
+		"keywords": "GMX, perpetual trading, decentralized exchange, leverage, Arbitrum, derivatif kripto, GLP"
+	},
+	"overview": "GMX adalah decentralized perpetual exchange yang memungkinkan trader untuk long atau short pada cryptocurrency dengan leverage hingga 100x, sementara penyedia likuiditas menghasilkan yield dengan menyediakan aset ke multi-asset pool protokol. Diluncurkan pada 2021, GMX telah menjadi salah satu platform derivatif terbesar di DeFi, merintis model GLP di mana semua trader berdagang melawan liquidity pool bersama.\n\nTidak seperti centralized exchange atau order book DEX, GMX menggunakan model berbasis pool unik di mana trader meminjam dari pool GLP untuk mengeksekusi posisi leveraged. Ini memungkinkan trade zero-slippage pada aset yang didukung, dengan harga yang berasal dari oracle Chainlink. Pool GLP menghasilkan 70% dari semua biaya trading, menjadikannya sumber yield yang menarik untuk investor pasif.\n\nGMX digunakan di Arbitrum dan Avalanche, memproses lebih dari $100 miliar dalam volume trading kumulatif. Peluncuran V2 protokol memperkenalkan pool terisolasi, aset sintetis, dan efisiensi modal yang ditingkatkan, lebih memperkuat posisinya sebagai venue derivatif terdesentralisasi terkemuka.",
+	"features": {
+		"1": {
+			"title": "Perpetual Trading",
+			"description": "Trade BTC, ETH, dan aset lainnya dengan leverage hingga 100x pada kontrak perpetual"
+		},
+		"2": {
+			"title": "Zero Slippage",
+			"description": "Jalankan trade besar tanpa price impact menggunakan oracle-based pricing"
+		},
+		"3": {
+			"title": "Liquidity Pool GLP",
+			"description": "Sediakan likuiditas untuk menghasilkan 70% dari biaya trading dan emisi token GMX"
+		},
+		"4": {
+			"title": "Biaya Rendah",
+			"description": "Biaya trading kompetitif dengan diskon untuk staker GMX"
+		},
+		"5": {
+			"title": "Terdesentralisasi",
+			"description": "Trading non-custodial - dana Anda tetap di wallet Anda sampai Anda trade"
+		},
+		"6": {
+			"title": "Pool GM (V2)",
+			"description": "Pasar terisolasi dengan aset sintetis dan efisiensi modal yang ditingkatkan"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Leveraged Trading",
+			"description": "Perkuat eksposur Anda terhadap BTC, ETH, dan aset kripto lainnya"
+		},
+		"2": {
+			"title": "Hedging",
+			"description": "Buka posisi short untuk hedge kepemilikan kripto spot Anda"
+		},
+		"3": {
+			"title": "Passive Yield",
+			"description": "Sediakan likuiditas GLP untuk menghasilkan biaya trading dan insentif token"
+		},
+		"4": {
+			"title": "Swap Slippage Rendah",
+			"description": "Jalankan swap spot besar antara aset yang didukung dengan price impact minimal"
+		},
+		"5": {
+			"title": "Derivatif Terdesentralisasi",
+			"description": "Akses trading derivatif tanpa KYC atau risiko centralized exchange"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu GMX dan bagaimana cara kerjanya?",
+			"answer": "GMX adalah decentralized perpetual exchange di mana trader long atau short dengan leverage melawan liquidity pool bersama (GLP). Harga berasal dari oracle Chainlink, memungkinkan eksekusi zero-slippage. Trader membayar biaya yang masuk ke pemegang GLP dan staker GMX. Jika trader kalah, pemegang GLP untung; jika trader menang, pemegang GLP membayar - menjadikan pemegang GLP sebagai counterparty untuk semua trade."
+		},
+		"2": {
+			"question": "Apakah GMX aman digunakan?",
+			"answer": "GMX telah diaudit secara ekstensif dan telah memproses lebih dari $100B dalam volume tanpa eksploitasi besar. Namun, perpetual trading secara inheren berisiko - Anda bisa kehilangan seluruh posisi dengan leverage. GLP juga membawa risiko: jika trader secara konsisten profit, nilai GLP menurun. Selalu pahami risiko sebelum trading."
+		},
+		"3": {
+			"question": "Apa itu GLP dan bagaimana cara menghasilkan yield?",
+			"answer": "GLP adalah token liquidity pool multi-aset GMX. Saat Anda mint GLP, Anda menyetor aset (ETH, BTC, USDC, dll.) dan menerima token GLP yang mewakili bagian Anda. Pemegang GLP menghasilkan 70% dari semua biaya trading yang dibayarkan dalam ETH/AVAX plus insentif esGMX. APR saat ini biasanya berkisar dari 15-40% tergantung pada volume trading."
+		},
+		"4": {
+			"question": "Berapa biaya di GMX?",
+			"answer": "GMX mengenakan biaya 0.1% untuk membuka atau menutup posisi, plus biaya pinjaman yang terakumulasi per jam berdasarkan utilisasi. Swap dikenakan biaya 0.2-0.8% tergantung apakah mereka membantu menyeimbangkan pool. Staker GMX menerima diskon biaya, dan tidak ada funding rate - hanya borrow rate."
+		},
+		"5": {
+			"question": "Apa perbedaan antara GMX V1 dan V2?",
+			"answer": "GMX V2 memperkenalkan pool GM terisolasi alih-alih pool GLP terpadu, memungkinkan lebih banyak aset dan risiko yang dikurangi. V2 mendukung aset sintetis, memiliki efisiensi modal yang ditingkatkan, dan memperkenalkan funding rate. GLP V1 tetap operasional dengan likuiditasnya yang mapan, sementara V2 terus berkembang dengan pasar baru."
+		}
+	},
+	"cta": {
+		"ready": "Siap untuk mulai trading?",
+		"button": "Buka GMX",
+		"note": "Decentralized perpetual trading dengan leverage hingga 100x"
+	}
+}

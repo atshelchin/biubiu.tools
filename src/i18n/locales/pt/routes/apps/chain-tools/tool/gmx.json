@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷",
+		"code": "pt"
+	},
+	"seo": {
+		"title": "GMX - Exchange Perpétua Descentralizada | Negocie com Alavancagem",
+		"description": "Descubra o GMX, a principal exchange perpétua descentralizada. Aprenda sobre negociação com alavancagem, provisão de liquidez GLP e swaps perpétuos com taxas baixas no Arbitrum e Avalanche.",
+		"keywords": "GMX, perpetual trading, decentralized exchange, leverage, Arbitrum, crypto derivatives, GLP"
+	},
+	"overview": "GMX é uma exchange perpétua descentralizada que permite aos traders fazerem posições long ou short em criptomoedas com até 100x de alavancagem, enquanto provedores de liquidez ganham rendimento fornecendo ativos para o pool multi-ativos do protocolo. Lançado em 2021, o GMX se tornou uma das maiores plataformas de derivativos em DeFi, sendo pioneiro no modelo GLP onde todos os traders negociam contra um pool de liquidez compartilhado.\n\nAo contrário de exchanges centralizadas ou DEXs de livro de ordens, o GMX usa um modelo único baseado em pool onde os traders emprestam do pool GLP para executar posições alavancadas. Isso permite negociações com slippage zero em ativos suportados, com preços derivados de oráculos Chainlink. O pool GLP ganha 70% de todas as taxas de negociação, tornando-o uma fonte de rendimento atraente para investidores passivos.\n\nGMX está implantado no Arbitrum e Avalanche, processando mais de US$ 100 bilhões em volume de negociação cumulativo. O lançamento V2 do protocolo introduziu pools isolados, ativos sintéticos e eficiência de capital aprimorada, consolidando ainda mais sua posição como o principal local de derivativos descentralizados.",
+	"features": {
+		"1": {
+			"title": "Negociação Perpétua",
+			"description": "Negocie BTC, ETH e outros ativos com até 100x de alavancagem em contratos perpétuos"
+		},
+		"2": {
+			"title": "Slippage Zero",
+			"description": "Execute grandes negociações sem impacto de preço usando precificação baseada em oráculo"
+		},
+		"3": {
+			"title": "Pool de Liquidez GLP",
+			"description": "Forneça liquidez para ganhar 70% das taxas de negociação e emissões de tokens GMX"
+		},
+		"4": {
+			"title": "Taxas Baixas",
+			"description": "Taxas de negociação competitivas com descontos para stakers de GMX"
+		},
+		"5": {
+			"title": "Descentralizado",
+			"description": "Negociação não-custodial - seus fundos permanecem em sua carteira até você negociar"
+		},
+		"6": {
+			"title": "Pools GM (V2)",
+			"description": "Mercados isolados com ativos sintéticos e eficiência de capital aprimorada"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Negociação Alavancada",
+			"description": "Amplifique sua exposição a BTC, ETH e outros ativos cripto"
+		},
+		"2": {
+			"title": "Hedging",
+			"description": "Abra posições short para fazer hedge de suas participações cripto spot"
+		},
+		"3": {
+			"title": "Rendimento Passivo",
+			"description": "Forneça liquidez GLP para ganhar taxas de negociação e incentivos de tokens"
+		},
+		"4": {
+			"title": "Swaps com Baixo Slippage",
+			"description": "Execute grandes swaps spot entre ativos suportados com impacto de preço mínimo"
+		},
+		"5": {
+			"title": "Derivativos Descentralizados",
+			"description": "Acesse negociação de derivativos sem KYC ou risco de exchange centralizada"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "O que é GMX e como funciona?",
+			"answer": "GMX é uma exchange perpétua descentralizada onde os traders fazem posições long ou short com alavancagem contra um pool de liquidez compartilhado (GLP). Os preços vêm de oráculos Chainlink, permitindo execução com slippage zero. Os traders pagam taxas que vão para detentores de GLP e stakers de GMX. Se os traders perdem, os detentores de GLP lucram; se os traders ganham, os detentores de GLP pagam - tornando os detentores de GLP a contraparte de todas as negociações."
+		},
+		"2": {
+			"question": "É seguro usar o GMX?",
+			"answer": "GMX foi extensivamente auditado e processou mais de US$ 100B em volume sem explorações importantes. No entanto, negociação perpétua é inerentemente arriscada - você pode perder toda sua posição com alavancagem. GLP também carrega risco: se os traders consistentemente lucram, o valor do GLP diminui. Sempre entenda os riscos antes de negociar."
+		},
+		"3": {
+			"question": "O que é GLP e como ganho rendimento?",
+			"answer": "GLP é o token do pool de liquidez multi-ativos do GMX. Quando você cunha GLP, você deposita ativos (ETH, BTC, USDC, etc.) e recebe tokens GLP representando sua participação. Os detentores de GLP ganham 70% de todas as taxas de negociação pagas em ETH/AVAX mais incentivos esGMX. APRs atuais tipicamente variam de 15-40% dependendo do volume de negociação."
+		},
+		"4": {
+			"question": "Quais são as taxas no GMX?",
+			"answer": "GMX cobra uma taxa de 0,1% para abrir ou fechar posições, mais taxas de empréstimo que acumulam por hora baseadas na utilização. Swaps custam 0,2-0,8% dependendo se ajudam a equilibrar o pool. Stakers de GMX recebem descontos de taxas, e não há taxa de financiamento - apenas a taxa de empréstimo."
+		},
+		"5": {
+			"question": "Qual é a diferença entre GMX V1 e V2?",
+			"answer": "GMX V2 introduz pools GM isolados em vez do pool GLP unificado, permitindo mais ativos e risco reduzido. V2 suporta ativos sintéticos, tem eficiência de capital aprimorada e introduz taxas de financiamento. O GLP do V1 permanece operacional com sua liquidez estabelecida, enquanto o V2 continua a expandir com novos mercados."
+		}
+	},
+	"cta": {
+		"ready": "Pronto para começar a negociar?",
+		"button": "Abrir GMX",
+		"note": "Negociação perpétua descentralizada com até 100x de alavancagem"
+	}
+}

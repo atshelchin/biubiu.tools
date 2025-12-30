@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸",
+		"code": "es"
+	},
+	"seo": {
+		"title": "GMX - Exchange Perpetuo Descentralizado | Comercia con Apalancamiento",
+		"description": "Descubre GMX, el exchange perpetuo descentralizado líder. Aprende sobre trading apalancado, provisión de liquidez GLP y swaps perpetuos de baja tarifa en Arbitrum y Avalanche.",
+		"keywords": "GMX, perpetual trading, decentralized exchange, leverage, Arbitrum, crypto derivatives, GLP"
+	},
+	"overview": "GMX es un exchange perpetuo descentralizado que permite a los traders operar en largo o corto en criptomonedas con hasta 100x de apalancamiento, mientras que los proveedores de liquidez ganan rendimiento suministrando activos al pool multi-activo del protocolo. Lanzado en 2021, GMX se ha convertido en una de las plataformas de derivados más grandes en DeFi, siendo pionero en el modelo GLP donde todos los traders operan contra un pool de liquidez compartido.\n\nA diferencia de exchanges centralizados o DEXs de libro de órdenes, GMX usa un modelo único basado en pool donde los traders piden prestado del pool GLP para ejecutar posiciones apalancadas. Esto permite operaciones con cero deslizamiento en activos soportados, con precios derivados de oráculos Chainlink. El pool GLP gana el 70% de todas las tarifas de trading, haciéndolo una fuente atractiva de rendimiento para inversores pasivos.\n\nGMX está desplegado en Arbitrum y Avalanche, procesando más de $100 mil millones en volumen de trading acumulado. El lanzamiento V2 del protocolo introdujo pools aislados, activos sintéticos y mejor eficiencia de capital, cementando aún más su posición como el lugar líder de derivados descentralizados.",
+	"features": {
+		"1": {
+			"title": "Trading Perpetuo",
+			"description": "Comercia BTC, ETH y otros activos con hasta 100x de apalancamiento en contratos perpetuos"
+		},
+		"2": {
+			"title": "Cero Deslizamiento",
+			"description": "Ejecuta grandes operaciones sin impacto de precio usando precios basados en oráculos"
+		},
+		"3": {
+			"title": "Pool de Liquidez GLP",
+			"description": "Proporciona liquidez para ganar 70% de las tarifas de trading y emisiones de tokens GMX"
+		},
+		"4": {
+			"title": "Tarifas Bajas",
+			"description": "Tarifas de trading competitivas con descuentos para stakers de GMX"
+		},
+		"5": {
+			"title": "Descentralizado",
+			"description": "Trading no-custodial - tus fondos permanecen en tu wallet hasta que operas"
+		},
+		"6": {
+			"title": "Pools GM (V2)",
+			"description": "Mercados aislados con activos sintéticos y mejor eficiencia de capital"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Trading Apalancado",
+			"description": "Amplifica tu exposición a BTC, ETH y otros activos cripto"
+		},
+		"2": {
+			"title": "Cobertura",
+			"description": "Abre posiciones cortas para cubrir tus tenencias cripto spot"
+		},
+		"3": {
+			"title": "Rendimiento Pasivo",
+			"description": "Proporciona liquidez GLP para ganar tarifas de trading e incentivos de tokens"
+		},
+		"4": {
+			"title": "Swaps de Bajo Deslizamiento",
+			"description": "Ejecuta grandes swaps spot entre activos soportados con impacto de precio mínimo"
+		},
+		"5": {
+			"title": "Derivados Descentralizados",
+			"description": "Accede al trading de derivados sin KYC o riesgo de exchange centralizado"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es GMX y cómo funciona?",
+			"answer": "GMX es un exchange perpetuo descentralizado donde los traders operan en largo o corto con apalancamiento contra un pool de liquidez compartido (GLP). Los precios provienen de oráculos Chainlink, permitiendo ejecución con cero deslizamiento. Los traders pagan tarifas que van a los titulares de GLP y stakers de GMX. Si los traders pierden, los titulares de GLP ganan; si los traders ganan, los titulares de GLP pagan - haciendo a los titulares de GLP la contraparte de todas las operaciones."
+		},
+		"2": {
+			"question": "¿Es seguro usar GMX?",
+			"answer": "GMX ha sido extensamente auditado y ha procesado más de $100 mil millones en volumen sin exploits importantes. Sin embargo, el trading perpetuo es inherentemente riesgoso - puedes perder tu posición completa con apalancamiento. GLP también conlleva riesgo: si los traders ganan consistentemente, el valor de GLP disminuye. Siempre entiende los riesgos antes de operar."
+		},
+		"3": {
+			"question": "¿Qué es GLP y cómo gano rendimiento?",
+			"answer": "GLP es el token de pool de liquidez multi-activo de GMX. Cuando acuñas GLP, depositas activos (ETH, BTC, USDC, etc.) y recibes tokens GLP representando tu participación. Los titulares de GLP ganan 70% de todas las tarifas de trading pagadas en ETH/AVAX más incentivos esGMX. Los APRs actuales típicamente oscilan entre 15-40% dependiendo del volumen de trading."
+		},
+		"4": {
+			"question": "¿Cuáles son las tarifas en GMX?",
+			"answer": "GMX cobra una tarifa del 0.1% para abrir o cerrar posiciones, más tarifas de préstamo que se acumulan por hora basadas en la utilización. Los swaps cuestan 0.2-0.8% dependiendo de si ayudan a balancear el pool. Los stakers de GMX reciben descuentos en tarifas, y no hay tasa de financiación - solo la tasa de préstamo."
+		},
+		"5": {
+			"question": "¿Cuál es la diferencia entre GMX V1 y V2?",
+			"answer": "GMX V2 introduce pools GM aislados en lugar del pool GLP unificado, permitiendo más activos y riesgo reducido. V2 soporta activos sintéticos, tiene mejor eficiencia de capital e introduce tasas de financiación. El GLP de V1 permanece operacional con su liquidez establecida, mientras que V2 continúa expandiéndose con nuevos mercados."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para comenzar a operar?",
+		"button": "Abrir GMX",
+		"note": "Trading perpetuo descentralizado con hasta 100x de apalancamiento"
+	}
+}

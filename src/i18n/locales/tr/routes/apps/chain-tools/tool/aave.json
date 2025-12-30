@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "Aave - Önde Gelen DeFi Borç Verme Protokolü | Kripto Ödünç Al ve Ver",
+		"description": "Dünyanın önde gelen merkezi olmayan borç verme protokolü Aave'yi keşfedin. Flash loans, çoklu zincir desteği ve kripto varlıkları sağlayarak gelir elde etme hakkında bilgi edinin.",
+		"keywords": "Aave, DeFi borç verme, kripto ödünç alma, flash loans, yield farming, Ethereum, Polygon, Arbitrum"
+	},
+	"overview": "Aave, kullanıcıların aracı olmadan kripto para varlıklarını ödünç vermesine, ödünç almasına ve faiz kazanmasına olanak tanıyan DeFi'deki en büyük ve en güvenilir merkezi olmayan borç verme protokollerinden biridir. 2017'de Stani Kulechov tarafından ETHLend olarak başlatılan protokol, 2020'de Aave (Fince'de 'hayalet' anlamına gelir) olarak yeniden markalandı ve o zamandan beri merkezi olmayan finansın temel taşlarından biri haline geldi.\n\nProtokol, kullanıcıların faiz kazanmak için kripto varlıkları yatırdığı likidite havuzları aracılığıyla çalışır, borçlular ise teminat sağlayarak kredi alabilir. Aave, arbitraj, teminat swapları ve kendi kendini likidite stratejileri için temel araçlar haline gelen flash loans - tek bir işlemde ödünç alınması ve geri ödenmesi gereken teminatsız krediler - dahil olmak üzere birçok DeFi inovasyonuna öncülük etti.\n\n2024 itibarıyla Aave, Ethereum, Polygon, Arbitrum, Optimism ve diğer ağlarda 10 milyar doların üzerinde Toplam Kilitli Değer (TVL) ile güvence altına almış ve bu alanda en sermaye verimli protokollerden biri haline gelmiştir.",
+	"features": {
+		"1": {
+			"title": "Sağla ve Faiz Kazan",
+			"description": "Likidite havuzlarına kripto varlıkları yatırın ve piyasa talebine bağlı olarak değişken faiz oranları kazanın"
+		},
+		"2": {
+			"title": "Teminata Karşı Borç Al",
+			"description": "Kripto teminat sağlayarak esnek değişken veya sabit faiz oranı seçenekleriyle kredi alın"
+		},
+		"3": {
+			"title": "Flash Loans",
+			"description": "Tek bir işlem içinde teminatsız kredilere erişin - arbitraj ve DeFi stratejileri için mükemmel"
+		},
+		"4": {
+			"title": "Çoklu Zincir Dağıtımı",
+			"description": "Ethereum, Polygon, Arbitrum, Optimism, Avalanche ve daha fazla ağda kullanılabilir"
+		},
+		"5": {
+			"title": "Güvenlik Modülü",
+			"description": "Protokolü korurken ödül kazanmak için Güvenlik Modülünde AAVE tokenları stake edin"
+		},
+		"6": {
+			"title": "GHO Stablecoin",
+			"description": "Sağladığınız teminatı kullanarak Aave'nin yerel merkezi olmayan stablecoin'i GHO'yu mint edin"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Gelir Üretimi",
+			"description": "Borç verme havuzlarına stablecoin veya kripto varlıkları sağlayarak pasif gelir elde edin"
+		},
+		"2": {
+			"title": "Kaldıraçlı Pozisyonlar",
+			"description": "Varlıklarınızı satmadan maruziyeti artırmak için varlıklarınıza karşı borç alın"
+		},
+		"3": {
+			"title": "Flash Loan Arbitrajı",
+			"description": "Fiyat arbitrajı ve teminat swapları dahil karmaşık DeFi stratejilerini yürütün"
+		},
+		"4": {
+			"title": "Likidite Erişimi",
+			"description": "Uzun vadeli varlıklarınızı satmadan likiditeye erişin - vergi optimizasyonu için ideal"
+		},
+		"5": {
+			"title": "Zincirler Arası DeFi",
+			"description": "Tutarlı kullanıcı deneyimiyle aynı protokolü birden fazla zincirde kullanın"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Aave nedir ve nasıl çalışır?",
+			"answer": "Aave, kullanıcıların faiz kazanmak için kripto varlıkları sağlayabileceği veya teminata karşı borç alabileceği merkezi olmayan bir borç verme protokolüdür. Sağlayıcılar, likidite havuzlarına varlık yatırır ve kullanım oranlarına göre değişken faiz kazanır. Borç alanlar teminat sağlamalı (genellikle kredi değerinin %120-150'si) ve kredileri için faiz ödemelidir."
+		},
+		"2": {
+			"question": "Aave kullanımı güvenli mi?",
+			"answer": "Aave, birden fazla güvenlik denetimine sahip ve güçlü bir geçmişe sahip olan en test edilmiş DeFi protokollerinden biridir. Protokol, AAVE stake edenlerin olası açıklara karşı bir destek sağladığı bir Güvenlik Modülüne sahiptir. Ancak DeFi her zaman akıllı sözleşme riskleri taşır, bu yüzden sadece kaybetmeyi göze alabileceğiniz miktarı yatırın."
+		},
+		"3": {
+			"question": "Flash loans nedir?",
+			"answer": "Flash loans, tek bir blockchain işlemi içinde ödünç alınması ve geri ödenmesi gereken teminatsız kredilerdir. Kredi işlem sonunda geri ödenmezse, tüm işlem geri alınır. Arbitraj, teminat swapları ve kendi kendini likidite stratejileri için kullanılır."
+		},
+		"4": {
+			"question": "AAVE tokenı ne için kullanılır?",
+			"answer": "AAVE, sahiplerinin protokol yükseltmeleri ve parametreleri üzerinde oy kullanmasına olanak tanıyan yönetişim tokenıdır. Token sahipleri ayrıca protokolü olası kötü borçlara karşı korurken ödül kazanmak için AAVE'yi Güvenlik Modülünde stake edebilir."
+		},
+		"5": {
+			"question": "GHO stablecoin nedir?",
+			"answer": "GHO, kullanıcıların sağladıkları teminatı kullanarak mint edebilecekleri Aave'nin yerel merkezi olmayan stablecoin'idir. Geleneksel stablecoin'lerden farklı olarak GHO, doğrudan Aave protokolü aracılığıyla oluşturulur ve faiz ödemeleri Aave DAO hazinesine gider."
+		}
+	},
+	"cta": {
+		"ready": "Borç vermeye başlamaya hazır mısınız?",
+		"button": "Aave'yi Aç",
+		"note": "Kripto varlıklarınızdan gelir elde edin"
+	}
+}

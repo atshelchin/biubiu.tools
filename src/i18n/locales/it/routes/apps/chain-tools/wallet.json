@@ -1,329 +1,329 @@
 {
 	"category_seo": {
-		"title": "Wallet Crypto - Hardware, Software e Multi-Chain | BiuBiu Tools",
-		"description": "Confronta i migliori wallet crypto per sicurezza e comodità. Wallet hardware, estensioni browser e wallet mobile per tutte le blockchain.",
-		"keywords": "wallet crypto, wallet hardware, metamask, ledger, trezor, wallet multi-chain",
+		"title": "Portafogli Crypto - Hardware, Software & Multi-Chain | BiuBiu Tools",
+		"description": "Confronta i migliori portafogli crypto per sicurezza e convenienza. Portafogli hardware, estensioni browser e portafogli mobile per tutte le blockchain.",
+		"keywords": "portafoglio crypto, portafoglio hardware, metamask, ledger, trezor, portafoglio multi-chain",
 		"faqs": [
 			{
-				"question": "Cos'è un wallet crypto?",
-				"answer": "Un wallet crypto è un software o hardware che conserva le tue chiavi private e ti permette di inviare, ricevere e gestire criptovalute. Non conserva effettivamente le crypto - gli asset rimangono sulla blockchain."
+				"question": "Cos'è un portafoglio crypto?",
+				"answer": "Un portafoglio crypto è un software o hardware che memorizza le tue chiavi private e ti permette di inviare, ricevere e gestire criptovalute. I portafogli non conservano effettivamente le crypto - gli asset rimangono sulla blockchain."
 			},
 			{
-				"question": "Wallet hardware vs wallet software?",
-				"answer": "I wallet hardware (Ledger, Trezor) conservano le chiavi offline per la massima sicurezza, ideali per grandi somme. I wallet software (MetaMask, Rainbow) sono più comodi per l'uso quotidiano ma sono connessi a internet."
+				"question": "Portafoglio hardware vs software?",
+				"answer": "I portafogli hardware (Ledger, Trezor) conservano le chiavi offline per la massima sicurezza, ideali per grandi quantità. I portafogli software (MetaMask, Rainbow) sono più comodi per l'uso quotidiano ma sono connessi a internet."
 			},
 			{
-				"question": "Come mantengo sicuro il mio wallet?",
-				"answer": "Non condividere mai la tua seed phrase, usa wallet hardware per grandi importi, abilita la 2FA dove possibile, verifica i dettagli delle transazioni prima di firmare e fai attenzione ai siti di phishing."
+				"question": "Come mantengo sicuro il mio portafoglio?",
+				"answer": "Non condividere mai la tua seed phrase, usa portafogli hardware per grandi importi, abilita 2FA quando possibile, verifica i dettagli delle transazioni prima di firmare e fai attenzione ai siti di phishing."
 			}
 		]
 	},
 	"tools": {
+		"biubiu_wallet_sweep": {
+			"description": "Consolida in batch token da più portafogli in un unico indirizzo"
+		},
+		"biubiu_one_to_many": {
+			"description": "Distribuisci token da un portafoglio a più destinatari"
+		},
+		"biubiu_wallet_generator": {
+			"description": "Genera portafogli HD in batch con frasi mnemoniche"
+		},
+		"biubiu_balance_scanner": {
+			"description": "Scansiona i saldi dei token su più portafogli contemporaneamente"
+		},
 		"debank": {
-			"description": "Tracker di portafoglio multi-chain e piattaforma social"
-		},
-		"rabby": {
-			"description": "Multi-chain browser wallet"
-		},
-		"rainbow": {
-			"description": "Wallet Ethereum elegante"
-		},
-		"metamask": {
-			"description": "Wallet Web3 più popolare"
-		},
-		"frame": {
-			"description": "Wallet desktop focalizzato sulla privacy"
-		},
-		"zerion": {
-			"description": "Portfolio DeFi e wallet"
-		},
-		"safe": {
-			"description": "Smart wallet multi-firma"
+			"description": "Tracker di portafoglio multi-chain con analisi DeFi e funzioni social"
 		},
 		"zapper": {
-			"description": "Dashboard portfolio DeFi"
+			"description": "Dashboard DeFi per tracking portafoglio, NFT e gestione rendimenti"
 		},
-		"argent": {
-			"description": "Smart wallet con recovery"
+		"zerion": {
+			"description": "Portafoglio DeFi intelligente con tracking e trading multi-chain"
 		},
-		"sequence": {
-			"description": "Smart wallet per gaming"
+		"metamask": {
+			"description": "Estensione browser più popolare per Ethereum e chain EVM"
 		},
-		"ledger": {
-			"description": "Wallet hardware per sicurezza"
+		"rabby": {
+			"description": "Portafoglio browser focalizzato sulla sicurezza con verifica rischi pre-transazione"
 		},
-		"trezor": {
-			"description": "Pioniere wallet hardware"
+		"rainbow": {
+			"description": "Portafoglio Ethereum user-friendly con bella visualizzazione NFT"
 		},
-		"privy": {
-			"description": "Soluzione wallet embedded"
+		"frame": {
+			"description": "Portafoglio desktop focalizzato sulla privacy con integrazione hardware"
 		},
-		"dynamic": {
-			"description": "Autenticazione multi-wallet"
+		"safe": {
+			"description": "Portafoglio smart contract multi-firma per team e DAO"
 		},
 		"ambire": {
-			"description": "Smart wallet con login email e transazioni senza gas"
+			"description": "Portafoglio smart con login email e transazioni gasless"
 		},
 		"obvious": {
-			"description": "Smart wallet con account abstraction"
+			"description": "Portafoglio account abstraction con recupero sociale"
+		},
+		"soul_wallet": {
+			"description": "Portafoglio smart ERC-4337 modulare con sistema plugin"
+		},
+		"patch_wallet": {
+			"description": "Portafoglio embedded con login social per applicazioni Web3"
 		},
 		"pimlico": {
-			"description": "Infrastruttura bundler e paymaster ERC-4337"
+			"description": "Infrastruttura bundler e paymaster ERC-4337 per account abstraction"
 		},
 		"stackup": {
-			"description": "Bundler account abstraction e SDK"
+			"description": "Servizio bundler account abstraction e SDK per sviluppatori"
 		},
 		"biconomy": {
-			"description": "SDK account abstraction e transazioni senza gas"
+			"description": "SDK transazioni gasless e infrastruttura account abstraction"
+		},
+		"alchemy_aa": {
+			"description": "SDK Account Kit per costruire applicazioni smart wallet"
 		},
 		"zerodev": {
-			"description": "SDK smart wallet modulare con Kernel"
+			"description": "SDK smart wallet modulare con implementazione account Kernel"
+		},
+		"particle_network": {
+			"description": "Wallet-as-a-service con login social e chain abstraction"
+		},
+		"privy": {
+			"description": "SDK portafoglio embedded per onboarding Web3 senza frizioni"
+		},
+		"dynamic": {
+			"description": "Piattaforma autenticazione e onboarding multi-wallet"
+		},
+		"ledger": {
+			"description": "Portafoglio hardware leader per cold storage sicuro"
+		},
+		"trezor": {
+			"description": "Pioniere portafogli hardware open source con sicurezza comprovata"
+		},
+		"coinbase_wallet": {
+			"description": "Portafoglio self-custody di Coinbase con supporto DeFi e NFT"
+		},
+		"trust_wallet": {
+			"description": "Portafoglio mobile multi-chain che supporta milioni di asset"
+		},
+		"argent": {
+			"description": "Portafoglio smart contract con guardiani e supporto StarkNet"
+		},
+		"sequence": {
+			"description": "SDK smart wallet ottimizzato per applicazioni gaming"
+		},
+		"phantom_wallet": {
+			"description": "Portafoglio multi-chain per Solana, Ethereum e Bitcoin"
+		},
+		"backpack_wallet": {
+			"description": "Portafoglio con supporto xNFT per ecosistemi Solana ed Ethereum"
+		},
+		"exodus_wallet": {
+			"description": "Portafoglio desktop e mobile con funzione swap integrata"
 		},
 		"solflare": {
-			"description": "Wallet Solana popolare"
+			"description": "Portafoglio Solana ricco di funzioni con supporto staking e NFT"
+		},
+		"keplr_wallet": {
+			"description": "Portafoglio leader per ecosistema Cosmos e trasferimenti IBC"
+		},
+		"leap_wallet": {
+			"description": "Portafoglio Cosmos multi-chain con integrazioni DeFi"
+		},
+		"xdefi_wallet": {
+			"description": "Portafoglio browser cross-chain con funzionalità swap nativa"
+		},
+		"brave_wallet": {
+			"description": "Portafoglio integrato nel browser con design privacy-first"
+		},
+		"block_wallet": {
+			"description": "Portafoglio browser con privacy migliorata e protezione anti-phishing"
+		},
+		"okx_wallet": {
+			"description": "Portafoglio Web3 multi-chain con DEX e marketplace NFT"
+		},
+		"core_wallet": {
+			"description": "Portafoglio ecosistema Avalanche con supporto Bitcoin ed Ethereum"
+		},
+		"enkrypt_wallet": {
+			"description": "Portafoglio browser multi-chain dal team MyEtherWallet"
+		},
+		"talisman_wallet": {
+			"description": "Portafoglio Polkadot ed Ethereum con dashboard portafoglio"
 		},
 		"subwallet": {
-			"description": "Wallet multi-chain per Polkadot"
+			"description": "Portafoglio completo per Polkadot e chain Substrate"
 		},
-		"tonhub": {
-			"description": "Wallet TON mobile"
+		"polkadot_js": {
+			"description": "Estensione browser ufficiale per ecosistema Polkadot"
 		},
-		"mytonwallet": {
-			"description": "Wallet TON open-source"
+		"nami_wallet": {
+			"description": "Portafoglio browser Cardano leggero per dApp e NFT"
 		},
-		"coolwallet": {
-			"description": "Wallet hardware con carta"
+		"eternl_wallet": {
+			"description": "Portafoglio Cardano ricco di funzioni con strumenti staking e DeFi"
 		},
-		"imtoken": {
-			"description": "Wallet multi-chain popolare"
+		"yoroi_wallet": {
+			"description": "Portafoglio leggero ufficiale per Cardano da EMURGO"
 		},
-		"tokenpocket": {
-			"description": "Wallet multi-chain decentralizzato"
+		"temple_wallet": {
+			"description": "Portafoglio browser per applicazioni Tezos DeFi e NFT"
 		},
-		"myetherwallet": {
-			"description": "Wallet Ethereum open-source"
+		"kukai_wallet": {
+			"description": "Portafoglio Tezos con login social e supporto DirectAuth"
 		},
-		"mycrypto": {
-			"description": "Wallet Ethereum e gestione account"
+		"petra_wallet": {
+			"description": "Portafoglio ufficiale per ecosistema blockchain Aptos"
 		},
-		"tronlink": {
-			"description": "Wallet ufficiale Tron"
+		"martian_wallet": {
+			"description": "Portafoglio multi-chain per reti Aptos e Sui"
 		},
-		"multis": {
-			"description": "Wallet multi-firma per aziende"
+		"sui_wallet": {
+			"description": "Portafoglio browser ufficiale per blockchain Sui"
 		},
-		"squads": {
-			"description": "Multi-firma su Solana"
-		},
-		"biubiu-wallet-sweep": {
-			"description": "Wallet Sweep - Tool"
-		},
-		"biubiu-one-to-many": {
-			"description": "One-to-Many Transfer - Tool"
-		},
-		"biubiu-wallet-generator": {
-			"description": "Wallet Generator - Tool"
-		},
-		"biubiu-balance-scanner": {
-			"description": "Balance Scanner - Tool"
-		},
-		"soul-wallet": {
-			"description": "Soul Wallet - Tool"
-		},
-		"patch-wallet": {
-			"description": "Patch Wallet - Tool"
-		},
-		"alchemy-aa": {
-			"description": "Alchemy Account Kit - Tool"
-		},
-		"particle-network": {
-			"description": "Particle Network - Tool"
-		},
-		"coinbase-wallet": {
-			"description": "Coinbase Wallet - Tool"
-		},
-		"trust-wallet": {
-			"description": "Trust Wallet - Tool"
-		},
-		"phantom-wallet": {
-			"description": "Phantom - Tool"
-		},
-		"backpack-wallet": {
-			"description": "Backpack - Tool"
-		},
-		"exodus-wallet": {
-			"description": "Exodus - Tool"
-		},
-		"keplr-wallet": {
-			"description": "Keplr - Tool"
-		},
-		"leap-wallet": {
-			"description": "Leap Wallet - Tool"
-		},
-		"xdefi-wallet": {
-			"description": "XDEFI - Tool"
-		},
-		"brave-wallet": {
-			"description": "Brave Wallet - Tool"
-		},
-		"block-wallet": {
-			"description": "BlockWallet - Tool"
-		},
-		"okx-wallet": {
-			"description": "OKX Wallet - Tool"
-		},
-		"core-wallet": {
-			"description": "Core Wallet - Tool"
-		},
-		"enkrypt-wallet": {
-			"description": "Enkrypt - Tool"
-		},
-		"talisman-wallet": {
-			"description": "Talisman - Tool"
-		},
-		"polkadot-js": {
-			"description": "Polkadot.js - Tool"
-		},
-		"nami-wallet": {
-			"description": "Nami - Tool"
-		},
-		"eternl-wallet": {
-			"description": "Eternl - Tool"
-		},
-		"yoroi-wallet": {
-			"description": "Yoroi - Tool"
-		},
-		"temple-wallet": {
-			"description": "Temple Wallet - Tool"
-		},
-		"kukai-wallet": {
-			"description": "Kukai - Tool"
-		},
-		"petra-wallet": {
-			"description": "Petra - Tool"
-		},
-		"martian-wallet": {
-			"description": "Martian - Tool"
-		},
-		"sui-wallet": {
-			"description": "Sui Wallet - Tool"
-		},
-		"suiet-wallet": {
-			"description": "Suiet - Tool"
+		"suiet_wallet": {
+			"description": "Portafoglio Sui open source con funzioni developer-friendly"
 		},
 		"tonkeeper": {
-			"description": "Tonkeeper - Tool"
+			"description": "Portafoglio TON popolare con supporto staking e Jetton"
 		},
-		"sender-wallet": {
-			"description": "Sender Wallet - Tool"
+		"tonhub": {
+			"description": "Portafoglio TON con integrazione pool staking Whales"
 		},
-		"meteor-wallet": {
-			"description": "Meteor Wallet - Tool"
+		"mytonwallet": {
+			"description": "Portafoglio TON open source per desktop e browser"
 		},
-		"here-wallet": {
-			"description": "HERE Wallet - Tool"
+		"sender_wallet": {
+			"description": "Portafoglio NEAR Protocol con funzioni DeFi e NFT"
 		},
-		"coin98-wallet": {
-			"description": "Coin98 - Tool"
+		"meteor_wallet": {
+			"description": "Portafoglio NEAR con tracking portafoglio avanzato"
 		},
-		"bitget-wallet": {
-			"description": "Bitget Wallet - Tool"
+		"here_wallet": {
+			"description": "Portafoglio NEAR mobile-first con ricompense staking"
 		},
-		"safepal-wallet": {
-			"description": "SafePal - Tool"
+		"coin98_wallet": {
+			"description": "Portale DeFi multi-chain con supporto 90+ blockchain"
 		},
-		"onekey-wallet": {
-			"description": "OneKey - Tool"
+		"bitget_wallet": {
+			"description": "Portafoglio multi-chain con aggregatore swap e launchpad"
 		},
-		"ellipal-wallet": {
-			"description": "ELLIPAL - Tool"
+		"safepal_wallet": {
+			"description": "Combo portafoglio hardware e software supportato da Binance"
 		},
-		"dcent-wallet": {
-			"description": "D - Tool"
+		"onekey_wallet": {
+			"description": "Portafoglio hardware open source con supporto multi-chain"
 		},
-		"math-wallet": {
-			"description": "Math Wallet - Tool"
+		"ellipal_wallet": {
+			"description": "Portafoglio hardware air-gapped con interfaccia touchscreen"
 		},
-		"alpha-wallet": {
-			"description": "AlphaWallet - Tool"
+		"dcent_wallet": {
+			"description": "Portafoglio hardware biometrico con autenticazione impronta digitale"
 		},
-		"status-wallet": {
-			"description": "Status - Tool"
+		"coolwallet": {
+			"description": "Portafoglio hardware formato carta di credito con connessione Bluetooth"
 		},
-		"unstoppable-wallet": {
-			"description": "Unstoppable Wallet - Tool"
+		"imtoken": {
+			"description": "Portafoglio mobile popolare in Asia con supporto DeFi multi-chain"
 		},
-		"exodus-wallet-ext": {
-			"description": "Exodus Extension - Tool"
+		"tokenpocket": {
+			"description": "Portafoglio mobile multi-chain con browser dApp integrato"
 		},
-		"atomic-wallet": {
-			"description": "Atomic Wallet - Tool"
+		"math_wallet": {
+			"description": "Portafoglio multi-piattaforma che supporta 100+ blockchain"
 		},
-		"guarda-wallet": {
-			"description": "Guarda - Tool"
+		"alpha_wallet": {
+			"description": "Portafoglio mobile open source con supporto TokenScript"
 		},
-		"edge-wallet": {
-			"description": "Edge - Tool"
+		"status_wallet": {
+			"description": "App messaggistica privata con portafoglio Ethereum integrato"
 		},
-		"crypto-com-defi": {
-			"description": "Crypto.com DeFi Wallet - Tool"
+		"unstoppable_wallet": {
+			"description": "Portafoglio mobile focalizzato sulla privacy con analytics DeFi"
 		},
-		"lobstr-wallet": {
-			"description": "LOBSTR - Tool"
+		"exodus_wallet_ext": {
+			"description": "Versione estensione browser del portafoglio multi-chain Exodus"
 		},
-		"freighter-wallet": {
-			"description": "Freighter - Tool"
+		"myetherwallet": {
+			"description": "Interfaccia web originale per gestione portafoglio Ethereum"
 		},
-		"den-wallet": {
-			"description": "Den - Tool"
+		"mycrypto": {
+			"description": "Portafoglio desktop e web per gestione sicura Ethereum"
+		},
+		"atomic_wallet": {
+			"description": "Portafoglio desktop con atomic swap e funzioni staking"
+		},
+		"guarda_wallet": {
+			"description": "Portafoglio multi-piattaforma con exchange e staking integrato"
+		},
+		"edge_wallet": {
+			"description": "Portafoglio mobile focalizzato sulla privacy con login basato su utente"
+		},
+		"crypto_com_defi": {
+			"description": "Portafoglio DeFi con chain Cronos e bridge cross-chain"
+		},
+		"lobstr_wallet": {
+			"description": "Portafoglio Stellar user-friendly con funzioni trading"
+		},
+		"freighter_wallet": {
+			"description": "Portafoglio browser per Stellar e smart contract Soroban"
+		},
+		"tronlink": {
+			"description": "Portafoglio ufficiale per ecosistema blockchain TRON"
+		},
+		"multis": {
+			"description": "Portafoglio multi-sig focalizzato su business con funzioni payroll"
+		},
+		"squads": {
+			"description": "Treasury multi-sig e gestione protocollo per Solana"
+		},
+		"den_wallet": {
+			"description": "Portafoglio smart con automazione DeFi e batching transazioni"
 		},
 		"instadapp": {
-			"description": "Instadapp - Tool"
+			"description": "Account smart DeFi con aggregazione protocolli e automazione"
 		},
-		"fuelet-wallet": {
-			"description": "Fuelet - Tool"
+		"fuelet_wallet": {
+			"description": "Portafoglio per layer di esecuzione modulare Fuel"
 		},
-		"fuel-wallet": {
-			"description": "Fuel Wallet - Tool"
+		"fuel_wallet": {
+			"description": "Portafoglio browser ufficiale per Fuel Network"
 		},
-		"braavos-wallet": {
-			"description": "Braavos - Tool"
+		"braavos_wallet": {
+			"description": "Portafoglio smart per StarkNet con supporto signer hardware"
 		},
-		"keystone-wallet": {
-			"description": "Keystone - Tool"
+		"keystone_wallet": {
+			"description": "Portafoglio hardware air-gapped con firma tramite QR code"
 		},
-		"gridplus-wallet": {
-			"description": "GridPlus Lattice1 - Tool"
+		"gridplus_wallet": {
+			"description": "Portafoglio hardware enterprise con storage SafeCard"
 		},
-		"tangem-wallet": {
-			"description": "Tangem - Tool"
+		"tangem_wallet": {
+			"description": "Portafoglio hardware basato su carta NFC per uso mobile"
 		},
-		"web3auth-wallet": {
-			"description": "Web3Auth - Tool"
+		"web3auth_wallet": {
+			"description": "Gestione chiavi basata su MPC con supporto login social"
 		},
-		"unisat-wallet": {
-			"description": "UniSat - Tool"
+		"unisat_wallet": {
+			"description": "Portafoglio Bitcoin per Ordinals, BRC-20 e iscrizioni"
 		},
-		"xverse-wallet": {
-			"description": "Xverse - Tool"
+		"xverse_wallet": {
+			"description": "Portafoglio Bitcoin e Stacks con supporto Ordinals"
 		},
-		"leather-wallet": {
-			"description": "Leather (Hiro) - Tool"
+		"leather_wallet": {
+			"description": "Portafoglio Bitcoin e Stacks precedentemente noto come Hiro Wallet"
 		},
-		"passport-wallet": {
-			"description": "Passport (Foundation) - Tool"
+		"passport_wallet": {
+			"description": "Portafoglio hardware Bitcoin air-gapped open source"
 		},
-		"seedsigner-wallet": {
-			"description": "SeedSigner - Tool"
+		"seedsigner_wallet": {
+			"description": "Progetto DIY dispositivo firma Bitcoin air-gapped"
 		},
-		"fireblocks-wallet": {
-			"description": "Fireblocks - Tool"
+		"fireblocks_wallet": {
+			"description": "Piattaforma custodia MPC istituzionale per asset digitali"
 		},
-		"anchorage-wallet": {
-			"description": "Anchorage Digital - Tool"
+		"anchorage_wallet": {
+			"description": "Banca asset digitali con licenza federale e custode"
 		},
-		"bitgo-wallet": {
-			"description": "BitGo - Tool"
+		"bitgo_wallet": {
+			"description": "Custodia istituzionale con multi-sig e assicurazione"
 		}
 	}
 }

@@ -1,470 +1,469 @@
 {
 	"category_seo": {
-		"title": "GameFi ve Web3 Oyunlar - Oyna-Kazan Oyunları | BiuBiu Tools",
-		"description": "Web3 oyunlarını ve GameFi platformlarını keşfedin. Oyna-kazan oyunları, NFT oyun varlıkları ve blokzincir oyun loncaları.",
-		"keywords": "gamefi, web3 oyunlar, oyna-kazan, nft oyunlar, blokzincir oyunları",
+		"title": "GameFi & Web3 Oyunları - Play-to-Earn Oyunlar | BiuBiu Tools",
+		"description": "Web3 oyunlarını ve GameFi platformlarını keşfedin. Play-to-earn oyunlar, NFT oyun varlıkları ve blockchain oyun loncaları.",
 		"faqs": [
 			{
 				"question": "GameFi nedir?",
-				"answer": "GameFi, oyunları DeFi mekanikleriyle birleştirir. Oyuncular oyun oynayarak token ve NFT kazanırlar. Varlıklar gerçekten oyuncular tarafından sahiplenilir ve ticaret yapılabilir veya oyunlar arasında kullanılabilir."
+				"answer": "GameFi, oyunları DeFi mekanikleriyle birleştirir. Oyuncular oyun oynayarak token ve NFT kazanırlar. Varlıklar gerçekten oyunculara aittir ve farklı oyunlarda takas edilebilir veya kullanılabilir."
 			},
 			{
 				"question": "Popüler Web3 oyunları nelerdir?",
-				"answer": "Axie Infinity oyna-kazan'ın öncüsü oldu. Illuvium ve Big Time AAA kalitesinde oyunlardır. Gods Unchained popüler bir kart oyunudur. Alan daha iyi oynanış odağıyla gelişiyor."
+				"answer": "Axie Infinity play-to-earn modelinin öncüsü oldu. Illuvium ve Big Time AAA kalitesinde oyunlardır. Gods Unchained popüler bir koleksiyon kart oyunudur. Alan daha iyi oynanış deneyimlerine doğru gelişiyor."
 			},
 			{
-				"question": "Oyun loncaları nelerdir?",
-				"answer": "YGG ve Merit Circle gibi oyun loncaları, oyuncuların pahalı oyun NFT'lerine erişmesine yardımcı olmak için kaynakları bir araya toplar. Oyunculara burs verir ve kazançları paylaşırlar. Yüksek giriş maliyetli oyunlar için kullanışlıdır."
+				"question": "Oyun loncaları nedir?",
+				"answer": "YGG ve Merit Circle gibi oyun loncaları, oyuncuların pahalı oyun NFT'lerine erişmesine yardımcı olmak için kaynakları birleştirir. Oyunculara burs verir ve gelirleri paylaşırlar. Yüksek giriş maliyetli oyunlar için faydalıdır."
 			}
 		]
 	},
 	"tools": {
-		"aavegotchi": {
-			"description": "DeFi-powered NFT gaming üzerinde Polygüzerinde"
-		},
-		"apeiron": {
-			"description": "God-game ile roguelike elements üzerinde Polygüzerinde"
-		},
-		"aurory": {
-			"description": "Solana JRPG tactics game ile NFT creatures"
-		},
-		"beam": {
-			"description": "Gaming subnet üzerinde Avalanche"
-		},
-		"bigtime": {
-			"description": "Big Time - Web3 gaming platiçinm"
-		},
-		"blocklords": {
-			"description": "Medieval grve strategy game ile dynasty building"
-		},
-		"blum": {
-			"description": "Telegram mini-app borsa ve gaming platiçinm"
-		},
-		"carv": {
-			"description": "Gaming identity ve credential protokol için Web3"
-		},
-		"catizen": {
-			"description": "Cat-themed Telegram game üzerinde TON blokzincir"
-		},
-		"cometh": {
-			"description": "Spaceship strategy game ile DeFi elements"
-		},
-		"cryptoblades": {
-			"description": "Web3 RPG ile play-to-earn mechanics"
-		},
-		"cyball": {
-			"description": "Football management game üzerinde BNB Chain"
-		},
-		"decentraland": {
-			"description": "Decentralve - Web3 gaming platiçinm"
-		},
-		"derace": {
-			"description": "NFT horse racing ile breeding ve betting"
-		},
-		"dogs": {
-			"description": "Dog-themed Telegram game üzerinde TON"
-		},
-		"era7": {
-			"description": "Trading card strategy game üzerinde BNB Chain"
-		},
-		"fractal": {
-			"description": "Gaming NFT pazaryeri ve discovery"
-		},
-		"fusionist": {
-			"description": "Binance-listed AAA mech strategy game ile ACE token"
-		},
-		"gaimin": {
-			"description": "Gaming rewards platiçinm ile GPU sharing"
-		},
-		"gamegpt": {
-			"description": "AI-powered gaming cüzerindetent generatiüzerinde platiçinm"
-		},
-		"gamestarter": {
-			"description": "Gaming launchpad ve publisher için Web3 games"
-		},
-		"genopets": {
-			"description": "Move-to-earn pet game üzerinde Solana"
-		},
-		"gunz": {
-			"description": "AAA battle royale shooter from Gunzilla Games"
-		},
-		"honeyland": {
-			"description": "Bee-themed strategy game üzerinde Solana"
-		},
-		"illuvium": {
-			"description": "AAA auto-battler RPG üzerinde Immutable X"
-		},
 		"immutable": {
-			"description": "Gaming-focused L2 ile zkEVM"
-		},
-		"iskra": {
-			"description": "Web3 gaming platiçinm ve topluluk"
-		},
-		"karrat": {
-			"description": "AI gaming ekosistem powering My Pet Hooligan"
-		},
-		"kryptomon": {
-			"description": "Creature breeding mobile game üzerinde BNB Chain"
-		},
-		"loot": {
-			"description": "Composable NFT adventure gear project"
-		},
-		"loot8": {
-			"description": "NFT gaming collectibles platiçinm"
-		},
-		"lumiterra": {
-			"description": "Open-world survival crafting game üzerinde Polygüzerinde"
-		},
-		"major": {
-			"description": "Social ranking Telegram game üzerinde TON"
-		},
-		"metalcore": {
-			"description": "Mech combat game üzerinde Immutable X"
-		},
-		"mir4": {
-			"description": "Cross-platiçinm MMORPG ile DRACO token mining mechanics"
-		},
-		"mirandus": {
-			"description": "Fantasy RPG in an epic world by Gala Games"
-		},
-		"mobox": {
-			"description": "GameFi platiçinm ile NFT farming üzerinde BNB Chain"
-		},
-		"momento": {
-			"description": "AI-powered gaming moments ve highlights"
-		},
-		"notcoin": {
-			"description": "Telegram tap game that launched NOT token"
-		},
-		"overworld": {
-			"description": "Actiüzerinde RPG ile loot system üzerinde Immutable X"
-		},
-		"parallel": {
-			"description": "Sci-fi trading card game üzerinde Ethereum"
-		},
-		"pegaxy": {
-			"description": "PvP horse racing game üzerinde Polygüzerinde"
-		},
-		"pixelmon": {
-			"description": "Open-world creature collectiüzerinde RPG ile evolving NFTs"
-		},
-		"pixels": {
-			"description": "Social farming game üzerinde Rüzerindein zincir"
-		},
-		"pixelverse": {
-			"description": "Cyberpunk Telegram game ile battles"
-		},
-		"playnance": {
-			"description": "Playnance - Web3 gaming platiçinm"
-		},
-		"rainmaker": {
-			"description": "Weather-based crypto predictiüzerinde game"
-		},
-		"realm": {
-			"description": "Fantasy RPG ile lve ve resources üzerinde Polygüzerinde"
-		},
-		"revomon": {
-			"description": "VR müzerindester battling game inspired by Pokemüzerinde"
+			"description": "Gas ücretsiz NFT ticareti için zkEVM ile oyun odaklı L2"
 		},
 		"ronin": {
-			"description": "Gaming sidezincir için Axie Infinity ekosistem"
-		},
-		"sandbox": {
-			"description": "The Svebox - Web3 gaming platiçinm"
-		},
-		"shrapnel": {
-			"description": "Moddable extractiüzerinde FPS üzerinde Avalanche"
-		},
-		"sipher": {
-			"description": "AAA multiplayer shooter üzerinde Ethereum"
-		},
-		"skyweaver": {
-			"description": "Free-to-play trading card game by Horizüzerinde"
-		},
-		"splinterlands": {
-			"description": "Splinterlves - Web3 gaming platiçinm"
-		},
-		"stardust": {
-			"description": "Web3 gaming SDK ve cüzdan solutiüzerinde"
-		},
-		"stepn": {
-			"description": "Move-to-earn fitness app rewarding physical activity ile tokens"
-		},
-		"superior": {
-			"description": "Roguelike co-op shooter üzerinde Gala Games platiçinm"
-		},
-		"superverse": {
-			"description": "NFT gaming pazaryeri ve ekosistem"
+			"description": "Axie Infinity ekosistemini güçlendiren oyun sidechain'i"
 		},
 		"treasure": {
-			"description": "Merkezi olmayan gaming ekosistem üzerinde Arbitrum"
+			"description": "MAGIC token ile Arbitrum üzerinde merkezi olmayan oyun ekosistemi"
 		},
-		"treeverse": {
-			"description": "Anime-inspired MMORPG metaverse"
+		"beam": {
+			"description": "Merit Circle tarafından Avalanche üzerinde oyun subnet'i"
 		},
-		"ultiverse": {
-			"description": "Binance Labs-invested AI-powered metaverse gaming platiçinm"
+		"stardust": {
+			"description": "Geliştiriciler için Web3 oyun SDK'sı ve cüzdan altyapısı"
 		},
-		"upland": {
-			"description": "Property trading metaverse mapped to real world"
-		},
-		"wildcard": {
-			"description": "Competitive arena game ile card-based strategy"
+		"fractal": {
+			"description": "Solana üzerinde oyun NFT pazaryeri ve keşif platformu"
 		},
 		"xai": {
-			"description": "Gaming L3 built üzerinde Arbitrum Orbit"
-		},
-		"xpet": {
-			"description": "Social trading pet game üzerinde Arbitrum"
-		},
-		"xterio": {
-			"description": "Binance Labs-backed AI gaming platiçinm ve publisher"
-		},
-		"yescoin": {
-			"description": "Telegram tap-to-earn game üzerinde TON"
+			"description": "Ölçeklenebilir oyunlar için Arbitrum Orbit üzerine inşa edilmiş oyun L3"
 		},
 		"ygg": {
-			"description": "Gaming guild ile scholarship programs"
+			"description": "Play-to-earn için burs programlarına sahip oyun loncası"
 		},
-		"elixir-games": {
-			"description": "Elixir Games - Tool"
+		"loot8": {
+			"description": "Markalar için NFT oyun koleksiyonları platformu"
 		},
-		"portal-gaming": {
-			"description": "Portal - Tool"
+		"iskra": {
+			"description": "Web3 oyun platformu ve topluluk merkezi"
 		},
-		"pirate-nation": {
-			"description": "Pirate Nation - Tool"
+		"loot": {
+			"description": "Oyun yapımcıları için birleştirilebilir macera ekipmanı NFT'leri"
 		},
-		"ev-io": {
-			"description": "Ev.io - Tool"
+		"pixels": {
+			"description": "Ronin üzerinde on-chain sosyal çiftçilik oyunu"
 		},
-		"ronin-gaming": {
-			"description": "Ronin - Tool"
+		"parallel": {
+			"description": "Rekabetçi oynanışlı bilim kurgu koleksiyon kart oyunu"
 		},
-		"prime-gaming": {
-			"description": "Prime Gaming - Tool"
+		"illuvium": {
+			"description": "Auto-battler mekanikleriyle AAA açık dünya RPG"
 		},
-		"sui-gaming": {
-			"description": "Sui Gaming - Tool"
+		"shrapnel": {
+			"description": "Avalanche üzerinde AAA modlanabilir extraction shooter"
 		},
-		"fractal-gaming": {
-			"description": "Fractal - Tool"
+		"playnance": {
+			"description": "Kripto ödüllü espor tahmin ve oyun platformu"
 		},
-		"myria-gaming": {
-			"description": "Myria - Tool"
+		"sandbox": {
+			"description": "Kullanıcı üretimli içerik ve LAND NFT'leri ile sanal dünya metaverse"
 		},
-		"oasys-gaming": {
-			"description": "Oasys - Tool"
+		"decentraland": {
+			"description": "LAND sahipliği ve DAO yönetimi ile merkezi olmayan sanal dünya"
 		},
-		"xborg-gaming": {
-			"description": "XBorg - Tool"
+		"bigtime": {
+			"description": "Zaman yolculuğu ve loot ile AAA multiplayer aksiyon RPG"
 		},
-		"beam-gaming": {
-			"description": "Beam - Tool"
+		"splinterlands": {
+			"description": "Play-to-earn ödülleriyle stratejik kart savaş oyunu"
 		},
-		"gala-games": {
-			"description": "Gala Games - Tool"
+		"stepn": {
+			"description": "Fiziksel aktiviteyi tokenlerle ödüllendiren move-to-earn fitness uygulaması"
 		},
-		"axie-infinity": {
-			"description": "Axie Infinity - Tool"
+		"mir4": {
+			"description": "DRACO token madenciliği mekanikleriyle cross-platform MMORPG"
 		},
-		"gods-unchained": {
-			"description": "Gods Unchained - Tool"
+		"wildcard": {
+			"description": "Kart stratejisi elementleriyle rekabetçi arena oyunu"
 		},
-		"guild-of-guardians": {
-			"description": "Guild of Guardians - Tool"
+		"aurory": {
+			"description": "NFT yaratıklarla Solana JRPG taktik oyunu"
 		},
-		"ember-sword": {
-			"description": "Ember Sword - Tool"
+		"blocklords": {
+			"description": "Hanedan inşası ile ortaçağ büyük strateji oyunu"
 		},
-		"star-atlas": {
-			"description": "Star Atlas - Tool"
+		"superior": {
+			"description": "Gala Games platformunda roguelike co-op shooter"
 		},
-		"hero-of-mavia": {
-			"description": "Heroes of Mavia - Tool"
+		"fusionist": {
+			"description": "ACE token ile Binance listelenmiş AAA mech strateji oyunu"
 		},
-		"night-crows": {
-			"description": "Night Crows - Tool"
+		"xterio": {
+			"description": "Binance Labs destekli AI oyun platformu ve yayıncı"
 		},
-		"off-the-grid": {
-			"description": "Off the Grid - Tool"
+		"ultiverse": {
+			"description": "Binance Labs yatırımlı AI destekli metaverse oyun platformu"
 		},
-		"maple-story-universe": {
-			"description": "MapleStory Universe - Tool"
+		"pixelmon": {
+			"description": "Gelişen NFT'lerle açık dünya yaratık toplama RPG"
 		},
-		"nyan-heroes": {
-			"description": "Nyan Heroes - Tool"
+		"xpet": {
+			"description": "Arbitrum üzerinde sosyal ticaret pet oyunu"
 		},
-		"phantom-galaxies": {
-			"description": "Phantom Galaxies - Tool"
+		"carv": {
+			"description": "Web3 oyun kimliği ve kimlik bilgisi protokolü"
 		},
-		"crypto-unicorns": {
-			"description": "Crypto Unicorns - Tool"
+		"gunz": {
+			"description": "Gunzilla Games'den AAA battle royale shooter"
 		},
-		"legends-of-venari": {
-			"description": "Legends of Venari - Tool"
+		"lumiterra": {
+			"description": "Polygon üzerinde açık dünya hayatta kalma crafting oyunu"
 		},
-		"planet-ix": {
-			"description": "Planet IX - Tool"
+		"gamestarter": {
+			"description": "Web3 oyun launchpad ve yayıncı"
 		},
-		"sweat-economy": {
-			"description": "Sweat Economy - Tool"
+		"gamegpt": {
+			"description": "AI destekli oyun içerik üretim platformu"
 		},
-		"champions-ascension": {
-			"description": "Champions Ascension - Tool"
+		"kryptomon": {
+			"description": "BNB Chain üzerinde yaratık yetiştirme mobil oyunu"
 		},
-		"defi-kingdoms": {
-			"description": "DeFi Kingdoms - Tool"
+		"revomon": {
+			"description": "Pokemon'dan ilham alan VR canavar savaş oyunu"
 		},
-		"cross-the-ages": {
-			"description": "Cross The Ages - Tool"
+		"era7": {
+			"description": "BNB Chain üzerinde koleksiyon kart strateji oyunu"
 		},
-		"echoes-of-empire": {
-			"description": "Echoes of Empire - Tool"
+		"cryptoblades": {
+			"description": "Play-to-earn mekanikleriyle Web3 RPG"
 		},
-		"spider-tanks": {
-			"description": "Spider Tanks - Tool"
+		"derace": {
+			"description": "Yetiştirme ve bahis ile NFT at yarışı"
 		},
-		"town-star": {
-			"description": "Town Star - Tool"
+		"superverse": {
+			"description": "NFT oyun pazaryeri ve ekosistemi"
 		},
-		"voxie-tactics": {
-			"description": "Voxie Tactics - Tool"
+		"karrat": {
+			"description": "My Pet Hooligan'ı güçlendiren AI oyun ekosistemi"
 		},
-		"camelot-unchained": {
-			"description": "Camelot Unchained - Tool"
+		"overworld": {
+			"description": "Immutable X üzerinde loot sistemli aksiyon RPG"
 		},
-		"wolf-game": {
-			"description": "Wolf Game - Tool"
+		"skyweaver": {
+			"description": "Horizon tarafından ücretsiz koleksiyon kart oyunu"
 		},
-		"forgotten-runiverse": {
-			"description": "Forgotten Runiverse - Tool"
+		"treeverse": {
+			"description": "Anime tarzı MMORPG metaverse"
 		},
-		"crypto-raiders": {
-			"description": "Crypto Raiders - Tool"
+		"metalcore": {
+			"description": "Immutable X üzerinde mech savaş oyunu"
 		},
-		"the-beacon": {
-			"description": "The Beacon - Tool"
+		"mirandus": {
+			"description": "Gala Games tarafından epik fantezi RPG"
 		},
-		"alien-worlds": {
-			"description": "Alien Worlds - Tool"
+		"aavegotchi": {
+			"description": "Polygon üzerinde DeFi destekli NFT oyunu"
 		},
-		"farmers-world": {
-			"description": "Farmers World - Tool"
+		"cometh": {
+			"description": "DeFi elementleriyle uzay strateji oyunu"
 		},
-		"thetan-arena": {
-			"description": "Thetan Arena - Tool"
+		"realm": {
+			"description": "Polygon üzerinde arazi ve kaynaklarla fantezi RPG"
 		},
-		"league-of-kingdoms": {
-			"description": "League of Kingdoms - Tool"
+		"mobox": {
+			"description": "BNB Chain üzerinde NFT farming GameFi platformu"
 		},
-		"revv-racing": {
-			"description": "REVV Racing - Tool"
+		"upland": {
+			"description": "Gerçek dünyaya eşlenmiş sanal emlak metaverse"
 		},
-		"riot-racers": {
-			"description": "Riot Racers - Tool"
+		"genopets": {
+			"description": "Solana üzerinde move-to-earn pet oyunu"
 		},
-		"zed-run": {
-			"description": "ZED RUN - Tool"
+		"cyball": {
+			"description": "BNB Chain üzerinde futbol menajerlik oyunu"
 		},
-		"derby-stars": {
-			"description": "Derby Stars - Tool"
+		"pegaxy": {
+			"description": "Polygon üzerinde PvP at yarışı oyunu"
 		},
-		"battle-of-guardians": {
-			"description": "Battle of Guardians - Tool"
+		"apeiron": {
+			"description": "Polygon üzerinde roguelike elementleriyle tanrı oyunu"
 		},
-		"the-machines-arena": {
-			"description": "The Machines Arena - Tool"
+		"sipher": {
+			"description": "Ethereum üzerinde AAA multiplayer shooter"
 		},
-		"planet-quest": {
-			"description": "PlanetQuest - Tool"
+		"honeyland": {
+			"description": "Solana üzerinde arı temalı strateji oyunu"
 		},
-		"ready-player-me": {
-			"description": "Ready Player Me - Tool"
+		"rainmaker": {
+			"description": "GameFi keşif ve analitik agregator platformu"
 		},
-		"hamster-kombat": {
-			"description": "Hamster Kombat - Tool"
+		"gaimin": {
+			"description": "GPU paylaşım ağı ile oyun ödül platformu"
 		},
-		"meme-fi": {
-			"description": "MemeFi - Tool"
+		"momento": {
+			"description": "TON blockchain üzerinde hyper-casual Telegram oyunu"
 		},
-		"my-pet-hooligan": {
-			"description": "My Pet Hooligan - Tool"
+		"catizen": {
+			"description": "TON blockchain üzerinde kedi temalı Telegram oyunu"
 		},
-		"nakamoto-games": {
-			"description": "Nakamoto Games - Tool"
+		"notcoin": {
+			"description": "NOT token ile Telegram tap-to-earn oyunu"
 		},
-		"gmt-stepn": {
-			"description": "GMT (STEPN) - Tool"
+		"blum": {
+			"description": "Telegram mini-app DEX ve oyun platformu"
 		},
-		"magic-square": {
-			"description": "Magic Square - Tool"
+		"yescoin": {
+			"description": "TON üzerinde Telegram tap-to-earn oyunu"
 		},
-		"age-of-dino": {
-			"description": "Age of Dino - Tool"
+		"dogs": {
+			"description": "TON üzerinde köpek temalı Telegram meme oyunu"
 		},
-		"bnb-heroes": {
-			"description": "BNB Heroes - Tool"
+		"pixelverse": {
+			"description": "Savaşlarla cyberpunk Telegram oyunu"
 		},
-		"elfin-games": {
-			"description": "Elfin Games - Tool"
+		"major": {
+			"description": "TON üzerinde sosyal sıralama Telegram oyunu"
 		},
-		"games-for-a-living": {
-			"description": "Games for a Living - Tool"
+		"elixir_games": {
+			"description": "Web3 oyun keşfi için masaüstü oyun başlatıcısı"
+		},
+		"portal_gaming": {
+			"description": "Cross-chain oyun cüzdanı ve keşif platformu"
+		},
+		"pirate_nation": {
+			"description": "Arbitrum L3 üzerinde tamamen on-chain korsan macera RPG"
+		},
+		"ev_io": {
+			"description": "Solana üzerinde play-to-earn ile tarayıcı tabanlı FPS shooter"
+		},
+		"ronin_gaming": {
+			"description": "Axie ve Sky Mavis oyunlarını güçlendiren oyun blockchain'i"
+		},
+		"prime_gaming": {
+			"description": "PRIME token ile Echelon Prime oyun ekosistemi"
+		},
+		"sui_gaming": {
+			"description": "Move tabanlı nesnelerle Sui blockchain üzerinde oyun hub'ı"
+		},
+		"fractal_gaming": {
+			"description": "Solana üzerinde oyun NFT pazaryeri ve keşif"
+		},
+		"myria_gaming": {
+			"description": "NFT altyapısı ve oyun stüdyosu ile oyun L2"
+		},
+		"oasys_gaming": {
+			"description": "Büyük oyun stüdyoları tarafından desteklenen Japon oyun blockchain'i"
+		},
+		"xborg_gaming": {
+			"description": "Oyun kimliği ve espor kimlik bilgisi platformu"
+		},
+		"beam_gaming": {
+			"description": "Merit Circle tarafından Avalanche üzerinde oyun subnet'i"
+		},
+		"gala_games": {
+			"description": "Birden fazla play-to-earn oyunuyla oyun ekosistemi"
+		},
+		"axie_infinity": {
+			"description": "NFT yaratıklar ve savaşlarla öncü play-to-earn oyunu"
+		},
+		"gods_unchained": {
+			"description": "Immutable X üzerinde ücretsiz rekabetçi koleksiyon kart oyunu"
+		},
+		"guild_of_guardians": {
+			"description": "Immutable X üzerinde mobil ekip tabanlı RPG"
+		},
+		"ember_sword": {
+			"description": "Immutable zkEVM üzerinde ücretsiz sandbox MMORPG"
+		},
+		"star_atlas": {
+			"description": "Solana üzerinde uzay keşif metaverse ve strateji oyunu"
+		},
+		"hero_of_mavia": {
+			"description": "PvP savaşlarıyla mobil üs inşa strateji oyunu"
+		},
+		"night_crows": {
+			"description": "WEMIX blockchain üzerinde AAA Kore MMORPG"
+		},
+		"off_the_grid": {
+			"description": "Avalanche üzerinde AAA cyberpunk battle royale shooter"
+		},
+		"maple_story_universe": {
+			"description": "Nexon tarafından klasik MapleStory MMORPG'nin blockchain versiyonu"
+		},
+		"nyan_heroes": {
+			"description": "Solana üzerinde kedi kahraman shooter oyunu"
+		},
+		"phantom_galaxies": {
+			"description": "Polygon üzerinde mecha uzay aksiyon RPG"
+		},
+		"crypto_unicorns": {
+			"description": "Polygon üzerinde unicorn yetiştirme ve çiftçilik oyunu"
+		},
+		"legends_of_venari": {
+			"description": "Ethereum üzerinde yaratık toplama ve keşif oyunu"
+		},
+		"planet_ix": {
+			"description": "Polygon üzerinde arazi sahipliği ile NFT strateji oyunu"
+		},
+		"sweat_economy": {
+			"description": "NEAR üzerinde adımları SWEAT tokenlerine dönüştüren move-to-earn uygulaması"
+		},
+		"champions_ascension": {
+			"description": "Ethereum üzerinde kitlesel multiplayer aksiyon RPG arena"
+		},
+		"defi_kingdoms": {
+			"description": "Kahramanlar, görevler ve DEX ile DeFi RPG ile buluşuyor"
+		},
+		"cross_the_ages": {
+			"description": "Immutable X üzerinde AR özellikli koleksiyon kart oyunu"
+		},
+		"echoes_of_empire": {
+			"description": "Gala Games üzerinde 4X uzay strateji oyunu"
+		},
+		"spider_tanks": {
+			"description": "Gala Games üzerinde PvP brawler espor oyunu"
+		},
+		"town_star": {
+			"description": "Gala Games üzerinde çiftçilik simülasyon oyunu"
+		},
+		"voxie_tactics": {
+			"description": "Polygon üzerinde voxel sanatıyla sıra tabanlı taktik oyunu"
+		},
+		"camelot_unchained": {
+			"description": "Derin crafting ile RvR odaklı PvP MMORPG"
+		},
+		"wolf_game": {
+			"description": "Ethereum üzerinde risk tabanlı NFT staking oyunu"
+		},
+		"forgotten_runiverse": {
+			"description": "Forgotten Runes Wizards topluluğu üzerine inşa edilmiş MMORPG"
+		},
+		"crypto_raiders": {
+			"description": "Polygon üzerinde zindan keşif RPG"
+		},
+		"the_beacon": {
+			"description": "Treasure tarafından Arbitrum üzerinde roguelike dungeon crawler"
+		},
+		"alien_worlds": {
+			"description": "WAX blockchain üzerinde NFT madencilik metaverse"
+		},
+		"farmers_world": {
+			"description": "WAX blockchain üzerinde çiftçilik NFT oyunu"
+		},
+		"thetan_arena": {
+			"description": "BNB Chain üzerinde MOBA ve battle royale espor oyunu"
+		},
+		"league_of_kingdoms": {
+			"description": "Polygon üzerinde arazi NFT'leri ile MMO strateji oyunu"
+		},
+		"revv_racing": {
+			"description": "Formula 1 elementleriyle motorsport yarış oyunu"
+		},
+		"riot_racers": {
+			"description": "Polygon üzerinde idle yarış play-to-earn oyunu"
+		},
+		"zed_run": {
+			"description": "Polygon üzerinde dijital at yarışı ve yetiştirme"
+		},
+		"derby_stars": {
+			"description": "Polygon üzerinde at yarışı ve yetiştirme oyunu"
+		},
+		"battle_of_guardians": {
+			"description": "BNB Chain üzerinde dövüş PvP espor oyunu"
+		},
+		"the_machines_arena": {
+			"description": "Ronin blockchain üzerinde rekabetçi hero shooter"
+		},
+		"planet_quest": {
+			"description": "Polygon üzerinde bilim kurgu keşif ve hayatta kalma oyunu"
+		},
+		"ready_player_me": {
+			"description": "Metaverse ve oyunlar için cross-platform avatar oluşturma"
+		},
+		"hamster_kombat": {
+			"description": "TON üzerinde viral tap-to-earn Telegram oyunu"
+		},
+		"meme_fi": {
+			"description": "Sui blockchain üzerinde tap-to-earn meme oyunu"
+		},
+		"my_pet_hooligan": {
+			"description": "Metaverse'de tavşan NFT'leri ile UGC shooter oyunu"
+		},
+		"nakamoto_games": {
+			"description": "Polygon üzerinde çoklu oyun play-to-earn platformu"
+		},
+		"gmt_stepn": {
+			"description": "STEPN move-to-earn uygulaması için FSL ekosistem tokeni"
+		},
+		"magic_square": {
+			"description": "Web3 uygulama mağazası ve keşif platformu"
+		},
+		"age_of_dino": {
+			"description": "BNB Chain üzerinde dinozor strateji play-to-earn oyunu"
+		},
+		"bnb_heroes": {
+			"description": "BNB Chain üzerinde idle RPG oyunu"
+		},
+		"elfin_games": {
+			"description": "BNB Chain üzerinde Pokemon benzeri NFT toplama oyunu"
+		},
+		"games_for_a_living": {
+			"description": "Polygon üzerinde mobil casual play-to-earn oyunlar"
 		},
 		"seedify": {
-			"description": "Seedify - Tool"
+			"description": "Blockchain oyunları için oyun launchpad ve inkübatör"
 		},
-		"wagmi-games": {
-			"description": "WAGMI Games - Tool"
+		"wagmi_games": {
+			"description": "Ethereum üzerinde rekabetçi tower defense PvP oyunu"
 		},
-		"sidus-heroes": {
-			"description": "SIDUS HEROES - Tool"
+		"sidus_heroes": {
+			"description": "Play-to-earn mekanikleriyle uzay MMORPG"
 		},
-		"chain-guardians": {
-			"description": "Chain Guardians - Tool"
+		"chain_guardians": {
+			"description": "BNB Chain üzerinde madencilik mekanikleriyle RPG"
 		},
-		"meta-apes": {
-			"description": "Meta Apes - Tool"
+		"meta_apes": {
+			"description": "BNB Chain üzerinde mobil MMO strateji oyunu"
 		},
-		"second-live": {
-			"description": "SecondLive - Tool"
+		"second_live": {
+			"description": "Binance üzerinde avatar özelleştirmeli sosyal metaverse"
 		},
-		"tiny-world": {
-			"description": "Tiny World - Tool"
+		"tiny_world": {
+			"description": "BNB Chain üzerinde NFT'lerle idle DeFi oyunu"
 		},
-		"radio-caca": {
-			"description": "Radio Caca (RACA) - Tool"
+		"radio_caca": {
+			"description": "USM metaverse ve NFT oyun ekosistemi"
 		},
-		"binary-x": {
-			"description": "BinaryX - Tool"
+		"binary_x": {
+			"description": "Cyber Dragon ve IGO launchpad ile oyun platformu"
 		},
-		"mines-of-dalarnia": {
-			"description": "Mines of Dalarnia - Tool"
+		"mines_of_dalarnia": {
+			"description": "Binance listelenmiş aksiyon madencilik platformer oyunu"
 		},
-		"moland-dao": {
-			"description": "Moland DAO - Tool"
+		"moland_dao": {
+			"description": "Arazi tabanlı metaverse DAO topluluğu"
 		},
-		"portal-fantasy": {
-			"description": "Portal Fantasy - Tool"
+		"portal_fantasy": {
+			"description": "Avalanche üzerinde JRPG yaratık macera oyunu"
 		},
-		"mighty-action-heroes": {
-			"description": "Mighty Action Heroes - Tool"
+		"mighty_action_heroes": {
+			"description": "Polygon üzerinde casual battle royale oyunu"
 		},
-		"meta-world": {
-			"description": "Meta World: My City - Tool"
+		"meta_world": {
+			"description": "BNB Chain üzerinde emlak ve sosyal metaverse"
 		},
-		"syn-city": {
-			"description": "SYN CITY - Tool"
+		"syn_city": {
+			"description": "BNB Chain üzerinde mafya temalı sosyal strateji oyunu"
 		},
-		"imperium-empires": {
-			"description": "Imperium Empires - Tool"
+		"imperium_empires": {
+			"description": "BNB Chain üzerinde uzay MMO strateji oyunu"
 		},
-		"monsta-infinite": {
-			"description": "Monsta Infinite - Tool"
+		"monsta_infinite": {
+			"description": "BNB Chain üzerinde yaratık savaş play-to-earn oyunu"
 		},
-		"drunk-robots": {
-			"description": "Drunk Robots - Tool"
+		"drunk_robots": {
+			"description": "BNB Chain üzerinde robot shooter PvP oyunu"
 		}
 	}
 }

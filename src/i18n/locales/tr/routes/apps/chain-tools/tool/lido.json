@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "Lido - Önde Gelen Liquid Staking Protokolü | ETH Stake Et, stETH Al",
+		"description": "En büyük liquid staking protokolü Lido'yu keşfedin. ETH stake etmeyi ve stETH almayı, staking ödülleri kazanmayı ve stake edilmiş varlıklarınızı DeFi'de kullanmayı öğrenin.",
+		"keywords": "Lido, liquid staking, stETH, ETH staking, Ethereum, DeFi, staking ödülleri"
+	},
+	"overview": "Lido, kullanıcıların ETH'lerini stake etmelerine ve karşılığında stETH (staked ETH) almalarına olanak tanıyan DeFi'deki en büyük liquid staking protokolüdür - stake edilmiş pozisyonlarını temsil eden ve otomatik olarak staking ödülleri biriktiren likit bir token. Ethereum Beacon Chain yayına çıkmadan hemen önce Aralık 2020'de başlatılan Lido, kritik bir sorunu çözdü: kullanıcıların ETH'lerini kilitlemeden staking ödülleri kazanmalarına olanak tanıdı.\n\nLido üzerinden ETH stake ettiğinizde, 1:1 oranında stETH alırsınız. Bu stETH bakiyesi, staking ödülleri biriktiğinde günlük artar ve serbestçe işlem görebilir, borç verme protokollerinde teminat olarak kullanılabilir veya DeFi'de likidite olarak sağlanabilir. Bu 'likit' doğa, stake edenlerin staking getirisi elde etmek ile DeFi'ye katılmak arasında seçim yapmak zorunda kalmadığı anlamına gelir.\n\nLido, 20 milyar doların üzerinde stake edilmiş ETH ve yüzlerce protokolde entegre edilmiş stETH ile temel DeFi altyapısı haline gelmiştir. Protokol, node operatörü seçimi, ücret yapıları ve protokol yükseltmelerini denetleyen Lido DAO aracılığıyla LDO token sahipleri tarafından yönetilir.",
+	"features": {
+		"1": {
+			"title": "Liquid Staking",
+			"description": "ETH stake edin ve otomatik olarak staking ödülleri biriktiren likit bir token olan stETH alın"
+		},
+		"2": {
+			"title": "Minimum Stake Yok",
+			"description": "Herhangi bir miktarda ETH stake edin - solo staking için gereken 32 ETH'ye gerek yok"
+		},
+		"3": {
+			"title": "DeFi Birleştirilebilirliği",
+			"description": "stETH'yi DeFi genelinde kullanın - teminat olarak, likidite havuzlarında veya getiri stratejileri için"
+		},
+		"4": {
+			"title": "Günlük Ödüller",
+			"description": "stETH bakiyesi, kazanılan staking ödüllerini yansıtmak için günlük artar"
+		},
+		"5": {
+			"title": "Çekimler",
+			"description": "Protokol aracılığıyla stETH'yi ETH'ye geri dönüştürmek için çekim talep edin"
+		},
+		"6": {
+			"title": "wstETH",
+			"description": "Sabit bakiyeli wrapped stETH - ödüller değer artışı yoluyla birikir"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Staking Ödülleri Kazan",
+			"description": "Likiditeyi korurken Ethereum staking getirisi (~%3-4 APY) kazanın"
+		},
+		"2": {
+			"title": "DeFi Teminatı",
+			"description": "stETH'yi Aave, MakerDAO ve diğer borç verme protokollerinde teminat olarak kullanın"
+		},
+		"3": {
+			"title": "Likidite Sağlama",
+			"description": "Curve'de stETH-ETH likiditesi sağlayın ve ek işlem ücretleri kazanın"
+		},
+		"4": {
+			"title": "Kaldıraçlı Staking",
+			"description": "Daha fazla ETH satın almak ve staking getirilerini artırmak için stETH'ye karşı borç alın"
+		},
+		"5": {
+			"title": "Portföy Çeşitlendirme",
+			"description": "Portföyünüzde getiri sağlayan bir ETH alternatifi olarak stETH tutun"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Lido nedir ve liquid staking nasıl çalışır?",
+			"answer": "Lido, ETH stake etmenize ve karşılığında stETH almanıza olanak tanıyan bir liquid staking protokolüdür. Lido üzerinden stake ettiğinizde, ETH'niz validator çalıştıran profesyonel node operatörlerine delege edilir. Stake'inizi temsil eden stETH alırsınız ve bu, ödüller biriktiğinde otomatik olarak bakiyede artar. Bu, staking ödülleri kazanırken stETH'yi DeFi'de kullanabileceğiniz anlamına gelir."
+		},
+		"2": {
+			"question": "Lido kullanımı güvenli mi?",
+			"answer": "Lido, birden fazla güvenlik denetimine sahip en büyük ve en test edilmiş liquid staking protokolüdür. Ancak riskler arasında akıllı sözleşme güvenlik açıkları, node operatörleri uygunsuz davranırsa slashing cezaları ve piyasa stresinde stETH'nin potansiyel olarak ETH'ye iskontolu işlem görmesi yer alır. Lido, merkezileşme riskini azaltmak için çeşitli bir node operatörü seti kullanır."
+		},
+		"3": {
+			"question": "stETH ve wstETH arasındaki fark nedir?",
+			"answer": "stETH bir rebasing tokenıdır - bakiyeniz ödüller biriktiğinde günlük artar. wstETH (wrapped stETH) sabit bir bakiyeye sahiptir ve ödüller stETH'ye göre artan değerinde yansıtılır. wstETH, rebasing tokenlarını desteklemeyen DeFi entegrasyonları ve vergi raporlaması amaçları için daha iyidir."
+		},
+		"4": {
+			"question": "Lido hangi ücretleri alır?",
+			"answer": "Lido, staking ödüllerinden %10 ücret alır ve bu node operatörleri ile Lido DAO hazinesi arasında bölünür. Bu ücret otomatik olarak düşülür - stETH bakiyenizde yansıtılan net staking ödüllerinizi alırsınız. Stake etme veya stake çözme için ücret yoktur."
+		},
+		"5": {
+			"question": "Lido'dan nasıl stake çözerim?",
+			"answer": "Lido'nun çekim kuyruğu aracılığıyla çekim talep edebilirsiniz ve bu, validator çıkışları tamamlandıkça talepleri işler (genellikle 1-5 gün). Alternatif olarak, anında likidite için Curve gibi DEX'lerde stETH'yi ETH ile takas edebilirsiniz, ancak piyasa koşullarına bağlı olarak 1:1'den biraz daha az alabilirsiniz."
+		}
+	},
+	"cta": {
+		"ready": "Staking yapmaya başlamaya hazır mısınız?",
+		"button": "Lido'yu Aç",
+		"note": "Likit kalırken ETH staking ödülleri kazanın"
+	}
+}

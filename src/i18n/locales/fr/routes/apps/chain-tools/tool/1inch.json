@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷",
+		"code": "fr"
+	},
+	"seo": {
+		"title": "1inch - Meilleur agrégateur DEX pour les échanges de tokens | Revue d'outil DeFi",
+		"description": "Découvrez 1inch, l'agrégateur DEX leader qui trouve les meilleurs taux d'échange sur les plateformes d'échange décentralisées. Découvrez le mode Fusion, les ordres limites et le trading multi-chaînes.",
+		"keywords": "1inch, agrégateur DEX, échange de tokens, meilleurs taux, DeFi, Ethereum, multi-chaînes, trading crypto"
+	},
+	"overview": "1inch est l'agrégateur d'échange décentralisé (DEX) leader qui agrège la liquidité de centaines de DEX pour trouver aux utilisateurs les meilleurs taux d'échange possibles. Fondé en 2019 lors d'un hackathon ETHGlobal par Sergej Kunz et Anton Bukov, 1inch est devenu l'un des outils les plus essentiels de l'écosystème DeFi.\n\nL'algorithme Pathfinder du protocole divise les transactions sur plusieurs sources de liquidité, optimisant les meilleurs taux de change tout en minimisant le slippage et les frais de gaz. Avec le mode Fusion, les utilisateurs peuvent exécuter des échanges sans payer de frais de gaz - les coûts de transaction sont couverts par des résolveurs qui se font concurrence pour remplir les ordres aux meilleurs prix.\n\n1inch est déployé sur plus de 12 réseaux blockchain, dont Ethereum, Polygon, Arbitrum, Optimism et BNB Chain, traitant des milliards de dollars de volume d'échange mensuel. Le protocole est devenu l'agrégateur de référence pour les traders recherchant une exécution optimale dans le paysage fragmenté des DEX.",
+	"features": {
+		"1": {
+			"title": "Agrégation DEX",
+			"description": "Agrège la liquidité de plus de 400 DEX pour trouver les meilleurs taux d'échange dans l'écosystème DeFi"
+		},
+		"2": {
+			"title": "Mode Fusion",
+			"description": "Échanges sans gaz où les résolveurs se font concurrence pour remplir votre ordre au meilleur prix"
+		},
+		"3": {
+			"title": "Ordres limites",
+			"description": "Définissez des prix cibles pour les transactions qui s'exécutent automatiquement lorsque les conditions sont remplies"
+		},
+		"4": {
+			"title": "Support multi-chaînes",
+			"description": "Échangez sur plus de 12 réseaux, dont Ethereum, Polygon, Arbitrum et d'autres"
+		},
+		"5": {
+			"title": "Algorithme Pathfinder",
+			"description": "Routage avancé qui divise les transactions sur plusieurs DEX pour une exécution optimale"
+		},
+		"6": {
+			"title": "Protection MEV",
+			"description": "Les ordres Fusion sont protégés contre les attaques sandwich et autres exploitations MEV"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Échanges de tokens optimaux",
+			"description": "Obtenez les meilleurs taux pour tout échange de tokens en agrégeant la liquidité sur tous les principaux DEX"
+		},
+		"2": {
+			"title": "Exécution de grandes transactions",
+			"description": "Divisez les gros ordres sur plusieurs sources pour minimiser l'impact sur les prix et le slippage"
+		},
+		"3": {
+			"title": "Trading sans gaz",
+			"description": "Utilisez le mode Fusion pour échanger des tokens sans payer de frais de gaz à l'avance"
+		},
+		"4": {
+			"title": "Trading d'ordres limites",
+			"description": "Définissez des ordres à exécuter automatiquement lorsque votre prix cible est atteint"
+		},
+		"5": {
+			"title": "Trading inter-chaînes",
+			"description": "Accédez à la même technologie d'agrégation sur plusieurs réseaux blockchain"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Qu'est-ce que 1inch et comment fonctionne-t-il ?",
+			"answer": "1inch est un agrégateur DEX qui trouve les meilleurs taux d'échange en cherchant sur des centaines d'échanges décentralisés. Lorsque vous effectuez une transaction, l'algorithme Pathfinder de 1inch calcule l'itinéraire optimal, divisant potentiellement votre transaction sur plusieurs DEX pour vous obtenir plus de tokens qu'en utilisant un seul échange."
+		},
+		"2": {
+			"question": "Est-il sûr d'utiliser 1inch ?",
+			"answer": "1inch a fait l'objet d'audits approfondis et a traité des milliards de volume d'échange sans incident de sécurité majeur. Le protocole est non-custodial - vous échangez toujours directement depuis votre portefeuille. Cependant, vérifiez toujours que vous utilisez l'interface officielle de 1inch et méfiez-vous des tokens frauduleux."
+		},
+		"3": {
+			"question": "Qu'est-ce que le mode Fusion ?",
+			"answer": "Fusion est le mode de trading sans gaz de 1inch où des teneurs de marché professionnels appelés 'résolveurs' se font concurrence pour remplir votre ordre. Vous signez un message (gratuit) au lieu de payer du gaz, et les résolveurs paient les frais de transaction. Vous obtenez souvent de meilleurs taux car les résolveurs peuvent optimiser l'exécution."
+		},
+		"4": {
+			"question": "Quels sont les frais sur 1inch ?",
+			"answer": "1inch ne facture pas de frais d'échange sur la plupart des transactions. Vous ne payez que les frais de gaz du réseau (ou rien en mode Fusion). La plateforme gagne grâce au slippage positif sur certaines transactions et grâce à son partenariat avec les sources de liquidité. Il y a des frais minimes sur les ordres limites lorsqu'ils s'exécutent."
+		},
+		"5": {
+			"question": "Comment 1inch se compare-t-il au trading direct sur Uniswap ?",
+			"answer": "1inch offre souvent de meilleurs taux qu'Uniswap seul car il peut router votre transaction via plusieurs DEX. Pour les grandes transactions en particulier, la division de 1inch peut réduire considérablement le slippage. Cependant, pour de très petites transactions sur des paires populaires, le trading direct sur DEX peut être moins cher en raison de l'optimisation du gaz."
+		}
+	},
+	"cta": {
+		"ready": "Prêt à trouver les meilleurs taux ?",
+		"button": "Ouvrir 1inch",
+		"note": "Meilleurs prix sur plus de 400 DEX"
+	}
+}

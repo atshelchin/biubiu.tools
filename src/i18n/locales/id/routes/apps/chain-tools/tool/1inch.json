@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "1inch - Agregator DEX Terbaik untuk Swap Token | Review Tool DeFi",
+		"description": "Temukan 1inch, agregator DEX terkemuka yang menemukan rate swap terbaik di berbagai exchange terdesentralisasi. Pelajari tentang Fusion mode, limit order, dan trading multi-chain.",
+		"keywords": "1inch, agregator DEX, swap token, rate terbaik, DeFi, Ethereum, multi-chain, trading kripto"
+	},
+	"overview": "1inch adalah agregator decentralized exchange (DEX) terkemuka yang menyediakan likuiditas dari ratusan DEX untuk menemukan rate swap terbaik bagi pengguna. Didirikan pada 2019 selama hackathon ETHGlobal oleh Sergej Kunz dan Anton Bukov, 1inch telah berkembang menjadi salah satu alat paling penting dalam ekosistem DeFi.\n\nAlgoritma Pathfinder protokol ini membagi perdagangan di berbagai sumber likuiditas, mengoptimalkan untuk rate exchange terbaik sambil meminimalkan slippage dan biaya gas. Dengan Fusion mode, pengguna dapat melakukan swap tanpa membayar biaya gas - biaya transaksi ditanggung oleh resolver yang bersaing untuk mengisi order dengan harga terbaik.\n\n1inch digunakan di 12+ jaringan blockchain termasuk Ethereum, Polygon, Arbitrum, Optimism, dan BNB Chain, memproses miliaran dolar dalam volume trading bulanan. Protokol ini telah menjadi agregator pilihan untuk trader yang mencari eksekusi optimal di lanskap DEX yang terfragmentasi.",
+	"features": {
+		"1": {
+			"title": "Agregasi DEX",
+			"description": "Menyediakan likuiditas dari 400+ DEX untuk menemukan rate swap terbaik di ekosistem DeFi"
+		},
+		"2": {
+			"title": "Fusion Mode",
+			"description": "Swap tanpa gas di mana resolver bersaing untuk mengisi order Anda dengan harga terbaik"
+		},
+		"3": {
+			"title": "Limit Order",
+			"description": "Tetapkan harga target untuk trade yang dieksekusi secara otomatis saat kondisi terpenuhi"
+		},
+		"4": {
+			"title": "Dukungan Multi-Chain",
+			"description": "Trade di 12+ jaringan termasuk Ethereum, Polygon, Arbitrum, dan lainnya"
+		},
+		"5": {
+			"title": "Algoritma Pathfinder",
+			"description": "Routing canggih yang membagi trade di berbagai DEX untuk eksekusi optimal"
+		},
+		"6": {
+			"title": "Perlindungan MEV",
+			"description": "Order Fusion dilindungi dari sandwich attack dan eksploitasi MEV lainnya"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Swap Token Optimal",
+			"description": "Dapatkan rate terbaik untuk swap token apa pun dengan menggabungkan likuiditas di semua DEX utama"
+		},
+		"2": {
+			"title": "Eksekusi Trade Besar",
+			"description": "Bagi order besar di berbagai sumber untuk meminimalkan price impact dan slippage"
+		},
+		"3": {
+			"title": "Trading Tanpa Gas",
+			"description": "Gunakan Fusion mode untuk swap token tanpa membayar biaya gas di muka"
+		},
+		"4": {
+			"title": "Trading Limit Order",
+			"description": "Tetapkan dan lupakan order yang dieksekusi saat harga target Anda tercapai"
+		},
+		"5": {
+			"title": "Trading Cross-Chain",
+			"description": "Akses teknologi agregasi yang sama di berbagai jaringan blockchain"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu 1inch dan bagaimana cara kerjanya?",
+			"answer": "1inch adalah agregator DEX yang menemukan rate swap terbaik dengan mencari di ratusan exchange terdesentralisasi. Saat Anda melakukan trade, algoritma Pathfinder 1inch menghitung rute optimal, berpotensi membagi trade Anda di berbagai DEX untuk mendapatkan lebih banyak token daripada menggunakan satu exchange."
+		},
+		"2": {
+			"question": "Apakah 1inch aman digunakan?",
+			"answer": "1inch telah diaudit secara ekstensif dan telah memproses miliaran dalam volume trading tanpa insiden keamanan besar. Protokolnya non-custodial - Anda selalu trading langsung dari wallet Anda. Namun, selalu verifikasi bahwa Anda menggunakan interface 1inch resmi dan hati-hati terhadap token scam."
+		},
+		"3": {
+			"question": "Apa itu Fusion mode?",
+			"answer": "Fusion adalah mode trading tanpa gas 1inch di mana market maker profesional yang disebut 'resolver' bersaing untuk mengisi order Anda. Anda menandatangani pesan (gratis) alih-alih membayar gas, dan resolver membayar biaya transaksi. Anda sering mendapatkan rate yang lebih baik karena resolver dapat mengoptimalkan eksekusi."
+		},
+		"4": {
+			"question": "Berapa biaya di 1inch?",
+			"answer": "1inch tidak membebankan biaya swap pada sebagian besar trade. Anda hanya membayar biaya gas jaringan (atau tidak ada dalam Fusion mode). Platform menghasilkan dari positive slippage pada beberapa trade dan dari kemitraan dengan sumber likuiditas. Ada biaya kecil pada limit order saat dieksekusi."
+		},
+		"5": {
+			"question": "Bagaimana perbandingan 1inch dengan trading langsung di Uniswap?",
+			"answer": "1inch sering memberikan rate yang lebih baik daripada Uniswap saja karena dapat merutekan trade Anda melalui beberapa DEX. Terutama untuk trade besar, pemisahan 1inch dapat secara signifikan mengurangi slippage. Namun, untuk trade sangat kecil pada pasangan populer, trading DEX langsung mungkin lebih murah karena optimasi gas."
+		}
+	},
+	"cta": {
+		"ready": "Siap menemukan rate terbaik?",
+		"button": "Buka 1inch",
+		"note": "Harga terbaik di 400+ DEX"
+	}
+}

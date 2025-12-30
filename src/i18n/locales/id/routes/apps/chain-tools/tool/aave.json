@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "Aave - Protokol Lending DeFi Terkemuka | Pinjam & Pinjamkan Kripto",
+		"description": "Temukan Aave, protokol lending terdesentralisasi terkemuka di dunia. Pelajari tentang flash loan, dukungan multi-chain, dan cara menghasilkan yield dengan menyediakan aset kripto.",
+		"keywords": "Aave, DeFi lending, peminjaman kripto, flash loan, yield farming, Ethereum, Polygon, Arbitrum"
+	},
+	"overview": "Aave adalah salah satu protokol lending terdesentralisasi terbesar dan paling terpercaya di DeFi, memungkinkan pengguna untuk meminjamkan, meminjam, dan menghasilkan bunga dari aset kripto tanpa perantara. Awalnya diluncurkan sebagai ETHLend pada 2017 oleh Stani Kulechov, protokol ini di-rebrand menjadi Aave (artinya 'hantu' dalam bahasa Finlandia) pada 2020 dan sejak itu menjadi pilar keuangan terdesentralisasi.\n\nProtokolnya beroperasi melalui liquidity pool di mana pengguna menyetor aset kripto untuk menghasilkan bunga, sementara peminjam dapat mengambil pinjaman dengan memberikan jaminan. Aave merintis beberapa inovasi DeFi, termasuk flash loan - pinjaman tanpa jaminan yang harus dipinjam dan dikembalikan dalam satu transaksi - yang telah menjadi alat penting untuk arbitrase, pertukaran jaminan, dan strategi self-liquidation.\n\nPada 2024, Aave telah mengamankan lebih dari $10 miliar dalam Total Value Locked (TVL) di Ethereum, Polygon, Arbitrum, Optimism, dan jaringan lainnya, menjadikannya salah satu protokol paling efisien modal di ruang ini.",
+	"features": {
+		"1": {
+			"title": "Supply & Hasilkan Bunga",
+			"description": "Setor aset kripto ke liquidity pool dan hasilkan suku bunga variabel berdasarkan permintaan pasar"
+		},
+		"2": {
+			"title": "Pinjam dengan Jaminan",
+			"description": "Ambil pinjaman dengan menyediakan jaminan kripto, dengan opsi suku bunga variabel atau stabil yang fleksibel"
+		},
+		"3": {
+			"title": "Flash Loan",
+			"description": "Akses pinjaman tanpa jaminan dalam satu transaksi - sempurna untuk arbitrase dan strategi DeFi"
+		},
+		"4": {
+			"title": "Deployment Multi-Chain",
+			"description": "Tersedia di Ethereum, Polygon, Arbitrum, Optimism, Avalanche, dan banyak jaringan lainnya"
+		},
+		"5": {
+			"title": "Safety Module",
+			"description": "Stake token AAVE di Safety Module untuk mendapatkan reward sambil melindungi protokol"
+		},
+		"6": {
+			"title": "Stablecoin GHO",
+			"description": "Mint GHO, stablecoin terdesentralisasi asli Aave, menggunakan jaminan yang Anda sediakan"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Generasi Yield",
+			"description": "Hasilkan pendapatan pasif dengan menyediakan stablecoin atau aset kripto ke lending pool"
+		},
+		"2": {
+			"title": "Posisi Leveraged",
+			"description": "Pinjam terhadap kepemilikan untuk meningkatkan eksposur tanpa menjual aset Anda"
+		},
+		"3": {
+			"title": "Arbitrase Flash Loan",
+			"description": "Jalankan strategi DeFi kompleks termasuk arbitrase harga dan pertukaran jaminan"
+		},
+		"4": {
+			"title": "Akses Likuiditas",
+			"description": "Akses likuiditas tanpa menjual kepemilikan jangka panjang - ideal untuk optimasi pajak"
+		},
+		"5": {
+			"title": "DeFi Cross-Chain",
+			"description": "Gunakan protokol yang sama di berbagai chain dengan pengalaman pengguna yang konsisten"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu Aave dan bagaimana cara kerjanya?",
+			"answer": "Aave adalah protokol lending terdesentralisasi di mana pengguna dapat menyediakan aset kripto untuk menghasilkan bunga atau meminjam dengan jaminan. Penyedia menyetor aset ke liquidity pool dan menghasilkan bunga variabel berdasarkan tingkat utilisasi. Peminjam harus menyediakan jaminan (biasanya 120-150% dari nilai pinjaman) dan membayar bunga atas pinjaman mereka."
+		},
+		"2": {
+			"question": "Apakah Aave aman digunakan?",
+			"answer": "Aave adalah salah satu protokol DeFi yang paling teruji dengan beberapa audit keamanan dan track record yang kuat. Protokol ini memiliki Safety Module di mana staker AAVE menyediakan cadangan terhadap potensi kekurangan. Namun, DeFi selalu membawa risiko smart contract, jadi hanya setor apa yang Anda mampu untuk kehilangan."
+		},
+		"3": {
+			"question": "Apa itu flash loan?",
+			"answer": "Flash loan adalah pinjaman tanpa jaminan yang harus dipinjam dan dikembalikan dalam satu transaksi blockchain. Jika pinjaman tidak dikembalikan pada akhir transaksi, seluruh transaksi akan dibatalkan. Mereka digunakan untuk arbitrase, pertukaran jaminan, dan strategi self-liquidation."
+		},
+		"4": {
+			"question": "Untuk apa token AAVE digunakan?",
+			"answer": "AAVE adalah token governance yang memungkinkan pemegang untuk memberikan suara pada upgrade protokol dan parameter. Pemegang token juga dapat melakukan stake AAVE di Safety Module untuk mendapatkan reward sambil menyediakan asuransi untuk protokol terhadap potensi bad debt."
+		},
+		"5": {
+			"question": "Apa itu stablecoin GHO?",
+			"answer": "GHO adalah stablecoin terdesentralisasi asli Aave yang dapat di-mint pengguna menggunakan jaminan yang mereka sediakan. Tidak seperti stablecoin tradisional, GHO dibuat langsung melalui protokol Aave, dengan pembayaran bunga masuk ke treasury Aave DAO."
+		}
+	},
+	"cta": {
+		"ready": "Siap untuk mulai lending?",
+		"button": "Buka Aave",
+		"note": "Hasilkan yield dari aset kripto Anda"
+	}
+}

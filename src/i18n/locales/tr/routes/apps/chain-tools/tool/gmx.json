@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "GMX - Merkezi Olmayan Perpetual Borsa | Kaldıraçla Ticaret Yapın",
+		"description": "Önde gelen merkezi olmayan perpetual borsa GMX'i keşfedin. Kaldıraç ticareti, GLP likidite sağlama ve Arbitrum ve Avalanche'da düşük ücretli perpetual swaplar hakkında bilgi edinin.",
+		"keywords": "GMX, perpetual ticaret, merkezi olmayan borsa, kaldıraç, Arbitrum, kripto türevleri, GLP"
+	},
+	"overview": "GMX, tüccarların kriptopara birimlerinde 100 kata kadar kaldıraçla long veya short pozisyon almalarını sağlarken, likidite sağlayıcıların protokolün çoklu varlık havuzuna varlık sağlayarak getiri kazanmasını sağlayan merkezi olmayan bir perpetual borsadır. 2021'de başlatılan GMX, tüm tüccarların paylaşılan bir likidite havuzuna karşı ticaret yaptığı GLP modelini öncülük ederek DeFi'deki en büyük türev platformlarından biri haline gelmiştir.\n\nMerkezileştirilmiş borsalar veya emir defteri DEX'lerinin aksine, GMX tüccarların kaldıraçlı pozisyonları yürütmek için GLP havuzundan borç aldığı benzersiz bir havuz tabanlı model kullanır. Bu, desteklenen varlıklarda sıfır kaymalı işlemlere olanak tanır ve fiyatlar Chainlink oracle'larından türetilir. GLP havuzu tüm işlem ücretlerinin %70'ini kazanır ve bu da pasif yatırımcılar için çekici bir getiri kaynağı haline getirir.\n\nGMX, Arbitrum ve Avalanche'da dağıtılmış olup, 100 milyar doların üzerinde kümülatif işlem hacmini işlemiştir. Protokolün V2 lansmanı izole havuzları, sentetik varlıkları ve geliştirilmiş sermaye verimliliğini tanıtarak önde gelen merkezi olmayan türev mekanı olarak konumunu daha da sağlamlaştırmıştır.",
+	"features": {
+		"1": {
+			"title": "Perpetual Ticaret",
+			"description": "Perpetual sözleşmelerde 100 kata kadar kaldıraçla BTC, ETH ve diğer varlıkları işlem yapın"
+		},
+		"2": {
+			"title": "Sıfır Kayma",
+			"description": "Oracle tabanlı fiyatlandırma kullanarak fiyat etkisi olmadan büyük işlemler gerçekleştirin"
+		},
+		"3": {
+			"title": "GLP Likidite Havuzu",
+			"description": "İşlem ücretlerinin %70'ini ve GMX token emisyonlarını kazanmak için likidite sağlayın"
+		},
+		"4": {
+			"title": "Düşük Ücretler",
+			"description": "GMX stake edenlere indirimli rekabetçi işlem ücretleri"
+		},
+		"5": {
+			"title": "Merkezi Olmayan",
+			"description": "Saklama yapmayan ticaret - fonlarınız ticaret yapana kadar cüzdanınızda kalır"
+		},
+		"6": {
+			"title": "GM Havuzları (V2)",
+			"description": "Sentetik varlıklar ve geliştirilmiş sermaye verimliliği ile izole piyasalar"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Kaldıraçlı Ticaret",
+			"description": "BTC, ETH ve diğer kripto varlıklara maruziyetinizi artırın"
+		},
+		"2": {
+			"title": "Hedging",
+			"description": "Spot kripto varlıklarınızı hedge etmek için short pozisyonları açın"
+		},
+		"3": {
+			"title": "Pasif Getiri",
+			"description": "İşlem ücretleri ve token teşvikleri kazanmak için GLP likiditesi sağlayın"
+		},
+		"4": {
+			"title": "Düşük Kayma Swapları",
+			"description": "Desteklenen varlıklar arasında minimum fiyat etkisiyle büyük spot swaplar gerçekleştirin"
+		},
+		"5": {
+			"title": "Merkezi Olmayan Türevler",
+			"description": "KYC veya merkezileştirilmiş borsa riski olmadan türev ticaretine erişin"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "GMX nedir ve nasıl çalışır?",
+			"answer": "GMX, tüccarların paylaşılan bir likidite havuzuna (GLP) karşı kaldıraçla long veya short pozisyon aldığı merkezi olmayan bir perpetual borsadır. Fiyatlar Chainlink oracle'larından gelir ve sıfır kaymalı yürütmeyi sağlar. Tüccarlar, GLP sahiplerine ve GMX stake edenlere giden ücretler öder. Tüccarlar kaybederse GLP sahipleri kazanır; tüccarlar kazanırsa GLP sahipleri öder - bu da GLP sahiplerini tüm işlemlerin karşı tarafı haline getirir."
+		},
+		"2": {
+			"question": "GMX kullanımı güvenli mi?",
+			"answer": "GMX kapsamlı bir şekilde denetlenmiş ve büyük sömürüler olmadan 100 milyar doların üzerinde hacim işlemiştir. Ancak perpetual ticaret doğası gereği risklidir - kaldıraçla tüm pozisyonunuzu kaybedebilirsiniz. GLP de risk taşır: tüccarlar sürekli kazanırsa GLP değeri düşer. Ticaret yapmadan önce her zaman riskleri anlayın."
+		},
+		"3": {
+			"question": "GLP nedir ve nasıl getiri kazanırım?",
+			"answer": "GLP, GMX'in çoklu varlık likidite havuzu tokenıdır. GLP mint ettiğinizde, varlıkları (ETH, BTC, USDC vb.) yatırır ve payınızı temsil eden GLP tokenlarını alırsınız. GLP sahipleri, ETH/AVAX ile ödenen tüm işlem ücretlerinin %70'ini artı esGMX teşviklerini kazanır. Mevcut APR'ler genellikle işlem hacmine bağlı olarak %15-40 arasında değişir."
+		},
+		"4": {
+			"question": "GMX'te ücretler nedir?",
+			"answer": "GMX, pozisyon açmak veya kapatmak için %0.1 ücret alır, artı kullanıma bağlı olarak saatlik biriken borçlanma ücretleri. Swaplar, havuzu dengelemeye yardımcı olup olmadığına bağlı olarak %0.2-0.8 maliyetindedir. GMX stake edenleri ücret indirimleri alır ve fonlama oranı yoktur - sadece borçlanma oranı."
+		},
+		"5": {
+			"question": "GMX V1 ve V2 arasındaki fark nedir?",
+			"answer": "GMX V2, birleşik GLP havuzu yerine izole GM havuzlarını tanıtarak daha fazla varlığa ve azaltılmış riske olanak tanır. V2, sentetik varlıkları destekler, geliştirilmiş sermaye verimliliğine sahiptir ve fonlama oranlarını tanıtır. V1'in GLP'si kurulu likiditesi ile çalışmaya devam ederken, V2 yeni piyasalarla genişlemeye devam eder."
+		}
+	},
+	"cta": {
+		"ready": "Ticaret yapmaya başlamaya hazır mısınız?",
+		"button": "GMX'i Aç",
+		"note": "100 kata kadar kaldıraçla merkezi olmayan perpetual ticaret"
+	}
+}

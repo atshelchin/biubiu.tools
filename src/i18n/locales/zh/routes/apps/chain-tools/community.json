@@ -2,6 +2,7 @@
 	"category_seo": {
 		"title": "加密社区 - Discord、Telegram 与论坛 | BiuBiu Tools",
 		"description": "查找和加入加密社区。Discord 服务器、Telegram 群组、论坛和 Web3 项目的社区平台。",
+		"keywords": "加密社区, discord加密, telegram加密, web3社区, 区块链论坛",
 		"faqs": [
 			{
 				"question": "加密社区在哪里聚集？",
@@ -16,5 +17,190 @@
 				"answer": "永远不要相信提供帮助或投资的私信。官方公告来自验证渠道。不要点击随机链接。管理员永远不会要求你的助记词。"
 			}
 		]
+	},
+	"tools": {
+		"discord_ethereum": {
+			"description": "以太坊官方社区Discord，用于协议讨论和开发"
+		},
+		"discord_uniswap": {
+			"description": "Uniswap社区Discord，用于DEX治理和DeFi讨论"
+		},
+		"discord_aave": {
+			"description": "Aave社区Discord，用于借贷协议和治理讨论"
+		},
+		"discord_chainlink": {
+			"description": "Chainlink社区Discord，用于预言机基础设施和开发者支持"
+		},
+		"discord_arbitrum": {
+			"description": "Arbitrum L2社区Discord，用于生态系统和开发讨论"
+		},
+		"discord_optimism": {
+			"description": "Optimism社区Discord，用于Superchain生态系统和治理"
+		},
+		"discord_base": {
+			"description": "Coinbase的Base L2社区Discord，用于生态系统建设"
+		},
+		"discord_zksync": {
+			"description": "zkSync社区Discord，用于zk-rollup开发和生态系统"
+		},
+		"discord_starknet": {
+			"description": "Starknet社区Discord，用于Cairo开发和zk扩展"
+		},
+		"discord_polygon": {
+			"description": "Polygon社区Discord，用于L2扩展和zkEVM开发"
+		},
+		"discord_ethglobal": {
+			"description": "ETHGlobal Discord，面向黑客松参与者和Web3建设者"
+		},
+		"discord_buildspace": {
+			"description": "Buildspace社区Discord，用于学习Web3开发"
+		},
+		"discord_alchemy": {
+			"description": "Alchemy开发者Discord，用于API支持和Web3基础设施"
+		},
+		"discord_hardhat": {
+			"description": "Hardhat社区Discord，用于Solidity开发和工具"
+		},
+		"discord_foundry": {
+			"description": "Foundry社区Discord，用于Solidity测试框架支持"
+		},
+		"discord_openzeppelin": {
+			"description": "OpenZeppelin Discord，用于智能合约安全和标准"
+		},
+		"discord_thegraph": {
+			"description": "The Graph社区Discord，用于子图开发和索引"
+		},
+		"discord_scaffold_eth": {
+			"description": "Scaffold-ETH Discord，用于快速dApp原型和BuidlGuidl"
+		},
+		"discord_immunefi": {
+			"description": "Immunefi Discord，面向漏洞赏金猎人和Web3安全"
+		},
+		"discord_code4rena": {
+			"description": "Code4rena社区Discord，用于竞争性安全审计"
+		},
+		"discord_sherlock": {
+			"description": "Sherlock社区Discord，用于安全审计和保险"
+		},
+		"discord_secureum": {
+			"description": "Secureum Discord，用于智能合约安全教育和研究"
+		},
+		"discord_opensea": {
+			"description": "OpenSea社区Discord，用于NFT市场讨论"
+		},
+		"discord_blur": {
+			"description": "Blur社区Discord，面向专业NFT交易者和市场"
+		},
+		"discord_artblocks": {
+			"description": "Art Blocks Discord，面向生成艺术收藏家和艺术家"
+		},
+		"discord_foundation": {
+			"description": "Foundation Discord，面向数字艺术创作者和收藏家"
+		},
+		"discord_nouns": {
+			"description": "Nouns DAO Discord，用于CC0 NFT治理和社区建设"
+		},
+		"discord_punks": {
+			"description": "CryptoPunks社区Discord，面向OG NFT收藏家"
+		},
+		"discord_bayc": {
+			"description": "Bored Ape Yacht Club Discord，面向BAYC持有者和Yuga生态"
+		},
+		"discord_azuki": {
+			"description": "Azuki社区Discord，面向动漫NFT文化和社区"
+		},
+		"discord_pudgypenguins": {
+			"description": "Pudgy Penguins Discord，用于社区和IP计划"
+		},
+		"discord_axie": {
+			"description": "Axie Infinity社区Discord，用于边玩边赚游戏"
+		},
+		"discord_illuvium": {
+			"description": "Illuvium社区Discord，用于AAA Web3游戏"
+		},
+		"discord_immutable": {
+			"description": "Immutable Discord，用于Web3游戏基础设施和zkEVM"
+		},
+		"discord_loot": {
+			"description": "Loot社区Discord，用于CC0游戏原语和建设者"
+		},
+		"discord_treasure": {
+			"description": "Treasure DAO Discord，用于Arbitrum上的游戏元宇宙"
+		},
+		"discord_ronin": {
+			"description": "Ronin Network Discord，用于游戏专注的L2生态系统"
+		},
+		"discord_bankless": {
+			"description": "Bankless DAO Discord，用于加密媒体和教育社区"
+		},
+		"discord_gitcoin": {
+			"description": "Gitcoin社区Discord，用于公共物品资助和赠款"
+		},
+		"discord_ens": {
+			"description": "ENS DAO Discord，用于以太坊域名服务治理"
+		},
+		"discord_farcaster": {
+			"description": "Farcaster社区Discord，用于去中心化社交协议"
+		},
+		"discord_lens": {
+			"description": "Lens Protocol Discord，面向去中心化社交图谱建设者"
+		},
+		"discord_friend_tech": {
+			"description": "friend.tech社区Discord，用于Base上的SocialFi"
+		},
+		"discord_rabbithole": {
+			"description": "RabbitHole Discord，用于边学边赚任务和教育"
+		},
+		"discord_galxe": {
+			"description": "Galxe社区Discord，用于Web3凭证和活动"
+		},
+		"discord_solana": {
+			"description": "Solana社区Discord，用于高性能L1生态系统"
+		},
+		"discord_avalanche": {
+			"description": "Avalanche社区Discord，用于子网和L1开发"
+		},
+		"discord_cosmos": {
+			"description": "Cosmos社区Discord，用于IBC和应用链生态系统"
+		},
+		"discord_sui": {
+			"description": "Sui社区Discord，用于Move语言开发"
+		},
+		"discord_aptos": {
+			"description": "Aptos社区Discord，用于基于Move的L1生态系统"
+		},
+		"discord_near": {
+			"description": "NEAR Protocol Discord，用于分片L1开发"
+		},
+		"discord_ton": {
+			"description": "TON社区Discord，用于Telegram集成区块链"
+		},
+		"tg_cointelegraph": {
+			"description": "Cointelegraph Telegram频道，用于加密新闻和更新"
+		},
+		"tg_whale_alert": {
+			"description": "Whale Alert Telegram，用于大额加密交易跟踪"
+		},
+		"tg_lookonchain": {
+			"description": "Lookonchain Telegram，用于链上分析和巨鲸观察"
+		},
+		"tg_ton_official": {
+			"description": "TON官方社区Telegram，用于生态系统更新"
+		},
+		"tg_solana_ann": {
+			"description": "Solana官方Telegram，用于公告和更新"
+		},
+		"tg_arbitrum_ann": {
+			"description": "Arbitrum官方Telegram，用于L2公告"
+		},
+		"tg_chaincatcher": {
+			"description": "链捕手Telegram，用于中文加密新闻和研究"
+		},
+		"tg_techflow": {
+			"description": "深潮TechFlow Telegram，用于中文Web3新闻和分析"
+		},
+		"tg_crypto_brazil": {
+			"description": "Crypto Brasil Telegram，面向巴西加密社区"
+		}
 	}
 }

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹",
+		"code": "it"
+	},
+	"seo": {
+		"title": "GMX - Exchange Perpetual Decentralizzato | Fai Trading con Leva",
+		"description": "Scopri GMX, l'exchange perpetual decentralizzato leader. Scopri il trading con leva, la fornitura di liquidità GLP e gli swap perpetual a basse commissioni su Arbitrum e Avalanche.",
+		"keywords": "GMX, trading perpetual, exchange decentralizzato, leva, Arbitrum, derivati crypto, GLP"
+	},
+	"overview": "GMX è un exchange perpetual decentralizzato che consente ai trader di andare long o short su criptovalute con una leva fino a 100x, mentre i fornitori di liquidità guadagnano rendimenti fornendo asset al pool multi-asset del protocollo. Lanciato nel 2021, GMX è diventato una delle più grandi piattaforme di derivati in DeFi, pioniere del modello GLP in cui tutti i trader fanno trading contro un pool di liquidità condiviso.\n\nA differenza degli exchange centralizzati o dei DEX order book, GMX utilizza un modello unico basato su pool in cui i trader prendono in prestito dal pool GLP per eseguire posizioni con leva. Questo consente trade a slippage zero sugli asset supportati, con prezzi derivati dagli oracoli Chainlink. Il pool GLP guadagna il 70% di tutte le commissioni di trading, rendendolo una fonte di rendimento attraente per gli investitori passivi.\n\nGMX è distribuito su Arbitrum e Avalanche, elaborando oltre 100 miliardi di dollari in volume di trading cumulativo. Il lancio della V2 del protocollo ha introdotto pool isolati, asset sintetici e migliorata efficienza del capitale, consolidando ulteriormente la sua posizione come principale sede di derivati decentralizzata.",
+	"features": {
+		"1": {
+			"title": "Trading Perpetual",
+			"description": "Fai trading di BTC, ETH e altri asset con una leva fino a 100x su contratti perpetual"
+		},
+		"2": {
+			"title": "Slippage Zero",
+			"description": "Esegui trade grandi senza impatto sul prezzo utilizzando prezzi basati su oracolo"
+		},
+		"3": {
+			"title": "Pool di Liquidità GLP",
+			"description": "Fornisci liquidità per guadagnare il 70% delle commissioni di trading ed emissioni di token GMX"
+		},
+		"4": {
+			"title": "Commissioni Basse",
+			"description": "Commissioni di trading competitive con sconti per gli staker di GMX"
+		},
+		"5": {
+			"title": "Decentralizzato",
+			"description": "Trading non-custodiale - i tuoi fondi rimangono nel tuo wallet fino a quando fai trading"
+		},
+		"6": {
+			"title": "Pool GM (V2)",
+			"description": "Mercati isolati con asset sintetici e migliorata efficienza del capitale"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Trading con Leva",
+			"description": "Amplifica la tua esposizione a BTC, ETH e altri asset crypto"
+		},
+		"2": {
+			"title": "Hedging",
+			"description": "Apri posizioni short per fare hedging delle tue holding crypto spot"
+		},
+		"3": {
+			"title": "Rendimento Passivo",
+			"description": "Fornisci liquidità GLP per guadagnare commissioni di trading e incentivi token"
+		},
+		"4": {
+			"title": "Swap a Basso Slippage",
+			"description": "Esegui swap spot grandi tra asset supportati con impatto minimo sul prezzo"
+		},
+		"5": {
+			"title": "Derivati Decentralizzati",
+			"description": "Accedi al trading di derivati senza KYC o rischio di exchange centralizzato"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Cos'è GMX e come funziona?",
+			"answer": "GMX è un exchange perpetual decentralizzato in cui i trader vanno long o short con leva contro un pool di liquidità condiviso (GLP). I prezzi provengono dagli oracoli Chainlink, consentendo un'esecuzione a slippage zero. I trader pagano commissioni che vanno ai possessori di GLP e agli staker di GMX. Se i trader perdono, i possessori di GLP guadagnano; se i trader vincono, i possessori di GLP pagano - rendendo i possessori di GLP la controparte di tutti i trade."
+		},
+		"2": {
+			"question": "È sicuro usare GMX?",
+			"answer": "GMX è stato ampiamente verificato e ha elaborato oltre 100 miliardi di dollari in volume senza exploit importanti. Tuttavia, il trading perpetual è intrinsecamente rischioso - puoi perdere l'intera posizione con la leva. Anche GLP comporta rischi: se i trader guadagnano costantemente, il valore di GLP diminuisce. Comprendi sempre i rischi prima di fare trading."
+		},
+		"3": {
+			"question": "Cos'è GLP e come posso guadagnare rendimenti?",
+			"answer": "GLP è il token del pool di liquidità multi-asset di GMX. Quando conii GLP, depositi asset (ETH, BTC, USDC, ecc.) e ricevi token GLP che rappresentano la tua quota. I possessori di GLP guadagnano il 70% di tutte le commissioni di trading pagate in ETH/AVAX più incentivi esGMX. Gli APR attuali tipicamente variano dal 15-40% a seconda del volume di trading."
+		},
+		"4": {
+			"question": "Quali sono le commissioni su GMX?",
+			"answer": "GMX addebita una commissione dello 0,1% per aprire o chiudere posizioni, più commissioni di prestito che si accumulano ogni ora in base all'utilizzo. Gli swap costano dallo 0,2% allo 0,8% a seconda che aiutino a bilanciare il pool. Gli staker di GMX ricevono sconti sulle commissioni, e non c'è funding rate - solo il borrow rate."
+		},
+		"5": {
+			"question": "Qual è la differenza tra GMX V1 e V2?",
+			"answer": "GMX V2 introduce pool GM isolati invece del pool GLP unificato, consentendo più asset e rischio ridotto. La V2 supporta asset sintetici, ha migliorata efficienza del capitale e introduce funding rate. Il GLP della V1 rimane operativo con la sua liquidità consolidata, mentre la V2 continua ad espandersi con nuovi mercati."
+		}
+	},
+	"cta": {
+		"ready": "Pronto per iniziare a fare trading?",
+		"button": "Apri GMX",
+		"note": "Trading perpetual decentralizzato con leva fino a 100x"
+	}
+}

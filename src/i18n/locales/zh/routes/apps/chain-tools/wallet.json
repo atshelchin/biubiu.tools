@@ -18,311 +18,311 @@
 		]
 	},
 	"tools": {
+		"biubiu_wallet_sweep": {
+			"description": "批量将多个钱包的代币归集到一个地址"
+		},
+		"biubiu_one_to_many": {
+			"description": "从一个钱包向多个接收地址分发代币"
+		},
+		"biubiu_wallet_generator": {
+			"description": "批量生成带助记词的 HD 钱包"
+		},
+		"biubiu_balance_scanner": {
+			"description": "同时扫描多个钱包的代币余额"
+		},
 		"debank": {
-			"description": "多链资产追踪和社交平台"
-		},
-		"rabby": {
-			"description": "多链浏览器钱包"
-		},
-		"rainbow": {
-			"description": "精美的以太坊钱包"
-		},
-		"metamask": {
-			"description": "最流行的 Web3 钱包"
-		},
-		"frame": {
-			"description": "注重隐私的桌面钱包"
-		},
-		"zerion": {
-			"description": "DeFi 投资组合和钱包"
-		},
-		"safe": {
-			"description": "多重签名智能钱包"
+			"description": "多链资产追踪器，含 DeFi 持仓分析和社交功能"
 		},
 		"zapper": {
-			"description": "DeFi 投资组合仪表板"
+			"description": "DeFi 仪表盘，支持资产追踪、NFT 和收益管理"
 		},
-		"argent": {
-			"description": "带恢复的智能钱包"
+		"zerion": {
+			"description": "智能 DeFi 钱包，含资产追踪和多链交易功能"
 		},
-		"sequence": {
-			"description": "游戏智能钱包"
+		"metamask": {
+			"description": "最流行的以太坊和 EVM 链浏览器扩展钱包"
 		},
-		"ledger": {
-			"description": "硬件钱包安全"
+		"rabby": {
+			"description": "注重安全的浏览器钱包，支持交易前风险扫描"
 		},
-		"trezor": {
-			"description": "硬件钱包先驱"
+		"rainbow": {
+			"description": "用户友好的以太坊钱包，NFT 展示精美"
 		},
-		"privy": {
-			"description": "嵌入式钱包方案"
+		"frame": {
+			"description": "注重隐私的桌面钱包，集成硬件钱包支持"
 		},
-		"dynamic": {
-			"description": "多钱包认证"
+		"safe": {
+			"description": "面向团队和 DAO 的多签智能合约钱包"
 		},
 		"ambire": {
-			"description": "账户抽象智能合约钱包"
+			"description": "支持邮箱登录和无 Gas 交易的智能钱包"
 		},
 		"obvious": {
-			"description": "社交恢复智能钱包"
+			"description": "支持社交恢复的账户抽象钱包"
+		},
+		"soul_wallet": {
+			"description": "支持插件系统的模块化 ERC-4337 智能钱包"
+		},
+		"patch_wallet": {
+			"description": "面向 Web3 应用的社交登录嵌入式钱包"
 		},
 		"pimlico": {
-			"description": "ERC-4337打包器与支付商基础设施"
+			"description": "账户抽象的 ERC-4337 打包器和支付商基础设施"
 		},
 		"stackup": {
-			"description": "账户抽象开发工具包"
+			"description": "账户抽象打包器服务和开发者 SDK"
 		},
 		"biconomy": {
-			"description": "无Gas交易与账户抽象SDK"
+			"description": "无 Gas 交易 SDK 和账户抽象基础设施"
+		},
+		"alchemy_aa": {
+			"description": "用于构建智能钱包应用的 Account Kit SDK"
 		},
 		"zerodev": {
-			"description": "智能钱包与会话密钥SDK"
+			"description": "带 Kernel 账户实现的模块化智能钱包 SDK"
+		},
+		"particle_network": {
+			"description": "支持社交登录和链抽象的钱包即服务"
+		},
+		"privy": {
+			"description": "实现无缝 Web3 用户入门的嵌入式钱包 SDK"
+		},
+		"dynamic": {
+			"description": "多钱包认证和入门平台"
+		},
+		"ledger": {
+			"description": "业界领先的安全冷存储硬件钱包"
+		},
+		"trezor": {
+			"description": "具有可靠安全性的开源硬件钱包先驱"
+		},
+		"coinbase_wallet": {
+			"description": "Coinbase 自托管钱包，支持 DeFi 和 NFT"
+		},
+		"trust_wallet": {
+			"description": "支持数百万资产的多链移动钱包"
+		},
+		"argent": {
+			"description": "带守护者和 StarkNet 支持的智能合约钱包"
+		},
+		"sequence": {
+			"description": "针对游戏应用优化的智能钱包 SDK"
+		},
+		"phantom_wallet": {
+			"description": "支持 Solana、以太坊和比特币的多链钱包"
+		},
+		"backpack_wallet": {
+			"description": "支持 xNFT 的 Solana 和以太坊生态钱包"
+		},
+		"exodus_wallet": {
+			"description": "内置交易功能的桌面和移动钱包"
 		},
 		"solflare": {
-			"description": "Solflare - Crypto wallet"
+			"description": "功能丰富的 Solana 钱包，支持质押和 NFT"
+		},
+		"keplr_wallet": {
+			"description": "Cosmos 生态和 IBC 转账的领先钱包"
+		},
+		"leap_wallet": {
+			"description": "集成 DeFi 的多链 Cosmos 钱包"
+		},
+		"xdefi_wallet": {
+			"description": "支持原生兑换功能的跨链浏览器钱包"
+		},
+		"brave_wallet": {
+			"description": "隐私优先设计的内置浏览器钱包"
+		},
+		"block_wallet": {
+			"description": "带钓鱼防护的隐私增强浏览器钱包"
+		},
+		"okx_wallet": {
+			"description": "带 DEX 和 NFT 市场的多链 Web3 钱包"
+		},
+		"core_wallet": {
+			"description": "支持比特币和以太坊的 Avalanche 生态钱包"
+		},
+		"enkrypt_wallet": {
+			"description": "MyEtherWallet 团队的多链浏览器钱包"
+		},
+		"talisman_wallet": {
+			"description": "带投资组合仪表盘的 Polkadot 和以太坊钱包"
 		},
 		"subwallet": {
-			"description": "SubWallet - Web3 钱包"
+			"description": "Polkadot 和 Substrate 链的综合钱包"
 		},
-		"tonhub": {
-			"description": "Tonhub - Web3 钱包"
+		"polkadot_js": {
+			"description": "Polkadot 生态系统的官方浏览器扩展"
 		},
-		"mytonwallet": {
-			"description": "MyTonWallet - Web3 钱包"
+		"nami_wallet": {
+			"description": "面向 dApp 和 NFT 的轻量级 Cardano 浏览器钱包"
 		},
-		"coolwallet": {
-			"description": "coolwallet - Web3 钱包"
+		"eternl_wallet": {
+			"description": "功能丰富的 Cardano 钱包，支持质押和 DeFi 工具"
 		},
-		"imtoken": {
-			"description": "imToken - Web3 钱包"
+		"yoroi_wallet": {
+			"description": "EMURGO 开发的 Cardano 官方轻钱包"
 		},
-		"tokenpocket": {
-			"description": "TokenPocket - Web3 钱包"
+		"temple_wallet": {
+			"description": "面向 Tezos DeFi 和 NFT 应用的浏览器钱包"
 		},
-		"myetherwallet": {
-			"description": "MyEtherWallet - Web3 钱包"
+		"kukai_wallet": {
+			"description": "支持社交登录和 DirectAuth 的 Tezos 钱包"
 		},
-		"mycrypto": {
-			"description": "MyCrypto - Web3 钱包"
+		"petra_wallet": {
+			"description": "Aptos 区块链生态的官方钱包"
 		},
-		"tronlink": {
-			"description": "TronLink - Web3 钱包"
+		"martian_wallet": {
+			"description": "支持 Aptos 和 Sui 网络的多链钱包"
 		},
-		"multis": {
-			"description": "Multis - Web3 钱包"
+		"sui_wallet": {
+			"description": "Sui 区块链的官方浏览器钱包"
 		},
-		"squads": {
-			"description": "Squads - Web3 钱包"
-		},
-		"biubiu-wallet-sweep": {
-			"description": "Wallet Sweep - Tool"
-		},
-		"biubiu-one-to-many": {
-			"description": "One-to-Many Transfer - Tool"
-		},
-		"biubiu-wallet-generator": {
-			"description": "Wallet Generator - Tool"
-		},
-		"biubiu-balance-scanner": {
-			"description": "Balance Scanner - Tool"
-		},
-		"soul-wallet": {
-			"description": "Soul Wallet - Tool"
-		},
-		"patch-wallet": {
-			"description": "Patch Wallet - Tool"
-		},
-		"alchemy-aa": {
-			"description": "Alchemy Account Kit - Tool"
-		},
-		"particle-network": {
-			"description": "Particle Network - Tool"
-		},
-		"coinbase-wallet": {
-			"description": "Coinbase Wallet - Tool"
-		},
-		"trust-wallet": {
-			"description": "Trust Wallet - Tool"
-		},
-		"phantom-wallet": {
-			"description": "Phantom - Tool"
-		},
-		"backpack-wallet": {
-			"description": "Backpack - Tool"
-		},
-		"exodus-wallet": {
-			"description": "Exodus - Tool"
-		},
-		"keplr-wallet": {
-			"description": "Keplr - Tool"
-		},
-		"leap-wallet": {
-			"description": "Leap Wallet - Tool"
-		},
-		"xdefi-wallet": {
-			"description": "XDEFI - Tool"
-		},
-		"brave-wallet": {
-			"description": "Brave Wallet - Tool"
-		},
-		"block-wallet": {
-			"description": "BlockWallet - Tool"
-		},
-		"okx-wallet": {
-			"description": "OKX Wallet - Tool"
-		},
-		"core-wallet": {
-			"description": "Core Wallet - Tool"
-		},
-		"enkrypt-wallet": {
-			"description": "Enkrypt - Tool"
-		},
-		"talisman-wallet": {
-			"description": "Talisman - Tool"
-		},
-		"polkadot-js": {
-			"description": "Polkadot.js - Tool"
-		},
-		"nami-wallet": {
-			"description": "Nami - Tool"
-		},
-		"eternl-wallet": {
-			"description": "Eternl - Tool"
-		},
-		"yoroi-wallet": {
-			"description": "Yoroi - Tool"
-		},
-		"temple-wallet": {
-			"description": "Temple Wallet - Tool"
-		},
-		"kukai-wallet": {
-			"description": "Kukai - Tool"
-		},
-		"petra-wallet": {
-			"description": "Petra - Tool"
-		},
-		"martian-wallet": {
-			"description": "Martian - Tool"
-		},
-		"sui-wallet": {
-			"description": "Sui Wallet - Tool"
-		},
-		"suiet-wallet": {
-			"description": "Suiet - Tool"
+		"suiet_wallet": {
+			"description": "开发者友好功能的开源 Sui 钱包"
 		},
 		"tonkeeper": {
-			"description": "Tonkeeper - Tool"
+			"description": "支持质押和 Jetton 的热门 TON 钱包"
 		},
-		"sender-wallet": {
-			"description": "Sender Wallet - Tool"
+		"tonhub": {
+			"description": "集成 Whales 质押池的 TON 钱包"
 		},
-		"meteor-wallet": {
-			"description": "Meteor Wallet - Tool"
+		"mytonwallet": {
+			"description": "面向桌面和浏览器的开源 TON 钱包"
 		},
-		"here-wallet": {
-			"description": "HERE Wallet - Tool"
+		"sender_wallet": {
+			"description": "支持 DeFi 和 NFT 功能的 NEAR Protocol 钱包"
 		},
-		"coin98-wallet": {
-			"description": "Coin98 - Tool"
+		"meteor_wallet": {
+			"description": "带高级投资组合追踪的 NEAR 钱包"
 		},
-		"bitget-wallet": {
-			"description": "Bitget Wallet - Tool"
+		"here_wallet": {
+			"description": "带质押奖励的移动优先 NEAR 钱包"
 		},
-		"safepal-wallet": {
-			"description": "SafePal - Tool"
+		"coin98_wallet": {
+			"description": "支持 90+ 区块链的多链 DeFi 门户"
 		},
-		"onekey-wallet": {
-			"description": "OneKey - Tool"
+		"bitget_wallet": {
+			"description": "带兑换聚合器和启动台的多链钱包"
 		},
-		"ellipal-wallet": {
-			"description": "ELLIPAL - Tool"
+		"safepal_wallet": {
+			"description": "Binance 投资的硬件软件钱包组合"
 		},
-		"dcent-wallet": {
-			"description": "D - Tool"
+		"onekey_wallet": {
+			"description": "支持多链的开源硬件钱包"
 		},
-		"math-wallet": {
-			"description": "Math Wallet - Tool"
+		"ellipal_wallet": {
+			"description": "带触摸屏界面的离线硬件钱包"
 		},
-		"alpha-wallet": {
-			"description": "AlphaWallet - Tool"
+		"dcent_wallet": {
+			"description": "带指纹认证的生物识别硬件钱包"
 		},
-		"status-wallet": {
-			"description": "Status - Tool"
+		"coolwallet": {
+			"description": "信用卡大小的蓝牙连接硬件钱包"
 		},
-		"unstoppable-wallet": {
-			"description": "Unstoppable Wallet - Tool"
+		"imtoken": {
+			"description": "亚洲热门的多链 DeFi 支持移动钱包"
 		},
-		"exodus-wallet-ext": {
-			"description": "Exodus Extension - Tool"
+		"tokenpocket": {
+			"description": "内置 dApp 浏览器的多链移动钱包"
 		},
-		"atomic-wallet": {
-			"description": "Atomic Wallet - Tool"
+		"math_wallet": {
+			"description": "支持 100+ 区块链的多平台钱包"
 		},
-		"guarda-wallet": {
-			"description": "Guarda - Tool"
+		"alpha_wallet": {
+			"description": "支持 TokenScript 的开源移动钱包"
 		},
-		"edge-wallet": {
-			"description": "Edge - Tool"
+		"status_wallet": {
+			"description": "内置以太坊钱包的隐私通讯应用"
 		},
-		"crypto-com-defi": {
-			"description": "Crypto.com DeFi Wallet - Tool"
+		"unstoppable_wallet": {
+			"description": "带 DeFi 分析的隐私优先移动钱包"
 		},
-		"lobstr-wallet": {
-			"description": "LOBSTR - Tool"
+		"exodus_wallet_ext": {
+			"description": "Exodus 多链钱包的浏览器扩展版本"
 		},
-		"freighter-wallet": {
-			"description": "Freighter - Tool"
+		"myetherwallet": {
+			"description": "以太坊钱包管理的原始 Web 界面"
 		},
-		"den-wallet": {
-			"description": "Den - Tool"
+		"mycrypto": {
+			"description": "安全以太坊管理的桌面和 Web 钱包"
+		},
+		"atomic_wallet": {
+			"description": "支持原子交换和质押功能的桌面钱包"
+		},
+		"guarda_wallet": {
+			"description": "内置交易所和质押的多平台钱包"
+		},
+		"edge_wallet": {
+			"description": "基于用户名登录的隐私优先移动钱包"
+		},
+		"crypto_com_defi": {
+			"description": "支持 Cronos 链和跨链桥的 DeFi 钱包"
+		},
+		"lobstr_wallet": {
+			"description": "带交易功能的用户友好 Stellar 钱包"
+		},
+		"freighter_wallet": {
+			"description": "支持 Stellar 和 Soroban 智能合约的浏览器钱包"
+		},
+		"tronlink": {
+			"description": "TRON 区块链生态的官方钱包"
+		},
+		"multis": {
+			"description": "带工资发放功能的企业级多签钱包"
+		},
+		"squads": {
+			"description": "Solana 的多签资金库和协议管理"
+		},
+		"den_wallet": {
+			"description": "支持 DeFi 自动化和交易批处理的智能钱包"
 		},
 		"instadapp": {
-			"description": "Instadapp - Tool"
+			"description": "带协议聚合和自动化的 DeFi 智能账户"
 		},
-		"fuelet-wallet": {
-			"description": "Fuelet - Tool"
+		"fuelet_wallet": {
+			"description": "Fuel 模块化执行层钱包"
 		},
-		"fuel-wallet": {
-			"description": "Fuel Wallet - Tool"
+		"fuel_wallet": {
+			"description": "Fuel Network 的官方浏览器钱包"
 		},
-		"braavos-wallet": {
-			"description": "Braavos - Tool"
+		"braavos_wallet": {
+			"description": "支持硬件签名器的 StarkNet 智能钱包"
 		},
-		"keystone-wallet": {
-			"description": "Keystone - Tool"
+		"keystone_wallet": {
+			"description": "支持二维码签名的离线硬件钱包"
 		},
-		"gridplus-wallet": {
-			"description": "GridPlus Lattice1 - Tool"
+		"gridplus_wallet": {
+			"description": "带 SafeCard 存储的企业级硬件钱包"
 		},
-		"tangem-wallet": {
-			"description": "Tangem - Tool"
+		"tangem_wallet": {
+			"description": "基于 NFC 卡的移动硬件钱包"
 		},
-		"web3auth-wallet": {
-			"description": "Web3Auth - Tool"
+		"web3auth_wallet": {
+			"description": "支持社交登录的 MPC 密钥管理"
 		},
-		"unisat-wallet": {
-			"description": "UniSat - Tool"
+		"unisat_wallet": {
+			"description": "支持 Ordinals、BRC-20 和铭文的比特币钱包"
 		},
-		"xverse-wallet": {
-			"description": "Xverse - Tool"
+		"xverse_wallet": {
+			"description": "支持 Ordinals 的比特币和 Stacks 钱包"
 		},
-		"leather-wallet": {
-			"description": "Leather (Hiro) - Tool"
+		"leather_wallet": {
+			"description": "前身为 Hiro Wallet 的比特币和 Stacks 钱包"
 		},
-		"passport-wallet": {
-			"description": "Passport (Foundation) - Tool"
+		"passport_wallet": {
+			"description": "开源离线比特币硬件钱包"
 		},
-		"seedsigner-wallet": {
-			"description": "SeedSigner - Tool"
+		"seedsigner_wallet": {
+			"description": "DIY 离线比特币签名设备项目"
 		},
-		"fireblocks-wallet": {
-			"description": "Fireblocks - Tool"
+		"fireblocks_wallet": {
+			"description": "数字资产机构级 MPC 托管平台"
 		},
-		"anchorage-wallet": {
-			"description": "Anchorage Digital - Tool"
+		"anchorage_wallet": {
+			"description": "联邦特许数字资产银行和托管商"
 		},
-		"bitgo-wallet": {
-			"description": "BitGo - Tool"
+		"bitgo_wallet": {
+			"description": "带多签和保险的机构托管服务"
 		}
 	}
 }

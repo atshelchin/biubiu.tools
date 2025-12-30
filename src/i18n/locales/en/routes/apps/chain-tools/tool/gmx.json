@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"seo": {
+		"title": "GMX - Decentralized Perpetual Exchange | Trade with Leverage",
+		"description": "Discover GMX, the leading decentralized perpetual exchange. Learn about leverage trading, GLP liquidity provision, and low fee perpetual swaps on Arbitrum and Avalanche.",
+		"keywords": "GMX, perpetual trading, decentralized exchange, leverage, Arbitrum, crypto derivatives, GLP"
+	},
+	"overview": "GMX is a decentralized perpetual exchange that enables traders to go long or short on cryptocurrencies with up to 100x leverage, while liquidity providers earn yield by supplying assets to the protocol's multi-asset pool. Launched in 2021, GMX has become one of the largest derivatives platforms in DeFi, pioneering the GLP model where all traders trade against a shared liquidity pool.\n\nUnlike centralized exchanges or order book DEXs, GMX uses a unique pool-based model where traders borrow from the GLP pool to execute leveraged positions. This allows for zero-slippage trades on supported assets, with prices derived from Chainlink oracles. The GLP pool earns 70% of all trading fees, making it an attractive yield source for passive investors.\n\nGMX is deployed on Arbitrum and Avalanche, processing over $100 billion in cumulative trading volume. The protocol's V2 launch introduced isolated pools, synthetic assets, and improved capital efficiency, further cementing its position as the leading decentralized derivatives venue.",
+	"features": {
+		"1": {
+			"title": "Perpetual Trading",
+			"description": "Trade BTC, ETH, and other assets with up to 100x leverage on perpetual contracts"
+		},
+		"2": {
+			"title": "Zero Slippage",
+			"description": "Execute large trades without price impact using oracle-based pricing"
+		},
+		"3": {
+			"title": "GLP Liquidity Pool",
+			"description": "Provide liquidity to earn 70% of trading fees and GMX token emissions"
+		},
+		"4": {
+			"title": "Low Fees",
+			"description": "Competitive trading fees with discounts for GMX stakers"
+		},
+		"5": {
+			"title": "Decentralized",
+			"description": "Non-custodial trading - your funds stay in your wallet until you trade"
+		},
+		"6": {
+			"title": "GM Pools (V2)",
+			"description": "Isolated markets with synthetic assets and improved capital efficiency"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Leveraged Trading",
+			"description": "Amplify your exposure to BTC, ETH, and other crypto assets"
+		},
+		"2": {
+			"title": "Hedging",
+			"description": "Open short positions to hedge your spot crypto holdings"
+		},
+		"3": {
+			"title": "Passive Yield",
+			"description": "Provide GLP liquidity to earn trading fees and token incentives"
+		},
+		"4": {
+			"title": "Low Slippage Swaps",
+			"description": "Execute large spot swaps between supported assets with minimal price impact"
+		},
+		"5": {
+			"title": "Decentralized Derivatives",
+			"description": "Access derivatives trading without KYC or centralized exchange risk"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is GMX and how does it work?",
+			"answer": "GMX is a decentralized perpetual exchange where traders go long or short with leverage against a shared liquidity pool (GLP). Prices come from Chainlink oracles, enabling zero-slippage execution. Traders pay fees that go to GLP holders and GMX stakers. If traders lose, GLP holders profit; if traders win, GLP holders pay - making GLP holders the counterparty to all trades."
+		},
+		"2": {
+			"question": "Is GMX safe to use?",
+			"answer": "GMX has been extensively audited and has processed over $100B in volume without major exploits. However, perpetual trading is inherently risky - you can lose your entire position with leverage. GLP carries risk too: if traders consistently profit, GLP value decreases. Always understand the risks before trading."
+		},
+		"3": {
+			"question": "What is GLP and how do I earn yield?",
+			"answer": "GLP is GMX's multi-asset liquidity pool token. When you mint GLP, you deposit assets (ETH, BTC, USDC, etc.) and receive GLP tokens representing your share. GLP holders earn 70% of all trading fees paid in ETH/AVAX plus esGMX incentives. Current APRs typically range from 15-40% depending on trading volume."
+		},
+		"4": {
+			"question": "What are the fees on GMX?",
+			"answer": "GMX charges a 0.1% fee to open or close positions, plus borrowing fees that accrue hourly based on utilization. Swaps cost 0.2-0.8% depending on whether they help balance the pool. GMX stakers receive fee discounts, and there's no funding rate - only the borrow rate."
+		},
+		"5": {
+			"question": "What's the difference between GMX V1 and V2?",
+			"answer": "GMX V2 introduces isolated GM pools instead of the unified GLP pool, allowing for more assets and reduced risk. V2 supports synthetic assets, has improved capital efficiency, and introduces funding rates. V1's GLP remains operational with its established liquidity, while V2 continues to expand with new markets."
+		}
+	},
+	"cta": {
+		"ready": "Ready to start trading?",
+		"button": "Open GMX",
+		"note": "Decentralized perpetual trading with up to 100x leverage"
+	}
+}

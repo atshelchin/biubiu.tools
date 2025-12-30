@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"seo": {
+		"title": "1inch - Best DEX Aggregator for Token Swaps | DeFi Tool Review",
+		"description": "Discover 1inch, the leading DEX aggregator that finds the best swap rates across decentralized exchanges. Learn about Fusion mode, limit orders, and multi-chain trading.",
+		"keywords": "1inch, DEX aggregator, token swap, best rates, DeFi, Ethereum, multi-chain, crypto trading"
+	},
+	"overview": "1inch is the leading decentralized exchange (DEX) aggregator that sources liquidity from hundreds of DEXs to find users the best possible swap rates. Founded in 2019 during an ETHGlobal hackathon by Sergej Kunz and Anton Bukov, 1inch has grown into one of the most essential tools in the DeFi ecosystem.\n\nThe protocol's Pathfinder algorithm splits trades across multiple liquidity sources, optimizing for the best exchange rates while minimizing slippage and gas costs. With Fusion mode, users can execute swaps without paying gas fees - the transaction costs are covered by resolvers who compete to fill orders at the best prices.\n\n1inch is deployed across 12+ blockchain networks including Ethereum, Polygon, Arbitrum, Optimism, and BNB Chain, processing billions of dollars in monthly trading volume. The protocol has become the go-to aggregator for traders seeking optimal execution across the fragmented DEX landscape.",
+	"features": {
+		"1": {
+			"title": "DEX Aggregation",
+			"description": "Sources liquidity from 400+ DEXs to find the best swap rates across the DeFi ecosystem"
+		},
+		"2": {
+			"title": "Fusion Mode",
+			"description": "Gasless swaps where resolvers compete to fill your order at the best price"
+		},
+		"3": {
+			"title": "Limit Orders",
+			"description": "Set target prices for trades that execute automatically when conditions are met"
+		},
+		"4": {
+			"title": "Multi-Chain Support",
+			"description": "Trade on 12+ networks including Ethereum, Polygon, Arbitrum, and more"
+		},
+		"5": {
+			"title": "Pathfinder Algorithm",
+			"description": "Advanced routing that splits trades across multiple DEXs for optimal execution"
+		},
+		"6": {
+			"title": "MEV Protection",
+			"description": "Fusion orders are protected from sandwich attacks and other MEV exploitation"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Optimal Token Swaps",
+			"description": "Get the best rates for any token swap by aggregating liquidity across all major DEXs"
+		},
+		"2": {
+			"title": "Large Trade Execution",
+			"description": "Split large orders across multiple sources to minimize price impact and slippage"
+		},
+		"3": {
+			"title": "Gasless Trading",
+			"description": "Use Fusion mode to swap tokens without paying gas fees upfront"
+		},
+		"4": {
+			"title": "Limit Order Trading",
+			"description": "Set and forget orders that execute when your target price is reached"
+		},
+		"5": {
+			"title": "Cross-Chain Trading",
+			"description": "Access the same aggregation technology across multiple blockchain networks"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is 1inch and how does it work?",
+			"answer": "1inch is a DEX aggregator that finds the best swap rates by searching across hundreds of decentralized exchanges. When you make a trade, 1inch's Pathfinder algorithm calculates the optimal route, potentially splitting your trade across multiple DEXs to get you more tokens than using any single exchange."
+		},
+		"2": {
+			"question": "Is 1inch safe to use?",
+			"answer": "1inch has been extensively audited and has processed billions in trading volume without major security incidents. The protocol is non-custodial - you're always trading directly from your wallet. However, always verify you're using the official 1inch interface and be cautious of scam tokens."
+		},
+		"3": {
+			"question": "What is Fusion mode?",
+			"answer": "Fusion is 1inch's gasless trading mode where professional market makers called 'resolvers' compete to fill your order. You sign a message (free) instead of paying gas, and resolvers pay the transaction costs. You often get better rates because resolvers can optimize execution."
+		},
+		"4": {
+			"question": "What are the fees on 1inch?",
+			"answer": "1inch doesn't charge swap fees on most trades. You only pay network gas fees (or nothing in Fusion mode). The platform earns from positive slippage on some trades and from its partnership with liquidity sources. There's a small fee on limit orders when they execute."
+		},
+		"5": {
+			"question": "How does 1inch compare to trading on Uniswap directly?",
+			"answer": "1inch often provides better rates than Uniswap alone because it can route your trade through multiple DEXs. For large trades especially, 1inch's splitting can significantly reduce slippage. However, for very small trades on popular pairs, direct DEX trading might be cheaper due to gas optimization."
+		}
+	},
+	"cta": {
+		"ready": "Ready to find the best rates?",
+		"button": "Open 1inch",
+		"note": "Best prices across 400+ DEXs"
+	}
+}

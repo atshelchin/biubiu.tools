@@ -17,8 +17,9 @@
 	const i18n = useI18n();
 
 	// Load tool-specific translations dynamically
-	// The translation file is loaded as: tools/{toolId}.json
-	const toolI18nPrefix = `${data.tool.id}`;
+	// The translation file is loaded as: routes/apps/chain-tools/tool/{toolId}.json
+	// With namespacePrefix: 'routes', the namespace becomes: routes/apps/chain-tools/tool/{toolId}
+	const toolI18nPrefix = `routes/apps/chain-tools/tool/${data.tool.id}`;
 
 	// Get SEO data from tool translations
 	const seoTitle = $derived(
@@ -71,7 +72,9 @@
 	// UI text with eslint-disable for dynamic i18n keys
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const categoryName = $derived(
-		i18n.t(`chain-tools.categories.${data.tool.category}` as any, { defaultValue: 'Back' })
+		i18n.t(`routes/apps/chain-tools.categories.${data.tool.category}` as any, {
+			defaultValue: 'Back'
+		})
 	);
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const faqsTitle = $derived(

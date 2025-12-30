@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸",
+		"code": "es"
+	},
+	"seo": {
+		"title": "Curve Finance - DEX Líder de Stablecoins | Intercambios de Bajo Deslizamiento",
+		"description": "Descubre Curve Finance, el DEX premier para trading de stablecoins y activos vinculados. Aprende sobre intercambios de bajo deslizamiento, provisión de liquidez y tokenomics de CRV.",
+		"keywords": "Curve Finance, stablecoin swap, DeFi, bajo deslizamiento, CRV, liquidity pool, yield farming"
+	},
+	"overview": "Curve Finance es un exchange descentralizado específicamente diseñado para trading eficiente entre stablecoins y activos vinculados. Lanzado en 2020 por Michael Egorov, un físico y emprendedor en serie, Curve fue pionero en el invariante StableSwap - una curva de vinculación optimizada para activos que deberían comerciarse a precios similares.\n\nA diferencia de AMMs de propósito general como Uniswap, los pools de Curve están optimizados para deslizamiento mínimo cuando se opera entre activos correlacionados como USDC/USDT/DAI o diferentes versiones envueltas de Bitcoin. Esta especialización ha hecho de Curve la columna vertebral de la liquidez DeFi, con muchos protocolos dependiendo de los pools de Curve para su trading de stablecoins y tokens de staking líquido.\n\nLa tokenomics veCRV del protocolo introdujo la gobernanza vote-escrowed, donde los usuarios bloquean tokens CRV para ganar poder de voto y aumentar sus recompensas de minería de liquidez. Este modelo ha sido ampliamente copiado a través de DeFi y desencadenó las 'Guerras de Curve' - protocolos compitiendo para acumular poder de voto CRV para dirigir emisiones a sus pools.",
+	"features": {
+		"1": {
+			"title": "AMM StableSwap",
+			"description": "Curva de vinculación especializada que permite intercambios de deslizamiento extremadamente bajo entre activos vinculados"
+		},
+		"2": {
+			"title": "Provisión de Liquidez",
+			"description": "Suministra liquidez a pools y gana tarifas de trading más incentivos de tokens CRV"
+		},
+		"3": {
+			"title": "Gobernanza veCRV",
+			"description": "Bloquea tokens CRV para votar sobre pesos de gauge y aumentar tus recompensas de minería de liquidez"
+		},
+		"4": {
+			"title": "Pools Multi-Activo",
+			"description": "Comercia entre múltiples stablecoins o activos vinculados en un solo pool"
+		},
+		"5": {
+			"title": "Pools Tricrypto",
+			"description": "Pools V2 para trading entre activos volátiles como ETH, BTC y stablecoins"
+		},
+		"6": {
+			"title": "crvUSD",
+			"description": "Stablecoin nativa de Curve respaldada por colateral cripto con mecanismo de liquidación suave"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Intercambios de Stablecoins",
+			"description": "Comercia entre USDC, USDT, DAI y otras stablecoins con deslizamiento mínimo"
+		},
+		"2": {
+			"title": "Yield Farming",
+			"description": "Proporciona liquidez para ganar tarifas de trading y recompensas CRV aumentadas por veCRV"
+		},
+		"3": {
+			"title": "Grandes Intercambios",
+			"description": "Ejecuta intercambios de millones de dólares entre activos vinculados con impacto de precio mínimo"
+		},
+		"4": {
+			"title": "Trading LST",
+			"description": "Intercambia entre tokens de staking líquido como stETH, rETH y cbETH eficientemente"
+		},
+		"5": {
+			"title": "Liquidez de Protocolo",
+			"description": "Los protocolos usan pools de Curve como lugares de liquidez primarios para sus tokens"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es Curve Finance y cómo funciona?",
+			"answer": "Curve es un DEX optimizado para trading entre stablecoins y activos vinculados. Su algoritmo StableSwap asume que los activos en un pool deberían valer aproximadamente lo mismo, permitiendo intercambios de deslizamiento extremadamente bajo. Los proveedores de liquidez ganan tarifas de los intercambios más incentivos de tokens CRV."
+		},
+		"2": {
+			"question": "¿Por qué usar Curve en lugar de Uniswap para intercambios de stablecoins?",
+			"answer": "La curva de vinculación especializada de Curve proporciona mucho menor deslizamiento para intercambios de stablecoins. Un intercambio de $1 millón de USDC a USDT en Curve podría tener 0.01% de deslizamiento, mientras que el mismo intercambio en Uniswap podría tener 0.3% o más. Para intercambios grandes, esta diferencia se traduce en ahorros significativos."
+		},
+		"3": {
+			"question": "¿Qué es veCRV y por qué es importante?",
+			"answer": "veCRV (vote-escrowed CRV) se obtiene bloqueando tokens CRV hasta por 4 años. Los titulares de veCRV pueden votar para dirigir emisiones de CRV a pools específicos, aumentar sus propias recompensas LP hasta 2.5x y ganar tarifas del protocolo. Esto crea incentivos para alineación a largo plazo con el protocolo."
+		},
+		"4": {
+			"question": "¿Qué son las Guerras de Curve?",
+			"answer": "Las Guerras de Curve se refieren a protocolos compitiendo para acumular poder de voto veCRV. Protocolos como Convex, Yearn y otros buscan controlar emisiones de CRV para beneficiar su liquidez. Convex en particular ha acumulado una gran parte de veCRV, permitiendo a los titulares de CVX influir en la gobernanza de Curve."
+		},
+		"5": {
+			"question": "¿Qué es crvUSD?",
+			"answer": "crvUSD es la stablecoin nativa de Curve que los usuarios pueden acuñar depositando colateral cripto. Presenta un mecanismo único de 'liquidación suave' llamado LLAMMA que convierte gradualmente el colateral a crvUSD a medida que los precios caen, reduciendo el riesgo de liquidaciones repentinas en comparación con protocolos de préstamos tradicionales."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para intercambiar con deslizamiento mínimo?",
+		"button": "Abrir Curve",
+		"note": "El hogar de la liquidez de stablecoins"
+	}
+}

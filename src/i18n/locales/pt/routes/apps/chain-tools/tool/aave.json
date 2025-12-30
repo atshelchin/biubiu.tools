@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Português",
+		"englishName": "Portuguese",
+		"direction": "ltr",
+		"flag": "🇧🇷",
+		"code": "pt"
+	},
+	"seo": {
+		"title": "Aave - Principal Protocolo de Empréstimos DeFi | Emprestar e Pegar Emprestado Cripto",
+		"description": "Descubra o Aave, o principal protocolo de empréstimos descentralizado do mundo. Aprenda sobre flash loans, suporte multi-chain e como ganhar rendimentos fornecendo ativos cripto.",
+		"keywords": "Aave, DeFi lending, empréstimo cripto, flash loans, yield farming, Ethereum, Polygon, Arbitrum"
+	},
+	"overview": "Aave é um dos maiores e mais confiáveis protocolos de empréstimos descentralizados em DeFi, permitindo que os usuários emprestem, peguem emprestado e ganhem juros sobre ativos de criptomoedas sem intermediários. Originalmente lançado como ETHLend em 2017 por Stani Kulechov, o protocolo foi renomeado para Aave (que significa 'fantasma' em finlandês) em 2020 e desde então se tornou uma pedra angular das finanças descentralizadas.\n\nO protocolo opera através de pools de liquidez onde os usuários depositam ativos cripto para ganhar juros, enquanto os tomadores podem obter empréstimos fornecendo garantias. Aave foi pioneiro em várias inovações DeFi, incluindo flash loans - empréstimos sem garantia que devem ser emprestados e reembolsados dentro de uma única transação - que se tornaram ferramentas essenciais para arbitragem, trocas de garantias e estratégias de auto-liquidação.\n\nEm 2024, o Aave garantiu mais de US$ 10 bilhões em Total Value Locked (TVL) através de Ethereum, Polygon, Arbitrum, Optimism e outras redes, tornando-se um dos protocolos mais eficientes em capital do espaço.",
+	"features": {
+		"1": {
+			"title": "Fornecer e Ganhar Juros",
+			"description": "Deposite ativos cripto em pools de liquidez e ganhe taxas de juros variáveis baseadas na demanda do mercado"
+		},
+		"2": {
+			"title": "Emprestar Contra Garantias",
+			"description": "Obtenha empréstimos fornecendo garantias cripto, com opções flexíveis de taxas de juros variáveis ou estáveis"
+		},
+		"3": {
+			"title": "Flash Loans",
+			"description": "Acesse empréstimos sem garantia dentro de uma única transação - perfeito para arbitragem e estratégias DeFi"
+		},
+		"4": {
+			"title": "Implantação Multi-Chain",
+			"description": "Disponível em Ethereum, Polygon, Arbitrum, Optimism, Avalanche e mais redes"
+		},
+		"5": {
+			"title": "Módulo de Segurança",
+			"description": "Faça staking de tokens AAVE no Módulo de Segurança para ganhar recompensas enquanto protege o protocolo"
+		},
+		"6": {
+			"title": "Stablecoin GHO",
+			"description": "Cunhe GHO, a stablecoin descentralizada nativa do Aave, usando suas garantias fornecidas"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Geração de Rendimento",
+			"description": "Ganhe renda passiva fornecendo stablecoins ou ativos cripto para pools de empréstimo"
+		},
+		"2": {
+			"title": "Posições Alavancadas",
+			"description": "Empreste contra suas participações para aumentar a exposição sem vender seus ativos"
+		},
+		"3": {
+			"title": "Arbitragem com Flash Loan",
+			"description": "Execute estratégias DeFi complexas incluindo arbitragem de preços e trocas de garantias"
+		},
+		"4": {
+			"title": "Acesso à Liquidez",
+			"description": "Acesse liquidez sem vender participações de longo prazo - ideal para otimização fiscal"
+		},
+		"5": {
+			"title": "DeFi Cross-Chain",
+			"description": "Use o mesmo protocolo em várias chains com experiência de usuário consistente"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "O que é Aave e como funciona?",
+			"answer": "Aave é um protocolo de empréstimos descentralizado onde os usuários podem fornecer ativos cripto para ganhar juros ou emprestar contra garantias. Os fornecedores depositam ativos em pools de liquidez e ganham juros variáveis baseados nas taxas de utilização. Os tomadores devem fornecer garantias (tipicamente 120-150% do valor do empréstimo) e pagar juros sobre seus empréstimos."
+		},
+		"2": {
+			"question": "É seguro usar o Aave?",
+			"answer": "Aave é um dos protocolos DeFi mais testados em batalha com múltiplas auditorias de segurança e um histórico sólido. O protocolo tem um Módulo de Segurança onde os stakers de AAVE fornecem um respaldo contra possíveis déficits. No entanto, DeFi sempre carrega riscos de contratos inteligentes, então deposite apenas o que você pode perder."
+		},
+		"3": {
+			"question": "O que são flash loans?",
+			"answer": "Flash loans são empréstimos sem garantia que devem ser emprestados e reembolsados dentro de uma única transação blockchain. Se o empréstimo não for reembolsado até o final da transação, toda a transação é revertida. Eles são usados para arbitragem, trocas de garantias e estratégias de auto-liquidação."
+		},
+		"4": {
+			"question": "Para que é usado o token AAVE?",
+			"answer": "AAVE é o token de governança que permite aos detentores votar em atualizações e parâmetros do protocolo. Os detentores de tokens também podem fazer staking de AAVE no Módulo de Segurança para ganhar recompensas enquanto fornecem seguro para o protocolo contra possíveis dívidas ruins."
+		},
+		"5": {
+			"question": "O que é a stablecoin GHO?",
+			"answer": "GHO é a stablecoin descentralizada nativa do Aave que os usuários podem cunhar usando suas garantias fornecidas. Ao contrário das stablecoins tradicionais, GHO é criado diretamente através do protocolo Aave, com pagamentos de juros indo para o tesouro da Aave DAO."
+		}
+	},
+	"cta": {
+		"ready": "Pronto para começar a emprestar?",
+		"button": "Abrir Aave",
+		"note": "Ganhe rendimento em seus ativos cripto"
+	}
+}

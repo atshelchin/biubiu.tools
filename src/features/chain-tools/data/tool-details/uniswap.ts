@@ -8,7 +8,7 @@ import type { ToolDetail } from '../../types';
 
 export const uniswapDetail: ToolDetail = {
 	id: 'uniswap',
-	i18nKeyPrefix: 'routes/apps/chain-tools.tools.uniswap',
+	i18nKeyPrefix: 'routes/apps/chain-tools/tool/uniswap',
 
 	// Content counts for rendering
 	featureCount: 6,

@@ -9,12 +9,22 @@ import type { ToolDetail } from '../../types';
 
 // Import individual tool details
 import { uniswapDetail } from './uniswap';
+import { aaveDetail } from './aave';
+import { oneInchDetail } from './1inch';
+import { curveDetail } from './curve';
+import { lidoDetail } from './lido';
+import { gmxDetail } from './gmx';
 
 /**
  * All tool details mapped by tool ID
  */
 export const toolDetails: Record<string, ToolDetail> = {
-	uniswap: uniswapDetail
+	uniswap: uniswapDetail,
+	aave: aaveDetail,
+	'1inch': oneInchDetail,
+	curve: curveDetail,
+	lido: lidoDetail,
+	gmx: gmxDetail
 };
 
 /**

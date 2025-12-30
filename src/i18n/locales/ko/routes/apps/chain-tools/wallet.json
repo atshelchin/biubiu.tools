@@ -1,329 +1,329 @@
 {
 	"category_seo": {
-		"title": "Crypto Wallets - Hardware, Software & Multi-Chain | BiuBiu Tools",
-		"description": "Compare the best crypto wallets for security and convenience. Hardware wallets, browser extensions, and mobile wallets for all blockchains.",
-		"keywords": "crypto wallet, hardware wallet, metamask, ledger, trezor, multi-chain wallet",
+		"title": "암호화폐 지갑 - 하드웨어, 소프트웨어 & 멀티체인 | BiuBiu Tools",
+		"description": "보안과 편의성을 위한 최고의 암호화폐 지갑을 비교하세요. 모든 블록체인을 위한 하드웨어 지갑, 브라우저 확장 프로그램, 모바일 지갑.",
+		"keywords": "암호화폐 지갑, 하드웨어 지갑, metamask, ledger, trezor, 멀티체인 지갑",
 		"faqs": [
 			{
-				"question": "What is a crypto wallet?",
-				"answer": "A crypto wallet is software or hardware that stores your private keys and allows you to send, receive, and manage cryptocurrencies. It doesn't actually store crypto - the assets remain on the blockchain."
+				"question": "암호화폐 지갑이란?",
+				"answer": "암호화폐 지갑은 개인 키를 저장하고 암호화폐를 보내고 받고 관리할 수 있게 해주는 소프트웨어 또는 하드웨어입니다. 실제로 암호화폐를 저장하지 않으며 자산은 블록체인에 남아있습니다."
 			},
 			{
-				"question": "Hardware wallet vs software wallet?",
-				"answer": "Hardware wallets (Ledger, Trezor) store keys offline for maximum security, ideal for large holdings. Software wallets (MetaMask, Rainbow) are more convenient for daily use but are connected to the internet."
+				"question": "하드웨어 지갑 vs 소프트웨어 지갑?",
+				"answer": "하드웨어 지갑(Ledger, Trezor)은 최대 보안을 위해 오프라인에서 키를 저장하며 대량 보유에 적합합니다. 소프트웨어 지갑(MetaMask, Rainbow)은 일상 사용에 더 편리하지만 인터넷에 연결되어 있습니다."
 			},
 			{
-				"question": "How do I keep my wallet safe?",
-				"answer": "Never share your seed phrase, use hardware wallets for large amounts, enable 2FA where possible, verify transaction details before signing, and be cautious of phishing sites."
+				"question": "지갑을 안전하게 유지하려면?",
+				"answer": "시드 구문을 절대 공유하지 말고, 대량 자금에는 하드웨어 지갑을 사용하고, 가능한 경우 2FA를 활성화하고, 서명 전 거래 세부 사항을 확인하고, 피싱 사이트를 조심하세요."
 			}
 		]
 	},
 	"tools": {
+		"biubiu_wallet_sweep": {
+			"description": "여러 지갑의 토큰을 하나의 주소로 일괄 통합"
+		},
+		"biubiu_one_to_many": {
+			"description": "하나의 지갑에서 여러 수신자에게 토큰 배포"
+		},
+		"biubiu_wallet_generator": {
+			"description": "니모닉 구문이 있는 HD 지갑 일괄 생성"
+		},
+		"biubiu_balance_scanner": {
+			"description": "여러 지갑의 토큰 잔액 동시 스캔"
+		},
 		"debank": {
-			"description": "멀티체인 포트폴리오 추적 및 소셜 플랫폼"
-		},
-		"rabby": {
-			"description": "멀티체인 브라우저 지갑"
-		},
-		"rainbow": {
-			"description": "아름다운 이더리움 지갑"
-		},
-		"metamask": {
-			"description": "가장 인기 있는 Web3 지갑"
-		},
-		"frame": {
-			"description": "프라이버시 중심 데스크톱 지갑"
-		},
-		"zerion": {
-			"description": "DeFi 포트폴리오 및 지갑"
-		},
-		"safe": {
-			"description": "다중 서명 스마트 지갑"
+			"description": "DeFi 포지션 분석 및 소셜 기능이 있는 멀티체인 포트폴리오 트래커"
 		},
 		"zapper": {
-			"description": "DeFi 포트폴리오 대시보드"
+			"description": "포트폴리오 추적, NFT 및 수익 관리를 위한 DeFi 대시보드"
 		},
-		"argent": {
-			"description": "복구 기능을 갖춘 스마트 지갑"
+		"zerion": {
+			"description": "포트폴리오 추적 및 멀티체인 거래 기능이 있는 스마트 DeFi 지갑"
 		},
-		"sequence": {
-			"description": "게이밍용 스마트 지갑"
+		"metamask": {
+			"description": "이더리움 및 EVM 체인용 가장 인기 있는 브라우저 확장 지갑"
 		},
-		"ledger": {
-			"description": "하드웨어 지갑 보안"
+		"rabby": {
+			"description": "거래 전 위험 스캔 기능이 있는 보안 중심 브라우저 지갑"
 		},
-		"trezor": {
-			"description": "하드웨어 지갑 선구자"
+		"rainbow": {
+			"description": "아름다운 NFT 디스플레이가 있는 사용자 친화적인 이더리움 지갑"
 		},
-		"privy": {
-			"description": "임베디드 지갑 솔루션"
+		"frame": {
+			"description": "하드웨어 지갑 통합이 있는 프라이버시 중심 데스크톱 지갑"
 		},
-		"dynamic": {
-			"description": "멀티 지갑 인증"
+		"safe": {
+			"description": "팀 및 DAO용 멀티시그 스마트 컨트랙트 지갑"
 		},
 		"ambire": {
-			"description": "이메일 로그인 및 무가스 거래를 갖춘 스마트 지갑"
+			"description": "이메일 로그인 및 가스리스 거래 지원 스마트 지갑"
 		},
 		"obvious": {
-			"description": "계정 추상화를 갖춘 스마트 지갑"
+			"description": "소셜 복구 기능이 있는 계정 추상화 지갑"
+		},
+		"soul_wallet": {
+			"description": "플러그인 시스템이 있는 모듈형 ERC-4337 스마트 지갑"
+		},
+		"patch_wallet": {
+			"description": "Web3 애플리케이션용 소셜 로그인 임베디드 지갑"
 		},
 		"pimlico": {
-			"description": "ERC-4337 번들러 및 페이마스터 인프라"
+			"description": "계정 추상화를 위한 ERC-4337 번들러 및 페이마스터 인프라"
 		},
 		"stackup": {
-			"description": "계정 추상화 번들러 및 SDK"
+			"description": "계정 추상화 번들러 서비스 및 개발자 SDK"
 		},
 		"biconomy": {
-			"description": "계정 추상화 및 무가스 거래 SDK"
+			"description": "가스리스 거래 SDK 및 계정 추상화 인프라"
+		},
+		"alchemy_aa": {
+			"description": "스마트 지갑 애플리케이션 구축을 위한 Account Kit SDK"
 		},
 		"zerodev": {
-			"description": "Kernel을 갖춘 모듈식 스마트 지갑 SDK"
+			"description": "Kernel 계정 구현이 있는 모듈형 스마트 지갑 SDK"
+		},
+		"particle_network": {
+			"description": "소셜 로그인 및 체인 추상화가 있는 Wallet-as-a-service"
+		},
+		"privy": {
+			"description": "원활한 Web3 사용자 온보딩을 위한 임베디드 지갑 SDK"
+		},
+		"dynamic": {
+			"description": "멀티 지갑 인증 및 온보딩 플랫폼"
+		},
+		"ledger": {
+			"description": "안전한 콜드 스토리지를 위한 업계 최고의 하드웨어 지갑"
+		},
+		"trezor": {
+			"description": "검증된 보안을 갖춘 오픈소스 하드웨어 지갑의 선구자"
+		},
+		"coinbase_wallet": {
+			"description": "DeFi 및 NFT 지원이 있는 Coinbase 셀프 커스터디 지갑"
+		},
+		"trust_wallet": {
+			"description": "수백만 자산을 지원하는 멀티체인 모바일 지갑"
+		},
+		"argent": {
+			"description": "가디언 및 StarkNet 지원이 있는 스마트 컨트랙트 지갑"
+		},
+		"sequence": {
+			"description": "게임 애플리케이션에 최적화된 스마트 지갑 SDK"
+		},
+		"phantom_wallet": {
+			"description": "Solana, 이더리움, 비트코인용 멀티체인 지갑"
+		},
+		"backpack_wallet": {
+			"description": "Solana 및 이더리움 생태계용 xNFT 지원 지갑"
+		},
+		"exodus_wallet": {
+			"description": "내장 거래 기능이 있는 데스크톱 및 모바일 지갑"
 		},
 		"solflare": {
-			"description": "Solana 브라우저 지갑"
+			"description": "스테이킹 및 NFT 지원이 있는 기능이 풍부한 Solana 지갑"
+		},
+		"keplr_wallet": {
+			"description": "Cosmos 생태계 및 IBC 전송을 위한 선도적인 지갑"
+		},
+		"leap_wallet": {
+			"description": "DeFi 통합이 있는 멀티체인 Cosmos 지갑"
+		},
+		"xdefi_wallet": {
+			"description": "네이티브 스왑 기능이 있는 크로스체인 브라우저 지갑"
+		},
+		"brave_wallet": {
+			"description": "프라이버시 우선 설계의 내장 브라우저 지갑"
+		},
+		"block_wallet": {
+			"description": "피싱 방지 기능이 있는 프라이버시 강화 브라우저 지갑"
+		},
+		"okx_wallet": {
+			"description": "DEX 및 NFT 마켓플레이스가 있는 멀티체인 Web3 지갑"
+		},
+		"core_wallet": {
+			"description": "비트코인 및 이더리움 지원이 있는 Avalanche 생태계 지갑"
+		},
+		"enkrypt_wallet": {
+			"description": "MyEtherWallet 팀의 멀티체인 브라우저 지갑"
+		},
+		"talisman_wallet": {
+			"description": "포트폴리오 대시보드가 있는 Polkadot 및 이더리움 지갑"
 		},
 		"subwallet": {
-			"description": "Polkadot 생태계 Web3 지갑"
+			"description": "Polkadot 및 Substrate 체인용 종합 지갑"
 		},
-		"tonhub": {
-			"description": "TON 블록체인 지갑"
+		"polkadot_js": {
+			"description": "Polkadot 생태계용 공식 브라우저 확장 프로그램"
 		},
-		"mytonwallet": {
-			"description": "TON용 Web3 지갑"
+		"nami_wallet": {
+			"description": "dApp 및 NFT용 경량 Cardano 브라우저 지갑"
 		},
-		"coolwallet": {
-			"description": "모바일 하드웨어 지갑"
+		"eternl_wallet": {
+			"description": "스테이킹 및 DeFi 도구가 있는 기능이 풍부한 Cardano 지갑"
 		},
-		"imtoken": {
-			"description": "멀티체인 모바일 지갑"
+		"yoroi_wallet": {
+			"description": "EMURGO의 Cardano 공식 라이트 지갑"
 		},
-		"tokenpocket": {
-			"description": "멀티체인 Web3 지갑"
+		"temple_wallet": {
+			"description": "Tezos DeFi 및 NFT 애플리케이션용 브라우저 지갑"
 		},
-		"myetherwallet": {
-			"description": "이더리움 Web3 지갑"
+		"kukai_wallet": {
+			"description": "소셜 로그인 및 DirectAuth 지원이 있는 Tezos 지갑"
 		},
-		"mycrypto": {
-			"description": "이더리움 지갑 및 인터페이스"
+		"petra_wallet": {
+			"description": "Aptos 블록체인 생태계용 공식 지갑"
 		},
-		"tronlink": {
-			"description": "TRON 블록체인 지갑"
+		"martian_wallet": {
+			"description": "Aptos 및 Sui 네트워크용 멀티체인 지갑"
 		},
-		"multis": {
-			"description": "기업용 다중 서명 지갑"
+		"sui_wallet": {
+			"description": "Sui 블록체인용 공식 브라우저 지갑"
 		},
-		"squads": {
-			"description": "Solana 다중 서명 지갑"
-		},
-		"biubiu-wallet-sweep": {
-			"description": "Wallet Sweep - Tool"
-		},
-		"biubiu-one-to-many": {
-			"description": "One-to-Many Transfer - Tool"
-		},
-		"biubiu-wallet-generator": {
-			"description": "Wallet Generator - Tool"
-		},
-		"biubiu-balance-scanner": {
-			"description": "Balance Scanner - Tool"
-		},
-		"soul-wallet": {
-			"description": "Soul Wallet - Tool"
-		},
-		"patch-wallet": {
-			"description": "Patch Wallet - Tool"
-		},
-		"alchemy-aa": {
-			"description": "Alchemy Account Kit - Tool"
-		},
-		"particle-network": {
-			"description": "Particle Network - Tool"
-		},
-		"coinbase-wallet": {
-			"description": "Coinbase Wallet - Tool"
-		},
-		"trust-wallet": {
-			"description": "Trust Wallet - Tool"
-		},
-		"phantom-wallet": {
-			"description": "Phantom - Tool"
-		},
-		"backpack-wallet": {
-			"description": "Backpack - Tool"
-		},
-		"exodus-wallet": {
-			"description": "Exodus - Tool"
-		},
-		"keplr-wallet": {
-			"description": "Keplr - Tool"
-		},
-		"leap-wallet": {
-			"description": "Leap Wallet - Tool"
-		},
-		"xdefi-wallet": {
-			"description": "XDEFI - Tool"
-		},
-		"brave-wallet": {
-			"description": "Brave Wallet - Tool"
-		},
-		"block-wallet": {
-			"description": "BlockWallet - Tool"
-		},
-		"okx-wallet": {
-			"description": "OKX Wallet - Tool"
-		},
-		"core-wallet": {
-			"description": "Core Wallet - Tool"
-		},
-		"enkrypt-wallet": {
-			"description": "Enkrypt - Tool"
-		},
-		"talisman-wallet": {
-			"description": "Talisman - Tool"
-		},
-		"polkadot-js": {
-			"description": "Polkadot.js - Tool"
-		},
-		"nami-wallet": {
-			"description": "Nami - Tool"
-		},
-		"eternl-wallet": {
-			"description": "Eternl - Tool"
-		},
-		"yoroi-wallet": {
-			"description": "Yoroi - Tool"
-		},
-		"temple-wallet": {
-			"description": "Temple Wallet - Tool"
-		},
-		"kukai-wallet": {
-			"description": "Kukai - Tool"
-		},
-		"petra-wallet": {
-			"description": "Petra - Tool"
-		},
-		"martian-wallet": {
-			"description": "Martian - Tool"
-		},
-		"sui-wallet": {
-			"description": "Sui Wallet - Tool"
-		},
-		"suiet-wallet": {
-			"description": "Suiet - Tool"
+		"suiet_wallet": {
+			"description": "개발자 친화적 기능이 있는 오픈소스 Sui 지갑"
 		},
 		"tonkeeper": {
-			"description": "Tonkeeper - Tool"
+			"description": "스테이킹 및 Jetton 지원이 있는 인기 TON 지갑"
 		},
-		"sender-wallet": {
-			"description": "Sender Wallet - Tool"
+		"tonhub": {
+			"description": "Whales 스테이킹 풀 통합이 있는 TON 지갑"
 		},
-		"meteor-wallet": {
-			"description": "Meteor Wallet - Tool"
+		"mytonwallet": {
+			"description": "데스크톱 및 브라우저용 오픈소스 TON 지갑"
 		},
-		"here-wallet": {
-			"description": "HERE Wallet - Tool"
+		"sender_wallet": {
+			"description": "DeFi 및 NFT 기능이 있는 NEAR Protocol 지갑"
 		},
-		"coin98-wallet": {
-			"description": "Coin98 - Tool"
+		"meteor_wallet": {
+			"description": "고급 포트폴리오 추적이 있는 NEAR 지갑"
 		},
-		"bitget-wallet": {
-			"description": "Bitget Wallet - Tool"
+		"here_wallet": {
+			"description": "스테이킹 보상이 있는 모바일 우선 NEAR 지갑"
 		},
-		"safepal-wallet": {
-			"description": "SafePal - Tool"
+		"coin98_wallet": {
+			"description": "90개 이상의 블록체인을 지원하는 멀티체인 DeFi 게이트웨이"
 		},
-		"onekey-wallet": {
-			"description": "OneKey - Tool"
+		"bitget_wallet": {
+			"description": "스왑 어그리게이터 및 런치패드가 있는 멀티체인 지갑"
 		},
-		"ellipal-wallet": {
-			"description": "ELLIPAL - Tool"
+		"safepal_wallet": {
+			"description": "Binance 지원 하드웨어 및 소프트웨어 지갑 콤보"
 		},
-		"dcent-wallet": {
-			"description": "D - Tool"
+		"onekey_wallet": {
+			"description": "멀티체인 지원이 있는 오픈소스 하드웨어 지갑"
 		},
-		"math-wallet": {
-			"description": "Math Wallet - Tool"
+		"ellipal_wallet": {
+			"description": "터치스크린 인터페이스가 있는 에어갭 하드웨어 지갑"
 		},
-		"alpha-wallet": {
-			"description": "AlphaWallet - Tool"
+		"dcent_wallet": {
+			"description": "지문 인증이 있는 생체 인식 하드웨어 지갑"
 		},
-		"status-wallet": {
-			"description": "Status - Tool"
+		"coolwallet": {
+			"description": "블루투스 연결이 있는 신용카드 크기 하드웨어 지갑"
 		},
-		"unstoppable-wallet": {
-			"description": "Unstoppable Wallet - Tool"
+		"imtoken": {
+			"description": "멀티체인 DeFi 지원이 있는 아시아에서 인기 있는 모바일 지갑"
 		},
-		"exodus-wallet-ext": {
-			"description": "Exodus Extension - Tool"
+		"tokenpocket": {
+			"description": "내장 dApp 브라우저가 있는 멀티체인 모바일 지갑"
 		},
-		"atomic-wallet": {
-			"description": "Atomic Wallet - Tool"
+		"math_wallet": {
+			"description": "100개 이상의 블록체인을 지원하는 멀티플랫폼 지갑"
 		},
-		"guarda-wallet": {
-			"description": "Guarda - Tool"
+		"alpha_wallet": {
+			"description": "TokenScript 지원이 있는 오픈소스 모바일 지갑"
 		},
-		"edge-wallet": {
-			"description": "Edge - Tool"
+		"status_wallet": {
+			"description": "내장 이더리움 지갑이 있는 프라이버시 메신저 앱"
 		},
-		"crypto-com-defi": {
-			"description": "Crypto.com DeFi Wallet - Tool"
+		"unstoppable_wallet": {
+			"description": "DeFi 분석이 있는 프라이버시 중심 모바일 지갑"
 		},
-		"lobstr-wallet": {
-			"description": "LOBSTR - Tool"
+		"exodus_wallet_ext": {
+			"description": "Exodus 멀티체인 지갑의 브라우저 확장 버전"
 		},
-		"freighter-wallet": {
-			"description": "Freighter - Tool"
+		"myetherwallet": {
+			"description": "이더리움 지갑 관리를 위한 원조 웹 인터페이스"
 		},
-		"den-wallet": {
-			"description": "Den - Tool"
+		"mycrypto": {
+			"description": "안전한 이더리움 관리를 위한 데스크톱 및 웹 지갑"
+		},
+		"atomic_wallet": {
+			"description": "아토믹 스왑 및 스테이킹 기능이 있는 데스크톱 지갑"
+		},
+		"guarda_wallet": {
+			"description": "내장 거래소 및 스테이킹이 있는 멀티플랫폼 지갑"
+		},
+		"edge_wallet": {
+			"description": "사용자 이름 기반 로그인이 있는 프라이버시 중심 모바일 지갑"
+		},
+		"crypto_com_defi": {
+			"description": "Cronos 체인 및 크로스체인 브릿지가 있는 DeFi 지갑"
+		},
+		"lobstr_wallet": {
+			"description": "거래 기능이 있는 사용자 친화적인 Stellar 지갑"
+		},
+		"freighter_wallet": {
+			"description": "Stellar 및 Soroban 스마트 컨트랙트용 브라우저 지갑"
+		},
+		"tronlink": {
+			"description": "TRON 블록체인 생태계용 공식 지갑"
+		},
+		"multis": {
+			"description": "급여 지급 기능이 있는 비즈니스 중심 멀티시그 지갑"
+		},
+		"squads": {
+			"description": "Solana용 멀티시그 트레저리 및 프로토콜 관리"
+		},
+		"den_wallet": {
+			"description": "DeFi 자동화 및 트랜잭션 배칭이 있는 스마트 지갑"
 		},
 		"instadapp": {
-			"description": "Instadapp - Tool"
+			"description": "프로토콜 집계 및 자동화가 있는 DeFi 스마트 계정"
 		},
-		"fuelet-wallet": {
-			"description": "Fuelet - Tool"
+		"fuelet_wallet": {
+			"description": "Fuel 모듈형 실행 레이어용 지갑"
 		},
-		"fuel-wallet": {
-			"description": "Fuel Wallet - Tool"
+		"fuel_wallet": {
+			"description": "Fuel Network용 공식 브라우저 지갑"
 		},
-		"braavos-wallet": {
-			"description": "Braavos - Tool"
+		"braavos_wallet": {
+			"description": "하드웨어 서명자 지원이 있는 StarkNet 스마트 지갑"
 		},
-		"keystone-wallet": {
-			"description": "Keystone - Tool"
+		"keystone_wallet": {
+			"description": "QR 코드 서명이 있는 에어갭 하드웨어 지갑"
 		},
-		"gridplus-wallet": {
-			"description": "GridPlus Lattice1 - Tool"
+		"gridplus_wallet": {
+			"description": "SafeCard 스토리지가 있는 엔터프라이즈 하드웨어 지갑"
 		},
-		"tangem-wallet": {
-			"description": "Tangem - Tool"
+		"tangem_wallet": {
+			"description": "모바일 사용을 위한 NFC 카드 기반 하드웨어 지갑"
 		},
-		"web3auth-wallet": {
-			"description": "Web3Auth - Tool"
+		"web3auth_wallet": {
+			"description": "소셜 로그인 지원이 있는 MPC 기반 키 관리"
 		},
-		"unisat-wallet": {
-			"description": "UniSat - Tool"
+		"unisat_wallet": {
+			"description": "Ordinals, BRC-20 및 인스크립션용 비트코인 지갑"
 		},
-		"xverse-wallet": {
-			"description": "Xverse - Tool"
+		"xverse_wallet": {
+			"description": "Ordinals 지원이 있는 비트코인 및 Stacks 지갑"
 		},
-		"leather-wallet": {
-			"description": "Leather (Hiro) - Tool"
+		"leather_wallet": {
+			"description": "이전 Hiro Wallet로 알려진 비트코인 및 Stacks 지갑"
 		},
-		"passport-wallet": {
-			"description": "Passport (Foundation) - Tool"
+		"passport_wallet": {
+			"description": "오픈소스 에어갭 비트코인 하드웨어 지갑"
 		},
-		"seedsigner-wallet": {
-			"description": "SeedSigner - Tool"
+		"seedsigner_wallet": {
+			"description": "DIY 에어갭 비트코인 서명 장치 프로젝트"
 		},
-		"fireblocks-wallet": {
-			"description": "Fireblocks - Tool"
+		"fireblocks_wallet": {
+			"description": "디지털 자산용 기관 MPC 커스터디 플랫폼"
 		},
-		"anchorage-wallet": {
-			"description": "Anchorage Digital - Tool"
+		"anchorage_wallet": {
+			"description": "연방 인가 디지털 자산 은행 및 커스터디언"
 		},
-		"bitgo-wallet": {
-			"description": "BitGo - Tool"
+		"bitgo_wallet": {
+			"description": "멀티시그 및 보험이 있는 기관 커스터디"
 		}
 	}
 }

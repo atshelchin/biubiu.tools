@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Curve Finance - Leading Stablecoin DEX | Low Slippage Swaps",
+		"description": "Discover Curve Finance, the premier DEX for stablecoin and pegged asset trading. Learn about low slippage swaps, liquidity provision, and CRV tokenomics.",
+		"keywords": "Curve Finance, stablecoin swap, DeFi, low slippage, CRV, liquidity pool, yield farming"
+	},
+	"overview": "Curve Finance is a decentralized exchange specifically designed for efficient trading between stablecoins and pegged assets. Launched in 2020 by Michael Egorov, a physicist and serial entrepreneur, Curve pioneered the StableSwap invariant - a bonding curve optimized for assets that should trade at similar prices.\n\nUnlike general-purpose AMMs like Uniswap, Curve's pools are optimized for minimal slippage when trading between correlated assets like USDC/USDT/DAI or different wrapped versions of Bitcoin. This specialization has made Curve the backbone of DeFi liquidity, with many protocols relying on Curve pools for their stablecoin and liquid staking token trading.\n\nThe protocol's veCRV tokenomics introduced vote-escrowed governance, where users lock CRV tokens to gain voting power and boost their liquidity mining rewards. This model has been widely copied across DeFi and sparked the 'Curve Wars' - protocols competing to accumulate CRV voting power to direct emissions to their pools.",
+	"features": {
+		"1": {
+			"title": "StableSwap AMM",
+			"description": "Specialized bonding curve that enables extremely low slippage swaps between pegged assets"
+		},
+		"2": {
+			"title": "Liquidity Provision",
+			"description": "Supply liquidity to pools and earn trading fees plus CRV token incentives"
+		},
+		"3": {
+			"title": "veCRV Governance",
+			"description": "Lock CRV tokens to vote on gauge weights and boost your liquidity mining rewards"
+		},
+		"4": {
+			"title": "Multi-Asset Pools",
+			"description": "Trade between multiple stablecoins or pegged assets in a single pool"
+		},
+		"5": {
+			"title": "Tricrypto Pools",
+			"description": "V2 pools for trading between volatile assets like ETH, BTC, and stablecoins"
+		},
+		"6": {
+			"title": "crvUSD",
+			"description": "Curve's native stablecoin backed by crypto collateral with soft liquidation mechanism"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Stablecoin Swaps",
+			"description": "Trade between USDC, USDT, DAI, and other stablecoins with minimal slippage"
+		},
+		"2": {
+			"title": "Yield Farming",
+			"description": "Provide liquidity to earn trading fees and CRV rewards boosted by veCRV"
+		},
+		"3": {
+			"title": "Large Trades",
+			"description": "Execute million-dollar trades between pegged assets with minimal price impact"
+		},
+		"4": {
+			"title": "LST Trading",
+			"description": "Swap between liquid staking tokens like stETH, rETH, and cbETH efficiently"
+		},
+		"5": {
+			"title": "Protocol Liquidity",
+			"description": "Protocols use Curve pools as primary liquidity venues for their tokens"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Curve Finance and how does it work?",
+			"answer": "Curve is a DEX optimized for trading between stablecoins and pegged assets. Its StableSwap algorithm assumes assets in a pool should be worth roughly the same, allowing for extremely low slippage trades. Liquidity providers earn fees from trades plus CRV token incentives."
+		},
+		"2": {
+			"question": "Why use Curve instead of Uniswap for stablecoin swaps?",
+			"answer": "Curve's specialized bonding curve provides much lower slippage for stablecoin trades. A $1 million USDC to USDT swap on Curve might have 0.01% slippage, while the same trade on Uniswap could have 0.3% or more. For large trades, this difference translates to significant savings."
+		},
+		"3": {
+			"question": "What is veCRV and why is it important?",
+			"answer": "veCRV (vote-escrowed CRV) is obtained by locking CRV tokens for up to 4 years. veCRV holders can vote to direct CRV emissions to specific pools, boost their own LP rewards up to 2.5x, and earn protocol fees. This creates incentives for long-term alignment with the protocol."
+		},
+		"4": {
+			"question": "What are the Curve Wars?",
+			"answer": "The Curve Wars refers to protocols competing to accumulate veCRV voting power. Protocols like Convex, Yearn, and others seek to control CRV emissions to benefit their liquidity. Convex in particular has accumulated a large share of veCRV, allowing CVX holders to influence Curve governance."
+		},
+		"5": {
+			"question": "What is crvUSD?",
+			"answer": "crvUSD is Curve's native stablecoin that users can mint by depositing crypto collateral. It features a unique 'soft liquidation' mechanism called LLAMMA that gradually converts collateral to crvUSD as prices fall, reducing the risk of sudden liquidations compared to traditional lending protocols."
+		}
+	},
+	"cta": {
+		"ready": "Ready to swap with minimal slippage?",
+		"button": "Open Curve",
+		"note": "The home of stablecoin liquidity"
+	}
+}

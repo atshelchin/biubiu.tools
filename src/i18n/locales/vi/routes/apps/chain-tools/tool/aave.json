@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "Aave - Giao thức cho vay DeFi hàng đầu | Vay & Cho vay tiền điện tử",
+		"description": "Khám phá Aave, giao thức cho vay phi tập trung hàng đầu thế giới. Tìm hiểu về flash loans, hỗ trợ đa chuỗi và cách kiếm lợi nhuận bằng cách cung cấp tài sản tiền điện tử.",
+		"keywords": "Aave, DeFi lending, crypto borrowing, flash loans, yield farming, Ethereum, Polygon, Arbitrum"
+	},
+	"overview": "Aave là một trong những giao thức cho vay phi tập trung lớn nhất và đáng tin cậy nhất trong DeFi, cho phép người dùng cho vay, vay và kiếm lãi suất từ tài sản tiền điện tử mà không cần trung gian. Ban đầu ra mắt với tên ETHLend vào năm 2017 bởi Stani Kulechov, giao thức đã đổi tên thành Aave (có nghĩa là 'ma' trong tiếng Phần Lan) vào năm 2020 và kể từ đó đã trở thành nền tảng của tài chính phi tập trung.\n\nGiao thức hoạt động thông qua các bể thanh khoản nơi người dùng gửi tài sản tiền điện tử để kiếm lãi suất, trong khi người vay có thể vay tiền bằng cách cung cấp tài sản thế chấp. Aave đã tiên phong trong một số đổi mới DeFi, bao gồm flash loans - các khoản vay không cần tài sản thế chấp phải được vay và trả lại trong một giao dịch duy nhất - đã trở thành công cụ thiết yếu cho arbitrage, hoán đổi tài sản thế chấp và các chiến lược tự thanh lý.\n\nTính đến năm 2024, Aave đã bảo đảm hơn 10 tỷ USD trong Tổng giá trị khóa (TVL) trên Ethereum, Polygon, Arbitrum, Optimism và các mạng khác, khiến nó trở thành một trong những giao thức hiệu quả vốn nhất trong không gian này.",
+	"features": {
+		"1": {
+			"title": "Cung cấp & Kiếm lãi suất",
+			"description": "Gửi tài sản tiền điện tử vào các bể thanh khoản và kiếm lãi suất biến đổi dựa trên nhu cầu thị trường"
+		},
+		"2": {
+			"title": "Vay với tài sản thế chấp",
+			"description": "Vay tiền bằng cách cung cấp tài sản thế chấp tiền điện tử, với các tùy chọn lãi suất biến đổi hoặc ổn định linh hoạt"
+		},
+		"3": {
+			"title": "Flash Loans",
+			"description": "Truy cập các khoản vay không cần tài sản thế chấp trong một giao dịch duy nhất - hoàn hảo cho arbitrage và các chiến lược DeFi"
+		},
+		"4": {
+			"title": "Triển khai đa chuỗi",
+			"description": "Có sẵn trên Ethereum, Polygon, Arbitrum, Optimism, Avalanche và nhiều mạng khác"
+		},
+		"5": {
+			"title": "Mô-đun an toàn",
+			"description": "Stake token AAVE trong Mô-đun an toàn để kiếm phần thưởng đồng thời bảo vệ giao thức"
+		},
+		"6": {
+			"title": "Stablecoin GHO",
+			"description": "Tạo GHO, stablecoin phi tập trung gốc của Aave, bằng cách sử dụng tài sản thế chấp đã cung cấp"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Tạo lợi nhuận",
+			"description": "Kiếm thu nhập thụ động bằng cách cung cấp stablecoin hoặc tài sản tiền điện tử cho các bể cho vay"
+		},
+		"2": {
+			"title": "Vị thế đòn bẩy",
+			"description": "Vay dựa trên tài sản nắm giữ để tăng exposure mà không cần bán tài sản của bạn"
+		},
+		"3": {
+			"title": "Flash Loan Arbitrage",
+			"description": "Thực hiện các chiến lược DeFi phức tạp bao gồm arbitrage giá và hoán đổi tài sản thế chấp"
+		},
+		"4": {
+			"title": "Truy cập thanh khoản",
+			"description": "Truy cập thanh khoản mà không cần bán tài sản nắm giữ dài hạn - lý tưởng để tối ưu hóa thuế"
+		},
+		"5": {
+			"title": "DeFi đa chuỗi",
+			"description": "Sử dụng cùng một giao thức trên nhiều chuỗi với trải nghiệm người dùng nhất quán"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Aave là gì và nó hoạt động như thế nào?",
+			"answer": "Aave là một giao thức cho vay phi tập trung nơi người dùng có thể cung cấp tài sản tiền điện tử để kiếm lãi suất hoặc vay với tài sản thế chấp. Người cung cấp gửi tài sản vào các bể thanh khoản và kiếm lãi suất biến đổi dựa trên tỷ lệ sử dụng. Người vay phải cung cấp tài sản thế chấp (thường là 120-150% giá trị khoản vay) và trả lãi suất cho các khoản vay của họ."
+		},
+		"2": {
+			"question": "Aave có an toàn để sử dụng không?",
+			"answer": "Aave là một trong những giao thức DeFi được thử nghiệm nhiều nhất với nhiều cuộc kiểm toán bảo mật và hồ sơ theo dõi vững chắc. Giao thức có Mô-đun an toàn nơi những người stake AAVE cung cấp hỗ trợ chống lại các thiếu hụt tiềm năng. Tuy nhiên, DeFi luôn mang rủi ro hợp đồng thông minh, vì vậy chỉ gửi những gì bạn có thể chấp nhận mất."
+		},
+		"3": {
+			"question": "Flash loans là gì?",
+			"answer": "Flash loans là các khoản vay không cần tài sản thế chấp phải được vay và trả lại trong một giao dịch blockchain duy nhất. Nếu khoản vay không được trả lại vào cuối giao dịch, toàn bộ giao dịch sẽ được hoàn tác. Chúng được sử dụng cho arbitrage, hoán đổi tài sản thế chấp và các chiến lược tự thanh lý."
+		},
+		"4": {
+			"question": "Token AAVE được sử dụng để làm gì?",
+			"answer": "AAVE là token quản trị cho phép người nắm giữ bỏ phiếu về các nâng cấp giao thức và các thông số. Người nắm giữ token cũng có thể stake AAVE trong Mô-đun an toàn để kiếm phần thưởng đồng thời cung cấp bảo hiểm cho giao thức chống lại nợ xấu tiềm năng."
+		},
+		"5": {
+			"question": "Stablecoin GHO là gì?",
+			"answer": "GHO là stablecoin phi tập trung gốc của Aave mà người dùng có thể tạo bằng cách sử dụng tài sản thế chấp đã cung cấp. Không giống như stablecoin truyền thống, GHO được tạo trực tiếp thông qua giao thức Aave, với các khoản thanh toán lãi suất đi vào kho bạc Aave DAO."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng bắt đầu cho vay?",
+		"button": "Mở Aave",
+		"note": "Kiếm lợi nhuận từ tài sản tiền điện tử của bạn"
+	}
+}

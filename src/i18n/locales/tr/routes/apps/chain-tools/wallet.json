@@ -1,329 +1,329 @@
 {
 	"category_seo": {
-		"title": "Kripto Cüzdanlar - Donanım, Yazılım ve Çoklu Zincir | BiuBiu Tools",
-		"description": "Güvenlik ve kolaylık için en iyi kripto cüzdanları karşılaştırın. Tüm blokzincirler için donanım cüzdanları, tarayıcı uzantıları ve mobil cüzdanlar.",
-		"keywords": "kripto cüzdanı, donanım cüzdanı, metamask, ledger, trezor, çoklu zincir cüzdanı",
+		"title": "Kripto Cüzdanlar - Donanım, Yazılım & Multi-Chain | BiuBiu Tools",
+		"description": "Güvenlik ve kullanım kolaylığı için en iyi kripto cüzdanları karşılaştırın. Tüm blockchain'ler için donanım cüzdanlar, tarayıcı uzantıları ve mobil cüzdanlar.",
+		"keywords": "kripto cüzdan, donanım cüzdan, metamask, ledger, trezor, multi-chain cüzdan",
 		"faqs": [
 			{
-				"question": "Kripto cüzdanı nedir?",
-				"answer": "Kripto cüzdanı, özel anahtarlarınızı saklayan ve kripto paraları göndermenize, almanıza ve yönetmenize olanak tanıyan yazılım veya donanımdır. Aslında kripto saklamaz - varlıklar blokzincirde kalır."
+				"question": "Kripto cüzdan nedir?",
+				"answer": "Kripto cüzdan, özel anahtarlarınızı saklayan ve kripto para göndermenizi, almanızı ve yönetmenizi sağlayan yazılım veya donanımdır. Cüzdanlar aslında kripto saklamaz - varlıklar blockchain'de kalır."
 			},
 			{
-				"question": "Donanım cüzdanı mı yoksa yazılım cüzdanı mı?",
-				"answer": "Donanım cüzdanları (Ledger, Trezor) anahtarları maksimum güvenlik için çevrimdışı saklar, büyük tutarlar için idealdir. Yazılım cüzdanları (MetaMask, Rainbow) günlük kullanım için daha kullanışlıdır ancak internete bağlıdır."
+				"question": "Donanım cüzdan mı yazılım cüzdan mı?",
+				"answer": "Donanım cüzdanlar (Ledger, Trezor) anahtarları çevrimdışı saklar, maksimum güvenlik için idealdir. Yazılım cüzdanlar (MetaMask, Rainbow) günlük kullanım için daha uygun ama internete bağlıdır."
 			},
 			{
 				"question": "Cüzdanımı nasıl güvende tutarım?",
-				"answer": "Tohum kelime dizinizi asla paylaşmayın, büyük miktarlar için donanım cüzdanları kullanın, mümkün olan yerlerde 2FA'yı etkinleştirin, imzalamadan önce işlem detaylarını doğrulayın ve kimlik avı sitelerine karşı dikkatli olun."
+				"answer": "Tohum ifadenizi asla paylaşmayın, büyük miktarlar için donanım cüzdan kullanın, mümkünse 2FA etkinleştirin, imzalamadan önce işlem detaylarını doğrulayın ve phishing sitelerine karşı dikkatli olun."
 			}
 		]
 	},
 	"tools": {
+		"biubiu_wallet_sweep": {
+			"description": "Birden fazla cüzdandan tokenleri tek bir adrese toplu olarak birleştirin"
+		},
+		"biubiu_one_to_many": {
+			"description": "Bir cüzdandan birden fazla alıcıya token dağıtın"
+		},
+		"biubiu_wallet_generator": {
+			"description": "Mnemonik ifadelerle toplu HD cüzdan oluşturun"
+		},
+		"biubiu_balance_scanner": {
+			"description": "Birden fazla cüzdanda token bakiyelerini eşzamanlı tarayın"
+		},
 		"debank": {
-			"description": "Çoklu zincir portföy takipçisi ve sosyal platform"
-		},
-		"ambire": {
-			"description": "E-posta girişi ve gazsız işlemlerle akıllı cüzdan"
-		},
-		"argent": {
-			"description": "Kurtarma özellikli akıllı cüzdan"
-		},
-		"biconomy": {
-			"description": "Hesap soyutlama ve gazsız işlem SDK"
-		},
-		"coolwallet": {
-			"description": "Mobil donanım cüzdanı"
-		},
-		"dynamic": {
-			"description": "Çoklu cüzdan kimlik doğrulama"
-		},
-		"frame": {
-			"description": "Gizlilik odaklı masaüstü cüzdan"
-		},
-		"imtoken": {
-			"description": "Çoklu zincir mobil cüzdan"
-		},
-		"ledger": {
-			"description": "Donanım cüzdan güvenliği"
-		},
-		"metamask": {
-			"description": "En popüler Web3 cüzdan"
-		},
-		"multis": {
-			"description": "Kurumsal kripto cüzdan"
-		},
-		"mycrypto": {
-			"description": "Ethereum cüzdan arayüzü"
-		},
-		"myetherwallet": {
-			"description": "Ethereum cüzdan arayüzü"
-		},
-		"mytonwallet": {
-			"description": "TON blokzincir cüzdanı"
-		},
-		"obvious": {
-			"description": "Hesap soyutlama ile akıllı cüzdan"
-		},
-		"pimlico": {
-			"description": "ERC-4337 toplayıcı ve ödeme yöneticisi altyapısı"
-		},
-		"privy": {
-			"description": "Gömülü cüzdan çözümü"
-		},
-		"rabby": {
-			"description": "Çoklu zincir tarayıcı cüzdanı"
-		},
-		"rainbow": {
-			"description": "Güzel Ethereum cüzdanı"
-		},
-		"safe": {
-			"description": "Çoklu imzalı akıllı cüzdan"
-		},
-		"sequence": {
-			"description": "Oyun için akıllı cüzdan"
-		},
-		"solflare": {
-			"description": "Solana cüzdanı"
-		},
-		"squads": {
-			"description": "Solana çoklu imza cüzdanı"
-		},
-		"stackup": {
-			"description": "Hesap soyutlama toplayıcısı ve SDK"
-		},
-		"subwallet": {
-			"description": "Polkadot ekosistem cüzdanı"
-		},
-		"tokenpocket": {
-			"description": "Çoklu zincir mobil cüzdan"
-		},
-		"tonhub": {
-			"description": "TON blokzincir cüzdanı"
-		},
-		"trezor": {
-			"description": "Donanım cüzdan öncüsü"
-		},
-		"tronlink": {
-			"description": "Tron blokzincir cüzdanı"
+			"description": "DeFi analizi ve sosyal özelliklerle multi-chain portföy takipçisi"
 		},
 		"zapper": {
-			"description": "DeFi portföy kontrol paneli"
+			"description": "Portföy takibi, NFT'ler ve getiri yönetimi için DeFi panosu"
 		},
 		"zerion": {
-			"description": "DeFi portföyü ve cüzdan"
+			"description": "Portföy takibi ve multi-chain trading ile akıllı DeFi cüzdanı"
+		},
+		"metamask": {
+			"description": "Ethereum ve EVM zincirleri için en popüler tarayıcı uzantısı cüzdanı"
+		},
+		"rabby": {
+			"description": "İşlem öncesi risk doğrulamalı güvenlik odaklı tarayıcı cüzdanı"
+		},
+		"rainbow": {
+			"description": "Güzel NFT görüntüleme ile kullanıcı dostu Ethereum cüzdanı"
+		},
+		"frame": {
+			"description": "Donanım entegrasyonlu gizlilik odaklı masaüstü cüzdanı"
+		},
+		"safe": {
+			"description": "Ekipler ve DAO'lar için çoklu imza akıllı kontrat cüzdanı"
+		},
+		"ambire": {
+			"description": "E-posta girişi ve gassız işlemlerle akıllı cüzdan"
+		},
+		"obvious": {
+			"description": "Sosyal kurtarmalı hesap soyutlama cüzdanı"
+		},
+		"soul_wallet": {
+			"description": "Plugin sistemli modüler ERC-4337 akıllı cüzdan"
+		},
+		"patch_wallet": {
+			"description": "Web3 uygulamaları için sosyal giriş ile gömülü cüzdan"
+		},
+		"pimlico": {
+			"description": "Hesap soyutlama için ERC-4337 bundler ve paymaster altyapısı"
+		},
+		"stackup": {
+			"description": "Geliştiriciler için hesap soyutlama bundler servisi ve SDK"
+		},
+		"biconomy": {
+			"description": "Gassız işlem SDK'sı ve hesap soyutlama altyapısı"
+		},
+		"alchemy_aa": {
+			"description": "Akıllı cüzdan uygulamaları oluşturmak için Account Kit SDK"
 		},
 		"zerodev": {
-			"description": "Kernel ile modüler akıllı cüzdan SDK"
+			"description": "Kernel hesap implementasyonu ile modüler akıllı cüzdan SDK'sı"
 		},
-		"biubiu-wallet-sweep": {
-			"description": "Wallet Sweep - Tool"
+		"particle_network": {
+			"description": "Sosyal giriş ve zincir soyutlamalı Wallet-as-a-service"
 		},
-		"biubiu-one-to-many": {
-			"description": "One-to-Many Transfer - Tool"
+		"privy": {
+			"description": "Sorunsuz Web3 onboarding için gömülü cüzdan SDK'sı"
 		},
-		"biubiu-wallet-generator": {
-			"description": "Wallet Generator - Tool"
+		"dynamic": {
+			"description": "Çoklu cüzdan kimlik doğrulama ve onboarding platformu"
 		},
-		"biubiu-balance-scanner": {
-			"description": "Balance Scanner - Tool"
+		"ledger": {
+			"description": "Güvenli soğuk depolama için lider donanım cüzdanı"
 		},
-		"soul-wallet": {
-			"description": "Soul Wallet - Tool"
+		"trezor": {
+			"description": "Kanıtlanmış güvenlikle açık kaynak donanım cüzdan öncüsü"
 		},
-		"patch-wallet": {
-			"description": "Patch Wallet - Tool"
+		"coinbase_wallet": {
+			"description": "DeFi ve NFT desteğiyle Coinbase'in kendi kendine saklama cüzdanı"
 		},
-		"alchemy-aa": {
-			"description": "Alchemy Account Kit - Tool"
+		"trust_wallet": {
+			"description": "Milyonlarca varlığı destekleyen multi-chain mobil cüzdan"
 		},
-		"particle-network": {
-			"description": "Particle Network - Tool"
+		"argent": {
+			"description": "Koruyucular ve StarkNet desteğiyle akıllı kontrat cüzdanı"
 		},
-		"coinbase-wallet": {
-			"description": "Coinbase Wallet - Tool"
+		"sequence": {
+			"description": "Oyun uygulamaları için optimize edilmiş akıllı cüzdan SDK'sı"
 		},
-		"trust-wallet": {
-			"description": "Trust Wallet - Tool"
+		"phantom_wallet": {
+			"description": "Solana, Ethereum ve Bitcoin için multi-chain cüzdan"
 		},
-		"phantom-wallet": {
-			"description": "Phantom - Tool"
+		"backpack_wallet": {
+			"description": "Solana ve Ethereum ekosistemleri için xNFT destekli cüzdan"
 		},
-		"backpack-wallet": {
-			"description": "Backpack - Tool"
+		"exodus_wallet": {
+			"description": "Yerleşik takas özelliğiyle masaüstü ve mobil cüzdan"
 		},
-		"exodus-wallet": {
-			"description": "Exodus - Tool"
+		"solflare": {
+			"description": "Staking ve NFT desteğiyle zengin özellikli Solana cüzdanı"
 		},
-		"keplr-wallet": {
-			"description": "Keplr - Tool"
+		"keplr_wallet": {
+			"description": "Cosmos ekosistemi ve IBC transferleri için lider cüzdan"
 		},
-		"leap-wallet": {
-			"description": "Leap Wallet - Tool"
+		"leap_wallet": {
+			"description": "DeFi entegrasyonlarıyla multi-chain Cosmos cüzdanı"
 		},
-		"xdefi-wallet": {
-			"description": "XDEFI - Tool"
+		"xdefi_wallet": {
+			"description": "Yerleşik swap fonksiyonlu cross-chain tarayıcı cüzdanı"
 		},
-		"brave-wallet": {
-			"description": "Brave Wallet - Tool"
+		"brave_wallet": {
+			"description": "Gizlilik öncelikli tasarımla tarayıcı entegre cüzdan"
 		},
-		"block-wallet": {
-			"description": "BlockWallet - Tool"
+		"block_wallet": {
+			"description": "Gelişmiş gizlilik ve anti-phishing korumalı tarayıcı cüzdanı"
 		},
-		"okx-wallet": {
-			"description": "OKX Wallet - Tool"
+		"okx_wallet": {
+			"description": "DEX ve NFT marketplace'li multi-chain Web3 cüzdanı"
 		},
-		"core-wallet": {
-			"description": "Core Wallet - Tool"
+		"core_wallet": {
+			"description": "Bitcoin ve Ethereum destekli Avalanche ekosistem cüzdanı"
 		},
-		"enkrypt-wallet": {
-			"description": "Enkrypt - Tool"
+		"enkrypt_wallet": {
+			"description": "MyEtherWallet ekibinden multi-chain tarayıcı cüzdanı"
 		},
-		"talisman-wallet": {
-			"description": "Talisman - Tool"
+		"talisman_wallet": {
+			"description": "Portföy panosulu Polkadot ve Ethereum cüzdanı"
 		},
-		"polkadot-js": {
-			"description": "Polkadot.js - Tool"
+		"subwallet": {
+			"description": "Polkadot ve Substrate zincirleri için kapsamlı cüzdan"
 		},
-		"nami-wallet": {
-			"description": "Nami - Tool"
+		"polkadot_js": {
+			"description": "Polkadot ekosistemi için resmi tarayıcı uzantısı"
 		},
-		"eternl-wallet": {
-			"description": "Eternl - Tool"
+		"nami_wallet": {
+			"description": "dApp'ler ve NFT'ler için hafif Cardano tarayıcı cüzdanı"
 		},
-		"yoroi-wallet": {
-			"description": "Yoroi - Tool"
+		"eternl_wallet": {
+			"description": "Staking ve DeFi araçlarıyla zengin özellikli Cardano cüzdanı"
 		},
-		"temple-wallet": {
-			"description": "Temple Wallet - Tool"
+		"yoroi_wallet": {
+			"description": "EMURGO tarafından Cardano için resmi hafif cüzdan"
 		},
-		"kukai-wallet": {
-			"description": "Kukai - Tool"
+		"temple_wallet": {
+			"description": "Tezos DeFi ve NFT uygulamaları için tarayıcı cüzdanı"
 		},
-		"petra-wallet": {
-			"description": "Petra - Tool"
+		"kukai_wallet": {
+			"description": "Sosyal giriş ve DirectAuth destekli Tezos cüzdanı"
 		},
-		"martian-wallet": {
-			"description": "Martian - Tool"
+		"petra_wallet": {
+			"description": "Aptos blockchain ekosistemi için resmi cüzdan"
 		},
-		"sui-wallet": {
-			"description": "Sui Wallet - Tool"
+		"martian_wallet": {
+			"description": "Aptos ve Sui ağları için multi-chain cüzdan"
 		},
-		"suiet-wallet": {
-			"description": "Suiet - Tool"
+		"sui_wallet": {
+			"description": "Sui blockchain için resmi tarayıcı cüzdanı"
+		},
+		"suiet_wallet": {
+			"description": "Geliştirici dostu özelliklerle açık kaynak Sui cüzdanı"
 		},
 		"tonkeeper": {
-			"description": "Tonkeeper - Tool"
+			"description": "Staking ve Jetton desteğiyle popüler TON cüzdanı"
 		},
-		"sender-wallet": {
-			"description": "Sender Wallet - Tool"
+		"tonhub": {
+			"description": "Whales staking havuzu entegrasyonlu TON cüzdanı"
 		},
-		"meteor-wallet": {
-			"description": "Meteor Wallet - Tool"
+		"mytonwallet": {
+			"description": "Masaüstü ve tarayıcı için açık kaynak TON cüzdanı"
 		},
-		"here-wallet": {
-			"description": "HERE Wallet - Tool"
+		"sender_wallet": {
+			"description": "DeFi ve NFT özellikleriyle NEAR Protocol cüzdanı"
 		},
-		"coin98-wallet": {
-			"description": "Coin98 - Tool"
+		"meteor_wallet": {
+			"description": "Gelişmiş portföy takibiyle NEAR cüzdanı"
 		},
-		"bitget-wallet": {
-			"description": "Bitget Wallet - Tool"
+		"here_wallet": {
+			"description": "Staking ödülleriyle mobil öncelikli NEAR cüzdanı"
 		},
-		"safepal-wallet": {
-			"description": "SafePal - Tool"
+		"coin98_wallet": {
+			"description": "90+ blockchain destekli multi-chain DeFi portalı"
 		},
-		"onekey-wallet": {
-			"description": "OneKey - Tool"
+		"bitget_wallet": {
+			"description": "Swap agregator ve launchpad'li multi-chain cüzdan"
 		},
-		"ellipal-wallet": {
-			"description": "ELLIPAL - Tool"
+		"safepal_wallet": {
+			"description": "Binance destekli donanım ve yazılım cüzdan kombinasyonu"
 		},
-		"dcent-wallet": {
-			"description": "D - Tool"
+		"onekey_wallet": {
+			"description": "Multi-chain destekli açık kaynak donanım cüzdanı"
 		},
-		"math-wallet": {
-			"description": "Math Wallet - Tool"
+		"ellipal_wallet": {
+			"description": "Dokunmatik ekran arayüzlü hava boşluklu donanım cüzdanı"
 		},
-		"alpha-wallet": {
-			"description": "AlphaWallet - Tool"
+		"dcent_wallet": {
+			"description": "Parmak izi kimlik doğrulamalı biyometrik donanım cüzdanı"
 		},
-		"status-wallet": {
-			"description": "Status - Tool"
+		"coolwallet": {
+			"description": "Bluetooth bağlantılı kredi kartı boyutunda donanım cüzdanı"
 		},
-		"unstoppable-wallet": {
-			"description": "Unstoppable Wallet - Tool"
+		"imtoken": {
+			"description": "Asya'da multi-chain DeFi destekli popüler mobil cüzdan"
 		},
-		"exodus-wallet-ext": {
-			"description": "Exodus Extension - Tool"
+		"tokenpocket": {
+			"description": "Yerleşik dApp tarayıcılı multi-chain mobil cüzdan"
 		},
-		"atomic-wallet": {
-			"description": "Atomic Wallet - Tool"
+		"math_wallet": {
+			"description": "100+ blockchain destekli çoklu platform cüzdanı"
 		},
-		"guarda-wallet": {
-			"description": "Guarda - Tool"
+		"alpha_wallet": {
+			"description": "TokenScript destekli açık kaynak mobil cüzdan"
 		},
-		"edge-wallet": {
-			"description": "Edge - Tool"
+		"status_wallet": {
+			"description": "Entegre Ethereum cüzdanlı gizli mesajlaşma uygulaması"
 		},
-		"crypto-com-defi": {
-			"description": "Crypto.com DeFi Wallet - Tool"
+		"unstoppable_wallet": {
+			"description": "DeFi analitiğiyle gizlilik odaklı mobil cüzdan"
 		},
-		"lobstr-wallet": {
-			"description": "LOBSTR - Tool"
+		"exodus_wallet_ext": {
+			"description": "Exodus multi-chain cüzdanının tarayıcı uzantısı versiyonu"
 		},
-		"freighter-wallet": {
-			"description": "Freighter - Tool"
+		"myetherwallet": {
+			"description": "Ethereum cüzdan yönetimi için orijinal web arayüzü"
 		},
-		"den-wallet": {
-			"description": "Den - Tool"
+		"mycrypto": {
+			"description": "Güvenli Ethereum yönetimi için masaüstü ve web cüzdanı"
+		},
+		"atomic_wallet": {
+			"description": "Atomik swap ve staking özellikleriyle masaüstü cüzdan"
+		},
+		"guarda_wallet": {
+			"description": "Yerleşik borsa ve staking ile çoklu platform cüzdanı"
+		},
+		"edge_wallet": {
+			"description": "Kullanıcı tabanlı girişle gizlilik odaklı mobil cüzdan"
+		},
+		"crypto_com_defi": {
+			"description": "Cronos zinciri ve cross-chain köprü ile DeFi cüzdanı"
+		},
+		"lobstr_wallet": {
+			"description": "Trading özellikleriyle kullanıcı dostu Stellar cüzdanı"
+		},
+		"freighter_wallet": {
+			"description": "Stellar ve Soroban akıllı kontratları için tarayıcı cüzdanı"
+		},
+		"tronlink": {
+			"description": "TRON blockchain ekosistemi için resmi cüzdan"
+		},
+		"multis": {
+			"description": "Bordro özellikleriyle iş odaklı çoklu imza cüzdanı"
+		},
+		"squads": {
+			"description": "Solana için çoklu imza hazine ve protokol yönetimi"
+		},
+		"den_wallet": {
+			"description": "DeFi otomasyonu ve işlem birleştirme ile akıllı cüzdan"
 		},
 		"instadapp": {
-			"description": "Instadapp - Tool"
+			"description": "Protokol agregasyonu ve otomasyonlu DeFi akıllı hesabı"
 		},
-		"fuelet-wallet": {
-			"description": "Fuelet - Tool"
+		"fuelet_wallet": {
+			"description": "Fuel modüler yürütme katmanı için cüzdan"
 		},
-		"fuel-wallet": {
-			"description": "Fuel Wallet - Tool"
+		"fuel_wallet": {
+			"description": "Fuel Network için resmi tarayıcı cüzdanı"
 		},
-		"braavos-wallet": {
-			"description": "Braavos - Tool"
+		"braavos_wallet": {
+			"description": "Donanım imzalayıcı desteğiyle StarkNet için akıllı cüzdan"
 		},
-		"keystone-wallet": {
-			"description": "Keystone - Tool"
+		"keystone_wallet": {
+			"description": "QR kodu imzalamalı hava boşluklu donanım cüzdanı"
 		},
-		"gridplus-wallet": {
-			"description": "GridPlus Lattice1 - Tool"
+		"gridplus_wallet": {
+			"description": "SafeCard depolamalı kurumsal düzey donanım cüzdanı"
 		},
-		"tangem-wallet": {
-			"description": "Tangem - Tool"
+		"tangem_wallet": {
+			"description": "Mobil kullanım için NFC tabanlı kart donanım cüzdanı"
 		},
-		"web3auth-wallet": {
-			"description": "Web3Auth - Tool"
+		"web3auth_wallet": {
+			"description": "Sosyal giriş desteğiyle MPC tabanlı anahtar yönetimi"
 		},
-		"unisat-wallet": {
-			"description": "UniSat - Tool"
+		"unisat_wallet": {
+			"description": "Ordinals, BRC-20 ve yazıtlar için Bitcoin cüzdanı"
 		},
-		"xverse-wallet": {
-			"description": "Xverse - Tool"
+		"xverse_wallet": {
+			"description": "Ordinals desteğiyle Bitcoin ve Stacks cüzdanı"
 		},
-		"leather-wallet": {
-			"description": "Leather (Hiro) - Tool"
+		"leather_wallet": {
+			"description": "Eski adıyla Hiro Wallet olan Bitcoin ve Stacks cüzdanı"
 		},
-		"passport-wallet": {
-			"description": "Passport (Foundation) - Tool"
+		"passport_wallet": {
+			"description": "Açık kaynak hava boşluklu Bitcoin donanım cüzdanı"
 		},
-		"seedsigner-wallet": {
-			"description": "SeedSigner - Tool"
+		"seedsigner_wallet": {
+			"description": "DIY hava boşluklu Bitcoin imzalama cihazı projesi"
 		},
-		"fireblocks-wallet": {
-			"description": "Fireblocks - Tool"
+		"fireblocks_wallet": {
+			"description": "Dijital varlıklar için kurumsal MPC saklama platformu"
 		},
-		"anchorage-wallet": {
-			"description": "Anchorage Digital - Tool"
+		"anchorage_wallet": {
+			"description": "Federal lisanslı dijital varlık bankası ve saklayıcı"
 		},
-		"bitgo-wallet": {
-			"description": "BitGo - Tool"
+		"bitgo_wallet": {
+			"description": "Çoklu imza ve sigortayla kurumsal saklama"
 		}
 	}
 }

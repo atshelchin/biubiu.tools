@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "GMX - Sàn giao dịch Perpetual phi tập trung | Giao dịch với đòn bẩy",
+		"description": "Khám phá GMX, sàn giao dịch perpetual phi tập trung hàng đầu. Tìm hiểu về giao dịch đòn bẩy, cung cấp thanh khoản GLP và hoán đổi perpetual phí thấp trên Arbitrum và Avalanche.",
+		"keywords": "GMX, perpetual trading, decentralized exchange, leverage, Arbitrum, crypto derivatives, GLP"
+	},
+	"overview": "GMX là một sàn giao dịch perpetual phi tập trung cho phép các nhà giao dịch mở vị thế long hoặc short trên tiền điện tử với đòn bẩy lên đến 100x, trong khi các nhà cung cấp thanh khoản kiếm lợi nhuận bằng cách cung cấp tài sản cho bể đa tài sản của giao thức. Ra mắt vào năm 2021, GMX đã trở thành một trong những nền tảng phái sinh lớn nhất trong DeFi, tiên phong mô hình GLP nơi tất cả các nhà giao dịch giao dịch chống lại một bể thanh khoản chung.\n\nKhác với các sàn giao dịch tập trung hoặc DEX order book, GMX sử dụng mô hình dựa trên bể độc đáo nơi các nhà giao dịch vay từ bể GLP để thực hiện các vị thế đòn bẩy. Điều này cho phép giao dịch không slippage trên các tài sản được hỗ trợ, với giá có nguồn gốc từ oracle Chainlink. Bể GLP kiếm được 70% tất cả phí giao dịch, khiến nó trở thành nguồn lợi nhuận hấp dẫn cho các nhà đầu tư thụ động.\n\nGMX được triển khai trên Arbitrum và Avalanche, xử lý hơn 100 tỷ USD khối lượng giao dịch tích lũy. Việc ra mắt V2 của giao thức đã giới thiệu các bể riêng biệt, tài sản tổng hợp và cải thiện hiệu quả vốn, củng cố thêm vị thế của nó như địa điểm phái sinh phi tập trung hàng đầu.",
+	"features": {
+		"1": {
+			"title": "Giao dịch Perpetual",
+			"description": "Giao dịch BTC, ETH và các tài sản khác với đòn bẩy lên đến 100x trên hợp đồng perpetual"
+		},
+		"2": {
+			"title": "Không có Slippage",
+			"description": "Thực hiện giao dịch lớn mà không có tác động giá bằng cách sử dụng định giá dựa trên oracle"
+		},
+		"3": {
+			"title": "Bể thanh khoản GLP",
+			"description": "Cung cấp thanh khoản để kiếm 70% phí giao dịch và phát thải token GMX"
+		},
+		"4": {
+			"title": "Phí thấp",
+			"description": "Phí giao dịch cạnh tranh với giảm giá cho người stake GMX"
+		},
+		"5": {
+			"title": "Phi tập trung",
+			"description": "Giao dịch không giữ tài sản - tiền của bạn ở trong ví cho đến khi bạn giao dịch"
+		},
+		"6": {
+			"title": "Bể GM (V2)",
+			"description": "Thị trường riêng biệt với tài sản tổng hợp và hiệu quả vốn được cải thiện"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Giao dịch đòn bẩy",
+			"description": "Khuếch đại exposure của bạn với BTC, ETH và các tài sản tiền điện tử khác"
+		},
+		"2": {
+			"title": "Hedging",
+			"description": "Mở vị thế short để hedge tài sản tiền điện tử spot của bạn"
+		},
+		"3": {
+			"title": "Lợi nhuận thụ động",
+			"description": "Cung cấp thanh khoản GLP để kiếm phí giao dịch và khuyến khích token"
+		},
+		"4": {
+			"title": "Hoán đổi slippage thấp",
+			"description": "Thực hiện hoán đổi spot lớn giữa các tài sản được hỗ trợ với tác động giá tối thiểu"
+		},
+		"5": {
+			"title": "Phái sinh phi tập trung",
+			"description": "Truy cập giao dịch phái sinh mà không cần KYC hoặc rủi ro sàn giao dịch tập trung"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "GMX là gì và nó hoạt động như thế nào?",
+			"answer": "GMX là một sàn giao dịch perpetual phi tập trung nơi các nhà giao dịch mở long hoặc short với đòn bẩy chống lại một bể thanh khoản chung (GLP). Giá đến từ oracle Chainlink, cho phép thực thi không slippage. Các nhà giao dịch trả phí đi cho người nắm giữ GLP và người stake GMX. Nếu các nhà giao dịch thua lỗ, người nắm giữ GLP lãi; nếu các nhà giao dịch thắng, người nắm giữ GLP trả - khiến người nắm giữ GLP trở thành đối tác của tất cả các giao dịch."
+		},
+		"2": {
+			"question": "GMX có an toàn để sử dụng không?",
+			"answer": "GMX đã được kiểm toán rộng rãi và đã xử lý hơn 100 tỷ USD khối lượng mà không có khai thác lớn. Tuy nhiên, giao dịch perpetual vốn dĩ có rủi ro - bạn có thể mất toàn bộ vị thế với đòn bẩy. GLP cũng mang rủi ro: nếu các nhà giao dịch liên tục lãi, giá trị GLP giảm. Luôn hiểu rủi ro trước khi giao dịch."
+		},
+		"3": {
+			"question": "GLP là gì và làm thế nào để kiếm lợi nhuận?",
+			"answer": "GLP là token bể thanh khoản đa tài sản của GMX. Khi bạn tạo GLP, bạn gửi tài sản (ETH, BTC, USDC, v.v.) và nhận token GLP đại diện cho phần của bạn. Người nắm giữ GLP kiếm được 70% tất cả phí giao dịch được trả bằng ETH/AVAX cộng với khuyến khích esGMX. APR hiện tại thường dao động từ 15-40% tùy thuộc vào khối lượng giao dịch."
+		},
+		"4": {
+			"question": "Phí trên GMX là bao nhiêu?",
+			"answer": "GMX tính phí 0,1% để mở hoặc đóng vị thế, cộng với phí vay tích lũy hàng giờ dựa trên mức sử dụng. Hoán đổi tốn 0,2-0,8% tùy thuộc vào việc chúng có giúp cân bằng bể hay không. Người stake GMX nhận được giảm giá phí và không có funding rate - chỉ có borrow rate."
+		},
+		"5": {
+			"question": "Sự khác biệt giữa GMX V1 và V2 là gì?",
+			"answer": "GMX V2 giới thiệu các bể GM riêng biệt thay vì bể GLP thống nhất, cho phép nhiều tài sản hơn và giảm rủi ro. V2 hỗ trợ tài sản tổng hợp, có hiệu quả vốn được cải thiện và giới thiệu funding rate. GLP của V1 vẫn hoạt động với thanh khoản đã thiết lập, trong khi V2 tiếp tục mở rộng với các thị trường mới."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng bắt đầu giao dịch?",
+		"button": "Mở GMX",
+		"note": "Giao dịch perpetual phi tập trung với đòn bẩy lên đến 100x"
+	}
+}

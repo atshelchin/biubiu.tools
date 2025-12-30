@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Aave - Leading DeFi Lending Protocol | Borrow & Lend Crypto",
+		"description": "Discover Aave, the world's leading decentralized lending protocol. Learn about flash loans, multi-chain support, and how to earn yield by supplying crypto assets.",
+		"keywords": "Aave, DeFi lending, crypto borrowing, flash loans, yield farming, Ethereum, Polygon, Arbitrum"
+	},
+	"overview": "Aave is one of the largest and most trusted decentralized lending protocols in DeFi, enabling users to lend, borrow, and earn interest on cryptocurrency assets without intermediaries. Originally launched as ETHLend in 2017 by Stani Kulechov, the protocol rebranded to Aave (meaning 'ghost' in Finnish) in 2020 and has since become a cornerstone of decentralized finance.\n\nThe protocol operates through liquidity pools where users deposit crypto assets to earn interest, while borrowers can take out loans by providing collateral. Aave pioneered several DeFi innovations, including flash loans - uncollateralized loans that must be borrowed and repaid within a single transaction - which have become essential tools for arbitrage, collateral swaps, and self-liquidation strategies.\n\nAs of 2024, Aave has secured over $10 billion in Total Value Locked (TVL) across Ethereum, Polygon, Arbitrum, Optimism, and other networks, making it one of the most capital-efficient protocols in the space.",
+	"features": {
+		"1": {
+			"title": "Supply & Earn Interest",
+			"description": "Deposit crypto assets into liquidity pools and earn variable interest rates based on market demand"
+		},
+		"2": {
+			"title": "Borrow Against Collateral",
+			"description": "Take out loans by providing crypto collateral, with flexible variable or stable interest rate options"
+		},
+		"3": {
+			"title": "Flash Loans",
+			"description": "Access uncollateralized loans within a single transaction - perfect for arbitrage and DeFi strategies"
+		},
+		"4": {
+			"title": "Multi-Chain Deployment",
+			"description": "Available on Ethereum, Polygon, Arbitrum, Optimism, Avalanche, and more networks"
+		},
+		"5": {
+			"title": "Safety Module",
+			"description": "Stake AAVE tokens in the Safety Module to earn rewards while protecting the protocol"
+		},
+		"6": {
+			"title": "GHO Stablecoin",
+			"description": "Mint GHO, Aave's native decentralized stablecoin, using your supplied collateral"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Yield Generation",
+			"description": "Earn passive income by supplying stablecoins or crypto assets to lending pools"
+		},
+		"2": {
+			"title": "Leveraged Positions",
+			"description": "Borrow against holdings to increase exposure without selling your assets"
+		},
+		"3": {
+			"title": "Flash Loan Arbitrage",
+			"description": "Execute complex DeFi strategies including price arbitrage and collateral swaps"
+		},
+		"4": {
+			"title": "Liquidity Access",
+			"description": "Access liquidity without selling long-term holdings - ideal for tax optimization"
+		},
+		"5": {
+			"title": "Cross-Chain DeFi",
+			"description": "Use the same protocol across multiple chains with consistent user experience"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Aave and how does it work?",
+			"answer": "Aave is a decentralized lending protocol where users can supply crypto assets to earn interest or borrow against collateral. Suppliers deposit assets into liquidity pools and earn variable interest based on utilization rates. Borrowers must provide collateral (typically 120-150% of loan value) and pay interest on their loans."
+		},
+		"2": {
+			"question": "Is Aave safe to use?",
+			"answer": "Aave is one of the most battle-tested DeFi protocols with multiple security audits and a strong track record. The protocol has a Safety Module where AAVE stakers provide a backstop against potential shortfalls. However, DeFi always carries smart contract risks, so only deposit what you can afford to lose."
+		},
+		"3": {
+			"question": "What are flash loans?",
+			"answer": "Flash loans are uncollateralized loans that must be borrowed and repaid within a single blockchain transaction. If the loan isn't repaid by the end of the transaction, the entire transaction reverts. They're used for arbitrage, collateral swaps, and self-liquidation strategies."
+		},
+		"4": {
+			"question": "What is the AAVE token used for?",
+			"answer": "AAVE is the governance token that allows holders to vote on protocol upgrades and parameters. Token holders can also stake AAVE in the Safety Module to earn rewards while providing insurance for the protocol against potential bad debt."
+		},
+		"5": {
+			"question": "What is GHO stablecoin?",
+			"answer": "GHO is Aave's native decentralized stablecoin that users can mint using their supplied collateral. Unlike traditional stablecoins, GHO is created directly through the Aave protocol, with interest payments going to the Aave DAO treasury."
+		}
+	},
+	"cta": {
+		"ready": "Ready to start lending?",
+		"button": "Open Aave",
+		"note": "Earn yield on your crypto assets"
+	}
+}

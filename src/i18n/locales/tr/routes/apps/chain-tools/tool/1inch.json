@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Türkçe",
+		"englishName": "Turkish",
+		"direction": "ltr",
+		"flag": "🇹🇷",
+		"code": "tr"
+	},
+	"seo": {
+		"title": "1inch - Token Swapları için En İyi DEX Toplayıcısı | DeFi Aracı İncelemesi",
+		"description": "Merkezi olmayan borsalar arasında en iyi swap oranlarını bulan önde gelen DEX toplayıcısı 1inch'i keşfedin. Fusion modu, limit emirleri ve çoklu zincir ticareti hakkında bilgi edinin.",
+		"keywords": "1inch, DEX toplayıcısı, token swap, en iyi oranlar, DeFi, Ethereum, çoklu zincir, kripto ticareti"
+	},
+	"overview": "1inch, kullanıcılara mümkün olan en iyi swap oranlarını bulmak için yüzlerce DEX'ten likidite sağlayan önde gelen merkezi olmayan borsa (DEX) toplayıcısıdır. 2019'da Sergej Kunz ve Anton Bukov tarafından bir ETHGlobal hackathon'unda kurulan 1inch, DeFi ekosistemindeki en önemli araçlardan biri haline gelmiştir.\n\nProtokol'ün Pathfinder algoritması, en iyi döviz kurları için optimize ederken kayma ve gas maliyetlerini minimize ederek işlemleri birden fazla likidite kaynağına böler. Fusion moduyla, kullanıcılar gas ücreti ödemeden swapları gerçekleştirebilir - işlem maliyetleri, en iyi fiyatlarla emirleri doldurmak için yarışan çözücüler tarafından karşılanır.\n\n1inch, Ethereum, Polygon, Arbitrum, Optimism ve BNB Chain dahil 12'den fazla blockchain ağında dağıtılmış olup, aylık milyarlarca dolarlık işlem hacmini işlemektedir. Protokol, parçalı DEX manzarasında optimal yürütme arayan tüccarlar için tercih edilen toplayıcı haline gelmiştir.",
+	"features": {
+		"1": {
+			"title": "DEX Toplama",
+			"description": "DeFi ekosisteminde en iyi swap oranlarını bulmak için 400'den fazla DEX'ten likidite sağlar"
+		},
+		"2": {
+			"title": "Fusion Modu",
+			"description": "Çözücülerin siparişinizi en iyi fiyatla doldurmak için yarıştığı gassız swaplar"
+		},
+		"3": {
+			"title": "Limit Emirleri",
+			"description": "Koşullar karşılandığında otomatik olarak gerçekleşen işlemler için hedef fiyatlar belirleyin"
+		},
+		"4": {
+			"title": "Çoklu Zincir Desteği",
+			"description": "Ethereum, Polygon, Arbitrum ve daha fazlası dahil 12'den fazla ağda ticaret yapın"
+		},
+		"5": {
+			"title": "Pathfinder Algoritması",
+			"description": "Optimal yürütme için işlemleri birden fazla DEX'e bölen gelişmiş yönlendirme"
+		},
+		"6": {
+			"title": "MEV Koruması",
+			"description": "Fusion emirleri sandwich saldırılarından ve diğer MEV sömürüsünden korunur"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Optimal Token Swapları",
+			"description": "Tüm büyük DEX'lerde likiditeyi toplayarak herhangi bir token swap için en iyi oranları elde edin"
+		},
+		"2": {
+			"title": "Büyük İşlem Yürütme",
+			"description": "Fiyat etkisini ve kaymayı minimize etmek için büyük emirleri birden fazla kaynağa bölün"
+		},
+		"3": {
+			"title": "Gassız Ticaret",
+			"description": "Peşin gas ücreti ödemeden token swap yapmak için Fusion modunu kullanın"
+		},
+		"4": {
+			"title": "Limit Emir Ticareti",
+			"description": "Hedef fiyatınıza ulaşıldığında yürütülen emirleri ayarlayın ve unutun"
+		},
+		"5": {
+			"title": "Zincirler Arası Ticaret",
+			"description": "Birden fazla blockchain ağında aynı toplama teknolojisine erişin"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "1inch nedir ve nasıl çalışır?",
+			"answer": "1inch, yüzlerce merkezi olmayan borsa arasında arama yaparak en iyi swap oranlarını bulan bir DEX toplayıcısıdır. Bir işlem yaptığınızda, 1inch'in Pathfinder algoritması optimal rotayı hesaplar ve potansiyel olarak size herhangi bir borsayı kullanmaktan daha fazla token kazandırmak için işleminizi birden fazla DEX'e böler."
+		},
+		"2": {
+			"question": "1inch kullanımı güvenli mi?",
+			"answer": "1inch kapsamlı bir şekilde denetlenmiş ve büyük güvenlik olayları olmadan milyarlarca işlem hacmini işlemiştir. Protokol saklama yapmaz - her zaman doğrudan cüzdanınızdan ticaret yaparsınız. Ancak resmi 1inch arayüzünü kullandığınızı her zaman doğrulayın ve dolandırıcılık tokenlarına karşı dikkatli olun."
+		},
+		"3": {
+			"question": "Fusion modu nedir?",
+			"answer": "Fusion, profesyonel piyasa yapıcıların 'çözücüler' olarak adlandırıldığı 1inch'in gassız ticaret modudur. Gas ödemek yerine bir mesaj imzalarsınız (ücretsiz) ve çözücüler işlem maliyetlerini öder. Çözücüler yürütmeyi optimize edebildikleri için genellikle daha iyi oranlar alırsınız."
+		},
+		"4": {
+			"question": "1inch'te ücretler nedir?",
+			"answer": "1inch çoğu işlemde swap ücreti almaz. Sadece ağ gas ücretlerini ödersiniz (veya Fusion modunda hiçbir şey). Platform, bazı işlemlerde pozitif kaymadan ve likidite kaynaklarıyla ortaklığından gelir elde eder. Limit emirleri yürütüldüğünde küçük bir ücret vardır."
+		},
+		"5": {
+			"question": "1inch, doğrudan Uniswap'ta ticaret yapmakla nasıl karşılaştırılır?",
+			"answer": "1inch genellikle sadece Uniswap'tan daha iyi oranlar sağlar çünkü işleminizi birden fazla DEX'e yönlendirebilir. Özellikle büyük işlemler için, 1inch'in bölme işlemi kaymayı önemli ölçüde azaltabilir. Ancak popüler çiftlerde çok küçük işlemler için, gas optimizasyonu nedeniyle doğrudan DEX ticareti daha ucuz olabilir."
+		}
+	},
+	"cta": {
+		"ready": "En iyi oranları bulmaya hazır mısınız?",
+		"button": "1inch'i Aç",
+		"note": "400'den fazla DEX'te en iyi fiyatlar"
+	}
+}

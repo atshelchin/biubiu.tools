@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "中文",
+		"englishName": "Chinese",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Curve Finance - 领先的稳定币 DEX | 低滑点兑换",
+		"description": "了解 Curve Finance，稳定币和锚定资产交易的首选 DEX。探索低滑点兑换、流动性提供和 CRV 代币经济学。",
+		"keywords": "Curve Finance, 稳定币兑换，DeFi, 低滑点，CRV, 流动性池，收益农场"
+	},
+	"overview": "Curve Finance是专为稳定币和锚定资产之间高效交易而设计的去中心化交易所。由物理学家和连续创业者Michael Egorov于2020年创立，Curve开创了StableSwap不变量——一种针对应该以相似价格交易的资产进行优化的联合曲线。\n\n与Uniswap等通用AMM不同，Curve的池针对关联资产（如USDC/USDT/DAI或不同版本的包装比特币）之间的交易进行了优化，实现最小滑点。这种专业化使Curve成为DeFi流动性的支柱，许多协议依赖Curve池进行其稳定币和流动质押代币的交易。\n\n该协议的veCRV代币经济学引入了投票托管治理，用户锁定CRV代币以获得投票权并提高流动性挖矿奖励。这一模式已在DeFi中广泛被复制，并引发了\"Curve战争\"——各协议竞争积累CRV投票权以将排放引导至其池中。",
+	"features": {
+		"1": {
+			"title": "StableSwap AMM",
+			"description": "专门的联合曲线，实现锚定资产之间极低滑点的兑换"
+		},
+		"2": {
+			"title": "流动性提供",
+			"description": "向池中提供流动性，赚取交易费用和 CRV 代币激励"
+		},
+		"3": {
+			"title": "veCRV 治理",
+			"description": "锁定 CRV 代币以投票决定 gauge 权重并提高您的流动性挖矿奖励"
+		},
+		"4": {
+			"title": "多资产池",
+			"description": "在单个池中交易多种稳定币或锚定资产"
+		},
+		"5": {
+			"title": "Tricrypto 池",
+			"description": "V2 池用于 ETH、BTC 和稳定币等波动资产之间的交易"
+		},
+		"6": {
+			"title": "crvUSD",
+			"description": "Curve 的原生稳定币，由加密抵押品支持，具有软清算机制"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "稳定币兑换",
+			"description": "以最小滑点在 USDC、USDT、DAI 和其他稳定币之间交易"
+		},
+		"2": {
+			"title": "收益农场",
+			"description": "提供流动性以赚取交易费用和由 veCRV 提升的 CRV 奖励"
+		},
+		"3": {
+			"title": "大额交易",
+			"description": "以最小价格影响执行锚定资产之间的百万美元级交易"
+		},
+		"4": {
+			"title": "LST 交易",
+			"description": "高效兑换 stETH、rETH 和 cbETH 等流动质押代币"
+		},
+		"5": {
+			"title": "协议流动性",
+			"description": "协议使用 Curve 池作为其代币的主要流动性场所"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 Curve Finance，它如何运作？",
+			"answer": "Curve 是专为稳定币和锚定资产交易优化的 DEX。其 StableSwap 算法假设池中的资产价值大致相同，从而实现极低滑点的交易。流动性提供者从交易中赚取费用以及 CRV 代币激励。"
+		},
+		"2": {
+			"question": "为什么使用 Curve 而不是 Uniswap 进行稳定币兑换？",
+			"answer": "Curve 的专用联合曲线为稳定币交易提供了更低的滑点。100 万美元的 USDC 到 USDT 兑换在 Curve 上可能只有 0.01% 的滑点，而在 Uniswap 上同样的交易可能有 0.3% 或更多。对于大额交易，这种差异意味着显著的节省。"
+		},
+		"3": {
+			"question": "什么是 veCRV，为什么它很重要？",
+			"answer": "veCRV（投票托管 CRV）通过将 CRV 代币锁定最长 4 年获得。veCRV 持有者可以投票将 CRV 排放引导到特定池，将自己的 LP 奖励提升高达 2.5 倍，并赚取协议费用。这创造了与协议长期一致的激励。"
+		},
+		"4": {
+			"question": "什么是 Curve 战争？",
+			"answer": "Curve 战争是指各协议竞争积累 veCRV 投票权的现象。Convex、Yearn 等协议寻求控制 CRV 排放以利于其流动性。特别是 Convex 积累了大量 veCRV，使 CVX 持有者能够影响 Curve 治理。"
+		},
+		"5": {
+			"question": "什么是crvUSD？",
+			"answer": "crvUSD是Curve的原生稳定币，用户可以通过存入加密抵押品来铸造。它具有独特的"软清算"机制，称为LLAMMA，随着价格下跌逐渐将抵押品转换为crvUSD，与传统借贷协议相比降低了突然清算的风险。"
+		}
+	},
+	"cta": {
+		"ready": "准备以最小滑点兑换了吗？",
+		"button": "打开 Curve",
+		"note": "稳定币流动性之家"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Italiano",
+		"englishName": "Italian",
+		"direction": "ltr",
+		"flag": "🇮🇹",
+		"code": "it"
+	},
+	"seo": {
+		"title": "Lido - Protocollo Leader di Liquid Staking | Metti in Staking ETH, Ottieni stETH",
+		"description": "Scopri Lido, il più grande protocollo di liquid staking. Scopri come mettere in staking ETH e ricevere stETH, guadagnare ricompense di staking e usare i tuoi asset in staking in DeFi.",
+		"keywords": "Lido, liquid staking, stETH, staking ETH, Ethereum, DeFi, ricompense staking"
+	},
+	"overview": "Lido è il più grande protocollo di liquid staking in DeFi, che consente agli utenti di mettere in staking i loro ETH e ricevere stETH (staked ETH) in cambio - un token liquido che rappresenta la loro posizione in staking e accumula ricompense di staking automaticamente. Lanciato nel dicembre 2020 poco prima dell'attivazione della Beacon Chain di Ethereum, Lido ha risolto un problema critico: consentire agli utenti di guadagnare ricompense di staking senza bloccare i loro ETH.\n\nQuando metti in staking ETH attraverso Lido, ricevi stETH in rapporto 1:1. Questo saldo di stETH aumenta quotidianamente man mano che si accumulano le ricompense di staking, e può essere liberamente scambiato, utilizzato come collaterale nei protocolli di prestito, o fornito come liquidità in DeFi. Questa natura 'liquida' significa che gli staker non devono scegliere tra guadagnare rendimenti di staking e partecipare in DeFi.\n\nLido è diventato un'infrastruttura DeFi fondamentale, con oltre 20 miliardi di dollari in ETH in staking e stETH integrato in centinaia di protocolli. Il protocollo è governato dai possessori di token LDO attraverso il Lido DAO, che supervisiona la selezione degli operatori di nodi, le strutture delle commissioni e gli aggiornamenti del protocollo.",
+	"features": {
+		"1": {
+			"title": "Liquid Staking",
+			"description": "Metti in staking ETH e ricevi stETH, un token liquido che accumula ricompense di staking automaticamente"
+		},
+		"2": {
+			"title": "Nessuno Staking Minimo",
+			"description": "Metti in staking qualsiasi quantità di ETH - non serve avere i 32 ETH richiesti per lo staking solo"
+		},
+		"3": {
+			"title": "Componibilità DeFi",
+			"description": "Usa stETH in DeFi - come collaterale, nei pool di liquidità, o per strategie di rendimento"
+		},
+		"4": {
+			"title": "Ricompense Giornaliere",
+			"description": "Il saldo di stETH aumenta quotidianamente per riflettere le ricompense di staking guadagnate"
+		},
+		"5": {
+			"title": "Prelievi",
+			"description": "Richiedi prelievi per convertire stETH di nuovo in ETH attraverso il protocollo"
+		},
+		"6": {
+			"title": "wstETH",
+			"description": "stETH wrapped con saldo costante - le ricompense si accumulano attraverso l'apprezzamento del valore"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Guadagna Ricompense di Staking",
+			"description": "Guadagna rendimenti di staking Ethereum (~3-4% APY) mantenendo la liquidità"
+		},
+		"2": {
+			"title": "Collaterale DeFi",
+			"description": "Usa stETH come collaterale su Aave, MakerDAO e altri protocolli di prestito"
+		},
+		"3": {
+			"title": "Fornitura di Liquidità",
+			"description": "Fornisci liquidità stETH-ETH su Curve e guadagna commissioni di trading aggiuntive"
+		},
+		"4": {
+			"title": "Staking con Leva",
+			"description": "Prendi in prestito contro stETH per comprare più ETH e amplificare i rendimenti di staking"
+		},
+		"5": {
+			"title": "Diversificazione del Portafoglio",
+			"description": "Tieni stETH come alternativa ETH che genera rendimenti nel tuo portafoglio"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Cos'è Lido e come funziona il liquid staking?",
+			"answer": "Lido è un protocollo di liquid staking che ti consente di mettere in staking ETH e ricevere stETH in cambio. Quando metti in staking attraverso Lido, i tuoi ETH vengono delegati a operatori di nodi professionisti che gestiscono i validatori. Ricevi stETH che rappresenta il tuo stake, che aumenta automaticamente di saldo man mano che si accumulano le ricompense. Questo significa che puoi usare stETH in DeFi mentre guadagni ancora ricompense di staking."
+		},
+		"2": {
+			"question": "È sicuro usare Lido?",
+			"answer": "Lido è il protocollo di liquid staking più grande e testato sul campo con molteplici audit di sicurezza. Tuttavia, i rischi includono vulnerabilità degli smart contract, penalità di slashing se gli operatori di nodi si comportano male, e stETH che potenzialmente viene scambiato con uno sconto rispetto a ETH durante stress di mercato. Lido utilizza un set diversificato di operatori di nodi per ridurre il rischio di centralizzazione."
+		},
+		"3": {
+			"question": "Qual è la differenza tra stETH e wstETH?",
+			"answer": "stETH è un token di rebasing - il tuo saldo aumenta quotidianamente man mano che si accumulano le ricompense. wstETH (wrapped stETH) ha un saldo costante, con le ricompense riflesse nel suo valore crescente relativo a stETH. wstETH è migliore per integrazioni DeFi che non supportano token di rebasing e per scopi di reporting fiscale."
+		},
+		"4": {
+			"question": "Quali commissioni addebita Lido?",
+			"answer": "Lido addebita una commissione del 10% sulle ricompense di staking, divisa tra operatori di nodi e il tesoro del Lido DAO. Questa commissione viene automaticamente dedotta - ricevi semplicemente le tue ricompense di staking nette riflesse nel tuo saldo di stETH. Non ci sono commissioni per lo staking o l'unstaking."
+		},
+		"5": {
+			"question": "Come posso fare l'unstake da Lido?",
+			"answer": "Puoi richiedere prelievi attraverso la coda di prelievo di Lido, che elabora le richieste man mano che le uscite dei validatori si completano (tipicamente 1-5 giorni). In alternativa, puoi scambiare stETH per ETH su DEX come Curve per liquidità immediata, anche se potresti ricevere leggermente meno di 1:1 a seconda delle condizioni di mercato."
+		}
+	},
+	"cta": {
+		"ready": "Pronto per iniziare lo staking?",
+		"button": "Apri Lido",
+		"note": "Guadagna ricompense di staking ETH rimanendo liquido"
+	}
+}

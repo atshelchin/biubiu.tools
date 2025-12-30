@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "1inch - Bộ tổng hợp DEX tốt nhất cho hoán đổi Token | Đánh giá công cụ DeFi",
+		"description": "Khám phá 1inch, bộ tổng hợp DEX hàng đầu tìm tỷ giá hoán đổi tốt nhất trên các sàn giao dịch phi tập trung. Tìm hiểu về chế độ Fusion, lệnh giới hạn và giao dịch đa chuỗi.",
+		"keywords": "1inch, DEX aggregator, token swap, best rates, DeFi, Ethereum, multi-chain, crypto trading"
+	},
+	"overview": "1inch là bộ tổng hợp sàn giao dịch phi tập trung (DEX) hàng đầu tìm nguồn thanh khoản từ hàng trăm DEX để tìm cho người dùng tỷ giá hoán đổi tốt nhất có thể. Được thành lập vào năm 2019 trong một hackathon ETHGlobal bởi Sergej Kunz và Anton Bukov, 1inch đã phát triển thành một trong những công cụ thiết yếu nhất trong hệ sinh thái DeFi.\n\nThuật toán Pathfinder của giao thức chia tách giao dịch trên nhiều nguồn thanh khoản, tối ưu hóa tỷ giá hối đoái tốt nhất đồng thời giảm thiểu slippage và chi phí gas. Với chế độ Fusion, người dùng có thể thực hiện hoán đổi mà không cần trả phí gas - chi phí giao dịch được bao trả bởi các resolver cạnh tranh để điền lệnh với giá tốt nhất.\n\n1inch được triển khai trên hơn 12 mạng blockchain bao gồm Ethereum, Polygon, Arbitrum, Optimism và BNB Chain, xử lý hàng tỷ đô la khối lượng giao dịch hàng tháng. Giao thức đã trở thành bộ tổng hợp được ưa chuộng cho các nhà giao dịch tìm kiếm thực thi tối ưu trên bối cảnh DEX phân mảnh.",
+	"features": {
+		"1": {
+			"title": "Tổng hợp DEX",
+			"description": "Tìm nguồn thanh khoản từ hơn 400 DEX để tìm tỷ giá hoán đổi tốt nhất trên hệ sinh thái DeFi"
+		},
+		"2": {
+			"title": "Chế độ Fusion",
+			"description": "Hoán đổi không phí gas nơi các resolver cạnh tranh để điền lệnh của bạn với giá tốt nhất"
+		},
+		"3": {
+			"title": "Lệnh giới hạn",
+			"description": "Đặt giá mục tiêu cho giao dịch sẽ tự động thực hiện khi điều kiện được đáp ứng"
+		},
+		"4": {
+			"title": "Hỗ trợ đa chuỗi",
+			"description": "Giao dịch trên hơn 12 mạng bao gồm Ethereum, Polygon, Arbitrum và nhiều hơn nữa"
+		},
+		"5": {
+			"title": "Thuật toán Pathfinder",
+			"description": "Định tuyến tiên tiến chia tách giao dịch trên nhiều DEX để thực thi tối ưu"
+		},
+		"6": {
+			"title": "Bảo vệ MEV",
+			"description": "Lệnh Fusion được bảo vệ khỏi các cuộc tấn công sandwich và khai thác MEV khác"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Hoán đổi Token tối ưu",
+			"description": "Nhận tỷ giá tốt nhất cho bất kỳ hoán đổi token nào bằng cách tổng hợp thanh khoản trên tất cả các DEX chính"
+		},
+		"2": {
+			"title": "Thực hiện giao dịch lớn",
+			"description": "Chia lệnh lớn trên nhiều nguồn để giảm thiểu tác động giá và slippage"
+		},
+		"3": {
+			"title": "Giao dịch không phí gas",
+			"description": "Sử dụng chế độ Fusion để hoán đổi token mà không cần trả phí gas trước"
+		},
+		"4": {
+			"title": "Giao dịch lệnh giới hạn",
+			"description": "Đặt và quên các lệnh sẽ thực hiện khi giá mục tiêu của bạn đạt được"
+		},
+		"5": {
+			"title": "Giao dịch đa chuỗi",
+			"description": "Truy cập cùng công nghệ tổng hợp trên nhiều mạng blockchain"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "1inch là gì và nó hoạt động như thế nào?",
+			"answer": "1inch là một bộ tổng hợp DEX tìm tỷ giá hoán đổi tốt nhất bằng cách tìm kiếm trên hàng trăm sàn giao dịch phi tập trung. Khi bạn thực hiện giao dịch, thuật toán Pathfinder của 1inch tính toán tuyến đường tối ưu, có thể chia tách giao dịch của bạn trên nhiều DEX để giúp bạn nhận được nhiều token hơn so với việc sử dụng bất kỳ sàn giao dịch đơn lẻ nào."
+		},
+		"2": {
+			"question": "1inch có an toàn để sử dụng không?",
+			"answer": "1inch đã được kiểm toán rộng rãi và đã xử lý hàng tỷ đô la khối lượng giao dịch mà không có sự cố bảo mật lớn. Giao thức không giữ tài sản - bạn luôn giao dịch trực tiếp từ ví của mình. Tuy nhiên, luôn xác minh bạn đang sử dụng giao diện 1inch chính thức và thận trọng với các token lừa đảo."
+		},
+		"3": {
+			"question": "Chế độ Fusion là gì?",
+			"answer": "Fusion là chế độ giao dịch không phí gas của 1inch nơi các nhà tạo lập thị trường chuyên nghiệp được gọi là 'resolvers' cạnh tranh để điền lệnh của bạn. Bạn ký một thông điệp (miễn phí) thay vì trả gas, và các resolver trả chi phí giao dịch. Bạn thường nhận được tỷ giá tốt hơn vì các resolver có thể tối ưu hóa thực thi."
+		},
+		"4": {
+			"question": "Phí trên 1inch là bao nhiêu?",
+			"answer": "1inch không tính phí hoán đổi trên hầu hết các giao dịch. Bạn chỉ trả phí gas mạng (hoặc không trả gì trong chế độ Fusion). Nền tảng kiếm tiền từ slippage dương trên một số giao dịch và từ quan hệ đối tác với các nguồn thanh khoản. Có một khoản phí nhỏ trên lệnh giới hạn khi chúng thực hiện."
+		},
+		"5": {
+			"question": "1inch so với giao dịch trực tiếp trên Uniswap như thế nào?",
+			"answer": "1inch thường cung cấp tỷ giá tốt hơn chỉ Uniswap một mình vì nó có thể định tuyến giao dịch của bạn qua nhiều DEX. Đặc biệt đối với các giao dịch lớn, việc chia tách của 1inch có thể giảm đáng kể slippage. Tuy nhiên, đối với các giao dịch rất nhỏ trên các cặp phổ biến, giao dịch DEX trực tiếp có thể rẻ hơn do tối ưu hóa gas."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng tìm tỷ giá tốt nhất?",
+		"button": "Mở 1inch",
+		"note": "Giá tốt nhất trên hơn 400 DEX"
+	}
+}

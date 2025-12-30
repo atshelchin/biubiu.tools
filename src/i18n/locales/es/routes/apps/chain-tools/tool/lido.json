@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸",
+		"code": "es"
+	},
+	"seo": {
+		"title": "Lido - Protocolo Líder de Staking Líquido | Haz Staking de ETH, Obtén stETH",
+		"description": "Descubre Lido, el protocolo de staking líquido más grande. Aprende cómo hacer staking de ETH y recibir stETH, ganar recompensas de staking y usar tus activos en staking en DeFi.",
+		"keywords": "Lido, liquid staking, stETH, ETH staking, Ethereum, DeFi, staking rewards"
+	},
+	"overview": "Lido es el protocolo de staking líquido más grande en DeFi, permitiendo a los usuarios hacer staking de su ETH y recibir stETH (ETH en staking) a cambio - un token líquido que representa su posición en staking y acumula recompensas de staking automáticamente. Lanzado en diciembre de 2020 justo antes de que la Beacon Chain de Ethereum entrara en funcionamiento, Lido resolvió un problema crítico: permitir a los usuarios ganar recompensas de staking sin bloquear su ETH.\n\nCuando haces staking de ETH a través de Lido, recibes stETH en una proporción 1:1. Este balance de stETH aumenta diariamente a medida que se acumulan las recompensas de staking, y puede ser libremente comerciado, usado como colateral en protocolos de préstamos, o proporcionado como liquidez en DeFi. Esta naturaleza 'líquida' significa que los stakers no tienen que elegir entre ganar rendimiento de staking y participar en DeFi.\n\nLido se ha convertido en infraestructura DeFi fundamental, con más de $20 mil millones en ETH en staking y stETH integrado a través de cientos de protocolos. El protocolo es gobernado por titulares de tokens LDO a través del Lido DAO, que supervisa la selección de operadores de nodos, estructuras de tarifas y actualizaciones del protocolo.",
+	"features": {
+		"1": {
+			"title": "Staking Líquido",
+			"description": "Haz staking de ETH y recibe stETH, un token líquido que acumula recompensas de staking automáticamente"
+		},
+		"2": {
+			"title": "Sin Mínimo de Staking",
+			"description": "Haz staking de cualquier cantidad de ETH - no necesitas los 32 ETH requeridos para staking solo"
+		},
+		"3": {
+			"title": "Composabilidad DeFi",
+			"description": "Usa stETH a través de DeFi - como colateral, en pools de liquidez o para estrategias de rendimiento"
+		},
+		"4": {
+			"title": "Recompensas Diarias",
+			"description": "El balance de stETH aumenta diariamente para reflejar las recompensas de staking ganadas"
+		},
+		"5": {
+			"title": "Retiros",
+			"description": "Solicita retiros para convertir stETH de vuelta a ETH a través del protocolo"
+		},
+		"6": {
+			"title": "wstETH",
+			"description": "stETH envuelto con un balance constante - las recompensas se acumulan a través de apreciación de valor"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Ganar Recompensas de Staking",
+			"description": "Gana rendimiento de staking de Ethereum (~3-4% APY) mientras mantienes liquidez"
+		},
+		"2": {
+			"title": "Colateral DeFi",
+			"description": "Usa stETH como colateral en Aave, MakerDAO y otros protocolos de préstamos"
+		},
+		"3": {
+			"title": "Provisión de Liquidez",
+			"description": "Proporciona liquidez stETH-ETH en Curve y gana tarifas de trading adicionales"
+		},
+		"4": {
+			"title": "Staking Apalancado",
+			"description": "Pide prestado contra stETH para comprar más ETH y amplificar retornos de staking"
+		},
+		"5": {
+			"title": "Diversificación de Portafolio",
+			"description": "Mantén stETH como una alternativa de ETH generadora de rendimiento en tu portafolio"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es Lido y cómo funciona el staking líquido?",
+			"answer": "Lido es un protocolo de staking líquido que te permite hacer staking de ETH y recibir stETH a cambio. Cuando haces staking a través de Lido, tu ETH es delegado a operadores de nodos profesionales que ejecutan validadores. Recibes stETH representando tu staking, que automáticamente aumenta en balance a medida que se acumulan las recompensas. Esto significa que puedes usar stETH en DeFi mientras sigues ganando recompensas de staking."
+		},
+		"2": {
+			"question": "¿Es seguro usar Lido?",
+			"answer": "Lido es el protocolo de staking líquido más grande y probado en batalla con múltiples auditorías de seguridad. Sin embargo, los riesgos incluyen vulnerabilidades de contratos inteligentes, penalizaciones de slashing si los operadores de nodos se comportan mal, y stETH potencialmente operando con descuento a ETH durante estrés del mercado. Lido usa un conjunto diverso de operadores de nodos para reducir el riesgo de centralización."
+		},
+		"3": {
+			"question": "¿Cuál es la diferencia entre stETH y wstETH?",
+			"answer": "stETH es un token rebasing - tu balance aumenta diariamente a medida que se acumulan las recompensas. wstETH (stETH envuelto) tiene un balance constante, con las recompensas reflejadas en su valor creciente relativo a stETH. wstETH es mejor para integraciones DeFi que no soportan tokens rebasing y para propósitos de reporte fiscal."
+		},
+		"4": {
+			"question": "¿Qué tarifas cobra Lido?",
+			"answer": "Lido cobra una tarifa del 10% sobre las recompensas de staking, dividida entre operadores de nodos y el tesoro del Lido DAO. Esta tarifa se deduce automáticamente - simplemente recibes tus recompensas netas de staking reflejadas en tu balance de stETH. No hay tarifas por hacer staking o retirar."
+		},
+		"5": {
+			"question": "¿Cómo retiro mi staking de Lido?",
+			"answer": "Puedes solicitar retiros a través de la cola de retiros de Lido, que procesa solicitudes a medida que se completan salidas de validadores (típicamente 1-5 días). Alternativamente, puedes intercambiar stETH por ETH en DEXs como Curve para liquidez inmediata, aunque puedes recibir ligeramente menos de 1:1 dependiendo de las condiciones del mercado."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para comenzar a hacer staking?",
+		"button": "Abrir Lido",
+		"note": "Gana recompensas de staking de ETH mientras te mantienes líquido"
+	}
+}

@@ -1,329 +1,329 @@
 {
 	"category_seo": {
-		"title": "Криптокошельки - Аппаратные, программные и мультичейн | BiuBiu Tools",
-		"description": "Сравните лучшие криптокошельки по безопасности и удобству. Аппаратные кошельки, расширения для браузеров и мобильные кошельки для всех блокчейнов.",
-		"keywords": "криптокошелек, аппаратный кошелек, metamask, ledger, trezor, мультичейн кошелек",
+		"title": "Крипто-кошельки - Аппаратные, Программные и Multi-Chain | BiuBiu Tools",
+		"description": "Сравните лучшие криптокошельки для безопасности и удобства. Аппаратные кошельки, расширения браузера и мобильные кошельки для всех блокчейнов.",
+		"keywords": "криптокошелек, аппаратный кошелек, metamask, ledger, trezor, multi-chain кошелек",
 		"faqs": [
 			{
 				"question": "Что такое криптокошелек?",
-				"answer": "Криптокошелек — это программное или аппаратное обеспечение, которое хранит ваши приватные ключи и позволяет отправлять, получать и управлять криптовалютами. Он фактически не хранит криптовалюту — активы остаются в блокчейне."
+				"answer": "Криптокошелек - это программное обеспечение или устройство, которое хранит ваши приватные ключи и позволяет отправлять, получать и управлять криптовалютой. Кошельки фактически не хранят крипту - активы остаются в блокчейне."
 			},
 			{
-				"question": "Аппаратный кошелек против программного кошелька?",
-				"answer": "Аппаратные кошельки (Ledger, Trezor) хранят ключи офлайн для максимальной безопасности, идеальны для больших сумм. Программные кошельки (MetaMask, Rainbow) удобнее для ежедневного использования, но подключены к интернету."
+				"question": "Аппаратный или программный кошелек?",
+				"answer": "Аппаратные кошельки (Ledger, Trezor) хранят ключи офлайн для максимальной безопасности, идеальны для крупных сумм. Программные кошельки (MetaMask, Rainbow) удобнее для ежедневного использования, но подключены к интернету."
 			},
 			{
-				"question": "Как обезопасить свой кошелек?",
-				"answer": "Никогда не делитесь своей seed-фразой, используйте аппаратные кошельки для больших сумм, включайте 2FA где возможно, проверяйте детали транзакций перед подписанием и остерегайтесь фишинговых сайтов."
+				"question": "Как защитить свой кошелек?",
+				"answer": "Никогда не делитесь seed-фразой, используйте аппаратный кошелек для крупных сумм, включите 2FA где возможно, проверяйте детали транзакций перед подписанием и остерегайтесь фишинговых сайтов."
 			}
 		]
 	},
 	"tools": {
+		"biubiu_wallet_sweep": {
+			"description": "Пакетная консолидация токенов из нескольких кошельков на один адрес"
+		},
+		"biubiu_one_to_many": {
+			"description": "Распределение токенов из одного кошелька нескольким получателям"
+		},
+		"biubiu_wallet_generator": {
+			"description": "Пакетная генерация HD-кошельков с мнемоническими фразами"
+		},
+		"biubiu_balance_scanner": {
+			"description": "Одновременное сканирование балансов токенов на нескольких кошельках"
+		},
 		"debank": {
-			"description": "Мультичейн трекер портфеля и социальная платформа"
-		},
-		"rabby": {
-			"description": "Мультичейн браузерный кошелек"
-		},
-		"rainbow": {
-			"description": "Красивый кошелек Ethereum"
-		},
-		"metamask": {
-			"description": "Самый популярный кошелек Web3"
-		},
-		"frame": {
-			"description": "Десктоп кошелек, ориентированный на приватность"
-		},
-		"zerion": {
-			"description": "Портфель DeFi и кошелек"
-		},
-		"safe": {
-			"description": "Мультиподписной смарт-кошелек"
+			"description": "Multi-chain трекер портфеля с DeFi-аналитикой и социальными функциями"
 		},
 		"zapper": {
-			"description": "Панель управления портфелем DeFi"
+			"description": "DeFi-панель для отслеживания портфеля, NFT и управления доходностью"
 		},
-		"argent": {
-			"description": "Смарт-кошелек с восстановлением"
+		"zerion": {
+			"description": "Умный DeFi-кошелек с отслеживанием портфеля и multi-chain торговлей"
 		},
-		"sequence": {
-			"description": "Смарт-кошелек для гейминга"
+		"metamask": {
+			"description": "Самое популярное браузерное расширение для Ethereum и EVM-сетей"
 		},
-		"ledger": {
-			"description": "Безопасность аппаратного кошелька"
+		"rabby": {
+			"description": "Браузерный кошелек с фокусом на безопасность и предтранзакционной проверкой рисков"
 		},
-		"trezor": {
-			"description": "Пионер аппаратных кошельков"
+		"rainbow": {
+			"description": "Удобный Ethereum-кошелек с красивым отображением NFT"
 		},
-		"privy": {
-			"description": "Решение встроенного кошелька"
+		"frame": {
+			"description": "Десктопный кошелек с фокусом на приватность и интеграцией с аппаратными кошельками"
 		},
-		"dynamic": {
-			"description": "Мультикошельковая аутентификация"
+		"safe": {
+			"description": "Мультисиг смарт-контракт кошелек для команд и DAO"
 		},
 		"ambire": {
-			"description": "Смарт-кошелек с входом по email и транзакциями без газа"
-		},
-		"biconomy": {
-			"description": "Абстракция аккаунтов и SDK для транзакций без газа"
-		},
-		"coolwallet": {
-			"description": "Аппаратный кошелек в виде карты"
-		},
-		"imtoken": {
-			"description": "Мультичейн мобильный кошелек"
-		},
-		"multis": {
-			"description": "Корпоративный мультиподписной кошелек"
-		},
-		"mycrypto": {
-			"description": "Менеджер интерфейса кошелька"
-		},
-		"myetherwallet": {
-			"description": "Бесплатный кошелек Ethereum с открытым исходным кодом"
-		},
-		"mytonwallet": {
-			"description": "Кошелек TON с открытым исходным кодом"
+			"description": "Смарт-кошелек с входом по email и безгазовыми транзакциями"
 		},
 		"obvious": {
-			"description": "Смарт-кошелек с абстракцией аккаунтов"
+			"description": "Кошелек с абстракцией аккаунта и социальным восстановлением"
+		},
+		"soul_wallet": {
+			"description": "Модульный ERC-4337 смарт-кошелек с системой плагинов"
+		},
+		"patch_wallet": {
+			"description": "Встроенный кошелек с социальным входом для Web3-приложений"
 		},
 		"pimlico": {
-			"description": "Инфраструктура ERC-4337 bundler и paymaster"
-		},
-		"solflare": {
-			"description": "Кошелек Solana для Web и мобильных устройств"
-		},
-		"squads": {
-			"description": "Мультиподписной кошелек Solana"
+			"description": "ERC-4337 bundler и paymaster инфраструктура для абстракции аккаунтов"
 		},
 		"stackup": {
-			"description": "Bundler и SDK для абстракции аккаунтов"
+			"description": "Bundler-сервис абстракции аккаунтов и SDK для разработчиков"
 		},
-		"subwallet": {
-			"description": "Универсальный кошелек Polkadot и Ethereum"
+		"biconomy": {
+			"description": "SDK безгазовых транзакций и инфраструктура абстракции аккаунтов"
 		},
-		"tokenpocket": {
-			"description": "Мультичейн крипто кошелек"
-		},
-		"tonhub": {
-			"description": "Кошелек TON для iOS и Android"
-		},
-		"tronlink": {
-			"description": "Кошелек Tron для браузеров"
+		"alchemy_aa": {
+			"description": "Account Kit SDK для создания приложений со смарт-кошельками"
 		},
 		"zerodev": {
-			"description": "Модульный SDK смарт-кошелька с Kernel"
+			"description": "Модульный SDK смарт-кошелька с реализацией Kernel-аккаунта"
 		},
-		"biubiu-wallet-sweep": {
-			"description": "Wallet Sweep - Tool"
+		"particle_network": {
+			"description": "Wallet-as-a-service с социальным входом и абстракцией сетей"
 		},
-		"biubiu-one-to-many": {
-			"description": "One-to-Many Transfer - Tool"
+		"privy": {
+			"description": "SDK встроенного кошелька для беспрепятственного Web3-онбординга"
 		},
-		"biubiu-wallet-generator": {
-			"description": "Wallet Generator - Tool"
+		"dynamic": {
+			"description": "Платформа мультикошельковой аутентификации и онбординга"
 		},
-		"biubiu-balance-scanner": {
-			"description": "Balance Scanner - Tool"
+		"ledger": {
+			"description": "Ведущий аппаратный кошелек для безопасного холодного хранения"
 		},
-		"soul-wallet": {
-			"description": "Soul Wallet - Tool"
+		"trezor": {
+			"description": "Пионер аппаратных кошельков с открытым кодом и проверенной безопасностью"
 		},
-		"patch-wallet": {
-			"description": "Patch Wallet - Tool"
+		"coinbase_wallet": {
+			"description": "Некастодиальный кошелек Coinbase с поддержкой DeFi и NFT"
 		},
-		"alchemy-aa": {
-			"description": "Alchemy Account Kit - Tool"
+		"trust_wallet": {
+			"description": "Multi-chain мобильный кошелек с поддержкой миллионов активов"
 		},
-		"particle-network": {
-			"description": "Particle Network - Tool"
+		"argent": {
+			"description": "Смарт-контракт кошелек с guardian'ами и поддержкой StarkNet"
 		},
-		"coinbase-wallet": {
-			"description": "Coinbase Wallet - Tool"
+		"sequence": {
+			"description": "SDK смарт-кошелька, оптимизированный для игровых приложений"
 		},
-		"trust-wallet": {
-			"description": "Trust Wallet - Tool"
+		"phantom_wallet": {
+			"description": "Multi-chain кошелек для Solana, Ethereum и Bitcoin"
 		},
-		"phantom-wallet": {
-			"description": "Phantom - Tool"
+		"backpack_wallet": {
+			"description": "Кошелек с поддержкой xNFT для экосистем Solana и Ethereum"
 		},
-		"backpack-wallet": {
-			"description": "Backpack - Tool"
+		"exodus_wallet": {
+			"description": "Десктопный и мобильный кошелек со встроенной функцией обмена"
 		},
-		"exodus-wallet": {
-			"description": "Exodus - Tool"
+		"solflare": {
+			"description": "Функциональный Solana-кошелек с поддержкой стейкинга и NFT"
 		},
-		"keplr-wallet": {
-			"description": "Keplr - Tool"
+		"keplr_wallet": {
+			"description": "Ведущий кошелек для экосистемы Cosmos и IBC-переводов"
 		},
-		"leap-wallet": {
-			"description": "Leap Wallet - Tool"
+		"leap_wallet": {
+			"description": "Multi-chain Cosmos-кошелек с DeFi-интеграциями"
 		},
-		"xdefi-wallet": {
-			"description": "XDEFI - Tool"
+		"xdefi_wallet": {
+			"description": "Кросс-чейн браузерный кошелек с нативной функцией обмена"
 		},
-		"brave-wallet": {
-			"description": "Brave Wallet - Tool"
+		"brave_wallet": {
+			"description": "Встроенный в браузер кошелек с приватностью в приоритете"
 		},
-		"block-wallet": {
-			"description": "BlockWallet - Tool"
+		"block_wallet": {
+			"description": "Браузерный кошелек с улучшенной приватностью и защитой от фишинга"
 		},
-		"okx-wallet": {
-			"description": "OKX Wallet - Tool"
+		"okx_wallet": {
+			"description": "Multi-chain Web3-кошелек с DEX и NFT-маркетплейсом"
 		},
-		"core-wallet": {
-			"description": "Core Wallet - Tool"
+		"core_wallet": {
+			"description": "Кошелек экосистемы Avalanche с поддержкой Bitcoin и Ethereum"
 		},
-		"enkrypt-wallet": {
-			"description": "Enkrypt - Tool"
+		"enkrypt_wallet": {
+			"description": "Multi-chain браузерный кошелек от команды MyEtherWallet"
 		},
-		"talisman-wallet": {
-			"description": "Talisman - Tool"
+		"talisman_wallet": {
+			"description": "Кошелек Polkadot и Ethereum с панелью управления портфелем"
 		},
-		"polkadot-js": {
-			"description": "Polkadot.js - Tool"
+		"subwallet": {
+			"description": "Комплексный кошелек для Polkadot и Substrate-сетей"
 		},
-		"nami-wallet": {
-			"description": "Nami - Tool"
+		"polkadot_js": {
+			"description": "Официальное браузерное расширение для экосистемы Polkadot"
 		},
-		"eternl-wallet": {
-			"description": "Eternl - Tool"
+		"nami_wallet": {
+			"description": "Легкий браузерный кошелек Cardano для dApp'ов и NFT"
 		},
-		"yoroi-wallet": {
-			"description": "Yoroi - Tool"
+		"eternl_wallet": {
+			"description": "Функциональный Cardano-кошелек с инструментами стейкинга и DeFi"
 		},
-		"temple-wallet": {
-			"description": "Temple Wallet - Tool"
+		"yoroi_wallet": {
+			"description": "Официальный легкий кошелек для Cardano от EMURGO"
 		},
-		"kukai-wallet": {
-			"description": "Kukai - Tool"
+		"temple_wallet": {
+			"description": "Браузерный кошелек для Tezos DeFi и NFT-приложений"
 		},
-		"petra-wallet": {
-			"description": "Petra - Tool"
+		"kukai_wallet": {
+			"description": "Tezos-кошелек с социальным входом и поддержкой DirectAuth"
 		},
-		"martian-wallet": {
-			"description": "Martian - Tool"
+		"petra_wallet": {
+			"description": "Официальный кошелек для экосистемы блокчейна Aptos"
 		},
-		"sui-wallet": {
-			"description": "Sui Wallet - Tool"
+		"martian_wallet": {
+			"description": "Multi-chain кошелек для сетей Aptos и Sui"
 		},
-		"suiet-wallet": {
-			"description": "Suiet - Tool"
+		"sui_wallet": {
+			"description": "Официальный браузерный кошелек для блокчейна Sui"
+		},
+		"suiet_wallet": {
+			"description": "Open source Sui-кошелек с удобными функциями для разработчиков"
 		},
 		"tonkeeper": {
-			"description": "Tonkeeper - Tool"
+			"description": "Популярный TON-кошелек с поддержкой стейкинга и Jetton"
 		},
-		"sender-wallet": {
-			"description": "Sender Wallet - Tool"
+		"tonhub": {
+			"description": "TON-кошелек с интеграцией стейкинг-пула Whales"
 		},
-		"meteor-wallet": {
-			"description": "Meteor Wallet - Tool"
+		"mytonwallet": {
+			"description": "Open source TON-кошелек для десктопа и браузера"
 		},
-		"here-wallet": {
-			"description": "HERE Wallet - Tool"
+		"sender_wallet": {
+			"description": "Кошелек NEAR Protocol с функциями DeFi и NFT"
 		},
-		"coin98-wallet": {
-			"description": "Coin98 - Tool"
+		"meteor_wallet": {
+			"description": "NEAR-кошелек с продвинутым отслеживанием портфеля"
 		},
-		"bitget-wallet": {
-			"description": "Bitget Wallet - Tool"
+		"here_wallet": {
+			"description": "Mobile-first NEAR-кошелек с наградами за стейкинг"
 		},
-		"safepal-wallet": {
-			"description": "SafePal - Tool"
+		"coin98_wallet": {
+			"description": "Multi-chain DeFi-портал с поддержкой 90+ блокчейнов"
 		},
-		"onekey-wallet": {
-			"description": "OneKey - Tool"
+		"bitget_wallet": {
+			"description": "Multi-chain кошелек с агрегатором обменов и launchpad'ом"
 		},
-		"ellipal-wallet": {
-			"description": "ELLIPAL - Tool"
+		"safepal_wallet": {
+			"description": "Комбо аппаратного и программного кошелька при поддержке Binance"
 		},
-		"dcent-wallet": {
-			"description": "D - Tool"
+		"onekey_wallet": {
+			"description": "Open source аппаратный кошелек с multi-chain поддержкой"
 		},
-		"math-wallet": {
-			"description": "Math Wallet - Tool"
+		"ellipal_wallet": {
+			"description": "Air-gapped аппаратный кошелек с сенсорным экраном"
 		},
-		"alpha-wallet": {
-			"description": "AlphaWallet - Tool"
+		"dcent_wallet": {
+			"description": "Биометрический аппаратный кошелек с аутентификацией по отпечатку пальца"
 		},
-		"status-wallet": {
-			"description": "Status - Tool"
+		"coolwallet": {
+			"description": "Аппаратный кошелек размером с кредитку с Bluetooth-подключением"
 		},
-		"unstoppable-wallet": {
-			"description": "Unstoppable Wallet - Tool"
+		"imtoken": {
+			"description": "Популярный в Азии мобильный кошелек с multi-chain DeFi-поддержкой"
 		},
-		"exodus-wallet-ext": {
-			"description": "Exodus Extension - Tool"
+		"tokenpocket": {
+			"description": "Multi-chain мобильный кошелек со встроенным dApp-браузером"
 		},
-		"atomic-wallet": {
-			"description": "Atomic Wallet - Tool"
+		"math_wallet": {
+			"description": "Мультиплатформенный кошелек с поддержкой 100+ блокчейнов"
 		},
-		"guarda-wallet": {
-			"description": "Guarda - Tool"
+		"alpha_wallet": {
+			"description": "Open source мобильный кошелек с поддержкой TokenScript"
 		},
-		"edge-wallet": {
-			"description": "Edge - Tool"
+		"status_wallet": {
+			"description": "Приватный мессенджер со встроенным Ethereum-кошельком"
 		},
-		"crypto-com-defi": {
-			"description": "Crypto.com DeFi Wallet - Tool"
+		"unstoppable_wallet": {
+			"description": "Мобильный кошелек с фокусом на приватность и DeFi-аналитикой"
 		},
-		"lobstr-wallet": {
-			"description": "LOBSTR - Tool"
+		"exodus_wallet_ext": {
+			"description": "Браузерное расширение multi-chain кошелька Exodus"
 		},
-		"freighter-wallet": {
-			"description": "Freighter - Tool"
+		"myetherwallet": {
+			"description": "Оригинальный веб-интерфейс для управления Ethereum-кошельком"
 		},
-		"den-wallet": {
-			"description": "Den - Tool"
+		"mycrypto": {
+			"description": "Десктопный и веб-кошелек для безопасного управления Ethereum"
+		},
+		"atomic_wallet": {
+			"description": "Десктопный кошелек с атомарными свопами и функциями стейкинга"
+		},
+		"guarda_wallet": {
+			"description": "Мультиплатформенный кошелек со встроенной биржей и стейкингом"
+		},
+		"edge_wallet": {
+			"description": "Мобильный кошелек с фокусом на приватность и пользовательским входом"
+		},
+		"crypto_com_defi": {
+			"description": "DeFi-кошелек с сетью Cronos и кросс-чейн мостом"
+		},
+		"lobstr_wallet": {
+			"description": "Удобный Stellar-кошелек с торговыми функциями"
+		},
+		"freighter_wallet": {
+			"description": "Браузерный кошелек для Stellar и смарт-контрактов Soroban"
+		},
+		"tronlink": {
+			"description": "Официальный кошелек для экосистемы блокчейна TRON"
+		},
+		"multis": {
+			"description": "Бизнес-ориентированный мультисиг-кошелек с функциями выплат"
+		},
+		"squads": {
+			"description": "Мультисиг-казначейство и управление протоколом для Solana"
+		},
+		"den_wallet": {
+			"description": "Смарт-кошелек с DeFi-автоматизацией и пакетированием транзакций"
 		},
 		"instadapp": {
-			"description": "Instadapp - Tool"
+			"description": "DeFi смарт-аккаунт с агрегацией протоколов и автоматизацией"
 		},
-		"fuelet-wallet": {
-			"description": "Fuelet - Tool"
+		"fuelet_wallet": {
+			"description": "Кошелек для модульного уровня исполнения Fuel"
 		},
-		"fuel-wallet": {
-			"description": "Fuel Wallet - Tool"
+		"fuel_wallet": {
+			"description": "Официальный браузерный кошелек для Fuel Network"
 		},
-		"braavos-wallet": {
-			"description": "Braavos - Tool"
+		"braavos_wallet": {
+			"description": "Смарт-кошелек для StarkNet с поддержкой аппаратной подписи"
 		},
-		"keystone-wallet": {
-			"description": "Keystone - Tool"
+		"keystone_wallet": {
+			"description": "Air-gapped аппаратный кошелек с подписью через QR-код"
 		},
-		"gridplus-wallet": {
-			"description": "GridPlus Lattice1 - Tool"
+		"gridplus_wallet": {
+			"description": "Корпоративный аппаратный кошелек с хранилищем SafeCard"
 		},
-		"tangem-wallet": {
-			"description": "Tangem - Tool"
+		"tangem_wallet": {
+			"description": "NFC-карточный аппаратный кошелек для мобильного использования"
 		},
-		"web3auth-wallet": {
-			"description": "Web3Auth - Tool"
+		"web3auth_wallet": {
+			"description": "MPC-управление ключами с поддержкой социального входа"
 		},
-		"unisat-wallet": {
-			"description": "UniSat - Tool"
+		"unisat_wallet": {
+			"description": "Bitcoin-кошелек для Ordinals, BRC-20 и надписей"
 		},
-		"xverse-wallet": {
-			"description": "Xverse - Tool"
+		"xverse_wallet": {
+			"description": "Bitcoin и Stacks кошелек с поддержкой Ordinals"
 		},
-		"leather-wallet": {
-			"description": "Leather (Hiro) - Tool"
+		"leather_wallet": {
+			"description": "Bitcoin и Stacks кошелек, ранее известный как Hiro Wallet"
 		},
-		"passport-wallet": {
-			"description": "Passport (Foundation) - Tool"
+		"passport_wallet": {
+			"description": "Open source air-gapped аппаратный Bitcoin-кошелек"
 		},
-		"seedsigner-wallet": {
-			"description": "SeedSigner - Tool"
+		"seedsigner_wallet": {
+			"description": "DIY-проект air-gapped устройства для подписи Bitcoin"
 		},
-		"fireblocks-wallet": {
-			"description": "Fireblocks - Tool"
+		"fireblocks_wallet": {
+			"description": "Институциональная MPC-платформа хранения цифровых активов"
 		},
-		"anchorage-wallet": {
-			"description": "Anchorage Digital - Tool"
+		"anchorage_wallet": {
+			"description": "Банк цифровых активов с федеральной лицензией и кастодиан"
 		},
-		"bitgo-wallet": {
-			"description": "BitGo - Tool"
+		"bitgo_wallet": {
+			"description": "Институциональное хранение с мультисигом и страхованием"
 		}
 	}
 }

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷",
+		"code": "fr"
+	},
+	"seo": {
+		"title": "GMX - Échange de perpétuels décentralisé | Tradez avec effet de levier",
+		"description": "Découvrez GMX, l'échange de perpétuels décentralisé leader. Apprenez-en davantage sur le trading avec effet de levier, la provision de liquidité GLP et les échanges perpétuels à frais réduits sur Arbitrum et Avalanche.",
+		"keywords": "GMX, trading de perpétuels, échange décentralisé, effet de levier, Arbitrum, dérivés crypto, GLP"
+	},
+	"overview": "GMX est un échange de perpétuels décentralisé qui permet aux traders d'aller long ou short sur les cryptomonnaies avec un effet de levier jusqu'à 100x, tandis que les fournisseurs de liquidité gagnent des rendements en fournissant des actifs au pool multi-actifs du protocole. Lancé en 2021, GMX est devenu l'une des plus grandes plateformes de dérivés dans la DeFi, pionnier du modèle GLP où tous les traders tradent contre un pool de liquidité partagé.\n\nContrairement aux échanges centralisés ou aux DEX à carnet d'ordres, GMX utilise un modèle unique basé sur un pool où les traders empruntent au pool GLP pour exécuter des positions avec effet de levier. Cela permet des transactions sans slippage sur les actifs supportés, avec des prix dérivés des oracles Chainlink. Le pool GLP gagne 70% de tous les frais de trading, ce qui en fait une source de rendement attractive pour les investisseurs passifs.\n\nGMX est déployé sur Arbitrum et Avalanche, traitant plus de 100 milliards de dollars de volume de trading cumulé. Le lancement de la V2 du protocole a introduit des pools isolés, des actifs synthétiques et une efficacité du capital améliorée, consolidant davantage sa position en tant que principale plateforme de dérivés décentralisés.",
+	"features": {
+		"1": {
+			"title": "Trading de perpétuels",
+			"description": "Tradez BTC, ETH et d'autres actifs avec un effet de levier jusqu'à 100x sur des contrats perpétuels"
+		},
+		"2": {
+			"title": "Slippage zéro",
+			"description": "Exécutez de grandes transactions sans impact sur les prix en utilisant une tarification basée sur des oracles"
+		},
+		"3": {
+			"title": "Pool de liquidité GLP",
+			"description": "Fournissez de la liquidité pour gagner 70% des frais de trading et des émissions de tokens GMX"
+		},
+		"4": {
+			"title": "Frais réduits",
+			"description": "Frais de trading compétitifs avec des réductions pour les stakers GMX"
+		},
+		"5": {
+			"title": "Décentralisé",
+			"description": "Trading non-custodial - vos fonds restent dans votre portefeuille jusqu'à ce que vous tradez"
+		},
+		"6": {
+			"title": "Pools GM (V2)",
+			"description": "Marchés isolés avec des actifs synthétiques et une efficacité du capital améliorée"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Trading avec effet de levier",
+			"description": "Amplifiez votre exposition à BTC, ETH et d'autres actifs crypto"
+		},
+		"2": {
+			"title": "Couverture",
+			"description": "Ouvrez des positions short pour couvrir vos avoirs spot en crypto"
+		},
+		"3": {
+			"title": "Rendement passif",
+			"description": "Fournissez de la liquidité GLP pour gagner des frais de trading et des incitations en tokens"
+		},
+		"4": {
+			"title": "Échanges à faible slippage",
+			"description": "Exécutez de grands échanges spot entre actifs supportés avec un impact minimal sur les prix"
+		},
+		"5": {
+			"title": "Dérivés décentralisés",
+			"description": "Accédez au trading de dérivés sans KYC ni risque d'échange centralisé"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Qu'est-ce que GMX et comment fonctionne-t-il ?",
+			"answer": "GMX est un échange de perpétuels décentralisé où les traders vont long ou short avec effet de levier contre un pool de liquidité partagé (GLP). Les prix proviennent des oracles Chainlink, permettant une exécution sans slippage. Les traders paient des frais qui vont aux détenteurs de GLP et aux stakers GMX. Si les traders perdent, les détenteurs de GLP profitent ; si les traders gagnent, les détenteurs de GLP paient - faisant des détenteurs de GLP la contrepartie de toutes les transactions."
+		},
+		"2": {
+			"question": "Est-il sûr d'utiliser GMX ?",
+			"answer": "GMX a fait l'objet d'audits approfondis et a traité plus de 100 milliards de dollars de volume sans exploitation majeure. Cependant, le trading de perpétuels est intrinsèquement risqué - vous pouvez perdre l'intégralité de votre position avec l'effet de levier. GLP comporte également des risques : si les traders profitent systématiquement, la valeur de GLP diminue. Comprenez toujours les risques avant de trader."
+		},
+		"3": {
+			"question": "Qu'est-ce que GLP et comment puis-je gagner des rendements ?",
+			"answer": "GLP est le token du pool de liquidité multi-actifs de GMX. Lorsque vous créez du GLP, vous déposez des actifs (ETH, BTC, USDC, etc.) et recevez des tokens GLP représentant votre part. Les détenteurs de GLP gagnent 70% de tous les frais de trading payés en ETH/AVAX plus des incitations esGMX. Les APR actuels varient généralement de 15 à 40% selon le volume de trading."
+		},
+		"4": {
+			"question": "Quels sont les frais sur GMX ?",
+			"answer": "GMX facture des frais de 0,1% pour ouvrir ou fermer des positions, plus des frais d'emprunt qui s'accumulent toutes les heures en fonction de l'utilisation. Les échanges coûtent 0,2-0,8% selon qu'ils aident à équilibrer le pool. Les stakers GMX reçoivent des réductions de frais, et il n'y a pas de taux de financement - seulement le taux d'emprunt."
+		},
+		"5": {
+			"question": "Quelle est la différence entre GMX V1 et V2 ?",
+			"answer": "GMX V2 introduit des pools GM isolés au lieu du pool GLP unifié, permettant plus d'actifs et un risque réduit. V2 supporte les actifs synthétiques, a une efficacité du capital améliorée et introduit des taux de financement. Le GLP de V1 reste opérationnel avec sa liquidité établie, tandis que V2 continue de s'étendre avec de nouveaux marchés."
+		}
+	},
+	"cta": {
+		"ready": "Prêt à commencer à trader ?",
+		"button": "Ouvrir GMX",
+		"note": "Trading de perpétuels décentralisé avec un effet de levier jusqu'à 100x"
+	}
+}

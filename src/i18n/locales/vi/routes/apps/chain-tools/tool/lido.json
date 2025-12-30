@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "Lido - Giao thức Liquid Staking hàng đầu | Stake ETH, nhận stETH",
+		"description": "Khám phá Lido, giao thức liquid staking lớn nhất. Tìm hiểu cách stake ETH và nhận stETH, kiếm phần thưởng staking và sử dụng tài sản đã stake trong DeFi.",
+		"keywords": "Lido, liquid staking, stETH, ETH staking, Ethereum, DeFi, staking rewards"
+	},
+	"overview": "Lido là giao thức liquid staking lớn nhất trong DeFi, cho phép người dùng stake ETH của họ và nhận stETH (staked ETH) đổi lại - một token thanh khoản đại diện cho vị thế đã stake của họ và tích lũy phần thưởng staking tự động. Ra mắt vào tháng 12 năm 2020 ngay trước khi Ethereum Beacon Chain đi vào hoạt động, Lido đã giải quyết một vấn đề quan trọng: cho phép người dùng kiếm phần thưởng staking mà không cần khóa ETH của họ.\n\nKhi bạn stake ETH thông qua Lido, bạn nhận stETH với tỷ lệ 1:1. Số dư stETH này tăng hàng ngày khi phần thưởng staking tích lũy, và có thể được giao dịch tự do, sử dụng làm tài sản thế chấp trong các giao thức cho vay hoặc cung cấp làm thanh khoản trong DeFi. Bản chất 'thanh khoản' này có nghĩa là người stake không phải lựa chọn giữa việc kiếm lợi nhuận staking và tham gia DeFi.\n\nLido đã trở thành cơ sở hạ tầng DeFi nền tảng, với hơn 20 tỷ USD ETH đã stake và stETH được tích hợp trên hàng trăm giao thức. Giao thức được quản lý bởi người nắm giữ token LDO thông qua Lido DAO, giám sát lựa chọn node operator, cấu trúc phí và nâng cấp giao thức.",
+	"features": {
+		"1": {
+			"title": "Liquid Staking",
+			"description": "Stake ETH và nhận stETH, một token thanh khoản tích lũy phần thưởng staking tự động"
+		},
+		"2": {
+			"title": "Không có mức stake tối thiểu",
+			"description": "Stake bất kỳ số lượng ETH nào - không cần 32 ETH được yêu cầu cho solo staking"
+		},
+		"3": {
+			"title": "Khả năng tương thích DeFi",
+			"description": "Sử dụng stETH trên DeFi - làm tài sản thế chấp, trong bể thanh khoản hoặc cho các chiến lược lợi nhuận"
+		},
+		"4": {
+			"title": "Phần thưởng hàng ngày",
+			"description": "Số dư stETH tăng hàng ngày để phản ánh phần thưởng staking đã kiếm được"
+		},
+		"5": {
+			"title": "Rút tiền",
+			"description": "Yêu cầu rút tiền để chuyển đổi stETH trở lại ETH thông qua giao thức"
+		},
+		"6": {
+			"title": "wstETH",
+			"description": "Wrapped stETH với số dư không đổi - phần thưởng tích lũy thông qua tăng giá trị"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Kiếm phần thưởng Staking",
+			"description": "Kiếm lợi nhuận staking Ethereum (~3-4% APY) trong khi duy trì thanh khoản"
+		},
+		"2": {
+			"title": "Tài sản thế chấp DeFi",
+			"description": "Sử dụng stETH làm tài sản thế chấp trên Aave, MakerDAO và các giao thức cho vay khác"
+		},
+		"3": {
+			"title": "Cung cấp thanh khoản",
+			"description": "Cung cấp thanh khoản stETH-ETH trên Curve và kiếm phí giao dịch bổ sung"
+		},
+		"4": {
+			"title": "Leveraged Staking",
+			"description": "Vay dựa trên stETH để mua thêm ETH và khuếch đại lợi nhuận staking"
+		},
+		"5": {
+			"title": "Đa dạng hóa danh mục đầu tư",
+			"description": "Giữ stETH như một phương án thay thế ETH sinh lời trong danh mục của bạn"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Lido là gì và liquid staking hoạt động như thế nào?",
+			"answer": "Lido là một giao thức liquid staking cho phép bạn stake ETH và nhận stETH đổi lại. Khi bạn stake thông qua Lido, ETH của bạn được ủy thác cho các node operator chuyên nghiệp chạy validator. Bạn nhận stETH đại diện cho stake của mình, tự động tăng số dư khi phần thưởng tích lũy. Điều này có nghĩa là bạn có thể sử dụng stETH trong DeFi trong khi vẫn kiếm phần thưởng staking."
+		},
+		"2": {
+			"question": "Lido có an toàn để sử dụng không?",
+			"answer": "Lido là giao thức liquid staking lớn nhất và được thử nghiệm nhiều nhất với nhiều cuộc kiểm toán bảo mật. Tuy nhiên, rủi ro bao gồm lỗ hổng hợp đồng thông minh, hình phạt slashing nếu node operator có hành vi sai trái và stETH có khả năng giao dịch ở mức giảm giá so với ETH trong thời kỳ căng thẳng thị trường. Lido sử dụng một tập hợp node operator đa dạng để giảm rủi ro tập trung hóa."
+		},
+		"3": {
+			"question": "Sự khác biệt giữa stETH và wstETH là gì?",
+			"answer": "stETH là token rebasing - số dư của bạn tăng hàng ngày khi phần thưởng tích lũy. wstETH (wrapped stETH) có số dư không đổi, với phần thưởng được phản ánh trong giá trị tăng của nó so với stETH. wstETH tốt hơn cho các tích hợp DeFi không hỗ trợ token rebasing và cho mục đích báo cáo thuế."
+		},
+		"4": {
+			"question": "Lido tính phí bao nhiêu?",
+			"answer": "Lido tính phí 10% trên phần thưởng staking, chia cho node operator và kho bạc Lido DAO. Phí này được tự động khấu trừ - bạn chỉ cần nhận phần thưởng staking ròng được phản ánh trong số dư stETH của bạn. Không có phí cho staking hoặc unstaking."
+		},
+		"5": {
+			"question": "Làm thế nào để unstake từ Lido?",
+			"answer": "Bạn có thể yêu cầu rút tiền thông qua hàng đợi rút tiền của Lido, xử lý yêu cầu khi các validator exit hoàn tất (thường là 1-5 ngày). Ngoài ra, bạn có thể hoán đổi stETH lấy ETH trên các DEX như Curve để có thanh khoản ngay lập tức, mặc dù bạn có thể nhận được ít hơn một chút so với tỷ lệ 1:1 tùy thuộc vào điều kiện thị trường."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng bắt đầu staking?",
+		"button": "Mở Lido",
+		"note": "Kiếm phần thưởng ETH staking trong khi giữ thanh khoản"
+	}
+}

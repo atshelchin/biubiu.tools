@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Español",
+		"englishName": "Spanish",
+		"direction": "ltr",
+		"flag": "🇪🇸",
+		"code": "es"
+	},
+	"seo": {
+		"title": "Aave - Protocolo Líder de Préstamos DeFi | Pide Prestado y Presta Cripto",
+		"description": "Descubre Aave, el protocolo de préstamos descentralizado líder mundial. Aprende sobre flash loans, soporte multi-cadena y cómo ganar rendimientos suministrando activos cripto.",
+		"keywords": "Aave, DeFi lending, préstamos cripto, flash loans, yield farming, Ethereum, Polygon, Arbitrum"
+	},
+	"overview": "Aave es uno de los protocolos de préstamos descentralizados más grandes y confiables en DeFi, permitiendo a los usuarios prestar, pedir prestado y ganar intereses sobre activos de criptomonedas sin intermediarios. Originalmente lanzado como ETHLend en 2017 por Stani Kulechov, el protocolo se rebautizó como Aave (que significa 'fantasma' en finlandés) en 2020 y desde entonces se ha convertido en una piedra angular de las finanzas descentralizadas.\n\nEl protocolo opera a través de pools de liquidez donde los usuarios depositan activos cripto para ganar intereses, mientras que los prestatarios pueden obtener préstamos proporcionando colateral. Aave fue pionero en varias innovaciones DeFi, incluidos los flash loans - préstamos sin colateral que deben ser tomados y devueltos dentro de una sola transacción - que se han convertido en herramientas esenciales para arbitraje, intercambio de colaterales y estrategias de auto-liquidación.\n\nA partir de 2024, Aave ha asegurado más de $10 mil millones en Valor Total Bloqueado (TVL) a través de Ethereum, Polygon, Arbitrum, Optimism y otras redes, convirtiéndolo en uno de los protocolos más eficientes en capital del espacio.",
+	"features": {
+		"1": {
+			"title": "Suministrar y Ganar Intereses",
+			"description": "Deposita activos cripto en pools de liquidez y gana tasas de interés variables basadas en la demanda del mercado"
+		},
+		"2": {
+			"title": "Pedir Prestado Contra Colateral",
+			"description": "Obtén préstamos proporcionando colateral cripto, con opciones flexibles de tasas de interés variables o estables"
+		},
+		"3": {
+			"title": "Flash Loans",
+			"description": "Accede a préstamos sin colateral dentro de una sola transacción - perfecto para arbitraje y estrategias DeFi"
+		},
+		"4": {
+			"title": "Despliegue Multi-Cadena",
+			"description": "Disponible en Ethereum, Polygon, Arbitrum, Optimism, Avalanche y más redes"
+		},
+		"5": {
+			"title": "Módulo de Seguridad",
+			"description": "Haz staking de tokens AAVE en el Módulo de Seguridad para ganar recompensas mientras proteges el protocolo"
+		},
+		"6": {
+			"title": "Stablecoin GHO",
+			"description": "Acuña GHO, la stablecoin descentralizada nativa de Aave, utilizando tu colateral suministrado"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Generación de Rendimientos",
+			"description": "Gana ingresos pasivos suministrando stablecoins o activos cripto a pools de préstamos"
+		},
+		"2": {
+			"title": "Posiciones Apalancadas",
+			"description": "Pide prestado contra tus tenencias para aumentar la exposición sin vender tus activos"
+		},
+		"3": {
+			"title": "Arbitraje con Flash Loans",
+			"description": "Ejecuta estrategias DeFi complejas incluyendo arbitraje de precios e intercambios de colateral"
+		},
+		"4": {
+			"title": "Acceso a Liquidez",
+			"description": "Accede a liquidez sin vender tenencias a largo plazo - ideal para optimización fiscal"
+		},
+		"5": {
+			"title": "DeFi Cross-Chain",
+			"description": "Usa el mismo protocolo en múltiples cadenas con una experiencia de usuario consistente"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es Aave y cómo funciona?",
+			"answer": "Aave es un protocolo de préstamos descentralizado donde los usuarios pueden suministrar activos cripto para ganar intereses o pedir prestado contra colateral. Los proveedores depositan activos en pools de liquidez y ganan intereses variables basados en las tasas de utilización. Los prestatarios deben proporcionar colateral (típicamente 120-150% del valor del préstamo) y pagar intereses sobre sus préstamos."
+		},
+		"2": {
+			"question": "¿Es seguro usar Aave?",
+			"answer": "Aave es uno de los protocolos DeFi más probados en batalla con múltiples auditorías de seguridad y un historial sólido. El protocolo tiene un Módulo de Seguridad donde los stakers de AAVE proporcionan un respaldo contra posibles déficits. Sin embargo, DeFi siempre conlleva riesgos de contratos inteligentes, así que solo deposita lo que puedas permitirte perder."
+		},
+		"3": {
+			"question": "¿Qué son los flash loans?",
+			"answer": "Los flash loans son préstamos sin colateral que deben ser tomados y devueltos dentro de una sola transacción de blockchain. Si el préstamo no se devuelve al final de la transacción, toda la transacción se revierte. Se usan para arbitraje, intercambios de colateral y estrategias de auto-liquidación."
+		},
+		"4": {
+			"question": "¿Para qué se usa el token AAVE?",
+			"answer": "AAVE es el token de gobernanza que permite a los titulares votar sobre actualizaciones del protocolo y parámetros. Los titulares de tokens también pueden hacer staking de AAVE en el Módulo de Seguridad para ganar recompensas mientras proporcionan seguro para el protocolo contra posibles deudas incobrables."
+		},
+		"5": {
+			"question": "¿Qué es la stablecoin GHO?",
+			"answer": "GHO es la stablecoin descentralizada nativa de Aave que los usuarios pueden acuñar usando su colateral suministrado. A diferencia de las stablecoins tradicionales, GHO se crea directamente a través del protocolo Aave, con los pagos de intereses yendo al tesoro del Aave DAO."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para comenzar a prestar?",
+		"button": "Abrir Aave",
+		"note": "Gana rendimientos sobre tus activos cripto"
+	}
+}

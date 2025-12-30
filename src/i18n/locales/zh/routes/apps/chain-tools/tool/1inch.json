@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "中文",
+		"englishName": "Chinese",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "1inch - 最佳 DEX 聚合器 | DeFi 工具评测",
+		"description": "了解 1inch，领先的 DEX 聚合器，为您找到去中心化交易所的最佳兑换率。探索 Fusion 模式、限价单和多链交易。",
+		"keywords": "1inch, DEX 聚合器，代币兑换，最佳汇率，DeFi, 以太坊，多链，加密货币交易"
+	},
+	"overview": "1inch 是领先的去中心化交易所（DEX）聚合器，从数百个 DEX 获取流动性，为用户找到最佳的兑换率。1inch 由 Sergej Kunz 和 Anton Bukov 于 2019 年在 ETHGlobal 黑客马拉松期间创立，已成为 DeFi 生态系统中最重要的工具之一。\n\n该协议的 Pathfinder 算法将交易分散到多个流动性来源，优化最佳汇率，同时最小化滑点和 gas 成本。通过 Fusion 模式，用户可以执行无需支付 gas 费的兑换——交易成本由竞争提供最佳价格的解算器承担。\n\n1inch 部署在 12+ 个区块链网络上，包括以太坊、Polygon、Arbitrum、Optimism 和 BNB Chain，每月处理数十亿美元的交易量。该协议已成为在分散的 DEX 格局中寻求最佳执行的交易者的首选聚合器。",
+	"features": {
+		"1": {
+			"title": "DEX 聚合",
+			"description": "从 400+ 个 DEX 获取流动性，在整个 DeFi 生态系统中找到最佳兑换率"
+		},
+		"2": {
+			"title": "Fusion 模式",
+			"description": "无 gas 兑换，解算器竞争以最佳价格填充您的订单"
+		},
+		"3": {
+			"title": "限价单",
+			"description": "设置目标价格，当条件满足时自动执行交易"
+		},
+		"4": {
+			"title": "多链支持",
+			"description": "在 12+ 个网络上交易，包括以太坊、Polygon、Arbitrum 等"
+		},
+		"5": {
+			"title": "Pathfinder 算法",
+			"description": "先进的路由算法，将交易分散到多个 DEX 以获得最佳执行"
+		},
+		"6": {
+			"title": "MEV 保护",
+			"description": "Fusion 订单受到保护，免受三明治攻击和其他 MEV 剥削"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "最优代币兑换",
+			"description": "通过聚合所有主要 DEX 的流动性，获得任何代币兑换的最佳汇率"
+		},
+		"2": {
+			"title": "大额交易执行",
+			"description": "将大额订单分散到多个来源，以最小化价格影响和滑点"
+		},
+		"3": {
+			"title": "无 gas 交易",
+			"description": "使用 Fusion 模式兑换代币，无需预付 gas 费"
+		},
+		"4": {
+			"title": "限价单交易",
+			"description": "设置订单后无需关注，当达到目标价格时自动执行"
+		},
+		"5": {
+			"title": "跨链交易",
+			"description": "在多个区块链网络上使用相同的聚合技术"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 1inch，它如何运作？",
+			"answer": "1inch 是一个 DEX 聚合器，通过搜索数百个去中心化交易所来找到最佳兑换率。当您进行交易时，1inch 的 Pathfinder 算法计算最优路径，可能将您的交易分散到多个 DEX，让您获得比使用任何单一交易所更多的代币。"
+		},
+		"2": {
+			"question": "使用 1inch 安全吗？",
+			"answer": "1inch 经过广泛审计，处理了数十亿的交易量，没有发生重大安全事件。该协议是非托管的——您始终直接从钱包进行交易。但是，请始终确认您使用的是官方 1inch 界面，并警惕诈骗代币。"
+		},
+		"3": {
+			"question": "什么是 Fusion 模式？",
+			"answer": "Fusion 是 1inch 的无 gas 交易模式，专业做市商（称为\"解算器\"）竞争填充您的订单。您签署一条消息（免费）而不是支付 gas，解算器支付交易成本。您通常能获得更好的汇率，因为解算器可以优化执行。"
+		},
+		"4": {
+			"question": "1inch 的费用是多少？",
+			"answer": "1inch 在大多数交易上不收取兑换费。您只需支付网络 gas 费（或在 Fusion 模式下无需支付）。平台从某些交易的正滑点和与流动性来源的合作中获利。限价单执行时会收取少量费用。"
+		},
+		"5": {
+			"question": "1inch 与直接在 Uniswap 交易相比如何？",
+			"answer": "1inch 通常比单独使用 Uniswap 提供更好的汇率，因为它可以将您的交易路由到多个 DEX。特别是对于大额交易，1inch 的拆分可以显著减少滑点。但是，对于热门交易对的小额交易，由于 gas 优化，直接 DEX 交易可能更便宜。"
+		}
+	},
+	"cta": {
+		"ready": "准备找到最佳汇率了吗？",
+		"button": "打开 1inch",
+		"note": "跨 400+ 个 DEX 的最佳价格"
+	}
+}

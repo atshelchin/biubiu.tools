@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Bahasa Indonesia",
+		"englishName": "Indonesian",
+		"direction": "ltr",
+		"flag": "🇮🇩",
+		"code": "id"
+	},
+	"seo": {
+		"title": "Curve Finance - DEX Stablecoin Terkemuka | Swap Slippage Rendah",
+		"description": "Temukan Curve Finance, DEX premier untuk trading stablecoin dan aset pegged. Pelajari tentang swap slippage rendah, penyediaan likuiditas, dan tokenomik CRV.",
+		"keywords": "Curve Finance, swap stablecoin, DeFi, slippage rendah, CRV, liquidity pool, yield farming"
+	},
+	"overview": "Curve Finance adalah decentralized exchange yang dirancang khusus untuk trading efisien antara stablecoin dan aset pegged. Diluncurkan pada 2020 oleh Michael Egorov, seorang fisikawan dan pengusaha serial, Curve merintis StableSwap invariant - bonding curve yang dioptimalkan untuk aset yang seharusnya diperdagangkan pada harga serupa.\n\nTidak seperti AMM tujuan umum seperti Uniswap, pool Curve dioptimalkan untuk slippage minimal saat trading antara aset yang berkorelasi seperti USDC/USDT/DAI atau versi wrapped Bitcoin yang berbeda. Spesialisasi ini telah menjadikan Curve tulang punggung likuiditas DeFi, dengan banyak protokol mengandalkan pool Curve untuk trading stablecoin dan liquid staking token mereka.\n\nTokenomik veCRV protokol ini memperkenalkan vote-escrowed governance, di mana pengguna mengunci token CRV untuk mendapatkan voting power dan meningkatkan reward liquidity mining mereka. Model ini telah banyak ditiru di DeFi dan memicu 'Curve Wars' - protokol bersaing untuk mengumpulkan voting power CRV untuk mengarahkan emisi ke pool mereka.",
+	"features": {
+		"1": {
+			"title": "StableSwap AMM",
+			"description": "Bonding curve khusus yang memungkinkan swap slippage sangat rendah antara aset pegged"
+		},
+		"2": {
+			"title": "Penyediaan Likuiditas",
+			"description": "Sediakan likuiditas ke pool dan hasilkan biaya trading plus insentif token CRV"
+		},
+		"3": {
+			"title": "Governance veCRV",
+			"description": "Kunci token CRV untuk memberikan suara pada gauge weight dan meningkatkan reward liquidity mining Anda"
+		},
+		"4": {
+			"title": "Pool Multi-Aset",
+			"description": "Trade antara beberapa stablecoin atau aset pegged dalam satu pool"
+		},
+		"5": {
+			"title": "Pool Tricrypto",
+			"description": "Pool V2 untuk trading antara aset volatil seperti ETH, BTC, dan stablecoin"
+		},
+		"6": {
+			"title": "crvUSD",
+			"description": "Stablecoin asli Curve yang didukung oleh jaminan kripto dengan mekanisme soft liquidation"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Swap Stablecoin",
+			"description": "Trade antara USDC, USDT, DAI, dan stablecoin lainnya dengan slippage minimal"
+		},
+		"2": {
+			"title": "Yield Farming",
+			"description": "Sediakan likuiditas untuk menghasilkan biaya trading dan reward CRV yang ditingkatkan oleh veCRV"
+		},
+		"3": {
+			"title": "Trade Besar",
+			"description": "Jalankan trade jutaan dolar antara aset pegged dengan price impact minimal"
+		},
+		"4": {
+			"title": "Trading LST",
+			"description": "Swap antara liquid staking token seperti stETH, rETH, dan cbETH secara efisien"
+		},
+		"5": {
+			"title": "Likuiditas Protokol",
+			"description": "Protokol menggunakan pool Curve sebagai venue likuiditas utama untuk token mereka"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Apa itu Curve Finance dan bagaimana cara kerjanya?",
+			"answer": "Curve adalah DEX yang dioptimalkan untuk trading antara stablecoin dan aset pegged. Algoritma StableSwap-nya mengasumsikan aset dalam pool harus bernilai kira-kira sama, memungkinkan trade slippage sangat rendah. Penyedia likuiditas menghasilkan biaya dari trade plus insentif token CRV."
+		},
+		"2": {
+			"question": "Mengapa menggunakan Curve daripada Uniswap untuk swap stablecoin?",
+			"answer": "Bonding curve khusus Curve memberikan slippage yang jauh lebih rendah untuk trade stablecoin. Swap USDC ke USDT $1 juta di Curve mungkin memiliki slippage 0.01%, sementara trade yang sama di Uniswap bisa memiliki 0.3% atau lebih. Untuk trade besar, perbedaan ini menghasilkan penghematan yang signifikan."
+		},
+		"3": {
+			"question": "Apa itu veCRV dan mengapa penting?",
+			"answer": "veCRV (vote-escrowed CRV) diperoleh dengan mengunci token CRV hingga 4 tahun. Pemegang veCRV dapat memberikan suara untuk mengarahkan emisi CRV ke pool tertentu, meningkatkan reward LP mereka sendiri hingga 2.5x, dan menghasilkan biaya protokol. Ini menciptakan insentif untuk keselarasan jangka panjang dengan protokol."
+		},
+		"4": {
+			"question": "Apa itu Curve Wars?",
+			"answer": "Curve Wars merujuk pada protokol yang bersaing untuk mengumpulkan voting power veCRV. Protokol seperti Convex, Yearn, dan lainnya berusaha untuk mengontrol emisi CRV untuk menguntungkan likuiditas mereka. Convex khususnya telah mengumpulkan bagian besar veCRV, memungkinkan pemegang CVX untuk mempengaruhi governance Curve."
+		},
+		"5": {
+			"question": "Apa itu crvUSD?",
+			"answer": "crvUSD adalah stablecoin asli Curve yang dapat di-mint pengguna dengan menyetor jaminan kripto. Ini menampilkan mekanisme 'soft liquidation' unik yang disebut LLAMMA yang secara bertahap mengonversi jaminan ke crvUSD saat harga turun, mengurangi risiko likuidasi mendadak dibandingkan dengan protokol lending tradisional."
+		}
+	},
+	"cta": {
+		"ready": "Siap untuk swap dengan slippage minimal?",
+		"button": "Buka Curve",
+		"note": "Rumah likuiditas stablecoin"
+	}
+}

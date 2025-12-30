@@ -1,329 +1,329 @@
 {
 	"category_seo": {
-		"title": "Ví Crypto - Ví Cứng, Phần Mềm & Đa Chuỗi | BiuBiu Tools",
-		"description": "So sánh các ví crypto tốt nhất về bảo mật và tiện lợi. Ví cứng, tiện ích trình duyệt và ví di động cho mọi blockchain.",
-		"keywords": "crypto wallet, hardware wallet, metamask, ledger, trezor, multi-chain wallet",
+		"title": "Ví Crypto - Phần cứng, Phần mềm & Multi-Chain | BiuBiu Tools",
+		"description": "So sánh các ví crypto tốt nhất về bảo mật và tiện lợi. Ví phần cứng, tiện ích mở rộng trình duyệt và ví di động cho tất cả blockchain.",
+		"keywords": "ví crypto, ví phần cứng, metamask, ledger, trezor, ví multi-chain",
 		"faqs": [
 			{
 				"question": "Ví crypto là gì?",
-				"answer": "Ví crypto là phần mềm hoặc phần cứng lưu trữ khóa riêng tư của bạn và cho phép bạn gửi, nhận và quản lý tiền điện tử. Nó không thực sự lưu trữ crypto - tài sản vẫn ở trên blockchain."
+				"answer": "Ví crypto là phần mềm hoặc phần cứng lưu trữ khóa riêng của bạn và cho phép bạn gửi, nhận và quản lý tiền điện tử. Ví không thực sự lưu trữ crypto - tài sản vẫn nằm trên blockchain."
 			},
 			{
-				"question": "Ví cứng so với ví phần mềm?",
-				"answer": "Ví cứng (Ledger, Trezor) lưu trữ khóa ngoại tuyến để có bảo mật tối đa, lý tưởng cho số lượng lớn. Ví phần mềm (MetaMask, Rainbow) tiện lợi hơn cho sử dụng hàng ngày nhưng được kết nối với internet."
+				"question": "Ví phần cứng vs ví phần mềm?",
+				"answer": "Ví phần cứng (Ledger, Trezor) lưu trữ khóa ngoại tuyến để bảo mật tối đa, lý tưởng cho số tiền lớn. Ví phần mềm (MetaMask, Rainbow) tiện lợi hơn cho sử dụng hàng ngày nhưng kết nối internet."
 			},
 			{
-				"question": "Làm thế nào để giữ ví của tôi an toàn?",
-				"answer": "Không bao giờ chia sẻ seed phrase của bạn, sử dụng ví cứng cho số tiền lớn, bật 2FA khi có thể, xác minh chi tiết giao dịch trước khi ký và cẩn thận với các trang web lừa đảo."
+				"question": "Làm sao để bảo vệ ví của tôi?",
+				"answer": "Không bao giờ chia sẻ cụm từ seed, sử dụng ví phần cứng cho số tiền lớn, bật 2FA khi có thể, xác minh chi tiết giao dịch trước khi ký và cẩn thận với các trang phishing."
 			}
 		]
 	},
 	"tools": {
+		"biubiu_wallet_sweep": {
+			"description": "Hợp nhất hàng loạt token từ nhiều ví vào một địa chỉ"
+		},
+		"biubiu_one_to_many": {
+			"description": "Phân phối token từ một ví đến nhiều người nhận"
+		},
+		"biubiu_wallet_generator": {
+			"description": "Tạo hàng loạt ví HD với cụm từ ghi nhớ"
+		},
+		"biubiu_balance_scanner": {
+			"description": "Quét số dư token trên nhiều ví đồng thời"
+		},
 		"debank": {
-			"description": "Theo dõi danh mục đầu tư đa chuỗi và nền tảng xã hội"
-		},
-		"rabby": {
-			"description": "Ví trình duyệt đa chuỗi"
-		},
-		"rainbow": {
-			"description": "Ví Ethereum đẹp mắt"
-		},
-		"metamask": {
-			"description": "Ví Web3 phổ biến nhất"
-		},
-		"frame": {
-			"description": "Ví desktop tập trung vào quyền riêng tư"
-		},
-		"zerion": {
-			"description": "Danh mục đầu tư và ví DeFi"
-		},
-		"safe": {
-			"description": "Ví thông minh đa chữ ký"
+			"description": "Theo dõi danh mục multi-chain với phân tích DeFi và tính năng xã hội"
 		},
 		"zapper": {
-			"description": "Bảng điều khiển danh mục đầu tư DeFi"
+			"description": "Bảng điều khiển DeFi để theo dõi danh mục, NFT và quản lý lợi nhuận"
 		},
-		"argent": {
-			"description": "Ví thông minh với khôi phục"
+		"zerion": {
+			"description": "Ví DeFi thông minh với theo dõi danh mục và giao dịch multi-chain"
 		},
-		"sequence": {
-			"description": "Ví thông minh cho game"
+		"metamask": {
+			"description": "Tiện ích mở rộng trình duyệt phổ biến nhất cho Ethereum và chuỗi EVM"
 		},
-		"ledger": {
-			"description": "Bảo mật ví cứng"
+		"rabby": {
+			"description": "Ví trình duyệt tập trung bảo mật với xác minh rủi ro trước giao dịch"
 		},
-		"trezor": {
-			"description": "Tiên phong ví cứng"
+		"rainbow": {
+			"description": "Ví Ethereum thân thiện với người dùng với hiển thị NFT đẹp"
 		},
-		"privy": {
-			"description": "Giải pháp ví nhúng"
+		"frame": {
+			"description": "Ví desktop tập trung quyền riêng tư với tích hợp phần cứng"
 		},
-		"dynamic": {
-			"description": "Xác thực đa ví"
+		"safe": {
+			"description": "Ví hợp đồng thông minh đa chữ ký cho nhóm và DAO"
 		},
 		"ambire": {
-			"description": "Ví thông minh với đăng nhập email và giao dịch không phí gas"
+			"description": "Ví thông minh với đăng nhập email và giao dịch không gas"
 		},
 		"obvious": {
-			"description": "Ví thông minh với account abstraction"
+			"description": "Ví trừu tượng hóa tài khoản với khôi phục xã hội"
+		},
+		"soul_wallet": {
+			"description": "Ví thông minh ERC-4337 mô-đun với hệ thống plugin"
+		},
+		"patch_wallet": {
+			"description": "Ví nhúng với đăng nhập xã hội cho ứng dụng Web3"
 		},
 		"pimlico": {
-			"description": "Cơ sở hạ tầng bundler và paymaster ERC-4337"
+			"description": "Hạ tầng bundler và paymaster ERC-4337 cho trừu tượng hóa tài khoản"
 		},
 		"stackup": {
-			"description": "Bundler và SDK account abstraction"
+			"description": "Dịch vụ bundler trừu tượng hóa tài khoản và SDK cho nhà phát triển"
 		},
 		"biconomy": {
-			"description": "SDK account abstraction và giao dịch không phí gas"
+			"description": "SDK giao dịch không gas và hạ tầng trừu tượng hóa tài khoản"
+		},
+		"alchemy_aa": {
+			"description": "SDK Account Kit để xây dựng ứng dụng ví thông minh"
 		},
 		"zerodev": {
-			"description": "SDK ví thông minh mô-đun với Kernel"
+			"description": "SDK ví thông minh mô-đun với triển khai tài khoản Kernel"
+		},
+		"particle_network": {
+			"description": "Wallet-as-a-service với đăng nhập xã hội và trừu tượng hóa chuỗi"
+		},
+		"privy": {
+			"description": "SDK ví nhúng cho onboarding Web3 không ma sát"
+		},
+		"dynamic": {
+			"description": "Nền tảng xác thực và onboarding đa ví"
+		},
+		"ledger": {
+			"description": "Ví phần cứng hàng đầu cho lưu trữ lạnh an toàn"
+		},
+		"trezor": {
+			"description": "Tiên phong ví phần cứng mã nguồn mở với bảo mật đã được chứng minh"
+		},
+		"coinbase_wallet": {
+			"description": "Ví tự lưu giữ của Coinbase với hỗ trợ DeFi và NFT"
+		},
+		"trust_wallet": {
+			"description": "Ví di động multi-chain hỗ trợ hàng triệu tài sản"
+		},
+		"argent": {
+			"description": "Ví hợp đồng thông minh với guardian và hỗ trợ StarkNet"
+		},
+		"sequence": {
+			"description": "SDK ví thông minh được tối ưu cho ứng dụng gaming"
+		},
+		"phantom_wallet": {
+			"description": "Ví multi-chain cho Solana, Ethereum và Bitcoin"
+		},
+		"backpack_wallet": {
+			"description": "Ví hỗ trợ xNFT cho hệ sinh thái Solana và Ethereum"
+		},
+		"exodus_wallet": {
+			"description": "Ví desktop và di động với chức năng swap tích hợp"
 		},
 		"solflare": {
-			"description": "Ví Solana phổ biến"
+			"description": "Ví Solana đầy đủ tính năng với hỗ trợ staking và NFT"
+		},
+		"keplr_wallet": {
+			"description": "Ví hàng đầu cho hệ sinh thái Cosmos và chuyển IBC"
+		},
+		"leap_wallet": {
+			"description": "Ví Cosmos multi-chain với tích hợp DeFi"
+		},
+		"xdefi_wallet": {
+			"description": "Ví trình duyệt cross-chain với chức năng swap gốc"
+		},
+		"brave_wallet": {
+			"description": "Ví tích hợp trình duyệt với thiết kế ưu tiên quyền riêng tư"
+		},
+		"block_wallet": {
+			"description": "Ví trình duyệt với quyền riêng tư nâng cao và bảo vệ chống phishing"
+		},
+		"okx_wallet": {
+			"description": "Ví Web3 multi-chain với DEX và marketplace NFT"
+		},
+		"core_wallet": {
+			"description": "Ví hệ sinh thái Avalanche với hỗ trợ Bitcoin và Ethereum"
+		},
+		"enkrypt_wallet": {
+			"description": "Ví trình duyệt multi-chain từ đội ngũ MyEtherWallet"
+		},
+		"talisman_wallet": {
+			"description": "Ví Polkadot và Ethereum với bảng điều khiển danh mục"
 		},
 		"subwallet": {
-			"description": "Ví đa chuỗi cho Polkadot"
+			"description": "Ví toàn diện cho Polkadot và chuỗi Substrate"
 		},
-		"tonhub": {
-			"description": "Ví TON di động"
+		"polkadot_js": {
+			"description": "Tiện ích mở rộng trình duyệt chính thức cho hệ sinh thái Polkadot"
 		},
-		"mytonwallet": {
-			"description": "Ví TON không giữ hộ"
+		"nami_wallet": {
+			"description": "Ví trình duyệt Cardano nhẹ cho dApp và NFT"
 		},
-		"coolwallet": {
-			"description": "Ví cứng thẻ"
+		"eternl_wallet": {
+			"description": "Ví Cardano đầy đủ tính năng với công cụ staking và DeFi"
 		},
-		"imtoken": {
-			"description": "Ví đa chuỗi phổ biến châu Á"
+		"yoroi_wallet": {
+			"description": "Ví nhẹ chính thức cho Cardano từ EMURGO"
 		},
-		"tokenpocket": {
-			"description": "Ví đa chuỗi toàn diện"
+		"temple_wallet": {
+			"description": "Ví trình duyệt cho ứng dụng Tezos DeFi và NFT"
 		},
-		"myetherwallet": {
-			"description": "Ví Ethereum dựa trên web"
+		"kukai_wallet": {
+			"description": "Ví Tezos với đăng nhập xã hội và hỗ trợ DirectAuth"
 		},
-		"mycrypto": {
-			"description": "Ví và công cụ Ethereum"
+		"petra_wallet": {
+			"description": "Ví chính thức cho hệ sinh thái blockchain Aptos"
 		},
-		"tronlink": {
-			"description": "Ví Tron chính thức"
+		"martian_wallet": {
+			"description": "Ví multi-chain cho mạng Aptos và Sui"
 		},
-		"multis": {
-			"description": "Ví đa chữ ký cho doanh nghiệp"
+		"sui_wallet": {
+			"description": "Ví trình duyệt chính thức cho blockchain Sui"
 		},
-		"squads": {
-			"description": "Ví đa chữ ký Solana"
-		},
-		"biubiu-wallet-sweep": {
-			"description": "Wallet Sweep - Tool"
-		},
-		"biubiu-one-to-many": {
-			"description": "One-to-Many Transfer - Tool"
-		},
-		"biubiu-wallet-generator": {
-			"description": "Wallet Generator - Tool"
-		},
-		"biubiu-balance-scanner": {
-			"description": "Balance Scanner - Tool"
-		},
-		"soul-wallet": {
-			"description": "Soul Wallet - Tool"
-		},
-		"patch-wallet": {
-			"description": "Patch Wallet - Tool"
-		},
-		"alchemy-aa": {
-			"description": "Alchemy Account Kit - Tool"
-		},
-		"particle-network": {
-			"description": "Particle Network - Tool"
-		},
-		"coinbase-wallet": {
-			"description": "Coinbase Wallet - Tool"
-		},
-		"trust-wallet": {
-			"description": "Trust Wallet - Tool"
-		},
-		"phantom-wallet": {
-			"description": "Phantom - Tool"
-		},
-		"backpack-wallet": {
-			"description": "Backpack - Tool"
-		},
-		"exodus-wallet": {
-			"description": "Exodus - Tool"
-		},
-		"keplr-wallet": {
-			"description": "Keplr - Tool"
-		},
-		"leap-wallet": {
-			"description": "Leap Wallet - Tool"
-		},
-		"xdefi-wallet": {
-			"description": "XDEFI - Tool"
-		},
-		"brave-wallet": {
-			"description": "Brave Wallet - Tool"
-		},
-		"block-wallet": {
-			"description": "BlockWallet - Tool"
-		},
-		"okx-wallet": {
-			"description": "OKX Wallet - Tool"
-		},
-		"core-wallet": {
-			"description": "Core Wallet - Tool"
-		},
-		"enkrypt-wallet": {
-			"description": "Enkrypt - Tool"
-		},
-		"talisman-wallet": {
-			"description": "Talisman - Tool"
-		},
-		"polkadot-js": {
-			"description": "Polkadot.js - Tool"
-		},
-		"nami-wallet": {
-			"description": "Nami - Tool"
-		},
-		"eternl-wallet": {
-			"description": "Eternl - Tool"
-		},
-		"yoroi-wallet": {
-			"description": "Yoroi - Tool"
-		},
-		"temple-wallet": {
-			"description": "Temple Wallet - Tool"
-		},
-		"kukai-wallet": {
-			"description": "Kukai - Tool"
-		},
-		"petra-wallet": {
-			"description": "Petra - Tool"
-		},
-		"martian-wallet": {
-			"description": "Martian - Tool"
-		},
-		"sui-wallet": {
-			"description": "Sui Wallet - Tool"
-		},
-		"suiet-wallet": {
-			"description": "Suiet - Tool"
+		"suiet_wallet": {
+			"description": "Ví Sui mã nguồn mở với tính năng thân thiện nhà phát triển"
 		},
 		"tonkeeper": {
-			"description": "Tonkeeper - Tool"
+			"description": "Ví TON phổ biến với hỗ trợ staking và Jetton"
 		},
-		"sender-wallet": {
-			"description": "Sender Wallet - Tool"
+		"tonhub": {
+			"description": "Ví TON với tích hợp pool staking Whales"
 		},
-		"meteor-wallet": {
-			"description": "Meteor Wallet - Tool"
+		"mytonwallet": {
+			"description": "Ví TON mã nguồn mở cho desktop và trình duyệt"
 		},
-		"here-wallet": {
-			"description": "HERE Wallet - Tool"
+		"sender_wallet": {
+			"description": "Ví NEAR Protocol với tính năng DeFi và NFT"
 		},
-		"coin98-wallet": {
-			"description": "Coin98 - Tool"
+		"meteor_wallet": {
+			"description": "Ví NEAR với theo dõi danh mục nâng cao"
 		},
-		"bitget-wallet": {
-			"description": "Bitget Wallet - Tool"
+		"here_wallet": {
+			"description": "Ví NEAR ưu tiên di động với phần thưởng staking"
 		},
-		"safepal-wallet": {
-			"description": "SafePal - Tool"
+		"coin98_wallet": {
+			"description": "Cổng DeFi multi-chain hỗ trợ 90+ blockchain"
 		},
-		"onekey-wallet": {
-			"description": "OneKey - Tool"
+		"bitget_wallet": {
+			"description": "Ví multi-chain với bộ tổng hợp swap và launchpad"
 		},
-		"ellipal-wallet": {
-			"description": "ELLIPAL - Tool"
+		"safepal_wallet": {
+			"description": "Kết hợp ví phần cứng và phần mềm được Binance hỗ trợ"
 		},
-		"dcent-wallet": {
-			"description": "D - Tool"
+		"onekey_wallet": {
+			"description": "Ví phần cứng mã nguồn mở với hỗ trợ multi-chain"
 		},
-		"math-wallet": {
-			"description": "Math Wallet - Tool"
+		"ellipal_wallet": {
+			"description": "Ví phần cứng air-gapped với giao diện màn hình cảm ứng"
 		},
-		"alpha-wallet": {
-			"description": "AlphaWallet - Tool"
+		"dcent_wallet": {
+			"description": "Ví phần cứng sinh trắc học với xác thực vân tay"
 		},
-		"status-wallet": {
-			"description": "Status - Tool"
+		"coolwallet": {
+			"description": "Ví phần cứng kích thước thẻ tín dụng với kết nối Bluetooth"
 		},
-		"unstoppable-wallet": {
-			"description": "Unstoppable Wallet - Tool"
+		"imtoken": {
+			"description": "Ví di động phổ biến ở Châu Á với hỗ trợ DeFi multi-chain"
 		},
-		"exodus-wallet-ext": {
-			"description": "Exodus Extension - Tool"
+		"tokenpocket": {
+			"description": "Ví di động multi-chain với trình duyệt dApp tích hợp"
 		},
-		"atomic-wallet": {
-			"description": "Atomic Wallet - Tool"
+		"math_wallet": {
+			"description": "Ví đa nền tảng hỗ trợ 100+ blockchain"
 		},
-		"guarda-wallet": {
-			"description": "Guarda - Tool"
+		"alpha_wallet": {
+			"description": "Ví di động mã nguồn mở với hỗ trợ TokenScript"
 		},
-		"edge-wallet": {
-			"description": "Edge - Tool"
+		"status_wallet": {
+			"description": "Ứng dụng nhắn tin riêng tư với ví Ethereum tích hợp"
 		},
-		"crypto-com-defi": {
-			"description": "Crypto.com DeFi Wallet - Tool"
+		"unstoppable_wallet": {
+			"description": "Ví di động tập trung quyền riêng tư với phân tích DeFi"
 		},
-		"lobstr-wallet": {
-			"description": "LOBSTR - Tool"
+		"exodus_wallet_ext": {
+			"description": "Phiên bản tiện ích mở rộng trình duyệt của ví multi-chain Exodus"
 		},
-		"freighter-wallet": {
-			"description": "Freighter - Tool"
+		"myetherwallet": {
+			"description": "Giao diện web gốc để quản lý ví Ethereum"
 		},
-		"den-wallet": {
-			"description": "Den - Tool"
+		"mycrypto": {
+			"description": "Ví desktop và web để quản lý Ethereum an toàn"
+		},
+		"atomic_wallet": {
+			"description": "Ví desktop với atomic swap và tính năng staking"
+		},
+		"guarda_wallet": {
+			"description": "Ví đa nền tảng với sàn giao dịch và staking tích hợp"
+		},
+		"edge_wallet": {
+			"description": "Ví di động tập trung quyền riêng tư với đăng nhập dựa trên người dùng"
+		},
+		"crypto_com_defi": {
+			"description": "Ví DeFi với chuỗi Cronos và cầu cross-chain"
+		},
+		"lobstr_wallet": {
+			"description": "Ví Stellar thân thiện người dùng với tính năng giao dịch"
+		},
+		"freighter_wallet": {
+			"description": "Ví trình duyệt cho Stellar và hợp đồng thông minh Soroban"
+		},
+		"tronlink": {
+			"description": "Ví chính thức cho hệ sinh thái blockchain TRON"
+		},
+		"multis": {
+			"description": "Ví đa chữ ký tập trung kinh doanh với tính năng bảng lương"
+		},
+		"squads": {
+			"description": "Quỹ đa chữ ký và quản lý giao thức cho Solana"
+		},
+		"den_wallet": {
+			"description": "Ví thông minh với tự động hóa DeFi và gom giao dịch"
 		},
 		"instadapp": {
-			"description": "Instadapp - Tool"
+			"description": "Tài khoản thông minh DeFi với tổng hợp giao thức và tự động hóa"
 		},
-		"fuelet-wallet": {
-			"description": "Fuelet - Tool"
+		"fuelet_wallet": {
+			"description": "Ví cho lớp thực thi mô-đun Fuel"
 		},
-		"fuel-wallet": {
-			"description": "Fuel Wallet - Tool"
+		"fuel_wallet": {
+			"description": "Ví trình duyệt chính thức cho Fuel Network"
 		},
-		"braavos-wallet": {
-			"description": "Braavos - Tool"
+		"braavos_wallet": {
+			"description": "Ví thông minh cho StarkNet với hỗ trợ ký phần cứng"
 		},
-		"keystone-wallet": {
-			"description": "Keystone - Tool"
+		"keystone_wallet": {
+			"description": "Ví phần cứng air-gapped với ký bằng mã QR"
 		},
-		"gridplus-wallet": {
-			"description": "GridPlus Lattice1 - Tool"
+		"gridplus_wallet": {
+			"description": "Ví phần cứng cấp doanh nghiệp với lưu trữ SafeCard"
 		},
-		"tangem-wallet": {
-			"description": "Tangem - Tool"
+		"tangem_wallet": {
+			"description": "Ví phần cứng dựa trên thẻ NFC cho sử dụng di động"
 		},
-		"web3auth-wallet": {
-			"description": "Web3Auth - Tool"
+		"web3auth_wallet": {
+			"description": "Quản lý khóa dựa trên MPC với hỗ trợ đăng nhập xã hội"
 		},
-		"unisat-wallet": {
-			"description": "UniSat - Tool"
+		"unisat_wallet": {
+			"description": "Ví Bitcoin cho Ordinals, BRC-20 và inscriptions"
 		},
-		"xverse-wallet": {
-			"description": "Xverse - Tool"
+		"xverse_wallet": {
+			"description": "Ví Bitcoin và Stacks với hỗ trợ Ordinals"
 		},
-		"leather-wallet": {
-			"description": "Leather (Hiro) - Tool"
+		"leather_wallet": {
+			"description": "Ví Bitcoin và Stacks trước đây gọi là Hiro Wallet"
 		},
-		"passport-wallet": {
-			"description": "Passport (Foundation) - Tool"
+		"passport_wallet": {
+			"description": "Ví phần cứng Bitcoin air-gapped mã nguồn mở"
 		},
-		"seedsigner-wallet": {
-			"description": "SeedSigner - Tool"
+		"seedsigner_wallet": {
+			"description": "Dự án thiết bị ký Bitcoin air-gapped DIY"
 		},
-		"fireblocks-wallet": {
-			"description": "Fireblocks - Tool"
+		"fireblocks_wallet": {
+			"description": "Nền tảng lưu giữ MPC tổ chức cho tài sản kỹ thuật số"
 		},
-		"anchorage-wallet": {
-			"description": "Anchorage Digital - Tool"
+		"anchorage_wallet": {
+			"description": "Ngân hàng tài sản kỹ thuật số được cấp phép liên bang và người giữ hộ"
 		},
-		"bitgo-wallet": {
-			"description": "BitGo - Tool"
+		"bitgo_wallet": {
+			"description": "Lưu giữ tổ chức với đa chữ ký và bảo hiểm"
 		}
 	}
 }

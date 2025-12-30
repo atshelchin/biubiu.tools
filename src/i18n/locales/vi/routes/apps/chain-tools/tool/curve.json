@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Tiếng Việt",
+		"englishName": "Vietnamese",
+		"direction": "ltr",
+		"flag": "🇻🇳",
+		"code": "vi"
+	},
+	"seo": {
+		"title": "Curve Finance - DEX Stablecoin hàng đầu | Hoán đổi slippage thấp",
+		"description": "Khám phá Curve Finance, DEX hàng đầu cho giao dịch stablecoin và tài sản neo giá. Tìm hiểu về hoán đổi slippage thấp, cung cấp thanh khoản và tokenomics CRV.",
+		"keywords": "Curve Finance, stablecoin swap, DeFi, low slippage, CRV, liquidity pool, yield farming"
+	},
+	"overview": "Curve Finance là một sàn giao dịch phi tập trung được thiết kế đặc biệt cho giao dịch hiệu quả giữa các stablecoin và tài sản neo giá. Ra mắt vào năm 2020 bởi Michael Egorov, một nhà vật lý và doanh nhân liên tiếp, Curve đã tiên phong trong đường cong bất biến StableSwap - một đường cong liên kết được tối ưu hóa cho các tài sản nên giao dịch ở mức giá tương tự.\n\nKhác với các AMM đa mục đích như Uniswap, các bể của Curve được tối ưu hóa cho slippage tối thiểu khi giao dịch giữa các tài sản tương quan như USDC/USDT/DAI hoặc các phiên bản wrapped khác nhau của Bitcoin. Sự chuyên biệt này đã khiến Curve trở thành xương sống của thanh khoản DeFi, với nhiều giao thức dựa vào các bể Curve cho giao dịch stablecoin và liquid staking token của họ.\n\nTokenomics veCRV của giao thức đã giới thiệu quản trị vote-escrowed, nơi người dùng khóa token CRV để có được quyền biểu quyết và tăng phần thưởng khai thác thanh khoản của họ. Mô hình này đã được sao chép rộng rãi trên DeFi và châm ngòi cho 'Curve Wars' - các giao thức cạnh tranh để tích lũy quyền biểu quyết CRV nhằm định hướng phát thải cho các bể của họ.",
+	"features": {
+		"1": {
+			"title": "AMM StableSwap",
+			"description": "Đường cong liên kết chuyên biệt cho phép hoán đổi slippage cực thấp giữa các tài sản neo giá"
+		},
+		"2": {
+			"title": "Cung cấp thanh khoản",
+			"description": "Cung cấp thanh khoản cho các bể và kiếm phí giao dịch cộng với khuyến khích token CRV"
+		},
+		"3": {
+			"title": "Quản trị veCRV",
+			"description": "Khóa token CRV để bỏ phiếu về trọng số gauge và tăng phần thưởng khai thác thanh khoản của bạn"
+		},
+		"4": {
+			"title": "Bể đa tài sản",
+			"description": "Giao dịch giữa nhiều stablecoin hoặc tài sản neo giá trong một bể duy nhất"
+		},
+		"5": {
+			"title": "Bể Tricrypto",
+			"description": "Bể V2 để giao dịch giữa các tài sản biến động như ETH, BTC và stablecoin"
+		},
+		"6": {
+			"title": "crvUSD",
+			"description": "Stablecoin gốc của Curve được hỗ trợ bởi tài sản thế chấp tiền điện tử với cơ chế thanh lý mềm"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Hoán đổi Stablecoin",
+			"description": "Giao dịch giữa USDC, USDT, DAI và các stablecoin khác với slippage tối thiểu"
+		},
+		"2": {
+			"title": "Yield Farming",
+			"description": "Cung cấp thanh khoản để kiếm phí giao dịch và phần thưởng CRV được tăng cường bởi veCRV"
+		},
+		"3": {
+			"title": "Giao dịch lớn",
+			"description": "Thực hiện giao dịch hàng triệu đô la giữa các tài sản neo giá với tác động giá tối thiểu"
+		},
+		"4": {
+			"title": "Giao dịch LST",
+			"description": "Hoán đổi giữa các liquid staking token như stETH, rETH và cbETH một cách hiệu quả"
+		},
+		"5": {
+			"title": "Thanh khoản giao thức",
+			"description": "Các giao thức sử dụng bể Curve làm địa điểm thanh khoản chính cho token của họ"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Curve Finance là gì và nó hoạt động như thế nào?",
+			"answer": "Curve là một DEX được tối ưu hóa cho giao dịch giữa các stablecoin và tài sản neo giá. Thuật toán StableSwap của nó giả định các tài sản trong một bể nên có giá trị gần như nhau, cho phép giao dịch slippage cực thấp. Các nhà cung cấp thanh khoản kiếm phí từ giao dịch cộng với khuyến khích token CRV."
+		},
+		"2": {
+			"question": "Tại sao nên sử dụng Curve thay vì Uniswap cho hoán đổi stablecoin?",
+			"answer": "Đường cong liên kết chuyên biệt của Curve cung cấp slippage thấp hơn nhiều cho giao dịch stablecoin. Một giao dịch USDC sang USDT trị giá 1 triệu đô la trên Curve có thể có slippage 0,01%, trong khi cùng giao dịch trên Uniswap có thể có 0,3% hoặc hơn. Đối với các giao dịch lớn, sự khác biệt này chuyển thành khoản tiết kiệm đáng kể."
+		},
+		"3": {
+			"question": "veCRV là gì và tại sao nó quan trọng?",
+			"answer": "veCRV (vote-escrowed CRV) được lấy bằng cách khóa token CRV tối đa 4 năm. Người nắm giữ veCRV có thể bỏ phiếu để định hướng phát thải CRV cho các bể cụ thể, tăng phần thưởng LP của riêng họ lên đến 2,5 lần và kiếm phí giao thức. Điều này tạo ra động lực cho sự liên kết dài hạn với giao thức."
+		},
+		"4": {
+			"question": "Curve Wars là gì?",
+			"answer": "Curve Wars đề cập đến các giao thức cạnh tranh để tích lũy quyền biểu quyết veCRV. Các giao thức như Convex, Yearn và những giao thức khác tìm cách kiểm soát phát thải CRV để mang lại lợi ích cho thanh khoản của họ. Đặc biệt Convex đã tích lũy một phần lớn veCRV, cho phép người nắm giữ CVX ảnh hưởng đến quản trị Curve."
+		},
+		"5": {
+			"question": "crvUSD là gì?",
+			"answer": "crvUSD là stablecoin gốc của Curve mà người dùng có thể tạo bằng cách gửi tài sản thế chấp tiền điện tử. Nó có cơ chế 'thanh lý mềm' độc đáo được gọi là LLAMMA, dần dần chuyển đổi tài sản thế chấp thành crvUSD khi giá giảm, giảm rủi ro thanh lý đột ngột so với các giao thức cho vay truyền thống."
+		}
+	},
+	"cta": {
+		"ready": "Sẵn sàng hoán đổi với slippage tối thiểu?",
+		"button": "Mở Curve",
+		"note": "Ngôi nhà của thanh khoản stablecoin"
+	}
+}

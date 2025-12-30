@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "Français",
+		"englishName": "French",
+		"direction": "ltr",
+		"flag": "🇫🇷",
+		"code": "fr"
+	},
+	"seo": {
+		"title": "Lido - Protocole de staking liquide leader | Stakez ETH, obtenez stETH",
+		"description": "Découvrez Lido, le plus grand protocole de staking liquide. Apprenez comment staker ETH et recevoir stETH, gagner des récompenses de staking et utiliser vos actifs stakés dans la DeFi.",
+		"keywords": "Lido, staking liquide, stETH, staking ETH, Ethereum, DeFi, récompenses de staking"
+	},
+	"overview": "Lido est le plus grand protocole de staking liquide dans la DeFi, permettant aux utilisateurs de staker leur ETH et de recevoir stETH (ETH staké) en retour - un token liquide qui représente leur position stakée et accumule automatiquement des récompenses de staking. Lancé en décembre 2020 juste avant la mise en ligne de la Beacon Chain Ethereum, Lido a résolu un problème critique : permettre aux utilisateurs de gagner des récompenses de staking sans verrouiller leur ETH.\n\nLorsque vous stakez ETH via Lido, vous recevez stETH à un ratio de 1:1. Ce solde de stETH augmente quotidiennement à mesure que les récompenses de staking s'accumulent, et peut être librement échangé, utilisé comme garantie dans les protocoles de prêt ou fourni comme liquidité dans la DeFi. Cette nature 'liquide' signifie que les stakers n'ont pas à choisir entre gagner un rendement de staking et participer à la DeFi.\n\nLido est devenu une infrastructure DeFi fondamentale, avec plus de 20 milliards de dollars d'ETH staké et stETH intégré dans des centaines de protocoles. Le protocole est gouverné par les détenteurs de tokens LDO via la DAO Lido, qui supervise la sélection des opérateurs de nœuds, les structures de frais et les mises à niveau du protocole.",
+	"features": {
+		"1": {
+			"title": "Staking liquide",
+			"description": "Stakez ETH et recevez stETH, un token liquide qui accumule automatiquement des récompenses de staking"
+		},
+		"2": {
+			"title": "Pas de minimum de stake",
+			"description": "Stakez n'importe quelle quantité d'ETH - pas besoin des 32 ETH requis pour le staking solo"
+		},
+		"3": {
+			"title": "Composabilité DeFi",
+			"description": "Utilisez stETH dans la DeFi - comme garantie, dans des pools de liquidité ou pour des stratégies de rendement"
+		},
+		"4": {
+			"title": "Récompenses quotidiennes",
+			"description": "Le solde de stETH augmente quotidiennement pour refléter les récompenses de staking gagnées"
+		},
+		"5": {
+			"title": "Retraits",
+			"description": "Demandez des retraits pour convertir stETH en ETH via le protocole"
+		},
+		"6": {
+			"title": "wstETH",
+			"description": "stETH encapsulé avec un solde constant - les récompenses s'accumulent par appréciation de la valeur"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Gagner des récompenses de staking",
+			"description": "Gagnez un rendement de staking Ethereum (~3-4% APY) tout en maintenant la liquidité"
+		},
+		"2": {
+			"title": "Garantie DeFi",
+			"description": "Utilisez stETH comme garantie sur Aave, MakerDAO et d'autres protocoles de prêt"
+		},
+		"3": {
+			"title": "Provision de liquidité",
+			"description": "Fournissez de la liquidité stETH-ETH sur Curve et gagnez des frais de trading supplémentaires"
+		},
+		"4": {
+			"title": "Staking avec effet de levier",
+			"description": "Empruntez contre stETH pour acheter plus d'ETH et amplifier les rendements de staking"
+		},
+		"5": {
+			"title": "Diversification de portefeuille",
+			"description": "Détenez stETH comme alternative ETH générant des rendements dans votre portefeuille"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Qu'est-ce que Lido et comment fonctionne le staking liquide ?",
+			"answer": "Lido est un protocole de staking liquide qui vous permet de staker ETH et de recevoir stETH en retour. Lorsque vous stakez via Lido, votre ETH est délégué à des opérateurs de nœuds professionnels qui exécutent des validateurs. Vous recevez stETH représentant votre stake, qui augmente automatiquement en solde à mesure que les récompenses s'accumulent. Cela signifie que vous pouvez utiliser stETH dans la DeFi tout en gagnant des récompenses de staking."
+		},
+		"2": {
+			"question": "Est-il sûr d'utiliser Lido ?",
+			"answer": "Lido est le protocole de staking liquide le plus important et le plus éprouvé avec plusieurs audits de sécurité. Cependant, les risques incluent des vulnérabilités de smart contracts, des pénalités de slashing si les opérateurs de nœuds se comportent mal, et stETH se négociant potentiellement avec une décote par rapport à ETH pendant le stress du marché. Lido utilise un ensemble diversifié d'opérateurs de nœuds pour réduire le risque de centralisation."
+		},
+		"3": {
+			"question": "Quelle est la différence entre stETH et wstETH ?",
+			"answer": "stETH est un token rebasant - votre solde augmente quotidiennement à mesure que les récompenses s'accumulent. wstETH (stETH encapsulé) a un solde constant, les récompenses étant reflétées dans sa valeur croissante par rapport à stETH. wstETH est meilleur pour les intégrations DeFi qui ne supportent pas les tokens rebasants et à des fins de déclaration fiscale."
+		},
+		"4": {
+			"question": "Quels frais Lido facture-t-il ?",
+			"answer": "Lido facture des frais de 10% sur les récompenses de staking, répartis entre les opérateurs de nœuds et la trésorerie de la DAO Lido. Ces frais sont automatiquement déduits - vous recevez simplement vos récompenses de staking nettes reflétées dans votre solde stETH. Il n'y a pas de frais pour staker ou destaker."
+		},
+		"5": {
+			"question": "Comment puis-je destaker de Lido ?",
+			"answer": "Vous pouvez demander des retraits via la file d'attente de retrait de Lido, qui traite les demandes au fur et à mesure que les sorties de validateurs se terminent (généralement 1-5 jours). Alternativement, vous pouvez échanger stETH contre ETH sur des DEX comme Curve pour une liquidité immédiate, bien que vous puissiez recevoir légèrement moins que 1:1 selon les conditions du marché."
+		}
+	},
+	"cta": {
+		"ready": "Prêt à commencer à staker ?",
+		"button": "Ouvrir Lido",
+		"note": "Gagnez des récompenses de staking ETH tout en restant liquide"
+	}
+}

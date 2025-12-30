@@ -4,49 +4,6 @@ import { createServerLoader } from '@shelchin/i18n';
 
 // Auto-scan all locale files and create server loader
 // Note: namespacePrefix is supported by the library but missing from type definitions
-// Chain-tools category namespaces
-const chainToolsCategories = [
-	'ai_crypto',
-	'airdrop_token',
-	'analytics',
-	'bridge',
-	'cex',
-	'community',
-	'dao',
-	'dao_token',
-	'defi',
-	'dev',
-	'explorer',
-	'funding',
-	'gamefi',
-	'gas_burner',
-	'identity',
-	'influencer',
-	'infra',
-	'jobs',
-	'l2',
-	'launchpad',
-	'legendary_token',
-	'mev',
-	'news',
-	'nft',
-	'non_evm',
-	'oracle',
-	'payments',
-	'privacy',
-	'product_hunt',
-	'regulation',
-	'restaking',
-	'rwa',
-	'security',
-	'social',
-	'stablecoin',
-	'trends',
-	'wallet',
-	'web3_teams',
-	'whale_address'
-].map((cat) => `routes/apps/chain-tools/${cat}`);
-
 const { load: i18nLoad } = createServerLoader(
 	import.meta.glob<{ default: LocaleData }>('../i18n/locales/**/*.json', { eager: true }),
 	{
@@ -61,9 +18,7 @@ const { load: i18nLoad } = createServerLoader(
 			'security-scanner',
 			'tools',
 			'wallet-connection',
-			'wallet',
-			'routes/apps/chain-tools',
-			...chainToolsCategories
+			'wallet'
 		],
 		homeNamespace: 'home',
 		namespacePrefix: 'routes'
