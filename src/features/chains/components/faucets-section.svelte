@@ -32,9 +32,9 @@
 	<section class="faucets-section">
 		<h2 class="section-title">
 			<Droplets class="icon" />
-			{i18n.t('chains.faucets')}
+			{i18n.t('routes/chains.faucets')}
 		</h2>
-		<p class="section-description">{i18n.t('chains.faucets_description')}</p>
+		<p class="section-description">{i18n.t('routes/chains.faucets_description')}</p>
 		<div class="faucets-grid">
 			{#each faucets as faucet, index (faucet)}
 				<a

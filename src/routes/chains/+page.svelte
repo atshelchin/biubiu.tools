@@ -97,9 +97,9 @@
 		<div class="header-content">
 			<h1 class="page-title">
 				<Layers class="title-icon" />
-				{i18n.t('chains.title')}
+				{i18n.t('routes/chains.title')}
 			</h1>
-			<p class="page-subtitle">{i18n.t('chains.subtitle')}</p>
+			<p class="page-subtitle">{i18n.t('routes/chains.subtitle')}</p>
 		</div>
 
 		<!-- Stats -->
@@ -107,12 +107,12 @@
 			<div class="stat-item">
 				<Globe class="stat-icon" />
 				<span class="stat-value">{data.stats.mainnetChains}</span>
-				<span class="stat-label">{i18n.t('chains.mainnet')}</span>
+				<span class="stat-label">{i18n.t('routes/chains.mainnet')}</span>
 			</div>
 			<div class="stat-item">
 				<TestTube class="stat-icon" />
 				<span class="stat-value">{data.stats.testnetChains}</span>
-				<span class="stat-label">{i18n.t('chains.testnet')}</span>
+				<span class="stat-label">{i18n.t('routes/chains.testnet')}</span>
 			</div>
 			<div class="stat-item">
 				<TrendingUp class="stat-icon" />
@@ -147,21 +147,21 @@
 					class:active={networkFilter === 'all'}
 					onclick={() => (networkFilter = 'all')}
 				>
-					{i18n.t('chains.filter_all')} ({data.stats.totalChains})
+					{i18n.t('routes/chains.filter_all')} ({data.stats.totalChains})
 				</button>
 				<button
 					class="filter-btn"
 					class:active={networkFilter === 'mainnet'}
 					onclick={() => (networkFilter = 'mainnet')}
 				>
-					{i18n.t('chains.mainnet')} ({data.stats.mainnetChains})
+					{i18n.t('routes/chains.mainnet')} ({data.stats.mainnetChains})
 				</button>
 				<button
 					class="filter-btn"
 					class:active={networkFilter === 'testnet'}
 					onclick={() => (networkFilter = 'testnet')}
 				>
-					{i18n.t('chains.testnet')} ({data.stats.testnetChains})
+					{i18n.t('routes/chains.testnet')} ({data.stats.testnetChains})
 				</button>
 			</div>
 
@@ -202,7 +202,7 @@
 					<div class="chain-name-row">
 						<span class="chain-name">{chain.name}</span>
 						{#if chain.isTestnet}
-							<span class="testnet-badge">{i18n.t('chains.testnet')}</span>
+							<span class="testnet-badge">{i18n.t('routes/chains.testnet')}</span>
 						{/if}
 					</div>
 					<div class="chain-meta">
@@ -243,7 +243,7 @@
 	<!-- Data Source -->
 	<footer class="data-source">
 		<p>
-			{i18n.t('chains.data_source')}:
+			{i18n.t('routes/chains.data_source')}:
 			<a href="https://chainlist.org" target="_blank" rel="noopener noreferrer">chainlist.org</a>,
 			<a href="https://defillama.com" target="_blank" rel="noopener noreferrer">DefiLlama</a>
 		</p>

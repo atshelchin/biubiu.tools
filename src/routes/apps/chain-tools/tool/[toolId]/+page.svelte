@@ -75,11 +75,11 @@
 	);
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const faqsTitle = $derived(
-		i18n.t('routes/apps/chain-tools/chain-tools.faqs_title' as any, { defaultValue: 'FAQ' })
+		i18n.t('routes/apps/chain-tools.faqs_title' as any, { defaultValue: 'FAQ' })
 	);
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const lastUpdatedLabel = $derived(
-		i18n.t('routes/apps/chain-tools/chain-tools.last_updated' as any, {
+		i18n.t('routes/apps/chain-tools.last_updated' as any, {
 			defaultValue: 'Last updated'
 		})
 	);

@@ -29,7 +29,7 @@
 		<h2 class="section-title">
 			<Info class="section-icon" />
 			<span
-				>{i18n.t('routes/apps/chain-tools/chain-tools.project_info' as keyof TranslationKeys, {
+				>{i18n.t('routes/apps/chain-tools.project_info' as keyof TranslationKeys, {
 					defaultValue: 'Project Info'
 				})}</span
 			>
@@ -44,7 +44,7 @@
 							<Calendar class="info-icon" />
 							<div class="info-content">
 								<span class="info-label"
-									>{i18n.t('routes/apps/chain-tools/chain-tools.founded' as keyof TranslationKeys, {
+									>{i18n.t('routes/apps/chain-tools.founded' as keyof TranslationKeys, {
 										defaultValue: 'Founded'
 									})}</span
 								>
@@ -58,7 +58,7 @@
 							<Users class="info-icon" />
 							<div class="info-content">
 								<span class="info-label"
-									>{i18n.t('routes/apps/chain-tools/chain-tools.team' as keyof TranslationKeys, {
+									>{i18n.t('routes/apps/chain-tools.team' as keyof TranslationKeys, {
 										defaultValue: 'Team'
 									})}</span
 								>
@@ -72,7 +72,7 @@
 							<Coins class="info-icon" />
 							<div class="info-content">
 								<span class="info-label"
-									>{i18n.t('routes/apps/chain-tools/chain-tools.funding' as keyof TranslationKeys, {
+									>{i18n.t('routes/apps/chain-tools.funding' as keyof TranslationKeys, {
 										defaultValue: 'Funding'
 									})}</span
 								>
@@ -87,7 +87,7 @@
 			{#if hasSocialLinks && detail.socialLinks}
 				<div class="social-section">
 					<span class="social-label"
-						>{i18n.t('routes/apps/chain-tools/chain-tools.links' as keyof TranslationKeys, {
+						>{i18n.t('routes/apps/chain-tools.links' as keyof TranslationKeys, {
 							defaultValue: 'Links'
 						})}:</span
 					>

@@ -16,7 +16,7 @@
 	<section class="explorers-section">
 		<h2 class="section-title">
 			<Search class="icon" />
-			{i18n.t('chains.block_explorers')}
+			{i18n.t('routes/chains.block_explorers')}
 		</h2>
 		<div class="explorers-grid">
 			{#each explorers as explorer, index (explorer.url)}

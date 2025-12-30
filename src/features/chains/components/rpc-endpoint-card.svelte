@@ -67,26 +67,26 @@
 	<!-- Status Row -->
 	<div class="status-row">
 		<!-- Tracking Status -->
-		<div class="status-item" title={i18n.t('chains.tracking_info')}>
+		<div class="status-item" title={i18n.t('routes/chains.tracking_info')}>
 			{#if endpoint.tracking === 'none'}
 				<Shield class="status-icon" style="color: {trackingColor}" />
 				<span class="status-text" style="color: {trackingColor}"
-					>{i18n.t('chains.no_tracking')}</span
+					>{i18n.t('routes/chains.no_tracking')}</span
 				>
 			{:else if endpoint.tracking === 'limited'}
 				<ShieldAlert class="status-icon" style="color: {trackingColor}" />
 				<span class="status-text" style="color: {trackingColor}"
-					>{i18n.t('chains.limited_tracking')}</span
+					>{i18n.t('routes/chains.limited_tracking')}</span
 				>
 			{:else if endpoint.tracking === 'yes'}
 				<ShieldAlert class="status-icon" style="color: {trackingColor}" />
 				<span class="status-text" style="color: {trackingColor}"
-					>{i18n.t('chains.has_tracking')}</span
+					>{i18n.t('routes/chains.has_tracking')}</span
 				>
 			{:else}
 				<ShieldQuestion class="status-icon" style="color: {trackingColor}" />
 				<span class="status-text" style="color: {trackingColor}"
-					>{i18n.t('chains.unknown_tracking')}</span
+					>{i18n.t('routes/chains.unknown_tracking')}</span
 				>
 			{/if}
 		</div>
@@ -95,19 +95,19 @@
 		{#if endpoint.isOpenSource}
 			<div class="status-item">
 				<Github class="status-icon" style="color: #a855f7" />
-				<span class="status-text" style="color: #a855f7">{i18n.t('chains.open_source')}</span>
+				<span class="status-text" style="color: #a855f7">{i18n.t('routes/chains.open_source')}</span>
 			</div>
 		{/if}
 
 		<!-- Latency (if available) -->
 		{#if latencyResult}
-			<div class="status-item latency" title={i18n.t('chains.latency_info')}>
+			<div class="status-item latency" title={i18n.t('routes/chains.latency_info')}>
 				{#if latencyResult.latency !== null}
 					<Zap class="status-icon" style="color: {latencyColor()}" />
 					<span class="status-text" style="color: {latencyColor()}">{latencyResult.latency}ms</span>
 				{:else}
 					<WifiOff class="status-icon" style="color: {latencyColor()}" />
-					<span class="status-text" style="color: {latencyColor()}">{i18n.t('chains.offline')}</span
+					<span class="status-text" style="color: {latencyColor()}">{i18n.t('routes/chains.offline')}</span
 					>
 				{/if}
 			</div>

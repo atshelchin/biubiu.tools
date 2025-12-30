@@ -5,91 +5,91 @@
 </script>
 
 <svelte:head>
-	<title>{i18n.t('terms.page_title')} | BiuBiu Tools</title>
-	<meta name="description" content={i18n.t('terms.page_description')} />
+	<title>{i18n.t('routes/terms.page_title')} | BiuBiu Tools</title>
+	<meta name="description" content={i18n.t('routes/terms.page_description')} />
 </svelte:head>
 
 <div class="terms-page">
 	<div class="container">
-		<h1>{i18n.t('terms.title')}</h1>
-		<p class="last-updated">{i18n.t('terms.last_updated')}: 2025-12-22</p>
+		<h1>{i18n.t('routes/terms.title')}</h1>
+		<p class="last-updated">{i18n.t('routes/terms.last_updated')}: 2025-12-22</p>
 
 		<div class="authoritative-notice">
-			{i18n.t('terms.authoritative_notice')}
+			{i18n.t('routes/terms.authoritative_notice')}
 		</div>
 
 		<section>
-			<h2>{i18n.t('terms.acceptance.title')}</h2>
-			<p>{i18n.t('terms.acceptance.content')}</p>
+			<h2>{i18n.t('routes/terms.acceptance.title')}</h2>
+			<p>{i18n.t('routes/terms.acceptance.content')}</p>
 		</section>
 
 		<section>
-			<h2>{i18n.t('terms.description.title')}</h2>
-			<p>{i18n.t('terms.description.content')}</p>
+			<h2>{i18n.t('routes/terms.description.title')}</h2>
+			<p>{i18n.t('routes/terms.description.content')}</p>
 		</section>
 
 		<section>
-			<h2>{i18n.t('terms.risks.title')}</h2>
-			<p>{i18n.t('terms.risks.intro')}</p>
+			<h2>{i18n.t('routes/terms.risks.title')}</h2>
+			<p>{i18n.t('routes/terms.risks.intro')}</p>
 			<ul>
-				<li>{i18n.t('terms.risks.item1')}</li>
-				<li>{i18n.t('terms.risks.item2')}</li>
-				<li>{i18n.t('terms.risks.item3')}</li>
-				<li>{i18n.t('terms.risks.item4')}</li>
-				<li>{i18n.t('terms.risks.item5')}</li>
+				<li>{i18n.t('routes/terms.risks.item1')}</li>
+				<li>{i18n.t('routes/terms.risks.item2')}</li>
+				<li>{i18n.t('routes/terms.risks.item3')}</li>
+				<li>{i18n.t('routes/terms.risks.item4')}</li>
+				<li>{i18n.t('routes/terms.risks.item5')}</li>
 			</ul>
 		</section>
 
 		<section>
-			<h2>{i18n.t('terms.no_advice.title')}</h2>
-			<p>{i18n.t('terms.no_advice.content')}</p>
+			<h2>{i18n.t('routes/terms.no_advice.title')}</h2>
+			<p>{i18n.t('routes/terms.no_advice.content')}</p>
 		</section>
 
 		<section>
-			<h2>{i18n.t('terms.user_responsibility.title')}</h2>
-			<p>{i18n.t('terms.user_responsibility.intro')}</p>
+			<h2>{i18n.t('routes/terms.user_responsibility.title')}</h2>
+			<p>{i18n.t('routes/terms.user_responsibility.intro')}</p>
 			<ul>
-				<li>{i18n.t('terms.user_responsibility.item1')}</li>
-				<li>{i18n.t('terms.user_responsibility.item2')}</li>
-				<li>{i18n.t('terms.user_responsibility.item3')}</li>
-				<li>{i18n.t('terms.user_responsibility.item4')}</li>
+				<li>{i18n.t('routes/terms.user_responsibility.item1')}</li>
+				<li>{i18n.t('routes/terms.user_responsibility.item2')}</li>
+				<li>{i18n.t('routes/terms.user_responsibility.item3')}</li>
+				<li>{i18n.t('routes/terms.user_responsibility.item4')}</li>
 			</ul>
 		</section>
 
 		<section>
-			<h2>{i18n.t('terms.disclaimer.title')}</h2>
-			<p>{i18n.t('terms.disclaimer.content')}</p>
+			<h2>{i18n.t('routes/terms.disclaimer.title')}</h2>
+			<p>{i18n.t('routes/terms.disclaimer.content')}</p>
 		</section>
 
 		<section>
-			<h2>{i18n.t('terms.limitation.title')}</h2>
-			<p>{i18n.t('terms.limitation.content')}</p>
+			<h2>{i18n.t('routes/terms.limitation.title')}</h2>
+			<p>{i18n.t('routes/terms.limitation.content')}</p>
 		</section>
 
 		<section>
-			<h2>{i18n.t('terms.prohibited.title')}</h2>
-			<p>{i18n.t('terms.prohibited.intro')}</p>
+			<h2>{i18n.t('routes/terms.prohibited.title')}</h2>
+			<p>{i18n.t('routes/terms.prohibited.intro')}</p>
 			<ul>
-				<li>{i18n.t('terms.prohibited.item1')}</li>
-				<li>{i18n.t('terms.prohibited.item2')}</li>
-				<li>{i18n.t('terms.prohibited.item3')}</li>
-				<li>{i18n.t('terms.prohibited.item4')}</li>
+				<li>{i18n.t('routes/terms.prohibited.item1')}</li>
+				<li>{i18n.t('routes/terms.prohibited.item2')}</li>
+				<li>{i18n.t('routes/terms.prohibited.item3')}</li>
+				<li>{i18n.t('routes/terms.prohibited.item4')}</li>
 			</ul>
 		</section>
 
 		<section>
-			<h2>{i18n.t('terms.open_source.title')}</h2>
-			<p>{i18n.t('terms.open_source.content')}</p>
+			<h2>{i18n.t('routes/terms.open_source.title')}</h2>
+			<p>{i18n.t('routes/terms.open_source.content')}</p>
 		</section>
 
 		<section>
-			<h2>{i18n.t('terms.modifications.title')}</h2>
-			<p>{i18n.t('terms.modifications.content')}</p>
+			<h2>{i18n.t('routes/terms.modifications.title')}</h2>
+			<p>{i18n.t('routes/terms.modifications.content')}</p>
 		</section>
 
 		<section>
-			<h2>{i18n.t('terms.contact.title')}</h2>
-			<p>{i18n.t('terms.contact.content')}</p>
+			<h2>{i18n.t('routes/terms.contact.title')}</h2>
+			<p>{i18n.t('routes/terms.contact.content')}</p>
 		</section>
 	</div>
 </div>

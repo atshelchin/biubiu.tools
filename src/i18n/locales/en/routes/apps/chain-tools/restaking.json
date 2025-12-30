@@ -56,6 +56,42 @@
 		},
 		"brevis": {
 			"description": "ZK coprocessor for historical blockchain data"
+		},
+		"renzo-protocol": {
+			"description": "Renzo (ezETH) - Tool"
+		},
+		"puffer-finance": {
+			"description": "Puffer Finance (pufETH) - Tool"
+		},
+		"kelp-dao": {
+			"description": "Kelp DAO (rsETH) - Tool"
+		},
+		"swell-restaking": {
+			"description": "Swell (rswETH) - Tool"
+		},
+		"hyperlane-avs": {
+			"description": "Hyperlane - Tool"
+		},
+		"omni-avs": {
+			"description": "Omni Network - Tool"
+		},
+		"witness-chain": {
+			"description": "Witness Chain - Tool"
+		},
+		"altlayer-avs": {
+			"description": "AltLayer MACH - Tool"
+		},
+		"eigenlayer-app": {
+			"description": "EigenLayer App - Tool"
+		},
+		"dune-eigenlayer": {
+			"description": "EigenLayer Dune Dashboard - Tool"
+		},
+		"defillama-restaking": {
+			"description": "DeFiLlama Restaking - Tool"
+		},
+		"rated-restaking": {
+			"description": "Rated Restaking - Tool"
 		}
 	}
 }

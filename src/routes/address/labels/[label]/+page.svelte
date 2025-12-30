@@ -30,7 +30,7 @@
 	<nav class="breadcrumb">
 		<a href="/address" class="back-link">
 			<ArrowLeft class="icon" />
-			<span>{i18n.t('address.all_addresses')}</span>
+			<span>{i18n.t('routes/address.all_addresses')}</span>
 		</a>
 	</nav>
 
@@ -38,10 +38,10 @@
 	<header class="page-header">
 		<div class="label-badge" style="--label-color: var(--color-{labelMeta.color}-500, #6b7280)">
 			<Tag class="label-icon" />
-			<span>{i18n.t(`address.labels.${data.label}` as keyof TranslationKeys)}</span>
+			<span>{i18n.t(`routes/address.labels.${data.label}` as keyof TranslationKeys)}</span>
 		</div>
 		<h1 class="page-title">
-			{i18n.t(`address.labels.${data.label}` as keyof TranslationKeys)} Addresses
+			{i18n.t(`routes/address.labels.${data.label}` as keyof TranslationKeys)} Addresses
 		</h1>
 		<p class="page-subtitle">{data.addresses.length} addresses found</p>
 	</header>

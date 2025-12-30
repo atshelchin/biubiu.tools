@@ -84,11 +84,11 @@
 
 	// Get translation key for token type
 	function getTokenTypeLabel(type: DistributionTokenType): string {
-		return i18n.t(`one-to-many-transfer.step3.content.token_type.${type}`);
+		return i18n.t(`routes/apps/one-to-many-transfer.step3.content.token_type.${type}`);
 	}
 
 	function getTokenTypeDesc(type: DistributionTokenType): string {
-		return i18n.t(`one-to-many-transfer.step3.content.token_type.${type}_desc`);
+		return i18n.t(`routes/apps/one-to-many-transfer.step3.content.token_type.${type}_desc`);
 	}
 
 	// Load NFT contract info

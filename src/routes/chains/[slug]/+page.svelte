@@ -114,7 +114,7 @@
 	<nav class="breadcrumb">
 		<a href="/chains" class="back-link">
 			<ArrowLeft class="icon" />
-			<span>{i18n.t('chains.all_chains')}</span>
+			<span>{i18n.t('routes/chains.all_chains')}</span>
 		</a>
 	</nav>
 
@@ -135,14 +135,14 @@
 		<div class="section-header">
 			<h2 class="section-title">
 				<Server class="icon" />
-				{i18n.t('chains.rpc_endpoints')}
+				{i18n.t('routes/chains.rpc_endpoints')}
 			</h2>
 			<div class="rpc-stats">
 				<span class="stat">{httpCount} HTTPS</span>
 				<span class="divider">|</span>
 				<span class="stat">{wsCount} WSS</span>
 				<span class="divider">|</span>
-				<span class="stat privacy">{noTrackingCount} {i18n.t('chains.privacy_friendly')}</span>
+				<span class="stat privacy">{noTrackingCount} {i18n.t('routes/chains.privacy_friendly')}</span>
 			</div>
 		</div>
 
@@ -152,7 +152,7 @@
 				<Zap class="latency-icon" />
 				{#if isTesting}
 					<span class="latency-text">
-						{i18n.t('chains.testing_latency')} ({testProgress.completed}/{testProgress.total})
+						{i18n.t('routes/chains.testing_latency')} ({testProgress.completed}/{testProgress.total})
 					</span>
 					<div class="progress-bar">
 						<div
@@ -162,19 +162,19 @@
 					</div>
 				{:else if latencyResults.size > 0}
 					<span class="latency-text">
-						<span class="online">{onlineCount} {i18n.t('chains.online')}</span>
+						<span class="online">{onlineCount} {i18n.t('routes/chains.online')}</span>
 						{#if offlineCount > 0}
 							<span class="separator">·</span>
-							<span class="offline">{offlineCount} {i18n.t('chains.offline')}</span>
+							<span class="offline">{offlineCount} {i18n.t('routes/chains.offline')}</span>
 						{/if}
 					</span>
 				{:else}
-					<span class="latency-text">{i18n.t('chains.click_to_test')}</span>
+					<span class="latency-text">{i18n.t('routes/chains.click_to_test')}</span>
 				{/if}
 			</div>
 			<button class="retest-btn" onclick={runLatencyTest} disabled={isTesting}>
 				<RefreshCw class="icon {isTesting ? 'spinning' : ''}" />
-				{i18n.t('chains.retest')}
+				{i18n.t('routes/chains.retest')}
 			</button>
 		</div>
 
@@ -182,41 +182,41 @@
 		<div class="filters">
 			<div class="filter-group">
 				<Filter class="filter-icon" />
-				<span class="filter-label">{i18n.t('chains.filter_tracking')}:</span>
+				<span class="filter-label">{i18n.t('routes/chains.filter_tracking')}:</span>
 				<div class="filter-buttons">
 					<button
 						class="filter-btn"
 						class:active={trackingFilter === 'all'}
 						onclick={() => (trackingFilter = 'all')}
 					>
-						{i18n.t('chains.filter_all')}
+						{i18n.t('routes/chains.filter_all')}
 					</button>
 					<button
 						class="filter-btn"
 						class:active={trackingFilter === 'none'}
 						onclick={() => (trackingFilter = 'none')}
 					>
-						{i18n.t('chains.filter_no_tracking')}
+						{i18n.t('routes/chains.filter_no_tracking')}
 					</button>
 					<button
 						class="filter-btn"
 						class:active={trackingFilter === 'limited'}
 						onclick={() => (trackingFilter = 'limited')}
 					>
-						{i18n.t('chains.filter_limited')}
+						{i18n.t('routes/chains.filter_limited')}
 					</button>
 				</div>
 			</div>
 
 			<div class="filter-group">
-				<span class="filter-label">{i18n.t('chains.filter_protocol')}:</span>
+				<span class="filter-label">{i18n.t('routes/chains.filter_protocol')}:</span>
 				<div class="filter-buttons">
 					<button
 						class="filter-btn"
 						class:active={protocolFilter === 'all'}
 						onclick={() => (protocolFilter = 'all')}
 					>
-						{i18n.t('chains.filter_all')}
+						{i18n.t('routes/chains.filter_all')}
 					</button>
 					<button
 						class="filter-btn"
@@ -244,13 +244,13 @@
 			</div>
 		{:else}
 			<div class="empty-state">
-				<p>{i18n.t('chains.no_rpc_match')}</p>
+				<p>{i18n.t('routes/chains.no_rpc_match')}</p>
 			</div>
 		{/if}
 
 		<!-- Showing count -->
 		<p class="showing-count">
-			{i18n.t('chains.showing_rpc', {
+			{i18n.t('routes/chains.showing_rpc', {
 				count: filteredRpcs.length,
 				total: data.parsedRpcs.length
 			})}
@@ -260,7 +260,7 @@
 	<!-- Data Source Footer -->
 	<footer class="data-source">
 		<p>
-			{i18n.t('chains.data_source')}:
+			{i18n.t('routes/chains.data_source')}:
 			<a href="https://chainlist.org" target="_blank" rel="noopener noreferrer">chainlist.org</a>
 			{#if data.chain.tvl}
 				,

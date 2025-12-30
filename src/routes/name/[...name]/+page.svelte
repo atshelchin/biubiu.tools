@@ -107,7 +107,7 @@
 	<nav class="breadcrumb">
 		<a href="/address" class="back-link">
 			<ArrowLeft class="icon" />
-			<span>{i18n.t('address.all_addresses')}</span>
+			<span>{i18n.t('routes/address.all_addresses')}</span>
 		</a>
 	</nav>
 
@@ -152,18 +152,18 @@
 		<!-- ENS Text Records (Additional info) -->
 		{#if data.ensRecords?.textRecords?.location || data.ensRecords?.textRecords?.keywords || data.ensRecords?.textRecords?.notice}
 			<div class="ens-metadata-section">
-				<h3 class="section-label">{i18n.t('name.ens_records')}</h3>
+				<h3 class="section-label">{i18n.t('routes/name.ens_records')}</h3>
 				<div class="ens-metadata-grid">
 					{#if data.ensRecords?.textRecords?.location}
 						<div class="ens-metadata-item">
 							<MapPin class="icon-inline" />
-							<span class="ens-metadata-label">{i18n.t('name.location')}</span>
+							<span class="ens-metadata-label">{i18n.t('routes/name.location')}</span>
 							<span class="ens-metadata-value">{data.ensRecords.textRecords.location}</span>
 						</div>
 					{/if}
 					{#if data.ensRecords?.textRecords?.keywords}
 						<div class="ens-metadata-item">
-							<span class="ens-metadata-label">{i18n.t('name.keywords')}</span>
+							<span class="ens-metadata-label">{i18n.t('routes/name.keywords')}</span>
 							<span class="ens-metadata-value">{data.ensRecords.textRecords.keywords}</span>
 						</div>
 					{/if}
@@ -179,7 +179,7 @@
 		<!-- Entity Info -->
 		{#if data.entity}
 			<div class="entity-section">
-				<h3 class="entity-label">{i18n.t('name.owner')}</h3>
+				<h3 class="entity-label">{i18n.t('routes/name.owner')}</h3>
 				<div class="entity-card">
 					{#if data.entity.logo}
 						<img src={data.entity.logo} alt={data.entity.name} class="entity-logo" />
@@ -192,13 +192,13 @@
 		<!-- Registration Info -->
 		{#if data.name.registrationStatus || data.name.registeredAt || effectiveExpiresAt}
 			<div class="registration-section">
-				<h3 class="section-label">{i18n.t('name.registration_info')}</h3>
+				<h3 class="section-label">{i18n.t('routes/name.registration_info')}</h3>
 				<div class="registration-grid">
 					{#if data.name.registrationStatus}
 						<div class="registration-item">
-							<span class="registration-label">{i18n.t('name.registration_status')}</span>
+							<span class="registration-label">{i18n.t('routes/name.registration_status')}</span>
 							<span class="registration-status status-{data.name.registrationStatus}">
-								{i18n.t(('name.status.' + data.name.registrationStatus) as keyof TranslationKeys)}
+								{i18n.t(('routes/name.status.' + data.name.registrationStatus) as keyof TranslationKeys)}
 							</span>
 						</div>
 					{/if}
@@ -207,7 +207,7 @@
 						<div class="registration-item">
 							<span class="registration-label">
 								<Calendar class="icon-inline" />
-								{i18n.t('name.registered_at')}
+								{i18n.t('routes/name.registered_at')}
 							</span>
 							<span class="registration-value">{data.name.registeredAt}</span>
 						</div>
@@ -217,16 +217,16 @@
 						<div class="registration-item">
 							<span class="registration-label">
 								<Clock class="icon-inline" />
-								{i18n.t('name.expires_at')}
+								{i18n.t('routes/name.expires_at')}
 							</span>
 							<span class="registration-value">
 								{new Date(effectiveExpiresAt).toLocaleDateString()}
 								{#if expirationInfo}
 									<span class="expiration-info" class:expired={expirationInfo.isExpired}>
 										{#if expirationInfo.isExpired}
-											({i18n.t('name.expired_ago', { days: expirationInfo.daysRemaining })})
+											({i18n.t('routes/name.expired_ago', { days: expirationInfo.daysRemaining })})
 										{:else}
-											({i18n.t('name.days_remaining', { days: expirationInfo.daysRemaining })})
+											({i18n.t('routes/name.days_remaining', { days: expirationInfo.daysRemaining })})
 										{/if}
 									</span>
 								{/if}
@@ -240,7 +240,7 @@
 		<!-- Resolved Address -->
 		{#if data.name.address}
 			<div class="address-section">
-				<h3 class="section-label">{i18n.t('name.resolved_address')}</h3>
+				<h3 class="section-label">{i18n.t('routes/name.resolved_address')}</h3>
 				<div class="address-row">
 					<code class="address-full">{data.name.address}</code>
 					<button class="copy-btn-small" onclick={copyAddress}>
@@ -258,20 +258,20 @@
 						class="address-link"
 					>
 						<Link2 class="icon" />
-						<span>{i18n.t('name.view_address_details')}</span>
+						<span>{i18n.t('routes/name.view_address_details')}</span>
 					</a>
 				{/if}
 			</div>
 		{:else}
 			<div class="not-resolved">
-				<span>{i18n.t('name.not_resolved')}</span>
+				<span>{i18n.t('routes/name.not_resolved')}</span>
 			</div>
 		{/if}
 
 		<!-- Social Links from ENS Records -->
 		{#if data.socialLinks && data.socialLinks.length > 0}
 			<div class="socials-section">
-				<h3 class="section-label">{i18n.t('name.socials')}</h3>
+				<h3 class="section-label">{i18n.t('routes/name.socials')}</h3>
 				<div class="social-links">
 					{#each data.socialLinks as link (link.platform)}
 						{@const IconComponent = getSocialIcon(link.platform)}
@@ -285,7 +285,7 @@
 		{:else if data.name.socials}
 			<!-- Fallback to static socials -->
 			<div class="socials-section">
-				<h3 class="section-label">{i18n.t('name.socials')}</h3>
+				<h3 class="section-label">{i18n.t('routes/name.socials')}</h3>
 				<div class="social-links">
 					{#if data.name.socials.website}
 						<a
@@ -334,7 +334,7 @@
 					class="external-link"
 				>
 					<ExternalLink class="icon" />
-					<span>{i18n.t('name.view_on', { platform: typeInfo.label })}</span>
+					<span>{i18n.t('routes/name.view_on', { platform: typeInfo.label })}</span>
 				</a>
 			{/if}
 
@@ -346,7 +346,7 @@
 					class="external-link"
 				>
 					<ExternalLink class="icon" />
-					<span>{i18n.t('name.view_on_etherscan')}</span>
+					<span>{i18n.t('routes/name.view_on_etherscan')}</span>
 				</a>
 			{/if}
 		</div>
@@ -354,15 +354,15 @@
 
 	<!-- FAQ Section for SEO -->
 	<section class="faq-section">
-		<h2 class="section-title">{i18n.t('name.faq.title')}</h2>
+		<h2 class="section-title">{i18n.t('routes/name.faq.title')}</h2>
 
 		<div class="faq-list">
 			<details class="faq-item">
 				<summary class="faq-question"
-					>{i18n.t('name.faq.what_is', { name: data.name.name })}</summary
+					>{i18n.t('routes/name.faq.what_is', { name: data.name.name })}</summary
 				>
 				<p class="faq-answer">
-					{i18n.t('name.faq.what_is_answer', {
+					{i18n.t('routes/name.faq.what_is_answer', {
 						name: data.name.name,
 						type: typeInfo.label
 					})}
@@ -370,17 +370,17 @@
 			</details>
 
 			<details class="faq-item">
-				<summary class="faq-question">{i18n.t('name.faq.how_to_use')}</summary>
+				<summary class="faq-question">{i18n.t('routes/name.faq.how_to_use')}</summary>
 				<p class="faq-answer">
-					{i18n.t('name.faq.how_to_use_answer', { name: data.name.name })}
+					{i18n.t('routes/name.faq.how_to_use_answer', { name: data.name.name })}
 				</p>
 			</details>
 
 			{#if data.name.address}
 				<details class="faq-item">
-					<summary class="faq-question">{i18n.t('name.faq.who_owns')}</summary>
+					<summary class="faq-question">{i18n.t('routes/name.faq.who_owns')}</summary>
 					<p class="faq-answer">
-						{i18n.t('name.faq.who_owns_answer', {
+						{i18n.t('routes/name.faq.who_owns_answer', {
 							name: data.name.name,
 							address: `${data.name.address.slice(0, 10)}...${data.name.address.slice(-6)}`
 						})}
@@ -393,9 +393,9 @@
 	<!-- Data Source Footer -->
 	<footer class="data-source">
 		<p>
-			{i18n.t('address.data_source')}:
-			{i18n.t(('address.source_' + data.name.source) as keyof TranslationKeys)}
-			· {i18n.t('address.updated')}: {data.name.updatedAt}
+			{i18n.t('routes/address.data_source')}:
+			{i18n.t(('routes/address.source_' + data.name.source) as keyof TranslationKeys)}
+			· {i18n.t('routes/address.updated')}: {data.name.updatedAt}
 		</p>
 	</footer>
 </div>

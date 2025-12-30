@@ -34,7 +34,7 @@
 		<h2 class="section-title">
 			<Target class="section-icon" />
 			<span
-				>{i18n.t('routes/apps/chain-tools/chain-tools.use_cases' as keyof TranslationKeys, {
+				>{i18n.t('routes/apps/chain-tools.use_cases' as keyof TranslationKeys, {
 					defaultValue: 'Use Cases'
 				})}</span
 			>

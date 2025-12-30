@@ -6,4 +6,4 @@
 	import { ConnectWalletContent } from '$lib/components/step/connect-wallet';
 </script>
 
-<ConnectWalletContent i18nPrefix="one-to-many-transfer" />
+<ConnectWalletContent i18nPrefix="routes/apps/one-to-many-transfer" />

@@ -26,7 +26,7 @@
 	// Determine network type color
 	const networkTypeColor = $derived(chain.isTestnet ? '#eab308' : '#22c55e');
 	const networkTypeLabel = $derived(
-		chain.isTestnet ? i18n.t('chains.testnet') : i18n.t('chains.mainnet')
+		chain.isTestnet ? i18n.t('routes/chains.testnet') : i18n.t('routes/chains.mainnet')
 	);
 
 	// Get chain icon URL (from icons stored in static folder)
@@ -75,7 +75,7 @@
 					</span>
 					{#if chain.status === 'deprecated'}
 						<span class="network-badge deprecated">
-							{i18n.t('chains.deprecated')}
+							{i18n.t('routes/chains.deprecated')}
 						</span>
 					{/if}
 				</div>
@@ -89,7 +89,7 @@
 				rel="noopener noreferrer"
 				class="official-link"
 			>
-				<span>{i18n.t('chains.official_website')}</span>
+				<span>{i18n.t('routes/chains.official_website')}</span>
 				<ExternalLink class="icon" />
 			</a>
 		{/if}
@@ -103,7 +103,7 @@
 				<Hash class="icon" />
 			</div>
 			<div class="stat-content">
-				<span class="stat-label">{i18n.t('chains.chain_id')}</span>
+				<span class="stat-label">{i18n.t('routes/chains.chain_id')}</span>
 				<span class="stat-value">{chain.chainId}</span>
 			</div>
 		</div>
@@ -114,7 +114,7 @@
 				<Coins class="icon" />
 			</div>
 			<div class="stat-content">
-				<span class="stat-label">{i18n.t('chains.native_currency')}</span>
+				<span class="stat-label">{i18n.t('routes/chains.native_currency')}</span>
 				<span class="stat-value">{chain.nativeCurrency?.symbol || chain.chain}</span>
 				<span class="stat-sub">{chain.nativeCurrency?.name}</span>
 			</div>
@@ -126,9 +126,9 @@
 				<Server class="icon" />
 			</div>
 			<div class="stat-content">
-				<span class="stat-label">{i18n.t('chains.rpc_endpoints')}</span>
+				<span class="stat-label">{i18n.t('routes/chains.rpc_endpoints')}</span>
 				<span class="stat-value">{rpcCount}</span>
-				<span class="stat-sub">{i18n.t('chains.available')}</span>
+				<span class="stat-sub">{i18n.t('routes/chains.available')}</span>
 			</div>
 		</div>
 
@@ -154,7 +154,7 @@
 		<div class="features-section">
 			<h3 class="section-title">
 				<FileCode class="icon" />
-				{i18n.t('chains.supported_features')}
+				{i18n.t('routes/chains.supported_features')}
 			</h3>
 			<div class="features-list">
 				{#each features as feature (feature)}
@@ -169,7 +169,7 @@
 		<div class="additional-info">
 			{#if chain.shortName}
 				<div class="info-item">
-					<span class="info-label">{i18n.t('chains.short_name')}:</span>
+					<span class="info-label">{i18n.t('routes/chains.short_name')}:</span>
 					<code class="info-value">{chain.shortName}</code>
 				</div>
 			{/if}
@@ -181,7 +181,7 @@
 			{/if}
 			{#if chain.ens?.registry}
 				<div class="info-item">
-					<span class="info-label">{i18n.t('chains.ens_registry')}:</span>
+					<span class="info-label">{i18n.t('routes/chains.ens_registry')}:</span>
 					<code class="info-value ens">{chain.ens.registry}</code>
 				</div>
 			{/if}

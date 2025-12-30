@@ -6,4 +6,4 @@
 	import { ConnectWalletFooter } from '$lib/components/step/connect-wallet';
 </script>
 
-<ConnectWalletFooter i18nPrefix="contract-events-scanner" />
+<ConnectWalletFooter i18nPrefix="routes/apps/contract-events-scanner" />

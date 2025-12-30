@@ -29,6 +29,54 @@
 		},
 		"suave": {
 			"description": "Single Unified Auction for Value Expression - future of MEV"
+		},
+		"flashbots-protect": {
+			"description": "Flashbots Protect - Tool"
+		},
+		"mev-blocker": {
+			"description": "MEV Blocker - Tool"
+		},
+		"cow-mev-protection": {
+			"description": "CoW Protocol MEV Protection - Tool"
+		},
+		"merkle-private-pool": {
+			"description": "Merkle Private Pool - Tool"
+		},
+		"flashbots-builder": {
+			"description": "Flashbots Builder - Tool"
+		},
+		"titan-builder": {
+			"description": "Titan Builder - Tool"
+		},
+		"rsync-builder": {
+			"description": "rsync Builder - Tool"
+		},
+		"flashbots-transparency": {
+			"description": "Flashbots Transparency Dashboard - Tool"
+		},
+		"mev-explore": {
+			"description": "MEV-Explore - Tool"
+		},
+		"eigenphi-mev": {
+			"description": "EigenPhi MEV - Tool"
+		},
+		"mev-watch": {
+			"description": "MEV Watch - Tool"
+		},
+		"mevboost-pics": {
+			"description": "mevboost.pics - Tool"
+		},
+		"mev-boost": {
+			"description": "MEV-Boost - Tool"
+		},
+		"mev-share": {
+			"description": "MEV-Share - Tool"
+		},
+		"jito-mev": {
+			"description": "Jito MEV - Tool"
+		},
+		"jito-bundles": {
+			"description": "Jito Bundles - Tool"
 		}
 	}
 }

@@ -11,4 +11,4 @@
 	const isChecking = $derived(step2State.isChecking);
 </script>
 
-<DependencyCheckFooter i18nPrefix="one-to-many-transfer" {summary} {isChecking} />
+<DependencyCheckFooter i18nPrefix="routes/apps/one-to-many-transfer" {summary} {isChecking} />

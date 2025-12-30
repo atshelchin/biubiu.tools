@@ -6,7 +6,7 @@
 	import { ConnectWalletSidebar } from '$lib/components/step/connect-wallet';
 </script>
 
-<ConnectWalletSidebar i18nPrefix="contract-events-scanner">
+<ConnectWalletSidebar i18nPrefix="routes/apps/contract-events-scanner">
 	<div class="feature-highlights">
 		<ul class="feature-list">
 			<li>

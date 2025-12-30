@@ -215,7 +215,7 @@
 	{#if !connectStore.isConnected && !checker.isChecking}
 		<!-- Not Connected State -->
 		<EmptyState
-			icon="plug"
+			icon="🔌"
 			title={t(`${i18nPrefix}.step2.content.wallet_not_connected_title`)}
 			message={t(`${i18nPrefix}.step2.content.wallet_not_connected_message`)}
 		>

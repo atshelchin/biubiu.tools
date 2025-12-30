@@ -41,7 +41,7 @@
 
 			<!-- CTA Button -->
 			<a href={tool.url} target="_blank" rel="noopener noreferrer" class="cta-button">
-				<span>{i18n.t('routes/apps/chain-tools/chain-tools.visit', { defaultValue: 'Visit' })}</span
+				<span>{i18n.t('routes/apps/chain-tools.visit', { defaultValue: 'Visit' })}</span
 				>
 				<ExternalLink class="cta-icon" />
 			</a>
@@ -52,7 +52,7 @@
 			<div class="chains-section">
 				<span class="section-label"
 					>{i18n.t(
-						'routes/apps/chain-tools/chain-tools.supported_chains' as keyof TranslationKeys,
+						'routes/apps/chain-tools.supported_chains' as keyof TranslationKeys,
 						{
 							defaultValue: 'Supported Chains'
 						}

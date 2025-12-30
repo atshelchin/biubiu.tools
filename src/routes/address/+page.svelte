@@ -124,8 +124,8 @@
 <div class="address-page">
 	<!-- Hero Section -->
 	<section class="hero">
-		<h1 class="title">{i18n.t('address.title')}</h1>
-		<p class="subtitle">{i18n.t('address.subtitle')}</p>
+		<h1 class="title">{i18n.t('routes/address.title')}</h1>
+		<p class="subtitle">{i18n.t('routes/address.subtitle')}</p>
 
 		<!-- Search Box -->
 		<div class="search-container">
@@ -134,7 +134,7 @@
 				<input
 					type="text"
 					class="search-input"
-					placeholder={i18n.t('address.search_placeholder')}
+					placeholder={i18n.t('routes/address.search_placeholder')}
 					bind:value={searchQuery}
 					oninput={handleSearch}
 				/>
@@ -146,7 +146,7 @@
 					{#if isSearching}
 						<div class="result-item no-results">
 							<span class="result-type">⏳</span>
-							<span class="result-id">{i18n.t('address.searching')}</span>
+							<span class="result-id">{i18n.t('routes/address.searching')}</span>
 						</div>
 					{:else if searchResults.length > 0}
 						<!-- Indexed results -->
@@ -171,7 +171,7 @@
 						<!-- Dynamic lookup in progress -->
 						<div class="result-item no-results">
 							<Loader2 class="spin-icon" />
-							<span class="result-id">{i18n.t('address.looking_up')}</span>
+							<span class="result-id">{i18n.t('routes/address.looking_up')}</span>
 						</div>
 					{:else if dynamicLookupResult}
 						<!-- Dynamic lookup result -->
@@ -203,14 +203,14 @@
 										<span class="result-badge">Contract</span>
 									{/if}
 								</span>
-								<span class="result-hint">{i18n.t('address.view_details')}</span>
+								<span class="result-hint">{i18n.t('routes/address.view_details')}</span>
 							</button>
 						{/if}
 					{:else}
 						<!-- No results -->
 						<div class="result-item no-results">
 							<span class="result-type">🔍</span>
-							<span class="result-id">{i18n.t('address.no_results')}</span>
+							<span class="result-id">{i18n.t('routes/address.no_results')}</span>
 						</div>
 					{/if}
 				</div>
@@ -221,19 +221,19 @@
 		<div class="stats-row">
 			<div class="stat-item">
 				<span class="stat-value">{data.stats.totalAddresses.toLocaleString()}</span>
-				<span class="stat-label">{i18n.t('address.stats.addresses')}</span>
+				<span class="stat-label">{i18n.t('routes/address.stats.addresses')}</span>
 			</div>
 			<div class="stat-divider"></div>
 			<div class="stat-item">
 				<span class="stat-value">{data.stats.totalNames.toLocaleString()}</span>
-				<span class="stat-label">{i18n.t('address.stats.names')}</span>
+				<span class="stat-label">{i18n.t('routes/address.stats.names')}</span>
 			</div>
 		</div>
 	</section>
 
 	<!-- Category Stats -->
 	<!-- <section class="categories-section">
-		<h2 class="section-title">{i18n.t('address.categories')}</h2>
+		<h2 class="section-title">{i18n.t('routes/address.categories')}</h2>
 		<div class="category-grid">
 			{#each categoryStats as stat (stat.label)}
 				<div class="category-card">
@@ -247,13 +247,13 @@
 
 	<!-- Browse by Label -->
 	<section class="labels-section">
-		<h2 class="section-title">{i18n.t('address.browse_by_label')}</h2>
+		<h2 class="section-title">{i18n.t('routes/address.browse_by_label')}</h2>
 		<div class="label-grid">
 			{#each labelCategories as label (label.id)}
 				<a href="/address/labels/{label.id}" class="label-card">
 					<span class="label-icon">{label.icon}</span>
 					<span class="label-name"
-						>{i18n.t(`address.labels.${label.id}` as keyof TranslationKeys)}</span
+						>{i18n.t(`routes/address.labels.${label.id}` as keyof TranslationKeys)}</span
 					>
 				</a>
 			{/each}
@@ -262,7 +262,7 @@
 
 	<!-- Popular Addresses -->
 	<section class="popular-section">
-		<h2 class="section-title">{i18n.t('address.popular_addresses')}</h2>
+		<h2 class="section-title">{i18n.t('routes/address.popular_addresses')}</h2>
 		<div class="address-list">
 			{#each data.popularAddresses as addr (`${addr.chainId}-${addr.address}`)}
 				{@const entity = addr.entityId ? getEntity(addr.entityId) : undefined}
@@ -282,7 +282,7 @@
 
 	<!-- Popular ENS Names -->
 	<section class="popular-section">
-		<h2 class="section-title">{i18n.t('address.popular_names')}</h2>
+		<h2 class="section-title">{i18n.t('routes/address.popular_names')}</h2>
 		<div class="name-grid">
 			{#each data.popularNames as name (name.name)}
 				<a href="/name/{name.name}" class="name-card">

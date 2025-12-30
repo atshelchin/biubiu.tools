@@ -42,7 +42,7 @@
 </script>
 
 <DependencyCheckContent
-	i18nPrefix="one-to-many-transfer"
+	i18nPrefix="routes/apps/one-to-many-transfer"
 	{checkDependencies}
 	onStateChange={handleStateChange}
 />

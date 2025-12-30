@@ -78,7 +78,7 @@
 	<nav class="breadcrumb">
 		<a href="/address" class="back-link">
 			<ArrowLeft class="icon" />
-			<span>{i18n.t('address.all_addresses')}</span>
+			<span>{i18n.t('routes/address.all_addresses')}</span>
 		</a>
 	</nav>
 
@@ -107,7 +107,7 @@
 				{:else if data.address.riskLevel === 'warning' || data.address.riskLevel === 'danger'}
 					<AlertTriangle class="risk-icon" />
 				{/if}
-				<span>{i18n.t(`address.risk.${data.address.riskLevel}` as keyof TranslationKeys)}</span>
+				<span>{i18n.t(`routes/address.risk.${data.address.riskLevel}` as keyof TranslationKeys)}</span>
 			</div>
 		</div>
 
@@ -127,19 +127,19 @@
 		<div class="balance-row">
 			<div class="balance-label">
 				<Wallet class="balance-icon" />
-				<span>{i18n.t('address.balance')}</span>
+				<span>{i18n.t('routes/address.balance')}</span>
 			</div>
 			<div class="balance-value">
 				{#if balanceLoading}
 					<Loader2 class="loading-icon spin" />
-					<span class="balance-loading">{i18n.t('address.loading_balance')}</span>
+					<span class="balance-loading">{i18n.t('routes/address.loading_balance')}</span>
 				{:else if balanceResult?.error}
 					<span class="balance-error">{balanceResult.error}</span>
 				{:else if balanceResult}
 					<span class="balance-amount">{formatBalance(balanceResult.balance)}</span>
 					<span class="balance-symbol">{balanceResult.symbol}</span>
 					{#if balanceResult.isContract}
-						<span class="contract-badge">{i18n.t('address.contract')}</span>
+						<span class="contract-badge">{i18n.t('routes/address.contract')}</span>
 					{/if}
 				{:else}
 					<span class="balance-na">-</span>
@@ -159,7 +159,7 @@
 						class="label-badge"
 						style="--label-color: var(--color-{LABEL_META[label]?.color || 'gray'}-500)"
 					>
-						{i18n.t(`address.labels.${label}` as keyof TranslationKeys)}
+						{i18n.t(`routes/address.labels.${label}` as keyof TranslationKeys)}
 					</span>
 				{/each}
 			</div>
@@ -174,7 +174,7 @@
 		<div class="external-links">
 			<a href={explorerUrl} target="_blank" rel="noopener noreferrer" class="external-link">
 				<ExternalLink class="icon" />
-				<span>{i18n.t('address.view_on_explorer')}</span>
+				<span>{i18n.t('routes/address.view_on_explorer')}</span>
 			</a>
 
 			{#if data.entity.website}
@@ -185,7 +185,7 @@
 					class="external-link"
 				>
 					<Link2 class="icon" />
-					<span>{i18n.t('address.website')}</span>
+					<span>{i18n.t('routes/address.website')}</span>
 				</a>
 			{/if}
 		</div>
@@ -196,7 +196,7 @@
 		<section class="related-section">
 			<h2 class="section-title">
 				<Tag class="section-icon" />
-				{i18n.t('address.related_names')}
+				{i18n.t('routes/address.related_names')}
 			</h2>
 			<div class="related-grid">
 				{#each data.relatedNames as name (name.name)}
@@ -213,7 +213,7 @@
 		<section class="related-section">
 			<h2 class="section-title">
 				<Link2 class="section-icon" />
-				{i18n.t('address.related_addresses')}
+				{i18n.t('routes/address.related_addresses')}
 			</h2>
 			<div class="related-list">
 				{#each data.relatedAddresses as addr (`${addr.chainId}-${addr.address}`)}
@@ -230,15 +230,15 @@
 
 	<!-- FAQ Section for SEO -->
 	<section class="faq-section">
-		<h2 class="section-title">{i18n.t('address.faq.title')}</h2>
+		<h2 class="section-title">{i18n.t('routes/address.faq.title')}</h2>
 
 		<div class="faq-list">
 			<details class="faq-item">
 				<summary class="faq-question"
-					>{i18n.t('address.faq.what_is', { name: data.address.name })}</summary
+					>{i18n.t('routes/address.faq.what_is', { name: data.address.name })}</summary
 				>
 				<p class="faq-answer">
-					{i18n.t('address.faq.what_is_answer', {
+					{i18n.t('routes/address.faq.what_is_answer', {
 						name: data.address.name,
 						entity: data.entity.name,
 						chain: CHAIN_META[data.chainId]?.name || 'Unknown'
@@ -247,18 +247,18 @@
 			</details>
 
 			<details class="faq-item">
-				<summary class="faq-question">{i18n.t('address.faq.is_safe')}</summary>
+				<summary class="faq-question">{i18n.t('routes/address.faq.is_safe')}</summary>
 				<p class="faq-answer">
-					{i18n.t(`address.faq.is_safe_answer_${data.address.riskLevel}` as keyof TranslationKeys, {
+					{i18n.t(`routes/address.faq.is_safe_answer_${data.address.riskLevel}` as keyof TranslationKeys, {
 						name: data.address.name
 					})}
 				</p>
 			</details>
 
 			<details class="faq-item">
-				<summary class="faq-question">{i18n.t('address.faq.how_to_verify')}</summary>
+				<summary class="faq-question">{i18n.t('routes/address.faq.how_to_verify')}</summary>
 				<p class="faq-answer">
-					{i18n.t('address.faq.how_to_verify_answer', {
+					{i18n.t('routes/address.faq.how_to_verify_answer', {
 						explorer: CHAIN_META[data.chainId]?.name || 'Etherscan'
 					})}
 				</p>
@@ -269,9 +269,9 @@
 	<!-- Data Source Footer -->
 	<footer class="data-source">
 		<p>
-			{i18n.t('address.data_source')}:
-			{i18n.t(('address.source_' + data.address.source) as keyof TranslationKeys)}
-			· {i18n.t('address.updated')}: {data.address.updatedAt}
+			{i18n.t('routes/address.data_source')}:
+			{i18n.t(('routes/address.source_' + data.address.source) as keyof TranslationKeys)}
+			· {i18n.t('routes/address.updated')}: {data.address.updatedAt}
 		</p>
 	</footer>
 </div>

@@ -14,7 +14,7 @@
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	const sectionTitle = $derived(
-		i18n.t('routes/apps/chain-tools/chain-tools.related_tools' as any, {
+		i18n.t('routes/apps/chain-tools.related_tools' as any, {
 			defaultValue: 'Related Tools'
 		})
 	);

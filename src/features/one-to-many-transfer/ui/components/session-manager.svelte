@@ -191,7 +191,7 @@
 						<div class="session-header">
 							<span class="session-token">{session.tokenSymbol}</span>
 							<span class="session-status {getStatusColor(session.status)}">
-								{i18n.t(`one-to-many-transfer.step5.session.status_${session.status}`)}
+								{i18n.t(`routes/apps/one-to-many-transfer.step5.session.status_${session.status}`)}
 							</span>
 						</div>
 						<div class="session-info">

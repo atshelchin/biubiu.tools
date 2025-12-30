@@ -5,74 +5,74 @@
 </script>
 
 <svelte:head>
-	<title>{i18n.t('privacy.page_title')} | BiuBiu Tools</title>
-	<meta name="description" content={i18n.t('privacy.page_description')} />
+	<title>{i18n.t('routes/privacy.page_title')} | BiuBiu Tools</title>
+	<meta name="description" content={i18n.t('routes/privacy.page_description')} />
 </svelte:head>
 
 <div class="privacy-page">
 	<div class="container">
-		<h1>{i18n.t('privacy.title')}</h1>
-		<p class="last-updated">{i18n.t('privacy.last_updated')}: 2025-12-22</p>
+		<h1>{i18n.t('routes/privacy.title')}</h1>
+		<p class="last-updated">{i18n.t('routes/privacy.last_updated')}: 2025-12-22</p>
 
 		<div class="authoritative-notice">
-			{i18n.t('privacy.authoritative_notice')}
+			{i18n.t('routes/privacy.authoritative_notice')}
 		</div>
 
 		<section>
-			<h2>{i18n.t('privacy.introduction.title')}</h2>
-			<p>{i18n.t('privacy.introduction.content')}</p>
+			<h2>{i18n.t('routes/privacy.introduction.title')}</h2>
+			<p>{i18n.t('routes/privacy.introduction.content')}</p>
 		</section>
 
 		<section>
-			<h2>{i18n.t('privacy.data_collection.title')}</h2>
-			<p>{i18n.t('privacy.data_collection.intro')}</p>
+			<h2>{i18n.t('routes/privacy.data_collection.title')}</h2>
+			<p>{i18n.t('routes/privacy.data_collection.intro')}</p>
 
-			<h3>{i18n.t('privacy.data_collection.necessary.title')}</h3>
+			<h3>{i18n.t('routes/privacy.data_collection.necessary.title')}</h3>
 			<ul>
-				<li>{i18n.t('privacy.data_collection.necessary.item1')}</li>
-				<li>{i18n.t('privacy.data_collection.necessary.item2')}</li>
-				<li>{i18n.t('privacy.data_collection.necessary.item3')}</li>
-				<li>{i18n.t('privacy.data_collection.necessary.item4')}</li>
-				<li>{i18n.t('privacy.data_collection.necessary.item5')}</li>
+				<li>{i18n.t('routes/privacy.data_collection.necessary.item1')}</li>
+				<li>{i18n.t('routes/privacy.data_collection.necessary.item2')}</li>
+				<li>{i18n.t('routes/privacy.data_collection.necessary.item3')}</li>
+				<li>{i18n.t('routes/privacy.data_collection.necessary.item4')}</li>
+				<li>{i18n.t('routes/privacy.data_collection.necessary.item5')}</li>
 			</ul>
 
-			<h3>{i18n.t('privacy.data_collection.analytics.title')}</h3>
+			<h3>{i18n.t('routes/privacy.data_collection.analytics.title')}</h3>
 			<ul>
-				<li>{i18n.t('privacy.data_collection.analytics.item1')}</li>
-				<li>{i18n.t('privacy.data_collection.analytics.item2')}</li>
-				<li>{i18n.t('privacy.data_collection.analytics.item3')}</li>
-			</ul>
-		</section>
-
-		<section>
-			<h2>{i18n.t('privacy.local_storage.title')}</h2>
-			<p>{i18n.t('privacy.local_storage.content')}</p>
-			<ul>
-				<li>{i18n.t('privacy.local_storage.item1')}</li>
-				<li>{i18n.t('privacy.local_storage.item2')}</li>
-				<li>{i18n.t('privacy.local_storage.item3')}</li>
-				<li>{i18n.t('privacy.local_storage.item4')}</li>
+				<li>{i18n.t('routes/privacy.data_collection.analytics.item1')}</li>
+				<li>{i18n.t('routes/privacy.data_collection.analytics.item2')}</li>
+				<li>{i18n.t('routes/privacy.data_collection.analytics.item3')}</li>
 			</ul>
 		</section>
 
 		<section>
-			<h2>{i18n.t('privacy.third_party.title')}</h2>
-			<p>{i18n.t('privacy.third_party.content')}</p>
-		</section>
-
-		<section>
-			<h2>{i18n.t('privacy.your_rights.title')}</h2>
-			<p>{i18n.t('privacy.your_rights.content')}</p>
+			<h2>{i18n.t('routes/privacy.local_storage.title')}</h2>
+			<p>{i18n.t('routes/privacy.local_storage.content')}</p>
 			<ul>
-				<li>{i18n.t('privacy.your_rights.item1')}</li>
-				<li>{i18n.t('privacy.your_rights.item2')}</li>
-				<li>{i18n.t('privacy.your_rights.item3')}</li>
+				<li>{i18n.t('routes/privacy.local_storage.item1')}</li>
+				<li>{i18n.t('routes/privacy.local_storage.item2')}</li>
+				<li>{i18n.t('routes/privacy.local_storage.item3')}</li>
+				<li>{i18n.t('routes/privacy.local_storage.item4')}</li>
 			</ul>
 		</section>
 
 		<section>
-			<h2>{i18n.t('privacy.contact.title')}</h2>
-			<p>{i18n.t('privacy.contact.content')}</p>
+			<h2>{i18n.t('routes/privacy.third_party.title')}</h2>
+			<p>{i18n.t('routes/privacy.third_party.content')}</p>
+		</section>
+
+		<section>
+			<h2>{i18n.t('routes/privacy.your_rights.title')}</h2>
+			<p>{i18n.t('routes/privacy.your_rights.content')}</p>
+			<ul>
+				<li>{i18n.t('routes/privacy.your_rights.item1')}</li>
+				<li>{i18n.t('routes/privacy.your_rights.item2')}</li>
+				<li>{i18n.t('routes/privacy.your_rights.item3')}</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>{i18n.t('routes/privacy.contact.title')}</h2>
+			<p>{i18n.t('routes/privacy.contact.content')}</p>
 		</section>
 	</div>
 </div>
