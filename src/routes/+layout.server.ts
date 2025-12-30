@@ -3,6 +3,7 @@ import type { LocaleData } from '@shelchin/i18n';
 import { createServerLoader } from '@shelchin/i18n';
 
 // Auto-scan all locale files and create server loader
+// Note: namespacePrefix is supported by the library but missing from type definitions
 const { load: i18nLoad } = createServerLoader(
 	import.meta.glob<{ default: LocaleData }>('../i18n/locales/**/*.json', { eager: true }),
 	{
@@ -14,14 +15,14 @@ const { load: i18nLoad } = createServerLoader(
 			'faqs',
 			'pricing',
 			'referral',
-			'routes/home',
 			'security-scanner',
 			'tools',
 			'wallet-connection',
 			'wallet'
 		],
-		homeNamespace: 'home'
-	}
+		homeNamespace: 'home',
+		namespacePrefix: 'routes'
+	} as Parameters<typeof createServerLoader>[1] & { namespacePrefix?: string }
 );
 
 export const load: LayoutServerLoad = async ({ cookies, url }) => {
