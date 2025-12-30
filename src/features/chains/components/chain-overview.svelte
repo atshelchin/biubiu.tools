@@ -34,6 +34,14 @@
 
 	// Format features
 	const features = $derived(chain.features?.map((f) => f.name) || []);
+
+	// Ensure URL has a protocol
+	function ensureProtocol(url: string): string {
+		if (url.startsWith('http://') || url.startsWith('https://')) {
+			return url;
+		}
+		return `https://${url}`;
+	}
 </script>
 
 <div class="chain-overview">
@@ -75,7 +83,12 @@
 		</div>
 
 		{#if chain.infoURL}
-			<a href={chain.infoURL} target="_blank" rel="noopener noreferrer" class="official-link">
+			<a
+				href={ensureProtocol(chain.infoURL)}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="official-link"
+			>
 				<span>{i18n.t('chains.official_website')}</span>
 				<ExternalLink class="icon" />
 			</a>

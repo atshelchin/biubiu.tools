@@ -10,10 +10,18 @@
 
 	const i18n = useI18n();
 
+	// Ensure URL has a protocol
+	function ensureProtocol(url: string): string {
+		if (url.startsWith('http://') || url.startsWith('https://')) {
+			return url;
+		}
+		return `https://${url}`;
+	}
+
 	// Extract domain from URL for display
 	function getDomain(url: string): string {
 		try {
-			return new URL(url).hostname;
+			return new URL(ensureProtocol(url)).hostname;
 		} catch {
 			return url;
 		}
@@ -30,7 +38,7 @@
 		<div class="faucets-grid">
 			{#each faucets as faucet, index (faucet)}
 				<a
-					href={faucet}
+					href={ensureProtocol(faucet)}
 					target="_blank"
 					rel="noopener noreferrer"
 					class="faucet-card"
