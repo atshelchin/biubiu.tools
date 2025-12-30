@@ -16,5 +16,139 @@
 				"answer": "Tiềm năng cao = rủi ro cao. Hầu hết token đều thất bại. Cẩn thận với rug pull, tokenomics kém, thiếu tiện ích và marketing quá thổi phồng. Không bao giờ đầu tư nhiều hơn mức bạn có thể mất."
 			}
 		]
+	},
+	"tools": {
+		"legend-bnb": {
+			"description": "BNB (Binance) - Tool"
+		},
+		"legend-sol": {
+			"description": "SOL (Solana) - Tool"
+		},
+		"legend-matic": {
+			"description": "MATIC/POL (Polygon) - Tool"
+		},
+		"legend-avax": {
+			"description": "AVAX (Avalanche) - Tool"
+		},
+		"legend-link": {
+			"description": "LINK (Chainlink) - Tool"
+		},
+		"legend-uni": {
+			"description": "UNI (Uniswap) - Tool"
+		},
+		"legend-aave": {
+			"description": "AAVE (Aave) - Tool"
+		},
+		"legend-ftm": {
+			"description": "FTM (Fantom) - Tool"
+		},
+		"legend-atom": {
+			"description": "ATOM (Cosmos) - Tool"
+		},
+		"legend-near": {
+			"description": "NEAR (NEAR Protocol) - Tool"
+		},
+		"legend-inj": {
+			"description": "INJ (Injective) - Tool"
+		},
+		"legend-ton": {
+			"description": "TON (Toncoin) - Tool"
+		},
+		"legend-sui": {
+			"description": "SUI (Sui) - Tool"
+		},
+		"legend-apt": {
+			"description": "APT (Aptos) - Tool"
+		},
+		"legend-sei": {
+			"description": "SEI (Sei) - Tool"
+		},
+		"legend-mkr": {
+			"description": "MKR (MakerDAO) - Tool"
+		},
+		"legend-snx": {
+			"description": "SNX (Synthetix) - Tool"
+		},
+		"legend-crv": {
+			"description": "CRV (Curve) - Tool"
+		},
+		"legend-gmx": {
+			"description": "GMX (GMX) - Tool"
+		},
+		"legend-pendle": {
+			"description": "PENDLE (Pendle) - Tool"
+		},
+		"legend-rune": {
+			"description": "RUNE (THORChain) - Tool"
+		},
+		"legend-dydx": {
+			"description": "DYDX (dYdX) - Tool"
+		},
+		"legend-shib": {
+			"description": "SHIB (Shiba Inu) - Tool"
+		},
+		"legend-pepe": {
+			"description": "PEPE - Tool"
+		},
+		"legend-bonk": {
+			"description": "BONK - Tool"
+		},
+		"legend-wif": {
+			"description": "WIF (dogwifhat) - Tool"
+		},
+		"legend-floki": {
+			"description": "FLOKI - Tool"
+		},
+		"legend-arb": {
+			"description": "ARB (Arbitrum) - Tool"
+		},
+		"legend-op": {
+			"description": "OP (Optimism) - Tool"
+		},
+		"legend-stx": {
+			"description": "STX (Stacks) - Tool"
+		},
+		"legend-tia": {
+			"description": "TIA (Celestia) - Tool"
+		},
+		"legend-jup": {
+			"description": "JUP (Jupiter) - Tool"
+		},
+		"legend-pyth": {
+			"description": "PYTH (Pyth Network) - Tool"
+		},
+		"legend-render": {
+			"description": "RNDR (Render) - Tool"
+		},
+		"legend-fet": {
+			"description": "FET (Fetch.ai) - Tool"
+		},
+		"legend-axs": {
+			"description": "AXS (Axie Infinity) - Tool"
+		},
+		"legend-sand": {
+			"description": "SAND (Sandbox) - Tool"
+		},
+		"legend-mana": {
+			"description": "MANA (Decentraland) - Tool"
+		},
+		"legend-gala": {
+			"description": "GALA (Gala Games) - Tool"
+		},
+		"legend-imx": {
+			"description": "IMX (Immutable) - Tool"
+		},
+		"legend-blur": {
+			"description": "BLUR (Blur) - Tool"
+		},
+		"coingecko-gainers": {
+			"description": "CoinGecko Top Gainers - Tool"
+		},
+		"dexscreener-trending": {
+			"description": "DEXScreener Trending - Tool"
+		},
+		"messari-screener": {
+			"description": "Messari Screener - Tool"
+		}
 	}
 }

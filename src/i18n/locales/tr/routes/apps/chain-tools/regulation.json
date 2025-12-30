@@ -17,5 +17,139 @@
 				"answer": "Tüm işlemlerin kayıtlarını tutun, yargı bölgenizin kurallarını anlayın, uyumlu borsaları kullanın ve kripto konusunda bilgili hukuk ve vergi uzmanlarına danışın."
 			}
 		]
+	},
+	"tools": {
+		"sec-crypto": {
+			"description": "SEC (US) - Tool"
+		},
+		"cftc-crypto": {
+			"description": "CFTC (US) - Tool"
+		},
+		"fincen-crypto": {
+			"description": "FinCEN (US) - Tool"
+		},
+		"occ-crypto": {
+			"description": "OCC (US) - Tool"
+		},
+		"fed-crypto": {
+			"description": "Federal Reserve - Tool"
+		},
+		"nydfs-crypto": {
+			"description": "NYDFS BitLicense - Tool"
+		},
+		"mica-eu": {
+			"description": "MiCA (EU) - Tool"
+		},
+		"esma-crypto": {
+			"description": "ESMA (EU) - Tool"
+		},
+		"eba-crypto": {
+			"description": "EBA (EU) - Tool"
+		},
+		"fca-crypto": {
+			"description": "FCA (UK) - Tool"
+		},
+		"bafin-crypto": {
+			"description": "BaFin (Germany) - Tool"
+		},
+		"amf-crypto": {
+			"description": "AMF (France) - Tool"
+		},
+		"finma-crypto": {
+			"description": "FINMA (Switzerland) - Tool"
+		},
+		"hkma-crypto": {
+			"description": "HKMA (Hong Kong) - Tool"
+		},
+		"sfc-hk": {
+			"description": "SFC (Hong Kong) - Tool"
+		},
+		"mas-crypto": {
+			"description": "MAS (Singapore) - Tool"
+		},
+		"jfsa-crypto": {
+			"description": "JFSA (Japan) - Tool"
+		},
+		"fsc-korea": {
+			"description": "FSC (South Korea) - Tool"
+		},
+		"asic-crypto": {
+			"description": "ASIC (Australia) - Tool"
+		},
+		"rbi-crypto": {
+			"description": "RBI (India) - Tool"
+		},
+		"vara-dubai": {
+			"description": "VARA (Dubai) - Tool"
+		},
+		"adgm-crypto": {
+			"description": "ADGM (Abu Dhabi) - Tool"
+		},
+		"sama-crypto": {
+			"description": "SAMA (Saudi Arabia) - Tool"
+		},
+		"sarb-crypto": {
+			"description": "SARB (South Africa) - Tool"
+		},
+		"csa-crypto": {
+			"description": "CSA (Canada) - Tool"
+		},
+		"cnbv-crypto": {
+			"description": "CNBV (Mexico) - Tool"
+		},
+		"bcra-crypto": {
+			"description": "BCRA (Argentina) - Tool"
+		},
+		"cvm-brazil": {
+			"description": "CVM (Brazil) - Tool"
+		},
+		"fatf-crypto": {
+			"description": "FATF - Tool"
+		},
+		"bis-crypto": {
+			"description": "BIS - Tool"
+		},
+		"fsb-crypto": {
+			"description": "FSB - Tool"
+		},
+		"iosco-crypto": {
+			"description": "IOSCO - Tool"
+		},
+		"coinbase-legal": {
+			"description": "Coinbase Legal Hub - Tool"
+		},
+		"a16z-policy": {
+			"description": "a16z Policy Hub - Tool"
+		},
+		"blockchain-association": {
+			"description": "Blockchain Association - Tool"
+		},
+		"coin-center": {
+			"description": "Coin Center - Tool"
+		},
+		"atlanticcouncil-cbdc": {
+			"description": "CBDC Tracker - Tool"
+		},
+		"global-crypto-map": {
+			"description": "Global Crypto Regulation Map - Tool"
+		},
+		"chainalysis-compliance": {
+			"description": "Chainalysis - Tool"
+		},
+		"elliptic-compliance": {
+			"description": "Elliptic - Tool"
+		},
+		"trm-labs": {
+			"description": "TRM Labs - Tool"
+		},
+		"merkle-science": {
+			"description": "Merkle Science - Tool"
+		},
+		"notabene-travel": {
+			"description": "Notabene - Tool"
+		},
+		"sumsub-kyc": {
+			"description": "Sumsub - Tool"
+		}
 	}
 }

@@ -117,6 +117,87 @@
 		},
 		"starkli": {
 			"description": "Starkli - Developer tool"
+		},
+		"biubiu-contract-deployer": {
+			"description": "Contract Deployer - Tool"
+		},
+		"biubiu-token-deployer": {
+			"description": "Token Deployer - Tool"
+		},
+		"biubiu-events-scanner": {
+			"description": "Events Scanner - Tool"
+		},
+		"biubiu-chainlist": {
+			"description": "Chainlist - Tool"
+		},
+		"abi-ninja": {
+			"description": "ABI Ninja - Tool"
+		},
+		"ethereum-signature-db": {
+			"description": "4byte.directory - Tool"
+		},
+		"ethers-js": {
+			"description": "Ethers.js - Tool"
+		},
+		"solidity-lang": {
+			"description": "Solidity Docs - Tool"
+		},
+		"evm-codes": {
+			"description": "EVM Codes - Tool"
+		},
+		"chainlink": {
+			"description": "Chainlink - Tool"
+		},
+		"the-graph": {
+			"description": "The Graph - Tool"
+		},
+		"scaffold-eth": {
+			"description": "Scaffold-ETH - Tool"
+		},
+		"create-eth-app": {
+			"description": "Create Eth App - Tool"
+		},
+		"cookbook-dev": {
+			"description": "Cookbook.dev - Tool"
+		},
+		"solidity-by-example": {
+			"description": "Solidity by Example - Tool"
+		},
+		"speedrun-ethereum": {
+			"description": "SpeedRunEthereum - Tool"
+		},
+		"eth-build": {
+			"description": "ETH.Build - Tool"
+		},
+		"crypto-zombies": {
+			"description": "CryptoZombies - Tool"
+		},
+		"atlas-ide": {
+			"description": "Atlas - Tool"
+		},
+		"paper-xyz": {
+			"description": "Paper - Tool"
+		},
+		"anchor-lang": {
+			"description": "Anchor - Tool"
+		},
+		"move-lang": {
+			"description": "Move Language - Tool"
+		},
+		"cairo-lang": {
+			"description": "Cairo - Tool"
+		},
+		"noir-lang": {
+			"description": "Noir - Tool"
+		},
+		"huff-lang": {
+			"description": "Huff - Tool"
+		},
+		"vyper-lang": {
+			"description": "Vyper - Tool"
+		},
+		"fe-lang": {
+			"description": "Fe - Tool"
 		}
 	}
 }

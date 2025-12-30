@@ -304,6 +304,72 @@
 		},
 		"marginfi": {
 			"description": "marginfi - DeFiプロトコル"
+		},
+		"eigenlayer": {
+			"description": "Ethereum restaking protocol for enhanced security"
+		},
+		"frax": {
+			"description": "Fractional-algorithmic stablecoin protocol"
+		},
+		"trader_joe": {
+			"description": "Avalanche native DEX with liquidity book"
+		},
+		"frax_ether": {
+			"description": "Liquid staking with frxETH and sfrxETH"
+		},
+		"mantle_lsp": {
+			"description": "Mantle liquid staking with mETH"
+		},
+		"etherfi": {
+			"description": "Non-custodial liquid staking with eETH"
+		},
+		"origin_dollar": {
+			"description": "Yield-bearing stablecoin with auto-rebasing"
+		},
+		"woofi_pro": {
+			"description": "Professional perpetual trading platform"
+		},
+		"goldfinch": {
+			"description": "Credit protocol for real-world lending"
+		},
+		"truefi": {
+			"description": "Uncollateralized lending for institutions"
+		},
+		"jones_dao": {
+			"description": "Options yield vaults on Arbitrum"
+		},
+		"rage_trade": {
+			"description": "Delta-neutral yield strategies"
+		},
+		"karak": {
+			"description": "Universal restaking layer for multichain security"
+		},
+		"kamino_finance": {
+			"description": "Automated liquidity and lending on Solana"
+		},
+		"drift_protocol": {
+			"description": "Perpetual DEX with orderbook on Solana"
+		},
+		"ondo_finance": {
+			"description": "Tokenized real-world assets platform"
+		},
+		"morpho_blue": {
+			"description": "Permissionless and modular lending protocol"
+		},
+		"gearbox_protocol": {
+			"description": "Composable leverage protocol for DeFi"
+		},
+		"extra_finance": {
+			"description": "Leveraged yield farming platform"
+		},
+		"fluid_protocol": {
+			"description": "Unified lending and DEX with smart collateral"
+		},
+		"reserve_protocol": {
+			"description": "Permissionless asset-backed stablecoin platform"
+		},
+		"term_finance": {
+			"description": "Fixed-rate lending with auction mechanism"
 		}
 	}
 }

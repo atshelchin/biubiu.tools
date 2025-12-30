@@ -37,6 +37,126 @@
 		},
 		"flexusd": {
 			"description": "flexUSD - Stablecoin"
+		},
+		"usdt-tether": {
+			"description": "Tether (USDT) - Tool"
+		},
+		"usdc-circle": {
+			"description": "USD Coin (USDC) - Tool"
+		},
+		"dai-makerdao": {
+			"description": "DAI (MakerDAO) - Tool"
+		},
+		"usde-ethena": {
+			"description": "USDe (Ethena) - Tool"
+		},
+		"usdd-tron": {
+			"description": "USDD (Tron) - Tool"
+		},
+		"busd-paxos": {
+			"description": "Binance USD (BUSD) - Tool"
+		},
+		"pyusd-paypal": {
+			"description": "PayPal USD (PYUSD) - Tool"
+		},
+		"gusd-gemini": {
+			"description": "Gemini Dollar (GUSD) - Tool"
+		},
+		"usdp-paxos": {
+			"description": "Pax Dollar (USDP) - Tool"
+		},
+		"sdai-spark": {
+			"description": "sDAI (Spark) - Tool"
+		},
+		"susde-ethena": {
+			"description": "sUSDe (Ethena) - Tool"
+		},
+		"eurs-stasis": {
+			"description": "STASIS EURO (EURS) - Tool"
+		},
+		"eurc-circle": {
+			"description": "Euro Coin (EURC) - Tool"
+		},
+		"eurt-tether": {
+			"description": "Tether EURt - Tool"
+		},
+		"xsgd-straitsx": {
+			"description": "XSGD (StraitsX) - Tool"
+		},
+		"lusd-liquity": {
+			"description": "LUSD (Liquity) - Tool"
+		},
+		"susd-synthetix": {
+			"description": "sUSD (Synthetix) - Tool"
+		},
+		"rai-reflexer": {
+			"description": "RAI (Reflexer) - Tool"
+		},
+		"mim-abracadabra": {
+			"description": "MIM (Abracadabra) - Tool"
+		},
+		"crvusd-curve": {
+			"description": "crvUSD (Curve) - Tool"
+		},
+		"gho-aave": {
+			"description": "GHO (Aave) - Tool"
+		},
+		"defillama-stablecoins": {
+			"description": "DeFiLlama Stablecoins - Tool"
+		},
+		"coingecko-stablecoins": {
+			"description": "CoinGecko Stablecoins - Tool"
+		},
+		"usual-usd0": {
+			"description": "USD0 (Usual) - Tool"
+		},
+		"mountain-usdm": {
+			"description": "USDM (Mountain) - Tool"
+		},
+		"ageur-angle": {
+			"description": "EURA (Angle) - Tool"
+		},
+		"mkusd-prisma": {
+			"description": "mkUSD (Prisma) - Tool"
+		},
+		"ultra-usd": {
+			"description": "Ultra USDu - Tool"
+		},
+		"dola-inverse": {
+			"description": "DOLA (Inverse) - Tool"
+		},
+		"hai-reflexer": {
+			"description": "HAI (Let - Tool"
+		},
+		"usdk-okx": {
+			"description": "USDK (OKX) - Tool"
+		},
+		"zusd-zeta": {
+			"description": "ZUSD (Zeta) - Tool"
+		},
+		"bob-stablecoin": {
+			"description": "BOB - Tool"
+		},
+		"usdx-kava": {
+			"description": "USDX (Kava) - Tool"
+		},
+		"isc-interest": {
+			"description": "ISC (Interest) - Tool"
+		},
+		"cusd-celo": {
+			"description": "cUSD (Celo) - Tool"
+		},
+		"ceur-celo": {
+			"description": "cEUR (Celo) - Tool"
+		},
+		"alusd-alchemix": {
+			"description": "alUSD (Alchemix) - Tool"
+		},
+		"usd-plus": {
+			"description": "USD+ (Overnight) - Tool"
+		},
+		"ust-wormhole": {
+			"description": "UST (Wormhole) - Tool"
 		}
 	}
 }

@@ -24,6 +24,60 @@
 		},
 		"api3": {
 			"description": "First-party oracle with Airnode for direct API data delivery"
+		},
+		"chainlink-data-feeds": {
+			"description": "Chainlink Data Feeds - Tool"
+		},
+		"pyth-network": {
+			"description": "Pyth Network - Tool"
+		},
+		"pyth-price-feeds": {
+			"description": "Pyth Price Feeds - Tool"
+		},
+		"band-protocol": {
+			"description": "Band Protocol - Tool"
+		},
+		"dia-data": {
+			"description": "DIA Data - Tool"
+		},
+		"tellor": {
+			"description": "Tellor - Tool"
+		},
+		"uma-protocol": {
+			"description": "UMA Protocol - Tool"
+		},
+		"redstone-oracles": {
+			"description": "RedStone Oracles - Tool"
+		},
+		"chronicle-labs": {
+			"description": "Chronicle Labs - Tool"
+		},
+		"umbrella-network": {
+			"description": "Umbrella Network - Tool"
+		},
+		"flux-protocol": {
+			"description": "Flux Protocol - Tool"
+		},
+		"supra-oracles": {
+			"description": "Supra Oracles - Tool"
+		},
+		"chainlink-vrf": {
+			"description": "Chainlink VRF - Tool"
+		},
+		"chainlink-automation": {
+			"description": "Chainlink Automation - Tool"
+		},
+		"chainlink-ccip": {
+			"description": "Chainlink CCIP - Tool"
+		},
+		"chainlink-functions": {
+			"description": "Chainlink Functions - Tool"
+		},
+		"defillama-oracles": {
+			"description": "DeFiLlama Oracles - Tool"
+		},
+		"oracle-dao": {
+			"description": "Oracle DAO - Tool"
 		}
 	}
 }

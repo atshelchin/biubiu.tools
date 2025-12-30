@@ -101,6 +101,27 @@
 		},
 		"suiscan": {
 			"description": "Trình khám phá Sui"
+		},
+		"optimistic-scan": {
+			"description": "Optimistic Etherscan - Tool"
+		},
+		"zksync-explorer": {
+			"description": "zkSync Explorer - Tool"
+		},
+		"solscan": {
+			"description": "Solscan - Tool"
+		},
+		"mintscan": {
+			"description": "Mintscan - Tool"
+		},
+		"tonscan": {
+			"description": "TONScan - Tool"
+		},
+		"evm-explorer": {
+			"description": "EVM Explorer - Tool"
+		},
+		"samczsun-explorer": {
+			"description": "sam.wtf - Tool"
 		}
 	}
 }

@@ -17,5 +17,706 @@
 				"answer": "Çok dikkatli olun. Birçok 'sinyal' ücretli tanıtım veya pump-and-dump'tır. Etkileyiciler genellikle çantalarını takipçilerine satarlar. İşlem çağrıları yerine eğitime odaklanın."
 			}
 		]
+	},
+	"tools": {
+		"kol-vitalik": {
+			"description": "Vitalik Buterin - Tool"
+		},
+		"kol-cz-binance": {
+			"description": "CZ (Changpeng Zhao) - Tool"
+		},
+		"kol-brian-armstrong": {
+			"description": "Brian Armstrong - Tool"
+		},
+		"kol-balaji": {
+			"description": "Balaji Srinivasan - Tool"
+		},
+		"kol-naval": {
+			"description": "Naval Ravikant - Tool"
+		},
+		"kol-cobie": {
+			"description": "Cobie - Tool"
+		},
+		"kol-hsaka": {
+			"description": "Hsaka - Tool"
+		},
+		"kol-tetranode": {
+			"description": "Tetranode - Tool"
+		},
+		"kol-lookonchain": {
+			"description": "Lookonchain - Tool"
+		},
+		"kol-defi-dad": {
+			"description": "DeFi Dad - Tool"
+		},
+		"kol-punk6529": {
+			"description": "punk6529 - Tool"
+		},
+		"kol-ansem": {
+			"description": "Ansem - Tool"
+		},
+		"kol-cryptohayes": {
+			"description": "Arthur Hayes - Tool"
+		},
+		"kol-raoul-pal": {
+			"description": "Raoul Pal - Tool"
+		},
+		"kol-dankrad": {
+			"description": "Dankrad Feist - Tool"
+		},
+		"kol-sassal": {
+			"description": "Sassal - Tool"
+		},
+		"kol-wublock": {
+			"description": "WuBlockchain - Tool"
+		},
+		"kol-tier10k": {
+			"description": "Tier10K - Tool"
+		},
+		"kol-bankless-yt": {
+			"description": "Bankless - Tool"
+		},
+		"kol-coinbureau": {
+			"description": "Coin Bureau - Tool"
+		},
+		"kol-unchained-yt": {
+			"description": "Unchained Podcast - Tool"
+		},
+		"kol-bell-curve": {
+			"description": "Bell Curve Podcast - Tool"
+		},
+		"kol-colin-wu": {
+			"description": "吴说区块链 (Colin Wu) - Tool"
+		},
+		"kol-mindao": {
+			"description": "杨民道 (Mindao) - Tool"
+		},
+		"kol-bitrun": {
+			"description": "比特币狂人 - Tool"
+		},
+		"kol-phyrex": {
+			"description": "Phyrex - Tool"
+		},
+		"kol-0xsun": {
+			"description": "0xSun - Tool"
+		},
+		"kol-maki": {
+			"description": "マキ (Maki) - Tool"
+		},
+		"kol-ikehaya": {
+			"description": "ikehaya (イケハヤ) - Tool"
+		},
+		"kol-cryptoquant-ki": {
+			"description": "Ki Young Ju - Tool"
+		},
+		"kol-jorge-crypto": {
+			"description": "Jorge Crypto - Tool"
+		},
+		"kol-bitboy-br": {
+			"description": "Gustavo Cerbasi Crypto - Tool"
+		},
+		"kol-hasheur": {
+			"description": "Hasheur (Owen Simonin) - Tool"
+		},
+		"kol-cryptoast": {
+			"description": "Cryptoast - Tool"
+		},
+		"kol-monsieur-tk": {
+			"description": "Monsieur TK - Tool"
+		},
+		"kol-blocktrainer": {
+			"description": "Blocktrainer - Tool"
+		},
+		"kol-julian-hosp": {
+			"description": "Julian Hosp - Tool"
+		},
+		"kol-incrypted": {
+			"description": "Incrypted - Tool"
+		},
+		"kol-cryptoins": {
+			"description": "Crypto Insider RU - Tool"
+		},
+		"kol-coin-otag": {
+			"description": "Coin Otag - Tool"
+		},
+		"kol-kripto-tv": {
+			"description": "Kripto TV - Tool"
+		},
+		"kol-coinvestasi": {
+			"description": "Coinvestasi - Tool"
+		},
+		"kol-indodax": {
+			"description": "Indodax Academy - Tool"
+		},
+		"kol-bitkub": {
+			"description": "Bitkub Academy - Tool"
+		},
+		"kol-siam-block": {
+			"description": "Siam Blockchain - Tool"
+		},
+		"kol-pushpendra": {
+			"description": "Pushpendra Singh - Tool"
+		},
+		"kol-crypto-gurukul": {
+			"description": "Crypto Gurukul - Tool"
+		},
+		"kol-bitvavo": {
+			"description": "Bitvavo Academy - Tool"
+		},
+		"kol-cryptonomist": {
+			"description": "The Cryptonomist IT - Tool"
+		},
+		"kol-zhusu": {
+			"description": "Zhu Su - Tool"
+		},
+		"kol-hasu": {
+			"description": "Hasu - Tool"
+		},
+		"kol-banteg": {
+			"description": "Banteg - Tool"
+		},
+		"kol-frankdegods": {
+			"description": "Frank DeGods - Tool"
+		},
+		"kol-zachxbt": {
+			"description": "ZachXBT - Tool"
+		},
+		"kol-bitcoinmagazine": {
+			"description": "Bitcoin Magazine - Tool"
+		},
+		"kol-saylor": {
+			"description": "Michael Saylor - Tool"
+		},
+		"kol-layah": {
+			"description": "Layah Heilpern - Tool"
+		},
+		"kol-pomp": {
+			"description": "Anthony Pompliano - Tool"
+		},
+		"kol-samczsun": {
+			"description": "samczsun - Tool"
+		},
+		"kol-iamDCinvestor": {
+			"description": "DCinvestor - Tool"
+		},
+		"kol-ledger": {
+			"description": "Ledger Status - Tool"
+		},
+		"kol-aave": {
+			"description": "Stani Kulechov - Tool"
+		},
+		"kol-haydenzadams": {
+			"description": "Hayden Adams - Tool"
+		},
+		"kol-defiance": {
+			"description": "DeFi Ignas - Tool"
+		},
+		"kol-inversebrah": {
+			"description": "InverseBrah - Tool"
+		},
+		"kol-cryptowizardd": {
+			"description": "Crypto Wizard - Tool"
+		},
+		"kol-gauntlet": {
+			"description": "Gauntlet - Tool"
+		},
+		"kol-defilama": {
+			"description": "DefiLlama - Tool"
+		},
+		"kol-sandymillin": {
+			"description": "Sandy Carter - Tool"
+		},
+		"kol-cryptokitty": {
+			"description": "Crypto Kitty - Tool"
+		},
+		"kol-cryptonews": {
+			"description": "Crypto News Alerts - Tool"
+		},
+		"kol-etherscan": {
+			"description": "Etherscan - Tool"
+		},
+		"kol-whiteboard": {
+			"description": "Whiteboard Crypto - Tool"
+		},
+		"kol-finematics": {
+			"description": "Finematics - Tool"
+		},
+		"kol-epicenter": {
+			"description": "Epicenter Podcast - Tool"
+		},
+		"kol-uponly": {
+			"description": "UpOnly - Tool"
+		},
+		"kol-cryptobanter": {
+			"description": "Crypto Banter - Tool"
+		},
+		"kol-realvision": {
+			"description": "Real Vision Crypto - Tool"
+		},
+		"kol-taiki": {
+			"description": "Taiki Maeda - Tool"
+		},
+		"kol-wuwei": {
+			"description": "吴说播客 - Tool"
+		},
+		"kol-ningning": {
+			"description": "NingNing - Tool"
+		},
+		"kol-jamestoken": {
+			"description": "James - Tool"
+		},
+		"kol-haotian": {
+			"description": "Haotian - Tool"
+		},
+		"kol-0xtodd": {
+			"description": "0xTodd - Tool"
+		},
+		"kol-maplenft": {
+			"description": "Maple - Tool"
+		},
+		"kol-yudan": {
+			"description": "Yudan - Tool"
+		},
+		"kol-0xmagicblue": {
+			"description": "0xMagicBlue - Tool"
+		},
+		"kol-ryoma": {
+			"description": "Ryoma - Tool"
+		},
+		"kol-tasuku": {
+			"description": "Tasuku - Tool"
+		},
+		"kol-coinnavi": {
+			"description": "Coin Navi Korea - Tool"
+		},
+		"kol-blockmedia": {
+			"description": "Block Media Korea - Tool"
+		},
+		"kol-criptonoticias": {
+			"description": "CriptoNoticias - Tool"
+		},
+		"kol-bitcobie": {
+			"description": "Bitcobie - Tool"
+		},
+		"kol-dalto": {
+			"description": "DaltoNic - Tool"
+		},
+		"yt-bitboy": {
+			"description": "BitBoy Crypto - Tool"
+		},
+		"yt-aantonop": {
+			"description": "aantonop (Andreas Antonopoulos) - Tool"
+		},
+		"yt-datadash": {
+			"description": "DataDash - Tool"
+		},
+		"yt-altcoin-daily": {
+			"description": "Altcoin Daily - Tool"
+		},
+		"yt-crypto-casey": {
+			"description": "Crypto Casey - Tool"
+		},
+		"yt-cryptorusb": {
+			"description": "CryptosRUs - Tool"
+		},
+		"yt-ivan-on-tech": {
+			"description": "Ivan on Tech - Tool"
+		},
+		"yt-the-moon": {
+			"description": "The Moon - Tool"
+		},
+		"yt-crypto-jebb": {
+			"description": "Crypto Jebb - Tool"
+		},
+		"yt-benjamin-cowen": {
+			"description": "Benjamin Cowen - Tool"
+		},
+		"yt-crypto-zombies": {
+			"description": "Crypto Zombies - Tool"
+		},
+		"yt-ellio-trades": {
+			"description": "Ellio Trades - Tool"
+		},
+		"yt-crypto-michael": {
+			"description": "Crypto Michael - Tool"
+		},
+		"yt-lark-davis": {
+			"description": "Lark Davis - Tool"
+		},
+		"yt-crypto-daily": {
+			"description": "Crypto Daily - Tool"
+		},
+		"yt-alex-becker": {
+			"description": "Alex Becker - Tool"
+		},
+		"yt-crypto-tips": {
+			"description": "Crypto Tips - Tool"
+		},
+		"yt-alessio-rastani": {
+			"description": "Alessio Rastani - Tool"
+		},
+		"yt-digital-asset": {
+			"description": "Digital Asset News - Tool"
+		},
+		"yt-coin-telegraph": {
+			"description": "Cointelegraph - Tool"
+		},
+		"yt-paul-barron": {
+			"description": "Paul Barron Network - Tool"
+		},
+		"yt-crypto-wendy": {
+			"description": "Crypto Wendy O - Tool"
+		},
+		"yt-boxmining": {
+			"description": "Boxmining - Tool"
+		},
+		"yt-crypto-love": {
+			"description": "Crypto Love - Tool"
+		},
+		"yt-sunny-decree": {
+			"description": "Sunny Decree - Tool"
+		},
+		"yt-crypto-kirby": {
+			"description": "Crypto Kirby - Tool"
+		},
+		"yt-chico-crypto": {
+			"description": "Chico Crypto - Tool"
+		},
+		"yt-invest-answers": {
+			"description": "InvestAnswers - Tool"
+		},
+		"yt-crypto-crew": {
+			"description": "Crypto Crew University - Tool"
+		},
+		"yt-jason-pizzino": {
+			"description": "Jason Pizzino - Tool"
+		},
+		"yt-dapp-university": {
+			"description": "Dapp University - Tool"
+		},
+		"yt-eat-the-blocks": {
+			"description": "Eat The Blocks - Tool"
+		},
+		"yt-smart-contract": {
+			"description": "Smart Contract Programmer - Tool"
+		},
+		"yt-patrick-collins": {
+			"description": "Patrick Collins - Tool"
+		},
+		"yt-moralis": {
+			"description": "Moralis Web3 - Tool"
+		},
+		"yt-nader-dabit": {
+			"description": "Nader Dabit - Tool"
+		},
+		"yt-alchemy": {
+			"description": "Alchemy - Tool"
+		},
+		"yt-chainlink": {
+			"description": "Chainlink - Tool"
+		},
+		"yt-lex-fridman": {
+			"description": "Lex Fridman (Crypto Episodes) - Tool"
+		},
+		"yt-what-bitcoin": {
+			"description": "What Bitcoin Did - Tool"
+		},
+		"yt-crypto-tips-matt": {
+			"description": "The Crypto Matt - Tool"
+		},
+		"yt-andrei-jikh": {
+			"description": "Andrei Jikh - Tool"
+		},
+		"yt-graham-stephan": {
+			"description": "Graham Stephan (Crypto) - Tool"
+		},
+		"yt-miles-deutscher": {
+			"description": "Miles Deutscher - Tool"
+		},
+		"yt-coinsider": {
+			"description": "Coinsider - Tool"
+		},
+		"yt-virtual-bacon": {
+			"description": "Virtual Bacon - Tool"
+		},
+		"yt-byte-megan": {
+			"description": "Byte Megan - Tool"
+		},
+		"yt-brian-jung": {
+			"description": "Brian Jung - Tool"
+		},
+		"yt-tech-lead": {
+			"description": "TechLead (Crypto) - Tool"
+		},
+		"yt-crypto-birb": {
+			"description": "Crypto Birb - Tool"
+		},
+		"yt-sheldon-evans": {
+			"description": "Sheldon Evans - Tool"
+		},
+		"yt-max-maher": {
+			"description": "Max Maher - Tool"
+		},
+		"yt-digital-perspectives": {
+			"description": "Digital Perspectives - Tool"
+		},
+		"yt-working-money": {
+			"description": "Working Money Channel - Tool"
+		},
+		"yt-moon-lambo": {
+			"description": "Moon Lambo - Tool"
+		},
+		"yt-crypto-banter-ran": {
+			"description": "Ran Neuner - Tool"
+		},
+		"yt-trader-mayne": {
+			"description": "Trader Mayne - Tool"
+		},
+		"yt-crypto-capital": {
+			"description": "Crypto Capital Venture - Tool"
+		},
+		"yt-the-birb-nest": {
+			"description": "The Birb Nest - Tool"
+		},
+		"yt-crypto-face": {
+			"description": "CryptoFace - Tool"
+		},
+		"yt-coin-stories": {
+			"description": "Coin Stories - Tool"
+		},
+		"yt-99bitcoins": {
+			"description": "99Bitcoins - Tool"
+		},
+		"yt-bitcoin-magazine": {
+			"description": "Bitcoin Magazine - Tool"
+		},
+		"yt-wolf-crypto": {
+			"description": "Wolf Of All Streets - Tool"
+		},
+		"yt-kitco-crypto": {
+			"description": "Kitco NEWS (Crypto) - Tool"
+		},
+		"yt-the-defiant": {
+			"description": "The Defiant - Tool"
+		},
+		"yt-coindesk": {
+			"description": "CoinDesk - Tool"
+		},
+		"yt-decrypt": {
+			"description": "Decrypt - Tool"
+		},
+		"yt-thinking-crypto": {
+			"description": "Thinking Crypto - Tool"
+		},
+		"yt-crypto-bobby": {
+			"description": "Crypto Bobby - Tool"
+		},
+		"yt-coin-code": {
+			"description": "Coin Code - Tool"
+		},
+		"yt-crypto-rover": {
+			"description": "Crypto Rover - Tool"
+		},
+		"yt-tyler-hill": {
+			"description": "Tyler Hill Investing - Tool"
+		},
+		"yt-crypto-gains": {
+			"description": "Crypto Gains - Tool"
+		},
+		"yt-coin-push-crypto": {
+			"description": "Coin Push Crypto - Tool"
+		},
+		"yt-crypto-rand": {
+			"description": "Crypto Rand - Tool"
+		},
+		"yt-crypto-world": {
+			"description": "Crypto World - Tool"
+		},
+		"yt-pompliano": {
+			"description": "Anthony Pompliano - Tool"
+		},
+		"yt-preston-pysh": {
+			"description": "Preston Pysh (We Study Billionaires) - Tool"
+		},
+		"yt-crypto-jargon": {
+			"description": "Crypto Jargon - Tool"
+		},
+		"yt-cryptobus": {
+			"description": "CryptoBus - Tool"
+		},
+		"yt-bitcoin-university": {
+			"description": "Bitcoin University - Tool"
+		},
+		"yt-altcoin-buzz": {
+			"description": "Altcoin Buzz - Tool"
+		},
+		"yt-coinmarketcap": {
+			"description": "CoinMarketCap - Tool"
+		},
+		"yt-coingecko": {
+			"description": "CoinGecko - Tool"
+		},
+		"yt-binance-academy": {
+			"description": "Binance Academy - Tool"
+		},
+		"yt-a16z-crypto": {
+			"description": "a16z crypto - Tool"
+		},
+		"yt-pantera-capital": {
+			"description": "Pantera Capital - Tool"
+		},
+		"pod-unchained": {
+			"description": "Unchained (Laura Shin) - Tool"
+		},
+		"pod-bankless-pod": {
+			"description": "Bankless Podcast - Tool"
+		},
+		"pod-up-only": {
+			"description": "Up Only - Tool"
+		},
+		"pod-uncommon-core": {
+			"description": "Uncommon Core - Tool"
+		},
+		"pod-on-the-brink": {
+			"description": "On The Brink - Tool"
+		},
+		"pod-what-bitcoin-did": {
+			"description": "What Bitcoin Did - Tool"
+		},
+		"pod-stephan-livera": {
+			"description": "Stephan Livera Podcast - Tool"
+		},
+		"pod-tales-crypt": {
+			"description": "Tales from the Crypt - Tool"
+		},
+		"pod-bitcoin-audible": {
+			"description": "Bitcoin Audible - Tool"
+		},
+		"pod-defiant-pod": {
+			"description": "The Defiant Podcast - Tool"
+		},
+		"pod-crypto-101": {
+			"description": "Crypto 101 - Tool"
+		},
+		"pod-pomp-pod": {
+			"description": "The Pomp Podcast - Tool"
+		},
+		"pod-zero-knowledge": {
+			"description": "Zero Knowledge - Tool"
+		},
+		"pod-epicenter-pod": {
+			"description": "Epicenter - Tool"
+		},
+		"pod-real-vision-crypto": {
+			"description": "Real Vision Crypto - Tool"
+		},
+		"pod-bell-curve-pod": {
+			"description": "Bell Curve - Tool"
+		},
+		"pod-empire": {
+			"description": "Empire (Blockworks) - Tool"
+		},
+		"pod-lightspeed": {
+			"description": "Lightspeed - Tool"
+		},
+		"pod-flipping-tables": {
+			"description": "Flipping Tables - Tool"
+		},
+		"pod-into-the-ether": {
+			"description": "Into the Ether - Tool"
+		},
+		"pod-the-daily-gwei": {
+			"description": "The Daily Gwei - Tool"
+		},
+		"pod-web3-galaxy-brain": {
+			"description": "Web3 Galaxy Brain - Tool"
+		},
+		"pod-a16z-web3": {
+			"description": "a16z Web3 Podcast - Tool"
+		},
+		"pod-breakdown": {
+			"description": "The Breakdown (NLW) - Tool"
+		},
+		"pod-crypto-native": {
+			"description": "Crypto Native - Tool"
+		},
+		"pod-where-it-happens": {
+			"description": "Where It Happens - Tool"
+		},
+		"pod-paradigm-shift": {
+			"description": "Paradigm Shift (Paradigm) - Tool"
+		},
+		"pod-crypto-fundamental": {
+			"description": "Crypto Fundamental - Tool"
+		},
+		"pod-solana-decoded": {
+			"description": "Validated (Solana) - Tool"
+		},
+		"pod-cosmos-pods": {
+			"description": "Interchain FM - Tool"
+		},
+		"pod-green-pill": {
+			"description": "Green Pill - Tool"
+		},
+		"pod-bankless-nation": {
+			"description": "Bankless Nation - Tool"
+		},
+		"pod-let-me-speak": {
+			"description": "Let Me Speak (Kyle Samani) - Tool"
+		},
+		"pod-crypto-tonight": {
+			"description": "Crypto Tonight - Tool"
+		},
+		"pod-bitcoin-brainstorm": {
+			"description": "Bitcoin Brainstorm - Tool"
+		},
+		"pod-rug-radio": {
+			"description": "Rug Radio - Tool"
+		},
+		"pod-gm-web3": {
+			"description": "GM Web3 - Tool"
+		},
+		"pod-frax-radio": {
+			"description": "Frax Radio - Tool"
+		},
+		"pod-defiant-defi": {
+			"description": "Defiant DeFi Decoded - Tool"
+		},
+		"pod-moon-or-bust": {
+			"description": "Moon or Bust - Tool"
+		},
+		"pod-token-talks": {
+			"description": "Token Talks - Tool"
+		},
+		"pod-nft-now": {
+			"description": "NFT Now - Tool"
+		},
+		"pod-proof-of-work": {
+			"description": "Proof of Work - Tool"
+		},
+		"pod-crypto-skeptics": {
+			"description": "Crypto Skeptics - Tool"
+		},
+		"pod-eth-daily": {
+			"description": "ETH Daily - Tool"
+		},
+		"tw-milesdeutscher": {
+			"description": "Miles Deutscher - Tool"
+		},
+		"tw-whale_alert": {
+			"description": "Whale Alert - Tool"
+		},
+		"tw-ledger-status": {
+			"description": "Ledger - Tool"
+		},
+		"tw-trezor": {
+			"description": "Trezor - Tool"
+		},
+		"tw-ethereumfdn": {
+			"description": "Ethereum Foundation - Tool"
+		},
+		"tw-solana-status": {
+			"description": "Solana - Tool"
+		}
 	}
 }

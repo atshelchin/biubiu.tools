@@ -21,6 +21,129 @@
 	"tools": {
 		"ccdata": {
 			"description": "Рыночные индексы и данные для институций"
+		},
+		"binance-cex": {
+			"description": "Binance - Tool"
+		},
+		"coinbase-cex": {
+			"description": "Coinbase - Tool"
+		},
+		"okx-cex": {
+			"description": "OKX - Tool"
+		},
+		"bybit-cex": {
+			"description": "Bybit - Tool"
+		},
+		"kraken-cex": {
+			"description": "Kraken - Tool"
+		},
+		"bitget-cex": {
+			"description": "Bitget - Tool"
+		},
+		"kucoin-cex": {
+			"description": "KuCoin - Tool"
+		},
+		"gateio-cex": {
+			"description": "Gate.io - Tool"
+		},
+		"htx-cex": {
+			"description": "HTX (Huobi) - Tool"
+		},
+		"mexc-cex": {
+			"description": "MEXC - Tool"
+		},
+		"deribit-cex": {
+			"description": "Deribit - Tool"
+		},
+		"bitfinex-cex": {
+			"description": "Bitfinex - Tool"
+		},
+		"bitmex-cex": {
+			"description": "BitMEX - Tool"
+		},
+		"upbit-cex": {
+			"description": "Upbit - Tool"
+		},
+		"bithumb-cex": {
+			"description": "Bithumb - Tool"
+		},
+		"bitflyer-cex": {
+			"description": "bitFlyer - Tool"
+		},
+		"coincheck-cex": {
+			"description": "Coincheck - Tool"
+		},
+		"wazirx-cex": {
+			"description": "WazirX - Tool"
+		},
+		"bitstamp-cex": {
+			"description": "Bitstamp - Tool"
+		},
+		"lbank-cex": {
+			"description": "LBank - Tool"
+		},
+		"backpack-cex": {
+			"description": "Backpack Exchange - Tool"
+		},
+		"hyperliquid-cex": {
+			"description": "Hyperliquid - Tool"
+		},
+		"cube-cex": {
+			"description": "Cube Exchange - Tool"
+		},
+		"bullish-cex": {
+			"description": "Bullish - Tool"
+		},
+		"hashkey-cex": {
+			"description": "HashKey Exchange - Tool"
+		},
+		"osl-cex": {
+			"description": "OSL - Tool"
+		},
+		"coingecko-exchanges": {
+			"description": "CoinGecko Exchanges - Tool"
+		},
+		"cmc-exchanges": {
+			"description": "CMC Exchange Ranking - Tool"
+		},
+		"cryptorank-exchanges": {
+			"description": "CryptoRank Exchanges - Tool"
+		},
+		"kaiko-data": {
+			"description": "Kaiko - Tool"
+		},
+		"coinbase-prime": {
+			"description": "Coinbase Prime - Tool"
+		},
+		"binance-institutional": {
+			"description": "Binance Institutional - Tool"
+		},
+		"galaxy-trading": {
+			"description": "Galaxy Trading - Tool"
+		},
+		"cumberland-trading": {
+			"description": "Cumberland - Tool"
+		},
+		"moonpay-ramp": {
+			"description": "MoonPay - Tool"
+		},
+		"transak-ramp": {
+			"description": "Transak - Tool"
+		},
+		"ramp-network": {
+			"description": "Ramp Network - Tool"
+		},
+		"banxa-ramp": {
+			"description": "Banxa - Tool"
+		},
+		"paxful-p2p": {
+			"description": "Paxful - Tool"
+		},
+		"localbitcoins-p2p": {
+			"description": "LocalBitcoins - Tool"
+		},
+		"noones-p2p": {
+			"description": "Noones - Tool"
 		}
 	}
 }

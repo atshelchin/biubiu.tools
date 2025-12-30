@@ -21,6 +21,135 @@
 	"tools": {
 		"boardroom": {
 			"description": "Agregador de gobernanza para rastrear propuestas DAO y votaciones"
+		},
+		"uni-token": {
+			"description": "UNI (Uniswap) - Tool"
+		},
+		"aave-token": {
+			"description": "AAVE (Aave) - Tool"
+		},
+		"mkr-token": {
+			"description": "MKR (MakerDAO) - Tool"
+		},
+		"crv-token": {
+			"description": "CRV (Curve) - Tool"
+		},
+		"comp-token": {
+			"description": "COMP (Compound) - Tool"
+		},
+		"snx-token": {
+			"description": "SNX (Synthetix) - Tool"
+		},
+		"ldo-token": {
+			"description": "LDO (Lido) - Tool"
+		},
+		"gmx-token": {
+			"description": "GMX (GMX) - Tool"
+		},
+		"bal-token": {
+			"description": "BAL (Balancer) - Tool"
+		},
+		"sushi-token": {
+			"description": "SUSHI (SushiSwap) - Tool"
+		},
+		"yfi-token": {
+			"description": "YFI (Yearn) - Tool"
+		},
+		"inch-token": {
+			"description": "1INCH (1inch) - Tool"
+		},
+		"pendle-token": {
+			"description": "PENDLE (Pendle) - Tool"
+		},
+		"ena-token": {
+			"description": "ENA (Ethena) - Tool"
+		},
+		"dydx-token": {
+			"description": "DYDX (dYdX) - Tool"
+		},
+		"cvx-token": {
+			"description": "CVX (Convex) - Tool"
+		},
+		"fxs-token": {
+			"description": "FXS (Frax) - Tool"
+		},
+		"blur-token": {
+			"description": "BLUR (Blur) - Tool"
+		},
+		"ape-token": {
+			"description": "APE (ApeCoin) - Tool"
+		},
+		"rpl-token": {
+			"description": "RPL (Rocket Pool) - Tool"
+		},
+		"morpho-token": {
+			"description": "MORPHO (Morpho) - Tool"
+		},
+		"rdnt-token": {
+			"description": "RDNT (Radiant) - Tool"
+		},
+		"osmo-token": {
+			"description": "OSMO (Osmosis) - Tool"
+		},
+		"jup-token": {
+			"description": "JUP (Jupiter) - Tool"
+		},
+		"ray-token": {
+			"description": "RAY (Raydium) - Tool"
+		},
+		"jto-token": {
+			"description": "JTO (Jito) - Tool"
+		},
+		"orca-token": {
+			"description": "ORCA (Orca) - Tool"
+		},
+		"arb-token": {
+			"description": "ARB (Arbitrum) - Tool"
+		},
+		"op-token": {
+			"description": "OP (Optimism) - Tool"
+		},
+		"strk-token": {
+			"description": "STRK (StarkNet) - Tool"
+		},
+		"zk-token": {
+			"description": "ZK (zkSync) - Tool"
+		},
+		"matic-token": {
+			"description": "MATIC/POL (Polygon) - Tool"
+		},
+		"mnt-token": {
+			"description": "MNT (Mantle) - Tool"
+		},
+		"metis-token": {
+			"description": "METIS (Metis) - Tool"
+		},
+		"ens-token": {
+			"description": "ENS (Ethereum Name Service) - Tool"
+		},
+		"gtc-token": {
+			"description": "GTC (Gitcoin) - Tool"
+		},
+		"safe-token": {
+			"description": "SAFE (Safe) - Tool"
+		},
+		"cow-token": {
+			"description": "COW (CoW Protocol) - Tool"
+		},
+		"gno-token": {
+			"description": "GNO (Gnosis) - Tool"
+		},
+		"tally-governance": {
+			"description": "Tally - Tool"
+		},
+		"snapshot-governance": {
+			"description": "Snapshot - Tool"
+		},
+		"karma-dao": {
+			"description": "Karma - Tool"
+		},
+		"messari-governance": {
+			"description": "Messari Governor - Tool"
 		}
 	}
 }

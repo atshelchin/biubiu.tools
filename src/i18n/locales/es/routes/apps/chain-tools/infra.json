@@ -72,6 +72,51 @@
 		},
 		"nodereal": {
 			"description": "Infraestructura blockchain y APIs de datos"
+		},
+		"blast-api": {
+			"description": "Blast API - Tool"
+		},
+		"tenderly-node": {
+			"description": "Tenderly Node - Tool"
+		},
+		"public-node": {
+			"description": "PublicNode - Tool"
+		},
+		"helius-rpc": {
+			"description": "Helius - Tool"
+		},
+		"triton-rpc": {
+			"description": "Triton - Tool"
+		},
+		"syndica-rpc": {
+			"description": "Syndica - Tool"
+		},
+		"lava-network": {
+			"description": "Lava Network - Tool"
+		},
+		"erpc-network": {
+			"description": "eRPC - Tool"
+		},
+		"thirdweb-rpc": {
+			"description": "thirdweb RPC - Tool"
+		},
+		"tatum-rpc": {
+			"description": "Tatum - Tool"
+		},
+		"chainstack-rpc": {
+			"description": "Chainstack - Tool"
+		},
+		"push-protocol": {
+			"description": "Push Protocol - Tool"
+		},
+		"xmtp": {
+			"description": "XMTP - Tool"
+		},
+		"flashbots-protect": {
+			"description": "Flashbots Protect - Tool"
+		},
+		"mev-blocker": {
+			"description": "MEV Blocker - Tool"
 		}
 	}
 }

@@ -29,6 +29,78 @@
 		},
 		"txstreet": {
 			"description": "Visualizzazione blockchain live"
+		},
+		"ultrasound-money": {
+			"description": "ultrasound.money - Tool"
+		},
+		"etherscan-gastracker": {
+			"description": "Etherscan Gas Tracker - Tool"
+		},
+		"blocknative-gas": {
+			"description": "Blocknative Gas Estimator - Tool"
+		},
+		"ethgas-watch": {
+			"description": "ETH Gas.watch - Tool"
+		},
+		"uniswap-gas": {
+			"description": "Uniswap (Top Gas Burner) - Tool"
+		},
+		"opensea-gas": {
+			"description": "OpenSea (NFT Gas Leader) - Tool"
+		},
+		"blur-gas": {
+			"description": "Blur (NFT Trading Gas) - Tool"
+		},
+		"tether-gas": {
+			"description": "Tether (USDT Transfers) - Tool"
+		},
+		"1inch-gas": {
+			"description": "1inch (Aggregator Gas) - Tool"
+		},
+		"metamask-swap-gas": {
+			"description": "MetaMask Swaps - Tool"
+		},
+		"flashbots-gas": {
+			"description": "Flashbots (MEV Gas) - Tool"
+		},
+		"banana-gun-gas": {
+			"description": "Banana Gun - Tool"
+		},
+		"maestro-gas": {
+			"description": "Maestro Bot - Tool"
+		},
+		"unibot-gas": {
+			"description": "Unibot - Tool"
+		},
+		"across-gas": {
+			"description": "Across Protocol - Tool"
+		},
+		"stargate-gas": {
+			"description": "Stargate Finance - Tool"
+		},
+		"l2beat-gas": {
+			"description": "L2BEAT Activity - Tool"
+		},
+		"rollup-codes": {
+			"description": "Rollup.codes - Tool"
+		},
+		"flashbots-protect": {
+			"description": "Flashbots Protect - Tool"
+		},
+		"evm-gas-profiler": {
+			"description": "Tenderly Gas Profiler - Tool"
+		},
+		"etherscan-charts": {
+			"description": "Etherscan Gas Charts - Tool"
+		},
+		"dune-gas": {
+			"description": "Dune Gas Dashboards - Tool"
+		},
+		"parsec-gas": {
+			"description": "Parsec Finance - Tool"
+		},
+		"rated-network": {
+			"description": "Rated Network - Tool"
 		}
 	}
 }

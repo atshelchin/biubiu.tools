@@ -45,12 +45,6 @@ import type { Category, CategoryId } from '../types';
 
 export const categories: Category[] = [
 	{
-		id: 'featured',
-		labelKey: 'routes/apps/chain-tools.categories.featured',
-		color: '#F59E0B',
-		icon: Award
-	},
-	{
 		id: 'defi',
 		labelKey: 'routes/apps/chain-tools.categories.defi',
 		color: '#10B981',

@@ -89,6 +89,39 @@
 		},
 		"layerswap": {
 			"description": "Cầu nối từ CEX sang L2"
+		},
+		"li-fi": {
+			"description": "LI.FI - Tool"
+		},
+		"circle-cctp": {
+			"description": "Circle CCTP - Tool"
+		},
+		"debridge-dln": {
+			"description": "deBridge DLN - Tool"
+		},
+		"meson-finance": {
+			"description": "Meson - Tool"
+		},
+		"router-protocol": {
+			"description": "Router Protocol - Tool"
+		},
+		"nitro-bridge": {
+			"description": "Nitro Bridge - Tool"
+		},
+		"portal-bridge-wormhole": {
+			"description": "Portal Bridge - Tool"
+		},
+		"celer-im": {
+			"description": "Celer IM - Tool"
+		},
+		"multichain-anycall": {
+			"description": "Multichain AnyCall - Tool"
+		},
+		"hyperlane-bridge": {
+			"description": "Hyperlane - Tool"
+		},
+		"connext-amarok": {
+			"description": "Connext Amarok - Tool"
 		}
 	}
 }
