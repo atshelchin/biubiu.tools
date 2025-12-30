@@ -1,0 +1,50 @@
+{
+	"category_seo": {
+		"title": "Layer 2 Çözümleri - Ethereum Ölçekleme Ağları | BiuBiu Tools",
+		"description": "Ethereum için Layer 2 ölçekleme çözümlerini keşfedin. Arbitrum, Optimism, Base, zkSync ve düşük ücretler ve hızlı işlemlerle diğer rollup'lar.",
+		"keywords": "layer 2, l2, ethereum ölçekleme, arbitrum, optimism, zksync, rollup'lar",
+		"faqs": [
+			{
+				"question": "Layer 2 nedir?",
+				"answer": "Layer 2'ler, ana Ethereum zincirinin (L1) dışında işlemleri işleyen ancak güvenliğini miras alan ölçekleme çözümleridir. Daha düşük ücretler ve daha hızlı işlemler sunarlar. Türler arasında Optimistic Rollup'lar ve ZK Rollup'lar bulunur."
+			},
+			{
+				"question": "Optimistic ve ZK Rollup'lar arasındaki fark nedir?",
+				"answer": "Optimistic Rollup'lar (Arbitrum, Optimism) işlemlerin geçerli olduğunu varsayar ve sahtekarlık kanıtlarını kullanır. ZK Rollup'lar (zkSync, Starknet) anında kesinlik için kriptografik kanıtlar kullanır ancak inşa etmesi daha karmaşıktır."
+			},
+			{
+				"question": "Hangi L2'yi kullanmalıyım?",
+				"answer": "Arbitrum ve Optimism en fazla DeFi aktivitesine sahiptir. Base (Coinbase) hızla büyüyor. zkSync ve Starknet ZK teknolojisi sunar. Kullanmak istediğiniz dApp'lere ve ücret düşüncelerine göre seçin."
+			}
+		]
+	},
+	"tools": {
+		"base": {
+			"description": "Coinbase's L2 built üzerinde OP Stack"
+		},
+		"l2beat": {
+			"description": "Layer 2 risk ve TVL analysis"
+		},
+		"linea": {
+			"description": "CüzerindesenSys zkEVM L2 solutiüzerinde"
+		},
+		"mantle": {
+			"description": "Modular L2 ile data availability layer"
+		},
+		"mode": {
+			"description": "OP Stack L2 ile DeFi focus"
+		},
+		"optimism": {
+			"description": "OP Stack powered Ethereum L2 ile Superzincir visiüzerinde"
+		},
+		"scroll": {
+			"description": "EVM-equivalent zkEVM rollup"
+		},
+		"starknet": {
+			"description": "ZK rollup using Cairo için validity proofs"
+		},
+		"superchain": {
+			"description": "Superzincir - Layer 2 scaling solutiüzerinde"
+		}
+	}
+}

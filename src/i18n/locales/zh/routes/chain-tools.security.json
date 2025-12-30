@@ -1,0 +1,145 @@
+{
+	"category_seo": {
+		"title": "安全工具 - 智能合约审计与 Web3 安全 | BiuBiu Tools",
+		"description": "使用安全工具保护你的加密资产。查找智能合约审计公司、钱包安全检查器、授权撤销工具和诈骗检测服务。",
+		"faqs": [
+			{
+				"question": "为什么智能合约审计很重要？",
+				"answer": "审计有助于在恶意行为者利用漏洞之前识别智能合约中的漏洞。审计过的协议通常更安全，但审计不能保证绝对安全——它们只是风险管理的一部分。"
+			},
+			{
+				"question": "如何检查代币或合约是否安全？",
+				"answer": "使用 Token Sniffer 或 De.Fi 等工具分析代币合约，查看是否有审计报告，验证社交媒体上的官方链接，检查流动性锁定状态，对看起来好得不像真的项目保持谨慎。"
+			},
+			{
+				"question": "如果我的钱包被盗怎么办？",
+				"answer": "立即将剩余资产转移到新的安全钱包，撤销所有代币授权，检查哪些交易耗尽了你的资金，向相关平台报告事件，并将被盗地址标记在 Etherscan 等区块浏览器上。"
+			}
+		]
+	},
+	"tools": {
+		"revoke": {
+			"description": "管理和撤销代币授权"
+		},
+		"slither": {
+			"description": "Solidity 静态分析工具"
+		},
+		"mythx": {
+			"description": "智能合约安全分析平台"
+		},
+		"certik": {
+			"description": "安全审计和 Skynet"
+		},
+		"hacken": {
+			"description": "区块链安全审计"
+		},
+		"immunefi": {
+			"description": "Web3 漏洞赏金平台"
+		},
+		"openzeppelin": {
+			"description": "智能合约安全库"
+		},
+		"dedaub": {
+			"description": "智能合约反编译器"
+		},
+		"honeypot": {
+			"description": "代币蜜罐检测"
+		},
+		"phalcon": {
+			"description": "交易分析浏览器"
+		},
+		"chainalysis": {
+			"description": "区块链合规平台"
+		},
+		"hexagate": {
+			"description": "智能合约实时威胁检测"
+		},
+		"hypernative": {
+			"description": "链上风险监控与预警"
+		},
+		"chainalert": {
+			"description": "自定义区块链事件监控"
+		},
+		"webacy": {
+			"description": "钱包安全评分与风险评估"
+		},
+		"harpie": {
+			"description": "链上防火墙与盗窃防护"
+		},
+		"blowfish": {
+			"description": "交易模拟安全预览"
+		},
+		"stelo": {
+			"description": "人性化交易安全预览"
+		},
+		"fire": {
+			"description": "交易安全浏览器扩展"
+		},
+		"scamsniffer": {
+			"description": "实时反诈骗与恶意检测"
+		},
+		"peckshield": {
+			"description": "区块链安全审计领导者"
+		},
+		"slowmist": {
+			"description": "区块链生态安全服务"
+		},
+		"quantstamp": {
+			"description": "自动化智能合约审计"
+		},
+		"spearbit": {
+			"description": "精英安全审计研究员网络"
+		},
+		"railgun": {
+			"description": "EVM链zk-SNARKs隐私DeFi"
+		},
+		"aztec": {
+			"description": "zk-rollup可编程隐私"
+		},
+		"nocturne": {
+			"description": "以太坊隐私账户层"
+		},
+		"umbra": {
+			"description": "EVM链隐身地址支付"
+		},
+		"labyrinth": {
+			"description": "机构合规隐私方案"
+		},
+		"elusiv": {
+			"description": "Solana合规隐私支付"
+		},
+		"zcash": {
+			"description": "原生隐私区块链屏蔽交易"
+		},
+		"code4rena": {
+			"description": "社区驱动审计竞赛"
+		},
+		"sherlock": {
+			"description": "带漏洞保障的审计竞赛"
+		},
+		"chainsecurity": {
+			"description": "ChainSecurity - Security tool"
+		},
+		"halborn": {
+			"description": "Halborn - Security tool"
+		},
+		"zellic": {
+			"description": "Zellic - Security tool"
+		},
+		"veridise": {
+			"description": "Veridise - Security tool"
+		},
+		"pessimistic": {
+			"description": "Pessimistic - Security tool"
+		},
+		"cyfrin": {
+			"description": "Cyfrin - Security tool"
+		},
+		"yaudit": {
+			"description": "yAudit - Security tool"
+		},
+		"forta": {
+			"description": "实时威胁检测网络"
+		}
+	}
+}

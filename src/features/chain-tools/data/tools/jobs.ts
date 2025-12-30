@@ -9,7 +9,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-cryptocurrencyjobs',
 		name: 'Cryptocurrency Jobs',
-		descriptionKey: 'chain-tools.tools.jobs_cryptocurrencyjobs.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_cryptocurrencyjobs.description',
 		url: 'https://cryptocurrencyjobs.co',
 		icon: Briefcase,
 		category: 'jobs',
@@ -19,7 +19,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-web3career',
 		name: 'Web3.career',
-		descriptionKey: 'chain-tools.tools.jobs_web3career.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_web3career.description',
 		url: 'https://web3.career',
 		icon: Briefcase,
 		category: 'jobs',
@@ -29,7 +29,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-cryptojobslist',
 		name: 'Crypto Jobs List',
-		descriptionKey: 'chain-tools.tools.jobs_cryptojobslist.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_cryptojobslist.description',
 		url: 'https://cryptojobslist.com',
 		icon: Briefcase,
 		category: 'jobs',
@@ -39,7 +39,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-pompcryptojobs',
 		name: 'Pomp Crypto Jobs',
-		descriptionKey: 'chain-tools.tools.jobs_pompcryptojobs.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_pompcryptojobs.description',
 		url: 'https://pompcryptojobs.com',
 		icon: Briefcase,
 		category: 'jobs',
@@ -49,7 +49,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-useweb3',
 		name: 'useWeb3',
-		descriptionKey: 'chain-tools.tools.jobs_useweb3.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_useweb3.description',
 		url: 'https://useweb3.xyz/jobs',
 		icon: Briefcase,
 		category: 'jobs',
@@ -59,7 +59,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-remoteok-crypto',
 		name: 'Remote OK Crypto',
-		descriptionKey: 'chain-tools.tools.jobs_remoteok_crypto.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_remoteok_crypto.description',
 		url: 'https://remoteok.com/remote-crypto-jobs',
 		icon: Briefcase,
 		category: 'jobs',
@@ -69,7 +69,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-blockchaindevjobs',
 		name: 'Blockchain Dev Jobs',
-		descriptionKey: 'chain-tools.tools.jobs_blockchaindevjobs.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_blockchaindevjobs.description',
 		url: 'https://blockchaindevjobs.com',
 		icon: Code,
 		category: 'jobs',
@@ -79,7 +79,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-defi-jobs',
 		name: 'DeFi Jobs',
-		descriptionKey: 'chain-tools.tools.jobs_defi_jobs.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_defi_jobs.description',
 		url: 'https://defi.jobs',
 		icon: Briefcase,
 		category: 'jobs',
@@ -89,7 +89,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-builtin-blockchain',
 		name: 'Built In Blockchain',
-		descriptionKey: 'chain-tools.tools.jobs_builtin_blockchain.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_builtin_blockchain.description',
 		url: 'https://builtin.com/jobs/blockchain',
 		icon: Briefcase,
 		category: 'jobs',
@@ -101,7 +101,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-dework',
 		name: 'Dework',
-		descriptionKey: 'chain-tools.tools.jobs_dework.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_dework.description',
 		url: 'https://dework.xyz',
 		icon: Users,
 		category: 'jobs',
@@ -111,7 +111,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-layer3',
 		name: 'Layer3',
-		descriptionKey: 'chain-tools.tools.jobs_layer3.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_layer3.description',
 		url: 'https://layer3.xyz',
 		icon: Award,
 		category: 'jobs',
@@ -121,7 +121,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-gitcoin',
 		name: 'Gitcoin',
-		descriptionKey: 'chain-tools.tools.jobs_gitcoin.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_gitcoin.description',
 		url: 'https://gitcoin.co',
 		icon: Users,
 		category: 'jobs',
@@ -131,7 +131,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-coordinape',
 		name: 'Coordinape',
-		descriptionKey: 'chain-tools.tools.jobs_coordinape.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_coordinape.description',
 		url: 'https://coordinape.com',
 		icon: Users,
 		category: 'jobs',
@@ -141,7 +141,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-wonderverse',
 		name: 'Wonderverse',
-		descriptionKey: 'chain-tools.tools.jobs_wonderverse.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_wonderverse.description',
 		url: 'https://www.wonderverse.xyz',
 		icon: Users,
 		category: 'jobs',
@@ -151,7 +151,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-charmverse',
 		name: 'CharmVerse',
-		descriptionKey: 'chain-tools.tools.jobs_charmverse.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_charmverse.description',
 		url: 'https://www.charmverse.io',
 		icon: Users,
 		category: 'jobs',
@@ -161,7 +161,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-daolens',
 		name: 'DAOLens',
-		descriptionKey: 'chain-tools.tools.jobs_daolens.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_daolens.description',
 		url: 'https://daolens.com',
 		icon: Users,
 		category: 'jobs',
@@ -173,7 +173,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-immunefi',
 		name: 'Immunefi',
-		descriptionKey: 'chain-tools.tools.jobs_immunefi.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_immunefi.description',
 		url: 'https://immunefi.com',
 		icon: Award,
 		category: 'jobs',
@@ -183,7 +183,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-code4rena',
 		name: 'Code4rena',
-		descriptionKey: 'chain-tools.tools.jobs_code4rena.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_code4rena.description',
 		url: 'https://code4rena.com',
 		icon: Award,
 		category: 'jobs',
@@ -193,7 +193,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-sherlock',
 		name: 'Sherlock',
-		descriptionKey: 'chain-tools.tools.jobs_sherlock.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_sherlock.description',
 		url: 'https://www.sherlock.xyz',
 		icon: Award,
 		category: 'jobs',
@@ -203,7 +203,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-hackenproof',
 		name: 'HackenProof',
-		descriptionKey: 'chain-tools.tools.jobs_hackenproof.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_hackenproof.description',
 		url: 'https://hackenproof.com',
 		icon: Award,
 		category: 'jobs',
@@ -213,7 +213,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-hats-finance',
 		name: 'Hats Finance',
-		descriptionKey: 'chain-tools.tools.jobs_hats_finance.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_hats_finance.description',
 		url: 'https://hats.finance',
 		icon: Award,
 		category: 'jobs',
@@ -223,7 +223,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-cantina',
 		name: 'Cantina',
-		descriptionKey: 'chain-tools.tools.jobs_cantina.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_cantina.description',
 		url: 'https://cantina.xyz',
 		icon: Award,
 		category: 'jobs',
@@ -233,7 +233,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-ethbounties',
 		name: 'ETH Bounties',
-		descriptionKey: 'chain-tools.tools.jobs_ethbounties.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_ethbounties.description',
 		url: 'https://bounties.ethereum.org',
 		icon: Award,
 		category: 'jobs',
@@ -245,7 +245,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-a16z-portfolio',
 		name: 'a16z Portfolio Jobs',
-		descriptionKey: 'chain-tools.tools.jobs_a16z_portfolio.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_a16z_portfolio.description',
 		url: 'https://jobs.a16z.com',
 		icon: Building2,
 		category: 'jobs',
@@ -255,7 +255,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-paradigm-portfolio',
 		name: 'Paradigm Portfolio',
-		descriptionKey: 'chain-tools.tools.jobs_paradigm_portfolio.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_paradigm_portfolio.description',
 		url: 'https://jobs.paradigm.xyz',
 		icon: Building2,
 		category: 'jobs',
@@ -265,7 +265,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-coinbase',
 		name: 'Coinbase Careers',
-		descriptionKey: 'chain-tools.tools.jobs_coinbase.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_coinbase.description',
 		url: 'https://www.coinbase.com/careers',
 		icon: Building2,
 		category: 'jobs',
@@ -275,7 +275,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-binance',
 		name: 'Binance Careers',
-		descriptionKey: 'chain-tools.tools.jobs_binance.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_binance.description',
 		url: 'https://www.binance.com/en/careers',
 		icon: Building2,
 		category: 'jobs',
@@ -285,7 +285,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-consensys',
 		name: 'ConsenSys Careers',
-		descriptionKey: 'chain-tools.tools.jobs_consensys.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_consensys.description',
 		url: 'https://consensys.io/careers',
 		icon: Building2,
 		category: 'jobs',
@@ -295,7 +295,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-chainlink-labs',
 		name: 'Chainlink Labs',
-		descriptionKey: 'chain-tools.tools.jobs_chainlink_labs.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_chainlink_labs.description',
 		url: 'https://chainlinklabs.com/careers',
 		icon: Building2,
 		category: 'jobs',
@@ -305,7 +305,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-ethereum-foundation',
 		name: 'Ethereum Foundation',
-		descriptionKey: 'chain-tools.tools.jobs_ethereum_foundation.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_ethereum_foundation.description',
 		url: 'https://ethereum.org/en/about/#open-jobs',
 		icon: Building2,
 		category: 'jobs',
@@ -315,7 +315,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-uniswap-labs',
 		name: 'Uniswap Labs',
-		descriptionKey: 'chain-tools.tools.jobs_uniswap_labs.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_uniswap_labs.description',
 		url: 'https://boards.greenhouse.io/uniswaplabs',
 		icon: Building2,
 		category: 'jobs',
@@ -325,7 +325,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-opensea',
 		name: 'OpenSea Careers',
-		descriptionKey: 'chain-tools.tools.jobs_opensea.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_opensea.description',
 		url: 'https://opensea.io/careers',
 		icon: Building2,
 		category: 'jobs',
@@ -335,7 +335,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-alchemy',
 		name: 'Alchemy Careers',
-		descriptionKey: 'chain-tools.tools.jobs_alchemy.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_alchemy.description',
 		url: 'https://www.alchemy.com/careers',
 		icon: Building2,
 		category: 'jobs',
@@ -347,7 +347,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-encode-club',
 		name: 'Encode Club',
-		descriptionKey: 'chain-tools.tools.jobs_encode_club.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_encode_club.description',
 		url: 'https://www.encode.club',
 		icon: Users,
 		category: 'jobs',
@@ -357,7 +357,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-ethglobal-fellowship',
 		name: 'ETHGlobal Fellowship',
-		descriptionKey: 'chain-tools.tools.jobs_ethglobal_fellowship.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_ethglobal_fellowship.description',
 		url: 'https://ethglobal.com',
 		icon: Users,
 		category: 'jobs',
@@ -367,7 +367,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-developer-dao',
 		name: 'Developer DAO',
-		descriptionKey: 'chain-tools.tools.jobs_developer_dao.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_developer_dao.description',
 		url: 'https://developerdao.com',
 		icon: Users,
 		category: 'jobs',
@@ -377,7 +377,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-buildspace-n-w',
 		name: 'Buildspace Nights & Weekends',
-		descriptionKey: 'chain-tools.tools.jobs_buildspace_n_w.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_buildspace_n_w.description',
 		url: 'https://buildspace.so',
 		icon: Users,
 		category: 'jobs',
@@ -389,7 +389,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-abcde',
 		name: 'ABCDE Capital Jobs',
-		descriptionKey: 'chain-tools.tools.jobs_abcde.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_abcde.description',
 		url: 'https://abcde.aborsecom/jobs',
 		icon: Globe,
 		category: 'jobs',
@@ -399,7 +399,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-foresight-ventures',
 		name: 'Foresight Ventures Jobs',
-		descriptionKey: 'chain-tools.tools.jobs_foresight_ventures.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_foresight_ventures.description',
 		url: 'https://foresightventures.com/careers',
 		icon: Globe,
 		category: 'jobs',
@@ -409,7 +409,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-hashkey',
 		name: 'HashKey Careers',
-		descriptionKey: 'chain-tools.tools.jobs_hashkey.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_hashkey.description',
 		url: 'https://hashkey.com/careers',
 		icon: Globe,
 		category: 'jobs',
@@ -419,7 +419,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-okx',
 		name: 'OKX Careers',
-		descriptionKey: 'chain-tools.tools.jobs_okx.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_okx.description',
 		url: 'https://www.okx.com/careers',
 		icon: Globe,
 		category: 'jobs',
@@ -429,7 +429,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-huobi',
 		name: 'HTX Careers',
-		descriptionKey: 'chain-tools.tools.jobs_huobi.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_huobi.description',
 		url: 'https://www.htx.com/careers',
 		icon: Globe,
 		category: 'jobs',
@@ -441,7 +441,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-crypto-careers',
 		name: 'Crypto Careers',
-		descriptionKey: 'chain-tools.tools.jobs_crypto_careers.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_crypto_careers.description',
 		url: 'https://www.crypto-careers.com',
 		icon: Briefcase,
 		category: 'jobs',
@@ -451,7 +451,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-otta-web3',
 		name: 'Otta Web3',
-		descriptionKey: 'chain-tools.tools.jobs_otta_web3.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_otta_web3.description',
 		url: 'https://otta.com/jobs/web3',
 		icon: Briefcase,
 		category: 'jobs',
@@ -461,7 +461,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-angellist-crypto',
 		name: 'AngelList Crypto',
-		descriptionKey: 'chain-tools.tools.jobs_angellist_crypto.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_angellist_crypto.description',
 		url: 'https://wellfound.com/crypto',
 		icon: Briefcase,
 		category: 'jobs',
@@ -471,7 +471,7 @@ export const jobsTools: ExternalTool[] = [
 	{
 		id: 'jobs-linkedin-web3',
 		name: 'LinkedIn Web3',
-		descriptionKey: 'chain-tools.tools.jobs_linkedin_web3.description',
+		descriptionKey: 'chain-tools.jobs.tools.jobs_linkedin_web3.description',
 		url: 'https://www.linkedin.com/jobs/web3-jobs',
 		icon: Briefcase,
 		category: 'jobs',

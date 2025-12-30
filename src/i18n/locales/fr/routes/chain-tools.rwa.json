@@ -1,0 +1,63 @@
+{
+	"category_seo": {
+		"title": "Tokenisation RWA - Actifs du Monde Réel sur Blockchain | BiuBiu Tools",
+		"description": "Explorez la tokenisation des actifs du monde réel. Investissez dans l'immobilier tokenisé, matières premières et actifs financiers sur blockchain.",
+		"keywords": "rwa, actifs du monde réel, tokenisation, immobilier tokenisé, actifs sur blockchain",
+		"faqs": [
+			{
+				"question": "Que sont les RWA en crypto ?",
+				"answer": "RWA (Real World Assets) sont des actifs physiques et financiers tokenisés sur blockchain. Exemples : immobilier, matières premières, art, obligations et prêts. La tokenisation rend ces actifs plus accessibles et échangeables."
+			},
+			{
+				"question": "Comment fonctionne la tokenisation RWA ?",
+				"answer": "La tokenisation convertit les droits de propriété d'actifs en tokens blockchain. Chaque token représente une fraction de propriété. Cela permet la propriété fractionnée, une meilleure liquidité et un trading 24/7 d'actifs traditionnellement illiquides."
+			},
+			{
+				"question": "Quels sont les avantages des RWA ?",
+				"answer": "Les avantages incluent : propriété fractionnée, liquidité accrue, coûts de transaction réduits, marchés globaux, règlement plus rapide et accessibilité pour les petits investisseurs auparavant exclus des actifs premium."
+			},
+			{
+				"question": "Les RWA sont-ils réglementés ?",
+				"answer": "Oui, les RWA impliquent généralement une conformité réglementaire significative puisqu'ils représentent des actifs du monde réel et des securities. Les projets RWA légitimes travaillent avec des frameworks légaux et maintiennent une conformité appropriée."
+			}
+		]
+	},
+	"tools": {
+		"goldfinch": {
+			"description": "Crypto prêt pour real-world credit dans emerging markets"
+		},
+		"truefi": {
+			"description": "Uncollateralized prêt pour institutional borrowers"
+		},
+		"centrifuge": {
+			"description": "Real-world asset financing protocole bringing invoices et real estate sur-chain"
+		},
+		"clearpool": {
+			"description": "Decentralized capital markets pour unsecured institutional prêt"
+		},
+		"matrixdock": {
+			"description": "Tokenized treasury bills avec STBT stablecoin"
+		},
+		"openeden": {
+			"description": "Tokenized T-Bills avec real-time NAV et 24/7 settlement"
+		},
+		"realt": {
+			"description": "Tokenized real estate investment avec fractional ownership"
+		},
+		"lofty": {
+			"description": "Fractional real estate investing sur Algorand blockchain"
+		},
+		"propy": {
+			"description": "Blockchain-based real estate transactions et ownership"
+		},
+		"securitize": {
+			"description": "Security token issuance et lifecycle gestion plateforme"
+		},
+		"tokeny": {
+			"description": "Enterprise tokenization plateforme pour compliant securities"
+		},
+		"polymesh": {
+			"description": "Purpose-built blockchain pour regulated sécurité tokens"
+		}
+	}
+}

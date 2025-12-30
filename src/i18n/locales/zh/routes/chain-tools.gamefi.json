@@ -1,0 +1,229 @@
+{
+	"category_seo": {
+		"title": "GameFi 与 Web3 游戏 - 边玩边赚 | BiuBiu Tools",
+		"description": "发现 Web3 游戏和 GameFi 平台。边玩边赚游戏、NFT 游戏资产和区块链游戏公会。",
+		"faqs": [
+			{
+				"question": "什么是 GameFi？",
+				"answer": "GameFi 将游戏与 DeFi 机制结合。玩家通过玩游戏赚取代币和 NFT。资产真正由玩家拥有，可以交易或在不同游戏中使用。"
+			},
+			{
+				"question": "流行的 Web3 游戏有哪些？",
+				"answer": "Axie Infinity 开创了边玩边赚模式。Illuvium 和 Big Time 是 AAA 级游戏。Gods Unchained 是流行的交易卡牌游戏。这个领域正在向更好的游戏体验演进。"
+			},
+			{
+				"question": "什么是游戏公会？",
+				"answer": "YGG 和 Merit Circle 等游戏公会汇集资源帮助玩家获得昂贵的游戏 NFT。他们为玩家提供奖学金并分享收益。对于高入门成本的游戏很有用。"
+			}
+		]
+	},
+	"tools": {
+		"immutable": {
+			"description": "专注游戏的 L2，带 zkEVM"
+		},
+		"ronin": {
+			"description": "Axie Infinity 生态的游戏侧链"
+		},
+		"treasure": {
+			"description": "Arbitrum 上的去中心化游戏生态"
+		},
+		"beam": {
+			"description": "Avalanche 上的游戏子网"
+		},
+		"stardust": {
+			"description": "Web3 游戏 SDK 和钱包解决方案"
+		},
+		"fractal": {
+			"description": "游戏 NFT 市场和发现平台"
+		},
+		"xai": {
+			"description": "基于 Arbitrum Orbit 的游戏 L3"
+		},
+		"ygg": {
+			"description": "带奖学金计划的游戏公会"
+		},
+		"loot8": {
+			"description": "NFT 游戏收藏品平台"
+		},
+		"iskra": {
+			"description": "Web3 游戏平台和社区"
+		},
+		"loot": {
+			"description": "可组合冒险NFT装备"
+		},
+		"pixels": {
+			"description": "链上农业社交游戏"
+		},
+		"parallel": {
+			"description": "科幻卡牌对战游戏"
+		},
+		"illuvium": {
+			"description": "3A级链上战斗RPG"
+		},
+		"shrapnel": {
+			"description": "3A级射击GameFi"
+		},
+		"playnance": {
+			"description": "Playnance - Web3 gaming platform"
+		},
+		"sandbox": {
+			"description": "The Sandbox - Web3 gaming platform"
+		},
+		"decentraland": {
+			"description": "Decentraland - Web3 gaming platform"
+		},
+		"bigtime": {
+			"description": "Big Time - Web3 gaming platform"
+		},
+		"splinterlands": {
+			"description": "Splinterlands - Web3 gaming platform"
+		},
+		"stepn": {
+			"description": "用代币奖励运动活动的Move-to-earn健身应用"
+		},
+		"mir4": {
+			"description": "具有DRACO代币挖矿机制的跨平台MMORPG"
+		},
+		"wildcard": {
+			"description": "具有卡牌策略的竞技场游戏"
+		},
+		"aurory": {
+			"description": "Solana JRPG战术游戏，具有NFT生物"
+		},
+		"blocklords": {
+			"description": "具有王朝建设的中世纪大战略游戏"
+		},
+		"superior": {
+			"description": "Gala Games平台上的Roguelike合作射击游戏"
+		},
+		"fusionist": {
+			"description": "币安上市的 AAA 级机甲策略游戏，ACE 代币"
+		},
+		"xterio": {
+			"description": "Binance Labs 投资的 AI 游戏平台与发行商"
+		},
+		"ultiverse": {
+			"description": "Binance Labs 投资的 AI 驱动元宇宙游戏平台"
+		},
+		"pixelmon": {
+			"description": "开放世界生物收集 RPG，NFT 可进化"
+		},
+		"xpet": {
+			"description": "Arbitrum 上的社交交易宠物游戏"
+		},
+		"carv": {
+			"description": "Web3 游戏身份与凭证协议"
+		},
+		"gunz": {
+			"description": "Gunzilla Games 开发的 AAA 大逃杀射击游戏"
+		},
+		"lumiterra": {
+			"description": "Polygon 上的开放世界生存制作游戏"
+		},
+		"gamestarter": {
+			"description": "Web3 游戏发射台与发行商"
+		},
+		"gamegpt": {
+			"description": "AI 驱动的游戏内容生成平台"
+		},
+		"kryptomon": {
+			"description": "BNB Chain 上的生物繁殖手游"
+		},
+		"revomon": {
+			"description": "受宝可梦启发的 VR 怪物对战游戏"
+		},
+		"era7": {
+			"description": "BNB Chain 上的交易卡牌策略游戏"
+		},
+		"cryptoblades": {
+			"description": "带 Play-to-Earn 机制的 Web3 RPG"
+		},
+		"derace": {
+			"description": "NFT 赛马，支持繁殖与投注"
+		},
+		"superverse": {
+			"description": "NFT 游戏市场与生态系统"
+		},
+		"karrat": {
+			"description": "驱动 My Pet Hooligan 的 AI 游戏生态"
+		},
+		"overworld": {
+			"description": "Immutable X 上带装备系统的动作 RPG"
+		},
+		"skyweaver": {
+			"description": "Horizon 开发的免费交易卡牌游戏"
+		},
+		"treeverse": {
+			"description": "动漫风格的 MMORPG 元宇宙"
+		},
+		"metalcore": {
+			"description": "Immutable X 上的机甲战斗游戏"
+		},
+		"mirandus": {
+			"description": "Gala Games 开发的史诗奇幻 RPG"
+		},
+		"aavegotchi": {
+			"description": "Polygon 上的 DeFi 驱动 NFT 游戏"
+		},
+		"cometh": {
+			"description": "带 DeFi 元素的太空飞船策略游戏"
+		},
+		"realm": {
+			"description": "Polygon 上带土地与资源的奇幻 RPG"
+		},
+		"mobox": {
+			"description": "BNB Chain 上的 NFT 农场 GameFi 平台"
+		},
+		"upland": {
+			"description": "映射真实世界的房产交易元宇宙"
+		},
+		"genopets": {
+			"description": "Solana 上的运动赚币宠物游戏"
+		},
+		"cyball": {
+			"description": "BNB Chain 上的足球经理游戏"
+		},
+		"pegaxy": {
+			"description": "Polygon 上的 PvP 赛马游戏"
+		},
+		"apeiron": {
+			"description": "Polygon 上带 Roguelike 元素的上帝游戏"
+		},
+		"sipher": {
+			"description": "以太坊上的 AAA 多人射击游戏"
+		},
+		"honeyland": {
+			"description": "Solana 上的蜜蜂主题策略游戏"
+		},
+		"rainmaker": {
+			"description": "基于天气的加密预测游戏"
+		},
+		"gaimin": {
+			"description": "带 GPU 共享的游戏奖励平台"
+		},
+		"momento": {
+			"description": "AI 驱动的游戏精彩时刻"
+		},
+		"catizen": {
+			"description": "TON 区块链上的猫主题 Telegram 游戏"
+		},
+		"notcoin": {
+			"description": "发行 NOT 代币的 Telegram 点击游戏"
+		},
+		"blum": {
+			"description": "Telegram 小程序交易所与游戏平台"
+		},
+		"yescoin": {
+			"description": "TON 上的 Telegram 点击赚币游戏"
+		},
+		"dogs": {
+			"description": "TON 上的狗主题 Telegram 游戏"
+		},
+		"pixelverse": {
+			"description": "带战斗的赛博朋克 Telegram 游戏"
+		},
+		"major": {
+			"description": "TON 上的社交排名 Telegram 游戏"
+		}
+	}
+}

@@ -1,0 +1,140 @@
+{
+	"category_seo": {
+		"title": "ブロックチェーン分析ツール - オンチェーンデータとインサイト | BiuBiu Tools",
+		"description": "オンチェーンデータ、ウォレット追跡、市場インサイトのためのトップブロックチェーン分析プラットフォームを探索。Dune、Nansen、Arkhamなどのツール。",
+		"keywords": "blockchain analytics, on-chain data, dune analytics, nansen, arkham, wallet tracking",
+		"faqs": [
+			{
+				"question": "オンチェーン分析とは何ですか？",
+				"answer": "オンチェーン分析は、ブロックチェーン取引データを分析してウォレットの行動、資金フロー、プロトコル利用、市場トレンドに関するインサイトを得ることです。トレーダーや研究者が情報に基づいた意思決定を行うのに役立ちます。"
+			},
+			{
+				"question": "スマートマネートラッキングとは何ですか？",
+				"answer": "スマートマネートラッキングは、成功したトレーダー、クジラ、機関投資家のウォレットを監視して、彼らの取引パターンを理解し、潜在的に彼らの戦略に従うことです。"
+			},
+			{
+				"question": "どの分析ツールを使用すべきですか？",
+				"answer": "Duneはカスタム SQL クエリに最適、Nansenはスマートマネートラッキングに、Arkhamはエンティティラベリングに、DefiLlamaはTVLデータに適しています。具体的なニーズに基づいて選択してください。"
+			}
+		]
+	},
+	"tools": {
+		"dune": {
+			"description": "Blockchain analytics with custom SQL queries"
+		},
+		"defillama": {
+			"description": "DeFi TVL aggregator and protocol analytics"
+		},
+		"nansen": {
+			"description": "On-chain analytics with smart money tracking"
+		},
+		"arkham": {
+			"description": "Blockchain intelligence platform"
+		},
+		"ultrasound": {
+			"description": "ETH supply and burn tracker"
+		},
+		"messari": {
+			"description": "Crypto research and data platform"
+		},
+		"coingecko": {
+			"description": "Cryptocurrency prices and market data"
+		},
+		"coinmarketcap": {
+			"description": "Crypto market cap rankings"
+		},
+		"glassnode": {
+			"description": "On-chain market intelligence"
+		},
+		"dexscreener": {
+			"description": "Real-time DEX pair charts"
+		},
+		"defined": {
+			"description": "Multi-chain DEX analytics"
+		},
+		"tokenterminal": {
+			"description": "Protocol financials and revenue metrics"
+		},
+		"artemis": {
+			"description": "Fundamental crypto analytics and research"
+		},
+		"growthepie": {
+			"description": "L2 analytics and comparison"
+		},
+		"dappradar": {
+			"description": "DApp ranking and tracking"
+		},
+		"ethburned": {
+			"description": "Ethereum burn statistics"
+		},
+		"parsec": {
+			"description": "DeFi analytics dashboard"
+		},
+		"eigenexplorer": {
+			"description": "EigenLayer analytics explorer"
+		},
+		"the_graph": {
+			"description": "Decentralized protocol for indexing blockchain data"
+		},
+		"flipside": {
+			"description": "Blockchain analytics with SQL queries"
+		},
+		"footprint": {
+			"description": "No-code blockchain data analysis platform"
+		},
+		"cryptofees": {
+			"description": "Protocol fee and revenue analytics"
+		},
+		"openbb": {
+			"description": "Open-source investment research terminal"
+		},
+		"watchers": {
+			"description": "Whale wallet tracking and alerts"
+		},
+		"cielo": {
+			"description": "Social wallet tracking and transaction feed"
+		},
+		"space_and_time": {
+			"description": "Verifiable data warehouse with ZK proofs"
+		},
+		"allium": {
+			"description": "Enterprise blockchain data platform"
+		},
+		"sentio": {
+			"description": "Multi-chain observability and monitoring"
+		},
+		"defillama_yields": {
+			"description": "Cross-chain yield farming comparison"
+		},
+		"defilabs": {
+			"description": "Whale and smart money tracking"
+		},
+		"chainanalytics": {
+			"description": "Custom blockchain data dashboards"
+		},
+		"cookie3": {
+			"description": "Cookie3 - Blockchain analytics"
+		},
+		"chainbeat": {
+			"description": "ChainBeat - Blockchain analytics"
+		},
+		"bitquery": {
+			"description": "Bitquery - Blockchain analytics"
+		},
+		"intotheblock": {
+			"description": "IntoTheBlock - Blockchain analytics"
+		},
+		"laevitas": {
+			"description": "Laevitas - Blockchain analytics"
+		},
+		"kaiko": {
+			"description": "Kaiko - Blockchain analytics"
+		},
+		"amberdata": {
+			"description": "Amberdata - Blockchain analytics"
+		},
+		"blockpour": {
+			"description": "Blockpour - Blockchain analytics"
+		}
+	}
+}

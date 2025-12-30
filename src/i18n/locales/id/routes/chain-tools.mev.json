@@ -1,0 +1,34 @@
+{
+	"category_seo": {
+		"title": "MEV - Alat & Perlindungan Maximal Extractable Value | BiuBiu Tools",
+		"description": "Pahami dan navigasi MEV. Alat perlindungan, transaksi privat, dan ekstraksi MEV untuk pengguna lanjutan.",
+		"faqs": [
+			{
+				"question": "Apa itu MEV?",
+				"answer": "MEV (Maximal Extractable Value) adalah profit yang diekstraksi dengan mengurutkan ulang, memasukkan, atau menyensor transaksi. Ini termasuk arbitrase, likuidasi, dan serangan sandwich yang dapat memengaruhi perdagangan Anda."
+			},
+			{
+				"question": "Bagaimana cara melindungi dari MEV?",
+				"answer": "Gunakan Flashbots Protect atau MEV Blocker untuk transaksi privat. Tetapkan slippage rendah. Gunakan agregator seperti 1inch dengan perlindungan MEV. Hindari perdagangan besar pada likuiditas tipis."
+			},
+			{
+				"question": "Apa itu serangan sandwich?",
+				"answer": "Serangan sandwich front-run swap Anda dengan pembelian, lalu back-run dengan penjualan, mengambil profit dari dampak harga yang Anda sebabkan. Menggunakan mempool privat atau perlindungan MEV mencegah ini."
+			}
+		]
+	},
+	"tools": {
+		"beaverbuild": {
+			"description": "Top Ethereum block builder with high market share"
+		},
+		"zeromev": {
+			"description": "Track MEV extraction across Ethereum blocks"
+		},
+		"relayscan": {
+			"description": "Analytics for MEV-Boost relays and builder performance"
+		},
+		"suave": {
+			"description": "Single Unified Auction for Value Expression - future of MEV"
+		}
+	}
+}

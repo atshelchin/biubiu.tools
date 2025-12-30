@@ -1,0 +1,309 @@
+{
+	"category_seo": {
+		"title": "Strumenti DeFi - Protocolli e App di Finanza Decentralizzata | BiuBiu Tools",
+		"description": "Scopri i migliori strumenti DeFi per scambi, prestiti, yield farming e altro. Confronta i principali protocolli come Uniswap, Aave, Curve e Compound.",
+		"keywords": "strumenti defi, finanza decentralizzata, dex, prestiti, yield farming, uniswap, aave, compound",
+		"faqs": [
+			{
+				"question": "Cos'è DeFi?",
+				"answer": "DeFi (Finanza Decentralizzata) si riferisce ai servizi finanziari costruiti sulla tecnologia blockchain che operano senza intermediari tradizionali come le banche. Include prestiti, scambi e guadagno di interessi su asset crypto."
+			},
+			{
+				"question": "Quali sono i rischi dell'uso di DeFi?",
+				"answer": "I rischi DeFi includono vulnerabilità degli smart contract, perdita impermanente nelle pool di liquidità, volatilità di mercato e potenziali rug pull. Fai sempre le tue ricerche e investi solo ciò che puoi permetterti di perdere."
+			},
+			{
+				"question": "Come posso iniziare con DeFi?",
+				"answer": "Per iniziare con DeFi: 1) Configura un wallet crypto come MetaMask, 2) Acquista ETH o altre crypto, 3) Connetti il tuo wallet a una piattaforma DeFi, 4) Inizia con scambi semplici prima di provare funzionalità avanzate."
+			},
+			{
+				"question": "Cos'è il TVL in DeFi?",
+				"answer": "TVL (Total Value Locked) rappresenta la quantità totale di asset depositati in un protocollo DeFi. È una metrica chiave per misurare la popolarità e il livello di sicurezza di un protocollo."
+			}
+		]
+	},
+	"tools": {
+		"uniswap": {
+			"description": "Exchange decentralizzato leader per lo scambio di token"
+		},
+		"aave": {
+			"description": "Protocollo decentralizzato di prestito e deposito"
+		},
+		"1inch": {
+			"description": "Aggregatore DEX per i migliori prezzi di swap"
+		},
+		"curve": {
+			"description": "AMM focalizzato su stablecoin con basso slippage"
+		},
+		"lido": {
+			"description": "Liquid staking per Ethereum e più"
+		},
+		"compound": {
+			"description": "Algorithmic money market protocollo"
+		},
+		"maker": {
+			"description": "DAI stablecoin e prestito protocollo"
+		},
+		"gmx": {
+			"description": "Decentralized perpetual exchange"
+		},
+		"pancakeswap": {
+			"description": "Leading DEX su BNB Chain"
+		},
+		"sushiswap": {
+			"description": "Multi-chain AMM e DeFi piattaforma"
+		},
+		"balancer": {
+			"description": "Automated portfolio manager e DEX"
+		},
+		"dydx": {
+			"description": "Decentralized perpetual trading exchange"
+		},
+		"convex": {
+			"description": "Boosted Curve yields without locking CRV"
+		},
+		"yearn": {
+			"description": "Automated rendimento optimization vaults"
+		},
+		"pendle": {
+			"description": "Yield tokenization e trading"
+		},
+		"radiant": {
+			"description": "Omnichain money market"
+		},
+		"morpho": {
+			"description": "Peer-a-peer prestito con optimized rates"
+		},
+		"rocketpool": {
+			"description": "Decentralized Ethereum staking"
+		},
+		"venus": {
+			"description": "BSC prestito e deposito"
+		},
+		"camelot": {
+			"description": "Arbitrum native DEX e launchpad"
+		},
+		"velodrome": {
+			"description": "Optimism liquidità hub"
+		},
+		"aerodrome": {
+			"description": "Central liquidità hub per Base rete"
+		},
+		"maverick": {
+			"description": "Dynamic distribution AMM per liquidità"
+		},
+		"spark": {
+			"description": "DAI prestito protocollo da MakerDAO"
+		},
+		"instadapp": {
+			"description": "DeFi smart account aggregator"
+		},
+		"sommelier": {
+			"description": "Actively managed DeFi vault strategies"
+		},
+		"euler": {
+			"description": "Permissionless prestito protocollo"
+		},
+		"benqi": {
+			"description": "Avalanche prestito & liquid staking"
+		},
+		"silo": {
+			"description": "Isolated risk prestito markets"
+		},
+		"abracadabra": {
+			"description": "Interest-bearing token prestito"
+		},
+		"alchemix": {
+			"description": "Self-repaying loans protocollo"
+		},
+		"exactly": {
+			"description": "Fixed e variable rate prestito"
+		},
+		"kyberswap": {
+			"description": "DEX aggregator con elastic pools"
+		},
+		"odos": {
+			"description": "Smart order routing aggregator"
+		},
+		"openocean": {
+			"description": "Cross-chain DEX aggregator"
+		},
+		"hashflow": {
+			"description": "MEV-protected RFQ trading"
+		},
+		"syncswap": {
+			"description": "zkSync Era native DEX"
+		},
+		"mute": {
+			"description": "zkSync DEX con amplifier"
+		},
+		"spacefi": {
+			"description": "zkSync DEX e rendimento farm"
+		},
+		"ramses": {
+			"description": "Arbitrum ve(3,3) DEX"
+		},
+		"thena": {
+			"description": "BNB Chain ve(3,3) DEX"
+		},
+		"baseswap": {
+			"description": "Base native DEX e farm"
+		},
+		"woofi": {
+			"description": "Low-slippage cross-chain DEX"
+		},
+		"gains": {
+			"description": "Decentralized leveraged trading"
+		},
+		"level": {
+			"description": "Perpetual trading piattaforma"
+		},
+		"mux": {
+			"description": "Leveraged trading aggregator"
+		},
+		"vertex": {
+			"description": "Perpetuals e spot DEX"
+		},
+		"hyperliquid": {
+			"description": "On-chain perpetual orderbook DEX"
+		},
+		"aevo": {
+			"description": "Options e perpetuals exchange"
+		},
+		"lyra": {
+			"description": "Options AMM protocollo"
+		},
+		"dopex": {
+			"description": "Decentralized options protocollo"
+		},
+		"premia": {
+			"description": "Options vaults e trading"
+		},
+		"harvest": {
+			"description": "DeFi rendimento farming aggregator"
+		},
+		"pickle": {
+			"description": "Yield optimization jars"
+		},
+		"concentrator": {
+			"description": "Auto-compounding per Curve e Convex"
+		},
+		"conic": {
+			"description": "Curve omnipool piattaforma"
+		},
+		"sturdy": {
+			"description": "Interest-free prestito protocollo"
+		},
+		"stakewise": {
+			"description": "Non-custodial ETH staking"
+		},
+		"stader": {
+			"description": "Multi-chain liquid staking"
+		},
+		"renzo": {
+			"description": "EigenLayer liquid restaking"
+		},
+		"puffer": {
+			"description": "Liquid restaking con anti-slashing tech"
+		},
+		"kelp": {
+			"description": "Liquid restaking con rsETH su EigenLayer"
+		},
+		"bentobox": {
+			"description": "Sushi's token vault con flash loan e prestito features"
+		},
+		"ribbon": {
+			"description": "Structured products e options vaults per sustainable rendimento"
+		},
+		"opyn": {
+			"description": "Options protocollo con squeeth perpetual strategy"
+		},
+		"notional": {
+			"description": "Fixed-rate prestito e deposito protocollo"
+		},
+		"maple": {
+			"description": "Institutional undercollateralized prestito marketplace"
+		},
+		"tokemak": {
+			"description": "Liquidity reactor per sustainable DeFi liquidità"
+		},
+		"olympus": {
+			"description": "Decentralized reserve currency protocollo con OHM token"
+		},
+		"umami": {
+			"description": "Sustainable rendimento vaults using GLP su Arbitrum"
+		},
+		"vela": {
+			"description": "Perpetual DEX con advanced trading features"
+		},
+		"y2k": {
+			"description": "Stablecoin depeg insurance e hedging protocollo"
+		},
+		"kwenta": {
+			"description": "Perpetual futures trading su Synthetix"
+		},
+		"polynomial": {
+			"description": "Options vaults powered da Synthetix su Optimism"
+		},
+		"angle": {
+			"description": "Euro stablecoin e forex DeFi protocollo"
+		},
+		"liquity": {
+			"description": "Interest-free deposito against ETH con LUSD stablecoin"
+		},
+		"reflexer": {
+			"description": "Non-pegged stablecoin RAI con PID controller"
+		},
+		"mstable": {
+			"description": "Meta-stablecoin piattaforma con rendimento savings"
+		},
+		"raft": {
+			"description": "LSD-backed stablecoin deposito protocollo"
+		},
+		"prisma": {
+			"description": "LSD-backed mkUSD stablecoin con Curve integration"
+		},
+		"gravita": {
+			"description": "LSD-backed GRAI stablecoin deposito"
+		},
+		"gyroscope": {
+			"description": "All-weather stablecoin con diversified reserves"
+		},
+		"paraswap": {
+			"description": "DEX aggregator per migliori swap rates across chains"
+		},
+		"matcha": {
+			"description": "DEX aggregator powered da 0x protocollo"
+		},
+		"cowswap": {
+			"description": "MEV-protected swap con batch auctions"
+		},
+		"bebop": {
+			"description": "Multi-token swap con gasless trading"
+		},
+		"dodo": {
+			"description": "Proactive market maker DEX con crowdpooling"
+		},
+		"clipper": {
+			"description": "DEX optimized per retail traders e small trades"
+		},
+		"symbiotic_restaking": {
+			"description": "Permissionless modular restaking protocollo"
+		},
+		"ether_fi": {
+			"description": "Non-custodial liquid restaking con eETH"
+		},
+		"swell": {
+			"description": "Liquid staking e restaking con swETH"
+		},
+		"beefy": {
+			"description": "Multi-chain auto-compounding rendimento optimizer"
+		},
+		"equilibria": {
+			"description": "Boosted yields per Pendle pools"
+		},
+		"marginfi": {
+			"description": "marginfi - DeFi protocollo"
+		}
+	}
+}

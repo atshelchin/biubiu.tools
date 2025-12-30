@@ -1,0 +1,94 @@
+{
+	"category_seo": {
+		"title": "跨链桥 - 区块链间资产转移 | BiuBiu Tools",
+		"description": "发现最佳跨链桥，在以太坊、Arbitrum、Optimism、Base 等网络间安全转移代币。",
+		"faqs": [
+			{
+				"question": "什么是跨链桥？",
+				"answer": "跨链桥是一种协议，允许你在不同区块链网络之间转移代币和数据。它在源链上锁定资产，并在目标链上铸造等值代币。"
+			},
+			{
+				"question": "哪些跨链桥最安全？",
+				"answer": "L2 的官方桥（如 Arbitrum Bridge、Optimism Bridge）通常最安全但较慢。第三方桥如 Stargate、Across 和 Hop 提供更快的转账，安全性也不错。始终检查桥的审计状态。"
+			},
+			{
+				"question": "跨链转账需要多长时间？",
+				"answer": "官方 L2 桥提款需要 7 天以上（欺诈证明期）。快速桥如 Stargate 或 Across 只需几分钟。理解速度与安全性的权衡很重要。"
+			}
+		]
+	},
+	"tools": {
+		"across": {
+			"description": "快速低成本跨链桥"
+		},
+		"stargate": {
+			"description": "基于 LayerZero 的全链桥"
+		},
+		"orbiter": {
+			"description": "L2 到 L2 跨 Rollup 桥"
+		},
+		"hop": {
+			"description": "L2 到 L2 代币桥"
+		},
+		"synapse": {
+			"description": "跨链桥和兑换"
+		},
+		"cbridge": {
+			"description": "Celer 跨链桥"
+		},
+		"multichain": {
+			"description": "多链路由协议"
+		},
+		"wormhole": {
+			"description": "跨链消息传递协议"
+		},
+		"socket": {
+			"description": "跨链桥聚合器"
+		},
+		"rhino": {
+			"description": "自托管桥聚合器"
+		},
+		"hyphen": {
+			"description": "即时跨链转账"
+		},
+		"connext": {
+			"description": "无信任跨链桥"
+		},
+		"debridge": {
+			"description": "跨链互操作性"
+		},
+		"allbridge": {
+			"description": "多链稳定币桥"
+		},
+		"portal": {
+			"description": "Wormhole Portal桥"
+		},
+		"squid": {
+			"description": "跨链兑换路由"
+		},
+		"owlto": {
+			"description": "快速低费L2桥"
+		},
+		"bungee": {
+			"description": "Socket驱动的跨链聚合"
+		},
+		"jumper": {
+			"description": "LI.FI跨链资产转移界面"
+		},
+		"superbridge": {
+			"description": "OP Stack原生跨链桥"
+		},
+		"relay": {
+			"description": "意图驱动的即时跨链桥"
+		},
+		"symbiosis": {
+			"description": "全链流动性跨链协议"
+		},
+		"dln": {
+			"description": "deBridge流动性网络跨链"
+		},
+		"layerswap": {
+			"description": "Layerswap - Cross-chain bridge"
+		}
+	}
+}

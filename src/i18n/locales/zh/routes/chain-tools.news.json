@@ -1,0 +1,154 @@
+{
+	"category_seo": {
+		"title": "加密新闻 - 市场动态与行业报道 | BiuBiu Tools",
+		"description": "获取最新加密新闻。市场分析、项目更新、监管新闻和行业趋势。",
+		"faqs": [
+			{
+				"question": "哪些加密新闻来源可靠？",
+				"answer": "The Block 和 CoinDesk 提供机构级报道。Decrypt 新闻易于理解。Bankless 和 The Defiant 专注 DeFi。始终交叉验证信息，警惕赞助内容。"
+			},
+			{
+				"question": "如何跟进加密动态？",
+				"answer": "在 Crypto Twitter/X 上关注关键账号。订阅 Bankless 和 Week in Ethereum 等 Newsletter。使用 CryptoPanic 等聚合器。加入你关注项目的 Discord 社区。"
+			},
+			{
+				"question": "如何识别 FUD 和错误信息？",
+				"answer": "检查多个来源，尽可能在链上验证声明，对匿名来源保持怀疑，理解信息分享者的利益动机。"
+			}
+		]
+	},
+	"tools": {
+		"theblock": {
+			"description": "The Block - Crypto news and research"
+		},
+		"coindesk": {
+			"description": "CoinDesk - Crypto news and research"
+		},
+		"cointelegraph": {
+			"description": "Cointelegraph - Crypto news and research"
+		},
+		"decrypt": {
+			"description": "Decrypt - Crypto news and research"
+		},
+		"blockworks": {
+			"description": "Blockworks - Crypto news and research"
+		},
+		"dlnews": {
+			"description": "DL News - Crypto news and research"
+		},
+		"rootdata": {
+			"description": "RootData - Crypto news and research"
+		},
+		"cryptorank": {
+			"description": "CryptoRank - Crypto news and research"
+		},
+		"bankless": {
+			"description": "Bankless - Crypto news and research"
+		},
+		"defiant": {
+			"description": "The Defiant - Crypto news and research"
+		},
+		"epicenter": {
+			"description": "Epicenter - Crypto news and research"
+		},
+		"bitcoinist": {
+			"description": "Bitcoinist - Crypto news and research"
+		},
+		"beincrypto": {
+			"description": "BeInCrypto - Crypto news and research"
+		},
+		"cryptobriefing": {
+			"description": "Crypto Briefing - Crypto news and research"
+		},
+		"odaily": {
+			"description": "Odaily - Crypto news and research"
+		},
+		"panews": {
+			"description": "PANews - Crypto news and research"
+		},
+		"techflow": {
+			"description": "TechFlow - Crypto news and research"
+		},
+		"chaincatcher": {
+			"description": "ChainCatcher - 加密新闻与媒体"
+		},
+		"marsbit": {
+			"description": "MarsBit - 加密新闻与媒体"
+		},
+		"blockbeats": {
+			"description": "BlockBeats - 加密新闻与媒体"
+		},
+		"jinse": {
+			"description": "Jinse Finance - 加密新闻与媒体"
+		},
+		"coindeskjapan": {
+			"description": "CoinDesk Japan - 加密新闻与媒体"
+		},
+		"ambcrypto": {
+			"description": "AMBCrypto - 加密新闻与媒体"
+		},
+		"newsbtc": {
+			"description": "NewsBTC - 加密新闻与媒体"
+		},
+		"dailycoin": {
+			"description": "DailyCoin - 加密新闻与媒体"
+		},
+		"coinspeaker": {
+			"description": "Coinspeaker - 加密新闻与媒体"
+		},
+		"bitcoinmagazine": {
+			"description": "Bitcoin Magazine - 加密新闻与媒体"
+		},
+		"protos": {
+			"description": "Protos - 加密新闻与媒体"
+		},
+		"web3isgoinggreat": {
+			"description": "Web3 Is Going Great - 加密新闻与媒体"
+		},
+		"thedefireport": {
+			"description": "The DeFi Report - 加密新闻与媒体"
+		},
+		"cryptotvplus": {
+			"description": "CryptoTVPlus - 加密新闻与媒体"
+		},
+		"bitcoinke": {
+			"description": "BitcoinKE - 加密新闻与媒体"
+		},
+		"coinpedia": {
+			"description": "Coinpedia - 加密新闻与媒体"
+		},
+		"cryptopotato": {
+			"description": "CryptoPotato - 加密新闻与媒体"
+		},
+		"btcpulse": {
+			"description": "BTC Pulse - 加密新闻与媒体"
+		},
+		"blockonomi": {
+			"description": "Blockonomi - 加密新闻与媒体"
+		},
+		"coincodex": {
+			"description": "CoinCodex - 加密新闻与媒体"
+		},
+		"tokeninsight": {
+			"description": "TokenInsight - 加密新闻与媒体"
+		},
+		"bitbo": {
+			"description": "Bitbo - 加密新闻与媒体"
+		},
+		"lookintochains": {
+			"description": "Look Into Chains - 加密新闻与媒体"
+		},
+		"vettafi": {
+			"description": "VettaFi - 加密新闻与媒体"
+		},
+		"a16zcrypto": {
+			"description": "a16z Crypto - 加密新闻与媒体"
+		},
+		"binanceresearch": {
+			"description": "Binance Research - 加密新闻与媒体"
+		},
+		"coinbaselearn": {
+			"description": "Coinbase Learn - 加密新闻与媒体"
+		}
+	}
+}

@@ -1,0 +1,39 @@
+{
+	"category_seo": {
+		"title": "Outils MEV - Extraction de Valeur Maximale et Protection | BiuBiu Tools",
+		"description": "Comprenez le MEV et protégez vos transactions. Explorez les outils de capture MEV, la protection et les stratégies d'extraction.",
+		"keywords": "mev, extraction de valeur maximale, frontrunning, flashbots, protection mev",
+		"faqs": [
+			{
+				"question": "Qu'est-ce que le MEV ?",
+				"answer": "MEV (Maximal Extractable Value) est le profit que les mineurs/validateurs peuvent gagner en réordonnant, incluant ou censurant des transactions dans les blocs. Il inclut les opportunités d'arbitrage, de liquidation et de frontrunning."
+			},
+			{
+				"question": "Le MEV est-il mauvais ?",
+				"answer": "Le MEV est neutre - il a des aspects positifs (liquidations efficaces, arbitrage) et négatifs (frontrunning, sandwiching utilisateurs). C'est une conséquence naturelle de la transparence blockchain mais peut impacter négativement les utilisateurs ordinaires."
+			},
+			{
+				"question": "Comment me protéger du MEV ?",
+				"answer": "Protection via : utilisation de RPC privés comme Flashbots, paramétrage de slippage plus large, découpage des grosses transactions, utilisation d'agrégateurs DEX avec protection MEV et éviter les pools à faible liquidité."
+			},
+			{
+				"question": "Qu'est-ce que Flashbots ?",
+				"answer": "Flashbots est une organisation de recherche et développement travaillant à atténuer les impacts négatifs du MEV. Ils fournissent des outils permettant aux utilisateurs d'envoyer des transactions privées et aux chercheurs d'extraire du MEV de manière plus transparente."
+			}
+		]
+	},
+	"tools": {
+		"beaverbuild": {
+			"description": "Top Ethereum block builder avec high market share"
+		},
+		"zeromev": {
+			"description": "Track MEV extraction across Ethereum blocks"
+		},
+		"relayscan": {
+			"description": "Analytics pour MEV-Boost relays et builder performance"
+		},
+		"suave": {
+			"description": "Single Unified Auction pour Value Expression - future de MEV"
+		}
+	}
+}

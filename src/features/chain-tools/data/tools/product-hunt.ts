@@ -23,7 +23,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'producthunt',
 		name: 'Product Hunt',
-		descriptionKey: 'chain-tools.tools.producthunt.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.producthunt.description',
 		url: 'https://www.producthunt.com',
 		icon: Rocket,
 		category: 'product-hunt',
@@ -34,7 +34,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'hackernews',
 		name: 'Hacker News',
-		descriptionKey: 'chain-tools.tools.hackernews.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.hackernews.description',
 		url: 'https://news.ycombinator.com',
 		icon: MessageSquare,
 		category: 'product-hunt',
@@ -45,7 +45,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'betalist',
 		name: 'BetaList',
-		descriptionKey: 'chain-tools.tools.betalist.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.betalist.description',
 		url: 'https://betalist.com',
 		icon: Lightbulb,
 		category: 'product-hunt',
@@ -55,7 +55,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'launchingnext',
 		name: 'Launching Next',
-		descriptionKey: 'chain-tools.tools.launchingnext.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.launchingnext.description',
 		url: 'https://www.launchingnext.com',
 		icon: Rocket,
 		category: 'product-hunt',
@@ -65,7 +65,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'saashub',
 		name: 'SaaS Hub',
-		descriptionKey: 'chain-tools.tools.saashub.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.saashub.description',
 		url: 'https://www.saashub.com',
 		icon: Search,
 		category: 'product-hunt',
@@ -75,7 +75,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'alternativeto',
 		name: 'AlternativeTo',
-		descriptionKey: 'chain-tools.tools.alternativeto.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.alternativeto.description',
 		url: 'https://alternativeto.net',
 		icon: Compass,
 		category: 'product-hunt',
@@ -85,7 +85,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'slant',
 		name: 'Slant',
-		descriptionKey: 'chain-tools.tools.slant.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.slant.description',
 		url: 'https://www.slant.co',
 		icon: Star,
 		category: 'product-hunt',
@@ -95,7 +95,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'theresanaiforthat',
 		name: "There's An AI For That",
-		descriptionKey: 'chain-tools.tools.theresanaiforthat.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.theresanaiforthat.description',
 		url: 'https://theresanaiforthat.com',
 		icon: Sparkles,
 		category: 'product-hunt',
@@ -106,7 +106,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'futurepedia',
 		name: 'Futurepedia',
-		descriptionKey: 'chain-tools.tools.futurepedia.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.futurepedia.description',
 		url: 'https://www.futurepedia.io',
 		icon: Sparkles,
 		category: 'product-hunt',
@@ -116,7 +116,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'toolify',
 		name: 'Toolify',
-		descriptionKey: 'chain-tools.tools.toolify.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.toolify.description',
 		url: 'https://www.toolify.ai',
 		icon: Sparkles,
 		category: 'product-hunt',
@@ -126,7 +126,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'g2',
 		name: 'G2',
-		descriptionKey: 'chain-tools.tools.g2.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.g2.description',
 		url: 'https://www.g2.com',
 		icon: Star,
 		category: 'product-hunt',
@@ -136,7 +136,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'capterra',
 		name: 'Capterra',
-		descriptionKey: 'chain-tools.tools.capterra.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.capterra.description',
 		url: 'https://www.capterra.com',
 		icon: Search,
 		category: 'product-hunt',
@@ -146,7 +146,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'getapp',
 		name: 'GetApp',
-		descriptionKey: 'chain-tools.tools.getapp.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.getapp.description',
 		url: 'https://www.getapp.com',
 		icon: Search,
 		category: 'product-hunt',
@@ -156,7 +156,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'trustradius',
 		name: 'TrustRadius',
-		descriptionKey: 'chain-tools.tools.trustradius.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.trustradius.description',
 		url: 'https://www.trustradius.com',
 		icon: Star,
 		category: 'product-hunt',
@@ -168,7 +168,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'indiehackers',
 		name: 'Indie Hackers',
-		descriptionKey: 'chain-tools.tools.indiehackers.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.indiehackers.description',
 		url: 'https://www.indiehackers.com',
 		icon: Users,
 		category: 'product-hunt',
@@ -179,7 +179,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'devto',
 		name: 'Dev.to',
-		descriptionKey: 'chain-tools.tools.devto.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.devto.description',
 		url: 'https://dev.to',
 		icon: MessageSquare,
 		category: 'product-hunt',
@@ -189,7 +189,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'hashnode',
 		name: 'Hashnode',
-		descriptionKey: 'chain-tools.tools.hashnode.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.hashnode.description',
 		url: 'https://hashnode.com',
 		icon: MessageSquare,
 		category: 'product-hunt',
@@ -199,7 +199,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'reddit-startups',
 		name: 'Reddit r/startups',
-		descriptionKey: 'chain-tools.tools.reddit_startups.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.reddit_startups.description',
 		url: 'https://www.reddit.com/r/startups',
 		icon: MessageSquare,
 		category: 'product-hunt',
@@ -209,7 +209,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'reddit-sideproject',
 		name: 'Reddit r/SideProject',
-		descriptionKey: 'chain-tools.tools.reddit_sideproject.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.reddit_sideproject.description',
 		url: 'https://www.reddit.com/r/SideProject',
 		icon: MessageSquare,
 		category: 'product-hunt',
@@ -219,7 +219,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'github-trending',
 		name: 'GitHub Trending',
-		descriptionKey: 'chain-tools.tools.github_trending.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.github_trending.description',
 		url: 'https://github.com/trending',
 		icon: TrendingUp,
 		category: 'product-hunt',
@@ -229,7 +229,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'lobsters',
 		name: 'Lobsters',
-		descriptionKey: 'chain-tools.tools.lobsters.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.lobsters.description',
 		url: 'https://lobste.rs',
 		icon: MessageSquare,
 		category: 'product-hunt',
@@ -241,7 +241,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'x-twitter',
 		name: 'X (Twitter)',
-		descriptionKey: 'chain-tools.tools.x_twitter.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.x_twitter.description',
 		url: 'https://x.com',
 		icon: Globe,
 		category: 'product-hunt',
@@ -251,7 +251,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'linkedin',
 		name: 'LinkedIn',
-		descriptionKey: 'chain-tools.tools.linkedin.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.linkedin.description',
 		url: 'https://www.linkedin.com',
 		icon: Users,
 		category: 'product-hunt',
@@ -261,7 +261,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'medium',
 		name: 'Medium',
-		descriptionKey: 'chain-tools.tools.medium.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.medium.description',
 		url: 'https://medium.com',
 		icon: Newspaper,
 		category: 'product-hunt',
@@ -271,7 +271,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'youtube',
 		name: 'YouTube',
-		descriptionKey: 'chain-tools.tools.youtube.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.youtube.description',
 		url: 'https://www.youtube.com',
 		icon: Radio,
 		category: 'product-hunt',
@@ -283,7 +283,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: '36kr',
 		name: '36氪',
-		descriptionKey: 'chain-tools.tools.36kr.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.36kr.description',
 		url: 'https://36kr.com',
 		icon: Newspaper,
 		category: 'product-hunt',
@@ -294,7 +294,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'sspai',
 		name: '少数派',
-		descriptionKey: 'chain-tools.tools.sspai.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.sspai.description',
 		url: 'https://sspai.com',
 		icon: Star,
 		category: 'product-hunt',
@@ -304,7 +304,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'v2ex',
 		name: 'V2EX',
-		descriptionKey: 'chain-tools.tools.v2ex.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.v2ex.description',
 		url: 'https://www.v2ex.com',
 		icon: MessageSquare,
 		category: 'product-hunt',
@@ -314,7 +314,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'appinn',
 		name: '小众软件',
-		descriptionKey: 'chain-tools.tools.appinn.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.appinn.description',
 		url: 'https://www.appinn.com',
 		icon: Search,
 		category: 'product-hunt',
@@ -324,7 +324,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'okjike',
 		name: '即刻',
-		descriptionKey: 'chain-tools.tools.okjike.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.okjike.description',
 		url: 'https://okjike.com',
 		icon: Users,
 		category: 'product-hunt',
@@ -334,7 +334,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'zhihu',
 		name: '知乎',
-		descriptionKey: 'chain-tools.tools.zhihu.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.zhihu.description',
 		url: 'https://www.zhihu.com',
 		icon: MessageSquare,
 		category: 'product-hunt',
@@ -344,7 +344,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'coolapk',
 		name: '酷安',
-		descriptionKey: 'chain-tools.tools.coolapk.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.coolapk.description',
 		url: 'https://www.coolapk.com',
 		icon: Search,
 		category: 'product-hunt',
@@ -354,7 +354,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'liqi',
 		name: '利器',
-		descriptionKey: 'chain-tools.tools.liqi.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.liqi.description',
 		url: 'https://liqi.io',
 		icon: Lightbulb,
 		category: 'product-hunt',
@@ -366,7 +366,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'moongift',
 		name: 'MOONGIFT',
-		descriptionKey: 'chain-tools.tools.moongift.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.moongift.description',
 		url: 'https://www.moongift.jp',
 		icon: Globe,
 		category: 'product-hunt',
@@ -378,7 +378,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'disquiet',
 		name: 'Disquiet',
-		descriptionKey: 'chain-tools.tools.disquiet.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.disquiet.description',
 		url: 'https://disquiet.io',
 		icon: Rocket,
 		category: 'product-hunt',
@@ -389,7 +389,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'geeknews-korea',
 		name: 'GeekNews',
-		descriptionKey: 'chain-tools.tools.geeknews_korea.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.geeknews_korea.description',
 		url: 'https://news.hada.io',
 		icon: Newspaper,
 		category: 'product-hunt',
@@ -401,7 +401,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'yourstory',
 		name: 'YourStory',
-		descriptionKey: 'chain-tools.tools.yourstory.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.yourstory.description',
 		url: 'https://yourstory.com',
 		icon: Newspaper,
 		category: 'product-hunt',
@@ -411,7 +411,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'inc42',
 		name: 'Inc42',
-		descriptionKey: 'chain-tools.tools.inc42.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.inc42.description',
 		url: 'https://inc42.com',
 		icon: Newspaper,
 		category: 'product-hunt',
@@ -423,7 +423,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'eu-startups',
 		name: 'EU-Startups',
-		descriptionKey: 'chain-tools.tools.eu_startups.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.eu_startups.description',
 		url: 'https://www.eu-startups.com',
 		icon: Building2,
 		category: 'product-hunt',
@@ -433,7 +433,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'tech-eu',
 		name: 'Tech.eu',
-		descriptionKey: 'chain-tools.tools.tech_eu.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.tech_eu.description',
 		url: 'https://tech.eu',
 		icon: Newspaper,
 		category: 'product-hunt',
@@ -443,7 +443,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'sifted',
 		name: 'Sifted',
-		descriptionKey: 'chain-tools.tools.sifted.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.sifted.description',
 		url: 'https://sifted.eu',
 		icon: Newspaper,
 		category: 'product-hunt',
@@ -455,7 +455,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'e27',
 		name: 'e27',
-		descriptionKey: 'chain-tools.tools.e27.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.e27.description',
 		url: 'https://e27.co',
 		icon: Globe,
 		category: 'product-hunt',
@@ -465,7 +465,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'techinasia',
 		name: 'Tech in Asia',
-		descriptionKey: 'chain-tools.tools.techinasia.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.techinasia.description',
 		url: 'https://www.techinasia.com',
 		icon: Newspaper,
 		category: 'product-hunt',
@@ -475,7 +475,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'krasia',
 		name: 'KrASIA',
-		descriptionKey: 'chain-tools.tools.krasia.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.krasia.description',
 		url: 'https://kr-asia.com',
 		icon: Newspaper,
 		category: 'product-hunt',
@@ -487,7 +487,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'startupeable',
 		name: 'Startupeable',
-		descriptionKey: 'chain-tools.tools.startupeable.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.startupeable.description',
 		url: 'https://startupeable.com',
 		icon: Rocket,
 		category: 'product-hunt',
@@ -497,7 +497,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'contxto',
 		name: 'Contxto',
-		descriptionKey: 'chain-tools.tools.contxto.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.contxto.description',
 		url: 'https://contxto.com',
 		icon: Newspaper,
 		category: 'product-hunt',
@@ -509,7 +509,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'alchemy-dapp-store',
 		name: 'Alchemy Dapp Store',
-		descriptionKey: 'chain-tools.tools.alchemy_dapp_store.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.alchemy_dapp_store.description',
 		url: 'https://www.alchemy.com/dapps',
 		icon: Search,
 		category: 'product-hunt',
@@ -519,7 +519,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'stateofthedapps',
 		name: 'State of the DApps',
-		descriptionKey: 'chain-tools.tools.stateofthedapps.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.stateofthedapps.description',
 		url: 'https://www.stateofthedapps.com',
 		icon: Globe,
 		category: 'product-hunt',
@@ -529,7 +529,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'web3-career',
 		name: 'Web3.Career',
-		descriptionKey: 'chain-tools.tools.web3_career.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.web3_career.description',
 		url: 'https://web3.career',
 		icon: Building2,
 		category: 'product-hunt',
@@ -539,7 +539,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'cryptorank-ico',
 		name: 'CryptoRank ICO',
-		descriptionKey: 'chain-tools.tools.cryptorank_ico.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.cryptorank_ico.description',
 		url: 'https://cryptorank.io/ico',
 		icon: TrendingUp,
 		category: 'product-hunt',
@@ -549,7 +549,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'icodrops',
 		name: 'ICO Drops',
-		descriptionKey: 'chain-tools.tools.icodrops.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.icodrops.description',
 		url: 'https://icodrops.com',
 		icon: Rocket,
 		category: 'product-hunt',
@@ -560,7 +560,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'coinmarketcap-new',
 		name: 'CoinMarketCap New Listings',
-		descriptionKey: 'chain-tools.tools.coinmarketcap_new.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.coinmarketcap_new.description',
 		url: 'https://coinmarketcap.com/new',
 		icon: TrendingUp,
 		category: 'product-hunt',
@@ -570,7 +570,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'coingecko-new',
 		name: 'CoinGecko New Coins',
-		descriptionKey: 'chain-tools.tools.coingecko_new.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.coingecko_new.description',
 		url: 'https://www.coingecko.com/en/new-cryptocurrencies',
 		icon: TrendingUp,
 		category: 'product-hunt',
@@ -580,7 +580,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'defillama-protocols',
 		name: 'DefiLlama Protocols',
-		descriptionKey: 'chain-tools.tools.defillama_protocols.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.defillama_protocols.description',
 		url: 'https://defillama.com/protocols',
 		icon: Search,
 		category: 'product-hunt',
@@ -590,7 +590,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'crypto-twitter',
 		name: 'Crypto Twitter (CT)',
-		descriptionKey: 'chain-tools.tools.crypto_twitter.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.crypto_twitter.description',
 		url: 'https://x.com/i/communities/1488624609016647686',
 		icon: Users,
 		category: 'product-hunt',
@@ -600,7 +600,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'mirror-xyz',
 		name: 'Mirror',
-		descriptionKey: 'chain-tools.tools.mirror_xyz.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.mirror_xyz.description',
 		url: 'https://mirror.xyz',
 		icon: Newspaper,
 		category: 'product-hunt',
@@ -610,7 +610,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'paragraph-xyz',
 		name: 'Paragraph',
-		descriptionKey: 'chain-tools.tools.paragraph_xyz.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.paragraph_xyz.description',
 		url: 'https://paragraph.xyz',
 		icon: Newspaper,
 		category: 'product-hunt',
@@ -620,7 +620,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'quest3',
 		name: 'Quest3',
-		descriptionKey: 'chain-tools.tools.quest3.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.quest3.description',
 		url: 'https://quest3.xyz',
 		icon: Rocket,
 		category: 'product-hunt',
@@ -630,7 +630,7 @@ export const productHuntTools: ExternalTool[] = [
 	{
 		id: 'zealy',
 		name: 'Zealy',
-		descriptionKey: 'chain-tools.tools.zealy.description',
+		descriptionKey: 'chain-tools.product_hunt.tools.zealy.description',
 		url: 'https://zealy.io',
 		icon: Star,
 		category: 'product-hunt',

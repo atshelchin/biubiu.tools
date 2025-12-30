@@ -1,0 +1,146 @@
+{
+	"category_seo": {
+		"title": "Ferramentas de Segurança Blockchain - Auditoria e Proteção | BiuBiu Tools",
+		"description": "Ferramentas de segurança essenciais para auditorias de contratos inteligentes, detecção de scams, verificação de aprovações de tokens e proteção de carteiras em Web3.",
+		"keywords": "segurança blockchain, auditoria contrato inteligente, detector scam, verificador aprovações token, segurança web3",
+		"faqs": [
+			{
+				"question": "Por que a segurança blockchain é importante?",
+				"answer": "Com bilhões em valor em blockchains, a segurança é crítica. As vulnerabilidades em contratos inteligentes, projetos scam e hacks de carteiras são comuns. As ferramentas de segurança ajudam a proteger seus ativos e verificar projetos."
+			},
+			{
+				"question": "O que é uma auditoria de contrato inteligente?",
+				"answer": "Uma auditoria de contrato inteligente é uma revisão exaustiva do código por especialistas em segurança para identificar vulnerabilidades, erros e riscos potenciais antes da implantação. Os projetos auditados geralmente são considerados mais seguros."
+			},
+			{
+				"question": "Como revogo as aprovações de tokens?",
+				"answer": "Use ferramentas como Revoke.cash ou Etherscan para ver e revogar aprovações de tokens. Isso previne que contratos maliciosos gastem tokens que você aprovou anteriormente. Revise e revogue aprovações não utilizadas regularmente."
+			}
+		]
+	},
+	"tools": {
+		"revoke": {
+			"description": "Manage and revoke token approvals"
+		},
+		"slither": {
+			"description": "Static analysis framework"
+		},
+		"mythx": {
+			"description": "Smart contract security API"
+		},
+		"certik": {
+			"description": "Security audits and skynet"
+		},
+		"hacken": {
+			"description": "Blockchain security auditing"
+		},
+		"immunefi": {
+			"description": "Web3 bug bounty platform"
+		},
+		"openzeppelin": {
+			"description": "Smart contract security library"
+		},
+		"dedaub": {
+			"description": "Smart contract security tools and decompiler"
+		},
+		"honeypot": {
+			"description": "Token honeypot detection"
+		},
+		"phalcon": {
+			"description": "Transaction analysis explorer"
+		},
+		"chainalysis": {
+			"description": "Blockchain compliance platform"
+		},
+		"hexagate": {
+			"description": "Real-time smart contract threat monitoring"
+		},
+		"hypernative": {
+			"description": "AI-powered security monitoring and prevention"
+		},
+		"chainalert": {
+			"description": "Blockchain security alerts and notifications"
+		},
+		"webacy": {
+			"description": "Wallet safety backup and crypto inheritance"
+		},
+		"harpie": {
+			"description": "On-chain firewall and scam protection"
+		},
+		"blowfish": {
+			"description": "Transaction simulation and threat prevention"
+		},
+		"stelo": {
+			"description": "Human-readable transaction previews"
+		},
+		"fire": {
+			"description": "Transaction simulation for wallet protection"
+		},
+		"scamsniffer": {
+			"description": "Scam and phishing detection service"
+		},
+		"peckshield": {
+			"description": "Blockchain security audit and research firm"
+		},
+		"slowmist": {
+			"description": "Security audit and incident investigation"
+		},
+		"quantstamp": {
+			"description": "Enterprise blockchain security auditing"
+		},
+		"spearbit": {
+			"description": "Expert security researchers network"
+		},
+		"railgun": {
+			"description": "Private DeFi with zk-SNARKs on EVM chains"
+		},
+		"aztec": {
+			"description": "Programmable privacy with zk-rollup"
+		},
+		"nocturne": {
+			"description": "Private account layer for Ethereum"
+		},
+		"umbra": {
+			"description": "Stealth address payments on EVM chains"
+		},
+		"labyrinth": {
+			"description": "Compliant privacy for institutions"
+		},
+		"elusiv": {
+			"description": "Compliant privacy payments on Solana"
+		},
+		"zcash": {
+			"description": "Native privacy blockchain with shielded transactions"
+		},
+		"forta": {
+			"description": "Real-time threat detection network"
+		},
+		"code4rena": {
+			"description": "Community-driven audit contests"
+		},
+		"sherlock": {
+			"description": "Audit contests with exploit coverage"
+		},
+		"chainsecurity": {
+			"description": "ChainSecurity - Security tool"
+		},
+		"halborn": {
+			"description": "Halborn - Security tool"
+		},
+		"zellic": {
+			"description": "Zellic - Security tool"
+		},
+		"veridise": {
+			"description": "Veridise - Security tool"
+		},
+		"pessimistic": {
+			"description": "Pessimistic - Security tool"
+		},
+		"cyfrin": {
+			"description": "Cyfrin - Security tool"
+		},
+		"yaudit": {
+			"description": "yAudit - Security tool"
+		}
+	}
+}

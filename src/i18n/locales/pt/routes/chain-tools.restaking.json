@@ -1,0 +1,62 @@
+{
+	"category_seo": {
+		"title": "Protocolos de Restaking - Capitalize Seu ETH Stakeado | BiuBiu Tools",
+		"description": "Aprenda sobre restaking com EigenLayer e protocolos similares. Capitalize ETH stakeado para segurança adicional e recompensas.",
+		"keywords": "restaking, eigenlayer, liquid restaking, staking eth, restaking capitalizacao",
+		"faqs": [
+			{
+				"question": "O que é restaking?",
+				"answer": "O restaking permite usar seu ETH já stakeado para garantir protocolos adicionais simultaneamente, ganhando recompensas de staking de múltiplas fontes. EigenLayer pioneiriza isso permitindo que os stakers validem serviços enquanto mantêm segurança do Ethereum."
+			},
+			{
+				"question": "Restaking vs Staking normal?",
+				"answer": "O staking normal garante Ethereum e ganha ~4% APR. O restaking permite que o mesmo ETH garanta serviços adicionais (oráculos, pontes, L2s) por recompensas extras. No entanto, o restaking adiciona riscos como condições de slashing adicionais e complexidade de contratos inteligentes."
+			},
+			{
+				"question": "Quais são os riscos do restaking?",
+				"answer": "Os riscos incluem: condições de slashing compostas (perder ETH por mau comportamento em múltiplos protocolos), vulnerabilidades de contratos inteligentes, riscos de liquidez em tokens de restaking líquido e centralização potencial se poucos operadores dominarem o restaking."
+			}
+		]
+	},
+	"tools": {
+		"eigenlayer": {
+			"description": "Restaking protocol for Ethereum security"
+		},
+		"etherfi": {
+			"description": "Decentralized staking protocol"
+		},
+		"karak": {
+			"description": "Universal restaking for multi-chain security"
+		},
+		"symbiotic": {
+			"description": "Permissionless and modular restaking protocol"
+		},
+		"babylon": {
+			"description": "Bitcoin staking protocol securing PoS networks"
+		},
+		"eigenpie": {
+			"description": "Magpie liquid restaking with isolated LRT tokens"
+		},
+		"bedrock": {
+			"description": "Universal liquid restaking with uniETH token"
+		},
+		"stakestone": {
+			"description": "Omnichain liquid restaking with STONE token"
+		},
+		"inception": {
+			"description": "Liquid restaking with instant unstaking via inETH"
+		},
+		"eigenda": {
+			"description": "EigenLayer data availability service for rollups"
+		},
+		"lagrange": {
+			"description": "ZK coprocessor AVS for cross-chain proving"
+		},
+		"espresso": {
+			"description": "Shared sequencing AVS for rollups"
+		},
+		"brevis": {
+			"description": "ZK coprocessor for historical blockchain data"
+		}
+	}
+}

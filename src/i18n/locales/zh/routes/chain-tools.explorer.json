@@ -1,0 +1,106 @@
+{
+	"category_seo": {
+		"title": "区块链浏览器 - 查看交易与智能合约 | BiuBiu Tools",
+		"description": "访问以太坊、BSC、Polygon 等网络的区块链浏览器。查看交易、验证合约、分析链上数据。",
+		"faqs": [
+			{
+				"question": "什么是区块链浏览器？",
+				"answer": "区块链浏览器是区块链数据的搜索引擎。它允许你查看交易、钱包余额、智能合约代码、代币转账和其他链上活动。"
+			},
+			{
+				"question": "如何验证智能合约？",
+				"answer": "在 Etherscan 上，进入合约地址，点击「Contract」标签，然后「Verify and Publish」。提交源代码、编译器版本和构造函数参数。验证后的合约会显示绿色勾号。"
+			},
+			{
+				"question": "最好的多链浏览器有哪些？",
+				"answer": "Blockscout 支持多个 EVM 链且开源。OKLink 覆盖 50+ 条链。对于特定链，使用原生浏览器如 Etherscan（以太坊）、BSCScan（BNB Chain）或 Arbiscan（Arbitrum）。"
+			}
+		]
+	},
+	"tools": {
+		"etherscan": {
+			"description": "以太坊区块浏览器"
+		},
+		"blockscout": {
+			"description": "开源多链区块浏览器"
+		},
+		"arbiscan": {
+			"description": "Arbitrum 区块浏览器"
+		},
+		"polygonscan": {
+			"description": "Polygon 区块浏览器"
+		},
+		"bscscan": {
+			"description": "BNB Chain 区块浏览器"
+		},
+		"basescan": {
+			"description": "Base 区块浏览器"
+		},
+		"snowtrace": {
+			"description": "Avalanche 区块浏览器"
+		},
+		"lineascan": {
+			"description": "Linea 区块浏览器"
+		},
+		"scrollscan": {
+			"description": "Scroll网络浏览器"
+		},
+		"mantlescan": {
+			"description": "Mantle网络浏览器"
+		},
+		"blastscan": {
+			"description": "Blast网络浏览器"
+		},
+		"modescan": {
+			"description": "Mode网络浏览器"
+		},
+		"celoscan": {
+			"description": "Celo区块链浏览器"
+		},
+		"ftmscan": {
+			"description": "Fantom网络浏览器"
+		},
+		"gnosisscan": {
+			"description": "Gnosis Chain浏览器"
+		},
+		"cronoscan": {
+			"description": "Cronos网络浏览器"
+		},
+		"moonbeamscan": {
+			"description": "Moonbeam和Moonriver浏览器"
+		},
+		"oklink": {
+			"description": "OKX多链区块浏览器"
+		},
+		"routescan": {
+			"description": "多链统一区块浏览器"
+		},
+		"onceupon": {
+			"description": "人性化交易叙事浏览器"
+		},
+		"anyabi": {
+			"description": "任意合约ABI获取工具"
+		},
+		"nearblocks": {
+			"description": "NearBlocks - Block explorer"
+		},
+		"blockchair": {
+			"description": "Blockchair - Block explorer"
+		},
+		"avascan": {
+			"description": "AvaScan - Block explorer"
+		},
+		"tronscan": {
+			"description": "TronScan - Block explorer"
+		},
+		"cardanoscan": {
+			"description": "Cardanoscan - Block explorer"
+		},
+		"viewblock": {
+			"description": "ViewBlock - Block explorer"
+		},
+		"suiscan": {
+			"description": "SuiScan - Block explorer"
+		}
+	}
+}

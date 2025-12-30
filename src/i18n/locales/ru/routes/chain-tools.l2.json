@@ -1,0 +1,50 @@
+{
+	"category_seo": {
+		"title": "Решения Layer 2 - Масштабирующие сети Ethereum | BiuBiu Tools",
+		"description": "Изучите решения масштабирования Layer 2 для Ethereum. Arbitrum, Optimism, Base, zkSync и другие роллапы с низкими комиссиями и быстрыми транзакциями.",
+		"keywords": "layer 2, l2, ethereum scaling, arbitrum, optimism, zksync, роллапы",
+		"faqs": [
+			{
+				"question": "Что такое Layer 2?",
+				"answer": "Layer 2 — это решения масштабирования, которые обрабатывают транзакции вне основной цепи Ethereum (L1), наследуя ее безопасность. Они предлагают более низкие комиссии и более быстрые транзакции. Типы включают Optimistic Rollups и ZK Rollups."
+			},
+			{
+				"question": "В чем разница между Optimistic и ZK Rollups?",
+				"answer": "Optimistic Rollups (Arbitrum, Optimism) предполагают, что транзакции действительны, и используют доказательства мошенничества. ZK Rollups (zkSync, Starknet) используют криптографические доказательства для мгновенной финальности, но более сложны в разработке."
+			},
+			{
+				"question": "Какой L2 мне использовать?",
+				"answer": "Arbitrum и Optimism имеют наибольшую активность DeFi. Base (Coinbase) быстро растет. zkSync и Starknet предлагают технологию ZK. Выбирайте в зависимости от dApps, которые хотите использовать, и соображений комиссий."
+			}
+		]
+	},
+	"tools": {
+		"l2beat": {
+			"description": "Анализ рисков и TVL Layer 2"
+		},
+		"optimism": {
+			"description": "L2 на базе OP Stack с видением Superchain"
+		},
+		"base": {
+			"description": "L2 от Coinbase, построенный на OP Stack"
+		},
+		"starknet": {
+			"description": "ZK rollup с использованием Cairo для доказательств достоверности"
+		},
+		"scroll": {
+			"description": "EVM-эквивалентный zkEVM rollup"
+		},
+		"linea": {
+			"description": "zkEVM L2 решение ConsenSys"
+		},
+		"mode": {
+			"description": "OP Stack L2 с фокусом на DeFi"
+		},
+		"mantle": {
+			"description": "Модульный L2 с уровнем доступности данных"
+		},
+		"superchain": {
+			"description": "Superцепь - Layer 2 scaling solution"
+		}
+	}
+}

@@ -1,0 +1,230 @@
+{
+	"category_seo": {
+		"title": "GameFi и Web3 игры - Play-to-Earn игры | BiuBiu Tools",
+		"description": "Откройте Web3-игры и платформы GameFi. Play-to-earn игры, игровые активы NFT и блокчейн-игровые гильдии.",
+		"keywords": "gamefi, web3 игры, play-to-earn, nft игры, блокчейн игры",
+		"faqs": [
+			{
+				"question": "Что такое GameFi?",
+				"answer": "GameFi сочетает игры с механиками DeFi. Игроки зарабатывают токены и NFT, играя в игры. Активы действительно принадлежат игрокам и могут торговаться или использоваться в разных играх."
+			},
+			{
+				"question": "Какие популярные Web3-игры?",
+				"answer": "Axie Infinity был пионером play-to-earn. Illuvium и Big Time — игры AAA-качества. Gods Unchained — популярная карточная игра. Пространство развивается с большим фокусом на геймплей."
+			},
+			{
+				"question": "Что такое игровые гильдии?",
+				"answer": "Игровые гильдии, такие как YGG и Merit Circle, объединяют ресурсы, чтобы помочь игрокам получить доступ к дорогим игровым NFT. Они дают стипендии игрокам и делят заработки. Полезно для игр с высокими входными затратами."
+			}
+		]
+	},
+	"tools": {
+		"immutable": {
+			"description": "Игровой L2 с zkEVM"
+		},
+		"ronin": {
+			"description": "Игровой сайдчейн для экосистемы Axie Infinity"
+		},
+		"treasure": {
+			"description": "Децентрализованная игровая экосистема на Arbitrum"
+		},
+		"beam": {
+			"description": "Игровой подсеть на Avalanche"
+		},
+		"stardust": {
+			"description": "SDK Web3 гейминга и решение кошелька"
+		},
+		"fractal": {
+			"description": "Маркетплейс и обнаружение игровых NFT"
+		},
+		"xai": {
+			"description": "Игровой L3, построенный на Arbitrum Orbit"
+		},
+		"ygg": {
+			"description": "Игровая гильдия с программами стипендий"
+		},
+		"loot8": {
+			"description": "Платформа NFT игровых коллекционных предметов"
+		},
+		"iskra": {
+			"description": "Платформа и сообщество Web3 гейминга"
+		},
+		"aavegotchi": {
+			"description": "DeFi-powered NFT gaming on Polygon"
+		},
+		"apeiron": {
+			"description": "God-game с roguelike elements on Polygon"
+		},
+		"aurory": {
+			"description": "Solana JRPG tactics game с NFT creatures"
+		},
+		"bigtime": {
+			"description": "Big Time - Web3 gaming платформа"
+		},
+		"blocklords": {
+			"description": "Medieval grи strategy game с dynasty building"
+		},
+		"blum": {
+			"description": "Telegram mini-app биржа и gaming платформа"
+		},
+		"carv": {
+			"description": "Gaming identity и credential протокол для Web3"
+		},
+		"catizen": {
+			"description": "Cat-themed Telegram game on TON блокчейн"
+		},
+		"cometh": {
+			"description": "Spaceship strategy game с DeFi elements"
+		},
+		"cryptoblades": {
+			"description": "Web3 RPG с play-to-earn mechanics"
+		},
+		"cyball": {
+			"description": "Football management game on BNB Chain"
+		},
+		"decentraland": {
+			"description": "Decentralи - Web3 gaming платформа"
+		},
+		"derace": {
+			"description": "NFT horse racing с breeding и betting"
+		},
+		"dogs": {
+			"description": "Dog-themed Telegram game on TON"
+		},
+		"era7": {
+			"description": "Trading card strategy game on BNB Chain"
+		},
+		"fusionist": {
+			"description": "Binance-listed AAA mech strategy game с ACE токен"
+		},
+		"gaimin": {
+			"description": "Gaming rewards платформа с GPU sharing"
+		},
+		"gamegpt": {
+			"description": "AI-powered gaming content generation платформа"
+		},
+		"gamestarter": {
+			"description": "Gaming launchpad и publisher для Web3 games"
+		},
+		"genopets": {
+			"description": "Move-to-earn pet game on Solana"
+		},
+		"gunz": {
+			"description": "AAA battle royale shooter from Gunzilla Games"
+		},
+		"honeyland": {
+			"description": "Bee-themed strategy game on Solana"
+		},
+		"illuvium": {
+			"description": "AAA auto-battler RPG on Immutable X"
+		},
+		"karrat": {
+			"description": "AI gaming экосистема powering My Pet Hooligan"
+		},
+		"kryptomon": {
+			"description": "Creature breeding mobile game on BNB Chain"
+		},
+		"loot": {
+			"description": "Composable NFT adventure gear project"
+		},
+		"lumiterra": {
+			"description": "Open-world survival crafting game on Polygon"
+		},
+		"major": {
+			"description": "Social ranking Telegram game on TON"
+		},
+		"metalcore": {
+			"description": "Mech combat game on Immutable X"
+		},
+		"mir4": {
+			"description": "Cross-платформа MMORPG с DRACO токен mining mechanics"
+		},
+		"mirandus": {
+			"description": "Fantasy RPG in an epic world by Gala Games"
+		},
+		"mobox": {
+			"description": "GameFi платформа с NFT farming on BNB Chain"
+		},
+		"momento": {
+			"description": "AI-powered gaming moments и highlights"
+		},
+		"notcoin": {
+			"description": "Telegram tap game that launched NOT токен"
+		},
+		"overworld": {
+			"description": "Action RPG с loot system on Immutable X"
+		},
+		"parallel": {
+			"description": "Sci-fi trading card game on Ethereum"
+		},
+		"pegaxy": {
+			"description": "PvP horse racing game on Polygon"
+		},
+		"pixelmon": {
+			"description": "Open-world creature collection RPG с evolving NFTs"
+		},
+		"pixels": {
+			"description": "Social farming game on Ronin цепь"
+		},
+		"pixelverse": {
+			"description": "Cyberpunk Telegram game с battles"
+		},
+		"playnance": {
+			"description": "Playnance - Web3 gaming платформа"
+		},
+		"rainmaker": {
+			"description": "Weather-based crypto prediction game"
+		},
+		"realm": {
+			"description": "Fantasy RPG с lи и resources on Polygon"
+		},
+		"revomon": {
+			"description": "VR monster battling game inspired by Pokemon"
+		},
+		"sandbox": {
+			"description": "The Sиbox - Web3 gaming платформа"
+		},
+		"shrapnel": {
+			"description": "Moddable extraction FPS on Avalanche"
+		},
+		"sipher": {
+			"description": "AAA multiplayer shooter on Ethereum"
+		},
+		"skyweaver": {
+			"description": "Free-to-play trading card game by Horizon"
+		},
+		"splinterlands": {
+			"description": "Splinterlиs - Web3 gaming платформа"
+		},
+		"stepn": {
+			"description": "Move-to-earn fitness app rewarding physical activity с токенs"
+		},
+		"superior": {
+			"description": "Roguelike co-op shooter on Gala Games платформа"
+		},
+		"superverse": {
+			"description": "NFT gaming маркетплейс и экосистема"
+		},
+		"treeverse": {
+			"description": "Anime-inspired MMORPG metaverse"
+		},
+		"ultiverse": {
+			"description": "Binance Labs-invested AI-powered metaverse gaming платформа"
+		},
+		"upland": {
+			"description": "Property trading metaverse mapped to real world"
+		},
+		"wildcard": {
+			"description": "Competitive arena game с card-based strategy"
+		},
+		"xpet": {
+			"description": "Social trading pet game on Arbitrum"
+		},
+		"xterio": {
+			"description": "Binance Labs-backed AI gaming платформа и publisher"
+		},
+		"yescoin": {
+			"description": "Telegram tap-to-earn game on TON"
+		}
+	}
+}

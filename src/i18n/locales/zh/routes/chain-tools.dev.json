@@ -1,0 +1,121 @@
+{
+	"category_seo": {
+		"title": "Web3 开发者工具 - 构建 dApp 与智能合约 | BiuBiu Tools",
+		"description": "在以太坊和其他区块链上构建的必备开发者工具。智能合约框架、测试工具和部署服务。",
+		"faqs": [
+			{
+				"question": "主要的智能合约开发框架有哪些？",
+				"answer": "Foundry 是最快、最流行的 Solidity 框架。Hardhat 提供出色的 JavaScript 集成和插件。Brownie 基于 Python。Anchor 是 Solana 程序的标准。"
+			},
+			{
+				"question": "如何获取测试网代币？",
+				"answer": "使用 Alchemy Faucet、Infura Faucet 或特定链的水龙头。Sepolia 是主要的以太坊测试网。大多数 L2 都有自己的测试网水龙头，可在其文档中找到链接。"
+			},
+			{
+				"question": "应该使用哪些 RPC 提供商？",
+				"answer": "Alchemy 和 Infura 最可靠，免费额度慷慨。QuickNode 性能很快。去中心化选项可考虑 Ankr 或 POKT Network。始终准备备用 RPC 端点。"
+			}
+		]
+	},
+	"tools": {
+		"tenderly": {
+			"description": "Tenderly - 智能合约调试和监控"
+		},
+		"chainlist": {
+			"description": "一键添加 EVM 网络到钱包"
+		},
+		"remix": {
+			"description": "浏览器版 Solidity IDE"
+		},
+		"foundry": {
+			"description": "高性能以太坊开发工具包"
+		},
+		"hardhat": {
+			"description": "以太坊开发环境框架"
+		},
+		"viem": {
+			"description": "TypeScript 以太坊库"
+		},
+		"wagmi": {
+			"description": "以太坊 React Hooks"
+		},
+		"rainbowkit": {
+			"description": "React 钱包连接 UI"
+		},
+		"web3modal": {
+			"description": "多框架钱包连接"
+		},
+		"thirdweb": {
+			"description": "全栈 Web3 开发平台"
+		},
+		"alchemy": {
+			"description": "Alchemy - Web3 开发平台和 API"
+		},
+		"infura": {
+			"description": "以太坊 API 基础设施"
+		},
+		"quicknode": {
+			"description": "多链节点基础设施"
+		},
+		"sourcify": {
+			"description": "去中心化合约验证"
+		},
+		"brownie": {
+			"description": "Python智能合约框架"
+		},
+		"ape": {
+			"description": "模块化Python框架"
+		},
+		"pyth": {
+			"description": "实时价格预言机"
+		},
+		"goldsky": {
+			"description": "实时数据流"
+		},
+		"envio": {
+			"description": "快速区块链索引器"
+		},
+		"covalent": {
+			"description": "统一区块链数据API"
+		},
+		"transpose": {
+			"description": "实时SQL区块链数据"
+		},
+		"chainbase": {
+			"description": "一体化数据平台"
+		},
+		"useweb3": {
+			"description": "Web3开发者学习资源导航"
+		},
+		"buildspace": {
+			"description": "项目制Web3学习社区"
+		},
+		"pointer": {
+			"description": "边学边赚加密开发教程"
+		},
+		"chainide": {
+			"description": "云端多链智能合约IDE"
+		},
+		"constructor": {
+			"description": "可视化智能合约构建器"
+		},
+		"bunzz": {
+			"description": "Bunzz - 智能合约部署市场"
+		},
+		"crossmint": {
+			"description": "企业级NFT基础设施API"
+		},
+		"moralis": {
+			"description": "Moralis - Developer tool"
+		},
+		"circom": {
+			"description": "Circom - Developer tool"
+		},
+		"protostar": {
+			"description": "Protostar - Developer tool"
+		},
+		"starkli": {
+			"description": "Starkli - Developer tool"
+		}
+	}
+}

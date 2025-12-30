@@ -26,7 +26,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	// {
 	// 	id: 'a16z-crypto',
 	// 	name: 'a16z crypto',
-	// 	descriptionKey: 'chain-tools.tools.a16z_crypto.description',
+	// 	descriptionKey: 'chain-tools.web3_teams.tools.a16z_crypto.description',
 	// 	url: 'https://a16zcrypto.com',
 	// 	icon: Building2,
 	// 	category: 'web3-teams',
@@ -37,7 +37,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'paradigm-vc',
 		name: 'Paradigm',
-		descriptionKey: 'chain-tools.tools.paradigm_vc.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.paradigm_vc.description',
 		url: 'https://www.paradigm.xyz',
 		icon: Building2,
 		category: 'web3-teams',
@@ -47,7 +47,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'sequoia-crypto',
 		name: 'Sequoia Capital',
-		descriptionKey: 'chain-tools.tools.sequoia_crypto.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.sequoia_crypto.description',
 		url: 'https://www.sequoiacap.com',
 		icon: Building2,
 		category: 'web3-teams',
@@ -57,7 +57,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'polychain-capital',
 		name: 'Polychain Capital',
-		descriptionKey: 'chain-tools.tools.polychain_capital.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.polychain_capital.description',
 		url: 'https://polychain.capital',
 		icon: Building2,
 		category: 'web3-teams',
@@ -67,7 +67,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'pantera-capital',
 		name: 'Pantera Capital',
-		descriptionKey: 'chain-tools.tools.pantera_capital.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.pantera_capital.description',
 		url: 'https://panteracapital.com',
 		icon: Building2,
 		category: 'web3-teams',
@@ -77,7 +77,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'dragonfly-capital',
 		name: 'Dragonfly',
-		descriptionKey: 'chain-tools.tools.dragonfly_capital.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.dragonfly_capital.description',
 		url: 'https://www.dragonfly.xyz',
 		icon: Building2,
 		category: 'web3-teams',
@@ -87,7 +87,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'multicoin-capital',
 		name: 'Multicoin Capital',
-		descriptionKey: 'chain-tools.tools.multicoin_capital.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.multicoin_capital.description',
 		url: 'https://multicoin.capital',
 		icon: Building2,
 		category: 'web3-teams',
@@ -97,7 +97,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'electric-capital',
 		name: 'Electric Capital',
-		descriptionKey: 'chain-tools.tools.electric_capital.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.electric_capital.description',
 		url: 'https://www.electriccapital.com',
 		icon: Building2,
 		category: 'web3-teams',
@@ -108,7 +108,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'framework-ventures',
 		name: 'Framework Ventures',
-		descriptionKey: 'chain-tools.tools.framework_ventures.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.framework_ventures.description',
 		url: 'https://framework.ventures',
 		icon: TrendingUp,
 		category: 'web3-teams',
@@ -118,7 +118,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'delphi-ventures',
 		name: 'Delphi Ventures',
-		descriptionKey: 'chain-tools.tools.delphi_ventures.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.delphi_ventures.description',
 		url: 'https://delphidigital.io/ventures',
 		icon: TrendingUp,
 		category: 'web3-teams',
@@ -128,7 +128,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'placeholder-vc',
 		name: 'Placeholder',
-		descriptionKey: 'chain-tools.tools.placeholder_vc.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.placeholder_vc.description',
 		url: 'https://placeholder.vc',
 		icon: TrendingUp,
 		category: 'web3-teams',
@@ -138,7 +138,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'variant-fund',
 		name: 'Variant',
-		descriptionKey: 'chain-tools.tools.variant_fund.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.variant_fund.description',
 		url: 'https://variant.fund',
 		icon: TrendingUp,
 		category: 'web3-teams',
@@ -148,7 +148,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'hashed-vc',
 		name: 'Hashed',
-		descriptionKey: 'chain-tools.tools.hashed_vc.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.hashed_vc.description',
 		url: 'https://hashed.com',
 		icon: Globe,
 		category: 'web3-teams',
@@ -158,7 +158,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'spartan-group',
 		name: 'Spartan Group',
-		descriptionKey: 'chain-tools.tools.spartan_group.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.spartan_group.description',
 		url: 'https://spartangroup.io',
 		icon: TrendingUp,
 		category: 'web3-teams',
@@ -168,7 +168,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'hack-vc',
 		name: 'Hack VC',
-		descriptionKey: 'chain-tools.tools.hack_vc.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.hack_vc.description',
 		url: 'https://hack.vc',
 		icon: Rocket,
 		category: 'web3-teams',
@@ -178,7 +178,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'bankless-ventures',
 		name: 'Bankless Ventures',
-		descriptionKey: 'chain-tools.tools.bankless_ventures.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.bankless_ventures.description',
 		url: 'https://www.banklessventures.com',
 		icon: TrendingUp,
 		category: 'web3-teams',
@@ -188,7 +188,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: '1kx-capital',
 		name: '1kx',
-		descriptionKey: 'chain-tools.tools.1kx_capital.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.1kx_capital.description',
 		url: 'https://1kx.network',
 		icon: TrendingUp,
 		category: 'web3-teams',
@@ -198,7 +198,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'robot-ventures',
 		name: 'Robot Ventures',
-		descriptionKey: 'chain-tools.tools.robot_ventures.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.robot_ventures.description',
 		url: 'https://robvc.com',
 		icon: Rocket,
 		category: 'web3-teams',
@@ -209,7 +209,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'coinbase-ventures',
 		name: 'Coinbase Ventures',
-		descriptionKey: 'chain-tools.tools.coinbase_ventures.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.coinbase_ventures.description',
 		url: 'https://www.coinbase.com/ventures',
 		icon: Building2,
 		category: 'web3-teams',
@@ -219,7 +219,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'binance-labs',
 		name: 'Binance Labs',
-		descriptionKey: 'chain-tools.tools.binance_labs.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.binance_labs.description',
 		url: 'https://labs.binance.com',
 		icon: Building2,
 		category: 'web3-teams',
@@ -229,7 +229,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'okx-ventures',
 		name: 'OKX Ventures',
-		descriptionKey: 'chain-tools.tools.okx_ventures.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.okx_ventures.description',
 		url: 'https://www.okx.com/ventures',
 		icon: Building2,
 		category: 'web3-teams',
@@ -239,7 +239,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'kraken-ventures',
 		name: 'Kraken Ventures',
-		descriptionKey: 'chain-tools.tools.kraken_ventures.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.kraken_ventures.description',
 		url: 'https://www.kraken.com/ventures',
 		icon: Building2,
 		category: 'web3-teams',
@@ -249,7 +249,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'circle-ventures',
 		name: 'Circle Ventures',
-		descriptionKey: 'chain-tools.tools.circle_ventures.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.circle_ventures.description',
 		url: 'https://www.circle.com/en/circle-ventures',
 		icon: Building2,
 		category: 'web3-teams',
@@ -259,7 +259,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'galaxy-ventures',
 		name: 'Galaxy Ventures',
-		descriptionKey: 'chain-tools.tools.galaxy_ventures.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.galaxy_ventures.description',
 		url: 'https://www.galaxy.com/ventures',
 		icon: Building2,
 		category: 'web3-teams',
@@ -270,7 +270,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'alliance-dao',
 		name: 'Alliance',
-		descriptionKey: 'chain-tools.tools.alliance_dao.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.alliance_dao.description',
 		url: 'https://alliance.xyz',
 		icon: Rocket,
 		category: 'web3-teams',
@@ -280,7 +280,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'ycombinator-crypto',
 		name: 'Y Combinator',
-		descriptionKey: 'chain-tools.tools.ycombinator_crypto.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.ycombinator_crypto.description',
 		url: 'https://www.ycombinator.com',
 		icon: Rocket,
 		category: 'web3-teams',
@@ -290,7 +290,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'outlier-ventures',
 		name: 'Outlier Ventures',
-		descriptionKey: 'chain-tools.tools.outlier_ventures.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.outlier_ventures.description',
 		url: 'https://outlierventures.io',
 		icon: Rocket,
 		category: 'web3-teams',
@@ -300,7 +300,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'longhash-ventures',
 		name: 'LongHash Ventures',
-		descriptionKey: 'chain-tools.tools.longhash_ventures.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.longhash_ventures.description',
 		url: 'https://www.longhash.vc',
 		icon: Rocket,
 		category: 'web3-teams',
@@ -310,7 +310,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'techstars-crypto',
 		name: 'Techstars',
-		descriptionKey: 'chain-tools.tools.techstars_crypto.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.techstars_crypto.description',
 		url: 'https://www.techstars.com',
 		icon: Rocket,
 		category: 'web3-teams',
@@ -321,7 +321,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'consensys-team',
 		name: 'Consensys',
-		descriptionKey: 'chain-tools.tools.consensys_team.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.consensys_team.description',
 		url: 'https://consensys.io',
 		icon: Users,
 		category: 'web3-teams',
@@ -331,7 +331,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'offchain-labs',
 		name: 'Offchain Labs',
-		descriptionKey: 'chain-tools.tools.offchain_labs.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.offchain_labs.description',
 		url: 'https://offchainlabs.com',
 		icon: Users,
 		category: 'web3-teams',
@@ -341,7 +341,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'matter-labs',
 		name: 'Matter Labs',
-		descriptionKey: 'chain-tools.tools.matter_labs.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.matter_labs.description',
 		url: 'https://matter-labs.io',
 		icon: Users,
 		category: 'web3-teams',
@@ -351,7 +351,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'optimism-team',
 		name: 'OP Labs',
-		descriptionKey: 'chain-tools.tools.optimism_team.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.optimism_team.description',
 		url: 'https://optimism.io',
 		icon: Users,
 		category: 'web3-teams',
@@ -361,7 +361,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'alchemy-team',
 		name: 'Alchemy',
-		descriptionKey: 'chain-tools.tools.alchemy_team.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.alchemy_team.description',
 		url: 'https://www.alchemy.com',
 		icon: Users,
 		category: 'web3-teams',
@@ -371,7 +371,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'chainlink-labs',
 		name: 'Chainlink Labs',
-		descriptionKey: 'chain-tools.tools.chainlink_labs.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.chainlink_labs.description',
 		url: 'https://chainlinklabs.com',
 		icon: Users,
 		category: 'web3-teams',
@@ -381,7 +381,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'eigenlayer-team',
 		name: 'Eigen Labs',
-		descriptionKey: 'chain-tools.tools.eigenlayer_team.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.eigenlayer_team.description',
 		url: 'https://www.eigenlayer.xyz',
 		icon: Users,
 		category: 'web3-teams',
@@ -391,7 +391,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'uniswap-labs',
 		name: 'Uniswap Labs',
-		descriptionKey: 'chain-tools.tools.uniswap_labs.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.uniswap_labs.description',
 		url: 'https://uniswap.org',
 		icon: Users,
 		category: 'web3-teams',
@@ -402,7 +402,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'jump-crypto',
 		name: 'Jump Crypto',
-		descriptionKey: 'chain-tools.tools.jump_crypto.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.jump_crypto.description',
 		url: 'https://jumpcrypto.com',
 		icon: Briefcase,
 		category: 'web3-teams',
@@ -412,7 +412,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'wintermute-trading',
 		name: 'Wintermute',
-		descriptionKey: 'chain-tools.tools.wintermute_trading.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.wintermute_trading.description',
 		url: 'https://wintermute.com',
 		icon: Briefcase,
 		category: 'web3-teams',
@@ -422,7 +422,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'gauntlet-network',
 		name: 'Gauntlet',
-		descriptionKey: 'chain-tools.tools.gauntlet_network.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.gauntlet_network.description',
 		url: 'https://gauntlet.network',
 		icon: Target,
 		category: 'web3-teams',
@@ -433,7 +433,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'dealroom-crypto',
 		name: 'Dealroom',
-		descriptionKey: 'chain-tools.tools.dealroom_crypto.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.dealroom_crypto.description',
 		url: 'https://dealroom.co/guides/web3',
 		icon: DollarSign,
 		category: 'web3-teams',
@@ -443,7 +443,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'pitchbook-crypto',
 		name: 'PitchBook',
-		descriptionKey: 'chain-tools.tools.pitchbook_crypto.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.pitchbook_crypto.description',
 		url: 'https://pitchbook.com',
 		icon: DollarSign,
 		category: 'web3-teams',
@@ -453,7 +453,7 @@ export const web3TeamsTools: ExternalTool[] = [
 	{
 		id: 'crypto-fundraising',
 		name: 'Crypto Fundraising',
-		descriptionKey: 'chain-tools.tools.crypto_fundraising.description',
+		descriptionKey: 'chain-tools.web3_teams.tools.crypto_fundraising.description',
 		url: 'https://crypto-fundraising.info',
 		icon: DollarSign,
 		category: 'web3-teams',

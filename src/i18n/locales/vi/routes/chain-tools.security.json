@@ -1,0 +1,146 @@
+{
+	"category_seo": {
+		"title": "Công Cụ Bảo Mật Web3 - Kiểm Toán, Giám Sát & Bảo Vệ | BiuBiu Tools",
+		"description": "Công cụ bảo mật thiết yếu cho Web3. Kiểm toán smart contract, mô phỏng giao dịch, quản lý phê duyệt và phát hiện mối đe dọa thời gian thực.",
+		"keywords": "web3 security, smart contract audit, revoke approvals, transaction simulation, defi security",
+		"faqs": [
+			{
+				"question": "Làm thế nào để thu hồi phê duyệt token?",
+				"answer": "Sử dụng các công cụ như Revoke.cash để xem và thu hồi các phê duyệt token không giới hạn mà bạn đã cấp cho smart contract. Điều này ngăn chặn các khai thác tiềm năng nếu một hợp đồng bị xâm phạm."
+			},
+			{
+				"question": "Mô phỏng giao dịch là gì?",
+				"answer": "Mô phỏng giao dịch (các công cụ như Pocket Universe) xem trước những gì sẽ xảy ra trước khi bạn ký giao dịch, giúp bạn tránh lừa đảo và kết quả không mong muốn."
+			},
+			{
+				"question": "Làm thế nào để xác minh smart contract an toàn?",
+				"answer": "Kiểm tra xem hợp đồng có được kiểm toán bởi các công ty uy tín không, xác minh mã trên Etherscan, tìm các chương trình bug bounty và kiểm tra lịch sử và TVL của giao thức."
+			}
+		]
+	},
+	"tools": {
+		"revoke": {
+			"description": "Quản lý và thu hồi phê duyệt token"
+		},
+		"slither": {
+			"description": "Framework phân tích tĩnh"
+		},
+		"mythx": {
+			"description": "API bảo mật hợp đồng thông minh"
+		},
+		"certik": {
+			"description": "Security audits and skynet"
+		},
+		"hacken": {
+			"description": "Blockchain security auditing"
+		},
+		"immunefi": {
+			"description": "Web3 bug bounty platform"
+		},
+		"openzeppelin": {
+			"description": "Smart contract security library"
+		},
+		"dedaub": {
+			"description": "Smart contract security tools and decompiler"
+		},
+		"honeypot": {
+			"description": "Token honeypot detection"
+		},
+		"phalcon": {
+			"description": "Transaction analysis explorer"
+		},
+		"chainalysis": {
+			"description": "Blockchain compliance platform"
+		},
+		"hexagate": {
+			"description": "Real-time smart contract threat monitoring"
+		},
+		"hypernative": {
+			"description": "AI-powered security monitoring and prevention"
+		},
+		"chainalert": {
+			"description": "Blockchain security alerts and notifications"
+		},
+		"webacy": {
+			"description": "Wallet safety backup and crypto inheritance"
+		},
+		"harpie": {
+			"description": "On-chain firewall and scam protection"
+		},
+		"blowfish": {
+			"description": "Transaction simulation and threat prevention"
+		},
+		"stelo": {
+			"description": "Human-readable transaction previews"
+		},
+		"fire": {
+			"description": "Transaction simulation for wallet protection"
+		},
+		"scamsniffer": {
+			"description": "Scam and phishing detection service"
+		},
+		"peckshield": {
+			"description": "Blockchain security audit and research firm"
+		},
+		"slowmist": {
+			"description": "Security audit and incident investigation"
+		},
+		"quantstamp": {
+			"description": "Enterprise blockchain security auditing"
+		},
+		"spearbit": {
+			"description": "Expert security researchers network"
+		},
+		"railgun": {
+			"description": "Private DeFi with zk-SNARKs on EVM chains"
+		},
+		"aztec": {
+			"description": "Programmable privacy with zk-rollup"
+		},
+		"nocturne": {
+			"description": "Private account layer for Ethereum"
+		},
+		"umbra": {
+			"description": "Stealth address payments on EVM chains"
+		},
+		"labyrinth": {
+			"description": "Compliant privacy for institutions"
+		},
+		"elusiv": {
+			"description": "Compliant privacy payments on Solana"
+		},
+		"zcash": {
+			"description": "Native privacy blockchain with shielded transactions"
+		},
+		"forta": {
+			"description": "Real-time threat detection network"
+		},
+		"code4rena": {
+			"description": "Community-driven audit contests"
+		},
+		"sherlock": {
+			"description": "Audit contests with exploit coverage"
+		},
+		"chainsecurity": {
+			"description": "ChainSecurity - Security tool"
+		},
+		"halborn": {
+			"description": "Halborn - Security tool"
+		},
+		"zellic": {
+			"description": "Zellic - Security tool"
+		},
+		"veridise": {
+			"description": "Veridise - Security tool"
+		},
+		"pessimistic": {
+			"description": "Pessimistic - Security tool"
+		},
+		"cyfrin": {
+			"description": "Cyfrin - Security tool"
+		},
+		"yaudit": {
+			"description": "yAudit - Security tool"
+		}
+	}
+}

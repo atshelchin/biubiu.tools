@@ -1,0 +1,35 @@
+{
+	"category_seo": {
+		"title": "MEV - Valor Extraível Máximo em Blockchain | BiuBiu Tools",
+		"description": "Entenda MEV (Valor Extraível Máximo): front-running, back-running, arbitragem sandwich e proteção MEV para transações blockchain.",
+		"keywords": "mev, valor extraivel maximo, front running, sandwich attack, flashbots, mev protection",
+		"faqs": [
+			{
+				"question": "O que é MEV?",
+				"answer": "MEV (Valor Extraível Máximo, antes Minerador) refere-se ao lucro que validadores/buscadores podem extrair de usuários ao reordenar, incluir ou excluir transações em blocos. Os exemplos comuns incluem arbitragem, liquidações e ataques sandwich em exchanges DEX."
+			},
+			{
+				"question": "Como o MEV me afeta?",
+				"answer": "MEV pode resultar em pior execução de preço para suas trocas (slippage do front-running), transações falhadas devido a competição de bots e maiores taxas de gas. Os ataques sandwich especificamente compram antes e vendem depois de sua negociação, extraindo valor."
+			},
+			{
+				"question": "Como me protejo de MEV?",
+				"answer": "Use RPCs de proteção MEV (como Flashbots Protect), configure slippage apropriado, evite grandes negociações em pools de baixa liquidez, considere agregadores DEX com proteção MEV incorporada (CowSwap), ou divida negociações grandes em partes menores."
+			}
+		]
+	},
+	"tools": {
+		"beaverbuild": {
+			"description": "Top Ethereum block builder with high market share"
+		},
+		"zeromev": {
+			"description": "Track MEV extraction across Ethereum blocks"
+		},
+		"relayscan": {
+			"description": "Analytics for MEV-Boost relays and builder performance"
+		},
+		"suave": {
+			"description": "Single Unified Auction for Value Expression - future of MEV"
+		}
+	}
+}

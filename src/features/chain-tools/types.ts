@@ -86,3 +86,75 @@ export interface ChainToolsPageData {
 	};
 	structuredData: Array<Record<string, unknown>>;
 }
+
+/**
+ * Social links for a tool
+ */
+export interface ToolSocialLinks {
+	twitter?: string;
+	discord?: string;
+	telegram?: string;
+	github?: string;
+	docs?: string;
+}
+
+/**
+ * FAQ item
+ */
+export interface ToolFAQ {
+	question: string;
+	answer: string;
+}
+
+/**
+ * Tool detail page extended data
+ * Used for rich content pages with SEO optimization
+ *
+ * Note: Text content uses i18n keys, actual content is in translation files
+ */
+export interface ToolDetail {
+	id: string; // Matches ExternalTool.id
+
+	// i18n key prefix for this tool's content
+	// e.g., 'chain-tools-detail.tools.uniswap'
+	i18nKeyPrefix: string;
+
+	// Number of content items (for rendering)
+	featureCount: number; // Number of features (5-8)
+	useCaseCount: number; // Number of use cases (3-5)
+	faqCount: number; // Number of FAQs (4-6)
+
+	// Project info (not translated - factual data)
+	founded?: string; // Year founded
+	team?: string; // Team name/info
+	funding?: string; // Funding info
+
+	// Social links (URLs, not translated)
+	socialLinks?: ToolSocialLinks;
+
+	// Related tools (tool IDs, not translated)
+	relatedTools: string[];
+
+	// Metadata
+	lastUpdated: string; // ISO date string
+}
+
+/**
+ * Tool detail page data for SSR
+ */
+export interface ToolDetailPageData {
+	tool: ExternalTool;
+	detail: ToolDetail;
+	category: Category;
+	relatedToolsData: ExternalTool[];
+	meta: {
+		title: string;
+		description: string;
+		keywords: string;
+		canonical: string;
+		type: 'website';
+		image: string;
+		locale: string;
+	};
+	structuredData: Array<Record<string, unknown>>;
+}

@@ -1,0 +1,91 @@
+{
+	"category_seo": {
+		"title": "加密支付 - 支付处理与卡服务 | BiuBiu Tools",
+		"description": "面向企业和个人的加密支付解决方案。支付处理器、加密卡和商户服务。",
+		"faqs": [
+			{
+				"question": "加密支付如何运作？",
+				"answer": "加密支付直接在区块链上转移价值。对于商户，BitPay 等支付处理器将加密货币转换为法币。Coinbase Card 等加密卡让你可以在任何地方消费加密货币。"
+			},
+			{
+				"question": "最好的加密卡有哪些？",
+				"answer": "Coinbase Card 和 Crypto.com Card 可用范围广。Gnosis Pay 提供 DeFi 集成。在选择前比较返现率、支持的国家和费用结构。"
+			},
+			{
+				"question": "企业可以接受加密支付吗？",
+				"answer": "可以，使用 BitPay、Coinbase Commerce 等支付处理器或直接钱包支付。考虑波动性、税务影响以及是否立即转换为法币。"
+			}
+		]
+	},
+	"tools": {
+		"moonpay": {
+			"description": "加密货币法币出入金"
+		},
+		"transak": {
+			"description": "法币转加密货币支付基础设施"
+		},
+		"ramp": {
+			"description": "非托管法币入金 SDK"
+		},
+		"onmeta": {
+			"description": "面向印度用户的法币入金"
+		},
+		"superfluid": {
+			"description": "实时代币流支付"
+		},
+		"sablier": {
+			"description": "用于归属和薪资的代币流"
+		},
+		"coinshift": {
+			"description": "资金库管理和多签操作"
+		},
+		"spritz": {
+			"description": "用加密货币通过 ACH 支付账单"
+		},
+		"bitpay": {
+			"description": "面向商家的加密支付处理"
+		},
+		"holyheld": {
+			"description": "非托管加密Visa卡"
+		},
+		"fusepay": {
+			"description": "Fuse网络支付解决方案"
+		},
+		"loopcrypto": {
+			"description": "链上订阅支付协议"
+		},
+		"reveel": {
+			"description": "链上收入分成协议"
+		},
+		"splits": {
+			"description": "无需信任的支付拆分"
+		},
+		"nowpayments": {
+			"description": "NOWPayments - Crypto payment solution"
+		},
+		"monerium": {
+			"description": "Monerium - Crypto payment solution"
+		},
+		"wyre": {
+			"description": "Wyre - Crypto payment solution"
+		},
+		"banxa": {
+			"description": "Banxa - Crypto payment solution"
+		},
+		"simplex": {
+			"description": "Simplex - Crypto payment solution"
+		},
+		"sardine": {
+			"description": "Sardine - Crypto payment solution"
+		},
+		"coinflow": {
+			"description": "Coinflow - Crypto payment solution"
+		},
+		"llamapay": {
+			"description": "LlamaPay - Crypto payment solution"
+		},
+		"parcel": {
+			"description": "Parcel - Crypto payment solution"
+		}
+	}
+}

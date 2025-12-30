@@ -1,0 +1,37 @@
+{
+	"category_seo": {
+		"title": "Stablecoins - USDC, USDT, DAI & More | BiuBiu Tools",
+		"description": "Learn about stablecoins and their use cases. Fiat-backed, algorithmic, and decentralized stablecoins for DeFi and payments.",
+		"faqs": [
+			{
+				"question": "What are stablecoins?",
+				"answer": "Stablecoins are cryptocurrencies pegged to stable assets like USD. Types include fiat-backed (USDC, USDT), crypto-backed (DAI), and algorithmic stablecoins."
+			},
+			{
+				"question": "Which stablecoin is safest?",
+				"answer": "USDC is highly regulated and transparent. USDT has the most liquidity but less transparency. DAI is decentralized but has smart contract risk. Diversification is wise."
+			},
+			{
+				"question": "What happened to UST?",
+				"answer": "UST was an algorithmic stablecoin that collapsed in May 2022, losing its peg and causing $40B+ in losses. It highlighted the risks of algorithmic designs without proper collateral."
+			}
+		]
+	},
+	"tools": {
+		"frax": {
+			"description": "Fractional-algorithmic stablecoin with partial collateralization"
+		},
+		"tusd": {
+			"description": "Regulated and audited USD-backed stablecoin"
+		},
+		"sfrax": {
+			"description": "Staked FRAX earning yield from Frax protocol"
+		},
+		"fdusd": {
+			"description": "First Digital USD (FDUSD) - Stablecoin"
+		},
+		"flexusd": {
+			"description": "flexUSD - Stablecoin"
+		}
+	}
+}

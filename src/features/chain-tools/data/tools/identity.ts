@@ -9,7 +9,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'ens',
 		name: 'ENS',
-		descriptionKey: 'chain-tools.tools.ens.description',
+		descriptionKey: 'chain-tools.identity.tools.ens.description',
 		url: 'https://ens.domains',
 		icon: Globe,
 		category: 'identity',
@@ -21,7 +21,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'unstoppable-domains',
 		name: 'Unstoppable Domains',
-		descriptionKey: 'chain-tools.tools.unstoppable_domains.description',
+		descriptionKey: 'chain-tools.identity.tools.unstoppable_domains.description',
 		url: 'https://unstoppabledomains.com',
 		icon: Globe,
 		category: 'identity',
@@ -32,7 +32,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'space-id',
 		name: 'SPACE ID',
-		descriptionKey: 'chain-tools.tools.space_id.description',
+		descriptionKey: 'chain-tools.identity.tools.space_id.description',
 		url: 'https://space.id',
 		icon: Globe,
 		category: 'identity',
@@ -43,7 +43,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'dotbit',
 		name: '.bit',
-		descriptionKey: 'chain-tools.tools.dotbit.description',
+		descriptionKey: 'chain-tools.identity.tools.dotbit.description',
 		url: 'https://did.id',
 		icon: Globe,
 		category: 'identity',
@@ -56,7 +56,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'gitcoin-passport',
 		name: 'Gitcoin Passport',
-		descriptionKey: 'chain-tools.tools.gitcoin_passport.description',
+		descriptionKey: 'chain-tools.identity.tools.gitcoin_passport.description',
 		url: 'https://passport.gitcoin.co',
 		icon: BadgeCheck,
 		category: 'identity',
@@ -67,7 +67,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'worldcoin',
 		name: 'Worldcoin',
-		descriptionKey: 'chain-tools.tools.worldcoin.description',
+		descriptionKey: 'chain-tools.identity.tools.worldcoin.description',
 		url: 'https://worldcoin.org',
 		icon: Eye,
 		category: 'identity',
@@ -78,7 +78,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'civic',
 		name: 'Civic',
-		descriptionKey: 'chain-tools.tools.civic.description',
+		descriptionKey: 'chain-tools.identity.tools.civic.description',
 		url: 'https://www.civic.com',
 		icon: BadgeCheck,
 		category: 'identity',
@@ -91,7 +91,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'galxe',
 		name: 'Galxe',
-		descriptionKey: 'chain-tools.tools.galxe.description',
+		descriptionKey: 'chain-tools.identity.tools.galxe.description',
 		url: 'https://galxe.com',
 		icon: Trophy,
 		category: 'identity',
@@ -102,7 +102,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'layer3',
 		name: 'Layer3',
-		descriptionKey: 'chain-tools.tools.layer3.description',
+		descriptionKey: 'chain-tools.identity.tools.layer3.description',
 		url: 'https://layer3.xyz',
 		icon: Trophy,
 		category: 'identity',
@@ -113,7 +113,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'poap',
 		name: 'POAP',
-		descriptionKey: 'chain-tools.tools.poap.description',
+		descriptionKey: 'chain-tools.identity.tools.poap.description',
 		url: 'https://poap.xyz',
 		icon: Award,
 		category: 'identity',
@@ -124,7 +124,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'galxe-passport',
 		name: 'Galxe Passport',
-		descriptionKey: 'chain-tools.tools.galxe_passport.description',
+		descriptionKey: 'chain-tools.identity.tools.galxe_passport.description',
 		url: 'https://galxe.com/passport',
 		icon: BadgeCheck,
 		category: 'identity',
@@ -136,7 +136,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'degenscore',
 		name: 'DegenScore',
-		descriptionKey: 'chain-tools.tools.degenscore.description',
+		descriptionKey: 'chain-tools.identity.tools.degenscore.description',
 		url: 'https://degenscore.com',
 		icon: Award,
 		category: 'identity',
@@ -147,7 +147,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'talent-protocol',
 		name: 'Talent Protocol',
-		descriptionKey: 'chain-tools.tools.talent_protocol.description',
+		descriptionKey: 'chain-tools.identity.tools.talent_protocol.description',
 		url: 'https://talentprotocol.com',
 		icon: Users,
 		category: 'identity',
@@ -160,7 +160,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'phi',
 		name: 'Phi',
-		descriptionKey: 'chain-tools.tools.phi.description',
+		descriptionKey: 'chain-tools.identity.tools.phi.description',
 		url: 'https://philand.xyz',
 		icon: Globe,
 		category: 'identity',
@@ -170,7 +170,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'otterspace',
 		name: 'Otterspace',
-		descriptionKey: 'chain-tools.tools.otterspace.description',
+		descriptionKey: 'chain-tools.identity.tools.otterspace.description',
 		url: 'https://otterspace.xyz',
 		icon: BadgeCheck,
 		category: 'identity',
@@ -180,7 +180,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'disco',
 		name: 'Disco',
-		descriptionKey: 'chain-tools.tools.disco.description',
+		descriptionKey: 'chain-tools.identity.tools.disco.description',
 		url: 'https://disco.xyz',
 		icon: Fingerprint,
 		category: 'identity',
@@ -192,7 +192,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'holonym',
 		name: 'Holonym',
-		descriptionKey: 'chain-tools.tools.holonym.description',
+		descriptionKey: 'chain-tools.identity.tools.holonym.description',
 		url: 'https://holonym.id',
 		icon: Fingerprint,
 		category: 'identity',
@@ -202,7 +202,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'anima',
 		name: 'Anima',
-		descriptionKey: 'chain-tools.tools.anima.description',
+		descriptionKey: 'chain-tools.identity.tools.anima.description',
 		url: 'https://anima.io',
 		icon: Fingerprint,
 		category: 'identity',
@@ -212,7 +212,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'polygon-id',
 		name: 'Polygon ID',
-		descriptionKey: 'chain-tools.tools.polygon_id.description',
+		descriptionKey: 'chain-tools.identity.tools.polygon_id.description',
 		url: 'https://polygon.technology/polygon-id',
 		icon: Fingerprint,
 		category: 'identity',
@@ -223,7 +223,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'sismo-protocol',
 		name: 'Sismo',
-		descriptionKey: 'chain-tools.tools.sismo_protocol.description',
+		descriptionKey: 'chain-tools.identity.tools.sismo_protocol.description',
 		url: 'https://sismo.io',
 		icon: Fingerprint,
 		category: 'identity',
@@ -233,7 +233,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'clique-protocol',
 		name: 'Clique',
-		descriptionKey: 'chain-tools.tools.clique_protocol.description',
+		descriptionKey: 'chain-tools.identity.tools.clique_protocol.description',
 		url: 'https://clique.social',
 		icon: Fingerprint,
 		category: 'identity',
@@ -243,7 +243,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'masa-protocol',
 		name: 'Masa',
-		descriptionKey: 'chain-tools.tools.masa_protocol.description',
+		descriptionKey: 'chain-tools.identity.tools.masa_protocol.description',
 		url: 'https://masa.finance',
 		icon: Fingerprint,
 		category: 'identity',
@@ -253,7 +253,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'reclaim-protocol',
 		name: 'Reclaim Protocol',
-		descriptionKey: 'chain-tools.tools.reclaim_protocol.description',
+		descriptionKey: 'chain-tools.identity.tools.reclaim_protocol.description',
 		url: 'https://reclaimprotocol.org',
 		icon: Fingerprint,
 		category: 'identity',
@@ -263,7 +263,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'humanity-protocol',
 		name: 'Humanity Protocol',
-		descriptionKey: 'chain-tools.tools.humanity_protocol.description',
+		descriptionKey: 'chain-tools.identity.tools.humanity_protocol.description',
 		url: 'https://humanity.org',
 		icon: Fingerprint,
 		category: 'identity',
@@ -273,7 +273,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'rarimo',
 		name: 'Rarimo',
-		descriptionKey: 'chain-tools.tools.rarimo.description',
+		descriptionKey: 'chain-tools.identity.tools.rarimo.description',
 		url: 'https://rarimo.com',
 		icon: Fingerprint,
 		category: 'identity',
@@ -283,7 +283,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'spruce-id',
 		name: 'SpruceID',
-		descriptionKey: 'chain-tools.tools.spruce_id.description',
+		descriptionKey: 'chain-tools.identity.tools.spruce_id.description',
 		url: 'https://spruceid.com',
 		icon: Fingerprint,
 		category: 'identity',
@@ -293,7 +293,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'verax',
 		name: 'Verax',
-		descriptionKey: 'chain-tools.tools.verax.description',
+		descriptionKey: 'chain-tools.identity.tools.verax.description',
 		url: 'https://verax.linea.build',
 		icon: BadgeCheck,
 		category: 'identity',
@@ -306,7 +306,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'bns',
 		name: 'BNS (Base Name Service)',
-		descriptionKey: 'chain-tools.tools.bns.description',
+		descriptionKey: 'chain-tools.identity.tools.bns.description',
 		url: 'https://base.org/names',
 		icon: Globe,
 		category: 'identity',
@@ -317,7 +317,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'linea-name-service',
 		name: 'Linea Name Service',
-		descriptionKey: 'chain-tools.tools.linea_name_service.description',
+		descriptionKey: 'chain-tools.identity.tools.linea_name_service.description',
 		url: 'https://lineans.app',
 		icon: Globe,
 		category: 'identity',
@@ -328,7 +328,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'bonfida-sns',
 		name: 'Bonfida (SNS)',
-		descriptionKey: 'chain-tools.tools.bonfida_sns.description',
+		descriptionKey: 'chain-tools.identity.tools.bonfida_sns.description',
 		url: 'https://www.sns.id',
 		icon: Globe,
 		category: 'identity',
@@ -339,7 +339,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'eas',
 		name: 'EAS (Ethereum Attestation Service)',
-		descriptionKey: 'chain-tools.tools.eas.description',
+		descriptionKey: 'chain-tools.identity.tools.eas.description',
 		url: 'https://attest.sh',
 		icon: BadgeCheck,
 		category: 'identity',
@@ -350,7 +350,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'zkpass',
 		name: 'zkPass',
-		descriptionKey: 'chain-tools.tools.zkpass.description',
+		descriptionKey: 'chain-tools.identity.tools.zkpass.description',
 		url: 'https://zkpass.org',
 		icon: Fingerprint,
 		category: 'identity',
@@ -360,7 +360,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'clr-fund',
 		name: 'clr.fund',
-		descriptionKey: 'chain-tools.tools.clr_fund.description',
+		descriptionKey: 'chain-tools.identity.tools.clr_fund.description',
 		url: 'https://clr.fund',
 		icon: BadgeCheck,
 		category: 'identity',
@@ -371,7 +371,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'privado-id',
 		name: 'Privado ID',
-		descriptionKey: 'chain-tools.tools.privado_id.description',
+		descriptionKey: 'chain-tools.identity.tools.privado_id.description',
 		url: 'https://iden3.io',
 		icon: Fingerprint,
 		category: 'identity',
@@ -381,7 +381,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'guild-xyz',
 		name: 'Guild.xyz',
-		descriptionKey: 'chain-tools.tools.guild_xyz.description',
+		descriptionKey: 'chain-tools.identity.tools.guild_xyz.description',
 		url: 'https://guild.xyz',
 		icon: Users,
 		category: 'identity',
@@ -391,7 +391,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'brightid',
 		name: 'BrightID',
-		descriptionKey: 'chain-tools.tools.brightid.description',
+		descriptionKey: 'chain-tools.identity.tools.brightid.description',
 		url: 'https://brightid.org',
 		icon: Eye,
 		category: 'identity',
@@ -401,7 +401,7 @@ export const identityTools: ExternalTool[] = [
 	{
 		id: 'nomis',
 		name: 'Nomis',
-		descriptionKey: 'chain-tools.tools.nomis.description',
+		descriptionKey: 'chain-tools.identity.tools.nomis.description',
 		url: 'https://nomis.cc',
 		icon: Award,
 		category: 'identity',

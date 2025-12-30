@@ -1,0 +1,66 @@
+{
+	"category_seo": {
+		"title": "Plateformes de Restaking - Récompenses de Staking Maximisées | BiuBiu Tools",
+		"description": "Maximisez les récompenses de staking avec les protocoles de restaking. Explorez EigenLayer et autres solutions de restaking pour rendements additionnels.",
+		"keywords": "restaking, eigenlayer, staking ethereum, rendements de staking",
+		"faqs": [
+			{
+				"question": "Qu'est-ce que le restaking ?",
+				"answer": "Le restaking permet aux stakers d'utiliser leurs actifs déjà stakés pour sécuriser des protocoles additionnels et gagner des récompenses supplémentaires. Il maximise l'utilité du capital tout en maintenant la sécurité du réseau principal."
+			},
+			{
+				"question": "Comment fonctionne le restaking ?",
+				"answer": "Les utilisateurs stakent leurs tokens (comme ETH) normalement, puis opt-in pour le restaking via des protocoles comme EigenLayer. Leurs tokens stakés sécurisent ensuite à la fois Ethereum et d'autres services, gagnant plusieurs flux de récompenses."
+			},
+			{
+				"question": "Quels sont les risques du restaking ?",
+				"answer": "Les risques incluent : conditions de slashing additionnelles depuis plusieurs protocoles, complexité technique accrue, risques de smart contract et surcollatéralisation potentielle. Les rendements plus élevés viennent avec des risques correspondants plus élevés."
+			},
+			{
+				"question": "Qu'est-ce qu'EigenLayer ?",
+				"answer": "EigenLayer est le protocole de restaking pionnier sur Ethereum. Il permet aux stakers de réutiliser leur ETH staké pour sécuriser des services additionnels (AVS - Actively Validated Services) et gagner des récompenses supplémentaires au-delà du staking ETH standard."
+			}
+		]
+	},
+	"tools": {
+		"eigenlayer": {
+			"description": "Restaking protocole pour Ethereum sécurité"
+		},
+		"etherfi": {
+			"description": "Decentralized staking protocole"
+		},
+		"karak": {
+			"description": "Universal restaking pour multi-chain sécurité"
+		},
+		"symbiotic": {
+			"description": "Permissionless et modular restaking protocole"
+		},
+		"babylon": {
+			"description": "Bitcoin staking protocole securing PoS réseaux"
+		},
+		"eigenpie": {
+			"description": "Magpie liquid restaking avec isolated LRT tokens"
+		},
+		"bedrock": {
+			"description": "Universal liquid restaking avec uniETH token"
+		},
+		"stakestone": {
+			"description": "Omnichain liquid restaking avec STONE token"
+		},
+		"inception": {
+			"description": "Liquid restaking avec instant unstaking via inETH"
+		},
+		"eigenda": {
+			"description": "EigenLayer données availability service pour rollups"
+		},
+		"lagrange": {
+			"description": "ZK coprocessor AVS pour cross-chain proving"
+		},
+		"espresso": {
+			"description": "Shared sequencing AVS pour rollups"
+		},
+		"brevis": {
+			"description": "ZK coprocessor pour historical blockchain données"
+		}
+	}
+}

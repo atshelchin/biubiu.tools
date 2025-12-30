@@ -1,0 +1,77 @@
+{
+	"category_seo": {
+		"title": "Не-EVM блокчейны - Solana, Bitcoin, Cosmos и другие | BiuBiu Tools",
+		"description": "Исследуйте экосистемы не-EVM блокчейнов. Solana, Bitcoin, Cosmos, Aptos, Sui и их уникальные инструменты и dApps.",
+		"keywords": "не-evm блокчейны, solana, bitcoin, cosmos, альтернативные блокчейны",
+		"faqs": [
+			{
+				"question": "Что такое не-EVM цепи?",
+				"answer": "Не-EVM цепи не используют виртуальную машину Ethereum. У них разные архитектуры — Solana использует Rust, Bitcoin имеет свой собственный скрипт, Cosmos использует CosmWasm. Каждая имеет уникальные компромиссы."
+			},
+			{
+				"question": "Зачем использовать не-EVM цепи?",
+				"answer": "Разные цепи оптимизированы для разных вещей. Solana для скорости и низких комиссий, Bitcoin для безопасности и децентрализации, Cosmos для интероперабельности, Move-цепи для безопасности."
+			},
+			{
+				"question": "Как создать мост к не-EVM цепям?",
+				"answer": "Используйте специальные мосты, такие как Wormhole (мультичейн), Portal (Solana) или IBC (Cosmos). Некоторые централизованные биржи поддерживают прямые депозиты/выводы на не-EVM цепи."
+			}
+		]
+	},
+	"tools": {
+		"algorand": {
+			"description": "Pure Proof of Stake блокчейн с instant finality"
+		},
+		"cardano": {
+			"description": "Research-driven блокчейн с peer-reviewed development"
+		},
+		"celestia": {
+			"description": "Modular data availability layer для rollups"
+		},
+		"dedust": {
+			"description": "DEX и DeFi платформа on TON"
+		},
+		"dymension": {
+			"description": "RollApp hub built on Cosmos для modular rollups"
+		},
+		"injective": {
+			"description": "DeFi-focused Cosmos цепь для derivatives trading"
+		},
+		"layerzero": {
+			"description": "Omniцепь interoperability протокол для trustless messaging"
+		},
+		"liquidswap": {
+			"description": "First AMM DEX on Aptos by Pontem"
+		},
+		"mintscan": {
+			"description": "Мультичейн Cosmos экосистема обозреватель"
+		},
+		"osmosis": {
+			"description": "Ведущий DEX in Cosmos экосистема с IBC integration"
+		},
+		"polkadot": {
+			"description": "Heterogeneous мультичейн сеть с paraцепьs"
+		},
+		"raydium": {
+			"description": "Solana AMM и liquidity provider с concentrated pools"
+		},
+		"solscan": {
+			"description": "Популярный Solana обозреватель с токен аналитика и NFT support"
+		},
+		"stacks": {
+			"description": "Bitcoin L2 bringing smart contracts to BTC"
+		},
+		"subscan": {
+			"description": "Мультичейн обозреватель для Polkadot и Substrate сетьs"
+		},
+		"tezos": {
+			"description": "Self-amending блокчейн с дляmal verification"
+		},
+		"tonkeeper": {
+			"description": "Популярный TON кошелек с Telegram integration"
+		},
+		"tonscan": {
+			"description": "TON блокчейн обозреватель для transactions и jettons"
+		}
+	}
+}

@@ -1,0 +1,49 @@
+{
+	"category_seo": {
+		"title": "Layer 2 解决方案 - 以太坊扩容网络 | BiuBiu Tools",
+		"description": "探索以太坊的 Layer 2 扩容解决方案。Arbitrum、Optimism、Base、zkSync 等 Rollup，费用更低、交易更快。",
+		"faqs": [
+			{
+				"question": "什么是 Layer 2？",
+				"answer": "Layer 2 是在以太坊主链（L1）之外处理交易的扩容解决方案，同时继承其安全性。它们提供更低的费用和更快的交易。类型包括 Optimistic Rollups 和 ZK Rollups。"
+			},
+			{
+				"question": "Optimistic 和 ZK Rollups 有什么区别？",
+				"answer": "Optimistic Rollups（Arbitrum、Optimism）假设交易有效并使用欺诈证明。ZK Rollups（zkSync、Starknet）使用加密证明实现即时最终性，但构建更复杂。"
+			},
+			{
+				"question": "应该使用哪个 L2？",
+				"answer": "Arbitrum 和 Optimism 的 DeFi 活动最多。Base（Coinbase）增长很快。zkSync 和 Starknet 提供 ZK 技术。根据你想使用的 dApp 和费用考虑来选择。"
+			}
+		]
+	},
+	"tools": {
+		"l2beat": {
+			"description": "Layer 2 风险和 TVL 分析"
+		},
+		"optimism": {
+			"description": "基于 OP Stack 的以太坊 L2，愿景是超级链"
+		},
+		"base": {
+			"description": "Coinbase 基于 OP Stack 构建的 L2"
+		},
+		"starknet": {
+			"description": "使用 Cairo 进行有效性证明的 ZK Rollup"
+		},
+		"scroll": {
+			"description": "EVM 等效的 zkEVM Rollup"
+		},
+		"linea": {
+			"description": "ConsenSys 的 zkEVM L2 解决方案"
+		},
+		"mode": {
+			"description": "专注 DeFi 的 OP Stack L2"
+		},
+		"mantle": {
+			"description": "带数据可用性层的模块化 L2"
+		},
+		"superchain": {
+			"description": "Superchain - Layer 2 scaling solution"
+		}
+	}
+}

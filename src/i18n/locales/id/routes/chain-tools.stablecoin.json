@@ -1,0 +1,37 @@
+{
+	"category_seo": {
+		"title": "Stablecoin - USDC, USDT, DAI & Lainnya | BiuBiu Tools",
+		"description": "Pelajari tentang stablecoin dan kasus penggunaannya. Stablecoin yang didukung fiat, algoritmik, dan terdesentralisasi untuk DeFi dan pembayaran.",
+		"faqs": [
+			{
+				"question": "Apa itu stablecoin?",
+				"answer": "Stablecoin adalah cryptocurrency yang dipatok ke aset stabil seperti USD. Jenisnya termasuk yang didukung fiat (USDC, USDT), didukung kripto (DAI), dan stablecoin algoritmik."
+			},
+			{
+				"question": "Stablecoin mana yang paling aman?",
+				"answer": "USDC sangat diatur dan transparan. USDT memiliki likuiditas paling banyak tetapi transparansi lebih rendah. DAI terdesentralisasi tetapi memiliki risiko smart contract. Diversifikasi adalah bijaksana."
+			},
+			{
+				"question": "Apa yang terjadi pada UST?",
+				"answer": "UST adalah stablecoin algoritmik yang kolaps pada Mei 2022, kehilangan patokannya dan menyebabkan kerugian $40B+. Ini menyoroti risiko desain algoritmik tanpa kolateral yang tepat."
+			}
+		]
+	},
+	"tools": {
+		"frax": {
+			"description": "Stablecoin algoritma fraksional dengan kolateralisasi parsial"
+		},
+		"tusd": {
+			"description": "Regulated and audited USD-backed stablecoin"
+		},
+		"sfrax": {
+			"description": "Staked FRAX earning yield from Frax protocol"
+		},
+		"fdusd": {
+			"description": "First Digital USD (FDUSD) - Stablecoin"
+		},
+		"flexusd": {
+			"description": "flexUSD - Stablecoin"
+		}
+	}
+}

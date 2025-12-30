@@ -1,0 +1,34 @@
+{
+	"category_seo": {
+		"title": "Crypto Trends & VC Activity - Market Intelligence | BiuBiu Tools",
+		"description": "Track crypto market trends and venture capital activity. Investment data, emerging narratives, and market movements.",
+		"faqs": [
+			{
+				"question": "How do I identify crypto trends early?",
+				"answer": "Follow VC investment announcements, track smart money on-chain, monitor social sentiment, watch developer activity metrics, and participate in builder communities."
+			},
+			{
+				"question": "Which VCs are most active in crypto?",
+				"answer": "a16z, Paradigm, Polychain, and Multicoin are top-tier. Animoca and Spartan for gaming. Track their portfolios for themes they're betting on."
+			},
+			{
+				"question": "What current trends should I watch?",
+				"answer": "AI agents, restaking, RWAs, and Bitcoin L2s are current hot themes. Trends cycle - what's hot today may cool off. Focus on fundamentals over hype."
+			}
+		]
+	},
+	"tools": {
+		"santiment": {
+			"description": "On-chain and social metrics"
+		},
+		"lunarcrush": {
+			"description": "Social sentiment analytics"
+		},
+		"token2049": {
+			"description": "Asia's premier crypto conference"
+		},
+		"developerreport": {
+			"description": "Annual developer ecosystem report"
+		}
+	}
+}

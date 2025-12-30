@@ -1,0 +1,80 @@
+{
+	"category_seo": {
+		"title": "Identidade Web3 - ENS, Credenciais On-Chain e Reputação | BiuBiu Tools",
+		"description": "Ferramentas de identidade Web3 incluindo Ethereum Name Service (ENS), credenciais verificáveis, sistemas de reputação e serviços de identidade descentralizada.",
+		"keywords": "identidade web3, ens, ethereum name service, credenciais on-chain, identidade descentralizada, did",
+		"faqs": [
+			{
+				"question": "O que é um nome ENS?",
+				"answer": "ENS (Ethereum Name Service) converte longos endereços de carteira (0x123...) em nomes legíveis como 'alice.eth'. É como DNS para blockchain, tornando mais fácil enviar cripto e construir sua identidade Web3."
+			},
+			{
+				"question": "Por que preciso de identidade Web3?",
+				"answer": "A identidade Web3 ajuda a construir reputação on-chain, possuir sua identidade digital, verificar credenciais sem intermediários e ter portabilidade entre plataformas. É essencial para redes sociais descentralizadas e futuras aplicações Web3."
+			},
+			{
+				"question": "O que são credenciais verificáveis?",
+				"answer": "As credenciais verificáveis são conquistas ou atributos digitais (como participação em eventos, certificações, memberships) emitidos on-chain que você pode provar sem revelar informações desnecessárias. São usadas para provas de participação, controle de acesso e reputação."
+			}
+		]
+	},
+	"tools": {
+		"ens": {
+			"description": "Ethereum Name Service for human-readable addresses"
+		},
+		"dotbit": {
+			"description": "Cross-chain decentralized identity protocol"
+		},
+		"galxe": {
+			"description": "Web3 credential and campaign platform"
+		},
+		"layer3": {
+			"description": "Learn-to-earn quests and Web3 onboarding"
+		},
+		"degenscore": {
+			"description": "On-chain reputation and DeFi score"
+		},
+		"civic": {
+			"description": "Identity verification and KYC solutions"
+		},
+		"poap": {
+			"description": "Proof of Attendance Protocol for event badges"
+		},
+		"phi": {
+			"description": "Metaverse identity and credential land"
+		},
+		"otterspace": {
+			"description": "Soulbound badges for DAO membership"
+		},
+		"disco": {
+			"description": "Verifiable credentials data backpack"
+		},
+		"holonym": {
+			"description": "Privacy-preserving identity verification with ZK"
+		},
+		"anima": {
+			"description": "Biometric identity for sybil resistance"
+		},
+		"rarimo": {
+			"description": "Rarimo - Identity and credentials"
+		},
+		"verax": {
+			"description": "Verax - Identity and credentials"
+		},
+		"bns": {
+			"description": "BNS (Base Name Service) - Identity and credentials"
+		},
+		"eas": {
+			"description": "EAS (Ethereum Attestation Service) - Identity and credentials"
+		},
+		"zkpass": {
+			"description": "zkPass - Identity and credentials"
+		},
+		"brightid": {
+			"description": "BrightID - Identity and credentials"
+		},
+		"nomis": {
+			"description": "Nomis - Identity and credentials"
+		}
+	}
+}

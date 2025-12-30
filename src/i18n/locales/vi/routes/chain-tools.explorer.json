@@ -1,0 +1,106 @@
+{
+	"category_seo": {
+		"title": "Trình Khám Phá Blockchain - Xem Giao Dịch & Smart Contract | BiuBiu Tools",
+		"description": "Truy cập trình khám phá blockchain cho Ethereum, BSC, Polygon và các mạng khác. Xem giao dịch, xác minh hợp đồng và phân tích dữ liệu on-chain.",
+		"faqs": [
+			{
+				"question": "Trình khám phá blockchain là gì?",
+				"answer": "Trình khám phá blockchain là công cụ tìm kiếm cho dữ liệu blockchain. Nó cho phép bạn xem giao dịch, số dư ví, mã smart contract, chuyển token và hoạt động on-chain khác."
+			},
+			{
+				"question": "Làm thế nào để xác minh smart contract?",
+				"answer": "Trên Etherscan, đi đến địa chỉ hợp đồng, nhấp vào tab 'Contract', sau đó 'Verify and Publish'. Gửi mã nguồn, phiên bản trình biên dịch và đối số constructor. Hợp đồng đã xác minh hiển thị dấu kiểm màu xanh."
+			},
+			{
+				"question": "Trình khám phá đa chuỗi tốt nhất là gì?",
+				"answer": "Blockscout hỗ trợ nhiều chuỗi EVM và là mã nguồn mở. OKLink bao phủ hơn 50 chuỗi. Đối với chuỗi cụ thể, sử dụng trình khám phá gốc như Etherscan (Ethereum), BSCScan (BNB Chain) hoặc Arbiscan (Arbitrum)."
+			}
+		]
+	},
+	"tools": {
+		"etherscan": {
+			"description": "Trình khám phá blockchain Ethereum"
+		},
+		"blockscout": {
+			"description": "Trình khám phá khối mã nguồn mở"
+		},
+		"arbiscan": {
+			"description": "Arbitrum blockchain explorer"
+		},
+		"polygonscan": {
+			"description": "Polygon blockchain explorer"
+		},
+		"bscscan": {
+			"description": "BNB Chain blockchain explorer"
+		},
+		"basescan": {
+			"description": "Base blockchain explorer"
+		},
+		"snowtrace": {
+			"description": "Avalanche blockchain explorer"
+		},
+		"lineascan": {
+			"description": "Linea blockchain explorer"
+		},
+		"scrollscan": {
+			"description": "Scroll network explorer"
+		},
+		"mantlescan": {
+			"description": "Mantle network explorer"
+		},
+		"blastscan": {
+			"description": "Blast network explorer"
+		},
+		"modescan": {
+			"description": "Mode network explorer"
+		},
+		"celoscan": {
+			"description": "Celo blockchain explorer"
+		},
+		"ftmscan": {
+			"description": "Fantom network explorer"
+		},
+		"gnosisscan": {
+			"description": "Gnosis Chain explorer"
+		},
+		"cronoscan": {
+			"description": "Cronos network explorer"
+		},
+		"moonbeamscan": {
+			"description": "Moonbeam & Moonriver explorer"
+		},
+		"oklink": {
+			"description": "Multi-chain blockchain explorer by OKX"
+		},
+		"routescan": {
+			"description": "Unified multi-chain block explorer"
+		},
+		"onceupon": {
+			"description": "Human-readable blockchain transaction explorer"
+		},
+		"anyabi": {
+			"description": "Smart contract ABI lookup and decoder"
+		},
+		"nearblocks": {
+			"description": "NearBlocks - Block explorer"
+		},
+		"blockchair": {
+			"description": "Blockchair - Block explorer"
+		},
+		"avascan": {
+			"description": "AvaScan - Block explorer"
+		},
+		"tronscan": {
+			"description": "TronScan - Block explorer"
+		},
+		"cardanoscan": {
+			"description": "Cardanoscan - Block explorer"
+		},
+		"viewblock": {
+			"description": "ViewBlock - Block explorer"
+		},
+		"suiscan": {
+			"description": "SuiScan - Block explorer"
+		}
+	}
+}

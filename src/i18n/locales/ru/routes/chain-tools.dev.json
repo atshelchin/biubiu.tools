@@ -1,0 +1,122 @@
+{
+	"category_seo": {
+		"title": "Инструменты разработчика Web3 - Создание dApps и смарт-контрактов | BiuBiu Tools",
+		"description": "Необходимые инструменты разработчика для создания на Ethereum и других блокчейнах. Фреймворки смарт-контрактов, инструменты тестирования и сервисы развертывания.",
+		"keywords": "инструменты разработчика web3, разработка solidity, hardhat, foundry, ethereum разработка",
+		"faqs": [
+			{
+				"question": "Какие основные фреймворки разработки смарт-контрактов?",
+				"answer": "Foundry — самый быстрый и популярный для Solidity. Hardhat предлагает отличную интеграцию с JavaScript и плагины. Brownie основан на Python. Anchor — стандарт для программ Solana."
+			},
+			{
+				"question": "Как получить тестовые токены?",
+				"answer": "Используйте faucets, такие как Alchemy Faucet, Infura Faucet или специфичные для цепи faucets. Sepolia — основная тестовая сеть Ethereum. Большинство L2 имеют свои собственные тестовые faucets, ссылки на которые есть в их документации."
+			},
+			{
+				"question": "Какие RPC-провайдеры следует использовать?",
+				"answer": "Alchemy и Infura — самые надежные с щедрыми бесплатными уровнями. QuickNode предлагает быструю производительность. Для децентрализованных вариантов рассмотрите Ankr или POKT Network. Всегда имейте резервные RPC-эндпоинты."
+			}
+		]
+	},
+	"tools": {
+		"tenderly": {
+			"description": "Отладка и мониторинг смарт-контрактов"
+		},
+		"chainlist": {
+			"description": "Добавление EVM-сетей в ваш кошелек"
+		},
+		"remix": {
+			"description": "Браузерная IDE для Solidity"
+		},
+		"foundry": {
+			"description": "Молниеносно быстрый Solidity инструментарий"
+		},
+		"hardhat": {
+			"description": "Среда разработки Ethereum"
+		},
+		"viem": {
+			"description": "TypeScript библиотека Ethereum"
+		},
+		"wagmi": {
+			"description": "React хуки для Ethereum"
+		},
+		"rainbowkit": {
+			"description": "UI подключения кошелька React"
+		},
+		"web3modal": {
+			"description": "Мультифреймворковое подключение кошелька"
+		},
+		"thirdweb": {
+			"description": "Полностековая разработка Web3"
+		},
+		"alchemy": {
+			"description": "Платформа разработки Web3 и API"
+		},
+		"infura": {
+			"description": "Инфраструктура Ethereum API"
+		},
+		"quicknode": {
+			"description": "Мультичейн инфраструктура нод"
+		},
+		"sourcify": {
+			"description": "Децентрализованная проверка контрактов"
+		},
+		"brownie": {
+			"description": "Python фреймворк смарт-контрактов"
+		},
+		"ape": {
+			"description": "Модульный Python фреймворк"
+		},
+		"pyth": {
+			"description": "Оракул цен в реальном времени"
+		},
+		"goldsky": {
+			"description": "Потоковая передача и индексация данных блокчейна в реальном времени"
+		},
+		"envio": {
+			"description": "HyperSync для ультрабыстрой индексации блокчейна"
+		},
+		"covalent": {
+			"description": "Унифицированный API данных блокчейна"
+		},
+		"transpose": {
+			"description": "Данные блокчейна в реальном времени с SQL API"
+		},
+		"chainbase": {
+			"description": "Платформа данных все-в-одном"
+		},
+		"useweb3": {
+			"description": "Курированные ресурсы для изучения Web3"
+		},
+		"buildspace": {
+			"description": "Сообщество обучения Web3 на основе проектов"
+		},
+		"pointer": {
+			"description": "Изучение разработки Web3 и заработок крипто"
+		},
+		"chainide": {
+			"description": "Облачная IDE для мультичейн разработки"
+		},
+		"bunzz": {
+			"description": "Bunzz - Smart contract deployment маркетплейс"
+		},
+		"circom": {
+			"description": "Circom - Developer инструмент"
+		},
+		"constructor": {
+			"description": "Visual no-code smart contract builder"
+		},
+		"crossmint": {
+			"description": "NFT minting API с fiat payments"
+		},
+		"moralis": {
+			"description": "Moralis - Developer инструмент"
+		},
+		"protostar": {
+			"description": "Protostar - Developer инструмент"
+		},
+		"starkli": {
+			"description": "Starkli - Developer инструмент"
+		}
+	}
+}

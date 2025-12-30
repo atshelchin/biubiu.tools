@@ -1,0 +1,116 @@
+{
+	"category_seo": {
+		"title": "NFT Tools - Marketplaces, Analytics & Creation | BiuBiu Tools",
+		"description": "Find the best NFT marketplaces, analytics tools, and creation platforms. Discover OpenSea, Blur, and other top NFT tools.",
+		"keywords": "nft tools, nft marketplace, opensea, blur, nft analytics, nft creation",
+		"faqs": [
+			{
+				"question": "What is an NFT?",
+				"answer": "NFT (Non-Fungible Token) is a unique digital asset on the blockchain representing ownership of items like art, music, collectibles, and virtual real estate. Each NFT is unique and cannot be replicated."
+			},
+			{
+				"question": "Where can I buy NFTs?",
+				"answer": "Popular NFT marketplaces include OpenSea (largest general marketplace), Blur (for traders), Magic Eden (Solana), and Foundation (curated art). Each platform has different fees and features."
+			},
+			{
+				"question": "How do I create an NFT?",
+				"answer": "To create an NFT: 1) Create digital artwork or content, 2) Choose a blockchain (Ethereum, Solana, etc.), 3) Select a marketplace like OpenSea, 4) Connect your wallet and upload your content, 5) Set pricing and list for sale."
+			}
+		]
+	},
+	"tools": {
+		"opensea": {
+			"description": "Largest NFT marketplace"
+		},
+		"blur": {
+			"description": "Pro NFT marketplace for traders"
+		},
+		"reservoir": {
+			"description": "NFT liquidity infrastructure"
+		},
+		"rarible": {
+			"description": "Create and trade NFTs on any chain"
+		},
+		"zora": {
+			"description": "NFT creation and marketplace"
+		},
+		"foundation": {
+			"description": "Curated digital art marketplace"
+		},
+		"manifold": {
+			"description": "NFT creator tools and contracts"
+		},
+		"nftnerds": {
+			"description": "NFT trading and analytics"
+		},
+		"looksrare": {
+			"description": "Community NFT marketplace"
+		},
+		"x2y2": {
+			"description": "Low-fee NFT marketplace"
+		},
+		"gem": {
+			"description": "NFT aggregator and sweeper"
+		},
+		"nftfi": {
+			"description": "NFT-collateralized loans"
+		},
+		"arcade": {
+			"description": "NFT lending protocol"
+		},
+		"mintfun": {
+			"description": "NFT minting discovery"
+		},
+		"sudoswap": {
+			"description": "NFT AMM for instant liquidity and trading"
+		},
+		"caviar": {
+			"description": "NFT fractionalization and AMM protocol"
+		},
+		"nftx": {
+			"description": "NFT liquidity protocol with vaulted floor prices"
+		},
+		"tessera": {
+			"description": "Collective NFT ownership through fractionalization"
+		},
+		"premint": {
+			"description": "NFT allowlist and whitelist management tool"
+		},
+		"bueno": {
+			"description": "No-code generative NFT art creation tool"
+		},
+		"highlight": {
+			"description": "Creator tools for NFT minting and distribution"
+		},
+		"tokenproof": {
+			"description": "NFT verification and token-gated experiences"
+		},
+		"rabbithole": {
+			"description": "On-chain quests and credential earning"
+		},
+		"tensor": {
+			"description": "Professional NFT trading on Solana"
+		},
+		"hyperspace": {
+			"description": "NFT aggregator and marketplace on Solana"
+		},
+		"tradeport": {
+			"description": "NFT marketplace for Sui and Aptos"
+		},
+		"campfire": {
+			"description": "NFT marketplace on Avalanche"
+		},
+		"paintswap": {
+			"description": "NFT marketplace on Fantom and Sonic"
+		},
+		"unlockd": {
+			"description": "Unlockd - NFT platform"
+		},
+		"formfunction": {
+			"description": "Formfunction - NFT platform"
+		},
+		"oncyber": {
+			"description": "Oncyber - NFT platform"
+		}
+	}
+}

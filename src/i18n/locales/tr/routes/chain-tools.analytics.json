@@ -1,0 +1,140 @@
+{
+	"category_seo": {
+		"title": "Blokzincir Analitik Araçları - Zincir Üstü Veriler ve İçgörüler | BiuBiu Tools",
+		"description": "Zincir üstü veriler, cüzdan takibi ve piyasa içgörüleri için önde gelen blokzincir analitik platformlarını keşfedin. Dune, Nansen ve Arkham gibi araçlar.",
+		"keywords": "blokzincir analitik, zincir üstü veri, dune analytics, nansen, arkham, cüzdan takibi",
+		"faqs": [
+			{
+				"question": "Zincir üstü analitik nedir?",
+				"answer": "Zincir üstü analitik, cüzdan davranışı, fon akışları, protokol kullanımı ve piyasa trendleri hakkında içgörü kazanmak için blokzincir işlem verilerini analiz etmeyi içerir. Tüccarlara ve araştırmacılara bilinçli kararlar almada yardımcı olur."
+			},
+			{
+				"question": "Akıllı para takibi nedir?",
+				"answer": "Akıllı para takibi, başarılı tüccarların, balinaların ve kurumların cüzdanlarını izleyerek ticaret modellerini anlamak ve potansiyel olarak stratejilerini takip etmektir."
+			},
+			{
+				"question": "Hangi analitik aracını kullanmalıyım?",
+				"answer": "Dune özel SQL sorguları için harika, Nansen akıllı para takibi için, Arkham varlık etiketleme için ve DefiLlama TVL verileri için. Özel ihtiyaçlarınıza göre seçin."
+			}
+		]
+	},
+	"tools": {
+		"dune": {
+			"description": "Özel SQL sorguları ile blokzincir analitik"
+		},
+		"defillama": {
+			"description": "DeFi TVL toplayıcısı ve protokol analitiği"
+		},
+		"nansen": {
+			"description": "Akıllı para takibi ile zincir üstü analitik"
+		},
+		"arkham": {
+			"description": "Blokzincir istihbarat platformu"
+		},
+		"ultrasound": {
+			"description": "ETH arz ve yakma takipçisi"
+		},
+		"allium": {
+			"description": "Enterprise blokzincir data platiçinm"
+		},
+		"amberdata": {
+			"description": "Amberdata - Blokzincir analitik"
+		},
+		"artemis": {
+			"description": "Fundamental crypto analitik ve research"
+		},
+		"bitquery": {
+			"description": "Bitquery - Blokzincir analitik"
+		},
+		"blockpour": {
+			"description": "Blockpour - Blokzincir analitik"
+		},
+		"chainanalytics": {
+			"description": "Custom blokzincir data dashboards"
+		},
+		"chainbeat": {
+			"description": "ChainBeat - Blokzincir analitik"
+		},
+		"cielo": {
+			"description": "Social cüzdan takip ve transactiüzerinde feed"
+		},
+		"coingecko": {
+			"description": "Cryptocurrency prices ve market data"
+		},
+		"coinmarketcap": {
+			"description": "Crypto market cap rankings"
+		},
+		"cookie3": {
+			"description": "Cookie3 - Blokzincir analitik"
+		},
+		"cryptofees": {
+			"description": "Protokol fee ve revenue analitik"
+		},
+		"dappradar": {
+			"description": "DApp ranking ve takip"
+		},
+		"defilabs": {
+			"description": "Whale ve smart müzerindeey takip"
+		},
+		"defillama_yields": {
+			"description": "Zincirler arası yield farming comparisüzerinde"
+		},
+		"defined": {
+			"description": "Çoklu zincir DEX analitik"
+		},
+		"dexscreener": {
+			"description": "Real-time DEX pair charts"
+		},
+		"eigenexplorer": {
+			"description": "EigenLayer analitik gezgin"
+		},
+		"ethburned": {
+			"description": "Ethereum burn statistics"
+		},
+		"flipside": {
+			"description": "Blokzincir analitik ile SQL queries"
+		},
+		"footprint": {
+			"description": "No-code blokzincir data analysis platiçinm"
+		},
+		"glassnode": {
+			"description": "On-zincir market intelligence"
+		},
+		"growthepie": {
+			"description": "L2 analitik ve comparisüzerinde"
+		},
+		"intotheblock": {
+			"description": "IntoTheBlock - Blokzincir analitik"
+		},
+		"kaiko": {
+			"description": "Kaiko - Blokzincir analitik"
+		},
+		"laevitas": {
+			"description": "Laevitas - Blokzincir analitik"
+		},
+		"messari": {
+			"description": "Crypto research ve data platiçinm"
+		},
+		"openbb": {
+			"description": "Açık kaynak investment research terminal"
+		},
+		"parsec": {
+			"description": "DeFi analitik dashboard"
+		},
+		"sentio": {
+			"description": "Çoklu zincir observability ve müzerindeitoring"
+		},
+		"space_and_time": {
+			"description": "Verifiable data warehouse ile ZK proofs"
+		},
+		"the_graph": {
+			"description": "Merkezi olmayan protokol için indexing blokzincir data"
+		},
+		"tokenterminal": {
+			"description": "Protokol financials ve revenue metrics"
+		},
+		"watchers": {
+			"description": "Whale cüzdan takip ve alerts"
+		}
+	}
+}

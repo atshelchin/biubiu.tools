@@ -1,0 +1,50 @@
+{
+	"category_seo": {
+		"title": "Web3 Fonlama - Hibeler, VC'ler ve Fon Toplama | BiuBiu Tools",
+		"description": "Web3 projeleri için fonlama kaynaklarını bulun. Ekosistem hibeleri, VC yatırımcıları, kitlesel fonlama platformları ve hızlandırıcı programları.",
+		"keywords": "web3 fonlama, kripto hibeleri, risk sermayesi, blokzincir fon toplama",
+		"faqs": [
+			{
+				"question": "Web3 projeleri nasıl fon alır?",
+				"answer": "Seçenekler arasında ekosistem hibeleri (Ethereum Foundation, L2 hibeleri), VC fonlaması (a16z, Paradigm), token lansmanları (başlatma platformları) ve geriye dönük fonlama (Optimism RetroPGF) bulunur."
+			},
+			{
+				"question": "Ekosistem hibeleri nelerdir?",
+				"answer": "Geliştirmeyi fonlamak için blokzincir vakıflarından hibeler. Ethereum Foundation, Uniswap Grants, Arbitrum Foundation ve diğerleri ekosistemlerinde inşa eden projeleri fonlar."
+			},
+			{
+				"question": "Kripto VC'lere nasıl pitch yaparım?",
+				"answer": "Önce çalışan bir ürün oluşturun. Kripto VC'ler teknik kurucuları ve açık kaynak katkılarını değerlendirir. Konferanslarda ağ kurun, sıcak tanıtımlar alın ve TVL veya kullanıcılar gibi çekiş metriklerini gösterin."
+			}
+		]
+	},
+	"tools": {
+		"coinlist": {
+			"description": "CoinList - Web3 investment ve funding platiçinm"
+		},
+		"dragonfly": {
+			"description": "Dragüzerindefly - Web3 investment ve funding platiçinm"
+		},
+		"kernel": {
+			"description": "Kernel - Web3 investment ve funding platiçinm"
+		},
+		"multicoin": {
+			"description": "Multicoin Capital - Web3 investment ve funding platiçinm"
+		},
+		"pantera": {
+			"description": "Pantera Capital - Web3 investment ve funding platiçinm"
+		},
+		"paradigm": {
+			"description": "Paradigm - Web3 investment ve funding platiçinm"
+		},
+		"placeholder": {
+			"description": "Placeholder - Web3 investment ve funding platiçinm"
+		},
+		"polychain": {
+			"description": "Polyzincir Capital - Web3 investment ve funding platiçinm"
+		},
+		"variant": {
+			"description": "Variant - Web3 investment ve funding platiçinm"
+		}
+	}
+}

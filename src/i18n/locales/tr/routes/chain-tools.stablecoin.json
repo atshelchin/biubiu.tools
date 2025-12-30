@@ -1,0 +1,38 @@
+{
+	"category_seo": {
+		"title": "Stablecoin'ler - USDC, USDT, DAI ve Daha Fazlası | BiuBiu Tools",
+		"description": "Stablecoin'ler ve kullanım durumları hakkında bilgi edinin. DeFi ve ödemeler için fiat destekli, algoritmik ve merkezi olmayan stablecoin'ler.",
+		"keywords": "stablecoin'ler, usdc, usdt, dai, fiat destekli kripto",
+		"faqs": [
+			{
+				"question": "Stablecoin'ler nelerdir?",
+				"answer": "Stablecoin'ler, USD gibi istikrarlı varlıklara sabitlenmiş kripto paralardır. Türler arasında fiat destekli (USDC, USDT), kripto destekli (DAI) ve algoritmik stablecoin'ler bulunur."
+			},
+			{
+				"question": "Hangi stablecoin en güvenlidir?",
+				"answer": "USDC yüksek düzeyde düzenlenir ve şeffaftır. USDT en fazla likiditeye sahiptir ancak daha az şeffaftır. DAI merkezi değildir ancak akıllı sözleşme riski vardır. Çeşitlendirme akıllıcadır."
+			},
+			{
+				"question": "UST'ye ne oldu?",
+				"answer": "UST, Mayıs 2022'de çöken ve sabitleme kaybeden, 40 milyar dolardan fazla kayba neden olan algoritmik bir stablecoin idi. Uygun teminatsız algoritmik tasarımların risklerini vurguladı."
+			}
+		]
+	},
+	"tools": {
+		"frax": {
+			"description": "Kısmi teminatlandırma ile kesirli-algoritmik stablecoin"
+		},
+		"fdusd": {
+			"description": "First Digital USD (FDUSD) - Stablecoin"
+		},
+		"flexusd": {
+			"description": "flexUSD - Stablecoin"
+		},
+		"sfrax": {
+			"description": "Staked FRAX earning yield from Frax protokol"
+		},
+		"tusd": {
+			"description": "Regulated ve audited USD-backed stablecoin"
+		}
+	}
+}

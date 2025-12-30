@@ -1,0 +1,77 @@
+{
+	"category_seo": {
+		"title": "Cadeias Não-EVM - Solana, Cosmos, Polkadot e Mais | BiuBiu Tools",
+		"description": "Explore blockchains não-EVM: Solana, Cosmos, Polkadot, Aptos e outras arquiteturas blockchain alternativas com características únicas.",
+		"keywords": "cadeias não evm, solana, cosmos, polkadot, blockchain alternativa, non ethereum",
+		"faqs": [
+			{
+				"question": "O que são cadeias não-EVM?",
+				"answer": "As cadeias não-EVM são blockchains que não usam a Ethereum Virtual Machine. Incluem Solana (Rust/Sealevel), Cosmos (Tendermint), Polkadot (Substrate) e outras. Frequentemente têm diferentes modelos de programação, características de desempenho e filosofias de design."
+			},
+			{
+				"question": "Por que usar cadeias não-EVM?",
+				"answer": "As cadeias não-EVM frequentemente oferecem throughput maior (Solana), personalização específica para apps (Cosmos SDK), interoperabilidade (Polkadot) ou diferentes modelos de segurança. Alguns desenvolvedores preferem linguagens de programação alternativas como Rust ou Move."
+			},
+			{
+				"question": "As cadeias não-EVM são compatíveis com Ethereum?",
+				"answer": "Geralmente não diretamente, embora algumas ofereçam máquinas virtuais EVM (como Moonbeam do Polkadot) ou pontes para Ethereum. Cada ecossistema tem suas próprias carteiras, dApps e ferramentas de desenvolvimento, embora conceitos como DeFi e NFTs sejam similares entre cadeias."
+			}
+		]
+	},
+	"tools": {
+		"solscan": {
+			"description": "Popular Solana explorer with token analytics and NFT support"
+		},
+		"mintscan": {
+			"description": "Multi-chain Cosmos ecosystem explorer"
+		},
+		"tonscan": {
+			"description": "TON blockchain explorer for transactions and jettons"
+		},
+		"raydium": {
+			"description": "Solana AMM and liquidity provider with concentrated pools"
+		},
+		"osmosis": {
+			"description": "Leading DEX in Cosmos ecosystem with IBC integration"
+		},
+		"injective": {
+			"description": "DeFi-focused Cosmos chain for derivatives trading"
+		},
+		"celestia": {
+			"description": "Modular data availability layer for rollups"
+		},
+		"dymension": {
+			"description": "RollApp hub built on Cosmos for modular rollups"
+		},
+		"liquidswap": {
+			"description": "First AMM DEX on Aptos by Pontem"
+		},
+		"tonkeeper": {
+			"description": "Popular TON wallet with Telegram integration"
+		},
+		"dedust": {
+			"description": "DEX and DeFi platform on TON"
+		},
+		"algorand": {
+			"description": "Pure Proof of Stake blockchain with instant finality"
+		},
+		"cardano": {
+			"description": "Research-driven blockchain with peer-reviewed development"
+		},
+		"polkadot": {
+			"description": "Heterogeneous multi-chain network with parachains"
+		},
+		"subscan": {
+			"description": "Multi-chain explorer for Polkadot and Substrate networks"
+		},
+		"tezos": {
+			"description": "Self-amending blockchain with formal verification"
+		},
+		"stacks": {
+			"description": "Bitcoin L2 bringing smart contracts to BTC"
+		},
+		"layerzero": {
+			"description": "Omnichain interoperability protocol for trustless messaging"
+		}
+	}
+}

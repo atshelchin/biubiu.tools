@@ -1,0 +1,118 @@
+{
+	"category_seo": {
+		"title": "加密钱包 - 安全资产管理与多链钱包 | BiuBiu Tools",
+		"description": "发现最佳加密钱包，用于管理数字资产。比较浏览器扩展、移动端和硬件钱包，支持多链和 DeFi 集成。",
+		"faqs": [
+			{
+				"question": "应该选择哪种类型的加密钱包？",
+				"answer": "热钱包（如 MetaMask、Rabby）适合日常使用，冷钱包/硬件钱包（如 Ledger、Trezor）适合长期存储。许多用户同时使用两种类型：热钱包用于活跃交易，硬件钱包用于储蓄。"
+			},
+			{
+				"question": "什么是多签钱包？",
+				"answer": "多签钱包需要多方签名才能批准交易，提供额外的安全层。Safe（原 Gnosis Safe）是最受欢迎的选择，常用于 DAO 资金库和团队资产管理。"
+			},
+			{
+				"question": "如何保护我的钱包安全？",
+				"answer": "永远不要分享你的助记词，使用硬件钱包存储大额资产，定期撤销不需要的代币授权，谨慎连接钱包到 dApp，考虑使用多签增加高价值账户的安全性。"
+			}
+		]
+	},
+	"tools": {
+		"debank": {
+			"description": "多链资产追踪和社交平台"
+		},
+		"rabby": {
+			"description": "多链浏览器钱包"
+		},
+		"rainbow": {
+			"description": "精美的以太坊钱包"
+		},
+		"metamask": {
+			"description": "最流行的 Web3 钱包"
+		},
+		"frame": {
+			"description": "注重隐私的桌面钱包"
+		},
+		"zerion": {
+			"description": "DeFi 投资组合和钱包"
+		},
+		"safe": {
+			"description": "多重签名智能钱包"
+		},
+		"zapper": {
+			"description": "DeFi 投资组合仪表板"
+		},
+		"argent": {
+			"description": "带恢复的智能钱包"
+		},
+		"sequence": {
+			"description": "游戏智能钱包"
+		},
+		"ledger": {
+			"description": "硬件钱包安全"
+		},
+		"trezor": {
+			"description": "硬件钱包先驱"
+		},
+		"privy": {
+			"description": "嵌入式钱包方案"
+		},
+		"dynamic": {
+			"description": "多钱包认证"
+		},
+		"ambire": {
+			"description": "账户抽象智能合约钱包"
+		},
+		"obvious": {
+			"description": "社交恢复智能钱包"
+		},
+		"pimlico": {
+			"description": "ERC-4337打包器与支付商基础设施"
+		},
+		"stackup": {
+			"description": "账户抽象开发工具包"
+		},
+		"biconomy": {
+			"description": "无Gas交易与账户抽象SDK"
+		},
+		"zerodev": {
+			"description": "智能钱包与会话密钥SDK"
+		},
+		"solflare": {
+			"description": "Solflare - Crypto wallet"
+		},
+		"subwallet": {
+			"description": "SubWallet - Web3 钱包"
+		},
+		"tonhub": {
+			"description": "Tonhub - Web3 钱包"
+		},
+		"mytonwallet": {
+			"description": "MyTonWallet - Web3 钱包"
+		},
+		"coolwallet": {
+			"description": "coolwallet - Web3 钱包"
+		},
+		"imtoken": {
+			"description": "imToken - Web3 钱包"
+		},
+		"tokenpocket": {
+			"description": "TokenPocket - Web3 钱包"
+		},
+		"myetherwallet": {
+			"description": "MyEtherWallet - Web3 钱包"
+		},
+		"mycrypto": {
+			"description": "MyCrypto - Web3 钱包"
+		},
+		"tronlink": {
+			"description": "TronLink - Web3 钱包"
+		},
+		"multis": {
+			"description": "Multis - Web3 钱包"
+		},
+		"squads": {
+			"description": "Squads - Web3 钱包"
+		}
+	}
+}

@@ -1,0 +1,58 @@
+{
+	"category_seo": {
+		"title": "Real World Assets (RWA) - Tokenized Assets | BiuBiu Tools",
+		"description": "Explore tokenized real world assets. Tokenized treasuries, real estate, commodities, and traditional finance on blockchain.",
+		"faqs": [
+			{
+				"question": "What are RWAs?",
+				"answer": "RWAs (Real World Assets) are traditional assets like US Treasuries, real estate, or commodities tokenized on blockchain. They bring traditional finance yields to DeFi."
+			},
+			{
+				"question": "Why are RWAs important?",
+				"answer": "RWAs provide stable yields from real economy (Treasury rates), diversification from crypto volatility, and bridge traditional finance with DeFi. MakerDAO holds billions in RWAs."
+			},
+			{
+				"question": "What RWA platforms exist?",
+				"answer": "Ondo Finance for tokenized treasuries, RealT for real estate, Centrifuge for asset financing. Major DeFi protocols are integrating RWA strategies for yield."
+			}
+		]
+	},
+	"tools": {
+		"goldfinch": {
+			"description": "Crypto lending for real-world credit in emerging markets"
+		},
+		"truefi": {
+			"description": "Uncollateralized lending for institutional borrowers"
+		},
+		"centrifuge": {
+			"description": "Real-world asset financing protocol bringing invoices and real estate on-chain"
+		},
+		"clearpool": {
+			"description": "Decentralized capital markets for unsecured institutional lending"
+		},
+		"matrixdock": {
+			"description": "Tokenized treasury bills with STBT stablecoin"
+		},
+		"openeden": {
+			"description": "Tokenized T-Bills with real-time NAV and 24/7 settlement"
+		},
+		"realt": {
+			"description": "Tokenized real estate investment with fractional ownership"
+		},
+		"lofty": {
+			"description": "Fractional real estate investing on Algorand blockchain"
+		},
+		"propy": {
+			"description": "Blockchain-based real estate transactions and ownership"
+		},
+		"securitize": {
+			"description": "Security token issuance and lifecycle management platform"
+		},
+		"tokeny": {
+			"description": "Enterprise tokenization platform for compliant securities"
+		},
+		"polymesh": {
+			"description": "Purpose-built blockchain for regulated security tokens"
+		}
+	}
+}

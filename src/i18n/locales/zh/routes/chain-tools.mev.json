@@ -1,0 +1,34 @@
+{
+	"category_seo": {
+		"title": "MEV - 最大可提取价值工具与保护 | BiuBiu Tools",
+		"description": "理解和应对 MEV。保护工具、私密交易和高级用户的 MEV 提取。",
+		"faqs": [
+			{
+				"question": "什么是 MEV？",
+				"answer": "MEV（最大可提取价值）是通过重新排序、插入或审查交易来提取的利润。包括套利、清算和可能影响你交易的三明治攻击。"
+			},
+			{
+				"question": "如何防护 MEV？",
+				"answer": "使用 Flashbots Protect 或 MEV Blocker 进行私密交易。设置低滑点。使用带有 MEV 保护的聚合器如 1inch。避免在流动性稀薄时进行大额交易。"
+			},
+			{
+				"question": "什么是三明治攻击？",
+				"answer": "三明治攻击在你的交换前用买入抢跑，然后用卖出尾随，从你造成的价格影响中获利。使用私密内存池或 MEV 保护可以防止这种情况。"
+			}
+		]
+	},
+	"tools": {
+		"beaverbuild": {
+			"description": "高市场份额的顶级以太坊区块构建器"
+		},
+		"zeromev": {
+			"description": "追踪以太坊区块中的MEV提取"
+		},
+		"relayscan": {
+			"description": "MEV-Boost中继和构建器性能分析"
+		},
+		"suave": {
+			"description": "价值表达的统一拍卖 - MEV的未来"
+		}
+	}
+}

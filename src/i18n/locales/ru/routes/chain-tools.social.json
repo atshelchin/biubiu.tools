@@ -1,0 +1,83 @@
+{
+	"category_seo": {
+		"title": "Социальные сети Web3 - Децентрализованные социальные сети и сообщества | BiuBiu Tools",
+		"description": "Децентрализованные социальные платформы и инструменты сообщества. Создавайте и взаимодействуйте с Web3-сообществами на Farcaster, Lens и других платформах.",
+		"keywords": "социальные сети web3, децентрализованные социальные сети, farcaster, lens protocol, крипто сообщества",
+		"faqs": [
+			{
+				"question": "Что такое платформы социальных сетей Web3?",
+				"answer": "Платформы социальных сетей Web3 — это децентрализованные альтернативы Twitter/Facebook. Вы владеете своими данными и социальным графом. Популярные включают Farcaster, Lens Protocol и DeSo."
+			},
+			{
+				"question": "Что такое Farcaster?",
+				"answer": "Farcaster — это децентрализованный социальный протокол, похожий на Twitter. Warpcast — основной клиент. Он популярен среди крипто-разработчиков и имеет сильную культуру сообщества."
+			},
+			{
+				"question": "Как координируются Web3-сообщества?",
+				"answer": "Discord и Telegram для чата в реальном времени, Farcaster/Lens для социальных сетей, Mirror для длинного контента, Snapshot для управления и Guild.xyz для доступа с токенами."
+			}
+		]
+	},
+	"tools": {
+		"farcaster": {
+			"description": "Децентрализованный социальный протокол"
+		},
+		"xmtp": {
+			"description": "Безопасный протокол сообщений кошелек-кошелек"
+		},
+		"warpcast": {
+			"description": "Основной клиент для социальной сети Farcaster"
+		},
+		"hey": {
+			"description": "Децентрализованное социальное приложение на Lens Protocol"
+		},
+		"orb": {
+			"description": "Мобильный клиент Lens Protocol"
+		},
+		"cyberconnect": {
+			"description": "Протокол социального графа с идентификацией Web3"
+		},
+		"mirror": {
+			"description": "Платформа публикаций и краудфандинга Web3"
+		},
+		"paragraph": {
+			"description": "Нативная рассылка и публикации Web3"
+		},
+		"deso": {
+			"description": "Блокчейн Layer 1, созданный для социальных приложений"
+		},
+		"phaver": {
+			"description": "Кроссплатформенное социальное приложение Web3"
+		},
+		"drakula": {
+			"description": "Платформа коротких видео на Farcaster"
+		},
+		"airstack": {
+			"description": "Airstack - Децентрализованный social платформа"
+		},
+		"buttrfly": {
+			"description": "Cross-платформа social агрегатор для Lens"
+		},
+		"huddle01": {
+			"description": "Huddle01 - Децентрализованный social платформа"
+		},
+		"link3": {
+			"description": "Web3 events и credentials by CyberConnect"
+		},
+		"moxie": {
+			"description": "Moxie - Децентрализованный social платформа"
+		},
+		"neynar": {
+			"description": "Neynar - Децентрализованный social платформа"
+		},
+		"supercast": {
+			"description": "Supercast - Децентрализованный social платформа"
+		},
+		"tape": {
+			"description": "Децентрализованный video платформа on Lens"
+		},
+		"unlonely": {
+			"description": "Web3 live streaming сообщество платформа"
+		}
+	}
+}

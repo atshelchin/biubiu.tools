@@ -1,0 +1,107 @@
+{
+	"category_seo": {
+		"title": "Blokzincir Gezginleri - İşlemleri ve Akıllı Sözleşmeleri Görüntüleyin | BiuBiu Tools",
+		"description": "Ethereum, BSC, Polygon ve diğer ağlar için blokzincir gezginlerine erişin. İşlemleri görüntüleyin, sözleşmeleri doğrulayın ve zincir üstü verileri analiz edin.",
+		"keywords": "blokzincir gezgini, etherscan, işlem görüntüleme, sözleşme doğrulama",
+		"faqs": [
+			{
+				"question": "Blokzincir gezgini nedir?",
+				"answer": "Blokzincir gezgini, blokzincir verileri için bir arama motorudur. İşlemleri, cüzdan bakiyelerini, akıllı sözleşme kodunu, token transferlerini ve diğer zincir üstü aktiviteleri görüntülemenize olanak tanır."
+			},
+			{
+				"question": "Akıllı sözleşmeyi nasıl doğrularım?",
+				"answer": "Etherscan'de sözleşme adresine gidin, 'Contract' sekmesine tıklayın, ardından 'Verify and Publish'e tıklayın. Kaynak kodu, derleyici sürümünü ve constructor argümanlarını gönderin. Doğrulanmış sözleşmeler yeşil onay işareti gösterir."
+			},
+			{
+				"question": "En iyi çoklu zincir gezginleri nelerdir?",
+				"answer": "Blockscout birçok EVM zincirini destekler ve açık kaynaklıdır. OKLink 50+ zinciri kapsar. Belirli zincirler için Etherscan (Ethereum), BSCScan (BNB Chain) veya Arbiscan (Arbitrum) gibi yerel gezginleri kullanın."
+			}
+		]
+	},
+	"tools": {
+		"etherscan": {
+			"description": "Ethereum blokzincir gezgini"
+		},
+		"blockscout": {
+			"description": "Açık kaynak blok gezgini"
+		},
+		"anyabi": {
+			"description": "Smart cüzerindetract ABI lookup ve decoder"
+		},
+		"arbiscan": {
+			"description": "Arbitrum blokzincir gezgin"
+		},
+		"avascan": {
+			"description": "AvaScan - Block gezgin"
+		},
+		"basescan": {
+			"description": "Base blokzincir gezgin"
+		},
+		"blastscan": {
+			"description": "Blast ağ gezgin"
+		},
+		"blockchair": {
+			"description": "Blockchair - Block gezgin"
+		},
+		"bscscan": {
+			"description": "BNB Chain blokzincir gezgin"
+		},
+		"cardanoscan": {
+			"description": "Cardanoscan - Block gezgin"
+		},
+		"celoscan": {
+			"description": "Celo blokzincir gezgin"
+		},
+		"cronoscan": {
+			"description": "Crüzerindeos ağ gezgin"
+		},
+		"ftmscan": {
+			"description": "Fantom ağ gezgin"
+		},
+		"gnosisscan": {
+			"description": "Gnosis Chain gezgin"
+		},
+		"lineascan": {
+			"description": "Linea blokzincir gezgin"
+		},
+		"mantlescan": {
+			"description": "Mantle ağ gezgin"
+		},
+		"modescan": {
+			"description": "Mode ağ gezgin"
+		},
+		"moonbeamscan": {
+			"description": "Moüzerindebeam & Moüzerinderiver gezgin"
+		},
+		"nearblocks": {
+			"description": "NearBlocks - Block gezgin"
+		},
+		"oklink": {
+			"description": "Çoklu zincir blokzincir gezgin by OKX"
+		},
+		"onceupon": {
+			"description": "Human-readable blokzincir transactiüzerinde gezgin"
+		},
+		"polygonscan": {
+			"description": "Polygüzerinde blokzincir gezgin"
+		},
+		"routescan": {
+			"description": "Unified çoklu zincir block gezgin"
+		},
+		"scrollscan": {
+			"description": "Scroll ağ gezgin"
+		},
+		"snowtrace": {
+			"description": "Avalanche blokzincir gezgin"
+		},
+		"suiscan": {
+			"description": "SuiScan - Block gezgin"
+		},
+		"tronscan": {
+			"description": "TrüzerindeScan - Block gezgin"
+		},
+		"viewblock": {
+			"description": "ViewBlock - Block gezgin"
+		}
+	}
+}

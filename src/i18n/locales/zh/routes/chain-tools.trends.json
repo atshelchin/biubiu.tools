@@ -1,0 +1,34 @@
+{
+	"category_seo": {
+		"title": "加密趋势与风投活动 - 市场情报 | BiuBiu Tools",
+		"description": "追踪加密市场趋势和风险投资活动。投资数据、新兴叙事和市场动向。",
+		"faqs": [
+			{
+				"question": "如何早期识别加密趋势？",
+				"answer": "关注风投投资公告，链上追踪聪明钱，监控社交情绪，观察开发者活动指标，参与建设者社区。"
+			},
+			{
+				"question": "哪些风投在加密领域最活跃？",
+				"answer": "a16z、Paradigm、Polychain 和 Multicoin 是顶级机构。Animoca 和 Spartan 专注游戏。追踪他们的投资组合以了解他们押注的主题。"
+			},
+			{
+				"question": "应该关注哪些当前趋势？",
+				"answer": "AI 代理、再质押、RWA 和比特币 L2 是当前热门主题。趋势会循环——今天热门的明天可能降温。关注基本面而不是炒作。"
+			}
+		]
+	},
+	"tools": {
+		"santiment": {
+			"description": "链上和社交指标"
+		},
+		"lunarcrush": {
+			"description": "社交情绪分析"
+		},
+		"token2049": {
+			"description": "亚洲顶级加密大会"
+		},
+		"developerreport": {
+			"description": "年度开发者生态报告"
+		}
+	}
+}

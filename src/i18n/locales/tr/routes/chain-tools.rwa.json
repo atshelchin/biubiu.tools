@@ -1,0 +1,59 @@
+{
+	"category_seo": {
+		"title": "Gerçek Dünya Varlıkları (RWA) - Tokenize Edilmiş Varlıklar | BiuBiu Tools",
+		"description": "Tokenize edilmiş gerçek dünya varlıklarını keşfedin. Tokenize edilmiş hazineler, gayrimenkul, emtialar ve blokzincirde geleneksel finans.",
+		"keywords": "rwa, gerçek dünya varlıkları, tokenizasyon, tokenize edilmiş hazineler",
+		"faqs": [
+			{
+				"question": "RWA nedir?",
+				"answer": "RWA (Gerçek Dünya Varlıkları), ABD Hazineleri, gayrimenkul veya emtialar gibi blokzincirde tokenize edilmiş geleneksel varlıklardır. Gerçek ekonomiden gelen getiriyi DeFi'ye getirirler."
+			},
+			{
+				"question": "RWA neden önemlidir?",
+				"answer": "RWA'lar gerçek ekonomiden istikrarlı getiri (Hazine oranları), kripto volatilitesinden çeşitlendirme ve geleneksel finans ile DeFi arasında köprü sağlar. MakerDAO RWA'larda milyarlara sahiptir."
+			},
+			{
+				"question": "Hangi RWA platformları mevcut?",
+				"answer": "Tokenize edilmiş hazineler için Ondo Finance, gayrimenkul için RealT, varlık finansmanı için Centrifuge. Büyük DeFi protokolleri getiri için RWA stratejilerini entegre ediyor."
+			}
+		]
+	},
+	"tools": {
+		"centrifuge": {
+			"description": "Real-world asset financing protokol bringing invoices ve real estate üzerinde-zincir"
+		},
+		"clearpool": {
+			"description": "Merkezi olmayan capital markets için unsecured institutiüzerindeal lending"
+		},
+		"goldfinch": {
+			"description": "Crypto lending için real-world credit in emerging markets"
+		},
+		"lofty": {
+			"description": "Fractiüzerindeal real estate investing üzerinde Algorve blokzincir"
+		},
+		"matrixdock": {
+			"description": "Tokenized treasury bills ile STBT stablecoin"
+		},
+		"openeden": {
+			"description": "Tokenized T-Bills ile real-time NAV ve 24/7 settlement"
+		},
+		"polymesh": {
+			"description": "Purpose-built blokzincir için regulated güvenlik tokens"
+		},
+		"propy": {
+			"description": "Blokzincir-based real estate transactiüzerindes ve ownership"
+		},
+		"realt": {
+			"description": "Tokenized real estate investment ile fractiüzerindeal ownership"
+		},
+		"securitize": {
+			"description": "Security token issuance ve lifecycle management platiçinm"
+		},
+		"tokeny": {
+			"description": "Enterprise tokenizatiüzerinde platiçinm için compliant securities"
+		},
+		"truefi": {
+			"description": "Uncollateralized lending için institutiüzerindeal borrowers"
+		}
+	}
+}

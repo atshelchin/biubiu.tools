@@ -1,0 +1,77 @@
+{
+	"category_seo": {
+		"title": "非EVMブロックチェーン - Solana、Bitcoin、Cosmosなど | BiuBiu Tools",
+		"description": "非EVMブロックチェーンエコシステムを探索。Solana、Bitcoin、Cosmos、Aptos、SuiとそのユニークなツールとdApps。",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "非EVMチェーンとは何ですか？",
+				"answer": "非EVMチェーンはEthereumの仮想マシンを使用しません。異なるアーキテクチャを持っています - SolanaはRustを使用し、Bitcoinは独自のスクリプトを持ち、CosmosはCosmWasmを使用します。それぞれにユニークなトレードオフがあります。"
+			},
+			{
+				"question": "なぜ非EVMチェーンを使用するのですか？",
+				"answer": "異なるチェーンが異なるものに最適化されています。Solanaはスピードと低手数料、Bitcoinはセキュリティと分散化、Cosmosは相互運用性、Moveチェーンは安全性に最適化されています。"
+			},
+			{
+				"question": "非EVMチェーンへのブリッジはどのように行いますか？",
+				"answer": "Wormhole（マルチチェーン）、Portal（Solana）、IBC（Cosmos）などの特定のブリッジを使用してください。一部の中央集権取引所は非EVMチェーンへの直接入出金をサポートしています。"
+			}
+		]
+	},
+	"tools": {
+		"solscan": {
+			"description": "Popular Solana explorer with token analytics and NFT support"
+		},
+		"mintscan": {
+			"description": "Multi-chain Cosmos ecosystem explorer"
+		},
+		"tonscan": {
+			"description": "TON blockchain explorer for transactions and jettons"
+		},
+		"raydium": {
+			"description": "Solana AMM and liquidity provider with concentrated pools"
+		},
+		"osmosis": {
+			"description": "Leading DEX in Cosmos ecosystem with IBC integration"
+		},
+		"injective": {
+			"description": "DeFi-focused Cosmos chain for derivatives trading"
+		},
+		"celestia": {
+			"description": "Modular data availability layer for rollups"
+		},
+		"dymension": {
+			"description": "RollApp hub built on Cosmos for modular rollups"
+		},
+		"liquidswap": {
+			"description": "First AMM DEX on Aptos by Pontem"
+		},
+		"tonkeeper": {
+			"description": "Popular TON wallet with Telegram integration"
+		},
+		"dedust": {
+			"description": "DEX and DeFi platform on TON"
+		},
+		"algorand": {
+			"description": "Pure Proof of Stake blockchain with instant finality"
+		},
+		"cardano": {
+			"description": "Research-driven blockchain with peer-reviewed development"
+		},
+		"polkadot": {
+			"description": "Heterogeneous multi-chain network with parachains"
+		},
+		"subscan": {
+			"description": "Multi-chain explorer for Polkadot and Substrate networks"
+		},
+		"tezos": {
+			"description": "Self-amending blockchain with formal verification"
+		},
+		"stacks": {
+			"description": "Bitcoin L2 bringing smart contracts to BTC"
+		},
+		"layerzero": {
+			"description": "Omnichain interoperability protocol for trustless messaging"
+		}
+	}
+}

@@ -1,0 +1,80 @@
+{
+	"category_seo": {
+		"title": "Ferramentas DAO - Plataformas de Governança Descentralizada | BiuBiu Tools",
+		"description": "Descubra ferramentas DAO para governança, votação, gestão de tesourarias e coordenação da comunidade. Inclui Snapshot, Tally, Aragon e mais.",
+		"keywords": "ferramentas dao, governança descentralizada, snapshot, tally, aragon, votação dao",
+		"faqs": [
+			{
+				"question": "O que é uma DAO?",
+				"answer": "Uma DAO (Organização Autônoma Descentralizada) é uma organização governada por contratos inteligentes e votação de membros em vez de liderança centralizada. Os holders de tokens votam em propostas para dirigir a organização."
+			},
+			{
+				"question": "Como participo de uma DAO?",
+				"answer": "Primeiro, adquira os tokens de governança da DAO. Depois junte-se ao Discord/fóruns, leia propostas em plataformas como Snapshot ou Tally, e vote de acordo com seus holdings de tokens. Algumas DAOs requerem delegação."
+			},
+			{
+				"question": "O que é Snapshot?",
+				"answer": "Snapshot é a plataforma de votação DAO mais popular. Permite votação sem gas off-chain enquanto usa holdings on-chain de tokens para calcular o poder de voto. É usado por milhares de DAOs para governança."
+			}
+		]
+	},
+	"tools": {
+		"snapshot": {
+			"description": "Off-chain gasless governance voting"
+		},
+		"tally": {
+			"description": "On-chain governance and DAO management"
+		},
+		"aragon": {
+			"description": "Build and manage DAOs easily"
+		},
+		"colony": {
+			"description": "DAO infrastructure and payroll"
+		},
+		"karma": {
+			"description": "DAO contributor reputation"
+		},
+		"lenster": {
+			"description": "Decentralized social on Lens"
+		},
+		"push": {
+			"description": "Web3 notifications and chat"
+		},
+		"daohaus": {
+			"description": "Moloch DAO launcher"
+		},
+		"charmverse": {
+			"description": "Web3 workspace platform"
+		},
+		"wonderverse": {
+			"description": "Wonderverse - DAO task management"
+		},
+		"coordinape": {
+			"description": "Decentralized compensation"
+		},
+		"guild": {
+			"description": "Token-gated communities"
+		},
+		"jokerace": {
+			"description": "On-chain voting contests"
+		},
+		"commonwealth": {
+			"description": "Governance discussion and community forum"
+		},
+		"jokedao": {
+			"description": "On-chain voting contests and governance games"
+		},
+		"llama": {
+			"description": "DAO governance and treasury operations"
+		},
+		"daolens": {
+			"description": "DAOLens - DAO governance tool"
+		},
+		"kleros": {
+			"description": "Kleros - DAO governance tool"
+		},
+		"dework": {
+			"description": "Dework - DAO governance tool"
+		}
+	}
+}

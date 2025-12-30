@@ -1,0 +1,59 @@
+{
+	"category_seo": {
+		"title": "Реальные активы (RWA) - Токенизированные активы | BiuBiu Tools",
+		"description": "Исследуйте токенизированные реальные активы. Токенизированные казначейские облигации, недвижимость, товары и традиционные финансы на блокчейне.",
+		"keywords": "rwa, реальные активы, токенизация, токенизированные казначейские облигации",
+		"faqs": [
+			{
+				"question": "Что такое RWA?",
+				"answer": "RWA (реальные активы) — это традиционные активы, такие как казначейские облигации США, недвижимость или товары, токенизированные в блокчейне. Они приносят доходность традиционной экономики в DeFi."
+			},
+			{
+				"question": "Почему RWA важны?",
+				"answer": "RWA обеспечивают стабильную доходность от реальной экономики (ставки казначейских облигаций), диверсификацию от волатильности криптовалют и мост между традиционными финансами и DeFi. MakerDAO владеет миллиардами в RWA."
+			},
+			{
+				"question": "Какие платформы RWA существуют?",
+				"answer": "Ondo Finance для токенизированных казначейских облигаций, RealT для недвижимости, Centrifuge для финансирования активов. Крупные DeFi-протоколы интегрируют RWA-стратегии для доходности."
+			}
+		]
+	},
+	"tools": {
+		"goldfinch": {
+			"description": "Крипто кредитование для реального кредита на развивающихся рынках"
+		},
+		"truefi": {
+			"description": "Некредитованное кредитование для институциональных заемщиков"
+		},
+		"centrifuge": {
+			"description": "Real-world asset financing протокол bringing invoices и real estate on-цепь"
+		},
+		"clearpool": {
+			"description": "Децентрализованный capital markets для unsecured institutional lending"
+		},
+		"lofty": {
+			"description": "Fractional real estate investing on Algorи блокчейн"
+		},
+		"matrixdock": {
+			"description": "Tokenized treasury bills с STBT stablecoin"
+		},
+		"openeden": {
+			"description": "Tokenized T-Bills с real-time NAV и 24/7 settlement"
+		},
+		"polymesh": {
+			"description": "Purpose-built блокчейн для regulated security токенs"
+		},
+		"propy": {
+			"description": "Блокчейн-based real estate transactions и ownership"
+		},
+		"realt": {
+			"description": "Tokenized real estate investment с fractional ownership"
+		},
+		"securitize": {
+			"description": "Security токен issuance и lifecycle management платформа"
+		},
+		"tokeny": {
+			"description": "Enterprise токенization платформа для compliant securities"
+		}
+	}
+}

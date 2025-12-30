@@ -1,0 +1,35 @@
+{
+	"category_seo": {
+		"title": "MEV - Maksimum Çıkarılabilir Değer Araçları ve Koruma | BiuBiu Tools",
+		"description": "MEV'i anlayın ve gezinin. Koruma araçları, özel işlemler ve ileri düzey kullanıcılar için MEV çıkarımı.",
+		"keywords": "mev, maksimum çıkarılabilir değer, mev koruması, özel işlemler",
+		"faqs": [
+			{
+				"question": "MEV nedir?",
+				"answer": "MEV (Maksimum Çıkarılabilir Değer), işlemleri yeniden sıralayarak, ekleyerek veya sansürleyerek elde edilen kardır. İşlemlerinizi etkileyebilecek arbitraj, likidasyonlar ve sandwich saldırılarını içerir."
+			},
+			{
+				"question": "MEV'den nasıl korunurum?",
+				"answer": "Özel işlemler için Flashbots Protect veya MEV Blocker kullanın. Düşük slippage ayarlayın. MEV korumalı 1inch gibi toplayıcıları kullanın. İnce likidite üzerinde büyük işlemlerden kaçının."
+			},
+			{
+				"question": "Sandwich saldırıları nelerdir?",
+				"answer": "Bir sandwich saldırısı, takasınızın önüne bir alımla geçer, ardından bir satışla arkasına geçer, neden olduğunuz fiyat etkisinden kar elde eder. Özel mempool'lar veya MEV koruması kullanmak bunu önler."
+			}
+		]
+	},
+	"tools": {
+		"beaverbuild": {
+			"description": "En iyi Ethereum block builder ile high market share"
+		},
+		"relayscan": {
+			"description": "Analitik için MEV-Boost relays ve builder periçinmance"
+		},
+		"suave": {
+			"description": "Single Unified Auctiüzerinde için Value Expressiüzerinde - future of MEV"
+		},
+		"zeromev": {
+			"description": "Track MEV extractiüzerinde across Ethereum blocks"
+		}
+	}
+}

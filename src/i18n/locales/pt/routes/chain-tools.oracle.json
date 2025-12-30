@@ -1,0 +1,29 @@
+{
+	"category_seo": {
+		"title": "Oráculos de Preço - Feeds de Dados Blockchain | BiuBiu Tools",
+		"description": "Oráculos descentralizados que fornecem dados de preço confiáveis para contratos inteligentes. Aprenda sobre Chainlink, Pyth Network e outras redes de oráculos.",
+		"keywords": "oráculos preço, chainlink, pyth network, oracle blockchain, feeds dados descentralizados",
+		"faqs": [
+			{
+				"question": "O que são oráculos blockchain?",
+				"answer": "Os oráculos blockchain são serviços que fornecem dados do mundo real (preços, clima, resultados esportivos) a contratos inteligentes. Os contratos não podem acessar dados externos diretamente, então os oráculos fazem a ponte entre blockchains e sistemas off-chain."
+			},
+			{
+				"question": "Por que os oráculos são importantes?",
+				"answer": "Os oráculos permitem que os contratos inteligentes reajam a eventos do mundo real. São críticos para protocolos DeFi (feeds de preço para empréstimos/liquidações), seguros descentralizados (verificação de reclamações), mercados de previsão e qualquer aplicação que necessite dados externos."
+			},
+			{
+				"question": "O que é Chainlink?",
+				"answer": "Chainlink é a maior rede de oráculos descentralizada, fornecendo feeds de dados seguros para milhares de projetos. Usa múltiplos nós de dados independentes e agregação on-chain para prevenir pontos únicos de falha e manipulação de dados."
+			}
+		]
+	},
+	"tools": {
+		"chainlink": {
+			"description": "Industry-leading decentralized oracle network for price feeds, VRF and automation"
+		},
+		"api3": {
+			"description": "First-party oracle with Airnode for direct API data delivery"
+		}
+	}
+}

@@ -1,0 +1,61 @@
+{
+	"category_seo": {
+		"title": "再质押 - EigenLayer 与流动性再质押 | BiuBiu Tools",
+		"description": "用于额外收益的再质押协议。EigenLayer、流动性再质押代币和 AVS（主动验证服务）。",
+		"faqs": [
+			{
+				"question": "什么是再质押？",
+				"answer": "再质押让你使用已质押的 ETH 来保护额外的协议（AVS）以获得额外收益。EigenLayer 首创了这一模式，允许 ETH 质押者从多个服务中获得奖励。"
+			},
+			{
+				"question": "什么是流动性再质押代币（LRT）？",
+				"answer": "LRT 如 eETH（ether.fi）或 ezETH（Renzo）代表可以在 DeFi 中使用的再质押 ETH。它们是再质押头寸的流动性版本。"
+			},
+			{
+				"question": "再质押有哪些风险？",
+				"answer": "再质押增加了 AVS 失败的削减风险、智能合约风险和复杂性。更高的收益伴随着更高的风险。了解你正在保护的 AVS 是什么。"
+			}
+		]
+	},
+	"tools": {
+		"eigenlayer": {
+			"description": "以太坊再质押协议"
+		},
+		"etherfi": {
+			"description": "去中心化质押协议"
+		},
+		"karak": {
+			"description": "多链安全通用再质押"
+		},
+		"symbiotic": {
+			"description": "无许可和模块化的重质押协议"
+		},
+		"babylon": {
+			"description": "保护PoS网络的比特币质押协议"
+		},
+		"eigenpie": {
+			"description": "具有隔离LRT代币的Magpie流动性重质押"
+		},
+		"bedrock": {
+			"description": "具有uniETH代币的通用流动性重质押"
+		},
+		"stakestone": {
+			"description": "具有STONE代币的全链流动性重质押"
+		},
+		"inception": {
+			"description": "通过inETH进行即时解质押的流动性重质押"
+		},
+		"eigenda": {
+			"description": "用于rollup的EigenLayer数据可用性服务"
+		},
+		"lagrange": {
+			"description": "用于跨链证明的ZK协处理器AVS"
+		},
+		"espresso": {
+			"description": "用于rollup的共享排序AVS"
+		},
+		"brevis": {
+			"description": "用于历史区块链数据的ZK协处理器"
+		}
+	}
+}

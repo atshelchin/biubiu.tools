@@ -20,7 +20,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'ankr',
 		name: 'Ankr',
-		descriptionKey: 'chain-tools.tools.ankr.description',
+		descriptionKey: 'chain-tools.infra.tools.ankr.description',
 		url: 'https://www.ankr.com',
 		icon: Network,
 		category: 'infra',
@@ -31,7 +31,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'chainstack',
 		name: 'Chainstack',
-		descriptionKey: 'chain-tools.tools.chainstack.description',
+		descriptionKey: 'chain-tools.infra.tools.chainstack.description',
 		url: 'https://chainstack.com',
 		icon: HardDrive,
 		category: 'infra',
@@ -42,7 +42,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'blast-api',
 		name: 'Blast API',
-		descriptionKey: 'chain-tools.tools.blast_api.description',
+		descriptionKey: 'chain-tools.infra.tools.blast_api.description',
 		url: 'https://blastapi.io',
 		icon: Zap,
 		category: 'infra',
@@ -53,7 +53,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'grove',
 		name: 'Grove (POKT)',
-		descriptionKey: 'chain-tools.tools.grove.description',
+		descriptionKey: 'chain-tools.infra.tools.grove.description',
 		url: 'https://grove.city',
 		icon: Server,
 		category: 'infra',
@@ -64,7 +64,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'drpc',
 		name: 'dRPC',
-		descriptionKey: 'chain-tools.tools.drpc.description',
+		descriptionKey: 'chain-tools.infra.tools.drpc.description',
 		url: 'https://drpc.org',
 		icon: Server,
 		category: 'infra',
@@ -75,7 +75,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'nodies',
 		name: 'Nodies',
-		descriptionKey: 'chain-tools.tools.nodies.description',
+		descriptionKey: 'chain-tools.infra.tools.nodies.description',
 		url: 'https://nodies.app',
 		icon: Server,
 		category: 'infra',
@@ -86,7 +86,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'llamanodes',
 		name: 'LlamaNodes',
-		descriptionKey: 'chain-tools.tools.llamanodes.description',
+		descriptionKey: 'chain-tools.infra.tools.llamanodes.description',
 		url: 'https://llamanodes.com',
 		icon: Server,
 		category: 'infra',
@@ -97,7 +97,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'tenderly-node',
 		name: 'Tenderly Node',
-		descriptionKey: 'chain-tools.tools.tenderly_node.description',
+		descriptionKey: 'chain-tools.infra.tools.tenderly_node.description',
 		url: 'https://tenderly.co/web3-gateway',
 		icon: Server,
 		category: 'infra',
@@ -108,7 +108,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'getblock',
 		name: 'GetBlock',
-		descriptionKey: 'chain-tools.tools.getblock.description',
+		descriptionKey: 'chain-tools.infra.tools.getblock.description',
 		url: 'https://getblock.io',
 		icon: Server,
 		category: 'infra',
@@ -118,7 +118,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'public-node',
 		name: 'PublicNode',
-		descriptionKey: 'chain-tools.tools.public_node.description',
+		descriptionKey: 'chain-tools.infra.tools.public_node.description',
 		url: 'https://publicnode.com',
 		icon: Server,
 		category: 'infra',
@@ -130,7 +130,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'helius-rpc',
 		name: 'Helius',
-		descriptionKey: 'chain-tools.tools.helius_rpc.description',
+		descriptionKey: 'chain-tools.infra.tools.helius_rpc.description',
 		url: 'https://helius.dev',
 		icon: Server,
 		category: 'infra',
@@ -141,7 +141,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'triton-rpc',
 		name: 'Triton',
-		descriptionKey: 'chain-tools.tools.triton_rpc.description',
+		descriptionKey: 'chain-tools.infra.tools.triton_rpc.description',
 		url: 'https://triton.one',
 		icon: Server,
 		category: 'infra',
@@ -152,7 +152,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'syndica-rpc',
 		name: 'Syndica',
-		descriptionKey: 'chain-tools.tools.syndica_rpc.description',
+		descriptionKey: 'chain-tools.infra.tools.syndica_rpc.description',
 		url: 'https://syndica.io',
 		icon: Server,
 		category: 'infra',
@@ -165,7 +165,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'lava-network',
 		name: 'Lava Network',
-		descriptionKey: 'chain-tools.tools.lava_network.description',
+		descriptionKey: 'chain-tools.infra.tools.lava_network.description',
 		url: 'https://lavanet.xyz',
 		icon: Server,
 		category: 'infra',
@@ -175,7 +175,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'erpc-network',
 		name: 'eRPC',
-		descriptionKey: 'chain-tools.tools.erpc_network.description',
+		descriptionKey: 'chain-tools.infra.tools.erpc_network.description',
 		url: 'https://erpc.cloud',
 		icon: Server,
 		category: 'infra',
@@ -185,7 +185,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'thirdweb-rpc',
 		name: 'thirdweb RPC',
-		descriptionKey: 'chain-tools.tools.thirdweb_rpc.description',
+		descriptionKey: 'chain-tools.infra.tools.thirdweb_rpc.description',
 		url: 'https://thirdweb.com/rpc',
 		icon: Server,
 		category: 'infra',
@@ -195,7 +195,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'tatum-rpc',
 		name: 'Tatum',
-		descriptionKey: 'chain-tools.tools.tatum_rpc.description',
+		descriptionKey: 'chain-tools.infra.tools.tatum_rpc.description',
 		url: 'https://tatum.io',
 		icon: Server,
 		category: 'infra',
@@ -205,7 +205,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'chainstack-rpc',
 		name: 'Chainstack',
-		descriptionKey: 'chain-tools.tools.chainstack_rpc.description',
+		descriptionKey: 'chain-tools.infra.tools.chainstack_rpc.description',
 		url: 'https://chainstack.com',
 		icon: Server,
 		category: 'infra',
@@ -215,7 +215,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'blockpi',
 		name: 'BlockPI',
-		descriptionKey: 'chain-tools.tools.blockpi.description',
+		descriptionKey: 'chain-tools.infra.tools.blockpi.description',
 		url: 'https://blockpi.io',
 		icon: Server,
 		category: 'infra',
@@ -225,7 +225,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'nodereal',
 		name: 'NodeReal',
-		descriptionKey: 'chain-tools.tools.nodereal.description',
+		descriptionKey: 'chain-tools.infra.tools.nodereal.description',
 		url: 'https://nodereal.io',
 		icon: Server,
 		category: 'infra',
@@ -238,7 +238,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'ipfs',
 		name: 'IPFS',
-		descriptionKey: 'chain-tools.tools.ipfs.description',
+		descriptionKey: 'chain-tools.infra.tools.ipfs.description',
 		url: 'https://ipfs.tech',
 		icon: Globe,
 		category: 'infra',
@@ -248,7 +248,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'arweave',
 		name: 'Arweave',
-		descriptionKey: 'chain-tools.tools.arweave.description',
+		descriptionKey: 'chain-tools.infra.tools.arweave.description',
 		url: 'https://www.arweave.org',
 		icon: HardDrive,
 		category: 'infra',
@@ -258,7 +258,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'filecoin',
 		name: 'Filecoin',
-		descriptionKey: 'chain-tools.tools.filecoin.description',
+		descriptionKey: 'chain-tools.infra.tools.filecoin.description',
 		url: 'https://filecoin.io',
 		icon: HardDrive,
 		category: 'infra',
@@ -268,7 +268,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'ceramic',
 		name: 'Ceramic',
-		descriptionKey: 'chain-tools.tools.ceramic.description',
+		descriptionKey: 'chain-tools.infra.tools.ceramic.description',
 		url: 'https://ceramic.network',
 		icon: Database,
 		category: 'infra',
@@ -280,7 +280,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'push-protocol',
 		name: 'Push Protocol',
-		descriptionKey: 'chain-tools.tools.push_protocol.description',
+		descriptionKey: 'chain-tools.infra.tools.push_protocol.description',
 		url: 'https://push.org',
 		icon: Bell,
 		category: 'infra',
@@ -291,7 +291,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'xmtp',
 		name: 'XMTP',
-		descriptionKey: 'chain-tools.tools.xmtp.description',
+		descriptionKey: 'chain-tools.infra.tools.xmtp.description',
 		url: 'https://xmtp.org',
 		icon: MessageSquare,
 		category: 'infra',
@@ -302,7 +302,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'walletconnect',
 		name: 'WalletConnect',
-		descriptionKey: 'chain-tools.tools.walletconnect.description',
+		descriptionKey: 'chain-tools.infra.tools.walletconnect.description',
 		url: 'https://walletconnect.com',
 		icon: Link2,
 		category: 'infra',
@@ -315,7 +315,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'flashbots-protect',
 		name: 'Flashbots Protect',
-		descriptionKey: 'chain-tools.tools.flashbots_protect.description',
+		descriptionKey: 'chain-tools.infra.tools.flashbots_protect.description',
 		url: 'https://protect.flashbots.net',
 		icon: Shield,
 		category: 'infra',
@@ -326,7 +326,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'mev-blocker',
 		name: 'MEV Blocker',
-		descriptionKey: 'chain-tools.tools.mev_blocker.description',
+		descriptionKey: 'chain-tools.infra.tools.mev_blocker.description',
 		url: 'https://mevblocker.io',
 		icon: Shield,
 		category: 'infra',
@@ -339,7 +339,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'switchboard',
 		name: 'Switchboard',
-		descriptionKey: 'chain-tools.tools.switchboard.description',
+		descriptionKey: 'chain-tools.infra.tools.switchboard.description',
 		url: 'https://switchboard.xyz',
 		icon: Server,
 		category: 'infra',
@@ -350,7 +350,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'dia',
 		name: 'DIA',
-		descriptionKey: 'chain-tools.tools.dia.description',
+		descriptionKey: 'chain-tools.infra.tools.dia.description',
 		url: 'https://diadata.org',
 		icon: Server,
 		category: 'infra',
@@ -361,7 +361,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'band_protocol',
 		name: 'Band Protocol',
-		descriptionKey: 'chain-tools.tools.band_protocol.description',
+		descriptionKey: 'chain-tools.infra.tools.band_protocol.description',
 		url: 'https://bandprotocol.com',
 		icon: Server,
 		category: 'infra',
@@ -372,7 +372,7 @@ export const infraTools: ExternalTool[] = [
 	{
 		id: 'tellor',
 		name: 'Tellor',
-		descriptionKey: 'chain-tools.tools.tellor.description',
+		descriptionKey: 'chain-tools.infra.tools.tellor.description',
 		url: 'https://tellor.io',
 		icon: Server,
 		category: 'infra',

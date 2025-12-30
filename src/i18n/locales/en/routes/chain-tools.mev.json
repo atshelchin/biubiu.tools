@@ -1,0 +1,34 @@
+{
+	"category_seo": {
+		"title": "MEV - Maximal Extractable Value Tools & Protection | BiuBiu Tools",
+		"description": "Understand and navigate MEV. Protection tools, private transactions, and MEV extraction for advanced users.",
+		"faqs": [
+			{
+				"question": "What is MEV?",
+				"answer": "MEV (Maximal Extractable Value) is profit extracted by reordering, inserting, or censoring transactions. It includes arbitrage, liquidations, and sandwich attacks that can affect your trades."
+			},
+			{
+				"question": "How do I protect against MEV?",
+				"answer": "Use Flashbots Protect or MEV Blocker for private transactions. Set low slippage. Use aggregators like 1inch with MEV protection. Avoid large trades on thin liquidity."
+			},
+			{
+				"question": "What are sandwich attacks?",
+				"answer": "A sandwich attack front-runs your swap with a buy, then back-runs with a sell, profiting from the price impact you cause. Using private mempools or MEV protection prevents this."
+			}
+		]
+	},
+	"tools": {
+		"beaverbuild": {
+			"description": "Top Ethereum block builder with high market share"
+		},
+		"zeromev": {
+			"description": "Track MEV extraction across Ethereum blocks"
+		},
+		"relayscan": {
+			"description": "Analytics for MEV-Boost relays and builder performance"
+		},
+		"suave": {
+			"description": "Single Unified Auction for Value Expression - future of MEV"
+		}
+	}
+}

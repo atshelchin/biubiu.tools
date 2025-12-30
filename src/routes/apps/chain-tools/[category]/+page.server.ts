@@ -31,24 +31,25 @@ export const load: PageServerLoad = (event) => {
 	const categoryKey = categoryId.replace(/-/g, '_');
 
 	// Try to get category-specific SEO, fallback to generic
+	// Namespace: chain-tools.{category} contains category_seo and tools
 	const seoTitle =
-		t(`chain-tools.category_seo.${categoryKey}.title` as keyof TranslationKeys, {
+		t(`chain-tools.${categoryKey}.category_seo.title` as keyof TranslationKeys, {
 			defaultValue: ''
 		}) || `${categoryName} - ${t('chain-tools.title')} | BiuBiu Tools`;
 
 	const seoDescription =
-		t(`chain-tools.category_seo.${categoryKey}.description` as keyof TranslationKeys, {
+		t(`chain-tools.${categoryKey}.category_seo.description` as keyof TranslationKeys, {
 			defaultValue: ''
 		}) || `${t('chain-tools.subtitle')} - ${categoryName}`;
 
 	const seoKeywords =
-		t(`chain-tools.category_seo.${categoryKey}.keywords` as keyof TranslationKeys, {
+		t(`chain-tools.${categoryKey}.category_seo.keywords` as keyof TranslationKeys, {
 			defaultValue: ''
 		}) || `${categoryName}, web3 tools, crypto, blockchain`;
 
-	// Get FAQs for this category - FAQs are not currently supported in namespace structure
+	// Get FAQs for this category from chain-tools.{category}.category_seo.faqs
 	type FaqItem = { question: string; answer: string };
-	const faqs: FaqItem[] = t<FaqItem[]>(`chain-tools.category_seo.${categoryKey}.faqs` as never);
+	const faqs: FaqItem[] = t<FaqItem[]>(`chain-tools.${categoryKey}.category_seo.faqs` as never);
 
 	console.log({ faqs });
 	// Generate structured data

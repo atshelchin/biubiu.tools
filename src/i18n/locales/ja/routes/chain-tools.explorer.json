@@ -1,0 +1,107 @@
+{
+	"category_seo": {
+		"title": "ブロックチェーンエクスプローラー - トランザクションとスマートコントラクトの表示 | BiuBiu Tools",
+		"description": "Ethereum、BSC、Polygonなどのネットワーク向けのブロックチェーンエクスプローラーにアクセス。トランザクションの表示、コントラクトの検証、オンチェーンデータの分析。",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "ブロックチェーンエクスプローラーとは何ですか？",
+				"answer": "ブロックチェーンエクスプローラーは、ブロックチェーンデータの検索エンジンです。トランザクション、ウォレット残高、スマートコントラクトコード、トークン転送、その他のオンチェーンアクティビティを表示できます。"
+			},
+			{
+				"question": "スマートコントラクトを検証するにはどうすればよいですか？",
+				"answer": "Etherscanで、コントラクトアドレスに移動し、「Contract」タブをクリックしてから「Verify and Publish」をクリックします。ソースコード、コンパイラバージョン、コンストラクタ引数を提出します。検証されたコントラクトには緑のチェックマークが表示されます。"
+			},
+			{
+				"question": "最高のマルチチェーンエクスプローラーは何ですか？",
+				"answer": "Blockscoutは多くのEVMチェーンをサポートしており、オープンソースです。OKLinkは50以上のチェーンをカバーしています。特定のチェーンには、Etherscan(Ethereum)、BSCScan(BNB Chain)、Arbiscan(Arbitrum)などのネイティブエクスプローラーを使用してください。"
+			}
+		]
+	},
+	"tools": {
+		"etherscan": {
+			"description": "Ethereum blockchain explorer"
+		},
+		"blockscout": {
+			"description": "Open source block explorer"
+		},
+		"arbiscan": {
+			"description": "Arbitrum blockchain explorer"
+		},
+		"polygonscan": {
+			"description": "Polygon blockchain explorer"
+		},
+		"bscscan": {
+			"description": "BNB Chain blockchain explorer"
+		},
+		"basescan": {
+			"description": "Base blockchain explorer"
+		},
+		"snowtrace": {
+			"description": "Avalanche blockchain explorer"
+		},
+		"lineascan": {
+			"description": "Linea blockchain explorer"
+		},
+		"scrollscan": {
+			"description": "Scroll network explorer"
+		},
+		"mantlescan": {
+			"description": "Mantle network explorer"
+		},
+		"blastscan": {
+			"description": "Blast network explorer"
+		},
+		"modescan": {
+			"description": "Mode network explorer"
+		},
+		"celoscan": {
+			"description": "Celo blockchain explorer"
+		},
+		"ftmscan": {
+			"description": "Fantom network explorer"
+		},
+		"gnosisscan": {
+			"description": "Gnosis Chain explorer"
+		},
+		"cronoscan": {
+			"description": "Cronos network explorer"
+		},
+		"moonbeamscan": {
+			"description": "Moonbeam & Moonriver explorer"
+		},
+		"oklink": {
+			"description": "Multi-chain blockchain explorer by OKX"
+		},
+		"routescan": {
+			"description": "Unified multi-chain block explorer"
+		},
+		"onceupon": {
+			"description": "Human-readable blockchain transaction explorer"
+		},
+		"anyabi": {
+			"description": "Smart contract ABI lookup and decoder"
+		},
+		"nearblocks": {
+			"description": "NearBlocks - Block explorer"
+		},
+		"blockchair": {
+			"description": "Blockchair - Block explorer"
+		},
+		"avascan": {
+			"description": "AvaScan - Block explorer"
+		},
+		"tronscan": {
+			"description": "TronScan - Block explorer"
+		},
+		"cardanoscan": {
+			"description": "Cardanoscan - Block explorer"
+		},
+		"viewblock": {
+			"description": "ViewBlock - Block explorer"
+		},
+		"suiscan": {
+			"description": "SuiScan - Block explorer"
+		}
+	}
+}

@@ -1,0 +1,116 @@
+{
+	"category_seo": {
+		"title": "NFT Araçları - Pazaryerleri, Analitik ve Oluşturma | BiuBiu Tools",
+		"description": "En iyi NFT pazaryerlerini, analitik araçlarını ve oluşturma platformlarını bulun. OpenSea, Blur ve diğer önde gelen NFT araçlarını keşfedin.",
+		"keywords": "nft araçları, nft pazaryeri, opensea, blur, nft analitik, nft oluşturma",
+		"faqs": [
+			{
+				"question": "NFT nedir?",
+				"answer": "NFT (Değiştirilemez Token), sanat, müzik, koleksiyon ürünleri ve sanal gayrimenkul gibi öğelerin sahipliğini temsil eden blokzincirdeki benzersiz bir dijital varlıktır. Her NFT benzersizdir ve kopyalanamaz."
+			},
+			{
+				"question": "NFT'leri nereden satın alabilirim?",
+				"answer": "Popüler NFT pazaryerleri arasında OpenSea (en büyük genel pazaryeri), Blur (tüccarlar için), Magic Eden (Solana) ve Foundation (küratörlü sanat) bulunur. Her platformun farklı ücretleri ve özellikleri vardır."
+			},
+			{
+				"question": "NFT nasıl oluştururum?",
+				"answer": "NFT oluşturmak için: 1) Dijital sanat eseri veya içerik oluşturun, 2) Bir blokzincir seçin (Ethereum, Solana vb.), 3) OpenSea gibi bir pazaryeri seçin, 4) Cüzdanınızı bağlayın ve içeriğinizi yükleyin, 5) Fiyatlandırma ayarlayın ve satışa sunun."
+			}
+		]
+	},
+	"tools": {
+		"opensea": {
+			"description": "En büyük NFT pazaryeri"
+		},
+		"blur": {
+			"description": "Tüccarlar için profesyonel NFT pazaryeri"
+		},
+		"reservoir": {
+			"description": "NFT likidite altyapısı"
+		},
+		"rarible": {
+			"description": "Herhangi bir zincirde NFT oluşturun ve ticareti yapın"
+		},
+		"arcade": {
+			"description": "NFT lending protokol"
+		},
+		"bueno": {
+			"description": "No-code generative NFT art creatiüzerinde araç"
+		},
+		"campfire": {
+			"description": "NFT pazaryeri üzerinde Avalanche"
+		},
+		"caviar": {
+			"description": "NFT fractiüzerindealizatiüzerinde ve AMM protokol"
+		},
+		"formfunction": {
+			"description": "Formfunctiüzerinde - NFT platiçinm"
+		},
+		"foundation": {
+			"description": "Curated digital art pazaryeri"
+		},
+		"gem": {
+			"description": "NFT toplayıcı ve sweeper"
+		},
+		"highlight": {
+			"description": "Creator araçs için NFT minting ve distributiüzerinde"
+		},
+		"hyperspace": {
+			"description": "NFT toplayıcı ve pazaryeri üzerinde Solana"
+		},
+		"looksrare": {
+			"description": "Community NFT pazaryeri"
+		},
+		"manifold": {
+			"description": "NFT creator araçs ve cüzerindetracts"
+		},
+		"mintfun": {
+			"description": "NFT minting discovery"
+		},
+		"nftfi": {
+			"description": "NFT-collateralized loans"
+		},
+		"nftnerds": {
+			"description": "NFT trading ve analitik"
+		},
+		"nftx": {
+			"description": "NFT liquidity protokol ile vaulted floor prices"
+		},
+		"oncyber": {
+			"description": "Oncyber - NFT platiçinm"
+		},
+		"paintswap": {
+			"description": "NFT pazaryeri üzerinde Fantom ve Süzerindeic"
+		},
+		"premint": {
+			"description": "NFT allowlist ve whitelist management araç"
+		},
+		"rabbithole": {
+			"description": "On-zincir quests ve credential earning"
+		},
+		"sudoswap": {
+			"description": "NFT AMM için instant liquidity ve trading"
+		},
+		"tensor": {
+			"description": "Professiüzerindeal NFT trading üzerinde Solana"
+		},
+		"tessera": {
+			"description": "Collective NFT ownership through fractiüzerindealizatiüzerinde"
+		},
+		"tokenproof": {
+			"description": "NFT verificatiüzerinde ve token-gated experiences"
+		},
+		"tradeport": {
+			"description": "NFT pazaryeri için Sui ve Aptos"
+		},
+		"unlockd": {
+			"description": "Unlockd - NFT platiçinm"
+		},
+		"x2y2": {
+			"description": "Low-fee NFT pazaryeri"
+		},
+		"zora": {
+			"description": "NFT creatiüzerinde ve pazaryeri"
+		}
+	}
+}

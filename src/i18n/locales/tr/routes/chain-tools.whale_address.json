@@ -1,0 +1,29 @@
+{
+	"category_seo": {
+		"title": "Balina Cüzdanları ve Hazine Takibi - Akıllı Para İçgörüleri | BiuBiu Tools",
+		"description": "Balina cüzdanlarını ve protokol hazinelerini takip edin. Kriptoda akıllı para hareketlerini ve kurumsal varlıkları izleyin.",
+		"keywords": "kripto balinaları, balina takibi, protokol haziheleri, akıllı para",
+		"faqs": [
+			{
+				"question": "Kripto balinası nedir?",
+				"answer": "Balina, büyük miktarda kripto para tutan bir varlıktır. İşlemleri piyasaları hareket ettirebilir. Balina cüzdanlarını takip etmek piyasa hareketlerinin erken sinyallerini sağlayabilir."
+			},
+			{
+				"question": "Balina cüzdanlarını nasıl takip ederim?",
+				"answer": "Etiketlenmiş cüzdan takibi için Nansen veya Arkham kullanın. Etherscan'de büyük transferler için uyarılar ayarlayın. Balina aktivitesini paylaşan @lookonchain gibi hesapları takip edin."
+			},
+			{
+				"question": "Protokol haziheleri nelerdir?",
+				"answer": "Hazineler, DAO'lar veya protokoller tarafından kontrol edilen fonlardır. Hibeler, likidite ve geliştirme için kullanılır. Büyük hazineler (Uniswap'inki gibi) proje sağlığının göstergeleri olarak izlenir."
+			}
+		]
+	},
+	"tools": {
+		"bubblemaps": {
+			"description": "Visual token holder ve supply distributiüzerinde analysis"
+		},
+		"lookonchain": {
+			"description": "On-zincir analitik platiçinm takip whale movements ve smart müzerindeey"
+		}
+	}
+}

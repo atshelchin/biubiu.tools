@@ -1,0 +1,95 @@
+{
+	"category_seo": {
+		"title": "Кроссчейн мосты - Перевод активов между блокчейнами | BiuBiu Tools",
+		"description": "Найдите лучшие кроссчейн мосты для безопасного перевода токенов между Ethereum, Arbitrum, Optimism, Base и другими сетями.",
+		"keywords": "кроссчейн мосты, мосты блокчейна, layer 2 мосты, перевод криптовалют",
+		"faqs": [
+			{
+				"question": "Что такое кроссчейн мост?",
+				"answer": "Кроссчейн мост — это протокол, который позволяет переводить токены и данные между различными сетями блокчейна. Он блокирует активы в исходной цепи и создает эквивалентные токены в целевой цепи."
+			},
+			{
+				"question": "Какие мосты самые безопасные?",
+				"answer": "Нативные мосты от L2 (такие как Arbitrum Bridge, Optimism Bridge) обычно самые безопасные, но медленнее. Сторонние мосты, такие как Stargate, Across и Hop, предлагают более быстрые переводы с разумной безопасностью. Всегда проверяйте статус аудита моста."
+			},
+			{
+				"question": "Сколько времени занимают переводы через мост?",
+				"answer": "Нативные мосты L2 занимают 7+ дней для вывода из-за периодов доказательства мошенничества. Быстрые мосты, такие как Stargate или Across, завершаются за минуты. Важно понимать компромисс скорость-безопасность."
+			}
+		]
+	},
+	"tools": {
+		"across": {
+			"description": "Быстрый и дешевый кроссчейн мост"
+		},
+		"stargate": {
+			"description": "Омничейн мост на базе LayerZero"
+		},
+		"orbiter": {
+			"description": "L2 кроссроллап мост"
+		},
+		"hop": {
+			"description": "Мост токенов L2 в L2"
+		},
+		"synapse": {
+			"description": "Кроссчейн мост и обмен"
+		},
+		"cbridge": {
+			"description": "Кроссчейн мост Celer"
+		},
+		"multichain": {
+			"description": "Протокол мультичейн роутера"
+		},
+		"wormhole": {
+			"description": "Протокол кроссчейн сообщений"
+		},
+		"socket": {
+			"description": "Агрегатор мостов для лучших маршрутов"
+		},
+		"rhino": {
+			"description": "Агрегатор мостов с самостоятельным хранением"
+		},
+		"hyphen": {
+			"description": "Мгновенные кроссчейн переводы"
+		},
+		"connext": {
+			"description": "Кроссчейн мост без доверия"
+		},
+		"debridge": {
+			"description": "Кроссчейн интероперабельность"
+		},
+		"allbridge": {
+			"description": "Мультичейн мост стейблкоинов"
+		},
+		"portal": {
+			"description": "Мост Wormhole Portal"
+		},
+		"squid": {
+			"description": "Роутер кроссчейн обмена"
+		},
+		"owlto": {
+			"description": "Быстрый и дешевый мост L2"
+		},
+		"bungee": {
+			"description": "Bridge агрегатор с gas refuel feature"
+		},
+		"dln": {
+			"description": "DeBridge limit order кроссчейн trading"
+		},
+		"jumper": {
+			"description": "Мультичейн bridge агрегатор by LI.FI"
+		},
+		"layerswap": {
+			"description": "Layerswap - Кроссчейн bridge"
+		},
+		"relay": {
+			"description": "Instant кроссчейн bridging solution"
+		},
+		"superbridge": {
+			"description": "Native bridge для Optimism и Base"
+		},
+		"symbiosis": {
+			"description": "Кроссчейн liquidity протокол и DEX"
+		}
+	}
+}

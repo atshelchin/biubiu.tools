@@ -1,0 +1,58 @@
+{
+	"category_seo": {
+		"title": "Asset Reali (RWA) - Asset Tokenizzati | BiuBiu Tools",
+		"description": "Esplora asset del mondo reale tokenizzati. Treasury tokenizzati, immobili, commodities e finanza tradizionale su blockchain.",
+		"faqs": [
+			{
+				"question": "Cosa sono gli RWA?",
+				"answer": "Gli RWA (Real World Asset) sono asset tradizionali come Treasury USA, immobili o commodities tokenizzati su blockchain. Portano rendimenti della finanza tradizionale in DeFi."
+			},
+			{
+				"question": "Perché gli RWA sono importanti?",
+				"answer": "Gli RWA forniscono rendimenti stabili dall'economia reale (tassi Treasury), diversificazione dalla volatilità crypto e collegano la finanza tradizionale con DeFi. MakerDAO detiene miliardi in RWA."
+			},
+			{
+				"question": "Quali piattaforme RWA esistono?",
+				"answer": "Ondo Finance per treasury tokenizzati, RealT per immobili, Centrifuge per finanziamento asset. I principali protocolli DeFi stanno integrando strategie RWA per rendimenti."
+			}
+		]
+	},
+	"tools": {
+		"goldfinch": {
+			"description": "Crypto prestito per real-world credit in emerging markets"
+		},
+		"truefi": {
+			"description": "Uncollateralized prestito per institutional borrowers"
+		},
+		"centrifuge": {
+			"description": "Real-world asset financing protocollo bringing invoices e real estate su-chain"
+		},
+		"clearpool": {
+			"description": "Decentralized capital markets per unsecured institutional prestito"
+		},
+		"matrixdock": {
+			"description": "Tokenized treasury bills con STBT stablecoin"
+		},
+		"openeden": {
+			"description": "Tokenized T-Bills con real-time NAV e 24/7 settlement"
+		},
+		"realt": {
+			"description": "Tokenized real estate investment con fractional ownership"
+		},
+		"lofty": {
+			"description": "Fractional real estate investing su Algorand blockchain"
+		},
+		"propy": {
+			"description": "Blockchain-based real estate transactions e ownership"
+		},
+		"securitize": {
+			"description": "Security token issuance e lifecycle gestione piattaforma"
+		},
+		"tokeny": {
+			"description": "Enterprise tokenization piattaforma per compliant securities"
+		},
+		"polymesh": {
+			"description": "Purpose-built blockchain per regulated sicurezza token"
+		}
+	}
+}

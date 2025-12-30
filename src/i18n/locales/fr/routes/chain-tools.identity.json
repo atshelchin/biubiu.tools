@@ -1,0 +1,84 @@
+{
+	"category_seo": {
+		"title": "Solutions d'Identité Blockchain - DID et Vérification | BiuBiu Tools",
+		"description": "Explorez les solutions d'identité décentralisée. Gérez votre identité numérique avec des outils DID, vérification et réputation.",
+		"keywords": "identité blockchain, identité décentralisée, did, vérification web3",
+		"faqs": [
+			{
+				"question": "Qu'est-ce que l'identité décentralisée ?",
+				"answer": "L'identité décentralisée (DID) permet aux utilisateurs de contrôler leurs propres données d'identité sans dépendre d'autorités centrales. Elle utilise la blockchain pour créer des identités vérifiables et portables."
+			},
+			{
+				"question": "Pourquoi avons-nous besoin de DID ?",
+				"answer": "DID offre confidentialité, sécurité et contrôle sur les données personnelles. Il élimine les points de défaillance uniques, réduit les vols d'identité et permet une vérification d'identité fluide entre plateformes."
+			},
+			{
+				"question": "Comment fonctionne la vérification blockchain ?",
+				"answer": "La vérification blockchain utilise des preuves cryptographiques pour confirmer l'identité sans révéler de détails personnels. Les vérificateurs valident les credentials, et ces vérifications sont stockées on-chain ou off-chain."
+			},
+			{
+				"question": "Puis-je utiliser une identité blockchain sur plusieurs plateformes ?",
+				"answer": "Oui, c'est l'un des principaux avantages. Votre identité décentralisée peut être utilisée sur différentes dApps et services sans créer de nouveaux comptes, offrant une véritable portabilité d'identité."
+			}
+		]
+	},
+	"tools": {
+		"ens": {
+			"description": "Ethereum Name Service pour human-readable addresses"
+		},
+		"dotbit": {
+			"description": "Cross-chain décentralisé identité protocole"
+		},
+		"galxe": {
+			"description": "Web3 credential et campaign plateforme"
+		},
+		"layer3": {
+			"description": "Learn-à-earn quests et Web3 onboarding"
+		},
+		"degenscore": {
+			"description": "On-chain reputation et DeFi score"
+		},
+		"civic": {
+			"description": "Identity verification et KYC solutions"
+		},
+		"poap": {
+			"description": "Proof de Attendance Protocol pour event badges"
+		},
+		"phi": {
+			"description": "Metaverse identité et credential land"
+		},
+		"otterspace": {
+			"description": "Soulbound badges pour DAO membership"
+		},
+		"disco": {
+			"description": "Verifiable credentials données backpack"
+		},
+		"holonym": {
+			"description": "Privacy-preserving identité verification avec ZK"
+		},
+		"anima": {
+			"description": "Biometric identité pour sybil resistance"
+		},
+		"rarimo": {
+			"description": "Rarimo - Identity et credentials"
+		},
+		"verax": {
+			"description": "Verax - Identity et credentials"
+		},
+		"bns": {
+			"description": "BNS (Base Name Service) - Identity et credentials"
+		},
+		"eas": {
+			"description": "EAS (Ethereum Attestation Service) - Identity et credentials"
+		},
+		"zkpass": {
+			"description": "zkPass - Identity et credentials"
+		},
+		"brightid": {
+			"description": "BrightID - Identity et credentials"
+		},
+		"nomis": {
+			"description": "NomEst - Identity et credentials"
+		}
+	}
+}

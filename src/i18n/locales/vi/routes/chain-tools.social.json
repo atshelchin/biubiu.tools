@@ -1,0 +1,82 @@
+{
+	"category_seo": {
+		"title": "Mạng Xã Hội Web3 - Nền Tảng Xã Hội Phi Tập Trung | BiuBiu Tools",
+		"description": "Nền tảng xã hội phi tập trung và công cụ cộng đồng. Xây dựng và tham gia cộng đồng Web3 trên Farcaster, Lens và nhiều hơn nữa.",
+		"faqs": [
+			{
+				"question": "Nền tảng xã hội Web3 là gì?",
+				"answer": "Nền tảng xã hội Web3 là lựa chọn thay thế phi tập trung cho Twitter/Facebook. Bạn sở hữu dữ liệu và biểu đồ xã hội của mình. Các nền tảng phổ biến bao gồm Farcaster, Lens Protocol và DeSo."
+			},
+			{
+				"question": "Farcaster là gì?",
+				"answer": "Farcaster là giao thức xã hội phi tập trung tương tự Twitter. Warpcast là client chính. Nó phổ biến trong số các nhà phát triển crypto và có văn hóa cộng đồng mạnh mẽ."
+			},
+			{
+				"question": "Cộng đồng Web3 phối hợp như thế nào?",
+				"answer": "Discord và Telegram cho trò chuyện thời gian thực, Farcaster/Lens cho xã hội, Mirror cho nội dung dài, Snapshot cho quản trị và Guild.xyz cho quyền truy cập có cổng token."
+			}
+		]
+	},
+	"tools": {
+		"farcaster": {
+			"description": "Decentralized social protocol"
+		},
+		"xmtp": {
+			"description": "Secure wallet-to-wallet messaging protocol"
+		},
+		"warpcast": {
+			"description": "Primary client for Farcaster social network"
+		},
+		"hey": {
+			"description": "Decentralized social app on Lens Protocol"
+		},
+		"orb": {
+			"description": "Mobile-first Lens Protocol client"
+		},
+		"cyberconnect": {
+			"description": "Social graph protocol with Web3 identity"
+		},
+		"mirror": {
+			"description": "Web3 publishing and crowdfunding platform"
+		},
+		"paragraph": {
+			"description": "Web3 native newsletter and publishing"
+		},
+		"deso": {
+			"description": "Layer 1 blockchain built for social applications"
+		},
+		"phaver": {
+			"description": "Cross-platform Web3 social app"
+		},
+		"drakula": {
+			"description": "Short-form video platform on Farcaster"
+		},
+		"link3": {
+			"description": "Web3 events and credentials by CyberConnect"
+		},
+		"buttrfly": {
+			"description": "Cross-platform social aggregator for Lens"
+		},
+		"tape": {
+			"description": "Decentralized video platform on Lens"
+		},
+		"unlonely": {
+			"description": "Web3 live streaming community platform"
+		},
+		"supercast": {
+			"description": "Supercast - Decentralized social platform"
+		},
+		"neynar": {
+			"description": "Neynar - Decentralized social platform"
+		},
+		"airstack": {
+			"description": "Airstack - Decentralized social platform"
+		},
+		"huddle01": {
+			"description": "Huddle01 - Decentralized social platform"
+		},
+		"moxie": {
+			"description": "Moxie - Decentralized social platform"
+		}
+	}
+}

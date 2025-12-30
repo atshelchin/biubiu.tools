@@ -1,0 +1,92 @@
+{
+	"category_seo": {
+		"title": "Криптоплатежи - Обработка платежей и карточные сервисы | BiuBiu Tools",
+		"description": "Решения криптоплатежей для бизнеса и частных лиц. Процессоры платежей, криптокарты и торговые услуги.",
+		"keywords": "криптоплатежи, процессор платежей, криптокарты, торговые услуги биткоин",
+		"faqs": [
+			{
+				"question": "Как работают криптоплатежи?",
+				"answer": "Криптоплатежи передают ценность напрямую в блокчейне. Для торговцев процессоры платежей, такие как BitPay, конвертируют криптовалюту в фиат. Криптокарты, такие как Coinbase Card, позволяют тратить криптовалюту везде."
+			},
+			{
+				"question": "Какие криптокарты лучшие?",
+				"answer": "Coinbase Card и Crypto.com Card широко доступны. Gnosis Pay предлагает интеграцию с DeFi. Сравните ставки кэшбэка, поддерживаемые страны и структуры комиссий перед выбором."
+			},
+			{
+				"question": "Могут ли бизнесы принимать криптоплатежи?",
+				"answer": "Да, используя процессоры платежей, такие как BitPay, Coinbase Commerce, или прямые платежи кошельком. Учтите волатильность, налоговые последствия и стоит ли немедленно конвертировать в фиат."
+			}
+		]
+	},
+	"tools": {
+		"moonpay": {
+			"description": "Фиат он-рамп и офф-рамп для крипто"
+		},
+		"transak": {
+			"description": "Инфраструктура платежей фиат-в-крипто"
+		},
+		"ramp": {
+			"description": "Некастодиальный фиат он-рамп SDK"
+		},
+		"onmeta": {
+			"description": "Фиат он-рамп для индийских пользователей"
+		},
+		"superfluid": {
+			"description": "Потоковая передача токенов в реальном времени для платежей"
+		},
+		"sablier": {
+			"description": "Потоковая передача токенов для вестинга и зарплаты"
+		},
+		"coinshift": {
+			"description": "Управление казначейством и мультиподписные операции"
+		},
+		"spritz": {
+			"description": "Оплата счетов криптовалютой через ACH"
+		},
+		"bitpay": {
+			"description": "Обработка криптоплатежей для торговцев"
+		},
+		"banxa": {
+			"description": "Banxa - Crypto payment solution"
+		},
+		"coinflow": {
+			"description": "Coinflow - Crypto payment solution"
+		},
+		"fusepay": {
+			"description": "Crypto spending card on Fuse сеть"
+		},
+		"holyheld": {
+			"description": "DeFi debit card с yield features"
+		},
+		"llamapay": {
+			"description": "LlamaPay - Crypto payment solution"
+		},
+		"loopcrypto": {
+			"description": "Recurring crypto billing и subscriptions"
+		},
+		"monerium": {
+			"description": "Monerium - Crypto payment solution"
+		},
+		"nowpayments": {
+			"description": "NOWPayments - Crypto payment solution"
+		},
+		"parcel": {
+			"description": "Parcel - Crypto payment solution"
+		},
+		"reveel": {
+			"description": "Automated revenue sharing и royalty splits"
+		},
+		"sardine": {
+			"description": "Sardine - Crypto payment solution"
+		},
+		"simplex": {
+			"description": "Simplex - Crypto payment solution"
+		},
+		"splits": {
+			"description": "On-цепь payment splitting протокол"
+		},
+		"wyre": {
+			"description": "Wyre - Crypto payment solution"
+		}
+	}
+}

@@ -17,13 +17,6 @@
 	const searchContext = getContext<{ query: string }>('chainToolsSearch');
 	const searchQuery = $derived(searchContext?.query || '');
 
-	// Import both locales for bilingual search
-	import enChainTools from '@/i18n/locales/en/routes/chain-tools.json';
-	import zhChainTools from '@/i18n/locales/zh/routes/chain-tools.json';
-
-	const enLocale = { chain_tools: enChainTools };
-	const zhLocale = { chain_tools: zhChainTools };
-
 	/**
 	 * Tokenize search query
 	 */
@@ -35,28 +28,20 @@
 	}
 
 	/**
-	 * Get tool description from both locales
+	 * Get tool descriptions using i18n
+	 * descriptionKey format: chain-tools.{category}.tools.{toolId}.description
 	 */
 	function getToolDescriptions(tool: ExternalTool): string[] {
 		const descriptions: string[] = [];
-		const keyParts = tool.descriptionKey.split('.');
-		const toolId = keyParts[keyParts.length - 2];
 
-		const enTools = enLocale.chain_tools?.tools as Record<
-			string,
-			{ description?: string } | undefined
-		>;
-		if (enTools?.[toolId]?.description) {
-			descriptions.push(enTools[toolId].description.toLowerCase());
+		// Get description in current locale
+		const currentDesc = i18n.t(tool.descriptionKey as never, { defaultValue: '' });
+		if (currentDesc) {
+			descriptions.push(currentDesc.toLowerCase());
 		}
 
-		const zhTools = zhLocale.chain_tools?.tools as Record<
-			string,
-			{ description?: string } | undefined
-		>;
-		if (zhTools?.[toolId]?.description) {
-			descriptions.push(zhTools[toolId].description.toLowerCase());
-		}
+		// Tool name is always searchable
+		descriptions.push(tool.name.toLowerCase());
 
 		return descriptions;
 	}

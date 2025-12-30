@@ -1,0 +1,50 @@
+{
+	"category_seo": {
+		"title": "Web3資金調達 - グラント、VCと資金調達 | BiuBiu Tools",
+		"description": "Web3プロジェクトの資金源を見つける。エコシステムグラント、VC投資家、クラウドファンディングプラットフォーム、アクセラレータープログラム。",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "Web3プロジェクトはどのように資金調達しますか？",
+				"answer": "オプションには、エコシステムグラント（Ethereum Foundation、L2グラント）、VCファンディング（a16z、Paradigm）、トークンローンチ（ローンチパッド）、遡及的資金提供（Optimism RetroPGF）があります。"
+			},
+			{
+				"question": "エコシステムグラントとは何ですか？",
+				"answer": "ブロックチェーン財団による開発資金提供グラント。Ethereum Foundation、Uniswap Grants、Arbitrum Foundationなどが、エコシステム上で構築するプロジェクトに資金を提供します。"
+			},
+			{
+				"question": "暗号資産VCにどのようにピッチしますか？",
+				"answer": "まず動作する製品を構築してください。暗号資産VCは技術的な創業者とオープンソース貢献を重視します。カンファレンスでネットワーキングし、紹介を得て、TVLやユーザーなどの牽引力指標を示してください。"
+			}
+		]
+	},
+	"tools": {
+		"paradigm": {
+			"description": "Paradigm - Web3 investment and funding platform"
+		},
+		"polychain": {
+			"description": "Polychain Capital - Web3 investment and funding platform"
+		},
+		"pantera": {
+			"description": "Pantera Capital - Web3 investment and funding platform"
+		},
+		"multicoin": {
+			"description": "Multicoin Capital - Web3 investment and funding platform"
+		},
+		"dragonfly": {
+			"description": "Dragonfly - Web3 investment and funding platform"
+		},
+		"variant": {
+			"description": "Variant - Web3 investment and funding platform"
+		},
+		"placeholder": {
+			"description": "Placeholder - Web3 investment and funding platform"
+		},
+		"coinlist": {
+			"description": "CoinList - Web3 investment and funding platform"
+		},
+		"kernel": {
+			"description": "Kernel - Web3 investment and funding platform"
+		}
+	}
+}

@@ -1,0 +1,79 @@
+{
+	"category_seo": {
+		"title": "Identitas Web3 - ENS, Lens & Identitas Terdesentralisasi | BiuBiu Tools",
+		"description": "Solusi identitas terdesentralisasi untuk Web3. Nama domain (ENS), profil sosial (Lens), kredensial, dan sistem reputasi.",
+		"faqs": [
+			{
+				"question": "Apa itu identitas Web3?",
+				"answer": "Identitas Web3 memungkinkan Anda memiliki identitas digital on-chain. Ini mencakup nama domain (ENS), profil sosial (Lens), kredensial terverifikasi, dan skor reputasi di seluruh dApp."
+			},
+			{
+				"question": "Haruskah saya mendapatkan domain ENS?",
+				"answer": "Ya, domain ENS mengganti alamat wallet yang kompleks dengan nama yang dapat dibaca (namakamu.eth). Mereka bekerja di seluruh wallet dan dApp. Anda juga dapat menggunakannya sebagai website terdesentralisasi."
+			},
+			{
+				"question": "Apa itu Lens Protocol?",
+				"answer": "Lens Protocol adalah social graph terdesentralisasi di mana Anda memiliki profil, konten, dan follower sebagai NFT. Aplikasi yang dibangun di Lens termasuk Lenster, Hey, dan Orb."
+			}
+		]
+	},
+	"tools": {
+		"ens": {
+			"description": "Ethereum Name Service for human-readable addresses"
+		},
+		"dotbit": {
+			"description": "Cross-chain decentralized identity protocol"
+		},
+		"galxe": {
+			"description": "Web3 credential and campaign platform"
+		},
+		"layer3": {
+			"description": "Learn-to-earn quests and Web3 onboarding"
+		},
+		"degenscore": {
+			"description": "On-chain reputation and DeFi score"
+		},
+		"civic": {
+			"description": "Identity verification and KYC solutions"
+		},
+		"poap": {
+			"description": "Proof of Attendance Protocol for event badges"
+		},
+		"phi": {
+			"description": "Metaverse identity and credential land"
+		},
+		"otterspace": {
+			"description": "Soulbound badges for DAO membership"
+		},
+		"disco": {
+			"description": "Verifiable credentials data backpack"
+		},
+		"holonym": {
+			"description": "Privacy-preserving identity verification with ZK"
+		},
+		"anima": {
+			"description": "Biometric identity for sybil resistance"
+		},
+		"rarimo": {
+			"description": "Rarimo - Identity and credentials"
+		},
+		"verax": {
+			"description": "Verax - Identity and credentials"
+		},
+		"bns": {
+			"description": "BNS (Base Name Service) - Identity and credentials"
+		},
+		"eas": {
+			"description": "EAS (Ethereum Attestation Service) - Identity and credentials"
+		},
+		"zkpass": {
+			"description": "zkPass - Identity and credentials"
+		},
+		"brightid": {
+			"description": "BrightID - Identity and credentials"
+		},
+		"nomis": {
+			"description": "Nomis - Identity and credentials"
+		}
+	}
+}

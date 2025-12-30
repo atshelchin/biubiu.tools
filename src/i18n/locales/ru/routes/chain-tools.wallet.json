@@ -1,0 +1,119 @@
+{
+	"category_seo": {
+		"title": "Криптокошельки - Аппаратные, программные и мультичейн | BiuBiu Tools",
+		"description": "Сравните лучшие криптокошельки по безопасности и удобству. Аппаратные кошельки, расширения для браузеров и мобильные кошельки для всех блокчейнов.",
+		"keywords": "криптокошелек, аппаратный кошелек, metamask, ledger, trezor, мультичейн кошелек",
+		"faqs": [
+			{
+				"question": "Что такое криптокошелек?",
+				"answer": "Криптокошелек — это программное или аппаратное обеспечение, которое хранит ваши приватные ключи и позволяет отправлять, получать и управлять криптовалютами. Он фактически не хранит криптовалюту — активы остаются в блокчейне."
+			},
+			{
+				"question": "Аппаратный кошелек против программного кошелька?",
+				"answer": "Аппаратные кошельки (Ledger, Trezor) хранят ключи офлайн для максимальной безопасности, идеальны для больших сумм. Программные кошельки (MetaMask, Rainbow) удобнее для ежедневного использования, но подключены к интернету."
+			},
+			{
+				"question": "Как обезопасить свой кошелек?",
+				"answer": "Никогда не делитесь своей seed-фразой, используйте аппаратные кошельки для больших сумм, включайте 2FA где возможно, проверяйте детали транзакций перед подписанием и остерегайтесь фишинговых сайтов."
+			}
+		]
+	},
+	"tools": {
+		"debank": {
+			"description": "Мультичейн трекер портфеля и социальная платформа"
+		},
+		"rabby": {
+			"description": "Мультичейн браузерный кошелек"
+		},
+		"rainbow": {
+			"description": "Красивый кошелек Ethereum"
+		},
+		"metamask": {
+			"description": "Самый популярный кошелек Web3"
+		},
+		"frame": {
+			"description": "Десктоп кошелек, ориентированный на приватность"
+		},
+		"zerion": {
+			"description": "Портфель DeFi и кошелек"
+		},
+		"safe": {
+			"description": "Мультиподписной смарт-кошелек"
+		},
+		"zapper": {
+			"description": "Панель управления портфелем DeFi"
+		},
+		"argent": {
+			"description": "Смарт-кошелек с восстановлением"
+		},
+		"sequence": {
+			"description": "Смарт-кошелек для гейминга"
+		},
+		"ledger": {
+			"description": "Безопасность аппаратного кошелька"
+		},
+		"trezor": {
+			"description": "Пионер аппаратных кошельков"
+		},
+		"privy": {
+			"description": "Решение встроенного кошелька"
+		},
+		"dynamic": {
+			"description": "Мультикошельковая аутентификация"
+		},
+		"ambire": {
+			"description": "Smart кошелек с email login и gasless transactions"
+		},
+		"biconomy": {
+			"description": "Account abstraction и gasless transaction SDK"
+		},
+		"coolwallet": {
+			"description": "coolкошелек - Web3 кошелек"
+		},
+		"imtoken": {
+			"description": "imToken - Web3 кошелек"
+		},
+		"multis": {
+			"description": "Multis - Web3 кошелек"
+		},
+		"mycrypto": {
+			"description": "MyCrypto - Web3 кошелек"
+		},
+		"myetherwallet": {
+			"description": "MyEtherКошелек - Web3 кошелек"
+		},
+		"mytonwallet": {
+			"description": "MyTonКошелек - Web3 кошелек"
+		},
+		"obvious": {
+			"description": "Smart кошелек с account abstraction"
+		},
+		"pimlico": {
+			"description": "ERC-4337 bundler и paymaster infrastructure"
+		},
+		"solflare": {
+			"description": "Solflare - Crypto кошелек"
+		},
+		"squads": {
+			"description": "Squads - Web3 кошелек"
+		},
+		"stackup": {
+			"description": "Account abstraction bundler и SDK"
+		},
+		"subwallet": {
+			"description": "SubКошелек - Web3 кошелек"
+		},
+		"tokenpocket": {
+			"description": "TokenPocket - Web3 кошелек"
+		},
+		"tonhub": {
+			"description": "Tonhub - Web3 кошелек"
+		},
+		"tronlink": {
+			"description": "TronLink - Web3 кошелек"
+		},
+		"zerodev": {
+			"description": "Modular smart кошелек SDK с Kernel"
+		}
+	}
+}

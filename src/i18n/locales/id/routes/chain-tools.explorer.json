@@ -1,0 +1,106 @@
+{
+	"category_seo": {
+		"title": "Blockchain Explorer - Lihat Transaksi & Smart Contract | BiuBiu Tools",
+		"description": "Akses blockchain explorer untuk Ethereum, BSC, Polygon, dan jaringan lainnya. Lihat transaksi, verifikasi contract, dan analisis data on-chain.",
+		"faqs": [
+			{
+				"question": "Apa itu blockchain explorer?",
+				"answer": "Blockchain explorer adalah mesin pencari untuk data blockchain. Ini memungkinkan Anda melihat transaksi, saldo wallet, kode smart contract, transfer token, dan aktivitas on-chain lainnya."
+			},
+			{
+				"question": "Bagaimana cara memverifikasi smart contract?",
+				"answer": "Di Etherscan, buka alamat contract, klik tab 'Contract', lalu 'Verify and Publish'. Kirimkan source code, versi compiler, dan argumen constructor. Contract yang diverifikasi menampilkan tanda centang hijau."
+			},
+			{
+				"question": "Apa explorer multi-chain terbaik?",
+				"answer": "Blockscout mendukung banyak chain EVM dan open-source. OKLink mencakup 50+ chain. Untuk chain spesifik, gunakan explorer native seperti Etherscan (Ethereum), BSCScan (BNB Chain), atau Arbiscan (Arbitrum)."
+			}
+		]
+	},
+	"tools": {
+		"etherscan": {
+			"description": "Penjelajah blockchain Ethereum"
+		},
+		"blockscout": {
+			"description": "Penjelajah blok sumber terbuka"
+		},
+		"arbiscan": {
+			"description": "Arbitrum blockchain explorer"
+		},
+		"polygonscan": {
+			"description": "Polygon blockchain explorer"
+		},
+		"bscscan": {
+			"description": "BNB Chain blockchain explorer"
+		},
+		"basescan": {
+			"description": "Base blockchain explorer"
+		},
+		"snowtrace": {
+			"description": "Avalanche blockchain explorer"
+		},
+		"lineascan": {
+			"description": "Linea blockchain explorer"
+		},
+		"scrollscan": {
+			"description": "Scroll network explorer"
+		},
+		"mantlescan": {
+			"description": "Mantle network explorer"
+		},
+		"blastscan": {
+			"description": "Blast network explorer"
+		},
+		"modescan": {
+			"description": "Mode network explorer"
+		},
+		"celoscan": {
+			"description": "Celo blockchain explorer"
+		},
+		"ftmscan": {
+			"description": "Fantom network explorer"
+		},
+		"gnosisscan": {
+			"description": "Gnosis Chain explorer"
+		},
+		"cronoscan": {
+			"description": "Cronos network explorer"
+		},
+		"moonbeamscan": {
+			"description": "Moonbeam & Moonriver explorer"
+		},
+		"oklink": {
+			"description": "Multi-chain blockchain explorer by OKX"
+		},
+		"routescan": {
+			"description": "Unified multi-chain block explorer"
+		},
+		"onceupon": {
+			"description": "Human-readable blockchain transaction explorer"
+		},
+		"anyabi": {
+			"description": "Smart contract ABI lookup and decoder"
+		},
+		"nearblocks": {
+			"description": "NearBlocks - Block explorer"
+		},
+		"blockchair": {
+			"description": "Blockchair - Block explorer"
+		},
+		"avascan": {
+			"description": "AvaScan - Block explorer"
+		},
+		"tronscan": {
+			"description": "TronScan - Block explorer"
+		},
+		"cardanoscan": {
+			"description": "Cardanoscan - Block explorer"
+		},
+		"viewblock": {
+			"description": "ViewBlock - Block explorer"
+		},
+		"suiscan": {
+			"description": "SuiScan - Block explorer"
+		}
+	}
+}

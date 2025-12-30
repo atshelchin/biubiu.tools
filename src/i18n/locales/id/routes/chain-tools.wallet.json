@@ -1,0 +1,119 @@
+{
+	"category_seo": {
+		"title": "Wallet Kripto - Hardware, Software & Multi-Chain | BiuBiu Tools",
+		"description": "Bandingkan wallet kripto terbaik untuk keamanan dan kenyamanan. Wallet hardware, ekstensi browser, dan wallet mobile untuk semua blockchain.",
+		"keywords": "wallet kripto, wallet hardware, metamask, ledger, trezor, wallet multi-chain",
+		"faqs": [
+			{
+				"question": "Apa itu wallet kripto?",
+				"answer": "Wallet kripto adalah software atau hardware yang menyimpan private key Anda dan memungkinkan Anda mengirim, menerima, dan mengelola cryptocurrency. Wallet tidak benar-benar menyimpan kripto - aset tetap di blockchain."
+			},
+			{
+				"question": "Wallet hardware vs wallet software?",
+				"answer": "Wallet hardware (Ledger, Trezor) menyimpan key secara offline untuk keamanan maksimum, ideal untuk kepemilikan besar. Wallet software (MetaMask, Rainbow) lebih nyaman untuk penggunaan sehari-hari tetapi terhubung ke internet."
+			},
+			{
+				"question": "Bagaimana cara menjaga wallet saya tetap aman?",
+				"answer": "Jangan pernah bagikan seed phrase Anda, gunakan wallet hardware untuk jumlah besar, aktifkan 2FA jika memungkinkan, verifikasi detail transaksi sebelum menandatangani, dan berhati-hati terhadap situs phishing."
+			}
+		]
+	},
+	"tools": {
+		"debank": {
+			"description": "Pelacak portofolio multi-chain dan platform sosial"
+		},
+		"rabby": {
+			"description": "Multi-chain browser wallet"
+		},
+		"rainbow": {
+			"description": "Beautiful Ethereum wallet"
+		},
+		"metamask": {
+			"description": "Most popular Web3 wallet"
+		},
+		"frame": {
+			"description": "Privacy-focused desktop wallet"
+		},
+		"zerion": {
+			"description": "DeFi portfolio and wallet"
+		},
+		"safe": {
+			"description": "Multi-signature smart wallet"
+		},
+		"zapper": {
+			"description": "DeFi portfolio dashboard"
+		},
+		"argent": {
+			"description": "Smart wallet with recovery"
+		},
+		"sequence": {
+			"description": "Smart wallet for gaming"
+		},
+		"ledger": {
+			"description": "Hardware wallet security"
+		},
+		"trezor": {
+			"description": "Hardware wallet pioneer"
+		},
+		"privy": {
+			"description": "Embedded wallet solution"
+		},
+		"dynamic": {
+			"description": "Multi-wallet authentication"
+		},
+		"ambire": {
+			"description": "Smart wallet with email login and gasless transactions"
+		},
+		"obvious": {
+			"description": "Smart wallet with account abstraction"
+		},
+		"pimlico": {
+			"description": "ERC-4337 bundler and paymaster infrastructure"
+		},
+		"stackup": {
+			"description": "Account abstraction bundler and SDK"
+		},
+		"biconomy": {
+			"description": "Account abstraction and gasless transaction SDK"
+		},
+		"zerodev": {
+			"description": "Modular smart wallet SDK with Kernel"
+		},
+		"solflare": {
+			"description": "Solflare - Crypto wallet"
+		},
+		"subwallet": {
+			"description": "SubWallet - Web3 wallet"
+		},
+		"tonhub": {
+			"description": "Tonhub - Web3 wallet"
+		},
+		"mytonwallet": {
+			"description": "MyTonWallet - Web3 wallet"
+		},
+		"coolwallet": {
+			"description": "coolwallet - Web3 wallet"
+		},
+		"imtoken": {
+			"description": "imToken - Web3 wallet"
+		},
+		"tokenpocket": {
+			"description": "TokenPocket - Web3 wallet"
+		},
+		"myetherwallet": {
+			"description": "MyEtherWallet - Web3 wallet"
+		},
+		"mycrypto": {
+			"description": "MyCrypto - Web3 wallet"
+		},
+		"tronlink": {
+			"description": "TronLink - Web3 wallet"
+		},
+		"multis": {
+			"description": "Multis - Web3 wallet"
+		},
+		"squads": {
+			"description": "Squads - Web3 wallet"
+		}
+	}
+}

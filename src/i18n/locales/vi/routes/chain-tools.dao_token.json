@@ -1,0 +1,25 @@
+{
+	"category_seo": {
+		"title": "Token Quản Trị DAO - Quyền Bỏ Phiếu & Tokenomics | BiuBiu Tools",
+		"description": "Hiểu về token quản trị DAO. Cơ chế bỏ phiếu, phân phối token và tham gia quản trị trong các DAO lớn.",
+		"faqs": [
+			{
+				"question": "Token quản trị là gì?",
+				"answer": "Token quản trị cho phép người nắm giữ quyền bỏ phiếu trong các quyết định của giao thức. Ví dụ: UNI (Uniswap), AAVE, COMP. Quyền bỏ phiếu thường tỷ lệ với lượng token nắm giữ."
+			},
+			{
+				"question": "Ủy quyền bỏ phiếu hoạt động như thế nào?",
+				"answer": "Bạn có thể ủy quyền quyền bỏ phiếu của mình cho người khác (đại biểu) trong khi vẫn giữ token. Điều này giúp các thành viên cộng đồng tích cực bỏ phiếu thay mặt cho những người nắm giữ thụ động."
+			},
+			{
+				"question": "Token quản trị có giá trị không?",
+				"answer": "Giá trị đến từ quyền quản trị, chia sẻ phí tiềm năng và đầu cơ. Một số giao thức chia sẻ doanh thu với người nắm giữ token. Những giao thức khác gặp khó khăn trong việc tích lũy giá trị."
+			}
+		]
+	},
+	"tools": {
+		"boardroom": {
+			"description": "Governance aggregator for tracking DAO proposals and voting"
+		}
+	}
+}

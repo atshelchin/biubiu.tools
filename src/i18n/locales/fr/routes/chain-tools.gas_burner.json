@@ -1,0 +1,39 @@
+{
+	"category_seo": {
+		"title": "Analyse des Brûleurs de Gas - Principaux Consommateurs de Gas Blockchain | BiuBiu Tools",
+		"description": "Analysez quels protocoles consomment le plus de gas sur Ethereum et autres chaînes. Suivez les contrats et dApps à gros consommateurs de gas.",
+		"keywords": "brûleurs de gas, frais de gas ethereum, utilisation de gas, suivi des frais blockchain",
+		"faqs": [
+			{
+				"question": "Qu'est-ce qu'un brûleur de gas ?",
+				"answer": "Un brûleur de gas fait référence aux smart contracts ou dApps qui consomment de grandes quantités de gas via un volume de transactions élevé. Le suivi des principaux brûleurs de gas aide à comprendre quels protocoles dominent l'activité du réseau."
+			},
+			{
+				"question": "Pourquoi les brûleurs de gas sont-ils importants ?",
+				"answer": "Les brûleurs de gas indiquent quels protocoles sont les plus utilisés et valorisés. Une utilisation élevée de gas signale une forte adoption. Cela aide aussi à comprendre quels secteurs (DeFi, NFT, gaming) dominent l'activité blockchain."
+			},
+			{
+				"question": "Comment réduire les coûts de gas ?",
+				"answer": "Réduisez les coûts de gas via : transactions pendant les heures creuses, utilisation de solutions Layer 2, regroupement de transactions, ajustement des paramètres de slippage, utilisation de protocoles économes en gas et attendre des conditions de réseau moins congestionnées."
+			},
+			{
+				"question": "Que se passe-t-il avec le gas brûlé ?",
+				"answer": "Depuis EIP-1559 d'Ethereum, une portion des frais de gas est brûlée (détruite définitivement), réduisant l'approvisionnement en ETH. Cela rend l'ETH déflationniste pendant les périodes de forte activité du réseau. Les brûleurs de gas contribuent à cette déflation."
+			}
+		]
+	},
+	"tools": {
+		"l2fees": {
+			"description": "CompSont L2 transaction fees"
+		},
+		"gasnow": {
+			"description": "Fast gas price tracker avec API"
+		},
+		"owlracle": {
+			"description": "Multi-chain gas oracle avec API"
+		},
+		"txstreet": {
+			"description": "Live blockchain visualization"
+		}
+	}
+}

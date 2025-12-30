@@ -1,0 +1,146 @@
+{
+	"category_seo": {
+		"title": "Инструменты безопасности Web3 - Аудит, мониторинг и защита | BiuBiu Tools",
+		"description": "Необходимые инструменты безопасности для Web3. Аудит смарт-контрактов, симуляция транзакций, управление разрешениями и обнаружение угроз в реальном времени.",
+		"keywords": "безопасность web3, аудит смарт-контрактов, отзыв разрешений, симуляция транзакций, безопасность defi",
+		"faqs": [
+			{
+				"question": "Как отозвать разрешения токенов?",
+				"answer": "Используйте инструменты, такие как Revoke.cash, чтобы просмотреть и отозвать неограниченные разрешения токенов, которые вы предоставили смарт-контрактам. Это предотвращает потенциальные эксплойты, если контракт будет скомпрометирован."
+			},
+			{
+				"question": "Что такое симуляция транзакций?",
+				"answer": "Симуляция транзакций (инструменты, такие как Pocket Universe) предварительно показывает, что произойдет, прежде чем вы подпишете транзакцию, помогая избежать мошенничества и неожиданных результатов."
+			},
+			{
+				"question": "Как проверить, что смарт-контракт безопасен?",
+				"answer": "Проверьте, аудирован ли контракт авторитетными фирмами, проверьте код на Etherscan, поищите программы bug bounty и проверьте послужной список протокола и TVL."
+			}
+		]
+	},
+	"tools": {
+		"revoke": {
+			"description": "Управление и отзыв разрешений токенов"
+		},
+		"slither": {
+			"description": "Фреймворк статического анализа"
+		},
+		"mythx": {
+			"description": "API безопасности смарт-контрактов"
+		},
+		"certik": {
+			"description": "Аудиты безопасности и skynet"
+		},
+		"hacken": {
+			"description": "Аудирование безопасности блокчейна"
+		},
+		"immunefi": {
+			"description": "Платформа bug bounty Web3"
+		},
+		"openzeppelin": {
+			"description": "Библиотека безопасности смарт-контрактов"
+		},
+		"dedaub": {
+			"description": "Инструменты безопасности смарт-контрактов и декомпилятор"
+		},
+		"honeypot": {
+			"description": "Обнаружение токенов-ловушек"
+		},
+		"phalcon": {
+			"description": "Обозреватель анализа транзакций"
+		},
+		"chainalysis": {
+			"description": "Платформа compliance блокчейна"
+		},
+		"hexagate": {
+			"description": "Мониторинг угроз смарт-контрактов в реальном времени"
+		},
+		"hypernative": {
+			"description": "Мониторинг и предотвращение безопасности на базе AI"
+		},
+		"chainalert": {
+			"description": "Оповещения и уведомления о безопасности блокчейна"
+		},
+		"webacy": {
+			"description": "Резервное копирование безопасности кошелька и крипто наследование"
+		},
+		"harpie": {
+			"description": "Он-чейн файрвол и защита от мошенничества"
+		},
+		"blowfish": {
+			"description": "Симуляция транзакций и предотвращение угроз"
+		},
+		"stelo": {
+			"description": "Читаемые предпросмотры транзакций"
+		},
+		"fire": {
+			"description": "Симуляция транзакций для защиты кошелька"
+		},
+		"scamsniffer": {
+			"description": "Сервис обнаружения мошенничества и фишинга"
+		},
+		"peckshield": {
+			"description": "Аудит безопасности блокчейна и исследовательская фирма"
+		},
+		"slowmist": {
+			"description": "Аудит безопасности и расследование инцидентов"
+		},
+		"quantstamp": {
+			"description": "Аудит безопасности блокчейна предприятий"
+		},
+		"spearbit": {
+			"description": "Сеть экспертов по безопасности"
+		},
+		"aztec": {
+			"description": "Programmable privacy с zk-rollup"
+		},
+		"chainsecurity": {
+			"description": "ChainSecurity - Security инструмент"
+		},
+		"code4rena": {
+			"description": "Управляемый сообществом audit contests"
+		},
+		"cyfrin": {
+			"description": "Cyfrin - Security инструмент"
+		},
+		"elusiv": {
+			"description": "Compliant privacy payments on Solana"
+		},
+		"forta": {
+			"description": "Real-time threat detection сеть"
+		},
+		"halborn": {
+			"description": "Halborn - Security инструмент"
+		},
+		"labyrinth": {
+			"description": "Compliant privacy для institutions"
+		},
+		"nocturne": {
+			"description": "Private account layer для Ethereum"
+		},
+		"pessimistic": {
+			"description": "Pessimistic - Security инструмент"
+		},
+		"railgun": {
+			"description": "Private DeFi с zk-SNARKs on EVM цепьs"
+		},
+		"sherlock": {
+			"description": "Audit contests с exploit coverage"
+		},
+		"umbra": {
+			"description": "Stealth address payments on EVM цепьs"
+		},
+		"veridise": {
+			"description": "Veridise - Security инструмент"
+		},
+		"yaudit": {
+			"description": "yAudit - Security инструмент"
+		},
+		"zcash": {
+			"description": "Native privacy блокчейн с shielded transactions"
+		},
+		"zellic": {
+			"description": "Zellic - Security инструмент"
+		}
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"category_seo": {
+		"title": "Gas Burner e Token Burn - Meccanismi Deflazionistici | BiuBiu Tools",
+		"description": "Traccia burn di token e consumo gas. Monitora meccanismi deflazionistici, tassi di burn e dinamiche di supply.",
+		"faqs": [
+			{
+				"question": "Cosa sono i token burn?",
+				"answer": "I token burn rimuovono permanentemente token dalla circolazione inviandoli a un indirizzo inutilizzabile. Questo crea pressione deflazionistica e può aumentare il valore di scarsità."
+			},
+			{
+				"question": "Come funziona il burn di ETH?",
+				"answer": "Dall'EIP-1559, le fee base vengono bruciate invece di andare ai miner. Durante alta attività, ETH può diventare deflazionistico. Traccia i tassi di burn su ultrasound.money."
+			},
+			{
+				"question": "Quali progetti hanno burn significativi?",
+				"answer": "Ethereum (base fee), BNB (burn trimestrali), SHIB (burn della community) e molti protocolli con meccanismi buy-and-burn. Controlla le tokenomics per capire i programmi di burn."
+			}
+		]
+	},
+	"tools": {
+		"l2fees": {
+			"description": "CompSono L2 transaction fees"
+		},
+		"gasnow": {
+			"description": "Fast gas price tracker con API"
+		},
+		"owlracle": {
+			"description": "Multi-chain gas oracle con API"
+		},
+		"txstreet": {
+			"description": "Live blockchain visualization"
+		}
+	}
+}

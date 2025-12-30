@@ -1,0 +1,123 @@
+{
+	"category_seo": {
+		"title": "Portefeuilles Crypto - Portefeuilles Logiciels et Matériels | BiuBiu Tools",
+		"description": "Trouvez le meilleur portefeuille crypto pour vos besoins. Comparez les portefeuilles logiciels comme MetaMask, Rabby avec les portefeuilles matériels comme Ledger et Trezor.",
+		"keywords": "portefeuille crypto, metamask, ledger, trezor, portefeuille matériel, portefeuille logiciel",
+		"faqs": [
+			{
+				"question": "Quel est le portefeuille crypto le plus sûr ?",
+				"answer": "Les portefeuilles matériels comme Ledger et Trezor sont généralement considérés comme les plus sûrs car ils stockent les clés privées hors ligne. Pour une utilisation quotidienne, les portefeuilles logiciels réputés comme MetaMask ou Rabby sont pratiques et raisonnablement sécurisés."
+			},
+			{
+				"question": "Quelle est la différence entre les portefeuilles chauds et froids ?",
+				"answer": "Les portefeuilles chauds sont connectés à Internet (portefeuilles logiciels), facilitant les transactions mais plus vulnérables aux piratages. Les portefeuilles froids sont hors ligne (portefeuilles matériels), offrant une meilleure sécurité mais moins de commodité."
+			},
+			{
+				"question": "Puis-je utiliser plusieurs portefeuilles ?",
+				"answer": "Oui, beaucoup utilisent plusieurs portefeuilles pour différents objectifs - un portefeuille matériel pour les avoirs à long terme, un portefeuille logiciel pour le trading quotidien et des portefeuilles séparés pour tester les nouvelles dApps."
+			},
+			{
+				"question": "Comment sauvegarder mon portefeuille ?",
+				"answer": "Écrivez toujours votre phrase de récupération (seed phrase) sur papier et conservez-la en lieu sûr. Ne la stockez jamais numériquement. Envisagez plusieurs copies dans des lieux sécurisés différents. Ne partagez jamais votre seed phrase avec personne."
+			}
+		]
+	},
+	"tools": {
+		"debank": {
+			"description": "Tracker de portefeuille multi-chain et plateforme sociale"
+		},
+		"rabby": {
+			"description": "Multi-chain browser wallet"
+		},
+		"rainbow": {
+			"description": "Beautiful Ethereum wallet"
+		},
+		"metamask": {
+			"description": "Most populaire Web3 wallet"
+		},
+		"frame": {
+			"description": "Privacy-focused desktop wallet"
+		},
+		"zerion": {
+			"description": "DeFi portfolio et wallet"
+		},
+		"safe": {
+			"description": "Multi-signature smart wallet"
+		},
+		"zapper": {
+			"description": "DeFi portfolio dashboard"
+		},
+		"argent": {
+			"description": "Smart wallet avec recovery"
+		},
+		"sequence": {
+			"description": "Smart wallet pour gaming"
+		},
+		"ledger": {
+			"description": "HardwSont wallet sécurité"
+		},
+		"trezor": {
+			"description": "HardwSont wallet pioneer"
+		},
+		"privy": {
+			"description": "Embedded wallet solution"
+		},
+		"dynamic": {
+			"description": "Multi-wallet authentication"
+		},
+		"ambire": {
+			"description": "Smart wallet avec email login et gasless transactions"
+		},
+		"obvious": {
+			"description": "Smart wallet avec account abstraction"
+		},
+		"pimlico": {
+			"description": "ERC-4337 bundler et paymaster infrastructure"
+		},
+		"stackup": {
+			"description": "Account abstraction bundler et SDK"
+		},
+		"biconomy": {
+			"description": "Account abstraction et gasless transaction SDK"
+		},
+		"zerodev": {
+			"description": "Modular smart wallet SDK avec Kernel"
+		},
+		"solflare": {
+			"description": "SolflSont - Crypto wallet"
+		},
+		"subwallet": {
+			"description": "SubWallet - Web3 wallet"
+		},
+		"tonhub": {
+			"description": "Tonhub - Web3 wallet"
+		},
+		"mytonwallet": {
+			"description": "MyTonWallet - Web3 wallet"
+		},
+		"coolwallet": {
+			"description": "coolwallet - Web3 wallet"
+		},
+		"imtoken": {
+			"description": "imToken - Web3 wallet"
+		},
+		"tokenpocket": {
+			"description": "TokenPocket - Web3 wallet"
+		},
+		"myetherwallet": {
+			"description": "MyEtherWallet - Web3 wallet"
+		},
+		"mycrypto": {
+			"description": "MyCrypto - Web3 wallet"
+		},
+		"tronlink": {
+			"description": "TronLink - Web3 wallet"
+		},
+		"multis": {
+			"description": "MultEst - Web3 wallet"
+		},
+		"squads": {
+			"description": "Squads - Web3 wallet"
+		}
+	}
+}

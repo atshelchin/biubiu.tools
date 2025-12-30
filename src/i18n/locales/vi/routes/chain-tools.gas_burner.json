@@ -1,0 +1,34 @@
+{
+	"category_seo": {
+		"title": "Đốt Gas & Token - Cơ Chế Giảm Phát | BiuBiu Tools",
+		"description": "Theo dõi đốt token và tiêu thụ gas. Giám sát cơ chế giảm phát, tỷ lệ đốt và động lực cung.",
+		"faqs": [
+			{
+				"question": "Đốt token là gì?",
+				"answer": "Đốt token loại bỏ vĩnh viễn token khỏi lưu thông bằng cách gửi chúng đến địa chỉ không thể sử dụng. Điều này tạo áp lực giảm phát và có thể tăng giá trị khan hiếm."
+			},
+			{
+				"question": "Đốt ETH hoạt động như thế nào?",
+				"answer": "Kể từ EIP-1559, phí cơ bản được đốt thay vì đến người đào. Trong hoạt động cao, ETH có thể trở thành giảm phát. Theo dõi tỷ lệ đốt trên ultrasound.money."
+			},
+			{
+				"question": "Dự án nào có đốt đáng kể?",
+				"answer": "Ethereum (phí cơ bản), BNB (đốt hàng quý), SHIB (đốt cộng đồng) và nhiều giao thức với cơ chế mua và đốt. Kiểm tra tokenomics để hiểu lịch trình đốt."
+			}
+		]
+	},
+	"tools": {
+		"l2fees": {
+			"description": "Compare L2 transaction fees"
+		},
+		"gasnow": {
+			"description": "Fast gas price tracker with API"
+		},
+		"owlracle": {
+			"description": "Multi-chain gas oracle with API"
+		},
+		"txstreet": {
+			"description": "Live blockchain visualization"
+		}
+	}
+}

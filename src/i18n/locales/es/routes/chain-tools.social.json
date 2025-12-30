@@ -1,0 +1,83 @@
+{
+	"category_seo": {
+		"title": "Redes Sociales Web3 - Plataformas Sociales Descentralizadas | BiuBiu Tools",
+		"description": "Explora redes sociales descentralizadas como Lens Protocol, Farcaster y otras plataformas SocialFi donde posees tus datos y conexiones.",
+		"keywords": "redes sociales web3, socialfi, lens protocol, farcaster, redes sociales descentralizadas",
+		"faqs": [
+			{
+				"question": "¿Qué son las redes sociales Web3?",
+				"answer": "Las redes sociales Web3 son plataformas descentralizadas donde posees tu perfil, contenido y conexiones sociales en lugar de que las compañías las controlen. Tu gráfico social es portable entre aplicaciones construidas en el mismo protocolo."
+			},
+			{
+				"question": "¿Lens Protocol vs Farcaster?",
+				"answer": "Ambos son protocolos de redes sociales descentralizadas en Ethereum/L2s. Lens se enfoca en un gráfico social modular con múltiples aplicaciones cliente. Farcaster prioriza resistencia a la censura con almacenamiento híbrido on-chain/off-chain."
+			},
+			{
+				"question": "¿Puedo monetizar en redes sociales Web3?",
+				"answer": "Sí, muchas plataformas sociales Web3 permiten monetización directa a través de: posts tokenizados (NFTs), propinas en cripto, tokens sociales, contenido gated con acceso por membresía y modelos de compartir ingresos con creadores."
+			}
+		]
+	},
+	"tools": {
+		"farcaster": {
+			"description": "Protocolo social descentralizado"
+		},
+		"xmtp": {
+			"description": "Protocolo de mensajería segura billetera a billetera"
+		},
+		"warpcast": {
+			"description": "Cliente principal para la red social Farcaster"
+		},
+		"hey": {
+			"description": "App social descentralizada en Lens Protocol"
+		},
+		"orb": {
+			"description": "Cliente de Lens Protocol mobile-first"
+		},
+		"cyberconnect": {
+			"description": "Protocolo de grafo social con identidad Web3"
+		},
+		"mirror": {
+			"description": "Plataforma de publicación y crowdfunding Web3"
+		},
+		"paragraph": {
+			"description": "Newsletter y publicación nativa de Web3"
+		},
+		"deso": {
+			"description": "Blockchain Layer 1 construida para aplicaciones sociales"
+		},
+		"phaver": {
+			"description": "App social Web3 multiplataforma"
+		},
+		"drakula": {
+			"description": "Plataforma de video corto en Farcaster"
+		},
+		"link3": {
+			"description": "Eventos Web3 y credenciales por CyberConnect"
+		},
+		"buttrfly": {
+			"description": "Agregador social multiplataforma para Lens"
+		},
+		"tape": {
+			"description": "Plataforma de video descentralizada en Lens"
+		},
+		"unlonely": {
+			"description": "Web3 live streaming community platform"
+		},
+		"supercast": {
+			"description": "Supercast - Decentralized social platform"
+		},
+		"neynar": {
+			"description": "Neynar - Decentralized social platform"
+		},
+		"airstack": {
+			"description": "Airstack - Decentralized social platform"
+		},
+		"huddle01": {
+			"description": "Huddle01 - Decentralized social platform"
+		},
+		"moxie": {
+			"description": "Moxie - Decentralized social platform"
+		}
+	}
+}

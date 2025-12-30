@@ -1,0 +1,37 @@
+{
+	"category_seo": {
+		"title": "Privasi Kripto - Transaksi Privat & Alat | BiuBiu Tools",
+		"description": "Alat yang menjaga privasi untuk cryptocurrency. Mixer, transaksi privat, dan protokol fokus privasi.",
+		"faqs": [
+			{
+				"question": "Mengapa privasi kripto penting?",
+				"answer": "Transaksi blockchain bersifat publik. Privasi melindungi dari pelacakan, serangan yang ditargetkan, dan pengawasan. Ini tentang keamanan dan kedaulatan keuangan, bukan menyembunyikan kesalahan."
+			},
+			{
+				"question": "Opsi privasi apa yang ada?",
+				"answer": "Gunakan privacy coin (Zcash, Monero), stealth address, atau protokol privasi. Solusi Layer 2 dan teknologi privasi baru sedang muncul. Status regulasi bervariasi menurut yurisdiksi."
+			},
+			{
+				"question": "Apakah menggunakan alat privasi legal?",
+				"answer": "Alat privasi umumnya legal, tetapi regulasi bervariasi. Beberapa mixer telah dikenai sanksi. Selalu patuhi hukum lokal dan pahami lingkungan regulasi."
+			}
+		]
+	},
+	"tools": {
+		"monero": {
+			"description": "Leading privacy-focused cryptocurrency with ring signatures and stealth addresses"
+		},
+		"firo": {
+			"description": "Privacy coin using Lelantus protocol for anonymous transactions"
+		},
+		"penumbra": {
+			"description": "Privacy-focused Cosmos chain for shielded transactions"
+		},
+		"namada": {
+			"description": "Multi-chain privacy protocol with asset-agnostic shielded transfers"
+		},
+		"semaphore": {
+			"description": "Zero-knowledge protocol for anonymous voting and signaling"
+		}
+	}
+}

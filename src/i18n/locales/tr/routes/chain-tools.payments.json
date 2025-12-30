@@ -1,0 +1,92 @@
+{
+	"category_seo": {
+		"title": "Kripto Ödemeler - Ödeme İşleme ve Kart Hizmetleri | BiuBiu Tools",
+		"description": "İşletmeler ve bireyler için kripto ödeme çözümleri. Ödeme işlemcileri, kripto kartları ve tüccar hizmetleri.",
+		"keywords": "kripto ödemeler, ödeme işlemcisi, kripto kartları, bitcoin tüccar hizmetleri",
+		"faqs": [
+			{
+				"question": "Kripto ödemeler nasıl çalışır?",
+				"answer": "Kripto ödemeler değeri doğrudan blokzincir üzerinde transfer eder. Tüccarlar için BitPay gibi ödeme işlemcileri kripto'yu fiat'a dönüştürür. Coinbase Card gibi kripto kartları her yerde kripto harcamanıza olanak tanır."
+			},
+			{
+				"question": "Hangi kripto kartları en iyidir?",
+				"answer": "Coinbase Card ve Crypto.com Card geniş çapta mevcuttur. Gnosis Pay DeFi entegrasyonu sunar. Seçmeden önce geri ödeme oranlarını, desteklenen ülkeleri ve ücret yapılarını karşılaştırın."
+			},
+			{
+				"question": "İşletmeler kripto ödemelerini kabul edebilir mi?",
+				"answer": "Evet, BitPay, Coinbase Commerce gibi ödeme işlemcilerini veya doğrudan cüzdan ödemelerini kullanarak. Volatiliteyi, vergi etkilerini ve hemen fiat'a dönüştürüp dönüştürmemeyi düşünün."
+			}
+		]
+	},
+	"tools": {
+		"banxa": {
+			"description": "Banxa - Crypto payment solutiüzerinde"
+		},
+		"bitpay": {
+			"description": "Crypto payment processing için merchants"
+		},
+		"coinflow": {
+			"description": "Coinflow - Crypto payment solutiüzerinde"
+		},
+		"coinshift": {
+			"description": "Treasury management ve multi-sig operatiüzerindes"
+		},
+		"fusepay": {
+			"description": "Crypto spending card üzerinde Fuse ağ"
+		},
+		"holyheld": {
+			"description": "DeFi debit card ile yield features"
+		},
+		"llamapay": {
+			"description": "LlamaPay - Crypto payment solutiüzerinde"
+		},
+		"loopcrypto": {
+			"description": "Recurring crypto billing ve subscriptiüzerindes"
+		},
+		"monerium": {
+			"description": "Müzerindeerium - Crypto payment solutiüzerinde"
+		},
+		"moonpay": {
+			"description": "Fiat üzerinde-ramp ve off-ramp için crypto"
+		},
+		"nowpayments": {
+			"description": "NOWPayments - Crypto payment solutiüzerinde"
+		},
+		"onmeta": {
+			"description": "Fiat üzerinde-ramp için Indian users"
+		},
+		"parcel": {
+			"description": "Parcel - Crypto payment solutiüzerinde"
+		},
+		"ramp": {
+			"description": "Nüzerinde-custodial fiat üzerinde-ramp SDK"
+		},
+		"reveel": {
+			"description": "Automated revenue sharing ve royalty splits"
+		},
+		"sablier": {
+			"description": "Token streaming için vesting ve payroll"
+		},
+		"sardine": {
+			"description": "Sardine - Crypto payment solutiüzerinde"
+		},
+		"simplex": {
+			"description": "Simplex - Crypto payment solutiüzerinde"
+		},
+		"splits": {
+			"description": "On-zincir payment splitting protokol"
+		},
+		"spritz": {
+			"description": "Pay bills ile crypto via ACH"
+		},
+		"superfluid": {
+			"description": "Real-time token streaming için payments"
+		},
+		"transak": {
+			"description": "Fiat-to-crypto payment infrastructure"
+		},
+		"wyre": {
+			"description": "Wyre - Crypto payment solutiüzerinde"
+		}
+	}
+}

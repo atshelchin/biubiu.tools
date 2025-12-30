@@ -1,0 +1,29 @@
+{
+	"category_seo": {
+		"title": "Whale Wallets & Treasury Tracking - Smart Money Insights | BiuBiu Tools",
+		"description": "Track whale wallets and protocol treasuries. Monitor smart money movements and institutional holdings in crypto.",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "What is a crypto whale?",
+				"answer": "A whale is an entity holding large amounts of cryptocurrency. Their trades can move markets. Tracking whale wallets can provide early signals of market movements."
+			},
+			{
+				"question": "How do I track whale wallets?",
+				"answer": "Use Nansen or Arkham for labeled wallet tracking. Set up alerts for large transfers on Etherscan. Follow accounts like @lookonchain that share whale activity."
+			},
+			{
+				"question": "What are protocol treasuries?",
+				"answer": "Treasuries are funds controlled by DAOs or protocols. They're used for grants, liquidity, and development. Large treasuries (like Uniswap's) are tracked as indicators of project health."
+			}
+		]
+	},
+	"tools": {
+		"bubblemaps": {
+			"description": "Visual token holder and supply distribution analysis"
+		},
+		"lookonchain": {
+			"description": "On-chain analytics platform tracking whale movements and smart money"
+		}
+	}
+}

@@ -1,0 +1,76 @@
+{
+	"category_seo": {
+		"title": "Blockchain Non-EVM - Solana, Bitcoin, Cosmos & Lainnya | BiuBiu Tools",
+		"description": "Jelajahi ekosistem blockchain non-EVM. Solana, Bitcoin, Cosmos, Aptos, Sui, dan alat serta dApp unik mereka.",
+		"faqs": [
+			{
+				"question": "Apa itu chain non-EVM?",
+				"answer": "Chain non-EVM tidak menggunakan virtual machine Ethereum. Mereka memiliki arsitektur berbeda - Solana menggunakan Rust, Bitcoin memiliki script sendiri, Cosmos menggunakan CosmWasm. Masing-masing memiliki tradeoff unik."
+			},
+			{
+				"question": "Mengapa menggunakan chain non-EVM?",
+				"answer": "Chain yang berbeda mengoptimalkan hal yang berbeda. Solana untuk kecepatan dan biaya rendah, Bitcoin untuk keamanan dan desentralisasi, Cosmos untuk interoperabilitas, chain Move untuk keamanan."
+			},
+			{
+				"question": "Bagaimana cara bridge ke chain non-EVM?",
+				"answer": "Gunakan bridge spesifik seperti Wormhole (multi-chain), Portal (Solana), atau IBC (Cosmos). Beberapa exchange terpusat mendukung deposit/withdrawal langsung ke chain non-EVM."
+			}
+		]
+	},
+	"tools": {
+		"solscan": {
+			"description": "Popular Solana explorer with token analytics and NFT support"
+		},
+		"mintscan": {
+			"description": "Multi-chain Cosmos ecosystem explorer"
+		},
+		"tonscan": {
+			"description": "TON blockchain explorer for transactions and jettons"
+		},
+		"raydium": {
+			"description": "Solana AMM and liquidity provider with concentrated pools"
+		},
+		"osmosis": {
+			"description": "Leading DEX in Cosmos ecosystem with IBC integration"
+		},
+		"injective": {
+			"description": "DeFi-focused Cosmos chain for derivatives trading"
+		},
+		"celestia": {
+			"description": "Modular data availability layer for rollups"
+		},
+		"dymension": {
+			"description": "RollApp hub built on Cosmos for modular rollups"
+		},
+		"liquidswap": {
+			"description": "First AMM DEX on Aptos by Pontem"
+		},
+		"tonkeeper": {
+			"description": "Popular TON wallet with Telegram integration"
+		},
+		"dedust": {
+			"description": "DEX and DeFi platform on TON"
+		},
+		"algorand": {
+			"description": "Pure Proof of Stake blockchain with instant finality"
+		},
+		"cardano": {
+			"description": "Research-driven blockchain with peer-reviewed development"
+		},
+		"polkadot": {
+			"description": "Heterogeneous multi-chain network with parachains"
+		},
+		"subscan": {
+			"description": "Multi-chain explorer for Polkadot and Substrate networks"
+		},
+		"tezos": {
+			"description": "Self-amending blockchain with formal verification"
+		},
+		"stacks": {
+			"description": "Bitcoin L2 bringing smart contracts to BTC"
+		},
+		"layerzero": {
+			"description": "Omnichain interoperability protocol for trustless messaging"
+		}
+	}
+}

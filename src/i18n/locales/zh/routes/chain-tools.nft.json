@@ -1,0 +1,115 @@
+{
+	"category_seo": {
+		"title": "NFT 工具 - 市场、分析与创作平台 | BiuBiu Tools",
+		"description": "探索 NFT 市场、分析平台和创作工具。发现稀有 NFT，追踪收藏品数据，在各区块链上进行铸造和交易。",
+		"faqs": [
+			{
+				"question": "什么是 NFT？",
+				"answer": "NFT（非同质化代币）是独特的数字资产，代表区块链上物品的所有权。它们可以代表数字艺术、收藏品、游戏道具、域名等，具有可验证的稀缺性和来源证明。"
+			},
+			{
+				"question": "在哪里可以购买和销售 NFT？",
+				"answer": "流行的 NFT 市场包括 OpenSea（最大的综合市场）、Blur（专业交易）、Magic Eden（Solana）和 LooksRare。每个平台都有不同的费用结构和特色功能。"
+			},
+			{
+				"question": "我应该在购买 NFT 前做什么研究？",
+				"answer": "检查收藏品的交易量和地板价历史，验证创作者真实性，审查智能合约安全性，研究社区和路线图，并使用 NFT 分析工具追踪巨鲸钱包活动和市场趋势。"
+			}
+		]
+	},
+	"tools": {
+		"opensea": {
+			"description": "最大的 NFT 交易市场"
+		},
+		"blur": {
+			"description": "专业交易者的 NFT 市场"
+		},
+		"reservoir": {
+			"description": "NFT 流动性聚合器和 API"
+		},
+		"rarible": {
+			"description": "多链 NFT 创作和交易平台"
+		},
+		"zora": {
+			"description": "NFT 创作和交易平台"
+		},
+		"foundation": {
+			"description": "精选数字艺术市场"
+		},
+		"manifold": {
+			"description": "NFT 创作者工具和合约"
+		},
+		"nftnerds": {
+			"description": "NFT 交易和分析"
+		},
+		"looksrare": {
+			"description": "社区NFT市场"
+		},
+		"x2y2": {
+			"description": "低费NFT市场"
+		},
+		"gem": {
+			"description": "NFT聚合器和扫货工具"
+		},
+		"nftfi": {
+			"description": "NFT抵押贷款"
+		},
+		"arcade": {
+			"description": "NFT借贷协议"
+		},
+		"mintfun": {
+			"description": "NFT铸造发现"
+		},
+		"sudoswap": {
+			"description": "NFT AMM与即时流动性"
+		},
+		"caviar": {
+			"description": "NFT流动性与碎片化协议"
+		},
+		"nftx": {
+			"description": "NFT金库与流动性池"
+		},
+		"tessera": {
+			"description": "稀有NFT共同所有权平台"
+		},
+		"premint": {
+			"description": "NFT白名单管理与抽奖"
+		},
+		"bueno": {
+			"description": "无代码NFT生成式艺术创作"
+		},
+		"highlight": {
+			"description": "创作者NFT铸造平台"
+		},
+		"tokenproof": {
+			"description": "NFT持有验证与会员服务"
+		},
+		"rabbithole": {
+			"description": "链上行为学习与奖励"
+		},
+		"hyperspace": {
+			"description": "Solana NFT聚合市场"
+		},
+		"tradeport": {
+			"description": "Sui与Aptos NFT市场"
+		},
+		"campfire": {
+			"description": "Avalanche NFT市场"
+		},
+		"paintswap": {
+			"description": "Fantom与Sonic NFT市场"
+		},
+		"unlockd": {
+			"description": "Unlockd - NFT platform"
+		},
+		"formfunction": {
+			"description": "Formfunction - NFT platform"
+		},
+		"oncyber": {
+			"description": "Oncyber - NFT platform"
+		},
+		"tensor": {
+			"description": "Solana 上的专业 NFT 交易平台"
+		}
+	}
+}

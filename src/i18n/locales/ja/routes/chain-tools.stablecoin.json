@@ -1,0 +1,38 @@
+{
+	"category_seo": {
+		"title": "ステーブルコイン - USDC、USDT、DAIなど | BiuBiu Tools",
+		"description": "ステーブルコインとそのユースケースを学ぶ。DeFiと決済のための法定通貨担保、アルゴリズム、分散型ステーブルコイン。",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "ステーブルコインとは何ですか？",
+				"answer": "ステーブルコインは米ドルなどの安定資産にペッグされた暗号資産です。タイプには法定通貨担保（USDC、USDT）、暗号資産担保（DAI）、アルゴリズムステーブルコインがあります。"
+			},
+			{
+				"question": "最も安全なステーブルコインはどれですか？",
+				"answer": "USDCは高度に規制され透明性があります。USDTは流動性が最も高いですが透明性は低いです。DAIは分散型ですがスマートコントラクトリスクがあります。分散投資が賢明です。"
+			},
+			{
+				"question": "USTに何が起こりましたか？",
+				"answer": "USTは2022年5月に崩壊したアルゴリズムステーブルコインで、ペッグを失い400億ドル以上の損失を引き起こしました。適切な担保のないアルゴリズム設計のリスクを浮き彫りにしました。"
+			}
+		]
+	},
+	"tools": {
+		"frax": {
+			"description": "Fractional-algorithmic stablecoin with partial collateralization"
+		},
+		"tusd": {
+			"description": "Regulated and audited USD-backed stablecoin"
+		},
+		"sfrax": {
+			"description": "Staked FRAX earning yield from Frax protocol"
+		},
+		"fdusd": {
+			"description": "First Digital USD (FDUSD) - Stablecoin"
+		},
+		"flexusd": {
+			"description": "flexUSD - Stablecoin"
+		}
+	}
+}

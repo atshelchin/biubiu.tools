@@ -1,0 +1,59 @@
+{
+	"category_seo": {
+		"title": "実世界資産（RWA）- トークン化された資産 | BiuBiu Tools",
+		"description": "トークン化された実世界資産を探索。トークン化された国債、不動産、商品、ブロックチェーン上の伝統的金融。",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "RWAとは何ですか？",
+				"answer": "RWA（実世界資産）は、米国債、不動産、商品などの伝統的資産がブロックチェーン上でトークン化されたものです。伝統的金融の利回りをDeFiにもたらします。"
+			},
+			{
+				"question": "RWAがなぜ重要なのですか？",
+				"answer": "RWAは実体経済からの安定した利回り（国債金利）、暗号資産のボラティリティからの分散、伝統的金融とDeFiの架け橋を提供します。MakerDAOは数十億ドルのRWAを保有しています。"
+			},
+			{
+				"question": "どのようなRWAプラットフォームが存在しますか？",
+				"answer": "トークン化された国債にはOndo Finance、不動産にはRealT、資産ファイナンスにはCentrifugeがあります。主要なDeFiプロトコルは利回りのためにRWA戦略を統合しています。"
+			}
+		]
+	},
+	"tools": {
+		"goldfinch": {
+			"description": "Crypto lending for real-world credit in emerging markets"
+		},
+		"truefi": {
+			"description": "Uncollateralized lending for institutional borrowers"
+		},
+		"centrifuge": {
+			"description": "Real-world asset financing protocol bringing invoices and real estate on-chain"
+		},
+		"clearpool": {
+			"description": "Decentralized capital markets for unsecured institutional lending"
+		},
+		"matrixdock": {
+			"description": "Tokenized treasury bills with STBT stablecoin"
+		},
+		"openeden": {
+			"description": "Tokenized T-Bills with real-time NAV and 24/7 settlement"
+		},
+		"realt": {
+			"description": "Tokenized real estate investment with fractional ownership"
+		},
+		"lofty": {
+			"description": "Fractional real estate investing on Algorand blockchain"
+		},
+		"propy": {
+			"description": "Blockchain-based real estate transactions and ownership"
+		},
+		"securitize": {
+			"description": "Security token issuance and lifecycle management platform"
+		},
+		"tokeny": {
+			"description": "Enterprise tokenization platform for compliant securities"
+		},
+		"polymesh": {
+			"description": "Purpose-built blockchain for regulated security tokens"
+		}
+	}
+}

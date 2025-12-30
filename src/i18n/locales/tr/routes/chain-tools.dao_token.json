@@ -1,0 +1,26 @@
+{
+	"category_seo": {
+		"title": "DAO Yönetişim Token'ları - Oylama Gücü ve Tokenomics | BiuBiu Tools",
+		"description": "DAO yönetişim token'larını anlayın. Oylama mekanizmaları, token dağıtımı ve büyük DAO'larda yönetişime katılım.",
+		"keywords": "yönetişim token'ları, dao token'ları, dao oylaması, protokol yönetişimi",
+		"faqs": [
+			{
+				"question": "Yönetişim token'ları nelerdir?",
+				"answer": "Yönetişim token'ları, sahiplerine bir protokolün kararlarında oy hakkı verir. Örnekler: UNI (Uniswap), AAVE, COMP. Oylama gücü genellikle token sahipliğiyle ölçeklenir."
+			},
+			{
+				"question": "Oy delegasyonu nasıl çalışır?",
+				"answer": "Oylama gücünüzü token'larınızı saklarken başkalarına (delegelere) devredebilirsiniz. Bu, aktif topluluk üyelerinin pasif sahipler adına oy kullanmasına yardımcı olur."
+			},
+			{
+				"question": "Yönetişim token'larının değeri var mı?",
+				"answer": "Değer, yönetişim haklarından, potansiyel ücret paylaşımından ve spekülasyondan gelir. Bazı protokoller geliri token sahipleriyle paylaşır. Diğerleri değer biriktirmekte zorlandı."
+			}
+		]
+	},
+	"tools": {
+		"boardroom": {
+			"description": "Governance toplayıcı için takip DAO proposals ve voting"
+		}
+	}
+}

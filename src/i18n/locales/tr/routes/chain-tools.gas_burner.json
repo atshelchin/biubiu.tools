@@ -1,0 +1,35 @@
+{
+	"category_seo": {
+		"title": "Gaz Yakıcılar ve Token Yakma - Deflasyonist Mekanizmalar | BiuBiu Tools",
+		"description": "Token yakmayı ve gaz tüketimini takip edin. Deflasyonist mekanizmaları, yakma oranlarını ve arz dinamiklerini izleyin.",
+		"keywords": "token yakma, eth yakma, deflasyonist token'lar, blokzincir gazı",
+		"faqs": [
+			{
+				"question": "Token yakma nedir?",
+				"answer": "Token yakma, token'ları kullanılamaz bir adrese göndererek dolaşımdan kalıcı olarak kaldırır. Bu deflasyonist baskı yaratır ve kıtlık değerini artırabilir."
+			},
+			{
+				"question": "ETH yakma nasıl çalışır?",
+				"answer": "EIP-1559'dan bu yana, temel ücretler madencilere gitmek yerine yakılır. Yüksek aktivite sırasında ETH deflasyonist hale gelebilir. Ultrasound.money'de yakma oranlarını takip edin."
+			},
+			{
+				"question": "Hangi projelerde önemli yakmalar var?",
+				"answer": "Ethereum (temel ücret), BNB (üç aylık yakma), SHIB (topluluk yakmaları) ve satın alma ve yakma mekanizmalarına sahip birçok protokol. Yakma programlarını anlamak için tokenomics'i kontrol edin."
+			}
+		]
+	},
+	"tools": {
+		"gasnow": {
+			"description": "Fast gas price tracker ile API"
+		},
+		"l2fees": {
+			"description": "Compare L2 transactiüzerinde fees"
+		},
+		"owlracle": {
+			"description": "Çoklu zincir gas oracle ile API"
+		},
+		"txstreet": {
+			"description": "Live blokzincir visualizatiüzerinde"
+		}
+	}
+}

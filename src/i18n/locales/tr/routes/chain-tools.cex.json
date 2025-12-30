@@ -1,0 +1,26 @@
+{
+	"category_seo": {
+		"title": "Kripto Borsaları (CEX) - İşlem Platformları | BiuBiu Tools",
+		"description": "İşlem için merkezi kripto borsaları. Borsa özelliklerini, güvenliği, ücretleri ve desteklenen varlıkları karşılaştırın.",
+		"keywords": "kripto borsaları, binance, coinbase, işlem platformları",
+		"faqs": [
+			{
+				"question": "Hangi borsalar en güvenlidir?",
+				"answer": "Coinbase ve Kraken ABD'de iyi düzenlenir. Binance küresel olarak en fazla likiditeye sahiptir. Rezerv kanıtlarını, düzenleyici uyumu ve güvenlik geçmişini arayın."
+			},
+			{
+				"question": "CEX mi yoksa DEX mi - hangisini kullanmalıyım?",
+				"answer": "Fiat on/off ramp'ları, gelişmiş ticaret ve yeni başlayanlar için CEX. Kendi saklama, izinsiz ticaret ve daha fazla token'a erişim için DEX. Birçok kişi her ikisini de kullanır."
+			},
+			{
+				"question": "Borsa hesabımı nasıl güvence altına alırım?",
+				"answer": "2FA'yı (tercihen donanım anahtarı) etkinleştirin, benzersiz parolalar kullanın, çekim adreslerini beyaz listeye ekleyin, çekim gecikmelerini etkinleştirin ve uzun süre borsalarda büyük miktarlar tutmayın."
+			}
+		]
+	},
+	"tools": {
+		"ccdata": {
+			"description": "Market indices ve data için institutiüzerindes"
+		}
+	}
+}

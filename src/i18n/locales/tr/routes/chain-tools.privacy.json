@@ -1,0 +1,38 @@
+{
+	"category_seo": {
+		"title": "Kripto Gizliliği - Özel İşlemler ve Araçlar | BiuBiu Tools",
+		"description": "Kripto para için gizliliği koruyan araçlar. Karıştırıcılar, özel işlemler ve gizlilik odaklı protokoller.",
+		"keywords": "kripto gizliliği, özel işlemler, karıştırıcılar, blokzincir anonimliği",
+		"faqs": [
+			{
+				"question": "Kripto gizliliği neden önemlidir?",
+				"answer": "Blokzincir işlemleri halka açıktır. Gizlilik izlemeye, hedefli saldırılara ve gözetlemeye karşı korur. Güvenlik ve finansal egemenlikle ilgilidir, yanlış yapma gizlemekle değil."
+			},
+			{
+				"question": "Hangi gizlilik seçenekleri mevcut?",
+				"answer": "Gizlilik coin'lerini (Zcash, Monero), stealth adreslerini veya gizlilik protokollerini kullanın. Layer 2 çözümleri ve yeni gizlilik teknolojisi ortaya çıkıyor. Düzenleyici durum yargı bölgelerine göre değişir."
+			},
+			{
+				"question": "Gizlilik araçlarını kullanmak yasal mı?",
+				"answer": "Gizlilik araçları genellikle yasaldır, ancak düzenlemeler değişir. Bazı karıştırıcılar yaptırıma uğramıştır. Her zaman yerel yasalara uyun ve düzenleyici ortamı anlayın."
+			}
+		]
+	},
+	"tools": {
+		"firo": {
+			"description": "Privacy coin using Lelantus protokol için anüzerindeymous transactiüzerindes"
+		},
+		"monero": {
+			"description": "Önde gelen privacy-focused cryptocurrency ile ring signatures ve stealth addresses"
+		},
+		"namada": {
+			"description": "Çoklu zincir privacy protokol ile asset-agnostic shielded transfers"
+		},
+		"penumbra": {
+			"description": "Privacy-focused Cosmos zincir için shielded transactiüzerindes"
+		},
+		"semaphore": {
+			"description": "Zero-knowledge protokol için anüzerindeymous voting ve signaling"
+		}
+	}
+}

@@ -1,0 +1,81 @@
+{
+	"category_seo": {
+		"title": "Blockchains Non-EVM - Solana, Cosmos et Chaînes Alternatives | BiuBiu Tools",
+		"description": "Explorez les blockchains non-EVM et leurs écosystèmes. Découvrez Solana, Cosmos, Near et d'autres chaînes alternatives.",
+		"keywords": "blockchains non-evm, solana, cosmos, near, chaînes alternatives",
+		"faqs": [
+			{
+				"question": "Qu'est-ce qu'une blockchain non-EVM ?",
+				"answer": "Les blockchains non-EVM sont celles qui n'utilisent pas l'Ethereum Virtual Machine. Elles ont leurs propres architectures, langages de programmation et conceptions de smart contracts, offrant souvent des approches différentes de la scalabilité et des fonctionnalités."
+			},
+			{
+				"question": "Pourquoi utiliser des chaînes non-EVM ?",
+				"answer": "Les chaînes non-EVM offrent souvent : des transactions plus rapides, des frais plus bas, des fonctionnalités uniques, des designs de smart contracts différents et des approches alternatives à la scalabilité et au consensus."
+			},
+			{
+				"question": "Puis-je utiliser MetaMask avec des chaînes non-EVM ?",
+				"answer": "Non, MetaMask est spécifique à EVM. Les chaînes non-EVM nécessitent leurs propres portefeuilles : Phantom pour Solana, Keplr pour Cosmos, etc. Cependant, certains portefeuilles multi-chaînes supportent plusieurs écosystèmes."
+			},
+			{
+				"question": "Les dApps EVM fonctionnent-elles sur des chaînes non-EVM ?",
+				"answer": "Non directement. Les dApps nécessitent de la réécriture pour les chaînes non-EVM utilisant leurs langages et frameworks natifs. Certains projets maintiennent des versions séparées sur différentes chaînes."
+			}
+		]
+	},
+	"tools": {
+		"solscan": {
+			"description": "Popular Solana explorateur avec token analytique et NFT support"
+		},
+		"mintscan": {
+			"description": "Multi-chain Cosmos ecosystem explorateur"
+		},
+		"tonscan": {
+			"description": "TON blockchain explorateur pour transactions et jettons"
+		},
+		"raydium": {
+			"description": "Solana AMM et liquidité provider avec concentrated pools"
+		},
+		"osmosis": {
+			"description": "Leading DEX dans Cosmos ecosystem avec IBC integration"
+		},
+		"injective": {
+			"description": "DeFi-focused Cosmos chain pour derivatives trading"
+		},
+		"celestia": {
+			"description": "Modular données availability layer pour rollups"
+		},
+		"dymension": {
+			"description": "RollApp hub built sur Cosmos pour modular rollups"
+		},
+		"liquidswap": {
+			"description": "First AMM DEX sur Aptos par Pontem"
+		},
+		"tonkeeper": {
+			"description": "Popular TON wallet avec Telegram integration"
+		},
+		"dedust": {
+			"description": "DEX et DeFi plateforme sur TON"
+		},
+		"algorand": {
+			"description": "Pure Proof de Stake blockchain avec instant finality"
+		},
+		"cardano": {
+			"description": "Research-driven blockchain avec peer-reviewed développement"
+		},
+		"polkadot": {
+			"description": "Heterogeneous multi-chain réseau avec parachains"
+		},
+		"subscan": {
+			"description": "Multi-chain explorateur pour Polkadot et Substrate réseaux"
+		},
+		"tezos": {
+			"description": "Self-amending blockchain avec formal verification"
+		},
+		"stacks": {
+			"description": "Bitcoin L2 bringing smart contracts à BTC"
+		},
+		"layerzero": {
+			"description": "Omnichain interoperability protocole pour trustless messaging"
+		}
+	}
+}

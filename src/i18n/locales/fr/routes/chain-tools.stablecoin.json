@@ -1,0 +1,42 @@
+{
+	"category_seo": {
+		"title": "Stablecoins - Cryptomonnaies Adossées au Dollar et à l'Euro | BiuBiu Tools",
+		"description": "Explorez les stablecoins et leurs cas d'usage. Comparez USDT, USDC, DAI et d'autres cryptomonnaies à prix stable.",
+		"keywords": "stablecoins, usdt, usdc, dai, cryptomonnaie à prix stable",
+		"faqs": [
+			{
+				"question": "Qu'est-ce qu'un stablecoin ?",
+				"answer": "Un stablecoin est une cryptomonnaie conçue pour maintenir une valeur stable, généralement arrimée 1:1 à des monnaies fiat comme le dollar américain. Les stablecoins offrent les avantages de la crypto sans la volatilité des prix."
+			},
+			{
+				"question": "Quels types de stablecoins existent ?",
+				"answer": "Les types principaux incluent : stablecoins garantis par fiat (USDT, USDC), garantis par crypto (DAI), garantis par algorithme et garantis par matières premières. Chaque type a des mécanismes et profils de risque différents."
+			},
+			{
+				"question": "Les stablecoins sont-ils sûrs ?",
+				"answer": "La sécurité des stablecoins varie. Les stablecoins garantis par fiat dépendent de l'émetteur conservant des réserves. Les stablecoins crypto dépendent de la surcollatéralisation. Toujours rechercher les mécanismes de soutien et les audits."
+			},
+			{
+				"question": "Pourquoi utiliser des stablecoins ?",
+				"answer": "Les stablecoins sont utiles pour : trading sans quitter la crypto, envoi de paiements transfrontaliers, génération de rendement via DeFi, protection contre la volatilité et accès aux services financiers sans comptes bancaires traditionnels."
+			}
+		]
+	},
+	"tools": {
+		"frax": {
+			"description": "Fractional-algorithmic stablecoin avec partial collateralization"
+		},
+		"tusd": {
+			"description": "Regulated et audited USD-backed stablecoin"
+		},
+		"sfrax": {
+			"description": "Staked FRAX earning rendement de Frax protocole"
+		},
+		"fdusd": {
+			"description": "First Digital USD (FDUSD) - Stablecoin"
+		},
+		"flexusd": {
+			"description": "flexUSD - Stablecoin"
+		}
+	}
+}

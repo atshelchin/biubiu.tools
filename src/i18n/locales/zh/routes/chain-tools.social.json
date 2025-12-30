@@ -1,0 +1,82 @@
+{
+	"category_seo": {
+		"title": "Web3 社交 - 去中心化社交网络与社区 | BiuBiu Tools",
+		"description": "去中心化社交平台和社区工具。在 Farcaster、Lens 等平台上构建和参与 Web3 社区。",
+		"faqs": [
+			{
+				"question": "什么是 Web3 社交平台？",
+				"answer": "Web3 社交平台是 Twitter/Facebook 的去中心化替代品。你拥有自己的数据和社交图谱。流行的包括 Farcaster、Lens Protocol 和 DeSo。"
+			},
+			{
+				"question": "什么是 Farcaster？",
+				"answer": "Farcaster 是类似 Twitter 的去中心化社交协议。Warpcast 是主要客户端。它在加密开发者中很受欢迎，有强大的社区文化。"
+			},
+			{
+				"question": "Web3 社区如何协调？",
+				"answer": "Discord 和 Telegram 用于实时聊天，Farcaster/Lens 用于社交，Mirror 用于长文内容，Snapshot 用于治理，Guild.xyz 用于代币门控访问。"
+			}
+		]
+	},
+	"tools": {
+		"farcaster": {
+			"description": "去中心化社交协议"
+		},
+		"xmtp": {
+			"description": "安全的钱包间消息协议"
+		},
+		"warpcast": {
+			"description": "Farcaster 社交网络主客户端"
+		},
+		"hey": {
+			"description": "Lens 协议上的去中心化社交应用"
+		},
+		"orb": {
+			"description": "移动优先的 Lens 协议客户端"
+		},
+		"cyberconnect": {
+			"description": "带 Web3 身份的社交图谱协议"
+		},
+		"mirror": {
+			"description": "Web3 发布和众筹平台"
+		},
+		"paragraph": {
+			"description": "Web3 原生新闻通讯和发布"
+		},
+		"deso": {
+			"description": "专为社交应用构建的 L1 区块链"
+		},
+		"phaver": {
+			"description": "跨平台 Web3 社交应用"
+		},
+		"drakula": {
+			"description": "Farcaster 上的短视频平台"
+		},
+		"link3": {
+			"description": "CyberConnect社交资料"
+		},
+		"buttrfly": {
+			"description": "Lens协议社交客户端"
+		},
+		"tape": {
+			"description": "Lens协议视频分享"
+		},
+		"unlonely": {
+			"description": "Web3直播与互动平台"
+		},
+		"supercast": {
+			"description": "Supercast - Decentralized social platform"
+		},
+		"neynar": {
+			"description": "Neynar - Decentralized social platform"
+		},
+		"airstack": {
+			"description": "Airstack - Decentralized social platform"
+		},
+		"huddle01": {
+			"description": "Huddle01 - Decentralized social platform"
+		},
+		"moxie": {
+			"description": "Moxie - Decentralized social platform"
+		}
+	}
+}

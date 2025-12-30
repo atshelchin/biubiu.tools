@@ -1,0 +1,50 @@
+{
+	"category_seo": {
+		"title": "Финансирование Web3 - Гранты, венчурный капитал и сбор средств | BiuBiu Tools",
+		"description": "Найдите источники финансирования для Web3-проектов. Экосистемные гранты, венчурные инвесторы, краудфандинговые платформы и программы акселераторов.",
+		"keywords": "финансирование web3, гранты криптовалют, венчурный капитал, сбор средств блокчейна",
+		"faqs": [
+			{
+				"question": "Как Web3-проекты получают финансирование?",
+				"answer": "Варианты включают экосистемные гранты (Ethereum Foundation, гранты L2), финансирование от венчурного капитала (a16z, Paradigm), запуски токенов (стартовые площадки) и ретроактивное финансирование (Optimism RetroPGF)."
+			},
+			{
+				"question": "Что такое экосистемные гранты?",
+				"answer": "Гранты от блокчейн-фондов для финансирования разработки. Ethereum Foundation, Uniswap Grants, Arbitrum Foundation и другие финансируют проекты, строящие на их экосистемах."
+			},
+			{
+				"question": "Как питчить крипто-венчурным капиталистам?",
+				"answer": "Сначала создайте работающий продукт. Крипто-венчурные капиталисты ценят технических основателей и вклад в открытый исходный код. Общайтесь на конференциях, получайте теплые рекомендации и показывайте метрики тракции, такие как TVL или пользователи."
+			}
+		]
+	},
+	"tools": {
+		"coinlist": {
+			"description": "CoinList - Web3 investment и funding платформа"
+		},
+		"dragonfly": {
+			"description": "Dragonfly - Web3 investment и funding платформа"
+		},
+		"kernel": {
+			"description": "Kernel - Web3 investment и funding платформа"
+		},
+		"multicoin": {
+			"description": "Multicoin Capital - Web3 investment и funding платформа"
+		},
+		"pantera": {
+			"description": "Pantera Capital - Web3 investment и funding платформа"
+		},
+		"paradigm": {
+			"description": "Paradigm - Web3 investment и funding платформа"
+		},
+		"placeholder": {
+			"description": "Placeholder - Web3 investment и funding платформа"
+		},
+		"polychain": {
+			"description": "Polyцепь Capital - Web3 investment и funding платформа"
+		},
+		"variant": {
+			"description": "Variant - Web3 investment и funding платформа"
+		}
+	}
+}

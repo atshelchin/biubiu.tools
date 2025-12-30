@@ -1,0 +1,58 @@
+{
+	"category_seo": {
+		"title": "真实世界资产（RWA）- 代币化资产 | BiuBiu Tools",
+		"description": "探索代币化的真实世界资产。代币化国债、房地产、商品和区块链上的传统金融。",
+		"faqs": [
+			{
+				"question": "什么是 RWA？",
+				"answer": "RWA（真实世界资产）是美国国债、房地产或商品等传统资产在区块链上的代币化。它们将传统金融收益带入 DeFi。"
+			},
+			{
+				"question": "为什么 RWA 很重要？",
+				"answer": "RWA 提供来自实体经济的稳定收益（国债利率）、与加密波动性的多元化，以及传统金融与 DeFi 的桥接。MakerDAO 持有数十亿美元的 RWA。"
+			},
+			{
+				"question": "有哪些 RWA 平台？",
+				"answer": "Ondo Finance 用于代币化国债，RealT 用于房地产，Centrifuge 用于资产融资。主要 DeFi 协议正在整合 RWA 策略以获取收益。"
+			}
+		]
+	},
+	"tools": {
+		"goldfinch": {
+			"description": "面向新兴市场的无抵押加密贷款"
+		},
+		"truefi": {
+			"description": "信用评分驱动的无抵押借贷"
+		},
+		"centrifuge": {
+			"description": "将发票和房地产引入链上的现实世界资产融资协议"
+		},
+		"clearpool": {
+			"description": "用于无担保机构借贷的去中心化资本市场"
+		},
+		"matrixdock": {
+			"description": "具有STBT稳定币的代币化国库券"
+		},
+		"openeden": {
+			"description": "具有实时NAV和24/7结算的代币化国库券"
+		},
+		"realt": {
+			"description": "具有分数所有权的代币化房地产投资"
+		},
+		"lofty": {
+			"description": "Algorand区块链上的分数房地产投资"
+		},
+		"propy": {
+			"description": "基于区块链的房地产交易和所有权"
+		},
+		"securitize": {
+			"description": "证券代币发行和生命周期管理平台"
+		},
+		"tokeny": {
+			"description": "用于合规证券的企业代币化平台"
+		},
+		"polymesh": {
+			"description": "专为受监管证券代币构建的区块链"
+		}
+	}
+}

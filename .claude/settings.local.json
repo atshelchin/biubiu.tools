@@ -40,7 +40,9 @@
       "Bash(then)",
       "Bash(else)",
       "Bash(fi)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(for f in static/contracts/*.json)",
+      "Bash(do echo \"=== $f ===\")"
     ],
     "deny": [],
     "ask": []

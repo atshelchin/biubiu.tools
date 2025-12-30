@@ -1,0 +1,30 @@
+{
+	"category_seo": {
+		"title": "Échanges Crypto (CEX) - Plateformes de Trading Centralisées | BiuBiu Tools",
+		"description": "Comparez les meilleurs échanges crypto centralisés. Trouvez les principales plateformes CEX pour trader Bitcoin, Ethereum et altcoins.",
+		"keywords": "échanges crypto, cex, binance, coinbase, plateformes de trading crypto",
+		"faqs": [
+			{
+				"question": "Qu'est-ce qu'un échange centralisé ?",
+				"answer": "Un échange centralisé (CEX) est une plateforme gérée par une entreprise qui facilite le trading de cryptomonnaies. Le CEX garde la garde des fonds des utilisateurs et opère un carnet d'ordres pour matcher acheteurs et vendeurs."
+			},
+			{
+				"question": "CEX vs DEX : Quelle est la différence ?",
+				"answer": "Les CEX sont centralisés avec garde des fonds, KYC et trading plus rapide. Les DEX sont décentralisés avec auto-garde, sans KYC mais potentiellement des frais plus élevés et liquidité moindre. Les CEX conviennent aux débutants, les DEX pour la confidentialité."
+			},
+			{
+				"question": "Comment choisir un échange crypto ?",
+				"answer": "Considérez : réputation et sécurité, cryptos disponibles, frais de trading, méthodes de dépôt/retrait, disponibilité régionale, interface utilisateur et support client. Commencez par des échanges établis et réglementés."
+			},
+			{
+				"question": "Les échanges centralisés sont-ils sûrs ?",
+				"answer": "Les CEX réputés ont de fortes mesures de sécurité, mais gardent vos fonds. Les risques incluent les piratages, faillites ou restrictions de retrait. Utilisez l'authentification à deux facteurs et ne conservez que les fonds pour le trading sur les échanges."
+			}
+		]
+	},
+	"tools": {
+		"ccdata": {
+			"description": "Market indices et données pour institutions"
+		}
+	}
+}

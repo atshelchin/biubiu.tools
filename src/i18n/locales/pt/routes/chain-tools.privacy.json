@@ -1,0 +1,38 @@
+{
+	"category_seo": {
+		"title": "Ferramentas de Privacidade Cripto - Transações Anônimas | BiuBiu Tools",
+		"description": "Ferramentas de privacidade blockchain para transações anônimas, mixers, privacy coins e protocolos de preservação de privacidade.",
+		"keywords": "privacidade cripto, transações anonimas, privacy coins, mixers cripto, privacidade blockchain",
+		"faqs": [
+			{
+				"question": "As transações blockchain são privadas?",
+				"answer": "Não por padrão. A maioria das blockchains são públicas - qualquer um pode ver transações, saldos e atividade de carteiras. Os endereços são pseudônimos mas podem ser vinculados a identidades reais através de análise, exchanges e interações on-chain."
+			},
+			{
+				"question": "Como consigo privacidade em cripto?",
+				"answer": "Opções incluem: privacy coins (Monero, Zcash), protocolos de privacidade (Tornado Cash - nota: sancionado), novos endereços para cada transação, não reutilizar endereços de depósito de exchange, e carteiras focadas em privacidade. Entenda as implicações legais em sua jurisdição."
+			},
+			{
+				"question": "As ferramentas de privacidade são legais?",
+				"answer": "Varia por jurisdição. Enquanto a privacidade é um direito fundamental, algumas ferramentas foram sancionadas (Tornado Cash) ou enfrentaram escrutínio regulatório devido ao uso em lavagem de dinheiro. Sempre cumpra com leis locais e use ferramentas de privacidade responsavelmente."
+			}
+		]
+	},
+	"tools": {
+		"monero": {
+			"description": "Leading privacy-focused cryptocurrency with ring signatures and stealth addresses"
+		},
+		"firo": {
+			"description": "Privacy coin using Lelantus protocol for anonymous transactions"
+		},
+		"penumbra": {
+			"description": "Privacy-focused Cosmos chain for shielded transactions"
+		},
+		"namada": {
+			"description": "Multi-chain privacy protocol with asset-agnostic shielded transfers"
+		},
+		"semaphore": {
+			"description": "Zero-knowledge protocol for anonymous voting and signaling"
+		}
+	}
+}

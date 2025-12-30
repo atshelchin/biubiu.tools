@@ -1,0 +1,37 @@
+{
+	"category_seo": {
+		"title": "Stablecoin - USDC, USDT, DAI & Hơn Thế | BiuBiu Tools",
+		"description": "Tìm hiểu về stablecoin và các trường hợp sử dụng của chúng. Stablecoin được hỗ trợ bởi fiat, thuật toán và phi tập trung cho DeFi và thanh toán.",
+		"faqs": [
+			{
+				"question": "Stablecoin là gì?",
+				"answer": "Stablecoin là tiền mã hóa được neo giữ với các tài sản ổn định như USD. Các loại bao gồm được hỗ trợ bởi fiat (USDC, USDT), được hỗ trợ bởi crypto (DAI) và stablecoin thuật toán."
+			},
+			{
+				"question": "Stablecoin nào an toàn nhất?",
+				"answer": "USDC được quản lý chặt chẽ và minh bạch. USDT có thanh khoản cao nhất nhưng ít minh bạch hơn. DAI là phi tập trung nhưng có rủi ro hợp đồng thông minh. Đa dạng hóa là khôn ngoan."
+			},
+			{
+				"question": "Chuyện gì đã xảy ra với UST?",
+				"answer": "UST là một stablecoin thuật toán đã sụp đổ vào tháng 5 năm 2022, mất peg và gây ra hơn 40 tỷ USD thiệt hại. Nó làm nổi bật rủi ro của thiết kế thuật toán không có tài sản thế chấp thích hợp."
+			}
+		]
+	},
+	"tools": {
+		"frax": {
+			"description": "Stablecoin thuật toán phân số với thế chấp một phần"
+		},
+		"tusd": {
+			"description": "Regulated and audited USD-backed stablecoin"
+		},
+		"sfrax": {
+			"description": "Staked FRAX earning yield from Frax protocol"
+		},
+		"fdusd": {
+			"description": "First Digital USD (FDUSD) - Stablecoin"
+		},
+		"flexusd": {
+			"description": "flexUSD - Stablecoin"
+		}
+	}
+}

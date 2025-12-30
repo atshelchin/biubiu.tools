@@ -1,0 +1,33 @@
+{
+	"category_seo": {
+		"title": "Suivi des Baleines Crypto - Adresses de Grands Détenteurs et Trésoreries | BiuBiu Tools",
+		"description": "Suivez les adresses des baleines crypto et les mouvements des grands détenteurs. Surveillez les portefeuilles institutionnels et les trésoreries de protocoles.",
+		"keywords": "suivi des baleines crypto, baleines bitcoin, grands détenteurs, mouvements de portefeuilles",
+		"faqs": [
+			{
+				"question": "Qui sont les baleines crypto ?",
+				"answer": "Les baleines crypto sont des individus ou entités détenant de grandes quantités de cryptomonnaie. Leurs transactions peuvent impacter significativement les prix du marché en raison du volume de leurs holdings."
+			},
+			{
+				"question": "Pourquoi suivre les baleines ?",
+				"answer": "Suivre les baleines aide à comprendre le sentiment du marché, identifier les tendances potentielles et anticiper les mouvements de prix. Les grands transferts signalent souvent des événements importants ou changements de marché."
+			},
+			{
+				"question": "Comment identifier les adresses des baleines ?",
+				"answer": "Les adresses des baleines peuvent être identifiées via des explorateurs blockchain montrant de gros soldes, des outils d'analyse on-chain et des services de suivi des baleines. Certaines adresses connues appartiennent à des échanges ou institutions."
+			},
+			{
+				"question": "Les mouvements des baleines prédisent-ils les prix ?",
+				"answer": "Les mouvements des baleines peuvent fournir des insights mais ne sont pas des prédicteurs infaillibles. Les grands transferts vers les échanges pourraient signaler une vente, tandis que les transferts vers des portefeuilles froids pourraient indiquer une détention à long terme."
+			}
+		]
+	},
+	"tools": {
+		"bubblemaps": {
+			"description": "Visual token holder et supply distribution analysis"
+		},
+		"lookonchain": {
+			"description": "On-chain analytique plateforme tracking whale movements et smart money"
+		}
+	}
+}

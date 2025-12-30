@@ -1,0 +1,77 @@
+{
+	"category_seo": {
+		"title": "EVM Olmayan Blokzincirler - Solana, Bitcoin, Cosmos ve Daha Fazlası | BiuBiu Tools",
+		"description": "EVM olmayan blokzincir ekosistemlerini keşfedin. Solana, Bitcoin, Cosmos, Aptos, Sui ve onların benzersiz araçları ve dApp'leri.",
+		"keywords": "evm olmayan blokzincirler, solana, bitcoin, cosmos, alternatif blokzincirler",
+		"faqs": [
+			{
+				"question": "EVM olmayan zincirler nelerdir?",
+				"answer": "EVM olmayan zincirler Ethereum'un sanal makinesini kullanmaz. Farklı mimarilere sahiptirler - Solana Rust kullanır, Bitcoin'in kendi script'i vardır, Cosmos CosmWasm kullanır. Her birinin benzersiz değiş tokuşları vardır."
+			},
+			{
+				"question": "Neden EVM olmayan zincirleri kullanmalıyım?",
+				"answer": "Farklı zincirler farklı şeyler için optimize edilir. Solana hız ve düşük ücretler için, Bitcoin güvenlik ve merkeziyetsizlik için, Cosmos birlikte çalışabilirlik için, Move zincirleri güvenlik için."
+			},
+			{
+				"question": "EVM olmayan zincirlere nasıl köprü kurarım?",
+				"answer": "Wormhole (çoklu zincir), Portal (Solana) veya IBC (Cosmos) gibi özel köprüler kullanın. Bazı merkezi borsalar EVM olmayan zincirlere doğrudan para yatırma/çekme desteği sunar."
+			}
+		]
+	},
+	"tools": {
+		"algorand": {
+			"description": "Pure Proof of Stake blokzincir ile instant finality"
+		},
+		"cardano": {
+			"description": "Research-driven blokzincir ile peer-reviewed development"
+		},
+		"celestia": {
+			"description": "Modular data availability layer için rollups"
+		},
+		"dedust": {
+			"description": "DEX ve DeFi platiçinm üzerinde TON"
+		},
+		"dymension": {
+			"description": "RollApp hub built üzerinde Cosmos için modular rollups"
+		},
+		"injective": {
+			"description": "DeFi-focused Cosmos zincir için derivatives trading"
+		},
+		"layerzero": {
+			"description": "Omnizincir interoperability protokol için trustless messaging"
+		},
+		"liquidswap": {
+			"description": "First AMM DEX üzerinde Aptos by Püzerindetem"
+		},
+		"mintscan": {
+			"description": "Çoklu zincir Cosmos ekosistem gezgin"
+		},
+		"osmosis": {
+			"description": "Önde gelen DEX in Cosmos ekosistem ile IBC integratiüzerinde"
+		},
+		"polkadot": {
+			"description": "Heterogeneous çoklu zincir ağ ile parazincirs"
+		},
+		"raydium": {
+			"description": "Solana AMM ve liquidity provider ile cüzerindecentrated pools"
+		},
+		"solscan": {
+			"description": "Popüler Solana gezgin ile token analitik ve NFT support"
+		},
+		"stacks": {
+			"description": "Bitcoin L2 bringing smart cüzerindetracts to BTC"
+		},
+		"subscan": {
+			"description": "Çoklu zincir gezgin için Polkadot ve Substrate ağs"
+		},
+		"tezos": {
+			"description": "Self-amending blokzincir ile içinmal verificatiüzerinde"
+		},
+		"tonkeeper": {
+			"description": "Popüler TON cüzdan ile Telegram integratiüzerinde"
+		},
+		"tonscan": {
+			"description": "TON blokzincir gezgin için transactiüzerindes ve jettüzerindes"
+		}
+	}
+}

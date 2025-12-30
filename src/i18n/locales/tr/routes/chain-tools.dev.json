@@ -1,0 +1,122 @@
+{
+	"category_seo": {
+		"title": "Web3 Geliştirici Araçları - dApp ve Akıllı Sözleşme Oluşturma | BiuBiu Tools",
+		"description": "Ethereum ve diğer blokzincirlerde inşa etmek için temel geliştirici araçları. Akıllı sözleşme çerçeveleri, test araçları ve dağıtım hizmetleri.",
+		"keywords": "web3 geliştirici araçları, solidity geliştirme, hardhat, foundry, ethereum geliştirme",
+		"faqs": [
+			{
+				"question": "Ana akıllı sözleşme geliştirme çerçeveleri nelerdir?",
+				"answer": "Foundry Solidity için en hızlı ve en popülerdir. Hardhat harika JavaScript entegrasyonu ve eklentiler sunar. Brownie Python tabanlıdır. Anchor Solana programları için standarttır."
+			},
+			{
+				"question": "Test ağı token'larını nasıl alabilirim?",
+				"answer": "Alchemy Faucet, Infura Faucet veya zincire özel musluklar gibi faucet'leri kullanın. Sepolia ana Ethereum test ağıdır. Çoğu L2'nin dokümantasyonlarından bağlantı verilen kendi test ağı musluğu vardır."
+			},
+			{
+				"question": "Hangi RPC sağlayıcılarını kullanmalıyım?",
+				"answer": "Alchemy ve Infura, cömert ücretsiz katmanlarla en güvenilirdir. QuickNode hızlı performans sunar. Merkezi olmayan seçenekler için Ankr veya POKT Network'ü düşünün. Her zaman yedek RPC uç noktalarına sahip olun."
+			}
+		]
+	},
+	"tools": {
+		"tenderly": {
+			"description": "Akıllı sözleşme hata ayıklama ve izleme"
+		},
+		"chainlist": {
+			"description": "Cüzdanınıza EVM ağları ekleyin"
+		},
+		"remix": {
+			"description": "Tarayıcı tabanlı Solidity IDE"
+		},
+		"foundry": {
+			"description": "Şimşek hızında Solidity araç seti"
+		},
+		"hardhat": {
+			"description": "Ethereum geliştirme ortamı"
+		},
+		"alchemy": {
+			"description": "Alchemy - Web3 development platiçinm ve APIs"
+		},
+		"ape": {
+			"description": "Modular Pythüzerinde framework"
+		},
+		"brownie": {
+			"description": "Pythüzerinde smart cüzerindetract framework"
+		},
+		"buildspace": {
+			"description": "Project-based Web3 learning topluluk"
+		},
+		"bunzz": {
+			"description": "Bunzz - Smart cüzerindetract deployment pazaryeri"
+		},
+		"chainbase": {
+			"description": "All-in-üzerindee data platiçinm"
+		},
+		"chainide": {
+			"description": "Cloud-based çoklu zincir development IDE"
+		},
+		"circom": {
+			"description": "Circom - Developer araç"
+		},
+		"constructor": {
+			"description": "Visual no-code smart cüzerindetract builder"
+		},
+		"covalent": {
+			"description": "Unified blokzincir data API"
+		},
+		"crossmint": {
+			"description": "NFT minting API ile fiat payments"
+		},
+		"envio": {
+			"description": "HyperSync için ultra-fast blokzincir indexing"
+		},
+		"goldsky": {
+			"description": "Real-time blokzincir data streaming ve indexing"
+		},
+		"infura": {
+			"description": "Ethereum API infrastructure"
+		},
+		"moralis": {
+			"description": "Moralis - Developer araç"
+		},
+		"pointer": {
+			"description": "Learn Web3 development ve earn crypto"
+		},
+		"protostar": {
+			"description": "Protostar - Developer araç"
+		},
+		"pyth": {
+			"description": "Real-time price oracle"
+		},
+		"quicknode": {
+			"description": "Çoklu zincir node infrastructure"
+		},
+		"rainbowkit": {
+			"description": "React cüzdan cüzerindenectiüzerinde UI"
+		},
+		"sourcify": {
+			"description": "Merkezi olmayan cüzerindetract verificatiüzerinde"
+		},
+		"starkli": {
+			"description": "Starkli - Developer araç"
+		},
+		"thirdweb": {
+			"description": "Full-stack Web3 development"
+		},
+		"transpose": {
+			"description": "Real-time blokzincir data ile SQL API"
+		},
+		"useweb3": {
+			"description": "Curated Web3 learning resources"
+		},
+		"viem": {
+			"description": "TypeScript Ethereum library"
+		},
+		"wagmi": {
+			"description": "React hooks için Ethereum"
+		},
+		"web3modal": {
+			"description": "Multi-framework cüzdan cüzerindenect"
+		}
+	}
+}

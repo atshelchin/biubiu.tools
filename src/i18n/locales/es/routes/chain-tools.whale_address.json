@@ -1,0 +1,29 @@
+{
+	"category_seo": {
+		"title": "Rastreador de Ballenas - Monitorea Billeteras Grandes y Tesorerías | BiuBiu Tools",
+		"description": "Rastrea direcciones de ballenas, monitorea grandes billeteras y sigue movimientos de tesorerías cripto. Identifica traders influyentes y comportamiento institucional.",
+		"keywords": "rastreador ballenas, monitor ballenas cripto, billeteras grandes, movimientos ballenas, rastreador tesorería",
+		"faqs": [
+			{
+				"question": "¿Qué son las ballenas cripto?",
+				"answer": "Las ballenas cripto son individuos o entidades que poseen grandes cantidades de criptomonedas. Sus transacciones pueden impactar significativamente los precios del mercado, por lo que los traders monitorean actividad de ballenas para conocimientos sobre tendencias potenciales del mercado."
+			},
+			{
+				"question": "¿Cómo rastrea la actividad de ballenas?",
+				"answer": "Usa herramientas de rastreo de ballenas que monitorean grandes transacciones, siguen billeteras conocidas de ballenas en analíticas on-chain, configura alertas para movimientos significativos de tokens y analiza patrones de actividad de ballenas a través de plataformas como Whale Alert o Nansen."
+			},
+			{
+				"question": "¿Es confiable el seguimiento de ballenas para trading?",
+				"answer": "El rastreo de ballenas provee conocimientos valiosos pero no debería ser tu única estrategia. Las ballenas pueden ejecutar estrategias complejas, movimientos pueden ser para no-trading (gestión de tesorería), y los scammers a veces imitan actividad de ballenas. Usa como una métrica entre muchas."
+			}
+		]
+	},
+	"tools": {
+		"bubblemaps": {
+			"description": "Análisis visual de tenedores de tokens y distribución de suministro"
+		},
+		"lookonchain": {
+			"description": "On-chain analytics platform tracking whale movements and smart money"
+		}
+	}
+}

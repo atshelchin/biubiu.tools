@@ -1,0 +1,28 @@
+{
+	"category_seo": {
+		"title": "区块链预言机 - 价格馈送与链下数据 | BiuBiu Tools",
+		"description": "将真实世界数据带入区块链的预言机服务。为智能合约提供价格馈送、随机数和跨链数据。",
+		"faqs": [
+			{
+				"question": "什么是区块链预言机？",
+				"answer": "预言机将外部数据（价格、天气、体育比分）带入智能合约。它们对于 DeFi、保险和任何需要真实世界信息的 dApp 都是必不可少的。"
+			},
+			{
+				"question": "为什么 Chainlink 如此重要？",
+				"answer": "Chainlink 是主导的预言机网络，保护着数十亿美元的 DeFi 价值。它提供去中心化价格馈送、用于随机数的 VRF 和用于跨链通信的 CCIP。"
+			},
+			{
+				"question": "什么是预言机攻击？",
+				"answer": "预言机攻击操纵价格馈送来利用 DeFi 协议。攻击者可能使用闪电贷操纵预言机读取的 DEX 价格。这已造成数亿美元的损失。"
+			}
+		]
+	},
+	"tools": {
+		"chainlink": {
+			"description": "行业领先的去中心化预言机网络，提供价格源、VRF 和自动化服务"
+		},
+		"api3": {
+			"description": "第一方预言机，使用 Airnode 直接传递 API 数据"
+		}
+	}
+}

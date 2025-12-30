@@ -1,0 +1,28 @@
+{
+	"category_seo": {
+		"title": "巨鲸钱包与资金库追踪 - 聪明钱洞察 | BiuBiu Tools",
+		"description": "追踪巨鲸钱包和协议资金库。监控加密货币中的聪明钱动向和机构持仓。",
+		"faqs": [
+			{
+				"question": "什么是加密巨鲸？",
+				"answer": "巨鲸是持有大量加密货币的实体。他们的交易可以影响市场。追踪巨鲸钱包可以提供市场走势的早期信号。"
+			},
+			{
+				"question": "如何追踪巨鲸钱包？",
+				"answer": "使用 Nansen 或 Arkham 进行标记钱包追踪。在 Etherscan 上设置大额转账警报。关注分享巨鲸活动的账号如 @lookonchain。"
+			},
+			{
+				"question": "什么是协议资金库？",
+				"answer": "资金库是由 DAO 或协议控制的资金。用于资助、流动性和开发。大型资金库（如 Uniswap 的）被作为项目健康度的指标来追踪。"
+			}
+		]
+	},
+	"tools": {
+		"bubblemaps": {
+			"description": "可视化代币持有者和供应分布分析"
+		},
+		"lookonchain": {
+			"description": "链上分析平台，追踪巨鲸动向和聪明资金"
+		}
+	}
+}

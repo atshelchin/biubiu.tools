@@ -1,0 +1,304 @@
+{
+	"category_seo": {
+		"title": "DeFi 工具 - 去中心化金融协议与应用 | BiuBiu Tools",
+		"description": "发现最佳 DeFi 协议和工具，包括去中心化交易所、借贷平台、流动性挖矿和收益聚合器。",
+		"faqs": [
+			{
+				"question": "什么是 DeFi？",
+				"answer": "DeFi（去中心化金融）是指建立在区块链上的金融服务，无需银行等传统中介机构。它使用户可以进行借贷、交易、获取收益等操作，同时保持对资产的完全控制。"
+			},
+			{
+				"question": "最受欢迎的 DeFi 协议有哪些？",
+				"answer": "流行的 DeFi 协议包括 Uniswap（去中心化交易）、Aave（借贷）、MakerDAO（稳定币）、Curve（稳定币交易）和 Lido（流动性质押）。每个协议服务于 DeFi 生态系统中的不同用途。"
+			},
+			{
+				"question": "如何安全地开始使用 DeFi？",
+				"answer": "从小额资金开始学习，使用 Rabby 或 MetaMask 等信誉良好的钱包，通过 DeFiLlama 等来源验证合约地址，谨慎授权代币，并考虑使用 Revoke.cash 等工具管理权限。"
+			}
+		]
+	},
+	"tools": {
+		"uniswap": {
+			"description": "领先的去中心化交易所"
+		},
+		"aave": {
+			"description": "去中心化借贷协议"
+		},
+		"1inch": {
+			"description": "DEX 聚合器，获取最优价格"
+		},
+		"curve": {
+			"description": "稳定币 AMM，低滑点交易"
+		},
+		"lido": {
+			"description": "以太坊流动性质押协议"
+		},
+		"compound": {
+			"description": "算法货币市场协议"
+		},
+		"maker": {
+			"description": "DAI 稳定币和借贷协议"
+		},
+		"gmx": {
+			"description": "去中心化永续合约交易所"
+		},
+		"pancakeswap": {
+			"description": "BNB Chain 上领先的 DEX"
+		},
+		"sushiswap": {
+			"description": "多链 AMM 和 DeFi 平台"
+		},
+		"balancer": {
+			"description": "自动化投资组合管理和 DEX"
+		},
+		"dydx": {
+			"description": "去中心化永续合约交易所"
+		},
+		"convex": {
+			"description": "Curve 增强质押和收益"
+		},
+		"yearn": {
+			"description": "自动化收益优化金库"
+		},
+		"pendle": {
+			"description": "收益代币化和交易"
+		},
+		"radiant": {
+			"description": "全链货币市场"
+		},
+		"morpho": {
+			"description": "优化的点对点借贷"
+		},
+		"rocketpool": {
+			"description": "去中心化以太坊质押"
+		},
+		"venus": {
+			"description": "BSC 借贷协议"
+		},
+		"camelot": {
+			"description": "Arbitrum 原生 DEX 和 Launchpad"
+		},
+		"velodrome": {
+			"description": "Optimism 流动性中心"
+		},
+		"aerodrome": {
+			"description": "Base 流动性中心"
+		},
+		"maverick": {
+			"description": "动态集中流动性 AMM"
+		},
+		"spark": {
+			"description": "MakerDAO 借贷协议"
+		},
+		"instadapp": {
+			"description": "DeFi 智能账户聚合器"
+		},
+		"sommelier": {
+			"description": "自动化 DeFi 金库策略"
+		},
+		"euler": {
+			"description": "无许可借贷协议"
+		},
+		"benqi": {
+			"description": "Avalanche借贷和流动性质押"
+		},
+		"silo": {
+			"description": "隔离风险借贷市场"
+		},
+		"abracadabra": {
+			"description": "生息代币借贷"
+		},
+		"alchemix": {
+			"description": "自偿还贷款协议"
+		},
+		"exactly": {
+			"description": "固定利率和浮动利率借贷"
+		},
+		"kyberswap": {
+			"description": "弹性池DEX聚合器"
+		},
+		"odos": {
+			"description": "智能路由聚合器"
+		},
+		"openocean": {
+			"description": "跨链DEX聚合器"
+		},
+		"hashflow": {
+			"description": "MEV保护的RFQ交易"
+		},
+		"syncswap": {
+			"description": "zkSync Era原生DEX"
+		},
+		"mute": {
+			"description": "zkSync DEX与放大器"
+		},
+		"spacefi": {
+			"description": "zkSync DEX和收益农场"
+		},
+		"ramses": {
+			"description": "Arbitrum ve(3,3) DEX"
+		},
+		"thena": {
+			"description": "BNB Chain ve(3,3) DEX"
+		},
+		"baseswap": {
+			"description": "Base原生DEX和农场"
+		},
+		"woofi": {
+			"description": "低滑点跨链DEX"
+		},
+		"gains": {
+			"description": "去中心化杠杆交易"
+		},
+		"level": {
+			"description": "永续合约交易平台"
+		},
+		"mux": {
+			"description": "杠杆交易聚合器"
+		},
+		"vertex": {
+			"description": "永续和现货DEX"
+		},
+		"hyperliquid": {
+			"description": "链上永续订单簿"
+		},
+		"aevo": {
+			"description": "期权和永续交易所"
+		},
+		"lyra": {
+			"description": "期权AMM协议"
+		},
+		"dopex": {
+			"description": "去中心化期权协议"
+		},
+		"premia": {
+			"description": "期权金库和交易"
+		},
+		"harvest": {
+			"description": "收益农场聚合器"
+		},
+		"pickle": {
+			"description": "收益优化罐"
+		},
+		"concentrator": {
+			"description": "Curve收益集中器"
+		},
+		"conic": {
+			"description": "Curve全能池平台"
+		},
+		"sturdy": {
+			"description": "免息借贷协议"
+		},
+		"stakewise": {
+			"description": "非托管ETH质押"
+		},
+		"stader": {
+			"description": "多链流动性质押"
+		},
+		"renzo": {
+			"description": "EigenLayer流动性再质押"
+		},
+		"puffer": {
+			"description": "原生流动性再质押"
+		},
+		"kelp": {
+			"description": "流动性再质押解决方案"
+		},
+		"bentobox": {
+			"description": "SushiSwap的代币金库与借贷基础设施"
+		},
+		"ribbon": {
+			"description": "DeFi结构化期权产品与收益金库"
+		},
+		"opyn": {
+			"description": "去中心化期权协议与永续合约"
+		},
+		"notional": {
+			"description": "链上固定利率借贷协议"
+		},
+		"maple": {
+			"description": "机构级无抵押借贷市场"
+		},
+		"tokemak": {
+			"description": "DeFi流动性供应与引导协议"
+		},
+		"olympus": {
+			"description": "协议自有流动性与国库管理"
+		},
+		"umami": {
+			"description": "Arbitrum上的可持续收益协议"
+		},
+		"vela": {
+			"description": "低费用高杠杆永续合约DEX"
+		},
+		"y2k": {
+			"description": "稳定币与锚定资产脱钩保险"
+		},
+		"kwenta": {
+			"description": "Synthetix驱动的永续合约交易"
+		},
+		"polynomial": {
+			"description": "Optimism上的DeFi衍生品金库"
+		},
+		"angle": {
+			"description": "去中心化欧元稳定币协议"
+		},
+		"liquity": {
+			"description": "无息借贷与LUSD稳定币"
+		},
+		"reflexer": {
+			"description": "RAI非锚定稳定资产协议"
+		},
+		"mstable": {
+			"description": "稳定资产聚合与收益生成"
+		},
+		"raft": {
+			"description": "LST抵押借贷与R稳定币"
+		},
+		"prisma": {
+			"description": "LST抵押借贷与mkUSD稳定币"
+		},
+		"gravita": {
+			"description": "LST零息贷款协议"
+		},
+		"gyroscope": {
+			"description": "全天候稳定币与储备设计"
+		},
+		"paraswap": {
+			"description": "最优路径DEX聚合与Gas优化"
+		},
+		"matcha": {
+			"description": "0x驱动的DEX聚合交易"
+		},
+		"cowswap": {
+			"description": "批量拍卖MEV保护交易"
+		},
+		"bebop": {
+			"description": "做市商驱动的无Gas签名交易"
+		},
+		"dodo": {
+			"description": "PMM主动做市与代币发行"
+		},
+		"clipper": {
+			"description": "小额交易低滑点DEX"
+		},
+		"symbiotic_restaking": {
+			"description": "无许可模块化再质押协议"
+		},
+		"ether_fi": {
+			"description": "非托管eETH流动性再质押"
+		},
+		"swell": {
+			"description": "swETH流动性质押与再质押"
+		},
+		"equilibria": {
+			"description": "Pendle池增强收益"
+		},
+		"marginfi": {
+			"description": "marginfi - DeFi protocol"
+		},
+		"beefy": {
+			"description": "多链自动复利收益优化器"
+		}
+	}
+}

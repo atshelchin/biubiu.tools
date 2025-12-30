@@ -1,0 +1,92 @@
+{
+	"category_seo": {
+		"title": "暗号資産決済 - 決済処理とカードサービス | BiuBiu Tools",
+		"description": "企業と個人向けの暗号資産決済ソリューション。決済プロセッサ、暗号資産カード、マーチャントサービス。",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "暗号資産決済はどのように機能しますか？",
+				"answer": "暗号資産決済はブロックチェーン上で直接価値を転送します。マーチャント向けには、BitPayなどの決済プロセッサが暗号資産を法定通貨に変換します。Coinbase Cardなどの暗号資産カードを使えば、どこでも暗号資産を使用できます。"
+			},
+			{
+				"question": "最適な暗号資産カードは何ですか？",
+				"answer": "Coinbase CardとCrypto.com Cardは広く利用可能です。Gnosis PayはDeFi統合を提供します。選択する前にキャッシュバック率、対応国、手数料体系を比較してください。"
+			},
+			{
+				"question": "企業は暗号資産決済を受け付けられますか？",
+				"answer": "はい、BitPay、Coinbase Commerceなどの決済プロセッサや直接ウォレット決済を使用できます。ボラティリティ、税務上の影響、即座に法定通貨に変換するかどうかを検討してください。"
+			}
+		]
+	},
+	"tools": {
+		"moonpay": {
+			"description": "Fiat on-ramp and off-ramp for crypto"
+		},
+		"transak": {
+			"description": "Fiat-to-crypto payment infrastructure"
+		},
+		"ramp": {
+			"description": "Non-custodial fiat on-ramp SDK"
+		},
+		"onmeta": {
+			"description": "Fiat on-ramp for Indian users"
+		},
+		"superfluid": {
+			"description": "Real-time token streaming for payments"
+		},
+		"sablier": {
+			"description": "Token streaming for vesting and payroll"
+		},
+		"coinshift": {
+			"description": "Treasury management and multi-sig operations"
+		},
+		"spritz": {
+			"description": "Pay bills with crypto via ACH"
+		},
+		"bitpay": {
+			"description": "Crypto payment processing for merchants"
+		},
+		"holyheld": {
+			"description": "DeFi debit card with yield features"
+		},
+		"fusepay": {
+			"description": "Crypto spending card on Fuse network"
+		},
+		"loopcrypto": {
+			"description": "Recurring crypto billing and subscriptions"
+		},
+		"reveel": {
+			"description": "Automated revenue sharing and royalty splits"
+		},
+		"splits": {
+			"description": "On-chain payment splitting protocol"
+		},
+		"nowpayments": {
+			"description": "NOWPayments - Crypto payment solution"
+		},
+		"monerium": {
+			"description": "Monerium - Crypto payment solution"
+		},
+		"wyre": {
+			"description": "Wyre - Crypto payment solution"
+		},
+		"banxa": {
+			"description": "Banxa - Crypto payment solution"
+		},
+		"simplex": {
+			"description": "Simplex - Crypto payment solution"
+		},
+		"sardine": {
+			"description": "Sardine - Crypto payment solution"
+		},
+		"coinflow": {
+			"description": "Coinflow - Crypto payment solution"
+		},
+		"llamapay": {
+			"description": "LlamaPay - Crypto payment solution"
+		},
+		"parcel": {
+			"description": "Parcel - Crypto payment solution"
+		}
+	}
+}

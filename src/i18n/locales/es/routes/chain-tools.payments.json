@@ -1,0 +1,92 @@
+{
+	"category_seo": {
+		"title": "Pagos Cripto - Procesadores de Pago Blockchain y Gateways | BiuBiu Tools",
+		"description": "Soluciones de pago cripto para negocios y comerciantes. Acepta Bitcoin, Ethereum y otras cripto con procesadores de pago y plataformas de facturación.",
+		"keywords": "pagos cripto, procesador pago blockchain, gateway pago, pagos bitcoin, pagos merchant cripto",
+		"faqs": [
+			{
+				"question": "¿Cómo acepto pagos cripto?",
+				"answer": "Integra procesadores de pago cripto como BitPay, Coinbase Commerce o NOWPayments en tu sitio web o tienda. Estos servicios manejan conversiones cripto-fiat, facturación y proveen APIs para integración de comercio electrónico."
+			},
+			{
+				"question": "¿Cuáles son las ventajas de los pagos cripto?",
+				"answer": "Los pagos cripto ofrecen tarifas más bajas que tarjetas de crédito, alcance global sin barreras bancarias, liquidación más rápida (especialmente internacional), sin chargebacks y acceso a clientes nativos de cripto."
+			},
+			{
+				"question": "¿Necesito guardar cripto?",
+				"answer": "No, la mayoría de procesadores de pago ofrecen conversión instantánea a fiat. Los clientes pagan en cripto, pero recibes moneda tradicional en tu cuenta bancaria. Alternativamente, puedes elegir recibir pagos parciales o totales en cripto."
+			}
+		]
+	},
+	"tools": {
+		"moonpay": {
+			"description": "On-ramp y off-ramp fiat para crypto"
+		},
+		"transak": {
+			"description": "Infraestructura de pagos fiat-to-crypto"
+		},
+		"ramp": {
+			"description": "SDK de on-ramp fiat no-custodial"
+		},
+		"onmeta": {
+			"description": "On-ramp fiat para usuarios de India"
+		},
+		"superfluid": {
+			"description": "Streaming de tokens en tiempo real para pagos"
+		},
+		"sablier": {
+			"description": "Streaming de tokens para vesting y nómina"
+		},
+		"coinshift": {
+			"description": "Gestión de tesorería y operaciones multi-firma"
+		},
+		"spritz": {
+			"description": "Pagar facturas con crypto vía ACH"
+		},
+		"bitpay": {
+			"description": "Procesamiento de pagos crypto para comerciantes"
+		},
+		"holyheld": {
+			"description": "Tarjeta de débito DeFi con funciones de rendimiento"
+		},
+		"fusepay": {
+			"description": "Tarjeta de gasto crypto en red Fuse"
+		},
+		"loopcrypto": {
+			"description": "Facturación crypto recurrente y suscripciones"
+		},
+		"reveel": {
+			"description": "Distribución automatizada de ingresos y divisiones de regalías"
+		},
+		"splits": {
+			"description": "On-chain payment splitting protocol"
+		},
+		"nowpayments": {
+			"description": "NOWPayments - Crypto payment solution"
+		},
+		"monerium": {
+			"description": "Monerium - Crypto payment solution"
+		},
+		"wyre": {
+			"description": "Wyre - Crypto payment solution"
+		},
+		"banxa": {
+			"description": "Banxa - Crypto payment solution"
+		},
+		"simplex": {
+			"description": "Simplex - Crypto payment solution"
+		},
+		"sardine": {
+			"description": "Sardine - Crypto payment solution"
+		},
+		"coinflow": {
+			"description": "Coinflow - Crypto payment solution"
+		},
+		"llamapay": {
+			"description": "LlamaPay - Crypto payment solution"
+		},
+		"parcel": {
+			"description": "Parcel - Crypto payment solution"
+		}
+	}
+}

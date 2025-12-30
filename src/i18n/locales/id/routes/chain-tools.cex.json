@@ -1,0 +1,25 @@
+{
+	"category_seo": {
+		"title": "Exchange Kripto (CEX) - Platform Trading | BiuBiu Tools",
+		"description": "Exchange cryptocurrency terpusat untuk trading. Bandingkan fitur exchange, keamanan, biaya, dan aset yang didukung.",
+		"faqs": [
+			{
+				"question": "Exchange mana yang paling aman?",
+				"answer": "Coinbase dan Kraken diatur dengan baik di AS. Binance memiliki likuiditas paling banyak secara global. Cari proof of reserves, kepatuhan regulasi, dan track record keamanan."
+			},
+			{
+				"question": "CEX vs DEX - mana yang harus saya gunakan?",
+				"answer": "CEX untuk on/off ramp fiat, trading lanjutan, dan ramah pemula. DEX untuk self-custody, trading tanpa izin, dan akses ke lebih banyak token. Banyak yang menggunakan keduanya."
+			},
+			{
+				"question": "Bagaimana cara mengamankan akun exchange saya?",
+				"answer": "Aktifkan 2FA (lebih baik kunci hardware), gunakan password unik, whitelist alamat withdrawal, aktifkan penundaan withdrawal, dan jangan simpan jumlah besar di exchange jangka panjang."
+			}
+		]
+	},
+	"tools": {
+		"ccdata": {
+			"description": "Market indices and data for institutions"
+		}
+	}
+}

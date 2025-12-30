@@ -1,0 +1,37 @@
+{
+	"category_seo": {
+		"title": "加密隐私 - 私密交易与工具 | BiuBiu Tools",
+		"description": "加密货币的隐私保护工具。混币器、私密交易和以隐私为重点的协议。",
+		"faqs": [
+			{
+				"question": "为什么加密隐私很重要？",
+				"answer": "区块链交易是公开的。隐私保护可以防止追踪、定向攻击和监控。这关乎安全和金融主权，而不是隐藏不当行为。"
+			},
+			{
+				"question": "有哪些隐私选项？",
+				"answer": "使用隐私币（Zcash、Monero）、隐身地址或隐私协议。Layer 2 解决方案和新的隐私技术正在出现。监管状态因司法管辖区而异。"
+			},
+			{
+				"question": "使用隐私工具合法吗？",
+				"answer": "隐私工具通常是合法的，但法规各异。一些混币器已被制裁。始终遵守当地法律并了解监管环境。"
+			}
+		]
+	},
+	"tools": {
+		"monero": {
+			"description": "使用环签名和隐身地址的领先隐私加密货币"
+		},
+		"firo": {
+			"description": "使用Lelantus协议进行匿名交易的隐私币"
+		},
+		"penumbra": {
+			"description": "用于屏蔽交易的隐私专注Cosmos链"
+		},
+		"namada": {
+			"description": "具有资产无关屏蔽转账的多链隐私协议"
+		},
+		"semaphore": {
+			"description": "用于匿名投票和信号的零知识协议"
+		}
+	}
+}

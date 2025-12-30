@@ -1,0 +1,80 @@
+{
+	"category_seo": {
+		"title": "Web3 Kimlik - ENS, Lens ve Merkezi Olmayan Kimlik | BiuBiu Tools",
+		"description": "Web3 için merkezi olmayan kimlik çözümleri. Alan adları (ENS), sosyal profiller (Lens), kimlik bilgileri ve itibar sistemleri.",
+		"keywords": "web3 kimlik, ens, lens protocol, merkezi olmayan kimlik, blokzincir alan adları",
+		"faqs": [
+			{
+				"question": "Web3 kimliği nedir?",
+				"answer": "Web3 kimliği, dijital kimliğinize zincir üzerinde sahip olmanızı sağlar. Bu, alan adlarını (ENS), sosyal profilleri (Lens), doğrulanabilir kimlik bilgilerini ve dApp'ler arasında itibar puanlarını içerir."
+			},
+			{
+				"question": "ENS alan adı almalı mıyım?",
+				"answer": "Evet, ENS alan adları karmaşık cüzdan adreslerini okunabilir isimlerle (yourname.eth) değiştirir. Cüzdanlar ve dApp'ler arasında çalışırlar. Ayrıca bunları merkezi olmayan web siteleri olarak da kullanabilirsiniz."
+			},
+			{
+				"question": "Lens Protocol nedir?",
+				"answer": "Lens Protocol, profilinize, içeriğinize ve takipçilerinize NFT olarak sahip olduğunuz merkezi olmayan bir sosyal graftır. Lens üzerine inşa edilen uygulamalar arasında Lenster, Hey ve Orb bulunur."
+			}
+		]
+	},
+	"tools": {
+		"anima": {
+			"description": "Biometric identity için sybil resistance"
+		},
+		"bns": {
+			"description": "BNS (Base Name Service) - Identity ve credentials"
+		},
+		"brightid": {
+			"description": "BrightID - Identity ve credentials"
+		},
+		"civic": {
+			"description": "Identity verificatiüzerinde ve KYC solutiüzerindes"
+		},
+		"degenscore": {
+			"description": "On-zincir reputatiüzerinde ve DeFi score"
+		},
+		"disco": {
+			"description": "Verifiable credentials data backpack"
+		},
+		"dotbit": {
+			"description": "Zincirler arası merkezi olmayan identity protokol"
+		},
+		"eas": {
+			"description": "EAS (Ethereum Attestatiüzerinde Service) - Identity ve credentials"
+		},
+		"ens": {
+			"description": "Ethereum Name Service için human-readable addresses"
+		},
+		"galxe": {
+			"description": "Web3 credential ve campaign platiçinm"
+		},
+		"holonym": {
+			"description": "Privacy-preserving identity verificatiüzerinde ile ZK"
+		},
+		"layer3": {
+			"description": "Learn-to-earn quests ve Web3 üzerindeboarding"
+		},
+		"nomis": {
+			"description": "Nomis - Identity ve credentials"
+		},
+		"otterspace": {
+			"description": "Soulbound badges için DAO membership"
+		},
+		"phi": {
+			"description": "Metaverse identity ve credential lve"
+		},
+		"poap": {
+			"description": "Proof of Attendance Protokol için event badges"
+		},
+		"rarimo": {
+			"description": "Rarimo - Identity ve credentials"
+		},
+		"verax": {
+			"description": "Verax - Identity ve credentials"
+		},
+		"zkpass": {
+			"description": "zkPass - Identity ve credentials"
+		}
+	}
+}

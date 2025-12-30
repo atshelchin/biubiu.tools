@@ -1,0 +1,33 @@
+{
+	"category_seo": {
+		"title": "Oracles Blockchain - Flux de Données de Prix et Fournisseurs | BiuBiu Tools",
+		"description": "Accédez aux meilleurs oracles blockchain pour des données de prix fiables. Explorez Chainlink, Band Protocol et autres fournisseurs de flux de données.",
+		"keywords": "oracles blockchain, oracles de prix, chainlink, flux de données, données on-chain",
+		"faqs": [
+			{
+				"question": "Qu'est-ce qu'un oracle blockchain ?",
+				"answer": "Un oracle blockchain est un service qui fournit des données du monde réel aux smart contracts. Les oracles permettent aux blockchains d'accéder à des informations externes comme les prix, météo, résultats sportifs et plus."
+			},
+			{
+				"question": "Pourquoi les oracles sont-ils nécessaires ?",
+				"answer": "Les blockchains ne peuvent pas accéder nativement aux données externes. Les oracles comblent cette lacune, permettant aux smart contracts d'utiliser des informations du monde réel pour l'exécution, rendant possible les applications DeFi complexes."
+			},
+			{
+				"question": "Comment fonctionnent les oracles de prix ?",
+				"answer": "Les oracles de prix récupèrent les données depuis plusieurs sources (échanges, agrégateurs), agrègent ces informations et les fournissent on-chain via smart contracts. Cela garantit des prix fiables et résistants à la manipulation."
+			},
+			{
+				"question": "Les oracles sont-ils sécurisés ?",
+				"answer": "La sécurité des oracles varie. Les principaux fournisseurs comme Chainlink utilisent des réseaux décentralisés de nœuds et plusieurs sources de données pour prévenir la manipulation. Toujours vérifier la décentralisation et l'historique de l'oracle."
+			}
+		]
+	},
+	"tools": {
+		"chainlink": {
+			"description": "Industry-leader décentralisé oracle réseau pour price feeds, VRF et automation"
+		},
+		"api3": {
+			"description": "First-party oracle avec Airnode pour direct API données delivery"
+		}
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"category_seo": {
+		"title": "Rastreador de Baleias - Monitore Carteiras Grandes e Tesourarias | BiuBiu Tools",
+		"description": "Rastreie endereços de baleias, monitore grandes carteiras e siga movimentos de tesourarias cripto. Identifique traders influentes e comportamento institucional.",
+		"keywords": "rastreador baleias, monitor baleias cripto, carteiras grandes, movimentos baleias, rastreador tesouraria",
+		"faqs": [
+			{
+				"question": "O que são baleias cripto?",
+				"answer": "As baleias cripto são indivíduos ou entidades que possuem grandes quantidades de criptomoedas. Suas transações podem impactar significativamente os preços do mercado, então os traders monitoram atividade de baleias para conhecimentos sobre tendências potenciais do mercado."
+			},
+			{
+				"question": "Como rastreio a atividade de baleias?",
+				"answer": "Use ferramentas de rastreamento de baleias que monitoram grandes transações, siga carteiras conhecidas de baleias em análises on-chain, configure alertas para movimentos significativos de tokens e analise padrões de atividade de baleias através de plataformas como Whale Alert ou Nansen."
+			},
+			{
+				"question": "O rastreamento de baleias é confiável para trading?",
+				"answer": "O rastreamento de baleias fornece conhecimentos valiosos mas não deveria ser sua única estratégia. As baleias podem executar estratégias complexas, movimentos podem ser para não-trading (gestão de tesouraria), e os scammers às vezes imitam atividade de baleias. Use como uma métrica entre muitas."
+			}
+		]
+	},
+	"tools": {
+		"bubblemaps": {
+			"description": "Visual token holder and supply distribution analysis"
+		},
+		"lookonchain": {
+			"description": "On-chain analytics platform tracking whale movements and smart money"
+		}
+	}
+}

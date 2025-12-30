@@ -1,0 +1,83 @@
+{
+	"category_seo": {
+		"title": "Web3 Sosyal - Merkezi Olmayan Sosyal Ağlar ve Topluluklar | BiuBiu Tools",
+		"description": "Merkezi olmayan sosyal platformlar ve topluluk araçları. Farcaster, Lens ve diğer platformlarda Web3 topluluklarını oluşturun ve etkileşime geçin.",
+		"keywords": "web3 sosyal, merkezi olmayan sosyal ağlar, farcaster, lens protocol, kripto toplulukları",
+		"faqs": [
+			{
+				"question": "Web3 sosyal platformları nelerdir?",
+				"answer": "Web3 sosyal platformları, Twitter/Facebook'a merkezi olmayan alternatiflerdir. Verilerinize ve sosyal grafiğinize sahip olursunuz. Popüler olanlar arasında Farcaster, Lens Protocol ve DeSo bulunur."
+			},
+			{
+				"question": "Farcaster nedir?",
+				"answer": "Farcaster, Twitter'a benzer merkezi olmayan bir sosyal protokoldür. Warpcast ana istemcidir. Kripto geliştiricileri arasında popülerdir ve güçlü bir topluluk kültürüne sahiptir."
+			},
+			{
+				"question": "Web3 toplulukları nasıl koordine olur?",
+				"answer": "Gerçek zamanlı sohbet için Discord ve Telegram, sosyal için Farcaster/Lens, uzun içerik için Mirror, yönetişim için Snapshot ve token'lı erişim için Guild.xyz."
+			}
+		]
+	},
+	"tools": {
+		"airstack": {
+			"description": "Airstack - Merkezi olmayan social platiçinm"
+		},
+		"buttrfly": {
+			"description": "Cross-platiçinm social toplayıcı için Lens"
+		},
+		"cyberconnect": {
+			"description": "Social graph protokol ile Web3 identity"
+		},
+		"deso": {
+			"description": "Layer 1 blokzincir built için social applicatiüzerindes"
+		},
+		"drakula": {
+			"description": "Short-içinm video platiçinm üzerinde Farcaster"
+		},
+		"farcaster": {
+			"description": "Merkezi olmayan social protokol"
+		},
+		"hey": {
+			"description": "Merkezi olmayan social app üzerinde Lens Protokol"
+		},
+		"huddle01": {
+			"description": "Huddle01 - Merkezi olmayan social platiçinm"
+		},
+		"link3": {
+			"description": "Web3 events ve credentials by CyberCüzerindenect"
+		},
+		"mirror": {
+			"description": "Web3 publishing ve crowdfunding platiçinm"
+		},
+		"moxie": {
+			"description": "Moxie - Merkezi olmayan social platiçinm"
+		},
+		"neynar": {
+			"description": "Neynar - Merkezi olmayan social platiçinm"
+		},
+		"orb": {
+			"description": "Mobile-first Lens Protokol client"
+		},
+		"paragraph": {
+			"description": "Web3 native haberlerletter ve publishing"
+		},
+		"phaver": {
+			"description": "Cross-platiçinm Web3 social app"
+		},
+		"supercast": {
+			"description": "Supercast - Merkezi olmayan social platiçinm"
+		},
+		"tape": {
+			"description": "Merkezi olmayan video platiçinm üzerinde Lens"
+		},
+		"unlonely": {
+			"description": "Web3 live streaming topluluk platiçinm"
+		},
+		"warpcast": {
+			"description": "Primary client için Farcaster social ağ"
+		},
+		"xmtp": {
+			"description": "Secure cüzdan-to-cüzdan messaging protokol"
+		}
+	}
+}

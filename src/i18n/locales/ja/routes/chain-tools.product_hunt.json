@@ -1,0 +1,156 @@
+{
+	"category_seo": {
+		"title": "プロダクトローンチプラットフォーム - 新製品の発見と宣伝 | BiuBiu Tools",
+		"description": "新製品をローンチ・発見するための最高のプラットフォームを見つける。Product Huntから36KrやDisquietなどの地域プラットフォームまで。",
+		"keywords": "product hunt, product launch, startup, indie hackers, beta list, product discovery",
+		"faqs": [
+			{
+				"question": "Product Huntとは何ですか？",
+				"answer": "Product Huntは、新しいテック製品を発見・ローンチするための主要なプラットフォームです。メーカーは、アーリーアダプター、投資家、テック愛好家のコミュニティに製品を展示できます。"
+			},
+			{
+				"question": "Product Huntでローンチするのに最適な時間はいつですか？",
+				"answer": "露出を最大化するには、PST(サンフランシスコ時間)の午前12:01にローンチします。火曜日と水曜日は通常、より多くのエンゲージメントが見られます。週末や祝日は避けてください。"
+			},
+			{
+				"question": "Product Huntの代替プラットフォームは何ですか？",
+				"answer": "代替プラットフォームには、Hacker News(Show HN)、初期段階のスタートアップ向けのBetaList、ブートストラップ製品向けのIndie Hackers、36Kr(中国)、Disquiet(韓国)、EU-Startups(ヨーロッパ)などの地域プラットフォームがあります。"
+			},
+			{
+				"question": "Web3製品を宣伝するにはどうすればよいですか？",
+				"answer": "Web3製品の場合、Crypto Twitter、Farcaster、コンテンツ用のMirror、コミュニティキャンペーン用のGalxeやZealyなどのプラットフォームを使用します。また、認知度を高めるためにDappRadarやICO Dropsにもリストしてください。"
+			}
+		]
+	},
+	"tools": {
+		"producthunt": {
+			"description": "The go-to platform for launching and discovering new products"
+		},
+		"hackernews": {
+			"description": "Tech community for sharing and discussing new projects (Show HN)"
+		},
+		"betalist": {
+			"description": "Platform for early adopters to discover upcoming startups"
+		},
+		"launchingnext": {
+			"description": "Directory for submitting and discovering new products"
+		},
+		"saashub": {
+			"description": "Software discovery platform for SaaS alternatives"
+		},
+		"alternativeto": {
+			"description": "Find alternatives to any software or app"
+		},
+		"slant": {
+			"description": "Product comparison and recommendation platform"
+		},
+		"theresanaiforthat": {
+			"description": "Comprehensive directory of AI tools and applications"
+		},
+		"futurepedia": {
+			"description": "AI tools directory with daily updates"
+		},
+		"toolify": {
+			"description": "AI tools discovery and comparison platform"
+		},
+		"g2": {
+			"description": "Business software reviews and ratings platform"
+		},
+		"capterra": {
+			"description": "Software comparison and review platform"
+		},
+		"getapp": {
+			"description": "Business software discovery platform"
+		},
+		"trustradius": {
+			"description": "B2B software reviews from verified users"
+		},
+		"indiehackers": {
+			"description": "Community for indie makers and bootstrapped founders"
+		},
+		"devto": {
+			"description": "Developer community for sharing articles and projects"
+		},
+		"hashnode": {
+			"description": "Developer blogging platform with built-in audience"
+		},
+		"lobsters": {
+			"description": "Technology-focused community with curated discussions"
+		},
+		"linkedin": {
+			"description": "Professional network for B2B marketing and networking"
+		},
+		"medium": {
+			"description": "Publishing platform for content marketing"
+		},
+		"youtube": {
+			"description": "Video platform for product demos and tutorials"
+		},
+		"36kr": {
+			"description": "Leading Chinese tech and startup media platform"
+		},
+		"sspai": {
+			"description": "Chinese platform for quality app recommendations"
+		},
+		"v2ex": {
+			"description": "Chinese developer and tech enthusiast community"
+		},
+		"appinn": {
+			"description": "Chinese platform for discovering niche software"
+		},
+		"okjike": {
+			"description": "Chinese interest-based social community"
+		},
+		"zhihu": {
+			"description": "Chinese Q&A platform for knowledge sharing"
+		},
+		"coolapk": {
+			"description": "Chinese Android app discovery community"
+		},
+		"liqi": {
+			"description": "Chinese platform showcasing creators' favorite tools"
+		},
+		"moongift": {
+			"description": "Japanese open source software introduction site"
+		},
+		"disquiet": {
+			"description": "Korean Product Hunt - product launch community"
+		},
+		"yourstory": {
+			"description": "India's leading startup and entrepreneurship media"
+		},
+		"inc42": {
+			"description": "Indian startup and tech news platform"
+		},
+		"sifted": {
+			"description": "European startup news by Financial Times"
+		},
+		"e27": {
+			"description": "Southeast Asian tech startup ecosystem platform"
+		},
+		"techinasia": {
+			"description": "Asian tech and startup news platform"
+		},
+		"krasia": {
+			"description": "36Kr's English platform for Asian tech news"
+		},
+		"startupeable": {
+			"description": "Latin American startup community (Spanish)"
+		},
+		"contxto": {
+			"description": "Latin American tech and startup news"
+		},
+		"stateofthedapps": {
+			"description": "Comprehensive dApp directory and rankings"
+		},
+		"icodrops": {
+			"description": "ICO and IDO calendar with ratings and analysis"
+		},
+		"quest3": {
+			"description": "Web3 quest and engagement platform (Asia focus)"
+		},
+		"zealy": {
+			"description": "Community quest and reward platform"
+		}
+	}
+}

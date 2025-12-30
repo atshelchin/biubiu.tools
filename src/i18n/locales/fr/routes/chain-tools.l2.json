@@ -1,0 +1,54 @@
+{
+	"category_seo": {
+		"title": "Solutions Layer 2 - Scalabilité Ethereum et Rollups | BiuBiu Tools",
+		"description": "Découvrez les solutions Layer 2 pour la scalabilité Ethereum. Explorez Arbitrum, Optimism, zkSync et d'autres technologies de rollup.",
+		"keywords": "layer 2, solutions l2, rollups ethereum, arbitrum, optimism, scalabilité",
+		"faqs": [
+			{
+				"question": "Qu'est-ce que Layer 2 ?",
+				"answer": "Layer 2 (L2) fait référence aux solutions construites au-dessus des blockchains (Layer 1) pour améliorer la scalabilité et réduire les coûts de transaction tout en héritant de la sécurité de la chaîne principale."
+			},
+			{
+				"question": "Quelle est la différence entre Optimistic et ZK rollups ?",
+				"answer": "Les Optimistic rollups supposent que les transactions sont valides par défaut avec une période de contestation. Les ZK rollups utilisent des preuves cryptographiques pour vérifier instantanément la validité des transactions. Les ZK rollups sont plus rapides mais plus complexes techniquement."
+			},
+			{
+				"question": "Les L2 sont-ils sûrs ?",
+				"answer": "Les L2 héritent de la sécurité d'Ethereum mais ont des considérations supplémentaires. Les principaux L2 sont généralement sûrs mais peuvent avoir des ponts, séquenceurs ou mécanismes de preuve différents qui affectent les garanties de sécurité."
+			},
+			{
+				"question": "Comment passer à Layer 2 ?",
+				"answer": "Pour utiliser L2 : 1) Choisissez une solution L2, 2) Ajoutez le réseau L2 à votre portefeuille, 3) Pontez vos actifs depuis Ethereum mainnet, 4) Commencez à utiliser les dApps sur L2 avec des frais plus faibles."
+			}
+		]
+	},
+	"tools": {
+		"l2beat": {
+			"description": "Layer 2 risk et TVL analysis"
+		},
+		"optimism": {
+			"description": "OP Stack powered Ethereum L2 avec Superchain vision"
+		},
+		"base": {
+			"description": "Coinbase's L2 built sur OP Stack"
+		},
+		"starknet": {
+			"description": "ZK rollup using Cairo pour validity proofs"
+		},
+		"scroll": {
+			"description": "EVM-equivalent zkEVM rollup"
+		},
+		"linea": {
+			"description": "ConsenSys zkEVM L2 solution"
+		},
+		"mode": {
+			"description": "OP Stack L2 avec DeFi focus"
+		},
+		"mantle": {
+			"description": "Modular L2 avec données availability layer"
+		},
+		"superchain": {
+			"description": "Superchain - Layer 2 scaling solution"
+		}
+	}
+}

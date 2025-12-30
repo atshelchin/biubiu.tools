@@ -1,0 +1,92 @@
+{
+	"category_seo": {
+		"title": "Crypto Payments - Payment Processing & Card Services | BiuBiu Tools",
+		"description": "Crypto payment solutions for businesses and individuals. Payment processors, crypto cards, and merchant services.",
+		"keywords": "",
+		"faqs": [
+			{
+				"question": "How do crypto payments work?",
+				"answer": "Crypto payments transfer value directly on blockchain. For merchants, payment processors like BitPay convert crypto to fiat. Crypto cards like Coinbase Card let you spend crypto anywhere."
+			},
+			{
+				"question": "Which crypto cards are best?",
+				"answer": "Coinbase Card and Crypto.com Card are widely available. Gnosis Pay offers DeFi integration. Compare cashback rates, supported countries, and fee structures before choosing."
+			},
+			{
+				"question": "Can businesses accept crypto payments?",
+				"answer": "Yes, using payment processors like BitPay, Coinbase Commerce, or direct wallet payments. Consider volatility, tax implications, and whether to convert to fiat immediately."
+			}
+		]
+	},
+	"tools": {
+		"moonpay": {
+			"description": "Fiat on-ramp and off-ramp for crypto"
+		},
+		"transak": {
+			"description": "Fiat-to-crypto payment infrastructure"
+		},
+		"ramp": {
+			"description": "Non-custodial fiat on-ramp SDK"
+		},
+		"onmeta": {
+			"description": "Fiat on-ramp for Indian users"
+		},
+		"superfluid": {
+			"description": "Real-time token streaming for payments"
+		},
+		"sablier": {
+			"description": "Token streaming for vesting and payroll"
+		},
+		"coinshift": {
+			"description": "Treasury management and multi-sig operations"
+		},
+		"spritz": {
+			"description": "Pay bills with crypto via ACH"
+		},
+		"bitpay": {
+			"description": "Crypto payment processing for merchants"
+		},
+		"holyheld": {
+			"description": "DeFi debit card with yield features"
+		},
+		"fusepay": {
+			"description": "Crypto spending card on Fuse network"
+		},
+		"loopcrypto": {
+			"description": "Recurring crypto billing and subscriptions"
+		},
+		"reveel": {
+			"description": "Automated revenue sharing and royalty splits"
+		},
+		"splits": {
+			"description": "On-chain payment splitting protocol"
+		},
+		"nowpayments": {
+			"description": "NOWPayments - Crypto payment solution"
+		},
+		"monerium": {
+			"description": "Monerium - Crypto payment solution"
+		},
+		"wyre": {
+			"description": "Wyre - Crypto payment solution"
+		},
+		"banxa": {
+			"description": "Banxa - Crypto payment solution"
+		},
+		"simplex": {
+			"description": "Simplex - Crypto payment solution"
+		},
+		"sardine": {
+			"description": "Sardine - Crypto payment solution"
+		},
+		"coinflow": {
+			"description": "Coinflow - Crypto payment solution"
+		},
+		"llamapay": {
+			"description": "LlamaPay - Crypto payment solution"
+		},
+		"parcel": {
+			"description": "Parcel - Crypto payment solution"
+		}
+	}
+}

@@ -1,0 +1,50 @@
+{
+	"category_seo": {
+		"title": "Soluciones Layer 2 - Scaling de Ethereum y Sidechains | BiuBiu Tools",
+		"description": "Descubre soluciones Layer 2 como Arbitrum, Optimism, Base, zkSync y otras tecnologías de scaling para transacciones más rápidas y baratas.",
+		"keywords": "layer 2, l2, arbitrum, optimism, base, zksync, ethereum scaling, rollups",
+		"faqs": [
+			{
+				"question": "¿Qué es Layer 2?",
+				"answer": "Layer 2 se refiere a soluciones de scaling construidas sobre Ethereum (Layer 1) que procesan transacciones más rápido y barato mientras heredan la seguridad de Ethereum. Los ejemplos incluyen Optimistic Rollups (Arbitrum, Optimism) y ZK Rollups (zkSync)."
+			},
+			{
+				"question": "¿Por qué usar Layer 2?",
+				"answer": "Los L2s ofrecen tarifas de transacción significativamente más bajas (a menudo <$0.01) y confirmaciones más rápidas que Ethereum mainnet mientras mantienen fuerte seguridad. Son ideales para DeFi, NFTs, juegos y transacciones frecuentes."
+			},
+			{
+				"question": "¿Optimistic vs ZK Rollups?",
+				"answer": "Los Optimistic Rollups (Arbitrum, Optimism) asumen que las transacciones son válidas con un período de desafío de 7 días. Los ZK Rollups (zkSync, StarkNet) prueban la validez criptográficamente para retiros más rápidos pero son más complejos de desarrollar."
+			}
+		]
+	},
+	"tools": {
+		"l2beat": {
+			"description": "Análisis de riesgo y TVL de Layer 2"
+		},
+		"optimism": {
+			"description": "L2 de Ethereum impulsado por OP Stack con visión Superchain"
+		},
+		"base": {
+			"description": "L2 de Coinbase construido en OP Stack"
+		},
+		"starknet": {
+			"description": "ZK rollup usando Cairo para pruebas de validez"
+		},
+		"scroll": {
+			"description": "EVM-equivalent zkEVM rollup"
+		},
+		"linea": {
+			"description": "ConsenSys zkEVM L2 solution"
+		},
+		"mode": {
+			"description": "L2 de OP Stack con enfoque DeFi"
+		},
+		"mantle": {
+			"description": "L2 modular con capa de disponibilidad de datos"
+		},
+		"superchain": {
+			"description": "Superchain - Layer 2 scaling solution"
+		}
+	}
+}

@@ -1,0 +1,62 @@
+{
+	"category_seo": {
+		"title": "Yeniden Stake - EigenLayer ve Likit Yeniden Stake | BiuBiu Tools",
+		"description": "Ek getiri için yeniden stake protokolleri. EigenLayer, likit yeniden stake token'ları ve AVS (Aktif Olarak Doğrulanan Hizmetler).",
+		"keywords": "yeniden stake, eigenlayer, likit yeniden stake, eth stake",
+		"faqs": [
+			{
+				"question": "Yeniden stake nedir?",
+				"answer": "Yeniden stake, ek getiri için ek AVS protokollerini güvence altına almak üzere stake edilmiş ETH kullanmanıza olanak tanır. EigenLayer bunu öncülük etti ve ETH stake edenlerin birden çok hizmetten ödül kazanmasına izin veriyor."
+			},
+			{
+				"question": "Likit yeniden stake token'ları (LRT) nelerdir?",
+				"answer": "eETH (ether.fi) veya ezETH (Renzo) gibi LRT'ler, DeFi'de kullanabileceğiniz yeniden stake edilmiş ETH'yi temsil eder. Yeniden stake edilmiş pozisyonların likit versiyonlarıdır."
+			},
+			{
+				"question": "Yeniden stake'in riskleri nelerdir?",
+				"answer": "Yeniden stake, AVS başarısızlıklarından slashing riski, akıllı sözleşme riski ve karmaşıklık ekler. Daha yüksek getiriler daha yüksek riskle gelir. Hangi AVS'yi güvence altına aldığınızı anlayın."
+			}
+		]
+	},
+	"tools": {
+		"eigenlayer": {
+			"description": "Ethereum güvenliği için yeniden stake protokolü"
+		},
+		"babylon": {
+			"description": "Bitcoin staking protokol securing PoS ağs"
+		},
+		"bedrock": {
+			"description": "Universal liquid restaking ile uniETH token"
+		},
+		"brevis": {
+			"description": "ZK coprocessor için historical blokzincir data"
+		},
+		"eigenda": {
+			"description": "EigenLayer data availability service için rollups"
+		},
+		"eigenpie": {
+			"description": "Magpie liquid restaking ile isolated LRT tokens"
+		},
+		"espresso": {
+			"description": "Shared sequencing AVS için rollups"
+		},
+		"etherfi": {
+			"description": "Merkezi olmayan staking protokol"
+		},
+		"inception": {
+			"description": "Liquid restaking ile instant unstaking via inETH"
+		},
+		"karak": {
+			"description": "Universal restaking için çoklu zincir güvenlik"
+		},
+		"lagrange": {
+			"description": "ZK coprocessor AVS için zincirler arası proving"
+		},
+		"stakestone": {
+			"description": "Omnizincir liquid restaking ile STONE token"
+		},
+		"symbiotic": {
+			"description": "Permissiüzerindeless ve modular restaking protokol"
+		}
+	}
+}

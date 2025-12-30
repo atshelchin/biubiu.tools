@@ -1,0 +1,29 @@
+{
+	"category_seo": {
+		"title": "Blokzincir Oracle'ları - Fiyat Akışları ve Zincir Dışı Veri | BiuBiu Tools",
+		"description": "Blokzincire gerçek dünya verisi getiren oracle hizmetleri. Akıllı sözleşmeler için fiyat akışları, rastgelelik ve zincirler arası veri.",
+		"keywords": "blokzincir oracle'ları, chainlink, fiyat akışları, zincir dışı veri",
+		"faqs": [
+			{
+				"question": "Blokzincir oracle'ları nelerdir?",
+				"answer": "Oracle'lar harici verileri (fiyatlar, hava durumu, spor skorları) akıllı sözleşmelere getirir. DeFi, sigorta ve gerçek dünya bilgisine ihtiyaç duyan herhangi bir dApp için gereklidirler."
+			},
+			{
+				"question": "Chainlink neden bu kadar önemli?",
+				"answer": "Chainlink, DeFi'deki milyarlarca doları güvence altına alan baskın oracle ağıdır. Merkezi olmayan fiyat akışları, rastgelelik için VRF ve zincirler arası iletişim için CCIP sağlar."
+			},
+			{
+				"question": "Oracle saldırıları nelerdir?",
+				"answer": "Oracle saldırıları, DeFi protokollerini istismar etmek için fiyat akışlarını manipüle eder. Saldırganlar, oracle'ların okuduğu DEX fiyatlarını manipüle etmek için flash loan kullanabilir. Bu, yüz milyonlarca kayba neden olmuştur."
+			}
+		]
+	},
+	"tools": {
+		"api3": {
+			"description": "First-party oracle ile Airnode için direct API data delivery"
+		},
+		"chainlink": {
+			"description": "Industry-önde gelen merkezi olmayan oracle ağ için price feeds, VRF ve automatiüzerinde"
+		}
+	}
+}

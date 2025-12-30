@@ -1,0 +1,122 @@
+{
+	"category_seo": {
+		"title": "Ferramentas para Desenvolvedores Web3 - Construa em Blockchain | BiuBiu Tools",
+		"description": "Ferramentas essenciais de desenvolvimento para construir dApps: Hardhat, Foundry, Remix, The Graph, APIs de nós e mais frameworks de contratos inteligentes.",
+		"keywords": "ferramentas dev web3, desenvolvimento blockchain, hardhat, foundry, remix, the graph, desenvolvimento contrato inteligente",
+		"faqs": [
+			{
+				"question": "Quais ferramentas preciso para desenvolver em Web3?",
+				"answer": "As ferramentas essenciais incluem: frameworks de contratos inteligentes (Hardhat/Foundry), IDE (Remix/VS Code), provedores de nós (Alchemy/Infura), bibliotecas Web3 (ethers.js/viem) e serviços de indexação (The Graph)."
+			},
+			{
+				"question": "Hardhat vs Foundry?",
+				"answer": "Hardhat é um framework JavaScript maduro e com grande ecossistema de plugins. Foundry é mais rápido, usa Solidity para testes e é preferido para contratos complexos. Muitos desenvolvedores usam ambos dependendo do projeto."
+			},
+			{
+				"question": "Como testo contratos inteligentes?",
+				"answer": "Escreva testes unitários usando frameworks de teste (Hardhat/Foundry), implante em redes de teste (Sepolia/Goerli), use redes locais (Anvil/Ganache) e considere auditorias de segurança antes da implantação em mainnet."
+			}
+		]
+	},
+	"tools": {
+		"tenderly": {
+			"description": "Tenderly - Smart contract debugging and monitoring"
+		},
+		"chainlist": {
+			"description": "Add EVM networks to your wallet"
+		},
+		"remix": {
+			"description": "Browser-based Solidity IDE"
+		},
+		"foundry": {
+			"description": "Blazing fast Solidity toolkit"
+		},
+		"hardhat": {
+			"description": "Ethereum development environment"
+		},
+		"viem": {
+			"description": "TypeScript Ethereum library"
+		},
+		"wagmi": {
+			"description": "React hooks for Ethereum"
+		},
+		"rainbowkit": {
+			"description": "React wallet connection UI"
+		},
+		"web3modal": {
+			"description": "Multi-framework wallet connect"
+		},
+		"thirdweb": {
+			"description": "Full-stack Web3 development"
+		},
+		"alchemy": {
+			"description": "Alchemy - Web3 development platform and APIs"
+		},
+		"infura": {
+			"description": "Ethereum API infrastructure"
+		},
+		"quicknode": {
+			"description": "Multi-chain node infrastructure"
+		},
+		"sourcify": {
+			"description": "Decentralized contract verification"
+		},
+		"brownie": {
+			"description": "Python smart contract framework"
+		},
+		"ape": {
+			"description": "Modular Python framework"
+		},
+		"pyth": {
+			"description": "Real-time price oracle"
+		},
+		"goldsky": {
+			"description": "Real-time blockchain data streaming and indexing"
+		},
+		"envio": {
+			"description": "HyperSync for ultra-fast blockchain indexing"
+		},
+		"covalent": {
+			"description": "Unified blockchain data API"
+		},
+		"transpose": {
+			"description": "Real-time blockchain data with SQL API"
+		},
+		"chainbase": {
+			"description": "All-in-one data platform"
+		},
+		"useweb3": {
+			"description": "Curated Web3 learning resources"
+		},
+		"buildspace": {
+			"description": "Project-based Web3 learning community"
+		},
+		"pointer": {
+			"description": "Learn Web3 development and earn crypto"
+		},
+		"chainide": {
+			"description": "Cloud-based multi-chain development IDE"
+		},
+		"constructor": {
+			"description": "Visual no-code smart contract builder"
+		},
+		"bunzz": {
+			"description": "Bunzz - Smart contract deployment marketplace"
+		},
+		"crossmint": {
+			"description": "NFT minting API with fiat payments"
+		},
+		"moralis": {
+			"description": "Moralis - Developer tool"
+		},
+		"circom": {
+			"description": "Circom - Developer tool"
+		},
+		"protostar": {
+			"description": "Protostar - Developer tool"
+		},
+		"starkli": {
+			"description": "Starkli - Developer tool"
+		}
+	}
+}

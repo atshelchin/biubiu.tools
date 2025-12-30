@@ -1,0 +1,79 @@
+{
+	"category_seo": {
+		"title": "DAO 工具 - 治理、投票与资金管理 | BiuBiu Tools",
+		"description": "创建和管理 DAO 的工具。治理平台、投票系统、资金管理和贡献者协调。",
+		"faqs": [
+			{
+				"question": "什么是 DAO？",
+				"answer": "DAO（去中心化自治组织）是由智能合约和代币持有者投票管理的组织。成员可以提案和投票决策，无需中央权威。"
+			},
+			{
+				"question": "如何参与 DAO 治理？",
+				"answer": "持有 DAO 的治理代币，然后使用 Snapshot 进行链下投票或 Tally 进行链上投票。某些 DAO 需要先委托代币才能投票。"
+			},
+			{
+				"question": "DAO 使用哪些工具？",
+				"answer": "Snapshot 用于无 Gas 投票，Tally 用于链上治理，Gnosis Safe 用于资金管理，Coordinape 用于贡献者奖励，Discourse/Commonwealth 用于讨论。"
+			}
+		]
+	},
+	"tools": {
+		"snapshot": {
+			"description": "链下无 Gas 治理投票"
+		},
+		"tally": {
+			"description": "链上治理和 DAO 管理"
+		},
+		"aragon": {
+			"description": "轻松构建和管理 DAO"
+		},
+		"colony": {
+			"description": "DAO 基础设施和薪资管理"
+		},
+		"karma": {
+			"description": "DAO 贡献者声誉"
+		},
+		"lenster": {
+			"description": "Lens 上的去中心化社交"
+		},
+		"push": {
+			"description": "Web3 通知和聊天"
+		},
+		"daohaus": {
+			"description": "Moloch DAO启动器"
+		},
+		"charmverse": {
+			"description": "Web3工作空间平台"
+		},
+		"wonderverse": {
+			"description": "Wonderverse - DAO 任务管理"
+		},
+		"coordinape": {
+			"description": "去中心化薪酬"
+		},
+		"guild": {
+			"description": "代币门控社区"
+		},
+		"jokerace": {
+			"description": "链上投票竞赛"
+		},
+		"commonwealth": {
+			"description": "全链社区治理论坛"
+		},
+		"jokedao": {
+			"description": "社区竞赛投票与激励"
+		},
+		"llama": {
+			"description": "链上治理与执行框架"
+		},
+		"daolens": {
+			"description": "DAOLens - DAO governance tool"
+		},
+		"kleros": {
+			"description": "Kleros - DAO governance tool"
+		},
+		"dework": {
+			"description": "Dework - DAO governance tool"
+		}
+	}
+}

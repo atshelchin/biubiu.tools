@@ -1,0 +1,25 @@
+{
+	"category_seo": {
+		"title": "Token Governance DAO - Kekuatan Voting & Tokenomik | BiuBiu Tools",
+		"description": "Pahami token governance DAO. Mekanisme voting, distribusi token, dan partisipasi governance di DAO utama.",
+		"faqs": [
+			{
+				"question": "Apa itu token governance?",
+				"answer": "Token governance memberikan hak voting kepada pemegang dalam keputusan protokol. Contoh: UNI (Uniswap), AAVE, COMP. Kekuatan voting biasanya berskala dengan kepemilikan token."
+			},
+			{
+				"question": "Bagaimana cara kerja delegasi voting?",
+				"answer": "Anda dapat mendelegasikan kekuatan voting Anda ke orang lain (delegasi) sambil mempertahankan token Anda. Ini membantu anggota komunitas aktif memilih atas nama pemegang pasif."
+			},
+			{
+				"question": "Apakah token governance memiliki nilai?",
+				"answer": "Nilai berasal dari hak governance, potensi pembagian biaya, dan spekulasi. Beberapa protokol membagikan pendapatan dengan pemegang token. Yang lain kesulitan mengakumulasi nilai."
+			}
+		]
+	},
+	"tools": {
+		"boardroom": {
+			"description": "Governance aggregator for tracking DAO proposals and voting"
+		}
+	}
+}

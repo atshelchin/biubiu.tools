@@ -232,7 +232,8 @@ function generateChainsSitemaps(): { filename: string; content: string }[] {
 			}
 		}
 
-		const filename = totalChunks === 1 ? 'sitemap-chains.xml' : `sitemap-chains-${chunkIndex + 1}.xml`;
+		const filename =
+			totalChunks === 1 ? 'sitemap-chains.xml' : `sitemap-chains-${chunkIndex + 1}.xml`;
 		sitemaps.push({
 			filename,
 			content: wrapSitemap(urls)

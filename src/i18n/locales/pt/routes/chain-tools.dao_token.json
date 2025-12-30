@@ -1,0 +1,26 @@
+{
+	"category_seo": {
+		"title": "Tokens de Governança DAO - Votação e Governance Tokens | BiuBiu Tools",
+		"description": "Descubra tokens de governança para DAOs principais. Aprenda sobre mecanismos de votação, delegação e participação em governança descentralizada.",
+		"keywords": "tokens governança dao, votação dao, delegação tokens, governança descentralizada, tokens governance",
+		"faqs": [
+			{
+				"question": "O que são tokens de governança?",
+				"answer": "Os tokens de governança dão aos holders direitos de votação sobre decisões do protocolo. Os exemplos incluem UNI (Uniswap), AAVE (Aave) e COMP (Compound). Geralmente, mais tokens = mais poder de voto, embora alguns sistemas usem quadrático ou delegação."
+			},
+			{
+				"question": "Como participo de governança?",
+				"answer": "Mantenha tokens de governança em sua carteira, depois vote em propostas através de plataformas como Snapshot, Tally ou sistemas de governança on-chain do protocolo. Alternativamente, delegue seus votos a participantes confiáveis da governança se não tiver tempo de pesquisar propostas."
+			},
+			{
+				"question": "Os tokens de governança têm valor?",
+				"answer": "Sim, frequentemente são negociados em exchanges. O valor vem de direitos de governança, potencial de compartilhamento de receita, acesso a recursos do protocolo e demanda especulativa. Alguns protocolos estão adicionando acumulação de valor aos tokens de governança."
+			}
+		]
+	},
+	"tools": {
+		"boardroom": {
+			"description": "Governance aggregator for tracking DAO proposals and voting"
+		}
+	}
+}

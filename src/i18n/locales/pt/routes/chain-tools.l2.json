@@ -1,0 +1,50 @@
+{
+	"category_seo": {
+		"title": "Soluções Layer 2 - Escalabilidade do Ethereum e Sidechains | BiuBiu Tools",
+		"description": "Descubra soluções Layer 2 como Arbitrum, Optimism, Base, zkSync e outras tecnologias de escalabilidade para transações mais rápidas e baratas.",
+		"keywords": "layer 2, l2, arbitrum, optimism, base, zksync, ethereum scaling, rollups",
+		"faqs": [
+			{
+				"question": "O que é Layer 2?",
+				"answer": "Layer 2 refere-se a soluções de escalabilidade construídas sobre Ethereum (Layer 1) que processam transações mais rápido e barato enquanto herdam a segurança do Ethereum. Os exemplos incluem Optimistic Rollups (Arbitrum, Optimism) e ZK Rollups (zkSync)."
+			},
+			{
+				"question": "Por que usar Layer 2?",
+				"answer": "Os L2s oferecem taxas de transação significativamente mais baixas (frequentemente <$0.01) e confirmações mais rápidas que a Ethereum mainnet enquanto mantêm forte segurança. São ideais para DeFi, NFTs, jogos e transações frequentes."
+			},
+			{
+				"question": "Optimistic vs ZK Rollups?",
+				"answer": "Os Optimistic Rollups (Arbitrum, Optimism) assumem que as transações são válidas com um período de desafio de 7 dias. Os ZK Rollups (zkSync, StarkNet) provam a validade criptograficamente para retiradas mais rápidas, mas são mais complexos de desenvolver."
+			}
+		]
+	},
+	"tools": {
+		"l2beat": {
+			"description": "Layer 2 risk and TVL analysis"
+		},
+		"optimism": {
+			"description": "OP Stack powered Ethereum L2 with Superchain vision"
+		},
+		"base": {
+			"description": "Coinbase's L2 built on OP Stack"
+		},
+		"starknet": {
+			"description": "ZK rollup using Cairo for validity proofs"
+		},
+		"scroll": {
+			"description": "EVM-equivalent zkEVM rollup"
+		},
+		"linea": {
+			"description": "ConsenSys zkEVM L2 solution"
+		},
+		"mode": {
+			"description": "OP Stack L2 with DeFi focus"
+		},
+		"mantle": {
+			"description": "Modular L2 with data availability layer"
+		},
+		"superchain": {
+			"description": "Superchain - Layer 2 scaling solution"
+		}
+	}
+}

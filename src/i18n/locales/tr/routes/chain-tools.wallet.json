@@ -1,0 +1,119 @@
+{
+	"category_seo": {
+		"title": "Kripto Cüzdanlar - Donanım, Yazılım ve Çoklu Zincir | BiuBiu Tools",
+		"description": "Güvenlik ve kolaylık için en iyi kripto cüzdanları karşılaştırın. Tüm blokzincirler için donanım cüzdanları, tarayıcı uzantıları ve mobil cüzdanlar.",
+		"keywords": "kripto cüzdanı, donanım cüzdanı, metamask, ledger, trezor, çoklu zincir cüzdanı",
+		"faqs": [
+			{
+				"question": "Kripto cüzdanı nedir?",
+				"answer": "Kripto cüzdanı, özel anahtarlarınızı saklayan ve kripto paraları göndermenize, almanıza ve yönetmenize olanak tanıyan yazılım veya donanımdır. Aslında kripto saklamaz - varlıklar blokzincirde kalır."
+			},
+			{
+				"question": "Donanım cüzdanı mı yoksa yazılım cüzdanı mı?",
+				"answer": "Donanım cüzdanları (Ledger, Trezor) anahtarları maksimum güvenlik için çevrimdışı saklar, büyük tutarlar için idealdir. Yazılım cüzdanları (MetaMask, Rainbow) günlük kullanım için daha kullanışlıdır ancak internete bağlıdır."
+			},
+			{
+				"question": "Cüzdanımı nasıl güvende tutarım?",
+				"answer": "Tohum kelime dizinizi asla paylaşmayın, büyük miktarlar için donanım cüzdanları kullanın, mümkün olan yerlerde 2FA'yı etkinleştirin, imzalamadan önce işlem detaylarını doğrulayın ve kimlik avı sitelerine karşı dikkatli olun."
+			}
+		]
+	},
+	"tools": {
+		"debank": {
+			"description": "Çoklu zincir portföy takipçisi ve sosyal platform"
+		},
+		"ambire": {
+			"description": "Smart cüzdan ile email login ve gasless transactiüzerindes"
+		},
+		"argent": {
+			"description": "Smart cüzdan ile recovery"
+		},
+		"biconomy": {
+			"description": "Account abstractiüzerinde ve gasless transactiüzerinde SDK"
+		},
+		"coolwallet": {
+			"description": "coolcüzdan - Web3 cüzdan"
+		},
+		"dynamic": {
+			"description": "Multi-cüzdan authenticatiüzerinde"
+		},
+		"frame": {
+			"description": "Privacy-focused desken iyi cüzdan"
+		},
+		"imtoken": {
+			"description": "imToken - Web3 cüzdan"
+		},
+		"ledger": {
+			"description": "Hardware cüzdan güvenlik"
+		},
+		"metamask": {
+			"description": "Most popüler Web3 cüzdan"
+		},
+		"multis": {
+			"description": "Multis - Web3 cüzdan"
+		},
+		"mycrypto": {
+			"description": "MyCrypto - Web3 cüzdan"
+		},
+		"myetherwallet": {
+			"description": "MyEtherCüzdan - Web3 cüzdan"
+		},
+		"mytonwallet": {
+			"description": "MyTüzerindeCüzdan - Web3 cüzdan"
+		},
+		"obvious": {
+			"description": "Smart cüzdan ile account abstractiüzerinde"
+		},
+		"pimlico": {
+			"description": "ERC-4337 bundler ve paymaster infrastructure"
+		},
+		"privy": {
+			"description": "Embedded cüzdan solutiüzerinde"
+		},
+		"rabby": {
+			"description": "Çoklu zincir browser cüzdan"
+		},
+		"rainbow": {
+			"description": "Beautiful Ethereum cüzdan"
+		},
+		"safe": {
+			"description": "Multi-signature smart cüzdan"
+		},
+		"sequence": {
+			"description": "Smart cüzdan için gaming"
+		},
+		"solflare": {
+			"description": "Solflare - Crypto cüzdan"
+		},
+		"squads": {
+			"description": "Squads - Web3 cüzdan"
+		},
+		"stackup": {
+			"description": "Account abstractiüzerinde bundler ve SDK"
+		},
+		"subwallet": {
+			"description": "SubCüzdan - Web3 cüzdan"
+		},
+		"tokenpocket": {
+			"description": "TokenPocket - Web3 cüzdan"
+		},
+		"tonhub": {
+			"description": "Tüzerindehub - Web3 cüzdan"
+		},
+		"trezor": {
+			"description": "Hardware cüzdan piüzerindeeer"
+		},
+		"tronlink": {
+			"description": "TrüzerindeLink - Web3 cüzdan"
+		},
+		"zapper": {
+			"description": "DeFi portfolio dashboard"
+		},
+		"zerion": {
+			"description": "DeFi portfolio ve cüzdan"
+		},
+		"zerodev": {
+			"description": "Modular smart cüzdan SDK ile Kernel"
+		}
+	}
+}

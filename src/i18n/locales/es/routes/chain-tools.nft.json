@@ -1,0 +1,116 @@
+{
+	"category_seo": {
+		"title": "Herramientas NFT - Mercados, Analíticas y Creación | BiuBiu Tools",
+		"description": "Encuentra los mejores mercados NFT, herramientas de analíticas y plataformas de creación. Descubre OpenSea, Blur y otras herramientas NFT destacadas.",
+		"keywords": "herramientas nft, mercado nft, opensea, blur, analíticas nft, creación nft",
+		"faqs": [
+			{
+				"question": "¿Qué es un NFT?",
+				"answer": "NFT (Token No Fungible) es un activo digital único en blockchain que representa la propiedad de elementos como arte, música, coleccionables y bienes raíces virtuales. Cada NFT es único y no puede replicarse."
+			},
+			{
+				"question": "¿Dónde puedo comprar NFTs?",
+				"answer": "Los mercados NFT populares incluyen OpenSea (mercado general más grande), Blur (para traders), Magic Eden (Solana) y Foundation (arte curado). Cada plataforma tiene diferentes tarifas y características."
+			},
+			{
+				"question": "¿Cómo creo mi propio NFT?",
+				"answer": "Para crear un NFT: 1) Elige una blockchain (Ethereum, Polygon, etc.), 2) Configura una billetera, 3) Selecciona un mercado que soporte la creación, 4) Sube tu archivo digital, 5) Agrega metadatos, 6) Paga la tarifa de acuñación si es necesaria."
+			}
+		]
+	},
+	"tools": {
+		"opensea": {
+			"description": "Mercado NFT más grande"
+		},
+		"blur": {
+			"description": "Mercado NFT profesional para traders"
+		},
+		"reservoir": {
+			"description": "Infraestructura de liquidez NFT"
+		},
+		"rarible": {
+			"description": "Crear e intercambiar NFTs en cualquier cadena"
+		},
+		"zora": {
+			"description": "Creación de NFTs y mercado"
+		},
+		"foundation": {
+			"description": "Mercado de arte digital curado"
+		},
+		"manifold": {
+			"description": "Herramientas y contratos para creadores de NFTs"
+		},
+		"nftnerds": {
+			"description": "Trading y analíticas de NFTs"
+		},
+		"looksrare": {
+			"description": "Mercado NFT comunitario"
+		},
+		"x2y2": {
+			"description": "Mercado NFT de bajas comisiones"
+		},
+		"gem": {
+			"description": "Agregador y recolector de NFTs"
+		},
+		"nftfi": {
+			"description": "Préstamos colateralizados con NFTs"
+		},
+		"arcade": {
+			"description": "Protocolo de préstamos de NFTs"
+		},
+		"mintfun": {
+			"description": "Descubrimiento de minteos de NFTs"
+		},
+		"sudoswap": {
+			"description": "AMM de NFTs para liquidez instantánea y trading"
+		},
+		"caviar": {
+			"description": "Protocolo de fraccionamiento de NFTs y AMM"
+		},
+		"nftx": {
+			"description": "Protocolo de liquidez NFT con precios mínimos en bóveda"
+		},
+		"tessera": {
+			"description": "Collective NFT ownership through fractionalization"
+		},
+		"premint": {
+			"description": "Herramienta de gestión de listas blancas y allowlist de NFTs"
+		},
+		"bueno": {
+			"description": "No-code generative NFT art creation tool"
+		},
+		"highlight": {
+			"description": "Herramientas para creadores para minteo y distribución de NFTs"
+		},
+		"tokenproof": {
+			"description": "Verificación de NFTs y experiencias con acceso por tokens"
+		},
+		"rabbithole": {
+			"description": "Misiones on-chain y obtención de credenciales"
+		},
+		"tensor": {
+			"description": "Trading profesional de NFTs en Solana"
+		},
+		"hyperspace": {
+			"description": "Agregador y mercado NFT en Solana"
+		},
+		"tradeport": {
+			"description": "Mercado NFT para Sui y Aptos"
+		},
+		"campfire": {
+			"description": "Mercado NFT en Avalanche"
+		},
+		"paintswap": {
+			"description": "Mercado NFT en Fantom y Sonic"
+		},
+		"unlockd": {
+			"description": "Unlockd - NFT platform"
+		},
+		"formfunction": {
+			"description": "Formfunction - NFT platform"
+		},
+		"oncyber": {
+			"description": "Oncyber - NFT platform"
+		}
+	}
+}

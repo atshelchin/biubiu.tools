@@ -1,0 +1,59 @@
+{
+	"category_seo": {
+		"title": "RWA - Tokenização de Ativos do Mundo Real | BiuBiu Tools",
+		"description": "Explore a tokenização RWA (Ativos do Mundo Real): imóveis, títulos, commodities e outros ativos tradicionais em blockchain.",
+		"keywords": "rwa, tokenizacao ativos mundo real, imoveis blockchain, titulos tokenizados, ativos tokenizados",
+		"faqs": [
+			{
+				"question": "O que são RWAs?",
+				"answer": "RWAs (Ativos do Mundo Real) são ativos tradicionais como imóveis, títulos, commodities ou arte que são tokenizados na blockchain. Isso permite propriedade fracionada, mercados 24/7, liquidação mais rápida e acesso global a investimentos tradicionalmente ilíquidos."
+			},
+			{
+				"question": "Como funciona a tokenização RWA?",
+				"answer": "Os ativos são representados legalmente como tokens on-chain, frequentemente com custódia off-chain do ativo real. Os tokens representam propriedade, reivindicações ou direitos econômicos. Isso requer estruturas legais, serviços de custódia confiáveis e mecanismos de verificação."
+			},
+			{
+				"question": "Quais são os casos de uso de RWA?",
+				"answer": "Os RWAs permitem investimento fracionado em imóveis, mercados de títulos descentralizados, empréstimos garantidos por ativos tradicionais, colaterais do mundo real para DeFi e transferências globais eficientes de ativos. MakerDAO, Centrifuge e Ondo Finance são pioneiros RWA."
+			}
+		]
+	},
+	"tools": {
+		"goldfinch": {
+			"description": "Crypto lending for real-world credit in emerging markets"
+		},
+		"truefi": {
+			"description": "Uncollateralized lending for institutional borrowers"
+		},
+		"centrifuge": {
+			"description": "Real-world asset financing protocol bringing invoices and real estate on-chain"
+		},
+		"clearpool": {
+			"description": "Decentralized capital markets for unsecured institutional lending"
+		},
+		"matrixdock": {
+			"description": "Tokenized treasury bills with STBT stablecoin"
+		},
+		"openeden": {
+			"description": "Tokenized T-Bills with real-time NAV and 24/7 settlement"
+		},
+		"realt": {
+			"description": "Tokenized real estate investment with fractional ownership"
+		},
+		"lofty": {
+			"description": "Fractional real estate investing on Algorand blockchain"
+		},
+		"propy": {
+			"description": "Blockchain-based real estate transactions and ownership"
+		},
+		"securitize": {
+			"description": "Security token issuance and lifecycle management platform"
+		},
+		"tokeny": {
+			"description": "Enterprise tokenization platform for compliant securities"
+		},
+		"polymesh": {
+			"description": "Purpose-built blockchain for regulated security tokens"
+		}
+	}
+}

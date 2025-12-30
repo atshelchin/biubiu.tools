@@ -1,0 +1,107 @@
+{
+	"category_seo": {
+		"title": "Exploradores de Blockchain - Rastreadores de Transações e Blocos | BiuBiu Tools",
+		"description": "Explore blockchains com Etherscan, BscScan, Polygonscan e outros exploradores de blocos. Rastreie transações, carteiras, contratos e mais.",
+		"keywords": "explorador blockchain, etherscan, bscscan, polygonscan, rastreador transações, explorador blocos",
+		"faqs": [
+			{
+				"question": "O que é um explorador de blockchain?",
+				"answer": "Um explorador de blockchain é um mecanismo de busca para blockchains que permite ver transações, carteiras, contratos inteligentes, blocos e outras informações on-chain. Etherscan é o mais popular para Ethereum."
+			},
+			{
+				"question": "Como uso um explorador de blocos?",
+				"answer": "Digite um endereço de carteira, hash de transação ou endereço de contrato na barra de busca para ver detalhes. Você pode rastrear o histórico de transações, saldos de tokens, interações com contratos e dados de blocos."
+			},
+			{
+				"question": "Minhas transações são privadas?",
+				"answer": "Não, todas as transações em blockchains públicas são visíveis para qualquer pessoa através de exploradores de blocos. Os endereços de carteiras são pseudônimos mas podem ser rastreados. Use carteiras de privacidade se precisar de anonimato."
+			}
+		]
+	},
+	"tools": {
+		"etherscan": {
+			"description": "Ethereum blockchain explorer"
+		},
+		"blockscout": {
+			"description": "Open source block explorer"
+		},
+		"arbiscan": {
+			"description": "Arbitrum blockchain explorer"
+		},
+		"polygonscan": {
+			"description": "Polygon blockchain explorer"
+		},
+		"bscscan": {
+			"description": "BNB Chain blockchain explorer"
+		},
+		"basescan": {
+			"description": "Base blockchain explorer"
+		},
+		"snowtrace": {
+			"description": "Avalanche blockchain explorer"
+		},
+		"lineascan": {
+			"description": "Linea blockchain explorer"
+		},
+		"scrollscan": {
+			"description": "Scroll network explorer"
+		},
+		"mantlescan": {
+			"description": "Mantle network explorer"
+		},
+		"blastscan": {
+			"description": "Blast network explorer"
+		},
+		"modescan": {
+			"description": "Mode network explorer"
+		},
+		"celoscan": {
+			"description": "Celo blockchain explorer"
+		},
+		"ftmscan": {
+			"description": "Fantom network explorer"
+		},
+		"gnosisscan": {
+			"description": "Gnosis Chain explorer"
+		},
+		"cronoscan": {
+			"description": "Cronos network explorer"
+		},
+		"moonbeamscan": {
+			"description": "Moonbeam & Moonriver explorer"
+		},
+		"oklink": {
+			"description": "Multi-chain blockchain explorer by OKX"
+		},
+		"routescan": {
+			"description": "Unified multi-chain block explorer"
+		},
+		"onceupon": {
+			"description": "Human-readable blockchain transaction explorer"
+		},
+		"anyabi": {
+			"description": "Smart contract ABI lookup and decoder"
+		},
+		"nearblocks": {
+			"description": "NearBlocks - Block explorer"
+		},
+		"blockchair": {
+			"description": "Blockchair - Block explorer"
+		},
+		"avascan": {
+			"description": "AvaScan - Block explorer"
+		},
+		"tronscan": {
+			"description": "TronScan - Block explorer"
+		},
+		"cardanoscan": {
+			"description": "Cardanoscan - Block explorer"
+		},
+		"viewblock": {
+			"description": "ViewBlock - Block explorer"
+		},
+		"suiscan": {
+			"description": "SuiScan - Block explorer"
+		}
+	}
+}

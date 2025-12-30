@@ -1,0 +1,77 @@
+{
+	"category_seo": {
+		"title": "Infraestrutura Blockchain - Nós, RPCs e Serviços de Dados | BiuBiu Tools",
+		"description": "Serviços essenciais de infraestrutura incluindo provedores de nós (Alchemy, Infura), RPCs, indexadores e ferramentas de dados blockchain.",
+		"keywords": "infraestrutura blockchain, provedor nós, alchemy, infura, rpc endpoints, indexação blockchain",
+		"faqs": [
+			{
+				"question": "O que é um provedor de nós?",
+				"answer": "Um provedor de nós oferece acesso a nós blockchain via APIs sem necessidade de executar seu próprio nó. Os serviços populares como Alchemy e Infura fornecem endpoints RPC confiáveis para que as dApps interajam com blockchains."
+			},
+			{
+				"question": "Por que usar Alchemy ou Infura?",
+				"answer": "Executar seu próprio nó blockchain requer hardware significativo, manutenção e experiência técnica. Os provedores de nós oferecem infraestrutura confiável e escalável, APIs aprimoradas, ferramentas de desenvolvimento e suporte."
+			},
+			{
+				"question": "Os serviços RPC são gratuitos?",
+				"answer": "A maioria dos provedores oferece níveis gratuitos para desenvolvimento e aplicações pequenas. Para aplicações em produção com alto tráfego, você precisará de planos pagos baseados em solicitações de API, unidades de computação ou largura de banda."
+			}
+		]
+	},
+	"tools": {
+		"ankr": {
+			"description": "Multi-chain RPC endpoints and staking infrastructure"
+		},
+		"chainstack": {
+			"description": "Managed blockchain infrastructure for enterprises"
+		},
+		"band_protocol": {
+			"description": "Cross-chain oracle with Cosmos SDK integration"
+		},
+		"ipfs": {
+			"description": "Decentralized file storage and content addressing"
+		},
+		"arweave": {
+			"description": "Permanent decentralized data storage"
+		},
+		"filecoin": {
+			"description": "Decentralized storage network with incentives"
+		},
+		"ceramic": {
+			"description": "Decentralized data streams and composable data"
+		},
+		"walletconnect": {
+			"description": "Open protocol for connecting wallets to DApps"
+		},
+		"grove": {
+			"description": "Decentralized RPC relay powered by POKT"
+		},
+		"drpc": {
+			"description": "Decentralized multi-chain RPC provider"
+		},
+		"nodies": {
+			"description": "Multi-chain RPC node infrastructure"
+		},
+		"llamanodes": {
+			"description": "Privacy-focused RPC with MEV protection"
+		},
+		"getblock": {
+			"description": "Multi-chain node access and RPC provider"
+		},
+		"switchboard": {
+			"description": "Decentralized oracle for Solana and Move chains"
+		},
+		"dia": {
+			"description": "Transparent and customizable oracle platform"
+		},
+		"tellor": {
+			"description": "Permissionless oracle with dispute mechanism and staking"
+		},
+		"blockpi": {
+			"description": "BlockPI - Infrastructure provider"
+		},
+		"nodereal": {
+			"description": "NodeReal - Infrastructure provider"
+		}
+	}
+}

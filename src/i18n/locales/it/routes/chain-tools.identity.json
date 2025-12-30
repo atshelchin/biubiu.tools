@@ -1,0 +1,79 @@
+{
+	"category_seo": {
+		"title": "Identità Web3 - ENS, Lens e Identità Decentralizzata | BiuBiu Tools",
+		"description": "Soluzioni di identità decentralizzata per Web3. Nomi di dominio (ENS), profili social (Lens), credenziali e sistemi di reputazione.",
+		"faqs": [
+			{
+				"question": "Cos'è l'identità Web3?",
+				"answer": "L'identità Web3 ti permette di possedere la tua identità digitale on-chain. Questo include nomi di dominio (ENS), profili social (Lens), credenziali verificabili e punteggi di reputazione tra dApp."
+			},
+			{
+				"question": "Dovrei ottenere un dominio ENS?",
+				"answer": "Sì, i domini ENS sostituiscono gli indirizzi wallet complessi con nomi leggibili (tuonome.eth). Funzionano tra wallet e dApp. Puoi anche usarli come siti web decentralizzati."
+			},
+			{
+				"question": "Cos'è Lens Protocol?",
+				"answer": "Lens Protocol è un social graph decentralizzato dove possiedi il tuo profilo, contenuti e follower come NFT. Le app costruite su Lens includono Lenster, Hey e Orb."
+			}
+		]
+	},
+	"tools": {
+		"ens": {
+			"description": "Ethereum Name Service per human-readable addresses"
+		},
+		"dotbit": {
+			"description": "Cross-chain decentralizzato identità protocollo"
+		},
+		"galxe": {
+			"description": "Web3 credential e campaign piattaforma"
+		},
+		"layer3": {
+			"description": "Learn-a-earn quests e Web3 onboarding"
+		},
+		"degenscore": {
+			"description": "On-chain reputation e DeFi score"
+		},
+		"civic": {
+			"description": "Identity verification e KYC solutions"
+		},
+		"poap": {
+			"description": "Proof di Attendance Protocol per event badges"
+		},
+		"phi": {
+			"description": "Metaverse identità e credential land"
+		},
+		"otterspace": {
+			"description": "Soulbound badges per DAO membership"
+		},
+		"disco": {
+			"description": "Verifiable credentials dati backpack"
+		},
+		"holonym": {
+			"description": "Privacy-preserving identità verification con ZK"
+		},
+		"anima": {
+			"description": "Biometric identità per sybil resistance"
+		},
+		"rarimo": {
+			"description": "Rarimo - Identity e credentials"
+		},
+		"verax": {
+			"description": "Verax - Identity e credentials"
+		},
+		"bns": {
+			"description": "BNS (Base Name Service) - Identity e credentials"
+		},
+		"eas": {
+			"description": "EAS (Ethereum Attestation Service) - Identity e credentials"
+		},
+		"zkpass": {
+			"description": "zkPass - Identity e credentials"
+		},
+		"brightid": {
+			"description": "BrightID - Identity e credentials"
+		},
+		"nomis": {
+			"description": "NomÈ - Identity e credentials"
+		}
+	}
+}

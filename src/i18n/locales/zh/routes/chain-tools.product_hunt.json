@@ -1,0 +1,151 @@
+{
+	"category_seo": {
+		"title": "产品发布平台 - 发现和推广新产品 | BiuBiu Tools",
+		"description": "发现产品发布和推广的最佳平台。无论是创业者寻找用户，还是探索者发现新产品，这里有全球各地区的优质平台推荐。",
+		"faqs": [
+			{
+				"question": "什么是产品发布平台？",
+				"answer": "产品发布平台是帮助新产品获得曝光和早期用户的社区。Product Hunt 是最著名的例子，创作者可以展示他们的产品，用户可以发现、投票和评论新产品。"
+			},
+			{
+				"question": "如何成功地在 Product Hunt 上发布产品？",
+				"answer": "选择合适的发布日期（通常避免周末），提前准备好高质量的截图和演示视频，发动你的社区在发布日提供支持，积极回复评论，并准备好解答用户问题。"
+			},
+			{
+				"question": "除了 Product Hunt 还有哪些推广渠道？",
+				"answer": "可以考虑 Hacker News（技术社区）、Indie Hackers（独立开发者）、BetaList（预发布产品）、Dev.to（开发者工具），以及各地区的本地平台如中国的 V2EX 和 36氪等。"
+			}
+		]
+	},
+	"tools": {
+		"producthunt": {
+			"description": "全球最知名的产品发布与发现平台"
+		},
+		"hackernews": {
+			"description": "技术社区，分享和讨论新项目（Show HN）"
+		},
+		"betalist": {
+			"description": "早期产品发布平台，面向尝鲜用户"
+		},
+		"launchingnext": {
+			"description": "新产品提交和发现目录"
+		},
+		"saashub": {
+			"description": "SaaS 软件发现与替代品平台"
+		},
+		"alternativeto": {
+			"description": "查找任何软件或应用的替代品"
+		},
+		"slant": {
+			"description": "产品对比和推荐平台"
+		},
+		"theresanaiforthat": {
+			"description": "全面的 AI 工具和应用目录"
+		},
+		"futurepedia": {
+			"description": "每日更新的 AI 工具目录"
+		},
+		"toolify": {
+			"description": "AI 工具发现和对比平台"
+		},
+		"g2": {
+			"description": "企业软件评测和评分平台"
+		},
+		"capterra": {
+			"description": "软件对比和评测平台"
+		},
+		"getapp": {
+			"description": "企业软件发现平台"
+		},
+		"trustradius": {
+			"description": "来自认证用户的 B2B 软件评测"
+		},
+		"indiehackers": {
+			"description": "独立开发者和自力创业者社区"
+		},
+		"devto": {
+			"description": "开发者社区，分享文章和项目"
+		},
+		"hashnode": {
+			"description": "自带流量的开发者博客平台"
+		},
+		"lobsters": {
+			"description": "精选讨论的技术社区"
+		},
+		"linkedin": {
+			"description": "B2B 营销和职业社交网络"
+		},
+		"medium": {
+			"description": "内容营销的发布平台"
+		},
+		"youtube": {
+			"description": "产品演示和教程的视频平台"
+		},
+		"36kr": {
+			"description": "中国领先的科技创业媒体平台"
+		},
+		"sspai": {
+			"description": "优质应用推荐平台"
+		},
+		"v2ex": {
+			"description": "开发者和技术爱好者社区"
+		},
+		"appinn": {
+			"description": "小众软件发现平台"
+		},
+		"okjike": {
+			"description": "基于兴趣的社交社区"
+		},
+		"zhihu": {
+			"description": "知识分享问答平台"
+		},
+		"coolapk": {
+			"description": "安卓应用发现社区"
+		},
+		"liqi": {
+			"description": "创作者分享工具的平台"
+		},
+		"moongift": {
+			"description": "日本开源软件介绍网站"
+		},
+		"disquiet": {
+			"description": "韩国版 Product Hunt，产品发布社区"
+		},
+		"yourstory": {
+			"description": "印度领先的创业和创业媒体"
+		},
+		"inc42": {
+			"description": "印度创业和科技新闻平台"
+		},
+		"sifted": {
+			"description": "英国金融时报旗下欧洲创业新闻"
+		},
+		"e27": {
+			"description": "东南亚科技创业生态平台"
+		},
+		"techinasia": {
+			"description": "亚洲科技和创业新闻平台"
+		},
+		"krasia": {
+			"description": "36氪英文版，亚洲科技新闻"
+		},
+		"startupeable": {
+			"description": "拉丁美洲创业社区（西班牙语）"
+		},
+		"contxto": {
+			"description": "拉丁美洲科技和创业新闻"
+		},
+		"stateofthedapps": {
+			"description": "全面的 DApp 目录和排名"
+		},
+		"icodrops": {
+			"description": "ICO 和 IDO 日历，含评级和分析"
+		},
+		"quest3": {
+			"description": "Web3 任务和互动平台（亚洲为主）"
+		},
+		"zealy": {
+			"description": "社区任务和奖励平台"
+		}
+	}
+}

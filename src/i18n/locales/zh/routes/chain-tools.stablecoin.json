@@ -1,0 +1,37 @@
+{
+	"category_seo": {
+		"title": "稳定币 - USDC、USDT、DAI 等 | BiuBiu Tools",
+		"description": "了解稳定币及其用例。法币支持、算法和去中心化稳定币，用于 DeFi 和支付。",
+		"faqs": [
+			{
+				"question": "什么是稳定币？",
+				"answer": "稳定币是与美元等稳定资产挂钩的加密货币。类型包括法币支持（USDC、USDT）、加密支持（DAI）和算法稳定币。"
+			},
+			{
+				"question": "哪种稳定币最安全？",
+				"answer": "USDC 监管严格且透明。USDT 流动性最大但透明度较低。DAI 是去中心化的但有智能合约风险。多元化是明智的选择。"
+			},
+			{
+				"question": "UST 发生了什么？",
+				"answer": "UST 是一种算法稳定币，于 2022 年 5 月崩溃，脱钩并导致 400 亿美元以上的损失。这凸显了没有适当抵押品的算法设计的风险。"
+			}
+		]
+	},
+	"tools": {
+		"frax": {
+			"description": "部分抵押的分数算法稳定币"
+		},
+		"tusd": {
+			"description": "受监管且经过审计的美元稳定币"
+		},
+		"sfrax": {
+			"description": "在 Frax 协议中质押赚取收益的 FRAX"
+		},
+		"fdusd": {
+			"description": "First Digital USD (FDUSD) - 稳定币"
+		},
+		"flexusd": {
+			"description": "flexUSD - 稳定币"
+		}
+	}
+}

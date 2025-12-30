@@ -1,0 +1,76 @@
+{
+	"category_seo": {
+		"title": "非 EVM 区块链 - Solana、Bitcoin、Cosmos 等 | BiuBiu Tools",
+		"description": "探索非 EVM 区块链生态系统。Solana、Bitcoin、Cosmos、Aptos、Sui 及其独特的工具和 dApp。",
+		"faqs": [
+			{
+				"question": "什么是非 EVM 链？",
+				"answer": "非 EVM 链不使用以太坊的虚拟机。它们有不同的架构——Solana 使用 Rust，Bitcoin 有自己的脚本，Cosmos 使用 CosmWasm。每个都有独特的权衡。"
+			},
+			{
+				"question": "为什么使用非 EVM 链？",
+				"answer": "不同的链为不同的目标优化。Solana 追求速度和低费用，Bitcoin 追求安全性和去中心化，Cosmos 追求互操作性，Move 链追求安全性。"
+			},
+			{
+				"question": "如何跨链到非 EVM 链？",
+				"answer": "使用特定的跨链桥如 Wormhole（多链）、Portal（Solana）或 IBC（Cosmos）。一些中心化交易所支持直接存取到非 EVM 链。"
+			}
+		]
+	},
+	"tools": {
+		"solscan": {
+			"description": "流行的 Solana 浏览器，支持代币分析和 NFT"
+		},
+		"mintscan": {
+			"description": "多链 Cosmos 生态系统浏览器"
+		},
+		"tonscan": {
+			"description": "TON 区块链浏览器，用于交易和 jettons"
+		},
+		"raydium": {
+			"description": "Solana AMM 和流动性提供者，具有集中池"
+		},
+		"osmosis": {
+			"description": "Cosmos 生态系统中领先的 DEX，集成 IBC"
+		},
+		"injective": {
+			"description": "专注于 DeFi 的 Cosmos 链，用于衍生品交易"
+		},
+		"celestia": {
+			"description": "用于 Rollup 的模块化数据可用性层"
+		},
+		"dymension": {
+			"description": "基于 Cosmos 构建的 RollApp 中心，用于模块化 Rollup"
+		},
+		"liquidswap": {
+			"description": "Pontem 在 Aptos 上的第一个 AMM DEX"
+		},
+		"tonkeeper": {
+			"description": "流行的 TON 钱包，集成 Telegram"
+		},
+		"dedust": {
+			"description": "TON 上的 DEX 和 DeFi 平台"
+		},
+		"algorand": {
+			"description": "纯权益证明区块链，具有即时最终性"
+		},
+		"cardano": {
+			"description": "研究驱动的区块链，具有同行评审的开发"
+		},
+		"polkadot": {
+			"description": "具有平行链的异构多链网络"
+		},
+		"subscan": {
+			"description": "Polkadot 和 Substrate 网络的多链浏览器"
+		},
+		"tezos": {
+			"description": "具有形式化验证的自修正区块链"
+		},
+		"stacks": {
+			"description": "Bitcoin L2，将智能合约带入 BTC"
+		},
+		"layerzero": {
+			"description": "全链互操作性协议，用于无信任消息传递"
+		}
+	}
+}

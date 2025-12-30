@@ -1,0 +1,58 @@
+{
+	"category_seo": {
+		"title": "Tài Sản Thế Giới Thực (RWA) - Tài Sản Token Hóa | BiuBiu Tools",
+		"description": "Khám phá tài sản thế giới thực được token hóa. Trái phiếu kho bạc, bất động sản, hàng hóa và tài chính truyền thống trên blockchain.",
+		"faqs": [
+			{
+				"question": "RWA là gì?",
+				"answer": "RWA (Real World Assets) là tài sản truyền thống như Trái phiếu Kho bạc Mỹ, bất động sản hoặc hàng hóa được token hóa trên blockchain. Chúng mang lợi suất tài chính truyền thống vào DeFi."
+			},
+			{
+				"question": "Tại sao RWA lại quan trọng?",
+				"answer": "RWA cung cấp lợi suất ổn định từ nền kinh tế thực (lãi suất kho bạc), đa dạng hóa từ biến động crypto và kết nối tài chính truyền thống với DeFi. MakerDAO nắm giữ hàng tỷ USD trong RWA."
+			},
+			{
+				"question": "Nền tảng RWA nào tồn tại?",
+				"answer": "Ondo Finance cho trái phiếu kho bạc token hóa, RealT cho bất động sản, Centrifuge cho tài trợ tài sản. Các giao thức DeFi lớn đang tích hợp chiến lược RWA để tạo lợi suất."
+			}
+		]
+	},
+	"tools": {
+		"goldfinch": {
+			"description": "Crypto lending for real-world credit in emerging markets"
+		},
+		"truefi": {
+			"description": "Uncollateralized lending for institutional borrowers"
+		},
+		"centrifuge": {
+			"description": "Real-world asset financing protocol bringing invoices and real estate on-chain"
+		},
+		"clearpool": {
+			"description": "Decentralized capital markets for unsecured institutional lending"
+		},
+		"matrixdock": {
+			"description": "Tokenized treasury bills with STBT stablecoin"
+		},
+		"openeden": {
+			"description": "Tokenized T-Bills with real-time NAV and 24/7 settlement"
+		},
+		"realt": {
+			"description": "Tokenized real estate investment with fractional ownership"
+		},
+		"lofty": {
+			"description": "Fractional real estate investing on Algorand blockchain"
+		},
+		"propy": {
+			"description": "Blockchain-based real estate transactions and ownership"
+		},
+		"securitize": {
+			"description": "Security token issuance and lifecycle management platform"
+		},
+		"tokeny": {
+			"description": "Enterprise tokenization platform for compliant securities"
+		},
+		"polymesh": {
+			"description": "Purpose-built blockchain for regulated security tokens"
+		}
+	}
+}

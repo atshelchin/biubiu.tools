@@ -1,0 +1,50 @@
+{
+	"category_seo": {
+		"title": "Financiamento Cripto - VC, Grants e Crowdfunding | BiuBiu Tools",
+		"description": "Encontre oportunidades de financiamento para projetos cripto: capital de risco, grants, crowdfunding, plataformas de investimento DAOs e aceleradoras.",
+		"keywords": "financiamento cripto, grants web3, vc blockchain, crowdfunding cripto, financiamento dao",
+		"faqs": [
+			{
+				"question": "Onde posso obter financiamento para meu projeto cripto?",
+				"answer": "Opções de financiamento incluem: firmas VC focadas em cripto (a16z crypto, Paradigm), programas de grants (Ethereum Foundation, Gitcoin), DAOs de investimento, plataformas de crowdfunding e aceleradoras blockchain."
+			},
+			{
+				"question": "O que são grants cripto?",
+				"answer": "Os grants cripto são fundos não-dilutivos concedidos a projetos que contribuem para o ecossistema. Os principais protocolos (Ethereum, Uniswap, Aave) oferecem grants através de suas fundações ou DAOs. Gitcoin também facilita financiamento quadrático da comunidade."
+			},
+			{
+				"question": "Como funciona o crowdfunding em Web3?",
+				"answer": "O crowdfunding Web3 pode ocorrer através de vendas de tokens (IDO/ICO), plataformas como Mirror para NFT crowdfunding, Gitcoin grants com matching quadrático ou financiamento de DAOs onde a comunidade vota para financiar projetos."
+			}
+		]
+	},
+	"tools": {
+		"paradigm": {
+			"description": "Paradigm - Web3 investment and funding platform"
+		},
+		"polychain": {
+			"description": "Polychain Capital - Web3 investment and funding platform"
+		},
+		"pantera": {
+			"description": "Pantera Capital - Web3 investment and funding platform"
+		},
+		"multicoin": {
+			"description": "Multicoin Capital - Web3 investment and funding platform"
+		},
+		"dragonfly": {
+			"description": "Dragonfly - Web3 investment and funding platform"
+		},
+		"variant": {
+			"description": "Variant - Web3 investment and funding platform"
+		},
+		"placeholder": {
+			"description": "Placeholder - Web3 investment and funding platform"
+		},
+		"coinlist": {
+			"description": "CoinList - Web3 investment and funding platform"
+		},
+		"kernel": {
+			"description": "Kernel - Web3 investment and funding platform"
+		}
+	}
+}

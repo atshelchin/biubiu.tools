@@ -1,0 +1,38 @@
+{
+	"category_seo": {
+		"title": "Stablecoins - Criptomoedas Vinculadas a Dólares | BiuBiu Tools",
+		"description": "Aprenda sobre stablecoins como USDT, USDC, DAI e outros ativos cripto estáveis. Compare tipos, garantias e casos de uso.",
+		"keywords": "stablecoins, usdt, usdc, dai, criptomoedas estáveis, stablecoins fiat",
+		"faqs": [
+			{
+				"question": "O que são stablecoins?",
+				"answer": "As stablecoins são criptomoedas projetadas para manter valor estável, geralmente vinculadas 1:1 a moedas fiat como o USD. Fornecem a velocidade e benefícios de cripto sem volatilidade de preços, tornando-as ideais para pagamentos e negociação DeFi."
+			},
+			{
+				"question": "USDT vs USDC vs DAI?",
+				"answer": "USDT (Tether) é a maior stablecoin mas menos transparente. USDC (Circle) é regulada nos EUA com auditorias regulares. DAI (MakerDAO) é descentralizada, garantida por cripto e governada por DAO. Cada uma tem diferentes níveis de confiança/descentralização."
+			},
+			{
+				"question": "As stablecoins são seguras?",
+				"answer": "O risco depende do tipo: as stablecoins centralizadas enfrentam risco de contraparte e regulatório. As stablecoins descentralizadas enfrentam riscos de contratos inteligentes e colateralização. As stablecoins algorítmicas mostraram ser propensas a colapsos (ver UST/LUNA)."
+			}
+		]
+	},
+	"tools": {
+		"frax": {
+			"description": "Fractional-algorithmic stablecoin with partial collateralization"
+		},
+		"tusd": {
+			"description": "Regulated and audited USD-backed stablecoin"
+		},
+		"sfrax": {
+			"description": "Staked FRAX earning yield from Frax protocol"
+		},
+		"fdusd": {
+			"description": "First Digital USD (FDUSD) - Stablecoin"
+		},
+		"flexusd": {
+			"description": "flexUSD - Stablecoin"
+		}
+	}
+}

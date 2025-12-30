@@ -1,0 +1,140 @@
+{
+	"category_seo": {
+		"title": "Công Cụ Phân Tích Blockchain - Dữ Liệu On-Chain & Insights | BiuBiu Tools",
+		"description": "Khám phá các nền tảng phân tích blockchain hàng đầu cho dữ liệu on-chain, theo dõi ví và thông tin thị trường. Các công cụ như Dune, Nansen và Arkham.",
+		"keywords": "blockchain analytics, on-chain data, dune analytics, nansen, arkham, wallet tracking",
+		"faqs": [
+			{
+				"question": "Phân tích on-chain là gì?",
+				"answer": "Phân tích on-chain liên quan đến việc phân tích dữ liệu giao dịch blockchain để có được thông tin chi tiết về hành vi ví, luồng vốn, việc sử dụng giao thức và xu hướng thị trường. Nó giúp trader và nhà nghiên cứu đưa ra quyết định sáng suốt."
+			},
+			{
+				"question": "Theo dõi smart money là gì?",
+				"answer": "Theo dõi smart money giám sát ví của các trader thành công, whale và tổ chức để hiểu mô hình giao dịch của họ và có khả năng theo dõi chiến lược của họ."
+			},
+			{
+				"question": "Tôi nên sử dụng công cụ phân tích nào?",
+				"answer": "Dune rất tốt cho truy vấn SQL tùy chỉnh, Nansen cho theo dõi smart money, Arkham cho gắn nhãn thực thể và DefiLlama cho dữ liệu TVL. Chọn dựa trên nhu cầu cụ thể của bạn."
+			}
+		]
+	},
+	"tools": {
+		"dune": {
+			"description": "Phân tích blockchain với truy vấn SQL tùy chỉnh"
+		},
+		"defillama": {
+			"description": "Bộ tổng hợp TVL DeFi và phân tích giao thức"
+		},
+		"nansen": {
+			"description": "Phân tích on-chain với theo dõi smart money"
+		},
+		"arkham": {
+			"description": "Nền tảng thông tin blockchain"
+		},
+		"ultrasound": {
+			"description": "Theo dõi cung và đốt ETH"
+		},
+		"messari": {
+			"description": "Crypto research and data platform"
+		},
+		"coingecko": {
+			"description": "Cryptocurrency prices and market data"
+		},
+		"coinmarketcap": {
+			"description": "Crypto market cap rankings"
+		},
+		"glassnode": {
+			"description": "On-chain market intelligence"
+		},
+		"dexscreener": {
+			"description": "Real-time DEX pair charts"
+		},
+		"defined": {
+			"description": "Multi-chain DEX analytics"
+		},
+		"tokenterminal": {
+			"description": "Protocol financials and revenue metrics"
+		},
+		"artemis": {
+			"description": "Fundamental crypto analytics and research"
+		},
+		"growthepie": {
+			"description": "L2 analytics and comparison"
+		},
+		"dappradar": {
+			"description": "DApp ranking and tracking"
+		},
+		"ethburned": {
+			"description": "Ethereum burn statistics"
+		},
+		"parsec": {
+			"description": "DeFi analytics dashboard"
+		},
+		"eigenexplorer": {
+			"description": "EigenLayer analytics explorer"
+		},
+		"the_graph": {
+			"description": "Decentralized protocol for indexing blockchain data"
+		},
+		"flipside": {
+			"description": "Blockchain analytics with SQL queries"
+		},
+		"footprint": {
+			"description": "No-code blockchain data analysis platform"
+		},
+		"cryptofees": {
+			"description": "Protocol fee and revenue analytics"
+		},
+		"openbb": {
+			"description": "Open-source investment research terminal"
+		},
+		"watchers": {
+			"description": "Whale wallet tracking and alerts"
+		},
+		"cielo": {
+			"description": "Social wallet tracking and transaction feed"
+		},
+		"space_and_time": {
+			"description": "Verifiable data warehouse with ZK proofs"
+		},
+		"allium": {
+			"description": "Enterprise blockchain data platform"
+		},
+		"sentio": {
+			"description": "Multi-chain observability and monitoring"
+		},
+		"defillama_yields": {
+			"description": "Cross-chain yield farming comparison"
+		},
+		"defilabs": {
+			"description": "Whale and smart money tracking"
+		},
+		"chainanalytics": {
+			"description": "Custom blockchain data dashboards"
+		},
+		"cookie3": {
+			"description": "Cookie3 - Blockchain analytics"
+		},
+		"chainbeat": {
+			"description": "ChainBeat - Blockchain analytics"
+		},
+		"bitquery": {
+			"description": "Bitquery - Blockchain analytics"
+		},
+		"intotheblock": {
+			"description": "IntoTheBlock - Blockchain analytics"
+		},
+		"laevitas": {
+			"description": "Laevitas - Blockchain analytics"
+		},
+		"kaiko": {
+			"description": "Kaiko - Blockchain analytics"
+		},
+		"amberdata": {
+			"description": "Amberdata - Blockchain analytics"
+		},
+		"blockpour": {
+			"description": "Blockpour - Blockchain analytics"
+		}
+	}
+}

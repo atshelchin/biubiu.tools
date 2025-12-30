@@ -1,0 +1,119 @@
+{
+	"category_seo": {
+		"title": "暗号ウォレット - ハードウェア、ソフトウェア、マルチチェーン | BiuBiu Tools",
+		"description": "セキュリティと利便性に優れた最高の暗号ウォレットを比較。すべてのブロックチェーン向けのハードウェアウォレット、ブラウザ拡張機能、モバイルウォレット。",
+		"keywords": "crypto wallet, hardware wallet, metamask, ledger, trezor, multi-chain wallet",
+		"faqs": [
+			{
+				"question": "暗号ウォレットとは何ですか？",
+				"answer": "暗号ウォレットは、秘密鍵を保存し、暗号通貨の送受信と管理を可能にするソフトウェアまたはハードウェアです。実際には暗号通貨を保存しません - 資産はブロックチェーン上に残ります。"
+			},
+			{
+				"question": "ハードウェアウォレット vs ソフトウェアウォレット?",
+				"answer": "ハードウェアウォレット(Ledger、Trezor)は最大限のセキュリティのため鍵をオフラインで保存し、大きな保有に適しています。ソフトウェアウォレット(MetaMask、Rainbow)は日常使用により便利ですが、インターネットに接続されています。"
+			},
+			{
+				"question": "ウォレットを安全に保つにはどうすればよいですか？",
+				"answer": "シードフレーズを決して共有しない、大きな金額にはハードウェアウォレットを使用する、可能な場合は2FAを有効にする、署名前に取引の詳細を確認する、フィッシングサイトに注意する。"
+			}
+		]
+	},
+	"tools": {
+		"debank": {
+			"description": "Multi-chain portfolio tracker and social platform"
+		},
+		"rabby": {
+			"description": "Multi-chain browser wallet"
+		},
+		"rainbow": {
+			"description": "Beautiful Ethereum wallet"
+		},
+		"metamask": {
+			"description": "Most popular Web3 wallet"
+		},
+		"frame": {
+			"description": "Privacy-focused desktop wallet"
+		},
+		"zerion": {
+			"description": "DeFi portfolio and wallet"
+		},
+		"safe": {
+			"description": "Multi-signature smart wallet"
+		},
+		"zapper": {
+			"description": "DeFi portfolio dashboard"
+		},
+		"argent": {
+			"description": "Smart wallet with recovery"
+		},
+		"sequence": {
+			"description": "Smart wallet for gaming"
+		},
+		"ledger": {
+			"description": "Hardware wallet security"
+		},
+		"trezor": {
+			"description": "Hardware wallet pioneer"
+		},
+		"privy": {
+			"description": "Embedded wallet solution"
+		},
+		"dynamic": {
+			"description": "Multi-wallet authentication"
+		},
+		"ambire": {
+			"description": "Smart wallet with email login and gasless transactions"
+		},
+		"obvious": {
+			"description": "Smart wallet with account abstraction"
+		},
+		"pimlico": {
+			"description": "ERC-4337 bundler and paymaster infrastructure"
+		},
+		"stackup": {
+			"description": "Account abstraction bundler and SDK"
+		},
+		"biconomy": {
+			"description": "Account abstraction and gasless transaction SDK"
+		},
+		"zerodev": {
+			"description": "Modular smart wallet SDK with Kernel"
+		},
+		"solflare": {
+			"description": "Solflare - Crypto wallet"
+		},
+		"subwallet": {
+			"description": "SubWallet - Web3 wallet"
+		},
+		"tonhub": {
+			"description": "Tonhub - Web3 wallet"
+		},
+		"mytonwallet": {
+			"description": "MyTonWallet - Web3 wallet"
+		},
+		"coolwallet": {
+			"description": "coolwallet - Web3 wallet"
+		},
+		"imtoken": {
+			"description": "imToken - Web3 wallet"
+		},
+		"tokenpocket": {
+			"description": "TokenPocket - Web3 wallet"
+		},
+		"myetherwallet": {
+			"description": "MyEtherWallet - Web3 wallet"
+		},
+		"mycrypto": {
+			"description": "MyCrypto - Web3 wallet"
+		},
+		"tronlink": {
+			"description": "TronLink - Web3 wallet"
+		},
+		"multis": {
+			"description": "Multis - Web3 wallet"
+		},
+		"squads": {
+			"description": "Squads - Web3 wallet"
+		}
+	}
+}
