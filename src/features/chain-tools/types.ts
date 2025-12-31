@@ -170,3 +170,211 @@ export interface ToolDetailPageData {
 	};
 	structuredData: Array<Record<string, unknown>>;
 }
+
+// ============================================================================
+// Category Guide System Types
+// ============================================================================
+
+/**
+ * Tool relation types for ecosystem visualization
+ */
+export type ToolRelationType =
+	| 'fork' // SushiSwap fork of Uniswap
+	| 'competitor' // Aave vs Compound
+	| 'depends_on' // Yearn depends on Curve
+	| 'integrates' // 1inch integrates Uniswap
+	| 'built_on' // Convex built on Curve
+	| 'same_ecosystem'; // Same team/ecosystem
+
+/**
+ * Relation between two tools
+ */
+export interface ToolRelation {
+	sourceId: string;
+	targetId: string;
+	type: ToolRelationType;
+	descriptionKey?: string; // i18n key for relation description
+}
+
+/**
+ * Sub-category within a main category
+ * e.g., "DEX", "Lending", "Stablecoin" within DeFi
+ */
+export interface SubCategory {
+	id: string;
+	labelKey: string; // i18n key
+	descriptionKey: string; // i18n key
+	toolIds: string[]; // Tools in this sub-category
+}
+
+/**
+ * Core project with additional context for learning
+ */
+export interface CoreProject {
+	toolId: string;
+	significanceKey: string; // i18n key: why this project matters
+	tier: 1 | 2 | 3; // 1 = must know, 2 = should know, 3 = nice to know
+}
+
+/**
+ * Learning task in a phase
+ */
+export interface LearningTask {
+	id: string;
+	actionKey: string; // i18n key: what to do
+	type: 'read' | 'research' | 'practice' | 'quiz';
+	toolId?: string; // Related tool (optional)
+	link?: string; // External link (optional)
+}
+
+/**
+ * Learning phase in the learning path
+ */
+export interface LearningPhase {
+	id: string;
+	titleKey: string; // i18n key
+	descriptionKey: string; // i18n key
+	estimatedDays: string; // e.g., "3-5 days"
+	tasks: LearningTask[];
+	coreToolIds: string[]; // Key tools for this phase
+}
+
+/**
+ * Glossary term
+ */
+export interface GlossaryTerm {
+	id: string;
+	termKey: string; // i18n key for term name
+	definitionKey: string; // i18n key for definition
+	relatedToolIds?: string[];
+	relatedTermIds?: string[];
+}
+
+/**
+ * Quiz question types
+ */
+export type QuizQuestionType =
+	| 'single_choice'
+	| 'multiple_choice'
+	| 'true_false'
+	| 'matching'
+	| 'ordering';
+
+/**
+ * Quiz question
+ */
+export interface QuizQuestion {
+	id: string;
+	type: QuizQuestionType;
+	difficulty: 'beginner' | 'intermediate' | 'expert';
+	questionKey: string; // i18n key
+	optionKeys: string[]; // i18n keys for options
+	correctAnswers: number[]; // Indices of correct options
+	explanationKey: string; // i18n key
+	relatedToolIds?: string[];
+	tags: string[]; // For categorizing scores
+}
+
+/**
+ * Quiz achievement level
+ */
+export interface QuizAchievement {
+	minScore: number; // Minimum percentage (0-1)
+	titleKey: string; // i18n key
+	badge: string; // Emoji or icon identifier
+}
+
+/**
+ * Complete quiz data for a category
+ */
+export interface CategoryQuiz {
+	categoryId: CategoryId;
+	questions: QuizQuestion[];
+	achievements: QuizAchievement[];
+}
+
+/**
+ * Complete guide data for a category
+ * All text content uses i18n keys
+ */
+export interface CategoryGuide {
+	categoryId: CategoryId;
+
+	// i18n key prefix for this guide
+	// e.g., 'routes/apps/chain-tools/guide/defi'
+	i18nKeyPrefix: string;
+
+	// Content structure (counts for rendering)
+	fundamentalsCount: number; // Number of fundamental sections
+	ecosystemSubCategories: SubCategory[];
+	coreProjects: CoreProject[];
+	learningPath: LearningPhase[];
+	glossary: GlossaryTerm[];
+
+	// Tool relations for ecosystem graph
+	relations: ToolRelation[];
+
+	// Quiz
+	quiz: CategoryQuiz;
+
+	// Metadata
+	lastUpdated: string;
+}
+
+/**
+ * User's progress for a category (stored in localStorage)
+ */
+export interface UserCategoryProgress {
+	categoryId: CategoryId;
+
+	// Reading progress
+	readSections: string[]; // Section IDs that have been read
+
+	// Tool status
+	toolStatus: Record<string, 'viewed' | 'learning' | 'mastered' | 'bookmarked'>;
+
+	// Quiz attempts
+	quizAttempts: {
+		difficulty: 'beginner' | 'intermediate' | 'expert';
+		score: number;
+		totalQuestions: number;
+		wrongQuestionIds: string[];
+		timestamp: number;
+	}[];
+
+	// Learning path progress
+	learningPathProgress: {
+		currentPhase: number;
+		completedTaskIds: string[];
+	};
+
+	// Best achievement
+	bestAchievement?: {
+		titleKey: string;
+		badge: string;
+		score: number;
+	};
+
+	// Timestamps
+	lastVisited: number;
+	startedAt: number;
+}
+
+/**
+ * Guide page data for SSR
+ */
+export interface CategoryGuidePageData {
+	guide: CategoryGuide;
+	category: SerializableCategory;
+	tools: SerializableExternalTool[];
+	meta: {
+		title: string;
+		description: string;
+		keywords: string;
+		canonical: string;
+		type: 'website';
+		image: string;
+		locale: string;
+	};
+	structuredData: Array<Record<string, unknown>>;
+}
