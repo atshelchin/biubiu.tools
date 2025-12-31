@@ -31,5 +31,5 @@ export const balancerDetail: ToolDetail = {
 	// Related DeFi tools
 	relatedTools: ['curve', 'uniswap', 'aura', 'gyroscope', 'beethoven-x'],
 
-	lastUpdated: '2024-12-31'
+	lastUpdated: '2025-12-31'
 };

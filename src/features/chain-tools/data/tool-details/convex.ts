@@ -31,5 +31,5 @@ export const convexDetail: ToolDetail = {
 	// Related DeFi tools
 	relatedTools: ['curve', 'frax', 'yearn', 'aura', 'concentrator'],
 
-	lastUpdated: '2024-12-31'
+	lastUpdated: '2025-12-31'
 };

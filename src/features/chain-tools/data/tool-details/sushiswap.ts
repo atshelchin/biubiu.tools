@@ -31,5 +31,5 @@ export const sushiswapDetail: ToolDetail = {
 	// Related DeFi tools
 	relatedTools: ['uniswap', 'pancakeswap', 'curve', 'balancer', '1inch'],
 
-	lastUpdated: '2024-12-31'
+	lastUpdated: '2025-12-31'
 };

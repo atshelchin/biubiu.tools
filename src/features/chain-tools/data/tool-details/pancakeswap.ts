@@ -31,5 +31,5 @@ export const pancakeswapDetail: ToolDetail = {
 	// Related DeFi tools
 	relatedTools: ['uniswap', 'sushiswap', 'trader-joe', 'camelot', '1inch'],
 
-	lastUpdated: '2024-12-31'
+	lastUpdated: '2025-12-31'
 };

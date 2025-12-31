@@ -327,5 +327,5 @@ export const defiGuide: CategoryGuide = {
 		'defillama'
 	],
 
-	lastUpdated: '2024-12-31'
+	lastUpdated: '2025-12-31'
 };

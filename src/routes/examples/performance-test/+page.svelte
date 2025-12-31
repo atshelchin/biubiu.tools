@@ -97,7 +97,7 @@
 				dependencies: ['endDate']
 			},
 			endDate: {
-				defaultValue: '2024-12-31',
+				defaultValue: '2025-12-31',
 				validator: {
 					validate: (value, values) => {
 						if ((value as string) <= (values.startDate as string)) {

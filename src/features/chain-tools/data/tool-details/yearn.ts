@@ -31,5 +31,5 @@ export const yearnDetail: ToolDetail = {
 	// Related DeFi tools
 	relatedTools: ['convex', 'curve', 'aave', 'compound', 'beefy'],
 
-	lastUpdated: '2024-12-31'
+	lastUpdated: '2025-12-31'
 };
