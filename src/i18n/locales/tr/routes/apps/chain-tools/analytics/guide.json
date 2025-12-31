@@ -1,0 +1,189 @@
+{
+	"title": "Analytics Guide",
+	"description": "Comprehensive guide to blockchain analytics and on-chain intelligence",
+	"estimated_read_time": "25 min",
+	"sections": {
+		"intro": {
+			"title": "Introduction to Blockchain Analytics",
+			"content": "Blockchain analytics is the practice of collecting, processing, and analyzing on-chain data to gain insights into market trends, protocol health, and trading opportunities. Unlike traditional finance where data is siloed and proprietary, blockchain data is transparent and accessible to everyone. This creates unique opportunities for researchers, traders, and investors to make data-driven decisions. Modern analytics tools have evolved from simple block explorers to sophisticated platforms that can track smart money movements, analyze protocol metrics, and visualize complex DeFi interactions. Whether you're a trader looking for alpha, a researcher studying market dynamics, or a developer building data products, understanding blockchain analytics is essential in the Web3 ecosystem."
+		},
+		"analytics_basics": {
+			"title": "Analytics Fundamentals",
+			"content": "Before diving into specific tools and techniques, it's important to understand the foundational concepts of blockchain analytics. This section covers why on-chain analysis matters, what types of data are available, and the key metrics you should know.",
+			"why_analytics": {
+				"title": "Why On-Chain Analytics Matters",
+				"content": "On-chain analytics provides transparency that doesn't exist in traditional markets. Every transaction, smart contract interaction, and token transfer is permanently recorded and publicly verifiable. This enables: **Verification over trust** - you can verify any claim about protocol activity, token holdings, or transaction history; **Early signal detection** - spot trends before they become mainstream by watching smart money movements; **Risk assessment** - evaluate protocol health, token distribution, and potential red flags; **Alpha generation** - find trading opportunities by analyzing whale behavior, liquidity flows, and market structure."
+			},
+			"data_types": {
+				"title": "Types of On-Chain Data",
+				"content": "Blockchain data comes in several forms: **Transaction data** includes sender, receiver, value, gas, and timestamps for every transaction; **Event logs** are emitted by smart contracts and contain application-specific data like swaps, deposits, and transfers; **State data** represents the current state of all accounts and smart contracts; **Block data** includes block-level information like proposer, MEV extraction, and finality; **Decoded data** transforms raw hex data into human-readable formats using ABIs and transaction decoding."
+			},
+			"key_metrics": {
+				"title": "Key Metrics to Track",
+				"content": "Different use cases require different metrics: **TVL (Total Value Locked)** measures the total value of assets deposited in a protocol; **Protocol revenue** shows how much a protocol earns from fees; **Active addresses** indicate user engagement and growth; **Transaction count** reflects network usage; **Gas consumption** shows which protocols and activities drive demand; **Token velocity** measures how frequently tokens change hands."
+			}
+		},
+		"defi_analytics": {
+			"title": "DeFi Analytics",
+			"content": "DeFi protocols generate rich on-chain data that can be analyzed to understand market dynamics, evaluate protocol health, and find yield opportunities.",
+			"tvl_analysis": {
+				"title": "TVL Analysis",
+				"content": "Total Value Locked (TVL) is the most widely used metric in DeFi, but it requires careful interpretation. Key considerations include: **Double counting** - the same dollar can be counted multiple times as it moves through different protocols; **Token price sensitivity** - TVL changes with token prices, not just deposits; **Chain comparison** - different chains have different definitions and methodologies; **Quality over quantity** - high TVL doesn't always mean a healthy protocol. DefiLlama has become the industry standard for TVL tracking, providing consistent methodology across chains and protocols."
+			},
+			"protocol_metrics": {
+				"title": "Protocol Metrics",
+				"content": "Beyond TVL, sophisticated investors analyze: **Revenue** - actual fees earned by the protocol; **Revenue to TVL ratio** - efficiency of capital utilization; **Token holder revenue** - what portion of fees goes to token holders; **P/S and P/E ratios** - traditional valuation metrics applied to protocols; **User metrics** - DAU, MAU, retention, and user growth; **Developer activity** - GitHub commits, contributor count, and ecosystem development."
+			},
+			"yield_analysis": {
+				"title": "Yield Analysis",
+				"content": "Yield farming requires understanding: **APY vs APR** - APY compounds, APR doesn't; **Sustainable vs unsustainable yields** - token emissions inflate APY but dilute holders; **Impermanent loss** - the hidden cost of liquidity provision; **Risk-adjusted returns** - higher yield often means higher risk. DeFiLlama Yields provides comprehensive yield data across protocols and chains."
+			}
+		},
+		"wallet_tracking": {
+			"title": "Wallet & Whale Tracking",
+			"content": "Tracking the activities of influential wallets can provide valuable market insights and trading signals.",
+			"smart_money": {
+				"title": "Smart Money Analysis",
+				"content": "Smart money refers to wallets with proven track records of profitable trading. Analytics platforms identify smart money by analyzing: **Historical performance** - wallets that consistently buy before pumps and sell before dumps; **Speed of action** - early participants in successful projects; **Information advantage** - wallets that seem to have insider knowledge; **Fund wallets** - known VC and institutional addresses. Nansen pioneered smart money labeling, while Arkham focuses on entity identification and wallet clustering."
+			},
+			"whale_watching": {
+				"title": "Whale Watching",
+				"content": "Whales are large holders whose actions can move markets. Key signals include: **Large transfers** - movement to/from exchanges often precedes price action; **Accumulation patterns** - whales buying during dips can signal bottoms; **Distribution patterns** - gradual selling by whales may indicate tops; **New whale entries** - fresh large buyers can indicate institutional interest. Whale Alert provides real-time notifications for large transfers across chains."
+			},
+			"holder_distribution": {
+				"title": "Holder Distribution",
+				"content": "Analyzing how tokens are distributed among holders reveals important information: **Concentration risk** - if few wallets hold most tokens, they can manipulate price; **Holder growth** - increasing number of holders suggests organic adoption; **Holder behavior** - are holders accumulating or distributing?; **Connected wallets** - cluster analysis can reveal if many 'holders' are actually one entity. Bubblemaps visualizes token distribution and wallet connections."
+			}
+		},
+		"trading_analytics": {
+			"title": "DEX & Trading Analytics",
+			"content": "Decentralized exchanges generate rich trading data that can be analyzed for market insights and trading opportunities.",
+			"dex_analysis": {
+				"title": "DEX Analysis",
+				"content": "Key metrics for DEX analysis include: **Volume** - total trading volume across pairs; **Liquidity** - depth of order books or liquidity pools; **Price impact** - how much a trade moves the price; **Fee generation** - revenue earned by liquidity providers; **Market share** - which DEXs dominate on each chain. DEX Screener provides real-time charting and analytics for decentralized trading pairs across all major chains."
+			},
+			"token_discovery": {
+				"title": "Token Discovery",
+				"content": "Finding new tokens early requires monitoring: **New pair creation** - when tokens first become tradeable; **Initial liquidity** - how much liquidity is provided at launch; **Early trading patterns** - accumulation vs distribution in first hours; **Social signals** - community growth and engagement; **Contract analysis** - checking for honeypots, taxes, and other red flags."
+			},
+			"derivatives": {
+				"title": "Derivatives Analytics",
+				"content": "On-chain derivatives (perpetuals, options) require different analysis: **Open interest** - total value of outstanding positions; **Funding rates** - premium paid by longs or shorts; **Liquidation levels** - prices where large positions get liquidated; **Options flow** - large options trades can signal informed bets. Laevitas specializes in crypto derivatives analytics."
+			}
+		},
+		"onchain_analytics": {
+			"title": "On-Chain Network Analytics",
+			"content": "Understanding network-level metrics provides insight into blockchain health and market cycles.",
+			"network_metrics": {
+				"title": "Network Metrics",
+				"content": "Core network health indicators include: **Hash rate / Stake rate** - security of the network; **Active addresses** - daily unique addresses transacting; **Transaction count** - overall network usage; **Fee revenue** - demand for block space; **Block production** - network performance and reliability. Glassnode provides comprehensive on-chain metrics for Bitcoin and Ethereum."
+			},
+			"eth_specific": {
+				"title": "Ethereum-Specific Analytics",
+				"content": "Ethereum's unique characteristics enable specialized analysis: **ETH burn rate** - how much ETH is being burned via EIP-1559; **Staking metrics** - validator count, staking ratio, withdrawal queue; **Layer 2 adoption** - activity moving to rollups; **Gas price dynamics** - network congestion and demand. Ultrasound.money tracks ETH supply changes and burn metrics."
+			},
+			"l2_analytics": {
+				"title": "Layer 2 Analytics",
+				"content": "As activity moves to L2s, new metrics become important: **L2 TVL** - value secured on each L2; **Batch posting** - frequency and cost of posting data to L1; **Sequencer revenue** - what L2 operators earn; **Cross-L2 flows** - capital movement between L2s; **Risk assessment** - maturity and decentralization of each L2. L2Beat is the definitive source for L2 analytics and risk assessment."
+			}
+		},
+		"sql_analytics": {
+			"title": "SQL Analytics & Dashboards",
+			"content": "SQL-based analytics platforms enable custom analysis and dashboard creation for researchers and analysts.",
+			"dune_intro": {
+				"title": "Dune Analytics",
+				"content": "Dune has become the standard for blockchain data analysis, offering: **Decoded tables** - smart contract events and functions in queryable tables; **Community queries** - thousands of public queries to learn from and fork; **Visualizations** - charts, tables, and counters for dashboards; **Real-time data** - continuously updated blockchain data; **Spellbook** - curated tables for common analytics needs. Learning Dune SQL opens up unlimited analysis possibilities."
+			},
+			"other_platforms": {
+				"title": "Other SQL Platforms",
+				"content": "Alternatives to Dune include: **Flipside Crypto** - offers bounty programs and similar SQL interface; **Footprint Analytics** - no-code option with drag-and-drop dashboards; **Nansen Query** - combines SQL with Nansen's labeled data; **BigQuery Public Datasets** - Google's free blockchain data. Each platform has different strengths, data coverage, and pricing models."
+			},
+			"building_dashboards": {
+				"title": "Building Dashboards",
+				"content": "Effective dashboards should: **Tell a story** - guide viewers through key insights; **Update automatically** - use parameterized queries for live data; **Be shareable** - embed in reports and social media; **Be maintainable** - document queries and use clear naming. Best practices include starting with existing dashboards, understanding the data model, and validating results against known values."
+			}
+		},
+		"data_infrastructure": {
+			"title": "Data Infrastructure",
+			"content": "Understanding the infrastructure behind blockchain data helps you choose the right tools and build custom solutions.",
+			"indexing": {
+				"title": "Blockchain Indexing",
+				"content": "Indexing transforms raw blockchain data into queryable formats. The Graph pioneered decentralized indexing with: **Subgraphs** - custom indexing schemas for specific protocols; **GraphQL API** - flexible query interface; **Decentralized network** - indexers compete to serve data; **Curation** - signal which subgraphs are valuable. Many protocols rely on subgraphs for their frontend data needs."
+			},
+			"data_providers": {
+				"title": "Data Providers",
+				"content": "Various providers offer blockchain data in different formats: **Allium** - real-time decoded data with high reliability; **Bitquery** - GraphQL APIs for multiple blockchains; **Covalent** - unified API across chains; **Moralis** - developer-friendly APIs; **QuickNode** - node provider with data features. Choice depends on use case, chains needed, and latency requirements."
+			},
+			"enterprise": {
+				"title": "Enterprise Data",
+				"content": "Institutional users often need: **Historical data** - complete chain history for backtesting; **High reliability** - SLAs and redundancy; **Compliance features** - audit trails and access controls; **Custom feeds** - tailored data products. Kaiko and Amberdata serve this market with institutional-grade data products."
+			}
+		},
+		"research": {
+			"title": "Research & Due Diligence",
+			"content": "Analytics tools support thorough research and due diligence on protocols and tokens.",
+			"protocol_research": {
+				"title": "Protocol Research",
+				"content": "Thorough protocol research includes: **Tokenomics analysis** - supply, distribution, vesting, inflation; **Smart contract review** - security, upgradeability, admin controls; **Team and investor research** - background, track record, conflicts; **Competitive analysis** - how the protocol compares to alternatives; **Community health** - Discord/Telegram activity, governance participation. Messari provides research reports and protocol profiles."
+			},
+			"token_analysis": {
+				"title": "Token Analysis",
+				"content": "Token-level research should cover: **On-chain metrics** - holder count, transfer activity, concentration; **Market metrics** - volume, liquidity, exchange listings; **Social metrics** - mentions, sentiment, influencer activity; **Development metrics** - commits, releases, developer activity; **Comparative metrics** - how metrics compare to peers. CoinGecko provides comprehensive token data, while IntoTheBlock offers on-chain signals."
+			},
+			"risk_assessment": {
+				"title": "Risk Assessment",
+				"content": "Risk evaluation includes: **Smart contract risk** - audit status, bug bounty, exploit history; **Counterparty risk** - centralization, custody, oracle dependencies; **Market risk** - liquidity, volatility, correlation; **Regulatory risk** - jurisdiction, compliance, legal status; **Team risk** - anonymity, track record, incentive alignment. Combining multiple data sources provides a comprehensive risk picture."
+			}
+		}
+	},
+	"glossary": {
+		"tvl": {
+			"term": "TVL (Total Value Locked)",
+			"definition": "The total value of crypto assets deposited in a DeFi protocol's smart contracts. TVL is the most common metric for measuring protocol size and adoption, though it can be affected by token price changes and double counting."
+		},
+		"mcap_fdv": {
+			"term": "Market Cap / FDV",
+			"definition": "Market Cap is the current price times circulating supply. FDV (Fully Diluted Valuation) is the current price times maximum supply. The ratio between them indicates how much dilution token holders might face."
+		},
+		"smart_money": {
+			"term": "Smart Money",
+			"definition": "Wallets that have demonstrated consistently profitable trading behavior or are associated with known institutional players. Tracking smart money movements can provide early signals about market trends."
+		},
+		"whale": {
+			"term": "Whale",
+			"definition": "A wallet holding a large amount of a particular asset. Whale movements, especially transfers to/from exchanges, are closely watched as they can significantly impact market prices."
+		},
+		"holder_distribution": {
+			"term": "Holder Distribution",
+			"definition": "The breakdown of how a token's supply is distributed among wallets. Healthy distribution shows broad ownership, while concentrated distribution indicates potential manipulation risk."
+		},
+		"protocol_revenue": {
+			"term": "Protocol Revenue",
+			"definition": "The fees earned by a protocol from its core activities (trading fees, interest, liquidation penalties, etc.). Revenue is often more reliable than TVL for assessing protocol health and token value."
+		},
+		"apy_apr": {
+			"term": "APY vs APR",
+			"definition": "APR (Annual Percentage Rate) is the simple interest rate without compounding. APY (Annual Percentage Yield) includes the effect of compound interest. In DeFi, high APYs often come from token emissions that dilute holders."
+		},
+		"subgraph": {
+			"term": "Subgraph",
+			"definition": "A custom indexing schema that defines how to extract, transform, and store data from a blockchain. Subgraphs are deployed on The Graph network and accessed via GraphQL queries."
+		},
+		"dau_mau": {
+			"term": "DAU / MAU",
+			"definition": "Daily Active Users and Monthly Active Users. In blockchain, these typically count unique addresses interacting with a protocol. The DAU/MAU ratio indicates user stickiness and engagement."
+		},
+		"open_interest": {
+			"term": "Open Interest",
+			"definition": "The total value of outstanding derivative positions (perpetuals, futures, options) that have not been settled. Rising open interest with price increases suggests conviction; rising OI with falling prices suggests potential liquidations."
+		},
+		"funding_rate": {
+			"term": "Funding Rate",
+			"definition": "Periodic payments between long and short perpetual traders to keep the perpetual price aligned with the spot price. Positive funding means longs pay shorts; negative means shorts pay longs. Extreme rates can signal market tops or bottoms."
+		},
+		"gas_burn": {
+			"term": "Gas Burn",
+			"definition": "The amount of ETH permanently destroyed through the EIP-1559 base fee mechanism. When more ETH is burned than issued as staking rewards, the ETH supply becomes deflationary (ultrasound money)."
+		}
+	}
+}
