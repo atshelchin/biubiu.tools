@@ -15,6 +15,9 @@ export default defineConfig({
 				brotliSize: true
 			})
 	],
+	worker: {
+		format: 'es'
+	},
 	server: {
 		fs: {
 			allow: ['packages', 'src', 'static']

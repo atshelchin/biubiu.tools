@@ -28,7 +28,7 @@ const pendingRequests = new Map<
  */
 function getWorker(): Worker {
 	if (!worker) {
-		worker = new Worker(new URL('../workers/membership-verifier.worker.ts', import.meta.url), {
+		worker = new Worker(new URL('../workers/membership-verifier.worker.js', import.meta.url), {
 			type: 'module'
 		});
 
