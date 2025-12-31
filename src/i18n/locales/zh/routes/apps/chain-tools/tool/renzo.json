@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Renzo - 简化流动性再质押",
+		"description": "Renzo 是发行 ezETH 的流动性再质押协议。通过自动化策略管理简化 EigenLayer 再质押。",
+		"keywords": "Renzo, ezETH, 流动性再质押, EigenLayer, LRT, REZ 代币"
+	},
+	"overview": "Renzo 是一个流动性再质押协议，通过发行 ezETH（一种流动性再质押代币）简化 EigenLayer 的参与。用户存入 ETH 或 LST 并获得赚取再质押收益的 ezETH。\n\nRenzo 处理 EigenLayer 的复杂性：选择运营商、选择 AVS（主动验证服务）和管理收益。这使得无需深入技术知识也能轻松参与再质押。\n\n随着 REZ 代币通过空投发行，Renzo 已建立治理体系并正在扩展到多链。ezETH 广泛集成于 DeFi，提供额外收益机会。",
+	"features": {
+		"1": {
+			"title": "ezETH 代币",
+			"description": "EigenLayer 流动性再质押代币"
+		},
+		"2": {
+			"title": "自动化策略",
+			"description": "Renzo 管理运营商和 AVS 选择"
+		},
+		"3": {
+			"title": "多链支持",
+			"description": "在以太坊和 L2 上可用"
+		},
+		"4": {
+			"title": "REZ 治理",
+			"description": "社区驱动的协议治理"
+		},
+		"5": {
+			"title": "DeFi 兼容",
+			"description": "在借贷和 DEX 中使用 ezETH"
+		},
+		"6": {
+			"title": "原生 ETH 支持",
+			"description": "无需 LST 直接存入 ETH"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "流动性再质押",
+			"description": "在保持流动性的同时赚取再质押收益"
+		},
+		"2": {
+			"title": "DeFi 策略",
+			"description": "在借贷和收益中使用 ezETH"
+		},
+		"3": {
+			"title": "L2 再质押",
+			"description": "从 Arbitrum、Base 等进行再质押"
+		},
+		"4": {
+			"title": "治理参与",
+			"description": "使用 REZ 对协议决策投票"
+		},
+		"5": {
+			"title": "杠杆再质押",
+			"description": "循环 ezETH 放大收益"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 ezETH？",
+			"answer": "ezETH 是 Renzo 的流动性再质押代币，代表在 EigenLayer 上再质押的 ETH。它赚取质押收益加上 EigenLayer 再质押收益。ezETH 可在 DeFi 中使用同时继续赚取这些收益。"
+		},
+		"2": {
+			"question": "什么是 REZ 代币？",
+			"answer": "REZ 是 Renzo 的治理代币，通过空投分发给早期用户和 ezETH 持有者。REZ 用于协议治理，可能有额外效用。您可以通过 Renzo 积分赚取 REZ。"
+		},
+		"3": {
+			"question": "如何获得 ezETH？",
+			"answer": "在 Renzo 应用上存入 ETH、stETH 或 wBETH 来铸造 ezETH。您也可以在 Arbitrum 或 Base 等 L2 上存入。或者在 DEX 上购买 ezETH。直接铸造可以赚取 Renzo 积分。"
+		},
+		"4": {
+			"question": "Renzo 安全吗？",
+			"answer": "Renzo 已经过审计，管理着数十亿美元的 TVL。风险包括智能合约风险、EigenLayer 削减风险和运营商风险。Renzo 通过在多个运营商间分散来降低单一运营商风险。请始终了解再质押风险。"
+		},
+		"5": {
+			"question": "Renzo vs Ether.fi：哪个更好？",
+			"answer": "两者都是领先的 LRT 协议。Renzo 提供多链存款和自动化策略。Ether.fi 有更大的 TVL 和自己的 L2（Scroll 合作）。两者都有代币（REZ vs ETHFI）。根据您的偏好两者都可以尝试。"
+		}
+	},
+	"cta": {
+		"ready": "准备好用 Renzo 再质押了吗？",
+		"button": "探索 Renzo",
+		"note": "简化流动性再质押"
+	}
+}

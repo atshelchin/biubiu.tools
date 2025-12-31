@@ -106,6 +106,12 @@ import { ondoDetail } from './ondo';
 import { hyperliquidDetail } from './hyperliquid';
 import { ensDetail } from './ens';
 import { pythDetail } from './pyth';
+import { symbioticDetail } from './symbiotic';
+import { kelpDetail } from './kelp';
+import { renzoDetail } from './renzo';
+import { etherfiDetail } from './etherfi';
+import { pufferDetail } from './puffer';
+import { swellDetail } from './swell';
 
 /**
  * All tool details mapped by tool ID
@@ -208,7 +214,13 @@ export const toolDetails: Record<string, ToolDetail> = {
 	ondo: ondoDetail,
 	hyperliquid: hyperliquidDetail,
 	ens: ensDetail,
-	pyth: pythDetail
+	pyth: pythDetail,
+	symbiotic: symbioticDetail,
+	kelp: kelpDetail,
+	renzo: renzoDetail,
+	etherfi: etherfiDetail,
+	puffer: pufferDetail,
+	swell: swellDetail
 };
 
 /**

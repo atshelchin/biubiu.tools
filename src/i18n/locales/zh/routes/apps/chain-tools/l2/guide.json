@@ -1,0 +1,172 @@
+{
+	"title": "Layer 2 指南：理解以太坊扩容解决方案",
+	"subtitle": "掌握 L2 技术 - Rollup 类型、生态系统、框架以及在 Layer 2 上构建应用",
+	"sections": {
+		"intro": {
+			"title": "理解 Layer 2",
+			"content": "<p>Layer 2（L2）解决方案是构建在以太坊（Layer 1）之上的扩容技术，在继承其安全性的同时更高效地处理交易。它们是以太坊可扩展性挑战的主要答案。</p><p>L2 不是在以太坊主网上处理每笔交易，而是将交易批量处理并将压缩的证明提交回 L1。这在保持以太坊安全保障的同时大幅降低了成本。</p><p>如今，L2 处理的交易量超过了以太坊主网，拥有数十亿美元的 TVL 和充满活力的生态系统。本指南涵盖从 L2 背后的技术到实际使用，甚至启动您自己的 L2 的所有内容。</p>"
+		},
+		"scaling_basics": {
+			"title": "扩容基础知识",
+			"content": "<p>在深入了解具体解决方案之前，先了解 Layer 2 为何存在以及它是如何工作的。</p>",
+			"why_l2": {
+				"title": "为什么需要 Layer 2？",
+				"content": "<p><strong>可扩展性问题：</strong>以太坊每秒可以处理约 15 笔交易。在高需求期间，这会导致：</p><ul><li>高 Gas 费用（高峰期简单转账需要 50-200 美元以上）</li><li>确认时间慢</li><li>dApp 用户体验差</li></ul><p><strong>不可能三角：</strong>区块链必须在去中心化、安全性和可扩展性之间取得平衡。以太坊优先考虑前两者，然后使用 L2 来实现可扩展性。</p><p><strong>L2 解决方案：</strong></p><ul><li>链下处理交易</li><li>继承以太坊的安全性</li><li>费用便宜 10-100 倍</li><li>更快的确认</li></ul>"
+			},
+			"rollup_concept": {
+				"title": "Rollup 的工作原理",
+				"content": "<p>Rollup 是主流的 L2 技术。它们将许多交易\"汇总\"成批次并发布到以太坊。</p><p><strong>基本流程：</strong></p><ol><li>用户向 L2 提交交易</li><li>排序器对交易进行排序和执行</li><li>交易被批量处理</li><li>批次被压缩并发布到以太坊</li><li>证明机制确保有效性</li></ol><p><strong>发布到以太坊的内容：</strong></p><ul><li>压缩的交易数据（或哈希）</li><li>执行后的新状态根</li><li>正确性证明（因 Rollup 类型而异）</li></ul><p>这允许数千笔 L2 交易由单笔 L1 交易保护。</p>"
+			},
+			"security_model": {
+				"title": "L2 安全模型",
+				"content": "<p>L2 继承以太坊的安全性，但程度因实现而异。</p><p><strong>关键安全属性：</strong></p><ul><li><strong>数据可用性：</strong>用户能否从 L1 数据重建 L2 状态？</li><li><strong>逃生通道：</strong>如果 L2 离线，用户能否提款？</li><li><strong>升级机制：</strong>谁可以升级合约，如何升级？</li><li><strong>排序器：</strong>它是中心化的吗？如果它进行审查会怎样？</li></ul><p><strong>L2BEAT</strong> 为每个 L2 提供详细的风险分析，在这些维度上对它们进行评级。在存入大量资金之前务必检查。</p><p><strong>重要提示：</strong>目前大多数 L2 都存在一些中心化风险。技术正在成熟，但要了解其中的权衡。</p>"
+			}
+		},
+		"rollup_types": {
+			"title": "Rollup 类型",
+			"content": "<p>Rollup 主要在如何向以太坊证明交易有效性方面有所不同。</p>",
+			"optimistic": {
+				"title": "Optimistic Rollup",
+				"content": "<p>Optimistic Rollup 假设交易是有效的，除非被证明无效。任何人都可以在争议期间挑战欺诈性状态。</p><p><strong>工作原理：</strong></p><ol><li>交易被执行，状态被发布</li><li>挑战期开始（通常为 7 天）</li><li>如果检测到无效状态，任何人都可以提交欺诈证明</li><li>如果被挑战，有争议的交易将在 L1 上重新执行</li><li>期限过后，状态被视为最终确定</li></ol><p><strong>主要参与者：</strong></p><ul><li><strong>Arbitrum One：</strong>TVL 最大的 L2，使用 WASM 执行的 Nitro 技术</li><li><strong>Optimism：</strong>OP Stack 先驱，连接 L2 的 Superchain 愿景</li><li><strong>Base：</strong>Coinbase 的 L2，增长最快，基于 OP Stack 构建</li></ul><p><strong>权衡：</strong></p><ul><li>优点：技术更简单，EVM 等效</li><li>缺点：官方桥提款延迟 7 天</li></ul>"
+			},
+			"zk": {
+				"title": "ZK Rollup",
+				"content": "<p>ZK（零知识）Rollup 生成加密证明来验证所有交易的有效性。不需要争议期。</p><p><strong>工作原理：</strong></p><ol><li>交易在链下执行</li><li>生成有效性证明（ZK-SNARK 或 ZK-STARK）</li><li>证明由 L1 智能合约验证</li><li>一旦证明被接受，状态立即最终确定</li></ol><p><strong>主要参与者：</strong></p><ul><li><strong>zkSync Era：</strong>原生账户抽象，用于超级链的 ZK Stack</li><li><strong>Starknet：</strong>STARK 证明，Cairo 语言，独特的架构</li><li><strong>Scroll：</strong>EVM 等效的 zkEVM，字节码兼容</li><li><strong>Polygon zkEVM：</strong>Polygon 2.0 愿景的一部分</li><li><strong>Linea：</strong>ConsenSys zkEVM</li></ul><p><strong>权衡：</strong></p><ul><li>优点：快速最终确定，无争议期</li><li>缺点：证明复杂，一些 EVM 差异</li></ul>"
+			},
+			"comparison": {
+				"title": "Optimistic vs ZK 比较",
+				"content": "<p><strong>最终确定性：</strong></p><ul><li>Optimistic：官方提款约 7 天</li><li>ZK：几分钟（一旦提交证明）</li></ul><p><strong>EVM 兼容性：</strong></p><ul><li>Optimistic：完全 EVM 等效，易于部署现有合约</li><li>ZK：各不相同 - 有些是等效的，有些需要修改</li></ul><p><strong>成本：</strong></p><ul><li>Optimistic：较低的 L2 成本，较高的 L1 数据成本</li><li>ZK：较高的证明成本，但正在快速改进</li></ul><p><strong>技术成熟度：</strong></p><ul><li>Optimistic：更成熟，经过实战检验</li><li>ZK：快速发展，有些仍在开发中</li></ul><p><strong>实际上：</strong>两种类型都已投入生产。根据您的具体需求和想要构建的生态系统进行选择。</p>"
+			}
+		},
+		"ecosystems": {
+			"title": "主要 L2 生态系统",
+			"content": "<p>每个主要 L2 都发展出了具有独特特征的生态系统。</p>",
+			"arbitrum": {
+				"title": "Arbitrum 生态系统",
+				"content": "<p>Arbitrum 是 TVL 最大的 L2，拥有主要的 DeFi 协议。</p><p><strong>关键数据：</strong></p><ul><li>L2 中最高的 TVL</li><li>强大的 DeFi 存在（GMX、Camelot、Radiant）</li><li>ARB 治理代币</li></ul><p><strong>技术：</strong></p><ul><li><strong>Nitro：</strong>基于 WASM 的执行以提高速度</li><li><strong>Stylus：</strong>支持 Rust/C++ 智能合约</li><li><strong>Orbit：</strong>构建 L3 的框架</li></ul><p><strong>生态亮点：</strong></p><ul><li>原生 DEX 和永续合约平台</li><li>游戏项目（Treasure、Pirate Nation）</li><li>不断增长的 NFT 场景</li></ul>"
+			},
+			"superchain": {
+				"title": "OP Stack 与 Superchain",
+				"content": "<p>Optimism 的愿景是\"Superchain\" - 一个共享安全性和基础设施的可互操作 L2 网络。</p><p><strong>OP Stack 链：</strong></p><ul><li><strong>OP Mainnet：</strong>原始的 Optimism 链</li><li><strong>Base：</strong>Coinbase 的 L2，大规模增长</li><li><strong>Zora：</strong>专注于 NFT 的 L2</li><li><strong>Mode：</strong>排序器费用分享</li><li><strong>还有 20 多个...</strong></li></ul><p><strong>Superchain 优势：</strong></p><ul><li>共享安全性和升级</li><li>跨链消息传递（即将推出）</li><li>排序器收入分享</li><li>集体治理</li></ul><p><strong>为什么这很重要：</strong>在一条 OP Stack 链上构建意味着可以轻松移植到其他链。网络效应非常强大。</p>"
+			},
+			"zk": {
+				"title": "ZK 生态系统",
+				"content": "<p>ZK Rollup 正在快速成熟，拥有自己独特的生态系统。</p><p><strong>zkSync Era：</strong></p><ul><li>从第一天起就有原生账户抽象</li><li>用于启动超级链的 ZK Stack</li><li>活跃的 DeFi 生态系统</li></ul><p><strong>Starknet：</strong></p><ul><li>Cairo 编程语言（非 EVM）</li><li>抗量子的 STARK 证明</li><li>独特的可扩展性方法</li></ul><p><strong>Scroll：</strong></p><ul><li>Type 2 zkEVM（EVM 等效）</li><li>从以太坊轻松迁移</li><li>不断增长的 DeFi 存在</li></ul><p><strong>Polygon zkEVM：</strong></p><ul><li>更广泛的 Polygon 生态系统的一部分</li><li>用于启动自定义链的 CDK</li><li>企业重点</li></ul>"
+			}
+		},
+		"using_l2s": {
+			"title": "使用 Layer 2",
+			"content": "<p>开始使用 L2 很简单，但需要理解几个关键概念。</p>",
+			"getting_started": {
+				"title": "入门指南",
+				"content": "<p><strong>添加 L2 网络：</strong></p><ol><li>访问 Chainlist.org</li><li>搜索您想要的 L2</li><li>点击\"添加到 MetaMask\"（或您的钱包）</li><li>确认添加网络</li></ol><p><strong>需要添加的关键网络：</strong></p><ul><li>Arbitrum One（Chain ID：42161）</li><li>Optimism（Chain ID：10）</li><li>Base（Chain ID：8453）</li><li>zkSync Era（Chain ID：324）</li></ul><p><strong>钱包兼容性：</strong></p><ul><li>大多数 EVM 钱包都可以与 Optimistic L2 一起使用</li><li>一些 ZK L2（Starknet）需要特定钱包</li><li>完全支持硬件钱包</li></ul>"
+			},
+			"bridging": {
+				"title": "跨链到 L2",
+				"content": "<p><strong>将资金转入 L2 的选项：</strong></p><ul><li><strong>官方桥：</strong>最安全，但速度慢（Optimistic 需要 7 天）</li><li><strong>第三方桥：</strong>快速（几分钟），风险略高</li><li><strong>CEX 提款：</strong>许多交易所现在支持直接 L2 提款</li></ul><p><strong>推荐方法：</strong></p><ol><li>检查您的交易所是否支持直接 L2 提款（最便宜）</li><li>如果不支持，使用 LI.FI 或 Jumper 等桥聚合器</li><li>对于大额资金，尽管需要等待，仍考虑使用官方桥</li></ol><p><strong>提款回 L1：</strong></p><ul><li>Optimistic：通过官方桥等待 7 天，或使用快速桥</li><li>ZK：通过官方桥快速（几分钟到几小时）</li></ul>"
+			},
+			"gas": {
+				"title": "Gas 和成本优化",
+				"content": "<p><strong>理解 L2 费用：</strong></p><p>L2 费用有两个组成部分：</p><ul><li><strong>L2 执行费用：</strong>在 L2 上计算的成本（非常便宜）</li><li><strong>L1 数据费用：</strong>将数据发布到以太坊的成本（随 L1 Gas 变化）</li></ul><p><strong>成本比较（典型值）：</strong></p><ul><li>简单转账：L2 上 0.01-0.10 美元 vs L1 上 2-10 美元</li><li>DEX 交换：L2 上 0.05-0.50 美元 vs L1 上 10-50 美元</li></ul><p><strong>EIP-4844 的影响：</strong></p><p>在 EIP-4844（blobs）之后，L2 费用下降了 10-100 倍。L1 数据现在存储在更便宜的\"blob 空间\"中。</p><p><strong>技巧：</strong></p><ul><li>L2 费用仍然随 L1 Gas 波动</li><li>尽可能批量操作</li><li>对于特定操作，某些 L2 比其他 L2 更便宜</li></ul>"
+			}
+		},
+		"frameworks": {
+			"title": "L2 框架",
+			"content": "<p>想启动自己的 L2？几个框架使这变得可行。</p>",
+			"op_stack": {
+				"title": "OP Stack",
+				"content": "<p>OP Stack 是为 Optimism 和 Superchain 提供动力的模块化、开源框架。</p><p><strong>主要特点：</strong></p><ul><li>经过实战检验的代码库（为 Base、Zora、Mode 提供动力）</li><li>模块化设计 - 根据需要交换组件</li><li>积极开发和升级</li><li>强大的社区和文档</li></ul><p><strong>启动链：</strong></p><ol><li>Fork OP Stack 仓库</li><li>配置链参数</li><li>部署 L1 合约</li><li>启动排序器和节点</li><li>加入 Superchain（可选但推荐）</li></ol><p><strong>考虑因素：</strong></p><ul><li>排序器运营成本</li><li>与 Optimism Collective 的关系</li><li>升级协调</li></ul>"
+			},
+			"orbit": {
+				"title": "Arbitrum Orbit",
+				"content": "<p>Orbit 允许任何人启动结算到 Arbitrum 的 L3 链。</p><p><strong>L3 概念：</strong></p><ul><li>L3 结算到 L2，L2 结算到 L1</li><li>更便宜的费用（可能再降低 10 倍）</li><li>针对特定用例的自定义配置</li></ul><p><strong>主要特点：</strong></p><ul><li>可定制的 Gas 代币</li><li>数据可用性层的选择</li><li>支持多种编程语言的 Stylus</li></ul><p><strong>示例：Degen Chain</strong></p><p>Degen Chain 作为 Farcaster 社区的 Orbit L3 启动。它展示了 L3 如何以超低费用服务于特定社区。</p>"
+			},
+			"zk": {
+				"title": "ZK 框架",
+				"content": "<p><strong>ZK Stack（zkSync）：</strong></p><ul><li>启动连接到 zkSync 的 ZK 超级链</li><li>链之间的原生互操作性</li><li>共享流动性潜力</li></ul><p><strong>Polygon CDK：</strong></p><ul><li>ZK 链的模块化框架</li><li>连接到 Polygon 的 AggLayer</li><li>企业友好，具有合规选项</li></ul><p><strong>与 Optimistic 的关键区别：</strong></p><p>ZK 框架需要更多的计算开销来进行证明，但提供更快的最终确定性。它们最适合即时最终确定性很重要的用例。</p><p><strong>权衡：</strong>ZK Stack 开发更复杂，但对于特定应用，技术优势可能值得。</p>"
+			}
+		},
+		"analytics": {
+			"title": "L2 分析与研究",
+			"content": "<p>了解 L2 指标有助于您做出关于在哪里构建和使用的明智决策。</p>",
+			"metrics": {
+				"title": "关键指标",
+				"content": "<p><strong>总锁定价值（TVL）：</strong></p><ul><li>衡量存入 L2 的资产</li><li>表示用户信任和生态系统规模</li><li>通过 L2BEAT 比较</li></ul><p><strong>每日交易量：</strong></p><ul><li>活动指标</li><li>与以太坊主网比较</li><li>一些 L2 现在超过了 L1 交易数量</li></ul><p><strong>平均费用：</strong></p><ul><li>每笔交易的成本</li><li>因操作类型而异</li><li>针对您的用例比较不同 L2</li></ul><p><strong>活跃地址：</strong></p><ul><li>进行交易的唯一钱包</li><li>表示真实用户采用</li><li>警惕空投刷量导致的膨胀</li></ul>"
+			},
+			"risk": {
+				"title": "风险评估",
+				"content": "<p><strong>L2BEAT 风险框架：</strong></p><p>L2BEAT 在多个风险类别中对 L2 进行评级：</p><ul><li><strong>状态验证：</strong>如何证明状态正确？</li><li><strong>数据可用性：</strong>交易数据存储在哪里？</li><li><strong>可升级性：</strong>谁可以升级，多快可以升级？</li><li><strong>排序器故障：</strong>如果排序器停止会怎样？</li><li><strong>提议者故障：</strong>如果没有人提议状态会怎样？</li></ul><p><strong>当前状态：</strong></p><ul><li>大多数 L2 仍有辅助轮（可升级、中心化排序器）</li><li>这是有意为之的，以便在早期阶段快速修复</li><li>关注渐进式去中心化</li></ul><p><strong>需要关注的事项：</strong></p><ul><li>安全委员会多签（不是单一密钥）</li><li>升级时间锁</li><li>逃生通道功能</li><li>去中心化路线图</li></ul>"
+			}
+		},
+		"advanced": {
+			"title": "高级主题",
+			"content": "<p>面向推动 L2 技术边界的构建者和研究人员。</p>",
+			"data_availability": {
+				"title": "数据可用性",
+				"content": "<p>数据可用性（DA）是指交易数据存储在哪里，以便任何人都可以验证 L2 状态。</p><p><strong>选项：</strong></p><ul><li><strong>以太坊 calldata：</strong>原始方法，昂贵但安全</li><li><strong>以太坊 blobs（EIP-4844）：</strong>更便宜，临时存储（2 周）</li><li><strong>Alt-DA（Celestia、EigenDA）：</strong>最便宜，但增加信任假设</li></ul><p><strong>Validium vs Rollup：</strong></p><ul><li>Rollup：DA 在以太坊上（完全安全继承）</li><li>Validium：DA 在链下（更便宜但需要信任）</li></ul><p><strong>权衡：</strong>更便宜的 DA = 更低的成本但额外的信任假设。目前，blob 数据提供了最佳平衡。</p>"
+			},
+			"sequencer": {
+				"title": "排序器去中心化",
+				"content": "<p>目前大多数 L2 运行中心化排序器。这是一个已知的限制，正在积极解决。</p><p><strong>排序器职责：</strong></p><ul><li>排序交易</li><li>执行并生产区块</li><li>向 L1 提交批次</li></ul><p><strong>中心化风险：</strong></p><ul><li>审查（排序器拒绝交易）</li><li>MEV 提取</li><li>单点故障</li></ul><p><strong>缓解策略：</strong></p><ul><li>逃生通道（通过 L1 强制包含）</li><li>共享排序网络</li><li>基于排序（L1 提议）</li><li>去中心化排序器集</li></ul><p><strong>未来：</strong>多个团队正在研究去中心化排序。预计在 2024-2025 年会有重大进展。</p>"
+			},
+			"interop": {
+				"title": "L2 互操作性",
+				"content": "<p>随着 L2 数量的增加，互操作性变得至关重要。</p><p><strong>当前状态：</strong></p><ul><li>每个 L2 相对隔离</li><li>在 L2 之间移动需要跨链</li><li>流动性碎片化</li></ul><p><strong>正在出现的解决方案：</strong></p><ul><li><strong>Superchain 互操作：</strong>OP Stack 链之间的原生消息传递</li><li><strong>共享排序：</strong>跨 L2 的原子交易</li><li><strong>意图驱动的桥：</strong>快速跨 L2 转账</li><li><strong>聚合层：</strong>共享结算（AggLayer、Avail）</li></ul><p><strong>愿景：</strong>最终，用户不需要考虑自己在哪个 L2 上。资产和应用应该在 Rollup 生态系统中无缝工作。</p>"
+			},
+			"future": {
+				"title": "未来发展",
+				"content": "<p><strong>新兴 L2 技术：</strong></p><ul><li><strong>MegaETH：</strong>亚毫秒延迟的实时区块链</li><li><strong>Eclipse：</strong>作为以太坊 L2 的 Solana VM</li><li><strong>Fuel：</strong>使用 Sway 语言的并行交易执行</li></ul><p><strong>技术趋势：</strong></p><ul><li>更快的 ZK 证明（硬件加速）</li><li>替代 VM（SVM、FuelVM、MoveVM）</li><li>基于 Rollup（L1 排序）</li><li>主权 Rollup（自己的结算）</li></ul><p><strong>市场演变：</strong></p><ul><li>围绕主要生态系统的整合</li><li>用于自定义需求的应用特定 L3</li><li>跨 L2 抽象层</li></ul><p>L2 格局正在快速演变。今天存在的链和框架在 2-3 年后可能看起来非常不同。</p>"
+			}
+		}
+	},
+	"glossary": {
+		"rollup": {
+			"term": "Rollup",
+			"definition": "一种 Layer 2 扩容解决方案，在链下执行交易，将它们批量处理，并将压缩数据发布到以太坊以继承安全性。"
+		},
+		"optimistic_rollup": {
+			"term": "Optimistic Rollup",
+			"definition": "假设交易有效除非被挑战的 Rollup。在争议期（通常为 7 天）使用欺诈证明来捕获无效状态。"
+		},
+		"zk_rollup": {
+			"term": "ZK Rollup",
+			"definition": "为每个批次生成加密有效性证明的 Rollup。不需要争议期 - 一旦证明在 L1 上被验证，状态就是最终的。"
+		},
+		"sequencer": {
+			"term": "排序器",
+			"definition": "对交易进行排序、执行它们并生产 L2 区块的实体。目前大多数 L2 都有中心化排序器，并计划去中心化。"
+		},
+		"fraud_proof": {
+			"term": "欺诈证明",
+			"definition": "Optimistic Rollup 中的一种机制，任何人都可以通过在挑战期内在 L1 上重新执行有争议的交易来证明无效状态。"
+		},
+		"validity_proof": {
+			"term": "有效性证明",
+			"definition": "一种加密证明（ZK-SNARK 或 ZK-STARK），数学上验证批次中的所有交易都被正确执行。"
+		},
+		"data_availability": {
+			"term": "数据可用性",
+			"definition": "交易数据可供任何人下载和验证 L2 状态的保证。对安全性和逃生通道至关重要。"
+		},
+		"challenge_period": {
+			"term": "挑战期",
+			"definition": "Optimistic Rollup 中的时间窗口（通常为 7 天），在此期间任何人都可以提交欺诈证明来争议无效状态。"
+		},
+		"escape_hatch": {
+			"term": "逃生通道",
+			"definition": "一种机制，允许用户即使在 L2 排序器离线或审查交易时也能直接提款到 L1。"
+		},
+		"l3": {
+			"term": "L3（Layer 3）",
+			"definition": "结算到 L2 而不是直接结算到以太坊的链。为专门用例提供更低的成本。"
+		},
+		"superchain": {
+			"term": "Superchain",
+			"definition": "Optimism 对可互操作的 OP Stack L2 网络的愿景，共享安全性、升级和跨链消息传递。"
+		},
+		"zkevm": {
+			"term": "zkEVM",
+			"definition": "与以太坊虚拟机兼容的 ZK Rollup，允许现有智能合约以最少或无需修改即可运行。"
+		}
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Swell Network - 流动性质押与再质押",
+		"description": "Swell Network 提供用于流动性质押的 swETH 和用于再质押的 rswETH。具有 DeFi 集成的完整质押解决方案。",
+		"keywords": "Swell Network, swETH, rswETH, 流动性质押, 再质押, SWELL 代币"
+	},
+	"overview": "Swell Network 是一个流动性质押和再质押协议，同时提供 swETH（流动性质押代币）和 rswETH（流动性再质押代币）。这种双产品方法为用户提供了质押策略的灵活性。\n\nswETH 提供简单的流动性质押收益，而 rswETH 添加 EigenLayer 再质押以获得额外收益。两种代币都集成到主要 DeFi 协议中。\n\nSwell 已宣布其由再质押驱动的自有 L2 Rollup，将自己定位为不仅仅是质押协议。SWELL 代币预计将为治理而发行。",
+	"features": {
+		"1": {
+			"title": "双产品",
+			"description": "swETH 用于质押，rswETH 用于再质押"
+		},
+		"2": {
+			"title": "Swell L2",
+			"description": "即将推出的由再质押保护的 Rollup"
+		},
+		"3": {
+			"title": "DeFi 原生",
+			"description": "跨协议深度集成"
+		},
+		"4": {
+			"title": "珍珠计划",
+			"description": "通过生态参与赚取积分"
+		},
+		"5": {
+			"title": "非托管",
+			"description": "去中心化验证者集"
+		},
+		"6": {
+			"title": "多策略",
+			"description": "选择您的风险/收益配置"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "流动性质押",
+			"description": "质押 ETH，获得 swETH"
+		},
+		"2": {
+			"title": "流动性再质押",
+			"description": "用 rswETH 再质押获得额外收益"
+		},
+		"3": {
+			"title": "DeFi 策略",
+			"description": "在借贷中使用 swETH/rswETH"
+		},
+		"4": {
+			"title": "积分挖矿",
+			"description": "赚取珍珠以获得 SWELL 空投"
+		},
+		"5": {
+			"title": "L2 参与",
+			"description": "为 Swell L2 发布做准备"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "swETH 和 rswETH 有什么区别？",
+			"answer": "swETH 是简单的流动性质押代币，赚取共识收益。rswETH 是流动性再质押代币，同时赚取质押和 EigenLayer 再质押收益。rswETH 收益更高但有额外的再质押风险。"
+		},
+		"2": {
+			"question": "什么是 Swell L2？",
+			"answer": "Swell 正在构建自己的由再质押保护的 Layer 2 Rollup。rswETH 持有者将帮助保护这个 L2。这为 Swell 的再质押产品创造了额外效用，并为参与者带来潜在奖励。"
+		},
+		"3": {
+			"question": "什么是珍珠？",
+			"answer": "珍珠是 Swell 的积分计划。通过持有 swETH 或 rswETH 并在 DeFi 中使用来赚取珍珠。珍珠预计将在代币发行时转换为 SWELL 代币。更多珍珠 = 更大空投。"
+		},
+		"4": {
+			"question": "Swell 安全吗？",
+			"answer": "Swell 已经过审计并运行去中心化验证者集。swETH 只有质押风险。rswETH 增加了 EigenLayer 再质押风险。该协议在管理大量 TVL 的同时运行可靠。标准智能合约风险适用。"
+		},
+		"5": {
+			"question": "应该选择 swETH 还是 rswETH？",
+			"answer": "如果您想要风险较低的简单质押，选择 swETH。如果您想要最大收益并接受再质押风险，选择 rswETH。您也可以在两者之间分配以实现多元化。"
+		}
+	},
+	"cta": {
+		"ready": "准备好用 Swell 质押了吗？",
+		"button": "探索 Swell",
+		"note": "流动性质押与再质押"
+	}
+}

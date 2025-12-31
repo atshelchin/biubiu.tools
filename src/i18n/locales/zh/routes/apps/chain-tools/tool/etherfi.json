@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Ether.fi - 非托管流动性质押",
+		"description": "Ether.fi 是非托管质押协议，提供 eETH 和 weETH。保留您的密钥同时赚取质押和再质押收益。",
+		"keywords": "Ether.fi, eETH, weETH, 流动性质押, 再质押, ETHFI 代币"
+	},
+	"overview": "Ether.fi 是一个去中心化的非托管流动性质押和再质押协议。用户质押 ETH 同时保留对其密钥的控制——这是质押领域的独特功能。\n\n该协议发行 eETH（变基型）和 weETH（包装型，非变基）代币，同时赚取常规质押收益和 EigenLayer 再质押收益。Ether.fi 已成为最大的流动性再质押协议之一。\n\n凭借 ETHFI 代币和强大的 DeFi 集成，Ether.fi 提供完整的质押解决方案。协议正在通过 Scroll 合作伙伴关系和自己的 L2 愿景进行扩展。",
+	"features": {
+		"1": {
+			"title": "非托管",
+			"description": "质押者保留对密钥的控制"
+		},
+		"2": {
+			"title": "eETH 和 weETH",
+			"description": "变基和包装代币选项"
+		},
+		"3": {
+			"title": "原生再质押",
+			"description": "自动 EigenLayer 集成"
+		},
+		"4": {
+			"title": "ETHFI 代币",
+			"description": "治理和效用代币"
+		},
+		"5": {
+			"title": "DeFi 集成",
+			"description": "weETH 在 DeFi 中广泛支持"
+		},
+		"6": {
+			"title": "独立质押者支持",
+			"description": "使用 eETH 运行自己的验证节点"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "流动性质押",
+			"description": "质押 ETH 并获得 eETH"
+		},
+		"2": {
+			"title": "再质押收益",
+			"description": "自动赚取 EigenLayer 收益"
+		},
+		"3": {
+			"title": "DeFi 抵押品",
+			"description": "在借贷协议中使用 weETH"
+		},
+		"4": {
+			"title": "独立质押",
+			"description": "非托管运营验证节点"
+		},
+		"5": {
+			"title": "收益策略",
+			"description": "在 DeFi 中叠加 weETH 收益"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "eETH 和 weETH 有什么区别？",
+			"answer": "eETH 是变基型的——随着收益积累您的余额会增加。weETH 是包装的 eETH，不会变基——它相对于 ETH 的价值会增加。weETH 更适合 DeFi（无变基问题）。两者代表相同的底层头寸。"
+		},
+		"2": {
+			"question": "什么是 ETHFI 代币？",
+			"answer": "ETHFI 是 Ether.fi 的治理代币，通过空投分发。它用于治理投票并在协议中有效用。ETHFI 可以通过忠诚度积分和各种项目赚取。"
+		},
+		"3": {
+			"question": "Ether.fi 如何实现非托管？",
+			"answer": "与大多数质押协议不同，Ether.fi 使用独特设计，让质押者控制其提款密钥。即使 Ether.fi 消失，您仍然可以提款。这是通过分布式密钥生成实现的。"
+		},
+		"4": {
+			"question": "Ether.fi 安全吗？",
+			"answer": "Ether.fi 已经过广泛审计，管理着数十亿美元的 TVL。非托管设计降低了协议风险。标准风险包括智能合约风险和 EigenLayer 削减风险。它是经过更多实战检验的 LRT 协议之一。"
+		},
+		"5": {
+			"question": "Ether.fi vs Lido：应该用哪个？",
+			"answer": "Lido 成熟且广泛集成但没有原生再质押。Ether.fi 提供再质押收益加上非托管设计。weETH 赚取更多收益但有再质押风险。简单使用 Lido，最大化收益使用 Ether.fi。"
+		}
+	},
+	"cta": {
+		"ready": "准备好用 Ether.fi 质押了吗？",
+		"button": "探索 Ether.fi",
+		"note": "非托管流动性质押"
+	}
+}

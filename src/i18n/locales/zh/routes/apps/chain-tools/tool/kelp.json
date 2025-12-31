@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Kelp DAO - 流动性再质押协议",
+		"description": "Kelp DAO 提供 rsETH，一种用于 EigenLayer 的流动性再质押代币。在保持流动性的同时赚取再质押收益。",
+		"keywords": "Kelp DAO, rsETH, 流动性再质押, EigenLayer, LRT, DeFi"
+	},
+	"overview": "Kelp DAO 是一个流动性再质押协议，发行 rsETH——代表在 EigenLayer 上再质押的 ETH 的代币。这使用户能够在保持资产流动性用于 DeFi 的同时赚取再质押收益。\n\nrsETH 通过处理运营商选择、AVS 管理和收益分配来简化再质押。用户存入 LST（stETH、ETHx 等）并获得可在 DeFi 中使用的 rsETH。\n\nKelp 已成长为最大的流动性再质押协议之一，rsETH 已集成到主要 DeFi 平台，用于借贷、交易和收益策略。",
+	"features": {
+		"1": {
+			"title": "rsETH 代币",
+			"description": "EigenLayer 流动性再质押代币"
+		},
+		"2": {
+			"title": "多 LST 支持",
+			"description": "接受 stETH、ETHx 等"
+		},
+		"3": {
+			"title": "DeFi 集成",
+			"description": "在 DeFi 协议中使用 rsETH"
+		},
+		"4": {
+			"title": "托管再质押",
+			"description": "Kelp 处理运营商选择"
+		},
+		"5": {
+			"title": "收益聚合",
+			"description": "赚取质押+再质押收益"
+		},
+		"6": {
+			"title": "Kelp 里程",
+			"description": "通过生态参与赚取积分"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "流动性再质押",
+			"description": "再质押同时保持流动性"
+		},
+		"2": {
+			"title": "DeFi 抵押品",
+			"description": "在借贷中使用 rsETH 作为抵押品"
+		},
+		"3": {
+			"title": "收益叠加",
+			"description": "结合再质押与 DeFi 收益"
+		},
+		"4": {
+			"title": "积分挖矿",
+			"description": "赚取 EigenLayer + Kelp 积分"
+		},
+		"5": {
+			"title": "简化再质押",
+			"description": "无需管理运营商即可再质押"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 rsETH？",
+			"answer": "rsETH 是 Kelp 的流动性再质押代币。它代表通过 Kelp 在 EigenLayer 上再质押的 ETH。rsETH 赚取再质押收益，可在 DeFi 中使用。rsETH 相对于 ETH 的价值会随着收益积累而增加。"
+		},
+		"2": {
+			"question": "Kelp 与 Ether.fi 有何不同？",
+			"answer": "两者都提供流动性再质押。Kelp 接受多种 LST（stETH、ETHx 等），而 Ether.fi 使用原生 ETH。Kelp 发行 rsETH；Ether.fi 发行 eETH。两者都与 EigenLayer 集成。根据您想存入的代币进行选择。"
+		},
+		"3": {
+			"question": "什么是 Kelp 里程？",
+			"answer": "Kelp 里程是通过持有 rsETH 和参与 Kelp 生态系统赚取的积分。里程可能在代币发行时转换为 KELP 代币。通过存入更多金额和在 DeFi 中使用 rsETH 可以赚取更多里程。"
+		},
+		"4": {
+			"question": "rsETH 安全吗？",
+			"answer": "rsETH 继承了底层 LST、EigenLayer 再质押和 Kelp 智能合约的风险。Kelp 已经过审计。再质押增加了 AVS 验证的削减风险。存入时请考虑这些分层风险。"
+		},
+		"5": {
+			"question": "如何获得 rsETH？",
+			"answer": "在 Kelp 网站存入支持的 LST（stETH、ETHx、sfrxETH）来铸造 rsETH。您也可以在 Curve 或 Balancer 等 DEX 上购买 rsETH。直接铸造可以赚取 Kelp 里程。"
+		}
+	},
+	"cta": {
+		"ready": "准备好用 rsETH 赚取收益了吗？",
+		"button": "探索 Kelp",
+		"note": "流动性再质押协议"
+	}
+}

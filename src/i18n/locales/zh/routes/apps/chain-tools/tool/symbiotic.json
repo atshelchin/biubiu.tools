@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Symbiotic - 模块化再质押基础设施",
+		"description": "Symbiotic 是模块化再质押协议，支持任意资产再质押。灵活的安全层，支持多种抵押品类型。",
+		"keywords": "Symbiotic, 再质押, 模块化, EigenLayer替代, 多资产再质押, DeFi"
+	},
+	"overview": "Symbiotic 是一个模块化再质押协议，旨在成为 EigenLayer 的灵活替代方案。与 EigenLayer 只专注于 ETH 再质押不同，Symbiotic 支持任意资产作为抵押品。\n\n该协议允许网络自定义其安全参数，包括选择何种资产作为质押品、削减条件和运营商要求。这种模块化使其对多样化需求的项目极具吸引力。\n\nSymbiotic 由 Lido 联合创始人和 Paradigm 支持，代表着再质押领域的另一种愿景——一个不是 EigenLayer 主导的世界。协议已上线并正在积分活动中。",
+	"features": {
+		"1": {
+			"title": "多资产再质押",
+			"description": "支持 ETH 之外的多种资产"
+		},
+		"2": {
+			"title": "模块化设计",
+			"description": "网络自定义安全参数"
+		},
+		"3": {
+			"title": "灵活抵押",
+			"description": "使用任意 ERC-20 代币作为抵押品"
+		},
+		"4": {
+			"title": "可定制削减",
+			"description": "网络定义削减条件"
+		},
+		"5": {
+			"title": "无许可创建",
+			"description": "任何人都可创建网络"
+		},
+		"6": {
+			"title": "顶级支持",
+			"description": "Lido 联创和 Paradigm 背书"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "另类再质押",
+			"description": "EigenLayer 之外的再质押选择"
+		},
+		"2": {
+			"title": "多资产质押",
+			"description": "使用 stETH、wBTC 等资产质押"
+		},
+		"3": {
+			"title": "网络启动",
+			"description": "为新网络引导安全性"
+		},
+		"4": {
+			"title": "积分获取",
+			"description": "赚取 Symbiotic 积分参与空投"
+		},
+		"5": {
+			"title": "流动性再质押",
+			"description": "通过 LRT 获取 Symbiotic 敞口"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Symbiotic 与 EigenLayer 有何不同？",
+			"answer": "EigenLayer 专注于 ETH 和 LST 再质押，有着自己的运营商集。Symbiotic 更加模块化——任何资产都可以用作抵押品，网络可以完全自定义其安全参数。这使得 Symbiotic 更加灵活但可能更加分散。"
+		},
+		"2": {
+			"question": "谁在 Symbiotic 背后？",
+			"answer": "Symbiotic 由 Lido 联合创始人创立，并获得 Paradigm 的支持。这代表了一个有趣的动态——Lido 生态系统创建了一个 EigenLayer 替代方案，为再质押带来竞争。"
+		},
+		"3": {
+			"question": "如何获得 Symbiotic 积分？",
+			"answer": "在 Symbiotic 中存入支持的资产（stETH、wstETH、cbETH 等）来赚取积分。积分预计会转换为代币。您还可以使用支持 Symbiotic 的 LRT（如 Mellow Finance）来同时赚取多种积分。"
+		},
+		"4": {
+			"question": "Symbiotic 安全吗？",
+			"answer": "Symbiotic 已经过审计，由知名团队创建。然而，它比 EigenLayer 更新，实战检验更少。模块化设计意味着安全性部分取决于各个网络的配置方式。"
+		},
+		"5": {
+			"question": "应该选择 Symbiotic 还是 EigenLayer？",
+			"answer": "许多用户两者都会使用以实现多元化。EigenLayer 更大、更成熟，有更多活跃的 AVS。Symbiotic 更新、更灵活，可能有不错的空投。考虑根据您持有的资产和风险偏好进行分配。"
+		}
+	},
+	"cta": {
+		"ready": "准备好探索模块化再质押了吗？",
+		"button": "探索 Symbiotic",
+		"note": "模块化再质押协议"
+	}
+}

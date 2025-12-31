@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Puffer Finance - 原生流动性再质押",
+		"description": "Puffer Finance 提供具有原生再质押和防削减技术的 pufETH。通过 Secure-Signer 保护实现安全再质押。",
+		"keywords": "Puffer Finance, pufETH, 流动性再质押, 防削减, PUFFER 代币, EigenLayer"
+	},
+	"overview": "Puffer Finance 是一个原生流动性再质押协议，发行 pufETH。Puffer 的独特之处在于其使用 Secure-Signer 的防削减技术，通过硬件安全降低验证者削减风险。\n\nPuffer 实现原生再质押，ETH 在一个步骤中完成质押和再质押，最大化资本效率。该协议获得了大量 VC 资金和以太坊基金会的支持。\n\n凭借 PUFFER 代币和不断增长的 TVL，Puffer 已确立自己作为领先 LRT 协议的地位，专注于安全性和去中心化。",
+	"features": {
+		"1": {
+			"title": "pufETH 代币",
+			"description": "具有原生再质押的流动性再质押代币"
+		},
+		"2": {
+			"title": "Secure-Signer",
+			"description": "验证者防削减技术"
+		},
+		"3": {
+			"title": "原生再质押",
+			"description": "一笔交易完成质押和再质押"
+		},
+		"4": {
+			"title": "PUFFER 代币",
+			"description": "治理和效用代币"
+		},
+		"5": {
+			"title": "低门槛",
+			"description": "验证者可以用更少 ETH 启动"
+		},
+		"6": {
+			"title": "EF 支持",
+			"description": "获得以太坊基金会资助"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "原生再质押",
+			"description": "自动再质押的 ETH 质押"
+		},
+		"2": {
+			"title": "安全验证",
+			"description": "运行具有削减保护的验证节点"
+		},
+		"3": {
+			"title": "DeFi 集成",
+			"description": "在借贷和 DEX 中使用 pufETH"
+		},
+		"4": {
+			"title": "积分挖矿",
+			"description": "赚取 Puffer 积分获得奖励"
+		},
+		"5": {
+			"title": "杠杆策略",
+			"description": "循环 pufETH 放大收益"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 pufETH？",
+			"answer": "pufETH 是 Puffer 的流动性再质押代币。它代表既进行质押（赚取共识收益）又在 EigenLayer 上再质押（赚取再质押收益）的 ETH。pufETH 可在 DeFi 中使用同时赚取这些收益。"
+		},
+		"2": {
+			"question": "什么是 Secure-Signer？",
+			"answer": "Secure-Signer 是 Puffer 的防削减技术，使用安全飞地（TEE）防止验证者签署可削减的消息。这显著降低了削减风险，使验证者可以用更少的抵押品运行。"
+		},
+		"3": {
+			"question": "什么是 PUFFER 代币？",
+			"answer": "PUFFER 是 Puffer Finance 的治理代币，通过空投分发。它用于治理决策，可能有未来效用。用户通过积分累积赚取 PUFFER。"
+		},
+		"4": {
+			"question": "Puffer 安全吗？",
+			"answer": "Puffer 有独特的安全功能（Secure-Signer）降低削减风险。该协议已经审计并获得 EF 资助。标准风险包括智能合约风险和 EigenLayer 风险。防削减技术是一个重要的安全特性。"
+		},
+		"5": {
+			"question": "如何获得 pufETH？",
+			"answer": "在 Puffer 网站存入 ETH 或 stETH 来铸造 pufETH。您也可以在 DEX 上购买 pufETH。直接铸造可以赚取 Puffer 积分。pufETH 然后可以在 DeFi 协议中使用。"
+		}
+	},
+	"cta": {
+		"ready": "准备好安全再质押了吗？",
+		"button": "探索 Puffer",
+		"note": "原生流动性再质押"
+	}
+}
