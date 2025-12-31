@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Harvest Finance - 收益农业聚合器",
+		"description": "Harvest Finance 自动化跨 DeFi 协议的收益农业。存入自动复利奖励的金库以优化 APY。",
+		"keywords": "Harvest Finance, FARM 代币, 收益聚合器, 自动复利, DeFi 金库, 农业"
+	},
+	"overview": "Harvest Finance 是一个收益农业聚合器，优化和自动复利跨 DeFi 的农业策略。将资产存入 Harvest 金库，协议处理领取、出售和再投资奖励。\n\nHarvest 支持跨主要 DeFi 协议的策略，如 Curve、Convex、Aave 等。自动复利功能通过频繁再投资收益最大化回报。\n\nFARM 代币治理协议并赚取协议利润份额。Harvest 是早期收益聚合器之一，自 2020 年以来运营。",
+	"features": {
+		"1": {
+			"title": "自动复利",
+			"description": "自动奖励再投资"
+		},
+		"2": {
+			"title": "多协议",
+			"description": "跨 DeFi 的策略"
+		},
+		"3": {
+			"title": "FARM 代币",
+			"description": "治理和利润分成"
+		},
+		"4": {
+			"title": "Gas 优化",
+			"description": "社会化 gas 成本"
+		},
+		"5": {
+			"title": "多链",
+			"description": "以太坊、Polygon 等"
+		},
+		"6": {
+			"title": "fTokens",
+			"description": "存款收据代币"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "收益农业",
+			"description": "优化的农业策略"
+		},
+		"2": {
+			"title": "自动复利",
+			"description": "免手动收益增长"
+		},
+		"3": {
+			"title": "Gas 节省",
+			"description": "分摊收割成本"
+		},
+		"4": {
+			"title": "FARM 质押",
+			"description": "赚取协议利润"
+		},
+		"5": {
+			"title": "LP 农业",
+			"description": "优化 LP 奖励"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "自动复利如何工作？",
+			"answer": "Harvest 金库自动收割农业奖励、出售并再投资到策略中。这频繁发生（通常每天）。比您手动能做到的更频繁复利导致更高的有效 APY。"
+		},
+		"2": {
+			"question": "什么是 fTokens？",
+			"answer": "当您存入 Harvest 时，您收到代表您份额的 fTokens（如 fUSDC）。随着收益复利，fTokens 价值升值。赎回 fTokens 以提取您的原始存款加收益。"
+		},
+		"3": {
+			"question": "Harvest 与 Yearn 相比如何？",
+			"answer": "两者都是收益聚合器，概念相似。Yearn 更大，TVL 更多。Harvest 有用于利润分成的 FARM 代币。两者都自动复利和优化策略。Harvest 历史上对新农场更激进。"
+		},
+		"4": {
+			"question": "什么是 FARM 代币？",
+			"answer": "FARM 是治理和利润分成代币。在利润分享池中质押 FARM 可赚取部分协议费用。FARM 持有者还对治理提案和协议方向进行投票。"
+		},
+		"5": {
+			"question": "Harvest Finance 安全吗？",
+			"answer": "Harvest 在 2020 年经历过闪电贷攻击但恢复并改进了安全性。此后进行了多次审计。智能合约和底层策略风险适用。该协议已运营和发展多年。"
+		}
+	},
+	"cta": {
+		"ready": "准备好优化您的农业了吗？",
+		"button": "探索 Harvest",
+		"note": "自动复利您的收益"
+	}
+}

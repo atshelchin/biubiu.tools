@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Level Finance - Multi-Chain Perpetuals",
+		"description": "Level Finance offers leveraged perpetual trading on BNB Chain and Arbitrum. Trade with up to 50x leverage using LLP liquidity.",
+		"keywords": "Level Finance, LVL token, LLP, BNB perpetuals, leveraged trading"
+	},
+	"overview": "Level Finance is a decentralized perpetual exchange operating on BNB Chain and Arbitrum. It uses a GMX-style model where liquidity providers stake in the LLP pool to earn trading fees.\n\nTraders can access up to 50x leverage on major crypto assets, with oracle-based pricing for low slippage. The platform features a tiered loyalty program that rewards active traders with better fee rates.\n\nThe LVL token governs the protocol and captures value through staking and buybacks. Level has become a significant perpetuals venue on BNB Chain.",
+	"features": {
+		"1": {
+			"title": "Multi-Chain",
+			"description": "BNB Chain and Arbitrum"
+		},
+		"2": {
+			"title": "LLP Liquidity",
+			"description": "GMX-style liquidity pool"
+		},
+		"3": {
+			"title": "Up to 50x Leverage",
+			"description": "High leverage trading"
+		},
+		"4": {
+			"title": "Loyalty Program",
+			"description": "Tiered fee discounts"
+		},
+		"5": {
+			"title": "LVL Token",
+			"description": "Governance and staking"
+		},
+		"6": {
+			"title": "Oracle Pricing",
+			"description": "Low slippage execution"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Perpetual Trading",
+			"description": "Leveraged crypto positions"
+		},
+		"2": {
+			"title": "LLP Providing",
+			"description": "Earn fees as liquidity provider"
+		},
+		"3": {
+			"title": "LVL Staking",
+			"description": "Stake for protocol rewards"
+		},
+		"4": {
+			"title": "Loyalty Farming",
+			"description": "Trade for tier upgrades"
+		},
+		"5": {
+			"title": "BNB Chain DeFi",
+			"description": "Major BSC perpetuals venue"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is LLP?",
+			"answer": "LLP (Level Liquidity Pool) is the liquidity layer for Level. LLP holders provide assets that serve as counterparty to traders. In return, LLP earns trading fees. Similar to GMX's GLP but on different chains."
+		},
+		"2": {
+			"question": "What is the loyalty program?",
+			"answer": "Level has a tiered system where trading volume earns loyalty points. Higher tiers get better fee rates and other benefits. It incentivizes active trading and creates sticky users."
+		},
+		"3": {
+			"question": "What is LVL token?",
+			"answer": "LVL is the governance and utility token. Stake LVL for protocol revenue share. Level also uses fees for LVL buybacks. LVL holders participate in governance decisions."
+		},
+		"4": {
+			"question": "How does Level compare to GMX?",
+			"answer": "Similar mechanics—liquidity pool, oracle pricing. Level has a loyalty program GMX lacks. Level is on BNB Chain primarily while GMX is on Arbitrum/Avalanche. GMX has more TVL and track record."
+		},
+		"5": {
+			"question": "Is Level Finance safe?",
+			"answer": "Level is audited and has operated since 2022. It uses proven GMX-style mechanics. Standard perpetual risks apply—liquidation, oracle risk, LP risk. Do your own research on newer protocols."
+		}
+	},
+	"cta": {
+		"ready": "Ready to trade on Level?",
+		"button": "Explore Level",
+		"note": "BNB Chain perpetuals leader"
+	}
+}

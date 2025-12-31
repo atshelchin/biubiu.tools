@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Aevo - 期权与永续合约交易所",
+		"description": "Aevo 是去中心化期权和永续合约交易所。在 Aevo 的 L2 rollup 上以深度流动性交易加密期权。",
+		"keywords": "Aevo, AEVO 代币, 加密期权, DeFi 期权, 永续合约, 期权交易"
+	},
+	"overview": "Aevo 是用于期权和永续合约的高性能去中心化交易所。源于 Ribbon Finance 在期权方面的专业知识，Aevo 提供具有机构级基础设施的主动加密期权交易。\n\n建立在自己的乐观 rollup 上，Aevo 提供快速执行和低费用。该平台采用订单簿模型，专业做市商为期权提供深度流动性。\n\nAevo 支持期权和永续期货交易，在各种加密资产上提供杠杆。AEVO 代币（从 RBN 合并而来）支持治理和质押。",
+	"features": {
+		"1": {
+			"title": "加密期权",
+			"description": "交易看涨和看跌期权"
+		},
+		"2": {
+			"title": "永续合约",
+			"description": "可用杠杆交易"
+		},
+		"3": {
+			"title": "Aevo Rollup",
+			"description": "为性能定制的 L2"
+		},
+		"4": {
+			"title": "订单簿模型",
+			"description": "专业流动性"
+		},
+		"5": {
+			"title": "AEVO 代币",
+			"description": "治理和交易奖励"
+		},
+		"6": {
+			"title": "预上市市场",
+			"description": "在 TGE 前交易代币"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "期权交易",
+			"description": "买卖加密期权"
+		},
+		"2": {
+			"title": "永续期货",
+			"description": "杠杆加密货币交易"
+		},
+		"3": {
+			"title": "对冲",
+			"description": "用看跌期权对冲"
+		},
+		"4": {
+			"title": "预上市交易",
+			"description": "在代币上市前投机"
+		},
+		"5": {
+			"title": "AEVO 质押",
+			"description": "质押获得费用折扣"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Aevo 与 Ribbon 有什么关系？",
+			"answer": "Aevo 由 Ribbon Finance 团队构建。Ribbon 专注于被动期权金库，Aevo 专注于主动交易。2023 年它们合并——RBN 转换为 AEVO 代币。两个产品在 Aevo 旗下继续运营。"
+		},
+		"2": {
+			"question": "什么是 Aevo rollup？",
+			"answer": "Aevo 运行在专门为交易构建的乐观 rollup 上。这提供了以太坊安全性和 DEX 级速度。存款/取款结算到以太坊 L1。rollup 实现了期权所需的快速订单簿匹配。"
+		},
+		"3": {
+			"question": "什么是预上市市场？",
+			"answer": "Aevo 提供代币正式上市（TGE）前的交易。您可以投机即将推出的代币价格。代币上市时结算。这是一个吸引了大量交易量的独特功能。"
+		},
+		"4": {
+			"question": "Aevo 上的期权交易如何工作？",
+			"answer": "Aevo 有类似传统交易所的期权订单簿。选择您的资产、到期日和行权价。下限价单或市价单。期权是欧式的，到期时结算。显示 Greeks 和 IV 以便明智交易。"
+		},
+		"5": {
+			"question": "Aevo 安全吗？",
+			"answer": "Aevo 经过审计，由经验丰富的 Ribbon 团队构建。它使用具有以太坊安全保证的 rollup。标准交易风险适用——永续合约清算、期权到期归零。预上市市场有独特的结算风险。"
+		}
+	},
+	"cta": {
+		"ready": "准备好交易期权和永续合约了吗？",
+		"button": "探索 Aevo",
+		"note": "专业期权交易所"
+	}
+}

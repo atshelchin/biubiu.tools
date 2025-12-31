@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Sommelier Finance - 主动 DeFi 金库",
+		"description": "Sommelier 提供使用链下计算的主动管理 DeFi 金库策略。通过 Cellars 赚取收益。",
+		"keywords": "Sommelier, SOMM 代币, Cellars, 主动金库, DeFi 收益, 智能金库"
+	},
+	"overview": "Sommelier Finance 提供称为 Cellars 的主动管理 DeFi 金库策略。与被动金库不同，Cellars 使用链下计算运行响应市场条件的复杂自适应策略。\n\n该协议使用 Cosmos SDK 链进行治理和链下策略计算，而金库存在于以太坊上。这种架构使得完全在链上运行成本太高的复杂策略成为可能。\n\nSommelier Cellars 从收益农业优化到杠杆质押策略不等。SOMM 代币治理协议和运行策略的验证者。",
+	"features": {
+		"1": {
+			"title": "主动管理",
+			"description": "策略适应市场"
+		},
+		"2": {
+			"title": "Cellars",
+			"description": "智能 DeFi 金库"
+		},
+		"3": {
+			"title": "链下计算",
+			"description": "复杂策略成为可能"
+		},
+		"4": {
+			"title": "SOMM 代币",
+			"description": "治理和验证"
+		},
+		"5": {
+			"title": "多策略",
+			"description": "各种收益方法"
+		},
+		"6": {
+			"title": "Cosmos 架构",
+			"description": "去中心化策略执行"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "收益优化",
+			"description": "主动收益农业"
+		},
+		"2": {
+			"title": "杠杆质押",
+			"description": "放大 ETH 质押收益"
+		},
+		"3": {
+			"title": "真实收益策略",
+			"description": "可持续收益来源"
+		},
+		"4": {
+			"title": "SOMM 质押",
+			"description": "保护网络"
+		},
+		"5": {
+			"title": "策略多元化",
+			"description": "分散到多个 Cellars"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 Cellars？",
+			"answer": "Cellars 是运行特定 DeFi 策略的智能金库。每个 Cellar 都有定义的策略——如杠杆 stETH 或 Aave 收益优化。策略师使用链下计算管理头寸，而用户只需存入资产。"
+		},
+		"2": {
+			"question": "链下计算如何工作？",
+			"answer": "Sommelier 运行一个 Cosmos 链，验证者在其中执行策略逻辑。这决定了要进行什么交易。然后决策通过金库合约在链上执行。它是去中心化的但能实现复杂策略。"
+		},
+		"3": {
+			"question": "Sommelier 与 Yearn 有何不同？",
+			"answer": "Yearn 策略是链上的且大多被动。Sommelier 使用链下计算进行主动自适应策略。Sommelier 可以响应市场条件、基于信号重新平衡，并运行更复杂的逻辑。"
+		},
+		"4": {
+			"question": "SOMM 代币用于什么？",
+			"answer": "SOMM 治理 Sommelier 链。验证者质押 SOMM 参与共识和策略执行。SOMM 持有者对协议参数和批准哪些策略进行投票。质押者赚取协议收入。"
+		},
+		"5": {
+			"question": "Sommelier 安全吗？",
+			"answer": "Sommelier 经过审计，具有独特的架构。风险包括策略表现（主动管理可能表现不佳）、智能合约风险和验证者行为。链下组件增加了复杂性。研究具体 Cellar 风险。"
+		}
+	},
+	"cta": {
+		"ready": "准备好使用主动 DeFi 策略了吗？",
+		"button": "探索 Sommelier",
+		"note": "主动管理 DeFi 金库"
+	}
+}

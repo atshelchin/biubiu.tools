@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Kwenta - Synthetix Perpetuals Trading",
+		"description": "Kwenta is the premier frontend for Synthetix perpetual futures. Trade with zero slippage using Synthetix liquidity on Optimism.",
+		"keywords": "Kwenta, KWENTA token, Synthetix perpetuals, zero slippage, Optimism trading"
+	},
+	"overview": "Kwenta is the leading trading interface for Synthetix perpetual futures. Built on Optimism, it offers zero-slippage perpetual trading using Synthetix's sUSD liquidity.\n\nBecause trades execute at oracle prices against Synthetix's debt pool, there's no slippage regardless of position size. This makes Kwenta attractive for large trades that would face significant slippage elsewhere.\n\nThe KWENTA token governs the platform and provides staking rewards. Kwenta has carved out a niche for traders valuing execution quality and large position capability.",
+	"features": {
+		"1": {
+			"title": "Zero Slippage",
+			"description": "Oracle-based execution"
+		},
+		"2": {
+			"title": "Synthetix Powered",
+			"description": "Built on Synthetix liquidity"
+		},
+		"3": {
+			"title": "Deep Liquidity",
+			"description": "Large positions supported"
+		},
+		"4": {
+			"title": "KWENTA Token",
+			"description": "Governance and rewards"
+		},
+		"5": {
+			"title": "Optimism Native",
+			"description": "Low cost L2 trading"
+		},
+		"6": {
+			"title": "Advanced Orders",
+			"description": "Limit, stop-loss, take-profit"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Large Position Trading",
+			"description": "Trade size without slippage"
+		},
+		"2": {
+			"title": "Perpetual Futures",
+			"description": "Leveraged crypto trading"
+		},
+		"3": {
+			"title": "KWENTA Staking",
+			"description": "Earn trading fee rebates"
+		},
+		"4": {
+			"title": "Hedging",
+			"description": "Hedge with no slippage cost"
+		},
+		"5": {
+			"title": "Synthetix Integration",
+			"description": "Part of Synthetix ecosystem"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How does zero slippage work?",
+			"answer": "Kwenta uses Synthetix's oracle-based system. Trades execute at Chainlink oracle prices, not against an orderbook or AMM. The Synthetix debt pool absorbs all positions. This means no slippage but dynamic funding rates."
+		},
+		"2": {
+			"question": "What is the relationship with Synthetix?",
+			"answer": "Kwenta is built on top of Synthetix's perpetuals infrastructure. Synthetix provides the liquidity and settlement layer. Kwenta is the trading interface. They're separate protocols but deeply integrated."
+		},
+		"3": {
+			"question": "What is KWENTA token?",
+			"answer": "KWENTA is the governance token. Stake KWENTA for fee rebates on trading and earn staking rewards. KWENTA holders govern the frontend protocol while Synthetix governs the underlying infrastructure."
+		},
+		"4": {
+			"question": "How does Kwenta compare to GMX?",
+			"answer": "Both offer zero/low slippage via oracles. GMX uses GLP pool, Kwenta uses Synthetix debt pool. GMX is multi-chain, Kwenta is Optimism-focused. Kwenta is more specialized for large positions."
+		},
+		"5": {
+			"question": "Is Kwenta safe?",
+			"answer": "Kwenta inherits Synthetix's battle-tested infrastructure. Both protocols are audited. Risks include oracle failures, Synthetix debt pool issues, and standard leverage risks. Synthetix has operated since 2018."
+		}
+	},
+	"cta": {
+		"ready": "Ready for zero-slippage trading?",
+		"button": "Explore Kwenta",
+		"note": "Synthetix perpetuals frontend"
+	}
+}

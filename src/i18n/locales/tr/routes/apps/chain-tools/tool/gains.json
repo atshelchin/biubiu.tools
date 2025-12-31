@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Gains Network (gTrade) - Leveraged Trading",
+		"description": "Gains Network offers leveraged trading for crypto, forex, and stocks on Polygon and Arbitrum. Trade with up to 150x leverage on gTrade.",
+		"keywords": "Gains Network, gTrade, GNS, leveraged trading, forex DeFi, synthetic assets"
+	},
+	"overview": "Gains Network operates gTrade, a decentralized leveraged trading platform supporting crypto, forex, stocks, and commodities. It offers up to 150x leverage on various asset classes.\n\nUnlike traditional perpetual DEXs, gTrade uses a synthetic architecture where trades are settled against a DAI vault. This enables trading assets that don't exist on-chain, like forex pairs and stock indices.\n\nThe GNS token powers the ecosystem, with stakers earning platform fees. Gains has grown significantly by offering unique asset classes not available on other DeFi platforms.",
+	"features": {
+		"1": {
+			"title": "Multi-Asset Trading",
+			"description": "Crypto, forex, stocks, commodities"
+		},
+		"2": {
+			"title": "High Leverage",
+			"description": "Up to 150x on some pairs"
+		},
+		"3": {
+			"title": "Synthetic Architecture",
+			"description": "Trade any asset class"
+		},
+		"4": {
+			"title": "GNS Staking",
+			"description": "Earn platform fees"
+		},
+		"5": {
+			"title": "Multi-Chain",
+			"description": "Polygon and Arbitrum"
+		},
+		"6": {
+			"title": "Oracle-Based",
+			"description": "Chainlink price feeds"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Forex Trading",
+			"description": "Trade EUR/USD, GBP/JPY, etc."
+		},
+		"2": {
+			"title": "Crypto Leverage",
+			"description": "High leverage crypto positions"
+		},
+		"3": {
+			"title": "Stock Indices",
+			"description": "Trade SPY, QQQ synthetics"
+		},
+		"4": {
+			"title": "GNS Yield",
+			"description": "Stake GNS for fee share"
+		},
+		"5": {
+			"title": "DAI Vault",
+			"description": "Provide liquidity, earn fees"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How can I trade forex on blockchain?",
+			"answer": "gTrade uses Chainlink oracles for real-world prices. When you open a forex trade, you're not buying actual euros—you're opening a synthetic position that tracks EUR/USD price. Profits and losses settle in DAI."
+		},
+		"2": {
+			"question": "What is the DAI vault?",
+			"answer": "The DAI vault is the counterparty to all trades. Traders' losses go to the vault, profits come from it. Vault depositors earn trading fees plus trader losses (minus profits). It's the liquidity layer for the platform."
+		},
+		"3": {
+			"question": "What is GNS token?",
+			"answer": "GNS is the governance and staking token. Stake GNS to earn a share of platform trading fees. GNS stakers receive DAI rewards proportional to their stake. GNS also has governance utility."
+		},
+		"4": {
+			"question": "Why use gTrade over forex brokers?",
+			"answer": "gTrade is permissionless—no KYC, trade anytime. Self-custody of funds. Transparent on-chain execution. Higher leverage available on some pairs. However, traditional brokers have tighter spreads for forex."
+		},
+		"5": {
+			"question": "Is gTrade safe?",
+			"answer": "gTrade is audited and battle-tested since 2021. Synthetic trading has oracle risk—if price feeds are wrong, trades settle incorrectly. High leverage amplifies liquidation risk. Vault depositors face trader profit risk."
+		}
+	},
+	"cta": {
+		"ready": "Ready to trade multiple asset classes?",
+		"button": "Explore gTrade",
+		"note": "Crypto, forex & stocks on-chain"
+	}
+}

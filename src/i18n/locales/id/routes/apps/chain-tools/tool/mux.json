@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "MUX Protocol - Perpetual Aggregator",
+		"description": "MUX Protocol aggregates perpetual DEX liquidity across chains. Trade with best execution through unified leverage trading interface.",
+		"keywords": "MUX Protocol, MCB token, perpetual aggregator, cross-chain leverage, DeFi derivatives"
+	},
+	"overview": "MUX Protocol is a decentralized perpetual trading aggregator and exchange. It aggregates liquidity across multiple perpetual DEXs to provide optimal execution for leveraged trades.\n\nBeyond aggregation, MUX operates its own perpetual exchange (MUXLP) using a GMX-style model. The protocol is multi-chain, operating on Arbitrum, BNB Chain, Optimism, Avalanche, and Fantom.\n\nThe MCB token governs the protocol, while MUXLP provides liquidity and earns trading fees. MUX offers a unified interface for perpetual trading across the DeFi landscape.",
+	"features": {
+		"1": {
+			"title": "Perpetual Aggregation",
+			"description": "Best execution across DEXs"
+		},
+		"2": {
+			"title": "Multi-Chain",
+			"description": "5+ chains supported"
+		},
+		"3": {
+			"title": "MUXLP Pool",
+			"description": "Native liquidity pool"
+		},
+		"4": {
+			"title": "MCB Governance",
+			"description": "Protocol governance token"
+		},
+		"5": {
+			"title": "Up to 100x Leverage",
+			"description": "High leverage options"
+		},
+		"6": {
+			"title": "Unified Interface",
+			"description": "One UI for all perp DEXs"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Aggregated Trading",
+			"description": "Best price across venues"
+		},
+		"2": {
+			"title": "Native Perpetuals",
+			"description": "Trade on MUXLP pool"
+		},
+		"3": {
+			"title": "MUXLP Providing",
+			"description": "Earn trading fees"
+		},
+		"4": {
+			"title": "Cross-Chain Trading",
+			"description": "Trade on multiple chains"
+		},
+		"5": {
+			"title": "MCB Staking",
+			"description": "Governance and rewards"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is perpetual aggregation?",
+			"answer": "MUX routes trades to the best perpetual DEX for your trade. If GMX has better rates than dYdX for your position, MUX routes there. It optimizes execution across venues automatically."
+		},
+		"2": {
+			"question": "What is MUXLP?",
+			"answer": "MUXLP is MUX's native liquidity pool, similar to GMX's GLP. Liquidity providers deposit assets and earn trading fees. MUXLP serves as counterparty to traders on MUX's native perpetual exchange."
+		},
+		"3": {
+			"question": "What chains does MUX support?",
+			"answer": "MUX operates on Arbitrum, BNB Chain, Optimism, Avalanche, and Fantom. Both aggregation and native MUXLP pools are available on multiple chains. Arbitrum is the primary chain."
+		},
+		"4": {
+			"question": "MCB vs MUX tokens?",
+			"answer": "MCB is the governance token for the MUX protocol. MUXLP is the liquidity provider token representing pool shares. MCB holders govern the protocol; MUXLP holders earn trading fees."
+		},
+		"5": {
+			"question": "Is MUX Protocol safe?",
+			"answer": "MUX is audited and has operated since 2021 (originally MCDEX). The aggregator adds smart contract complexity. Native trading uses proven GMX-style mechanics. Multi-chain expands attack surface. DYOR."
+		}
+	},
+	"cta": {
+		"ready": "Ready for aggregated perpetual trading?",
+		"button": "Explore MUX",
+		"note": "Perpetual DEX aggregator"
+	}
+}

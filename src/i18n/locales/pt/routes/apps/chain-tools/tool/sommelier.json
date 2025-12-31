@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Sommelier Finance - Active DeFi Vaults",
+		"description": "Sommelier offers actively managed DeFi vaults using off-chain computation for sophisticated strategies. Earn yield through Cellars.",
+		"keywords": "Sommelier, SOMM token, Cellars, active vaults, DeFi yield, smart vaults"
+	},
+	"overview": "Sommelier Finance offers actively managed DeFi vault strategies called Cellars. Unlike passive vaults, Cellars use off-chain computation to run sophisticated, adaptive strategies that respond to market conditions.\n\nThe protocol uses a Cosmos SDK chain for governance and off-chain strategy computation, while vaults live on Ethereum. This architecture enables complex strategies that would be too expensive to run fully on-chain.\n\nSommelier Cellars range from yield farming optimization to leveraged staking strategies. The SOMM token governs the protocol and validators who run strategies.",
+	"features": {
+		"1": {
+			"title": "Active Management",
+			"description": "Strategies adapt to markets"
+		},
+		"2": {
+			"title": "Cellars",
+			"description": "Smart DeFi vaults"
+		},
+		"3": {
+			"title": "Off-Chain Compute",
+			"description": "Complex strategies possible"
+		},
+		"4": {
+			"title": "SOMM Token",
+			"description": "Governance and validation"
+		},
+		"5": {
+			"title": "Multi-Strategy",
+			"description": "Various yield approaches"
+		},
+		"6": {
+			"title": "Cosmos Architecture",
+			"description": "Decentralized strategy execution"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Yield Optimization",
+			"description": "Active yield farming"
+		},
+		"2": {
+			"title": "Leveraged Staking",
+			"description": "Amplified ETH staking yield"
+		},
+		"3": {
+			"title": "Real Yield Strategies",
+			"description": "Sustainable yield sources"
+		},
+		"4": {
+			"title": "SOMM Staking",
+			"description": "Secure the network"
+		},
+		"5": {
+			"title": "Strategy Diversification",
+			"description": "Spread across Cellars"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What are Cellars?",
+			"answer": "Cellars are smart vaults running specific DeFi strategies. Each Cellar has a defined strategy—like leveraged stETH or Aave yield optimization. Strategists manage positions using off-chain computation while users just deposit assets."
+		},
+		"2": {
+			"question": "How does off-chain computation work?",
+			"answer": "Sommelier runs a Cosmos chain where validators execute strategy logic. This determines what trades to make. The decisions are then executed on-chain via the vault contracts. It's decentralized but enables complex strategies."
+		},
+		"3": {
+			"question": "What makes Sommelier different from Yearn?",
+			"answer": "Yearn strategies are on-chain and largely passive. Sommelier uses off-chain computation for active, adaptive strategies. Sommelier can respond to market conditions, rebalance based on signals, and run more sophisticated logic."
+		},
+		"4": {
+			"question": "What is SOMM token used for?",
+			"answer": "SOMM governs the Sommelier chain. Validators stake SOMM to participate in consensus and strategy execution. SOMM holders vote on protocol parameters and which strategies to approve. Stakers earn protocol revenue."
+		},
+		"5": {
+			"question": "Is Sommelier safe?",
+			"answer": "Sommelier is audited with a unique architecture. Risks include strategy performance (active management can underperform), smart contract risk, and validator behavior. The off-chain component adds complexity. Research specific Cellar risks."
+		}
+	},
+	"cta": {
+		"ready": "Ready for active DeFi strategies?",
+		"button": "Explore Sommelier",
+		"note": "Actively managed DeFi vaults"
+	}
+}

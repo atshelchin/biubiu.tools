@@ -1,0 +1,247 @@
+{
+	"meta": {
+		"title": "Web3 开发者工具指南",
+		"description": "区块链开发框架、库和基础设施完整指南"
+	},
+	"title": "Web3 开发者工具指南",
+	"subtitle": "从智能合约到全栈 DApp",
+	"estimated_read_time": "25 分钟阅读",
+
+	"sections": {
+		"intro": {
+			"title": "Web3 开发入门",
+			"content": "区块链开发与传统软件开发有着本质区别。你的代码一旦部署就不可更改，每个操作都需要消耗真实的金钱（Gas），安全漏洞可能导致即时的资金损失。<br/><br/>本指南涵盖专业区块链开发所需的核心工具和实践，从编写第一个智能合约到部署生产级去中心化应用。"
+		},
+
+		"dev_basics": {
+			"title": "开发基础",
+			"content": "在深入了解具体工具之前，理解区块链开发的核心概念至关重要。",
+
+			"what_is": {
+				"title": "什么是智能合约？",
+				"content": "智能合约是存储在区块链上的程序，当满足预设条件时会自动执行。与运行在中心化服务器上的传统程序不同，智能合约具有以下特点：<br/><br/><strong>不可变性</strong> - 一旦部署，代码无法更改（除非设计了升级模式）<br/><br/><strong>确定性</strong> - 相同的输入总是产生相同的输出<br/><br/><strong>无需信任</strong> - 执行由网络保证，而非任何单一方<br/><br/><strong>透明性</strong> - 任何人都可以查看代码并验证其行为<br/><br/>最流行的智能合约平台是以太坊，使用以太坊虚拟机（EVM）。许多其他链（Polygon、Arbitrum、Base、BSC）都兼容 EVM，这意味着相同的代码可以在多个网络上运行。"
+			},
+
+			"environment": {
+				"title": "搭建开发环境",
+				"content": "典型的 Web3 开发环境包括：<br/><br/><strong>1. 代码编辑器</strong> - 配合 Solidity 扩展的 VS Code 是最受欢迎的选择<br/><br/><strong>2. 开发框架</strong> - Hardhat 或 Foundry 用于编译、测试和部署<br/><br/><strong>3. 本地区块链</strong> - 用于测试的本地节点（Hardhat Network、Anvil 或 Ganache）<br/><br/><strong>4. 钱包</strong> - MetaMask 或类似工具用于与已部署的合约交互<br/><br/><strong>5. RPC 提供商</strong> - 访问区块链节点（Alchemy、Infura 或公共 RPC）<br/><br/>对于初学者，基于浏览器的 IDE 如 Remix 提供了一站式解决方案，无需任何本地设置。"
+			},
+
+			"testnets": {
+				"title": "测试网和水龙头",
+				"content": "测试网是与主网功能相同但使用无价值测试代币的区块链网络。它们对开发至关重要，因为：<br/><br/><strong>免费使用</strong> - 可以从水龙头免费获取测试 ETH<br/><br/><strong>可以安全失败</strong> - 错误不会造成真实资金损失<br/><br/><strong>类似生产环境</strong> - 行为与主网高度相似<br/><br/><strong>常用以太坊测试网：</strong><br/>• Sepolia - 支持最广泛，推荐用于大多数开发<br/>• Goerli - 正在弃用，但一些项目仍在使用<br/>• Holesky - 较新的测试网，用于质押和验证者测试<br/><br/><strong>L2 测试网：</strong><br/>• Arbitrum Sepolia、Optimism Sepolia、Base Sepolia<br/><br/>大多数水龙头需要主网活动证明或社交验证以防止滥用。"
+			}
+		},
+
+		"frameworks": {
+			"title": "开发框架",
+			"content": "开发框架提供了高效编译、测试和部署智能合约所需的工具。",
+
+			"hardhat": {
+				"title": "Hardhat",
+				"content": "Hardhat 是最流行的 JavaScript/TypeScript 开发框架，以其灵活性和丰富的插件生态系统著称。<br/><br/><strong>核心特性：</strong><br/>• 原生支持 JavaScript/TypeScript，出色的 IDE 支持<br/>• Hardhat Network 提供高级调试功能（Solidity 中的 console.log）<br/>• 丰富的插件生态系统（ethers.js、验证、Gas 报告）<br/>• 灵活的任务系统支持自定义工作流<br/>• 强大的社区和文档<br/><br/><strong>最适合：</strong><br/>• 有 JavaScript/TypeScript 经验的团队<br/>• 需要大量自定义的项目<br/>• 与现有 Node.js 工具链集成<br/><br/><strong>快速开始：</strong><br/><code>npx hardhat init</code>"
+			},
+
+			"foundry": {
+				"title": "Foundry",
+				"content": "Foundry 是一个基于 Rust 的超快开发工具包，正在成为专业智能合约开发者的首选。<br/><br/><strong>核心特性：</strong><br/>• 使用 Solidity 编写测试（与合约使用相同语言）<br/>• 极快的编译和测试速度<br/>• 内置模糊测试功能<br/>• 强大的作弊码用于测试操作<br/>• Cast CLI 用于与链交互<br/>• Chisel 用于交互式 Solidity REPL<br/><br/><strong>最适合：</strong><br/>• 对性能有要求的开发<br/>• 注重安全的团队<br/>• 复杂的测试需求<br/>• 偏好 Solidity 而非 JS 的开发者<br/><br/><strong>快速开始：</strong><br/><code>curl -L https://foundry.paradigm.xyz | bash</code><br/><code>foundryup</code>"
+			},
+
+			"remix": {
+				"title": "Remix IDE",
+				"content": "Remix 是一个基于浏览器的 IDE，非常适合学习、快速原型设计和教学。<br/><br/><strong>核心特性：</strong><br/>• 无需安装 - 在浏览器中运行<br/>• 内置编译器、调试器和部署功能<br/>• 静态分析和安全警告<br/>• 集成 MetaMask 进行部署<br/>• 插件扩展功能<br/><br/><strong>最适合：</strong><br/>• 学习 Solidity 的初学者<br/>• 快速原型设计和实验<br/>• 教学和工作坊<br/>• 简单的合约交互<br/><br/><strong>限制：</strong><br/>• 不适合大型项目<br/>• 版本控制集成有限<br/>• 不太适合团队协作"
+			},
+
+			"comparison": {
+				"title": "框架对比",
+				"content": "<strong>Hardhat vs Foundry：</strong><br/><br/>| 特性 | Hardhat | Foundry |<br/>|------|---------|---------|<br/>| 语言 | JavaScript/TypeScript | Rust/Solidity |<br/>| 测试语言 | JS/TS | Solidity |<br/>| 速度 | 良好 | 极佳 |<br/>| 模糊测试 | 插件 | 内置 |<br/>| 学习曲线 | 较低 | 较高 |<br/>| 生态系统 | 更大 | 快速增长 |<br/><br/><strong>建议：</strong><br/>• 新开发者：从 Remix 开始，然后转向 Hardhat<br/>• 有 JS 经验的团队：Hardhat<br/>• 注重安全/性能需求：Foundry<br/>• 许多高级项目：两者结合使用"
+			}
+		},
+
+		"languages": {
+			"title": "智能合约语言",
+			"content": "不同的区块链使用不同的编程语言来编写智能合约。",
+
+			"solidity": {
+				"title": "Solidity",
+				"content": "Solidity 是 EVM 兼容区块链的主流语言，专为智能合约设计。<br/><br/><strong>核心特点：</strong><br/>• 静态类型，面向对象<br/>• 语法类似 JavaScript/C++<br/>• 支持继承、库和复杂类型<br/>• 完善的工具和文档<br/>• Web3 中最大的开发者社区<br/><br/><strong>当前最佳实践：</strong><br/>• 使用 Solidity 0.8.x 获得内置溢出保护<br/>• 遵循 Checks-Effects-Interactions 模式<br/>• 使用 OpenZeppelin 合约作为标准实现<br/>• 生产部署时启用优化器<br/>• 始终包含 NatSpec 文档"
+			},
+
+			"vyper": {
+				"title": "Vyper",
+				"content": "Vyper 是一种类 Python 的 EVM 语言，以安全为首要设计目标。<br/><br/><strong>核心特点：</strong><br/>• 类 Python 语法，易于阅读<br/>• 无继承（故意简化）<br/>• 无内联汇编（更安全）<br/>• 无函数重载<br/>• 内置溢出保护<br/><br/><strong>最适合：</strong><br/>• 安全关键型合约<br/>• Python 背景的开发者<br/>• 简单、可审计的合约<br/>• 优先考虑可读性的项目<br/><br/>Curve Finance 等主要协议使用 Vyper 编写其核心合约。"
+			},
+
+			"others": {
+				"title": "其他智能合约语言",
+				"content": "<strong>Cairo（StarkNet）：</strong><br/>• 用于 ZK-rollups 的可证明计算语言<br/>• 专为 StarkNet 生态系统设计<br/>• 类 Rust 语法，有独特概念<br/>• 随 StarkNet 采用快速增长<br/><br/><strong>Move（Sui/Aptos）：</strong><br/>• 面向资源的编程语言<br/>• 最初由 Facebook/Diem 开发<br/>• 强类型系统防止常见错误<br/>• 被 Sui 和 Aptos 区块链使用<br/><br/><strong>Rust/Anchor（Solana）：</strong><br/>• Solana 程序使用 Rust 编写<br/>• Anchor 框架提供抽象<br/>• 与 EVM 不同的执行模型<br/>• 高性能但学习曲线较陡<br/><br/><strong>Noir/Circom（ZK）：</strong><br/>• 用于零知识电路的领域特定语言<br/>• 用于隐私保护应用<br/>• 编译为 ZK 证明"
+			}
+		},
+
+		"frontend": {
+			"title": "前端集成",
+			"content": "将 Web 应用连接到区块链需要专门的库和模式。",
+
+			"libraries": {
+				"title": "Web3 库",
+				"content": "<strong>Ethers.js：</strong><br/>经典之选，经过实战检验，使用广泛。<br/>• 简洁直观的 API<br/>• 优秀的文档<br/>• 大量的示例生态系统<br/>• 与任何前端框架配合使用<br/><br/><strong>Viem：</strong><br/>现代 TypeScript 优先的替代方案，采用率快速增长。<br/>• 更小的包体积<br/>• 更好的 TypeScript 类型推断<br/>• 模块化架构<br/>• 为现代工具链构建<br/><br/><strong>建议：</strong><br/>新项目应考虑使用 Viem，因为其现代化设计。Ethers.js 对于现有项目和已熟悉它的团队仍然是优秀的选择。"
+			},
+
+			"hooks": {
+				"title": "React Hooks（Wagmi）",
+				"content": "Wagmi 为以太坊提供 React hooks，基于 Viem 构建。<br/><br/><strong>核心特性：</strong><br/>• 自动缓存和请求去重<br/>• TypeScript 支持与强类型推断<br/>• 常用操作的 hooks（useAccount、useBalance、useContractRead）<br/>• 内置钱包连接支持<br/>• 支持 Suspense 用于异步操作<br/><br/><strong>示例：</strong><br/><code>const { address } = useAccount()</code><br/><code>const { data: balance } = useBalance({ address })</code><br/><br/>Wagmi 已成为基于 React 的 dApp 的标准，拥有优秀的文档和不断壮大的生态系统。"
+			},
+
+			"wallet": {
+				"title": "钱包连接",
+				"content": "<strong>RainbowKit：</strong><br/>美观、可定制的钱包连接模态框。<br/>• 预构建的 UI 组件<br/>• 支持 50+ 钱包<br/>• 移动端响应式<br/>• 主题定制<br/>• 基于 Wagmi 构建<br/><br/><strong>Web3Modal（WalletConnect）：</strong><br/>来自 WalletConnect 的通用钱包连接。<br/>• 适用于任何框架<br/>• WalletConnect v2 支持<br/>• 链抽象<br/>• 邮箱/社交登录选项<br/><br/><strong>ConnectKit：</strong><br/>RainbowKit 的替代方案，设计理念不同。<br/>• 极简设计<br/>• 可定制动画<br/>• 小包体积<br/><br/>这三个选项都运作良好 - 根据你的设计偏好和团队熟悉度选择。"
+			}
+		},
+
+		"infrastructure": {
+			"title": "基础设施与节点提供商",
+			"content": "可靠的基础设施对生产级 dApp 至关重要。",
+
+			"rpc": {
+				"title": "RPC 提供商",
+				"content": "RPC（远程过程调用）提供商为你的应用提供区块链数据访问和交易提交服务。<br/><br/><strong>Alchemy：</strong><br/>• 行业领先的可靠性<br/>• 增强的 API（NFT、转账、Webhooks）<br/>• 优秀的调试工具<br/>• 慷慨的免费套餐<br/><br/><strong>Infura：</strong><br/>• RPC 服务的先驱<br/>• ConsenSys 支持<br/>• IPFS 集成<br/>• 经过大规模验证<br/><br/><strong>QuickNode：</strong><br/>• 最广泛的链支持（50+）<br/>• 全球低延迟<br/>• 附加组件市场<br/><br/><strong>公共 RPC：</strong><br/>仅用于开发 - 它们有速率限制，不可靠于生产环境。"
+			},
+
+			"indexers": {
+				"title": "区块链索引器",
+				"content": "索引器组织区块链数据以便高效查询，对显示历史数据至关重要。<br/><br/><strong>The Graph：</strong><br/>• 去中心化索引协议<br/>• GraphQL 查询<br/>• 大量现有子图库<br/>• 社区运行的网络<br/><br/><strong>Goldsky：</strong><br/>• 实时数据流<br/>• 镜像子图以实现冗余<br/>• 即时子图部署<br/>• 比 The Graph 托管服务性能更好<br/><br/><strong>Envio（HyperSync）：</strong><br/>• 比传统索引快 100 倍<br/>• TypeScript 原生<br/>• 优秀的开发体验<br/>• 非常适合数据密集型应用<br/><br/>根据你的需求选择：The Graph 用于去中心化，Goldsky 用于可靠性，Envio 用于性能。"
+			},
+
+			"apis": {
+				"title": "数据 API",
+				"content": "<strong>Moralis：</strong><br/>• NFT API（元数据、所有权、转账）<br/>• 代币 API（价格、余额、转账）<br/>• DeFi API（仓位、收益）<br/>• 实时 Webhooks<br/><br/><strong>Covalent：</strong><br/>• 统一的 100+ 链 API<br/>• 历史数据访问<br/>• 付费计划无速率限制<br/>• 非常适合多链应用<br/><br/><strong>Transpose：</strong><br/>• 类 SQL 查询<br/>• 实时数据<br/>• 非常适合分析<br/><br/>这些 API 通过提供跨链的预索引、标准化数据来节省开发时间。"
+			}
+		},
+
+		"testing": {
+			"title": "测试与调试",
+			"content": "当 Bug 可能意味着永久性资金损失时，彻底的测试至关重要。",
+
+			"unit": {
+				"title": "单元测试",
+				"content": "<strong>Hardhat 测试：</strong><br/>• 使用 Chai/Mocha 进行断言<br/>• Hardhat Network 用于快速本地测试<br/>• 使用辅助函数操作时间<br/>• 主网分叉用于集成测试<br/><br/><strong>Foundry 测试：</strong><br/>• 使用 Solidity 编写测试<br/>• setUp() 用于测试初始化<br/>• assertEq、assertTrue、expectRevert<br/>• 作弊码用于状态操作<br/><br/><strong>最佳实践：</strong><br/>• 测试每个公共函数<br/>• 测试边界情况和失败条件<br/>• 测试事件是否正确发出<br/>• 彻底测试访问控制<br/>• 目标是 100% 分支覆盖率"
+			},
+
+			"debugging": {
+				"title": "调试工具",
+				"content": "<strong>Tenderly：</strong><br/>• 发送前模拟交易<br/>• 可视化调试器支持逐步执行<br/>• Gas 分析器<br/>• 告警监控<br/>• 分叉主网进行测试<br/><br/><strong>Hardhat console.log：</strong><br/>• 在 Solidity 中添加 console.log<br/>• 本地开发时调试<br/>• 无 Gas 成本（仅用于开发）<br/><br/><strong>Foundry Traces：</strong><br/>• -vvvv 获取详细追踪<br/>• 查看所有内部调用<br/>• 每次调用的 Gas 分解<br/><br/>Tenderly 对于调试主网上失败的交易特别有价值。"
+			},
+
+			"fuzz": {
+				"title": "模糊测试",
+				"content": "模糊测试自动生成随机输入，以发现你可能遗漏的边界情况。<br/><br/><strong>Foundry 模糊测试：</strong><br/><code>function testFuzz_Deposit(uint256 amount) public {</code><br/><code>    vm.assume(amount > 0 && amount < type(uint128).max);</code><br/><code>    // 使用随机金额测试</code><br/><code>}</code><br/><br/><strong>不变量测试：</strong><br/>• 定义必须始终为真的属性<br/>• Foundry 尝试破坏不变量<br/>• 捕获传统测试遗漏的 Bug<br/><br/><strong>最佳实践：</strong><br/>• 使用 bound() 将输入约束在现实范围内<br/>• 定义有意义的不变量<br/>• 部署前运行高迭代次数<br/>• 考虑对关键合约进行形式化验证"
+			}
+		},
+
+		"deployment": {
+			"title": "部署与验证",
+			"content": "正确的部署实践确保你的合约安全且可验证。",
+
+			"verification": {
+				"title": "合约验证",
+				"content": "验证使你的源代码在区块浏览器上公开可读。<br/><br/><strong>为什么要验证？</strong><br/>• 用户可以在交互前阅读你的代码<br/>• 启用 Etherscan 上的 Read/Write 标签<br/>• 与社区建立信任<br/>• 许多集成所必需<br/><br/><strong>Etherscan 验证：</strong><br/>• 最常见的方法<br/>• 使用 Hardhat/Foundry 插件自动化<br/>• 支持单文件和多文件合约<br/><br/><strong>Sourcify：</strong><br/>• 去中心化验证<br/>• 更严格的匹配要求<br/>• 在 IPFS 上存储源代码<br/>• 长期保存的首选<br/><br/>始终在部署后立即验证你的合约。"
+			},
+
+			"strategies": {
+				"title": "部署策略",
+				"content": "<strong>部署清单：</strong><br/>• 所有测试通过<br/>• 安全审计完成（用于生产）<br/>• Gas 优化已审查<br/>• 构造函数参数已验证<br/>• 多签所有权已配置<br/>• 紧急暂停机制就绪<br/><br/><strong>CREATE2 部署：</strong><br/>• 跨链确定性地址<br/>• 在所有 EVM 链上相同地址<br/>• 对多链协议很有用<br/><br/><strong>部署脚本：</strong><br/>• 使用脚本，永远不要手动部署<br/>• 版本控制所有部署数据<br/>• 将地址记录到 JSON 文件<br/>• 先在测试网测试脚本"
+			},
+
+			"upgrades": {
+				"title": "可升级性模式",
+				"content": "<strong>代理模式：</strong><br/>• 透明代理 - OpenZeppelin 标准<br/>• UUPS 代理 - 更节省 Gas<br/>• 钻石模式 - 用于复杂系统<br/><br/><strong>注意事项：</strong><br/>• 必须保持存储布局<br/>• 初始化替代构造函数<br/>• 升级权限是信任假设<br/>• 一些协议故意不可升级<br/><br/><strong>最佳实践：</strong><br/>• 使用 OpenZeppelin Upgrades 插件<br/>• 彻底测试升级路径<br/>• 考虑升级时间锁<br/>• 记录升级流程<br/><br/>可升级性是灵活性与信任之间的权衡。许多 DeFi 协议偏好不可变合约。"
+			}
+		},
+
+		"oracles": {
+			"title": "预言机与外部数据",
+			"content": "智能合约无法直接访问外部数据。预言机弥合了这一差距。",
+
+			"price_feeds": {
+				"title": "价格信息源",
+				"content": "<strong>Chainlink 价格源：</strong><br/>• DeFi 行业标准<br/>• 去中心化节点运营商<br/>• 偏差和心跳触发器<br/>• 在大多数 EVM 链上可用<br/><br/><strong>Pyth Network：</strong><br/>• 亚秒级更新<br/>• 拉取模式（成本更低）<br/>• 在非 EVM 链上强势<br/>• 高频交易用例<br/><br/><strong>集成示例：</strong><br/><code>AggregatorV3Interface feed = AggregatorV3Interface(address);</code><br/><code>(, int256 price,,,) = feed.latestRoundData();</code><br/><br/><strong>安全检查：</strong><br/>• 验证价格不是过时的<br/>• 检查负价格<br/>• 处理排序器停机（L2）<br/>• 考虑价格操纵攻击"
+			},
+
+			"vrf": {
+				"title": "可验证随机性（VRF）",
+				"content": "区块链原生的随机性是可预测的。VRF 提供可证明公平的随机数。<br/><br/><strong>Chainlink VRF：</strong><br/>• 密码学证明的随机性<br/>• 请求-响应模式<br/>• 用于抽奖、NFT 铸造、游戏<br/>• V2.5 支持直接资金选项<br/><br/><strong>工作原理：</strong><br/>1. 你的合约请求随机性<br/>2. VRF 节点在链下生成证明<br/>3. 证明在链上验证<br/>4. 回调传递随机数<br/><br/><strong>用例：</strong><br/>• 公平的 NFT 属性分配<br/>• 抽奖和抽奖获奖者<br/>• 随机游戏结果<br/>• 任何必须无偏的选择"
+			}
+		},
+
+		"learning": {
+			"title": "学习资源",
+			"content": "最优秀的开发者永不停止学习。以下是适合各级别的经过验证的资源。",
+
+			"tutorials": {
+				"title": "互动教程",
+				"content": "<strong>CryptoZombies：</strong><br/>• 通过构建游戏学习 Solidity<br/>• 免费的游戏化课程<br/>• 涵盖从基础到高级<br/>• 非常适合完全初学者<br/><br/><strong>SpeedRunEthereum：</strong><br/>• 基于挑战的学习<br/>• 构建真实项目<br/>• 社区反馈<br/>• 来自 Austin Griffith（Scaffold-ETH 作者）<br/><br/><strong>Solidity by Example：</strong><br/>• 简洁的代码示例<br/>• 常见模式解释<br/>• 可复制粘贴的代码<br/>• 出色的参考资源<br/><br/><strong>Alchemy University：</strong><br/>• 全面的课程体系<br/>• 免费认证<br/>• JavaScript 和 Solidity 课程"
+			},
+
+			"starters": {
+				"title": "入门模板",
+				"content": "<strong>Scaffold-ETH 2：</strong><br/>• 全栈以太坊开发<br/>• 预配置的 Hardhat + Next.js<br/>• 合约热重载<br/>• 内置调试 UI<br/>• 最适合快速原型设计<br/><br/><strong>thirdweb：</strong><br/>• 无代码合约部署<br/>• 预构建合约模板<br/>• React/Unity SDK<br/>• 托管基础设施<br/><br/><strong>Create Web3 DApp：</strong><br/>• 现代模板<br/>• Viem + Wagmi + RainbowKit<br/>• 多框架选项<br/><br/>从模板开始学习模式，然后随着理解加深进行自定义。"
+			},
+
+			"docs": {
+				"title": "必读文档",
+				"content": "<strong>必读文档：</strong><br/>• Solidity 文档 - 语言参考<br/>• OpenZeppelin 文档 - 安全合约模式<br/>• EIPs（ethereum.org）- 标准提案<br/>• Viem/Wagmi 文档 - 前端集成<br/><br/><strong>EVM 深入探索：</strong><br/>• EVM Codes - 交互式操作码参考<br/>• 以太坊黄皮书 - 技术规范<br/>• Understanding the EVM（博客系列）<br/><br/><strong>安全资源：</strong><br/>• SWC Registry - 智能合约弱点<br/>• Consensys 最佳实践 - 安全指南<br/>• Rekt News - 从黑客事件中学习<br/><br/>收藏这些资源并经常参考。最优秀的开发者知道如何快速找到答案。"
+			}
+		}
+	},
+
+	"glossary": {
+		"abi": {
+			"term": "ABI（应用二进制接口）",
+			"definition": "智能合约函数和事件的 JSON 描述。ABI 告诉应用程序如何编码函数调用和解码返回值。在编译期间生成。"
+		},
+		"bytecode": {
+			"term": "字节码",
+			"definition": "智能合约源代码的编译形式，由 EVM 操作码组成。字节码是实际部署到区块链并由节点执行的内容。"
+		},
+		"evm": {
+			"term": "EVM（以太坊虚拟机）",
+			"definition": "以太坊及兼容链上智能合约的运行时环境。它在所有节点上以沙盒化、确定性的环境执行字节码。"
+		},
+		"gas": {
+			"term": "Gas",
+			"definition": "测量 EVM 中计算工作量的单位。每个操作码消耗 Gas，用户为使用的总 Gas 付费。Gas 限制防止无限循环并确保公平的资源分配。"
+		},
+		"opcode": {
+			"term": "操作码",
+			"definition": "由 EVM 执行的低级指令。示例：PUSH1（添加到栈）、SSTORE（存储到存储）、CALL（调用另一个合约）。每个操作码有固定的 Gas 成本。"
+		},
+		"rpc": {
+			"term": "RPC（远程过程调用）",
+			"definition": "与区块链节点通信的协议。JSON-RPC 是标准，提供 eth_call、eth_sendTransaction 和 eth_getBalance 等方法。"
+		},
+		"subgraph": {
+			"term": "子图",
+			"definition": "The Graph 协议的索引定义。子图指定要索引哪些合约、监听哪些事件，以及如何转换数据以便通过 GraphQL 查询。"
+		},
+		"selector": {
+			"term": "函数选择器",
+			"definition": "函数签名的 Keccak-256 哈希的前 4 个字节。用于标识要调用哪个函数。示例：transfer(address,uint256) → 0xa9059cbb"
+		},
+		"proxy": {
+			"term": "代理合约",
+			"definition": "将所有调用委托给实现合约的合约。通过更改实现地址来实现可升级性，同时保留代理的地址和存储。"
+		},
+		"oracle": {
+			"term": "预言机",
+			"definition": "向智能合约提供外部数据的服务。预言机弥合链上和链下世界之间的差距，提供价格信息、随机性和现实世界数据。"
+		},
+		"testnet": {
+			"term": "测试网",
+			"definition": "用于测试的区块链网络，与主网功能相同但使用无价值代币。开发者使用测试网在主网部署前测试合约。"
+		},
+		"mainnet": {
+			"term": "主网",
+			"definition": "进行真实价值交易的生产区块链网络。部署到主网意味着你的合约处理真实资产且不可变。"
+		}
+	}
+}

@@ -1,0 +1,247 @@
+{
+	"meta": {
+		"title": "Web3 Developer Tools Guide",
+		"description": "Complete guide to blockchain development frameworks, libraries, and infrastructure"
+	},
+	"title": "Web3 Developer Tools Guide",
+	"subtitle": "From Smart Contracts to Full-Stack dApps",
+	"estimated_read_time": "25 min read",
+
+	"sections": {
+		"intro": {
+			"title": "Introduction to Web3 Development",
+			"content": "Building on blockchain is fundamentally different from traditional software development. Your code becomes immutable once deployed, every operation costs real money (gas), and security vulnerabilities can lead to immediate financial loss.<br/><br/>This guide covers the essential tools and practices for professional blockchain development, from writing your first smart contract to deploying production-ready decentralized applications."
+		},
+
+		"dev_basics": {
+			"title": "Development Fundamentals",
+			"content": "Before diving into specific tools, understanding the core concepts of blockchain development is essential.",
+
+			"what_is": {
+				"title": "What are Smart Contracts?",
+				"content": "Smart contracts are programs stored on a blockchain that execute automatically when predetermined conditions are met. Unlike traditional programs running on centralized servers, smart contracts are:<br/><br/><strong>Immutable</strong> - Once deployed, the code cannot be changed (unless designed with upgrade patterns)<br/><br/><strong>Deterministic</strong> - The same input always produces the same output<br/><br/><strong>Trustless</strong> - Execution is guaranteed by the network, not by any single party<br/><br/><strong>Transparent</strong> - Anyone can view the code and verify its behavior<br/><br/>The most popular platform for smart contracts is Ethereum, using the Ethereum Virtual Machine (EVM). Many other chains (Polygon, Arbitrum, Base, BSC) are EVM-compatible, meaning the same code works across multiple networks."
+			},
+
+			"environment": {
+				"title": "Setting Up Your Environment",
+				"content": "A typical Web3 development environment includes:<br/><br/><strong>1. Code Editor</strong> - VS Code with Solidity extensions is the most popular choice<br/><br/><strong>2. Development Framework</strong> - Hardhat or Foundry for compiling, testing, and deploying<br/><br/><strong>3. Local Blockchain</strong> - A local node for testing (Hardhat Network, Anvil, or Ganache)<br/><br/><strong>4. Wallet</strong> - MetaMask or similar for interacting with deployed contracts<br/><br/><strong>5. RPC Provider</strong> - Access to blockchain nodes (Alchemy, Infura, or public RPCs)<br/><br/>For beginners, browser-based IDEs like Remix provide everything in one place, requiring no local setup."
+			},
+
+			"testnets": {
+				"title": "Testnets and Faucets",
+				"content": "Testnets are blockchain networks identical to mainnet but using worthless test tokens. They're essential for development because:<br/><br/><strong>Free to use</strong> - Get test ETH from faucets at no cost<br/><br/><strong>Safe to fail</strong> - Mistakes don't cost real money<br/><br/><strong>Production-like</strong> - Behavior closely mirrors mainnet<br/><br/><strong>Popular Ethereum Testnets:</strong><br/>• Sepolia - Most widely supported, recommended for most development<br/>• Goerli - Being deprecated, but still used by some projects<br/>• Holesky - Newer testnet for staking and validator testing<br/><br/><strong>L2 Testnets:</strong><br/>• Arbitrum Sepolia, Optimism Sepolia, Base Sepolia<br/><br/>Most faucets require either proof of mainnet activity or social verification to prevent abuse."
+			}
+		},
+
+		"frameworks": {
+			"title": "Development Frameworks",
+			"content": "Development frameworks provide the tools needed to compile, test, and deploy smart contracts efficiently.",
+
+			"hardhat": {
+				"title": "Hardhat",
+				"content": "Hardhat is the most popular JavaScript/TypeScript development framework, known for its flexibility and extensive plugin ecosystem.<br/><br/><strong>Key Features:</strong><br/>• JavaScript/TypeScript native with excellent IDE support<br/>• Hardhat Network with advanced debugging (console.log in Solidity)<br/>• Extensive plugin ecosystem (ethers.js, verification, gas reporting)<br/>• Flexible task system for custom workflows<br/>• Strong community and documentation<br/><br/><strong>Best For:</strong><br/>• Teams with JavaScript/TypeScript experience<br/>• Projects needing extensive customization<br/>• Integration with existing Node.js tooling<br/><br/><strong>Quick Start:</strong><br/><code>npx hardhat init</code>"
+			},
+
+			"foundry": {
+				"title": "Foundry",
+				"content": "Foundry is a blazing-fast Rust-based development toolkit that's becoming the preferred choice for serious smart contract developers.<br/><br/><strong>Key Features:</strong><br/>• Write tests in Solidity (same language as contracts)<br/>• Extremely fast compilation and testing<br/>• Built-in fuzzing for property-based testing<br/>• Powerful cheatcodes for test manipulation<br/>• Cast CLI for interacting with chains<br/>• Chisel for interactive Solidity REPL<br/><br/><strong>Best For:</strong><br/>• Performance-critical development<br/>• Security-focused teams<br/>• Complex testing requirements<br/>• Developers who prefer Solidity over JS<br/><br/><strong>Quick Start:</strong><br/><code>curl -L https://foundry.paradigm.xyz | bash</code><br/><code>foundryup</code>"
+			},
+
+			"remix": {
+				"title": "Remix IDE",
+				"content": "Remix is a browser-based IDE perfect for learning, quick prototyping, and teaching.<br/><br/><strong>Key Features:</strong><br/>• No installation required - works in browser<br/>• Built-in compiler, debugger, and deployment<br/>• Static analysis and security warnings<br/>• Integration with MetaMask for deployment<br/>• Plugins for additional functionality<br/><br/><strong>Best For:</strong><br/>• Beginners learning Solidity<br/>• Quick prototyping and experiments<br/>• Teaching and workshops<br/>• Simple contract interactions<br/><br/><strong>Limitations:</strong><br/>• Not suitable for large projects<br/>• Limited version control integration<br/>• Less suitable for team collaboration"
+			},
+
+			"comparison": {
+				"title": "Framework Comparison",
+				"content": "<strong>Hardhat vs Foundry:</strong><br/><br/>| Feature | Hardhat | Foundry |<br/>|---------|---------|---------|<br/>| Language | JavaScript/TypeScript | Rust/Solidity |<br/>| Test Language | JS/TS | Solidity |<br/>| Speed | Good | Excellent |<br/>| Fuzzing | Plugin | Built-in |<br/>| Learning Curve | Lower | Higher |<br/>| Ecosystem | Larger | Growing |<br/><br/><strong>Recommendation:</strong><br/>• New developers: Start with Remix, then move to Hardhat<br/>• Teams with JS experience: Hardhat<br/>• Security-focused/Performance needs: Foundry<br/>• Many advanced projects: Use both together"
+			}
+		},
+
+		"languages": {
+			"title": "Smart Contract Languages",
+			"content": "Different blockchains use different programming languages for smart contracts.",
+
+			"solidity": {
+				"title": "Solidity",
+				"content": "Solidity is the dominant language for EVM-compatible blockchains, designed specifically for smart contracts.<br/><br/><strong>Key Characteristics:</strong><br/>• Statically typed, object-oriented<br/>• Syntax similar to JavaScript/C++<br/>• Supports inheritance, libraries, and complex types<br/>• Extensive tooling and documentation<br/>• Largest developer community in Web3<br/><br/><strong>Current Best Practices:</strong><br/>• Use Solidity 0.8.x for built-in overflow protection<br/>• Follow the Checks-Effects-Interactions pattern<br/>• Use OpenZeppelin contracts for standard implementations<br/>• Enable optimizer for production deployments<br/>• Always include NatSpec documentation"
+			},
+
+			"vyper": {
+				"title": "Vyper",
+				"content": "Vyper is a Python-like language for the EVM, designed with security as the primary focus.<br/><br/><strong>Key Characteristics:</strong><br/>• Python-like syntax, easy to read<br/>• No inheritance (intentionally simpler)<br/>• No inline assembly (safer)<br/>• No function overloading<br/>• Built-in overflow protection<br/><br/><strong>Best For:</strong><br/>• Security-critical contracts<br/>• Developers from Python background<br/>• Simple, auditable contracts<br/>• Projects prioritizing readability<br/><br/>Major protocols like Curve Finance use Vyper for their core contracts."
+			},
+
+			"others": {
+				"title": "Other Smart Contract Languages",
+				"content": "<strong>Cairo (StarkNet):</strong><br/>• Provable computation language for ZK-rollups<br/>• Designed for StarkNet ecosystem<br/>• Rust-like syntax with unique concepts<br/>• Growing rapidly with StarkNet adoption<br/><br/><strong>Move (Sui/Aptos):</strong><br/>• Resource-oriented programming language<br/>• Originally developed by Facebook/Diem<br/>• Strong type system preventing common bugs<br/>• Used by Sui and Aptos blockchains<br/><br/><strong>Rust/Anchor (Solana):</strong><br/>• Solana programs written in Rust<br/>• Anchor framework provides abstractions<br/>• Different execution model than EVM<br/>• High performance but steeper learning curve<br/><br/><strong>Noir/Circom (ZK):</strong><br/>• Domain-specific languages for zero-knowledge circuits<br/>• Used for privacy-preserving applications<br/>• Compile to ZK proofs"
+			}
+		},
+
+		"frontend": {
+			"title": "Frontend Integration",
+			"content": "Connecting your web application to blockchain requires specialized libraries and patterns.",
+
+			"libraries": {
+				"title": "Web3 Libraries",
+				"content": "<strong>Ethers.js:</strong><br/>The classic choice, battle-tested and widely used.<br/>• Clean, intuitive API<br/>• Excellent documentation<br/>• Large ecosystem of examples<br/>• Works with any frontend framework<br/><br/><strong>Viem:</strong><br/>Modern TypeScript-first alternative, gaining rapid adoption.<br/>• Smaller bundle size<br/>• Better TypeScript inference<br/>• Modular architecture<br/>• Built for modern toolchains<br/><br/><strong>Recommendation:</strong><br/>New projects should consider Viem for its modern design. Ethers.js remains excellent for existing projects and teams already familiar with it."
+			},
+
+			"hooks": {
+				"title": "React Hooks (Wagmi)",
+				"content": "Wagmi provides React hooks for Ethereum, built on top of Viem.<br/><br/><strong>Key Features:</strong><br/>• Automatic caching and request deduplication<br/>• TypeScript support with strong type inference<br/>• Hooks for common operations (useAccount, useBalance, useContractRead)<br/>• Built-in support for wallet connection<br/>• Suspense support for async operations<br/><br/><strong>Example:</strong><br/><code>const { address } = useAccount()</code><br/><code>const { data: balance } = useBalance({ address })</code><br/><br/>Wagmi has become the standard for React-based dApps, with excellent documentation and growing ecosystem."
+			},
+
+			"wallet": {
+				"title": "Wallet Connection",
+				"content": "<strong>RainbowKit:</strong><br/>Beautiful, customizable wallet connection modal.<br/>• Pre-built UI components<br/>• Supports 50+ wallets<br/>• Mobile responsive<br/>• Theme customization<br/>• Built on Wagmi<br/><br/><strong>Web3Modal (WalletConnect):</strong><br/>Universal wallet connection from WalletConnect.<br/>• Works with any framework<br/>• WalletConnect v2 support<br/>• Chain abstraction<br/>• Email/social login options<br/><br/><strong>ConnectKit:</strong><br/>Alternative to RainbowKit with different design philosophy.<br/>• Minimalist design<br/>• Customizable animations<br/>• Small bundle size<br/><br/>All three options work well - choose based on your design preferences and team familiarity."
+			}
+		},
+
+		"infrastructure": {
+			"title": "Infrastructure & Node Providers",
+			"content": "Reliable infrastructure is critical for production dApps.",
+
+			"rpc": {
+				"title": "RPC Providers",
+				"content": "RPC (Remote Procedure Call) providers give your application access to blockchain data and transaction submission.<br/><br/><strong>Alchemy:</strong><br/>• Industry-leading reliability<br/>• Enhanced APIs (NFT, transfers, webhooks)<br/>• Excellent debugging tools<br/>• Generous free tier<br/><br/><strong>Infura:</strong><br/>• Pioneer in RPC services<br/>• ConsenSys backed<br/>• IPFS integration<br/>• Proven at scale<br/><br/><strong>QuickNode:</strong><br/>• Widest chain support (50+)<br/>• Low latency globally<br/>• Marketplace for add-ons<br/><br/><strong>Public RPCs:</strong><br/>For development only - they're rate-limited and not reliable for production."
+			},
+
+			"indexers": {
+				"title": "Blockchain Indexers",
+				"content": "Indexers organize blockchain data for efficient querying, essential for displaying historical data.<br/><br/><strong>The Graph:</strong><br/>• Decentralized indexing protocol<br/>• GraphQL queries<br/>• Large library of existing subgraphs<br/>• Community-run network<br/><br/><strong>Goldsky:</strong><br/>• Real-time data streaming<br/>• Mirror subgraphs for redundancy<br/>• Instant subgraph deployment<br/>• Better performance than The Graph hosted service<br/><br/><strong>Envio (HyperSync):</strong><br/>• 100x faster than traditional indexing<br/>• TypeScript-native<br/>• Excellent developer experience<br/>• Great for data-heavy applications<br/><br/>Choose based on your needs: The Graph for decentralization, Goldsky for reliability, Envio for performance."
+			},
+
+			"apis": {
+				"title": "Data APIs",
+				"content": "<strong>Moralis:</strong><br/>• NFT APIs (metadata, ownership, transfers)<br/>• Token APIs (prices, balances, transfers)<br/>• DeFi APIs (positions, yields)<br/>• Real-time webhooks<br/><br/><strong>Covalent:</strong><br/>• Unified API for 100+ chains<br/>• Historical data access<br/>• No rate limits on paid plans<br/>• Excellent for multi-chain applications<br/><br/><strong>Transpose:</strong><br/>• SQL-like queries<br/>• Real-time data<br/>• Great for analytics<br/><br/>These APIs save development time by providing pre-indexed, normalized data across chains."
+			}
+		},
+
+		"testing": {
+			"title": "Testing & Debugging",
+			"content": "Thorough testing is critical when bugs can mean permanent financial loss.",
+
+			"unit": {
+				"title": "Unit Testing",
+				"content": "<strong>Hardhat Testing:</strong><br/>• Use Chai/Mocha for assertions<br/>• Hardhat Network for fast local testing<br/>• Time manipulation with helpers<br/>• Mainnet forking for integration tests<br/><br/><strong>Foundry Testing:</strong><br/>• Write tests in Solidity<br/>• setUp() for test initialization<br/>• assertEq, assertTrue, expectRevert<br/>• Cheatcodes for state manipulation<br/><br/><strong>Best Practices:</strong><br/>• Test every public function<br/>• Test edge cases and failure conditions<br/>• Test events are emitted correctly<br/>• Test access control thoroughly<br/>• Aim for 100% branch coverage"
+			},
+
+			"debugging": {
+				"title": "Debugging Tools",
+				"content": "<strong>Tenderly:</strong><br/>• Transaction simulation before sending<br/>• Visual debugger with step-through<br/>• Gas profiler<br/>• Alert monitoring<br/>• Fork mainnet for testing<br/><br/><strong>Hardhat console.log:</strong><br/>• Add console.log to Solidity<br/>• Debug during local development<br/>• No gas cost (development only)<br/><br/><strong>Foundry Traces:</strong><br/>• -vvvv for detailed traces<br/>• See all internal calls<br/>• Gas breakdown per call<br/><br/>Tenderly is especially valuable for debugging transactions that failed on mainnet."
+			},
+
+			"fuzz": {
+				"title": "Fuzz Testing",
+				"content": "Fuzz testing automatically generates random inputs to find edge cases you might miss.<br/><br/><strong>Foundry Fuzzing:</strong><br/><code>function testFuzz_Deposit(uint256 amount) public {</code><br/><code>    vm.assume(amount > 0 && amount < type(uint128).max);</code><br/><code>    // test with random amounts</code><br/><code>}</code><br/><br/><strong>Invariant Testing:</strong><br/>• Define properties that must always be true<br/>• Foundry attempts to break invariants<br/>• Catches bugs traditional tests miss<br/><br/><strong>Best Practices:</strong><br/>• Use bound() to constrain inputs realistically<br/>• Define meaningful invariants<br/>• Run with high iteration counts before deployment<br/>• Consider formal verification for critical contracts"
+			}
+		},
+
+		"deployment": {
+			"title": "Deployment & Verification",
+			"content": "Proper deployment practices ensure your contracts are secure and verifiable.",
+
+			"verification": {
+				"title": "Contract Verification",
+				"content": "Verification makes your source code public and readable on block explorers.<br/><br/><strong>Why Verify?</strong><br/>• Users can read your code before interacting<br/>• Enables Read/Write tabs on Etherscan<br/>• Builds trust with your community<br/>• Required for many integrations<br/><br/><strong>Etherscan Verification:</strong><br/>• Most common method<br/>• Automated with Hardhat/Foundry plugins<br/>• Works for single and multi-file contracts<br/><br/><strong>Sourcify:</strong><br/>• Decentralized verification<br/>• Stricter matching requirements<br/>• Stores source code on IPFS<br/>• Preferred for long-term preservation<br/><br/>Always verify your contracts immediately after deployment."
+			},
+
+			"strategies": {
+				"title": "Deployment Strategies",
+				"content": "<strong>Deployment Checklist:</strong><br/>• All tests pass<br/>• Security audit completed (for production)<br/>• Gas optimization reviewed<br/>• Constructor parameters verified<br/>• Multi-sig ownership configured<br/>• Emergency pause mechanism ready<br/><br/><strong>CREATE2 Deployments:</strong><br/>• Deterministic addresses across chains<br/>• Same address on all EVM chains<br/>• Useful for multi-chain protocols<br/><br/><strong>Deployment Scripts:</strong><br/>• Use scripts, never deploy manually<br/>• Version control all deployment data<br/>• Log addresses to JSON files<br/>• Test scripts on testnet first"
+			},
+
+			"upgrades": {
+				"title": "Upgradeability Patterns",
+				"content": "<strong>Proxy Patterns:</strong><br/>• Transparent Proxy - OpenZeppelin standard<br/>• UUPS Proxy - More gas efficient<br/>• Diamond Pattern - For complex systems<br/><br/><strong>Considerations:</strong><br/>• Storage layout must be preserved<br/>• Initialization replaces constructor<br/>• Upgrade authority is a trust assumption<br/>• Some protocols are intentionally non-upgradeable<br/><br/><strong>Best Practices:</strong><br/>• Use OpenZeppelin Upgrades plugin<br/>• Test upgrade path thoroughly<br/>• Consider time-locks on upgrades<br/>• Document upgrade procedures<br/><br/>Upgradeability is a trade-off between flexibility and trust. Many DeFi protocols prefer immutable contracts."
+			}
+		},
+
+		"oracles": {
+			"title": "Oracles & External Data",
+			"content": "Smart contracts can't access external data directly. Oracles bridge this gap.",
+
+			"price_feeds": {
+				"title": "Price Feeds",
+				"content": "<strong>Chainlink Price Feeds:</strong><br/>• Industry standard for DeFi<br/>• Decentralized node operators<br/>• Deviation and heartbeat triggers<br/>• Available on most EVM chains<br/><br/><strong>Pyth Network:</strong><br/>• Sub-second updates<br/>• Pull-based model (lower cost)<br/>• Strong on non-EVM chains<br/>• High-frequency trading use cases<br/><br/><strong>Integration Example:</strong><br/><code>AggregatorV3Interface feed = AggregatorV3Interface(address);</code><br/><code>(, int256 price,,,) = feed.latestRoundData();</code><br/><br/><strong>Safety Checks:</strong><br/>• Verify price is not stale<br/>• Check for negative prices<br/>• Handle sequencer downtime (L2)<br/>• Consider price manipulation attacks"
+			},
+
+			"vrf": {
+				"title": "Verifiable Randomness (VRF)",
+				"content": "Blockchain-native randomness is predictable. VRF provides provably fair random numbers.<br/><br/><strong>Chainlink VRF:</strong><br/>• Cryptographically proven randomness<br/>• Request-response pattern<br/>• Used for lotteries, NFT mints, gaming<br/>• V2.5 with direct funding option<br/><br/><strong>How It Works:</strong><br/>1. Your contract requests randomness<br/>2. VRF nodes generate proof off-chain<br/>3. Proof verified on-chain<br/>4. Callback delivers random number<br/><br/><strong>Use Cases:</strong><br/>• Fair NFT trait assignment<br/>• Lottery and raffle winners<br/>• Random game outcomes<br/>• Any selection that must be unbiased"
+			}
+		},
+
+		"learning": {
+			"title": "Learning Resources",
+			"content": "The best developers never stop learning. Here are proven resources for all skill levels.",
+
+			"tutorials": {
+				"title": "Interactive Tutorials",
+				"content": "<strong>CryptoZombies:</strong><br/>• Learn Solidity by building a game<br/>• Free, gamified lessons<br/>• Covers basics to advanced<br/>• Great for complete beginners<br/><br/><strong>SpeedRunEthereum:</strong><br/>• Challenge-based learning<br/>• Build real projects<br/>• Community feedback<br/>• From Austin Griffith (Scaffold-ETH)<br/><br/><strong>Solidity by Example:</strong><br/>• Concise code examples<br/>• Common patterns explained<br/>• Copy-paste ready code<br/>• Great reference resource<br/><br/><strong>Alchemy University:</strong><br/>• Comprehensive curriculum<br/>• Free certification<br/>• JavaScript and Solidity tracks"
+			},
+
+			"starters": {
+				"title": "Starter Kits",
+				"content": "<strong>Scaffold-ETH 2:</strong><br/>• Full-stack Ethereum development<br/>• Pre-configured Hardhat + Next.js<br/>• Hot reload for contracts<br/>• Debug UI built-in<br/>• Best for rapid prototyping<br/><br/><strong>thirdweb:</strong><br/>• No-code contract deployment<br/>• Pre-built contract templates<br/>• React/Unity SDKs<br/>• Managed infrastructure<br/><br/><strong>Create Web3 DApp:</strong><br/>• Modern templates<br/>• Viem + Wagmi + RainbowKit<br/>• Multiple framework options<br/><br/>Start with a template to learn patterns, then customize as you understand more."
+			},
+
+			"docs": {
+				"title": "Essential Documentation",
+				"content": "<strong>Must-Read Docs:</strong><br/>• Solidity Documentation - Language reference<br/>• OpenZeppelin Docs - Secure contract patterns<br/>• EIPs (ethereum.org) - Standard proposals<br/>• Viem/Wagmi Docs - Frontend integration<br/><br/><strong>EVM Deep Dives:</strong><br/>• EVM Codes - Interactive opcode reference<br/>• Ethereum Yellow Paper - Technical specification<br/>• Understanding the EVM (blog series)<br/><br/><strong>Security Resources:</strong><br/>• SWC Registry - Smart contract weaknesses<br/>• Consensys Best Practices - Security guidelines<br/>• Rekt News - Learn from hacks<br/><br/>Bookmark these and refer to them often. The best developers know where to find answers quickly."
+			}
+		}
+	},
+
+	"glossary": {
+		"abi": {
+			"term": "ABI (Application Binary Interface)",
+			"definition": "A JSON description of a smart contract's functions and events. The ABI tells applications how to encode function calls and decode return values. Generated during compilation."
+		},
+		"bytecode": {
+			"term": "Bytecode",
+			"definition": "The compiled form of smart contract source code, consisting of EVM opcodes. Bytecode is what actually gets deployed to the blockchain and executed by nodes."
+		},
+		"evm": {
+			"term": "EVM (Ethereum Virtual Machine)",
+			"definition": "The runtime environment for smart contracts on Ethereum and compatible chains. It executes bytecode in a sandboxed, deterministic environment across all nodes."
+		},
+		"gas": {
+			"term": "Gas",
+			"definition": "The unit measuring computational work in the EVM. Each opcode costs gas, and users pay for total gas used. Gas limits prevent infinite loops and ensure fair resource allocation."
+		},
+		"opcode": {
+			"term": "Opcode",
+			"definition": "Low-level instructions executed by the EVM. Examples: PUSH1 (add to stack), SSTORE (store to storage), CALL (call another contract). Each opcode has a fixed gas cost."
+		},
+		"rpc": {
+			"term": "RPC (Remote Procedure Call)",
+			"definition": "The protocol for communicating with blockchain nodes. JSON-RPC is the standard, providing methods like eth_call, eth_sendTransaction, and eth_getBalance."
+		},
+		"subgraph": {
+			"term": "Subgraph",
+			"definition": "An indexing definition for The Graph protocol. Subgraphs specify which contracts to index, what events to listen for, and how to transform data for querying via GraphQL."
+		},
+		"selector": {
+			"term": "Function Selector",
+			"definition": "The first 4 bytes of the Keccak-256 hash of a function signature. Used to identify which function to call. Example: transfer(address,uint256) → 0xa9059cbb"
+		},
+		"proxy": {
+			"term": "Proxy Contract",
+			"definition": "A contract that delegates all calls to an implementation contract. Enables upgradeability by changing the implementation address while preserving the proxy's address and storage."
+		},
+		"oracle": {
+			"term": "Oracle",
+			"definition": "A service providing external data to smart contracts. Oracles bridge the gap between on-chain and off-chain worlds, providing price feeds, randomness, and real-world data."
+		},
+		"testnet": {
+			"term": "Testnet",
+			"definition": "A blockchain network for testing that mirrors mainnet functionality but uses worthless tokens. Developers use testnets to test contracts before mainnet deployment."
+		},
+		"mainnet": {
+			"term": "Mainnet",
+			"definition": "The production blockchain network where real value is transacted. Deploying to mainnet means your contract handles real assets and is immutable."
+		}
+	}
+}

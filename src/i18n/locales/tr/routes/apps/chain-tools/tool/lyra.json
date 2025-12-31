@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Lyra Finance - DeFi Options Protocol",
+		"description": "Lyra Finance is a leading DeFi options protocol built on Optimism. Trade options with automated market making and competitive pricing.",
+		"keywords": "Lyra Finance, LYRA token, DeFi options, Optimism options, AMM options, crypto derivatives"
+	},
+	"overview": "Lyra Finance is a decentralized options protocol that uses an automated market maker (AMM) for options pricing. Instead of orderbooks, Lyra algorithmically prices options based on volatility and Greek risk management.\n\nBuilt on Optimism and later expanding to Arbitrum, Lyra offers liquid options markets for major crypto assets. The protocol uses liquidity providers who earn by selling options to traders.\n\nLyra's innovation is making options accessible through DeFi. The LYRA token governs the protocol and incentivizes liquidity provision.",
+	"features": {
+		"1": {
+			"title": "Options AMM",
+			"description": "Algorithmic options pricing"
+		},
+		"2": {
+			"title": "Optimism Native",
+			"description": "Low-cost L2 trading"
+		},
+		"3": {
+			"title": "Automated Greeks",
+			"description": "Protocol manages risk"
+		},
+		"4": {
+			"title": "LYRA Token",
+			"description": "Governance and incentives"
+		},
+		"5": {
+			"title": "LP Vaults",
+			"description": "Provide options liquidity"
+		},
+		"6": {
+			"title": "Synthetix Integration",
+			"description": "Uses SNX for settlement"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Options Trading",
+			"description": "Buy calls and puts"
+		},
+		"2": {
+			"title": "Hedging",
+			"description": "Protect portfolio with puts"
+		},
+		"3": {
+			"title": "Liquidity Provision",
+			"description": "Earn by selling options"
+		},
+		"4": {
+			"title": "Speculation",
+			"description": "Leveraged directional bets"
+		},
+		"5": {
+			"title": "LYRA Staking",
+			"description": "Governance participation"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How does the options AMM work?",
+			"answer": "Lyra uses Black-Scholes pricing adjusted for on-chain conditions. The AMM quotes prices based on implied volatility, skew, and Greek exposures. Prices adjust automatically as positions are opened. LPs provide liquidity and earn from trading spreads."
+		},
+		"2": {
+			"question": "What is the LP vault?",
+			"answer": "LP vaults hold collateral that backs options sold to traders. LPs earn premiums from option sales but take on market risk. The AMM manages Greeks to reduce directional exposure. LP returns depend on market volatility and trading activity."
+		},
+		"3": {
+			"question": "Why build on Optimism?",
+			"answer": "Options need frequent price updates and low transaction costs. Optimism provides both. Lyra also integrates with Synthetix for settlement, which is Optimism-native. The L2 enables options trading that would be too expensive on mainnet."
+		},
+		"4": {
+			"question": "How does Lyra compare to Deribit?",
+			"answer": "Deribit is centralized with deeper liquidity and more markets. Lyra is decentralized and permissionless. Lyra uses AMM, Deribit uses orderbook. Deribit better for professionals, Lyra for DeFi-native options access."
+		},
+		"5": {
+			"question": "Is Lyra safe?",
+			"answer": "Lyra is audited and has operated since 2021. The AMM model is complex with oracle dependencies. LP vaults carry market risk—large moves can cause losses. Synthetix integration adds dependency. Research the risk parameters."
+		}
+	},
+	"cta": {
+		"ready": "Ready to trade DeFi options?",
+		"button": "Explore Lyra",
+		"note": "Options AMM on Optimism"
+	}
+}

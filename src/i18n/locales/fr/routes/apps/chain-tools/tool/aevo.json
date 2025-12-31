@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Aevo - Options & Perpetuals Exchange",
+		"description": "Aevo is a decentralized options and perpetuals exchange. Trade crypto options with deep liquidity on Aevo's L2 rollup.",
+		"keywords": "Aevo, AEVO token, crypto options, DeFi options, perpetuals, options trading"
+	},
+	"overview": "Aevo is a high-performance decentralized exchange for options and perpetuals. Born from Ribbon Finance's expertise in options, Aevo offers active trading of crypto options with institutional-grade infrastructure.\n\nBuilt on its own optimistic rollup, Aevo provides fast execution and low fees. The platform features an orderbook model with professional market makers providing deep liquidity for options.\n\nAevo supports both options and perpetual futures trading, offering leverage on various crypto assets. The AEVO token (merged from RBN) powers governance and staking.",
+	"features": {
+		"1": {
+			"title": "Crypto Options",
+			"description": "Trade calls and puts"
+		},
+		"2": {
+			"title": "Perpetuals",
+			"description": "Leverage trading available"
+		},
+		"3": {
+			"title": "Aevo Rollup",
+			"description": "Custom L2 for performance"
+		},
+		"4": {
+			"title": "Orderbook Model",
+			"description": "Professional liquidity"
+		},
+		"5": {
+			"title": "AEVO Token",
+			"description": "Governance and trading rewards"
+		},
+		"6": {
+			"title": "Pre-Launch Markets",
+			"description": "Trade tokens before TGE"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Options Trading",
+			"description": "Buy/sell crypto options"
+		},
+		"2": {
+			"title": "Perpetual Futures",
+			"description": "Leveraged crypto trading"
+		},
+		"3": {
+			"title": "Hedging",
+			"description": "Hedge with put options"
+		},
+		"4": {
+			"title": "Pre-Launch Trading",
+			"description": "Speculate before token launches"
+		},
+		"5": {
+			"title": "AEVO Staking",
+			"description": "Stake for fee discounts"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How is Aevo related to Ribbon?",
+			"answer": "Aevo was built by the Ribbon Finance team. Ribbon focused on passive option vaults, Aevo on active trading. In 2023 they merged—RBN converted to AEVO token. Both products continue under the Aevo umbrella."
+		},
+		"2": {
+			"question": "What is the Aevo rollup?",
+			"answer": "Aevo runs on its own optimistic rollup built specifically for trading. This provides Ethereum security with DEX-level speed. Deposits/withdrawals settle to Ethereum L1. The rollup enables the fast orderbook matching needed for options."
+		},
+		"3": {
+			"question": "What are pre-launch markets?",
+			"answer": "Aevo offers trading of tokens before their official launch (TGE). You can speculate on upcoming tokens' prices. These are settled when the token launches. It's a unique feature that attracted significant volume."
+		},
+		"4": {
+			"question": "How does options trading work on Aevo?",
+			"answer": "Aevo has an orderbook for options like traditional exchanges. Select your asset, expiry, and strike. Place limit or market orders. Options are European-style, settling at expiry. Greeks and IV are displayed for informed trading."
+		},
+		"5": {
+			"question": "Is Aevo safe?",
+			"answer": "Aevo is audited and built by the experienced Ribbon team. It uses a rollup with Ethereum security guarantees. Standard trading risks apply—liquidation on perps, options expiring worthless. The pre-launch markets have unique settlement risks."
+		}
+	},
+	"cta": {
+		"ready": "Ready to trade options and perps?",
+		"button": "Explore Aevo",
+		"note": "Professional options exchange"
+	}
+}

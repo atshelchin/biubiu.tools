@@ -136,6 +136,12 @@ import { perpetualDetail } from './perpetual';
 import { kwentaDetail } from './kwenta';
 import { levelDetail } from './level';
 import { muxDetail } from './mux';
+import { ribbonDetail } from './ribbon';
+import { aevoDetail } from './aevo';
+import { lyraDetail } from './lyra';
+import { dopexDetail } from './dopex';
+import { sommelierDetail } from './sommelier';
+import { harvestDetail } from './harvest';
 
 /**
  * All tool details mapped by tool ID
@@ -268,7 +274,13 @@ export const toolDetails: Record<string, ToolDetail> = {
 	perpetual: perpetualDetail,
 	kwenta: kwentaDetail,
 	level: levelDetail,
-	mux: muxDetail
+	mux: muxDetail,
+	ribbon: ribbonDetail,
+	aevo: aevoDetail,
+	lyra: lyraDetail,
+	dopex: dopexDetail,
+	sommelier: sommelierDetail,
+	harvest: harvestDetail
 };
 
 /**

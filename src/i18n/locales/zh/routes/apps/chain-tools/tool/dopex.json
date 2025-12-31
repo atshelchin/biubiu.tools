@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Dopex - 去中心化期权协议",
+		"description": "Dopex 在 Arbitrum 上提供去中心化期权产品。交易单一质押期权金库（SSOVs）和大西洋期权。",
+		"keywords": "Dopex, DPX 代币, rDPX, SSOVs, 大西洋期权, Arbitrum 期权"
+	},
+	"overview": "Dopex 是 Arbitrum 上的去中心化期权协议，提供创新期权产品。其旗舰产品包括单一质押期权金库（SSOVs）和具有独特抵押机制的大西洋期权。\n\nSSOVs 让用户通过在其选择的行权价卖出期权来赚取收益。大西洋期权具有永续风格的期权，可以使用其他 DeFi 头寸作为抵押品。\n\nDopex 有两个代币：DPX 用于治理，rDPX 作为从协议费用中累积价值的回扣代币。该协议开创了多项 DeFi 期权创新。",
+	"features": {
+		"1": {
+			"title": "SSOVs",
+			"description": "单一质押期权金库"
+		},
+		"2": {
+			"title": "大西洋期权",
+			"description": "永续风格期权"
+		},
+		"3": {
+			"title": "DPX & rDPX",
+			"description": "双代币模型"
+		},
+		"4": {
+			"title": "Arbitrum 原生",
+			"description": "快速、低成本期权"
+		},
+		"5": {
+			"title": "自定义行权价",
+			"description": "选择您的行权价格"
+		},
+		"6": {
+			"title": "抵押效率",
+			"description": "使用 DeFi 头寸作为抵押品"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "SSOV 存款",
+			"description": "通过卖出期权赚取收益"
+		},
+		"2": {
+			"title": "期权买入",
+			"description": "购买看涨和看跌期权"
+		},
+		"3": {
+			"title": "大西洋跨式",
+			"description": "交易永续期权"
+		},
+		"4": {
+			"title": "DPX 质押",
+			"description": "治理和收入分成"
+		},
+		"5": {
+			"title": "GMX 集成",
+			"description": "GLP 头寸期权"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 SSOVs？",
+			"answer": "单一质押期权金库让您存入资产并选择卖出期权的行权价。当交易者购买这些期权时您赚取权利金。类似于 Ribbon 金库，但行权价由用户选择而非算法选择。"
+		},
+		"2": {
+			"question": "什么是大西洋期权？",
+			"answer": "大西洋期权是没有固定到期日的永续风格期权。它们具有独特功能，如抵押品共享——您借入的资产或 LP 头寸可以作为期权抵押品，提高资本效率。"
+		},
+		"3": {
+			"question": "DPX vs rDPX 代币？",
+			"answer": "DPX 是用于投票和质押的主要治理代币。rDPX 是从协议费用中累积价值的回扣代币，用于各种协议机制。两个代币在 Dopex 的经济模型中协同工作。"
+		},
+		"4": {
+			"question": "Dopex 如何与 GMX 集成？",
+			"answer": "Dopex 提供可以使用 GLP（GMX 的流动性代币）作为抵押品的大西洋期权。这让 GLP 持有者无需出售头寸即可获得杠杆。这是一种交易期权的资本高效方式。"
+		},
+		"5": {
+			"question": "Dopex 安全吗？",
+			"answer": "Dopex 经过审计但有复杂的创新产品。双代币模型和大西洋期权较新颖，实战检验较少。Arbitrum 原生具有智能合约风险。使用前了解每个产品的具体风险。"
+		}
+	},
+	"cta": {
+		"ready": "准备好探索 Dopex 期权了吗？",
+		"button": "探索 Dopex",
+		"note": "Arbitrum 上的创新期权"
+	}
+}

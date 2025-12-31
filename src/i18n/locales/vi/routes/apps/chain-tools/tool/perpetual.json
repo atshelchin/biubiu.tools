@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Perpetual Protocol - vAMM Perpetuals",
+		"description": "Perpetual Protocol pioneers virtual AMM perpetual trading on Optimism. Trade crypto perpetuals with no counterparty and guaranteed liquidity.",
+		"keywords": "Perpetual Protocol, PERP token, vAMM, Optimism perpetuals, decentralized derivatives"
+	},
+	"overview": "Perpetual Protocol pioneered the virtual AMM (vAMM) model for decentralized perpetual trading. Instead of traditional orderbooks or liquidity pools, vAMMs use mathematical curves for guaranteed liquidity.\n\nBuilt on Optimism, Perpetual Protocol offers low-cost perpetual trading with no counterparty risk. The vAMM ensures trades always execute, though larger positions have higher slippage.\n\nThe PERP token governs the protocol and can be staked for rewards. Perpetual Protocol was one of the first successful decentralized perpetual exchanges.",
+	"features": {
+		"1": {
+			"title": "vAMM Model",
+			"description": "Virtual AMM for perpetuals"
+		},
+		"2": {
+			"title": "Guaranteed Liquidity",
+			"description": "Trades always execute"
+		},
+		"3": {
+			"title": "No Counterparty",
+			"description": "Trade against the protocol"
+		},
+		"4": {
+			"title": "Optimism Native",
+			"description": "Low fees, fast execution"
+		},
+		"5": {
+			"title": "PERP Token",
+			"description": "Governance and staking"
+		},
+		"6": {
+			"title": "Cross-Margin",
+			"description": "Efficient capital usage"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Perpetual Trading",
+			"description": "Trade crypto with leverage"
+		},
+		"2": {
+			"title": "Hedging",
+			"description": "Hedge spot positions"
+		},
+		"3": {
+			"title": "PERP Staking",
+			"description": "Stake for protocol rewards"
+		},
+		"4": {
+			"title": "Speculation",
+			"description": "Leveraged directional bets"
+		},
+		"5": {
+			"title": "Arbitrage",
+			"description": "Arb with other venues"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is a vAMM?",
+			"answer": "A virtual AMM uses the AMM bonding curve math but without real tokens in the pool. It's a pricing mechanism for perpetuals. The curve determines entry/exit prices. No liquidity providers needed—the protocol itself is counterparty."
+		},
+		"2": {
+			"question": "How is this different from GMX?",
+			"answer": "GMX uses oracle prices with GLP liquidity pool. Perpetual uses vAMM math for pricing. GMX has zero price impact, Perp has slippage based on position size. Different tradeoffs—GMX needs LPs, Perp needs healthy funding rates."
+		},
+		"3": {
+			"question": "What is PERP token for?",
+			"answer": "PERP is governance and utility token. Stake PERP to earn protocol revenue share. PERP holders vote on protocol parameters. The token captures value from trading activity on the platform."
+		},
+		"4": {
+			"question": "Why build on Optimism?",
+			"answer": "Optimism provides low fees and fast confirmations needed for derivatives trading. The EVM compatibility made migration easy. Optimism's growing DeFi ecosystem provides good synergies."
+		},
+		"5": {
+			"question": "Is Perpetual Protocol safe?",
+			"answer": "Perpetual Protocol is audited and has operated since 2020—one of the oldest perp DEXs. The vAMM model is novel and has different risks than traditional models. Standard leverage risks apply. Research thoroughly."
+		}
+	},
+	"cta": {
+		"ready": "Ready to trade perpetuals?",
+		"button": "Explore Perpetual",
+		"note": "Pioneer of on-chain perpetuals"
+	}
+}

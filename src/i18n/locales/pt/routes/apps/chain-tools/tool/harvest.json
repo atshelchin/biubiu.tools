@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Harvest Finance - Yield Farming Aggregator",
+		"description": "Harvest Finance automates yield farming across DeFi protocols. Deposit into vaults that auto-compound rewards for optimized APY.",
+		"keywords": "Harvest Finance, FARM token, yield aggregator, auto-compound, DeFi vaults, farming"
+	},
+	"overview": "Harvest Finance is a yield farming aggregator that optimizes and auto-compounds farming strategies across DeFi. Deposit assets into Harvest vaults, and the protocol handles claiming, selling, and reinvesting rewards.\n\nHarvest supports strategies across major DeFi protocols like Curve, Convex, Aave, and more. The auto-compounding feature maximizes returns by reinvesting earnings frequently.\n\nThe FARM token governs the protocol and earns a share of protocol profits. Harvest was one of the early yield aggregators, operating since 2020.",
+	"features": {
+		"1": {
+			"title": "Auto-Compound",
+			"description": "Automatic reward reinvestment"
+		},
+		"2": {
+			"title": "Multi-Protocol",
+			"description": "Strategies across DeFi"
+		},
+		"3": {
+			"title": "FARM Token",
+			"description": "Governance and profit share"
+		},
+		"4": {
+			"title": "Gas Optimization",
+			"description": "Socialized gas costs"
+		},
+		"5": {
+			"title": "Multi-Chain",
+			"description": "Ethereum, Polygon, more"
+		},
+		"6": {
+			"title": "fTokens",
+			"description": "Receipt tokens for deposits"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Yield Farming",
+			"description": "Optimized farming strategies"
+		},
+		"2": {
+			"title": "Auto-Compounding",
+			"description": "Hands-off yield growth"
+		},
+		"3": {
+			"title": "Gas Savings",
+			"description": "Share harvesting costs"
+		},
+		"4": {
+			"title": "FARM Staking",
+			"description": "Earn protocol profits"
+		},
+		"5": {
+			"title": "LP Farming",
+			"description": "Optimize LP rewards"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How does auto-compounding work?",
+			"answer": "Harvest vaults automatically harvest farming rewards, sell them, and reinvest into the strategy. This happens frequently (usually daily). Compounding more often than you could manually results in higher effective APY."
+		},
+		"2": {
+			"question": "What are fTokens?",
+			"answer": "When you deposit into Harvest, you receive fTokens (like fUSDC) representing your share. fTokens appreciate in value as yields compound. Redeem fTokens to withdraw your original deposit plus earnings."
+		},
+		"3": {
+			"question": "How does Harvest compare to Yearn?",
+			"answer": "Both are yield aggregators with similar concepts. Yearn is larger with more TVL. Harvest has the FARM token for profit-sharing. Both auto-compound and optimize strategies. Harvest historically was more aggressive on new farms."
+		},
+		"4": {
+			"question": "What is FARM token?",
+			"answer": "FARM is the governance and profit-sharing token. Stake FARM in the Profit Share pool to earn a portion of protocol fees. FARM holders also vote on governance proposals and protocol direction."
+		},
+		"5": {
+			"question": "Is Harvest Finance safe?",
+			"answer": "Harvest experienced a flash loan attack in 2020 but recovered and improved security. It's been audited multiple times since. Smart contract and underlying strategy risks apply. The protocol has operated and evolved for years."
+		}
+	},
+	"cta": {
+		"ready": "Ready to optimize your farming?",
+		"button": "Explore Harvest",
+		"note": "Auto-compound your yields"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Dopex - Decentralized Options Protocol",
+		"description": "Dopex offers decentralized options products on Arbitrum. Trade Single Staking Option Vaults (SSOVs) and Atlantic Options.",
+		"keywords": "Dopex, DPX token, rDPX, SSOVs, Atlantic Options, Arbitrum options"
+	},
+	"overview": "Dopex is a decentralized options protocol on Arbitrum offering innovative options products. Its flagship products include Single Staking Option Vaults (SSOVs) and Atlantic Options with unique collateral mechanisms.\n\nSSOVs let users earn yield by selling options at their chosen strike prices. Atlantic Options feature perpetual-style options that can use other DeFi positions as collateral.\n\nDopex has two tokens: DPX for governance and rDPX as a rebate token that accrues value from protocol fees. The protocol has pioneered several DeFi options innovations.",
+	"features": {
+		"1": {
+			"title": "SSOVs",
+			"description": "Single Staking Option Vaults"
+		},
+		"2": {
+			"title": "Atlantic Options",
+			"description": "Perpetual-style options"
+		},
+		"3": {
+			"title": "DPX & rDPX",
+			"description": "Dual token model"
+		},
+		"4": {
+			"title": "Arbitrum Native",
+			"description": "Fast, low-cost options"
+		},
+		"5": {
+			"title": "Custom Strikes",
+			"description": "Choose your strike prices"
+		},
+		"6": {
+			"title": "Collateral Efficiency",
+			"description": "Use DeFi positions as collateral"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "SSOV Deposits",
+			"description": "Earn yield selling options"
+		},
+		"2": {
+			"title": "Options Buying",
+			"description": "Purchase calls and puts"
+		},
+		"3": {
+			"title": "Atlantic Straddles",
+			"description": "Trade perpetual options"
+		},
+		"4": {
+			"title": "DPX Staking",
+			"description": "Governance and revenue share"
+		},
+		"5": {
+			"title": "GMX Integration",
+			"description": "Options on GLP positions"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What are SSOVs?",
+			"answer": "Single Staking Option Vaults let you deposit assets and choose strike prices for selling options. You earn premiums when traders buy those options. It's like Ribbon vaults but with user-selected strikes instead of algorithmic selection."
+		},
+		"2": {
+			"question": "What are Atlantic Options?",
+			"answer": "Atlantic Options are perpetual-style options without fixed expiry. They have unique features like collateral sharing—your borrowed assets or LP positions can serve as option collateral, improving capital efficiency."
+		},
+		"3": {
+			"question": "DPX vs rDPX tokens?",
+			"answer": "DPX is the main governance token for voting and staking. rDPX is a rebate token that accrues value from protocol fees and is used in various protocol mechanisms. Both tokens work together in Dopex's economic model."
+		},
+		"4": {
+			"question": "How does Dopex integrate with GMX?",
+			"answer": "Dopex offers Atlantic Options that can use GLP (GMX's liquidity token) as collateral. This lets GLP holders access leverage without selling their position. It's a capital-efficient way to trade options."
+		},
+		"5": {
+			"question": "Is Dopex safe?",
+			"answer": "Dopex is audited but has complex, innovative products. The dual-token model and Atlantic options are novel with less battle-testing. Arbitrum-native with smart contract risk. Understand each product's specific risks before using."
+		}
+	},
+	"cta": {
+		"ready": "Ready to explore Dopex options?",
+		"button": "Explore Dopex",
+		"note": "Innovative options on Arbitrum"
+	}
+}

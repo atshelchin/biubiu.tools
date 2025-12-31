@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Lyra Finance - DeFi 期权协议",
+		"description": "Lyra Finance 是建立在 Optimism 上的领先 DeFi 期权协议。通过自动做市和有竞争力的定价交易期权。",
+		"keywords": "Lyra Finance, LYRA 代币, DeFi 期权, Optimism 期权, AMM 期权, 加密衍生品"
+	},
+	"overview": "Lyra Finance 是一个使用自动做市商（AMM）进行期权定价的去中心化期权协议。Lyra 不使用订单簿，而是基于波动性和 Greek 风险管理算法定价期权。\n\n建立在 Optimism 上并后来扩展到 Arbitrum，Lyra 为主要加密资产提供流动的期权市场。该协议使用流动性提供者，他们通过向交易者卖出期权赚取收益。\n\nLyra 的创新是使期权通过 DeFi 可访问。LYRA 代币治理协议并激励流动性提供。",
+	"features": {
+		"1": {
+			"title": "期权 AMM",
+			"description": "算法期权定价"
+		},
+		"2": {
+			"title": "Optimism 原生",
+			"description": "低成本 L2 交易"
+		},
+		"3": {
+			"title": "自动 Greeks",
+			"description": "协议管理风险"
+		},
+		"4": {
+			"title": "LYRA 代币",
+			"description": "治理和激励"
+		},
+		"5": {
+			"title": "LP 金库",
+			"description": "提供期权流动性"
+		},
+		"6": {
+			"title": "Synthetix 集成",
+			"description": "使用 SNX 结算"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "期权交易",
+			"description": "买入看涨和看跌期权"
+		},
+		"2": {
+			"title": "对冲",
+			"description": "用看跌期权保护投资组合"
+		},
+		"3": {
+			"title": "流动性提供",
+			"description": "通过卖出期权赚取"
+		},
+		"4": {
+			"title": "投机",
+			"description": "杠杆方向性押注"
+		},
+		"5": {
+			"title": "LYRA 质押",
+			"description": "治理参与"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "期权 AMM 如何工作？",
+			"answer": "Lyra 使用根据链上条件调整的 Black-Scholes 定价。AMM 根据隐含波动率、偏斜和 Greek 敞口报价。随着头寸开立，价格自动调整。LP 提供流动性并从交易价差中赚取。"
+		},
+		"2": {
+			"question": "什么是 LP 金库？",
+			"answer": "LP 金库持有支持向交易者出售期权的抵押品。LP 从期权销售中赚取权利金但承担市场风险。AMM 管理 Greeks 以减少方向性敞口。LP 回报取决于市场波动性和交易活动。"
+		},
+		"3": {
+			"question": "为什么建立在 Optimism 上？",
+			"answer": "期权需要频繁的价格更新和低交易成本。Optimism 两者兼备。Lyra 还与 Synthetix 集成进行结算，后者是 Optimism 原生的。L2 使得在主网上太贵的期权交易成为可能。"
+		},
+		"4": {
+			"question": "Lyra 与 Deribit 相比如何？",
+			"answer": "Deribit 是中心化的，有更深的流动性和更多市场。Lyra 是去中心化和无需许可的。Lyra 使用 AMM，Deribit 使用订单簿。Deribit 更适合专业人士，Lyra 适合 DeFi 原生期权访问。"
+		},
+		"5": {
+			"question": "Lyra 安全吗？",
+			"answer": "Lyra 经过审计，自 2021 年以来运营。AMM 模型复杂，有预言机依赖。LP 金库承担市场风险——大波动可能导致损失。Synthetix 集成增加了依赖性。研究风险参数。"
+		}
+	},
+	"cta": {
+		"ready": "准备好交易 DeFi 期权了吗？",
+		"button": "探索 Lyra",
+		"note": "Optimism 上的期权 AMM"
+	}
+}

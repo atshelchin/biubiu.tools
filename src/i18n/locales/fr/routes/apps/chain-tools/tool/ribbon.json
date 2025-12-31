@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Ribbon Finance - DeFi Options Vaults",
+		"description": "Ribbon Finance offers structured products through automated options vaults. Earn yield through covered call and put-selling strategies.",
+		"keywords": "Ribbon Finance, RBN token, options vaults, DOVs, structured products, DeFi options"
+	},
+	"overview": "Ribbon Finance pioneered DeFi Options Vaults (DOVs), making options strategies accessible to regular users. Instead of trading options yourself, you deposit into a vault that automatically runs options strategies.\n\nThe most popular vault is covered call selling—the vault sells call options on your deposited assets to generate premium income. Put-selling vaults collect premiums by selling downside protection.\n\nRibbon has since merged with Aevo for active options trading, but the vault products continue to serve users wanting passive options-based yield.",
+	"features": {
+		"1": {
+			"title": "Options Vaults",
+			"description": "Automated options strategies"
+		},
+		"2": {
+			"title": "Covered Calls",
+			"description": "Earn yield on holdings"
+		},
+		"3": {
+			"title": "Put Selling",
+			"description": "Premium income strategy"
+		},
+		"4": {
+			"title": "RBN Token",
+			"description": "Governance and gauges"
+		},
+		"5": {
+			"title": "Aevo Integration",
+			"description": "Merged with Aevo exchange"
+		},
+		"6": {
+			"title": "Multi-Asset",
+			"description": "ETH, BTC, SOL vaults"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Passive Yield",
+			"description": "Earn yield through option premiums"
+		},
+		"2": {
+			"title": "Covered Call Strategy",
+			"description": "Generate income on ETH/BTC"
+		},
+		"3": {
+			"title": "Put Selling",
+			"description": "Collect premiums on stablecoins"
+		},
+		"4": {
+			"title": "RBN Staking",
+			"description": "Boost vault yields"
+		},
+		"5": {
+			"title": "Structured Products",
+			"description": "Access complex strategies simply"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is a covered call vault?",
+			"answer": "A covered call vault holds your ETH/BTC and sells weekly call options at prices above current market. If price stays below strike, you keep the premium as yield. If price exceeds strike, your upside is capped but you still earn premium."
+		},
+		"2": {
+			"question": "What are the risks?",
+			"answer": "Covered call vaults cap upside—if the asset moons, you miss gains above the strike. Put-selling vaults risk buying at high prices. In crashes, vault performance lags holding the asset. Options premium doesn't compensate for all scenarios."
+		},
+		"3": {
+			"question": "What is the Aevo merger?",
+			"answer": "Ribbon merged with Aevo, an options and perpetuals exchange. RBN converted to AEVO token. Ribbon vaults continue operating while Aevo focuses on active trading. They share infrastructure and liquidity."
+		},
+		"4": {
+			"question": "How are strikes selected?",
+			"answer": "Ribbon uses algorithms to select strikes that balance yield and risk. Typically strikes are 10-30% out of the money. The goal is collecting premiums without options expiring in the money too often."
+		},
+		"5": {
+			"question": "How often do vaults compound?",
+			"answer": "Most Ribbon vaults run weekly cycles. Options expire Friday, new positions open. Premiums compound into the vault. You can withdraw after each cycle. APY varies based on volatility and market conditions."
+		}
+	},
+	"cta": {
+		"ready": "Ready to earn options-based yield?",
+		"button": "Explore Ribbon",
+		"note": "DeFi options vault pioneer"
+	}
+}
