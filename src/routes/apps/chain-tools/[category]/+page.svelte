@@ -1,65 +1,21 @@
 <script lang="ts">
 	import { useI18n } from '@shelchin/i18n';
-	import { SearchX } from '@lucide/svelte';
+	import { FolderOpen } from '@lucide/svelte';
 	import ExternalToolCard from '@/features/chain-tools/components/external-tool-card.svelte';
 	import SeoHead from '$lib/components/seo-head.svelte';
 	import Faqs from '$lib/components/ui/faqs.svelte';
+	import Pagination from '$lib/components/ui/pagination.svelte';
 	import { allTools as toolsData } from '@/features/chain-tools/data/tools';
 	import type { ExternalTool } from '@/features/chain-tools/types';
 	import type { PageData } from './$types';
-	import { getContext } from 'svelte';
 
 	let { data }: { data: PageData } = $props();
 
 	const i18n = useI18n();
 
-	// Get search query from layout context
-	const searchContext = getContext<{ query: string }>('chainToolsSearch');
-	const searchQuery = $derived(searchContext?.query || '');
-
-	/**
-	 * Tokenize search query
-	 */
-	function tokenizeQuery(query: string): string[] {
-		return query
-			.toLowerCase()
-			.split(/\s+/)
-			.filter((t) => t.length > 0);
-	}
-
-	/**
-	 * Get tool descriptions using i18n
-	 * descriptionKey format: chain-tools.{category}.tools.{toolId}.description
-	 */
-	function getToolDescriptions(tool: ExternalTool): string[] {
-		const descriptions: string[] = [];
-
-		// Get description in current locale
-		const currentDesc = i18n.t(tool.descriptionKey as never, { defaultValue: '' });
-		if (currentDesc) {
-			descriptions.push(currentDesc.toLowerCase());
-		}
-
-		// Tool name is always searchable
-		descriptions.push(tool.name.toLowerCase());
-
-		return descriptions;
-	}
-
-	/**
-	 * Check if a tool matches the search query
-	 */
-	function matchesTool(tool: ExternalTool, tokens: string[]): boolean {
-		const searchableTexts: string[] = [
-			tool.name.toLowerCase(),
-			...tool.tags.map((t) => t.toLowerCase()),
-			...(tool.chains || []).map((c) => c.toLowerCase()),
-			...getToolDescriptions(tool)
-		];
-
-		const combinedText = searchableTexts.join(' ');
-		return tokens.every((token) => combinedText.includes(token));
-	}
+	// Pagination settings
+	const ITEMS_PER_PAGE = 12;
+	let currentPage = $state(1);
 
 	/**
 	 * Sort tools: BiuBiu tools first
@@ -74,20 +30,44 @@
 		});
 	}
 
-	// Filtered tools
+	// Filtered tools by category
 	const filteredTools = $derived.by(() => {
-		// Filter by category
-		let result = toolsData.filter((tool) => tool.category === data.categoryId);
-
-		// Apply search filter if query exists
-		if (searchQuery.trim().length > 0) {
-			const tokens = tokenizeQuery(searchQuery);
-			if (tokens.length > 0) {
-				result = result.filter((tool) => matchesTool(tool, tokens));
-			}
-		}
-
+		const result = toolsData.filter((tool) => tool.category === data.categoryId);
 		return sortToolsWithBiubiuFirst(result);
+	});
+
+	// Pagination calculations
+	const totalPages = $derived(Math.ceil(filteredTools.length / ITEMS_PER_PAGE));
+
+	// Reset to page 1 when category changes
+	$effect(() => {
+		void data.categoryId;
+		currentPage = 1;
+	});
+
+	// Paginated tools for current page
+	const paginatedTools = $derived.by(() => {
+		const start = (currentPage - 1) * ITEMS_PER_PAGE;
+		const end = start + ITEMS_PER_PAGE;
+		return filteredTools.slice(start, end);
+	});
+
+	function handlePageChange(page: number) {
+		currentPage = page;
+		// Scroll to top of tools grid smoothly
+		const grid = document.querySelector('.tools-grid');
+		if (grid) {
+			grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		}
+	}
+
+	// Pagination labels (i18n)
+	const paginationLabels = $derived({
+		previous: i18n.t('common.pagination.previous' as never, { defaultValue: 'Previous' }),
+		next: i18n.t('common.pagination.next' as never, { defaultValue: 'Next' }),
+		first: i18n.t('common.pagination.first' as never, { defaultValue: 'First' }),
+		last: i18n.t('common.pagination.last' as never, { defaultValue: 'Last' }),
+		page: i18n.t('common.pagination.page' as never, { defaultValue: 'Page' })
 	});
 </script>
 
@@ -105,15 +85,25 @@
 <!-- Tools Grid -->
 {#if filteredTools.length > 0}
 	<div class="tools-grid">
-		{#each filteredTools as tool, index (tool.id)}
+		{#each paginatedTools as tool, index (tool.id)}
 			<ExternalToolCard {tool} {index} />
 		{/each}
 	</div>
+
+	<!-- Pagination -->
+	{#if totalPages > 1}
+		<Pagination
+			{currentPage}
+			{totalPages}
+			onPageChange={handlePageChange}
+			labels={paginationLabels}
+		/>
+	{/if}
 {:else}
 	<!-- Empty State -->
 	<div class="empty-state">
 		<div class="empty-icon">
-			<SearchX class="icon" />
+			<FolderOpen class="icon" />
 		</div>
 		<h3 class="empty-title">{i18n.t('routes/apps/chain-tools.empty_title')}</h3>
 		<p class="empty-description">
@@ -125,10 +115,19 @@
 <!-- Footer Stats -->
 <div class="page-footer">
 	<p class="stats">
-		{i18n.t('routes/apps/chain-tools.showing_count', {
-			count: filteredTools.length,
-			total: toolsData.length
-		})}
+		{#if totalPages > 1}
+			{i18n.t('common.pagination.showing_range' as never, {
+				defaultValue: 'Showing {start}-{end} of {total}',
+				start: (currentPage - 1) * ITEMS_PER_PAGE + 1,
+				end: Math.min(currentPage * ITEMS_PER_PAGE, filteredTools.length),
+				total: filteredTools.length
+			})}
+		{:else}
+			{i18n.t('routes/apps/chain-tools.showing_count', {
+				count: filteredTools.length,
+				total: toolsData.length
+			})}
+		{/if}
 	</p>
 	<p class="disclaimer">{i18n.t('routes/apps/chain-tools.disclaimer')}</p>
 </div>

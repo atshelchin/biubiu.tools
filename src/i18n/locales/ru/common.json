@@ -82,5 +82,13 @@
 		"add_custom_network": "Добавить свою сеть"
 	},
 	"copy_address": "Копировать адрес",
-	"copied": "Скопировано!"
+	"copied": "Скопировано!",
+	"pagination": {
+		"previous": "Назад",
+		"next": "Вперёд",
+		"first": "Первая",
+		"last": "Последняя",
+		"page": "Страница",
+		"showing_range": "Показано {start}-{end} из {total}"
+	}
 }

@@ -1,155 +1,155 @@
 {
 	"category_seo": {
-		"title": "Yüksek Potansiyelli Token'lar - Araştırma ve Analiz Araçları | BiuBiu Tools",
-		"description": "Yüksek potansiyelli token'ları araştırmak için araçlar. Yeni fırsatlar için zincir üstü analiz, sosyal metrikler ve erken keşif platformları.",
-		"keywords": "yüksek potansiyelli token'lar, erken kripto projeleri, token araştırması, 10x 100x token'lar",
+		"title": "Efsanevi Tokenlar - 10x-1000x Büyüme Kripto Projeleri | BiuBiu Tools",
+		"description": "Lansmandan bu yana devasa büyüme elde eden efsanevi tokenları takip edin. BNB, SOL, SHIB, PEPE ve daha fazlası dahil 10x-1000x getiri sağlayan kanıtlanmış projeleri araştırın.",
+		"keywords": "efsanevi tokenlar, 100x kripto, 1000x tokenlar, en iyi performans kripto, yüksek büyüme tokenlar",
 		"faqs": [
 			{
-				"question": "Erken fırsatları nasıl bulurum?",
-				"answer": "Yeni token dağıtımlarını izleyin, akıllı para cüzdanlarını takip edin, sosyal medyada geliştiricileri ve yapımcıları takip edin, testnet'lere katılın ve yaklaşan lansmanları araştırın."
+				"question": "Bir tokeni efsanevi yapan nedir?",
+				"answer": "Efsanevi tokenlar lansmandan bu yana 10x-1000x+ getiri elde etmiş, önemli piyasa değerlerini korumuş ve kalıcı ekosistemler oluşturmuştur. L1'ler, DeFi, memeler ve altyapı genelinde başarılı projeleri temsil ederler."
 			},
 			{
-				"question": "Potansiyeli gösteren metrikler nelerdir?",
-				"answer": "Ekip geçmişine, teknoloji yeniliğine, tokenomics'e (arz, vesting), topluluk etkileşimine, geliştirici aktivitesine (GitHub), TVL büyümesine ve akıllı para ilgisine bakın."
+				"question": "Bu tokenlara hâlâ yatırım yapabilir miyim?",
+				"answer": "Evet, ancak zaten devasa büyüme yaşadılar. Gelecek getiriler daha düşük olabilir. Yatırım yapmadan önce her projenin temellerini, mevcut değerlemesini ve büyüme potansiyelini araştırın."
 			},
 			{
-				"question": "Riskler nelerdir?",
-				"answer": "Yüksek potansiyel = yüksek risk. Çoğu token başarısız olur. Rug pull'lar, kötü tokenomics, fayda eksikliği ve aşırı abartılmış pazarlamaya dikkat edin. Kaybedebileceğinizden fazlasını asla yatırım yapmayın."
+				"question": "Bir sonraki efsanevi tokeni nasıl bulurum?",
+				"answer": "Güçlü temeller arayın: yenilikçi teknoloji, deneyimli ekip, aktif geliştirme, büyüyen topluluk, gerçek fayda ve iyi tokenomik. Kaliteli projelere erken katılım şansları artırır."
 			}
 		]
 	},
 	"tools": {
-		"legend-bnb": {
-			"description": "BNB (Binance) - Tool"
+		"legend_bnb": {
+			"description": "BNB Chain, borsa indirimleri ve en büyük kripto borsasındaki DeFi'yi destekleyen Binance ekosistem tokeni"
 		},
-		"legend-sol": {
-			"description": "SOL (Solana) - Tool"
+		"legend_sol": {
+			"description": "Hızlı işlemler, düşük ücretler ve gelişen DeFi/NFT ekosistemi ile tanınan yüksek performanslı L1 blockchain"
 		},
-		"legend-matic": {
-			"description": "MATIC/POL (Polygon) - Tool"
+		"legend_matic": {
+			"description": "Polygon PoS ve zkEVM ağları aracılığıyla hızlı, düşük maliyetli işlemler sağlayan Ethereum ölçekleme çözümü"
 		},
-		"legend-avax": {
-			"description": "AVAX (Avalanche) - Tool"
+		"legend_avax": {
+			"description": "Yüksek verim ve neredeyse anlık kesinlik ile özel blockchain subnetleri sağlayan Layer 1 platformu"
 		},
-		"legend-link": {
-			"description": "LINK (Chainlink) - Tool"
+		"legend_link": {
+			"description": "Zincirler arası akıllı sözleşmelere güvenilir off-chain veri sağlayan lider merkeziyetsiz oracle ağı"
 		},
-		"legend-uni": {
-			"description": "UNI (Uniswap) - Tool"
+		"legend_uni": {
+			"description": "Otomatik market yapıcılara öncülük eden en büyük merkeziyetsiz borsa Uniswap'ın yönetim tokeni"
 		},
-		"legend-aave": {
-			"description": "AAVE (Aave) - Tool"
+		"legend_aave": {
+			"description": "Flash loan ve cross-chain desteği ile borç alma ve verme sağlayan lider DeFi kredi protokolü"
 		},
-		"legend-ftm": {
-			"description": "FTM (Fantom) - Tool"
+		"legend_ftm": {
+			"description": "Yüksek hız ve düşük ücretleriyle bilinen, DeFi uygulamaları için popüler DAG tabanlı akıllı sözleşme platformu"
 		},
-		"legend-atom": {
-			"description": "ATOM (Cosmos) - Tool"
+		"legend_atom": {
+			"description": "IBC protokolü aracılığıyla blockchainler arası birlikte çalışabilirliği sağlayan Cosmos ekosisteminin merkezi"
 		},
-		"legend-near": {
-			"description": "NEAR (NEAR Protocol) - Tool"
+		"legend_near": {
+			"description": "İnsan tarafından okunabilir hesaplar ve düşük işlem maliyetleri ile kullanılabilirliğe odaklanan parçalanmış Layer 1 blockchain"
 		},
-		"legend-inj": {
-			"description": "INJ (Injective) - Tool"
+		"legend_inj": {
+			"description": "Yerleşik emir defteri, türevler ve cross-chain ticaret ile DeFi için optimize edilmiş Cosmos tabanlı blockchain"
 		},
-		"legend-ton": {
-			"description": "TON (Toncoin) - Tool"
+		"legend_ton": {
+			"description": "Devasa kullanıcı tabanı, hızlı işlemler ve büyüyen ekosistemi olan Telegram entegreli blockchain"
 		},
-		"legend-sui": {
-			"description": "SUI (Sui) - Tool"
+		"legend_sui": {
+			"description": "Paralel işlem işleme ve yüksek verim sağlayan nesne merkezli tasarıma sahip Move tabanlı Layer 1"
 		},
-		"legend-apt": {
-			"description": "APT (Aptos) - Tool"
+		"legend_apt": {
+			"description": "Güvenlik ve ölçeklenebilirliğe odaklanan eski Diem geliştiricilerinden Move tabanlı Layer 1 blockchain"
 		},
-		"legend-sei": {
-			"description": "SEI (Sei) - Tool"
+		"legend_sei": {
+			"description": "Yerleşik emir eşleştirme motoru ve paralelleştirilmiş EVM yürütmesi olan ticaret için optimize edilmiş Layer 1"
 		},
-		"legend-mkr": {
-			"description": "MKR (MakerDAO) - Tool"
+		"legend_mkr": {
+			"description": "DAI stablecoin'in arkasındaki protokol ve DeFi'nin temel projelerinden biri olan MakerDAO'nun yönetim tokeni"
 		},
-		"legend-snx": {
-			"description": "SNX (Synthetix) - Tool"
+		"legend_snx": {
+			"description": "Hisse senetleri, emtialar ve kripto türevlerinin zincir üstü ticaretini sağlayan sentetik varlık protokolü"
 		},
-		"legend-crv": {
-			"description": "CRV (Curve) - Tool"
+		"legend_crv": {
+			"description": "Yenilikçi vote-escrow tokenomik yapısına sahip lider stablecoin DEX'i Curve Finance'ın yönetim tokeni"
 		},
-		"legend-gmx": {
-			"description": "GMX (GMX) - Tool"
+		"legend_gmx": {
+			"description": "Arbitrum ve Avalanche'ta sıfır fiyat etkisi işlemleri ve gerçek getiri sunan merkeziyetsiz perpetual borsası"
 		},
-		"legend-pendle": {
-			"description": "PENDLE (Pendle) - Tool"
+		"legend_pendle": {
+			"description": "Puan spekülasyonu ile getiri ve anaparanın ayrılması ve ticaretini sağlayan getiri ticareti protokolü"
 		},
-		"legend-rune": {
-			"description": "RUNE (THORChain) - Tool"
+		"legend_rune": {
+			"description": "Bitcoin, Ethereum ve daha fazlası arasında güvensiz cross-chain takasları sağlayan THORChain'in yerli tokeni"
 		},
-		"legend-dydx": {
-			"description": "DYDX (dYdX) - Tool"
+		"legend_dydx": {
+			"description": "Artık kendi Cosmos tabanlı appchain'inde çalışan lider merkeziyetsiz türev borsası"
 		},
-		"legend-shib": {
-			"description": "SHIB (Shiba Inu) - Tool"
+		"legend_shib": {
+			"description": "Büyüyen Shibarium ekosistemi ile efsanevi 1000x+ getiri elde eden topluluk odaklı meme token"
 		},
-		"legend-pepe": {
-			"description": "PEPE - Tool"
+		"legend_pepe": {
+			"description": "İkonik Pepe kurbağasına dayanan 2023'ün çığır açan meme coin'i, lansmandan bu yana devasa kazançlar elde etti"
 		},
-		"legend-bonk": {
-			"description": "BONK - Tool"
+		"legend_bonk": {
+			"description": "Ekosistem katılımcılarına airdrop edilen Solana'nın topluluk meme tokeni, SOL'a yenilenen ilgi sağladı"
 		},
-		"legend-wif": {
-			"description": "WIF (dogwifhat) - Tool"
+		"legend_wif": {
+			"description": "Şapkalı bir köpeği içeren 2024'ün en iyi Solana meme'i, hızlı benimseme ve borsa listelemeleri elde etti"
 		},
-		"legend-floki": {
-			"description": "FLOKI - Tool"
+		"legend_floki": {
+			"description": "Valhalla metaverse oyunu, NFT'ler ve DeFi ürünleri dahil fayda odaklı meme token"
 		},
-		"legend-arb": {
-			"description": "ARB (Arbitrum) - Tool"
+		"legend_arb": {
+			"description": "Ethereum'un lider iyimser rollup Layer 2 ölçekleme çözümü Arbitrum'un yönetim tokeni"
 		},
-		"legend-op": {
-			"description": "OP (Optimism) - Tool"
+		"legend_op": {
+			"description": "Optimism ve OP Stack rollup'larının Superchain ekosistemi için yönetim tokeni"
 		},
-		"legend-stx": {
-			"description": "STX (Stacks) - Tool"
+		"legend_stx": {
+			"description": "Bitcoin'in proof-of-work'ü tarafından güvence altına alınan akıllı sözleşmeler ve DeFi sağlayan Bitcoin Layer 2"
 		},
-		"legend-tia": {
-			"description": "TIA (Celestia) - Tool"
+		"legend_tia": {
+			"description": "Rollup'ların yüksek verim ve düşük maliyetle veri yayınlamasını sağlayan modüler veri kullanılabilirlik katmanı"
 		},
-		"legend-jup": {
-			"description": "JUP (Jupiter) - Tool"
+		"legend_jup": {
+			"description": "Ekosistem ticareti için merkezi altyapı olan Solana'nın lider DEX agregator ve launchpad'i"
 		},
-		"legend-pyth": {
-			"description": "PYTH (Pyth Network) - Tool"
+		"legend_pyth": {
+			"description": "Birinci taraf veri kaynaklarından gerçek zamanlı fiyat beslemeleri sağlayan yüksek doğruluklu oracle ağı"
 		},
-		"legend-render": {
-			"description": "RNDR (Render) - Tool"
+		"legend_render": {
+			"description": "3D grafik, AI ve metaverse uygulamaları için merkeziyetsiz GPU işleme ağı"
 		},
-		"legend-fet": {
-			"description": "FET (Fetch.ai) - Tool"
+		"legend_fet": {
+			"description": "Otonom ekonomik ajanlar ve veri paylaşımını sağlayan AI ve makine öğrenimi odaklı blockchain"
 		},
-		"legend-axs": {
-			"description": "AXS (Axie Infinity) - Tool"
+		"legend_axs": {
+			"description": "GameFi hareketini başlatan öncü oyna-kazan oyunu Axie Infinity'nin yönetim tokeni"
 		},
-		"legend-sand": {
-			"description": "SAND (Sandbox) - Tool"
+		"legend_sand": {
+			"description": "Sanal arazi, oyun ve yaratıcı ekonomiye sahip The Sandbox metaverse platformunun fayda tokeni"
 		},
-		"legend-mana": {
-			"description": "MANA (Decentraland) - Tool"
+		"legend_mana": {
+			"description": "Arazi sahipliğine sahip ilk blockchain tabanlı sanal dünyalardan biri olan Decentraland'ın para birimi"
 		},
-		"legend-gala": {
-			"description": "GALA (Gala Games) - Tool"
+		"legend_gala": {
+			"description": "Çoklu blockchain oyunları ve eğlence içeren Gala Games platformunu destekleyen oyun ekosistemi tokeni"
 		},
-		"legend-imx": {
-			"description": "IMX (Immutable) - Tool"
+		"legend_imx": {
+			"description": "Gaz ücretsiz NFT basımı ve ticareti ile büyük Web3 oyunlarını destekleyen oyun odaklı Layer 2"
 		},
-		"legend-blur": {
-			"description": "BLUR (Blur) - Tool"
+		"legend_blur": {
+			"description": "Profesyonel tüccar özellikleri ve airdrop teşvikleri ile pazarı altüst eden NFT marketplace tokeni"
 		},
-		"coingecko-gainers": {
-			"description": "CoinGecko Top Gainers - Tool"
+		"coingecko_gainers": {
+			"description": "CoinGecko'da 24s, 7g ve 30g performansa göre en çok kazanan kripto paraları takip edin"
 		},
-		"dexscreener-trending": {
-			"description": "DEXScreener Trending - Tool"
+		"dexscreener_trending": {
+			"description": "Gerçek zamanlı fiyat grafikleri ve ticaret verileri ile tüm DEX'lerde trend olan tokenleri keşfedin"
 		},
-		"messari-screener": {
-			"description": "Messari Screener - Tool"
+		"messari_screener": {
+			"description": "Piyasa değeri, metrikler ve temeller için gelişmiş filtrelere sahip profesyonel kripto tarayıcı"
 		}
 	}
 }

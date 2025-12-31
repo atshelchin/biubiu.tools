@@ -82,5 +82,13 @@
 		"add_custom_network": "커스텀 네트워크 추가"
 	},
 	"copy_address": "주소 복사",
-	"copied": "복사됨!"
+	"copied": "복사됨!",
+	"pagination": {
+		"previous": "이전",
+		"next": "다음",
+		"first": "처음",
+		"last": "마지막",
+		"page": "페이지",
+		"showing_range": "{total}개 중 {start}-{end} 표시"
+	}
 }

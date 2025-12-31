@@ -82,5 +82,13 @@
 		"add_custom_network": "Özel ağ ekle"
 	},
 	"copy_address": "Adresi kopyala",
-	"copied": "Kopyalandı!"
+	"copied": "Kopyalandı!",
+	"pagination": {
+		"previous": "Önceki",
+		"next": "Sonraki",
+		"first": "İlk",
+		"last": "Son",
+		"page": "Sayfa",
+		"showing_range": "{total} içinden {start}-{end} gösteriliyor"
+	}
 }

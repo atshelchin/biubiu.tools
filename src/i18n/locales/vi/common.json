@@ -82,5 +82,13 @@
 		"add_custom_network": "Thêm mạng tùy chỉnh"
 	},
 	"copy_address": "Sao chép địa chỉ",
-	"copied": "Đã sao chép!"
+	"copied": "Đã sao chép!",
+	"pagination": {
+		"previous": "Trước",
+		"next": "Sau",
+		"first": "Đầu",
+		"last": "Cuối",
+		"page": "Trang",
+		"showing_range": "Hiển thị {start}-{end} trong {total}"
+	}
 }

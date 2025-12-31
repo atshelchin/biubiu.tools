@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { useI18n } from '@shelchin/i18n';
-	import SearchBar from '@/features/chain-tools/components/search-bar.svelte';
 	import CategoryFilter from '@/features/chain-tools/components/category-filter.svelte';
 	import { categories } from '@/features/chain-tools/data/categories';
 	import type { CategoryId } from '@/features/chain-tools/types';
@@ -21,28 +20,7 @@
 		return lastPart as CategoryId;
 	});
 
-	// Search state
-	let searchQuery = $state('');
-	let debouncedQuery = $state('');
-	let debounceTimer: ReturnType<typeof setTimeout> | null = null;
-
-	function handleSearchChange(value: string) {
-		searchQuery = value;
-
-		if (debounceTimer) {
-			clearTimeout(debounceTimer);
-		}
-
-		debounceTimer = setTimeout(() => {
-			debouncedQuery = value;
-		}, 300);
-	}
-
 	function handleCategorySelect(id: CategoryId) {
-		// Clear search when changing category
-		searchQuery = '';
-		debouncedQuery = '';
-
 		// Navigate to category route
 		const basePath = $page.url.pathname.includes('/zh/')
 			? '/zh/apps/chain-tools'
@@ -54,14 +32,6 @@
 			goto(`${basePath}/${id}`);
 		}
 	}
-
-	// Expose search query to child pages via context or props
-	import { setContext } from 'svelte';
-	setContext('chainToolsSearch', {
-		get query() {
-			return debouncedQuery;
-		}
-	});
 </script>
 
 <div class="chain-tools-page">
@@ -71,9 +41,8 @@
 		<p class="page-subtitle">{i18n.t('routes/apps/chain-tools.subtitle')}</p>
 	</header>
 
-	<!-- Search and Filter -->
+	<!-- Category Filter -->
 	<div class="controls">
-		<SearchBar value={searchQuery} onchange={handleSearchChange} />
 		<CategoryFilter {categories} selected={currentCategory} onselect={handleCategorySelect} />
 	</div>
 

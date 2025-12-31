@@ -82,5 +82,13 @@
 		"add_custom_network": "Tambahkan jaringan kustom"
 	},
 	"copy_address": "Salin alamat",
-	"copied": "Disalin!"
+	"copied": "Disalin!",
+	"pagination": {
+		"previous": "Sebelumnya",
+		"next": "Berikutnya",
+		"first": "Pertama",
+		"last": "Terakhir",
+		"page": "Halaman",
+		"showing_range": "Menampilkan {start}-{end} dari {total}"
+	}
 }

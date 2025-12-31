@@ -82,5 +82,13 @@
 		"add_custom_network": "カスタムネットワークを追加"
 	},
 	"copy_address": "アドレスをコピー",
-	"copied": "コピーしました！"
+	"copied": "コピーしました！",
+	"pagination": {
+		"previous": "前へ",
+		"next": "次へ",
+		"first": "最初",
+		"last": "最後",
+		"page": "ページ",
+		"showing_range": "{start}-{end} / {total}件"
+	}
 }

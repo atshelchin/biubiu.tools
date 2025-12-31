@@ -82,5 +82,13 @@
 		"add_custom_network": "Adicionar rede personalizada"
 	},
 	"copy_address": "Copiar Endereço",
-	"copied": "Copiado!"
+	"copied": "Copiado!",
+	"pagination": {
+		"previous": "Anterior",
+		"next": "Próximo",
+		"first": "Primeira",
+		"last": "Última",
+		"page": "Página",
+		"showing_range": "Exibindo {start}-{end} de {total}"
+	}
 }

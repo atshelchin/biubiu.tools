@@ -1,155 +1,155 @@
 {
 	"category_seo": {
-		"title": "Высокопотенциальные токены - Исследования и инструменты анализа | BiuBiu Tools",
-		"description": "Инструменты для исследования высокопотенциальных токенов. Он-чейн анализ, социальные метрики и платформы раннего обнаружения для новых возможностей.",
-		"keywords": "высокопотенциальные токены, ранние криптопроекты, исследование токенов, 10x 100x токены",
+		"title": "Легендарные Токены - Криптопроекты с Ростом 10x-1000x | BiuBiu Tools",
+		"description": "Отслеживайте легендарные токены, достигшие массивного роста с момента запуска. Исследуйте проверенные проекты с доходностью 10x-1000x включая BNB, SOL, SHIB, PEPE и другие.",
+		"keywords": "легендарные токены, 100x крипто, 1000x токены, лучшая крипто производительность, высокорастущие токены",
 		"faqs": [
 			{
-				"question": "Как найти ранние возможности?",
-				"answer": "Отслеживайте новые развертывания токенов, следите за кошельками умных денег, следите за разработчиками и строителями в социальных сетях, участвуйте в тестнетах и исследуйте предстоящие запуски."
+				"question": "Что делает токен легендарным?",
+				"answer": "Легендарные токены достигли доходности 10x-1000x+ с момента запуска, сохранили значительную рыночную капитализацию и построили устойчивые экосистемы. Они представляют успешные проекты в L1, DeFi, мемах и инфраструктуре."
 			},
 			{
-				"question": "Какие метрики указывают на потенциал?",
-				"answer": "Смотрите на опыт команды, инновации технологий, токеномику (поставка, вестинг), вовлеченность сообщества, активность разработчиков (GitHub), рост TVL и интерес умных денег."
+				"question": "Могу ли я ещё инвестировать в эти токены?",
+				"answer": "Да, но они уже испытали массивный рост. Будущая доходность может быть ниже. Изучите фундаментальные показатели, текущую оценку и потенциал роста каждого проекта перед инвестированием."
 			},
 			{
-				"question": "Каковы риски?",
-				"answer": "Высокий потенциал = высокий риск. Большинство токенов терпят неудачу. Следите за rug pull, плохой токеномикой, отсутствием полезности и чрезмерно раздутым маркетингом. Никогда не инвестируйте больше, чем можете потерять."
+				"question": "Как найти следующий легендарный токен?",
+				"answer": "Ищите сильные фундаментальные показатели: инновационные технологии, опытную команду, активную разработку, растущее сообщество, реальную полезность и хорошую токеномику. Раннее участие в качественных проектах увеличивает шансы."
 			}
 		]
 	},
 	"tools": {
-		"legend-bnb": {
-			"description": "BNB (Binance) - Tool"
+		"legend_bnb": {
+			"description": "Токен экосистемы Binance, обеспечивающий BNB Chain, скидки на бирже и DeFi на крупнейшей криптобирже"
 		},
-		"legend-sol": {
-			"description": "SOL (Solana) - Tool"
+		"legend_sol": {
+			"description": "Высокопроизводительный L1 блокчейн, известный быстрыми транзакциями, низкими комиссиями и процветающей экосистемой DeFi/NFT"
 		},
-		"legend-matic": {
-			"description": "MATIC/POL (Polygon) - Tool"
+		"legend_matic": {
+			"description": "Решение масштабирования Ethereum, обеспечивающее быстрые и недорогие транзакции через сети Polygon PoS и zkEVM"
 		},
-		"legend-avax": {
-			"description": "AVAX (Avalanche) - Tool"
+		"legend_avax": {
+			"description": "Платформа Layer 1, позволяющая создавать кастомные подсети блокчейна с высокой пропускной способностью и почти мгновенной финальностью"
 		},
-		"legend-link": {
-			"description": "LINK (Chainlink) - Tool"
+		"legend_link": {
+			"description": "Ведущая децентрализованная оракульная сеть, предоставляющая надёжные офф-чейн данные смарт-контрактам между цепями"
 		},
-		"legend-uni": {
-			"description": "UNI (Uniswap) - Tool"
+		"legend_uni": {
+			"description": "Токен управления Uniswap, крупнейшей децентрализованной биржи, ставшей пионером автоматических маркет-мейкеров"
 		},
-		"legend-aave": {
-			"description": "AAVE (Aave) - Tool"
+		"legend_aave": {
+			"description": "Ведущий протокол кредитования DeFi, обеспечивающий займы и кредиты с флеш-займами и кросс-чейн поддержкой"
 		},
-		"legend-ftm": {
-			"description": "FTM (Fantom) - Tool"
+		"legend_ftm": {
+			"description": "Платформа смарт-контрактов на основе DAG, известная высокой скоростью и низкими комиссиями, популярная для DeFi приложений"
 		},
-		"legend-atom": {
-			"description": "ATOM (Cosmos) - Tool"
+		"legend_atom": {
+			"description": "Хаб экосистемы Cosmos, обеспечивающий совместимость между блокчейнами через протокол IBC"
 		},
-		"legend-near": {
-			"description": "NEAR (NEAR Protocol) - Tool"
+		"legend_near": {
+			"description": "Шардированный Layer 1 блокчейн, ориентированный на удобство использования с читаемыми аккаунтами и низкими транзакционными издержками"
 		},
-		"legend-inj": {
-			"description": "INJ (Injective) - Tool"
+		"legend_inj": {
+			"description": "Блокчейн на базе Cosmos, оптимизированный для DeFi со встроенной книгой ордеров, деривативами и кросс-чейн торговлей"
 		},
-		"legend-ton": {
-			"description": "TON (Toncoin) - Tool"
+		"legend_ton": {
+			"description": "Интегрированный с Telegram блокчейн с массивной базой пользователей, быстрыми транзакциями и растущей экосистемой"
 		},
-		"legend-sui": {
-			"description": "SUI (Sui) - Tool"
+		"legend_sui": {
+			"description": "Layer 1 на базе Move с объектно-ориентированным дизайном, обеспечивающий параллельную обработку транзакций и высокую пропускную способность"
 		},
-		"legend-apt": {
-			"description": "APT (Aptos) - Tool"
+		"legend_apt": {
+			"description": "Layer 1 блокчейн на базе Move от бывших разработчиков Diem, ориентированный на безопасность и масштабируемость"
 		},
-		"legend-sei": {
-			"description": "SEI (Sei) - Tool"
+		"legend_sei": {
+			"description": "Оптимизированный для торговли Layer 1 со встроенным движком сопоставления ордеров и параллельным выполнением EVM"
 		},
-		"legend-mkr": {
-			"description": "MKR (MakerDAO) - Tool"
+		"legend_mkr": {
+			"description": "Токен управления MakerDAO, протокола за стейблкоином DAI и одного из основополагающих проектов DeFi"
 		},
-		"legend-snx": {
-			"description": "SNX (Synthetix) - Tool"
+		"legend_snx": {
+			"description": "Протокол синтетических активов, обеспечивающий ончейн торговлю акциями, товарами и криптодеривативами"
 		},
-		"legend-crv": {
-			"description": "CRV (Curve) - Tool"
+		"legend_crv": {
+			"description": "Токен управления Curve Finance, ведущего DEX стейблкоинов с инновационной токеномикой vote-escrow"
 		},
-		"legend-gmx": {
-			"description": "GMX (GMX) - Tool"
+		"legend_gmx": {
+			"description": "Децентрализованная бессрочная биржа на Arbitrum и Avalanche с нулевым ценовым воздействием и реальной доходностью"
 		},
-		"legend-pendle": {
-			"description": "PENDLE (Pendle) - Tool"
+		"legend_pendle": {
+			"description": "Протокол торговли доходностью, позволяющий разделять и торговать доходность и основную сумму со спекуляцией на поинтах"
 		},
-		"legend-rune": {
-			"description": "RUNE (THORChain) - Tool"
+		"legend_rune": {
+			"description": "Нативный токен THORChain, обеспечивающий бездоверительные кросс-чейн свопы между Bitcoin, Ethereum и другими"
 		},
-		"legend-dydx": {
-			"description": "DYDX (dYdX) - Tool"
+		"legend_dydx": {
+			"description": "Ведущая децентрализованная биржа деривативов, теперь работающая на собственной аппчейн на базе Cosmos"
 		},
-		"legend-shib": {
-			"description": "SHIB (Shiba Inu) - Tool"
+		"legend_shib": {
+			"description": "Мем-токен, управляемый сообществом, достигший легендарной доходности 1000x+ с растущей экосистемой Shibarium"
 		},
-		"legend-pepe": {
-			"description": "PEPE - Tool"
+		"legend_pepe": {
+			"description": "Прорывной мем-коин 2023 года на основе культового Pepe frog, достигший массивных прибылей с момента запуска"
 		},
-		"legend-bonk": {
-			"description": "BONK - Tool"
+		"legend_bonk": {
+			"description": "Мем-токен сообщества Solana, раздаваемый участникам экосистемы, вызвавший возобновлённый интерес к SOL"
 		},
-		"legend-wif": {
-			"description": "WIF (dogwifhat) - Tool"
+		"legend_wif": {
+			"description": "Топовый мем Solana 2024 с собакой в шляпе, достигший быстрого принятия и листингов на биржах"
 		},
-		"legend-floki": {
-			"description": "FLOKI - Tool"
+		"legend_floki": {
+			"description": "Мем-токен с фокусом на утилитарность, включая метаверс-игру Valhalla, NFT и продукты DeFi"
 		},
-		"legend-arb": {
-			"description": "ARB (Arbitrum) - Tool"
+		"legend_arb": {
+			"description": "Токен управления Arbitrum, ведущего оптимистического роллап Layer 2 решения масштабирования Ethereum"
 		},
-		"legend-op": {
-			"description": "OP (Optimism) - Tool"
+		"legend_op": {
+			"description": "Токен управления Optimism и экосистемы Superchain роллапов OP Stack"
 		},
-		"legend-stx": {
-			"description": "STX (Stacks) - Tool"
+		"legend_stx": {
+			"description": "Bitcoin Layer 2, обеспечивающий смарт-контракты и DeFi, защищённые proof-of-work Bitcoin"
 		},
-		"legend-tia": {
-			"description": "TIA (Celestia) - Tool"
+		"legend_tia": {
+			"description": "Модульный уровень доступности данных, позволяющий роллапам публиковать данные с высокой пропускной способностью и низкой стоимостью"
 		},
-		"legend-jup": {
-			"description": "JUP (Jupiter) - Tool"
+		"legend_jup": {
+			"description": "Ведущий DEX агрегатор и лаунчпад Solana, центральная инфраструктура для торговли экосистемы"
 		},
-		"legend-pyth": {
-			"description": "PYTH (Pyth Network) - Tool"
+		"legend_pyth": {
+			"description": "Высокоточная оракульная сеть, предоставляющая ценовые фиды в реальном времени от первичных источников данных"
 		},
-		"legend-render": {
-			"description": "RNDR (Render) - Tool"
+		"legend_render": {
+			"description": "Децентрализованная сеть GPU рендеринга для 3D графики, AI и метаверс приложений"
 		},
-		"legend-fet": {
-			"description": "FET (Fetch.ai) - Tool"
+		"legend_fet": {
+			"description": "Блокчейн, ориентированный на AI и машинное обучение, обеспечивающий автономных экономических агентов и обмен данными"
 		},
-		"legend-axs": {
-			"description": "AXS (Axie Infinity) - Tool"
+		"legend_axs": {
+			"description": "Токен управления Axie Infinity, пионерской игры play-to-earn, положившей начало движению GameFi"
 		},
-		"legend-sand": {
-			"description": "SAND (Sandbox) - Tool"
+		"legend_sand": {
+			"description": "Утилитарный токен метаверс-платформы The Sandbox с виртуальной землёй, играми и экономикой создателей"
 		},
-		"legend-mana": {
-			"description": "MANA (Decentraland) - Tool"
+		"legend_mana": {
+			"description": "Валюта Decentraland, одного из первых виртуальных миров на блокчейне с владением землёй"
 		},
-		"legend-gala": {
-			"description": "GALA (Gala Games) - Tool"
+		"legend_gala": {
+			"description": "Токен игровой экосистемы, обеспечивающий платформу Gala Games с множеством блокчейн-игр и развлечений"
 		},
-		"legend-imx": {
-			"description": "IMX (Immutable) - Tool"
+		"legend_imx": {
+			"description": "Layer 2, ориентированный на игры, с бесплатным минтингом и торговлей NFT, обеспечивающий ведущие Web3 игры"
 		},
-		"legend-blur": {
-			"description": "BLUR (Blur) - Tool"
+		"legend_blur": {
+			"description": "Токен NFT маркетплейса, разрушивший рынок профессиональными функциями для трейдеров и стимулами аирдропов"
 		},
-		"coingecko-gainers": {
-			"description": "CoinGecko Top Gainers - Tool"
+		"coingecko_gainers": {
+			"description": "Отслеживайте криптовалюты с наибольшим ростом по показателям 24ч, 7д и 30д на CoinGecko"
 		},
-		"dexscreener-trending": {
-			"description": "DEXScreener Trending - Tool"
+		"dexscreener_trending": {
+			"description": "Откройте для себя трендовые токены на всех DEX с графиками цен в реальном времени и торговыми данными"
 		},
-		"messari-screener": {
-			"description": "Messari Screener - Tool"
+		"messari_screener": {
+			"description": "Профессиональный криптоскринер с продвинутыми фильтрами для рыночной капитализации, метрик и фундаментальных показателей"
 		}
 	}
 }

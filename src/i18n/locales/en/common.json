@@ -97,5 +97,13 @@
 	"language": {
 		"recommended": "Recommended",
 		"english_most_complete": "English version is the most complete"
+	},
+	"pagination": {
+		"previous": "Previous",
+		"next": "Next",
+		"first": "First",
+		"last": "Last",
+		"page": "Page",
+		"showing_range": "Showing {start}-{end} of {total}"
 	}
 }

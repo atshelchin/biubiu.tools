@@ -1,154 +1,155 @@
 {
 	"category_seo": {
-		"title": "Token Tiềm Năng Cao - Công Cụ Nghiên Cứu & Phân Tích | BiuBiu Tools",
-		"description": "Công cụ để nghiên cứu token có tiềm năng cao. Phân tích on-chain, chỉ số xã hội và nền tảng khám phá sớm cho cơ hội mới.",
+		"title": "Token Huyền Thoại - Dự Án Crypto Tăng Trưởng 10x-1000x | BiuBiu Tools",
+		"description": "Theo dõi các token huyền thoại đã đạt tăng trưởng khổng lồ từ khi ra mắt. Nghiên cứu các dự án đã được chứng minh với lợi nhuận 10x-1000x bao gồm BNB, SOL, SHIB, PEPE và nhiều hơn.",
+		"keywords": "token huyền thoại, crypto 100x, token 1000x, crypto hiệu suất cao nhất, token tăng trưởng cao",
 		"faqs": [
 			{
-				"question": "Làm thế nào để tìm cơ hội sớm?",
-				"answer": "Giám sát triển khai token mới, theo dõi ví smart money, theo dõi nhà phát triển và người xây dựng trên mạng xã hội, tham gia testnet và nghiên cứu các dự án sắp ra mắt."
+				"question": "Điều gì làm cho một token trở thành huyền thoại?",
+				"answer": "Token huyền thoại đã đạt lợi nhuận 10x-1000x+ từ khi ra mắt, duy trì vốn hóa thị trường đáng kể và xây dựng hệ sinh thái bền vững. Chúng đại diện cho các dự án thành công trong L1, DeFi, meme và cơ sở hạ tầng."
 			},
 			{
-				"question": "Chỉ số nào cho thấy tiềm năng?",
-				"answer": "Xem xét nền tảng đội ngũ, đổi mới công nghệ, tokenomics (cung, vesting), sự tương tác cộng đồng, hoạt động phát triển (GitHub), tăng trưởng TVL và sự quan tâm của smart money."
+				"question": "Tôi có còn đầu tư được vào các token này không?",
+				"answer": "Có, nhưng chúng đã có tăng trưởng khổng lồ. Lợi nhuận tương lai có thể thấp hơn. Nghiên cứu các yếu tố cơ bản, định giá hiện tại và tiềm năng tăng trưởng của từng dự án trước khi đầu tư."
 			},
 			{
-				"question": "Rủi ro là gì?",
-				"answer": "Tiềm năng cao = rủi ro cao. Hầu hết token đều thất bại. Cẩn thận với rug pull, tokenomics kém, thiếu tiện ích và marketing quá thổi phồng. Không bao giờ đầu tư nhiều hơn mức bạn có thể mất."
+				"question": "Làm thế nào để tìm token huyền thoại tiếp theo?",
+				"answer": "Tìm kiếm nền tảng mạnh: công nghệ đổi mới, đội ngũ giàu kinh nghiệm, phát triển tích cực, cộng đồng phát triển, tiện ích thực tế và tokenomics tốt. Tham gia sớm vào các dự án chất lượng tăng cơ hội."
 			}
 		]
 	},
 	"tools": {
-		"legend-bnb": {
-			"description": "BNB (Binance) - Tool"
+		"legend_bnb": {
+			"description": "Token hệ sinh thái Binance hỗ trợ BNB Chain, giảm giá sàn giao dịch và DeFi trên sàn crypto lớn nhất"
 		},
-		"legend-sol": {
-			"description": "SOL (Solana) - Tool"
+		"legend_sol": {
+			"description": "Blockchain L1 hiệu suất cao nổi tiếng với giao dịch nhanh, phí thấp và hệ sinh thái DeFi/NFT phát triển"
 		},
-		"legend-matic": {
-			"description": "MATIC/POL (Polygon) - Tool"
+		"legend_matic": {
+			"description": "Giải pháp mở rộng Ethereum cung cấp giao dịch nhanh, chi phí thấp thông qua mạng Polygon PoS và zkEVM"
 		},
-		"legend-avax": {
-			"description": "AVAX (Avalanche) - Tool"
+		"legend_avax": {
+			"description": "Nền tảng Layer 1 cho phép subnet blockchain tùy chỉnh với thông lượng cao và hoàn tất gần như tức thì"
 		},
-		"legend-link": {
-			"description": "LINK (Chainlink) - Tool"
+		"legend_link": {
+			"description": "Mạng oracle phi tập trung hàng đầu cung cấp dữ liệu off-chain đáng tin cậy cho smart contract cross-chain"
 		},
-		"legend-uni": {
-			"description": "UNI (Uniswap) - Tool"
+		"legend_uni": {
+			"description": "Token quản trị của Uniswap, sàn giao dịch phi tập trung lớn nhất tiên phong automated market maker"
 		},
-		"legend-aave": {
-			"description": "AAVE (Aave) - Tool"
+		"legend_aave": {
+			"description": "Giao thức cho vay DeFi hàng đầu cho phép vay mượn với flash loan và hỗ trợ cross-chain"
 		},
-		"legend-ftm": {
-			"description": "FTM (Fantom) - Tool"
+		"legend_ftm": {
+			"description": "Nền tảng smart contract dựa trên DAG nổi tiếng với tốc độ cao và phí thấp, phổ biến cho ứng dụng DeFi"
 		},
-		"legend-atom": {
-			"description": "ATOM (Cosmos) - Tool"
+		"legend_atom": {
+			"description": "Hub của hệ sinh thái Cosmos cho phép khả năng tương tác giữa các blockchain thông qua giao thức IBC"
 		},
-		"legend-near": {
-			"description": "NEAR (NEAR Protocol) - Tool"
+		"legend_near": {
+			"description": "Blockchain Layer 1 phân mảnh tập trung vào khả năng sử dụng với tài khoản dễ đọc và chi phí giao dịch thấp"
 		},
-		"legend-inj": {
-			"description": "INJ (Injective) - Tool"
+		"legend_inj": {
+			"description": "Blockchain dựa trên Cosmos tối ưu hóa cho DeFi với sổ lệnh tích hợp, phái sinh và giao dịch cross-chain"
 		},
-		"legend-ton": {
-			"description": "TON (Toncoin) - Tool"
+		"legend_ton": {
+			"description": "Blockchain tích hợp Telegram với lượng người dùng lớn, giao dịch nhanh và hệ sinh thái đang phát triển"
 		},
-		"legend-sui": {
-			"description": "SUI (Sui) - Tool"
+		"legend_sui": {
+			"description": "Layer 1 dựa trên Move với thiết kế tập trung đối tượng cho phép xử lý giao dịch song song và thông lượng cao"
 		},
-		"legend-apt": {
-			"description": "APT (Aptos) - Tool"
+		"legend_apt": {
+			"description": "Blockchain Layer 1 dựa trên Move từ các nhà phát triển Diem cũ tập trung vào an toàn và khả năng mở rộng"
 		},
-		"legend-sei": {
-			"description": "SEI (Sei) - Tool"
+		"legend_sei": {
+			"description": "Layer 1 tối ưu hóa giao dịch với engine khớp lệnh tích hợp và thực thi EVM song song"
 		},
-		"legend-mkr": {
-			"description": "MKR (MakerDAO) - Tool"
+		"legend_mkr": {
+			"description": "Token quản trị của MakerDAO, giao thức đằng sau stablecoin DAI và một trong những dự án nền tảng của DeFi"
 		},
-		"legend-snx": {
-			"description": "SNX (Synthetix) - Tool"
+		"legend_snx": {
+			"description": "Giao thức tài sản tổng hợp cho phép giao dịch on-chain cổ phiếu, hàng hóa và phái sinh crypto"
 		},
-		"legend-crv": {
-			"description": "CRV (Curve) - Tool"
+		"legend_crv": {
+			"description": "Token quản trị của Curve Finance, DEX stablecoin hàng đầu với tokenomics vote-escrow đổi mới"
 		},
-		"legend-gmx": {
-			"description": "GMX (GMX) - Tool"
+		"legend_gmx": {
+			"description": "Sàn perpetual phi tập trung trên Arbitrum và Avalanche với giao dịch không ảnh hưởng giá và lợi nhuận thực"
 		},
-		"legend-pendle": {
-			"description": "PENDLE (Pendle) - Tool"
+		"legend_pendle": {
+			"description": "Giao thức giao dịch lợi suất cho phép tách và giao dịch lợi suất và gốc với đầu cơ điểm"
 		},
-		"legend-rune": {
-			"description": "RUNE (THORChain) - Tool"
+		"legend_rune": {
+			"description": "Token gốc của THORChain cho phép swap cross-chain không cần tin tưởng giữa Bitcoin, Ethereum và các chain khác"
 		},
-		"legend-dydx": {
-			"description": "DYDX (dYdX) - Tool"
+		"legend_dydx": {
+			"description": "Sàn phái sinh phi tập trung hàng đầu hiện đang chạy trên appchain dựa trên Cosmos riêng"
 		},
-		"legend-shib": {
-			"description": "SHIB (Shiba Inu) - Tool"
+		"legend_shib": {
+			"description": "Token meme do cộng đồng điều khiển đạt lợi nhuận huyền thoại 1000x+ với hệ sinh thái Shibarium đang phát triển"
 		},
-		"legend-pepe": {
-			"description": "PEPE - Tool"
+		"legend_pepe": {
+			"description": "Meme coin đột phá 2023 dựa trên biểu tượng Pepe frog, đạt lợi nhuận khổng lồ từ khi ra mắt"
 		},
-		"legend-bonk": {
-			"description": "BONK - Tool"
+		"legend_bonk": {
+			"description": "Token meme cộng đồng Solana airdrop cho người tham gia hệ sinh thái, thúc đẩy sự quan tâm mới đến SOL"
 		},
-		"legend-wif": {
-			"description": "WIF (dogwifhat) - Tool"
+		"legend_wif": {
+			"description": "Meme Solana hàng đầu 2024 với hình ảnh chó đội mũ, đạt được sự chấp nhận nhanh chóng và niêm yết trên sàn"
 		},
-		"legend-floki": {
-			"description": "FLOKI - Tool"
+		"legend_floki": {
+			"description": "Token meme tập trung tiện ích bao gồm game metaverse Valhalla, NFT và sản phẩm DeFi"
 		},
-		"legend-arb": {
-			"description": "ARB (Arbitrum) - Tool"
+		"legend_arb": {
+			"description": "Token quản trị của Arbitrum, giải pháp mở rộng Layer 2 optimistic rollup hàng đầu của Ethereum"
 		},
-		"legend-op": {
-			"description": "OP (Optimism) - Tool"
+		"legend_op": {
+			"description": "Token quản trị của Optimism và hệ sinh thái Superchain của các rollup OP Stack"
 		},
-		"legend-stx": {
-			"description": "STX (Stacks) - Tool"
+		"legend_stx": {
+			"description": "Bitcoin Layer 2 cho phép smart contract và DeFi được bảo vệ bởi proof-of-work của Bitcoin"
 		},
-		"legend-tia": {
-			"description": "TIA (Celestia) - Tool"
+		"legend_tia": {
+			"description": "Lớp khả dụng dữ liệu modular cho phép rollup đăng dữ liệu với thông lượng cao và chi phí thấp"
 		},
-		"legend-jup": {
-			"description": "JUP (Jupiter) - Tool"
+		"legend_jup": {
+			"description": "Aggregator DEX và launchpad hàng đầu của Solana, cơ sở hạ tầng trung tâm cho giao dịch hệ sinh thái"
 		},
-		"legend-pyth": {
-			"description": "PYTH (Pyth Network) - Tool"
+		"legend_pyth": {
+			"description": "Mạng oracle độ chính xác cao cung cấp price feed thời gian thực từ nguồn dữ liệu bên thứ nhất"
 		},
-		"legend-render": {
-			"description": "RNDR (Render) - Tool"
+		"legend_render": {
+			"description": "Mạng render GPU phi tập trung cho đồ họa 3D, AI và ứng dụng metaverse"
 		},
-		"legend-fet": {
-			"description": "FET (Fetch.ai) - Tool"
+		"legend_fet": {
+			"description": "Blockchain tập trung AI và machine learning cho phép các agent kinh tế tự động và chia sẻ dữ liệu"
 		},
-		"legend-axs": {
-			"description": "AXS (Axie Infinity) - Tool"
+		"legend_axs": {
+			"description": "Token quản trị của Axie Infinity, game play-to-earn tiên phong khởi đầu phong trào GameFi"
 		},
-		"legend-sand": {
-			"description": "SAND (Sandbox) - Tool"
+		"legend_sand": {
+			"description": "Token tiện ích của nền tảng metaverse The Sandbox với đất ảo, game và nền kinh tế sáng tạo"
 		},
-		"legend-mana": {
-			"description": "MANA (Decentraland) - Tool"
+		"legend_mana": {
+			"description": "Tiền tệ của Decentraland, một trong những thế giới ảo blockchain đầu tiên với quyền sở hữu đất"
 		},
-		"legend-gala": {
-			"description": "GALA (Gala Games) - Tool"
+		"legend_gala": {
+			"description": "Token hệ sinh thái gaming hỗ trợ nền tảng Gala Games với nhiều game blockchain và giải trí"
 		},
-		"legend-imx": {
-			"description": "IMX (Immutable) - Tool"
+		"legend_imx": {
+			"description": "Layer 2 tập trung gaming với mint và giao dịch NFT miễn gas, hỗ trợ các game Web3 hàng đầu"
 		},
-		"legend-blur": {
-			"description": "BLUR (Blur) - Tool"
+		"legend_blur": {
+			"description": "Token marketplace NFT đã phá vỡ thị trường với tính năng cho trader chuyên nghiệp và khuyến khích airdrop"
 		},
-		"coingecko-gainers": {
-			"description": "CoinGecko Top Gainers - Tool"
+		"coingecko_gainers": {
+			"description": "Theo dõi các cryptocurrency tăng trưởng mạnh nhất theo hiệu suất 24h, 7d và 30d trên CoinGecko"
 		},
-		"dexscreener-trending": {
-			"description": "DEXScreener Trending - Tool"
+		"dexscreener_trending": {
+			"description": "Khám phá token trending trên tất cả DEX với biểu đồ giá thời gian thực và dữ liệu giao dịch"
 		},
-		"messari-screener": {
-			"description": "Messari Screener - Tool"
+		"messari_screener": {
+			"description": "Screener crypto chuyên nghiệp với bộ lọc nâng cao cho vốn hóa thị trường, metrics và fundamentals"
 		}
 	}
 }

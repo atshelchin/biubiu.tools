@@ -1,80 +1,17 @@
 <script lang="ts">
 	import { useI18n } from '@shelchin/i18n';
-	import { SearchX } from '@lucide/svelte';
+	import { FolderOpen } from '@lucide/svelte';
 	import ExternalToolCard from '@/features/chain-tools/components/external-tool-card.svelte';
 	import SeoHead from '$lib/components/seo-head.svelte';
 	import { allTools as toolsData } from '@/features/chain-tools/data/tools';
-	import type { ExternalTool } from '@/features/chain-tools/types';
 	import type { PageData } from './$types';
-	import { getContext } from 'svelte';
 
 	let { data }: { data: PageData } = $props();
 
 	const i18n = useI18n();
 
-	// Get search query from layout context
-	const searchContext = getContext<{ query: string }>('chainToolsSearch');
-	const searchQuery = $derived(searchContext?.query || '');
-
-	/**
-	 * Tokenize search query
-	 */
-	function tokenizeQuery(query: string): string[] {
-		return query
-			.toLowerCase()
-			.split(/\s+/)
-			.filter((t) => t.length > 0);
-	}
-
-	/**
-	 * Get tool description from i18n
-	 * Uses the tool's descriptionKey which is in format: chain-tools.{category}.tools.{toolId}.description
-	 */
-	function getToolDescriptions(tool: ExternalTool): string[] {
-		const descriptions: string[] = [];
-
-		// Get description from current locale
-		const currentDesc = i18n.t(tool.descriptionKey as never, { defaultValue: '' });
-		if (currentDesc) {
-			descriptions.push(currentDesc.toLowerCase());
-		}
-
-		// For search, we also want English descriptions if not already in English
-		// This is handled by tool name and tags which are always in English
-		return descriptions;
-	}
-
-	/**
-	 * Check if a tool matches the search query
-	 */
-	function matchesTool(tool: ExternalTool, tokens: string[]): boolean {
-		const searchableTexts: string[] = [
-			tool.name.toLowerCase(),
-			...tool.tags.map((t) => t.toLowerCase()),
-			...(tool.chains || []).map((c) => c.toLowerCase()),
-			...getToolDescriptions(tool)
-		];
-
-		const combinedText = searchableTexts.join(' ');
-		return tokens.every((token) => combinedText.includes(token));
-	}
-
-	// Filtered tools - show featured tools on main page
-	const filteredTools = $derived.by(() => {
-		const hasSearchQuery = searchQuery.trim().length > 0;
-
-		// When searching, search all tools
-		if (hasSearchQuery) {
-			const tokens = tokenizeQuery(searchQuery);
-			if (tokens.length > 0) {
-				return toolsData.filter((tool) => matchesTool(tool, tokens));
-			}
-			return toolsData;
-		}
-
-		// No search - show featured tools
-		return toolsData.filter((tool) => tool.isFeatured === true);
-	});
+	// Show featured tools on main page
+	const filteredTools = $derived(toolsData.filter((tool) => tool.isFeatured === true));
 </script>
 
 <SeoHead
@@ -99,7 +36,7 @@
 	<!-- Empty State -->
 	<div class="empty-state">
 		<div class="empty-icon">
-			<SearchX class="icon" />
+			<FolderOpen class="icon" />
 		</div>
 		<h3 class="empty-title">{i18n.t('routes/apps/chain-tools.empty_title')}</h3>
 		<p class="empty-description">
