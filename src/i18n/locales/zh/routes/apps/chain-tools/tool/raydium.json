@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Raydium - Solana 首选 AMM 与流动性协议",
+		"description": "在 Solana 领先的 AMM 上提供流动性和交易。Raydium 通过深度流动性池和集中流动性为 DeFi 提供动力。",
+		"keywords": "Raydium, Solana AMM, 流动性池, RAY 代币, Solana DeFi, 收益农场"
+	},
+	"overview": "Raydium 是 Solana 上领先的自动做市商（AMM），为代币兑换提供深度流动性，并使用户能够通过提供流动性获得收益。2021 年推出以来，Raydium 一直是 Solana DeFi 生态系统的核心。\n\n该协议率先实现了与 Serum（现为 OpenBook）的链上订单簿集成，允许 AMM 池和中央限价订单簿之间共享流动性。这种混合模式比纯 AMM 提供更好的价格发现和更深的流动性。\n\nRaydium 提供标准 AMM 池和集中流动性仓位（CLMM），允许 LP 通过将流动性集中在特定价格区间来获得更高收益。该平台还托管 AcceleRaytor，这是新 Solana 项目的发射台。",
+	"features": {
+		"1": {
+			"title": "集中流动性",
+			"description": "通过在自定义价格区间提供流动性获得更高收益"
+		},
+		"2": {
+			"title": "标准 AMM 池",
+			"description": "简单的全价格区间流动性，自动再平衡"
+		},
+		"3": {
+			"title": "代币兑换",
+			"description": "以深度流动性和低滑点交易代币"
+		},
+		"4": {
+			"title": "AcceleRaytor",
+			"description": "参与新代币发行和 IDO"
+		},
+		"5": {
+			"title": "RAY 质押",
+			"description": "质押 RAY 代币获得协议奖励"
+		},
+		"6": {
+			"title": "无许可池",
+			"description": "无需审批即可为任何代币对创建池子"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "流动性提供",
+			"description": "通过向池子提供流动性赚取交易费"
+		},
+		"2": {
+			"title": "代币交易",
+			"description": "以最小滑点兑换代币"
+		},
+		"3": {
+			"title": "收益农场",
+			"description": "在特定池子上赚取 RAY 奖励"
+		},
+		"4": {
+			"title": "新代币发行",
+			"description": "参与 AcceleRaytor IDO"
+		},
+		"5": {
+			"title": "创建池子",
+			"description": "为新代币启动流动性"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Raydium 安全吗？",
+			"answer": "Raydium 是 Solana 最成熟的协议之一，自 2021 年运行以来没有发生重大安全事件。合约经过审计且开源。然而，与所有 DeFi 一样，存在智能合约风险。对于大额资金请谨慎使用。"
+		},
+		"2": {
+			"question": "什么是无常损失？",
+			"answer": "无常损失发生在配对代币价格比率变化时。如果一个代币暴涨或暴跌，LP 可能最终的价值比单纯持有更少。集中流动性会放大收益和无常损失风险。在提供流动性前请理解这一点。"
+		},
+		"3": {
+			"question": "什么是 RAY 代币？",
+			"answer": "RAY 是 Raydium 的治理和实用代币。它用于质押奖励、治理投票和 AcceleRaytor 参与。RAY 可以质押获得协议收入分成。它在主要交易所可交易。"
+		},
+		"4": {
+			"question": "Raydium vs Orca：哪个更好？",
+			"answer": "两者都是优秀的 Solana AMM。Raydium 对于主要交易对有更深的流动性和 AcceleRaytor 发射台。Orca 有更简单的界面和 Whirlpools 集中流动性。许多 LP 两者都用。Jupiter 会路由到价格更好的那个。"
+		},
+		"5": {
+			"question": "我应该使用标准还是集中流动性？",
+			"answer": "标准池更简单——存入并在全价格区间赚取。集中流动性（CLMM）赚得更多但需要主动管理，无常损失风险更高。在理解其动态之前，从标准池开始。"
+		}
+	},
+	"cta": {
+		"ready": "准备在 Solana 上提供流动性？",
+		"button": "打开 Raydium",
+		"note": "Solana 领先的 AMM"
+	}
+}

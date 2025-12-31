@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Magic Eden - 多链 NFT 市场",
+		"description": "在 Solana、以太坊、比特币等链上买卖和发现 NFT。领先的跨链 NFT 市场。",
+		"keywords": "Magic Eden, NFT 市场, Solana NFT, 比特币 Ordinals, 多链 NFT, 数字收藏品"
+	},
+	"overview": "Magic Eden 是领先的多链 NFT 市场，最初建立在 Solana 上，现支持以太坊、比特币 Ordinals、Polygon 和 Base。成立于 2021 年，Magic Eden 已促成数十亿美元的 NFT 交易量。\n\n从 Solana NFT 市场的主导地位起步，Magic Eden 扩展成为真正的跨链平台，尤其成为首批支持比特币 Ordinals 的主要平台之一。该平台为跨多个区块链发现、购买和出售 NFT 提供统一体验。\n\nMagic Eden 为创作者提供工具，包括发射台服务、版税执行选项和创作者分析。该平台的低费用（2%）和用户友好界面使其成为许多 NFT 收藏家和创作者的首选。",
+	"features": {
+		"1": {
+			"title": "多链支持",
+			"description": "在 Solana、以太坊、比特币、Polygon 和 Base 上交易 NFT"
+		},
+		"2": {
+			"title": "比特币 Ordinals",
+			"description": "买卖比特币铭文和 BRC-20"
+		},
+		"3": {
+			"title": "发射台",
+			"description": "使用创作者工具铸造新收藏品"
+		},
+		"4": {
+			"title": "收藏品分析",
+			"description": "追踪地板价、交易量和持有者数据"
+		},
+		"5": {
+			"title": "出价与报价",
+			"description": "对任何 NFT 或收藏品出价"
+		},
+		"6": {
+			"title": "稀有度工具",
+			"description": "查看收藏品特征的稀有度排名"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "NFT 交易",
+			"description": "跨多个链买卖 NFT"
+		},
+		"2": {
+			"title": "比特币 Ordinals",
+			"description": "交易比特币铭文和 BRC-20 代币"
+		},
+		"3": {
+			"title": "收藏品发行",
+			"description": "通过发射台从新收藏品铸造"
+		},
+		"4": {
+			"title": "投资组合管理",
+			"description": "追踪和管理 NFT 持仓"
+		},
+		"5": {
+			"title": "创作者工具",
+			"description": "发行和管理 NFT 收藏品"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Magic Eden 的费用是多少？",
+			"answer": "Magic Eden 收取 2% 的销售费用，低于大多数竞争对手。在某些链上创作者版税是可选的。比特币 Ordinals 有略微不同的费用结构。购买没有费用，只有出售时收费。"
+		},
+		"2": {
+			"question": "Magic Eden 安全吗？",
+			"answer": "是的，Magic Eden 是一个成熟的、有风投支持的平台，具有强大的安全实践。交易是链上和非托管的。但是，始终要验证 NFT 的真实性并警惕诈骗收藏品。平台有针对合法项目的验证系统。"
+		},
+		"3": {
+			"question": "如何在 Magic Eden 上购买比特币 Ordinals？",
+			"answer": "连接比特币钱包（如 Xverse 或 Leather），浏览 Ordinals 收藏品，然后购买。Magic Eden 处理铭文过程。你需要 BTC 来购买和支付网络费用。体验与购买 Solana NFT 类似。"
+		},
+		"4": {
+			"question": "Magic Eden vs OpenSea：哪个更好？",
+			"answer": "Magic Eden 在 Solana 和比特币 Ordinals 方面领先。OpenSea 在以太坊方面领先。Magic Eden 费用更低（2% vs 2.5%）。OpenSea 有更多以太坊收藏品。许多收藏家根据交易的链使用两者。"
+		},
+		"5": {
+			"question": "Magic Eden 有代币吗？",
+			"answer": "Magic Eden 已宣布 ME 代币，但截至 2024 年底尚未发行。活跃用户可能有资格获得空投。关注他们的官方渠道了解代币发行公告。警惕声称是 ME 的诈骗代币。"
+		}
+	},
+	"cta": {
+		"ready": "准备探索多链 NFT？",
+		"button": "打开 Magic Eden",
+		"note": "跨链 NFT 市场"
+	}
+}

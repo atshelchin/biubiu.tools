@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Jupiter - Solana 领先的 DEX 聚合器",
+		"description": "Solana 上最佳的兑换价格。Jupiter 聚合所有 DEX 以寻找最优路由，实现最小滑点交易。",
+		"keywords": "Jupiter, Solana DEX, 兑换聚合器, JUP 代币, Solana 交易, DeFi"
+	},
+	"overview": "Jupiter 是 Solana 上领先的 DEX 聚合器，通过多个流动性来源路由交易以找到最佳价格。2021 年推出以来，Jupiter 已成为 Solana 的默认交易界面，每日处理数十亿美元的交易量。\n\n该平台聚合来自 Raydium、Orca、Meteora 和数十个其他 Solana DEX 的流动性，自动将交易分割到多个池子以实现最优执行。Jupiter 的路由算法考虑价格影响、费用和滑点以最大化收益。\n\n除了简单的兑换，Jupiter 还提供限价单、DCA（定投）和永续合约交易。JUP 代币于 2024 年 1 月发布，是加密史上最大的空投之一，分发给活跃的 Solana 用户。",
+	"features": {
+		"1": {
+			"title": "最优价格路由",
+			"description": "聚合 20+ DEX 寻找最优兑换路由"
+		},
+		"2": {
+			"title": "限价单",
+			"description": "设置目标价格并自动执行"
+		},
+		"3": {
+			"title": "DCA 交易",
+			"description": "定投任何 Solana 代币"
+		},
+		"4": {
+			"title": "永续合约",
+			"description": "交易永续期货，最高 100 倍杠杆"
+		},
+		"5": {
+			"title": "价格影响保护",
+			"description": "智能路由最小化大额交易的滑点"
+		},
+		"6": {
+			"title": "代币发射台",
+			"description": "通过 Jupiter LFG 发行新代币"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "代币兑换",
+			"description": "以最佳可用价格交易任何 Solana 代币"
+		},
+		"2": {
+			"title": "大额交易",
+			"description": "以最小价格影响执行大额兑换"
+		},
+		"3": {
+			"title": "限价单",
+			"description": "设置目标价格后无需关注"
+		},
+		"4": {
+			"title": "DCA 策略",
+			"description": "自动定期购买喜欢的代币"
+		},
+		"5": {
+			"title": "杠杆交易",
+			"description": "交易永续合约，最高 100 倍杠杆"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Jupiter 使用免费吗？",
+			"answer": "是的，Jupiter 的兑换聚合是免费的——你只需支付标准的 Solana 网络费用（约 $0.00025）和 DEX 费用。Jupiter 从其永续合约平台和代币发射台赚取收入，而非基本兑换。聚合交易没有隐藏费用。"
+		},
+		"2": {
+			"question": "Jupiter 安全吗？",
+			"answer": "是的，Jupiter 是 Solana 上使用最多的 DeFi 协议，处理数十亿美元的交易量。它经过多次审计且是非托管的——你始终控制你的代币。团队是公开身份的，在 Solana 社区中备受尊重。"
+		},
+		"3": {
+			"question": "什么是 JUP 代币？",
+			"answer": "JUP 是 Jupiter 的治理代币，于 2024 年 1 月发布，向 Solana 用户进行了大规模空投。JUP 持有者可以对协议决策进行投票并从质押中获得收益。未来计划对活跃用户进行更多空投。"
+		},
+		"4": {
+			"question": "Jupiter vs Raydium：我应该用哪个？",
+			"answer": "使用 Jupiter 进行兑换——当 Raydium 提供最佳价格时它会路由到 Raydium，同时检查所有其他 DEX。只有在提供流动性或使用特定 AMM 功能时才直接使用 Raydium。对于交易，Jupiter 总是更好的选择。"
+		},
+		"5": {
+			"question": "Jupiter 如何找到最佳价格？",
+			"answer": "Jupiter 的路由算法检查 20+ DEX 的价格，计算最优交易分割，并考虑费用、滑点和价格影响。它经常将大额交易分割到多个池子以最小化滑点。这一切都在毫秒内发生。"
+		}
+	},
+	"cta": {
+		"ready": "准备获得最佳 Solana 兑换？",
+		"button": "打开 Jupiter",
+		"note": "Solana 领先的 DEX 聚合器"
+	}
+}

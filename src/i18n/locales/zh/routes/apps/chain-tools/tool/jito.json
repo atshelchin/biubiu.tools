@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Jito - Solana 流动性质押与 MEV 基础设施",
+		"description": "使用 Jito 质押 SOL 并赚取 MEV 奖励。Solana 上领先的流动性质押协议，带 JitoSOL。",
+		"keywords": "Jito, JitoSOL, Solana 质押, 流动性质押, MEV, Solana 收益"
+	},
+	"overview": "Jito 是 Solana 领先的流动性质押协议和 MEV 基础设施提供商。成立于 2022 年，Jito 让用户质押 SOL 并获得 JitoSOL，这是一种赚取质押奖励加 MEV（最大可提取价值）收入的流动代币。\n\n与 SOL 被锁定的传统质押不同，JitoSOL 可以在 Solana DeFi 中使用，同时仍然赚取奖励。Jito 的 MEV 感知验证器客户端从交易排序中捕获额外价值，将这些奖励传递给 JitoSOL 持有者。\n\nJito 还运营 Solana 的关键 MEV 基础设施，包括帮助交易者高效执行交易的区块引擎和捆绑交易。JTO 治理代币于 2023 年 12 月空投，是 Solana 最大的空投之一。",
+	"features": {
+		"1": {
+			"title": "流动性质押",
+			"description": "质押 SOL 并获得流动的 JitoSOL 代币"
+		},
+		"2": {
+			"title": "MEV 奖励",
+			"description": "从 MEV 收入分成中赚取额外收益"
+		},
+		"3": {
+			"title": "DeFi 兼容",
+			"description": "在 Solana DeFi 协议中使用 JitoSOL"
+		},
+		"4": {
+			"title": "即时解押",
+			"description": "随时通过 DEX 将 JitoSOL 换回 SOL"
+		},
+		"5": {
+			"title": "验证者委托",
+			"description": "质押分布在高性能验证者之间"
+		},
+		"6": {
+			"title": "JTO 治理",
+			"description": "使用 JTO 代币参与协议治理"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "流动性质押",
+			"description": "在保持 SOL 流动性的同时赚取质押奖励"
+		},
+		"2": {
+			"title": "DeFi 抵押品",
+			"description": "在借贷协议中使用 JitoSOL 作为抵押品"
+		},
+		"3": {
+			"title": "收益叠加",
+			"description": "将质押收益与 DeFi 收益结合"
+		},
+		"4": {
+			"title": "MEV 捕获",
+			"description": "从 Solana 的 MEV 基础设施中受益"
+		},
+		"5": {
+			"title": "治理",
+			"description": "使用 JTO 对协议决策进行投票"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 JitoSOL？",
+			"answer": "JitoSOL 是 Jito 的流动性质押代币。当你使用 Jito 质押 SOL 时，你会收到代表你质押仓位的 JitoSOL。随着质押和 MEV 奖励累积，JitoSOL 相对于 SOL 的价值会增加。你可以在 DeFi 中使用 JitoSOL 或随时换回 SOL。"
+		},
+		"2": {
+			"question": "什么是 MEV，Jito 如何捕获它？",
+			"answer": "MEV（最大可提取价值）是区块中交易排序产生的价值。Jito 运行修改后的验证者软件来捕获 MEV 并将其分配给 JitoSOL 持有者。这在正常质押奖励之上增加了约 1-3% 的额外 APY。"
+		},
+		"3": {
+			"question": "Jito 安全吗？",
+			"answer": "Jito 是 Solana 最成熟的协议之一，具有经过审计的智能合约。然而，流动性质押存在智能合约风险。JitoSOL 由质押的 SOL 1:1+ 支持。协议由 JTO 代币持有者治理。"
+		},
+		"4": {
+			"question": "如何从 Jito 解押？",
+			"answer": "你可以在 Jupiter 或 Raydium 上即时将 JitoSOL 换成 SOL——没有解押期。或者，你可以直接通过 Jito 解押，这需要正常的 Solana 解押期（约 2-3 天）。即时兑换方法最受欢迎。"
+		},
+		"5": {
+			"question": "Jito vs Marinade：选择哪个流动性质押？",
+			"answer": "两者都很出色。Jito 由于 MEV 奖励有更高的 APY，且更新。Marinade 更成熟，mSOL 被广泛集成。许多用户两者都持有。检查当前 APY 并根据你的风险承受能力和集成需求决定。"
+		}
+	},
+	"cta": {
+		"ready": "准备使用 Jito 质押 SOL？",
+		"button": "打开 Jito",
+		"note": "流动性质押 + MEV 奖励"
+	}
+}

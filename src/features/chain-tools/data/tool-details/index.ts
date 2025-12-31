@@ -76,6 +76,12 @@ import { tokenterminalDetail } from './tokenterminal';
 import { cryptoquantDetail } from './cryptoquant';
 import { santimentDetail } from './santiment';
 import { intotheblockDetail } from './intotheblock';
+import { jupiterDetail } from './jupiter';
+import { raydiumDetail } from './raydium';
+import { magicEdenDetail } from './magic-eden';
+import { tensorDetail } from './tensor';
+import { jitoDetail } from './jito';
+import { marinadeDetail } from './marinade';
 
 /**
  * All tool details mapped by tool ID
@@ -148,7 +154,13 @@ export const toolDetails: Record<string, ToolDetail> = {
 	tokenterminal: tokenterminalDetail,
 	cryptoquant: cryptoquantDetail,
 	santiment: santimentDetail,
-	intotheblock: intotheblockDetail
+	intotheblock: intotheblockDetail,
+	jupiter: jupiterDetail,
+	raydium: raydiumDetail,
+	'magic-eden': magicEdenDetail,
+	tensor: tensorDetail,
+	jito: jitoDetail,
+	marinade: marinadeDetail
 };
 
 /**

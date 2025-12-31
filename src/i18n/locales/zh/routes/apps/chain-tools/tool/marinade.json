@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Marinade - Solana 流动性质押协议",
+		"description": "质押 SOL，获得 mSOL，保持流动性。Marinade 是 Solana 最早的流动性质押协议，拥有最多的 DeFi 集成。",
+		"keywords": "Marinade, mSOL, Solana 质押, 流动性质押, MNDE 代币, Solana DeFi"
+	},
+	"overview": "Marinade 是 Solana 上的先驱流动性质押协议，允许用户质押 SOL 并获得 mSOL 作为回报。2021 年推出，Marinade 是第一个为 Solana 带来流动性质押的协议，至今仍是最大的质押提供商之一。\n\n当你使用 Marinade 质押时，你的 SOL 会分布在 400+ 验证者之间，在赚取质押奖励的同时促进网络去中心化。mSOL 在 Solana DeFi 中被广泛集成，可用作借贷中的抵押品、DEX 中的流动性等。\n\nMarinade 由 MNDE 代币治理，作为 DAO 运营。该协议提供流动性质押（mSOL）和原生质押选项，为用户在保护网络同时赚取收益提供灵活性。",
+	"features": {
+		"1": {
+			"title": "流动性质押",
+			"description": "质押 SOL 并即时获得 mSOL 代币"
+		},
+		"2": {
+			"title": "验证者多样性",
+			"description": "质押分布在 400+ 验证者之间以实现去中心化"
+		},
+		"3": {
+			"title": "原生质押",
+			"description": "可选择直接质押而不获得流动代币"
+		},
+		"4": {
+			"title": "DeFi 集成",
+			"description": "mSOL 被主要 Solana 协议接受"
+		},
+		"5": {
+			"title": "DAO 治理",
+			"description": "协议由 MNDE 代币持有者治理"
+		},
+		"6": {
+			"title": "延迟解押",
+			"description": "可选择直接解押，无滑点"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "流动性质押",
+			"description": "在保持 SOL 流动性的同时赚取质押奖励"
+		},
+		"2": {
+			"title": "DeFi 抵押品",
+			"description": "在借贷协议中使用 mSOL 作为抵押品"
+		},
+		"3": {
+			"title": "LP 仓位",
+			"description": "提供 mSOL 流动性并赚取交易费"
+		},
+		"4": {
+			"title": "去中心化",
+			"description": "支持 Solana 网络去中心化"
+		},
+		"5": {
+			"title": "原生质押",
+			"description": "直接质押到偏好的验证者"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 mSOL？",
+			"answer": "mSOL 是 Marinade 的流动性质押代币。它代表质押的 SOL 加上累积的奖励。随着质押奖励累积，mSOL 相对于 SOL 的价值会随时间增加。你可以在 DeFi 中使用 mSOL 或在 DEX 上换回 SOL。"
+		},
+		"2": {
+			"question": "Marinade 安全吗？",
+			"answer": "Marinade 是 Solana 最成熟的协议之一，自 2021 年运营以来经过多次审计。协议是非托管的并由 DAO 治理。与所有 DeFi 一样存在智能合约风险。mSOL 由质押的 SOL 完全支持。"
+		},
+		"3": {
+			"question": "什么是 MNDE 代币？",
+			"answer": "MNDE 是 Marinade 的治理代币。MNDE 持有者对协议参数、验证者委托策略和金库支出进行投票。MNDE 可以通过激励计划获得，在交易所可交易。"
+		},
+		"4": {
+			"question": "如何从 Marinade 解押？",
+			"answer": "两个选项：1）即时——在 Jupiter 等 DEX 上将 mSOL 换成 SOL（可能有小滑点），或 2）延迟——直接通过 Marinade 解押，无滑点但需要等待 1-2 个纪元（约 2-4 天）。"
+		},
+		"5": {
+			"question": "Marinade vs Jito：我应该用哪个？",
+			"answer": "Marinade 有更多的 DeFi 集成，并促进跨 400+ 验证者的去中心化。Jito 由于 MEV 奖励提供更高的 APY，但将质押集中在支持 MEV 的验证者。根据你的优先级选择——收益 vs 去中心化。"
+		}
+	},
+	"cta": {
+		"ready": "准备使用 Marinade 质押 SOL？",
+		"button": "打开 Marinade",
+		"note": "Solana 最早的流动性质押"
+	}
+}

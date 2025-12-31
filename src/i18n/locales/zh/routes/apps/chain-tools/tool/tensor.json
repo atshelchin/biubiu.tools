@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Tensor - 专业 Solana NFT 交易平台",
+		"description": "为 Solana 高级用户打造的 NFT 交易。Tensor 提供专业功能、AMM 池和最佳执行。",
+		"keywords": "Tensor, Solana NFT, NFT 交易, TNSR 代币, NFT AMM, 专业 NFT"
+	},
+	"overview": "Tensor 是为 Solana 专业级 NFT 市场，为需要高级交易功能的高级用户打造。2022 年推出以来，Tensor 通过提供卓越的交易工具从 Magic Eden 获得了显著的市场份额。\n\n该平台在 Solana 上率先推出了 NFT AMM 池，通过自动做市实现收藏品的即时流动性。Tensor 的全收藏品出价、高级分析和 TensorSwap AMM 使其成为高交易量交易者的首选平台。\n\nTensor 通过交易奖励计划用 TNSR 代币奖励活跃交易者。该平台专注于速度、低费用和专业功能，使其成为严肃 Solana NFT 交易的首选平台。",
+	"features": {
+		"1": {
+			"title": "TensorSwap AMM",
+			"description": "通过自动做市实现即时 NFT 流动性"
+		},
+		"2": {
+			"title": "收藏品出价",
+			"description": "对整个收藏品出价，而非单个 NFT"
+		},
+		"3": {
+			"title": "交易奖励",
+			"description": "通过交易活动赚取 TNSR 代币"
+		},
+		"4": {
+			"title": "专业分析",
+			"description": "高级图表、地板追踪和市场数据"
+		},
+		"5": {
+			"title": "压缩 NFT",
+			"description": "支持高效低成本的压缩 NFT"
+		},
+		"6": {
+			"title": "出价池",
+			"description": "创建池子以设定价格自动购买 NFT"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "地板交易",
+			"description": "快速扫地板和翻转 NFT"
+		},
+		"2": {
+			"title": "收藏品出价",
+			"description": "一次性对整个收藏品出价"
+		},
+		"3": {
+			"title": "AMM 流动性",
+			"description": "为 NFT 收藏品提供即时流动性"
+		},
+		"4": {
+			"title": "交易奖励",
+			"description": "通过活跃交易赚取 TNSR 代币"
+		},
+		"5": {
+			"title": "做市",
+			"description": "运行出价池进行自动购买"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Tensor 的费用是多少？",
+			"answer": "Tensor 对市场销售收取 1.5% 的吃单费，低于 Magic Eden 的 2%。TensorSwap AMM 池有由池创建者设置的可自定义费用。创作者版税是可选的。总体而言，Tensor 是最便宜的 Solana NFT 平台之一。"
+		},
+		"2": {
+			"question": "什么是 TNSR 代币？",
+			"answer": "TNSR 是 Tensor 的治理和奖励代币。用户通过奖励计划的交易活动赚取 TNSR。TNSR 可以质押获得额外福利并用于治理。代币于 2024 年发行。"
+		},
+		"3": {
+			"question": "什么是 TensorSwap AMM？",
+			"answer": "TensorSwap 允许用户为 NFT 收藏品创建流动性池。当他人通过其池子买卖时，池创建者赚取费用。它为可能订单簿较薄的收藏品提供即时流动性。"
+		},
+		"4": {
+			"question": "Tensor vs Magic Eden：哪个更适合交易？",
+			"answer": "Tensor 更适合活跃交易，有更低的费用、AMM 池和交易奖励。Magic Eden 更适合休闲浏览，界面更简单。专业交易者偏好 Tensor；休闲收藏家通常偏好 Magic Eden。"
+		},
+		"5": {
+			"question": "收藏品出价如何工作？",
+			"answer": "收藏品出价让你以设定价格对收藏品中的任何 NFT 出价。当有人接受时，你自动收到他们的 NFT。这对于扫地板或在不观看特定列表的情况下进入收藏品很有效。"
+		}
+	},
+	"cta": {
+		"ready": "准备进行专业 NFT 交易？",
+		"button": "打开 Tensor",
+		"note": "专业 Solana NFT 交易"
+	}
+}
