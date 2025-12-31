@@ -1,0 +1,166 @@
+{
+	"title": "DAO 与治理完全指南",
+	"subtitle": "从基础到高级框架掌握去中心化治理",
+
+	"sections": {
+		"intro": {
+			"title": "DAO 简介",
+			"content": "<p>DAO（去中心化自治组织）代表了组织结构和治理方式的根本性转变。与传统公司拥有董事会和高管不同，DAO 完全由其社区通过透明的链上投票机制进行治理。</p><p>在这份完整指南中，你将学习 DAO 的工作原理、治理机制如何实现集体决策，以及如何参与塑造你所使用协议的未来。我们将探索支撑数十亿美元 DeFi 协议的真实治理系统,从简单的代币投票到复杂的 veToken 模型。</p>"
+		},
+		"governance_basics": {
+			"title": "理解 DAO 治理",
+			"content": "<p>在深入了解具体工具和框架之前,理解使 DAO 治理运作的核心原则至关重要。这些概念构成了加密货币中每个治理系统的基础。</p>",
+			"what_is_dao": {
+				"title": "什么是 DAO?",
+				"content": "<p>DAO 是一个由编码为智能合约的规则代表的组织,由其成员而非中央权威控制。关键特征包括:</p><ul><li><strong>透明规则:</strong>所有治理规则都编码在开源智能合约中</li><li><strong>社区控制:</strong>代币持有者对所有重大决策进行投票</li><li><strong>无需信任的执行:</strong>批准的提案通过智能合约自动执行</li><li><strong>全球参与:</strong>任何人都可以参与,无论地点或身份</li></ul><p><strong>真实案例:</strong></p><ul><li><strong>MakerDAO:</strong>治理 DAI 稳定币协议,TVL 超过 50 亿美元</li><li><strong>Uniswap DAO:</strong>控制最大的 DEX,金库资金超过 30 亿美元</li><li><strong>Compound:</strong>社区治理超过 20 亿美元的借贷协议</li></ul>"
+			},
+			"how_governance_works": {
+				"title": "治理如何运作",
+				"content": "<p>典型的 DAO 治理流程遵循以下步骤:</p><ol><li><strong>讨论:</strong>社区在论坛中讨论想法(Discord、Discourse)</li><li><strong>温度检查:</strong>链下投票以评估兴趣(通常在 Snapshot 上)</li><li><strong>正式提案:</strong>在链上或 Snapshot 提交详细提案</li><li><strong>投票期:</strong>代币持有者投票(通常 3-7 天)</li><li><strong>法定人数检查:</strong>验证是否达到最低参与阈值</li><li><strong>执行:</strong>如果通过,提案执行(链上)或团队实施(链下)</li></ol><p><strong>示例流程(Uniswap):</strong></p><ol><li>在治理论坛讨论</li><li>在 Snapshot 上进行温度检查(需要 5 万 UNI 提案)</li><li>通过 Governor Bravo 提交链上提案(需要 250 万 UNI)</li><li>7 天投票期(需要 4000 万 UNI 法定人数)</li><li>2 天时间锁延迟</li><li>如果通过则自动执行</li></ol>"
+			},
+			"voting_mechanisms": {
+				"title": "投票机制",
+				"content": "<p>不同的 DAO 使用不同的投票系统,各有独特的权衡:</p><p><strong>代币加权投票(最常见):</strong></p><ul><li>1 个代币 = 1 票</li><li>简单透明</li><li>风险:巨鲸主导决策</li><li>使用者:Compound、Uniswap、Aave</li></ul><p><strong>平方投票:</strong></p><ul><li>成本呈平方增长(1 票 = 1 代币,2 票 = 4 代币,3 票 = 9 代币)</li><li>减少巨鲸影响</li><li>实施更复杂</li><li>可用于:Snapshot(作为选项)</li></ul><p><strong>信念投票:</strong></p><ul><li>投票权重随持有时间增加而增加</li><li>鼓励长期思考</li><li>使用者:1Hive、Commons Stack</li></ul><p><strong>全息共识:</strong></p><ul><li>预测市场决定哪些提案获得关注</li><li>解决选民疲劳问题</li><li>使用者:DAOstack</li></ul>"
+			}
+		},
+		"governance_tools": {
+			"title": "治理工具",
+			"content": "<p>已经出现了几个平台来促进 DAO 治理,每个平台都服务于不同的需求,从无 Gas 投票到链上执行。</p>",
+			"snapshot": {
+				"title": "Snapshot:无 Gas 投票",
+				"content": "<p>Snapshot 是最受欢迎的链下投票平台,被数千个 DAO 使用,包括 Uniswap、Aave 和 ENS。</p><p><strong>主要功能:</strong></p><ul><li><strong>零 Gas 成本:</strong>投票完全免费(使用基于签名的投票)</li><li><strong>灵活策略:</strong>支持各种投票机制(代币余额、委托、LP 代币)</li><li><strong>自定义插件:</strong>与 Gnosis Safe、Discord 等集成</li><li><strong>多链:</strong>适用于以太坊、Polygon、Arbitrum 等</li></ul><p><strong>工作原理:</strong></p><ol><li>DAO 使用自定义设置创建 Snapshot 空间</li><li>代币持有者连接钱包查看提案</li><li>投票者签署消息(无 Gas)投票</li><li>使用特定区块高度的区块链状态验证投票</li><li>统计结果,但执行是手动的(链下)</li></ol><p><strong>局限性:</strong></p><ul><li>无自动执行(结果不具约束力)</li><li>易受最后一刻投票波动影响</li><li>需要信任实施团队</li></ul>"
+			},
+			"tally": {
+				"title": "Tally:链上治理",
+				"content": "<p>Tally 为链上治理提供用户友好的界面,主要用于 Governor 合约(OpenZeppelin 标准)。</p><p><strong>主要功能:</strong></p><ul><li><strong>链上执行:</strong>提案通过时自动执行</li><li><strong>Governor 支持:</strong>适用于 Governor Alpha、Bravo 和 OpenZeppelin Governor</li><li><strong>委托界面:</strong>轻松委托投票权</li><li><strong>分析:</strong>跟踪选民参与度、提案成功率</li><li><strong>通知:</strong>获取新提案和投票提醒的警报</li></ul><p><strong>工作原理:</strong></p><ol><li>将钱包连接到 Tally</li><li>浏览使用 Governor 合约的 DAO(Compound、Uniswap、Gitcoin)</li><li>查看带详细描述的活跃提案</li><li>链上投票(需要 Gas)</li><li>监控提案在投票、时间锁和执行期间的状态</li></ol><p><strong>相比 Snapshot 的优势:</strong></p><ul><li>具有约束力的结果和自动执行</li><li>更高的合法性(链上验证)</li><li>时间锁延迟防止即时执行攻击</li></ul><p><strong>劣势:</strong></p><ul><li>投票需要 Gas(在以太坊上可能是 10-100 美元)</li><li>仅适用于与 Governor 兼容的合约</li></ul>"
+			},
+			"boardroom": {
+				"title": "Boardroom:治理聚合器",
+				"content": "<p>Boardroom 汇总多个 DAO 的治理活动,帮助参与者跟踪和管理他们的投票权。</p><p><strong>主要功能:</strong></p><ul><li><strong>多 DAO 仪表板:</strong>在一个地方查看所有治理头寸</li><li><strong>协议覆盖:</strong>跟踪不同平台上的 100 多个 DAO</li><li><strong>委托跟踪:</strong>监控谁在委托给谁</li><li><strong>分析:</strong>深入洞察治理模式</li><li><strong>API 访问:</strong>对治理数据的程序化访问</li></ul><p><strong>用例:</strong></p><ul><li>管理多个协议投票的代表</li><li>分析治理趋势的研究人员</li><li>对其治理活动进行基准测试的 DAO</li></ul>"
+			}
+		},
+		"token_governance": {
+			"title": "基于代币的治理",
+			"content": "<p>大多数 DAO 使用治理代币来实现投票。理解这些代币的工作原理对于有效参与至关重要。</p>",
+			"governance_tokens": {
+				"title": "治理代币",
+				"content": "<p>治理代币授予持有者对协议决策进行投票的权利。与纯实用代币不同,治理代币代表所有权和控制权。</p><p><strong>主要治理代币示例:</strong></p><ul><li><strong>UNI(Uniswap):</strong>总供应量 10 亿,治理超过 30 亿美元金库</li><li><strong>COMP(Compound):</strong>总供应量 1000 万,控制借贷协议参数</li><li><strong>AAVE:</strong>控制 Aave 协议和安全模块</li><li><strong>MKR(Maker):</strong>治理 DAI 稳定币系统</li></ul><p><strong>治理代币控制什么:</strong></p><ul><li>协议参数(费用、利率、抵押率)</li><li>金库支出(赠款、合作伙伴关系、流动性激励)</li><li>智能合约升级(在治理控制的升级机制内)</li><li>经济政策(代币发行、回购、质押奖励)</li></ul><p><strong>代币分配:</strong></p><ul><li>团队/创始人:20-30%(通常有归属期)</li><li>投资者:10-20%(有归属期)</li><li>社区/用户:40-60%(通过流动性挖矿、空投)</li><li>金库/DAO:10-20%(用于未来计划)</li></ul>"
+			},
+			"delegation": {
+				"title": "委托",
+				"content": "<p>委托允许代币持有者在不转移代币所有权的情况下将投票权分配给其他人。</p><p><strong>为什么要委托?</strong></p><ul><li>没有时间评估每个提案</li><li>委托给特定领域的专家</li><li>提高治理效率(避免因法定人数不足导致提案失败)</li><li>作为代表赢得声誉</li></ul><p><strong>委托如何运作:</strong></p><ol><li>代币持有者调用 <code>delegate(address)</code> 函数</li><li>投票权转移给代表(代币留在你的钱包中)</li><li>代表可以使用来自所有委托人的合并权力投票</li><li>你可以随时重新委托或自己投票</li></ol><p><strong>著名代表:</strong></p><ul><li><strong>a16z(Andreessen Horowitz):</strong>Uniswap、Compound、Aave 的主要代表</li><li><strong>Gauntlet:</strong>风险管理公司,活跃于多个 DeFi DAO</li><li><strong>Flipside Crypto:</strong>数据分析公司担任代表</li></ul><p><strong>成为代表:</strong></p><ol><li>在 Tally 等平台上创建代表档案</li><li>分享你的治理理念和专业知识</li><li>积极参与讨论</li><li>持续对提案投票</li><li>透明地发布投票理由</li></ol>"
+			},
+			"vetoken_models": {
+				"title": "veToken 模型(投票托管)",
+				"content": "<p>投票托管(ve)代币模型锁定代币较长时间以换取增强的投票权和奖励。由 Curve Finance 首创。</p><p><strong>veCRV 如何运作:</strong></p><ul><li>锁定 CRV 最多 4 年 → 收到 veCRV</li><li>锁定 4 年的 1 CRV = 1 veCRV</li><li>锁定 1 年的 1 CRV = 0.25 veCRV</li><li>veCRV 线性衰减直到锁定期满</li></ul><p><strong>锁定的好处:</strong></p><ul><li><strong>提升奖励:</strong>CRV 发行提升高达 2.5 倍</li><li><strong>投票权:</strong>直接控制量规权重(控制 CRV 向池的发行)</li><li><strong>协议收入:</strong>分享协议费用</li><li><strong>治理权利:</strong>对协议更改投票</li></ul><p><strong>Curve 战争:</strong></p><p>协议竞相积累 veCRV 以引导发行到他们的池:</p><ul><li><strong>Convex:</strong>聚合 CRV,控制 veCRV 供应的 50%+</li><li><strong>Yearn:</strong>持有大量 veCRV 头寸</li><li><strong>Stake DAO:</strong>veCRV 积累策略</li></ul><p>这创造了一个元游戏,协议贿赂 veCRV 持有者为他们的池投票,激励价值数百万美元。</p><p><strong>其他 veToken 实现:</strong></p><ul><li><strong>veBAL(Balancer):</strong>锁定 80/20 BAL/ETH LP</li><li><strong>vlCVX(Convex):</strong>锁定 CVX 以对 Curve 量规投票</li><li><strong>veANGLE(Angle Protocol):</strong>治理和费用分享</li></ul>"
+			}
+		},
+		"treasury_management": {
+			"title": "金库管理",
+			"content": "<p>DAO 控制着数十亿美元的金库。适当的管理需要安全的多签名钱包和透明的资金流。</p>",
+			"multisig_wallets": {
+				"title": "多签名钱包",
+				"content": "<p>多签名钱包需要多个签名才能执行交易,提供安全性和去中心化。</p><p><strong>Gnosis Safe(最受欢迎):</strong></p><ul><li>M-of-N 签名方案(例如 3-of-5、4-of-7)</li><li>支持任何交易类型(转账、合约调用)</li><li>用于复杂交互的交易构建器</li><li>与 DeFi 协议集成</li></ul><p><strong>常见多签名配置:</strong></p><ul><li><strong>小型 DAO:</strong>3-of-5(快速决策,中等安全性)</li><li><strong>大型 DAO:</strong>6-of-9 或更高(更多安全性,执行速度较慢)</li><li><strong>紧急响应:</strong>2-of-3 用于时间敏感的行动</li></ul><p><strong>谁是签名者?</strong></p><ul><li>核心团队成员</li><li>选举的社区代表</li><li>安全合作伙伴(例如白帽黑客)</li><li>法律实体(用于监管合规)</li></ul><p><strong>真实案例:</strong></p><ul><li><strong>Uniswap 金库:</strong>4-of-7 多签名管理超过 30 亿美元</li><li><strong>Compound:</strong>9-of-13 社区多签名</li><li><strong>Gitcoin:</strong>6-of-10 多签名用于赠款</li></ul><p><strong>安全最佳实践:</strong></p><ul><li>地理分布(防止单点物理威胁)</li><li>所有签名者使用硬件钱包</li><li>定期签名者轮换</li><li>公开宣布签名者变更</li><li>大额交易的时间锁延迟</li></ul>"
+			},
+			"token_vesting": {
+				"title": "代币归属和流式传输",
+				"content": "<p>代币归属确保团队成员和贡献者随时间逐步收到代币,使长期激励保持一致。</p><p><strong>传统归属:</strong></p><ul><li>1 年悬崖期:第一年不释放代币</li><li>4 年归属:代币在 4 年内线性解锁</li><li>示例:100 万代币,1 年悬崖期,4 年归属 = 第 1 年 0 代币,然后第 2-5 年每年 25 万</li></ul><p><strong>Sablier:代币流式传输协议:</strong></p><ul><li><strong>连续归属:</strong>代币每秒解锁,而不是批量解锁</li><li><strong>接收者控制:</strong>随时提取解锁的代币</li><li><strong>发送者取消:</strong>取消流并回收未归属的代币</li><li><strong>DeFi 集成:</strong>流式传输任何 ERC-20 代币</li></ul><p><strong>用例:</strong></p><ul><li><strong>团队薪酬:</strong>以稳定币或治理代币流式传输工资</li><li><strong>赠款:</strong>为贡献者提供渐进式资金</li><li><strong>投资者解锁:</strong>透明、可验证的归属</li><li><strong>流动性挖矿:</strong>向 LP 流式传输奖励</li></ul><p><strong>相比传统归属的优势:</strong></p><ul><li>更公平:无悬崖焦虑或突然抛售</li><li>透明:链上验证归属时间表</li><li>灵活:接收者可以根据需要提取</li><li>税收效率:在某些司法管辖区可能有更好的税收待遇</li></ul>"
+			}
+		},
+		"dao_frameworks": {
+			"title": "DAO 框架",
+			"content": "<p>存在几个框架来帮助创建和管理 DAO,每个框架都针对不同的用例进行了优化。</p>",
+			"aragon": {
+				"title": "Aragon",
+				"content": "<p>Aragon 是最古老、功能最完整的 DAO 框架之一,允许任何人创建和管理 DAO。</p><p><strong>主要功能:</strong></p><ul><li><strong>DAO 模板:</strong>常见治理结构的预构建模板</li><li><strong>模块化应用:</strong>通过应用添加功能(投票、财务、代币)</li><li><strong>权限系统:</strong>对谁可以做什么的精细控制</li><li><strong>Aragon Court:</strong>去中心化争议解决</li></ul><p><strong>Aragon 模板:</strong></p><ul><li><strong>公司模板:</strong>基于可转让代币的投票</li><li><strong>成员模板:</strong>不可转让的成员份额</li><li><strong>声誉模板:</strong>基于功绩的投票权</li></ul><p><strong>著名的 Aragon DAO:</strong></p><ul><li><strong>Decentraland:</strong>虚拟世界治理</li><li><strong>API3:</strong>去中心化 API 治理</li><li><strong>BrightID:</strong>社交身份网络</li></ul><p><strong>最新更新(Aragon OSx):</strong></p><ul><li>模块化插件架构</li><li>多链部署(以太坊、Polygon、Arbitrum)</li><li>提高 Gas 效率</li><li>更好的开发者体验</li></ul>"
+			},
+			"moloch": {
+				"title": "Moloch DAO",
+				"content": "<p>Moloch 开创了专注于赠款和资金协调的极简 DAO 设计,具有独特的「愤怒退出」功能。</p><p><strong>核心概念:</strong></p><ul><li><strong>份额:</strong>不可转让的投票份额</li><li><strong>战利品:</strong>无投票权的经济份额</li><li><strong>提案:</strong>成员、资金或交易提案</li><li><strong>愤怒退出:</strong>随时以比例金库份额退出</li></ul><p><strong>Moloch 如何运作:</strong></p><ol><li>成员提交提案并支付贡品(付款)</li><li>7 天投票期(1 份额 = 1 票)</li><li>7 天宽限期(允许在执行前愤怒退出)</li><li>如果通过,贡品进入金库,成员获得份额</li></ol><p><strong>为什么要宽限期 + 愤怒退出?</strong></p><p>这保护少数持有者免受恶意提案的影响。如果坏提案通过,少数派可以在执行前退出并带走资金。</p><p><strong>Moloch 变体:</strong></p><ul><li><strong>Moloch v2:</strong>添加了战利品、交易提案、GuildKick</li><li><strong>Moloch v3(Baal):</strong>萨满(外部合约)权限,更好的用户体验</li><li><strong>DAOhaus:</strong>无代码 Moloch DAO 启动器</li></ul><p><strong>最适合:</strong></p><ul><li>赠款型 DAO(例如 MetaCartel、Moloch DAO 本身)</li><li>汇集资本的风险 DAO</li><li>优先考虑少数派保护的社区</li></ul>"
+			},
+			"compound_governor": {
+				"title": "Compound Governor(OpenZeppelin)",
+				"content": "<p>Governor 合约最初由 Compound 创建并由 OpenZeppelin 标准化,是使用最广泛的链上治理框架。</p><p><strong>Governor 演变:</strong></p><ul><li><strong>Governor Alpha:</strong>原始 Compound 治理</li><li><strong>Governor Bravo:</strong>添加了提案取消,更好的 Gas 效率</li><li><strong>OpenZeppelin Governor:</strong>模块化、可扩展标准</li></ul><p><strong>工作原理:</strong></p><ol><li><strong>提案:</strong>提交带可执行代码的提案(需要提案阈值,例如供应量的 1%)</li><li><strong>投票:</strong>代币持有者投票支持/反对/弃权</li><li><strong>队列:</strong>如果通过(达到法定人数,多数票),提案在 Timelock 中排队</li><li><strong>执行:</strong>时间锁延迟后(通常 2 天),任何人都可以执行</li></ol><p><strong>关键参数:</strong></p><ul><li><strong>提案阈值:</strong>提案所需的代币(防止垃圾提案)</li><li><strong>法定人数:</strong>有效性所需的最少投票(防止低投票率攻击)</li><li><strong>投票期:</strong>投票持续时间(通常 3-7 天)</li><li><strong>时间锁延迟:</strong>执行前的延迟(紧急退出窗口)</li></ul><p><strong>优点:</strong></p><ul><li>经过实战检验(Compound、Uniswap、Gitcoin 和 100 多个协议使用它)</li><li>自动执行(无需手动实施)</li><li>完全链上(最高合法性)</li></ul><p><strong>缺点:</strong></p><ul><li>投票的 Gas 成本高</li><li>进入门槛高(提案阈值)</li><li>用户复杂性</li></ul><p><strong>使用者:</strong></p><ul><li>Compound(20 亿美元 TVL)</li><li>Uniswap(30 亿美元 TVL)</li><li>Gitcoin(赠款平台)</li><li>Nouns DAO(每日拍卖的 NFT 项目)</li></ul>"
+			}
+		},
+		"participating": {
+			"title": "参与 DAO",
+			"content": "<p>积极参与治理对 DAO 的成功至关重要。以下是如何有效参与的方法。</p>",
+			"finding_daos": {
+				"title": "寻找要加入的 DAO",
+				"content": "<p><strong>在哪里发现 DAO:</strong></p><ul><li><strong>Snapshot 空间:</strong>在 snapshot.org 浏览 20,000 多个 DAO</li><li><strong>Tally:</strong>在 tally.xyz 探索基于 Governor 的 DAO</li><li><strong>Boardroom:</strong>boardroom.io 的 DAO 聚合器</li><li><strong>DeepDAO:</strong>deepdao.io 的 DAO 分析</li><li><strong>DAOlist:</strong>daolist.io 的精选目录</li></ul><p><strong>选择 DAO 的标准:</strong></p><ul><li><strong>一致性:</strong>DAO 的使命是否与你的价值观一致?</li><li><strong>活跃度:</strong>提案是否定期且有意义?</li><li><strong>参与度:</strong>选民投票率是否健康(>10%)?</li><li><strong>金库:</strong>DAO 是否有可持续的资金?</li><li><strong>社区:</strong>Discord/论坛是否活跃且友好?</li></ul><p><strong>从小开始:</strong></p><ol><li>加入 DAO Discord/论坛并观察</li><li>阅读过去的提案以理解治理</li><li>在投票前参与讨论</li><li>开始对较小的提案投票</li><li>考虑委托以向有经验的投票者学习</li></ol>"
+			},
+			"voting_strategies": {
+				"title": "投票策略",
+				"content": "<p><strong>何时投票:</strong></p><ul><li><strong>高影响提案:</strong>金库支出 >1% 资金、协议参数更改、智能合约升级</li><li><strong>你的专业领域:</strong>对你理解的领域的提案投票</li><li><strong>有争议的问题:</strong>接近的投票需要每个参与者</li></ul><p><strong>何时弃权:</strong></p><ul><li>你不完全理解提案</li><li>你有利益冲突</li><li>你想帮助达到法定人数而不影响结果</li></ul><p><strong>投票前的尽职调查:</strong></p><ol><li><strong>阅读完整提案:</strong>不要仅根据标题投票</li><li><strong>检查讨论:</strong>专家在说什么?</li><li><strong>验证声明:</strong>提案可能包含不准确的数据</li><li><strong>考虑外部性:</strong>有哪些意外后果?</li><li><strong>审查代码:</strong>对于智能合约提案,审查或验证审计</li></ol><p><strong>委托策略:</strong></p><ul><li>委托给多个专家(如果协议允许)</li><li>定期审查代表的投票历史</li><li>如果代表变得不活跃或投票违背你的价值观,重新委托</li></ul>"
+			},
+			"proposal_creation": {
+				"title": "创建提案",
+				"content": "<p>创建有效的提案是一门艺术。以下是如何最大化提案通过机会的方法。</p><p><strong>提案前阶段:</strong></p><ol><li><strong>论坛讨论:</strong>在治理论坛发布初步想法</li><li><strong>收集反馈:</strong>纳入社区建议</li><li><strong>寻找支持者:</strong>在正式提案前建立联盟</li><li><strong>估算成本:</strong>如果请求资金,提供详细预算</li></ol><p><strong>提案结构:</strong></p><ul><li><strong>标题:</strong>清晰、描述性(不是点击诱饵)</li><li><strong>摘要:</strong>为忙碌的选民提供一段概述</li><li><strong>动机:</strong>为什么需要这个?它解决什么问题?</li><li><strong>规范:</strong>将要发生什么的详细描述</li><li><strong>理由:</strong>为什么选择这种方法而不是替代方案?</li><li><strong>实施:</strong>技术细节、时间表、里程碑</li><li><strong>预算:</strong>如果请求资金,逐项细分</li><li><strong>成功指标:</strong>如何衡量成功?</li></ul><p><strong>常见提案类型:</strong></p><ul><li><strong>参数更改:</strong>调整费用、利率、抵押率</li><li><strong>金库支出:</strong>赠款、合作伙伴关系、流动性激励</li><li><strong>协议升级:</strong>添加新功能或修复错误</li><li><strong>治理更改:</strong>修改投票规则或参数</li><li><strong>元治理:</strong>DAO 应如何在其他 DAO 中投票</li></ul><p><strong>成功秘诀:</strong></p><ul><li>保持简单(复杂的提案吓跑选民)</li><li>将大型提案分解为小块</li><li>展示往绩记录(以前的贡献有帮助)</li><li>在投票期间对问题做出回应</li><li>接受并非每个提案都会通过</li></ul>"
+			}
+		},
+		"risks": {
+			"title": "治理风险和挑战",
+			"content": "<p>DAO 治理并不完美。理解风险有助于你更有效地参与并保护你的利益。</p>",
+			"governance_attacks": {
+				"title": "治理攻击",
+				"content": "<p>几种攻击媒介威胁 DAO 治理:</p><p><strong>1. 闪电贷治理攻击:</strong></p><ul><li>攻击者通过闪电贷借入大量治理代币</li><li>对恶意提案投票</li><li>在同一笔交易中归还代币</li><li><strong>防御:</strong>在提案前的区块快照投票权</li></ul><p><strong>2. 购买选票:</strong></p><ul><li>攻击者购买或借入足够的代币以通过恶意提案</li><li>提取价值,然后出售代币</li><li><strong>防御:</strong>时间锁(给代币持有者退出时间)、高法定人数要求</li></ul><p><strong>3. 51% 攻击:</strong></p><ul><li>单个实体积累多数投票权</li><li>可以单方面通过任何提案</li><li><strong>防御:</strong>平方投票、委托上限、少数派否决权</li></ul><p><strong>真实攻击案例:</strong></p><ul><li><strong>Beanstalk(2022 年 4 月):</strong>攻击者使用闪电贷通过恶意提案,窃取 7600 万美元</li><li><strong>Build Finance(2021 年 2 月):</strong>通过购买代币进行恶意收购,损失 47 万美元</li></ul><p><strong>警告信号:</strong></p><ul><li>在投票期后期提交的提案</li><li>突然向新地址进行大额代币转移</li><li>讨论极少的提案</li><li>不切实际的承诺或紧急情况</li></ul>"
+			},
+			"voter_apathy": {
+				"title": "选民冷漠",
+				"content": "<p>低选民参与度是 DAO 面临的最大挑战之一。</p><p><strong>问题:</strong></p><ul><li>典型选民投票率:合格代币的 5-15%</li><li>大多数持有者是被动投资者,而不是积极治理者</li><li>太多提案导致选民疲劳</li><li>复杂性障碍(技术提案难以理解)</li></ul><p><strong>后果:</strong></p><ul><li>少数人可以控制决策</li><li>提案未能达到法定人数</li><li>中心化风险(活跃选民积累权力)</li><li>委托选民可能不代表广泛社区</li></ul><p><strong>正在尝试的解决方案:</strong></p><ul><li><strong>投票激励:</strong>奖励活跃选民(例如投票托管模型)</li><li><strong>委托:</strong>使委托给活跃参与者变得容易</li><li><strong>改进用户体验:</strong>简化投票界面和提案摘要</li><li><strong>信念投票:</strong>设置并忘记投票(质押保持投票状态直到你更改)</li><li><strong>预测市场:</strong>让市场发出提案结果信号</li></ul>"
+			},
+			"plutocracy_concerns": {
+				"title": "财阀统治(巨鲸主导)",
+				"content": "<p>代币加权投票自然有利于大持有者,创造财阀统治。</p><p><strong>现实:</strong></p><ul><li>前 1% 持有者通常控制 >50% 投票权</li><li>风险投资和早期投资者具有不成比例的影响力</li><li>巨鲸可以推翻社区共识</li></ul><p><strong>示例:</strong></p><ul><li><strong>Uniswap:</strong>前 10 个地址控制约 40% 的投票权</li><li><strong>Compound:</strong>仅 a16z 就几乎可以达到法定人数</li></ul><p><strong>缓解策略:</strong></p><ul><li><strong>平方投票:</strong>较大质押的回报递减</li><li><strong>基于身份的投票:</strong>一人 = 一票(需要身份解决方案)</li><li><strong>多议院治理:</strong>代币持有者和用户的独立议院</li><li><strong>愤怒退出:</strong>少数派保护机制(Moloch DAO)</li><li><strong>否决权:</strong>技术/安全委员会可以否决危险提案</li></ul><p><strong>权衡:</strong></p><p>代币加权投票使激励保持一致(大持有者最有利害关系),但可能排除较小的参与者。没有完美的解决方案——每个 DAO 必须根据其价值观和目标进行选择。</p>"
+			},
+			"legal_uncertainty": {
+				"title": "法律和监管不确定性",
+				"content": "<p>DAO 存在于法律灰色地带,给参与者带来风险。</p><p><strong>关键问题:</strong></p><ul><li>DAO 是法律实体吗?</li><li>代币持有者对 DAO 行为负责吗?</li><li>DAO 金库如何征税?</li><li>治理代币是证券吗?</li></ul><p><strong>当前法律环境:</strong></p><ul><li><strong>怀俄明州(美国):</strong>允许 DAO LLC(DAO 的法律实体包装)</li><li><strong>马绍尔群岛:</strong>通过了特定于 DAO 的立法</li><li><strong>瑞士:</strong>DAO 友好司法管辖区(许多 DAO 在此注册)</li><li><strong>大多数国家:</strong>尚无明确指导</li></ul><p><strong>值得注意的法律问题:</strong></p><ul><li><strong>Ooki DAO(2022):</strong>CFTC 直接起诉 DAO,声称代币持有者负有责任</li><li><strong>SEC 审查:</strong>治理代币可能是证券(豪威测试)</li><li><strong>税收不确定性:</strong>如何报告 DAO 收入和投票?</li></ul><p><strong>风险管理:</strong></p><ul><li><strong>法律包装:</strong>注册为 LLC 或基金会</li><li><strong>地理多样性:</strong>多签名签署者在不同司法管辖区</li><li><strong>合规:</strong>就证券法影响咨询律师</li><li><strong>去中心化:</strong>更加去中心化 = 更难监管</li><li><strong>文档:</strong>清晰的治理决策记录</li></ul><p><strong>免责声明:</strong>这不是法律建议。在参与或创建 DAO 之前,请咨询熟悉你所在司法管辖区 DAO 法规的律师。</p>"
+			}
+		}
+	},
+
+	"glossary": {
+		"dao": {
+			"term": "DAO(去中心化自治组织)",
+			"definition": "由智能合约和社区投票而非中心化管理治理的组织。规则透明,决策由代币持有者集体做出。"
+		},
+		"governance_token": {
+			"term": "治理代币",
+			"definition": "授予持有者在 DAO 中投票权的代币。每个代币通常代表一票,允许持有者影响协议决策和参数更改。"
+		},
+		"proposal": {
+			"term": "提案",
+			"definition": "提交给 DAO 进行投票的正式行动建议。提案可以包括参数更改、金库支出、协议升级或治理修改。"
+		},
+		"quorum": {
+			"term": "法定人数",
+			"definition": "提案有效所需的最低投票数。防止参与度很低的提案通过。典型法定人数:总代币供应量的 4-10%。"
+		},
+		"delegation": {
+			"term": "委托",
+			"definition": "在不转移代币所有权的情况下将投票权分配给另一个地址。允许代币持有者通过受信任的代表间接参与治理。"
+		},
+		"timelock": {
+			"term": "时间锁",
+			"definition": "提案批准和执行之间的延迟,通常为 24-48 小时。给代币持有者时间在不同意通过的提案时退出,防止即时攻击。"
+		},
+		"multisig": {
+			"term": "多签名钱包(Multisig)",
+			"definition": "需要 M-of-N 签名才能执行交易的钱包(例如 3-of-5)。通过分布式控制提供安全性,常用于 DAO 金库。"
+		},
+		"rage_quit": {
+			"term": "愤怒退出",
+			"definition": "一种机制(由 Moloch DAO 推广),允许成员退出并获得其比例的金库资产份额。保护少数派免受多数票的剥削。"
+		},
+		"vetoken": {
+			"term": "veToken(投票托管代币)",
+			"definition": "锁定较长时间(最多 4 年)的代币,以换取投票权和提升奖励。由 Curve Finance(veCRV)首创,使长期激励保持一致。"
+		},
+		"quadratic_voting": {
+			"term": "平方投票",
+			"definition": "一种投票系统,其中成本随投票呈平方增长(1 票 = 1 代币,2 票 = 4 代币)。减少巨鲸影响,给较小持有者更多相对权力。"
+		}
+	}
+}

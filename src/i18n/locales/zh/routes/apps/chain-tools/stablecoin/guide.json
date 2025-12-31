@@ -1,0 +1,153 @@
+{
+	"title": "稳定币完全指南",
+	"subtitle": "理解和使用加密生态系统中的稳定币",
+	"estimated_read_time": "18 分钟",
+
+	"sections": {
+		"intro": {
+			"title": "稳定币简介",
+			"content": "<p>稳定币是设计用来保持稳定价值的加密货币,通常锚定法定货币如美元。它们解决了加密货币最大的问题之一:<strong>价格波动性</strong>。虽然比特币和以太坊可能在一天内波动 10-20%,但稳定币旨在精确保持在 1.00 美元。</p><p>这使它们成为加密生态系统的基础设施。没有稳定币,你需要不断在加密货币和传统银行账户之间转移资金。有了稳定币,你可以完全在链上持有稳定价值,在 DeFi 协议中使用它,即时发送跨境支付,并赚取收益——所有这些都不需要与银行打交道。</p><p>截至 2025 年,稳定币的市值超过 2000 亿美元,每月处理数千亿美元的交易量。了解它们如何运作、它们的差异以及风险,对于任何加密货币参与者来说都至关重要。</p>"
+		},
+
+		"stablecoin_types": {
+			"title": "稳定币类型",
+			"content": "<p>并非所有稳定币都是平等的。它们使用根本不同的机制来维持锚定,每种机制在去中心化、资本效率和稳定性方面都有独特的权衡。</p>",
+			"fiat_backed": {
+				"title": "法币支持型稳定币",
+				"content": "<p>最简单也是最受欢迎的类型。每发行一个稳定币,就有 1 美元(或等值)存放在银行账户或国债中。这是传统的 IOU 模式引入区块链。</p><p><strong>工作原理:</strong></p><ol><li>用户向发行方存入 1 美元</li><li>发行方在链上铸造 1 个稳定币代币</li><li>用户可以随时将代币兑换为 1 美元</li></ol><p><strong>示例:</strong> USDC(Circle)、USDT(Tether)、BUSD(Binance,已弃用)</p><p><strong>优势:</strong></p><ul><li><strong>易于理解:</strong> 1 个代币 = 银行中的 1 美元</li><li><strong>稳固的锚定:</strong>由实际美元或等价物支持</li><li><strong>资本高效:</strong> 1:1 支持比率</li><li><strong>监管明确:</strong>更容易遵守法规</li></ul><p><strong>劣势:</strong></p><ul><li><strong>中心化:</strong>发行方可以冻结账户、列入黑名单地址</li><li><strong>托管风险:</strong>依赖传统银行系统</li><li><strong>透明度问题:</strong>需要信任储备审计</li><li><strong>监管风险:</strong>受政府控制</li></ul>"
+			},
+			"crypto_backed": {
+				"title": "加密抵押型稳定币",
+				"content": "<p>这些稳定币不是由法币支持,而是由其他加密货币支持。由于加密货币的波动性,它们需要<strong>超额抵押</strong>——你需要存入价值 1.50 美元以上的加密货币才能铸造 1 美元的稳定币。</p><p><strong>工作原理(以 MakerDAO/DAI 为例):</strong></p><ol><li>用户存入价值 150 美元的 ETH 作为抵押品</li><li>用户借出/铸造最多 100 美元的 DAI(66% 抵押率)</li><li>如果 ETH 下跌且抵押率低于最低要求,头寸就会被清算</li><li>要取回 ETH,用户必须偿还 DAI 加上稳定费(利息)</li></ol><p><strong>示例:</strong> DAI(MakerDAO)、crvUSD(Curve)、sUSD(Synthetix)</p><p><strong>优势:</strong></p><ul><li><strong>去中心化:</strong>没有中央发行者,由智能合约和 DAO 管理</li><li><strong>透明:</strong>所有抵押品在链上可见</li><li><strong>抗审查:</strong>没有人可以冻结你的资产</li><li><strong>可组合:</strong>与其他 DeFi 协议无缝协作</li></ul><p><strong>劣势:</strong></p><ul><li><strong>资本效率低:</strong>需要 1.50 美元以上才能获得 1 美元稳定币</li><li><strong>机制复杂:</strong>需要了解 CDP、清算、稳定费</li><li><strong>清算风险:</strong>波动性抵押品可能引发级联清算</li><li><strong>锚定不稳定:</strong>在市场压力期间可能在 1 美元上下交易</li></ul>"
+			},
+			"algorithmic": {
+				"title": "算法稳定币",
+				"content": "<p>这些稳定币试图通过算法和激励机制来维持锚定,通常只有最少的抵押或没有抵押。历史表明这极其难以成功执行。</p><p><strong>纯算法型(大多失败):</strong></p><ul><li>使用供应扩张/收缩来维持锚定</li><li>发行债券或二级代币来吸收波动性</li><li><strong>重大失败案例:</strong> UST/LUNA(400 亿美元崩溃)、IRON、Basis Cash</li></ul><p><strong>分数/混合方法(更成功):</strong></p><p>FRAX 开创了<strong>分数算法</strong>模型,将抵押品与算法机制相结合:</p><ul><li>部分由 USDC 支持(抵押率根据需求调整)</li><li>部分由 FXS(协议代币)支持,可以被销毁/铸造</li><li>抵押率在市场压力期间增加,在稳定期间减少</li><li>比完全支持型更高效,比纯算法型更稳定</li></ul><p><strong>优势:</strong></p><ul><li><strong>资本高效:</strong>可以抵押不足或无抵押</li><li><strong>可扩展:</strong>不受抵押品可用性限制</li><li><strong>创新:</strong>探索新的稳定机制</li></ul><p><strong>劣势:</strong></p><ul><li><strong>复杂:</strong>难以理解失败模式</li><li><strong>未经验证:</strong>大多数都失败得很惨</li><li><strong>死亡螺旋风险:</strong>信心丧失可能引发快速崩溃</li><li><strong>监管不确定:</strong>可能被归类为证券</li></ul><p><strong>重要提示:</strong>纯算法稳定币的记录不佳。即使是复杂的用户也在 UST 中损失了数十亿美元。务必极其谨慎。</p>"
+			}
+		},
+
+		"major_stablecoins": {
+			"title": "主要稳定币深度解析",
+			"content": "<p>让我们深入了解主导市场并支撑大多数 DeFi 活动的领先稳定币。</p>",
+			"usdt": {
+				"title": "USDT (Tether) - 先驱者",
+				"content": "<p><strong>推出时间:</strong> 2014 年<br/><strong>类型:</strong>法币支持型<br/><strong>市值:</strong>约 1200 亿美元(最大稳定币)<br/><strong>发行方:</strong> Tether Limited</p><p><strong>优势:</strong></p><ul><li><strong>流动性之王:</strong>所有交易所中交易量最高</li><li><strong>多链:</strong>可在 15+ 个区块链上使用(以太坊、波场、Solana 等)</li><li><strong>久经考验:</strong>经历了多个市场周期的 10 年以上运营</li><li><strong>深度整合:</strong>在加密领域到处都被接受</li></ul><p><strong>争议:</strong></p><ul><li><strong>储备透明度:</strong>历史上缺乏明确的审计</li><li><strong>监管审查:</strong>因误导性储备声明而受到调查和罚款</li><li><strong>商业票据敞口:</strong>以前持有大量非现金储备</li></ul><p><strong>当前状态(2025):</strong> Tether 通过定期证明报告提高了透明度,并将储备转移到更安全的资产(主要是美国国债)。然而,从监管角度来看,它仍然比 USDC 更具争议性。</p><p><strong>最适合:</strong>最大流动性,尤其是在中心化交易所交易和 USDT 占主导地位的新兴市场。</p>"
+			},
+			"usdc": {
+				"title": "USDC (USD Coin) - 监管合规之选",
+				"content": "<p><strong>推出时间:</strong> 2018 年<br/><strong>类型:</strong>法币支持型<br/><strong>市值:</strong>约 350 亿美元<br/><strong>发行方:</strong> Circle(与 Coinbase 的联盟)</p><p><strong>优势:</strong></p><ul><li><strong>监管合规:</strong>在美国完全受监管</li><li><strong>透明度:</strong>顶级会计师事务所的月度证明报告</li><li><strong>储备质量:</strong> 100% 由现金和短期美国国债支持</li><li><strong>DeFi 整合:</strong>许多 DeFi 协议的首选稳定币</li><li><strong>机构采用:</strong>被主要金融机构使用</li></ul><p><strong>劣势:</strong></p><ul><li><strong>中心化:</strong> Circle 可以冻结账户(已对受制裁地址这样做)</li><li><strong>银行依赖:</strong>暴露于传统银行系统风险</li><li><strong>流动性较低:</strong>交易量少于 USDT</li></ul><p><strong>2023 年 3 月 SVB 危机:</strong>当硅谷银行(持有约 33 亿美元储备)倒闭时,USDC 短暂脱锚至 0.88 美元。Circle 迅速转移储备,USDC 在几天内恢复锚定。这凸显了中心化稳定币的风险,但也显示了韧性。</p><p><strong>最适合:</strong> DeFi 协议,优先考虑监管合规和透明度的用户,美国业务。</p>"
+			},
+			"dai": {
+				"title": "DAI - 去中心化标准",
+				"content": "<p><strong>推出时间:</strong> 2017 年<br/><strong>类型:</strong>加密抵押型<br/><strong>市值:</strong>约 50 亿美元<br/><strong>发行方:</strong> MakerDAO(去中心化组织)</p><p><strong>DAI 的工作原理:</strong></p><ol><li>用户通过存入抵押品(ETH、WBTC、stETH 等)开设金库(以前的 CDP)</li><li>用户根据抵押品生成/借入 DAI(通常最高 66% 抵押率)</li><li>用户支付由 MKR 治理设定的<strong>稳定费</strong>(利率)</li><li>如果抵押品价值下降太多,金库就会被清算并受到罚款</li><li><strong>锚定稳定模块(PSM)</strong>允许 DAI 和 USDC 之间 1:1 交换以实现紧密锚定</li></ol><p><strong>优势:</strong></p><ul><li><strong>去中心化:</strong>没有公司控制它,由 MKR 代币持有者治理</li><li><strong>透明:</strong>所有抵押品和操作在链上可见</li><li><strong>抗审查:</strong>不能被冻结或没收</li><li><strong>多抵押品:</strong>接受多种加密资产作为抵押品</li><li><strong>DeFi 原生:</strong>设计用于与其他协议的可组合性</li></ul><p><strong>担忧:</strong></p><ul><li><strong>RWA 支持:</strong>约 60% 的 DAI 现在由真实世界资产支持(主要是通过 PSM 的 USDC 持有的美国国债)。这引入了中心化和监管风险。</li><li><strong>复杂性:</strong>需要主动管理以避免清算</li><li><strong>锚定稳定性:</strong>比法币支持型更频繁地在 1 美元上下交易</li></ul><p><strong>最适合:</strong>优先考虑去中心化和抗审查的 DeFi 用户,愿意接受稍微宽松的锚定。</p>"
+			},
+			"others": {
+				"title": "其他值得注意的稳定币",
+				"content": "<p><strong>FRAX - 分数算法先驱</strong></p><ul><li>混合模型:部分抵押(USDC) + 算法(FXS 销毁/铸造)</li><li>抵押率根据市场条件调整(目前约 92%)</li><li>创新的稳定机制,包括 AMO(算法市场操作)</li><li>市值:约 6.5 亿美元</li></ul><p><strong>crvUSD - Curve 的借贷清算 AMM (LLAMMA)</strong></p><ul><li>由加密资产超额抵押</li><li>革命性的清算机制:软清算而非硬清算</li><li>当抵押品价格下跌时,逐渐转换为稳定币;如果价格恢复,则转换回来</li><li>减少借款人的清算风险和损失</li><li>市值:约 1.5 亿美元但在增长</li></ul><p><strong>sUSD - Synthetix 稳定币</strong></p><ul><li>由 SNX 代币支持(高度超额抵押,约 400%+ 比率)</li><li>Synthetix 合成资产生态系统的一部分</li><li>主要在 Synthetix 内用于交易合成资产</li></ul><p><strong>TUSD、USDP、GUSD - 其他法币支持型选项</strong></p><ul><li>与 USDC 类似但市值较小</li><li>TUSD (TrueUSD):约 5 亿美元</li><li>USDP (Pax Dollar):约 4 亿美元</li><li>GUSD (Gemini Dollar):约 3.5 亿美元</li></ul>"
+			}
+		},
+
+		"use_cases": {
+			"title": "稳定币用例",
+			"content": "<p>稳定币不仅仅是价值存储工具——它们是支持新金融活动的活跃基础设施。以下是人们使用稳定币的主要方式。</p>",
+			"trading": {
+				"title": "交易和投资组合管理",
+				"content": "<p>最初的用例:<strong>在不离开加密货币的情况下锁定利润。</strong></p><p><strong>传统方法:</strong></p><ol><li>加密货币上涨,你想锁定利润</li><li>卖到交易所,提现到银行账户(1-5 天,收取费用)</li><li>想要回购?存入交易所(再 1-5 天,更多费用)</li><li>错过机会</li></ol><p><strong>稳定币方法:</strong></p><ol><li>在链上 12 秒内将 ETH 兑换为 USDC</li><li>利润以稳定价值锁定</li><li>市场下跌?立即兑换回 ETH</li><li>总时间:几分钟,而不是几天</li></ol><p><strong>投资组合再平衡:</strong>专业交易者使用稳定币作为投资组合的中心。与其直接交易 BTC→ETH,不如交易 BTC→USDC→ETH。这在流动性对上提供更好的价格和更清晰的会计。</p><p><strong>风险管理:</strong>当市场看起来不稳定时,将投资组合转移到稳定币。在等待入场机会的同时,在稳定币上赚取收益(3-8% 年化收益)。</p>"
+			},
+			"defi": {
+				"title": "DeFi 协议和收益生成",
+				"content": "<p>稳定币是 <strong>DeFi 的基础</strong>。大多数收益机会涉及稳定币,因为它们提供无价格波动风险的回报。</p><p><strong>借贷市场:</strong></p><ul><li>向 Aave 提供 USDC:从借款人那里赚取 3-6% 年化收益</li><li>向 Compound 提供 DAI:赚取利息 + COMP 奖励</li><li>风险低于借出 ETH 等波动性资产</li></ul><p><strong>流动性提供:</strong></p><ul><li>Curve 3pool (DAI/USDC/USDT):以最小的无常损失赚取交易费</li><li>稳定币对的<strong>无常损失可忽略不计</strong>,因为价格一起移动</li><li>综合年化收益:4-12%,取决于池和激励</li></ul><p><strong>杠杆和 delta 中性策略:</strong></p><ul><li>以 ETH 抵押品借入稳定币,用稳定币进行耕作,保持 ETH 敞口</li><li>以 3% 利率借出 DAI,在 Curve 上赚取 8%,获利 5% 利差</li><li>高级:递归借贷(存款 → 借款 → 存款 → 借款...)</li></ul><p><strong>跨链 DeFi:</strong>将稳定币桥接到 L2(Arbitrum、Optimism)或其他 L1(Solana、Avalanche)以获得更高收益和更低费用。</p>"
+			},
+			"payments": {
+				"title": "支付和商务",
+				"content": "<p>稳定币正在成为传统支付渠道的严肃替代方案,尤其是在线和国际商务方面。</p><p><strong>商户采用:</strong></p><ul><li>接受 USDC/USDT 而无波动性风险</li><li>几秒钟内结算 vs 信用卡的 2-3 天</li><li>费用低于信用卡处理(2.9% + 0.30 美元)</li><li>无退款(商户承担欺诈风险,但也没有虚假争议)</li></ul><p><strong>工资和承包商支付:</strong></p><ul><li>用 USDC 支付全球承包商——他们立即收到</li><li>无银行中介,无 SWIFT 延迟</li><li>在加密公司和远程优先组织中流行</li></ul><p><strong>B2B 结算:</strong></p><ul><li>大型企业使用稳定币进行供应商支付</li><li>对跨境 B2B 交易特别有价值</li><li>示例:美国零售商用 USDC 支付亚洲制造商,几分钟内结算</li></ul><p><strong>当前限制:</strong>监管不确定性、会计复杂性、消费者采用有限(大多数人仍更喜欢信用卡保护)。</p>"
+			},
+			"remittance": {
+				"title": "汇款和跨境转账",
+				"content": "<p>也许是稳定币<strong>最有说服力的现实世界用例</strong>。传统汇款已经崩溃——它缓慢、昂贵,并且排除了数十亿人。</p><p><strong>传统汇款问题:</strong></p><ul><li><strong>昂贵:</strong>平均费用 6-7%(世界银行数据)</li><li><strong>缓慢:</strong>国际转账需要 3-5 天</li><li><strong>准入有限:</strong>两端都需要银行账户</li><li><strong>不透明:</strong>外汇转换中的隐藏费用</li></ul><p><strong>稳定币汇款:</strong></p><ul><li><strong>接近零费用:</strong>无论金额多少都是 0.50-5 美元(区块链 Gas 费)</li><li><strong>即时:</strong>几秒到几分钟内结算</li><li><strong>开放访问:</strong>只需要互联网和钱包</li><li><strong>透明:</strong>看到确切的接收金额</li></ul><p><strong>现实世界采用:</strong></p><ul><li><strong>拉丁美洲:</strong> USDT 在汇款和储蓄方面的使用大幅增长</li><li><strong>非洲:</strong>稳定币绕过疲弱的本地货币和昂贵的汇款服务</li><li><strong>东南亚:</strong>工人通过稳定币汇款回家以避免 10%+ 的费用</li></ul><p><strong>挑战:</strong>最后一公里转换为本地货币、监管明确性、用户教育、钱包安全。</p><p><strong>影响:</strong>一个每月汇款 200 美元的工人通过使用稳定币而不是西联汇款每年节省约 840 美元。对于每天生活费不到 10 美元的家庭来说,这是改变生活的。</p>"
+			}
+		},
+
+		"yield_opportunities": {
+			"title": "用稳定币赚取收益",
+			"content": "<p>稳定币最大的优势之一:<strong>在没有价格波动的情况下赚取收益</strong>。传统储蓄账户支付接近零的利息。DeFi 稳定币收益率范围从 3-15%+ 年化收益。</p>",
+			"lending": {
+				"title": "借贷协议",
+				"content": "<p>用稳定币赚钱最安全、最简单的方法:将它们提供给借贷协议并从借款人那里赚取利息。</p><p><strong>工作原理:</strong></p><ol><li>将 USDC/DAI/USDT 存入 Aave 或 Compound</li><li>收到生息代币(aUSDC、cDAI 等)</li><li>利息每个区块(约 12 秒)自动累积</li><li>随时提取(除非 100% 利用率——罕见)</li></ol><p><strong>当前利率(典型范围,因市场而异):</strong></p><ul><li><strong>Aave:</strong> USDC/USDT/DAI 2-7% 年化收益</li><li><strong>Compound:</strong> 2-6% 年化收益 + COMP 奖励</li><li><strong>波动期间更高:</strong>当交易者需要杠杆时,借贷需求激增,利率上升</li></ul><p><strong>风险因素:</strong></p><ul><li><strong>智能合约风险:</strong>协议被黑客攻击(通过审计、保险、久经考验的代码来缓解)</li><li><strong>利用率风险:</strong>如果 100% 被借出,在有人还款之前无法提取(非常罕见)</li><li><strong>利率波动:</strong>年化收益率根据供需波动</li></ul><p><strong>专业提示:</strong>使用像 <strong>Yearn Finance</strong> 这样的聚合器自动将资金转移到最高收益机会并自动复利。</p>"
+			},
+			"liquidity_pools": {
+				"title": "流动性池和 AMM",
+				"content": "<p>通过向去中心化交易所提供流动性来赚取交易费。对于稳定币池来说,这是<strong>低风险且稳定回报</strong>。</p><p><strong>Curve Finance - 稳定币流动性之王:</strong></p><p>Curve 专注于以最小滑点进行稳定币交换。主要池:</p><ul><li><strong>3pool (DAI/USDC/USDT):</strong> DeFi 中流动性最强的稳定币池</li><li>基础年化收益:来自交易费的 1-4%</li><li>提升年化收益:通过 CRV 奖励和 veCRV 提升达到 3-10%+</li><li>额外收益:在 Convex 中质押 LP 代币以获得提升的 CRV 奖励</li></ul><p><strong>为什么选择 Curve 用于稳定币?</strong></p><ul><li>专为价格相似的资产设计的算法(低滑点)</li><li>最小的无常损失(稳定币保持约 1 美元)</li><li>深度流动性吸引高交易量 = 更多费用</li></ul><p><strong>Uniswap V3 稳定币区间:</strong></p><ul><li>在紧密区间内集中流动性(例如 0.995-1.005 美元)</li><li>资本效率远高于 V2</li><li>每美元赚取更高费用,但需要主动管理</li><li>风险:如果稳定币脱锚到你的区间之外,你就停止赚取</li></ul><p><strong>收益分解:</strong></p><ul><li><strong>保守型(Aave/Compound):</strong> 3-6% 年化收益,最少管理</li><li><strong>中等型(Curve 3pool):</strong> 5-10% 年化收益,质押后忘记</li><li><strong>活跃型(Curve + Convex):</strong> 8-15% 年化收益,定期领取和复利</li><li><strong>高级型(Uniswap V3):</strong> 10-20%+ 年化收益,需要主动再平衡</li></ul><p><strong>风险提示:</strong>更高的收益通常意味着更高的风险或更积极的管理。从像 Aave 和 Curve 这样久经考验的协议开始。</p>"
+			}
+		},
+
+		"risks": {
+			"title": "稳定币风险与安全",
+			"content": "<p>稳定币被称为「稳定」,但它们并非没有风险。了解风险对于保护你的资本至关重要。</p>",
+			"depeg_risk": {
+				"title": "脱锚风险",
+				"content": "<p>当稳定币的价格偏离其 1.00 美元锚定时。这可以从小幅波动(±0.5%)到灾难性崩溃(→0 美元)。</p><p><strong>历史脱锚事件:</strong></p><ul><li><strong>UST/LUNA(2022 年 5 月):</strong> 1.00 美元 → 0.00 美元,72 小时内。400 亿美元以上的价值被摧毁。死亡螺旋:UST 失去锚定 → 铸造 LUNA 以恢复锚定 → LUNA 恶性通胀 → 两者都崩溃。</li><li><strong>USDC(2023 年 3 月):</strong>当 SVB 倒闭持有 33 亿美元储备时,1.00 美元 → 0.88 美元。Circle 转移储备后几天内恢复到 1.00 美元。</li><li><strong>DAI(2020 年 3 月):</strong>在黑色星期四清算级联期间短暂交易在 1.05-1.12 美元。MakerDAO 向 PSM 添加 USDC 以加强锚定。</li></ul><p><strong>为什么会发生脱锚:</strong></p><ul><li><strong>法币支持型:</strong>储备担忧、银行问题、监管行动</li><li><strong>加密抵押型:</strong>抵押品波动、清算级联、智能合约漏洞</li><li><strong>算法型:</strong>死亡螺旋、信心丧失、套利机制崩溃</li></ul><p><strong>保护策略:</strong></p><ul><li><strong>多样化:</strong>不要 100% 持有一种稳定币</li><li><strong>监控:</strong>在聚合器上观察价格偏离 1 美元</li><li><strong>了解你的退出:</strong>如果发生脱锚,计划在哪里交换</li><li><strong>偏好经过验证的:</strong> USDC/USDT/DAI 已从问题中恢复;新稳定币未经测试</li></ul>"
+			},
+			"regulatory": {
+				"title": "监管风险",
+				"content": "<p>稳定币处于加密货币和传统金融的交叉点,使它们成为监管的主要目标。</p><p><strong>关键监管问题:</strong></p><ul><li><strong>银行法:</strong>稳定币发行方是银行吗?他们需要银行牌照吗?</li><li><strong>证券分类:</strong>稳定币是受 SEC 监督的证券吗?</li><li><strong>AML/KYC:</strong>了解你的客户和反洗钱的要求</li><li><strong>储备要求:</strong>什么必须支持稳定币?必须多久审计一次?</li></ul><p><strong>潜在的监管行动:</strong></p><ul><li><strong>发行方限制:</strong>只有持牌实体才能发行稳定币</li><li><strong>下架:</strong>交易所被迫下架不合规的稳定币</li><li><strong>资本管制:</strong>限制稳定币用于跨境支付</li><li><strong>强制赎回:</strong>发行方无法满足按面值赎回的要求</li></ul><p><strong>地理差异:</strong></p><ul><li><strong>美国:</strong>审查力度加大,2025-2026 年可能出台稳定币立法</li><li><strong>欧盟:</strong> MiCA(加密资产市场)法规在 2024-2025 年生效</li><li><strong>亚洲:</strong>参差不齐——新加坡拥抱、中国禁止、日本监管</li></ul><p><strong>这对用户意味着什么:</strong></p><ul><li>预计购买/出售稳定币会有更多 KYC 要求</li><li>较小/未受监管的稳定币可能会被下架</li><li>透明度增加是好事,但也更加中心化控制</li></ul>"
+			},
+			"centralization": {
+				"title": "中心化风险",
+				"content": "<p>大多数稳定币都有中心控制点,可以冻结、没收或审查交易。这是监管合规和法币支持的权衡。</p><p><strong>USDC/USDT 冻结权力:</strong></p><ul><li>Circle (USDC) 和 Tether (USDT) 可以<strong>列入黑名单地址</strong></li><li>一旦列入黑名单,这些代币就会被永久冻结</li><li>这是遵守执法请求所必需的</li><li><strong>真实案例:</strong> Tornado Cash 地址被列入黑名单,受制裁实体被封锁</li></ul><p><strong>中心化失败模式:</strong></p><ul><li><strong>银行访问:</strong>如果 Circle/Tether 失去银行合作伙伴,发行/赎回停止</li><li><strong>政府没收:</strong>储备可能被当局冻结</li><li><strong>公司失败:</strong>如果发行方破产,恢复不确定</li></ul><p><strong>DAI 的中心化悖论:</strong></p><ul><li>DAI 是「去中心化的」,但约 60% 由 USDC(中心化稳定币)支持</li><li>如果 USDC 失败,DAI 会受到严重影响</li><li>MakerDAO 的最终计划旨在减少 RWA 依赖</li></ul><p><strong>缓解措施:</strong></p><ul><li><strong>了解权衡:</strong>法币支持型 = 中心化但稳定;加密抵押型 = 去中心化但复杂</li><li><strong>多样化:</strong>持有中心化(USDC)和去中心化(DAI)稳定币的混合</li><li><strong>接受现实:</strong>完全去中心化与完美锚定稳定性尚不存在</li></ul>"
+			},
+			"smart_contract": {
+				"title": "智能合约风险",
+				"content": "<p>对于加密抵押型和算法稳定币,智能合约漏洞可能导致灾难性损失。</p><p><strong>历史黑客/漏洞:</strong></p><ul><li><strong>bZx (2020):</strong>闪电贷攻击利用了预言机操纵,影响了稳定币抵押品</li><li><strong>Mango Markets (2022):</strong>预言机操纵抽走了 1 亿美元以上,影响了稳定币池</li><li><strong>Euler Finance (2023):</strong> 2 亿美元以上的黑客攻击影响了借贷池中的多个稳定币(后来资金被退回)</li></ul><p><strong>风险因素:</strong></p><ul><li><strong>代码复杂性:</strong>更复杂 = 更多攻击面(Curve LLAMMA 是创新的但复杂)</li><li><strong>预言机依赖:</strong>价格源操纵可能导致错误的清算</li><li><strong>可组合性风险:</strong>一个协议中的漏洞可能级联到其他协议</li><li><strong>升级风险:</strong>协议升级可能引入漏洞</li></ul><p><strong>尽职调查清单:</strong></p><ul><li><strong>审计:</strong>协议是否经过审计?由谁审计?(Trail of Bits、OpenZeppelin 等)</li><li><strong>久经考验:</strong>代码在生产环境中运行了多长时间没有问题?</li><li><strong>漏洞赏金:</strong>协议是否为发现漏洞提供奖励?</li><li><strong>保险:</strong>你能购买智能合约保险吗?(Nexus Mutual、InsurAce)</li><li><strong>TVL:</strong>更高的 TVL 通常意味着更多审查和白帽关注</li></ul><p><strong>最佳实践:</strong></p><ul><li>不要盲目进入新的稳定币协议</li><li>从小额开始测试</li><li>分散到多个协议</li><li>考虑为大额头寸购买保险</li></ul>"
+			}
+		},
+
+		"tracking_tools": {
+			"title": "监控和跟踪工具",
+			"content": "<p>使用这些必备工具了解稳定币健康状况、收益和市场动态:</p><p><strong>DefiLlama - 综合 DeFi 分析:</strong></p><ul><li>跟踪稳定币总市值和主导地位</li><li>监控所有协议的 TVL</li><li>比较借贷平台的收益</li><li>查看链之间的稳定币流动</li><li>显示稳定币供应量随时间变化的图表</li></ul><p><strong>Curve Analytics - 稳定币交易数据:</strong></p><ul><li>实时稳定币价格和池余额</li><li>稳定币池的交易量和费用生成</li><li>及早识别脱锚事件(当池不平衡发生时)</li><li>监控 LP 收益和 CRV 排放</li></ul><p><strong>CoinGecko/CoinMarketCap:</strong></p><ul><li>所有主要稳定币的价格跟踪</li><li>快速发现脱锚(价格 ≠ 1.00 美元)</li><li>市值排名和 24 小时交易量</li><li>历史价格图表</li></ul><p><strong>证明和储备报告:</strong></p><ul><li><strong>USDC:</strong> circle.com/en/usdc(Grant Thornton 的月度证明)</li><li><strong>USDT:</strong> tether.to/en/transparency(季度储备报告)</li><li><strong>DAI:</strong> daistats.com(实时链上抵押品数据)</li></ul><p><strong>链上分析:</strong></p><ul><li><strong>Dune Analytics:</strong>稳定币指标的自定义仪表板</li><li><strong>Nansen:</strong>巨鲸钱包跟踪、聪明钱流向</li><li><strong>Etherscan:</strong>验证智能合约代码和代币持有者</li></ul><p><strong>需要监控的内容:</strong></p><ul><li><strong>价格:</strong>应保持在 1.00 美元 ±0.5%</li><li><strong>市值:</strong>快速下降可能表明信心丧失</li><li><strong>交易量:</strong>激增可能表明恐慌性抛售</li><li><strong>储备:</strong>对于法币支持型,确保完全支持</li><li><strong>抵押率:</strong>对于加密抵押型,注意抵押不足</li></ul><p><strong>设置警报:</strong>使用 CoinGecko 价格警报或 Dune 仪表板通知,在你的稳定币偏离锚定时获得通知。</p>"
+		}
+	},
+
+	"glossary": {
+		"stablecoin": {
+			"term": "稳定币",
+			"definition": "一种设计用来保持稳定价值的加密货币,通常锚定法定货币如美元。使加密生态系统内的稳定价值存储和交易成为可能。"
+		},
+		"peg": {
+			"term": "锚定",
+			"definition": "稳定币旨在维持的目标价格,通常为 1.00 美元。强锚定意味着稳定币始终在 1.00 美元或非常接近 1.00 美元交易。"
+		},
+		"depeg": {
+			"term": "脱锚",
+			"definition": "当稳定币的市场价格显著偏离其预期锚定时(例如,以 0.95 美元或 1.05 美元而不是 1.00 美元交易)。可以从暂时波动到永久崩溃。"
+		},
+		"collateral_ratio": {
+			"term": "抵押率",
+			"definition": "抵押品价值与稳定币债务的比率。例如,150% 的抵押率意味着 1.50 美元的抵押品支持 1.00 美元的稳定币。更高的比率提供更多安全缓冲。"
+		},
+		"overcollateralized": {
+			"term": "超额抵押",
+			"definition": "当抵押品价值超过债务价值时。由于加密货币的波动性,加密抵押型稳定币需要超额抵押(例如 150%)。为价格下跌提供安全边际。"
+		},
+		"algorithmic_stablecoin": {
+			"term": "算法稳定币",
+			"definition": "使用算法和激励机制来维持其锚定的稳定币,通常只有最少的抵押或没有抵押。大多数纯算法稳定币都失败了(UST、IRON 等)。"
+		},
+		"fiat_backed": {
+			"term": "法币支持型",
+			"definition": "由持有的法定货币(美元)或等价物 1:1 支持的稳定币。每个代币可兑换 1 美元。示例:USDC、USDT。中心化但简单且资本高效。"
+		},
+		"cdp": {
+			"term": "CDP(抵押债务头寸)",
+			"definition": "用户锁定抵押品并生成(借入)稳定币的智能合约。由 MakerDAO 用于创建 DAI。在当前的 MakerDAO 术语中也称为「金库」。"
+		},
+		"psm": {
+			"term": "PSM(锚定稳定模块)",
+			"definition": "MakerDAO 的一种机制,允许 DAI 和其他稳定币(主要是 USDC)之间以接近零费用的 1:1 交换。帮助将 DAI 的锚定紧密维持在 1.00 美元左右。"
+		},
+		"stability_fee": {
+			"term": "稳定费",
+			"definition": "在 MakerDAO 金库中对债务收取的利率。由 MKR 治理设定。功能类似于利率——用户在偿还 DAI 债务以解锁抵押品时必须支付此费用。"
+		}
+	}
+}

@@ -130,8 +130,7 @@ export const infraGuide: CategoryGuide = {
 				},
 				{
 					id: 'permanent-storage',
-					titleKey:
-						'routes/apps/chain-tools/infra/guide.sections.storage.permanent_storage.title',
+					titleKey: 'routes/apps/chain-tools/infra/guide.sections.storage.permanent_storage.title',
 					contentKey:
 						'routes/apps/chain-tools/infra/guide.sections.storage.permanent_storage.content',
 					toolMentions: [
@@ -174,8 +173,7 @@ export const infraGuide: CategoryGuide = {
 			subsections: [
 				{
 					id: 'observability',
-					titleKey:
-						'routes/apps/chain-tools/infra/guide.sections.monitoring.observability.title',
+					titleKey: 'routes/apps/chain-tools/infra/guide.sections.monitoring.observability.title',
 					contentKey:
 						'routes/apps/chain-tools/infra/guide.sections.monitoring.observability.content',
 					toolMentions: [{ toolId: 'tenderly', context: 'monitoring and debugging' }]
@@ -196,8 +194,7 @@ export const infraGuide: CategoryGuide = {
 			subsections: [
 				{
 					id: 'redundancy',
-					titleKey:
-						'routes/apps/chain-tools/infra/guide.sections.best_practices.redundancy.title',
+					titleKey: 'routes/apps/chain-tools/infra/guide.sections.best_practices.redundancy.title',
 					contentKey:
 						'routes/apps/chain-tools/infra/guide.sections.best_practices.redundancy.content'
 				},

@@ -54,7 +54,7 @@
 
 			"comparison": {
 				"title": "框架对比",
-				"content": "<strong>Hardhat vs Foundry：</strong><br/><br/>| 特性 | Hardhat | Foundry |<br/>|------|---------|---------|<br/>| 语言 | JavaScript/TypeScript | Rust/Solidity |<br/>| 测试语言 | JS/TS | Solidity |<br/>| 速度 | 良好 | 极佳 |<br/>| 模糊测试 | 插件 | 内置 |<br/>| 学习曲线 | 较低 | 较高 |<br/>| 生态系统 | 更大 | 快速增长 |<br/><br/><strong>建议：</strong><br/>• 新开发者：从 Remix 开始，然后转向 Hardhat<br/>• 有 JS 经验的团队：Hardhat<br/>• 注重安全/性能需求：Foundry<br/>• 许多高级项目：两者结合使用"
+				"content": "**Hardhat vs Foundry：**\n\n| 特性 | Hardhat | Foundry |\n|------|---------|----------|\n| 语言 | JavaScript/TypeScript | Rust/Solidity |\n| 测试语言 | JS/TS | Solidity |\n| 速度 | 良好 | 极佳 |\n| 模糊测试 | 插件 | 内置 |\n| 学习曲线 | 较低 | 较高 |\n| 生态系统 | 更大 | 快速增长 |\n\n**建议：**\n\n• 新开发者：从 Remix 开始，然后转向 Hardhat\n\n• 有 JS 经验的团队：Hardhat\n\n• 注重安全/性能需求：Foundry\n\n• 许多高级项目：两者结合使用"
 			}
 		},
 

@@ -54,7 +54,7 @@
 
 			"comparison": {
 				"title": "Framework Comparison",
-				"content": "<strong>Hardhat vs Foundry:</strong><br/><br/>| Feature | Hardhat | Foundry |<br/>|---------|---------|---------|<br/>| Language | JavaScript/TypeScript | Rust/Solidity |<br/>| Test Language | JS/TS | Solidity |<br/>| Speed | Good | Excellent |<br/>| Fuzzing | Plugin | Built-in |<br/>| Learning Curve | Lower | Higher |<br/>| Ecosystem | Larger | Growing |<br/><br/><strong>Recommendation:</strong><br/>• New developers: Start with Remix, then move to Hardhat<br/>• Teams with JS experience: Hardhat<br/>• Security-focused/Performance needs: Foundry<br/>• Many advanced projects: Use both together"
+				"content": "**Hardhat vs Foundry:**\n\n| Feature | Hardhat | Foundry |\n|---------|---------|----------|\n| Language | JavaScript/TypeScript | Rust/Solidity |\n| Test Language | JS/TS | Solidity |\n| Speed | Good | Excellent |\n| Fuzzing | Plugin | Built-in |\n| Learning Curve | Lower | Higher |\n| Ecosystem | Larger | Growing |\n\n**Recommendation:**\n\n• New developers: Start with Remix, then move to Hardhat\n\n• Teams with JS experience: Hardhat\n\n• Security-focused/Performance needs: Foundry\n\n• Many advanced projects: Use both together"
 			}
 		},
 

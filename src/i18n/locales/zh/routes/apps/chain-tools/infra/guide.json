@@ -1,0 +1,142 @@
+{
+	"title": "区块链基础设施完全指南",
+	"subtitle": "掌握 RPC 提供商、节点服务、存储和 Web3 基础设施",
+
+	"sections": {
+		"intro": {
+			"title": "区块链基础设施简介",
+			"content": "<p>区块链基础设施是每个 Web3 应用程序的支柱。无论你是在构建 DeFi 协议、NFT 市场还是区块链游戏,你都需要可靠地访问区块链数据、链下内容存储以及用户通信渠道。</p><p>与传统应用程序中你可能运行自己的数据库和服务器不同,区块链开发需要专门的基础设施服务。虽然可以运行自己的区块链节点,但资源密集——大多数开发者使用基础设施提供商来高效可靠地访问区块链网络。</p><p>这份全面的指南涵盖了从 RPC 提供商和节点服务到去中心化存储和消息协议的所有内容。你将学习如何为你的需求选择正确的基础设施、优化成本并构建有韧性的 Web3 应用程序。</p>"
+		},
+		"rpc_providers": {
+			"title": "RPC 提供商",
+			"content": "<p>远程过程调用(RPC)提供商是你访问区块链网络的网关。它们允许你的应用程序读取区块链数据并提交交易,而无需运行自己的节点。</p>",
+			"what_is_rpc": {
+				"title": "什么是 RPC?",
+				"content": "<p>RPC 是一种允许你的应用程序与区块链节点通信的协议。当你想要检查账户余额、读取智能合约数据或发送交易时,你的应用程序会向区块链节点发起 RPC 调用。</p><p><strong>常见的 RPC 方法:</strong></p><ul><li><strong>eth_blockNumber:</strong> 获取最新区块号</li><li><strong>eth_getBalance:</strong> 查询地址余额</li><li><strong>eth_call:</strong> 从智能合约读取数据</li><li><strong>eth_sendRawTransaction:</strong> 提交已签名的交易</li><li><strong>eth_getLogs:</strong> 查询事件日志</li></ul><p><strong>RPC 请求示例:</strong></p><p>当你将钱包连接到 Uniswap 并查看代币余额时,DApp 会发起如下 RPC 调用:</p><pre>{\n  \"jsonrpc\": \"2.0\",\n  \"method\": \"eth_call\",\n  \"params\": [{\n    \"to\": \"0xA0b86991...\",\n    \"data\": \"0x70a08231...\"\n  }, \"latest\"],\n  \"id\": 1\n}</pre><p>这个请求向区块链询问:「这个地址的 USDC 余额是多少?」</p>"
+			},
+			"provider_comparison": {
+				"title": "RPC 提供商对比",
+				"content": "<p>不同的提供商提供不同的功能、定价和性能特性。以下是重要的考虑因素:</p><p><strong>Alchemy:</strong></p><ul><li><strong>优势:</strong> 增强型 API、NFT API、Webhooks、一流的调试工具</li><li><strong>免费额度:</strong> 每月 3 亿计算单元</li><li><strong>最适合:</strong> 需要高级功能的生产应用</li><li><strong>独特功能:</strong> 实时 Webhook 的 Notify API、NFT 元数据 API</li></ul><p><strong>Infura:</strong></p><ul><li><strong>优势:</strong> 行业标准、出色的可靠性、IPFS 集成</li><li><strong>免费额度:</strong> 每天 10 万次请求</li><li><strong>最适合:</strong> 需要久经考验基础设施的团队</li><li><strong>独特功能:</strong> 集成 IPFS 网关、Gas 价格 API</li></ul><p><strong>QuickNode:</strong></p><ul><li><strong>优势:</strong> 超低延迟、全球基础设施、专用节点</li><li><strong>免费额度:</strong> 有限的免费计划</li><li><strong>最适合:</strong> 需要最高性能的应用程序</li><li><strong>独特功能:</strong> Token API、插件市场</li></ul><p><strong>Ankr:</strong></p><ul><li><strong>优势:</strong> 去中心化、免费公共 RPC、多链支持</li><li><strong>免费额度:</strong> 公共端点(有速率限制)</li><li><strong>最适合:</strong> 预算有限的项目、测试</li><li><strong>独特功能:</strong> 去中心化节点网络、质押集成</li></ul><p><strong>成本对比(以太坊主网):</strong></p><ul><li>免费额度: 适合开发和小型应用(1-1 万日活用户)</li><li>付费计划: 中型应用通常为每月 50-500 美元(1-10 万日活用户)</li><li>企业级: 大流量应用的定制定价(10 万以上日活用户)</li></ul>"
+			},
+			"choosing_provider": {
+				"title": "选择合适的提供商",
+				"content": "<p>你的基础设施选择取决于几个因素:</p><p><strong>开发阶段:</strong></p><ul><li><strong>原型开发:</strong> 使用免费公共 RPC(Ankr、公共端点)</li><li><strong>测试:</strong> 来自 Alchemy 或 Infura 的免费额度</li><li><strong>生产环境:</strong> 有保证正常运行时间和支持的付费计划</li></ul><p><strong>应用类型:</strong></p><ul><li><strong>NFT 项目:</strong> Alchemy(NFT API)、Moralis(NFT 索引)</li><li><strong>DeFi:</strong> QuickNode(低延迟)、Alchemy(事件 Webhooks)</li><li><strong>多链:</strong> Ankr、Moralis(广泛的链支持)</li><li><strong>历史数据:</strong> 提供存档节点的供应商(Alchemy、QuickNode)</li></ul><p><strong>预算考虑:</strong></p><ul><li>开发期间从免费额度开始</li><li>在承诺付费计划之前监控使用情况</li><li>考虑去中心化选项(Ankr、Pocket Network)以节省成本</li><li>使用多个提供商实现冗余(稍后讨论)</li></ul><p><strong>性能要求:</strong></p><ul><li>用户的地理分布</li><li>延迟要求(交易机器人需要低于 100ms)</li><li>请求量(每秒请求数)</li><li>数据新鲜度(数据需要多新?)</li></ul>"
+			}
+		},
+		"node_services": {
+			"title": "节点服务",
+			"content": "<p>虽然 RPC 提供商让你访问共享节点,但有时你需要专用基础设施或想要运行自己的节点。</p>",
+			"running_nodes": {
+				"title": "运行自己的节点",
+				"content": "<p>运行区块链节点可以让你获得最大的控制权和隐私,但需要大量资源。</p><p><strong>节点类型:</strong></p><ul><li><strong>全节点:</strong> 存储最近的区块链状态(以太坊约 500GB)</li><li><strong>存档节点:</strong> 存储完整的历史状态(以太坊 12TB 以上)</li><li><strong>轻客户端:</strong> 最小存储,依赖全节点获取数据</li></ul><p><strong>硬件要求(以太坊全节点):</strong></p><ul><li>CPU: 4 核以上</li><li>内存: 16GB 以上(推荐 32GB)</li><li>存储: 2TB 以上 SSD(必须快速)</li><li>网络: 稳定连接,25+ Mbps</li><li>成本: 云托管约每月 100-300 美元</li></ul><p><strong>何时运行自己的节点:</strong></p><ul><li>你需要保证的正常运行时间和控制权</li><li>隐私至关重要(隐藏你查询的地址)</li><li>高请求量使提供商成本昂贵</li><li>你正在为其他人构建基础设施</li><li>教育目的(理解协议)</li></ul><p><strong>何时不运行自己的节点:</strong></p><ul><li>刚开始 Web3 开发</li><li>构建消费者应用程序(改用提供商)</li><li>需要多链支持(为 10 个以上的链运行节点不切实际)</li><li>维护的 DevOps 资源有限</li></ul>"
+			},
+			"node_as_service": {
+				"title": "节点即服务",
+				"content": "<p>节点即服务提供商为你提供专用节点,而无需操作开销。</p><p><strong>QuickNode 专用节点:</strong></p><ul><li>几分钟内配置专用节点</li><li>选择你的区域以获得最佳延迟</li><li>全节点或存档节点选项</li><li>用于追踪、调试、NFT 数据的插件</li><li>定价: 每月 50-500 美元以上,取决于链和功能</li></ul><p><strong>Chainstack:</strong></p><ul><li>面向企业的节点基础设施</li><li>多云部署(AWS、GCP、Azure)</li><li>合规性和安全功能</li><li>支持联盟链</li><li>可提供定制 SLA</li></ul><p><strong>专用节点的用例:</strong></p><ul><li><strong>高流量应用:</strong> 当共享 RPC 受速率限制时</li><li><strong>MEV/交易:</strong> 为竞争性应用最小化延迟</li><li><strong>隐私:</strong> 你的查询不会与其他人混在一起</li><li><strong>自定义配置:</strong> 特殊的节点设置或模块</li></ul>"
+			}
+		},
+		"data_apis": {
+			"title": "数据可用性与 API",
+			"content": "<p>原始 RPC 访问为你提供低级区块链数据,但通常你需要更高级的 API 来实现高效的应用程序开发。</p>",
+			"indexing_querying": {
+				"title": "索引和查询",
+				"content": "<p>区块链数据针对安全性和去中心化进行了优化,而不是查询。如果你需要查找「这个地址拥有的所有 NFT」或「过去一小时 Uniswap 上的所有交换」,查询原始区块链数据既慢又昂贵。</p><p><strong>The Graph - 去中心化索引:</strong></p><p>The Graph 使用称为子图的 GraphQL API 索引区块链数据。你不用扫描数百万个区块,而是查询索引数据库。</p><p><strong>示例: 查询 Uniswap 交换</strong></p><pre>query {\n  swaps(\n    first: 10\n    orderBy: timestamp\n    orderDirection: desc\n    where: { pair: \"0x...\", amount0: { gt: \"1000000\" } }\n  ) {\n    transaction { id }\n    timestamp\n    amount0In\n    amount1Out\n  }\n}</pre><p>这个查询通过原始 RPC 调用执行需要几个小时。使用 The Graph,它在毫秒内返回。</p><p><strong>构建子图:</strong></p><ol><li>定义你的数据架构(要跟踪哪些实体)</li><li>编写映射代码(如何处理事件)</li><li>部署到 The Graph 的去中心化网络</li><li>从你的 DApp 使用 GraphQL 查询</li></ol><p><strong>成本:</strong> 查询免费,在去中心化网络上索引需支付 GRT 代币</p>"
+			},
+			"api_providers": {
+				"title": "专业 API 提供商",
+				"content": "<p>几家提供商为常见的区块链数据需求提供现成的 API。</p><p><strong>Moralis:</strong></p><ul><li><strong>NFT API:</strong> 获取 NFT 元数据、所有权、转账</li><li><strong>Token API:</strong> 价格数据、余额、转账</li><li><strong>Wallet API:</strong> 地址的完整交易历史</li><li><strong>用例:</strong> 快速构建 NFT 画廊、投资组合跟踪器</li><li><strong>定价:</strong> 免费额度: 每月 4 万计算单元</li></ul><p><strong>Alchemy NFT API:</strong></p><ul><li>全面的 NFT 元数据</li><li>所有权跟踪</li><li>地板价和销售数据</li><li>NFT 合集的垃圾检测</li></ul><p><strong>Covalent:</strong></p><ul><li>跨 100 多个区块链的统一 API</li><li>历史余额数据</li><li>投资组合跟踪</li><li>DeFi 头寸</li></ul><p><strong>何时使用高级 API:</strong></p><ul><li>快速原型开发(更快上市)</li><li>常见用例(NFT 画廊、钱包视图)</li><li>多链应用(避免集成 10 个以上不同的 RPC)</li><li>团队缺乏区块链专业知识(API 抽象复杂性)</li></ul><p><strong>权衡:</strong></p><ul><li><strong>优点:</strong> 开发更快、代码更少、由提供商维护</li><li><strong>缺点:</strong> 灵活性较低、供应商锁定、大规模时成本可能更高</li></ul>"
+			}
+		},
+		"storage": {
+			"title": "去中心化存储",
+			"content": "<p>区块链存储大数据成本很高。单个 NFT 图像在链上存储需要数千美元。这就是为什么大多数 Web3 应用程序使用去中心化存储来存储文件、图像和元数据。</p>",
+			"ipfs": {
+				"title": "IPFS - 星际文件系统",
+				"content": "<p>IPFS 是一个用于存储和共享文件的点对点网络。IPFS 使用基于内容的寻址(CID),而不是基于位置的寻址(URL)。</p><p><strong>IPFS 工作原理:</strong></p><ol><li>将文件上传到 IPFS</li><li>接收唯一的 CID(内容标识符): <code>Qm...</code></li><li>任何人都可以使用其 CID 检索文件</li><li>文件内容经过加密验证</li></ol><p><strong>示例 - NFT 元数据:</strong></p><p>不在链上存储图像 URL:</p><pre>\"image\": \"https://myserver.com/nft/1.jpg\"</pre><p>你存储 IPFS CID:</p><pre>\"image\": \"ipfs://QmYHj7...\"</pre><p><strong>优势:</strong></p><ul><li><strong>不可变性:</strong> 内容无法更改(CID 会改变)</li><li><strong>去中心化:</strong> 没有单点故障</li><li><strong>持久性:</strong> 只要有人固定它,它就存在</li></ul><p><strong>挑战:</strong></p><ul><li><strong>固定:</strong> 如果没有人托管文件,文件会消失</li><li><strong>速度:</strong> 比中心化存储(CDN)慢</li><li><strong>网关:</strong> 通常通过 HTTP 网关访问(中心化风险)</li></ul><p><strong>IPFS 固定服务:</strong></p><ul><li><strong>Pinata:</strong> 1GB 固定存储每月 20 美元</li><li><strong>NFT.Storage:</strong> NFT 数据免费(Filecoin 支持)</li><li><strong>Web3.Storage:</strong> 免费额度(Filecoin 支持)</li><li><strong>Infura IPFS:</strong> 与其 RPC 服务集成</li></ul><p><strong>最佳实践:</strong></p><ol><li>始终固定重要内容</li><li>使用多个固定服务实现冗余</li><li>考虑混合方法(IPFS + CDN)</li><li>在区块链记录中包含 CID 以供验证</li></ol>"
+			},
+			"permanent_storage": {
+				"title": "永久存储解决方案",
+				"content": "<p>IPFS 需要主动固定才能保持文件可用。对于真正的永久存储,请考虑以下替代方案:</p><p><strong>Arweave - 一次付费,永久存储:</strong></p><p>Arweave 通过一次性付款提供永久存储。该协议在经济上激励矿工永久存储数据。</p><ul><li><strong>定价:</strong> 1MB 约 2 美元(一次性付款)</li><li><strong>用例:</strong> NFT 元数据、历史记录、档案</li><li><strong>访问:</strong> 通过 HTTP 网关或原生协议</li><li><strong>保证:</strong> 200 年以上的存储捐赠</li></ul><p><strong>工作原理:</strong></p><ol><li>预付存储费用(基于文件大小)</li><li>矿工存储你的数据以赚取区块奖励</li><li>经济激励确保长期存储</li><li>通过内容寻址访问数据</li></ol><p><strong>示例 - 存储 NFT 元数据:</strong></p><pre>// 上传到 Arweave\nconst transaction = await arweave.createTransaction({\n  data: JSON.stringify(metadata)\n});\n\nawait arweave.transactions.sign(transaction);\nawait arweave.transactions.post(transaction);\n\n// 交易 ID 是永久引用\nconst url = `https://arweave.net/${transaction.id}`;</pre><p><strong>Filecoin - 去中心化存储市场:</strong></p><p>Filecoin 创建了一个存储市场。存储提供商在价格和可靠性上竞争。</p><ul><li><strong>定价:</strong> 市场驱动,非常便宜(每 GB 每天约 0.000002 美元)</li><li><strong>用例:</strong> 大型数据集、备份、档案</li><li><strong>交易:</strong> 与提供商协商存储交易</li><li><strong>验证:</strong> 加密证明确保数据被存储</li></ul><p><strong>NFT.Storage 和 Web3.Storage:</strong></p><p>这些服务为 Web3 应用程序提供免费的 IPFS 和 Filecoin 存储,由 Protocol Labs 支持。</p><ul><li>通过简单的 API 上传文件</li><li>自动固定到 IPFS</li><li>在 Filecoin 上备份</li><li>公共数据免费</li></ul><p><strong>选择存储解决方案:</strong></p><ul><li><strong>NFT:</strong> Arweave 或 NFT.Storage(持久性很重要)</li><li><strong>应用数据:</strong> 带固定的 IPFS(快速访问)</li><li><strong>档案:</strong> Filecoin(大数据成本效益高)</li><li><strong>混合:</strong> 热数据用 IPFS,冷存储用 Filecoin</li></ul>"
+			}
+		},
+		"messaging": {
+			"title": "消息与通信",
+			"content": "<p>Web3 应用程序需要尊重用户隐私和所有权的去中心化通信渠道。</p>",
+			"notifications": {
+				"title": "Web3 通知",
+				"content": "<p>传统的推送通知需要中心化服务器和用户联系信息。Web3 需要去中心化的替代方案。</p><p><strong>Push Protocol(前 EPNS):</strong></p><p>Push Protocol 实现钱包到钱包的通知,无需暴露电子邮件或电话号码。</p><p><strong>工作原理:</strong></p><ol><li>DApp 在 Push Protocol 上创建「频道」</li><li>用户选择接收来自频道的通知</li><li>DApp 通过 Push Protocol 向订阅者发送通知</li><li>用户在启用 Push 的应用中接收通知</li></ol><p><strong>用例:</strong></p><ul><li><strong>DeFi 警报:</strong> 「你的贷款接近清算」</li><li><strong>治理:</strong> 「新提案可供投票」</li><li><strong>社交:</strong> 「有人在 Lens Protocol 上关注了你」</li><li><strong>NFT:</strong> 「你的 NFT 收到报价」</li><li><strong>游戏:</strong> 「你的比赛正在开始」</li></ul><p><strong>集成示例:</strong></p><pre>// 向用户发送通知\nawait PushAPI.payloads.sendNotification({\n  signer,\n  type: 3, // 定向通知\n  identityType: 2, // 直接到钱包\n  notification: {\n    title: '贷款警报',\n    body: '你的健康因子低于 1.5'\n  },\n  payload: {\n    title: '贷款警报',\n    body: '考虑添加抵押品以避免清算',\n    cta: 'https://app.example.com/positions/123'\n  },\n  recipients: '0xuser_wallet_address'\n});</pre><p><strong>优势:</strong></p><ul><li>无需收集电子邮件/电话</li><li>用户控制他们的通知</li><li>加密和去中心化</li><li>跨平台(移动、网页、扩展)</li></ul>"
+			},
+			"messaging_protocols": {
+				"title": "去中心化消息",
+				"content": "<p>Web3 社交和通信功能需要跨应用程序工作的消息协议。</p><p><strong>XMTP - 可扩展消息传输协议:</strong></p><p>XMTP 实现带端到端加密的钱包到钱包消息传递。</p><p><strong>关键功能:</strong></p><ul><li><strong>钱包原生:</strong> 消息绑定到以太坊地址</li><li><strong>端到端加密:</strong> 只有发送者和接收者可以阅读消息</li><li><strong>可移植:</strong> 消息在应用之间跟随你</li><li><strong>可组合:</strong> 任何应用都可以集成 XMTP</li></ul><p><strong>用例:</strong></p><ul><li><strong>NFT 市场:</strong> 买卖双方协商</li><li><strong>DAO:</strong> 成员沟通</li><li><strong>社交应用:</strong> 去中心化的 Twitter DM</li><li><strong>客户支持:</strong> 协议支持渠道</li></ul><p><strong>集成示例:</strong></p><pre>import { Client } from '@xmtp/xmtp-js';\n\n// 使用用户钱包初始化客户端\nconst client = await Client.create(wallet);\n\n// 开始对话\nconst conversation = await client.conversations.newConversation(\n  '0xrecipient_address'\n);\n\n// 发送消息\nawait conversation.send('你好,来自我的 DApp!');\n\n// 列出对话\nconst allConversations = await client.conversations.list();\n\n// 流式传输新消息\nfor await (const message of await conversation.streamMessages()) {\n  console.log(`新消息: ${message.content}`);\n}</pre><p><strong>对比:</strong></p><ul><li><strong>XMTP:</strong> 直接消息、端到端加密、基于钱包</li><li><strong>Push Protocol:</strong> 通知和公告、基于频道</li><li><strong>结合使用:</strong> 使用 Push 进行广播,XMTP 进行对话</li></ul>"
+			}
+		},
+		"monitoring": {
+			"title": "监控与可观测性",
+			"content": "<p>生产环境的 Web3 应用程序需要全面的监控来检测问题并保持可靠性。</p>",
+			"observability": {
+				"title": "区块链可观测性",
+				"content": "<p>传统的应用程序监控工具不适用于区块链应用程序。你需要理解智能合约和链上事件的专用工具。</p><p><strong>Tenderly:</strong></p><p>Tenderly 为智能合约提供模拟、监控和调试。</p><p><strong>关键功能:</strong></p><ul><li><strong>交易模拟:</strong> 在发送前测试交易</li><li><strong>调试器:</strong> 逐步执行失败的交易</li><li><strong>监控:</strong> 智能合约事件的实时警报</li><li><strong>分析:</strong> Gas 使用、函数调用、状态变化</li><li><strong>警报:</strong> 获得异常通知</li></ul><p><strong>用例:</strong></p><ul><li><strong>调试失败的交易:</strong> 准确查看交易失败的位置和原因</li><li><strong>Gas 优化:</strong> 识别昂贵的操作</li><li><strong>安全监控:</strong> 对可疑活动发出警报</li><li><strong>测试:</strong> 模拟复杂场景</li></ul><p><strong>示例 - 模拟交易:</strong></p><pre>// 在执行前模拟交换\nconst simulation = await tenderly.simulator.simulateTransaction({\n  from: userAddress,\n  to: uniswapRouter,\n  input: swapCalldata,\n  value: 0\n});\n\nif (simulation.status) {\n  // 成功 - 继续真实交易\n} else {\n  // 失败 - 向用户显示失败原因\n  console.error(simulation.error);\n}</pre><p><strong>其他监控工具:</strong></p><ul><li><strong>Alchemy Monitoring:</strong> 请求分析、错误跟踪</li><li><strong>Blocknative:</strong> 内存池监控、Gas 价格预测</li><li><strong>OpenZeppelin Defender:</strong> 以安全为重点的监控和警报</li></ul>"
+			},
+			"alerts": {
+				"title": "设置警报",
+				"content": "<p>主动警报帮助你在用户投诉之前发现问题。</p><p><strong>要配置的关键警报:</strong></p><ol><li><strong>RPC 错误:</strong> 错误率 > 5% 时警报</li><li><strong>Gas 峰值:</strong> Gas 价格超过阈值时通知</li><li><strong>失败的交易:</strong> 跟踪失败的交易率</li><li><strong>智能合约事件:</strong> 监控关键合约交互</li><li><strong>余额警报:</strong> 热钱包余额低时通知</li><li><strong>安全事件:</strong> 异常管理调用或可疑转账时警报</li></ol><p><strong>警报配置示例(Tenderly):</strong></p><pre>// 监控借贷池的清算\nconst alert = await tenderly.alerts.create({\n  name: '大额清算警报',\n  network: 'mainnet',\n  contractAddress: lendingPoolAddress,\n  eventSignature: 'LiquidationCall(...)',\n  conditions: [\n    {\n      parameter: 'debtToCover',\n      operator: 'GREATER_THAN',\n      value: '100000000000000000000000' // 10 万 USDC\n    }\n  ],\n  actions: [\n    { type: 'WEBHOOK', url: 'https://api.example.com/alerts' },\n    { type: 'EMAIL', email: 'team@example.com' },\n    { type: 'SLACK', webhook: slackWebhookUrl }\n  ]\n});</pre><p><strong>警报最佳实践:</strong></p><ul><li>仅从关键警报开始(避免警报疲劳)</li><li>设置适当的阈值(过于敏感 = 噪音)</li><li>使用多个渠道(Slack、PagerDuty、电子邮件)</li><li>在警报中包含运行手册链接</li><li>定期测试警报</li><li>根据误报进行审查和调整</li></ul>"
+			}
+		},
+		"best_practices": {
+			"title": "基础设施最佳实践",
+			"content": "<p>构建可靠的 Web3 应用程序需要周到的基础设施设计。</p>",
+			"redundancy": {
+				"title": "构建冗余",
+				"content": "<p>永远不要依赖单个基础设施提供商。即使是最好的服务也会有故障。</p><p><strong>多提供商策略:</strong></p><pre>// 回退提供商配置\nconst providers = [\n  new JsonRpcProvider(alchemyUrl),     // 主要\n  new JsonRpcProvider(infuraUrl),      // 回退 1\n  new JsonRpcProvider(ankrUrl)         // 回退 2\n];\n\nclass FallbackProvider {\n  async request(method, params) {\n    for (const provider of this.providers) {\n      try {\n        return await provider.send(method, params);\n      } catch (error) {\n        console.error(`提供商失败: ${error}`);\n        // 尝试下一个提供商\n      }\n    }\n    throw new Error('所有提供商都失败了');\n  }\n}</pre><p><strong>负载均衡:</strong></p><ul><li>在多个提供商之间分配请求</li><li>实现指数退避的重试逻辑</li><li>跟踪提供商健康状况并绕过故障</li><li>为不同的链使用不同的提供商</li></ul><p><strong>断路器模式:</strong></p><pre>class CircuitBreaker {\n  constructor(provider, threshold = 5) {\n    this.provider = provider;\n    this.failureCount = 0;\n    this.threshold = threshold;\n    this.state = 'CLOSED'; // CLOSED、OPEN、HALF_OPEN\n  }\n\n  async request(method, params) {\n    if (this.state === 'OPEN') {\n      throw new Error('断路器处于 OPEN 状态');\n    }\n\n    try {\n      const result = await this.provider.send(method, params);\n      this.onSuccess();\n      return result;\n    } catch (error) {\n      this.onFailure();\n      throw error;\n    }\n  }\n\n  onSuccess() {\n    this.failureCount = 0;\n    this.state = 'CLOSED';\n  }\n\n  onFailure() {\n    this.failureCount++;\n    if (this.failureCount >= this.threshold) {\n      this.state = 'OPEN';\n      // 超时后重置\n      setTimeout(() => this.state = 'HALF_OPEN', 60000);\n    }\n  }\n}</pre>"
+			},
+			"cost_optimization": {
+				"title": "成本优化",
+				"content": "<p>随着应用程序扩展,基础设施成本会快速增长。以下是优化方法:</p><p><strong>缓存策略:</strong></p><pre>// 缓存不变的区块链数据\nconst cache = new Map();\n\nasync function getTokenMetadata(tokenAddress) {\n  const cacheKey = `metadata:${tokenAddress}`;\n  \n  // 首先检查缓存\n  if (cache.has(cacheKey)) {\n    return cache.get(cacheKey);\n  }\n\n  // 从区块链获取\n  const metadata = await fetchFromBlockchain(tokenAddress);\n  \n  // 无限期缓存(元数据不会改变)\n  cache.set(cacheKey, metadata);\n  return metadata;\n}\n\n// 对于变化的数据,使用 TTL\nasync function getTokenPrice(tokenAddress) {\n  const cacheKey = `price:${tokenAddress}`;\n  const cached = cache.get(cacheKey);\n  \n  if (cached && Date.now() - cached.timestamp < 60000) {\n    return cached.data; // 缓存 1 分钟\n  }\n\n  const price = await fetchPrice(tokenAddress);\n  cache.set(cacheKey, { data: price, timestamp: Date.now() });\n  return price;\n}</pre><p><strong>请求批处理:</strong></p><pre>// 不要 10 次单独调用\nconst balances = await Promise.all(\n  tokens.map(token => provider.getBalance(token))\n);\n\n// 批处理为单次调用\nconst multicall = new Multicall(provider);\nconst balances = await multicall.aggregate([\n  tokens.map(token => ({\n    target: token,\n    callData: erc20.encodeFunctionData('balanceOf', [address])\n  }))\n]);</pre><p><strong>优化查询频率:</strong></p><ul><li>如果每 10 秒就可以,不要每秒轮询更新</li><li>使用 Webhooks 而不是轮询(Alchemy Notify、Push Protocol)</li><li>为重试实现指数退避</li><li>聚合用户请求(不要多次获取相同数据)</li></ul><p><strong>选择适当的数据源:</strong></p><ul><li><strong>静态数据:</strong> 获取一次,永久缓存(代币元数据)</li><li><strong>缓慢变化:</strong> 长 TTL 缓存(30 分钟-1 小时)(TVL 数据)</li><li><strong>实时:</strong> 使用 Websockets,不轮询(价格数据)</li><li><strong>历史:</strong> 使用 The Graph 或索引器,不用原始 RPC(过去的事件)</li></ul><p><strong>监控和警报成本:</strong></p><ul><li>为提供商设置账单警报</li><li>每周跟踪计算单元使用情况</li><li>识别昂贵的查询并优化它们</li><li>考虑切换链以降低 Gas 费用(L2)</li></ul><p><strong>免费额度优化:</strong></p><ul><li>使用多个免费账户(用于不同环境)</li><li>组合来自不同提供商的免费额度</li><li>为非关键读操作使用公共 RPC</li><li>仅在持续达到限制时升级到付费</li></ul>"
+			}
+		}
+	},
+
+	"glossary": {
+		"rpc": {
+			"term": "RPC(远程过程调用)",
+			"definition": "允许应用程序与区块链节点通信的协议。用于读取数据和提交交易,无需运行自己的节点。"
+		},
+		"node": {
+			"term": "节点",
+			"definition": "运行区块链软件的计算机,存储区块链数据并验证交易。节点可以是全节点(最近状态)、存档节点(所有历史)或轻节点(最小数据)。"
+		},
+		"archive_node": {
+			"term": "存档节点",
+			"definition": "存储所有状态完整历史的区块链节点。查询历史数据所必需,但需要比全节点多 10 倍以上的存储。"
+		},
+		"light_client": {
+			"term": "轻客户端",
+			"definition": "不存储完整区块链数据的最小区块链客户端。依赖全节点获取数据,但可以验证加密证明。"
+		},
+		"ipfs": {
+			"term": "IPFS(星际文件系统)",
+			"definition": "使用内容寻址存储和共享文件的点对点网络。文件由加密哈希(CID)而非位置标识。"
+		},
+		"data_availability": {
+			"term": "数据可用性",
+			"definition": "区块链数据发布并可供所有网络参与者访问的保证。对 Layer 2 安全性和去中心化至关重要。"
+		},
+		"latency": {
+			"term": "延迟",
+			"definition": "发起请求和接收响应之间的时间延迟。低延迟(低于 100ms)对交易和交互式应用至关重要。"
+		},
+		"redundancy": {
+			"term": "冗余",
+			"definition": "拥有备份基础设施以在故障期间维持服务。最佳实践:使用多个 RPC 提供商并自动故障转移。"
+		},
+		"api_key": {
+			"term": "API 密钥",
+			"definition": "向基础设施提供商验证你的应用程序的唯一标识符。用于速率限制、计费和访问控制。"
+		},
+		"rate_limit": {
+			"term": "速率限制",
+			"definition": "一段时间内允许的最大请求数。免费额度通常限制为每秒 100-300 个请求。"
+		}
+	}
+}

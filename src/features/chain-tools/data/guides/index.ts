@@ -5,9 +5,11 @@
 import type { CategoryGuide, CategoryId } from '../../types';
 import { analyticsGuide } from './analytics';
 import { bridgeGuide } from './bridge';
+import { daoGuide } from './dao';
 import { defiGuide } from './defi';
 import { devGuide } from './dev';
 import { explorerGuide } from './explorer';
+import { infraGuide } from './infra';
 import { l2Guide } from './l2';
 import { nftGuide } from './nft';
 import { securityGuide } from './security';
@@ -17,9 +19,11 @@ import { walletGuide } from './wallet';
 export const categoryGuides: Partial<Record<CategoryId, CategoryGuide>> = {
 	analytics: analyticsGuide,
 	bridge: bridgeGuide,
+	dao: daoGuide,
 	defi: defiGuide,
 	dev: devGuide,
 	explorer: explorerGuide,
+	infra: infraGuide,
 	l2: l2Guide,
 	nft: nftGuide,
 	security: securityGuide,

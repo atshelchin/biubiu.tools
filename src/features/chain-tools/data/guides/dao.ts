@@ -33,7 +33,8 @@ export const daoGuide: CategoryGuide = {
 			subsections: [
 				{
 					id: 'what-is-dao',
-					titleKey: 'routes/apps/chain-tools/dao/guide.sections.governance_basics.what_is_dao.title',
+					titleKey:
+						'routes/apps/chain-tools/dao/guide.sections.governance_basics.what_is_dao.title',
 					contentKey:
 						'routes/apps/chain-tools/dao/guide.sections.governance_basics.what_is_dao.content'
 				},
@@ -205,8 +206,7 @@ export const daoGuide: CategoryGuide = {
 				{
 					id: 'governance-attacks',
 					titleKey: 'routes/apps/chain-tools/dao/guide.sections.risks.governance_attacks.title',
-					contentKey:
-						'routes/apps/chain-tools/dao/guide.sections.risks.governance_attacks.content'
+					contentKey: 'routes/apps/chain-tools/dao/guide.sections.risks.governance_attacks.content'
 				},
 				{
 					id: 'voter-apathy',
@@ -216,14 +216,12 @@ export const daoGuide: CategoryGuide = {
 				{
 					id: 'plutocracy-concerns',
 					titleKey: 'routes/apps/chain-tools/dao/guide.sections.risks.plutocracy_concerns.title',
-					contentKey:
-						'routes/apps/chain-tools/dao/guide.sections.risks.plutocracy_concerns.content'
+					contentKey: 'routes/apps/chain-tools/dao/guide.sections.risks.plutocracy_concerns.content'
 				},
 				{
 					id: 'legal-uncertainty',
 					titleKey: 'routes/apps/chain-tools/dao/guide.sections.risks.legal_uncertainty.title',
-					contentKey:
-						'routes/apps/chain-tools/dao/guide.sections.risks.legal_uncertainty.content'
+					contentKey: 'routes/apps/chain-tools/dao/guide.sections.risks.legal_uncertainty.content'
 				}
 			]
 		}
