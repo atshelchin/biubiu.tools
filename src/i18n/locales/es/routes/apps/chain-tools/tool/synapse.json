@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Synapse Protocol - Puente Cross-Chain",
+		"description": "Synapse Protocol permite puentes y swaps cross-chain. Mueve activos entre más de 15 cadenas con liquidez profunda y tarifas competitivas.",
+		"keywords": "Synapse Protocol, puente cross-chain, token SYN, multicadena, puente, swaps cross-chain"
+	},
+	"overview": "Synapse Protocol es un puente cross-chain y red de liquidez que soporta más de 15 blockchains. Transfiere activos entre Ethereum, L2s y alt-L1s con buena liquidez y tarifas razonables.\n\nSynapse usa una combinación de pools de liquidez y puentes canónicos para diferentes rutas. Sus pools stableswap nUSD y nETH proporcionan liquidez profunda para transferencias cross-chain. La red ha procesado miles de millones en volumen.\n\nEl token SYN se usa para gobernanza y minería de liquidez. Synapse también ofrece mensajería cross-chain para desarrolladores construyendo aplicaciones multi-cadena. Es uno de los puentes establecidos en el ecosistema.",
+	"features": {
+		"1": {
+			"title": "15+ Cadenas",
+			"description": "Amplio soporte de red"
+		},
+		"2": {
+			"title": "Liquidez Profunda",
+			"description": "Grandes pools stableswap"
+		},
+		"3": {
+			"title": "Swaps Cross-Chain",
+			"description": "Cualquier token a cualquier token"
+		},
+		"4": {
+			"title": "Token SYN",
+			"description": "Gobernanza y recompensas"
+		},
+		"5": {
+			"title": "Mensajería",
+			"description": "Comunicación cross-chain"
+		},
+		"6": {
+			"title": "Transferencias Rápidas",
+			"description": "Minutos, no horas"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Puente de Activos",
+			"description": "Mover entre cadenas"
+		},
+		"2": {
+			"title": "Swaps Cross-Chain",
+			"description": "Swap y puente juntos"
+		},
+		"3": {
+			"title": "Puente de Stablecoins",
+			"description": "Mover USDC/USDT"
+		},
+		"4": {
+			"title": "Farming LP",
+			"description": "Proveer liquidez de puente"
+		},
+		"5": {
+			"title": "Integración Desarrollador",
+			"description": "Mensajería cross-chain"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué cadenas soporta Synapse?",
+			"answer": "Synapse soporta Ethereum, Arbitrum, Optimism, Polygon, BSC, Avalanche, Fantom y muchos otros. Consulta la app para cadenas soportadas actuales—regularmente añaden nuevas redes conforme ganan tracción."
+		},
+		"2": {
+			"question": "¿Cuánto tardan las transferencias?",
+			"answer": "La mayoría de transferencias se completan en 5-15 minutos. La velocidad depende de los tiempos de confirmación de la cadena origen/destino. Los depósitos de Ethereum tardan más por requisitos de finalidad. Las transferencias L2-a-L2 son más rápidas."
+		},
+		"3": {
+			"question": "¿Cuáles son las tarifas?",
+			"answer": "Las tarifas incluyen costos de gas en ambas cadenas más una pequeña tarifa de protocolo (usualmente 0.05-0.1%). Para puentes de stablecoin, el slippage es mínimo debido a pools de liquidez profundos. Compara con otros puentes para mejores tarifas."
+		},
+		"4": {
+			"question": "¿Qué es nUSD/nETH?",
+			"answer": "nUSD y nETH son activos nativos cross-chain de Synapse. Cuando haces puente, podrías recibir nUSD que puedes intercambiar por USDC nativo. Esto permite liquidez cross-chain eficiente sin tokens envueltos."
+		},
+		"5": {
+			"question": "¿Es seguro Synapse?",
+			"answer": "Synapse ha operado desde 2021 y procesado miles de millones sin exploits mayores. Usa esquemas de firma de umbral con validadores distribuidos. Siempre usa enlaces oficiales y entiende los riesgos de los puentes."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para hacer puente cross-chain?",
+		"button": "Usar Synapse",
+		"note": "Red de liquidez cross-chain"
+	}
+}

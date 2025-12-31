@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Aztec Network - L2 de Privacidad",
+		"description": "Aztec está construyendo un L2 orientado a la privacidad usando pruebas de conocimiento cero. Contratos inteligentes privados con privacidad programable en Ethereum.",
+		"keywords": "Aztec Network, L2 privacidad, Noir, conocimiento cero, contratos inteligentes privados, zkRollup"
+	},
+	"overview": "Aztec Network está construyendo la primera plataforma de contratos inteligentes privados usando pruebas de conocimiento cero. A diferencia de blockchains transparentes, Aztec permite aplicaciones donde los detalles de las transacciones permanecen confidenciales.\n\nAztec fue pionero en PLONK—uno de los sistemas de pruebas ZK más eficientes ahora usado en toda la industria. Su lenguaje de programación Noir permite a los desarrolladores escribir contratos inteligentes privados sin ser expertos en criptografía.\n\nAztec Connect (descontinuado) permitía transacciones DeFi privadas. El próximo Aztec L2 proporcionará privacidad programable completa con estado privado, funciones privadas y composabilidad privada.",
+	"features": {
+		"1": {
+			"title": "Contratos Inteligentes Privados",
+			"description": "Lógica on-chain confidencial"
+		},
+		"2": {
+			"title": "Lenguaje Noir",
+			"description": "Escribe programas privados"
+		},
+		"3": {
+			"title": "Pruebas PLONK",
+			"description": "Sistema ZK eficiente"
+		},
+		"4": {
+			"title": "Seguridad Ethereum",
+			"description": "ZK rollup en ETH"
+		},
+		"5": {
+			"title": "Estado Privado",
+			"description": "Datos de contrato ocultos"
+		},
+		"6": {
+			"title": "Composabilidad",
+			"description": "Llamadas a contratos privados"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Transacciones Privadas",
+			"description": "Transferencias confidenciales"
+		},
+		"2": {
+			"title": "DeFi Privado",
+			"description": "Actividad de trading oculta"
+		},
+		"3": {
+			"title": "Desarrollo en Noir",
+			"description": "Construye apps privadas"
+		},
+		"4": {
+			"title": "Privacidad Empresarial",
+			"description": "Lógica de negocio confidencial"
+		},
+		"5": {
+			"title": "Identidad",
+			"description": "Credenciales privadas"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es Noir?",
+			"answer": "Noir es el lenguaje de programación de Aztec para circuitos de conocimiento cero. Escribe código similar a Rust que compila a pruebas ZK. No necesitas conocimiento de criptografía. Noir puede usarse con o sin Aztec."
+		},
+		"2": {
+			"question": "¿Cómo es Aztec diferente de otros L2?",
+			"answer": "La mayoría de L2s (Arbitrum, Optimism) son transparentes—todos ven todas las transacciones. Aztec es privado por defecto. Transacciones, saldos y estado de contratos pueden ocultarse. Es privacidad a nivel de protocolo."
+		},
+		"3": {
+			"question": "¿Qué pasó con Aztec Connect?",
+			"answer": "Aztec Connect era un puente de privacidad para DeFi—protege fondos, usa DeFi privadamente. Fue descontinuado en 2024 para enfocarse en el Aztec L2 completo. El L2 ofrecerá contratos inteligentes privados más completos."
+		},
+		"4": {
+			"question": "¿Cuándo se lanza Aztec?",
+			"answer": "Aztec L2 está en desarrollo con fases de testnet. Mainnet completa esperada en 2024-2025. El lenguaje Noir ya es usable. Sigue su Discord para el estado actual y acceso a testnet."
+		},
+		"5": {
+			"question": "¿Qué es PLONK?",
+			"answer": "PLONK es un sistema de pruebas de conocimiento cero inventado por investigadores de Aztec. Es eficiente y ampliamente adoptado más allá de Aztec—usado por zkSync, Polygon y otros. Es una contribución importante a la tecnología ZK."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para contratos inteligentes privados?",
+		"button": "Explorar Aztec",
+		"note": "L2 orientado a la privacidad"
+	}
+}

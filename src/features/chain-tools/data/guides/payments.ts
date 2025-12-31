@@ -155,10 +155,8 @@ export const paymentsGuide: CategoryGuide = {
 			subsections: [
 				{
 					id: 'onramps',
-					titleKey:
-						'routes/apps/chain-tools/payments/guide.sections.fiat_ramps.onramps.title',
-					contentKey:
-						'routes/apps/chain-tools/payments/guide.sections.fiat_ramps.onramps.content',
+					titleKey: 'routes/apps/chain-tools/payments/guide.sections.fiat_ramps.onramps.title',
+					contentKey: 'routes/apps/chain-tools/payments/guide.sections.fiat_ramps.onramps.content',
 					toolMentions: [
 						{ toolId: 'moonpay', context: 'card purchases' },
 						{ toolId: 'transak', context: 'global coverage' },
@@ -167,10 +165,8 @@ export const paymentsGuide: CategoryGuide = {
 				},
 				{
 					id: 'offramps',
-					titleKey:
-						'routes/apps/chain-tools/payments/guide.sections.fiat_ramps.offramps.title',
-					contentKey:
-						'routes/apps/chain-tools/payments/guide.sections.fiat_ramps.offramps.content',
+					titleKey: 'routes/apps/chain-tools/payments/guide.sections.fiat_ramps.offramps.title',
+					contentKey: 'routes/apps/chain-tools/payments/guide.sections.fiat_ramps.offramps.content',
 					toolMentions: [
 						{ toolId: 'spritz', context: 'bill payments' },
 						{ toolId: 'monerium', context: 'IBAN transfers' }
@@ -178,8 +174,7 @@ export const paymentsGuide: CategoryGuide = {
 				},
 				{
 					id: 'crypto-cards',
-					titleKey:
-						'routes/apps/chain-tools/payments/guide.sections.fiat_ramps.crypto_cards.title',
+					titleKey: 'routes/apps/chain-tools/payments/guide.sections.fiat_ramps.crypto_cards.title',
 					contentKey:
 						'routes/apps/chain-tools/payments/guide.sections.fiat_ramps.crypto_cards.content',
 					toolMentions: [{ toolId: 'gnosis-pay', context: 'self-custody card' }]
@@ -195,15 +190,13 @@ export const paymentsGuide: CategoryGuide = {
 			subsections: [
 				{
 					id: 'use-cases',
-					titleKey:
-						'routes/apps/chain-tools/payments/guide.sections.remittances.use_cases.title',
+					titleKey: 'routes/apps/chain-tools/payments/guide.sections.remittances.use_cases.title',
 					contentKey:
 						'routes/apps/chain-tools/payments/guide.sections.remittances.use_cases.content'
 				},
 				{
 					id: 'advantages',
-					titleKey:
-						'routes/apps/chain-tools/payments/guide.sections.remittances.advantages.title',
+					titleKey: 'routes/apps/chain-tools/payments/guide.sections.remittances.advantages.title',
 					contentKey:
 						'routes/apps/chain-tools/payments/guide.sections.remittances.advantages.content'
 				}
@@ -218,10 +211,8 @@ export const paymentsGuide: CategoryGuide = {
 			subsections: [
 				{
 					id: 'multi-sig',
-					titleKey:
-						'routes/apps/chain-tools/payments/guide.sections.treasury.multi_sig.title',
-					contentKey:
-						'routes/apps/chain-tools/payments/guide.sections.treasury.multi_sig.content',
+					titleKey: 'routes/apps/chain-tools/payments/guide.sections.treasury.multi_sig.title',
+					contentKey: 'routes/apps/chain-tools/payments/guide.sections.treasury.multi_sig.content',
 					toolMentions: [
 						{ toolId: 'safe', context: 'multi-sig wallet' },
 						{ toolId: 'coinshift', context: 'treasury operations' }
@@ -229,8 +220,7 @@ export const paymentsGuide: CategoryGuide = {
 				},
 				{
 					id: 'batch-payments',
-					titleKey:
-						'routes/apps/chain-tools/payments/guide.sections.treasury.batch_payments.title',
+					titleKey: 'routes/apps/chain-tools/payments/guide.sections.treasury.batch_payments.title',
 					contentKey:
 						'routes/apps/chain-tools/payments/guide.sections.treasury.batch_payments.content',
 					toolMentions: [{ toolId: 'parcel', context: 'batch transactions' }]
@@ -246,8 +236,7 @@ export const paymentsGuide: CategoryGuide = {
 			subsections: [
 				{
 					id: 'kyc-aml',
-					titleKey:
-						'routes/apps/chain-tools/payments/guide.sections.compliance_tax.kyc_aml.title',
+					titleKey: 'routes/apps/chain-tools/payments/guide.sections.compliance_tax.kyc_aml.title',
 					contentKey:
 						'routes/apps/chain-tools/payments/guide.sections.compliance_tax.kyc_aml.content',
 					toolMentions: [{ toolId: 'sardine', context: 'fraud prevention' }]
@@ -281,8 +270,7 @@ export const paymentsGuide: CategoryGuide = {
 		{
 			id: 'streaming-payment',
 			termKey: 'routes/apps/chain-tools/payments/guide.glossary.streaming_payment.term',
-			definitionKey:
-				'routes/apps/chain-tools/payments/guide.glossary.streaming_payment.definition',
+			definitionKey: 'routes/apps/chain-tools/payments/guide.glossary.streaming_payment.definition',
 			relatedToolIds: ['superfluid', 'sablier', 'llamapay']
 		},
 		{
@@ -311,8 +299,7 @@ export const paymentsGuide: CategoryGuide = {
 		{
 			id: 'payment-gateway',
 			termKey: 'routes/apps/chain-tools/payments/guide.glossary.payment_gateway.term',
-			definitionKey:
-				'routes/apps/chain-tools/payments/guide.glossary.payment_gateway.definition',
+			definitionKey: 'routes/apps/chain-tools/payments/guide.glossary.payment_gateway.definition',
 			relatedToolIds: ['coinbase-commerce', 'nowpayments']
 		},
 		{
@@ -330,8 +317,7 @@ export const paymentsGuide: CategoryGuide = {
 		{
 			id: 'payment-token',
 			termKey: 'routes/apps/chain-tools/payments/guide.glossary.payment_token.term',
-			definitionKey:
-				'routes/apps/chain-tools/payments/guide.glossary.payment_token.definition'
+			definitionKey: 'routes/apps/chain-tools/payments/guide.glossary.payment_token.definition'
 		}
 	],
 

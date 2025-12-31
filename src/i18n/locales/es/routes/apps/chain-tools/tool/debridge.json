@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "deBridge - Protocolo de Trading Cross-Chain",
+		"description": "deBridge permite trading y puentes cross-chain de alto rendimiento. Swaps de activos nativos con liquidez profunda y bajo deslizamiento.",
+		"keywords": "deBridge, trading cross-chain, DLN, token DBR, interoperabilidad, swaps cross-chain"
+	},
+	"overview": "deBridge es un protocolo de trading y puentes cross-chain enfocado en rendimiento y eficiencia de capital. Su DLN (Red de Liquidez Descentralizada) permite swaps cross-chain nativos sin tokens envueltos.\n\nA diferencia de puentes tradicionales que bloquean y acuñan, los market makers de deBridge proporcionan activos nativos en la cadena destino. Esto significa mejor liquidez, menor deslizamiento y sin complejidad de tokens envueltos. El protocolo soporta órdenes límite cross-chain.\n\nEl token DBR se usa para gobernanza y distribución de tarifas. deBridge ha procesado volumen significativo con tarifas competitivas, especialmente para operaciones grandes donde la profundidad de liquidez importa.",
+	"features": {
+		"1": {
+			"title": "Activos Nativos",
+			"description": "Sin tokens envueltos"
+		},
+		"2": {
+			"title": "Red DLN",
+			"description": "Liquidez descentralizada"
+		},
+		"3": {
+			"title": "Límites Cross-Chain",
+			"description": "Órdenes límite"
+		},
+		"4": {
+			"title": "Token DBR",
+			"description": "Gobernanza y tarifas"
+		},
+		"5": {
+			"title": "Liquidez Profunda",
+			"description": "Bajo deslizamiento"
+		},
+		"6": {
+			"title": "Multi-Cadena",
+			"description": "Redes principales"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Swaps Grandes",
+			"description": "Puente con liquidez profunda"
+		},
+		"2": {
+			"title": "Órdenes Límite",
+			"description": "Límites cross-chain"
+		},
+		"3": {
+			"title": "Activos Nativos",
+			"description": "Evitar tokens envueltos"
+		},
+		"4": {
+			"title": "Market Making",
+			"description": "Proveer liquidez"
+		},
+		"5": {
+			"title": "Trading",
+			"description": "Arbitraje cross-chain"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es DLN?",
+			"answer": "DLN (Red de Liquidez Descentralizada) es el sistema de swap cross-chain de deBridge. Market makers compiten para llenar órdenes, proporcionando activos nativos en destino. Sin tokens envueltos, solo ETH nativo, USDC, etc."
+		},
+		"2": {
+			"question": "¿Cómo son posibles los activos nativos?",
+			"answer": "Los market makers mantienen activos nativos en múltiples cadenas. Cuando quieres ETH en Arbitrum, te envían su ETH nativo allí y reciben tu ETH en Ethereum. Es como swaps atómicos entre cadenas."
+		},
+		"3": {
+			"question": "¿Qué hay de las órdenes límite?",
+			"answer": "deBridge soporta órdenes límite cross-chain. Establece un precio objetivo para tu swap, y los market makers lo llenan cuando las condiciones se cumplen. Ejecuta estrategias de trading entre cadenas con precisión."
+		},
+		"4": {
+			"question": "¿Qué es el token DBR?",
+			"answer": "DBR gobierna el protocolo deBridge. Los holders votan en parámetros y desarrollo. El staking de DBR puede proporcionar participación en tarifas de los ingresos del protocolo. Alinea la gobernanza con el éxito del protocolo."
+		},
+		"5": {
+			"question": "¿Qué cadenas están soportadas?",
+			"answer": "deBridge soporta Ethereum, Arbitrum, Optimism, Polygon, BSC, Avalanche, Fantom, Solana y más. El enfoque está en cadenas principales con alta actividad de trading. Consulta la app para soporte actual."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para trading cross-chain?",
+		"button": "Usar deBridge",
+		"note": "Puentes de alto rendimiento"
+	}
+}

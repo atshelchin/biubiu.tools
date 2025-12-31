@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "LI.FI - Agregador de Puentes Cross-Chain y DEX",
+		"description": "LI.FI agrega puentes y DEXs a través de más de 20 cadenas. Encuentra las mejores rutas para cualquier swap cross-chain en una interfaz.",
+		"keywords": "LI.FI, agregador de puentes, swaps cross-chain, agregador DEX, multi-cadena, interoperabilidad"
+	},
+	"overview": "LI.FI es un protocolo de agregación de puentes cross-chain y DEX. Combina múltiples puentes e intercambios para encontrar rutas óptimas para mover cualquier token a cualquier cadena.\n\nEl protocolo agrega puentes como Stargate, Hop, Across, Connext y Celer, más DEXs en cada cadena. Esto significa que puedes intercambiar Token A en Cadena X por Token B en Cadena Y en una sola transacción.\n\nLI.FI potencia el puente para muchas wallets y dApps a través de su API. También ofrecen una app para usuarios en transferto.xyz. Es infraestructura para experiencias multi-cadena fluidas.",
+	"features": {
+		"1": {
+			"title": "Agregación de Puentes",
+			"description": "Todos los puentes, una interfaz"
+		},
+		"2": {
+			"title": "Agregación DEX",
+			"description": "Mejores tasas de swap"
+		},
+		"3": {
+			"title": "20+ Cadenas",
+			"description": "Amplia cobertura"
+		},
+		"4": {
+			"title": "Cualquiera-a-Cualquiera",
+			"description": "Cualquier token, cualquier cadena"
+		},
+		"5": {
+			"title": "SDK Desarrollador",
+			"description": "Integración fácil"
+		},
+		"6": {
+			"title": "Widget",
+			"description": "Embeber en tu app"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Swaps Cross-Chain",
+			"description": "Token A → Token B cross-chain"
+		},
+		"2": {
+			"title": "Encontrar Mejor Tarifa",
+			"description": "Comparar todas las rutas"
+		},
+		"3": {
+			"title": "Integración Wallet",
+			"description": "Añadir puente a wallets"
+		},
+		"4": {
+			"title": "Puente dApp",
+			"description": "Embeber vía widget"
+		},
+		"5": {
+			"title": "Onboarding Multi-Cadena",
+			"description": "Mover usuarios a tu cadena"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es LI.FI?",
+			"answer": "LI.FI es un agregador de puentes y DEX. Encuentra la mejor ruta para transferencias cross-chain comparando múltiples puentes y combinando con swaps DEX. Una transacción para ir de cualquier token en cualquier cadena a cualquier otro."
+		},
+		"2": {
+			"question": "¿Cómo es diferente de Socket/Bungee?",
+			"answer": "LI.FI y Socket son similares—ambos agregan puentes y DEXs. Tienen diferentes integraciones de puentes y pueden encontrar diferentes rutas óptimas. Compara para tu transferencia específica. Ambos son buenas opciones."
+		},
+		"3": {
+			"question": "¿Qué puentes están soportados?",
+			"answer": "LI.FI integra Stargate, Hop, Across, Connext, Celer, Multichain y otros. Más DEXs como Uniswap, SushiSwap, ParaSwap en cada cadena. Consulta los docs para la lista completa actual."
+		},
+		"4": {
+			"question": "¿Puedo embeber LI.FI en mi app?",
+			"answer": "Sí, LI.FI ofrece widgets y SDKs. Embebe un widget de puente en tu dApp o integra la API para implementaciones personalizadas. Muchas wallets usan LI.FI para su función de puente."
+		},
+		"5": {
+			"question": "¿Hay un token?",
+			"answer": "LI.FI actualmente no tiene un token. El protocolo se financia a través de tarifas de asociación de puentes y financiación de capital de riesgo. El enfoque está en construir la mejor infraestructura de agregación."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para cross-chain fluido?",
+		"button": "Usar LI.FI",
+		"note": "Agregador de puentes y DEX"
+	}
+}

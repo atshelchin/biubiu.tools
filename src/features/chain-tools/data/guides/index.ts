@@ -10,6 +10,7 @@ import { daoGuide } from './dao';
 import { defiGuide } from './defi';
 import { devGuide } from './dev';
 import { explorerGuide } from './explorer';
+import { fundingGuide } from './funding';
 import { gamefiGuide } from './gamefi';
 import { identityGuide } from './identity';
 import { infraGuide } from './infra';
@@ -17,11 +18,14 @@ import { l2Guide } from './l2';
 import { launchpadGuide } from './launchpad';
 import { mevGuide } from './mev';
 import { nftGuide } from './nft';
+import { nonEvmGuide } from './non-evm';
 import { oracleGuide } from './oracle';
+import { paymentsGuide } from './payments';
 import { privacyGuide } from './privacy';
 import { restakingGuide } from './restaking';
 import { rwaGuide } from './rwa';
 import { securityGuide } from './security';
+import { socialGuide } from './social';
 import { stablecoinGuide } from './stablecoin';
 import { walletGuide } from './wallet';
 
@@ -34,6 +38,7 @@ export const categoryGuides: Partial<Record<CategoryId, CategoryGuide>> = {
 	defi: defiGuide,
 	dev: devGuide,
 	explorer: explorerGuide,
+	funding: fundingGuide,
 	gamefi: gamefiGuide,
 	identity: identityGuide,
 	infra: infraGuide,
@@ -41,11 +46,14 @@ export const categoryGuides: Partial<Record<CategoryId, CategoryGuide>> = {
 	launchpad: launchpadGuide,
 	mev: mevGuide,
 	nft: nftGuide,
+	'non-evm': nonEvmGuide,
 	oracle: oracleGuide,
+	payments: paymentsGuide,
 	privacy: privacyGuide,
 	restaking: restakingGuide,
 	rwa: rwaGuide,
 	security: securityGuide,
+	social: socialGuide,
 	stablecoin: stablecoinGuide,
 	wallet: walletGuide
 	// Add more guides as they are created

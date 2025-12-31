@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Multichain - Protocolo Router Cross-Chain",
+		"description": "Multichain (anteriormente Anyswap) proporcionaba puentes cross-chain a través de más de 90 blockchains. Contexto histórico importante para discusiones sobre seguridad de puentes.",
+		"keywords": "Multichain, Anyswap, puente cross-chain, token MULTI, exploit de puente, puente multichain"
+	},
+	"overview": "Multichain (anteriormente Anyswap) fue uno de los puentes cross-chain más grandes, soportando más de 90 blockchains en su pico. Procesó miles de millones en volumen y estaba integrado en muchos protocolos DeFi.\n\nEn julio de 2023, Multichain experimentó un incidente mayor donde cientos de millones fueron drenados. El CEO supuestamente fue detenido en China, y el equipo quedó en silencio. Las operaciones cesaron efectivamente, convirtiéndose en una historia de advertencia sobre seguridad de puentes y riesgos de centralización.\n\nLa historia de Multichain es importante para entender los riesgos de puentes. Destacó los peligros del control concentrado, falta de transparencia y la importancia de evaluar los supuestos de seguridad de los puentes antes de usar cualquier solución de bridging.",
+	"features": {
+		"1": {
+			"title": "90+ Cadenas",
+			"description": "Era cobertura extensiva"
+		},
+		"2": {
+			"title": "Protocolo Router",
+			"description": "Enrutamiento de liquidez"
+		},
+		"3": {
+			"title": "anyToken",
+			"description": "Sistema de activos wrapped"
+		},
+		"4": {
+			"title": "Token MULTI",
+			"description": "Gobernanza (extinto)"
+		},
+		"5": {
+			"title": "Seguridad MPC",
+			"description": "Computación multipartita"
+		},
+		"6": {
+			"title": "Caso de Advertencia",
+			"description": "Ejemplo de riesgo de puentes"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Referencia Histórica",
+			"description": "Estudio de riesgo de puentes"
+		},
+		"2": {
+			"title": "Lecciones de Seguridad",
+			"description": "Riesgos de centralización"
+		},
+		"3": {
+			"title": "Due Diligence",
+			"description": "Evaluar puentes cuidadosamente"
+		},
+		"4": {
+			"title": "No Recomendado",
+			"description": "Usar alternativas"
+		},
+		"5": {
+			"title": "Usuarios Afectados",
+			"description": "Verificar procesos de reclamación"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Multichain sigue operando?",
+			"answer": "No. Después del incidente de julio 2023, Multichain cesó operaciones. No uses ningún puente de Multichain ni mantengas anyTokens. Usa puentes alternativos como Stargate, Hop, Across o Axelar."
+		},
+		"2": {
+			"question": "¿Qué pasó con Multichain?",
+			"answer": "En julio 2023, más de $130M fueron drenados de Multichain. El CEO supuestamente fue detenido en China. El equipo quedó en silencio. Se cree que las claves fueron comprometidas o tomadas. Un recordatorio de que la seguridad de puentes depende de los operadores."
+		},
+		"3": {
+			"question": "¿Qué pasa si tengo fondos atrapados?",
+			"answer": "Si tienes anyTokens atrapados o transacciones pendientes, las opciones son limitadas. Algunas cadenas/proyectos afectados tienen procesos de recuperación. Verifica anuncios oficiales. Desafortunadamente, muchos fondos probablemente están perdidos."
+		},
+		"4": {
+			"question": "¿Qué podemos aprender de Multichain?",
+			"answer": "Lecciones clave: Evalúa modelos de seguridad de puentes. El control concentrado es peligroso. MPC no ayuda si los holders de claves están comprometidos. Diversidad entre puentes reduce el riesgo. Siempre investiga antes de usar grandes cantidades."
+		},
+		"5": {
+			"question": "¿Qué puentes debería usar en su lugar?",
+			"answer": "Alternativas incluyen Stargate, Hop, Across, Synapse, Celer, Axelar, LayerZero y Wormhole. Cada uno tiene diferentes compromisos de seguridad. Usa agregadores de puentes como Socket/LI.FI para comparar rutas."
+		}
+	},
+	"cta": {
+		"ready": "¿Buscando puentes activos?",
+		"button": "Ver Alternativas de Puentes",
+		"note": "No usar - solo referencia histórica"
+	}
+}

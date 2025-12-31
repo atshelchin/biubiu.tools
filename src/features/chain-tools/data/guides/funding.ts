@@ -239,7 +239,8 @@ export const fundingGuide: CategoryGuide = {
 		{
 			id: 'retroactive-funding',
 			termKey: 'routes/apps/chain-tools/funding/guide.glossary.retroactive_funding.term',
-			definitionKey: 'routes/apps/chain-tools/funding/guide.glossary.retroactive_funding.definition',
+			definitionKey:
+				'routes/apps/chain-tools/funding/guide.glossary.retroactive_funding.definition',
 			relatedToolIds: ['optimism-rpgf']
 		},
 		{

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Moralis - Plataforma de Desarrollo Web3",
+		"description": "Moralis proporciona APIs y herramientas para desarrollo Web3. Construye dApps más rápido con APIs de wallet, NFT, tokens y datos blockchain.",
+		"keywords": "Moralis, Web3 API, NFT API, token API, desarrollo blockchain, desarrollo dApp"
+	},
+	"overview": "Moralis es una plataforma completa de desarrollo Web3 que ofrece APIs que simplifican la construcción de dApps. En lugar de parsear datos blockchain crudos, usa las APIs de Moralis para obtener información estructurada y lista para usar.\n\nLa plataforma proporciona APIs para datos de wallet (portafolios, transacciones), NFTs (metadatos, propiedad, transferencias), tokens (precios, holders) y datos blockchain generales. Todo está indexado y servido a través de APIs REST simples.\n\nMoralis soporta cadenas principales incluyendo Ethereum, Polygon, BSC y Solana. Las APIs manejan la complejidad de los datos blockchain, permitiendo a los desarrolladores enfocarse en construir aplicaciones.",
+	"features": {
+		"1": {
+			"title": "Wallet API",
+			"description": "Datos de portafolio y transacciones"
+		},
+		"2": {
+			"title": "NFT API",
+			"description": "Metadatos, propiedad, transferencias"
+		},
+		"3": {
+			"title": "Token API",
+			"description": "Precios, holders, balances"
+		},
+		"4": {
+			"title": "Streams",
+			"description": "Webhooks en tiempo real"
+		},
+		"5": {
+			"title": "Multi-Cadena",
+			"description": "Soporte EVM y Solana"
+		},
+		"6": {
+			"title": "Integración Fácil",
+			"description": "APIs REST, SDKs"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Apps de Portafolio",
+			"description": "Mostrar holdings del usuario"
+		},
+		"2": {
+			"title": "Plataformas NFT",
+			"description": "Mostrar colecciones NFT"
+		},
+		"3": {
+			"title": "Dashboards de Tokens",
+			"description": "Datos de precios y holders"
+		},
+		"4": {
+			"title": "Historial de Transacciones",
+			"description": "Feeds de actividad del usuario"
+		},
+		"5": {
+			"title": "Alertas en Tiempo Real",
+			"description": "Notificaciones por webhook"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué proporciona Moralis?",
+			"answer": "Moralis indexa datos blockchain y los sirve a través de APIs. Obtén portafolios de wallet, metadatos NFT, precios de tokens, historiales de transacciones—todo mediante llamadas API simples en lugar de ejecutar tu propio indexador."
+		},
+		"2": {
+			"question": "¿Moralis vs The Graph?",
+			"answer": "The Graph es un protocolo de indexación descentralizado—consultas subgraphs. Moralis es un servicio API centralizado—más simple pero menos descentralizado. Moralis es más fácil para empezar, Graph es más personalizable y trustless."
+		},
+		"3": {
+			"question": "¿Qué cadenas están soportadas?",
+			"answer": "Moralis soporta Ethereum, Polygon, BSC, Arbitrum, Optimism, Avalanche, Fantom, Solana y más. La cobertura se enfoca en cadenas EVM principales más Solana. Consulta la documentación para la lista completa actual."
+		},
+		"4": {
+			"question": "¿Moralis es gratuito?",
+			"answer": "Moralis tiene un tier gratuito bueno para desarrollo. Los planes de pago se basan en llamadas API. Las apps en producción típicamente necesitan planes de pago. Tier gratuito generoso comparado con algunas alternativas."
+		},
+		"5": {
+			"question": "¿Cómo se actualizan los datos?",
+			"answer": "Moralis indexa continuamente datos blockchain. La mayoría de los datos son en tiempo real o casi tiempo real. Streams proporcionan webhooks instantáneos para nuevos eventos. Los datos históricos están pre-indexados para consultas rápidas."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para construir con Moralis?",
+		"button": "Explorar Moralis",
+		"note": "APIs Web3 simplificadas"
+	}
+}

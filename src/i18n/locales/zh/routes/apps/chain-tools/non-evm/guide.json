@@ -1,0 +1,150 @@
+{
+	"title": "非 EVM 区块链完整指南",
+	"subtitle": "探索以太坊之外的替代区块链架构",
+
+	"sections": {
+		"intro": {
+			"title": "超越 EVM：替代区块链宇宙",
+			"content": "<p>虽然以太坊及其 EVM 兼容链主导着智能合约领域,但一个多样化的非 EVM 区块链生态系统已经出现,每个都提供独特的架构创新和权衡。</p><p>非 EVM 区块链不仅仅是不同——它们往往从根本上重新思考区块链应该如何运作。<strong>Solana</strong> 开创了并行交易执行,实现了 50,000+ TPS。<strong>Cosmos</strong> 通过 IBC 创建了区块链互联网,使主权应用链能够无缝通信。<strong>Sui 和 Aptos</strong> 通过 Move 语言引入了以对象为中心的编程模型,提供了比 Solidity 更好的安全保证。</p><p>本指南探讨主要的非 EVM 生态系统、它们的独特功能、开发范式,以及何时选择它们而非 EVM 链。</p>"
+		},
+
+		"solana": {
+			"title": "Solana：高性能执行",
+			"content": "<p>Solana 代表了从头构建高性能区块链的最雄心勃勃的尝试之一。Solana 的架构不接受限制大多数链的顺序交易模型,而是实现并行执行,并持续实现每秒数千笔交易。</p>",
+			"architecture": {
+				"title": "Solana 的架构创新",
+				"content": "<p><strong>历史证明 (PoH):</strong> Solana 的突破性创新是 PoH——一个加密时钟,证明事件之间已经过了时间。这消除了节点就时间进行通信的需要,大大减少了共识开销。</p><p><strong>并行执行:</strong> Solana 要求交易提前指定它们将读取/写入哪些账户。这使 Sealevel 运行时能够跨多个核心并行执行非冲突交易。</p><p><strong>Gulf Stream:</strong> 交易在当前区块完成之前转发给即将到来的验证者,将确认时间缩短至 400 毫秒。</p><p><strong>Turbine:</strong> 区块传播协议,将数据分解成更小的数据包,类似于 BitTorrent,实现向数千个验证者高效分发。</p><p><strong>权衡:</strong> Solana 的性能以更高的硬件要求(验证者需要强大的机器)和极端负载期间的偶尔网络拥堵为代价。</p>"
+			},
+			"development": {
+				"title": "在 Solana 上构建",
+				"content": "<p>Solana 程序(智能合约)用 <strong>Rust</strong> 或 <strong>C/C++</strong> 编写,并编译为 BPF 字节码。开发模型与 EVM 有很大不同:</p><p><strong>账户模型:</strong> Solana 中的一切都是账户——程序(不可变代码)、数据账户(可变状态)和系统账户。程序是无状态的;它们操作传递给它们的数据账户。</p><p><strong>租金模型:</strong> 账户必须保持与其数据大小成比例的最低余额(租金),或通过预付 2 年以上租金成为\"免租\"。</p><p><strong>程序派生地址 (PDA):</strong> 从程序 ID 和种子派生的确定性地址,使程序能够\"拥有\"账户而无需私钥。</p><p><strong>开发工具:</strong></p><ul><li><strong>Anchor:</strong> Solana 的 Hardhat 等价物——构建程序的框架</li><li><strong>Solana CLI:</strong> 用于部署和交互的命令行工具</li><li><strong>Phantom/Solflare:</strong> 用于测试 dApp 的钱包浏览器</li></ul>"
+			},
+			"ecosystem": {
+				"title": "Solana 生态系统亮点",
+				"content": "<p><strong>DeFi:</strong></p><ul><li><strong>Jupiter:</strong> 领先的 DEX 聚合器,路由跨所有 Solana AMM 的交易</li><li><strong>Raydium:</strong> Solana 上第一个 AMM,与 OpenBook 订单簿集成</li><li><strong>Drift Protocol:</strong> 具有 100 倍杠杆的高级永续平台</li><li><strong>Marinade Finance:</strong> 流动性质押协议(质押 SOL,接收 mSOL)</li></ul><p><strong>NFT:</strong></p><ul><li><strong>Magic Eden:</strong> 最大的 Solana NFT 市场(现在是多链)</li><li><strong>Tensor:</strong> 具有高级功能的专业 NFT 交易平台</li></ul><p><strong>基础设施:</strong></p><ul><li><strong>Helius:</strong> 高级 RPC 节点和开发者 API</li><li><strong>GenesysGo:</strong> 高性能 RPC 和数据基础设施</li></ul><p><strong>开发者选择 Solana 的原因:</strong> 低费用($0.00025/交易)、快速最终性(400 毫秒)、单一交易内的可组合性、不断增长的生态系统。</p>"
+			}
+		},
+
+		"cosmos": {
+			"title": "Cosmos：区块链互联网",
+			"content": "<p>Cosmos 采取了与单体区块链根本不同的方法。Cosmos 不是构建单一的通用链,而是提供工具来构建可以通过 IBC(区块链间通信)进行无信任通信的<strong>特定应用区块链</strong>。</p>",
+			"ibc": {
+				"title": "IBC：无信任的链间通信",
+				"content": "<p>IBC 是区块链的 TCP/IP——链之间发送消息和代币的标准化协议,无需桥接或包装资产。</p><p><strong>IBC 工作原理:</strong></p><ol><li>源链锁定代币并发出承诺证明</li><li>中继器(任何人都可以运行)观察证明并将其提交到目标链</li><li>目标链使用源链的轻客户端验证证明</li><li>如果有效,代币在目标链上铸造/解锁</li></ol><p><strong>IBC vs 桥接:</strong> 传统桥接使用受信任的验证者或多重签名。IBC 使用轻客户端——数学验证而不是社会信任。当您通过 IBC 将 ATOM 从 Cosmos Hub 转移到 Osmosis 时,您获得的是<strong>原生 ATOM</strong>,而不是包装代币。</p><p><strong>IBC 功能:</strong></p><ul><li><strong>代币转移:</strong> 在启用 IBC 的链之间移动任何代币</li><li><strong>链间账户:</strong> 控制其他链上的账户</li><li><strong>链间查询:</strong> 从其他链读取状态</li><li><strong>链间安全:</strong> 跨链共享验证者集</li></ul>"
+			},
+			"appchains": {
+				"title": "特定应用区块链",
+				"content": "<p>在 Cosmos 中,每个主要应用程序运行自己的区块链,具有自定义规则,而不是在共享链上竞争资源。</p><p><strong>应用链的好处:</strong></p><ul><li><strong>主权:</strong> 控制自己的治理、代币经济学、升级</li><li><strong>性能:</strong> 所有区块空间都是你的——没有竞争</li><li><strong>定制化:</strong> 根据需要修改共识、状态机、执行</li><li><strong>可持续性:</strong> 捕获 MEV 和费用,而不是向 L1 支付租金</li></ul><p><strong>著名的应用链:</strong></p><ul><li><strong>Osmosis:</strong> DEX 链,协议中具有自定义 AMM 逻辑</li><li><strong>dYdX V4:</strong> 订单簿衍生品交易所,具有自定义匹配引擎</li><li><strong>Injective:</strong> 交易优化链,具有链上订单簿</li><li><strong>Celestia:</strong> Rollup 的模块化数据可用性</li></ul><p><strong>Cosmos SDK:</strong> 使用 Cosmos SDK 构建区块链非常简单——一个模块化框架,提供开箱即用的共识(CometBFT)、质押、治理和 IBC。开发者添加应用逻辑的自定义模块。</p>"
+			},
+			"staking": {
+				"title": "Cosmos 质押模型",
+				"content": "<p>大多数 Cosmos 链使用具有相似特征的<strong>委托权益证明</strong>:</p><p><strong>验证者选择:</strong> 通常 100-175 个验证者(取决于链),按质押权重选择。代币持有者委托给保护网络的验证者。</p><p><strong>质押奖励:</strong> 7-20% 年化收益率,取决于链通胀和质押比率。奖励来自通胀 + 交易费用。</p><p><strong>解绑期:</strong> 当您取消质押时,代币锁定 14-21 天(因链而异)。这可以防止\"无利害关系\"攻击。</p><p><strong>削减:</strong> 验证者可能因以下原因被削减(损失质押):</p><ul><li><strong>双重签名:</strong> 签署冲突区块(5-10% 削减)</li><li><strong>停机时间:</strong> 离线时间过长(0.01-1% 削减)</li></ul><p><strong>流动性质押:</strong> <strong>Stride</strong> 等协议让您在保持流动性的同时进行质押。质押 ATOM → 接收 stATOM → 在 DeFi 中使用 stATOM 同时赚取质押奖励。</p>"
+			}
+		},
+
+		"move_chains": {
+			"title": "基于 Move 的链：Sui 和 Aptos",
+			"content": "<p>Sui 和 Aptos 源自 Meta 放弃的 Diem(Libra)项目,都使用 <strong>Move 编程语言</strong>——从头设计用于安全资产管理和并行执行。</p>",
+			"sui": {
+				"title": "Sui：以对象为中心的区块链",
+				"content": "<p>Sui 的架构以<strong>对象</strong>而不是账户为中心。每个资产和状态片段都是具有唯一 ID、所有权和类型的对象。</p><p><strong>对象所有权模型:</strong></p><ul><li><strong>拥有对象:</strong> 由单个地址控制(最常见)</li><li><strong>共享对象:</strong> 可以被多方修改(需要共识)</li><li><strong>不可变对象:</strong> 只读,不需要共识</li></ul><p><strong>并行执行:</strong> 触及独立拥有对象的交易无需共识即可并行执行。只有触及共享对象的交易需要排序。</p><p><strong>示例:</strong> 10,000 个用户将拥有的 NFT 转移到不同地址 = 全部并行执行。10,000 个用户在共享订单簿上交易 = 需要顺序处理。</p><p><strong>Sui 上的 Move:</strong> Sui 的 Move 方言强调对象。每个函数都将对象作为参数,修改它们,并返回更新的版本。编译器证明内存安全并防止常见错误(双花、重入)。</p><p><strong>生态系统:</strong></p><ul><li><strong>Turbos Finance:</strong> 集中流动性 DEX(Uniswap V3 风格)</li><li><strong>Cetus Protocol:</strong> 主要 AMM,具有流动性池</li><li><strong>Sui Wallet:</strong> 官方浏览器钱包</li></ul>"
+			},
+			"aptos": {
+				"title": "Aptos：并行执行强者",
+				"content": "<p>Aptos 与 Sui 共享 Move 语言,但采取不同的架构方法,通过 <strong>Block-STM</strong> 专注于最大化并行交易执行。</p><p><strong>Block-STM:</strong> 乐观并行执行引擎。交易被推测性地并行执行,然后验证。如果检测到冲突(交易 B 读取了交易 A 修改的数据),冲突交易以正确的顺序重新执行。</p><p><strong>结果:</strong> Aptos 在受控测试中实现了 160,000+ TPS,通过智能并行化执行,无需开发者预先指定依赖关系。</p><p><strong>账户模型:</strong> 与 Sui 的对象不同,Aptos 使用类似于以太坊的以账户为中心的模型,但具有 Move 的安全保证。</p><p><strong>Aptos 上的 Move:</strong></p><ul><li><strong>资源:</strong> 不能复制或删除的资产,只能移动</li><li><strong>模块:</strong> 存储在账户中的智能合约代码</li><li><strong>无重入:</strong> 语言设计防止重入攻击</li><li><strong>形式验证:</strong> Move 证明器可以数学验证合约属性</li></ul><p><strong>生态系统:</strong></p><ul><li><strong>LiquidSwap:</strong> Aptos 上领先的 AMM</li><li><strong>Petra Wallet:</strong> 官方 Aptos 钱包</li><li><strong>Panora:</strong> 跨链 DEX 聚合器</li></ul>"
+			}
+		},
+
+		"bitcoin_ecosystem": {
+			"title": "比特币生态系统：超越数字黄金",
+			"content": "<p>比特币的角色正在超越价值存储而演变。虽然比特币的基础层保持保守(按设计),但新的协议和层正在解锁可编程性和可扩展性。</p>",
+			"ordinals": {
+				"title": "Ordinals 和比特币 NFT",
+				"content": "<p><strong>Ordinals 理论:</strong> 单个聪(最小比特币单位)的编号方案。每个聪都可以跨交易跟踪,通过直接在比特币区块链上铭刻数据来创建\"数字工艺品\"。</p><p><strong>铭文:</strong> 类似于 NFT,铭文将数据(图像、文本、代码)存储在比特币交易见证数据中。与以太坊上的 NFT(存储 URL)不同,铭文包含比特币区块链上的<strong>实际数据</strong>。</p><p><strong>BRC-20:</strong> 使用 Ordinals 铭文的实验性代币标准。不是智能合约——只是索引器解释为代币余额的 JSON 数据。</p><p><strong>争议:</strong> Ordinals 在比特币社区引发了辩论。批评者认为它们会使区块链膨胀。支持者指出它们增加了矿工收入并展示了比特币的可编程性。</p>"
+			},
+			"lightning": {
+				"title": "闪电网络：比特币的支付层",
+				"content": "<p>闪电网络是比特币的 Layer 2,用于快速、廉价的支付。闪电不是在链上记录每笔交易,而是使用<strong>支付通道</strong>。</p><p><strong>支付通道工作原理:</strong></p><ol><li>双方通过在多重签名中锁定比特币来打开通道</li><li>他们可以在链外进行无限次交易,更新余额</li><li>任何一方都可以关闭通道,在链上发布最终状态</li></ol><p><strong>路由:</strong> 没有与某人的直接通道?闪电通过中间节点路由支付。如果存在 A→B→C 通道,A 可以通过 B 向 C 付款。</p><p><strong>用例:</strong></p><ul><li><strong>微支付:</strong> 流式传输聪以获取内容、小费、按 API 调用付费</li><li><strong>即时结算:</strong> 支付在毫秒内确认,而不是链上的 10 分钟以上</li><li><strong>隐私:</strong> 中间节点不知道支付来源/目的地</li></ul><p><strong>采用:</strong> 闪电通道中有 5,000+ 比特币,被 Strike、Cash App 和萨尔瓦多的 Chivo 钱包使用。</p>"
+			},
+			"bitcoin_l2s": {
+				"title": "比特币 L2：比特币上的智能合约",
+				"content": "<p><strong>Stacks:</strong> Layer 2,将智能合约带到比特币,同时在比特币的 L1 上结算以获得安全性。</p><ul><li><strong>Clarity 语言:</strong> 可确定的智能合约语言(您可以在运行前预测执行)</li><li><strong>转移证明:</strong> 矿工提交比特币以挖掘 Stacks 区块</li><li><strong>比特币最终性:</strong> Stacks 交易在比特币上结算</li></ul><p><strong>Rootstock (RSK):</strong> 通过联合挖矿由比特币矿工保护的 EVM 兼容侧链。</p><ul><li><strong>编写 Solidity,部署在比特币保护的链上</strong></li><li><strong>双向锚定:</strong> 锁定 BTC,1:1 接收 RBTC</li><li><strong>联合挖矿:</strong> 比特币矿工可以以最小的额外成本同时挖掘 RSK</li></ul><p><strong>未来发展:</strong> BitVM(比特币虚拟机)、Ark 协议(改进的支付池)和 Taproot Assets(代币发行)正在扩展比特币的功能。</p>"
+			}
+		},
+
+		"ton": {
+			"title": "TON：Telegram 区块链",
+			"content": "<p>TON(The Open Network)最初由 Telegram 开发,然后交给社区。它专为通过 Telegram 的 8 亿+用户群实现<strong>大规模采用</strong>而设计。</p><p><strong>架构:</strong></p><ul><li><strong>无限分片:</strong> TON 可以分割成 2^60 个分片链,每个都并行处理交易</li><li><strong>即时最终性:</strong> 5 秒区块时间,即时确认</li><li><strong>工作链:</strong> 异构区块链架构——不同的工作链可以有不同的规则</li></ul><p><strong>Telegram 集成:</strong></p><ul><li><strong>Telegram 中的 TON 钱包:</strong> 内置于 Telegram 的非托管钱包</li><li><strong>用户名 NFT:</strong> 将您的 @username 拥有为 NFT</li><li><strong>Telegram 机器人:</strong> 接受 TON 支付,分发代币,启动迷你应用</li></ul><p><strong>开发:</strong></p><ul><li><strong>FunC 语言:</strong> TON 智能合约的低级语言</li><li><strong>Tact 语言:</strong> FunC 的更高级、类型安全的替代品</li></ul><p><strong>生态系统:</strong></p><ul><li><strong>STON.fi &amp; DeDust:</strong> 领先的 DEX</li><li><strong>Tonkeeper:</strong> 流行的非托管钱包</li><li><strong>TON DNS:</strong> 去中心化域名(.ton)</li></ul><p><strong>用例:</strong> 如果您正在构建针对 Telegram 用户的消费者应用,TON 提供无与伦比的分发。</p>"
+		},
+
+		"near_protocol": {
+			"title": "NEAR Protocol：分片 Layer 1",
+			"content": "<p>NEAR Protocol 实现了 <strong>Nightshade 分片</strong>——将网络分割成多个并行处理交易的分片。</p><p><strong>Nightshade 分片:</strong></p><ul><li>验证者被分配验证特定分片</li><li>分片产生组合成区块的\"块\"</li><li>跨分片消息使分片通信成为可能</li><li>动态重新分片根据使用情况调整容量</li></ul><p><strong>开发者体验:</strong></p><ul><li><strong>Rust &amp; AssemblyScript:</strong> 用熟悉的语言编写合约</li><li><strong>人类可读账户:</strong> alice.near 而不是 0x123...</li><li><strong>渐进式安全:</strong> 应用的有限访问密钥(不能耗尽您的钱包)</li></ul><p><strong>NEAR 功能:</strong></p><ul><li><strong>Rainbow Bridge:</strong> 无信任的以太坊-NEAR 桥接</li><li><strong>Aurora:</strong> NEAR 上的 EVM 兼容层</li><li><strong>BOS(区块链操作系统):</strong> 可组合的前端组件</li></ul><p><strong>生态系统:</strong></p><ul><li><strong>Ref Finance:</strong> 多池 AMM DEX</li><li><strong>Burrow:</strong> 借贷协议</li><li><strong>Paras:</strong> NFT 市场</li></ul>"
+		},
+
+		"polkadot_substrate": {
+			"title": "Polkadot：通过平行链的共享安全",
+			"content": "<p>Polkadot 的架构包含一个<strong>中继链</strong>,为多个可以具有完全不同功能的<strong>平行链</strong>提供安全性。</p><p><strong>工作原理:</strong></p><ul><li><strong>中继链:</strong> 验证平行链状态转换的中心链</li><li><strong>平行链:</strong> 具有自己逻辑的独立链,由中继链保护</li><li><strong>收集者:</strong> 产生平行链区块</li><li><strong>验证者:</strong> 验证所有平行链区块并提供安全性</li></ul><p><strong>平行链插槽:</strong> 通过蜡烛拍卖拍卖的有限数量的插槽。项目锁定 DOT 96 周以赢得插槽。这创造了强大的经济一致性。</p><p><strong>Substrate 框架:</strong> 用 <strong>几周而不是几年</strong>构建区块链。Substrate 提供模块化组件(共识、网络、数据库),您可以像乐高积木一样组装。</p><p><strong>跨链消息 (XCM):</strong> 平行链通过标准化消息格式进行通信——类似于 IBC 但更可编程。</p><p><strong>著名的平行链:</strong></p><ul><li><strong>Acala:</strong> DeFi 中心,具有 DEX 和稳定币</li><li><strong>Moonbeam:</strong> EVM 兼容的智能合约平台</li><li><strong>Astar:</strong> 支持 EVM + WASM 的多 VM</li></ul><p><strong>Kusama:</strong> Polkadot 的\"金丝雀网络\"——实验性功能首先在这里启动,具有真正的经济价值。</p>"
+		},
+
+		"choosing_chain": {
+			"title": "选择正确的非 EVM 链",
+			"content": "<p>面对如此多的替代方案,您如何选择?根据您的用例考虑这些因素。</p>",
+			"performance": {
+				"title": "性能要求",
+				"content": "<p><strong>需要极高吞吐量?</strong> <br>→ <strong>Solana</strong> 或 <strong>Sui</strong> (50,000+ TPS,并行执行)</p><p><strong>需要即时最终性?</strong> <br>→ <strong>TON</strong> (5 秒)或 <strong>Solana</strong> (400 毫秒)</p><p><strong>构建高频交易应用?</strong> <br>→ <strong>Injective</strong> (Cosmos)或 <strong>Drift</strong> (Solana)</p><p><strong>需要一致、可预测的性能?</strong> <br>→ <strong>Cosmos 应用链</strong>(无区块空间竞争)</p><p><strong>扩展策略:</strong></p><ul><li><strong>垂直扩展:</strong> Solana、Sui、Aptos(更快的单链)</li><li><strong>水平扩展:</strong> NEAR、TON(分片)、Polkadot(平行链)</li><li><strong>特定应用:</strong> Cosmos(每个应用的专用链)</li></ul>"
+			},
+			"developer_experience": {
+				"title": "开发者体验",
+				"content": "<p><strong>来自 Web2,有 Rust 经验?</strong> <br>→ <strong>Solana</strong> 或 <strong>NEAR</strong> (原生 Rust 开发)</p><p><strong>想要最大的安全保证?</strong> <br>→ <strong>Move 链</strong> (Sui/Aptos)(形式验证,无重入)</p><p><strong>需要构建自定义区块链?</strong> <br>→ <strong>Cosmos SDK</strong> 或 <strong>Substrate</strong> (模块化框架)</p><p><strong>针对 Telegram 用户?</strong> <br>→ <strong>TON</strong> (内置分发给 8 亿用户)</p><p><strong>想要熟悉的 EVM 工具?</strong> <br>→ <strong>Aurora</strong> (NEAR)、<strong>Moonbeam</strong> (Polkadot)、<strong>RSK</strong> (比特币)</p><p><strong>学习曲线:</strong></p><ul><li><strong>最简单:</strong> Cosmos SDK (Go)、NEAR (Rust/AS)、TON 机器人 (JavaScript)</li><li><strong>中等:</strong> Solana (Rust + 新范式)、Substrate (Rust + 区块链架构)</li><li><strong>最难:</strong> Move (新语言 + 新范式)、Polkadot 平行链(复杂架构)</li></ul>"
+			},
+			"ecosystem_maturity": {
+				"title": "生态系统成熟度",
+				"content": "<p><strong>最成熟的生态系统:</strong></p><ul><li><strong>Solana:</strong> 广泛的 DeFi,成熟的 NFT 市场,强大的基础设施</li><li><strong>Cosmos:</strong> 50+ IBC 连接的链,经过验证的应用链模型</li><li><strong>Polkadot:</strong> 40+ 平行链,成熟的工具</li></ul><p><strong>快速增长:</strong></p><ul><li><strong>Sui &amp; Aptos:</strong> 强大的风投支持,不断增长的开发者活动</li><li><strong>TON:</strong> 通过 Telegram 集成实现爆炸性增长</li></ul><p><strong>利基/专业化:</strong></p><ul><li><strong>比特币 L2:</strong> 早期阶段但独特的安全模型</li><li><strong>NEAR:</strong> 坚实的技术,较小的生态系统</li></ul><p><strong>危险信号:</strong></p><ul><li>没有活跃的开发者或提交</li><li>中心化的验证者集</li><li>不切实际的性能声明(基准测试与实际)</li><li>缺乏开发者文档</li></ul><p><strong>多链未来:</strong> 不要认为\"EVM vs 非 EVM\"或\"Solana vs Cosmos\"。未来是多链的。在您的用户所在的地方构建,并使用桥接(LayerZero、Wormhole、Axelar)连接生态系统。</p>"
+			}
+		}
+	},
+
+	"glossary": {
+		"non_evm": {
+			"term": "非 EVM",
+			"definition": "不使用以太坊虚拟机的区块链。它们具有不同的架构、编程模型,并且通常具有与以太坊及其 L2 不同的性能特征。"
+		},
+		"parallel_execution": {
+			"term": "并行执行",
+			"definition": "同时处理多个交易而不是顺序处理。像 Solana、Sui 和 Aptos 这样的链可以跨 CPU 核心并行执行数千个非冲突交易。"
+		},
+		"ibc": {
+			"term": "IBC(区块链间通信)",
+			"definition": "Cosmos 生态系统中区块链之间无信任通信的协议。使用轻客户端进行验证,而不是受信任的桥接。"
+		},
+		"app_chain": {
+			"term": "应用链",
+			"definition": "针对单一用例(DEX、衍生品、游戏)优化的特定应用区块链。在 Cosmos 中很常见,每个主要应用都运行自己的主权链。"
+		},
+		"validator": {
+			"term": "验证者",
+			"definition": "通过提议和验证区块参与共识的节点。在权益证明系统中,验证者根据其质押金额被选择。"
+		},
+		"ordinals": {
+			"term": "Ordinals",
+			"definition": "为单个聪(最小比特币单位)编号的协议,使得可以直接在比特币区块链上创建类似 NFT 的\"铭文\"。"
+		},
+		"inscription": {
+			"term": "铭文",
+			"definition": "使用 Ordinals 协议永久存储在比特币区块链上的数据(图像、文本、代码)。与 NFT 不同,铭文包含链上的实际数据。"
+		},
+		"sharding": {
+			"term": "分片",
+			"definition": "将区块链分割成多个并行处理交易的并行链(分片)。NEAR(Nightshade)和 TON(无限分片)用于水平扩展。"
+		},
+		"parachain": {
+			"term": "平行链",
+			"definition": "Polkadot 生态系统中与中继链共享安全性的独立区块链。平行链可以具有完全不同的功能,同时受益于共享验证者。"
+		},
+		"account_abstraction": {
+			"term": "账户抽象",
+			"definition": "灵活的账户模型,允许可编程账户、社交恢复、以任何代币支付 gas 和其他 UX 改进。Aptos 和 Sui 原生支持。"
+		}
+	}
+}

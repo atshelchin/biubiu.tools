@@ -138,8 +138,7 @@ export const socialGuide: CategoryGuide = {
 				},
 				{
 					id: 'push-protocol',
-					titleKey:
-						'routes/apps/chain-tools/social/guide.sections.messaging.push_protocol.title',
+					titleKey: 'routes/apps/chain-tools/social/guide.sections.messaging.push_protocol.title',
 					contentKey:
 						'routes/apps/chain-tools/social/guide.sections.messaging.push_protocol.content',
 					toolMentions: [{ toolId: 'push-protocol', context: 'web3 notifications' }]
@@ -155,10 +154,8 @@ export const socialGuide: CategoryGuide = {
 			subsections: [
 				{
 					id: 'monetization',
-					titleKey:
-						'routes/apps/chain-tools/social/guide.sections.social_fi.monetization.title',
-					contentKey:
-						'routes/apps/chain-tools/social/guide.sections.social_fi.monetization.content'
+					titleKey: 'routes/apps/chain-tools/social/guide.sections.social_fi.monetization.title',
+					contentKey: 'routes/apps/chain-tools/social/guide.sections.social_fi.monetization.content'
 				},
 				{
 					id: 'tips-subscriptions',
@@ -265,8 +262,7 @@ export const socialGuide: CategoryGuide = {
 		{
 			id: 'wallet-messaging',
 			termKey: 'routes/apps/chain-tools/social/guide.glossary.wallet_messaging.term',
-			definitionKey:
-				'routes/apps/chain-tools/social/guide.glossary.wallet_messaging.definition',
+			definitionKey: 'routes/apps/chain-tools/social/guide.glossary.wallet_messaging.definition',
 			relatedToolIds: ['xmtp', 'push-protocol']
 		},
 		{

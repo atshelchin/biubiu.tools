@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Axelar - Comunicación Universal Cross-Chain",
+		"description": "Axelar proporciona comunicación segura cross-chain a través de más de 50 blockchains. Infraestructura de paso de mensajes general y puente de activos.",
+		"keywords": "Axelar, mensajería cross-chain, GMP, token AXL, interoperabilidad, Cosmos"
+	},
+	"overview": "Axelar es una red de interoperabilidad descentralizada que conecta más de 50 blockchains. Permite el paso de mensajes general (GMP) permitiendo que contratos inteligentes se comuniquen entre cualquier cadena soportada.\n\nA diferencia de los puentes de propósito único, Axelar es infraestructura de propósito general. Los desarrolladores pueden construir aplicaciones cross-chain donde la lógica y los activos fluyen entre Cosmos, cadenas EVM y otras. Squid usa Axelar para swaps cross-chain.\n\nLa red está asegurada por un conjunto de validadores proof-of-stake que hacen staking de tokens AXL. Se originó del ecosistema Cosmos pero soporta extensivamente cadenas EVM. Protocolos importantes como Frax y dYdX usan Axelar para funcionalidad cross-chain.",
+	"features": {
+		"1": {
+			"title": "50+ Cadenas",
+			"description": "Amplia interoperabilidad"
+		},
+		"2": {
+			"title": "Mensajería General",
+			"description": "Llamadas cross-chain"
+		},
+		"3": {
+			"title": "Puente de Activos",
+			"description": "Transferencias de tokens"
+		},
+		"4": {
+			"title": "Token AXL",
+			"description": "Staking y gobernanza"
+		},
+		"5": {
+			"title": "Cosmos + EVM",
+			"description": "Multi-ecosistema"
+		},
+		"6": {
+			"title": "Integración Squid",
+			"description": "Swaps cross-chain"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "dApps Cross-Chain",
+			"description": "Lógica multi-cadena"
+		},
+		"2": {
+			"title": "Puente de Activos",
+			"description": "Mover tokens"
+		},
+		"3": {
+			"title": "Puente Cosmos",
+			"description": "Conectar con IBC"
+		},
+		"4": {
+			"title": "Staking AXL",
+			"description": "Asegurar la red"
+		},
+		"5": {
+			"title": "Integración de Protocolo",
+			"description": "Añadir cross-chain"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es el Paso de Mensajes General?",
+			"answer": "GMP permite que contratos inteligentes en diferentes cadenas se comuniquen. Llama una función en Polygon desde Ethereum. Actualiza estado en Avalanche basado en eventos en Cosmos. Es la base para aplicaciones verdaderamente cross-chain."
+		},
+		"2": {
+			"question": "¿Cómo está asegurado Axelar?",
+			"answer": "Axelar usa proof-of-stake con validadores haciendo staking de tokens AXL. La votación cuadrática limita la influencia de grandes validadores. La red tiene miles de millones en valor asegurado y no ha tenido incidentes de seguridad importantes."
+		},
+		"3": {
+			"question": "¿Qué cadenas soporta Axelar?",
+			"answer": "Axelar soporta más de 50 cadenas incluyendo Ethereum, todos los L2 principales, cadenas Cosmos (vía IBC), Polygon, Avalanche, Fantom, Moonbeam y más. La cobertura es extensa en ecosistemas EVM y Cosmos."
+		},
+		"4": {
+			"question": "¿Qué es Squid?",
+			"answer": "Squid (squidrouter.com) es un protocolo de swap cross-chain construido sobre Axelar. Intercambia cualquier token por cualquier token entre cadenas en una sola transacción. Demuestra las capacidades GMP de Axelar para usuarios finales."
+		},
+		"5": {
+			"question": "¿Axelar vs LayerZero vs Wormhole?",
+			"answer": "Los tres son protocolos de mensajería general. Axelar tiene fuerte integración con Cosmos y conjunto descentralizado de validadores. LayerZero tiene más enfoque EVM. Wormhole conecta más ecosistemas incluyendo Solana. Cada uno tiene diferentes modelos de seguridad."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para cross-chain universal?",
+		"button": "Explorar Axelar",
+		"note": "Red de comunicación cross-chain"
+	}
+}

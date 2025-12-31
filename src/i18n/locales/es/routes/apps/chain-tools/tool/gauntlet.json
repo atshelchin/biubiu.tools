@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Gauntlet - Optimización de Riesgos DeFi",
+		"description": "Gauntlet optimiza parámetros de protocolos DeFi usando simulaciones. Gestión de riesgos, eficiencia de capital y recomendaciones de parámetros para protocolos de préstamos.",
+		"keywords": "Gauntlet, riesgo DeFi, optimización de parámetros, simulación, Aave, Compound, gestión de riesgos"
+	},
+	"overview": "Gauntlet es la plataforma líder de optimización de riesgos DeFi. Usan simulaciones basadas en agentes para optimizar parámetros de protocolos—encontrando el punto óptimo entre riesgo y eficiencia de capital.\n\nLos modelos de Gauntlet simulan condiciones de mercado, comportamiento de usuarios y casos extremos para recomendar parámetros como factores de colateral, umbrales de liquidación y curvas de tasas de interés. Protocolos importantes como Aave, Compound y Maker confían en Gauntlet.\n\nMás allá de la optimización de parámetros, Gauntlet proporciona dashboards de riesgo, monitorea la salud del protocolo y responde a condiciones de mercado. Su trabajo protege miles de millones en TVL de cascadas de liquidación y riesgos de insolvencia.",
+	"features": {
+		"1": {
+			"title": "Motor de Simulación",
+			"description": "Modelado basado en agentes"
+		},
+		"2": {
+			"title": "Optimización de Parámetros",
+			"description": "Riesgo vs eficiencia"
+		},
+		"3": {
+			"title": "Dashboards de Riesgo",
+			"description": "Monitoreo de protocolos"
+		},
+		"4": {
+			"title": "Protocolos Principales",
+			"description": "Aave, Compound, etc."
+		},
+		"5": {
+			"title": "Investigación",
+			"description": "Análisis publicados"
+		},
+		"6": {
+			"title": "Respuesta a Incidentes",
+			"description": "Reacciones a condiciones de mercado"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Equipos de Protocolo",
+			"description": "Optimización de parámetros"
+		},
+		"2": {
+			"title": "Gobernanza",
+			"description": "Decisiones informadas"
+		},
+		"3": {
+			"title": "Monitoreo de Riesgos",
+			"description": "Acceso a dashboards"
+		},
+		"4": {
+			"title": "Investigación",
+			"description": "Estudiar sus modelos"
+		},
+		"5": {
+			"title": "Due Diligence",
+			"description": "Seguridad de protocolos"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué hace Gauntlet?",
+			"answer": "Gauntlet ejecuta simulaciones para optimizar parámetros de protocolos DeFi. Modelan liquidaciones, estrés de mercado y comportamiento de usuarios para encontrar configuraciones seguras pero eficientes. Piensa en ellos como el equipo de gestión de riesgos para DeFi."
+		},
+		"2": {
+			"question": "¿Qué protocolos usan Gauntlet?",
+			"answer": "Protocolos de préstamos importantes incluyendo Aave, Compound, Maker y Venus usan Gauntlet. También trabajan con protocolos más nuevos. Sus recomendaciones influyen en configuraciones de miles de millones en TVL."
+		},
+		"3": {
+			"question": "¿Cómo funcionan las simulaciones?",
+			"answer": "Gauntlet crea modelos basados en agentes con prestatarios, prestamistas y liquidadores. Simulan caídas de mercado, volatilidad de precios y casos extremos. Los parámetros se prueban contra miles de escenarios."
+		},
+		"4": {
+			"question": "¿Puedo ver sus recomendaciones?",
+			"answer": "Gauntlet publica propuestas de gobernanza en foros de protocolos. Lee su análisis cuando recomiendan cambios de parámetros. Los dashboards de riesgo a veces son públicos. Consulta la gobernanza de cada protocolo."
+		},
+		"5": {
+			"question": "¿Gauntlet vs Chaos Labs?",
+			"answer": "Ambos hacen simulación de riesgos DeFi. Gauntlet está más establecido con más relaciones con protocolos. Chaos Labs es más nuevo pero crece rápido. A menudo compiten por el mismo trabajo con protocolos."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para riesgo optimizado?",
+		"button": "Explorar Gauntlet",
+		"note": "Optimización de riesgos DeFi"
+	}
+}

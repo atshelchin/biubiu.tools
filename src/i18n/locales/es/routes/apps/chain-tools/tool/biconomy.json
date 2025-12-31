@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Biconomy - Infraestructura de Abstracción de Cuentas",
+		"description": "Biconomy simplifica la UX de Web3 con abstracción de cuentas, transacciones sin gas y cuentas inteligentes. Construye experiencias dApp fluidas.",
+		"keywords": "Biconomy, abstracción de cuentas, sin gas, cuentas inteligentes, token BICO, UX Web3"
+	},
+	"overview": "Biconomy proporciona infraestructura para mejor experiencia de usuario Web3 a través de abstracción de cuentas. Reemplaza popups de wallet confusos y pagos de gas con interacciones fluidas tipo Web2.\n\nSus Cuentas Inteligentes permiten a usuarios pagar gas en cualquier token, agrupar transacciones y usar recuperación social. Los Paymasters permiten transacciones sin gas donde las apps patrocinan el gas del usuario. La arquitectura modular soporta módulos personalizados.\n\nBiconomy ha procesado millones de transacciones para dApps importantes. El token BICO se usa para gobernanza y potencialmente para staking de paymaster. Son un proveedor líder de infraestructura de abstracción de cuentas.",
+	"features": {
+		"1": {
+			"title": "Cuentas Inteligentes",
+			"description": "Wallets ERC-4337"
+		},
+		"2": {
+			"title": "Transacciones Sin Gas",
+			"description": "Patrocina gas del usuario"
+		},
+		"3": {
+			"title": "Pagar Gas en Cualquier Token",
+			"description": "Pago de gas flexible"
+		},
+		"4": {
+			"title": "Transacciones Agrupadas",
+			"description": "Múltiples ops, un clic"
+		},
+		"5": {
+			"title": "Token BICO",
+			"description": "Token de gobernanza"
+		},
+		"6": {
+			"title": "Multi-Cadena",
+			"description": "Principales cadenas EVM"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "dApps Sin Gas",
+			"description": "Patrocina gas del usuario"
+		},
+		"2": {
+			"title": "Onboarding",
+			"description": "Primer uso sin fricción"
+		},
+		"3": {
+			"title": "Acciones Agrupadas",
+			"description": "Aprobar + swap en uno"
+		},
+		"4": {
+			"title": "Recuperación Social",
+			"description": "Recuperar sin semilla"
+		},
+		"5": {
+			"title": "Claves de Sesión",
+			"description": "Permisos limitados"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es la abstracción de cuentas?",
+			"answer": "La abstracción de cuentas hace que las wallets sean contratos inteligentes programables. En lugar de reglas EOA fijas, define validación personalizada, pago de gas y recuperación. ERC-4337 es el estándar. Permite UX tipo Web2."
+		},
+		"2": {
+			"question": "¿Cómo funcionan las transacciones sin gas?",
+			"answer": "Los Paymasters de Biconomy pagan gas en nombre de los usuarios. Las dApps depositan fondos para cubrir el gas del usuario. Los usuarios firman transacciones, el paymaster envía y paga. El gasto de la dApp reemplaza la fricción del usuario."
+		},
+		"3": {
+			"question": "¿Qué son las Cuentas Inteligentes?",
+			"answer": "Las Cuentas Inteligentes son wallets de contrato inteligente siguiendo ERC-4337. Tienen características programables: pago de gas en cualquier token, agrupación, claves de sesión, recuperación. La implementación de Biconomy es modular y auditada."
+		},
+		"4": {
+			"question": "¿Para qué se usa el token BICO?",
+			"answer": "BICO gobierna el protocolo Biconomy. Los holders votan en parámetros del protocolo y desarrollo. La utilidad futura puede incluir staking de paymaster. Actualmente enfocado principalmente en gobernanza."
+		},
+		"5": {
+			"question": "¿Qué dApps usan Biconomy?",
+			"answer": "Muchas dApps importantes usan Biconomy para mejoras de UX. Ejemplos incluyen Decentraland, Perpetual Protocol y varias plataformas de gaming/NFT. Revisa sus casos de estudio para integraciones actuales."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para UX Web3 fluida?",
+		"button": "Explorar Biconomy",
+		"note": "Infraestructura de abstracción de cuentas"
+	}
+}

@@ -1,0 +1,158 @@
+{
+	"title": "加密货币支付完全指南",
+	"subtitle": "从消费者交易到企业财资管理，全面掌握加密支付",
+
+	"sections": {
+		"intro": {
+			"title": "加密货币支付简介",
+			"content": "<p>加密货币正在从投机资产演变为真正的交换媒介。虽然早期的加密支付又慢又贵，但现代支付基础设施使加密交易比传统支付系统更快、更便宜。</p><p>本指南涵盖整个加密支付生态系统：从使用信用卡购买第一笔加密货币，到作为商家接受支付，再到使用流式支付管理企业工资。你将了解使加密支付变得实用的技术、目前可用的工具，以及企业如何已经在使用加密货币在全球范围内转移资金。</p>"
+		},
+		"payment_rails": {
+			"title": "加密支付轨道",
+			"content": "<p>并非所有区块链都适合支付。比特币的基础层每秒只能处理 7 笔交易，拥堵时费用可能达到 50 美元以上。以太坊在高峰使用期也好不到哪里去。</p><p>现代支付基础设施使用专门设计用于高吞吐量和低成本的区块链和 Layer 2 网络。了解这些支付轨道对于选择正确的解决方案至关重要。</p>",
+			"stablecoins": {
+				"title": "稳定币：支付标准",
+				"content": "<p>稳定币是加密支付的基础。没有人想用比特币给咖啡定价，因为它可能在你喝完之前就波动 10%。</p><p><strong>为什么稳定币主导支付：</strong></p><ul><li><strong>价格稳定：</strong>今天 1 美元 USDC = 明天 1 美元 USDC</li><li><strong>即时结算：</strong>转账在几秒内完成，而不是 3-5 个工作日</li><li><strong>全球覆盖：</strong>以同样的便捷性发送 100 美元或 100 万美元到任何地方</li><li><strong>可编程性：</strong>自动化定期付款、分账和托管</li></ul><p><strong>领先的支付稳定币：</strong></p><ul><li><strong>USDC（Circle）：</strong>完全储备、受监管、最受商业信任</li><li><strong>USDT（Tether）：</strong>最高流动性、全球广泛接受</li><li><strong>PYUSD（PayPal）：</strong>PayPal 发行、商家采用日益增长</li><li><strong>EURe（Monerium）：</strong>欧洲市场受监管的欧元稳定币</li></ul>"
+			},
+			"layer2": {
+				"title": "支付用 Layer 2 网络",
+				"content": "<p>Layer 2 网络继承了以太坊的安全性，同时提供显著更低的费用和更快的确认时间。这使它们成为日常支付的理想选择。</p><p><strong>流行的支付 L2：</strong></p><ul><li><strong>Base：</strong>Coinbase 的 L2，专为消费者加密采用而设计。每笔交易费用约 0.01 美元</li><li><strong>Arbitrum：</strong>按 TVL 计最大的 L2，丰富的 DeFi 生态系统用于支付集成</li><li><strong>Optimism：</strong>快速最终性，流行于工资和定期付款</li><li><strong>Polygon：</strong>高吞吐量，支付提供商广泛支持</li></ul><p><strong>实际案例：</strong>一家咖啡店在 Base 上使用 Coinbase Commerce，每笔交易支付 0.01 美元，而在以太坊主网上是 5-15 美元。每天 100 笔交易，每天的费用是 1 美元而不是 500-1,500 美元。</p>"
+			},
+			"bitcoin_lightning": {
+				"title": "比特币闪电网络",
+				"content": "<p>闪电网络是建立在比特币之上的 Layer 2 支付协议。它通过在用户之间创建支付通道来实现即时、接近零费用的比特币支付。</p><p><strong>工作原理：</strong></p><ol><li>通过在链上锁定比特币来开启支付通道</li><li>通过闪电网络进行无限次即时链下支付</li><li>关闭通道以在链上结算最终余额</li></ol><p><strong>闪电网络采用：</strong></p><ul><li>萨尔瓦多使用闪电网络进行官方比特币支付</li><li>Strike、Cash App 和其他应用支持闪电网络</li><li>新兴市场商家采用日益增长</li></ul><p>闪电网络在传统银行基础设施昂贵的地区特别有价值。</p>"
+			}
+		},
+		"merchant_solutions": {
+			"title": "商家支付解决方案",
+			"content": "<p>作为商家接受加密支付需要不同于消费者钱包的工具。商家解决方案处理发票、支付跟踪、会计集成和合规。</p>",
+			"payment_gateways": {
+				"title": "加密支付网关",
+				"content": "<p>支付网关是加密货币的 Stripe 或 PayPal 等价物——它们处理接受加密货币的复杂性，因此商家不必亲自处理。</p><p><strong>Coinbase Commerce：</strong></p><ul><li>免费使用，即时转换为法币收取 1% 费用</li><li>接受比特币、以太坊、USDC 等</li><li>Shopify、WooCommerce 等的电子商务插件</li><li>非托管——商家直接收到资金</li></ul><p><strong>BitPay：</strong></p><ul><li>最古老的加密支付处理器之一（自 2011 年）</li><li>以加密货币或法币结算</li><li>支持主要加密货币</li><li>税务报告的合规工具</li></ul><p><strong>NOWPayments：</strong></p><ul><li>支持 300 多种加密货币</li><li>比传统网关更低的费用</li><li>自动转换为首选货币</li><li>自定义集成的 API</li></ul><p><strong>集成示例：</strong>使用 Coinbase Commerce 插件在 10 分钟内为你的 Shopify 商店添加加密结账。无需编码。</p>"
+			},
+			"pos_systems": {
+				"title": "销售点（POS）系统",
+				"content": "<p>实体零售店需要像传统信用卡终端一样工作的销售点解决方案，但用于加密货币。</p><p><strong>加密 POS 系统的功能：</strong></p><ul><li>为客户支付生成二维码</li><li>实时价格转换（以当地货币显示）</li><li>即时支付确认</li><li>与现有收银系统集成</li><li>自动税务计算</li></ul><p><strong>对商家的好处：</strong></p><ul><li><strong>更低的费用：</strong>0.5-1% vs 信用卡的 2-3%</li><li><strong>无退款：</strong>加密支付是最终的</li><li><strong>即时结算：</strong>资金立即可用</li><li><strong>全球客户：</strong>接受游客的支付而无需货币转换费</li></ul>"
+			},
+			"invoicing": {
+				"title": "加密发票",
+				"content": "<p>B2B 支付需要专业的发票工具。加密发票平台创建带有到期日、明细项和自动支付跟踪的支付请求。</p><p><strong>Request Network：</strong></p><ul><li>去中心化发票协议</li><li>创建加密或法币金额的发票</li><li>自动支付检测</li><li>导出到会计软件（QuickBooks、Xero）</li></ul><p><strong>Utila：</strong></p><ul><li>加密发票和工资</li><li>多币种支持</li><li>团队协作功能</li><li>合规文档</li></ul><p><strong>用例：</strong>一位自由设计师向客户开具 5,000 美元的发票。客户在 Arbitrum 上用 USDC 支付。Request Network 自动检测支付，标记发票为已支付，并将记录导出到设计师的会计软件。</p>"
+			}
+		},
+		"payroll_streaming": {
+			"title": "工资和流式支付",
+			"content": "<p>加密货币最具创新性的功能之一是可编程货币。流式支付让你按秒支付工资，创造传统金融无法实现的新薪酬模式。</p>",
+			"streaming_payments": {
+				"title": "流式支付解释",
+				"content": "<p>传统工资：工作 2 周，周五发薪。<br>流式支付：在工作时持续获得报酬。</p><p><strong>流式支付如何工作：</strong></p><ol><li>雇主将资金存入流式合约</li><li>资金持续流向员工钱包（例如，50,000 美元/年 = 1.58 美元/秒）</li><li>员工可以随时提取</li><li>当资金用完或合约结束时，流式自动停止</li></ol><p><strong>Superfluid：</strong></p><ul><li>实时货币流式协议</li><li>用一笔交易创建持续支付流</li><li>被 DAO 和加密原生公司使用</li><li>支持以太坊、Polygon、Optimism、Arbitrum、Base</li></ul><p><strong>Sablier：</strong></p><ul><li>代币归属和流式</li><li>线性、悬崖和自定义归属计划</li><li>用于员工薪酬、赠款和代币解锁</li><li>基于 NFT 的流式（流式可转让）</li></ul><p><strong>LlamaPay：</strong></p><ul><li>简单的流式界面</li><li>通过优化合约降低 Gas 成本</li><li>适用于 DAO 贡献者支付</li></ul>"
+			},
+			"payroll_management": {
+				"title": "加密工资管理",
+				"content": "<p>使用传统银行管理远程、全球团队的工资充满挑战。加密工资通过将国际和国内支付同等对待来解决这个问题。</p><p><strong>Utopia Labs：</strong></p><ul><li>DAO 和加密公司的工资平台</li><li>以加密或法币支付全球承包商</li><li>自动税务计算</li><li>不同司法管辖区的合规文档</li></ul><p><strong>Parcel：</strong></p><ul><li>DAO 的批量支付工具</li><li>一笔交易支付多个接收者</li><li>批量支付的 CSV 导入</li><li>与 Gnosis Safe 集成用于财资管理</li></ul><p><strong>实际节省：</strong>一家拥有 20 名国际承包商的公司，每次国际电汇花费 50-75 美元。仅电汇费用每月就是 1,000-1,500 美元。使用加密工资：每月总费用 20-50 美元，无论员工位置如何。</p>"
+			},
+			"revenue_sharing": {
+				"title": "收入分享和支付分账",
+				"content": "<p>加密货币使得在多个接收者之间自动分配支付变得容易——非常适合合作伙伴关系、版税和收入分享。</p><p><strong>0xSplits：</strong></p><ul><li>无信任支付分账协议</li><li>定义百分比分账（例如，70% 创始人、20% 投资者、10% 慈善）</li><li>所有传入支付自动分账</li><li>不可变或可更新的分账</li><li>零费用（仅 Gas）</li></ul><p><strong>Reveel：</strong></p><ul><li>收入分配平台</li><li>创建支付瀑布（先付 A，然后 B，然后分账）</li><li>基于时间的分配变化</li><li>分析仪表板</li></ul><p><strong>用例：</strong>三位联合创始人设置了 0xSplits 合约：40/30/30。他们将所有公司收入（商家支付、投资、赠款）指向这个地址。每笔支付都自动正确分账，消除了手动会计和信任问题。</p>"
+			}
+		},
+		"fiat_ramps": {
+			"title": "法币出入金",
+			"content": "<p>传统金融和加密金融之间的桥梁。入金让你用法币购买加密货币；出金让你将加密货币转换回法币。</p>",
+			"onramps": {
+				"title": "法币入金",
+				"content": "<p>入金是大多数人进入加密货币的方式。它们接受信用卡、银行转账和本地支付方式。</p><p><strong>MoonPay：</strong></p><ul><li>支持 160 多个国家</li><li>信用卡/借记卡和银行转账</li><li>直接购买到你的钱包</li><li>嵌入 MetaMask、Rainbow 和其他钱包</li><li>费用：卡片 3.5-4.5%，银行转账更低</li></ul><p><strong>Transak：</strong></p><ul><li>全球覆盖，支持本地支付方式</li><li>许多地区费用更低</li><li>dApp 的白标解决方案</li><li>内置合规（KYC/AML）</li></ul><p><strong>Ramp：</strong></p><ul><li>非托管入金</li><li>购买直接进入你的钱包的加密货币</li><li>dApp 集成的 SDK</li><li>支持 Apple Pay 和 Google Pay</li></ul><p><strong>选择入金：</strong>仔细比较费用——它们因支付方式和地区而异。卡片购买最快但最贵（3-5%）。银行转账最便宜（0.5-1%）但需要 1-3 天。</p>"
+			},
+			"offramps": {
+				"title": "法币出金",
+				"content": "<p>将加密货币转换回法币通常比购买加密货币更难。出金专门处理这个方向。</p><p><strong>Spritz：</strong></p><ul><li>直接用加密货币支付账单</li><li>连接银行账户和信用卡</li><li>定期账单的自动支付设置</li><li>无需手动转换和提取</li></ul><p><strong>Monerium：</strong></p><ul><li>欧洲受监管的电子货币机构</li><li>发行由银行存款 1:1 支持的链上欧元（EURe）</li><li>将 EURe 直接兑换到 IBAN 银行账户</li><li>机构级合规</li></ul><p><strong>用例：</strong>一位自由职业者在 Polygon 上收到 10,000 USDC 支付。使用 Spritz，他们可以直接从 USDC 支付 2,000 美元的租金，而无需先转换为 USD，发送到银行，然后支付给房东。节省时间和费用。</p>"
+			},
+			"crypto_cards": {
+				"title": "加密借记卡",
+				"content": "<p>加密借记卡让你在接受 Visa 或 Mastercard 的任何地方使用加密货币。它们在销售点自动将加密货币转换为法币。</p><p><strong>Gnosis Pay：</strong></p><ul><li>自我托管的 Visa 卡</li><li>直接从你的 Gnosis Safe 消费</li><li>无交易所中介</li><li>在欧洲可用</li></ul><p><strong>工作原理：</strong></p><ol><li>用 USDC 或其他加密货币加载你的卡钱包</li><li>在接受 Visa/Mastercard 的任何商家刷卡</li><li>卡提供商自动将加密货币转换为当地法币</li><li>商家正常收到法币</li></ol><p><strong>好处：</strong></p><ul><li>无需商家采用即可使用加密货币</li><li>在消费前在卡余额上赚取 DeFi 收益</li><li>自我托管（对于某些卡）</li></ul><p><strong>注意事项：</strong></p><ul><li>在大多数司法管辖区，每次购买都是应税事件</li><li>转换费用（通常 0.5-2%）</li><li>并非所有卡在所有地区都可用</li></ul>"
+			}
+		},
+		"remittances": {
+			"title": "汇款和跨境支付",
+			"content": "<p>加密货币在跨境支付中表现最出色。传统国际转账缓慢（3-5 天）、昂贵（5-10% 费用）且需要银行基础设施。</p>",
+			"use_cases": {
+				"title": "汇款用例",
+				"content": "<p><strong>移民工人汇款：</strong></p><p>全球范围内，移民每年向其母国汇款超过 7000 亿美元。Western Union 等传统服务收取 5-10% 的费用。加密汇款的成本可以是 0.5-2%。</p><p><strong>示例流程：</strong></p><ol><li>美国工人在 Coinbase 购买 USDC（100 美元 - 1 美元费用 = 99 USDC）</li><li>在 Polygon 上向菲律宾家人发送 USDC（0.01 美元交易费）</li><li>家人在当地交易所将 USDC 兑换为菲律宾比索（99 美元 - 1% 费用 = 98 美元收到）</li></ol><p>传统电汇：100 美元 - 7 美元费用 - 3 美元接收银行费用 = 90 美元收到<br>加密：100 美元 - 1 美元 - 0.01 美元 - 1 美元 = 98 美元收到</p><p>多收到 8 美元（8% 更好），而且是即时的而不是 3-5 天。</p><p><strong>商业支付：</strong></p><ul><li>无电汇费用支付国际供应商</li><li>接收全球客户的支付</li><li>跨境财资管理</li></ul>"
+			},
+			"advantages": {
+				"title": "为什么加密货币在跨境支付中获胜",
+				"content": "<p><strong>速度：</strong>加密交易在几秒到几分钟内结算。SWIFT 转账需要 3-5 个工作日。在周末和节假日，SWIFT 停止。加密货币不会。</p><p><strong>成本：</strong>电汇转账：每笔交易 25-50 美元。L2 上的加密：0.01-1.00 美元。对于大额，差异更加显著。</p><p><strong>准入：</strong>全球有 17 亿人没有银行账户但有智能手机。他们可以在没有银行账户的情况下接收加密货币。</p><p><strong>透明度：</strong>在区块链浏览器上实时跟踪支付。使用电汇，资金在银行系统中消失数天。</p><p><strong>全天候：</strong>周日凌晨 3 点发送资金。试试用银行做这个。</p><p><strong>挑战：</strong></p><ul><li>双方都需要加密知识</li><li>汇率波动（稳定币解决）</li><li>在许多地方仍需要最后一英里的法币转换</li><li>某些司法管辖区的监管不确定性</li></ul>"
+			}
+		},
+		"treasury": {
+			"title": "财资管理",
+			"content": "<p>对于持有大量加密货币的组织，专业的财资管理工具对于安全和运营效率至关重要。</p>",
+			"multi_sig": {
+				"title": "多重签名钱包",
+				"content": "<p>永远不要将公司资金存储在单签名钱包中。多签需要多个批准者进行交易，消除单点故障。</p><p><strong>Gnosis Safe（Safe）：</strong></p><ul><li>多签钱包的行业标准</li><li>M-of-N 签名方案（例如，需要 3-of-5 签名者）</li><li>支持任何 ERC-20 代币和 NFT</li><li>在 10 多个网络上可用</li></ul><p><strong>设置财资多签：</strong></p><ol><li>选择签名者数量（大型组织 5-7 个）</li><li>设置签名阈值（通常是签名者的 50-60%）</li><li>从组织的不同部分添加受信任的签名者</li><li>记录恢复程序</li><li>先用小额测试</li></ol><p><strong>Coinshift：</strong></p><ul><li>基于 Gnosis Safe 构建</li><li>添加财资分析和报告</li><li>定期支付和自动化</li><li>基于角色的访问控制</li><li>会计导出</li></ul>"
+			},
+			"batch_payments": {
+				"title": "批量支付",
+				"content": "<p>单独支付多个接收者浪费时间和 Gas 费。批量支付工具将多笔支付合并为一笔交易。</p><p><strong>Parcel：</strong></p><ul><li>上传接收者和金额的 CSV</li><li>一笔交易支付所有人</li><li>节省 80-95% 的 Gas 费</li><li>与 Safe 集成用于批准工作流</li></ul><p><strong>示例：</strong>一个 DAO 需要支付 50 名贡献者。单独交易：50 × 2 美元 Gas = 100 美元费用。批量支付：5 美元费用。此外，接收者同时获得支付而不是一个接一个。</p><p><strong>用例：</strong></p><ul><li>每月贡献者工资</li><li>空投分发</li><li>投资者股息支付</li><li>多方结算</li></ul>"
+			}
+		},
+		"compliance_tax": {
+			"title": "合规和税务考虑",
+			"content": "<p>加密支付产生新的合规和税务义务。忽视这些可能导致严重的法律和财务后果。</p>",
+			"kyc_aml": {
+				"title": "KYC/AML 要求",
+				"content": "<p>大多数支付提供商需要了解你的客户（KYC）和反洗钱（AML）合规。</p><p><strong>何时需要 KYC：</strong></p><ul><li>法币出入金（总是）</li><li>服务商家的支付处理器（通常）</li><li>大额交易（因司法管辖区而异）</li></ul><p><strong>Sardine：</strong></p><ul><li>合规和欺诈预防平台</li><li>即时 KYC 验证</li><li>交易监控</li><li>风险评分</li></ul><p><strong>对于商家：</strong></p><ul><li>记录大额交易的客户信息</li><li>监控可疑活动</li><li>维护交易记录</li><li>提交所需报告（美国的 CTR、SAR）</li></ul>"
+			},
+			"tax_reporting": {
+				"title": "加密支付的税务报告",
+				"content": "<p>在大多数司法管辖区，接收加密支付是应税事件。复杂性因用例而异。</p><p><strong>对于接受加密货币的企业：</strong></p><ul><li>在收到时以当地货币记录公允市场价值</li><li>像任何其他支付一样报告为收入</li><li>跟踪未来销售的成本基础</li><li>记录所有交易以备审计</li></ul><p><strong>对于以加密货币支付的员工：</strong></p><ul><li>加密工资按普通收入征税</li><li>在收到时确定价值</li><li>后续出售产生额外的资本利得/损失</li></ul><p><strong>对于承包商：</strong></p><ul><li>加密支付是自雇收入</li><li>仔细跟踪以进行估计税款支付</li><li>照常扣除业务费用</li></ul><p><strong>工具：</strong></p><ul><li>Request Network 生成税务就绪发票</li><li>与 QuickBooks、Xero 的会计集成</li><li>加密税务软件：Koinly、CoinTracker、TokenTax</li></ul>"
+			},
+			"best_practices": {
+				"title": "支付最佳实践",
+				"content": "<p><strong>对于商家：</strong></p><ol><li>使用成熟的支付处理器，不要自己开发</li><li>接受稳定币以避免波动</li><li>如果无法持有加密货币，自动转换为法币</li><li>在结账时清楚显示加密支付选项</li><li>提供即时支付确认</li></ol><p><strong>对于组织：</strong></p><ol><li>对所有财资资金使用多签（最少 3-of-5）</li><li>保持热钱包余额低，大部分资金在冷存储中</li><li>记录所有支付批准者和流程</li><li>使用批量支付提高效率</li><li>维护详细的交易记录</li><li>与熟悉加密的会计师合作</li></ol><p><strong>对于个人：</strong></p><ol><li>从小额测试交易开始</li><li>仔细验证接收者地址（无法撤销）</li><li>使用 ENS 名称或地址簿避免拼写错误</li><li>保留所有加密收入和支付的记录</li><li>在接受加密工资前了解税务影响</li></ol><p><strong>安全检查清单：</strong></p><ul><li>✓ 大额使用硬件钱包</li><li>✓ 组织资金使用多签</li><li>✓ 先用小额测试交易</li><li>✓ 验证智能合约地址</li><li>✓ 使用支付请求，而不是手动输入地址</li><li>✓ 监控地址是否有意外交易</li></ul>"
+			}
+		}
+	},
+
+	"glossary": {
+		"payment_rail": {
+			"term": "支付轨道",
+			"definition": "转移资金的底层基础设施。在加密货币中，这包括处理支付交易的区块链（以太坊、比特币）、Layer 2 网络（Arbitrum、Optimism）和侧链（Polygon）。"
+		},
+		"streaming_payment": {
+			"term": "流式支付",
+			"definition": "随着时间推移从发送者到接收者的持续资金流，通常以秒为单位测量。由智能合约实现，持续释放资金而不是离散的薪水支票。"
+		},
+		"invoice": {
+			"term": "发票",
+			"definition": "包含金额、到期日和明细项等详细信息的支付请求文档。加密发票可以直接用加密货币支付，并在检测到区块链交易时自动标记为已支付。"
+		},
+		"remittance": {
+			"term": "汇款",
+			"definition": "从一个地点向另一个地点汇款，通常由移民工人向其母国的家人汇款。与传统服务相比，加密货币显著降低了汇款成本。"
+		},
+		"pos": {
+			"term": "POS（销售点）",
+			"definition": "进行零售交易的系统，如收银机或支付终端。加密 POS 系统生成二维码供客户扫描并用加密货币支付。"
+		},
+		"merchant": {
+			"term": "商家",
+			"definition": "销售商品或服务的企业。加密商家解决方案让企业在传统支付方式之外接受加密货币支付。"
+		},
+		"payment_gateway": {
+			"term": "支付网关",
+			"definition": "为商家处理支付处理的服务，类似于 Stripe 处理信用卡的方式。加密支付网关处理加密货币支付，并可选择转换为法币。"
+		},
+		"fiat_onramp": {
+			"term": "法币入金",
+			"definition": "将传统货币（法币）转换为加密货币的服务。入金接受信用卡、银行转账或本地支付方式，并将加密货币交付到你的钱包。"
+		},
+		"fiat_offramp": {
+			"term": "法币出金",
+			"definition": "将加密货币转换回传统货币的服务。出金从你的钱包中提取加密货币，并将法币存入你的银行账户或直接支付你的账单。"
+		},
+		"payment_token": {
+			"term": "支付代币",
+			"definition": "设计用作交换媒介的加密货币。稳定币如 USDC 和 USDT 由于其稳定的价值而成为最常见的支付代币。"
+		}
+	}
+}

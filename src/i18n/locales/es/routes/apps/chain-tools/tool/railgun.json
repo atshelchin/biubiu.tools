@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "RAILGUN - Privacidad para DeFi",
+		"description": "RAILGUN proporciona privacidad on-chain para transacciones DeFi. Protege tokens y opera privadamente usando protocolos DeFi existentes.",
+		"keywords": "RAILGUN, privacidad DeFi, transacciones protegidas, conocimiento cero, token RAIL, trading privado"
+	},
+	"overview": "RAILGUN trae privacidad a DeFi sin abandonar el ecosistema Ethereum. A diferencia de cadenas de privacidad, RAILGUN es un sistema de contratos inteligentes que protege tokens mientras te permite interactuar con protocolos DeFi regulares.\n\nProtege tus tokens en el sistema RAILGUN, luego opera en Uniswap, presta en Aave, o usa cualquier DeFi privadamente. Las pruebas de conocimiento cero aseguran que tus transacciones son válidas sin revelar emisor, receptor o cantidad.\n\nRAILGUN funciona en Ethereum, Polygon, BSC y Arbitrum. El token RAIL gobierna el protocolo. Es la solución de privacidad líder que se integra con DeFi existente en lugar de crear ecosistemas separados.",
+	"features": {
+		"1": {
+			"title": "Saldos Protegidos",
+			"description": "Tenencias de tokens privadas"
+		},
+		"2": {
+			"title": "DeFi Privado",
+			"description": "Usa protocolos privadamente"
+		},
+		"3": {
+			"title": "Conocimiento Cero",
+			"description": "Pruebas ZK para privacidad"
+		},
+		"4": {
+			"title": "Multi-Cadena",
+			"description": "ETH, Polygon, BSC, Arb"
+		},
+		"5": {
+			"title": "Token RAIL",
+			"description": "Token de gobernanza"
+		},
+		"6": {
+			"title": "Railway Wallet",
+			"description": "Interfaz de wallet privada"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Transferencias Privadas",
+			"description": "Envía tokens privadamente"
+		},
+		"2": {
+			"title": "Trading Privado",
+			"description": "Swap sin exposición"
+		},
+		"3": {
+			"title": "DeFi Privado",
+			"description": "Presta/pide prestado privadamente"
+		},
+		"4": {
+			"title": "Proteger Tenencias",
+			"description": "Oculta saldos de wallet"
+		},
+		"5": {
+			"title": "Gobernanza RAIL",
+			"description": "Vota en el protocolo"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Cómo funciona la privacidad de RAILGUN?",
+			"answer": "Deposita tokens para obtener versiones 'protegidas'. Las transacciones dentro de RAILGUN usan pruebas ZK—prueban validez sin revelar detalles. Al usar DeFi, RAILGUN interactúa en tu nombre privadamente."
+		},
+		"2": {
+			"question": "¿Es RAILGUN como Tornado Cash?",
+			"answer": "Ambos usan pruebas ZK para privacidad. Tornado era un mezclador—deposita y retira cantidades fijas. RAILGUN es un sistema completo de saldo privado con integración DeFi. RAILGUN mantiene saldos, no solo mezcla."
+		},
+		"3": {
+			"question": "¿Puedo usar DeFi regular privadamente?",
+			"answer": "Sí, esa es la característica clave de RAILGUN. Tu saldo protegido puede operar en agregadores 0x/Uniswap, interactuar con protocolos de préstamo, etc. RAILGUN actúa como intermediario para que DeFi vea el contrato, no a ti."
+		},
+		"4": {
+			"question": "¿Es legal RAILGUN?",
+			"answer": "RAILGUN es una herramienta de privacidad—la legalidad depende del uso y la jurisdicción. Incluye un sistema 'Prueba Privada de Inocencia' para cumplimiento. Siempre sigue las leyes locales. La privacidad en sí no es ilegal."
+		},
+		"5": {
+			"question": "¿Cuáles son las limitaciones?",
+			"answer": "Proteger/desproteger cuesta gas. La generación de pruebas ZK toma tiempo. Conjunto de anonimato más pequeño que el ideal. Algunos tokens/protocolos no soportados. La privacidad es probabilística—los patrones pueden filtrar información."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para DeFi privado?",
+		"button": "Explorar RAILGUN",
+		"note": "Privacidad encuentra DeFi"
+	}
+}

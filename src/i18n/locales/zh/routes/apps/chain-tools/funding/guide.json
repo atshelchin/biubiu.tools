@@ -1,0 +1,158 @@
+{
+	"title": "加密货币融资完全指南",
+	"subtitle": "从赠款到风险投资掌握 Web3 融资",
+
+	"sections": {
+		"intro": {
+			"title": "加密货币融资简介",
+			"content": "<p>加密货币融资的运作方式与传统金融有着根本性的不同。你不需要向可能不了解区块链技术的银行或传统风投推销，而是可以接触到一个蓬勃发展的加密原生融资生态系统——从无需许可的赠款到深入了解你所在领域的专业风投。</p><p>在这份完整指南中，你将了解加密货币中的每一条主要融资路径：生态系统赠款、平方融资、追溯公共产品融资、风险投资、代币销售和社区融资。我们将介绍真实案例、申请策略，以及如何建立通往成功融资的关系。</p>"
+		},
+		"funding_types": {
+			"title": "加密货币融资类型",
+			"content": "<p>了解加密货币融资格局是你的第一步。与传统金融的有限选择不同，加密货币提供多样化的融资机制，每种机制都适合不同的项目阶段和目标。</p>",
+			"grants": {
+				"title": "赠款",
+				"content": "<p>赠款是非稀释性融资 (不放弃股权),通常专注于公共产品、基础设施和生态系统发展。对于早期项目来说，它们往往是最好的起点。</p><p><strong>关键特征:</strong></p><ul><li><strong>非稀释性:</strong>不需要股权或代币</li><li><strong>基于里程碑:</strong>根据可交付成果发放资金</li><li><strong>公共产品导向:</strong>偏好有益于生态系统的项目</li><li><strong>金额:</strong>通常为 5000 美元至 50 万美元，一些大型项目可达 100 万美元以上</li></ul><p><strong>最适合:</strong></p><ul><li>开源基础设施和工具</li><li>研究和教育</li><li>开发者工具和库</li><li>社区建设计划</li><li>标准和文档</li></ul><p><strong>不太适合:</strong>以收入为重点的业务、闭源项目或需要大量市场推广资金的项目。</p>"
+			},
+			"venture_capital": {
+				"title": "风险投资",
+				"content": "<p>加密货币风投投资高增长项目，以换取股权 (公司) 或代币 (协议)。他们提供资本、人脉和战略指导。</p><p><strong>融资轮次:</strong></p><ul><li><strong>种子前:</strong>50 万至 200 万美元，从想法到早期产品</li><li><strong>种子轮:</strong>200 万至 1000 万美元，探索产品市场契合度</li><li><strong>A 轮:</strong>1000 万至 3000 万美元，扩展已验证的模式</li><li><strong>B 轮及以上:</strong>3000 万美元以上，市场领导地位和扩张</li></ul><p><strong>风投寻找什么:</strong></p><ul><li><strong>团队:</strong>具有相关经验的优秀创始人</li><li><strong>市场:</strong>大型可寻址市场，明确的痛点</li><li><strong>牵引力:</strong>用户增长、TVL、收入或网络效应</li><li><strong>代币经济学:</strong>精心设计的价值累积和激励机制</li><li><strong>差异化:</strong>独特方法或不公平优势</li></ul><p><strong>顶级加密货币风投:</strong> a16z Crypto、Paradigm、Polychain、Pantera、Multicoin、Dragonfly、Framework Ventures、Electric Capital、Variant。</p>"
+			},
+			"crowdfunding": {
+				"title": "众筹与代币销售",
+				"content": "<p>众筹让你直接从社区筹集资金，无论是通过平台还是代币销售。这保持了社区所有权和一致性。</p><p><strong>模式:</strong></p><ul><li><strong>Juicebox:</strong>以太坊原生众筹，提供 NFT 奖励</li><li><strong>代币销售 (IDO/IEO):</strong>向早期支持者出售代币</li><li><strong>通过启动平台公开销售:</strong>使用 CoinList 等平台</li><li><strong>公平发布:</strong>无预售，所有人价格相同</li></ul><p><strong>优势:</strong></p><ul><li>从第一天起建立参与社区</li><li>保持去中心化和社区所有权</li><li>比风投融资流程更快</li><li>展示市场需求</li></ul><p><strong>挑战:</strong></p><ul><li>监管复杂性 (特别是在美国)</li><li>需要现有社区和信任</li><li>代币持有者的高期望</li><li>代币价格波动带来压力</li></ul>"
+			},
+			"retroactive_funding": {
+				"title": "追溯公共产品融资",
+				"content": "<p>追溯融资是一种范式转变：不是预测哪些项目会成功，而是在它们<strong>证明</strong>了影响力之后再资助它们。这奖励为生态系统带来价值的建设者。</p><p><strong>工作原理:</strong></p><ol><li>构建并发布公共产品</li><li>向社区展示影响力</li><li>获得追溯融资轮次提名</li><li>徽章持有者或投票者决定分配</li><li>根据过去的影响获得资金</li></ol><p><strong>Optimism RetroPGF:</strong> 最大的追溯融资计划，跨轮次分配数百万 OP 代币:</p><ul><li><strong>RetroPGF 1 (2021):</strong> 100 万美元给 58 个项目</li><li><strong>RetroPGF 2 (2023):</strong> 1000 万 OP(约 1000 万美元) 给 195 个项目</li><li><strong>RetroPGF 3 (2023):</strong> 3000 万 OP(约 3000 万美元) 给 643 个项目</li><li><strong>RetroPGF 4 (2024+):</strong> 持续迭代</li></ul><p><strong>策略:</strong>不要等待赠款——现在就构建有价值的公共产品，记录影响，并在宣布追溯轮次时参与。</p>"
+			}
+		},
+		"grant_programs": {
+			"title": "主要赠款计划",
+			"content": "<p>加密货币赠款计划每年分配数亿美元。了解每个计划的重点和申请流程是成功的关键。</p>",
+			"ethereum_foundation": {
+				"title": "以太坊基金会赠款",
+				"content": "<p>以太坊基金会的生态系统支持计划 (ESP) 是最负盛名的赠款计划之一，资助核心基础设施、研究和社区计划。</p><p><strong>重点领域:</strong></p><ul><li><strong>核心协议:</strong>客户端多样性、共识研究、EVM 改进</li><li><strong>开发者工具:</strong>测试框架、调试工具、IDE</li><li><strong>密码学与安全:</strong>ZKP 研究、审计、形式化验证</li><li><strong>教育与社区:</strong>文档、翻译、本地社区</li><li><strong>应用研究:</strong>可扩展性、隐私、MEV 解决方案</li></ul><p><strong>赠款规模:</strong>通常为 5 万至 50 万美元，关键基础设施可能更高。</p><p><strong>申请流程:</strong></p><ol><li>通过以太坊基金会网站提交咨询</li><li>初步审查 (2-4 周)</li><li>如果有前景，提交详细提案</li><li>尽职调查和面试</li><li>资金决定和里程碑设置</li></ol><p><strong>成功技巧:</strong></p><ul><li>与以太坊路线图保持一致 (The Surge、Scourge、Verge、Purge、Splurge)</li><li>展示技术能力和相关经验</li><li>显示清晰的可交付成果和时间表</li><li>强调公共产品性质和开源承诺</li></ul>"
+			},
+			"gitcoin": {
+				"title": "Gitcoin 赠款",
+				"content": "<p>Gitcoin 开创了开源加密项目的<strong>平方融资</strong>。与委员会决定不同，社区捐赠使用平方匹配从池中获得匹配。</p><p><strong>平方融资工作原理:</strong></p><ul><li>你向支持的项目捐款</li><li>匹配池放大小额捐赠多于大额捐赠</li><li>来自 100 人的 1 美元比来自 1 人的 100 美元获得更多匹配</li><li>公式：匹配 = (√d₁ + √d₂ + √d₃...)² 其中 d = 捐赠</li></ul><p><strong>示例:</strong>项目 A 从 1 个捐赠者获得 100 美元 = 10 美元匹配。项目 B 从 10 个捐赠者获得 10 美元 = 100 美元匹配。这有利于拥有广泛社区支持的项目，而不是由巨鲸资助的项目。</p><p><strong>赠款轮次:</strong></p><ul><li><strong>主轮次:</strong>季度，10 万至 200 万美元匹配池</li><li><strong>生态系统轮次:</strong>特定于链 (以太坊、Polygon、Arbitrum)</li><li><strong>主题轮次:</strong>DeFi、气候、DEI 等</li></ul><p><strong>Grants Stack:</strong> Gitcoin 的新协议允许任何人运行自己的平方融资轮次。</p><p><strong>成功策略:</strong></p><ul><li>在轮次开始前建立社区</li><li>创建具有清晰影响力的引人注目的项目页面</li><li>在轮次期间积极参与</li><li>展示持续开发和透明度</li></ul>"
+			},
+			"optimism_retropgf": {
+				"title": "Optimism RetroPGF",
+				"content": "<p>Optimism 的追溯公共产品融资 (RetroPGF) 奖励已经为 Optimism 生态系统和整个以太坊带来价值的项目。</p><p><strong>资助内容:</strong></p><ul><li><strong>基础设施:</strong>RPC 提供商、索引器、预言机</li><li><strong>开发者工具:</strong>库、框架、教育内容</li><li><strong>应用程序:</strong>DeFi、NFT、治理工具</li><li><strong>社区:</strong>教育内容、翻译、活动</li></ul><p><strong>流程:</strong></p><ol><li><strong>提名:</strong>任何人都可以提名项目 (或自我提名)</li><li><strong>申请:</strong>项目提交影响描述</li><li><strong>评估:</strong>徽章持有者 (选定的社区成员) 审查</li><li><strong>投票:</strong>徽章持有者在项目之间分配预算</li><li><strong>分配:</strong>根据投票分配 OP 代币</li></ol><p><strong>RetroPGF 3 结果 (3000 万 OP):</strong></p><ul><li>资助 643 个项目</li><li>中位数：约 1.4 万 OP(约 3 万美元)</li><li>顶级项目:40 万至 50 万 OP(80 万至 100 万美元)</li><li>类别：基础设施 (40%)、工具 (30%)、社区 (20%)、其他 (10%)</li></ul><p><strong>关键见解:</strong>RetroPGF 奖励已证明的影响而非承诺。构建有价值的东西，清晰记录你的影响，你将获得追溯奖励。</p>"
+			},
+			"ecosystem_grants": {
+				"title": "生态系统特定赠款",
+				"content": "<p>每个主要区块链生态系统都运行赠款计划，以资助其链上的应用程序、基础设施和社区计划。</p><p><strong>Arbitrum 赠款:</strong></p><ul><li>重点:DeFi、游戏、社交、基础设施</li><li>金额:1 万至 50 万美元</li><li>来自 DAO 金库的 ARB 代币赠款</li><li>通过 Arbitrum DAO 治理</li></ul><p><strong>Polygon 赠款:</strong></p><ul><li>重点：游戏、DeFi、NFT、社交、ZK 应用</li><li>Village 计划：孵化 + 资金</li><li>金额:5000 美元至 100 万美元，取决于阶段</li></ul><p><strong>Solana 赠款:</strong></p><ul><li>重点:DeFi、游戏、移动、支付</li><li>开发者赠款：工具和基础设施</li><li>集成赠款：将项目引入 Solana</li></ul><p><strong>协议特定赠款:</strong></p><ul><li><strong>Uniswap 赠款:</strong>UNI DAO 为生态系统工具提供赠款</li><li><strong>Aave 赠款:</strong>AGD 资助 Aave 生态系统发展</li><li><strong>Compound 赠款:</strong>COMP 赠款用于治理、工具、集成</li></ul><p><strong>策略:</strong>如果你在特定链上构建，申请该生态系统的赠款。通常比竞争通用以太坊赠款更容易。</p>"
+			}
+		},
+		"vc_landscape": {
+			"title": "加密货币风投格局",
+			"content": "<p>加密货币风险投资已发展成为一个复杂的生态系统，拥有专业公司，每个公司都有独特的投资理论和价值主张。</p>",
+			"crypto_vcs": {
+				"title": "主要加密货币风投",
+				"content": "<p>了解不同的风投有助于你针对项目阶段和重点领域找到合适的合作伙伴。</p><p><strong>一线 - 最大基金 (10 亿美元以上):</strong></p><ul><li><strong>a16z Crypto:</strong>跨基金 76 亿美元，广泛投资组合，强大的监管倡导</li><li><strong>Paradigm:</strong>130 亿美元以上 AUM，研究导向，大额持仓，技术深度</li><li><strong>Polychain:</strong>先驱加密货币风投，理论驱动，协议投资</li><li><strong>Pantera:</strong>最古老的加密基金 (2013),广泛的加密货币敞口</li></ul><p><strong>理论驱动型风投:</strong></p><ul><li><strong>Multicoin Capital:</strong>强烈的主见理论 (Web3、Solana 生态系统)</li><li><strong>Dragonfly:</strong>跨境 (美国/亚洲),基础设施和 DeFi</li><li><strong>Variant:</strong>所有权经济、消费者加密、创作者经济</li></ul><p><strong>阶段特定:</strong></p><ul><li><strong>Framework Ventures:</strong>早期 DeFi 和游戏</li><li><strong>Electric Capital:</strong>开发者生态系统重点，发布开发者报告</li><li><strong>Placeholder:</strong>早期网络和协议</li></ul><p><strong>企业风投:</strong></p><ul><li><strong>Coinbase Ventures:</strong>300 多家投资组合公司，战略一致</li><li><strong>Binance Labs:</strong>专注于使用 BNB Chain 的项目，孵化</li><li><strong>Galaxy Digital:</strong>Mike Novogratz 的公司，机构重点</li></ul><p><strong>地理专业化:</strong></p><ul><li><strong>HashKey Capital:</strong>亚洲重点，香港总部，监管专业知识</li><li><strong>Spartan Group:</strong>亚洲重点，咨询服务</li><li><strong>LongHash Ventures:</strong>亚洲加速器 + 风投</li></ul>"
+			},
+			"deal_terms": {
+				"title": "理解风投交易条款",
+				"content": "<p>与传统风投相比，加密货币风投交易具有独特的结构。理解这些条款对于谈判至关重要。</p><p><strong>投资结构:</strong></p><ul><li><strong>SAFT(未来代币简单协议):</strong>承诺在启动时交付代币，常见于代币前项目</li><li><strong>代币购买:</strong>以低于未来公开价格直接购买代币</li><li><strong>股权:</strong>公司的传统股权 (在纯协议项目中较少见)</li><li><strong>混合:</strong>股权和代币</li></ul><p><strong>需要谈判的关键条款:</strong></p><ul><li><strong>估值:</strong>完全稀释估值 (FDV) 与市值</li><li><strong>归属:</strong>团队通常为 4 年，1 年悬崖;风投通常获得较短的归属期</li><li><strong>锁定:</strong>TGE 后风投可以出售之前的期限 (通常为 6-24 个月)</li><li><strong>线性与悬崖:</strong>线性释放 (每月) 与悬崖 (每季度/每年)</li><li><strong>折扣:</strong>风投通常获得公开销售价格的 20-50% 折扣</li><li><strong>比例权:</strong>在未来轮次中保持所有权百分比的权利</li></ul><p><strong>红旗:</strong></p><ul><li>无锁定 (风投可以在启动后立即抛售)</li><li>过度分配 (超过 20% 给风投会造成压力)</li><li>控制条款 (风投不应控制去中心化协议)</li><li>不利的代币经济学 (团队/社区获得太少)</li></ul>"
+			},
+			"valuations": {
+				"title": "加密货币估值",
+				"content": "<p>加密货币估值是艺术 + 科学，通常基于可比协议、增长指标和代币经济学。</p><p><strong>估值方法:</strong></p><ul><li><strong>可比倍数:</strong>查看类似项目的 FDV/TVL、FDV/收入、FDV/用户</li><li><strong>网络价值:</strong>梅特卡夫定律(价值与用户²成正比)</li><li><strong>DCF(贴现现金流):</strong>预测未来收入/费用并贴现到现值</li><li><strong>基于阶段:</strong>种子前 500 万至 2000 万美元，种子轮 2000 万至 1 亿美元，A 轮 1 亿至 5 亿美元，B 轮及以上 5 亿美元以上</li></ul><p><strong>DeFi 协议估值:</strong></p><ul><li><strong>高 TVL(超过 10 亿美元):</strong>0.3-1.5 倍 TVL 的 FDV 是合理的</li><li><strong>增长收入:</strong>高增长的年化收入 10-50 倍</li><li><strong>强大的代币经济学:</strong>具有真实收益和回购的协议溢价</li></ul><p><strong>市场周期很重要:</strong></p><ul><li><strong>牛市 (2021):</strong>种子轮在 1 亿至 5 亿美元 FDV 很常见</li><li><strong>熊市 (2022-2023):</strong>同一阶段为 2000 万至 5000 万美元 FDV</li><li><strong>复苏 (2024+):</strong>估值正在恢复但更理性</li></ul><p><strong>典型分配:</strong></p><ul><li>团队:15-25%</li><li>投资者:15-30%</li><li>金库/DAO:30-50%</li><li>社区/生态系统:20-40%</li></ul>"
+			}
+		},
+		"crowdfunding": {
+			"title": "众筹与社区融资",
+			"content": "<p>加密货币众筹允许你从社区筹集资金，同时保持一致性和去中心化。</p>",
+			"juicebox": {
+				"title": "Juicebox 协议",
+				"content": "<p>Juicebox 是一个以太坊原生众筹平台，项目可以筹集 ETH 并向支持者分发治理代币或 NFT。</p><p><strong>工作原理:</strong></p><ol><li>创建项目并设置融资目标/条款</li><li>贡献者向你的项目发送 ETH</li><li>他们收到项目代币或 NFT</li><li>你可以设置溢出 (超额资金可由贡献者收回)</li><li>融资周期允许动态治理</li></ol><p><strong>成功的 Juicebox 项目:</strong></p><ul><li><strong>ConstitutionDAO:</strong>1 周内筹集 4700 万美元 (尽管在宪法拍卖中失败)</li><li><strong>AssangeDAO:</strong>5300 万美元用于支持 Julian Assange 的法律辩护</li><li><strong>MoonDAO:</strong>社区资助的太空计划</li><li><strong>StudioDAO:</strong>去中心化电影融资</li></ul><p><strong>关键特性:</strong></p><ul><li>具有内置治理的可编程金库</li><li>为贡献者提供溢出保护</li><li>不同贡献等级的 NFT 奖励</li><li>用于迭代开发的融资周期</li></ul>"
+			},
+			"token_sales": {
+				"title": "代币销售与启动平台",
+				"content": "<p>代币销售让项目通过直接向支持者出售代币来筹集资金，无论是通过公开销售还是启动平台。</p><p><strong>销售模式:</strong></p><ul><li><strong>公开销售:</strong>向任何人开放，通常超额认购</li><li><strong>白名单销售:</strong>预先批准的参与者，减少机器人活动</li><li><strong>荷兰式拍卖:</strong>价格从高开始下降直到清算</li><li><strong>联合曲线:</strong>价格随每次购买而增加</li></ul><p><strong>启动平台:</strong></p><ul><li><strong>CoinList:</strong>首选平台，需要合规，美国认可</li><li><strong>Republic Crypto:</strong>Reg CF 众筹，零售可访问</li><li><strong>DAO Maker:</strong>强大的持有者基础 (SHO 模型)</li><li><strong>Polkastarter:</strong>多链启动平台</li></ul><p><strong>监管考虑:</strong></p><ul><li><strong>美国:</strong>由于证券法而困难，考虑排除美国或使用 Reg D/Reg CF</li><li><strong>实用代币:</strong>如果真正去中心化且功能性，可能不是证券</li><li><strong>SAFT:</strong>有助于延迟代币交付，直到网络去中心化</li><li><strong>法律顾问:</strong>必不可少——加密证券法很复杂</li></ul>"
+			},
+			"investment_daos": {
+				"title": "投资 DAO",
+				"content": "<p>投资 DAO 汇集成员资金，集体投资加密项目，通常比散户获得更好的条款。</p><p><strong>工作原理:</strong></p><ul><li>成员向 DAO 金库贡献资金</li><li>DAO 投票决定投资哪些项目</li><li>DAO 接收代币或股权</li><li>回报流回 DAO 成员</li></ul><p><strong>投资 DAO 类型:</strong></p><ul><li><strong>Syndicate:</strong>创建具有法律结构的投资 DAO 平台</li><li><strong>AngelList Crypto:</strong>加密交易的滚动基金和辛迪加</li><li><strong>Echo:</strong>社区驱动的分配 (成员可以领取部分)</li><li><strong>MetaCartel Ventures:</strong>早期加密 DAO 投资者</li></ul><p><strong>对于创始人:</strong></p><ul><li>投资 DAO 可以写较小的支票 (2.5 万至 25 万美元),而不是传统风投</li><li>通常更注重社区和参与</li><li>可以提供草根支持和传播</li><li>尽职调查流程可能更长 (需要 DAO 投票)</li></ul><p><strong>对于投资者:</strong></p><ul><li>访问通常保留给风投的交易</li><li>通过参与尽职调查学习</li><li>投资组合多元化</li><li>监管不确定性 (DAO 结构处于法律灰色地带)</li></ul>"
+			}
+		},
+		"application_tips": {
+			"title": "申请技巧与最佳实践",
+			"content": "<p>无论是申请赠款还是向风投推销，你的申请都是你的第一印象。让它发挥作用。</p>",
+			"grant_applications": {
+				"title": "撰写强有力的赠款申请",
+				"content": "<p>赠款审查员阅读数十或数百份申请。通过清晰、具体和影响导向来让你的申请脱颖而出。</p><p><strong>基本组成部分:</strong></p><ul><li><strong>问题陈述:</strong>你正在解决什么具体问题？为什么重要？</li><li><strong>解决方案:</strong>你的项目如何独特地解决这个问题？</li><li><strong>影响:</strong>谁受益？你将如何衡量成功？</li><li><strong>团队:</strong>为什么你有独特的资格？相关经验？</li><li><strong>里程碑:</strong>具有时间表的具体、可衡量的可交付成果</li><li><strong>预算:</strong>透明细分资金使用方式</li><li><strong>先前工作:</strong>GitHub 仓库、演示、先前赠款、牵引力</li></ul><p><strong>要做:</strong></p><ul><li>与赠款计划的既定优先事项保持一致</li><li>提供实时演示、GitHub 或原型的链接</li><li>对可交付成果要具体 (而非模糊的承诺)</li><li>显示你已经开始 (投入其中)</li><li>解释这如何使更广泛的生态系统受益，而不仅仅是你的项目</li></ul><p><strong>不要做:</strong></p><ul><li>提交用于多个赠款的通用申请</li><li>在没有明确里程碑的情况下申请资金</li><li>过度承诺或提出不切实际的时间表</li><li>隐藏团队成员或保持匿名 (赠款的红旗)</li><li>忽略赠款的重点领域</li></ul>"
+			},
+			"pitch_decks": {
+				"title": "创建有效的推介演示",
+				"content": "<p>风投看到数百份演示。你的推介演示需要在 10-15 张幻灯片中讲述一个引人注目的故事，让他们兴奋地了解更多。</p><p><strong>标准演示结构:</strong></p><ol><li><strong>封面:</strong>名称、标语、标志</li><li><strong>问题:</strong>有什么问题？为什么是现在？</li><li><strong>解决方案:</strong>你的独特方法</li><li><strong>产品:</strong>演示或截图</li><li><strong>市场:</strong>TAM/SAM/SOM、增长趋势</li><li><strong>牵引力:</strong>用户、TVL、收入、增长率</li><li><strong>代币经济学:</strong>供应、分配、效用、价值累积</li><li><strong>路线图:</strong>你将用资金构建什么</li><li><strong>团队:</strong>创始人和关键雇员、相关经验</li><li><strong>竞争:</strong>格局和你的差异化</li><li><strong>商业模式:</strong>你如何获取价值</li><li><strong>融资:</strong>筹集金额、资金使用、目标里程碑</li></ol><p><strong>加密特定幻灯片包括:</strong></p><ul><li><strong>代币经济学:</strong>对于评估代币投资的风投至关重要</li><li><strong>智能合约审计:</strong>如果已部署</li><li><strong>治理:</strong>协议将如何治理</li><li><strong>市场推广:</strong>你将如何引导流动性/用户</li></ul><p><strong>设计技巧:</strong></p><ul><li>使用高质量的视觉效果和一致的品牌</li><li>每张幻灯片一个想法 (不是文字墙)</li><li>以数据和图表为先导 (风投喜欢指标)</li><li>包含创始人照片 (建立信任)</li></ul>"
+			},
+			"milestones": {
+				"title": "设定可实现的里程碑",
+				"content": "<p>里程碑证明你可以执行并帮助资助者跟踪进度。它们应该是具体、可衡量和有时限的。</p><p><strong>好的里程碑:</strong></p><ul><li>「将经审计的智能合约部署到主网」(具体、可验证)</li><li>「达到 1000 万美元 TVL」(可衡量)</li><li>「与 5 个 DEX 集成以进行流动性聚合」(具体数量)</li><li>「在 iOS 和 Android 上启动移动应用」(明确可交付)</li><li>「发布来自 Trail of Bits 的安全审计」(具体、可验证)</li></ul><p><strong>糟糕的里程碑:</strong></p><ul><li>「构建产品」(模糊)</li><li>「发展社区」(不可衡量)</li><li>「改进 UX」(主观)</li><li>「研究解决方案」(没有具体输出)</li></ul><p><strong>基于里程碑的融资:</strong></p><ul><li><strong>第一批 (30%):</strong>初步开发和测试</li><li><strong>第二批 (40%):</strong>主网启动和审计</li><li><strong>第三批 (30%):</strong>增长和生态系统集成</li></ul><p><strong>报告:</strong></p><ul><li>许多赠款需要月度或季度更新</li><li>对进度和障碍保持透明</li><li>分享 GitHub 提交、已部署合约、指标仪表板的链接</li><li>公开更新建立信任，可能导致后续资金</li></ul>"
+			}
+		},
+		"building_relationships": {
+			"title": "建立关系",
+			"content": "<p>融资关乎关系，而非交易。最好的创始人在需要钱之前就建立关系。</p>",
+			"networking": {
+				"title": "在加密货币中建立人脉",
+				"content": "<p>加密货币是一个小而紧密的行业。你的声誉和关系是你最宝贵的资产。</p><p><strong>在哪里建立人脉:</strong></p><ul><li><strong>会议:</strong>Devcon、ETHDenver、EthCC、Consensus、TOKEN2049</li><li><strong>黑客松:</strong>ETHGlobal 活动、Buildathons、链特定黑客松</li><li><strong>Twitter/X:</strong>与风投、建设者和意见领袖互动</li><li><strong>Discord/Telegram:</strong>加入你欣赏的项目社区</li><li><strong>播客:</strong>上播客分享你的故事</li><li><strong>演示日:</strong>加速器演示日 (Alliance、Kernel、Outlier Ventures)</li></ul><p><strong>有效的人脉策略:</strong></p><ul><li><strong>首先增加价值:</strong>在寻求帮助之前帮助他人</li><li><strong>真正好奇:</strong>向他人学习，不只是推销</li><li><strong>跟进:</strong>见面后发送便条</li><li><strong>保持联系:</strong>即使不筹款时也分享更新</li><li><strong>令人难忘:</strong>有一个清晰、简洁的方式解释你的项目</li></ul><p><strong>建立风投关系:</strong></p><ul><li>在需要资金之前开始对话</li><li>分享月度更新 (产品、指标、学习)</li><li>寻求建议，而非金钱 (最初)</li><li>向他们介绍其他有趣的创始人</li><li>当你确实筹款时，你会有温暖的介绍</li></ul>"
+			},
+			"community_building": {
+				"title": "社区建设",
+				"content": "<p>你的社区是你的护城河。强大的社区导致更好的融资、用户获取和长期可持续性。</p><p><strong>从零开始构建:</strong></p><ul><li><strong>从价值开始:</strong>在请求支持之前创建有用的内容、工具或见解</li><li><strong>找到早期信徒:</strong>与志同道合的个人进行一对一对话</li><li><strong>创建聚集空间:</strong>Discord、Telegram 或论坛</li><li><strong>真诚参与:</strong>创始人应在社区中活跃</li><li><strong>认可贡献者:</strong>突出并奖励社区成员</li></ul><p><strong>社区主导的融资:</strong></p><ul><li><strong>Gitcoin 赠款:</strong>小额捐赠者获得平方匹配 (有利于广泛支持)</li><li><strong>Mirror 众筹:</strong>为融资撰写 NFT</li><li><strong>Juicebox:</strong>具有贡献者治理的社区金库</li><li><strong>社区轮次:</strong>在风投轮次之前向社区分配代币销售名额</li></ul><p><strong>长期社区价值:</strong></p><ul><li>社区成员成为传播者</li><li>早期支持者提供反馈和错误报告</li><li>社区增长吸引风投兴趣</li><li>去中心化所有权创造韧性</li></ul>"
+			},
+			"public_goods": {
+				"title": "构建公共产品",
+				"content": "<p>公共产品是非竞争性和非排他性的——任何人都可以使用它们，而不会减少他人的访问。它们在传统市场中长期资金不足，但由于追溯融资和赠款，在加密货币中蓬勃发展。</p><p><strong>加密公共产品示例:</strong></p><ul><li><strong>基础设施:</strong>RPC 节点、索引器、存档节点</li><li><strong>开发者工具:</strong>库、测试框架、样板代码</li><li><strong>标准:</strong>ERC、协议规范</li><li><strong>教育:</strong>教程、文档、翻译</li><li><strong>研究:</strong>学术论文、机制设计</li><li><strong>审计与安全:</strong>开源审计报告、安全工具</li></ul><p><strong>为什么构建公共产品:</strong></p><ul><li><strong>追溯融资:</strong>Optimism RetroPGF、Gitcoin 等在事后奖励影响</li><li><strong>赠款:</strong>比商业产品更容易获得公共产品赠款</li><li><strong>声誉:</strong>构建受尊重的公共产品确立你作为领导者的地位</li><li><strong>网络效应:</strong>你的工具被广泛采用，创造护城河</li></ul><p><strong>可持续性模式:</strong></p><ul><li><strong>赠款:</strong>来自生态系统的持续资金</li><li><strong>追溯融资:</strong>定期轮次奖励过去的影响</li><li><strong>免费增值:</strong>免费开源 + 付费托管/支持层</li><li><strong>DAO 所有权:</strong>用于社区融资的治理代币</li></ul><p><strong>理念:</strong>\"构建公共产品，获得追溯奖励\"是一个强大的新模式。不要等待前期资金——构建有价值的东西，展示影响，资金将随之而来。</p>"
+			}
+		}
+	},
+
+	"glossary": {
+		"grant": {
+			"term": "赠款",
+			"definition": "提供给项目的非稀释性资金，通常专注于公共产品、基础设施或生态系统发展。与风投融资不同，赠款不需要放弃股权或代币。"
+		},
+		"retroactive_funding": {
+			"term": "追溯融资",
+			"definition": "在项目展示影响后奖励项目的融资模式，而不是预测未来成功。由 Optimism 的 RetroPGF 计划推广。"
+		},
+		"quadratic_funding": {
+			"term": "平方融资",
+			"definition": "民主融资机制，其中匹配资金根据贡献者数量分配，而不仅仅是金额。来自更多人的较小捐赠比来自少数人的大额捐赠获得更大的匹配。"
+		},
+		"safe": {
+			"term": "SAFE(未来股权简单协议)",
+			"definition": "投资合同，投资者提供资金以换取在未来某个日期获得股权的权利，通常有折扣。在加密货币中，SAFT(未来代币简单协议) 是代币等效物。"
+		},
+		"valuation": {
+			"term": "估值",
+			"definition": "项目或协议的估计价值。在加密货币中，通常以 FDV(完全稀释估值) 衡量 = 代币价格 × 总供应量，即使代币尚未流通。"
+		},
+		"runway": {
+			"term": "跑道",
+			"definition": "项目在资金耗尽前可以运营的时间，计算为：当前资金 ÷ 月度消耗率。示例：银行中有 50 万美元，每月消耗 5 万美元 = 10 个月跑道。"
+		},
+		"milestone": {
+			"term": "里程碑",
+			"definition": "项目承诺实现的具体、可衡量的目标，通常与融资批次相关联。好的里程碑是具体的 (例如，\"将经审计的合约部署到主网\"),而不是模糊的 (例如，\"改进产品\")。"
+		},
+		"treasury": {
+			"term": "金库",
+			"definition": "由 DAO 或协议控制的资金，通常保存在多签或由代币持有者治理。用于赠款、开发、合作伙伴关系和生态系统增长。"
+		},
+		"dao_grants": {
+			"term": "DAO 赠款",
+			"definition": "由 DAO 使用其金库资助和治理的赠款。示例包括 Uniswap 赠款、Aave 赠款和 Compound 赠款，代币持有者对分配进行投票。"
+		},
+		"public_goods": {
+			"term": "公共产品",
+			"definition": "非竞争性 (一个人的使用不会减少可用性) 和非排他性 (无法阻止他人使用) 的产品或服务。示例：开源代码、文档、研究。"
+		}
+	}
+}

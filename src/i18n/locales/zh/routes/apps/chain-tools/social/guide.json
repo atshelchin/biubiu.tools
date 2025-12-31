@@ -1,0 +1,153 @@
+{
+	"title": "Web3 社交完整指南",
+	"subtitle": "掌握去中心化社交媒体,拥有你的数字身份",
+
+	"sections": {
+		"intro": {
+			"title": "Web3 社交革命",
+			"content": "<p>社交媒体已经坏掉了。少数几家公司控制着数十亿人在线上看到什么、说什么、分享什么。他们拥有你的数据、你的受众和你的内容。他们可以封禁你、隐藏你的内容,或者一夜之间改变算法——摧毁你多年的努力。</p><p><strong>Web3 社交是解药。</strong>它建立在区块链技术之上,赋予你真正拥有身份、内容和连接的权利。没有中心化权威可以剥夺它们。你的粉丝是你的,你的内容是你的,你可以直接变现而无需中间商抽走 30-50% 的提成。</p><p>在这份综合指南中,你将学习去中心化社交网络如何运作、哪些平台正在引领革命,以及如何在新创作者经济中建立你的影响力。无论你是创作者、开发者,还是只是厌倦了大科技公司的控制,这都是你通往 Web3 社交的路线图。</p>"
+		},
+
+		"social_protocols": {
+			"title": "去中心化社交协议",
+			"content": "<p>与传统社交媒体中每个平台都是围墙花园不同,Web3 社交建立在开放协议之上。这些协议就像社交基础设施——任何人都可以在其上构建应用程序,你的数据可以在所有应用程序中使用。</p>",
+			"lens_protocol": {
+				"title": "Lens Protocol:可组合的社交图谱",
+				"content": "<p>由 Aave 团队创建的 Lens Protocol 是 Web3 中最具创新性的社交协议。它将社交关系视为 Polygon 上的 NFT,使你的社交图谱<strong>可组合且可移植</strong>。</p><p><strong>Lens 的工作原理:</strong></p><ul><li><strong>个人资料是 NFT:</strong>你的用户名 (@yourusername.lens) 是你拥有的 NFT</li><li><strong>关注是 NFT:</strong>当有人关注你时,他们会获得一个关注 NFT</li><li><strong>内容是模块化的:</strong>帖子可以包括收藏、镜像和评论</li><li><strong>内置变现:</strong>为关注、收藏或订阅设置价格</li></ul><p><strong>为什么重要:</strong>在 Twitter 上,如果你被封禁,你的 10 万粉丝就没了。在 Lens 上,你的粉丝是钱包中的 NFT——没人能夺走它们。任何建立在 Lens 上的应用都可以立即访问你的整个社交图谱。</p><p><strong>热门 Lens 应用:</strong></p><ul><li><strong>Hey (原 Lenster):</strong>类似 Twitter 的体验,最受欢迎的 Lens 客户端</li><li><strong>Orb:</strong>移动优先的社交应用,界面精美</li><li><strong>Tape:</strong>去中心化视频平台(类似 YouTube)</li><li><strong>Buttrfly:</strong>跨协议聚合器</li></ul>"
+			},
+			"farcaster": {
+				"title": "Farcaster:充分去中心化的社交",
+				"content": "<p>Farcaster 采用务实的去中心化方法。由前 Coinbase 高管创建,它被设计为\"充分去中心化\"——结合区块链的身份和链下数据以提高性能。</p><p><strong>架构:</strong></p><ul><li><strong>链上:</strong>用户 ID 和名称注册表(在 Optimism 上)</li><li><strong>链下:</strong>帖子、点赞、回复存储在去中心化中心</li><li><strong>结果:</strong>快速、类似 Twitter 的用户体验,无需高昂的 gas 费用</li></ul><p><strong>Frames:</strong>Farcaster 的杀手级功能。Frames 是直接嵌入在帖子中的交互式迷你应用——你可以铸造 NFT、兑换代币、玩游戏或对提案投票,而无需离开你的动态。</p><p><strong>生态系统:</strong></p><ul><li><strong>Warpcast:</strong>Farcaster 团队构建的旗舰客户端(加密圈的 Twitter)</li><li><strong>Supercast:</strong>面向高级用户的高级客户端</li><li><strong>Moxie:</strong>基于 Farcaster 的粉丝代币经济</li><li><strong>Neynar:</strong>用于构建 Farcaster 应用的开发者 API</li></ul><p><strong>增长:</strong>Farcaster 在 2024 年从约 5 万用户增长到 35 万以上,受到 Frames 创新和强大的加密原生社区的推动。</p>"
+			},
+			"cyberconnect": {
+				"title": "CyberConnect:多链社交图谱",
+				"content": "<p>CyberConnect 专注于成为跨多个区块链的通用社交图谱。它不是构建另一个社交网络,而是提供任何应用都可以接入的身份和连接层。</p><p><strong>关键特性:</strong></p><ul><li><strong>多链:</strong>跨 Ethereum、BSC、Polygon、Optimism 等工作</li><li><strong>Link3:</strong>他们的旗舰应用,用于 Web3 活动、凭证和专业网络</li><li><strong>W3ST:</strong>社区社交代币标准</li><li><strong>认证:</strong>可验证的凭证和声誉</li></ul><p>可以将 CyberConnect 视为 LinkedIn 遇到 Web3——专注于专业身份和可验证的成就,而不是休闲发帖。</p>"
+			}
+		},
+
+		"decentralized_content": {
+			"title": "去中心化内容发布",
+			"content": "<p>Web3 不仅仅是关于短帖子——它正在革新长篇内容、新闻通讯和视频。创作者可以直接发布到区块链,确保永久可用性和真正的所有权。</p>",
+			"publishing_platforms": {
+				"title": "写作和发布",
+				"content": "<p><strong>Mirror:</strong>Web3 发布的先驱。Mirror 将 Medium 风格的写作与 NFT 铸造和众筹结合起来。</p><ul><li><strong>NFT 文章:</strong>将文章转化为可收藏的 NFT——粉丝可以收藏以支持你</li><li><strong>分配合约:</strong>自动在协作者之间分配收入</li><li><strong>众筹:</strong>在写作前通过销售 NFT 版本筹集资金</li><li><strong>永久:</strong>内容存储在 Arweave 上,无法被审查或删除</li></ul><p><strong>成功案例:</strong></p><ul><li>Packy McCormick 通过 Mirror 为 Not Boring 新闻通讯筹集了 10 万美元以上</li><li>DAO 使用 Mirror 进行治理提案和文档记录</li><li>加密研究人员发布无法被删除的报告</li></ul><p><strong>Paragraph:</strong>带有内置变现功能的 Web3 新闻通讯。</p><ul><li>电子邮件 + 链上订阅</li><li>持有者的代币门控内容</li><li>将单个新闻通讯版本作为 NFT 收藏</li><li>直接拥有受众(电子邮件导出为 NFT)</li></ul><p>两个平台都让创作者在没有平台风险的情况下建立业务。你的内容、你的受众、你的收入——没有中间商。</p>"
+			},
+			"video_streaming": {
+				"title": "视频和直播",
+				"content": "<p>视频是去中心化社交的最后前沿。在链上存储和流式传输视频是昂贵的,因此 Web3 视频平台使用巧妙的混合方法。</p><p><strong>Tape (Lens Protocol):</strong></p><ul><li>建立在 Lens 上,所以你的 Lens 粉丝会自动看到你的视频</li><li>视频存储在去中心化存储上(IPFS/Arweave)</li><li>通过收藏、打赏和订阅变现</li><li>你的视频库可以在任何 Lens 应用中移植</li></ul><p><strong>Unlonely:</strong></p><ul><li>带有实时区块链交互的直播</li><li>观众可以铸造瞬间、打赏创作者、对内容投票</li><li>通过代币机制实现游戏化参与</li><li>被加密播客和现场节目使用</li></ul><p><strong>Drakula:</strong></p><ul><li>Farcaster 上的短视频(抖音风格)</li><li>与 Frames 集成以实现动态内交互</li><li>通过参与代币奖励创作者</li></ul><p>趋势很明确:视频创作者正在转向链上以拥有受众并获得更好的变现。</p>"
+			}
+		},
+
+		"social_tokens": {
+			"title": "社交代币和创作者币",
+			"content": "<p>Web3 社交通过社交代币实现创作者和粉丝之间的直接财务关系。创作者可以发行自己的代币,而不是依赖平台广告或订阅。</p>",
+			"creator_coins": {
+				"title": "创作者币和密钥",
+				"content": "<p><strong>Friend.tech:</strong>2023 年末主导加密圈的病毒式社交交易平台。</p><p><strong>概念:</strong>你的社交访问被代币化。要给某人发消息或查看他们的私人内容,你需要购买他们的\"密钥\"(份额)。随着更多人购买,价格上涨(联合曲线)。</p><p><strong>机制:</strong></p><ul><li>建立在 Base 上(Coinbase 的 L2)</li><li>用 ETH 买卖密钥</li><li>密钥持有者获得聊天访问权和独家内容</li><li>创作者从所有交易中赚取 5% 的费用</li><li>协议收取 5% 的费用</li></ul><p><strong>巅峰影响:</strong>Friend.tech 在最初几个月的交易量超过 5 亿美元。影响者从密钥交易中赚了数百万。但是...</p><p><strong>现实检验:</strong>投机泡沫破裂了。大多数密钥损失了 90% 以上的价值。教训?社交代币在有真正效用(独家内容、活动、访问权)时才有效,而不是纯粹的投机。</p><p><strong>Moxie (Farcaster):</strong>从 Friend.tech 的错误中学习,Moxie 构建了一个更可持续的模型。</p><ul><li>为 Farcaster 用户和频道提供粉丝代币</li><li>通过优质参与而不仅仅是购买来赚取代币</li><li>用于打赏、解锁内容、治理</li><li>更公平的分配——不仅仅是付费玩</li></ul>"
+			},
+			"community_tokens": {
+				"title": "社区代币",
+				"content": "<p>除了个人创作者代币,Web3 社交还支持社区拥有的代币经济:</p><p><strong>DAO 代币:</strong>像 Friends With Benefits ($FWB) 这样的社区使用代币进行会员资格:</p><ul><li>持有 X 代币以加入独家 Discord/活动</li><li>对社区决策进行投票</li><li>访问线下活动、合作、机会</li></ul><p><strong>频道代币:</strong>Farcaster 频道可以拥有自己的代币用于:</p><ul><li>打赏优质贡献者</li><li>奖励参与</li><li>解锁高级功能</li><li>对频道规则进行治理</li></ul><p><strong>最佳实践:</strong></p><ol><li><strong>从效用开始,而非投机:</strong>给代币明确的用例</li><li><strong>奖励参与:</strong>不要只是出售——奖励优质内容</li><li><strong>先建立再代币化:</strong>首先建立社区,然后再代币化</li><li><strong>公平分配:</strong>避免巨鲸集中,将代币分散给活跃成员</li></ol>"
+			}
+		},
+
+		"messaging": {
+			"title": "Web3 消息和通信",
+			"content": "<p>Web3 中的消息传递意味着钱包到钱包的通信——无需电话号码、电子邮件、无中心化服务器读取你的消息。</p>",
+			"xmtp": {
+				"title": "XMTP:钱包到钱包消息传递",
+				"content": "<p>XMTP(可扩展消息传输协议)是基于钱包的消息传递的领先协议。</p><p><strong>工作原理:</strong></p><ul><li>你的钱包地址就是你的身份</li><li>默认端到端加密</li><li>消息存储在去中心化网络中</li><li>可在集成 XMTP 的任何应用中使用</li></ul><p><strong>为什么重要:</strong></p><ul><li><strong>无审查:</strong>没有中心化服务器可以关闭</li><li><strong>可移植:</strong>你的消息可在所有 XMTP 应用中使用</li><li><strong>抗垃圾邮件:</strong>可以按代币持有量、NFT 所有权等过滤</li><li><strong>可编程:</strong>启用机器人、支付、通知</li></ul><p><strong>使用 XMTP 的应用:</strong></p><ul><li>Coinbase Wallet 消息传递</li><li>Lens Protocol 私信</li><li>Converse(独立 XMTP 应用)</li><li>许多 Web3 游戏和应用</li></ul><p><strong>用例:</strong></p><ul><li>无需 Discord 的 DAO 协调</li><li>NFT 持有者专属聊天</li><li>创作者与粉丝的直接沟通</li><li>DeFi 协议的客户支持</li></ul>"
+			},
+			"push_protocol": {
+				"title": "Push Protocol:Web3 通知",
+				"content": "<p>Push Protocol(原 EPNS)为 Web3 带来通知——这是经常被忽视的关键基础设施。</p><p><strong>问题:</strong>在 Web3 中,你需要主动检查所有内容。你的拍卖结束了吗?你的提案被投票了吗?有人给你发送代币了吗?Push 解决了这个问题。</p><p><strong>功能:</strong></p><ul><li><strong>频道订阅:</strong>订阅你关心的协议/DAO</li><li><strong>直接消息:</strong>像 XMTP 一样的钱包到钱包聊天</li><li><strong>可自定义:</strong>为每个频道设置通知偏好</li><li><strong>多平台:</strong>浏览器、移动端、与应用集成</li></ul><p><strong>实际用途:</strong></p><ul><li>Aave 清算警告</li><li>ENS 域名到期提醒</li><li>治理提案通知</li><li>NFT 销售/报价通知</li><li>DeFi 收益策略更新</li></ul><p>Push 是必不可少的基础设施——使 Web3 用户体验与 Web2 竞争。</p>"
+			}
+		},
+
+		"social_fi": {
+			"title": "SocialFi:将你的社交影响力变现",
+			"content": "<p>SocialFi(社交 + 金融)是关于从你的社交活动中赚钱。在 Web2 中,平台将你的内容变现。在 Web3 中,你自己变现。</p>",
+			"monetization": {
+				"title": "创作者变现模式",
+				"content": "<p><strong>1. 内容收藏:</strong></p><p>在 Lens 上,读者可以将你的帖子作为 NFT \"收藏\"。设置你的价格:</p><ul><li>免费收藏以扩大影响力</li><li>付费收藏(0.01-10+ ETH)用于高级内容</li><li>限量版创造稀缺性</li><li>限时收藏创造紧迫感</li></ul><p>示例:一位流行的 Lens 创作者通过付费收藏从一篇病毒式帖子中赚取了 5 万美元。</p><p><strong>2. 订阅 NFT:</strong></p><ul><li>粉丝铸造订阅 NFT 以获得每月访问权</li><li>代币门控内容、聊天或特权</li><li>可续订的订阅与效用</li><li>Paragraph 和 Mirror 支持此模型</li></ul><p><strong>3. 打赏和捐赠:</strong></p><ul><li>任何代币的直接钱包到钱包打赏</li><li>Farcaster 的 Warps 功能内置打赏</li><li>无平台费用——100% 归创作者</li></ul><p><strong>4. 社交代币交易:</strong></p><ul><li>创作者从密钥/代币交易中赚取费用</li><li>Friend.tech:每笔交易 5%</li><li>Moxie:从参与中赚取,而不仅仅是交易</li></ul><p><strong>5. NFT 发行和合作:</strong></p><ul><li>向你的受众推出 NFT 系列</li><li>Zora 使这在 Lens/Farcaster 上无缝衔接</li><li>通过智能合约与合作者分享收入</li></ul>"
+			},
+			"tips_subscriptions": {
+				"title": "打赏、订阅和赞助",
+				"content": "<p><strong>赞助模式:</strong></p><p>Web3 社交实现了类似于 Patreon 的直接创作者-粉丝关系,但更好:</p><p><strong>相比 Patreon 的优势:</strong></p><ul><li><strong>更低的费用:</strong>Patreon 收取 8-12%。区块链费用通常为 2-5%</li><li><strong>全球性:</strong>加密货币在任何地方都有效。无区域支付限制</li><li><strong>所有权:</strong>支持者拥有的 NFT 可能升值或授予福利</li><li><strong>可组合:</strong>你的订阅 NFT 可在多个应用中使用</li><li><strong>二级市场:</strong>支持者可以转售订阅(你可以赚取版税)</li></ul><p><strong>混合模式:</strong></p><p>许多创作者使用多平台策略:</p><ul><li>在 Lens/Farcaster 上发布免费内容以建立受众</li><li>为超级粉丝提供付费收藏的高级帖子</li><li>在 Mirror 上发布带有 NFT 版本的长篇内容</li><li>在 Paragraph 上发布带有代币门控存档的新闻通讯</li><li>为代币/NFT 持有者提供独家聊天</li></ul><p><strong>真实示例:</strong></p><p>加密艺术家每天在 Lens 上发帖(免费),每周在 Mirror 上发布深度分析(0.01 ETH 收藏),并为其创作者 NFT 持有者提供独家教程。这比他们以前的 Patreon 赚得更多,参与度更好。</p>"
+			}
+		},
+
+		"building_presence": {
+			"title": "建立你的 Web3 社交影响力",
+			"content": "<p>准备好投入了吗?这是你在去中心化社交媒体中建立自己的实用手册。</p>",
+			"choosing_platform": {
+				"title": "选择你的平台",
+				"content": "<p><strong>如果以下情况,从 Farcaster 开始:</strong></p><ul><li>你已经活跃在加密/技术领域</li><li>你想要类似 Twitter 的用户体验和参与度</li><li>你重视速度和易用性</li><li>你对 Frames 和创新功能感兴趣</li></ul><p><strong>如果以下情况,从 Lens 开始:</strong></p><ul><li>你是内容创作者(作家、艺术家、视频)</li><li>你想要最大的控制权和可组合性</li><li>你正在建立长期品牌</li><li>变现是优先事项</li></ul><p><strong>两者都用:</strong>许多加密原生用户都在两个平台上。使用:</p><ul><li>Farcaster 进行实时讨论和网络</li><li>Lens 进行内容发布和变现</li><li>Firefly 或 Buttrfly 应用在一个界面中管理两者</li></ul><p><strong>第一步:</strong></p><ol><li><strong>Farcaster:</strong>下载 Warpcast,每年支付 5 美元获得用户名,开始发帖</li><li><strong>Lens:</strong>访问 Hey.xyz,声明你的用户名(免费),设置个人资料</li><li><strong>重要:</strong>在两个平台上使用相同的用户名以保持品牌一致性</li></ol>"
+			},
+			"content_strategy": {
+				"title": "Web3 社交的内容策略",
+				"content": "<p><strong>表现良好的内容:</strong></p><p>Web3 社交的动态与 Twitter 或 Instagram 不同:</p><ul><li><strong>教育内容:</strong>简单地解释复杂的主题</li><li><strong>链上洞察:</strong>分享有趣的钱包/合约发现</li><li><strong>公开建设:</strong>分享你的旅程、胜利和失败</li><li><strong>协议深度分析:</strong>关于 DeFi、NFT 等的优质研究</li><li><strong>表情包:</strong>是的,它们在这里也有效</li></ul><p><strong>不起作用的内容:</strong></p><ul><li>纯粹的参与度养殖(\"转发这个\")</li><li>从 Twitter 复制粘贴的 alpha</li><li>未披露的推销</li><li>通用的励志名言</li></ul><p><strong>发帖节奏:</strong></p><ul><li><strong>每天:</strong>1-3 条优质帖子(不要更多——质量 > 数量)</li><li><strong>每周:</strong>1 篇长篇文章(Mirror/Paragraph)</li><li><strong>参与:</strong>评论他人的帖子,进行真正的对话</li></ul><p><strong>语气和风格:</strong></p><p>Web3 受众重视:</p><ul><li><strong>真实性:</strong>做你自己,而不是公司账户</li><li><strong>透明度:</strong>披露利益冲突</li><li><strong>有帮助:</strong>自由分享知识</li><li><strong>尊重:</strong>不同意但不攻击</li></ul>"
+			},
+			"growing_audience": {
+				"title": "增长你的受众",
+				"content": "<p><strong>优质粉丝增长策略:</strong></p><p><strong>1. 一致性:</strong>至少定期发帖 3-6 个月。Web3 社交奖励耐心。</p><p><strong>2. 真诚参与:</strong></p><ul><li>用有价值的评论回复大账户的帖子</li><li>提问、发起讨论</li><li>支持其他创作者</li></ul><p><strong>3. 交叉推广:</strong></p><ul><li>在 Twitter/Farcaster 上分享你的 Lens 个人资料,反之亦然</li><li>在电子邮件签名、网站中提及你的 Web3 用户名</li><li>在活动中使用 QR 码链接到你的个人资料</li></ul><p><strong>4. 合作:</strong></p><ul><li>与其他 Web3 创作者共同创作内容</li><li>在 Mirror 上撰写带有收入分配的联合文章</li><li>在已建立的频道上发表客座帖子</li></ul><p><strong>5. 提供独家价值:</strong></p><ul><li>给你的粉丝早期 alpha</li><li>工具、仪表板或资源</li><li>精选列表和推荐</li></ul><p><strong>6. 利用频道/社区:</strong></p><ul><li>Farcaster 频道就像 subreddit——找到你的利基</li><li>为相关频道贡献优质内容</li><li>在自我推广之前建立声誉</li></ul><p><strong>飞轮:</strong></p><ol><li>发布优质内容 → 获得参与</li><li>参与带来粉丝 → 更多影响力</li><li>通过收藏/订阅变现 → 重新投资于更好的内容</li><li>更好的内容 → 更多参与 → 重复</li></ol><p><strong>避免陷阱:</strong></p><ul><li><strong>不要购买粉丝/参与度:</strong>这很明显并损害信誉</li><li><strong>不要发垃圾邮件:</strong>一个好帖子胜过十个平庸的帖子</li><li><strong>不要只自我推广:</strong>80% 价值,20% 推广</li><li><strong>不要忽视你的受众:</strong>回复评论,表示感谢</li></ul>"
+			}
+		},
+
+		"future_of_social": {
+			"title": "Web3 社交的未来",
+			"content": "<p>去中心化社交仍处于早期阶段,但趋势很明显。这是它的发展方向。</p>",
+			"interoperability": {
+				"title": "跨协议互操作性",
+				"content": "<p><strong>愿景:</strong>你的社交身份应该在任何地方都有效。在 Lens 上发帖,有人在 Farcaster 上阅读。在 Farcaster 上关注某人,通过 XMTP 给他们发消息。</p><p><strong>当前进展:</strong></p><ul><li><strong>聚合器:</strong>像 Firefly 和 Buttrfly 这样的应用已经在一个动态中显示 Lens + Farcaster</li><li><strong>消息传递:</strong>XMTP 集成到多个平台</li><li><strong>身份:</strong>ENS 名称跨链和平台工作</li><li><strong>存储:</strong>IPFS/Arweave 支持跨平台内容永久性</li></ul><p><strong>剩余挑战:</strong></p><ul><li>不同的数据模型(Lens 使用 NFT,Farcaster 使用中心)</li><li>不同的功能集(Lens 收藏 vs Farcaster frames)</li><li>性能与去中心化的权衡</li></ul><p><strong>2025+ 路线图:</strong></p><ul><li>通用社交图谱桥接</li><li>跨链关注和交互</li><li>所有平台的统一通知</li><li>可互操作的内容变现</li></ul><p>想想电子邮件——无论你使用 Gmail 还是 Outlook,你仍然可以通信。这就是 Web3 社交的发展方向。</p>"
+			},
+			"ai_integration": {
+				"title": "AI 和 Web3 社交",
+				"content": "<p>AI 正在以强大的方式改变 Web3 社交:</p><p><strong>1. AI 代理作为社交参与者:</strong></p><ul><li>拥有钱包地址的自主 AI 代理在社交媒体上发帖</li><li>推荐个性化内容的 AI 策展人</li><li>有意义地参与的聊天机器人,而不是垃圾邮件</li></ul><p><strong>2. 内容创作辅助:</strong></p><ul><li>AI 帮助创作者产生更多、更好的内容</li><li>生成图像、编辑视频、撰写草稿</li><li>但是——创作者的声音和策略仍然是人类的</li></ul><p><strong>3. 发现和策展:</strong></p><ul><li>学习你兴趣的 AI 驱动动态</li><li>比简单的时间顺序或算法动态更智能</li><li>用户控制——你选择你的 AI 策展人</li></ul><p><strong>4. 审核:</strong></p><ul><li>AI 帮助标记垃圾邮件、欺诈和滥用</li><li>社区训练的模型,而不是公司黑箱</li><li>透明且可上诉</li></ul><p><strong>5. 验证和信任:</strong></p><ul><li>AI 帮助验证人类 vs 机器人</li><li>与社交集成的人格证明</li><li>基于链上行为的声誉评分</li></ul><p><strong>平衡:</strong></p><p>Web3 社交 + AI 可能是令人难以置信的或反乌托邦的。与 Web2 的关键区别:</p><ul><li><strong>用户控制:</strong>你选择你的 AI 工具,而不是被平台强制</li><li><strong>开源:</strong>AI 模型可以被审计</li><li><strong>所有权:</strong>你的数据训练你的 AI,而不是别人的</li></ul><p>想象一下:一个 AI 助手了解你的兴趣(来自你的链上活动),策展你的动态,帮助你创建内容,并管理你的变现——但你拥有它,而不是 Meta 或 Twitter。</p><p>这就是现在正在构建的未来。</p>"
+			}
+		}
+	},
+
+	"glossary": {
+		"social_graph": {
+			"term": "社交图谱",
+			"definition": "社交平台上用户之间的连接网络。在 Web3 中,你的社交图谱是可移植的,由你拥有,而不是平台。"
+		},
+		"composable": {
+			"term": "可组合",
+			"definition": "不同应用程序和协议无缝协作的能力。可组合的社交图谱意味着你的粉丝可以在该协议上构建的所有应用中使用。"
+		},
+		"social_nft": {
+			"term": "社交 NFT",
+			"definition": "代表社交互动(如关注、收藏或会员资格)的 NFT。实现可移植的社交关系和变现。"
+		},
+		"social_fi": {
+			"term": "SocialFi",
+			"definition": "社交媒体和金融的交集。通过区块链上的代币、NFT、打赏和订阅将社交活动变现。"
+		},
+		"creator_economy": {
+			"term": "创作者经济",
+			"definition": "创作者直接将其内容和受众变现的生态系统,无需平台中介。Web3 通过 NFT 和代币为此提供超级动力。"
+		},
+		"frames": {
+			"term": "Frames",
+			"definition": "嵌入在 Farcaster 帖子中的交互式迷你应用。用户可以铸造 NFT、兑换代币、投票或玩游戏,而无需离开动态。"
+		},
+		"wallet_messaging": {
+			"term": "钱包到钱包消息传递",
+			"definition": "区块链地址之间的直接通信,无需电话号码或电子邮件。通常是端到端加密和去中心化的。"
+		},
+		"decentralized_identity": {
+			"term": "去中心化身份",
+			"definition": "不受任何公司控制的自有数字身份。通常与你的钱包地址或基于区块链的标识符绑定。"
+		},
+		"attestations": {
+			"term": "认证",
+			"definition": "关于用户的可验证凭证或声明,存储在链上。用于声誉、成就、技能和信任信号。"
+		},
+		"content_nft": {
+			"term": "内容 NFT",
+			"definition": "代表内容(文章、视频、帖子)所有权或可收藏性的 NFT。实现新的变现和永久性模型。"
+		}
+	}
+}

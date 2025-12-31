@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Connext - Protocolo de Transferencia Cross-Chain",
+		"description": "Connext permite transferencias y mensajería cross-chain con mínima confianza. Transfiere activos y datos entre cadenas con seguridad criptográfica.",
+		"keywords": "Connext, puente cross-chain, xCall, token NEXT, interoperabilidad, mínima confianza"
+	},
+	"overview": "Connext es un protocolo de mínima confianza para transferencias y mensajería cross-chain. Se enfoca en garantías de seguridad que no dependen de terceros de confianza, usando pruebas criptográficas y verificación optimista.\n\nEl protocolo usa una red de routers para liquidez y xCall para mensajería cross-chain. Las transferencias están aseguradas por las cadenas subyacentes en lugar de un conjunto separado de validadores. Esto proporciona supuestos de seguridad más fuertes que muchos puentes.\n\nEl token NEXT se usa para gobernanza e incentivar routers que proporcionan liquidez. Connext potencia el puente para varias aplicaciones y es conocido por su enfoque en descentralización y seguridad.",
+	"features": {
+		"1": {
+			"title": "Mínima Confianza",
+			"description": "Seguridad criptográfica"
+		},
+		"2": {
+			"title": "Mensajería xCall",
+			"description": "Llamadas cross-chain"
+		},
+		"3": {
+			"title": "Red de Routers",
+			"description": "Liquidez descentralizada"
+		},
+		"4": {
+			"title": "Token NEXT",
+			"description": "Gobernanza e incentivos"
+		},
+		"5": {
+			"title": "Multi-Cadena",
+			"description": "Soporte de red creciente"
+		},
+		"6": {
+			"title": "Enfoque Desarrollador",
+			"description": "Construye dApps cross-chain"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Puente Seguro",
+			"description": "Transferencias con mínima confianza"
+		},
+		"2": {
+			"title": "dApps Cross-Chain",
+			"description": "Integración xCall"
+		},
+		"3": {
+			"title": "Operaciones de Router",
+			"description": "Proveer liquidez"
+		},
+		"4": {
+			"title": "Gobernanza NEXT",
+			"description": "Votación del protocolo"
+		},
+		"5": {
+			"title": "Integración de Protocolo",
+			"description": "Añadir a tu protocolo"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué hace a Connext de mínima confianza?",
+			"answer": "Connext usa verificación optimista asegurada por las cadenas subyacentes. En lugar de confiar en un conjunto de validadores, la seguridad viene de pruebas criptográficas. Si algo sale mal, puede probarse on-chain."
+		},
+		"2": {
+			"question": "¿Qué es xCall?",
+			"answer": "xCall es la primitiva de mensajería cross-chain de Connext. Permite que contratos inteligentes llamen funciones en otras cadenas. Construye dApps donde la lógica abarca múltiples blockchains—gobernanza cross-chain, liquidez unificada, etc."
+		},
+		"3": {
+			"question": "¿Cómo funcionan los routers?",
+			"answer": "Los routers son proveedores de liquidez que adelantan fondos en la cadena destino. Hacen staking de NEXT y ganan tarifas de las transferencias que facilitan. Cualquiera puede ejecutar un router, haciendo la red descentralizada."
+		},
+		"4": {
+			"question": "¿Qué es el token NEXT?",
+			"answer": "NEXT gobierna el protocolo Connext e incentiva routers. Haz staking de NEXT para ejecutar un router y ganar tarifas. Los holders de tokens votan en parámetros del protocolo y actualizaciones."
+		},
+		"5": {
+			"question": "¿Connext vs otros puentes?",
+			"answer": "Connext prioriza la mínima confianza y seguridad sobre velocidad pura. Algunos puentes son más rápidos pero dependen de partes de confianza. Elige Connext si los supuestos de seguridad te importan."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para puentes con mínima confianza?",
+		"button": "Usar Connext",
+		"note": "Protocolo de transferencia cross-chain"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "LlamaRisk - Evaluación de Riesgos DeFi",
+		"description": "LlamaRisk proporciona análisis independiente de riesgos para protocolos DeFi. Evaluaciones de riesgo de activos, recomendaciones de parámetros e investigación de seguridad.",
+		"keywords": "LlamaRisk, riesgo DeFi, evaluación de riesgos, análisis de activos, Aave, Curve, seguridad de protocolos"
+	},
+	"overview": "LlamaRisk es un equipo independiente de evaluación de riesgos enfocado en protocolos DeFi. Analizan activos colaterales, proporcionan recomendaciones de parámetros y publican investigación sobre riesgos de protocolos.\n\nOriginalmente conocidos por su trabajo en Curve y Aave, LlamaRisk evalúa nuevos listados de activos, identifica riesgos en parámetros de protocolos y proporciona monitoreo continuo. Sus evaluaciones ayudan a la gobernanza a tomar decisiones informadas.\n\nLlamaRisk publica reportes detallados en Substack cubriendo riesgos de stablecoins, análisis de colaterales y temas de seguridad DeFi. Son asesores de confianza para procesos importantes de gobernanza DeFi.",
+	"features": {
+		"1": {
+			"title": "Análisis de Riesgo de Activos",
+			"description": "Evaluación de colaterales"
+		},
+		"2": {
+			"title": "Asesoría de Parámetros",
+			"description": "Configuraciones de protocolo"
+		},
+		"3": {
+			"title": "Investigación Pública",
+			"description": "Reportes publicados"
+		},
+		"4": {
+			"title": "Soporte de Gobernanza",
+			"description": "Decisiones informadas"
+		},
+		"5": {
+			"title": "Análisis de Stablecoins",
+			"description": "Evaluación de riesgo de paridad"
+		},
+		"6": {
+			"title": "Independiente",
+			"description": "Análisis imparcial"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Evaluación de Activos",
+			"description": "Análisis de nuevos listados"
+		},
+		"2": {
+			"title": "Gobernanza",
+			"description": "Votación informada"
+		},
+		"3": {
+			"title": "Investigación de Riesgos",
+			"description": "Aprender de reportes"
+		},
+		"4": {
+			"title": "Equipos de Protocolo",
+			"description": "Asesoría de riesgos"
+		},
+		"5": {
+			"title": "Due Diligence",
+			"description": "Entender riesgos"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué hace LlamaRisk?",
+			"answer": "LlamaRisk evalúa riesgos en protocolos DeFi. Analizan activos colaterales, recomiendan parámetros (loan-to-value, umbrales de liquidación) y publican investigación. Ayudan a la gobernanza a tomar decisiones más seguras."
+		},
+		"2": {
+			"question": "¿Qué protocolos usan LlamaRisk?",
+			"answer": "LlamaRisk trabaja con protocolos principales incluyendo Aave y Curve. Han analizado cientos de activos para decisiones de listado. Sus recomendaciones influyen en miles de millones en TVL."
+		},
+		"3": {
+			"question": "¿Cómo puedo leer su investigación?",
+			"answer": "LlamaRisk publica en Substack (cryptorisks.substack.com). Los reportes cubren riesgos de stablecoins, análisis de activos y temas de seguridad DeFi. Gratis para leer y valioso para entender riesgos de protocolos."
+		},
+		"4": {
+			"question": "¿LlamaRisk vs Gauntlet?",
+			"answer": "Ambos trabajan en riesgos DeFi. Gauntlet se enfoca en optimización de parámetros basada en simulación. LlamaRisk hace análisis cualitativo de activos e investigación. Diferentes enfoques—muchos protocolos usan ambos."
+		},
+		"5": {
+			"question": "¿Puedo contratar a LlamaRisk?",
+			"answer": "LlamaRisk acepta contratos de protocolos para asesoría de riesgos. Contáctalos para análisis personalizado. La mayoría de su investigación se hace para DAOs principales a través de grants de gobernanza."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para entender los riesgos DeFi?",
+		"button": "Leer LlamaRisk",
+		"note": "Análisis de riesgos independiente"
+	}
+}

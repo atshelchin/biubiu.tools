@@ -53,7 +53,9 @@
       "Bash(for tool in alchemy ankr arweave chainstack filecoin infura ipfs moralis push-protocol quicknode tenderly thegraph xmtp)",
       "Bash(do echo -n \"$tool: \")",
       "Bash(npx tsc:*)",
-      "Bash(npm run lint:*)"
+      "Bash(npm run lint:*)",
+      "Bash(npm run format:*)",
+      "Bash(npm run check:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Orbiter Finance - Puente L2",
+		"description": "Orbiter Finance se especializa en puentes rápidos y baratos entre L2s de Ethereum. Optimizado para zkSync, Arbitrum, Optimism y otros rollups.",
+		"keywords": "Orbiter Finance, puente L2, puente zkSync, puente Arbitrum, puente rollup, cross-L2"
+	},
+	"overview": "Orbiter Finance es un puente descentralizado optimizado para transferencias L2 de Ethereum. Destaca en puentes rápidos y de bajo costo entre rollups como zkSync, Arbitrum, Optimism, Base y Linea.\n\nOrbiter usa un modelo maker-taker donde los proveedores de liquidez (makers) adelantan los fondos en la cadena destino. Esto permite transferencias casi instantáneas sin esperar la finalidad de L1. El protocolo es no custodial y de mínima confianza.\n\nParticularmente popular en el ecosistema zkSync, Orbiter maneja volumen significativo entre L2s. Las tarifas son competitivas, a menudo más bajas que las alternativas para rutas L2-a-L2. Es el puente preferido para usuarios de rollups.",
+	"features": {
+		"1": {
+			"title": "Optimizado para L2",
+			"description": "Construido para rollups"
+		},
+		"2": {
+			"title": "Transferencias Rápidas",
+			"description": "Puente casi instantáneo"
+		},
+		"3": {
+			"title": "Tarifas Bajas",
+			"description": "Tarifas L2 competitivas"
+		},
+		"4": {
+			"title": "No Custodial",
+			"description": "Diseño descentralizado"
+		},
+		"5": {
+			"title": "Múltiples L2s",
+			"description": "Todos los rollups principales"
+		},
+		"6": {
+			"title": "Enfoque ETH",
+			"description": "ETH y stablecoins"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "L2 a L2",
+			"description": "Puente rápido de rollup"
+		},
+		"2": {
+			"title": "Puente zkSync",
+			"description": "Ruta zkSync popular"
+		},
+		"3": {
+			"title": "Farming de Airdrops",
+			"description": "Actividad en L2s"
+		},
+		"4": {
+			"title": "Depósitos Rápidos",
+			"description": "Onboarding L2 rápido"
+		},
+		"5": {
+			"title": "Ahorro de Costos",
+			"description": "Más barato que puentes oficiales"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Por qué usar Orbiter para L2s?",
+			"answer": "Orbiter está optimizado para transferencias L2-a-L2. Mientras que los puentes oficiales son lentos (esperan finalidad L1), el modelo maker de Orbiter proporciona transferencias casi instantáneas. Las tarifas también son más bajas. Es la forma más rápida entre rollups."
+		},
+		"2": {
+			"question": "¿Qué tan rápidas son las transferencias?",
+			"answer": "La mayoría de transferencias se completan en 1-5 minutos. El maker adelanta fondos en destino inmediatamente después de ver tu depósito. Mucho más rápido que puentes oficiales que pueden tomar horas por finalidad L1."
+		},
+		"3": {
+			"question": "¿Qué L2s están soportados?",
+			"answer": "Orbiter soporta Arbitrum, Optimism, zkSync Era, Base, Linea, Scroll, Polygon zkEVM, StarkNet y más. El enfoque está en L2s/rollups de Ethereum. Consulta su app para redes soportadas actuales."
+		},
+		"4": {
+			"question": "¿Hay un token?",
+			"answer": "Orbiter ha insinuado un token pero no ha lanzado uno aún. Los usuarios hacen puente a través de la plataforma potencialmente ganando airdrops futuros. Consulta sus canales oficiales para actualizaciones."
+		},
+		"5": {
+			"question": "¿Cómo funcionan las tarifas?",
+			"answer": "Las tarifas incluyen una pequeña tarifa de protocolo más gas en ambas cadenas. El gas L2 es barato, así que los costos totales son bajos. Compara con agregadores como Bungee para tu ruta específica—Orbiter es a menudo mejor para L2-L2."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para puente L2 rápido?",
+		"button": "Usar Orbiter",
+		"note": "Puente optimizado para L2"
+	}
+}

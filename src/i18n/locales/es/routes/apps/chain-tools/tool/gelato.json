@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Gelato Network - Automatización Web3",
+		"description": "Gelato automatiza la ejecución de contratos inteligentes. Programa transacciones, crea bots y construye dApps automatizadas sin gestionar infraestructura.",
+		"keywords": "Gelato Network, automatización Web3, automatización de contratos inteligentes, red de keepers, token GEL, bots"
+	},
+	"overview": "Gelato Network automatiza la ejecución de contratos inteligentes, sirviendo como una red de bots descentralizada para Web3. Programa transacciones futuras, automatiza estrategias DeFi o activa acciones basadas en condiciones on-chain.\n\nEn lugar de ejecutar tu propia infraestructura de keepers, la red de ejecutores de Gelato maneja la automatización de forma confiable. Los desarrolladores definen condiciones y acciones; Gelato asegura que se ejecuten cuando se cumplen las condiciones.\n\nGelato se ha expandido hacia abstracción de cuentas (relay para txs sin gas), rollup-as-a-service y más. El token GEL se usa para staking y gobernanza. Es infraestructura central para dApps automatizadas.",
+	"features": {
+		"1": {
+			"title": "Automatización de Tareas",
+			"description": "Programa llamadas a contratos"
+		},
+		"2": {
+			"title": "Ejecutores Descentralizados",
+			"description": "Red de bots confiable"
+		},
+		"3": {
+			"title": "Servicio Relay",
+			"description": "Meta-transacciones sin gas"
+		},
+		"4": {
+			"title": "Multi-Cadena",
+			"description": "Todas las cadenas EVM principales"
+		},
+		"5": {
+			"title": "Token GEL",
+			"description": "Staking y gobernanza"
+		},
+		"6": {
+			"title": "RaaS",
+			"description": "Rollup-as-a-Service"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Automatización DeFi",
+			"description": "Auto-compound, rebalanceo"
+		},
+		"2": {
+			"title": "Órdenes Límite",
+			"description": "Activar en condiciones de precio"
+		},
+		"3": {
+			"title": "Protección de Liquidación",
+			"description": "Auto-pago antes de liquidación"
+		},
+		"4": {
+			"title": "Transacciones Sin Gas",
+			"description": "Relay de transacciones de usuarios"
+		},
+		"5": {
+			"title": "Acciones Programadas",
+			"description": "Ejecución basada en tiempo"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Para qué se usa Gelato?",
+			"answer": "Gelato automatiza la ejecución de contratos inteligentes. Casos de uso: vaults de auto-compound, órdenes límite DEX, protección de liquidación, pagos programados, cualquier lógica 'si esto entonces aquello' on-chain. Es el cron jobs de Web3."
+		},
+		"2": {
+			"question": "¿Cómo funciona la automatización?",
+			"answer": "Define una condición (precio alcanza X) y acción (ejecutar swap). Los ejecutores de Gelato monitorean la condición. Cuando se cumple, envían la transacción. Pagas gas más una pequeña comisión de Gelato."
+		},
+		"3": {
+			"question": "¿Gelato vs Chainlink Automation?",
+			"answer": "Ambos automatizan contratos inteligentes. Chainlink tiene integración de oráculos más amplia. Gelato se enfoca en ejecución con más flexibilidad. Gelato tiene relay sin gas. Ambos son confiables—elige según las características específicas necesarias."
+		},
+		"4": {
+			"question": "¿Qué es el token GEL?",
+			"answer": "GEL se usa para staking por ejecutores que operan infraestructura de automatización. Los stakers ganan comisiones. Los holders de GEL gobiernan el protocolo. Alinea incentivos para una red de automatización confiable."
+		},
+		"5": {
+			"question": "¿Qué es Gelato RaaS?",
+			"answer": "Gelato ofrece Rollup-as-a-Service—despliega tu propia cadena L2/L3 fácilmente. Ellos gestionan la infraestructura. Varios proyectos usan Gelato para sus rollups. Es una expansión más allá de la automatización central."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para automatizar tu dApp?",
+		"button": "Explorar Gelato",
+		"note": "La capa de automatización de Web3"
+	}
+}

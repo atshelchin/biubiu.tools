@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Code4rena - Auditorías de Seguridad Competitivas",
+		"description": "Code4rena ejecuta concursos de auditoría competitivos. Cientos de investigadores de seguridad compiten para encontrar bugs en tu protocolo por recompensas.",
+		"keywords": "Code4rena, concurso de auditoría, bug bounty, auditoría competitiva, seguridad DeFi, auditoría de contratos inteligentes"
+	},
+	"overview": "Code4rena (C4) fue pionero en concursos de auditoría competitivos. En lugar de contratar un auditor, los protocolos organizan concursos donde cientos de investigadores de seguridad compiten para encontrar vulnerabilidades. Más ojos, más bugs encontrados.\n\nLos wardens (auditores) envían hallazgos clasificados por severidad. Los bugs de mayor severidad pagan más. Los mejores wardens ganan recompensas significativas. Esta gamificación atrae talento y crea cobertura exhaustiva.\n\nCode4rena ha ejecutado concursos para protocolos importantes como Aave, OpenSea y ENS. El modelo competitivo frecuentemente encuentra bugs que las auditorías tradicionales pasan por alto. Se ha convertido en infraestructura esencial para la seguridad DeFi.",
+	"features": {
+		"1": {
+			"title": "Auditorías Competitivas",
+			"description": "Cientos de ojos"
+		},
+		"2": {
+			"title": "Red de Wardens",
+			"description": "Talento de seguridad top"
+		},
+		"3": {
+			"title": "Ranking por Severidad",
+			"description": "Hallazgos priorizados"
+		},
+		"4": {
+			"title": "Reportes Públicos",
+			"description": "Resultados transparentes"
+		},
+		"5": {
+			"title": "Protocolos Principales",
+			"description": "Adopción de la industria"
+		},
+		"6": {
+			"title": "Comunidad",
+			"description": "Ecosistema de seguridad"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Auditoría de Protocolo",
+			"description": "Revisión competitiva"
+		},
+		"2": {
+			"title": "Caza de Bugs",
+			"description": "Gana como warden"
+		},
+		"3": {
+			"title": "Pre-Lanzamiento",
+			"description": "Validación de seguridad"
+		},
+		"4": {
+			"title": "Investigación",
+			"description": "Estudiar hallazgos pasados"
+		},
+		"5": {
+			"title": "Complementar Auditorías",
+			"description": "Cobertura adicional"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Cómo funcionan los concursos de Code4rena?",
+			"answer": "El protocolo envía código y pool de premios. El concurso dura 3-7 días. Los wardens envían hallazgos. Los jueces clasifican por severidad. Los pagos se basan en severidad y unicidad. Los hallazgos más altos/únicos pagan más."
+		},
+		"2": {
+			"question": "¿Cuánto cuesta un concurso?",
+			"answer": "Los concursos típicamente van de $50K a $200K+ dependiendo del tamaño del código y el pool de premios. Pools más grandes atraen más wardens. Code4rena cobra una comisión además del pool de premios."
+		},
+		"3": {
+			"question": "¿Cómo me convierto en warden?",
+			"answer": "Regístrate en Code4rena, únete a Discord y empieza a competir. Cualquiera puede participar. Las ganancias dependen de encontrar bugs válidos. Estudia reportes pasados para aprender. Los mejores wardens ganan seis cifras."
+		},
+		"4": {
+			"question": "¿Code4rena vs auditorías tradicionales?",
+			"answer": "Auditorías tradicionales: equipo dedicado, revisión exhaustiva. C4: muchos ojos, presión competitiva. Se complementan—muchos protocolos hacen ambas. C4 frecuentemente encuentra bugs que las auditorías dedicadas pasan por alto."
+		},
+		"5": {
+			"question": "¿Los resultados de los concursos son públicos?",
+			"answer": "Sí. Después del juicio, los reportes se publican. Cualquiera puede leer los hallazgos. Esta transparencia ayuda al ecosistema a aprender. Explora concursos pasados para estudiar patrones de vulnerabilidades."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para auditoría competitiva?",
+		"button": "Explorar Code4rena",
+		"note": "Concursos de seguridad competitivos"
+	}
+}

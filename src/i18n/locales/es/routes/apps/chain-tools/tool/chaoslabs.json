@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Chaos Labs - Simulación de Riesgos DeFi",
+		"description": "Chaos Labs proporciona simulación de riesgos y optimización de parámetros para protocolos DeFi. Modelado basado en agentes para protocolos más seguros y eficientes.",
+		"keywords": "Chaos Labs, riesgo DeFi, simulación, optimización de parámetros, Aave, GMX, gestión de riesgos"
+	},
+	"overview": "Chaos Labs es una plataforma de simulación de riesgos DeFi que ayuda a los protocolos a optimizar parámetros y gestionar riesgos. Sus simulaciones basadas en agentes modelan condiciones de mercado complejas para encontrar configuraciones seguras.\n\nChaos Labs trabaja con protocolos importantes como Aave, GMX, dYdX y Uniswap. Proporcionan recomendaciones de parámetros, dashboards de riesgo y monitoreo continuo. Sus modelos ayudan a prevenir cascadas de liquidación e insolvencia.\n\nCreciendo rápidamente en el espacio, Chaos Labs recaudó financiación significativa para expandir sus capacidades de simulación. Se están convirtiendo en un actor clave en infraestructura de riesgo DeFi junto a Gauntlet.",
+	"features": {
+		"1": {
+			"title": "Simulación por Agentes",
+			"description": "Modelado complejo"
+		},
+		"2": {
+			"title": "Optimización de Parámetros",
+			"description": "Seguro + eficiente"
+		},
+		"3": {
+			"title": "Dashboards de Riesgo",
+			"description": "Monitoreo en tiempo real"
+		},
+		"4": {
+			"title": "Oráculos",
+			"description": "Oráculos de riesgo"
+		},
+		"5": {
+			"title": "Protocolos Principales",
+			"description": "Clientes DeFi top"
+		},
+		"6": {
+			"title": "Investigación",
+			"description": "Análisis publicado"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Equipos de Protocolo",
+			"description": "Optimización de riesgos"
+		},
+		"2": {
+			"title": "Gobernanza",
+			"description": "Decisiones de parámetros"
+		},
+		"3": {
+			"title": "Monitoreo",
+			"description": "Dashboards de riesgo"
+		},
+		"4": {
+			"title": "Investigación",
+			"description": "Aprender de modelos"
+		},
+		"5": {
+			"title": "Due Diligence",
+			"description": "Evaluación de protocolos"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué hace Chaos Labs?",
+			"answer": "Chaos Labs simula el comportamiento de protocolos DeFi bajo diversas condiciones de mercado. Recomiendan parámetros, monitorean riesgos y ayudan a los protocolos a evitar la insolvencia. Es como pruebas de estrés para DeFi."
+		},
+		"2": {
+			"question": "¿Qué protocolos usan Chaos Labs?",
+			"answer": "Protocolos principales incluyendo Aave, GMX, dYdX, Uniswap y otros. Están creciendo su base de clientes rápidamente. Consulta los foros de gobernanza para ver sus recomendaciones."
+		},
+		"3": {
+			"question": "¿Chaos Labs vs Gauntlet?",
+			"answer": "Ambos hacen trabajo similar—simulación de riesgos DeFi y optimización de parámetros. Gauntlet está más establecido; Chaos Labs crece rápido. Compiten por relaciones con protocolos. Ambos son respetados."
+		},
+		"4": {
+			"question": "¿Puedo usar sus herramientas?",
+			"answer": "Chaos Labs trabaja principalmente con protocolos directamente. Algunos dashboards de riesgo son públicos. Su investigación y recomendaciones se publican en foros de gobernanza. No es un producto para consumidores."
+		},
+		"5": {
+			"question": "¿Qué son los oráculos de riesgo?",
+			"answer": "Chaos Labs está desarrollando oráculos de riesgo on-chain—contratos inteligentes que proporcionan parámetros de riesgo. Los protocolos podrían ajustar configuraciones automáticamente según condiciones de mercado. Infraestructura innovadora."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para simulación de riesgos?",
+		"button": "Explorar Chaos Labs",
+		"note": "Simulación de riesgos DeFi"
+	}
+}

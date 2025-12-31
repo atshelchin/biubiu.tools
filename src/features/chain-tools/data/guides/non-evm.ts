@@ -37,21 +37,18 @@ export const nonEvmGuide: CategoryGuide = {
 				{
 					id: 'solana-architecture',
 					titleKey: 'routes/apps/chain-tools/non-evm/guide.sections.solana.architecture.title',
-					contentKey:
-						'routes/apps/chain-tools/non-evm/guide.sections.solana.architecture.content',
+					contentKey: 'routes/apps/chain-tools/non-evm/guide.sections.solana.architecture.content',
 					toolMentions: [{ toolId: 'solana-network' }, { toolId: 'solana-explorer' }]
 				},
 				{
 					id: 'solana-development',
 					titleKey: 'routes/apps/chain-tools/non-evm/guide.sections.solana.development.title',
-					contentKey:
-						'routes/apps/chain-tools/non-evm/guide.sections.solana.development.content'
+					contentKey: 'routes/apps/chain-tools/non-evm/guide.sections.solana.development.content'
 				},
 				{
 					id: 'solana-ecosystem',
 					titleKey: 'routes/apps/chain-tools/non-evm/guide.sections.solana.ecosystem.title',
-					contentKey:
-						'routes/apps/chain-tools/non-evm/guide.sections.solana.ecosystem.content',
+					contentKey: 'routes/apps/chain-tools/non-evm/guide.sections.solana.ecosystem.content',
 					toolMentions: [
 						{ toolId: 'jupiter-solana', context: 'DEX aggregator' },
 						{ toolId: 'raydium', context: 'AMM' },
@@ -79,8 +76,7 @@ export const nonEvmGuide: CategoryGuide = {
 				{
 					id: 'cosmos-appchains',
 					titleKey: 'routes/apps/chain-tools/non-evm/guide.sections.cosmos.appchains.title',
-					contentKey:
-						'routes/apps/chain-tools/non-evm/guide.sections.cosmos.appchains.content',
+					contentKey: 'routes/apps/chain-tools/non-evm/guide.sections.cosmos.appchains.content',
 					toolMentions: [
 						{ toolId: 'osmosis', context: 'DEX chain' },
 						{ toolId: 'injective', context: 'trading chain' }
@@ -117,8 +113,7 @@ export const nonEvmGuide: CategoryGuide = {
 				{
 					id: 'aptos',
 					titleKey: 'routes/apps/chain-tools/non-evm/guide.sections.move_chains.aptos.title',
-					contentKey:
-						'routes/apps/chain-tools/non-evm/guide.sections.move_chains.aptos.content',
+					contentKey: 'routes/apps/chain-tools/non-evm/guide.sections.move_chains.aptos.content',
 					toolMentions: [
 						{ toolId: 'aptos-network' },
 						{ toolId: 'petra-wallet' },
@@ -231,8 +226,7 @@ export const nonEvmGuide: CategoryGuide = {
 		{
 			id: 'parallel-execution',
 			termKey: 'routes/apps/chain-tools/non-evm/guide.glossary.parallel_execution.term',
-			definitionKey:
-				'routes/apps/chain-tools/non-evm/guide.glossary.parallel_execution.definition',
+			definitionKey: 'routes/apps/chain-tools/non-evm/guide.glossary.parallel_execution.definition',
 			relatedToolIds: ['solana-network', 'sui-network', 'aptos-network']
 		},
 		{
