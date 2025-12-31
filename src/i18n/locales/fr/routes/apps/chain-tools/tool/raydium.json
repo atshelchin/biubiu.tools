@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Raydium - Solana's Premier AMM & Liquidity Protocol",
+		"description": "Provide liquidity and trade on Solana's leading AMM. Raydium powers DeFi with deep liquidity pools and concentrated liquidity.",
+		"keywords": "Raydium, Solana AMM, liquidity pool, RAY token, Solana DeFi, yield farming"
+	},
+	"overview": "Raydium is the leading automated market maker (AMM) on Solana, providing deep liquidity for token swaps and enabling users to earn yield through liquidity provision. Launched in 2021, Raydium has been central to Solana's DeFi ecosystem.\n\nThe protocol pioneered on-chain order book integration with Serum (now OpenBook), allowing liquidity to be shared between AMM pools and central limit order books. This hybrid model provides better price discovery and deeper liquidity than pure AMMs.\n\nRaydium offers both standard AMM pools and concentrated liquidity positions (CLMM), allowing LPs to earn higher yields by focusing liquidity in specific price ranges. The platform also hosts AcceleRaytor, a launchpad for new Solana projects.",
+	"features": {
+		"1": {
+			"title": "Concentrated Liquidity",
+			"description": "Earn higher yields by providing liquidity in custom price ranges"
+		},
+		"2": {
+			"title": "Standard AMM Pools",
+			"description": "Simple full-range liquidity with automatic rebalancing"
+		},
+		"3": {
+			"title": "Token Swaps",
+			"description": "Trade tokens with deep liquidity and low slippage"
+		},
+		"4": {
+			"title": "AcceleRaytor",
+			"description": "Participate in new token launches and IDOs"
+		},
+		"5": {
+			"title": "RAY Staking",
+			"description": "Stake RAY tokens to earn protocol rewards"
+		},
+		"6": {
+			"title": "Permissionless Pools",
+			"description": "Create pools for any token pair without approval"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Liquidity Provision",
+			"description": "Earn trading fees by providing liquidity to pools"
+		},
+		"2": {
+			"title": "Token Trading",
+			"description": "Swap tokens with minimal slippage"
+		},
+		"3": {
+			"title": "Yield Farming",
+			"description": "Earn RAY rewards on select pools"
+		},
+		"4": {
+			"title": "New Token Launches",
+			"description": "Participate in AcceleRaytor IDOs"
+		},
+		"5": {
+			"title": "Pool Creation",
+			"description": "Launch liquidity for new tokens"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Is Raydium safe?",
+			"answer": "Raydium is one of the most established Solana protocols, running since 2021 without major security incidents. The contracts are audited and open source. However, like all DeFi, there are smart contract risks. Use appropriate caution with large amounts."
+		},
+		"2": {
+			"question": "What is impermanent loss?",
+			"answer": "Impermanent loss occurs when the price ratio of paired tokens changes. If one token moons or dumps, LPs may end up with less value than simply holding. Concentrated liquidity amplifies both yields and IL risk. Understand this before providing liquidity."
+		},
+		"3": {
+			"question": "What is RAY token?",
+			"answer": "RAY is Raydium's governance and utility token. It's used for staking rewards, governance voting, and AcceleRaytor participation. RAY can be staked to earn protocol revenue share. It's tradeable on major exchanges."
+		},
+		"4": {
+			"question": "Raydium vs Orca: Which is better?",
+			"answer": "Both are excellent Solana AMMs. Raydium has deeper liquidity for major pairs and AcceleRaytor launchpad. Orca has a simpler interface and Whirlpools for concentrated liquidity. Many LPs use both. Jupiter will route through whichever offers better prices."
+		},
+		"5": {
+			"question": "Should I use standard or concentrated liquidity?",
+			"answer": "Standard pools are simpler—deposit and earn on the full price range. Concentrated liquidity (CLMM) earns more but requires active management and has higher IL risk. Start with standard pools until you understand the dynamics."
+		}
+	},
+	"cta": {
+		"ready": "Ready to provide liquidity on Solana?",
+		"button": "Open Raydium",
+		"note": "Solana's leading AMM"
+	}
+}

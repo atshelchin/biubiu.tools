@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Linea - zkEVM L2 by Consensys",
+		"description": "Linea is a zkEVM Layer 2 built by Consensys, the team behind MetaMask. Fast, secure, and developer-friendly Ethereum scaling.",
+		"keywords": "Linea, zkEVM, Consensys, Ethereum L2, MetaMask, Layer 2"
+	},
+	"overview": "Linea is a zkEVM Layer 2 network built by Consensys, the company behind MetaMask and Infura. Launched in 2023, Linea offers EVM-equivalent compatibility with the security benefits of zero-knowledge proofs.\n\nBeing built by Consensys gives Linea unique advantages—native MetaMask integration, enterprise relationships, and access to Consensys's extensive developer tools. The network focuses on developer experience and enterprise adoption.\n\nLinea uses a type-2 zkEVM, meaning existing Ethereum smart contracts work without modification. The network has attracted significant TVL and a growing ecosystem of DeFi, NFT, and gaming applications.",
+	"features": {
+		"1": {
+			"title": "Type-2 zkEVM",
+			"description": "Full EVM equivalence with ZK security"
+		},
+		"2": {
+			"title": "MetaMask Native",
+			"description": "Built-in MetaMask support and easy onboarding"
+		},
+		"3": {
+			"title": "Consensys Ecosystem",
+			"description": "Integration with Infura, Truffle, and more"
+		},
+		"4": {
+			"title": "Low Fees",
+			"description": "Transaction costs significantly lower than Ethereum"
+		},
+		"5": {
+			"title": "Fast Finality",
+			"description": "Quick transaction confirmation times"
+		},
+		"6": {
+			"title": "Enterprise Ready",
+			"description": "Built with enterprise adoption in mind"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi Deployment",
+			"description": "Deploy Ethereum dApps with lower costs"
+		},
+		"2": {
+			"title": "NFT Platforms",
+			"description": "Build NFT marketplaces and games affordably"
+		},
+		"3": {
+			"title": "Enterprise Apps",
+			"description": "Launch enterprise blockchain applications"
+		},
+		"4": {
+			"title": "Developer Testing",
+			"description": "Test Ethereum dApps in production-like environment"
+		},
+		"5": {
+			"title": "DeFi Farming",
+			"description": "Participate in Linea ecosystem incentives"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Does Linea have a token?",
+			"answer": "Linea has not launched a token yet as of late 2024, but one is expected. Active users may be eligible for airdrops based on ecosystem participation. The Linea Voyage campaigns track activity for potential rewards."
+		},
+		"2": {
+			"question": "Is Linea safe?",
+			"answer": "Linea is built by Consensys, one of the most established companies in crypto. The zkEVM provides cryptographic security proofs. However, as a newer L2, it's still maturing. Start with smaller amounts and grow as confidence builds."
+		},
+		"3": {
+			"question": "How do I bridge to Linea?",
+			"answer": "Use the official Linea Bridge at bridge.linea.build or MetaMask's built-in bridge. Third-party bridges like Stargate and Hop also support Linea. MetaMask makes bridging particularly seamless with native support."
+		},
+		"4": {
+			"question": "Linea vs zkSync: Which zkEVM is better?",
+			"answer": "Both are strong zkEVMs. Linea has Consensys backing and MetaMask integration. zkSync Era has been live longer and has more TVL. Linea is type-2 (more compatible); zkSync is type-4 (more ZK-native). Choose based on your priorities."
+		},
+		"5": {
+			"question": "What is Linea Voyage?",
+			"answer": "Linea Voyage is a campaign system where users earn points for ecosystem activities. Points may convert to token rewards when Linea launches its token. Completing quests, using dApps, and providing liquidity all earn Voyage points."
+		}
+	},
+	"cta": {
+		"ready": "Ready to build on Linea?",
+		"button": "Explore Linea",
+		"note": "zkEVM by Consensys"
+	}
+}

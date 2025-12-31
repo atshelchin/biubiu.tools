@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Tensor - Pro Solana NFT Trading Platform",
+		"description": "Advanced NFT trading for Solana power users. Tensor offers pro features, AMM pools, and the best execution for serious traders.",
+		"keywords": "Tensor, Solana NFT, NFT trading, TNSR token, NFT AMM, professional NFT"
+	},
+	"overview": "Tensor is the professional-grade NFT marketplace for Solana, built for power users who need advanced trading features. Launched in 2022, Tensor has captured significant market share from Magic Eden by offering superior trading tools.\n\nThe platform pioneered NFT AMM pools on Solana, allowing instant liquidity for collections through automated market making. Tensor's collection-wide bids, advanced analytics, and TensorSwap AMM have made it the preferred platform for high-volume traders.\n\nTensor rewards active traders with TNSR tokens through its trading rewards program. The platform's focus on speed, low fees, and professional features has established it as the go-to platform for serious Solana NFT trading.",
+	"features": {
+		"1": {
+			"title": "TensorSwap AMM",
+			"description": "Instant NFT liquidity through automated market making"
+		},
+		"2": {
+			"title": "Collection Bids",
+			"description": "Bid on entire collections, not just individual NFTs"
+		},
+		"3": {
+			"title": "Trading Rewards",
+			"description": "Earn TNSR tokens for trading activity"
+		},
+		"4": {
+			"title": "Pro Analytics",
+			"description": "Advanced charts, floor tracking, and market data"
+		},
+		"5": {
+			"title": "Compressed NFTs",
+			"description": "Support for cost-efficient compressed NFTs"
+		},
+		"6": {
+			"title": "Bid Pools",
+			"description": "Create pools to automatically buy NFTs at set prices"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Floor Trading",
+			"description": "Quickly sweep floors and flip NFTs"
+		},
+		"2": {
+			"title": "Collection Bidding",
+			"description": "Make offers on entire collections at once"
+		},
+		"3": {
+			"title": "AMM Liquidity",
+			"description": "Provide instant liquidity for NFT collections"
+		},
+		"4": {
+			"title": "Trading Rewards",
+			"description": "Earn TNSR tokens through active trading"
+		},
+		"5": {
+			"title": "Market Making",
+			"description": "Run bid pools for automated buying"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What are Tensor's fees?",
+			"answer": "Tensor charges 1.5% taker fees on marketplace sales, lower than Magic Eden's 2%. TensorSwap AMM pools have customizable fees set by pool creators. Creator royalties are optional. Overall, Tensor is one of the cheapest Solana NFT platforms."
+		},
+		"2": {
+			"question": "What is TNSR token?",
+			"answer": "TNSR is Tensor's governance and rewards token. Users earn TNSR through trading activity via the rewards program. TNSR can be staked for additional benefits and used for governance. The token launched in 2024."
+		},
+		"3": {
+			"question": "What is TensorSwap AMM?",
+			"answer": "TensorSwap allows users to create liquidity pools for NFT collections. Pool creators earn fees when others buy/sell through their pools. It provides instant liquidity for collections that might otherwise have thin order books."
+		},
+		"4": {
+			"question": "Tensor vs Magic Eden: Which for trading?",
+			"answer": "Tensor is better for active trading with lower fees, AMM pools, and trading rewards. Magic Eden is better for casual browsing and has a simpler interface. Pro traders prefer Tensor; casual collectors often prefer Magic Eden."
+		},
+		"5": {
+			"question": "How do collection bids work?",
+			"answer": "Collection bids let you bid on any NFT in a collection at a set price. When someone accepts, you automatically receive their NFT. It's efficient for floor sweeping or getting into collections without watching specific listings."
+		}
+	},
+	"cta": {
+		"ready": "Ready for pro NFT trading?",
+		"button": "Open Tensor",
+		"note": "Professional Solana NFT trading"
+	}
+}

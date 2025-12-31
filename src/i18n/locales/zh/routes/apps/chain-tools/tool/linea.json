@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Linea - Consensys 打造的 zkEVM L2",
+		"description": "Linea 是由 Consensys（MetaMask 背后的团队）构建的 zkEVM 二层网络。快速、安全、开发者友好的以太坊扩展方案。",
+		"keywords": "Linea, zkEVM, Consensys, 以太坊 L2, MetaMask, 二层网络"
+	},
+	"overview": "Linea 是由 Consensys（MetaMask 和 Infura 背后的公司）构建的 zkEVM 二层网络。于 2023 年推出，Linea 提供 EVM 等效兼容性以及零知识证明的安全优势。\n\n由 Consensys 构建赋予 Linea 独特优势——原生 MetaMask 集成、企业关系以及 Consensys 丰富的开发者工具。网络专注于开发者体验和企业采用。\n\nLinea 使用 type-2 zkEVM，意味着现有以太坊智能合约无需修改即可工作。网络已吸引大量 TVL 和不断增长的 DeFi、NFT 和游戏应用生态系统。",
+	"features": {
+		"1": {
+			"title": "Type-2 zkEVM",
+			"description": "具有 ZK 安全性的完全 EVM 等效"
+		},
+		"2": {
+			"title": "MetaMask 原生",
+			"description": "内置 MetaMask 支持，轻松上手"
+		},
+		"3": {
+			"title": "Consensys 生态系统",
+			"description": "与 Infura、Truffle 等集成"
+		},
+		"4": {
+			"title": "低费用",
+			"description": "交易成本显著低于以太坊"
+		},
+		"5": {
+			"title": "快速确认",
+			"description": "交易确认时间快"
+		},
+		"6": {
+			"title": "企业级",
+			"description": "以企业采用为目标构建"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi 部署",
+			"description": "以更低成本部署以太坊 dApps"
+		},
+		"2": {
+			"title": "NFT 平台",
+			"description": "经济实惠地构建 NFT 市场和游戏"
+		},
+		"3": {
+			"title": "企业应用",
+			"description": "启动企业区块链应用"
+		},
+		"4": {
+			"title": "开发者测试",
+			"description": "在类生产环境测试以太坊 dApps"
+		},
+		"5": {
+			"title": "DeFi 挖矿",
+			"description": "参与 Linea 生态系统激励"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Linea 有代币吗？",
+			"answer": "截至 2024 年底 Linea 尚未发布代币，但预计会有。活跃用户可能有资格根据生态系统参与度获得空投。Linea Voyage 活动追踪活动以获取潜在奖励。"
+		},
+		"2": {
+			"question": "Linea 安全吗？",
+			"answer": "Linea 由 Consensys 构建，这是加密领域最成熟的公司之一。zkEVM 提供密码学安全证明。不过作为较新的 L2，它仍在成熟中。从较小金额开始，随着信心增长再增加。"
+		},
+		"3": {
+			"question": "如何桥接到 Linea？",
+			"answer": "使用 bridge.linea.build 官方 Linea Bridge 或 MetaMask 内置桥。Stargate 和 Hop 等第三方桥也支持 Linea。MetaMask 使桥接特别顺畅，原生支持。"
+		},
+		"4": {
+			"question": "Linea 与 zkSync 哪个更好？",
+			"answer": "两者都是强大的 zkEVM。Linea 有 Consensys 支持和 MetaMask 集成。zkSync Era 上线时间更长，TVL 更高。Linea 是 type-2（更兼容）；zkSync 是 type-4（更原生 ZK）。根据优先级选择。"
+		},
+		"5": {
+			"question": "什么是 Linea Voyage？",
+			"answer": "Linea Voyage 是一个活动系统，用户通过生态系统活动赚取积分。当 Linea 发布代币时，积分可能转换为代币奖励。完成任务、使用 dApps 和提供流动性都能赚取 Voyage 积分。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在 Linea 上构建了吗？",
+		"button": "探索 Linea",
+		"note": "Consensys 的 zkEVM"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Mode Network - 为 DeFi 增长而生的 L2",
+		"description": "Mode 是专为 DeFi 设计的以太坊 L2，内置推荐奖励。通过发展生态系统赚取奖励。",
+		"keywords": "Mode Network, MODE 代币, 以太坊 L2, DeFi L2, OP Stack, 排序器奖励"
+	},
+	"overview": "Mode 是基于 OP Stack 构建的以太坊二层网络，专门设计用于通过创新激励机制加速 DeFi 增长。于 2024 年推出，Mode 引入了排序器费用分享（SFS），奖励开发者和用户促进生态系统增长。\n\n网络独特的价值主张是其推荐和费用分享系统。当你引入用户或部署产生费用的合约时，你会获得这些排序器费用的一部分。这创造了与生态系统增长一致的激励。\n\nMode 是 Optimism Superchain 的一部分，受益于与 Base 和 Optimism 主网等其他 OP Stack 链的共享安全性和互操作性。",
+	"features": {
+		"1": {
+			"title": "排序器费用分享",
+			"description": "开发者从合约产生的费用中获利"
+		},
+		"2": {
+			"title": "推荐奖励",
+			"description": "为引入用户到生态系统赚取奖励"
+		},
+		"3": {
+			"title": "OP Stack",
+			"description": "基于成熟的 Optimism 技术构建"
+		},
+		"4": {
+			"title": "低费用",
+			"description": "DeFi 活动交易费用实惠"
+		},
+		"5": {
+			"title": "EVM 兼容",
+			"description": "无需修改即可部署以太坊合约"
+		},
+		"6": {
+			"title": "Superchain 成员",
+			"description": "Optimism 互操作生态系统的一部分"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi 开发",
+			"description": "构建 DeFi 协议并从使用中获利"
+		},
+		"2": {
+			"title": "生态系统增长",
+			"description": "通过引入用户赚取推荐奖励"
+		},
+		"3": {
+			"title": "收益耕作",
+			"description": "参与 Mode 生态系统激励"
+		},
+		"4": {
+			"title": "协议部署",
+			"description": "部署带收入分享的合约"
+		},
+		"5": {
+			"title": "DeFi 交易",
+			"description": "在 Mode DEX 上以低费用交易"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 MODE 代币？",
+			"answer": "MODE 是网络的原生治理和实用代币。它通过空投分发给早期用户，用于治理投票。MODE 可通过生态系统参与和质押获得。"
+		},
+		"2": {
+			"question": "什么是排序器费用分享？",
+			"answer": "SFS 允许智能合约开发者注册他们的合约，并从这些合约交易产生的排序器费用中获得一部分。这是建设者除了代币经济学之外将 dApps 货币化的方式。"
+		},
+		"3": {
+			"question": "Mode 安全吗？",
+			"answer": "Mode 基于 Optimism 和 Base 使用的久经考验的 OP Stack 构建。它继承以太坊的结算安全性。网络较新，所以需要保持适当谨慎，但底层技术是成熟的。"
+		},
+		"4": {
+			"question": "如何桥接到 Mode？",
+			"answer": "使用 bridge.mode.network 官方 Mode Bridge 或 Stargate、Orbiter 等第三方桥。桥接简单，从以太坊或其他支持的链通常需要几分钟。"
+		},
+		"5": {
+			"question": "Mode 与 Base 有什么区别？",
+			"answer": "两者都使用 OP Stack 但侧重不同。Mode 强调通过 SFS 和推荐奖励的开发者激励。Base 专注于 Coinbase 生态系统集成和消费者应用。两者都是具有互操作性的 Superchain 成员。"
+		}
+	},
+	"cta": {
+		"ready": "准备好与 Mode 一起成长了吗？",
+		"button": "探索 Mode",
+		"note": "内置奖励的 L2"
+	}
+}

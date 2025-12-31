@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Mantle - 高性能以太坊 L2",
+		"description": "Mantle 是由 BitDAO 国库支持的模块化以太坊 L2。超低费用、快速交易和强大的生态系统激励。",
+		"keywords": "Mantle, MNT 代币, 以太坊 L2, BitDAO, 二层网络, 模块化区块链"
+	},
+	"overview": "Mantle 是高性能以太坊二层网络，由加密领域最大的 DAO 国库之一支持。于 2023 年推出，Mantle 使用模块化架构，以太坊提供安全性，自定义数据可用性实现低成本。\n\n由价值数十亿美元的 BitDAO 国库（现为 Mantle 国库）支持，网络拥有大量资源用于生态系统开发、资助和激励计划。这种财务支持使 Mantle 区别于其他 L2。\n\nMantle 专注于开发者和用户友好性，提供全面的文档、资助计划以及不断增长的 DeFi、游戏和 NFT 应用生态系统。",
+	"features": {
+		"1": {
+			"title": "模块化设计",
+			"description": "带自定义数据可用性的优化 Rollup"
+		},
+		"2": {
+			"title": "巨额国库",
+			"description": "数十亿美元生态系统基金支持"
+		},
+		"3": {
+			"title": "超低费用",
+			"description": "交易成本显著低于以太坊"
+		},
+		"4": {
+			"title": "EVM 兼容",
+			"description": "与以太坊工具完全兼容"
+		},
+		"5": {
+			"title": "生态系统资助",
+			"description": "为建设者和项目提供慷慨资金"
+		},
+		"6": {
+			"title": "mETH 质押",
+			"description": "mETH 原生流动性质押"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi 构建",
+			"description": "在生态系统支持下启动 DeFi 协议"
+		},
+		"2": {
+			"title": "游戏",
+			"description": "以低费用构建区块链游戏"
+		},
+		"3": {
+			"title": "收益耕作",
+			"description": "参与生态系统激励计划"
+		},
+		"4": {
+			"title": "流动性质押",
+			"description": "通过 mETH 质押 ETH 获取额外收益"
+		},
+		"5": {
+			"title": "NFT 平台",
+			"description": "经济实惠地部署 NFT 项目"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 MNT 代币？",
+			"answer": "MNT 是 Mantle 的原生代币，用于 Gas 费用和治理。它是在 BitDAO 更名为 Mantle 时创建的，BIT 以 1:1 转换为 MNT。MNT 可质押以获得治理权力，并在整个 Mantle 生态系统中使用。"
+		},
+		"2": {
+			"question": "Mantle 安全吗？",
+			"answer": "Mantle 继承以太坊的结算安全性，同时使用自己的数据可用性层。网络已经过审计，并由巨额国库支持。与较新的 L2 一样，需要保持适当谨慎。"
+		},
+		"3": {
+			"question": "什么是 mETH？",
+			"answer": "mETH 是 Mantle 的流动性质押 ETH 代币。当你在 Mantle 上质押 ETH 时，你会收到 mETH，它在保持流动性可用于 DeFi 的同时赚取质押奖励。类似于 stETH，但原生于 Mantle。"
+		},
+		"4": {
+			"question": "如何桥接到 Mantle？",
+			"answer": "使用 bridge.mantle.xyz 官方 Mantle Bridge 或 Stargate、Orbiter、Across 等第三方桥。从以太坊桥接简单直接，通常需要几分钟。"
+		},
+		"5": {
+			"question": "BitDAO 发生了什么？",
+			"answer": "BitDAO 于 2023 年更名为 Mantle，专注于构建 L2 网络。BIT 代币以 1:1 转换为 MNT。支持 BitDAO 的国库现在用数十亿资产支持 Mantle 生态系统发展。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在 Mantle 上构建了吗？",
+		"button": "探索 Mantle",
+		"note": "国库支持的 L2"
+	}
+}

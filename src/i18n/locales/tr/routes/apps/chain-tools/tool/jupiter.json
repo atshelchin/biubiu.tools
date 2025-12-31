@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Jupiter - Solana's Leading DEX Aggregator",
+		"description": "The best swap rates on Solana. Jupiter aggregates all DEXs to find optimal routes for your trades with minimal slippage.",
+		"keywords": "Jupiter, Solana DEX, swap aggregator, JUP token, Solana trading, DeFi"
+	},
+	"overview": "Jupiter is the leading DEX aggregator on Solana, routing trades through multiple liquidity sources to find the best prices. Launched in 2021, Jupiter has become the default trading interface for Solana, processing billions in daily volume.\n\nThe platform aggregates liquidity from Raydium, Orca, Meteora, and dozens of other Solana DEXs, automatically splitting trades across pools for optimal execution. Jupiter's routing algorithm considers price impact, fees, and slippage to maximize returns.\n\nBeyond simple swaps, Jupiter offers limit orders, DCA (dollar-cost averaging), and perpetual trading. The JUP token launched in January 2024 with one of the largest airdrops in crypto history, distributed to active Solana users.",
+	"features": {
+		"1": {
+			"title": "Best Price Routing",
+			"description": "Aggregates 20+ DEXs to find optimal swap routes"
+		},
+		"2": {
+			"title": "Limit Orders",
+			"description": "Set target prices and execute automatically"
+		},
+		"3": {
+			"title": "DCA Trading",
+			"description": "Dollar-cost average into any Solana token"
+		},
+		"4": {
+			"title": "Perpetuals",
+			"description": "Trade perpetual futures with up to 100x leverage"
+		},
+		"5": {
+			"title": "Price Impact Protection",
+			"description": "Smart routing minimizes slippage on large trades"
+		},
+		"6": {
+			"title": "Token Launchpad",
+			"description": "Launch new tokens through Jupiter LFG"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Token Swapping",
+			"description": "Trade any Solana token at the best available rate"
+		},
+		"2": {
+			"title": "Large Trades",
+			"description": "Execute big swaps with minimal price impact"
+		},
+		"3": {
+			"title": "Limit Orders",
+			"description": "Set and forget orders at target prices"
+		},
+		"4": {
+			"title": "DCA Strategy",
+			"description": "Automate regular purchases of favorite tokens"
+		},
+		"5": {
+			"title": "Leverage Trading",
+			"description": "Trade perpetuals with up to 100x leverage"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Is Jupiter free to use?",
+			"answer": "Yes, Jupiter's swap aggregation is free—you only pay standard Solana network fees (~$0.00025) and DEX fees. Jupiter earns from its perpetuals platform and token launchpad, not from basic swaps. There are no hidden fees on aggregated trades."
+		},
+		"2": {
+			"question": "Is Jupiter safe?",
+			"answer": "Yes, Jupiter is the most-used DeFi protocol on Solana, processing billions in volume. It's been audited multiple times and is non-custodial—you always control your tokens. The team is doxxed and well-respected in the Solana community."
+		},
+		"3": {
+			"question": "What is JUP token?",
+			"answer": "JUP is Jupiter's governance token, launched in January 2024 with a massive airdrop to Solana users. JUP holders can vote on protocol decisions and earn from staking. Future airdrops are planned for active users."
+		},
+		"4": {
+			"question": "Jupiter vs Raydium: Which should I use?",
+			"answer": "Use Jupiter for swaps—it will route through Raydium when it offers the best price, plus check all other DEXs. Use Raydium directly only for liquidity provision or specific AMM features. For trading, Jupiter is always the better choice."
+		},
+		"5": {
+			"question": "How does Jupiter find the best price?",
+			"answer": "Jupiter's routing algorithm checks prices across 20+ DEXs, calculates optimal trade splits, and considers fees, slippage, and price impact. It often splits large trades across multiple pools to minimize slippage. All this happens in milliseconds."
+		}
+	},
+	"cta": {
+		"ready": "Ready for the best Solana swaps?",
+		"button": "Open Jupiter",
+		"note": "Solana's leading DEX aggregator"
+	}
+}

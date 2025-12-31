@@ -1,0 +1,190 @@
+{
+	"title": "NFT Complete Guide: From Collecting to Creating",
+	"subtitle": "Master the NFT ecosystem - marketplaces, trading strategies, NFT-Fi, and multi-chain opportunities",
+
+	"sections": {
+		"intro": {
+			"title": "Understanding NFTs",
+			"content": "<p>NFTs (Non-Fungible Tokens) are unique digital assets that represent ownership of items like art, music, collectibles, and virtual real estate on the blockchain. Unlike cryptocurrencies where each token is identical, every NFT is unique and cannot be replaced with something else.</p><p>The NFT market has evolved dramatically since the 2021 boom. While trading volumes have normalized, the technology has matured with better infrastructure, more sophisticated trading tools, and new financial primitives like NFT lending and fractionalization.</p><p>This guide covers everything from buying your first NFT to advanced trading strategies and creating your own collections.</p>"
+		},
+
+		"nft_standards": {
+			"title": "NFT Technical Standards",
+			"content": "<p>Understanding the technical foundations helps you make better decisions as a collector or creator.</p>",
+			"erc721": {
+				"title": "ERC-721: The Original NFT Standard",
+				"content": "<p>ERC-721 is the original NFT standard on Ethereum. Each token has a unique ID and is completely distinct from every other token in the collection.</p><p><strong>Key characteristics:</strong></p><ul><li>Each token is unique with its own token ID</li><li>Tokens cannot be divided - you own the whole NFT or nothing</li><li>Most PFP collections and 1/1 art use ERC-721</li><li>Gas-intensive for batch operations</li></ul>"
+			},
+			"erc1155": {
+				"title": "ERC-1155: Semi-Fungible Tokens",
+				"content": "<p>ERC-1155 allows for both fungible and non-fungible tokens in a single contract. It's more gas-efficient for collections with multiple editions.</p><p><strong>Common uses:</strong></p><ul><li>Gaming items with multiple copies</li><li>Edition-based art (e.g., 100 copies of the same piece)</li><li>Membership passes and tickets</li><li>In-game currencies alongside unique items</li></ul>"
+			},
+			"metadata": {
+				"title": "Metadata & Storage",
+				"content": "<p>The image/media isn't stored on-chain - it's too expensive. NFTs contain metadata pointing to the actual content.</p><p><strong>Storage options:</strong></p><ul><li><strong>IPFS:</strong> Decentralized, content-addressed storage. Most common for quality projects.</li><li><strong>Arweave:</strong> Permanent storage with one-time payment. Growing in popularity.</li><li><strong>On-chain:</strong> SVGs or small data stored directly. Most decentralized but limited.</li><li><strong>Centralized servers:</strong> Cheapest but risky - if the server goes down, your NFT image is gone.</li></ul><p><strong>Always check:</strong> Where is the metadata hosted? IPFS/Arweave is preferred over centralized hosting.</p>"
+			}
+		},
+
+		"marketplaces": {
+			"title": "NFT Marketplaces",
+			"content": "<p>Choosing the right marketplace depends on your goals - casual collecting, professional trading, or artistic curation.</p>",
+			"general_marketplaces": {
+				"title": "General Marketplaces",
+				"content": "<p><strong>OpenSea</strong> remains the most accessible marketplace for beginners. It supports multiple chains, has the largest user base, and offers simple buying/selling experiences.</p><p><strong>Blur</strong> has become the choice for professional traders. Features include:</p><ul><li>Zero marketplace fees</li><li>Bid pools for efficient floor trading</li><li>Portfolio analytics and P&L tracking</li><li>Blend lending protocol integration</li></ul><p><strong>Magic Eden</strong> excels in multi-chain support, especially for Solana and Bitcoin Ordinals.</p>"
+			},
+			"specialized_marketplaces": {
+				"title": "Specialized & Curated Platforms",
+				"content": "<p><strong>Foundation</strong> focuses on curated digital art with invitation-only creator access. Auctions create exciting price discovery moments.</p><p><strong>Zora</strong> pioneered the \"hyperstructure\" model - free minting with no platform fees. Ideal for artists who want to maximize their earnings.</p><p><strong>Sound.xyz</strong> is the leading platform for music NFTs, enabling artists to release songs as collectible editions with unique perks for collectors.</p>"
+			},
+			"aggregators": {
+				"title": "Aggregators",
+				"content": "<p>Aggregators pull listings from multiple marketplaces, ensuring you get the best prices.</p><p><strong>Gem (now OpenSea Pro)</strong> allows bulk buying across marketplaces in a single transaction, saving gas and ensuring you sweep efficiently.</p><p><strong>Reservoir</strong> provides the infrastructure layer - their API powers many NFT applications and aggregates liquidity from all major marketplaces.</p>"
+			}
+		},
+
+		"collecting": {
+			"title": "Collecting NFTs",
+			"content": "<p>Successful collecting requires research, timing, and understanding market dynamics.</p>",
+			"finding_projects": {
+				"title": "Finding Promising Projects",
+				"content": "<p><strong>Discovery sources:</strong></p><ul><li><strong>icy.tools:</strong> Real-time trending mints and whale activity</li><li><strong>mint.fun:</strong> Curated free mints and trending collections</li><li><strong>Twitter/X:</strong> Still the primary social layer for NFT discourse</li><li><strong>Discord servers:</strong> Alpha groups and project communities</li></ul><p><strong>What to look for:</strong></p><ul><li>Team credibility and track record</li><li>Art quality and uniqueness</li><li>Community engagement and growth</li><li>Utility and roadmap realism</li></ul>"
+			},
+			"due_diligence": {
+				"title": "Due Diligence",
+				"content": "<p><strong>Before buying, always check:</strong></p><ul><li><strong>Contract verification:</strong> Is the contract verified on Etherscan?</li><li><strong>Holder distribution:</strong> Are tokens spread across many wallets or concentrated?</li><li><strong>Trading history:</strong> Is there organic volume or wash trading?</li><li><strong>Royalty settings:</strong> Are creator royalties enforced?</li><li><strong>Metadata storage:</strong> Where are images hosted?</li></ul><p>Use analytics tools to understand rarity distribution and fair pricing before placing bids.</p>"
+			},
+			"minting_strategies": {
+				"title": "Minting Strategies",
+				"content": "<p><strong>Getting on allowlists:</strong></p><ul><li>Join Discord early and be genuinely active</li><li>Follow and engage with the team on Twitter</li><li>Use platforms like PREMINT to register for raffles</li><li>Hold related NFTs that might grant access</li></ul><p><strong>Public mint tips:</strong></p><ul><li>Prepare transactions in advance</li><li>Use priority gas during competitive mints</li><li>Have backup wallets ready</li><li>Never click links from DMs - always verify official minting sites</li></ul>"
+			}
+		},
+
+		"creating": {
+			"title": "Creating NFTs",
+			"content": "<p>Whether you're an artist launching a collection or a developer building NFT infrastructure, understanding creation tools is essential.</p>",
+			"minting_options": {
+				"title": "Minting Platforms",
+				"content": "<p><strong>Manifold</strong> is the gold standard for creators who want their own smart contracts. Features include:</p><ul><li>Own your smart contract completely</li><li>Advanced mint mechanics (claim pages, burns, etc.)</li><li>Extensive app ecosystem</li><li>Multi-chain deployment</li></ul><p><strong>Zora</strong> offers free minting with protocol rewards for creators. The Zora Network (L2) makes minting nearly free.</p><p><strong>Highlight</strong> provides a streamlined experience for multi-chain drops with built-in minting pages.</p>"
+			},
+			"collection_launch": {
+				"title": "Launching a Collection",
+				"content": "<p><strong>Generative art collections</strong> require:</p><ul><li>Layer-based artwork (traits with variations)</li><li>Rarity configuration</li><li>Metadata generation</li></ul><p>Tools like <strong>Bueno</strong> simplify this process with no-code generators.</p><p><strong>Transient Labs</strong> offers advanced mechanics for creators who want unique drops - like \"The Doppelganger\" burn-to-change contracts.</p><p><strong>Launch checklist:</strong></p><ol><li>Audit your contract (at minimum, use verified templates)</li><li>Test on testnet thoroughly</li><li>Prepare reveal if applicable</li><li>Set up minting site and verify URLs</li><li>Plan community communication</li></ol>"
+			},
+			"royalties": {
+				"title": "Understanding Royalties",
+				"content": "<p>Creator royalties were historically 5-10% of secondary sales, but enforcement has changed dramatically.</p><p><strong>Current landscape:</strong></p><ul><li><strong>OpenSea:</strong> Enforces royalties for new collections using Operator Filter</li><li><strong>Blur:</strong> Optional royalties - collectors choose to pay</li><li><strong>Magic Eden:</strong> Variable enforcement by chain</li></ul><p><strong>Strategies for creators:</strong></p><ul><li>Focus on mint price rather than royalty income</li><li>Build utility that incentivizes marketplace loyalty</li><li>Consider staking/burning mechanisms for holder engagement</li></ul>"
+			}
+		},
+
+		"nft_fi": {
+			"title": "NFT-Fi: NFT Financialization",
+			"content": "<p>NFT-Fi unlocks liquidity from your NFT holdings without selling. This is a rapidly evolving space with significant opportunities and risks.</p>",
+			"nft_lending": {
+				"title": "NFT Lending",
+				"content": "<p>Use your NFTs as collateral to borrow ETH or stablecoins.</p><p><strong>NFTfi</strong> operates a peer-to-peer model where lenders set their own terms. Rates vary based on collection and loan parameters.</p><p><strong>Arcade</strong> enables loans against wrapped bundles of NFTs, improving capital efficiency.</p><p><strong>Unlockd</strong> offers instant liquidity with oracle-based pricing, similar to Aave for NFTs.</p><p><strong>Risks to understand:</strong></p><ul><li>Liquidation if floor drops below loan value</li><li>Smart contract risks</li><li>Loss of your NFT if you default</li></ul>"
+			},
+			"fractionalization": {
+				"title": "Fractionalization",
+				"content": "<p>Fractionalization divides an NFT into tradeable tokens, enabling shared ownership of expensive assets.</p><p><strong>NFTX</strong> creates vault tokens backed by collections. Each vault token represents fractional ownership of the floor.</p><p><strong>Floor Protocol</strong> creates \"micro-tokens\" (μTokens) that can be traded on DEXs.</p><p><strong>Tessera</strong> (formerly Fractional) enables collective ownership with governance for high-value pieces.</p><p><strong>Use cases:</strong></p><ul><li>Gain exposure to expensive collections</li><li>Diversify across multiple collections with limited capital</li><li>Create liquidity for otherwise illiquid assets</li></ul>"
+			},
+			"nft_amm": {
+				"title": "NFT AMMs",
+				"content": "<p>Automated Market Makers for NFTs enable instant buying and selling at algorithmic prices.</p><p><strong>Sudoswap</strong> pioneered the bonding curve model for NFTs:</p><ul><li>Create buy/sell pools for collections</li><li>Earn trading fees as a liquidity provider</li><li>Instant liquidity without counterparty</li></ul><p><strong>Caviar</strong> focuses on floor price liquidity, enabling deep order books for popular collections.</p><p><strong>Tradeoffs:</strong></p><ul><li>Better liquidity vs. potentially lower prices than marketplace listings</li><li>LP positions can suffer impermanent loss</li></ul>"
+			}
+		},
+
+		"trading": {
+			"title": "Trading Strategies",
+			"content": "<p>NFT trading ranges from casual flipping to sophisticated market making. Understanding different strategies helps you find your edge.</p>",
+			"floor_trading": {
+				"title": "Floor Trading",
+				"content": "<p>Floor trading focuses on buying at or near the floor price and selling as the floor rises.</p><p><strong>Key tactics:</strong></p><ul><li>Bid slightly below floor for patient accumulation</li><li>Sweep floors during market dips</li><li>List above your purchase price during green candles</li></ul><p><strong>Tools:</strong> Blur's bidding interface allows you to place collection-wide bids that automatically execute at floor prices.</p><p><strong>Risks:</strong> Floors can drop significantly, leaving you holding bags. Always size positions appropriately.</p>"
+			},
+			"trait_sniping": {
+				"title": "Trait Sniping",
+				"content": "<p>Trait sniping involves identifying undervalued NFTs based on rare or desirable traits.</p><p><strong>Strategy:</strong></p><ol><li>Understand which traits the market values</li><li>Use rarity tools to find mispriced listings</li><li>Set up alerts for specific trait combinations</li><li>Act quickly - good deals don't last</li></ol><p>Analytics tools provide trait floor prices, helping you identify when rare traits are listed near common floors.</p>"
+			},
+			"flipping": {
+				"title": "Mint Flipping & Airdrops",
+				"content": "<p>Flipping involves minting new projects and selling quickly for profit.</p><p><strong>Success factors:</strong></p><ul><li>Getting on allowlists for hyped projects</li><li>Understanding market sentiment</li><li>Timing your sells correctly</li><li>Managing gas costs</li></ul><p><strong>Airdrops:</strong> Holding certain NFTs can qualify you for airdrops. The Blur airdrop rewarded active traders with significant BLUR allocations, with some earning thousands of dollars based on their trading activity.</p>"
+			}
+		},
+
+		"security": {
+			"title": "Security Best Practices",
+			"content": "<p>NFT scams are sophisticated and can drain your entire collection in seconds. Security is non-negotiable.</p>",
+			"wallet_security": {
+				"title": "Wallet Security",
+				"content": "<p><strong>Essential practices:</strong></p><ul><li>Use hardware wallets for valuable collections</li><li>Keep a separate \"hot wallet\" for minting and daily use</li><li>Never share your seed phrase - EVER</li></ul><p><strong>Delegation tools</strong> like Delegate.cash and Warm.xyz allow you to interact with dApps using a hot wallet while keeping NFTs in cold storage.</p><p>How it works: Your cold wallet delegates permissions to a hot wallet, proving ownership without exposing your main holdings.</p>"
+			},
+			"scam_prevention": {
+				"title": "Avoiding Scams",
+				"content": "<p><strong>Common scam types:</strong></p><ul><li><strong>Phishing sites:</strong> Fake marketplace links that drain wallets</li><li><strong>Discord hacks:</strong> Compromised servers posting fake mint links</li><li><strong>Malicious signatures:</strong> Approvals that allow draining</li><li><strong>Fake collections:</strong> Copies of popular projects with similar names</li></ul><p><strong>Prevention:</strong></p><ul><li>Bookmark official sites - never click links from DMs</li><li>Use transaction simulation tools before signing</li><li>Revoke old approvals regularly</li><li>Verify collection contracts on Etherscan</li></ul><p>In April 2022, the BAYC Instagram was hacked, posting a fake airdrop link that stole approximately $3M worth of NFTs from users who connected their wallets.</p>"
+			},
+			"verification": {
+				"title": "Verification & Token Gating",
+				"content": "<p><strong>Tokenproof</strong> enables secure verification of NFT ownership for events and perks without connecting your main wallet.</p><p><strong>Best practices for projects:</strong></p><ul><li>Use established verification tools rather than custom solutions</li><li>Don't require wallet connections for basic information</li><li>Implement proper access control for holders-only content</li></ul>"
+			}
+		},
+
+		"multi_chain": {
+			"title": "Multi-Chain NFTs",
+			"content": "<p>NFTs exist on many blockchains beyond Ethereum, each with unique characteristics and communities.</p>",
+			"solana_nfts": {
+				"title": "Solana NFTs",
+				"content": "<p>Solana offers near-instant transactions and sub-cent fees, making it popular for gaming and high-frequency trading.</p><p><strong>Ecosystem highlights:</strong></p><ul><li>Strong gaming and PFP communities</li><li>Compressed NFTs for mass distribution</li><li>Active trading on Tensor and Magic Eden</li></ul><p><strong>Tensor</strong> is the leading Solana marketplace with AMM pools and professional trading features. It's essentially Blur for Solana.</p>"
+			},
+			"bitcoin_ordinals": {
+				"title": "Bitcoin Ordinals",
+				"content": "<p>Ordinals inscribe data directly on Bitcoin satoshis, creating truly immutable NFTs on the most secure blockchain.</p><p><strong>Key concepts:</strong></p><ul><li><strong>Inscriptions:</strong> Content stored on-chain in witness data</li><li><strong>Ordinal theory:</strong> Tracking individual satoshis</li><li><strong>Runes:</strong> Bitcoin-native token standard</li></ul><p>Trade Ordinals on specialized marketplaces like Ordinals Market and Magic Eden's Bitcoin section.</p><p><strong>Note:</strong> Bitcoin NFT infrastructure is less mature - expect higher fees and slower confirmations compared to Ethereum.</p>"
+			},
+			"l2_nfts": {
+				"title": "Layer 2 NFTs",
+				"content": "<p>L2s like Base, Arbitrum, and Optimism offer Ethereum security with lower fees.</p><p><strong>Advantages:</strong></p><ul><li>Much lower minting and trading fees</li><li>Same wallet and addresses as mainnet</li><li>Growing ecosystems and airdrops</li></ul><p><strong>Decent</strong> enables cross-chain minting, allowing collectors to pay on any chain while receiving NFTs on their preferred network.</p><p>Many new collections are launching on L2s exclusively to reduce costs for both creators and collectors.</p>"
+			}
+		}
+	},
+
+	"glossary": {
+		"floor_price": {
+			"term": "Floor Price",
+			"definition": "The lowest listed price for any NFT in a collection. A key metric for evaluating collection value and market sentiment."
+		},
+		"rarity": {
+			"term": "Rarity",
+			"definition": "How uncommon specific traits are within a collection. Rare traits typically command premium prices over floor."
+		},
+		"mint": {
+			"term": "Mint",
+			"definition": "The process of creating a new NFT on the blockchain. The first time an NFT is purchased from the creator."
+		},
+		"allowlist": {
+			"term": "Allowlist (Whitelist)",
+			"definition": "A list of wallet addresses granted early or guaranteed access to mint an NFT collection, often at a lower price."
+		},
+		"airdrop": {
+			"term": "Airdrop",
+			"definition": "Free distribution of NFTs to holders of other NFTs or tokens, often used as rewards or to expand communities."
+		},
+		"royalties": {
+			"term": "Royalties",
+			"definition": "Percentage of secondary sales paid to the original creator. Typically 2.5-10% but enforcement varies by marketplace."
+		},
+		"pfp": {
+			"term": "PFP (Profile Picture)",
+			"definition": "A category of NFTs designed to be used as social media profile pictures. Examples include BAYC, CryptoPunks, and Azuki."
+		},
+		"reveal": {
+			"term": "Reveal",
+			"definition": "When a collection's actual artwork is shown. Many projects launch with placeholder images and reveal later to build anticipation."
+		},
+		"sweep": {
+			"term": "Sweep",
+			"definition": "Buying multiple NFTs at or near the floor price in quick succession, often to accumulate a position or raise the floor."
+		},
+		"ordinals": {
+			"term": "Ordinals",
+			"definition": "Bitcoin NFTs created by inscribing data onto individual satoshis. Permanently stored on the Bitcoin blockchain."
+		}
+	}
+}

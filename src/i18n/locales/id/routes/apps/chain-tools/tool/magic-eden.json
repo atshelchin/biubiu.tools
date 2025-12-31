@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Magic Eden - Multi-Chain NFT Marketplace",
+		"description": "Buy, sell, and discover NFTs across Solana, Ethereum, Bitcoin, and more. The leading cross-chain NFT marketplace.",
+		"keywords": "Magic Eden, NFT marketplace, Solana NFTs, Bitcoin Ordinals, multi-chain NFT, digital collectibles"
+	},
+	"overview": "Magic Eden is the leading multi-chain NFT marketplace, originally built on Solana and now supporting Ethereum, Bitcoin Ordinals, Polygon, and Base. Founded in 2021, Magic Eden has facilitated billions in NFT trading volume.\n\nStarting as the dominant Solana NFT marketplace, Magic Eden expanded to become truly cross-chain, notably becoming one of the first major platforms to support Bitcoin Ordinals. The platform offers a unified experience for discovering, buying, and selling NFTs across multiple blockchains.\n\nMagic Eden provides tools for creators including launchpad services, royalty enforcement options, and creator analytics. The platform's low fees (2%) and user-friendly interface have made it the preferred choice for many NFT collectors and creators.",
+	"features": {
+		"1": {
+			"title": "Multi-Chain Support",
+			"description": "Trade NFTs on Solana, Ethereum, Bitcoin, Polygon, and Base"
+		},
+		"2": {
+			"title": "Bitcoin Ordinals",
+			"description": "Buy and sell Bitcoin inscriptions and BRC-20s"
+		},
+		"3": {
+			"title": "Launchpad",
+			"description": "Mint new collections with creator tools"
+		},
+		"4": {
+			"title": "Collection Analytics",
+			"description": "Track floor prices, volume, and holder data"
+		},
+		"5": {
+			"title": "Bid & Offers",
+			"description": "Make offers on any NFT or collection"
+		},
+		"6": {
+			"title": "Rarity Tools",
+			"description": "View rarity rankings for collection traits"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "NFT Trading",
+			"description": "Buy and sell NFTs across multiple chains"
+		},
+		"2": {
+			"title": "Bitcoin Ordinals",
+			"description": "Trade Bitcoin inscriptions and BRC-20 tokens"
+		},
+		"3": {
+			"title": "Collection Launches",
+			"description": "Mint from new collections via launchpad"
+		},
+		"4": {
+			"title": "Portfolio Management",
+			"description": "Track and manage NFT holdings"
+		},
+		"5": {
+			"title": "Creator Tools",
+			"description": "Launch and manage NFT collections"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What are Magic Eden's fees?",
+			"answer": "Magic Eden charges 2% on sales, lower than most competitors. Creator royalties are optional on some chains. Bitcoin Ordinals have slightly different fee structures. There are no fees for buying, only selling."
+		},
+		"2": {
+			"question": "Is Magic Eden safe?",
+			"answer": "Yes, Magic Eden is a well-established, VC-backed platform with strong security practices. Transactions are on-chain and non-custodial. However, always verify NFT authenticity and be cautious of scam collections. The platform has verification systems for legitimate projects."
+		},
+		"3": {
+			"question": "How do I buy Bitcoin Ordinals on Magic Eden?",
+			"answer": "Connect a Bitcoin wallet (like Xverse or Leather), browse Ordinals collections, and purchase. Magic Eden handles the inscription process. You'll need BTC for purchases and network fees. The experience is similar to buying Solana NFTs."
+		},
+		"4": {
+			"question": "Magic Eden vs OpenSea: Which is better?",
+			"answer": "Magic Eden leads for Solana and Bitcoin Ordinals. OpenSea leads for Ethereum. Magic Eden has lower fees (2% vs 2.5%). OpenSea has more Ethereum collections. Many collectors use both depending on which chain they're trading."
+		},
+		"5": {
+			"question": "Does Magic Eden have a token?",
+			"answer": "Magic Eden has announced the ME token but hasn't launched it yet as of late 2024. Active users may be eligible for airdrops. Follow their official channels for token launch announcements. Be wary of scam tokens claiming to be ME."
+		}
+	},
+	"cta": {
+		"ready": "Ready to explore multi-chain NFTs?",
+		"button": "Open Magic Eden",
+		"note": "Cross-chain NFT marketplace"
+	}
+}

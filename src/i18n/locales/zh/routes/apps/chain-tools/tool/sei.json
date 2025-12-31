@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Sei - 最快的 Layer 1 区块链",
+		"description": "Sei 是最快的 Layer 1 区块链，针对交易优化，具有 400ms 最终确认。专为 DeFi 和交易所应用构建。",
+		"keywords": "Sei Network, SEI 代币, Layer 1, 快速区块链, 交易链, DeFi"
+	},
+	"overview": "Sei 是高性能 Layer 1 区块链，针对交易优化，具有 400ms 最终确认和内置订单撮合引擎。于 2023 年推出，Sei 从底层开始为 DeFi 和交易所应用设计。\n\n网络通过并行交易处理和原生订单撮合引擎实现极致速度，使 DEX 能够提供类似 CEX 的性能。Sei V2 引入了 EVM 兼容性，允许以太坊开发者在 Sei 上部署。\n\nSei 将自己定位为最快的交易区块链，具有专门为 DeFi、衍生品和交易所应用设计的优化。生态系统随着 DEX、永续合约交易所和其他以交易为中心的应用快速增长。",
+	"features": {
+		"1": {
+			"title": "400ms 最终确认",
+			"description": "近乎即时的交易确认"
+		},
+		"2": {
+			"title": "原生订单撮合",
+			"description": "为 DEX 内置的交易所基础设施"
+		},
+		"3": {
+			"title": "并行处理",
+			"description": "交易并行处理以提高吞吐量"
+		},
+		"4": {
+			"title": "EVM 兼容",
+			"description": "Sei V2 支持以太坊智能合约"
+		},
+		"5": {
+			"title": "乐观并行化",
+			"description": "自动交易并行化"
+		},
+		"6": {
+			"title": "MEV 防护",
+			"description": "内置抢跑保护"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DEX 交易",
+			"description": "在高性能去中心化交易所交易"
+		},
+		"2": {
+			"title": "永续合约",
+			"description": "使用低延迟的永续合约交易所"
+		},
+		"3": {
+			"title": "DeFi 开发",
+			"description": "构建交易和 DeFi 应用"
+		},
+		"4": {
+			"title": "游戏",
+			"description": "开发需要快速最终确认的游戏"
+		},
+		"5": {
+			"title": "NFT 交易",
+			"description": "即时确认交易 NFT"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Sei 为什么这么快？",
+			"answer": "Sei 通过多项创新实现速度：并行交易处理、乐观并行化以及针对最终确认优化的共识机制。原生订单撮合引擎也降低了交易应用的延迟。"
+		},
+		"2": {
+			"question": "什么是 SEI 代币？",
+			"answer": "SEI 是用于 Gas 费用、质押和治理的原生代币。SEI 可质押以保护网络并赚取奖励。它还用于网络升级和参数更改的治理投票。"
+		},
+		"3": {
+			"question": "Sei 兼容 EVM 吗？",
+			"answer": "是的，Sei V2（2024 年推出）引入了 EVM 兼容性。你可以在 Sei 上部署以太坊智能合约并使用 MetaMask 与之交互。这是在 Sei 原生 CosmWasm 合约支持之外的功能。"
+		},
+		"4": {
+			"question": "Sei 和 Solana 哪个更快？",
+			"answer": "两者都极快。Sei 声称 400ms 最终确认，而 Solana 为 400-500ms。Sei 专门针对交易优化，具有原生订单撮合。Solana 生态系统更大。纯粹交易速度上，两者相当。"
+		},
+		"5": {
+			"question": "如何桥接到 Sei？",
+			"answer": "使用 Wormhole、Axelar 或其他支持的桥接将资产转移到 Sei。对于 EVM 资产，可以使用 Sei Bridge。过程因桥接而异，但通常需要几分钟。"
+		}
+	},
+	"cta": {
+		"ready": "准备好体验最快的链了吗？",
+		"button": "探索 Sei",
+		"note": "为交易优化"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Manta Pacific - 面向 ZK 应用的模块化 L2",
+		"description": "Manta Pacific 是专为 ZK 应用设计的模块化 L2。低费用、快速交易，为开发者提供原生 ZK 工具。",
+		"keywords": "Manta Pacific, Manta Network, ZK L2, 模块化区块链, MANTA 代币, 二层网络"
+	},
+	"overview": "Manta Pacific 是专为 ZK（零知识）应用设计的模块化二层网络。基于 OP Stack 构建，使用 Celestia 进行数据可用性，Manta 提供超低费用同时保持以太坊安全性。\n\n该网络通过 Universal Circuits（通用电路）脱颖而出——这是可复用的 ZK 电路，开发者无需深入密码学专业知识即可集成到应用中。这使得构建隐私保护和 ZK 驱动的应用对所有开发者都变得触手可及。\n\n自 2023 年主网发布以来，Manta 吸引了大量资本和生态系统增长。MANTA 代币为网络提供 Gas、质押和治理功能。",
+	"features": {
+		"1": {
+			"title": "模块化架构",
+			"description": "OP Stack + Celestia 实现最佳性能和成本"
+		},
+		"2": {
+			"title": "Universal Circuits",
+			"description": "为开发者提供可复用的 ZK 构建块"
+		},
+		"3": {
+			"title": "超低费用",
+			"description": "交易成本低于 $0.01"
+		},
+		"4": {
+			"title": "EVM 兼容",
+			"description": "轻松部署现有以太坊合约"
+		},
+		"5": {
+			"title": "zkSBT 支持",
+			"description": "原生支持 ZK 灵魂绑定代币"
+		},
+		"6": {
+			"title": "快速确认",
+			"description": "交易确认时间快"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "ZK 应用",
+			"description": "使用 Universal Circuits 构建隐私保护 dApps"
+		},
+		"2": {
+			"title": "DeFi 协议",
+			"description": "部署低费用和 ZK 功能的 DeFi"
+		},
+		"3": {
+			"title": "身份解决方案",
+			"description": "创建基于 ZK 的身份和凭证系统"
+		},
+		"4": {
+			"title": "游戏",
+			"description": "构建具有私密状态和低成本的游戏"
+		},
+		"5": {
+			"title": "NFT 平台",
+			"description": "以最低 Gas 成本启动 NFT 项目"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 MANTA 代币？",
+			"answer": "MANTA 是 Manta Network 的原生代币，用于 Gas 费用、质押和治理。它为 Manta Pacific（L2）和 Manta Atlantic（L1）提供动力。MANTA 可质押以赚取网络奖励并参与治理。"
+		},
+		"2": {
+			"question": "Manta Pacific 安全吗？",
+			"answer": "Manta Pacific 通过其 Optimistic Rollup 设计继承以太坊的安全性。团队已进行审计并获得大量 VC 支持。作为较新的 L2，对资金规模应保持正常谨慎。"
+		},
+		"3": {
+			"question": "如何桥接到 Manta Pacific？",
+			"answer": "使用 pacific.manta.network 官方 Manta Bridge 或 Stargate、Orbiter 等第三方桥。桥接简单直接，从以太坊或其他支持的链通常需要几分钟。"
+		},
+		"4": {
+			"question": "什么是 Universal Circuits？",
+			"answer": "Universal Circuits 是预构建的 ZK 电路，开发者无需理解复杂密码学即可使用。它们通过简单的 API 调用实现 ZK 功能，如隐私交易、匿名凭证和可验证计算。"
+		},
+		"5": {
+			"question": "Manta Pacific 和 Manta Atlantic 有什么区别？",
+			"answer": "Manta Pacific 是面向通用 ZK 应用的以太坊 L2（OP Stack）。Manta Atlantic 是专注于隐私的 Polkadot 平行链。大多数 DeFi 活动发生在 Pacific 上。Atlantic 更专注于 Polkadot 生态系统。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在 Manta 上构建了吗？",
+		"button": "探索 Manta",
+		"note": "面向 ZK 应用的模块化 L2"
+	}
+}

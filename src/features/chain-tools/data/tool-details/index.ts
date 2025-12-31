@@ -82,6 +82,12 @@ import { magicEdenDetail } from './magic-eden';
 import { tensorDetail } from './tensor';
 import { jitoDetail } from './jito';
 import { marinadeDetail } from './marinade';
+import { polygonDetail } from './polygon';
+import { lineaDetail } from './linea';
+import { mantaDetail } from './manta';
+import { mantleDetail } from './mantle';
+import { modeDetail } from './mode';
+import { seiDetail } from './sei';
 
 /**
  * All tool details mapped by tool ID
@@ -160,7 +166,13 @@ export const toolDetails: Record<string, ToolDetail> = {
 	'magic-eden': magicEdenDetail,
 	tensor: tensorDetail,
 	jito: jitoDetail,
-	marinade: marinadeDetail
+	marinade: marinadeDetail,
+	polygon: polygonDetail,
+	linea: lineaDetail,
+	manta: mantaDetail,
+	mantle: mantleDetail,
+	mode: modeDetail,
+	sei: seiDetail
 };
 
 /**

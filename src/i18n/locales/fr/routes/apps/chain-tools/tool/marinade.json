@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Marinade - Solana Liquid Staking Protocol",
+		"description": "Stake SOL, receive mSOL, and stay liquid. Marinade is Solana's original liquid staking protocol with the most DeFi integrations.",
+		"keywords": "Marinade, mSOL, Solana staking, liquid staking, MNDE token, Solana DeFi"
+	},
+	"overview": "Marinade is the pioneering liquid staking protocol on Solana, allowing users to stake SOL and receive mSOL in return. Launched in 2021, Marinade was the first to bring liquid staking to Solana and remains one of the largest staking providers.\n\nWhen you stake with Marinade, your SOL is distributed across 400+ validators, promoting network decentralization while earning staking rewards. mSOL is widely integrated across Solana DeFi, usable as collateral in lending, liquidity in DEXs, and more.\n\nMarinade is governed by the MNDE token and operated as a DAO. The protocol offers both liquid staking (mSOL) and native staking options, giving users flexibility in how they secure the network while earning yield.",
+	"features": {
+		"1": {
+			"title": "Liquid Staking",
+			"description": "Stake SOL and receive mSOL tokens instantly"
+		},
+		"2": {
+			"title": "Validator Diversity",
+			"description": "Stake distributed across 400+ validators for decentralization"
+		},
+		"3": {
+			"title": "Native Staking",
+			"description": "Option to stake directly without liquid token"
+		},
+		"4": {
+			"title": "DeFi Integration",
+			"description": "mSOL accepted across major Solana protocols"
+		},
+		"5": {
+			"title": "DAO Governance",
+			"description": "Protocol governed by MNDE token holders"
+		},
+		"6": {
+			"title": "Delayed Unstaking",
+			"description": "Option to unstake directly with no slippage"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Liquid Staking",
+			"description": "Earn staking rewards while keeping SOL liquid"
+		},
+		"2": {
+			"title": "DeFi Collateral",
+			"description": "Use mSOL as collateral in lending protocols"
+		},
+		"3": {
+			"title": "LP Positions",
+			"description": "Provide mSOL liquidity and earn trading fees"
+		},
+		"4": {
+			"title": "Decentralization",
+			"description": "Support Solana network decentralization"
+		},
+		"5": {
+			"title": "Native Staking",
+			"description": "Stake directly to preferred validators"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is mSOL?",
+			"answer": "mSOL is Marinade's liquid staking token. It represents staked SOL plus accumulated rewards. mSOL value increases relative to SOL over time as staking rewards accrue. You can use mSOL in DeFi or swap back to SOL on DEXs."
+		},
+		"2": {
+			"question": "Is Marinade safe?",
+			"answer": "Marinade is one of Solana's most established protocols, operating since 2021 with multiple audits. The protocol is non-custodial and governed by a DAO. Smart contract risk exists as with all DeFi. mSOL is fully backed by staked SOL."
+		},
+		"3": {
+			"question": "What is MNDE token?",
+			"answer": "MNDE is Marinade's governance token. MNDE holders vote on protocol parameters, validator delegation strategy, and treasury spending. MNDE can be earned through incentive programs and is tradeable on exchanges."
+		},
+		"4": {
+			"question": "How do I unstake from Marinade?",
+			"answer": "Two options: 1) Instant—swap mSOL to SOL on DEXs like Jupiter (may have small slippage), or 2) Delayed—unstake through Marinade directly with no slippage but requires waiting 1-2 epochs (~2-4 days)."
+		},
+		"5": {
+			"question": "Marinade vs Jito: Which should I use?",
+			"answer": "Marinade has more DeFi integrations and promotes decentralization across 400+ validators. Jito offers higher APY due to MEV rewards but concentrates stake in MEV-enabled validators. Choose based on your priorities—yield vs decentralization."
+		}
+	},
+	"cta": {
+		"ready": "Ready to stake SOL with Marinade?",
+		"button": "Open Marinade",
+		"note": "Solana's original liquid staking"
+	}
+}

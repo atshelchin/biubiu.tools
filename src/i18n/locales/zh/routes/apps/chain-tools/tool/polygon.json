@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Polygon - 以太坊扩展解决方案",
+		"description": "Polygon 是领先的以太坊扩展解决方案，提供低费用和快速交易。数十亿交易的证明，构建可扩展的 dApps。",
+		"keywords": "Polygon, MATIC, 以太坊 L2, PoS, zkEVM, 区块链扩展"
+	},
+	"overview": "Polygon 是以太坊最成熟的扩展解决方案，处理了数十亿笔交易，承载了数千个 dApps。从最初的 Matic Network 成长为综合性扩展平台，Polygon 提供多种技术满足不同需求。\n\nPolygon PoS 链是旗舰产品——一条 EVM 兼容侧链，交易费用仅需几分钱。Polygon zkEVM 使用零知识证明实现更高安全性。Polygon CDK 让项目能够启动自己的 L2。\n\n凭借强大的 DeFi 生态系统、主要 NFT 平台（如 OpenSea、Magic Eden）以及迪士尼和星巴克等企业合作伙伴关系，Polygon 在采用方面处于领先地位。",
+	"features": {
+		"1": {
+			"title": "Polygon PoS",
+			"description": "费用低至几分钱的快速交易"
+		},
+		"2": {
+			"title": "Polygon zkEVM",
+			"description": "具有 ZK 证明安全性的以太坊等效性"
+		},
+		"3": {
+			"title": "Polygon CDK",
+			"description": "构建定制化 L2 链的工具包"
+		},
+		"4": {
+			"title": "AggLayer",
+			"description": "统一流动性的跨链协议"
+		},
+		"5": {
+			"title": "成熟生态系统",
+			"description": "数千个 dApps 和数十亿交易"
+		},
+		"6": {
+			"title": "企业采用",
+			"description": "主要品牌和机构整合"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi 交易",
+			"description": "以极低费用使用 DEX 和借贷协议"
+		},
+		"2": {
+			"title": "NFT 铸造",
+			"description": "以几分钱成本铸造和交易 NFT"
+		},
+		"3": {
+			"title": "游戏",
+			"description": "在快速低成本的基础设施上构建链游"
+		},
+		"4": {
+			"title": "企业解决方案",
+			"description": "企业区块链应用"
+		},
+		"5": {
+			"title": "dApp 开发",
+			"description": "部署可扩展的以太坊应用"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "MATIC 和 POL 代币有什么区别？",
+			"answer": "POL 是 MATIC 的升级版代币，增强了质押和治理功能。MATIC 持有者可以 1:1 迁移到 POL。两者在过渡期间都在使用。POL 支持多链质押和更多 Polygon 生态系统功能。"
+		},
+		"2": {
+			"question": "Polygon 安全吗？",
+			"answer": "Polygon PoS 由自己的验证者保护，具有多年安全运行记录。Polygon zkEVM 使用零知识证明实现数学安全保证。两者都有审计和漏洞赏金计划。对于高价值操作，zkEVM 具有更强的安全性。"
+		},
+		"3": {
+			"question": "Polygon PoS 与 zkEVM 如何选择？",
+			"answer": "使用 PoS 获得最低费用和最大 dApp 选择。使用 zkEVM 获得 ZK 证明的更高安全保证。PoS 生态系统更成熟，zkEVM 更新但技术更先进。大多数用户从 PoS 开始。"
+		},
+		"4": {
+			"question": "如何桥接到 Polygon？",
+			"answer": "使用 Polygon Portal（portal.polygon.technology）进行官方桥接，或使用 Stargate、Hop、Across 等第三方桥。从以太坊桥接需要 15-30 分钟。第三方桥接可能更快但有交易对手风险。"
+		},
+		"5": {
+			"question": "Polygon 为什么 Gas 费这么低？",
+			"answer": "Polygon PoS 在以太坊之外处理交易，仅定期提交检查点。这种设计将交易成本分摊到大量交易中，降低单笔费用。zkEVM 使用 ZK 压缩实现更低成本。"
+		}
+	},
+	"cta": {
+		"ready": "准备好使用 Polygon 了吗？",
+		"button": "探索 Polygon",
+		"note": "以太坊最大的扩展生态系统"
+	}
+}

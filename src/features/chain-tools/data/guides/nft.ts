@@ -110,8 +110,7 @@ export const nftGuide: CategoryGuide = {
 				{
 					id: 'due-diligence',
 					titleKey: 'routes/apps/chain-tools/nft/guide.sections.collecting.due_diligence.title',
-					contentKey:
-						'routes/apps/chain-tools/nft/guide.sections.collecting.due_diligence.content',
+					contentKey: 'routes/apps/chain-tools/nft/guide.sections.collecting.due_diligence.content',
 					toolMentions: [{ toolId: 'nftnerds', context: 'analytics and rarity' }]
 				},
 				{
@@ -134,8 +133,7 @@ export const nftGuide: CategoryGuide = {
 				{
 					id: 'minting-options',
 					titleKey: 'routes/apps/chain-tools/nft/guide.sections.creating.minting_options.title',
-					contentKey:
-						'routes/apps/chain-tools/nft/guide.sections.creating.minting_options.content',
+					contentKey: 'routes/apps/chain-tools/nft/guide.sections.creating.minting_options.content',
 					toolMentions: [
 						{ toolId: 'manifold', context: 'custom smart contracts' },
 						{ toolId: 'zora', context: 'free minting' },
@@ -179,8 +177,7 @@ export const nftGuide: CategoryGuide = {
 				{
 					id: 'fractionalization',
 					titleKey: 'routes/apps/chain-tools/nft/guide.sections.nft_fi.fractionalization.title',
-					contentKey:
-						'routes/apps/chain-tools/nft/guide.sections.nft_fi.fractionalization.content',
+					contentKey: 'routes/apps/chain-tools/nft/guide.sections.nft_fi.fractionalization.content',
 					toolMentions: [
 						{ toolId: 'nftx', context: 'vault tokens' },
 						{ toolId: 'floor-protocol', context: 'micro-tokens' },
@@ -247,8 +244,7 @@ export const nftGuide: CategoryGuide = {
 				{
 					id: 'wallet-security',
 					titleKey: 'routes/apps/chain-tools/nft/guide.sections.security.wallet_security.title',
-					contentKey:
-						'routes/apps/chain-tools/nft/guide.sections.security.wallet_security.content',
+					contentKey: 'routes/apps/chain-tools/nft/guide.sections.security.wallet_security.content',
 					toolMentions: [
 						{ toolId: 'delegate-cash', context: 'safe delegation' },
 						{ toolId: 'warm-xyz', context: 'wallet linking' }
@@ -257,8 +253,7 @@ export const nftGuide: CategoryGuide = {
 				{
 					id: 'scam-prevention',
 					titleKey: 'routes/apps/chain-tools/nft/guide.sections.security.scam_prevention.title',
-					contentKey:
-						'routes/apps/chain-tools/nft/guide.sections.security.scam_prevention.content',
+					contentKey: 'routes/apps/chain-tools/nft/guide.sections.security.scam_prevention.content',
 					caseStudies: [
 						{
 							id: 'bayc-phishing',
@@ -268,7 +263,8 @@ export const nftGuide: CategoryGuide = {
 								'routes/apps/chain-tools/nft/guide.sections.security.scam_prevention.case_bayc.description',
 							date: '2022-04-25',
 							profit: '~$3M stolen',
-							sourceUrl: 'https://www.theverge.com/2022/4/25/23041415/bored-ape-yacht-club-nft-hack-instagram',
+							sourceUrl:
+								'https://www.theverge.com/2022/4/25/23041415/bored-ape-yacht-club-nft-hack-instagram',
 							relatedToolIds: ['opensea']
 						}
 					]
@@ -291,8 +287,7 @@ export const nftGuide: CategoryGuide = {
 				{
 					id: 'solana-nfts',
 					titleKey: 'routes/apps/chain-tools/nft/guide.sections.multi_chain.solana_nfts.title',
-					contentKey:
-						'routes/apps/chain-tools/nft/guide.sections.multi_chain.solana_nfts.content',
+					contentKey: 'routes/apps/chain-tools/nft/guide.sections.multi_chain.solana_nfts.content',
 					toolMentions: [
 						{ toolId: 'tensor', context: 'Solana trading' },
 						{ toolId: 'magic-eden', context: 'Solana marketplace' }
@@ -300,8 +295,7 @@ export const nftGuide: CategoryGuide = {
 				},
 				{
 					id: 'bitcoin-ordinals',
-					titleKey:
-						'routes/apps/chain-tools/nft/guide.sections.multi_chain.bitcoin_ordinals.title',
+					titleKey: 'routes/apps/chain-tools/nft/guide.sections.multi_chain.bitcoin_ordinals.title',
 					contentKey:
 						'routes/apps/chain-tools/nft/guide.sections.multi_chain.bitcoin_ordinals.content',
 					toolMentions: [

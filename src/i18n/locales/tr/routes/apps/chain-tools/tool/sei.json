@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Sei - The Fastest Layer 1 Blockchain",
+		"description": "Sei is the fastest Layer 1 blockchain, optimized for trading with 400ms finality. Built for DeFi and exchange applications.",
+		"keywords": "Sei Network, SEI token, Layer 1, fast blockchain, trading chain, DeFi"
+	},
+	"overview": "Sei is a high-performance Layer 1 blockchain optimized for trading, featuring 400ms finality and built-in order matching engine. Launched in 2023, Sei is designed from the ground up for DeFi and exchange applications.\n\nThe network achieves extreme speed through parallelized transaction processing and a native order matching engine that allows DEXs to offer CEX-like performance. Sei V2 introduced EVM compatibility, allowing Ethereum developers to deploy on Sei.\n\nSei positions itself as the fastest blockchain for trading, with optimizations specifically designed for DeFi, derivatives, and exchange applications. The ecosystem has grown rapidly with DEXs, perpetual exchanges, and other trading-focused applications.",
+	"features": {
+		"1": {
+			"title": "400ms Finality",
+			"description": "Near-instant transaction confirmation"
+		},
+		"2": {
+			"title": "Native Order Matching",
+			"description": "Built-in exchange infrastructure for DEXs"
+		},
+		"3": {
+			"title": "Parallel Processing",
+			"description": "Transactions processed in parallel for throughput"
+		},
+		"4": {
+			"title": "EVM Compatible",
+			"description": "Sei V2 supports Ethereum smart contracts"
+		},
+		"5": {
+			"title": "Optimistic Parallelization",
+			"description": "Automatic transaction parallelization"
+		},
+		"6": {
+			"title": "MEV Prevention",
+			"description": "Built-in protections against front-running"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DEX Trading",
+			"description": "Trade on high-performance decentralized exchanges"
+		},
+		"2": {
+			"title": "Perpetuals",
+			"description": "Use perpetual exchanges with low latency"
+		},
+		"3": {
+			"title": "DeFi Development",
+			"description": "Build trading and DeFi applications"
+		},
+		"4": {
+			"title": "Gaming",
+			"description": "Develop games requiring fast finality"
+		},
+		"5": {
+			"title": "NFT Trading",
+			"description": "Trade NFTs with instant confirmation"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How is Sei so fast?",
+			"answer": "Sei achieves speed through multiple innovations: parallel transaction processing, optimistic parallelization, and a consensus mechanism optimized for finality. The native order matching engine also reduces latency for trading applications."
+		},
+		"2": {
+			"question": "What is SEI token?",
+			"answer": "SEI is the native token for gas fees, staking, and governance. SEI can be staked to secure the network and earn rewards. It's also used for governance voting on network upgrades and parameter changes."
+		},
+		"3": {
+			"question": "Is Sei EVM compatible?",
+			"answer": "Yes, Sei V2 (launched 2024) introduced EVM compatibility. You can deploy Ethereum smart contracts on Sei and interact with them using MetaMask. This is in addition to Sei's native CosmWasm contract support."
+		},
+		"4": {
+			"question": "Sei vs Solana: Which is faster?",
+			"answer": "Both are extremely fast. Sei claims 400ms finality vs Solana's 400-500ms. Sei is optimized specifically for trading with native order matching. Solana has a larger ecosystem. For pure trading speed, they're comparable."
+		},
+		"5": {
+			"question": "How do I bridge to Sei?",
+			"answer": "Use Wormhole, Axelar, or other supported bridges to transfer assets to Sei. For EVM assets, you can use the Sei Bridge. The process varies by bridge but typically takes a few minutes."
+		}
+	},
+	"cta": {
+		"ready": "Ready for the fastest chain?",
+		"button": "Explore Sei",
+		"note": "Optimized for trading"
+	}
+}

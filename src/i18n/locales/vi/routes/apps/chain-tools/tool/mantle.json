@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Mantle - High-Performance Ethereum L2",
+		"description": "Mantle is a modular Ethereum L2 backed by BitDAO treasury. Ultra-low fees, fast transactions, and strong ecosystem incentives.",
+		"keywords": "Mantle, MNT token, Ethereum L2, BitDAO, Layer 2, modular blockchain"
+	},
+	"overview": "Mantle is a high-performance Ethereum Layer 2 network backed by one of the largest DAO treasuries in crypto. Launched in 2023, Mantle uses modular architecture with Ethereum for security and custom data availability for low costs.\n\nBacked by the BitDAO treasury (now Mantle treasury) worth billions, the network has significant resources for ecosystem development, grants, and incentive programs. This financial backing distinguishes Mantle from other L2s.\n\nMantle focuses on being developer and user-friendly with comprehensive documentation, grants programs, and a growing ecosystem of DeFi, gaming, and NFT applications.",
+	"features": {
+		"1": {
+			"title": "Modular Design",
+			"description": "Optimized rollup with custom data availability"
+		},
+		"2": {
+			"title": "Massive Treasury",
+			"description": "Backed by multi-billion dollar ecosystem fund"
+		},
+		"3": {
+			"title": "Ultra-Low Fees",
+			"description": "Transaction costs significantly below Ethereum"
+		},
+		"4": {
+			"title": "EVM Compatible",
+			"description": "Full compatibility with Ethereum tooling"
+		},
+		"5": {
+			"title": "Ecosystem Grants",
+			"description": "Generous funding for builders and projects"
+		},
+		"6": {
+			"title": "mETH Staking",
+			"description": "Native liquid staking with mETH"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi Building",
+			"description": "Launch DeFi protocols with ecosystem support"
+		},
+		"2": {
+			"title": "Gaming",
+			"description": "Build blockchain games with low fees"
+		},
+		"3": {
+			"title": "Yield Farming",
+			"description": "Participate in ecosystem incentive programs"
+		},
+		"4": {
+			"title": "Liquid Staking",
+			"description": "Stake ETH via mETH for additional yield"
+		},
+		"5": {
+			"title": "NFT Platforms",
+			"description": "Deploy NFT projects affordably"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is MNT token?",
+			"answer": "MNT is Mantle's native token used for gas fees and governance. It was created when BitDAO rebranded to Mantle, converting BIT to MNT. MNT can be staked for governance power and is used across the Mantle ecosystem."
+		},
+		"2": {
+			"question": "Is Mantle safe?",
+			"answer": "Mantle inherits Ethereum security for settlement while using its own data availability layer. The network has been audited and is backed by a massive treasury. As with newer L2s, start with appropriate caution."
+		},
+		"3": {
+			"question": "What is mETH?",
+			"answer": "mETH is Mantle's liquid staking ETH token. When you stake ETH on Mantle, you receive mETH that earns staking rewards while remaining liquid and usable in DeFi. It's similar to stETH but native to Mantle."
+		},
+		"4": {
+			"question": "How do I bridge to Mantle?",
+			"answer": "Use the official Mantle Bridge at bridge.mantle.xyz or third-party bridges like Stargate, Orbiter, or Across. Bridging from Ethereum is straightforward and typically takes minutes."
+		},
+		"5": {
+			"question": "What happened to BitDAO?",
+			"answer": "BitDAO rebranded to Mantle in 2023, focusing on building the L2 network. BIT tokens converted to MNT at 1:1. The treasury that backed BitDAO now supports Mantle ecosystem development with billions in assets."
+		}
+	},
+	"cta": {
+		"ready": "Ready to build on Mantle?",
+		"button": "Explore Mantle",
+		"note": "Treasury-backed L2"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Jito - Solana Liquid Staking & MEV Infrastructure",
+		"description": "Stake SOL and earn MEV rewards with Jito. The leading liquid staking protocol on Solana with JitoSOL.",
+		"keywords": "Jito, JitoSOL, Solana staking, liquid staking, MEV, Solana yield"
+	},
+	"overview": "Jito is Solana's leading liquid staking protocol and MEV infrastructure provider. Founded in 2022, Jito lets users stake SOL and receive JitoSOL, a liquid token that earns staking rewards plus MEV (Maximal Extractable Value) revenue.\n\nUnlike traditional staking where SOL is locked, JitoSOL can be used across Solana DeFi while still earning rewards. Jito's MEV-aware validator client captures additional value from transaction ordering, passing these rewards to JitoSOL holders.\n\nJito also operates critical MEV infrastructure for Solana, including block engines and bundles that help traders execute transactions efficiently. The JTO governance token was airdropped in December 2023, one of Solana's largest airdrops.",
+	"features": {
+		"1": {
+			"title": "Liquid Staking",
+			"description": "Stake SOL and receive liquid JitoSOL tokens"
+		},
+		"2": {
+			"title": "MEV Rewards",
+			"description": "Earn additional yield from MEV revenue sharing"
+		},
+		"3": {
+			"title": "DeFi Compatible",
+			"description": "Use JitoSOL across Solana DeFi protocols"
+		},
+		"4": {
+			"title": "Instant Unstaking",
+			"description": "Swap JitoSOL back to SOL anytime via DEXs"
+		},
+		"5": {
+			"title": "Validator Delegation",
+			"description": "Stake distributed across high-performance validators"
+		},
+		"6": {
+			"title": "JTO Governance",
+			"description": "Participate in protocol governance with JTO tokens"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Liquid Staking",
+			"description": "Earn staking rewards while keeping SOL liquid"
+		},
+		"2": {
+			"title": "DeFi Collateral",
+			"description": "Use JitoSOL as collateral in lending protocols"
+		},
+		"3": {
+			"title": "Yield Stacking",
+			"description": "Combine staking yield with DeFi yields"
+		},
+		"4": {
+			"title": "MEV Capture",
+			"description": "Benefit from Solana's MEV infrastructure"
+		},
+		"5": {
+			"title": "Governance",
+			"description": "Vote on protocol decisions with JTO"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is JitoSOL?",
+			"answer": "JitoSOL is Jito's liquid staking token. When you stake SOL with Jito, you receive JitoSOL that represents your staked position. JitoSOL value increases relative to SOL as staking and MEV rewards accrue. You can use JitoSOL in DeFi or swap back to SOL anytime."
+		},
+		"2": {
+			"question": "What is MEV and how does Jito capture it?",
+			"answer": "MEV (Maximal Extractable Value) is value from transaction ordering in blocks. Jito runs modified validator software that captures MEV and distributes it to JitoSOL holders. This adds ~1-3% additional APY on top of normal staking rewards."
+		},
+		"3": {
+			"question": "Is Jito safe?",
+			"answer": "Jito is one of the most established Solana protocols with audited smart contracts. However, liquid staking carries smart contract risk. JitoSOL is backed 1:1+ by staked SOL. The protocol is governed by JTO token holders."
+		},
+		"4": {
+			"question": "How do I unstake from Jito?",
+			"answer": "You can swap JitoSOL to SOL instantly on Jupiter or Raydium—there's no unstaking period. Alternatively, you can unstake directly through Jito, which takes the normal Solana unstaking period (~2-3 days). The instant swap method is most popular."
+		},
+		"5": {
+			"question": "Jito vs Marinade: Which liquid staking?",
+			"answer": "Both are excellent. Jito has higher APY due to MEV rewards and is newer. Marinade is more established with mSOL widely integrated. Many users hold both. Check current APYs and decide based on your risk tolerance and integration needs."
+		}
+	},
+	"cta": {
+		"ready": "Ready to stake SOL with Jito?",
+		"button": "Open Jito",
+		"note": "Liquid staking + MEV rewards"
+	}
+}
