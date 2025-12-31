@@ -1,83 +1,83 @@
 {
 	"seo": {
-		"title": "POAP - Proof of Attendance Protocol",
-		"description": "POAP creates digital collectibles for life's moments. Mint NFT badges for events, achievements, and experiences on Gnosis Chain.",
-		"keywords": "POAP, proof of attendance, event NFTs, badges, Gnosis Chain, collectibles"
+		"title": "POAP - 出席证明协议",
+		"description": "POAP 创建数字出席徽章作为 NFT。收集来自活动、会议和特殊时刻的纪念品。",
+		"keywords": "POAP, 出席证明, NFT 徽章, 活动 NFT, 数字收藏品, 以太坊 NFT"
 	},
-	"overview": "POAP (Proof of Attendance Protocol) creates NFT badges that prove you were at an event or participated in an experience. These 'POAPs' have become the digital equivalent of event wristbands or stamps in a passport.\n\nPOAPs are minted on Gnosis Chain (formerly xDai) for free claiming, making them accessible for events of any size. They've been adopted by conferences, DAOs, communities, and brands worldwide.\n\nBeyond simple attendance, POAPs serve as building blocks for reputation, community membership, and access control. Your POAP collection tells the story of your journey through Web3.",
+	"overview": "POAP（出席证明协议）将你生活中的时刻变成可收藏的数字徽章。参加活动、会议或特殊场合？领取一个 POAP 来纪念它。\n\n每个 POAP 都是 Gnosis Chain 上的 NFT（以前在以太坊主网）。它们是免费的——发行者创建设计，出席者免费领取。你的 POAP 收藏变成你经历的视觉历史。\n\nPOAP 被广泛用于 Web3 活动、社区会议、在线活动等。超越纪念品，它们还可以用于门控访问、声誉和社区建设。",
 	"features": {
 		"1": {
-			"title": "Event Badges",
-			"description": "Prove attendance NFTs"
+			"title": "NFT 徽章",
+			"description": "可收藏的时刻"
 		},
 		"2": {
-			"title": "Free Minting",
-			"description": "Gnosis Chain = no gas"
+			"title": "免费领取",
+			"description": "无 Gas 费用"
 		},
 		"3": {
-			"title": "Easy Distribution",
-			"description": "Links, QR codes, claims"
+			"title": "Gnosis Chain",
+			"description": "低成本 NFT"
 		},
 		"4": {
-			"title": "Collectible Gallery",
-			"description": "Display your journey"
+			"title": "活动纪念品",
+			"description": "数字回忆"
 		},
 		"5": {
-			"title": "Token Gating",
-			"description": "Access based on POAPs"
+			"title": "声誉证明",
+			"description": "验证出席"
 		},
 		"6": {
-			"title": "Developer API",
-			"description": "Build POAP integrations"
+			"title": "社区建设",
+			"description": "门控访问"
 		}
 	},
 	"use_cases": {
 		"1": {
-			"title": "Event Attendance",
-			"description": "Badge for being there"
+			"title": "活动纪念品",
+			"description": "纪念出席"
 		},
 		"2": {
-			"title": "Community Building",
-			"description": "Reward participation"
+			"title": "会议徽章",
+			"description": "收集会议 POAP"
 		},
 		"3": {
-			"title": "Access Control",
-			"description": "Gate by POAP ownership"
+			"title": "社区门控",
+			"description": "用 POAP 解锁访问"
 		},
 		"4": {
-			"title": "Achievement Badges",
-			"description": "Recognize accomplishments"
+			"title": "声誉建设",
+			"description": "展示经历"
 		},
 		"5": {
-			"title": "Memory Collection",
-			"description": "Digital scrapbook"
+			"title": "品牌参与",
+			"description": "创建纪念 POAP"
 		}
 	},
 	"faqs": {
 		"1": {
-			"question": "What can POAPs be used for?",
-			"answer": "POAPs prove attendance and participation. They're used for: community reputation, event memories, access to exclusive content, airdrop eligibility, voting rights, and more. They're composable building blocks."
+			"question": "什么是 POAP？",
+			"answer": "POAP 是证明你参加某事的数字徽章（NFT）。参加会议？拿个 POAP。在线社区活动？POAP。它们像数字纪念品，构成你经历的视觉时间线。"
 		},
 		"2": {
-			"question": "Why are POAPs free?",
-			"answer": "POAPs mint on Gnosis Chain which has very low fees. POAP covers these minimal costs. This makes POAPs accessible for any event size. The focus is adoption, not monetization."
+			"question": "POAP 是免费的吗？",
+			"answer": "是的，领取 POAP 对收集者是免费的。发行者通过 POAP 支付铸造费用，但出席者免费领取。Gas 费由协议或发行者覆盖。"
 		},
 		"3": {
-			"question": "How do I get POAPs?",
-			"answer": "Event organizers distribute claim links, QR codes, or secret words. Some POAPs auto-drop to attendees. Check your wallet at poap.xyz or use the POAP app. They also appear in wallet apps."
+			"question": "如何领取 POAP？",
+			"answer": "发行者分发领取链接或二维码。扫描或点击，连接你的钱包（或只用电子邮件），POAP 出现在你的收藏中。通过 poap.xyz 查看你的 POAP。"
 		},
 		"4": {
-			"question": "Can I create POAPs?",
-			"answer": "Yes, apply at poap.xyz to create POAPs for your events. There's a review process to maintain quality. You'll need to describe your event and distribution method. It's free to create."
+			"question": "POAP 可以转让吗？",
+			"answer": "是的，POAP 是可转让的 NFT。你可以发送它们或在二级市场出售。然而，大多数人保留它们作为个人收藏品而不是交易。"
 		},
 		"5": {
-			"question": "Are POAPs valuable?",
-			"answer": "POAPs aren't meant to be traded—they're soulbound-ish. Some have secondary value from historic events. Their real value is reputation, access, and memories. Don't treat them as investments."
+			"question": "如何创建 POAP？",
+			"answer": "在 POAP.xyz 申请作为发行者。设计你的徽章（圆形图像），设置活动详情和领取方法。需要审核。一旦批准，你获得用于分发的领取链接。"
 		}
 	},
 	"cta": {
-		"ready": "Ready to collect moments?",
-		"button": "Explore POAP",
-		"note": "Badges for life's moments"
+		"ready": "准备收集你的时刻了吗？",
+		"button": "探索 POAP",
+		"note": "你生活的书签"
 	}
 }

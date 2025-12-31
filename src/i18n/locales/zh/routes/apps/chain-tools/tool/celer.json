@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Celer Network - 跨链互操作性",
+		"description": "Celer Network 通过 cBridge 提供跨链桥接和链间消息传递。在 40+ 条区块链间快速、低成本转账。",
+		"keywords": "Celer Network, cBridge, CELR 代币, 跨链桥, 互操作性, 多链"
+	},
+	"overview": "Celer Network 是一个以 cBridge 闻名的区块链互操作性协议，这是他们的跨链资产转移解决方案。在 40+ 条链间以有竞争力的费用和快速最终性桥接代币。\n\nCeler 使用状态守护者网络（SGN），验证者质押 CELR 来保护跨链转账。不同的桥接模式在速度和安全性之间提供权衡。网络已处理数十亿美元的交易量。\n\n除了桥接，Celer 还为构建跨链 dApp 的开发者提供链间消息（IM）。CELR 代币用于质押、治理和费用支付。它是多链加密的经过考验的基础设施。",
+	"features": {
+		"1": {
+			"title": "40+ 条链",
+			"description": "广泛网络支持"
+		},
+		"2": {
+			"title": "cBridge",
+			"description": "快速资产转移"
+		},
+		"3": {
+			"title": "链间消息传递",
+			"description": "跨链 dApp 逻辑"
+		},
+		"4": {
+			"title": "CELR 代币",
+			"description": "质押和治理"
+		},
+		"5": {
+			"title": "低费用",
+			"description": "有竞争力的定价"
+		},
+		"6": {
+			"title": "多种模式",
+			"description": "速度 vs 安全权衡"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "代币桥接",
+			"description": "跨链移动资产"
+		},
+		"2": {
+			"title": "多链 dApp",
+			"description": "链间消息传递"
+		},
+		"3": {
+			"title": "NFT 桥接",
+			"description": "跨链 NFT 转移"
+		},
+		"4": {
+			"title": "CELR 质押",
+			"description": "从 SGN 赚取"
+		},
+		"5": {
+			"title": "协议集成",
+			"description": "为 dApp 添加桥接"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 cBridge？",
+			"answer": "cBridge 是 Celer 的资产桥接解决方案。它支持 40+ 条链和数百种代币。使用流动性池和 SGN 验证者网络保障安全。是生态系统中较成熟的桥之一。"
+		},
+		"2": {
+			"question": "转账有多快？",
+			"answer": "速度取决于桥接模式。基于池的转账在目标链上可以接近即时。规范映射桥取决于源链最终性。典型转账在 5-20 分钟内完成。"
+		},
+		"3": {
+			"question": "什么是 SGN？",
+			"answer": "状态守护者网络是 Celer 的验证者网络。验证者质押 CELR 并共同签署跨链交易。它为桥接提供安全保障。你可以质押 CELR 参与并赚取奖励。"
+		},
+		"4": {
+			"question": "Celer vs 其他桥？",
+			"answer": "Celer 有广泛的链支持和有竞争力的费用。它是较老、更经过考验的桥之一。比较你特定路线的费率和速度——不同的桥在不同链/代币上表现优异。"
+		},
+		"5": {
+			"question": "什么是链间消息传递？",
+			"answer": "IM 让不同链上的智能合约进行通信。开发者可以构建逻辑跨越多链的 dApp——跨链治理、统一流动性、多链游戏。它是多链未来的基础设施。"
+		}
+	},
+	"cta": {
+		"ready": "准备用 Celer 桥接了吗？",
+		"button": "使用 cBridge",
+		"note": "跨链互操作性"
+	}
+}

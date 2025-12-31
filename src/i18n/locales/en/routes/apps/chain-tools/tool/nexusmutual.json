@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Nexus Mutual - DeFi Insurance",
+		"description": "Nexus Mutual provides decentralized smart contract coverage. Protect your DeFi positions against protocol exploits and hacks.",
+		"keywords": "Nexus Mutual, DeFi insurance, smart contract cover, NXM token, crypto insurance, exploit protection"
+	},
+	"overview": "Nexus Mutual is the leading decentralized insurance protocol for DeFi. Buy cover to protect your deposits against smart contract exploits. If a covered protocol gets hacked, claims are paid out.\n\nCoverage is underwritten by NXM stakers who assess risk and stake on specific protocols. High-risk protocols need more staking capital. Claims are assessed by the mutual's members through governance votes.\n\nNexus Mutual has paid millions in claims from major exploits. It's essential risk management infrastructure for DeFi users and protocols. The NXM token represents membership and economic participation.",
+	"features": {
+		"1": {
+			"title": "Smart Contract Cover",
+			"description": "Protocol protection"
+		},
+		"2": {
+			"title": "Decentralized Claims",
+			"description": "Member-assessed"
+		},
+		"3": {
+			"title": "NXM Token",
+			"description": "Membership + value"
+		},
+		"4": {
+			"title": "Risk Staking",
+			"description": "Underwrite protocols"
+		},
+		"5": {
+			"title": "Proven Payouts",
+			"description": "Claims paid"
+		},
+		"6": {
+			"title": "Wide Coverage",
+			"description": "Many protocols"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Protect Deposits",
+			"description": "Cover your DeFi"
+		},
+		"2": {
+			"title": "Risk Staking",
+			"description": "Earn underwriting"
+		},
+		"3": {
+			"title": "Claims Voting",
+			"description": "Participate in governance"
+		},
+		"4": {
+			"title": "Protocol Coverage",
+			"description": "Get your protocol listed"
+		},
+		"5": {
+			"title": "Risk Management",
+			"description": "Portfolio protection"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How does Nexus Mutual coverage work?",
+			"answer": "Buy cover for a specific protocol and amount. Pay a premium (varies by protocol risk). If the protocol is exploited during your coverage period, file a claim. Members vote on validity. Valid claims are paid."
+		},
+		"2": {
+			"question": "How much does coverage cost?",
+			"answer": "Premiums vary by protocol—riskier protocols cost more. Typical rates are 2-10% annually. Check the app for current pricing. Coverage capacity depends on NXM staked against each protocol."
+		},
+		"3": {
+			"question": "How are claims assessed?",
+			"answer": "Claim assessors (NXM holders) vote on claim validity. They evaluate if the exploit falls within coverage terms. Fraudulent assessments are punished. The process is transparent and on-chain."
+		},
+		"4": {
+			"question": "What is NXM token?",
+			"answer": "NXM represents membership in the mutual. It's used for staking, governance, and claims assessment. Value is tied to the mutual's capital pool. You must be a member (KYC) to hold NXM."
+		},
+		"5": {
+			"question": "Has Nexus Mutual paid claims?",
+			"answer": "Yes. Nexus Mutual has paid millions in claims from exploits including bZx, Yearn, and others. Proven track record of honoring coverage. This builds trust in the mutual model."
+		}
+	},
+	"cta": {
+		"ready": "Ready to protect your DeFi?",
+		"button": "Get Coverage",
+		"note": "Decentralized DeFi insurance"
+	}
+}

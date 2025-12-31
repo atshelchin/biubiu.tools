@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Trail of Bits - Security Research & Auditing",
+		"description": "Trail of Bits is a leading security research firm. Smart contract audits, security tools like Slither and Echidna, and cutting-edge blockchain security research.",
+		"keywords": "Trail of Bits, security audit, Slither, Echidna, smart contract security, blockchain security"
+	},
+	"overview": "Trail of Bits is one of the most respected security research firms in the blockchain space. They've audited major protocols including Ethereum 2.0, Compound, MakerDAO, and hundreds of others.\n\nBeyond audits, Trail of Bits creates essential open-source security tools. Slither is the go-to static analyzer for Solidity. Echidna provides property-based fuzzing. Manticore does symbolic execution. These tools are used by developers worldwide.\n\nTheir research advances the entire industry. Trail of Bits publishes detailed security analyses, develops new testing methodologies, and trains security researchers. They're foundational to blockchain security.",
+	"features": {
+		"1": {
+			"title": "Security Audits",
+			"description": "Expert code review"
+		},
+		"2": {
+			"title": "Slither",
+			"description": "Static analyzer"
+		},
+		"3": {
+			"title": "Echidna",
+			"description": "Property-based fuzzer"
+		},
+		"4": {
+			"title": "Research",
+			"description": "Cutting-edge security"
+		},
+		"5": {
+			"title": "Training",
+			"description": "Security education"
+		},
+		"6": {
+			"title": "Open Source",
+			"description": "Free tools for all"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Protocol Audits",
+			"description": "Pre-launch security"
+		},
+		"2": {
+			"title": "Tool Usage",
+			"description": "Slither in CI/CD"
+		},
+		"3": {
+			"title": "Fuzzing",
+			"description": "Echidna testing"
+		},
+		"4": {
+			"title": "Research",
+			"description": "Learn from publications"
+		},
+		"5": {
+			"title": "Training",
+			"description": "Security bootcamps"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Trail of Bits known for?",
+			"answer": "Trail of Bits is known for high-quality security audits, open-source tools (Slither, Echidna, Manticore), and security research. They've audited major protocols and their tools are industry standards."
+		},
+		"2": {
+			"question": "How much does an audit cost?",
+			"answer": "Trail of Bits audits are premium-priced, typically $200K+ for comprehensive reviews. They're selective about projects. For earlier-stage projects, use their free tools and consider other auditors first."
+		},
+		"3": {
+			"question": "What is Slither?",
+			"answer": "Slither is a static analysis tool for Solidity. It detects vulnerabilities, code quality issues, and generates reports. Run it on any Solidity project—it's free and catches common bugs before deployment."
+		},
+		"4": {
+			"question": "What is Echidna?",
+			"answer": "Echidna is a property-based fuzzer for smart contracts. You define properties that should always hold; Echidna tries to break them with random inputs. It finds edge cases manual testing misses."
+		},
+		"5": {
+			"question": "Can I use their tools for free?",
+			"answer": "Yes. Slither, Echidna, Manticore, and other Trail of Bits tools are open source. Use them in your development workflow. They're essential for any serious smart contract development."
+		}
+	},
+	"cta": {
+		"ready": "Ready for world-class security?",
+		"button": "Explore Trail of Bits",
+		"note": "Security research leader"
+	}
+}

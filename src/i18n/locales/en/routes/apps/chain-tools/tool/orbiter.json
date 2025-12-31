@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Orbiter Finance - L2 Bridge",
+		"description": "Orbiter Finance specializes in fast, cheap bridging between Ethereum L2s. Optimized for zkSync, Arbitrum, Optimism, and other rollups.",
+		"keywords": "Orbiter Finance, L2 bridge, zkSync bridge, Arbitrum bridge, rollup bridge, cross-L2"
+	},
+	"overview": "Orbiter Finance is a decentralized bridge optimized for Ethereum L2 transfers. It excels at fast, low-cost bridging between rollups like zkSync, Arbitrum, Optimism, Base, and Linea.\n\nOrbiter uses a maker-taker model where liquidity providers (makers) front the funds on the destination chain. This enables near-instant transfers without waiting for L1 finality. The protocol is non-custodial and trust-minimized.\n\nParticularly popular in the zkSync ecosystem, Orbiter handles significant volume between L2s. Fees are competitive, often lower than alternatives for L2-to-L2 routes. It's a go-to bridge for rollup users.",
+	"features": {
+		"1": {
+			"title": "L2 Optimized",
+			"description": "Built for rollups"
+		},
+		"2": {
+			"title": "Fast Transfers",
+			"description": "Near-instant bridging"
+		},
+		"3": {
+			"title": "Low Fees",
+			"description": "Competitive L2 rates"
+		},
+		"4": {
+			"title": "Non-Custodial",
+			"description": "Decentralized design"
+		},
+		"5": {
+			"title": "Multiple L2s",
+			"description": "All major rollups"
+		},
+		"6": {
+			"title": "ETH Focus",
+			"description": "ETH and stablecoins"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "L2 to L2",
+			"description": "Fast rollup bridging"
+		},
+		"2": {
+			"title": "zkSync Bridging",
+			"description": "Popular zkSync route"
+		},
+		"3": {
+			"title": "Airdrop Farming",
+			"description": "Activity on L2s"
+		},
+		"4": {
+			"title": "Quick Deposits",
+			"description": "Fast L2 onboarding"
+		},
+		"5": {
+			"title": "Cost Savings",
+			"description": "Cheaper than official bridges"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Why use Orbiter for L2s?",
+			"answer": "Orbiter is optimized for L2-to-L2 transfers. While official bridges are slow (wait for L1 finality), Orbiter's maker model provides near-instant transfers. Fees are often lower too. It's the fastest way between rollups."
+		},
+		"2": {
+			"question": "How fast are transfers?",
+			"answer": "Most transfers complete in 1-5 minutes. The maker fronts funds on the destination immediately after seeing your deposit. Much faster than official bridges which can take hours for L1 finality."
+		},
+		"3": {
+			"question": "Which L2s are supported?",
+			"answer": "Orbiter supports Arbitrum, Optimism, zkSync Era, Base, Linea, Scroll, Polygon zkEVM, StarkNet, and more. Focus is on Ethereum L2s/rollups. Check their app for current supported networks."
+		},
+		"4": {
+			"question": "Is there a token?",
+			"answer": "Orbiter has hinted at a token but hasn't launched one yet. Users bridge through the platform potentially earning future airdrops. Check their official channels for updates."
+		},
+		"5": {
+			"question": "How do fees work?",
+			"answer": "Fees include a small protocol fee plus gas on both chains. L2 gas is cheap, so total costs are low. Compare with aggregators like Bungee for your specific route—Orbiter is often best for L2-L2."
+		}
+	},
+	"cta": {
+		"ready": "Ready for fast L2 bridging?",
+		"button": "Use Orbiter",
+		"note": "L2-optimized bridge"
+	}
+}

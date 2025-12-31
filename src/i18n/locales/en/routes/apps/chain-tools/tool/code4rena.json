@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Code4rena - Competitive Security Audits",
+		"description": "Code4rena runs competitive audit contests. Hundreds of security researchers compete to find bugs in your protocol for bounties.",
+		"keywords": "Code4rena, audit contest, bug bounty, competitive audit, DeFi security, smart contract audit"
+	},
+	"overview": "Code4rena (C4) pioneered competitive audit contests. Instead of hiring one auditor, protocols host contests where hundreds of security researchers compete to find vulnerabilities. More eyes, more bugs found.\n\nWardens (auditors) submit findings ranked by severity. Higher severity bugs pay more. Top wardens earn significant bounties. This gamification attracts talent and creates thorough coverage.\n\nCode4rena has run contests for major protocols including Aave, OpenSea, and ENS. The competitive model often finds bugs that traditional audits miss. It's become essential infrastructure for DeFi security.",
+	"features": {
+		"1": {
+			"title": "Competitive Audits",
+			"description": "Hundreds of eyes"
+		},
+		"2": {
+			"title": "Warden Network",
+			"description": "Top security talent"
+		},
+		"3": {
+			"title": "Severity Ranking",
+			"description": "Prioritized findings"
+		},
+		"4": {
+			"title": "Public Reports",
+			"description": "Transparent results"
+		},
+		"5": {
+			"title": "Major Protocols",
+			"description": "Industry adoption"
+		},
+		"6": {
+			"title": "Community",
+			"description": "Security ecosystem"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Protocol Audit",
+			"description": "Competitive review"
+		},
+		"2": {
+			"title": "Bug Hunting",
+			"description": "Earn as warden"
+		},
+		"3": {
+			"title": "Pre-Launch",
+			"description": "Security validation"
+		},
+		"4": {
+			"title": "Research",
+			"description": "Study past findings"
+		},
+		"5": {
+			"title": "Complement Audits",
+			"description": "Additional coverage"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How do Code4rena contests work?",
+			"answer": "Protocol submits code and prize pool. Contest runs for 3-7 days. Wardens submit findings. Judges rank by severity. Payouts based on severity and uniqueness. Higher/unique findings pay more."
+		},
+		"2": {
+			"question": "How much does a contest cost?",
+			"answer": "Contests typically range from $50K to $200K+ depending on codebase size and prize pool. Larger pools attract more wardens. Code4rena takes a fee on top of the prize pool."
+		},
+		"3": {
+			"question": "How do I become a warden?",
+			"answer": "Sign up on Code4rena, join Discord, and start competing. Anyone can participate. Earnings depend on finding valid bugs. Study past reports to learn. Top wardens earn six figures."
+		},
+		"4": {
+			"question": "Code4rena vs traditional audits?",
+			"answer": "Traditional audits: dedicated team, thorough review. C4: many eyes, competitive pressure. They complement each other—many protocols do both. C4 often finds bugs that dedicated audits miss."
+		},
+		"5": {
+			"question": "Are contest results public?",
+			"answer": "Yes. After judging, reports are published. Anyone can read findings. This transparency helps the ecosystem learn. Browse past contests to study vulnerability patterns."
+		}
+	},
+	"cta": {
+		"ready": "Ready for competitive auditing?",
+		"button": "Explore Code4rena",
+		"note": "Competitive security contests"
+	}
+}

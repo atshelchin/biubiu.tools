@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Mythril - Smart Contract Security Analyzer",
+		"description": "Mythril is a security analysis tool for EVM bytecode. Symbolic execution to find vulnerabilities in Ethereum smart contracts.",
+		"keywords": "Mythril, symbolic execution, smart contract security, EVM analysis, vulnerability detection, Consensys"
+	},
+	"overview": "Mythril is a security analysis tool that uses symbolic execution to find vulnerabilities in Ethereum smart contracts. Unlike static analysis, it actually executes code symbolically to discover issues.\n\nCreated by Consensys, Mythril detects common vulnerabilities including integer overflows, reentrancy, unprotected ether withdrawal, and more. It works on EVM bytecode, so it can analyze deployed contracts too.\n\nMythril is often used alongside static analyzers like Slither. The combination of symbolic execution and static analysis provides more comprehensive coverage than either alone.",
+	"features": {
+		"1": {
+			"title": "Symbolic Execution",
+			"description": "Deep analysis"
+		},
+		"2": {
+			"title": "Bytecode Analysis",
+			"description": "Analyze deployed contracts"
+		},
+		"3": {
+			"title": "Multiple Detectors",
+			"description": "Common vulnerabilities"
+		},
+		"4": {
+			"title": "Consensys Backed",
+			"description": "Enterprise support"
+		},
+		"5": {
+			"title": "Open Source",
+			"description": "Free to use"
+		},
+		"6": {
+			"title": "CI Integration",
+			"description": "Automate security"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Deep Analysis",
+			"description": "Find complex bugs"
+		},
+		"2": {
+			"title": "Bytecode Audit",
+			"description": "Analyze without source"
+		},
+		"3": {
+			"title": "Pre-Deployment",
+			"description": "Security verification"
+		},
+		"4": {
+			"title": "Complement Static",
+			"description": "Use with Slither"
+		},
+		"5": {
+			"title": "Research",
+			"description": "Study contract security"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is symbolic execution?",
+			"answer": "Symbolic execution treats inputs as symbols rather than concrete values. It explores all possible execution paths to find bugs. More thorough than fuzzing for some bug types, but slower."
+		},
+		"2": {
+			"question": "Mythril vs Slither?",
+			"answer": "Slither is static analysis—fast pattern matching. Mythril is symbolic execution—slower but explores execution paths. Use both: Slither for quick checks, Mythril for deeper analysis. They find different bugs."
+		},
+		"3": {
+			"question": "How do I install Mythril?",
+			"answer": "Install via pip: `pip3 install mythril`. Or use Docker: `docker pull mythril/myth`. Run with `myth analyze <contract.sol>`. Requires solc for source compilation."
+		},
+		"4": {
+			"question": "Can Mythril analyze deployed contracts?",
+			"answer": "Yes. Mythril works on EVM bytecode. Get bytecode from Etherscan and analyze. Useful for checking deployed contracts or when source isn't available. Use --address flag with RPC."
+		},
+		"5": {
+			"question": "Why is Mythril slow?",
+			"answer": "Symbolic execution explores many execution paths—it's computationally intensive. Adjust timeout and transaction depth for balance. For quick checks, use Slither first, then Mythril for deeper passes."
+		}
+	},
+	"cta": {
+		"ready": "Ready for deep security analysis?",
+		"button": "Get Mythril",
+		"note": "Symbolic execution for EVM"
+	}
+}

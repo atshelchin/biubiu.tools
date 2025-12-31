@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Flashbots - MEV Infrastructure",
+		"description": "Flashbots builds infrastructure for fair MEV extraction. Protect transactions from frontrunning with MEV-Share and access block building through MEV-Boost.",
+		"keywords": "Flashbots, MEV, maximal extractable value, frontrunning protection, MEV-Boost, block building"
+	},
+	"overview": "Flashbots is the leading MEV (Maximal Extractable Value) research and development organization. They've built critical infrastructure that makes Ethereum fairer and more efficient by democratizing access to MEV.\n\nMEV-Boost lets validators outsource block building to specialized builders, increasing validator revenue while keeping the network decentralized. MEV-Share returns MEV to users whose transactions generate it, protecting them from harmful extraction.\n\nFlashbots also developed Protect RPC, which routes transactions through private mempools to prevent frontrunning. Their research shapes how the entire industry thinks about MEV. They're essential Ethereum infrastructure.",
+	"features": {
+		"1": {
+			"title": "MEV-Boost",
+			"description": "Validator block building"
+		},
+		"2": {
+			"title": "MEV-Share",
+			"description": "MEV redistribution"
+		},
+		"3": {
+			"title": "Protect RPC",
+			"description": "Frontrunning protection"
+		},
+		"4": {
+			"title": "Flashbots Auction",
+			"description": "Private tx submission"
+		},
+		"5": {
+			"title": "SUAVE",
+			"description": "Decentralized block building"
+		},
+		"6": {
+			"title": "Research",
+			"description": "MEV research leadership"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Frontrun Protection",
+			"description": "Private transactions"
+		},
+		"2": {
+			"title": "Validator Revenue",
+			"description": "Maximize block value"
+		},
+		"3": {
+			"title": "MEV Searchers",
+			"description": "Submit bundles"
+		},
+		"4": {
+			"title": "Protocol Integration",
+			"description": "MEV-aware design"
+		},
+		"5": {
+			"title": "User Protection",
+			"description": "MEV redistribution"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is MEV?",
+			"answer": "MEV (Maximal Extractable Value) is profit extracted by reordering, inserting, or censoring transactions. Examples: frontrunning swaps, sandwich attacks, liquidations. Flashbots makes MEV extraction more transparent and returns value to users."
+		},
+		"2": {
+			"question": "How does Protect RPC work?",
+			"answer": "Instead of sending transactions to the public mempool (where bots see and frontrun them), Protect sends to private builders. Your transaction is included without being sandwiched. Add the RPC to MetaMask for protection."
+		},
+		"3": {
+			"question": "What is MEV-Boost?",
+			"answer": "MEV-Boost is software validators run to outsource block building. Specialized builders compete to construct the most valuable block. Validators pick the highest bid. It's how most Ethereum blocks are built today."
+		},
+		"4": {
+			"question": "What is MEV-Share?",
+			"answer": "MEV-Share redistributes MEV to the users who created it. When your transaction generates MEV, you get some back instead of it all going to searchers. It aligns incentives between users and the MEV supply chain."
+		},
+		"5": {
+			"question": "What is SUAVE?",
+			"answer": "SUAVE (Single Unified Auction for Value Expression) is Flashbots' vision for decentralized block building. Currently, builders are centralized. SUAVE aims to make the entire MEV supply chain more decentralized and fair."
+		}
+	},
+	"cta": {
+		"ready": "Ready to protect your transactions?",
+		"button": "Explore Flashbots",
+		"note": "MEV infrastructure for Ethereum"
+	}
+}

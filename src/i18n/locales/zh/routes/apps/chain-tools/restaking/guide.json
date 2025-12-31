@@ -1,154 +1,154 @@
 {
-	"title": "Restaking Complete Guide",
-	"subtitle": "Master EigenLayer Restaking and Liquid Restaking Tokens",
+	"title": "重质押完整指南",
+	"subtitle": "掌握 EigenLayer 重质押和流动性重质押代币",
 
 	"sections": {
 		"intro": {
-			"title": "Introduction to Restaking",
-			"content": "<p>Restaking is one of the most innovative developments in Ethereum's staking ecosystem. Introduced by EigenLayer, restaking allows you to reuse your staked ETH to secure additional networks and services, earning extra rewards beyond standard staking yields.</p><p>In this comprehensive guide, you'll learn what restaking is, how it works through EigenLayer's protocol, the role of Actively Validated Services (AVS), and how liquid restaking tokens (LRTs) are making participation more accessible. We'll cover practical strategies, yield opportunities, and critical risk factors you need to understand.</p>"
+			"title": "重质押简介",
+			"content": "<p>重质押(Restaking)是以太坊质押生态系统中最具创新性的发展之一。由 EigenLayer 引入的重质押允许您重复使用已质押的 ETH 来保护其他网络和服务,在标准质押收益之外赚取额外奖励。</p><p>在这份综合指南中,您将了解什么是重质押、它如何通过 EigenLayer 协议工作、主动验证服务(AVS)的作用,以及流动性重质押代币(LRT)如何使参与变得更加容易。我们将涵盖实用策略、收益机会以及您需要理解的关键风险因素。</p>"
 		},
 		"why_restaking": {
-			"title": "Why Restaking Matters",
-			"content": "<p>Traditional Ethereum staking secures the Ethereum network and earns you around 3-4% APR. But what if you could use that same staked ETH to secure additional services and earn more rewards?</p><p>That's the core innovation of restaking. Instead of your staked ETH only securing Ethereum, it can be 'restaked' to provide economic security for multiple services simultaneously. This creates a concept called <strong>shared security</strong>—new protocols can leverage Ethereum's existing security instead of bootstrapping their own validator sets from scratch.</p><p><strong>Benefits for participants:</strong></p><ul><li>Higher yields: Earn both ETH staking rewards + AVS rewards</li><li>Capital efficiency: One stake secures multiple services</li><li>Support emerging protocols: Help new services launch with robust security</li></ul><p><strong>Benefits for protocols:</strong></p><ul><li>Inherit Ethereum's security from day one</li><li>Lower costs than building independent validator networks</li><li>Faster time to market with proven security guarantees</li></ul>"
+			"title": "为什么重质押很重要",
+			"content": "<p>传统的以太坊质押保护以太坊网络并为您赚取约 3-4% 的年化收益率。但如果您可以使用相同的质押 ETH 来保护其他服务并获得更多奖励呢?</p><p>这就是重质押的核心创新。您的质押 ETH 不仅仅保护以太坊,还可以被'重新质押'以同时为多个服务提供经济安全。这创造了一个称为<strong>共享安全</strong>的概念——新协议可以利用以太坊现有的安全性,而不是从零开始构建自己的验证者集。</p><p><strong>对参与者的好处:</strong></p><ul><li>更高收益:赚取 ETH 质押奖励 + AVS 奖励</li><li>资本效率:一次质押保护多个服务</li><li>支持新兴协议:帮助新服务以强大的安全性启动</li></ul><p><strong>对协议的好处:</strong></p><ul><li>从第一天起就继承以太坊的安全性</li><li>成本低于构建独立验证者网络</li><li>利用经过验证的安全保证更快进入市场</li></ul>"
 		},
 		"how_it_works": {
-			"title": "How Restaking Works",
-			"content": "<p>Understanding restaking requires learning about three key concepts: EigenLayer's protocol design, Actively Validated Services (AVS), and the roles participants can take.</p>",
+			"title": "重质押如何工作",
+			"content": "<p>理解重质押需要学习三个关键概念:EigenLayer 的协议设计、主动验证服务(AVS)以及参与者可以扮演的角色。</p>",
 			"eigenlayer_model": {
-				"title": "The EigenLayer Model",
-				"content": "<p>EigenLayer is the foundational protocol that enables restaking on Ethereum. It works through a system of smart contracts that coordinate between stakers, operators, and AVS.</p><p><strong>Core components:</strong></p><ul><li><strong>EigenPods:</strong> Smart contracts that manage your Ethereum validator's stake proof. When you natively restake, you point your validator's withdrawal credentials to an EigenPod</li><li><strong>Strategy Contracts:</strong> Manage different types of restaked assets (native ETH, liquid staking tokens like stETH)</li><li><strong>Delegation Manager:</strong> Handles the relationship between delegators (stakers) and operators</li><li><strong>Slasher:</strong> Enforces penalties for operator misbehavior across AVS</li></ul><p>The key innovation is that EigenLayer sits between Ethereum validators and new services, creating a marketplace for shared security.</p>"
+				"title": "EigenLayer 模型",
+				"content": "<p>EigenLayer 是在以太坊上实现重质押的基础协议。它通过一个智能合约系统协调质押者、运营商和 AVS 之间的关系。</p><p><strong>核心组件:</strong></p><ul><li><strong>EigenPod:</strong> 管理以太坊验证者质押证明的智能合约。当您进行原生重质押时,将验证者的提款凭证指向 EigenPod</li><li><strong>策略合约:</strong> 管理不同类型的重质押资产(原生 ETH、stETH 等流动性质押代币)</li><li><strong>委托管理器:</strong> 处理委托者(质押者)和运营商之间的关系</li><li><strong>罚没器:</strong> 在各个 AVS 中对运营商的不当行为执行惩罚</li></ul><p>关键创新在于 EigenLayer 位于以太坊验证者和新服务之间,创建了一个共享安全的市场。</p>"
 			},
 			"avs": {
-				"title": "Actively Validated Services (AVS)",
-				"content": "<p>AVS are the services and protocols that utilize restaked ETH for their security. Think of them as customers of EigenLayer's shared security marketplace.</p><p>An AVS defines specific validation tasks that operators must perform. These could be:</p><ul><li>Running oracle nodes to provide price feeds</li><li>Operating bridge validators to secure cross-chain transfers</li><li>Validating off-chain computation results</li><li>Running consensus for a rollup or sidechain</li><li>Providing data availability guarantees</li></ul><p>Each AVS sets its own requirements, rewards, and slashing conditions. Operators choose which AVS to support based on their infrastructure capabilities and risk tolerance.</p>"
+				"title": "主动验证服务 (AVS)",
+				"content": "<p>AVS 是利用重质押 ETH 保障其安全的服务和协议。可以将它们视为 EigenLayer 共享安全市场的客户。</p><p>AVS 定义运营商必须执行的特定验证任务。这些可能是:</p><ul><li>运行预言机节点以提供价格信息</li><li>运营跨链桥验证者以保护跨链转账</li><li>验证链下计算结果</li><li>为 Rollup 或侧链运行共识</li><li>提供数据可用性保证</li></ul><p>每个 AVS 设定自己的要求、奖励和罚没条件。运营商根据其基础设施能力和风险承受能力选择支持哪些 AVS。</p>"
 			},
 			"roles": {
-				"title": "Operators vs Delegators",
-				"content": "<p>There are two primary ways to participate in restaking:</p><p><strong>Operators:</strong></p><ul><li>Run the actual infrastructure (validator nodes, AVS-specific software)</li><li>Register with EigenLayer and opt into specific AVS</li><li>Accept delegated stake from other users</li><li>Earn commissions on rewards from delegated stake</li><li>Subject to slashing if they misbehave or go offline</li><li>Requires technical expertise and reliable infrastructure</li></ul><p><strong>Delegators:</strong></p><ul><li>Stake or restake ETH without running infrastructure</li><li>Choose operators to delegate their stake to</li><li>Earn rewards minus operator commission (typically 5-10%)</li><li>Share slashing risk with chosen operator</li><li>Can be done through native restaking or liquid restaking tokens</li><li>Accessible to anyone with ETH</li></ul><p>Most users will be delegators, choosing trusted operators to handle the technical work while earning rewards on their restaked ETH.</p>"
+				"title": "运营商 vs 委托者",
+				"content": "<p>参与重质押有两种主要方式:</p><p><strong>运营商:</strong></p><ul><li>运行实际的基础设施(验证者节点、AVS 特定软件)</li><li>在 EigenLayer 注册并选择加入特定的 AVS</li><li>接受其他用户的委托质押</li><li>从委托质押的奖励中赚取佣金</li><li>如果行为不当或离线将面临罚没</li><li>需要技术专业知识和可靠的基础设施</li></ul><p><strong>委托者:</strong></p><ul><li>质押或重新质押 ETH 而无需运行基础设施</li><li>选择运营商来委托他们的质押</li><li>赚取奖励减去运营商佣金(通常 5-10%)</li><li>与所选运营商共担罚没风险</li><li>可以通过原生重质押或流动性重质押代币完成</li><li>任何拥有 ETH 的人都可以参与</li></ul><p>大多数用户将成为委托者,选择值得信赖的运营商来处理技术工作,同时在他们重新质押的 ETH 上赚取奖励。</p>"
 			}
 		},
 		"avs_ecosystem": {
-			"title": "The AVS Ecosystem",
-			"content": "<p>The AVS ecosystem is rapidly growing as protocols recognize the benefits of shared security. Let's explore the types of services being built and real examples.</p>",
+			"title": "AVS 生态系统",
+			"content": "<p>随着协议认识到共享安全的好处,AVS 生态系统正在迅速发展。让我们探索正在构建的服务类型和实际示例。</p>",
 			"types_of_avs": {
-				"title": "Types of AVS",
-				"content": "<p>AVS can be categorized by the type of service they provide:</p><p><strong>1. Oracle Networks</strong><br/>Decentralized price feeds and real-world data providers. Restaking provides economic security for data accuracy.</p><p><strong>2. Bridges and Interoperability</strong><br/>Cross-chain bridges use restaked ETH to secure asset transfers between blockchains.</p><p><strong>3. Data Availability Layers</strong><br/>Protocols that guarantee rollup data is available and retrievable. Critical for rollup security.</p><p><strong>4. Sequencers</strong><br/>Decentralized sequencers for rollups, replacing centralized operators with restaked security.</p><p><strong>5. Coprocessors</strong><br/>Off-chain computation engines that execute complex operations, verified through restaking.</p><p><strong>6. Keeper Networks</strong><br/>Automated services that trigger on-chain actions (liquidations, rebases, etc.) secured by restaking.</p>"
+				"title": "AVS 类型",
+				"content": "<p>AVS 可以按其提供的服务类型分类:</p><p><strong>1. 预言机网络</strong><br/>去中心化的价格信息和真实世界数据提供者。重质押为数据准确性提供经济安全。</p><p><strong>2. 跨链桥和互操作性</strong><br/>跨链桥使用重质押 ETH 来保护区块链之间的资产转移。</p><p><strong>3. 数据可用性层</strong><br/>保证 Rollup 数据可用和可检索的协议。对 Rollup 安全至关重要。</p><p><strong>4. 排序器</strong><br/>Rollup 的去中心化排序器,用重质押安全替代中心化运营商。</p><p><strong>5. 协处理器</strong><br/>执行复杂操作的链下计算引擎,通过重质押进行验证。</p><p><strong>6. Keeper 网络</strong><br/>触发链上操作(清算、重新平衡等)的自动化服务,由重质押保护。</p>"
 			},
 			"examples": {
-				"title": "Notable AVS Examples",
-				"content": "<p><strong>EigenDA:</strong> EigenLayer's own data availability solution. One of the first AVS to launch, providing cheap and scalable data availability for rollups.</p><p><strong>AltLayer:</strong> Restaked rollups that use EigenLayer for enhanced security and fast finality.</p><p><strong>Espresso:</strong> Shared sequencer for rollups, preventing MEV and censorship through decentralization.</p><p><strong>Lagrange:</strong> ZK coprocessor for provable computation over large datasets.</p><p><strong>Witness Chain:</strong> Decentralized physical infrastructure network coordination.</p><p>As of late 2024, dozens of AVS are in development or testing phases. The ecosystem is expected to grow significantly throughout 2025 as AVS rewards begin flowing to restakers.</p>"
+				"title": "著名的 AVS 示例",
+				"content": "<p><strong>EigenDA:</strong> EigenLayer 自己的数据可用性解决方案。首批启动的 AVS 之一,为 Rollup 提供廉价和可扩展的数据可用性。</p><p><strong>AltLayer:</strong> 使用 EigenLayer 增强安全性和快速最终性的重质押 Rollup。</p><p><strong>Espresso:</strong> Rollup 的共享排序器,通过去中心化防止 MEV 和审查。</p><p><strong>Lagrange:</strong> 用于大型数据集可证明计算的零知识协处理器。</p><p><strong>Witness Chain:</strong> 去中心化物理基础设施网络协调。</p><p>截至 2024 年底,数十个 AVS 正处于开发或测试阶段。随着 AVS 奖励开始流向重质押者,预计整个 2025 年生态系统将显著增长。</p>"
 			}
 		},
 		"participation": {
-			"title": "How to Participate in Restaking",
-			"content": "<p>There are multiple ways to participate in restaking, each with different requirements, risks, and potential rewards. Choose based on your technical capabilities and capital size.</p>",
+			"title": "如何参与重质押",
+			"content": "<p>参与重质押有多种方式,每种方式都有不同的要求、风险和潜在回报。根据您的技术能力和资金规模进行选择。</p>",
 			"native_restaking": {
-				"title": "Native Restaking",
-				"content": "<p>Native restaking involves using your Ethereum validator's stake directly with EigenLayer.</p><p><strong>Requirements:</strong></p><ul><li>32 ETH minimum (standard validator requirement)</li><li>Running an Ethereum validator node</li><li>Technical knowledge to configure EigenPod</li><li>Setting withdrawal credentials to your EigenPod address</li></ul><p><strong>Process:</strong></p><ol><li>Deploy an EigenPod through EigenLayer</li><li>Point your validator's withdrawal credentials to the EigenPod</li><li>Register as an operator or delegate to an existing operator</li><li>Opt into specific AVS (if operating) or let your operator manage it</li><li>Start earning both ETH staking + AVS rewards</li></ol><p><strong>Advantages:</strong> Maximum control, no intermediary risk, highest potential yield<br/><strong>Disadvantages:</strong> High technical barrier, 32 ETH minimum, illiquid until withdrawal</p>"
+				"title": "原生重质押",
+				"content": "<p>原生重质押涉及直接将以太坊验证者的质押与 EigenLayer 一起使用。</p><p><strong>要求:</strong></p><ul><li>最少 32 ETH(标准验证者要求)</li><li>运行以太坊验证者节点</li><li>配置 EigenPod 的技术知识</li><li>将提款凭证设置为您的 EigenPod 地址</li></ul><p><strong>流程:</strong></p><ol><li>通过 EigenLayer 部署 EigenPod</li><li>将验证者的提款凭证指向 EigenPod</li><li>注册为运营商或委托给现有运营商</li><li>选择加入特定的 AVS(如果运营)或让您的运营商管理</li><li>开始赚取 ETH 质押 + AVS 奖励</li></ol><p><strong>优点:</strong> 最大控制权,无中介风险,最高潜在收益<br/><strong>缺点:</strong> 技术门槛高,32 ETH 最低要求,提款前缺乏流动性</p>"
 			},
 			"lrt_restaking": {
-				"title": "Liquid Restaking via LRTs",
-				"content": "<p>Liquid restaking tokens (LRTs) let you participate without running validators or meeting the 32 ETH minimum.</p><p><strong>How it works:</strong></p><ol><li>Deposit ETH (or LSTs like stETH) into a liquid restaking protocol</li><li>Receive LRT tokens (eETH, ezETH, pufETH, etc.)</li><li>The protocol handles native restaking or LST restaking behind the scenes</li><li>Your LRT accrues both staking and restaking rewards</li><li>Use your LRT in DeFi while still earning restaking yield</li></ol><p><strong>Popular LRT protocols:</strong></p><ul><li><strong>Ether.fi (eETH):</strong> Decentralized, focuses on node operator distribution</li><li><strong>Renzo (ezETH):</strong> Multi-chain strategy, integrated with major DeFi protocols</li><li><strong>Puffer (pufETH):</strong> Anti-slashing technology, focuses on solo staker friendliness</li><li><strong>Kelp DAO (rsETH):</strong> Multi-asset restaking supporting various LSTs</li><li><strong>Swell (rswETH):</strong> Combines liquid staking + restaking</li></ul><p><strong>Advantages:</strong> Low barrier to entry, liquid position, DeFi composability<br/><strong>Disadvantages:</strong> Smart contract risk, depends on protocol's operator choices</p>"
+				"title": "通过 LRT 进行流动性重质押",
+				"content": "<p>流动性重质押代币(LRT)让您无需运行验证者或满足 32 ETH 最低要求即可参与。</p><p><strong>工作原理:</strong></p><ol><li>将 ETH(或 stETH 等 LST)存入流动性重质押协议</li><li>获得 LRT 代币(eETH、ezETH、pufETH 等)</li><li>协议在幕后处理原生重质押或 LST 重质押</li><li>您的 LRT 累积质押和重质押奖励</li><li>在 DeFi 中使用您的 LRT,同时仍赚取重质押收益</li></ol><p><strong>流行的 LRT 协议:</strong></p><ul><li><strong>Ether.fi (eETH):</strong> 去中心化,专注于节点运营商分布</li><li><strong>Renzo (ezETH):</strong> 多链策略,与主要 DeFi 协议集成</li><li><strong>Puffer (pufETH):</strong> 反罚没技术,专注于独立质押者友好性</li><li><strong>Kelp DAO (rsETH):</strong> 支持各种 LST 的多资产重质押</li><li><strong>Swell (rswETH):</strong> 结合流动性质押 + 重质押</li></ul><p><strong>优点:</strong> 进入门槛低,流动性头寸,DeFi 可组合性<br/><strong>缺点:</strong> 智能合约风险,取决于协议的运营商选择</p>"
 			},
 			"delegating": {
-				"title": "Choosing Operators for Delegation",
-				"content": "<p>Whether you're natively restaking or using LRTs, understanding operator selection is crucial for maximizing returns and minimizing risks.</p><p><strong>Factors to evaluate:</strong></p><ul><li><strong>Uptime history:</strong> Check operator performance metrics on EigenLayer</li><li><strong>Commission rate:</strong> Typically 5-10%, lower isn't always better if uptime suffers</li><li><strong>AVS participation:</strong> Which services are they validating? More AVS = more reward potential</li><li><strong>Team reputation:</strong> Established operators with proven track records preferred</li><li><strong>Stake distribution:</strong> Avoid over-concentrated operators to reduce systemic risk</li><li><strong>Slashing history:</strong> Has this operator ever been slashed?</li></ul><p>Most LRT protocols handle operator selection automatically, but understanding their strategies helps you choose the right LRT.</p>"
+				"title": "为委托选择运营商",
+				"content": "<p>无论您是进行原生重质押还是使用 LRT,了解运营商选择对于最大化回报和最小化风险至关重要。</p><p><strong>评估因素:</strong></p><ul><li><strong>正常运行时间历史:</strong> 在 EigenLayer 上检查运营商性能指标</li><li><strong>佣金率:</strong> 通常 5-10%,如果正常运行时间受损,较低并不总是更好</li><li><strong>AVS 参与:</strong> 他们验证哪些服务?更多 AVS = 更多奖励潜力</li><li><strong>团队声誉:</strong> 首选具有良好记录的成熟运营商</li><li><strong>质押分布:</strong> 避免过度集中的运营商以降低系统性风险</li><li><strong>罚没历史:</strong> 该运营商是否曾被罚没?</li></ul><p>大多数 LRT 协议自动处理运营商选择,但了解他们的策略有助于您选择正确的 LRT。</p>"
 			}
 		},
 		"liquid_restaking_tokens": {
-			"title": "Liquid Restaking Tokens Deep Dive",
-			"content": "<p>LRTs are revolutionizing restaking accessibility, much like liquid staking tokens (LSTs) did for Ethereum staking. Let's explore why they matter and how to use them effectively.</p>",
+			"title": "流动性重质押代币深入探讨",
+			"content": "<p>LRT 正在彻底改变重质押的可访问性,就像流动性质押代币(LST)对以太坊质押所做的那样。让我们探索它们为什么重要以及如何有效使用它们。</p>",
 			"benefits": {
-				"title": "Why Use Liquid Restaking Tokens?",
-				"content": "<p><strong>1. Capital Efficiency</strong><br/>Your ETH earns staking yield + restaking rewards + DeFi yields simultaneously. Deploy your LRT as collateral in lending markets, provide liquidity on DEXs, or participate in yield strategies—all while maintaining restaking exposure.</p><p><strong>2. Lower Barriers</strong><br/>No 32 ETH minimum, no node operation, no technical complexity. Anyone can participate with any amount.</p><p><strong>3. Liquidity</strong><br/>Unlike native restaking, LRTs can be traded instantly. Exit positions without waiting for validator withdrawals.</p><p><strong>4. Diversification</strong><br/>Most LRT protocols delegate across multiple operators and opt into multiple AVS, spreading risk automatically.</p><p><strong>5. Auto-Compounding</strong><br/>Many LRTs automatically reinvest rewards, compounding your returns without manual intervention.</p>"
+				"title": "为什么使用流动性重质押代币?",
+				"content": "<p><strong>1. 资本效率</strong><br/>您的 ETH 同时赚取质押收益 + 重质押奖励 + DeFi 收益。将您的 LRT 作为抵押品部署在借贷市场中,在 DEX 上提供流动性,或参与收益策略——同时保持重质押敞口。</p><p><strong>2. 降低门槛</strong><br/>无需 32 ETH 最低要求,无需运行节点,无技术复杂性。任何人都可以用任何金额参与。</p><p><strong>3. 流动性</strong><br/>与原生重质押不同,LRT 可以即时交易。无需等待验证者提款即可退出头寸。</p><p><strong>4. 多样化</strong><br/>大多数 LRT 协议委托给多个运营商并选择加入多个 AVS,自动分散风险。</p><p><strong>5. 自动复利</strong><br/>许多 LRT 自动重新投资奖励,无需手动干预即可复利您的回报。</p>"
 			},
 			"major_lrts": {
-				"title": "Comparing Major LRTs",
-				"content": "<p><strong>Ether.fi (eETH)</strong><br/>TVL: ~$10B+ (largest LRT protocol)<br/>Strategy: Wide operator distribution, Operation Solo Staker program supporting independent validators<br/>Unique feature: Liquid staking + restaking in one token<br/>DeFi integration: Excellent (Pendle, Curve, Aave support)</p><p><strong>Renzo (ezETH)</strong><br/>TVL: ~$3B+<br/>Strategy: Active AVS selection, multi-chain deployment<br/>Unique feature: Strong institutional partnerships<br/>DeFi integration: Very good (available on Arbitrum, Base, BNB Chain)</p><p><strong>Puffer (pufETH)</strong><br/>TVL: ~$2B+<br/>Strategy: Anti-slashing technology using secure-signer<br/>Unique feature: Validator tickets (no-loss lottery for node operation)<br/>DeFi integration: Growing (focus on Ethereum mainnet)</p><p><strong>Kelp DAO (rsETH)</strong><br/>TVL: ~$1B+<br/>Strategy: Accepts multiple LSTs (stETH, rETH, cbETH, etc.)<br/>Unique feature: LRT aggregator model<br/>DeFi integration: Good (multi-chain presence)</p><p><strong>Swell (rswETH)</strong><br/>TVL: ~$1.5B+<br/>Strategy: Restaked version of existing swETH liquid staking token<br/>Unique feature: Pearl rewards program<br/>DeFi integration: Moderate</p><p><em>Note: TVL figures are approximate and change frequently. Always verify current metrics before investing.</em></p>"
+				"title": "比较主要 LRT",
+				"content": "<p><strong>Ether.fi (eETH)</strong><br/>TVL:约 100 亿美元以上(最大的 LRT 协议)<br/>策略:广泛的运营商分布,Operation Solo Staker 计划支持独立验证者<br/>独特功能:流动性质押 + 重质押合二为一<br/>DeFi 集成:优秀(Pendle、Curve、Aave 支持)</p><p><strong>Renzo (ezETH)</strong><br/>TVL:约 30 亿美元以上<br/>策略:主动 AVS 选择,多链部署<br/>独特功能:强大的机构合作伙伴关系<br/>DeFi 集成:非常好(在 Arbitrum、Base、BNB Chain 上可用)</p><p><strong>Puffer (pufETH)</strong><br/>TVL:约 20 亿美元以上<br/>策略:使用安全签名器的反罚没技术<br/>独特功能:验证者票证(无损失彩票用于节点操作)<br/>DeFi 集成:增长中(专注于以太坊主网)</p><p><strong>Kelp DAO (rsETH)</strong><br/>TVL:约 10 亿美元以上<br/>策略:接受多种 LST(stETH、rETH、cbETH 等)<br/>独特功能:LRT 聚合器模型<br/>DeFi 集成:良好(多链存在)</p><p><strong>Swell (rswETH)</strong><br/>TVL:约 15 亿美元以上<br/>策略:现有 swETH 流动性质押代币的重质押版本<br/>独特功能:Pearl 奖励计划<br/>DeFi 集成:中等</p><p><em>注意:TVL 数字是近似值并且经常变化。投资前请务必验证当前指标。</em></p>"
 			},
 			"using_lrts": {
-				"title": "Strategies for Using LRTs",
-				"content": "<p><strong>Hold for Yield</strong><br/>Simplest strategy: Hold your LRT and earn base staking + restaking rewards. Expected combined APR: 4-8% depending on AVS reward activations.</p><p><strong>Leverage on Lending Markets</strong><br/>Deposit LRT as collateral on Aave, borrow stablecoins or ETH, use borrowed funds to acquire more LRT. Amplify returns but accept liquidation risk.</p><p><strong>Liquidity Provision</strong><br/>Provide LRT/ETH or LRT/stablecoin liquidity on Curve or Balancer. Earn trading fees + LRT yield + potential liquidity mining rewards.</p><p><strong>Pendle Fixed Yield</strong><br/>Split your LRT into principal token (PT) and yield token (YT). Sell YT to lock in guaranteed fixed yield, or buy YT to speculate on high future yields.</p><p><strong>Points Farming</strong><br/>Many LRT protocols offer points programs that may convert to token airdrops. Compare point earning rates across protocols and strategies.</p><p><strong>Risk-Managed Approach</strong><br/>Diversify across multiple LRTs (25% each in 4 different protocols) to reduce protocol-specific risks while maintaining restaking exposure.</p>"
+				"title": "使用 LRT 的策略",
+				"content": "<p><strong>持有收益</strong><br/>最简单的策略:持有您的 LRT 并赚取基础质押 + 重质押奖励。预期综合年化收益率:4-8%,取决于 AVS 奖励激活。</p><p><strong>在借贷市场上杠杆化</strong><br/>在 Aave 上存入 LRT 作为抵押品,借入稳定币或 ETH,使用借入的资金获取更多 LRT。放大回报但承担清算风险。</p><p><strong>提供流动性</strong><br/>在 Curve 或 Balancer 上提供 LRT/ETH 或 LRT/稳定币流动性。赚取交易费 + LRT 收益 + 潜在的流动性挖矿奖励。</p><p><strong>Pendle 固定收益</strong><br/>将您的 LRT 分割为本金代币(PT)和收益代币(YT)。出售 YT 以锁定保证的固定收益,或购买 YT 以押注高未来收益。</p><p><strong>积分farming</strong><br/>许多 LRT 协议提供可能转换为代币空投的积分计划。比较各协议和策略的积分赚取率。</p><p><strong>风险管理方法</strong><br/>在多个 LRT 中分散(每个协议 25%,共 4 个不同协议)以降低协议特定风险,同时保持重质押敞口。</p>"
 			}
 		},
 		"yield_opportunities": {
-			"title": "Yield Opportunities in Restaking",
-			"content": "<p>Understanding the yield stack is crucial for evaluating restaking opportunities and comparing them to alternatives.</p>",
+			"title": "重质押中的收益机会",
+			"content": "<p>理解收益结构对于评估重质押机会并将其与替代方案进行比较至关重要。</p>",
 			"staking_yield": {
-				"title": "Base Staking Yield",
-				"content": "<p>All restaking starts with Ethereum staking yield as the foundation:</p><ul><li><strong>Consensus rewards:</strong> ~3-4% APR from proposing and attesting to blocks</li><li><strong>Execution rewards:</strong> Variable, depends on network activity and MEV</li><li><strong>Combined:</strong> Typically 3.5-4.5% APR</li></ul><p>This yield accrues automatically to all staked ETH, including restaked positions.</p>"
+				"title": "基础质押收益",
+				"content": "<p>所有重质押都以以太坊质押收益为基础:</p><ul><li><strong>共识奖励:</strong> 约 3-4% 年化收益率,来自提议和证明区块</li><li><strong>执行奖励:</strong> 可变,取决于网络活动和 MEV</li><li><strong>综合:</strong> 通常 3.5-4.5% 年化收益率</li></ul><p>此收益自动累积到所有质押的 ETH,包括重质押头寸。</p>"
 			},
 			"restaking_rewards": {
-				"title": "Additional Restaking Rewards",
-				"content": "<p>Restaking adds an extra yield layer on top of base staking:</p><p><strong>AVS Fees</strong><br/>Some AVS charge fees for their services (like EigenDA charging rollups for data availability). A portion flows to restakers securing the AVS.</p><p><strong>AVS Token Emissions</strong><br/>Many AVS will issue their own tokens and distribute them to restakers. This is the expected primary source of restaking rewards in the near term.</p><p><strong>Expected Combined APR:</strong> Base staking (3.5-4.5%) + AVS rewards (estimated 1-5% initially, potentially higher during token launches) = 5-10% total APR</p><p><strong>Important:</strong> AVS rewards are not yet fully active across the ecosystem. Early 2025 is expected to see significant AVS reward launches. Current yields are primarily from points programs and staking.</p>"
+				"title": "额外重质押奖励",
+				"content": "<p>重质押在基础质押之上添加了额外的收益层:</p><p><strong>AVS 费用</strong><br/>一些 AVS 为其服务收费(如 EigenDA 向 Rollup 收取数据可用性费用)。一部分流向保护 AVS 的重质押者。</p><p><strong>AVS 代币发行</strong><br/>许多 AVS 将发行自己的代币并分发给重质押者。这是近期重质押奖励的预期主要来源。</p><p><strong>预期综合年化收益率:</strong> 基础质押(3.5-4.5%)+ AVS 奖励(最初估计 1-5%,在代币发布期间可能更高)= 总共 5-10% 年化收益率</p><p><strong>重要:</strong> AVS 奖励尚未在整个生态系统中完全激活。预计 2025 年初将看到大量 AVS 奖励启动。当前收益主要来自积分计划和质押。</p>"
 			},
 			"defi_strategies": {
-				"title": "DeFi Yield Strategies with LRTs",
-				"content": "<p>LRT holders can stack additional yields through DeFi participation:</p><p><strong>Lending Protocol Deposits</strong><br/>Supply LRTs on Aave or similar platforms. Current supply APR: 1-3% (low because it's new collateral). As adoption grows, borrow demand may increase rates.</p><p><strong>Curve Liquidity Provision</strong><br/>Provide liquidity to LRT/ETH pools. Earn 3-8% from trading fees + CRV emissions + potential protocol incentives.</p><p><strong>Pendle Yield Trading</strong><br/>Advanced strategy: Trade future yield through Pendle's YT tokens. When you believe AVS rewards will activate soon, buy underpriced YT tokens to capture the yield spike.</p><p><strong>Leveraged Restaking</strong><br/>Deposit LRT → Borrow ETH → Buy more LRT → Repeat. Can achieve 1.5-3x leverage. High risk: If LRT depegs or yield doesn't cover borrow costs, positions can be liquidated.</p><p><strong>Example Stacked Yield:</strong><br/>eETH base yield: 4%<br/>AVS rewards (estimated): 2%<br/>Curve LP trading fees: 3%<br/>CRV emissions: 2%<br/>Protocol incentives: 3%<br/>Total: ~14% APR (not accounting for IL or risk)</p><p><em>Always understand the risks before pursuing high-yield strategies. Higher yields generally mean higher complexity and risk.</em></p>"
+				"title": "使用 LRT 的 DeFi 收益策略",
+				"content": "<p>LRT 持有者可以通过 DeFi 参与叠加额外收益:</p><p><strong>借贷协议存款</strong><br/>在 Aave 或类似平台上提供 LRT。当前供应年化收益率:1-3%(因为是新抵押品而较低)。随着采用增长,借款需求可能提高利率。</p><p><strong>Curve 流动性提供</strong><br/>为 LRT/ETH 池提供流动性。赚取 3-8% 的交易费 + CRV 发行 + 潜在的协议激励。</p><p><strong>Pendle 收益交易</strong><br/>高级策略:通过 Pendle 的 YT 代币交易未来收益。当您相信 AVS 奖励即将激活时,购买定价过低的 YT 代币以捕获收益飙升。</p><p><strong>杠杆重质押</strong><br/>存入 LRT → 借入 ETH → 购买更多 LRT → 重复。可以实现 1.5-3 倍杠杆。高风险:如果 LRT 脱钩或收益无法覆盖借款成本,头寸可能被清算。</p><p><strong>叠加收益示例:</strong><br/>eETH 基础收益:4%<br/>AVS 奖励(估计):2%<br/>Curve LP 交易费:3%<br/>CRV 发行:2%<br/>协议激励:3%<br/>总计:约 14% 年化收益率(不考虑无常损失或风险)</p><p><em>在追求高收益策略之前,请务必了解风险。更高的收益通常意味着更高的复杂性和风险。</em></p>"
 			}
 		},
 		"risks": {
-			"title": "Risks and Safety Considerations",
-			"content": "<p>Restaking introduces new risks beyond standard Ethereum staking. Understanding and mitigating these risks is essential for safe participation.</p>",
+			"title": "风险和安全考虑",
+			"content": "<p>重质押引入了标准以太坊质押之外的新风险。理解和减轻这些风险对于安全参与至关重要。</p>",
 			"slashing_risk": {
-				"title": "Slashing Risk",
-				"content": "<p>Slashing is the most significant risk unique to restaking. While Ethereum validators can only be slashed for Ethereum consensus violations, restaked positions can be slashed for:</p><ul><li><strong>Ethereum consensus violations:</strong> Double signing, surround voting (traditional slashing)</li><li><strong>AVS-specific violations:</strong> Each AVS defines its own slashing conditions</li><li><strong>Operator failures:</strong> Extended downtime, incorrect computations, censorship</li></ul><p><strong>Slashing severity:</strong></p><ul><li>Most AVS are launching with conservative slashing (0.5-2% penalties initially)</li><li>Ethereum consensus slashing can be severe (up to entire 32 ETH in extreme cases)</li><li>Multiple simultaneous slashes can compound</li></ul><p><strong>Mitigation:</strong></p><ul><li>Choose operators with perfect slashing history and high uptime</li><li>Start by delegating to operators participating in fewer AVS</li><li>Diversify across multiple operators if possible</li><li>Monitor operator performance regularly</li><li>For native restakers: understand each AVS's slashing conditions before opting in</li></ul>"
+				"title": "罚没风险",
+				"content": "<p>罚没是重质押独有的最重要风险。虽然以太坊验证者只能因以太坊共识违规而被罚没,但重质押头寸可能因以下原因被罚没:</p><ul><li><strong>以太坊共识违规:</strong> 双重签名、包围投票(传统罚没)</li><li><strong>AVS 特定违规:</strong> 每个 AVS 定义自己的罚没条件</li><li><strong>运营商故障:</strong> 长时间停机、错误计算、审查</li></ul><p><strong>罚没严重程度:</strong></p><ul><li>大多数 AVS 以保守的罚没启动(最初 0.5-2% 罚金)</li><li>以太坊共识罚没可能很严重(在极端情况下最多整个 32 ETH)</li><li>多个同时罚没可能复合</li></ul><p><strong>缓解:</strong></p><ul><li>选择具有完美罚没历史和高正常运行时间的运营商</li><li>开始时委托给参与较少 AVS 的运营商</li><li>如果可能,在多个运营商之间分散</li><li>定期监控运营商性能</li><li>对于原生重质押者:在选择加入之前了解每个 AVS 的罚没条件</li></ul>"
 			},
 			"smart_contract_risk": {
-				"title": "Smart Contract and Protocol Risk",
-				"content": "<p>Restaking involves multiple layers of smart contracts, each introducing potential vulnerabilities:</p><p><strong>EigenLayer Core Contracts</strong><br/>The foundation of the ecosystem. Extensively audited but still carries risk. A core contract exploit could affect all restakers.</p><p><strong>LRT Protocol Contracts</strong><br/>Each LRT protocol has its own contract system. Newer protocols may have undiscovered vulnerabilities.</p><p><strong>AVS Contracts</strong><br/>Each AVS deploys contracts for validation logic and reward distribution. Bugs here could affect their restakers.</p><p><strong>Integration Risks</strong><br/>Using LRTs in DeFi adds more contract layers (Curve pools, Aave markets, etc.), compounding risk.</p><p><strong>Mitigation:</strong></p><ul><li>Stick to audited protocols with long track records</li><li>Diversify across multiple LRT protocols</li><li>Start with smaller positions until protocols prove themselves</li><li>Check if protocols have insurance coverage (Nexus Mutual, InsurAce)</li><li>Review audit reports before depositing significant amounts</li></ul>"
+				"title": "智能合约和协议风险",
+				"content": "<p>重质押涉及多层智能合约,每一层都引入潜在的漏洞:</p><p><strong>EigenLayer 核心合约</strong><br/>生态系统的基础。经过广泛审计但仍存在风险。核心合约漏洞可能影响所有重质押者。</p><p><strong>LRT 协议合约</strong><br/>每个 LRT 协议都有自己的合约系统。较新的协议可能有未发现的漏洞。</p><p><strong>AVS 合约</strong><br/>每个 AVS 为验证逻辑和奖励分配部署合约。这里的错误可能影响其重质押者。</p><p><strong>集成风险</strong><br/>在 DeFi 中使用 LRT 会添加更多合约层(Curve 池、Aave 市场等),加剧风险。</p><p><strong>缓解:</strong></p><ul><li>坚持使用具有长期记录的经过审计的协议</li><li>在多个 LRT 协议之间分散</li><li>在协议证明自己之前从较小的头寸开始</li><li>检查协议是否有保险覆盖(Nexus Mutual、InsurAce)</li><li>在存入大量资金之前查看审计报告</li></ul>"
 			},
 			"liquidity_risk": {
-				"title": "Liquidity and Depeg Risk",
-				"content": "<p>LRTs represent claims on restaked assets but can trade at premiums or discounts to their underlying value:</p><p><strong>Depeg Scenarios:</strong></p><ul><li><strong>Mass exit demand:</strong> If many holders want to exit simultaneously, LRT may trade below net asset value</li><li><strong>Operator slashing:</strong> Large slashing events reduce underlying value</li><li><strong>Smart contract concerns:</strong> Perceived risks can cause temporary depegs</li><li><strong>Liquidity crises:</strong> Low DEX liquidity can cause price volatility</li></ul><p><strong>Withdrawal mechanics:</strong></p><ul><li>Most LRTs don't offer instant redemptions at face value</li><li>Withdrawal queues may take 7+ days during normal conditions</li><li>During stress, queues could extend longer</li><li>This creates arbitrage opportunities but also exit friction</li></ul><p><strong>Mitigation:</strong></p><ul><li>Maintain exit liquidity on DEXs by providing to LRT/ETH pools</li><li>Don't overleverage LRT positions you might need to exit quickly</li><li>Diversify across LRTs with different withdrawal mechanisms</li><li>Understand each protocol's withdrawal process before entering</li><li>Monitor LRT/ETH price ratios for significant deviations</li></ul>"
+				"title": "流动性和脱钩风险",
+				"content": "<p>LRT 代表对重质押资产的索取权,但可能以相对于其基础价值的溢价或折扣进行交易:</p><p><strong>脱钩场景:</strong></p><ul><li><strong>大规模退出需求:</strong> 如果许多持有者想同时退出,LRT 可能低于净资产价值交易</li><li><strong>运营商罚没:</strong> 大型罚没事件降低基础价值</li><li><strong>智能合约担忧:</strong> 感知风险可能导致临时脱钩</li><li><strong>流动性危机:</strong> DEX 流动性低可能导致价格波动</li></ul><p><strong>提款机制:</strong></p><ul><li>大多数 LRT 不提供按面值的即时赎回</li><li>正常情况下提款队列可能需要 7 天以上</li><li>在压力期间,队列可能延长更长时间</li><li>这创造了套利机会,但也造成了退出摩擦</li></ul><p><strong>缓解:</strong></p><ul><li>通过提供 LRT/ETH 池在 DEX 上维持退出流动性</li><li>不要过度杠杆化您可能需要快速退出的 LRT 头寸</li><li>在具有不同提款机制的 LRT 之间分散</li><li>在进入之前了解每个协议的提款流程</li><li>监控 LRT/ETH 价格比率是否存在重大偏差</li></ul>"
 			},
 			"mitigation": {
-				"title": "Risk Mitigation Best Practices",
-				"content": "<p>Follow these principles to participate in restaking more safely:</p><p><strong>1. Start Small</strong><br/>Begin with 5-10% of your ETH position. As you gain confidence and protocols prove themselves, consider increasing exposure.</p><p><strong>2. Diversify</strong><br/>Don't put all your restaking into one LRT protocol or under one operator. Spread across 2-4 different approaches.</p><p><strong>3. Research Operators</strong><br/>If choosing native restaking or a protocol that lets you select operators, thoroughly vet their history, infrastructure, and team.</p><p><strong>4. Monitor Regularly</strong><br/>Set up alerts for large depegs, check operator performance monthly, stay informed about AVS launches and changes.</p><p><strong>5. Understand AVS</strong><br/>Before your funds back a new AVS (directly or through an LRT protocol), understand what it does, its slashing conditions, and its security model.</p><p><strong>6. Plan Your Exit</strong><br/>Know how to exit your position before entering. Understand withdrawal times, liquidity sources, and potential costs.</p><p><strong>7. Yield Reality Check</strong><br/>If advertised yields seem too high (>20% APR on what should be conservative strategies), understand where that yield comes from and what risks enable it.</p><p><strong>8. Keep Learning</strong><br/>The restaking ecosystem is evolving rapidly. Stay updated on new AVS launches, protocol updates, and emerging risks.</p>"
+				"title": "风险缓解最佳实践",
+				"content": "<p>遵循这些原则以更安全地参与重质押:</p><p><strong>1. 从小开始</strong><br/>从您 ETH 头寸的 5-10% 开始。随着您获得信心和协议证明自己,考虑增加敞口。</p><p><strong>2. 多样化</strong><br/>不要将所有重质押放在一个 LRT 协议或一个运营商下。分散到 2-4 种不同的方法。</p><p><strong>3. 研究运营商</strong><br/>如果选择原生重质押或允许您选择运营商的协议,彻底审查他们的历史、基础设施和团队。</p><p><strong>4. 定期监控</strong><br/>为大幅脱钩设置警报,每月检查运营商性能,及时了解 AVS 启动和变化。</p><p><strong>5. 了解 AVS</strong><br/>在您的资金支持新的 AVS(直接或通过 LRT 协议)之前,了解它的功能、罚没条件和安全模型。</p><p><strong>6. 规划您的退出</strong><br/>在进入之前了解如何退出您的头寸。了解提款时间、流动性来源和潜在成本。</p><p><strong>7. 收益现实检查</strong><br/>如果广告收益看起来太高(在应该是保守策略的情况下 >20% 年化收益率),了解该收益来自何处以及什么风险使其成为可能。</p><p><strong>8. 持续学习</strong><br/>重质押生态系统正在快速发展。及时了解新的 AVS 启动、协议更新和新兴风险。</p>"
 			}
 		}
 	},
 
 	"glossary": {
 		"restaking": {
-			"term": "Restaking",
-			"definition": "The process of reusing already-staked ETH to provide economic security for additional protocols and services beyond Ethereum itself, enabled by EigenLayer."
+			"term": "重质押 (Restaking)",
+			"definition": "重复使用已质押的 ETH 为以太坊本身之外的其他协议和服务提供经济安全的过程,由 EigenLayer 实现。"
 		},
 		"avs": {
-			"term": "AVS (Actively Validated Service)",
-			"definition": "A protocol or service that uses restaked ETH for its security. AVS pay rewards to restakers in exchange for economic security guarantees."
+			"term": "AVS (主动验证服务)",
+			"definition": "使用重质押 ETH 保障其安全的协议或服务。AVS 向重质押者支付奖励以换取经济安全保证。"
 		},
 		"operator": {
-			"term": "Operator",
-			"definition": "An entity that runs the technical infrastructure for validators and AVS nodes. Operators accept delegated stake and earn commissions while taking on slashing risk."
+			"term": "运营商 (Operator)",
+			"definition": "为验证者和 AVS 节点运行技术基础设施的实体。运营商接受委托质押并赚取佣金,同时承担罚没风险。"
 		},
 		"delegator": {
-			"term": "Delegator",
-			"definition": "A user who stakes or restakes ETH by delegating it to an operator rather than running infrastructure themselves. Delegators earn rewards minus operator commission."
+			"term": "委托者 (Delegator)",
+			"definition": "通过将 ETH 委托给运营商而不是自己运行基础设施来质押或重新质押的用户。委托者赚取奖励减去运营商佣金。"
 		},
 		"slashing": {
-			"term": "Slashing",
-			"definition": "The penalty mechanism where staked ETH is partially or fully burned for validator misbehavior, including both Ethereum consensus violations and AVS-specific failures."
+			"term": "罚没 (Slashing)",
+			"definition": "对验证者不当行为部分或全部销毁质押 ETH 的惩罚机制,包括以太坊共识违规和 AVS 特定故障。"
 		},
 		"lrt": {
-			"term": "LRT (Liquid Restaking Token)",
-			"definition": "A token representing restaked ETH that can be freely traded and used in DeFi while still earning restaking rewards. Examples: eETH, ezETH, pufETH."
+			"term": "LRT (流动性重质押代币)",
+			"definition": "代表重质押 ETH 的代币,可以自由交易并在 DeFi 中使用,同时仍赚取重质押奖励。例如:eETH、ezETH、pufETH。"
 		},
 		"eigenpod": {
 			"term": "EigenPod",
-			"definition": "A smart contract deployed by EigenLayer users that manages their validator's stake proofs and withdrawal credentials for native restaking."
+			"definition": "由 EigenLayer 用户部署的智能合约,管理其验证者的质押证明和提款凭证以进行原生重质押。"
 		},
 		"shared_security": {
-			"term": "Shared Security",
-			"definition": "The concept where multiple protocols share the same economic security base (restaked ETH) instead of each building independent validator sets."
+			"term": "共享安全 (Shared Security)",
+			"definition": "多个协议共享相同的经济安全基础(重质押 ETH)而不是各自构建独立验证者集的概念。"
 		},
 		"delegation": {
-			"term": "Delegation",
-			"definition": "The act of assigning your stake to an operator who will run the required infrastructure on your behalf in exchange for a commission."
+			"term": "委托 (Delegation)",
+			"definition": "将您的质押分配给运营商的行为,运营商将代表您运行所需的基础设施以换取佣金。"
 		},
 		"withdrawal": {
-			"term": "Withdrawal (Restaking)",
-			"definition": "The process of exiting restaking positions and retrieving your ETH. May involve queues, delays, and partial unstaking from multiple AVS."
+			"term": "提款 (重质押)",
+			"definition": "退出重质押头寸并取回 ETH 的过程。可能涉及队列、延迟以及从多个 AVS 部分解除质押。"
 		}
 	}
 }

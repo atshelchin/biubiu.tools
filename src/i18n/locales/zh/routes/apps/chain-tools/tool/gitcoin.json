@@ -1,83 +1,83 @@
 {
 	"seo": {
-		"title": "Gitcoin - Public Goods Funding",
-		"description": "Gitcoin funds open source and public goods through quadratic funding grants. Support builders and earn Gitcoin Passport for identity.",
-		"keywords": "Gitcoin, GTC token, quadratic funding, grants, public goods, Gitcoin Passport"
+		"title": "Gitcoin - 开源资助与赠款",
+		"description": "Gitcoin 通过二次方资助赠款为开源和公共物品提供资金。GTC 代币治理生态系统。",
+		"keywords": "Gitcoin, 二次方资助, 开源赠款, GTC 代币, 公共物品, Web3 资助"
 	},
-	"overview": "Gitcoin pioneered quadratic funding for public goods in crypto. Through Gitcoin Grants, community donations are matched using a formula that amplifies projects with broad support over whale donors.\n\nBeyond grants, Gitcoin developed Passport—a decentralized identity system that aggregates credentials to prove you're a unique human. Passport is used for sybil resistance across Web3.\n\nThe GTC token governs the Gitcoin DAO which manages the grants program. Gitcoin has distributed over $50M to open source projects and public goods builders.",
+	"overview": "Gitcoin 通过创新资助机制革新了开源资助。他们的二次方资助赠款（Gitcoin Grants）让社区支持的项目获得匹配资金，有效放大小额捐赠。\n\n每轮赠款中，项目从社区收集捐赠。Gitcoin 使用二次方公式分配匹配池——更多独特贡献者意味着更多匹配。这让社区驱动的项目得以蓬勃发展。\n\nGitcoin 还提供 Passport（防女巫身份验证）和 Allo Protocol（资源分配）。GTC 代币治理生态系统。它们是以太坊公共物品资助的核心基础设施。",
 	"features": {
 		"1": {
-			"title": "Quadratic Funding",
-			"description": "Democratic grant matching"
+			"title": "Gitcoin Grants",
+			"description": "二次方资助"
 		},
 		"2": {
 			"title": "Gitcoin Passport",
-			"description": "Decentralized identity"
+			"description": "防女巫身份"
 		},
 		"3": {
-			"title": "GTC Token",
-			"description": "Governance token"
+			"title": "Allo Protocol",
+			"description": "资源分配"
 		},
 		"4": {
-			"title": "Grants Stack",
-			"description": "Run your own rounds"
+			"title": "GTC 代币",
+			"description": "治理代币"
 		},
 		"5": {
-			"title": "Allo Protocol",
-			"description": "Capital allocation infra"
+			"title": "匹配池",
+			"description": "放大社区捐赠"
 		},
 		"6": {
-			"title": "Public Goods",
-			"description": "Fund open source"
+			"title": "公共物品",
+			"description": "资助开源"
 		}
 	},
 	"use_cases": {
 		"1": {
-			"title": "Donate to Grants",
-			"description": "Support public goods"
+			"title": "项目资助",
+			"description": "为你的开源项目获得资金"
 		},
 		"2": {
-			"title": "Apply for Funding",
-			"description": "Get grant for your project"
+			"title": "捐赠放大",
+			"description": "小额捐赠获得匹配"
 		},
 		"3": {
-			"title": "Build Passport",
-			"description": "Prove unique identity"
+			"title": "女巫防护",
+			"description": "使用 Passport 验证"
 		},
 		"4": {
-			"title": "Run Grant Rounds",
-			"description": "Organize funding"
+			"title": "生态发展",
+			"description": "资助社区项目"
 		},
 		"5": {
-			"title": "GTC Governance",
-			"description": "Vote on decisions"
+			"title": "治理参与",
+			"description": "用 GTC 投票"
 		}
 	},
 	"faqs": {
 		"1": {
-			"question": "What is quadratic funding?",
-			"answer": "Quadratic funding matches donations based on number of contributors, not amount. 100 people giving $1 gets more matching than 1 person giving $100. It democratizes funding by amplifying broad support."
+			"question": "什么是二次方资助？",
+			"answer": "二次方资助根据独特贡献者数量而非总金额匹配资金。100人各捐1美元比1人捐100美元获得更多匹配。它民主化资助，优先考虑广泛社区支持。"
 		},
 		"2": {
-			"question": "What is Gitcoin Passport?",
-			"answer": "Passport aggregates identity stamps (Twitter, ENS, POAPs, etc.) into a score. Higher scores mean more likely to be a unique human. Apps use Passport for sybil resistance. It's become widely adopted."
+			"question": "Gitcoin Grants 如何运作？",
+			"answer": "每轮赠款（通常每季度），项目创建页面，人们捐赠。Gitcoin 根据二次方公式分配匹配池。捐赠小额给多个项目最大化你的影响力。"
 		},
 		"3": {
-			"question": "How do grant rounds work?",
-			"answer": "Gitcoin runs quarterly rounds with matching pools. Projects apply, community donates, quadratic formula distributes matching. Ecosystem partners also run rounds using Gitcoin's Grants Stack."
+			"question": "什么是 Gitcoin Passport？",
+			"answer": "Passport 帮助验证独特的人类身份。你收集'stamps'（GitHub、Twitter、链上活动）来提高你的分数。分数更高意味着在赠款中有更大的贡献权重。它可以防止女巫攻击。"
 		},
 		"4": {
-			"question": "What is Allo Protocol?",
-			"answer": "Allo is Gitcoin's capital allocation protocol. It's the infrastructure for running grant rounds, streaming payments, and other funding mechanisms. Other platforms can build on Allo."
+			"question": "GTC 代币有什么用？",
+			"answer": "GTC 治理 Gitcoin DAO。持有者投票决定赠款轮次参数、匹配池分配和协议发展。它是对 Gitcoin 生态系统的治理权力。"
 		},
 		"5": {
-			"question": "What is GTC used for?",
-			"answer": "GTC governs Gitcoin DAO. Holders vote on grant round parameters, treasury allocation, and protocol decisions. GTC staking may be added for additional utility. It's primarily a governance token."
+			"question": "如何参与 Gitcoin Grants？",
+			"answer": "作为捐赠者：浏览项目，捐赠少至1美元。作为项目方：申请你的项目纳入赠款轮次。获取 Gitcoin Passport 以最大化你的影响力。"
 		}
 	},
 	"cta": {
-		"ready": "Ready to fund public goods?",
-		"button": "Explore Gitcoin",
-		"note": "Quadratic funding pioneer"
+		"ready": "准备支持开源了吗？",
+		"button": "探索 Gitcoin",
+		"note": "公共物品资助平台"
 	}
 }

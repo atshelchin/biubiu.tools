@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Sherlock - Security + Coverage Protocol",
+		"description": "Sherlock combines audit contests with smart contract coverage. Security audits with built-in exploit protection for DeFi protocols.",
+		"keywords": "Sherlock, audit contest, smart contract coverage, DeFi insurance, security audit, exploit protection"
+	},
+	"overview": "Sherlock combines competitive security audits with smart contract coverage. Protocols get audited by competing security researchers, then covered against exploits. If bugs slip through, Sherlock pays.\n\nThis alignment of incentives is unique. Auditors (Watsons) are motivated to find everything because Sherlock bears residual risk. Coverage is underwritten by stakers who earn yield for taking on protocol risk.\n\nSherlock has audited major protocols and paid out claims when exploits occurred. The combination of audit + coverage creates comprehensive security that standalone audits or insurance can't match.",
+	"features": {
+		"1": {
+			"title": "Audit Contests",
+			"description": "Competitive security"
+		},
+		"2": {
+			"title": "Exploit Coverage",
+			"description": "Insurance backup"
+		},
+		"3": {
+			"title": "Watson Network",
+			"description": "Top auditors"
+		},
+		"4": {
+			"title": "Aligned Incentives",
+			"description": "Auditors + coverage"
+		},
+		"5": {
+			"title": "Staking Yield",
+			"description": "Underwrite risk"
+		},
+		"6": {
+			"title": "Claims Paid",
+			"description": "Proven coverage"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Protocol Audit",
+			"description": "Competitive + coverage"
+		},
+		"2": {
+			"title": "Bug Hunting",
+			"description": "Earn as Watson"
+		},
+		"3": {
+			"title": "Underwriting",
+			"description": "Stake for yield"
+		},
+		"4": {
+			"title": "Risk Management",
+			"description": "Coverage for users"
+		},
+		"5": {
+			"title": "Pre-Launch",
+			"description": "Security + insurance"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How is Sherlock different from Code4rena?",
+			"answer": "Both run competitive audits. Sherlock adds exploit coverage—if auditors miss bugs, Sherlock pays claims. This aligns incentives better. Code4rena is audit-only. Different risk/cost tradeoffs."
+		},
+		"2": {
+			"question": "How does coverage work?",
+			"answer": "Protocols pay premiums for coverage. If exploited due to bugs in audited code, Sherlock pays out. Coverage amounts and terms are negotiated. Stakers provide the capital backing coverage."
+		},
+		"3": {
+			"question": "How do I become a Watson?",
+			"answer": "Apply through Sherlock. Pass their evaluation process. Once approved, compete in contests. Watsons are generally more vetted than Code4rena wardens—higher barrier, curated quality."
+		},
+		"4": {
+			"question": "What yields can stakers earn?",
+			"answer": "Staker yields vary with protocol demand and risk. Check current rates on Sherlock. You're underwriting protocol risk—if exploits happen, stakers take losses. Risk-adjusted returns."
+		},
+		"5": {
+			"question": "Has Sherlock paid claims?",
+			"answer": "Yes. Sherlock has paid out claims for exploits in covered protocols. This proves the coverage works. The combination of skin-in-the-game and actual payouts builds trust."
+		}
+	},
+	"cta": {
+		"ready": "Ready for audit + coverage?",
+		"button": "Explore Sherlock",
+		"note": "Security with backup"
+	}
+}

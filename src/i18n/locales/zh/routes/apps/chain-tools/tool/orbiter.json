@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Orbiter Finance - L2 桥",
+		"description": "Orbiter Finance 专注于以太坊 L2 之间快速、便宜的桥接。为 zkSync、Arbitrum、Optimism 和其他 rollup 优化。",
+		"keywords": "Orbiter Finance, L2 桥, zkSync 桥, Arbitrum 桥, rollup 桥, 跨 L2"
+	},
+	"overview": "Orbiter Finance 是一个为以太坊 L2 转账优化的去中心化桥。它擅长在 zkSync、Arbitrum、Optimism、Base 和 Linea 等 rollup 之间进行快速、低成本的桥接。\n\nOrbiter 使用 maker-taker 模型，流动性提供者（maker）在目标链上预付资金。这实现了几乎即时的转账，无需等待 L1 最终性。协议是非托管和信任最小化的。\n\n在 zkSync 生态系统中特别受欢迎，Orbiter 处理 L2 之间的大量交易。费用具有竞争力，L2 到 L2 路线通常比替代方案更低。它是 rollup 用户的首选桥。",
+	"features": {
+		"1": {
+			"title": "L2 优化",
+			"description": "为 rollup 而建"
+		},
+		"2": {
+			"title": "快速转账",
+			"description": "接近即时桥接"
+		},
+		"3": {
+			"title": "低费用",
+			"description": "有竞争力的 L2 费率"
+		},
+		"4": {
+			"title": "非托管",
+			"description": "去中心化设计"
+		},
+		"5": {
+			"title": "多个 L2",
+			"description": "所有主要 rollup"
+		},
+		"6": {
+			"title": "ETH 为主",
+			"description": "ETH 和稳定币"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "L2 到 L2",
+			"description": "快速 rollup 桥接"
+		},
+		"2": {
+			"title": "zkSync 桥接",
+			"description": "热门 zkSync 路线"
+		},
+		"3": {
+			"title": "空投刷量",
+			"description": "L2 上的活动"
+		},
+		"4": {
+			"title": "快速存款",
+			"description": "快速 L2 入场"
+		},
+		"5": {
+			"title": "成本节省",
+			"description": "比官方桥更便宜"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "为什么用 Orbiter 做 L2？",
+			"answer": "Orbiter 为 L2 到 L2 转账优化。官方桥很慢（等待 L1 最终性），Orbiter 的 maker 模型提供接近即时的转账。费用通常也更低。这是 rollup 之间最快的方式。"
+		},
+		"2": {
+			"question": "转账有多快？",
+			"answer": "大多数转账在 1-5 分钟内完成。Maker 在看到你的存款后立即在目标链上预付资金。比可能需要数小时等待 L1 最终性的官方桥快得多。"
+		},
+		"3": {
+			"question": "支持哪些 L2？",
+			"answer": "Orbiter 支持 Arbitrum、Optimism、zkSync Era、Base、Linea、Scroll、Polygon zkEVM、StarkNet 等。重点是以太坊 L2/rollup。查看他们的应用获取当前支持的网络。"
+		},
+		"4": {
+			"question": "有代币吗？",
+			"answer": "Orbiter 暗示过代币但尚未发布。用户通过平台桥接可能赚取未来空投。关注他们的官方渠道获取更新。"
+		},
+		"5": {
+			"question": "费用如何工作？",
+			"answer": "费用包括小额协议费加两条链上的 Gas。L2 Gas 很便宜，所以总成本很低。与 Bungee 等聚合器比较你的特定路线——Orbiter 通常是 L2-L2 的最佳选择。"
+		}
+	},
+	"cta": {
+		"ready": "准备快速 L2 桥接了吗？",
+		"button": "使用 Orbiter",
+		"note": "L2 优化桥"
+	}
+}

@@ -1,0 +1,170 @@
+{
+	"title": "GameFi 完整指南",
+	"subtitle": "从边玩边赚到高级策略全面掌握区块链游戏",
+
+	"sections": {
+		"intro": {
+			"title": "GameFi 介绍",
+			"content": "<p>GameFi(游戏+金融)代表区块链技术与游戏的融合,创造了新的经济模式,玩家可以真正拥有游戏内资产并从游戏中获得真实价值。与传统游戏中你辛苦获得的物品属于游戏公司不同,GameFi 通过 NFT 和代币将所有权交到你手中。</p><p>在这份综合指南中,你将学习区块链游戏的运作原理,探索从休闲边玩边赚到完全上链游戏的不同游戏类型,了解游戏经济学,并发现玩家如何在 GameFi 中真正赚钱。我们将介绍 Axie Infinity 和 Gods Unchained 等主要游戏、Immutable 和 Ronin 等游戏基础设施,最重要的是——你需要了解的风险和可持续性因素。</p>"
+		},
+		"game_types": {
+			"title": "区块链游戏类型",
+			"content": "<p>区块链游戏有多种形式,每种都有不同的经济模型和游戏机制。了解这些类别可以帮助你找到符合你目标和风险承受能力的游戏。</p>",
+			"play_to_earn": {
+				"title": "边玩边赚(P2E)游戏",
+				"content": "<p>边玩边赚游戏通过加密货币或 NFT 奖励玩家的时间和技能。这种模式在 2021 年 Axie Infinity 大受欢迎时获得了巨大关注,菲律宾的玩家每天玩游戏赚取的收入超过最低工资。</p><p><strong>P2E 工作原理:</strong></p><ul><li>玩家完成任务、战斗或任务以赚取游戏内代币</li><li>这些代币可以在交易所出售换取真钱</li><li>NFT 物品和角色可以在市场上交易</li><li>玩家技能和时间投入直接关联收益</li></ul><p><strong>热门 P2E 游戏:</strong></p><ul><li><strong>Axie Infinity:</strong> 战斗名为 Axies 的生物,繁殖它们并赚取 SLP 代币</li><li><strong>Pixels:</strong> Ronin 上的休闲农场游戏,玩法轻松</li><li><strong>Big Time:</strong> 带有可交易 NFT 战利品的动作 RPG</li><li><strong>Gods Unchained:</strong> 免费游玩的交易卡牌游戏</li></ul><p><strong>现实检验:</strong> 大多数 P2E 游戏随着更多玩家加入收益会下降。早期玩家通常赚最多钱,而晚期进入者在购买入门 NFT 后难以收回成本。</p>"
+			},
+			"move_to_earn": {
+				"title": "边动边赚(M2E)游戏",
+				"content": "<p>边动边赚游戏奖励身体活动,通常使用智能手机 GPS 和运动传感器跟踪运动。这个类别在 2022 年随着 STEPN 爆发,其高峰期用户每天慢跑可赚取 100 美元以上。</p><p><strong>M2E 工作原理:</strong></p><ul><li>购买 NFT 运动鞋或活动追踪器</li><li>应用追踪你的步行、跑步或其他运动</li><li>根据距离、速度和 NFT 属性赚取代币</li><li>升级和交易 NFT 以获得更好的收益</li></ul><p><strong>主要 M2E 平台:</strong></p><ul><li><strong>STEPN:</strong> 带有运动鞋 NFT 的跑步和步行应用(市值峰值超过 40 亿美元)</li><li><strong>Sweat Economy:</strong> 基于 NEAR 的健身奖励,入门成本较低</li><li><strong>Genopets:</strong> Solana 上由你的步数驱动的宠物养成游戏</li></ul><p><strong>警告:</strong> M2E 游戏高度依赖新用户增长。当增长停止时,代币价格通常会暴跌 90% 以上,因为现有用户出售他们的收益。STEPN 代币在短短 3 个月内从 4 美元跌至 0.20 美元。</p>"
+			},
+			"fully_onchain": {
+				"title": "完全上链游戏",
+				"content": "<p>完全上链游戏将所有游戏逻辑和状态直接存储在区块链上,而不仅仅是资产。这创造了真正不可停止的游戏,即使原始开发者消失也能存活。</p><p><strong>完全上链的重要性:</strong></p><ul><li><strong>永久性:</strong> 游戏永久存在于链上</li><li><strong>可组合性:</strong> 其他开发者可以在其基础上构建或创建模组</li><li><strong>真正所有权:</strong> 不仅是资产,而是整个游戏状态</li><li><strong>透明度:</strong> 所有游戏机制都是可验证的代码</li></ul><p><strong>技术权衡:</strong></p><ul><li>每个操作的 gas 成本更高</li><li>由于区块确认时间导致游戏速度较慢</li><li>与传统游戏相比复杂度有限</li><li>通常需要 L2 或游戏链才能可行</li></ul><p><strong>示例:</strong></p><ul><li><strong>Pirate Nation:</strong> 在 Apex(Arbitrum L3)上的 RPG,所有状态都在链上</li><li><strong>Dark Forest:</strong> 展示 zkSNARKs 的太空策略游戏</li><li><strong>Loot:</strong> 基于文本的 RPG 物品,催生了一个生态系统</li></ul>"
+			}
+		},
+		"game_assets": {
+			"title": "游戏资产和经济学",
+			"content": "<p>了解区块链游戏资产对于做出明智的游戏选择和物品估值决策至关重要。</p>",
+			"nfts": {
+				"title": "游戏中的 NFT",
+				"content": "<p>游戏中的 NFT 代表你真正拥有的独特物品、角色或土地。与公司可以删除你账户的传统游戏不同,NFT 在区块链上持久存在。</p><p><strong>游戏 NFT 类型:</strong></p><ul><li><strong>角色/头像:</strong> Axies、Gods Unchained 卡牌、可玩英雄</li><li><strong>装备/物品:</strong> 武器、盔甲、装饰品</li><li><strong>土地/房地产:</strong> Sandbox、Decentraland 中的虚拟地块</li><li><strong>消耗品:</strong> 药水、制作材料(通常是同质化的)</li></ul><p><strong>NFT 在游戏中的效用:</strong></p><ul><li><strong>游戏访问:</strong> 某些游戏需要拥有 NFT 才能玩</li><li><strong>增强收益:</strong> 更高稀有度的 NFT 通常赚取更多奖励</li><li><strong>繁殖/制作:</strong> 组合 NFT 创造新的</li><li><strong>治理:</strong> 对游戏开发决策进行投票</li></ul><p><strong>交易和流动性:</strong></p><p>游戏 NFT 在 Immutable 市场、Fractal 等专业市场或 OpenSea 等通用平台上交易。流动性差异巨大——热门游戏物品即时交易,而小众物品可能需要数周才能卖出。</p><p><strong>估值因素:</strong></p><ul><li>稀有度(通常来自随机属性)</li><li>游戏内赚钱潜力</li><li>美学吸引力和地位价值</li><li>游戏受欢迎程度和玩家数量</li><li>历史销售数据和地板价</li></ul>"
+			},
+			"tokens": {
+				"title": "代币经济学",
+				"content": "<p>大多数区块链游戏使用双代币模型将治理与游戏内收益分开。理解这种结构对于评估游戏可持续性至关重要。</p><p><strong>双代币模型(最常见):</strong></p><ul><li><strong>治理代币:</strong> 固定供应,用于投票和质押(例如 AXS、ILV、GMT)</li><li><strong>游戏内代币:</strong> 无限或高上限供应,通过游戏获得(例如 SLP、GST)</li></ul><p><strong>为什么要双代币?</strong></p><p>如果游戏直接赚取治理代币,早期玩家可以在新玩家到来之前提取所有价值。游戏内代币充当缓冲——它可以自由铸造作为奖励,没有治理价值,保护主代币。</p><p><strong>代币销毁机制(对可持续性至关重要):</strong></p><p>游戏需要从流通中移除代币以防止通货膨胀:</p><ul><li>繁殖成本(销毁代币创造新 NFT)</li><li>升级/强化费用</li><li>市场交易费用</li><li>制作和修理成本</li></ul><p><strong>不可持续代币经济学的警告信号:</strong></p><ul><li>没有有意义的代币销毁机制</li><li>每日高通胀(>流通供应的 5%)</li><li>大多数玩家在提取价值,很少有人添加</li><li>代币解锁时间表倾销给散户玩家</li></ul><p><strong>死亡螺旋:</strong></p><p>当代币奖励超过代币销毁时,价格下跌 → 收益减少 → 玩家离开 → 价格下跌更快。这已经杀死了数十个 P2E 游戏。成功的游戏平衡奖励与真正的代币效用和销毁。</p>"
+			}
+		},
+		"major_games": {
+			"title": "主要区块链游戏",
+			"content": "<p>让我们看看塑造行业的最重要的区块链游戏,分析它们成功的原因以及我们可以从它们的经济学中学到什么。</p>",
+			"axie": {
+				"title": "Axie Infinity: P2E 先驱",
+				"content": "<p>Axie Infinity 在 2021 年普及了边玩边赚游戏,NFT 交易量达到 40 亿美元,并在发展中国家创造了奖学金经济。</p><p><strong>Axie 工作原理:</strong></p><ul><li>收集和战斗名为 Axies 的生物(每个都是 NFT)</li><li>赢得战斗以赚取 SLP(Smooth Love Potion)代币</li><li>使用 AXS 和 SLP 代币繁殖 Axies 以创造新的 Axies</li><li>在市场上交易 Axies,稀有的价值数千美元</li></ul><p><strong>经济高峰(2021):</strong></p><ul><li>每日活跃用户:270 万</li><li>平均玩家收益:菲律宾每月 200-300 美元</li><li>AXS 代币:160 美元历史最高</li><li>SLP 代币:0.40 美元(从 0.01 美元)</li></ul><p><strong>出了什么问题:</strong></p><p>太多玩家赚取 SLP(每天 4000 万以上),销毁机制不足。繁殖成本无法吸收代币洪流。SLP 暴跌至 0.003 美元,使游戏无利可图。游戏将焦点从赚钱转向电竞和土地游戏。</p><p><strong>经验教训:</strong></p><ul><li>P2E 无法维持无限的玩家增长</li><li>代币销毁必须与玩家收益成比例</li><li>游戏需要有趣的玩法,而不仅仅是赚钱</li><li>公会/奖学金模式创造工作机会,但也创造提取压力</li></ul><p><strong>当前状态:</strong></p><p>Axie 转向 Axie Infinity: Origins(免费游玩)和 Axie Homeland(土地游戏)。焦点从 P2E 转向竞技电竞,Ronin 区块链每天处理数百万笔交易。</p>"
+			},
+			"gods_unchained": {
+				"title": "Gods Unchained: 免费游玩 TCG",
+				"content": "<p>Gods Unchained 是一款交易卡牌游戏,证明区块链游戏可以真正有趣,同时保持玩家对卡牌的所有权。</p><p><strong>主要特点:</strong></p><ul><li>免费游玩:无需购买 NFT 即可开始</li><li>通过游玩和排名获得卡牌</li><li>卡牌在你\"锻造\"时成为可交易的 NFT</li><li>竞技排名游戏和周末锦标赛</li><li>建立在 Immutable X 上,零费用交易</li></ul><p><strong>使其可持续的原因:</strong></p><ul><li>专注于游戏质量而非 P2E 承诺</li><li>类似炉石传说——卡牌游戏玩家熟悉</li><li>NFT 卡牌具有真正的效用(竞争优势)</li><li>从卡包销售获得收入,而不是无限代币印刷</li></ul><p><strong>玩家收益:</strong></p><p>适度且现实。顶级玩家通过出售稀有卡牌赚取数百美元,但大多数玩家赚得很少或没有。这比承诺每个人每天都能赚钱更可持续。</p><p><strong>挑战:</strong></p><ul><li>流动性低于主流游戏(玩家基数较小)</li><li>卡牌价值随游戏平衡变化波动</li><li>竞技成功需要技能和时间投入</li></ul>"
+			},
+			"illuvium": {
+				"title": "Illuvium: AAA 开放世界 RPG",
+				"content": "<p>Illuvium 旨在成为第一款 AAA 质量的区块链游戏——一款具有惊人图形和自动战斗机制的开放世界 RPG。</p><p><strong>游戏机制:</strong></p><ul><li>探索外星世界,捕捉生物(Illuvials)</li><li>为自动战斗构建团队</li><li>制作物品和装备</li><li>在排名竞技场战斗中竞争</li><li>三个互联游戏:Overworld、Arena、Zero</li></ul><p><strong>经济模型:</strong></p><ul><li><strong>ILV 代币:</strong> 治理和质押奖励</li><li><strong>sILV:</strong> 通过游戏获得的游戏内货币</li><li><strong>NFT:</strong> Illuvials、土地、装备都可交易</li></ul><p><strong>建立在 Immutable X 上:</strong></p><p>NFT 交易零 gas 费用,对于频繁物品交易的游戏很重要。</p><p><strong>当前状态:</strong></p><p>2024 年启动公开测试,经过多年开发。高制作价值,但玩家增长慢于预期,部分原因是高 PC 要求和复杂的入门流程。</p><p><strong>投资考虑:</strong></p><p>代表区块链游戏的高预算、高质量方法。成功取决于吸引关心游戏质量而非快速赚钱的主流玩家。</p>"
+			},
+			"bigtime": {
+				"title": "Big Time: 动作 RPG",
+				"content": "<p>Big Time 是一款免费游玩的多人动作 RPG,具有时间旅行冒险和独特的 NFT 集成方法。</p><p><strong>游戏玩法:</strong></p><ul><li>类似暗黑破坏神的砍杀战斗</li><li>与朋友组队进行地下城探险</li><li>收集装饰品、武器和 SPACE(游戏内土地 NFT)</li><li>在你的 SPACE 中制作限量版物品</li></ul><p><strong>经济方法:</strong></p><ul><li>免费游玩核心游戏</li><li>NFT SPACE 授予制作/赚钱能力</li><li>沙漏系统调节赚钱(NFT 需要沙漏才能生产物品)</li><li>BIGTIME 代币于 2023 年底推出</li></ul><p><strong>有趣之处:</strong></p><p>Big Time 不是氪金或纯 P2E,而是专注于具有地位价值的 NFT 装饰品和\"生产\"的 SPACE 所有权。这减少了代币经济学的压力,因为不是每个人都需要不断赚钱。</p><p><strong>挑战:</strong></p><ul><li>需要高端 PC 才能获得良好性能</li><li>加密原生功能的学习曲线</li><li>随着更多 SPACE 所有者制作,物品饱和</li></ul>"
+			}
+		},
+		"infrastructure": {
+			"title": "游戏基础设施",
+			"content": "<p>区块链游戏需要专门的基础设施——以太坊主网对游戏交易来说太慢且太贵。专注于游戏的链已经出现来解决这个问题。</p>",
+			"immutable": {
+				"title": "Immutable: zkEVM 游戏平台",
+				"content": "<p>Immutable 提供专门为 NFT 游戏设计的基础设施,结合零 gas 费用和 EVM 兼容性。</p><p><strong>两种解决方案:</strong></p><ul><li><strong>Immutable X:</strong> ZK-rollup,9000+ TPS,零 gas 费用</li><li><strong>Immutable zkEVM:</strong> EVM 兼容链,用于更复杂的游戏</li></ul><p><strong>开发者优势:</strong></p><ul><li>玩家零 gas 费用(Immutable 承担)</li><li>快速交易最终性</li><li>内置市场和钱包基础设施</li><li>Unity、Unreal Engine 的 SDK</li></ul><p><strong>主要游戏:</strong></p><p>Gods Unchained、Guild of Guardians、Illuvium、Ember Sword 以及 200 多款在开发中的游戏。</p><p><strong>IMX 代币:</strong></p><p>用于质押、治理和支付协议费用。在平台上构建的开发者需要持有。</p>"
+			},
+			"ronin": {
+				"title": "Ronin: 游戏以太坊侧链",
+				"content": "<p>Ronin 由 Sky Mavis 专门为 Axie Infinity 构建,然后向其他游戏开放。它是针对游戏交易优化的以太坊侧链。</p><p><strong>主要特点:</strong></p><ul><li>快速出块时间(3 秒)</li><li>低交易费用(约 0.01-0.10 美元)</li><li>权威证明共识(更快但更中心化)</li><li>专门用于游戏用例</li></ul><p><strong>主要游戏:</strong></p><p>Axie Infinity、Pixels、The Machines Arena 以及不断增长的休闲游戏生态系统。</p><p><strong>RON 代币:</strong></p><p>用于 gas 费用和质押的原生代币。验证者必须质押 RON 以保护网络。</p><p><strong>安全说明:</strong></p><p>Ronin 在 2022 年遭受了 6.24 亿美元的黑客攻击,攻击者攻破了验证者节点。团队赔偿了用户并改进了安全性,但这突出了游戏链的中心化风险。</p>"
+			},
+			"gaming_l2s": {
+				"title": "其他游戏 L2 和链",
+				"content": "<p>除了 Immutable 和 Ronin,还有几条链将游戏作为主要用例:</p><p><strong>Beam(Avalanche Subnet):</strong></p><ul><li>由 Merit Circle DAO 支持的 Avalanche 子网</li><li>专注于 AAA 游戏和电竞</li><li>便宜的交易,快速最终性</li></ul><p><strong>Xai(Arbitrum Orbit L3):</strong></p><ul><li>作为 Arbitrum L3 构建的游戏链</li><li>传统玩家不需要钱包(账户抽象)</li><li>由 Offchain Labs 支持</li></ul><p><strong>Treasure(Arbitrum):</strong></p><ul><li>Arbitrum 上的游戏生态系统</li><li>共享流动性和物品市场</li><li>MAGIC 代币为整个生态系统提供动力</li></ul><p><strong>为什么有这么多游戏链?</strong></p><p>游戏需要高吞吐量、低费用和对其经济环境的控制。通用 L2 与 DeFi 竞争区块空间,而游戏链优先处理游戏交易。</p>"
+			}
+		},
+		"guilds": {
+			"title": "公会和奖学金",
+			"content": "<p>游戏公会作为 GameFi 生态系统的关键部分出现,在发展中国家创造就业机会,同时引发关于可持续性和劳工实践的问题。</p>",
+			"ygg": {
+				"title": "Yield Guild Games (YGG)",
+				"content": "<p>Yield Guild Games 开创了奖学金模式,公会购买游戏资产并将其借给玩家以换取收益份额。</p><p><strong>YGG 工作原理:</strong></p><ul><li>公会购买昂贵的游戏 NFT(Axies、土地等)</li><li>学者无需前期成本即可获得游玩权限</li><li>收益分成:60-70% 给学者,30-40% 给公会</li><li>公会提供培训和社区支持</li></ul><p><strong>YGG 的投资方法:</strong></p><ul><li>早期投资有前途的游戏</li><li>建立区域子 DAO(东南亚、印度等)</li><li>根据赚钱潜力策划支持哪些游戏</li></ul><p><strong>峰值影响:</strong></p><p>在 Axie 的鼎盛时期,菲律宾的 YGG 学者赚取的收入超过当地最低工资。成千上万的家庭依赖奖学金收入。</p><p><strong>当前状态:</strong></p><p>随着 Axie 收益崩溃,YGG 转向 Web3 游戏基础设施和新游戏。奖学金模式在游戏有利可图时有效,但会产生依赖风险。</p>"
+			},
+			"scholarship": {
+				"title": "奖学金模式",
+				"content": "<p><strong>奖学金的好处:</strong></p><ul><li>降低发展中国家玩家的入门门槛</li><li>风险在公会,而非个人玩家</li><li>社区和培训支持</li><li>跨多个游戏多元化</li></ul><p><strong>批评和担忧:</strong></p><ul><li><strong>数字劳动:</strong> 在许多情况下,学者的工作报酬低于最低工资</li><li><strong>提取压力:</strong> 公会放大游戏代币的抛售压力</li><li><strong>不可持续性:</strong> 模式需要持续增长否则崩溃</li><li><strong>中心化:</strong> 少数大型公会控制大量游戏资产</li></ul><p><strong>其他主要公会:</strong></p><ul><li><strong>Merit Circle:</strong> DAO 治理的公会,专注于竞技游戏</li><li><strong>UniX Gaming:</strong> 数据驱动的游戏选择方法</li><li><strong>Good Games Guild:</strong> 亚太地区重点</li></ul><p><strong>公会的未来:</strong></p><p>随着游戏从纯 P2E 转向边玩边赚或免费游玩模式,公会正在演变为电竞团队、游戏投资者和社区组织者,而不是纯粹的奖学金提供者。</p>"
+			}
+		},
+		"earning": {
+			"title": "GameFi 赚钱策略",
+			"content": "<p>让我们实际一点。人们如何在区块链游戏中真正赚钱?以下是主要策略,从初级到高级排序。</p>",
+			"playing": {
+				"title": "通过游戏赚钱",
+				"content": "<p><strong>每日任务刷取:</strong></p><p>许多 P2E 游戏奖励每日任务或比赛。持续的玩家可以赚取适度金额:</p><ul><li>时间投入:每天 2-4 小时</li><li>典型收益:每月 50-200 美元(游戏差异很大)</li><li>要求:游戏 NFT(通常 100-1000 美元以上入门)</li></ul><p><strong>竞技游戏:</strong></p><p>熟练的玩家通过锦标赛和排名奖励赚得更多:</p><ul><li>Gods Unchained 周末锦标赛:奖励卡牌价值 50-500 美元</li><li>Axie 排行榜奖励:顶级玩家赚取数千 AXS</li><li>电竞奖金:增长中但仍小于传统电竞</li></ul><p><strong>收益现实检验:</strong></p><p>大多数 P2E 游戏遵循这种模式:</p><ol><li>早期:高收益吸引玩家</li><li>增长阶段:收益在更多玩家之间稀释</li><li>成熟期:只有技术娴熟或早期玩家获利</li><li>衰退期:大多数玩家赚取低于最低工资</li></ol><p><strong>可持续方法:</strong></p><p>不要期望稳定收入。将其视为有潜在奖励的游戏,而不是工作。玩你喜欢的游戏,将收益视为不错的额外收入。</p>"
+			},
+			"trading": {
+				"title": "NFT 交易和投机",
+				"content": "<p>交易游戏 NFT 可能比玩游戏更有利可图,但需要不同的技能。</p><p><strong>翻转策略:</strong></p><ul><li>在游戏不受欢迎时购买被低估的 NFT</li><li>在炒作周期或元变化期间出售</li><li>专注于功能性物品,而不仅仅是装饰品</li><li>研究游戏机制以识别有价值的属性</li></ul><p><strong>成功交易示例:</strong></p><ul><li>在熊市购买、在 2021 年繁荣期出售的 Axie 翻转者(10-50 倍收益)</li><li>在元变化之前购买的 Gods Unchained 卡牌投机者</li><li>Sandbox、Decentraland 中的虚拟土地翻转者</li></ul><p><strong>交易工具:</strong></p><ul><li>Fractal、Immutable 市场用于游戏 NFT</li><li>OpenSea 用于一般 NFT 交易</li><li>游戏特定市场通常具有更好的流动性</li></ul><p><strong>风险:</strong></p><ul><li>流动性低——不能总是在你想要时出售</li><li>游戏更新可能一夜之间摧毁物品价值</li><li>鲸鱼的市场操纵</li><li>退出流动性问题——谁会从你这里买?</li></ul><p><strong>高级策略:</strong></p><p>一些交易者专门从事特定游戏,建立对物品价值、元变化和玩家行为的深入了解。这更接近专业交易而非休闲翻转。</p>"
+			},
+			"breeding": {
+				"title": "繁殖和创造",
+				"content": "<p>一些游戏允许玩家通过繁殖、制作或其他创造机制创建新 NFT。这可能有利可图,但需要资本和知识。</p><p><strong>繁殖机制(Axie Infinity 示例):</strong></p><ol><li>拥有两个兼容的 Axies(繁殖父母)</li><li>支付 AXS + SLP 代币的繁殖成本</li><li>获得具有父母随机特征的后代</li><li>出售后代,希望高于繁殖成本</li></ol><p><strong>盈利因素:</strong></p><ul><li>父母的遗传特征(决定后代价值)</li><li>当前代币价格(繁殖成本变化)</li><li>对特定特征或元构建的需求</li><li>繁殖次数(Axies 有繁殖限制)</li></ul><p><strong>其他繁殖/制作游戏:</strong></p><ul><li>Pegaxy、ZED RUN(赛马)</li><li>Crypto Unicorns(生物繁殖)</li><li>Big Time(SPACE 中的装备制作)</li></ul><p><strong>繁殖陷阱:</strong></p><p>当每个人都为了盈利而繁殖时,供应超过需求 → 价格崩溃 → 繁殖变得无利可图。成功的繁殖者把握市场时机或找到利基(稀有特征、竞技构建)。</p><p><strong>高级繁殖:</strong></p><p>专业繁殖者跟踪遗传学、需求模式和代币价格周期。一些人赚取六位数,但这更接近经营企业而非玩游戏。</p>"
+			},
+			"land": {
+				"title": "虚拟土地所有权",
+				"content": "<p>区块链元宇宙中的虚拟土地可以产生被动收入,但价格和效用差异巨大。</p><p><strong>土地如何产生价值:</strong></p><ul><li><strong>租金收入:</strong> 其他玩家付费使用你的土地</li><li><strong>广告/赞助:</strong> 品牌为高流量区域付费</li><li><strong>游戏内资源:</strong> 土地生产材料或代币</li><li><strong>开发:</strong> 建造游戏/体验并收取入场费</li></ul><p><strong>主要元宇宙土地:</strong></p><ul><li><strong>The Sandbox:</strong> 体素元宇宙,以 LAND NFT 出售土地</li><li><strong>Decentraland:</strong> 带有 LAND 地块的 3D 虚拟世界</li><li><strong>Axie Infinity(Homeland):</strong> 生产资源的土地游戏</li><li><strong>Ember Sword:</strong> 具有土地所有权的 MMORPG</li></ul><p><strong>土地价格:</strong></p><p>高度可变。热门区域附近的黄金地段:10,000-100,000 美元以上。偏远地块:100-1,000 美元。价格在 2021-2022 年炒作中大幅上涨,然后暴跌 70-90%。</p><p><strong>土地收入的现实:</strong></p><p>大多数虚拟土地产生零收入。只有高度开发且有真实流量的地块才能赚取有意义的回报。这更像投机性房地产而非被动收入。</p><p><strong>成功因素:</strong></p><ul><li>靠近热门景点的位置</li><li>积极开发和活动</li><li>营销以吸引访客</li><li>与品牌或创作者的合作</li></ul><p><strong>投资视角:</strong></p><p>虚拟土地是对元宇宙未来的赌注。如果数百万人最终\"生活\"在这些世界中,黄金地段可能很有价值。如果他们不这样做,那就一文不值。高风险,长时间跨度。</p>"
+			}
+		},
+		"risks": {
+			"title": "风险和可持续性",
+			"content": "<p>GameFi 最大的挑战是可持续性。许多游戏承诺收益,但缺乏能够长期支持它们的经济模型。在投入时间或金钱之前了解这些风险至关重要。</p>",
+			"sustainability": {
+				"title": "经济可持续性",
+				"content": "<p>要使 P2E 游戏可持续,价值流入必须快于流出。当玩家提取的价值超过新资金进入时,游戏经济崩溃。</p><p><strong>基本等式:</strong></p><p>可持续游戏 = (新玩家存款 + 市场费用 + 赞助) > (玩家提款 + 开发成本)</p><p><strong>为什么大多数 P2E 游戏失败:</strong></p><ul><li><strong>过度关注赚钱:</strong> 玩家只是为了提取价值而加入</li><li><strong>价值创造不足:</strong> 没有真正的产品或娱乐价值</li><li><strong>金字塔动态:</strong> 早期玩家从晚期进入者那里获利</li><li><strong>没有可持续的收入:</strong> 代币销售无法永远资助奖励</li></ul><p><strong>存在可持续模式:</strong></p><ul><li><strong>真正的娱乐价值:</strong> 玩家付费是因为有趣(Gods Unchained)</li><li><strong>装饰品销售:</strong> 可选的 NFT 购买资助开发(Big Time)</li><li><strong>竞争生态系统:</strong> 玩家投资以获得优势(电竞)</li><li><strong>创作者经济:</strong> 用户构建吸引他人的内容(Sandbox)</li></ul><p><strong>要寻找什么:</strong></p><ul><li>人们会在没有赚钱的情况下玩这个游戏吗?</li><li>除了代币销售之外,是否有明确的收入来源?</li><li>代币销毁机制是否随玩家增长而扩展?</li><li>开发者对经济学是否透明?</li></ul>"
+			},
+			"death_spiral": {
+				"title": "游戏死亡螺旋",
+				"content": "<p>许多 GameFi 项目遵循可预测的死亡螺旋模式。了解这一点可以帮助你避免成为退出流动性。</p><p><strong>典型死亡螺旋:</strong></p><ol><li><strong>发布炒作:</strong> 高 APY 吸引初始玩家</li><li><strong>增长阶段:</strong> 代币价格上涨,媒体报道增加</li><li><strong>峰值:</strong> 最大玩家数,最高收益,最多炒作</li><li><strong>过度饱和:</strong> 太多玩家赚钱,新存款不足</li><li><strong>价格下跌:</strong> 代币奖励价值降低</li><li><strong>玩家流失:</strong> 无利可图的玩家离开,出售资产</li><li><strong>崩溃:</strong> 剩余玩家无法出售,游戏变成鬼城</li></ol><p><strong>真实示例:</strong></p><ul><li><strong>Axie Infinity SLP:</strong> 0.40 美元 → 0.003 美元(99% 下跌)6 个月内</li><li><strong>STEPN GST:</strong> 8 美元 → 0.01 美元(99.8% 下跌)3 个月内</li><li><strong>DeFi Kingdoms JEWEL:</strong> 20 美元 → 0.10 美元(95% 下跌)</li></ul><p><strong>你处于死亡螺旋的警告信号:</strong></p><ul><li>每日活跃用户下降</li><li>尽管承诺高 APY,代币价格仍在下跌</li><li>社区对收益的投诉</li><li>开发者承诺\"即将推出的功能\"但没有交付</li><li>新玩家增长放缓</li></ul><p><strong>如何避免成为退出流动性:</strong></p><ul><li>不要在炒作高峰时购买</li><li>定期提取收益,不要无休止地复利</li><li>监控玩家增长趋势</li><li>进入前制定退出策略</li><li>不要陷入沉没成本谬误</li></ul>"
+			},
+			"regulatory": {
+				"title": "监管风险",
+				"content": "<p>GameFi 存在于法律灰色地带。边玩边赚机制在某些司法管辖区可能被视为赌博、证券或无牌汇款。</p><p><strong>监管担忧:</strong></p><ul><li><strong>赌博法:</strong> 具有随机奖励的游戏可能是赌博</li><li><strong>证券法:</strong> 承诺回报的代币可能是证券</li><li><strong>劳动法:</strong> 奖学金玩家是员工吗?</li><li><strong>税收影响:</strong> 收益在大多数国家是应税收入</li></ul><p><strong>地区限制:</strong></p><p>几个国家限制或禁止了区块链游戏:</p><ul><li>中国完全禁止加密游戏</li><li>韩国限制 P2E 游戏</li><li>几个国家要求随机奖励需要赌博许可证</li></ul><p><strong>项目风险:</strong></p><ul><li>开发者可能面临法律诉讼</li><li>游戏可能被迫在某些地区关闭</li><li>银行账户和支付处理器可能被冻结</li></ul><p><strong>玩家保护:</strong></p><ul><li>了解当地税务义务(通常为收益的 15-40%)</li><li>保留所有交易记录</li><li>注意游戏可能突然消失</li><li>不要投资超过你能承受损失的金额</li></ul>"
+			},
+			"evaluation": {
+				"title": "智能游戏评估",
+				"content": "<p>在向任何区块链游戏投入时间或金钱之前,批判性地评估它:</p><p><strong>游戏质量检查表:</strong></p><ul><li>游戏玩法在没有赚钱的情况下真的有趣吗?</li><li>图形和机制是否符合现代标准?</li><li>是否有具有现实里程碑的路线图?</li><li>团队是否兑现了过去的承诺?</li></ul><p><strong>经济模型检查表:</strong></p><ul><li>代币来源(发行)和销毁(燃烧)是什么?</li><li>是否有明确的可持续性路径?</li><li>入门成本和估计回本时间是多少?</li><li>收益对玩家数量变化的敏感度如何?</li></ul><p><strong>团队和社区:</strong></p><ul><li>团队是否公开且有经验?</li><li>在游戏或加密领域的往绩记录?</li><li>积极开发和沟通?</li><li>社区情绪(Discord、Twitter)?</li></ul><p><strong>市场指标:</strong></p><ul><li>每日活跃用户(增长还是下降?)</li><li>代币价格趋势(稳定、上涨还是暴跌?)</li><li>NFT 地板价和交易量</li><li>市场流动性(你真的能卖掉吗?)</li></ul><p><strong>要避免的危险信号:</strong></p><ul><li>匿名团队</li><li>不切实际的 APY 承诺(1000% 以上)</li><li>没有可运行的产品,只有白皮书</li><li>营销力度大,实质内容少</li><li>从其他游戏复制的玩法</li><li>团队可以访问的锁定流动性</li><li>代币解锁倾销给散户</li></ul><p><strong>最后建议:</strong></p><p>以怀疑和好奇的态度对待 GameFi。该技术在游戏所有权和经济方面实现了真正的创新,但大多数项目都是不可持续的圈钱项目。玩你喜欢的游戏,将任何收益视为奖励,永远不要投资超过你能承受损失的金额。</p>"
+			}
+		}
+	},
+
+	"glossary": {
+		"play_to_earn": {
+			"term": "边玩边赚 (P2E)",
+			"definition": "玩家通过游戏赚取加密货币或 NFT 的游戏模式。玩家投入时间和技能来产生真实收入,尽管可持续性因游戏而异。"
+		},
+		"game_nft": {
+			"term": "游戏 NFT",
+			"definition": "代表游戏内资产(如角色、物品或土地)的非同质化代币。与传统游戏不同,玩家真正拥有这些资产,可以在开放市场上交易。"
+		},
+		"in_game_token": {
+			"term": "游戏内代币",
+			"definition": "通过游戏获得的加密货币,通常具有无限或高供应量。通常在双代币模型中与治理代币配对。价值取决于游戏健康状况和代币销毁机制。"
+		},
+		"guild": {
+			"term": "游戏公会",
+			"definition": "购买游戏资产(NFT)并将其借给玩家(学者)以换取收益份额的组织。由 Yield Guild Games 在 Axie Infinity 高峰期开创。"
+		},
+		"scholarship": {
+			"term": "奖学金",
+			"definition": "公会或投资者将游戏 NFT 借给没有资本购买它们的玩家的安排。收益在学者和赞助商之间分配,通常为 60-70% 给学者。"
+		},
+		"fully_onchain": {
+			"term": "完全上链游戏",
+			"definition": "所有逻辑和状态都存储在区块链上的游戏,而不仅仅是资产。这些游戏真正去中心化,即使没有原始开发者也能存活。"
+		},
+		"gaming_l2": {
+			"term": "游戏 L2/链",
+			"definition": "针对游戏交易优化的 Layer 2 解决方案或专用区块链。具有游戏操作所需的快速速度、低费用和高吞吐量。示例:Immutable、Ronin、Beam。"
+		},
+		"breeding": {
+			"term": "繁殖",
+			"definition": "玩家结合两个 NFT(通常是生物)并支付代币以创建具有两个父母特征的新 NFT 的机制。可能有利可图,但需要了解遗传学和市场需求。"
+		},
+		"land": {
+			"term": "虚拟土地",
+			"definition": "代表区块链元宇宙中空间所有权的 NFT。可以通过租金、资源生产或举办活动潜在地产生收入。高度投机性资产类别。"
+		},
+		"game_economy": {
+			"term": "游戏经济",
+			"definition": "区块链游戏的经济系统,包括代币发行(奖励)、销毁(燃烧机制)、NFT 市场和价值流动。健康的经济平衡赚钱与消费。"
+		}
+	}
+}

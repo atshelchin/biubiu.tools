@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Synapse Protocol - Cross-Chain Bridge",
+		"description": "Synapse Protocol enables cross-chain bridging and swaps. Move assets between 15+ chains with deep liquidity and competitive rates.",
+		"keywords": "Synapse Protocol, cross-chain bridge, SYN token, multichain, bridging, cross-chain swaps"
+	},
+	"overview": "Synapse Protocol is a cross-chain bridge and liquidity network supporting 15+ blockchains. Bridge assets between Ethereum, L2s, and alt-L1s with good liquidity and reasonable fees.\n\nSynapse uses a combination of liquidity pools and canonical bridges for different routes. Their nUSD and nETH stableswap pools provide deep liquidity for cross-chain transfers. The network has processed billions in volume.\n\nThe SYN token is used for governance and liquidity mining. Synapse also offers cross-chain messaging for developers building multi-chain applications. It's one of the established bridges in the ecosystem.",
+	"features": {
+		"1": {
+			"title": "15+ Chains",
+			"description": "Wide network support"
+		},
+		"2": {
+			"title": "Deep Liquidity",
+			"description": "Large stableswap pools"
+		},
+		"3": {
+			"title": "Cross-Chain Swaps",
+			"description": "Any token to any token"
+		},
+		"4": {
+			"title": "SYN Token",
+			"description": "Governance and rewards"
+		},
+		"5": {
+			"title": "Messaging",
+			"description": "Cross-chain communication"
+		},
+		"6": {
+			"title": "Fast Transfers",
+			"description": "Minutes, not hours"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Bridge Assets",
+			"description": "Move between chains"
+		},
+		"2": {
+			"title": "Cross-Chain Swaps",
+			"description": "Swap and bridge together"
+		},
+		"3": {
+			"title": "Stablecoin Bridging",
+			"description": "Move USDC/USDT"
+		},
+		"4": {
+			"title": "LP Farming",
+			"description": "Provide bridge liquidity"
+		},
+		"5": {
+			"title": "Developer Integration",
+			"description": "Cross-chain messaging"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Which chains does Synapse support?",
+			"answer": "Synapse supports Ethereum, Arbitrum, Optimism, Polygon, BSC, Avalanche, Fantom, and many others. Check the app for current supported chains—they regularly add new networks as they gain traction."
+		},
+		"2": {
+			"question": "How long do transfers take?",
+			"answer": "Most transfers complete in 5-15 minutes. Speed depends on source/destination chain confirmation times. Ethereum deposits take longer due to finality requirements. L2-to-L2 transfers are fastest."
+		},
+		"3": {
+			"question": "What are the fees?",
+			"answer": "Fees include gas costs on both chains plus a small protocol fee (usually 0.05-0.1%). For stablecoin bridges, slippage is minimal due to deep liquidity pools. Compare with other bridges for best rates."
+		},
+		"4": {
+			"question": "What is nUSD/nETH?",
+			"answer": "nUSD and nETH are Synapse's cross-chain native assets. When you bridge, you might receive nUSD which you can swap for native USDC. This enables efficient cross-chain liquidity without wrapped tokens."
+		},
+		"5": {
+			"question": "Is Synapse safe?",
+			"answer": "Synapse has been operating since 2021 and processed billions without major exploits. It uses threshold signature schemes with distributed validators. Always use official links and understand bridge risks."
+		}
+	},
+	"cta": {
+		"ready": "Ready to bridge cross-chain?",
+		"button": "Use Synapse",
+		"note": "Cross-chain liquidity network"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "QuickNode - 区块链基础设施",
+		"description": "QuickNode 提供快速可靠的区块链节点基础设施。通过托管 RPC 端点和 API 访问 25+ 条链。",
+		"keywords": "QuickNode, RPC 节点, 区块链 API, 节点基础设施, Web3 开发, 多链"
+	},
+	"overview": "QuickNode 是领先的区块链基础设施提供商，在 25+ 条链上提供托管节点服务。无需运行自己的节点，使用 QuickNode 可靠的 RPC 端点为你的 dApp 服务。\n\nQuickNode 强调速度和可靠性，拥有全球分布式基础设施。他们的市场提供增强 API、NFT 工具和分析等附加组件。企业功能包括专用节点和 SLA。\n\n除了基本 RPC，QuickNode 还提供实时数据流、无服务器计算函数和各种 Web3 开发工具。这是一个综合性基础设施平台。",
+	"features": {
+		"1": {
+			"title": "25+ 条链",
+			"description": "广泛区块链支持"
+		},
+		"2": {
+			"title": "快速 RPC",
+			"description": "低延迟端点"
+		},
+		"3": {
+			"title": "Streams",
+			"description": "实时区块链数据"
+		},
+		"4": {
+			"title": "Functions",
+			"description": "无服务器计算"
+		},
+		"5": {
+			"title": "附加组件市场",
+			"description": "扩展功能"
+		},
+		"6": {
+			"title": "企业级",
+			"description": "专用节点、SLA"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "dApp 开发",
+			"description": "应用程序 RPC"
+		},
+		"2": {
+			"title": "多链应用",
+			"description": "一个提供商，多条链"
+		},
+		"3": {
+			"title": "实时数据",
+			"description": "流式区块链事件"
+		},
+		"4": {
+			"title": "NFT 工具",
+			"description": "NFT API 和元数据"
+		},
+		"5": {
+			"title": "企业",
+			"description": "生产基础设施"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "QuickNode 支持哪些链？",
+			"answer": "QuickNode 支持 25+ 条链，包括以太坊、Polygon、Solana、Arbitrum、Optimism、BSC、Avalanche 等。EVM 链覆盖广泛，也包括主要非 EVM 链。"
+		},
+		"2": {
+			"question": "QuickNode vs Alchemy vs Infura？",
+			"answer": "都是主要 RPC 提供商。QuickNode 强调速度和链覆盖。Alchemy 在开发者工具方面领先。Infura 是原始提供商，以太坊可信度高。定价和功能各异——根据需求比较。"
+		},
+		"3": {
+			"question": "什么是 Streams？",
+			"answer": "Streams 通过 webhooks 实时推送区块链数据。无需轮询新区块/事件，数据即时到达。适用于索引、通知和实时应用。"
+		},
+		"4": {
+			"question": "什么是 Functions？",
+			"answer": "Functions 让你运行由区块链事件触发的无服务器代码。编写在交易发生时执行的 JavaScript。就像 Web3 的 AWS Lambda——无需管理服务器的计算。"
+		},
+		"5": {
+			"question": "有免费套餐吗？",
+			"answer": "QuickNode 提供请求数有限的免费套餐。适合开发和测试。生产应用通常需要付费计划。为高流量用户提供带 SLA 的企业计划。"
+		}
+	},
+	"cta": {
+		"ready": "准备使用快速区块链基础设施了吗？",
+		"button": "探索 QuickNode",
+		"note": "多链节点提供商"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Connext - Cross-Chain Transfer Protocol",
+		"description": "Connext enables trust-minimized cross-chain transfers and messaging. Bridge assets and data across chains with cryptographic security.",
+		"keywords": "Connext, cross-chain bridge, xCall, NEXT token, interoperability, trust-minimized"
+	},
+	"overview": "Connext is a trust-minimized protocol for cross-chain transfers and messaging. It focuses on security guarantees that don't rely on trusted third parties, using cryptographic proofs and optimistic verification.\n\nThe protocol uses a router network for liquidity and xCall for cross-chain messaging. Transfers are secured by the underlying chains rather than a separate validator set. This provides stronger security assumptions than many bridges.\n\nNEXT token is used for governance and to incentivize routers who provide liquidity. Connext powers bridging for various applications and is known for its focus on decentralization and security.",
+	"features": {
+		"1": {
+			"title": "Trust-Minimized",
+			"description": "Cryptographic security"
+		},
+		"2": {
+			"title": "xCall Messaging",
+			"description": "Cross-chain calls"
+		},
+		"3": {
+			"title": "Router Network",
+			"description": "Decentralized liquidity"
+		},
+		"4": {
+			"title": "NEXT Token",
+			"description": "Governance and incentives"
+		},
+		"5": {
+			"title": "Multi-Chain",
+			"description": "Growing network support"
+		},
+		"6": {
+			"title": "Developer Focus",
+			"description": "Build cross-chain dApps"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Secure Bridging",
+			"description": "Trust-minimized transfers"
+		},
+		"2": {
+			"title": "Cross-Chain dApps",
+			"description": "xCall integration"
+		},
+		"3": {
+			"title": "Router Operations",
+			"description": "Provide liquidity"
+		},
+		"4": {
+			"title": "NEXT Governance",
+			"description": "Protocol voting"
+		},
+		"5": {
+			"title": "Protocol Integration",
+			"description": "Add to your protocol"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What makes Connext trust-minimized?",
+			"answer": "Connext uses optimistic verification secured by the underlying chains. Instead of trusting a validator set, security comes from cryptographic proofs. If something goes wrong, it can be proven on-chain."
+		},
+		"2": {
+			"question": "What is xCall?",
+			"answer": "xCall is Connext's cross-chain messaging primitive. It lets smart contracts call functions on other chains. Build dApps where logic spans multiple blockchains—cross-chain governance, unified liquidity, etc."
+		},
+		"3": {
+			"question": "How do routers work?",
+			"answer": "Routers are liquidity providers who front funds on the destination chain. They stake NEXT and earn fees from transfers they facilitate. Anyone can run a router, making the network decentralized."
+		},
+		"4": {
+			"question": "What is NEXT token?",
+			"answer": "NEXT governs the Connext protocol and incentivizes routers. Stake NEXT to run a router and earn fees. Token holders vote on protocol parameters and upgrades."
+		},
+		"5": {
+			"question": "Connext vs other bridges?",
+			"answer": "Connext prioritizes trust-minimization and security over pure speed. Some bridges are faster but rely on trusted parties. Choose Connext if security assumptions matter to you."
+		}
+	},
+	"cta": {
+		"ready": "Ready for trust-minimized bridging?",
+		"button": "Use Connext",
+		"note": "Cross-chain transfer protocol"
+	}
+}

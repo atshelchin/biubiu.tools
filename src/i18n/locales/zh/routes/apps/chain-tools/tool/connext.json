@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Connext - 跨链转账协议",
+		"description": "Connext 实现信任最小化的跨链转账和消息传递。使用加密安全性在链间桥接资产和数据。",
+		"keywords": "Connext, 跨链桥, xCall, NEXT 代币, 互操作性, 信任最小化"
+	},
+	"overview": "Connext 是一个用于跨链转账和消息传递的信任最小化协议。它专注于不依赖受信任第三方的安全保证，使用加密证明和乐观验证。\n\n该协议使用路由器网络提供流动性，使用 xCall 进行跨链消息传递。转账由底层链保护，而不是独立的验证者集。这提供了比许多桥更强的安全假设。\n\nNEXT 代币用于治理和激励提供流动性的路由器。Connext 为各种应用提供桥接支持，以其对去中心化和安全性的关注而闻名。",
+	"features": {
+		"1": {
+			"title": "信任最小化",
+			"description": "加密安全"
+		},
+		"2": {
+			"title": "xCall 消息传递",
+			"description": "跨链调用"
+		},
+		"3": {
+			"title": "路由器网络",
+			"description": "去中心化流动性"
+		},
+		"4": {
+			"title": "NEXT 代币",
+			"description": "治理和激励"
+		},
+		"5": {
+			"title": "多链",
+			"description": "不断增长的网络支持"
+		},
+		"6": {
+			"title": "开发者聚焦",
+			"description": "构建跨链 dApp"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "安全桥接",
+			"description": "信任最小化转账"
+		},
+		"2": {
+			"title": "跨链 dApp",
+			"description": "xCall 集成"
+		},
+		"3": {
+			"title": "路由器运营",
+			"description": "提供流动性"
+		},
+		"4": {
+			"title": "NEXT 治理",
+			"description": "协议投票"
+		},
+		"5": {
+			"title": "协议集成",
+			"description": "添加到你的协议"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么让 Connext 信任最小化？",
+			"answer": "Connext 使用由底层链保护的乐观验证。不是信任验证者集，安全性来自加密证明。如果出了问题，可以在链上证明。"
+		},
+		"2": {
+			"question": "什么是 xCall？",
+			"answer": "xCall 是 Connext 的跨链消息传递原语。它让智能合约调用其他链上的函数。构建逻辑跨越多个区块链的 dApp——跨链治理、统一流动性等。"
+		},
+		"3": {
+			"question": "路由器如何工作？",
+			"answer": "路由器是在目标链上预付资金的流动性提供者。他们质押 NEXT 并从他们促成的转账中赚取费用。任何人都可以运行路由器，使网络去中心化。"
+		},
+		"4": {
+			"question": "NEXT 代币是什么？",
+			"answer": "NEXT 治理 Connext 协议并激励路由器。质押 NEXT 运行路由器并赚取费用。代币持有者投票决定协议参数和升级。"
+		},
+		"5": {
+			"question": "Connext vs 其他桥？",
+			"answer": "Connext 优先考虑信任最小化和安全性而非纯粹速度。一些桥更快但依赖受信任方。如果安全假设对你重要，选择 Connext。"
+		}
+	},
+	"cta": {
+		"ready": "准备信任最小化桥接了吗？",
+		"button": "使用 Connext",
+		"note": "跨链转账协议"
+	}
+}

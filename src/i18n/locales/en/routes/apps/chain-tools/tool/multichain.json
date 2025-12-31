@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Multichain - Cross-Chain Router Protocol",
+		"description": "Multichain (formerly Anyswap) provided cross-chain bridging across 90+ blockchains. Important historical context for bridge security discussions.",
+		"keywords": "Multichain, Anyswap, cross-chain bridge, MULTI token, bridge exploit, multichain bridge"
+	},
+	"overview": "Multichain (formerly Anyswap) was one of the largest cross-chain bridges, supporting 90+ blockchains at its peak. It processed billions in volume and was integrated into many DeFi protocols.\n\nIn July 2023, Multichain experienced a major incident where hundreds of millions were drained. The CEO was reportedly detained in China, and the team went silent. Operations effectively ceased, making it a cautionary tale about bridge security and centralization risks.\n\nMultichain's history is important for understanding bridge risks. It highlighted dangers of concentrated control, lack of transparency, and the importance of evaluating bridge security assumptions before using any bridging solution.",
+	"features": {
+		"1": {
+			"title": "90+ Chains",
+			"description": "Was extensive coverage"
+		},
+		"2": {
+			"title": "Router Protocol",
+			"description": "Liquidity routing"
+		},
+		"3": {
+			"title": "anyToken",
+			"description": "Wrapped asset system"
+		},
+		"4": {
+			"title": "MULTI Token",
+			"description": "Governance (defunct)"
+		},
+		"5": {
+			"title": "MPC Security",
+			"description": "Multi-party computation"
+		},
+		"6": {
+			"title": "Cautionary Tale",
+			"description": "Bridge risk example"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Historical Reference",
+			"description": "Bridge risk study"
+		},
+		"2": {
+			"title": "Security Lessons",
+			"description": "Centralization risks"
+		},
+		"3": {
+			"title": "Due Diligence",
+			"description": "Evaluate bridges carefully"
+		},
+		"4": {
+			"title": "Not Recommended",
+			"description": "Use alternatives"
+		},
+		"5": {
+			"title": "Affected Users",
+			"description": "Check claim processes"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Is Multichain still operational?",
+			"answer": "No. After the July 2023 incident, Multichain ceased operations. Do not use any Multichain bridges or hold anyTokens. Use alternative bridges like Stargate, Hop, Across, or Axelar."
+		},
+		"2": {
+			"question": "What happened to Multichain?",
+			"answer": "In July 2023, $130M+ was drained from Multichain. The CEO was reportedly detained in China. Team went silent. It's believed keys were compromised or taken. A reminder that bridge security depends on operators."
+		},
+		"3": {
+			"question": "What if I have stuck funds?",
+			"answer": "If you have stuck anyTokens or pending transactions, options are limited. Some affected chains/projects have recovery processes. Check official announcements. Unfortunately, many funds are likely lost."
+		},
+		"4": {
+			"question": "What can we learn from Multichain?",
+			"answer": "Key lessons: Evaluate bridge security models. Concentrated control is dangerous. MPC doesn't help if key holders are compromised. Diversity across bridges reduces risk. Always research before using large amounts."
+		},
+		"5": {
+			"question": "What bridges should I use instead?",
+			"answer": "Alternatives include Stargate, Hop, Across, Synapse, Celer, Axelar, LayerZero, and Wormhole. Each has different security tradeoffs. Use bridge aggregators like Socket/LI.FI to compare routes."
+		}
+	},
+	"cta": {
+		"ready": "Looking for active bridges?",
+		"button": "View Bridge Alternatives",
+		"note": "Do not use - historical reference only"
+	}
+}

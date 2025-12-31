@@ -1,0 +1,146 @@
+{
+	"title": "AI-Crypto 完全指南",
+	"subtitle": "理解人工智能与区块链的交汇点",
+
+	"sections": {
+		"intro": {
+			"title": "AI x Crypto 简介",
+			"content": "<p>AI 和区块链的融合代表着技术领域最令人兴奋的前沿之一。AI 擅长处理数据和做出智能决策,而区块链提供去中心化、透明性和经济激励。两者结合正在创造全新的范式,改变我们训练模型、部署计算资源和构建自主系统的方式。</p><p>本指南探索 AI-Crypto 生态系统——从为 AI 训练提供动力的去中心化 GPU 网络到管理加密投资组合的自主代理。你将了解 AI x Crypto 项目的主要类别,理解其背后的技术,并发现这个新兴领域的投资机会。</p>"
+		},
+		"ai_infrastructure": {
+			"title": "区块链上的 AI 基础设施",
+			"content": "<p>区块链在 AI 中最基本的应用之一是去中心化基础设施层。训练和运行 AI 模型需要大量计算资源,传统上由 AWS、Google Cloud 和 Microsoft Azure 等中心化云服务提供商控制。区块链提供了一种去中心化的替代方案,任何人都可以贡献算力并获得奖励。</p>",
+			"decentralized_compute": {
+				"title": "去中心化计算网络",
+				"content": "<p>去中心化计算网络汇聚来自世界各地的闲置计算资源,创建一个全球算力市场。开发者可以以更低的成本从个人提供商那里访问 GPU 和 CPU,而不是从亚马逊或谷歌租用。</p><p><strong>工作原理:</strong></p><ul><li>提供商质押代币并列出他们的硬件(GPU、CPU、存储)</li><li>消费者浏览可用资源并根据规格和价格租用</li><li>智能合约处理支付并确保服务交付</li><li>声誉系统防止欺诈并确保质量</li></ul><p><strong>主要项目:</strong></p><ul><li><strong>Akash Network:</strong> 通用计算的去中心化云市场(基于 Cosmos)</li><li><strong>Render Network:</strong> 专注于图形和 AI 的 GPU 渲染(Solana)</li><li><strong>io.net:</strong> 专门为 AI/ML 工作负载提供的 GPU 网络(Solana)</li></ul>"
+			},
+			"gpu_networks": {
+				"title": "AI 训练的 GPU 网络",
+				"content": "<p>训练现代 AI 模型需要巨大的 GPU 算力。单次 GPT-3 训练运行的计算成本估计为 460 万美元。去中心化 GPU 网络旨在民主化对这一关键资源的访问。</p><p><strong>为什么 GPU 对 AI 很重要:</strong></p><ul><li>并行处理:GPU 可以同时执行数千次计算</li><li>矩阵运算:对神经网络数学至关重要</li><li>成本效益:对于 AI 任务,速度可以比 CPU 快 10-100 倍</li></ul><p><strong>商业模式:</strong> GPU 所有者通过提供计算时间赚取代币。租用者支付代币以访问 GPU。网络促进匹配、验证和支付。</p><p><strong>挑战:</strong></p><ul><li>验证:如何证明计算确实发生了?</li><li>质量控制:并非所有 GPU 都是平等的</li><li>延迟:分布式网络比集中数据中心慢</li><li>安全:保护敏感的训练数据</li></ul>"
+			},
+			"ai_inference": {
+				"title": "区块链上的 AI 推理",
+				"content": "<p>虽然训练模型需要大量计算,但运行模型(推理)更加轻量级,但需要执行数十亿次。去中心化推理网络提供由区块链经济支持的 AI 模型 API。</p><p><strong>Ritual:</strong> 一个 AI 协处理器,将 AI 能力引入链上。智能合约可以调用 AI 模型并获得可验证的结果。用例包括链上信用评分、欺诈检测和自动交易。</p><p><strong>Hyperbolic:</strong> 用于在流行模型上运行推理的去中心化 API。类似于 OpenAI 的 API,但由分布式 GPU 提供商提供支持。</p><p><strong>愿景:</strong> 就像 Chainlink 通过预言机将现实世界数据引入链上一样,这些项目将 AI 能力引入链上。想象一下智能合约可以使用机器学习分析图像、处理语言或进行预测。</p>"
+			}
+		},
+		"ai_agents": {
+			"title": "AI 代理和自主系统",
+			"content": "<p>AI 代理是能够感知环境、做出决策并采取行动以实现目标的自主程序。与区块链结合后,这些代理可以拥有加密钱包、执行交易并与 DeFi 协议交互——所有这些都无需人工干预。</p>",
+			"autonomous_agents": {
+				"title": "自主 AI 代理",
+				"content": "<p>2024-2025 年,加密行业见证了 AI 代理的爆炸式增长。这些代理从简单的交易机器人到管理整个协议的复杂自主实体。</p><p><strong>什么使 AI 代理自主?</strong></p><ul><li>拥有自己的钱包并控制私钥</li><li>根据编程目标和市场条件做出决策</li><li>可以在没有人工批准的情况下执行交易</li><li>随着时间的推移学习和适应(在高级实现中)</li></ul><p><strong>著名项目:</strong></p><ul><li><strong>ai16z (Eliza):</strong> 用于构建 AI 代理的开源框架。由 @shawmakesmagic 创建,它成为最受欢迎的代理框架之一。ai16z 代币本身代表代理基础设施的所有权。</li><li><strong>Virtuals Protocol:</strong> 用于创建和部署 AI 代理的平台,特别是用于游戏和虚拟世界。代理可以有个性、记忆和目标。</li><li><strong>Autonolas:</strong> 用于构建自主服务的框架——协调实现复杂目标的多代理系统。</li></ul><p><strong>真实案例:</strong> Truth Terminal,一个在 X (Twitter) 上的 AI 代理,因自主推广 GOAT 模因币而闻名。它展示了 AI 代理如何产生文化影响并产生真实的经济价值。</p>"
+			},
+			"ai_daos": {
+				"title": "AI 驱动的 DAO",
+				"content": "<p>DAO(去中心化自治组织)通常需要人类对提案进行投票。但如果 AI 可以参与治理呢? AI DAO 将机器智能与去中心化决策相结合。</p><p><strong>潜在用例:</strong></p><ul><li><strong>自动化财库管理:</strong> AI 分析市场状况并提出最佳分配策略</li><li><strong>智能提案筛选:</strong> AI 在人工投票前过滤垃圾邮件并评估提案质量</li><li><strong>预测性治理:</strong> AI 预测不同治理决策的结果</li><li><strong>执行代理:</strong> AI 自动执行批准的决策</li></ul><p><strong>风险:</strong> AI 偏见可能影响治理。如果 AI 有投票权,它能否被操纵?如果 AI 做出灾难性决策会怎样?</p><p><strong>探索这一领域的项目:</strong> Fetch.ai 构建可以参与市场和治理的自主经济代理。Autonolas 支持多代理协调以完成复杂任务。</p>"
+			},
+			"agent_frameworks": {
+				"title": "代理开发框架",
+				"content": "<p>从头开始构建 AI 代理很复杂。框架提供基础设施、工具和标准,使代理开发变得容易。</p><p><strong>Eliza (by ai16z):</strong></p><ul><li>开源 TypeScript 框架</li><li>支持多个平台(Discord、Twitter、Telegram)</li><li>内置钱包集成</li><li>记忆和个性系统</li><li>用于扩展功能的插件架构</li></ul><p><strong>Theoriq:</strong> 用于创建代理集合的平台——协同工作的专业代理组。把它想象成一个协调任务的 AI 专家团队。</p><p><strong>为什么框架很重要:</strong> 就像 Rails 使 Web 开发变得容易,React 革新了前端开发一样,代理框架将使 AI 代理创建民主化。我们正处于早期阶段——预计会有快速创新。</p>"
+			}
+		},
+		"data_marketplace": {
+			"title": "数据市场和代币化",
+			"content": "<p>AI 模型的好坏取决于其训练数据。区块链为数据所有权、共享和货币化提供了新模式。个人和组织可以将数据代币化并出售访问权,而不是科技巨头囤积数据。</p>",
+			"data_tokenization": {
+				"title": "数据资产代币化",
+				"content": "<p>数据代币化意味着将数据权利表示为区块链代币。这使得:</p><ul><li><strong>所有权:</strong> 加密证明谁拥有什么数据</li><li><strong>货币化:</strong> 在不失去所有权的情况下出售数据访问权</li><li><strong>可组合性:</strong> 跨组织组合数据集</li><li><strong>透明度:</strong> 跟踪数据使用和来源</li></ul><p><strong>Ocean Protocol:</strong> 领先的数据市场,用户可以在其中发布、发现和消费数据资产。数据被代币化为数据代币,授予访问权。科学家可以发布医疗数据集,研究人员付费访问,原始科学家赚取收入。</p><p><strong>Vana:</strong> 专注于个人数据所有权。用户可以将他们的数据(社交媒体、浏览历史等)汇集到数据 DAO 中,然后将访问权出售给 AI 公司进行训练。不是 Facebook 拥有你的数据,而是你拥有——当它被使用时你会赚钱。</p><p><strong>真实案例:</strong> 医院可以将匿名患者数据代币化。AI 研究人员购买访问权以训练医疗诊断模型。医院赚取收入,研究人员获得数据,通过加密保护患者隐私。</p>"
+			},
+			"data_privacy": {
+				"title": "隐私保护 AI",
+				"content": "<p>共享数据是有风险的——即使是加密数据也有可能被解密。隐私保护技术让 AI 模型可以在数据上训练而无需查看原始数据本身。</p><p><strong>关键技术:</strong></p><ul><li><strong>联邦学习:</strong> 模型在分布式数据上训练而不集中数据。你手机的键盘学习你的打字模式而不会将你的消息发送到服务器。</li><li><strong>同态加密:</strong> 对加密数据执行计算。结果也是加密的,但解密后是正确的答案。</li><li><strong>安全多方计算 (MPC):</strong> 多方共同计算一个函数,同时保持输入私密。</li><li><strong>可信执行环境 (TEE):</strong> 硬件隔离的计算区域,即使基础设施提供商也看不到数据。</li></ul><p><strong>Phala Network:</strong> 使用 TEE 提供机密计算。AI 模型可以在敏感数据(财务记录、健康数据)上运行,而不会将数据暴露给任何人。</p><p><strong>Nillion:</strong> 使用 MPC 构建隐私保护计算基础设施。多方可以一起训练 AI,而不会泄露各自的数据集。</p>"
+			}
+		},
+		"ai_models": {
+			"title": "去中心化 AI 模型训练和部署",
+			"content": "<p>训练最先进的 AI 模型需要数百万美元,并且需要只有科技巨头才能负担得起的资源。去中心化 AI 旨在使模型训练民主化,允许集体所有权和协作。</p>",
+			"decentralized_training": {
+				"title": "分布式模型训练",
+				"content": "<p>不是一家公司在其服务器上训练模型,而是想象世界各地数千名参与者共同贡献算力来训练模型。</p><p><strong>Bittensor (TAO):</strong> 旗舰去中心化 AI 网络。它是一个网络的网络,不同的子网专门从事不同的 AI 任务(文本生成、图像识别、预测等)。矿工竞争构建最好的模型,验证者对其性能进行评分。高性能的矿工赚取 TAO 代币。</p><p><strong>Bittensor 的工作原理:</strong></p><ol><li>矿工构建/微调 AI 模型</li><li>验证者测试模型并对性能评分</li><li>高分 = 更多 TAO 奖励</li><li>任何人都可以查询网络以访问最好的模型</li></ol><p><strong>为什么它很重要:</strong> Bittensor 创建市场驱动的 AI 开发。最好的模型获胜,无论谁构建它们。它是无需许可的——任何人都可以贡献。</p><p><strong>Gensyn:</strong> 专注于可验证的深度学习计算。使用证明系统来验证训练是否正确进行,从而实现无需信任的分布式训练。</p><p><strong>FLock.io:</strong> 实施联邦学习,参与者在本地数据上训练,只共享模型更新,从而保护隐私。</p>"
+			},
+			"model_marketplace": {
+				"title": "AI 模型市场",
+				"content": "<p>就像 Uniswap 创建了无需许可的代币交换一样,AI 模型市场创建了对 AI 服务的无需许可访问。</p><p><strong>SingularityNET (AGIX):</strong> 最早的 AI 市场之一。开发者发布 AI 服务(图像识别、翻译、预测模型),用户付费使用。所有这些都通过智能合约协调。</p><p><strong>Together AI:</strong> 虽然更加中心化,但它提供对开源模型的 API 访问。用户为推理付费。随着它去中心化,它可能成为链上 AI 服务如何工作的模型。</p><p><strong>商业模式:</strong></p><ul><li>模型创建者质押代币以列出他们的模型</li><li>用户付费运行推理</li><li>支付在模型创建者和计算提供者之间分配</li><li>质量评级防止低质量模型占主导地位</li></ul>"
+			},
+			"zkml": {
+				"title": "零知识机器学习 (ZKML)",
+				"content": "<p>如何在不泄露模型或输入数据的情况下证明 AI 做出了特定预测?零知识证明实现了 AI 计算的加密验证。</p><p><strong>为什么 ZKML 很重要:</strong></p><ul><li><strong>可验证的 AI:</strong> 在不泄露模型权重的情况下证明模型做出了预测</li><li><strong>隐私:</strong> 在敏感数据上运行 AI 而不暴露数据</li><li><strong>链上 AI:</strong> 在智能合约中执行 AI 逻辑并提供加密保证</li><li><strong>知识产权保护:</strong> 使用 AI 模型而不泄露专有训练数据</li></ul><p><strong>主要项目:</strong></p><ul><li><strong>Modulus Labs:</strong> 构建 ZKML 基础设施。他们的系统可以证明神经网络为给定输入产生了特定输出,所有这些都是加密的。</li><li><strong>EZKL:</strong> 用于生成 ML 模型执行的 ZK 证明的库。开发者可以用几行代码创建可验证的 AI 推理。</li><li><strong>Giza:</strong> StarkNet 上的 ZKML 平台。支持具有可证明决策的 AI 代理。</li></ul><p><strong>真实用例:</strong> 链上信用评分。智能合约需要评估某人的信用度。使用 ZKML,用户可以证明他们的信用评分符合要求,而不泄露他们的财务历史。</p>"
+			}
+		},
+		"ai_tools_for_crypto": {
+			"title": "面向加密用户的 AI 工具",
+			"content": "<p>除了区块链为 AI 提供动力之外,AI 也在彻底改变我们与加密货币的交互方式。从交易机器人到安全分析,AI 工具正成为加密用户的必需品。</p>",
+			"trading_bots": {
+				"title": "AI 交易机器人和预测",
+				"content": "<p>加密市场永不休眠,价格波动在毫秒内发生。AI 交易机器人分析大量数据并以比人类更快的速度执行策略。</p><p><strong>AI 交易类型:</strong></p><ul><li><strong>算法交易:</strong> 基于规则的策略(套利、做市)</li><li><strong>情绪分析:</strong> AI 分析社交媒体、新闻和论坛以衡量市场情绪</li><li><strong>模式识别:</strong> 机器学习识别图表模式和相关性</li><li><strong>预测建模:</strong> AI 根据历史数据预测价格走势</li></ul><p><strong>Numerai:</strong> 一个独特的数据科学锦标赛对冲基金。数据科学家构建预测模型,在他们的预测上质押加密货币,并因准确的模型获得奖励。最好的模型被组合起来管理一个真实的对冲基金。</p><p><strong>Spectral:</strong> 使用 AI 进行链上信用评分和风险评估。机器学习模型分析钱包历史以预测贷款偿还的可能性。</p><p><strong>现实检验:</strong> 大多数零售 AI 交易机器人表现不佳或亏损。市场是对抗性的——当许多机器人使用类似策略时,它们会竞争掉利润。拥有更好数据、更快基础设施和更复杂模型的专业公司占主导地位。</p>"
+			},
+			"analytics": {
+				"title": "AI 驱动的分析",
+				"content": "<p>加密生态系统产生大量数据——每笔交易、钱包交互和协议变更都记录在链上。AI 帮助理解这些数据。</p><p><strong>用例:</strong></p><ul><li><strong>鲸鱼监测:</strong> AI 识别大持有者并跟踪他们的动向</li><li><strong>聪明钱跟踪:</strong> 发现并复制成功交易者的策略</li><li><strong>异常检测:</strong> 识别可能表明黑客或漏洞利用的异常模式</li><li><strong>网络分析:</strong> 映射钱包和协议之间的关系</li><li><strong>趋势预测:</strong> 识别新兴叙事和代币类别</li></ul><p><strong>DeFiLlama AI:</strong> 虽然主要是 TVL 跟踪器,但 DeFiLlama 正在整合 AI 驱动的见解,帮助用户发现趋势和机会。</p><p><strong>Cookie.fun:</strong> 跟踪 AI 代理活动的分析平台。随着代理变得更加普遍,理解它们的行为变得至关重要。</p>"
+			},
+			"security": {
+				"title": "AI 用于安全和审计",
+				"content": "<p>智能合约漏洞每年造成数十亿美元的损失。AI 可以帮助在漏洞被利用之前识别错误和漏洞。</p><p><strong>AI 如何提高安全性:</strong></p><ul><li><strong>漏洞检测:</strong> 在过去的漏洞利用上训练的 AI 可以在新代码中发现类似的模式</li><li><strong>形式化验证:</strong> 自动证明代码符合规范</li><li><strong>异常检测:</strong> 标记可能是漏洞利用的异常交易</li><li><strong>蜜罐检测:</strong> 在用户损失资金之前识别诈骗代币</li></ul><p><strong>挑战:</strong> AI 安全工具会产生误报。它们可以捕获已知模式,但在处理新型攻击向量时会遇到困难。人工审计师仍然至关重要——AI 增强但不能取代他们。</p><p><strong>未来:</strong> 想象一下 AI 代理持续监控协议,自动暂停可疑交易,甚至即时修复漏洞。我们还没有到那一步,但这是我们前进的方向。</p>"
+			}
+		},
+		"investment_considerations": {
+			"title": "投资 AI-Crypto",
+			"content": "<p>AI x Crypto 代表着重大的投资机会,但也存在独特的风险。以下是如何评估项目和管理这个新兴领域风险的方法。</p>",
+			"token_economics": {
+				"title": "理解 AI 代币经济学",
+				"content": "<p>AI-Crypto 代币根据项目类型服务于不同的目的:</p><p><strong>计算代币 (Render, io.net, Akash):</strong></p><ul><li>提供商通过提供算力赚取代币</li><li>消费者支付代币以租用资源</li><li>代币价值与算力需求 vs. 供应挂钩</li><li>风险:与中心化提供商(AWS 等)竞争</li></ul><p><strong>网络代币 (Bittensor, Fetch.ai):</strong></p><ul><li>矿工通过为网络做贡献赚取代币</li><li>用户付费访问网络服务</li><li>质押以进行验证和治理</li><li>如果网络成为基础设施,价值就会累积</li></ul><p><strong>治理代币 (许多 DAO):</strong></p><ul><li>对协议参数和升级进行投票</li><li>可能从协议费用中获得收入分成</li><li>价值取决于协议成功和治理重要性</li></ul><p><strong>估值框架:</strong></p><ol><li><strong>实用性:</strong> 代币是否真的需要,还是只是一个筹款工具?</li><li><strong>需求驱动因素:</strong> 什么创造了对代币的需求?</li><li><strong>供应动态:</strong> 通胀率、发行计划、代币解锁</li><li><strong>竞争护城河:</strong> 什么阻止有人分叉项目?</li><li><strong>团队和执行:</strong> 团队能否真正构建他们承诺的东西?</li></ol>"
+			},
+			"risks": {
+				"title": "风险和挑战",
+				"content": "<p><strong>技术风险:</strong></p><ul><li><strong>中心化:</strong> 许多去中心化 AI 项目实际上相当中心化</li><li><strong>性能:</strong> 去中心化系统通常比中心化替代方案更慢、更昂贵</li><li><strong>安全:</strong> 处理 AI 逻辑的智能合约可能有独特的漏洞</li><li><strong>监管:</strong> AI 监管正在演变;可能影响加密 AI 项目</li></ul><p><strong>市场风险:</strong></p><ul><li><strong>炒作周期:</strong> AI x Crypto 吸引大量投机;许多项目被高估</li><li><strong>竞争:</strong> OpenAI、Google 和其他巨头在 AI 方面具有巨大优势</li><li><strong>代币解锁:</strong> 许多项目有大量代币供应解锁,可能导致价格崩盘</li><li><strong>用例验证:</strong> 去中心化 AI 解决方案是否真的比中心化解决方案提供价值?</li></ul><p><strong>尽职调查清单:</strong></p><ul><li>项目是否真正使用区块链,还是只是为了筹款而使用加密货币?</li><li>去中心化是否提供真正的好处,还是只是增加复杂性?</li><li>竞争对手(加密和非加密)是谁?</li><li>当前使用情况 vs. 承诺的未来使用情况是什么?</li><li>决策和代币分配有多中心化?</li><li>是否有重大的代币解锁即将到来?</li></ul>"
+			},
+			"opportunities": {
+				"title": "投资机会",
+				"content": "<p><strong>高信念主题:</strong></p><p><strong>1. 去中心化计算基础设施</strong></p><ul><li>论点:AI 计算需求呈指数增长;去中心化网络可以通过更便宜来获得市场份额</li><li>项目:Render, io.net, Akash, Aethir</li><li>风险:需要证明它们可以在定价和性能上与 AWS/Google 竞争</li></ul><p><strong>2. AI 代理平台</strong></p><ul><li>论点:随着 AI 代理激增,构建/部署它们的基础设施变得有价值</li><li>项目:ai16z, Virtuals Protocol, Autonolas</li><li>风险:代理开发仍处于早期阶段;不清楚哪个平台会获胜</li></ul><p><strong>3. 去中心化 AI 网络</strong></p><ul><li>论点:如果去中心化训练/部署模型成为标准,网络代币就会捕获价值</li><li>项目:Bittensor, Ritual, Gensyn</li><li>风险:需要证明去中心化模型可以匹配中心化质量</li></ul><p><strong>4. 数据所有权和市场</strong></p><ul><li>论点:个人和组织将希望将他们的数据货币化而不是免费提供</li><li>项目:Ocean Protocol, Vana, Grass</li><li>风险:关于数据权利和隐私的监管不确定性</li></ul><p><strong>投资组合方法:</strong></p><ul><li>70%:具有实际使用的成熟项目(Bittensor, Render)</li><li>20%:具有强大团队和技术的新兴项目(Ritual, ai16z)</li><li>10%:投机性/实验性(新代理平台、ZKML 项目)</li></ul><p><strong>不要投资超过你能承受的损失。</strong> AI-Crypto 是极高风险、高回报的。许多项目将失败。多元化和头寸规模至关重要。</p>"
+			}
+		}
+	},
+
+	"glossary": {
+		"decentralized_compute": {
+			"term": "去中心化计算",
+			"definition": "通过区块链聚合的分布式计算资源(CPU、GPU、存储)网络。提供商通过贡献资源赚取代币;消费者付费使用。"
+		},
+		"gpu_network": {
+			"term": "GPU 网络",
+			"definition": "基于区块链的 GPU 算力市场。对 AI 训练和推理至关重要。提供商列出他们的 GPU,用户租用,智能合约处理验证和支付。"
+		},
+		"ai_agent": {
+			"term": "AI 代理",
+			"definition": "能够感知环境、做出决策并采取行动的自主程序。在加密领域,代理通常控制钱包并独立与 DeFi 协议交互。"
+		},
+		"data_marketplace": {
+			"term": "数据市场",
+			"definition": "数据所有者可以将其数据代币化并出售访问权的平台。通过区块链和加密实现数据货币化,同时保持所有权和隐私。"
+		},
+		"model_training": {
+			"term": "模型训练",
+			"definition": "通过将 AI 模型暴露于大型数据集来教导它的过程。去中心化训练将此过程分布到许多贡献算力并赚取代币的参与者。"
+		},
+		"inference": {
+			"term": "推理",
+			"definition": "运行训练好的 AI 模型以进行预测或生成输出。比训练更轻量级,但会发生数十亿次,使去中心化推理网络变得有价值。"
+		},
+		"tokenized_compute": {
+			"term": "代币化计算",
+			"definition": "将计算资源(CPU、GPU、存储)表示为区块链代币。实现无需许可的市场,任何人都可以买卖算力。"
+		},
+		"ai_dao": {
+			"term": "AI DAO",
+			"definition": "使用 AI 进行决策、治理或执行的去中心化自治组织。AI 可以分析提案、预测结果,甚至参与投票。"
+		},
+		"vector_database": {
+			"term": "向量数据库",
+			"definition": "用于存储和查询 AI 中使用的高维向量(嵌入)的专用数据库。对于语义搜索、推荐系统和 RAG(检索增强生成)至关重要。"
+		},
+		"llm": {
+			"term": "LLM(大型语言模型)",
+			"definition": "在大量文本数据集上训练以理解和生成人类语言的 AI 模型。示例:GPT-4、Claude。加密项目正在努力使 LLM 训练和推理去中心化。"
+		}
+	}
+}

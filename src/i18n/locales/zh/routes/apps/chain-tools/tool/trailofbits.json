@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Trail of Bits - 安全研究与审计",
+		"description": "Trail of Bits 是领先的安全研究公司。智能合约审计、Slither 和 Echidna 等安全工具，以及前沿区块链安全研究。",
+		"keywords": "Trail of Bits, 安全审计, Slither, Echidna, 智能合约安全, 区块链安全"
+	},
+	"overview": "Trail of Bits 是区块链领域最受尊敬的安全研究公司之一。他们审计过主要协议，包括以太坊 2.0、Compound、MakerDAO 等数百个项目。\n\n除了审计，Trail of Bits 还创建了必不可少的开源安全工具。Slither 是 Solidity 的首选静态分析器。Echidna 提供基于属性的模糊测试。Manticore 进行符号执行。这些工具被全球开发者使用。\n\n他们的研究推动整个行业发展。Trail of Bits 发布详细的安全分析，开发新的测试方法，并培训安全研究人员。他们是区块链安全的基石。",
+	"features": {
+		"1": {
+			"title": "安全审计",
+			"description": "专家代码审查"
+		},
+		"2": {
+			"title": "Slither",
+			"description": "静态分析器"
+		},
+		"3": {
+			"title": "Echidna",
+			"description": "基于属性的模糊器"
+		},
+		"4": {
+			"title": "研究",
+			"description": "前沿安全"
+		},
+		"5": {
+			"title": "培训",
+			"description": "安全教育"
+		},
+		"6": {
+			"title": "开源",
+			"description": "所有人免费使用"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "协议审计",
+			"description": "上线前安全"
+		},
+		"2": {
+			"title": "工具使用",
+			"description": "CI/CD 中的 Slither"
+		},
+		"3": {
+			"title": "模糊测试",
+			"description": "Echidna 测试"
+		},
+		"4": {
+			"title": "研究",
+			"description": "从发表物学习"
+		},
+		"5": {
+			"title": "培训",
+			"description": "安全训练营"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Trail of Bits 以什么闻名？",
+			"answer": "Trail of Bits 以高质量安全审计、开源工具（Slither、Echidna、Manticore）和安全研究闻名。他们审计过主要协议，他们的工具是行业标准。"
+		},
+		"2": {
+			"question": "审计费用是多少？",
+			"answer": "Trail of Bits 审计定价高端，全面审查通常 20 万美元以上。他们对项目很挑剔。对于早期项目，先使用他们的免费工具，考虑其他审计师。"
+		},
+		"3": {
+			"question": "什么是 Slither？",
+			"answer": "Slither 是 Solidity 的静态分析工具。它检测漏洞、代码质量问题并生成报告。在任何 Solidity 项目上运行它——免费且能在部署前捕获常见错误。"
+		},
+		"4": {
+			"question": "什么是 Echidna？",
+			"answer": "Echidna 是智能合约的基于属性的模糊器。你定义应该始终成立的属性；Echidna 尝试用随机输入打破它们。它能发现手动测试遗漏的边缘情况。"
+		},
+		"5": {
+			"question": "我可以免费使用他们的工具吗？",
+			"answer": "是的。Slither、Echidna、Manticore 和其他 Trail of Bits 工具都是开源的。在你的开发工作流中使用它们。它们对任何严肃的智能合约开发都是必不可少的。"
+		}
+	},
+	"cta": {
+		"ready": "准备获得世界级安全了吗？",
+		"button": "探索 Trail of Bits",
+		"note": "安全研究领导者"
+	}
+}

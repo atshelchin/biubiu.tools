@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Slither - 智能合约静态分析器",
+		"description": "Slither是Trail of Bits开发的静态分析框架，用于检测Solidity智能合约中的漏洞和代码问题。",
+		"keywords": "Slither, 静态分析, Solidity, 智能合约安全, 漏洞检测, Trail of Bits"
+	},
+	"overview": "Slither是最广泛使用的智能合约静态分析工具。由Trail of Bits构建，它能在几秒钟内扫描Solidity代码，查找常见漏洞、代码优化机会和最佳实践违规。\n\nSlither包含90多个内置检测器，涵盖重入攻击、未检查的外部调用、危险的委托调用等问题。它可以在本地运行，集成到CI/CD流水线中，或在推送代码前作为预提交钩子使用。\n\n该工具免费开源，是Solidity开发者的必备工具。即使是专业审计师也将Slither作为初始代码审查的一部分。它能发现人工可能遗漏的问题。",
+	"features": {
+		"1": {
+			"title": "90+检测器",
+			"description": "全面的漏洞检测"
+		},
+		"2": {
+			"title": "快速分析",
+			"description": "秒级扫描"
+		},
+		"3": {
+			"title": "CI/CD集成",
+			"description": "自动化检查"
+		},
+		"4": {
+			"title": "开源",
+			"description": "免费使用"
+		},
+		"5": {
+			"title": "自定义检测器",
+			"description": "扩展功能"
+		},
+		"6": {
+			"title": "打印器",
+			"description": "代码信息提取"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "开发审查",
+			"description": "代码质量检查"
+		},
+		"2": {
+			"title": "审计准备",
+			"description": "自动化预审"
+		},
+		"3": {
+			"title": "CI/CD",
+			"description": "持续安全检测"
+		},
+		"4": {
+			"title": "学习",
+			"description": "理解漏洞模式"
+		},
+		"5": {
+			"title": "代码优化",
+			"description": "Gas和效率改进"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Slither是什么？",
+			"answer": "Slither是Solidity代码的静态分析器。它读取你的智能合约并自动检查常见漏洞——重入攻击、访问控制问题、危险模式等。把它想象成Solidity的代码检查器。"
+		},
+		"2": {
+			"question": "如何运行Slither？",
+			"answer": "通过pip安装：pip install slither-analyzer。然后运行slither .即可分析你的项目。它适用于Hardhat、Foundry和原始Solidity文件。几秒钟内输出结果。"
+		},
+		"3": {
+			"question": "Slither能检测哪些问题？",
+			"answer": "包括重入攻击、未检查的外部调用、危险的委托调用、整数溢出模式、访问控制问题等。90多个检测器涵盖大多数常见漏洞。"
+		},
+		"4": {
+			"question": "我还需要人工审计吗？",
+			"answer": "是的。Slither能捕获常见模式，但无法理解业务逻辑、复杂的跨合约交互或新颖的攻击向量。最佳实践是Slither用于自动化检查+人工审计用于深度审查。"
+		},
+		"5": {
+			"question": "Slither免费吗？",
+			"answer": "完全免费开源。由Trail of Bits维护。用于任何项目都没有限制。这是Web3安全最重要的公共产品之一。"
+		}
+	},
+	"cta": {
+		"ready": "准备好分析你的合约了吗？",
+		"button": "安装Slither",
+		"note": "免费静态分析"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "RAILGUN - DeFi 隐私系统",
+		"description": "RAILGUN 通过屏蔽地址和零知识证明为 DeFi 交易带来隐私。私密交换、借贷和转账。",
+		"keywords": "RAILGUN, DeFi 隐私, 零知识, 屏蔽交易, RAIL 代币, 隐私钱包"
+	},
+	"overview": "RAILGUN 为 DeFi 交易带来完整隐私。它不是使用可见的钱包地址，而是让你用屏蔽地址进行交换、借贷和转账——除了你之外没人知道你的余额或活动。\n\n系统使用零知识证明验证交易而不透露发送者、接收者或金额。你的资产进入 RAILGUN 智能合约，成为更大隐私集的一部分。\n\nRAIL 代币用于治理和质押。RAILGUN 与主要 DeFi 协议集成——私密使用 Uniswap、Aave 等。它是以太坊及其他链上金融隐私的关键基础设施。",
+	"features": {
+		"1": {
+			"title": "屏蔽地址",
+			"description": "私密余额"
+		},
+		"2": {
+			"title": "零知识证明",
+			"description": "验证不透露"
+		},
+		"3": {
+			"title": "DeFi 集成",
+			"description": "私密使用协议"
+		},
+		"4": {
+			"title": "多链",
+			"description": "ETH、Polygon 等"
+		},
+		"5": {
+			"title": "RAIL 代币",
+			"description": "治理和质押"
+		},
+		"6": {
+			"title": "隐私集",
+			"description": "匿名保证"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "私密转账",
+			"description": "隐藏发送者/接收者"
+		},
+		"2": {
+			"title": "私密 DeFi",
+			"description": "保密使用协议"
+		},
+		"3": {
+			"title": "投资组合隐私",
+			"description": "隐藏你的持仓"
+		},
+		"4": {
+			"title": "薪资支付",
+			"description": "私密工资单"
+		},
+		"5": {
+			"title": "交易隐私",
+			"description": "隐藏策略"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "RAILGUN 如何提供隐私？",
+			"answer": "资产存入 RAILGUN 智能合约后变成'屏蔽'状态。然后你可以用零知识证明进行转账或与 DeFi 交互，证明你有足够资金但不透露你是谁或具体金额。"
+		},
+		"2": {
+			"question": "RAILGUN 和 Tornado Cash 有什么区别？",
+			"answer": "Tornado Cash 是一个混币器——存入提取固定金额。RAILGUN 是一个带余额的私密钱包——用屏蔽资产进行交换、借贷和持有。它是完整的私密 DeFi，不只是混币。"
+		},
+		"3": {
+			"question": "哪些协议与 RAILGUN 集成？",
+			"answer": "RAILGUN 与主要 DEX（Uniswap、SushiSwap）和借贷协议集成。列表不断增长。你可以从 RAILGUN 钱包私密地与这些协议交互。"
+		},
+		"4": {
+			"question": "屏蔽和取消屏蔽怎么工作？",
+			"answer": "屏蔽：存入代币到 RAILGUN 合约，获得屏蔽代币。取消屏蔽：将屏蔽代币提取到常规地址。越多人屏蔽，隐私集越大，匿名性越好。"
+		},
+		"5": {
+			"question": "RAIL 代币有什么用？",
+			"answer": "RAIL 治理 RAILGUN DAO。质押者帮助保护协议并获得收益。它激励长期一致性和治理参与。"
+		}
+	},
+	"cta": {
+		"ready": "准备私密使用 DeFi 了吗？",
+		"button": "探索 RAILGUN",
+		"note": "DeFi 隐私层"
+	}
+}

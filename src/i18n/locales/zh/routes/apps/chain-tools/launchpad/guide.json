@@ -1,0 +1,182 @@
+{
+	"title": "Launchpad 完整指南",
+	"subtitle": "从 IDO 到公平发射机制,掌握代币发射全流程",
+
+	"sections": {
+		"intro": {
+			"title": "代币发射简介",
+			"content": "<p>代币发射是新加密项目进入市场并向早期支持者分发代币的方式。与需要监管批准且仅限于合格投资者的传统 IPO 不同,加密代币发射全球可访问,且有多种形式——从中心化的 IDO 到完全无需许可的公平发射。</p><p>在这份综合指南中,您将了解不同的发射机制、如何安全参与,以及最重要的——如何评估项目以避免诈骗和跑路。我们将涵盖成功发射的真实案例、检视代币经济学结构,并提供尽职调查框架。</p>"
+		},
+		"launch_types": {
+			"title": "代币发射类型",
+			"content": "<p>了解不同的发射机制对于参与和风险评估至关重要。每种类型都有独特的特征、优势和风险。</p>",
+			"ico_history": {
+				"title": "ICO:最初的代币销售",
+				"content": "<p><strong>首次代币发行(ICO)</strong>主导了 2017 年的牛市。项目发布白皮书,直接接受 ETH 到合约地址以换取代币。</p><p><strong>2017 ICO 热潮:</strong>以太坊在 2014 年的 ICO 中筹集了 1800 万美元。到 2017 年,项目筹集数亿美元。EOS 在为期一年的 ICO 中筹集了 41 亿美元。市场基本不受监管,任何人都可以参与。</p><p><strong>ICO 衰落的原因:</strong></p><ul><li>监管打击(SEC 将许多归类为证券)</li><li>诈骗率极高(估计 80%+ 的 ICO 是诈骗或失败)</li><li>没有价格发现机制——代币上市后通常立即暴跌</li><li>缺乏审查——任何人都可以在没有监督的情况下发射</li></ul><p>今天,传统的 ICO 已经很少见,被更复杂的机制所取代,这些机制具有更好的价格发现和审查。</p>"
+			},
+			"ido": {
+				"title": "IDO:去中心化发射",
+				"content": "<p><strong>首次 DEX 发行(IDO)</strong>直接在去中心化交易所发射代币,提供即时流动性和交易。与 ICO 需要等待数周或数月才能上市不同,IDO 代币可以立即交易。</p><p><strong>IDO 运作方式:</strong></p><ol><li>项目与发射平台合作</li><li>发射平台审查项目(尽职调查、智能合约审计)</li><li>用户质押发射平台的原生代币以参与</li><li>分配基于等级(质押多少)和/或抽奖</li><li>代币直接发射到 DEX 流动性池</li></ol><p><strong>优势:</strong></p><ul><li>即时流动性和价格发现</li><li>发射平台进行一定程度的审查</li><li>透明的链上过程</li><li>全球可访问性(某些 KYC 例外)</li></ul><p><strong>劣势:</strong></p><ul><li>竞争激烈——热门发射在几秒钟内售罄</li><li>必须持有发射平台代币(机会成本)</li><li>尽管有审查,仍存在显著的诈骗风险</li><li>如果代币经济学不佳,价格可能大幅下跌</li></ul>"
+			},
+			"ieo": {
+				"title": "IEO:交易所支持的发射",
+				"content": "<p><strong>首次交易所发行(IEO)</strong>是在中心化交易所(如币安 Launchpad)上进行的代币销售,交易所提供审查、营销和即时上市。</p><p><strong>IEO 运作方式:</strong></p><ol><li>交易所审查并选择项目</li><li>用户使用交易所的原生代币购买代币(例如币安的 BNB)</li><li>分配基于持有量或抽奖系统</li><li>代币立即在交易所上市</li></ol><p><strong>历史表现:</strong>早期币安 Launchpad 项目获得了非凡的回报——Matic(Polygon)在几周内涨了 10 倍,Elrond 涨了 20 倍。然而,随着竞争加剧,后来的发射变得不那么有利可图。</p><p><strong>优点:</strong></p><ul><li>最强的审查(交易所押注声誉)</li><li>保证在主要交易所上市</li><li>高度营销曝光</li></ul><p><strong>缺点:</strong></p><ul><li>竞争极其激烈(数百万人竞争分配)</li><li>必须持有交易所代币</li><li>中心化流程(可能排除某些国家)</li><li>回报随时间递减</li></ul>"
+			},
+			"fair_launch": {
+				"title": "公平发射:无预售,平等访问",
+				"content": "<p><strong>公平发射</strong>没有预售,发射时没有团队分配,没有特权早期访问。每个人都可以从第一天以相同价格参与。</p><p><strong>理念:</strong>公平发射作为对 ICO/IDO 诈骗的反应而出现,在这些诈骗中,团队向散户买家倾倒大量预分配代币。在公平发射中,即使是团队也必须像其他人一样购买或赚取代币。</p><p><strong>常见的公平发射机制:</strong></p><ul><li><strong>联合曲线(Pump.fun):</strong>价格随着更多代币被购买而算法性增加。早期买家获得更好的价格,但没有预售锁定</li><li><strong>流动性引导池(Fjord):</strong>从高价开始逐渐降低,阻止机器人和巨鲸</li><li><strong>纯公平发射:</strong>所有代币同时进入 DEX 池,无归属</li></ul><p><strong>示例:Yearn Finance(YFI)</strong>于 2020 年 7 月公平发射,无预售,无团队分配,无 VC 投资者。所有 30,000 个代币分发给流动性提供者。几周内,YFI 从 0 美元涨到 40,000 美元。创始人只保留了他个人挖矿的部分。</p><p><strong>风险:</strong></p><ul><li>没有归属意味着团队可以随时出售</li><li>如果设计不当,容易受到狙击机器人的攻击</li><li>巨鲸可以主导供应</li><li>仍然不能保证合法性或成功</li></ul>"
+			},
+			"lbp": {
+				"title": "LBP:流动性引导池",
+				"content": "<p><strong>流动性引导池</strong>是一种公平发射机制,最初由 Balancer 创建,现在主要通过 Fjord Foundry 提供。与传统发射相比,它们提供了卓越的价格发现。</p><p><strong>LBP 运作方式:</strong></p><ol><li>池以高代币权重开始(例如 95% 项目代币,5% USDC)</li><li>初始价格非常高(设计为不具吸引力)</li><li>权重逐渐转移(例如在 3 天内转移到 50/50)</li><li>除非有购买压力,否则价格自然下降</li><li>最终价格代表真实市场需求</li></ol><p><strong>为什么有效:</strong>下降的价格曲线阻止了机器人和 FOMO 购买。耐心的买家等待价格稳定,而市场找到真实需求。这比固定价格销售更有效率,在固定价格销售中,机器人争相购买并立即倾倒。</p><p><strong>示例机制:</strong></p><ul><li>第 1 天:代币价格从 10 美元开始(对大多数人来说太贵)</li><li>第 2 天:即使没有卖压,价格曲线也降至 2 美元</li><li>第 3 天:市场买入,稳定在 1.20 美元</li><li>结果:公平的价格发现,发射后波动性较小</li></ul><p><strong>优势:</strong></p><ul><li>阻止机器人操纵</li><li>真实价格发现</li><li>减少即时倾倒</li><li>项目资本效率更高</li></ul>"
+			}
+		},
+		"major_launchpads": {
+			"title": "主要发射平台",
+			"content": "<p>不同的发射平台服务于不同的利基市场——一些专注于高质量、经过审查的项目,而另一些则优先考虑无需许可的访问。了解每个平台的模式可以帮助您选择参与的地方。</p>",
+			"dao_maker": {
+				"title": "DAO Maker:强持有者发行",
+				"content": "<p><strong>DAO Maker</strong>开创了强持有者发行(SHO)模式,旨在奖励长期代币持有者并过滤掉短期投机者。</p><p><strong>SHO 运作方式:</strong></p><ol><li>质押 DAO 代币以进入</li><li>分配基于质押金额和持续时间</li><li>归属在 6-12 个月内逐渐释放代币</li><li>可以随时领取归属代币或质押以获得额外奖励</li></ol><p><strong>审查流程:</strong>DAO Maker 声称进行广泛的尽职调查——团队背景调查、产品验证、代币经济学审查和法律合规性。然而,他们仍然有显著的失败(如 My Neighbor Alice 发射后表现不佳)。</p><p><strong>业绩记录:</strong>混合。早期发射如 Orion Protocol(ORN)涨了 20 倍。后来的发射往往无法维持价值。该平台转向提供不同的分配等级和模式。</p><p><strong>要求:</strong></p><ul><li>最低质押因等级而异(通常为 500-5000 DAO)</li><li>大多数销售需要 KYC</li><li>某些销售受地理位置限制</li></ul>"
+			},
+			"seedify": {
+				"title": "Seedify:分层分配系统",
+				"content": "<p><strong>Seedify</strong>使用九层系统,您的分配随着 SFUND 代币持有量的增加而增加。他们专注于游戏、元宇宙和 NFT 项目。</p><p><strong>等级结构:</strong></p><ul><li>第 1-3 级:基于抽奖的分配(持有最低 SFUND)</li><li>第 4-6 级:保证分配随持有量增加</li><li>第 7-9 级:大型保证分配(需要大量 SFUND 质押)</li></ul><p><strong>示例:</strong>第 7 级持有者可能获得 2,000 美元的保证分配,而第 2 级进入抽奖以获得潜在的 100 美元分配。</p><p><strong>审查重点:</strong>强调 GameFi 项目。他们评估游戏开发进度、团队在游戏方面的经验以及商业模式的可行性。</p><p><strong>优点:</strong></p><ul><li>清晰的等级系统(知道您的分配)</li><li>专注于游戏/元宇宙利基</li><li>为项目提供孵化服务</li></ul><p><strong>缺点:</strong></p><ul><li>有意义的分配需要高 SFUND 成本</li><li>GameFi 行业波动性</li><li>代币价格取决于游戏趋势</li></ul>"
+			},
+			"polkastarter": {
+				"title": "Polkastarter:多链发射",
+				"content": "<p><strong>Polkastarter</strong>是最古老的 IDO 平台之一,支持跨多个链的发射。最初专注于 Polkadot 生态系统,现在是多链的。</p><p><strong>分配方法:</strong></p><ol><li>质押 POLS 代币</li><li>申请白名单(因项目而异)</li><li>如果列入白名单,参与抽奖或保证分配</li><li>某些发射使用 FCFS(先到先得)</li></ol><p><strong>著名发射:</strong></p><ul><li><strong>Covalent(CQT):</strong>区块链数据索引——成功发射,仍在运营</li><li><strong>Quickswap(QUICK):</strong>Polygon DEX——重大成功故事</li><li><strong>Ultra(UOS):</strong>游戏平台——结果混合</li></ul><p><strong>独特功能:</strong></p><ul><li>某些发射的保险基金(如果项目跑路,部分补偿)</li><li>多链支持(不锁定到一个生态系统)</li><li>固定价格和动态定价选项</li></ul><p><strong>挑战:</strong></p><ul><li>白名单过程可能不透明</li><li>竞争仍然非常激烈</li><li>保险基金覆盖有限</li></ul>"
+			},
+			"fjord": {
+				"title": "Fjord Foundry:公平价格发现",
+				"content": "<p><strong>Fjord Foundry</strong>(以前称为 Copper Launch)专门从事流动性引导池,提供加密货币中最复杂的价格发现机制。</p><p><strong>运作方式:</strong></p><ol><li>项目设置 LBP,起始权重(例如 95/5)</li><li>池持续时间通常为 2-4 天</li><li>权重逐渐转移到最终比率(例如 50/50)</li><li>任何人都可以参与——无需质押</li><li>最终池成为初始 DEX 流动性</li></ol><p><strong>示例:Alchemix(ALCH)</strong>于 2021 年 2 月通过 Copper LBP 发射。从极高的价格开始,逐渐下降,直到市场找到约 800 美元的公平价值。代币维持价值优于大多数固定价格发射。</p><p><strong>项目选择 LBP 的原因:</strong></p><ul><li>比固定价格销售更好的价格发现</li><li>不太容易受到机器人操纵</li><li>发射后立即流动性</li><li>资本效率更高(需要更少的启动资本)</li></ul><p><strong>用户优势:</strong></p><ul><li>无需质押平台代币</li><li>可以在发射期间的任何时候购买</li><li>市场驱动的定价减少 FOMO</li><li>透明的机制</li></ul>"
+			},
+			"pump_fun": {
+				"title": "Pump.fun:无需许可的联合曲线",
+				"content": "<p><strong>Pump.fun</strong>通过完全无需许可的联合曲线模型使 Solana 上的代币发射民主化。任何人都可以在几秒钟内以零前期成本发射代币。</p><p><strong>联合曲线模型:</strong></p><ol><li>任何人创建代币——无需批准</li><li>价格从接近零开始,随着代币购买而算法性增加</li><li>所有购买和销售都发生在联合曲线上(没有外部 DEX)</li><li>当达到阈值市值(约 69k 美元)时,流动性转移到 Raydium DEX</li><li>曲线被销毁,代币在 Raydium 上自由交易</li></ol><p><strong>公式:</strong>曲线通常使用 <code>价格 = k × 供应量^2</code>,意味着每个代币的成本逐渐高于上一个。</p><p><strong>现象:</strong>Pump.fun 成为 Solana 顶级费用生成器之一,每天处理数千次发射。大多数代币很快死亡(跑路或缺乏兴趣),但有些取得了巨大成功。</p><p><strong>成功故事:</strong></p><ul><li>Bonk 风格的 memecoin 发射到数百万市值</li><li>社区代币有机地获得牵引力</li><li>NFT 项目使用它进行公平代币分配</li></ul><p><strong>风险:</strong></p><ul><li>诈骗率极高(90%+ 的发射失败/跑路)</li><li>没有任何审查</li><li>联合曲线机制有利于非常早期的买家</li><li>大多数交易量来自堕落的投机</li></ul><p><strong>用例:</strong>最适合实验性、社区驱动的项目,其中公平性和无需许可的访问比审查更重要。不适合严肃投资。</p>"
+			}
+		},
+		"participation_guide": {
+			"title": "如何参与代币发射",
+			"content": "<p>成功参与发射需要准备、理解平台机制和快速执行。以下是如何导航该过程。</p>",
+			"requirements": {
+				"title": "常见要求",
+				"content": "<p><strong>代币持有:</strong>大多数发射平台需要质押他们的原生代币:</p><ul><li><strong>DAO Maker:</strong>500-5000+ DAO 代币(500-5000+ 美元)</li><li><strong>Seedify:</strong>50-10,000+ SFUND 代币(因等级而异)</li><li><strong>Polkastarter:</strong>250+ POLS 代币</li><li><strong>Fjord/Pump.fun:</strong>不需要平台代币</li></ul><p><strong>KYC/AML:</strong>许多平台需要身份验证:</p><ul><li>护照或政府 ID</li><li>居住证明</li><li>面部验证</li><li>处理时间:24 小时至 1 周</li></ul><p><strong>地理限制:</strong>常见排除:</p><ul><li>美国(SEC 法规)</li><li>中国、伊朗、朝鲜(制裁)</li><li>有时:英国、加拿大、新加坡(因项目而异)</li></ul><p><strong>准备清单:</strong></p><ol><li>提前完成 KYC(不要等到发射日)</li><li>提前数周获取并质押平台代币</li><li>设置有足够 gas 资金的钱包</li><li>加入项目的 Discord/Telegram 以获取公告</li><li>阅读白皮书和代币经济学</li><li>检查您所在时区的发射时间</li></ol>"
+			},
+			"allocation": {
+				"title": "理解分配系统",
+				"content": "<p><strong>保证分配:</strong>较高等级获得固定分配金额。Seedify 第 8 级示例:无论需求如何,保证 3,000 美元分配。</p><p><strong>抽奖系统:</strong>较低等级进入随机抽签。如果被选中,您将获得分配。如果没有,您什么也得不到。典型概率:10-30%,取决于超额认购。</p><p><strong>先到先得(FCFS):</strong>在保证和抽奖轮次之后,剩余代币出售给任何人——最快者获胜。需要:</p><ul><li>快速的互联网连接</li><li>钱包已连接</li><li>如果可能,交易预签名</li><li>高 gas 费用以抢跑其他人</li></ul><p><strong>超额认购:</strong>当需求超过供应时,分配按比例减少。</p><p><strong>示例:</strong></p><ul><li>总筹集:500,000 美元</li><li>合格用户的总需求:2,000,000 美元</li><li>超额认购:4 倍</li><li>如果您有资格获得 1,000 美元,您将获得 250 美元</li></ul><p><strong>专业提示:</strong>仔细阅读公告——某些发射使用混合模型(保证 + 抽奖 + FCFS 轮次)。每轮可能有不同的要求。</p>"
+			},
+			"kyc": {
+				"title": "KYC 和合规性",
+				"content": "<p><strong>KYC 存在的原因:</strong></p><ul><li>监管合规性(尤其是基于团队的发射)</li><li>防止机器人和女巫攻击</li><li>地理限制</li><li>反洗钱要求</li></ul><p><strong>收集什么信息:</strong></p><ul><li>完整法定姓名</li><li>出生日期</li><li>居住地址</li><li>政府 ID(护照、驾驶执照)</li><li>用于面部验证的自拍</li><li>有时:地址证明(水电费账单)</li></ul><p><strong>常见 KYC 提供商:</strong></p><ul><li><strong>Blockpass:</strong>被许多发射平台使用,可跨平台重用</li><li><strong>Synaps:</strong>快速验证,移动友好</li><li><strong>Jumio:</strong>成熟的提供商,彻底检查</li></ul><p><strong>隐私问题:</strong></p><ul><li>您的数据由第三方提供商存储</li><li>过去发生过数据泄露</li><li>信息可能与当局共享</li><li>考虑:潜在分配是否值得隐私权衡?</li></ul><p><strong>无需 KYC 的替代方案:</strong></p><ul><li>Pump.fun、Fjord Foundry(参与无需 KYC)</li><li>DEX 上的纯公平发射</li><li>某些社区发射</li></ul><p><strong>重要:</strong>切勿为未知或未经审查的平台完成 KYC。诈骗者创建虚假发射平台以收集身份文件。</p>"
+			}
+		},
+		"token_vesting": {
+			"title": "理解代币归属",
+			"content": "<p>归属时间表决定何时以及如何释放代币。理解这些对于评估发射可行性和价格行动预测至关重要。</p>",
+			"cliff": {
+				"title": "锁定期",
+				"content": "<p><strong>什么是锁定期?</strong>锁定期是初始锁定期,其中释放零代币。锁定期结束后,归属开始。</p><p><strong>示例:</strong></p><ul><li>6 个月锁定期,然后 18 个月线性归属</li><li>第 0-6 个月:没有代币释放</li><li>第 6 个月:锁定期结束,第一批归属解锁</li><li>第 6-24 个月:代币每月逐渐释放</li></ul><p><strong>锁定期存在的原因:</strong></p><ul><li>使团队激励与长期成功保持一致</li><li>防止即时倾倒</li><li>在团队可以出售之前给项目发展时间</li></ul><p><strong>危险信号:</strong></p><ul><li>团队/顾问代币没有锁定期(可以立即倾倒)</li><li>大分配的短锁定期(3 个月或更少)</li><li>仅公开销售有锁定期,团队没有(不公平分配)</li></ul><p><strong>理想结构:</strong></p><ul><li>团队/顾问:12 个月锁定期,24-36 个月归属</li><li>投资者:6-12 个月锁定期,12-24 个月归属</li><li>公开销售:TGE 部分解锁(10-20%),其余 3-12 个月</li></ul>"
+			},
+			"linear_vesting": {
+				"title": "线性归属时间表",
+				"content": "<p><strong>线性归属</strong>在一段时间内以相等的金额释放代币。最常见和最直接的方法。</p><p><strong>示例:</strong></p><ul><li>总分配:100,000 代币</li><li>归属:6 个月锁定期后 12 个月线性</li><li>第 6 个月(锁定期结束):8,333 代币解锁</li><li>第 7-18 个月:每月 8,333 代币解锁</li></ul><p><strong>计算价格压力:</strong></p><p>如果您知道归属时间表,您可以预测代币解锁事件:</p><ul><li><strong>总供应量:</strong>1 亿代币</li><li><strong>团队分配:</strong>2000 万(20%)</li><li><strong>归属:</strong>12 个月锁定期,24 个月线性</li><li><strong>锁定期后每月解锁:</strong>2000 万 / 24 = 833,333 代币每月</li></ul><p>如果项目在锁定期结束时市值为 1000 万美元,每月解锁 83.3 万代币:</p><ul><li>按当前价格计算,每月约 10 万美元的潜在卖压</li><li>如果团队积极出售,这是看跌的</li><li>如果团队持有,看涨信号</li></ul><p><strong>聪明的投资者:</strong>跟踪解锁时间表并相应调整头寸。重大解锁通常会引发价格下跌。</p>"
+			},
+			"unlock_schedules": {
+				"title": "分析解锁时间表",
+				"content": "<p><strong>要问的关键问题:</strong></p><ol><li><strong>TGE 时解锁多少百分比?</strong>(代币生成事件)<br>• 理想:5-15% 用于初始流动性<br>• 危险信号:50%+(大量倾倒风险)</li><li><strong>团队代币何时解锁?</strong><br>• 理想:12+ 个月锁定期<br>• 危险信号:没有锁定期或短锁定期</li><li><strong>总归属持续时间是多少?</strong><br>• 理想:24-48 个月<br>• 危险信号:少于 12 个月</li><li><strong>是否有任何「解锁锁定期」(大型一次性释放)?</strong><br>• 注意大量同时解锁的日期</li></ol><p><strong>示例分析:项目 XYZ</strong></p><ul><li><strong>总供应量:</strong>10 亿代币</li><li><strong>TGE 解锁:</strong>10%(1 亿代币)</li><li><strong>团队:</strong>20%(2 亿),12 个月锁定期,36 个月线性</li><li><strong>投资者:</strong>30%(3 亿),6 个月锁定期,18 个月线性</li><li><strong>公众:</strong>10%(1 亿),TGE 时 20%,12 个月线性</li></ul><p><strong>预计解锁时间表:</strong></p><ul><li><strong>第 0 个月(TGE):</strong>1.2 亿代币流通(12%)</li><li><strong>第 6 个月:</strong>投资者锁定期结束——主要卖压开始</li><li><strong>第 12 个月:</strong>团队锁定期结束——更多卖压</li><li><strong>第 24 个月:</strong>投资者归属完成——稳定</li><li><strong>第 48 个月:</strong>所有归属完成</li></ul><p><strong>交易策略:</strong></p><ul><li>如果是好项目,在发射时购买,但预计在第 6 和 12 个月倾倒</li><li>考虑在主要解锁日期之前出售</li><li>在解锁卖压过去后重新积累</li><li>仅当基本面证明稀释合理时才长期持有</li></ul>"
+			}
+		},
+		"evaluation_criteria": {
+			"title": "评估发射机会",
+			"content": "<p>每年有数千次发射和高失败率,严格的评估至关重要。这是一个尽职调查框架。</p>",
+			"team": {
+				"title": "团队评估",
+				"content": "<p><strong>要研究什么:</strong></p><ol><li><strong>公开身份:</strong>团队成员是否完全公开,有真实姓名、照片和 LinkedIn 个人资料?<br>• 危险信号:非隐私重点项目的匿名团队</li><li><strong>业绩记录:</strong>他们以前建造过什么?<br>• 寻找:以前成功的退出、相关经验<br>• 危险信号:没有相关背景的首次创始人</li><li><strong>技术专长:</strong>他们能执行路线图吗?<br>• 检查 GitHub 活动、技术白皮书、代码质量<br>• 危险信号:没有技术联合创始人,没有 GitHub 活动</li><li><strong>顾问:</strong>谁在支持他们?<br>• 好迹象:积极参与的知名顾问<br>• 危险信号:没有真正参与的付费顾问</li></ol><p><strong>如何研究:</strong></p><ul><li>LinkedIn:验证就业历史</li><li>Twitter/X:检查活动、参与度、声誉</li><li>GitHub:查看代码贡献</li><li>Google:搜索任何争议或过去的失败</li><li>社区:在项目 Discord 中询问——认真的团队参与</li></ul><p><strong>示例:好团队</strong></p><ul><li>创始人:曾在 Coinbase 领导工程</li><li>CTO:以太坊核心贡献者 5 年</li><li>顾问:Vitalik Buterin(积极参与)、Naval Ravikant</li><li>GitHub:活跃开发,50+ 贡献者</li></ul><p><strong>示例:危险信号</strong></p><ul><li>创始人:没有 LinkedIn,匿名</li><li>团队:库存照片或 AI 生成的图像</li><li>顾问:只有标志,没有参与确认</li><li>GitHub:分叉项目,没有原始代码</li></ul>"
+			},
+			"tokenomics": {
+				"title": "代币经济学分析",
+				"content": "<p><strong>供应分配:</strong>代币如何分配?</p><p><strong>健康分配:</strong></p><ul><li>社区/生态系统:40-60%</li><li>团队/顾问:10-20%</li><li>投资者:10-25%</li><li>财库/基金会:10-20%</li><li>公开销售:5-15%</li></ul><p><strong>危险信号分配:</strong></p><ul><li>团队 + 投资者 > 50%(大多数由内部人员控制)</li><li>公开销售 < 3%(去中心化不足)</li><li>不清楚的分配或「其他」类别 > 10%</li></ul><p><strong>效用分析:</strong>代币做什么?</p><ul><li><strong>良好的效用:</strong><br>• 治理(对协议变更进行投票)<br>• 收入分享(费用分配给持有者)<br>• 质押奖励(激励持有)<br>• 平台使用所需(交易费用、访问)</li><li><strong>弱效用:</strong><br>• 没有真正权力的「治理」<br>• 不可持续收益率的质押<br>• 没有明确的长期持有理由</li></ul><p><strong>发行计划:</strong>新代币进入流通的速度有多快?</p><ul><li>高通胀(每年 10%+):持续卖压</li><li>适度通胀(2-5%):如果与增长匹配则合理</li><li>通缩(燃烧):如果可持续则看涨</li></ul><p><strong>市值评估:</strong></p><ul><li><strong>FDV(完全稀释估值):</strong>如果所有代币都在流通,市值</li><li><strong>流通市值:</strong>当前流通供应量 × 价格</li><li><strong>危险信号:</strong>FDV > 流通市值的 10 倍(未来巨大稀释)</li></ul><p><strong>示例比较:</strong></p><ul><li><strong>项目 A:</strong>1000 万美元市值,5 亿美元 FDV(50 倍稀释——避免)</li><li><strong>项目 B:</strong>1000 万美元市值,3000 万美元 FDV(3 倍稀释——合理)</li></ul>"
+			},
+			"product": {
+				"title": "产品和市场契合度",
+				"content": "<p><strong>产品阶段评估:</strong></p><ol><li><strong>想法阶段:</strong>只是一份白皮书,没有工作产品<br>• 风险:极高(90%+ 未能交付)<br>• 仅在团队出色且您可以接受全部损失时投资</li><li><strong>MVP/Beta:</strong>工作原型,功能有限<br>• 风险:高(50%+ 未能获得牵引力)<br>• 寻找:用户反馈、迭代速度、清晰的路线图</li><li><strong>实时产品:</strong>功能齐全,有真实用户<br>• 风险:中等(取决于竞争和增长)<br>• 寻找:用户增长、收入、留存指标</li><li><strong>成熟产品:</strong>经过验证的市场契合度,大量用户/收入<br>• 风险:较低,但增长可能已定价<br>• 寻找:护城河、网络效应、扩展计划</li></ol><p><strong>牵引力指标:</strong></p><ul><li><strong>用户:</strong>多少?增长还是停滞?</li><li><strong>收入:</strong>任何?增长?可持续模式?</li><li><strong>活动:</strong>每日交易、交易量、参与度</li><li><strong>留存:</strong>用户是否回来?</li></ul><p><strong>竞争分析:</strong></p><ul><li>谁是竞争对手?</li><li>差异化是什么?</li><li>是否有明确的护城河(网络效应、技术、社区)?</li><li>他们能否真正与成熟的参与者竞争?</li></ul><p><strong>市场规模:</strong></p><ul><li>问题是否足够大以证明估值合理?</li><li>总可寻址市场(TAM)分析</li><li>此解决方案是否需要加密货币?</li></ul><p><strong>危险信号:</strong></p><ul><li>发射时没有工作产品</li><li>复制现有项目而没有创新</li><li>过度承诺(「以太坊杀手」、「10,000 倍潜力」)</li><li>没有明确的市场进入策略</li><li>代币销售以资助想法的开发(而非执行)</li></ul>"
+			}
+		},
+		"risks_scams": {
+			"title": "风险和常见诈骗",
+			"content": "<p>代币发射领域充满了诈骗和失败的项目。估计 80%+ 的发射失败或完全是诈骗。以下是如何保护自己。</p>",
+			"rug_pulls": {
+				"title": "理解跑路",
+				"content": "<p><strong>什么是跑路?</strong>当开发人员放弃项目并拿走投资者的钱时,通常通过移除流动性或倾倒预分配代币。</p><p><strong>跑路类型:</strong></p><ol><li><strong>流动性移除:</strong><br>• 开发人员向 DEX 添加流动性,等待炒作<br>• 移除所有流动性,使代币一文不值<br>• 预防:检查流动性是否锁定(通过 Team Finance 等服务)</li><li><strong>代币倾倒:</strong><br>• 团队持有大量分配<br>• 倾倒给不知情的买家<br>• 预防:检查代币分配和归属</li><li><strong>智能合约后门:</strong><br>• 合约有隐藏功能可以铸造无限代币或冻结交易<br>• 预防:智能合约审计,检查已验证的合约</li><li><strong>慢速跑路:</strong><br>• 团队随时间逐渐出售分配<br>• 开发放缓,承诺未兑现<br>• 预防:监控 GitHub 活动和路线图交付</li></ol><p><strong>著名的跑路:</strong></p><ul><li><strong>Squid Game Token(SQUID):</strong>2021 年 11 月,被盗 300 万美元以上。合约有阻止出售的代码,只有开发人员可以出售。</li><li><strong>AnubisDAO:</strong>2021 年 10 月,发射后几分钟内被盗 6000 万美元。流动性立即耗尽。</li><li><strong>Meerkat Finance:</strong>2021 年 3 月,在 BSC 上被盗 3100 万美元。保险库代码有隐藏的提款功能。</li></ul>"
+			},
+			"red_flags": {
+				"title": "危险信号清单",
+				"content": "<p><strong>团队危险信号:</strong></p><ul><li>❌ 非隐私项目的匿名团队</li><li>❌ 库存照片或虚假身份</li><li>❌ 没有 LinkedIn 或可验证的历史</li><li>❌ 未披露以前失败的项目</li><li>❌ 过度激进的营销(「保证 100 倍」)</li></ul><p><strong>代币经济学危险信号:</strong></p><ul><li>❌ 团队分配 > 30%</li><li>❌ 团队没有归属或短归属</li><li>❌ 不清楚的代币分配</li><li>❌ 合约中的铸造功能(可以创建无限代币)</li><li>❌ 允许开发人员冻结交易的暂停功能</li></ul><p><strong>产品危险信号:</strong></p><ul><li>❌ 没有工作产品,只有承诺</li><li>❌ 复制的白皮书(抄袭)</li><li>❌ 不现实的路线图(「我们将取代以太坊」)</li><li>❌ 没有 GitHub 活动或闭源</li><li>❌ 代币没有明确的用例</li></ul><p><strong>发射危险信号:</strong></p><ul><li>❌ 没有流动性锁定</li><li>❌ 未经审计的智能合约</li><li>❌ 完全由团队提供的流动性</li><li>❌ 可疑的高 APY(庞氏经济学)</li><li>❌ 需要招募他人(金字塔计划)</li></ul><p><strong>社区危险信号:</strong></p><ul><li>❌ 虚假的 Twitter 关注者(突然跳跃,低参与度)</li><li>❌ Telegram/Discord 只有炒作,没有实质内容</li><li>❌ 版主删除批评性问题</li><li>❌ 购买压力(「最后机会!」、「现在 FOMO!」)</li></ul><p><strong>如果您发现 3+ 个危险信号,请离开。如果您发现 5+,那肯定是诈骗。</strong></p>"
+			},
+			"due_diligence": {
+				"title": "尽职调查流程",
+				"content": "<p><strong>逐步清单:</strong></p><ol><li><strong>团队研究(15-30 分钟):</strong><br>• Google 每个团队成员<br>• 检查 LinkedIn 个人资料<br>• 查看 GitHub 活动<br>• 搜索过去的争议</li><li><strong>智能合约审计(10 分钟):</strong><br>• 是否由知名公司审计?(CertiK、Trail of Bits、OpenZeppelin)<br>• 阅读审计报告——是否发现并修复了关键问题?<br>• 在 Etherscan/BSCscan 上检查合约——是否已验证?<br>• 使用 Token Sniffer 等工具检查常见的诈骗模式</li><li><strong>代币经济学审查(15 分钟):</strong><br>• 阅读代币分配细分<br>• 检查网站或白皮书上的归属时间表<br>• 计算 FDV 与市值<br>• 寻找流动性锁定证明</li><li><strong>产品测试(20-30 分钟):</strong><br>• 如果存在产品,请使用<br>• 检查 GitHub 以进行真实开发<br>• 搜索竞争对手<br>• 阅读白皮书(技术部分,而不仅仅是营销)</li><li><strong>社区评估(10 分钟):</strong><br>• 加入 Discord/Telegram<br>• 提出批评性问题——他们如何回应?<br>• 检查 Twitter 参与度(真实或机器人关注者?)<br>• 阅读 Reddit 线程以获得公正的意见</li><li><strong>可比分析(10 分钟):</strong><br>• 类似项目的市值是多少?<br>• 估值是否合理?<br>• 竞争优势是什么?</li></ol><p><strong>总时间:每个项目 1-2 小时。如果您不能花这段时间,您就不应该投资。</strong></p><p><strong>尽职调查工具:</strong></p><ul><li><strong>Token Sniffer:</strong>诈骗检测</li><li><strong>RugDoc:</strong>安全审查</li><li><strong>DexTools:</strong>图表分析和持有者分布</li><li><strong>Etherscan/BSCscan:</strong>合约验证</li><li><strong>CoinGecko/CMC:</strong>市场数据和链接</li></ul>"
+			}
+		},
+		"post_launch_strategies": {
+			"title": "发射后交易策略",
+			"content": "<p>发射只是开始。聪明的参与者有何时出售、何时持有以及如何管理风险的策略。</p>",
+			"timing": {
+				"title": "何时出售",
+				"content": "<p><strong>常见出售策略:</strong></p><ol><li><strong>立即翻转(高风险):</strong><br>• 发射时立即出售以快速获利<br>• 有效条件:发射被大量超额认购且炒作很高<br>• 风险:可能过早出售,价格可能从发射上涨 10 倍</li><li><strong>拿出初始投资:</strong><br>• 等待 2-3 倍,出售足够收回初始投资<br>• 让其余部分免费运行<br>• 有效条件:您想消除下行风险</li><li><strong>阶梯式退出:</strong><br>• 分批出售(2 倍时 25%,5 倍时 25%,10 倍时 25%,持有 25%)<br>• 有效条件:您相信长期潜力但想锁定利润</li><li><strong>为里程碑持有:</strong><br>• 设置特定目标(产品发布、交易所上市、主网)<br>• 在每个里程碑出售部分<br>• 有效条件:您密切关注路线图</li></ol><p><strong>市场周期考虑:</strong></p><ul><li><strong>牛市:</strong>可以持有更长时间,价格通常继续上涨</li><li><strong>熊市:</strong>更快地获利,反弹通常是短暂的</li><li><strong>横盘:</strong>在强势中出售,买入下跌</li></ul><p><strong>解锁事件:</strong></p><ul><li>重大解锁通常导致 10-30% 的价格下跌</li><li>考虑在重大解锁前 1-2 周出售</li><li>如果您长期看涨,在卖压消退后重新购买</li></ul><p><strong>心理:</strong></p><ul><li>不要情感依恋——代币不是您的身份</li><li>获利不是「背叛」项目</li><li>过早出售并错过收益比持有太久并失去一切要好</li></ul>"
+			},
+			"monitoring": {
+				"title": "监控您的投资",
+				"content": "<p><strong>要跟踪什么:</strong></p><ol><li><strong>开发进度:</strong><br>• GitHub 活动——开发人员还在编码吗?<br>• 路线图里程碑——是否正在实现?<br>• 产品更新——是否有真正的进展?</li><li><strong>代币指标:</strong><br>• 价格和市值趋势<br>• 交易量(交易量下降 = 兴趣减退)<br>• 持有者分布(巨鲸积累或倾倒?)</li><li><strong>社区健康:</strong><br>• Discord/Telegram 活动——增长还是死亡?<br>• Twitter 参与度——真实或机器人关注者?<br>• 团队沟通——频繁且透明?</li><li><strong>合作伙伴关系和集成:</strong><br>• 新的交易所上市<br>• 协议集成<br>• 宣布的战略合作伙伴关系</li><li><strong>竞争对手活动:</strong><br>• 竞争对手是否更快地发货?<br>• 他们是否获得市场份额?<br>• 您的项目是否落后?</li></ol><p><strong>监控工具:</strong></p><ul><li><strong>DexTools/DexScreener:</strong>价格图表、持有者分析</li><li><strong>Nansen:</strong>巨鲸跟踪(谁在购买/出售?)</li><li><strong>Lunar Crush:</strong>社会情绪分析</li><li><strong>GitHub:</strong>代码提交和贡献者活动</li><li><strong>Google Alerts:</strong>新闻提及</li></ul><p><strong>出售的警告信号:</strong></p><ul><li>开发停止(数周没有 GitHub 提交)</li><li>团队沉默(没有更新)</li><li>路线图反复延迟</li><li>关键团队成员离开</li><li>社区抱怨未兑现的承诺</li><li>交易量枯竭</li></ul>"
+			},
+			"portfolio_management": {
+				"title": "投资组合管理",
+				"content": "<p><strong>头寸规模:</strong></p><ul><li><strong>高风险(想法阶段):</strong>最多 1-3% 的投资组合</li><li><strong>中等风险(测试产品):</strong>3-8% 的投资组合</li><li><strong>较低风险(实时产品,经过验证的牵引力):</strong>5-15% 的投资组合</li><li><strong>永远不要:</strong>全部投入单个发射,无论看起来多好</li></ul><p><strong>跨发射的多样化:</strong></p><ul><li>不要将所有资金投入一个发射周期</li><li>分散到多个发射(有些会失败,有些会涨 10 倍)</li><li>跨发射平台多样化(不同平台,不同审查)</li><li>跨部门多样化(DeFi、GameFi、基础设施等)</li></ul><p><strong>示例投资组合分配:</strong></p><ul><li>40%:蓝筹加密货币(ETH、BTC)</li><li>30%:成熟的中盘</li><li>20%:有牵引力的最近发射</li><li>10%:新发射(分散到 5-10 个项目)</li></ul><p><strong>重新平衡:</strong></p><ul><li>如果发射涨 10 倍,现在占您投资组合的很大一部分</li><li>通过获利重新平衡,保持头寸规模合理</li><li>将利润再投资到新机会或稳定币</li></ul><p><strong>税务考虑:</strong></p><ul><li>短期收益税高于长期(在许多国家)</li><li>跟踪所有购买的成本基础</li><li>考虑税收损失收割(出售亏损者以抵消收益)</li><li>咨询加密税务专家——这变得复杂</li></ul><p><strong>心理止损:</strong></p><ul><li>提前决定:「如果这下跌 50%,我会出售」</li><li>或:「如果它在 Y 日期之前没有达到 X 里程碑,我会退出」</li><li>不要让希望覆盖您的策略</li><li>情感持有是人们将代币骑到零的方式</li></ul><p><strong>持续学习:</strong></p><ul><li>回顾过去的投资——什么有效,什么没有?</li><li>记录您的决策和结果日志</li><li>从错误中学习而不自责</li><li>保持谦虚——这个市场最终会使每个人谦卑</li></ul>"
+			}
+		}
+	},
+
+	"glossary": {
+		"ido": {
+			"term": "IDO (首次 DEX 发行)",
+			"definition": "直接在去中心化交易所发生的代币发射,提供即时流动性和交易。与需要等待交易所上市的 ICO 不同,IDO 允许即时价格发现和交易。"
+		},
+		"ieo": {
+			"term": "IEO (首次交易所发行)",
+			"definition": "在中心化交易所平台(如币安 Launchpad)上进行的代币销售。交易所审查项目、处理销售并提供即时上市。由于交易所尽职调查,通常被认为比 ICO 更安全。"
+		},
+		"ico": {
+			"term": "ICO (首次代币发行)",
+			"definition": "最初的代币销售方法,在 2017 年流行。项目直接接受加密货币(通常是 ETH)以换取代币。由于监管问题和高诈骗率,现在基本上被 IDO 和 IEO 所取代。"
+		},
+		"fair_launch": {
+			"term": "公平发射",
+			"definition": "发射时没有预售、没有团队分配且所有参与者平等访问的代币发射。理念是即使团队也必须像其他人一样购买或赚取代币,防止内部优势和早期倾倒。"
+		},
+		"lbp": {
+			"term": "LBP (流动性引导池)",
+			"definition": "一种使用动态定价的代币发射,从高价开始逐渐降低。这阻止了机器人和 FOMO 购买,允许更好的价格发现。下降的价格曲线持续到市场需求稳定价格。"
+		},
+		"allocation": {
+			"term": "分配",
+			"definition": "您被允许在发射中购买的代币数量。可以是保证的(固定金额)、基于抽奖的(随机选择)或由等级决定(基于平台代币持有量)。"
+		},
+		"vesting": {
+			"term": "归属",
+			"definition": "确定何时以及如何随时间释放代币的时间表。归属通过锁定代币并逐渐释放它们来防止即时倾倒,为团队和早期投资者调整长期激励。"
+		},
+		"cliff": {
+			"term": "锁定期",
+			"definition": "归属时间表中的初始锁定期,其中释放零代币。锁定期结束后,归属开始。例如,「12 个月锁定期」意味着第一年没有代币解锁。"
+		},
+		"tge": {
+			"term": "TGE (代币生成事件)",
+			"definition": "代币创建并首次可用的时刻。这通常是初始流通供应进入市场并开始交易的时候。通常与「发射」或「上市」互换使用。"
+		},
+		"whitelist": {
+			"term": "白名单",
+			"definition": "被允许参与代币发射的预先批准的钱包地址列表。获得白名单通常需要完成任务(KYC、社交媒体关注、持有平台代币)或赢得抽奖。"
+		}
+	}
+}

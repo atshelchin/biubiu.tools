@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Celer Network - Cross-Chain Interoperability",
+		"description": "Celer Network provides cross-chain bridging via cBridge and inter-chain messaging. Fast, low-cost transfers across 40+ blockchains.",
+		"keywords": "Celer Network, cBridge, CELR token, cross-chain bridge, interoperability, multichain"
+	},
+	"overview": "Celer Network is a blockchain interoperability protocol known for cBridge, their cross-chain asset transfer solution. Bridge tokens across 40+ chains with competitive fees and fast finality.\n\nCeler uses a State Guardian Network (SGN) of validators who stake CELR to secure cross-chain transfers. Different bridging modes offer tradeoffs between speed and security. The network has processed billions in volume.\n\nBeyond bridging, Celer offers Inter-chain Message (IM) for developers building cross-chain dApps. CELR token is used for staking, governance, and fee payments. It's battle-tested infrastructure for multi-chain crypto.",
+	"features": {
+		"1": {
+			"title": "40+ Chains",
+			"description": "Extensive network support"
+		},
+		"2": {
+			"title": "cBridge",
+			"description": "Fast asset transfers"
+		},
+		"3": {
+			"title": "Inter-chain Messaging",
+			"description": "Cross-chain dApp logic"
+		},
+		"4": {
+			"title": "CELR Token",
+			"description": "Staking and governance"
+		},
+		"5": {
+			"title": "Low Fees",
+			"description": "Competitive pricing"
+		},
+		"6": {
+			"title": "Multiple Modes",
+			"description": "Speed vs security tradeoffs"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Token Bridging",
+			"description": "Move assets cross-chain"
+		},
+		"2": {
+			"title": "Multi-Chain dApps",
+			"description": "Inter-chain messaging"
+		},
+		"3": {
+			"title": "NFT Bridging",
+			"description": "Cross-chain NFT transfers"
+		},
+		"4": {
+			"title": "CELR Staking",
+			"description": "Earn from SGN"
+		},
+		"5": {
+			"title": "Protocol Integration",
+			"description": "Add bridging to dApps"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is cBridge?",
+			"answer": "cBridge is Celer's asset bridging solution. It supports 40+ chains and hundreds of tokens. Uses liquidity pools and the SGN validator network for security. One of the more established bridges in the ecosystem."
+		},
+		"2": {
+			"question": "How fast are transfers?",
+			"answer": "Speed depends on the bridging mode. Pool-based transfers can be near-instant on the destination. Canonical-mapping bridges depend on source chain finality. Typical transfers complete in 5-20 minutes."
+		},
+		"3": {
+			"question": "What is the SGN?",
+			"answer": "State Guardian Network is Celer's validator network. Validators stake CELR and co-sign cross-chain transactions. It provides security guarantees for bridging. You can stake CELR to participate and earn rewards."
+		},
+		"4": {
+			"question": "Celer vs other bridges?",
+			"answer": "Celer has extensive chain support and competitive fees. It's one of the older, more battle-tested bridges. Compare rates and speeds for your specific route—different bridges excel on different chains/tokens."
+		},
+		"5": {
+			"question": "What is Inter-chain Messaging?",
+			"answer": "IM lets smart contracts on different chains communicate. Developers can build dApps where logic spans multiple chains—cross-chain governance, unified liquidity, multi-chain games. It's infrastructure for the multi-chain future."
+		}
+	},
+	"cta": {
+		"ready": "Ready to bridge with Celer?",
+		"button": "Use cBridge",
+		"note": "Cross-chain interoperability"
+	}
+}

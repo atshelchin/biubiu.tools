@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Biconomy - 账户抽象基础设施",
+		"description": "Biconomy 通过账户抽象、无 Gas 交易和智能账户简化 Web3 用户体验。构建无缝 dApp 体验。",
+		"keywords": "Biconomy, 账户抽象, 无 Gas, 智能账户, BICO 代币, Web3 UX"
+	},
+	"overview": "Biconomy 通过账户抽象提供更好的 Web3 用户体验基础设施。用无缝的、类 Web2 交互替代令人困惑的钱包弹窗和 Gas 支付。\n\n他们的智能账户让用户可以用任何代币支付 Gas、批量交易和使用社交恢复。Paymaster 实现无 Gas 交易，应用赞助用户 Gas。模块化架构支持自定义模块。\n\nBiconomy 已为主要 dApp 处理数百万笔交易。BICO 代币用于治理，可能用于 paymaster 质押。他们是领先的账户抽象基础设施提供商。",
+	"features": {
+		"1": {
+			"title": "智能账户",
+			"description": "ERC-4337 钱包"
+		},
+		"2": {
+			"title": "无 Gas 交易",
+			"description": "赞助用户 Gas"
+		},
+		"3": {
+			"title": "任意代币支付 Gas",
+			"description": "灵活 Gas 支付"
+		},
+		"4": {
+			"title": "批量交易",
+			"description": "多个操作，一次点击"
+		},
+		"5": {
+			"title": "BICO 代币",
+			"description": "治理代币"
+		},
+		"6": {
+			"title": "多链",
+			"description": "主要 EVM 链"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "无 Gas dApp",
+			"description": "赞助用户 Gas"
+		},
+		"2": {
+			"title": "用户引导",
+			"description": "无摩擦首次使用"
+		},
+		"3": {
+			"title": "批量操作",
+			"description": "授权+交换一步完成"
+		},
+		"4": {
+			"title": "社交恢复",
+			"description": "无需种子词恢复"
+		},
+		"5": {
+			"title": "会话密钥",
+			"description": "有限权限"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是账户抽象？",
+			"answer": "账户抽象使钱包成为可编程智能合约。无需固定 EOA 规则，可定义自定义验证、Gas 支付和恢复。ERC-4337 是标准。它实现了类 Web2 的用户体验。"
+		},
+		"2": {
+			"question": "无 Gas 交易如何工作？",
+			"answer": "Biconomy Paymaster 代表用户支付 Gas。dApp 存入资金覆盖用户 Gas。用户签署交易，paymaster 提交并支付。dApp 费用替代用户摩擦。"
+		},
+		"3": {
+			"question": "什么是智能账户？",
+			"answer": "智能账户是遵循 ERC-4337 的智能合约钱包。它们具有可编程功能：任意代币 Gas 支付、批量处理、会话密钥、恢复。Biconomy 的实现是模块化且经过审计的。"
+		},
+		"4": {
+			"question": "BICO 代币有什么用？",
+			"answer": "BICO 治理 Biconomy 协议。持有者投票协议参数和发展。未来可能包括 paymaster 质押。目前主要专注于治理。"
+		},
+		"5": {
+			"question": "哪些 dApp 使用 Biconomy？",
+			"answer": "许多主要 dApp 使用 Biconomy 改善用户体验。例如 Decentraland、Perpetual Protocol 和各种游戏/NFT 平台。查看他们的案例研究了解当前集成。"
+		}
+	},
+	"cta": {
+		"ready": "准备获得无缝 Web3 体验了吗？",
+		"button": "探索 Biconomy",
+		"note": "账户抽象基础设施"
+	}
+}

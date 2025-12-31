@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "MEV Blocker - Transaction Protection",
+		"description": "MEV Blocker protects your transactions from frontrunning and sandwich attacks. Free RPC endpoint that returns MEV back to users.",
+		"keywords": "MEV Blocker, frontrunning protection, sandwich attack, MEV protection, CoW Protocol, transaction privacy"
+	},
+	"overview": "MEV Blocker is a free RPC endpoint that protects your transactions from MEV attacks like frontrunning and sandwiching. Instead of broadcasting to the public mempool where bots can exploit you, transactions go through a private order flow.\n\nBuilt by CoW Protocol team, MEV Blocker works by sending transactions to a network of searchers who commit to not exploit them. If your transaction does generate MEV, you get a rebate instead of losing to bots.\n\nSimply add MEV Blocker as a custom RPC in MetaMask. All your swaps, trades, and transactions automatically get protection. It's the easiest way to protect yourself from MEV.",
+	"features": {
+		"1": {
+			"title": "Frontrun Protection",
+			"description": "Private transaction flow"
+		},
+		"2": {
+			"title": "Sandwich Protection",
+			"description": "Prevent price manipulation"
+		},
+		"3": {
+			"title": "MEV Rebates",
+			"description": "Get MEV back"
+		},
+		"4": {
+			"title": "Free to Use",
+			"description": "No extra cost"
+		},
+		"5": {
+			"title": "Easy Setup",
+			"description": "One-click RPC add"
+		},
+		"6": {
+			"title": "Works Everywhere",
+			"description": "Any dApp, any wallet"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DEX Trading",
+			"description": "Protected swaps"
+		},
+		"2": {
+			"title": "Large Trades",
+			"description": "No sandwich attacks"
+		},
+		"3": {
+			"title": "DeFi Users",
+			"description": "General protection"
+		},
+		"4": {
+			"title": "NFT Minting",
+			"description": "Fair transaction order"
+		},
+		"5": {
+			"title": "Wallet Default",
+			"description": "Always-on protection"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What attacks does MEV Blocker prevent?",
+			"answer": "MEV Blocker prevents frontrunning (bots trading before you) and sandwich attacks (bots trading before AND after you). These attacks cause you to get worse prices. MEV Blocker keeps your transactions private from exploiting bots."
+		},
+		"2": {
+			"question": "How do I set up MEV Blocker?",
+			"answer": "Visit mevblocker.io and click 'Add to Wallet'. It adds MEV Blocker as a custom RPC to MetaMask. All your Ethereum transactions now route through the protected endpoint. Takes about 10 seconds."
+		},
+		"3": {
+			"question": "Is MEV Blocker free?",
+			"answer": "Yes, completely free. You pay normal gas fees. The service is free because searchers pay for the privilege of non-exploitative order flow. When they extract MEV, part goes back to you as rebates."
+		},
+		"4": {
+			"question": "Does it slow down transactions?",
+			"answer": "Slightly. Transactions take about 6-12 seconds longer because they go through private channels rather than the public mempool. For most users, this delay is worth the protection from losing money to MEV bots."
+		},
+		"5": {
+			"question": "MEV Blocker vs Flashbots Protect?",
+			"answer": "Both offer frontrunning protection. MEV Blocker emphasizes MEV rebates—you get paid when your tx generates MEV. Flashbots Protect focuses on privacy. Both are good; MEV Blocker is simpler to use."
+		}
+	},
+	"cta": {
+		"ready": "Ready to protect your transactions?",
+		"button": "Use MEV Blocker",
+		"note": "Free MEV protection"
+	}
+}

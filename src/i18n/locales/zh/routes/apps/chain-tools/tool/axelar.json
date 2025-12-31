@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Axelar - 通用跨链通信",
+		"description": "Axelar 提供 50+ 条区块链间的安全跨链通信。通用消息传递和资产桥接基础设施。",
+		"keywords": "Axelar, 跨链消息传递, GMP, AXL 代币, 互操作性, Cosmos"
+	},
+	"overview": "Axelar 是一个连接 50+ 条区块链的去中心化互操作性网络。它实现通用消息传递（GMP），允许智能合约在任何支持的链间进行通信。\n\n与单一用途的桥不同，Axelar 是通用基础设施。开发者可以构建跨链应用，其中逻辑和资产在 Cosmos、EVM 链和其他链之间流动。Squid 使用 Axelar 进行跨链交换。\n\n网络由质押 AXL 代币的权益证明验证者集保护。它起源于 Cosmos 生态系统，但广泛支持 EVM 链。Frax 和 dYdX 等主要协议使用 Axelar 进行跨链功能。",
+	"features": {
+		"1": {
+			"title": "50+ 条链",
+			"description": "广泛互操作性"
+		},
+		"2": {
+			"title": "通用消息传递",
+			"description": "跨链调用"
+		},
+		"3": {
+			"title": "资产桥接",
+			"description": "代币转移"
+		},
+		"4": {
+			"title": "AXL 代币",
+			"description": "质押和治理"
+		},
+		"5": {
+			"title": "Cosmos + EVM",
+			"description": "多生态系统"
+		},
+		"6": {
+			"title": "Squid 集成",
+			"description": "跨链交换"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "跨链 dApp",
+			"description": "多链逻辑"
+		},
+		"2": {
+			"title": "资产桥接",
+			"description": "移动代币"
+		},
+		"3": {
+			"title": "Cosmos 桥接",
+			"description": "连接 IBC"
+		},
+		"4": {
+			"title": "AXL 质押",
+			"description": "保护网络"
+		},
+		"5": {
+			"title": "协议集成",
+			"description": "添加跨链功能"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是通用消息传递？",
+			"answer": "GMP 让不同链上的智能合约进行通信。从以太坊调用 Polygon 上的函数。根据 Cosmos 上的事件更新 Avalanche 上的状态。它是真正跨链应用的基础。"
+		},
+		"2": {
+			"question": "Axelar 如何保护？",
+			"answer": "Axelar 使用权益证明，验证者质押 AXL 代币。二次方投票限制大验证者的影响力。网络保护了数十亿美元价值，没有发生过重大安全事件。"
+		},
+		"3": {
+			"question": "Axelar 支持哪些链？",
+			"answer": "Axelar 支持 50+ 条链，包括以太坊、所有主要 L2、Cosmos 链（通过 IBC）、Polygon、Avalanche、Fantom、Moonbeam 等。覆盖 EVM 和 Cosmos 生态系统。"
+		},
+		"4": {
+			"question": "什么是 Squid？",
+			"answer": "Squid（squidrouter.com）是建立在 Axelar 上的跨链交换协议。在一笔交易中将任何代币交换为跨链的任何代币。它向终端用户展示了 Axelar 的 GMP 能力。"
+		},
+		"5": {
+			"question": "Axelar vs LayerZero vs Wormhole？",
+			"answer": "三者都是通用消息传递协议。Axelar 有强大的 Cosmos 集成和去中心化验证者集。LayerZero 更专注于 EVM。Wormhole 连接更多生态系统包括 Solana。每个都有不同的安全模型。"
+		}
+	},
+	"cta": {
+		"ready": "准备通用跨链了吗？",
+		"button": "探索 Axelar",
+		"note": "跨链通信网络"
+	}
+}

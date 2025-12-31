@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "InsurAce - Multi-Chain DeFi Insurance",
+		"description": "InsurAce provides DeFi insurance across multiple chains. Cover your protocol positions with affordable premiums and quick claims.",
+		"keywords": "InsurAce, DeFi insurance, multi-chain coverage, INSUR token, smart contract insurance, crypto protection"
+	},
+	"overview": "InsurAce is a multi-chain DeFi insurance protocol offering coverage across Ethereum, BSC, Polygon, and other networks. Protect your DeFi positions against smart contract exploits with competitive premiums.\n\nThe protocol features portfolio-based coverage—insure multiple positions under one policy with discounts. Claims are processed through a transparent assessment system. InsurAce has paid claims from multiple exploits.\n\nINSUR token is used for governance and can be staked for yield. Lower premiums than some competitors make InsurAce accessible for smaller positions. Good option for multi-chain DeFi users.",
+	"features": {
+		"1": {
+			"title": "Multi-Chain",
+			"description": "Cross-chain coverage"
+		},
+		"2": {
+			"title": "Portfolio Cover",
+			"description": "Bundle discounts"
+		},
+		"3": {
+			"title": "Low Premiums",
+			"description": "Competitive pricing"
+		},
+		"4": {
+			"title": "INSUR Token",
+			"description": "Governance and staking"
+		},
+		"5": {
+			"title": "Quick Claims",
+			"description": "Fast processing"
+		},
+		"6": {
+			"title": "Wide Protocol Support",
+			"description": "Many protocols covered"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Multi-Chain DeFi",
+			"description": "Cross-chain protection"
+		},
+		"2": {
+			"title": "Portfolio Coverage",
+			"description": "Bundle positions"
+		},
+		"3": {
+			"title": "INSUR Staking",
+			"description": "Earn yield"
+		},
+		"4": {
+			"title": "Affordable Cover",
+			"description": "Lower premiums"
+		},
+		"5": {
+			"title": "Mining Investment",
+			"description": "Underwrite risk"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Which chains does InsurAce support?",
+			"answer": "InsurAce covers protocols on Ethereum, BSC, Polygon, Avalanche, and others. Multi-chain coverage from one platform. Check the app for current supported chains and protocols."
+		},
+		"2": {
+			"question": "How is InsurAce different from Nexus Mutual?",
+			"answer": "InsurAce offers multi-chain coverage (Nexus is Ethereum-focused), portfolio bundles, and often lower premiums. Nexus has longer track record and larger capital pool. Compare for your specific needs."
+		},
+		"3": {
+			"question": "What is portfolio cover?",
+			"answer": "Instead of buying separate covers, bundle multiple protocol positions into one policy. Get discounts for bundling. Easier management and lower total cost for diversified DeFi users."
+		},
+		"4": {
+			"question": "How do claims work?",
+			"answer": "File a claim with exploit evidence. Claims are assessed by the community through voting. Valid claims receive payouts from the capital pool. Process is transparent and documented."
+		},
+		"5": {
+			"question": "What is INSUR token?",
+			"answer": "INSUR governs InsurAce protocol. Stake for yield from premium revenue. Participate in claims assessment and governance votes. It aligns stakeholder incentives."
+		}
+	},
+	"cta": {
+		"ready": "Ready for multi-chain coverage?",
+		"button": "Get InsurAce",
+		"note": "Multi-chain DeFi insurance"
+	}
+}

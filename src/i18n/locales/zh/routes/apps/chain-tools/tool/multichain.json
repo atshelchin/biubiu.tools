@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Multichain - 跨链路由协议",
+		"description": "Multichain（前身为 Anyswap）曾提供 90+ 条区块链的跨链桥接。桥安全讨论的重要历史背景。",
+		"keywords": "Multichain, Anyswap, 跨链桥, MULTI 代币, 桥漏洞, 多链桥"
+	},
+	"overview": "Multichain（前身为 Anyswap）曾是最大的跨链桥之一，高峰期支持 90+ 条区块链。它处理了数十亿美元的交易量，并被集成到许多 DeFi 协议中。\n\n2023 年 7 月，Multichain 经历了一次重大事件，数亿美元被抽走。据报道 CEO 在中国被拘留，团队沉默。运营实际上停止了，成为桥安全和中心化风险的警示故事。\n\nMultichain 的历史对于理解桥风险很重要。它凸显了集中控制的危险、缺乏透明度，以及在使用任何桥接解决方案之前评估桥安全假设的重要性。",
+	"features": {
+		"1": {
+			"title": "90+ 条链",
+			"description": "曾经覆盖广泛"
+		},
+		"2": {
+			"title": "路由协议",
+			"description": "流动性路由"
+		},
+		"3": {
+			"title": "anyToken",
+			"description": "包装资产系统"
+		},
+		"4": {
+			"title": "MULTI 代币",
+			"description": "治理（已停止）"
+		},
+		"5": {
+			"title": "MPC 安全",
+			"description": "多方计算"
+		},
+		"6": {
+			"title": "警示故事",
+			"description": "桥风险示例"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "历史参考",
+			"description": "桥风险研究"
+		},
+		"2": {
+			"title": "安全教训",
+			"description": "中心化风险"
+		},
+		"3": {
+			"title": "尽职调查",
+			"description": "仔细评估桥"
+		},
+		"4": {
+			"title": "不推荐使用",
+			"description": "使用替代品"
+		},
+		"5": {
+			"title": "受影响用户",
+			"description": "检查索赔流程"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Multichain 还在运营吗？",
+			"answer": "不。2023 年 7 月事件后，Multichain 停止运营。不要使用任何 Multichain 桥或持有 anyToken。使用 Stargate、Hop、Across 或 Axelar 等替代桥。"
+		},
+		"2": {
+			"question": "Multichain 发生了什么？",
+			"answer": "2023 年 7 月，1.3 亿美元以上从 Multichain 被抽走。据报道 CEO 在中国被拘留。团队沉默。据信密钥被泄露或被拿走。提醒桥安全依赖于运营商。"
+		},
+		"3": {
+			"question": "如果我有被困资金怎么办？",
+			"answer": "如果你有被困的 anyToken 或待处理交易，选择有限。一些受影响的链/项目有恢复流程。查看官方公告。不幸的是，许多资金可能已丢失。"
+		},
+		"4": {
+			"question": "我们能从 Multichain 学到什么？",
+			"answer": "关键教训：评估桥安全模型。集中控制是危险的。如果密钥持有者被泄露，MPC 也无济于事。跨桥多元化降低风险。使用大额之前始终研究。"
+		},
+		"5": {
+			"question": "我应该使用哪些桥替代？",
+			"answer": "替代品包括 Stargate、Hop、Across、Synapse、Celer、Axelar、LayerZero 和 Wormhole。每个都有不同的安全权衡。使用 Socket/LI.FI 等桥聚合器比较路线。"
+		}
+	},
+	"cta": {
+		"ready": "寻找活跃的桥？",
+		"button": "查看桥替代品",
+		"note": "请勿使用 - 仅供历史参考"
+	}
+}

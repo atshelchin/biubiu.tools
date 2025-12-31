@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Superbridge - 原生 L2 桥",
+		"description": "Superbridge 提供最简单的方式桥接到 OP Stack 链。Base、Optimism、Zora、Mode 和其他 L2 的原生桥接。",
+		"keywords": "Superbridge, OP Stack 桥, Base 桥, 原生桥, L2 桥, optimistic rollup"
+	},
+	"overview": "Superbridge 是桥接资产进出 OP Stack L2 的最简单方式。它为 Base、Optimism、Zora、Mode 和其他建立在 Optimism 堆栈上的链提供原生桥接的简洁界面。\n\n原生桥使用官方 rollup 桥合约——最安全的桥接方式。Superbridge 通过用户友好的界面使这些官方桥变得易于访问。没有第三方协议，只有直接的 L1↔L2 转账。\n\n权衡是速度：原生桥有等待期（特别是提款）由于 rollup 最终性。但对于愿意等待的安全意识用户，Superbridge 为支持的链提供最安全的桥接选项。",
+	"features": {
+		"1": {
+			"title": "OP Stack 原生",
+			"description": "官方桥合约"
+		},
+		"2": {
+			"title": "简单 UI",
+			"description": "用户友好界面"
+		},
+		"3": {
+			"title": "多个 L2",
+			"description": "Base、OP、Zora、Mode"
+		},
+		"4": {
+			"title": "最安全",
+			"description": "无第三方风险"
+		},
+		"5": {
+			"title": "存款快速",
+			"description": "快速到 L2"
+		},
+		"6": {
+			"title": "提款慢",
+			"description": "7 天挑战期"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "安全桥接",
+			"description": "最小信任假设"
+		},
+		"2": {
+			"title": "首次存款",
+			"description": "初始 L2 资金"
+		},
+		"3": {
+			"title": "大额",
+			"description": "值得等待"
+		},
+		"4": {
+			"title": "长期持有",
+			"description": "不赶时间"
+		},
+		"5": {
+			"title": "OP Stack L2",
+			"description": "官方桥访问"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "为什么使用原生桥？",
+			"answer": "原生桥使用官方 rollup 合约——L2 本身的安全性。没有额外的信任假设。第三方桥更快但引入额外风险。对于大额或安全聚焦，原生最好。"
+		},
+		"2": {
+			"question": "存款需要多长时间？",
+			"answer": "存款到 L2 很快——通常在 L1 确认后 10-20 分钟。你正在向 rollup 添加资金，处理很快。提款才需要更长时间。"
+		},
+		"3": {
+			"question": "为什么提款需要 7 天？",
+			"answer": "乐观 rollup 假设交易有效除非被挑战。7 天挑战期让任何人可以在需要时证明欺诈。这种安全模型需要等待期。这是特性，不是 bug。"
+		},
+		"4": {
+			"question": "Superbridge 支持哪些 L2？",
+			"answer": "Superbridge 支持 OP Stack 链：Base、Optimism、Zora、Mode、Fraxtal 等。这些都共享相同的原生桥架构。不支持非 OP Stack 链。"
+		},
+		"5": {
+			"question": "我可以加速提款吗？",
+			"answer": "Across 或 Hop 等第三方桥通过预付流动性提供更快提款。但它们增加信任假设。如果你需要速度，用它们。如果安全更重要，等 7 天。"
+		}
+	},
+	"cta": {
+		"ready": "准备安全 L2 桥接了吗？",
+		"button": "使用 Superbridge",
+		"note": "原生 OP Stack 桥"
+	}
+}

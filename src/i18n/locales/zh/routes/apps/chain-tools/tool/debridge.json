@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "deBridge - 跨链交易协议",
+		"description": "deBridge 实现高性能跨链交易和桥接。具有深度流动性和低滑点的原生资产交换。",
+		"keywords": "deBridge, 跨链交易, DLN, DBR 代币, 互操作性, 跨链交换"
+	},
+	"overview": "deBridge 是一个专注于性能和资本效率的跨链交易和桥接协议。他们的 DLN（去中心化流动性网络）实现无包装代币的原生跨链交换。\n\n与锁定和铸造的传统桥不同，deBridge 的做市商在目标链上提供原生资产。这意味着更好的流动性、更低的滑点，没有包装代币的复杂性。协议支持跨链限价单。\n\nDBR 代币用于治理和费用分享。deBridge 以有竞争力的费率处理了大量交易，特别是对于流动性深度重要的大额交易。",
+	"features": {
+		"1": {
+			"title": "原生资产",
+			"description": "无包装代币"
+		},
+		"2": {
+			"title": "DLN 网络",
+			"description": "去中心化流动性"
+		},
+		"3": {
+			"title": "跨链限价单",
+			"description": "限价订单"
+		},
+		"4": {
+			"title": "DBR 代币",
+			"description": "治理和费用"
+		},
+		"5": {
+			"title": "深度流动性",
+			"description": "低滑点"
+		},
+		"6": {
+			"title": "多链",
+			"description": "主要网络"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "大额交换",
+			"description": "深度流动性桥接"
+		},
+		"2": {
+			"title": "限价单",
+			"description": "跨链限价"
+		},
+		"3": {
+			"title": "原生资产",
+			"description": "避免包装代币"
+		},
+		"4": {
+			"title": "做市",
+			"description": "提供流动性"
+		},
+		"5": {
+			"title": "交易",
+			"description": "跨链套利"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 DLN？",
+			"answer": "DLN（去中心化流动性网络）是 deBridge 的跨链交换系统。做市商竞争填充订单，在目标链上提供原生资产。没有包装代币，只有原生 ETH、USDC 等。"
+		},
+		"2": {
+			"question": "原生资产如何可能？",
+			"answer": "做市商在多条链上持有原生资产。当你想要 Arbitrum 上的 ETH，他们发送他们在那里的原生 ETH 并接收你在以太坊上的 ETH。就像跨链的原子交换。"
+		},
+		"3": {
+			"question": "限价单如何工作？",
+			"answer": "deBridge 支持跨链限价单。为你的交换设置价格目标，做市商在条件满足时填充。以精确的方式跨链执行交易策略。"
+		},
+		"4": {
+			"question": "DBR 代币是什么？",
+			"answer": "DBR 治理 deBridge 协议。持有者投票参数和发展。质押 DBR 可能从协议收入中获得费用分享。它使治理与协议成功保持一致。"
+		},
+		"5": {
+			"question": "支持哪些链？",
+			"answer": "deBridge 支持以太坊、Arbitrum、Optimism、Polygon、BSC、Avalanche、Fantom、Solana 等。重点是交易活动高的主要链。查看应用获取当前支持。"
+		}
+	},
+	"cta": {
+		"ready": "准备跨链交易了吗？",
+		"button": "使用 deBridge",
+		"note": "高性能桥接"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "RAILGUN - Privacy for DeFi",
+		"description": "RAILGUN provides on-chain privacy for DeFi transactions. Shield tokens and trade privately while using existing DeFi protocols.",
+		"keywords": "RAILGUN, privacy DeFi, shielded transactions, zero knowledge, RAIL token, private trading"
+	},
+	"overview": "RAILGUN brings privacy to DeFi without leaving the Ethereum ecosystem. Unlike privacy chains, RAILGUN is a smart contract system that shields tokens while letting you interact with regular DeFi protocols.\n\nShield your tokens into the RAILGUN system, then trade on Uniswap, lend on Aave, or use any DeFi privately. Zero-knowledge proofs ensure your transactions are valid without revealing sender, recipient, or amount.\n\nRAILGUN works on Ethereum, Polygon, BSC, and Arbitrum. The RAIL token governs the protocol. It's the leading privacy solution that integrates with existing DeFi rather than creating separate ecosystems.",
+	"features": {
+		"1": {
+			"title": "Shielded Balances",
+			"description": "Private token holdings"
+		},
+		"2": {
+			"title": "Private DeFi",
+			"description": "Use protocols privately"
+		},
+		"3": {
+			"title": "Zero-Knowledge",
+			"description": "ZK proofs for privacy"
+		},
+		"4": {
+			"title": "Multi-Chain",
+			"description": "ETH, Polygon, BSC, Arb"
+		},
+		"5": {
+			"title": "RAIL Token",
+			"description": "Governance token"
+		},
+		"6": {
+			"title": "Railway Wallet",
+			"description": "Private wallet interface"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Private Transfers",
+			"description": "Send tokens privately"
+		},
+		"2": {
+			"title": "Private Trading",
+			"description": "Swap without exposure"
+		},
+		"3": {
+			"title": "Private DeFi",
+			"description": "Lend/borrow privately"
+		},
+		"4": {
+			"title": "Shield Holdings",
+			"description": "Hide wallet balances"
+		},
+		"5": {
+			"title": "RAIL Governance",
+			"description": "Vote on protocol"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How does RAILGUN privacy work?",
+			"answer": "Deposit tokens to get 'shielded' versions. Transactions within RAILGUN use ZK proofs—they prove validity without revealing details. When using DeFi, RAILGUN interacts on your behalf privately."
+		},
+		"2": {
+			"question": "Is RAILGUN like Tornado Cash?",
+			"answer": "Both use ZK proofs for privacy. Tornado was a mixer—deposit and withdraw fixed amounts. RAILGUN is a full private balance system with DeFi integration. RAILGUN maintains balances, not just mixing."
+		},
+		"3": {
+			"question": "Can I use regular DeFi privately?",
+			"answer": "Yes, that's RAILGUN's key feature. Your shielded balance can trade on 0x/Uniswap aggregators, interact with lending protocols, etc. RAILGUN acts as intermediary so DeFi sees the contract, not you."
+		},
+		"4": {
+			"question": "Is RAILGUN legal?",
+			"answer": "RAILGUN is a privacy tool—legality depends on use and jurisdiction. It includes a 'Private Proof of Innocence' system for compliance. Always follow your local laws. Privacy itself isn't illegal."
+		},
+		"5": {
+			"question": "What are the limitations?",
+			"answer": "Shielding/unshielding costs gas. ZK proof generation takes time. Smaller anonymity set than ideal. Some tokens/protocols not supported. Privacy is probabilistic—patterns can leak information."
+		}
+	},
+	"cta": {
+		"ready": "Ready for private DeFi?",
+		"button": "Explore RAILGUN",
+		"note": "Privacy meets DeFi"
+	}
+}

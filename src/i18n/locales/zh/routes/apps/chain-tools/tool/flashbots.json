@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Flashbots - MEV 基础设施",
+		"description": "Flashbots 构建公平 MEV 提取的基础设施。通过 MEV-Share 保护交易免受抢跑，通过 MEV-Boost 访问区块构建。",
+		"keywords": "Flashbots, MEV, 最大可提取价值, 抢跑保护, MEV-Boost, 区块构建"
+	},
+	"overview": "Flashbots 是领先的 MEV（最大可提取价值）研究和开发组织。他们构建的关键基础设施通过民主化 MEV 访问使以太坊更公平和高效。\n\nMEV-Boost 让验证者将区块构建外包给专业构建者，在保持网络去中心化的同时增加验证者收入。MEV-Share 将 MEV 返还给产生它的用户，保护他们免受有害提取。\n\nFlashbots 还开发了 Protect RPC，通过私有内存池路由交易以防止抢跑。他们的研究塑造了整个行业对 MEV 的思考方式。他们是以太坊的核心基础设施。",
+	"features": {
+		"1": {
+			"title": "MEV-Boost",
+			"description": "验证者区块构建"
+		},
+		"2": {
+			"title": "MEV-Share",
+			"description": "MEV 再分配"
+		},
+		"3": {
+			"title": "Protect RPC",
+			"description": "抢跑保护"
+		},
+		"4": {
+			"title": "Flashbots 拍卖",
+			"description": "私密交易提交"
+		},
+		"5": {
+			"title": "SUAVE",
+			"description": "去中心化区块构建"
+		},
+		"6": {
+			"title": "研究",
+			"description": "MEV 研究领导者"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "抢跑保护",
+			"description": "私密交易"
+		},
+		"2": {
+			"title": "验证者收入",
+			"description": "最大化区块价值"
+		},
+		"3": {
+			"title": "MEV 搜索者",
+			"description": "提交捆绑包"
+		},
+		"4": {
+			"title": "协议集成",
+			"description": "MEV 感知设计"
+		},
+		"5": {
+			"title": "用户保护",
+			"description": "MEV 再分配"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 MEV？",
+			"answer": "MEV（最大可提取价值）是通过重排、插入或审查交易获取的利润。例如：抢跑交换、三明治攻击、清算。Flashbots 使 MEV 提取更透明，并将价值返还给用户。"
+		},
+		"2": {
+			"question": "Protect RPC 如何工作？",
+			"answer": "交易不会发送到公共内存池（机器人可以看到并抢跑），而是发送给私有构建者。你的交易被包含而不会被夹击。在 MetaMask 中添加该 RPC 即可获得保护。"
+		},
+		"3": {
+			"question": "什么是 MEV-Boost？",
+			"answer": "MEV-Boost 是验证者运行的软件，用于外包区块构建。专业构建者竞争构建最有价值的区块。验证者选择最高出价。这是今天大多数以太坊区块的构建方式。"
+		},
+		"4": {
+			"question": "什么是 MEV-Share？",
+			"answer": "MEV-Share 将 MEV 重新分配给创造它的用户。当你的交易产生 MEV 时，你会收到一部分而不是全部流向搜索者。它使用户和 MEV 供应链之间的激励保持一致。"
+		},
+		"5": {
+			"question": "什么是 SUAVE？",
+			"answer": "SUAVE（单一统一价值表达拍卖）是 Flashbots 对去中心化区块构建的愿景。目前，构建者是中心化的。SUAVE 旨在使整个 MEV 供应链更加去中心化和公平。"
+		}
+	},
+	"cta": {
+		"ready": "准备保护你的交易了吗？",
+		"button": "探索 Flashbots",
+		"note": "以太坊 MEV 基础设施"
+	}
+}

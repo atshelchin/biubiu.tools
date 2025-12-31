@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Synapse Protocol - 跨链桥",
+		"description": "Synapse Protocol 实现跨链桥接和交换。在 15+ 条链之间转移资产，具有深度流动性和有竞争力的费率。",
+		"keywords": "Synapse Protocol, 跨链桥, SYN 代币, 多链, 桥接, 跨链交换"
+	},
+	"overview": "Synapse Protocol 是一个支持 15+ 条区块链的跨链桥和流动性网络。在以太坊、L2 和 alt-L1 之间桥接资产，具有良好的流动性和合理的费用。\n\nSynapse 对不同路线使用流动性池和规范桥的组合。他们的 nUSD 和 nETH 稳定币交换池为跨链转账提供深度流动性。网络已处理数十亿美元的交易量。\n\nSYN 代币用于治理和流动性挖矿。Synapse 还为构建多链应用的开发者提供跨链消息传递。它是生态系统中成熟的桥之一。",
+	"features": {
+		"1": {
+			"title": "15+ 条链",
+			"description": "广泛网络支持"
+		},
+		"2": {
+			"title": "深度流动性",
+			"description": "大型稳定币交换池"
+		},
+		"3": {
+			"title": "跨链交换",
+			"description": "任意代币到任意代币"
+		},
+		"4": {
+			"title": "SYN 代币",
+			"description": "治理和奖励"
+		},
+		"5": {
+			"title": "消息传递",
+			"description": "跨链通信"
+		},
+		"6": {
+			"title": "快速转账",
+			"description": "分钟级，非小时级"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "桥接资产",
+			"description": "在链间移动"
+		},
+		"2": {
+			"title": "跨链交换",
+			"description": "交换和桥接一起"
+		},
+		"3": {
+			"title": "稳定币桥接",
+			"description": "移动 USDC/USDT"
+		},
+		"4": {
+			"title": "LP 挖矿",
+			"description": "提供桥流动性"
+		},
+		"5": {
+			"title": "开发者集成",
+			"description": "跨链消息传递"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Synapse 支持哪些链？",
+			"answer": "Synapse 支持以太坊、Arbitrum、Optimism、Polygon、BSC、Avalanche、Fantom 等。查看应用获取当前支持的链——他们会定期添加获得关注的新网络。"
+		},
+		"2": {
+			"question": "转账需要多长时间？",
+			"answer": "大多数转账在 5-15 分钟内完成。速度取决于源/目标链的确认时间。由于最终性要求，以太坊存款需要更长时间。L2 到 L2 转账最快。"
+		},
+		"3": {
+			"question": "费用是多少？",
+			"answer": "费用包括两条链上的 Gas 成本加上少量协议费（通常 0.05-0.1%）。对于稳定币桥接，由于深度流动性池，滑点最小。与其他桥比较以获得最佳费率。"
+		},
+		"4": {
+			"question": "什么是 nUSD/nETH？",
+			"answer": "nUSD 和 nETH 是 Synapse 的跨链原生资产。当你桥接时，你可能会收到 nUSD，然后可以交换为原生 USDC。这实现了高效的跨链流动性，无需包装代币。"
+		},
+		"5": {
+			"question": "Synapse 安全吗？",
+			"answer": "Synapse 自 2021 年以来一直在运营，处理了数十亿美元且没有重大漏洞。它使用具有分布式验证者的阈值签名方案。始终使用官方链接并了解桥接风险。"
+		}
+	},
+	"cta": {
+		"ready": "准备跨链桥接了吗？",
+		"button": "使用 Synapse",
+		"note": "跨链流动性网络"
+	}
+}

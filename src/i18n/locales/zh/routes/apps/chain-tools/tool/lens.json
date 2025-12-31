@@ -1,83 +1,83 @@
 {
 	"seo": {
-		"title": "Lens Protocol - Decentralized Social Graph",
-		"description": "Lens Protocol is a decentralized social graph built on Polygon. Own your social identity and content across Web3 applications.",
-		"keywords": "Lens Protocol, social graph, Web3 social, decentralized social, Polygon, content ownership"
+		"title": "Lens Protocol - 去中心化社交图谱",
+		"description": "Lens Protocol 是建立在 Polygon 上的去中心化社交图谱。拥有你的社交身份、内容和关系。",
+		"keywords": "Lens Protocol, 去中心化社交, 社交图谱, Web3 社交, Polygon, NFT 个人资料"
 	},
-	"overview": "Lens Protocol is a decentralized social graph that lets users own their social identity and content. Built by the Aave team on Polygon, Lens provides the infrastructure for Web3 social applications.\n\nYour Lens profile is an NFT that you control. Followers, content, and interactions are stored on-chain, portable across any app built on Lens. This breaks the lock-in of traditional social platforms.\n\nLens has grown a vibrant ecosystem of social apps including Lenster, Orb, and Hey. Content creators can monetize directly through collect modules without platform intermediaries.",
+	"overview": "Lens Protocol 是由 Aave 团队构建的去中心化社交图谱。与 Twitter 或 Instagram 不同，在那些平台上你的关注者和内容由公司拥有，而 Lens 让你真正拥有你的社交身份。\n\n每个个人资料都是一个 NFT。你的关注者、帖子和连接都属于你。如果一个应用审查你或倒闭了，你可以把你的图谱带到另一个应用。这是可组合的社交。\n\nLens 生态系统包括多个应用：Lenster（类似 Twitter）、Lenstube（类似 YouTube）、Orb 等。它们都共享同一个社交图谱。发展迅速，在 Web3 社交中处于领先地位。",
 	"features": {
 		"1": {
-			"title": "Profile NFTs",
-			"description": "Own your social identity"
+			"title": "NFT 个人资料",
+			"description": "拥有你的身份"
 		},
 		"2": {
-			"title": "Portable Graph",
-			"description": "Followers across all apps"
+			"title": "便携式社交图谱",
+			"description": "带走你的关注者"
 		},
 		"3": {
-			"title": "Content Ownership",
-			"description": "Own what you create"
+			"title": "内容所有权",
+			"description": "拥有你的帖子"
 		},
 		"4": {
-			"title": "Collect Modules",
-			"description": "Monetize content directly"
+			"title": "模块化",
+			"description": "自定义社交原语"
 		},
 		"5": {
-			"title": "Polygon Native",
-			"description": "Low-cost social actions"
+			"title": "多应用生态",
+			"description": "一个图谱，多个应用"
 		},
 		"6": {
-			"title": "Open Ecosystem",
-			"description": "Many apps, one graph"
+			"title": "无 Gas 费",
+			"description": "Polygon 驱动"
 		}
 	},
 	"use_cases": {
 		"1": {
-			"title": "Social Posting",
-			"description": "Share content you own"
+			"title": "去中心化社交",
+			"description": "拥有你的身份"
 		},
 		"2": {
-			"title": "Creator Monetization",
-			"description": "Sell content as collects"
+			"title": "创作者经济",
+			"description": "内容货币化"
 		},
 		"3": {
-			"title": "Building Audience",
-			"description": "Portable follower base"
+			"title": "构建应用",
+			"description": "开发社交应用"
 		},
 		"4": {
-			"title": "App Development",
-			"description": "Build on Lens graph"
+			"title": "便携式粉丝群",
+			"description": "在应用间携带受众"
 		},
 		"5": {
-			"title": "Community",
-			"description": "Join Web3 social communities"
+			"title": "社区建设",
+			"description": "拥有社区关系"
 		}
 	},
 	"faqs": {
 		"1": {
-			"question": "What is a social graph?",
-			"answer": "A social graph is the network of connections between users—followers, friends, interactions. On Twitter, this is owned by Twitter. On Lens, you own it as an NFT, portable to any Lens app."
+			"question": "什么是 Lens Protocol？",
+			"answer": "Lens 是一个去中心化社交图谱——你的社交身份、关注者和内容存储在区块链上。你拥有它而非平台。个人资料是 NFT。你可以在共享同一图谱的应用之间移动。"
 		},
 		"2": {
-			"question": "How does Lens differ from Twitter?",
-			"answer": "Twitter owns your data and followers. Lens stores them on-chain as your property. You can use any Lens app with the same profile. No platform can ban you or delete your content. You monetize directly."
+			"question": "如何获取 Lens 个人资料？",
+			"answer": "最初 Lens 个人资料是邀请制的。现在你可以在 OpenSea 等市场购买个人资料 NFT，或在他们开放铸造时创建。关注官方公告获取当前获取方法。"
 		},
 		"3": {
-			"question": "What are Lens apps?",
-			"answer": "Many apps are built on Lens: Lenster (Twitter-like), Hey (social), Orb (mobile), Buttrfly (cross-posting), and more. All share the same social graph—followers on one work on all."
+			"question": "Lens 和 Farcaster 有什么区别？",
+			"answer": "两者都是去中心化社交协议。Lens 建立在 Polygon 上，以 NFT 为中心。Farcaster 使用不同架构，专注于轻量级消息传递。两者都在成长——它们提供不同的权衡和生态系统。"
 		},
 		"4": {
-			"question": "What are collect modules?",
-			"answer": "Collect modules let followers 'collect' your posts as NFTs. You set a price and they pay directly to you. It's native content monetization without platform fees or algorithms deciding who sees it."
+			"question": "有哪些 Lens 应用？",
+			"answer": "主要的 Lens 应用包括 Lenster/Hey（类似 Twitter 的信息流）、Lenstube（视频）、Orb（移动端）等。它们都共享你的 Lens 图谱。发一个帖子，它会出现在任何地方。"
 		},
 		"5": {
-			"question": "Is Lens free to use?",
-			"answer": "Lens profiles were initially free but limited. Now profiles require purchasing or receiving from existing holders. Posting costs minimal Polygon gas. Some apps sponsor gas for users."
+			"question": "为什么社交图谱的所有权很重要？",
+			"answer": "在 Web2 中，如果 Twitter 封禁你，你会失去关注者。在 Lens 中，你的图谱是你自己的。在应用之间切换不会失去受众。无法被去平台化。它从根本上改变了创作者和平台的权力动态。"
 		}
 	},
 	"cta": {
-		"ready": "Ready to own your social identity?",
-		"button": "Explore Lens",
-		"note": "Web3 social graph"
+		"ready": "准备拥有你的社交身份了吗？",
+		"button": "探索 Lens",
+		"note": "去中心化社交图谱"
 	}
 }

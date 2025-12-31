@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Socket - Bridge Aggregator Protocol",
+		"description": "Socket aggregates bridges and DEXs for optimal cross-chain routes. One API for all bridging, powering apps like Bungee Exchange.",
+		"keywords": "Socket, bridge aggregator, Bungee, cross-chain routing, interoperability, multi-bridge"
+	},
+	"overview": "Socket is a bridge and DEX aggregation protocol. Instead of choosing a single bridge, Socket finds the optimal route across multiple bridges and exchanges for your cross-chain transfer.\n\nThink of it as 1inch for bridging. Socket compares rates across Stargate, Hop, Across, Celer, and many others to find the best combination of speed, cost, and security for your specific transfer.\n\nBungee Exchange is Socket's consumer-facing product—a user-friendly interface for cross-chain swaps. Many other apps integrate Socket's API for bridging. It's infrastructure that makes multi-chain crypto more accessible.",
+	"features": {
+		"1": {
+			"title": "Bridge Aggregation",
+			"description": "Compare all bridges"
+		},
+		"2": {
+			"title": "DEX Integration",
+			"description": "Swap + bridge combined"
+		},
+		"3": {
+			"title": "Optimal Routes",
+			"description": "Best price finding"
+		},
+		"4": {
+			"title": "Bungee Exchange",
+			"description": "User-friendly interface"
+		},
+		"5": {
+			"title": "Developer API",
+			"description": "Integrate bridging"
+		},
+		"6": {
+			"title": "Multi-Chain",
+			"description": "Wide network support"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Best Rate Bridging",
+			"description": "Compare all options"
+		},
+		"2": {
+			"title": "Cross-Chain Swaps",
+			"description": "Any token, any chain"
+		},
+		"3": {
+			"title": "App Integration",
+			"description": "Add bridging via API"
+		},
+		"4": {
+			"title": "Route Optimization",
+			"description": "Speed vs cost tradeoffs"
+		},
+		"5": {
+			"title": "Multi-Bridge",
+			"description": "Split across bridges"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Socket?",
+			"answer": "Socket is a bridge aggregator—it finds the best route across multiple bridges for your transfer. Instead of manually comparing Stargate, Hop, Across, etc., Socket does it automatically. Bungee is their consumer app."
+		},
+		"2": {
+			"question": "How does route optimization work?",
+			"answer": "Socket checks available bridges for your token/route, compares fees and speeds, and shows you options. You can optimize for cost (cheapest), speed (fastest), or balance. It may split large transfers across bridges."
+		},
+		"3": {
+			"question": "What bridges does Socket support?",
+			"answer": "Socket integrates major bridges including Stargate, Hop, Across, Celer, Hyphen, Connext, and more. The list grows as new bridges launch. Check their docs for current integrations."
+		},
+		"4": {
+			"question": "What is Bungee Exchange?",
+			"answer": "Bungee is Socket's user-facing app at bungee.exchange. Clean UI for cross-chain transfers powered by Socket's aggregation. Anyone can use it to bridge—no need to choose bridges manually."
+		},
+		"5": {
+			"question": "Can developers integrate Socket?",
+			"answer": "Yes, Socket provides APIs and SDKs for developers. Add cross-chain functionality to your app without integrating each bridge separately. Many wallets and dApps use Socket for bridging."
+		}
+	},
+	"cta": {
+		"ready": "Ready for optimal cross-chain routes?",
+		"button": "Use Socket",
+		"note": "Bridge aggregation protocol"
+	}
+}

@@ -1,0 +1,162 @@
+{
+	"title": "去中心化身份完全指南",
+	"subtitle": "从 ENS 到零知识凭证，精通 Web3 身份",
+
+	"sections": {
+		"intro": {
+			"title": "去中心化身份简介",
+			"content": "<p>去中心化身份（DID）代表了我们如何在线管理数字身份的根本性转变。去中心化身份不依赖于 Google、Facebook 或政府数据库等中心化平台来验证你的身份，而是让你完全拥有和控制你的身份数据。</p><p>在这份完整指南中，你将学习去中心化身份如何运作，从简单的命名服务（如 ENS）到使用零知识证明的高级隐私保护凭证。我们将探索真实世界的用例，从更简便的加密货币交易到抗女巫攻击的空投和 DAO 治理。</p>"
+		},
+		"why_decentralized_identity": {
+			"title": "为什么去中心化身份很重要",
+			"content": "<p>传统的数字身份已经失效。每个网站都有自己的用户名/密码系统。社交登录让科技巨头控制你的访问权限。政府身份证泄露你的个人数据。Web3 提供了一个更好的方式——一个真正属于你的身份。</p>",
+			"ownership": {
+				"title": "自主身份",
+				"content": "<p><strong>Web2 身份：</strong>Facebook、Google 和政府拥有你的身份数据。他们可以删除你的账户、拒绝访问或泄露你的信息。</p><p><strong>Web3 身份：</strong>你通过加密密钥控制自己的身份。没有平台可以夺走、审查或在未经你许可的情况下访问它。</p><p><strong>控制权：</strong>你决定分享什么信息、与谁分享以及分享多长时间。随时可以撤销访问权限。</p><p><strong>可移植性：</strong>你的身份适用于所有 Web3 应用。一次登录，无限平台。</p><p><strong>隐私：</strong>通过零知识证明，你可以证明关于自己的事实（如年龄或公民身份），而无需透露底层数据。</p>"
+			},
+			"portability": {
+				"title": "跨平台身份",
+				"content": "<p>想象一下拥有一个可以在任何地方使用的身份。你的 ENS 名称成为你的：</p><ul><li><strong>支付地址：</strong>向 alice.eth 而不是 0x742d... 发送加密货币</li><li><strong>社交档案：</strong>你在 Lens、Farcaster 和其他社交协议上的用户名</li><li><strong>登录凭证：</strong>无需密码即可登录 dApp</li><li><strong>声誉：</strong>你的链上历史记录在各个平台之间跟随你</li></ul><p>这不仅仅是方便——它从根本上改变了权力动态。平台竞相为你服务，因为你可以在不失去身份、关注者或声誉的情况下离开。</p>"
+			}
+		},
+		"naming_services": {
+			"title": "区块链命名服务",
+			"content": "<p>命名服务是去中心化身份的基础。它们用人类可读的名称替换长加密地址，使加密货币像传统应用一样易于使用。</p>",
+			"ens": {
+				"title": "ENS：价值互联网的 DNS",
+				"content": "<p>以太坊域名服务（ENS）是最成熟的区块链命名系统。它的工作原理类似于互联网的 DNS，但是去中心化且抗审查。</p><p><strong>ENS 工作原理：</strong></p><ol><li>注册一个 .eth 域名（例如 alice.eth）</li><li>将其链接到你的以太坊地址、其他加密地址、社交档案，甚至网站</li><li>任何人都可以使用你的 .eth 名称向你发送加密货币或联系你</li></ol><p><strong>ENS 功能：</strong></p><ul><li><strong>多链支持：</strong>一个 ENS 名称可以解析为以太坊、比特币、狗狗币和 100 多条其他链上的地址</li><li><strong>丰富的个人资料：</strong>添加头像、Twitter 账号、电子邮件、网站和自定义记录</li><li><strong>子域名：</strong>创建 pay.alice.eth、vault.alice.eth 等</li><li><strong>可编程：</strong>智能合约可以拥有名称并实现自定义逻辑</li></ul><p><strong>真实示例：</strong>vitalik.eth 是 Vitalik Buterin 的 ENS 名称。它解析为他的以太坊地址（0xd8dA...）、他的 Twitter（@VitalikButerin），并显示他的头像。任何人都可以通过输入 vitalik.eth 向他发送 ETH。</p>"
+			},
+			"multi_chain": {
+				"title": "多链命名服务",
+				"content": "<p>随着加密货币扩展到以太坊之外，命名服务也发展为支持多个生态系统：</p><p><strong>Unstoppable Domains：</strong>基于 NFT 的域名（.crypto、.nft、.wallet），你永久拥有——无需续费。它们可作为钱包地址、网站托管和跨多链的登录凭证。</p><p><strong>SPACE ID：</strong>BNB Chain、Arbitrum 和其他网络的首选命名服务。他们提供 .bnb、.arb 域名，并正在构建跨链的通用命名服务。</p><p><strong>Base 域名服务（BNS）：</strong>Coinbase 的 L2 命名服务，提供 .base 域名。与 Coinbase 产品和 Base 生态系统深度集成。</p><p><strong>.bit：</strong>由 Nervos 提供支持的链无关命名。适用于任何区块链和任何钱包。你甚至可以使用 .bit 名称登录 Web2 应用。</p><p><strong>Bonfida SNS：</strong>Solana 的命名服务。.sol 域名是 Solana 上的标准身份，类似于以太坊上的 ENS。</p>"
+			},
+			"lens_handles": {
+				"title": "社交协议用户名",
+				"content": "<p>除了域名之外，去中心化社交协议使用用户名作为主要标识符：</p><p><strong>Lens 协议：</strong>@alice.lens 既是你的社交用户名，也是你拥有的 NFT。它包括你的帖子、关注者和社交图谱——所有这些都可以在 Lens 应用之间移植。</p><p><strong>Farcaster：</strong>使用你控制的 .farcaster 用户名。你的身份和社交连接是你的，而不是应用的。</p><p>这些用户名代表了一种新范式：<strong>你的社交身份是你拥有的资产</strong>，而不是从平台租来的个人资料。</p>"
+			}
+		},
+		"credentials_attestations": {
+			"title": "凭证与证明",
+			"content": "<p>凭证和证明允许你以可验证、防篡改的方式证明关于自己的事实。把它们想象成任何人都可以验证但没有人可以伪造的数字证书。</p>",
+			"proof_of_humanity": {
+				"title": "人格证明",
+				"content": "<p>加密货币面临的最大挑战之一是女巫攻击——一个人创建数千个假身份。人格证明系统在不透露你是谁的情况下验证你是一个独特的人类。</p><p><strong>Worldcoin：</strong>使用生物识别虹膜扫描创建唯一身份。你通过使用 Orb 设备扫描眼睛来证明你是人类。这会生成一个 World ID——你的唯一性的加密证明，而不链接到你的真实身份。</p><p><strong>Gitcoin Passport：</strong>聚合来自多个来源的身份验证（Twitter、Discord、Google、链上活动等）。你收集的「印章」越多，你的人类得分就越高。没有单点故障。</p><p><strong>BrightID：</strong>使用社交图谱验证。你通过在视频通话中与其他经过验证的人类连接来证明你的唯一性。去中心化、隐私保护且免费。</p><p><strong>为什么重要：</strong>人格证明实现了公平的空投、一人一票的治理，并防止机器人操纵去中心化系统。</p>"
+			},
+			"attestation_systems": {
+				"title": "链上证明系统",
+				"content": "<p>证明是关于某事或某人的签名声明。它们就像验证事实的数字签名。</p><p><strong>以太坊证明服务（EAS）：</strong>以太坊、Base、Optimism 和 Arbitrum 上的通用证明协议。任何人都可以创建自定义证明模式（模板）并发布可验证的证明。</p><p><strong>用例示例：</strong></p><ul><li>大学向你的地址发布文凭证明</li><li>DAO 证明你完成了赏金任务</li><li>KYC 提供商证明你通过了验证（不透露你的个人数据）</li><li>活动组织者证明你参加了会议</li></ul><p><strong>Verax：</strong>Linea 的证明注册表。类似于 EAS，但针对 Linea 网络进行了优化，具有更低的费用和更好的性能。</p><p>证明是可组合的——dApp 可以检查你的证明以授予访问权限、分发奖励或验证凭证，而无需信任中心化数据库。</p>"
+			},
+			"verifiable_credentials": {
+				"title": "可验证凭证",
+				"content": "<p>可验证凭证（VC）是你存储和控制的防篡改数字凭证。与存储在链上的证明不同，VC 可以存储在你的钱包中并有选择地共享。</p><p><strong>Disco：</strong>你的「数据背包」，用于收集和管理凭证。凭证可以代表技能、成就、会员资格或任何可验证的声明。你在需要时分享它们，而不会暴露所有内容。</p><p><strong>Civic：</strong>专注于身份验证和合规性。他们提供 KYC/AML 凭证，证明你通过了验证，而无需向每个 dApp 透露你的个人信息。</p><p><strong>工作流程：</strong></p><ol><li>发行者创建凭证并以加密方式签名</li><li>你将其存储在钱包中（如 Disco 的数据背包）</li><li>当 dApp 需要证明时，你出示凭证</li><li>dApp 验证签名并检查是否未被撤销</li></ol><p>这就是你如何证明自己年满 18 岁、是合格投资者或是美国公民，<strong>而无需透露你的身份证、生日或个人详细信息</strong>。</p>"
+			}
+		},
+		"reputation_systems": {
+			"title": "声誉系统",
+			"content": "<p>在 Web3 中，你的声誉是透明且可移植的。你在链上做的一切都有助于你的声誉得分，它会在所有平台上跟随你。</p>",
+			"on_chain_reputation": {
+				"title": "链上声誉评分",
+				"content": "<p>与你无法查看或控制的 Web2 信用评分不同，Web3 声誉是透明、可验证和可组合的。</p><p><strong>DegenScore：</strong>分析你的以太坊活动以计算声誉得分。因素包括交易历史、DeFi 使用情况、NFT 持有量和链上行为。高 DegenScore 表明你是经验丰富的加密用户，有资格获得独家空投和机会。</p><p><strong>Nomis：</strong>多链声誉协议。它分析你在以太坊、Polygon、BNB Chain 等上的活动，以创建全面的声誉得分。将你的得分铸造为链上徽章，证明你的可信度。</p><p><strong>Talent Protocol：</strong>专注于建设者声誉。如果你是开发者、设计师或创作者，你的 Talent 得分反映你对 Web3 的贡献。项目用它来寻找优质贡献者，建设者用它来展示他们的工作。</p><p><strong>为什么声誉重要：</strong></p><ul><li>基于链上信用历史的更优惠贷款利率</li><li>访问独家社区和机会</li><li>公平的空投分配（老用户获得更多）</li><li>合作和招聘的信任信号</li></ul>"
+			},
+			"poaps_badges": {
+				"title": "POAP 和数字徽章",
+				"content": "<p>徽章和 POAP（出席证明协议）是代表你的经历和成就的可收藏凭证。</p><p><strong>POAP：</strong>原创出席证明。活动组织者为参与者创建独特的 NFT 徽章。参加会议？获得 POAP。参与治理投票？获得 POAP。你的 POAP 收藏是你的 Web3 简历。</p><p><strong>Galxe：</strong>凭证和活动平台。项目创建任务和活动，你通过完成它们来赚取链上凭证（OAT）。大量用于社区建设和空投资格认证。</p><p><strong>Layer3：</strong>边学边赚凭证平台。完成任务以了解协议并获得可验证的凭证。项目使用 Layer3 来教育和引导用户，同时为未来的空投分发凭证。</p><p><strong>真实示例：</strong>许多项目使用 POAP 出席 + Galxe 任务完成 + 最低交易次数作为空投标准。你的徽章证明你是真正的社区成员，而不是机器人。</p>"
+			},
+			"soulbound_tokens": {
+				"title": "灵魂绑定代币（SBT）",
+				"content": "<p>灵魂绑定代币是不可转让的 NFT——永久绑定到你的钱包。与你可以出售的常规 NFT 不同，SBT 代表不应该可转让的凭证。</p><p><strong>Otterspace：</strong>为 DAO 和社区创建不可转让的徽章。用例包括会员徽章、角色分配和成就认可。由于它们不能转让，它们真正代表<em>你</em>，而不是购买代币的任何人。</p><p><strong>为什么要灵魂绑定？</strong></p><ul><li><strong>真实成就：</strong>不能购买别人的文凭或出席记录</li><li><strong>可信声誉：</strong>如果声誉得分可交易，它们就失去了意义</li><li><strong>治理权：</strong>基于贡献而非资本的投票权</li><li><strong>社区成员资格：</strong>证明你赢得了你的位置</li></ul><p>Vitalik Buterin 提出 SBT 作为「去中心化社会」（DeSoc）的基础——其中声誉、凭证和社会关系构成在线信任的基础。</p>"
+			}
+		},
+		"privacy_preserving_identity": {
+			"title": "隐私保护身份",
+			"content": "<p>终极身份系统让你在不透露底层数据的情况下证明关于自己的事情。这就是零知识（ZK）证明如何革新身份的地方。</p>",
+			"zk_identity": {
+				"title": "零知识身份",
+				"content": "<p>零知识证明让你证明一个陈述是真实的，而不透露除了陈述本身的真实性之外的任何信息。</p><p><strong>示例：</strong>证明你年满 21 岁，而不透露你的出生日期、身份证号码，甚至不透露你的确切年龄。验证者只学到一位信息：TRUE（你年满 21 岁）或 FALSE（你不满 21 岁）。</p><p><strong>Polygon ID：</strong>原生 ZK 身份基础设施。发行者创建凭证，你将它们存储在钱包中，你可以用零知识证明来证明关于自己的声明。验证者永远看不到你的实际凭证。</p><p><strong>Privado ID（iden3）：</strong>Polygon ID 和其他 ZK 身份系统背后的开源协议。实现具有零知识证明能力的 W3C DID 标准。</p><p><strong>zkPass：</strong>让你生成关于你的私人数据（如银行余额、信用评分或社交媒体关注者）的零知识证明，而无需暴露原始数据。对于在不暴露自己的情况下证明资格很有用。</p>"
+			},
+			"selective_disclosure": {
+				"title": "选择性披露",
+				"content": "<p>选择性披露意味着只披露所需的特定信息，不多不少。</p><p><strong>传统 KYC：</strong>你提交护照、驾照、银行对账单和水电费账单。平台看到一切——你的全名、地址、照片、出生日期、身份证号码。</p><p><strong>基于 ZK 的选择性披露：</strong>你只证明所需内容。检查年龄？证明你年满 18 岁。检查公民身份？证明你是美国公民。平台不了解其他任何内容。</p><p><strong>Sismo Protocol：</strong>创建聚合你的数据（ENS 名称、POAP、代币持有量等）的 ZK 徽章，并让你证明组成员资格而不透露你的地址。示例：证明你是早期以太坊用户，而不将你的身份与你的实际钱包链接起来。</p><p><strong>Holonym：</strong>隐私优先的人格证明。你验证一次身份，然后在每个 dApp 中用零知识证明来证明关于自己的事实（如独特的人类、X 国公民、年龄超过 Y）。</p>"
+			},
+			"zk_kyc": {
+				"title": "ZK-KYC：隐私合规验证",
+				"content": "<p>法规通常要求进行了解你的客户（KYC）验证。传统 KYC 意味着向中心化公司提交文件。ZK-KYC 提供了更好的方式。</p><p><strong>ZK-KYC 工作原理：</strong></p><ol><li>与受信任的发行者（政府、银行或 KYC 提供商）一次性验证你的身份</li><li>接收加密凭证</li><li>在需要时生成关于你的凭证的零知识证明</li><li>dApp 验证证明而不查看你的个人信息</li></ol><p><strong>好处：</strong></p><ul><li>验证一次，到处使用——无需重复 KYC</li><li>最小化数据暴露——只证明所需内容</li><li>减少平台责任——他们从不存储你的敏感数据</li><li>用户隐私——平台无法跨服务跟踪你</li></ul><p>这是 Web3 合规性的未来——隐私保护但符合规定。</p>"
+			}
+		},
+		"identity_aggregation": {
+			"title": "身份聚合",
+			"content": "<p>大多数人在 Web2 和 Web3 上拥有多个钱包和身份。身份聚合将这些组合成你控制的统一身份。</p>",
+			"linking_identities": {
+				"title": "链接 Web2 和 Web3",
+				"content": "<p>你的身份跨越多个平台：Twitter、Discord、GitHub、以太坊地址、Solana 地址等。身份预言机和聚合器将这些链接在一起。</p><p><strong>Clique Protocol：</strong>一个身份预言机，验证并链接你的 Web2 身份（社交媒体、电子邮件）与你的 Web3 地址。Dapp 可以查询 Clique 来查看你经过验证的社交账户，而无需单独登录。</p><p><strong>用例：</strong></p><ul><li><strong>空投：</strong>项目通过验证 Twitter 到钱包的链接向 Twitter 关注者分发代币</li><li><strong>门控访问：</strong>DAO 根据 GitHub 贡献或 Discord 角色授予访问权限</li><li><strong>声誉：</strong>将你的 Web2 社交证明与链上活动聚合，以获得全面的声誉</li></ul><p>目标是统一身份——一个地方管理你在整个互联网上的所有凭证和连接。</p>"
+			},
+			"cross_chain": {
+				"title": "跨链身份",
+				"content": "<p>Web3 是多链的。你的以太坊身份、Solana NFT、Base 凭证和 Polygon 徽章应该一起工作。</p><p><strong>Rarimo：</strong>跨链身份协议，使凭证可在区块链之间移植。在以太坊上发布证明，在 Polygon 上验证它。你的声誉无处不在。</p><p><strong>挑战：</strong></p><ul><li>不同的链使用不同的加密标准</li><li>验证跨链证明需要桥接或预言机</li><li>跨链链接地址时的隐私考虑</li></ul><p><strong>未来愿景：</strong>一个去中心化身份，适用于所有链，在 Web2 和 Web3 之间架起桥梁，并通过零知识证明维护隐私。</p>"
+			}
+		},
+		"use_cases": {
+			"title": "真实世界用例",
+			"content": "<p>去中心化身份不仅仅是理论上的——它今天正在解决真正的问题。以下是人们实际使用它的方式。</p>",
+			"web3_login": {
+				"title": "Web3 登录：使用以太坊登录",
+				"content": "<p>厌倦了记住密码？Web3 登录让你使用钱包登录应用。</p><p><strong>SpruceID（SIWE）：</strong>使用以太坊登录的标准。你不使用用户名/密码，而是用钱包签署消息。应用验证签名并让你登录。没有密码需要忘记或泄露。</p><p><strong>工作原理：</strong></p><ol><li>在网站上点击「使用以太坊登录」</li><li>连接你的钱包（MetaMask、Rainbow 等）</li><li>签署一条消息，证明你拥有该地址</li><li>你已登录——应用知道你的地址并可以加载你的数据</li></ol><p><strong>好处：</strong></p><ul><li>无需记住或存储密码</li><li>不需要电子邮件（增强隐私）</li><li>适用于所有启用 SIWE 的应用</li><li>你的钱包控制访问权限——通过断开连接来撤销</li></ul><p>这正成为 Web3 应用的标准。许多 Web2 应用也采用它作为替代登录选项。</p>"
+			},
+			"airdrops": {
+				"title": "抗女巫攻击的空投",
+				"content": "<p>空投是分发代币的流行方式。但如果没有身份验证，人们会创建数千个钱包来薅空投。女巫抗性解决了这个问题。</p><p><strong>Gitcoin Passport：</strong>最受欢迎的女巫抗性工具。项目设置最低 Passport 得分以获得空投资格。由于很难伪造印章（经过验证的 Twitter、GitHub、真实的链上活动），薅羊毛者被过滤掉。</p><p><strong>Galxe Passport：</strong>类似概念。完成验证以建立你的 Galxe Passport 得分。项目使用此得分来确保只有真实用户获得空投。</p><p><strong>真实示例：</strong></p><ul><li>Optimism 的空投使用链上活动 + 证明来过滤女巫</li><li>Arbitrum 使用交易次数 + 基于时间的标准</li><li>zkSync 可能会使用 Gitcoin Passport 或类似工具</li></ul><p><strong>结果：</strong>更公平的空投，代币流向真实用户，而不是机器人大军。身份验证使 Web3 更加公平。</p>"
+			},
+			"governance": {
+				"title": "DAO 治理和访问控制",
+				"content": "<p>DAO 需要管理成员资格、角色和权限。身份系统使这成为可能。</p><p><strong>Guild.xyz：</strong>代币门控访问控制。创建公会，其中入场需要特定的代币、NFT、凭证或证明。常见用途：</p><ul><li>基于代币持有量的 Discord 角色</li><li>徽章持有者的私人频道</li><li>基于声誉得分的分级会员资格</li><li>基于经过验证的凭证访问工具</li></ul><p><strong>示例工作流程：</strong></p><ol><li>DAO 创建一个公会，入场要求：持有 100+ DAO 代币<em>或</em>拥有核心贡献者徽章</li><li>成员连接钱包并验证凭证</li><li>公会自动授予 Discord 角色和访问权限</li><li>如果你出售代币或失去凭证，访问权限被撤销</li></ol><p><strong>超越访问控制：</strong>身份实现一人一票（使用人格证明）、加权投票（使用声誉得分）和委托（将你的投票权分配给受信任的专家）。</p>"
+			},
+			"social_networks": {
+				"title": "去中心化社交网络",
+				"content": "<p>去中心化社交网络使用身份作为其基础。你的身份、内容和社交图谱都是你拥有的资产。</p><p><strong>Lens 协议：</strong>你的 @alice.lens 用户名是一个 NFT。每个帖子、评论和关注者关系都存储在链上。你可以使用任何 Lens 应用（Lenster、Orb、Hey），你的身份/内容会跟随你。如果你不喜欢某个应用，可以切换——你不会失去关注者。</p><p><strong>Farcaster：</strong>类似模型，使用 .farcaster 用户名。你的社交图谱是你的，应用竞相提供最佳界面。</p><p><strong>为什么重要：</strong></p><ul><li><strong>平台独立性：</strong>Twitter 可以封禁你，你会失去一切。Lens 不能——你拥有你的用户名。</li><li><strong>创作者货币化：</strong>将你的内容代币化，让粉丝将你的帖子收藏为 NFT</li><li><strong>可移植声誉：</strong>你的关注者数量和社交证明随你移动</li><li><strong>算法选择：</strong>应用使用不同的算法，但显示你的统一社交图谱</li></ul><p>去中心化身份使 Web3 社交网络成为可能。没有它，我们只会重新创建 Twitter 的中心化。</p>"
+			}
+		}
+	},
+
+	"glossary": {
+		"ens": {
+			"term": "ENS（以太坊域名服务）",
+			"definition": "区块链命名服务，将人类可读的名称（如 alice.eth）映射到以太坊地址、其他加密地址和元数据。相当于去中心化的 DNS。"
+		},
+		"did": {
+			"term": "DID（去中心化标识符）",
+			"definition": "一个全球唯一的标识符，实现可验证的去中心化数字身份。DID 由身份所有者控制，而不是中心化注册表。"
+		},
+		"soulbound_token": {
+			"term": "灵魂绑定代币（SBT）",
+			"definition": "永久绑定到钱包的不可转让 NFT。用于不应该可交易的凭证、成就和声誉。"
+		},
+		"attestation": {
+			"term": "证明",
+			"definition": "验证声明或事实的加密签名声明。证明可以存储在链上以供公开验证。"
+		},
+		"credential": {
+			"term": "可验证凭证",
+			"definition": "可以进行加密验证的防篡改数字凭证。由所有者存储并有选择地出示以证明声明。"
+		},
+		"reputation_score": {
+			"term": "声誉评分",
+			"definition": "基于链上活动、凭证和社交证明的地址可信度的量化衡量标准。用于空投、贷款利率和访问控制。"
+		},
+		"poap": {
+			"term": "POAP（出席证明协议）",
+			"definition": "证明出席活动或参与活动的 NFT 徽章。POAP 形成你的经历的可验证记录。"
+		},
+		"proof_of_humanity": {
+			"term": "人格证明",
+			"definition": "验证地址由独特的人类控制，而不是机器人或重复账户。对于空投和治理中的女巫抗性至关重要。"
+		},
+		"kyc": {
+			"term": "KYC（了解你的客户）",
+			"definition": "符合法规要求的身份验证过程。ZK-KYC 通过零知识证明实现验证，同时保护隐私。"
+		},
+		"self_sovereign_identity": {
+			"term": "自主身份",
+			"definition": "个人对其身份数据拥有完全所有权和控制权的身份模型。没有中央机构可以撤销或控制你的身份。"
+		}
+	}
+}

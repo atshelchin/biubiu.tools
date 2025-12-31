@@ -1,83 +1,83 @@
 {
 	"seo": {
-		"title": "Farcaster - Decentralized Social Network",
-		"description": "Farcaster is a sufficiently decentralized social network. Build social apps with Frames on the crypto-native Twitter alternative.",
-		"keywords": "Farcaster, Warpcast, Frames, decentralized social, crypto Twitter, Web3 social"
+		"title": "Farcaster - 去中心化社交协议",
+		"description": "Farcaster 是一个充分去中心化的社交网络。通过加密原生社区和应用拥有你的身份和内容。",
+		"keywords": "Farcaster, 去中心化社交, Warpcast, Web3 社交, sufficiently decentralized, 加密社交"
 	},
-	"overview": "Farcaster is a sufficiently decentralized social protocol that's become the home of crypto Twitter. Unlike fully on-chain solutions, Farcaster uses a hybrid architecture for practical social experiences.\n\nThe main client Warpcast feels like Twitter but for crypto natives. Farcaster Frames revolutionized the space by enabling interactive mini-apps within posts—polls, mints, games, transactions.\n\nFarcaster has attracted significant crypto community attention with viral Frames campaigns and organic growth. It's backed by major funding and positioned as the leading crypto social platform.",
+	"overview": "Farcaster 是一个去中心化社交协议，增长迅速，尤其在加密社区中。与封闭网络不同，Farcaster 让你拥有自己的身份和数据，同时提供类似 Twitter 的体验。\n\n该协议将身份与应用分离。使用任何 Farcaster 应用（如 Warpcast）发帖，你的内容和关注者保持可移植性。Channels 组织主题讨论，Frames 为帖子带来交互式迷你应用。\n\n主要由加密原住民使用——创始人、开发者和爱好者。由 Coinbase 前高管创立的 Merkle Manufactory 开发，拥有强大的支持。",
 	"features": {
 		"1": {
-			"title": "Frames",
-			"description": "Interactive apps in posts"
+			"title": "去中心化身份",
+			"description": "拥有你的账户"
 		},
 		"2": {
-			"title": "Warpcast",
-			"description": "Main client app"
+			"title": "Warpcast 应用",
+			"description": "主要客户端"
 		},
 		"3": {
-			"title": "Sufficiently Decentralized",
-			"description": "Practical hybrid model"
+			"title": "Channels",
+			"description": "主题社区"
 		},
 		"4": {
-			"title": "Channels",
-			"description": "Topic-based communities"
+			"title": "Frames",
+			"description": "帖子内迷你应用"
 		},
 		"5": {
-			"title": "Identity",
-			"description": "Crypto-native identity"
+			"title": "便携式数据",
+			"description": "在应用间切换"
 		},
 		"6": {
-			"title": "Open Protocol",
-			"description": "Build your own client"
+			"title": "以太坊原生",
+			"description": "链上身份"
 		}
 	},
 	"use_cases": {
 		"1": {
-			"title": "Crypto Social",
-			"description": "Connect with crypto community"
+			"title": "加密社交",
+			"description": "Web3 原生交流"
 		},
 		"2": {
-			"title": "Frames Development",
-			"description": "Build interactive experiences"
+			"title": "构建器网络",
+			"description": "与创始人连接"
 		},
 		"3": {
-			"title": "Community Building",
-			"description": "Create channels"
+			"title": "Frames 开发",
+			"description": "创建交互式帖子"
 		},
 		"4": {
-			"title": "Marketing",
-			"description": "Viral Frame campaigns"
+			"title": "社区 Channels",
+			"description": "主题讨论"
 		},
 		"5": {
-			"title": "Identity",
-			"description": "Build reputation"
+			"title": "内容创作",
+			"description": "拥有你的受众"
 		}
 	},
 	"faqs": {
 		"1": {
-			"question": "What are Frames?",
-			"answer": "Frames are interactive mini-apps that live inside Farcaster posts. Click a Frame to vote in polls, mint NFTs, play games, or make transactions. They went viral and defined Farcaster's unique value."
+			"question": "什么是 Farcaster？",
+			"answer": "Farcaster 是一个去中心化社交协议。你创建与任何应用绑定的身份。发帖、关注用户、加入 channels。它感觉像 Twitter，但你拥有自己的账户。热门应用 Warpcast 是主要客户端。"
 		},
 		"2": {
-			"question": "What is sufficiently decentralized?",
-			"answer": "Farcaster isn't fully on-chain—that would be too slow. It uses hubs (servers) that sync data. Anyone can run a hub. Identity is on Optimism. It's decentralized enough that no single party controls it."
+			"question": "什么是 Frames？",
+			"answer": "Frames 是直接嵌入帖子的交互式迷你应用。投票、铸造 NFT、玩游戏——全部在帖子内完成。它是 Farcaster 的创新功能，实现丰富的交互式社交体验。"
 		},
 		"3": {
-			"question": "How is Farcaster different from Lens?",
-			"answer": "Lens is fully on-chain on Polygon. Farcaster uses hybrid architecture for better UX. Farcaster has Frames, Lens has collect modules. Farcaster feels more like Twitter, Lens more like a protocol."
+			"question": "如何加入 Farcaster？",
+			"answer": "下载 Warpcast（iOS/Android）并注册。你需要支付一次性费用（约 5-10 美元）在链上注册你的身份。这可以防止垃圾信息，帮助保持高质量社区。"
 		},
 		"4": {
-			"question": "What is Warpcast?",
-			"answer": "Warpcast is the main Farcaster client, built by the core team. It's where most users are. Other clients exist (Supercast, etc.) but Warpcast is dominant. Think Twitter app for Farcaster protocol."
+			"question": "为什么要使用 Farcaster 而不是 Twitter？",
+			"answer": "你拥有自己的身份——没有平台可以封禁你。数据是可移植的。加密原生社区非常活跃。对于 Web3 人群来说，这是首选的社交网络。Frames 等创新让它变得独特。"
 		},
 		"5": {
-			"question": "Does Farcaster cost money?",
-			"answer": "Farcaster has yearly storage fees (currently ~$5/year in ETH). This prevents spam and funds infrastructure. The fee is minimal but creates some barrier versus free platforms."
+			"question": "Farcaster 的代币经济学是什么？",
+			"answer": "Farcaster 没有代币。协议专注于社交基础设施而非代币经济学。你需要付费注册以覆盖链上成本，但没有投机性代币。"
 		}
 	},
 	"cta": {
-		"ready": "Ready to join crypto social?",
-		"button": "Explore Farcaster",
-		"note": "Home of Frames"
+		"ready": "准备加入去中心化社交了吗？",
+		"button": "探索 Farcaster",
+		"note": "加密原生社交协议"
 	}
 }

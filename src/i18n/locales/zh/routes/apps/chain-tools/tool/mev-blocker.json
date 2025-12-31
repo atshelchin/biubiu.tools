@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "MEV Blocker - 交易保护",
+		"description": "MEV Blocker 保护你的交易免受抢跑和三明治攻击。免费 RPC 端点，将 MEV 返还给用户。",
+		"keywords": "MEV Blocker, 抢跑保护, 三明治攻击, MEV 保护, CoW Protocol, 交易隐私"
+	},
+	"overview": "MEV Blocker 是一个免费的 RPC 端点，保护你的交易免受抢跑和三明治等 MEV 攻击。交易不是广播到公共内存池让机器人利用你，而是通过私有订单流。\n\n由 CoW Protocol 团队构建，MEV Blocker 通过将交易发送给承诺不利用它们的搜索者网络来工作。如果你的交易确实产生了 MEV，你会获得返利而不是损失给机器人。\n\n只需在 MetaMask 中添加 MEV Blocker 作为自定义 RPC。你所有的交换、交易都会自动获得保护。这是保护自己免受 MEV 的最简单方法。",
+	"features": {
+		"1": {
+			"title": "抢跑保护",
+			"description": "私密交易流"
+		},
+		"2": {
+			"title": "三明治保护",
+			"description": "防止价格操纵"
+		},
+		"3": {
+			"title": "MEV 返利",
+			"description": "获得 MEV 返还"
+		},
+		"4": {
+			"title": "免费使用",
+			"description": "无额外成本"
+		},
+		"5": {
+			"title": "简单设置",
+			"description": "一键添加 RPC"
+		},
+		"6": {
+			"title": "到处可用",
+			"description": "任何 dApp，任何钱包"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DEX 交易",
+			"description": "受保护的交换"
+		},
+		"2": {
+			"title": "大额交易",
+			"description": "无三明治攻击"
+		},
+		"3": {
+			"title": "DeFi 用户",
+			"description": "通用保护"
+		},
+		"4": {
+			"title": "NFT 铸造",
+			"description": "公平交易顺序"
+		},
+		"5": {
+			"title": "钱包默认",
+			"description": "始终开启保护"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "MEV Blocker 能防止哪些攻击？",
+			"answer": "MEV Blocker 防止抢跑（机器人在你之前交易）和三明治攻击（机器人在你之前和之后交易）。这些攻击导致你获得更差的价格。MEV Blocker 让你的交易对利用机器人保持私密。"
+		},
+		"2": {
+			"question": "如何设置 MEV Blocker？",
+			"answer": "访问 mevblocker.io 并点击'添加到钱包'。它会将 MEV Blocker 作为自定义 RPC 添加到 MetaMask。你所有的以太坊交易现在都通过受保护的端点路由。大约需要10秒。"
+		},
+		"3": {
+			"question": "MEV Blocker 免费吗？",
+			"answer": "是的，完全免费。你只需支付正常的 Gas 费。服务免费是因为搜索者为非剥削性订单流付费。当他们提取 MEV 时，部分作为返利返还给你。"
+		},
+		"4": {
+			"question": "会减慢交易速度吗？",
+			"answer": "稍微会。交易大约需要多6-12秒，因为它们通过私有渠道而不是公共内存池。对大多数用户来说，这种延迟值得用来防止损失资金给 MEV 机器人。"
+		},
+		"5": {
+			"question": "MEV Blocker vs Flashbots Protect？",
+			"answer": "两者都提供抢跑保护。MEV Blocker 强调 MEV 返利——当你的交易产生 MEV 时你会获得报酬。Flashbots Protect 专注于隐私。两者都不错；MEV Blocker 使用更简单。"
+		}
+	},
+	"cta": {
+		"ready": "准备保护你的交易了吗？",
+		"button": "使用 MEV Blocker",
+		"note": "免费 MEV 保护"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Biconomy - Account Abstraction Infrastructure",
+		"description": "Biconomy simplifies Web3 UX with account abstraction, gasless transactions, and smart accounts. Build seamless dApp experiences.",
+		"keywords": "Biconomy, account abstraction, gasless, smart accounts, BICO token, Web3 UX"
+	},
+	"overview": "Biconomy provides infrastructure for better Web3 user experience through account abstraction. Replace confusing wallet popups and gas payments with seamless, Web2-like interactions.\n\nTheir Smart Accounts let users pay gas in any token, batch transactions, and use social recovery. Paymasters enable gasless transactions where apps sponsor user gas. The modular architecture supports custom modules.\n\nBiconomy has processed millions of transactions for major dApps. The BICO token is used for governance and potentially for paymaster staking. They're a leading account abstraction infrastructure provider.",
+	"features": {
+		"1": {
+			"title": "Smart Accounts",
+			"description": "ERC-4337 wallets"
+		},
+		"2": {
+			"title": "Gasless Transactions",
+			"description": "Sponsor user gas"
+		},
+		"3": {
+			"title": "Pay Gas in Any Token",
+			"description": "Flexible gas payment"
+		},
+		"4": {
+			"title": "Batched Transactions",
+			"description": "Multiple ops, one click"
+		},
+		"5": {
+			"title": "BICO Token",
+			"description": "Governance token"
+		},
+		"6": {
+			"title": "Multi-Chain",
+			"description": "Major EVM chains"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Gasless dApps",
+			"description": "Sponsor user gas"
+		},
+		"2": {
+			"title": "Onboarding",
+			"description": "Frictionless first use"
+		},
+		"3": {
+			"title": "Batched Actions",
+			"description": "Approve + swap in one"
+		},
+		"4": {
+			"title": "Social Recovery",
+			"description": "Recover without seed"
+		},
+		"5": {
+			"title": "Session Keys",
+			"description": "Limited permissions"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is account abstraction?",
+			"answer": "Account abstraction makes wallets programmable smart contracts. Instead of fixed EOA rules, define custom validation, gas payment, and recovery. ERC-4337 is the standard. It enables Web2-like UX."
+		},
+		"2": {
+			"question": "How do gasless transactions work?",
+			"answer": "Biconomy Paymasters pay gas on behalf of users. dApps deposit funds to cover user gas. Users sign transactions, paymaster submits and pays. The dApp expense replaces user friction."
+		},
+		"3": {
+			"question": "What are Smart Accounts?",
+			"answer": "Smart Accounts are smart contract wallets following ERC-4337. They have programmable features: any-token gas payment, batching, session keys, recovery. Biconomy's implementation is modular and audited."
+		},
+		"4": {
+			"question": "What is BICO token used for?",
+			"answer": "BICO governs the Biconomy protocol. Holders vote on protocol parameters and development. Future utility may include paymaster staking. Currently primarily governance focused."
+		},
+		"5": {
+			"question": "Which dApps use Biconomy?",
+			"answer": "Many major dApps use Biconomy for UX improvements. Examples include Decentraland, Perpetual Protocol, and various gaming/NFT platforms. Check their case studies for current integrations."
+		}
+	},
+	"cta": {
+		"ready": "Ready for seamless Web3 UX?",
+		"button": "Explore Biconomy",
+		"note": "Account abstraction infrastructure"
+	}
+}

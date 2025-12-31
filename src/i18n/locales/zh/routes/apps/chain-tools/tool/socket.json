@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Socket - 桥聚合器协议",
+		"description": "Socket 聚合桥和 DEX 以获得最优跨链路由。一个 API 用于所有桥接，驱动 Bungee Exchange 等应用。",
+		"keywords": "Socket, 桥聚合器, Bungee, 跨链路由, 互操作性, 多桥"
+	},
+	"overview": "Socket 是一个桥和 DEX 聚合协议。不是选择单一的桥，Socket 会在多个桥和交易所中为你的跨链转账找到最优路由。\n\n可以把它想象成桥接领域的 1inch。Socket 比较 Stargate、Hop、Across、Celer 等的费率，为你的特定转账找到速度、成本和安全性的最佳组合。\n\nBungee Exchange 是 Socket 面向消费者的产品——一个用户友好的跨链交换界面。许多其他应用集成 Socket 的 API 用于桥接。它是使多链加密更易访问的基础设施。",
+	"features": {
+		"1": {
+			"title": "桥聚合",
+			"description": "比较所有桥"
+		},
+		"2": {
+			"title": "DEX 集成",
+			"description": "交换+桥接组合"
+		},
+		"3": {
+			"title": "最优路由",
+			"description": "最佳价格发现"
+		},
+		"4": {
+			"title": "Bungee Exchange",
+			"description": "用户友好界面"
+		},
+		"5": {
+			"title": "开发者 API",
+			"description": "集成桥接"
+		},
+		"6": {
+			"title": "多链",
+			"description": "广泛网络支持"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "最佳费率桥接",
+			"description": "比较所有选项"
+		},
+		"2": {
+			"title": "跨链交换",
+			"description": "任何代币，任何链"
+		},
+		"3": {
+			"title": "应用集成",
+			"description": "通过 API 添加桥接"
+		},
+		"4": {
+			"title": "路由优化",
+			"description": "速度 vs 成本权衡"
+		},
+		"5": {
+			"title": "多桥分割",
+			"description": "分散到多个桥"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 Socket？",
+			"answer": "Socket 是一个桥聚合器——它为你的转账在多个桥中找到最佳路由。不用手动比较 Stargate、Hop、Across 等，Socket 自动完成。Bungee 是他们的消费者应用。"
+		},
+		"2": {
+			"question": "路由优化如何工作？",
+			"answer": "Socket 检查你的代币/路线的可用桥，比较费用和速度，向你展示选项。你可以优化成本（最便宜）、速度（最快）或平衡。它可能会将大额转账分散到多个桥。"
+		},
+		"3": {
+			"question": "Socket 支持哪些桥？",
+			"answer": "Socket 集成主要桥，包括 Stargate、Hop、Across、Celer、Hyphen、Connext 等。随着新桥推出，列表不断增长。查看他们的文档获取当前集成。"
+		},
+		"4": {
+			"question": "什么是 Bungee Exchange？",
+			"answer": "Bungee 是 Socket 面向用户的应用，在 bungee.exchange。简洁的跨链转账 UI，由 Socket 的聚合驱动。任何人都可以用它桥接——无需手动选择桥。"
+		},
+		"5": {
+			"question": "开发者可以集成 Socket 吗？",
+			"answer": "是的，Socket 为开发者提供 API 和 SDK。无需单独集成每个桥即可为你的应用添加跨链功能。许多钱包和 dApp 使用 Socket 进行桥接。"
+		}
+	},
+	"cta": {
+		"ready": "准备获得最优跨链路由了吗？",
+		"button": "使用 Socket",
+		"note": "桥聚合协议"
+	}
+}

@@ -51,7 +51,9 @@
       "Bash(do if ! grep -q ^$tool$ /tmp/existing_tools.txt)",
       "Bash(then echo $tool fi done)",
       "Bash(for tool in alchemy ankr arweave chainstack filecoin infura ipfs moralis push-protocol quicknode tenderly thegraph xmtp)",
-      "Bash(do echo -n \"$tool: \")"
+      "Bash(do echo -n \"$tool: \")",
+      "Bash(npx tsc:*)",
+      "Bash(npm run lint:*)"
     ],
     "deny": [],
     "ask": []

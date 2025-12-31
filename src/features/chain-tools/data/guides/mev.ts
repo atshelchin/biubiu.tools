@@ -37,8 +37,7 @@ export const mevGuide: CategoryGuide = {
 				{
 					id: 'frontrunning',
 					titleKey: 'routes/apps/chain-tools/mev/guide.sections.mev_types.frontrunning.title',
-					contentKey:
-						'routes/apps/chain-tools/mev/guide.sections.mev_types.frontrunning.content',
+					contentKey: 'routes/apps/chain-tools/mev/guide.sections.mev_types.frontrunning.content',
 					toolMentions: [{ toolId: 'mev-explore', context: 'track frontrunning' }]
 				},
 				{
@@ -75,8 +74,7 @@ export const mevGuide: CategoryGuide = {
 			subsections: [
 				{
 					id: 'searchers',
-					titleKey:
-						'routes/apps/chain-tools/mev/guide.sections.mev_supply_chain.searchers.title',
+					titleKey: 'routes/apps/chain-tools/mev/guide.sections.mev_supply_chain.searchers.title',
 					contentKey:
 						'routes/apps/chain-tools/mev/guide.sections.mev_supply_chain.searchers.content',
 					toolMentions: [{ toolId: 'flashbots-builder', context: 'submit bundles' }]
@@ -94,8 +92,7 @@ export const mevGuide: CategoryGuide = {
 				},
 				{
 					id: 'validators',
-					titleKey:
-						'routes/apps/chain-tools/mev/guide.sections.mev_supply_chain.validators.title',
+					titleKey: 'routes/apps/chain-tools/mev/guide.sections.mev_supply_chain.validators.title',
 					contentKey:
 						'routes/apps/chain-tools/mev/guide.sections.mev_supply_chain.validators.content',
 					toolMentions: [{ toolId: 'mev-boost', context: 'validator middleware' }]
@@ -129,8 +126,7 @@ export const mevGuide: CategoryGuide = {
 				{
 					id: 'mev-blocker',
 					titleKey: 'routes/apps/chain-tools/mev/guide.sections.protection.mev_blocker.title',
-					contentKey:
-						'routes/apps/chain-tools/mev/guide.sections.protection.mev_blocker.content',
+					contentKey: 'routes/apps/chain-tools/mev/guide.sections.protection.mev_blocker.content',
 					toolMentions: [{ toolId: 'mev-blocker', context: 'CoW Swap protection' }]
 				},
 				{
@@ -189,10 +185,8 @@ export const mevGuide: CategoryGuide = {
 				},
 				{
 					id: 'mev-boost',
-					titleKey:
-						'routes/apps/chain-tools/mev/guide.sections.post_merge_mev.mev_boost.title',
-					contentKey:
-						'routes/apps/chain-tools/mev/guide.sections.post_merge_mev.mev_boost.content',
+					titleKey: 'routes/apps/chain-tools/mev/guide.sections.post_merge_mev.mev_boost.title',
+					contentKey: 'routes/apps/chain-tools/mev/guide.sections.post_merge_mev.mev_boost.content',
 					toolMentions: [
 						{ toolId: 'mev-boost', context: 'validator software' },
 						{ toolId: 'mevboost-pics', context: 'performance metrics' }

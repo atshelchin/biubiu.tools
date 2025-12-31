@@ -75,8 +75,7 @@ export const restakingGuide: CategoryGuide = {
 				},
 				{
 					id: 'examples',
-					titleKey:
-						'routes/apps/chain-tools/restaking/guide.sections.avs_ecosystem.examples.title',
+					titleKey: 'routes/apps/chain-tools/restaking/guide.sections.avs_ecosystem.examples.title',
 					contentKey:
 						'routes/apps/chain-tools/restaking/guide.sections.avs_ecosystem.examples.content'
 				}
@@ -197,8 +196,7 @@ export const restakingGuide: CategoryGuide = {
 				{
 					id: 'slashing-risk',
 					titleKey: 'routes/apps/chain-tools/restaking/guide.sections.risks.slashing_risk.title',
-					contentKey:
-						'routes/apps/chain-tools/restaking/guide.sections.risks.slashing_risk.content'
+					contentKey: 'routes/apps/chain-tools/restaking/guide.sections.risks.slashing_risk.content'
 				},
 				{
 					id: 'smart-contract-risk',
@@ -209,16 +207,14 @@ export const restakingGuide: CategoryGuide = {
 				},
 				{
 					id: 'liquidity-risk',
-					titleKey:
-						'routes/apps/chain-tools/restaking/guide.sections.risks.liquidity_risk.title',
+					titleKey: 'routes/apps/chain-tools/restaking/guide.sections.risks.liquidity_risk.title',
 					contentKey:
 						'routes/apps/chain-tools/restaking/guide.sections.risks.liquidity_risk.content'
 				},
 				{
 					id: 'mitigation',
 					titleKey: 'routes/apps/chain-tools/restaking/guide.sections.risks.mitigation.title',
-					contentKey:
-						'routes/apps/chain-tools/restaking/guide.sections.risks.mitigation.content'
+					contentKey: 'routes/apps/chain-tools/restaking/guide.sections.risks.mitigation.content'
 				}
 			]
 		}
@@ -270,8 +266,7 @@ export const restakingGuide: CategoryGuide = {
 		{
 			id: 'shared-security',
 			termKey: 'routes/apps/chain-tools/restaking/guide.glossary.shared_security.term',
-			definitionKey:
-				'routes/apps/chain-tools/restaking/guide.glossary.shared_security.definition',
+			definitionKey: 'routes/apps/chain-tools/restaking/guide.glossary.shared_security.definition',
 			relatedToolIds: ['eigenlayer']
 		},
 		{

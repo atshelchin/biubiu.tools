@@ -1,83 +1,83 @@
 {
 	"seo": {
-		"title": "Snapshot - Decentralized Governance",
-		"description": "Snapshot enables gas-free DAO voting. Create proposals and vote using tokens without spending gas on Ethereum.",
-		"keywords": "Snapshot, DAO voting, governance, gas-free voting, proposals, Web3 governance"
+		"title": "Snapshot - 去中心化投票",
+		"description": "Snapshot 为 DAO 和代币社区提供无 Gas 链下投票。创建提案、投票，无需交易费用。",
+		"keywords": "Snapshot, DAO 投票, 链下治理, 去中心化治理, 无 Gas 投票, 代币投票"
 	},
-	"overview": "Snapshot revolutionized DAO governance by enabling gas-free voting. Instead of expensive on-chain transactions, Snapshot uses signed messages that are verified off-chain but cryptographically secure.\n\nNearly every major DAO uses Snapshot for governance. Create a space, set voting strategies, and let token holders vote on proposals without any gas costs. Results can trigger on-chain execution via tools like SafeSnap.\n\nSnapshot's flexibility supports various voting mechanisms: token-weighted, quadratic, NFT-based, and more. It's become the default governance layer for Web3 organizations.",
+	"overview": "Snapshot 是去中心化治理的标准。它为 DAO 和代币社区提供无 Gas 链下投票，让治理变得可及和频繁成为可能。\n\n用代币持有量投票不需要实际交易。投票签名存储在链下（IPFS），但可验证。这意味着无 Gas 费用，同时仍然保持安全。\n\n几乎每个主要 DAO 都使用 Snapshot：Uniswap、Aave、ENS 等。灵活的投票策略支持代币加权、二次方投票、NFT 投票等。它是去中心化治理的基础设施。",
 	"features": {
 		"1": {
-			"title": "Gas-Free Voting",
-			"description": "Sign, don't transact"
+			"title": "无 Gas 投票",
+			"description": "链下签名"
 		},
 		"2": {
-			"title": "Custom Strategies",
-			"description": "Flexible voting power"
+			"title": "投票策略",
+			"description": "灵活投票规则"
 		},
 		"3": {
-			"title": "DAO Spaces",
-			"description": "Your governance hub"
+			"title": "提案系统",
+			"description": "创建/讨论/投票"
 		},
 		"4": {
-			"title": "On-Chain Execution",
-			"description": "SafeSnap integration"
+			"title": "IPFS 存储",
+			"description": "去中心化记录"
 		},
 		"5": {
-			"title": "Delegation",
-			"description": "Delegate your vote"
+			"title": "多链",
+			"description": "跨链代币投票"
 		},
 		"6": {
-			"title": "Multi-Voting",
-			"description": "Various mechanisms"
+			"title": "生态集成",
+			"description": "行业标准"
 		}
 	},
 	"use_cases": {
 		"1": {
-			"title": "DAO Governance",
-			"description": "Vote on proposals"
+			"title": "DAO 治理",
+			"description": "代币持有者决策"
 		},
 		"2": {
-			"title": "Create Proposals",
-			"description": "Submit ideas for vote"
+			"title": "社区投票",
+			"description": "收集偏好"
 		},
 		"3": {
-			"title": "Run a DAO",
-			"description": "Set up governance"
+			"title": "赠款决策",
+			"description": "分配资金"
 		},
 		"4": {
-			"title": "Delegation",
-			"description": "Delegate voting power"
+			"title": "参数更新",
+			"description": "协议更改投票"
 		},
 		"5": {
-			"title": "Signal Voting",
-			"description": "Gauge community sentiment"
+			"title": "信号收集",
+			"description": "非约束性投票"
 		}
 	},
 	"faqs": {
 		"1": {
-			"question": "How is voting gas-free?",
-			"answer": "Snapshot uses signed messages (EIP-712) instead of transactions. Your wallet signs a vote, Snapshot stores it on IPFS. No blockchain transaction needed. The signature proves you voted with your tokens."
+			"question": "Snapshot 是如何免 Gas 的？",
+			"answer": "投票签名存储在 IPFS 上，而非链上交易。你签署一条证明你投票选择的消息。签名可验证与你的代币持有量对比。无链上操作=无 Gas 费用。"
 		},
 		"2": {
-			"question": "Are Snapshot votes binding?",
-			"answer": "By default, Snapshot votes are 'signaling'—someone must execute results manually. SafeSnap integration can make votes automatically execute on-chain. Many DAOs treat Snapshot results as binding by social contract."
+			"question": "什么是投票策略？",
+			"answer": "策略定义如何计算投票权重。代币加权（1代币=1票）、二次方（平衡大户）、NFT 持有、多代币等。空间可以自定义满足需求的策略。"
 		},
 		"3": {
-			"question": "What are voting strategies?",
-			"answer": "Strategies define voting power. Token-weighted uses token balance. Quadratic uses square root. NFT-based counts NFTs. You can combine strategies. Custom strategies can use any on-chain data."
+			"question": "Snapshot 投票有约束力吗？",
+			"answer": "本身没有。Snapshot 是信号收集。DAO 通常用多签或治理合约执行通过的提案。有些 DAO 使用 SafeSnap 进行自动链上执行。"
 		},
 		"4": {
-			"question": "How do I create a DAO space?",
-			"answer": "Go to snapshot.org and create a space. Configure voting strategies, set admins, customize appearance. You'll need a connected wallet. Any project can create a space for their community."
+			"question": "如何为我的项目创建空间？",
+			"answer": "在 Snapshot 注册你的 ENS 域名作为空间。配置投票策略、投票期限和成员资格。你的社区可以开始创建和投票提案。免费使用。"
 		},
 		"5": {
-			"question": "Is Snapshot decentralized?",
-			"answer": "Votes are stored on IPFS and verifiable. The frontend is centralized but votes can be verified independently. It's 'sufficiently decentralized'—not fully trustless but practical and widely trusted."
+			"question": "我可以用多个钱包的代币投票吗？",
+			"answer": "每个钱包独立投票。有些策略支持委托——把你的投票权委托给另一个地址。这对持有多个钱包或委托给专家很有用。"
 		}
 	},
 	"cta": {
-		"ready": "Ready to govern?",
-		"button": "Explore Snapshot",
-		"note": "Gas-free DAO voting"
+		"ready": "准备参与治理了吗？",
+		"button": "探索 Snapshot",
+		"note": "去中心化治理标准"
 	}
 }

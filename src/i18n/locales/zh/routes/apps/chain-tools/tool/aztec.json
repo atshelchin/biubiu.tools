@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Aztec Network - 隐私 L2",
+		"description": "Aztec 使用零知识证明构建隐私优先的 L2。在以太坊上实现可编程隐私的私密智能合约。",
+		"keywords": "Aztec Network, 隐私 L2, Noir, 零知识, 私密智能合约, zkRollup"
+	},
+	"overview": "Aztec Network 正在构建首个使用零知识证明的私密智能合约平台。与透明区块链不同，Aztec 使应用程序的交易详情保持机密。\n\nAztec 开创了 PLONK——现在全行业使用的最高效 ZK 证明系统之一。他们的 Noir 编程语言让开发者无需成为密码学专家就能编写私密智能合约。\n\nAztec Connect（已弃用）实现了私密 DeFi 交易。即将推出的 Aztec L2 将提供完整的可编程隐私，包括私密状态、私密函数和私密可组合性。",
+	"features": {
+		"1": {
+			"title": "私密智能合约",
+			"description": "机密链上逻辑"
+		},
+		"2": {
+			"title": "Noir 语言",
+			"description": "编写私密程序"
+		},
+		"3": {
+			"title": "PLONK 证明",
+			"description": "高效 ZK 系统"
+		},
+		"4": {
+			"title": "以太坊安全性",
+			"description": "ETH 上的 ZK Rollup"
+		},
+		"5": {
+			"title": "私密状态",
+			"description": "隐藏合约数据"
+		},
+		"6": {
+			"title": "可组合性",
+			"description": "私密合约调用"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "私密交易",
+			"description": "机密转账"
+		},
+		"2": {
+			"title": "私密 DeFi",
+			"description": "隐藏交易活动"
+		},
+		"3": {
+			"title": "Noir 开发",
+			"description": "构建私密应用"
+		},
+		"4": {
+			"title": "企业隐私",
+			"description": "机密商业逻辑"
+		},
+		"5": {
+			"title": "身份",
+			"description": "私密凭证"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 Noir？",
+			"answer": "Noir 是 Aztec 用于零知识电路的编程语言。编写类 Rust 的代码，编译成 ZK 证明。你不需要密码学知识。Noir 可以独立于 Aztec 使用。"
+		},
+		"2": {
+			"question": "Aztec 和其他 L2 有什么不同？",
+			"answer": "大多数 L2（Arbitrum、Optimism）是透明的——每个人都能看到所有交易。Aztec 默认是私密的。交易、余额和合约状态都可以隐藏。这是协议层面的隐私。"
+		},
+		"3": {
+			"question": "Aztec Connect 发生了什么？",
+			"answer": "Aztec Connect 是 DeFi 的隐私桥——屏蔽资金，私密使用 DeFi。它在 2024 年停止以专注于完整的 Aztec L2。L2 将提供更全面的私密智能合约。"
+		},
+		"4": {
+			"question": "Aztec 什么时候上线？",
+			"answer": "Aztec L2 正在开发中，有测试网阶段。预计 2024-2025 年全面主网上线。Noir 语言已经可用。关注他们的 Discord 获取当前状态和测试网访问。"
+		},
+		"5": {
+			"question": "什么是 PLONK？",
+			"answer": "PLONK 是 Aztec 研究人员发明的零知识证明系统。它高效且被广泛采用——zkSync、Polygon 等都在使用。这是对 ZK 技术的重大贡献。"
+		}
+	},
+	"cta": {
+		"ready": "准备使用私密智能合约了吗？",
+		"button": "探索 Aztec",
+		"note": "隐私优先 L2"
+	}
+}

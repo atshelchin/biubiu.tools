@@ -1,83 +1,83 @@
 {
 	"seo": {
-		"title": "Worldcoin - Global Identity Protocol",
-		"description": "Worldcoin provides proof-of-personhood through World ID. Verify you're human while preserving privacy using zero-knowledge proofs.",
-		"keywords": "Worldcoin, World ID, WLD token, proof of personhood, Orb, biometric identity"
+		"title": "Worldcoin - 全球身份网络",
+		"description": "Worldcoin 通过虹膜扫描创建全球身份网络，为人类验证和 UBI 分发提供人格证明。",
+		"keywords": "Worldcoin, World ID, 虹膜扫描, 人格证明, WLD 代币, Sam Altman"
 	},
-	"overview": "Worldcoin is building a global identity and financial network. Its core innovation is World ID—a privacy-preserving proof that you're a unique human, verified through iris scans at Orb devices.\n\nWorld ID uses zero-knowledge proofs so apps can verify you're human without knowing who you are. This enables sybil-resistant airdrops, voting, and services while protecting privacy.\n\nThe WLD token is distributed to verified humans as a form of universal basic income experiment. Worldcoin runs on its own L2 (World Chain) built on Optimism technology.",
+	"overview": "Worldcoin 是一个雄心勃勃的项目，旨在为每个人创建全球身份网络和加密货币。通过扫描虹膜验证独特人类身份，用户获得 World ID 和 WLD 代币。\n\n核心是解决数字世界的人格证明。随着 AI 变得难以区分，验证人类变得至关重要。World ID 在不透露你是谁的情况下证明你是独特的人类。\n\n由 Sam Altman 联合创立，Worldcoin 雄心勃勃且有争议。批评者担忧隐私问题。支持者认为这是通往全民基本收入和公平 AI 分配的途径。规模令人印象深刻，数百万用户已验证。",
 	"features": {
 		"1": {
 			"title": "World ID",
-			"description": "Proof of personhood"
+			"description": "隐私保护身份"
 		},
 		"2": {
-			"title": "Orb Verification",
-			"description": "Iris-based uniqueness"
+			"title": "虹膜验证",
+			"description": "独特人类证明"
 		},
 		"3": {
-			"title": "Zero-Knowledge",
-			"description": "Privacy-preserving proofs"
+			"title": "WLD 代币",
+			"description": "分发给验证用户"
 		},
 		"4": {
-			"title": "WLD Token",
-			"description": "UBI-style distribution"
+			"title": "Orb 设备",
+			"description": "生物识别扫描仪"
 		},
 		"5": {
-			"title": "World Chain",
-			"description": "Dedicated L2"
+			"title": "人格证明",
+			"description": "防女巫验证"
 		},
 		"6": {
-			"title": "World App",
-			"description": "Wallet and identity app"
+			"title": "全球规模",
+			"description": "百万用户"
 		}
 	},
 	"use_cases": {
 		"1": {
-			"title": "Sybil Resistance",
-			"description": "One person, one account"
+			"title": "人类验证",
+			"description": "证明独特人类身份"
 		},
 		"2": {
-			"title": "Fair Airdrops",
-			"description": "One claim per human"
+			"title": "空投公平性",
+			"description": "每人一份"
 		},
 		"3": {
-			"title": "WLD Claims",
-			"description": "Receive token grants"
+			"title": "UBI 分发",
+			"description": "全球收入潜力"
 		},
 		"4": {
-			"title": "App Integration",
-			"description": "Add human verification"
+			"title": "反女巫攻击",
+			"description": "验证独特用户"
 		},
 		"5": {
-			"title": "Voting",
-			"description": "Sybil-resistant governance"
+			"title": "隐私登录",
+			"description": "匿名验证"
 		}
 	},
 	"faqs": {
 		"1": {
-			"question": "What is proof of personhood?",
-			"answer": "Proof of personhood verifies you're a unique human without revealing identity. World ID uses iris scans to create a unique hash. Apps verify you haven't registered twice. It solves the sybil problem."
+			"question": "什么是 Worldcoin？",
+			"answer": "Worldcoin 是一个创建全球身份网络的项目。你用名为 Orb 的设备扫描虹膜以验证你是独特的人类。你获得 World ID（用于人格证明）和 WLD 代币。"
 		},
 		"2": {
-			"question": "Is iris scanning safe?",
-			"answer": "Worldcoin claims iris images are deleted after creating the hash. The hash can't reverse to your iris. Privacy concerns remain valid—you're trusting their process. Regulatory scrutiny varies by country."
+			"question": "Worldcoin 如何保护隐私？",
+			"answer": "World ID 使用零知识证明。你可以证明自己是独特的人类，而不透露你的身份。虹膜扫描创建哈希而非图像。但批评者仍然担心中心化数据收集。"
 		},
 		"3": {
-			"question": "What is World Chain?",
-			"answer": "World Chain is Worldcoin's L2 blockchain built on Optimism stack. It prioritizes verified humans for block space. Designed for identity-based applications. Launched in 2024."
+			"question": "WLD 代币是什么？",
+			"answer": "WLD 是分发给验证用户的代币。这是一种加密货币，可以交易。愿景是如果价值增长，可以成为一种全民基本收入形式。目前它是投机性资产。"
 		},
 		"4": {
-			"question": "How do I get WLD tokens?",
-			"answer": "Get verified at an Orb (physical device in many cities). Once verified, claim WLD grants through World App. Grants are distributed periodically. Availability varies by jurisdiction."
+			"question": "有什么争议？",
+			"answer": "批评包括：生物识别数据收集问题、脆弱地区的知情同意问题、中心化担忧、代币经济学和内部人士分配。支持者认为这些问题会逐步解决。"
 		},
 		"5": {
-			"question": "What are the controversies?",
-			"answer": "Concerns include: biometric data collection, Sam Altman (OpenAI) involvement, developing country targeting, centralized Orb hardware. Also regulatory challenges in various countries. Research thoroughly."
+			"question": "如何获得验证？",
+			"answer": "在 Worldcoin 网站上找到附近的 Orb 位置。参加验证会议，扫描你的虹膜。你会收到 World ID 和 WLD 代币。该过程大约需要 2 分钟。"
 		}
 	},
 	"cta": {
-		"ready": "Ready to verify your humanity?",
-		"button": "Explore Worldcoin",
-		"note": "Global identity protocol"
+		"ready": "准备获取你的 World ID 了吗？",
+		"button": "探索 Worldcoin",
+		"note": "全球人格证明网络"
 	}
 }

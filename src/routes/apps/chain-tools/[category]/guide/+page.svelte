@@ -307,7 +307,7 @@
 
 			<!-- Back to category -->
 			<div class="article-footer">
-				<a href="/apps/chain-tools/{data.guide.categoryId}" class="back-link-footer">
+				<a href="/" class="back-link-footer">
 					<BookOpen class="footer-icon" />
 					{t('routes/apps/chain-tools.explore_more_tools')}
 				</a>

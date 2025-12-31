@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Gelato Network - Web3 自动化",
+		"description": "Gelato 自动化智能合约执行。安排交易、创建机器人、构建自动化 dApp，无需运行基础设施。",
+		"keywords": "Gelato Network, Web3 自动化, 智能合约自动化, keeper 网络, GEL 代币, 机器人"
+	},
+	"overview": "Gelato Network 自动化智能合约执行，作为 Web3 的去中心化机器人网络。安排未来交易、自动化 DeFi 策略或根据链上条件触发操作。\n\n无需运行自己的 keeper 基础设施，Gelato 的执行者网络可靠地处理自动化。开发者定义条件和操作；Gelato 确保在条件满足时执行。\n\nGelato 已扩展到账户抽象（无 Gas 交易中继）、Rollup 即服务等领域。GEL 代币用于质押和治理。它是自动化 dApp 的核心基础设施。",
+	"features": {
+		"1": {
+			"title": "任务自动化",
+			"description": "安排智能合约调用"
+		},
+		"2": {
+			"title": "去中心化执行者",
+			"description": "可靠的机器人网络"
+		},
+		"3": {
+			"title": "中继服务",
+			"description": "无 Gas 元交易"
+		},
+		"4": {
+			"title": "多链",
+			"description": "所有主要 EVM 链"
+		},
+		"5": {
+			"title": "GEL 代币",
+			"description": "质押和治理"
+		},
+		"6": {
+			"title": "RaaS",
+			"description": "Rollup 即服务"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi 自动化",
+			"description": "自动复投、再平衡"
+		},
+		"2": {
+			"title": "限价单",
+			"description": "价格条件触发"
+		},
+		"3": {
+			"title": "清算保护",
+			"description": "清算前自动还款"
+		},
+		"4": {
+			"title": "无 Gas 交易",
+			"description": "中继用户交易"
+		},
+		"5": {
+			"title": "定时操作",
+			"description": "基于时间执行"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Gelato 用于什么？",
+			"answer": "Gelato 自动化智能合约执行。用例：自动复投金库、DEX 限价单、清算保护、定时支付，任何'如果这样那么那样'的链上逻辑。它是 Web3 的 cron 作业。"
+		},
+		"2": {
+			"question": "自动化如何工作？",
+			"answer": "定义一个条件（价格达到 X）和操作（执行交换）。Gelato 的执行者监控条件。当条件满足时，他们提交交易。你支付 Gas 加少量 Gelato 费用。"
+		},
+		"3": {
+			"question": "Gelato vs Chainlink Automation？",
+			"answer": "两者都自动化智能合约。Chainlink 有更广泛的预言机集成。Gelato 专注于执行，更灵活。Gelato 有无 Gas 中继。两者都可靠——根据具体需求选择。"
+		},
+		"4": {
+			"question": "GEL 代币是什么？",
+			"answer": "GEL 用于运行自动化基础设施的执行者质押。质押者赚取费用。GEL 持有者治理协议。它为可靠的自动化网络对齐激励。"
+		},
+		"5": {
+			"question": "什么是 Gelato RaaS？",
+			"answer": "Gelato 提供 Rollup 即服务——轻松部署你自己的 L2/L3 链。他们处理基础设施。多个项目使用 Gelato 作为他们的 rollup。这是核心自动化之外的扩展。"
+		}
+	},
+	"cta": {
+		"ready": "准备自动化你的 dApp 了吗？",
+		"button": "探索 Gelato",
+		"note": "Web3 自动化层"
+	}
+}

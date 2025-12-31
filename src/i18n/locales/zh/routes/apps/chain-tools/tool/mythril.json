@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Mythril - 智能合约安全分析",
+		"description": "Mythril是智能合约的符号执行分析器。通过深度代码路径分析检测漏洞。",
+		"keywords": "Mythril, 符号执行, 智能合约安全, 漏洞检测, ConsenSys, 安全分析"
+	},
+	"overview": "Mythril使用符号执行来分析智能合约——这是一种比静态分析更深入的技术。它实际执行代码路径以发现传统工具可能遗漏的漏洞。\n\nMythril由ConsenSys开发，是MythX安全平台的一部分。它能检测重入攻击、整数溢出、未检查的外部调用和访问控制问题。符号执行意味着它探索实际执行路径，而不仅仅是模式匹配。\n\n该工具运行时间比Slither长，但发现的问题可能不同。许多团队同时使用两者——Slither用于快速反馈，Mythril用于深入分析。对于关键合约，符号执行增加了重要的安全保障层。",
+	"features": {
+		"1": {
+			"title": "符号执行",
+			"description": "深度路径分析"
+		},
+		"2": {
+			"title": "漏洞检测",
+			"description": "常见漏洞"
+		},
+		"3": {
+			"title": "MythX集成",
+			"description": "云端分析"
+		},
+		"4": {
+			"title": "开源",
+			"description": "免费使用"
+		},
+		"5": {
+			"title": "多个检测模块",
+			"description": "全面检测"
+		},
+		"6": {
+			"title": "交易追踪",
+			"description": "攻击路径"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "深度分析",
+			"description": "关键合约"
+		},
+		"2": {
+			"title": "安全审计",
+			"description": "审计工具"
+		},
+		"3": {
+			"title": "补充工具",
+			"description": "与静态分析配合"
+		},
+		"4": {
+			"title": "漏洞研究",
+			"description": "发现新问题"
+		},
+		"5": {
+			"title": "教育",
+			"description": "学习漏洞"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Mythril与Slither有什么不同？",
+			"answer": "Slither使用静态分析（模式匹配），Mythril使用符号执行（实际探索代码路径）。Mythril更慢但可能发现不同的漏洞。最佳实践是同时使用两者。"
+		},
+		"2": {
+			"question": "什么是符号执行？",
+			"answer": "符号执行不使用具体值运行代码，而是使用符号值探索所有可能的执行路径。它能找到静态分析遗漏的边界情况，但计算成本更高。"
+		},
+		"3": {
+			"question": "如何安装Mythril？",
+			"answer": "通过pip安装：pip install mythril。然后运行myth analyze contract.sol。分析可能需要几分钟。也可以使用MythX服务进行云端分析。"
+		},
+		"4": {
+			"question": "MythX是什么？",
+			"answer": "MythX是一个云安全服务，运行包括Mythril在内的多种分析工具。它比本地Mythril更快，并包含额外的检测器。有免费层可用。"
+		},
+		"5": {
+			"question": "应该什么时候使用Mythril？",
+			"answer": "用于处理真金白银的关键合约。在Slither之后运行它进行深入分析。对于简单合约，Slither可能就够了。对于DeFi协议，同时使用两者。"
+		}
+	},
+	"cta": {
+		"ready": "准备好深度分析了吗？",
+		"button": "安装Mythril",
+		"note": "符号执行分析"
+	}
+}

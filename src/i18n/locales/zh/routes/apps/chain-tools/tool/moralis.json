@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Moralis - Web3 开发平台",
+		"description": "Moralis 提供 Web3 开发 API 和工具。使用钱包、NFT、代币和区块链数据 API 更快构建 dApp。",
+		"keywords": "Moralis, Web3 API, NFT API, 代币 API, 区块链开发, dApp 开发"
+	},
+	"overview": "Moralis 是一个综合性 Web3 开发平台，提供简化构建 dApp 的 API。无需解析原始区块链数据，使用 Moralis API 获取结构化的、即用型信息。\n\n平台提供钱包数据（投资组合、交易）、NFT（元数据、所有权、转账）、代币（价格、持有者）和通用区块链数据的 API。所有数据都已索引并通过简单的 REST API 提供。\n\nMoralis 支持主要链，包括以太坊、Polygon、BSC 和 Solana。API 处理区块链数据的复杂性，让开发者专注于构建应用。",
+	"features": {
+		"1": {
+			"title": "钱包 API",
+			"description": "投资组合和交易数据"
+		},
+		"2": {
+			"title": "NFT API",
+			"description": "元数据、所有权、转账"
+		},
+		"3": {
+			"title": "代币 API",
+			"description": "价格、持有者、余额"
+		},
+		"4": {
+			"title": "Streams",
+			"description": "实时 webhooks"
+		},
+		"5": {
+			"title": "多链",
+			"description": "EVM 和 Solana 支持"
+		},
+		"6": {
+			"title": "易于集成",
+			"description": "REST API、SDK"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "投资组合应用",
+			"description": "显示用户持仓"
+		},
+		"2": {
+			"title": "NFT 平台",
+			"description": "展示 NFT 收藏"
+		},
+		"3": {
+			"title": "代币仪表板",
+			"description": "价格和持有者数据"
+		},
+		"4": {
+			"title": "交易历史",
+			"description": "用户活动信息流"
+		},
+		"5": {
+			"title": "实时警报",
+			"description": "Webhook 通知"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Moralis 提供什么？",
+			"answer": "Moralis 索引区块链数据并通过 API 提供。获取钱包投资组合、NFT 元数据、代币价格、交易历史——全部通过简单 API 调用，而非运行自己的索引器。"
+		},
+		"2": {
+			"question": "Moralis vs The Graph？",
+			"answer": "The Graph 是去中心化索引协议——你查询 subgraph。Moralis 是中心化 API 服务——更简单但去中心化程度较低。Moralis 更容易上手，Graph 更可定制和去信任化。"
+		},
+		"3": {
+			"question": "支持哪些链？",
+			"answer": "Moralis 支持以太坊、Polygon、BSC、Arbitrum、Optimism、Avalanche、Fantom、Solana 等。覆盖主要 EVM 链加 Solana。查看文档获取当前完整列表。"
+		},
+		"4": {
+			"question": "Moralis 免费吗？",
+			"answer": "Moralis 有适合开发的免费套餐。付费计划基于 API 调用量。生产应用通常需要付费计划。与一些替代品相比免费套餐很慷慨。"
+		},
+		"5": {
+			"question": "数据如何更新？",
+			"answer": "Moralis 持续索引区块链数据。大多数数据是实时或接近实时的。Streams 为新事件提供即时 webhooks。历史数据已预先索引以实现快速查询。"
+		}
+	},
+	"cta": {
+		"ready": "准备用 Moralis 构建了吗？",
+		"button": "探索 Moralis",
+		"note": "简化 Web3 API"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "LI.FI - 跨链桥和 DEX 聚合器",
+		"description": "LI.FI 聚合 20+ 条链的桥和 DEX。在一个界面中找到任何跨链交换的最佳路由。",
+		"keywords": "LI.FI, 桥聚合器, 跨链交换, DEX 聚合器, 多链, 互操作性"
+	},
+	"overview": "LI.FI 是一个跨链桥和 DEX 聚合协议。它组合多个桥和交易所，为将任何代币转移到任何链找到最优路由。\n\n该协议聚合 Stargate、Hop、Across、Connext 和 Celer 等桥，以及每条链上的 DEX。这意味着你可以在单笔交易中将链 X 上的代币 A 交换为链 Y 上的代币 B。\n\nLI.FI 通过其 API 为许多钱包和 dApp 提供桥接支持。他们还在 transferto.xyz 提供面向用户的应用。它是无缝多链体验的基础设施。",
+	"features": {
+		"1": {
+			"title": "桥聚合",
+			"description": "所有桥，一个界面"
+		},
+		"2": {
+			"title": "DEX 聚合",
+			"description": "最佳交换费率"
+		},
+		"3": {
+			"title": "20+ 条链",
+			"description": "广泛覆盖"
+		},
+		"4": {
+			"title": "任意到任意",
+			"description": "任何代币，任何链"
+		},
+		"5": {
+			"title": "开发者 SDK",
+			"description": "轻松集成"
+		},
+		"6": {
+			"title": "小部件",
+			"description": "嵌入你的应用"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "跨链交换",
+			"description": "代币 A → 代币 B 跨链"
+		},
+		"2": {
+			"title": "最佳费率发现",
+			"description": "比较所有路由"
+		},
+		"3": {
+			"title": "钱包集成",
+			"description": "为钱包添加桥接"
+		},
+		"4": {
+			"title": "dApp 桥接",
+			"description": "通过小部件嵌入"
+		},
+		"5": {
+			"title": "多链引导",
+			"description": "将用户引入你的链"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 LI.FI？",
+			"answer": "LI.FI 是一个桥和 DEX 聚合器。它通过比较多个桥并结合 DEX 交换来找到跨链转账的最佳路由。一笔交易从任何链上的任何代币到任何其他代币。"
+		},
+		"2": {
+			"question": "和 Socket/Bungee 有什么不同？",
+			"answer": "LI.FI 和 Socket 类似——都聚合桥和 DEX。它们有不同的桥集成，可能找到不同的最优路由。为你的特定转账进行比较。两者都是不错的选择。"
+		},
+		"3": {
+			"question": "支持哪些桥？",
+			"answer": "LI.FI 集成 Stargate、Hop、Across、Connext、Celer、Multichain 等。加上每条链上的 Uniswap、SushiSwap、ParaSwap 等 DEX。查看文档获取完整的当前列表。"
+		},
+		"4": {
+			"question": "我可以在我的应用中嵌入 LI.FI 吗？",
+			"answer": "是的，LI.FI 提供小部件和 SDK。在你的 dApp 中嵌入桥接小部件或集成 API 进行自定义实现。许多钱包使用 LI.FI 作为他们的桥接功能。"
+		},
+		"5": {
+			"question": "有代币吗？",
+			"answer": "LI.FI 目前没有代币。协议通过桥合作费和风险投资获得资金。重点是构建最佳的聚合基础设施。"
+		}
+	},
+	"cta": {
+		"ready": "准备无缝跨链了吗？",
+		"button": "使用 LI.FI",
+		"note": "桥和 DEX 聚合器"
+	}
+}

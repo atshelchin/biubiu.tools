@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Aztec Network - Privacy L2",
+		"description": "Aztec is building a privacy-first L2 using zero-knowledge proofs. Private smart contracts with programmable privacy on Ethereum.",
+		"keywords": "Aztec Network, privacy L2, Noir, zero knowledge, private smart contracts, zkRollup"
+	},
+	"overview": "Aztec Network is building the first private smart contract platform using zero-knowledge proofs. Unlike transparent blockchains, Aztec enables applications where transaction details remain confidential.\n\nAztec pioneered PLONK—one of the most efficient ZK proof systems now used across the industry. Their Noir programming language lets developers write private smart contracts without being cryptography experts.\n\nAztec Connect (deprecated) enabled private DeFi transactions. The upcoming Aztec L2 will provide full programmable privacy with private state, private functions, and private composability.",
+	"features": {
+		"1": {
+			"title": "Private Smart Contracts",
+			"description": "Confidential on-chain logic"
+		},
+		"2": {
+			"title": "Noir Language",
+			"description": "Write private programs"
+		},
+		"3": {
+			"title": "PLONK Proofs",
+			"description": "Efficient ZK system"
+		},
+		"4": {
+			"title": "Ethereum Security",
+			"description": "ZK rollup on ETH"
+		},
+		"5": {
+			"title": "Private State",
+			"description": "Hidden contract data"
+		},
+		"6": {
+			"title": "Composability",
+			"description": "Private contract calls"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Private Transactions",
+			"description": "Confidential transfers"
+		},
+		"2": {
+			"title": "Private DeFi",
+			"description": "Hidden trading activity"
+		},
+		"3": {
+			"title": "Noir Development",
+			"description": "Build private apps"
+		},
+		"4": {
+			"title": "Enterprise Privacy",
+			"description": "Confidential business logic"
+		},
+		"5": {
+			"title": "Identity",
+			"description": "Private credentials"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Noir?",
+			"answer": "Noir is Aztec's programming language for zero-knowledge circuits. Write Rust-like code that compiles to ZK proofs. You don't need cryptography knowledge. Noir can be used with or without Aztec."
+		},
+		"2": {
+			"question": "How is Aztec different from other L2s?",
+			"answer": "Most L2s (Arbitrum, Optimism) are transparent—everyone sees all transactions. Aztec is private by default. Transactions, balances, and contract state can be hidden. It's privacy at the protocol level."
+		},
+		"3": {
+			"question": "What happened to Aztec Connect?",
+			"answer": "Aztec Connect was a privacy bridge for DeFi—shield funds, use DeFi privately. It was sunset in 2024 to focus on the full Aztec L2. The L2 will offer more comprehensive private smart contracts."
+		},
+		"4": {
+			"question": "When is Aztec launching?",
+			"answer": "Aztec L2 is in development with testnet phases. Full mainnet expected in 2024-2025. Noir language is already usable. Follow their Discord for current status and testnet access."
+		},
+		"5": {
+			"question": "What is PLONK?",
+			"answer": "PLONK is a zero-knowledge proof system invented by Aztec researchers. It's efficient and widely adopted beyond Aztec—used by zkSync, Polygon, and others. It's a major contribution to ZK technology."
+		}
+	},
+	"cta": {
+		"ready": "Ready for private smart contracts?",
+		"button": "Explore Aztec",
+		"note": "Privacy-first L2"
+	}
+}

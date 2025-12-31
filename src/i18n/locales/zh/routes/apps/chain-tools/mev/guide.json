@@ -1,157 +1,157 @@
 {
-	"title": "MEV Complete Guide",
-	"subtitle": "Master Maximal Extractable Value from Basics to Advanced Strategies",
-	"estimated_read_time": "18 min",
+	"title": "MEV 完全指南",
+	"subtitle": "从基础到高级策略掌握最大可提取价值",
+	"estimated_read_time": "18 分钟",
 
 	"sections": {
 		"intro": {
-			"title": "Introduction to MEV",
-			"content": "<p>MEV (Maximal Extractable Value), formerly known as Miner Extractable Value, represents the profit that can be extracted from reordering, inserting, or censoring transactions within blocks. This is one of the most sophisticated and impactful phenomena in blockchain technology.</p><p>Since Ethereum's launch, over $600 million in MEV has been extracted from users. Understanding MEV is crucial whether you're a trader trying to protect yourself or an advanced user looking to capture opportunities. This guide will teach you how MEV works, how to protect yourself, and how professional searchers profit from it.</p>"
+			"title": "MEV 简介",
+			"content": "<p>MEV(Maximal Extractable Value，最大可提取价值),原称 Miner Extractable Value(矿工可提取价值),指通过重新排序、插入或审查区块内的交易而可以提取的利润。这是区块链技术中最复杂和最具影响力的现象之一。</p><p>自以太坊推出以来，已有超过 6 亿美元的 MEV 从用户手中被提取。无论你是想保护自己的交易者，还是想捕捉机会的高级用户，理解 MEV 都至关重要。本指南将教你 MEV 如何运作、如何保护自己，以及专业搜索者如何从中获利。</p>"
 		},
 
 		"mev_types": {
-			"title": "Types of MEV",
-			"content": "<p>MEV manifests in several forms, from benign to harmful. Understanding these types helps you recognize when you're being extracted from and how to protect yourself.</p>",
+			"title": "MEV 的类型",
+			"content": "<p>MEV 以多种形式表现，从良性到有害不等。理解这些类型可以帮助你识别何时被提取价值以及如何保护自己。</p>",
 			"frontrunning": {
-				"title": "Frontrunning",
-				"content": "<p>Frontrunning occurs when a searcher sees a pending transaction in the mempool and places their own transaction ahead of it by paying higher gas fees.</p><p><strong>Example:</strong> You submit a large buy order for a token. A bot sees your transaction, quickly buys before you, then sells immediately after your purchase executes at the higher price. The bot profits from the price movement your trade created.</p><p><strong>Impact on users:</strong> You receive fewer tokens than expected due to price slippage. The frontrunner essentially taxes your trade.</p><p><strong>Real case:</strong> In 2020, a single bot frontran over $100,000 worth of trades in one day on Uniswap, making ~$20,000 profit.</p>"
+				"title": "抢跑交易",
+				"content": "<p>抢跑交易发生在搜索者看到内存池中的待处理交易，并通过支付更高的 gas 费用将自己的交易放在前面时。</p><p><strong>示例:</strong> 你提交了一个代币的大额买单。机器人看到你的交易，迅速在你之前买入，然后在你的购买以更高价格执行后立即卖出。机器人从你的交易创造的价格波动中获利。</p><p><strong>对用户的影响:</strong> 由于价格滑点，你收到的代币少于预期。抢跑者实际上对你的交易征税。</p><p><strong>真实案例:</strong> 2020 年，一个机器人在 Uniswap 上一天内抢跑了价值超过 10 万美元的交易，获利约 2 万美元。</p>"
 			},
 			"sandwich_attacks": {
-				"title": "Sandwich Attacks",
-				"content": "<p>Sandwich attacks are a sophisticated form of frontrunning where the attacker places transactions both before and after the victim's transaction—hence 'sandwiching' them.</p><p><strong>How it works:</strong></p><ol><li>Victim submits a trade to buy Token A</li><li>Attacker frontruns by buying Token A first (price goes up)</li><li>Victim's trade executes at the inflated price</li><li>Attacker backruns by selling Token A (profits from the price difference)</li></ol><p><strong>Example numbers:</strong> You try to buy $10,000 worth of ETH on Uniswap. A sandwich bot:<br/>1. Buys $50,000 of ETH right before you (pushing price up 0.5%)<br/>2. Your trade executes at the inflated price<br/>3. Bot sells immediately after (taking ~$250 profit from you)</p><p>Sandwich attacks are the most common and harmful form of MEV for regular users, accounting for over $500 million in extracted value.</p>"
+				"title": "三明治攻击",
+				"content": "<p>三明治攻击是一种复杂的抢跑形式，攻击者在受害者的交易前后都放置交易——因此将其夹在中间。</p><p><strong>运作方式:</strong></p><ol><li>受害者提交购买代币 A 的交易</li><li>攻击者先抢跑购买代币 A(价格上涨)</li><li>受害者的交易以抬高的价格执行</li><li>攻击者在后面卖出代币 A(从价格差中获利)</li></ol><p><strong>数字示例:</strong> 你尝试在 Uniswap 上购买价值 1 万美元的 ETH。三明治机器人:<br/>1. 在你之前购买 5 万美元的 ETH(将价格推高 0.5%)<br/>2. 你的交易以抬高的价格执行<br/>3. 机器人立即卖出 (从你这里获利约 250 美元)</p><p>三明治攻击是普通用户最常见和最有害的 MEV 形式，已提取价值超过 5 亿美元。</p>"
 			},
 			"arbitrage": {
-				"title": "Arbitrage",
-				"content": "<p>Arbitrage MEV involves profiting from price differences across different exchanges or pools. Unlike frontrunning, arbitrage is generally considered beneficial as it helps maintain price consistency across markets.</p><p><strong>Cross-DEX arbitrage:</strong> When ETH is $2,000 on Uniswap but $2,005 on SushiSwap, arbitrageurs buy on Uniswap and sell on SushiSwap, profiting $5 per ETH while bringing prices back in line.</p><p><strong>Triangle arbitrage:</strong> Exploiting price inefficiencies across three or more trading pairs. For example: ETH → USDC → DAI → ETH, if the circular rate is profitable.</p><p><strong>Statistical arbitrage:</strong> Using historical patterns and correlations to predict short-term price movements and profit from temporary mispricings.</p><p>Arbitrage bots are the most active participants in MEV, executing thousands of transactions daily and keeping DeFi markets efficient.</p>"
+				"title": "套利",
+				"content": "<p>套利 MEV 涉及从不同交易所或池之间的价格差异中获利。与抢跑不同，套利通常被认为是有益的，因为它有助于保持跨市场的价格一致性。</p><p><strong>跨 DEX 套利:</strong> 当 ETH 在 Uniswap 上价格为 2,000 美元，而在 SushiSwap 上为 2,005 美元时，套利者在 Uniswap 上买入并在 SushiSwap 上卖出，每个 ETH 获利 5 美元，同时使价格恢复一致。</p><p><strong>三角套利:</strong> 利用三个或更多交易对之间的价格低效。例如：ETH → USDC → DAI → ETH，如果循环汇率有利可图。</p><p><strong>统计套利:</strong> 使用历史模式和相关性预测短期价格变动，并从暂时的错误定价中获利。</p><p>套利机器人是 MEV 中最活跃的参与者，每天执行数千笔交易，保持 DeFi 市场的效率。</p>"
 			},
 			"liquidations": {
-				"title": "Liquidations",
-				"content": "<p>In lending protocols, when a borrower's collateral value falls below the liquidation threshold, liquidators can repay the debt and receive collateral at a discount (typically 5-15%).</p><p><strong>The race:</strong> During market crashes, thousands of positions become liquidatable simultaneously. Liquidators compete to capture these opportunities, often paying extremely high gas fees ($1,000+) to win.</p><p><strong>Example from March 2020 crash:</strong> When ETH dropped 30% in one day, over $8 million in liquidations occurred on Compound alone. Some liquidators made over $100,000 in a single transaction.</p><p><strong>Why liquidations matter:</strong> They're essential for protocol health—without liquidators, lending protocols would become insolvent. This is 'good MEV' that protects the ecosystem.</p>"
+				"title": "清算",
+				"content": "<p>在借贷协议中，当借款人的抵押品价值低于清算阈值时，清算人可以偿还债务并以折扣价 (通常为 5-15%) 获得抵押品。</p><p><strong>竞赛:</strong> 在市场崩盘期间，数千个仓位同时变得可清算。清算人竞争捕捉这些机会，通常支付极高的 gas 费用 (1,000 美元以上) 才能获胜。</p><p><strong>2020 年 3 月崩盘示例:</strong> 当 ETH 一天内下跌 30% 时，仅在 Compound 上就发生了超过 800 万美元的清算。一些清算人在一笔交易中赚了超过 10 万美元。</p><p><strong>清算为何重要:</strong> 它们对协议健康至关重要——没有清算人，借贷协议将变得资不抵债。这是保护生态系统的\"良性 MEV\"。</p>"
 			},
 			"backrunning": {
-				"title": "Backrunning",
-				"content": "<p>Backrunning involves placing a transaction immediately after another transaction to capitalize on the state changes it creates.</p><p><strong>Common scenario:</strong> A large trade on a DEX creates a price discrepancy. Backrunners immediately arbitrage this discrepancy against other DEXs or pools.</p><p><strong>Example:</strong> Someone swaps $1M USDC for ETH on Uniswap, moving the price from $2,000 to $2,003. A backrunner immediately buys ETH on Curve (still $2,000) and sells on Uniswap ($2,003), profiting from the 3-second price difference.</p><p><strong>Impact:</strong> Unlike frontrunning, backrunning doesn't directly harm users—it actually helps restore market efficiency after large trades. It's considered neutral or positive MEV.</p>"
+				"title": "尾随交易",
+				"content": "<p>尾随交易涉及在另一笔交易之后立即放置交易，以利用其创造的状态变化。</p><p><strong>常见场景:</strong> DEX 上的大额交易创造了价格差异。尾随者立即针对其他 DEX 或池套利这种差异。</p><p><strong>示例:</strong> 有人在 Uniswap 上将 100 万 USDC 兑换为 ETH，将价格从 2,000 美元移动到 2,003 美元。尾随者立即在 Curve 上购买 ETH(仍为 2,000 美元) 并在 Uniswap 上卖出 (2,003 美元),从 3 秒的价格差中获利。</p><p><strong>影响:</strong> 与抢跑不同，尾随交易不会直接伤害用户——它实际上有助于在大额交易后恢复市场效率。它被认为是中性或正面的 MEV。</p>"
 			}
 		},
 
 		"mev_supply_chain": {
-			"title": "The MEV Supply Chain",
-			"content": "<p>After Ethereum's merge to Proof of Stake, MEV extraction evolved into a sophisticated multi-layered system called the MEV supply chain. Understanding this structure is crucial for comprehending modern MEV.</p>",
+			"title": "MEV 供应链",
+			"content": "<p>在以太坊合并到权益证明之后，MEV 提取演变成了一个称为 MEV 供应链的复杂多层系统。理解这种结构对于理解现代 MEV 至关重要。</p>",
 			"searchers": {
-				"title": "Searchers",
-				"content": "<p>Searchers are the bottom layer—individuals or bots that identify MEV opportunities and create transaction bundles to capture them.</p><p><strong>What searchers do:</strong></p><ul><li>Monitor the mempool for profitable opportunities</li><li>Run simulations to test if transactions will be profitable</li><li>Create transaction bundles with precise ordering</li><li>Submit bundles to builders with bid prices</li></ul><p><strong>Types of searchers:</strong></p><ul><li><strong>Arbitrage bots:</strong> Find and exploit price differences (most common)</li><li><strong>Liquidation bots:</strong> Monitor lending protocols for liquidation opportunities</li><li><strong>Sandwich bots:</strong> Extract value from user trades (most controversial)</li><li><strong>NFT snipers:</strong> Frontrun NFT purchases and sales</li></ul><p><strong>Competition:</strong> Thousands of searchers compete for the same opportunities. Success requires fast execution, low latency, and sophisticated algorithms.</p>"
+				"title": "搜索者",
+				"content": "<p>搜索者是底层——识别 MEV 机会并创建交易包来捕捉它们的个人或机器人。</p><p><strong>搜索者的工作:</strong></p><ul><li>监控内存池寻找有利可图的机会</li><li>运行模拟测试交易是否有利可图</li><li>创建具有精确排序的交易包</li><li>向构建者提交带有出价的交易包</li></ul><p><strong>搜索者类型:</strong></p><ul><li><strong>套利机器人:</strong> 发现并利用价格差异 (最常见)</li><li><strong>清算机器人:</strong> 监控借贷协议的清算机会</li><li><strong>三明治机器人:</strong> 从用户交易中提取价值 (最具争议)</li><li><strong>NFT 狙击手:</strong> 抢跑 NFT 购买和销售</li></ul><p><strong>竞争:</strong> 数千名搜索者竞争相同的机会。成功需要快速执行、低延迟和复杂的算法。</p>"
 			},
 			"builders": {
-				"title": "Builders",
-				"content": "<p>Builders receive bundles from multiple searchers and assemble them into complete blocks, maximizing total value.</p><p><strong>Builder responsibilities:</strong></p><ul><li>Receive bundles from searchers</li><li>Simulate bundles to verify profitability</li><li>Order transactions to maximize MEV extraction</li><li>Fill remaining space with mempool transactions</li><li>Submit completed blocks to relays</li></ul><p><strong>Major builders:</strong></p><ul><li><strong>Flashbots Builder:</strong> Largest builder, ~30-40% market share</li><li><strong>Beaverbuild:</strong> Independent builder, ~15-20% share</li><li><strong>Titan:</strong> High-performance builder, ~10-15% share</li></ul><p><strong>Builder revenue:</strong> Builders keep a portion of MEV (typically 10-30%) and pass the rest to validators. Top builders process hundreds of millions in MEV annually.</p><p><strong>Block value distribution:</strong> A typical block might contain: $10,000 in MEV (captured by searchers) + $5,000 in priority fees + $2,000 in base fees (burned).</p>"
+				"title": "构建者",
+				"content": "<p>构建者从多个搜索者那里接收交易包，并将它们组装成完整的区块，最大化总价值。</p><p><strong>构建者的职责:</strong></p><ul><li>从搜索者那里接收交易包</li><li>模拟交易包以验证盈利能力</li><li>排序交易以最大化 MEV 提取</li><li>用内存池交易填充剩余空间</li><li>向中继提交完成的区块</li></ul><p><strong>主要构建者:</strong></p><ul><li><strong>Flashbots Builder:</strong> 最大的构建者，约占 30-40% 市场份额</li><li><strong>Beaverbuild:</strong> 独立构建者，约占 15-20% 份额</li><li><strong>Titan:</strong> 高性能构建者，约占 10-15% 份额</li></ul><p><strong>构建者收入:</strong> 构建者保留一部分 MEV(通常为 10-30%),并将其余部分传递给验证者。顶级构建者每年处理数亿美元的 MEV。</p><p><strong>区块价值分配:</strong> 一个典型的区块可能包含：10,000 美元的 MEV(由搜索者捕获)+ 5,000 美元的优先费用 + 2,000 美元的基础费用 (销毁)。</p>"
 			},
 			"validators": {
-				"title": "Validators",
-				"content": "<p>Validators are Ethereum's block proposers who ultimately decide which block gets included in the chain. Post-merge, validators earn revenue from both staking rewards and MEV.</p><p><strong>Traditional validator revenue (pre-PBS):</strong></p><ul><li>Consensus rewards: ~4-5% APR from staking</li><li>Execution rewards: Priority fees from transactions</li><li>MEV: Captured by building blocks themselves (required technical expertise)</li></ul><p><strong>Modern validator revenue (with MEV-Boost):</strong></p><ul><li>Consensus rewards: Same 4-5% APR</li><li>Block bids: Builders bid to provide the most profitable block</li><li>MEV sharing: Validators receive 70-90% of MEV value from builders</li></ul><p><strong>Impact:</strong> By running MEV-Boost, validators increased their revenue by 50-200% compared to building blocks themselves. Over 95% of validators now use MEV-Boost.</p>"
+				"title": "验证者",
+				"content": "<p>验证者是以太坊的区块提议者，最终决定哪个区块被包含在链中。合并后，验证者从质押奖励和 MEV 中获得收入。</p><p><strong>传统验证者收入 (PBS 之前):</strong></p><ul><li>共识奖励：质押约 4-5% 的年化收益率</li><li>执行奖励：交易的优先费用</li><li>MEV: 通过自己构建区块捕获 (需要技术专长)</li></ul><p><strong>现代验证者收入 (使用 MEV-Boost):</strong></p><ul><li>共识奖励：相同的 4-5% 年化收益率</li><li>区块出价：构建者竞标提供最有利可图的区块</li><li>MEV 分享：验证者从构建者那里获得 70-90% 的 MEV 价值</li></ul><p><strong>影响:</strong> 通过运行 MEV-Boost，验证者的收入比自己构建区块增加了 50-200%。现在超过 95% 的验证者使用 MEV-Boost。</p>"
 			},
 			"block_production": {
-				"title": "Block Production Flow",
-				"content": "<p>The modern block production process involves multiple steps across different actors, creating a market-based system for block space.</p><p><strong>Step-by-step flow:</strong></p><ol><li><strong>Users submit transactions</strong> to the public mempool</li><li><strong>Searchers identify opportunities</strong> and create bundles</li><li><strong>Searchers submit bundles</strong> to builders with bid prices</li><li><strong>Builders construct blocks</strong> by combining profitable bundles</li><li><strong>Builders submit blocks</strong> to relays along with their bid</li><li><strong>Relays validate blocks</strong> and forward winning bid to validators</li><li><strong>Validators choose the highest bid</strong> and propose that block</li><li><strong>Block is added to chain</strong> and MEV is distributed</li></ol><p><strong>Timing:</strong> This entire process happens in ~1-2 seconds before each 12-second slot. Latency is critical—delays of even 100ms can mean losing opportunities.</p><p><strong>Revenue split example:</strong> From a $100,000 MEV opportunity:<br/>- Searcher keeps: $60,000 (60%)<br/>- Builder keeps: $10,000 (10%)<br/>- Validator receives: $30,000 (30%)<br/>- Total extracted from users: $100,000</p>"
+				"title": "区块生产流程",
+				"content": "<p>现代区块生产过程涉及不同参与者的多个步骤，为区块空间创建了一个基于市场的系统。</p><p><strong>逐步流程:</strong></p><ol><li><strong>用户提交交易</strong> 到公共内存池</li><li><strong>搜索者识别机会</strong> 并创建交易包</li><li><strong>搜索者提交交易包</strong> 给构建者并出价</li><li><strong>构建者构建区块</strong> 通过组合有利可图的交易包</li><li><strong>构建者提交区块</strong> 给中继并出价</li><li><strong>中继验证区块</strong> 并将获胜出价转发给验证者</li><li><strong>验证者选择最高出价</strong> 并提议该区块</li><li><strong>区块被添加到链中</strong> MEV 被分配</li></ol><p><strong>时间:</strong> 整个过程在每个 12 秒时隙之前的约 1-2 秒内发生。延迟至关重要——即使 100 毫秒的延迟也可能意味着失去机会。</p><p><strong>收入分配示例:</strong> 从 100,000 美元的 MEV 机会中:<br/>- 搜索者保留：60,000 美元 (60%)<br/>- 构建者保留：10,000 美元 (10%)<br/>- 验证者获得：30,000 美元 (30%)<br/>- 从用户那里提取的总额：100,000 美元</p>"
 			}
 		},
 
 		"protection": {
-			"title": "Protecting Yourself from MEV",
-			"content": "<p>As a regular user, you can't eliminate MEV exposure entirely, but you can significantly reduce it using protection tools and best practices.</p>",
+			"title": "保护自己免受 MEV",
+			"content": "<p>作为普通用户，你无法完全消除 MEV 暴露，但可以使用保护工具和最佳实践显著减少它。</p>",
 			"flashbots": {
 				"title": "Flashbots Protect RPC",
-				"content": "<p>Flashbots Protect is a free RPC endpoint that sends your transactions directly to Flashbots builders instead of the public mempool, protecting you from frontrunning and sandwich attacks.</p><p><strong>How to use:</strong></p><ol><li>Add Flashbots Protect RPC to your wallet (MetaMask, Rabby, etc.)</li><li>RPC URL: https://rpc.flashbots.net</li><li>Your transactions bypass the public mempool</li><li>Flashbots builders include your transaction without frontrunning</li></ol><p><strong>Benefits:</strong></p><ul><li>No frontrunning or sandwich attacks</li><li>Failed transactions don't cost gas</li><li>You may receive MEV rebates through MEV-Share</li></ul><p><strong>Trade-offs:</strong></p><ul><li>Slightly slower inclusion (6-12 seconds vs 3-6 seconds)</li><li>Relies on Flashbots builder market share (~40%)</li><li>Not 100% guaranteed inclusion</li></ul><p><strong>When to use:</strong> Large trades, token swaps, NFT purchases—anything where MEV extraction could cost you more than a few dollars.</p>"
+				"content": "<p>Flashbots Protect 是一个免费的 RPC 端点，它将你的交易直接发送给 Flashbots 构建者而不是公共内存池，保护你免受抢跑和三明治攻击。</p><p><strong>使用方法:</strong></p><ol><li>将 Flashbots Protect RPC 添加到你的钱包 (MetaMask、Rabby 等)</li><li>RPC URL: https://rpc.flashbots.net</li><li>你的交易绕过公共内存池</li><li>Flashbots 构建者包含你的交易而不抢跑</li></ol><p><strong>好处:</strong></p><ul><li>没有抢跑或三明治攻击</li><li>失败的交易不花费 gas</li><li>你可能通过 MEV-Share 获得 MEV 回扣</li></ul><p><strong>权衡:</strong></p><ul><li>包含速度稍慢 (6-12 秒 vs 3-6 秒)</li><li>依赖 Flashbots 构建者市场份额 (约 40%)</li><li>不保证 100% 包含</li></ul><p><strong>何时使用:</strong> 大额交易、代币交换、NFT 购买——任何 MEV 提取可能花费你超过几美元的情况。</p>"
 			},
 			"mev_blocker": {
-				"title": "MEV Blocker (CoW Swap)",
-				"content": "<p>MEV Blocker is a comprehensive solution from CoW Protocol that not only protects you from MEV but also shares extracted MEV back with you.</p><p><strong>Key features:</strong></p><ul><li><strong>Batch auctions:</strong> CoW Swap batches trades together, eliminating MEV opportunities</li><li><strong>Solver competition:</strong> Multiple professional traders compete to find best execution</li><li><strong>MEV rebates:</strong> If MEV is extracted, you get up to 90% back</li><li><strong>Better prices:</strong> Often beats regular DEX prices due to solver competition</li></ul><p><strong>How it works:</strong></p><ol><li>You submit an order to CoW Swap</li><li>Order goes into a batch with other orders (not public mempool)</li><li>Solvers compete to execute your trade at the best price</li><li>Trades settle on-chain in a single transaction</li><li>Any MEV extracted is shared back with users</li></ol><p><strong>Statistics:</strong> CoW Swap users have saved over $300 million from MEV compared to traditional DEXs. Average savings: 0.1-0.3% per trade.</p>"
+				"title": "MEV Blocker(CoW Swap)",
+				"content": "<p>MEV Blocker 是 CoW Protocol 的综合解决方案，不仅保护你免受 MEV，还将提取的 MEV 分享回给你。</p><p><strong>关键特性:</strong></p><ul><li><strong>批量拍卖:</strong> CoW Swap 将交易批量处理在一起，消除 MEV 机会</li><li><strong>求解器竞争:</strong> 多个专业交易者竞争寻找最佳执行</li><li><strong>MEV 回扣:</strong> 如果提取了 MEV，你可以获得高达 90% 的回扣</li><li><strong>更好的价格:</strong> 由于求解器竞争，通常超过常规 DEX 价格</li></ul><p><strong>运作方式:</strong></p><ol><li>你向 CoW Swap 提交订单</li><li>订单与其他订单一起进入批次 (不是公共内存池)</li><li>求解器竞争以最佳价格执行你的交易</li><li>交易在链上以单笔交易结算</li><li>任何提取的 MEV 都会分享回给用户</li></ol><p><strong>统计数据:</strong> 与传统 DEX 相比，CoW Swap 用户已节省超过 3 亿美元的 MEV。平均节省：每笔交易 0.1-0.3%。</p>"
 			},
 			"private_transactions": {
-				"title": "Private Transactions & Best Practices",
-				"content": "<p>Beyond dedicated tools, you can protect yourself through behavioral changes and smart transaction design.</p><p><strong>Best practices to avoid MEV:</strong></p><ul><li><strong>Use wider slippage tolerances wisely:</strong> Too tight = transaction fails, too loose = more MEV extraction. For stablecoins: 0.1-0.3%, for volatile pairs: 0.5-1%</li><li><strong>Split large trades:</strong> Instead of one $100k swap, do 5x $20k swaps over time</li><li><strong>Trade during low volatility:</strong> MEV bots are less active when markets are calm</li><li><strong>Use limit orders:</strong> CoW Swap and 1inch limit orders avoid mempool exposure</li><li><strong>Time your transactions:</strong> Avoid major news events and high-volume periods</li></ul><p><strong>Advanced protection:</strong></p><ul><li><strong>Private mempools:</strong> Services like Eden Network offer private transaction submission</li><li><strong>Account abstraction:</strong> New wallet standards that enable batching and conditional execution</li><li><strong>L2 solutions:</strong> Arbitrum, Optimism have different MEV dynamics (usually less extraction)</li></ul><p><strong>Cost-benefit analysis:</strong> For trades under $1,000, MEV protection may cost more in slower execution than you'd save. Focus protection on larger trades.</p>"
+				"title": "私有交易和最佳实践",
+				"content": "<p>除了专用工具外，你还可以通过行为改变和智能交易设计来保护自己。</p><p><strong>避免 MEV 的最佳实践:</strong></p><ul><li><strong>明智使用更宽的滑点容忍度:</strong> 太紧 = 交易失败，太松 = 更多 MEV 提取。稳定币：0.1-0.3%,波动对：0.5-1%</li><li><strong>拆分大额交易:</strong> 不要一次性进行 10 万美元的交换，而是在一段时间内进行 5 次 2 万美元的交换</li><li><strong>在低波动期交易:</strong> 市场平静时 MEV 机器人不太活跃</li><li><strong>使用限价订单:</strong> CoW Swap 和 1inch 限价订单避免内存池暴露</li><li><strong>安排交易时间:</strong> 避免重大新闻事件和高交易量时期</li></ul><p><strong>高级保护:</strong></p><ul><li><strong>私有内存池:</strong> Eden Network 等服务提供私有交易提交</li><li><strong>账户抽象:</strong> 启用批处理和条件执行的新钱包标准</li><li><strong>L2 解决方案:</strong> Arbitrum、Optimism 具有不同的 MEV 动态 (通常提取较少)</li></ul><p><strong>成本效益分析:</strong> 对于 1,000 美元以下的交易，MEV 保护在执行缓慢方面的成本可能超过你节省的。将保护重点放在较大的交易上。</p>"
 			}
 		},
 
 		"profit_opportunities": {
-			"title": "MEV Profit Opportunities",
-			"content": "<p>While protecting yourself from MEV is important, understanding how to capture MEV can be lucrative for technical users. This is an advanced topic requiring programming skills, capital, and risk tolerance.</p>",
+			"title": "MEV 盈利机会",
+			"content": "<p>虽然保护自己免受 MEV 很重要，但理解如何捕捉 MEV 对技术用户来说可能是有利可图的。这是一个高级主题，需要编程技能、资本和风险承受能力。</p>",
 			"become_searcher": {
-				"title": "Becoming a Searcher",
-				"content": "<p>MEV searching is highly competitive but potentially profitable. Success requires combining technical skills, market understanding, and capital.</p><p><strong>Requirements:</strong></p><ul><li><strong>Programming skills:</strong> Solidity, JavaScript/TypeScript, Python</li><li><strong>Infrastructure:</strong> Fast servers, low-latency connections, archive nodes</li><li><strong>Capital:</strong> $10,000-$100,000+ for profitable opportunities</li><li><strong>Gas fees:</strong> Be prepared to pay $100-$1,000+ in failed transaction costs while learning</li></ul><p><strong>Common strategies for beginners:</strong></p><ul><li><strong>Liquidation hunting:</strong> Monitor lending protocols for undercollateralized positions</li><li><strong>Cross-DEX arbitrage:</strong> Find price differences between exchanges</li><li><strong>Long-tail token arbitrage:</strong> Less competition than ETH/USDC pairs</li><li><strong>NFT sniping:</strong> Identify mispriced NFT listings</li></ul><p><strong>Reality check:</strong> Most beginning searchers lose money. The field is dominated by well-funded teams with years of experience. Start with paper trading (simulations) before risking real capital.</p><p><strong>Learning path:</strong></p><ol><li>Study existing MEV transactions on Etherscan</li><li>Use Flashbots' MEV-Inspect to analyze historical MEV</li><li>Build simulations in a test environment</li><li>Start with small capital and simple strategies</li><li>Join communities like Flashbots Discord for support</li></ol>"
+				"title": "成为搜索者",
+				"content": "<p>MEV 搜索竞争激烈但可能有利可图。成功需要结合技术技能、市场理解和资本。</p><p><strong>要求:</strong></p><ul><li><strong>编程技能:</strong> Solidity、JavaScript/TypeScript、Python</li><li><strong>基础设施:</strong> 快速服务器、低延迟连接、归档节点</li><li><strong>资本:</strong> 10,000-100,000 美元以上用于有利可图的机会</li><li><strong>Gas 费用:</strong> 准备在学习过程中支付 100-1,000 美元以上的失败交易成本</li></ul><p><strong>初学者的常见策略:</strong></p><ul><li><strong>清算猎手:</strong> 监控借贷协议的抵押不足仓位</li><li><strong>跨 DEX 套利:</strong> 发现交易所之间的价格差异</li><li><strong>长尾代币套利:</strong> 竞争少于 ETH/USDC 对</li><li><strong>NFT 狙击:</strong> 识别定价错误的 NFT 列表</li></ul><p><strong>现实检查:</strong> 大多数初学者搜索者会赔钱。该领域由拥有多年经验的资金充足团队主导。在冒真实资本风险之前，从纸上交易 (模拟) 开始。</p><p><strong>学习路径:</strong></p><ol><li>在 Etherscan 上研究现有的 MEV 交易</li><li>使用 Flashbots 的 MEV-Inspect 分析历史 MEV</li><li>在测试环境中构建模拟</li><li>从小额资本和简单策略开始</li><li>加入 Flashbots Discord 等社区寻求支持</li></ol>"
 			},
 			"tools_needed": {
-				"title": "Tools and Infrastructure",
-				"content": "<p>Successful MEV searching requires a sophisticated technology stack and deep market understanding.</p><p><strong>Essential tools:</strong></p><ul><li><strong>Ethereum node:</strong> Archive node for historical data, full node for current state</li><li><strong>Mempool monitoring:</strong> Direct connections to nodes, mempool streaming services</li><li><strong>Simulation environment:</strong> Tenderly, Hardhat, or custom fork testing</li><li><strong>Bundle submission:</strong> Flashbots Relay API, MEV-Boost integration</li><li><strong>Analytics:</strong> EigenPhi, MEV-Explore, ZeroMEV for research</li></ul><p><strong>Infrastructure costs:</strong></p><ul><li>Archive node: $500-$2,000/month</li><li>Low-latency server: $200-$500/month</li><li>Mempool services: $100-$1,000/month</li><li>Total: $800-$3,500/month minimum</li></ul><p><strong>Software stack example:</strong></p><ul><li><strong>Backend:</strong> TypeScript with ethers.js or web3.py</li><li><strong>Simulation:</strong> Tenderly for pre-flight checks</li><li><strong>Monitoring:</strong> Custom websocket connections to multiple nodes</li><li><strong>Database:</strong> PostgreSQL for opportunity tracking</li><li><strong>Alerting:</strong> Real-time notifications for profitable opportunities</li></ul><p><strong>Open-source resources:</strong></p><ul><li>Flashbots searcher examples on GitHub</li><li>MEV-inspect for analyzing opportunities</li><li>Artemis framework for building MEV bots</li></ul><p><strong>Expected returns:</strong> Successful searchers can make $1,000-$10,000/day, but 90% of attempts fail. Competition is fierce and constantly evolving.</p>"
+				"title": "所需工具和基础设施",
+				"content": "<p>成功的 MEV 搜索需要复杂的技术堆栈和深入的市场理解。</p><p><strong>必备工具:</strong></p><ul><li><strong>以太坊节点:</strong> 历史数据的归档节点，当前状态的完整节点</li><li><strong>内存池监控:</strong> 直接连接到节点，内存池流服务</li><li><strong>模拟环境:</strong> Tenderly、Hardhat 或自定义分叉测试</li><li><strong>交易包提交:</strong> Flashbots Relay API、MEV-Boost 集成</li><li><strong>分析:</strong> EigenPhi、MEV-Explore、ZeroMEV 用于研究</li></ul><p><strong>基础设施成本:</strong></p><ul><li>归档节点：500-2,000 美元/月</li><li>低延迟服务器：200-500 美元/月</li><li>内存池服务：100-1,000 美元/月</li><li>总计：最低 800-3,500 美元/月</li></ul><p><strong>软件堆栈示例:</strong></p><ul><li><strong>后端:</strong> 使用 ethers.js 或 web3.py 的 TypeScript</li><li><strong>模拟:</strong> Tenderly 用于预检查</li><li><strong>监控:</strong> 与多个节点的自定义 websocket 连接</li><li><strong>数据库:</strong> PostgreSQL 用于机会跟踪</li><li><strong>警报:</strong> 有利可图机会的实时通知</li></ul><p><strong>开源资源:</strong></p><ul><li>GitHub 上的 Flashbots 搜索者示例</li><li>MEV-inspect 用于分析机会</li><li>Artemis 框架用于构建 MEV 机器人</li></ul><p><strong>预期回报:</strong> 成功的搜索者每天可以赚 1,000-10,000 美元，但 90% 的尝试会失败。竞争激烈且不断发展。</p>"
 			}
 		},
 
 		"post_merge_mev": {
-			"title": "Post-Merge MEV Landscape",
-			"content": "<p>Ethereum's merge to Proof of Stake in September 2022 fundamentally changed MEV dynamics, introducing new infrastructure and opportunities.</p>",
+			"title": "合并后的 MEV 格局",
+			"content": "<p>以太坊在 2022 年 9 月合并到权益证明从根本上改变了 MEV 动态，引入了新的基础设施和机会。</p>",
 			"pbs": {
-				"title": "Proposer-Builder Separation (PBS)",
-				"content": "<p>PBS is the architectural innovation that separated block building from block proposing, creating a competitive market for MEV extraction.</p><p><strong>Why PBS was needed:</strong> Before PBS, validators had to build blocks themselves to capture MEV. This created centralization pressure—sophisticated operators with MEV expertise earned much more than home stakers.</p><p><strong>How PBS works:</strong></p><ul><li>Builders specialize in MEV extraction and block construction</li><li>Builders compete to offer validators the highest block bids</li><li>Validators simply choose the best bid—no technical MEV expertise needed</li><li>This democratizes MEV revenue across all validators</li></ul><p><strong>Impact on decentralization:</strong> PBS prevented a scenario where only large, sophisticated operators could profitably validate. Now, even a solo home staker earns similar MEV revenue to large institutions.</p><p><strong>Current PBS market:</strong></p><ul><li>~95% of validators use MEV-Boost (PBS middleware)</li><li>~20 active builders compete for blocks</li><li>Average block value: $40,000-$80,000 (including MEV)</li><li>Validators earn 50-200% more than without PBS</li></ul><p><strong>Centralization concerns:</strong> While PBS democratized validator MEV, it concentrated power in builders. The top 3 builders control ~60% of blocks.</p>"
+				"title": "提议者 - 构建者分离 (PBS)",
+				"content": "<p>PBS 是将区块构建与区块提议分离的架构创新，为 MEV 提取创建了一个竞争市场。</p><p><strong>为何需要 PBS:</strong> 在 PBS 之前，验证者必须自己构建区块才能捕获 MEV。这造成了中心化压力——拥有 MEV 专业知识的复杂运营商比家庭质押者赚得多得多。</p><p><strong>PBS 如何运作:</strong></p><ul><li>构建者专门从事 MEV 提取和区块构建</li><li>构建者竞争向验证者提供最高的区块出价</li><li>验证者只需选择最佳出价——不需要技术 MEV 专业知识</li><li>这使所有验证者的 MEV 收入民主化</li></ul><p><strong>对去中心化的影响:</strong> PBS 防止了只有大型复杂运营商才能有利可图地验证的情况。现在，即使是单独的家庭质押者也能获得与大型机构类似的 MEV 收入。</p><p><strong>当前 PBS 市场:</strong></p><ul><li>约 95% 的验证者使用 MEV-Boost(PBS 中间件)</li><li>约 20 个活跃构建者竞争区块</li><li>平均区块价值：40,000-80,000 美元 (包括 MEV)</li><li>验证者的收入比没有 PBS 时多 50-200%</li></ul><p><strong>中心化担忧:</strong> 虽然 PBS 使验证者 MEV 民主化，但它将权力集中在构建者身上。前 3 名构建者控制着约 60% 的区块。</p>"
 			},
 			"mev_boost": {
-				"title": "MEV-Boost: The PBS Implementation",
-				"content": "<p>MEV-Boost is the practical implementation of PBS, acting as middleware between validators and the block builder market.</p><p><strong>Architecture:</strong></p><ul><li><strong>Validator:</strong> Runs consensus client + MEV-Boost sidecar</li><li><strong>MEV-Boost:</strong> Connects to multiple relays</li><li><strong>Relays:</strong> Trusted intermediaries between builders and validators</li><li><strong>Builders:</strong> Construct blocks and submit to relays</li></ul><p><strong>How it works each slot:</strong></p><ol><li>Validator asks MEV-Boost for the best block bid (1-2 seconds before slot)</li><li>MEV-Boost queries all connected relays simultaneously</li><li>Relays return block bids from builders (header only, not full block)</li><li>MEV-Boost returns highest bid to validator</li><li>Validator signs and returns signature</li><li>Relay releases full block to validator</li><li>Validator proposes block to network</li></ol><p><strong>Why relays exist:</strong> Builders don't trust validators not to steal their blocks, and validators don't trust builders to pay. Relays act as trusted escrow, ensuring atomic exchange.</p><p><strong>Relay diversity:</strong> Validators should connect to multiple relays for redundancy:<br/>- Flashbots Relay<br/>- Bloxroute Max Profit<br/>- Ultra Sound Relay<br/>- Agnostic Relay<br/>- Eden Network Relay</p><p><strong>Performance monitoring:</strong> Use mevboost.pics to track your validator's MEV-Boost performance and ensure you're capturing maximum value.</p>"
+				"title": "MEV-Boost: PBS 实现",
+				"content": "<p>MEV-Boost 是 PBS 的实际实现，充当验证者和区块构建者市场之间的中间件。</p><p><strong>架构:</strong></p><ul><li><strong>验证者:</strong> 运行共识客户端 + MEV-Boost 侧车</li><li><strong>MEV-Boost:</strong> 连接到多个中继</li><li><strong>中继:</strong> 构建者和验证者之间的可信中介</li><li><strong>构建者:</strong> 构建区块并提交给中继</li></ul><p><strong>每个时隙的运作方式:</strong></p><ol><li>验证者向 MEV-Boost 请求最佳区块出价 (时隙前 1-2 秒)</li><li>MEV-Boost 同时查询所有连接的中继</li><li>中继从构建者那里返回区块出价 (仅头部，不是完整区块)</li><li>MEV-Boost 将最高出价返回给验证者</li><li>验证者签名并返回签名</li><li>中继向验证者释放完整区块</li><li>验证者向网络提议区块</li></ol><p><strong>为何存在中继:</strong> 构建者不信任验证者不会窃取他们的区块，验证者不信任构建者会付款。中继充当可信托管，确保原子交换。</p><p><strong>中继多样性:</strong> 验证者应连接到多个中继以实现冗余:<br/>- Flashbots Relay<br/>- Bloxroute Max Profit<br/>- Ultra Sound Relay<br/>- Agnostic Relay<br/>- Eden Network Relay</p><p><strong>性能监控:</strong> 使用 mevboost.pics 跟踪你的验证者的 MEV-Boost 性能，并确保你捕获最大价值。</p>"
 			}
 		},
 
 		"ethical_considerations": {
-			"title": "Ethics and Future of MEV",
-			"content": "<p>MEV raises fundamental questions about fairness, censorship, and the future of blockchain networks. Understanding these issues is crucial for anyone involved in MEV.</p>",
+			"title": "伦理和 MEV 的未来",
+			"content": "<p>MEV 提出了关于公平性、审查和区块链网络未来的根本问题。理解这些问题对任何参与 MEV 的人都至关重要。</p>",
 			"censorship": {
-				"title": "Censorship and OFAC Compliance",
-				"content": "<p>One of the most controversial aspects of modern MEV infrastructure is transaction censorship, particularly related to OFAC (Office of Foreign Assets Control) sanctions.</p><p><strong>The issue:</strong> Some builders and relays censor transactions from OFAC-sanctioned addresses (like Tornado Cash). This conflicts with Ethereum's credible neutrality ethos.</p><p><strong>Current state:</strong></p><ul><li>~50% of blocks are built by OFAC-compliant builders who censor transactions</li><li>Censored transactions typically get included in next non-censoring block</li><li>Average delay: 12-36 seconds (1-3 blocks)</li></ul><p><strong>Arguments for censorship:</strong></p><ul><li>Legal compliance required for US-based entities</li><li>Reduces regulatory risk for the industry</li><li>Censored transactions still eventually get included</li></ul><p><strong>Arguments against:</strong></p><ul><li>Violates Ethereum's neutrality and censorship resistance</li><li>Creates two classes of transactions</li><li>Slippery slope—what else might be censored?</li><li>Weakens Ethereum's core value proposition</li></ul><p><strong>Monitoring:</strong> MEV Watch tracks censorship rates in real-time, showing which builders/relays censor and how it affects users.</p><p><strong>Solutions being explored:</strong></p><ul><li>Encrypted mempools where builders can't see transaction details</li><li>Threshold encryption revealing txs only after commitment</li><li>Inclusion lists forcing validators to include certain transactions</li></ul>"
+				"title": "审查和 OFAC 合规",
+				"content": "<p>现代 MEV 基础设施最具争议的方面之一是交易审查，特别是与 OFAC(外国资产控制办公室) 制裁相关的审查。</p><p><strong>问题:</strong> 一些构建者和中继审查来自 OFAC 制裁地址 (如 Tornado Cash) 的交易。这与以太坊的可信中立性精神冲突。</p><p><strong>当前状态:</strong></p><ul><li>约 50% 的区块由符合 OFAC 的构建者构建，他们审查交易</li><li>被审查的交易通常在下一个非审查区块中被包含</li><li>平均延迟：12-36 秒 (1-3 个区块)</li></ul><p><strong>支持审查的论点:</strong></p><ul><li>美国实体需要法律合规</li><li>降低行业的监管风险</li><li>被审查的交易最终仍会被包含</li></ul><p><strong>反对的论点:</strong></p><ul><li>违反以太坊的中立性和抗审查性</li><li>创建两类交易</li><li>滑坡效应——还有什么可能被审查？</li><li>削弱以太坊的核心价值主张</li></ul><p><strong>监控:</strong> MEV Watch 实时跟踪审查率，显示哪些构建者/中继进行审查以及如何影响用户。</p><p><strong>正在探索的解决方案:</strong></p><ul><li>加密内存池，构建者无法看到交易详情</li><li>阈值加密，仅在承诺后显示交易</li><li>包含列表，强制验证者包含某些交易</li></ul>"
 			},
 			"fairness": {
-				"title": "Fairness and the Future",
-				"content": "<p>The MEV landscape continues to evolve, with new solutions aiming to make extraction fairer and more transparent.</p><p><strong>MEV-Share:</strong> Flashbots' solution for sharing MEV with transaction originators. When your transaction creates MEV opportunities, you receive a portion of the profits. Early results show users receiving 10-40% of MEV back.</p><p><strong>SUAVE (Single Unified Auction for Value Expression):</strong> Flashbots' vision for a decentralized MEV marketplace. Instead of Ethereum-specific infrastructure, SUAVE would be a cross-chain platform where any blockchain can plug in for optimal MEV extraction and distribution.</p><p><strong>Order Flow Auctions (OFAs):</strong> Wallets and frontends auctioning user transaction flow to the highest bidder, sharing profits with users. Projects like UniswapX implement OFA principles.</p><p><strong>Fair sequencing:</strong> Research into provably fair transaction ordering that eliminates certain MEV types while preserving the beneficial forms (like arbitrage and liquidations).</p><p><strong>The philosophical debate:</strong> Is MEV theft or a legitimate market dynamic? Arguments on both sides:<br/><br/><strong>MEV as harmful:</strong><br/>- Users pay a hidden tax on every transaction<br/>- Creates perverse incentives for validators<br/>- Complexity favors sophisticated actors over regular users<br/><br/><strong>MEV as neutral/beneficial:</strong><br/>- Arbitrage keeps markets efficient<br/>- Liquidations protect protocol solvency<br/>- Better to have transparent MEV than hidden manipulation<br/>- Competition among searchers minimizes extraction</p><p><strong>The future:</strong> Most experts believe some MEV is unavoidable and even beneficial, but the goal should be:<br/>1. Minimize harmful extraction (frontrunning, sandwiching)<br/>2. Maximize beneficial extraction (arbitrage, liquidations)<br/>3. Redistribute extracted value fairly to transaction originators<br/>4. Maintain decentralization and censorship resistance</p><p><strong>Your role:</strong> Whether you're a user, searcher, or validator, understanding MEV helps you navigate crypto more successfully and advocate for fairer systems.</p>"
+				"title": "公平性和未来",
+				"content": "<p>MEV 格局继续发展，新解决方案旨在使提取更公平、更透明。</p><p><strong>MEV-Share:</strong> Flashbots 与交易发起者分享 MEV 的解决方案。当你的交易创造 MEV 机会时，你会获得一部分利润。早期结果显示用户获得 10-40% 的 MEV 回报。</p><p><strong>SUAVE(价值表达的单一统一拍卖):</strong> Flashbots 对去中心化 MEV 市场的愿景。SUAVE 将不是以太坊特定的基础设施，而是一个跨链平台，任何区块链都可以插入以实现最佳 MEV 提取和分配。</p><p><strong>订单流拍卖 (OFAs):</strong> 钱包和前端将用户交易流拍卖给出价最高者，与用户分享利润。UniswapX 等项目实现了 OFA 原则。</p><p><strong>公平排序:</strong> 研究可证明公平的交易排序，消除某些 MEV 类型，同时保留有益形式 (如套利和清算)。</p><p><strong>哲学辩论:</strong> MEV 是盗窃还是合法的市场动态？双方的论点:<br/><br/><strong>MEV 有害:</strong><br/>- 用户为每笔交易支付隐藏税<br/>- 为验证者创造不良激励<br/>- 复杂性有利于复杂参与者而非普通用户<br/><br/><strong>MEV 中性/有益:</strong><br/>- 套利保持市场效率<br/>- 清算保护协议偿付能力<br/>- 透明的 MEV 优于隐藏的操纵<br/>- 搜索者之间的竞争最小化提取</p><p><strong>未来:</strong> 大多数专家认为某些 MEV 是不可避免的，甚至是有益的，但目标应该是:<br/>1. 最小化有害提取 (抢跑、夹击)<br/>2. 最大化有益提取 (套利、清算)<br/>3. 公平地将提取的价值重新分配给交易发起者<br/>4. 保持去中心化和抗审查性</p><p><strong>你的角色:</strong> 无论你是用户、搜索者还是验证者，理解 MEV 都能帮助你更成功地驾驭加密货币，并倡导更公平的系统。</p>"
 			}
 		}
 	},
 
 	"glossary": {
 		"mev": {
-			"term": "MEV (Maximal Extractable Value)",
-			"definition": "The maximum value that can be extracted from block production beyond standard rewards, by reordering, inserting, or censoring transactions. Originally called 'Miner Extractable Value' but renamed after Ethereum's merge to Proof of Stake."
+			"term": "MEV(最大可提取价值)",
+			"definition": "除了标准奖励之外，通过重新排序、插入或审查交易从区块生产中提取的最大价值。原称\"矿工可提取价值\",但在以太坊合并到权益证明后更名。"
 		},
 		"searcher": {
-			"term": "Searcher",
-			"definition": "An individual or bot that identifies MEV opportunities in the mempool and creates transaction bundles to capture them. Searchers compete to find and extract value from arbitrage, liquidations, and other opportunities."
+			"term": "搜索者",
+			"definition": "在内存池中识别 MEV 机会并创建交易包来捕捉它们的个人或机器人。搜索者竞争从套利、清算和其他机会中发现和提取价值。"
 		},
 		"builder": {
-			"term": "Builder",
-			"definition": "An entity that receives bundles from searchers and assembles them into complete blocks, optimizing for maximum MEV extraction. Builders bid to have validators propose their blocks."
+			"term": "构建者",
+			"definition": "从搜索者那里接收交易包并将它们组装成完整区块的实体，优化以实现最大 MEV 提取。构建者竞标让验证者提议他们的区块。"
 		},
 		"validator": {
-			"term": "Validator",
-			"definition": "A Proof of Stake participant who proposes blocks and validates transactions. Validators receive consensus rewards plus MEV revenue from builders through the PBS system."
+			"term": "验证者",
+			"definition": "提议区块并验证交易的权益证明参与者。验证者通过 PBS 系统从共识奖励和构建者的 MEV 收入中获得收益。"
 		},
 		"frontrunning": {
-			"term": "Frontrunning",
-			"definition": "The practice of seeing a pending transaction and placing your own transaction ahead of it (by paying higher gas fees) to profit from the price movement it will cause."
+			"term": "抢跑交易",
+			"definition": "看到待处理交易并通过支付更高的 gas 费用将自己的交易放在前面，从其将造成的价格变动中获利的做法。"
 		},
 		"sandwich_attack": {
-			"term": "Sandwich Attack",
-			"definition": "A two-part MEV attack where the attacker places one transaction before and one after the victim's transaction, profiting from the price movement. The victim is 'sandwiched' between the attacker's trades."
+			"term": "三明治攻击",
+			"definition": "一种两部分 MEV 攻击，攻击者在受害者的交易前后各放置一笔交易，从价格变动中获利。受害者被\"夹在\"攻击者的交易之间。"
 		},
 		"backrunning": {
-			"term": "Backrunning",
-			"definition": "Placing a transaction immediately after another transaction to profit from the state changes it creates, typically through arbitrage. Unlike frontrunning, backrunning doesn't directly harm the original transaction."
+			"term": "尾随交易",
+			"definition": "在另一笔交易之后立即放置交易以从其创造的状态变化中获利，通常通过套利。与抢跑不同，尾随交易不会直接伤害原始交易。"
 		},
 		"pga": {
-			"term": "PGA (Priority Gas Auction)",
-			"definition": "When multiple searchers compete for the same MEV opportunity by continuously raising gas prices to outbid each other. Can result in gas wars where the winner pays extreme fees."
+			"term": "PGA(优先 Gas 拍卖)",
+			"definition": "当多个搜索者通过不断提高 gas 价格来相互竞标同一 MEV 机会时。可能导致 gas 战争，获胜者支付极高的费用。"
 		},
 		"bundle": {
-			"term": "Bundle",
-			"definition": "A group of transactions submitted together with specific ordering requirements. Bundles are atomic—they either all execute in order or none execute. Used by searchers to capture MEV opportunities without mempool exposure."
+			"term": "交易包",
+			"definition": "具有特定排序要求的一组交易一起提交。交易包是原子的——它们要么全部按顺序执行，要么都不执行。搜索者使用它来捕获 MEV 机会而不暴露于内存池。"
 		},
 		"slot": {
-			"term": "Slot",
-			"definition": "A 12-second interval in Ethereum's Proof of Stake consensus where one validator is randomly selected to propose a block. Slots are the fundamental time unit in Ethereum's consensus layer."
+			"term": "时隙",
+			"definition": "以太坊权益证明共识中的 12 秒间隔，其中随机选择一个验证者来提议区块。时隙是以太坊共识层的基本时间单位。"
 		}
 	}
 }

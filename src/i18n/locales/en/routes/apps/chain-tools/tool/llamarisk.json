@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "LlamaRisk - DeFi Risk Assessment",
+		"description": "LlamaRisk provides independent risk analysis for DeFi protocols. Asset risk assessments, parameter recommendations, and security research.",
+		"keywords": "LlamaRisk, DeFi risk, risk assessment, asset analysis, Aave, Curve, protocol security"
+	},
+	"overview": "LlamaRisk is an independent risk assessment team focused on DeFi protocols. They analyze collateral assets, provide parameter recommendations, and publish research on protocol risks.\n\nOriginally known for Curve and Aave risk work, LlamaRisk evaluates new asset listings, identifies risks in protocol parameters, and provides ongoing monitoring. Their assessments help governance make informed decisions.\n\nLlamaRisk publishes detailed reports on Substack covering stablecoin risks, collateral analysis, and DeFi security topics. They're trusted advisors for major DeFi governance processes.",
+	"features": {
+		"1": {
+			"title": "Asset Risk Analysis",
+			"description": "Collateral evaluation"
+		},
+		"2": {
+			"title": "Parameter Advice",
+			"description": "Protocol settings"
+		},
+		"3": {
+			"title": "Public Research",
+			"description": "Published reports"
+		},
+		"4": {
+			"title": "Governance Support",
+			"description": "Informed decisions"
+		},
+		"5": {
+			"title": "Stablecoin Analysis",
+			"description": "Peg risk assessment"
+		},
+		"6": {
+			"title": "Independent",
+			"description": "Unbiased analysis"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Asset Evaluation",
+			"description": "New listing analysis"
+		},
+		"2": {
+			"title": "Governance",
+			"description": "Informed voting"
+		},
+		"3": {
+			"title": "Risk Research",
+			"description": "Learn from reports"
+		},
+		"4": {
+			"title": "Protocol Teams",
+			"description": "Risk advisory"
+		},
+		"5": {
+			"title": "Due Diligence",
+			"description": "Understand risks"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What does LlamaRisk do?",
+			"answer": "LlamaRisk assesses risks in DeFi protocols. They analyze collateral assets, recommend parameters (loan-to-value, liquidation thresholds), and publish research. They help governance make safer decisions."
+		},
+		"2": {
+			"question": "Which protocols use LlamaRisk?",
+			"answer": "LlamaRisk works with major protocols including Aave and Curve. They've analyzed hundreds of assets for listing decisions. Their recommendations influence billions in TVL."
+		},
+		"3": {
+			"question": "How can I read their research?",
+			"answer": "LlamaRisk publishes on Substack (cryptorisks.substack.com). Reports cover stablecoin risks, asset analysis, and DeFi security topics. Free to read and valuable for understanding protocol risks."
+		},
+		"4": {
+			"question": "LlamaRisk vs Gauntlet?",
+			"answer": "Both do DeFi risk work. Gauntlet focuses on simulation-based parameter optimization. LlamaRisk does qualitative asset analysis and research. Different approaches—many protocols use both."
+		},
+		"5": {
+			"question": "Can I hire LlamaRisk?",
+			"answer": "LlamaRisk takes on protocol engagements for risk advisory. Contact them for custom analysis. Most of their research is done for major DAOs through governance grants."
+		}
+	},
+	"cta": {
+		"ready": "Ready to understand DeFi risks?",
+		"button": "Read LlamaRisk",
+		"note": "Independent risk analysis"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "deBridge - Cross-Chain Trading Protocol",
+		"description": "deBridge enables high-performance cross-chain trading and bridging. Native asset swaps with deep liquidity and low slippage.",
+		"keywords": "deBridge, cross-chain trading, DLN, DBR token, interoperability, cross-chain swaps"
+	},
+	"overview": "deBridge is a cross-chain trading and bridging protocol focused on performance and capital efficiency. Their DLN (Decentralized Liquidity Network) enables native cross-chain swaps without wrapped tokens.\n\nUnlike traditional bridges that lock and mint, deBridge's market makers provide native assets on the destination chain. This means better liquidity, lower slippage, and no wrapped token complexity. The protocol supports limit orders cross-chain.\n\nDBR token is used for governance and fee sharing. deBridge has processed significant volume with competitive rates, especially for larger trades where liquidity depth matters.",
+	"features": {
+		"1": {
+			"title": "Native Assets",
+			"description": "No wrapped tokens"
+		},
+		"2": {
+			"title": "DLN Network",
+			"description": "Decentralized liquidity"
+		},
+		"3": {
+			"title": "Cross-Chain Limits",
+			"description": "Limit orders"
+		},
+		"4": {
+			"title": "DBR Token",
+			"description": "Governance and fees"
+		},
+		"5": {
+			"title": "Deep Liquidity",
+			"description": "Low slippage"
+		},
+		"6": {
+			"title": "Multi-Chain",
+			"description": "Major networks"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Large Swaps",
+			"description": "Deep liquidity bridging"
+		},
+		"2": {
+			"title": "Limit Orders",
+			"description": "Cross-chain limits"
+		},
+		"3": {
+			"title": "Native Assets",
+			"description": "Avoid wrapped tokens"
+		},
+		"4": {
+			"title": "Market Making",
+			"description": "Provide liquidity"
+		},
+		"5": {
+			"title": "Trading",
+			"description": "Cross-chain arbitrage"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is DLN?",
+			"answer": "DLN (Decentralized Liquidity Network) is deBridge's cross-chain swap system. Market makers compete to fill orders, providing native assets on the destination. No wrapped tokens, just native ETH, USDC, etc."
+		},
+		"2": {
+			"question": "How are native assets possible?",
+			"answer": "Market makers hold native assets on multiple chains. When you want ETH on Arbitrum, they send you their native ETH there and receive your ETH on Ethereum. It's like atomic swaps across chains."
+		},
+		"3": {
+			"question": "What about limit orders?",
+			"answer": "deBridge supports cross-chain limit orders. Set a price target for your swap, and market makers fill it when conditions are met. Execute trading strategies across chains with precision."
+		},
+		"4": {
+			"question": "What is DBR token?",
+			"answer": "DBR governs deBridge protocol. Holders vote on parameters and development. Staking DBR may provide fee sharing from protocol revenue. It aligns governance with protocol success."
+		},
+		"5": {
+			"question": "Which chains are supported?",
+			"answer": "deBridge supports Ethereum, Arbitrum, Optimism, Polygon, BSC, Avalanche, Fantom, Solana, and more. Focus is on major chains with high trading activity. Check app for current support."
+		}
+	},
+	"cta": {
+		"ready": "Ready for cross-chain trading?",
+		"button": "Use deBridge",
+		"note": "High-performance bridging"
+	}
+}

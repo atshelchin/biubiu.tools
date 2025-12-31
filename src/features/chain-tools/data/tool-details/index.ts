@@ -148,6 +148,30 @@ import { sudoswapDetail } from './sudoswap';
 import { nftxDetail } from './nftx';
 import { immutableDetail } from './immutable';
 import { axieDetail } from './axie';
+import { lensDetail } from './lens';
+import { farcasterDetail } from './farcaster';
+import { worldcoinDetail } from './worldcoin';
+import { gitcoinDetail } from './gitcoin';
+import { poapDetail } from './poap';
+import { snapshotDetail } from './snapshot';
+import { railgunDetail } from './railgun';
+import { aztecDetail } from './aztec';
+import { quicknodeDetail } from './quicknode';
+import { moralisDetail } from './moralis';
+import { biconomyDetail } from './biconomy';
+import { gelatoDetail } from './gelato';
+import { flashbotsDetail } from './flashbots';
+import { mevBlockerDetail } from './mev-blocker';
+import { synapseDetail } from './synapse';
+import { celerDetail } from './celer';
+import { socketDetail } from './socket';
+import { lifiDetail } from './lifi';
+import { orbiterDetail } from './orbiter';
+import { connextDetail } from './connext';
+import { axelarDetail } from './axelar';
+import { multichainDetail } from './multichain';
+import { debridgeDetail } from './debridge';
+import { superbridgeDetail } from './superbridge';
 
 /**
  * All tool details mapped by tool ID
@@ -292,7 +316,31 @@ export const toolDetails: Record<string, ToolDetail> = {
 	sudoswap: sudoswapDetail,
 	nftx: nftxDetail,
 	immutable: immutableDetail,
-	axie: axieDetail
+	axie: axieDetail,
+	lens: lensDetail,
+	farcaster: farcasterDetail,
+	worldcoin: worldcoinDetail,
+	gitcoin: gitcoinDetail,
+	poap: poapDetail,
+	snapshot: snapshotDetail,
+	railgun: railgunDetail,
+	aztec: aztecDetail,
+	quicknode: quicknodeDetail,
+	moralis: moralisDetail,
+	biconomy: biconomyDetail,
+	gelato: gelatoDetail,
+	flashbots: flashbotsDetail,
+	'mev-blocker': mevBlockerDetail,
+	synapse: synapseDetail,
+	celer: celerDetail,
+	socket: socketDetail,
+	lifi: lifiDetail,
+	orbiter: orbiterDetail,
+	connext: connextDetail,
+	axelar: axelarDetail,
+	multichain: multichainDetail,
+	debridge: debridgeDetail,
+	superbridge: superbridgeDetail
 };
 
 /**
