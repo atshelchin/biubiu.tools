@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Birdeye - Solana Token Analytics & DeFi Dashboard",
+		"description": "The leading Solana analytics platform for token tracking, DeFi data, and portfolio management. Real-time prices across all Solana DEXs.",
+		"keywords": "Birdeye, Solana analytics, Solana tokens, DeFi dashboard, token tracking, Solana DeFi"
+	},
+	"overview": "Birdeye is the premier analytics platform for Solana and multi-chain DeFi, providing real-time token data, portfolio tracking, and comprehensive market analytics. Founded in 2021, Birdeye has become the go-to tool for Solana traders and investors.\n\nThe platform aggregates data from all major Solana DEXs including Jupiter, Raydium, Orca, and Meteora, providing accurate pricing and liquidity information. Birdeye's token profiles include holder analysis, trading history, and security indicators.\n\nBeyond Solana, Birdeye has expanded to support 15+ chains including Ethereum, Base, and Arbitrum. The platform offers API access for developers and integrates with major wallets for seamless portfolio tracking.",
+	"features": {
+		"1": {
+			"title": "Real-Time Solana Data",
+			"description": "Aggregated prices from all Solana DEXs instantly"
+		},
+		"2": {
+			"title": "Token Profiles",
+			"description": "Detailed analysis including holders, trades, and security"
+		},
+		"3": {
+			"title": "Portfolio Tracker",
+			"description": "Connect wallet to track all Solana holdings"
+		},
+		"4": {
+			"title": "Trending Tokens",
+			"description": "Discover hot tokens based on volume and activity"
+		},
+		"5": {
+			"title": "Price Alerts",
+			"description": "Set notifications for price movements"
+		},
+		"6": {
+			"title": "Developer API",
+			"description": "Access Solana DeFi data programmatically"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Solana Trading",
+			"description": "Monitor Solana token prices and find trading opportunities"
+		},
+		"2": {
+			"title": "Token Research",
+			"description": "Analyze holder distribution and trading patterns"
+		},
+		"3": {
+			"title": "Portfolio Management",
+			"description": "Track Solana holdings across wallets"
+		},
+		"4": {
+			"title": "Memecoin Discovery",
+			"description": "Find trending Solana memecoins early"
+		},
+		"5": {
+			"title": "DeFi Analytics",
+			"description": "Monitor TVL and activity across Solana DeFi"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Is Birdeye free?",
+			"answer": "Yes, Birdeye's core features are free including token data, charts, and portfolio tracking. Premium features and API access require payment. The free tier is comprehensive enough for most traders and researchers."
+		},
+		"2": {
+			"question": "Is Birdeye accurate for Solana?",
+			"answer": "Yes, Birdeye is considered the most accurate source for Solana token data. It aggregates from all major DEXs in real-time and is used by Jupiter, Phantom, and other major Solana applications as their data source."
+		},
+		"3": {
+			"question": "Does Birdeye support other chains?",
+			"answer": "Yes, Birdeye has expanded beyond Solana to support 15+ chains including Ethereum, Base, Arbitrum, BSC, and more. However, Solana remains its strongest coverage with the most comprehensive data."
+		},
+		"4": {
+			"question": "Birdeye vs DEX Screener for Solana?",
+			"answer": "Birdeye has deeper Solana integration, better token profiles, and portfolio tracking. DEX Screener has broader multi-chain coverage and faster load times. For serious Solana trading, Birdeye is preferred; for quick multi-chain checks, DEX Screener."
+		},
+		"5": {
+			"question": "Can I trust Birdeye's security indicators?",
+			"answer": "Birdeye provides helpful security information like contract verification and holder concentration, but it's not a security audit. Always do additional research before trading new tokens. Use it as one data point among several."
+		}
+	},
+	"cta": {
+		"ready": "Ready to explore Solana tokens?",
+		"button": "Open Birdeye",
+		"note": "Leading Solana analytics"
+	}
+}

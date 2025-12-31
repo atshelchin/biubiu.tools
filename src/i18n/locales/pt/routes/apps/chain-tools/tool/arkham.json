@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Arkham Intelligence - Blockchain Investigation & Entity Labels",
+		"description": "De-anonymize the blockchain with Arkham's entity labels and investigation tools. Track wallets, funds, and connections across chains.",
+		"keywords": "Arkham Intelligence, blockchain investigation, wallet tracking, entity labels, crypto forensics, fund tracing"
+	},
+	"overview": "Arkham Intelligence is a blockchain analytics platform that deanonymizes crypto transactions by linking addresses to real-world entities. Founded in 2020, Arkham uses AI to identify wallet owners and track funds across chains.\n\nThe platform maintains one of the largest databases of labeled addresses, identifying wallets belonging to exchanges, institutions, protocols, and notable individuals. This makes it invaluable for investigating fund flows, researching whale activity, and understanding market movements.\n\nArkham's Intel Exchange allows users to buy and sell blockchain intelligence using ARKM tokens, creating a marketplace for wallet labels and investigation data. The platform serves investigators, researchers, journalists, and traders who need to understand who's behind crypto transactions.",
+	"features": {
+		"1": {
+			"title": "Entity Labels",
+			"description": "Database of wallet owners including exchanges, VCs, and whales"
+		},
+		"2": {
+			"title": "Fund Tracing",
+			"description": "Visual tools to follow money across addresses and chains"
+		},
+		"3": {
+			"title": "Real-Time Alerts",
+			"description": "Get notified when tracked entities move funds"
+		},
+		"4": {
+			"title": "Investigation Tools",
+			"description": "Build connection graphs and export transaction data"
+		},
+		"5": {
+			"title": "Intel Exchange",
+			"description": "Marketplace to buy and sell address intelligence"
+		},
+		"6": {
+			"title": "Multi-Chain Support",
+			"description": "Track entities across Ethereum, Bitcoin, and more"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Whale Tracking",
+			"description": "Monitor large holder movements and trading patterns"
+		},
+		"2": {
+			"title": "Hack Investigation",
+			"description": "Trace stolen funds and identify attackers"
+		},
+		"3": {
+			"title": "Trading Intelligence",
+			"description": "See what smart money is buying and selling"
+		},
+		"4": {
+			"title": "Due Diligence",
+			"description": "Research counterparty wallets before transactions"
+		},
+		"5": {
+			"title": "Journalism Research",
+			"description": "Investigate crypto stories with verifiable data"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Is Arkham free?",
+			"answer": "Yes, Arkham's basic features are free to use. Premium features and API access require ARKM tokens. The Intel Exchange allows earning ARKM by contributing intelligence. Free tier provides substantial utility for most users."
+		},
+		"2": {
+			"question": "How does Arkham identify wallet owners?",
+			"answer": "Arkham uses AI to analyze transaction patterns, known address connections, ENS names, social links, and various on-chain signals. Their Ultra algorithm processes this data to probabilistically link addresses to entities. Accuracy varies but is generally high for major entities."
+		},
+		"3": {
+			"question": "Is Arkham legal?",
+			"answer": "Yes, Arkham analyzes public blockchain data which is legally available to anyone. However, selling personal wallet information has raised privacy concerns. Arkham operates in a legal gray area that's being debated in the crypto community."
+		},
+		"4": {
+			"question": "What is ARKM token?",
+			"answer": "ARKM is Arkham's utility token used to access premium features and participate in the Intel Exchange. Users can stake ARKM to access intel or earn it by contributing accurate address labels. The token launched in July 2023."
+		},
+		"5": {
+			"question": "Arkham vs Nansen: Which is better for tracking?",
+			"answer": "Both are excellent but differ in focus. Arkham excels at entity identification and investigation tools. Nansen is better for smart money tracking and NFT analytics. Arkham is more forensics-focused; Nansen more trading-focused. Many use both."
+		}
+	},
+	"cta": {
+		"ready": "Ready to investigate the blockchain?",
+		"button": "Open Arkham",
+		"note": "Blockchain intelligence platform"
+	}
+}

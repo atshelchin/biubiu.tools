@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Messari - 专业加密研究与数据平台",
+		"description": "获取机构级加密研究、资产档案和市场情报。Messari 提供专业人士所需的数据和洞察。",
+		"keywords": "Messari, 加密研究, 机构加密, 资产档案, 市场情报, 加密数据"
+	},
+	"overview": "Messari 是一个专业级加密货币研究和数据平台，提供机构级洞察、资产档案和市场情报。由 Ryan Selkis 于 2018 年创立，Messari 已成为严肃加密投资者和研究人员的首选资源。\n\n该平台通过深度研究报告、标准化资产档案和经过验证的数据以及 DAO 治理追踪来区分自己。Messari 的研究团队产出的高质量分析可与传统金融研究公司媲美。\n\nMessari 服务于对冲基金、风投、协议和需要准确数据和可操作洞察的资深个人投资者。该平台的注册表提供来自加密项目的经过验证的标准化披露，为通常不透明的市场带来透明度。",
+	"features": {
+		"1": {
+			"title": "研究报告",
+			"description": "机构级分析和市场情报"
+		},
+		"2": {
+			"title": "资产档案",
+			"description": "1,000+ 资产的全面标准化数据"
+		},
+		"3": {
+			"title": "Governor",
+			"description": "追踪跨协议的 DAO 治理提案和投票"
+		},
+		"4": {
+			"title": "筛选工具",
+			"description": "按自定义指标过滤和比较资产"
+		},
+		"5": {
+			"title": "协议指标",
+			"description": "各协议的真实收入、TVL 和基本面数据"
+		},
+		"6": {
+			"title": "融资数据",
+			"description": "追踪风投交易、估值和投资者活动"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "投资研究",
+			"description": "通过机构级分析深入研究资产"
+		},
+		"2": {
+			"title": "治理参与",
+			"description": "追踪和参与跨链的 DAO 提案"
+		},
+		"3": {
+			"title": "市场情报",
+			"description": "通过每日简报和板块分析保持领先"
+		},
+		"4": {
+			"title": "尽职调查",
+			"description": "通过 Messari 注册表验证项目数据"
+		},
+		"5": {
+			"title": "融资追踪",
+			"description": "监控风投活动和新兴趋势"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Messari 是免费的吗？",
+			"answer": "Messari 提供免费层级，包含基本筛选器和有限的研究。Messari Pro（$29.99/月）解锁所有研究、图表和筛选器。具有 API 访问和自定义数据的企业计划价格更高。与 Pro 相比，免费版本有用但有限。"
+		},
+		"2": {
+			"question": "谁在使用 Messari？",
+			"answer": "Messari 的客户包括加密对冲基金、风险投资公司、协议团队、交易所和资深个人投资者。著名用户包括 Paradigm、a16z crypto 和许多协议金库。它定位为加密货币的彭博终端。"
+		},
+		"3": {
+			"question": "什么是 Messari Governor？",
+			"answer": "Governor 是 Messari 的治理聚合器，追踪主要 DAO 的提案。你可以看到活跃提案、投票分布和投票历史。它帮助代币持有者参与治理，帮助研究人员追踪去中心化程度。"
+		},
+		"4": {
+			"question": "Messari 的研究可靠吗？",
+			"answer": "Messari 雇用具有传统金融和加密背景的专业分析师。他们的研究在行业内以全面和相对公正而著称。他们披露利益冲突并维护编辑标准。"
+		},
+		"5": {
+			"question": "Messari vs Token Terminal：哪个更适合基本面？",
+			"answer": "两者在协议基本面方面都很出色。Messari 提供更广泛的研究和治理工具。Token Terminal 纯粹专注于财务指标，数据可视化更清晰。许多专业人士两者都用——Token Terminal 用于纯财务，Messari 用于研究。"
+		}
+	},
+	"cta": {
+		"ready": "准备获取专业加密研究？",
+		"button": "打开 Messari",
+		"note": "机构级洞察"
+	}
+}

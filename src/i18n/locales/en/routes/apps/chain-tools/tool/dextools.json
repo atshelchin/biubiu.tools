@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "DEXTools - Token Trading Charts & Analytics Platform",
+		"description": "Advanced DEX trading platform with real-time charts, token scores, and wallet tracking. The trader's choice for discovering and analyzing tokens.",
+		"keywords": "DEXTools, DEX trading, token charts, DEXT score, crypto trading, token analytics"
+	},
+	"overview": "DEXTools is a comprehensive trading platform for decentralized exchanges, offering advanced charting, token scoring, and wallet tracking features. Launched in 2020, DEXTools has become a favorite among crypto traders for its rich feature set and detailed analytics.\n\nThe platform is known for its DEXT Score—a proprietary rating system that evaluates tokens based on contract analysis, liquidity, holder distribution, and social metrics. This helps traders quickly assess token quality and avoid potential scams.\n\nDEXTools supports 40+ blockchains and offers premium features including wallet tracking, real-time alerts, and multiswap functionality. The DEXT token provides governance and premium access, with staking options for enhanced features.",
+	"features": {
+		"1": {
+			"title": "DEXT Score",
+			"description": "Proprietary token rating combining contract, liquidity, and social analysis"
+		},
+		"2": {
+			"title": "Live Pair Explorer",
+			"description": "Real-time trading data with buy/sell visualization"
+		},
+		"3": {
+			"title": "Wallet Tracking",
+			"description": "Monitor whale wallets and smart money movements"
+		},
+		"4": {
+			"title": "Multiswap",
+			"description": "Trade tokens across multiple DEXs from one interface"
+		},
+		"5": {
+			"title": "Price Alerts",
+			"description": "Set custom alerts for price movements and new listings"
+		},
+		"6": {
+			"title": "Token Lock Detection",
+			"description": "Identify locked liquidity and vested tokens"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Token Research",
+			"description": "Evaluate new tokens with DEXT Score before trading"
+		},
+		"2": {
+			"title": "Active Trading",
+			"description": "Monitor live pairs and execute trades with multiswap"
+		},
+		"3": {
+			"title": "Whale Watching",
+			"description": "Track large wallet movements and copy trading signals"
+		},
+		"4": {
+			"title": "New Token Discovery",
+			"description": "Find trending tokens and new pair listings"
+		},
+		"5": {
+			"title": "Scam Avoidance",
+			"description": "Use contract analysis to identify risky tokens"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Is DEXTools free?",
+			"answer": "DEXTools has a free tier with basic features including charts and pair info. Premium features like wallet tracking, advanced alerts, and multiswap require DEXT tokens. You can stake DEXT for access or pay per feature. The free version is quite capable for basic trading."
+		},
+		"2": {
+			"question": "What is DEXT Score?",
+			"answer": "DEXT Score is a 0-99 rating that evaluates tokens based on contract verification, liquidity quality, holder distribution, social presence, and transaction patterns. Higher scores indicate more trustworthy tokens. It's not foolproof but helps filter obvious scams."
+		},
+		"3": {
+			"question": "How does DEXTools make money?",
+			"answer": "DEXTools monetizes through DEXT token utility (staking for features), premium subscriptions, promoted tokens/pairs, and partnership fees. The DEXT token is central to their business model and required for premium features."
+		},
+		"4": {
+			"question": "DEXTools vs DEX Screener: Which is better?",
+			"answer": "DEXTools has more features (DEXT Score, wallet tracking, multiswap) but requires tokens for full access. DEX Screener is simpler, faster, and completely free. DEXTools is better for serious traders; DEX Screener for quick research. Many use both."
+		},
+		"5": {
+			"question": "Is DEXTools safe to connect wallet?",
+			"answer": "Yes, DEXTools is a well-established platform used by millions. When trading via multiswap, you sign individual transactions. DEXTools never has access to your private keys. Use standard precautions like any DeFi interaction."
+		}
+	},
+	"cta": {
+		"ready": "Ready for advanced DEX trading?",
+		"button": "Open DEXTools",
+		"note": "Professional trading analytics"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Token Terminal - 加密基本面与财务指标",
+		"description": "像分析股票一样分析加密协议，包括收入、市盈率和财务指标。DeFi 的专业级基本面分析。",
+		"keywords": "Token Terminal, 加密基本面, 协议收入, DeFi 指标, 财务分析, 加密市盈率"
+	},
+	"overview": "Token Terminal 将传统财务分析引入加密货币，为区块链协议提供收入、盈利和估值指标。成立于 2020 年，该平台已成为希望像分析传统股票一样分析加密货币的投资者的必备工具。\n\n该平台追踪协议产生的真实收入——用户实际支付的费用——并计算市销率（P/S）、市盈率（P/E）和完全稀释估值等指标。这使得基本面分析超越了简单的市值比较。\n\nToken Terminal 覆盖 400+ 协议，跨越 DeFi、L1/L2 链、NFT 市场和其他加密垂直领域。简洁的界面和标准化的指标使得跨类别比较协议和识别被低估或高估的资产变得容易。",
+	"features": {
+		"1": {
+			"title": "协议收入",
+			"description": "追踪协议产生的实际费用和收入"
+		},
+		"2": {
+			"title": "财务比率",
+			"description": "市销率、市盈率和其他传统估值指标"
+		},
+		"3": {
+			"title": "比较分析",
+			"description": "使用标准化指标比较协议"
+		},
+		"4": {
+			"title": "历史数据",
+			"description": "多年财务历史用于趋势分析"
+		},
+		"5": {
+			"title": "自定义仪表板",
+			"description": "构建个性化视图和自选列表"
+		},
+		"6": {
+			"title": "数据导出",
+			"description": "下载数据用于外部分析"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "基本面分析",
+			"description": "根据收入和盈利对协议估值"
+		},
+		"2": {
+			"title": "协议比较",
+			"description": "使用财务指标比较类似协议"
+		},
+		"3": {
+			"title": "趋势分析",
+			"description": "追踪收入增长和市场份额随时间的变化"
+		},
+		"4": {
+			"title": "投资研究",
+			"description": "识别具有强劲基本面的被低估协议"
+		},
+		"5": {
+			"title": "市场情报",
+			"description": "监控板块表现和新兴趋势"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Token Terminal 是免费的吗？",
+			"answer": "Token Terminal 提供免费层级，包含有限的指标和历史数据。Pro 计划（$325/月）解锁完整数据访问、API 和高级功能。免费层级对于基本研究有用，但严肃分析需要 Pro。"
+		},
+		"2": {
+			"question": "Token Terminal 如何计算收入？",
+			"answer": "Token Terminal 追踪用户向协议支付的实际链上费用。这包括交易费、借贷利息、交易手续费等。收入是特定于协议的，从区块链数据计算，而非报告数据。"
+		},
+		"3": {
+			"question": "收入和盈利有什么区别？",
+			"answer": "收入是产生的总费用。盈利减去代币排放和运营成本。许多协议有正收入但负盈利，因为代币激励很高。Token Terminal 两者都显示以实现准确分析。"
+		},
+		"4": {
+			"question": "Token Terminal vs DefiLlama：哪个更适合基本面？",
+			"answer": "Token Terminal 专注于财务指标（收入、市盈率、盈利）。DefiLlama 专注于 TVL 和协议追踪。它们是互补的——使用 DefiLlama 进行 TVL 和协议发现，Token Terminal 进行财务分析。"
+		},
+		"5": {
+			"question": "Token Terminal 数据准确吗？",
+			"answer": "Token Terminal 直接从区块链数据提取，并保持高准确性标准。他们的方法论有文档记录，并定期更新计算。它被认为是协议财务数据的行业标准。"
+		}
+	},
+	"cta": {
+		"ready": "准备进行基本面分析？",
+		"button": "打开 Token Terminal",
+		"note": "加密财务指标"
+	}
+}

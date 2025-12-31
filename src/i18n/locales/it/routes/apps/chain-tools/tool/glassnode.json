@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Glassnode - On-Chain Market Intelligence & Blockchain Analytics",
+		"description": "Professional on-chain analytics for Bitcoin and crypto markets. Glassnode provides institutional-grade metrics and market intelligence.",
+		"keywords": "Glassnode, on-chain analytics, Bitcoin metrics, blockchain data, market intelligence, crypto analytics"
+	},
+	"overview": "Glassnode is the leading provider of on-chain market intelligence, offering institutional-grade analytics for Bitcoin and other major cryptocurrencies. Founded in 2018 in Zug, Switzerland, Glassnode has become essential for understanding blockchain data and market dynamics.\n\nThe platform specializes in on-chain metrics that reveal what's happening beneath price action—accumulation by long-term holders, exchange flows, miner behavior, and network health. These insights help traders and investors make data-driven decisions based on fundamental blockchain activity.\n\nGlassnode serves hedge funds, trading firms, and serious individual investors who need to understand market structure beyond simple price charts. Their weekly reports and real-time dashboards are widely referenced in crypto research and media.",
+	"features": {
+		"1": {
+			"title": "200+ On-Chain Metrics",
+			"description": "Comprehensive metrics for Bitcoin, Ethereum, and major assets"
+		},
+		"2": {
+			"title": "Real-Time Alerts",
+			"description": "Get notified when key metrics hit thresholds"
+		},
+		"3": {
+			"title": "Glassnode Studio",
+			"description": "Build custom dashboards and visualizations"
+		},
+		"4": {
+			"title": "Market Reports",
+			"description": "Weekly analysis from the Glassnode research team"
+		},
+		"5": {
+			"title": "Exchange Flows",
+			"description": "Track deposits and withdrawals across exchanges"
+		},
+		"6": {
+			"title": "Entity Clustering",
+			"description": "Identify whale behavior and holder cohorts"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Market Timing",
+			"description": "Use on-chain signals for better entry and exit points"
+		},
+		"2": {
+			"title": "Whale Watching",
+			"description": "Monitor large holder behavior and accumulation"
+		},
+		"3": {
+			"title": "Exchange Analysis",
+			"description": "Track exchange reserves and flow patterns"
+		},
+		"4": {
+			"title": "Network Health",
+			"description": "Assess blockchain fundamentals and adoption"
+		},
+		"5": {
+			"title": "Research Reports",
+			"description": "Create data-driven analysis and presentations"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Is Glassnode free?",
+			"answer": "Glassnode offers a free tier with limited metrics and historical data. Advanced plan ($29/month) unlocks most metrics with full history. Professional ($799/month) adds API access and real-time data. Free tier is useful but limited for serious analysis."
+		},
+		"2": {
+			"question": "What is on-chain analysis?",
+			"answer": "On-chain analysis studies blockchain data to understand market behavior—who's buying, selling, holding, and in what amounts. Unlike technical analysis (price patterns), on-chain reveals actual network activity, making it powerful for understanding fundamentals."
+		},
+		"3": {
+			"question": "Is Glassnode data reliable?",
+			"answer": "Yes, Glassnode uses sophisticated clustering algorithms and data validation. Their methodology is documented and they continuously improve accuracy. They're considered industry standard for on-chain analytics alongside CryptoQuant and IntoTheBlock."
+		},
+		"4": {
+			"question": "Glassnode vs CryptoQuant: Which is better?",
+			"answer": "Both are excellent. Glassnode has more metrics and better visualization tools. CryptoQuant has more exchange-specific data and trader-focused signals. Many professionals use both. Glassnode is more research-oriented; CryptoQuant more trading-focused."
+		},
+		"5": {
+			"question": "What are the most useful Glassnode metrics?",
+			"answer": "Key metrics include: NUPL (unrealized profit/loss), Exchange Inflows/Outflows, SOPR (spent output profit ratio), Active Addresses, and Long-Term Holder Supply. These reveal market sentiment and holder behavior better than price alone."
+		}
+	},
+	"cta": {
+		"ready": "Ready for on-chain intelligence?",
+		"button": "Open Glassnode",
+		"note": "Professional blockchain analytics"
+	}
+}

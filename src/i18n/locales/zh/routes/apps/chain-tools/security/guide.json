@@ -1,0 +1,164 @@
+{
+	"title": "Web3 安全：完整保护指南",
+	"subtitle": "学习在区块链生态中保护自己并发现漏洞",
+
+	"sections": {
+		"intro": {
+			"title": "理解 Web3 安全",
+			"content": "<p>Web3 安全与传统网络安全有本质区别。在区块链世界中，<strong>代码即法律</strong> —— 一旦交易执行，就无法撤销。对恶意合约的一次授权，可能在几秒内掏空你的整个钱包。</p><p>自 2020 年以来，DeFi 生态系统因黑客攻击、漏洞利用和诈骗已损失超过 <strong>100 亿美元</strong>。理解安全不是可选项——它是在这个领域生存的必要条件。</p><p>本指南将带你从基础的个人保护到理解复杂的协议漏洞，甚至教你如何通过发现漏洞来赚钱。</p>"
+		},
+
+		"threat_landscape": {
+			"title": "威胁全景",
+			"content": "<p>在保护自己之前，你需要了解面对的威胁。Web3 威胁从简单的钓鱼攻击到复杂的智能合约漏洞利用不等。</p>",
+			"common_attacks": {
+				"title": "常见攻击类型",
+				"content": "<p><strong>1. 钓鱼与社会工程</strong><br/>假网站、Discord 私信和冒充者账户仍是用户损失资金的第一大途径。攻击者创建热门 dApp 的像素级复制品或冒充客服人员。</p><p><strong>2. 授权漏洞利用</strong><br/>当你授权代币支出时，你就给了该合约移动你代币的权限。无限授权（常见默认设置）意味着一个被攻陷的合约可以掏空一切。</p><p><strong>3. 智能合约漏洞</strong><br/>代码中的 bug，如重入、整数溢出或访问控制问题，允许攻击者从协议中窃取资金。</p><p><strong>4. 闪电贷攻击</strong><br/>利用无抵押贷款借入数百万美元来操纵价格并耗尽协议的复杂攻击，全部在单笔交易中完成。</p>"
+			},
+			"attack_vectors": {
+				"title": "攻击向量",
+				"content": "<p><strong>前端攻击：</strong>DNS 劫持、CDN 入侵或恶意浏览器扩展可以将合法交易替换为恶意交易。</p><p><strong>私钥盗窃：</strong>恶意软件、硬件被攻陷或操作安全不当可能直接暴露私钥。</p><p><strong>预言机操纵：</strong>操纵 DeFi 协议依赖的价格馈送用于清算和交换。</p><p><strong>跨链桥漏洞：</strong>跨链桥因锁定大量资产而成为高价值目标。</p>"
+			}
+		},
+
+		"personal_security": {
+			"title": "个人安全基础",
+			"content": "<p>你的第一道防线是你自己的安全实践。大多数损失来自可预防的用户端错误。</p>",
+			"wallet_safety": {
+				"title": "钱包安全",
+				"content": "<p><strong>硬件钱包：</strong>对于任何大额持仓使用硬件钱包（Ledger、Trezor）。它们让你的私钥保持离线，并需要物理确认才能进行交易。</p><p><strong>钱包分离：</strong>为不同目的使用不同的钱包：</p><ul><li><strong>热钱包：</strong>用于日常使用和铸造的小额资金</li><li><strong>冷钱包：</strong>主要持仓，从不连接随机的 dApp</li><li><strong>一次性钱包：</strong>用于测试新协议或高风险交互</li></ul><p><strong>交易预览：</strong>像 Rabby 这样的现代钱包在签名前显示交易模拟。始终审查你实际要授权的内容。</p>"
+			},
+			"approval_management": {
+				"title": "管理代币授权",
+				"content": "<p>每次与 DeFi 协议交互时，你可能都会授予代币授权。这些权限会永久持续，除非被撤销。</p><p><strong>最佳实践：</strong></p><ul><li>使用 Revoke.cash 或 De.Fi 定期审计授权</li><li>尽可能设置特定金额而非无限授权</li><li>撤销不再使用的协议的授权</li><li>对异常代币授权请求保持警惕</li></ul><p><strong>案例：</strong>BadgerDAO 漏洞（损失 1.2 亿美元）利用了通过被攻陷前端注入的恶意授权。授予无限授权的用户失去了整个仓位。</p>"
+			},
+			"phishing_protection": {
+				"title": "防钓鱼保护",
+				"content": "<p><strong>URL 验证：</strong>始终验证你在正确的域名上。收藏官方网站。特别小心：</p><ul><li>Google 广告结果（经常用于钓鱼）</li><li>来自 Discord/Twitter 私信的链接</li><li>来自未知来源的二维码</li></ul><p><strong>交易模拟：</strong>使用 Pocket Universe 或 Blowfish 等工具在签名前模拟交易。如果交易会掏空你的钱包，它们会发出警告。</p><p><strong>浏览器扩展：</strong>安装 ScamSniffer 或 Wallet Guard，获取已知钓鱼网站的实时警告。</p>"
+			}
+		},
+
+		"contract_security": {
+			"title": "智能合约安全",
+			"content": "<p>理解智能合约安全有助于你评估协议，如果你是开发者，还能编写更安全的代码。</p>",
+			"common_vulnerabilities": {
+				"title": "常见漏洞",
+				"content": "<p><strong>重入攻击：</strong>当合约在更新状态之前进行外部调用时，允许攻击者重新进入并反复提取资金。DAO 黑客事件（6000 万美元）就是重入攻击。</p><p><strong>访问控制：</strong>缺失或不当的权限检查，允许未授权用户调用特权函数。</p><p><strong>整数溢出/下溢：</strong>数学运算溢出，可能允许攻击者无中生有创建代币或绕过余额检查。</p><p><strong>预言机操纵：</strong>使用现货价格或容易被操纵的价格源，可以被闪电贷利用。</p><p><strong>检测工具：</strong>像 Slither 这样的静态分析器可以自动检测许多常见漏洞。MythX 提供更深入分析的符号执行。</p>"
+			},
+			"audit_process": {
+				"title": "理解审计",
+				"content": "<p><strong>审计涵盖内容：</strong></p><ul><li>逻辑错误和漏洞的代码审查</li><li>经济攻击分析</li><li>Gas 优化建议</li><li>最佳实践合规性</li></ul><p><strong>审计局限性：</strong></p><ul><li>审计是时间快照——审计后的更改可能引入 bug</li><li>审计员可能遗漏问题——即使被审计的协议也会被黑</li><li>审计员水平不等——检查公司的过往记录</li></ul><p><strong>评估审计：</strong>查看 CertiK 的安全排行榜，阅读实际审计报告（不只是「由...审计」），并寻找多家知名公司的多次审计。</p>"
+			},
+			"formal_verification": {
+				"title": "形式化验证",
+				"content": "<p>形式化验证使用数学证明来验证代码的行为符合预期。这是最高级别的安全保证，但也是最昂贵和耗时的。</p><p><strong>使用场景：</strong></p><ul><li>核心 DeFi 基础组件（Uniswap V2、Compound）</li><li>持有数十亿资产的跨链桥合约</li><li>高 TVL 的代币合约</li></ul><p>对于大多数用户，检查协议是否有形式化验证是一个强烈的正面信号，但对于较小的协议，缺乏它并不一定是危险信号。</p>"
+			}
+		},
+
+		"case_studies": {
+			"title": "从真实黑客事件中学习",
+			"content": "<p>理解安全的最好方式是研究真实的攻击。每一次重大黑客事件都教会我们可能出错的地方。</p>",
+			"reentrancy": {
+				"title": "DAO 黑客事件（2016）",
+				"content": "<p>这次攻击永远改变了以太坊，并导致了以太坊经典的诞生。</p>",
+				"case_dao": {
+					"title": "原始重入攻击",
+					"description": "The DAO 当时持有约 15% 的所有 ETH。攻击者利用提款函数中的重入漏洞，在余额更新之前递归调用它。这使他们能够提取 360 万 ETH（当时约 6000 万美元）。这次攻击如此重大，以太坊社区进行了硬分叉来恢复资金，将原始链创建为以太坊经典。"
+				}
+			},
+			"flash_loan_attacks": {
+				"title": "闪电贷攻击",
+				"content": "<p>闪电贷使以前不可能的攻击成为可能——在单笔交易中借入数百万无抵押贷款来操纵价格。</p>",
+				"case_euler": {
+					"title": "Euler Finance 黑客事件 - 1.97 亿美元",
+					"description": "2023 年 3 月，攻击者利用了 Euler 捐赠功能中的漏洞，结合清算逻辑中的缺陷。使用来自 Aave 的闪电贷，他们操纵了协议的账户系统，创造了一个可以以盈利方式自我清算的情况。这次攻击掏空了 1.97 亿美元，使其成为有史以来最大的 DeFi 黑客事件之一。值得注意的是，攻击者最终在谈判后归还了大部分资金。"
+				}
+			},
+			"bridge_hacks": {
+				"title": "跨链桥漏洞",
+				"content": "<p>跨链桥是持有数十亿锁定资产的蜜罐。它们复杂的验证器/签名方案已被反复利用。</p>",
+				"case_ronin": {
+					"title": "Ronin 桥黑客事件 - 6.25 亿美元",
+					"description": "Axie Infinity 的 Ronin 跨链桥需要 9 个验证者中的 5 个来签名提款。朝鲜的 Lazarus 集团通过社会工程（假工作机会）和一个第三方验证者攻陷了 5 个验证者。他们提取了 173,600 ETH 和 2550 万美元 USDC。这次攻击在用户尝试提款前 6 天内未被发现。这凸显了中心化桥接安全和监控不力的风险。"
+				}
+			}
+		},
+
+		"earning": {
+			"title": "通过安全赚钱",
+			"content": "<p>Web3 安全是区块链中最赚钱的领域之一。顶级安全研究员通过漏洞赏金和审计竞赛赚取数百万美元。</p>",
+			"bug_bounties": {
+				"title": "漏洞赏金狩猎",
+				"content": "<p><strong>Immunefi</strong> 是最大的 Web3 漏洞赏金平台，已支付超过 1.5 亿美元的赏金。顶级支付包括：</p><ul><li>Wormhole：1000 万美元（关键漏洞）</li><li>Aurora：600 万美元赏金</li><li>Polygon：200 万美元（共识 bug）</li></ul><p><strong>入门方法：</strong></p><ol><li>学习 Solidity 和常见漏洞模式</li><li>研究过去的漏洞利用和审计报告</li><li>从较小的协议开始积累经验</li><li>清晰记录你的发现以获得最大赏金</li></ol>"
+			},
+			"audit_contests": {
+				"title": "审计竞赛",
+				"content": "<p>竞争性审计平台让你与其他审计员竞争发现 bug：</p><p><strong>Code4rena：</strong>社区驱动的审计竞赛，奖池高达 100 万美元。结果公开，建立你的声誉。</p><p><strong>Sherlock：</strong>将审计与保险覆盖相结合。审计员质押代币支持他们的工作。</p><p><strong>CodeHawks（Cyfrin）：</strong>教育重点，在竞赛之外有结构化的学习路径。</p><p><strong>成功秘诀：</strong></p><ul><li>首先专注于理解协议的业务逻辑</li><li>寻找可以被打破的边缘情况和不变量</li><li>编写清晰、可重现的概念证明</li><li>与顶级审计员的报告协作和学习</li></ul>"
+			},
+			"security_career": {
+				"title": "建立安全职业",
+				"content": "<p><strong>职业路径：</strong></p><ul><li><strong>独立审计员：</strong>自由职业、高收入潜力、灵活的时间安排</li><li><strong>审计公司：</strong>结构化环境、稳定工作、向同事学习</li><li><strong>协议安全：</strong>大型协议的内部安全</li><li><strong>安全工具：</strong>构建检测和监控工具</li></ul><p><strong>技能发展：</strong></p><ul><li>精通 Solidity 和 EVM 内部机制</li><li>学习模糊测试和形式化验证基础</li><li>研究经济学和机制设计</li><li>通过竞赛建立公开的记录</li></ul>"
+			}
+		},
+
+		"tools_deep_dive": {
+			"title": "安全工具深入了解",
+			"content": "<p>合适的工具可以大大提升你的安全态势，无论你是用户、开发者还是审计员。</p>",
+			"static_analysis": {
+				"title": "静态分析工具",
+				"content": "<p><strong>Slither（Trail of Bits）：</strong>最广泛使用的 Solidity 静态分析器。检测常见漏洞、优化和代码质量问题。免费开源。</p><p><strong>MythX：</strong>使用符号执行和 SMT 求解器进行更深入分析的商业工具。可以发现静态分析遗漏的 bug。</p><p><strong>Aderyn：</strong>专注于速度和与现代开发工作流程集成的较新工具。</p><p><strong>使用方法：</strong>在每次提交时运行静态分析。集成到 CI/CD 管道中。不要忽略警告——调查每一个。</p>"
+			},
+			"monitoring": {
+				"title": "实时监控",
+				"content": "<p><strong>Forta：</strong>具有社区构建的机器人监控威胁的去中心化检测网络。涵盖漏洞检测、治理攻击和异常活动。</p><p><strong>OpenZeppelin Defender：</strong>安全合约管理的运营平台。包括自动化交易执行、升级和监控。</p><p><strong>监控内容：</strong></p><ul><li>大额转账</li><li>异常函数调用</li><li>治理提案</li><li>预言机价格偏差</li><li>授权更改</li></ul>"
+			},
+			"transaction_analysis": {
+				"title": "交易分析",
+				"content": "<p>当出现问题时，你需要了解发生了什么：</p><p><strong>Phalcon（BlockSec）：</strong>具有调用追踪、资金流向分析和漏洞检测的交易浏览器。对于事后分析至关重要。</p><p><strong>Tx Tracer（OpenChain）：</strong>带有 calldata 解码的免费交易追踪器。非常适合理解复杂交易。</p><p><strong>Tenderly：</strong>交易模拟和调试平台。用于在发送前测试交易或调试失败的交易。</p>"
+			}
+		}
+	},
+
+	"glossary": {
+		"reentrancy": {
+			"term": "重入攻击",
+			"definition": "一种漏洞，当合约在更新状态之前进行外部调用时，允许被调用的合约回调并在第一次调用完成之前重复操作。"
+		},
+		"approval": {
+			"term": "代币授权",
+			"definition": "授予智能合约代表你花费代币的权限。无限授权允许永久花费任意数量的该代币，除非被撤销。"
+		},
+		"front_running": {
+			"term": "抢跑交易",
+			"definition": "当某人观察到待处理的交易并提交自己更高 gas 的交易以先执行时，从原始交易会导致的价格变动中获利。"
+		},
+		"oracle_manipulation": {
+			"term": "预言机操纵",
+			"definition": "人为移动预言机（价格馈送）报告的价格，以利用依赖该价格进行清算、交换或借贷的协议。"
+		},
+		"private_key": {
+			"term": "私钥",
+			"definition": "控制区块链地址访问权限的秘密加密密钥。拥有私钥的任何人都完全控制相关资金。"
+		},
+		"phishing": {
+			"term": "钓鱼",
+			"definition": "通过假网站或冒充来窃取凭据或诱骗用户签署恶意交易的欺诈性尝试。"
+		},
+		"bug_bounty": {
+			"term": "漏洞赏金",
+			"definition": "协议为安全研究人员在漏洞被利用之前负责任地披露漏洞而支付奖励的计划。"
+		},
+		"formal_verification": {
+			"term": "形式化验证",
+			"definition": "使用数学证明来验证代码完全按照指定行为，提供最高级别的保证，确保验证的属性中不存在 bug。"
+		},
+		"honeypot": {
+			"term": "蜜罐",
+			"definition": "一种恶意代币或合约，允许你买入但阻止你卖出，永久困住你的资金。"
+		},
+		"rugpull": {
+			"term": "跑路",
+			"definition": "当开发者在提取用户资金后放弃项目时，通常通过抽干流动性池或利用管理员功能。"
+		}
+	}
+}

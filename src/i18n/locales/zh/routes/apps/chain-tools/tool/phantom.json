@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Phantom - Solana、以太坊和比特币多链加密钱包",
+		"description": "适用于 Solana、以太坊、Polygon 和比特币的友好加密钱包。Phantom 让探索 Web3 变得安全又简单。",
+		"keywords": "Phantom 钱包, Solana 钱包, 多链钱包, 加密钱包, Web3 钱包, DeFi 钱包"
+	},
+	"overview": "Phantom 是一个多链加密钱包，最初作为领先的 Solana 钱包，现已扩展支持以太坊、Polygon、Base 和比特币。以其精美的设计和用户友好的界面著称，Phantom 让每个人都能接触 Web3。\n\n由前 0x 工程师于 2021 年创立，Phantom 在由 Paradigm 领投的 B 轮融资中筹集了 1.09 亿美元，公司估值达 12 亿美元。钱包拥有超过 1500 万活跃用户，在 Solana 生态系统中特别受欢迎。\n\nPhantom 在安全方面表现出色，具有交易预览、骗局检测和 NFT 垃圾过滤等功能。钱包自动隐藏可疑代币，并在与恶意合约交互前警告用户。可在 iOS、Android 和所有主流浏览器上使用。",
+	"features": {
+		"1": {
+			"title": "多链支持",
+			"description": "在一个钱包中管理 Solana、以太坊、Polygon、Base 和比特币"
+		},
+		"2": {
+			"title": "交易预览",
+			"description": "在签署任何交易之前准确查看会发生什么"
+		},
+		"3": {
+			"title": "内置兑换",
+			"description": "直接在钱包中交易代币，获得聚合价格"
+		},
+		"4": {
+			"title": "NFT 画廊",
+			"description": "查看、发送和管理 NFT，带垃圾过滤"
+		},
+		"5": {
+			"title": "骗局检测",
+			"description": "自动警告恶意网站和合约"
+		},
+		"6": {
+			"title": "硬件钱包支持",
+			"description": "连接 Ledger 实现冷存储安全"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Solana DeFi",
+			"description": "与 Solana dApps、DEX 和 DeFi 协议交互"
+		},
+		"2": {
+			"title": "多链管理",
+			"description": "在一个界面中管理跨多个链的资产"
+		},
+		"3": {
+			"title": "NFT 收集",
+			"description": "购买、存储和管理 NFT 收藏品"
+		},
+		"4": {
+			"title": "代币兑换",
+			"description": "以有竞争力的费率和低费用交易代币"
+		},
+		"5": {
+			"title": "移动加密",
+			"description": "在 iOS 和 Android 上获得完整的钱包功能"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Phantom 钱包安全吗？",
+			"answer": "是的，Phantom 是最安全的加密钱包之一。它是自托管的（你控制你的密钥），经过多次安全审计，并包含内置的骗局检测。交易预览和垃圾过滤等功能增加了额外的保护。数百万人安全使用。"
+		},
+		"2": {
+			"question": "Phantom 钱包是免费的吗？",
+			"answer": "是的，Phantom 免费下载和使用。没有订阅费。Phantom 通过应用内兑换收取少量费用（通常 0.85%）来盈利。使用 Phantom 进行交易、存储和 dApp 连接除了网络 Gas 费外完全免费。"
+		},
+		"3": {
+			"question": "我可以用 Phantom 管理以太坊吗？",
+			"answer": "是的，Phantom 除了 Solana 还支持以太坊、Polygon 和 Base。你可以管理 ETH、ERC-20 代币和以太坊 NFT。多链支持意味着一个钱包满足大部分加密需求。"
+		},
+		"4": {
+			"question": "Phantom vs MetaMask：哪个更好？",
+			"answer": "对于 Solana：Phantom 明显更好，有原生支持和优越的用户体验。对于以太坊：MetaMask 有更广泛的 dApp 兼容性。Phantom 有更好的设计和安全功能；MetaMask 有更深的 EVM 集成。许多用户两者都有用于不同的链。"
+		},
+		"5": {
+			"question": "如何恢复我的 Phantom 钱包？",
+			"answer": "在新设备上设置 Phantom 时使用你的 12 或 24 个单词的恢复短语（助记词）。永远不要分享这个短语——任何拥有它的人都可以访问你的资金。如果你丢失了短语且无法访问钱包，资金很遗憾无法恢复。"
+		}
+	},
+	"cta": {
+		"ready": "准备使用友好的加密钱包？",
+		"button": "获取 Phantom",
+		"note": "适合每个人的多链钱包"
+	}
+}

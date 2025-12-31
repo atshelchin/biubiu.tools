@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "DEX Screener - 实时 DEX 图表与代币分析",
+		"description": "实时追踪所有 DEX 上的代币价格。DEX Screener 为 DeFi 交易者提供图表、流动性数据和新交易对提醒。",
+		"keywords": "DEX Screener, DEX 图表, 代币追踪, DeFi 交易, 流动性对, 新代币"
+	},
+	"overview": "DEX Screener 是一个实时图表和去中心化交易所分析平台，覆盖 80+ 链上的代币，包括以太坊、BSC、Solana、Base 和 Arbitrum。它是交易者寻找新代币和监控 DEX 流动性的首选工具。\n\n与中心化交易所数据不同，DEX Screener 直接从区块链数据中提取，实时显示每笔交易。该平台擅长在代币上线几分钟内就发现新代币，这使其成为早期代币交易和 meme 币狩猎的必备工具。\n\nDEX Screener 简洁的界面和快速的数据使其在需要准确实时信息的 DeFi 交易者中很受欢迎，而无需传统图表工具的复杂性。该平台完全免费，无需注册账户。",
+	"features": {
+		"1": {
+			"title": "支持 80+ 链",
+			"description": "追踪所有主流和新兴区块链上的 DEX 交易对"
+		},
+		"2": {
+			"title": "实时图表",
+			"description": "TradingView 驱动的图表，显示每笔链上交易"
+		},
+		"3": {
+			"title": "新交易对提醒",
+			"description": "当新代币在任何 DEX 上线时获得通知"
+		},
+		"4": {
+			"title": "流动性分析",
+			"description": "查看池子大小、锁定流动性和 LP 持有者数据"
+		},
+		"5": {
+			"title": "代币安全",
+			"description": "基本的合约检查，检测蜜罐和所有权问题"
+		},
+		"6": {
+			"title": "自选列表",
+			"description": "创建自定义自选列表并追踪多个代币"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "新代币发现",
+			"description": "在所有 DEX 上发现新上线的代币"
+		},
+		"2": {
+			"title": "DEX 交易",
+			"description": "监控价格和流动性以进行 DEX 交易"
+		},
+		"3": {
+			"title": "Meme 币交易",
+			"description": "追踪热门 meme 币和新发行"
+		},
+		"4": {
+			"title": "流动性分析",
+			"description": "交易前检查池子深度和安全性"
+		},
+		"5": {
+			"title": "多链监控",
+			"description": "监控以太坊、Solana、BSC 等链上的代币"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "DEX Screener 是免费的吗？",
+			"answer": "是的，DEX Screener 完全免费，无需注册账户。所有功能包括图表、新交易对提醒和多链追踪都对所有人开放。他们通过广告和推广代币盈利，保持核心功能免费。"
+		},
+		"2": {
+			"question": "DEX Screener 准确吗？",
+			"answer": "是的，DEX Screener 直接从区块链交易中提取数据，所以价格和交易是准确的。与 CoinGecko 或 CMC 的价格差异是因为 CEX 和 DEX 价格不同。DEX Screener 显示的是实际的链上价格。"
+		},
+		"3": {
+			"question": "DEX Screener 如何发现新代币？",
+			"answer": "DEX Screener 实时索引支持的 DEX 上的新流动性池创建。当在 Uniswap、PancakeSwap、Raydium 等上创建新交易对时，它会在几分钟内出现。这使其成为早期代币发现的必备工具。"
+		},
+		"4": {
+			"question": "DEX Screener vs DEXTools：哪个更好？",
+			"answer": "两者都很出色。DEX Screener 界面更简洁、加载更快、多链支持更好。DEXTools 有更多功能如代币评分和钱包追踪，但需要付费才能完全访问。许多交易者两者都用。"
+		},
+		"5": {
+			"question": "DEX Screener 能检测骗局吗？",
+			"answer": "DEX Screener 显示基本安全信息，如合约验证、流动性锁定和所有权放弃。但它不是完整的审计。在交易新代币之前，始终使用专门工具如 TokenSniffer 或 GoPlus 进行彻底的安全检查。"
+		}
+	},
+	"cta": {
+		"ready": "准备追踪 DEX 代币？",
+		"button": "打开 DEX Screener",
+		"note": "免费实时 DEX 图表"
+	}
+}

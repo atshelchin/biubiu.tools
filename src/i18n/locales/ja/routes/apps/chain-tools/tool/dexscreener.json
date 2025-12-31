@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "DEX Screener - Real-Time DEX Charts & Token Analytics",
+		"description": "Track token prices across all DEXs in real-time. DEX Screener provides charts, liquidity data, and new pair alerts for DeFi traders.",
+		"keywords": "DEX Screener, DEX charts, token tracking, DeFi trading, liquidity pairs, new tokens"
+	},
+	"overview": "DEX Screener is a real-time charting and analytics platform for decentralized exchanges, covering tokens across 80+ chains including Ethereum, BSC, Solana, Base, and Arbitrum. It's the go-to tool for traders hunting new tokens and monitoring DEX liquidity.\n\nUnlike centralized exchange data, DEX Screener pulls directly from blockchain data, showing every trade as it happens. The platform excels at discovering new tokens within minutes of launch, making it essential for early-stage token trading and memecoin hunting.\n\nDEX Screener's clean interface and fast data make it popular among DeFi traders who need accurate, real-time information without the complexity of traditional charting tools. The platform is completely free with no account required.",
+	"features": {
+		"1": {
+			"title": "80+ Chains Supported",
+			"description": "Track DEX pairs across all major and emerging blockchains"
+		},
+		"2": {
+			"title": "Real-Time Charts",
+			"description": "TradingView-powered charts with every on-chain trade"
+		},
+		"3": {
+			"title": "New Pair Alerts",
+			"description": "Get notified when new tokens launch on any DEX"
+		},
+		"4": {
+			"title": "Liquidity Analysis",
+			"description": "See pool sizes, locked liquidity, and LP holder data"
+		},
+		"5": {
+			"title": "Token Security",
+			"description": "Basic contract checks for honeypots and ownership"
+		},
+		"6": {
+			"title": "Watchlists",
+			"description": "Create custom watchlists and track multiple tokens"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "New Token Discovery",
+			"description": "Find newly launched tokens across all DEXs"
+		},
+		"2": {
+			"title": "DEX Trading",
+			"description": "Monitor prices and liquidity for DEX trades"
+		},
+		"3": {
+			"title": "Memecoin Trading",
+			"description": "Track trending memecoins and new launches"
+		},
+		"4": {
+			"title": "Liquidity Analysis",
+			"description": "Check pool depth and safety before trading"
+		},
+		"5": {
+			"title": "Multi-Chain Monitoring",
+			"description": "Watch tokens across Ethereum, Solana, BSC, and more"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Is DEX Screener free?",
+			"answer": "Yes, DEX Screener is completely free with no account required. All features including charts, new pair alerts, and multi-chain tracking are available to everyone. They monetize through ads and promoted tokens, keeping core features free."
+		},
+		"2": {
+			"question": "Is DEX Screener accurate?",
+			"answer": "Yes, DEX Screener pulls data directly from blockchain transactions, so prices and trades are accurate. Price discrepancies with CoinGecko or CMC occur because CEX and DEX prices differ. DEX Screener shows the actual on-chain price."
+		},
+		"3": {
+			"question": "How does DEX Screener find new tokens?",
+			"answer": "DEX Screener indexes new liquidity pool creations across supported DEXs in real-time. When a new pair is created on Uniswap, PancakeSwap, Raydium, etc., it appears within minutes. This makes it essential for early token discovery."
+		},
+		"4": {
+			"question": "DEX Screener vs DEXTools: Which is better?",
+			"answer": "Both are excellent. DEX Screener has a cleaner interface, faster loading, and better multi-chain support. DEXTools has more features like token scores and wallet tracking but requires premium for full access. Many traders use both."
+		},
+		"5": {
+			"question": "Can DEX Screener detect scams?",
+			"answer": "DEX Screener shows basic security info like contract verification, liquidity locking, and ownership renouncement. However, it's not a full audit. Always use dedicated tools like TokenSniffer or GoPlus for thorough security checks before trading new tokens."
+		}
+	},
+	"cta": {
+		"ready": "Ready to track DEX tokens?",
+		"button": "Open DEX Screener",
+		"note": "Free real-time DEX charts"
+	}
+}

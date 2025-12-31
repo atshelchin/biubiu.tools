@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "CryptoQuant - On-Chain Analytics & Market Intelligence",
+		"description": "Professional on-chain analytics for crypto traders. Exchange flows, miner data, and market indicators for Bitcoin and altcoins.",
+		"keywords": "CryptoQuant, on-chain analytics, exchange flows, Bitcoin metrics, crypto trading, market indicators"
+	},
+	"overview": "CryptoQuant is a professional on-chain analytics platform specializing in exchange flows, derivatives data, and market indicators. Founded in 2019 in South Korea, CryptoQuant has become essential for traders who want to understand market dynamics beyond price.\n\nThe platform excels at tracking exchange-related metrics—deposits, withdrawals, reserves, and whale movements across major exchanges. These insights help traders anticipate market moves based on actual on-chain behavior rather than speculation.\n\nCryptoQuant also provides comprehensive derivatives data including funding rates, open interest, and liquidation levels. The platform serves both individual traders and institutions with tiered access to its extensive dataset.",
+	"features": {
+		"1": {
+			"title": "Exchange Flow Tracking",
+			"description": "Monitor deposits and withdrawals across major exchanges"
+		},
+		"2": {
+			"title": "Whale Alerts",
+			"description": "Real-time notifications for large transfers"
+		},
+		"3": {
+			"title": "Derivatives Data",
+			"description": "Funding rates, open interest, and liquidation data"
+		},
+		"4": {
+			"title": "Market Indicators",
+			"description": "Proprietary signals like Exchange Whale Ratio"
+		},
+		"5": {
+			"title": "Miner Analytics",
+			"description": "Track miner outflows, reserves, and behavior"
+		},
+		"6": {
+			"title": "Quicktake",
+			"description": "Analyst insights and market commentary"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Exchange Analysis",
+			"description": "Monitor exchange reserves and flow patterns"
+		},
+		"2": {
+			"title": "Whale Tracking",
+			"description": "Follow large holder movements to/from exchanges"
+		},
+		"3": {
+			"title": "Derivatives Trading",
+			"description": "Use funding and liquidation data for trading"
+		},
+		"4": {
+			"title": "Market Timing",
+			"description": "Identify accumulation and distribution phases"
+		},
+		"5": {
+			"title": "Risk Management",
+			"description": "Monitor market stress indicators"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Is CryptoQuant free?",
+			"answer": "CryptoQuant offers a free tier with basic metrics and limited history. Advanced plan ($29/month) unlocks most features. Professional plan ($99/month) adds API access and real-time data. Free tier is useful but limited for active trading."
+		},
+		"2": {
+			"question": "What is Exchange Whale Ratio?",
+			"answer": "Exchange Whale Ratio measures the proportion of large deposits (top 10) relative to total exchange inflows. High ratios suggest whales are moving to sell; low ratios suggest retail dominance. It's a popular CryptoQuant indicator."
+		},
+		"3": {
+			"question": "How accurate is CryptoQuant data?",
+			"answer": "CryptoQuant is highly accurate for exchange-labeled data. They maintain extensive exchange wallet databases and update continuously. Some metrics use heuristics which may have margins of error. It's industry-standard for exchange flow analysis."
+		},
+		"4": {
+			"question": "CryptoQuant vs Glassnode: Which is better?",
+			"answer": "CryptoQuant excels at exchange flows and derivatives data. Glassnode has more on-chain metrics and better visualization. CryptoQuant is more trading-focused; Glassnode more research-focused. Many serious analysts use both."
+		},
+		"5": {
+			"question": "What is Quicktake?",
+			"answer": "Quicktake is CryptoQuant's analyst insight feature where verified analysts share market commentary and data interpretations. It provides context for on-chain data and highlights significant movements. Available to subscribed users."
+		}
+	},
+	"cta": {
+		"ready": "Ready for on-chain trading data?",
+		"button": "Open CryptoQuant",
+		"note": "Exchange flow analytics"
+	}
+}

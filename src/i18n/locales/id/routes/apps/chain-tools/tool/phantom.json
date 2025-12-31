@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Phantom - Multi-Chain Crypto Wallet for Solana, Ethereum & Bitcoin",
+		"description": "The friendly crypto wallet for Solana, Ethereum, Polygon, and Bitcoin. Phantom makes it safe & easy to explore Web3.",
+		"keywords": "Phantom wallet, Solana wallet, multi-chain wallet, crypto wallet, Web3 wallet, DeFi wallet"
+	},
+	"overview": "Phantom is a multi-chain crypto wallet that started as the leading Solana wallet and has expanded to support Ethereum, Polygon, Base, and Bitcoin. Known for its beautiful design and user-friendly interface, Phantom makes Web3 accessible to everyone.\n\nFounded in 2021 by former 0x engineers, Phantom raised $109M in Series B funding led by Paradigm, valuing the company at $1.2B. The wallet has over 15 million active users and is particularly popular in the Solana ecosystem.\n\nPhantom excels at security with features like transaction previews, scam detection, and NFT spam filtering. The wallet automatically hides suspicious tokens and warns users before interacting with malicious contracts. Available on iOS, Android, and all major browsers.",
+	"features": {
+		"1": {
+			"title": "Multi-Chain Support",
+			"description": "Manage Solana, Ethereum, Polygon, Base, and Bitcoin in one wallet"
+		},
+		"2": {
+			"title": "Transaction Previews",
+			"description": "See exactly what will happen before signing any transaction"
+		},
+		"3": {
+			"title": "Built-in Swaps",
+			"description": "Trade tokens directly in the wallet with aggregated pricing"
+		},
+		"4": {
+			"title": "NFT Gallery",
+			"description": "View, send, and manage NFTs with spam filtering"
+		},
+		"5": {
+			"title": "Scam Detection",
+			"description": "Automatic warnings for malicious sites and contracts"
+		},
+		"6": {
+			"title": "Hardware Wallet Support",
+			"description": "Connect Ledger for cold storage security"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Solana DeFi",
+			"description": "Interact with Solana dApps, DEXs, and DeFi protocols"
+		},
+		"2": {
+			"title": "Multi-Chain Management",
+			"description": "Manage assets across multiple chains in one interface"
+		},
+		"3": {
+			"title": "NFT Collecting",
+			"description": "Buy, store, and manage NFT collections"
+		},
+		"4": {
+			"title": "Token Swapping",
+			"description": "Trade tokens with competitive rates and low fees"
+		},
+		"5": {
+			"title": "Mobile Crypto",
+			"description": "Full wallet functionality on iOS and Android"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Is Phantom wallet safe?",
+			"answer": "Yes, Phantom is one of the most secure crypto wallets. It's self-custodial (you control your keys), has undergone multiple security audits, and includes built-in scam detection. Features like transaction previews and spam filtering add extra protection. Used by millions safely."
+		},
+		"2": {
+			"question": "Is Phantom wallet free?",
+			"answer": "Yes, Phantom is free to download and use. There are no subscription fees. Phantom makes money from a small fee on in-app swaps (usually 0.85%). Using Phantom for transactions, storage, and dApp connections is completely free beyond network gas fees."
+		},
+		"3": {
+			"question": "Can I use Phantom for Ethereum?",
+			"answer": "Yes, Phantom supports Ethereum, Polygon, and Base in addition to Solana. You can manage ETH, ERC-20 tokens, and Ethereum NFTs. The multi-chain support means one wallet for most of your crypto needs."
+		},
+		"4": {
+			"question": "Phantom vs MetaMask: Which is better?",
+			"answer": "For Solana: Phantom is clearly better with native support and superior UX. For Ethereum: MetaMask has wider dApp compatibility. Phantom has better design and security features; MetaMask has deeper EVM integration. Many users have both for different chains."
+		},
+		"5": {
+			"question": "How do I recover my Phantom wallet?",
+			"answer": "Use your 12 or 24-word recovery phrase (seed phrase) when setting up Phantom on a new device. Never share this phrase—anyone with it can access your funds. If you've lost your phrase and can't access the wallet, the funds are unfortunately not recoverable."
+		}
+	},
+	"cta": {
+		"ready": "Ready for the friendly crypto wallet?",
+		"button": "Get Phantom",
+		"note": "Multi-chain wallet for everyone"
+	}
+}

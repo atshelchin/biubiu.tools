@@ -64,6 +64,18 @@ import { zapperDetail } from './zapper';
 import { zerionDetail } from './zerion';
 import { rabbyDetail } from './rabby';
 import { debankDetail } from './debank';
+import { coinmarketcapDetail } from './coinmarketcap';
+import { messariDetail } from './messari';
+import { dexscreenerDetail } from './dexscreener';
+import { glassnodeDetail } from './glassnode';
+import { arkhamDetail } from './arkham';
+import { phantomDetail } from './phantom';
+import { dextoolsDetail } from './dextools';
+import { birdeyeDetail } from './birdeye';
+import { tokenterminalDetail } from './tokenterminal';
+import { cryptoquantDetail } from './cryptoquant';
+import { santimentDetail } from './santiment';
+import { intotheblockDetail } from './intotheblock';
 
 /**
  * All tool details mapped by tool ID
@@ -124,7 +136,19 @@ export const toolDetails: Record<string, ToolDetail> = {
 	zapper: zapperDetail,
 	zerion: zerionDetail,
 	rabby: rabbyDetail,
-	debank: debankDetail
+	debank: debankDetail,
+	coinmarketcap: coinmarketcapDetail,
+	messari: messariDetail,
+	dexscreener: dexscreenerDetail,
+	glassnode: glassnodeDetail,
+	arkham: arkhamDetail,
+	phantom: phantomDetail,
+	dextools: dextoolsDetail,
+	birdeye: birdeyeDetail,
+	tokenterminal: tokenterminalDetail,
+	cryptoquant: cryptoquantDetail,
+	santiment: santimentDetail,
+	intotheblock: intotheblockDetail
 };
 
 /**

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "IntoTheBlock - AI-Powered Crypto Analytics & Signals",
+		"description": "Machine learning-powered blockchain analytics with holder analysis, price predictions, and institutional-grade data for crypto assets.",
+		"keywords": "IntoTheBlock, crypto analytics, AI trading, holder analysis, blockchain data, crypto signals"
+	},
+	"overview": "IntoTheBlock is an AI-powered analytics platform that applies machine learning to blockchain data, providing unique insights for crypto investors. Founded in 2018, the platform combines on-chain analytics with predictive modeling and holder analysis.\n\nThe platform is known for its holder composition analysis, breaking down addresses into categories like whales, investors, and retail. This segmentation helps understand who holds an asset and how concentrated ownership is.\n\nIntoTheBlock also provides signals and indicators derived from AI models, including price predictions and market sentiment scores. The platform serves both individual investors and institutions with tiered access to its analytics suite.",
+	"features": {
+		"1": {
+			"title": "Holder Analysis",
+			"description": "Break down holders by size, concentration, and behavior"
+		},
+		"2": {
+			"title": "AI Price Predictions",
+			"description": "Machine learning-based price forecasts"
+		},
+		"3": {
+			"title": "In/Out of Money",
+			"description": "Visualize holder profitability at each price level"
+		},
+		"4": {
+			"title": "Large Transaction Tracking",
+			"description": "Monitor whale and institutional movements"
+		},
+		"5": {
+			"title": "DeFi Analytics",
+			"description": "Protocol health scores and risk metrics"
+		},
+		"6": {
+			"title": "Correlation Analysis",
+			"description": "Understand asset correlations and diversification"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Holder Research",
+			"description": "Understand who holds an asset and their positions"
+		},
+		"2": {
+			"title": "Support/Resistance",
+			"description": "Identify price levels where holders break even"
+		},
+		"3": {
+			"title": "Whale Monitoring",
+			"description": "Track large holder movements and accumulation"
+		},
+		"4": {
+			"title": "Risk Assessment",
+			"description": "Evaluate holder concentration and distribution"
+		},
+		"5": {
+			"title": "Market Sentiment",
+			"description": "Gauge overall market mood through on-chain signals"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Is IntoTheBlock free?",
+			"answer": "IntoTheBlock offers free basic analytics for many assets. Pro plans ($29/month) unlock full features, historical data, and API access. The free tier provides useful overview data but Pro is needed for detailed analysis."
+		},
+		"2": {
+			"question": "What is In/Out of Money?",
+			"answer": "In/Out of Money shows what percentage of holders are profitable at current price. 'In the Money' holders bought lower; 'Out of Money' bought higher. This visualizes potential support/resistance based on holder cost basis."
+		},
+		"3": {
+			"question": "How accurate are AI price predictions?",
+			"answer": "AI predictions are probabilistic estimates, not guarantees. They're useful as one input among many but should not be the sole basis for trading decisions. IntoTheBlock is transparent that predictions have limitations."
+		},
+		"4": {
+			"question": "IntoTheBlock vs Glassnode: Which for holder analysis?",
+			"answer": "IntoTheBlock excels at holder segmentation and the In/Out of Money feature. Glassnode has more comprehensive on-chain metrics overall. For holder-focused analysis, IntoTheBlock; for broad on-chain research, Glassnode."
+		},
+		"5": {
+			"question": "Does IntoTheBlock cover DeFi?",
+			"answer": "Yes, IntoTheBlock provides DeFi analytics including protocol health scores, TVL tracking, and risk metrics. They analyze major DeFi protocols across multiple chains with focus on lending and liquidity protocols."
+		}
+	},
+	"cta": {
+		"ready": "Ready for AI-powered analytics?",
+		"button": "Open IntoTheBlock",
+		"note": "Machine learning insights"
+	}
+}

@@ -1,0 +1,164 @@
+{
+	"title": "Web3 Security: Complete Protection Guide",
+	"subtitle": "Learn to protect yourself and find vulnerabilities in the blockchain ecosystem",
+
+	"sections": {
+		"intro": {
+			"title": "Understanding Web3 Security",
+			"content": "<p>Web3 security is fundamentally different from traditional cybersecurity. In the blockchain world, <strong>code is law</strong> - once a transaction is executed, it cannot be reversed. A single approval to a malicious contract can drain your entire wallet in seconds.</p><p>Since 2020, over <strong>$10 billion</strong> has been lost to hacks, exploits, and scams in the DeFi ecosystem. Understanding security isn't optional - it's essential for survival in this space.</p><p>This guide will take you from basic personal protection to understanding complex protocol vulnerabilities, and even show you how to earn by finding bugs.</p>"
+		},
+
+		"threat_landscape": {
+			"title": "The Threat Landscape",
+			"content": "<p>Before protecting yourself, you need to understand what you're up against. Web3 threats range from simple phishing attacks to sophisticated smart contract exploits.</p>",
+			"common_attacks": {
+				"title": "Common Attack Types",
+				"content": "<p><strong>1. Phishing & Social Engineering</strong><br/>Fake websites, Discord DMs, and impersonator accounts remain the #1 way users lose funds. Attackers create pixel-perfect copies of popular dApps or pose as support staff.</p><p><strong>2. Approval Exploits</strong><br/>When you approve a token for spending, you're giving that contract permission to move your tokens. Unlimited approvals (common default) mean a compromised contract can drain everything.</p><p><strong>3. Smart Contract Vulnerabilities</strong><br/>Bugs in code like reentrancy, integer overflow, or access control issues that allow attackers to steal funds from protocols.</p><p><strong>4. Flash Loan Attacks</strong><br/>Sophisticated attacks that borrow millions in uncollateralized loans to manipulate prices and drain protocols, all within a single transaction.</p>"
+			},
+			"attack_vectors": {
+				"title": "Attack Vectors",
+				"content": "<p><strong>Frontend Attacks:</strong> DNS hijacking, CDN compromises, or malicious browser extensions can replace legitimate transactions with malicious ones.</p><p><strong>Private Key Theft:</strong> Malware, compromised hardware, or poor operational security can expose private keys directly.</p><p><strong>Oracle Manipulation:</strong> Manipulating price feeds that DeFi protocols rely on for liquidations and swaps.</p><p><strong>Bridge Exploits:</strong> Cross-chain bridges are high-value targets due to the large amount of locked assets.</p>"
+			}
+		},
+
+		"personal_security": {
+			"title": "Personal Security Essentials",
+			"content": "<p>Your first line of defense is your own security practices. Most losses come from preventable user-side mistakes.</p>",
+			"wallet_safety": {
+				"title": "Wallet Safety",
+				"content": "<p><strong>Hardware Wallets:</strong> Use hardware wallets (Ledger, Trezor) for any significant holdings. They keep your private keys offline and require physical confirmation for transactions.</p><p><strong>Wallet Segregation:</strong> Use separate wallets for different purposes:</p><ul><li><strong>Hot wallet:</strong> Small amounts for daily use and minting</li><li><strong>Cold wallet:</strong> Main holdings, never connected to random dApps</li><li><strong>Burner wallet:</strong> For testing new protocols or risky interactions</li></ul><p><strong>Transaction Previews:</strong> Modern wallets like Rabby show transaction simulations before signing. Always review what you're actually approving.</p>"
+			},
+			"approval_management": {
+				"title": "Managing Token Approvals",
+				"content": "<p>Every time you interact with a DeFi protocol, you likely grant token approvals. These permissions persist forever unless revoked.</p><p><strong>Best Practices:</strong></p><ul><li>Regularly audit approvals using Revoke.cash or De.Fi</li><li>Set specific amounts instead of unlimited approvals when possible</li><li>Revoke approvals for protocols you no longer use</li><li>Be suspicious of requests for unusual token approvals</li></ul><p><strong>Example:</strong> The BadgerDAO exploit ($120M lost) exploited malicious approvals injected via a compromised frontend. Users who had granted unlimited approvals lost their entire positions.</p>"
+			},
+			"phishing_protection": {
+				"title": "Phishing Protection",
+				"content": "<p><strong>URL Verification:</strong> Always verify you're on the correct domain. Bookmark official sites. Be especially careful with:</p><ul><li>Google ad results (often used for phishing)</li><li>Links from Discord/Twitter DMs</li><li>QR codes from unknown sources</li></ul><p><strong>Transaction Simulation:</strong> Use tools like Pocket Universe or Blowfish that simulate transactions before signing. They'll warn you if a transaction would drain your wallet.</p><p><strong>Browser Extensions:</strong> Install ScamSniffer or Wallet Guard to get real-time warnings about known phishing sites.</p>"
+			}
+		},
+
+		"contract_security": {
+			"title": "Smart Contract Security",
+			"content": "<p>Understanding smart contract security helps you evaluate protocols and, if you're a developer, write safer code.</p>",
+			"common_vulnerabilities": {
+				"title": "Common Vulnerabilities",
+				"content": "<p><strong>Reentrancy:</strong> When a contract makes an external call before updating its state, allowing attackers to re-enter and drain funds repeatedly. The DAO hack ($60M) was a reentrancy attack.</p><p><strong>Access Control:</strong> Missing or improper permission checks that allow unauthorized users to call privileged functions.</p><p><strong>Integer Overflow/Underflow:</strong> Mathematical operations that wrap around, potentially allowing attackers to create tokens from nothing or bypass balance checks.</p><p><strong>Oracle Manipulation:</strong> Using spot prices or easily manipulable price sources that can be exploited with flash loans.</p><p><strong>Tools for Detection:</strong> Static analyzers like Slither can automatically detect many common vulnerabilities. MythX provides symbolic execution for deeper analysis.</p>"
+			},
+			"audit_process": {
+				"title": "Understanding Audits",
+				"content": "<p><strong>What Audits Cover:</strong></p><ul><li>Code review for logical errors and vulnerabilities</li><li>Economic attack analysis</li><li>Gas optimization recommendations</li><li>Best practices compliance</li></ul><p><strong>Audit Limitations:</strong></p><ul><li>Audits are a snapshot in time - changes after audit may introduce bugs</li><li>Auditors can miss issues - even audited protocols get hacked</li><li>Not all auditors are equal - check the firm's track record</li></ul><p><strong>Evaluating Audits:</strong> Check CertiK's security leaderboard, read the actual audit reports (not just \"audited by\"), and look for multiple audits from reputable firms.</p>"
+			},
+			"formal_verification": {
+				"title": "Formal Verification",
+				"content": "<p>Formal verification uses mathematical proofs to verify code behaves as intended. It's the highest level of security assurance but also the most expensive and time-consuming.</p><p><strong>When It's Used:</strong></p><ul><li>Core DeFi primitives (Uniswap V2, Compound)</li><li>Bridge contracts holding billions</li><li>Token contracts with high TVL</li></ul><p>For most users, checking if a protocol has formal verification is a strong positive signal, but its absence isn't necessarily a red flag for smaller protocols.</p>"
+			}
+		},
+
+		"case_studies": {
+			"title": "Learning from Real Hacks",
+			"content": "<p>The best way to understand security is to study real attacks. Each major hack teaches valuable lessons about what can go wrong.</p>",
+			"reentrancy": {
+				"title": "The DAO Hack (2016)",
+				"content": "<p>The attack that changed Ethereum forever and led to the creation of Ethereum Classic.</p>",
+				"case_dao": {
+					"title": "The Original Reentrancy Attack",
+					"description": "The DAO held ~15% of all ETH at the time. The attacker exploited a reentrancy vulnerability in the withdrawal function, recursively calling it before the balance was updated. This allowed them to drain 3.6 million ETH (~$60M at the time). The attack was so significant that the Ethereum community hard-forked to recover the funds, creating Ethereum Classic as the original chain."
+				}
+			},
+			"flash_loan_attacks": {
+				"title": "Flash Loan Attacks",
+				"content": "<p>Flash loans enable attacks previously impossible - borrowing millions with no collateral to manipulate prices within a single transaction.</p>",
+				"case_euler": {
+					"title": "Euler Finance Hack - $197M",
+					"description": "In March 2023, an attacker exploited a vulnerability in Euler's donation function combined with a flaw in the liquidation logic. Using a flash loan from Aave, they manipulated the protocol's accounting to create a situation where they could liquidate themselves at a profit. The attack drained $197M, making it one of the largest DeFi hacks ever. Remarkably, the attacker eventually returned most of the funds after negotiations."
+				}
+			},
+			"bridge_hacks": {
+				"title": "Bridge Vulnerabilities",
+				"content": "<p>Cross-chain bridges are honeypots holding billions in locked assets. Their complex validator/signature schemes have been repeatedly exploited.</p>",
+				"case_ronin": {
+					"title": "Ronin Bridge Hack - $625M",
+					"description": "The Axie Infinity Ronin bridge required 5 of 9 validators to sign withdrawals. The North Korean Lazarus Group compromised 5 validators through social engineering (fake job offer) and a third-party validator. They drained 173,600 ETH and $25.5M USDC. The attack went undetected for 6 days until a user tried to withdraw. This highlighted the risks of centralized bridge security and poor monitoring."
+				}
+			}
+		},
+
+		"earning": {
+			"title": "Earning Through Security",
+			"content": "<p>Web3 security is one of the most lucrative fields in blockchain. Top security researchers earn millions through bug bounties and audit contests.</p>",
+			"bug_bounties": {
+				"title": "Bug Bounty Hunting",
+				"content": "<p><strong>Immunefi</strong> is the largest Web3 bug bounty platform with over $150M in bounties paid. Top payouts include:</p><ul><li>Wormhole: $10M for a critical vulnerability</li><li>Aurora: $6M bounty paid</li><li>Polygon: $2M for a consensus bug</li></ul><p><strong>Getting Started:</strong></p><ol><li>Learn Solidity and common vulnerability patterns</li><li>Study past exploits and audit reports</li><li>Start with smaller protocols to build experience</li><li>Document your findings clearly for maximum payout</li></ol>"
+			},
+			"audit_contests": {
+				"title": "Audit Contests",
+				"content": "<p>Competitive auditing platforms let you compete with other auditors to find bugs:</p><p><strong>Code4rena:</strong> Community-driven audit contests with prize pools up to $1M. Results are public, building your reputation.</p><p><strong>Sherlock:</strong> Combines auditing with insurance coverage. Auditors stake tokens backing their work.</p><p><strong>CodeHawks (Cyfrin):</strong> Educational focus with structured learning paths alongside contests.</p><p><strong>Tips for Success:</strong></p><ul><li>Focus on understanding the protocol's business logic first</li><li>Look for edge cases and invariants that can be broken</li><li>Write clear, reproducible proof-of-concepts</li><li>Collaborate and learn from top auditors' reports</li></ul>"
+			},
+			"security_career": {
+				"title": "Building a Security Career",
+				"content": "<p><strong>Career Paths:</strong></p><ul><li><strong>Independent Auditor:</strong> Freelance, high earning potential, flexible schedule</li><li><strong>Audit Firm:</strong> Structured environment, steady work, learn from peers</li><li><strong>Protocol Security:</strong> In-house security at major protocols</li><li><strong>Security Tooling:</strong> Building detection and monitoring tools</li></ul><p><strong>Skill Development:</strong></p><ul><li>Master Solidity and EVM internals</li><li>Learn fuzzing and formal verification basics</li><li>Study economics and mechanism design</li><li>Build a public track record through contests</li></ul>"
+			}
+		},
+
+		"tools_deep_dive": {
+			"title": "Security Tools Deep Dive",
+			"content": "<p>The right tools can dramatically improve your security posture, whether you're a user, developer, or auditor.</p>",
+			"static_analysis": {
+				"title": "Static Analysis Tools",
+				"content": "<p><strong>Slither (Trail of Bits):</strong> The most widely used Solidity static analyzer. Detects common vulnerabilities, optimizations, and code quality issues. Free and open source.</p><p><strong>MythX:</strong> Commercial tool using symbolic execution and SMT solvers for deeper analysis. Can find bugs that static analysis misses.</p><p><strong>Aderyn:</strong> Newer tool focused on speed and integration with modern development workflows.</p><p><strong>Usage:</strong> Run static analysis on every commit. Integrate into CI/CD pipelines. Don't ignore warnings - investigate each one.</p>"
+			},
+			"monitoring": {
+				"title": "Real-Time Monitoring",
+				"content": "<p><strong>Forta:</strong> Decentralized detection network with community-built bots monitoring for threats. Covers exploit detection, governance attacks, and unusual activity.</p><p><strong>OpenZeppelin Defender:</strong> Operations platform for secure contract management. Includes automated transaction execution, upgrades, and monitoring.</p><p><strong>What to Monitor:</strong></p><ul><li>Large value transfers</li><li>Unusual function calls</li><li>Governance proposals</li><li>Oracle price deviations</li><li>Approval changes</li></ul>"
+			},
+			"transaction_analysis": {
+				"title": "Transaction Analysis",
+				"content": "<p>When something goes wrong, you need to understand what happened:</p><p><strong>Phalcon (BlockSec):</strong> Transaction explorer with call tracing, fund flow analysis, and exploit detection. Essential for post-mortem analysis.</p><p><strong>Tx Tracer (OpenChain):</strong> Free transaction tracer with calldata decoding. Great for understanding complex transactions.</p><p><strong>Tenderly:</strong> Transaction simulation and debugging platform. Use it to test transactions before sending or debug failed ones.</p>"
+			}
+		}
+	},
+
+	"glossary": {
+		"reentrancy": {
+			"term": "Reentrancy",
+			"definition": "A vulnerability where a contract makes an external call before updating its state, allowing the called contract to call back and repeat the action before the first call completes."
+		},
+		"approval": {
+			"term": "Token Approval",
+			"definition": "Permission granted to a smart contract to spend tokens on your behalf. Unlimited approvals allow spending any amount of that token forever unless revoked."
+		},
+		"front_running": {
+			"term": "Front-Running",
+			"definition": "When someone observes a pending transaction and submits their own transaction with higher gas to execute before it, profiting from the price movement the original transaction would cause."
+		},
+		"oracle_manipulation": {
+			"term": "Oracle Manipulation",
+			"definition": "Artificially moving the price reported by an oracle (price feed) to exploit protocols that rely on that price for liquidations, swaps, or lending."
+		},
+		"private_key": {
+			"term": "Private Key",
+			"definition": "The secret cryptographic key that controls access to a blockchain address. Anyone with the private key has full control over the associated funds."
+		},
+		"phishing": {
+			"term": "Phishing",
+			"definition": "Fraudulent attempts to steal credentials or trick users into signing malicious transactions, typically through fake websites or impersonation."
+		},
+		"bug_bounty": {
+			"term": "Bug Bounty",
+			"definition": "A reward program where protocols pay security researchers for responsibly disclosing vulnerabilities before they can be exploited."
+		},
+		"formal_verification": {
+			"term": "Formal Verification",
+			"definition": "Using mathematical proofs to verify that code behaves exactly as specified, providing the highest level of assurance that no bugs exist in the verified properties."
+		},
+		"honeypot": {
+			"term": "Honeypot",
+			"definition": "A malicious token or contract designed to let you buy in but prevent you from selling, trapping your funds permanently."
+		},
+		"rugpull": {
+			"term": "Rug Pull",
+			"definition": "When developers abandon a project after extracting user funds, typically by draining liquidity pools or exploiting admin functions."
+		}
+	}
+}

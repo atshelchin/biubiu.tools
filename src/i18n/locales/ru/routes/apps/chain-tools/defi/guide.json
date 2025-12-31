@@ -1,345 +1,170 @@
 {
-	"meta": {
-		"title": "DeFi Complete Guide - Master Decentralized Finance",
-		"description": "Comprehensive guide to DeFi: Learn what DeFi is, explore core protocols, understand risks and opportunities. Includes 200+ DeFi tools and protocols."
-	},
 	"title": "DeFi Complete Guide",
-	"subtitle": "Master Decentralized Finance from Beginner to Expert",
-	"intro": "DeFi (Decentralized Finance) represents a paradigm shift in financial services. This comprehensive guide will help you understand, navigate, and master the DeFi ecosystem.",
+	"subtitle": "Master Decentralized Finance from Basics to Advanced Strategies",
 
-	"navigation": {
-		"fundamentals": "Fundamentals",
-		"ecosystem": "Ecosystem",
-		"learning_path": "Learning Path",
-		"glossary": "Glossary",
-		"quiz": "Quiz",
-		"progress": "My Progress"
-	},
-
-	"stats": {
-		"tools_count": "{count} DeFi Tools",
-		"sub_categories": "{count} Sub-categories",
-		"learning_phases": "{count} Learning Phases",
-		"quiz_questions": "{count} Quiz Questions"
-	},
-
-	"fundamentals": {
-		"title": "DeFi Fundamentals",
-		"description": "Build a solid foundation of DeFi knowledge",
-		"section1": {
-			"title": "What is DeFi?",
-			"content": "DeFi, short for Decentralized Finance, refers to financial services built on blockchain technology that operate without traditional intermediaries like banks. Instead of relying on centralized institutions, DeFi uses smart contracts - self-executing code on the blockchain - to automate financial transactions.\n\nKey characteristics of DeFi include:\n- **Permissionless**: Anyone with an internet connection can access DeFi services\n- **Transparent**: All transactions are recorded on a public blockchain\n- **Non-custodial**: Users maintain control of their own assets\n- **Composable**: DeFi protocols can be combined like building blocks"
+	"sections": {
+		"intro": {
+			"title": "Introduction to DeFi",
+			"content": "<p>DeFi (Decentralized Finance) represents one of the most transformative innovations in financial history. Unlike traditional finance, where banks and institutions control your money, DeFi puts you in complete control through smart contracts on the blockchain.</p><p>In this comprehensive guide, you'll learn not just what DeFi is, but how it works, how to participate safely, and most importantly—how people actually make money in DeFi. We'll cover real examples with verifiable on-chain evidence, from basic swaps to advanced strategies like flash loan arbitrage.</p>"
 		},
-		"section2": {
-			"title": "DeFi vs Traditional Finance",
-			"content": "| Aspect | Traditional Finance | DeFi |\n|--------|--------------------|----- |\n| Access | Requires bank account, ID | Only needs a wallet |\n| Hours | Business hours | 24/7/365 |\n| Speed | Days for settlement | Minutes to seconds |\n| Control | Banks hold your funds | You control your keys |\n| Transparency | Opaque | Fully transparent |\n| Innovation | Slow, regulated | Rapid, experimental |"
+		"why_defi": {
+			"title": "Why DeFi Matters",
+			"content": "<p>To understand why DeFi is revolutionary, you need to understand what's broken in traditional finance. When you deposit money in a bank, you're essentially giving them control of your funds. They decide who can have an account, what interest rates you earn (usually near zero), and whether your transaction is approved.</p>",
+			"vs_tradfi": {
+				"title": "DeFi vs Traditional Finance",
+				"content": "<p><strong>Access:</strong> Traditional finance requires ID verification, credit checks, and bank accounts. DeFi only needs an internet connection and a wallet—anyone in the world can participate.</p><p><strong>Operating Hours:</strong> Banks close on weekends and holidays. DeFi operates 24/7/365, including during market crashes when traditional markets halt trading.</p><p><strong>Transparency:</strong> You can't see what your bank does with your deposits. Every DeFi transaction is recorded on a public blockchain—you can verify exactly where your funds are.</p><p><strong>Speed:</strong> International wire transfers take 3-5 business days. DeFi transfers settle in seconds to minutes.</p><p><strong>Yield:</strong> Savings accounts pay 0.01-4% APY. DeFi lending protocols routinely offer 3-15% APY on stablecoins.</p>"
+			},
+			"opportunities": {
+				"title": "Earning Opportunities in DeFi",
+				"content": "<p>DeFi creates earning opportunities that simply don't exist in traditional finance:</p><ul><li><strong>Liquidity Provision:</strong> Earn trading fees by providing liquidity to DEXs</li><li><strong>Lending:</strong> Earn interest by lending your crypto assets</li><li><strong>Yield Farming:</strong> Maximize returns by strategically moving assets between protocols</li><li><strong>Arbitrage:</strong> Profit from price differences between platforms</li><li><strong>Liquidations:</strong> Earn rewards by helping maintain protocol health</li></ul>"
+			}
 		},
-		"section3": {
-			"title": "Core DeFi Primitives",
-			"content": "DeFi is built on several fundamental building blocks:\n\n**1. Decentralized Exchanges (DEXs)**\nPlatforms for swapping tokens without intermediaries. Examples: Uniswap, Curve\n\n**2. Lending Protocols**\nDeposit assets to earn interest, or borrow against collateral. Examples: Aave, Compound\n\n**3. Stablecoins**\nCryptocurrencies designed to maintain a stable value. Examples: USDC, DAI\n\n**4. Yield Aggregators**\nAutomatically optimize yields across protocols. Examples: Yearn, Convex\n\n**5. Derivatives**\nTrade futures, options, and perpetuals on-chain. Examples: GMX, dYdX"
+		"core_concepts": {
+			"title": "Core DeFi Concepts",
+			"content": "<p>Before diving into strategies, you need to understand the fundamental building blocks of DeFi. These concepts will appear repeatedly as we explore more advanced topics.</p>",
+			"liquidity": {
+				"title": "Liquidity and Liquidity Pools",
+				"content": "<p>Liquidity is the lifeblood of DeFi. A liquid market means you can buy or sell an asset quickly without significantly affecting its price.</p><p>In traditional exchanges, liquidity comes from order books—buyers and sellers posting their desired prices. DeFi introduced a revolutionary alternative: <strong>Automated Market Makers (AMMs)</strong>.</p><p>Instead of matching buyers and sellers, AMMs use liquidity pools—smart contracts holding pairs of tokens. Anyone can become a liquidity provider (LP) by depositing tokens, earning a share of trading fees in return.</p>"
+			},
+			"amm": {
+				"title": "How AMMs Work",
+				"content": "<p>The most common AMM formula is the constant product: <code>x × y = k</code></p><p>Where x and y are the quantities of two tokens in the pool, and k is a constant. When someone trades, they add one token and remove another, but k must remain unchanged (minus fees).</p><p><strong>Example:</strong> A pool has 10 ETH and 30,000 USDC (k = 300,000). Someone wants to buy 1 ETH. The pool must maintain k = 300,000, so after the trade: 9 ETH × 33,333 USDC = 300,000. The trader pays ~3,333 USDC for 1 ETH.</p><p>This is why larger trades have worse prices (more slippage)—they move the price curve more.</p>"
+			},
+			"lending": {
+				"title": "Lending and Borrowing",
+				"content": "<p>DeFi lending works differently than traditional loans. Instead of credit checks, DeFi uses <strong>overcollateralization</strong>—you must deposit more value than you borrow.</p><p><strong>Why would anyone take an overcollateralized loan?</strong></p><ul><li>Access liquidity without selling your crypto (avoiding capital gains tax)</li><li>Leverage your position (borrow stablecoins to buy more crypto)</li><li>Short-selling strategies</li><li>Arbitrage opportunities</li></ul><p>The ratio of collateral to debt is called the <strong>Loan-to-Value (LTV)</strong> ratio. If the collateral value drops below a threshold, the position gets <strong>liquidated</strong>—partially sold to repay the debt.</p>"
+			},
+			"stablecoins": {
+				"title": "Stablecoins",
+				"content": "<p>Stablecoins are cryptocurrencies designed to maintain a stable value, typically $1 USD. They're essential for DeFi because they provide a stable unit of account without leaving the crypto ecosystem.</p><p><strong>Types of Stablecoins:</strong></p><ul><li><strong>Fiat-backed (USDC, USDT):</strong> Each token is backed by $1 in a bank account</li><li><strong>Crypto-collateralized (DAI):</strong> Backed by overcollateralized crypto deposits</li><li><strong>Algorithmic (FRAX):</strong> Use algorithms to maintain the peg</li></ul><p>Most DeFi yield opportunities involve stablecoins, as they let you earn returns without crypto price volatility.</p>"
+			}
 		},
-		"section4": {
-			"title": "DeFi Risks",
-			"content": "Understanding risks is crucial before participating in DeFi:\n\n**Smart Contract Risk**\nBugs or vulnerabilities in code can lead to loss of funds. Even audited protocols have been exploited.\n\n**Economic Risk**\nToken price volatility can trigger liquidations or impermanent loss.\n\n**Oracle Risk**\nPrice feeds can be manipulated, leading to protocol exploits.\n\n**Regulatory Risk**\nDeFi operates in a regulatory grey area that may change.\n\n**User Error**\nSending funds to wrong addresses or approving malicious contracts."
+		"getting_started": {
+			"title": "Getting Started with DeFi",
+			"content": "<p>Now that you understand the concepts, let's walk through your first DeFi interactions. Start small—these steps are about learning, not making money.</p>",
+			"first_swap": {
+				"title": "Your First Swap",
+				"content": "<p><strong>Step 1:</strong> Set up a wallet (MetaMask recommended for beginners)</p><p><strong>Step 2:</strong> Get some ETH for gas fees (buy on an exchange, then withdraw to your wallet)</p><p><strong>Step 3:</strong> Visit a DEX like Uniswap</p><p><strong>Step 4:</strong> Connect your wallet and approve the connection</p><p><strong>Step 5:</strong> Select the tokens you want to swap</p><p><strong>Step 6:</strong> Review the swap details (slippage, gas fees, output amount)</p><p><strong>Step 7:</strong> Confirm the transaction in your wallet</p><p><strong>Important:</strong> Always verify you're on the official website. Scammers create fake sites that steal your funds.</p>"
+			},
+			"first_deposit": {
+				"title": "Your First Lending Deposit",
+				"content": "<p>After you're comfortable with swaps, try earning yield on your assets:</p><p><strong>Step 1:</strong> Visit a lending protocol like Aave</p><p><strong>Step 2:</strong> Click 'Supply' on the asset you want to deposit</p><p><strong>Step 3:</strong> Approve the token (one-time transaction per token)</p><p><strong>Step 4:</strong> Confirm the deposit amount</p><p>You'll immediately start earning interest. The APY fluctuates based on supply and demand—when more people want to borrow, rates go up.</p>"
+			},
+			"gas_optimization": {
+				"title": "Gas Optimization Tips",
+				"content": "<p>Gas fees are the cost of using the blockchain. They can range from $1 to $100+ on Ethereum during congestion.</p><ul><li><strong>Time your transactions:</strong> Gas is cheapest on weekends and late at night (US time)</li><li><strong>Use L2s:</strong> Layer 2 networks like Arbitrum and Optimism have fees 10-100x lower</li><li><strong>Batch transactions:</strong> Some protocols let you combine multiple actions</li><li><strong>Set appropriate gas limits:</strong> Too low = failed transaction (you still pay). Too high = wasted money</li></ul>"
+			}
 		},
-		"section5": {
-			"title": "Getting Started Safely",
-			"content": "Before diving into DeFi, follow these safety practices:\n\n1. **Start Small**: Begin with small amounts you can afford to lose\n2. **Use Hardware Wallets**: Store significant funds in hardware wallets\n3. **Verify Contracts**: Always verify you're interacting with official contracts\n4. **Understand Gas**: Learn how gas fees work on your chosen network\n5. **Do Your Research**: Never invest in projects you don't understand\n6. **Revoke Approvals**: Regularly revoke unused token approvals"
-		}
-	},
-
-	"ecosystem": {
-		"title": "DeFi Ecosystem Map",
-		"description": "Explore the different sectors and how they interconnect",
-		"layers": {
-			"application": "Application Layer",
-			"protocol": "Protocol Layer",
-			"infrastructure": "Infrastructure",
-			"base": "Base Layer (L1/L2)"
+		"earning": {
+			"title": "Earning in DeFi",
+			"content": "<p>This is what you came for. Let's explore the main ways people actually make money in DeFi, from beginner strategies to advanced techniques.</p>",
+			"yield_farming": {
+				"title": "Yield Farming",
+				"content": "<p>Yield farming means strategically deploying your assets to maximize returns. The simplest form is depositing assets in lending protocols, but it can get much more complex.</p><p><strong>Basic Strategy (Stablecoin Yield):</strong></p><ol><li>Deposit USDC into Aave → Earn 3-5% APY</li><li>Receive aUSDC as your deposit receipt</li><li>Stake aUSDC in additional protocols for extra rewards</li></ol><p><strong>Intermediate Strategy (Curve LP):</strong></p><ol><li>Provide stablecoin liquidity to Curve</li><li>Earn trading fees + CRV rewards</li><li>Stake your LP tokens in Convex for boosted yields</li><li>Combined APY: 5-15%</li></ol><p>Yield aggregators like Yearn automate these strategies, automatically compounding your returns.</p>"
+			},
+			"liquidity_providing": {
+				"title": "Providing Liquidity",
+				"content": "<p>As a liquidity provider, you earn a share of trading fees. On Uniswap V3, LPs earn 0.3% of every trade in their price range.</p><p><strong>The catch:</strong> Impermanent Loss (IL). When prices change, you end up with more of the token that dropped in value. For volatile pairs, IL can exceed fee earnings.</p><p><strong>Minimizing IL:</strong></p><ul><li>Provide liquidity to stablecoin pairs (USDC/USDT has minimal IL)</li><li>Choose correlated pairs (ETH/stETH move together)</li><li>Use wider price ranges on V3 (more fees captured, less IL)</li></ul>"
+			},
+			"lending_interest": {
+				"title": "Lending Interest",
+				"content": "<p>The safest DeFi yield strategy: deposit assets and earn interest from borrowers.</p><p><strong>Current rates (typical ranges):</strong></p><ul><li>Stablecoins (USDC, DAI): 3-8% APY</li><li>ETH: 2-5% APY</li><li>BTC (WBTC): 1-3% APY</li></ul><p>Rates vary by platform and market conditions. During high demand for borrowing (bull markets), rates spike. During quiet periods, they drop.</p><p><strong>Risk factors:</strong></p><ul><li>Smart contract risk (protocol gets hacked)</li><li>Liquidation cascade risk (extreme market moves)</li><li>Platform solvency (centralized elements fail)</li></ul>"
+			}
 		},
-		"dex": {
-			"label": "DEX (Decentralized Exchanges)",
-			"description": "Platforms for swapping tokens without intermediaries using automated market makers (AMMs) or order books."
+		"advanced": {
+			"title": "Advanced Strategies",
+			"content": "<p>These strategies require deeper understanding and often coding skills. They also carry higher risks. Study them to understand how DeFi really works, but don't attempt without thorough preparation.</p>",
+			"flash_loans": {
+				"title": "Flash Loans",
+				"content": "<p>Flash loans are one of DeFi's most mind-bending innovations. You can borrow millions of dollars with <strong>zero collateral</strong>—as long as you repay it in the same transaction.</p><p>How is this possible? The blockchain transaction either completes fully or reverts entirely. If you can't repay, it's like the loan never happened.</p><p><strong>Common flash loan uses:</strong></p><ul><li><strong>Arbitrage:</strong> Borrow → Buy cheap on Exchange A → Sell high on Exchange B → Repay + keep profit</li><li><strong>Collateral swaps:</strong> Swap your collateral type without closing your position</li><li><strong>Self-liquidation:</strong> Close a risky position without getting liquidation penalties</li></ul>",
+				"case_bzx": {
+					"title": "The bZx Flash Loan Attack (2020)",
+					"description": "One of DeFi's most famous flash loan exploits. The attacker borrowed 10,000 ETH via flash loan, manipulated Uniswap prices through a large trade, exploited bZx's oracle which read Uniswap prices, then profited from the artificial price difference. All in one transaction, generating ~$350,000 profit. This incident led to major improvements in oracle security across DeFi."
+				}
+			},
+			"arbitrage": {
+				"title": "DEX Arbitrage",
+				"content": "<p>Arbitrage is profiting from price differences between markets. In DeFi, prices on different DEXs can diverge, creating opportunities.</p><p><strong>Simple arbitrage example:</strong></p><ul><li>ETH is $2,000 on Uniswap</li><li>ETH is $2,010 on SushiSwap</li><li>Buy on Uniswap, sell on SushiSwap, profit $10 per ETH (minus gas)</li></ul><p><strong>Reality check:</strong> Pure arbitrage is extremely competitive. Professional arbitrageurs use sophisticated bots and pay high gas fees to front-run competitors. For retail traders, the opportunities are often too small to be profitable after gas.</p><p>Most profitable for retail: Cross-chain arbitrage (less competition) and longer-term price inefficiencies rather than instant arbitrage.</p>",
+				"case_dex": {
+					"title": "DEX Arbitrage in Practice",
+					"description": "Professional arbitrage bots monitor price feeds across hundreds of DEXs and execute trades in milliseconds. The most successful ones run at near-zero latency and often pay millions in gas fees to win competitive auctions. Most retail attempts at pure arbitrage fail due to competition and gas costs."
+				}
+			},
+			"liquidations": {
+				"title": "Liquidation Hunting",
+				"content": "<p>When borrowers' collateral falls below required levels, their positions can be liquidated. Liquidators repay part of the debt and receive collateral at a discount (typically 5-10%).</p><p><strong>How it works:</strong></p><ol><li>Monitor lending protocols for undercollateralized positions</li><li>When a position's health factor drops below 1.0, it's liquidatable</li><li>Call the liquidation function, repaying debt with your funds</li><li>Receive discounted collateral (your profit)</li></ol><p>This is competitive—most liquidations are captured by sophisticated bots. But during extreme market crashes, opportunities arise faster than bots can process them.</p>"
+			},
+			"mev": {
+				"title": "MEV (Maximal Extractable Value)",
+				"content": "<p>MEV refers to the value that can be extracted by reordering, inserting, or censoring transactions within a block. This is the dark art of DeFi—highly technical but important to understand.</p><p><strong>Types of MEV:</strong></p><ul><li><strong>Front-running:</strong> Seeing a large buy order, buying first, then selling after</li><li><strong>Back-running:</strong> Placing a trade immediately after a large order</li><li><strong>Sandwich attacks:</strong> Front-run + back-run combined</li></ul><p>MEV extraction requires deep technical knowledge and is dominated by specialized firms. As a regular user, your goal is to <strong>avoid being extracted from</strong> by using MEV-protected services.</p>"
+			}
 		},
-		"lending": {
-			"label": "Lending & Borrowing",
-			"description": "Protocols that enable users to lend assets for yield or borrow against collateral."
-		},
-		"stablecoin": {
-			"label": "Stablecoins",
-			"description": "Cryptocurrencies designed to maintain stable value, typically pegged to USD."
-		},
-		"yield": {
-			"label": "Yield Aggregators",
-			"description": "Protocols that automatically optimize yield farming strategies across DeFi."
-		},
-		"derivatives": {
-			"label": "Derivatives & Perps",
-			"description": "On-chain trading of futures, perpetuals, and options."
-		},
-		"aggregator": {
-			"label": "Aggregators & Dashboards",
-			"description": "Tools that aggregate data or liquidity from multiple sources."
-		},
-		"view_all": "View all {count} tools"
-	},
-
-	"core": {
-		"title": "Core Projects",
-		"description": "Essential protocols you should understand",
-		"tier1": "Must Know",
-		"tier2": "Should Know",
-		"tier3": "Nice to Know",
-		"uniswap": "Pioneer of AMM-based DEX. Introduced the x*y=k formula. Largest DEX by volume.",
-		"aave": "Leading lending protocol. Introduced flash loans. Multi-chain presence.",
-		"makerdao": "Creator of DAI stablecoin. Pioneered CDP model. Foundation of DeFi.",
-		"curve": "Optimized for stablecoin trading. Low slippage. Central to yield farming.",
-		"compound": "Early lending protocol. Introduced cTokens. Inspired many forks.",
-		"yearn": "Yield aggregator pioneer. Automated strategies. Key ecosystem player.",
-		"1inch": "Leading DEX aggregator. Optimal routing. Multi-chain support.",
-		"gmx": "Decentralized perpetuals. Real yield model. Growing ecosystem.",
-		"convex": "Curve yield optimizer. Major CRV holder. Curve Wars participant.",
-		"pendle": "Yield tokenization. Fixed/variable yields. Innovative mechanism."
-	},
-
-	"learning": {
-		"title": "Learning Path",
-		"description": "Structured path to DeFi mastery",
-		"your_progress": "Your Progress",
-		"estimated_time": "Estimated: {days} days",
-		"phase1": {
-			"title": "Phase 1: Foundation",
-			"description": "Understand core concepts and try your first DeFi interactions",
-			"task1": "Read: What is DeFi (Fundamentals section)",
-			"task2": "Read: DeFi Ecosystem overview",
-			"task3": "Practice: Complete a swap on Uniswap",
-			"task4": "Research: Understand Uniswap's AMM mechanism",
-			"task5": "Research: Explore Aave's lending interface",
-			"task6": "Quiz: Pass the beginner quiz (6/10 or higher)"
-		},
-		"phase2": {
-			"title": "Phase 2: Deep Dive",
-			"description": "Master each DeFi sector and understand protocol relationships",
-			"task1": "Compare: Uniswap V2 vs V3 mechanism differences",
-			"task2": "Research: Curve's StableSwap algorithm",
-			"task3": "Research: How 1inch aggregation works",
-			"task4": "Compare: Aave vs Compound differences",
-			"task5": "Read: Understanding liquidation mechanics",
-			"task6": "Research: MakerDAO CDP mechanism",
-			"task7": "Quiz: Pass the intermediate quiz (10/15 or higher)"
-		},
-		"phase3": {
-			"title": "Phase 3: Advanced Topics",
-			"description": "Explore complex strategies and emerging sectors",
-			"task1": "Research: Yearn vault strategies",
-			"task2": "Research: Convex and the Curve Wars",
-			"task3": "Research: GMX perpetual mechanics",
-			"task4": "Read: DeFi security and audit basics",
-			"task5": "Read: Cross-chain DeFi considerations"
-		},
-		"phase4": {
-			"title": "Phase 4: Mastery",
-			"description": "Complete coverage and ongoing learning",
-			"task1": "Browse and categorize all DeFi tools",
-			"task2": "Practice: Create multi-step DeFi strategies",
-			"task3": "Quiz: Pass the expert quiz (15/20 or higher)"
+		"risks": {
+			"title": "DeFi Risks and Safety",
+			"content": "<p>DeFi offers unprecedented opportunities, but also unprecedented risks. Understanding these risks is essential for long-term success.</p>",
+			"smart_contract": {
+				"title": "Smart Contract Risk",
+				"content": "<p>Every DeFi protocol is only as secure as its smart contracts. Even audited protocols can have vulnerabilities.</p><p><strong>Major DeFi hacks:</strong></p><ul><li>Ronin Bridge: $624M (2022)</li><li>Wormhole: $326M (2022)</li><li>Nomad Bridge: $190M (2022)</li></ul><p><strong>Mitigation:</strong></p><ul><li>Use established protocols with long track records</li><li>Diversify across multiple protocols</li><li>Start with small amounts</li><li>Check for audits (but don't rely solely on them)</li></ul>"
+			},
+			"impermanent_loss": {
+				"title": "Impermanent Loss",
+				"content": "<p>Impermanent Loss affects liquidity providers when token prices change. The name is misleading—it becomes permanent when you withdraw.</p><p><strong>IL Formula for 50/50 pools:</strong></p><p>IL = 2 × √(price_ratio) / (1 + price_ratio) - 1</p><p><strong>IL by price change:</strong></p><ul><li>1.5x price change: 2.0% IL</li><li>2x price change: 5.7% IL</li><li>3x price change: 13.4% IL</li><li>5x price change: 25.5% IL</li></ul><p>IL is offset by trading fees. For high-volume pairs, fees often exceed IL. For low-volume or volatile pairs, IL usually wins.</p>"
+			},
+			"rug_pulls": {
+				"title": "Rug Pulls and Scams",
+				"content": "<p>A rug pull occurs when project creators drain user funds and disappear. This is common in new, unvetted projects.</p><p><strong>Warning signs:</strong></p><ul><li>Anonymous team</li><li>No audit</li><li>Unrealistic APYs (1000%+ is almost always unsustainable)</li><li>Locked liquidity that can be unlocked by team</li><li>Heavy social media promotion, light on technical details</li></ul>"
+			},
+			"dyor": {
+				"title": "DYOR (Do Your Own Research)",
+				"content": "<p>Before using any DeFi protocol, verify:</p><ol><li><strong>Team:</strong> Are they public? What's their track record?</li><li><strong>Audits:</strong> Has the code been audited? By whom?</li><li><strong>TVL:</strong> How much value is locked? More TVL = more confidence</li><li><strong>Time:</strong> How long has the protocol been running without issues?</li><li><strong>Code:</strong> Is it open source? Verified on Etherscan?</li></ol><p>Use DefiLlama to check TVL and protocol stats. Use Etherscan to verify contracts. Never trust, always verify.</p>"
+			}
 		}
 	},
 
 	"glossary": {
-		"title": "DeFi Glossary",
-		"description": "Key terms and concepts",
-		"search_placeholder": "Search terms...",
 		"amm": {
 			"term": "AMM (Automated Market Maker)",
-			"definition": "A type of decentralized exchange that uses mathematical formulas to price assets instead of order books. Liquidity providers deposit tokens into pools, and traders swap against these pools. The most common formula is x*y=k (constant product)."
+			"definition": "A decentralized exchange mechanism using mathematical formulas instead of order books. LPs provide liquidity, and prices are determined algorithmically."
 		},
 		"tvl": {
 			"term": "TVL (Total Value Locked)",
-			"definition": "The total value of crypto assets deposited in a DeFi protocol, measured in USD. TVL is a key metric for evaluating protocol adoption and trust. Higher TVL generally indicates more user confidence."
+			"definition": "The total value of crypto assets deposited in a DeFi protocol. A key metric for measuring protocol adoption and trust."
 		},
 		"liquidity_pool": {
 			"term": "Liquidity Pool",
-			"definition": "A collection of funds locked in a smart contract, used to facilitate trading on DEXs. Liquidity providers deposit equal values of two tokens and earn trading fees in return."
+			"definition": "A smart contract holding pairs of tokens that enables trading. Liquidity providers deposit tokens and earn trading fees."
 		},
 		"impermanent_loss": {
 			"term": "Impermanent Loss",
-			"definition": "The difference in value between holding tokens in a liquidity pool vs simply holding them. Occurs when token prices change after depositing. Called 'impermanent' because the loss is only realized upon withdrawal."
+			"definition": "The loss LPs experience when token prices change compared to simply holding. Called 'impermanent' because it's only realized upon withdrawal."
 		},
 		"flash_loan": {
 			"term": "Flash Loan",
-			"definition": "An uncollateralized loan that must be borrowed and repaid within the same blockchain transaction. If not repaid, the entire transaction reverts. Used for arbitrage, liquidations, and collateral swaps."
+			"definition": "An uncollateralized loan that must be repaid within the same transaction. Used for arbitrage, collateral swaps, and liquidations."
 		},
 		"collateral": {
 			"term": "Collateral",
-			"definition": "Assets deposited as security for a loan. In DeFi lending, borrowers must over-collateralize (deposit more value than they borrow) to account for price volatility."
+			"definition": "Assets deposited as security for a loan. DeFi loans are overcollateralized—you deposit more value than you borrow."
 		},
 		"liquidation": {
 			"term": "Liquidation",
-			"definition": "The forced sale of collateral when a loan becomes undercollateralized. Liquidators repay part of the debt and receive the collateral at a discount as incentive."
-		},
-		"health_factor": {
-			"term": "Health Factor",
-			"definition": "A metric in lending protocols (especially Aave) that represents the safety of a borrowing position. Below 1.0 means the position can be liquidated. Higher values indicate safer positions."
+			"definition": "The forced sale of collateral when a loan becomes undercollateralized. Liquidators receive a discount as incentive."
 		},
 		"apy": {
 			"term": "APY (Annual Percentage Yield)",
-			"definition": "The real rate of return on an investment over a year, accounting for compound interest. APY = (1 + r/n)^n - 1, where r is the rate and n is compounding periods."
-		},
-		"apr": {
-			"term": "APR (Annual Percentage Rate)",
-			"definition": "The yearly interest rate without accounting for compounding. Simpler than APY but can be misleading for frequently compounding returns."
+			"definition": "The real rate of return including compound interest. Higher than APR when interest compounds frequently."
 		},
 		"slippage": {
 			"term": "Slippage",
-			"definition": "The difference between expected and actual execution price of a trade. Larger trades and lower liquidity result in higher slippage. DEX aggregators help minimize slippage."
+			"definition": "The difference between expected and actual trade execution price. Larger trades and lower liquidity cause more slippage."
 		},
 		"yield_farming": {
 			"term": "Yield Farming",
-			"definition": "The practice of moving assets between protocols to maximize returns. Often involves providing liquidity, staking tokens, and claiming rewards. Can be automated via yield aggregators."
+			"definition": "Strategically moving assets between protocols to maximize returns. Can involve lending, LP provision, and staking."
 		},
-		"governance_token": {
-			"term": "Governance Token",
-			"definition": "A token that grants voting rights in protocol decisions. Holders can propose and vote on changes to protocol parameters, treasury allocation, and upgrades."
-		},
-		"cdp": {
-			"term": "CDP (Collateralized Debt Position)",
-			"definition": "A mechanism used by MakerDAO where users lock collateral to mint DAI stablecoins. The collateral ratio must stay above a minimum threshold to avoid liquidation."
-		},
-		"oracle": {
-			"term": "Oracle",
-			"definition": "A service that provides external data to smart contracts. Price oracles are crucial for DeFi, enabling protocols to know asset values. Chainlink is the dominant oracle provider."
+		"mev": {
+			"term": "MEV (Maximal Extractable Value)",
+			"definition": "Value extracted by reordering, inserting, or censoring transactions. Includes front-running, back-running, and sandwich attacks."
 		}
-	},
-
-	"quiz": {
-		"title": "DeFi Mastery Quiz",
-		"description": "Test your DeFi knowledge",
-		"select_difficulty": "Select Difficulty",
-		"beginner": "Beginner",
-		"intermediate": "Intermediate",
-		"expert": "Expert",
-		"questions_count": "{count} questions",
-		"estimated_time": "~{minutes} minutes",
-		"start_quiz": "Start Quiz",
-		"next": "Next",
-		"previous": "Previous",
-		"skip": "Skip",
-		"submit": "Submit",
-		"show_hint": "Show Hint",
-		"your_answer": "Your Answer",
-		"correct_answer": "Correct Answer",
-		"explanation": "Explanation",
-		"related_tools": "Related Tools",
-		"results": {
-			"title": "Quiz Complete!",
-			"score": "Your Score",
-			"achievement": "Achievement",
-			"breakdown": "Score Breakdown",
-			"weak_areas": "Areas to Improve",
-			"recommendations": "We recommend reviewing these topics:",
-			"retry": "Try Again",
-			"share": "Share Result",
-			"view_answers": "View All Answers"
-		},
-		"achievement": {
-			"master": "DeFi Master",
-			"advanced": "DeFi Advanced",
-			"intermediate": "DeFi Learner",
-			"beginner": "DeFi Beginner"
-		},
-		"q1": {
-			"question": "What does AMM stand for?",
-			"option1": "Automated Market Maker",
-			"option2": "Automatic Money Manager",
-			"option3": "Advanced Market Model",
-			"option4": "Asset Management Module",
-			"explanation": "AMM stands for Automated Market Maker. It's a type of decentralized exchange mechanism that uses mathematical formulas (like x*y=k) to price assets instead of traditional order books."
-		},
-		"q2": {
-			"question": "What does TVL measure in DeFi?",
-			"option1": "Transaction Volume Limit",
-			"option2": "Total Value Locked - assets deposited in protocols",
-			"option3": "Token Value Level",
-			"option4": "Trading Velocity Logarithm",
-			"explanation": "TVL (Total Value Locked) measures the total value of crypto assets deposited in a DeFi protocol. It's a key metric for evaluating protocol adoption and user trust."
-		},
-		"q3": {
-			"question": "Flash loans must be borrowed and repaid in the same transaction.",
-			"option1": "True",
-			"option2": "False",
-			"explanation": "True. Flash loans are unique to DeFi and must be borrowed and repaid within the same blockchain transaction. If the loan isn't repaid, the entire transaction reverts as if it never happened."
-		},
-		"q4": {
-			"question": "Curve Finance is primarily optimized for trading which type of assets?",
-			"option1": "High-volatility tokens",
-			"option2": "NFTs",
-			"option3": "Stablecoins and similar-value assets",
-			"option4": "Governance tokens",
-			"explanation": "Curve uses the StableSwap algorithm specifically designed for assets with similar values (like stablecoins or wBTC/BTC). This allows for extremely low slippage on these trades."
-		},
-		"q5": {
-			"question": "What major innovation did Uniswap V3 introduce?",
-			"option1": "Governance token UNI",
-			"option2": "Concentrated liquidity positions",
-			"option3": "Flash loans",
-			"option4": "Cross-chain swaps",
-			"explanation": "Uniswap V3 introduced concentrated liquidity, allowing LPs to provide liquidity within specific price ranges. This dramatically improves capital efficiency compared to V2's full-range liquidity."
-		},
-		"q6": {
-			"question": "Which of the following are stablecoins? (Select all that apply)",
-			"option1": "USDC",
-			"option2": "ETH",
-			"option3": "DAI",
-			"option4": "FRAX",
-			"explanation": "USDC (fiat-backed), DAI (crypto-collateralized), and FRAX (algorithmic/hybrid) are all stablecoins. ETH is the native token of Ethereum and is not a stablecoin."
-		},
-		"q7": {
-			"question": "What is the primary purpose of Convex Finance in relation to Curve?",
-			"option1": "To provide flash loans",
-			"option2": "To compete with Curve",
-			"option3": "To maximize CRV rewards and accumulate voting power",
-			"option4": "To bridge assets between chains",
-			"explanation": "Convex Finance was built to help users maximize their CRV rewards without locking tokens. It accumulates veCRV voting power, becoming a major player in the 'Curve Wars' for governance control."
-		},
-		"q8": {
-			"question": "If a token's price doubles (2x) while you're providing liquidity, approximately how much impermanent loss do you experience?",
-			"option1": "About 5.7%",
-			"option2": "About 25%",
-			"option3": "About 50%",
-			"option4": "No loss occurs",
-			"explanation": "Using the IL formula: IL = 2 * sqrt(2) / (1 + 2) - 1 ≈ -5.7%. For a 2x price change, you experience roughly 5.7% impermanent loss compared to just holding the tokens."
-		}
-	},
-
-	"progress": {
-		"title": "My Learning Progress",
-		"overall": "Overall Progress",
-		"content_progress": "Content Progress",
-		"quiz_scores": "Quiz Scores",
-		"tools_status": "Tools Status",
-		"best_score": "Best Score",
-		"not_attempted": "Not Attempted",
-		"achievements": "Achievements",
-		"next_achievement": "Next Achievement",
-		"mastered": "Mastered",
-		"learning": "Learning",
-		"bookmarked": "Bookmarked",
-		"not_viewed": "Not Viewed",
-		"export": "Export Progress",
-		"share": "Share Progress",
-		"reset": "Reset Progress"
-	},
-
-	"common": {
-		"view_tool": "View Tool",
-		"view_all": "View All",
-		"continue": "Continue",
-		"start": "Start",
-		"complete": "Complete",
-		"in_progress": "In Progress",
-		"not_started": "Not Started",
-		"back": "Back",
-		"next": "Next"
 	}
 }

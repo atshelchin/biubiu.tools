@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Arkham Intelligence - 区块链调查与实体标签",
+		"description": "使用 Arkham 的实体标签和调查工具解匿区块链。追踪钱包、资金和跨链连接。",
+		"keywords": "Arkham Intelligence, 区块链调查, 钱包追踪, 实体标签, 加密取证, 资金追踪"
+	},
+	"overview": "Arkham Intelligence 是一个区块链分析平台，通过将地址与现实世界实体关联来解匿加密交易。成立于 2020 年，Arkham 使用 AI 识别钱包所有者并跨链追踪资金。\n\n该平台维护着最大的标记地址数据库之一，识别属于交易所、机构、协议和知名个人的钱包。这使其在调查资金流向、研究巨鲸活动和理解市场走势方面非常有价值。\n\nArkham 的 Intel Exchange 允许用户使用 ARKM 代币买卖区块链情报，为钱包标签和调查数据创建了一个市场。该平台服务于需要了解加密交易背后是谁的调查人员、研究人员、记者和交易者。",
+	"features": {
+		"1": {
+			"title": "实体标签",
+			"description": "钱包所有者数据库，包括交易所、风投和巨鲸"
+		},
+		"2": {
+			"title": "资金追踪",
+			"description": "可视化工具，跟踪跨地址和链的资金流向"
+		},
+		"3": {
+			"title": "实时提醒",
+			"description": "当追踪的实体转移资金时获得通知"
+		},
+		"4": {
+			"title": "调查工具",
+			"description": "构建连接图并导出交易数据"
+		},
+		"5": {
+			"title": "Intel Exchange",
+			"description": "买卖地址情报的市场"
+		},
+		"6": {
+			"title": "多链支持",
+			"description": "跨以太坊、比特币等追踪实体"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "巨鲸追踪",
+			"description": "监控大户的资金流动和交易模式"
+		},
+		"2": {
+			"title": "黑客调查",
+			"description": "追踪被盗资金并识别攻击者"
+		},
+		"3": {
+			"title": "交易情报",
+			"description": "查看聪明钱正在买入和卖出什么"
+		},
+		"4": {
+			"title": "尽职调查",
+			"description": "交易前研究对手方钱包"
+		},
+		"5": {
+			"title": "新闻调查",
+			"description": "用可验证数据调查加密故事"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Arkham 是免费的吗？",
+			"answer": "是的，Arkham 的基本功能免费使用。高级功能和 API 访问需要 ARKM 代币。Intel Exchange 允许通过贡献情报赚取 ARKM。免费层级为大多数用户提供了足够的实用功能。"
+		},
+		"2": {
+			"question": "Arkham 如何识别钱包所有者？",
+			"answer": "Arkham 使用 AI 分析交易模式、已知地址连接、ENS 名称、社交链接和各种链上信号。他们的 Ultra 算法处理这些数据以概率方式将地址与实体关联。对于主要实体，准确性通常很高。"
+		},
+		"3": {
+			"question": "Arkham 合法吗？",
+			"answer": "是的，Arkham 分析的是任何人都可以合法访问的公共区块链数据。然而，出售个人钱包信息引发了隐私担忧。Arkham 运营在一个正在加密社区讨论的法律灰色地带。"
+		},
+		"4": {
+			"question": "什么是 ARKM 代币？",
+			"answer": "ARKM 是 Arkham 的实用代币，用于访问高级功能和参与 Intel Exchange。用户可以质押 ARKM 访问情报或通过贡献准确的地址标签来赚取。代币于 2023 年 7 月发布。"
+		},
+		"5": {
+			"question": "Arkham vs Nansen：哪个更适合追踪？",
+			"answer": "两者都很出色但侧重点不同。Arkham 擅长实体识别和调查工具。Nansen 更擅长聪明钱追踪和 NFT 分析。Arkham 更偏取证导向；Nansen 更偏交易导向。许多人两者都用。"
+		}
+	},
+	"cta": {
+		"ready": "准备调查区块链？",
+		"button": "打开 Arkham",
+		"note": "区块链情报平台"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Santiment - 加密行为分析与社交指标",
+		"description": "通过行为分析、社交情绪和开发活动理解加密市场。用于明智交易的数据驱动洞察。",
+		"keywords": "Santiment, 加密情绪, 社交指标, 开发活动, 行为分析, 市场情报"
+	},
+	"overview": "Santiment 是一个行为分析平台，结合链上、社交和开发数据，为加密市场提供独特的洞察。成立于 2016 年，通过 ICO 融资，Santiment 开发了捕捉市场心理的专有指标。\n\n该平台以其社交情绪分析而闻名，追踪 Twitter、Telegram、Reddit 和其他平台上的提及、情绪和热门话题。这些社交数据与链上指标相结合，有助于识别市场顶部、底部和转折点。\n\nSantiment 还独特地追踪加密项目的开发活动，衡量 GitHub 提交和开发者参与度。这提供了对哪些项目正在积极建设与哪些开发势头下降的洞察。",
+	"features": {
+		"1": {
+			"title": "社交情绪",
+			"description": "追踪跨平台的社交提及和情绪"
+		},
+		"2": {
+			"title": "开发活动",
+			"description": "衡量 GitHub 提交和开发者参与度"
+		},
+		"3": {
+			"title": "链上指标",
+			"description": "持有者行为、交易所流量和网络活动"
+		},
+		"4": {
+			"title": "Sanbase Pro",
+			"description": "高级分析和自定义提醒"
+		},
+		"5": {
+			"title": "Santiment Queries",
+			"description": "类似 SQL 的界面用于自定义数据探索"
+		},
+		"6": {
+			"title": "新兴趋势",
+			"description": "在热门话题成为主流前识别它们"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "情绪分析",
+			"description": "通过社交数据衡量市场情绪"
+		},
+		"2": {
+			"title": "项目评估",
+			"description": "评估开发活动和承诺"
+		},
+		"3": {
+			"title": "趋势发现",
+			"description": "发现新兴叙事和热门话题"
+		},
+		"4": {
+			"title": "市场择时",
+			"description": "识别情绪极端以进行逆向操作"
+		},
+		"5": {
+			"title": "研究",
+			"description": "深入研究项目基本面和行为"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Santiment 是免费的吗？",
+			"answer": "Santiment 提供免费层级，包含基本指标。Pro 计划从 $49/月起，提供高级功能。SAN 代币可以质押获得折扣。免费层级对于休闲研究提供良好价值，但 Pro 解锁强大功能。"
+		},
+		"2": {
+			"question": "Santiment 如何衡量情绪？",
+			"answer": "Santiment 使用自然语言处理分析 Twitter、Telegram、Reddit 和其他平台上的社交媒体帖子。他们衡量数量（提及）、情绪（正面/负面）和社交主导地位（相对关注度）。数据每小时更新。"
+		},
+		"3": {
+			"question": "什么是开发活动？",
+			"answer": "Santiment 追踪加密项目的公开 GitHub 活动，计算提交、拉取请求和活跃开发者。这衡量实际的开发工作，帮助识别正在持续开发的项目与被放弃的项目。"
+		},
+		"4": {
+			"question": "社交情绪对交易有用吗？",
+			"answer": "社交情绪最好用作逆向指标——极端正面情绪通常先于顶部，极端负面先于底部。它不是择时工具，但有助于识别群体心理何时达到极端。"
+		},
+		"5": {
+			"question": "什么是 SAN 代币？",
+			"answer": "SAN 是 Santiment 的实用代币，用于平台访问和质押。质押 SAN 可获得订阅折扣。代币在 2017 年 ICO 中分发，在各种交易所交易。"
+		}
+	},
+	"cta": {
+		"ready": "准备进行行为分析？",
+		"button": "打开 Santiment",
+		"note": "社交和链上洞察"
+	}
+}

@@ -50,6 +50,18 @@
 		return data.tools.find((tool) => tool.id === toolId);
 	}
 
+	// Check if any tools exist for tool mentions
+	function hasValidTools(toolMentions: Array<{ toolId: string; context?: string }> | undefined) {
+		if (!toolMentions || toolMentions.length === 0) return false;
+		return toolMentions.some((mention) => getTool(mention.toolId));
+	}
+
+	// Check if any tools exist for glossary tool IDs
+	function hasValidToolIds(toolIds: string[] | undefined) {
+		if (!toolIds || toolIds.length === 0) return false;
+		return toolIds.some((id) => getTool(id));
+	}
+
 	// Render case study source link
 	function getCaseStudyLink(caseStudy: CaseStudy): string | undefined {
 		if (caseStudy.txHash) {
@@ -139,8 +151,8 @@
 						{@html t(section.contentKey)}
 					</div>
 
-					<!-- Tool mentions -->
-					{#if section.toolMentions && section.toolMentions.length > 0}
+					<!-- Tool mentions - only show if at least one tool exists -->
+					{#if hasValidTools(section.toolMentions)}
 						<div class="tool-mentions">
 							<span class="tool-mentions-label">{t('routes/apps/chain-tools.related_tools')}:</span>
 							{#each section.toolMentions as mention (mention.toolId)}
@@ -166,8 +178,8 @@
 									{@html t(subsection.contentKey)}
 								</div>
 
-								<!-- Subsection tool mentions -->
-								{#if subsection.toolMentions && subsection.toolMentions.length > 0}
+								<!-- Subsection tool mentions - only show if at least one tool exists -->
+								{#if hasValidTools(subsection.toolMentions)}
 									<div class="tool-mentions">
 										<span class="tool-mentions-label"
 											>{t('routes/apps/chain-tools.related_tools')}:</span
@@ -198,8 +210,8 @@
 												{#if caseStudy.date}
 													<span class="case-study-date">{caseStudy.date}</span>
 												{/if}
-												{@const link = getCaseStudyLink(caseStudy)}
-												{#if link}
+												{#if getCaseStudyLink(caseStudy)}
+													{@const link = getCaseStudyLink(caseStudy)}
 													<a href={link} target="_blank" rel="noopener" class="case-study-link">
 														{t('routes/apps/chain-tools.view_source')}
 														<ExternalLink class="link-icon" />
@@ -225,8 +237,8 @@
 										{/if}
 									</div>
 									<p class="case-study-description">{t(caseStudy.descriptionKey)}</p>
-									{@const link = getCaseStudyLink(caseStudy)}
-									{#if link}
+									{#if getCaseStudyLink(caseStudy)}
+										{@const link = getCaseStudyLink(caseStudy)}
 										<a href={link} target="_blank" rel="noopener" class="case-study-link">
 											{t('routes/apps/chain-tools.view_source')}
 											<ExternalLink class="link-icon" />
@@ -247,7 +259,7 @@
 						<div class="glossary-item" id={`term-${term.id}`}>
 							<dt class="glossary-term">{t(term.termKey)}</dt>
 							<dd class="glossary-definition">{t(term.definitionKey)}</dd>
-							{#if term.relatedToolIds && term.relatedToolIds.length > 0}
+							{#if hasValidToolIds(term.relatedToolIds)}
 								<div class="glossary-tools">
 									{#each term.relatedToolIds as toolId (toolId)}
 										{@const tool = getTool(toolId)}

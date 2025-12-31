@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "IntoTheBlock - AI 驱动的加密分析与信号",
+		"description": "机器学习驱动的区块链分析，提供持有者分析、价格预测和机构级加密资产数据。",
+		"keywords": "IntoTheBlock, 加密分析, AI 交易, 持有者分析, 区块链数据, 加密信号"
+	},
+	"overview": "IntoTheBlock 是一个 AI 驱动的分析平台，将机器学习应用于区块链数据，为加密投资者提供独特的洞察。成立于 2018 年，该平台结合链上分析与预测模型和持有者分析。\n\n该平台以其持有者构成分析而闻名，将地址分为巨鲸、投资者和散户等类别。这种细分有助于理解谁持有资产以及所有权的集中程度。\n\nIntoTheBlock 还提供从 AI 模型得出的信号和指标，包括价格预测和市场情绪评分。该平台通过分层访问其分析套件服务于个人投资者和机构。",
+	"features": {
+		"1": {
+			"title": "持有者分析",
+			"description": "按规模、集中度和行为细分持有者"
+		},
+		"2": {
+			"title": "AI 价格预测",
+			"description": "基于机器学习的价格预测"
+		},
+		"3": {
+			"title": "盈亏分析",
+			"description": "可视化每个价格水平的持有者盈利能力"
+		},
+		"4": {
+			"title": "大额交易追踪",
+			"description": "监控巨鲸和机构动向"
+		},
+		"5": {
+			"title": "DeFi 分析",
+			"description": "协议健康评分和风险指标"
+		},
+		"6": {
+			"title": "相关性分析",
+			"description": "理解资产相关性和多元化"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "持有者研究",
+			"description": "理解谁持有资产及其仓位"
+		},
+		"2": {
+			"title": "支撑/阻力",
+			"description": "识别持有者盈亏平衡的价格水平"
+		},
+		"3": {
+			"title": "巨鲸监控",
+			"description": "追踪大户动向和累积情况"
+		},
+		"4": {
+			"title": "风险评估",
+			"description": "评估持有者集中度和分布"
+		},
+		"5": {
+			"title": "市场情绪",
+			"description": "通过链上信号衡量整体市场情绪"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "IntoTheBlock 是免费的吗？",
+			"answer": "IntoTheBlock 为许多资产提供免费的基本分析。Pro 计划（$29/月）解锁完整功能、历史数据和 API 访问。免费层级提供有用的概览数据，但详细分析需要 Pro。"
+		},
+		"2": {
+			"question": "什么是盈亏分析？",
+			"answer": "盈亏分析显示在当前价格下有多少百分比的持有者是盈利的。'盈利中'的持有者买入价更低；'亏损中'的持有者买入价更高。这基于持有者成本基础可视化潜在的支撑/阻力。"
+		},
+		"3": {
+			"question": "AI 价格预测准确吗？",
+			"answer": "AI 预测是概率估计，不是保证。它们作为众多输入之一有用，但不应作为交易决策的唯一依据。IntoTheBlock 对预测有局限性保持透明。"
+		},
+		"4": {
+			"question": "IntoTheBlock vs Glassnode：哪个更适合持有者分析？",
+			"answer": "IntoTheBlock 擅长持有者细分和盈亏分析功能。Glassnode 总体上有更全面的链上指标。对于专注持有者的分析，选 IntoTheBlock；对于广泛的链上研究，选 Glassnode。"
+		},
+		"5": {
+			"question": "IntoTheBlock 覆盖 DeFi 吗？",
+			"answer": "是的，IntoTheBlock 提供 DeFi 分析，包括协议健康评分、TVL 追踪和风险指标。他们分析跨多个链的主要 DeFi 协议，重点关注借贷和流动性协议。"
+		}
+	},
+	"cta": {
+		"ready": "准备获取 AI 驱动的分析？",
+		"button": "打开 IntoTheBlock",
+		"note": "机器学习洞察"
+	}
+}

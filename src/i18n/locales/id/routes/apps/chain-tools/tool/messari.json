@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Messari - Professional Crypto Research & Data Platform",
+		"description": "Access institutional-grade crypto research, asset profiles, and market intelligence. Messari provides the data and insights professionals need.",
+		"keywords": "Messari, crypto research, institutional crypto, asset profiles, market intelligence, crypto data"
+	},
+	"overview": "Messari is a professional-grade cryptocurrency research and data platform that provides institutional-level insights, asset profiles, and market intelligence. Founded in 2018 by Ryan Selkis, Messari has become the go-to resource for serious crypto investors and researchers.\n\nThe platform differentiates itself through in-depth research reports, standardized asset profiles with verified data, and governance tracking for DAOs. Messari's research team produces high-quality analysis that rivals traditional financial research firms.\n\nMessari serves hedge funds, VCs, protocols, and sophisticated individual investors who need accurate data and actionable insights. The platform's Registry provides verified, standardized disclosures from crypto projects, bringing transparency to an often opaque market.",
+	"features": {
+		"1": {
+			"title": "Research Reports",
+			"description": "Institutional-quality analysis and market intelligence"
+		},
+		"2": {
+			"title": "Asset Profiles",
+			"description": "Comprehensive standardized data on 1,000+ assets"
+		},
+		"3": {
+			"title": "Governor",
+			"description": "Track DAO governance proposals and voting across protocols"
+		},
+		"4": {
+			"title": "Screener Tools",
+			"description": "Filter and compare assets by custom metrics"
+		},
+		"5": {
+			"title": "Protocol Metrics",
+			"description": "Real revenue, TVL, and fundamental data by protocol"
+		},
+		"6": {
+			"title": "Fundraising Data",
+			"description": "Track VC deals, valuations, and investor activity"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Investment Research",
+			"description": "Deep dive into assets with institutional-grade analysis"
+		},
+		"2": {
+			"title": "Governance Participation",
+			"description": "Track and participate in DAO proposals across chains"
+		},
+		"3": {
+			"title": "Market Intelligence",
+			"description": "Stay ahead with daily briefings and sector analysis"
+		},
+		"4": {
+			"title": "Due Diligence",
+			"description": "Verify project data through Messari Registry"
+		},
+		"5": {
+			"title": "Fundraising Tracking",
+			"description": "Monitor VC activity and emerging trends"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Is Messari free?",
+			"answer": "Messari offers a free tier with basic screeners and limited research. Messari Pro ($29.99/month) unlocks all research, charts, and screeners. Enterprise plans with API access and custom data start at higher tiers. The free version is useful but limited compared to Pro."
+		},
+		"2": {
+			"question": "Who uses Messari?",
+			"answer": "Messari's customers include crypto hedge funds, venture capital firms, protocol teams, exchanges, and sophisticated individual investors. Notable users include Paradigm, a16z crypto, and many protocol treasuries. It's positioned as Bloomberg for crypto."
+		},
+		"3": {
+			"question": "What is Messari Governor?",
+			"answer": "Governor is Messari's governance aggregator that tracks proposals across major DAOs. You can see active proposals, vote distribution, and voting history. It helps token holders participate in governance and researchers track decentralization."
+		},
+		"4": {
+			"question": "Is Messari research reliable?",
+			"answer": "Messari employs professional analysts with traditional finance and crypto backgrounds. Their research is well-regarded in the industry for being thorough and relatively unbiased. They disclose conflicts of interest and maintain editorial standards."
+		},
+		"5": {
+			"question": "Messari vs Token Terminal: Which for fundamentals?",
+			"answer": "Both are excellent for protocol fundamentals. Messari offers broader research and governance tools. Token Terminal focuses purely on financial metrics with cleaner data visualization. Many professionals use both—Token Terminal for pure financials, Messari for research."
+		}
+	},
+	"cta": {
+		"ready": "Ready for professional crypto research?",
+		"button": "Open Messari",
+		"note": "Institutional-grade insights"
+	}
+}

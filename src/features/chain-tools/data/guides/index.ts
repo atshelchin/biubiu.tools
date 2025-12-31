@@ -4,13 +4,15 @@
  */
 import type { CategoryGuide, CategoryId } from '../../types';
 import { defiGuide } from './defi';
+import { securityGuide } from './security';
 
 // Map of all available guides
 export const categoryGuides: Partial<Record<CategoryId, CategoryGuide>> = {
-	defi: defiGuide
+	defi: defiGuide,
+	security: securityGuide
 	// Add more guides as they are created
 	// nft: nftGuide,
-	// security: securityGuide,
+	// bridge: bridgeGuide,
 };
 
 /**

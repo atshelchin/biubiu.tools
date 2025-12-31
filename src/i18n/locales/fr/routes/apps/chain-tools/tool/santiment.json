@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Santiment - Crypto Behavior Analytics & Social Metrics",
+		"description": "Understand crypto markets through behavior analytics, social sentiment, and development activity. Data-driven insights for informed trading.",
+		"keywords": "Santiment, crypto sentiment, social metrics, development activity, behavior analytics, market intelligence"
+	},
+	"overview": "Santiment is a behavior analytics platform that combines on-chain, social, and development data to provide unique insights into crypto markets. Founded in 2016 and funded through an ICO, Santiment has developed proprietary metrics that capture market psychology.\n\nThe platform is known for its social sentiment analysis, tracking mentions, sentiment, and trending topics across Twitter, Telegram, Reddit, and other platforms. This social data combined with on-chain metrics helps identify market tops, bottoms, and turning points.\n\nSantiment also uniquely tracks development activity across crypto projects, measuring GitHub commits and developer engagement. This provides insight into which projects are actively building versus those with declining development momentum.",
+	"features": {
+		"1": {
+			"title": "Social Sentiment",
+			"description": "Track social mentions and sentiment across platforms"
+		},
+		"2": {
+			"title": "Development Activity",
+			"description": "Measure GitHub commits and developer engagement"
+		},
+		"3": {
+			"title": "On-Chain Metrics",
+			"description": "Holder behavior, exchange flows, and network activity"
+		},
+		"4": {
+			"title": "Sanbase Pro",
+			"description": "Advanced analytics and custom alerts"
+		},
+		"5": {
+			"title": "Santiment Queries",
+			"description": "SQL-like interface for custom data exploration"
+		},
+		"6": {
+			"title": "Emerging Trends",
+			"description": "Identify trending topics before they go mainstream"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Sentiment Analysis",
+			"description": "Gauge market mood through social data"
+		},
+		"2": {
+			"title": "Project Evaluation",
+			"description": "Assess development activity and commitment"
+		},
+		"3": {
+			"title": "Trend Discovery",
+			"description": "Find emerging narratives and trending topics"
+		},
+		"4": {
+			"title": "Market Timing",
+			"description": "Identify extremes in sentiment for contrarian plays"
+		},
+		"5": {
+			"title": "Research",
+			"description": "Deep dive into project fundamentals and behavior"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Is Santiment free?",
+			"answer": "Santiment offers a free tier with basic metrics. Pro plans start at $49/month for advanced features. SAN tokens can be staked for discounts. The free tier provides good value for casual research but Pro unlocks the powerful features."
+		},
+		"2": {
+			"question": "How does Santiment measure sentiment?",
+			"answer": "Santiment uses NLP to analyze social media posts across Twitter, Telegram, Reddit, and other platforms. They measure volume (mentions), sentiment (positive/negative), and social dominance (relative attention). The data is updated hourly."
+		},
+		"3": {
+			"question": "What is development activity?",
+			"answer": "Santiment tracks public GitHub activity for crypto projects, counting commits, pull requests, and active developers. This measures actual development work, helping identify projects with strong ongoing development versus abandoned ones."
+		},
+		"4": {
+			"question": "Is social sentiment useful for trading?",
+			"answer": "Social sentiment is best used as a contrarian indicator—extreme positive sentiment often precedes tops, extreme negative precedes bottoms. It's not a timing tool but helps identify when crowd psychology reaches extremes."
+		},
+		"5": {
+			"question": "What are SAN tokens?",
+			"answer": "SAN is Santiment's utility token used for platform access and staking. Staking SAN provides discounts on subscriptions. The token was distributed in their 2017 ICO and trades on various exchanges."
+		}
+	},
+	"cta": {
+		"ready": "Ready for behavior analytics?",
+		"button": "Open Santiment",
+		"note": "Social and on-chain insights"
+	}
+}

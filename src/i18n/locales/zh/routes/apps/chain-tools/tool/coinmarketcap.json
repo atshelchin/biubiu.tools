@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "CoinMarketCap - 加密货币价格、图表与市场数据",
+		"description": "追踪加密货币价格、市值和交易量。全球最常引用的加密数据平台，收录 10,000+ 币种。",
+		"keywords": "CoinMarketCap, 加密货币价格, 市值, 加密货币, CMC, 币种追踪"
+	},
+	"overview": "CoinMarketCap 是全球最常引用的加密货币价格追踪网站，提供超过 10,000 种加密货币的数据。由 Brandon Chez 于 2013 年创立，CMC 于 2020 年被币安以约 4 亿美元收购。\n\n该平台作为加密货币定价数据的行业标准，提供实时价格、市值、交易量和历史数据。CMC 被交易者、研究人员、记者和机构广泛用作加密市场数据的主要来源。\n\n除了基本的价格追踪，CoinMarketCap 还通过 CMC Academy 提供教育内容、投资组合追踪、交易所排名以及各种加密分析工具。该平台的 API 为行业内无数应用程序和交易机器人提供支持。",
+	"features": {
+		"1": {
+			"title": "10,000+ 加密货币",
+			"description": "几乎覆盖所有可交易的加密资产"
+		},
+		"2": {
+			"title": "交易所排名",
+			"description": "按交易量、流动性和网站流量的可信交易所排名"
+		},
+		"3": {
+			"title": "投资组合追踪器",
+			"description": "追踪持仓，设置价格提醒和绩效指标"
+		},
+		"4": {
+			"title": "CMC 学院",
+			"description": "为加密新手提供教育内容和术语表"
+		},
+		"5": {
+			"title": "NFT 数据",
+			"description": "NFT 收藏品排名、地板价和销售数据"
+		},
+		"6": {
+			"title": "免费 API",
+			"description": "通过免费和付费 API 层级访问价格数据"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "价格追踪",
+			"description": "监控加密货币价格和市场走势"
+		},
+		"2": {
+			"title": "市场研究",
+			"description": "分析市场趋势、主导地位和板块表现"
+		},
+		"3": {
+			"title": "交易所选择",
+			"description": "按交易量、费用和可信度比较交易所"
+		},
+		"4": {
+			"title": "投资组合管理",
+			"description": "追踪持仓并设置交易价格提醒"
+		},
+		"5": {
+			"title": "尽职调查",
+			"description": "研究新代币、其供应量和市场数据"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "CoinMarketCap 准确吗？",
+			"answer": "CoinMarketCap 汇总来自数百个交易所的数据，并使用各种方法过滤虚假交易量。虽然没有任何数据源是完美的，但 CMC 是行业标准，并不断改进其方法论。对于主流币种，准确性很高；小币种的数据可能不太可靠。"
+		},
+		"2": {
+			"question": "CoinMarketCap 是免费的吗？",
+			"answer": "是的，CoinMarketCap 网站完全免费使用。API 有免费层级，每月 10,000 积分和速率限制。付费 API 计划从 $29/月起，适用于有更高限制和更多端点的专业使用。"
+		},
+		"3": {
+			"question": "CoinMarketCap 是币安旗下的吗？",
+			"answer": "是的，币安于 2020 年 4 月收购了 CoinMarketCap。CMC 拥有独立的团队和方法论独立运营。有些批评者担心存在偏见，但 CMC 保持编辑独立性，在其指标中公平地对币安竞争对手进行排名。"
+		},
+		"4": {
+			"question": "什么是 CMC 市值？",
+			"answer": "CMC 上的市值计算公式为流通供应量 × 当前价格。CMC 区分流通供应量、总供应量和最大供应量。流通供应量不包括锁定的、预留的或不可公开交易的团队代币。"
+		},
+		"5": {
+			"question": "CoinMarketCap vs CoinGecko：哪个更好？",
+			"answer": "两者都很出色。CMC 品牌认知度更高，界面更简洁。CoinGecko 有更多 DeFi 数据、开发者活动指标，且没有企业所有者。许多用户两者都查看。CoinGecko 更受社区偏好；CMC 更机构化。"
+		}
+	},
+	"cta": {
+		"ready": "准备追踪加密货币价格？",
+		"button": "打开 CoinMarketCap",
+		"note": "行业标准价格数据"
+	}
+}

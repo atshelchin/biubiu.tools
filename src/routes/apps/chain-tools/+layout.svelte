@@ -89,7 +89,7 @@
 	/* Mobile */
 	@media (max-width: 768px) {
 		.chain-tools-page {
-			padding: var(--space-4) var(--space-3);
+			/* padding: var(--space-4) var(--space-3); */
 		}
 
 		.page-header {

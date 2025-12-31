@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "CoinMarketCap - Cryptocurrency Prices, Charts & Market Data",
+		"description": "Track cryptocurrency prices, market caps, and trading volumes. The world's most referenced crypto data platform with 10,000+ coins.",
+		"keywords": "CoinMarketCap, crypto prices, market cap, cryptocurrency, CMC, coin tracking"
+	},
+	"overview": "CoinMarketCap is the world's most-referenced cryptocurrency price-tracking website, providing data on over 10,000 cryptocurrencies. Founded in 2013 by Brandon Chez, CMC was acquired by Binance in 2020 for an estimated $400 million.\n\nThe platform serves as the industry standard for cryptocurrency pricing data, offering real-time prices, market capitalizations, trading volumes, and historical data. CMC is widely used by traders, researchers, journalists, and institutions as the primary source for crypto market data.\n\nBeyond basic price tracking, CoinMarketCap offers educational content through CMC Academy, portfolio tracking, exchange rankings, and various tools for crypto analysis. The platform's API powers countless applications and trading bots across the industry.",
+	"features": {
+		"1": {
+			"title": "10,000+ Cryptocurrencies",
+			"description": "Comprehensive coverage of virtually every tradeable crypto asset"
+		},
+		"2": {
+			"title": "Exchange Rankings",
+			"description": "Trusted exchange rankings by volume, liquidity, and web traffic"
+		},
+		"3": {
+			"title": "Portfolio Tracker",
+			"description": "Track your holdings with price alerts and performance metrics"
+		},
+		"4": {
+			"title": "CMC Academy",
+			"description": "Educational content and glossary for crypto newcomers"
+		},
+		"5": {
+			"title": "NFT Data",
+			"description": "NFT collection rankings, floor prices, and sales data"
+		},
+		"6": {
+			"title": "Free API",
+			"description": "Access pricing data through free and paid API tiers"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Price Tracking",
+			"description": "Monitor cryptocurrency prices and market movements"
+		},
+		"2": {
+			"title": "Market Research",
+			"description": "Analyze market trends, dominance, and sector performance"
+		},
+		"3": {
+			"title": "Exchange Selection",
+			"description": "Compare exchanges by volume, fees, and trustworthiness"
+		},
+		"4": {
+			"title": "Portfolio Management",
+			"description": "Track holdings and set price alerts for trading"
+		},
+		"5": {
+			"title": "Due Diligence",
+			"description": "Research new tokens, their supply, and market data"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Is CoinMarketCap accurate?",
+			"answer": "CoinMarketCap aggregates data from hundreds of exchanges and uses various methods to filter out fake volume. While no data source is perfect, CMC is industry-standard and continuously improves its methodology. For major coins, accuracy is very high; smaller coins may have less reliable data."
+		},
+		"2": {
+			"question": "Is CoinMarketCap free?",
+			"answer": "Yes, CoinMarketCap's website is completely free to use. The API has a free tier with 10,000 credits/month and rate limits. Paid API plans start at $29/month for professional use with higher limits and more endpoints."
+		},
+		"3": {
+			"question": "Is CoinMarketCap owned by Binance?",
+			"answer": "Yes, Binance acquired CoinMarketCap in April 2020. CMC operates independently with its own team and methodology. Some critics worry about bias, but CMC maintains editorial independence and ranks Binance competitors fairly in their metrics."
+		},
+		"4": {
+			"question": "What is CMC market cap?",
+			"answer": "Market cap on CMC is calculated as circulating supply × current price. CMC distinguishes between circulating, total, and max supply. Circulating supply excludes locked, reserved, or team tokens that aren't publicly tradeable."
+		},
+		"5": {
+			"question": "CoinMarketCap vs CoinGecko: Which is better?",
+			"answer": "Both are excellent. CMC has more brand recognition and cleaner UI. CoinGecko has more DeFi data, developer activity metrics, and no corporate owner. Many users check both. CoinGecko is community-preferred; CMC is more institutional."
+		}
+	},
+	"cta": {
+		"ready": "Ready to track crypto prices?",
+		"button": "Open CoinMarketCap",
+		"note": "Industry-standard price data"
+	}
+}

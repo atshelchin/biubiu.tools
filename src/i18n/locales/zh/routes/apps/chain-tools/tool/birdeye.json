@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Birdeye - Solana 代币分析与 DeFi 仪表板",
+		"description": "领先的 Solana 分析平台，用于代币追踪、DeFi 数据和投资组合管理。所有 Solana DEX 的实时价格。",
+		"keywords": "Birdeye, Solana 分析, Solana 代币, DeFi 仪表板, 代币追踪, Solana DeFi"
+	},
+	"overview": "Birdeye 是 Solana 和多链 DeFi 的首选分析平台，提供实时代币数据、投资组合追踪和全面的市场分析。成立于 2021 年，Birdeye 已成为 Solana 交易者和投资者的首选工具。\n\n该平台汇集来自所有主要 Solana DEX 的数据，包括 Jupiter、Raydium、Orca 和 Meteora，提供准确的价格和流动性信息。Birdeye 的代币档案包括持有者分析、交易历史和安全指标。\n\n除了 Solana，Birdeye 已扩展支持 15+ 链，包括以太坊、Base 和 Arbitrum。该平台为开发者提供 API 访问，并与主要钱包集成以实现无缝的投资组合追踪。",
+	"features": {
+		"1": {
+			"title": "实时 Solana 数据",
+			"description": "即时聚合来自所有 Solana DEX 的价格"
+		},
+		"2": {
+			"title": "代币档案",
+			"description": "详细分析，包括持有者、交易和安全性"
+		},
+		"3": {
+			"title": "投资组合追踪器",
+			"description": "连接钱包追踪所有 Solana 持仓"
+		},
+		"4": {
+			"title": "热门代币",
+			"description": "根据交易量和活动发现热门代币"
+		},
+		"5": {
+			"title": "价格提醒",
+			"description": "设置价格变动通知"
+		},
+		"6": {
+			"title": "开发者 API",
+			"description": "以编程方式访问 Solana DeFi 数据"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Solana 交易",
+			"description": "监控 Solana 代币价格并寻找交易机会"
+		},
+		"2": {
+			"title": "代币研究",
+			"description": "分析持有者分布和交易模式"
+		},
+		"3": {
+			"title": "投资组合管理",
+			"description": "跨钱包追踪 Solana 持仓"
+		},
+		"4": {
+			"title": "Meme 币发现",
+			"description": "尽早发现热门 Solana meme 币"
+		},
+		"5": {
+			"title": "DeFi 分析",
+			"description": "监控 Solana DeFi 的 TVL 和活动"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Birdeye 是免费的吗？",
+			"answer": "是的，Birdeye 的核心功能是免费的，包括代币数据、图表和投资组合追踪。高级功能和 API 访问需要付费。免费层级对于大多数交易者和研究人员来说足够全面。"
+		},
+		"2": {
+			"question": "Birdeye 对 Solana 准确吗？",
+			"answer": "是的，Birdeye 被认为是 Solana 代币数据最准确的来源。它实时聚合所有主要 DEX 的数据，并被 Jupiter、Phantom 和其他主要 Solana 应用程序用作其数据源。"
+		},
+		"3": {
+			"question": "Birdeye 支持其他链吗？",
+			"answer": "是的，Birdeye 已扩展到支持 15+ 链，包括以太坊、Base、Arbitrum、BSC 等。然而，Solana 仍然是其最强的覆盖范围，拥有最全面的数据。"
+		},
+		"4": {
+			"question": "Birdeye vs DEX Screener：哪个更适合 Solana？",
+			"answer": "Birdeye 有更深的 Solana 集成、更好的代币档案和投资组合追踪。DEX Screener 有更广泛的多链覆盖和更快的加载时间。对于严肃的 Solana 交易，首选 Birdeye；对于快速多链检查，选 DEX Screener。"
+		},
+		"5": {
+			"question": "我能信任 Birdeye 的安全指标吗？",
+			"answer": "Birdeye 提供有用的安全信息，如合约验证和持有者集中度，但它不是安全审计。在交易新代币之前始终做额外研究。将其作为多个数据点之一使用。"
+		}
+	},
+	"cta": {
+		"ready": "准备探索 Solana 代币？",
+		"button": "打开 Birdeye",
+		"note": "领先的 Solana 分析"
+	}
+}

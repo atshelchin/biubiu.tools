@@ -28,7 +28,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'ethereum-foundation',
 		name: 'Ethereum Foundation',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.ethereum_foundation.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.ethereum_foundation.description',
 		url: 'https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae',
 		icon: Landmark,
 		category: 'whale-address',
@@ -40,7 +40,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'aave-treasury',
 		name: 'Aave Treasury',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.aave_treasury.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.aave_treasury.description',
 		url: 'https://etherscan.io/address/0x89c51828427f70d77875c6747759fb17ba10ceb0',
 		icon: Landmark,
 		category: 'whale-address',
@@ -52,7 +52,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'compound-treasury',
 		name: 'Compound Treasury',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.compound_treasury.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.compound_treasury.description',
 		url: 'https://etherscan.io/address/0x2775b1c75658be0f640272ccb8c72ac986009e38',
 		icon: Landmark,
 		category: 'whale-address',
@@ -63,7 +63,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'lido-treasury',
 		name: 'Lido DAO Treasury',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.lido_treasury.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.lido_treasury.description',
 		url: 'https://etherscan.io/address/0x3e40d73eb977dc6a537af587d48316fee66e9c8c',
 		icon: Landmark,
 		category: 'whale-address',
@@ -74,7 +74,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'arbitrum-treasury',
 		name: 'Arbitrum DAO Treasury',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.arbitrum_treasury.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.arbitrum_treasury.description',
 		url: 'https://arbiscan.io/address/0xf3fc178157fb3c87548baa86f9d24ba38e649b58',
 		icon: Landmark,
 		category: 'whale-address',
@@ -85,7 +85,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'optimism-treasury',
 		name: 'Optimism Treasury',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.optimism_treasury.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.optimism_treasury.description',
 		url: 'https://optimistic.etherscan.io/address/0x2501c477d0a35545a387aa4a3eee4292a9a8b3f0',
 		icon: Landmark,
 		category: 'whale-address',
@@ -96,7 +96,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'gnosis-treasury',
 		name: 'Gnosis Treasury',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.gnosis_treasury.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.gnosis_treasury.description',
 		url: 'https://etherscan.io/address/0x0da0c3e52c977ed3cbc641ff02dd271c3ed55afe',
 		icon: Landmark,
 		category: 'whale-address',
@@ -107,7 +107,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'ens-treasury',
 		name: 'ENS DAO Treasury',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.ens_treasury.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.ens_treasury.description',
 		url: 'https://etherscan.io/address/0xfe89cc7abb2c4183683ab71653c4cdc9b02d44b7',
 		icon: Landmark,
 		category: 'whale-address',
@@ -119,7 +119,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'curve-multisig',
 		name: 'Curve Emergency DAO',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.curve_multisig.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.curve_multisig.description',
 		url: 'https://etherscan.io/address/0x467947EE34aF926cF1DCac093870f613C96B1E0c',
 		icon: Shield,
 		category: 'whale-address',
@@ -130,7 +130,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'yearn-multisig',
 		name: 'Yearn Multisig',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.yearn_multisig.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.yearn_multisig.description',
 		url: 'https://etherscan.io/address/0xfeb4acf3df3cdea7399794d0869ef76a6efaff52',
 		icon: Shield,
 		category: 'whale-address',
@@ -142,7 +142,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'vitalik-wallet',
 		name: 'vitalik.eth',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.vitalik_wallet.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.vitalik_wallet.description',
 		url: 'https://etherscan.io/address/0xd8da6bf26964af9d7eed9e03e53415d37aa96045',
 		icon: Users,
 		category: 'whale-address',
@@ -153,7 +153,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'justin-sun-wallet',
 		name: 'Justin Sun Wallet',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.justin_sun_wallet.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.justin_sun_wallet.description',
 		url: 'https://etherscan.io/address/0x3ddfa8ec3052539b6c9549f12cea2c295cff5296',
 		icon: Users,
 		category: 'whale-address',
@@ -164,7 +164,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'tetranode-wallet',
 		name: 'Tetranode',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.tetranode_wallet.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.tetranode_wallet.description',
 		url: 'https://debank.com/profile/0x9c5083dd4838e120dbeac44c052179692aa5dac5',
 		icon: Users,
 		category: 'whale-address',
@@ -175,7 +175,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'hsaka-wallet',
 		name: 'Hsaka Trades',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.hsaka_wallet.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.hsaka_wallet.description',
 		url: 'https://debank.com/profile/0xe21dc18513e3e68a52f9fcdacfd56948d43a11c6',
 		icon: Users,
 		category: 'whale-address',
@@ -187,7 +187,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'binance-hot-wallet',
 		name: 'Binance Hot Wallet',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.binance_hot_wallet.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.binance_hot_wallet.description',
 		url: 'https://bscscan.com/address/0x8894e0a0c962cb723c1976a4421c95949be2d4e3',
 		icon: Landmark,
 		category: 'whale-address',
@@ -198,7 +198,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'pancakeswap-treasury',
 		name: 'PancakeSwap Treasury',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.pancakeswap_treasury.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.pancakeswap_treasury.description',
 		url: 'https://bscscan.com/address/0x4B16c5dE96EB2117bBE5fd171E4d203624B014aa',
 		icon: Landmark,
 		category: 'whale-address',
@@ -209,7 +209,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'venus-treasury',
 		name: 'Venus Treasury',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.venus_treasury.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.venus_treasury.description',
 		url: 'https://bscscan.com/address/0xf322942f644a996a617bd29c16bd7d231d9f35e9',
 		icon: Landmark,
 		category: 'whale-address',
@@ -221,7 +221,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'base-bridge',
 		name: 'Base Bridge',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.base_bridge.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.base_bridge.description',
 		url: 'https://basescan.org/address/0x49048044d57e1c92a77f79988d21fa8faf74e97e',
 		icon: Landmark,
 		category: 'whale-address',
@@ -232,7 +232,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'aerodrome-treasury',
 		name: 'Aerodrome Treasury',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.aerodrome_treasury.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.aerodrome_treasury.description',
 		url: 'https://basescan.org/address/0xeBf418Fe2512e7E6bd9b87a8F0f294aCDC67e6B4',
 		icon: Landmark,
 		category: 'whale-address',
@@ -245,7 +245,7 @@ export const whaleAddressTools: ExternalTool[] = [
 		id: 'polygon-ecosystem-fund',
 		name: 'Polygon Ecosystem Fund',
 		descriptionKey:
-			'routes/apps/chain-tools/whale_address.tools.polygon_ecosystem_fund.description',
+			'routes/apps/chain-tools/whale-address.tools.polygon_ecosystem_fund.description',
 		url: 'https://polygonscan.com/address/0x9727d03CD7Ca7cCe5beec9F8Ea6d5d5C8F8B8cf9',
 		icon: Landmark,
 		category: 'whale-address',
@@ -256,7 +256,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'quickswap-treasury',
 		name: 'QuickSwap Treasury',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.quickswap_treasury.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.quickswap_treasury.description',
 		url: 'https://polygonscan.com/address/0x958d208Cdf087843e9AD98d23823d32E17d723A1',
 		icon: Landmark,
 		category: 'whale-address',
@@ -268,7 +268,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'avalanche-foundation',
 		name: 'Avalanche Foundation',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.avalanche_foundation.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.avalanche_foundation.description',
 		url: 'https://snowtrace.io/address/0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7',
 		icon: Landmark,
 		category: 'whale-address',
@@ -279,7 +279,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'traderjoe-treasury',
 		name: 'Trader Joe Treasury',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.traderjoe_treasury.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.traderjoe_treasury.description',
 		url: 'https://snowtrace.io/address/0x1A731B2299E22FbAC282E7094EdA41046343Cb51',
 		icon: Landmark,
 		category: 'whale-address',
@@ -291,7 +291,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'solana-foundation',
 		name: 'Solana Foundation',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.solana_foundation.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.solana_foundation.description',
 		url: 'https://solscan.io/account/7BAtC9Y9Y2zhj9nYLJvYVU6nUjfDzBDqRHjNBHN9i9pC',
 		icon: Landmark,
 		category: 'whale-address',
@@ -302,7 +302,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'jupiter-treasury',
 		name: 'Jupiter Treasury',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.jupiter_treasury.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.jupiter_treasury.description',
 		url: 'https://solscan.io/account/JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4',
 		icon: Landmark,
 		category: 'whale-address',
@@ -313,7 +313,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'raydium-treasury',
 		name: 'Raydium Treasury',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.raydium_treasury.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.raydium_treasury.description',
 		url: 'https://solscan.io/account/7YttLkHDoNj9wyDur5pM1ejNaAvT9X4eqaYcHQqtj2G5',
 		icon: Landmark,
 		category: 'whale-address',
@@ -325,7 +325,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'ton-foundation',
 		name: 'TON Foundation',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.ton_foundation.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.ton_foundation.description',
 		url: 'https://tonscan.org/address/EQDtFpEwcFAEcRe5mLVh2N6C0x-_hJEM7W61_JLnSF74p4q2',
 		icon: Landmark,
 		category: 'whale-address',
@@ -336,7 +336,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'sui-foundation',
 		name: 'Sui Foundation',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.sui_foundation.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.sui_foundation.description',
 		url: 'https://suiscan.xyz/mainnet/account/0x7013a8c6d0a91fb1d3c2a7d3c9d8f38a0e0c9e1a2b3c4d5e6f7a8b9c0d1e2f3a',
 		icon: Landmark,
 		category: 'whale-address',
@@ -347,7 +347,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'aptos-foundation',
 		name: 'Aptos Foundation',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.aptos_foundation.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.aptos_foundation.description',
 		url: 'https://aptoscan.com/account/0x1',
 		icon: Landmark,
 		category: 'whale-address',
@@ -358,7 +358,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'cosmos-hub-pool',
 		name: 'Cosmos Hub Community Pool',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.cosmos_hub_pool.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.cosmos_hub_pool.description',
 		url: 'https://www.mintscan.io/cosmos/account/cosmos1jv65s3grqf6v6jl3dp4t6c9t9rk99cd88lyufl',
 		icon: Landmark,
 		category: 'whale-address',
@@ -370,7 +370,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'cz-wallet',
 		name: 'CZ (Changpeng Zhao)',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.cz_wallet.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.cz_wallet.description',
 		url: 'https://debank.com/profile/0x28c6c06298d514db089934071355e5743bf21d60',
 		icon: Users,
 		category: 'whale-address',
@@ -381,7 +381,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'grayscale-wallet',
 		name: 'Grayscale',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.grayscale_wallet.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.grayscale_wallet.description',
 		url: 'https://etherscan.io/address/0x1c8de5f5f22b8de00bf33673c829b18ff4be8e18',
 		icon: Building2,
 		category: 'whale-address',
@@ -392,7 +392,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'blackrock-wallet',
 		name: 'BlackRock iShares',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.blackrock_wallet.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.blackrock_wallet.description',
 		url: 'https://etherscan.io/address/0x35Af6A6C2B3d2ec20cd5E98f3f8C6EA7c7d5f578',
 		icon: Building2,
 		category: 'whale-address',
@@ -403,7 +403,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'fidelity-wallet',
 		name: 'Fidelity',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.fidelity_wallet.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.fidelity_wallet.description',
 		url: 'https://etherscan.io/address/0xc3d688B66703497DAA19211EEdff47f25384cdc3',
 		icon: Building2,
 		category: 'whale-address',
@@ -415,7 +415,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'a16z-wallet',
 		name: 'a16z Crypto',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.a16z_wallet.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.a16z_wallet.description',
 		url: 'https://etherscan.io/address/0x05e793ce0c6027323ac150f6d45c2344d28b6019',
 		icon: Building2,
 		category: 'whale-address',
@@ -426,7 +426,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'paradigm-wallet',
 		name: 'Paradigm',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.paradigm_wallet.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.paradigm_wallet.description',
 		url: 'https://etherscan.io/address/0x3d30b1ab88d487b0f3061f40de76845bec3f1e94',
 		icon: Building2,
 		category: 'whale-address',
@@ -437,7 +437,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'jump-trading-wallet',
 		name: 'Jump Trading',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.jump_trading_wallet.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.jump_trading_wallet.description',
 		url: 'https://etherscan.io/address/0xcbe2cf3bd012e9c1ade64235cc0cf23b4a0642b1',
 		icon: Building2,
 		category: 'whale-address',
@@ -448,7 +448,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'wintermute-wallet',
 		name: 'Wintermute',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.wintermute_wallet.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.wintermute_wallet.description',
 		url: 'https://etherscan.io/address/0x00000000ae347930bd1e7b0f35588b92280f9e75',
 		icon: Building2,
 		category: 'whale-address',
@@ -459,7 +459,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'galaxy-digital-wallet',
 		name: 'Galaxy Digital',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.galaxy_digital_wallet.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.galaxy_digital_wallet.description',
 		url: 'https://etherscan.io/address/0x63bf0126c6c4d17bb33c362151759ed9d5b2a004',
 		icon: Building2,
 		category: 'whale-address',
@@ -471,7 +471,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'lookonchain',
 		name: 'Lookonchain',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.lookonchain.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.lookonchain.description',
 		url: 'https://lookonchain.com',
 		icon: Eye,
 		category: 'whale-address',
@@ -481,7 +481,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'whale-alert',
 		name: 'Whale Alert',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.whale_alert.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.whale_alert.description',
 		url: 'https://whale-alert.io',
 		icon: Bell,
 		category: 'whale-address',
@@ -491,7 +491,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'nansen-smart-money',
 		name: 'Nansen Smart Money',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.nansen_smart_money.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.nansen_smart_money.description',
 		url: 'https://app.nansen.ai/smart-money',
 		icon: TrendingUp,
 		category: 'whale-address',
@@ -501,7 +501,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'arkham-intelligence',
 		name: 'Arkham Intelligence',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.arkham_intelligence.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.arkham_intelligence.description',
 		url: 'https://platform.arkhamintelligence.com',
 		icon: Search,
 		category: 'whale-address',
@@ -511,7 +511,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'debank-whales',
 		name: 'DeBank Whales',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.debank_whales.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.debank_whales.description',
 		url: 'https://debank.com/ranking',
 		icon: BarChart3,
 		category: 'whale-address',
@@ -521,7 +521,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'spot-on-chain',
 		name: 'Spot On Chain',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.spot_on_chain.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.spot_on_chain.description',
 		url: 'https://platform.spotonchain.ai',
 		icon: Eye,
 		category: 'whale-address',
@@ -531,7 +531,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'bubblemaps',
 		name: 'Bubblemaps',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.bubblemaps.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.bubblemaps.description',
 		url: 'https://bubblemaps.io',
 		icon: Database,
 		category: 'whale-address',
@@ -541,7 +541,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'etherscan-label',
 		name: 'Etherscan Label Cloud',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.etherscan_label.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.etherscan_label.description',
 		url: 'https://etherscan.io/labelcloud',
 		icon: Search,
 		category: 'whale-address',
@@ -551,7 +551,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'zerion-whales',
 		name: 'Zerion Whale Tracker',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.zerion_whales.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.zerion_whales.description',
 		url: 'https://app.zerion.io/explore',
 		icon: Wallet,
 		category: 'whale-address',
@@ -561,7 +561,7 @@ export const whaleAddressTools: ExternalTool[] = [
 	{
 		id: 'watchers-pro',
 		name: 'Watchers Pro',
-		descriptionKey: 'routes/apps/chain-tools/whale_address.tools.watchers_pro.description',
+		descriptionKey: 'routes/apps/chain-tools/whale-address.tools.watchers_pro.description',
 		url: 'https://www.watchers.pro',
 		icon: Eye,
 		category: 'whale-address',
