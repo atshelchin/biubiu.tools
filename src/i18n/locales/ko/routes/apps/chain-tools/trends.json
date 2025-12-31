@@ -1,125 +1,125 @@
 {
 	"category_seo": {
-		"title": "Crypto Trends & VC Activity - Market Intelligence | BiuBiu Tools",
-		"description": "Track crypto market trends and venture capital activity. Investment data, emerging narratives, and market movements.",
-		"keywords": "",
+		"title": "암호화폐 트렌드 & VC 활동 - 시장 인텔리전스 | BiuBiu Tools",
+		"description": "암호화폐 시장 트렌드와 벤처 캐피탈 활동을 추적하세요. 투자 데이터, 신흥 내러티브, 시장 움직임.",
+		"keywords": "암호화폐 트렌드, VC 활동, 시장 인텔리전스, 암호화폐 리서치, 블록체인 내러티브",
 		"faqs": [
 			{
-				"question": "How do I identify crypto trends early?",
-				"answer": "Follow VC investment announcements, track smart money on-chain, monitor social sentiment, watch developer activity metrics, and participate in builder communities."
+				"question": "암호화폐 트렌드를 조기에 어떻게 식별하나요?",
+				"answer": "VC 투자 발표를 팔로우하고, 온체인에서 스마트 머니를 추적하고, 소셜 센티먼트를 모니터링하고, 개발자 활동 메트릭을 관찰하고, 빌더 커뮤니티에 참여하세요."
 			},
 			{
-				"question": "Which VCs are most active in crypto?",
-				"answer": "a16z, Paradigm, Polychain, and Multicoin are top-tier. Animoca and Spartan for gaming. Track their portfolios for themes they're betting on."
+				"question": "암호화폐에서 가장 활발한 VC는?",
+				"answer": "a16z, Paradigm, Polychain, Multicoin이 최상위입니다. 게이밍에는 Animoca와 Spartan. 그들이 베팅하는 테마에 대해 포트폴리오를 추적하세요."
 			},
 			{
-				"question": "What current trends should I watch?",
-				"answer": "AI agents, restaking, RWAs, and Bitcoin L2s are current hot themes. Trends cycle - what's hot today may cool off. Focus on fundamentals over hype."
+				"question": "어떤 현재 트렌드를 주목해야 하나요?",
+				"answer": "AI 에이전트, 리스테이킹, RWA, Bitcoin L2가 현재 핫한 테마입니다. 트렌드는 순환합니다 - 오늘 핫한 것이 내일 식을 수 있습니다. 과대광고보다 펀더멘털에 집중하세요."
 			}
 		]
 	},
 	"tools": {
 		"santiment": {
-			"description": "온체인 및 소셜 지표"
+			"description": "암호화폐 센티먼트 분석을 위한 온체인 및 소셜 메트릭"
 		},
 		"lunarcrush": {
-			"description": "소셜 센티먼트 분석"
+			"description": "소셜 센티먼트 분석 및 시장 인텔리전스 플랫폼"
 		},
 		"token2049": {
-			"description": "아시아의 프리미어 암호화폐 컨퍼런스"
+			"description": "싱가포르와 두바이에서 개최되는 아시아 최고의 암호화폐 컨퍼런스"
 		},
 		"developerreport": {
-			"description": "연간 개발자 생태계 리포트"
+			"description": "Electric Capital의 연간 개발자 생태계 리포트"
 		},
-		"crunchbase-crypto": {
-			"description": "Crunchbase Crypto - Tool"
+		"crunchbase_crypto": {
+			"description": "암호화폐 스타트업 펀딩 데이터베이스 및 기업 리서치"
 		},
-		"cryptorank-funding": {
-			"description": "CryptoRank Funding - Tool"
+		"cryptorank_funding": {
+			"description": "암호화폐 펀딩 라운드 및 투자 트래커"
 		},
-		"rootdata-funding": {
-			"description": "RootData - Tool"
+		"rootdata_funding": {
+			"description": "펀딩 및 팀 데이터가 포함된 Web3 프로젝트 데이터베이스"
 		},
-		"defilama-raises": {
-			"description": "DefiLlama Raises - Tool"
+		"defilama_raises": {
+			"description": "DeFi 및 암호화폐 펀딩 라운드 애그리게이터"
 		},
-		"messari-funding": {
-			"description": "Messari Fundraising - Tool"
+		"messari_funding": {
+			"description": "기관급 암호화폐 리서치 및 펀딩 데이터"
 		},
-		"dove-metrics": {
-			"description": "Dove Metrics - Tool"
+		"dove_metrics": {
+			"description": "암호화폐 펀드레이징 데이터 및 VC 딜플로우 분석"
 		},
-		"galaxy-research": {
-			"description": "Galaxy Research - Tool"
+		"galaxy_research": {
+			"description": "Galaxy Digital 리서치 리포트 및 시장 분석"
 		},
-		"kaito-ai": {
-			"description": "Kaito AI - Tool"
+		"kaito_ai": {
+			"description": "AI 기반 암호화폐 리서치 및 알파 발굴"
 		},
-		"artemis-xyz": {
-			"description": "Artemis - Tool"
+		"artemis_xyz": {
+			"description": "블록체인 개발자 활동 및 생태계 분석"
 		},
-		"coinglass-trends": {
-			"description": "CoinGlass - Tool"
+		"coinglass_trends": {
+			"description": "암호화폐 파생상품 데이터 및 청산 추적"
 		},
-		"cryptoquant-trends": {
-			"description": "CryptoQuant - Tool"
+		"cryptoquant_trends": {
+			"description": "온체인 분석 및 거래소 자금 흐름 지표"
 		},
-		"ethereum-magicians": {
-			"description": "Ethereum Magicians - Tool"
+		"ethereum_magicians": {
+			"description": "이더리움 코어 개발 토론 포럼"
 		},
-		"ethresear-ch": {
-			"description": "ethresear.ch - Tool"
+		"ethresear_ch": {
+			"description": "프로토콜 개선을 위한 이더리움 리서치 포럼"
 		},
-		"github-trending-sol": {
-			"description": "GitHub Trending (Solidity) - Tool"
+		"github_trending_sol": {
+			"description": "GitHub에서 트렌딩하는 Solidity 저장소"
 		},
-		"paradigm-research": {
-			"description": "Paradigm Research - Tool"
+		"paradigm_research": {
+			"description": "Paradigm VC 리서치 및 오픈소스 기여"
 		},
-		"a16z-research": {
-			"description": "a16z crypto Research - Tool"
+		"a16z_research": {
+			"description": "a16z 암호화폐 리서치 및 State of Crypto 리포트"
 		},
-		"flashbots-writings": {
-			"description": "Flashbots Writings - Tool"
+		"flashbots_writings": {
+			"description": "MEV 리서치 및 Flashbots 프로토콜 업데이트"
 		},
-		"modular-narrative": {
-			"description": "Modular Stack - Tool"
+		"modular_narrative": {
+			"description": "모듈러 블록체인 생태계 트렌드 및 스택 분석"
 		},
-		"btcfi-narrative": {
-			"description": "BTCFi Ecosystem - Tool"
+		"btcfi_narrative": {
+			"description": "Bitcoin DeFi 생태계 및 L2 개발 트렌드"
 		},
-		"intent-narrative": {
-			"description": "Intents & Chain Abstraction - Tool"
+		"intent_narrative": {
+			"description": "체인 추상화 및 인텐트 중심 아키텍처 트렌드"
 		},
-		"depin-narrative": {
-			"description": "DePIN Ecosystem - Tool"
+		"depin_narrative": {
+			"description": "분산형 물리 인프라 네트워크 트렌드"
 		},
-		"socialfi-narrative": {
-			"description": "SocialFi Trends - Tool"
+		"socialfi_narrative": {
+			"description": "소셜 파이낸스 및 토큰화 소셜 네트워크 트렌드"
 		},
-		"theblock-research": {
-			"description": "The Block Research - Tool"
+		"theblock_research": {
+			"description": "The Block 암호화폐 리서치 및 시장 데이터"
 		},
-		"delphi-digital": {
-			"description": "Delphi Digital - Tool"
+		"delphi_digital": {
+			"description": "심층 암호화폐 리서치 및 기관 분석"
 		},
-		"bankless-hq": {
-			"description": "Bankless - Tool"
+		"bankless_hq": {
+			"description": "암호화폐 미디어 및 교육 플랫폼"
 		},
-		"unchained-crypto": {
-			"description": "Unchained - Tool"
+		"unchained_crypto": {
+			"description": "암호화폐 뉴스 팟캐스트 및 탐사 저널리즘"
 		},
-		"ethglobal-events": {
-			"description": "ETHGlobal - Tool"
+		"ethglobal_events": {
+			"description": "전 세계 이더리움 해커톤 및 개발자 이벤트"
 		},
-		"devcon-ethereum": {
-			"description": "Devcon - Tool"
+		"devcon_ethereum": {
+			"description": "이더리움 재단 공식 개발자 컨퍼런스"
 		},
-		"consensus-coindesk": {
-			"description": "Consensus - Tool"
+		"consensus_coindesk": {
+			"description": "CoinDesk 연간 암호화폐 및 블록체인 컨퍼런스"
 		},
-		"tokenterminal-dev": {
-			"description": "Token Terminal - Tool"
+		"tokenterminal_dev": {
+			"description": "프로토콜 수익 및 개발자 활동 메트릭"
 		}
 	}
 }

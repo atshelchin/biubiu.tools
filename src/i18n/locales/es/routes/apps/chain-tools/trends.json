@@ -20,106 +20,106 @@
 	},
 	"tools": {
 		"santiment": {
-			"description": "Métricas on-chain y sociales"
+			"description": "Métricas on-chain y sociales para análisis de sentimiento cripto"
 		},
 		"lunarcrush": {
-			"description": "Analíticas de sentimiento social"
+			"description": "Plataforma de analítica de sentimiento social e inteligencia de mercado"
 		},
 		"token2049": {
-			"description": "Conferencia cripto premier de Asia"
+			"description": "Conferencia cripto premier de Asia en Singapur y Dubái"
 		},
 		"developerreport": {
-			"description": "Reporte anual del ecosistema de desarrolladores"
+			"description": "Reporte anual del ecosistema de desarrolladores por Electric Capital"
 		},
-		"crunchbase-crypto": {
-			"description": "Crunchbase Crypto - Tool"
+		"crunchbase_crypto": {
+			"description": "Base de datos de financiamiento de startups cripto e investigación de empresas"
 		},
-		"cryptorank-funding": {
-			"description": "CryptoRank Funding - Tool"
+		"cryptorank_funding": {
+			"description": "Rastreador de rondas de financiamiento e inversiones cripto"
 		},
-		"rootdata-funding": {
-			"description": "RootData - Tool"
+		"rootdata_funding": {
+			"description": "Base de datos de proyectos Web3 con datos de financiamiento y equipos"
 		},
-		"defilama-raises": {
-			"description": "DefiLlama Raises - Tool"
+		"defilama_raises": {
+			"description": "Agregador de rondas de financiamiento DeFi y cripto"
 		},
-		"messari-funding": {
-			"description": "Messari Fundraising - Tool"
+		"messari_funding": {
+			"description": "Investigación cripto de grado institucional y datos de financiamiento"
 		},
-		"dove-metrics": {
-			"description": "Dove Metrics - Tool"
+		"dove_metrics": {
+			"description": "Datos de recaudación cripto y analíticas de flujo de deals VC"
 		},
-		"galaxy-research": {
-			"description": "Galaxy Research - Tool"
+		"galaxy_research": {
+			"description": "Reportes de investigación y análisis de mercado de Galaxy Digital"
 		},
-		"kaito-ai": {
-			"description": "Kaito AI - Tool"
+		"kaito_ai": {
+			"description": "Investigación cripto impulsada por IA y descubrimiento de alpha"
 		},
-		"artemis-xyz": {
-			"description": "Artemis - Tool"
+		"artemis_xyz": {
+			"description": "Actividad de desarrolladores blockchain y analíticas de ecosistemas"
 		},
-		"coinglass-trends": {
-			"description": "CoinGlass - Tool"
+		"coinglass_trends": {
+			"description": "Datos de derivados cripto y seguimiento de liquidaciones"
 		},
-		"cryptoquant-trends": {
-			"description": "CryptoQuant - Tool"
+		"cryptoquant_trends": {
+			"description": "Analíticas on-chain e indicadores de flujo de exchanges"
 		},
-		"ethereum-magicians": {
-			"description": "Ethereum Magicians - Tool"
+		"ethereum_magicians": {
+			"description": "Foro de discusión de desarrollo core de Ethereum"
 		},
-		"ethresear-ch": {
-			"description": "ethresear.ch - Tool"
+		"ethresear_ch": {
+			"description": "Foro de investigación de Ethereum para mejoras de protocolo"
 		},
-		"github-trending-sol": {
-			"description": "GitHub Trending (Solidity) - Tool"
+		"github_trending_sol": {
+			"description": "Repositorios de Solidity trending en GitHub"
 		},
-		"paradigm-research": {
-			"description": "Paradigm Research - Tool"
+		"paradigm_research": {
+			"description": "Investigación VC de Paradigm y contribuciones open source"
 		},
-		"a16z-research": {
-			"description": "a16z crypto Research - Tool"
+		"a16z_research": {
+			"description": "Investigación cripto de a16z y reportes State of Crypto"
 		},
-		"flashbots-writings": {
-			"description": "Flashbots Writings - Tool"
+		"flashbots_writings": {
+			"description": "Investigación MEV y actualizaciones del protocolo Flashbots"
 		},
-		"modular-narrative": {
-			"description": "Modular Stack - Tool"
+		"modular_narrative": {
+			"description": "Tendencias del ecosistema blockchain modular y análisis de stack"
 		},
-		"btcfi-narrative": {
-			"description": "BTCFi Ecosystem - Tool"
+		"btcfi_narrative": {
+			"description": "Ecosistema Bitcoin DeFi y tendencias de desarrollo L2"
 		},
-		"intent-narrative": {
-			"description": "Intents & Chain Abstraction - Tool"
+		"intent_narrative": {
+			"description": "Tendencias de abstracción de cadena y arquitectura centrada en intents"
 		},
-		"depin-narrative": {
-			"description": "DePIN Ecosystem - Tool"
+		"depin_narrative": {
+			"description": "Tendencias de redes de infraestructura física descentralizada"
 		},
-		"socialfi-narrative": {
-			"description": "SocialFi Trends - Tool"
+		"socialfi_narrative": {
+			"description": "Tendencias de finanzas sociales y redes sociales tokenizadas"
 		},
-		"theblock-research": {
-			"description": "The Block Research - Tool"
+		"theblock_research": {
+			"description": "Investigación cripto y datos de mercado de The Block"
 		},
-		"delphi-digital": {
-			"description": "Delphi Digital - Tool"
+		"delphi_digital": {
+			"description": "Investigación cripto en profundidad y análisis institucional"
 		},
-		"bankless-hq": {
-			"description": "Bankless - Tool"
+		"bankless_hq": {
+			"description": "Plataforma de medios y educación cripto"
 		},
-		"unchained-crypto": {
-			"description": "Unchained - Tool"
+		"unchained_crypto": {
+			"description": "Podcast de noticias cripto y periodismo investigativo"
 		},
-		"ethglobal-events": {
-			"description": "ETHGlobal - Tool"
+		"ethglobal_events": {
+			"description": "Hackathons de Ethereum y eventos de desarrolladores mundiales"
 		},
-		"devcon-ethereum": {
-			"description": "Devcon - Tool"
+		"devcon_ethereum": {
+			"description": "Conferencia oficial de desarrolladores de Ethereum Foundation"
 		},
-		"consensus-coindesk": {
-			"description": "Consensus - Tool"
+		"consensus_coindesk": {
+			"description": "Conferencia anual de cripto y blockchain de CoinDesk"
 		},
-		"tokenterminal-dev": {
-			"description": "Token Terminal - Tool"
+		"tokenterminal_dev": {
+			"description": "Métricas de ingresos de protocolo y actividad de desarrolladores"
 		}
 	}
 }

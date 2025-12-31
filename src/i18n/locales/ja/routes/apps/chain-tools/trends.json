@@ -2,7 +2,7 @@
 	"category_seo": {
 		"title": "暗号資産トレンドとVC活動 - 市場インテリジェンス | BiuBiu Tools",
 		"description": "暗号資産市場のトレンドとベンチャーキャピタル活動を追跡。投資データ、新興ナラティブ、市場の動き。",
-		"keywords": "",
+		"keywords": "暗号資産トレンド, VC活動, 市場インテリジェンス, 暗号資産リサーチ, ブロックチェーンナラティブ",
 		"faqs": [
 			{
 				"question": "暗号資産トレンドを早期に識別するにはどうすればよいですか？",
@@ -20,106 +20,106 @@
 	},
 	"tools": {
 		"santiment": {
-			"description": "オンチェーンとソーシャルメトリクス"
+			"description": "暗号資産センチメント分析のためのオンチェーンおよびソーシャルメトリクス"
 		},
 		"lunarcrush": {
-			"description": "ソーシャルセンチメント分析"
+			"description": "ソーシャルセンチメント分析と市場インテリジェンスプラットフォーム"
 		},
 		"token2049": {
-			"description": "アジアのプレミア暗号資産カンファレンス"
+			"description": "シンガポールとドバイで開催されるアジアのプレミア暗号資産カンファレンス"
 		},
 		"developerreport": {
-			"description": "年次開発者エコシステムレポート"
+			"description": "Electric Capitalによる年次開発者エコシステムレポート"
 		},
-		"crunchbase-crypto": {
-			"description": "Crunchbase Crypto - Tool"
+		"crunchbase_crypto": {
+			"description": "暗号資産スタートアップ資金調達データベースと企業リサーチ"
 		},
-		"cryptorank-funding": {
-			"description": "CryptoRank Funding - Tool"
+		"cryptorank_funding": {
+			"description": "暗号資産資金調達ラウンドと投資トラッカー"
 		},
-		"rootdata-funding": {
-			"description": "RootData - Tool"
+		"rootdata_funding": {
+			"description": "資金調達とチームデータを含むWeb3プロジェクトデータベース"
 		},
-		"defilama-raises": {
-			"description": "DefiLlama Raises - Tool"
+		"defilama_raises": {
+			"description": "DeFiと暗号資産資金調達ラウンドアグリゲーター"
 		},
-		"messari-funding": {
-			"description": "Messari Fundraising - Tool"
+		"messari_funding": {
+			"description": "機関投資家向け暗号資産リサーチと資金調達データ"
 		},
-		"dove-metrics": {
-			"description": "Dove Metrics - Tool"
+		"dove_metrics": {
+			"description": "暗号資産資金調達データとVCディールフロー分析"
 		},
-		"galaxy-research": {
-			"description": "Galaxy Research - Tool"
+		"galaxy_research": {
+			"description": "Galaxy Digitalリサーチレポートと市場分析"
 		},
-		"kaito-ai": {
-			"description": "Kaito AI - Tool"
+		"kaito_ai": {
+			"description": "AI駆動の暗号資産リサーチとアルファ発見"
 		},
-		"artemis-xyz": {
-			"description": "Artemis - Tool"
+		"artemis_xyz": {
+			"description": "ブロックチェーン開発者活動とエコシステム分析"
 		},
-		"coinglass-trends": {
-			"description": "CoinGlass - Tool"
+		"coinglass_trends": {
+			"description": "暗号資産デリバティブデータと清算追跡"
 		},
-		"cryptoquant-trends": {
-			"description": "CryptoQuant - Tool"
+		"cryptoquant_trends": {
+			"description": "オンチェーン分析と取引所フロー指標"
 		},
-		"ethereum-magicians": {
-			"description": "Ethereum Magicians - Tool"
+		"ethereum_magicians": {
+			"description": "Ethereumコア開発ディスカッションフォーラム"
 		},
-		"ethresear-ch": {
-			"description": "ethresear.ch - Tool"
+		"ethresear_ch": {
+			"description": "プロトコル改善のためのEthereumリサーチフォーラム"
 		},
-		"github-trending-sol": {
-			"description": "GitHub Trending (Solidity) - Tool"
+		"github_trending_sol": {
+			"description": "GitHubでトレンドのSolidityリポジトリ"
 		},
-		"paradigm-research": {
-			"description": "Paradigm Research - Tool"
+		"paradigm_research": {
+			"description": "Paradigm VCリサーチとオープンソース貢献"
 		},
-		"a16z-research": {
-			"description": "a16z crypto Research - Tool"
+		"a16z_research": {
+			"description": "a16z暗号資産リサーチとState of Cryptoレポート"
 		},
-		"flashbots-writings": {
-			"description": "Flashbots Writings - Tool"
+		"flashbots_writings": {
+			"description": "MEVリサーチとFlashbotsプロトコル更新"
 		},
-		"modular-narrative": {
-			"description": "Modular Stack - Tool"
+		"modular_narrative": {
+			"description": "モジュラーブロックチェーンエコシステムトレンドとスタック分析"
 		},
-		"btcfi-narrative": {
-			"description": "BTCFi Ecosystem - Tool"
+		"btcfi_narrative": {
+			"description": "Bitcoin DeFiエコシステムとL2開発トレンド"
 		},
-		"intent-narrative": {
-			"description": "Intents & Chain Abstraction - Tool"
+		"intent_narrative": {
+			"description": "チェーン抽象化とインテント中心アーキテクチャトレンド"
 		},
-		"depin-narrative": {
-			"description": "DePIN Ecosystem - Tool"
+		"depin_narrative": {
+			"description": "分散型物理インフラネットワークトレンド"
 		},
-		"socialfi-narrative": {
-			"description": "SocialFi Trends - Tool"
+		"socialfi_narrative": {
+			"description": "ソーシャルファイナンスとトークン化ソーシャルネットワークトレンド"
 		},
-		"theblock-research": {
-			"description": "The Block Research - Tool"
+		"theblock_research": {
+			"description": "The Block暗号資産リサーチと市場データ"
 		},
-		"delphi-digital": {
-			"description": "Delphi Digital - Tool"
+		"delphi_digital": {
+			"description": "詳細な暗号資産リサーチと機関投資家向け分析"
 		},
-		"bankless-hq": {
-			"description": "Bankless - Tool"
+		"bankless_hq": {
+			"description": "暗号資産メディアと教育プラットフォーム"
 		},
-		"unchained-crypto": {
-			"description": "Unchained - Tool"
+		"unchained_crypto": {
+			"description": "暗号資産ニュースポッドキャストと調査報道"
 		},
-		"ethglobal-events": {
-			"description": "ETHGlobal - Tool"
+		"ethglobal_events": {
+			"description": "世界各地のEthereumハッカソンと開発者イベント"
 		},
-		"devcon-ethereum": {
-			"description": "Devcon - Tool"
+		"devcon_ethereum": {
+			"description": "Ethereum Foundation公式開発者カンファレンス"
 		},
-		"consensus-coindesk": {
-			"description": "Consensus - Tool"
+		"consensus_coindesk": {
+			"description": "CoinDeskの年次暗号資産・ブロックチェーンカンファレンス"
 		},
-		"tokenterminal-dev": {
-			"description": "Token Terminal - Tool"
+		"tokenterminal_dev": {
+			"description": "プロトコル収益と開発者活動メトリクス"
 		}
 	}
 }

@@ -2,6 +2,7 @@
 	"category_seo": {
 		"title": "Xu Hướng Crypto & Hoạt Động VC - Thông Tin Thị Trường | BiuBiu Tools",
 		"description": "Theo dõi xu hướng thị trường crypto và hoạt động vốn mạo hiểm. Dữ liệu đầu tư, câu chuyện mới nổi và biến động thị trường.",
+		"keywords": "xu hướng crypto, hoạt động vc, thông tin thị trường, nghiên cứu crypto, xu hướng blockchain",
 		"faqs": [
 			{
 				"question": "Làm thế nào để nhận biết xu hướng crypto sớm?",
@@ -19,106 +20,106 @@
 	},
 	"tools": {
 		"santiment": {
-			"description": "Chỉ số on-chain và xã hội"
+			"description": "Chỉ số on-chain và xã hội cho phân tích tâm lý crypto"
 		},
 		"lunarcrush": {
-			"description": "Phân tích tâm lý xã hội"
+			"description": "Nền tảng phân tích tâm lý xã hội và thông tin thị trường"
 		},
 		"token2049": {
-			"description": "Hội nghị crypto hàng đầu châu Á"
+			"description": "Hội nghị crypto hàng đầu châu Á tại Singapore và Dubai"
 		},
 		"developerreport": {
-			"description": "Báo cáo hệ sinh thái nhà phát triển hàng năm"
+			"description": "Báo cáo hệ sinh thái nhà phát triển hàng năm của Electric Capital"
 		},
-		"crunchbase-crypto": {
-			"description": "Crunchbase Crypto - Tool"
+		"crunchbase_crypto": {
+			"description": "Cơ sở dữ liệu tài trợ startup crypto và nghiên cứu công ty"
 		},
-		"cryptorank-funding": {
-			"description": "CryptoRank Funding - Tool"
+		"cryptorank_funding": {
+			"description": "Công cụ theo dõi vòng gọi vốn và đầu tư crypto"
 		},
-		"rootdata-funding": {
-			"description": "RootData - Tool"
+		"rootdata_funding": {
+			"description": "Cơ sở dữ liệu dự án Web3 với dữ liệu tài trợ và đội ngũ"
 		},
-		"defilama-raises": {
-			"description": "DefiLlama Raises - Tool"
+		"defilama_raises": {
+			"description": "Trình tổng hợp vòng gọi vốn DeFi và crypto"
 		},
-		"messari-funding": {
-			"description": "Messari Fundraising - Tool"
+		"messari_funding": {
+			"description": "Nghiên cứu crypto cấp tổ chức và dữ liệu tài trợ"
 		},
-		"dove-metrics": {
-			"description": "Dove Metrics - Tool"
+		"dove_metrics": {
+			"description": "Dữ liệu gây quỹ crypto và phân tích luồng giao dịch VC"
 		},
-		"galaxy-research": {
-			"description": "Galaxy Research - Tool"
+		"galaxy_research": {
+			"description": "Báo cáo nghiên cứu Galaxy Digital và phân tích thị trường"
 		},
-		"kaito-ai": {
-			"description": "Kaito AI - Tool"
+		"kaito_ai": {
+			"description": "Nghiên cứu crypto hỗ trợ AI và khám phá alpha"
 		},
-		"artemis-xyz": {
-			"description": "Artemis - Tool"
+		"artemis_xyz": {
+			"description": "Hoạt động nhà phát triển blockchain và phân tích hệ sinh thái"
 		},
-		"coinglass-trends": {
-			"description": "CoinGlass - Tool"
+		"coinglass_trends": {
+			"description": "Dữ liệu phái sinh crypto và theo dõi thanh lý"
 		},
-		"cryptoquant-trends": {
-			"description": "CryptoQuant - Tool"
+		"cryptoquant_trends": {
+			"description": "Phân tích on-chain và chỉ số luồng sàn giao dịch"
 		},
-		"ethereum-magicians": {
-			"description": "Ethereum Magicians - Tool"
+		"ethereum_magicians": {
+			"description": "Diễn đàn thảo luận phát triển lõi Ethereum"
 		},
-		"ethresear-ch": {
-			"description": "ethresear.ch - Tool"
+		"ethresear_ch": {
+			"description": "Diễn đàn nghiên cứu Ethereum cho cải tiến giao thức"
 		},
-		"github-trending-sol": {
-			"description": "GitHub Trending (Solidity) - Tool"
+		"github_trending_sol": {
+			"description": "Kho lưu trữ Solidity xu hướng trên GitHub"
 		},
-		"paradigm-research": {
-			"description": "Paradigm Research - Tool"
+		"paradigm_research": {
+			"description": "Nghiên cứu VC Paradigm và đóng góp mã nguồn mở"
 		},
-		"a16z-research": {
-			"description": "a16z crypto Research - Tool"
+		"a16z_research": {
+			"description": "Nghiên cứu crypto a16z và báo cáo State of Crypto"
 		},
-		"flashbots-writings": {
-			"description": "Flashbots Writings - Tool"
+		"flashbots_writings": {
+			"description": "Nghiên cứu MEV và cập nhật giao thức Flashbots"
 		},
-		"modular-narrative": {
-			"description": "Modular Stack - Tool"
+		"modular_narrative": {
+			"description": "Xu hướng hệ sinh thái blockchain mô-đun và phân tích stack"
 		},
-		"btcfi-narrative": {
-			"description": "BTCFi Ecosystem - Tool"
+		"btcfi_narrative": {
+			"description": "Hệ sinh thái Bitcoin DeFi và xu hướng phát triển L2"
 		},
-		"intent-narrative": {
-			"description": "Intents & Chain Abstraction - Tool"
+		"intent_narrative": {
+			"description": "Xu hướng trừu tượng hóa chuỗi và kiến trúc tập trung intent"
 		},
-		"depin-narrative": {
-			"description": "DePIN Ecosystem - Tool"
+		"depin_narrative": {
+			"description": "Xu hướng mạng cơ sở hạ tầng vật lý phi tập trung"
 		},
-		"socialfi-narrative": {
-			"description": "SocialFi Trends - Tool"
+		"socialfi_narrative": {
+			"description": "Xu hướng tài chính xã hội và mạng xã hội token hóa"
 		},
-		"theblock-research": {
-			"description": "The Block Research - Tool"
+		"theblock_research": {
+			"description": "Nghiên cứu crypto The Block và dữ liệu thị trường"
 		},
-		"delphi-digital": {
-			"description": "Delphi Digital - Tool"
+		"delphi_digital": {
+			"description": "Nghiên cứu crypto chuyên sâu và phân tích tổ chức"
 		},
-		"bankless-hq": {
-			"description": "Bankless - Tool"
+		"bankless_hq": {
+			"description": "Nền tảng truyền thông và giáo dục crypto"
 		},
-		"unchained-crypto": {
-			"description": "Unchained - Tool"
+		"unchained_crypto": {
+			"description": "Podcast tin tức crypto và báo chí điều tra"
 		},
-		"ethglobal-events": {
-			"description": "ETHGlobal - Tool"
+		"ethglobal_events": {
+			"description": "Hackathon Ethereum và sự kiện nhà phát triển toàn cầu"
 		},
-		"devcon-ethereum": {
-			"description": "Devcon - Tool"
+		"devcon_ethereum": {
+			"description": "Hội nghị nhà phát triển chính thức của Ethereum Foundation"
 		},
-		"consensus-coindesk": {
-			"description": "Consensus - Tool"
+		"consensus_coindesk": {
+			"description": "Hội nghị crypto và blockchain hàng năm của CoinDesk"
 		},
-		"tokenterminal-dev": {
-			"description": "Token Terminal - Tool"
+		"tokenterminal_dev": {
+			"description": "Chỉ số doanh thu giao thức và hoạt động nhà phát triển"
 		}
 	}
 }

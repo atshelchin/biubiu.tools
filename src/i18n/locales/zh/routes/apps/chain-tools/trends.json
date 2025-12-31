@@ -2,6 +2,7 @@
 	"category_seo": {
 		"title": "加密趋势与风投活动 - 市场情报 | BiuBiu Tools",
 		"description": "追踪加密市场趋势和风险投资活动。投资数据、新兴叙事和市场动向。",
+		"keywords": "加密趋势, 风投活动, 市场情报, 加密研究, 区块链叙事",
 		"faqs": [
 			{
 				"question": "如何早期识别加密趋势？",
@@ -19,106 +20,106 @@
 	},
 	"tools": {
 		"santiment": {
-			"description": "链上和社交指标"
+			"description": "用于加密情绪分析的链上和社交指标"
 		},
 		"lunarcrush": {
-			"description": "社交情绪分析"
+			"description": "社交情绪分析和市场情报平台"
 		},
 		"token2049": {
-			"description": "亚洲顶级加密大会"
+			"description": "亚洲顶级加密会议，在新加坡和迪拜举办"
 		},
 		"developerreport": {
-			"description": "年度开发者生态报告"
+			"description": "Electric Capital 年度开发者生态报告"
 		},
-		"crunchbase-crypto": {
-			"description": "Crunchbase Crypto - Tool"
+		"crunchbase_crypto": {
+			"description": "加密创业公司融资数据库和公司研究"
 		},
-		"cryptorank-funding": {
-			"description": "CryptoRank Funding - Tool"
+		"cryptorank_funding": {
+			"description": "加密融资轮次和投资追踪器"
 		},
-		"rootdata-funding": {
-			"description": "RootData - Tool"
+		"rootdata_funding": {
+			"description": "Web3 项目数据库，包含融资和团队数据"
 		},
-		"defilama-raises": {
-			"description": "DefiLlama Raises - Tool"
+		"defilama_raises": {
+			"description": "DeFi 和加密融资轮次聚合器"
 		},
-		"messari-funding": {
-			"description": "Messari Fundraising - Tool"
+		"messari_funding": {
+			"description": "机构级加密研究和融资数据"
 		},
-		"dove-metrics": {
-			"description": "Dove Metrics - Tool"
+		"dove_metrics": {
+			"description": "加密融资数据和风投交易流分析"
 		},
-		"galaxy-research": {
-			"description": "Galaxy Research - Tool"
+		"galaxy_research": {
+			"description": "Galaxy Digital 研究报告和市场分析"
 		},
-		"kaito-ai": {
-			"description": "Kaito AI - Tool"
+		"kaito_ai": {
+			"description": "AI 驱动的加密研究和 Alpha 发现"
 		},
-		"artemis-xyz": {
-			"description": "Artemis - Tool"
+		"artemis_xyz": {
+			"description": "区块链开发者活动和生态系统分析"
 		},
-		"coinglass-trends": {
-			"description": "CoinGlass - Tool"
+		"coinglass_trends": {
+			"description": "加密衍生品数据和清算追踪"
 		},
-		"cryptoquant-trends": {
-			"description": "CryptoQuant - Tool"
+		"cryptoquant_trends": {
+			"description": "链上分析和交易所资金流向指标"
 		},
-		"ethereum-magicians": {
-			"description": "Ethereum Magicians - Tool"
+		"ethereum_magicians": {
+			"description": "以太坊核心开发讨论论坛"
 		},
-		"ethresear-ch": {
-			"description": "ethresear.ch - Tool"
+		"ethresear_ch": {
+			"description": "以太坊协议改进研究论坛"
 		},
-		"github-trending-sol": {
-			"description": "GitHub Trending (Solidity) - Tool"
+		"github_trending_sol": {
+			"description": "GitHub 上热门的 Solidity 代码库"
 		},
-		"paradigm-research": {
-			"description": "Paradigm Research - Tool"
+		"paradigm_research": {
+			"description": "Paradigm 风投研究和开源贡献"
 		},
-		"a16z-research": {
-			"description": "a16z crypto Research - Tool"
+		"a16z_research": {
+			"description": "a16z 加密研究和加密现状报告"
 		},
-		"flashbots-writings": {
-			"description": "Flashbots Writings - Tool"
+		"flashbots_writings": {
+			"description": "MEV 研究和 Flashbots 协议更新"
 		},
-		"modular-narrative": {
-			"description": "Modular Stack - Tool"
+		"modular_narrative": {
+			"description": "模块化区块链生态系统趋势和堆栈分析"
 		},
-		"btcfi-narrative": {
-			"description": "BTCFi Ecosystem - Tool"
+		"btcfi_narrative": {
+			"description": "比特币 DeFi 生态系统和 L2 开发趋势"
 		},
-		"intent-narrative": {
-			"description": "Intents & Chain Abstraction - Tool"
+		"intent_narrative": {
+			"description": "链抽象和意图中心架构趋势"
 		},
-		"depin-narrative": {
-			"description": "DePIN Ecosystem - Tool"
+		"depin_narrative": {
+			"description": "去中心化物理基础设施网络趋势"
 		},
-		"socialfi-narrative": {
-			"description": "SocialFi Trends - Tool"
+		"socialfi_narrative": {
+			"description": "社交金融和代币化社交网络趋势"
 		},
-		"theblock-research": {
-			"description": "The Block Research - Tool"
+		"theblock_research": {
+			"description": "The Block 加密研究和市场数据"
 		},
-		"delphi-digital": {
-			"description": "Delphi Digital - Tool"
+		"delphi_digital": {
+			"description": "深度加密研究和机构分析"
 		},
-		"bankless-hq": {
-			"description": "Bankless - Tool"
+		"bankless_hq": {
+			"description": "加密媒体和教育平台"
 		},
-		"unchained-crypto": {
-			"description": "Unchained - Tool"
+		"unchained_crypto": {
+			"description": "加密新闻播客和调查性新闻"
 		},
-		"ethglobal-events": {
-			"description": "ETHGlobal - Tool"
+		"ethglobal_events": {
+			"description": "全球以太坊黑客松和开发者活动"
 		},
-		"devcon-ethereum": {
-			"description": "Devcon - Tool"
+		"devcon_ethereum": {
+			"description": "以太坊基金会官方开发者大会"
 		},
-		"consensus-coindesk": {
-			"description": "Consensus - Tool"
+		"consensus_coindesk": {
+			"description": "CoinDesk 年度加密和区块链大会"
 		},
-		"tokenterminal-dev": {
-			"description": "Token Terminal - Tool"
+		"tokenterminal_dev": {
+			"description": "协议收入和开发者活动指标"
 		}
 	}
 }

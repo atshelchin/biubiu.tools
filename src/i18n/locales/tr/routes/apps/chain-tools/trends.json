@@ -2,7 +2,7 @@
 	"category_seo": {
 		"title": "Kripto Trendleri ve VC Aktivitesi - Piyasa İstihbaratı | BiuBiu Tools",
 		"description": "Kripto piyasa trendlerini ve risk sermayesi aktivitesini takip edin. Yatırım verileri, gelişen anlatılar ve piyasa hareketleri.",
-		"keywords": "kripto trendler, kripto risk sermayesi, blokzincir yatırımları, piyasa trendleri",
+		"keywords": "kripto trendler, kripto risk sermayesi, blokzincir yatırımları, piyasa trendleri, kripto araştırma",
 		"faqs": [
 			{
 				"question": "Kripto trendlerini erken nasıl belirlerim?",
@@ -19,107 +19,107 @@
 		]
 	},
 	"tools": {
-		"developerreport": {
-			"description": "Annual geliştirici ekosistem report"
+		"santiment": {
+			"description": "Kripto duyarlılık analizi için zincir üstü ve sosyal metrikler"
 		},
 		"lunarcrush": {
-			"description": "Social sentiment analitik"
-		},
-		"santiment": {
-			"description": "On-zincir ve social metrics"
+			"description": "Sosyal duyarlılık analizi ve piyasa istihbarat platformu"
 		},
 		"token2049": {
-			"description": "Asia's premier crypto cüzerindeference"
+			"description": "Singapur ve Dubai'de Asya'nın premier kripto konferansı"
 		},
-		"crunchbase-crypto": {
-			"description": "Crunchbase Crypto - Tool"
+		"developerreport": {
+			"description": "Electric Capital tarafından yıllık geliştirici ekosistem raporu"
 		},
-		"cryptorank-funding": {
-			"description": "CryptoRank Funding - Tool"
+		"crunchbase_crypto": {
+			"description": "Kripto startup fonlama veritabanı ve şirket araştırması"
 		},
-		"rootdata-funding": {
-			"description": "RootData - Tool"
+		"cryptorank_funding": {
+			"description": "Kripto fonlama turları ve yatırım takipçisi"
 		},
-		"defilama-raises": {
-			"description": "DefiLlama Raises - Tool"
+		"rootdata_funding": {
+			"description": "Fonlama ve ekip verileriyle Web3 proje veritabanı"
 		},
-		"messari-funding": {
-			"description": "Messari Fundraising - Tool"
+		"defilama_raises": {
+			"description": "DeFi ve kripto fonlama turları toplayıcısı"
 		},
-		"dove-metrics": {
-			"description": "Dove Metrics - Tool"
+		"messari_funding": {
+			"description": "Kurumsal seviye kripto araştırma ve fonlama verileri"
 		},
-		"galaxy-research": {
-			"description": "Galaxy Research - Tool"
+		"dove_metrics": {
+			"description": "Kripto fon toplama verileri ve VC anlaşma akışı analitiği"
 		},
-		"kaito-ai": {
-			"description": "Kaito AI - Tool"
+		"galaxy_research": {
+			"description": "Galaxy Digital araştırma raporları ve piyasa analizi"
 		},
-		"artemis-xyz": {
-			"description": "Artemis - Tool"
+		"kaito_ai": {
+			"description": "AI destekli kripto araştırma ve alpha keşfi"
 		},
-		"coinglass-trends": {
-			"description": "CoinGlass - Tool"
+		"artemis_xyz": {
+			"description": "Blokzincir geliştirici aktivitesi ve ekosistem analitiği"
 		},
-		"cryptoquant-trends": {
-			"description": "CryptoQuant - Tool"
+		"coinglass_trends": {
+			"description": "Kripto türev verileri ve likidasyonu takibi"
 		},
-		"ethereum-magicians": {
-			"description": "Ethereum Magicians - Tool"
+		"cryptoquant_trends": {
+			"description": "Zincir üstü analitik ve borsa akış göstergeleri"
 		},
-		"ethresear-ch": {
-			"description": "ethresear.ch - Tool"
+		"ethereum_magicians": {
+			"description": "Ethereum çekirdek geliştirme tartışma forumu"
 		},
-		"github-trending-sol": {
-			"description": "GitHub Trending (Solidity) - Tool"
+		"ethresear_ch": {
+			"description": "Protokol iyileştirmeleri için Ethereum araştırma forumu"
 		},
-		"paradigm-research": {
-			"description": "Paradigm Research - Tool"
+		"github_trending_sol": {
+			"description": "GitHub'da trend olan Solidity depoları"
 		},
-		"a16z-research": {
-			"description": "a16z crypto Research - Tool"
+		"paradigm_research": {
+			"description": "Paradigm VC araştırması ve açık kaynak katkıları"
 		},
-		"flashbots-writings": {
-			"description": "Flashbots Writings - Tool"
+		"a16z_research": {
+			"description": "a16z kripto araştırması ve State of Crypto raporları"
 		},
-		"modular-narrative": {
-			"description": "Modular Stack - Tool"
+		"flashbots_writings": {
+			"description": "MEV araştırması ve Flashbots protokol güncellemeleri"
 		},
-		"btcfi-narrative": {
-			"description": "BTCFi Ecosystem - Tool"
+		"modular_narrative": {
+			"description": "Modüler blokzincir ekosistem trendleri ve yığın analizi"
 		},
-		"intent-narrative": {
-			"description": "Intents & Chain Abstraction - Tool"
+		"btcfi_narrative": {
+			"description": "Bitcoin DeFi ekosistemi ve L2 geliştirme trendleri"
 		},
-		"depin-narrative": {
-			"description": "DePIN Ecosystem - Tool"
+		"intent_narrative": {
+			"description": "Zincir soyutlama ve niyet merkezli mimari trendleri"
 		},
-		"socialfi-narrative": {
-			"description": "SocialFi Trends - Tool"
+		"depin_narrative": {
+			"description": "Merkeziyetsiz fiziksel altyapı ağı trendleri"
 		},
-		"theblock-research": {
-			"description": "The Block Research - Tool"
+		"socialfi_narrative": {
+			"description": "Sosyal finans ve tokenize sosyal ağ trendleri"
 		},
-		"delphi-digital": {
-			"description": "Delphi Digital - Tool"
+		"theblock_research": {
+			"description": "The Block kripto araştırması ve piyasa verileri"
 		},
-		"bankless-hq": {
-			"description": "Bankless - Tool"
+		"delphi_digital": {
+			"description": "Derinlemesine kripto araştırması ve kurumsal analiz"
 		},
-		"unchained-crypto": {
-			"description": "Unchained - Tool"
+		"bankless_hq": {
+			"description": "Kripto medya ve eğitim platformu"
 		},
-		"ethglobal-events": {
-			"description": "ETHGlobal - Tool"
+		"unchained_crypto": {
+			"description": "Kripto haber podcast'i ve araştırmacı gazetecilik"
 		},
-		"devcon-ethereum": {
-			"description": "Devcon - Tool"
+		"ethglobal_events": {
+			"description": "Dünya çapında Ethereum hackathon'ları ve geliştirici etkinlikleri"
 		},
-		"consensus-coindesk": {
-			"description": "Consensus - Tool"
+		"devcon_ethereum": {
+			"description": "Resmi Ethereum Vakfı geliştirici konferansı"
 		},
-		"tokenterminal-dev": {
-			"description": "Token Terminal - Tool"
+		"consensus_coindesk": {
+			"description": "CoinDesk'in yıllık kripto ve blokzincir konferansı"
+		},
+		"tokenterminal_dev": {
+			"description": "Protokol geliri ve geliştirici aktivite metrikleri"
 		}
 	}
 }

@@ -2,7 +2,7 @@
 	"category_seo": {
 		"title": "Криптотренды и активность венчурного капитала - Рыночная разведка | BiuBiu Tools",
 		"description": "Отслеживайте криптовалютные рыночные тренды и активность венчурного капитала. Инвестиционные данные, развивающиеся нарративы и движения рынка.",
-		"keywords": "криптотренды, венчурный капитал крипто, инвестиции в блокчейн, рыночные тренды",
+		"keywords": "криптотренды, венчурный капитал крипто, инвестиции в блокчейн, рыночные тренды, криптоисследования",
 		"faqs": [
 			{
 				"question": "Как выявить криптотренды рано?",
@@ -20,106 +20,106 @@
 	},
 	"tools": {
 		"santiment": {
-			"description": "Он-чейн и социальные метрики"
-		},
-		"developerreport": {
-			"description": "Annual разработчик экосистема report"
+			"description": "Он-чейн и социальные метрики для анализа настроений криптовалют"
 		},
 		"lunarcrush": {
-			"description": "Social sentiment аналитика"
+			"description": "Платформа аналитики социальных настроений и рыночной разведки"
 		},
 		"token2049": {
-			"description": "Asia's премиум crypto conference"
+			"description": "Премиальная криптоконференция Азии в Сингапуре и Дубае"
 		},
-		"crunchbase-crypto": {
-			"description": "Crunchbase Crypto - Tool"
+		"developerreport": {
+			"description": "Ежегодный отчёт экосистемы разработчиков от Electric Capital"
 		},
-		"cryptorank-funding": {
-			"description": "CryptoRank Funding - Tool"
+		"crunchbase_crypto": {
+			"description": "База данных финансирования криптостартапов и исследование компаний"
 		},
-		"rootdata-funding": {
-			"description": "RootData - Tool"
+		"cryptorank_funding": {
+			"description": "Трекер раундов криптофинансирования и инвестиций"
 		},
-		"defilama-raises": {
-			"description": "DefiLlama Raises - Tool"
+		"rootdata_funding": {
+			"description": "База данных Web3 проектов с данными о финансировании и командах"
 		},
-		"messari-funding": {
-			"description": "Messari Fundraising - Tool"
+		"defilama_raises": {
+			"description": "Агрегатор раундов финансирования DeFi и криптовалют"
 		},
-		"dove-metrics": {
-			"description": "Dove Metrics - Tool"
+		"messari_funding": {
+			"description": "Криптоисследования институционального уровня и данные о финансировании"
 		},
-		"galaxy-research": {
-			"description": "Galaxy Research - Tool"
+		"dove_metrics": {
+			"description": "Данные криптофандрейзинга и аналитика потока сделок VC"
 		},
-		"kaito-ai": {
-			"description": "Kaito AI - Tool"
+		"galaxy_research": {
+			"description": "Исследовательские отчёты Galaxy Digital и анализ рынка"
 		},
-		"artemis-xyz": {
-			"description": "Artemis - Tool"
+		"kaito_ai": {
+			"description": "Криптоисследования на базе AI и поиск альфы"
 		},
-		"coinglass-trends": {
-			"description": "CoinGlass - Tool"
+		"artemis_xyz": {
+			"description": "Активность блокчейн-разработчиков и аналитика экосистем"
 		},
-		"cryptoquant-trends": {
-			"description": "CryptoQuant - Tool"
+		"coinglass_trends": {
+			"description": "Данные криптодеривативов и отслеживание ликвидаций"
 		},
-		"ethereum-magicians": {
-			"description": "Ethereum Magicians - Tool"
+		"cryptoquant_trends": {
+			"description": "Он-чейн аналитика и индикаторы потоков бирж"
 		},
-		"ethresear-ch": {
-			"description": "ethresear.ch - Tool"
+		"ethereum_magicians": {
+			"description": "Форум обсуждения разработки ядра Ethereum"
 		},
-		"github-trending-sol": {
-			"description": "GitHub Trending (Solidity) - Tool"
+		"ethresear_ch": {
+			"description": "Исследовательский форум Ethereum для улучшений протокола"
 		},
-		"paradigm-research": {
-			"description": "Paradigm Research - Tool"
+		"github_trending_sol": {
+			"description": "Трендовые репозитории Solidity на GitHub"
 		},
-		"a16z-research": {
-			"description": "a16z crypto Research - Tool"
+		"paradigm_research": {
+			"description": "Исследования VC Paradigm и вклад в открытый код"
 		},
-		"flashbots-writings": {
-			"description": "Flashbots Writings - Tool"
+		"a16z_research": {
+			"description": "Криптоисследования a16z и отчёты State of Crypto"
 		},
-		"modular-narrative": {
-			"description": "Modular Stack - Tool"
+		"flashbots_writings": {
+			"description": "Исследования MEV и обновления протокола Flashbots"
 		},
-		"btcfi-narrative": {
-			"description": "BTCFi Ecosystem - Tool"
+		"modular_narrative": {
+			"description": "Тренды модульной блокчейн-экосистемы и анализ стека"
 		},
-		"intent-narrative": {
-			"description": "Intents & Chain Abstraction - Tool"
+		"btcfi_narrative": {
+			"description": "Экосистема Bitcoin DeFi и тренды развития L2"
 		},
-		"depin-narrative": {
-			"description": "DePIN Ecosystem - Tool"
+		"intent_narrative": {
+			"description": "Тренды абстракции цепей и интент-ориентированной архитектуры"
 		},
-		"socialfi-narrative": {
-			"description": "SocialFi Trends - Tool"
+		"depin_narrative": {
+			"description": "Тренды децентрализованных сетей физической инфраструктуры"
 		},
-		"theblock-research": {
-			"description": "The Block Research - Tool"
+		"socialfi_narrative": {
+			"description": "Тренды социальных финансов и токенизированных соцсетей"
 		},
-		"delphi-digital": {
-			"description": "Delphi Digital - Tool"
+		"theblock_research": {
+			"description": "Криптоисследования The Block и рыночные данные"
 		},
-		"bankless-hq": {
-			"description": "Bankless - Tool"
+		"delphi_digital": {
+			"description": "Глубокие криптоисследования и институциональный анализ"
 		},
-		"unchained-crypto": {
-			"description": "Unchained - Tool"
+		"bankless_hq": {
+			"description": "Криптомедиа и образовательная платформа"
 		},
-		"ethglobal-events": {
-			"description": "ETHGlobal - Tool"
+		"unchained_crypto": {
+			"description": "Подкаст криптоновостей и журналистские расследования"
 		},
-		"devcon-ethereum": {
-			"description": "Devcon - Tool"
+		"ethglobal_events": {
+			"description": "Хакатоны Ethereum и мероприятия для разработчиков по всему миру"
 		},
-		"consensus-coindesk": {
-			"description": "Consensus - Tool"
+		"devcon_ethereum": {
+			"description": "Официальная конференция разработчиков Ethereum Foundation"
 		},
-		"tokenterminal-dev": {
-			"description": "Token Terminal - Tool"
+		"consensus_coindesk": {
+			"description": "Ежегодная крипто- и блокчейн-конференция CoinDesk"
+		},
+		"tokenterminal_dev": {
+			"description": "Метрики доходов протоколов и активности разработчиков"
 		}
 	}
 }
