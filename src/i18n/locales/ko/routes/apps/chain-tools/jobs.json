@@ -1,161 +1,161 @@
 {
 	"category_seo": {
-		"title": "Web3 Jobs - Crypto Careers & Remote Opportunities | BiuBiu Tools",
-		"description": "Find jobs in the crypto industry. Developer roles, marketing, community management, and remote Web3 opportunities.",
-		"keywords": "",
+		"title": "암호화폐 일자리 - 블록체인 커리어와 기회 | BiuBiu Tools",
+		"description": "Web3 일자리, 암호화폐 기회, 블록체인 커리어를 찾으세요. 개발자, 마케터, 업계 전문가를 채용하는 회사들과 연결하세요.",
+		"keywords": "암호화폐 일자리, web3 일자리, 블록체인 커리어, 블록체인 개발자 일자리, 원격 암호화폐 일자리",
 		"faqs": [
 			{
-				"question": "What skills are needed for Web3 jobs?",
-				"answer": "Developers: Solidity, Rust, or TypeScript. Non-technical: community management, marketing, content creation, BD. Understanding of blockchain fundamentals is expected for all roles."
+				"question": "암호화폐 일자리를 어떻게 찾나요?",
+				"answer": "전문 Web3 구인 사이트로는 Crypto Jobs List, Web3 Career, Cryptocurrency Jobs, AngelList(암호화폐 필터)가 있습니다. 많은 프로젝트가 Discord, Twitter, LinkedIn에 채용 공고를 올립니다. 암호화폐 이벤트 네트워킹도 도움이 됩니다."
 			},
 			{
-				"question": "Where can I find Web3 jobs?",
-				"answer": "Crypto.jobs and Web3.career are dedicated job boards. LinkedIn has increasing crypto listings. Twitter/X job postings are common. Many roles are posted in project Discords."
+				"question": "Web3 일자리에 필요한 스킬은?",
+				"answer": "기술 스킬로는 스마트 컨트랙트 개발(Solidity, Rust), 프론트엔드 개발(React, ethers.js), 블록체인 보안이 있습니다. 비기술직은 암호화폐 마케팅, 커뮤니티 관리, 비즈니스 개발, 제품 디자인, 금융 경험이 필요합니다."
 			},
 			{
-				"question": "Are Web3 jobs mostly remote?",
-				"answer": "Yes, the majority of Web3 jobs are remote-first. Companies are globally distributed. Time zone flexibility varies - some require overlap with US or EU hours."
+				"question": "암호화폐 일자리 급여가 높나요?",
+				"answer": "일반적으로 그렇습니다, 특히 스마트 컨트랙트 개발자와 보안 역할에서요. 많은 Web3 포지션이 경쟁력 있는 보상, 원격 근무, 토큰 지분, 독특한 혜택을 제공합니다. 급여는 경험, 스킬, 회사 단계에 따라 다릅니다."
 			}
 		]
 	},
 	"tools": {
-		"jobs-cryptocurrencyjobs": {
-			"description": "Cryptocurrency Jobs - Tool"
+		"jobs_cryptocurrencyjobs": {
+			"description": "선도적인 블록체인 기업과 스타트업의 수천 개 포지션을 보유한 프리미어 암호화폐 구인 게시판"
 		},
-		"jobs-web3career": {
-			"description": "Web3.career - Tool"
+		"jobs_web3career": {
+			"description": "급여 투명성과 커리어 리소스를 갖춘 원격 암호화폐 구인 목록을 제공하는 Web3 커리어 포털"
 		},
-		"jobs-cryptojobslist": {
-			"description": "Crypto Jobs List - Tool"
+		"jobs_cryptojobslist": {
+			"description": "탑 블록체인 기업의 큐레이션된 Web3 포지션을 집계하는 암호화폐 구인 리스트"
 		},
-		"jobs-pompcryptojobs": {
-			"description": "Pomp Crypto Jobs - Tool"
+		"jobs_pompcryptojobs": {
+			"description": "검증된 블록체인 스타트업 포지션과 업계 인사이트를 제공하는 Pomp 암호화폐 구인 게시판"
 		},
-		"jobs-useweb3": {
-			"description": "useWeb3 - Tool"
+		"jobs_useweb3": {
+			"description": "Web3에 진입하는 개발자를 위한 튜토리얼, 일자리, 학습 자료를 제공하는 useWeb3 리소스 허브"
 		},
-		"jobs-remoteok-crypto": {
-			"description": "Remote OK Crypto - Tool"
+		"jobs_remoteok_crypto": {
+			"description": "글로벌 팀의 원격 친화적 블록체인 포지션을 제공하는 Remote OK 암호화폐 섹션"
 		},
-		"jobs-blockchaindevjobs": {
-			"description": "Blockchain Dev Jobs - Tool"
+		"jobs_blockchaindevjobs": {
+			"description": "Solidity, Rust, Web3 엔지니어링 역할에 초점을 맞춘 블록체인 개발자 구인 목록"
 		},
-		"jobs-defi-jobs": {
-			"description": "DeFi Jobs - Tool"
+		"jobs_defi_jobs": {
+			"description": "탈중앙화 금융 프로토콜과 프로젝트의 포지션을 제공하는 DeFi 전문 구인 게시판"
 		},
-		"jobs-builtin-blockchain": {
-			"description": "Built In Blockchain - Tool"
+		"jobs_builtin_blockchain": {
+			"description": "설립된 테크 기업과 전통 기업의 암호화폐 포지션을 제공하는 Built In 블록체인 일자리"
 		},
-		"jobs-dework": {
-			"description": "Dework - Tool"
+		"jobs_dework": {
+			"description": "기여자 바운티, 작업, 풀타임 DAO 일자리를 찾기 위한 Dework 작업 관리 플랫폼"
 		},
-		"jobs-layer3": {
-			"description": "Layer3 - Tool"
+		"jobs_layer3": {
+			"description": "프로토콜 작업을 완료하여 보상을 받고 Web3 일자리 기회를 발견하는 Layer3 퀘스트 플랫폼"
 		},
-		"jobs-gitcoin": {
-			"description": "Gitcoin - Tool"
+		"jobs_gitcoin": {
+			"description": "오픈소스 개발과 생태계 지원을 통해 보상을 받는 Gitcoin 그랜트와 바운티 플랫폼"
 		},
-		"jobs-coordinape": {
-			"description": "Coordinape - Tool"
+		"jobs_coordinape": {
+			"description": "기여 추적, 동료 인센티브, 커뮤니티 보상을 위한 Coordinape DAO 조정 도구"
 		},
-		"jobs-wonderverse": {
-			"description": "Wonderverse - Tool"
+		"jobs_wonderverse": {
+			"description": "기여자, 작업, 탈중앙화 워크플로를 관리하는 Wonderverse DAO 운영 플랫폼"
 		},
-		"jobs-charmverse": {
-			"description": "CharmVerse - Tool"
+		"jobs_charmverse": {
+			"description": "DAO 거버넌스, 제안, 기여자 관리를 위한 CharmVerse Web3 네이티브 워크스페이스"
 		},
-		"jobs-daolens": {
-			"description": "DAOLens - Tool"
+		"jobs_daolens": {
+			"description": "DAO를 탐색하고 기여 기회를 찾기 위한 DAOLens 분석 및 발견 플랫폼"
 		},
-		"jobs-immunefi": {
-			"description": "Immunefi - Tool"
+		"jobs_immunefi": {
+			"description": "보안 연구자를 위해 수백만 달러 보상을 제공하는 선도적인 Web3 버그 바운티 플랫폼"
 		},
-		"jobs-code4rena": {
-			"description": "Code4rena - Tool"
+		"jobs_code4rena": {
+			"description": "스마트 컨트랙트 취약점을 발견하여 바운티를 획득하는 Code4rena 경쟁 감사 플랫폼"
 		},
-		"jobs-sherlock": {
-			"description": "Sherlock - Tool"
+		"jobs_sherlock": {
+			"description": "보안 연구자에게 보장된 보상을 제공하는 Sherlock 감사 대회 및 보험 플랫폼"
 		},
-		"jobs-hackenproof": {
-			"description": "HackenProof - Tool"
+		"jobs_hackenproof": {
+			"description": "보안 연구자와 블록체인 프로젝트를 연결하는 HackenProof 버그 바운티 마켓플레이스"
 		},
-		"jobs-hats-finance": {
-			"description": "Hats Finance - Tool"
+		"jobs_hats_finance": {
+			"description": "커뮤니티 주도 보안 인센티브를 제공하는 Hats Finance 탈중앙화 감사 및 버그 바운티"
 		},
-		"jobs-cantina": {
-			"description": "Cantina - Tool"
+		"jobs_cantina": {
+			"description": "탑 Web3 보안 연구자와 프로토콜을 연결하는 Cantina 보안 마켓플레이스"
 		},
-		"jobs-ethbounties": {
-			"description": "ETH Bounties - Tool"
+		"jobs_ethbounties": {
+			"description": "개발, 연구, 커뮤니티 프로젝트를 위한 이더리움 바운티와 그랜트"
 		},
-		"jobs-a16z-portfolio": {
-			"description": "a16z Portfolio Jobs - Tool"
+		"jobs_a16z_portfolio": {
+			"description": "선도적인 암호화폐 VC가 지원하는 스타트업 기회를 제공하는 a16z 포트폴리오 기업 일자리"
 		},
-		"jobs-paradigm-portfolio": {
-			"description": "Paradigm Portfolio - Tool"
+		"jobs_paradigm_portfolio": {
+			"description": "탑 암호화폐 투자자가 지원하는 기업 포지션에 연결하는 Paradigm 포트폴리오 채용"
 		},
-		"jobs-coinbase": {
-			"description": "Coinbase Careers - Tool"
+		"jobs_coinbase": {
+			"description": "미국 선도 암호화폐 거래소의 포지션을 제공하는 Coinbase 공식 채용 페이지"
 		},
-		"jobs-binance": {
-			"description": "Binance Careers - Tool"
+		"jobs_binance": {
+			"description": "세계 최대 암호화폐 거래소의 포지션을 제공하는 Binance 채용 포털"
 		},
-		"jobs-consensys": {
-			"description": "ConsenSys Careers - Tool"
+		"jobs_consensys": {
+			"description": "MetaMask와 Infura를 개발하는 이더리움 인프라 기업의 포지션을 제공하는 ConsenSys 채용"
 		},
-		"jobs-chainlink-labs": {
-			"description": "Chainlink Labs - Tool"
+		"jobs_chainlink_labs": {
+			"description": "선도적인 탈중앙화 오라클 네트워크의 기회를 제공하는 Chainlink Labs 일자리"
 		},
-		"jobs-ethereum-foundation": {
-			"description": "Ethereum Foundation - Tool"
+		"jobs_ethereum_foundation": {
+			"description": "이더리움 프로토콜 개발과 생태계 성장을 지원하는 이더리움 재단 일자리"
 		},
-		"jobs-uniswap-labs": {
-			"description": "Uniswap Labs - Tool"
+		"jobs_uniswap_labs": {
+			"description": "선도적인 탈중앙화 거래소와 DeFi 프로토콜을 구축하는 Uniswap Labs 채용"
 		},
-		"jobs-opensea": {
-			"description": "OpenSea Careers - Tool"
+		"jobs_opensea": {
+			"description": "최대 NFT 마켓플레이스의 기회를 제공하는 OpenSea 포지션"
 		},
-		"jobs-alchemy": {
-			"description": "Alchemy Careers - Tool"
+		"jobs_alchemy": {
+			"description": "선도적인 블록체인 개발 플랫폼의 엔지니어링과 비즈니스 역할을 제공하는 Alchemy 채용 페이지"
 		},
-		"jobs-encode-club": {
-			"description": "Encode Club - Tool"
+		"jobs_encode_club": {
+			"description": "학습과 구축을 통해 Web3에 진입하기 위한 Encode Club 교육 및 해커톤"
 		},
-		"jobs-ethglobal-fellowship": {
-			"description": "ETHGlobal Fellowship - Tool"
+		"jobs_ethglobal_fellowship": {
+			"description": "Web3 신규 참여자를 위한 해커톤과 워크샵을 제공하는 ETHGlobal 펠로우십 프로그램"
 		},
-		"jobs-developer-dao": {
-			"description": "Developer DAO - Tool"
+		"jobs_developer_dao": {
+			"description": "Web3 개발자를 위한 리소스, 일자리, 네트워킹을 제공하는 Developer DAO 커뮤니티"
 		},
-		"jobs-buildspace-n-w": {
-			"description": "Buildspace Nights & Weekends - Tool"
+		"jobs_buildspace_n_w": {
+			"description": "구축, 학습, 지원을 받기 위한 Buildspace Nights & Weekends 인큐베이터 프로그램"
 		},
-		"jobs-abcde": {
-			"description": "ABCDE Capital Jobs - Tool"
+		"jobs_abcde": {
+			"description": "아시아 선도 암호화폐 VC의 포트폴리오 기회를 제공하는 ABCDE Capital 채용 페이지"
 		},
-		"jobs-foresight-ventures": {
-			"description": "Foresight Ventures Jobs - Tool"
+		"jobs_foresight_ventures": {
+			"description": "아시아 암호화폐 투자 회사의 기회를 제공하는 Foresight Ventures 일자리"
 		},
-		"jobs-hashkey": {
-			"description": "HashKey Careers - Tool"
+		"jobs_hashkey": {
+			"description": "아시아 선도 디지털 자산 금융 서비스 그룹의 포지션을 제공하는 HashKey 채용 포털"
 		},
-		"jobs-okx": {
-			"description": "OKX Careers - Tool"
+		"jobs_okx": {
+			"description": "글로벌 암호화폐 거래소와 Web3 생태계의 포지션을 제공하는 OKX 채용"
 		},
-		"jobs-huobi": {
-			"description": "HTX Careers - Tool"
+		"jobs_huobi": {
+			"description": "글로벌 암호화폐 거래소의 기회를 제공하는 HTX(구 Huobi) 채용"
 		},
-		"jobs-crypto-careers": {
-			"description": "Crypto Careers - Tool"
+		"jobs_crypto_careers": {
+			"description": "블록체인 중심 일자리 집계와 커리어 리소스를 제공하는 Crypto Careers 구직 플랫폼"
 		},
-		"jobs-otta-web3": {
-			"description": "Otta Web3 - Tool"
+		"jobs_otta_web3": {
+			"description": "현대적 구직 플랫폼에서 큐레이션된 암호화폐 기회를 발견하는 Otta Web3 일자리"
 		},
-		"jobs-angellist-crypto": {
-			"description": "AngelList Crypto - Tool"
+		"jobs_angellist_crypto": {
+			"description": "선도적인 스타트업 채용 플랫폼의 Web3 포지션을 제공하는 AngelList 암호화폐 스타트업 일자리"
 		},
-		"jobs-linkedin-web3": {
-			"description": "LinkedIn Web3 - Tool"
+		"jobs_linkedin_web3": {
+			"description": "전문 네트워크에서 암호화폐와 블록체인 기회를 발견하는 LinkedIn Web3 일자리 검색"
 		}
 	}
 }

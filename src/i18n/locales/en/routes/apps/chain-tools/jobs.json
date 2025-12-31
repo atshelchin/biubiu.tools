@@ -1,160 +1,161 @@
 {
 	"category_seo": {
-		"title": "Web3 工作 - 加密职业与远程机会 | BiuBiu Tools",
-		"description": "在加密行业找工作。开发者职位、市场营销、社区管理和远程 Web3 机会。",
+		"title": "Web3 Jobs - Crypto Careers & Remote Opportunities | BiuBiu Tools",
+		"description": "Find jobs in the crypto industry. Developer positions, marketing, community management and remote Web3 opportunities.",
+		"keywords": "web3 jobs, crypto careers, blockchain jobs, remote crypto, defi jobs",
 		"faqs": [
 			{
-				"question": "Web3 工作需要什么技能？",
-				"answer": "开发者：Solidity、Rust 或 TypeScript。非技术：社区管理、市场营销、内容创作、BD。所有职位都期望理解区块链基础知识。"
+				"question": "What skills are needed for Web3 jobs?",
+				"answer": "Developers: Solidity, Rust, or TypeScript. Non-technical: community management, marketing, content creation, BD. All positions expect understanding of blockchain fundamentals."
 			},
 			{
-				"question": "在哪里找 Web3 工作？",
-				"answer": "Crypto.jobs 和 Web3.career 是专门的招聘网站。LinkedIn 有越来越多的加密职位。Twitter/X 上的招聘帖子很常见。许多职位在项目 Discord 中发布。"
+				"question": "Where to find Web3 jobs?",
+				"answer": "Crypto.jobs and Web3.career are dedicated job boards. LinkedIn has a growing number of crypto positions. Hiring posts on Twitter/X are common. Many positions are posted in project Discords."
 			},
 			{
-				"question": "Web3 工作大多是远程吗？",
-				"answer": "是的，大多数 Web3 工作都是远程优先。公司分布在全球各地。时区灵活性各异——有些要求与美国或欧洲时区重叠。"
+				"question": "Are Web3 jobs mostly remote?",
+				"answer": "Yes, most Web3 jobs are remote-first. Companies are distributed globally. Timezone flexibility varies - some require overlap with US or European timezones."
 			}
 		]
 	},
 	"tools": {
-		"jobs-cryptocurrencyjobs": {
-			"description": "Cryptocurrency Jobs - Tool"
+		"jobs_cryptocurrencyjobs": {
+			"description": "Premier crypto job board with thousands of positions from top blockchain companies and startups"
 		},
-		"jobs-web3career": {
-			"description": "Web3.career - Tool"
+		"jobs_web3career": {
+			"description": "Curated Web3 job platform featuring developer, marketing, and community positions at crypto companies"
 		},
-		"jobs-cryptojobslist": {
-			"description": "Crypto Jobs List - Tool"
+		"jobs_cryptojobslist": {
+			"description": "Comprehensive crypto job aggregator covering blockchain startups to established exchanges"
 		},
-		"jobs-pompcryptojobs": {
-			"description": "Pomp Crypto Jobs - Tool"
+		"jobs_pompcryptojobs": {
+			"description": "Curated crypto job board by Anthony Pompliano featuring quality positions from vetted companies"
 		},
-		"jobs-useweb3": {
-			"description": "useWeb3 - Tool"
+		"jobs_useweb3": {
+			"description": "Web3 learning and job platform with developer-focused positions and educational resources"
 		},
-		"jobs-remoteok-crypto": {
-			"description": "Remote OK Crypto - Tool"
+		"jobs_remoteok_crypto": {
+			"description": "Remote-first crypto job listings from the popular Remote OK platform with global opportunities"
 		},
-		"jobs-blockchaindevjobs": {
-			"description": "Blockchain Dev Jobs - Tool"
+		"jobs_blockchaindevjobs": {
+			"description": "Technical blockchain developer job board for Solidity, Rust, and smart contract positions"
 		},
-		"jobs-defi-jobs": {
-			"description": "DeFi Jobs - Tool"
+		"jobs_defi_jobs": {
+			"description": "DeFi-focused job platform for positions at lending protocols, DEXs, and yield platforms"
 		},
-		"jobs-builtin-blockchain": {
-			"description": "Built In Blockchain - Tool"
+		"jobs_builtin_blockchain": {
+			"description": "Blockchain jobs on Built In platform featuring positions at funded tech startups"
 		},
-		"jobs-dework": {
-			"description": "Dework - Tool"
+		"jobs_dework": {
+			"description": "DAO task and bounty platform for finding contributor work and on-chain compensation"
 		},
-		"jobs-layer3": {
-			"description": "Layer3 - Tool"
+		"jobs_layer3": {
+			"description": "Quest and bounty platform for earning rewards by completing on-chain tasks and learning"
 		},
-		"jobs-gitcoin": {
-			"description": "Gitcoin - Tool"
+		"jobs_gitcoin": {
+			"description": "Open source funding and bounty platform supporting Web3 public goods development"
 		},
-		"jobs-coordinape": {
-			"description": "Coordinape - Tool"
+		"jobs_coordinape": {
+			"description": "DAO compensation tool for peer-based rewards and contributor circle management"
 		},
-		"jobs-wonderverse": {
-			"description": "Wonderverse - Tool"
+		"jobs_wonderverse": {
+			"description": "DAO project management platform for organizing tasks, bounties, and contributor workflows"
 		},
-		"jobs-charmverse": {
-			"description": "CharmVerse - Tool"
+		"jobs_charmverse": {
+			"description": "Web3 workspace platform for DAOs with bounties, proposals, and community management"
 		},
-		"jobs-daolens": {
-			"description": "DAOLens - Tool"
+		"jobs_daolens": {
+			"description": "DAO discovery and analytics platform for finding contributor opportunities across DAOs"
 		},
-		"jobs-immunefi": {
-			"description": "Immunefi - Tool"
+		"jobs_immunefi": {
+			"description": "Leading Web3 bug bounty platform with millions in rewards for security researchers"
 		},
-		"jobs-code4rena": {
-			"description": "Code4rena - Tool"
+		"jobs_code4rena": {
+			"description": "Competitive smart contract auditing platform with contests and rewards for auditors"
 		},
-		"jobs-sherlock": {
-			"description": "Sherlock - Tool"
+		"jobs_sherlock": {
+			"description": "DeFi security platform combining auditing contests with protocol coverage"
 		},
-		"jobs-hackenproof": {
-			"description": "HackenProof - Tool"
+		"jobs_hackenproof": {
+			"description": "Blockchain bug bounty platform for security researchers and whitehat hackers"
 		},
-		"jobs-hats-finance": {
-			"description": "Hats Finance - Tool"
+		"jobs_hats_finance": {
+			"description": "Decentralized bug bounty protocol with on-chain incentives for security findings"
 		},
-		"jobs-cantina": {
-			"description": "Cantina - Tool"
+		"jobs_cantina": {
+			"description": "Premium security auditing platform by Spearbit for competitive audit contests"
 		},
-		"jobs-ethbounties": {
-			"description": "ETH Bounties - Tool"
+		"jobs_ethbounties": {
+			"description": "Official Ethereum Foundation bug bounty program for protocol-level security"
 		},
-		"jobs-a16z-portfolio": {
-			"description": "a16z Portfolio Jobs - Tool"
+		"jobs_a16z_portfolio": {
+			"description": "Job board for Andreessen Horowitz crypto portfolio companies with funded positions"
 		},
-		"jobs-paradigm-portfolio": {
-			"description": "Paradigm Portfolio - Tool"
+		"jobs_paradigm_portfolio": {
+			"description": "Career opportunities at Paradigm-backed crypto companies and protocols"
 		},
-		"jobs-coinbase": {
-			"description": "Coinbase Careers - Tool"
+		"jobs_coinbase": {
+			"description": "Coinbase official careers page for positions at the leading US crypto exchange"
 		},
-		"jobs-binance": {
-			"description": "Binance Careers - Tool"
+		"jobs_binance": {
+			"description": "Binance careers portal for global positions at the world's largest crypto exchange"
 		},
-		"jobs-consensys": {
-			"description": "ConsenSys Careers - Tool"
+		"jobs_consensys": {
+			"description": "ConsenSys careers for Ethereum infrastructure roles including MetaMask and Infura teams"
 		},
-		"jobs-chainlink-labs": {
-			"description": "Chainlink Labs - Tool"
+		"jobs_chainlink_labs": {
+			"description": "Chainlink Labs careers for oracle network and Web3 infrastructure positions"
 		},
-		"jobs-ethereum-foundation": {
-			"description": "Ethereum Foundation - Tool"
+		"jobs_ethereum_foundation": {
+			"description": "Ethereum Foundation open positions for protocol research and ecosystem development"
 		},
-		"jobs-uniswap-labs": {
-			"description": "Uniswap Labs - Tool"
+		"jobs_uniswap_labs": {
+			"description": "Uniswap Labs careers for positions at the leading decentralized exchange"
 		},
-		"jobs-opensea": {
-			"description": "OpenSea Careers - Tool"
+		"jobs_opensea": {
+			"description": "OpenSea careers for positions at the major NFT marketplace platform"
 		},
-		"jobs-alchemy": {
-			"description": "Alchemy Careers - Tool"
+		"jobs_alchemy": {
+			"description": "Alchemy careers for Web3 developer infrastructure and API platform positions"
 		},
-		"jobs-encode-club": {
-			"description": "Encode Club - Tool"
+		"jobs_encode_club": {
+			"description": "Web3 education and bootcamp platform for entry-level blockchain developer training"
 		},
-		"jobs-ethglobal-fellowship": {
-			"description": "ETHGlobal Fellowship - Tool"
+		"jobs_ethglobal_fellowship": {
+			"description": "ETHGlobal hackathon organizer with fellowship programs and builder opportunities"
 		},
-		"jobs-developer-dao": {
-			"description": "Developer DAO - Tool"
+		"jobs_developer_dao": {
+			"description": "Developer community DAO for Web3 education, networking, and entry-level opportunities"
 		},
-		"jobs-buildspace-n-w": {
-			"description": "Buildspace Nights & Weekends - Tool"
+		"jobs_buildspace_n_w": {
+			"description": "Buildspace incubator program for building projects with community support and mentorship"
 		},
-		"jobs-abcde": {
-			"description": "ABCDE Capital Jobs - Tool"
+		"jobs_abcde": {
+			"description": "ABCDE Capital portfolio job opportunities for positions at Asia-focused crypto funds"
 		},
-		"jobs-foresight-ventures": {
-			"description": "Foresight Ventures Jobs - Tool"
+		"jobs_foresight_ventures": {
+			"description": "Foresight Ventures careers for positions at the Asia-based crypto investment firm"
 		},
-		"jobs-hashkey": {
-			"description": "HashKey Careers - Tool"
+		"jobs_hashkey": {
+			"description": "HashKey careers for positions at the Hong Kong licensed digital asset group"
 		},
-		"jobs-okx": {
-			"description": "OKX Careers - Tool"
+		"jobs_okx": {
+			"description": "OKX global careers for positions at the major cryptocurrency exchange"
 		},
-		"jobs-huobi": {
-			"description": "HTX Careers - Tool"
+		"jobs_huobi": {
+			"description": "HTX (formerly Huobi) careers for positions at the global crypto exchange"
 		},
-		"jobs-crypto-careers": {
-			"description": "Crypto Careers - Tool"
+		"jobs_crypto_careers": {
+			"description": "Crypto career networking platform for job seekers and industry professionals"
 		},
-		"jobs-otta-web3": {
-			"description": "Otta Web3 - Tool"
+		"jobs_otta_web3": {
+			"description": "Otta curated Web3 job matches based on skills and preferences"
 		},
-		"jobs-angellist-crypto": {
-			"description": "AngelList Crypto - Tool"
+		"jobs_angellist_crypto": {
+			"description": "Wellfound (AngelList) crypto startup jobs with equity compensation options"
 		},
-		"jobs-linkedin-web3": {
-			"description": "LinkedIn Web3 - Tool"
+		"jobs_linkedin_web3": {
+			"description": "LinkedIn Web3 job search for professional blockchain and crypto positions"
 		}
 	}
 }

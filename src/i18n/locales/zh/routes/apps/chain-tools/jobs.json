@@ -1,160 +1,161 @@
 {
 	"category_seo": {
-		"title": "Web3 工作 - 加密职业与远程机会 | BiuBiu Tools",
-		"description": "在加密行业找工作。开发者职位、市场营销、社区管理和远程 Web3 机会。",
+		"title": "加密货币工作 - 区块链职业与机会 | BiuBiu Tools",
+		"description": "查找Web3工作、加密货币机会和区块链职业。与招聘开发者、营销人员和行业专业人士的公司建立联系。",
+		"keywords": "加密货币工作, web3工作, 区块链职业, 区块链开发者工作, 远程加密货币工作",
 		"faqs": [
 			{
-				"question": "Web3 工作需要什么技能？",
-				"answer": "开发者：Solidity、Rust 或 TypeScript。非技术：社区管理、市场营销、内容创作、BD。所有职位都期望理解区块链基础知识。"
+				"question": "如何找到加密货币工作?",
+				"answer": "专业的Web3招聘网站包括Crypto Jobs List、Web3 Career、Cryptocurrency Jobs和AngelList（加密货币筛选）。许多项目在Discord、Twitter和LinkedIn上发布职位。参加加密货币活动也有助于建立人脉。"
 			},
 			{
-				"question": "在哪里找 Web3 工作？",
-				"answer": "Crypto.jobs 和 Web3.career 是专门的招聘网站。LinkedIn 有越来越多的加密职位。Twitter/X 上的招聘帖子很常见。许多职位在项目 Discord 中发布。"
+				"question": "Web3工作需要什么技能?",
+				"answer": "技术技能包括智能合约开发（Solidity、Rust）、前端开发（React、ethers.js）、区块链安全。非技术岗位需要加密货币营销、社区管理、业务拓展、产品设计和金融经验。"
 			},
 			{
-				"question": "Web3 工作大多是远程吗？",
-				"answer": "是的，大多数 Web3 工作都是远程优先。公司分布在全球各地。时区灵活性各异——有些要求与美国或欧洲时区重叠。"
+				"question": "加密货币工作薪资高吗?",
+				"answer": "通常是的，尤其是智能合约开发者和安全岗位。许多Web3职位提供有竞争力的薪酬、远程工作、代币股权和独特福利。薪资因经验、技能和公司阶段而异。"
 			}
 		]
 	},
 	"tools": {
-		"jobs-cryptocurrencyjobs": {
-			"description": "Cryptocurrency Jobs - Tool"
+		"jobs_cryptocurrencyjobs": {
+			"description": "顶级加密货币招聘平台，拥有来自领先区块链公司和初创企业的数千个职位"
 		},
-		"jobs-web3career": {
-			"description": "Web3.career - Tool"
+		"jobs_web3career": {
+			"description": "Web3职业门户，提供带薪资透明度的远程加密货币工作列表和职业资源"
 		},
-		"jobs-cryptojobslist": {
-			"description": "Crypto Jobs List - Tool"
+		"jobs_cryptojobslist": {
+			"description": "加密货币工作列表，汇集顶级区块链公司的精选Web3职位"
 		},
-		"jobs-pompcryptojobs": {
-			"description": "Pomp Crypto Jobs - Tool"
+		"jobs_pompcryptojobs": {
+			"description": "Pomp加密货币工作板，提供经过验证的区块链初创公司职位和行业洞察"
 		},
-		"jobs-useweb3": {
-			"description": "useWeb3 - Tool"
+		"jobs_useweb3": {
+			"description": "useWeb3资源中心，为想要进入Web3的开发者提供教程、工作和学习材料"
 		},
-		"jobs-remoteok-crypto": {
-			"description": "Remote OK Crypto - Tool"
+		"jobs_remoteok_crypto": {
+			"description": "Remote OK加密货币版块，提供全球团队的远程友好区块链职位"
 		},
-		"jobs-blockchaindevjobs": {
-			"description": "Blockchain Dev Jobs - Tool"
+		"jobs_blockchaindevjobs": {
+			"description": "区块链开发者工作列表，专注Solidity、Rust和Web3工程角色"
 		},
-		"jobs-defi-jobs": {
-			"description": "DeFi Jobs - Tool"
+		"jobs_defi_jobs": {
+			"description": "DeFi专业招聘板，提供去中心化金融协议和项目的职位"
 		},
-		"jobs-builtin-blockchain": {
-			"description": "Built In Blockchain - Tool"
+		"jobs_builtin_blockchain": {
+			"description": "Built In区块链工作，提供科技公司和传统企业的加密货币职位"
 		},
-		"jobs-dework": {
-			"description": "Dework - Tool"
+		"jobs_dework": {
+			"description": "Dework DAO任务管理平台，用于寻找贡献者bounty、任务和全职DAO工作"
 		},
-		"jobs-layer3": {
-			"description": "Layer3 - Tool"
+		"jobs_layer3": {
+			"description": "Layer3任务平台，通过完成协议任务获得报酬并发现Web3工作机会"
 		},
-		"jobs-gitcoin": {
-			"description": "Gitcoin - Tool"
+		"jobs_gitcoin": {
+			"description": "Gitcoin资助和bounty平台，通过开源开发和生态系统支持获得报酬"
 		},
-		"jobs-coordinape": {
-			"description": "Coordinape - Tool"
+		"jobs_coordinape": {
+			"description": "Coordinape DAO协调工具，用于贡献跟踪、同事间激励和社区薪酬"
 		},
-		"jobs-wonderverse": {
-			"description": "Wonderverse - Tool"
+		"jobs_wonderverse": {
+			"description": "Wonderverse DAO运营平台，用于管理贡献者、任务和去中心化工作流"
 		},
-		"jobs-charmverse": {
-			"description": "CharmVerse - Tool"
+		"jobs_charmverse": {
+			"description": "CharmVerse Web3原生工作空间，用于DAO治理、提案和贡献者管理"
 		},
-		"jobs-daolens": {
-			"description": "DAOLens - Tool"
+		"jobs_daolens": {
+			"description": "DAOLens分析和发现平台，用于探索DAO并找到贡献机会"
 		},
-		"jobs-immunefi": {
-			"description": "Immunefi - Tool"
+		"jobs_immunefi": {
+			"description": "领先的Web3漏洞赏金平台，为安全研究人员提供数百万美元奖励"
 		},
-		"jobs-code4rena": {
-			"description": "Code4rena - Tool"
+		"jobs_code4rena": {
+			"description": "Code4rena竞争性审计平台，通过发现智能合约漏洞获得赏金"
 		},
-		"jobs-sherlock": {
-			"description": "Sherlock - Tool"
+		"jobs_sherlock": {
+			"description": "Sherlock审计竞赛和保险平台，为安全研究人员提供有保障的奖励"
 		},
-		"jobs-hackenproof": {
-			"description": "HackenProof - Tool"
+		"jobs_hackenproof": {
+			"description": "HackenProof漏洞赏金市场，连接安全研究人员和区块链项目"
 		},
-		"jobs-hats-finance": {
-			"description": "Hats Finance - Tool"
+		"jobs_hats_finance": {
+			"description": "Hats Finance去中心化审计和漏洞赏金，提供社区驱动的安全激励"
 		},
-		"jobs-cantina": {
-			"description": "Cantina - Tool"
+		"jobs_cantina": {
+			"description": "Cantina安全市场，连接顶级Web3安全研究人员和协议"
 		},
-		"jobs-ethbounties": {
-			"description": "ETH Bounties - Tool"
+		"jobs_ethbounties": {
+			"description": "以太坊bounty和资助平台，用于开发、研究和社区项目"
 		},
-		"jobs-a16z-portfolio": {
-			"description": "a16z Portfolio Jobs - Tool"
+		"jobs_a16z_portfolio": {
+			"description": "a16z投资组合公司职位，提供由领先加密货币VC支持的初创公司机会"
 		},
-		"jobs-paradigm-portfolio": {
-			"description": "Paradigm Portfolio - Tool"
+		"jobs_paradigm_portfolio": {
+			"description": "Paradigm投资组合招聘，链接由顶级加密货币投资者支持的公司职位"
 		},
-		"jobs-coinbase": {
-			"description": "Coinbase Careers - Tool"
+		"jobs_coinbase": {
+			"description": "Coinbase官方招聘页面，提供美国领先加密货币交易所的职位"
 		},
-		"jobs-binance": {
-			"description": "Binance Careers - Tool"
+		"jobs_binance": {
+			"description": "Binance招聘门户，提供全球最大加密货币交易所的职位"
 		},
-		"jobs-consensys": {
-			"description": "ConsenSys Careers - Tool"
+		"jobs_consensys": {
+			"description": "ConsenSys招聘，提供MetaMask和Infura背后以太坊基础设施公司的职位"
 		},
-		"jobs-chainlink-labs": {
-			"description": "Chainlink Labs - Tool"
+		"jobs_chainlink_labs": {
+			"description": "Chainlink Labs职位，提供领先去中心化预言机网络的机会"
 		},
-		"jobs-ethereum-foundation": {
-			"description": "Ethereum Foundation - Tool"
+		"jobs_ethereum_foundation": {
+			"description": "以太坊基金会工作，支持以太坊协议开发和生态系统增长"
 		},
-		"jobs-uniswap-labs": {
-			"description": "Uniswap Labs - Tool"
+		"jobs_uniswap_labs": {
+			"description": "Uniswap Labs招聘，构建领先的去中心化交易所和DeFi协议"
 		},
-		"jobs-opensea": {
-			"description": "OpenSea Careers - Tool"
+		"jobs_opensea": {
+			"description": "OpenSea职位，提供最大NFT市场的机会"
 		},
-		"jobs-alchemy": {
-			"description": "Alchemy Careers - Tool"
+		"jobs_alchemy": {
+			"description": "Alchemy招聘页面，提供领先区块链开发平台的工程和业务职位"
 		},
-		"jobs-encode-club": {
-			"description": "Encode Club - Tool"
+		"jobs_encode_club": {
+			"description": "Encode Club教育和黑客松，通过学习和建设进入Web3"
 		},
-		"jobs-ethglobal-fellowship": {
-			"description": "ETHGlobal Fellowship - Tool"
+		"jobs_ethglobal_fellowship": {
+			"description": "ETHGlobal Fellowship计划，为Web3新秀提供黑客松和研讨会"
 		},
-		"jobs-developer-dao": {
-			"description": "Developer DAO - Tool"
+		"jobs_developer_dao": {
+			"description": "Developer DAO社区，为Web3开发者提供资源、工作和交流"
 		},
-		"jobs-buildspace-n-w": {
-			"description": "Buildspace Nights & Weekends - Tool"
+		"jobs_buildspace_n_w": {
+			"description": "Buildspace Nights & Weekends孵化器项目，边建设边学习并获得支持"
 		},
-		"jobs-abcde": {
-			"description": "ABCDE Capital Jobs - Tool"
+		"jobs_abcde": {
+			"description": "ABCDE Capital招聘页面，亚洲领先加密货币VC的投资组合机会"
 		},
-		"jobs-foresight-ventures": {
-			"description": "Foresight Ventures Jobs - Tool"
+		"jobs_foresight_ventures": {
+			"description": "Foresight Ventures职位，提供亚洲加密货币投资公司的机会"
 		},
-		"jobs-hashkey": {
-			"description": "HashKey Careers - Tool"
+		"jobs_hashkey": {
+			"description": "HashKey招聘门户，亚洲领先数字资产金融服务集团的职位"
 		},
-		"jobs-okx": {
-			"description": "OKX Careers - Tool"
+		"jobs_okx": {
+			"description": "OKX招聘，提供全球加密货币交易所和Web3生态系统的职位"
 		},
-		"jobs-huobi": {
-			"description": "HTX Careers - Tool"
+		"jobs_huobi": {
+			"description": "HTX（原火币）招聘，全球加密货币交易所的机会"
 		},
-		"jobs-crypto-careers": {
-			"description": "Crypto Careers - Tool"
+		"jobs_crypto_careers": {
+			"description": "Crypto Careers求职平台，专注区块链的职位聚合和职业资源"
 		},
-		"jobs-otta-web3": {
-			"description": "Otta Web3 - Tool"
+		"jobs_otta_web3": {
+			"description": "Otta Web3工作，在现代求职平台上发现经过审核的加密货币机会"
 		},
-		"jobs-angellist-crypto": {
-			"description": "AngelList Crypto - Tool"
+		"jobs_angellist_crypto": {
+			"description": "AngelList加密货币初创公司工作，领先初创招聘平台上的Web3职位"
 		},
-		"jobs-linkedin-web3": {
-			"description": "LinkedIn Web3 - Tool"
+		"jobs_linkedin_web3": {
+			"description": "LinkedIn Web3职位搜索，在专业网络上发现加密货币和区块链机会"
 		}
 	}
 }

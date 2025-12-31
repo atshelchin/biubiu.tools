@@ -1,161 +1,161 @@
 {
 	"category_seo": {
-		"title": "Web3求人 - 暗号資産キャリアとリモート機会 | BiuBiu Tools",
-		"description": "暗号資産業界で仕事を見つける。開発者の役割、マーケティング、コミュニティ管理、リモートWeb3機会。",
-		"keywords": "",
+		"title": "暗号資産求人 - ブロックチェーンキャリアと機会 | BiuBiu Tools",
+		"description": "Web3求人、暗号資産機会、ブロックチェーンキャリアを探す。開発者、マーケター、業界専門家を採用している企業とつながる。",
+		"keywords": "暗号資産求人, web3求人, ブロックチェーンキャリア, ブロックチェーン開発者求人, リモート暗号資産求人",
 		"faqs": [
 			{
-				"question": "Web3の仕事に必要なスキルは何ですか？",
-				"answer": "開発者：Solidity、Rust、またはTypeScript。非技術職：コミュニティ管理、マーケティング、コンテンツ作成、BD。すべての役割でブロックチェーンの基礎知識が期待されます。"
+				"question": "暗号資産求人を見つけるには？",
+				"answer": "専門のWeb3求人サイトにはCrypto Jobs List、Web3 Career、Cryptocurrency Jobs、AngelList（暗号資産フィルター）があります。多くのプロジェクトがDiscord、Twitter、LinkedInで求人を投稿しています。暗号資産イベントでのネットワーキングも役立ちます。"
 			},
 			{
-				"question": "Web3の仕事はどこで見つけられますか？",
-				"answer": "Crypto.jobsとWeb3.careerは専用の求人ボードです。LinkedInには暗号資産リストが増えています。Twitter/Xの求人投稿が一般的です。多くの役割がプロジェクトのDiscordに投稿されます。"
+				"question": "Web3求人に必要なスキルは？",
+				"answer": "技術スキルにはスマートコントラクト開発（Solidity、Rust）、フロントエンド開発（React、ethers.js）、ブロックチェーンセキュリティが含まれます。非技術職には暗号資産マーケティング、コミュニティ管理、ビジネス開発、プロダクトデザイン、金融経験が求められます。"
 			},
 			{
-				"question": "Web3の仕事はほとんどリモートですか？",
-				"answer": "はい、Web3の仕事の大部分はリモートファーストです。企業はグローバルに分散しています。タイムゾーンの柔軟性は様々で、一部は米国またはEUの時間との重複が必要です。"
+				"question": "暗号資産求人は高給？",
+				"answer": "一般的にはい、特にスマートコントラクト開発者やセキュリティ職で。多くのWeb3ポジションは競争力のある報酬、リモートワーク、トークンエクイティ、ユニークな福利厚生を提供しています。給与は経験、スキル、企業ステージによって異なります。"
 			}
 		]
 	},
 	"tools": {
-		"jobs-cryptocurrencyjobs": {
-			"description": "Cryptocurrency Jobs - Tool"
+		"jobs_cryptocurrencyjobs": {
+			"description": "トップブロックチェーン企業やスタートアップから数千のポジションを掲載するプレミア暗号資産求人サイト"
 		},
-		"jobs-web3career": {
-			"description": "Web3.career - Tool"
+		"jobs_web3career": {
+			"description": "給与透明性とキャリアリソースを備えたリモート暗号資産求人リストを掲載するWeb3キャリアポータル"
 		},
-		"jobs-cryptojobslist": {
-			"description": "Crypto Jobs List - Tool"
+		"jobs_cryptojobslist": {
+			"description": "トップブロックチェーン企業からキュレーションされたWeb3ポジションを集約する暗号資産求人リスト"
 		},
-		"jobs-pompcryptojobs": {
-			"description": "Pomp Crypto Jobs - Tool"
+		"jobs_pompcryptojobs": {
+			"description": "検証済みブロックチェーンスタートアップポジションと業界インサイトを提供するPomp Crypto求人ボード"
 		},
-		"jobs-useweb3": {
-			"description": "useWeb3 - Tool"
+		"jobs_useweb3": {
+			"description": "Web3に参入する開発者向けのチュートリアル、求人、学習教材を提供するuseWeb3リソースハブ"
 		},
-		"jobs-remoteok-crypto": {
-			"description": "Remote OK Crypto - Tool"
+		"jobs_remoteok_crypto": {
+			"description": "グローバルチームからのリモートフレンドリーなブロックチェーンポジションを掲載するRemote OKの暗号資産セクション"
 		},
-		"jobs-blockchaindevjobs": {
-			"description": "Blockchain Dev Jobs - Tool"
+		"jobs_blockchaindevjobs": {
+			"description": "Solidity、Rust、Web3エンジニアリングロールに焦点を当てたブロックチェーン開発者求人リスト"
 		},
-		"jobs-defi-jobs": {
-			"description": "DeFi Jobs - Tool"
+		"jobs_defi_jobs": {
+			"description": "分散型金融プロトコルとプロジェクトのポジションを掲載するDeFi専門求人ボード"
 		},
-		"jobs-builtin-blockchain": {
-			"description": "Built In Blockchain - Tool"
+		"jobs_builtin_blockchain": {
+			"description": "確立されたテック企業と従来型企業の暗号資産ポジションを掲載するBuilt Inブロックチェーン求人"
 		},
-		"jobs-dework": {
-			"description": "Dework - Tool"
+		"jobs_dework": {
+			"description": "コントリビューターバウンティ、タスク、フルタイムDAO求人を見つけるためのDeworkタスク管理プラットフォーム"
 		},
-		"jobs-layer3": {
-			"description": "Layer3 - Tool"
+		"jobs_layer3": {
+			"description": "プロトコルタスクを完了して報酬を獲得し、Web3求人機会を発見するLayer3クエストプラットフォーム"
 		},
-		"jobs-gitcoin": {
-			"description": "Gitcoin - Tool"
+		"jobs_gitcoin": {
+			"description": "オープンソース開発とエコシステムサポートで報酬を獲得するGitcoinグラントとバウンティプラットフォーム"
 		},
-		"jobs-coordinape": {
-			"description": "Coordinape - Tool"
+		"jobs_coordinape": {
+			"description": "コントリビューション追跡、ピアインセンティブ、コミュニティ報酬のためのCoordinape DAO調整ツール"
 		},
-		"jobs-wonderverse": {
-			"description": "Wonderverse - Tool"
+		"jobs_wonderverse": {
+			"description": "コントリビューター、タスク、分散型ワークフローを管理するWonderverse DAOオペレーションプラットフォーム"
 		},
-		"jobs-charmverse": {
-			"description": "CharmVerse - Tool"
+		"jobs_charmverse": {
+			"description": "DAOガバナンス、提案、コントリビューター管理のためのCharmVerse Web3ネイティブワークスペース"
 		},
-		"jobs-daolens": {
-			"description": "DAOLens - Tool"
+		"jobs_daolens": {
+			"description": "DAOを探索しコントリビューション機会を見つけるためのDAOLens分析・発見プラットフォーム"
 		},
-		"jobs-immunefi": {
-			"description": "Immunefi - Tool"
+		"jobs_immunefi": {
+			"description": "セキュリティ研究者向けに数百万ドルの報酬を提供するリーディングWeb3バグバウンティプラットフォーム"
 		},
-		"jobs-code4rena": {
-			"description": "Code4rena - Tool"
+		"jobs_code4rena": {
+			"description": "スマートコントラクトの脆弱性を発見してバウンティを獲得するCode4rena競争的監査プラットフォーム"
 		},
-		"jobs-sherlock": {
-			"description": "Sherlock - Tool"
+		"jobs_sherlock": {
+			"description": "セキュリティ研究者向けに保証された報酬を提供するSherlock監査コンテスト・保険プラットフォーム"
 		},
-		"jobs-hackenproof": {
-			"description": "HackenProof - Tool"
+		"jobs_hackenproof": {
+			"description": "セキュリティ研究者とブロックチェーンプロジェクトを接続するHackenProofバグバウンティマーケットプレイス"
 		},
-		"jobs-hats-finance": {
-			"description": "Hats Finance - Tool"
+		"jobs_hats_finance": {
+			"description": "コミュニティ主導のセキュリティインセンティブを提供するHats Finance分散型監査とバグバウンティ"
 		},
-		"jobs-cantina": {
-			"description": "Cantina - Tool"
+		"jobs_cantina": {
+			"description": "トップWeb3セキュリティ研究者とプロトコルを接続するCantinaセキュリティマーケットプレイス"
 		},
-		"jobs-ethbounties": {
-			"description": "ETH Bounties - Tool"
+		"jobs_ethbounties": {
+			"description": "開発、研究、コミュニティプロジェクト向けのイーサリアムバウンティとグラント"
 		},
-		"jobs-a16z-portfolio": {
-			"description": "a16z Portfolio Jobs - Tool"
+		"jobs_a16z_portfolio": {
+			"description": "リーディング暗号資産VCが支援するスタートアップの機会を提供するa16zポートフォリオ企業求人"
 		},
-		"jobs-paradigm-portfolio": {
-			"description": "Paradigm Portfolio - Tool"
+		"jobs_paradigm_portfolio": {
+			"description": "トップ暗号資産投資家が支援する企業のポジションにリンクするParadigmポートフォリオ採用"
 		},
-		"jobs-coinbase": {
-			"description": "Coinbase Careers - Tool"
+		"jobs_coinbase": {
+			"description": "米国リーディング暗号資産取引所のポジションを掲載するCoinbase公式採用ページ"
 		},
-		"jobs-binance": {
-			"description": "Binance Careers - Tool"
+		"jobs_binance": {
+			"description": "世界最大の暗号資産取引所のポジションを掲載するBinance採用ポータル"
 		},
-		"jobs-consensys": {
-			"description": "ConsenSys Careers - Tool"
+		"jobs_consensys": {
+			"description": "MetaMaskとInfuraを開発するイーサリアムインフラ企業のポジションを掲載するConsenSys採用"
 		},
-		"jobs-chainlink-labs": {
-			"description": "Chainlink Labs - Tool"
+		"jobs_chainlink_labs": {
+			"description": "リーディング分散型オラクルネットワークの機会を提供するChainlink Labs求人"
 		},
-		"jobs-ethereum-foundation": {
-			"description": "Ethereum Foundation - Tool"
+		"jobs_ethereum_foundation": {
+			"description": "イーサリアムプロトコル開発とエコシステム成長を支援するイーサリアム財団求人"
 		},
-		"jobs-uniswap-labs": {
-			"description": "Uniswap Labs - Tool"
+		"jobs_uniswap_labs": {
+			"description": "リーディング分散型取引所とDeFiプロトコルを構築するUniswap Labs採用"
 		},
-		"jobs-opensea": {
-			"description": "OpenSea Careers - Tool"
+		"jobs_opensea": {
+			"description": "最大のNFTマーケットプレイスの機会を提供するOpenSeaポジション"
 		},
-		"jobs-alchemy": {
-			"description": "Alchemy Careers - Tool"
+		"jobs_alchemy": {
+			"description": "リーディングブロックチェーン開発プラットフォームのエンジニアリングとビジネスロールを掲載するAlchemy採用ページ"
 		},
-		"jobs-encode-club": {
-			"description": "Encode Club - Tool"
+		"jobs_encode_club": {
+			"description": "学習と構築を通じてWeb3に参入するためのEncode Club教育とハッカソン"
 		},
-		"jobs-ethglobal-fellowship": {
-			"description": "ETHGlobal Fellowship - Tool"
+		"jobs_ethglobal_fellowship": {
+			"description": "Web3新規参入者向けのハッカソンとワークショップを提供するETHGlobalフェローシッププログラム"
 		},
-		"jobs-developer-dao": {
-			"description": "Developer DAO - Tool"
+		"jobs_developer_dao": {
+			"description": "Web3開発者向けのリソース、求人、ネットワーキングを提供するDeveloper DAOコミュニティ"
 		},
-		"jobs-buildspace-n-w": {
-			"description": "Buildspace Nights & Weekends - Tool"
+		"jobs_buildspace_n_w": {
+			"description": "構築、学習、サポートを受けるためのBuildspace Nights & Weekendsインキュベータープログラム"
 		},
-		"jobs-abcde": {
-			"description": "ABCDE Capital Jobs - Tool"
+		"jobs_abcde": {
+			"description": "アジアリーディング暗号資産VCのポートフォリオ機会を提供するABCDE Capital採用ページ"
 		},
-		"jobs-foresight-ventures": {
-			"description": "Foresight Ventures Jobs - Tool"
+		"jobs_foresight_ventures": {
+			"description": "アジア暗号資産投資会社の機会を提供するForesight Ventures求人"
 		},
-		"jobs-hashkey": {
-			"description": "HashKey Careers - Tool"
+		"jobs_hashkey": {
+			"description": "アジアリーディングデジタル資産金融サービスグループのポジションを掲載するHashKey採用ポータル"
 		},
-		"jobs-okx": {
-			"description": "OKX Careers - Tool"
+		"jobs_okx": {
+			"description": "グローバル暗号資産取引所とWeb3エコシステムのポジションを掲載するOKX採用"
 		},
-		"jobs-huobi": {
-			"description": "HTX Careers - Tool"
+		"jobs_huobi": {
+			"description": "グローバル暗号資産取引所の機会を提供するHTX（旧Huobi）採用"
 		},
-		"jobs-crypto-careers": {
-			"description": "Crypto Careers - Tool"
+		"jobs_crypto_careers": {
+			"description": "ブロックチェーン専門の求人集約とキャリアリソースを提供するCrypto Careers求職プラットフォーム"
 		},
-		"jobs-otta-web3": {
-			"description": "Otta Web3 - Tool"
+		"jobs_otta_web3": {
+			"description": "モダン求職プラットフォームでキュレーションされた暗号資産機会を発見するOtta Web3求人"
 		},
-		"jobs-angellist-crypto": {
-			"description": "AngelList Crypto - Tool"
+		"jobs_angellist_crypto": {
+			"description": "リーディングスタートアップ採用プラットフォームのWeb3ポジションを掲載するAngelList暗号資産スタートアップ求人"
 		},
-		"jobs-linkedin-web3": {
-			"description": "LinkedIn Web3 - Tool"
+		"jobs_linkedin_web3": {
+			"description": "プロフェッショナルネットワークで暗号資産とブロックチェーン機会を発見するLinkedIn Web3求人検索"
 		}
 	}
 }
