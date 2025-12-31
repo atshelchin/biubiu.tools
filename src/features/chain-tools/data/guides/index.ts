@@ -13,6 +13,7 @@ import { infraGuide } from './infra';
 import { l2Guide } from './l2';
 import { nftGuide } from './nft';
 import { securityGuide } from './security';
+import { stablecoinGuide } from './stablecoin';
 import { walletGuide } from './wallet';
 
 // Map of all available guides
@@ -27,6 +28,7 @@ export const categoryGuides: Partial<Record<CategoryId, CategoryGuide>> = {
 	l2: l2Guide,
 	nft: nftGuide,
 	security: securityGuide,
+	stablecoin: stablecoinGuide,
 	wallet: walletGuide
 	// Add more guides as they are created
 };

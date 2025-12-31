@@ -90,8 +90,7 @@ export const stablecoinGuide: CategoryGuide = {
 				},
 				{
 					id: 'dai',
-					titleKey:
-						'routes/apps/chain-tools/stablecoin/guide.sections.major_stablecoins.dai.title',
+					titleKey: 'routes/apps/chain-tools/stablecoin/guide.sections.major_stablecoins.dai.title',
 					contentKey:
 						'routes/apps/chain-tools/stablecoin/guide.sections.major_stablecoins.dai.content',
 					toolMentions: [{ toolId: 'makerdao' }]
@@ -134,8 +133,7 @@ export const stablecoinGuide: CategoryGuide = {
 				},
 				{
 					id: 'remittance',
-					titleKey:
-						'routes/apps/chain-tools/stablecoin/guide.sections.use_cases.remittance.title',
+					titleKey: 'routes/apps/chain-tools/stablecoin/guide.sections.use_cases.remittance.title',
 					contentKey:
 						'routes/apps/chain-tools/stablecoin/guide.sections.use_cases.remittance.content'
 				}
@@ -146,8 +144,7 @@ export const stablecoinGuide: CategoryGuide = {
 		{
 			id: 'yield-opportunities',
 			titleKey: 'routes/apps/chain-tools/stablecoin/guide.sections.yield_opportunities.title',
-			contentKey:
-				'routes/apps/chain-tools/stablecoin/guide.sections.yield_opportunities.content',
+			contentKey: 'routes/apps/chain-tools/stablecoin/guide.sections.yield_opportunities.content',
 			subsections: [
 				{
 					id: 'lending',
@@ -177,27 +174,23 @@ export const stablecoinGuide: CategoryGuide = {
 				{
 					id: 'depeg-risk',
 					titleKey: 'routes/apps/chain-tools/stablecoin/guide.sections.risks.depeg_risk.title',
-					contentKey:
-						'routes/apps/chain-tools/stablecoin/guide.sections.risks.depeg_risk.content'
+					contentKey: 'routes/apps/chain-tools/stablecoin/guide.sections.risks.depeg_risk.content'
 				},
 				{
 					id: 'regulatory',
 					titleKey: 'routes/apps/chain-tools/stablecoin/guide.sections.risks.regulatory.title',
-					contentKey:
-						'routes/apps/chain-tools/stablecoin/guide.sections.risks.regulatory.content'
+					contentKey: 'routes/apps/chain-tools/stablecoin/guide.sections.risks.regulatory.content'
 				},
 				{
 					id: 'centralization',
-					titleKey:
-						'routes/apps/chain-tools/stablecoin/guide.sections.risks.centralization.title',
+					titleKey: 'routes/apps/chain-tools/stablecoin/guide.sections.risks.centralization.title',
 					contentKey:
 						'routes/apps/chain-tools/stablecoin/guide.sections.risks.centralization.content',
 					toolMentions: [{ toolId: 'usdc' }, { toolId: 'usdt' }]
 				},
 				{
 					id: 'smart-contract',
-					titleKey:
-						'routes/apps/chain-tools/stablecoin/guide.sections.risks.smart_contract.title',
+					titleKey: 'routes/apps/chain-tools/stablecoin/guide.sections.risks.smart_contract.title',
 					contentKey:
 						'routes/apps/chain-tools/stablecoin/guide.sections.risks.smart_contract.content'
 				}
@@ -250,8 +243,7 @@ export const stablecoinGuide: CategoryGuide = {
 		},
 		{
 			id: 'algorithmic-stablecoin',
-			termKey:
-				'routes/apps/chain-tools/stablecoin/guide.glossary.algorithmic_stablecoin.term',
+			termKey: 'routes/apps/chain-tools/stablecoin/guide.glossary.algorithmic_stablecoin.term',
 			definitionKey:
 				'routes/apps/chain-tools/stablecoin/guide.glossary.algorithmic_stablecoin.definition',
 			relatedToolIds: ['frax']
@@ -277,8 +269,7 @@ export const stablecoinGuide: CategoryGuide = {
 		{
 			id: 'stability-fee',
 			termKey: 'routes/apps/chain-tools/stablecoin/guide.glossary.stability_fee.term',
-			definitionKey:
-				'routes/apps/chain-tools/stablecoin/guide.glossary.stability_fee.definition',
+			definitionKey: 'routes/apps/chain-tools/stablecoin/guide.glossary.stability_fee.definition',
 			relatedToolIds: ['makerdao']
 		}
 	],

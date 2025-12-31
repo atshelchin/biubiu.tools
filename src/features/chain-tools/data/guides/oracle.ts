@@ -109,8 +109,7 @@ export const oracleGuide: CategoryGuide = {
 				},
 				{
 					id: 'safety-checks',
-					titleKey:
-						'routes/apps/chain-tools/oracle/guide.sections.price_feeds.safety_checks.title',
+					titleKey: 'routes/apps/chain-tools/oracle/guide.sections.price_feeds.safety_checks.title',
 					contentKey:
 						'routes/apps/chain-tools/oracle/guide.sections.price_feeds.safety_checks.content'
 				}
@@ -139,8 +138,7 @@ export const oracleGuide: CategoryGuide = {
 				},
 				{
 					id: 'vrf-use-cases',
-					titleKey:
-						'routes/apps/chain-tools/oracle/guide.sections.randomness.vrf_use_cases.title',
+					titleKey: 'routes/apps/chain-tools/oracle/guide.sections.randomness.vrf_use_cases.title',
 					contentKey:
 						'routes/apps/chain-tools/oracle/guide.sections.randomness.vrf_use_cases.content'
 				}
@@ -194,43 +192,37 @@ export const oracleGuide: CategoryGuide = {
 				{
 					id: 'pyth',
 					titleKey: 'routes/apps/chain-tools/oracle/guide.sections.oracle_providers.pyth.title',
-					contentKey:
-						'routes/apps/chain-tools/oracle/guide.sections.oracle_providers.pyth.content',
+					contentKey: 'routes/apps/chain-tools/oracle/guide.sections.oracle_providers.pyth.content',
 					toolMentions: [{ toolId: 'pyth-network' }, { toolId: 'pyth-price-feeds' }]
 				},
 				{
 					id: 'uma',
 					titleKey: 'routes/apps/chain-tools/oracle/guide.sections.oracle_providers.uma.title',
-					contentKey:
-						'routes/apps/chain-tools/oracle/guide.sections.oracle_providers.uma.content',
+					contentKey: 'routes/apps/chain-tools/oracle/guide.sections.oracle_providers.uma.content',
 					toolMentions: [{ toolId: 'uma-protocol' }]
 				},
 				{
 					id: 'band',
 					titleKey: 'routes/apps/chain-tools/oracle/guide.sections.oracle_providers.band.title',
-					contentKey:
-						'routes/apps/chain-tools/oracle/guide.sections.oracle_providers.band.content',
+					contentKey: 'routes/apps/chain-tools/oracle/guide.sections.oracle_providers.band.content',
 					toolMentions: [{ toolId: 'band-protocol' }]
 				},
 				{
 					id: 'api3',
 					titleKey: 'routes/apps/chain-tools/oracle/guide.sections.oracle_providers.api3.title',
-					contentKey:
-						'routes/apps/chain-tools/oracle/guide.sections.oracle_providers.api3.content',
+					contentKey: 'routes/apps/chain-tools/oracle/guide.sections.oracle_providers.api3.content',
 					toolMentions: [{ toolId: 'api3' }]
 				},
 				{
 					id: 'tellor',
-					titleKey:
-						'routes/apps/chain-tools/oracle/guide.sections.oracle_providers.tellor.title',
+					titleKey: 'routes/apps/chain-tools/oracle/guide.sections.oracle_providers.tellor.title',
 					contentKey:
 						'routes/apps/chain-tools/oracle/guide.sections.oracle_providers.tellor.content',
 					toolMentions: [{ toolId: 'tellor' }]
 				},
 				{
 					id: 'redstone',
-					titleKey:
-						'routes/apps/chain-tools/oracle/guide.sections.oracle_providers.redstone.title',
+					titleKey: 'routes/apps/chain-tools/oracle/guide.sections.oracle_providers.redstone.title',
 					contentKey:
 						'routes/apps/chain-tools/oracle/guide.sections.oracle_providers.redstone.content',
 					toolMentions: [{ toolId: 'redstone-oracles' }]
@@ -319,8 +311,7 @@ export const oracleGuide: CategoryGuide = {
 		{
 			id: 'deviation-threshold',
 			termKey: 'routes/apps/chain-tools/oracle/guide.glossary.deviation_threshold.term',
-			definitionKey:
-				'routes/apps/chain-tools/oracle/guide.glossary.deviation_threshold.definition',
+			definitionKey: 'routes/apps/chain-tools/oracle/guide.glossary.deviation_threshold.definition',
 			relatedToolIds: ['chainlink', 'pyth-network']
 		},
 		{
@@ -331,8 +322,7 @@ export const oracleGuide: CategoryGuide = {
 		{
 			id: 'oracle-manipulation',
 			termKey: 'routes/apps/chain-tools/oracle/guide.glossary.oracle_manipulation.term',
-			definitionKey:
-				'routes/apps/chain-tools/oracle/guide.glossary.oracle_manipulation.definition'
+			definitionKey: 'routes/apps/chain-tools/oracle/guide.glossary.oracle_manipulation.definition'
 		},
 		{
 			id: 'data-freshness',
@@ -342,8 +332,7 @@ export const oracleGuide: CategoryGuide = {
 		{
 			id: 'schelling-point',
 			termKey: 'routes/apps/chain-tools/oracle/guide.glossary.schelling_point.term',
-			definitionKey:
-				'routes/apps/chain-tools/oracle/guide.glossary.schelling_point.definition',
+			definitionKey: 'routes/apps/chain-tools/oracle/guide.glossary.schelling_point.definition',
 			relatedToolIds: ['uma-protocol', 'tellor']
 		},
 		{

@@ -49,7 +49,9 @@
       "Bash(for file in compound maker eigenlayer pendle dydx)",
       "Bash(do python3 -m json.tool /Users/shelchin/ai-repo2025/biubiu.tools/src/i18n/locales/es/routes/apps/chain-tools/tool/$file.json)",
       "Bash(do if ! grep -q ^$tool$ /tmp/existing_tools.txt)",
-      "Bash(then echo $tool fi done)"
+      "Bash(then echo $tool fi done)",
+      "Bash(for tool in alchemy ankr arweave chainstack filecoin infura ipfs moralis push-protocol quicknode tenderly thegraph xmtp)",
+      "Bash(do echo -n \"$tool: \")"
     ],
     "deny": [],
     "ask": []
