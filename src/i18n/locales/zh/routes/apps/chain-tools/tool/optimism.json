@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Optimism - 以太坊 Layer 2 扩容方案 | L2 工具评测",
+		"description": "深入了解 Optimism，基于 OP Stack 的以太坊 Layer 2。掌握 Superchain 愿景、OP 治理、RetroPGF 公共物品资助，以及 Base、Mode 和 Zora 如何构建在 OP Stack 之上。",
+		"keywords": "Optimism, OP Stack, Layer 2, L2, 以太坊扩容, Superchain, OP 代币, RetroPGF, Base, Mode, rollup"
+	},
+	"overview": "Optimism 是以太坊的 Layer 2 扩容方案，采用乐观卷叠（Optimistic Rollup）技术，在保持以太坊安全保障的同时大幅降低交易成本。由 Jinglan Wang、Karl Floersch 和 Kevin Ho 于2019年创立（现以 OP Labs 运营），Optimism 已从单一的 L2 链发展成为「Superchain」（超级链）的基础——一个共享安全性和流动性的互联 L2 网络愿景。\n\nOptimism 的核心是 OP Stack，这是一个标准化的开源开发框架，使启动新的 L2 链变得简单。Base（由 Coinbase 推出）、Mode 和 Zora 等主要网络都是使用 OP Stack 构建的，形成了一个不断增长的可互操作链生态系统，它们受益于共享的基础设施和安全性。\n\nOptimism 的与众不同之处不仅在于其技术，还在于通过 RetroPGF（追溯性公共物品资助）对公共物品资助的承诺。OP 社区会分配数百万美元奖励那些已经为生态系统提供价值的项目。通过 OP 代币管理协议升级和资金分配，Optimism 代表了技术卓越与进步性加密治理的独特融合。",
+	"features": {
+		"1": {
+			"title": "OP Stack 框架",
+			"description": "开源模块化框架，用于构建 L2 链——为 Base、Mode、Zora 提供动力，让任何人都能启动自己的 L2"
+		},
+		"2": {
+			"title": "Superchain 愿景",
+			"description": "共享安全性、治理和升级的可互操作 L2 网络——为以太坊创建统一的扩容生态系统"
+		},
+		"3": {
+			"title": "OP 代币治理",
+			"description": "通过 OP 代币实现去中心化治理——社区控制协议升级、金库分配和 RetroPGF 计划"
+		},
+		"4": {
+			"title": "RetroPGF 公共物品资助",
+			"description": "创新模式，根据影响力追溯性奖励项目——数百万美元分配给开源开发者和公共物品"
+		},
+		"5": {
+			"title": "Bedrock 升级",
+			"description": "最新架构将费用降低 40-50%，提升节点性能，增强与以太坊工具的兼容性"
+		},
+		"6": {
+			"title": "故障证明系统",
+			"description": "去中心化争议解决机制，允许任何人挑战无效交易——消除桥接中的信任假设"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi 应用",
+			"description": "以显著更低的交易成本部署或使用 DeFi 协议，同时保持以太坊的安全性"
+		},
+		"2": {
+			"title": "NFT 铸造和交易",
+			"description": "以最低的 Gas 费用创建、购买和出售 NFT——在生成艺术和 PFP 收藏品中很受欢迎"
+		},
+		"3": {
+			"title": "游戏和社交应用",
+			"description": "构建需要频繁交易的链上游戏和社交应用，无需承担高昂成本"
+		},
+		"4": {
+			"title": "低成本交易",
+			"description": "以几分钱而非几美元的成本进行转账、交换和交互——让加密货币日常使用成为可能"
+		},
+		"5": {
+			"title": "Superchain 开发",
+			"description": "使用 OP Stack 启动你自己的 L2，继承安全性并受益于整个 Superchain 的共享流动性"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 Optimism？它是如何工作的？",
+			"answer": "Optimism 是使用乐观卷叠技术的以太坊 Layer 2。它将数百笔交易打包在一起，在链下处理，然后将结果发布到以太坊。交易被假定为有效的（「乐观」），除非在争议窗口期间受到挑战，这样就能以更低的费用继承以太坊的安全性。"
+		},
+		"2": {
+			"question": "什么是 OP Stack 和 Superchain？",
+			"answer": "OP Stack 是用于构建 L2 链的开源框架。Superchain 是一个愿景，即使用 OP Stack 构建的多个 L2（如 Optimism、Base、Mode）可以无缝通信和共享安全性。可以把它想象成创建一个专业化链的网络，作为一个统一的生态系统协同工作。"
+		},
+		"3": {
+			"question": "什么是 Superchain，它是如何工作的？",
+			"answer": "Superchain 是基于 OP Stack 构建的 L2 链网络，共享标准化的通信协议、安全假设和治理。Superchain 不是让孤立的 L2 竞争，而是使它们能够互操作——允许资产和消息在链之间自由移动，同时受益于集体安全性和升级。"
+		},
+		"4": {
+			"question": "RetroPGF 是如何工作的？",
+			"answer": "RetroPGF（追溯性公共物品资助）是 Optimism 为生态系统开发提供资金的创新方法。不是提前发放资助，而是在项目展示了实际影响后奖励它们。社区成员投票决定哪些项目提供了最大价值，并相应地分配 OP 代币——使激励机制与实际结果保持一致。"
+		},
+		"5": {
+			"question": "OP 代币用于什么？",
+			"answer": "OP 代币具有治理功能——持有者可以对协议升级、金库支出和 RetroPGF 分配进行投票。它还在 Superchain 治理中发挥作用，帮助协调所有 OP Stack 链的升级和标准。目前，OP 不用于支付 Gas 费（而是使用 ETH）。"
+		}
+	},
+	"cta": {
+		"ready": "准备好探索 Superchain 了吗？",
+		"button": "访问 Optimism",
+		"note": "以太坊安全性，L2 速度——你通往 Superchain 的门户"
+	}
+}

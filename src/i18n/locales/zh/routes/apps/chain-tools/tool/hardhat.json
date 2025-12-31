@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Hardhat - 以太坊开发框架 | 智能合约开发",
+		"description": "了解Hardhat,领先的JavaScript/TypeScript以太坊开发框架。使用本地区块链、插件和强大的开发者工具构建、测试和调试智能合约。",
+		"keywords": "Hardhat, 以太坊开发, 智能合约测试, Hardhat Network, 区块链开发, Solidity, JavaScript, TypeScript"
+	},
+	"overview": "Hardhat是为JavaScript和TypeScript开发者构建的专业以太坊开发环境。由Nomic Foundation于2019年创建,已成为智能合约开发的行业标准,被包括Uniswap、Aave、Compound和OpenSea在内的主要协议使用。\n\nHardhat提供完整的本地区块链(Hardhat Network)来模拟以太坊,允许开发者部署合约、运行测试和调试代码,而无需花费真实的ETH。该框架包括Solidity的console.log调试——这是一项革命性功能,将传统调试带入智能合约。其广泛的插件生态系统添加了gas报告、合约验证和测试框架集成等功能。\n\n该平台擅长主网分叉,允许开发者在本地针对真实区块链状态进行测试。这对于合约与现有协议交互的DeFi开发至关重要。Hardhat的TypeScript支持、强大的测试能力和出色的文档使其成为专业团队的首选。该框架经过实战检验,支持部署了数十亿美元的智能合约。",
+	"features": {
+		"1": {
+			"title": "Hardhat Network",
+			"description": "内置本地区块链,具有EVM模拟,非常适合开发和测试"
+		},
+		"2": {
+			"title": "TypeScript支持",
+			"description": "一流的TypeScript集成,用于类型安全的智能合约开发"
+		},
+		"3": {
+			"title": "插件生态系统",
+			"description": "广泛的插件系统,用于gas报告、验证、部署等"
+		},
+		"4": {
+			"title": "Console.log调试",
+			"description": "Solidity中的革命性console.log支持,便于调试"
+		},
+		"5": {
+			"title": "主网分叉",
+			"description": "在本地分叉以太坊主网,以针对真实区块链状态进行测试"
+		},
+		"6": {
+			"title": "Gas报告",
+			"description": "详细的gas使用报告,以优化智能合约效率"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "智能合约开发",
+			"description": "使用强大的开发工具构建和编译Solidity合约"
+		},
+		"2": {
+			"title": "测试",
+			"description": "使用JavaScript/TypeScript和Mocha/Chai编写全面的测试套件"
+		},
+		"3": {
+			"title": "本地开发",
+			"description": "使用本地区块链和即时反馈快速开发和迭代"
+		},
+		"4": {
+			"title": "主网分叉",
+			"description": "通过分叉主网状态测试DeFi集成,实现真实测试"
+		},
+		"5": {
+			"title": "CI/CD集成",
+			"description": "将自动化测试和部署集成到持续集成流水线中"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是Hardhat,为什么它很受欢迎?",
+			"answer": "Hardhat是面向JavaScript/TypeScript开发者的以太坊开发框架。它受欢迎是因为它提供了完整的开发环境:本地区块链(Hardhat Network)、测试框架、部署工具和强大的插件生态系统。与旧工具不同,Hardhat在Solidity中提供console.log调试,使智能合约调试变得更加容易。它被大多数主要DeFi协议使用,已成为行业标准。"
+		},
+		"2": {
+			"question": "Hardhat vs Foundry - 我应该使用哪个?",
+			"answer": "Hardhat使用JavaScript/TypeScript进行测试和脚本编写,对于Web开发者来说很熟悉。它拥有更大的插件生态系统和更好的文档。Foundry使用Solidity进行测试,速度更快,吸引喜欢用一种语言编写所有内容的开发者。如果您熟悉JS/TS并想要广泛的工具,请选择Hardhat。如果您优先考虑速度并想用Solidity编写测试,请选择Foundry。"
+		},
+		"3": {
+			"question": "如何使用Hardhat插件?",
+			"answer": "通过npm安装插件(例如,「npm install --save-dev @nomicfoundation/hardhat-ethers」),然后在hardhat.config.js中使用「require(\"@nomicfoundation/hardhat-ethers\")」导入它们。流行的插件包括hardhat-ethers(ethers.js集成)、hardhat-gas-reporter(gas分析)、hardhat-contract-sizer(合约大小检查)和@nomicfoundation/hardhat-verify(合约验证)。插件系统广泛扩展了Hardhat的功能。"
+		},
+		"4": {
+			"question": "什么是Hardhat Network,它如何工作?",
+			"answer": "Hardhat Network是为开发设计的本地以太坊网络,与Hardhat捆绑在一起。它在您的机器上运行,模拟EVM,并提供即时挖矿(无需等待区块)。您可以分叉主网以针对真实状态进行测试,在Solidity中使用console.log,并获得详细的错误消息。它比测试网快得多,不需要真实的ETH,非常适合快速开发和测试。"
+		},
+		"5": {
+			"question": "如何使用Hardhat调试智能合约?",
+			"answer": "Hardhat通过Solidity中的console.log支持彻底改变了调试。在您的合约中导入「hardhat/console.sol」并像在JavaScript中一样使用console.log()。Hardhat还为失败的交易提供详细的堆栈跟踪,准确显示错误发生的位置和原因。对于更深入的调试,使用Hardhat的内置调试器或与Tenderly等工具集成,以进行交易模拟和调试。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在以太坊上构建了吗?",
+		"button": "打开Hardhat文档",
+		"note": "行业标准开发框架"
+	}
+}

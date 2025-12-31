@@ -1,0 +1,155 @@
+{
+	"category_seo": {
+		"title": "Token di Governance DAO - Potere di Voto e Tokenomics | BiuBiu Tools",
+		"description": "Esplora i token di governance DAO. Meccanismi di voto, distribuzione token e partecipazione alla governance nei principali DAO.",
+		"keywords": "token governance DAO, voto DeFi, governance protocollo, tokenomics, delega governance",
+		"faqs": [
+			{
+				"question": "Cosa sono i token di governance?",
+				"answer": "I token di governance danno ai possessori diritti di voto nelle decisioni di un protocollo. Esempi: UNI (Uniswap), AAVE, COMP. Il potere di voto tipicamente scala con il possesso di token."
+			},
+			{
+				"question": "Come funziona la delega del voto?",
+				"answer": "Puoi delegare il tuo potere di voto ad altri (delegati) mantenendo i tuoi token. Questo aiuta i membri attivi della community a votare per conto dei possessori passivi."
+			},
+			{
+				"question": "I token di governance hanno valore?",
+				"answer": "Il valore deriva dai diritti di governance, potenziale condivisione di commissioni e speculazione. Alcuni protocolli condividono i ricavi con i possessori di token. Altri hanno faticato ad accumulare valore."
+			}
+		]
+	},
+	"tools": {
+		"boardroom": {
+			"description": "Aggregatore governance per tracciare proposte DAO, votazioni e attività dei delegati su più protocolli"
+		},
+		"uni_token": {
+			"description": "Token di governance Uniswap per votare su upgrade del protocollo, switch delle commissioni e allocazioni del tesoro del più grande DEX"
+		},
+		"aave_token": {
+			"description": "Token di governance e staking del modulo di sicurezza Aave per il principale protocollo di prestito decentralizzato"
+		},
+		"mkr_token": {
+			"description": "Token di governance MakerDAO per gestire parametri della stablecoin DAI, tipi di collaterale e rischio del protocollo"
+		},
+		"crv_token": {
+			"description": "Token di governance Curve con meccaniche vote-escrow (veCRV) per dirigere incentivi di liquidità ai pool"
+		},
+		"comp_token": {
+			"description": "Token di governance Compound per votare su modelli di tasso d'interesse e parametri del protocollo per prestiti DeFi"
+		},
+		"snx_token": {
+			"description": "Token di governance e staking Synthetix per il protocollo di asset sintetici, supportando sUSD e synth"
+		},
+		"ldo_token": {
+			"description": "Token di governance Lido DAO per il più grande protocollo di liquid staking che gestisce stETH e staking cross-chain"
+		},
+		"gmx_token": {
+			"description": "Token di governance e utilità GMX per il DEX perpetui, guadagnando commissioni del protocollo dal trading"
+		},
+		"bal_token": {
+			"description": "Token di governance Balancer con meccaniche veBAL per dirigere ricompense del liquidity mining ai pool"
+		},
+		"sushi_token": {
+			"description": "Token di governance SushiSwap per il DEX multi-chain ed ecosistema DeFi inclusi prestiti e launchpad"
+		},
+		"yfi_token": {
+			"description": "Token di governance Yearn Finance per il protocollo aggregatore di rendimento che gestisce strategie vault"
+		},
+		"inch_token": {
+			"description": "Token di governance e utilità 1inch per l'aggregatore DEX con ricompense staking e voto DAO"
+		},
+		"pendle_token": {
+			"description": "Token di governance Pendle per il protocollo di tokenizzazione del rendimento, abilitando trading del rendimento futuro"
+		},
+		"ena_token": {
+			"description": "Token di governance Ethena per il protocollo del dollaro sintetico USDe supportato da derivati ETH in staking"
+		},
+		"dydx_token": {
+			"description": "Token di governance dYdX per l'exchange decentralizzato di perpetui, ora sulla propria chain Cosmos"
+		},
+		"cvx_token": {
+			"description": "Token Convex Finance per potenziare ricompense Curve e governare la piattaforma di ottimizzazione rendimento CRV"
+		},
+		"fxs_token": {
+			"description": "Token di governance Frax Share per la stablecoin frazionale-algoritmica ed ecosistema DeFi"
+		},
+		"blur_token": {
+			"description": "Token di governance Blur per il marketplace NFT con trading senza commissioni e funzionalità avanzate"
+		},
+		"ape_token": {
+			"description": "Token di governance ApeCoin per l'ecosistema Bored Ape, giochi e iniziative metaverso"
+		},
+		"rpl_token": {
+			"description": "Token di governance e collaterale Rocket Pool per il protocollo di staking decentralizzato Ethereum"
+		},
+		"morpho_token": {
+			"description": "Token di governance Morpho per l'ottimizzatore di prestiti peer-to-peer costruito su Aave e Compound"
+		},
+		"rdnt_token": {
+			"description": "Token di governance Radiant Capital per il protocollo di prestito omnichain usando LayerZero"
+		},
+		"osmo_token": {
+			"description": "Token di governance e staking Osmosis per il più grande DEX nell'ecosistema Cosmos"
+		},
+		"jup_token": {
+			"description": "Token di governance Jupiter per il principale aggregatore DEX Solana e exchange perpetui"
+		},
+		"ray_token": {
+			"description": "Token di governance Raydium per l'AMM Solana e fornitore di liquidità per il libro ordini Serum"
+		},
+		"jto_token": {
+			"description": "Token di governance Jito per l'infrastruttura MEV Solana e protocollo liquid staking"
+		},
+		"orca_token": {
+			"description": "Token di governance Orca per il DEX Solana user-friendly con pool di liquidità concentrata"
+		},
+		"arb_token": {
+			"description": "Token di governance Arbitrum per il principale L2 Ethereum usando optimistic rollup"
+		},
+		"op_token": {
+			"description": "Token di governance Optimism per la soluzione di scaling L2 ed ecosistema Superchain"
+		},
+		"strk_token": {
+			"description": "Token di governance StarkNet per l'L2 ZK-rollup usando prove STARK per scalare Ethereum"
+		},
+		"zk_token": {
+			"description": "Token di governance zkSync Era per il ZK-rollup con astrazione account nativa"
+		},
+		"matic_token": {
+			"description": "Token di governance Polygon (MATIC/POL) per l'ecosistema di scaling Ethereum inclusi PoS e zkEVM"
+		},
+		"mnt_token": {
+			"description": "Token di governance Mantle per l'L2 supportato dal tesoro BitDAO con architettura modulare"
+		},
+		"metis_token": {
+			"description": "Token di governance Metis per l'L2 Ethereum focalizzato su aziende e compagnie decentralizzate"
+		},
+		"ens_token": {
+			"description": "Token di governance Ethereum Name Service per gestire il sistema di domini .eth e upgrade del protocollo"
+		},
+		"gtc_token": {
+			"description": "Token di governance Gitcoin per la piattaforma di finanziamento beni pubblici usando finanziamento quadratico"
+		},
+		"safe_token": {
+			"description": "Token di governance Safe (precedentemente Gnosis Safe) per l'infrastruttura principale di wallet multi-sig"
+		},
+		"cow_token": {
+			"description": "Token di governance CoW Protocol per il DEX protetto da MEV usando aste batch"
+		},
+		"gno_token": {
+			"description": "Token di governance Gnosis per la piattaforma mercati di previsione ed ecosistema Gnosis Chain"
+		},
+		"tally_governance": {
+			"description": "Piattaforma governance on-chain per creare proposte, delegare voti ed eseguire decisioni DAO"
+		},
+		"snapshot_governance": {
+			"description": "Piattaforma di voto off-chain per governance senza gas usando messaggi firmati e strategie personalizzabili"
+		},
+		"karma_dao": {
+			"description": "Piattaforma di reputazione contributori DAO e tracciamento delegati per analytics governance"
+		},
+		"messari_governance": {
+			"description": "Ricerca e analytics governance di Messari che copre proposte DAO e trend di voto"
+		}
+	}
+}

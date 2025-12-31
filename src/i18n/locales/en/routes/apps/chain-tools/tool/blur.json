@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Blur - Pro NFT Marketplace | Zero Fees, Fastest Trading, BLUR Rewards",
+		"description": "Discover Blur, the professional NFT marketplace with zero fees, lightning-fast trading, and BLUR token rewards. Includes aggregator and Blend NFT lending.",
+		"keywords": "Blur, NFT, marketplace, zero fees, BLUR token, Blend, NFT lending, aggregator, pro trading"
+	},
+	"overview": "Blur is a professional NFT marketplace launched in 2022 that quickly became the leading platform for high-volume NFT traders. Built by traders for traders, Blur prioritizes speed, efficiency, and professional trading tools over casual browsing.\n\nThe platform's key differentiator is its zero marketplace fees combined with aggressive BLUR token rewards that incentivized traders to migrate from OpenSea. Blur features an NFT aggregator that finds the best prices across multiple marketplaces, advanced portfolio analytics, and sweep tools for buying multiple NFTs efficiently.\n\nIn May 2023, Blur launched Blend, a peer-to-peer NFT lending protocol that allows NFT holders to borrow ETH against their NFTs without oracles or expiration dates. This pioneering \"buy now, pay later\" model for NFTs expanded Blur's ecosystem beyond pure marketplace trading. Blur consistently leads in professional trader volume despite OpenSea's larger casual user base.",
+	"features": {
+		"1": {
+			"title": "Zero Marketplace Fees",
+			"description": "Trade NFTs with 0% marketplace fees (only creator royalties if optional)"
+		},
+		"2": {
+			"title": "Speed Optimized",
+			"description": "Fastest listing, bidding, and sweeping with real-time updates and hotkeys"
+		},
+		"3": {
+			"title": "NFT Aggregator",
+			"description": "Find best prices across OpenSea, X2Y2, LooksRare and other marketplaces"
+		},
+		"4": {
+			"title": "Blend Lending",
+			"description": "Borrow ETH against NFTs with flexible terms and no expiration dates"
+		},
+		"5": {
+			"title": "BLUR Token Rewards",
+			"description": "Earn BLUR tokens through trading, listing, and bidding activities"
+		},
+		"6": {
+			"title": "Pro Trading Tools",
+			"description": "Advanced portfolio tracking, collection analytics, and trait sniping"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Professional NFT Trading",
+			"description": "Execute high-volume trades with zero fees and advanced tools"
+		},
+		"2": {
+			"title": "Floor Sweeping",
+			"description": "Quickly buy multiple NFTs at floor price across collections"
+		},
+		"3": {
+			"title": "NFT Lending with Blend",
+			"description": "Borrow ETH against NFT collateral or lend ETH to earn yield"
+		},
+		"4": {
+			"title": "Earn BLUR Tokens",
+			"description": "Participate in trading, listing, and lending to earn token rewards"
+		},
+		"5": {
+			"title": "Blue-Chip Collection Trading",
+			"description": "Trade top NFT collections with deep liquidity and competitive pricing"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Blur and why is it popular?",
+			"answer": "Blur is a professional NFT marketplace that became popular by offering zero marketplace fees, the fastest trading interface, and generous BLUR token airdrops to early users. Unlike OpenSea which targets casual users, Blur is built for professional traders with features like advanced analytics, sweep tools, and an NFT aggregator. The aggressive token incentives drove massive trading volume migration from OpenSea in 2023."
+		},
+		"2": {
+			"question": "Why does Blur have zero fees?",
+			"answer": "Blur charges 0% marketplace fees (compared to OpenSea's 2.5%) as a competitive strategy to attract traders. Revenue comes from potential future fees, the BLUR token ecosystem, and Blend lending. The zero-fee model plus token rewards made Blur the preferred platform for professional traders. Creator royalties are optional, which was controversial but aligned with trader preferences."
+		},
+		"3": {
+			"question": "What is Blend and how does it work?",
+			"answer": "Blend is Blur's peer-to-peer NFT lending protocol launched in May 2023. NFT holders can borrow ETH by using their NFTs as collateral, with no oracles or expiration dates. Lenders offer ETH at specified interest rates. Loans can be refinanced at any time by other lenders offering better rates. If a borrower defaults, the NFT is liquidated. Blend pioneered flexible, perpetual NFT-backed loans."
+		},
+		"4": {
+			"question": "How do I earn BLUR tokens?",
+			"answer": "BLUR tokens are earned through active marketplace participation: trading NFTs (buying and selling), listing NFTs for sale, placing collection and trait bids, and using Blend for lending/borrowing. Blur ran multiple airdrop seasons rewarding early users. To maximize earnings, maintain active listings and bids on blue-chip collections. Token rewards are designed to incentivize liquidity provision."
+		},
+		"5": {
+			"question": "How does Blur compare to OpenSea?",
+			"answer": "Blur targets professional traders with zero fees, faster interface, aggregator, and pro tools. OpenSea targets casual users with broader discovery, multi-chain support, and easier onboarding. Blur leads in professional trader volume and blue-chip trading; OpenSea has more total users and collections. Many serious traders use Blur for trading and OpenSea for discovery. Blur's Blend adds NFT lending that OpenSea lacks."
+		}
+	},
+	"cta": {
+		"ready": "Ready for pro NFT trading?",
+		"button": "Open Blur",
+		"note": "Zero fees, fastest trading, earn BLUR"
+	}
+}

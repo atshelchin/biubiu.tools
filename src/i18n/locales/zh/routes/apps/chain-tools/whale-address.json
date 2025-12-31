@@ -1,0 +1,169 @@
+{
+	"category_seo": {
+		"title": "巨鲸钱包与资金库追踪 - 聪明钱洞察 | BiuBiu Tools",
+		"description": "追踪巨鲸钱包和协议资金库。监控加密货币中的聪明钱动向和机构持仓。",
+		"faqs": [
+			{
+				"question": "什么是加密巨鲸？",
+				"answer": "巨鲸是持有大量加密货币的实体。他们的交易可以影响市场。追踪巨鲸钱包可以提供市场走势的早期信号。"
+			},
+			{
+				"question": "如何追踪巨鲸钱包？",
+				"answer": "使用 Nansen 或 Arkham 进行标记钱包追踪。在 Etherscan 上设置大额转账警报。关注分享巨鲸活动的账号如 @lookonchain。"
+			},
+			{
+				"question": "什么是协议资金库？",
+				"answer": "资金库是由 DAO 或协议控制的资金。用于资助、流动性和开发。大型资金库（如 Uniswap 的）被作为项目健康度的指标来追踪。"
+			}
+		]
+	},
+	"tools": {
+		"ethereum_foundation": {
+			"description": "以太坊基金会资金库钱包，资助生态系统开发和研究"
+		},
+		"aave_treasury": {
+			"description": "Aave协议资金库，管理借贷协议开发的DAO资金"
+		},
+		"compound_treasury": {
+			"description": "Compound协议资金库，持有DeFi借贷治理资金"
+		},
+		"lido_treasury": {
+			"description": "Lido DAO资金库，管理流动性质押协议资金"
+		},
+		"arbitrum_treasury": {
+			"description": "Arbitrum DAO资金库，资助L2生态系统资助和开发"
+		},
+		"optimism_treasury": {
+			"description": "Optimism Collective资金库，用于Superchain生态系统资助"
+		},
+		"gnosis_treasury": {
+			"description": "Gnosis DAO资金库，管理Safe生态系统和GNO资金"
+		},
+		"ens_treasury": {
+			"description": "ENS DAO资金库，用于以太坊域名服务治理和资助"
+		},
+		"curve_multisig": {
+			"description": "Curve Finance紧急DAO多签，用于协议安全行动"
+		},
+		"yearn_multisig": {
+			"description": "Yearn Finance多签钱包，管理收益协议运营"
+		},
+		"vitalik_wallet": {
+			"description": "Vitalik Buterin公开钱包 - 以太坊联合创始人和影响力人物"
+		},
+		"justin_sun_wallet": {
+			"description": "Justin Sun钱包 - TRON创始人，以大额DeFi持仓闻名"
+		},
+		"tetranode_wallet": {
+			"description": "Tetranode钱包 - 有影响力的DeFi巨鲸和早期协议投资者"
+		},
+		"hsaka_wallet": {
+			"description": "Hsaka Trades钱包 - GMX和dYdX上的知名永续合约交易员"
+		},
+		"binance_hot_wallet": {
+			"description": "Binance交易所热钱包，用于BNB Chain运营"
+		},
+		"pancakeswap_treasury": {
+			"description": "PancakeSwap资金库，管理CAKE代币和DEX协议资金"
+		},
+		"venus_treasury": {
+			"description": "Venus协议资金库，用于BNB Chain借贷平台治理"
+		},
+		"base_bridge": {
+			"description": "Base L2桥接合约，持有从以太坊桥接的资产"
+		},
+		"aerodrome_treasury": {
+			"description": "Aerodrome Finance资金库，Base链领先DEX"
+		},
+		"polygon_ecosystem_fund": {
+			"description": "Polygon生态系统基金，支持资助和生态系统开发"
+		},
+		"quickswap_treasury": {
+			"description": "QuickSwap资金库，用于Polygon原生DEX协议"
+		},
+		"avalanche_foundation": {
+			"description": "Avalanche基金会钱包，资助AVAX生态系统增长"
+		},
+		"traderjoe_treasury": {
+			"description": "Trader Joe资金库，Avalanche领先DEX和DeFi中心"
+		},
+		"solana_foundation": {
+			"description": "Solana基金会钱包，支持生态系统开发和资助"
+		},
+		"jupiter_treasury": {
+			"description": "Jupiter聚合器资金库，Solana领先交换平台"
+		},
+		"raydium_treasury": {
+			"description": "Raydium资金库，Solana的AMM和流动性协议"
+		},
+		"ton_foundation": {
+			"description": "TON基金会钱包，支持Telegram区块链生态系统"
+		},
+		"sui_foundation": {
+			"description": "Sui基金会资金库，资助Move语言L1开发"
+		},
+		"aptos_foundation": {
+			"description": "Aptos基金会钱包，用于Move驱动的区块链生态系统"
+		},
+		"cosmos_hub_pool": {
+			"description": "Cosmos Hub社区池，用于ATOM生态系统治理资助"
+		},
+		"cz_wallet": {
+			"description": "CZ（赵长鹏）钱包 - Binance创始人和加密行业领袖"
+		},
+		"grayscale_wallet": {
+			"description": "Grayscale机构钱包，管理比特币和以太坊ETF持仓"
+		},
+		"blackrock_wallet": {
+			"description": "BlackRock iShares钱包，用于机构加密ETF托管"
+		},
+		"fidelity_wallet": {
+			"description": "Fidelity机构钱包，用于加密资产管理"
+		},
+		"a16z_wallet": {
+			"description": "Andreessen Horowitz加密基金钱包 - 领先Web3风险投资"
+		},
+		"paradigm_wallet": {
+			"description": "Paradigm VC钱包 - 主要加密原生投资基金"
+		},
+		"jump_trading_wallet": {
+			"description": "Jump Trading钱包 - 机构做市商和交易公司"
+		},
+		"wintermute_wallet": {
+			"description": "Wintermute钱包 - 领先加密做市商和流动性提供者"
+		},
+		"galaxy_digital_wallet": {
+			"description": "Galaxy Digital钱包 - 机构加密投资和交易"
+		},
+		"lookonchain": {
+			"description": "链上分析平台，追踪巨鲸动向和聪明资金"
+		},
+		"whale_alert": {
+			"description": "主要加密货币大额交易实时警报"
+		},
+		"nansen_smart_money": {
+			"description": "Nansen聪明资金追踪，用于标记钱包分析"
+		},
+		"arkham_intelligence": {
+			"description": "区块链情报平台，用于钱包去匿名化和追踪"
+		},
+		"debank_whales": {
+			"description": "DeBank巨鲸排名，显示最大的多链投资组合持有者"
+		},
+		"spot_on_chain": {
+			"description": "AI驱动链上分析，用于巨鲸追踪和市场洞察"
+		},
+		"bubblemaps": {
+			"description": "可视化代币持有者和供应分布分析"
+		},
+		"etherscan_label": {
+			"description": "Etherscan标记地址数据库，用于已知钱包识别"
+		},
+		"zerion_whales": {
+			"description": "Zerion探索功能，用于巨鲸投资组合发现和追踪"
+		},
+		"watchers_pro": {
+			"description": "聪明资金追踪平台，带有巨鲸钱包活动警报"
+		}
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Scroll - EVM 等效的 ZK Rollup | Layer 2 工具评测",
+		"description": "深入了解 Scroll，以太坊的 EVM 等效 ZK rollup。掌握字节码级兼容性、社区驱动开发、Session Marks 奖励，以及如何无需修改即可部署现有智能合约。",
+		"keywords": "Scroll, ZK rollup, Layer 2, EVM 等效, 字节码兼容, Session Marks, 以太坊扩容, zkEVM"
+	},
+	"overview": "Scroll 是一个 EVM 等效的 Layer 2 扩容解决方案，将零知识（ZK）rollup 技术的强大功能带到以太坊，同时保持与现有工具和合约的完美兼容性。Scroll 于2023年10月在主网启动，通过对字节码级 EVM 等效性的承诺脱颖而出，允许开发者无需修改即可部署任何现有的 Solidity 或 Vyper 合约。\n\nScroll 的独特之处在于其社区优先的方法。由来自以太坊基金会和学术界的研究人员构建，Scroll 作为公共产品大力贡献于 ZK-EVM 研究，许多创新都为更广泛的生态系统开源。该项目强调去中心化和安全性，实施多证明系统并致力于去中心化排序器。\n\nScroll 的 Session Marks 计划奖励用户的生态系统参与，跟踪 DeFi、NFT 和社交互动中的链上活动。虽然未正式确认为空投机制，但 Session Marks 标志着对活跃社区成员的未来奖励。凭借不断增长的 TVL、繁荣的 DeFi 生态系统和对 EVM 等效性的强烈关注，Scroll 代表了一种实用的 ZK 扩容方法，优先考虑开发者体验和生态系统兼容性。",
+	"features": {
+		"1": {
+			"title": "EVM 等效性",
+			"description": "与以太坊完美的字节码级兼容性，允许部署任何现有智能合约，无需代码修改或特殊工具"
+		},
+		"2": {
+			"title": "zkEVM 技术",
+			"description": "使用零知识证明保证交易有效性，提供即时最终确定性和从以太坊继承的最高安全性"
+		},
+		"3": {
+			"title": "开发者友好",
+			"description": "与所有现有以太坊开发工具无缝配合，如 Hardhat、Foundry、Remix 和标准 Web3 库"
+		},
+		"4": {
+			"title": "低交易费用",
+			"description": "通过高效的 ZK 证明生成和批处理，实现比以太坊主网低50-100倍的 Gas 费用"
+		},
+		"5": {
+			"title": "Session Marks 奖励",
+			"description": "通过参与生态系统赚取 Session Marks，标记追踪 DeFi 活动、NFT 互动和社区参与"
+		},
+		"6": {
+			"title": "社区驱动开发",
+			"description": "开源 ZK 研究和开发，积极为以太坊的 ZK 生态系统做出贡献，作为公共产品"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi 应用",
+			"description": "部署借贷协议、DEX 和收益农场，享受 ZK 安全性和低费用，同时保持与以太坊的完全兼容性"
+		},
+		"2": {
+			"title": "迁移现有合约",
+			"description": "将现有以太坊 dApp 移植到 Scroll，无需更改代码，只需重新部署字节码即可享受更低费用"
+		},
+		"3": {
+			"title": "低成本代币转账",
+			"description": "以即时最终确定性和最低费用发送和接收代币，非常适合支付、汇款和日常交易"
+		},
+		"4": {
+			"title": "赚取 Session Marks",
+			"description": "参与 Scroll 的 DeFi 生态系统，桥接资产，在 DEX 上交易，并与社区互动以累积 Session Marks"
+		},
+		"5": {
+			"title": "构建 ZK 生态系统",
+			"description": "利用 Scroll 的开源 ZK 创新构建高级隐私保护应用，并为 ZK 研究做出贡献"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 Scroll？它是如何工作的？",
+			"answer": "Scroll 是使用 ZK rollup 技术的以太坊 Layer 2，具有 EVM 等效性。它在链下执行交易，在字节码级别完美镜像以太坊执行层的环境中。执行后，Scroll 生成零知识证明（zkSNARK），以数学方式保证交易有效性。这些紧凑的证明被提交到以太坊，允许任何人验证正确性而无需重新执行交易。这提供即时最终确定性、更低的费用和最高安全性，同时保持与所有现有以太坊合约和工具的完美兼容性。"
+		},
+		"2": {
+			"question": "Scroll 与其他 ZK rollup 有何不同？",
+			"answer": "Scroll 的关键区别在于其对 EVM 等效性而非仅仅 EVM 兼容性的关注。虽然一些 ZK rollup 需要自定义编译器或对某些操作码有限制，但 Scroll 在字节码级别支持以太坊虚拟机，这意味着在以太坊上工作的任何合约都可以在 Scroll 上无需修改即可工作。这是通过创新的 ZK 电路设计实现的，可以直接证明 EVM 执行。此外，Scroll 强调开源研究和社区驱动开发，将许多创新作为公共产品贡献回以太坊生态系统。"
+		},
+		"3": {
+			"question": "什么是 Session Marks？我如何赚取它们？",
+			"answer": "Session Marks 是 Scroll 的忠诚度计划，跟踪你的链上活动和生态系统参与。你可以通过桥接资产到 Scroll、使用 DeFi 协议（交换、借贷、提供流动性）、铸造或交易 NFT，以及参与社区治理来赚取标记。不同的活动根据其对生态系统的价值获得不同的标记权重。虽然 Scroll 尚未正式确认标记将转换为代币空投，但它们清楚地标志着哪些用户正在积极为网络做出贡献。在 Scroll Sessions 仪表板上查看你的标记。"
+		},
+		"4": {
+			"question": "我如何将资产桥接到 Scroll？",
+			"answer": "你可以通过多种方法将资产桥接到 Scroll：（1）在 scroll.io/bridge 的官方 Scroll 桥从以太坊主网直接桥接，（2）第三方桥如 Orbiter Finance、Owlto 或 LayerZero，用于从其他 L2 进行跨链转账，或（3）支持直接 Scroll 存款/提款的中心化交易所。官方桥使用 ZK 证明以确保安全性，并有提款延迟，而第三方桥通过流动性池提供更快的转账。始终验证桥地址，并先用小额测试。"
+		},
+		"5": {
+			"question": "Scroll 与 zkSync 和 Starknet 相比如何？",
+			"answer": "这三者都是 ZK rollup，但采用不同的方法。Scroll 优先考虑 EVM 等效性，允许完美的字节码兼容性，无需更改代码。zkSync Era 专注于 EVM 兼容性，具有原生账户抽象等附加功能，但可能需要一些合约修改。Starknet 完全使用不同的 VM（Cairo），需要完全重写合约，但提供潜在的性能优势。对于想要不加修改部署现有合约的开发者，Scroll 是最简单的选择。对于想要尖端功能的新项目，zkSync 或 Starknet 可能提供更多创新。Scroll 的优势在于其无缝的开发者体验和完美的以太坊兼容性。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在 EVM 等效的 ZK 上构建了吗？",
+		"button": "访问 Scroll",
+		"note": "完美的以太坊兼容性与 ZK 安全性"
+	}
+}

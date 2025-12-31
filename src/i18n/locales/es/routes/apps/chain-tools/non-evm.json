@@ -1,0 +1,170 @@
+{
+	"category_seo": {
+		"title": "Cadenas No-EVM - Solana, Cosmos, Polkadot y Más | BiuBiu Tools",
+		"description": "Explora blockchains no-EVM: Solana, Cosmos, Polkadot, Aptos y otras arquitecturas blockchain alternativas con características únicas.",
+		"keywords": "cadenas no evm, solana, cosmos, polkadot, aptos, sui, ton, near",
+		"faqs": [
+			{
+				"question": "¿Qué son las cadenas no-EVM?",
+				"answer": "Las cadenas no-EVM son blockchains que no usan la Ethereum Virtual Machine. Incluyen Solana (Rust/Sealevel), Cosmos (Tendermint), Polkadot (Substrate) y otras. A menudo tienen diferentes modelos de programación, características de rendimiento y filosofías de diseño."
+			},
+			{
+				"question": "¿Por qué usar cadenas no-EVM?",
+				"answer": "Las cadenas no-EVM a menudo ofrecen throughput mayor (Solana), personalización específica para apps (Cosmos SDK), interoperabilidad (Polkadot) o diferentes modelos de seguridad. Algunos desarrolladores prefieren lenguajes de programación alternativos como Rust o Move."
+			},
+			{
+				"question": "¿Son las cadenas no-EVM compatibles con Ethereum?",
+				"answer": "Generalmente no directamente, aunque algunas ofrecen máquinas virtuales EVM (como Polkadot's Moonbeam) o puentes a Ethereum. Cada ecosistema tiene sus propias billeteras, dApps y herramientas de desarrollo, aunque conceptos como DeFi y NFTs son similares entre cadenas."
+			}
+		]
+	},
+	"tools": {
+		"solana_network": {
+			"description": "Blockchain de alto rendimiento con finalidad sub-segundo y bajas tarifas"
+		},
+		"solana_explorer": {
+			"description": "Explorador oficial de Solana para transacciones y cuentas"
+		},
+		"solscan": {
+			"description": "Explorador popular de Solana con analíticas de tokens y NFT"
+		},
+		"jupiter_solana": {
+			"description": "Agregador DEX líder de Solana para mejores tasas de swap"
+		},
+		"raydium": {
+			"description": "AMM de Solana y proveedor de liquidez con pools concentradas"
+		},
+		"marinade_finance": {
+			"description": "Mayor protocolo de staking líquido de Solana con token mSOL"
+		},
+		"phantom_wallet": {
+			"description": "Billetera popular de Solana con soporte multi-cadena"
+		},
+		"magic_eden_solana": {
+			"description": "Marketplace NFT líder en Solana y Bitcoin Ordinals"
+		},
+		"tensor_nft": {
+			"description": "Plataforma profesional de trading NFT en Solana con AMM"
+		},
+		"drift_protocol": {
+			"description": "DEX de perpetuos de Solana con hasta 10x apalancamiento"
+		},
+		"cosmos_network": {
+			"description": "Internet de Blockchains habilitando comunicación cross-chain vía IBC"
+		},
+		"mintscan": {
+			"description": "Explorador multi-cadena del ecosistema Cosmos"
+		},
+		"keplr_wallet": {
+			"description": "Billetera estándar del ecosistema Cosmos con soporte IBC"
+		},
+		"osmosis": {
+			"description": "DEX líder en ecosistema Cosmos con integración IBC"
+		},
+		"stride_zone": {
+			"description": "Staking líquido multi-cadena para ecosistema Cosmos"
+		},
+		"injective": {
+			"description": "Cadena Cosmos enfocada en DeFi para trading de derivados"
+		},
+		"sei_network": {
+			"description": "L1 más rápida optimizada para trading con finalidad de 400ms"
+		},
+		"celestia": {
+			"description": "Capa modular de disponibilidad de datos para rollups"
+		},
+		"dymension": {
+			"description": "Hub RollApp construido en Cosmos para rollups modulares"
+		},
+		"sui_network": {
+			"description": "L1 basada en Move con ejecución paralela de transacciones"
+		},
+		"sui_explorer": {
+			"description": "Explorador oficial de Sui y analíticas"
+		},
+		"sui_wallet": {
+			"description": "Billetera oficial de Sui para gestionar activos"
+		},
+		"turbos_finance": {
+			"description": "DEX de liquidez concentrada en Sui"
+		},
+		"cetus_protocol": {
+			"description": "DEX pionero y protocolo de liquidez en Sui y Aptos"
+		},
+		"aptos_network": {
+			"description": "L1 basada en Move con ejecución paralela Block-STM"
+		},
+		"aptos_explorer": {
+			"description": "Explorador oficial de Aptos para transacciones"
+		},
+		"petra_wallet": {
+			"description": "Billetera oficial de Aptos por Aptos Labs"
+		},
+		"pontem_wallet": {
+			"description": "Billetera multi-cadena para ecosistemas Aptos y Move"
+		},
+		"liquidswap": {
+			"description": "Primer DEX AMM en Aptos por Pontem"
+		},
+		"ton_network": {
+			"description": "The Open Network con integración Telegram y adopción masiva"
+		},
+		"tonscan": {
+			"description": "Explorador blockchain de TON para transacciones y jettons"
+		},
+		"tonkeeper": {
+			"description": "Billetera TON popular con integración Telegram"
+		},
+		"ston_fi": {
+			"description": "DEX líder en TON con bajas tarifas y swaps rápidos"
+		},
+		"dedust": {
+			"description": "Plataforma DEX y DeFi en TON"
+		},
+		"near_protocol": {
+			"description": "Blockchain PoS fragmentada con abstracción de cuentas"
+		},
+		"near_explorer": {
+			"description": "Explorador oficial de NEAR Protocol"
+		},
+		"ref_finance": {
+			"description": "Plataforma DeFi multi-propósito líder en NEAR"
+		},
+		"polkadot": {
+			"description": "Red multi-cadena heterogénea con parachains"
+		},
+		"subscan": {
+			"description": "Explorador multi-cadena para redes Polkadot y Substrate"
+		},
+		"algorand": {
+			"description": "Blockchain Pure Proof of Stake con finalidad instantánea"
+		},
+		"cardano": {
+			"description": "Blockchain impulsada por investigación con desarrollo revisado por pares"
+		},
+		"tezos": {
+			"description": "Blockchain auto-modificable con verificación formal"
+		},
+		"stacks": {
+			"description": "L2 de Bitcoin trayendo contratos inteligentes a BTC"
+		},
+		"lightning_network": {
+			"description": "L2 de Bitcoin para pagos instantáneos de bajo costo"
+		},
+		"rsk_rootstock": {
+			"description": "Sidechain de Bitcoin con contratos inteligentes compatibles con EVM"
+		},
+		"ibc_protocol": {
+			"description": "Protocolo de comunicación inter-blockchain para cadenas Cosmos"
+		},
+		"wormhole_bridge": {
+			"description": "Protocolo de mensajería cross-chain conectando blockchains principales"
+		},
+		"axelar_network": {
+			"description": "Red universal de comunicación cross-chain"
+		},
+		"layerzero": {
+			"description": "Protocolo de interoperabilidad omnichain para mensajería sin confianza"
+		}
+	}
+}

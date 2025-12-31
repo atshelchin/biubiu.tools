@@ -1,0 +1,170 @@
+{
+	"category_seo": {
+		"title": "Rastreador de Ballenas - Monitorea Billeteras Grandes y Tesorerías | BiuBiu Tools",
+		"description": "Rastrea direcciones de ballenas, monitorea grandes billeteras y sigue movimientos de tesorerías cripto. Identifica traders influyentes y comportamiento institucional.",
+		"keywords": "rastreador ballenas, monitor ballenas cripto, billeteras grandes, movimientos ballenas, rastreador tesorería",
+		"faqs": [
+			{
+				"question": "¿Qué son las ballenas cripto?",
+				"answer": "Las ballenas cripto son individuos o entidades que poseen grandes cantidades de criptomonedas. Sus transacciones pueden impactar significativamente los precios del mercado, por lo que los traders monitorean actividad de ballenas para conocimientos sobre tendencias potenciales del mercado."
+			},
+			{
+				"question": "¿Cómo rastrea la actividad de ballenas?",
+				"answer": "Usa herramientas de rastreo de ballenas que monitorean grandes transacciones, siguen billeteras conocidas de ballenas en analíticas on-chain, configura alertas para movimientos significativos de tokens y analiza patrones de actividad de ballenas a través de plataformas como Whale Alert o Nansen."
+			},
+			{
+				"question": "¿Es confiable el seguimiento de ballenas para trading?",
+				"answer": "El rastreo de ballenas provee conocimientos valiosos pero no debería ser tu única estrategia. Las ballenas pueden ejecutar estrategias complejas, movimientos pueden ser para no-trading (gestión de tesorería), y los scammers a veces imitan actividad de ballenas. Usa como una métrica entre muchas."
+			}
+		]
+	},
+	"tools": {
+		"ethereum_foundation": {
+			"description": "Billetera de tesorería de Ethereum Foundation financiando desarrollo e investigación del ecosistema"
+		},
+		"aave_treasury": {
+			"description": "Tesorería del protocolo Aave gestionando fondos DAO para desarrollo del protocolo de préstamos"
+		},
+		"compound_treasury": {
+			"description": "Tesorería del protocolo Compound manteniendo fondos para gobernanza de préstamos DeFi"
+		},
+		"lido_treasury": {
+			"description": "Tesorería Lido DAO gestionando fondos del protocolo de staking líquido"
+		},
+		"arbitrum_treasury": {
+			"description": "Tesorería Arbitrum DAO financiando grants y desarrollo del ecosistema L2"
+		},
+		"optimism_treasury": {
+			"description": "Tesorería Optimism Collective para financiamiento del ecosistema Superchain"
+		},
+		"gnosis_treasury": {
+			"description": "Tesorería Gnosis DAO gestionando ecosistema Safe y fondos GNO"
+		},
+		"ens_treasury": {
+			"description": "Tesorería ENS DAO para gobernanza y grants de Ethereum Name Service"
+		},
+		"curve_multisig": {
+			"description": "Multisig del DAO de emergencia de Curve Finance para acciones de seguridad del protocolo"
+		},
+		"yearn_multisig": {
+			"description": "Billetera multisig de Yearn Finance gestionando operaciones del protocolo de rendimiento"
+		},
+		"vitalik_wallet": {
+			"description": "Billetera pública de Vitalik Buterin - Co-fundador de Ethereum y figura influyente"
+		},
+		"justin_sun_wallet": {
+			"description": "Billetera de Justin Sun - Fundador de TRON conocido por grandes posiciones DeFi"
+		},
+		"tetranode_wallet": {
+			"description": "Billetera de Tetranode - Ballena DeFi influyente e inversor temprano de protocolos"
+		},
+		"hsaka_wallet": {
+			"description": "Billetera Hsaka Trades - Trader prominente de perpetuos en GMX y dYdX"
+		},
+		"binance_hot_wallet": {
+			"description": "Hot wallet del exchange Binance para operaciones de BNB Chain"
+		},
+		"pancakeswap_treasury": {
+			"description": "Tesorería PancakeSwap gestionando token CAKE y fondos del protocolo DEX"
+		},
+		"venus_treasury": {
+			"description": "Tesorería del protocolo Venus para gobernanza de plataforma de préstamos en BNB Chain"
+		},
+		"base_bridge": {
+			"description": "Contrato puente Base L2 manteniendo activos bridgeados desde Ethereum"
+		},
+		"aerodrome_treasury": {
+			"description": "Tesorería Aerodrome Finance para el DEX líder de Base chain"
+		},
+		"polygon_ecosystem_fund": {
+			"description": "Fondo del ecosistema Polygon apoyando grants y desarrollo del ecosistema"
+		},
+		"quickswap_treasury": {
+			"description": "Tesorería QuickSwap para protocolo DEX nativo de Polygon"
+		},
+		"avalanche_foundation": {
+			"description": "Billetera de Avalanche Foundation financiando crecimiento del ecosistema AVAX"
+		},
+		"traderjoe_treasury": {
+			"description": "Tesorería Trader Joe para el DEX líder y hub DeFi de Avalanche"
+		},
+		"solana_foundation": {
+			"description": "Billetera de Solana Foundation apoyando desarrollo del ecosistema y grants"
+		},
+		"jupiter_treasury": {
+			"description": "Tesorería del agregador Jupiter para la plataforma de swap líder de Solana"
+		},
+		"raydium_treasury": {
+			"description": "Tesorería Raydium para el AMM y protocolo de liquidez de Solana"
+		},
+		"ton_foundation": {
+			"description": "Billetera TON Foundation apoyando el ecosistema blockchain de Telegram"
+		},
+		"sui_foundation": {
+			"description": "Tesorería Sui Foundation financiando desarrollo L1 basado en Move"
+		},
+		"aptos_foundation": {
+			"description": "Billetera Aptos Foundation para ecosistema blockchain impulsado por Move"
+		},
+		"cosmos_hub_pool": {
+			"description": "Pool comunitario de Cosmos Hub para financiamiento de gobernanza del ecosistema ATOM"
+		},
+		"cz_wallet": {
+			"description": "Billetera CZ (Changpeng Zhao) - Fundador de Binance y líder de la industria cripto"
+		},
+		"grayscale_wallet": {
+			"description": "Billetera institucional Grayscale gestionando holdings de ETF de Bitcoin y Ethereum"
+		},
+		"blackrock_wallet": {
+			"description": "Billetera BlackRock iShares para custodia institucional de ETF cripto"
+		},
+		"fidelity_wallet": {
+			"description": "Billetera institucional Fidelity para gestión de activos cripto"
+		},
+		"a16z_wallet": {
+			"description": "Billetera del fondo cripto Andreessen Horowitz - VC líder en Web3"
+		},
+		"paradigm_wallet": {
+			"description": "Billetera VC Paradigm - Principal fondo de inversión cripto-nativo"
+		},
+		"jump_trading_wallet": {
+			"description": "Billetera Jump Trading - Market maker institucional y firma de trading"
+		},
+		"wintermute_wallet": {
+			"description": "Billetera Wintermute - Market maker líder y proveedor de liquidez cripto"
+		},
+		"galaxy_digital_wallet": {
+			"description": "Billetera Galaxy Digital - Inversión y trading institucional cripto"
+		},
+		"lookonchain": {
+			"description": "Plataforma de analíticas on-chain rastreando movimientos de ballenas y smart money"
+		},
+		"whale_alert": {
+			"description": "Alertas en tiempo real de grandes transacciones en principales criptomonedas"
+		},
+		"nansen_smart_money": {
+			"description": "Rastreo de Smart Money de Nansen para análisis de billeteras etiquetadas"
+		},
+		"arkham_intelligence": {
+			"description": "Plataforma de inteligencia blockchain para des-anonimización y rastreo de billeteras"
+		},
+		"debank_whales": {
+			"description": "Ranking de ballenas DeBank mostrando los mayores holders de portfolios multi-chain"
+		},
+		"spot_on_chain": {
+			"description": "Analíticas on-chain impulsadas por IA para rastreo de ballenas e insights de mercado"
+		},
+		"bubblemaps": {
+			"description": "Análisis visual de holders de tokens y distribución de supply"
+		},
+		"etherscan_label": {
+			"description": "Base de datos de direcciones etiquetadas de Etherscan para identificación de billeteras conocidas"
+		},
+		"zerion_whales": {
+			"description": "Función de exploración Zerion para descubrimiento y rastreo de portfolios de ballenas"
+		},
+		"watchers_pro": {
+			"description": "Plataforma de rastreo de smart money con alertas de actividad de billeteras ballena"
+		}
+	}
+}

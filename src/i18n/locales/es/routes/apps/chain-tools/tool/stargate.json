@@ -1,0 +1,101 @@
+{
+	"_meta": {
+		"title": "Stargate Finance - Protocolo de Transporte de Liquidez Omnichain",
+		"description": "Stargate Finance es un protocolo de transporte de liquidez omnichain construido sobre LayerZero. Transfiere activos nativos entre cadenas con pools de liquidez unificados y finalidad garantizada instantánea."
+	},
+	"seo": {
+		"title": "Stargate Finance - Protocolo de Transporte de Liquidez Omnichain | Puente Cross-Chain",
+		"description": "Stargate Finance permite transferencias de activos cross-chain sin fricciones con pools de liquidez unificados. Construido sobre LayerZero para puentes de activos nativos con finalidad garantizada instantánea.",
+		"keywords": "Stargate Finance, puente omnichain, LayerZero, liquidez cross-chain, liquidez unificada, token STG, transferencia de activos nativos, DeFi cross-chain"
+	},
+	"overview": {
+		"title": "Acerca de Stargate Finance",
+		"description": "Stargate Finance es un protocolo de transporte de liquidez completamente componible construido sobre LayerZero. Permite transferencias de activos nativos a través de múltiples blockchains utilizando pools de liquidez unificados. El protocolo presenta finalidad garantizada instantánea y un algoritmo delta para una eficiencia de capital óptima. El token STG impulsa la gobernanza y proporciona incentivos de liquidez para el ecosistema.",
+		"website_label": "Sitio Web Oficial",
+		"whitepaper_label": "Documentación"
+	},
+	"features": {
+		"title": "Características Clave",
+		"items": {
+			"feature_1": {
+				"title": "Liquidez Unificada",
+				"description": "Un solo pool de liquidez compartido entre todas las cadenas para máxima eficiencia de capital y slippage reducido."
+			},
+			"feature_2": {
+				"title": "Transferencias de Activos Nativos",
+				"description": "Transfiere activos nativos sin tokens envueltos, manteniendo la pureza de los activos entre cadenas."
+			},
+			"feature_3": {
+				"title": "Finalidad Garantizada Instantánea",
+				"description": "Completación de transacción garantizada en la cadena de destino sin posibilidad de reversión."
+			},
+			"feature_4": {
+				"title": "Algoritmo Delta",
+				"description": "Algoritmo de reequilibrio inteligente que optimiza la distribución de liquidez entre cadenas."
+			},
+			"feature_5": {
+				"title": "Recompensas por Staking de STG",
+				"description": "Gana recompensas apostando tokens STG y participando en la gobernanza del protocolo."
+			},
+			"feature_6": {
+				"title": "Componibilidad Omnichain",
+				"description": "Integración fluida con otros protocolos para operaciones DeFi cross-chain complejas."
+			}
+		}
+	},
+	"use_cases": {
+		"title": "Casos de Uso",
+		"items": {
+			"use_case_1": {
+				"title": "Swaps Cross-Chain",
+				"description": "Intercambia activos entre diferentes blockchains con liquidez unificada y slippage mínimo."
+			},
+			"use_case_2": {
+				"title": "DeFi Omnichain",
+				"description": "Accede a protocolos DeFi en múltiples cadenas sin gestionar tokens envueltos."
+			},
+			"use_case_3": {
+				"title": "Provisión de Liquidez",
+				"description": "Proporciona liquidez para ganar comisiones y recompensas STG de transacciones cross-chain."
+			},
+			"use_case_4": {
+				"title": "Agregación de Puentes",
+				"description": "Integra Stargate en dApps para experiencias de usuario cross-chain sin fricciones."
+			},
+			"use_case_5": {
+				"title": "Puente de Activos Nativos",
+				"description": "Mueve activos nativos entre cadenas manteniendo su forma original."
+			}
+		}
+	},
+	"faqs": {
+		"title": "Preguntas Frecuentes",
+		"items": {
+			"faq_1": {
+				"question": "¿Qué es Stargate Finance?",
+				"answer": "Stargate Finance es un protocolo de transporte de liquidez completamente componible construido sobre LayerZero. Permite a los usuarios transferir activos nativos a través de múltiples blockchains utilizando pools de liquidez unificados, con finalidad garantizada instantánea y eficiencia de capital óptima a través de su algoritmo delta."
+			},
+			"faq_2": {
+				"question": "¿Cómo funciona la liquidez unificada?",
+				"answer": "Stargate utiliza un solo pool de liquidez compartido en todas las cadenas compatibles. Este enfoque unificado maximiza la eficiencia del capital al permitir que los proveedores de liquidez sirvan múltiples rutas simultáneamente, reduciendo la fragmentación y el slippage en comparación con los diseños de puentes tradicionales con pools aislados por cadena."
+			},
+			"faq_3": {
+				"question": "¿Para qué se usa el token STG?",
+				"answer": "STG es el token de gobernanza y utilidad de Stargate. Se utiliza para votar en la gobernanza del protocolo, ganar recompensas por staking, recibir incentivos de provisión de liquidez y participar en la toma de decisiones del protocolo. Los titulares de STG pueden apostar sus tokens para ganar una parte de las comisiones y recompensas del protocolo."
+			},
+			"faq_4": {
+				"question": "¿Qué cadenas soporta Stargate?",
+				"answer": "Stargate soporta múltiples cadenas EVM y no-EVM incluyendo Ethereum, BNB Chain, Avalanche, Polygon, Arbitrum, Optimism, Fantom, Metis y más. El protocolo continúa expandiéndose a cadenas adicionales a través de la infraestructura omnichain de LayerZero."
+			},
+			"faq_5": {
+				"question": "¿Cómo se relaciona Stargate con LayerZero?",
+				"answer": "Stargate está construido sobre el protocolo de mensajería omnichain de LayerZero. LayerZero proporciona la infraestructura subyacente para la comunicación cross-chain segura, mientras que Stargate implementa la capa de transporte de liquidez sobre ella. Ambos son desarrollados por LayerZero Labs."
+			}
+		}
+	},
+	"cta": {
+		"title": "Comienza a Usar Stargate Finance",
+		"description": "Experimenta transferencias de activos omnichain sin fricciones con liquidez unificada y finalidad garantizada instantánea.",
+		"button": "Visitar Stargate Finance"
+	}
+}

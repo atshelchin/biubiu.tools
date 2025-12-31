@@ -1,0 +1,224 @@
+{
+	"category_seo": {
+		"title": "AI & 크립토 - AI 토큰과 탈중앙화 AI | BiuBiu Tools",
+		"description": "AI와 블록체인의 교차점. AI 토큰, 탈중앙화 컴퓨트, AI 에이전트, 온체인 머신 러닝.",
+		"keywords": "ai 크립토, ai 토큰, 탈중앙화 ai, ai 에이전트, 블록체인 ai",
+		"faqs": [
+			{
+				"question": "AI와 크립토는 어떻게 연결되어 있나요?",
+				"answer": "AI와 크립토는 탈중앙화 컴퓨트(Akash, Render), AI 에이전트 경제, 탈중앙화 AI 훈련, AI 서비스용 토큰을 통해 교차합니다."
+			},
+			{
+				"question": "크립토에서 AI 에이전트란 무엇인가요?",
+				"answer": "AI 에이전트는 지갑을 보유하고, 거래를 하며, DeFi와 상호작용할 수 있는 자율 프로그램입니다. 트레이딩, 콘텐츠 생성, 프로토콜 관리를 위해 등장하고 있습니다."
+			},
+			{
+				"question": "주요 AI 크립토 프로젝트는 무엇인가요?",
+				"answer": "GPU 컴퓨트를 위한 Render Network, 탈중앙화 클라우드를 위한 Akash, 탈중앙화 AI를 위한 Bittensor, 다양한 AI 에이전트 플랫폼이 있습니다. 이 분야는 빠르게 진화하고 있습니다."
+			}
+		]
+	},
+	"tools": {
+		"virtuals_protocol": {
+			"description": "Base에서 토큰화된 소유권을 가진 AI 에이전트를 생성하고 배포하는 플랫폼"
+		},
+		"ai16z": {
+			"description": "자율 에이전트 생성을 위한 AI DAO 및 Eliza 프레임워크"
+		},
+		"truth_terminal": {
+			"description": "GOAT 토큰 현상을 촉발한 X의 자율 AI 에이전트"
+		},
+		"autonolas": {
+			"description": "자율 AI 에이전트 서비스 구축 및 실행 플랫폼"
+		},
+		"flock_io": {
+			"description": "탈중앙화 AI 모델 훈련을 위한 연합 학습 플랫폼"
+		},
+		"render_network": {
+			"description": "AI 및 3D 그래픽 워크로드를 위한 탈중앙화 GPU 렌더링 네트워크"
+		},
+		"akash_network": {
+			"description": "AI 워크로드를 위한 탈중앙화 클라우드 컴퓨팅 마켓플레이스"
+		},
+		"io_net": {
+			"description": "데이터 센터에서 컴퓨트를 집계하는 탈중앙화 GPU 네트워크"
+		},
+		"bittensor": {
+			"description": "인센티브화된 머신 러닝을 갖춘 탈중앙화 AI 네트워크"
+		},
+		"ritual": {
+			"description": "스마트 컨트랙트를 위한 AI 코프로세서 인프라"
+		},
+		"gensyn": {
+			"description": "검증을 갖춘 ML 훈련을 위한 탈중앙화 프로토콜"
+		},
+		"together_ai": {
+			"description": "오픈소스 모델을 갖춘 탈중앙화 AI 추론 플랫폼"
+		},
+		"fetch_ai": {
+			"description": "Web3 자동화를 위한 자율 AI 에이전트 플랫폼"
+		},
+		"ocean_protocol": {
+			"description": "AI 훈련 데이터를 위한 탈중앙화 데이터 교환 프로토콜"
+		},
+		"singularitynet": {
+			"description": "AI 서비스를 위한 탈중앙화 마켓플레이스"
+		},
+		"masa": {
+			"description": "신원 중심 AI를 위한 탈중앙화 데이터 네트워크"
+		},
+		"grass": {
+			"description": "대역폭을 보상하는 탈중앙화 데이터 스크래핑 네트워크"
+		},
+		"altered_state_machine": {
+			"description": "게이밍 및 메타버스 애플리케이션을 위한 AI 기반 NFT 브레인"
+		},
+		"alethea_ai": {
+			"description": "AI 기반 인터랙티브 NFT를 만드는 iNFT 플랫폼"
+		},
+		"nft_art_generators": {
+			"description": "고유한 NFT 아트워크를 생성하는 AI 도구"
+		},
+		"stability_ai": {
+			"description": "Stable Diffusion 모델을 개발한 오픈소스 AI 회사"
+		},
+		"cookie_ai": {
+			"description": "온체인 AI 활동을 추적하는 AI 에이전트 분석 플랫폼"
+		},
+		"virtuals_terminal": {
+			"description": "Base의 AI 에이전트를 위한 런치패드 및 트레이딩 터미널"
+		},
+		"defillama_ai": {
+			"description": "AI 크립토 프로토콜 TVL을 추적하는 DeFiLlama AI 카테고리"
+		},
+		"worldcoin": {
+			"description": "홍채 스캔을 사용하는 인격 증명 신원 프로토콜"
+		},
+		"morpheus_ai": {
+			"description": "개인 스마트 에이전트를 위한 탈중앙화 AI 에이전트 네트워크"
+		},
+		"spectral_ai": {
+			"description": "머신 러닝을 사용한 온체인 신용 점수"
+		},
+		"numerai": {
+			"description": "데이터 사이언스 토너먼트를 갖춘 AI 기반 헤지펀드"
+		},
+		"dain_ai": {
+			"description": "자율 작업을 위한 Solana의 AI 에이전트 인프라"
+		},
+		"vana": {
+			"description": "AI 모델 훈련을 위한 사용자 소유 데이터 네트워크"
+		},
+		"phala_network": {
+			"description": "프라이버시 보호 AI를 위한 기밀 컴퓨팅 네트워크"
+		},
+		"nosana": {
+			"description": "Solana의 탈중앙화 GPU 컴퓨트 네트워크"
+		},
+		"golem": {
+			"description": "AI 워크로드를 위한 탈중앙화 컴퓨팅 마켓플레이스"
+		},
+		"livepeer": {
+			"description": "탈중앙화 비디오 트랜스코딩 및 AI 추론 네트워크"
+		},
+		"hyperbolic": {
+			"description": "GPU 네트워크를 갖춘 탈중앙화 AI 추론 인프라"
+		},
+		"venice_ai": {
+			"description": "프라이버시 중심 무검열 AI 어시스턴트"
+		},
+		"myshell": {
+			"description": "음성 기능을 갖춘 오픈소스 AI 에이전트 플랫폼"
+		},
+		"griffain": {
+			"description": "Solana의 AI 에이전트 밈코인 및 플랫폼"
+		},
+		"arc_ai": {
+			"description": "Solana를 위한 Rust 기반 AI 에이전트 프레임워크"
+		},
+		"zerebro": {
+			"description": "창의적 콘텐츠 생성을 위한 자율 AI 에이전트"
+		},
+		"swarmnode": {
+			"description": "AI 에이전트 오케스트레이션을 위한 분산 노드 네트워크"
+		},
+		"sentient_ai": {
+			"description": "AGI를 위한 오픈소스 AI 개발 재단"
+		},
+		"nous_research": {
+			"description": "Hermes 모델을 만드는 오픈소스 AI 연구소"
+		},
+		"pond_ai": {
+			"description": "그래프 신경망을 사용한 온체인 AI 예측"
+		},
+		"aioz_network": {
+			"description": "탈중앙화 CDN 및 AI 컴퓨트 네트워크"
+		},
+		"theoriq": {
+			"description": "Base의 컴포저블 AI 에이전트 프로토콜"
+		},
+		"ora_protocol": {
+			"description": "검증 가능한 ML 추론을 위한 온체인 AI 오라클"
+		},
+		"modulus_labs": {
+			"description": "ML 모델 검증을 위한 영지식 증명"
+		},
+		"ezkl": {
+			"description": "온체인 AI 추론을 증명하는 ZKML 툴킷"
+		},
+		"giza": {
+			"description": "StarkNet의 ZK 증명을 갖춘 검증 가능한 ML 플랫폼"
+		},
+		"lagrange_dao": {
+			"description": "Filecoin의 탈중앙화 AI 컴퓨트 플랫폼"
+		},
+		"kip_protocol": {
+			"description": "AI 데이터 수익화를 위한 지식 자산 프로토콜"
+		},
+		"sahara_ai": {
+			"description": "탈중앙화 AI 지식 기반 플랫폼"
+		},
+		"bagel_network": {
+			"description": "탈중앙화 ML 데이터 파이프라인 네트워크"
+		},
+		"allora_network": {
+			"description": "컨텍스트 예측을 위한 자기 개선 AI 네트워크"
+		},
+		"nillion": {
+			"description": "AI를 위한 MPC를 사용하는 프라이버시 보호 컴퓨트 네트워크"
+		},
+		"arbius": {
+			"description": "GPU 마이닝을 통한 탈중앙화 AI 이미지 생성"
+		},
+		"crynux": {
+			"description": "엣지 디바이스를 위한 탈중앙화 AI 추론 네트워크"
+		},
+		"gpu_net": {
+			"description": "AI 워크로드를 위한 탈중앙화 GPU 네트워크"
+		},
+		"aethir": {
+			"description": "게이밍 및 AI를 위한 탈중앙화 GPU 클라우드"
+		},
+		"spheron": {
+			"description": "AI 배포를 위한 탈중앙화 컴퓨트 인프라"
+		},
+		"clore_ai": {
+			"description": "AI 및 마이닝을 위한 GPU 렌탈 마켓플레이스"
+		},
+		"theta_edge": {
+			"description": "비디오 및 AI 워크로드를 위한 엣지 컴퓨팅 네트워크"
+		},
+		"nimble_network": {
+			"description": "탈중앙화 인텔리전스를 위한 컴포저블 AI 프레임워크"
+		},
+		"tensorplex": {
+			"description": "Bittensor TAO를 위한 리퀴드 스테이킹 및 DeFi"
+		},
+		"taoshi": {
+			"description": "AI 트레이딩 시그널을 위한 Bittensor 서브넷"
+		},
+		"corcel": {
+			"description": "Bittensor 네트워크로 구동되는 AI 추론 API"
+		}
+	}
+}

@@ -1,0 +1,170 @@
+{
+	"category_seo": {
+		"title": "Non-EVM 블록체인 - Solana, Bitcoin, Cosmos 등 | BiuBiu Tools",
+		"description": "Non-EVM 블록체인 생태계를 탐색하세요. Solana, Bitcoin, Cosmos, Aptos, Sui와 그들의 고유한 도구와 dApp.",
+		"keywords": "non-evm 체인, solana, bitcoin, cosmos, aptos, sui, ton, near, polkadot",
+		"faqs": [
+			{
+				"question": "Non-EVM 체인이란 무엇인가요?",
+				"answer": "Non-EVM 체인은 이더리움의 가상 머신을 사용하지 않습니다. 다른 아키텍처를 가지고 있습니다 - Solana는 Rust를 사용하고, Bitcoin은 자체 스크립트를 가지며, Cosmos는 CosmWasm을 사용합니다. 각각 고유한 트레이드오프가 있습니다."
+			},
+			{
+				"question": "왜 Non-EVM 체인을 사용하나요?",
+				"answer": "다른 체인은 다른 것을 위해 최적화됩니다. Solana는 속도와 낮은 수수료, Bitcoin은 보안과 탈중앙화, Cosmos는 상호운용성, Move 체인은 안전성을 위해 최적화됩니다."
+			},
+			{
+				"question": "Non-EVM 체인으로 어떻게 브릿지하나요?",
+				"answer": "Wormhole(멀티체인), Portal(Solana), IBC(Cosmos) 같은 특정 브릿지를 사용하세요. 일부 중앙화 거래소는 Non-EVM 체인으로의 직접 입출금을 지원합니다."
+			}
+		]
+	},
+	"tools": {
+		"solana_network": {
+			"description": "서브초 파이널리티와 낮은 수수료를 가진 고성능 블록체인"
+		},
+		"solana_explorer": {
+			"description": "트랜잭션과 계정을 위한 공식 Solana 블록체인 탐색기"
+		},
+		"solscan": {
+			"description": "토큰 분석 및 NFT 지원을 갖춘 인기 Solana 탐색기"
+		},
+		"jupiter_solana": {
+			"description": "최고의 스왑 레이트를 위한 선도적인 Solana DEX 애그리게이터"
+		},
+		"raydium": {
+			"description": "집중 풀을 갖춘 Solana AMM 및 유동성 제공자"
+		},
+		"marinade_finance": {
+			"description": "mSOL 토큰을 가진 가장 큰 Solana 리퀴드 스테이킹 프로토콜"
+		},
+		"phantom_wallet": {
+			"description": "멀티체인 지원을 갖춘 인기 Solana 지갑"
+		},
+		"magic_eden_solana": {
+			"description": "Solana와 Bitcoin Ordinals의 선도적인 NFT 마켓플레이스"
+		},
+		"tensor_nft": {
+			"description": "AMM을 갖춘 Solana의 전문 NFT 트레이딩 플랫폼"
+		},
+		"drift_protocol": {
+			"description": "최대 10배 레버리지의 Solana 무기한 선물 DEX"
+		},
+		"cosmos_network": {
+			"description": "IBC를 통한 크로스체인 통신을 가능하게 하는 블록체인의 인터넷"
+		},
+		"mintscan": {
+			"description": "멀티체인 Cosmos 생태계 탐색기"
+		},
+		"keplr_wallet": {
+			"description": "IBC 지원을 갖춘 표준 Cosmos 생태계 지갑"
+		},
+		"osmosis": {
+			"description": "IBC 통합을 갖춘 Cosmos 생태계의 대표 DEX"
+		},
+		"stride_zone": {
+			"description": "Cosmos 생태계를 위한 멀티체인 리퀴드 스테이킹"
+		},
+		"injective": {
+			"description": "파생상품 거래를 위한 DeFi 중심 Cosmos 체인"
+		},
+		"sei_network": {
+			"description": "400ms 파이널리티로 트레이딩에 최적화된 가장 빠른 L1"
+		},
+		"celestia": {
+			"description": "롤업을 위한 모듈식 데이터 가용성 레이어"
+		},
+		"dymension": {
+			"description": "모듈식 롤업을 위해 Cosmos에 구축된 RollApp 허브"
+		},
+		"sui_network": {
+			"description": "병렬 트랜잭션 실행을 가진 Move 기반 L1"
+		},
+		"sui_explorer": {
+			"description": "공식 Sui 블록체인 탐색기 및 분석"
+		},
+		"sui_wallet": {
+			"description": "Sui 자산 관리를 위한 공식 Sui 지갑"
+		},
+		"turbos_finance": {
+			"description": "Sui 블록체인의 집중 유동성 DEX"
+		},
+		"cetus_protocol": {
+			"description": "Sui와 Aptos의 선구적인 DEX 및 유동성 프로토콜"
+		},
+		"aptos_network": {
+			"description": "Block-STM 병렬 실행을 가진 Move 기반 L1"
+		},
+		"aptos_explorer": {
+			"description": "트랜잭션을 위한 공식 Aptos 블록체인 탐색기"
+		},
+		"petra_wallet": {
+			"description": "Aptos Labs의 공식 Aptos 지갑"
+		},
+		"pontem_wallet": {
+			"description": "Aptos와 Move 생태계를 위한 멀티체인 지갑"
+		},
+		"liquidswap": {
+			"description": "Pontem의 Aptos 첫 AMM DEX"
+		},
+		"ton_network": {
+			"description": "텔레그램 통합과 대규모 채택을 가진 The Open Network"
+		},
+		"tonscan": {
+			"description": "거래 및 제톤을 위한 TON 블록체인 탐색기"
+		},
+		"tonkeeper": {
+			"description": "텔레그램 통합을 갖춘 인기 TON 지갑"
+		},
+		"ston_fi": {
+			"description": "낮은 수수료와 빠른 스왑을 가진 TON의 선도적인 DEX"
+		},
+		"dedust": {
+			"description": "TON의 DEX 및 DeFi 플랫폼"
+		},
+		"near_protocol": {
+			"description": "계정 추상화를 가진 샤딩된 PoS 블록체인"
+		},
+		"near_explorer": {
+			"description": "공식 NEAR Protocol 블록체인 탐색기"
+		},
+		"ref_finance": {
+			"description": "NEAR의 선도적인 다목적 DeFi 플랫폼"
+		},
+		"polkadot": {
+			"description": "파라체인을 갖춘 이종 멀티체인 네트워크"
+		},
+		"subscan": {
+			"description": "Polkadot 및 Substrate 네트워크를 위한 멀티체인 탐색기"
+		},
+		"algorand": {
+			"description": "즉시 최종성을 갖춘 순수 PoS 블록체인"
+		},
+		"cardano": {
+			"description": "동료 검토 개발을 갖춘 연구 주도 블록체인"
+		},
+		"tezos": {
+			"description": "형식적 검증을 갖춘 자기 수정 블록체인"
+		},
+		"stacks": {
+			"description": "BTC에 스마트 컨트랙트를 가져오는 비트코인 L2"
+		},
+		"lightning_network": {
+			"description": "즉시 저비용 결제를 위한 비트코인 L2"
+		},
+		"rsk_rootstock": {
+			"description": "EVM 호환 스마트 컨트랙트를 가진 비트코인 사이드체인"
+		},
+		"ibc_protocol": {
+			"description": "Cosmos 체인을 위한 블록체인 간 통신 프로토콜"
+		},
+		"wormhole_bridge": {
+			"description": "주요 블록체인을 연결하는 크로스체인 메시징 프로토콜"
+		},
+		"axelar_network": {
+			"description": "범용 크로스체인 통신 네트워크"
+		},
+		"layerzero": {
+			"description": "무신뢰 메시징을 위한 옴니체인 상호 운용성 프로토콜"
+		}
+	}
+}

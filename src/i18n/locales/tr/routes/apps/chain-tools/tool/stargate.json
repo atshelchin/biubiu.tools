@@ -1,0 +1,101 @@
+{
+	"_meta": {
+		"title": "Stargate Finance - Omnichain Likidite Taşıma Protokolü",
+		"description": "Stargate Finance, LayerZero üzerine inşa edilmiş bir omnichain likidite taşıma protokolüdür. Birleşik likidite havuzları ile zincirler arası yerel varlık transferi ve anında garantili kesinlik sağlar."
+	},
+	"seo": {
+		"title": "Stargate Finance - Omnichain Likidite Taşıma Protokolü | Çapraz Zincir Köprüsü",
+		"description": "Stargate Finance, birleşik likidite havuzları ile sorunsuz çapraz zincir varlık transferlerini mümkün kılar. Anında garantili kesinlik ile yerel varlık köprüleme için LayerZero üzerine inşa edilmiştir.",
+		"keywords": "Stargate Finance, omnichain köprü, LayerZero, çapraz zincir likidite, birleşik likidite, STG token, yerel varlık transferi, çapraz zincir DeFi"
+	},
+	"overview": {
+		"title": "Stargate Finance Hakkında",
+		"description": "Stargate Finance, LayerZero üzerine inşa edilmiş tamamen birleştirilebilir bir likidite taşıma protokolüdür. Birleşik likidite havuzları kullanarak birden fazla blokzincir arasında yerel varlık transferlerini mümkün kılar. Protokol, anında garantili kesinlik ve optimal sermaye verimliliği için delta algoritması sunar. STG token, yönetimi güçlendirir ve ekosistem için likidite teşvikleri sağlar.",
+		"website_label": "Resmi Web Sitesi",
+		"whitepaper_label": "Dokümantasyon"
+	},
+	"features": {
+		"title": "Ana Özellikler",
+		"items": {
+			"feature_1": {
+				"title": "Birleşik Likidite",
+				"description": "Maksimum sermaye verimliliği ve azaltılmış kayma için tüm zincirler arasında paylaşılan tek likidite havuzu."
+			},
+			"feature_2": {
+				"title": "Yerel Varlık Transferleri",
+				"description": "Sarılmış token olmadan yerel varlıkları transfer edin, zincirler arasında varlık saflığını koruyun."
+			},
+			"feature_3": {
+				"title": "Anında Garantili Kesinlik",
+				"description": "Hedef zincirde geri dönüş olasılığı olmadan garantili işlem tamamlanması."
+			},
+			"feature_4": {
+				"title": "Delta Algoritması",
+				"description": "Zincirler arasında likidite dağılımını optimize eden akıllı yeniden dengeleme algoritması."
+			},
+			"feature_5": {
+				"title": "STG Stake Ödülleri",
+				"description": "STG tokenları stake ederek ve protokol yönetimine katılarak ödüller kazanın."
+			},
+			"feature_6": {
+				"title": "Omnichain Birleştirilebilirlik",
+				"description": "Karmaşık çapraz zincir DeFi operasyonları için diğer protokollerle sorunsuz entegrasyon."
+			}
+		}
+	},
+	"use_cases": {
+		"title": "Kullanım Senaryoları",
+		"items": {
+			"use_case_1": {
+				"title": "Çapraz Zincir Swaplar",
+				"description": "Birleşik likidite ve minimum kayma ile farklı blokzincirler arasında varlık değişimi yapın."
+			},
+			"use_case_2": {
+				"title": "Omnichain DeFi",
+				"description": "Sarılmış tokenları yönetmeden birden fazla zincirdeki DeFi protokollerine erişin."
+			},
+			"use_case_3": {
+				"title": "Likidite Sağlama",
+				"description": "Çapraz zincir işlemlerinden ücret ve STG ödülleri kazanmak için likidite sağlayın."
+			},
+			"use_case_4": {
+				"title": "Köprü Agregasyonu",
+				"description": "Sorunsuz çapraz zincir kullanıcı deneyimleri için Stargate'i dApp'lere entegre edin."
+			},
+			"use_case_5": {
+				"title": "Yerel Varlık Köprüleme",
+				"description": "Orijinal formlarını koruyarak zincirler arasında yerel varlıkları taşıyın."
+			}
+		}
+	},
+	"faqs": {
+		"title": "Sıkça Sorulan Sorular",
+		"items": {
+			"faq_1": {
+				"question": "Stargate Finance nedir?",
+				"answer": "Stargate Finance, LayerZero üzerine inşa edilmiş tamamen birleştirilebilir bir likidite taşıma protokolüdür. Kullanıcıların birleşik likidite havuzları kullanarak birden fazla blokzincir arasında yerel varlık transferi yapmalarını sağlar, anında garantili kesinlik ve delta algoritması ile optimal sermaye verimliliği sunar."
+			},
+			"faq_2": {
+				"question": "Birleşik likidite nasıl çalışır?",
+				"answer": "Stargate, desteklenen tüm zincirlerde tek bir paylaşılan likidite havuzu kullanır. Bu birleşik yaklaşım, likidite sağlayıcıların birden fazla rotaya aynı anda hizmet vermesine izin vererek sermaye verimliliğini maksimize eder, zincir başına izole havuzlara sahip geleneksel köprü tasarımlarına kıyasla parçalanma ve kaymayı azaltır."
+			},
+			"faq_3": {
+				"question": "STG token ne için kullanılır?",
+				"answer": "STG, Stargate'in yönetim ve fayda tokenıdır. Protokol yönetimi oylaması, stake ödülleri kazanma, likidite sağlama teşvikleri alma ve protokol karar alma sürecine katılma için kullanılır. STG sahipleri, protokol ücretleri ve ödüllerinin bir payını kazanmak için tokenlarını stake edebilir."
+			},
+			"faq_4": {
+				"question": "Stargate hangi zincirleri destekler?",
+				"answer": "Stargate, Ethereum, BNB Chain, Avalanche, Polygon, Arbitrum, Optimism, Fantom, Metis ve daha fazlası dahil olmak üzere birden fazla EVM ve EVM dışı zinciri destekler. Protokol, LayerZero'nun omnichain altyapısı aracılığıyla ek zincirlere genişlemeye devam ediyor."
+			},
+			"faq_5": {
+				"question": "Stargate ve LayerZero nasıl ilişkilidir?",
+				"answer": "Stargate, LayerZero'nun omnichain mesajlaşma protokolü üzerine inşa edilmiştir. LayerZero, güvenli çapraz zincir iletişimi için temel altyapıyı sağlarken, Stargate bunun üzerine likidite taşıma katmanını uygular. Her ikisi de LayerZero Labs tarafından geliştirilmiştir."
+			}
+		}
+	},
+	"cta": {
+		"title": "Stargate Finance'i Kullanmaya Başlayın",
+		"description": "Birleşik likidite ve anında garantili kesinlik ile sorunsuz omnichain varlık transferlerini deneyimleyin.",
+		"button": "Stargate Finance'i Ziyaret Edin"
+	}
+}

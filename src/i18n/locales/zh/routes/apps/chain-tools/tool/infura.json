@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Infura - 以太坊和多链节点基础设施 | Web3 API",
+		"description": "了解Infura,最初的以太坊节点基础设施提供商。为MetaMask和数千个dApp提供可靠的RPC访问和IPFS托管。",
+		"keywords": "Infura, 以太坊API, 区块链节点, MetaMask基础设施, IPFS网关, Web3 RPC, 多链API"
+	},
+	"overview": "Infura是最初的以太坊节点基础设施提供商,成立于2016年,是首批消除开发者运行自己区块链节点需求的服务之一。现在作为ConsenSys的产品,Infura为MetaMask(全球最受欢迎的Web3钱包)和生态系统中的数千个其他dApp提供支持。\n\n该平台为以太坊、Polygon、Arbitrum、Optimism和其他主要链提供可靠的RPC访问。除了基本的节点访问,Infura还提供用于去中心化存储的IPFS网关服务、用于历史区块链查询的归档数据访问以及企业级SLA。凭借99.9%的正常运行时间和全球基础设施,Infura每天处理数十亿次请求。\n\n作为ConsenSys的一部分,Infura与MetaMask和其他ConsenSys产品无缝集成。该平台开创了区块链即服务模式,这种模式现在已成为大多数Web3开发者习以为常的事。他们的免费套餐支持独立开发者,而企业计划则为主要协议和机构提供服务。Infura的基础设施经历了多个牛市和网络升级的考验,使其成为该领域最值得信赖的提供商之一。",
+	"features": {
+		"1": {
+			"title": "以太坊RPC",
+			"description": "最初且最可靠的以太坊节点访问,支持归档数据"
+		},
+		"2": {
+			"title": "多链支持",
+			"description": "提供以太坊、Polygon、Arbitrum、Optimism和其他主要链的RPC访问"
+		},
+		"3": {
+			"title": "IPFS网关",
+			"description": "通过可靠的IPFS固定和检索实现去中心化存储访问"
+		},
+		"4": {
+			"title": "归档数据",
+			"description": "完整的历史区块链数据访问,用于复杂查询和分析"
+		},
+		"5": {
+			"title": "高可用性",
+			"description": "99.9%正常运行时间SLA,具有全球基础设施和自动故障转移"
+		},
+		"6": {
+			"title": "MetaMask集成",
+			"description": "与MetaMask原生集成,无缝兼容ConsenSys生态系统"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "dApp后端",
+			"description": "使用可靠的区块链数据访问为去中心化应用提供支持"
+		},
+		"2": {
+			"title": "智能合约交互",
+			"description": "为基于合约的应用读写区块链数据"
+		},
+		"3": {
+			"title": "IPFS托管",
+			"description": "为NFT和Web3应用存储和检索去中心化内容"
+		},
+		"4": {
+			"title": "企业基础设施",
+			"description": "使用企业级SLA和支持构建生产区块链服务"
+		},
+		"5": {
+			"title": "钱包后端",
+			"description": "为钱包应用和浏览器扩展提供区块链访问"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是Infura,为什么它很重要?",
+			"answer": "Infura是最初的区块链节点基础设施提供商,成立于2016年,旨在消除开发者运行自己以太坊节点的需求。运行节点需要大量资源(存储、带宽、DevOps)。Infura开创了区块链即服务模式,使Web3开发变得可访问。它现在为MetaMask和数千个dApp提供支持,每天处理数十亿次请求。"
+		},
+		"2": {
+			"question": "Infura与MetaMask有什么关系?",
+			"answer": "Infura和MetaMask都是ConsenSys的产品。MetaMask使用Infura作为其默认RPC提供商,这意味着大多数MetaMask用户通过Infura的基础设施连接到以太坊。这种集成为MetaMask用户提供了可靠的节点访问,无需他们运行自己的节点。开发者也可以直接为其dApp使用Infura。"
+		},
+		"3": {
+			"question": "Infura支持哪些链?",
+			"answer": "Infura支持以太坊(主网和测试网)、Polygon、Arbitrum、Optimism、Palm、Filecoin和其他主要链。每条链都包括完整的RPC访问,以太坊包括用于历史查询的归档节点功能。他们还为去中心化存储提供IPFS网关服务。查看他们的文档以获取支持的网络完整列表。"
+		},
+		"4": {
+			"question": "Infura的免费套餐限制是什么?",
+			"answer": "Infura提供免费套餐,每天10万次请求(每月300万次)和每秒10次请求。这对于独立项目和测试来说很慷慨。付费计划(Developer、Team、Growth、Enterprise)提供更高的限制、专门支持和SLA保证。许多项目从免费开始,随着规模扩大而升级。"
+		},
+		"5": {
+			"question": "Infura与Alchemy相比如何?",
+			"answer": "两者都提供可靠的节点基础设施,具有相似的核心功能。Infura开创了这个领域(2016年)并为MetaMask提供支持,拥有更广泛的用户覆盖。Alchemy(2017年)更注重开发者体验,提供增强的API、SDK和工具。Infura强调稳定性和ConsenSys生态系统集成。两者都受到主要项目的信任;选择通常取决于所需的具体功能和现有工具。"
+		}
+	},
+	"cta": {
+		"ready": "准备好使用Infura构建了吗?",
+		"button": "打开Infura",
+		"note": "最初的以太坊基础设施提供商"
+	}
+}

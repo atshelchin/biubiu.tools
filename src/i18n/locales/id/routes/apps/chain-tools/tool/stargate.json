@@ -1,0 +1,101 @@
+{
+	"_meta": {
+		"title": "Stargate Finance - Protokol Transportasi Likuiditas Omnichain",
+		"description": "Stargate Finance adalah protokol transportasi likuiditas omnichain yang dibangun di LayerZero. Transfer aset asli lintas rantai dengan pool likuiditas terpadu dan finalitas terjamin instan."
+	},
+	"seo": {
+		"title": "Stargate Finance - Protokol Transportasi Likuiditas Omnichain | Jembatan Cross-Chain",
+		"description": "Stargate Finance memungkinkan transfer aset cross-chain yang mulus dengan pool likuiditas terpadu. Dibangun di LayerZero untuk jembatan aset asli dengan finalitas terjamin instan.",
+		"keywords": "Stargate Finance, jembatan omnichain, LayerZero, likuiditas cross-chain, likuiditas terpadu, token STG, transfer aset asli, DeFi cross-chain"
+	},
+	"overview": {
+		"title": "Tentang Stargate Finance",
+		"description": "Stargate Finance adalah protokol transportasi likuiditas yang sepenuhnya dapat disusun yang dibangun di LayerZero. Ini memungkinkan transfer aset asli di beberapa blockchain menggunakan pool likuiditas terpadu. Protokol ini menampilkan finalitas terjamin instan dan algoritma delta untuk efisiensi modal yang optimal. Token STG memberdayakan tata kelola dan memberikan insentif likuiditas untuk ekosistem.",
+		"website_label": "Situs Web Resmi",
+		"whitepaper_label": "Dokumentasi"
+	},
+	"features": {
+		"title": "Fitur Utama",
+		"items": {
+			"feature_1": {
+				"title": "Likuiditas Terpadu",
+				"description": "Pool likuiditas tunggal yang dibagikan di semua rantai untuk efisiensi modal maksimum dan slippage yang dikurangi."
+			},
+			"feature_2": {
+				"title": "Transfer Aset Asli",
+				"description": "Transfer aset asli tanpa token yang dibungkus, mempertahankan kemurnian aset lintas rantai."
+			},
+			"feature_3": {
+				"title": "Finalitas Terjamin Instan",
+				"description": "Penyelesaian transaksi terjamin di rantai tujuan tanpa kemungkinan pembatalan."
+			},
+			"feature_4": {
+				"title": "Algoritma Delta",
+				"description": "Algoritma penyeimbangan ulang cerdas yang mengoptimalkan distribusi likuiditas lintas rantai."
+			},
+			"feature_5": {
+				"title": "Hadiah Staking STG",
+				"description": "Dapatkan hadiah dengan melakukan staking token STG dan berpartisipasi dalam tata kelola protokol."
+			},
+			"feature_6": {
+				"title": "Komposabilitas Omnichain",
+				"description": "Integrasi mulus dengan protokol lain untuk operasi DeFi cross-chain yang kompleks."
+			}
+		}
+	},
+	"use_cases": {
+		"title": "Kasus Penggunaan",
+		"items": {
+			"use_case_1": {
+				"title": "Swap Cross-Chain",
+				"description": "Tukar aset antara blockchain yang berbeda dengan likuiditas terpadu dan slippage minimal."
+			},
+			"use_case_2": {
+				"title": "DeFi Omnichain",
+				"description": "Akses protokol DeFi di beberapa rantai tanpa mengelola token yang dibungkus."
+			},
+			"use_case_3": {
+				"title": "Penyediaan Likuiditas",
+				"description": "Sediakan likuiditas untuk mendapatkan biaya dan hadiah STG dari transaksi cross-chain."
+			},
+			"use_case_4": {
+				"title": "Agregasi Jembatan",
+				"description": "Integrasikan Stargate ke dalam dApp untuk pengalaman pengguna cross-chain yang mulus."
+			},
+			"use_case_5": {
+				"title": "Jembatan Aset Asli",
+				"description": "Pindahkan aset asli antara rantai sambil mempertahankan bentuk aslinya."
+			}
+		}
+	},
+	"faqs": {
+		"title": "Pertanyaan yang Sering Diajukan",
+		"items": {
+			"faq_1": {
+				"question": "Apa itu Stargate Finance?",
+				"answer": "Stargate Finance adalah protokol transportasi likuiditas yang sepenuhnya dapat disusun yang dibangun di LayerZero. Ini memungkinkan pengguna untuk mentransfer aset asli di beberapa blockchain menggunakan pool likuiditas terpadu, dengan finalitas terjamin instan dan efisiensi modal yang optimal melalui algoritma deltanya."
+			},
+			"faq_2": {
+				"question": "Bagaimana likuiditas terpadu bekerja?",
+				"answer": "Stargate menggunakan pool likuiditas bersama tunggal di semua rantai yang didukung. Pendekatan terpadu ini memaksimalkan efisiensi modal dengan memungkinkan penyedia likuiditas melayani beberapa rute secara bersamaan, mengurangi fragmentasi dan slippage dibandingkan dengan desain jembatan tradisional dengan pool terisolasi per rantai."
+			},
+			"faq_3": {
+				"question": "Untuk apa token STG digunakan?",
+				"answer": "STG adalah token tata kelola dan utilitas Stargate. Ini digunakan untuk pemungutan suara tata kelola protokol, mendapatkan hadiah staking, menerima insentif penyediaan likuiditas, dan berpartisipasi dalam pengambilan keputusan protokol. Pemegang STG dapat melakukan staking token mereka untuk mendapatkan bagian dari biaya dan hadiah protokol."
+			},
+			"faq_4": {
+				"question": "Rantai apa yang didukung Stargate?",
+				"answer": "Stargate mendukung beberapa rantai EVM dan non-EVM termasuk Ethereum, BNB Chain, Avalanche, Polygon, Arbitrum, Optimism, Fantom, Metis, dan lainnya. Protokol terus berkembang ke rantai tambahan melalui infrastruktur omnichain LayerZero."
+			},
+			"faq_5": {
+				"question": "Bagaimana hubungan Stargate dengan LayerZero?",
+				"answer": "Stargate dibangun di atas protokol pesan omnichain LayerZero. LayerZero menyediakan infrastruktur dasar untuk komunikasi cross-chain yang aman, sementara Stargate mengimplementasikan lapisan transportasi likuiditas di atasnya. Keduanya dikembangkan oleh LayerZero Labs."
+			}
+		}
+	},
+	"cta": {
+		"title": "Mulai Menggunakan Stargate Finance",
+		"description": "Alami transfer aset omnichain yang mulus dengan likuiditas terpadu dan finalitas terjamin instan.",
+		"button": "Kunjungi Stargate Finance"
+	}
+}

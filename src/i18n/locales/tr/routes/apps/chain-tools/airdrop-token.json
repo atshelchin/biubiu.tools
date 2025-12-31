@@ -1,0 +1,164 @@
+{
+	"category_seo": {
+		"title": "Kripto Airdrop'ları - Token Dağıtımları ve Uygunluk | BiuBiu Tools",
+		"description": "Kripto airdrop'larını takip edin ve talep edin. Airdrop fırsatlarını bulun, uygunluğu kontrol edin ve airdrop farming stratejilerini öğrenin.",
+		"keywords": "kripto airdrop'ları, token dağıtımı, airdrop uygunluğu, ücretsiz kripto, airdrop farming",
+		"faqs": [
+			{
+				"question": "Kripto airdrop'ları nedir?",
+				"answer": "Airdrop'lar erken kullanıcılara, sahiplere veya topluluk üyelerine ücretsiz token dağıtımlarıdır. Sahipliği merkeziyetsizleştirmek, kullanıcıları ödüllendirmek ve yeni projeler için farkındalık yaratmak için kullanılır."
+			},
+			{
+				"question": "Airdrop'lara nasıl hak kazanırım?",
+				"answer": "Protokolleri erken kullanın, zaman içinde aktiviteyi sürdürün, testnet'lere katılın, ilgili token/NFT'lere sahip olun ve topluluklarla etkileşime geçin. Sybil tespiti yaygındır - miktar yerine kalite önemlidir."
+			},
+			{
+				"question": "Airdrop'lar vergiye tabi mi?",
+				"answer": "Çoğu yargı bölgesinde airdrop'lar alındığında gelir olarak ve satıldığında sermaye kazançları olarak vergiye tabidir. Airdrop anındaki adil piyasa değerinin kayıtlarını tutun. Vergi uzmanına danışın."
+			}
+		]
+	},
+	"tools": {
+		"airdrop_uni": {
+			"description": "Efsanevi Uniswap airdrop'u - erken DEX kullanıcılarına 400 UNI, DeFi token dağıtımları için standart belirledi"
+		},
+		"airdrop_ens": {
+			"description": "Domain sahiplerine ENS yönetişim tokeni airdrop'u - erken Ethereum Name Service benimseyenlerini ödüllendiriyor"
+		},
+		"airdrop_dydx": {
+			"description": "dYdX sürekli işlem platformu airdrop'u - hacim ve aktiviteye göre trader'ları ödüllendiriyor"
+		},
+		"airdrop_1inch": {
+			"description": "1inch DEX toplayıcı airdrop'u - toplayıcı üzerinden swap yapan kullanıcılara dağıtıldı"
+		},
+		"airdrop_ldo": {
+			"description": "Lido DAO yönetişim tokeni - erken likit staking kullanıcılarını ve stETH sahiplerini ödüllendiriyor"
+		},
+		"airdrop_op": {
+			"description": "Optimism L2 airdrop'u - erken köprü kullanıcılarını, DAO oylayanlarını ve aktif Ethereum kullanıcılarını ödüllendiriyor"
+		},
+		"airdrop_arb": {
+			"description": "Arbitrum L2 airdrop'u - köprü kullanıcılarını ve ekosistem katılımcılarını ödüllendiren en büyük L2 airdrop'u"
+		},
+		"airdrop_blur": {
+			"description": "Blur NFT pazaryeri airdrop'u - sadakat puanı sistemiyle profesyonel trader'ları ödüllendiriyor"
+		},
+		"airdrop_strk": {
+			"description": "Starknet tedarik programı - erken kullanıcılara ve ekosistem katkıda bulunanlarına zk-rollup airdrop'u"
+		},
+		"airdrop_zk": {
+			"description": "zkSync Era airdrop'u - erken köprü kullanıcılarını ve mainnet aktivite katılımcılarını ödüllendiriyor"
+		},
+		"airdrop_jup": {
+			"description": "Jupiter toplayıcı airdrop'u - swap kullanıcılarına Solana'nın en büyük DEX airdrop'u"
+		},
+		"airdrop_w": {
+			"description": "Wormhole zincirler arası köprü airdrop'u - birden fazla zincirdeki köprü kullanıcılarını ödüllendiriyor"
+		},
+		"airdrop_ena": {
+			"description": "Ethena sentetik dolar protokolü airdrop'u - shard sahiplerini ve erken USDe basanları ödüllendiriyor"
+		},
+		"airdrop_eigen": {
+			"description": "EigenLayer yeniden stake protokolü airdrop'u - erken yeniden stake edenleri ve puan kazananları ödüllendiriyor"
+		},
+		"airdrop_pyth": {
+			"description": "Pyth Network oracle airdrop'u - 27'den fazla blockchain'deki DeFi kullanıcılarına dağıtıldı"
+		},
+		"airdrop_tnsr": {
+			"description": "Tensor NFT pazaryeri airdrop'u - sezon puanlarıyla Solana NFT trader'larını ödüllendiriyor"
+		},
+		"airdrop_kmno": {
+			"description": "Kamino Finance airdrop'u - likidite sağlayıcıları ve kullanıcıları ödüllendiren Solana DeFi protokolü"
+		},
+		"airdrop_parcl": {
+			"description": "Parcl emlak ticareti airdrop'u - sentetik gayrimenkul ticareti için Solana protokolü"
+		},
+		"airdrop_wen": {
+			"description": "WEN meme token airdrop'u - Jupiter şiir NFT sahipleri ücretsiz WEN tokenleri aldı"
+		},
+		"airdrop_omni": {
+			"description": "Omni Network birlikte çalışabilirlik airdrop'u - EigenLayer yeniden stake edenleri ve testnet kullanıcılarını ödüllendiriyor"
+		},
+		"airdrop_alt": {
+			"description": "AltLayer hizmet olarak rollup airdrop'u - yeniden stake edenleri ve ekosistem katılımcılarını ödüllendiriyor"
+		},
+		"airdrop_manta": {
+			"description": "Manta Pacific modüler L2 airdrop'u - köprü kullanıcılarını ve New Paradigm katılımcılarını ödüllendiriyor"
+		},
+		"airdrop_dym": {
+			"description": "Dymension RollApp hub airdrop'u - Cosmos stake edenlere ve erken genesis roller'lara dağıtıldı"
+		},
+		"airdrop_zetachain": {
+			"description": "ZetaChain omnichain airdrop'u - testnet katılımcılarını ve erken mainnet kullanıcılarını ödüllendiriyor"
+		},
+		"airdrop_ethfi": {
+			"description": "Ether.fi likit yeniden stake airdrop'u - eETH sahiplerini ve sadakat puanı kazananları ödüllendiriyor"
+		},
+		"airdrop_renzo": {
+			"description": "Renzo yeniden stake protokolü airdrop'u - ezETH sahiplerine ve puan kazananlara dağıtıldı"
+		},
+		"airdrop_puffer": {
+			"description": "Puffer Finance potansiyel airdrop - pufETH puan sistemiyle likit yeniden stake protokolü"
+		},
+		"airdrop_kelp": {
+			"description": "Kelp DAO potansiyel airdrop - Kelp Miles ödülleriyle rsETH likit yeniden stake"
+		},
+		"airdrop_swell": {
+			"description": "Swell Network potansiyel airdrop - pearl puan programıyla likit staking"
+		},
+		"airdrop_cow": {
+			"description": "CoW Protocol MEV koruma airdrop'u - toplu açık artırma ticareti kullanıcılarını ödüllendiriyor"
+		},
+		"airdrop_hop": {
+			"description": "Hop Protocol L2 köprü airdrop'u - erken çapraz L2 köprü kullanıcılarını ödüllendiriyor"
+		},
+		"airdrop_safe": {
+			"description": "Safe çoklu imza cüzdan airdrop'u - Safe kullanıcılarına ve ekosistem katılımcılarına dağıtıldı"
+		},
+		"airdrop_matic_pol": {
+			"description": "Polygon MATIC'ten POL token geçişi - yeni yerel tokene 1:1 yükseltme"
+		},
+		"earndrop": {
+			"description": "Çoklu protokol airdrop uygunluk denetleyicisi - birden fazla airdrop için niteliği doğrulayın"
+		},
+		"defillama_airdrops": {
+			"description": "DeFiLlama airdrop takipçisi - yaklaşan ve aktif token dağıtımlarının kapsamlı listesi"
+		},
+		"airdrop_alert": {
+			"description": "Airdrop Alert haberleri ve bildirimleri - yeni airdrop fırsatları hakkında güncel kalın"
+		},
+		"airdrops_io": {
+			"description": "Airdrops.io toplayıcı - rehberlerle küratörlü meşru airdrop listesi"
+		},
+		"airdrop_farmer": {
+			"description": "Layer3 görev platformu - ödüller ve potansiyel airdrop'lar kazanmak için zincir üstü görevleri tamamlayın"
+		},
+		"galxe_campaigns": {
+			"description": "Galxe Web3 kimlik bilgisi kampanyaları - potansiyel airdrop'lar için NFT'ler ve puanlar kazanın"
+		},
+		"rabbithole_quests": {
+			"description": "RabbitHole öğren-kazan platformu - DeFi öğrenmek ve ödüller kazanmak için görevleri tamamlayın"
+		},
+		"zealy_quests": {
+			"description": "Zealy topluluk görev platformu - proje ödülleri için sosyal ve zincir üstü görevleri tamamlayın"
+		},
+		"potential_scroll": {
+			"description": "Scroll zkEVM potansiyel airdrop - L2'yi kullanın ve ekosisteme katılın"
+		},
+		"potential_linea": {
+			"description": "Linea zkEVM potansiyel airdrop - Voyage puan programıyla ConsenSys L2"
+		},
+		"potential_blast": {
+			"description": "Blast L2 yerel getiri airdrop'u - erken yatırımcıları ve ekosistem kullanıcılarını ödüllendiriyor"
+		},
+		"potential_berachain": {
+			"description": "Berachain potansiyel airdrop - testnet katılımıyla likidite kanıtı L1"
+		},
+		"potential_monad": {
+			"description": "Monad potansiyel airdrop - şu anda geliştirme aşamasında yüksek performanslı EVM L1"
+		},
+		"potential_fuel": {
+			"description": "Fuel Network potansiyel airdrop - beta testnet'li modüler yürütme katmanı"
+		}
+	}
+}

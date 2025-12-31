@@ -1,0 +1,164 @@
+{
+	"category_seo": {
+		"title": "加密空投 - 代币分发与资格 | BiuBiu Tools",
+		"description": "追踪和领取加密空投。查找空投机会、检查资格并学习空投farming策略。",
+		"keywords": "加密空投, 代币分发, 空投资格, 免费加密货币, 空投farming",
+		"faqs": [
+			{
+				"question": "什么是加密空投？",
+				"answer": "空投是向早期用户、持有者或社区成员免费分发代币。用于去中心化所有权、奖励用户和为新项目创造知名度。"
+			},
+			{
+				"question": "如何获得空投资格？",
+				"answer": "早期使用协议、长期保持活动、参与测试网、持有相关代币/NFT并参与社区。女巫检测很常见——质量比数量重要。"
+			},
+			{
+				"question": "空投需要交税吗？",
+				"answer": "在大多数司法管辖区，空投在收到时作为收入征税，出售时作为资本利得征税。记录空投时的公允市场价值。咨询税务专业人士。"
+			}
+		]
+	},
+	"tools": {
+		"airdrop_uni": {
+			"description": "传奇Uniswap空投 - 向早期DEX用户发放400 UNI，为DeFi代币分发树立标准"
+		},
+		"airdrop_ens": {
+			"description": "ENS治理代币空投给域名持有者 - 奖励早期以太坊域名服务采用者"
+		},
+		"airdrop_dydx": {
+			"description": "dYdX永续交易平台空投 - 根据交易量和活动奖励交易者"
+		},
+		"airdrop_1inch": {
+			"description": "1inch DEX聚合器空投 - 分发给通过聚合器交换的用户"
+		},
+		"airdrop_ldo": {
+			"description": "Lido DAO治理代币 - 奖励早期流动性质押用户和stETH持有者"
+		},
+		"airdrop_op": {
+			"description": "Optimism L2空投 - 奖励早期桥接用户、DAO投票者和活跃以太坊用户"
+		},
+		"airdrop_arb": {
+			"description": "Arbitrum L2空投 - 最大L2空投，奖励桥接用户和生态参与者"
+		},
+		"airdrop_blur": {
+			"description": "Blur NFT市场空投 - 通过忠诚度积分系统奖励专业交易者"
+		},
+		"airdrop_strk": {
+			"description": "Starknet配置计划 - zk-rollup空投给早期用户和生态贡献者"
+		},
+		"airdrop_zk": {
+			"description": "zkSync Era空投 - 奖励早期桥接用户和主网活动参与者"
+		},
+		"airdrop_jup": {
+			"description": "Jupiter聚合器空投 - Solana最大DEX空投给交换用户"
+		},
+		"airdrop_w": {
+			"description": "Wormhole跨链桥空投 - 奖励多链桥接用户"
+		},
+		"airdrop_ena": {
+			"description": "Ethena合成美元协议空投 - 奖励碎片持有者和早期USDe铸造者"
+		},
+		"airdrop_eigen": {
+			"description": "EigenLayer再质押协议空投 - 奖励早期再质押者和积分获得者"
+		},
+		"airdrop_pyth": {
+			"description": "Pyth Network预言机空投 - 分发给27+区块链的DeFi用户"
+		},
+		"airdrop_tnsr": {
+			"description": "Tensor NFT市场空投 - 通过赛季积分奖励Solana NFT交易者"
+		},
+		"airdrop_kmno": {
+			"description": "Kamino Finance空投 - Solana DeFi协议奖励流动性提供者和用户"
+		},
+		"airdrop_parcl": {
+			"description": "Parcl房地产交易空投 - Solana合成房地产交易协议"
+		},
+		"airdrop_wen": {
+			"description": "WEN meme代币空投 - Jupiter诗歌NFT持有者获得免费WEN代币"
+		},
+		"airdrop_omni": {
+			"description": "Omni Network互操作性空投 - 奖励EigenLayer再质押者和测试网用户"
+		},
+		"airdrop_alt": {
+			"description": "AltLayer rollup即服务空投 - 奖励再质押者和生态参与者"
+		},
+		"airdrop_manta": {
+			"description": "Manta Pacific模块化L2空投 - 奖励桥接用户和New Paradigm参与者"
+		},
+		"airdrop_dym": {
+			"description": "Dymension RollApp中心空投 - 分发给Cosmos质押者和早期genesis参与者"
+		},
+		"airdrop_zetachain": {
+			"description": "ZetaChain全链空投 - 奖励测试网参与者和早期主网用户"
+		},
+		"airdrop_ethfi": {
+			"description": "Ether.fi流动性再质押空投 - 奖励eETH持有者和忠诚度积分获得者"
+		},
+		"airdrop_renzo": {
+			"description": "Renzo再质押协议空投 - 分发给ezETH持有者和积分获得者"
+		},
+		"airdrop_puffer": {
+			"description": "Puffer Finance潜在空投 - 流动性再质押协议，有pufETH积分系统"
+		},
+		"airdrop_kelp": {
+			"description": "Kelp DAO潜在空投 - rsETH流动性再质押，有Kelp Miles奖励"
+		},
+		"airdrop_swell": {
+			"description": "Swell Network潜在空投 - 流动性质押，有珍珠积分计划"
+		},
+		"airdrop_cow": {
+			"description": "CoW Protocol MEV保护空投 - 奖励批量拍卖交易用户"
+		},
+		"airdrop_hop": {
+			"description": "Hop Protocol L2桥接空投 - 奖励早期跨L2桥接用户"
+		},
+		"airdrop_safe": {
+			"description": "Safe多签钱包空投 - 分发给Safe用户和生态参与者"
+		},
+		"airdrop_matic_pol": {
+			"description": "Polygon MATIC到POL代币迁移 - 1:1升级到新原生代币"
+		},
+		"earndrop": {
+			"description": "多协议空投资格检查器 - 验证多个空投的资格"
+		},
+		"defillama_airdrops": {
+			"description": "DeFiLlama空投追踪器 - 即将到来和活跃代币分发的综合列表"
+		},
+		"airdrop_alert": {
+			"description": "空投警报新闻和通知 - 了解最新空投机会"
+		},
+		"airdrops_io": {
+			"description": "Airdrops.io聚合器 - 附带指南的合法空投精选列表"
+		},
+		"airdrop_farmer": {
+			"description": "Layer3任务平台 - 完成链上任务以获得奖励和潜在空投"
+		},
+		"galxe_campaigns": {
+			"description": "Galxe Web3凭证活动 - 获得NFT和积分以获得潜在空投"
+		},
+		"rabbithole_quests": {
+			"description": "RabbitHole边学边赚平台 - 完成任务学习DeFi并获得奖励"
+		},
+		"zealy_quests": {
+			"description": "Zealy社区任务平台 - 完成社交和链上任务获得项目奖励"
+		},
+		"potential_scroll": {
+			"description": "Scroll zkEVM潜在空投 - 使用L2并参与生态系统"
+		},
+		"potential_linea": {
+			"description": "Linea zkEVM潜在空投 - ConsenSys L2，有Voyage积分计划"
+		},
+		"potential_blast": {
+			"description": "Blast L2原生收益空投 - 奖励早期存款者和生态用户"
+		},
+		"potential_berachain": {
+			"description": "Berachain潜在空投 - 流动性证明L1，有测试网参与"
+		},
+		"potential_monad": {
+			"description": "Monad潜在空投 - 高性能EVM L1，目前正在开发中"
+		},
+		"potential_fuel": {
+			"description": "Fuel Network潜在空投 - 模块化执行层，有beta测试网"
+		}
+	}
+}

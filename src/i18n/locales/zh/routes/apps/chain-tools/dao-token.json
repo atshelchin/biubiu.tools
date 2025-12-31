@@ -1,0 +1,155 @@
+{
+	"category_seo": {
+		"title": "DAO 治理代币 - 投票权与代币经济学 | BiuBiu Tools",
+		"description": "探索 DAO 治理代币。主要 DAO 中的投票机制、代币分配和治理参与。",
+		"keywords": "DAO治理代币, DeFi投票, 协议治理, 代币经济学, 治理委托",
+		"faqs": [
+			{
+				"question": "什么是治理代币？",
+				"answer": "治理代币赋予持有者在协议决策中的投票权。例如：UNI（Uniswap）、AAVE、COMP。投票权通常与代币持有量成比例。"
+			},
+			{
+				"question": "投票委托如何运作？",
+				"answer": "你可以将投票权委托给他人（代表）同时保留代币。这有助于活跃的社区成员代表被动持有者投票。"
+			},
+			{
+				"question": "治理代币有价值吗？",
+				"answer": "价值来自治理权、潜在的费用分成和投机。一些协议与代币持有者分享收入。其他协议在价值累积方面遇到困难。"
+			}
+		]
+	},
+	"tools": {
+		"boardroom": {
+			"description": "治理聚合器，用于追踪多个协议的 DAO 提案、投票和委托活动"
+		},
+		"uni_token": {
+			"description": "Uniswap 治理代币，用于最大 DEX 的协议升级、费用开关和资金库分配投票"
+		},
+		"aave_token": {
+			"description": "Aave 治理和安全模块质押代币，用于领先的去中心化借贷协议"
+		},
+		"mkr_token": {
+			"description": "MakerDAO 治理代币，用于管理 DAI 稳定币参数、抵押品类型和协议风险"
+		},
+		"crv_token": {
+			"description": "Curve 治理代币，采用投票托管机制（veCRV）引导流动性激励至资金池"
+		},
+		"comp_token": {
+			"description": "Compound 治理代币，用于 DeFi 借贷的利率模型和协议参数投票"
+		},
+		"snx_token": {
+			"description": "Synthetix 治理和质押代币，用于合成资产协议，支撑 sUSD 和合成资产"
+		},
+		"ldo_token": {
+			"description": "Lido DAO 治理代币，用于最大的流动性质押协议，管理 stETH 和跨链质押"
+		},
+		"gmx_token": {
+			"description": "GMX 治理和实用代币，用于永续合约 DEX，从交易中赚取协议费用"
+		},
+		"bal_token": {
+			"description": "Balancer 治理代币，采用 veBAL 机制引导流动性挖矿奖励至资金池"
+		},
+		"sushi_token": {
+			"description": "SushiSwap 治理代币，用于多链 DEX 和 DeFi 生态系统，包括借贷和启动平台"
+		},
+		"yfi_token": {
+			"description": "Yearn Finance 治理代币，用于管理机枪池策略的收益聚合协议"
+		},
+		"inch_token": {
+			"description": "1inch 治理和实用代币，用于 DEX 聚合器，具有质押奖励和 DAO 投票功能"
+		},
+		"pendle_token": {
+			"description": "Pendle 治理代币，用于收益代币化协议，实现未来收益交易"
+		},
+		"ena_token": {
+			"description": "Ethena 治理代币，用于由质押 ETH 衍生品支撑的合成美元协议 USDe"
+		},
+		"dydx_token": {
+			"description": "dYdX 治理代币，用于去中心化永续合约交易所，现已迁移至独立 Cosmos 链"
+		},
+		"cvx_token": {
+			"description": "Convex Finance 代币，用于增强 Curve 奖励并治理 CRV 收益优化平台"
+		},
+		"fxs_token": {
+			"description": "Frax Share 治理代币，用于分数算法稳定币和 DeFi 生态系统"
+		},
+		"blur_token": {
+			"description": "Blur 治理代币，用于零手续费交易和高级交易功能的 NFT 市场"
+		},
+		"ape_token": {
+			"description": "ApeCoin 治理代币，用于无聊猿生态系统、游戏和元宇宙项目"
+		},
+		"rpl_token": {
+			"description": "Rocket Pool 治理和抵押代币，用于去中心化以太坊质押协议"
+		},
+		"morpho_token": {
+			"description": "Morpho 治理代币，用于构建在 Aave 和 Compound 之上的点对点借贷优化器"
+		},
+		"rdnt_token": {
+			"description": "Radiant Capital 治理代币，用于使用 LayerZero 的全链借贷协议"
+		},
+		"osmo_token": {
+			"description": "Osmosis 治理和质押代币，用于 Cosmos 生态系统中最大的 DEX"
+		},
+		"jup_token": {
+			"description": "Jupiter 治理代币，用于领先的 Solana DEX 聚合器和永续合约交易所"
+		},
+		"ray_token": {
+			"description": "Raydium 治理代币，用于 Solana AMM 和 Serum 订单簿流动性提供者"
+		},
+		"jto_token": {
+			"description": "Jito 治理代币，用于 Solana MEV 基础设施和流动性质押协议"
+		},
+		"orca_token": {
+			"description": "Orca 治理代币，用于具有集中流动性池的用户友好型 Solana DEX"
+		},
+		"arb_token": {
+			"description": "Arbitrum 治理代币，用于使用乐观 Rollup 的领先以太坊 L2"
+		},
+		"op_token": {
+			"description": "Optimism 治理代币，用于 L2 扩展解决方案和超级链生态系统"
+		},
+		"strk_token": {
+			"description": "StarkNet 治理代币，用于使用 STARK 证明进行以太坊扩展的 ZK-rollup L2"
+		},
+		"zk_token": {
+			"description": "zkSync Era 治理代币，用于具有原生账户抽象的 ZK-rollup"
+		},
+		"matic_token": {
+			"description": "Polygon (MATIC/POL) 治理代币，用于包括 PoS 和 zkEVM 的以太坊扩展生态系统"
+		},
+		"mnt_token": {
+			"description": "Mantle 治理代币，用于由 BitDAO 资金库支持的模块化架构 L2"
+		},
+		"metis_token": {
+			"description": "Metis 治理代币，用于专注于企业和去中心化公司的以太坊 L2"
+		},
+		"ens_token": {
+			"description": "以太坊域名服务治理代币，用于管理 .eth 域名系统和协议升级"
+		},
+		"gtc_token": {
+			"description": "Gitcoin 治理代币，用于使用二次方资助的公共产品资助平台"
+		},
+		"safe_token": {
+			"description": "Safe（原 Gnosis Safe）治理代币，用于领先的多签钱包基础设施"
+		},
+		"cow_token": {
+			"description": "CoW Protocol 治理代币，用于使用批量拍卖的 MEV 保护 DEX"
+		},
+		"gno_token": {
+			"description": "Gnosis 治理代币，用于预测市场平台和 Gnosis Chain 生态系统"
+		},
+		"tally_governance": {
+			"description": "链上治理平台，用于创建提案、委托投票和执行 DAO 决策"
+		},
+		"snapshot_governance": {
+			"description": "链下投票平台，使用签名消息和可定制策略进行无 Gas 治理"
+		},
+		"karma_dao": {
+			"description": "DAO 贡献者声誉和委托追踪平台，用于治理分析"
+		},
+		"messari_governance": {
+			"description": "Messari 的治理研究和分析，涵盖 DAO 提案和投票趋势"
+		}
+	}
+}

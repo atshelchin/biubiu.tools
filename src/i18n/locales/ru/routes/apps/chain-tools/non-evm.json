@@ -1,0 +1,170 @@
+{
+	"category_seo": {
+		"title": "Не-EVM блокчейны - Solana, Bitcoin, Cosmos и другие | BiuBiu Tools",
+		"description": "Исследуйте экосистемы не-EVM блокчейнов. Solana, Bitcoin, Cosmos, Aptos, Sui и их уникальные инструменты и dApps.",
+		"keywords": "не-evm блокчейны, solana, bitcoin, cosmos, aptos, sui, ton, near, polkadot",
+		"faqs": [
+			{
+				"question": "Что такое не-EVM цепи?",
+				"answer": "Не-EVM цепи не используют виртуальную машину Ethereum. У них разные архитектуры — Solana использует Rust, Bitcoin имеет свой собственный скрипт, Cosmos использует CosmWasm. Каждая имеет уникальные компромиссы."
+			},
+			{
+				"question": "Зачем использовать не-EVM цепи?",
+				"answer": "Разные цепи оптимизированы для разных вещей. Solana для скорости и низких комиссий, Bitcoin для безопасности и децентрализации, Cosmos для интероперабельности, Move-цепи для безопасности."
+			},
+			{
+				"question": "Как создать мост к не-EVM цепям?",
+				"answer": "Используйте специальные мосты, такие как Wormhole (мультичейн), Portal (Solana) или IBC (Cosmos). Некоторые централизованные биржи поддерживают прямые депозиты/выводы на не-EVM цепи."
+			}
+		]
+	},
+	"tools": {
+		"solana_network": {
+			"description": "Высокопроизводительный блокчейн с субсекундной финальностью и низкими комиссиями"
+		},
+		"solana_explorer": {
+			"description": "Официальный обозреватель Solana для транзакций и аккаунтов"
+		},
+		"solscan": {
+			"description": "Популярный обозреватель Solana с аналитикой токенов и поддержкой NFT"
+		},
+		"jupiter_solana": {
+			"description": "Ведущий DEX-агрегатор Solana для лучших курсов обмена"
+		},
+		"raydium": {
+			"description": "Solana AMM и провайдер ликвидности с концентрированными пулами"
+		},
+		"marinade_finance": {
+			"description": "Крупнейший протокол ликвидного стейкинга Solana с токеном mSOL"
+		},
+		"phantom_wallet": {
+			"description": "Популярный кошелек Solana с мультичейн-поддержкой"
+		},
+		"magic_eden_solana": {
+			"description": "Ведущий NFT маркетплейс на Solana и Bitcoin Ordinals"
+		},
+		"tensor_nft": {
+			"description": "Профессиональная платформа торговли NFT на Solana с AMM"
+		},
+		"drift_protocol": {
+			"description": "DEX бессрочных фьючерсов Solana с плечом до 10x"
+		},
+		"cosmos_network": {
+			"description": "Интернет блокчейнов, обеспечивающий кроссчейн-коммуникацию через IBC"
+		},
+		"mintscan": {
+			"description": "Мультичейн обозреватель экосистемы Cosmos"
+		},
+		"keplr_wallet": {
+			"description": "Стандартный кошелек экосистемы Cosmos с поддержкой IBC"
+		},
+		"osmosis": {
+			"description": "Ведущий DEX в экосистеме Cosmos с интеграцией IBC"
+		},
+		"stride_zone": {
+			"description": "Мультичейн ликвидный стейкинг для экосистемы Cosmos"
+		},
+		"injective": {
+			"description": "Cosmos цепь с фокусом на DeFi для торговли деривативами"
+		},
+		"sei_network": {
+			"description": "Самый быстрый L1, оптимизированный для трейдинга с финальностью 400мс"
+		},
+		"celestia": {
+			"description": "Модульный слой доступности данных для роллапов"
+		},
+		"dymension": {
+			"description": "Хаб RollApp построенный на Cosmos для модульных роллапов"
+		},
+		"sui_network": {
+			"description": "L1 на базе Move с параллельным выполнением транзакций"
+		},
+		"sui_explorer": {
+			"description": "Официальный обозреватель блокчейна Sui и аналитика"
+		},
+		"sui_wallet": {
+			"description": "Официальный кошелек Sui для управления активами на Sui"
+		},
+		"turbos_finance": {
+			"description": "DEX с концентрированной ликвидностью на блокчейне Sui"
+		},
+		"cetus_protocol": {
+			"description": "Пионерский DEX и протокол ликвидности на Sui и Aptos"
+		},
+		"aptos_network": {
+			"description": "L1 на базе Move с параллельным выполнением Block-STM"
+		},
+		"aptos_explorer": {
+			"description": "Официальный обозреватель блокчейна Aptos для транзакций"
+		},
+		"petra_wallet": {
+			"description": "Официальный кошелек Aptos от Aptos Labs"
+		},
+		"pontem_wallet": {
+			"description": "Мультичейн кошелек для экосистем Aptos и Move"
+		},
+		"liquidswap": {
+			"description": "Первый AMM DEX на Aptos от Pontem"
+		},
+		"ton_network": {
+			"description": "The Open Network с интеграцией Telegram и массовым принятием"
+		},
+		"tonscan": {
+			"description": "Обозреватель блокчейна TON для транзакций и джеттонов"
+		},
+		"tonkeeper": {
+			"description": "Популярный кошелек TON с интеграцией Telegram"
+		},
+		"ston_fi": {
+			"description": "Ведущий DEX на TON с низкими комиссиями и быстрыми свопами"
+		},
+		"dedust": {
+			"description": "DEX и DeFi платформа на TON"
+		},
+		"near_protocol": {
+			"description": "Шардированный PoS блокчейн с абстракцией аккаунтов"
+		},
+		"near_explorer": {
+			"description": "Официальный обозреватель блокчейна NEAR Protocol"
+		},
+		"ref_finance": {
+			"description": "Ведущая многоцелевая DeFi платформа на NEAR"
+		},
+		"polkadot": {
+			"description": "Гетерогенная мультичейн сеть с парачейнами"
+		},
+		"subscan": {
+			"description": "Мультичейн обозреватель для Polkadot и Substrate сетей"
+		},
+		"algorand": {
+			"description": "Чистый Proof of Stake блокчейн с мгновенной финальностью"
+		},
+		"cardano": {
+			"description": "Блокчейн на основе исследований с рецензируемой разработкой"
+		},
+		"tezos": {
+			"description": "Самоизменяющийся блокчейн с формальной верификацией"
+		},
+		"stacks": {
+			"description": "Bitcoin L2, приносящий смарт-контракты в BTC"
+		},
+		"lightning_network": {
+			"description": "Bitcoin L2 для мгновенных низкозатратных платежей"
+		},
+		"rsk_rootstock": {
+			"description": "Сайдчейн Bitcoin с EVM-совместимыми смарт-контрактами"
+		},
+		"ibc_protocol": {
+			"description": "Протокол межблокчейновой коммуникации для цепей Cosmos"
+		},
+		"wormhole_bridge": {
+			"description": "Кроссчейн протокол обмена сообщениями, соединяющий основные блокчейны"
+		},
+		"axelar_network": {
+			"description": "Универсальная сеть кроссчейн-коммуникации"
+		},
+		"layerzero": {
+			"description": "Омничейн протокол интероперабельности для обмена сообщениями без доверия"
+		}
+	}
+}

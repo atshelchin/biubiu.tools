@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Rainbow - 精美的以太坊钱包 | NFT、DeFi 与多链",
+		"description": "了解 Rainbow，有趣简单的以太坊钱包，拥有精美的界面。展示 NFT，赚取 Rainbow 积分，跨多条链访问 DeFi。",
+		"keywords": "Rainbow, 以太坊钱包，NFT 钱包，移动钱包，Rainbow 积分，Web3, ENS, 多链"
+	},
+	"overview": "Rainbow 是一款有趣、简单且安全的以太坊钱包，通过精美的设计使加密货币变得易于访问。由 Rainbow 于 2019 年创建，已筹集超过 1800 万美元的资金，并因其华丽的界面、NFT 优先的方法和用户友好的体验而广受欢迎。\n\nRainbow 在 iOS 和 Android 上可用，提供移动优先的体验，具有 NFT 画廊、ENS 集成、代币兑换和多链支持等功能。该钱包以其独特的 Rainbow 积分系统而脱颖而出，该系统奖励用户的参与度，并专注于使 Web3 变得有趣而不是令人生畏。\n\nRainbow 支持以太坊、Polygon、Arbitrum、Optimism、Base 和其他 EVM 链。该钱包与流行的 DeFi 协议和 NFT 市场集成，允许用户以风格化的方式管理其数字资产。凭借对设计、易用性和社区参与的重视，Rainbow 已成为 NFT 收藏家和重视美学与功能性的用户的首选钱包。",
+	"features": {
+		"1": {
+			"title": "精美设计",
+			"description": "令人惊叹的界面，配有彩色渐变、流畅动画和直观的用户体验"
+		},
+		"2": {
+			"title": "NFT 画廊",
+			"description": "用类似 Instagram 的精美画廊视图展示你的 NFT 收藏"
+		},
+		"3": {
+			"title": "多链支持",
+			"description": "访问以太坊、Polygon、Arbitrum、Optimism、Base 和其他 EVM 网络"
+		},
+		"4": {
+			"title": "ENS 集成",
+			"description": "使用 ENS 名称，设置自定义头像，并浏览 .eth 目录"
+		},
+		"5": {
+			"title": "应用内兑换",
+			"description": "通过 0x 等 DEX 聚合器以最佳价格兑换代币"
+		},
+		"6": {
+			"title": "Rainbow 积分",
+			"description": "通过钱包活动和参与赚取积分，未来可能获得奖励"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "收藏 NFT",
+			"description": "跨链查看和管理 NFT 收藏，享受精美的画廊展示"
+		},
+		"2": {
+			"title": "浏览 ENS",
+			"description": "探索 ENS 个人资料，设置自定义头像，并在任何地方使用 .eth 名称"
+		},
+		"3": {
+			"title": "代币兑换",
+			"description": "在支持的网络上以有竞争力的价格和低费用交易代币"
+		},
+		"4": {
+			"title": "dApp 交互",
+			"description": "通过 WalletConnect 连接到 DeFi 协议、NFT 市场和 Web3 应用"
+		},
+		"5": {
+			"title": "投资组合追踪",
+			"description": "跨多条链监控代币余额、NFT 和投资组合表现"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 Rainbow，它有什么不同？",
+			"answer": "Rainbow 是一款专注于精美设计和用户体验的移动以太坊钱包。与优先考虑功能而非美学的传统加密钱包不同，Rainbow 将功能性与令人惊叹的视觉效果相结合——彩色渐变、流畅动画和类似 Instagram 的 NFT 画廊。它旨在使 Web3 变得有趣且易于访问，特别吸引 NFT 收藏家和欣赏良好设计的用户。"
+		},
+		"2": {
+			"question": "Rainbow 在 iOS 和 Android 上可用吗？",
+			"answer": "是的，Rainbow 在 iOS (iPhone) 和 Android 平台上都可用。该钱包主要专注于移动端，提供针对智能手机优化的原生应用体验。桌面用户也有浏览器扩展可用，但移动应用仍然是主要平台，具有最完整的功能集。"
+		},
+		"3": {
+			"question": "Rainbow 支持哪些链？",
+			"answer": "Rainbow 支持以太坊主网和多个 Layer 2 网络，包括 Polygon、Arbitrum、Optimism、Base、Zora、Blast 和其他 EVM 兼容链。你可以轻松在网络之间切换，在一个统一界面中查看所有链上的资产，并与任何支持的网络上的 dApp 交互。"
+		},
+		"4": {
+			"question": "什么是 Rainbow 积分，我如何赚取？",
+			"answer": "Rainbow 积分是一个游戏化系统，奖励用户的钱包活动和参与度。你可以通过执行诸如交换、收藏 NFT、使用 ENS、推荐朋友和每日签到等操作来赚取积分。虽然积分目前没有货币价值，但它们可能会解锁未来的奖励、空投或独家功能。排行榜在用户之间创造了友好的竞争。"
+		},
+		"5": {
+			"question": "如何将 Rainbow 连接到 dApp？",
+			"answer": "Rainbow 使用 WalletConnect 安全地连接到 dApp。在计算机上访问 dApp 时，点击「连接钱包」并选择「WalletConnect」，然后使用 Rainbow 的内置扫描仪扫描二维码。对于移动 dApp，点击「连接钱包」并从列表中选择 Rainbow。连接是安全的，允许你直接从手机批准交易。"
+		}
+	},
+	"cta": {
+		"ready": "准备好时尚地探索 Web3 了吗？",
+		"button": "打开 Rainbow",
+		"note": "用于 NFT 和 DeFi 的精美以太坊钱包"
+	}
+}

@@ -1,0 +1,174 @@
+{
+	"category_seo": {
+		"title": "Suivi des Baleines Crypto - Adresses de Grands Détenteurs et Trésoreries | BiuBiu Tools",
+		"description": "Suivez les adresses des baleines crypto et les mouvements des grands détenteurs. Surveillez les portefeuilles institutionnels et les trésoreries de protocoles.",
+		"keywords": "suivi des baleines crypto, baleines bitcoin, grands détenteurs, mouvements de portefeuilles",
+		"faqs": [
+			{
+				"question": "Qui sont les baleines crypto ?",
+				"answer": "Les baleines crypto sont des individus ou entités détenant de grandes quantités de cryptomonnaie. Leurs transactions peuvent impacter significativement les prix du marché en raison du volume de leurs holdings."
+			},
+			{
+				"question": "Pourquoi suivre les baleines ?",
+				"answer": "Suivre les baleines aide à comprendre le sentiment du marché, identifier les tendances potentielles et anticiper les mouvements de prix. Les grands transferts signalent souvent des événements importants ou changements de marché."
+			},
+			{
+				"question": "Comment identifier les adresses des baleines ?",
+				"answer": "Les adresses des baleines peuvent être identifiées via des explorateurs blockchain montrant de gros soldes, des outils d'analyse on-chain et des services de suivi des baleines. Certaines adresses connues appartiennent à des échanges ou institutions."
+			},
+			{
+				"question": "Les mouvements des baleines prédisent-ils les prix ?",
+				"answer": "Les mouvements des baleines peuvent fournir des insights mais ne sont pas des prédicteurs infaillibles. Les grands transferts vers les échanges pourraient signaler une vente, tandis que les transferts vers des portefeuilles froids pourraient indiquer une détention à long terme."
+			}
+		]
+	},
+	"tools": {
+		"ethereum_foundation": {
+			"description": "Portefeuille de trésorerie de l'Ethereum Foundation finançant le développement et la recherche de l'écosystème"
+		},
+		"aave_treasury": {
+			"description": "Trésorerie du protocole Aave gérant les fonds DAO pour le développement du protocole de prêt"
+		},
+		"compound_treasury": {
+			"description": "Trésorerie du protocole Compound détenant des fonds pour la gouvernance des prêts DeFi"
+		},
+		"lido_treasury": {
+			"description": "Trésorerie Lido DAO gérant les fonds du protocole de staking liquide"
+		},
+		"arbitrum_treasury": {
+			"description": "Trésorerie Arbitrum DAO finançant les subventions et le développement de l'écosystème L2"
+		},
+		"optimism_treasury": {
+			"description": "Trésorerie Optimism Collective pour le financement de l'écosystème Superchain"
+		},
+		"gnosis_treasury": {
+			"description": "Trésorerie Gnosis DAO gérant l'écosystème Safe et les fonds GNO"
+		},
+		"ens_treasury": {
+			"description": "Trésorerie ENS DAO pour la gouvernance et les subventions d'Ethereum Name Service"
+		},
+		"curve_multisig": {
+			"description": "Multisig du DAO d'urgence Curve Finance pour les actions de sécurité du protocole"
+		},
+		"yearn_multisig": {
+			"description": "Portefeuille multisig Yearn Finance gérant les opérations du protocole de rendement"
+		},
+		"vitalik_wallet": {
+			"description": "Portefeuille public de Vitalik Buterin - Co-fondateur d'Ethereum et figure influente"
+		},
+		"justin_sun_wallet": {
+			"description": "Portefeuille de Justin Sun - Fondateur de TRON connu pour ses grandes positions DeFi"
+		},
+		"tetranode_wallet": {
+			"description": "Portefeuille de Tetranode - Baleine DeFi influente et investisseur précoce de protocoles"
+		},
+		"hsaka_wallet": {
+			"description": "Portefeuille Hsaka Trades - Trader perpétuel éminent sur GMX et dYdX"
+		},
+		"binance_hot_wallet": {
+			"description": "Hot wallet de l'échange Binance pour les opérations BNB Chain"
+		},
+		"pancakeswap_treasury": {
+			"description": "Trésorerie PancakeSwap gérant le token CAKE et les fonds du protocole DEX"
+		},
+		"venus_treasury": {
+			"description": "Trésorerie du protocole Venus pour la gouvernance de la plateforme de prêt BNB Chain"
+		},
+		"base_bridge": {
+			"description": "Contrat de pont Base L2 détenant les actifs pontés depuis Ethereum"
+		},
+		"aerodrome_treasury": {
+			"description": "Trésorerie Aerodrome Finance pour le DEX leader de Base chain"
+		},
+		"polygon_ecosystem_fund": {
+			"description": "Fonds de l'écosystème Polygon soutenant les subventions et le développement"
+		},
+		"quickswap_treasury": {
+			"description": "Trésorerie QuickSwap pour le protocole DEX natif de Polygon"
+		},
+		"avalanche_foundation": {
+			"description": "Portefeuille de l'Avalanche Foundation finançant la croissance de l'écosystème AVAX"
+		},
+		"traderjoe_treasury": {
+			"description": "Trésorerie Trader Joe pour le DEX leader et hub DeFi d'Avalanche"
+		},
+		"solana_foundation": {
+			"description": "Portefeuille de la Solana Foundation soutenant le développement et les subventions"
+		},
+		"jupiter_treasury": {
+			"description": "Trésorerie de l'agrégateur Jupiter pour la plateforme de swap leader de Solana"
+		},
+		"raydium_treasury": {
+			"description": "Trésorerie Raydium pour l'AMM et le protocole de liquidité de Solana"
+		},
+		"ton_foundation": {
+			"description": "Portefeuille TON Foundation soutenant l'écosystème blockchain Telegram"
+		},
+		"sui_foundation": {
+			"description": "Trésorerie Sui Foundation finançant le développement L1 basé sur Move"
+		},
+		"aptos_foundation": {
+			"description": "Portefeuille Aptos Foundation pour l'écosystème blockchain propulsé par Move"
+		},
+		"cosmos_hub_pool": {
+			"description": "Pool communautaire Cosmos Hub pour le financement de la gouvernance de l'écosystème ATOM"
+		},
+		"cz_wallet": {
+			"description": "Portefeuille CZ (Changpeng Zhao) - Fondateur de Binance et leader de l'industrie crypto"
+		},
+		"grayscale_wallet": {
+			"description": "Portefeuille institutionnel Grayscale gérant les avoirs ETF Bitcoin et Ethereum"
+		},
+		"blackrock_wallet": {
+			"description": "Portefeuille BlackRock iShares pour la garde institutionnelle d'ETF crypto"
+		},
+		"fidelity_wallet": {
+			"description": "Portefeuille institutionnel Fidelity pour la gestion d'actifs crypto"
+		},
+		"a16z_wallet": {
+			"description": "Portefeuille du fonds crypto Andreessen Horowitz - Capital-risque Web3 leader"
+		},
+		"paradigm_wallet": {
+			"description": "Portefeuille VC Paradigm - Fonds d'investissement crypto-natif majeur"
+		},
+		"jump_trading_wallet": {
+			"description": "Portefeuille Jump Trading - Market maker institutionnel et société de trading"
+		},
+		"wintermute_wallet": {
+			"description": "Portefeuille Wintermute - Market maker crypto leader et fournisseur de liquidité"
+		},
+		"galaxy_digital_wallet": {
+			"description": "Portefeuille Galaxy Digital - Investissement et trading crypto institutionnel"
+		},
+		"lookonchain": {
+			"description": "Plateforme d'analytique on-chain suivant les mouvements des baleines et le smart money"
+		},
+		"whale_alert": {
+			"description": "Alertes en temps réel pour les grandes transactions dans les principales cryptomonnaies"
+		},
+		"nansen_smart_money": {
+			"description": "Suivi Smart Money de Nansen pour l'analyse des portefeuilles étiquetés"
+		},
+		"arkham_intelligence": {
+			"description": "Plateforme d'intelligence blockchain pour la dé-anonymisation et le suivi de portefeuilles"
+		},
+		"debank_whales": {
+			"description": "Classement des baleines DeBank montrant les plus grands détenteurs de portfolios multi-chaînes"
+		},
+		"spot_on_chain": {
+			"description": "Analytique on-chain propulsée par IA pour le suivi des baleines et les insights marché"
+		},
+		"bubblemaps": {
+			"description": "Analyse visuelle des détenteurs de tokens et de la distribution de l'offre"
+		},
+		"etherscan_label": {
+			"description": "Base de données d'adresses étiquetées d'Etherscan pour l'identification de portefeuilles connus"
+		},
+		"zerion_whales": {
+			"description": "Fonction d'exploration Zerion pour la découverte et le suivi de portfolios de baleines"
+		},
+		"watchers_pro": {
+			"description": "Plateforme de suivi smart money avec alertes d'activité de portefeuilles baleines"
+		}
+	}
+}

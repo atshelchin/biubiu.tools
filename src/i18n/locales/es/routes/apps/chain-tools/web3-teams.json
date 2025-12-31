@@ -1,0 +1,149 @@
+{
+	"category_seo": {
+		"title": "Equipos Web3 y VCs - Constructores e Inversores | BiuBiu Tools",
+		"description": "Descubre equipos Web3, constructores e inversores. Rastrea quién está construyendo qué y dónde invierte el dinero inteligente.",
+		"keywords": "equipos web3, vcs cripto, inversores blockchain, constructores cripto, capital de riesgo",
+		"faqs": [
+			{
+				"question": "¿Cómo investigo equipos Web3?",
+				"answer": "Verifica los antecedentes del equipo en LinkedIn, valida proyectos anteriores, busca actividad en GitHub y evalúa la reputación en la comunidad. Los equipos anónimos conllevan mayor riesgo."
+			},
+			{
+				"question": "¿Qué hace fuerte a un equipo Web3?",
+				"answer": "Proyectos exitosos previos, profundidad técnica, comunicación transparente, incentivos de tokens alineados y compromiso genuino con la comunidad. El rendimiento pasado importa."
+			},
+			{
+				"question": "¿Cómo evalúan los VCs los proyectos cripto?",
+				"answer": "Calidad del equipo, innovación tecnológica, tamaño del mercado, tokenomics, posicionamiento competitivo y tracción. La etapa temprana se enfoca en el equipo, la etapa posterior en métricas."
+			}
+		]
+	},
+	"tools": {
+		"paradigm_vc": {
+			"description": "VC cripto enfocado en investigación, conocido por contribuciones técnicas, herramientas de código abierto y respaldo a proyectos DeFi e infraestructura"
+		},
+		"sequoia_crypto": {
+			"description": "Legendario VC de Silicon Valley expandiéndose a cripto, respaldando FTX, Polygon y otras empresas Web3 importantes"
+		},
+		"polychain_capital": {
+			"description": "Fondo cripto-nativo fundado por ex empleado de Coinbase, inversor temprano en Compound, Maker y Cosmos"
+		},
+		"pantera_capital": {
+			"description": "Una de las primeras firmas de inversión cripto, gestionando fondos de cobertura y venture enfocados en blockchain desde 2013"
+		},
+		"dragonfly_capital": {
+			"description": "VC cripto global con fuerte presencia en Asia, invirtiendo en DeFi, infraestructura y cripto de consumo"
+		},
+		"multicoin_capital": {
+			"description": "Fondo cripto impulsado por tesis, conocido por inversiones en el ecosistema Solana y apuestas en blockchain Layer 1"
+		},
+		"electric_capital": {
+			"description": "VC enfocado en desarrolladores que publica informes anuales de desarrolladores e invierte en proyectos de infraestructura Web3"
+		},
+		"framework_ventures": {
+			"description": "Inversor activo en DeFi y gaming conocido por participación práctica y en gobernanza de protocolos"
+		},
+		"delphi_ventures": {
+			"description": "Brazo de venture respaldado por investigación de Delphi Digital, invirtiendo en DeFi, gaming e infraestructura NFT"
+		},
+		"placeholder_vc": {
+			"description": "VC impulsado por tesis enfocado en protocolos descentralizados, sistemas de gobernanza y modelos de propiedad de redes"
+		},
+		"variant_fund": {
+			"description": "VC enfocado en redes propiedad de usuarios y modelos de propiedad basados en tokens en Web3"
+		},
+		"hashed_vc": {
+			"description": "VC cripto líder coreano invirtiendo en gaming, DeFi e infraestructura con fuerte red asiática"
+		},
+		"spartan_group": {
+			"description": "Fondo cripto enfocado en Asia combinando inversión venture con trading y servicios de asesoría"
+		},
+		"hack_vc": {
+			"description": "VC cripto de etapa temprana liderado por ex socio de a16z, enfocado en infraestructura y fundadores técnicos"
+		},
+		"bankless_ventures": {
+			"description": "Fondo venture respaldado por la comunidad de la marca de medios Bankless, invirtiendo en el ecosistema Ethereum"
+		},
+		"1kx_capital": {
+			"description": "VC cripto europeo enfocado en redes de tokens, gobernanza e inversiones en protocolos de etapa temprana"
+		},
+		"robot_ventures": {
+			"description": "Fondo cripto de etapa temprana fundado por el creador de Compound Robert Leshner, respaldando innovación DeFi"
+		},
+		"coinbase_ventures": {
+			"description": "Brazo de inversión estratégica de Coinbase, respaldando proyectos del ecosistema en DeFi, NFTs e infraestructura"
+		},
+		"binance_labs": {
+			"description": "Brazo venture e incubadora de Binance, invirtiendo y acelerando startups blockchain globalmente"
+		},
+		"okx_ventures": {
+			"description": "Brazo de inversión del exchange OKX, apoyando constructores Web3 en infraestructura y aplicaciones"
+		},
+		"kraken_ventures": {
+			"description": "Brazo de inversión estratégica del exchange Kraken, enfocado en infraestructura y desarrollo del ecosistema"
+		},
+		"circle_ventures": {
+			"description": "Brazo de inversión de Circle (emisor de USDC), respaldando infraestructura de stablecoins y proyectos fintech"
+		},
+		"galaxy_ventures": {
+			"description": "Brazo venture de Galaxy Digital, inversiones de grado institucional en cripto y blockchain"
+		},
+		"alliance_dao": {
+			"description": "Aceleradora Web3 que ejecuta programas por cohortes con mentoría de los principales fundadores cripto"
+		},
+		"ycombinator_crypto": {
+			"description": "Aceleradora de startups legendaria respaldando empresas cripto a través de su programa estándar por lotes"
+		},
+		"outlier_ventures": {
+			"description": "Aceleradora Web3 que ejecuta programas Base Camp para startups basadas en tokens con apoyo práctico"
+		},
+		"longhash_ventures": {
+			"description": "Aceleradora y VC con sede en Singapur enfocada en fundadores Web3 en la región Asia-Pacífico"
+		},
+		"techstars_crypto": {
+			"description": "Aceleradora global de startups que ejecuta cohortes enfocadas en blockchain y cripto con red de mentores"
+		},
+		"consensys_team": {
+			"description": "Empresa de infraestructura Ethereum que construye MetaMask, Infura y otras herramientas core del ecosistema"
+		},
+		"offchain_labs": {
+			"description": "Equipo que construye Arbitrum, la solución líder de escalado Ethereum Layer 2 usando optimistic rollups"
+		},
+		"matter_labs": {
+			"description": "Equipo que construye zkSync, una solución de escalado Layer 2 usando tecnología de pruebas de conocimiento cero"
+		},
+		"optimism_team": {
+			"description": "Equipo central detrás de Optimism L2 y la visión Superchain para Ethereum escalable"
+		},
+		"alchemy_team": {
+			"description": "Proveedor líder de infraestructura Web3 ofreciendo APIs de nodos, herramientas para desarrolladores y datos blockchain"
+		},
+		"chainlink_labs": {
+			"description": "Equipo que construye la red oracle Chainlink, protocolo cross-chain CCIP e infraestructura de datos descentralizada"
+		},
+		"eigenlayer_team": {
+			"description": "Equipo que construye el protocolo de restaking EigenLayer habilitando seguridad compartida para aplicaciones AVS"
+		},
+		"uniswap_labs": {
+			"description": "Equipo detrás de Uniswap, el protocolo de exchange descentralizado más grande por volumen"
+		},
+		"jump_crypto": {
+			"description": "Brazo cripto de firma de trading que construye el puente Wormhole e invierte en infraestructura blockchain"
+		},
+		"wintermute_trading": {
+			"description": "Principal creador de mercado cripto proporcionando liquidez en exchanges y protocolos DeFi"
+		},
+		"gauntlet_network": {
+			"description": "Firma de gestión de riesgo DeFi usando simulaciones para optimizar parámetros y economía de protocolos"
+		},
+		"dealroom_crypto": {
+			"description": "Base de datos de startups y financiación que rastrea rondas de empresas Web3, valoraciones y actividad de inversores"
+		},
+		"pitchbook_crypto": {
+			"description": "Base de datos de grado institucional para deals de VC, rondas de financiación cripto y análisis de mercado"
+		},
+		"crypto_fundraising": {
+			"description": "Rastreador gratuito de rondas de financiación cripto, actividad de inversores y datos de financiación de startups"
+		}
+	}
+}

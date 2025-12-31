@@ -1,0 +1,170 @@
+{
+	"category_seo": {
+		"title": "非 EVM 区块链 - Solana、Bitcoin、Cosmos 等 | BiuBiu Tools",
+		"description": "探索非 EVM 区块链生态系统。Solana、Bitcoin、Cosmos、Aptos、Sui 及其独特的工具和 dApp。",
+		"keywords": "非evm链, solana, bitcoin, cosmos, aptos, sui, ton, near, polkadot",
+		"faqs": [
+			{
+				"question": "什么是非 EVM 链？",
+				"answer": "非 EVM 链不使用以太坊的虚拟机。它们有不同的架构——Solana 使用 Rust，Bitcoin 有自己的脚本，Cosmos 使用 CosmWasm。每个都有独特的权衡。"
+			},
+			{
+				"question": "为什么使用非 EVM 链？",
+				"answer": "不同的链为不同的目标优化。Solana 追求速度和低费用，Bitcoin 追求安全性和去中心化，Cosmos 追求互操作性，Move 链追求安全性。"
+			},
+			{
+				"question": "如何跨链到非 EVM 链？",
+				"answer": "使用特定的跨链桥如 Wormhole（多链）、Portal（Solana）或 IBC（Cosmos）。一些中心化交易所支持直接存取到非 EVM 链。"
+			}
+		]
+	},
+	"tools": {
+		"solana_network": {
+			"description": "高性能区块链，亚秒级最终性和低费用"
+		},
+		"solana_explorer": {
+			"description": "官方 Solana 区块链浏览器，用于交易和账户"
+		},
+		"solscan": {
+			"description": "流行的 Solana 浏览器，支持代币分析和 NFT"
+		},
+		"jupiter_solana": {
+			"description": "领先的 Solana DEX 聚合器，获取最佳兑换率"
+		},
+		"raydium": {
+			"description": "Solana AMM 和流动性提供者，具有集中池"
+		},
+		"marinade_finance": {
+			"description": "最大的 Solana 流动性质押协议，带 mSOL 代币"
+		},
+		"phantom_wallet": {
+			"description": "流行的 Solana 钱包，支持多链"
+		},
+		"magic_eden_solana": {
+			"description": "Solana 和 Bitcoin Ordinals 上领先的 NFT 市场"
+		},
+		"tensor_nft": {
+			"description": "Solana 上的专业 NFT 交易平台，带 AMM"
+		},
+		"drift_protocol": {
+			"description": "Solana 永续合约 DEX，最高 10 倍杠杆"
+		},
+		"cosmos_network": {
+			"description": "区块链互联网，通过 IBC 实现跨链通信"
+		},
+		"mintscan": {
+			"description": "多链 Cosmos 生态系统浏览器"
+		},
+		"keplr_wallet": {
+			"description": "标准 Cosmos 生态系统钱包，支持 IBC"
+		},
+		"osmosis": {
+			"description": "Cosmos 生态系统中领先的 DEX，集成 IBC"
+		},
+		"stride_zone": {
+			"description": "Cosmos 生态系统的多链流动性质押"
+		},
+		"injective": {
+			"description": "专注于 DeFi 的 Cosmos 链，用于衍生品交易"
+		},
+		"sei_network": {
+			"description": "为交易优化的最快 L1，400ms 最终性"
+		},
+		"celestia": {
+			"description": "用于 Rollup 的模块化数据可用性层"
+		},
+		"dymension": {
+			"description": "基于 Cosmos 构建的 RollApp 中心，用于模块化 Rollup"
+		},
+		"sui_network": {
+			"description": "基于 Move 的 L1，具有并行交易执行"
+		},
+		"sui_explorer": {
+			"description": "官方 Sui 区块链浏览器和分析"
+		},
+		"sui_wallet": {
+			"description": "官方 Sui 钱包，用于管理 Sui 上的资产"
+		},
+		"turbos_finance": {
+			"description": "Sui 区块链上的集中流动性 DEX"
+		},
+		"cetus_protocol": {
+			"description": "Sui 和 Aptos 上的先驱 DEX 和流动性协议"
+		},
+		"aptos_network": {
+			"description": "基于 Move 的 L1，具有 Block-STM 并行执行"
+		},
+		"aptos_explorer": {
+			"description": "官方 Aptos 区块链浏览器，用于交易"
+		},
+		"petra_wallet": {
+			"description": "Aptos Labs 官方 Aptos 钱包"
+		},
+		"pontem_wallet": {
+			"description": "Aptos 和 Move 生态系统的多链钱包"
+		},
+		"liquidswap": {
+			"description": "Pontem 在 Aptos 上的第一个 AMM DEX"
+		},
+		"ton_network": {
+			"description": "The Open Network，集成 Telegram 和大规模采用"
+		},
+		"tonscan": {
+			"description": "TON 区块链浏览器，用于交易和 jettons"
+		},
+		"tonkeeper": {
+			"description": "流行的 TON 钱包，集成 Telegram"
+		},
+		"ston_fi": {
+			"description": "TON 上领先的 DEX，低费用和快速兑换"
+		},
+		"dedust": {
+			"description": "TON 上的 DEX 和 DeFi 平台"
+		},
+		"near_protocol": {
+			"description": "分片权益证明区块链，具有账户抽象"
+		},
+		"near_explorer": {
+			"description": "官方 NEAR Protocol 区块链浏览器"
+		},
+		"ref_finance": {
+			"description": "NEAR 上领先的多功能 DeFi 平台"
+		},
+		"polkadot": {
+			"description": "具有平行链的异构多链网络"
+		},
+		"subscan": {
+			"description": "Polkadot 和 Substrate 网络的多链浏览器"
+		},
+		"algorand": {
+			"description": "纯权益证明区块链，具有即时最终性"
+		},
+		"cardano": {
+			"description": "研究驱动的区块链，具有同行评审的开发"
+		},
+		"tezos": {
+			"description": "具有形式化验证的自修正区块链"
+		},
+		"stacks": {
+			"description": "Bitcoin L2，将智能合约带入 BTC"
+		},
+		"lightning_network": {
+			"description": "Bitcoin L2，用于即时、低成本支付"
+		},
+		"rsk_rootstock": {
+			"description": "Bitcoin 侧链，具有 EVM 兼容智能合约"
+		},
+		"ibc_protocol": {
+			"description": "Cosmos 链的区块链间通信协议"
+		},
+		"wormhole_bridge": {
+			"description": "连接主要区块链的跨链消息协议"
+		},
+		"axelar_network": {
+			"description": "通用跨链通信网络"
+		},
+		"layerzero": {
+			"description": "全链互操作性协议，用于无信任消息传递"
+		}
+	}
+}

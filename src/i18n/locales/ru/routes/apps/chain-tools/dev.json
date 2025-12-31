@@ -118,85 +118,85 @@
 		"starkli": {
 			"description": "CLI для взаимодействия с Starknet"
 		},
-		"biubiu-contract-deployer": {
+		"biubiu_contract_deployer": {
 			"description": "Contract Deployer - Tool"
 		},
-		"biubiu-token-deployer": {
+		"biubiu_token_deployer": {
 			"description": "Token Deployer - Tool"
 		},
-		"biubiu-events-scanner": {
+		"biubiu_events_scanner": {
 			"description": "Events Scanner - Tool"
 		},
-		"biubiu-chainlist": {
+		"biubiu_chainlist": {
 			"description": "Chainlist - Tool"
 		},
-		"abi-ninja": {
+		"abi_ninja": {
 			"description": "ABI Ninja - Tool"
 		},
-		"ethereum-signature-db": {
+		"ethereum_signature_db": {
 			"description": "4byte.directory - Tool"
 		},
-		"ethers-js": {
+		"ethers_js": {
 			"description": "Ethers.js - Tool"
 		},
-		"solidity-lang": {
+		"solidity_lang": {
 			"description": "Solidity Docs - Tool"
 		},
-		"evm-codes": {
+		"evm_codes": {
 			"description": "EVM Codes - Tool"
 		},
 		"chainlink": {
 			"description": "Chainlink - Tool"
 		},
-		"the-graph": {
+		"the_graph": {
 			"description": "The Graph - Tool"
 		},
-		"scaffold-eth": {
+		"scaffold_eth": {
 			"description": "Scaffold-ETH - Tool"
 		},
-		"create-eth-app": {
+		"create_eth_app": {
 			"description": "Create Eth App - Tool"
 		},
-		"cookbook-dev": {
+		"cookbook_dev": {
 			"description": "Cookbook.dev - Tool"
 		},
-		"solidity-by-example": {
+		"solidity_by_example": {
 			"description": "Solidity by Example - Tool"
 		},
-		"speedrun-ethereum": {
+		"speedrun_ethereum": {
 			"description": "SpeedRunEthereum - Tool"
 		},
-		"eth-build": {
+		"eth_build": {
 			"description": "ETH.Build - Tool"
 		},
-		"crypto-zombies": {
+		"crypto_zombies": {
 			"description": "CryptoZombies - Tool"
 		},
-		"atlas-ide": {
+		"atlas_ide": {
 			"description": "Atlas - Tool"
 		},
-		"paper-xyz": {
+		"paper_xyz": {
 			"description": "Paper - Tool"
 		},
-		"anchor-lang": {
+		"anchor_lang": {
 			"description": "Anchor - Tool"
 		},
-		"move-lang": {
+		"move_lang": {
 			"description": "Move Language - Tool"
 		},
-		"cairo-lang": {
+		"cairo_lang": {
 			"description": "Cairo - Tool"
 		},
-		"noir-lang": {
+		"noir_lang": {
 			"description": "Noir - Tool"
 		},
-		"huff-lang": {
+		"huff_lang": {
 			"description": "Huff - Tool"
 		},
-		"vyper-lang": {
+		"vyper_lang": {
 			"description": "Vyper - Tool"
 		},
-		"fe-lang": {
+		"fe_lang": {
 			"description": "Fe - Tool"
 		}
 	}

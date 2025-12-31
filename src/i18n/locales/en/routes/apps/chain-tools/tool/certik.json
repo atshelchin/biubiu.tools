@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "CertiK - Leading Blockchain Security Firm | Smart Contract Audits & Skynet Monitoring",
+		"description": "Discover CertiK, the leading blockchain security firm. Real-time Skynet monitoring, 4000+ audits, security leaderboard, and formal verification. Founded by Yale professors.",
+		"keywords": "CertiK, blockchain security, smart contract audit, Skynet, security score, formal verification, penetration testing, KYC verification"
+	},
+	"overview": "CertiK is the world's leading blockchain security firm, founded in 2017 by professors from Yale University and Columbia University. With over $230 million in funding, CertiK has become the most prolific auditor in the blockchain space, having conducted over 4,000 security audits for leading projects including BNB Chain, Polygon, Aave, 1inch, and Yearn Finance.\n\nWhat sets CertiK apart is their unique combination of academic rigor and cutting-edge technology. The founders pioneered formal verification techniques for blockchain, allowing mathematical proof of smart contract correctness. Their flagship product, Skynet, provides real-time security monitoring for thousands of blockchain projects, tracking over $360 billion in assets across 40+ chains.\n\nCertiK's Security Leaderboard ranks protocols based on their security posture, creating transparency in the industry. Their services include smart contract audits, penetration testing, formal verification, KYC verification, and continuous monitoring. Major hacks have been prevented by CertiK's security measures, and their reputation has made a CertiK audit badge a mark of credibility in the blockchain space. The company operates globally with offices in New York, Seattle, San Francisco, and Asia, employing over 300 security experts.",
+	"features": {
+		"1": {
+			"title": "Smart Contract Audits",
+			"description": "Comprehensive security reviews with 4000+ audits completed for leading blockchain projects"
+		},
+		"2": {
+			"title": "Skynet Real-Time Monitoring",
+			"description": "24/7 automated security monitoring protecting $360B+ across 40+ chains with instant threat alerts"
+		},
+		"3": {
+			"title": "Security Leaderboard",
+			"description": "Public rankings of protocol security scores creating transparency and accountability"
+		},
+		"4": {
+			"title": "Formal Verification",
+			"description": "Mathematical proof of smart contract correctness using academic techniques pioneered by Yale professors"
+		},
+		"5": {
+			"title": "Penetration Testing",
+			"description": "Simulate real-world attacks to identify vulnerabilities before malicious actors do"
+		},
+		"6": {
+			"title": "KYC Verification",
+			"description": "Project team identity verification providing trust signals to investors and users"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Get Protocol Audited",
+			"description": "Before mainnet launch, get comprehensive security audit to identify vulnerabilities and build user trust"
+		},
+		"2": {
+			"title": "Monitor Protocol Security",
+			"description": "Use Skynet for continuous 24/7 monitoring of deployed contracts with instant alerts for suspicious activity"
+		},
+		"3": {
+			"title": "Check Security Scores",
+			"description": "Research protocols on Security Leaderboard before investing to assess risk and security posture"
+		},
+		"4": {
+			"title": "Due Diligence Research",
+			"description": "Verify project security credentials, KYC status, and audit history before partnerships or investments"
+		},
+		"5": {
+			"title": "Display KYC Badges",
+			"description": "Projects get verified KYC badges to demonstrate team credibility and build community confidence"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is CertiK and why is it important?",
+			"answer": "CertiK is the world's leading blockchain security firm, founded by Yale and Columbia professors. They've conducted over 4,000 audits for major projects like Binance, Polygon, and Aave. A CertiK audit has become the gold standard for security verification in crypto. Their Skynet platform monitors $360B+ in assets 24/7, preventing countless exploits. Getting audited by CertiK is crucial for any serious blockchain project before launch."
+		},
+		"2": {
+			"question": "What is CertiK Skynet?",
+			"answer": "Skynet is CertiK's real-time security monitoring platform that tracks blockchain projects 24/7 across 40+ chains. It uses AI and machine learning to detect suspicious activities, unusual transactions, governance attacks, and security incidents as they happen. Skynet monitors over $360 billion in crypto assets and provides instant alerts to project teams. It's like having a security guard that never sleeps, continuously watching for threats to your protocol."
+		},
+		"3": {
+			"question": "How does CertiK's security score work?",
+			"answer": "CertiK assigns security scores (0-100) to blockchain projects based on multiple factors: smart contract audit results, on-chain security metrics, governance structure, market stability, and operational security. Projects are ranked on the Security Leaderboard, creating transparency. A high score (90+) indicates strong security practices and low risk. Scores are updated continuously based on Skynet monitoring. This helps users and investors assess project risk before engaging."
+		},
+		"4": {
+			"question": "How much does a CertiK audit cost?",
+			"answer": "CertiK audit costs vary based on code complexity, number of contracts, and urgency. Typical ranges: small projects ($5k-20k), medium DeFi protocols ($20k-50k), large protocols with complex logic ($50k-200k+). Major DeFi protocols may pay $100k-500k for comprehensive audits. Timeline is usually 2-6 weeks. While expensive, an audit is essential for projects handling user funds—the cost of a hack far exceeds audit fees. Contact CertiK directly for quotes."
+		},
+		"5": {
+			"question": "What is formal verification and why does CertiK use it?",
+			"answer": "Formal verification is a mathematical technique that proves smart contracts behave correctly under all possible conditions—not just testing common scenarios. CertiK's founders pioneered this for blockchain at Yale. Unlike traditional testing which checks specific cases, formal verification mathematically proves properties like 'total supply never changes unexpectedly' or 'only owner can call this function.' It's the most rigorous security approach available, catching edge cases human auditors might miss. This academic foundation sets CertiK apart from other auditors."
+		}
+	},
+	"cta": {
+		"ready": "Ready to secure your blockchain project?",
+		"button": "Visit CertiK",
+		"note": "Trusted by 4000+ projects worldwide"
+	}
+}

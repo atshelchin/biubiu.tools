@@ -1,0 +1,345 @@
+{
+	"meta": {
+		"title": "DeFi 完全指南 - 掌握去中心化金融",
+		"description": "全面的 DeFi 指南：了解什么是 DeFi，探索核心协议，理解风险和机会。包含 200+ DeFi 工具和协议。"
+	},
+	"title": "DeFi 完全指南",
+	"subtitle": "从入门到精通去中心化金融",
+	"intro": "DeFi（去中心化金融）代表着金融服务的范式转变。这份全面的指南将帮助您理解、探索并掌握 DeFi 生态系统。",
+
+	"navigation": {
+		"fundamentals": "基础知识",
+		"ecosystem": "生态系统",
+		"learning_path": "学习路径",
+		"glossary": "术语表",
+		"quiz": "测验",
+		"progress": "我的进度"
+	},
+
+	"stats": {
+		"tools_count": "{count} 个 DeFi 工具",
+		"sub_categories": "{count} 个子类别",
+		"learning_phases": "{count} 个学习阶段",
+		"quiz_questions": "{count} 道测验题"
+	},
+
+	"fundamentals": {
+		"title": "DeFi 基础知识",
+		"description": "建立扎实的 DeFi 知识基础",
+		"section1": {
+			"title": "什么是 DeFi？",
+			"content": "DeFi，即去中心化金融，是指建立在区块链技术上、无需银行等传统中介机构即可运作的金融服务。DeFi 使用智能合约——区块链上自动执行的代码——来自动化金融交易，而非依赖中心化机构。\n\nDeFi 的主要特点包括：\n- **无许可**：任何有互联网连接的人都可以访问 DeFi 服务\n- **透明**：所有交易都记录在公开的区块链上\n- **非托管**：用户保持对自己资产的控制权\n- **可组合**：DeFi 协议可以像积木一样组合使用"
+		},
+		"section2": {
+			"title": "DeFi vs 传统金融",
+			"content": "| 方面 | 传统金融 | DeFi |\n|--------|--------------------|----- |\n| 准入 | 需要银行账户、身份证 | 只需一个钱包 |\n| 时间 | 工作时间 | 24/7/365 |\n| 速度 | 结算需要数天 | 几分钟到几秒 |\n| 控制 | 银行持有您的资金 | 您控制您的密钥 |\n| 透明度 | 不透明 | 完全透明 |\n| 创新 | 缓慢、受监管 | 快速、实验性 |"
+		},
+		"section3": {
+			"title": "DeFi 核心原语",
+			"content": "DeFi 建立在几个基本构建块之上：\n\n**1. 去中心化交易所 (DEX)**\n无需中介即可交换代币的平台。例如：Uniswap、Curve\n\n**2. 借贷协议**\n存入资产赚取利息，或以抵押品借款。例如：Aave、Compound\n\n**3. 稳定币**\n旨在保持稳定价值的加密货币。例如：USDC、DAI\n\n**4. 收益聚合器**\n自动优化跨协议收益。例如：Yearn、Convex\n\n**5. 衍生品**\n链上交易期货、期权和永续合约。例如：GMX、dYdX"
+		},
+		"section4": {
+			"title": "DeFi 风险",
+			"content": "在参与 DeFi 之前，了解风险至关重要：\n\n**智能合约风险**\n代码中的漏洞可能导致资金损失。即使经过审计的协议也曾被利用。\n\n**经济风险**\n代币价格波动可能触发清算或无常损失。\n\n**预言机风险**\n价格馈送可能被操纵，导致协议被攻击。\n\n**监管风险**\nDeFi 在监管灰色地带运作，可能发生变化。\n\n**用户错误**\n将资金发送到错误地址或授权恶意合约。"
+		},
+		"section5": {
+			"title": "安全入门",
+			"content": "在深入 DeFi 之前，请遵循以下安全实践：\n\n1. **从小额开始**：从您可以承受损失的小额开始\n2. **使用硬件钱包**：将大量资金存储在硬件钱包中\n3. **验证合约**：始终验证您与官方合约交互\n4. **了解 Gas**：学习所选网络上 Gas 费用的工作原理\n5. **做好研究**：永远不要投资您不了解的项目\n6. **撤销授权**：定期撤销未使用的代币授权"
+		}
+	},
+
+	"ecosystem": {
+		"title": "DeFi 生态系统地图",
+		"description": "探索不同领域及其相互联系",
+		"layers": {
+			"application": "应用层",
+			"protocol": "协议层",
+			"infrastructure": "基础设施",
+			"base": "基础层 (L1/L2)"
+		},
+		"dex": {
+			"label": "DEX（去中心化交易所）",
+			"description": "使用自动做市商 (AMM) 或订单簿无需中介即可交换代币的平台。"
+		},
+		"lending": {
+			"label": "借贷",
+			"description": "允许用户存入资产赚取收益或以抵押品借款的协议。"
+		},
+		"stablecoin": {
+			"label": "稳定币",
+			"description": "旨在保持稳定价值的加密货币，通常锚定美元。"
+		},
+		"yield": {
+			"label": "收益聚合器",
+			"description": "自动优化 DeFi 收益策略的协议。"
+		},
+		"derivatives": {
+			"label": "衍生品 & 永续",
+			"description": "链上交易期货、永续合约和期权。"
+		},
+		"aggregator": {
+			"label": "聚合器 & 仪表板",
+			"description": "从多个来源聚合数据或流动性的工具。"
+		},
+		"view_all": "查看全部 {count} 个工具"
+	},
+
+	"core": {
+		"title": "核心项目",
+		"description": "您应该了解的基本协议",
+		"tier1": "必须了解",
+		"tier2": "应该了解",
+		"tier3": "建议了解",
+		"uniswap": "AMM DEX 先驱。引入 x*y=k 公式。按交易量计最大的 DEX。",
+		"aave": "领先的借贷协议。引入闪电贷。多链部署。",
+		"makerdao": "DAI 稳定币创建者。开创 CDP 模型。DeFi 基石。",
+		"curve": "针对稳定币交易优化。低滑点。收益挖矿核心。",
+		"compound": "早期借贷协议。引入 cToken。启发众多分叉。",
+		"yearn": "收益聚合器先驱。自动化策略。关键生态参与者。",
+		"1inch": "领先的 DEX 聚合器。最优路由。多链支持。",
+		"gmx": "去中心化永续合约。真实收益模式。生态不断增长。",
+		"convex": "Curve 收益优化器。主要 CRV 持有者。Curve Wars 参与者。",
+		"pendle": "收益代币化。固定/浮动收益。创新机制。"
+	},
+
+	"learning": {
+		"title": "学习路径",
+		"description": "通往 DeFi 精通的结构化路径",
+		"your_progress": "您的进度",
+		"estimated_time": "预计：{days} 天",
+		"phase1": {
+			"title": "阶段 1：基础",
+			"description": "理解核心概念并尝试您的第一次 DeFi 交互",
+			"task1": "阅读：什么是 DeFi（基础知识部分）",
+			"task2": "阅读：DeFi 生态系统概述",
+			"task3": "实践：在 Uniswap 上完成一次交换",
+			"task4": "研究：理解 Uniswap 的 AMM 机制",
+			"task5": "研究：探索 Aave 的借贷界面",
+			"task6": "测验：通过初级测验（6/10 或更高）"
+		},
+		"phase2": {
+			"title": "阶段 2：深入学习",
+			"description": "掌握每个 DeFi 领域并理解协议关系",
+			"task1": "比较：Uniswap V2 vs V3 机制差异",
+			"task2": "研究：Curve 的 StableSwap 算法",
+			"task3": "研究：1inch 聚合如何工作",
+			"task4": "比较：Aave vs Compound 差异",
+			"task5": "阅读：理解清算机制",
+			"task6": "研究：MakerDAO CDP 机制",
+			"task7": "测验：通过中级测验（10/15 或更高）"
+		},
+		"phase3": {
+			"title": "阶段 3：高级话题",
+			"description": "探索复杂策略和新兴领域",
+			"task1": "研究：Yearn 金库策略",
+			"task2": "研究：Convex 和 Curve Wars",
+			"task3": "研究：GMX 永续机制",
+			"task4": "阅读：DeFi 安全和审计基础",
+			"task5": "阅读：跨链 DeFi 考量"
+		},
+		"phase4": {
+			"title": "阶段 4：精通",
+			"description": "完整覆盖和持续学习",
+			"task1": "浏览并分类所有 DeFi 工具",
+			"task2": "实践：创建多步 DeFi 策略",
+			"task3": "测验：通过高级测验（15/20 或更高）"
+		}
+	},
+
+	"glossary": {
+		"title": "DeFi 术语表",
+		"description": "关键术语和概念",
+		"search_placeholder": "搜索术语...",
+		"amm": {
+			"term": "AMM（自动做市商）",
+			"definition": "一种使用数学公式而非订单簿来定价资产的去中心化交易所。流动性提供者将代币存入池中，交易者与这些池进行交换。最常见的公式是 x*y=k（恒定乘积）。"
+		},
+		"tvl": {
+			"term": "TVL（总锁仓价值）",
+			"definition": "存入 DeFi 协议的加密资产总价值，以美元计量。TVL 是评估协议采用率和信任度的关键指标。TVL 越高通常表示用户信心越大。"
+		},
+		"liquidity_pool": {
+			"term": "流动性池",
+			"definition": "锁定在智能合约中的资金集合，用于促进 DEX 上的交易。流动性提供者存入等值的两种代币，作为回报赚取交易费。"
+		},
+		"impermanent_loss": {
+			"term": "无常损失",
+			"definition": "在流动性池中持有代币与简单持有代币之间的价值差异。在存款后代币价格变化时发生。称为'无常'是因为只有在提款时才实现损失。"
+		},
+		"flash_loan": {
+			"term": "闪电贷",
+			"definition": "必须在同一区块链交易中借入和偿还的无抵押贷款。如果未偿还，整个交易将回滚。用于套利、清算和抵押品互换。"
+		},
+		"collateral": {
+			"term": "抵押品",
+			"definition": "作为贷款担保存入的资产。在 DeFi 借贷中，借款人必须超额抵押（存入比借入更多的价值）以应对价格波动。"
+		},
+		"liquidation": {
+			"term": "清算",
+			"definition": "当贷款变为抵押不足时强制出售抵押品。清算人偿还部分债务并以折扣价获得抵押品作为激励。"
+		},
+		"health_factor": {
+			"term": "健康因子",
+			"definition": "借贷协议（尤其是 Aave）中表示借贷仓位安全性的指标。低于 1.0 意味着仓位可能被清算。数值越高表示仓位越安全。"
+		},
+		"apy": {
+			"term": "APY（年化收益率）",
+			"definition": "一年内投资的实际回报率，考虑复利。APY = (1 + r/n)^n - 1，其中 r 是利率，n 是复利周期数。"
+		},
+		"apr": {
+			"term": "APR（年利率）",
+			"definition": "不考虑复利的年利率。比 APY 简单，但对于频繁复利的回报可能具有误导性。"
+		},
+		"slippage": {
+			"term": "滑点",
+			"definition": "交易预期价格与实际执行价格之间的差异。交易越大、流动性越低，滑点越高。DEX 聚合器有助于最小化滑点。"
+		},
+		"yield_farming": {
+			"term": "收益挖矿",
+			"definition": "在协议之间转移资产以最大化回报的实践。通常涉及提供流动性、质押代币和领取奖励。可通过收益聚合器自动化。"
+		},
+		"governance_token": {
+			"term": "治理代币",
+			"definition": "授予协议决策投票权的代币。持有者可以提议并投票决定协议参数变更、资金分配和升级。"
+		},
+		"cdp": {
+			"term": "CDP（抵押债务头寸）",
+			"definition": "MakerDAO 使用的一种机制，用户锁定抵押品以铸造 DAI 稳定币。抵押率必须保持在最低阈值以上以避免清算。"
+		},
+		"oracle": {
+			"term": "预言机",
+			"definition": "向智能合约提供外部数据的服务。价格预言机对 DeFi 至关重要，使协议能够了解资产价值。Chainlink 是主要的预言机提供商。"
+		}
+	},
+
+	"quiz": {
+		"title": "DeFi 精通测验",
+		"description": "测试您的 DeFi 知识",
+		"select_difficulty": "选择难度",
+		"beginner": "初级",
+		"intermediate": "中级",
+		"expert": "高级",
+		"questions_count": "{count} 道题",
+		"estimated_time": "约 {minutes} 分钟",
+		"start_quiz": "开始测验",
+		"next": "下一题",
+		"previous": "上一题",
+		"skip": "跳过",
+		"submit": "提交",
+		"show_hint": "显示提示",
+		"your_answer": "您的答案",
+		"correct_answer": "正确答案",
+		"explanation": "解释",
+		"related_tools": "相关工具",
+		"results": {
+			"title": "测验完成！",
+			"score": "您的得分",
+			"achievement": "成就",
+			"breakdown": "得分详情",
+			"weak_areas": "待改进领域",
+			"recommendations": "我们建议复习这些主题：",
+			"retry": "重试",
+			"share": "分享结果",
+			"view_answers": "查看所有答案"
+		},
+		"achievement": {
+			"master": "DeFi 大师",
+			"advanced": "DeFi 进阶",
+			"intermediate": "DeFi 学习者",
+			"beginner": "DeFi 入门"
+		},
+		"q1": {
+			"question": "AMM 代表什么？",
+			"option1": "自动做市商",
+			"option2": "自动资金管理器",
+			"option3": "高级市场模型",
+			"option4": "资产管理模块",
+			"explanation": "AMM 代表自动做市商。这是一种去中心化交易所机制，使用数学公式（如 x*y=k）来定价资产，而非传统订单簿。"
+		},
+		"q2": {
+			"question": "TVL 在 DeFi 中衡量什么？",
+			"option1": "交易量限制",
+			"option2": "总锁仓价值 - 存入协议的资产",
+			"option3": "代币价值水平",
+			"option4": "交易速度对数",
+			"explanation": "TVL（总锁仓价值）衡量存入 DeFi 协议的加密资产总价值。这是评估协议采用率和用户信任度的关键指标。"
+		},
+		"q3": {
+			"question": "闪电贷必须在同一交易中借入和偿还。",
+			"option1": "正确",
+			"option2": "错误",
+			"explanation": "正确。闪电贷是 DeFi 独有的，必须在同一区块链交易中借入和偿还。如果贷款未偿还，整个交易将回滚，就像从未发生过一样。"
+		},
+		"q4": {
+			"question": "Curve Finance 主要针对哪种类型的资产交易进行优化？",
+			"option1": "高波动性代币",
+			"option2": "NFT",
+			"option3": "稳定币和相似价值资产",
+			"option4": "治理代币",
+			"explanation": "Curve 使用专为相似价值资产（如稳定币或 wBTC/BTC）设计的 StableSwap 算法。这允许这些交易具有极低的滑点。"
+		},
+		"q5": {
+			"question": "Uniswap V3 引入了什么重大创新？",
+			"option1": "治理代币 UNI",
+			"option2": "集中流动性头寸",
+			"option3": "闪电贷",
+			"option4": "跨链交换",
+			"explanation": "Uniswap V3 引入了集中流动性，允许 LP 在特定价格范围内提供流动性。与 V2 的全范围流动性相比，这大大提高了资本效率。"
+		},
+		"q6": {
+			"question": "以下哪些是稳定币？（多选）",
+			"option1": "USDC",
+			"option2": "ETH",
+			"option3": "DAI",
+			"option4": "FRAX",
+			"explanation": "USDC（法币支持）、DAI（加密抵押）和 FRAX（算法/混合）都是稳定币。ETH 是以太坊的原生代币，不是稳定币。"
+		},
+		"q7": {
+			"question": "Convex Finance 相对于 Curve 的主要目的是什么？",
+			"option1": "提供闪电贷",
+			"option2": "与 Curve 竞争",
+			"option3": "最大化 CRV 奖励并积累投票权",
+			"option4": "跨链桥接资产",
+			"explanation": "Convex Finance 旨在帮助用户在不锁定代币的情况下最大化其 CRV 奖励。它积累 veCRV 投票权，成为'Curve Wars'治理控制争夺战中的主要参与者。"
+		},
+		"q8": {
+			"question": "如果代币价格在您提供流动性期间翻倍（2x），您大约会经历多少无常损失？",
+			"option1": "约 5.7%",
+			"option2": "约 25%",
+			"option3": "约 50%",
+			"option4": "不会发生损失",
+			"explanation": "使用无常损失公式：IL = 2 * sqrt(2) / (1 + 2) - 1 ≈ -5.7%。对于 2x 的价格变化，与单纯持有代币相比，您会经历约 5.7% 的无常损失。"
+		}
+	},
+
+	"progress": {
+		"title": "我的学习进度",
+		"overall": "总体进度",
+		"content_progress": "内容进度",
+		"quiz_scores": "测验分数",
+		"tools_status": "工具状态",
+		"best_score": "最佳分数",
+		"not_attempted": "未尝试",
+		"achievements": "成就",
+		"next_achievement": "下一个成就",
+		"mastered": "已掌握",
+		"learning": "学习中",
+		"bookmarked": "已收藏",
+		"not_viewed": "未查看",
+		"export": "导出进度",
+		"share": "分享进度",
+		"reset": "重置进度"
+	},
+
+	"common": {
+		"view_tool": "查看工具",
+		"view_all": "查看全部",
+		"continue": "继续",
+		"start": "开始",
+		"complete": "完成",
+		"in_progress": "进行中",
+		"not_started": "未开始",
+		"back": "返回",
+		"next": "下一步"
+	}
+}

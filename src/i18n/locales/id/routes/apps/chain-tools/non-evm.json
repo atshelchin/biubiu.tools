@@ -1,0 +1,170 @@
+{
+	"category_seo": {
+		"title": "Blockchain Non-EVM - Solana, Bitcoin, Cosmos & Lainnya | BiuBiu Tools",
+		"description": "Jelajahi ekosistem blockchain non-EVM. Solana, Bitcoin, Cosmos, Aptos, Sui, dan alat serta dApp unik mereka.",
+		"keywords": "chain non-evm, solana, bitcoin, cosmos, aptos, sui, ton, near, polkadot",
+		"faqs": [
+			{
+				"question": "Apa itu chain non-EVM?",
+				"answer": "Chain non-EVM tidak menggunakan virtual machine Ethereum. Mereka memiliki arsitektur berbeda - Solana menggunakan Rust, Bitcoin memiliki script sendiri, Cosmos menggunakan CosmWasm. Masing-masing memiliki tradeoff unik."
+			},
+			{
+				"question": "Mengapa menggunakan chain non-EVM?",
+				"answer": "Chain yang berbeda mengoptimalkan hal yang berbeda. Solana untuk kecepatan dan biaya rendah, Bitcoin untuk keamanan dan desentralisasi, Cosmos untuk interoperabilitas, chain Move untuk keamanan."
+			},
+			{
+				"question": "Bagaimana cara bridge ke chain non-EVM?",
+				"answer": "Gunakan bridge spesifik seperti Wormhole (multi-chain), Portal (Solana), atau IBC (Cosmos). Beberapa exchange terpusat mendukung deposit/withdrawal langsung ke chain non-EVM."
+			}
+		]
+	},
+	"tools": {
+		"solana_network": {
+			"description": "Blockchain performa tinggi dengan finalitas sub-detik dan biaya rendah"
+		},
+		"solana_explorer": {
+			"description": "Explorer Solana resmi untuk transaksi dan akun"
+		},
+		"solscan": {
+			"description": "Explorer Solana populer dengan analitik token dan dukungan NFT"
+		},
+		"jupiter_solana": {
+			"description": "Agregator DEX Solana terkemuka untuk rate swap terbaik"
+		},
+		"raydium": {
+			"description": "AMM Solana dan penyedia likuiditas dengan pool terkonsentrasi"
+		},
+		"marinade_finance": {
+			"description": "Protokol liquid staking Solana terbesar dengan token mSOL"
+		},
+		"phantom_wallet": {
+			"description": "Wallet Solana populer dengan dukungan multi-chain"
+		},
+		"magic_eden_solana": {
+			"description": "Marketplace NFT terkemuka di Solana dan Bitcoin Ordinals"
+		},
+		"tensor_nft": {
+			"description": "Platform trading NFT profesional di Solana dengan AMM"
+		},
+		"drift_protocol": {
+			"description": "DEX perpetual Solana dengan leverage hingga 10x"
+		},
+		"cosmos_network": {
+			"description": "Internet of Blockchains memungkinkan komunikasi cross-chain via IBC"
+		},
+		"mintscan": {
+			"description": "Explorer ekosistem Cosmos multi-chain"
+		},
+		"keplr_wallet": {
+			"description": "Wallet standar ekosistem Cosmos dengan dukungan IBC"
+		},
+		"osmosis": {
+			"description": "DEX terkemuka di ekosistem Cosmos dengan integrasi IBC"
+		},
+		"stride_zone": {
+			"description": "Liquid staking multi-chain untuk ekosistem Cosmos"
+		},
+		"injective": {
+			"description": "Chain Cosmos fokus DeFi untuk trading derivatif"
+		},
+		"sei_network": {
+			"description": "L1 tercepat dioptimalkan untuk trading dengan finalitas 400ms"
+		},
+		"celestia": {
+			"description": "Layer ketersediaan data modular untuk rollup"
+		},
+		"dymension": {
+			"description": "Hub RollApp dibangun di Cosmos untuk rollup modular"
+		},
+		"sui_network": {
+			"description": "L1 berbasis Move dengan eksekusi transaksi paralel"
+		},
+		"sui_explorer": {
+			"description": "Explorer blockchain Sui resmi dan analitik"
+		},
+		"sui_wallet": {
+			"description": "Wallet Sui resmi untuk mengelola aset di Sui"
+		},
+		"turbos_finance": {
+			"description": "DEX likuiditas terkonsentrasi di blockchain Sui"
+		},
+		"cetus_protocol": {
+			"description": "DEX perintis dan protokol likuiditas di Sui dan Aptos"
+		},
+		"aptos_network": {
+			"description": "L1 berbasis Move dengan eksekusi paralel Block-STM"
+		},
+		"aptos_explorer": {
+			"description": "Explorer blockchain Aptos resmi untuk transaksi"
+		},
+		"petra_wallet": {
+			"description": "Wallet Aptos resmi oleh Aptos Labs"
+		},
+		"pontem_wallet": {
+			"description": "Wallet multi-chain untuk ekosistem Aptos dan Move"
+		},
+		"liquidswap": {
+			"description": "DEX AMM pertama di Aptos oleh Pontem"
+		},
+		"ton_network": {
+			"description": "The Open Network dengan integrasi Telegram dan adopsi massal"
+		},
+		"tonscan": {
+			"description": "Explorer blockchain TON untuk transaksi dan jetton"
+		},
+		"tonkeeper": {
+			"description": "Wallet TON populer dengan integrasi Telegram"
+		},
+		"ston_fi": {
+			"description": "DEX terkemuka di TON dengan biaya rendah dan swap cepat"
+		},
+		"dedust": {
+			"description": "Platform DEX dan DeFi di TON"
+		},
+		"near_protocol": {
+			"description": "Blockchain PoS sharded dengan abstraksi akun"
+		},
+		"near_explorer": {
+			"description": "Explorer blockchain NEAR Protocol resmi"
+		},
+		"ref_finance": {
+			"description": "Platform DeFi multi-fungsi terkemuka di NEAR"
+		},
+		"polkadot": {
+			"description": "Jaringan multi-chain heterogen dengan parachain"
+		},
+		"subscan": {
+			"description": "Explorer multi-chain untuk Polkadot dan jaringan Substrate"
+		},
+		"algorand": {
+			"description": "Blockchain Pure Proof of Stake dengan finalitas instan"
+		},
+		"cardano": {
+			"description": "Blockchain berbasis riset dengan pengembangan peer-reviewed"
+		},
+		"tezos": {
+			"description": "Blockchain self-amending dengan verifikasi formal"
+		},
+		"stacks": {
+			"description": "L2 Bitcoin yang membawa smart contract ke BTC"
+		},
+		"lightning_network": {
+			"description": "L2 Bitcoin untuk pembayaran instan biaya rendah"
+		},
+		"rsk_rootstock": {
+			"description": "Sidechain Bitcoin dengan smart contract kompatibel EVM"
+		},
+		"ibc_protocol": {
+			"description": "Protokol komunikasi inter-blockchain untuk chain Cosmos"
+		},
+		"wormhole_bridge": {
+			"description": "Protokol messaging cross-chain menghubungkan blockchain utama"
+		},
+		"axelar_network": {
+			"description": "Jaringan komunikasi cross-chain universal"
+		},
+		"layerzero": {
+			"description": "Protokol interoperabilitas omnichain untuk messaging tanpa kepercayaan"
+		}
+	}
+}

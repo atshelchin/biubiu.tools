@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Hop Protocol - 快速L2原生代币桥 | 即时Rollup转账",
+		"description": "探索Hop Protocol,专为以太坊Rollup之间快速、低成本转账设计的L2原生代币桥。使用hToken和Bonder网络实现即时流动性。",
+		"keywords": "Hop Protocol, HOP, 桥, L2, rollup, hToken, Bonder, 跨链, 以太坊"
+	},
+	"overview": "Hop Protocol是一个L2原生代币桥,专为以太坊Rollup和侧链之间的快速、低成本转账而设计。成立于2021年,Hop开创了使用hToken(Hop桥接代币)和Bonder网络的独特架构,实现近乎即时的转账,无需等待Rollup最终性。\n\n与等待Rollup提款的传统桥不同(在Optimistic Rollup上需要7天),Hop在每个Rollup上使用自动化做市商(AMM)和特殊的hToken。当您桥接时,您在源链上将代币兑换为hToken,Bonder移动流动性,然后您在目标链上将hToken兑换为原生代币。这使得转账在几分钟内完成,而不是几天。\n\nBonder网络由专门的节点组成,为跨Rollup转账提供流动性。Bonder质押HOP代币并通过提供即时流动性赚取费用。HOP代币持有者可以参与成为Bonder或参与关于支持链、费用和协议升级的治理决策。已桥接超过10亿美元并支持主要L2,Hop已成为L2生态系统的基础设施。",
+	"features": {
+		"1": {
+			"title": "快速L2桥接",
+			"description": "在几分钟内在L2之间转移代币,无需等待Rollup最终性"
+		},
+		"2": {
+			"title": "hToken系统",
+			"description": "规范的hToken桥接实现跨所有支持链的即时兑换"
+		},
+		"3": {
+			"title": "Bonder网络",
+			"description": "去中心化流动性提供者为即时转账提供前置资本"
+		},
+		"4": {
+			"title": "多Rollup支持",
+			"description": "连接以太坊、Arbitrum、Optimism、Polygon、Gnosis和Base"
+		},
+		"5": {
+			"title": "低费用",
+			"description": "通过高效的L2到L2转账和优化的Gas使用最小化成本"
+		},
+		"6": {
+			"title": "HOP治理",
+			"description": "HOP代币持有者治理协议参数、费用和新链添加"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "L2到L2转账",
+			"description": "在Rollup之间移动资产,无需通过以太坊主网"
+		},
+		"2": {
+			"title": "快速提款",
+			"description": "在几分钟内从Rollup退出到主网或其他L2,而不是等待7天"
+		},
+		"3": {
+			"title": "代币桥接",
+			"description": "在L2生态系统中桥接USDC、ETH、DAI和其他代币"
+		},
+		"4": {
+			"title": "DeFi可组合性",
+			"description": "通过无缝资产移动访问多个L2上的DeFi协议"
+		},
+		"5": {
+			"title": "多L2管理",
+			"description": "高效管理不同Rollup和侧链上的投资组合"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是Hop Protocol,它如何工作?",
+			"answer": "Hop Protocol是一个L2原生桥,可在以太坊Rollup之间实现快速转账。它通过在每条链上使用hToken(桥接代币)和AMM来工作。当您桥接时,您在源链上将代币兑换为hToken,Bonder促进跨链转账,然后您在目标链上将hToken兑换回原生代币。这避免了等待Rollup最终性(在Optimistic Rollup上需要7天)。"
+		},
+		"2": {
+			"question": "什么是hToken?",
+			"answer": "hToken是Hop的规范桥接代币,存在于每个支持的链上。例如,hUSDC存在于以太坊、Arbitrum、Optimism和Polygon上。这些hToken可以使用每条链上的AMM即时兑换为原生代币。hToken系统在所有Rollup上创建统一的流动性层,实现快速转账。"
+		},
+		"3": {
+			"question": "什么是Bonder,它们如何工作?",
+			"answer": "Bonder是为跨链转账提供即时流动性的专门节点。它们质押HOP代币并为用户提供前置资本,以换取费用。当您桥接时,目标链上的Bonder立即向您提供代币,然后通过从源链认领资金来重新平衡其流动性。这种机制实现了即时转账,无需等待。"
+		},
+		"4": {
+			"question": "Hop支持哪些链?",
+			"answer": "Hop支持以太坊主网和主要的L2/侧链,包括Arbitrum、Optimism、Polygon、Gnosis Chain和Base。支持的代币包括ETH、USDC、USDT、DAI、MATIC等。该协议根据社区治理决策持续添加新链和代币。"
+		},
+		"5": {
+			"question": "Hop转账有多快?",
+			"answer": "Hop转账通常在5-15分钟内完成,具体取决于网络拥堵和Bonder可用性。这比原生Rollup桥快得多,后者需要Optimistic Rollup提款7天或ZK Rollup证明生成3-12小时。L2到L2转账甚至更快,通常在5分钟内完成。"
+		}
+	},
+	"cta": {
+		"ready": "准备好跨L2桥接了吗?",
+		"button": "打开Hop Protocol",
+		"note": "快速L2原生代币桥"
+	}
+}

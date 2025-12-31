@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Base - Coinbase's Ethereum Layer 2 | L2 Tool Review",
+		"description": "Discover Base, Coinbase's Layer 2 built on OP Stack. Learn about Superchain integration, no native token model, low fees, and home to friend.tech and Farcaster apps. The fastest growing L2 in 2024.",
+		"keywords": "Base, Coinbase L2, OP Stack, Layer 2, Ethereum scaling, Superchain, friend.tech, Farcaster, Base chain, no token"
+	},
+	"overview": "Base is Coinbase's Layer 2 solution for Ethereum, built using the OP Stack framework as part of the Optimism Superchain. Launched in August 2023, Base represents Coinbase's bold move to bring billions of users on-chain by providing a secure, low-cost, and developer-friendly environment backed by one of crypto's most trusted institutions.\n\nWhat makes Base unique is its approach to growth and sustainability. Unlike most L2s, Base has no plans to launch a native token - it uses ETH for gas fees and shares sequencer revenue with the Optimism Collective. This decision signals Coinbase's long-term commitment to building infrastructure rather than quick token gains. Base benefits from Coinbase's massive user base, making it the easiest L2 for mainstream crypto users to access.\n\nIn 2024, Base became the fastest-growing L2, attracting viral consumer apps like friend.tech (SocialFi), Farcaster-based apps (decentralized social), and a thriving onchain culture. With Coinbase's regulatory expertise, strong security practices, and seamless integration with Coinbase.com, Base is positioned as the bridge between traditional finance and the onchain economy.",
+	"features": {
+		"1": {
+			"title": "Built on OP Stack / Superchain",
+			"description": "Part of Optimism's Superchain ecosystem - shares security standards and benefits from ongoing OP Stack improvements and interoperability"
+		},
+		"2": {
+			"title": "Coinbase Backing & Integration",
+			"description": "Direct support from Coinbase with seamless wallet integration, easy onboarding from Coinbase.com, and access to 100M+ crypto users"
+		},
+		"3": {
+			"title": "No Native Token Model",
+			"description": "Uses ETH for gas fees with no plans for a Base token - shares sequencer revenue with Optimism Collective, aligning with long-term infrastructure goals"
+		},
+		"4": {
+			"title": "Ultra-Low Transaction Fees",
+			"description": "Dramatically reduced costs compared to Ethereum mainnet - enables microtransactions and high-frequency interactions for consumer apps"
+		},
+		"5": {
+			"title": "Easy Onboarding",
+			"description": "Simplest L2 onboarding for Coinbase users - bridge directly from Coinbase wallet or exchange with just a few clicks"
+		},
+		"6": {
+			"title": "Security & Compliance",
+			"description": "Benefits from Coinbase's institutional-grade security practices and regulatory compliance expertise"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Consumer Crypto Apps",
+			"description": "Build and use mainstream-friendly crypto applications with low fees and easy onboarding - perfect for apps targeting non-technical users"
+		},
+		"2": {
+			"title": "Social dApps & SocialFi",
+			"description": "Home to friend.tech, Farcaster apps, and other social platforms that require frequent, low-cost interactions"
+		},
+		"3": {
+			"title": "DeFi Protocols",
+			"description": "Deploy or use DeFi apps with minimal transaction costs while benefiting from Coinbase's user base and liquidity"
+		},
+		"4": {
+			"title": "NFT & Digital Collectibles",
+			"description": "Create, mint, and trade NFTs with low fees - growing ecosystem for digital art, music, and PFP collections"
+		},
+		"5": {
+			"title": "Onchain Gaming",
+			"description": "Build fully onchain games that require frequent state updates without prohibitive gas costs"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Base and how is it related to Coinbase?",
+			"answer": "Base is an Ethereum Layer 2 built by Coinbase using the OP Stack framework. It's designed to bring Coinbase's 100M+ users onchain by providing a secure, low-cost environment. While Base is a separate network, it benefits from Coinbase's brand, security expertise, and seamless integration with Coinbase products."
+		},
+		"2": {
+			"question": "Why doesn't Base have a native token?",
+			"answer": "Base intentionally has no plans for a native token. It uses ETH for gas fees and shares sequencer revenue with the Optimism Collective. This approach signals Coinbase's focus on building sustainable infrastructure rather than token speculation, and aligns Base's success with Ethereum and the broader Superchain ecosystem."
+		},
+		"3": {
+			"question": "How is Base related to Optimism and the Superchain?",
+			"answer": "Base is built using OP Stack, the same framework powering Optimism, and is part of the Superchain - a network of interoperable L2s. Base shares security standards with Optimism and benefits from shared infrastructure improvements. Base also contributes sequencer revenue back to the Optimism Collective, creating a mutually beneficial relationship."
+		},
+		"4": {
+			"question": "How do I bridge funds to Base?",
+			"answer": "The easiest way is through Coinbase.com or Coinbase Wallet - you can transfer ETH and supported tokens to Base with just a few clicks. You can also use the official Base bridge (bridge.base.org), or third-party bridges like Stargate, Hop, or Across for cross-chain transfers from other L2s."
+		},
+		"5": {
+			"question": "Is Base decentralized?",
+			"answer": "Base is currently operated by Coinbase as a centralized sequencer, similar to most L2s in their early stages. However, Base inherits Ethereum's security through its L2 architecture, and plans to progressively decentralize over time. As part of the Superchain, Base will benefit from shared governance and decentralization efforts across all OP Stack chains."
+		}
+	},
+	"cta": {
+		"ready": "Ready to build onchain with Coinbase?",
+		"button": "Visit Base",
+		"note": "Secure, scalable, and backed by Coinbase - the easiest way to go onchain"
+	}
+}

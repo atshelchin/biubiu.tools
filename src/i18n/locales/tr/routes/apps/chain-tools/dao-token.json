@@ -1,0 +1,155 @@
+{
+	"category_seo": {
+		"title": "DAO Yönetişim Token'ları - Oylama Gücü ve Tokenomics | BiuBiu Tools",
+		"description": "DAO yönetişim token'larını keşfedin. Büyük DAO'larda oylama mekanizmaları, token dağıtımı ve yönetişim katılımı.",
+		"keywords": "DAO yönetişim token'ları, DeFi oylama, protokol yönetişimi, tokenomics, yönetişim delegasyonu",
+		"faqs": [
+			{
+				"question": "Yönetişim token'ları nelerdir?",
+				"answer": "Yönetişim token'ları, sahiplerine bir protokolün kararlarında oy hakkı verir. Örnekler: UNI (Uniswap), AAVE, COMP. Oylama gücü genellikle token sahipliğiyle ölçeklenir."
+			},
+			{
+				"question": "Oy delegasyonu nasıl çalışır?",
+				"answer": "Oylama gücünüzü token'larınızı saklarken başkalarına (delegelere) devredebilirsiniz. Bu, aktif topluluk üyelerinin pasif sahipler adına oy kullanmasına yardımcı olur."
+			},
+			{
+				"question": "Yönetişim token'larının değeri var mı?",
+				"answer": "Değer, yönetişim haklarından, potansiyel ücret paylaşımından ve spekülasyondan gelir. Bazı protokoller geliri token sahipleriyle paylaşır. Diğerleri değer biriktirmekte zorlandı."
+			}
+		]
+	},
+	"tools": {
+		"boardroom": {
+			"description": "Birden fazla protokolde DAO tekliflerini, oylamayı ve delege faaliyetlerini izlemek için yönetişim toplayıcısı"
+		},
+		"uni_token": {
+			"description": "En büyük DEX'in protokol yükseltmeleri, ücret anahtarları ve hazine tahsislerinde oy kullanmak için Uniswap yönetişim token'ı"
+		},
+		"aave_token": {
+			"description": "Önde gelen merkeziyetsiz borç verme protokolü için Aave yönetişim ve güvenlik modülü stake token'ı"
+		},
+		"mkr_token": {
+			"description": "DAI stablecoin parametrelerini, teminat türlerini ve protokol riskini yönetmek için MakerDAO yönetişim token'ı"
+		},
+		"crv_token": {
+			"description": "Havuzlara likidite teşviklerini yönlendirmek için vote-escrow mekanikleriyle (veCRV) Curve yönetişim token'ı"
+		},
+		"comp_token": {
+			"description": "DeFi borç verme için faiz oranı modelleri ve protokol parametrelerinde oy kullanmak için Compound yönetişim token'ı"
+		},
+		"snx_token": {
+			"description": "sUSD ve synth'leri destekleyen sentetik varlık protokolü için Synthetix yönetişim ve stake token'ı"
+		},
+		"ldo_token": {
+			"description": "stETH ve zincirler arası stake'i yöneten en büyük likit stake protokolü için Lido DAO yönetişim token'ı"
+		},
+		"gmx_token": {
+			"description": "İşlemlerden protokol ücretleri kazanan sürekli DEX için GMX yönetişim ve fayda token'ı"
+		},
+		"bal_token": {
+			"description": "Havuzlara likidite madenciliği ödüllerini yönlendirmek için veBAL mekanikleriyle Balancer yönetişim token'ı"
+		},
+		"sushi_token": {
+			"description": "Borç verme ve launchpad dahil çoklu zincir DEX ve DeFi ekosistemi için SushiSwap yönetişim token'ı"
+		},
+		"yfi_token": {
+			"description": "Vault stratejilerini yöneten getiri toplayıcı protokolü için Yearn Finance yönetişim token'ı"
+		},
+		"inch_token": {
+			"description": "Stake ödülleri ve DAO oylaması ile DEX toplayıcısı için 1inch yönetişim ve fayda token'ı"
+		},
+		"pendle_token": {
+			"description": "Gelecek getiri ticaretini mümkün kılan getiri tokenizasyon protokolü için Pendle yönetişim token'ı"
+		},
+		"ena_token": {
+			"description": "Stake edilmiş ETH türevleriyle desteklenen sentetik dolar protokolü USDe için Ethena yönetişim token'ı"
+		},
+		"dydx_token": {
+			"description": "Artık kendi Cosmos zincirinde olan merkeziyetsiz sürekli borsa için dYdX yönetişim token'ı"
+		},
+		"cvx_token": {
+			"description": "Curve ödüllerini artırmak ve CRV getiri optimizasyon platformunu yönetmek için Convex Finance token'ı"
+		},
+		"fxs_token": {
+			"description": "Kesirli-algoritmik stablecoin ve DeFi ekosistemi için Frax Share yönetişim token'ı"
+		},
+		"blur_token": {
+			"description": "Sıfır ücretli işlem ve gelişmiş ticaret özellikleri ile NFT pazar yeri için Blur yönetişim token'ı"
+		},
+		"ape_token": {
+			"description": "Bored Ape ekosistemi, oyunlar ve metaverse girişimleri için ApeCoin yönetişim token'ı"
+		},
+		"rpl_token": {
+			"description": "Merkeziyetsiz Ethereum stake protokolü için Rocket Pool yönetişim ve teminat token'ı"
+		},
+		"morpho_token": {
+			"description": "Aave ve Compound üzerine inşa edilmiş eşler arası borç verme optimize edicisi için Morpho yönetişim token'ı"
+		},
+		"rdnt_token": {
+			"description": "LayerZero kullanan omnichain borç verme protokolü için Radiant Capital yönetişim token'ı"
+		},
+		"osmo_token": {
+			"description": "Cosmos ekosistemindeki en büyük DEX için Osmosis yönetişim ve stake token'ı"
+		},
+		"jup_token": {
+			"description": "Önde gelen Solana DEX toplayıcısı ve sürekli borsa için Jupiter yönetişim token'ı"
+		},
+		"ray_token": {
+			"description": "Solana AMM ve Serum emir defteri likidite sağlayıcısı için Raydium yönetişim token'ı"
+		},
+		"jto_token": {
+			"description": "Solana MEV altyapısı ve likit stake protokolü için Jito yönetişim token'ı"
+		},
+		"orca_token": {
+			"description": "Yoğunlaştırılmış likidite havuzlarıyla kullanıcı dostu Solana DEX için Orca yönetişim token'ı"
+		},
+		"arb_token": {
+			"description": "İyimser rollup'lar kullanan önde gelen Ethereum L2 için Arbitrum yönetişim token'ı"
+		},
+		"op_token": {
+			"description": "L2 ölçekleme çözümü ve Superchain ekosistemi için Optimism yönetişim token'ı"
+		},
+		"strk_token": {
+			"description": "Ethereum ölçekleme için STARK kanıtları kullanan ZK-rollup L2 için StarkNet yönetişim token'ı"
+		},
+		"zk_token": {
+			"description": "Yerel hesap soyutlaması ile ZK-rollup için zkSync Era yönetişim token'ı"
+		},
+		"matic_token": {
+			"description": "PoS ve zkEVM dahil Ethereum ölçekleme ekosistemi için Polygon (MATIC/POL) yönetişim token'ı"
+		},
+		"mnt_token": {
+			"description": "Modüler mimariye sahip BitDAO hazinesi tarafından desteklenen L2 için Mantle yönetişim token'ı"
+		},
+		"metis_token": {
+			"description": "Kurumsal ve merkeziyetsiz şirketlere odaklanan Ethereum L2 için Metis yönetişim token'ı"
+		},
+		"ens_token": {
+			"description": ".eth alan adı sistemini ve protokol yükseltmelerini yönetmek için Ethereum Name Service yönetişim token'ı"
+		},
+		"gtc_token": {
+			"description": "Kuadratik finansman kullanan kamu malları finansman platformu için Gitcoin yönetişim token'ı"
+		},
+		"safe_token": {
+			"description": "Önde gelen çoklu imza cüzdan altyapısı için Safe (eski adıyla Gnosis Safe) yönetişim token'ı"
+		},
+		"cow_token": {
+			"description": "Toplu açık artırma kullanan MEV korumalı DEX için CoW Protocol yönetişim token'ı"
+		},
+		"gno_token": {
+			"description": "Tahmin piyasaları platformu ve Gnosis Chain ekosistemi için Gnosis yönetişim token'ı"
+		},
+		"tally_governance": {
+			"description": "Teklif oluşturma, oy delegasyonu ve DAO kararlarını yürütme için zincir üstü yönetişim platformu"
+		},
+		"snapshot_governance": {
+			"description": "İmzalı mesajlar ve özelleştirilebilir stratejiler kullanarak gaz ücretsiz yönetişim için zincir dışı oylama platformu"
+		},
+		"karma_dao": {
+			"description": "Yönetişim analitiği için DAO katkıda bulunan itibarı ve delege izleme platformu"
+		},
+		"messari_governance": {
+			"description": "DAO tekliflerini ve oylama trendlerini kapsayan Messari yönetişim araştırması ve analitiği"
+		}
+	}
+}

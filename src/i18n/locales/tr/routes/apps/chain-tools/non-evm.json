@@ -1,0 +1,170 @@
+{
+	"category_seo": {
+		"title": "EVM Olmayan Blokzincirler - Solana, Bitcoin, Cosmos ve Daha Fazlası | BiuBiu Tools",
+		"description": "EVM olmayan blokzincir ekosistemlerini keşfedin. Solana, Bitcoin, Cosmos, Aptos, Sui ve onların benzersiz araçları ve dApp'leri.",
+		"keywords": "evm olmayan zincirler, solana, bitcoin, cosmos, aptos, sui, ton, near, polkadot",
+		"faqs": [
+			{
+				"question": "EVM olmayan zincirler nelerdir?",
+				"answer": "EVM olmayan zincirler Ethereum'un sanal makinesini kullanmaz. Farklı mimarilere sahiptirler - Solana Rust kullanır, Bitcoin'in kendi script'i vardır, Cosmos CosmWasm kullanır. Her birinin benzersiz değiş tokuşları vardır."
+			},
+			{
+				"question": "Neden EVM olmayan zincirleri kullanmalıyım?",
+				"answer": "Farklı zincirler farklı şeyler için optimize edilir. Solana hız ve düşük ücretler için, Bitcoin güvenlik ve merkeziyetsizlik için, Cosmos birlikte çalışabilirlik için, Move zincirleri güvenlik için."
+			},
+			{
+				"question": "EVM olmayan zincirlere nasıl köprü kurarım?",
+				"answer": "Wormhole (çoklu zincir), Portal (Solana) veya IBC (Cosmos) gibi özel köprüler kullanın. Bazı merkezi borsalar EVM olmayan zincirlere doğrudan para yatırma/çekme desteği sunar."
+			}
+		]
+	},
+	"tools": {
+		"solana_network": {
+			"description": "Saniyenin altında kesinlik ve düşük ücretlerle yüksek performanslı blokzincir"
+		},
+		"solana_explorer": {
+			"description": "İşlemler ve hesaplar için resmi Solana blokzincir gezgini"
+		},
+		"solscan": {
+			"description": "Token analitiği ve NFT desteği ile popüler Solana gezgini"
+		},
+		"jupiter_solana": {
+			"description": "En iyi swap oranları için lider Solana DEX toplayıcı"
+		},
+		"raydium": {
+			"description": "Yoğunlaştırılmış havuzlarla Solana AMM ve likidite sağlayıcı"
+		},
+		"marinade_finance": {
+			"description": "mSOL token ile en büyük Solana likit staking protokolü"
+		},
+		"phantom_wallet": {
+			"description": "Çoklu zincir destekli popüler Solana cüzdanı"
+		},
+		"magic_eden_solana": {
+			"description": "Solana ve Bitcoin Ordinals'ta lider NFT pazaryeri"
+		},
+		"tensor_nft": {
+			"description": "AMM ile Solana'da profesyonel NFT ticaret platformu"
+		},
+		"drift_protocol": {
+			"description": "10x'e kadar kaldıraçlı Solana süresiz vadeli DEX"
+		},
+		"cosmos_network": {
+			"description": "IBC aracılığıyla zincirler arası iletişimi sağlayan Blokzincirlerin İnterneti"
+		},
+		"mintscan": {
+			"description": "Çoklu zincir Cosmos ekosistem gezgini"
+		},
+		"keplr_wallet": {
+			"description": "IBC destekli standart Cosmos ekosistem cüzdanı"
+		},
+		"osmosis": {
+			"description": "IBC entegrasyonlu Cosmos ekosisteminde lider DEX"
+		},
+		"stride_zone": {
+			"description": "Cosmos ekosistemi için çoklu zincir likit staking"
+		},
+		"injective": {
+			"description": "Türev ticareti için DeFi odaklı Cosmos zinciri"
+		},
+		"sei_network": {
+			"description": "400ms kesinlik ile ticaret için optimize edilmiş en hızlı L1"
+		},
+		"celestia": {
+			"description": "Rollup'lar için modüler veri kullanılabilirlik katmanı"
+		},
+		"dymension": {
+			"description": "Modüler rollup'lar için Cosmos üzerine inşa edilmiş RollApp hub'ı"
+		},
+		"sui_network": {
+			"description": "Paralel işlem yürütme ile Move tabanlı L1"
+		},
+		"sui_explorer": {
+			"description": "Resmi Sui blokzincir gezgini ve analitiği"
+		},
+		"sui_wallet": {
+			"description": "Sui'de varlık yönetimi için resmi Sui Cüzdanı"
+		},
+		"turbos_finance": {
+			"description": "Sui blokzincirinde yoğunlaştırılmış likidite DEX"
+		},
+		"cetus_protocol": {
+			"description": "Sui ve Aptos'ta öncü DEX ve likidite protokolü"
+		},
+		"aptos_network": {
+			"description": "Block-STM paralel yürütme ile Move tabanlı L1"
+		},
+		"aptos_explorer": {
+			"description": "İşlemler için resmi Aptos blokzincir gezgini"
+		},
+		"petra_wallet": {
+			"description": "Aptos Labs tarafından resmi Aptos cüzdanı"
+		},
+		"pontem_wallet": {
+			"description": "Aptos ve Move ekosistemleri için çoklu zincir cüzdan"
+		},
+		"liquidswap": {
+			"description": "Pontem tarafından Aptos'ta ilk AMM DEX"
+		},
+		"ton_network": {
+			"description": "Telegram entegrasyonu ve kitle benimsemesiyle The Open Network"
+		},
+		"tonscan": {
+			"description": "İşlemler ve jetton'lar için TON blokzincir gezgini"
+		},
+		"tonkeeper": {
+			"description": "Telegram entegrasyonlu popüler TON cüzdanı"
+		},
+		"ston_fi": {
+			"description": "Düşük ücretler ve hızlı swap'larla TON'da lider DEX"
+		},
+		"dedust": {
+			"description": "TON'da DEX ve DeFi platformu"
+		},
+		"near_protocol": {
+			"description": "Hesap soyutlama ile parçalanmış PoS blokzincir"
+		},
+		"near_explorer": {
+			"description": "Resmi NEAR Protocol blokzincir gezgini"
+		},
+		"ref_finance": {
+			"description": "NEAR'da lider çok amaçlı DeFi platformu"
+		},
+		"polkadot": {
+			"description": "Parazincirlerle heterojen çoklu zincir ağı"
+		},
+		"subscan": {
+			"description": "Polkadot ve Substrate ağları için çoklu zincir gezgini"
+		},
+		"algorand": {
+			"description": "Anında kesinlik ile Pure Proof of Stake blokzincir"
+		},
+		"cardano": {
+			"description": "Akran değerlendirmeli geliştirme ile araştırma odaklı blokzincir"
+		},
+		"tezos": {
+			"description": "Biçimsel doğrulama ile kendini değiştiren blokzincir"
+		},
+		"stacks": {
+			"description": "BTC'ye akıllı sözleşmeler getiren Bitcoin L2"
+		},
+		"lightning_network": {
+			"description": "Anında düşük maliyetli ödemeler için Bitcoin L2"
+		},
+		"rsk_rootstock": {
+			"description": "EVM uyumlu akıllı sözleşmelerle Bitcoin yan zinciri"
+		},
+		"ibc_protocol": {
+			"description": "Cosmos zincirleri için blokzincirler arası iletişim protokolü"
+		},
+		"wormhole_bridge": {
+			"description": "Büyük blokzincirleri bağlayan zincirler arası mesajlaşma protokolü"
+		},
+		"axelar_network": {
+			"description": "Evrensel zincirler arası iletişim ağı"
+		},
+		"layerzero": {
+			"description": "Güvensiz mesajlaşma için omni-zincir birlikte çalışabilirlik protokolü"
+		}
+	}
+}

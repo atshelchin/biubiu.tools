@@ -1,0 +1,107 @@
+{
+	"category_seo": {
+		"title": "Gas Burners & Token Burns - Deflationary Mechanisms | BiuBiu Tools",
+		"description": "Track token burns and gas consumption. Monitor deflationary mechanisms, burn rates and supply dynamics.",
+		"keywords": "gas tracker, eth burn, token burn, deflationary crypto, eip-1559",
+		"faqs": [
+			{
+				"question": "What is token burning?",
+				"answer": "Token burning permanently removes tokens from circulation by sending them to an unusable address. This creates deflationary pressure and may increase scarcity value."
+			},
+			{
+				"question": "How does ETH burning work?",
+				"answer": "Since EIP-1559, base fees are burned instead of going to miners. During high activity, ETH can become deflationary. Track burn rates on ultrasound.money."
+			},
+			{
+				"question": "Which projects have significant burns?",
+				"answer": "Ethereum (base fees), BNB (quarterly burns), SHIB (community burns), and many protocols with buy-and-burn mechanisms. Check tokenomics to understand burn schedules."
+			}
+		]
+	},
+	"tools": {
+		"l2fees": {
+			"description": "Compare L2 transaction fees"
+		},
+		"gasnow": {
+			"description": "Fast gas price tracker with API"
+		},
+		"owlracle": {
+			"description": "Multi-chain gas oracle with API"
+		},
+		"txstreet": {
+			"description": "Real-time blockchain visualization"
+		},
+		"ultrasound_money": {
+			"description": "ETH supply and burn tracker"
+		},
+		"etherscan_gastracker": {
+			"description": "Ethereum gas price monitor"
+		},
+		"blocknative_gas": {
+			"description": "Real-time gas prediction"
+		},
+		"ethgas_watch": {
+			"description": "Gas price alerts service"
+		},
+		"uniswap_gas": {
+			"description": "Top gas consumer DEX"
+		},
+		"opensea_gas": {
+			"description": "NFT marketplace gas usage"
+		},
+		"blur_gas": {
+			"description": "NFT trading gas analytics"
+		},
+		"tether_gas": {
+			"description": "USDT transfer gas tracker"
+		},
+		"1inch_gas": {
+			"description": "Aggregator gas consumption"
+		},
+		"metamask_swap_gas": {
+			"description": "MetaMask swap gas costs"
+		},
+		"flashbots_gas": {
+			"description": "MEV transaction gas"
+		},
+		"banana_gun_gas": {
+			"description": "Trading bot gas usage"
+		},
+		"maestro_gas": {
+			"description": "Sniping bot gas tracker"
+		},
+		"unibot_gas": {
+			"description": "Telegram bot gas costs"
+		},
+		"across_gas": {
+			"description": "Bridge protocol gas usage"
+		},
+		"stargate_gas": {
+			"description": "Cross-chain bridge gas"
+		},
+		"l2beat_gas": {
+			"description": "L2 activity and gas metrics"
+		},
+		"rollup_codes": {
+			"description": "Rollup gas efficiency data"
+		},
+		"flashbots_protect": {
+			"description": "Private transaction RPC"
+		},
+		"evm_gas_profiler": {
+			"description": "Smart contract gas profiling"
+		},
+		"etherscan_charts": {
+			"description": "Historical gas price charts"
+		},
+		"dune_gas": {
+			"description": "Custom gas analytics queries"
+		},
+		"parsec_gas": {
+			"description": "DeFi gas usage analytics"
+		},
+		"rated_network": {
+			"description": "Validator and staking metrics"
+		}
+	}
+}

@@ -1,0 +1,155 @@
+{
+	"category_seo": {
+		"title": "Token Quản Trị DAO - Quyền Bỏ Phiếu & Tokenomics | BiuBiu Tools",
+		"description": "Khám phá token quản trị DAO. Cơ chế bỏ phiếu, phân phối token và tham gia quản trị trong các DAO lớn.",
+		"keywords": "token quản trị DAO, bỏ phiếu DeFi, quản trị giao thức, tokenomics, ủy quyền quản trị",
+		"faqs": [
+			{
+				"question": "Token quản trị là gì?",
+				"answer": "Token quản trị cho phép người nắm giữ quyền bỏ phiếu trong các quyết định của giao thức. Ví dụ: UNI (Uniswap), AAVE, COMP. Quyền bỏ phiếu thường tỷ lệ với lượng token nắm giữ."
+			},
+			{
+				"question": "Ủy quyền bỏ phiếu hoạt động như thế nào?",
+				"answer": "Bạn có thể ủy quyền quyền bỏ phiếu của mình cho người khác (đại biểu) trong khi vẫn giữ token. Điều này giúp các thành viên cộng đồng tích cực bỏ phiếu thay mặt cho những người nắm giữ thụ động."
+			},
+			{
+				"question": "Token quản trị có giá trị không?",
+				"answer": "Giá trị đến từ quyền quản trị, chia sẻ phí tiềm năng và đầu cơ. Một số giao thức chia sẻ doanh thu với người nắm giữ token. Những giao thức khác gặp khó khăn trong việc tích lũy giá trị."
+			}
+		]
+	},
+	"tools": {
+		"boardroom": {
+			"description": "Bộ tổng hợp quản trị để theo dõi đề xuất DAO, bỏ phiếu và hoạt động đại biểu trên nhiều giao thức"
+		},
+		"uni_token": {
+			"description": "Token quản trị Uniswap để bỏ phiếu nâng cấp giao thức, chuyển đổi phí và phân bổ ngân quỹ của DEX lớn nhất"
+		},
+		"aave_token": {
+			"description": "Token quản trị và staking module an toàn Aave cho giao thức cho vay phi tập trung hàng đầu"
+		},
+		"mkr_token": {
+			"description": "Token quản trị MakerDAO để quản lý tham số stablecoin DAI, loại tài sản thế chấp và rủi ro giao thức"
+		},
+		"crv_token": {
+			"description": "Token quản trị Curve với cơ chế vote-escrow (veCRV) để hướng dẫn khuyến khích thanh khoản vào các pool"
+		},
+		"comp_token": {
+			"description": "Token quản trị Compound để bỏ phiếu về mô hình lãi suất và tham số giao thức cho vay DeFi"
+		},
+		"snx_token": {
+			"description": "Token quản trị và staking Synthetix cho giao thức tài sản tổng hợp, hỗ trợ sUSD và synths"
+		},
+		"ldo_token": {
+			"description": "Token quản trị Lido DAO cho giao thức liquid staking lớn nhất quản lý stETH và staking cross-chain"
+		},
+		"gmx_token": {
+			"description": "Token quản trị và tiện ích GMX cho DEX perpetual, kiếm phí giao thức từ giao dịch"
+		},
+		"bal_token": {
+			"description": "Token quản trị Balancer với cơ chế veBAL để hướng dẫn phần thưởng khai thác thanh khoản vào các pool"
+		},
+		"sushi_token": {
+			"description": "Token quản trị SushiSwap cho DEX đa chuỗi và hệ sinh thái DeFi bao gồm cho vay và launchpad"
+		},
+		"yfi_token": {
+			"description": "Token quản trị Yearn Finance cho giao thức tổng hợp lợi suất quản lý chiến lược vault"
+		},
+		"inch_token": {
+			"description": "Token quản trị và tiện ích 1inch cho bộ tổng hợp DEX với phần thưởng staking và bỏ phiếu DAO"
+		},
+		"pendle_token": {
+			"description": "Token quản trị Pendle cho giao thức token hóa lợi suất, cho phép giao dịch lợi suất tương lai"
+		},
+		"ena_token": {
+			"description": "Token quản trị Ethena cho giao thức đô la tổng hợp USDe được hỗ trợ bởi phái sinh ETH đã stake"
+		},
+		"dydx_token": {
+			"description": "Token quản trị dYdX cho sàn giao dịch perpetual phi tập trung, hiện trên chuỗi Cosmos riêng"
+		},
+		"cvx_token": {
+			"description": "Token Convex Finance để tăng phần thưởng Curve và quản trị nền tảng tối ưu hóa lợi suất CRV"
+		},
+		"fxs_token": {
+			"description": "Token quản trị Frax Share cho stablecoin phân số-thuật toán và hệ sinh thái DeFi"
+		},
+		"blur_token": {
+			"description": "Token quản trị Blur cho marketplace NFT với giao dịch không phí và tính năng giao dịch nâng cao"
+		},
+		"ape_token": {
+			"description": "Token quản trị ApeCoin cho hệ sinh thái Bored Ape, game và sáng kiến metaverse"
+		},
+		"rpl_token": {
+			"description": "Token quản trị và tài sản thế chấp Rocket Pool cho giao thức staking Ethereum phi tập trung"
+		},
+		"morpho_token": {
+			"description": "Token quản trị Morpho cho bộ tối ưu hóa cho vay ngang hàng được xây dựng trên Aave và Compound"
+		},
+		"rdnt_token": {
+			"description": "Token quản trị Radiant Capital cho giao thức cho vay omnichain sử dụng LayerZero"
+		},
+		"osmo_token": {
+			"description": "Token quản trị và staking Osmosis cho DEX lớn nhất trong hệ sinh thái Cosmos"
+		},
+		"jup_token": {
+			"description": "Token quản trị Jupiter cho bộ tổng hợp DEX hàng đầu Solana và sàn giao dịch perpetual"
+		},
+		"ray_token": {
+			"description": "Token quản trị Raydium cho Solana AMM và nhà cung cấp thanh khoản cho sổ lệnh Serum"
+		},
+		"jto_token": {
+			"description": "Token quản trị Jito cho cơ sở hạ tầng MEV Solana và giao thức liquid staking"
+		},
+		"orca_token": {
+			"description": "Token quản trị Orca cho DEX Solana thân thiện với người dùng với pool thanh khoản tập trung"
+		},
+		"arb_token": {
+			"description": "Token quản trị Arbitrum cho L2 Ethereum hàng đầu sử dụng optimistic rollup"
+		},
+		"op_token": {
+			"description": "Token quản trị Optimism cho giải pháp mở rộng L2 và hệ sinh thái Superchain"
+		},
+		"strk_token": {
+			"description": "Token quản trị StarkNet cho L2 ZK-rollup sử dụng chứng minh STARK để mở rộng Ethereum"
+		},
+		"zk_token": {
+			"description": "Token quản trị zkSync Era cho ZK-rollup với trừu tượng tài khoản gốc"
+		},
+		"matic_token": {
+			"description": "Token quản trị Polygon (MATIC/POL) cho hệ sinh thái mở rộng Ethereum bao gồm PoS và zkEVM"
+		},
+		"mnt_token": {
+			"description": "Token quản trị Mantle cho L2 được hỗ trợ bởi ngân quỹ BitDAO với kiến trúc module"
+		},
+		"metis_token": {
+			"description": "Token quản trị Metis cho L2 Ethereum tập trung vào doanh nghiệp và công ty phi tập trung"
+		},
+		"ens_token": {
+			"description": "Token quản trị Ethereum Name Service để quản lý hệ thống tên miền .eth và nâng cấp giao thức"
+		},
+		"gtc_token": {
+			"description": "Token quản trị Gitcoin cho nền tảng tài trợ hàng hóa công cộng sử dụng tài trợ bậc hai"
+		},
+		"safe_token": {
+			"description": "Token quản trị Safe (trước đây là Gnosis Safe) cho cơ sở hạ tầng ví multi-sig hàng đầu"
+		},
+		"cow_token": {
+			"description": "Token quản trị CoW Protocol cho DEX được bảo vệ khỏi MEV sử dụng đấu giá theo lô"
+		},
+		"gno_token": {
+			"description": "Token quản trị Gnosis cho nền tảng thị trường dự đoán và hệ sinh thái Gnosis Chain"
+		},
+		"tally_governance": {
+			"description": "Nền tảng quản trị on-chain để tạo đề xuất, ủy quyền phiếu bầu và thực thi quyết định DAO"
+		},
+		"snapshot_governance": {
+			"description": "Nền tảng bỏ phiếu off-chain cho quản trị không gas sử dụng tin nhắn đã ký và chiến lược tùy chỉnh"
+		},
+		"karma_dao": {
+			"description": "Nền tảng danh tiếng người đóng góp DAO và theo dõi đại biểu cho phân tích quản trị"
+		},
+		"messari_governance": {
+			"description": "Nghiên cứu và phân tích quản trị từ Messari bao gồm đề xuất DAO và xu hướng bỏ phiếu"
+		}
+	}
+}

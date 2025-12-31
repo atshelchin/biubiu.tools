@@ -1,0 +1,149 @@
+{
+	"category_seo": {
+		"title": "Web3 팀 & VC - 빌더 & 투자자 | BiuBiu Tools",
+		"description": "Web3 팀, 빌더, 투자자를 발견하세요. 누가 무엇을 구축하고 스마트 머니가 어디에 투자하는지 추적하세요.",
+		"keywords": "web3팀, 크립토VC, 블록체인 투자자, 크립토 빌더, 벤처 캐피탈",
+		"faqs": [
+			{
+				"question": "Web3 팀을 어떻게 조사하나요?",
+				"answer": "LinkedIn에서 팀 배경을 확인하고, 과거 프로젝트를 검증하고, GitHub 활동을 찾고, 커뮤니티 평판을 평가하세요. 익명 팀은 더 높은 리스크를 수반합니다."
+			},
+			{
+				"question": "강력한 Web3 팀의 특징은 무엇인가요?",
+				"answer": "이전 성공 프로젝트, 기술적 깊이, 투명한 커뮤니케이션, 정렬된 토큰 인센티브, 진정한 커뮤니티 참여. 과거 성과가 중요합니다."
+			},
+			{
+				"question": "VC는 크립토 프로젝트를 어떻게 평가하나요?",
+				"answer": "팀 품질, 기술 혁신, 시장 규모, 토크노믹스, 경쟁 포지셔닝, 트랙션. 초기 단계는 팀에, 후기 단계는 지표에 집중합니다."
+			}
+		]
+	},
+	"tools": {
+		"paradigm_vc": {
+			"description": "기술적 기여, 오픈소스 도구, 주요 DeFi 및 인프라 프로젝트 지원으로 알려진 연구 중심 크립토 VC"
+		},
+		"sequoia_crypto": {
+			"description": "크립토로 확장한 전설적인 실리콘밸리 VC, FTX, Polygon 및 기타 주요 Web3 기업 지원"
+		},
+		"polychain_capital": {
+			"description": "전 Coinbase 직원이 설립한 크립토 네이티브 펀드, Compound, Maker, Cosmos의 초기 투자자"
+		},
+		"pantera_capital": {
+			"description": "최초의 크립토 투자 회사 중 하나, 2013년부터 블록체인 중심 헤지펀드와 벤처펀드 운용"
+		},
+		"dragonfly_capital": {
+			"description": "아시아에서 강한 존재감을 가진 글로벌 크립토 VC, DeFi, 인프라, 컨슈머 크립토에 투자"
+		},
+		"multicoin_capital": {
+			"description": "솔라나 생태계 투자와 Layer 1 블록체인 베팅으로 알려진 테시스 기반 크립토 펀드"
+		},
+		"electric_capital": {
+			"description": "연간 개발자 보고서를 발행하고 Web3 인프라 프로젝트에 투자하는 개발자 중심 VC"
+		},
+		"framework_ventures": {
+			"description": "실질적 참여와 프로토콜 거버넌스 참여로 알려진 적극적인 DeFi 및 게이밍 투자자"
+		},
+		"delphi_ventures": {
+			"description": "Delphi Digital의 리서치 기반 벤처 부문, DeFi, 게이밍, NFT 인프라에 투자"
+		},
+		"placeholder_vc": {
+			"description": "탈중앙화 프로토콜, 거버넌스 시스템, 네트워크 소유권 모델에 집중하는 테시스 기반 VC"
+		},
+		"variant_fund": {
+			"description": "Web3에서 사용자 소유 네트워크와 토큰 기반 소유권 모델에 집중하는 VC"
+		},
+		"hashed_vc": {
+			"description": "강력한 아시아 네트워크를 보유한 한국 선도 크립토 VC, 게이밍, DeFi, 인프라에 투자"
+		},
+		"spartan_group": {
+			"description": "벤처 투자와 트레이딩, 자문 서비스를 결합한 아시아 중심 크립토 펀드"
+		},
+		"hack_vc": {
+			"description": "전 a16z 파트너가 이끄는 초기 단계 크립토 VC, 인프라와 기술 창업자에 집중"
+		},
+		"bankless_ventures": {
+			"description": "Bankless 미디어 브랜드의 커뮤니티 지원 벤처 펀드, 이더리움 생태계에 투자"
+		},
+		"1kx_capital": {
+			"description": "토큰 네트워크, 거버넌스, 초기 단계 프로토콜 투자에 집중하는 유럽 크립토 VC"
+		},
+		"robot_ventures": {
+			"description": "Compound 창업자 Robert Leshner가 설립한 초기 단계 크립토 펀드, DeFi 혁신 지원"
+		},
+		"coinbase_ventures": {
+			"description": "Coinbase의 전략적 투자 부문, DeFi, NFT, 인프라 생태계 프로젝트 지원"
+		},
+		"binance_labs": {
+			"description": "Binance의 벤처 부문 및 인큐베이터, 전 세계 블록체인 스타트업에 투자 및 육성"
+		},
+		"okx_ventures": {
+			"description": "OKX 거래소의 투자 부문, 인프라와 애플리케이션 Web3 빌더 지원"
+		},
+		"kraken_ventures": {
+			"description": "Kraken 거래소의 전략적 투자 부문, 인프라와 생태계 개발에 집중"
+		},
+		"circle_ventures": {
+			"description": "Circle(USDC 발행사)의 투자 부문, 스테이블코인 인프라와 핀테크 프로젝트 지원"
+		},
+		"galaxy_ventures": {
+			"description": "Galaxy Digital의 벤처 부문, 크립토와 블록체인 전반에 기관급 투자"
+		},
+		"alliance_dao": {
+			"description": "최고의 크립토 창업자 멘토십과 함께 코호트 기반 프로그램을 운영하는 Web3 액셀러레이터"
+		},
+		"ycombinator_crypto": {
+			"description": "표준 배치 프로그램을 통해 크립토 기업을 지원하는 전설적인 스타트업 액셀러레이터"
+		},
+		"outlier_ventures": {
+			"description": "토큰 기반 스타트업을 위한 Base Camp 프로그램을 운영하는 Web3 액셀러레이터"
+		},
+		"longhash_ventures": {
+			"description": "아시아-태평양 지역 Web3 창업자에 집중하는 싱가포르 기반 액셀러레이터 및 VC"
+		},
+		"techstars_crypto": {
+			"description": "멘토 네트워크와 함께 블록체인 및 크립토 중심 코호트를 운영하는 글로벌 스타트업 액셀러레이터"
+		},
+		"consensys_team": {
+			"description": "MetaMask, Infura 및 기타 핵심 생태계 도구를 구축하는 이더리움 인프라 기업"
+		},
+		"offchain_labs": {
+			"description": "Optimistic Rollups을 사용하는 선도적 이더리움 Layer 2 스케일링 솔루션 Arbitrum을 구축하는 팀"
+		},
+		"matter_labs": {
+			"description": "영지식 증명 기술을 사용하는 Layer 2 스케일링 솔루션 zkSync를 구축하는 팀"
+		},
+		"optimism_team": {
+			"description": "Optimism L2와 확장 가능한 이더리움을 위한 Superchain 비전을 이끄는 핵심 팀"
+		},
+		"alchemy_team": {
+			"description": "노드 API, 개발자 도구, 블록체인 데이터를 제공하는 선도적 Web3 인프라 제공업체"
+		},
+		"chainlink_labs": {
+			"description": "Chainlink 오라클 네트워크, CCIP 크로스체인 프로토콜, 탈중앙화 데이터 인프라를 구축하는 팀"
+		},
+		"eigenlayer_team": {
+			"description": "AVS 애플리케이션을 위한 공유 보안을 가능하게 하는 EigenLayer 리스테이킹 프로토콜을 구축하는 팀"
+		},
+		"uniswap_labs": {
+			"description": "거래량 기준 최대 탈중앙화 거래소 프로토콜 Uniswap을 이끄는 팀"
+		},
+		"jump_crypto": {
+			"description": "Wormhole 브릿지를 구축하고 블록체인 인프라에 투자하는 트레이딩 회사의 크립토 부문"
+		},
+		"wintermute_trading": {
+			"description": "거래소와 DeFi 프로토콜 전반에 유동성을 제공하는 주요 크립토 마켓 메이커"
+		},
+		"gauntlet_network": {
+			"description": "시뮬레이션을 사용해 프로토콜 매개변수와 경제를 최적화하는 DeFi 리스크 관리 회사"
+		},
+		"dealroom_crypto": {
+			"description": "Web3 기업의 펀딩 라운드, 밸류에이션, 투자자 활동을 추적하는 스타트업 및 펀딩 데이터베이스"
+		},
+		"pitchbook_crypto": {
+			"description": "VC 딜, 크립토 펀딩 라운드, 시장 분석을 위한 기관급 데이터베이스"
+		},
+		"crypto_fundraising": {
+			"description": "크립토 펀딩 라운드, 투자자 활동, 스타트업 펀딩 데이터를 위한 무료 트래커"
+		}
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Base - Coinbase 的以太坊 Layer 2 | L2 工具评测",
+		"description": "深入了解 Base，Coinbase 基于 OP Stack 构建的 Layer 2。掌握 Superchain 集成、无原生代币模式、低费用，以及 friend.tech 和 Farcaster 应用的主场。2024年增长最快的 L2。",
+		"keywords": "Base, Coinbase L2, OP Stack, Layer 2, 以太坊扩容, Superchain, friend.tech, Farcaster, Base 链, 无代币"
+	},
+	"overview": "Base 是 Coinbase 为以太坊打造的 Layer 2 解决方案，使用 OP Stack 框架构建，是 Optimism Superchain 的一部分。Base 于2023年8月推出，代表了 Coinbase 将数十亿用户带到链上的大胆举措，通过提供由加密货币最受信任的机构之一支持的安全、低成本、对开发者友好的环境来实现这一目标。\n\nBase 的独特之处在于其增长和可持续性方法。与大多数 L2 不同，Base 没有推出原生代币的计划——它使用 ETH 支付 Gas 费用，并与 Optimism Collective 共享排序器收入。这一决定表明了 Coinbase 对构建基础设施的长期承诺，而不是追求快速的代币收益。Base 受益于 Coinbase 的庞大用户群，使其成为主流加密用户最容易访问的 L2。\n\n2024年，Base 成为增长最快的 L2，吸引了像 friend.tech（SocialFi）、基于 Farcaster 的应用（去中心化社交）等病毒式传播的消费者应用，以及蓬勃发展的链上文化。凭借 Coinbase 的监管专业知识、强大的安全实践以及与 Coinbase.com 的无缝集成，Base 定位为传统金融与链上经济之间的桥梁。",
+	"features": {
+		"1": {
+			"title": "基于 OP Stack / Superchain 构建",
+			"description": "Optimism Superchain 生态系统的一部分——共享安全标准，并受益于 OP Stack 的持续改进和互操作性"
+		},
+		"2": {
+			"title": "Coinbase 支持与集成",
+			"description": "获得 Coinbase 的直接支持，拥有无缝的钱包集成、从 Coinbase.com 轻松入门，以及访问1亿多加密用户"
+		},
+		"3": {
+			"title": "无原生代币模式",
+			"description": "使用 ETH 支付 Gas 费用，没有推出 Base 代币的计划——与 Optimism Collective 共享排序器收入，符合长期基础设施目标"
+		},
+		"4": {
+			"title": "超低交易费用",
+			"description": "与以太坊主网相比成本大幅降低——支持微交易和消费者应用的高频交互"
+		},
+		"5": {
+			"title": "轻松入门",
+			"description": "Coinbase 用户最简单的 L2 入门体验——只需几次点击即可从 Coinbase 钱包或交易所直接桥接"
+		},
+		"6": {
+			"title": "安全性与合规性",
+			"description": "受益于 Coinbase 的机构级安全实践和监管合规专业知识"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "消费者加密应用",
+			"description": "以低费用和轻松入门构建和使用对主流友好的加密应用——非常适合针对非技术用户的应用"
+		},
+		"2": {
+			"title": "社交 dApp 和 SocialFi",
+			"description": "friend.tech、Farcaster 应用和其他需要频繁、低成本交互的社交平台的主场"
+		},
+		"3": {
+			"title": "DeFi 协议",
+			"description": "以最低的交易成本部署或使用 DeFi 应用，同时受益于 Coinbase 的用户群和流动性"
+		},
+		"4": {
+			"title": "NFT 和数字收藏品",
+			"description": "以低费用创建、铸造和交易 NFT——数字艺术、音乐和 PFP 收藏品的生态系统不断增长"
+		},
+		"5": {
+			"title": "链上游戏",
+			"description": "构建需要频繁状态更新的完全链上游戏，无需承担高昂的 Gas 成本"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 Base？它与 Coinbase 有什么关系？",
+			"answer": "Base 是 Coinbase 使用 OP Stack 框架构建的以太坊 Layer 2。它旨在通过提供安全、低成本的环境，将 Coinbase 的1亿多用户带到链上。虽然 Base 是一个独立的网络，但它受益于 Coinbase 的品牌、安全专业知识以及与 Coinbase 产品的无缝集成。"
+		},
+		"2": {
+			"question": "为什么 Base 没有原生代币？",
+			"answer": "Base 有意没有推出原生代币的计划。它使用 ETH 支付 Gas 费用，并与 Optimism Collective 共享排序器收入。这种方法表明 Coinbase 专注于构建可持续的基础设施，而不是代币投机，并使 Base 的成功与以太坊和更广泛的 Superchain 生态系统保持一致。"
+		},
+		"3": {
+			"question": "Base 与 Optimism 和 Superchain 有什么关系？",
+			"answer": "Base 使用 OP Stack 构建，这是为 Optimism 提供动力的同一框架，并且是 Superchain（可互操作 L2 网络）的一部分。Base 与 Optimism 共享安全标准，并受益于共享基础设施的改进。Base 还将排序器收入贡献给 Optimism Collective，创造了互惠互利的关系。"
+		},
+		"4": {
+			"question": "如何将资金桥接到 Base？",
+			"answer": "最简单的方法是通过 Coinbase.com 或 Coinbase Wallet——只需几次点击即可将 ETH 和支持的代币转移到 Base。你也可以使用官方 Base 桥接（bridge.base.org），或使用像 Stargate、Hop 或 Across 这样的第三方桥接进行从其他 L2 的跨链转账。"
+		},
+		"5": {
+			"question": "Base 去中心化了吗？",
+			"answer": "Base 目前由 Coinbase 作为中心化排序器运营，类似于大多数 L2 的早期阶段。但是，Base 通过其 L2 架构继承了以太坊的安全性，并计划随着时间的推移逐步去中心化。作为 Superchain 的一部分，Base 将受益于所有 OP Stack 链的共享治理和去中心化努力。"
+		}
+	},
+	"cta": {
+		"ready": "准备好与 Coinbase 一起构建链上应用了吗？",
+		"button": "访问 Base",
+		"note": "安全、可扩展，并由 Coinbase 支持——最简单的链上之路"
+	}
+}

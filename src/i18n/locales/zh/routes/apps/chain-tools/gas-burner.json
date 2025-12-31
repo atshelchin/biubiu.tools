@@ -1,0 +1,106 @@
+{
+	"category_seo": {
+		"title": "Gas 消耗榜与代币销毁 - 通缩机制 | BiuBiu Tools",
+		"description": "追踪代币销毁和 Gas 消耗。监控通缩机制、销毁率和供应动态。",
+		"faqs": [
+			{
+				"question": "什么是代币销毁？",
+				"answer": "代币销毁通过将代币发送到不可用的地址来永久移除流通中的代币。这创造了通缩压力并可能增加稀缺价值。"
+			},
+			{
+				"question": "ETH 销毁如何运作？",
+				"answer": "自 EIP-1559 以来，基础费用被销毁而不是给矿工。在高活动期间，ETH 可能变得通缩。在 ultrasound.money 上追踪销毁率。"
+			},
+			{
+				"question": "哪些项目有显著的销毁？",
+				"answer": "以太坊（基础费用）、BNB（季度销毁）、SHIB（社区销毁），以及许多带有买入销毁机制的协议。查看代币经济学以了解销毁计划。"
+			}
+		]
+	},
+	"tools": {
+		"l2fees": {
+			"description": "比较L2交易费用"
+		},
+		"gasnow": {
+			"description": "快速Gas价格追踪器，提供API"
+		},
+		"owlracle": {
+			"description": "多链Gas预言机，提供API"
+		},
+		"txstreet": {
+			"description": "实时区块链可视化"
+		},
+		"ultrasound_money": {
+			"description": "ETH 供应和销毁追踪"
+		},
+		"etherscan_gastracker": {
+			"description": "以太坊 Gas 价格追踪"
+		},
+		"blocknative_gas": {
+			"description": "内存池 Gas 估算器"
+		},
+		"ethgas_watch": {
+			"description": "Gas 价格警报服务"
+		},
+		"uniswap_gas": {
+			"description": "Uniswap 高 Gas 消耗协议"
+		},
+		"opensea_gas": {
+			"description": "OpenSea NFT Gas 消耗"
+		},
+		"blur_gas": {
+			"description": "Blur NFT Gas 消耗"
+		},
+		"tether_gas": {
+			"description": "USDT 转账 Gas 消耗"
+		},
+		"1inch_gas": {
+			"description": "1inch 聚合器 Gas 消耗"
+		},
+		"metamask_swap_gas": {
+			"description": "MetaMask Swap Gas 消耗"
+		},
+		"flashbots_gas": {
+			"description": "Flashbots (MEV Gas) - Tool"
+		},
+		"banana_gun_gas": {
+			"description": "Banana Gun - Tool"
+		},
+		"maestro_gas": {
+			"description": "Maestro Bot - Tool"
+		},
+		"unibot_gas": {
+			"description": "Unibot - Tool"
+		},
+		"across_gas": {
+			"description": "Across Protocol - Tool"
+		},
+		"stargate_gas": {
+			"description": "Stargate Finance - Tool"
+		},
+		"l2beat_gas": {
+			"description": "L2BEAT Activity - Tool"
+		},
+		"rollup_codes": {
+			"description": "Rollup.codes - Tool"
+		},
+		"flashbots_protect": {
+			"description": "Flashbots Protect - Tool"
+		},
+		"evm_gas_profiler": {
+			"description": "Tenderly Gas Profiler - Tool"
+		},
+		"etherscan_charts": {
+			"description": "Etherscan Gas Charts - Tool"
+		},
+		"dune_gas": {
+			"description": "Dune Gas Dashboards - Tool"
+		},
+		"parsec_gas": {
+			"description": "Parsec Finance - Tool"
+		},
+		"rated_network": {
+			"description": "Rated Network - Tool"
+		}
+	}
+}

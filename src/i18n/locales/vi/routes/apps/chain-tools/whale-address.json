@@ -1,0 +1,169 @@
+{
+	"category_seo": {
+		"title": "Ví Cá Voi & Theo Dõi Kho Bạc - Thông Tin Smart Money | BiuBiu Tools",
+		"description": "Theo dõi ví cá voi và kho bạc giao thức. Giám sát chuyển động smart money và nắm giữ tổ chức trong crypto.",
+		"faqs": [
+			{
+				"question": "Cá voi crypto là gì?",
+				"answer": "Cá voi là một thực thể nắm giữ số lượng lớn tiền điện tử. Giao dịch của họ có thể làm chuyển động thị trường. Theo dõi ví cá voi có thể cung cấp tín hiệu sớm về biến động thị trường."
+			},
+			{
+				"question": "Làm thế nào để theo dõi ví cá voi?",
+				"answer": "Sử dụng Nansen hoặc Arkham để theo dõi ví được gắn nhãn. Thiết lập cảnh báo cho chuyển khoản lớn trên Etherscan. Theo dõi các tài khoản như @lookonchain chia sẻ hoạt động cá voi."
+			},
+			{
+				"question": "Kho bạc giao thức là gì?",
+				"answer": "Kho bạc là quỹ được kiểm soát bởi DAO hoặc giao thức. Chúng được sử dụng cho tài trợ, thanh khoản và phát triển. Kho bạc lớn (như của Uniswap) được theo dõi như chỉ số sức khỏe dự án."
+			}
+		]
+	},
+	"tools": {
+		"ethereum_foundation": {
+			"description": "Ví kho bạc Ethereum Foundation tài trợ phát triển và nghiên cứu hệ sinh thái"
+		},
+		"aave_treasury": {
+			"description": "Kho bạc giao thức Aave quản lý quỹ DAO cho phát triển giao thức cho vay"
+		},
+		"compound_treasury": {
+			"description": "Kho bạc giao thức Compound giữ quỹ cho quản trị cho vay DeFi"
+		},
+		"lido_treasury": {
+			"description": "Kho bạc Lido DAO quản lý quỹ giao thức staking lỏng"
+		},
+		"arbitrum_treasury": {
+			"description": "Kho bạc Arbitrum DAO tài trợ grants và phát triển hệ sinh thái L2"
+		},
+		"optimism_treasury": {
+			"description": "Kho bạc Optimism Collective cho tài trợ hệ sinh thái Superchain"
+		},
+		"gnosis_treasury": {
+			"description": "Kho bạc Gnosis DAO quản lý hệ sinh thái Safe và quỹ GNO"
+		},
+		"ens_treasury": {
+			"description": "Kho bạc ENS DAO cho quản trị và grants Ethereum Name Service"
+		},
+		"curve_multisig": {
+			"description": "Multisig DAO khẩn cấp Curve Finance cho các hành động bảo mật giao thức"
+		},
+		"yearn_multisig": {
+			"description": "Ví multisig Yearn Finance quản lý hoạt động giao thức yield"
+		},
+		"vitalik_wallet": {
+			"description": "Ví công khai của Vitalik Buterin - Đồng sáng lập Ethereum và nhân vật có ảnh hưởng"
+		},
+		"justin_sun_wallet": {
+			"description": "Ví Justin Sun - Nhà sáng lập TRON nổi tiếng với vị thế DeFi lớn"
+		},
+		"tetranode_wallet": {
+			"description": "Ví Tetranode - Cá voi DeFi có ảnh hưởng và nhà đầu tư giao thức sớm"
+		},
+		"hsaka_wallet": {
+			"description": "Ví Hsaka Trades - Trader perpetual nổi bật trên GMX và dYdX"
+		},
+		"binance_hot_wallet": {
+			"description": "Hot wallet sàn Binance cho hoạt động BNB Chain"
+		},
+		"pancakeswap_treasury": {
+			"description": "Kho bạc PancakeSwap quản lý token CAKE và quỹ giao thức DEX"
+		},
+		"venus_treasury": {
+			"description": "Kho bạc giao thức Venus cho quản trị nền tảng cho vay BNB Chain"
+		},
+		"base_bridge": {
+			"description": "Hợp đồng bridge Base L2 giữ tài sản được bridge từ Ethereum"
+		},
+		"aerodrome_treasury": {
+			"description": "Kho bạc Aerodrome Finance cho DEX hàng đầu Base chain"
+		},
+		"polygon_ecosystem_fund": {
+			"description": "Quỹ hệ sinh thái Polygon hỗ trợ grants và phát triển hệ sinh thái"
+		},
+		"quickswap_treasury": {
+			"description": "Kho bạc QuickSwap cho giao thức DEX gốc Polygon"
+		},
+		"avalanche_foundation": {
+			"description": "Ví Avalanche Foundation tài trợ tăng trưởng hệ sinh thái AVAX"
+		},
+		"traderjoe_treasury": {
+			"description": "Kho bạc Trader Joe cho DEX hàng đầu và trung tâm DeFi của Avalanche"
+		},
+		"solana_foundation": {
+			"description": "Ví Solana Foundation hỗ trợ phát triển hệ sinh thái và grants"
+		},
+		"jupiter_treasury": {
+			"description": "Kho bạc aggregator Jupiter cho nền tảng swap hàng đầu của Solana"
+		},
+		"raydium_treasury": {
+			"description": "Kho bạc Raydium cho AMM và giao thức thanh khoản của Solana"
+		},
+		"ton_foundation": {
+			"description": "Ví TON Foundation hỗ trợ hệ sinh thái blockchain Telegram"
+		},
+		"sui_foundation": {
+			"description": "Kho bạc Sui Foundation tài trợ phát triển L1 dựa trên Move"
+		},
+		"aptos_foundation": {
+			"description": "Ví Aptos Foundation cho hệ sinh thái blockchain chạy bằng Move"
+		},
+		"cosmos_hub_pool": {
+			"description": "Community pool Cosmos Hub cho tài trợ quản trị hệ sinh thái ATOM"
+		},
+		"cz_wallet": {
+			"description": "Ví CZ (Changpeng Zhao) - Nhà sáng lập Binance và lãnh đạo ngành crypto"
+		},
+		"grayscale_wallet": {
+			"description": "Ví tổ chức Grayscale quản lý nắm giữ ETF Bitcoin và Ethereum"
+		},
+		"blackrock_wallet": {
+			"description": "Ví BlackRock iShares cho lưu ký ETF crypto tổ chức"
+		},
+		"fidelity_wallet": {
+			"description": "Ví tổ chức Fidelity cho quản lý tài sản crypto"
+		},
+		"a16z_wallet": {
+			"description": "Ví quỹ crypto Andreessen Horowitz - VC Web3 hàng đầu"
+		},
+		"paradigm_wallet": {
+			"description": "Ví VC Paradigm - Quỹ đầu tư crypto-native hàng đầu"
+		},
+		"jump_trading_wallet": {
+			"description": "Ví Jump Trading - Market maker tổ chức và công ty giao dịch"
+		},
+		"wintermute_wallet": {
+			"description": "Ví Wintermute - Market maker crypto hàng đầu và nhà cung cấp thanh khoản"
+		},
+		"galaxy_digital_wallet": {
+			"description": "Ví Galaxy Digital - Đầu tư và giao dịch crypto tổ chức"
+		},
+		"lookonchain": {
+			"description": "Nền tảng phân tích on-chain theo dõi chuyển động cá voi và smart money"
+		},
+		"whale_alert": {
+			"description": "Cảnh báo thời gian thực cho giao dịch lớn trong các crypto chính"
+		},
+		"nansen_smart_money": {
+			"description": "Theo dõi Smart Money của Nansen cho phân tích ví được gắn nhãn"
+		},
+		"arkham_intelligence": {
+			"description": "Nền tảng tình báo blockchain cho de-ẩn danh và theo dõi ví"
+		},
+		"debank_whales": {
+			"description": "Xếp hạng cá voi DeBank hiển thị người nắm giữ portfolio đa chuỗi lớn nhất"
+		},
+		"spot_on_chain": {
+			"description": "Phân tích on-chain chạy bằng AI cho theo dõi cá voi và thông tin thị trường"
+		},
+		"bubblemaps": {
+			"description": "Phân tích phân phối người nắm giữ token và cung trực quan"
+		},
+		"etherscan_label": {
+			"description": "Cơ sở dữ liệu địa chỉ được gắn nhãn của Etherscan cho nhận dạng ví đã biết"
+		},
+		"zerion_whales": {
+			"description": "Tính năng khám phá Zerion cho khám phá và theo dõi portfolio cá voi"
+		},
+		"watchers_pro": {
+			"description": "Nền tảng theo dõi smart money với cảnh báo hoạt động ví cá voi"
+		}
+	}
+}

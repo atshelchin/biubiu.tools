@@ -73,49 +73,49 @@
 		"nodereal": {
 			"description": "Servizi infrastruttura blockchain"
 		},
-		"blast-api": {
+		"blast_api": {
 			"description": "Blast API - Tool"
 		},
-		"tenderly-node": {
+		"tenderly_node": {
 			"description": "Tenderly Node - Tool"
 		},
-		"public-node": {
+		"public_node": {
 			"description": "PublicNode - Tool"
 		},
-		"helius-rpc": {
+		"helius_rpc": {
 			"description": "Helius - Tool"
 		},
-		"triton-rpc": {
+		"triton_rpc": {
 			"description": "Triton - Tool"
 		},
-		"syndica-rpc": {
+		"syndica_rpc": {
 			"description": "Syndica - Tool"
 		},
-		"lava-network": {
+		"lava_network": {
 			"description": "Lava Network - Tool"
 		},
-		"erpc-network": {
+		"erpc_network": {
 			"description": "eRPC - Tool"
 		},
-		"thirdweb-rpc": {
+		"thirdweb_rpc": {
 			"description": "thirdweb RPC - Tool"
 		},
-		"tatum-rpc": {
+		"tatum_rpc": {
 			"description": "Tatum - Tool"
 		},
-		"chainstack-rpc": {
+		"chainstack_rpc": {
 			"description": "Chainstack - Tool"
 		},
-		"push-protocol": {
+		"push_protocol": {
 			"description": "Push Protocol - Tool"
 		},
 		"xmtp": {
 			"description": "XMTP - Tool"
 		},
-		"flashbots-protect": {
+		"flashbots_protect": {
 			"description": "Flashbots Protect - Tool"
 		},
-		"mev-blocker": {
+		"mev_blocker": {
 			"description": "MEV Blocker - Tool"
 		}
 	}

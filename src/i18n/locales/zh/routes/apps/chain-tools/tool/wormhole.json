@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Wormhole - 跨链消息传递协议 | 连接30+区块链",
+		"description": "探索Wormhole,连接30+链的通用消息传递协议。使用Wormhole的Guardian网络桥接代币、NFT并构建跨链dApp。",
+		"keywords": "Wormhole, W代币, 跨链, 桥, 消息传递, Guardian, Solana, EVM, Cosmos, Sui, Aptos"
+	},
+	"overview": "Wormhole是一个通用消息传递协议,连接超过30个区块链网络,实现无缝的跨链通信和资产转移。最初于2020年作为Solana的桥启动,Wormhole已发展成为一个综合互操作性层,支持EVM链、Solana、Cosmos、Sui、Aptos等。\n\n其核心是Wormhole使用Guardian网络——由19个验证者组成的集合,包括Jump Crypto、Staked和Figment——他们观察和验证跨链消息。当消息从一条链发送时,Guardian独立验证并签署可验证行动批准(VAA),然后可以提交到目标链。这种架构不仅支持代币转移,还支持复杂跨链应用的任意消息传递。\n\nWormhole的基础设施已处理超过400亿美元的交易量,并促成了数百万次跨链交易。2024年,W代币推出,为协议引入了治理和质押。尽管在2022年经历了一次重大漏洞(由Jump Crypto全额赔偿),Wormhole已成为多链基础设施的关键部分,为Portal Bridge、Mayan Finance等应用提供支持。",
+	"features": {
+		"1": {
+			"title": "跨链消息传递",
+			"description": "在30+支持的区块链网络之间发送任意消息和数据"
+		},
+		"2": {
+			"title": "Guardian网络",
+			"description": "19个独立验证者通过共识保护跨链消息"
+		},
+		"3": {
+			"title": "代币桥",
+			"description": "在链之间转移代币,并创建和管理包装资产"
+		},
+		"4": {
+			"title": "NFT桥",
+			"description": "在链之间移动NFT,同时保持元数据和来源"
+		},
+		"5": {
+			"title": "多生态系统支持",
+			"description": "连接EVM、Solana、Cosmos、Sui、Aptos和其他区块链生态系统"
+		},
+		"6": {
+			"title": "W代币治理",
+			"description": "通过W代币质押参与协议治理并获得奖励"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "代币桥接",
+			"description": "在不同区块链网络之间无缝转移代币"
+		},
+		"2": {
+			"title": "跨链dApp",
+			"description": "构建同时与多个区块链交互的应用"
+		},
+		"3": {
+			"title": "多链治理",
+			"description": "在多个区块链网络上启用治理投票和决策"
+		},
+		"4": {
+			"title": "NFT转移",
+			"description": "在链之间移动NFT集合,以访问不同的市场和社区"
+		},
+		"5": {
+			"title": "通用消息传递",
+			"description": "在链之间发送自定义数据和指令,用于复杂的跨链逻辑"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是Wormhole,它是如何工作的?",
+			"answer": "Wormhole是一个通用消息传递协议,使不同区块链之间能够通信。它通过Guardian网络工作,该网络由19个验证者组成,他们观察源链上的消息并创建签名的可验证行动批准(VAA)。这些VAA可以提交到目标链以执行跨链操作。这种架构不仅支持代币转移,还支持任何类型的跨链消息或数据传输。"
+		},
+		"2": {
+			"question": "Guardian如何保护网络安全?",
+			"answer": "Guardian是由知名组织(如Jump Crypto、Staked和Figment)运营的独立验证者。每个Guardian独立观察区块链事件,并在达成共识时签署VAA(需要19个签名中的13个)。这种去中心化验证模型防止任何单一实体控制跨链消息,Guardian运营商的多样性通过分布提供安全性。"
+		},
+		"3": {
+			"question": "2022年的漏洞发生了什么,Wormhole现在安全吗?",
+			"answer": "2022年2月,Wormhole由于Solana合约中的签名验证错误遭受了3.25亿美元的漏洞攻击。Jump Crypto立即赔偿了所有受影响的用户,并在几小时内修补了漏洞。此后,Wormhole经过了广泛的安全审计,实施了多个额外的安全层,并在没有事故的情况下处理了数十亿美元的交易量。该协议现在被认为是经过实战考验且安全的。"
+		},
+		"4": {
+			"question": "Wormhole连接了哪些链?",
+			"answer": "Wormhole连接了跨多个生态系统的30+条链:EVM链(以太坊、BSC、Polygon、Avalanche、Arbitrum、Optimism、Base等)、Solana、Cosmos链(Osmosis、Injective等)、Sui、Aptos、Near、Algorand等。这使其成为最全面的互操作性协议之一,能够实现不同区块链架构之间的通信。"
+		},
+		"5": {
+			"question": "W代币用于什么?",
+			"answer": "W是Wormhole于2024年推出的治理和实用代币。W代币持有者可以参与协议治理,对升级、Guardian集变更和财库决策进行投票。该代币还支持质押,用户可以质押W以帮助保护网络并获得奖励。此外,W可能在未来用于协议费用和激励跨链活动。"
+		}
+	},
+	"cta": {
+		"ready": "准备好开启跨链之旅了吗?",
+		"button": "打开Wormhole",
+		"note": "通用消息传递协议"
+	}
+}

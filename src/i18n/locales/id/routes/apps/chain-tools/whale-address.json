@@ -1,0 +1,169 @@
+{
+	"category_seo": {
+		"title": "Wallet Whale & Pelacakan Treasury - Wawasan Smart Money | BiuBiu Tools",
+		"description": "Lacak wallet whale dan treasury protokol. Pantau pergerakan smart money dan kepemilikan institusional dalam kripto.",
+		"faqs": [
+			{
+				"question": "Apa itu whale kripto?",
+				"answer": "Whale adalah entitas yang memegang cryptocurrency dalam jumlah besar. Perdagangan mereka dapat menggerakkan pasar. Melacak wallet whale dapat memberikan sinyal awal pergerakan pasar."
+			},
+			{
+				"question": "Bagaimana cara melacak wallet whale?",
+				"answer": "Gunakan Nansen atau Arkham untuk pelacakan wallet berlabel. Siapkan alert untuk transfer besar di Etherscan. Ikuti akun seperti @lookonchain yang membagikan aktivitas whale."
+			},
+			{
+				"question": "Apa itu treasury protokol?",
+				"answer": "Treasury adalah dana yang dikontrol oleh DAO atau protokol. Mereka digunakan untuk grant, likuiditas, dan pengembangan. Treasury besar (seperti Uniswap) dilacak sebagai indikator kesehatan proyek."
+			}
+		]
+	},
+	"tools": {
+		"ethereum_foundation": {
+			"description": "Wallet treasury Ethereum Foundation mendanai pengembangan dan penelitian ekosistem"
+		},
+		"aave_treasury": {
+			"description": "Treasury protokol Aave mengelola dana DAO untuk pengembangan protokol pinjaman"
+		},
+		"compound_treasury": {
+			"description": "Treasury protokol Compound menyimpan dana untuk tata kelola pinjaman DeFi"
+		},
+		"lido_treasury": {
+			"description": "Treasury Lido DAO mengelola dana protokol liquid staking"
+		},
+		"arbitrum_treasury": {
+			"description": "Treasury Arbitrum DAO mendanai grant dan pengembangan ekosistem L2"
+		},
+		"optimism_treasury": {
+			"description": "Treasury Optimism Collective untuk pendanaan ekosistem Superchain"
+		},
+		"gnosis_treasury": {
+			"description": "Treasury Gnosis DAO mengelola ekosistem Safe dan dana GNO"
+		},
+		"ens_treasury": {
+			"description": "Treasury ENS DAO untuk tata kelola dan grant Ethereum Name Service"
+		},
+		"curve_multisig": {
+			"description": "Multisig DAO darurat Curve Finance untuk tindakan keamanan protokol"
+		},
+		"yearn_multisig": {
+			"description": "Wallet multisig Yearn Finance mengelola operasi protokol yield"
+		},
+		"vitalik_wallet": {
+			"description": "Wallet publik Vitalik Buterin - Co-founder Ethereum dan tokoh berpengaruh"
+		},
+		"justin_sun_wallet": {
+			"description": "Wallet Justin Sun - Pendiri TRON terkenal dengan posisi DeFi besar"
+		},
+		"tetranode_wallet": {
+			"description": "Wallet Tetranode - Whale DeFi berpengaruh dan investor protokol awal"
+		},
+		"hsaka_wallet": {
+			"description": "Wallet Hsaka Trades - Trader perpetual terkemuka di GMX dan dYdX"
+		},
+		"binance_hot_wallet": {
+			"description": "Hot wallet exchange Binance untuk operasi BNB Chain"
+		},
+		"pancakeswap_treasury": {
+			"description": "Treasury PancakeSwap mengelola token CAKE dan dana protokol DEX"
+		},
+		"venus_treasury": {
+			"description": "Treasury protokol Venus untuk tata kelola platform pinjaman BNB Chain"
+		},
+		"base_bridge": {
+			"description": "Kontrak bridge Base L2 menyimpan aset yang di-bridge dari Ethereum"
+		},
+		"aerodrome_treasury": {
+			"description": "Treasury Aerodrome Finance untuk DEX terkemuka Base chain"
+		},
+		"polygon_ecosystem_fund": {
+			"description": "Dana ekosistem Polygon mendukung grant dan pengembangan ekosistem"
+		},
+		"quickswap_treasury": {
+			"description": "Treasury QuickSwap untuk protokol DEX native Polygon"
+		},
+		"avalanche_foundation": {
+			"description": "Wallet Avalanche Foundation mendanai pertumbuhan ekosistem AVAX"
+		},
+		"traderjoe_treasury": {
+			"description": "Treasury Trader Joe untuk DEX terkemuka dan hub DeFi Avalanche"
+		},
+		"solana_foundation": {
+			"description": "Wallet Solana Foundation mendukung pengembangan ekosistem dan grant"
+		},
+		"jupiter_treasury": {
+			"description": "Treasury aggregator Jupiter untuk platform swap terkemuka Solana"
+		},
+		"raydium_treasury": {
+			"description": "Treasury Raydium untuk AMM dan protokol likuiditas Solana"
+		},
+		"ton_foundation": {
+			"description": "Wallet TON Foundation mendukung ekosistem blockchain Telegram"
+		},
+		"sui_foundation": {
+			"description": "Treasury Sui Foundation mendanai pengembangan L1 berbasis Move"
+		},
+		"aptos_foundation": {
+			"description": "Wallet Aptos Foundation untuk ekosistem blockchain berbasis Move"
+		},
+		"cosmos_hub_pool": {
+			"description": "Community pool Cosmos Hub untuk pendanaan tata kelola ekosistem ATOM"
+		},
+		"cz_wallet": {
+			"description": "Wallet CZ (Changpeng Zhao) - Pendiri Binance dan pemimpin industri kripto"
+		},
+		"grayscale_wallet": {
+			"description": "Wallet institusional Grayscale mengelola kepemilikan ETF Bitcoin dan Ethereum"
+		},
+		"blackrock_wallet": {
+			"description": "Wallet BlackRock iShares untuk kustodi ETF kripto institusional"
+		},
+		"fidelity_wallet": {
+			"description": "Wallet institusional Fidelity untuk manajemen aset kripto"
+		},
+		"a16z_wallet": {
+			"description": "Wallet dana kripto Andreessen Horowitz - VC Web3 terkemuka"
+		},
+		"paradigm_wallet": {
+			"description": "Wallet VC Paradigm - Dana investasi kripto-native terkemuka"
+		},
+		"jump_trading_wallet": {
+			"description": "Wallet Jump Trading - Market maker institusional dan firma trading"
+		},
+		"wintermute_wallet": {
+			"description": "Wallet Wintermute - Market maker kripto terkemuka dan penyedia likuiditas"
+		},
+		"galaxy_digital_wallet": {
+			"description": "Wallet Galaxy Digital - Investasi dan trading kripto institusional"
+		},
+		"lookonchain": {
+			"description": "Platform analitik on-chain yang melacak pergerakan whale dan smart money"
+		},
+		"whale_alert": {
+			"description": "Alert real-time untuk transaksi besar dalam cryptocurrency utama"
+		},
+		"nansen_smart_money": {
+			"description": "Pelacakan Smart Money Nansen untuk analisis wallet berlabel"
+		},
+		"arkham_intelligence": {
+			"description": "Platform intelijen blockchain untuk de-anonimisasi dan pelacakan wallet"
+		},
+		"debank_whales": {
+			"description": "Peringkat whale DeBank menampilkan pemegang portfolio multi-chain terbesar"
+		},
+		"spot_on_chain": {
+			"description": "Analitik on-chain berbasis AI untuk pelacakan whale dan wawasan pasar"
+		},
+		"bubblemaps": {
+			"description": "Analisis visual pemegang token dan distribusi supply"
+		},
+		"etherscan_label": {
+			"description": "Database alamat berlabel Etherscan untuk identifikasi wallet yang dikenal"
+		},
+		"zerion_whales": {
+			"description": "Fitur jelajah Zerion untuk penemuan dan pelacakan portfolio whale"
+		},
+		"watchers_pro": {
+			"description": "Platform pelacakan smart money dengan alert aktivitas wallet whale"
+		}
+	}
+}

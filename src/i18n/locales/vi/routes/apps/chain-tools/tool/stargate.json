@@ -1,0 +1,101 @@
+{
+	"_meta": {
+		"title": "Stargate Finance - Giao Thức Vận Chuyển Thanh Khoản Omnichain",
+		"description": "Stargate Finance là giao thức vận chuyển thanh khoản omnichain được xây dựng trên LayerZero. Chuyển tài sản gốc giữa các chuỗi với các pool thanh khoản hợp nhất và tính cuối cùng được đảm bảo tức thì."
+	},
+	"seo": {
+		"title": "Stargate Finance - Giao Thức Vận Chuyển Thanh Khoản Omnichain | Cầu Nối Cross-Chain",
+		"description": "Stargate Finance cho phép chuyển tài sản cross-chain liền mạch với các pool thanh khoản hợp nhất. Được xây dựng trên LayerZero để bắc cầu tài sản gốc với tính cuối cùng được đảm bảo tức thì.",
+		"keywords": "Stargate Finance, cầu omnichain, LayerZero, thanh khoản cross-chain, thanh khoản hợp nhất, token STG, chuyển tài sản gốc, DeFi cross-chain"
+	},
+	"overview": {
+		"title": "Về Stargate Finance",
+		"description": "Stargate Finance là giao thức vận chuyển thanh khoản hoàn toàn có thể kết hợp được xây dựng trên LayerZero. Nó cho phép chuyển tài sản gốc qua nhiều blockchain sử dụng các pool thanh khoản hợp nhất. Giao thức có tính cuối cùng được đảm bảo tức thì và thuật toán delta để tối ưu hóa hiệu quả vốn. Token STG cung cấp năng lượng cho quản trị và cung cấp các khuyến khích thanh khoản cho hệ sinh thái.",
+		"website_label": "Website Chính Thức",
+		"whitepaper_label": "Tài Liệu"
+	},
+	"features": {
+		"title": "Tính Năng Chính",
+		"items": {
+			"feature_1": {
+				"title": "Thanh Khoản Hợp Nhất",
+				"description": "Một pool thanh khoản duy nhất được chia sẻ trên tất cả các chuỗi để tối đa hóa hiệu quả vốn và giảm trượt giá."
+			},
+			"feature_2": {
+				"title": "Chuyển Tài Sản Gốc",
+				"description": "Chuyển tài sản gốc không cần token được bọc, duy trì độ tinh khiết của tài sản giữa các chuỗi."
+			},
+			"feature_3": {
+				"title": "Tính Cuối Cùng Được Đảm Bảo Tức Thì",
+				"description": "Hoàn thành giao dịch được đảm bảo tại chuỗi đích không có khả năng hoàn tác."
+			},
+			"feature_4": {
+				"title": "Thuật Toán Delta",
+				"description": "Thuật toán cân bằng lại thông minh tối ưu hóa phân phối thanh khoản giữa các chuỗi."
+			},
+			"feature_5": {
+				"title": "Phần Thưởng Staking STG",
+				"description": "Kiếm phần thưởng bằng cách stake token STG và tham gia quản trị giao thức."
+			},
+			"feature_6": {
+				"title": "Khả Năng Kết Hợp Omnichain",
+				"description": "Tích hợp liền mạch với các giao thức khác cho các hoạt động DeFi cross-chain phức tạp."
+			}
+		}
+	},
+	"use_cases": {
+		"title": "Trường Hợp Sử Dụng",
+		"items": {
+			"use_case_1": {
+				"title": "Hoán Đổi Cross-Chain",
+				"description": "Hoán đổi tài sản giữa các blockchain khác nhau với thanh khoản hợp nhất và trượt giá tối thiểu."
+			},
+			"use_case_2": {
+				"title": "DeFi Omnichain",
+				"description": "Truy cập các giao thức DeFi trên nhiều chuỗi mà không cần quản lý token được bọc."
+			},
+			"use_case_3": {
+				"title": "Cung Cấp Thanh Khoản",
+				"description": "Cung cấp thanh khoản để kiếm phí và phần thưởng STG từ các giao dịch cross-chain."
+			},
+			"use_case_4": {
+				"title": "Tổng Hợp Cầu Nối",
+				"description": "Tích hợp Stargate vào dApp để có trải nghiệm người dùng cross-chain liền mạch."
+			},
+			"use_case_5": {
+				"title": "Bắc Cầu Tài Sản Gốc",
+				"description": "Di chuyển tài sản gốc giữa các chuỗi trong khi duy trì hình thức ban đầu của chúng."
+			}
+		}
+	},
+	"faqs": {
+		"title": "Câu Hỏi Thường Gặp",
+		"items": {
+			"faq_1": {
+				"question": "Stargate Finance là gì?",
+				"answer": "Stargate Finance là giao thức vận chuyển thanh khoản hoàn toàn có thể kết hợp được xây dựng trên LayerZero. Nó cho phép người dùng chuyển tài sản gốc qua nhiều blockchain sử dụng các pool thanh khoản hợp nhất, với tính cuối cùng được đảm bảo tức thì và hiệu quả vốn tối ưu thông qua thuật toán delta."
+			},
+			"faq_2": {
+				"question": "Thanh khoản hợp nhất hoạt động như thế nào?",
+				"answer": "Stargate sử dụng một pool thanh khoản chia sẻ duy nhất trên tất cả các chuỗi được hỗ trợ. Cách tiếp cận hợp nhất này tối đa hóa hiệu quả vốn bằng cách cho phép các nhà cung cấp thanh khoản phục vụ nhiều tuyến đường đồng thời, giảm phân mảnh và trượt giá so với thiết kế cầu nối truyền thống với các pool bị cô lập theo từng chuỗi."
+			},
+			"faq_3": {
+				"question": "Token STG được sử dụng để làm gì?",
+				"answer": "STG là token quản trị và tiện ích của Stargate. Nó được sử dụng để bỏ phiếu quản trị giao thức, kiếm phần thưởng staking, nhận các khuyến khích cung cấp thanh khoản và tham gia vào việc ra quyết định của giao thức. Người nắm giữ STG có thể stake token của họ để kiếm một phần phí và phần thưởng của giao thức."
+			},
+			"faq_4": {
+				"question": "Stargate hỗ trợ những chuỗi nào?",
+				"answer": "Stargate hỗ trợ nhiều chuỗi EVM và non-EVM bao gồm Ethereum, BNB Chain, Avalanche, Polygon, Arbitrum, Optimism, Fantom, Metis và nhiều hơn nữa. Giao thức tiếp tục mở rộng sang các chuỗi bổ sung thông qua cơ sở hạ tầng omnichain của LayerZero."
+			},
+			"faq_5": {
+				"question": "Stargate liên quan đến LayerZero như thế nào?",
+				"answer": "Stargate được xây dựng trên giao thức nhắn tin omnichain của LayerZero. LayerZero cung cấp cơ sở hạ tầng cơ bản cho giao tiếp cross-chain an toàn, trong khi Stargate triển khai lớp vận chuyển thanh khoản ở trên đó. Cả hai đều được phát triển bởi LayerZero Labs."
+			}
+		}
+	},
+	"cta": {
+		"title": "Bắt Đầu Sử Dụng Stargate Finance",
+		"description": "Trải nghiệm chuyển tài sản omnichain liền mạch với thanh khoản hợp nhất và tính cuối cùng được đảm bảo tức thì.",
+		"button": "Truy Cập Stargate Finance"
+	}
+}

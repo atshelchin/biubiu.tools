@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "OpenZeppelin - 智能合约安全与开发工具 | 区块链安全",
+		"description": "深入了解 OpenZeppelin，智能合约开发的行业标准。掌握 Contracts 合约库、Defender 平台、可升级合约以及专业安全审计服务。",
+		"keywords": "OpenZeppelin, 智能合约, 安全, 审计, Defender, 可升级合约, ERC20, ERC721, ERC1155, Solidity, 区块链开发"
+	},
+	"overview": "OpenZeppelin 是区块链行业智能合约安全与开发的黄金标准。自2015年成立以来，OpenZeppelin 已成为安全智能合约开发的代名词，为全球领先的区块链项目提供经过实战检验的代码库、安全工具和审计服务。\n\nOpenZeppelin Contracts 合约库是使用最广泛的安全智能合约开发框架，超过10,000个项目依赖于它。Compound、Aave、Coinbase 等主要协议以及无数其他项目都依赖 OpenZeppelin 的代币标准实现（ERC20、ERC721、ERC1155）、访问控制和可升级合约方案。\n\n除了开源库之外，OpenZeppelin 还提供 Defender 平台，这是一个用于自动化智能合约操作、监控安全性和管理链上基础设施的综合平台。他们的安全审计服务已审查了价值数十亿美元的智能合约，使其成为区块链安全领域最受信赖的品牌之一。",
+	"features": {
+		"1": {
+			"title": "Contracts 合约库",
+			"description": "经过实战检验的模块化智能合约组件，涵盖 ERC20、ERC721、ERC1155、治理和访问控制——被数千个项目使用"
+		},
+		"2": {
+			"title": "Defender 平台",
+			"description": "自动化合约操作、监控交易、管理访问控制，并实时响应安全威胁"
+		},
+		"3": {
+			"title": "可升级合约",
+			"description": "部署可以升级的智能合约以修复错误或添加功能，同时保留状态和地址"
+		},
+		"4": {
+			"title": "访问控制",
+			"description": "强大的基于角色的访问控制系统，支持多重签名和时间锁机制"
+		},
+		"5": {
+			"title": "安全审计",
+			"description": "来自已审查数十亿协议价值团队的专业智能合约审计服务"
+		},
+		"6": {
+			"title": "治理工具",
+			"description": "完整的治理框架，包括代币投票、提案系统和时间锁控制器"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "代币部署（ERC20/721/1155）",
+			"description": "使用经过数千个项目测试的标准兼容实现，安全地发行代币"
+		},
+		"2": {
+			"title": "可升级合约",
+			"description": "构建可在部署后升级的智能合约，同时保持状态和用户信任"
+		},
+		"3": {
+			"title": "访问控制实现",
+			"description": "在合约中实现多重签名钱包、基于角色的权限和安全的管理员功能"
+		},
+		"4": {
+			"title": "操作自动化",
+			"description": "使用 Defender 自动化合约交互、监控事件和管理基础设施，无需自定义后端代码"
+		},
+		"5": {
+			"title": "安全审计",
+			"description": "在启动高价值协议之前获得专业的安全审查，以识别潜在漏洞"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 OpenZeppelin？为什么它很重要？",
+			"answer": "OpenZeppelin 为智能合约开发提供最值得信赖的库和工具。几乎每个主要的 DeFi 协议都使用他们的代码，因为它经过了广泛的审计、实战检验，并遵循最佳安全实践。使用 OpenZeppelin 可以降低可能导致黑客攻击的智能合约漏洞风险。"
+		},
+		"2": {
+			"question": "什么是 OpenZeppelin Contracts？",
+			"answer": "OpenZeppelin Contracts 是一个用 Solidity 编写的开源可重用智能合约组件库。它包括代币标准的实现（ERC20、ERC721、ERC1155）、访问控制机制、可升级合约模式和安全工具。这些合约是模块化的，允许开发者根据需要继承和组合它们。"
+		},
+		"3": {
+			"question": "什么是 OpenZeppelin Defender？",
+			"answer": "Defender 是一个用于自动化和监控智能合约操作的安全平台。它包括自动交易执行（Relayers）、安全监控（Sentinels）、访问控制管理和事件响应工具等功能。它旨在帮助团队在不构建自定义基础设施的情况下安全地操作智能合约。"
+		},
+		"4": {
+			"question": "OpenZeppelin Contracts 是免费使用的吗？",
+			"answer": "是的，OpenZeppelin Contracts 在 MIT 许可证下完全免费且开源。你可以在商业项目中使用、修改和部署这些合约，无需支付任何费用。Defender 有免费和付费版本，而审计服务则根据项目范围定价。"
+		},
+		"5": {
+			"question": "如何让 OpenZeppelin 审计我的智能合约？",
+			"answer": "你可以通过 OpenZeppelin 网站申请审计。该流程通常涉及分享你的合约代码和文档，之后他们会根据复杂度和时间表提供报价。审计可能需要几周时间，建议任何处理大量资金或用户资产的协议都进行审计。"
+		}
+	},
+	"cta": {
+		"ready": "准备好构建安全的智能合约了吗？",
+		"button": "访问 OpenZeppelin",
+		"note": "被全球领先的区块链项目信赖"
+	}
+}

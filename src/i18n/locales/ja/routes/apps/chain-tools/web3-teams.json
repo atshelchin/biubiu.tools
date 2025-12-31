@@ -1,0 +1,149 @@
+{
+	"category_seo": {
+		"title": "Web3チームとVC - ビルダーと投資家 | BiuBiu Tools",
+		"description": "Web3チーム、ビルダー、投資家を発見。誰が何を構築し、スマートマネーがどこに投資しているかを追跡。",
+		"keywords": "web3チーム, クリプトVC, ブロックチェーン投資家, クリプトビルダー, ベンチャーキャピタル",
+		"faqs": [
+			{
+				"question": "Web3チームをどのようにリサーチしますか？",
+				"answer": "LinkedInでチームの背景を確認し、過去のプロジェクトを検証し、GitHub活動を探し、コミュニティの評判を評価してください。匿名チームはより高いリスクを伴います。"
+			},
+			{
+				"question": "強力なWeb3チームの特徴は何ですか？",
+				"answer": "過去の成功したプロジェクト、技術的深さ、透明なコミュニケーション、整合したトークンインセンティブ、真のコミュニティエンゲージメント。過去の実績が重要です。"
+			},
+			{
+				"question": "VCはどのように暗号資産プロジェクトを評価しますか？",
+				"answer": "チームの質、技術革新、市場規模、トークノミクス、競争ポジショニング、牽引力。初期段階はチームに焦点を当て、後期段階はメトリクスに焦点を当てます。"
+			}
+		]
+	},
+	"tools": {
+		"paradigm_vc": {
+			"description": "技術的貢献、オープンソースツール、主要なDeFiおよびインフラプロジェクトへの支援で知られる研究重視のクリプトVC"
+		},
+		"sequoia_crypto": {
+			"description": "クリプトに進出した伝説的なシリコンバレーVC、FTX、Polygon、その他の主要Web3企業を支援"
+		},
+		"polychain_capital": {
+			"description": "元Coinbase従業員が設立したクリプトネイティブファンド、Compound、Maker、Cosmosの早期投資家"
+		},
+		"pantera_capital": {
+			"description": "最初のクリプト投資会社の1つ、2013年からブロックチェーン特化のヘッジファンドとベンチャーファンドを運用"
+		},
+		"dragonfly_capital": {
+			"description": "アジアで強いプレゼンスを持つグローバルクリプトVC、DeFi、インフラ、コンシューマークリプトに投資"
+		},
+		"multicoin_capital": {
+			"description": "Solanaエコシステム投資とLayer 1ブロックチェーンへの賭けで知られるテーシス駆動のクリプトファンド"
+		},
+		"electric_capital": {
+			"description": "年次開発者レポートを発行しWeb3インフラプロジェクトに投資する開発者重視のVC"
+		},
+		"framework_ventures": {
+			"description": "実践的な関与とプロトコルガバナンス参加で知られるアクティブなDeFiおよびゲーミング投資家"
+		},
+		"delphi_ventures": {
+			"description": "Delphi Digitalのリサーチ支援ベンチャー部門、DeFi、ゲーミング、NFTインフラに投資"
+		},
+		"placeholder_vc": {
+			"description": "分散型プロトコル、ガバナンスシステム、ネットワーク所有権モデルに焦点を当てたテーシス駆動のVC"
+		},
+		"variant_fund": {
+			"description": "Web3でユーザー所有ネットワークとトークンベースの所有権モデルに焦点を当てたVC"
+		},
+		"hashed_vc": {
+			"description": "強力なアジアネットワークを持ち、ゲーミング、DeFi、インフラに投資する韓国のリーディングクリプトVC"
+		},
+		"spartan_group": {
+			"description": "ベンチャー投資とトレーディング、アドバイザリーサービスを組み合わせたアジア重視のクリプトファンド"
+		},
+		"hack_vc": {
+			"description": "元a16zパートナーが率いる早期ステージクリプトVC、インフラと技術創業者に焦点"
+		},
+		"bankless_ventures": {
+			"description": "Banklessメディアブランドからのコミュニティ支援ベンチャーファンド、イーサリアムエコシステムに投資"
+		},
+		"1kx_capital": {
+			"description": "トークンネットワーク、ガバナンス、早期ステージプロトコル投資に焦点を当てた欧州クリプトVC"
+		},
+		"robot_ventures": {
+			"description": "Compound創設者Robert Leshnerが設立した早期ステージクリプトファンド、DeFiイノベーションを支援"
+		},
+		"coinbase_ventures": {
+			"description": "Coinbaseの戦略的投資部門、DeFi、NFT、インフラのエコシステムプロジェクトを支援"
+		},
+		"binance_labs": {
+			"description": "Binanceのベンチャー部門およびインキュベーター、グローバルにブロックチェーンスタートアップに投資・加速"
+		},
+		"okx_ventures": {
+			"description": "OKX取引所の投資部門、インフラとアプリケーションのWeb3ビルダーを支援"
+		},
+		"kraken_ventures": {
+			"description": "Kraken取引所の戦略的投資部門、インフラとエコシステム開発に焦点"
+		},
+		"circle_ventures": {
+			"description": "Circle（USDC発行者）の投資部門、ステーブルコインインフラとフィンテックプロジェクトを支援"
+		},
+		"galaxy_ventures": {
+			"description": "Galaxy Digitalのベンチャー部門、クリプトとブロックチェーンへの機関投資家グレード投資"
+		},
+		"alliance_dao": {
+			"description": "トップクリプト創業者からのメンターシップ付きコホートベースプログラムを運営するWeb3アクセラレーター"
+		},
+		"ycombinator_crypto": {
+			"description": "標準バッチプログラムを通じてクリプト企業を支援する伝説的なスタートアップアクセラレーター"
+		},
+		"outlier_ventures": {
+			"description": "トークンベースのスタートアップ向けにBase Campプログラムを実施するWeb3アクセラレーター"
+		},
+		"longhash_ventures": {
+			"description": "アジア太平洋地域のWeb3創業者に焦点を当てたシンガポールベースのアクセラレーター・VC"
+		},
+		"techstars_crypto": {
+			"description": "メンターネットワークを持つブロックチェーン・クリプト重視のコホートを運営するグローバルスタートアップアクセラレーター"
+		},
+		"consensys_team": {
+			"description": "MetaMask、Infura、その他のコアエコシステムツールを構築するイーサリアムインフラ企業"
+		},
+		"offchain_labs": {
+			"description": "Optimistic Rollupsを使用するリーディングイーサリアムLayer 2スケーリングソリューションArbitrumを構築するチーム"
+		},
+		"matter_labs": {
+			"description": "ゼロ知識証明技術を使用するLayer 2スケーリングソリューションzkSyncを構築するチーム"
+		},
+		"optimism_team": {
+			"description": "Optimism L2とスケーラブルなイーサリアムのためのSuperchainビジョンを支えるコアチーム"
+		},
+		"alchemy_team": {
+			"description": "ノードAPI、開発者ツール、ブロックチェーンデータを提供するリーディングWeb3インフラプロバイダー"
+		},
+		"chainlink_labs": {
+			"description": "Chainlinkオラクルネットワーク、CCIPクロスチェーンプロトコル、分散型データインフラを構築するチーム"
+		},
+		"eigenlayer_team": {
+			"description": "AVSアプリケーション向けの共有セキュリティを可能にするEigenLayerリステーキングプロトコルを構築するチーム"
+		},
+		"uniswap_labs": {
+			"description": "取引量で最大の分散型取引所プロトコルUniswapを支えるチーム"
+		},
+		"jump_crypto": {
+			"description": "Wormholeブリッジを構築しブロックチェーンインフラに投資するトレーディング会社のクリプト部門"
+		},
+		"wintermute_trading": {
+			"description": "取引所とDeFiプロトコル全体に流動性を提供する主要クリプトマーケットメーカー"
+		},
+		"gauntlet_network": {
+			"description": "シミュレーションを使用してプロトコルパラメーターと経済を最適化するDeFiリスク管理会社"
+		},
+		"dealroom_crypto": {
+			"description": "Web3企業の調達ラウンド、バリュエーション、投資家活動を追跡するスタートアップ・資金調達データベース"
+		},
+		"pitchbook_crypto": {
+			"description": "VC取引、クリプト資金調達ラウンド、市場分析のための機関投資家グレードデータベース"
+		},
+		"crypto_fundraising": {
+			"description": "クリプト資金調達ラウンド、投資家活動、スタートアップ資金データの無料トラッカー"
+		}
+	}
+}

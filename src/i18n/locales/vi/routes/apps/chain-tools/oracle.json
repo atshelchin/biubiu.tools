@@ -24,58 +24,58 @@
 		"api3": {
 			"description": "Oracle bên thứ nhất với Airnode để cung cấp dữ liệu API trực tiếp"
 		},
-		"chainlink-data-feeds": {
+		"chainlink_data_feeds": {
 			"description": "Chainlink Data Feeds - Tool"
 		},
-		"pyth-network": {
+		"pyth_network": {
 			"description": "Pyth Network - Tool"
 		},
-		"pyth-price-feeds": {
+		"pyth_price_feeds": {
 			"description": "Pyth Price Feeds - Tool"
 		},
-		"band-protocol": {
+		"band_protocol": {
 			"description": "Band Protocol - Tool"
 		},
-		"dia-data": {
+		"dia_data": {
 			"description": "DIA Data - Tool"
 		},
 		"tellor": {
 			"description": "Tellor - Tool"
 		},
-		"uma-protocol": {
+		"uma_protocol": {
 			"description": "UMA Protocol - Tool"
 		},
-		"redstone-oracles": {
+		"redstone_oracles": {
 			"description": "RedStone Oracles - Tool"
 		},
-		"chronicle-labs": {
+		"chronicle_labs": {
 			"description": "Chronicle Labs - Tool"
 		},
-		"umbrella-network": {
+		"umbrella_network": {
 			"description": "Umbrella Network - Tool"
 		},
-		"flux-protocol": {
+		"flux_protocol": {
 			"description": "Flux Protocol - Tool"
 		},
-		"supra-oracles": {
+		"supra_oracles": {
 			"description": "Supra Oracles - Tool"
 		},
-		"chainlink-vrf": {
+		"chainlink_vrf": {
 			"description": "Chainlink VRF - Tool"
 		},
-		"chainlink-automation": {
+		"chainlink_automation": {
 			"description": "Chainlink Automation - Tool"
 		},
-		"chainlink-ccip": {
+		"chainlink_ccip": {
 			"description": "Chainlink CCIP - Tool"
 		},
-		"chainlink-functions": {
+		"chainlink_functions": {
 			"description": "Chainlink Functions - Tool"
 		},
-		"defillama-oracles": {
+		"defillama_oracles": {
 			"description": "DeFiLlama Oracles - Tool"
 		},
-		"oracle-dao": {
+		"oracle_dao": {
 			"description": "Oracle DAO - Tool"
 		}
 	}

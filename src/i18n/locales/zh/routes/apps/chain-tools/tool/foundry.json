@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Foundry - 极速以太坊开发工具包 | 基于Rust的框架",
+		"description": "了解Foundry,基于Rust的极速以太坊开发工具包。包括用于Solidity测试的Forge、Cast CLI工具、Anvil本地节点和Chisel REPL,实现快速智能合约开发。",
+		"keywords": "Foundry, Forge, Cast, Anvil, Chisel, 以太坊开发, Rust, Solidity测试, 智能合约, 模糊测试, gas优化"
+	},
+	"overview": "Foundry是用Rust编写的极速、便携且模块化的以太坊应用开发工具包。由Paradigm于2021年创建,Foundry在优先考虑速度并更喜欢用Solidity而不是JavaScript编写测试的开发者中迅速获得采用。\n\nFoundry由四个强大的工具组成:Forge(在Solidity中执行测试的测试框架)、Cast(用于与EVM智能合约交互的瑞士军刀)、Anvil(本地以太坊节点)和Chisel(快速Solidity REPL)。该框架以极快而闻名——在Hardhat中需要几分钟的测试在Foundry中几秒钟就能运行完成。这种速度来自Rust的性能和并行测试执行。\n\nFoundry的独特之处在于直接用Solidity编写测试。这意味着开发者在整个开发周期中使用一种语言工作,使工作流程更加无缝。内置的模糊测试功能自动测试边缘情况,详细的gas报告帮助优化合约。Foundry已成为需要最高速度和控制的开发者的首选,被构建高性能DeFi协议和基础设施的团队使用。",
+	"features": {
+		"1": {
+			"title": "Forge测试框架",
+			"description": "用Solidity编写智能合约测试,具有并行执行和极快的性能"
+		},
+		"2": {
+			"title": "Cast CLI工具",
+			"description": "以太坊的瑞士军刀 - 从CLI调用合约、发送交易、检索数据"
+		},
+		"3": {
+			"title": "Anvil本地节点",
+			"description": "具有即时挖矿和主网分叉能力的快速本地以太坊节点"
+		},
+		"4": {
+			"title": "Chisel Solidity REPL",
+			"description": "用于快速原型设计和测试代码片段的交互式Solidity shell"
+		},
+		"5": {
+			"title": "内置模糊测试",
+			"description": "自动基于属性的测试,生成随机输入以查找边缘情况"
+		},
+		"6": {
+			"title": "Gas快照",
+			"description": "跟踪gas使用随时间的变化,通过详细的gas报告捕获退化"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "智能合约测试",
+			"description": "使用Solidity编写全面的测试套件,具有快速执行和并行测试"
+		},
+		"2": {
+			"title": "模糊测试和属性测试",
+			"description": "使用内置模糊测试功能发现边缘情况和漏洞"
+		},
+		"3": {
+			"title": "基于脚本的部署",
+			"description": "使用Solidity脚本部署合约,实现可重现和版本控制的部署"
+		},
+		"4": {
+			"title": "Gas优化",
+			"description": "使用详细报告和快照分析和优化gas使用"
+		},
+		"5": {
+			"title": "协议开发",
+			"description": "使用快速迭代周期和强大测试构建高性能DeFi协议"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是Foundry,为什么它如此快?",
+			"answer": "Foundry是基于Rust的以太坊开发工具包,包括Forge(测试)、Cast(CLI工具)、Anvil(本地节点)和Chisel(REPL)。它极快是因为它用Rust编写,并行运行测试,并且不需要在JavaScript和EVM之间建立桥梁。在其他框架中需要几分钟的测试在Foundry中几秒钟就能运行完成。该框架允许您用Solidity编写测试,将所有内容保持在一种语言中。"
+		},
+		"2": {
+			"question": "Foundry vs Hardhat - 我应该选择哪个?",
+			"answer": "如果您优先考虑速度、更喜欢用Solidity编写测试并想要强大的内置模糊测试,请选择Foundry。它非常适合熟悉命令行工具和构建性能关键协议的开发者。如果您更喜欢使用JavaScript/TypeScript进行测试、需要更大的插件生态系统或想要更广泛的文档,请选择Hardhat。许多团队同时使用两者:用Hardhat进行开发和部署,用Foundry进行测试。"
+		},
+		"3": {
+			"question": "什么是Forge,如何使用它进行测试?",
+			"answer": "Forge是Foundry的测试框架。您使用「forge-std」库用Solidity编写测试。测试文件放在「test/」目录中,测试函数以「test」开头。使用「forge test」运行测试。Forge支持模糊测试(带参数的测试函数获得随机输入)、gas报告和并行执行。它还提供作弊码,如「vm.prank()」来模拟不同的调用者和「vm.expectRevert()」来测试失败情况。"
+		},
+		"4": {
+			"question": "什么是Cast,我可以用它做什么?",
+			"answer": "Cast是Foundry的命令行工具,用于与以太坊交互。您可以调用合约函数(「cast call」)、发送交易(「cast send」)、在格式之间转换(「cast --to-hex」)、检索区块链数据(「cast block」)等等。它就像将ethers.js或web3.js作为CLI工具。Cast对于快速合约交互、调试和脚本编写非常有用,无需编写JavaScript代码。"
+		},
+		"5": {
+			"question": "如何安装和开始使用Foundry?",
+			"answer": "使用「curl -L https://foundry.paradigm.xyz | bash」安装Foundry,然后运行「foundryup」。使用「forge init my-project」创建新项目。这将创建一个项目结构,包含「src/」(合约)、「test/」(测试)和「script/」(部署脚本)。使用「forge test」运行测试,使用「forge build」构建。Foundry Book(book.getfoundry.sh)有全面的文档和入门教程。"
+		}
+	},
+	"cta": {
+		"ready": "准备好极速开发了吗?",
+		"button": "打开Foundry文档",
+		"note": "基于Rust的以太坊工具包"
+	}
+}

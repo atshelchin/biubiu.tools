@@ -1,0 +1,170 @@
+{
+	"category_seo": {
+		"title": "Rastreador de Baleias - Monitore Carteiras Grandes e Tesourarias | BiuBiu Tools",
+		"description": "Rastreie endereços de baleias, monitore grandes carteiras e siga movimentos de tesourarias cripto. Identifique traders influentes e comportamento institucional.",
+		"keywords": "rastreador baleias, monitor baleias cripto, carteiras grandes, movimentos baleias, rastreador tesouraria",
+		"faqs": [
+			{
+				"question": "O que são baleias cripto?",
+				"answer": "As baleias cripto são indivíduos ou entidades que possuem grandes quantidades de criptomoedas. Suas transações podem impactar significativamente os preços do mercado, então os traders monitoram atividade de baleias para conhecimentos sobre tendências potenciais do mercado."
+			},
+			{
+				"question": "Como rastreio a atividade de baleias?",
+				"answer": "Use ferramentas de rastreamento de baleias que monitoram grandes transações, siga carteiras conhecidas de baleias em análises on-chain, configure alertas para movimentos significativos de tokens e analise padrões de atividade de baleias através de plataformas como Whale Alert ou Nansen."
+			},
+			{
+				"question": "O rastreamento de baleias é confiável para trading?",
+				"answer": "O rastreamento de baleias fornece conhecimentos valiosos mas não deveria ser sua única estratégia. As baleias podem executar estratégias complexas, movimentos podem ser para não-trading (gestão de tesouraria), e os scammers às vezes imitam atividade de baleias. Use como uma métrica entre muitas."
+			}
+		]
+	},
+	"tools": {
+		"ethereum_foundation": {
+			"description": "Carteira do tesouro da Ethereum Foundation financiando desenvolvimento e pesquisa do ecossistema"
+		},
+		"aave_treasury": {
+			"description": "Tesouro do protocolo Aave gerenciando fundos DAO para desenvolvimento do protocolo de empréstimos"
+		},
+		"compound_treasury": {
+			"description": "Tesouro do protocolo Compound mantendo fundos para governança de empréstimos DeFi"
+		},
+		"lido_treasury": {
+			"description": "Tesouro Lido DAO gerenciando fundos do protocolo de staking líquido"
+		},
+		"arbitrum_treasury": {
+			"description": "Tesouro Arbitrum DAO financiando grants e desenvolvimento do ecossistema L2"
+		},
+		"optimism_treasury": {
+			"description": "Tesouro Optimism Collective para financiamento do ecossistema Superchain"
+		},
+		"gnosis_treasury": {
+			"description": "Tesouro Gnosis DAO gerenciando ecossistema Safe e fundos GNO"
+		},
+		"ens_treasury": {
+			"description": "Tesouro ENS DAO para governança e grants do Ethereum Name Service"
+		},
+		"curve_multisig": {
+			"description": "Multisig do DAO de emergência da Curve Finance para ações de segurança do protocolo"
+		},
+		"yearn_multisig": {
+			"description": "Carteira multisig da Yearn Finance gerenciando operações do protocolo de rendimento"
+		},
+		"vitalik_wallet": {
+			"description": "Carteira pública de Vitalik Buterin - Co-fundador do Ethereum e figura influente"
+		},
+		"justin_sun_wallet": {
+			"description": "Carteira de Justin Sun - Fundador do TRON conhecido por grandes posições DeFi"
+		},
+		"tetranode_wallet": {
+			"description": "Carteira do Tetranode - Baleia DeFi influente e investidor inicial de protocolos"
+		},
+		"hsaka_wallet": {
+			"description": "Carteira Hsaka Trades - Trader proeminente de perpétuos no GMX e dYdX"
+		},
+		"binance_hot_wallet": {
+			"description": "Hot wallet da exchange Binance para operações da BNB Chain"
+		},
+		"pancakeswap_treasury": {
+			"description": "Tesouro PancakeSwap gerenciando token CAKE e fundos do protocolo DEX"
+		},
+		"venus_treasury": {
+			"description": "Tesouro do protocolo Venus para governança de plataforma de empréstimos na BNB Chain"
+		},
+		"base_bridge": {
+			"description": "Contrato ponte Base L2 mantendo ativos bridgeados do Ethereum"
+		},
+		"aerodrome_treasury": {
+			"description": "Tesouro Aerodrome Finance para a DEX líder da Base chain"
+		},
+		"polygon_ecosystem_fund": {
+			"description": "Fundo do ecossistema Polygon apoiando grants e desenvolvimento do ecossistema"
+		},
+		"quickswap_treasury": {
+			"description": "Tesouro QuickSwap para protocolo DEX nativo do Polygon"
+		},
+		"avalanche_foundation": {
+			"description": "Carteira da Avalanche Foundation financiando crescimento do ecossistema AVAX"
+		},
+		"traderjoe_treasury": {
+			"description": "Tesouro Trader Joe para a DEX líder e hub DeFi do Avalanche"
+		},
+		"solana_foundation": {
+			"description": "Carteira da Solana Foundation apoiando desenvolvimento do ecossistema e grants"
+		},
+		"jupiter_treasury": {
+			"description": "Tesouro do agregador Jupiter para a plataforma de swap líder da Solana"
+		},
+		"raydium_treasury": {
+			"description": "Tesouro Raydium para o AMM e protocolo de liquidez da Solana"
+		},
+		"ton_foundation": {
+			"description": "Carteira TON Foundation apoiando o ecossistema blockchain do Telegram"
+		},
+		"sui_foundation": {
+			"description": "Tesouro Sui Foundation financiando desenvolvimento L1 baseado em Move"
+		},
+		"aptos_foundation": {
+			"description": "Carteira Aptos Foundation para ecossistema blockchain movido por Move"
+		},
+		"cosmos_hub_pool": {
+			"description": "Pool comunitário do Cosmos Hub para financiamento de governança do ecossistema ATOM"
+		},
+		"cz_wallet": {
+			"description": "Carteira CZ (Changpeng Zhao) - Fundador da Binance e líder da indústria cripto"
+		},
+		"grayscale_wallet": {
+			"description": "Carteira institucional Grayscale gerenciando holdings de ETF de Bitcoin e Ethereum"
+		},
+		"blackrock_wallet": {
+			"description": "Carteira BlackRock iShares para custódia institucional de ETF cripto"
+		},
+		"fidelity_wallet": {
+			"description": "Carteira institucional Fidelity para gestão de ativos cripto"
+		},
+		"a16z_wallet": {
+			"description": "Carteira do fundo cripto Andreessen Horowitz - VC líder em Web3"
+		},
+		"paradigm_wallet": {
+			"description": "Carteira VC Paradigm - Principal fundo de investimento cripto-nativo"
+		},
+		"jump_trading_wallet": {
+			"description": "Carteira Jump Trading - Market maker institucional e firma de trading"
+		},
+		"wintermute_wallet": {
+			"description": "Carteira Wintermute - Market maker líder e provedor de liquidez cripto"
+		},
+		"galaxy_digital_wallet": {
+			"description": "Carteira Galaxy Digital - Investimento e trading institucional cripto"
+		},
+		"lookonchain": {
+			"description": "Plataforma de análises on-chain rastreando movimentos de baleias e smart money"
+		},
+		"whale_alert": {
+			"description": "Alertas em tempo real de grandes transações nas principais criptomoedas"
+		},
+		"nansen_smart_money": {
+			"description": "Rastreamento de Smart Money da Nansen para análise de carteiras rotuladas"
+		},
+		"arkham_intelligence": {
+			"description": "Plataforma de inteligência blockchain para des-anonimização e rastreamento de carteiras"
+		},
+		"debank_whales": {
+			"description": "Ranking de baleias DeBank mostrando os maiores holders de portfolios multi-chain"
+		},
+		"spot_on_chain": {
+			"description": "Análises on-chain movidas por IA para rastreamento de baleias e insights de mercado"
+		},
+		"bubblemaps": {
+			"description": "Análise visual de holders de tokens e distribuição de supply"
+		},
+		"etherscan_label": {
+			"description": "Banco de dados de endereços rotulados do Etherscan para identificação de carteiras conhecidas"
+		},
+		"zerion_whales": {
+			"description": "Função de exploração Zerion para descoberta e rastreamento de portfolios de baleias"
+		},
+		"watchers_pro": {
+			"description": "Plataforma de rastreamento de smart money com alertas de atividade de carteiras baleia"
+		}
+	}
+}

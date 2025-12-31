@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Arbitrum One - 全球最大以太坊 L2 解决方案 | Layer 2 工具评测",
+		"description": "深入了解 Arbitrum One，锁仓量最大的以太坊 Layer 2。掌握乐观卷叠技术、Nitro 升级、Stylus 虚拟机、ARB 治理代币，高效扩展你的去中心化应用。",
+		"keywords": "Arbitrum, L2, Layer 2, 乐观卷叠, 以太坊扩容, ARB 代币, Nitro, Stylus, Orbit, DeFi"
+	},
+	"overview": "Arbitrum One 是领先的以太坊 Layer 2 扩容解决方案，采用乐观卷叠（Optimistic Rollup）技术，在保持以太坊安全保障的同时提供更快、更便宜的交易。2021年8月由 Offchain Labs 推出以来，Arbitrum 已成长为锁仓价值（TVL）最大的 L2，托管着充满活力的 DeFi 协议、NFT 市场和去中心化应用生态系统。\n\n该平台在2022年8月进行的 Nitro 升级为交易吞吐量和成本效率带来了重大改进，采用基于 Go 的架构，完全兼容以太坊虚拟机（EVM）。这意味着开发者可以直接部署现有的 Solidity 智能合约，无需任何修改，使迁移变得无缝衔接。\n\nArbitrum 的生态系统已经超越了单一链条。ARB 治理代币实现了社区驱动的决策制定，而 Stylus 引入了对 Rust、C++ 和其他语言编写的智能合约的支持。Arbitrum Orbit 允许开发者创建具有可配置功能的自定义 L3 链，非常适合应用专用卷叠。拥有超过100亿美元的 TVL 和数百个 dApp，Arbitrum 已证明自己是扩展以太坊应用的首选解决方案。",
+	"features": {
+		"1": {
+			"title": "乐观卷叠技术",
+			"description": "在链下处理交易并通过欺诈证明保障安全，Gas 费用比以太坊主网低10-40倍"
+		},
+		"2": {
+			"title": "Nitro 架构",
+			"description": "采用 Go 和 WebAssembly 构建的先进技术栈，提供卓越性能和完整的 EVM 兼容性"
+		},
+		"3": {
+			"title": "Stylus 多语言支持",
+			"description": "使用 Rust、C++ 或任何可编译为 WASM 的语言编写智能合约，拓展开发者的可能性"
+		},
+		"4": {
+			"title": "ARB 代币治理",
+			"description": "ARB 代币持有者通过投票决定协议升级和金库决策，实现社区驱动的治理"
+		},
+		"5": {
+			"title": "Arbitrum Orbit 创建 L3 链",
+			"description": "启动你自己的可定制 Layer 3 链，拥有专用吞吐量和定制的 Gas 代币"
+		},
+		"6": {
+			"title": "最高的 L2 锁仓量",
+			"description": "超过100亿美元的锁仓价值（TVL），托管400多个 dApp，包括 Uniswap、GMX、Aave 和 Curve"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi 协议扩容",
+			"description": "部署或使用借贷、DEX 和衍生品平台，交易成本大幅降低"
+		},
+		"2": {
+			"title": "NFT 市场",
+			"description": "以以太坊主网成本的一小部分铸造、交易和转移 NFT，同时保持安全性"
+		},
+		"3": {
+			"title": "游戏和元宇宙",
+			"description": "利用 Arbitrum 的低费用和快速最终确定性构建具有频繁交易的区块链游戏"
+		},
+		"4": {
+			"title": "低成本代币交换",
+			"description": "在 Uniswap 和 Camelot 等流行 DEX 上交易代币，滑点最小，费用低廉"
+		},
+		"5": {
+			"title": "dApp 部署",
+			"description": "迁移现有以太坊 dApp 或构建新应用，得益于完整的 EVM 兼容性无需修改代码"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 Arbitrum One？它是如何工作的？",
+			"answer": "Arbitrum One 是使用乐观卷叠技术的以太坊 Layer 2。它在链下打包交易，高效执行，并将压缩数据发布到以太坊。安全性通过欺诈证明维护——如果有人提交无效交易，验证者可以在争议期内提出质疑。这种方法在继承以太坊安全性的同时实现了10-40倍的费用降低。"
+		},
+		"2": {
+			"question": "乐观卷叠与其他扩容解决方案有何不同？",
+			"answer": "乐观卷叠默认假设交易是有效的（因此称为「乐观」），仅在受到质疑时才进行验证，不同于为每批交易生成有效性证明的 ZK-rollup。这使乐观卷叠更容易实现完整的 EVM 兼容性，但需要提款延迟（约7天）以确保安全。Arbitrum 提供了两全其美的解决方案——EVM 兼容性与良好性能。"
+		},
+		"3": {
+			"question": "什么是 Stylus？为什么它很重要？",
+			"answer": "Stylus 是 Arbitrum 的突破性功能，允许使用 Rust、C++ 或任何兼容 WebAssembly 的语言与 Solidity 一起编写智能合约。这向数百万熟悉传统编程语言的开发者开放了区块链开发，实现了 Solidity 中无法实现的性能优化，并为计算密集型操作将 Gas 成本降低高达10倍。"
+		},
+		"4": {
+			"question": "如何将资产桥接到 Arbitrum One？",
+			"answer": "你可以使用官方 Arbitrum Bridge（bridge.arbitrum.io）或第三方桥接如 Synapse、Hop Protocol 或 Across 将资产从以太坊桥接到 Arbitrum。官方桥接存款大约需要10-15分钟。提款回以太坊时，出于安全考虑有7天的质疑期。第三方桥接可能更快，但可能收取更高费用。"
+		},
+		"5": {
+			"question": "ARB 代币有什么用途？",
+			"answer": "ARB 是 Arbitrum 于2023年3月推出的治理代币。持有者可以通过 Arbitrum DAO 对协议升级、金库分配和生态系统倡议进行投票。虽然 ARB 不直接降低费用，但它赋予社区对协议未来的控制权，包括关于费用结构、协议升级和资助计划的决策。DAO 控制着大量金库以资助生态系统增长。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在 Arbitrum 上扩展了吗？",
+		"button": "访问 Arbitrum",
+		"note": "10-40倍费用降低，享受以太坊级安全性"
+	}
+}
