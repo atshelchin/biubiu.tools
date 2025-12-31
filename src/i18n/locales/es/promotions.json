@@ -1,0 +1,62 @@
+{
+	"section_title": "Herramientas BiuBiu",
+	"completion_title": "Siguiente paso",
+	"tools": {
+		"token_deployer": {
+			"name": "Desplegador de Tokens",
+			"description": "Crea y despliega tokens ERC20 en múltiples cadenas"
+		},
+		"nft_deployer": {
+			"name": "Desplegador de NFT",
+			"description": "Despliega colecciones NFT con metadatos personalizables"
+		},
+		"wallet_sweep": {
+			"name": "Barrido de Billetera",
+			"description": "Consolida activos de múltiples billeteras"
+		},
+		"wallet_generator": {
+			"name": "Generador de Billeteras",
+			"description": "Genera direcciones de billetera seguras en masa"
+		},
+		"token_balance_scanner": {
+			"name": "Escáner de Saldo de Tokens",
+			"description": "Consulta saldos de tokens en múltiples direcciones"
+		},
+		"ens_scanner": {
+			"name": "Escáner ENS",
+			"description": "Consulta masiva de dominios y registros ENS"
+		},
+		"contract_deployer": {
+			"name": "Desplegador de Contratos",
+			"description": "Despliega contratos inteligentes desde código fuente"
+		},
+		"contract_events_scanner": {
+			"name": "Escáner de Eventos",
+			"description": "Monitorea y escanea eventos y logs de contratos"
+		},
+		"one_to_many_transfer": {
+			"name": "Transferencia Masiva",
+			"description": "Envía tokens a múltiples direcciones en una transacción"
+		},
+		"assets_monitor": {
+			"name": "Monitor de Activos",
+			"description": "Rastrea y monitorea tu portafolio entre cadenas"
+		},
+		"nft_manager": {
+			"name": "Gestor de NFT",
+			"description": "Visualiza y gestiona tus colecciones NFT"
+		},
+		"call_master": {
+			"name": "Call Master",
+			"description": "Interactúa directamente con contratos inteligentes"
+		},
+		"dex_moonshot_trader": {
+			"name": "Trader DEX",
+			"description": "Opera tokens en exchanges descentralizados"
+		},
+		"chainlist": {
+			"name": "Lista de Cadenas",
+			"description": "Añade redes blockchain a tu billetera"
+		}
+	}
+}

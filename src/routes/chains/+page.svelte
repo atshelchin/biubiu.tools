@@ -11,6 +11,7 @@
 		X
 	} from '@lucide/svelte';
 	import SeoHead from '$lib/components/seo-head.svelte';
+	import { PromotionFooter } from '@/features/promotions';
 	import { formatTvl, getChainSlug } from '@/features/chains/data/chains';
 	import type { PageData } from './$types';
 	import type { Chain } from '@/features/chains/types';
@@ -239,6 +240,9 @@
 	<p class="results-count">
 		Showing {displayedChains.length} of {filteredChains.length} chains
 	</p>
+
+	<!-- Promotions -->
+	<PromotionFooter promotions={data.promotions} />
 
 	<!-- Data Source -->
 	<footer class="data-source">

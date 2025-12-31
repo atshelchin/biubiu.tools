@@ -1,0 +1,62 @@
+{
+	"section_title": "BiuBiu Tools",
+	"completion_title": "What's Next?",
+	"tools": {
+		"token_deployer": {
+			"name": "Token Deployer",
+			"description": "Create and deploy ERC20 tokens on multiple chains"
+		},
+		"nft_deployer": {
+			"name": "NFT Deployer",
+			"description": "Deploy NFT collections with customizable metadata"
+		},
+		"wallet_sweep": {
+			"name": "Wallet Sweep",
+			"description": "Consolidate assets from multiple wallets"
+		},
+		"wallet_generator": {
+			"name": "Wallet Generator",
+			"description": "Generate secure wallet addresses in bulk"
+		},
+		"token_balance_scanner": {
+			"name": "Token Balance Scanner",
+			"description": "Check token balances across multiple addresses"
+		},
+		"ens_scanner": {
+			"name": "ENS Scanner",
+			"description": "Batch lookup ENS domains and records"
+		},
+		"contract_deployer": {
+			"name": "Contract Deployer",
+			"description": "Deploy smart contracts from source code"
+		},
+		"contract_events_scanner": {
+			"name": "Contract Events Scanner",
+			"description": "Monitor and scan contract events and logs"
+		},
+		"one_to_many_transfer": {
+			"name": "Batch Transfer",
+			"description": "Send tokens to multiple addresses in one transaction"
+		},
+		"assets_monitor": {
+			"name": "Assets Monitor",
+			"description": "Track and monitor your portfolio across chains"
+		},
+		"nft_manager": {
+			"name": "NFT Manager",
+			"description": "View and manage your NFT collections"
+		},
+		"call_master": {
+			"name": "Call Master",
+			"description": "Interact with smart contracts directly"
+		},
+		"dex_moonshot_trader": {
+			"name": "DEX Trader",
+			"description": "Trade tokens on decentralized exchanges"
+		},
+		"chainlist": {
+			"name": "Chainlist",
+			"description": "Add blockchain networks to your wallet"
+		}
+	}
+}

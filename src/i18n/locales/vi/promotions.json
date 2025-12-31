@@ -1,0 +1,62 @@
+{
+	"section_title": "Công cụ BiuBiu",
+	"completion_title": "Bước tiếp theo",
+	"tools": {
+		"token_deployer": {
+			"name": "Triển khai Token",
+			"description": "Tạo và triển khai token ERC20 trên nhiều chuỗi"
+		},
+		"nft_deployer": {
+			"name": "Triển khai NFT",
+			"description": "Triển khai bộ sưu tập NFT với metadata tùy chỉnh"
+		},
+		"wallet_sweep": {
+			"name": "Quét Ví",
+			"description": "Gom tài sản từ nhiều ví"
+		},
+		"wallet_generator": {
+			"name": "Tạo Ví",
+			"description": "Tạo hàng loạt địa chỉ ví an toàn"
+		},
+		"token_balance_scanner": {
+			"name": "Quét Số Dư Token",
+			"description": "Kiểm tra số dư token trên nhiều địa chỉ"
+		},
+		"ens_scanner": {
+			"name": "Quét ENS",
+			"description": "Tra cứu hàng loạt tên miền và bản ghi ENS"
+		},
+		"contract_deployer": {
+			"name": "Triển khai Hợp đồng",
+			"description": "Triển khai hợp đồng thông minh từ mã nguồn"
+		},
+		"contract_events_scanner": {
+			"name": "Quét Sự kiện Hợp đồng",
+			"description": "Giám sát và quét sự kiện, log hợp đồng"
+		},
+		"one_to_many_transfer": {
+			"name": "Chuyển Hàng loạt",
+			"description": "Gửi token đến nhiều địa chỉ trong một giao dịch"
+		},
+		"assets_monitor": {
+			"name": "Giám sát Tài sản",
+			"description": "Theo dõi và giám sát danh mục đầu tư đa chuỗi"
+		},
+		"nft_manager": {
+			"name": "Quản lý NFT",
+			"description": "Xem và quản lý bộ sưu tập NFT của bạn"
+		},
+		"call_master": {
+			"name": "Call Master",
+			"description": "Tương tác trực tiếp với hợp đồng thông minh"
+		},
+		"dex_moonshot_trader": {
+			"name": "Giao dịch DEX",
+			"description": "Giao dịch token trên sàn phi tập trung"
+		},
+		"chainlist": {
+			"name": "Danh sách Chuỗi",
+			"description": "Thêm mạng blockchain vào ví của bạn"
+		}
+	}
+}

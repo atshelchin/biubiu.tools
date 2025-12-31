@@ -1,0 +1,62 @@
+{
+	"section_title": "BiuBiu Araçları",
+	"completion_title": "Sıradaki adım",
+	"tools": {
+		"token_deployer": {
+			"name": "Token Dağıtıcı",
+			"description": "Birden fazla zincirde ERC20 tokenları oluşturun ve dağıtın"
+		},
+		"nft_deployer": {
+			"name": "NFT Dağıtıcı",
+			"description": "Özelleştirilebilir meta verilerle NFT koleksiyonları dağıtın"
+		},
+		"wallet_sweep": {
+			"name": "Cüzdan Tarama",
+			"description": "Birden fazla cüzdandan varlıkları birleştirin"
+		},
+		"wallet_generator": {
+			"name": "Cüzdan Oluşturucu",
+			"description": "Toplu olarak güvenli cüzdan adresleri oluşturun"
+		},
+		"token_balance_scanner": {
+			"name": "Token Bakiye Tarayıcı",
+			"description": "Birden fazla adreste token bakiyelerini kontrol edin"
+		},
+		"ens_scanner": {
+			"name": "ENS Tarayıcı",
+			"description": "ENS alan adlarını ve kayıtlarını toplu arayın"
+		},
+		"contract_deployer": {
+			"name": "Sözleşme Dağıtıcı",
+			"description": "Kaynak kodundan akıllı sözleşmeler dağıtın"
+		},
+		"contract_events_scanner": {
+			"name": "Sözleşme Olay Tarayıcı",
+			"description": "Sözleşme olaylarını ve loglarını izleyin ve tarayın"
+		},
+		"one_to_many_transfer": {
+			"name": "Toplu Transfer",
+			"description": "Tek işlemde birden fazla adrese token gönderin"
+		},
+		"assets_monitor": {
+			"name": "Varlık İzleyici",
+			"description": "Portföyünüzü zincirler arası takip edin ve izleyin"
+		},
+		"nft_manager": {
+			"name": "NFT Yöneticisi",
+			"description": "NFT koleksiyonlarınızı görüntüleyin ve yönetin"
+		},
+		"call_master": {
+			"name": "Call Master",
+			"description": "Akıllı sözleşmelerle doğrudan etkileşim kurun"
+		},
+		"dex_moonshot_trader": {
+			"name": "DEX Trader",
+			"description": "Merkezi olmayan borsalarda token alım satımı yapın"
+		},
+		"chainlist": {
+			"name": "Zincir Listesi",
+			"description": "Cüzdanınıza blockchain ağları ekleyin"
+		}
+	}
+}

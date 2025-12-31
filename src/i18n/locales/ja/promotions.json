@@ -1,0 +1,62 @@
+{
+	"section_title": "BiuBiu ツール",
+	"completion_title": "次のステップ",
+	"tools": {
+		"token_deployer": {
+			"name": "トークンデプロイヤー",
+			"description": "複数のチェーンでERC20トークンを作成・デプロイ"
+		},
+		"nft_deployer": {
+			"name": "NFTデプロイヤー",
+			"description": "カスタマイズ可能なメタデータでNFTコレクションをデプロイ"
+		},
+		"wallet_sweep": {
+			"name": "ウォレットスイープ",
+			"description": "複数のウォレットから資産を統合"
+		},
+		"wallet_generator": {
+			"name": "ウォレットジェネレーター",
+			"description": "安全なウォレットアドレスを一括生成"
+		},
+		"token_balance_scanner": {
+			"name": "トークン残高スキャナー",
+			"description": "複数アドレスのトークン残高を確認"
+		},
+		"ens_scanner": {
+			"name": "ENSスキャナー",
+			"description": "ENSドメインとレコードを一括検索"
+		},
+		"contract_deployer": {
+			"name": "コントラクトデプロイヤー",
+			"description": "ソースコードからスマートコントラクトをデプロイ"
+		},
+		"contract_events_scanner": {
+			"name": "コントラクトイベントスキャナー",
+			"description": "コントラクトのイベントとログを監視・スキャン"
+		},
+		"one_to_many_transfer": {
+			"name": "一括送金",
+			"description": "1回のトランザクションで複数アドレスにトークンを送信"
+		},
+		"assets_monitor": {
+			"name": "資産モニター",
+			"description": "チェーン横断でポートフォリオを追跡・監視"
+		},
+		"nft_manager": {
+			"name": "NFTマネージャー",
+			"description": "NFTコレクションを表示・管理"
+		},
+		"call_master": {
+			"name": "コールマスター",
+			"description": "スマートコントラクトと直接対話"
+		},
+		"dex_moonshot_trader": {
+			"name": "DEXトレーダー",
+			"description": "分散型取引所でトークンを取引"
+		},
+		"chainlist": {
+			"name": "チェーンリスト",
+			"description": "ウォレットにブロックチェーンネットワークを追加"
+		}
+	}
+}

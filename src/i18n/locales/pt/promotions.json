@@ -1,0 +1,62 @@
+{
+	"section_title": "Ferramentas BiuBiu",
+	"completion_title": "Próximo passo",
+	"tools": {
+		"token_deployer": {
+			"name": "Implantador de Tokens",
+			"description": "Crie e implante tokens ERC20 em múltiplas redes"
+		},
+		"nft_deployer": {
+			"name": "Implantador de NFT",
+			"description": "Implante coleções NFT com metadados personalizáveis"
+		},
+		"wallet_sweep": {
+			"name": "Varredura de Carteira",
+			"description": "Consolide ativos de múltiplas carteiras"
+		},
+		"wallet_generator": {
+			"name": "Gerador de Carteiras",
+			"description": "Gere endereços de carteira seguros em massa"
+		},
+		"token_balance_scanner": {
+			"name": "Scanner de Saldo de Tokens",
+			"description": "Verifique saldos de tokens em múltiplos endereços"
+		},
+		"ens_scanner": {
+			"name": "Scanner ENS",
+			"description": "Consulta em lote de domínios e registros ENS"
+		},
+		"contract_deployer": {
+			"name": "Implantador de Contratos",
+			"description": "Implante contratos inteligentes a partir do código-fonte"
+		},
+		"contract_events_scanner": {
+			"name": "Scanner de Eventos",
+			"description": "Monitore e escaneie eventos e logs de contratos"
+		},
+		"one_to_many_transfer": {
+			"name": "Transferência em Lote",
+			"description": "Envie tokens para múltiplos endereços em uma transação"
+		},
+		"assets_monitor": {
+			"name": "Monitor de Ativos",
+			"description": "Rastreie e monitore seu portfólio entre redes"
+		},
+		"nft_manager": {
+			"name": "Gerenciador de NFT",
+			"description": "Visualize e gerencie suas coleções NFT"
+		},
+		"call_master": {
+			"name": "Call Master",
+			"description": "Interaja diretamente com contratos inteligentes"
+		},
+		"dex_moonshot_trader": {
+			"name": "Trader DEX",
+			"description": "Negocie tokens em exchanges descentralizadas"
+		},
+		"chainlist": {
+			"name": "Lista de Redes",
+			"description": "Adicione redes blockchain à sua carteira"
+		}
+	}
+}

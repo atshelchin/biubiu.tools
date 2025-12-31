@@ -1,0 +1,62 @@
+{
+	"section_title": "BiuBiu 工具",
+	"completion_title": "接下来试试",
+	"tools": {
+		"token_deployer": {
+			"name": "代币部署器",
+			"description": "在多条链上创建和部署 ERC20 代币"
+		},
+		"nft_deployer": {
+			"name": "NFT 部署器",
+			"description": "部署可自定义元数据的 NFT 合集"
+		},
+		"wallet_sweep": {
+			"name": "钱包归集",
+			"description": "将多个钱包的资产整合到一起"
+		},
+		"wallet_generator": {
+			"name": "钱包生成器",
+			"description": "批量生成安全的钱包地址"
+		},
+		"token_balance_scanner": {
+			"name": "代币余额扫描",
+			"description": "批量查询多个地址的代币余额"
+		},
+		"ens_scanner": {
+			"name": "ENS 扫描器",
+			"description": "批量查询 ENS 域名和记录"
+		},
+		"contract_deployer": {
+			"name": "合约部署器",
+			"description": "从源代码部署智能合约"
+		},
+		"contract_events_scanner": {
+			"name": "合约事件扫描",
+			"description": "监控和扫描合约事件日志"
+		},
+		"one_to_many_transfer": {
+			"name": "批量转账",
+			"description": "一笔交易向多个地址发送代币"
+		},
+		"assets_monitor": {
+			"name": "资产监控",
+			"description": "跨链追踪和监控您的投资组合"
+		},
+		"nft_manager": {
+			"name": "NFT 管理器",
+			"description": "查看和管理您的 NFT 合集"
+		},
+		"call_master": {
+			"name": "合约交互",
+			"description": "直接与智能合约交互"
+		},
+		"dex_moonshot_trader": {
+			"name": "DEX 交易",
+			"description": "在去中心化交易所交易代币"
+		},
+		"chainlist": {
+			"name": "链列表",
+			"description": "将区块链网络添加到您的钱包"
+		}
+	}
+}

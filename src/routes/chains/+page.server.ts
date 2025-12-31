@@ -2,6 +2,7 @@ import type { PageServerLoad } from './$types';
 import { allChains, getChainStats } from '@/features/chains/data/chains';
 import { createT } from '$i18n/translations';
 import { extractLocaleFromPathname } from '$utils/common';
+import { getPromotions } from '@/features/promotions';
 
 export const load: PageServerLoad = (event) => {
 	const { url } = event;
@@ -58,9 +59,17 @@ export const load: PageServerLoad = (event) => {
 		}
 	];
 
+	// Get promotions for this page
+	const promotions = getPromotions({
+		placement: 'chains-bottom',
+		locale
+	});
+
 	return {
 		chains: allChains,
 		stats,
+		promotions,
+		locale,
 		meta: {
 			title,
 			description,

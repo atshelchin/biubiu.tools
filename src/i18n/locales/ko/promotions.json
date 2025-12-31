@@ -1,0 +1,62 @@
+{
+	"section_title": "BiuBiu 도구",
+	"completion_title": "다음 단계",
+	"tools": {
+		"token_deployer": {
+			"name": "토큰 배포자",
+			"description": "여러 체인에서 ERC20 토큰 생성 및 배포"
+		},
+		"nft_deployer": {
+			"name": "NFT 배포자",
+			"description": "맞춤형 메타데이터로 NFT 컬렉션 배포"
+		},
+		"wallet_sweep": {
+			"name": "지갑 스윕",
+			"description": "여러 지갑의 자산을 통합"
+		},
+		"wallet_generator": {
+			"name": "지갑 생성기",
+			"description": "안전한 지갑 주소를 대량 생성"
+		},
+		"token_balance_scanner": {
+			"name": "토큰 잔액 스캐너",
+			"description": "여러 주소의 토큰 잔액 확인"
+		},
+		"ens_scanner": {
+			"name": "ENS 스캐너",
+			"description": "ENS 도메인 및 레코드 일괄 조회"
+		},
+		"contract_deployer": {
+			"name": "컨트랙트 배포자",
+			"description": "소스 코드에서 스마트 컨트랙트 배포"
+		},
+		"contract_events_scanner": {
+			"name": "컨트랙트 이벤트 스캐너",
+			"description": "컨트랙트 이벤트 및 로그 모니터링 및 스캔"
+		},
+		"one_to_many_transfer": {
+			"name": "일괄 전송",
+			"description": "한 번의 트랜잭션으로 여러 주소에 토큰 전송"
+		},
+		"assets_monitor": {
+			"name": "자산 모니터",
+			"description": "체인 전반에서 포트폴리오 추적 및 모니터링"
+		},
+		"nft_manager": {
+			"name": "NFT 관리자",
+			"description": "NFT 컬렉션 보기 및 관리"
+		},
+		"call_master": {
+			"name": "콜 마스터",
+			"description": "스마트 컨트랙트와 직접 상호작용"
+		},
+		"dex_moonshot_trader": {
+			"name": "DEX 트레이더",
+			"description": "탈중앙화 거래소에서 토큰 거래"
+		},
+		"chainlist": {
+			"name": "체인리스트",
+			"description": "지갑에 블록체인 네트워크 추가"
+		}
+	}
+}

@@ -1,0 +1,62 @@
+{
+	"section_title": "Outils BiuBiu",
+	"completion_title": "Prochaine étape",
+	"tools": {
+		"token_deployer": {
+			"name": "Déployeur de Tokens",
+			"description": "Créez et déployez des tokens ERC20 sur plusieurs chaînes"
+		},
+		"nft_deployer": {
+			"name": "Déployeur NFT",
+			"description": "Déployez des collections NFT avec métadonnées personnalisables"
+		},
+		"wallet_sweep": {
+			"name": "Balayage de Portefeuille",
+			"description": "Consolidez les actifs de plusieurs portefeuilles"
+		},
+		"wallet_generator": {
+			"name": "Générateur de Portefeuilles",
+			"description": "Générez des adresses de portefeuille sécurisées en masse"
+		},
+		"token_balance_scanner": {
+			"name": "Scanner de Solde de Tokens",
+			"description": "Vérifiez les soldes de tokens sur plusieurs adresses"
+		},
+		"ens_scanner": {
+			"name": "Scanner ENS",
+			"description": "Recherche en masse de domaines et enregistrements ENS"
+		},
+		"contract_deployer": {
+			"name": "Déployeur de Contrats",
+			"description": "Déployez des contrats intelligents depuis le code source"
+		},
+		"contract_events_scanner": {
+			"name": "Scanner d'Événements",
+			"description": "Surveillez et scannez les événements et logs de contrats"
+		},
+		"one_to_many_transfer": {
+			"name": "Transfert en Masse",
+			"description": "Envoyez des tokens à plusieurs adresses en une transaction"
+		},
+		"assets_monitor": {
+			"name": "Moniteur d'Actifs",
+			"description": "Suivez et surveillez votre portefeuille multi-chaînes"
+		},
+		"nft_manager": {
+			"name": "Gestionnaire NFT",
+			"description": "Visualisez et gérez vos collections NFT"
+		},
+		"call_master": {
+			"name": "Call Master",
+			"description": "Interagissez directement avec les contrats intelligents"
+		},
+		"dex_moonshot_trader": {
+			"name": "Trader DEX",
+			"description": "Échangez des tokens sur les exchanges décentralisés"
+		},
+		"chainlist": {
+			"name": "Liste des Chaînes",
+			"description": "Ajoutez des réseaux blockchain à votre portefeuille"
+		}
+	}
+}

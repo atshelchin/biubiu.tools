@@ -1,0 +1,62 @@
+{
+	"section_title": "Strumenti BiuBiu",
+	"completion_title": "Prossimo passo",
+	"tools": {
+		"token_deployer": {
+			"name": "Distributore di Token",
+			"description": "Crea e distribuisci token ERC20 su più catene"
+		},
+		"nft_deployer": {
+			"name": "Distributore NFT",
+			"description": "Distribuisci collezioni NFT con metadati personalizzabili"
+		},
+		"wallet_sweep": {
+			"name": "Sweep del Portafoglio",
+			"description": "Consolida gli asset da più portafogli"
+		},
+		"wallet_generator": {
+			"name": "Generatore di Portafogli",
+			"description": "Genera indirizzi di portafoglio sicuri in massa"
+		},
+		"token_balance_scanner": {
+			"name": "Scanner Saldo Token",
+			"description": "Controlla i saldi dei token su più indirizzi"
+		},
+		"ens_scanner": {
+			"name": "Scanner ENS",
+			"description": "Ricerca in batch di domini e record ENS"
+		},
+		"contract_deployer": {
+			"name": "Distributore di Contratti",
+			"description": "Distribuisci smart contract dal codice sorgente"
+		},
+		"contract_events_scanner": {
+			"name": "Scanner Eventi Contratto",
+			"description": "Monitora e scansiona eventi e log dei contratti"
+		},
+		"one_to_many_transfer": {
+			"name": "Trasferimento in Batch",
+			"description": "Invia token a più indirizzi in una transazione"
+		},
+		"assets_monitor": {
+			"name": "Monitor degli Asset",
+			"description": "Traccia e monitora il tuo portafoglio su più catene"
+		},
+		"nft_manager": {
+			"name": "Gestore NFT",
+			"description": "Visualizza e gestisci le tue collezioni NFT"
+		},
+		"call_master": {
+			"name": "Call Master",
+			"description": "Interagisci direttamente con gli smart contract"
+		},
+		"dex_moonshot_trader": {
+			"name": "Trader DEX",
+			"description": "Scambia token su exchange decentralizzati"
+		},
+		"chainlist": {
+			"name": "Lista delle Catene",
+			"description": "Aggiungi reti blockchain al tuo portafoglio"
+		}
+	}
+}

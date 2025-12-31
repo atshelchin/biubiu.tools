@@ -1,0 +1,62 @@
+{
+	"section_title": "Alat BiuBiu",
+	"completion_title": "Langkah selanjutnya",
+	"tools": {
+		"token_deployer": {
+			"name": "Penerapan Token",
+			"description": "Buat dan terapkan token ERC20 di berbagai jaringan"
+		},
+		"nft_deployer": {
+			"name": "Penerapan NFT",
+			"description": "Terapkan koleksi NFT dengan metadata yang dapat disesuaikan"
+		},
+		"wallet_sweep": {
+			"name": "Penyapuan Dompet",
+			"description": "Konsolidasi aset dari beberapa dompet"
+		},
+		"wallet_generator": {
+			"name": "Generator Dompet",
+			"description": "Buat alamat dompet yang aman secara massal"
+		},
+		"token_balance_scanner": {
+			"name": "Pemindai Saldo Token",
+			"description": "Periksa saldo token di beberapa alamat"
+		},
+		"ens_scanner": {
+			"name": "Pemindai ENS",
+			"description": "Pencarian batch domain dan catatan ENS"
+		},
+		"contract_deployer": {
+			"name": "Penerapan Kontrak",
+			"description": "Terapkan smart contract dari kode sumber"
+		},
+		"contract_events_scanner": {
+			"name": "Pemindai Event Kontrak",
+			"description": "Pantau dan pindai event dan log kontrak"
+		},
+		"one_to_many_transfer": {
+			"name": "Transfer Batch",
+			"description": "Kirim token ke beberapa alamat dalam satu transaksi"
+		},
+		"assets_monitor": {
+			"name": "Monitor Aset",
+			"description": "Lacak dan pantau portofolio Anda lintas jaringan"
+		},
+		"nft_manager": {
+			"name": "Manajer NFT",
+			"description": "Lihat dan kelola koleksi NFT Anda"
+		},
+		"call_master": {
+			"name": "Call Master",
+			"description": "Berinteraksi langsung dengan smart contract"
+		},
+		"dex_moonshot_trader": {
+			"name": "Trader DEX",
+			"description": "Perdagangkan token di bursa terdesentralisasi"
+		},
+		"chainlist": {
+			"name": "Daftar Jaringan",
+			"description": "Tambahkan jaringan blockchain ke dompet Anda"
+		}
+	}
+}
