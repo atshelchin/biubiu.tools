@@ -2,6 +2,7 @@
 	"category_seo": {
 		"title": "Web3 团队与风投 - 建设者与投资者 | BiuBiu Tools",
 		"description": "发现 Web3 团队、建设者和投资者。追踪谁在建造什么以及聪明钱在投资哪里。",
+		"keywords": "web3团队, 加密风投, 区块链投资者, 加密建设者, 风险投资",
 		"faqs": [
 			{
 				"question": "如何研究 Web3 团队？",
@@ -18,134 +19,131 @@
 		]
 	},
 	"tools": {
-		"a16z-crypto": {
-			"description": "a16z crypto - Tool"
+		"paradigm_vc": {
+			"description": "以研究为导向的加密风投，以技术贡献、开源工具和支持主要 DeFi 及基础设施项目闻名"
 		},
-		"paradigm-vc": {
-			"description": "Paradigm - Tool"
+		"sequoia_crypto": {
+			"description": "传奇硅谷风投扩展至加密领域，投资了 FTX、Polygon 等主要 Web3 公司"
 		},
-		"sequoia-crypto": {
-			"description": "Sequoia Capital - Tool"
+		"polychain_capital": {
+			"description": "由前 Coinbase 员工创立的加密原生基金，是 Compound、Maker 和 Cosmos 的早期投资者"
 		},
-		"polychain-capital": {
-			"description": "Polychain Capital - Tool"
+		"pantera_capital": {
+			"description": "最早的加密投资公司之一，自 2013 年起管理区块链专注的对冲基金和风险基金"
 		},
-		"pantera-capital": {
-			"description": "Pantera Capital - Tool"
+		"dragonfly_capital": {
+			"description": "在亚洲有强大影响力的全球加密风投，投资 DeFi、基础设施和消费级加密"
 		},
-		"dragonfly-capital": {
-			"description": "Dragonfly - Tool"
+		"multicoin_capital": {
+			"description": "以论点驱动的加密基金，以 Solana 生态系统投资和 Layer 1 区块链押注闻名"
 		},
-		"multicoin-capital": {
-			"description": "Multicoin Capital - Tool"
+		"electric_capital": {
+			"description": "以开发者为中心的风投，发布年度开发者报告并投资 Web3 基础设施项目"
 		},
-		"electric-capital": {
-			"description": "Electric Capital - Tool"
+		"framework_ventures": {
+			"description": "活跃的 DeFi 和游戏投资者，以实际参与和协议治理参与闻名"
 		},
-		"framework-ventures": {
-			"description": "Framework Ventures - Tool"
+		"delphi_ventures": {
+			"description": "Delphi Digital 的研究支持风投部门，投资 DeFi、游戏和 NFT 基础设施"
 		},
-		"delphi-ventures": {
-			"description": "Delphi Ventures - Tool"
+		"placeholder_vc": {
+			"description": "以论点驱动的风投，专注于去中心化协议、治理系统和网络所有权模型"
 		},
-		"placeholder-vc": {
-			"description": "Placeholder - Tool"
+		"variant_fund": {
+			"description": "专注于用户拥有网络和 Web3 代币所有权模型的风投"
 		},
-		"variant-fund": {
-			"description": "Variant - Tool"
+		"hashed_vc": {
+			"description": "韩国领先的加密风投，投资游戏、DeFi 和基础设施，拥有强大的亚洲网络"
 		},
-		"hashed-vc": {
-			"description": "Hashed - Tool"
+		"spartan_group": {
+			"description": "亚洲专注的加密基金，结合风险投资、交易和咨询服务"
 		},
-		"spartan-group": {
-			"description": "Spartan Group - Tool"
+		"hack_vc": {
+			"description": "由前 a16z 合伙人领导的早期加密风投，专注于基础设施和技术创始人"
 		},
-		"hack-vc": {
-			"description": "Hack VC - Tool"
+		"bankless_ventures": {
+			"description": "来自 Bankless 媒体品牌的社区支持风投基金，投资以太坊生态系统"
 		},
-		"bankless-ventures": {
-			"description": "Bankless Ventures - Tool"
+		"1kx_capital": {
+			"description": "欧洲加密风投，专注于代币网络、治理和早期协议投资"
 		},
-		"1kx-capital": {
-			"description": "1kx - Tool"
+		"robot_ventures": {
+			"description": "由 Compound 创始人 Robert Leshner 创立的早期加密基金，支持 DeFi 创新"
 		},
-		"robot-ventures": {
-			"description": "Robot Ventures - Tool"
+		"coinbase_ventures": {
+			"description": "Coinbase 的战略投资部门，支持 DeFi、NFT 和基础设施生态系统项目"
 		},
-		"coinbase-ventures": {
-			"description": "Coinbase Ventures - Tool"
+		"binance_labs": {
+			"description": "Binance 的风险投资和孵化部门，全球投资和加速区块链创业公司"
 		},
-		"binance-labs": {
-			"description": "Binance Labs - Tool"
+		"okx_ventures": {
+			"description": "OKX 交易所的投资部门，支持基础设施和应用领域的 Web3 建设者"
 		},
-		"okx-ventures": {
-			"description": "OKX Ventures - Tool"
+		"kraken_ventures": {
+			"description": "Kraken 交易所的战略投资部门，专注于基础设施和生态系统发展"
 		},
-		"kraken-ventures": {
-			"description": "Kraken Ventures - Tool"
+		"circle_ventures": {
+			"description": "Circle（USDC 发行方）的投资部门，支持稳定币基础设施和金融科技项目"
 		},
-		"circle-ventures": {
-			"description": "Circle Ventures - Tool"
+		"galaxy_ventures": {
+			"description": "Galaxy Digital 的风投部门，在加密和区块链领域进行机构级投资"
 		},
-		"galaxy-ventures": {
-			"description": "Galaxy Ventures - Tool"
+		"alliance_dao": {
+			"description": "Web3 加速器，运营由顶级加密创始人提供指导的批次项目"
 		},
-		"alliance-dao": {
-			"description": "Alliance - Tool"
+		"ycombinator_crypto": {
+			"description": "传奇创业加速器，通过其标准批次项目支持加密公司"
 		},
-		"ycombinator-crypto": {
-			"description": "Y Combinator - Tool"
+		"outlier_ventures": {
+			"description": "Web3 加速器，为代币化创业公司运营 Base Camp 项目并提供实际支持"
 		},
-		"outlier-ventures": {
-			"description": "Outlier Ventures - Tool"
+		"longhash_ventures": {
+			"description": "新加坡加速器和风投，专注于亚太地区的 Web3 创始人"
 		},
-		"longhash-ventures": {
-			"description": "LongHash Ventures - Tool"
+		"techstars_crypto": {
+			"description": "全球创业加速器，运营区块链和加密专注的批次项目及导师网络"
 		},
-		"techstars-crypto": {
-			"description": "Techstars - Tool"
+		"consensys_team": {
+			"description": "以太坊基础设施公司，构建 MetaMask、Infura 和其他核心生态系统工具"
 		},
-		"consensys-team": {
-			"description": "Consensys - Tool"
+		"offchain_labs": {
+			"description": "构建 Arbitrum 的团队，使用 optimistic rollups 的领先以太坊 Layer 2 扩展解决方案"
 		},
-		"offchain-labs": {
-			"description": "Offchain Labs - Tool"
+		"matter_labs": {
+			"description": "构建 zkSync 的团队，使用零知识证明技术的 Layer 2 扩展解决方案"
 		},
-		"matter-labs": {
-			"description": "Matter Labs - Tool"
+		"optimism_team": {
+			"description": "Optimism L2 和可扩展以太坊超级链愿景背后的核心团队"
 		},
-		"optimism-team": {
-			"description": "OP Labs - Tool"
+		"alchemy_team": {
+			"description": "领先的 Web3 基础设施提供商，提供节点 API、开发者工具和区块链数据"
 		},
-		"alchemy-team": {
-			"description": "Alchemy - Tool"
+		"chainlink_labs": {
+			"description": "构建 Chainlink 预言机网络、CCIP 跨链协议和去中心化数据基础设施的团队"
 		},
-		"chainlink-labs": {
-			"description": "Chainlink Labs - Tool"
+		"eigenlayer_team": {
+			"description": "构建 EigenLayer 再质押协议的团队，为 AVS 应用程序提供共享安全性"
 		},
-		"eigenlayer-team": {
-			"description": "Eigen Labs - Tool"
+		"uniswap_labs": {
+			"description": "Uniswap 背后的团队，交易量最大的去中心化交易所协议"
 		},
-		"uniswap-labs": {
-			"description": "Uniswap Labs - Tool"
+		"jump_crypto": {
+			"description": "交易公司的加密部门，构建 Wormhole 跨链桥并投资区块链基础设施"
 		},
-		"jump-crypto": {
-			"description": "Jump Crypto - Tool"
+		"wintermute_trading": {
+			"description": "主要的加密做市商，为交易所和 DeFi 协议提供流动性"
 		},
-		"wintermute-trading": {
-			"description": "Wintermute - Tool"
+		"gauntlet_network": {
+			"description": "DeFi 风险管理公司，使用模拟优化协议参数和经济学"
 		},
-		"gauntlet-network": {
-			"description": "Gauntlet - Tool"
+		"dealroom_crypto": {
+			"description": "创业公司和融资数据库，追踪 Web3 公司融资、估值和投资者活动"
 		},
-		"dealroom-crypto": {
-			"description": "Dealroom - Tool"
+		"pitchbook_crypto": {
+			"description": "机构级风投交易、加密融资轮次和市场分析数据库"
 		},
-		"pitchbook-crypto": {
-			"description": "PitchBook - Tool"
-		},
-		"crypto-fundraising": {
-			"description": "Crypto Fundraising - Tool"
+		"crypto_fundraising": {
+			"description": "免费的加密融资轮次、投资者活动和创业融资数据追踪器"
 		}
 	}
 }

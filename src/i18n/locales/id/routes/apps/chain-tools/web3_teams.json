@@ -2,6 +2,7 @@
 	"category_seo": {
 		"title": "Tim & VC Web3 - Builder & Investor | BiuBiu Tools",
 		"description": "Temukan tim, builder, dan investor Web3. Lacak siapa yang membangun apa dan di mana smart money berinvestasi.",
+		"keywords": "tim web3, vc kripto, investor blockchain, builder kripto, modal ventura",
 		"faqs": [
 			{
 				"question": "Bagaimana cara meneliti tim Web3?",
@@ -18,134 +19,131 @@
 		]
 	},
 	"tools": {
-		"a16z-crypto": {
-			"description": "a16z crypto - Tool"
+		"paradigm_vc": {
+			"description": "VC kripto fokus riset, terkenal dengan kontribusi teknis, alat open-source, dan dukungan proyek DeFi dan infrastruktur besar"
 		},
-		"paradigm-vc": {
-			"description": "Paradigm - Tool"
+		"sequoia_crypto": {
+			"description": "VC legendaris Silicon Valley yang ekspansi ke kripto, mendukung FTX, Polygon, dan perusahaan Web3 besar lainnya"
 		},
-		"sequoia-crypto": {
-			"description": "Sequoia Capital - Tool"
+		"polychain_capital": {
+			"description": "Dana kripto-native didirikan oleh mantan karyawan Coinbase, investor awal Compound, Maker, dan Cosmos"
 		},
-		"polychain-capital": {
-			"description": "Polychain Capital - Tool"
+		"pantera_capital": {
+			"description": "Salah satu firma investasi kripto pertama, mengelola hedge fund dan venture fund fokus blockchain sejak 2013"
 		},
-		"pantera-capital": {
-			"description": "Pantera Capital - Tool"
+		"dragonfly_capital": {
+			"description": "VC kripto global dengan kehadiran kuat di Asia, berinvestasi di DeFi, infrastruktur, dan kripto konsumen"
 		},
-		"dragonfly-capital": {
-			"description": "Dragonfly - Tool"
+		"multicoin_capital": {
+			"description": "Dana kripto berbasis tesis, terkenal dengan investasi ekosistem Solana dan taruhan pada blockchain Layer 1"
 		},
-		"multicoin-capital": {
-			"description": "Multicoin Capital - Tool"
+		"electric_capital": {
+			"description": "VC fokus developer yang menerbitkan laporan developer tahunan dan berinvestasi di proyek infrastruktur Web3"
 		},
-		"electric-capital": {
-			"description": "Electric Capital - Tool"
+		"framework_ventures": {
+			"description": "Investor DeFi dan gaming aktif terkenal dengan keterlibatan langsung dan partisipasi governance protokol"
 		},
-		"framework-ventures": {
-			"description": "Framework Ventures - Tool"
+		"delphi_ventures": {
+			"description": "Cabang venture berbasis riset dari Delphi Digital, berinvestasi di DeFi, gaming, dan infrastruktur NFT"
 		},
-		"delphi-ventures": {
-			"description": "Delphi Ventures - Tool"
+		"placeholder_vc": {
+			"description": "VC berbasis tesis fokus pada protokol terdesentralisasi, sistem governance, dan model kepemilikan jaringan"
 		},
-		"placeholder-vc": {
-			"description": "Placeholder - Tool"
+		"variant_fund": {
+			"description": "VC fokus pada jaringan milik pengguna dan model kepemilikan berbasis token di Web3"
 		},
-		"variant-fund": {
-			"description": "Variant - Tool"
+		"hashed_vc": {
+			"description": "VC kripto terkemuka Korea yang berinvestasi di gaming, DeFi, dan infrastruktur dengan jaringan Asia yang kuat"
 		},
-		"hashed-vc": {
-			"description": "Hashed - Tool"
+		"spartan_group": {
+			"description": "Dana kripto fokus Asia yang menggabungkan investasi venture dengan trading dan layanan konsultasi"
 		},
-		"spartan-group": {
-			"description": "Spartan Group - Tool"
+		"hack_vc": {
+			"description": "VC kripto tahap awal dipimpin mantan partner a16z, fokus pada infrastruktur dan founder teknis"
 		},
-		"hack-vc": {
-			"description": "Hack VC - Tool"
+		"bankless_ventures": {
+			"description": "Dana venture didukung komunitas dari brand media Bankless, berinvestasi di ekosistem Ethereum"
 		},
-		"bankless-ventures": {
-			"description": "Bankless Ventures - Tool"
+		"1kx_capital": {
+			"description": "VC kripto Eropa fokus pada jaringan token, governance, dan investasi protokol tahap awal"
 		},
-		"1kx-capital": {
-			"description": "1kx - Tool"
+		"robot_ventures": {
+			"description": "Dana kripto tahap awal didirikan oleh pencipta Compound Robert Leshner, mendukung inovasi DeFi"
 		},
-		"robot-ventures": {
-			"description": "Robot Ventures - Tool"
+		"coinbase_ventures": {
+			"description": "Cabang investasi strategis Coinbase, mendukung proyek ekosistem di DeFi, NFT, dan infrastruktur"
 		},
-		"coinbase-ventures": {
-			"description": "Coinbase Ventures - Tool"
+		"binance_labs": {
+			"description": "Cabang venture dan inkubator Binance, berinvestasi dan mengakselerasi startup blockchain secara global"
 		},
-		"binance-labs": {
-			"description": "Binance Labs - Tool"
+		"okx_ventures": {
+			"description": "Cabang investasi exchange OKX, mendukung builder Web3 di infrastruktur dan aplikasi"
 		},
-		"okx-ventures": {
-			"description": "OKX Ventures - Tool"
+		"kraken_ventures": {
+			"description": "Cabang investasi strategis exchange Kraken, fokus pada infrastruktur dan pengembangan ekosistem"
 		},
-		"kraken-ventures": {
-			"description": "Kraken Ventures - Tool"
+		"circle_ventures": {
+			"description": "Cabang investasi Circle (penerbit USDC), mendukung infrastruktur stablecoin dan proyek fintech"
 		},
-		"circle-ventures": {
-			"description": "Circle Ventures - Tool"
+		"galaxy_ventures": {
+			"description": "Cabang venture Galaxy Digital, investasi kelas institusional di kripto dan blockchain"
 		},
-		"galaxy-ventures": {
-			"description": "Galaxy Ventures - Tool"
+		"alliance_dao": {
+			"description": "Akselerator Web3 yang menjalankan program berbasis cohort dengan mentorship dari founder kripto top"
 		},
-		"alliance-dao": {
-			"description": "Alliance - Tool"
+		"ycombinator_crypto": {
+			"description": "Akselerator startup legendaris yang mendukung perusahaan kripto melalui program batch standarnya"
 		},
-		"ycombinator-crypto": {
-			"description": "Y Combinator - Tool"
+		"outlier_ventures": {
+			"description": "Akselerator Web3 yang menjalankan program Base Camp untuk startup berbasis token dengan dukungan langsung"
 		},
-		"outlier-ventures": {
-			"description": "Outlier Ventures - Tool"
+		"longhash_ventures": {
+			"description": "Akselerator dan VC berbasis Singapura fokus pada founder Web3 di kawasan Asia-Pasifik"
 		},
-		"longhash-ventures": {
-			"description": "LongHash Ventures - Tool"
+		"techstars_crypto": {
+			"description": "Akselerator startup global yang menjalankan cohort fokus blockchain dan kripto dengan jaringan mentor"
 		},
-		"techstars-crypto": {
-			"description": "Techstars - Tool"
+		"consensys_team": {
+			"description": "Perusahaan infrastruktur Ethereum yang membangun MetaMask, Infura, dan alat ekosistem inti lainnya"
 		},
-		"consensys-team": {
-			"description": "Consensys - Tool"
+		"offchain_labs": {
+			"description": "Tim yang membangun Arbitrum, solusi scaling Ethereum Layer 2 terkemuka menggunakan optimistic rollups"
 		},
-		"offchain-labs": {
-			"description": "Offchain Labs - Tool"
+		"matter_labs": {
+			"description": "Tim yang membangun zkSync, solusi scaling Layer 2 menggunakan teknologi zero-knowledge proof"
 		},
-		"matter-labs": {
-			"description": "Matter Labs - Tool"
+		"optimism_team": {
+			"description": "Tim inti di balik Optimism L2 dan visi Superchain untuk Ethereum yang dapat diskalakan"
 		},
-		"optimism-team": {
-			"description": "OP Labs - Tool"
+		"alchemy_team": {
+			"description": "Penyedia infrastruktur Web3 terkemuka yang menawarkan API node, alat developer, dan data blockchain"
 		},
-		"alchemy-team": {
-			"description": "Alchemy - Tool"
+		"chainlink_labs": {
+			"description": "Tim yang membangun jaringan oracle Chainlink, protokol cross-chain CCIP, dan infrastruktur data terdesentralisasi"
 		},
-		"chainlink-labs": {
-			"description": "Chainlink Labs - Tool"
+		"eigenlayer_team": {
+			"description": "Tim yang membangun protokol restaking EigenLayer yang memungkinkan keamanan bersama untuk aplikasi AVS"
 		},
-		"eigenlayer-team": {
-			"description": "Eigen Labs - Tool"
+		"uniswap_labs": {
+			"description": "Tim di balik Uniswap, protokol exchange terdesentralisasi terbesar berdasarkan volume"
 		},
-		"uniswap-labs": {
-			"description": "Uniswap Labs - Tool"
+		"jump_crypto": {
+			"description": "Cabang kripto dari firma trading yang membangun bridge Wormhole dan berinvestasi di infrastruktur blockchain"
 		},
-		"jump-crypto": {
-			"description": "Jump Crypto - Tool"
+		"wintermute_trading": {
+			"description": "Market maker kripto besar yang menyediakan likuiditas di exchange dan protokol DeFi"
 		},
-		"wintermute-trading": {
-			"description": "Wintermute - Tool"
+		"gauntlet_network": {
+			"description": "Firma manajemen risiko DeFi menggunakan simulasi untuk mengoptimalkan parameter dan ekonomi protokol"
 		},
-		"gauntlet-network": {
-			"description": "Gauntlet - Tool"
+		"dealroom_crypto": {
+			"description": "Database startup dan funding yang melacak putaran perusahaan Web3, valuasi, dan aktivitas investor"
 		},
-		"dealroom-crypto": {
-			"description": "Dealroom - Tool"
+		"pitchbook_crypto": {
+			"description": "Database kelas institusional untuk deal VC, putaran funding kripto, dan analisis pasar"
 		},
-		"pitchbook-crypto": {
-			"description": "PitchBook - Tool"
-		},
-		"crypto-fundraising": {
-			"description": "Crypto Fundraising - Tool"
+		"crypto_fundraising": {
+			"description": "Pelacak gratis untuk putaran funding kripto, aktivitas investor, dan data funding startup"
 		}
 	}
 }

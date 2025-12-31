@@ -2,7 +2,7 @@
 	"category_seo": {
 		"title": "Web3 Ekipleri ve VC'ler - Yapımcılar ve Yatırımcılar | BiuBiu Tools",
 		"description": "Web3 ekiplerini, yapımcıları ve yatırımcıları keşfedin. Kimin ne inşa ettiğini ve akıllı paranın nereye yatırım yaptığını takip edin.",
-		"keywords": "web3 ekipleri, kripto yapımcılar, blokzincir vc'leri, kripto yatırımcılar",
+		"keywords": "web3 ekipleri, kripto vc'ler, blokzincir yatırımcılar, kripto yapımcılar, risk sermayesi",
 		"faqs": [
 			{
 				"question": "Web3 ekiplerini nasıl araştırırım?",
@@ -19,134 +19,131 @@
 		]
 	},
 	"tools": {
-		"a16z-crypto": {
-			"description": "a16z crypto - Tool"
+		"paradigm_vc": {
+			"description": "Teknik katkıları, açık kaynak araçları ve büyük DeFi ile altyapı projelerini desteklemesiyle tanınan araştırma odaklı kripto VC"
 		},
-		"paradigm-vc": {
-			"description": "Paradigm - Tool"
+		"sequoia_crypto": {
+			"description": "Kriptoya genişleyen efsanevi Silikon Vadisi VC'si, FTX, Polygon ve diğer büyük Web3 şirketlerini destekliyor"
 		},
-		"sequoia-crypto": {
-			"description": "Sequoia Capital - Tool"
+		"polychain_capital": {
+			"description": "Eski Coinbase çalışanı tarafından kurulan kripto-yerli fon, Compound, Maker ve Cosmos'un erken yatırımcısı"
 		},
-		"polychain-capital": {
-			"description": "Polychain Capital - Tool"
+		"pantera_capital": {
+			"description": "İlk kripto yatırım firmalarından biri, 2013'ten beri blokzincir odaklı hedge fonları ve girişim fonları yönetiyor"
 		},
-		"pantera-capital": {
-			"description": "Pantera Capital - Tool"
+		"dragonfly_capital": {
+			"description": "Asya'da güçlü varlığa sahip global kripto VC, DeFi, altyapı ve tüketici kriptoya yatırım yapıyor"
 		},
-		"dragonfly-capital": {
-			"description": "Dragonfly - Tool"
+		"multicoin_capital": {
+			"description": "Solana ekosistemi yatırımları ve Layer 1 blokzincir bahisleriyle tanınan tez odaklı kripto fon"
 		},
-		"multicoin-capital": {
-			"description": "Multicoin Capital - Tool"
+		"electric_capital": {
+			"description": "Yıllık geliştirici raporları yayınlayan ve Web3 altyapı projelerine yatırım yapan geliştirici odaklı VC"
 		},
-		"electric-capital": {
-			"description": "Electric Capital - Tool"
+		"framework_ventures": {
+			"description": "Uygulamalı katılımı ve protokol yönetişimi katılımıyla tanınan aktif DeFi ve oyun yatırımcısı"
 		},
-		"framework-ventures": {
-			"description": "Framework Ventures - Tool"
+		"delphi_ventures": {
+			"description": "Delphi Digital'in araştırma destekli girişim kolu, DeFi, oyun ve NFT altyapısına yatırım yapıyor"
 		},
-		"delphi-ventures": {
-			"description": "Delphi Ventures - Tool"
+		"placeholder_vc": {
+			"description": "Merkeziyetsiz protokoller, yönetişim sistemleri ve ağ sahiplik modellerine odaklanan tez odaklı VC"
 		},
-		"placeholder-vc": {
-			"description": "Placeholder - Tool"
+		"variant_fund": {
+			"description": "Web3'te kullanıcı sahipliğindeki ağlara ve token tabanlı sahiplik modellerine odaklanan VC"
 		},
-		"variant-fund": {
-			"description": "Variant - Tool"
+		"hashed_vc": {
+			"description": "Güçlü Asya ağıyla oyun, DeFi ve altyapıya yatırım yapan önde gelen Koreli kripto VC"
 		},
-		"hashed-vc": {
-			"description": "Hashed - Tool"
+		"spartan_group": {
+			"description": "Girişim yatırımını ticaret ve danışmanlık hizmetleriyle birleştiren Asya odaklı kripto fon"
 		},
-		"spartan-group": {
-			"description": "Spartan Group - Tool"
+		"hack_vc": {
+			"description": "Eski a16z ortağı tarafından yönetilen, altyapı ve teknik kuruculara odaklanan erken aşama kripto VC"
 		},
-		"hack-vc": {
-			"description": "Hack VC - Tool"
+		"bankless_ventures": {
+			"description": "Bankless medya markasından topluluk destekli girişim fonu, Ethereum ekosistemine yatırım yapıyor"
 		},
-		"bankless-ventures": {
-			"description": "Bankless Ventures - Tool"
+		"1kx_capital": {
+			"description": "Token ağları, yönetişim ve erken aşama protokol yatırımlarına odaklanan Avrupalı kripto VC"
 		},
-		"1kx-capital": {
-			"description": "1kx - Tool"
+		"robot_ventures": {
+			"description": "Compound yaratıcısı Robert Leshner tarafından kurulan, DeFi inovasyonunu destekleyen erken aşama kripto fon"
 		},
-		"robot-ventures": {
-			"description": "Robot Ventures - Tool"
+		"coinbase_ventures": {
+			"description": "Coinbase'in stratejik yatırım kolu, DeFi, NFT'ler ve altyapıdaki ekosistem projelerini destekliyor"
 		},
-		"coinbase-ventures": {
-			"description": "Coinbase Ventures - Tool"
+		"binance_labs": {
+			"description": "Binance'in girişim kolu ve inkübatörü, global olarak blokzincir startup'larına yatırım yapıyor ve hızlandırıyor"
 		},
-		"binance-labs": {
-			"description": "Binance Labs - Tool"
+		"okx_ventures": {
+			"description": "OKX borsasının yatırım kolu, altyapı ve uygulamalarda Web3 yapımcılarını destekliyor"
 		},
-		"okx-ventures": {
-			"description": "OKX Ventures - Tool"
+		"kraken_ventures": {
+			"description": "Kraken borsasının stratejik yatırım kolu, altyapı ve ekosistem geliştirmeye odaklanıyor"
 		},
-		"kraken-ventures": {
-			"description": "Kraken Ventures - Tool"
+		"circle_ventures": {
+			"description": "Circle'ın (USDC ihraççısı) yatırım kolu, stablecoin altyapısı ve fintech projelerini destekliyor"
 		},
-		"circle-ventures": {
-			"description": "Circle Ventures - Tool"
+		"galaxy_ventures": {
+			"description": "Galaxy Digital'in girişim kolu, kripto ve blokzincir genelinde kurumsal düzeyde yatırımlar"
 		},
-		"galaxy-ventures": {
-			"description": "Galaxy Ventures - Tool"
+		"alliance_dao": {
+			"description": "En iyi kripto kuruculardan mentorluk ile kohort tabanlı programlar yürüten Web3 hızlandırıcı"
 		},
-		"alliance-dao": {
-			"description": "Alliance - Tool"
+		"ycombinator_crypto": {
+			"description": "Standart batch programı aracılığıyla kripto şirketlerini destekleyen efsanevi startup hızlandırıcısı"
 		},
-		"ycombinator-crypto": {
-			"description": "Y Combinator - Tool"
+		"outlier_ventures": {
+			"description": "Token tabanlı startup'lar için uygulamalı destekle Base Camp programları yürüten Web3 hızlandırıcı"
 		},
-		"outlier-ventures": {
-			"description": "Outlier Ventures - Tool"
+		"longhash_ventures": {
+			"description": "Asya-Pasifik bölgesindeki Web3 kuruculara odaklanan Singapur merkezli hızlandırıcı ve VC"
 		},
-		"longhash-ventures": {
-			"description": "LongHash Ventures - Tool"
+		"techstars_crypto": {
+			"description": "Mentor ağıyla blokzincir ve kripto odaklı kohortlar yürüten global startup hızlandırıcısı"
 		},
-		"techstars-crypto": {
-			"description": "Techstars - Tool"
+		"consensys_team": {
+			"description": "MetaMask, Infura ve diğer çekirdek ekosistem araçlarını inşa eden Ethereum altyapı şirketi"
 		},
-		"consensys-team": {
-			"description": "Consensys - Tool"
+		"offchain_labs": {
+			"description": "Optimistic rollup'lar kullanan önde gelen Ethereum Layer 2 ölçekleme çözümü Arbitrum'u inşa eden ekip"
 		},
-		"offchain-labs": {
-			"description": "Offchain Labs - Tool"
+		"matter_labs": {
+			"description": "Sıfır bilgi kanıtı teknolojisi kullanan Layer 2 ölçekleme çözümü zkSync'i inşa eden ekip"
 		},
-		"matter-labs": {
-			"description": "Matter Labs - Tool"
+		"optimism_team": {
+			"description": "Optimism L2 ve ölçeklenebilir Ethereum için Superchain vizyonunun arkasındaki çekirdek ekip"
 		},
-		"optimism-team": {
-			"description": "OP Labs - Tool"
+		"alchemy_team": {
+			"description": "Node API'leri, geliştirici araçları ve blokzincir verileri sunan önde gelen Web3 altyapı sağlayıcısı"
 		},
-		"alchemy-team": {
-			"description": "Alchemy - Tool"
+		"chainlink_labs": {
+			"description": "Chainlink oracle ağı, CCIP çapraz zincir protokolü ve merkeziyetsiz veri altyapısını inşa eden ekip"
 		},
-		"chainlink-labs": {
-			"description": "Chainlink Labs - Tool"
+		"eigenlayer_team": {
+			"description": "AVS uygulamaları için paylaşımlı güvenliği mümkün kılan EigenLayer restaking protokolünü inşa eden ekip"
 		},
-		"eigenlayer-team": {
-			"description": "Eigen Labs - Tool"
+		"uniswap_labs": {
+			"description": "Hacim bazında en büyük merkeziyetsiz borsa protokolü Uniswap'ın arkasındaki ekip"
 		},
-		"uniswap-labs": {
-			"description": "Uniswap Labs - Tool"
+		"jump_crypto": {
+			"description": "Wormhole köprüsünü inşa eden ve blokzincir altyapısına yatırım yapan ticaret firmasının kripto kolu"
 		},
-		"jump-crypto": {
-			"description": "Jump Crypto - Tool"
+		"wintermute_trading": {
+			"description": "Borsalar ve DeFi protokollerinde likidite sağlayan büyük kripto piyasa yapıcısı"
 		},
-		"wintermute-trading": {
-			"description": "Wintermute - Tool"
+		"gauntlet_network": {
+			"description": "Protokol parametrelerini ve ekonomisini optimize etmek için simülasyonlar kullanan DeFi risk yönetimi firması"
 		},
-		"gauntlet-network": {
-			"description": "Gauntlet - Tool"
+		"dealroom_crypto": {
+			"description": "Web3 şirket turlarını, değerlemeleri ve yatırımcı aktivitesini takip eden startup ve fonlama veritabanı"
 		},
-		"dealroom-crypto": {
-			"description": "Dealroom - Tool"
+		"pitchbook_crypto": {
+			"description": "VC anlaşmaları, kripto fonlama turları ve pazar analizi için kurumsal düzeyde veritabanı"
 		},
-		"pitchbook-crypto": {
-			"description": "PitchBook - Tool"
-		},
-		"crypto-fundraising": {
-			"description": "Crypto Fundraising - Tool"
+		"crypto_fundraising": {
+			"description": "Kripto fonlama turları, yatırımcı aktivitesi ve startup fonlama verileri için ücretsiz takipçi"
 		}
 	}
 }

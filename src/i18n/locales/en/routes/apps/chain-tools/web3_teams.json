@@ -2,6 +2,7 @@
 	"category_seo": {
 		"title": "Web3 Teams & VCs - Builders & Investors | BiuBiu Tools",
 		"description": "Discover Web3 teams, builders, and investors. Track who's building what and where smart money is investing.",
+		"keywords": "web3 teams, crypto vcs, blockchain investors, crypto builders, venture capital",
 		"faqs": [
 			{
 				"question": "How do I research Web3 teams?",
@@ -18,134 +19,131 @@
 		]
 	},
 	"tools": {
-		"a16z-crypto": {
-			"description": "a16z crypto - Tool"
+		"paradigm_vc": {
+			"description": "Research-focused crypto VC known for technical contributions, open-source tooling, and backing major DeFi and infrastructure projects"
 		},
-		"paradigm-vc": {
-			"description": "Paradigm - Tool"
+		"sequoia_crypto": {
+			"description": "Legendary Silicon Valley VC expanding into crypto, backing FTX, Polygon, and other major Web3 companies"
 		},
-		"sequoia-crypto": {
-			"description": "Sequoia Capital - Tool"
+		"polychain_capital": {
+			"description": "Crypto-native fund founded by former Coinbase employee, early investor in Compound, Maker, and Cosmos"
 		},
-		"polychain-capital": {
-			"description": "Polychain Capital - Tool"
+		"pantera_capital": {
+			"description": "One of the first crypto investment firms, managing blockchain-focused hedge funds and venture funds since 2013"
 		},
-		"pantera-capital": {
-			"description": "Pantera Capital - Tool"
+		"dragonfly_capital": {
+			"description": "Global crypto VC with strong Asia presence, investing across DeFi, infrastructure, and consumer crypto"
 		},
-		"dragonfly-capital": {
-			"description": "Dragonfly - Tool"
+		"multicoin_capital": {
+			"description": "Thesis-driven crypto fund known for Solana ecosystem investments and Layer 1 blockchain bets"
 		},
-		"multicoin-capital": {
-			"description": "Multicoin Capital - Tool"
+		"electric_capital": {
+			"description": "Developer-focused VC publishing annual developer reports and investing in Web3 infrastructure projects"
 		},
-		"electric-capital": {
-			"description": "Electric Capital - Tool"
+		"framework_ventures": {
+			"description": "Active DeFi and gaming investor known for hands-on involvement and protocol governance participation"
 		},
-		"framework-ventures": {
-			"description": "Framework Ventures - Tool"
+		"delphi_ventures": {
+			"description": "Research-backed venture arm of Delphi Digital, investing in DeFi, gaming, and NFT infrastructure"
 		},
-		"delphi-ventures": {
-			"description": "Delphi Ventures - Tool"
+		"placeholder_vc": {
+			"description": "Thesis-driven VC focused on decentralized protocols, governance systems, and network ownership models"
 		},
-		"placeholder-vc": {
-			"description": "Placeholder - Tool"
+		"variant_fund": {
+			"description": "VC focused on user-owned networks and token-based ownership models in Web3"
 		},
-		"variant-fund": {
-			"description": "Variant - Tool"
+		"hashed_vc": {
+			"description": "Leading Korean crypto VC investing across gaming, DeFi, and infrastructure with strong Asia network"
 		},
-		"hashed-vc": {
-			"description": "Hashed - Tool"
+		"spartan_group": {
+			"description": "Asia-focused crypto fund combining venture investment with trading and advisory services"
 		},
-		"spartan-group": {
-			"description": "Spartan Group - Tool"
+		"hack_vc": {
+			"description": "Early-stage crypto VC led by former a16z partner, focusing on infrastructure and technical founders"
 		},
-		"hack-vc": {
-			"description": "Hack VC - Tool"
+		"bankless_ventures": {
+			"description": "Community-backed venture fund from the Bankless media brand, investing in Ethereum ecosystem"
 		},
-		"bankless-ventures": {
-			"description": "Bankless Ventures - Tool"
+		"1kx_capital": {
+			"description": "European crypto VC focused on token networks, governance, and early-stage protocol investments"
 		},
-		"1kx-capital": {
-			"description": "1kx - Tool"
+		"robot_ventures": {
+			"description": "Early-stage crypto fund founded by Compound creator Robert Leshner, backing DeFi innovation"
 		},
-		"robot-ventures": {
-			"description": "Robot Ventures - Tool"
+		"coinbase_ventures": {
+			"description": "Strategic investment arm of Coinbase, backing ecosystem projects across DeFi, NFTs, and infrastructure"
 		},
-		"coinbase-ventures": {
-			"description": "Coinbase Ventures - Tool"
+		"binance_labs": {
+			"description": "Venture arm and incubator of Binance, investing in and accelerating blockchain startups globally"
 		},
-		"binance-labs": {
-			"description": "Binance Labs - Tool"
+		"okx_ventures": {
+			"description": "Investment arm of OKX exchange, supporting Web3 builders across infrastructure and applications"
 		},
-		"okx-ventures": {
-			"description": "OKX Ventures - Tool"
+		"kraken_ventures": {
+			"description": "Strategic investment arm of Kraken exchange, focusing on infrastructure and ecosystem development"
 		},
-		"kraken-ventures": {
-			"description": "Kraken Ventures - Tool"
+		"circle_ventures": {
+			"description": "Investment arm of Circle (USDC issuer), backing stablecoin infrastructure and fintech projects"
 		},
-		"circle-ventures": {
-			"description": "Circle Ventures - Tool"
+		"galaxy_ventures": {
+			"description": "Venture arm of Galaxy Digital, institutional-grade investments across crypto and blockchain"
 		},
-		"galaxy-ventures": {
-			"description": "Galaxy Ventures - Tool"
+		"alliance_dao": {
+			"description": "Web3 accelerator running cohort-based programs with mentorship from top crypto founders"
 		},
-		"alliance-dao": {
-			"description": "Alliance - Tool"
+		"ycombinator_crypto": {
+			"description": "Legendary startup accelerator backing crypto companies through its standard batch program"
 		},
-		"ycombinator-crypto": {
-			"description": "Y Combinator - Tool"
+		"outlier_ventures": {
+			"description": "Web3 accelerator running Base Camp programs for token-based startups with hands-on support"
 		},
-		"outlier-ventures": {
-			"description": "Outlier Ventures - Tool"
+		"longhash_ventures": {
+			"description": "Singapore-based accelerator and VC focused on Web3 founders in Asia-Pacific region"
 		},
-		"longhash-ventures": {
-			"description": "LongHash Ventures - Tool"
+		"techstars_crypto": {
+			"description": "Global startup accelerator running blockchain and crypto-focused cohorts with mentor network"
 		},
-		"techstars-crypto": {
-			"description": "Techstars - Tool"
+		"consensys_team": {
+			"description": "Ethereum infrastructure company building MetaMask, Infura, and other core ecosystem tools"
 		},
-		"consensys-team": {
-			"description": "Consensys - Tool"
+		"offchain_labs": {
+			"description": "Team building Arbitrum, the leading Ethereum Layer 2 scaling solution using optimistic rollups"
 		},
-		"offchain-labs": {
-			"description": "Offchain Labs - Tool"
+		"matter_labs": {
+			"description": "Team building zkSync, a Layer 2 scaling solution using zero-knowledge proof technology"
 		},
-		"matter-labs": {
-			"description": "Matter Labs - Tool"
+		"optimism_team": {
+			"description": "Core team behind Optimism L2 and the Superchain vision for scalable Ethereum"
 		},
-		"optimism-team": {
-			"description": "OP Labs - Tool"
+		"alchemy_team": {
+			"description": "Leading Web3 infrastructure provider offering node APIs, developer tools, and blockchain data"
 		},
-		"alchemy-team": {
-			"description": "Alchemy - Tool"
+		"chainlink_labs": {
+			"description": "Team building Chainlink oracle network, CCIP cross-chain protocol, and decentralized data infrastructure"
 		},
-		"chainlink-labs": {
-			"description": "Chainlink Labs - Tool"
+		"eigenlayer_team": {
+			"description": "Team building EigenLayer restaking protocol enabling shared security for AVS applications"
 		},
-		"eigenlayer-team": {
-			"description": "Eigen Labs - Tool"
+		"uniswap_labs": {
+			"description": "Team behind Uniswap, the largest decentralized exchange protocol by volume"
 		},
-		"uniswap-labs": {
-			"description": "Uniswap Labs - Tool"
+		"jump_crypto": {
+			"description": "Trading firm's crypto arm building Wormhole bridge and investing in blockchain infrastructure"
 		},
-		"jump-crypto": {
-			"description": "Jump Crypto - Tool"
+		"wintermute_trading": {
+			"description": "Major crypto market maker providing liquidity across exchanges and DeFi protocols"
 		},
-		"wintermute-trading": {
-			"description": "Wintermute - Tool"
+		"gauntlet_network": {
+			"description": "DeFi risk management firm using simulations to optimize protocol parameters and economics"
 		},
-		"gauntlet-network": {
-			"description": "Gauntlet - Tool"
+		"dealroom_crypto": {
+			"description": "Startup and funding database tracking Web3 company raises, valuations, and investor activity"
 		},
-		"dealroom-crypto": {
-			"description": "Dealroom - Tool"
+		"pitchbook_crypto": {
+			"description": "Institutional-grade database for VC deals, crypto fundraising rounds, and market analysis"
 		},
-		"pitchbook-crypto": {
-			"description": "PitchBook - Tool"
-		},
-		"crypto-fundraising": {
-			"description": "Crypto Fundraising - Tool"
+		"crypto_fundraising": {
+			"description": "Free tracker for crypto funding rounds, investor activity, and startup fundraising data"
 		}
 	}
 }

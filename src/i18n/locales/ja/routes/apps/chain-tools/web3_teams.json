@@ -2,7 +2,7 @@
 	"category_seo": {
 		"title": "Web3チームとVC - ビルダーと投資家 | BiuBiu Tools",
 		"description": "Web3チーム、ビルダー、投資家を発見。誰が何を構築し、スマートマネーがどこに投資しているかを追跡。",
-		"keywords": "",
+		"keywords": "web3チーム, クリプトVC, ブロックチェーン投資家, クリプトビルダー, ベンチャーキャピタル",
 		"faqs": [
 			{
 				"question": "Web3チームをどのようにリサーチしますか？",
@@ -19,134 +19,131 @@
 		]
 	},
 	"tools": {
-		"a16z-crypto": {
-			"description": "a16z crypto - Tool"
+		"paradigm_vc": {
+			"description": "技術的貢献、オープンソースツール、主要なDeFiおよびインフラプロジェクトへの支援で知られる研究重視のクリプトVC"
 		},
-		"paradigm-vc": {
-			"description": "Paradigm - Tool"
+		"sequoia_crypto": {
+			"description": "クリプトに進出した伝説的なシリコンバレーVC、FTX、Polygon、その他の主要Web3企業を支援"
 		},
-		"sequoia-crypto": {
-			"description": "Sequoia Capital - Tool"
+		"polychain_capital": {
+			"description": "元Coinbase従業員が設立したクリプトネイティブファンド、Compound、Maker、Cosmosの早期投資家"
 		},
-		"polychain-capital": {
-			"description": "Polychain Capital - Tool"
+		"pantera_capital": {
+			"description": "最初のクリプト投資会社の1つ、2013年からブロックチェーン特化のヘッジファンドとベンチャーファンドを運用"
 		},
-		"pantera-capital": {
-			"description": "Pantera Capital - Tool"
+		"dragonfly_capital": {
+			"description": "アジアで強いプレゼンスを持つグローバルクリプトVC、DeFi、インフラ、コンシューマークリプトに投資"
 		},
-		"dragonfly-capital": {
-			"description": "Dragonfly - Tool"
+		"multicoin_capital": {
+			"description": "Solanaエコシステム投資とLayer 1ブロックチェーンへの賭けで知られるテーシス駆動のクリプトファンド"
 		},
-		"multicoin-capital": {
-			"description": "Multicoin Capital - Tool"
+		"electric_capital": {
+			"description": "年次開発者レポートを発行しWeb3インフラプロジェクトに投資する開発者重視のVC"
 		},
-		"electric-capital": {
-			"description": "Electric Capital - Tool"
+		"framework_ventures": {
+			"description": "実践的な関与とプロトコルガバナンス参加で知られるアクティブなDeFiおよびゲーミング投資家"
 		},
-		"framework-ventures": {
-			"description": "Framework Ventures - Tool"
+		"delphi_ventures": {
+			"description": "Delphi Digitalのリサーチ支援ベンチャー部門、DeFi、ゲーミング、NFTインフラに投資"
 		},
-		"delphi-ventures": {
-			"description": "Delphi Ventures - Tool"
+		"placeholder_vc": {
+			"description": "分散型プロトコル、ガバナンスシステム、ネットワーク所有権モデルに焦点を当てたテーシス駆動のVC"
 		},
-		"placeholder-vc": {
-			"description": "Placeholder - Tool"
+		"variant_fund": {
+			"description": "Web3でユーザー所有ネットワークとトークンベースの所有権モデルに焦点を当てたVC"
 		},
-		"variant-fund": {
-			"description": "Variant - Tool"
+		"hashed_vc": {
+			"description": "強力なアジアネットワークを持ち、ゲーミング、DeFi、インフラに投資する韓国のリーディングクリプトVC"
 		},
-		"hashed-vc": {
-			"description": "Hashed - Tool"
+		"spartan_group": {
+			"description": "ベンチャー投資とトレーディング、アドバイザリーサービスを組み合わせたアジア重視のクリプトファンド"
 		},
-		"spartan-group": {
-			"description": "Spartan Group - Tool"
+		"hack_vc": {
+			"description": "元a16zパートナーが率いる早期ステージクリプトVC、インフラと技術創業者に焦点"
 		},
-		"hack-vc": {
-			"description": "Hack VC - Tool"
+		"bankless_ventures": {
+			"description": "Banklessメディアブランドからのコミュニティ支援ベンチャーファンド、イーサリアムエコシステムに投資"
 		},
-		"bankless-ventures": {
-			"description": "Bankless Ventures - Tool"
+		"1kx_capital": {
+			"description": "トークンネットワーク、ガバナンス、早期ステージプロトコル投資に焦点を当てた欧州クリプトVC"
 		},
-		"1kx-capital": {
-			"description": "1kx - Tool"
+		"robot_ventures": {
+			"description": "Compound創設者Robert Leshnerが設立した早期ステージクリプトファンド、DeFiイノベーションを支援"
 		},
-		"robot-ventures": {
-			"description": "Robot Ventures - Tool"
+		"coinbase_ventures": {
+			"description": "Coinbaseの戦略的投資部門、DeFi、NFT、インフラのエコシステムプロジェクトを支援"
 		},
-		"coinbase-ventures": {
-			"description": "Coinbase Ventures - Tool"
+		"binance_labs": {
+			"description": "Binanceのベンチャー部門およびインキュベーター、グローバルにブロックチェーンスタートアップに投資・加速"
 		},
-		"binance-labs": {
-			"description": "Binance Labs - Tool"
+		"okx_ventures": {
+			"description": "OKX取引所の投資部門、インフラとアプリケーションのWeb3ビルダーを支援"
 		},
-		"okx-ventures": {
-			"description": "OKX Ventures - Tool"
+		"kraken_ventures": {
+			"description": "Kraken取引所の戦略的投資部門、インフラとエコシステム開発に焦点"
 		},
-		"kraken-ventures": {
-			"description": "Kraken Ventures - Tool"
+		"circle_ventures": {
+			"description": "Circle（USDC発行者）の投資部門、ステーブルコインインフラとフィンテックプロジェクトを支援"
 		},
-		"circle-ventures": {
-			"description": "Circle Ventures - Tool"
+		"galaxy_ventures": {
+			"description": "Galaxy Digitalのベンチャー部門、クリプトとブロックチェーンへの機関投資家グレード投資"
 		},
-		"galaxy-ventures": {
-			"description": "Galaxy Ventures - Tool"
+		"alliance_dao": {
+			"description": "トップクリプト創業者からのメンターシップ付きコホートベースプログラムを運営するWeb3アクセラレーター"
 		},
-		"alliance-dao": {
-			"description": "Alliance - Tool"
+		"ycombinator_crypto": {
+			"description": "標準バッチプログラムを通じてクリプト企業を支援する伝説的なスタートアップアクセラレーター"
 		},
-		"ycombinator-crypto": {
-			"description": "Y Combinator - Tool"
+		"outlier_ventures": {
+			"description": "トークンベースのスタートアップ向けにBase Campプログラムを実施するWeb3アクセラレーター"
 		},
-		"outlier-ventures": {
-			"description": "Outlier Ventures - Tool"
+		"longhash_ventures": {
+			"description": "アジア太平洋地域のWeb3創業者に焦点を当てたシンガポールベースのアクセラレーター・VC"
 		},
-		"longhash-ventures": {
-			"description": "LongHash Ventures - Tool"
+		"techstars_crypto": {
+			"description": "メンターネットワークを持つブロックチェーン・クリプト重視のコホートを運営するグローバルスタートアップアクセラレーター"
 		},
-		"techstars-crypto": {
-			"description": "Techstars - Tool"
+		"consensys_team": {
+			"description": "MetaMask、Infura、その他のコアエコシステムツールを構築するイーサリアムインフラ企業"
 		},
-		"consensys-team": {
-			"description": "Consensys - Tool"
+		"offchain_labs": {
+			"description": "Optimistic Rollupsを使用するリーディングイーサリアムLayer 2スケーリングソリューションArbitrumを構築するチーム"
 		},
-		"offchain-labs": {
-			"description": "Offchain Labs - Tool"
+		"matter_labs": {
+			"description": "ゼロ知識証明技術を使用するLayer 2スケーリングソリューションzkSyncを構築するチーム"
 		},
-		"matter-labs": {
-			"description": "Matter Labs - Tool"
+		"optimism_team": {
+			"description": "Optimism L2とスケーラブルなイーサリアムのためのSuperchainビジョンを支えるコアチーム"
 		},
-		"optimism-team": {
-			"description": "OP Labs - Tool"
+		"alchemy_team": {
+			"description": "ノードAPI、開発者ツール、ブロックチェーンデータを提供するリーディングWeb3インフラプロバイダー"
 		},
-		"alchemy-team": {
-			"description": "Alchemy - Tool"
+		"chainlink_labs": {
+			"description": "Chainlinkオラクルネットワーク、CCIPクロスチェーンプロトコル、分散型データインフラを構築するチーム"
 		},
-		"chainlink-labs": {
-			"description": "Chainlink Labs - Tool"
+		"eigenlayer_team": {
+			"description": "AVSアプリケーション向けの共有セキュリティを可能にするEigenLayerリステーキングプロトコルを構築するチーム"
 		},
-		"eigenlayer-team": {
-			"description": "Eigen Labs - Tool"
+		"uniswap_labs": {
+			"description": "取引量で最大の分散型取引所プロトコルUniswapを支えるチーム"
 		},
-		"uniswap-labs": {
-			"description": "Uniswap Labs - Tool"
+		"jump_crypto": {
+			"description": "Wormholeブリッジを構築しブロックチェーンインフラに投資するトレーディング会社のクリプト部門"
 		},
-		"jump-crypto": {
-			"description": "Jump Crypto - Tool"
+		"wintermute_trading": {
+			"description": "取引所とDeFiプロトコル全体に流動性を提供する主要クリプトマーケットメーカー"
 		},
-		"wintermute-trading": {
-			"description": "Wintermute - Tool"
+		"gauntlet_network": {
+			"description": "シミュレーションを使用してプロトコルパラメーターと経済を最適化するDeFiリスク管理会社"
 		},
-		"gauntlet-network": {
-			"description": "Gauntlet - Tool"
+		"dealroom_crypto": {
+			"description": "Web3企業の調達ラウンド、バリュエーション、投資家活動を追跡するスタートアップ・資金調達データベース"
 		},
-		"dealroom-crypto": {
-			"description": "Dealroom - Tool"
+		"pitchbook_crypto": {
+			"description": "VC取引、クリプト資金調達ラウンド、市場分析のための機関投資家グレードデータベース"
 		},
-		"pitchbook-crypto": {
-			"description": "PitchBook - Tool"
-		},
-		"crypto-fundraising": {
-			"description": "Crypto Fundraising - Tool"
+		"crypto_fundraising": {
+			"description": "クリプト資金調達ラウンド、投資家活動、スタートアップ資金データの無料トラッカー"
 		}
 	}
 }

@@ -2,7 +2,7 @@
 	"category_seo": {
 		"title": "Web3 команды и венчурные капиталисты - Строители и инвесторы | BiuBiu Tools",
 		"description": "Откройте для себя Web3 команды, строителей и инвесторов. Отслеживайте, кто что строит и куда инвестируют умные деньги.",
-		"keywords": "web3 команды, крипто строители, венчурные капиталисты блокчейна, крипто инвесторы",
+		"keywords": "web3 команды, крипто vc, блокчейн инвесторы, крипто строители, венчурный капитал",
 		"faqs": [
 			{
 				"question": "Как исследовать Web3 команды?",
@@ -19,134 +19,131 @@
 		]
 	},
 	"tools": {
-		"a16z-crypto": {
-			"description": "a16z crypto - Tool"
+		"paradigm_vc": {
+			"description": "Исследовательский крипто VC, известный техническими вкладами, open-source инструментами и поддержкой крупных DeFi и инфраструктурных проектов"
 		},
-		"paradigm-vc": {
-			"description": "Paradigm - Tool"
+		"sequoia_crypto": {
+			"description": "Легендарный VC Кремниевой долины, расширяющийся в крипто, поддерживающий FTX, Polygon и другие крупные Web3 компании"
 		},
-		"sequoia-crypto": {
-			"description": "Sequoia Capital - Tool"
+		"polychain_capital": {
+			"description": "Крипто-нативный фонд, основанный бывшим сотрудником Coinbase, ранний инвестор в Compound, Maker и Cosmos"
 		},
-		"polychain-capital": {
-			"description": "Polychain Capital - Tool"
+		"pantera_capital": {
+			"description": "Одна из первых крипто инвестиционных фирм, управляющая хедж-фондами и венчурными фондами с фокусом на блокчейн с 2013"
 		},
-		"pantera-capital": {
-			"description": "Pantera Capital - Tool"
+		"dragonfly_capital": {
+			"description": "Глобальный крипто VC с сильным присутствием в Азии, инвестирующий в DeFi, инфраструктуру и потребительский крипто"
 		},
-		"dragonfly-capital": {
-			"description": "Dragonfly - Tool"
+		"multicoin_capital": {
+			"description": "Тезисно-ориентированный крипто фонд, известный инвестициями в экосистему Solana и ставками на Layer 1 блокчейны"
 		},
-		"multicoin-capital": {
-			"description": "Multicoin Capital - Tool"
+		"electric_capital": {
+			"description": "VC с фокусом на разработчиков, публикующий годовые отчеты и инвестирующий в проекты инфраструктуры Web3"
 		},
-		"electric-capital": {
-			"description": "Electric Capital - Tool"
+		"framework_ventures": {
+			"description": "Активный DeFi и гейминг инвестор, известный практическим участием и участием в управлении протоколами"
 		},
-		"framework-ventures": {
-			"description": "Framework Ventures - Tool"
+		"delphi_ventures": {
+			"description": "Исследовательское венчурное подразделение Delphi Digital, инвестирующее в DeFi, гейминг и NFT инфраструктуру"
 		},
-		"delphi-ventures": {
-			"description": "Delphi Ventures - Tool"
+		"placeholder_vc": {
+			"description": "Тезисно-ориентированный VC, фокусирующийся на децентрализованных протоколах, системах управления и моделях владения сетями"
 		},
-		"placeholder-vc": {
-			"description": "Placeholder - Tool"
+		"variant_fund": {
+			"description": "VC, фокусирующийся на сетях, принадлежащих пользователям, и моделях владения на основе токенов в Web3"
 		},
-		"variant-fund": {
-			"description": "Variant - Tool"
+		"hashed_vc": {
+			"description": "Ведущий корейский крипто VC, инвестирующий в гейминг, DeFi и инфраструктуру с сильной азиатской сетью"
 		},
-		"hashed-vc": {
-			"description": "Hashed - Tool"
+		"spartan_group": {
+			"description": "Крипто фонд с фокусом на Азию, сочетающий венчурные инвестиции с трейдингом и консультационными услугами"
 		},
-		"spartan-group": {
-			"description": "Spartan Group - Tool"
+		"hack_vc": {
+			"description": "Ранний крипто VC под руководством бывшего партнера a16z, фокусирующийся на инфраструктуре и технических основателях"
 		},
-		"hack-vc": {
-			"description": "Hack VC - Tool"
+		"bankless_ventures": {
+			"description": "Венчурный фонд при поддержке сообщества медиа-бренда Bankless, инвестирующий в экосистему Ethereum"
 		},
-		"bankless-ventures": {
-			"description": "Bankless Ventures - Tool"
+		"1kx_capital": {
+			"description": "Европейский крипто VC, фокусирующийся на токен-сетях, управлении и ранних инвестициях в протоколы"
 		},
-		"1kx-capital": {
-			"description": "1kx - Tool"
+		"robot_ventures": {
+			"description": "Ранний крипто фонд, основанный создателем Compound Робертом Лешнером, поддерживающий DeFi инновации"
 		},
-		"robot-ventures": {
-			"description": "Robot Ventures - Tool"
+		"coinbase_ventures": {
+			"description": "Стратегическое инвестиционное подразделение Coinbase, поддерживающее проекты экосистемы в DeFi, NFT и инфраструктуре"
 		},
-		"coinbase-ventures": {
-			"description": "Coinbase Ventures - Tool"
+		"binance_labs": {
+			"description": "Венчурное подразделение и инкубатор Binance, инвестирующий и ускоряющий блокчейн стартапы глобально"
 		},
-		"binance-labs": {
-			"description": "Binance Labs - Tool"
+		"okx_ventures": {
+			"description": "Инвестиционное подразделение биржи OKX, поддерживающее Web3 строителей в инфраструктуре и приложениях"
 		},
-		"okx-ventures": {
-			"description": "OKX Ventures - Tool"
+		"kraken_ventures": {
+			"description": "Стратегическое инвестиционное подразделение биржи Kraken, фокусирующееся на инфраструктуре и развитии экосистемы"
 		},
-		"kraken-ventures": {
-			"description": "Kraken Ventures - Tool"
+		"circle_ventures": {
+			"description": "Инвестиционное подразделение Circle (эмитент USDC), поддерживающее инфраструктуру стейблкоинов и финтех проекты"
 		},
-		"circle-ventures": {
-			"description": "Circle Ventures - Tool"
+		"galaxy_ventures": {
+			"description": "Венчурное подразделение Galaxy Digital, институциональные инвестиции в крипто и блокчейн"
 		},
-		"galaxy-ventures": {
-			"description": "Galaxy Ventures - Tool"
+		"alliance_dao": {
+			"description": "Web3 акселератор, проводящий когортные программы с менторством от топ крипто основателей"
 		},
-		"alliance-dao": {
-			"description": "Alliance - Tool"
+		"ycombinator_crypto": {
+			"description": "Легендарный стартап акселератор, поддерживающий крипто компании через стандартную батч-программу"
 		},
-		"ycombinator-crypto": {
-			"description": "Y Combinator - Tool"
+		"outlier_ventures": {
+			"description": "Web3 акселератор, проводящий программы Base Camp для токен-стартапов с практической поддержкой"
 		},
-		"outlier-ventures": {
-			"description": "Outlier Ventures - Tool"
+		"longhash_ventures": {
+			"description": "Акселератор и VC из Сингапура, фокусирующийся на Web3 основателях в Азиатско-Тихоокеанском регионе"
 		},
-		"longhash-ventures": {
-			"description": "LongHash Ventures - Tool"
+		"techstars_crypto": {
+			"description": "Глобальный стартап акселератор, проводящий когорты с фокусом на блокчейн и крипто с сетью менторов"
 		},
-		"techstars-crypto": {
-			"description": "Techstars - Tool"
+		"consensys_team": {
+			"description": "Компания инфраструктуры Ethereum, создающая MetaMask, Infura и другие ключевые инструменты экосистемы"
 		},
-		"consensys-team": {
-			"description": "Consensys - Tool"
+		"offchain_labs": {
+			"description": "Команда, создающая Arbitrum, ведущее решение масштабирования Ethereum Layer 2 с использованием optimistic rollups"
 		},
-		"offchain-labs": {
-			"description": "Offchain Labs - Tool"
+		"matter_labs": {
+			"description": "Команда, создающая zkSync, решение масштабирования Layer 2 с использованием технологии доказательств с нулевым разглашением"
 		},
-		"matter-labs": {
-			"description": "Matter Labs - Tool"
+		"optimism_team": {
+			"description": "Основная команда за Optimism L2 и видением Superchain для масштабируемого Ethereum"
 		},
-		"optimism-team": {
-			"description": "OP Labs - Tool"
+		"alchemy_team": {
+			"description": "Ведущий провайдер инфраструктуры Web3, предлагающий API нод, инструменты разработчиков и данные блокчейна"
 		},
-		"alchemy-team": {
-			"description": "Alchemy - Tool"
+		"chainlink_labs": {
+			"description": "Команда, создающая сеть оракулов Chainlink, кросс-чейн протокол CCIP и децентрализованную инфраструктуру данных"
 		},
-		"chainlink-labs": {
-			"description": "Chainlink Labs - Tool"
+		"eigenlayer_team": {
+			"description": "Команда, создающая протокол рестейкинга EigenLayer, обеспечивающий общую безопасность для AVS приложений"
 		},
-		"eigenlayer-team": {
-			"description": "Eigen Labs - Tool"
+		"uniswap_labs": {
+			"description": "Команда за Uniswap, крупнейшим децентрализованным протоколом обмена по объему"
 		},
-		"uniswap-labs": {
-			"description": "Uniswap Labs - Tool"
+		"jump_crypto": {
+			"description": "Крипто подразделение торговой фирмы, создающее мост Wormhole и инвестирующее в блокчейн инфраструктуру"
 		},
-		"jump-crypto": {
-			"description": "Jump Crypto - Tool"
+		"wintermute_trading": {
+			"description": "Крупный крипто маркет-мейкер, обеспечивающий ликвидность на биржах и в DeFi протоколах"
 		},
-		"wintermute-trading": {
-			"description": "Wintermute - Tool"
+		"gauntlet_network": {
+			"description": "Компания управления рисками DeFi, использующая симуляции для оптимизации параметров и экономики протоколов"
 		},
-		"gauntlet-network": {
-			"description": "Gauntlet - Tool"
+		"dealroom_crypto": {
+			"description": "База данных стартапов и финансирования, отслеживающая раунды Web3 компаний, оценки и активность инвесторов"
 		},
-		"dealroom-crypto": {
-			"description": "Dealroom - Tool"
+		"pitchbook_crypto": {
+			"description": "Институциональная база данных для VC сделок, крипто раундов финансирования и анализа рынка"
 		},
-		"pitchbook-crypto": {
-			"description": "PitchBook - Tool"
-		},
-		"crypto-fundraising": {
-			"description": "Crypto Fundraising - Tool"
+		"crypto_fundraising": {
+			"description": "Бесплатный трекер крипто раундов финансирования, активности инвесторов и данных о финансировании стартапов"
 		}
 	}
 }

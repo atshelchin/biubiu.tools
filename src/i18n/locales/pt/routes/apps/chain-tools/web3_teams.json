@@ -1,152 +1,149 @@
 {
 	"category_seo": {
-		"title": "Equipes Web3 - Colaboração e Gestão de Projetos | BiuBiu Tools",
-		"description": "Ferramentas para equipes Web3, colaboração DAO, gestão de projetos e fluxo de trabalho de desenvolvimento descentralizado.",
-		"keywords": "equipes web3, colaboracao dao, gestao projetos blockchain, ferramentas equipes descentralizadas",
+		"title": "Equipes Web3 e VCs - Construtores e Investidores | BiuBiu Tools",
+		"description": "Descubra equipes Web3, construtores e investidores. Rastreie quem está construindo o quê e onde o smart money está investindo.",
+		"keywords": "equipes web3, vcs cripto, investidores blockchain, construtores cripto, capital de risco",
 		"faqs": [
 			{
-				"question": "Como as equipes Web3 trabalham juntas?",
-				"answer": "As equipes Web3 frequentemente trabalham remotamente e descentralizadamente usando: Discord/Telegram para comunicação, Notion/GitBook para documentação, GitHub para código, ferramentas de governança DAO para decisões, coordenação on-chain e cripto para pagamentos."
+				"question": "Como pesquiso equipes Web3?",
+				"answer": "Verifique os antecedentes da equipe no LinkedIn, valide projetos anteriores, procure atividade no GitHub e avalie a reputação na comunidade. Equipes anônimas carregam maior risco."
 			},
 			{
-				"question": "Quais ferramentas são essenciais para equipes Web3?",
-				"answer": "As ferramentas essenciais incluem: plataformas de comunicação (Discord, Telegram), software de gestão de projetos (Notion, Linear), controle de versões (GitHub), dashboards de governança (Snapshot, Tally), gestão de tesouraria (Gnosis Safe) e plataformas de pagamento (Sablier, Utopia)."
+				"question": "O que torna uma equipe Web3 forte?",
+				"answer": "Projetos bem-sucedidos anteriores, profundidade técnica, comunicação transparente, incentivos de tokens alinhados e engajamento genuíno com a comunidade. O desempenho passado importa."
 			},
 			{
-				"question": "Em que as equipes Web3 diferem das tradicionais?",
-				"answer": "As equipes Web3 tipicamente enfatizam: descentralização (sem hierarquias estritas), transparência (trabalho público, governança on-chain), alinhamento de incentivos (tokens, equidade), trabalho remoto-first, colaboração assíncrona global e uso de ferramentas cripto-native para coordenação."
+				"question": "Como os VCs avaliam projetos cripto?",
+				"answer": "Qualidade da equipe, inovação tecnológica, tamanho do mercado, tokenomics, posicionamento competitivo e tração. Estágio inicial foca na equipe, estágio posterior em métricas."
 			}
 		]
 	},
 	"tools": {
-		"a16z-crypto": {
-			"description": "a16z crypto - Tool"
+		"paradigm_vc": {
+			"description": "VC cripto focado em pesquisa, conhecido por contribuições técnicas, ferramentas open-source e apoio a projetos DeFi e infraestrutura"
 		},
-		"paradigm-vc": {
-			"description": "Paradigm - Tool"
+		"sequoia_crypto": {
+			"description": "Lendário VC do Vale do Silício expandindo para cripto, apoiando FTX, Polygon e outras grandes empresas Web3"
 		},
-		"sequoia-crypto": {
-			"description": "Sequoia Capital - Tool"
+		"polychain_capital": {
+			"description": "Fundo cripto-nativo fundado por ex-funcionário da Coinbase, investidor inicial em Compound, Maker e Cosmos"
 		},
-		"polychain-capital": {
-			"description": "Polychain Capital - Tool"
+		"pantera_capital": {
+			"description": "Uma das primeiras firmas de investimento cripto, gerenciando hedge funds e venture funds focados em blockchain desde 2013"
 		},
-		"pantera-capital": {
-			"description": "Pantera Capital - Tool"
+		"dragonfly_capital": {
+			"description": "VC cripto global com forte presença na Ásia, investindo em DeFi, infraestrutura e cripto de consumo"
 		},
-		"dragonfly-capital": {
-			"description": "Dragonfly - Tool"
+		"multicoin_capital": {
+			"description": "Fundo cripto orientado por tese, conhecido por investimentos no ecossistema Solana e apostas em blockchain Layer 1"
 		},
-		"multicoin-capital": {
-			"description": "Multicoin Capital - Tool"
+		"electric_capital": {
+			"description": "VC focado em desenvolvedores que publica relatórios anuais de desenvolvedores e investe em projetos de infraestrutura Web3"
 		},
-		"electric-capital": {
-			"description": "Electric Capital - Tool"
+		"framework_ventures": {
+			"description": "Investidor ativo em DeFi e gaming conhecido por envolvimento prático e participação em governança de protocolos"
 		},
-		"framework-ventures": {
-			"description": "Framework Ventures - Tool"
+		"delphi_ventures": {
+			"description": "Braço venture apoiado por pesquisa da Delphi Digital, investindo em DeFi, gaming e infraestrutura NFT"
 		},
-		"delphi-ventures": {
-			"description": "Delphi Ventures - Tool"
+		"placeholder_vc": {
+			"description": "VC orientado por tese focado em protocolos descentralizados, sistemas de governança e modelos de propriedade de redes"
 		},
-		"placeholder-vc": {
-			"description": "Placeholder - Tool"
+		"variant_fund": {
+			"description": "VC focado em redes de propriedade de usuários e modelos de propriedade baseados em tokens no Web3"
 		},
-		"variant-fund": {
-			"description": "Variant - Tool"
+		"hashed_vc": {
+			"description": "Principal VC cripto coreano investindo em gaming, DeFi e infraestrutura com forte rede asiática"
 		},
-		"hashed-vc": {
-			"description": "Hashed - Tool"
+		"spartan_group": {
+			"description": "Fundo cripto focado na Ásia combinando investimento venture com trading e serviços de consultoria"
 		},
-		"spartan-group": {
-			"description": "Spartan Group - Tool"
+		"hack_vc": {
+			"description": "VC cripto de estágio inicial liderado por ex-sócio da a16z, focando em infraestrutura e fundadores técnicos"
 		},
-		"hack-vc": {
-			"description": "Hack VC - Tool"
+		"bankless_ventures": {
+			"description": "Fundo venture apoiado pela comunidade da marca de mídia Bankless, investindo no ecossistema Ethereum"
 		},
-		"bankless-ventures": {
-			"description": "Bankless Ventures - Tool"
+		"1kx_capital": {
+			"description": "VC cripto europeu focado em redes de tokens, governança e investimentos em protocolos de estágio inicial"
 		},
-		"1kx-capital": {
-			"description": "1kx - Tool"
+		"robot_ventures": {
+			"description": "Fundo cripto de estágio inicial fundado pelo criador do Compound Robert Leshner, apoiando inovação DeFi"
 		},
-		"robot-ventures": {
-			"description": "Robot Ventures - Tool"
+		"coinbase_ventures": {
+			"description": "Braço de investimento estratégico da Coinbase, apoiando projetos do ecossistema em DeFi, NFTs e infraestrutura"
 		},
-		"coinbase-ventures": {
-			"description": "Coinbase Ventures - Tool"
+		"binance_labs": {
+			"description": "Braço venture e incubadora da Binance, investindo e acelerando startups blockchain globalmente"
 		},
-		"binance-labs": {
-			"description": "Binance Labs - Tool"
+		"okx_ventures": {
+			"description": "Braço de investimento da exchange OKX, apoiando construtores Web3 em infraestrutura e aplicações"
 		},
-		"okx-ventures": {
-			"description": "OKX Ventures - Tool"
+		"kraken_ventures": {
+			"description": "Braço de investimento estratégico da exchange Kraken, focando em infraestrutura e desenvolvimento do ecossistema"
 		},
-		"kraken-ventures": {
-			"description": "Kraken Ventures - Tool"
+		"circle_ventures": {
+			"description": "Braço de investimento da Circle (emissora de USDC), apoiando infraestrutura de stablecoins e projetos fintech"
 		},
-		"circle-ventures": {
-			"description": "Circle Ventures - Tool"
+		"galaxy_ventures": {
+			"description": "Braço venture da Galaxy Digital, investimentos de grau institucional em cripto e blockchain"
 		},
-		"galaxy-ventures": {
-			"description": "Galaxy Ventures - Tool"
+		"alliance_dao": {
+			"description": "Aceleradora Web3 executando programas baseados em coortes com mentoria dos principais fundadores cripto"
 		},
-		"alliance-dao": {
-			"description": "Alliance - Tool"
+		"ycombinator_crypto": {
+			"description": "Lendária aceleradora de startups apoiando empresas cripto através de seu programa padrão por lotes"
 		},
-		"ycombinator-crypto": {
-			"description": "Y Combinator - Tool"
+		"outlier_ventures": {
+			"description": "Aceleradora Web3 executando programas Base Camp para startups baseadas em tokens com suporte prático"
 		},
-		"outlier-ventures": {
-			"description": "Outlier Ventures - Tool"
+		"longhash_ventures": {
+			"description": "Aceleradora e VC baseada em Singapura focada em fundadores Web3 na região Ásia-Pacífico"
 		},
-		"longhash-ventures": {
-			"description": "LongHash Ventures - Tool"
+		"techstars_crypto": {
+			"description": "Aceleradora global de startups executando coortes focadas em blockchain e cripto com rede de mentores"
 		},
-		"techstars-crypto": {
-			"description": "Techstars - Tool"
+		"consensys_team": {
+			"description": "Empresa de infraestrutura Ethereum construindo MetaMask, Infura e outras ferramentas core do ecossistema"
 		},
-		"consensys-team": {
-			"description": "Consensys - Tool"
+		"offchain_labs": {
+			"description": "Equipe construindo Arbitrum, a solução líder de scaling Ethereum Layer 2 usando optimistic rollups"
 		},
-		"offchain-labs": {
-			"description": "Offchain Labs - Tool"
+		"matter_labs": {
+			"description": "Equipe construindo zkSync, uma solução de scaling Layer 2 usando tecnologia de prova de conhecimento zero"
 		},
-		"matter-labs": {
-			"description": "Matter Labs - Tool"
+		"optimism_team": {
+			"description": "Equipe central por trás do Optimism L2 e da visão Superchain para Ethereum escalável"
 		},
-		"optimism-team": {
-			"description": "OP Labs - Tool"
+		"alchemy_team": {
+			"description": "Provedor líder de infraestrutura Web3 oferecendo APIs de nós, ferramentas para desenvolvedores e dados blockchain"
 		},
-		"alchemy-team": {
-			"description": "Alchemy - Tool"
+		"chainlink_labs": {
+			"description": "Equipe construindo a rede oracle Chainlink, protocolo cross-chain CCIP e infraestrutura de dados descentralizada"
 		},
-		"chainlink-labs": {
-			"description": "Chainlink Labs - Tool"
+		"eigenlayer_team": {
+			"description": "Equipe construindo o protocolo de restaking EigenLayer habilitando segurança compartilhada para aplicações AVS"
 		},
-		"eigenlayer-team": {
-			"description": "Eigen Labs - Tool"
+		"uniswap_labs": {
+			"description": "Equipe por trás do Uniswap, o maior protocolo de exchange descentralizada por volume"
 		},
-		"uniswap-labs": {
-			"description": "Uniswap Labs - Tool"
+		"jump_crypto": {
+			"description": "Braço cripto de firma de trading construindo a ponte Wormhole e investindo em infraestrutura blockchain"
 		},
-		"jump-crypto": {
-			"description": "Jump Crypto - Tool"
+		"wintermute_trading": {
+			"description": "Principal market maker cripto fornecendo liquidez em exchanges e protocolos DeFi"
 		},
-		"wintermute-trading": {
-			"description": "Wintermute - Tool"
+		"gauntlet_network": {
+			"description": "Firma de gestão de risco DeFi usando simulações para otimizar parâmetros e economia de protocolos"
 		},
-		"gauntlet-network": {
-			"description": "Gauntlet - Tool"
+		"dealroom_crypto": {
+			"description": "Banco de dados de startups e financiamento rastreando rodadas de empresas Web3, avaliações e atividade de investidores"
 		},
-		"dealroom-crypto": {
-			"description": "Dealroom - Tool"
+		"pitchbook_crypto": {
+			"description": "Banco de dados de grau institucional para deals de VC, rodadas de financiamento cripto e análise de mercado"
 		},
-		"pitchbook-crypto": {
-			"description": "PitchBook - Tool"
-		},
-		"crypto-fundraising": {
-			"description": "Crypto Fundraising - Tool"
+		"crypto_fundraising": {
+			"description": "Rastreador gratuito de rodadas de financiamento cripto, atividade de investidores e dados de financiamento de startups"
 		}
 	}
 }
