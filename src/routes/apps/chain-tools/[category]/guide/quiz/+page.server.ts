@@ -1,7 +1,8 @@
 import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import { getCategoryGuide } from '@/features/chain-tools/data/guides';
-import { categories, tools } from '@/features/chain-tools/data';
+import { categories } from '@/features/chain-tools/data/categories';
+import { allTools } from '@/features/chain-tools/data/tools';
 import type {
 	CategoryId,
 	SerializableCategory,
@@ -31,7 +32,7 @@ export const load: PageServerLoad = async ({ params, url }) => {
 	};
 
 	// Get tools for this category
-	const categoryTools = tools.filter((t) => t.category === categoryId);
+	const categoryTools = allTools.filter((t) => t.category === categoryId);
 	const serializableTools: SerializableExternalTool[] = categoryTools.map((tool) => ({
 		id: tool.id,
 		name: tool.name,
