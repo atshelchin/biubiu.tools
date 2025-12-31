@@ -4,6 +4,7 @@ import { getChainBySlug, getChainById, parseRpcEndpoints } from '@/features/chai
 import type { ChainPageData } from '@/features/chains/types';
 import { createT } from '$i18n/translations';
 import { extractLocaleFromPathname } from '$utils/common';
+import { getPromotions } from '@/features/promotions';
 
 export const load: PageServerLoad = (event): ChainPageData => {
 	const { url, params } = event;
@@ -135,9 +136,16 @@ export const load: PageServerLoad = (event): ChainPageData => {
 		}
 	];
 
+	// Get promotions for this page
+	const promotions = getPromotions({
+		placement: 'chain-detail-bottom',
+		locale
+	});
+
 	return {
 		chain,
 		parsedRpcs,
+		promotions,
 		meta: {
 			title,
 			description,

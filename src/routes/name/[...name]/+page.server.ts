@@ -8,6 +8,7 @@ import {
 } from '@/features/address/ens-resolver';
 import { createT } from '$i18n/translations';
 import { extractLocaleFromPathname } from '$utils/common';
+import { getPromotions, type Promotion } from '@/features/promotions';
 
 export interface SocialLink {
 	platform: string;
@@ -21,6 +22,7 @@ export interface NameDetailPageData {
 	resolvedAddress?: LabeledAddress;
 	ensRecords?: ENSRecords;
 	socialLinks: SocialLink[];
+	promotions: Promotion[];
 	meta: {
 		title: string;
 		description: string;
@@ -253,12 +255,19 @@ export const load: PageServerLoad = async (event): Promise<NameDetailPageData> =
 		structuredData.push(personData);
 	}
 
+	// Get promotions for this page
+	const promotions = getPromotions({
+		placement: 'ens-detail-bottom',
+		locale
+	});
+
 	return {
 		name,
 		entity,
 		resolvedAddress,
 		ensRecords,
 		socialLinks,
+		promotions,
 		meta: {
 			title,
 			description,

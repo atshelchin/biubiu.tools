@@ -4,6 +4,7 @@
 	import { createConnectStore } from '$lib/stores/connect.svelte';
 	import PageLayout from '$lib/components/page-layout.svelte';
 	import FAQs from '$lib/components/ui/faqs.svelte';
+	import { PromotionFooter } from '@/features/promotions';
 	import SearchFilterBar from '@/features/chainlist/ui/search-filter-bar.svelte';
 	import ChainCard from '@/features/chainlist/ui/chain-card.svelte';
 	import type { NetworkFilter } from '@/features/chainlist/types/chain';
@@ -201,6 +202,9 @@
 
 		<!-- FAQ Section for SEO -->
 		<FAQs {faqs} title={i18n.t('routes/apps/chainlist.faq.title')} />
+
+		<!-- Promotions -->
+		<PromotionFooter promotions={data.promotions} />
 
 		<footer class="data-source">
 			{i18n.t('routes/apps/chainlist.data_source')}

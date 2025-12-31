@@ -17,6 +17,7 @@
 		// User
 	} from '@lucide/svelte';
 	import SeoHead from '$lib/components/seo-head.svelte';
+	import { PromotionFooter } from '@/features/promotions';
 	import type { PageData } from './$types';
 	// import type { SocialLink } from './+page.server';
 
@@ -393,6 +394,9 @@
 			{/if}
 		</div>
 	</section>
+
+	<!-- Promotions -->
+	<PromotionFooter promotions={data.promotions} />
 
 	<!-- Data Source Footer -->
 	<footer class="data-source">

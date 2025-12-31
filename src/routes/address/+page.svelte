@@ -2,6 +2,7 @@
 	import { useI18n, type TranslationKeys } from '@shelchin/i18n';
 	import { Search, Loader2 } from '@lucide/svelte';
 	import SeoHead from '$lib/components/seo-head.svelte';
+	import { PromotionFooter } from '@/features/promotions';
 	import type { PageData } from './$types';
 	import { CHAIN_META } from '@/features/address/types';
 	import { getEntity } from '@/features/address/data';
@@ -294,6 +295,9 @@
 			{/each}
 		</div>
 	</section>
+
+	<!-- Promotions -->
+	<PromotionFooter promotions={data.promotions} />
 </div>
 
 <style>

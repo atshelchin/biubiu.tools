@@ -8,6 +8,7 @@
 	import RpcEndpointCard from '@/features/chains/components/rpc-endpoint-card.svelte';
 	import ExplorersSection from '@/features/chains/components/explorers-section.svelte';
 	import FaucetsSection from '@/features/chains/components/faucets-section.svelte';
+	import { PromotionFooter } from '@/features/promotions';
 	import { testMultipleRpcs, sortByLatency } from '@/features/chains/utils/rpc-tester';
 	import type { PageData } from './$types';
 	import type { ParsedRpcEndpoint, RpcLatencyResult } from '@/features/chains/types';
@@ -258,6 +259,9 @@
 			})}
 		</p>
 	</section>
+
+	<!-- Promotions -->
+	<PromotionFooter promotions={data.promotions} />
 
 	<!-- Data Source Footer -->
 	<footer class="data-source">

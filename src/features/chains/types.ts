@@ -2,6 +2,8 @@
  * Types for the EVM Chains Encyclopedia
  */
 
+import type { Promotion } from '@/features/promotions/types';
+
 /**
  * RPC endpoint with tracking information
  */
@@ -118,6 +120,7 @@ export interface ChainPageMeta {
 export interface ChainPageData {
 	chain: Chain;
 	parsedRpcs: ParsedRpcEndpoint[];
+	promotions: Promotion[];
 	meta: ChainPageMeta;
 	structuredData: Record<string, unknown>[];
 }

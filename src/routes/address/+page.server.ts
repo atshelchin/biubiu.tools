@@ -3,11 +3,13 @@ import { allAddresses, allNames, stats } from '@/features/address/data';
 import type { LabeledAddress, NameRecord } from '@/features/address/types';
 import { createT } from '$i18n/translations';
 import { extractLocaleFromPathname } from '$utils/common';
+import { getPromotions, type Promotion } from '@/features/promotions';
 
 export interface AddressIndexPageData {
 	popularAddresses: LabeledAddress[];
 	popularNames: NameRecord[];
 	stats: typeof stats;
+	promotions: Promotion[];
 	meta: {
 		title: string;
 		description: string;
@@ -102,10 +104,17 @@ export const load: PageServerLoad = (event): AddressIndexPageData => {
 		}
 	];
 
+	// Get promotions for this page
+	const promotions = getPromotions({
+		placement: 'address-bottom',
+		locale
+	});
+
 	return {
 		popularAddresses,
 		popularNames,
 		stats,
+		promotions,
 		meta: {
 			title,
 			description,

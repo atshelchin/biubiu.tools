@@ -2,6 +2,7 @@ import type { PageServerLoad } from './$types';
 import { createWebAppData, createHowToData, type HowToStepData } from '$lib/utils/structured-data';
 import { createT } from '$i18n/translations';
 import { extractLocaleFromPathname } from '$utils/common';
+import { getPromotions } from '@/features/promotions';
 
 export const load: PageServerLoad = (event) => {
 	const { url } = event;
@@ -65,8 +66,15 @@ export const load: PageServerLoad = (event) => {
 		zh: 'zh_CN'
 	};
 
+	// Get promotions for this page
+	const promotions = getPromotions({
+		placement: 'chainlist-bottom',
+		locale
+	});
+
 	return {
 		// chains: processedChains,
+		promotions,
 		meta: {
 			title: t('routes/apps/chainlist.seo.page_title'),
 			description: t('routes/apps/chainlist.seo.page_description'),
