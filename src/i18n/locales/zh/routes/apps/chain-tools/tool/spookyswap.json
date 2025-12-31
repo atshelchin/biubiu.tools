@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "SpookySwap - Fantom 顶级 DEX",
+		"description": "SpookySwap 是 Fantom Opera 上领先的 DEX，具有农场、跨链桥和 BOO 代币质押。在 Fantom 上低费用交易。",
+		"keywords": "SpookySwap, BOO 代币, Fantom DEX, Fantom Opera, DeFi, 收益农场"
+	},
+	"overview": "SpookySwap 是 Fantom Opera 网络上最早和最大的去中心化交易所。在 2021 年 Fantom 的 DeFi 夏天建立，它仍然是该生态系统的主要交易场所。\n\n该平台提供标准 AMM 交易、收益农场和 BOO 代币质押。xBOO 质押提供协议收入分享。SpookySwap 还具有跨链转移的桥接功能。\n\n尽管 Fantom 活动减少，SpookySwap 继续以可靠的基础设施和 Fantom 原生代币最深的流动性服务于生态系统。",
+	"features": {
+		"1": {
+			"title": "Fantom 原生",
+			"description": "为 Fantom Opera 构建"
+		},
+		"2": {
+			"title": "BOO 代币",
+			"description": "治理和质押奖励"
+		},
+		"3": {
+			"title": "xBOO 质押",
+			"description": "赚取协议费用"
+		},
+		"4": {
+			"title": "跨链桥",
+			"description": "将资产桥接到 Fantom"
+		},
+		"5": {
+			"title": "收益农场",
+			"description": "在 LP 仓位上赚取 BOO"
+		},
+		"6": {
+			"title": "低费用",
+			"description": "Fantom 快速便宜的交易"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "在 Fantom 交易",
+			"description": "以最低费用交换"
+		},
+		"2": {
+			"title": "收益农场",
+			"description": "农场 BOO 代币"
+		},
+		"3": {
+			"title": "xBOO 质押",
+			"description": "质押获得协议收入"
+		},
+		"4": {
+			"title": "桥接",
+			"description": "跨链转移资产"
+		},
+		"5": {
+			"title": "提供流动性",
+			"description": "为交易对提供 LP"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 BOO 代币？",
+			"answer": "BOO 是 SpookySwap 的治理和效用代币。通过农场赚取，可以质押为 xBOO 获得协议收入。BOO 也用于平台开发的治理投票。"
+		},
+		"2": {
+			"question": "什么是 xBOO？",
+			"answer": "xBOO 是质押的 BOO，赚取交易费分成。当您质押 BOO 时，您收到 xBOO。随着费用积累，xBOO/BOO 比率随时间增加。"
+		},
+		"3": {
+			"question": "Fantom 还活跃吗？",
+			"answer": "Fantom 活动低于其 2021-2022 高峰，但仍在运营。Sonic 升级旨在振兴生态系统。如果您使用 Fantom，SpookySwap 仍是主要 DEX。"
+		},
+		"4": {
+			"question": "SpookySwap 的桥如何运作？",
+			"answer": "SpookySwap 的桥允许在 Fantom 和其他链之间转移资产。它使用桥接合作伙伴确保安全。桥接总是有风险——只使用可信路径并验证地址。"
+		},
+		"5": {
+			"question": "SpookySwap 安全吗？",
+			"answer": "SpookySwap 自 2021 年以来运营，是最成熟的 Fantom DEX。经过审计，历史 TVL 可观。标准 DEX 风险适用。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在 Fantom 交易了吗？",
+		"button": "探索 SpookySwap",
+		"note": "Fantom 的原始 DEX"
+	}
+}

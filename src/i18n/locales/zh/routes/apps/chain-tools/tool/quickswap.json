@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "QuickSwap - Polygon 领先的 DEX",
+		"description": "QuickSwap 是 Polygon 顶级 DEX，具有 Dragon's Lair 质押和集中流动性。在 Polygon 上以近零费用交易。",
+		"keywords": "QuickSwap, QUICK 代币, Polygon DEX, Dragon's Lair, 集中流动性, DeFi"
+	},
+	"overview": "QuickSwap 是 Polygon（原 Matic）上最早和最大的去中心化交易所。于 2020 年推出，它将 Uniswap V2 风格的交易带到 Polygon，具有近零 Gas 费用。\n\n该平台已发展到包括集中流动性（V3）、QUICK 持有者的 Dragon's Lair 质押和永续合约交易。QUICK 代币驱动治理和质押奖励。\n\nQuickSwap 仍是 Polygon 的主要 DEX，在 Polygon 生态系统中拥有最深的流动性和最广泛的代币支持。",
+	"features": {
+		"1": {
+			"title": "Polygon 原生",
+			"description": "为 Polygon 生态系统构建"
+		},
+		"2": {
+			"title": "近零费用",
+			"description": "交易费用只需几分钱"
+		},
+		"3": {
+			"title": "集中流动性",
+			"description": "V3 风格资本效率"
+		},
+		"4": {
+			"title": "Dragon's Lair",
+			"description": "质押 QUICK 获得 dQUICK"
+		},
+		"5": {
+			"title": "永续合约",
+			"description": "Polygon 上的杠杆交易"
+		},
+		"6": {
+			"title": "游戏集成",
+			"description": "连接到 Polygon 游戏"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "低成本交易",
+			"description": "以最低 Gas 交换"
+		},
+		"2": {
+			"title": "提供流动性",
+			"description": "作为 LP 赚取费用"
+		},
+		"3": {
+			"title": "QUICK 质押",
+			"description": "在 Dragon's Lair 质押"
+		},
+		"4": {
+			"title": "永续交易",
+			"description": "使用杠杆交易"
+		},
+		"5": {
+			"title": "游戏代币",
+			"description": "交易 Polygon 游戏资产"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 Dragon's Lair？",
+			"answer": "Dragon's Lair 是 QuickSwap 的质押金库。质押 QUICK 获得 dQUICK（Dragon's QUICK）。dQUICK 随时间积累交易费分成。这是 QUICK 持有者的被动赚取机制。"
+		},
+		"2": {
+			"question": "为什么 QuickSwap 费用这么低？",
+			"answer": "QuickSwap 运行在 Polygon 上，与以太坊主网相比 Gas 成本非常低。交易成本通常低于 0.01 美元，使其适用于所有交易规模。"
+		},
+		"3": {
+			"question": "QuickSwap 有集中流动性吗？",
+			"answer": "是的，QuickSwap 推出了类似 Uniswap V3 的 V3 集中流动性池。LP 可以在特定价格范围内提供流动性，以提高资本效率和更高的费用收入。"
+		},
+		"4": {
+			"question": "QuickSwap vs Polygon 上的 Uniswap？",
+			"answer": "QuickSwap 是 Polygon 原生的，具有 Dragon's Lair 激励和更深的集成。Uniswap 也在 Polygon 上具有标准功能。QuickSwap 通常对 Polygon 原生代币有更好的流动性。"
+		},
+		"5": {
+			"question": "QuickSwap 安全吗？",
+			"answer": "QuickSwap 自 2020 年以来作为 Polygon 主要 DEX 运营。经过审计和实战检验，TVL 可观。标准 AMM 风险适用。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在 Polygon 交易了吗？",
+		"button": "探索 QuickSwap",
+		"note": "Polygon 的原始 DEX"
+	}
+}

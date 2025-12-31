@@ -1,83 +1,83 @@
 {
 	"seo": {
-		"title": "Bebop - Intent-Based DEX Aggregator",
-		"description": "Bebop is an intent-based trading platform by Wintermute offering gasless swaps and MEV protection. Trade with professional market making.",
-		"keywords": "Bebop, DEX aggregator, intent-based trading, gasless swaps, Wintermute, MEV protection"
+		"title": "Bebop - 意图驱动的 DEX 聚合器",
+		"description": "Bebop 是 Wintermute 开发的意图驱动交易平台，提供无 Gas 交换和 MEV 保护。享受专业做市商的交易服务。",
+		"keywords": "Bebop, DEX 聚合器, 意图交易, 无 Gas 交换, Wintermute, MEV 保护"
 	},
-	"overview": "Bebop is an intent-based trading platform developed by Wintermute, one of the largest crypto market makers. Instead of routing through AMMs, Bebop matches orders with professional market makers for better pricing.\n\nThe platform offers gasless trading where users sign messages instead of transactions, and Bebop handles execution. This provides MEV protection and often better prices than traditional DEX aggregators.\n\nWith multi-token swaps, limit orders, and institutional-grade liquidity, Bebop represents the next evolution of DEX trading focused on execution quality.",
+	"overview": "Bebop 是由加密货币最大做市商之一 Wintermute 开发的意图驱动交易平台。Bebop 不通过 AMM 路由，而是与专业做市商匹配订单以获得更好的价格。\n\n该平台提供无 Gas 交易，用户签署消息而非交易，Bebop 处理执行。这提供了 MEV 保护，通常比传统 DEX 聚合器有更好的价格。\n\n凭借多代币交换、限价单和机构级流动性，Bebop 代表了专注于执行质量的 DEX 交易的下一代演进。",
 	"features": {
 		"1": {
-			"title": "Intent-Based Trading",
-			"description": "Sign intents, not transactions"
+			"title": "意图驱动交易",
+			"description": "签署意图，而非交易"
 		},
 		"2": {
-			"title": "Wintermute Liquidity",
-			"description": "Access to professional market making"
+			"title": "Wintermute 流动性",
+			"description": "获取专业做市商服务"
 		},
 		"3": {
-			"title": "Gasless Swaps",
-			"description": "No gas fees for traders"
+			"title": "无 Gas 交换",
+			"description": "交易者无需支付 Gas 费"
 		},
 		"4": {
-			"title": "MEV Protection",
-			"description": "Protected from sandwich attacks"
+			"title": "MEV 保护",
+			"description": "防止三明治攻击"
 		},
 		"5": {
-			"title": "Multi-Token Swaps",
-			"description": "Swap multiple tokens at once"
+			"title": "多代币交换",
+			"description": "一次交换多个代币"
 		},
 		"6": {
-			"title": "Limit Orders",
-			"description": "Set your target price"
+			"title": "限价单",
+			"description": "设置您的目标价格"
 		}
 	},
 	"use_cases": {
 		"1": {
-			"title": "Better Execution",
-			"description": "Get competitive quotes from market makers"
+			"title": "更好的执行",
+			"description": "从做市商获取有竞争力的报价"
 		},
 		"2": {
-			"title": "Gasless Trading",
-			"description": "Trade without paying gas"
+			"title": "无 Gas 交易",
+			"description": "无需支付 Gas 费交易"
 		},
 		"3": {
-			"title": "Large Trades",
-			"description": "Execute size with minimal slippage"
+			"title": "大额交易",
+			"description": "以最小滑点执行大额订单"
 		},
 		"4": {
-			"title": "Multi-Token Rebalancing",
-			"description": "Swap many tokens in one transaction"
+			"title": "多代币再平衡",
+			"description": "在一笔交易中交换多个代币"
 		},
 		"5": {
-			"title": "Safe Trading",
-			"description": "Avoid MEV and front-running"
+			"title": "安全交易",
+			"description": "避免 MEV 和抢跑"
 		}
 	},
 	"faqs": {
 		"1": {
-			"question": "How is Bebop different from 1inch?",
-			"answer": "1inch routes through on-chain AMMs. Bebop uses intent-based trading where professional market makers (primarily Wintermute) quote prices off-chain. This often results in better prices, gasless execution, and MEV protection. Think of it as OTC trading made accessible."
+			"question": "Bebop 与 1inch 有何不同？",
+			"answer": "1inch 通过链上 AMM 路由。Bebop 使用意图驱动交易，专业做市商（主要是 Wintermute）在链下报价。这通常带来更好的价格、无 Gas 执行和 MEV 保护。"
 		},
 		"2": {
-			"question": "Who is Wintermute?",
-			"answer": "Wintermute is one of the largest cryptocurrency market makers, trading billions daily. They provide liquidity to exchanges and DeFi protocols. Bebop is their retail-facing product that gives regular users access to institutional liquidity."
+			"question": "Wintermute 是什么？",
+			"answer": "Wintermute 是最大的加密货币做市商之一，每天交易数十亿美元。他们为交易所和 DeFi 协议提供流动性。Bebop 是他们面向零售用户的产品。"
 		},
 		"3": {
-			"question": "How are gasless swaps possible?",
-			"answer": "You sign a message (intent) authorizing the trade. Bebop's settlement contract executes the swap and pays gas on your behalf. The gas cost is factored into the quote. This means you can trade even with zero ETH for gas."
+			"question": "无 Gas 交换是如何实现的？",
+			"answer": "您签署一个授权交易的消息（意图）。Bebop 的结算合约执行交换并代您支付 Gas。Gas 成本已计入报价中。"
 		},
 		"4": {
-			"question": "Is Bebop safe?",
-			"answer": "Bebop is built by Wintermute, a reputable market maker. Contracts are audited. The intent-based system means you only authorize specific trades. However, you're trusting Wintermute as counterparty rather than trustless AMMs."
+			"question": "Bebop 安全吗？",
+			"answer": "Bebop 由知名做市商 Wintermute 构建。合约经过审计。意图驱动系统意味着您只授权特定交易。"
 		},
 		"5": {
-			"question": "What chains does Bebop support?",
-			"answer": "Bebop supports Ethereum, Arbitrum, Polygon, BNB Chain, Optimism, and other major chains. The multi-chain support continues to expand. Check their app for the current list."
+			"question": "Bebop 支持哪些链？",
+			"answer": "Bebop 支持以太坊、Arbitrum、Polygon、BNB Chain、Optimism 等主要链。多链支持持续扩展。"
 		}
 	},
 	"cta": {
-		"ready": "Ready for better execution?",
-		"button": "Explore Bebop",
-		"note": "Intent-based trading"
+		"ready": "准备好获得更好的执行了吗？",
+		"button": "探索 Bebop",
+		"note": "意图驱动交易"
 	}
 }

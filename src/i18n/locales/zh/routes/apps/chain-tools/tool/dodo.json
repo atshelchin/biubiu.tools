@@ -1,83 +1,83 @@
 {
 	"seo": {
-		"title": "DODO - PMM DEX with Custom Liquidity",
-		"description": "DODO uses Proactive Market Making (PMM) for capital-efficient trading. Create custom pools and access professional market making.",
-		"keywords": "DODO, PMM, Proactive Market Making, DEX, DODO token, liquidity provision, DeFi"
+		"title": "DODO - 具有自定义流动性的 PMM DEX",
+		"description": "DODO 使用主动做市（PMM）进行资本高效交易。创建自定义池并获得专业做市服务。",
+		"keywords": "DODO, PMM, 主动做市, DEX, DODO 代币, 流动性提供, DeFi"
 	},
-	"overview": "DODO is a DEX powered by its Proactive Market Making (PMM) algorithm, which provides more capital-efficient liquidity than traditional AMMs. PMM actively adjusts prices based on market conditions.\n\nThe platform allows anyone to create custom liquidity pools with flexible parameters, ideal for token launches and concentrated liquidity strategies. DODO also offers crowdpooling for fair token launches.\n\nWith the DODO token for governance and fee sharing, plus integration across major chains, DODO serves as both a trading venue and liquidity infrastructure.",
+	"overview": "DODO 是一个由其主动做市（PMM）算法驱动的 DEX，比传统 AMM 提供更高的资本效率流动性。PMM 根据市场条件主动调整价格。\n\n该平台允许任何人创建具有灵活参数的自定义流动性池，非常适合代币发行和集中流动性策略。DODO 还提供众筹池用于公平代币发行。\n\n凭借用于治理和费用分享的 DODO 代币，加上在主要链上的集成，DODO 同时作为交易场所和流动性基础设施。",
 	"features": {
 		"1": {
-			"title": "PMM Algorithm",
-			"description": "Proactive market making for efficiency"
+			"title": "PMM 算法",
+			"description": "主动做市提高效率"
 		},
 		"2": {
-			"title": "Custom Pools",
-			"description": "Create pools with flexible parameters"
+			"title": "自定义池",
+			"description": "创建具有灵活参数的池"
 		},
 		"3": {
-			"title": "Crowdpooling",
-			"description": "Fair token launch mechanism"
+			"title": "众筹池",
+			"description": "公平的代币发行机制"
 		},
 		"4": {
-			"title": "DODO Token",
-			"description": "Governance and vDODO staking"
+			"title": "DODO 代币",
+			"description": "治理和 vDODO 质押"
 		},
 		"5": {
-			"title": "Multi-Chain",
-			"description": "Ethereum, BSC, Arbitrum, and more"
+			"title": "多链支持",
+			"description": "以太坊、BSC、Arbitrum 等"
 		},
 		"6": {
-			"title": "Professional MM",
-			"description": "Access market maker strategies"
+			"title": "专业做市",
+			"description": "获取做市商策略"
 		}
 	},
 	"use_cases": {
 		"1": {
-			"title": "Efficient Trading",
-			"description": "Trade with PMM's tight spreads"
+			"title": "高效交易",
+			"description": "使用 PMM 的紧密价差交易"
 		},
 		"2": {
-			"title": "Pool Creation",
-			"description": "Launch custom liquidity pools"
+			"title": "池创建",
+			"description": "启动自定义流动性池"
 		},
 		"3": {
-			"title": "Token Launches",
-			"description": "Use crowdpooling for fair IDOs"
+			"title": "代币发行",
+			"description": "使用众筹池进行公平 IDO"
 		},
 		"4": {
-			"title": "LP Strategies",
-			"description": "Provide concentrated liquidity"
+			"title": "LP 策略",
+			"description": "提供集中流动性"
 		},
 		"5": {
-			"title": "vDODO Staking",
-			"description": "Stake for rewards and governance"
+			"title": "vDODO 质押",
+			"description": "质押获得奖励和治理"
 		}
 	},
 	"faqs": {
 		"1": {
-			"question": "What is Proactive Market Making (PMM)?",
-			"answer": "PMM is DODO's unique algorithm that concentrates liquidity near the market price, updating proactively. Unlike constant product AMMs, PMM provides better capital efficiency and lower slippage. It mimics professional market making strategies."
+			"question": "什么是主动做市（PMM）？",
+			"answer": "PMM 是 DODO 独特的算法，将流动性集中在市场价格附近，主动更新。提供更好的资本效率和更低的滑点。"
 		},
 		"2": {
-			"question": "How is DODO different from Uniswap?",
-			"answer": "Uniswap uses x*y=k formula spreading liquidity across all prices. DODO's PMM concentrates liquidity where it's needed, reducing slippage. DODO also allows customizable pool parameters and single-sided liquidity provision."
+			"question": "DODO 与 Uniswap 有何不同？",
+			"answer": "Uniswap 使用 x*y=k 公式将流动性分散到所有价格。DODO 的 PMM 将流动性集中在需要的地方，减少滑点。"
 		},
 		"3": {
-			"question": "What is Crowdpooling?",
-			"answer": "Crowdpooling is DODO's fair launch mechanism. It prevents bot manipulation and front-running during token launches. Participants can claim their allocation after the pool ends, with liquidity automatically added to DODO."
+			"question": "什么是众筹池？",
+			"answer": "众筹池是 DODO 的公平发行机制。它防止机器人操纵和代币发行期间的抢跑。"
 		},
 		"4": {
-			"question": "What is vDODO?",
-			"answer": "vDODO is the staked version of DODO tokens. By staking DODO for vDODO, you get voting rights, share of trading fees, and membership rewards. Longer lock-ups can provide higher rewards."
+			"question": "什么是 vDODO？",
+			"answer": "vDODO 是 DODO 代币的质押版本。通过质押获得投票权、交易费分享和会员奖励。"
 		},
 		"5": {
-			"question": "Is DODO safe?",
-			"answer": "DODO has been operating since 2020 and is audited by multiple firms. It's used by many protocols for liquidity. Standard DeFi risks apply. The PMM model has proven itself but understand any new pool's parameters before LPing."
+			"question": "DODO 安全吗？",
+			"answer": "DODO 自 2020 年以来一直运营，经过多家公司审计。被许多协议用于流动性。标准 DeFi 风险适用。"
 		}
 	},
 	"cta": {
-		"ready": "Ready to explore PMM trading?",
-		"button": "Explore DODO",
-		"note": "Proactive market making DEX"
+		"ready": "准备好探索 PMM 交易了吗？",
+		"button": "探索 DODO",
+		"note": "主动做市 DEX"
 	}
 }

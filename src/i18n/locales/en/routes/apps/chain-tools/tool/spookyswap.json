@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "SpookySwap - Fantom's Top DEX",
+		"description": "SpookySwap is the leading DEX on Fantom Opera with farming, bridges, and BOO token staking. Trade with low fees on Fantom.",
+		"keywords": "SpookySwap, BOO token, Fantom DEX, Fantom Opera, DeFi, yield farming"
+	},
+	"overview": "SpookySwap is the original and largest decentralized exchange on the Fantom Opera network. Built in 2021 during Fantom's DeFi summer, it remains the primary trading venue for the ecosystem.\n\nThe platform offers standard AMM trading, yield farming, and BOO token staking. xBOO staking provides protocol revenue sharing. SpookySwap also features a bridge for cross-chain transfers.\n\nDespite Fantom's reduced activity, SpookySwap continues to serve the ecosystem with reliable infrastructure and the deepest liquidity for Fantom-native tokens.",
+	"features": {
+		"1": {
+			"title": "Fantom Native",
+			"description": "Built for Fantom Opera"
+		},
+		"2": {
+			"title": "BOO Token",
+			"description": "Governance and staking rewards"
+		},
+		"3": {
+			"title": "xBOO Staking",
+			"description": "Earn protocol fees"
+		},
+		"4": {
+			"title": "Cross-Chain Bridge",
+			"description": "Bridge assets to Fantom"
+		},
+		"5": {
+			"title": "Yield Farming",
+			"description": "Earn BOO on LP positions"
+		},
+		"6": {
+			"title": "Low Fees",
+			"description": "Fantom's fast, cheap transactions"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Trading on Fantom",
+			"description": "Swap with minimal fees"
+		},
+		"2": {
+			"title": "Yield Farming",
+			"description": "Farm BOO tokens"
+		},
+		"3": {
+			"title": "xBOO Staking",
+			"description": "Stake for protocol revenue"
+		},
+		"4": {
+			"title": "Bridging",
+			"description": "Move assets cross-chain"
+		},
+		"5": {
+			"title": "Liquidity Provision",
+			"description": "Provide LP for trading pairs"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is BOO token?",
+			"answer": "BOO is SpookySwap's governance and utility token. It's earned through farming and can be staked as xBOO for protocol revenue. BOO is also used for governance votes on platform development."
+		},
+		"2": {
+			"question": "What is xBOO?",
+			"answer": "xBOO is staked BOO that earns a share of trading fees. When you stake BOO, you receive xBOO. The xBOO/BOO ratio increases over time as fees accumulate. It's a single-staking revenue share mechanism."
+		},
+		"3": {
+			"question": "Is Fantom still active?",
+			"answer": "Fantom has lower activity than its 2021-2022 peak but still operates. The Sonic upgrade aims to revitalize the ecosystem. SpookySwap remains the primary DEX if you're using Fantom."
+		},
+		"4": {
+			"question": "How does SpookySwap's bridge work?",
+			"answer": "SpookySwap's bridge allows moving assets between Fantom and other chains. It uses a bridging partner for security. Bridging always carries risk—use only trusted routes and verify addresses."
+		},
+		"5": {
+			"question": "Is SpookySwap safe?",
+			"answer": "SpookySwap has operated since 2021 and is the most established Fantom DEX. It's audited with significant historical TVL. Standard DEX risks apply. Consider Fantom network's current state when using."
+		}
+	},
+	"cta": {
+		"ready": "Ready to trade on Fantom?",
+		"button": "Explore SpookySwap",
+		"note": "Fantom's original DEX"
+	}
+}

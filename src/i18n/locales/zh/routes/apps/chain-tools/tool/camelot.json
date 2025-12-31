@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Camelot - Arbitrum 原生 DEX",
+		"description": "Camelot 是 Arbitrum 的原生 DEX，具有自定义池类型和 Nitro 池。使用 GRAIL 和 xGRAIL 代币交易和赚取。",
+		"keywords": "Camelot, GRAIL, xGRAIL, Arbitrum DEX, Nitro 池, 集中流动性, DeFi"
+	},
+	"overview": "Camelot 是 Arbitrum 的原生去中心化交易所，设计为生态系统的流动性中心。它具有多种池类型，包括集中流动性（V3）、波动池和稳定池。\n\n该平台独特的 Nitro 池允许协议使用自定义激励机制引导流动性。xGRAIL 是 GRAIL 的托管版本，提供治理和增强收益。\n\nCamelot 已成为 Arbitrum DeFi 生态系统的核心，为许多原生项目提供流动性，并通过合作伙伴关系提供发射台服务。",
+	"features": {
+		"1": {
+			"title": "多种池类型",
+			"description": "V3、波动和稳定 AMM"
+		},
+		"2": {
+			"title": "Nitro 池",
+			"description": "自定义激励机制"
+		},
+		"3": {
+			"title": "xGRAIL 系统",
+			"description": "托管代币用于治理"
+		},
+		"4": {
+			"title": "Arbitrum 原生",
+			"description": "为 Arbitrum 生态系统构建"
+		},
+		"5": {
+			"title": "发射台",
+			"description": "Round Table 新项目发射"
+		},
+		"6": {
+			"title": "分红",
+			"description": "协议收入分享"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "在 Arbitrum 交易",
+			"description": "使用多种 AMM 类型交换"
+		},
+		"2": {
+			"title": "集中 LP",
+			"description": "提供 V3 风格流动性"
+		},
+		"3": {
+			"title": "Nitro 农场",
+			"description": "在 Nitro 池中赚取增强奖励"
+		},
+		"4": {
+			"title": "xGRAIL 质押",
+			"description": "锁定获得治理和分红"
+		},
+		"5": {
+			"title": "项目发射",
+			"description": "为新代币引导流动性"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 Nitro 池？",
+			"answer": "Nitro 池是 Camelot 的可定制激励池。项目可以创建具有特定要求（锁定期、仓位大小）和奖励的池。这允许超越标准农场的精确流动性引导。"
+		},
+		"2": {
+			"question": "GRAIL 和 xGRAIL 有什么区别？",
+			"answer": "GRAIL 是流动的治理代币。xGRAIL 是托管的 GRAIL，提供增强收益、治理投票和分红权。xGRAIL 有归属期才能转换回 GRAIL。"
+		},
+		"3": {
+			"question": "Camelot 分红如何运作？",
+			"answer": "xGRAIL 持有者从协议费用中获得分红。部分交易费和其他收入分配给 xGRAIL 质押者。这从实际协议使用中创造真实收益。"
+		},
+		"4": {
+			"question": "Camelot vs Arbitrum 上的 Uniswap？",
+			"answer": "Camelot 是 Arbitrum 原生的，专注于生态系统和 xGRAIL 激励。Uniswap 是成熟的领导者，在主要交易对上有更深的流动性。Camelot 通常对 Arbitrum 原生代币有更好的汇率。"
+		},
+		"5": {
+			"question": "Camelot 安全吗？",
+			"answer": "Camelot 经过审计，在 Arbitrum 上有可观 TVL。自 2022 年以来运营，没有重大事故。标准 DEX 风险适用。"
+		}
+	},
+	"cta": {
+		"ready": "准备好探索 Arbitrum DeFi 了吗？",
+		"button": "探索 Camelot",
+		"note": "Arbitrum 的流动性中心"
+	}
+}

@@ -1,83 +1,83 @@
 {
 	"seo": {
-		"title": "Odos - Smart Order Routing DEX Aggregator",
-		"description": "Odos uses patented smart order routing to find the best swap paths. Trade with multi-token inputs and optimized execution.",
-		"keywords": "Odos, DEX aggregator, smart order routing, multi-token swap, DeFi trading, gas optimization"
+		"title": "Odos - 智能订单路由 DEX 聚合器",
+		"description": "Odos 使用专利智能订单路由找到最佳交换路径。使用多代币输入和优化执行进行交易。",
+		"keywords": "Odos, DEX 聚合器, 智能订单路由, 多代币交换, DeFi 交易, Gas 优化"
 	},
-	"overview": "Odos is a DEX aggregator known for its advanced smart order routing algorithm. Using patented technology, Odos explores more possible paths than typical aggregators, often finding better rates.\n\nA unique feature is multi-input swaps—you can trade multiple tokens into one in a single transaction. This is ideal for portfolio rebalancing or consolidating dust.\n\nOdos has grown rapidly with strong multi-chain support and a loyalty program. The platform focuses on execution quality and gas efficiency for all trade sizes.",
+	"overview": "Odos 是以其先进智能订单路由算法著称的 DEX 聚合器。使用专利技术，Odos 比典型聚合器探索更多可能路径，通常能找到更好的汇率。\n\n一个独特功能是多输入交换——您可以在单笔交易中将多个代币交换成一个。这非常适合投资组合再平衡或整合小额余额。\n\nOdos 凭借强大的多链支持和忠诚度计划快速增长。该平台专注于所有交易规模的执行质量和 Gas 效率。",
 	"features": {
 		"1": {
-			"title": "Smart Order Routing",
-			"description": "Patented algorithm for optimal paths"
+			"title": "智能订单路由",
+			"description": "专利算法寻找最优路径"
 		},
 		"2": {
-			"title": "Multi-Input Swaps",
-			"description": "Trade multiple tokens at once"
+			"title": "多输入交换",
+			"description": "一次交换多个代币"
 		},
 		"3": {
-			"title": "500+ Liquidity Sources",
-			"description": "Wide DEX coverage"
+			"title": "500+ 流动性来源",
+			"description": "广泛的 DEX 覆盖"
 		},
 		"4": {
-			"title": "Gas Optimization",
-			"description": "Efficient transaction batching"
+			"title": "Gas 优化",
+			"description": "高效的交易批处理"
 		},
 		"5": {
-			"title": "Loyalty Program",
-			"description": "Earn rewards for trading"
+			"title": "忠诚度计划",
+			"description": "通过交易赚取奖励"
 		},
 		"6": {
-			"title": "Multi-Chain",
-			"description": "Ethereum, Arbitrum, Base, and more"
+			"title": "多链支持",
+			"description": "以太坊、Arbitrum、Base 等"
 		}
 	},
 	"use_cases": {
 		"1": {
-			"title": "Best Rate Trading",
-			"description": "Find optimal swap paths"
+			"title": "最佳汇率交易",
+			"description": "找到最优交换路径"
 		},
 		"2": {
-			"title": "Portfolio Consolidation",
-			"description": "Swap many tokens to one"
+			"title": "投资组合整合",
+			"description": "将多个代币换成一个"
 		},
 		"3": {
-			"title": "Large Trades",
-			"description": "Execute size with smart routing"
+			"title": "大额交易",
+			"description": "通过智能路由执行大额"
 		},
 		"4": {
-			"title": "Dust Cleanup",
-			"description": "Consolidate small balances"
+			"title": "清理小额",
+			"description": "整合小额余额"
 		},
 		"5": {
-			"title": "Rewards Earning",
-			"description": "Accumulate loyalty points"
+			"title": "赚取奖励",
+			"description": "积累忠诚度积分"
 		}
 	},
 	"faqs": {
 		"1": {
-			"question": "How is Odos different from 1inch?",
-			"answer": "Odos uses a patented routing algorithm that explores more path combinations. Key unique feature is multi-input swaps—trading multiple tokens into one. Users often report competitive or better rates, especially for complex swaps."
+			"question": "Odos 与 1inch 有何不同？",
+			"answer": "Odos 使用专利路由算法，探索更多路径组合。关键独特功能是多输入交换——将多个代币换成一个。"
 		},
 		"2": {
-			"question": "What are multi-input swaps?",
-			"answer": "Multi-input swaps let you trade several tokens into one in a single transaction. For example, swap ETH + USDC + LINK all into WBTC. This saves gas vs multiple separate swaps and is great for rebalancing."
+			"question": "什么是多输入交换？",
+			"answer": "多输入交换让您在单笔交易中将多个代币换成一个。例如，将 ETH + USDC + LINK 全部换成 WBTC。"
 		},
 		"3": {
-			"question": "Does Odos have a token?",
-			"answer": "As of now, Odos doesn't have a token but has a loyalty program. Points accumulate based on trading activity. This suggests a potential future token, but nothing is confirmed. Points may convert to rewards."
+			"question": "Odos 有代币吗？",
+			"answer": "目前 Odos 没有代币但有忠诚度计划。积分根据交易活动累积，可能在未来转换为奖励。"
 		},
 		"4": {
-			"question": "Is Odos safe?",
-			"answer": "Odos contracts are audited and have processed significant volume. It's a non-custodial aggregator—you trade through smart contracts. Standard DEX risks apply. The team is doxxed and backed by investors."
+			"question": "Odos 安全吗？",
+			"answer": "Odos 合约经过审计，处理了大量交易量。它是非托管聚合器，团队已公开身份并获得投资者支持。"
 		},
 		"5": {
-			"question": "Which chains does Odos support?",
-			"answer": "Odos supports Ethereum, Arbitrum, Optimism, Base, Polygon, Avalanche, BSC, and more. Chain support continues to expand. Check their app for the current full list."
+			"question": "Odos 支持哪些链？",
+			"answer": "Odos 支持以太坊、Arbitrum、Optimism、Base、Polygon、Avalanche、BSC 等。链支持持续扩展。"
 		}
 	},
 	"cta": {
-		"ready": "Ready for smarter routing?",
-		"button": "Explore Odos",
-		"note": "Advanced DEX aggregation"
+		"ready": "准备好更智能的路由了吗？",
+		"button": "探索 Odos",
+		"note": "高级 DEX 聚合"
 	}
 }

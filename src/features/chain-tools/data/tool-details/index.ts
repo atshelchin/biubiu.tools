@@ -112,6 +112,18 @@ import { renzoDetail } from './renzo';
 import { etherfiDetail } from './etherfi';
 import { pufferDetail } from './puffer';
 import { swellDetail } from './swell';
+import { bebopDetail } from './bebop';
+import { paraswapDetail } from './paraswap';
+import { cowswapDetail } from './cowswap';
+import { kyberswapDetail } from './kyberswap';
+import { odosDetail } from './odos';
+import { dodoDetail } from './dodo';
+import { velodromeDetail } from './velodrome';
+import { traderjoeDetail } from './traderjoe';
+import { camelotDetail } from './camelot';
+import { spookyswapDetail } from './spookyswap';
+import { quickswapDetail } from './quickswap';
+import { maverickDetail } from './maverick';
 
 /**
  * All tool details mapped by tool ID
@@ -220,7 +232,19 @@ export const toolDetails: Record<string, ToolDetail> = {
 	renzo: renzoDetail,
 	etherfi: etherfiDetail,
 	puffer: pufferDetail,
-	swell: swellDetail
+	swell: swellDetail,
+	bebop: bebopDetail,
+	paraswap: paraswapDetail,
+	cowswap: cowswapDetail,
+	kyberswap: kyberswapDetail,
+	odos: odosDetail,
+	dodo: dodoDetail,
+	velodrome: velodromeDetail,
+	traderjoe: traderjoeDetail,
+	camelot: camelotDetail,
+	spookyswap: spookyswapDetail,
+	quickswap: quickswapDetail,
+	maverick: maverickDetail
 };
 
 /**

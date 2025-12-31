@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Velodrome - Optimism 原生 DEX",
+		"description": "Velodrome 是 Optimism 上使用 ve(3,3) 代币经济学的领先 DEX。使用 VELO 进行交易、提供流动性和投票。",
+		"keywords": "Velodrome, VELO, Optimism DEX, ve(3,3), 流动性, DeFi, Optimism"
+	},
+	"overview": "Velodrome 是 Optimism 网络的原生 DEX，设计为生态系统的流动性层。使用由 Solidly 开创的 ve(3,3) 代币经济学，Velodrome 协调交易者、LP 和协议之间的激励。\n\n该平台结合了稳定和波动池以及投票机制，veVELO 持有者可以将排放定向到他们喜欢的池。这创造了高效的流动性路由和可持续的收益。\n\nVelodrome 已成为 Optimism 上 TVL 最大的 DEX，其模型后来被 Base 上的 Aerodrome 采用。它是 Optimism 生态系统的主要交易场所。",
+	"features": {
+		"1": {
+			"title": "ve(3,3) 模型",
+			"description": "投票托管代币经济学实现可持续收益"
+		},
+		"2": {
+			"title": "Optimism 原生",
+			"description": "专为 Optimism 构建"
+		},
+		"3": {
+			"title": "双池类型",
+			"description": "稳定和波动 AMM 池"
+		},
+		"4": {
+			"title": "排放投票",
+			"description": "veVELO 持有者定向奖励"
+		},
+		"5": {
+			"title": "贿赂系统",
+			"description": "协议为排放投票付费"
+		},
+		"6": {
+			"title": "低费用",
+			"description": "针对 L2 效率优化"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "在 Optimism 交易",
+			"description": "以低费用交换代币"
+		},
+		"2": {
+			"title": "提供流动性",
+			"description": "作为 LP 赚取 VELO 排放"
+		},
+		"3": {
+			"title": "投票托管质押",
+			"description": "锁定 VELO 获得 veVELO 权力"
+		},
+		"4": {
+			"title": "赚取贿赂",
+			"description": "通过战略性投票赚取贿赂"
+		},
+		"5": {
+			"title": "协议流动性",
+			"description": "为项目引导流动性"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 ve(3,3)？",
+			"answer": "ve(3,3) 结合了 Curve 的投票托管 (ve) 模型和 Olympus 的 (3,3) 博弈论。用户锁定 VELO 获得 veVELO 来投票排放。锁定时间越长，投票权越大。"
+		},
+		"2": {
+			"question": "如何在 Velodrome 上赚取收益？",
+			"answer": "LP 从池中赚取 VELO 排放。veVELO 持有者从他们投票的池中赚取交易费和贿赂。您也可以提供贿赂来吸引投票到您偏好的池。"
+		},
+		"3": {
+			"question": "什么是贿赂？",
+			"answer": "贿赂是协议支付给 veVELO 投票者的激励。协议希望排放定向到他们的池以获得流动性，他们支付贿赂来吸引投票。"
+		},
+		"4": {
+			"question": "Velodrome vs Aerodrome？",
+			"answer": "Velodrome 在 Optimism 上；Aerodrome 是其在 Base 上的分叉。相同的 ve(3,3) 模型，不同的链。根据您使用的链选择。"
+		},
+		"5": {
+			"question": "Velodrome 安全吗？",
+			"answer": "Velodrome 经过审计，是 Optimism 上 TVL 最大的 DEX。代码经过实战检验，ve(3,3) 机制已被证明。标准 AMM 风险适用。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在 Optimism 交易了吗？",
+		"button": "探索 Velodrome",
+		"note": "Optimism 的流动性层"
+	}
+}

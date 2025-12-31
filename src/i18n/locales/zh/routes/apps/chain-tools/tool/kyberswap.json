@@ -1,83 +1,83 @@
 {
 	"seo": {
-		"title": "KyberSwap - Multi-Chain DEX Aggregator",
-		"description": "KyberSwap is a DEX aggregator with concentrated liquidity pools. Trade across 15+ chains with KNC token rewards.",
-		"keywords": "KyberSwap, Kyber Network, KNC token, DEX aggregator, concentrated liquidity, multi-chain DEX"
+		"title": "KyberSwap - 多链 DEX 聚合器",
+		"description": "KyberSwap 是具有集中流动性池的 DEX 聚合器。在 15+ 链上交易并获得 KNC 代币奖励。",
+		"keywords": "KyberSwap, Kyber Network, KNC 代币, DEX 聚合器, 集中流动性, 多链 DEX"
 	},
-	"overview": "KyberSwap is one of the longest-running DEX protocols, operating since 2017. It combines DEX aggregation with its own concentrated liquidity pools (KyberSwap Elastic) for comprehensive trading.\n\nThe aggregator routes through 100+ liquidity sources across 15+ chains, finding optimal paths for any trade. KyberSwap Elastic allows LPs to provide concentrated liquidity similar to Uniswap V3.\n\nWith the KNC token for governance and liquidity mining rewards, KyberSwap offers both trading and earning opportunities across the multi-chain ecosystem.",
+	"overview": "KyberSwap 是运营时间最长的 DEX 协议之一，自 2017 年以来一直运营。它将 DEX 聚合与自己的集中流动性池相结合，提供全面的交易体验。\n\n聚合器在 15+ 链上路由通过 100+ 流动性来源，为任何交易找到最优路径。KyberSwap Elastic 允许 LP 提供集中流动性。\n\n凭借用于治理和流动性挖矿奖励的 KNC 代币，KyberSwap 在多链生态系统中同时提供交易和赚取机会。",
 	"features": {
 		"1": {
-			"title": "Wide Chain Support",
-			"description": "15+ chains including Ethereum, Arbitrum, Polygon"
+			"title": "广泛链支持",
+			"description": "15+ 链包括以太坊、Arbitrum、Polygon"
 		},
 		"2": {
-			"title": "100+ DEXs Aggregated",
-			"description": "Routes through major liquidity sources"
+			"title": "100+ DEX 聚合",
+			"description": "路由通过主要流动性来源"
 		},
 		"3": {
 			"title": "KyberSwap Elastic",
-			"description": "Concentrated liquidity pools"
+			"description": "集中流动性池"
 		},
 		"4": {
-			"title": "KNC Token",
-			"description": "Governance and staking rewards"
+			"title": "KNC 代币",
+			"description": "治理和质押奖励"
 		},
 		"5": {
-			"title": "Limit Orders",
-			"description": "Set target prices on any chain"
+			"title": "限价单",
+			"description": "在任何链上设置目标价格"
 		},
 		"6": {
-			"title": "Earning Programs",
-			"description": "Liquidity mining and farming"
+			"title": "赚取项目",
+			"description": "流动性挖矿和农场"
 		}
 	},
 	"use_cases": {
 		"1": {
-			"title": "Multi-Chain Trading",
-			"description": "Swap on any supported chain"
+			"title": "多链交易",
+			"description": "在任何支持的链上交换"
 		},
 		"2": {
-			"title": "Best Rate Finding",
-			"description": "Compare across 100+ sources"
+			"title": "最佳汇率查找",
+			"description": "在 100+ 来源中比较"
 		},
 		"3": {
-			"title": "Concentrated LP",
-			"description": "Earn fees with capital efficiency"
+			"title": "集中 LP",
+			"description": "以资本效率赚取费用"
 		},
 		"4": {
-			"title": "Limit Orders",
-			"description": "Automated limit order execution"
+			"title": "限价单",
+			"description": "自动限价单执行"
 		},
 		"5": {
-			"title": "KNC Staking",
-			"description": "Stake for governance and rewards"
+			"title": "KNC 质押",
+			"description": "质押获得治理和奖励"
 		}
 	},
 	"faqs": {
 		"1": {
-			"question": "What is KyberSwap Elastic?",
-			"answer": "KyberSwap Elastic is their concentrated liquidity DEX, similar to Uniswap V3. LPs set price ranges for more capital-efficient positions. It offers additional features like auto-compounding and customizable fee tiers."
+			"question": "什么是 KyberSwap Elastic？",
+			"answer": "KyberSwap Elastic 是集中流动性 DEX，类似 Uniswap V3。LP 设置价格范围以获得更高资本效率。"
 		},
 		"2": {
-			"question": "What happened in the KyberSwap exploit?",
-			"answer": "In November 2023, KyberSwap Elastic was exploited for ~$50M. The team has been working on compensation and rebuilding. This highlights the risks in DeFi. Check their current status before using elastic pools."
+			"question": "KyberSwap 漏洞事件是什么？",
+			"answer": "2023 年 11 月，KyberSwap Elastic 被利用约 5000 万美元。团队一直在进行补偿和重建。使用前请查看当前状态。"
 		},
 		"3": {
-			"question": "What is KNC token?",
-			"answer": "KNC is Kyber Network's governance token. It's used for voting on protocol decisions, staking for rewards, and liquidity mining. KNC has been around since 2017, making it one of the oldest DeFi tokens."
+			"question": "什么是 KNC 代币？",
+			"answer": "KNC 是 Kyber Network 的治理代币。用于对协议决策投票、质押获得奖励和流动性挖矿。"
 		},
 		"4": {
-			"question": "KyberSwap vs 1inch: Which has better rates?",
-			"answer": "Both aggregate many sources. 1inch often has more liquidity sources on Ethereum. KyberSwap has strong multi-chain presence. For any specific trade, compare both. Results vary by chain and pair."
+			"question": "KyberSwap vs 1inch：哪个汇率更好？",
+			"answer": "两者都聚合许多来源。1inch 在以太坊上通常有更多流动性来源，KyberSwap 有强大多链存在。"
 		},
 		"5": {
-			"question": "Which chains does KyberSwap support?",
-			"answer": "KyberSwap supports 15+ chains including Ethereum, Arbitrum, Optimism, Polygon, BSC, Avalanche, Fantom, and more. It's one of the most widely deployed DEX aggregators."
+			"question": "KyberSwap 支持哪些链？",
+			"answer": "KyberSwap 支持 15+ 链，包括以太坊、Arbitrum、Optimism、Polygon、BSC、Avalanche 等。"
 		}
 	},
 	"cta": {
-		"ready": "Ready to trade across chains?",
-		"button": "Explore KyberSwap",
-		"note": "Multi-chain DEX aggregator"
+		"ready": "准备好跨链交易了吗？",
+		"button": "探索 KyberSwap",
+		"note": "多链 DEX 聚合器"
 	}
 }

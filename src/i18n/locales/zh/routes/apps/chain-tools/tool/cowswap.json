@@ -1,83 +1,83 @@
 {
 	"seo": {
-		"title": "CoW Swap - MEV-Protected DEX Aggregator",
-		"description": "CoW Swap uses batch auctions for MEV protection and Coincidence of Wants matching. Trade with protection from sandwich attacks.",
-		"keywords": "CoW Swap, CoW Protocol, MEV protection, batch auctions, DEX aggregator, COW token"
+		"title": "CoW Swap - MEV 保护的 DEX 聚合器",
+		"description": "CoW Swap 使用批量拍卖进行 MEV 保护和需求巧合匹配。交易时防止三明治攻击。",
+		"keywords": "CoW Swap, CoW Protocol, MEV 保护, 批量拍卖, DEX 聚合器, COW 代币"
 	},
-	"overview": "CoW Swap is a DEX aggregator that protects traders from MEV (Miner Extractable Value) through batch auctions. Instead of instant execution, orders are collected and settled together, eliminating front-running opportunities.\n\nThe protocol's unique Coincidence of Wants (CoW) system matches traders directly when possible, providing peer-to-peer settlement without AMM fees. When direct matching isn't possible, solvers compete to find the best execution.\n\nWith the COW token for governance and solver incentives, CoW Swap has become the go-to choice for MEV-conscious traders seeking fair execution.",
+	"overview": "CoW Swap 是一个通过批量拍卖保护交易者免受 MEV 影响的 DEX 聚合器。订单不是即时执行，而是收集后一起结算，消除抢跑机会。\n\n该协议独特的需求巧合（CoW）系统在可能时直接匹配交易者，提供点对点结算，无需 AMM 费用。当无法直接匹配时，求解者竞争寻找最佳执行方案。\n\n凭借用于治理和求解者激励的 COW 代币，CoW Swap 已成为注重 MEV 的交易者寻求公平执行的首选。",
 	"features": {
 		"1": {
-			"title": "Batch Auctions",
-			"description": "Orders settled in batches for MEV protection"
+			"title": "批量拍卖",
+			"description": "订单批量结算以保护 MEV"
 		},
 		"2": {
-			"title": "Coincidence of Wants",
-			"description": "Direct peer-to-peer matching"
+			"title": "需求巧合",
+			"description": "直接点对点匹配"
 		},
 		"3": {
-			"title": "Solver Competition",
-			"description": "Solvers compete for best execution"
+			"title": "求解者竞争",
+			"description": "求解者竞争最佳执行"
 		},
 		"4": {
-			"title": "Gasless Trading",
-			"description": "Sign orders, solvers pay gas"
+			"title": "无 Gas 交易",
+			"description": "签署订单，求解者支付 Gas"
 		},
 		"5": {
-			"title": "COW Token",
-			"description": "Governance and solver incentives"
+			"title": "COW 代币",
+			"description": "治理和求解者激励"
 		},
 		"6": {
-			"title": "MEV Blocker",
-			"description": "Built-in front-running protection"
+			"title": "MEV 拦截器",
+			"description": "内置抢跑保护"
 		}
 	},
 	"use_cases": {
 		"1": {
-			"title": "MEV-Protected Trading",
-			"description": "Trade without front-running fear"
+			"title": "MEV 保护交易",
+			"description": "无需担心抢跑的交易"
 		},
 		"2": {
-			"title": "Gasless Swaps",
-			"description": "Trade without paying gas upfront"
+			"title": "无 Gas 交换",
+			"description": "无需预付 Gas 费交易"
 		},
 		"3": {
-			"title": "Large Orders",
-			"description": "Execute size with batch protection"
+			"title": "大额订单",
+			"description": "在批量保护下执行大额订单"
 		},
 		"4": {
-			"title": "Solver Integration",
-			"description": "Become a solver for rewards"
+			"title": "求解者集成",
+			"description": "成为求解者获得奖励"
 		},
 		"5": {
-			"title": "DAO Governance",
-			"description": "Vote on protocol with COW"
+			"title": "DAO 治理",
+			"description": "使用 COW 对协议投票"
 		}
 	},
 	"faqs": {
 		"1": {
-			"question": "How does CoW Swap protect from MEV?",
-			"answer": "Traditional DEXs execute instantly, allowing bots to front-run. CoW Swap collects orders into batches, then solvers compete to find optimal settlement. Since all batch orders execute at the same price, there's no front-running opportunity."
+			"question": "CoW Swap 如何防止 MEV？",
+			"answer": "传统 DEX 即时执行，允许机器人抢跑。CoW Swap 将订单收集成批次，所有批次订单以相同价格执行，没有抢跑机会。"
 		},
 		"2": {
-			"question": "What is Coincidence of Wants?",
-			"answer": "When two traders want opposite sides (one selling ETH for USDC, another buying ETH with USDC), CoW matches them directly. This P2P settlement avoids AMM fees and slippage. It's like finding a direct trade partner automatically."
+			"question": "什么是需求巧合？",
+			"answer": "当两个交易者想要相反的交易时，CoW 直接匹配他们。这种 P2P 结算避免了 AMM 费用和滑点。"
 		},
 		"3": {
-			"question": "What are solvers?",
-			"answer": "Solvers are specialized actors who compete to execute CoW Swap batches. They find the best routes across DEXs and settle orders. Solvers stake COW tokens and earn fees for winning batches. Anyone can become a solver."
+			"question": "什么是求解者？",
+			"answer": "求解者是竞争执行 CoW Swap 批次的专业参与者。他们质押 COW 代币并通过赢得批次赚取费用。"
 		},
 		"4": {
-			"question": "Is CoW Swap slower than other DEXs?",
-			"answer": "Yes, batch auctions take 1-2 minutes vs instant. This delay enables MEV protection. For most trades, the better execution outweighs the wait. If you need instant execution, use traditional DEXs."
+			"question": "CoW Swap 比其他 DEX 慢吗？",
+			"answer": "是的，批量拍卖需要 1-2 分钟而非即时。这种延迟实现了 MEV 保护。对于大多数交易，更好的执行超过等待。"
 		},
 		"5": {
-			"question": "What is the COW token?",
-			"answer": "COW is the governance token for CoW Protocol. It's used for voting on protocol upgrades, solver staking, and fee discounts. COW was distributed via airdrop to early users and can be earned through various programs."
+			"question": "什么是 COW 代币？",
+			"answer": "COW 是 CoW Protocol 的治理代币。用于对协议升级投票、求解者质押和费用折扣。"
 		}
 	},
 	"cta": {
-		"ready": "Ready for MEV-protected trading?",
-		"button": "Explore CoW Swap",
-		"note": "Batch auctions for fair execution"
+		"ready": "准备好 MEV 保护交易了吗？",
+		"button": "探索 CoW Swap",
+		"note": "批量拍卖实现公平执行"
 	}
 }

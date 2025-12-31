@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "QuickSwap - Polygon's Leading DEX",
+		"description": "QuickSwap is Polygon's top DEX featuring Dragon's Lair staking and concentrated liquidity. Trade with near-zero fees on Polygon.",
+		"keywords": "QuickSwap, QUICK token, Polygon DEX, Dragon's Lair, concentrated liquidity, DeFi"
+	},
+	"overview": "QuickSwap is the original and largest decentralized exchange on Polygon (formerly Matic). Launched in 2020, it brought Uniswap V2-style trading to Polygon with near-zero gas fees.\n\nThe platform has evolved to include concentrated liquidity (V3), Dragon's Lair staking for QUICK holders, and perpetuals trading. QUICK token powers governance and staking rewards.\n\nQuickSwap remains the primary DEX for Polygon with the deepest liquidity and widest token support across the Polygon ecosystem.",
+	"features": {
+		"1": {
+			"title": "Polygon Native",
+			"description": "Built for Polygon ecosystem"
+		},
+		"2": {
+			"title": "Near-Zero Fees",
+			"description": "Trade for fractions of a cent"
+		},
+		"3": {
+			"title": "Concentrated Liquidity",
+			"description": "V3-style capital efficiency"
+		},
+		"4": {
+			"title": "Dragon's Lair",
+			"description": "Stake QUICK for dQUICK"
+		},
+		"5": {
+			"title": "Perpetuals",
+			"description": "Leveraged trading on Polygon"
+		},
+		"6": {
+			"title": "Gaming Integration",
+			"description": "Connected to Polygon gaming"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Low-Cost Trading",
+			"description": "Swap with minimal gas"
+		},
+		"2": {
+			"title": "Liquidity Provision",
+			"description": "Earn fees as LP"
+		},
+		"3": {
+			"title": "QUICK Staking",
+			"description": "Stake in Dragon's Lair"
+		},
+		"4": {
+			"title": "Perpetual Trading",
+			"description": "Trade with leverage"
+		},
+		"5": {
+			"title": "Gaming Tokens",
+			"description": "Trade Polygon gaming assets"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Dragon's Lair?",
+			"answer": "Dragon's Lair is QuickSwap's staking vault. Stake QUICK to receive dQUICK (Dragon's QUICK). dQUICK accumulates a share of trading fees over time. It's a passive earning mechanism for QUICK holders."
+		},
+		"2": {
+			"question": "Why are fees so low on QuickSwap?",
+			"answer": "QuickSwap runs on Polygon which has very low gas costs compared to Ethereum mainnet. Trading costs are typically less than $0.01, making it accessible for all trade sizes."
+		},
+		"3": {
+			"question": "Does QuickSwap have concentrated liquidity?",
+			"answer": "Yes, QuickSwap launched V3 concentrated liquidity pools similar to Uniswap V3. LPs can provide liquidity in specific price ranges for improved capital efficiency and higher fee earnings."
+		},
+		"4": {
+			"question": "QuickSwap vs Uniswap on Polygon?",
+			"answer": "QuickSwap is Polygon-native with Dragon's Lair incentives and deeper integration. Uniswap is also on Polygon with its standard features. QuickSwap often has better liquidity for Polygon-native tokens."
+		},
+		"5": {
+			"question": "Is QuickSwap safe?",
+			"answer": "QuickSwap has been operating since 2020 as Polygon's primary DEX. It's audited and battle-tested with significant TVL. Standard AMM risks apply—impermanent loss and smart contract risk."
+		}
+	},
+	"cta": {
+		"ready": "Ready to trade on Polygon?",
+		"button": "Explore QuickSwap",
+		"note": "Polygon's original DEX"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Maverick Protocol - 动态 AMM",
+		"description": "Maverick Protocol 具有跟随价格移动的动态集中流动性。使用 MAV 代币在多链上交易。",
+		"keywords": "Maverick, MAV 代币, 动态 AMM, 集中流动性, Base DEX, zkSync DEX"
+	},
+	"overview": "Maverick Protocol 是一个创新的 AMM，具有动态集中流动性。与 LP 必须手动再平衡的静态集中流动性不同，Maverick 的流动性可以自动跟随价格移动。\n\n该协议为 LP 仓位提供多种移动模式，允许复杂的流动性策略。这为交易者创造了更高资本效率的市场和更紧的价差。\n\nMaverick 部署在以太坊、Base、zkSync 和 BNB Chain 上。MAV 代币通过 veMAV 质押提供治理和激励对齐。",
+	"features": {
+		"1": {
+			"title": "动态流动性",
+			"description": "跟随价格的 LP 仓位"
+		},
+		"2": {
+			"title": "移动模式",
+			"description": "多种 LP 策略选项"
+		},
+		"3": {
+			"title": "多链",
+			"description": "以太坊、Base、zkSync、BNB"
+		},
+		"4": {
+			"title": "MAV 代币",
+			"description": "治理和质押"
+		},
+		"5": {
+			"title": "增强池",
+			"description": "激励流动性池"
+		},
+		"6": {
+			"title": "资本效率",
+			"description": "集中流动性创新"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "高效交易",
+			"description": "以紧密价差交易"
+		},
+		"2": {
+			"title": "动态 LP",
+			"description": "提供移动的流动性"
+		},
+		"3": {
+			"title": "被动 LP",
+			"description": "使用移动模式设置后不管"
+		},
+		"4": {
+			"title": "MAV 质押",
+			"description": "质押获得 veMAV 治理"
+		},
+		"5": {
+			"title": "增强农场",
+			"description": "在增强池中赚取额外奖励"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Maverick 与 Uniswap V3 有何不同？",
+			"answer": "Uniswap V3 集中流动性是静态的——您设置范围后它保持不变。Maverick 的动态流动性可以自动随价格移动。这减少了持续再平衡的需要并保持资本效率。"
+		},
+		"2": {
+			"question": "什么是移动模式？",
+			"answer": "移动模式定义您的流动性如何随价格移动。选项包括：向右模式（跟随价格上涨）、向左模式（跟随价格下跌）、双向模式（跟随两个方向）和静态模式（如传统集中流动性）。"
+		},
+		"3": {
+			"question": "MAV 代币有什么用途？",
+			"answer": "MAV 是 Maverick 的治理代币。质押 MAV 获得 veMAV 以投票协议决策和定向激励。veMAV 持有者可以增强他们的 LP 奖励并参与 Gauge 投票。"
+		},
+		"4": {
+			"question": "Maverick 在哪些链上？",
+			"answer": "Maverick 部署在以太坊主网、Base、zkSync Era 和 BNB Chain 上。所有支持的链上都有相同的动态 AMM 技术。"
+		},
+		"5": {
+			"question": "Maverick 安全吗？",
+			"answer": "Maverick 经过审计，获得包括 Founders Fund 在内的知名投资者支持。该协议自推出以来处理了大量交易量。标准 AMM 风险适用，加上动态仓位的额外复杂性。"
+		}
+	},
+	"cta": {
+		"ready": "准备好使用动态流动性了吗？",
+		"button": "探索 Maverick",
+		"note": "下一代集中流动性"
+	}
+}

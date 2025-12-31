@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Trader Joe - Avalanche 领先的 DEX",
+		"description": "Trader Joe 是 Avalanche 上顶级 DEX，具有集中流动性的 Liquidity Book。交易、农场和赚取 JOE 代币。",
+		"keywords": "Trader Joe, JOE 代币，Avalanche DEX, Liquidity Book, 集中流动性，DeFi"
+	},
+	"overview": "Trader Joe 是 Avalanche 上最大的去中心化交易所，以其创新的 Liquidity Book AMM 著称。与传统 AMM 不同，Liquidity Book 使用离散价格箱进行集中流动性，提高资本效率。\n\n该平台提供交易、农场、借贷和发射台功能。JOE 代币通过质押（sJOE、rJOE、veJOE）驱动生态系统，具有各种效用和奖励。\n\nTrader Joe 已扩展到 Arbitrum 和 BNB Chain，将其 Liquidity Book 创新带到多个生态系统，同时在其主链上保持强大存在。",
+	"features": {
+		"1": {
+			"title": "Liquidity Book",
+			"description": "带价格箱的集中流动性"
+		},
+		"2": {
+			"title": "多链",
+			"description": "Avalanche, Arbitrum, BNB Chain"
+		},
+		"3": {
+			"title": "JOE 质押",
+			"description": "sJOE、rJOE、veJOE 选项"
+		},
+		"4": {
+			"title": "借贷",
+			"description": "Banker Joe 借贷协议"
+		},
+		"5": {
+			"title": "发射台",
+			"description": "Rocket Joe 新项目发射"
+		},
+		"6": {
+			"title": "自动池",
+			"description": "托管 LP 策略"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "交易",
+			"description": "使用集中流动性交换"
+		},
+		"2": {
+			"title": "提供流动性",
+			"description": "使用 Liquidity Book 箱 LP"
+		},
+		"3": {
+			"title": "JOE 质押",
+			"description": "质押获得奖励和特权"
+		},
+		"4": {
+			"title": "农场",
+			"description": "在 LP 仓位上赚取 JOE"
+		},
+		"5": {
+			"title": "借贷",
+			"description": "在 Banker Joe 上借贷"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 Liquidity Book？",
+			"answer": "Liquidity Book 是 Trader Joe 的集中流动性 AMM。流动性不是连续曲线，而是放置在离散的价格\"箱\"中。LP 仅在其箱活跃时赚取费用。"
+		},
+		"2": {
+			"question": "sJOE、rJOE 和 veJOE 有什么区别？",
+			"answer": "sJOE 是质押的 JOE，以稳定币赚取平台费用。rJOE 赚取奖励并获得 Rocket Joe 发射台访问权。veJOE 是投票托管的，用于增强农场和治理。"
+		},
+		"3": {
+			"question": "Trader Joe 只在 Avalanche 上吗？",
+			"answer": "不，Trader Joe 已扩展到 Arbitrum 和 BNB Chain。Liquidity Book DEX 在所有三个链上可用。一些功能如 Banker Joe 借贷是 Avalanche 专属的。"
+		},
+		"4": {
+			"question": "Liquidity Book 与 Uniswap V3 相比如何？",
+			"answer": "两者都提供集中流动性。Liquidity Book 使用离散箱 vs Uniswap 的自定义范围。箱更容易管理，可能更节省 Gas。"
+		},
+		"5": {
+			"question": "Trader Joe 安全吗？",
+			"answer": "Trader Joe 自 2021 年以来经过审计和实战检验，TVL 可观。它是 Avalanche 领先的 DEX。标准 DeFi 风险适用。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在 Avalanche 交易了吗？",
+		"button": "探索 Trader Joe",
+		"note": "Avalanche 顶级 DEX"
+	}
+}

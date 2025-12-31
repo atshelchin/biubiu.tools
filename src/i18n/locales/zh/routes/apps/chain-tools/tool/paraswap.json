@@ -1,83 +1,83 @@
 {
 	"seo": {
-		"title": "ParaSwap - DEX Aggregator with PSP Token",
-		"description": "ParaSwap aggregates DEX liquidity for best swap rates. Earn PSP tokens and access gasless trading with ParaSwap Delta.",
-		"keywords": "ParaSwap, DEX aggregator, PSP token, gasless swaps, DeFi trading, multi-chain"
+		"title": "ParaSwap - 带 PSP 代币的 DEX 聚合器",
+		"description": "ParaSwap 聚合 DEX 流动性以获得最佳交换率。赚取 PSP 代币并通过 ParaSwap Delta 访问无 Gas 交易。",
+		"keywords": "ParaSwap, DEX 聚合器, PSP 代币, 无 Gas 交换, DeFi 交易, 多链"
 	},
-	"overview": "ParaSwap is a DEX aggregator that finds the best rates across decentralized exchanges. By splitting orders across multiple DEXs and liquidity sources, ParaSwap optimizes for price and gas efficiency.\n\nThe platform features ParaSwap Delta for gasless trading through intent-based orders, competing with CoW Swap and Bebop. Users can earn PSP tokens through staking and trading.\n\nWith support for multiple chains and a focus on developer APIs, ParaSwap serves both retail traders and protocols needing aggregation infrastructure.",
+	"overview": "ParaSwap 是一个 DEX 聚合器，在去中心化交易所之间寻找最佳汇率。通过在多个 DEX 和流动性来源之间拆分订单，ParaSwap 优化价格和 Gas 效率。\n\n该平台通过意图驱动订单提供 ParaSwap Delta 进行无 Gas 交易，与 CoW Swap 和 Bebop 竞争。用户可以通过质押和交易赚取 PSP 代币。\n\n凭借多链支持和专注于开发者 API，ParaSwap 同时服务零售交易者和需要聚合基础设施的协议。",
 	"features": {
 		"1": {
-			"title": "Multi-DEX Routing",
-			"description": "Split orders for best prices"
+			"title": "多 DEX 路由",
+			"description": "拆分订单获得最佳价格"
 		},
 		"2": {
 			"title": "ParaSwap Delta",
-			"description": "Gasless intent-based trading"
+			"description": "无 Gas 意图驱动交易"
 		},
 		"3": {
-			"title": "PSP Token",
-			"description": "Governance and fee sharing"
+			"title": "PSP 代币",
+			"description": "治理和费用分享"
 		},
 		"4": {
-			"title": "Multi-Chain",
-			"description": "Ethereum, Polygon, BSC, and more"
+			"title": "多链支持",
+			"description": "以太坊、Polygon、BSC 等"
 		},
 		"5": {
-			"title": "API Access",
-			"description": "Developer-friendly integration"
+			"title": "API 访问",
+			"description": "开发者友好的集成"
 		},
 		"6": {
-			"title": "Limit Orders",
-			"description": "Set target prices for trades"
+			"title": "限价单",
+			"description": "设置交易目标价格"
 		}
 	},
 	"use_cases": {
 		"1": {
-			"title": "Best Rate Trading",
-			"description": "Get optimal prices across DEXs"
+			"title": "最佳汇率交易",
+			"description": "在 DEX 之间获取最优价格"
 		},
 		"2": {
-			"title": "Gasless Swaps",
-			"description": "Trade with ParaSwap Delta"
+			"title": "无 Gas 交换",
+			"description": "使用 ParaSwap Delta 交易"
 		},
 		"3": {
-			"title": "Protocol Integration",
-			"description": "Use API for your dApp"
+			"title": "协议集成",
+			"description": "为您的 dApp 使用 API"
 		},
 		"4": {
-			"title": "PSP Staking",
-			"description": "Stake for fee discounts"
+			"title": "PSP 质押",
+			"description": "质押获得费用折扣"
 		},
 		"5": {
-			"title": "Cross-Chain Trading",
-			"description": "Swap on multiple networks"
+			"title": "跨链交易",
+			"description": "在多个网络上交换"
 		}
 	},
 	"faqs": {
 		"1": {
-			"question": "How does ParaSwap find the best rate?",
-			"answer": "ParaSwap's algorithm queries dozens of DEXs and liquidity sources simultaneously. It considers splitting orders across multiple sources, factoring in gas costs. The result is often better than trading on any single DEX."
+			"question": "ParaSwap 如何找到最佳汇率？",
+			"answer": "ParaSwap 的算法同时查询数十个 DEX 和流动性来源。它考虑在多个来源之间拆分订单，计入 Gas 成本。"
 		},
 		"2": {
-			"question": "What is ParaSwap Delta?",
-			"answer": "Delta is ParaSwap's gasless trading mode using intent-based orders. Instead of submitting transactions, you sign an order that market makers fill. This provides MEV protection and no upfront gas costs."
+			"question": "什么是 ParaSwap Delta？",
+			"answer": "Delta 是 ParaSwap 使用意图驱动订单的无 Gas 交易模式。您签署订单而非提交交易，由做市商执行。"
 		},
 		"3": {
-			"question": "What is PSP token used for?",
-			"answer": "PSP is ParaSwap's governance token. Staking PSP unlocks fee discounts and voting rights. Social stakers (long-term stakers) get better rewards. PSP may also receive protocol revenue sharing."
+			"question": "PSP 代币有什么用途？",
+			"answer": "PSP 是 ParaSwap 的治理代币。质押 PSP 可解锁费用折扣和投票权。社交质押者获得更好的奖励。"
 		},
 		"4": {
-			"question": "ParaSwap vs 1inch: Which is better?",
-			"answer": "Both are top DEX aggregators with similar coverage. 1inch has larger market share and more liquidity sources. ParaSwap has PSP token incentives and Delta for gasless trades. Try both and compare quotes for your specific trades."
+			"question": "ParaSwap vs 1inch：哪个更好？",
+			"answer": "两者都是顶级 DEX 聚合器。1inch 有更大市场份额，ParaSwap 有 PSP 代币激励。针对具体交易两者都试试。"
 		},
 		"5": {
-			"question": "Is ParaSwap safe?",
-			"answer": "ParaSwap has been operating since 2019 with billions in volume processed. Contracts are audited. It's a non-custodial aggregator—you're trading through smart contracts. Standard DEX risks apply."
+			"question": "ParaSwap 安全吗？",
+			"answer": "ParaSwap 自 2019 年运营，处理了数十亿美元交易量。合约经过审计，是非托管聚合器。"
 		}
 	},
 	"cta": {
-		"ready": "Ready to find the best rates?",
-		"button": "Explore ParaSwap",
-		"note": "DEX aggregation with PSP"
+		"ready": "准备好找到最佳汇率了吗？",
+		"button": "探索 ParaSwap",
+		"note": "带 PSP 的 DEX 聚合"
 	}
 }
