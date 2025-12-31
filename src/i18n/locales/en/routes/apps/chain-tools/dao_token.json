@@ -1,154 +1,155 @@
 {
 	"category_seo": {
-		"title": "DAO 治理代币 - 投票权与代币经济学 | BiuBiu Tools",
-		"description": "了解 DAO 治理代币。主要 DAO 中的投票机制、代币分配和治理参与。",
+		"title": "DAO Governance Tokens - Voting Power & Tokenomics | BiuBiu Tools",
+		"description": "Explore DAO governance tokens. Voting mechanisms, token distribution, and governance participation across major DAOs.",
+		"keywords": "DAO governance tokens, DeFi voting, protocol governance, tokenomics, governance delegation",
 		"faqs": [
 			{
-				"question": "什么是治理代币？",
-				"answer": "治理代币赋予持有者在协议决策中的投票权。例如：UNI（Uniswap）、AAVE、COMP。投票权通常与代币持有量成比例。"
+				"question": "What are governance tokens?",
+				"answer": "Governance tokens grant holders voting rights in protocol decisions. Examples: UNI (Uniswap), AAVE, COMP. Voting power is typically proportional to token holdings."
 			},
 			{
-				"question": "投票委托如何运作？",
-				"answer": "你可以将投票权委托给他人（代表）同时保留代币。这有助于活跃的社区成员代表被动持有者投票。"
+				"question": "How does vote delegation work?",
+				"answer": "You can delegate voting power to others (delegates) while retaining tokens. This helps active community members vote on behalf of passive holders."
 			},
 			{
-				"question": "治理代币有价值吗？",
-				"answer": "价值来自治理权、潜在的费用分成和投机。一些协议与代币持有者分享收入。其他协议在价值累积方面遇到困难。"
+				"question": "Are governance tokens valuable?",
+				"answer": "Value derives from governance rights, potential fee sharing, and speculation. Some protocols share revenue with token holders. Others struggle with value accrual."
 			}
 		]
 	},
 	"tools": {
 		"boardroom": {
-			"description": "治理聚合器，用于追踪 DAO 提案和投票"
+			"description": "Governance aggregator for tracking DAO proposals, voting, and delegate activity across multiple protocols"
 		},
-		"uni-token": {
-			"description": "UNI (Uniswap) - Tool"
+		"uni_token": {
+			"description": "Uniswap governance token for voting on protocol upgrades, fee switches, and treasury allocations for the largest DEX"
 		},
-		"aave-token": {
-			"description": "AAVE (Aave) - Tool"
+		"aave_token": {
+			"description": "Aave governance and safety module staking token for the leading decentralized lending protocol"
 		},
-		"mkr-token": {
-			"description": "MKR (MakerDAO) - Tool"
+		"mkr_token": {
+			"description": "MakerDAO governance token for managing DAI stablecoin parameters, collateral types, and protocol risk"
 		},
-		"crv-token": {
-			"description": "CRV (Curve) - Tool"
+		"crv_token": {
+			"description": "Curve governance token with vote-escrow mechanics (veCRV) for directing liquidity incentives to pools"
 		},
-		"comp-token": {
-			"description": "COMP (Compound) - Tool"
+		"comp_token": {
+			"description": "Compound governance token for voting on interest rate models and protocol parameters for DeFi lending"
 		},
-		"snx-token": {
-			"description": "SNX (Synthetix) - Tool"
+		"snx_token": {
+			"description": "Synthetix governance and staking token for the synthetic assets protocol, backing sUSD and synths"
 		},
-		"ldo-token": {
-			"description": "LDO (Lido) - Tool"
+		"ldo_token": {
+			"description": "Lido DAO governance token for the largest liquid staking protocol managing stETH and cross-chain staking"
 		},
-		"gmx-token": {
-			"description": "GMX (GMX) - Tool"
+		"gmx_token": {
+			"description": "GMX governance and utility token for the perpetual DEX, earning protocol fees from trading"
 		},
-		"bal-token": {
-			"description": "BAL (Balancer) - Tool"
+		"bal_token": {
+			"description": "Balancer governance token with veBAL mechanics for directing liquidity mining rewards to pools"
 		},
-		"sushi-token": {
-			"description": "SUSHI (SushiSwap) - Tool"
+		"sushi_token": {
+			"description": "SushiSwap governance token for the multi-chain DEX and DeFi ecosystem including lending and launchpad"
 		},
-		"yfi-token": {
-			"description": "YFI (Yearn) - Tool"
+		"yfi_token": {
+			"description": "Yearn Finance governance token for the yield aggregator protocol managing vault strategies"
 		},
-		"inch-token": {
-			"description": "1INCH (1inch) - Tool"
+		"inch_token": {
+			"description": "1inch governance and utility token for the DEX aggregator with staking rewards and DAO voting"
 		},
-		"pendle-token": {
-			"description": "PENDLE (Pendle) - Tool"
+		"pendle_token": {
+			"description": "Pendle governance token for the yield tokenization protocol, enabling trading of future yield"
 		},
-		"ena-token": {
-			"description": "ENA (Ethena) - Tool"
+		"ena_token": {
+			"description": "Ethena governance token for the synthetic dollar protocol USDe backed by staked ETH derivatives"
 		},
-		"dydx-token": {
-			"description": "DYDX (dYdX) - Tool"
+		"dydx_token": {
+			"description": "dYdX governance token for the decentralized perpetual exchange, now on its own Cosmos chain"
 		},
-		"cvx-token": {
-			"description": "CVX (Convex) - Tool"
+		"cvx_token": {
+			"description": "Convex Finance token for boosting Curve rewards and governing the CRV yield optimization platform"
 		},
-		"fxs-token": {
-			"description": "FXS (Frax) - Tool"
+		"fxs_token": {
+			"description": "Frax Share governance token for the fractional-algorithmic stablecoin and DeFi ecosystem"
 		},
-		"blur-token": {
-			"description": "BLUR (Blur) - Tool"
+		"blur_token": {
+			"description": "Blur governance token for the NFT marketplace with zero-fee trading and advanced trading features"
 		},
-		"ape-token": {
-			"description": "APE (ApeCoin) - Tool"
+		"ape_token": {
+			"description": "ApeCoin governance token for the Bored Ape ecosystem, games, and metaverse initiatives"
 		},
-		"rpl-token": {
-			"description": "RPL (Rocket Pool) - Tool"
+		"rpl_token": {
+			"description": "Rocket Pool governance and collateral token for the decentralized Ethereum staking protocol"
 		},
-		"morpho-token": {
-			"description": "MORPHO (Morpho) - Tool"
+		"morpho_token": {
+			"description": "Morpho governance token for the peer-to-peer lending optimizer built on top of Aave and Compound"
 		},
-		"rdnt-token": {
-			"description": "RDNT (Radiant) - Tool"
+		"rdnt_token": {
+			"description": "Radiant Capital governance token for the omnichain lending protocol using LayerZero"
 		},
-		"osmo-token": {
-			"description": "OSMO (Osmosis) - Tool"
+		"osmo_token": {
+			"description": "Osmosis governance and staking token for the largest DEX in the Cosmos ecosystem"
 		},
-		"jup-token": {
-			"description": "JUP (Jupiter) - Tool"
+		"jup_token": {
+			"description": "Jupiter governance token for the leading Solana DEX aggregator and perpetual exchange"
 		},
-		"ray-token": {
-			"description": "RAY (Raydium) - Tool"
+		"ray_token": {
+			"description": "Raydium governance token for the Solana AMM and liquidity provider to the Serum order book"
 		},
-		"jto-token": {
-			"description": "JTO (Jito) - Tool"
+		"jto_token": {
+			"description": "Jito governance token for the Solana MEV infrastructure and liquid staking protocol"
 		},
-		"orca-token": {
-			"description": "ORCA (Orca) - Tool"
+		"orca_token": {
+			"description": "Orca governance token for the user-friendly Solana DEX with concentrated liquidity pools"
 		},
-		"arb-token": {
-			"description": "ARB (Arbitrum) - Tool"
+		"arb_token": {
+			"description": "Arbitrum governance token for the leading Ethereum L2 using optimistic rollups"
 		},
-		"op-token": {
-			"description": "OP (Optimism) - Tool"
+		"op_token": {
+			"description": "Optimism governance token for the L2 scaling solution and Superchain ecosystem"
 		},
-		"strk-token": {
-			"description": "STRK (StarkNet) - Tool"
+		"strk_token": {
+			"description": "StarkNet governance token for the ZK-rollup L2 using STARK proofs for Ethereum scaling"
 		},
-		"zk-token": {
-			"description": "ZK (zkSync) - Tool"
+		"zk_token": {
+			"description": "zkSync Era governance token for the ZK-rollup with native account abstraction"
 		},
-		"matic-token": {
-			"description": "MATIC/POL (Polygon) - Tool"
+		"matic_token": {
+			"description": "Polygon (MATIC/POL) governance token for the Ethereum scaling ecosystem including PoS and zkEVM"
 		},
-		"mnt-token": {
-			"description": "MNT (Mantle) - Tool"
+		"mnt_token": {
+			"description": "Mantle governance token for the L2 backed by BitDAO treasury with modular architecture"
 		},
-		"metis-token": {
-			"description": "METIS (Metis) - Tool"
+		"metis_token": {
+			"description": "Metis governance token for the Ethereum L2 focused on enterprise and decentralized companies"
 		},
-		"ens-token": {
-			"description": "ENS (Ethereum Name Service) - Tool"
+		"ens_token": {
+			"description": "Ethereum Name Service governance token for managing the .eth domain system and protocol upgrades"
 		},
-		"gtc-token": {
-			"description": "GTC (Gitcoin) - Tool"
+		"gtc_token": {
+			"description": "Gitcoin governance token for the public goods funding platform using quadratic funding"
 		},
-		"safe-token": {
-			"description": "SAFE (Safe) - Tool"
+		"safe_token": {
+			"description": "Safe (formerly Gnosis Safe) governance token for the leading multi-sig wallet infrastructure"
 		},
-		"cow-token": {
-			"description": "COW (CoW Protocol) - Tool"
+		"cow_token": {
+			"description": "CoW Protocol governance token for the MEV-protected DEX using batch auctions"
 		},
-		"gno-token": {
-			"description": "GNO (Gnosis) - Tool"
+		"gno_token": {
+			"description": "Gnosis governance token for the prediction markets platform and Gnosis Chain ecosystem"
 		},
-		"tally-governance": {
-			"description": "Tally - Tool"
+		"tally_governance": {
+			"description": "On-chain governance platform for creating proposals, delegating votes, and executing DAO decisions"
 		},
-		"snapshot-governance": {
-			"description": "Snapshot - Tool"
+		"snapshot_governance": {
+			"description": "Off-chain voting platform for gasless governance using signed messages and customizable strategies"
 		},
-		"karma-dao": {
-			"description": "Karma - Tool"
+		"karma_dao": {
+			"description": "DAO contributor reputation and delegate tracking platform for governance analytics"
 		},
-		"messari-governance": {
-			"description": "Messari Governor - Tool"
+		"messari_governance": {
+			"description": "Governance research and analytics from Messari covering DAO proposals and voting trends"
 		}
 	}
 }

@@ -1,7 +1,8 @@
 {
 	"category_seo": {
 		"title": "Token Quản Trị DAO - Quyền Bỏ Phiếu & Tokenomics | BiuBiu Tools",
-		"description": "Hiểu về token quản trị DAO. Cơ chế bỏ phiếu, phân phối token và tham gia quản trị trong các DAO lớn.",
+		"description": "Khám phá token quản trị DAO. Cơ chế bỏ phiếu, phân phối token và tham gia quản trị trong các DAO lớn.",
+		"keywords": "token quản trị DAO, bỏ phiếu DeFi, quản trị giao thức, tokenomics, ủy quyền quản trị",
 		"faqs": [
 			{
 				"question": "Token quản trị là gì?",
@@ -19,136 +20,136 @@
 	},
 	"tools": {
 		"boardroom": {
-			"description": "Bộ tổng hợp quản trị để theo dõi đề xuất và bỏ phiếu DAO"
+			"description": "Bộ tổng hợp quản trị để theo dõi đề xuất DAO, bỏ phiếu và hoạt động đại biểu trên nhiều giao thức"
 		},
-		"uni-token": {
-			"description": "UNI (Uniswap) - Tool"
+		"uni_token": {
+			"description": "Token quản trị Uniswap để bỏ phiếu nâng cấp giao thức, chuyển đổi phí và phân bổ ngân quỹ của DEX lớn nhất"
 		},
-		"aave-token": {
-			"description": "AAVE (Aave) - Tool"
+		"aave_token": {
+			"description": "Token quản trị và staking module an toàn Aave cho giao thức cho vay phi tập trung hàng đầu"
 		},
-		"mkr-token": {
-			"description": "MKR (MakerDAO) - Tool"
+		"mkr_token": {
+			"description": "Token quản trị MakerDAO để quản lý tham số stablecoin DAI, loại tài sản thế chấp và rủi ro giao thức"
 		},
-		"crv-token": {
-			"description": "CRV (Curve) - Tool"
+		"crv_token": {
+			"description": "Token quản trị Curve với cơ chế vote-escrow (veCRV) để hướng dẫn khuyến khích thanh khoản vào các pool"
 		},
-		"comp-token": {
-			"description": "COMP (Compound) - Tool"
+		"comp_token": {
+			"description": "Token quản trị Compound để bỏ phiếu về mô hình lãi suất và tham số giao thức cho vay DeFi"
 		},
-		"snx-token": {
-			"description": "SNX (Synthetix) - Tool"
+		"snx_token": {
+			"description": "Token quản trị và staking Synthetix cho giao thức tài sản tổng hợp, hỗ trợ sUSD và synths"
 		},
-		"ldo-token": {
-			"description": "LDO (Lido) - Tool"
+		"ldo_token": {
+			"description": "Token quản trị Lido DAO cho giao thức liquid staking lớn nhất quản lý stETH và staking cross-chain"
 		},
-		"gmx-token": {
-			"description": "GMX (GMX) - Tool"
+		"gmx_token": {
+			"description": "Token quản trị và tiện ích GMX cho DEX perpetual, kiếm phí giao thức từ giao dịch"
 		},
-		"bal-token": {
-			"description": "BAL (Balancer) - Tool"
+		"bal_token": {
+			"description": "Token quản trị Balancer với cơ chế veBAL để hướng dẫn phần thưởng khai thác thanh khoản vào các pool"
 		},
-		"sushi-token": {
-			"description": "SUSHI (SushiSwap) - Tool"
+		"sushi_token": {
+			"description": "Token quản trị SushiSwap cho DEX đa chuỗi và hệ sinh thái DeFi bao gồm cho vay và launchpad"
 		},
-		"yfi-token": {
-			"description": "YFI (Yearn) - Tool"
+		"yfi_token": {
+			"description": "Token quản trị Yearn Finance cho giao thức tổng hợp lợi suất quản lý chiến lược vault"
 		},
-		"inch-token": {
-			"description": "1INCH (1inch) - Tool"
+		"inch_token": {
+			"description": "Token quản trị và tiện ích 1inch cho bộ tổng hợp DEX với phần thưởng staking và bỏ phiếu DAO"
 		},
-		"pendle-token": {
-			"description": "PENDLE (Pendle) - Tool"
+		"pendle_token": {
+			"description": "Token quản trị Pendle cho giao thức token hóa lợi suất, cho phép giao dịch lợi suất tương lai"
 		},
-		"ena-token": {
-			"description": "ENA (Ethena) - Tool"
+		"ena_token": {
+			"description": "Token quản trị Ethena cho giao thức đô la tổng hợp USDe được hỗ trợ bởi phái sinh ETH đã stake"
 		},
-		"dydx-token": {
-			"description": "DYDX (dYdX) - Tool"
+		"dydx_token": {
+			"description": "Token quản trị dYdX cho sàn giao dịch perpetual phi tập trung, hiện trên chuỗi Cosmos riêng"
 		},
-		"cvx-token": {
-			"description": "CVX (Convex) - Tool"
+		"cvx_token": {
+			"description": "Token Convex Finance để tăng phần thưởng Curve và quản trị nền tảng tối ưu hóa lợi suất CRV"
 		},
-		"fxs-token": {
-			"description": "FXS (Frax) - Tool"
+		"fxs_token": {
+			"description": "Token quản trị Frax Share cho stablecoin phân số-thuật toán và hệ sinh thái DeFi"
 		},
-		"blur-token": {
-			"description": "BLUR (Blur) - Tool"
+		"blur_token": {
+			"description": "Token quản trị Blur cho marketplace NFT với giao dịch không phí và tính năng giao dịch nâng cao"
 		},
-		"ape-token": {
-			"description": "APE (ApeCoin) - Tool"
+		"ape_token": {
+			"description": "Token quản trị ApeCoin cho hệ sinh thái Bored Ape, game và sáng kiến metaverse"
 		},
-		"rpl-token": {
-			"description": "RPL (Rocket Pool) - Tool"
+		"rpl_token": {
+			"description": "Token quản trị và tài sản thế chấp Rocket Pool cho giao thức staking Ethereum phi tập trung"
 		},
-		"morpho-token": {
-			"description": "MORPHO (Morpho) - Tool"
+		"morpho_token": {
+			"description": "Token quản trị Morpho cho bộ tối ưu hóa cho vay ngang hàng được xây dựng trên Aave và Compound"
 		},
-		"rdnt-token": {
-			"description": "RDNT (Radiant) - Tool"
+		"rdnt_token": {
+			"description": "Token quản trị Radiant Capital cho giao thức cho vay omnichain sử dụng LayerZero"
 		},
-		"osmo-token": {
-			"description": "OSMO (Osmosis) - Tool"
+		"osmo_token": {
+			"description": "Token quản trị và staking Osmosis cho DEX lớn nhất trong hệ sinh thái Cosmos"
 		},
-		"jup-token": {
-			"description": "JUP (Jupiter) - Tool"
+		"jup_token": {
+			"description": "Token quản trị Jupiter cho bộ tổng hợp DEX hàng đầu Solana và sàn giao dịch perpetual"
 		},
-		"ray-token": {
-			"description": "RAY (Raydium) - Tool"
+		"ray_token": {
+			"description": "Token quản trị Raydium cho Solana AMM và nhà cung cấp thanh khoản cho sổ lệnh Serum"
 		},
-		"jto-token": {
-			"description": "JTO (Jito) - Tool"
+		"jto_token": {
+			"description": "Token quản trị Jito cho cơ sở hạ tầng MEV Solana và giao thức liquid staking"
 		},
-		"orca-token": {
-			"description": "ORCA (Orca) - Tool"
+		"orca_token": {
+			"description": "Token quản trị Orca cho DEX Solana thân thiện với người dùng với pool thanh khoản tập trung"
 		},
-		"arb-token": {
-			"description": "ARB (Arbitrum) - Tool"
+		"arb_token": {
+			"description": "Token quản trị Arbitrum cho L2 Ethereum hàng đầu sử dụng optimistic rollup"
 		},
-		"op-token": {
-			"description": "OP (Optimism) - Tool"
+		"op_token": {
+			"description": "Token quản trị Optimism cho giải pháp mở rộng L2 và hệ sinh thái Superchain"
 		},
-		"strk-token": {
-			"description": "STRK (StarkNet) - Tool"
+		"strk_token": {
+			"description": "Token quản trị StarkNet cho L2 ZK-rollup sử dụng chứng minh STARK để mở rộng Ethereum"
 		},
-		"zk-token": {
-			"description": "ZK (zkSync) - Tool"
+		"zk_token": {
+			"description": "Token quản trị zkSync Era cho ZK-rollup với trừu tượng tài khoản gốc"
 		},
-		"matic-token": {
-			"description": "MATIC/POL (Polygon) - Tool"
+		"matic_token": {
+			"description": "Token quản trị Polygon (MATIC/POL) cho hệ sinh thái mở rộng Ethereum bao gồm PoS và zkEVM"
 		},
-		"mnt-token": {
-			"description": "MNT (Mantle) - Tool"
+		"mnt_token": {
+			"description": "Token quản trị Mantle cho L2 được hỗ trợ bởi ngân quỹ BitDAO với kiến trúc module"
 		},
-		"metis-token": {
-			"description": "METIS (Metis) - Tool"
+		"metis_token": {
+			"description": "Token quản trị Metis cho L2 Ethereum tập trung vào doanh nghiệp và công ty phi tập trung"
 		},
-		"ens-token": {
-			"description": "ENS (Ethereum Name Service) - Tool"
+		"ens_token": {
+			"description": "Token quản trị Ethereum Name Service để quản lý hệ thống tên miền .eth và nâng cấp giao thức"
 		},
-		"gtc-token": {
-			"description": "GTC (Gitcoin) - Tool"
+		"gtc_token": {
+			"description": "Token quản trị Gitcoin cho nền tảng tài trợ hàng hóa công cộng sử dụng tài trợ bậc hai"
 		},
-		"safe-token": {
-			"description": "SAFE (Safe) - Tool"
+		"safe_token": {
+			"description": "Token quản trị Safe (trước đây là Gnosis Safe) cho cơ sở hạ tầng ví multi-sig hàng đầu"
 		},
-		"cow-token": {
-			"description": "COW (CoW Protocol) - Tool"
+		"cow_token": {
+			"description": "Token quản trị CoW Protocol cho DEX được bảo vệ khỏi MEV sử dụng đấu giá theo lô"
 		},
-		"gno-token": {
-			"description": "GNO (Gnosis) - Tool"
+		"gno_token": {
+			"description": "Token quản trị Gnosis cho nền tảng thị trường dự đoán và hệ sinh thái Gnosis Chain"
 		},
-		"tally-governance": {
-			"description": "Tally - Tool"
+		"tally_governance": {
+			"description": "Nền tảng quản trị on-chain để tạo đề xuất, ủy quyền phiếu bầu và thực thi quyết định DAO"
 		},
-		"snapshot-governance": {
-			"description": "Snapshot - Tool"
+		"snapshot_governance": {
+			"description": "Nền tảng bỏ phiếu off-chain cho quản trị không gas sử dụng tin nhắn đã ký và chiến lược tùy chỉnh"
 		},
-		"karma-dao": {
-			"description": "Karma - Tool"
+		"karma_dao": {
+			"description": "Nền tảng danh tiếng người đóng góp DAO và theo dõi đại biểu cho phân tích quản trị"
 		},
-		"messari-governance": {
-			"description": "Messari Governor - Tool"
+		"messari_governance": {
+			"description": "Nghiên cứu và phân tích quản trị từ Messari bao gồm đề xuất DAO và xu hướng bỏ phiếu"
 		}
 	}
 }

@@ -1,7 +1,8 @@
 {
 	"category_seo": {
 		"title": "Token Governance DAO - Kekuatan Voting & Tokenomik | BiuBiu Tools",
-		"description": "Pahami token governance DAO. Mekanisme voting, distribusi token, dan partisipasi governance di DAO utama.",
+		"description": "Jelajahi token governance DAO. Mekanisme voting, distribusi token, dan partisipasi governance di DAO utama.",
+		"keywords": "token governance DAO, voting DeFi, governance protokol, tokenomik, delegasi governance",
 		"faqs": [
 			{
 				"question": "Apa itu token governance?",
@@ -19,136 +20,136 @@
 	},
 	"tools": {
 		"boardroom": {
-			"description": "Agregator governance untuk melacak proposal DAO dan voting"
+			"description": "Agregator governance untuk melacak proposal DAO, voting, dan aktivitas delegasi di berbagai protokol"
 		},
-		"uni-token": {
-			"description": "UNI (Uniswap) - Tool"
+		"uni_token": {
+			"description": "Token governance Uniswap untuk voting upgrade protokol, switch biaya, dan alokasi treasury DEX terbesar"
 		},
-		"aave-token": {
-			"description": "AAVE (Aave) - Tool"
+		"aave_token": {
+			"description": "Token governance dan staking modul keamanan Aave untuk protokol pinjaman terdesentralisasi terkemuka"
 		},
-		"mkr-token": {
-			"description": "MKR (MakerDAO) - Tool"
+		"mkr_token": {
+			"description": "Token governance MakerDAO untuk mengelola parameter stablecoin DAI, jenis jaminan, dan risiko protokol"
 		},
-		"crv-token": {
-			"description": "CRV (Curve) - Tool"
+		"crv_token": {
+			"description": "Token governance Curve dengan mekanika vote-escrow (veCRV) untuk mengarahkan insentif likuiditas ke pool"
 		},
-		"comp-token": {
-			"description": "COMP (Compound) - Tool"
+		"comp_token": {
+			"description": "Token governance Compound untuk voting model suku bunga dan parameter protokol pinjaman DeFi"
 		},
-		"snx-token": {
-			"description": "SNX (Synthetix) - Tool"
+		"snx_token": {
+			"description": "Token governance dan staking Synthetix untuk protokol aset sintetis, mendukung sUSD dan synths"
 		},
-		"ldo-token": {
-			"description": "LDO (Lido) - Tool"
+		"ldo_token": {
+			"description": "Token governance Lido DAO untuk protokol liquid staking terbesar yang mengelola stETH dan staking cross-chain"
 		},
-		"gmx-token": {
-			"description": "GMX (GMX) - Tool"
+		"gmx_token": {
+			"description": "Token governance dan utilitas GMX untuk DEX perpetual, menghasilkan biaya protokol dari trading"
 		},
-		"bal-token": {
-			"description": "BAL (Balancer) - Tool"
+		"bal_token": {
+			"description": "Token governance Balancer dengan mekanika veBAL untuk mengarahkan hadiah mining likuiditas ke pool"
 		},
-		"sushi-token": {
-			"description": "SUSHI (SushiSwap) - Tool"
+		"sushi_token": {
+			"description": "Token governance SushiSwap untuk DEX multi-chain dan ekosistem DeFi termasuk pinjaman dan launchpad"
 		},
-		"yfi-token": {
-			"description": "YFI (Yearn) - Tool"
+		"yfi_token": {
+			"description": "Token governance Yearn Finance untuk protokol agregator yield yang mengelola strategi vault"
 		},
-		"inch-token": {
-			"description": "1INCH (1inch) - Tool"
+		"inch_token": {
+			"description": "Token governance dan utilitas 1inch untuk agregator DEX dengan hadiah staking dan voting DAO"
 		},
-		"pendle-token": {
-			"description": "PENDLE (Pendle) - Tool"
+		"pendle_token": {
+			"description": "Token governance Pendle untuk protokol tokenisasi yield, memungkinkan trading yield masa depan"
 		},
-		"ena-token": {
-			"description": "ENA (Ethena) - Tool"
+		"ena_token": {
+			"description": "Token governance Ethena untuk protokol dolar sintetis USDe yang didukung derivatif ETH yang di-stake"
 		},
-		"dydx-token": {
-			"description": "DYDX (dYdX) - Tool"
+		"dydx_token": {
+			"description": "Token governance dYdX untuk bursa perpetual terdesentralisasi, sekarang di chain Cosmos sendiri"
 		},
-		"cvx-token": {
-			"description": "CVX (Convex) - Tool"
+		"cvx_token": {
+			"description": "Token Convex Finance untuk meningkatkan hadiah Curve dan mengatur platform optimisasi yield CRV"
 		},
-		"fxs-token": {
-			"description": "FXS (Frax) - Tool"
+		"fxs_token": {
+			"description": "Token governance Frax Share untuk stablecoin fraksional-algoritmik dan ekosistem DeFi"
 		},
-		"blur-token": {
-			"description": "BLUR (Blur) - Tool"
+		"blur_token": {
+			"description": "Token governance Blur untuk marketplace NFT dengan trading tanpa biaya dan fitur trading lanjutan"
 		},
-		"ape-token": {
-			"description": "APE (ApeCoin) - Tool"
+		"ape_token": {
+			"description": "Token governance ApeCoin untuk ekosistem Bored Ape, game, dan inisiatif metaverse"
 		},
-		"rpl-token": {
-			"description": "RPL (Rocket Pool) - Tool"
+		"rpl_token": {
+			"description": "Token governance dan jaminan Rocket Pool untuk protokol staking Ethereum terdesentralisasi"
 		},
-		"morpho-token": {
-			"description": "MORPHO (Morpho) - Tool"
+		"morpho_token": {
+			"description": "Token governance Morpho untuk optimizer pinjaman peer-to-peer yang dibangun di atas Aave dan Compound"
 		},
-		"rdnt-token": {
-			"description": "RDNT (Radiant) - Tool"
+		"rdnt_token": {
+			"description": "Token governance Radiant Capital untuk protokol pinjaman omnichain menggunakan LayerZero"
 		},
-		"osmo-token": {
-			"description": "OSMO (Osmosis) - Tool"
+		"osmo_token": {
+			"description": "Token governance dan staking Osmosis untuk DEX terbesar di ekosistem Cosmos"
 		},
-		"jup-token": {
-			"description": "JUP (Jupiter) - Tool"
+		"jup_token": {
+			"description": "Token governance Jupiter untuk agregator DEX Solana terkemuka dan bursa perpetual"
 		},
-		"ray-token": {
-			"description": "RAY (Raydium) - Tool"
+		"ray_token": {
+			"description": "Token governance Raydium untuk AMM Solana dan penyedia likuiditas ke buku order Serum"
 		},
-		"jto-token": {
-			"description": "JTO (Jito) - Tool"
+		"jto_token": {
+			"description": "Token governance Jito untuk infrastruktur MEV Solana dan protokol liquid staking"
 		},
-		"orca-token": {
-			"description": "ORCA (Orca) - Tool"
+		"orca_token": {
+			"description": "Token governance Orca untuk DEX Solana yang ramah pengguna dengan pool likuiditas terkonsentrasi"
 		},
-		"arb-token": {
-			"description": "ARB (Arbitrum) - Tool"
+		"arb_token": {
+			"description": "Token governance Arbitrum untuk L2 Ethereum terkemuka menggunakan optimistic rollup"
 		},
-		"op-token": {
-			"description": "OP (Optimism) - Tool"
+		"op_token": {
+			"description": "Token governance Optimism untuk solusi scaling L2 dan ekosistem Superchain"
 		},
-		"strk-token": {
-			"description": "STRK (StarkNet) - Tool"
+		"strk_token": {
+			"description": "Token governance StarkNet untuk L2 ZK-rollup menggunakan bukti STARK untuk menskalakan Ethereum"
 		},
-		"zk-token": {
-			"description": "ZK (zkSync) - Tool"
+		"zk_token": {
+			"description": "Token governance zkSync Era untuk ZK-rollup dengan abstraksi akun native"
 		},
-		"matic-token": {
-			"description": "MATIC/POL (Polygon) - Tool"
+		"matic_token": {
+			"description": "Token governance Polygon (MATIC/POL) untuk ekosistem scaling Ethereum termasuk PoS dan zkEVM"
 		},
-		"mnt-token": {
-			"description": "MNT (Mantle) - Tool"
+		"mnt_token": {
+			"description": "Token governance Mantle untuk L2 yang didukung treasury BitDAO dengan arsitektur modular"
 		},
-		"metis-token": {
-			"description": "METIS (Metis) - Tool"
+		"metis_token": {
+			"description": "Token governance Metis untuk L2 Ethereum yang fokus pada perusahaan dan perusahaan terdesentralisasi"
 		},
-		"ens-token": {
-			"description": "ENS (Ethereum Name Service) - Tool"
+		"ens_token": {
+			"description": "Token governance Ethereum Name Service untuk mengelola sistem domain .eth dan upgrade protokol"
 		},
-		"gtc-token": {
-			"description": "GTC (Gitcoin) - Tool"
+		"gtc_token": {
+			"description": "Token governance Gitcoin untuk platform pendanaan barang publik menggunakan pendanaan kuadratik"
 		},
-		"safe-token": {
-			"description": "SAFE (Safe) - Tool"
+		"safe_token": {
+			"description": "Token governance Safe (sebelumnya Gnosis Safe) untuk infrastruktur wallet multi-sig terkemuka"
 		},
-		"cow-token": {
-			"description": "COW (CoW Protocol) - Tool"
+		"cow_token": {
+			"description": "Token governance CoW Protocol untuk DEX yang dilindungi MEV menggunakan lelang batch"
 		},
-		"gno-token": {
-			"description": "GNO (Gnosis) - Tool"
+		"gno_token": {
+			"description": "Token governance Gnosis untuk platform pasar prediksi dan ekosistem Gnosis Chain"
 		},
-		"tally-governance": {
-			"description": "Tally - Tool"
+		"tally_governance": {
+			"description": "Platform governance on-chain untuk membuat proposal, mendelegasikan suara, dan mengeksekusi keputusan DAO"
 		},
-		"snapshot-governance": {
-			"description": "Snapshot - Tool"
+		"snapshot_governance": {
+			"description": "Platform voting off-chain untuk governance tanpa gas menggunakan pesan bertanda tangan dan strategi yang dapat dikustomisasi"
 		},
-		"karma-dao": {
-			"description": "Karma - Tool"
+		"karma_dao": {
+			"description": "Platform reputasi kontributor DAO dan pelacakan delegasi untuk analitik governance"
 		},
-		"messari-governance": {
-			"description": "Messari Governor - Tool"
+		"messari_governance": {
+			"description": "Riset dan analitik governance dari Messari yang mencakup proposal DAO dan tren voting"
 		}
 	}
 }

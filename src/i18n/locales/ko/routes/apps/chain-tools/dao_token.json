@@ -1,155 +1,155 @@
 {
 	"category_seo": {
-		"title": "DAO Governance Tokens - Voting Power & Tokenomics | BiuBiu Tools",
-		"description": "Understand DAO governance tokens. Voting mechanisms, token distribution, and governance participation in major DAOs.",
-		"keywords": "",
+		"title": "DAO 거버넌스 토큰 - 투표권 및 토크노믹스 | BiuBiu Tools",
+		"description": "DAO 거버넌스 토큰을 탐색하세요. 주요 DAO의 투표 메커니즘, 토큰 분배 및 거버넌스 참여에 대해 알아보세요.",
+		"keywords": "DAO 거버넌스 토큰, DeFi 투표, 프로토콜 거버넌스, 토크노믹스, 거버넌스 위임",
 		"faqs": [
 			{
-				"question": "What are governance tokens?",
-				"answer": "Governance tokens give holders voting rights in a protocol's decisions. Examples: UNI (Uniswap), AAVE, COMP. Voting power typically scales with token holdings."
+				"question": "거버넌스 토큰이란 무엇인가요?",
+				"answer": "거버넌스 토큰은 보유자에게 프로토콜 결정에 대한 투표권을 부여합니다. 예: UNI(Uniswap), AAVE, COMP. 투표력은 일반적으로 토큰 보유량에 비례합니다."
 			},
 			{
-				"question": "How does vote delegation work?",
-				"answer": "You can delegate your voting power to others (delegates) while keeping your tokens. This helps active community members vote on behalf of passive holders."
+				"question": "투표 위임은 어떻게 작동하나요?",
+				"answer": "토큰을 보유한 채로 투표권을 다른 사람(대리인)에게 위임할 수 있습니다. 이를 통해 활동적인 커뮤니티 구성원이 수동적 보유자를 대신해 투표할 수 있습니다."
 			},
 			{
-				"question": "Do governance tokens have value?",
-				"answer": "Value comes from governance rights, potential fee sharing, and speculation. Some protocols share revenue with token holders. Others have struggled to accrue value."
+				"question": "거버넌스 토큰에 가치가 있나요?",
+				"answer": "가치는 거버넌스 권리, 잠재적 수수료 공유 및 투기에서 발생합니다. 일부 프로토콜은 토큰 보유자와 수익을 공유합니다. 다른 프로토콜은 가치 축적에 어려움을 겪습니다."
 			}
 		]
 	},
 	"tools": {
 		"boardroom": {
-			"description": "DAO 제안 및 투표 추적을 위한 거버넌스 수집기"
+			"description": "여러 프로토콜의 DAO 제안, 투표 및 대리인 활동을 추적하는 거버넌스 애그리게이터"
 		},
-		"uni-token": {
-			"description": "UNI (Uniswap) - Tool"
+		"uni_token": {
+			"description": "최대 DEX의 프로토콜 업그레이드, 수수료 스위치 및 트레저리 할당에 투표하는 Uniswap 거버넌스 토큰"
 		},
-		"aave-token": {
-			"description": "AAVE (Aave) - Tool"
+		"aave_token": {
+			"description": "선도적인 탈중앙화 대출 프로토콜을 위한 Aave 거버넌스 및 안전 모듈 스테이킹 토큰"
 		},
-		"mkr-token": {
-			"description": "MKR (MakerDAO) - Tool"
+		"mkr_token": {
+			"description": "DAI 스테이블코인 매개변수, 담보 유형 및 프로토콜 리스크를 관리하는 MakerDAO 거버넌스 토큰"
 		},
-		"crv-token": {
-			"description": "CRV (Curve) - Tool"
+		"crv_token": {
+			"description": "풀에 대한 유동성 인센티브를 지시하는 vote-escrow 메커니즘(veCRV)을 갖춘 Curve 거버넌스 토큰"
 		},
-		"comp-token": {
-			"description": "COMP (Compound) - Tool"
+		"comp_token": {
+			"description": "DeFi 대출의 이자율 모델 및 프로토콜 매개변수에 투표하는 Compound 거버넌스 토큰"
 		},
-		"snx-token": {
-			"description": "SNX (Synthetix) - Tool"
+		"snx_token": {
+			"description": "sUSD와 synth를 지원하는 합성 자산 프로토콜을 위한 Synthetix 거버넌스 및 스테이킹 토큰"
 		},
-		"ldo-token": {
-			"description": "LDO (Lido) - Tool"
+		"ldo_token": {
+			"description": "stETH 및 크로스체인 스테이킹을 관리하는 최대 유동 스테이킹 프로토콜을 위한 Lido DAO 거버넌스 토큰"
 		},
-		"gmx-token": {
-			"description": "GMX (GMX) - Tool"
+		"gmx_token": {
+			"description": "거래에서 프로토콜 수수료를 버는 영구 DEX를 위한 GMX 거버넌스 및 유틸리티 토큰"
 		},
-		"bal-token": {
-			"description": "BAL (Balancer) - Tool"
+		"bal_token": {
+			"description": "풀에 대한 유동성 마이닝 보상을 지시하는 veBAL 메커니즘을 갖춘 Balancer 거버넌스 토큰"
 		},
-		"sushi-token": {
-			"description": "SUSHI (SushiSwap) - Tool"
+		"sushi_token": {
+			"description": "대출 및 런치패드를 포함한 멀티체인 DEX 및 DeFi 생태계를 위한 SushiSwap 거버넌스 토큰"
 		},
-		"yfi-token": {
-			"description": "YFI (Yearn) - Tool"
+		"yfi_token": {
+			"description": "볼트 전략을 관리하는 수익 애그리게이터 프로토콜을 위한 Yearn Finance 거버넌스 토큰"
 		},
-		"inch-token": {
-			"description": "1INCH (1inch) - Tool"
+		"inch_token": {
+			"description": "스테이킹 보상 및 DAO 투표를 갖춘 DEX 애그리게이터를 위한 1inch 거버넌스 및 유틸리티 토큰"
 		},
-		"pendle-token": {
-			"description": "PENDLE (Pendle) - Tool"
+		"pendle_token": {
+			"description": "미래 수익 거래를 가능하게 하는 수익 토큰화 프로토콜을 위한 Pendle 거버넌스 토큰"
 		},
-		"ena-token": {
-			"description": "ENA (Ethena) - Tool"
+		"ena_token": {
+			"description": "스테이킹된 ETH 파생상품으로 지원되는 합성 달러 프로토콜 USDe를 위한 Ethena 거버넌스 토큰"
 		},
-		"dydx-token": {
-			"description": "DYDX (dYdX) - Tool"
+		"dydx_token": {
+			"description": "현재 자체 Cosmos 체인에 있는 탈중앙화 영구 거래소를 위한 dYdX 거버넌스 토큰"
 		},
-		"cvx-token": {
-			"description": "CVX (Convex) - Tool"
+		"cvx_token": {
+			"description": "Curve 보상을 부스트하고 CRV 수익 최적화 플랫폼을 관리하는 Convex Finance 토큰"
 		},
-		"fxs-token": {
-			"description": "FXS (Frax) - Tool"
+		"fxs_token": {
+			"description": "부분 알고리즘 스테이블코인 및 DeFi 생태계를 위한 Frax Share 거버넌스 토큰"
 		},
-		"blur-token": {
-			"description": "BLUR (Blur) - Tool"
+		"blur_token": {
+			"description": "무수수료 거래 및 고급 거래 기능을 갖춘 NFT 마켓플레이스를 위한 Blur 거버넌스 토큰"
 		},
-		"ape-token": {
-			"description": "APE (ApeCoin) - Tool"
+		"ape_token": {
+			"description": "Bored Ape 생태계, 게임 및 메타버스 이니셔티브를 위한 ApeCoin 거버넌스 토큰"
 		},
-		"rpl-token": {
-			"description": "RPL (Rocket Pool) - Tool"
+		"rpl_token": {
+			"description": "탈중앙화 이더리움 스테이킹 프로토콜을 위한 Rocket Pool 거버넌스 및 담보 토큰"
 		},
-		"morpho-token": {
-			"description": "MORPHO (Morpho) - Tool"
+		"morpho_token": {
+			"description": "Aave와 Compound 위에 구축된 P2P 대출 최적화기를 위한 Morpho 거버넌스 토큰"
 		},
-		"rdnt-token": {
-			"description": "RDNT (Radiant) - Tool"
+		"rdnt_token": {
+			"description": "LayerZero를 사용하는 옴니체인 대출 프로토콜을 위한 Radiant Capital 거버넌스 토큰"
 		},
-		"osmo-token": {
-			"description": "OSMO (Osmosis) - Tool"
+		"osmo_token": {
+			"description": "Cosmos 생태계 최대 DEX를 위한 Osmosis 거버넌스 및 스테이킹 토큰"
 		},
-		"jup-token": {
-			"description": "JUP (Jupiter) - Tool"
+		"jup_token": {
+			"description": "선도적인 Solana DEX 애그리게이터 및 영구 거래소를 위한 Jupiter 거버넌스 토큰"
 		},
-		"ray-token": {
-			"description": "RAY (Raydium) - Tool"
+		"ray_token": {
+			"description": "Solana AMM 및 Serum 오더북 유동성 공급자를 위한 Raydium 거버넌스 토큰"
 		},
-		"jto-token": {
-			"description": "JTO (Jito) - Tool"
+		"jto_token": {
+			"description": "Solana MEV 인프라 및 유동 스테이킹 프로토콜을 위한 Jito 거버넌스 토큰"
 		},
-		"orca-token": {
-			"description": "ORCA (Orca) - Tool"
+		"orca_token": {
+			"description": "집중 유동성 풀을 갖춘 사용자 친화적인 Solana DEX를 위한 Orca 거버넌스 토큰"
 		},
-		"arb-token": {
-			"description": "ARB (Arbitrum) - Tool"
+		"arb_token": {
+			"description": "옵티미스틱 롤업을 사용하는 선도적인 이더리움 L2를 위한 Arbitrum 거버넌스 토큰"
 		},
-		"op-token": {
-			"description": "OP (Optimism) - Tool"
+		"op_token": {
+			"description": "L2 스케일링 솔루션 및 슈퍼체인 생태계를 위한 Optimism 거버넌스 토큰"
 		},
-		"strk-token": {
-			"description": "STRK (StarkNet) - Tool"
+		"strk_token": {
+			"description": "이더리움 스케일링을 위해 STARK 증명을 사용하는 ZK-롤업 L2를 위한 StarkNet 거버넌스 토큰"
 		},
-		"zk-token": {
-			"description": "ZK (zkSync) - Tool"
+		"zk_token": {
+			"description": "네이티브 계정 추상화를 갖춘 ZK-롤업을 위한 zkSync Era 거버넌스 토큰"
 		},
-		"matic-token": {
-			"description": "MATIC/POL (Polygon) - Tool"
+		"matic_token": {
+			"description": "PoS 및 zkEVM을 포함한 이더리움 스케일링 생태계를 위한 Polygon(MATIC/POL) 거버넌스 토큰"
 		},
-		"mnt-token": {
-			"description": "MNT (Mantle) - Tool"
+		"mnt_token": {
+			"description": "모듈식 아키텍처를 갖춘 BitDAO 트레저리가 지원하는 L2를 위한 Mantle 거버넌스 토큰"
 		},
-		"metis-token": {
-			"description": "METIS (Metis) - Tool"
+		"metis_token": {
+			"description": "기업 및 탈중앙화 회사에 초점을 맞춘 이더리움 L2를 위한 Metis 거버넌스 토큰"
 		},
-		"ens-token": {
-			"description": "ENS (Ethereum Name Service) - Tool"
+		"ens_token": {
+			"description": ".eth 도메인 시스템 및 프로토콜 업그레이드를 관리하는 Ethereum Name Service 거버넌스 토큰"
 		},
-		"gtc-token": {
-			"description": "GTC (Gitcoin) - Tool"
+		"gtc_token": {
+			"description": "이차 펀딩을 사용하는 공공재 펀딩 플랫폼을 위한 Gitcoin 거버넌스 토큰"
 		},
-		"safe-token": {
-			"description": "SAFE (Safe) - Tool"
+		"safe_token": {
+			"description": "선도적인 멀티시그 지갑 인프라를 위한 Safe(이전 Gnosis Safe) 거버넌스 토큰"
 		},
-		"cow-token": {
-			"description": "COW (CoW Protocol) - Tool"
+		"cow_token": {
+			"description": "배치 경매를 사용하는 MEV 보호 DEX를 위한 CoW Protocol 거버넌스 토큰"
 		},
-		"gno-token": {
-			"description": "GNO (Gnosis) - Tool"
+		"gno_token": {
+			"description": "예측 시장 플랫폼 및 Gnosis Chain 생태계를 위한 Gnosis 거버넌스 토큰"
 		},
-		"tally-governance": {
-			"description": "Tally - Tool"
+		"tally_governance": {
+			"description": "제안 생성, 투표 위임 및 DAO 결정 실행을 위한 온체인 거버넌스 플랫폼"
 		},
-		"snapshot-governance": {
-			"description": "Snapshot - Tool"
+		"snapshot_governance": {
+			"description": "서명된 메시지 및 사용자 정의 가능한 전략을 사용한 가스리스 거버넌스를 위한 오프체인 투표 플랫폼"
 		},
-		"karma-dao": {
-			"description": "Karma - Tool"
+		"karma_dao": {
+			"description": "거버넌스 분석을 위한 DAO 기여자 평판 및 대리인 추적 플랫폼"
 		},
-		"messari-governance": {
-			"description": "Messari Governor - Tool"
+		"messari_governance": {
+			"description": "DAO 제안 및 투표 트렌드를 다루는 Messari의 거버넌스 리서치 및 분석"
 		}
 	}
 }

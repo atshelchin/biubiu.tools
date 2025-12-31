@@ -1,8 +1,8 @@
 {
 	"category_seo": {
 		"title": "Токены управления DAO - Право голоса и токеномика | BiuBiu Tools",
-		"description": "Понимание токенов управления DAO. Механизмы голосования, распределение токенов и участие в управлении в крупных DAO.",
-		"keywords": "токены управления, dao токены, голосование dao, управление протоколом",
+		"description": "Исследуйте токены управления DAO. Механизмы голосования, распределение токенов и участие в управлении в крупных DAO.",
+		"keywords": "токены управления DAO, голосование DeFi, управление протоколом, токеномика, делегирование управления",
 		"faqs": [
 			{
 				"question": "Что такое токены управления?",
@@ -20,136 +20,136 @@
 	},
 	"tools": {
 		"boardroom": {
-			"description": "Агрегатор управления для отслеживания предложений и голосований DAO"
+			"description": "Агрегатор управления для отслеживания предложений DAO, голосований и активности делегатов по нескольким протоколам"
 		},
-		"uni-token": {
-			"description": "UNI (Uniswap) - Tool"
+		"uni_token": {
+			"description": "Токен управления Uniswap для голосования по обновлениям протокола, переключению комиссий и распределению казначейства крупнейшей DEX"
 		},
-		"aave-token": {
-			"description": "AAVE (Aave) - Tool"
+		"aave_token": {
+			"description": "Токен управления и стейкинга модуля безопасности Aave для ведущего децентрализованного протокола кредитования"
 		},
-		"mkr-token": {
-			"description": "MKR (MakerDAO) - Tool"
+		"mkr_token": {
+			"description": "Токен управления MakerDAO для управления параметрами стейблкоина DAI, типами залога и рисками протокола"
 		},
-		"crv-token": {
-			"description": "CRV (Curve) - Tool"
+		"crv_token": {
+			"description": "Токен управления Curve с механикой vote-escrow (veCRV) для направления стимулов ликвидности в пулы"
 		},
-		"comp-token": {
-			"description": "COMP (Compound) - Tool"
+		"comp_token": {
+			"description": "Токен управления Compound для голосования по моделям процентных ставок и параметрам протокола DeFi-кредитования"
 		},
-		"snx-token": {
-			"description": "SNX (Synthetix) - Tool"
+		"snx_token": {
+			"description": "Токен управления и стейкинга Synthetix для протокола синтетических активов, поддерживающего sUSD и синты"
 		},
-		"ldo-token": {
-			"description": "LDO (Lido) - Tool"
+		"ldo_token": {
+			"description": "Токен управления Lido DAO для крупнейшего протокола ликвидного стейкинга, управляющего stETH и кросс-чейн стейкингом"
 		},
-		"gmx-token": {
-			"description": "GMX (GMX) - Tool"
+		"gmx_token": {
+			"description": "Токен управления и утилиты GMX для DEX бессрочных контрактов, зарабатывающий комиссии протокола от торговли"
 		},
-		"bal-token": {
-			"description": "BAL (Balancer) - Tool"
+		"bal_token": {
+			"description": "Токен управления Balancer с механикой veBAL для направления вознаграждений майнинга ликвидности в пулы"
 		},
-		"sushi-token": {
-			"description": "SUSHI (SushiSwap) - Tool"
+		"sushi_token": {
+			"description": "Токен управления SushiSwap для мультичейн DEX и экосистемы DeFi, включая кредитование и лаунчпад"
 		},
-		"yfi-token": {
-			"description": "YFI (Yearn) - Tool"
+		"yfi_token": {
+			"description": "Токен управления Yearn Finance для протокола агрегатора доходности, управляющего стратегиями хранилищ"
 		},
-		"inch-token": {
-			"description": "1INCH (1inch) - Tool"
+		"inch_token": {
+			"description": "Токен управления и утилиты 1inch для агрегатора DEX со стейкинг-вознаграждениями и голосованием DAO"
 		},
-		"pendle-token": {
-			"description": "PENDLE (Pendle) - Tool"
+		"pendle_token": {
+			"description": "Токен управления Pendle для протокола токенизации доходности, позволяющего торговать будущей доходностью"
 		},
-		"ena-token": {
-			"description": "ENA (Ethena) - Tool"
+		"ena_token": {
+			"description": "Токен управления Ethena для протокола синтетического доллара USDe, обеспеченного деривативами застейканного ETH"
 		},
-		"dydx-token": {
-			"description": "DYDX (dYdX) - Tool"
+		"dydx_token": {
+			"description": "Токен управления dYdX для децентрализованной биржи бессрочных контрактов, теперь на собственной цепи Cosmos"
 		},
-		"cvx-token": {
-			"description": "CVX (Convex) - Tool"
+		"cvx_token": {
+			"description": "Токен Convex Finance для усиления вознаграждений Curve и управления платформой оптимизации доходности CRV"
 		},
-		"fxs-token": {
-			"description": "FXS (Frax) - Tool"
+		"fxs_token": {
+			"description": "Токен управления Frax Share для частично-алгоритмического стейблкоина и экосистемы DeFi"
 		},
-		"blur-token": {
-			"description": "BLUR (Blur) - Tool"
+		"blur_token": {
+			"description": "Токен управления Blur для NFT-маркетплейса с безкомиссионной торговлей и расширенными функциями"
 		},
-		"ape-token": {
-			"description": "APE (ApeCoin) - Tool"
+		"ape_token": {
+			"description": "Токен управления ApeCoin для экосистемы Bored Ape, игр и метавселенных инициатив"
 		},
-		"rpl-token": {
-			"description": "RPL (Rocket Pool) - Tool"
+		"rpl_token": {
+			"description": "Токен управления и залога Rocket Pool для децентрализованного протокола стейкинга Ethereum"
 		},
-		"morpho-token": {
-			"description": "MORPHO (Morpho) - Tool"
+		"morpho_token": {
+			"description": "Токен управления Morpho для оптимизатора P2P-кредитования, построенного поверх Aave и Compound"
 		},
-		"rdnt-token": {
-			"description": "RDNT (Radiant) - Tool"
+		"rdnt_token": {
+			"description": "Токен управления Radiant Capital для омничейн протокола кредитования с использованием LayerZero"
 		},
-		"osmo-token": {
-			"description": "OSMO (Osmosis) - Tool"
+		"osmo_token": {
+			"description": "Токен управления и стейкинга Osmosis для крупнейшей DEX в экосистеме Cosmos"
 		},
-		"jup-token": {
-			"description": "JUP (Jupiter) - Tool"
+		"jup_token": {
+			"description": "Токен управления Jupiter для ведущего агрегатора DEX Solana и биржи бессрочных контрактов"
 		},
-		"ray-token": {
-			"description": "RAY (Raydium) - Tool"
+		"ray_token": {
+			"description": "Токен управления Raydium для AMM Solana и поставщика ликвидности для книги ордеров Serum"
 		},
-		"jto-token": {
-			"description": "JTO (Jito) - Tool"
+		"jto_token": {
+			"description": "Токен управления Jito для инфраструктуры MEV Solana и протокола ликвидного стейкинга"
 		},
-		"orca-token": {
-			"description": "ORCA (Orca) - Tool"
+		"orca_token": {
+			"description": "Токен управления Orca для удобной DEX Solana с пулами концентрированной ликвидности"
 		},
-		"arb-token": {
-			"description": "ARB (Arbitrum) - Tool"
+		"arb_token": {
+			"description": "Токен управления Arbitrum для ведущего L2 Ethereum с использованием оптимистичных роллапов"
 		},
-		"op-token": {
-			"description": "OP (Optimism) - Tool"
+		"op_token": {
+			"description": "Токен управления Optimism для решения масштабирования L2 и экосистемы Superchain"
 		},
-		"strk-token": {
-			"description": "STRK (StarkNet) - Tool"
+		"strk_token": {
+			"description": "Токен управления StarkNet для L2 ZK-роллапа с использованием STARK-доказательств для масштабирования Ethereum"
 		},
-		"zk-token": {
-			"description": "ZK (zkSync) - Tool"
+		"zk_token": {
+			"description": "Токен управления zkSync Era для ZK-роллапа с нативной абстракцией аккаунтов"
 		},
-		"matic-token": {
-			"description": "MATIC/POL (Polygon) - Tool"
+		"matic_token": {
+			"description": "Токен управления Polygon (MATIC/POL) для экосистемы масштабирования Ethereum, включая PoS и zkEVM"
 		},
-		"mnt-token": {
-			"description": "MNT (Mantle) - Tool"
+		"mnt_token": {
+			"description": "Токен управления Mantle для L2, поддерживаемого казначейством BitDAO с модульной архитектурой"
 		},
-		"metis-token": {
-			"description": "METIS (Metis) - Tool"
+		"metis_token": {
+			"description": "Токен управления Metis для L2 Ethereum, ориентированного на предприятия и децентрализованные компании"
 		},
-		"ens-token": {
-			"description": "ENS (Ethereum Name Service) - Tool"
+		"ens_token": {
+			"description": "Токен управления Ethereum Name Service для управления системой доменов .eth и обновлениями протокола"
 		},
-		"gtc-token": {
-			"description": "GTC (Gitcoin) - Tool"
+		"gtc_token": {
+			"description": "Токен управления Gitcoin для платформы финансирования общественных благ с использованием квадратичного финансирования"
 		},
-		"safe-token": {
-			"description": "SAFE (Safe) - Tool"
+		"safe_token": {
+			"description": "Токен управления Safe (ранее Gnosis Safe) для ведущей инфраструктуры мультисиг-кошельков"
 		},
-		"cow-token": {
-			"description": "COW (CoW Protocol) - Tool"
+		"cow_token": {
+			"description": "Токен управления CoW Protocol для DEX с защитой от MEV с использованием пакетных аукционов"
 		},
-		"gno-token": {
-			"description": "GNO (Gnosis) - Tool"
+		"gno_token": {
+			"description": "Токен управления Gnosis для платформы рынков предсказаний и экосистемы Gnosis Chain"
 		},
-		"tally-governance": {
-			"description": "Tally - Tool"
+		"tally_governance": {
+			"description": "Платформа ончейн-управления для создания предложений, делегирования голосов и исполнения решений DAO"
 		},
-		"snapshot-governance": {
-			"description": "Snapshot - Tool"
+		"snapshot_governance": {
+			"description": "Платформа оффчейн-голосования для безгазового управления с использованием подписанных сообщений и настраиваемых стратегий"
 		},
-		"karma-dao": {
-			"description": "Karma - Tool"
+		"karma_dao": {
+			"description": "Платформа репутации контрибьюторов DAO и отслеживания делегатов для аналитики управления"
 		},
-		"messari-governance": {
-			"description": "Messari Governor - Tool"
+		"messari_governance": {
+			"description": "Исследования и аналитика управления от Messari, охватывающие предложения DAO и тренды голосования"
 		}
 	}
 }

@@ -1,155 +1,155 @@
 {
 	"category_seo": {
 		"title": "DAOガバナンストークン - 投票権とトークノミクス | BiuBiu Tools",
-		"description": "DAOガバナンストークンを理解する。主要DAOにおける投票メカニズム、トークン配布、ガバナンス参加。",
-		"keywords": "",
+		"description": "DAOガバナンストークンを探索。主要DAOにおける投票メカニズム、トークン分配、ガバナンス参加について。",
+		"keywords": "DAOガバナンストークン, DeFi投票, プロトコルガバナンス, トークノミクス, ガバナンス委任",
 		"faqs": [
 			{
-				"question": "ガバナンストークンとは何ですか？",
-				"answer": "ガバナンストークンは保有者にプロトコルの決定における投票権を与えます。例：UNI（Uniswap）、AAVE、COMP。投票権は通常、トークン保有量に比例します。"
+				"question": "ガバナンストークンとは？",
+				"answer": "ガバナンストークンは保有者にプロトコル決定への投票権を付与します。例：UNI（Uniswap）、AAVE、COMP。投票力は通常、トークン保有量に比例します。"
 			},
 			{
 				"question": "投票委任はどのように機能しますか？",
-				"answer": "トークンを保持したまま、投票権を他者（代表者）に委任できます。これにより、積極的なコミュニティメンバーが消極的保有者に代わって投票できます。"
+				"answer": "トークンを保持したまま投票権を他者（デリゲート）に委任できます。これにより、アクティブなコミュニティメンバーがパッシブホルダーを代表して投票できます。"
 			},
 			{
-				"question": "ガバナンストークンに価値はありますか？",
-				"answer": "価値はガバナンス権、潜在的な手数料共有、投機から生まれます。一部のプロトコルはトークン保有者と収益を共有します。他のプロトコルは価値の蓄積に苦労しています。"
+				"question": "ガバナンストークンには価値がありますか？",
+				"answer": "価値はガバナンス権、潜在的な手数料分配、投機から生まれます。一部のプロトコルはトークン保有者と収益を共有します。他は価値蓄積に苦労しています。"
 			}
 		]
 	},
 	"tools": {
 		"boardroom": {
-			"description": "DAO提案と投票を追跡するガバナンスアグリゲーター"
+			"description": "複数のプロトコルにわたるDAO提案、投票、デリゲート活動を追跡するガバナンスアグリゲーター"
 		},
-		"uni-token": {
-			"description": "UNI (Uniswap) - Tool"
+		"uni_token": {
+			"description": "最大のDEXにおけるプロトコルアップグレード、手数料スイッチ、トレジャリー配分に投票するUniswapガバナンストークン"
 		},
-		"aave-token": {
-			"description": "AAVE (Aave) - Tool"
+		"aave_token": {
+			"description": "主要な分散型レンディングプロトコルのためのAaveガバナンスおよびセーフティモジュールステーキングトークン"
 		},
-		"mkr-token": {
-			"description": "MKR (MakerDAO) - Tool"
+		"mkr_token": {
+			"description": "DAIステーブルコインのパラメータ、担保タイプ、プロトコルリスクを管理するMakerDAOガバナンストークン"
 		},
-		"crv-token": {
-			"description": "CRV (Curve) - Tool"
+		"crv_token": {
+			"description": "プールへの流動性インセンティブを誘導するvote-escrowメカニズム（veCRV）を持つCurveガバナンストークン"
 		},
-		"comp-token": {
-			"description": "COMP (Compound) - Tool"
+		"comp_token": {
+			"description": "DeFiレンディングの金利モデルとプロトコルパラメータに投票するCompoundガバナンストークン"
 		},
-		"snx-token": {
-			"description": "SNX (Synthetix) - Tool"
+		"snx_token": {
+			"description": "sUSDとシンセティクスを裏付ける合成資産プロトコルのためのSynthetixガバナンスおよびステーキングトークン"
 		},
-		"ldo-token": {
-			"description": "LDO (Lido) - Tool"
+		"ldo_token": {
+			"description": "stETHとクロスチェーンステーキングを管理する最大のリキッドステーキングプロトコルのためのLido DAOガバナンストークン"
 		},
-		"gmx-token": {
-			"description": "GMX (GMX) - Tool"
+		"gmx_token": {
+			"description": "取引からプロトコル手数料を獲得するパーペチュアルDEXのためのGMXガバナンスおよびユーティリティトークン"
 		},
-		"bal-token": {
-			"description": "BAL (Balancer) - Tool"
+		"bal_token": {
+			"description": "プールへの流動性マイニング報酬を誘導するveBALメカニズムを持つBalancerガバナンストークン"
 		},
-		"sushi-token": {
-			"description": "SUSHI (SushiSwap) - Tool"
+		"sushi_token": {
+			"description": "レンディングとローンチパッドを含むマルチチェーンDEXとDeFiエコシステムのためのSushiSwapガバナンストークン"
 		},
-		"yfi-token": {
-			"description": "YFI (Yearn) - Tool"
+		"yfi_token": {
+			"description": "ボールト戦略を管理するイールドアグリゲータープロトコルのためのYearn Financeガバナンストークン"
 		},
-		"inch-token": {
-			"description": "1INCH (1inch) - Tool"
+		"inch_token": {
+			"description": "ステーキング報酬とDAO投票を持つDEXアグリゲーターのための1inchガバナンスおよびユーティリティトークン"
 		},
-		"pendle-token": {
-			"description": "PENDLE (Pendle) - Tool"
+		"pendle_token": {
+			"description": "将来のイールド取引を可能にするイールドトークン化プロトコルのためのPendleガバナンストークン"
 		},
-		"ena-token": {
-			"description": "ENA (Ethena) - Tool"
+		"ena_token": {
+			"description": "ステークドETHデリバティブに裏付けられた合成ドルプロトコルUSDeのためのEthenaガバナンストークン"
 		},
-		"dydx-token": {
-			"description": "DYDX (dYdX) - Tool"
+		"dydx_token": {
+			"description": "現在は独自のCosmosチェーン上にある分散型パーペチュアル取引所のためのdYdXガバナンストークン"
 		},
-		"cvx-token": {
-			"description": "CVX (Convex) - Tool"
+		"cvx_token": {
+			"description": "Curve報酬をブーストしCRVイールド最適化プラットフォームを統治するConvex Financeトークン"
 		},
-		"fxs-token": {
-			"description": "FXS (Frax) - Tool"
+		"fxs_token": {
+			"description": "分数アルゴリズムステーブルコインとDeFiエコシステムのためのFrax Shareガバナンストークン"
 		},
-		"blur-token": {
-			"description": "BLUR (Blur) - Tool"
+		"blur_token": {
+			"description": "ゼロ手数料取引と高度な取引機能を持つNFTマーケットプレイスのためのBlurガバナンストークン"
 		},
-		"ape-token": {
-			"description": "APE (ApeCoin) - Tool"
+		"ape_token": {
+			"description": "Bored Apeエコシステム、ゲーム、メタバースイニシアチブのためのApeCoinガバナンストークン"
 		},
-		"rpl-token": {
-			"description": "RPL (Rocket Pool) - Tool"
+		"rpl_token": {
+			"description": "分散型イーサリアムステーキングプロトコルのためのRocket Poolガバナンスおよび担保トークン"
 		},
-		"morpho-token": {
-			"description": "MORPHO (Morpho) - Tool"
+		"morpho_token": {
+			"description": "AaveとCompound上に構築されたピアツーピアレンディングオプティマイザーのためのMorphoガバナンストークン"
 		},
-		"rdnt-token": {
-			"description": "RDNT (Radiant) - Tool"
+		"rdnt_token": {
+			"description": "LayerZeroを使用するオムニチェーンレンディングプロトコルのためのRadiant Capitalガバナンストークン"
 		},
-		"osmo-token": {
-			"description": "OSMO (Osmosis) - Tool"
+		"osmo_token": {
+			"description": "Cosmosエコシステム最大のDEXのためのOsmosisガバナンスおよびステーキングトークン"
 		},
-		"jup-token": {
-			"description": "JUP (Jupiter) - Tool"
+		"jup_token": {
+			"description": "Solanaの主要DEXアグリゲーターおよびパーペチュアル取引所のためのJupiterガバナンストークン"
 		},
-		"ray-token": {
-			"description": "RAY (Raydium) - Tool"
+		"ray_token": {
+			"description": "Solana AMMおよびSerumオーダーブックへの流動性プロバイダーのためのRaydiumガバナンストークン"
 		},
-		"jto-token": {
-			"description": "JTO (Jito) - Tool"
+		"jto_token": {
+			"description": "Solana MEVインフラストラクチャとリキッドステーキングプロトコルのためのJitoガバナンストークン"
 		},
-		"orca-token": {
-			"description": "ORCA (Orca) - Tool"
+		"orca_token": {
+			"description": "集中流動性プールを持つユーザーフレンドリーなSolana DEXのためのOrcaガバナンストークン"
 		},
-		"arb-token": {
-			"description": "ARB (Arbitrum) - Tool"
+		"arb_token": {
+			"description": "オプティミスティックロールアップを使用する主要なイーサリアムL2のためのArbitrumガバナンストークン"
 		},
-		"op-token": {
-			"description": "OP (Optimism) - Tool"
+		"op_token": {
+			"description": "L2スケーリングソリューションとスーパーチェーンエコシステムのためのOptimismガバナンストークン"
 		},
-		"strk-token": {
-			"description": "STRK (StarkNet) - Tool"
+		"strk_token": {
+			"description": "イーサリアムスケーリングのためにSTARK証明を使用するZK-rollup L2のためのStarkNetガバナンストークン"
 		},
-		"zk-token": {
-			"description": "ZK (zkSync) - Tool"
+		"zk_token": {
+			"description": "ネイティブアカウント抽象化を持つZK-rollupのためのzkSync Eraガバナンストークン"
 		},
-		"matic-token": {
-			"description": "MATIC/POL (Polygon) - Tool"
+		"matic_token": {
+			"description": "PoSとzkEVMを含むイーサリアムスケーリングエコシステムのためのPolygon（MATIC/POL）ガバナンストークン"
 		},
-		"mnt-token": {
-			"description": "MNT (Mantle) - Tool"
+		"mnt_token": {
+			"description": "モジュラーアーキテクチャを持つBitDAOトレジャリーに支えられたL2のためのMantleガバナンストークン"
 		},
-		"metis-token": {
-			"description": "METIS (Metis) - Tool"
+		"metis_token": {
+			"description": "企業と分散型企業に焦点を当てたイーサリアムL2のためのMetisガバナンストークン"
 		},
-		"ens-token": {
-			"description": "ENS (Ethereum Name Service) - Tool"
+		"ens_token": {
+			"description": ".ethドメインシステムとプロトコルアップグレードを管理するEthereum Name Serviceガバナンストークン"
 		},
-		"gtc-token": {
-			"description": "GTC (Gitcoin) - Tool"
+		"gtc_token": {
+			"description": "二次資金調達を使用する公共財資金調達プラットフォームのためのGitcoinガバナンストークン"
 		},
-		"safe-token": {
-			"description": "SAFE (Safe) - Tool"
+		"safe_token": {
+			"description": "主要なマルチシグウォレットインフラストラクチャのためのSafe（旧Gnosis Safe）ガバナンストークン"
 		},
-		"cow-token": {
-			"description": "COW (CoW Protocol) - Tool"
+		"cow_token": {
+			"description": "バッチオークションを使用するMEV保護DEXのためのCoW Protocolガバナンストークン"
 		},
-		"gno-token": {
-			"description": "GNO (Gnosis) - Tool"
+		"gno_token": {
+			"description": "予測市場プラットフォームとGnosis Chainエコシステムのためのgnosisガバナンストークン"
 		},
-		"tally-governance": {
-			"description": "Tally - Tool"
+		"tally_governance": {
+			"description": "提案作成、投票委任、DAO決定実行のためのオンチェーンガバナンスプラットフォーム"
 		},
-		"snapshot-governance": {
-			"description": "Snapshot - Tool"
+		"snapshot_governance": {
+			"description": "署名されたメッセージとカスタマイズ可能な戦略を使用するガスレスガバナンスのためのオフチェーン投票プラットフォーム"
 		},
-		"karma-dao": {
-			"description": "Karma - Tool"
+		"karma_dao": {
+			"description": "ガバナンス分析のためのDAO貢献者レピュテーションおよびデリゲート追跡プラットフォーム"
 		},
-		"messari-governance": {
-			"description": "Messari Governor - Tool"
+		"messari_governance": {
+			"description": "DAO提案と投票トレンドをカバーするMessariのガバナンスリサーチと分析"
 		}
 	}
 }
