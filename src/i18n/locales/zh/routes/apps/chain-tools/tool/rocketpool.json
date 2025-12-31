@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Rocket Pool - 去中心化以太坊质押 | rETH 流动性质押代币",
+		"description": "探索 Rocket Pool，去中心化的以太坊质押协议。质押任意数量的 ETH 获得 rETH，或仅用8 ETH 运行节点。去信任且无需许可。",
+		"keywords": "Rocket Pool, rETH, 以太坊质押, 流动性质押, 节点运营商, 去中心化, RPL"
+	},
+	"overview": "Rocket Pool 是领先的去中心化以太坊质押协议，提供流动性质押（rETH）和无需许可的节点运营。由 David Rugendyke 于2016年创立，Rocket Pool 是最早的流动性质押解决方案之一，仍然是中心化质押提供商最去中心化的替代方案。\n\n该协议在两方面运作：普通用户可以质押任意数量的 ETH 并获得 rETH，这是一种随着质押奖励累积而升值的流动性质押代币。节点运营商可以仅用8 ETH 运行验证者（而不是单独质押的32 ETH），通过绑定 RPL 代币并与存款人 ETH 匹配。\n\nRocket Pool 的关键差异化因素是真正的去中心化——任何人都可以无需许可地运行节点，协议不依赖中心化的运营商集。Oracle DAO 提供价格馈送并管理协议运营。拥有全球数千个独立节点运营商，Rocket Pool 为以太坊提供了最抗审查的质押选项。",
+	"features": {
+		"1": {
+			"title": "rETH 流动性质押",
+			"description": "质押任意数量的 ETH 并获得自动累积质押奖励的 rETH"
+		},
+		"2": {
+			"title": "8 ETH 迷你池",
+			"description": "仅用8 ETH 即可运行验证者，与协议存款人匹配"
+		},
+		"3": {
+			"title": "无需许可的节点",
+			"description": "任何人都可以无需批准成为节点运营商——真正去中心化"
+		},
+		"4": {
+			"title": "RPL 抵押品",
+			"description": "节点运营商绑定 RPL 作为保险，在其质押上赚取 RPL 奖励"
+		},
+		"5": {
+			"title": "平滑池",
+			"description": "可选池，在参与节点之间社会化 MEV 和优先费用"
+		},
+		"6": {
+			"title": "Oracle DAO",
+			"description": "用于 rETH 定价和协议运营的去中心化预言机网络"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "流动性 ETH 质押",
+			"description": "质押 ETH 无锁定——在赚取质押奖励的同时在 DeFi 中使用 rETH"
+		},
+		"2": {
+			"title": "家庭节点运营",
+			"description": "在家运行以太坊验证者，资本要求降低"
+		},
+		"3": {
+			"title": "DeFi 抵押品",
+			"description": "在 Aave、Maker 和其他借贷协议中使用 rETH 作为抵押品"
+		},
+		"4": {
+			"title": "去中心化质押",
+			"description": "通过选择真正无需许可的协议来支持以太坊去中心化"
+		},
+		"5": {
+			"title": "RPL 质押",
+			"description": "作为节点运营商绑定 RPL 以赚取增强的质押收益"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 Rocket Pool？rETH 如何工作？",
+			"answer": "Rocket Pool 是一个去中心化的质押协议。当你存入 ETH 时，你会收到 rETH——代表你质押的 ETH 加上累积奖励的代币。随着质押奖励累积，rETH 相对于 ETH 的价值会随时间增加。你可以随时通过协议或 DEX 将 rETH 兑换回 ETH。ETH 由全球数千个独立节点运营商质押。"
+		},
+		"2": {
+			"question": "Rocket Pool 与 Lido 有什么不同？",
+			"answer": "关键区别在于去中心化。Rocket Pool 允许任何人无需许可地用8 ETH 运行节点，而 Lido 使用精选的专业运营商集。Rocket Pool 在全球拥有数千个独立节点运营商，使其更抗审查。Lido 按 TVL 计算更大，但验证者运营更集中。"
+		},
+		"3": {
+			"question": "什么是 RPL？为什么节点运营商需要它？",
+			"answer": "RPL 是 Rocket Pool 的治理和实用代币。节点运营商必须绑定至少相当于其借入 ETH 10% 价值的 RPL 作为抵御罚没的保险。作为回报，他们在 ETH 质押奖励之上赚取 RPL 通胀奖励。RPL 还授予协议治理的投票权。"
+		},
+		"4": {
+			"question": "我可以在家运行 Rocket Pool 节点吗？",
+			"answer": "可以！Rocket Pool 专为家庭质押者设计。你需要至少8 ETH、用于抵押品的 RPL、满足硬件要求的计算机和稳定的互联网连接。Smartnode 软件简化了设置。许多节点运营商在家中的消费级硬件上运行，为以太坊的地理去中心化做出贡献。"
+		},
+		"5": {
+			"question": "rETH 有哪些风险？",
+			"answer": "风险包括：智能合约漏洞、罚没事件（由 RPL 保险缓解）、rETH 价格在 DEX 上偏离公允价值、Oracle DAO 中的预言机风险，以及一般质押风险如客户端错误。Rocket Pool 经过了广泛的审计，并设有漏洞赏金计划。"
+		}
+	},
+	"cta": {
+		"ready": "准备好去中心化质押 ETH 了吗？",
+		"button": "打开 Rocket Pool",
+		"note": "去中心化的以太坊流动性质押"
+	}
+}

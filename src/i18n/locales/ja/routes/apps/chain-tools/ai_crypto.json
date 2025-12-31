@@ -2,7 +2,7 @@
 	"category_seo": {
 		"title": "AIと暗号資産 - AIトークンと分散型AI | BiuBiu Tools",
 		"description": "AIとブロックチェーンの交差点。AIトークン、分散型コンピュート、AIエージェント、オンチェーン機械学習。",
-		"keywords": "",
+		"keywords": "ai暗号資産, aiトークン, 分散型ai, aiエージェント, ブロックチェーンai",
 		"faqs": [
 			{
 				"question": "AIと暗号資産はどのように関連していますか？",
@@ -19,14 +19,29 @@
 		]
 	},
 	"tools": {
-		"worldcoin": {
-			"description": "人格証明アイデンティティプロトコル"
+		"virtuals_protocol": {
+			"description": "Baseでトークン化された所有権を持つAIエージェントを作成・デプロイするプラットフォーム"
 		},
 		"ai16z": {
 			"description": "自律エージェント作成のためのAI DAOとElizaフレームワーク"
 		},
+		"truth_terminal": {
+			"description": "GOATトークン現象を生み出したX上の自律AIエージェント"
+		},
 		"autonolas": {
 			"description": "自律AIエージェントサービス構築と実行のためのプラットフォーム"
+		},
+		"flock_io": {
+			"description": "分散型AIモデルトレーニングのための連合学習プラットフォーム"
+		},
+		"render_network": {
+			"description": "AIと3Dグラフィックスワークロード向けの分散型GPUレンダリングネットワーク"
+		},
+		"akash_network": {
+			"description": "AIワークロード向けの分散型クラウドコンピューティングマーケットプレイス"
+		},
+		"io_net": {
+			"description": "データセンターからコンピュートを集約する分散型GPUネットワーク"
 		},
 		"bittensor": {
 			"description": "インセンティブ付き機械学習の分散型AIネットワーク"
@@ -37,6 +52,15 @@
 		"gensyn": {
 			"description": "検証付きML訓練の分散型プロトコル"
 		},
+		"together_ai": {
+			"description": "オープンソースモデルによる分散型AI推論プラットフォーム"
+		},
+		"fetch_ai": {
+			"description": "Web3自動化のための自律AIエージェントプラットフォーム"
+		},
+		"ocean_protocol": {
+			"description": "AIトレーニングデータのための分散型データ交換プロトコル"
+		},
 		"singularitynet": {
 			"description": "AIサービス向け分散型マーケットプレイス"
 		},
@@ -46,179 +70,155 @@
 		"grass": {
 			"description": "帯域幅報酬の分散型データスクレイピングネットワーク"
 		},
+		"altered_state_machine": {
+			"description": "ゲームとメタバースアプリケーション向けのAI搭載NFTブレイン"
+		},
+		"alethea_ai": {
+			"description": "AI搭載インタラクティブNFTを作成するiNFTプラットフォーム"
+		},
+		"nft_art_generators": {
+			"description": "ユニークなNFTアートワークを生成するAIツール"
+		},
+		"stability_ai": {
+			"description": "Stable Diffusionモデルを開発するオープンソースAI企業"
+		},
+		"cookie_ai": {
+			"description": "オンチェーンAI活動を追跡するAIエージェント分析プラットフォーム"
+		},
+		"virtuals_terminal": {
+			"description": "BaseでのAIエージェントのためのローンチパッドとトレーディングターミナル"
+		},
+		"defillama_ai": {
+			"description": "AI暗号プロトコルのTVLを追跡するDeFiLlama AIカテゴリ"
+		},
+		"worldcoin": {
+			"description": "虹彩スキャンを使用したプルーフ・オブ・パーソンフッドアイデンティティプロトコル"
+		},
+		"morpheus_ai": {
+			"description": "パーソナルスマートエージェントのための分散型AIエージェントネットワーク"
+		},
+		"spectral_ai": {
+			"description": "機械学習を使用したオンチェーン信用スコアリング"
+		},
 		"numerai": {
-			"description": "Numerai - AI暗号資産プロジェクト"
+			"description": "データサイエンストーナメントを持つAI搭載ヘッジファンド"
+		},
+		"dain_ai": {
+			"description": "自律タスクのためのSolana上のAIエージェントインフラ"
 		},
 		"vana": {
-			"description": "Vana - AI暗号資産プロジェクト"
+			"description": "AIモデルトレーニングのためのユーザー所有データネットワーク"
+		},
+		"phala_network": {
+			"description": "プライバシー保護AI向けのコンフィデンシャルコンピューティングネットワーク"
 		},
 		"nosana": {
-			"description": "Nosana - AI暗号資産プロジェクト"
+			"description": "Solana上の分散型GPUコンピュートネットワーク"
 		},
 		"golem": {
-			"description": "Golem - AI暗号資産プロジェクト"
+			"description": "AIワークロード向けの分散型コンピューティングマーケットプレイス"
 		},
 		"livepeer": {
-			"description": "Livepeer - AI暗号資産プロジェクト"
+			"description": "分散型ビデオトランスコーディングとAI推論ネットワーク"
 		},
 		"hyperbolic": {
-			"description": "Hyperbolic - AI暗号資産プロジェクト"
+			"description": "GPUネットワークを持つ分散型AI推論インフラ"
+		},
+		"venice_ai": {
+			"description": "プライバシー重視の無検閲AIアシスタント"
 		},
 		"myshell": {
-			"description": "MyShell - AI暗号資産プロジェクト"
+			"description": "音声機能を持つオープンソースAIエージェントプラットフォーム"
 		},
 		"griffain": {
-			"description": "Griffain - AI暗号資産プロジェクト"
+			"description": "SolanaでのAIエージェントミームコインとプラットフォーム"
+		},
+		"arc_ai": {
+			"description": "Solana向けRustベースのAIエージェントフレームワーク"
 		},
 		"zerebro": {
-			"description": "Zerebro - AI暗号資産プロジェクト"
+			"description": "クリエイティブコンテンツ生成のための自律AIエージェント"
 		},
 		"swarmnode": {
-			"description": "SwarmNode - AI暗号資産プロジェクト"
+			"description": "AIエージェントオーケストレーションのための分散ノードネットワーク"
+		},
+		"sentient_ai": {
+			"description": "AGI向けオープンソースAI開発財団"
+		},
+		"nous_research": {
+			"description": "Hermesモデルを作成するオープンソースAI研究所"
+		},
+		"pond_ai": {
+			"description": "グラフニューラルネットワークを使用したオンチェーンAI予測"
+		},
+		"aioz_network": {
+			"description": "分散型CDNとAIコンピュートネットワーク"
 		},
 		"theoriq": {
-			"description": "Theoriq - AI暗号資産プロジェクト"
+			"description": "Baseでのコンポーザブル AIエージェントプロトコル"
+		},
+		"ora_protocol": {
+			"description": "検証可能なML推論のためのオンチェーンAIオラクル"
+		},
+		"modulus_labs": {
+			"description": "MLモデル検証のためのゼロ知識証明"
 		},
 		"ezkl": {
-			"description": "EZKL - AI暗号資産プロジェクト"
+			"description": "オンチェーンAI推論を証明するZKMLツールキット"
 		},
 		"giza": {
-			"description": "Giza - AI暗号資産プロジェクト"
+			"description": "StarkNetでのZK証明を持つ検証可能なMLプラットフォーム"
+		},
+		"lagrange_dao": {
+			"description": "Filecoin上の分散型AIコンピュートプラットフォーム"
+		},
+		"kip_protocol": {
+			"description": "AIデータマネタイゼーションのためのナレッジアセットプロトコル"
+		},
+		"sahara_ai": {
+			"description": "分散型AIナレッジベースプラットフォーム"
+		},
+		"bagel_network": {
+			"description": "分散型MLデータパイプラインネットワーク"
+		},
+		"allora_network": {
+			"description": "コンテキスト予測のための自己改善AIネットワーク"
 		},
 		"nillion": {
-			"description": "Nillion - AI暗号資産プロジェクト"
+			"description": "AI向けMPCを使用したプライバシー保護コンピュートネットワーク"
 		},
 		"arbius": {
-			"description": "Arbius - AI暗号資産プロジェクト"
+			"description": "GPUマイニングによる分散型AI画像生成"
 		},
 		"crynux": {
-			"description": "Crynux - AI暗号資産プロジェクト"
+			"description": "エッジデバイス向け分散型AI推論ネットワーク"
+		},
+		"gpu_net": {
+			"description": "AIワークロード向けの分散型GPUネットワーク"
 		},
 		"aethir": {
-			"description": "Aethir - AI暗号資産プロジェクト"
+			"description": "ゲームとAI向けの分散型GPUクラウド"
 		},
 		"spheron": {
-			"description": "Spheron - AI暗号資産プロジェクト"
+			"description": "AIデプロイメント向けの分散型コンピュートインフラ"
+		},
+		"clore_ai": {
+			"description": "AIとマイニング向けのGPUレンタルマーケットプレイス"
+		},
+		"theta_edge": {
+			"description": "ビデオとAIワークロード向けのエッジコンピューティングネットワーク"
+		},
+		"nimble_network": {
+			"description": "分散型インテリジェンスのためのコンポーザブルAIフレームワーク"
 		},
 		"tensorplex": {
-			"description": "Tensorplex - AI暗号資産プロジェクト"
+			"description": "Bittensor TAOのためのリキッドステーキングとDeFi"
 		},
 		"taoshi": {
-			"description": "Taoshi - AI暗号資産プロジェクト"
+			"description": "AIトレーディングシグナルのためのBittensorサブネット"
 		},
 		"corcel": {
-			"description": "Corcel - AI暗号資産プロジェクト"
-		},
-		"virtuals-protocol": {
-			"description": "Virtuals Protocol - Tool"
-		},
-		"truth-terminal": {
-			"description": "Truth Terminal - Tool"
-		},
-		"flock-io": {
-			"description": "FLock.io - Tool"
-		},
-		"render-network": {
-			"description": "Render Network - Tool"
-		},
-		"akash-network": {
-			"description": "Akash Network - Tool"
-		},
-		"io-net": {
-			"description": "io.net - Tool"
-		},
-		"together-ai": {
-			"description": "Together AI - Tool"
-		},
-		"fetch-ai": {
-			"description": "Fetch.ai (FET) - Tool"
-		},
-		"ocean-protocol": {
-			"description": "Ocean Protocol - Tool"
-		},
-		"altered-state-machine": {
-			"description": "Altered State Machine - Tool"
-		},
-		"alethea-ai": {
-			"description": "Alethea AI - Tool"
-		},
-		"midjourney-crypto": {
-			"description": "NFT Art Generators - Tool"
-		},
-		"stability-ai": {
-			"description": "Stability AI - Tool"
-		},
-		"cookie-ai": {
-			"description": "Cookie.fun - Tool"
-		},
-		"virtuals-terminal": {
-			"description": "Virtuals Terminal - Tool"
-		},
-		"defillama-ai": {
-			"description": "DeFiLlama AI - Tool"
-		},
-		"morpheus-ai": {
-			"description": "Morpheus - Tool"
-		},
-		"spectral-ai": {
-			"description": "Spectral - Tool"
-		},
-		"dain-ai": {
-			"description": "DAIN - Tool"
-		},
-		"phala-network": {
-			"description": "Phala Network - Tool"
-		},
-		"venice-ai": {
-			"description": "Venice AI - Tool"
-		},
-		"arc-ai": {
-			"description": "Arc - Tool"
-		},
-		"sentient-ai": {
-			"description": "Sentient - Tool"
-		},
-		"nous-research": {
-			"description": "Nous Research - Tool"
-		},
-		"pond-ai": {
-			"description": "Pond - Tool"
-		},
-		"aioz-network": {
-			"description": "AIOZ Network - Tool"
-		},
-		"ora-protocol": {
-			"description": "ORA Protocol - Tool"
-		},
-		"modulus-labs": {
-			"description": "Modulus Labs - Tool"
-		},
-		"lagrange-dao": {
-			"description": "Lagrange DAO - Tool"
-		},
-		"kip-protocol": {
-			"description": "KIP Protocol - Tool"
-		},
-		"sahara-ai": {
-			"description": "Sahara AI - Tool"
-		},
-		"bagel-network": {
-			"description": "Bagel Network - Tool"
-		},
-		"allora-network": {
-			"description": "Allora - Tool"
-		},
-		"gpu-net": {
-			"description": "GPU.Net - Tool"
-		},
-		"clore-ai": {
-			"description": "Clore.ai - Tool"
-		},
-		"theta-edge": {
-			"description": "Theta EdgeCloud - Tool"
-		},
-		"nimble-network": {
-			"description": "Nimble - Tool"
+			"description": "Bittensorネットワークによる AI推論API"
 		}
 	}
 }

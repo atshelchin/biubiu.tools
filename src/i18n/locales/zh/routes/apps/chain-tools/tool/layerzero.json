@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "LayerZero - 全链互操作性协议 | 连接50+区块链",
+		"description": "探索LayerZero,全链消息传递协议。构建可在50+区块链之间无缝交互的应用,具有可定制的安全性。",
+		"keywords": "LayerZero, ZRO, 全链, 互操作性, 跨链, 桥, 消息传递, OFT"
+	},
+	"overview": "LayerZero是一个全链互操作性协议,使应用能够跨50+区块链进行通信。由Bryan Pellegrino、Ryan Zarick和Caleb Banister于2021年创立,LayerZero开创了跨链消息传递的应用自有安全性概念。\n\n与锁定和铸造资产的传统桥不同,LayerZero是一个消息传递协议,允许开发者在链之间发送任何类型的数据。独特的安全模型让应用选择自己的去中心化验证网络(DVN)——它们可以使用Chainlink、Polyhedra、Google Cloud或任何组合进行消息验证。这种模块化意味着没有单一实体控制跨链安全性。\n\nLayerZero的关键标准包括用于原生多链代币的OFT(全链可替代代币)和用于跨链NFT的ONFT。处理超过1.37亿条消息和转移超过50亿美元的价值,LayerZero已成为Stargate、Radiant和许多其他全链应用的基础设施。",
+	"features": {
+		"1": {
+			"title": "通用消息传递",
+			"description": "在50+支持的区块链网络之间发送任何消息类型"
+		},
+		"2": {
+			"title": "模块化安全性",
+			"description": "从30+个DVN中选择,包括Chainlink、Google Cloud和Polyhedra"
+		},
+		"3": {
+			"title": "OFT标准",
+			"description": "创建无缝跨多个链存在的原生全链代币"
+		},
+		"4": {
+			"title": "不可变协议",
+			"description": "核心合约不可变且无需许可,以实现最大信任"
+		},
+		"5": {
+			"title": "执行灵活性",
+			"description": "任何人都可以执行消息,确保无需许可的操作"
+		},
+		"6": {
+			"title": "开发者SDK",
+			"description": "用于构建全链应用的综合工具和合约"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "全链代币",
+			"description": "部署原生存在于多个区块链上的代币"
+		},
+		"2": {
+			"title": "跨链DeFi",
+			"description": "构建跨越多个链的借贷、DEX和收益协议"
+		},
+		"3": {
+			"title": "统一治理",
+			"description": "从任何连接的链启用投票和治理参与"
+		},
+		"4": {
+			"title": "NFT桥接",
+			"description": "在链之间移动NFT,同时保持来源和所有权"
+		},
+		"5": {
+			"title": "游戏资产",
+			"description": "创建可在多个区块链游戏中使用的游戏内物品和货币"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是LayerZero,它与桥有什么不同?",
+			"answer": "LayerZero是一个消息传递协议,而不是桥。传统桥在一条链上锁定资产并在另一条链上铸造包装版本,从而产生蜜罐风险。LayerZero使应用能够在链之间发送任意消息(包括代币转移),应用选择其安全配置。它是构建跨链应用的基础设施,而不仅仅是移动代币。"
+		},
+		"2": {
+			"question": "什么是DVN,安全性如何工作?",
+			"answer": "DVN(去中心化验证网络)是验证跨链消息的实体。与单一桥运营商不同,LayerZero让应用选择信任哪些DVN——Chainlink预言机、Google Cloud、Polyhedra ZK证明或自定义设置。攻击者需要破坏应用选择的多个独立DVN,这使得攻击变得更加困难。"
+		},
+		"3": {
+			"question": "什么是OFT标准?",
+			"answer": "OFT(全链可替代代币)是LayerZero创建原生存在于多个链上的代币的标准。与代表锁定资产的包装代币不同,OFT使用销毁和铸造机制——在源链上销毁的代币在目标链上铸造。这在所有链上维持统一供应,无需包装代币碎片化。"
+		},
+		"4": {
+			"question": "ZRO代币用于什么?",
+			"answer": "ZRO是LayerZero的原生代币,用于协议费用、治理和质押。用户为跨链消息支付ZRO(或者,应用可以使用源链的原生代币支付费用)。ZRO持有者可以参与关于协议参数和DVN配置的治理决策。"
+		},
+		"5": {
+			"question": "哪些应用使用LayerZero?",
+			"answer": "主要应用包括:Stargate(使用LayerZero的跨链桥)、Radiant Capital(全链借贷)、Angle Protocol(全链稳定币)、Holograph(全链NFT)等。超过50,000个合约已使用LayerZero部署,主要代币如USDC已集成OFT以实现原生多链支持。"
+		}
+	},
+	"cta": {
+		"ready": "准备好开启全链之旅了吗?",
+		"button": "打开LayerZero",
+		"note": "全链互操作性协议"
+	}
+}

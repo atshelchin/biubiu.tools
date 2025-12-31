@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Safe - 多签钱包 | 安全的数字资产管理",
+		"description": "了解 Safe(前身为 Gnosis Safe),领先的多签钱包。通过可定制的审批阈值和智能合约安全性保护数字资产。",
+		"keywords": "Safe, Gnosis Safe, 多签，多重签名钱包，DAO 金库，智能合约钱包，加密安全"
+	},
+	"overview": "Safe(前身为 Gnosis Safe) 是用于保护数字资产的行业标准智能合约钱包。最初由 Gnosis 团队开发并于 2018 年推出，Safe 已成为 DAO、协议和机构管理加密金库最值得信赖的解决方案。\n\n与由单个私钥控制的传统钱包不同，Safe 使用多重签名 (多签) 安全性，交易需要多个批准。你配置 M-of-N 签名者——例如，3-of-5 意味着 5 个指定签名者中的任意 3 个必须批准。这消除了单点故障：没有人可以单方面转移资金。Safe 还支持支出限额、交易批处理和模块化扩展。\n\nSafe 已在 1000 多万笔交易中保护了超过 1000 亿美元的资产。Uniswap、Aave、ENS 等主要协议和无数 DAO 使用 Safe 进行金库管理。Safe 生态系统包括 Safe{Wallet}(用户界面)、Safe{Core}(面向开发者的智能账户基础设施),以及与硬件钱包、移动应用和交易构建器的集成。Safe 代表了从 EOA 钱包到可编程智能账户的演变。",
+	"features": {
+		"1": {
+			"title": "多签安全",
+			"description": "交易需要多个批准 (例如 3-of-5)——没有单点故障"
+		},
+		"2": {
+			"title": "交易批处理",
+			"description": "将多个交易捆绑为一个，节省 gas 并实现复杂操作"
+		},
+		"3": {
+			"title": "支出限额",
+			"description": "为签名者设置额度，在限额内无需完全批准即可支出"
+		},
+		"4": {
+			"title": "多链",
+			"description": "在以太坊、Polygon、Arbitrum、Optimism 和其他 EVM 链上部署 Safe"
+		},
+		"5": {
+			"title": "Safe Apps",
+			"description": "通过集成应用直接从 Safe 与 DeFi 协议交互"
+		},
+		"6": {
+			"title": "恢复选项",
+			"description": "配置监护人和账户恢复的恢复机制"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DAO 金库",
+			"description": "通过透明的多签治理管理社区资金"
+		},
+		"2": {
+			"title": "协议所有权",
+			"description": "通过分布式签名控制智能合约管理员密钥"
+		},
+		"3": {
+			"title": "团队钱包",
+			"description": "通过多个团队成员的批准保护公司加密资产"
+		},
+		"4": {
+			"title": "个人安全",
+			"description": "使用硬件钱包 + 手机 + 备份签名者保护个人持有"
+		},
+		"5": {
+			"title": "投资基金",
+			"description": "通过多签为投资者提供保护管理基金资产"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 Safe，它与 MetaMask 有何不同？",
+			"answer": "Safe 是一个需要多个签名 (多签) 才能进行交易的智能合约钱包。MetaMask 是一个由单个私钥控制的 EOA(外部拥有账户)。如果你丢失了 MetaMask 的助记词或被盗，资金就会消失。使用 Safe，你需要多个签名者批准——即使一个密钥被泄露，资金也受到保护。Safe 适用于高安全性用例;MetaMask 适用于日常交易。"
+		},
+		"2": {
+			"question": "如何设置 Safe 多签？",
+			"answer": "访问 safe.global，连接你的钱包，然后点击\"Create Safe\"。选择一个网络 (以太坊、Polygon 等),添加签名者地址 (可以批准交易的钱包),并设置阈值 (必须签名的数量)。例如，添加 5 个签名者，设置 3-of-5 阈值。你需要支付 gas 来部署 Safe 智能合约。然后将资产转移到你的新 Safe 地址。"
+		},
+		"3": {
+			"question": "如果我失去对签名者的访问权限会怎样？",
+			"answer": "如果你失去一个签名者但仍有足够的签名者满足阈值，你可以提议一个交易，用新地址替换丢失的签名者。剩余的签名者批准后，Safe 会更新。这就是为什么阈值应该小于总签名者数 (例如 3-of-5，而不是 5-of-5)。通过适当的设置，丢失一个设备或密钥并不意味着丢失资金。"
+		},
+		"4": {
+			"question": "Safe 只适用于 DAO 和团队吗？",
+			"answer": "Safe 在 DAO 中很受欢迎，但也适用于个人安全。个人使用 2-of-3 设置的 Safe:硬件钱包 + 手机 + 备份 (纸质或可信任的人)。这可以防止丢失一个设备或单个密钥被盗。对于大量持有，多个签名的开销是值得的。许多加密原生个人使用 Safe 进行冷存储。"
+		},
+		"5": {
+			"question": "什么是 Safe Apps 和 Safe Modules?",
+			"answer": "Safe Apps 是集成到 Safe 界面中的 dApp——你可以直接从 Safe 与 Uniswap、Aave 等交互，无需切换上下文。Safe Modules 是添加功能的扩展：支出限额 (额度模块)、定期支付、恢复机制等。这种模块化使 Safe 成为一个可编程平台，而不仅仅是一个钱包。"
+		}
+	},
+	"cta": {
+		"ready": "准备好保护你的资产了吗？",
+		"button": "打开 Safe",
+		"note": "行业标准智能合约钱包"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Etherscan - 以太坊区块链浏览器 | 追踪交易与合约",
+		"description": "了解 Etherscan，领先的以太坊区块链浏览器。追踪交易，验证合约，分析地址，探索链上数据。",
+		"keywords": "Etherscan, 区块链浏览器，以太坊，交易追踪，智能合约，Gas 追踪器，代币追踪器"
+	},
+	"overview": "Etherscan 是以太坊领先的区块链浏览器，为所有链上活动提供了一个窗口。成立于 2015 年，Etherscan 已成为与以太坊交互的任何人的必备工具——从调试合约的开发者到追踪交易的用户，再到分析链上数据的研究者。\n\n该平台允许用户搜索以太坊上的任何交易、地址、代币或智能合约。主要功能包括交易追踪、合约验证和读取、代币转账和持有、Gas 价格追踪以及详细分析。Etherscan 还为开发者提供 API 以编程方式访问区块链数据。他们的验证合约功能已成为标准——用户在交互前通常会检查合约是否\"在 Etherscan 上验证\"。\n\nEtherscan 已扩展到通过单独的浏览器支持其他 EVM 链:Polygonscan、Arbiscan、Optimistic Etherscan、BSCScan 等。该团队还构建了用于钱包间消息传递的 Blockscan Chat。Etherscan 每天拥有数十亿页面浏览量和数百万 API 调用，是使以太坊的透明性对每个人都可访问的基础设施。",
+	"features": {
+		"1": {
+			"title": "交易追踪",
+			"description": "查找任何交易的详细状态、使用的 gas 和解码数据"
+		},
+		"2": {
+			"title": "合约验证",
+			"description": "验证和读取智能合约源代码以提高透明度和信任"
+		},
+		"3": {
+			"title": "代币追踪",
+			"description": "探索 ERC-20 和 ERC-721 代币转账、持有者和分析"
+		},
+		"4": {
+			"title": "Gas 追踪器",
+			"description": "实时 Gas 价格追踪，提供慢速、平均和快速估算"
+		},
+		"5": {
+			"title": "地址分析",
+			"description": "查看完整的交易历史、代币余额和合约交互"
+		},
+		"6": {
+			"title": "开发者 API",
+			"description": "编程访问区块链数据以构建应用"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "交易验证",
+			"description": "在发送加密货币后确认交易状态和详细信息"
+		},
+		"2": {
+			"title": "合约研究",
+			"description": "在与 DeFi 协议交互前阅读验证的合约代码"
+		},
+		"3": {
+			"title": "钱包分析",
+			"description": "研究地址以了解持有和交易模式"
+		},
+		"4": {
+			"title": "代币发现",
+			"description": "找到新代币，检查合法性，分析持有者分布"
+		},
+		"5": {
+			"title": "调试与开发",
+			"description": "开发者使用 Etherscan 调试交易和测试合约"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 Etherscan，如何使用它？",
+			"answer": "Etherscan 是一个区块链浏览器，让你搜索和分析以太坊上的一切。将任何交易哈希、钱包地址、合约地址或 ENS 名称粘贴到搜索栏中。你会看到完整的详细信息：交易 (状态、值、gas),地址 (余额、历史、代币),合约 (代码、交互)。这是验证链上任何事物的首选工具。"
+		},
+		"2": {
+			"question": "如何在 Etherscan 上验证智能合约？",
+			"answer": "转到合约地址，点击\"Contract\"标签，然后点击\"Verify & Publish\"。选择部署期间使用的编译器版本和优化设置，粘贴源代码 (或上传扁平化文件),然后提交。验证后，任何人都可以阅读合约代码并通过 Etherscan 与读/写函数交互。大多数信誉良好的项目都会验证他们的合约。"
+		},
+		"3": {
+			"question": "为什么我的交易显示\"Pending\"?",
+			"answer": "Pending 意味着交易在内存池中等待被包含在区块中。常见原因:Gas 价格太低 (矿工优先考虑更高的 gas),网络拥堵 (许多待处理交易),或 nonce 问题。你可以通过以更高的 gas 重新提交 (相同 nonce) 来\"加速\",或等待。Etherscan 显示待处理交易，但它们尚未确认。"
+		},
+		"4": {
+			"question": "Etherscan 只适用于以太坊吗？",
+			"answer": "Etherscan 背后的团队为许多 EVM 链运营浏览器:Polygonscan(Polygon)、Arbiscan(Arbitrum)、Optimistic Etherscan(Optimism)、BSCScan(BNB Chain) 等。每个浏览器的工作方式类似，但用于各自的链。它们共享相同的界面和功能，只是区块链数据不同。"
+		},
+		"5": {
+			"question": "Etherscan 如何盈利？",
+			"answer": "Etherscan 的收入来自：广告 (网站上的横幅广告)、高级 API 计划 (免费套餐有速率限制，付费计划提供更多调用) 和企业服务。基本浏览器免费使用。他们还获得以太坊基金会的资助。尽管是关键基础设施，Etherscan 是一家私营公司，而不是协议。"
+		}
+	},
+	"cta": {
+		"ready": "准备好探索以太坊了吗？",
+		"button": "打开 Etherscan",
+		"note": "领先的以太坊区块链浏览器"
+	}
+}

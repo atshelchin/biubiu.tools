@@ -2,6 +2,7 @@
 	"category_seo": {
 		"title": "AI & Kripto - Token AI & AI Terdesentralisasi | BiuBiu Tools",
 		"description": "Persimpangan AI dan blockchain. Token AI, komputasi terdesentralisasi, agen AI, dan machine learning on-chain.",
+		"keywords": "ai kripto, token ai, ai terdesentralisasi, agen ai, blockchain ai",
 		"faqs": [
 			{
 				"question": "Bagaimana AI dan kripto terhubung?",
@@ -18,14 +19,29 @@
 		]
 	},
 	"tools": {
-		"worldcoin": {
-			"description": "Protokol identitas proof-of-personhood"
+		"virtuals_protocol": {
+			"description": "Platform untuk membuat dan men-deploy agen AI di Base dengan kepemilikan ter-tokenisasi"
 		},
 		"ai16z": {
 			"description": "AI DAO dan framework Eliza untuk membuat agen otonom"
 		},
+		"truth_terminal": {
+			"description": "Agen AI otonom di X yang memulai fenomena token GOAT"
+		},
 		"autonolas": {
 			"description": "Platform untuk membangun dan menjalankan layanan agen AI otonom"
+		},
+		"flock_io": {
+			"description": "Platform pembelajaran federasi untuk pelatihan model AI terdesentralisasi"
+		},
+		"render_network": {
+			"description": "Jaringan rendering GPU terdesentralisasi untuk AI dan beban kerja grafis 3D"
+		},
+		"akash_network": {
+			"description": "Marketplace komputasi cloud terdesentralisasi untuk beban kerja AI"
+		},
+		"io_net": {
+			"description": "Jaringan GPU terdesentralisasi yang mengagregasi komputasi dari data center"
 		},
 		"bittensor": {
 			"description": "Jaringan AI terdesentralisasi dengan machine learning yang diberi insentif"
@@ -36,6 +52,15 @@
 		"gensyn": {
 			"description": "Protokol terdesentralisasi untuk pelatihan ML dengan verifikasi"
 		},
+		"together_ai": {
+			"description": "Platform inferensi AI terdesentralisasi dengan model open source"
+		},
+		"fetch_ai": {
+			"description": "Platform agen AI otonom untuk otomatisasi web3"
+		},
+		"ocean_protocol": {
+			"description": "Protokol pertukaran data terdesentralisasi untuk data pelatihan AI"
+		},
 		"singularitynet": {
 			"description": "Marketplace terdesentralisasi untuk layanan AI"
 		},
@@ -45,179 +70,155 @@
 		"grass": {
 			"description": "Jaringan scraping data terdesentralisasi yang memberi reward bandwidth"
 		},
+		"altered_state_machine": {
+			"description": "Otak NFT bertenaga AI untuk aplikasi gaming dan metaverse"
+		},
+		"alethea_ai": {
+			"description": "Platform iNFT yang membuat NFT interaktif bertenaga AI"
+		},
+		"nft_art_generators": {
+			"description": "Alat AI untuk menghasilkan karya seni NFT unik"
+		},
+		"stability_ai": {
+			"description": "Perusahaan AI open source di balik model Stable Diffusion"
+		},
+		"cookie_ai": {
+			"description": "Platform analitik agen AI yang melacak aktivitas AI on-chain"
+		},
+		"virtuals_terminal": {
+			"description": "Launchpad dan terminal trading untuk agen AI di Base"
+		},
+		"defillama_ai": {
+			"description": "Kategori AI DeFiLlama yang melacak TVL protokol AI kripto"
+		},
+		"worldcoin": {
+			"description": "Protokol identitas proof-of-personhood menggunakan pemindaian iris"
+		},
+		"morpheus_ai": {
+			"description": "Jaringan agen AI terdesentralisasi untuk agen pintar personal"
+		},
+		"spectral_ai": {
+			"description": "Penilaian kredit on-chain menggunakan machine learning"
+		},
 		"numerai": {
-			"description": "Platform hedge fund berbasis AI dengan data terenkripsi"
+			"description": "Hedge fund bertenaga AI dengan turnamen data science"
+		},
+		"dain_ai": {
+			"description": "Infrastruktur agen AI di Solana untuk tugas otonom"
 		},
 		"vana": {
-			"description": "Jaringan data pribadi untuk pelatihan AI"
+			"description": "Jaringan data milik pengguna untuk pelatihan model AI"
+		},
+		"phala_network": {
+			"description": "Jaringan komputasi rahasia untuk AI yang menjaga privasi"
 		},
 		"nosana": {
-			"description": "Grid komputasi GPU terdesentralisasi untuk inferensi AI"
+			"description": "Jaringan komputasi GPU terdesentralisasi di Solana"
 		},
 		"golem": {
-			"description": "Marketplace komputasi terdesentralisasi untuk rendering dan AI"
+			"description": "Marketplace komputasi terdesentralisasi untuk beban kerja AI"
 		},
 		"livepeer": {
-			"description": "Jaringan transcoding video terdesentralisasi"
+			"description": "Jaringan transcoding video terdesentralisasi dan inferensi AI"
 		},
 		"hyperbolic": {
-			"description": "Platform inferensi AI terdesentralisasi"
+			"description": "Infrastruktur inferensi AI terdesentralisasi dengan jaringan GPU"
+		},
+		"venice_ai": {
+			"description": "Asisten AI tanpa sensor dengan fokus privasi"
 		},
 		"myshell": {
-			"description": "Platform pembuatan agen AI dengan reward creator"
+			"description": "Platform agen AI open source dengan kemampuan suara"
 		},
 		"griffain": {
-			"description": "Protokol agen AI terdesentralisasi"
+			"description": "Memecoin dan platform agen AI di Solana"
+		},
+		"arc_ai": {
+			"description": "Framework agen AI berbasis Rust untuk Solana"
 		},
 		"zerebro": {
-			"description": "Platform kreativitas AI on-chain"
+			"description": "Agen AI otonom untuk pembuatan konten kreatif"
 		},
 		"swarmnode": {
-			"description": "Jaringan node untuk komputasi AI terdesentralisasi"
+			"description": "Jaringan node terdistribusi untuk orkestrasi agen AI"
+		},
+		"sentient_ai": {
+			"description": "Yayasan pengembangan AI open source untuk AGI"
+		},
+		"nous_research": {
+			"description": "Lab riset AI open source yang membuat model Hermes"
+		},
+		"pond_ai": {
+			"description": "Prediksi AI on-chain menggunakan jaringan neural grafis"
+		},
+		"aioz_network": {
+			"description": "CDN terdesentralisasi dan jaringan komputasi AI"
 		},
 		"theoriq": {
-			"description": "Framework komposabilitas untuk agen AI"
+			"description": "Protokol agen AI yang dapat dikomposisi di Base"
+		},
+		"ora_protocol": {
+			"description": "Oracle AI on-chain untuk inferensi ML yang dapat diverifikasi"
+		},
+		"modulus_labs": {
+			"description": "Bukti zero-knowledge untuk verifikasi model ML"
 		},
 		"ezkl": {
-			"description": "Toolkit zero-knowledge untuk machine learning"
+			"description": "Toolkit ZKML untuk membuktikan inferensi AI on-chain"
 		},
 		"giza": {
-			"description": "Platform ML verifiable dengan bukti ZK"
+			"description": "Platform ML yang dapat diverifikasi dengan bukti ZK di StarkNet"
+		},
+		"lagrange_dao": {
+			"description": "Platform komputasi AI terdesentralisasi di Filecoin"
+		},
+		"kip_protocol": {
+			"description": "Protokol aset pengetahuan untuk monetisasi data AI"
+		},
+		"sahara_ai": {
+			"description": "Platform basis pengetahuan AI terdesentralisasi"
+		},
+		"bagel_network": {
+			"description": "Jaringan pipeline data ML terdesentralisasi"
+		},
+		"allora_network": {
+			"description": "Jaringan AI yang memperbaiki diri untuk prediksi kontekstual"
 		},
 		"nillion": {
-			"description": "Jaringan komputasi pribadi terdesentralisasi"
+			"description": "Jaringan komputasi yang menjaga privasi menggunakan MPC untuk AI"
 		},
 		"arbius": {
-			"description": "Marketplace AI terdesentralisasi untuk generasi gambar"
+			"description": "Pembuatan gambar AI terdesentralisasi dengan mining GPU"
 		},
 		"crynux": {
-			"description": "Jaringan AI terdesentralisasi untuk model difusi"
+			"description": "Jaringan inferensi AI terdesentralisasi untuk perangkat edge"
+		},
+		"gpu_net": {
+			"description": "Jaringan GPU terdesentralisasi untuk beban kerja AI"
 		},
 		"aethir": {
-			"description": "Infrastruktur cloud GPU terdesentralisasi"
+			"description": "Cloud GPU terdesentralisasi untuk gaming dan AI"
 		},
 		"spheron": {
-			"description": "Platform deployment terdesentralisasi untuk aplikasi AI"
+			"description": "Infrastruktur komputasi terdesentralisasi untuk deployment AI"
+		},
+		"clore_ai": {
+			"description": "Marketplace penyewaan GPU untuk AI dan mining"
+		},
+		"theta_edge": {
+			"description": "Jaringan edge computing untuk beban kerja video dan AI"
+		},
+		"nimble_network": {
+			"description": "Framework AI yang dapat dikomposisi untuk kecerdasan terdesentralisasi"
 		},
 		"tensorplex": {
-			"description": "Infrastruktur pasar data untuk AI"
+			"description": "Liquid staking dan DeFi untuk Bittensor TAO"
 		},
 		"taoshi": {
-			"description": "Subnet trading dan keuangan Bittensor"
+			"description": "Subnet Bittensor untuk sinyal trading AI"
 		},
 		"corcel": {
-			"description": "API terdesentralisasi untuk model AI Bittensor"
-		},
-		"virtuals-protocol": {
-			"description": "Virtuals Protocol - Tool"
-		},
-		"truth-terminal": {
-			"description": "Truth Terminal - Tool"
-		},
-		"flock-io": {
-			"description": "FLock.io - Tool"
-		},
-		"render-network": {
-			"description": "Render Network - Tool"
-		},
-		"akash-network": {
-			"description": "Akash Network - Tool"
-		},
-		"io-net": {
-			"description": "io.net - Tool"
-		},
-		"together-ai": {
-			"description": "Together AI - Tool"
-		},
-		"fetch-ai": {
-			"description": "Fetch.ai (FET) - Tool"
-		},
-		"ocean-protocol": {
-			"description": "Ocean Protocol - Tool"
-		},
-		"altered-state-machine": {
-			"description": "Altered State Machine - Tool"
-		},
-		"alethea-ai": {
-			"description": "Alethea AI - Tool"
-		},
-		"midjourney-crypto": {
-			"description": "NFT Art Generators - Tool"
-		},
-		"stability-ai": {
-			"description": "Stability AI - Tool"
-		},
-		"cookie-ai": {
-			"description": "Cookie.fun - Tool"
-		},
-		"virtuals-terminal": {
-			"description": "Virtuals Terminal - Tool"
-		},
-		"defillama-ai": {
-			"description": "DeFiLlama AI - Tool"
-		},
-		"morpheus-ai": {
-			"description": "Morpheus - Tool"
-		},
-		"spectral-ai": {
-			"description": "Spectral - Tool"
-		},
-		"dain-ai": {
-			"description": "DAIN - Tool"
-		},
-		"phala-network": {
-			"description": "Phala Network - Tool"
-		},
-		"venice-ai": {
-			"description": "Venice AI - Tool"
-		},
-		"arc-ai": {
-			"description": "Arc - Tool"
-		},
-		"sentient-ai": {
-			"description": "Sentient - Tool"
-		},
-		"nous-research": {
-			"description": "Nous Research - Tool"
-		},
-		"pond-ai": {
-			"description": "Pond - Tool"
-		},
-		"aioz-network": {
-			"description": "AIOZ Network - Tool"
-		},
-		"ora-protocol": {
-			"description": "ORA Protocol - Tool"
-		},
-		"modulus-labs": {
-			"description": "Modulus Labs - Tool"
-		},
-		"lagrange-dao": {
-			"description": "Lagrange DAO - Tool"
-		},
-		"kip-protocol": {
-			"description": "KIP Protocol - Tool"
-		},
-		"sahara-ai": {
-			"description": "Sahara AI - Tool"
-		},
-		"bagel-network": {
-			"description": "Bagel Network - Tool"
-		},
-		"allora-network": {
-			"description": "Allora - Tool"
-		},
-		"gpu-net": {
-			"description": "GPU.Net - Tool"
-		},
-		"clore-ai": {
-			"description": "Clore.ai - Tool"
-		},
-		"theta-edge": {
-			"description": "Theta EdgeCloud - Tool"
-		},
-		"nimble-network": {
-			"description": "Nimble - Tool"
+			"description": "API inferensi AI yang didukung oleh jaringan Bittensor"
 		}
 	}
 }

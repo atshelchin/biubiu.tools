@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Euler Finance - 模块化借贷协议 | 可定制的DeFi信贷市场",
+		"description": "探索Euler Finance V2,模块化借贷平台。创建自定义借贷金库,使用任何资产作为抵押品,构建复杂的信贷策略。",
+		"keywords": "Euler Finance, EUL, 借贷, 借款, 模块化, 金库, DeFi, 信贷"
+	},
+	"overview": "Euler Finance是一个模块化借贷协议,能够创建可定制的信贷市场。最初于2021年启动,Euler V2代表了在2023年漏洞利用后进行广泛安全工作后的完全重建。新版本在DeFi借贷中引入了前所未有的灵活性。\n\nEuler V2包含两个核心组件:用于部署具有可配置参数的自定义借贷金库的Euler Vault Kit(EVK),以及允许金库识别来自其他金库抵押品的Ethereum Vault Connector(EVC)。这使得复杂的信贷结构成为可能——单个抵押品头寸可以支持跨多个市场的借款。\n\n模块化设计意味着任何人都可以创建具有自定义风险参数、预言机配置、利率模型和清算机制的借贷市场。这包括从需许可的机构金库到无需许可的公共市场。Euler已通过全面的安全措施进行了重建,自V2重新启动以来实现了显著的TVL增长。",
+	"features": {
+		"1": {
+			"title": "Euler Vault Kit",
+			"description": "创建具有可配置风险参数和预言机的自定义借贷金库"
+		},
+		"2": {
+			"title": "Ethereum Vault Connector",
+			"description": "在多个金库中使用抵押品进行资本高效的借款"
+		},
+		"3": {
+			"title": "模块化市场",
+			"description": "无需许可地为任何资产对创建借贷市场"
+		},
+		"4": {
+			"title": "灵活的预言机",
+			"description": "支持Chainlink、Uniswap TWAP、Redstone和自定义预言机"
+		},
+		"5": {
+			"title": "风险隔离",
+			"description": "隔离的借贷池防止不同市场之间的传染"
+		},
+		"6": {
+			"title": "治理控制",
+			"description": "金库可以根据创建者选择进行治理、不可变或可升级"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "标准借贷",
+			"description": "在经过验证的精选金库中针对主要资产进行借贷"
+		},
+		"2": {
+			"title": "长尾资产",
+			"description": "访问较新或流动性较低代币的借贷市场"
+		},
+		"3": {
+			"title": "机构市场",
+			"description": "创建具有KYC要求和自定义条款的需许可金库"
+		},
+		"4": {
+			"title": "杠杆策略",
+			"description": "使用跨金库抵押品进行高效的杠杆头寸"
+		},
+		"5": {
+			"title": "市场创建",
+			"description": "为特定资产或用例部署自定义借贷市场"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是Euler Finance,V2如何运作?",
+			"answer": "Euler是一个模块化借贷协议。V2允许任何人使用Euler Vault Kit(EVK)创建自定义借贷金库。每个金库可以有自己的抵押品类型、预言机、利率模型和风险参数。Ethereum Vault Connector(EVC)将金库连接在一起,允许一个金库中的抵押品支持其他金库中的借款。"
+		},
+		"2": {
+			"question": "Euler V1发生了什么?",
+			"answer": "Euler V1于2023年3月遭受了1.97亿美元的漏洞利用,原因是捐赠攻击向量中的漏洞。攻击者后来归还了资金。Euler Labs花费了一年多的时间开发V2,进行了广泛的安全审计并实施了全面的漏洞赏金计划。V2是完全的架构重新设计,而不是V1的补丁。"
+		},
+		"3": {
+			"question": "什么是Ethereum Vault Connector(EVC)?",
+			"answer": "EVC是Euler的创新,允许跨金库抵押品识别。您无需将抵押品单独存入每个借贷市场,而是可以存入一次并让多个金库识别它。这极大地提高了资本效率并实现了复杂的多腿借款策略。"
+		},
+		"4": {
+			"question": "谁可以创建Euler金库?",
+			"answer": "任何人都可以使用EVK创建金库。金库创建者选择所有参数:接受的抵押品、预言机、利率、清算条件和治理。金库可以完全无需许可、需要白名单或具有任何自定义访问控制。这使得从机构私人市场到公共无需许可借贷的一切成为可能。"
+		},
+		"5": {
+			"question": "使用Euler V2安全吗?",
+			"answer": "Euler V2经历了DeFi中最全面的安全流程之一——广泛的审计、形式验证和100万美元以上的漏洞赏金。但是,DeFi始终存在风险。模块化设计意味着每个金库都有独立的风险——配置不当的金库不会影响其他金库。在存款之前始终研究特定金库。"
+		}
+	},
+	"cta": {
+		"ready": "准备好探索模块化借贷了吗?",
+		"button": "打开Euler Finance",
+		"note": "为任何资产提供可定制的借贷金库"
+	}
+}

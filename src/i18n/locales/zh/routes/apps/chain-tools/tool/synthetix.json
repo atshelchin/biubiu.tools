@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Synthetix - 去中心化合成资产协议 | 链上交易任何资产",
+		"description": "探索 Synthetix，创建和交易合成资产的协议。在链上访问加密货币、外汇、大宗商品和股票，具有无限流动性。",
+		"keywords": "Synthetix, SNX, 合成资产, Synths, DeFi, 衍生品, 永续合约, 流动性"
+	},
+	"overview": "Synthetix 是一个去中心化协议，可在以太坊和 Optimism 上创建和交易合成资产（Synths）。由 Kain Warwick 于2017年创立（最初名为 Havven），Synthetix 开创了链上合成资产的概念——跟踪现实世界资产价格的代币，如货币、大宗商品、股票和加密货币。\n\n该协议通过让 SNX 代币持有者质押其代币作为抵押品来铸造 Synths。这创建了一个共享债务池，质押者共同支持所有流通的 Synths。该系统为 Synth 间交易提供无限流动性和零滑点，因为它们只是基于预言机的价格转换，而不是传统的 AMM 兑换。\n\nSynthetix V3 引入了具有独立流动性池的模块化架构，实现了更高效的资本部署和新的市场类型。该协议已成为基础性的 DeFi 基础设施，Kwenta 和 Lyra 等协议在 Synthetix 流动性之上构建永续合约和期权交易。",
+	"features": {
+		"1": {
+			"title": "合成资产",
+			"description": "在链上交易加密货币、外汇、大宗商品和指数的合成版本"
+		},
+		"2": {
+			"title": "零滑点",
+			"description": "Synth 间兑换通过预言机定价具有无限流动性和零滑点"
+		},
+		"3": {
+			"title": "永续合约",
+			"description": "通过 Kwenta 等集成商以深度流动性交易永续合约"
+		},
+		"4": {
+			"title": "SNX 质押",
+			"description": "质押 SNX 以铸造 sUSD、赚取交易手续费并参与治理"
+		},
+		"5": {
+			"title": "V3 模块化池",
+			"description": "为不同市场提供独立的流动性池，具有可配置的风险参数"
+		},
+		"6": {
+			"title": "跨链",
+			"description": "部署在以太坊主网和 Optimism L2 上以降低 Gas 成本"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "衍生品交易",
+			"description": "使用杠杆交易加密资产的永续合约"
+		},
+		"2": {
+			"title": "外汇敞口",
+			"description": "获得主要货币（如欧元、日元、澳元）的链上敞口"
+		},
+		"3": {
+			"title": "质押奖励",
+			"description": "质押 SNX 以赚取交易手续费和通胀奖励"
+		},
+		"4": {
+			"title": "流动性提供",
+			"description": "为 V3 池提供抵押品以从交易者那里赚取回报"
+		},
+		"5": {
+			"title": "协议集成",
+			"description": "在 Synthetix 流动性之上构建交易界面和产品"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 Synthetix？合成资产是如何工作的？",
+			"answer": "Synthetix 能够创建 Synths——通过预言机跟踪外部资产价格的代币。SNX 质押者提供支持所有 Synths 的抵押品。当你持有 sUSD（合成美元）时，你可以按预言机价格将其兑换为任何其他 Synth（sBTC、sETH、sEUR 等），零滑点。该系统不需要对手方——它只是支持预言机定价代币的抵押品。"
+		},
+		"2": {
+			"question": "SNX 质押机制是什么？",
+			"answer": "SNX 持有者质押其代币作为抵押品以铸造 sUSD。质押者必须维持抵押率（目前约500%）并主动管理其债务仓位。作为回报，他们赚取每周交易手续费和 SNX 通胀奖励。债务池是共享的——如果 Synth 交易者盈利，质押者债务增加；如果交易者亏损，质押者债务减少。"
+		},
+		"3": {
+			"question": "什么是 Synthetix V3？",
+			"answer": "V3 是引入模块化架构的完全重建。V3 不是一个全局债务池，而是有独立的池，可以用自定义风险参数支持不同的市场。这实现了更高效的资本使用、更容易的集成和新的产品类型。V3 还引入了跨链功能和改进的治理。"
+		},
+		"4": {
+			"question": "哪些协议建立在 Synthetix 上？",
+			"answer": "几个主要协议建立在 Synthetix 流动性之上：Kwenta 用于永续合约交易、Lyra 用于期权、Polynomial 用于结构化产品等。这些集成商提供用户界面，而 Synthetix 提供底层流动性和结算层。这种生态系统模式允许 Synthetix 专注于基础设施。"
+		},
+		"5": {
+			"question": "使用 Synthetix 有哪些风险？",
+			"answer": "风险包括：智能合约漏洞、预言机操纵/故障、债务池敞口（质押者分担交易损失）、抵押率下降太低时的清算，以及围绕合成资产的监管不确定性。该协议经过了广泛的审计，但仍然复杂，具有固有的 DeFi 风险。"
+		}
+	},
+	"cta": {
+		"ready": "准备好交易合成资产了吗？",
+		"button": "打开 Synthetix",
+		"note": "去中心化合成资产和永续合约"
+	}
+}

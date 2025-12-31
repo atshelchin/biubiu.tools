@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "MetaMask - 领先的加密钱包 | 访问 DeFi、NFT 与 Web3",
+		"description": "了解 MetaMask，领先的自托管加密钱包。在以太坊和 EVM 兼容链上访问 DeFi 协议、NFT 市场和 Web3 应用。",
+		"keywords": "MetaMask, 加密钱包，以太坊钱包，Web3, DeFi, NFT, 浏览器扩展，移动钱包"
+	},
+	"overview": "MetaMask 是全球最受欢迎的自托管加密钱包，使用户能够在以太坊和 EVM 兼容区块链上访问去中心化应用。由 Aaron Davis 和 Dan Finlay 于 2016 年在 ConsenSys 创建，MetaMask 开创了浏览器扩展钱包的概念，使 Web3 对主流用户变得可访问。\n\n作为 Chrome、Firefox、Brave 和 Edge 的浏览器扩展，以及 iOS 和 Android 的移动应用，MetaMask 为超过 3000 万月活跃用户提供服务。该钱包允许用户存储 ETH 和 ERC-20 代币，与 dApp 交互，交换代币，用法币购买加密货币，以及管理 NFT。MetaMask Snaps 使第三方扩展能够添加功能，如支持非 EVM 链。\n\nMetaMask 已成为 Web3 身份验证的事实标准，大多数 dApp 使用\"连接 MetaMask\"作为主要登录方式。该钱包通过交换费用 (0.875%) 和入金合作伙伴关系产生收入。作为数百万用户访问 DeFi、NFT 和 Web3 的门户，MetaMask 仍然是以太坊生态系统的重要基础设施。",
+	"features": {
+		"1": {
+			"title": "多链支持",
+			"description": "连接到以太坊、Polygon、Arbitrum、Optimism、BSC 和数百条 EVM 链"
+		},
+		"2": {
+			"title": "应用内兑换",
+			"description": "直接在钱包中兑换代币，获得来自多个 DEX 的聚合报价"
+		},
+		"3": {
+			"title": "NFT 管理",
+			"description": "在支持的网络上查看、发送和管理 NFT 收藏"
+		},
+		"4": {
+			"title": "硬件钱包",
+			"description": "连接 Ledger 和 Trezor 硬件钱包以增强安全性"
+		},
+		"5": {
+			"title": "MetaMask Snaps",
+			"description": "通过第三方插件扩展功能，支持非 EVM 链和特性"
+		},
+		"6": {
+			"title": "投资组合视图",
+			"description": "通过集成的投资组合仪表板跨链追踪你的持有"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "访问 DeFi",
+			"description": "连接到以太坊和 L2 上的借贷、DEX 和收益协议"
+		},
+		"2": {
+			"title": "NFT 交易",
+			"description": "在 OpenSea、Blur 和其他市场上买卖和管理 NFT"
+		},
+		"3": {
+			"title": "代币兑换",
+			"description": "通过集成的 DEX 聚合以有竞争力的价格交易代币"
+		},
+		"4": {
+			"title": "Web3 登录",
+			"description": "使用你的钱包地址登录 dApp 和网站"
+		},
+		"5": {
+			"title": "跨链",
+			"description": "跨多个 EVM 网络桥接资产并与应用交互"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 MetaMask，它安全吗？",
+			"answer": "MetaMask 是一个自托管加密钱包，这意味着你控制自己的私钥——而不是 MetaMask 或 ConsenSys。正确使用时通常被认为是安全的：启用密码保护，永远不要分享你的秘密恢复短语，在签名前验证交易详情，并警惕钓鱼网站。主要风险是用户错误 (丢失助记词，签署恶意交易) 而不是软件漏洞。"
+		},
+		"2": {
+			"question": "如何向 MetaMask 添加新网络？",
+			"answer": "点击顶部的网络下拉菜单，然后选择\"添加网络\"。你可以一键添加 Polygon 或 Arbitrum 等热门网络，或手动输入其他链的 RPC 详细信息。像 Chainlist.org 这样的网站提供经过验证的网络配置，你可以自动添加。始终从官方来源验证 RPC URL，以避免连接到恶意节点。"
+		},
+		"3": {
+			"question": "什么是 MetaMask Snaps?",
+			"answer": "Snaps 是为 MetaMask 添加功能的第三方扩展。它们可以启用对非 EVM 链 (如 Bitcoin、Solana、Cosmos) 的支持，添加新的交易洞察，提供自定义通知等。Snaps 在隔离环境中运行以确保安全。你可以从 MetaMask Snaps 目录安装它们，每个 Snap 都会请求你必须批准的特定权限。"
+		},
+		"4": {
+			"question": "为什么我的交易卡住或失败？",
+			"answer": "常见原因:Gas 价格太低 (增加 gas),nonce 问题 (在设置中重置账户),网络拥堵 (等待或加速),或智能合约错误 (检查 dApp)。对于卡住的交易，你可以\"加速\"(支付更多 gas) 或\"取消\"(用相同 nonce 向自己发送 0 ETH)。MetaMask 的活动标签显示你可以管理的待处理交易。"
+		},
+		"5": {
+			"question": "MetaMask 如何盈利？",
+			"answer": "MetaMask 通过交换费用 (通过 MetaMask Swaps 进行应用内代币兑换收取 0.875%),入金合作伙伴关系 (通过 MoonPay/Transak 等提供商进行法币到加密货币购买的费用),以及为组织提供的 MetaMask Institutional 服务来赚钱。核心钱包功能是免费的——你只需支付交易的网络 gas 费。"
+		}
+	},
+	"cta": {
+		"ready": "准备好探索 Web3 了吗？",
+		"button": "打开 MetaMask」",
+		"note": "领先的自托管加密钱包"
+	}
+}

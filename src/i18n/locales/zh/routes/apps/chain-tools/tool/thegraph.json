@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "The Graph - 去中心化索引协议 | 查询区块链数据",
+		"description": "了解 The Graph,Web3 的去中心化索引协议。构建子图以使用 GraphQL 高效查询区块链数据。",
+		"keywords": "The Graph, GRT, 子图，区块链索引，GraphQL, Web3 数据，去中心化协议"
+	},
+	"overview": "The Graph 是一个去中心化的索引协议，能够高效查询区块链数据。由 Yaniv Tal、Jannis Pohlmann 和 Brandon Ramirez 于 2018 年创立，The Graph 解决了一个根本问题：区块链数据以针对共识优化的格式存储，而不是查询。直接从节点读取数据既慢又有限。\n\nThe Graph 通过\"子图\"工作——索引和组织特定区块链数据的开放 API。开发者定义要索引的数据 (事件、实体、关系),The Graph 网络将其索引为可通过 GraphQL 访问的可查询格式。索引器运行处理和提供查询的节点，策展人标记哪些子图有价值，委托人质押 GRT 以支持索引器。\n\n已提供超过 1950 亿次查询并部署了数千个子图，The Graph 为包括 Uniswap、Aave、Synthetix 在内的大多数主要 dApp 提供支持。去中心化网络确保没有单点故障和抗审查性。GRT 代币用于质押、策展和支付查询费用。The Graph 已成为 Web3 的基础设施，经常被称为\"区块链的 Google\"。",
+	"features": {
+		"1": {
+			"title": "子图索引",
+			"description": "创建索引特定区块链数据的自定义 API"
+		},
+		"2": {
+			"title": "GraphQL 查询",
+			"description": "使用 GraphQL 查询区块链数据——灵活、高效且对开发者友好"
+		},
+		"3": {
+			"title": "多链",
+			"description": "从以太坊、Polygon、Arbitrum 和许多其他链索引数据"
+		},
+		"4": {
+			"title": "去中心化网络",
+			"description": "由独立索引器网络提供查询以确保可靠性"
+		},
+		"5": {
+			"title": "Subgraph Studio",
+			"description": "使用开发者友好的工作室构建、测试和部署子图"
+		},
+		"6": {
+			"title": "实时更新",
+			"description": "子图随着新区块的产生自动更新"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi 仪表板",
+			"description": "使用索引的协议数据为分析仪表板提供支持"
+		},
+		"2": {
+			"title": "NFT 市场",
+			"description": "高效查询 NFT 所有权、转账和元数据"
+		},
+		"3": {
+			"title": "协议前端",
+			"description": "通过快速的区块链数据访问构建响应式 dApp UI"
+		},
+		"4": {
+			"title": "钱包应用",
+			"description": "向用户显示交易历史和投资组合数据"
+		},
+		"5": {
+			"title": "数据分析",
+			"description": "研究者查询链上数据进行分析和报告"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 The Graph，为什么需要它？",
+			"answer": "The Graph 是一个索引协议，使区块链数据可查询。区块链存储数据是为了共识，而不是查询——直接读取数据既慢又有限。The Graph 将区块链数据索引为结构化格式，让你可以使用 GraphQL 查询 (如\"获取过去一小时内超过 10 万美元的所有交换\")。大多数主要 dApp 使用 The Graph，因为直接节点查询无法支持响应式 UI。"
+		},
+		"2": {
+			"question": "什么是子图？",
+			"answer": "子图是一个开放 API，定义要索引哪些区块链数据以及如何组织它。你编写一个\"子图清单\",指定要监视哪些智能合约和事件，以及将区块链事件转换为实体的\"映射\"。一旦部署，The Graph 网络索引数据并通过 GraphQL 提供服务。任何人都可以创建子图，流行的子图被许多应用重用。"
+		},
+		"3": {
+			"question": "如何查询子图？",
+			"answer": "子图使用 GraphQL 查询。每个子图都有一个端点 URL，你可以在其中发送 GraphQL 查询。例如:query { swaps(first: 10, orderBy: amountUSD) { ... } }。The Graph Explorer 让你浏览和测试子图。对于生产，你从 Subgraph Studio 获取 API 密钥，并使用 GRT 或信用卡支付查询费用。"
+		},
+		"4": {
+			"question": "GRT 代币用于什么？",
+			"answer": "GRT 是 The Graph 的原生代币，有几种用途：索引器质押 GRT 参与网络并赚取查询费用。策展人质押 GRT 以标记哪些子图有价值 (赚取部分费用)。委托人将 GRT 质押给索引器以赚取奖励。查询费用以 GRT 支付 (或通过转换为 GRT 的法币计费)。GRT 在整个网络中对齐激励。"
+		},
+		"5": {
+			"question": "The Graph 的去中心化网络如何工作？",
+			"answer": "三个主要角色：索引器运行索引子图和提供查询的节点，质押 GRT 并赚取费用。策展人通过质押 GRT 标记有价值的子图，帮助索引器优先考虑要索引的内容。委托人将 GRT 质押给他们信任的索引器，分享奖励。这创建了一个去中心化网络，没有单一实体控制基础设施——与中心化索引服务不同。"
+		}
+	},
+	"cta": {
+		"ready": "准备好查询区块链数据了吗？",
+		"button": "打开 The Graph",
+		"note": "Web3 的去中心化索引协议"
+	}
+}

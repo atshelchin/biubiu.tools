@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Frax Finance - 去中心化稳定币与DeFi枢纽 | FRAX、frxETH、Fraxtal",
+		"description": "探索Frax Finance，创新的DeFi生态系统。使用FRAX稳定币、frxETH流动性质押、Fraxlend和Fraxtal L2获得全面的DeFi解决方案。",
+		"keywords": "Frax Finance, FRAX, frxETH, FXS, 稳定币, 流动性质押, Fraxtal, DeFi"
+	},
+	"overview": "Frax Finance是一个围绕FRAX稳定币和一系列互联协议构建的综合性DeFi生态系统。由Sam Kazemian于2020年创立,Frax开创了部分算法稳定币模型,尽管它现已发展为完全抵押模式。\n\n该生态系统包括:FRAX(现已100%抵押的去中心化稳定币)、frxETH/sfrxETH(以太坊流动性质押)、Fraxlend(无需许可的借贷)、FraxSwap(支持TWAMM的DEX)、FraxFerry(跨链桥)和Fraxtal(基于Optimism技术构建的L2区块链)。FXS是治理代币,捕获所有协议活动的价值。\n\nFrax的关键创新是其垂直整合方法——拥有从稳定币到L2链的整个技术栈。该协议通过其veFXS和vlCVX持有量在Curve和Convex中拥有重要的治理权力,允许其引导流动性激励到Frax相关池并维持深度流动性。",
+	"features": {
+		"1": {
+			"title": "FRAX稳定币",
+			"description": "由加密货币抵押品支持的去中心化美元稳定币,现已100%抵押"
+		},
+		"2": {
+			"title": "frxETH质押",
+			"description": "ETH流动性质押,提供frxETH和产生收益的sfrxETH代币"
+		},
+		"3": {
+			"title": "Fraxlend",
+			"description": "无需许可的借贷市场,具有隔离风险和自定义参数"
+		},
+		"4": {
+			"title": "Fraxtal L2",
+			"description": "基于Optimism的L2链,使用FRAX作为燃料代币,提供区块空间激励"
+		},
+		"5": {
+			"title": "FraxSwap",
+			"description": "内置TWAMM的AMM,支持大额时间加权平均价格订单"
+		},
+		"6": {
+			"title": "veFXS治理",
+			"description": "锁定FXS获得投票权、gauge权重方向和协议费用"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "稳定币使用",
+			"description": "使用FRAX进行交易、借贷,作为DeFi中的稳定价值"
+		},
+		"2": {
+			"title": "ETH流动性质押",
+			"description": "通过frxETH质押ETH并持有sfrxETH自动累积收益"
+		},
+		"3": {
+			"title": "杠杆策略",
+			"description": "使用Fraxlend针对各种抵押品类型进行借贷"
+		},
+		"4": {
+			"title": "L2开发",
+			"description": "在Fraxtal上构建,享受更低的燃料费用和区块空间激励奖励"
+		},
+		"5": {
+			"title": "治理参与",
+			"description": "将FXS锁定为veFXS,投票决定协议参数并赚取费用"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是Frax Finance,FRAX如何运作?",
+			"answer": "Frax Finance是围绕FRAX稳定币构建的DeFi生态系统。FRAX最初是部分算法稳定币(部分抵押),但已演变为100%抵押以实现最大稳定性。该协议包括流动性质押、借贷、DEX和L2链——所有这些都互联以创建全面的DeFi堆栈。"
+		},
+		"2": {
+			"question": "frxETH和sfrxETH有什么区别?",
+			"answer": "frxETH是1:1锚定ETH的代币,用于提供流动性。sfrxETH是质押版本,累积所有验证者奖励。当您质押ETH时,可以选择frxETH(用于LP)或转换为sfrxETH(用于被动收益)。随着质押奖励累积,sfrxETH的价值会随时间增长。"
+		},
+		"3": {
+			"question": "什么是Fraxtal?",
+			"answer": "Fraxtal是Frax基于Optimism(OP Stack)技术构建的L2区块链。它使用FRAX作为原生燃料代币。其独特功能是'Flox'——区块空间激励,根据消耗的燃料奖励用户和开发者,创建链上采用和活动的飞轮效应。"
+		},
+		"4": {
+			"question": "什么是FXS和veFXS?",
+			"answer": "FXS是Frax的治理代币,捕获所有生态系统活动的价值。veFXS(投票托管FXS)通过锁定FXS最多4年获得。veFXS持有者投票决定gauge权重、赚取协议费用并引导激励。更长的锁定期提供更多投票权。"
+		},
+		"5": {
+			"question": "使用Frax安全吗?",
+			"answer": "Frax自2020年以来一直在运营,经过广泛审计。FRAX现已100%抵押,降低了脱钩风险。但是,风险包括智能合约漏洞、预言机依赖性以及互联协议设计的复杂性。frxETH流动性质押具有额外的验证者风险。"
+		}
+	},
+	"cta": {
+		"ready": "准备好探索Frax生态系统了吗?",
+		"button": "打开Frax Finance",
+		"note": "一个生态系统中的稳定币、流动性质押和L2"
+	}
+}

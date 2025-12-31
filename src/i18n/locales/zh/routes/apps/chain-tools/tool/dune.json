@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Dune Analytics - 区块链数据平台 | 查询和可视化链上数据",
+		"description": "探索Dune,领先的区块链分析平台。编写SQL查询、构建仪表板,探索以太坊、比特币和40+链上的链上数据。",
+		"keywords": "Dune Analytics, 区块链数据, SQL, 仪表板, 链上分析, DeFi分析, 加密数据"
+	},
+	"overview": "Dune是领先的社区驱动区块链分析平台,使任何人都能查询、可视化和共享链上数据。由Fredrik Haga和Mats Olsen于2018年创立,Dune通过使其可通过SQL查询访问而无需数据工程专业知识,实现了区块链数据分析的民主化。\n\n该平台提供跨40+网络(包括以太坊、比特币、Solana、Polygon和Layer 2)的解码、人类可读的区块链数据。用户编写SQL查询(使用DuneSQL)来分析从DeFi协议指标到NFT交易模式的任何内容,然后创建可视化和可共享的仪表板。Spellbook是Dune的开源转换层,为常见分析需求提供预构建的数据集。\n\nDune已成为加密研究的基础设施,数千名分析师创建的公共仪表板被协议、投资者和记者使用。该平台将原始区块链数据与解码的合约事件相结合,使任何懂SQL的人都能进行复杂的链上分析。",
+	"features": {
+		"1": {
+			"title": "SQL查询",
+			"description": "编写DuneSQL查询以分析来自40+网络的解码区块链数据"
+		},
+		"2": {
+			"title": "可视化仪表板",
+			"description": "创建和共享带有图表、表格和指标的交互式仪表板"
+		},
+		"3": {
+			"title": "Spellbook",
+			"description": "用于常见分析的预构建数据集,如DEX交易、NFT销售、桥接"
+		},
+		"4": {
+			"title": "实时数据",
+			"description": "访问自动更新的近实时区块链数据"
+		},
+		"5": {
+			"title": "API访问",
+			"description": "以编程方式访问查询结果以集成到应用中"
+		},
+		"6": {
+			"title": "社区查询",
+			"description": "从数千个公共查询和仪表板中分叉和学习"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "协议分析",
+			"description": "跟踪DeFi协议的TVL、交易量、用户和指标"
+		},
+		"2": {
+			"title": "钱包分析",
+			"description": "研究巨鲸钱包、跟踪聪明资金并分析交易模式"
+		},
+		"3": {
+			"title": "代币研究",
+			"description": "分析代币分配、持有者行为和转账模式"
+		},
+		"4": {
+			"title": "NFT分析",
+			"description": "跟踪NFT销售、地板价、持有者统计和集合指标"
+		},
+		"5": {
+			"title": "生态系统研究",
+			"description": "比较L2、跟踪燃料使用情况并分析网络活动趋势"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是Dune,它适合谁?",
+			"answer": "Dune是一个区块链分析平台,用户使用SQL查询链上数据并创建可视化仪表板。它适合任何分析加密货币的人:跟踪协议的研究人员、寻找alpha的交易者、监控其指标的协议、调查链上事件的记者以及构建数据产品的开发者。基本的SQL知识有帮助但不是必需的——您可以从分叉现有查询开始。"
+		},
+		"2": {
+			"question": "Dune上有哪些数据可用?",
+			"answer": "Dune提供来自40+区块链的解码数据,包括以太坊、比特币、Solana和主要L2。数据包括原始交易、解码的合约事件(例如Uniswap交换、Aave存款)、代币转账、NFT交易等。Spellbook提供更高级别的表,如所有协议的DEX交易,使复杂的分析更简单。"
+		},
+		"3": {
+			"question": "Dune免费使用吗?",
+			"answer": "Dune有一个免费套餐,允许公共查询和仪表板,但在查询执行和数据新鲜度方面有一些限制。付费计划(Plus、Pro、Enterprise)提供私有查询、更快的执行、更多积分、API访问和其他功能。许多用户从免费开始,随着需求增长而升级。"
+		},
+		"4": {
+			"question": "什么是Spellbook?",
+			"answer": "Spellbook是Dune的开源转换层(使用dbt构建)。它包含社区维护的SQL模型,将原始区块链数据转换为有用的表——如dex.trades(所有DEX交易)、nft.trades(NFT销售)、erc20余额等。任何人都可以贡献新的spell,它们可供所有Dune用户免费使用。"
+		},
+		"5": {
+			"question": "如何学习使用Dune?",
+			"answer": "从探索流行的仪表板和分叉查询开始,了解它们的工作原理。Dune提供文档、教程和Discord社区寻求帮助。OurNetwork是一个流行的学习资源。基本的SQL技能可以直接转移——如果您知道SELECT、JOIN和GROUP BY,您就可以在Dune上分析区块链数据。"
+		}
+	},
+	"cta": {
+		"ready": "准备好分析链上数据了吗?",
+		"button": "打开Dune",
+		"note": "社区驱动的区块链分析"
+	}
+}

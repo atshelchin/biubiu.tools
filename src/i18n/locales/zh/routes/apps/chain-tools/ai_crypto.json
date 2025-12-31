@@ -2,6 +2,7 @@
 	"category_seo": {
 		"title": "AI 与加密 - AI 代币与去中心化 AI | BiuBiu Tools",
 		"description": "AI 与区块链的交汇。AI 代币、去中心化算力、AI 代理和链上机器学习。",
+		"keywords": "ai加密, ai代币, 去中心化ai, ai代理, 区块链ai",
 		"faqs": [
 			{
 				"question": "AI 和加密如何关联？",
@@ -18,14 +19,29 @@
 		]
 	},
 	"tools": {
-		"worldcoin": {
-			"description": "人格证明身份协议"
+		"virtuals_protocol": {
+			"description": "在Base上创建和部署AI代理的平台，支持代币化所有权"
 		},
 		"ai16z": {
 			"description": "用于创建自主代理的AI DAO和Eliza框架"
 		},
+		"truth_terminal": {
+			"description": "X上的自主AI代理，引发了GOAT代币现象"
+		},
 		"autonolas": {
 			"description": "构建和运行自主AI代理服务的平台"
+		},
+		"flock_io": {
+			"description": "用于去中心化AI模型训练的联邦学习平台"
+		},
+		"render_network": {
+			"description": "用于AI和3D图形工作负载的去中心化GPU渲染网络"
+		},
+		"akash_network": {
+			"description": "用于AI工作负载的去中心化云计算市场"
+		},
+		"io_net": {
+			"description": "聚合数据中心算力的去中心化GPU网络"
 		},
 		"bittensor": {
 			"description": "具有激励机器学习的去中心化AI网络"
@@ -36,6 +52,15 @@
 		"gensyn": {
 			"description": "具有验证的ML训练去中心化协议"
 		},
+		"together_ai": {
+			"description": "使用开源模型的去中心化AI推理平台"
+		},
+		"fetch_ai": {
+			"description": "用于Web3自动化的自主AI代理平台"
+		},
+		"ocean_protocol": {
+			"description": "用于AI训练数据的去中心化数据交换协议"
+		},
 		"singularitynet": {
 			"description": "AI服务的去中心化市场"
 		},
@@ -45,179 +70,155 @@
 		"grass": {
 			"description": "奖励带宽的去中心化数据抓取网络"
 		},
+		"altered_state_machine": {
+			"description": "用于游戏和元宇宙应用的AI驱动NFT大脑"
+		},
+		"alethea_ai": {
+			"description": "创建AI驱动交互式NFT的iNFT平台"
+		},
+		"nft_art_generators": {
+			"description": "用于生成独特NFT艺术品的AI工具"
+		},
+		"stability_ai": {
+			"description": "Stable Diffusion模型背后的开源AI公司"
+		},
+		"cookie_ai": {
+			"description": "追踪链上AI活动的AI代理分析平台"
+		},
+		"virtuals_terminal": {
+			"description": "Base上AI代理的发射台和交易终端"
+		},
+		"defillama_ai": {
+			"description": "追踪AI加密协议TVL的DeFiLlama AI分类"
+		},
+		"worldcoin": {
+			"description": "使用虹膜扫描的人格证明身份协议"
+		},
+		"morpheus_ai": {
+			"description": "用于个人智能代理的去中心化AI代理网络"
+		},
+		"spectral_ai": {
+			"description": "使用机器学习的链上信用评分"
+		},
 		"numerai": {
-			"description": "Numerai - AI 加密项目"
+			"description": "具有数据科学竞赛的AI驱动对冲基金"
+		},
+		"dain_ai": {
+			"description": "Solana上用于自主任务的AI代理基础设施"
 		},
 		"vana": {
-			"description": "Vana - AI 加密项目"
+			"description": "用于AI模型训练的用户拥有数据网络"
+		},
+		"phala_network": {
+			"description": "用于隐私保护AI的机密计算网络"
 		},
 		"nosana": {
-			"description": "Nosana - AI 加密项目"
+			"description": "Solana上的去中心化GPU计算网络"
 		},
 		"golem": {
-			"description": "Golem - AI 加密项目"
+			"description": "用于AI工作负载的去中心化计算市场"
 		},
 		"livepeer": {
-			"description": "Livepeer - AI 加密项目"
+			"description": "去中心化视频转码和AI推理网络"
 		},
 		"hyperbolic": {
-			"description": "Hyperbolic - AI 加密项目"
+			"description": "具有GPU网络的去中心化AI推理基础设施"
+		},
+		"venice_ai": {
+			"description": "注重隐私的无审查AI助手"
 		},
 		"myshell": {
-			"description": "MyShell - AI 加密项目"
+			"description": "具有语音功能的开源AI代理平台"
 		},
 		"griffain": {
-			"description": "Griffain - AI 加密项目"
+			"description": "Solana上的AI代理meme币和平台"
+		},
+		"arc_ai": {
+			"description": "用于Solana的Rust基础AI代理框架"
 		},
 		"zerebro": {
-			"description": "Zerebro - AI 加密项目"
+			"description": "用于创意内容生成的自主AI代理"
 		},
 		"swarmnode": {
-			"description": "SwarmNode - AI 加密项目"
+			"description": "用于AI代理编排的分布式节点网络"
+		},
+		"sentient_ai": {
+			"description": "用于AGI的开源AI开发基金会"
+		},
+		"nous_research": {
+			"description": "创建Hermes模型的开源AI研究实验室"
+		},
+		"pond_ai": {
+			"description": "使用图神经网络的链上AI预测"
+		},
+		"aioz_network": {
+			"description": "去中心化CDN和AI计算网络"
 		},
 		"theoriq": {
-			"description": "Theoriq - AI 加密项目"
+			"description": "Base上的可组合AI代理协议"
+		},
+		"ora_protocol": {
+			"description": "用于可验证ML推理的链上AI预言机"
+		},
+		"modulus_labs": {
+			"description": "用于ML模型验证的零知识证明"
 		},
 		"ezkl": {
-			"description": "EZKL - AI 加密项目"
+			"description": "用于证明链上AI推理的ZKML工具包"
 		},
 		"giza": {
-			"description": "Giza - AI 加密项目"
+			"description": "StarkNet上具有ZK证明的可验证ML平台"
+		},
+		"lagrange_dao": {
+			"description": "Filecoin上的去中心化AI计算平台"
+		},
+		"kip_protocol": {
+			"description": "用于AI数据货币化的知识资产协议"
+		},
+		"sahara_ai": {
+			"description": "去中心化AI知识库平台"
+		},
+		"bagel_network": {
+			"description": "去中心化ML数据管道网络"
+		},
+		"allora_network": {
+			"description": "用于上下文预测的自我改进AI网络"
 		},
 		"nillion": {
-			"description": "Nillion - AI 加密项目"
+			"description": "使用MPC进行AI的隐私保护计算网络"
 		},
 		"arbius": {
-			"description": "Arbius - AI 加密项目"
+			"description": "具有GPU挖矿的去中心化AI图像生成"
 		},
 		"crynux": {
-			"description": "Crynux - AI 加密项目"
+			"description": "用于边缘设备的去中心化AI推理网络"
+		},
+		"gpu_net": {
+			"description": "用于AI工作负载的去中心化GPU网络"
 		},
 		"aethir": {
-			"description": "Aethir - AI 加密项目"
+			"description": "用于游戏和AI的去中心化GPU云"
 		},
 		"spheron": {
-			"description": "Spheron - AI 加密项目"
+			"description": "用于AI部署的去中心化计算基础设施"
+		},
+		"clore_ai": {
+			"description": "用于AI和挖矿的GPU租赁市场"
+		},
+		"theta_edge": {
+			"description": "用于视频和AI工作负载的边缘计算网络"
+		},
+		"nimble_network": {
+			"description": "用于去中心化智能的可组合AI框架"
 		},
 		"tensorplex": {
-			"description": "Tensorplex - AI 加密项目"
+			"description": "Bittensor TAO的流动性质押和DeFi"
 		},
 		"taoshi": {
-			"description": "Taoshi - AI 加密项目"
+			"description": "用于AI交易信号的Bittensor子网"
 		},
 		"corcel": {
-			"description": "Corcel - AI 加密项目"
-		},
-		"virtuals-protocol": {
-			"description": "Virtuals Protocol - Tool"
-		},
-		"truth-terminal": {
-			"description": "Truth Terminal - Tool"
-		},
-		"flock-io": {
-			"description": "FLock.io - Tool"
-		},
-		"render-network": {
-			"description": "Render Network - Tool"
-		},
-		"akash-network": {
-			"description": "Akash Network - Tool"
-		},
-		"io-net": {
-			"description": "io.net - Tool"
-		},
-		"together-ai": {
-			"description": "Together AI - Tool"
-		},
-		"fetch-ai": {
-			"description": "Fetch.ai (FET) - Tool"
-		},
-		"ocean-protocol": {
-			"description": "Ocean Protocol - Tool"
-		},
-		"altered-state-machine": {
-			"description": "Altered State Machine - Tool"
-		},
-		"alethea-ai": {
-			"description": "Alethea AI - Tool"
-		},
-		"midjourney-crypto": {
-			"description": "NFT Art Generators - Tool"
-		},
-		"stability-ai": {
-			"description": "Stability AI - Tool"
-		},
-		"cookie-ai": {
-			"description": "Cookie.fun - Tool"
-		},
-		"virtuals-terminal": {
-			"description": "Virtuals Terminal - Tool"
-		},
-		"defillama-ai": {
-			"description": "DeFiLlama AI - Tool"
-		},
-		"morpheus-ai": {
-			"description": "Morpheus - Tool"
-		},
-		"spectral-ai": {
-			"description": "Spectral - Tool"
-		},
-		"dain-ai": {
-			"description": "DAIN - Tool"
-		},
-		"phala-network": {
-			"description": "Phala Network - Tool"
-		},
-		"venice-ai": {
-			"description": "Venice AI - Tool"
-		},
-		"arc-ai": {
-			"description": "Arc - Tool"
-		},
-		"sentient-ai": {
-			"description": "Sentient - Tool"
-		},
-		"nous-research": {
-			"description": "Nous Research - Tool"
-		},
-		"pond-ai": {
-			"description": "Pond - Tool"
-		},
-		"aioz-network": {
-			"description": "AIOZ Network - Tool"
-		},
-		"ora-protocol": {
-			"description": "ORA Protocol - Tool"
-		},
-		"modulus-labs": {
-			"description": "Modulus Labs - Tool"
-		},
-		"lagrange-dao": {
-			"description": "Lagrange DAO - Tool"
-		},
-		"kip-protocol": {
-			"description": "KIP Protocol - Tool"
-		},
-		"sahara-ai": {
-			"description": "Sahara AI - Tool"
-		},
-		"bagel-network": {
-			"description": "Bagel Network - Tool"
-		},
-		"allora-network": {
-			"description": "Allora - Tool"
-		},
-		"gpu-net": {
-			"description": "GPU.Net - Tool"
-		},
-		"clore-ai": {
-			"description": "Clore.ai - Tool"
-		},
-		"theta-edge": {
-			"description": "Theta EdgeCloud - Tool"
-		},
-		"nimble-network": {
-			"description": "Nimble - Tool"
+			"description": "由Bittensor网络驱动的AI推理API"
 		}
 	}
 }

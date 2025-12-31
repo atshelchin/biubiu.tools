@@ -19,14 +19,29 @@
 		]
 	},
 	"tools": {
-		"worldcoin": {
-			"description": "Protocolo de identidad proof-of-personhood"
+		"virtuals_protocol": {
+			"description": "Plataforma para crear y desplegar agentes IA en Base con propiedad tokenizada"
 		},
 		"ai16z": {
 			"description": "DAO de IA y framework Eliza para crear agentes autónomos"
 		},
+		"truth_terminal": {
+			"description": "Agente IA autónomo en X que originó el fenómeno del token GOAT"
+		},
 		"autonolas": {
 			"description": "Plataforma para construir y ejecutar servicios de agentes IA autónomos"
+		},
+		"flock_io": {
+			"description": "Plataforma de aprendizaje federado para entrenamiento descentralizado de modelos IA"
+		},
+		"render_network": {
+			"description": "Red descentralizada de renderizado GPU para cargas de trabajo de IA y gráficos 3D"
+		},
+		"akash_network": {
+			"description": "Mercado de computación en la nube descentralizado para cargas de trabajo IA"
+		},
+		"io_net": {
+			"description": "Red GPU descentralizada que agrega computación de centros de datos"
 		},
 		"bittensor": {
 			"description": "Red de IA descentralizada con machine learning incentivado"
@@ -37,6 +52,15 @@
 		"gensyn": {
 			"description": "Protocolo descentralizado para entrenamiento ML con verificación"
 		},
+		"together_ai": {
+			"description": "Plataforma de inferencia IA descentralizada con modelos de código abierto"
+		},
+		"fetch_ai": {
+			"description": "Plataforma de agentes IA autónomos para automatización web3"
+		},
+		"ocean_protocol": {
+			"description": "Protocolo de intercambio de datos descentralizado para datos de entrenamiento IA"
+		},
 		"singularitynet": {
 			"description": "Mercado descentralizado para servicios de IA"
 		},
@@ -46,179 +70,155 @@
 		"grass": {
 			"description": "Red descentralizada de scraping de datos recompensando ancho de banda"
 		},
+		"altered_state_machine": {
+			"description": "Cerebros NFT potenciados por IA para aplicaciones de gaming y metaverso"
+		},
+		"alethea_ai": {
+			"description": "Plataforma iNFT que crea NFTs interactivos potenciados por IA"
+		},
+		"nft_art_generators": {
+			"description": "Herramientas IA para generar arte NFT único"
+		},
+		"stability_ai": {
+			"description": "Empresa de IA de código abierto detrás de los modelos Stable Diffusion"
+		},
+		"cookie_ai": {
+			"description": "Plataforma de analíticas de agentes IA rastreando actividad IA on-chain"
+		},
+		"virtuals_terminal": {
+			"description": "Launchpad y terminal de trading para agentes IA en Base"
+		},
+		"defillama_ai": {
+			"description": "Categoría IA de DeFiLlama rastreando TVL de protocolos IA cripto"
+		},
+		"worldcoin": {
+			"description": "Protocolo de identidad proof-of-personhood usando escaneo de iris"
+		},
+		"morpheus_ai": {
+			"description": "Red de agentes IA descentralizada para agentes inteligentes personales"
+		},
+		"spectral_ai": {
+			"description": "Puntuación crediticia on-chain usando machine learning"
+		},
 		"numerai": {
-			"description": "Hedge fund impulsado por IA con torneo de data science"
+			"description": "Hedge fund impulsado por IA con torneo de ciencia de datos"
+		},
+		"dain_ai": {
+			"description": "Infraestructura de agentes IA en Solana para tareas autónomas"
 		},
 		"vana": {
-			"description": "Red de datos propiedad del usuario para modelos IA"
+			"description": "Red de datos propiedad del usuario para entrenamiento de modelos IA"
+		},
+		"phala_network": {
+			"description": "Red de computación confidencial para IA que preserva la privacidad"
 		},
 		"nosana": {
 			"description": "Red de computación GPU descentralizada en Solana"
 		},
 		"golem": {
-			"description": "Red de computación descentralizada para tasks IA"
+			"description": "Mercado de computación descentralizado para cargas de trabajo IA"
 		},
 		"livepeer": {
-			"description": "Red descentralizada de transcodificación de video"
+			"description": "Red descentralizada de transcodificación de video e inferencia IA"
 		},
 		"hyperbolic": {
-			"description": "Infraestructura de inferencia IA descentralizada"
+			"description": "Infraestructura de inferencia IA descentralizada con red GPU"
+		},
+		"venice_ai": {
+			"description": "Asistente IA sin censura enfocado en privacidad"
 		},
 		"myshell": {
-			"description": "Plataforma de agentes IA de código abierto"
+			"description": "Plataforma de agentes IA de código abierto con capacidades de voz"
 		},
 		"griffain": {
-			"description": "Token meme de agentes IA en Solana"
+			"description": "Memecoin y plataforma de agentes IA en Solana"
+		},
+		"arc_ai": {
+			"description": "Framework de agentes IA basado en Rust para Solana"
 		},
 		"zerebro": {
-			"description": "Agente IA autónomo para creación de contenido"
+			"description": "Agente IA autónomo para generación de contenido creativo"
 		},
 		"swarmnode": {
-			"description": "Red de nodos distribuidos para inferencia IA"
+			"description": "Red de nodos distribuida para orquestación de agentes IA"
+		},
+		"sentient_ai": {
+			"description": "Fundación de desarrollo IA de código abierto para AGI"
+		},
+		"nous_research": {
+			"description": "Laboratorio de investigación IA de código abierto creando modelos Hermes"
+		},
+		"pond_ai": {
+			"description": "Predicciones IA on-chain usando redes neuronales de grafos"
+		},
+		"aioz_network": {
+			"description": "CDN descentralizado y red de computación IA"
 		},
 		"theoriq": {
-			"description": "Protocolo de agentes IA componibles"
+			"description": "Protocolo de agentes IA componibles en Base"
+		},
+		"ora_protocol": {
+			"description": "Oráculo IA on-chain para inferencia ML verificable"
+		},
+		"modulus_labs": {
+			"description": "Pruebas zero-knowledge para verificación de modelos ML"
 		},
 		"ezkl": {
-			"description": "Herramienta de pruebas ZK para modelos ML"
+			"description": "Kit de herramientas ZKML para demostrar inferencia IA on-chain"
 		},
 		"giza": {
-			"description": "Plataforma de ML verificable con pruebas ZK"
+			"description": "Plataforma ML verificable con pruebas ZK en StarkNet"
+		},
+		"lagrange_dao": {
+			"description": "Plataforma de computación IA descentralizada en Filecoin"
+		},
+		"kip_protocol": {
+			"description": "Protocolo de activos de conocimiento para monetización de datos IA"
+		},
+		"sahara_ai": {
+			"description": "Plataforma de base de conocimiento IA descentralizada"
+		},
+		"bagel_network": {
+			"description": "Red de pipeline de datos ML descentralizada"
+		},
+		"allora_network": {
+			"description": "Red IA auto-mejorable para predicciones contextuales"
 		},
 		"nillion": {
-			"description": "Red de computación que preserva privacidad"
+			"description": "Red de computación que preserva privacidad usando MPC para IA"
 		},
 		"arbius": {
-			"description": "Red descentralizada de generación de imágenes IA"
+			"description": "Generación de imágenes IA descentralizada con minería GPU"
 		},
 		"crynux": {
-			"description": "Red de inferencia IA descentralizada"
+			"description": "Red de inferencia IA descentralizada para dispositivos edge"
+		},
+		"gpu_net": {
+			"description": "Red GPU descentralizada para cargas de trabajo IA"
 		},
 		"aethir": {
-			"description": "Red de computación GPU en la nube descentralizada"
+			"description": "Nube GPU descentralizada para gaming e IA"
 		},
 		"spheron": {
-			"description": "Infraestructura descentralizada de computación y almacenamiento"
+			"description": "Infraestructura de computación descentralizada para despliegue IA"
+		},
+		"clore_ai": {
+			"description": "Mercado de alquiler GPU para IA y minería"
+		},
+		"theta_edge": {
+			"description": "Red de computación edge para cargas de trabajo de video e IA"
+		},
+		"nimble_network": {
+			"description": "Framework IA componible para inteligencia descentralizada"
 		},
 		"tensorplex": {
-			"description": "Mercado de inferencia IA descentralizado"
+			"description": "Staking líquido y DeFi para Bittensor TAO"
 		},
 		"taoshi": {
-			"description": "Subred Bittensor para modelos de lenguaje"
+			"description": "Subred Bittensor para señales de trading IA"
 		},
 		"corcel": {
-			"description": "APIs de IA descentralizadas en Bittensor"
-		},
-		"virtuals-protocol": {
-			"description": "Virtuals Protocol - Tool"
-		},
-		"truth-terminal": {
-			"description": "Truth Terminal - Tool"
-		},
-		"flock-io": {
-			"description": "FLock.io - Tool"
-		},
-		"render-network": {
-			"description": "Render Network - Tool"
-		},
-		"akash-network": {
-			"description": "Akash Network - Tool"
-		},
-		"io-net": {
-			"description": "io.net - Tool"
-		},
-		"together-ai": {
-			"description": "Together AI - Tool"
-		},
-		"fetch-ai": {
-			"description": "Fetch.ai (FET) - Tool"
-		},
-		"ocean-protocol": {
-			"description": "Ocean Protocol - Tool"
-		},
-		"altered-state-machine": {
-			"description": "Altered State Machine - Tool"
-		},
-		"alethea-ai": {
-			"description": "Alethea AI - Tool"
-		},
-		"midjourney-crypto": {
-			"description": "NFT Art Generators - Tool"
-		},
-		"stability-ai": {
-			"description": "Stability AI - Tool"
-		},
-		"cookie-ai": {
-			"description": "Cookie.fun - Tool"
-		},
-		"virtuals-terminal": {
-			"description": "Virtuals Terminal - Tool"
-		},
-		"defillama-ai": {
-			"description": "DeFiLlama AI - Tool"
-		},
-		"morpheus-ai": {
-			"description": "Morpheus - Tool"
-		},
-		"spectral-ai": {
-			"description": "Spectral - Tool"
-		},
-		"dain-ai": {
-			"description": "DAIN - Tool"
-		},
-		"phala-network": {
-			"description": "Phala Network - Tool"
-		},
-		"venice-ai": {
-			"description": "Venice AI - Tool"
-		},
-		"arc-ai": {
-			"description": "Arc - Tool"
-		},
-		"sentient-ai": {
-			"description": "Sentient - Tool"
-		},
-		"nous-research": {
-			"description": "Nous Research - Tool"
-		},
-		"pond-ai": {
-			"description": "Pond - Tool"
-		},
-		"aioz-network": {
-			"description": "AIOZ Network - Tool"
-		},
-		"ora-protocol": {
-			"description": "ORA Protocol - Tool"
-		},
-		"modulus-labs": {
-			"description": "Modulus Labs - Tool"
-		},
-		"lagrange-dao": {
-			"description": "Lagrange DAO - Tool"
-		},
-		"kip-protocol": {
-			"description": "KIP Protocol - Tool"
-		},
-		"sahara-ai": {
-			"description": "Sahara AI - Tool"
-		},
-		"bagel-network": {
-			"description": "Bagel Network - Tool"
-		},
-		"allora-network": {
-			"description": "Allora - Tool"
-		},
-		"gpu-net": {
-			"description": "GPU.Net - Tool"
-		},
-		"clore-ai": {
-			"description": "Clore.ai - Tool"
-		},
-		"theta-edge": {
-			"description": "Theta EdgeCloud - Tool"
-		},
-		"nimble-network": {
-			"description": "Nimble - Tool"
+			"description": "APIs de inferencia IA impulsadas por la red Bittensor"
 		}
 	}
 }

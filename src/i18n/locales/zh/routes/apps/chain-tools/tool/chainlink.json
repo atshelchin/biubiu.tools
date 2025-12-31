@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Chainlink - 去中心化预言机网络 | 将智能合约连接到真实世界数据",
+		"description": "探索Chainlink,领先的去中心化预言机网络。安全地将智能合约连接到真实世界数据、API和链下计算。",
+		"keywords": "Chainlink, LINK, 预言机, 价格数据源, VRF, CCIP, 智能合约, DeFi"
+	},
+	"overview": "Chainlink是行业标准的去中心化预言机网络,使智能合约能够安全访问链下数据、API和计算。由Sergey Nazarov和Steve Ellis于2017年创立,Chainlink解决了'预言机问题'——将可靠的外部数据导入区块链环境的挑战。\n\n该网络通过独立的节点运营商运行,他们从多个来源汇总数据,为智能合约提供防篡改的输入和输出。Chainlink的产品包括价格数据源(被大多数DeFi协议使用)、VRF(用于游戏/NFT的可验证随机函数)、自动化(去中心化合约执行)、函数(无服务器计算)和CCIP(跨链互操作性协议)。\n\nChainlink在DeFi、保险、游戏和企业应用中保护超过750亿美元的价值。LINK代币用于支付节点运营商和作为质押抵押品。凭借其广泛的集成和经过验证的记录,Chainlink已成为整个区块链生态系统的关键基础设施。",
+	"features": {
+		"1": {
+			"title": "价格数据源",
+			"description": "为大多数DeFi协议提供准确市场数据的去中心化价格预言机"
+		},
+		"2": {
+			"title": "VRF",
+			"description": "可验证随机函数,为游戏和NFT提供可证明公平的随机性"
+		},
+		"3": {
+			"title": "CCIP",
+			"description": "跨链互操作性协议,用于安全的代币和消息传输"
+		},
+		"4": {
+			"title": "自动化",
+			"description": "用于维护和触发器的去中心化智能合约自动化"
+		},
+		"5": {
+			"title": "函数",
+			"description": "无服务器计算平台,将智能合约连接到任何API"
+		},
+		"6": {
+			"title": "储备金证明",
+			"description": "链上验证链下或跨链资产储备金"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi价格数据",
+			"description": "为借贷、衍生品和DEX协议提供准确的价格数据源"
+		},
+		"2": {
+			"title": "游戏随机性",
+			"description": "为公平的NFT铸造和游戏机制生成可验证的随机数"
+		},
+		"3": {
+			"title": "跨链转账",
+			"description": "在不同区块链之间安全地桥接代币和消息"
+		},
+		"4": {
+			"title": "自动化操作",
+			"description": "根据时间或外部条件触发智能合约函数"
+		},
+		"5": {
+			"title": "真实世界集成",
+			"description": "将区块链应用连接到传统API和数据源"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是Chainlink,为什么智能合约需要预言机?",
+			"answer": "Chainlink是一个去中心化预言机网络,向智能合约提供外部数据。区块链是无法直接访问外部数据的隔离系统。预言机通过安全获取真实世界信息(价格、天气、体育比分等)并在链上交付来弥合这一差距。没有预言机,DeFi和大多数区块链应用无法运行。"
+		},
+		"2": {
+			"question": "Chainlink如何确保数据准确性?",
+			"answer": "Chainlink使用多层去中心化:数据来自许多优质数据提供商,由多个独立节点运营商汇总,中位数/共识结果在链上交付。节点运营商质押LINK作为抵押品,如果提供不良数据可能会被削减。这使得操纵在经济上不可行。"
+		},
+		"3": {
+			"question": "什么是CCIP,它如何工作?",
+			"answer": "CCIP(跨链互操作性协议)是Chainlink的安全跨链通信解决方案。它使用Chainlink的去中心化预言机网络实现区块链之间的代币转移和任意消息传递,以确保安全性。与已被利用数十亿美元的桥不同,CCIP利用Chainlink现有的安全基础设施。"
+		},
+		"4": {
+			"question": "LINK代币用于什么?",
+			"answer": "LINK是Chainlink的原生代币,具有多种用途:支付节点运营商的预言机服务、节点运营商的质押抵押品(对不良数据进行削减)以及参与治理。dApp为Chainlink服务支付LINK,随着网络使用增长创造需求。"
+		},
+		"5": {
+			"question": "哪些协议使用Chainlink?",
+			"answer": "Chainlink被大多数主要DeFi协议使用,包括Aave、Compound、Synthetix、dYdX、GMX等数百个协议。它也被传统企业如Swift、DTCC和ANZ Bank用于区块链实验。超过1,800个项目跨DeFi、游戏、NFT和保险依赖Chainlink预言机。"
+		}
+	},
+	"cta": {
+		"ready": "准备好探索Chainlink预言机了吗?",
+		"button": "打开Chainlink",
+		"note": "行业标准的预言机网络"
+	}
+}

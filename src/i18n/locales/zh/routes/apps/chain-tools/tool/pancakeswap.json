@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "PancakeSwap - 领先的多链 DEX | 在 BNB Chain 上交易与赚取",
+		"description": "探索 PancakeSwap，BNB Chain 上最受欢迎的 DEX。交易代币、提供流动性、挖 CAKE，并参与跨多链的 IFO。",
+		"keywords": "PancakeSwap, BNB Chain, DEX, CAKE, 流动性挖矿, 流动性, IFO, DeFi"
+	},
+	"overview": "PancakeSwap 是 BNB Chain 上最大的去中心化交易所，现已扩展成为支持以太坊、Arbitrum、Base 等多链的领先 DEX。2020年9月推出，PancakeSwap 迅速成为 BNB Chain 用户交换代币、提供流动性和赚取收益的首选平台。\n\n该平台提供全面的 DeFi 体验，包括通过其 AMM 进行代币兑换、通过农场和糖浆池进行流动性挖矿、用于新代币发行的初始农场发行（IFO）、预测市场、NFT 市场和永续交易。CAKE 代币作为治理和实用代币，质押选项提供各种福利。\n\nPancakeSwap 持续创新，增加了用于自动化流动性的仓位管理器、跨链兑换和集中流动性池（v3）等功能。凭借数十亿美元的交易量和数百万用户，它仍然是 BNB Chain 的主导 DEX，也是更广泛的多链 DeFi 生态系统中的重要参与者。",
+	"features": {
+		"1": {
+			"title": "多链 DEX",
+			"description": "在 BNB Chain、以太坊、Arbitrum、Base、zkSync 等多条链上交易"
+		},
+		"2": {
+			"title": "流动性挖矿",
+			"description": "通过在农场质押 LP 代币或在糖浆池质押单一资产来赚取 CAKE 奖励"
+		},
+		"3": {
+			"title": "IFO",
+			"description": "参与初始农场发行，抢先获得新代币发行"
+		},
+		"4": {
+			"title": "V3 集中流动性",
+			"description": "在特定价格范围内提供流动性以提高资本效率"
+		},
+		"5": {
+			"title": "永续交易",
+			"description": "使用杠杆交易主流加密货币对的永续合约"
+		},
+		"6": {
+			"title": "游戏与 NFT",
+			"description": "参与预测市场、彩票和 NFT 市场"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "代币兑换",
+			"description": "在 BNB Chain 上以低费用交易 BEP-20 代币和跨链资产"
+		},
+		"2": {
+			"title": "收益生成",
+			"description": "质押 LP 代币或 CAKE 通过挖矿奖励赚取被动收入"
+		},
+		"3": {
+			"title": "新代币获取",
+			"description": "参与 IFO 以发行价购买新代币"
+		},
+		"4": {
+			"title": "流动性提供",
+			"description": "提供流动性以赚取交易手续费和 CAKE 激励"
+		},
+		"5": {
+			"title": "跨链交易",
+			"description": "在多条链上兑换资产而无需离开平台"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 PancakeSwap？它是如何工作的？",
+			"answer": "PancakeSwap 是一个使用 AMM（自动做市商）模型的去中心化交易所。交易不是基于订单簿，而是对由用户资助的流动性池执行。你可以即时兑换代币、提供流动性以赚取手续费，并质押 LP 代币或 CAKE 以赚取额外奖励。"
+		},
+		"2": {
+			"question": "CAKE 代币有什么用？",
+			"answer": "CAKE 是 PancakeSwap 的治理和实用代币。你可以在糖浆池中质押 CAKE 以赚取其他代币、锁定 CAKE 为 veCAKE 以提升挖矿奖励并对治理投票、参与 IFO，并在整个平台上用作交易对。"
+		},
+		"3": {
+			"question": "如何在 PancakeSwap 上挖矿？",
+			"answer": "挖矿步骤：1) 为交易对添加流动性以获得 LP 代币，2) 进入农场并找到你的交易对，3) 质押你的 LP 代币，4) 随时间赚取 CAKE 奖励，5) 收获奖励或复投。请注意，挖矿存在无常损失风险。"
+		},
+		"4": {
+			"question": "使用 PancakeSwap 安全吗？",
+			"answer": "PancakeSwap 是最成熟的 DEX 之一，经过了广泛的安全审计，拥有良好的记录。然而，DeFi 始终存在风险，包括智能合约漏洞、无常损失和代币风险。只投资你能承受损失的金额，并在交易前研究代币。"
+		},
+		"5": {
+			"question": "PancakeSwap 支持哪些链？",
+			"answer": "PancakeSwap 已从 BNB Chain 扩展到支持以太坊、Arbitrum、Base、zkSync Era、Polygon zkEVM、Linea、opBNB 和 Aptos。你可以在每条链上兑换原生资产，并使用跨链功能在它们之间桥接。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在 PancakeSwap 上交易了吗？",
+		"button": "打开 PancakeSwap",
+		"note": "领先的多链 DEX，用于交易和赚取"
+	}
+}

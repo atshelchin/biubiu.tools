@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Alchemy - 区块链开发者平台 | 构建Web3应用",
+		"description": "了解Alchemy,领先的区块链开发者平台。使用可靠的节点基础设施、API和开发者工具构建可扩展的Web3应用。",
+		"keywords": "Alchemy, 区块链API, Web3开发, 节点基础设施, NFT API, dApp开发, 以太坊API"
+	},
+	"overview": "Alchemy是领先的区块链开发者平台,提供构建可扩展Web3应用所需的基础设施和工具。由Nikil Viswanathan和Joe Lau于2017年创立,Alchemy为包括OpenSea、Adobe、Shopify和许多顶级DeFi协议在内的主要公司提供支持。\n\n该平台为以太坊、Polygon、Arbitrum、Optimism、Solana和其他主要链提供可靠的节点基础设施。除了基本的RPC访问,Alchemy还提供增强的NFT、代币、交易和Webhook API。他们的Supernode技术提供比运行自己的节点更高的可靠性和更低的延迟。开发者工具包括Alchemy SDK、区块链浏览器、内存池可视化工具和调试工具。\n\nAlchemy已处理数万亿次请求,支持转移了超过1000亿美元价值的应用。截至2022年,Alchemy的估值达到102亿美元,已成为区块链领域的AWS——大多数Web3开发者依赖的基础设施。他们的免费套餐使独立开发者可以使用,而企业计划可扩展到数百万次请求。",
+	"features": {
+		"1": {
+			"title": "Supernode RPC",
+			"description": "跨主要链提供99.9%+正常运行时间的高可靠性节点基础设施"
+		},
+		"2": {
+			"title": "增强API",
+			"description": "专门的NFT元数据、代币余额、交易历史等API"
+		},
+		"3": {
+			"title": "Webhook",
+			"description": "链上事件(如转账和合约调用)的实时通知"
+		},
+		"4": {
+			"title": "Alchemy SDK",
+			"description": "简化常见区块链操作的开发者友好SDK"
+		},
+		"5": {
+			"title": "Account Kit",
+			"description": "用于无Gas交易和社交登录的智能钱包基础设施"
+		},
+		"6": {
+			"title": "Rollup解决方案",
+			"description": "使用Alchemy的rollup即服务平台部署自定义L2/L3链"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "dApp开发",
+			"description": "使用强大的区块链基础设施构建可靠的去中心化应用"
+		},
+		"2": {
+			"title": "NFT平台",
+			"description": "使用全面的元数据API为NFT市场和应用提供支持"
+		},
+		"3": {
+			"title": "钱包服务",
+			"description": "构建具有实时余额更新和交易历史的钱包"
+		},
+		"4": {
+			"title": "DeFi协议",
+			"description": "为DeFi应用访问可靠的价格数据和交易广播"
+		},
+		"5": {
+			"title": "企业Web3",
+			"description": "大规模将区块链功能集成到企业应用中"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是Alchemy,为什么开发者要使用它?",
+			"answer": "Alchemy是区块链基础设施,提供节点访问和API,这样开发者就不必运行自己的节点。运行以太坊节点需要大量资源(TB级存储,持续同步,DevOps)。Alchemy处理这些基础设施,同时添加增强功能,如NFT API、Webhook和调试工具。大多数主要dApp都使用Alchemy或类似的提供商。"
+		},
+		"2": {
+			"question": "Alchemy与运行自己的节点相比如何?",
+			"answer": "运行自己的节点可以完全控制,但需要大量资源:硬件、存储(以太坊需1-2TB)、带宽和持续维护。Alchemy的Supernode提供更高的可靠性(99.9%+正常运行时间)、更低的延迟、增强的API,并自动扩展。对于大多数项目,使用Alchemy比自托管更具成本效益,直到达到非常高的流量。"
+		},
+		"3": {
+			"question": "Alchemy是免费的吗?",
+			"answer": "Alchemy提供慷慨的免费套餐:每月3亿计算单元,涵盖大多数独立项目和早期创业公司。付费计划(Growth、Scale、Enterprise)提供更多计算单元、更高的速率限制、专门支持和高级功能。许多开发者从免费开始,随着应用增长而升级。"
+		},
+		"4": {
+			"question": "Alchemy支持哪些链?",
+			"answer": "Alchemy支持主要链,包括以太坊、Polygon、Arbitrum、Optimism、Base、Solana等。每条链都有完整的RPC支持以及特定于链的增强API。他们根据开发者需求持续添加新链。查看他们的文档以获取当前支持的网络列表。"
+		},
+		"5": {
+			"question": "什么是Alchemy Account Kit?",
+			"answer": "Account Kit是Alchemy的智能钱包基础设施,启用账户抽象(ERC-4337)。它允许dApp提供无Gas交易(赞助用户gas)、社交登录(使用电子邮件/Google登录)和可编程钱包。这通过消除用户管理助记词或持有ETH支付gas的需要来改善用户体验。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在Web3上构建了吗?",
+		"button": "打开Alchemy",
+		"note": "领先的区块链开发者平台"
+	}
+}

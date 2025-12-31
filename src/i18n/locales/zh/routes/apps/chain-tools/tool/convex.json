@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "Convex Finance - 增强 Curve 与 Frax 质押 | 最大化 CRV 奖励",
+		"description": "探索 Convex Finance，最大化 Curve 和 Frax 收益的平台。质押 LP 代币获得增强的 CRV 奖励而无需锁定，或质押 CVX 赚取协议费用。",
+		"keywords": "Convex Finance, CVX, Curve, CRV, 收益提升，DeFi, 流动性质押，veCRV"
+	},
+	"overview": "Convex Finance 是一个 DeFi 协议，通过聚合 veCRV 投票权来最大化 Curve Finance 流动性提供者的收益。2021 年 5 月推出，Convex 解决了一个关键问题：在 Curve 上赚取最高 CRV 奖励需要锁定 CRV 长达 4 年，而大多数用户无法或不愿意这样做。\n\nConvex 汇集了质押 CRV 用户的 veCRV，然后使用这些聚合的投票权为所有 Convex 存款人提升奖励。Curve LP 代币持有者可以在 Convex 上质押，无需亲自锁定任何 CRV 即可赚取增强的 CRV + CVX 奖励。这使得增强收益民主化，并引发了\"Curve 战争\"——协议竞相争夺 Convex 的 CVX 投票权以引导 CRV 排放。\n\n该平台已扩展到 Curve 之外，支持 Frax Finance（cvxFXS）和 f(x) Protocol。CVX 代币持有者可以将其代币锁定为 vlCVX 以投票决定流量权重，并从寻求排放引导的协议那里赚取贿赂。拥有超过 10 亿美元的 TVL，Convex 是 Curve 生态系统的核心。",
+	"features": {
+		"1": {
+			"title": "增强的 CRV 奖励",
+			"description": "无需亲自锁定 CRV 4 年即可赚取最高 Curve 奖励"
+		},
+		"2": {
+			"title": "CVX 奖励",
+			"description": "质押 Curve LP 代币即可在增强的 CRV 之外赚取 CVX"
+		},
+		"3": {
+			"title": "cvxCRV 质押",
+			"description": "将 CRV 质押为 cvxCRV 以赚取 CRV、CVX 和 3CRV 奖励"
+		},
+		"4": {
+			"title": "vlCVX 投票",
+			"description": "锁定 CVX 以投票决定 Curve 流量权重并赚取贿赂"
+		},
+		"5": {
+			"title": "Frax 支持",
+			"description": "将 FXS 质押为 cvxFXS 以获得增强的 Frax 协议奖励"
+		},
+		"6": {
+			"title": "自动复利",
+			"description": "为存款人自动领取并复投奖励"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Curve LP 提升",
+			"description": "在你的 Curve LP 仓位上赚取最高 CRV 奖励而无需锁定 CRV"
+		},
+		"2": {
+			"title": "CRV 质押",
+			"description": "将 CRV 转换为 cvxCRV 以赚取收益而无需 4 年锁定"
+		},
+		"3": {
+			"title": "治理权力",
+			"description": "将 CVX 锁定为 vlCVX 以引导 Curve 排放并赚取贿赂"
+		},
+		"4": {
+			"title": "被动收益",
+			"description": "质押并赚取跨 Curve 和 Frax 的自动复投奖励"
+		},
+		"5": {
+			"title": "协议影响力",
+			"description": "协议积累 CVX 以影响 CRV 排放到其资金池"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 Convex Finance？为什么会存在？",
+			"answer": "Convex 解决了 Curve 的提升问题。要赚取最高 CRV 奖励，你需要将 CRV 锁定为 veCRV 长达 4 年。大多数用户无法做到这一点。Convex 聚合了许多用户的 veCRV，为所有在 Convex 上质押 Curve LP 代币的人提供增强奖励——无需个人锁定。"
+		},
+		"2": {
+			"question": "CRV、cvxCRV 和 veCRV 有什么区别？",
+			"answer": "CRV 是 Curve 的代币。veCRV 是直接在 Curve 中锁定长达 4 年的投票托管 CRV——它提供投票权和提升，但流动性差。cvxCRV 是存入 Convex 的 CRV——它具有流动性（可交易），并从 Convex 的聚合 veCRV 仓位中赚取收益。将 CRV 转换为 cvxCRV 是单向的。"
+		},
+		"3": {
+			"question": "什么是 Curve 战争？",
+			"answer": "Curve 战争是指协议竞相积累 CVX/vlCVX 以引导 CRV 排放。由于 Convex 控制着大量 veCRV，控制 CVX 投票权意味着控制 Curve 奖励的去向。协议向 vlCVX 投票者提供\"贿赂\"以投票支持其资金池，围绕排放引导创造了一个元游戏。"
+		},
+		"4": {
+			"question": "什么是 vlCVX？贿赂是如何运作的？",
+			"answer": "vlCVX（投票锁定 CVX）是锁定 16 周以上的 CVX。vlCVX 持有者投票决定哪些 Curve 资金池获得 CRV 排放。协议向将排放引导到其资金池的 vlCVX 投票者支付\"贿赂\"（代币奖励）。贿赂通常比锁定的 CVX 更有价值，为投票者创造了有吸引力的收益。"
+		},
+		"5": {
+			"question": "将 CRV 转换为 cvxCRV 可以逆转吗？",
+			"answer": "不可以，将 CRV 转换为 cvxCRV 是单向且永久的。然而，cvxCRV 可以在 DEX 上交易。cvxCRV/CRV 汇率根据市场情况波动——有时 cvxCRV 相对于 CRV 以折扣或溢价交易。转换前请考虑这一点。"
+		}
+	},
+	"cta": {
+		"ready": "准备好最大化你的 Curve 收益了吗？",
+		"button": "打开 Convex",
+		"note": "Curve 和 Frax 的增强质押"
+	}
+}

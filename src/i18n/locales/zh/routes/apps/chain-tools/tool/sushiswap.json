@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "简体中文",
+		"englishName": "Chinese (Simplified)",
+		"direction": "ltr",
+		"flag": "🇨🇳",
+		"code": "zh"
+	},
+	"seo": {
+		"title": "SushiSwap - 多链 DEX 与 DeFi 平台 | 交易、赚取、跨链桥接",
+		"description": "探索 SushiSwap，社区驱动的多链 DEX。交易代币、提供流动性，在 30 多个网络上访问跨链兑换。",
+		"keywords": "SushiSwap, Sushi, DEX, 多链，DeFi, 流动性，SUSHI 代币，跨链"
+	},
+	"overview": "SushiSwap 是一个社区驱动的去中心化交易所，已从 Uniswap 分叉演变为全面的多链 DeFi 平台。2020 年 8 月在\"DeFi 之夏\"期间推出，Sushi 开创了吸血鬼攻击和流动性挖矿激励的概念，重塑了 DeFi 协议如何竞争用户。\n\n该平台现在在 30 多个网络上运行，包括以太坊、Arbitrum、Polygon、Avalanche 等。除了简单的兑换，Sushi 还提供集中流动性池（SushiSwap V3）、通过 SushiXSwap 的跨链兑换，以及全面的 DeFi 工具套件。SUSHI 代币用于治理，可以质押为 xSUSHI 以赚取协议费用。\n\nSushi 经历了重大演变，经历了各种领导和重组阶段。如今，它专注于成为最佳的多链兑换体验，具有路由优化、MEV 保护和无缝跨链交易等功能。",
+	"features": {
+		"1": {
+			"title": "30+ 链支持",
+			"description": "在以太坊、Arbitrum、Polygon、Avalanche、BSC 等多个网络上交易"
+		},
+		"2": {
+			"title": "SushiXSwap",
+			"description": "由 Stargate 和 Axelar 驱动的跨链兑换，实现无缝多链交易"
+		},
+		"3": {
+			"title": "集中流动性",
+			"description": "V3 资金池具有自定义价格范围，实现资本高效的流动性提供"
+		},
+		"4": {
+			"title": "路由优化",
+			"description": "智能路由在多个流动性来源中找到最佳价格"
+		},
+		"5": {
+			"title": "xSUSHI 质押",
+			"description": "质押 SUSHI 以赚取协议交易费用的份额"
+		},
+		"6": {
+			"title": "Furo 流式传输",
+			"description": "用于薪资和赠款的代币流式传输和归属解决方案"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "多链交易",
+			"description": "从单一界面在 30 多个网络上兑换代币"
+		},
+		"2": {
+			"title": "跨链兑换",
+			"description": "使用 SushiXSwap 在一笔交易中桥接和兑换"
+		},
+		"3": {
+			"title": "流动性提供",
+			"description": "通过为资金池提供流动性赚取交易手续费"
+		},
+		"4": {
+			"title": "被动收入",
+			"description": "质押 SUSHI 为 xSUSHI 以赚取协议收入份额"
+		},
+		"5": {
+			"title": "代币流式传输",
+			"description": "使用 Furo 进行薪资、归属计划和赠款"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 SushiSwap？它与 Uniswap 有什么不同？",
+			"answer": "SushiSwap 最初是 Uniswap 的分叉，但已演变成一个独特的多链平台。主要区别包括：支持 30 多条链（而 Uniswap 较少）、通过 SushiXSwap 的跨链兑换、具有收入分享的 SUSHI 代币，以及社区优先的治理模式。两者都使用 AMM 机制，但已经显著分化。"
+		},
+		"2": {
+			"question": "什么是 xSUSHI？质押如何运作？",
+			"answer": "xSUSHI 是质押版本的 SUSHI。当你在 SushiBar 中质押 SUSHI 时，你会收到 xSUSHI，随着协议费用累积，其价值会升值。所有交易手续费的一部分用于购买 SUSHI 并分配给 xSUSHI 持有者。你可以随时取消质押以接收你的 SUSHI 加上赚取的奖励。"
+		},
+		"3": {
+			"question": "SushiXSwap 跨链兑换如何工作？",
+			"answer": "SushiXSwap 使用 Stargate 和 Axelar 等桥接协议来实现跨链兑换。你可以在一笔交易中将一条链上的代币兑换为另一条链上的不同代币。系统处理桥接、在两条链上兑换，并将最终代币交付到你的钱包。"
+		},
+		"4": {
+			"question": "使用 SushiSwap 安全吗？",
+			"answer": "SushiSwap 自 2020 年以来一直在运营，经过了多次安全审计。然而，与所有 DeFi 一样，风险存在，包括智能合约错误、无常损失、跨链功能的桥接漏洞以及特定代币的风险。该协议过去曾发生过安全事件，因此请始终谨慎行事。"
+		},
+		"5": {
+			"question": "Sushi 的领导层发生了什么？",
+			"answer": "Sushi 的治理历史动荡。最初以匿名方式推出，经历了中心化领导、资金库争议和重组时期。如今，它作为 DAO 运营，拥有选举产生的领导层。尽管面临这些挑战，该协议仍在继续开发和扩展。"
+		}
+	},
+	"cta": {
+		"ready": "准备好跨链交易了吗？",
+		"button": "打开 SushiSwap",
+		"note": "社区驱动的多链 DEX"
+	}
+}
