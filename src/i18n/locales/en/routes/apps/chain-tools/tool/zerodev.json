@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "ZeroDev - Account Abstraction SDK",
+		"description": "ZeroDev is the leading account abstraction SDK. Build smart accounts with gasless transactions, session keys, and passkey authentication.",
+		"keywords": "ZeroDev, account abstraction, ERC-4337, smart accounts, gasless, session keys, passkeys"
+	},
+	"overview": "ZeroDev is the leading account abstraction SDK. They make it easy to build smart accounts with ERC-4337—enabling gasless transactions, batched operations, and programmable wallets.\n\nZeroDev provides Kernel, a modular smart account that developers can customize. Their SDK handles the complexity of bundlers, paymasters, and user operations. Focus on your app, not AA infrastructure.\n\nKey features include session keys (delegated permissions), passkey authentication, and gas sponsorship. ZeroDev is powering the next generation of user-friendly dApps with invisible wallet experiences.",
+	"features": {
+		"1": {
+			"title": "Smart Accounts",
+			"description": "ERC-4337"
+		},
+		"2": {
+			"title": "Gasless TX",
+			"description": "Sponsored gas"
+		},
+		"3": {
+			"title": "Session Keys",
+			"description": "Delegated perms"
+		},
+		"4": {
+			"title": "Passkeys",
+			"description": "Biometric auth"
+		},
+		"5": {
+			"title": "Modular",
+			"description": "Kernel accounts"
+		},
+		"6": {
+			"title": "Multi-Chain",
+			"description": "Many networks"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Gasless dApps",
+			"description": "Sponsor user gas"
+		},
+		"2": {
+			"title": "Gaming",
+			"description": "Session keys"
+		},
+		"3": {
+			"title": "Onboarding",
+			"description": "No seed phrases"
+		},
+		"4": {
+			"title": "Batched TX",
+			"description": "Multi-call"
+		},
+		"5": {
+			"title": "Social Login",
+			"description": "Web2 UX"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is ZeroDev?",
+			"answer": "ZeroDev is an account abstraction SDK built on ERC-4337. It lets you create smart contract wallets with features like gasless transactions, session keys, and passkey login. Makes dApps feel like normal apps."
+		},
+		"2": {
+			"question": "What is account abstraction?",
+			"answer": "Account abstraction (AA) replaces EOAs with smart contract wallets. Enables gas sponsorship, batched transactions, social recovery, and programmable security. ERC-4337 is the standard; ZeroDev implements it."
+		},
+		"3": {
+			"question": "What are session keys?",
+			"answer": "Session keys let users grant limited permissions to apps—like \"approve up to 10 USDC for this game.\" Users don't sign every transaction. Enables gaming-like UX for blockchain apps."
+		},
+		"4": {
+			"question": "How do passkeys work?",
+			"answer": "Users authenticate with Face ID or fingerprint instead of seed phrases. ZeroDev uses passkeys to secure smart accounts. No more 12-word phrases for mainstream users."
+		},
+		"5": {
+			"question": "Is ZeroDev free?",
+			"answer": "They have a generous free tier for development and small apps. Production usage has paid tiers. Gas sponsorship costs depend on your paymaster setup."
+		}
+	},
+	"cta": {
+		"ready": "Ready for account abstraction?",
+		"button": "Start Building",
+		"note": "Smart account SDK"
+	}
+}

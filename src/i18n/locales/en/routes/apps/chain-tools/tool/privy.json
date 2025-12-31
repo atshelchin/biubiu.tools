@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Privy - Web3 Authentication",
+		"description": "Privy is the authentication library for Web3. Social login, embedded wallets, and progressive Web3 adoption for mainstream users.",
+		"keywords": "Privy, Web3 auth, embedded wallets, social login, wallet connection, onboarding"
+	},
+	"overview": "Privy is the authentication library for Web3. They make it easy to onboard users with email, social login, or wallets—and optionally create embedded wallets for a seamless experience.\n\nThe library handles the complexity of wallet connection while supporting progressive Web3 adoption. Users can start with email and later link a self-custody wallet. Best-in-class onboarding UX.\n\nPrivy is popular with consumer apps that need mainstream-friendly authentication. Supports embedded wallets (Privy manages keys) or external wallets (MetaMask, etc.). Flexible for any use case.",
+	"features": {
+		"1": {
+			"title": "Social Login",
+			"description": "Email, Google, etc."
+		},
+		"2": {
+			"title": "Embedded Wallets",
+			"description": "No seed phrases"
+		},
+		"3": {
+			"title": "External Wallets",
+			"description": "MetaMask support"
+		},
+		"4": {
+			"title": "Progressive Web3",
+			"description": "Gradual adoption"
+		},
+		"5": {
+			"title": "React SDK",
+			"description": "Easy integration"
+		},
+		"6": {
+			"title": "Multi-Chain",
+			"description": "Many networks"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Consumer Apps",
+			"description": "Mainstream UX"
+		},
+		"2": {
+			"title": "Onboarding",
+			"description": "Email signup"
+		},
+		"3": {
+			"title": "Gaming",
+			"description": "No friction"
+		},
+		"4": {
+			"title": "NFT Apps",
+			"description": "Easy minting"
+		},
+		"5": {
+			"title": "Hybrid Auth",
+			"description": "Web2 + Web3"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Privy?",
+			"answer": "Privy is Web3 authentication. Users sign in with email, Google, or Twitter—Privy can create an embedded wallet automatically. Or users connect existing wallets. Bridges Web2 and Web3 UX."
+		},
+		"2": {
+			"question": "What are embedded wallets?",
+			"answer": "Privy can create wallets for users who sign in with email/social. No seed phrases—Privy secures the keys. Users can export later if they want self-custody. Great for onboarding."
+		},
+		"3": {
+			"question": "Privy vs RainbowKit?",
+			"answer": "RainbowKit is wallet connection UI—users must have a wallet. Privy handles full authentication including creating embedded wallets for users without one. Different use cases."
+		},
+		"4": {
+			"question": "Is Privy secure?",
+			"answer": "Privy uses secure key management (HSMs, MPC) for embedded wallets. Users can link multiple auth methods for recovery. Security is core to their offering—they handle real value."
+		},
+		"5": {
+			"question": "Pricing?",
+			"answer": "Free tier for development and small apps. Production pricing based on monthly active users. Enterprise plans for large-scale apps. Check their pricing page for current rates."
+		}
+	},
+	"cta": {
+		"ready": "Ready for easy onboarding?",
+		"button": "Try Privy",
+		"note": "Web3 authentication"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Lit Protocol - Decentralized Key Management",
+		"description": "Lit Protocol provides decentralized key management and programmable signing. PKPs and access control for advanced Web3 applications.",
+		"keywords": "Lit Protocol, PKP, programmable keys, decentralized signing, access control, threshold cryptography"
+	},
+	"overview": "Lit Protocol is decentralized key management and programmable signing infrastructure. Their network of nodes collectively manages keys, enabling PKPs (Programmable Key Pairs) and access control.\n\nKey features include decentralized signing (threshold cryptography), access control (blockchain-based conditions), and PKPs (keys controlled by code). Powerful primitives for advanced Web3 applications.\n\nLit enables use cases like: signing based on token ownership, time-locked decryption, cross-chain authentication. They're building the decentralized layer for key management and access control.",
+	"features": {
+		"1": {
+			"title": "Decentralized Keys",
+			"description": "Threshold crypto"
+		},
+		"2": {
+			"title": "PKPs",
+			"description": "Programmable keys"
+		},
+		"3": {
+			"title": "Access Control",
+			"description": "Blockchain conditions"
+		},
+		"4": {
+			"title": "Cross-Chain",
+			"description": "Multi-chain signing"
+		},
+		"5": {
+			"title": "Encryption",
+			"description": "Conditional decrypt"
+		},
+		"6": {
+			"title": "Automation",
+			"description": "Programmable signing"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Token Gating",
+			"description": "NFT-based access"
+		},
+		"2": {
+			"title": "Encryption",
+			"description": "Conditional access"
+		},
+		"3": {
+			"title": "Cross-Chain",
+			"description": "Multi-chain auth"
+		},
+		"4": {
+			"title": "Automation",
+			"description": "Programmable signing"
+		},
+		"5": {
+			"title": "PKP Wallets",
+			"description": "Code-controlled"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Lit Protocol?",
+			"answer": "Lit is decentralized key management. Their node network collectively manages keys using threshold cryptography. Enables signing based on conditions, programmable keys (PKPs), and access control."
+		},
+		"2": {
+			"question": "What are PKPs?",
+			"answer": "Programmable Key Pairs are keys controlled by code. Define conditions for when/how they sign. Enables automated, condition-based blockchain interactions without exposing private keys."
+		},
+		"3": {
+			"question": "How does access control work?",
+			"answer": "Set conditions based on blockchain state: token ownership, DAO membership, on-chain data. Lit nodes verify conditions before allowing access/signing. Decentralized enforcement."
+		},
+		"4": {
+			"question": "Use cases for Lit?",
+			"answer": "Token-gated content, cross-chain authentication, conditional encryption, automated signing, Web3 SSO. Any use case needing programmable or conditional key operations."
+		},
+		"5": {
+			"question": "How decentralized is it?",
+			"answer": "Lit uses threshold cryptography across a node network. No single node has complete keys. Decentralization is core to security—keys only exist distributed across nodes."
+		}
+	},
+	"cta": {
+		"ready": "Ready for programmable keys?",
+		"button": "Explore Lit",
+		"note": "Decentralized key management"
+	}
+}

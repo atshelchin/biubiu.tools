@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Turnkey - Secure Key Infrastructure",
+		"description": "Turnkey provides secure private key infrastructure. API-based key management in secure enclaves for exchanges, institutions, and dApps.",
+		"keywords": "Turnkey, key management, secure enclaves, HSM, private keys, enterprise, wallet infrastructure"
+	},
+	"overview": "Turnkey provides secure private key infrastructure for Web3. Their API-based system manages keys in secure enclaves—enabling wallet features without holding custody.\n\nBuilt for developers who need programmatic key management: exchanges, institutions, and advanced dApps. Turnkey handles the HSM/enclave complexity while you focus on your application.\n\nThe approach is institutional-grade security with API accessibility. Create wallets, sign transactions, and implement policies—all through their API. Popular for B2B and infrastructure use cases.",
+	"features": {
+		"1": {
+			"title": "Secure Enclaves",
+			"description": "HSM-level security"
+		},
+		"2": {
+			"title": "API Access",
+			"description": "Programmatic"
+		},
+		"3": {
+			"title": "Policy Engine",
+			"description": "Signing rules"
+		},
+		"4": {
+			"title": "Non-Custodial",
+			"description": "You control"
+		},
+		"5": {
+			"title": "Multi-Sig",
+			"description": "Threshold signing"
+		},
+		"6": {
+			"title": "Enterprise",
+			"description": "B2B focus"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Exchanges",
+			"description": "Hot wallet infra"
+		},
+		"2": {
+			"title": "Institutions",
+			"description": "Secure custody"
+		},
+		"3": {
+			"title": "dApp Backends",
+			"description": "Key management"
+		},
+		"4": {
+			"title": "Embedded Wallets",
+			"description": "Infrastructure"
+		},
+		"5": {
+			"title": "Automation",
+			"description": "Programmatic signing"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Turnkey?",
+			"answer": "Turnkey is private key infrastructure. They manage keys in secure enclaves, accessible via API. Create wallets, sign transactions, enforce policies—without building HSM infrastructure yourself."
+		},
+		"2": {
+			"question": "How is it non-custodial?",
+			"answer": "Keys are in secure enclaves only you control. Turnkey can't access your keys—they provide infrastructure, not custody. You maintain control through your credentials."
+		},
+		"3": {
+			"question": "Who uses Turnkey?",
+			"answer": "Exchanges, institutions, and developers needing programmatic key management. B2B focus—they power other services' wallet infrastructure rather than serving end users directly."
+		},
+		"4": {
+			"question": "Turnkey vs AWS KMS?",
+			"answer": "AWS KMS is general-purpose. Turnkey is blockchain-specific—they understand transactions, policies, and Web3 needs. Purpose-built for crypto key management."
+		},
+		"5": {
+			"question": "What are policies?",
+			"answer": "Signing policies control what can be signed: spending limits, allowed destinations, required approvals. Implement security rules at the infrastructure level."
+		}
+	},
+	"cta": {
+		"ready": "Ready for key infrastructure?",
+		"button": "Explore Turnkey",
+		"note": "Secure key management"
+	}
+}

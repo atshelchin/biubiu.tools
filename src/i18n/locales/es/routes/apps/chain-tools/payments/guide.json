@@ -1,0 +1,158 @@
+{
+	"title": "Guía Completa de Pagos Cripto",
+	"subtitle": "Domina los Pagos Cripto desde Transacciones de Consumidor hasta Tesorería Empresarial",
+
+	"sections": {
+		"intro": {
+			"title": "Introducción a los Pagos Cripto",
+			"content": "<p>Las criptomonedas están evolucionando de activos especulativos a verdaderos medios de intercambio. Mientras los primeros pagos cripto eran lentos y costosos, la infraestructura de pagos moderna hace que las transacciones cripto sean más rápidas y baratas que los sistemas de pago tradicionales.</p><p>Esta guía cubre todo el ecosistema de pagos cripto: desde comprar tu primera cripto con tarjeta de crédito, hasta aceptar pagos como comerciante, hasta gestionar nóminas empresariales con pagos en streaming. Aprenderás sobre las tecnologías que hacen prácticos los pagos cripto, las herramientas disponibles hoy y cómo las empresas ya están usando cripto para mover dinero globalmente.</p>"
+		},
+		"payment_rails": {
+			"title": "Rieles de Pago Cripto",
+			"content": "<p>No todas las blockchains son adecuadas para pagos. La capa base de Bitcoin procesa solo 7 transacciones por segundo con tarifas que pueden alcanzar $50+ durante congestión. Ethereum no es mucho mejor durante uso pico.</p><p>La infraestructura de pagos moderna usa blockchains especializadas y redes de capa 2 diseñadas para alto throughput y bajos costos. Entender estos rieles de pago es esencial para elegir la solución correcta.</p>",
+			"stablecoins": {
+				"title": "Stablecoins: El Estándar de Pagos",
+				"content": "<p>Las stablecoins son la base de los pagos cripto. Nadie quiere poner precio a su café en Bitcoin cuando puede fluctuar 10% antes de terminarlo.</p><p><strong>Por qué las stablecoins dominan los pagos:</strong></p><ul><li><strong>Estabilidad de precio:</strong> $1 USDC hoy = $1 USDC mañana</li><li><strong>Liquidación instantánea:</strong> Las transferencias liquidan en segundos, no en 3-5 días hábiles</li><li><strong>Alcance global:</strong> Envía $100 o $1,000,000 a cualquier lugar con la misma facilidad</li><li><strong>Programabilidad:</strong> Automatiza pagos recurrentes, divisiones y depósitos en garantía</li></ul><p><strong>Stablecoins líderes para pagos:</strong></p><ul><li><strong>USDC (Circle):</strong> Totalmente respaldada, regulada, la más confiable para negocios</li><li><strong>USDT (Tether):</strong> Mayor liquidez, ampliamente aceptada globalmente</li><li><strong>PYUSD (PayPal):</strong> Emitida por PayPal, adopción comercial en crecimiento</li><li><strong>EURe (Monerium):</strong> Stablecoin de Euro regulada para mercados europeos</li></ul>"
+			},
+			"layer2": {
+				"title": "Redes de Capa 2 para Pagos",
+				"content": "<p>Las redes de Capa 2 heredan la seguridad de Ethereum mientras ofrecen tarifas dramáticamente más bajas y tiempos de confirmación más rápidos. Esto las hace ideales para pagos cotidianos.</p><p><strong>L2s populares para pagos:</strong></p><ul><li><strong>Base:</strong> L2 de Coinbase, diseñada para adopción cripto de consumidores. Tarifas ~$0.01 por transacción</li><li><strong>Arbitrum:</strong> Mayor L2 por TVL, extenso ecosistema DeFi para integraciones de pago</li><li><strong>Optimism:</strong> Finalidad rápida, popular para nóminas y pagos recurrentes</li><li><strong>Polygon:</strong> Alto throughput, ampliamente soportado por proveedores de pago</li></ul><p><strong>Ejemplo del mundo real:</strong> Una cafetería usando Coinbase Commerce en Base paga $0.01 por transacción versus $5-15 en mainnet de Ethereum. Con 100 transacciones diarias, eso es $1 vs $500-1,500 en tarifas diarias.</p>"
+			},
+			"bitcoin_lightning": {
+				"title": "Bitcoin Lightning Network",
+				"content": "<p>Lightning Network es un protocolo de pago de capa 2 construido sobre Bitcoin. Permite pagos Bitcoin instantáneos con tarifas casi nulas creando canales de pago entre usuarios.</p><p><strong>Cómo funciona:</strong></p><ol><li>Abre un canal de pago bloqueando Bitcoin on-chain</li><li>Realiza pagos instantáneos ilimitados off-chain a través de Lightning Network</li><li>Cierra el canal para liquidar el balance final on-chain</li></ol><p><strong>Adopción de Lightning:</strong></p><ul><li>El Salvador usa Lightning para pagos oficiales de Bitcoin</li><li>Strike, Cash App y otras apps soportan Lightning</li><li>Adopción comercial creciente en mercados emergentes</li></ul><p>Lightning es particularmente valioso en regiones con infraestructura bancaria tradicional costosa.</p>"
+			}
+		},
+		"merchant_solutions": {
+			"title": "Soluciones de Pago para Comerciantes",
+			"content": "<p>Aceptar pagos cripto como comerciante requiere herramientas diferentes a las wallets de consumidores. Las soluciones para comerciantes manejan facturación, seguimiento de pagos, integración contable y cumplimiento.</p>",
+			"payment_gateways": {
+				"title": "Pasarelas de Pago Cripto",
+				"content": "<p>Las pasarelas de pago son el equivalente cripto de Stripe o PayPal—manejan la complejidad de aceptar cripto para que los comerciantes no tengan que hacerlo.</p><p><strong>Coinbase Commerce:</strong></p><ul><li>Gratis para usar, 1% de tarifa por conversiones instantáneas a fiat</li><li>Acepta Bitcoin, Ethereum, USDC y más</li><li>Plugins de e-commerce para Shopify, WooCommerce, etc.</li><li>No custodial—los comerciantes reciben fondos directamente</li></ul><p><strong>BitPay:</strong></p><ul><li>Uno de los procesadores de pago cripto más antiguos (desde 2011)</li><li>Liquidación en cripto o fiat</li><li>Soporta principales criptomonedas</li><li>Herramientas de cumplimiento para reportes fiscales</li></ul><p><strong>NOWPayments:</strong></p><ul><li>Soporta 300+ criptomonedas</li><li>Tarifas más bajas que pasarelas tradicionales</li><li>Auto-conversión a moneda preferida</li><li>API para integraciones personalizadas</li></ul><p><strong>Ejemplo de integración:</strong> Añade checkout cripto a tu tienda Shopify en menos de 10 minutos usando el plugin de Coinbase Commerce. Sin necesidad de código.</p>"
+			},
+			"pos_systems": {
+				"title": "Sistemas de Punto de Venta (POS)",
+				"content": "<p>Las tiendas físicas necesitan soluciones de punto de venta que funcionen como terminales de tarjeta de crédito tradicionales pero para cripto.</p><p><strong>Características de sistemas POS cripto:</strong></p><ul><li>Generación de código QR para pagos de clientes</li><li>Conversión de precio en tiempo real (mostrar en moneda local)</li><li>Confirmación de pago instantánea</li><li>Integración con sistemas de caja registradora existentes</li><li>Cálculo automático de impuestos</li></ul><p><strong>Beneficios para comerciantes:</strong></p><ul><li><strong>Tarifas más bajas:</strong> 0.5-1% vs 2-3% para tarjetas de crédito</li><li><strong>Sin contracargos:</strong> Los pagos cripto son finales</li><li><strong>Liquidación instantánea:</strong> Fondos disponibles inmediatamente</li><li><strong>Clientes globales:</strong> Acepta pagos de turistas sin tarifas de conversión de moneda</li></ul>"
+			},
+			"invoicing": {
+				"title": "Facturación Cripto",
+				"content": "<p>Los pagos B2B necesitan herramientas de facturación profesionales. Las plataformas de facturación cripto crean solicitudes de pago con fechas de vencimiento, líneas de detalle y seguimiento automático de pagos.</p><p><strong>Request Network:</strong></p><ul><li>Protocolo de facturación descentralizado</li><li>Crea facturas con montos en cripto o fiat</li><li>Detección automática de pagos</li><li>Exportación para software contable (QuickBooks, Xero)</li></ul><p><strong>Utila:</strong></p><ul><li>Facturación cripto y nómina</li><li>Soporte multi-moneda</li><li>Funciones de colaboración en equipo</li><li>Documentación de cumplimiento</li></ul><p><strong>Caso de uso:</strong> Un diseñador freelance factura a un cliente por $5,000. El cliente paga en USDC en Arbitrum. Request Network detecta automáticamente el pago, marca la factura como pagada y exporta el registro al software contable del diseñador.</p>"
+			}
+		},
+		"payroll_streaming": {
+			"title": "Nómina y Pagos en Streaming",
+			"content": "<p>Una de las características más innovadoras de cripto es el dinero programable. Los pagos en streaming te permiten pagar salarios por segundo, creando nuevos modelos de compensación imposibles con finanzas tradicionales.</p>",
+			"streaming_payments": {
+				"title": "Pagos en Streaming Explicados",
+				"content": "<p>Nómina tradicional: Trabaja 2 semanas, cobra el viernes.<br>Pagos en streaming: Cobra continuamente mientras trabajas.</p><p><strong>Cómo funcionan los pagos en streaming:</strong></p><ol><li>El empleador deposita fondos en un contrato de streaming</li><li>Los fondos fluyen continuamente a la wallet del empleado (ej. $50,000/año = $1.58 por segundo)</li><li>El empleado puede retirar en cualquier momento</li><li>El stream se detiene automáticamente cuando se agotan los fondos o termina el contrato</li></ol><p><strong>Superfluid:</strong></p><ul><li>Protocolo de streaming de dinero en tiempo real</li><li>Crea streams de pago continuos con una transacción</li><li>Usado por DAOs y empresas nativas cripto</li><li>Soporta Ethereum, Polygon, Optimism, Arbitrum, Base</li></ul><p><strong>Sablier:</strong></p><ul><li>Vesting y streaming de tokens</li><li>Cronogramas de vesting lineales, con cliff y personalizados</li><li>Usado para compensación de empleados, grants y desbloqueo de tokens</li><li>Streams basados en NFT (los streams son transferibles)</li></ul><p><strong>LlamaPay:</strong></p><ul><li>Interfaz de streaming simple</li><li>Menores costos de gas a través de contratos optimizados</li><li>Ideal para pagos a contribuidores de DAOs</li></ul>"
+			},
+			"payroll_management": {
+				"title": "Gestión de Nómina Cripto",
+				"content": "<p>Gestionar nómina para equipos remotos y globales es desafiante con banca tradicional. La nómina cripto resuelve esto tratando pagos internacionales y domésticos de forma idéntica.</p><p><strong>Utopia Labs:</strong></p><ul><li>Plataforma de nómina para DAOs y empresas cripto</li><li>Paga a contratistas globalmente en cripto o fiat</li><li>Cálculos de impuestos automatizados</li><li>Documentación de cumplimiento para diferentes jurisdicciones</li></ul><p><strong>Parcel:</strong></p><ul><li>Herramienta de pago por lotes para DAOs</li><li>Paga a múltiples destinatarios en una transacción</li><li>Importación CSV para pagos masivos</li><li>Integración con Gnosis Safe para gestión de tesorería</li></ul><p><strong>Ahorros del mundo real:</strong> Una empresa con 20 contratistas internacionales gasta $50-75 por transferencia internacional. Eso es $1,000-1,500 mensuales solo en tarifas de transferencia. Con nómina cripto: $20-50 total de tarifas mensuales, independientemente de la ubicación del empleado.</p>"
+			},
+			"revenue_sharing": {
+				"title": "Reparto de Ingresos y División de Pagos",
+				"content": "<p>Cripto facilita dividir pagos automáticamente entre múltiples destinatarios—perfecto para asociaciones, regalías y reparto de ingresos.</p><p><strong>0xSplits:</strong></p><ul><li>Protocolo de división de pagos sin confianza</li><li>Define divisiones porcentuales (ej. 70% fundador, 20% inversor, 10% caridad)</li><li>Todos los pagos entrantes se dividen automáticamente</li><li>Divisiones inmutables o actualizables</li><li>Cero tarifas (solo gas)</li></ul><p><strong>Reveel:</strong></p><ul><li>Plataforma de distribución de ingresos</li><li>Crea cascadas de pago (paga a A primero, luego B, luego divide)</li><li>Cambios de distribución basados en tiempo</li><li>Panel de análisis</li></ul><p><strong>Caso de uso:</strong> Tres cofundadores configuran un contrato 0xSplits: 40/30/30. Dirigen todos los ingresos de la empresa (pagos de comerciantes, inversiones, grants) a esta dirección. Cada pago se divide automáticamente correctamente, eliminando contabilidad manual y problemas de confianza.</p>"
+			}
+		},
+		"fiat_ramps": {
+			"title": "Rampas de Entrada y Salida Fiat",
+			"content": "<p>El puente entre finanzas tradicionales y cripto. Las rampas de entrada te permiten comprar cripto con fiat; las rampas de salida te permiten convertir cripto de vuelta a fiat.</p>",
+			"onramps": {
+				"title": "Rampas de Entrada Fiat",
+				"content": "<p>Las rampas de entrada son cómo la mayoría de las personas entran a cripto. Aceptan tarjetas de crédito, transferencias bancarias y métodos de pago locales.</p><p><strong>MoonPay:</strong></p><ul><li>Soporta 160+ países</li><li>Tarjeta de crédito/débito y transferencia bancaria</li><li>Compra directamente a tu wallet</li><li>Integrado en MetaMask, Rainbow y otras wallets</li><li>Tarifas: 3.5-4.5% para tarjetas, más bajo para transferencia bancaria</li></ul><p><strong>Transak:</strong></p><ul><li>Cobertura global con métodos de pago locales</li><li>Tarifas más bajas en muchas regiones</li><li>Solución de marca blanca para dApps</li><li>Cumplimiento integrado (KYC/AML)</li></ul><p><strong>Ramp:</strong></p><ul><li>Rampa de entrada no custodial</li><li>Compra cripto que va directamente a tu wallet</li><li>SDK para integración de dApps</li><li>Soporte para Apple Pay y Google Pay</li></ul><p><strong>Elegir una rampa de entrada:</strong> Compara tarifas cuidadosamente—varían significativamente por método de pago y región. Las compras con tarjeta son las más rápidas pero más caras (3-5%). Las transferencias bancarias son las más baratas (0.5-1%) pero toman 1-3 días.</p>"
+			},
+			"offramps": {
+				"title": "Rampas de Salida Fiat",
+				"content": "<p>Convertir cripto de vuelta a fiat es a menudo más difícil que comprar cripto. Las rampas de salida se especializan en esta dirección.</p><p><strong>Spritz:</strong></p><ul><li>Paga facturas directamente con cripto</li><li>Conecta cuentas bancarias y tarjetas de crédito</li><li>Configuración de pago automático para facturas recurrentes</li><li>Sin necesidad de convertir y retirar manualmente</li></ul><p><strong>Monerium:</strong></p><ul><li>Institución de dinero electrónico regulada en Europa</li><li>Emite EUR on-chain (EURe) respaldado 1:1 por depósitos bancarios</li><li>Canjea EURe directamente a cuenta bancaria IBAN</li><li>Cumplimiento de grado institucional</li></ul><p><strong>Caso de uso:</strong> Un freelancer recibe $10,000 en USDC en Polygon. Usando Spritz, puede pagar su alquiler de $2,000 directamente desde USDC sin primero convertir a USD, enviar al banco y luego pagar al arrendador. Ahorra tiempo y tarifas.</p>"
+			},
+			"crypto_cards": {
+				"title": "Tarjetas de Débito Cripto",
+				"content": "<p>Las tarjetas de débito cripto te permiten gastar cripto en cualquier lugar donde se acepte Visa o Mastercard. Auto-convierten cripto a fiat en el punto de venta.</p><p><strong>Gnosis Pay:</strong></p><ul><li>Tarjeta Visa de auto-custodia</li><li>Gasta directamente desde tu Gnosis Safe</li><li>Sin intermediario de exchange</li><li>Disponible en Europa</li></ul><p><strong>Cómo funcionan:</strong></p><ol><li>Carga tu wallet de tarjeta con USDC u otra cripto</li><li>Pasa la tarjeta en cualquier comercio que acepte Visa/Mastercard</li><li>El proveedor de la tarjeta auto-convierte cripto a fiat local</li><li>El comerciante recibe fiat normalmente</li></ol><p><strong>Beneficios:</strong></p><ul><li>Gasta cripto sin adopción del comerciante</li><li>Gana rendimientos DeFi en el balance de la tarjeta antes de gastar</li><li>Auto-custodia (para algunas tarjetas)</li></ul><p><strong>Consideraciones:</strong></p><ul><li>Cada compra es un evento tributable en la mayoría de jurisdicciones</li><li>Tarifas de conversión (típicamente 0.5-2%)</li><li>No todas las tarjetas están disponibles en todas las regiones</li></ul>"
+			}
+		},
+		"remittances": {
+			"title": "Remesas y Pagos Transfronterizos",
+			"content": "<p>Cripto brilla más en pagos transfronterizos. Las transferencias internacionales tradicionales son lentas (3-5 días), caras (5-10% de tarifas) y requieren infraestructura bancaria.</p>",
+			"use_cases": {
+				"title": "Casos de Uso de Remesas",
+				"content": "<p><strong>Remesas de trabajadores migrantes:</strong></p><p>A nivel mundial, los migrantes envían $700+ mil millones anualmente a sus países de origen. Servicios tradicionales como Western Union cobran 5-10% en tarifas. Las remesas cripto pueden costar 0.5-2%.</p><p><strong>Flujo de ejemplo:</strong></p><ol><li>Trabajador en EE.UU. compra USDC en Coinbase ($100 - $1 tarifa = $99 USDC)</li><li>Envía USDC en Polygon a familia en Filipinas ($0.01 tarifa de transacción)</li><li>Familia convierte USDC a Peso Filipino en exchange local ($99 - 1% tarifa = $98 recibidos)</li></ol><p>Transferencia tradicional: $100 - $7 tarifa - $3 tarifa banco receptor = $90 recibidos<br>Cripto: $100 - $1 - $0.01 - $1 = $98 recibidos</p><p>Eso es $8 más recibidos (8% mejor) e instantáneo en lugar de 3-5 días.</p><p><strong>Pagos empresariales:</strong></p><ul><li>Paga a proveedores internacionales sin tarifas de transferencia</li><li>Recibe pagos de clientes globales</li><li>Gestión de tesorería transfronteriza</li></ul>"
+			},
+			"advantages": {
+				"title": "Por Qué Cripto Gana en Pagos Transfronterizos",
+				"content": "<p><strong>Velocidad:</strong> Las transacciones cripto liquidan en segundos a minutos. Las transferencias SWIFT toman 3-5 días hábiles. Durante fines de semana y feriados, SWIFT se detiene. Cripto no.</p><p><strong>Costo:</strong> Transferencias bancarias: $25-50 por transacción. Cripto en L2: $0.01-1.00. Para grandes montos, la diferencia es aún más dramática.</p><p><strong>Acceso:</strong> 1.7 mil millones de personas globalmente no tienen banco pero tienen smartphones. Pueden recibir cripto sin cuenta bancaria.</p><p><strong>Transparencia:</strong> Rastrea pagos en tiempo real en exploradores de blockchain. Con transferencias, el dinero desaparece en el sistema bancario por días.</p><p><strong>Siempre activo:</strong> Envía dinero a las 3am un domingo. Intenta eso con un banco.</p><p><strong>Desafíos:</strong></p><ul><li>Se requiere alfabetización cripto en ambos extremos</li><li>Volatilidad del tipo de cambio (resuelto por stablecoins)</li><li>Conversión a fiat de última milla aún necesaria en muchos lugares</li><li>Incertidumbre regulatoria en algunas jurisdicciones</li></ul>"
+			}
+		},
+		"treasury": {
+			"title": "Gestión de Tesorería",
+			"content": "<p>Para organizaciones con cripto significativo, las herramientas profesionales de gestión de tesorería son esenciales para seguridad y eficiencia operativa.</p>",
+			"multi_sig": {
+				"title": "Wallets Multi-Firma",
+				"content": "<p>Nunca almacenes fondos de la empresa en una wallet de firma única. Multi-sig requiere múltiples aprobadores para transacciones, eliminando puntos únicos de fallo.</p><p><strong>Gnosis Safe (Safe):</strong></p><ul><li>Estándar de la industria para wallets multi-sig</li><li>Esquemas de firma M-de-N (ej. 3-de-5 firmantes requeridos)</li><li>Soporte para cualquier token ERC-20 y NFTs</li><li>Disponible en 10+ redes</li></ul><p><strong>Configurando multi-sig de tesorería:</strong></p><ol><li>Elige número de firmantes (5-7 para organizaciones grandes)</li><li>Establece umbral de firmas (usualmente 50-60% de firmantes)</li><li>Añade firmantes confiables de diferentes partes de la organización</li><li>Documenta procedimientos de recuperación</li><li>Prueba con pequeño monto primero</li></ol><p><strong>Coinshift:</strong></p><ul><li>Construido sobre Gnosis Safe</li><li>Añade análisis y reportes de tesorería</li><li>Pagos programados y automatización</li><li>Control de acceso basado en roles</li><li>Exportación contable</li></ul>"
+			},
+			"batch_payments": {
+				"title": "Pagos por Lotes",
+				"content": "<p>Pagar a múltiples destinatarios individualmente desperdicia tiempo y tarifas de gas. Las herramientas de pago por lotes combinan muchos pagos en una transacción.</p><p><strong>Parcel:</strong></p><ul><li>Sube CSV de destinatarios y montos</li><li>Una transacción paga a todos</li><li>Ahorra 80-95% en tarifas de gas</li><li>Integrado con Safe para flujo de aprobación</li></ul><p><strong>Ejemplo:</strong> Un DAO necesita pagar a 50 contribuidores. Transacciones individuales: 50 × $2 gas = $100 en tarifas. Pago por lotes: $5 en tarifas. Además, los destinatarios reciben pago simultáneamente en lugar de uno por uno.</p><p><strong>Casos de uso:</strong></p><ul><li>Nómina mensual de contribuidores</li><li>Distribuciones de airdrop</li><li>Pagos de dividendos a inversores</li><li>Liquidaciones multipartitas</li></ul>"
+			}
+		},
+		"compliance_tax": {
+			"title": "Cumplimiento y Consideraciones Fiscales",
+			"content": "<p>Los pagos cripto crean nuevas obligaciones de cumplimiento e impuestos. Ignorarlas puede llevar a consecuencias legales y financieras serias.</p>",
+			"kyc_aml": {
+				"title": "Requisitos KYC/AML",
+				"content": "<p>La mayoría de los proveedores de pago requieren cumplimiento de Conoce a Tu Cliente (KYC) y Anti-Lavado de Dinero (AML).</p><p><strong>Cuándo se requiere KYC:</strong></p><ul><li>Rampas de entrada y salida fiat (siempre)</li><li>Procesadores de pago que sirven a comerciantes (usualmente)</li><li>Grandes volúmenes de transacción (varía por jurisdicción)</li></ul><p><strong>Sardine:</strong></p><ul><li>Plataforma de cumplimiento y prevención de fraude</li><li>Verificación KYC instantánea</li><li>Monitoreo de transacciones</li><li>Puntuación de riesgo</li></ul><p><strong>Para comerciantes:</strong></p><ul><li>Documenta información del cliente para grandes transacciones</li><li>Monitorea actividad sospechosa</li><li>Mantén registros de transacciones</li><li>Presenta reportes requeridos (CTR, SAR en EE.UU.)</li></ul>"
+			},
+			"tax_reporting": {
+				"title": "Reportes Fiscales para Pagos Cripto",
+				"content": "<p>En la mayoría de jurisdicciones, recibir pagos cripto es un evento tributable. La complejidad varía por caso de uso.</p><p><strong>Para negocios que aceptan cripto:</strong></p><ul><li>Registra valor justo de mercado en moneda local al momento de recepción</li><li>Reporta como ingreso como cualquier otro pago</li><li>Rastrea base de costo para ventas futuras</li><li>Documenta todas las transacciones para auditorías</li></ul><p><strong>Para empleados pagados en cripto:</strong></p><ul><li>El salario cripto se grava como ingreso ordinario</li><li>Valor determinado al momento de recepción</li><li>Venta posterior crea ganancias/pérdidas de capital adicionales</li></ul><p><strong>Para contratistas:</strong></p><ul><li>Pagos cripto son ingreso por trabajo independiente</li><li>Rastrea cuidadosamente para pagos de impuestos estimados</li><li>Deduce gastos de negocio normalmente</li></ul><p><strong>Herramientas:</strong></p><ul><li>Request Network genera facturas listas para impuestos</li><li>Integraciones contables con QuickBooks, Xero</li><li>Software de impuestos cripto: Koinly, CoinTracker, TokenTax</li></ul>"
+			},
+			"best_practices": {
+				"title": "Mejores Prácticas de Pago",
+				"content": "<p><strong>Para comerciantes:</strong></p><ol><li>Usa procesadores de pago establecidos, no crees el tuyo</li><li>Acepta stablecoins para evitar volatilidad</li><li>Auto-convierte a fiat si no puedes mantener cripto</li><li>Muestra claramente la opción de pago cripto en checkout</li><li>Proporciona confirmación de pago instantánea</li></ol><p><strong>Para organizaciones:</strong></p><ol><li>Usa multi-sig para todos los fondos de tesorería (mínimo 3-de-5)</li><li>Mantén balances de hot wallet bajos, la mayoría de fondos en almacenamiento frío</li><li>Documenta todos los aprobadores de pago y procesos</li><li>Usa pagos por lotes para eficiencia</li><li>Mantén registros detallados de transacciones</li><li>Trabaja con contadores familiarizados con cripto</li></ol><p><strong>Para individuos:</strong></p><ol><li>Comienza con pequeñas transacciones de prueba</li><li>Verifica direcciones de destinatario cuidadosamente (no pueden revertirse)</li><li>Usa nombres ENS o libreta de direcciones para evitar errores de tipeo</li><li>Mantén registros de todos los ingresos y pagos cripto</li><li>Entiende las implicaciones fiscales antes de aceptar salario cripto</li></ol><p><strong>Lista de verificación de seguridad:</strong></p><ul><li>✓ Hardware wallet para grandes montos</li><li>✓ Multi-sig para fondos organizacionales</li><li>✓ Transacciones de prueba con pequeños montos primero</li><li>✓ Verifica direcciones de contratos inteligentes</li><li>✓ Usa solicitudes de pago, no entrada manual de dirección</li><li>✓ Monitorea direcciones para transacciones inesperadas</li></ul>"
+			}
+		}
+	},
+
+	"glossary": {
+		"payment_rail": {
+			"term": "Riel de Pago",
+			"definition": "La infraestructura subyacente para mover dinero. En cripto, esto incluye blockchains (Ethereum, Bitcoin), redes de capa 2 (Arbitrum, Optimism) y sidechains (Polygon) que procesan transacciones de pago."
+		},
+		"streaming_payment": {
+			"term": "Pago en Streaming",
+			"definition": "Un flujo continuo de dinero del emisor al receptor a lo largo del tiempo, a menudo medido por segundo. Habilitado por contratos inteligentes que liberan fondos continuamente en lugar de en cheques de pago discretos."
+		},
+		"invoice": {
+			"term": "Factura",
+			"definition": "Un documento de solicitud de pago con detalles como monto, fecha de vencimiento y líneas de detalle. Las facturas cripto pueden pagarse directamente con criptomoneda y marcarse automáticamente como pagadas cuando se detecta la transacción en blockchain."
+		},
+		"remittance": {
+			"term": "Remesa",
+			"definition": "Dinero enviado de una ubicación a otra, típicamente por trabajadores migrantes a familia en su país de origen. Cripto reduce significativamente los costos de remesas comparado con servicios tradicionales."
+		},
+		"pos": {
+			"term": "POS (Punto de Venta)",
+			"definition": "Un sistema donde ocurren transacciones minoristas, como una caja registradora o terminal de pago. Los sistemas POS cripto generan códigos QR para que los clientes escaneen y paguen con criptomoneda."
+		},
+		"merchant": {
+			"term": "Comerciante",
+			"definition": "Un negocio que vende bienes o servicios. Las soluciones para comerciantes cripto permiten a las empresas aceptar pagos en criptomoneda junto con métodos de pago tradicionales."
+		},
+		"payment_gateway": {
+			"term": "Pasarela de Pago",
+			"definition": "Un servicio que maneja el procesamiento de pagos para comerciantes, similar a cómo Stripe procesa tarjetas de crédito. Las pasarelas de pago cripto manejan pagos en criptomoneda y opcionalmente convierten a fiat."
+		},
+		"fiat_onramp": {
+			"term": "Rampa de Entrada Fiat",
+			"definition": "Un servicio que convierte moneda tradicional (fiat) en criptomoneda. Las rampas de entrada aceptan tarjetas de crédito, transferencias bancarias o métodos de pago locales y entregan cripto a tu wallet."
+		},
+		"fiat_offramp": {
+			"term": "Rampa de Salida Fiat",
+			"definition": "Un servicio que convierte criptomoneda de vuelta a moneda tradicional. Las rampas de salida retiran cripto de tu wallet y depositan fiat en tu cuenta bancaria o pagan tus facturas directamente."
+		},
+		"payment_token": {
+			"term": "Token de Pago",
+			"definition": "Una criptomoneda diseñada para uso como medio de intercambio. Las stablecoins como USDC y USDT son los tokens de pago más comunes debido a su valor estable."
+		}
+	}
+}

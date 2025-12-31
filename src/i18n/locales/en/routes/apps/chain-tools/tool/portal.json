@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Portal - Enterprise MPC Infrastructure",
+		"description": "Portal provides MPC wallet infrastructure for enterprises. Distributed key management for exchanges, custodians, and fintechs.",
+		"keywords": "Portal, MPC, enterprise wallets, key management, custody, B2B infrastructure"
+	},
+	"overview": "Portal provides MPC wallet infrastructure for enterprises. Their technology enables wallet creation at scale while keeping keys distributed—no single point of compromise.\n\nPortal focuses on B2B use cases: exchanges, custodians, and companies needing wallet infrastructure. They handle the cryptographic complexity while you build your product.\n\nThe platform includes policy engines for transaction controls and recovery mechanisms for key management. Enterprise-grade security with developer-friendly APIs.",
+	"features": {
+		"1": {
+			"title": "MPC Security",
+			"description": "Distributed keys"
+		},
+		"2": {
+			"title": "Enterprise",
+			"description": "B2B infrastructure"
+		},
+		"3": {
+			"title": "Policy Engine",
+			"description": "Transaction rules"
+		},
+		"4": {
+			"title": "Recovery",
+			"description": "Key backup"
+		},
+		"5": {
+			"title": "Multi-Chain",
+			"description": "Many networks"
+		},
+		"6": {
+			"title": "API-First",
+			"description": "Developer friendly"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Exchanges",
+			"description": "Wallet infrastructure"
+		},
+		"2": {
+			"title": "Custodians",
+			"description": "Secure custody"
+		},
+		"3": {
+			"title": "Fintechs",
+			"description": "Embedded wallets"
+		},
+		"4": {
+			"title": "B2B Platforms",
+			"description": "White-label"
+		},
+		"5": {
+			"title": "Institutions",
+			"description": "Enterprise security"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Portal?",
+			"answer": "Portal provides MPC wallet infrastructure for enterprises. Create wallets at scale with distributed key management. No single party has complete keys—secure by design."
+		},
+		"2": {
+			"question": "Who uses Portal?",
+			"answer": "Exchanges, custodians, and fintechs needing wallet infrastructure. B2B focus—Portal powers other companies' wallet products rather than serving end users directly."
+		},
+		"3": {
+			"question": "What is the policy engine?",
+			"answer": "Set rules for transactions: spending limits, approved destinations, required approvals. Enforce security policies at the infrastructure level before signing."
+		},
+		"4": {
+			"question": "Portal vs Turnkey?",
+			"answer": "Both provide key infrastructure for enterprises. Portal uses MPC; Turnkey uses secure enclaves. Different security architectures, similar use cases. Evaluate based on your requirements."
+		},
+		"5": {
+			"question": "Enterprise pricing?",
+			"answer": "Portal has enterprise pricing based on usage and support needs. Contact their sales team for specific quotes. They work with companies at various scales."
+		}
+	},
+	"cta": {
+		"ready": "Ready for MPC infrastructure?",
+		"button": "Contact Portal",
+		"note": "Enterprise MPC wallets"
+	}
+}

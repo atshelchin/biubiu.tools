@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Particle Network - Chain Abstraction",
+		"description": "Particle Network builds chain abstraction infrastructure. Universal Accounts and social login for seamless multi-chain experiences.",
+		"keywords": "Particle Network, chain abstraction, Universal Accounts, social login, multi-chain, Web3 UX"
+	},
+	"overview": "Particle Network is building chain abstraction infrastructure. Their vision: users interact with one account across all chains, without thinking about which network they're on.\n\nKey products include Particle Wallet (social login + smart accounts) and Universal Accounts (chain-abstracted accounts). They're pushing beyond simple AA to true cross-chain UX.\n\nParticle emphasizes developer experience with comprehensive SDKs and documentation. They support EVM chains and are expanding. A vision for the future of multi-chain interaction.",
+	"features": {
+		"1": {
+			"title": "Chain Abstraction",
+			"description": "Cross-chain UX"
+		},
+		"2": {
+			"title": "Universal Accounts",
+			"description": "One account"
+		},
+		"3": {
+			"title": "Social Login",
+			"description": "Easy onboarding"
+		},
+		"4": {
+			"title": "Smart Accounts",
+			"description": "AA support"
+		},
+		"5": {
+			"title": "Multi-Chain",
+			"description": "Many networks"
+		},
+		"6": {
+			"title": "Developer SDKs",
+			"description": "Easy integration"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Multi-Chain Apps",
+			"description": "Unified UX"
+		},
+		"2": {
+			"title": "Consumer Apps",
+			"description": "Simple onboarding"
+		},
+		"3": {
+			"title": "Gaming",
+			"description": "Cross-chain assets"
+		},
+		"4": {
+			"title": "DeFi",
+			"description": "Chain-abstracted"
+		},
+		"5": {
+			"title": "NFT Apps",
+			"description": "Multi-chain NFTs"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Particle Network?",
+			"answer": "Particle Network builds chain abstraction infrastructure. Their goal: one account works across all chains. Users don't think about networks—apps handle chain switching invisibly."
+		},
+		"2": {
+			"question": "What are Universal Accounts?",
+			"answer": "Universal Accounts work across multiple chains with one address and unified balance. No bridging, no chain switching for users. The system handles cross-chain complexity."
+		},
+		"3": {
+			"question": "How is this different from bridges?",
+			"answer": "Bridges move assets between chains. Particle abstracts chains entirely—users have one account that works everywhere. The UX goal is hiding chain existence from users."
+		},
+		"4": {
+			"question": "Which chains are supported?",
+			"answer": "Multiple EVM chains with expansion planned. They're building toward broad chain coverage. Check their docs for current support and roadmap."
+		},
+		"5": {
+			"question": "Is it production ready?",
+			"answer": "Parts of their stack are in production. Universal Accounts is newer. They're iterating toward their vision. Evaluate for your specific needs and timeline."
+		}
+	},
+	"cta": {
+		"ready": "Ready for chain abstraction?",
+		"button": "Explore Particle",
+		"note": "Chain abstraction infrastructure"
+	}
+}

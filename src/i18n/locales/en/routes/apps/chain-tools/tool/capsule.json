@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Capsule - Enterprise MPC Wallets",
+		"description": "Capsule provides enterprise MPC wallet infrastructure. SOC 2 compliant embedded wallets with distributed key management.",
+		"keywords": "Capsule, MPC, enterprise wallets, SOC 2, embedded wallets, compliance, key management"
+	},
+	"overview": "Capsule provides embedded wallet infrastructure using MPC. They enable apps to create wallets for users via social login while maintaining true non-custody through distributed key shares.\n\nThe focus is on security and compliance—Capsule targets enterprises and regulated environments. Their MPC approach means no single party ever holds a complete private key.\n\nCapsule differentiates on security posture: SOC 2 compliance, enterprise support, and integration with existing identity systems. Built for companies with serious security requirements.",
+	"features": {
+		"1": {
+			"title": "MPC Wallets",
+			"description": "Distributed keys"
+		},
+		"2": {
+			"title": "Social Login",
+			"description": "Easy onboarding"
+		},
+		"3": {
+			"title": "SOC 2",
+			"description": "Compliance ready"
+		},
+		"4": {
+			"title": "Enterprise",
+			"description": "B2B focus"
+		},
+		"5": {
+			"title": "Non-Custodial",
+			"description": "True ownership"
+		},
+		"6": {
+			"title": "Identity Integration",
+			"description": "SSO support"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Enterprise Apps",
+			"description": "Compliant wallets"
+		},
+		"2": {
+			"title": "Fintech",
+			"description": "Regulated environment"
+		},
+		"3": {
+			"title": "B2B Products",
+			"description": "White-label"
+		},
+		"4": {
+			"title": "Consumer Apps",
+			"description": "Secure onboarding"
+		},
+		"5": {
+			"title": "Institutions",
+			"description": "Enterprise needs"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Capsule?",
+			"answer": "Capsule provides MPC wallet infrastructure. Apps create wallets for users via social login, but keys are distributed—no single party has full control. Non-custodial embedded wallets."
+		},
+		"2": {
+			"question": "What makes Capsule enterprise-grade?",
+			"answer": "SOC 2 compliance, enterprise support, identity system integration, and security-first architecture. Built for companies with compliance requirements and security teams."
+		},
+		"3": {
+			"question": "How does MPC work here?",
+			"answer": "Private keys are split into shares across multiple parties (user, Capsule, backup). Signatures are computed collaboratively. No party can sign alone—true non-custody."
+		},
+		"4": {
+			"question": "Capsule vs Web3Auth?",
+			"answer": "Both use MPC for embedded wallets. Capsule emphasizes enterprise features and compliance. Web3Auth has broader consumer focus. Choose based on your security requirements."
+		},
+		"5": {
+			"question": "Is there a developer tier?",
+			"answer": "Yes, they have developer access for building and testing. Production usage has enterprise pricing. Contact them for specific plans and compliance needs."
+		}
+	},
+	"cta": {
+		"ready": "Ready for enterprise MPC?",
+		"button": "Contact Capsule",
+		"note": "Enterprise wallet infrastructure"
+	}
+}

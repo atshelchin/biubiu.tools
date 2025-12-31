@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Stackup - Simple Account Abstraction",
+		"description": "Stackup provides account abstraction infrastructure with a focus on simplicity. Bundler and paymaster services for ERC-4337.",
+		"keywords": "Stackup, ERC-4337, account abstraction, bundler, paymaster, simple AA"
+	},
+	"overview": "Stackup provides account abstraction infrastructure with a focus on simplicity. Their bundler and paymaster services make ERC-4337 accessible to all developers.\n\nKey offerings include hosted bundlers, verifying paymasters, and a user-friendly dashboard. Stackup emphasizes developer experience—getting AA working quickly without deep ERC-4337 knowledge.\n\nThey also contribute to the AA ecosystem with open-source tools and educational content. Good choice for teams wanting straightforward AA integration without complexity.",
+	"features": {
+		"1": {
+			"title": "Bundler API",
+			"description": "Hosted service"
+		},
+		"2": {
+			"title": "Paymaster",
+			"description": "Gas sponsorship"
+		},
+		"3": {
+			"title": "Dashboard",
+			"description": "Easy management"
+		},
+		"4": {
+			"title": "Multi-Chain",
+			"description": "Many networks"
+		},
+		"5": {
+			"title": "Simple SDK",
+			"description": "Easy integration"
+		},
+		"6": {
+			"title": "Open Source",
+			"description": "Community tools"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Quick AA Setup",
+			"description": "Fast integration"
+		},
+		"2": {
+			"title": "Gas Sponsorship",
+			"description": "Gasless apps"
+		},
+		"3": {
+			"title": "Bundler Service",
+			"description": "Reliable backend"
+		},
+		"4": {
+			"title": "Learning AA",
+			"description": "Simple start"
+		},
+		"5": {
+			"title": "Production Apps",
+			"description": "Scalable infra"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Stackup?",
+			"answer": "Stackup provides ERC-4337 bundler and paymaster services. They focus on simplicity—easy APIs, good documentation, and a management dashboard. Makes AA accessible without deep expertise."
+		},
+		"2": {
+			"question": "How is Stackup different?",
+			"answer": "Stackup emphasizes developer experience and simplicity. While others focus on advanced features, Stackup prioritizes getting started quickly. Good for teams new to account abstraction."
+		},
+		"3": {
+			"question": "What chains are supported?",
+			"answer": "Multiple EVM chains including Ethereum, Polygon, Arbitrum, Optimism, and others. Check their documentation for the current list. They add new chains based on demand."
+		},
+		"4": {
+			"question": "Is there documentation?",
+			"answer": "Yes, Stackup has comprehensive docs and tutorials. They invest in education—good starting point for learning ERC-4337. Their guides explain concepts alongside implementation."
+		},
+		"5": {
+			"question": "Pricing model?",
+			"answer": "Free tier for development. Production pricing based on bundler operations and paymaster usage. Transparent pricing on their website. Competitive with other AA providers."
+		}
+	},
+	"cta": {
+		"ready": "Ready to start with AA?",
+		"button": "Try Stackup",
+		"note": "Simple AA infrastructure"
+	}
+}

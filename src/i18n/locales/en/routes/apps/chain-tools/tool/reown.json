@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Reown - WalletConnect Protocol",
+		"description": "Reown (WalletConnect) provides the protocol for connecting wallets to dApps. Universal wallet connection with AppKit UI.",
+		"keywords": "Reown, WalletConnect, wallet connection, AppKit, Web3Modal, dApp protocol"
+	},
+	"overview": "Reown (formerly WalletConnect) provides the protocol for connecting wallets to dApps. Their standard enables any wallet to connect to any app—the universal wallet connection layer.\n\nWalletConnect v2 introduced multi-chain support, session management, and improved security. It's the standard used by most mobile wallets and many dApps for remote wallet connections.\n\nReown also offers AppKit (formerly Web3Modal), a wallet connection UI that supports WalletConnect and many other connection methods. The company behind the protocol now offers full-stack solutions.",
+	"features": {
+		"1": {
+			"title": "WalletConnect",
+			"description": "Connection protocol"
+		},
+		"2": {
+			"title": "Multi-Chain",
+			"description": "Cross-chain sessions"
+		},
+		"3": {
+			"title": "AppKit",
+			"description": "Connection UI"
+		},
+		"4": {
+			"title": "Mobile Support",
+			"description": "Native wallets"
+		},
+		"5": {
+			"title": "Standard Protocol",
+			"description": "Universal"
+		},
+		"6": {
+			"title": "Session Management",
+			"description": "Persistent"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "dApp Connection",
+			"description": "Wallet linking"
+		},
+		"2": {
+			"title": "Mobile Wallets",
+			"description": "Remote signing"
+		},
+		"3": {
+			"title": "Multi-Chain",
+			"description": "Cross-chain dApps"
+		},
+		"4": {
+			"title": "Wallet Developers",
+			"description": "Protocol support"
+		},
+		"5": {
+			"title": "dApp Developers",
+			"description": "AppKit UI"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Reown?",
+			"answer": "Reown (formerly WalletConnect) provides the protocol connecting wallets to dApps. When you scan a QR code with your mobile wallet, that's WalletConnect. They also offer AppKit for connection UI."
+		},
+		"2": {
+			"question": "What is WalletConnect?",
+			"answer": "WalletConnect is the open protocol for wallet-dApp connections. It works across wallets and apps—a universal standard. V2 supports multi-chain and improved security."
+		},
+		"3": {
+			"question": "What is AppKit?",
+			"answer": "AppKit (formerly Web3Modal) is a wallet connection UI component. Supports WalletConnect, injected wallets, and others. Drop-in solution for connecting wallets in dApps."
+		},
+		"4": {
+			"question": "Is WalletConnect free?",
+			"answer": "The protocol is free and open source. Reown offers cloud services for relay servers. Free tier available; paid tiers for production. AppKit has similar model."
+		},
+		"5": {
+			"question": "Why the rebrand?",
+			"answer": "WalletConnect Inc became Reown to reflect expanded offerings beyond the protocol. WalletConnect protocol keeps its name; Reown is the company offering full solutions."
+		}
+	},
+	"cta": {
+		"ready": "Ready to connect wallets?",
+		"button": "Explore Reown",
+		"note": "Wallet connection protocol"
+	}
+}
