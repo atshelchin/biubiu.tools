@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Gauntlet - DeFi风险优化",
+		"description": "Gauntlet使用模拟优化DeFi协议参数。为借贷协议提供风险管理、资本效率和参数建议。",
+		"keywords": "Gauntlet, DeFi风险, 参数优化, 模拟, Aave, Compound, 风险管理"
+	},
+	"overview": "Gauntlet是领先的DeFi风险优化平台。他们使用基于代理的模拟来优化协议参数——在风险和资本效率之间找到最佳平衡点。\n\nGauntlet的模型模拟市场条件、用户行为和边缘情况，以推荐抵押因子、清算阈值和利率曲线等参数。包括Aave、Compound和Maker在内的主要协议依赖Gauntlet。\n\n除了参数优化，Gauntlet还提供风险仪表板、监控协议健康状况，并对市场条件做出响应。他们的工作保护数十亿TVL免受清算级联和破产风险。",
+	"features": {
+		"1": {
+			"title": "模拟引擎",
+			"description": "基于代理建模"
+		},
+		"2": {
+			"title": "参数优化",
+			"description": "风险vs效率"
+		},
+		"3": {
+			"title": "风险仪表板",
+			"description": "协议监控"
+		},
+		"4": {
+			"title": "主要协议",
+			"description": "Aave、Compound等"
+		},
+		"5": {
+			"title": "研究",
+			"description": "发布分析"
+		},
+		"6": {
+			"title": "事件响应",
+			"description": "市场条件反应"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "协议团队",
+			"description": "参数优化"
+		},
+		"2": {
+			"title": "治理",
+			"description": "知情决策"
+		},
+		"3": {
+			"title": "风险监控",
+			"description": "仪表板访问"
+		},
+		"4": {
+			"title": "研究",
+			"description": "学习模型"
+		},
+		"5": {
+			"title": "尽职调查",
+			"description": "协议安全"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Gauntlet做什么？",
+			"answer": "Gauntlet运行模拟来优化DeFi协议参数。他们模拟清算、市场压力和用户行为，以找到安全且高效的设置。把他们想象成DeFi的风险管理团队。"
+		},
+		"2": {
+			"question": "哪些协议使用Gauntlet？",
+			"answer": "主要借贷协议包括Aave、Compound、Maker和Venus都使用Gauntlet。他们也与较新的协议合作。他们的建议影响数十亿TVL设置。"
+		},
+		"3": {
+			"question": "模拟如何工作？",
+			"answer": "Gauntlet创建包含借款人、贷款人和清算人的基于代理模型。他们模拟市场崩溃、价格波动和边缘情况。参数在数千个场景中测试。"
+		},
+		"4": {
+			"question": "可以看到他们的建议吗？",
+			"answer": "Gauntlet在协议论坛上发布治理提案。当他们推荐参数变更时可以阅读分析。风险仪表板有时是公开的。查看各个协议治理。"
+		},
+		"5": {
+			"question": "Gauntlet vs Chaos Labs？",
+			"answer": "两者都做DeFi风险模拟。Gauntlet成立更早，协议关系更多。Chaos Labs较新但增长快。他们经常竞争相同的协议工作。"
+		}
+	},
+	"cta": {
+		"ready": "准备好优化风险了吗？",
+		"button": "探索Gauntlet",
+		"note": "DeFi风险优化"
+	}
+}

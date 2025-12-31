@@ -1,0 +1,153 @@
+{
+	"title": "Web3 Social Complete Guide",
+	"subtitle": "Master Decentralized Social Media and Own Your Digital Identity",
+
+	"sections": {
+		"intro": {
+			"title": "The Web3 Social Revolution",
+			"content": "<p>Social media is broken. A handful of corporations control what billions of people see, say, and share online. They own your data, your audience, and your content. They can ban you, shadow-ban you, or change the algorithm overnight—destroying years of work.</p><p><strong>Web3 social is the antidote.</strong> It's built on blockchain technology, giving you true ownership of your identity, content, and connections. No central authority can take them away. Your followers are yours, your content is yours, and you can monetize directly without middlemen taking 30-50% cuts.</p><p>In this comprehensive guide, you'll learn how decentralized social networks work, which platforms are leading the revolution, and how to build your presence in the new creator economy. Whether you're a creator, developer, or just tired of Big Tech's control, this is your roadmap to Web3 social.</p>"
+		},
+
+		"social_protocols": {
+			"title": "Decentralized Social Protocols",
+			"content": "<p>Unlike traditional social media where each platform is a walled garden, Web3 social is built on open protocols. These protocols are like social infrastructure—anyone can build applications on top of them, and your data works across all of them.</p>",
+			"lens_protocol": {
+				"title": "Lens Protocol: Composable Social Graphs",
+				"content": "<p>Lens Protocol, created by Aave's team, is the most innovative social protocol in Web3. It treats social relationships as NFTs on Polygon, making your social graph <strong>composable and portable</strong>.</p><p><strong>How Lens Works:</strong></p><ul><li><strong>Profiles are NFTs:</strong> Your handle (@yourusername.lens) is an NFT you own</li><li><strong>Follows are NFTs:</strong> When someone follows you, they get a Follow NFT</li><li><strong>Content is modular:</strong> Posts can include collects, mirrors, and comments</li><li><strong>Monetization built-in:</strong> Set prices for follows, collects, or subscriptions</li></ul><p><strong>Why it matters:</strong> On Twitter, if you get banned, your 100k followers are gone. On Lens, your followers are NFTs in wallets—no one can take them away. Any app built on Lens can access your entire social graph instantly.</p><p><strong>Popular Lens Apps:</strong></p><ul><li><strong>Hey (formerly Lenster):</strong> Twitter-like experience, most popular Lens client</li><li><strong>Orb:</strong> Mobile-first social app with beautiful UI</li><li><strong>Tape:</strong> Decentralized video platform (like YouTube)</li><li><strong>Buttrfly:</strong> Cross-protocol aggregator</li></ul>"
+			},
+			"farcaster": {
+				"title": "Farcaster: Sufficiently Decentralized Social",
+				"content": "<p>Farcaster takes a pragmatic approach to decentralization. Created by ex-Coinbase executives, it's designed to be \"sufficiently decentralized\"—combining blockchain for identity with off-chain data for performance.</p><p><strong>Architecture:</strong></p><ul><li><strong>On-chain:</strong> User IDs and name registry (on Optimism)</li><li><strong>Off-chain:</strong> Posts, likes, replies stored in decentralized hubs</li><li><strong>Result:</strong> Fast, Twitter-like UX without high gas fees</li></ul><p><strong>Frames:</strong> Farcaster's killer feature. Frames are interactive mini-apps embedded directly in posts—you can mint NFTs, swap tokens, play games, or vote on proposals without leaving your feed.</p><p><strong>The Ecosystem:</strong></p><ul><li><strong>Warpcast:</strong> Flagship client built by Farcaster team (like Twitter for crypto)</li><li><strong>Supercast:</strong> Premium client for power users</li><li><strong>Moxie:</strong> Fan token economy on top of Farcaster</li><li><strong>Neynar:</strong> Developer APIs for building Farcaster apps</li></ul><p><strong>Growth:</strong> Farcaster went from ~50k users to 350k+ in 2024, driven by Frames innovation and strong crypto-native community.</p>"
+			},
+			"cyberconnect": {
+				"title": "CyberConnect: Multi-Chain Social Graph",
+				"content": "<p>CyberConnect focuses on being the universal social graph across multiple blockchains. Instead of building another social network, it provides the identity and connection layer that any app can plug into.</p><p><strong>Key Features:</strong></p><ul><li><strong>Multi-chain:</strong> Works across Ethereum, BSC, Polygon, Optimism, and more</li><li><strong>Link3:</strong> Their flagship app for Web3 events, credentials, and professional networking</li><li><strong>W3ST:</strong> Social token standard for communities</li><li><strong>Attestations:</strong> Verifiable credentials and reputation</li></ul><p>Think of CyberConnect as LinkedIn meets Web3—focused on professional identity and verifiable achievements rather than casual posting.</p>"
+			}
+		},
+
+		"decentralized_content": {
+			"title": "Decentralized Content Publishing",
+			"content": "<p>Web3 isn't just about short posts—it's revolutionizing long-form content, newsletters, and video. Creators can publish directly to blockchain, ensuring permanent availability and true ownership.</p>",
+			"publishing_platforms": {
+				"title": "Writing and Publishing",
+				"content": "<p><strong>Mirror:</strong> The pioneer of Web3 publishing. Mirror combines Medium-style writing with NFT minting and crowdfunding.</p><ul><li><strong>NFT Articles:</strong> Turn articles into collectible NFTs—fans can collect to support you</li><li><strong>Split Contracts:</strong> Automatically split revenue between collaborators</li><li><strong>Crowdfunds:</strong> Raise money by selling NFT editions before writing</li><li><strong>Permanent:</strong> Content stored on Arweave, can't be censored or deleted</li></ul><p><strong>Success Stories:</strong></p><ul><li>Packy McCormick raised $100k+ for Not Boring newsletter through Mirror</li><li>DAOs use Mirror for governance proposals and documentation</li><li>Crypto researchers publish reports that can't be taken down</li></ul><p><strong>Paragraph:</strong> Web3 newsletters with built-in monetization.</p><ul><li>Email + on-chain subscriptions</li><li>Token-gated content for holders</li><li>Collect individual newsletter editions as NFTs</li><li>Direct audience ownership (emails exported as NFTs)</li></ul><p>Both platforms let creators build businesses without platform risk. Your content, your audience, your revenue—no middlemen.</p>"
+			},
+			"video_streaming": {
+				"title": "Video and Live Streaming",
+				"content": "<p>Video is the final frontier for decentralized social. Storing and streaming video on-chain is expensive, so Web3 video platforms use clever hybrid approaches.</p><p><strong>Tape (Lens Protocol):</strong></p><ul><li>Built on Lens, so your Lens followers automatically see your videos</li><li>Videos stored on decentralized storage (IPFS/Arweave)</li><li>Monetize through collects, tips, and subscriptions</li><li>Your video library is portable across any Lens app</li></ul><p><strong>Unlonely:</strong></p><ul><li>Live streaming with real-time blockchain interactions</li><li>Viewers can mint moments, tip creators, vote on content</li><li>Gamified engagement through token mechanics</li><li>Used by crypto podcasts and live shows</li></ul><p><strong>Drakula:</strong></p><ul><li>Short-form video (TikTok-style) on Farcaster</li><li>Integrated with Frames for in-feed interactions</li><li>Creator rewards through engagement tokens</li></ul><p>The trend is clear: video creators are moving on-chain for audience ownership and better monetization.</p>"
+			}
+		},
+
+		"social_tokens": {
+			"title": "Social Tokens and Creator Coins",
+			"content": "<p>Web3 social enables direct financial relationships between creators and fans through social tokens. Instead of relying on platform ads or subscriptions, creators can issue their own tokens.</p>",
+			"creator_coins": {
+				"title": "Creator Coins and Keys",
+				"content": "<p><strong>Friend.tech:</strong> The viral social trading platform that dominated crypto in late 2023.</p><p><strong>The Concept:</strong> Your social access is tokenized. To message someone or see their private content, you buy \"keys\" (shares) in them. As more people buy, the price increases (bonding curve).</p><p><strong>Mechanics:</strong></p><ul><li>Built on Base (Coinbase's L2)</li><li>Buy/sell keys with ETH</li><li>Key holders get chat access and exclusive content</li><li>Creators earn 5% fee on all trades</li><li>Protocol takes 5% fee</li></ul><p><strong>Peak Impact:</strong> Friend.tech did $500M+ in trading volume in first few months. Influencers made millions from key trading. But...</p><p><strong>The Reality Check:</strong> The speculative bubble popped. Most keys lost 90%+ value. The lesson? Social tokens work when there's real utility (exclusive content, events, access), not pure speculation.</p><p><strong>Moxie (Farcaster):</strong> Learning from Friend.tech's mistakes, Moxie built a more sustainable model.</p><ul><li>Fan tokens for Farcaster users and channels</li><li>Earn tokens through quality engagement, not just buying</li><li>Used for tipping, unlocking content, governance</li><li>Fairer distribution—not just pay-to-play</li></ul>"
+			},
+			"community_tokens": {
+				"title": "Community Tokens",
+				"content": "<p>Beyond individual creator tokens, Web3 social enables community-owned token economies:</p><p><strong>DAO Tokens:</strong> Communities like Friends With Benefits ($FWB) use tokens for membership:</p><ul><li>Hold X tokens to join exclusive Discord/events</li><li>Vote on community decisions</li><li>Access to IRL events, collaborations, opportunities</li></ul><p><strong>Channel Tokens:</strong> Farcaster channels can have their own tokens for:</p><ul><li>Tipping quality contributors</li><li>Rewarding engagement</li><li>Unlocking premium features</li><li>Governance over channel rules</li></ul><p><strong>Best Practices:</strong></p><ol><li><strong>Start with utility, not speculation:</strong> Give tokens clear use cases</li><li><strong>Reward participation:</strong> Don't just sell—reward quality content</li><li><strong>Build before tokenizing:</strong> Establish community first, tokenize later</li><li><strong>Fair distribution:</strong> Avoid whale concentration, spread tokens to active members</li></ol>"
+			}
+		},
+
+		"messaging": {
+			"title": "Web3 Messaging and Communication",
+			"content": "<p>Messaging in Web3 means wallet-to-wallet communication—no phone numbers, no emails, no centralized servers reading your messages.</p>",
+			"xmtp": {
+				"title": "XMTP: Wallet-to-Wallet Messaging",
+				"content": "<p>XMTP (Extensible Message Transport Protocol) is the leading protocol for wallet-based messaging.</p><p><strong>How It Works:</strong></p><ul><li>Your wallet address is your identity</li><li>End-to-end encrypted by default</li><li>Messages stored in decentralized network</li><li>Works across any app that integrates XMTP</li></ul><p><strong>Why It Matters:</strong></p><ul><li><strong>No censorship:</strong> No central server to shut down</li><li><strong>Portable:</strong> Your messages work across all XMTP apps</li><li><strong>Spam resistant:</strong> Can filter by token holdings, NFT ownership, etc.</li><li><strong>Programmable:</strong> Enable bots, payments, notifications</li></ul><p><strong>Apps Using XMTP:</strong></p><ul><li>Coinbase Wallet messaging</li><li>Lens Protocol DMs</li><li>Converse (standalone XMTP app)</li><li>Many Web3 games and apps</li></ul><p><strong>Use Cases:</strong></p><ul><li>DAO coordination without Discord</li><li>NFT holder exclusive chats</li><li>Direct creator-to-fan communication</li><li>Customer support for DeFi protocols</li></ul>"
+			},
+			"push_protocol": {
+				"title": "Push Protocol: Web3 Notifications",
+				"content": "<p>Push Protocol (formerly EPNS) brings notifications to Web3—crucial infrastructure often overlooked.</p><p><strong>The Problem:</strong> In Web3, you need to actively check everything. Did your auction end? Was your proposal voted on? Did someone send you tokens? Push solves this.</p><p><strong>Features:</strong></p><ul><li><strong>Channel subscriptions:</strong> Subscribe to protocols/DAOs you care about</li><li><strong>Direct messaging:</strong> Wallet-to-wallet chat like XMTP</li><li><strong>Customizable:</strong> Set notification preferences per channel</li><li><strong>Multi-platform:</strong> Browser, mobile, integrates with apps</li></ul><p><strong>Real Uses:</strong></p><ul><li>Aave liquidation warnings</li><li>ENS domain expiration alerts</li><li>Governance proposal notifications</li><li>NFT sale/offer notifications</li><li>DeFi yield strategy updates</li></ul><p>Push is essential infrastructure—making Web3 user experience competitive with Web2.</p>"
+			}
+		},
+
+		"social_fi": {
+			"title": "SocialFi: Monetizing Your Social Presence",
+			"content": "<p>SocialFi (Social + Finance) is about earning from your social activity. In Web2, platforms monetize your content. In Web3, you do.</p>",
+			"monetization": {
+				"title": "Creator Monetization Models",
+				"content": "<p><strong>1. Content Collecting:</strong></p><p>On Lens, readers can \"collect\" your posts as NFTs. Set your price:</p><ul><li>Free collects to grow reach</li><li>Paid collects (0.01-10+ ETH) for premium content</li><li>Limited editions create scarcity</li><li>Time-limited collects for urgency</li></ul><p>Example: A popular Lens creator made $50k from a viral post through paid collects.</p><p><strong>2. Subscription NFTs:</strong></p><ul><li>Fans mint a subscription NFT for monthly access</li><li>Token-gated content, chats, or perks</li><li>Renewable subscriptions with utility</li><li>Paragraph and Mirror support this model</li></ul><p><strong>3. Tipping and Donations:</strong></p><ul><li>Direct wallet-to-wallet tips in any token</li><li>Farcaster's Warps feature built-in tipping</li><li>No platform fees—100% to creator</li></ul><p><strong>4. Social Token Trading:</strong></p><ul><li>Creators earn fees from key/token trades</li><li>Friend.tech: 5% on every transaction</li><li>Moxie: Earn from engagement, not just trading</li></ul><p><strong>5. NFT Drops and Collabs:</strong></p><ul><li>Launch NFT collections to your audience</li><li>Zora makes this seamless on Lens/Farcaster</li><li>Revenue share with collaborators via smart contracts</li></ul>"
+			},
+			"tips_subscriptions": {
+				"title": "Tips, Subscriptions, and Patronage",
+				"content": "<p><strong>The Patronage Model:</strong></p><p>Web3 social enables direct creator-fan relationships similar to Patreon, but better:</p><p><strong>Advantages over Patreon:</strong></p><ul><li><strong>Lower fees:</strong> Patreon takes 8-12%. Blockchain fees are often 2-5%</li><li><strong>Global:</strong> Crypto works anywhere. No regional payment restrictions</li><li><strong>Ownership:</strong> Supporters own NFTs that may appreciate or grant benefits</li><li><strong>Composable:</strong> Your subscription NFT works across multiple apps</li><li><strong>Secondary markets:</strong> Supporters can resell subscriptions (you can earn royalties)</li></ul><p><strong>Hybrid Models:</strong></p><p>Many creators use multi-platform strategies:</p><ul><li>Free content on Lens/Farcaster to build audience</li><li>Premium posts with paid collects for superfans</li><li>Long-form on Mirror with NFT editions</li><li>Newsletter on Paragraph with token-gated archives</li><li>Exclusive chat for token/NFT holders</li></ul><p><strong>Real Example:</strong></p><p>Crypto artist posts daily on Lens (free), weekly deep dives on Mirror (0.01 ETH collect), and exclusive tutorials for holders of their Creator NFT. This nets more than their old Patreon ever did, with better engagement.</p>"
+			}
+		},
+
+		"building_presence": {
+			"title": "Building Your Web3 Social Presence",
+			"content": "<p>Ready to dive in? Here's your practical playbook for establishing yourself in decentralized social media.</p>",
+			"choosing_platform": {
+				"title": "Choosing Your Platform",
+				"content": "<p><strong>Start with Farcaster if:</strong></p><ul><li>You're already active in crypto/tech</li><li>You want Twitter-like UX and engagement</li><li>You value speed and ease of use</li><li>You're interested in Frames and innovative features</li></ul><p><strong>Start with Lens if:</strong></p><ul><li>You're a content creator (writer, artist, video)</li><li>You want maximum control and composability</li><li>You're building a long-term brand</li><li>Monetization is a priority</li></ul><p><strong>Use Both:</strong> Many crypto natives are on both. Use:</p><ul><li>Farcaster for real-time discussions and networking</li><li>Lens for content publishing and monetization</li><li>Firefly or Buttrfly apps to manage both in one interface</li></ul><p><strong>First Steps:</strong></p><ol><li><strong>Farcaster:</strong> Download Warpcast, pay $5/year for username, start posting</li><li><strong>Lens:</strong> Visit Hey.xyz, claim your handle (free), set up profile</li><li><strong>Important:</strong> Use the same username on both for brand consistency</li></ol>"
+			},
+			"content_strategy": {
+				"title": "Content Strategy for Web3 Social",
+				"content": "<p><strong>What Performs Well:</strong></p><p>Web3 social has different dynamics than Twitter or Instagram:</p><ul><li><strong>Educational content:</strong> Explain complex topics simply</li><li><strong>On-chain insights:</strong> Share interesting wallet/contract discoveries</li><li><strong>Building in public:</strong> Share your journey, wins, and failures</li><li><strong>Protocol deep-dives:</strong> Quality research on DeFi, NFTs, etc.</li><li><strong>Memes:</strong> Yes, they work here too</li></ul><p><strong>What Doesn't Work:</strong></p><ul><li>Pure engagement farming (\"repost this\")</li><li>Copy-pasted alpha from Twitter</li><li>Shilling without disclosure</li><li>Generic motivational quotes</li></ul><p><strong>Posting Cadence:</strong></p><ul><li><strong>Daily:</strong> 1-3 quality posts (not more—quality > quantity)</li><li><strong>Weekly:</strong> 1 long-form piece (Mirror/Paragraph)</li><li><strong>Engage:</strong> Comment on others' posts, have real conversations</li></ul><p><strong>Voice and Style:</strong></p><p>Web3 audiences value:</p><ul><li><strong>Authenticity:</strong> Be yourself, not a corporate account</li><li><strong>Transparency:</strong> Disclose conflicts of interest</li><li><strong>Helpfulness:</strong> Share knowledge freely</li><li><strong>Respect:</strong> Disagree without being disagreeable</li></ul>"
+			},
+			"growing_audience": {
+				"title": "Growing Your Audience",
+				"content": "<p><strong>Quality Follower Growth Strategies:</strong></p><p><strong>1. Consistency:</strong> Post regularly for 3-6 months minimum. Web3 social rewards patience.</p><p><strong>2. Engage Authentically:</strong></p><ul><li>Reply to big accounts' posts with value-add comments</li><li>Ask questions, start discussions</li><li>Support other creators</li></ul><p><strong>3. Cross-Promotion:</strong></p><ul><li>Share your Lens profile on Twitter/Farcaster and vice versa</li><li>Mention your Web3 handles in email signatures, websites</li><li>QR codes to your profile at events</li></ul><p><strong>4. Collaborate:</strong></p><ul><li>Co-create content with other Web3 creators</li><li>Joint Mirror articles with revenue splits</li><li>Guest posts on established channels</li></ul><p><strong>5. Provide Exclusive Value:</strong></p><ul><li>Early alpha to your followers</li><li>Tools, dashboards, or resources</li><li>Curated lists and recommendations</li></ul><p><strong>6. Leverage Channels/Communities:</strong></p><ul><li>Farcaster channels are like subreddits—find your niche</li><li>Contribute quality content to relevant channels</li><li>Build reputation before self-promotion</li></ul><p><strong>The Flywheel:</strong></p><ol><li>Post quality content → Get engagement</li><li>Engagement brings followers → More reach</li><li>Monetize through collects/subscriptions → Reinvest in better content</li><li>Better content → More engagement → Repeat</li></ol><p><strong>Avoiding Pitfalls:</strong></p><ul><li><strong>Don't buy followers/engagement:</strong> It's obvious and hurts credibility</li><li><strong>Don't spam:</strong> One good post beats ten mediocre ones</li><li><strong>Don't only self-promote:</strong> 80% value, 20% promotion</li><li><strong>Don't ignore your audience:</strong> Reply to comments, show appreciation</li></ul>"
+			}
+		},
+
+		"future_of_social": {
+			"title": "The Future of Web3 Social",
+			"content": "<p>Decentralized social is still early, but the trends are clear. Here's where it's heading.</p>",
+			"interoperability": {
+				"title": "Cross-Protocol Interoperability",
+				"content": "<p><strong>The Vision:</strong> Your social identity should work everywhere. Post on Lens, someone reads it on Farcaster. Follow someone on Farcaster, message them via XMTP.</p><p><strong>Current Progress:</strong></p><ul><li><strong>Aggregators:</strong> Apps like Firefly and Buttrfly already show Lens + Farcaster in one feed</li><li><strong>Messaging:</strong> XMTP integrated across multiple platforms</li><li><strong>Identity:</strong> ENS names work across chains and platforms</li><li><strong>Storage:</strong> IPFS/Arweave enable cross-platform content permanence</li></ul><p><strong>Remaining Challenges:</strong></p><ul><li>Different data models (Lens uses NFTs, Farcaster uses hubs)</li><li>Varying feature sets (Lens collects vs Farcaster frames)</li><li>Performance vs decentralization tradeoffs</li></ul><p><strong>The 2025+ Roadmap:</strong></p><ul><li>Universal social graph bridges</li><li>Cross-chain follows and interactions</li><li>Unified notifications across all platforms</li><li>Interoperable content monetization</li></ul><p>Think email—it doesn't matter if you use Gmail or Outlook, you can still communicate. That's where Web3 social is heading.</p>"
+			},
+			"ai_integration": {
+				"title": "AI and Web3 Social",
+				"content": "<p>AI is transforming Web3 social in powerful ways:</p><p><strong>1. AI Agents as Social Participants:</strong></p><ul><li>Autonomous AI agents with wallet addresses posting on social</li><li>AI curators that recommend personalized content</li><li>Chatbots that engage meaningfully, not spam</li></ul><p><strong>2. Content Creation Assistance:</strong></p><ul><li>AI helps creators produce more, better content</li><li>Generate images, edit videos, write drafts</li><li>But—the creator's voice and strategy remain human</li></ul><p><strong>3. Discovery and Curation:</strong></p><ul><li>AI-powered feeds that learn your interests</li><li>Smarter than simple chronological or algorithmic feeds</li><li>User-controlled—you choose your AI curator</li></ul><p><strong>4. Moderation:</strong></p><ul><li>AI helps flag spam, scams, and abuse</li><li>Community-trained models, not corporate black boxes</li><li>Transparent and appealable</li></ul><p><strong>5. Verification and Trust:</strong></p><ul><li>AI helps verify humans vs bots</li><li>Proof-of-personhood integrated with social</li><li>Reputation scoring based on on-chain behavior</li></ul><p><strong>The Balance:</strong></p><p>Web3 social + AI could be incredible or dystopian. The key difference from Web2:</p><ul><li><strong>User control:</strong> You choose your AI tools, not forced by platform</li><li><strong>Open source:</strong> AI models can be audited</li><li><strong>Ownership:</strong> Your data trains your AI, not someone else's</li></ul><p>Imagine: An AI assistant that knows your interests (from your on-chain activity), curates your feed, helps you create content, and manages your monetization—but you own it, not Meta or Twitter.</p><p>That's the future being built right now.</p>"
+			}
+		}
+	},
+
+	"glossary": {
+		"social_graph": {
+			"term": "Social Graph",
+			"definition": "The network of connections between users on a social platform. In Web3, your social graph is portable and owned by you, not the platform."
+		},
+		"composable": {
+			"term": "Composable",
+			"definition": "The ability for different applications and protocols to work together seamlessly. A composable social graph means your followers work across all apps built on that protocol."
+		},
+		"social_nft": {
+			"term": "Social NFT",
+			"definition": "NFTs representing social interactions like follows, collects, or memberships. Enables portable social relationships and monetization."
+		},
+		"social_fi": {
+			"term": "SocialFi",
+			"definition": "The intersection of social media and finance. Monetizing social activity through tokens, NFTs, tips, and subscriptions on blockchain."
+		},
+		"creator_economy": {
+			"term": "Creator Economy",
+			"definition": "The ecosystem where creators monetize their content and audience directly, without platform intermediaries. Web3 supercharges this with NFTs and tokens."
+		},
+		"frames": {
+			"term": "Frames",
+			"definition": "Interactive mini-apps embedded in Farcaster posts. Users can mint NFTs, swap tokens, vote, or play games without leaving their feed."
+		},
+		"wallet_messaging": {
+			"term": "Wallet-to-Wallet Messaging",
+			"definition": "Direct communication between blockchain addresses without phone numbers or emails. Typically end-to-end encrypted and decentralized."
+		},
+		"decentralized_identity": {
+			"term": "Decentralized Identity",
+			"definition": "A self-owned digital identity not controlled by any company. Usually tied to your wallet address or blockchain-based identifier."
+		},
+		"attestations": {
+			"term": "Attestations",
+			"definition": "Verifiable credentials or claims about a user, stored on-chain. Used for reputation, achievements, skills, and trust signals."
+		},
+		"content_nft": {
+			"term": "Content NFT",
+			"definition": "An NFT representing ownership or collectibility of content (article, video, post). Enables new monetization and permanence models."
+		}
+	}
+}

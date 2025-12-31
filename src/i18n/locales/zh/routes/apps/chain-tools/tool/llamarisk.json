@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "LlamaRisk - DeFi风险评估",
+		"description": "LlamaRisk为DeFi协议提供独立风险分析。资产风险评估、参数建议和安全研究。",
+		"keywords": "LlamaRisk, DeFi风险, 风险评估, 资产分析, Aave, Curve, 协议安全"
+	},
+	"overview": "LlamaRisk是一个专注于DeFi协议的独立风险评估团队。他们分析抵押品资产，提供参数建议，并发布协议风险研究。\n\n最初以Curve和Aave风险工作闻名，LlamaRisk评估新资产上架，识别协议参数中的风险，并提供持续监控。他们的评估帮助治理做出明智决策。\n\nLlamaRisk在Substack上发布详细报告，涵盖稳定币风险、抵押品分析和DeFi安全话题。他们是主要DeFi治理流程的可信顾问。",
+	"features": {
+		"1": {
+			"title": "资产风险分析",
+			"description": "抵押品评估"
+		},
+		"2": {
+			"title": "参数建议",
+			"description": "协议设置"
+		},
+		"3": {
+			"title": "公开研究",
+			"description": "发布报告"
+		},
+		"4": {
+			"title": "治理支持",
+			"description": "知情决策"
+		},
+		"5": {
+			"title": "稳定币分析",
+			"description": "脱钩风险评估"
+		},
+		"6": {
+			"title": "独立性",
+			"description": "无偏见分析"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "资产评估",
+			"description": "新上架分析"
+		},
+		"2": {
+			"title": "治理",
+			"description": "知情投票"
+		},
+		"3": {
+			"title": "风险研究",
+			"description": "学习报告"
+		},
+		"4": {
+			"title": "协议团队",
+			"description": "风险顾问"
+		},
+		"5": {
+			"title": "尽职调查",
+			"description": "理解风险"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "LlamaRisk做什么？",
+			"answer": "LlamaRisk评估DeFi协议中的风险。他们分析抵押品资产，推荐参数（贷款价值比、清算阈值），并发布研究。他们帮助治理做出更安全的决策。"
+		},
+		"2": {
+			"question": "哪些协议使用LlamaRisk？",
+			"answer": "LlamaRisk与包括Aave和Curve在内的主要协议合作。他们已分析数百种资产的上架决策。他们的建议影响数十亿TVL。"
+		},
+		"3": {
+			"question": "如何阅读他们的研究？",
+			"answer": "LlamaRisk在Substack（cryptorisks.substack.com）上发布。报告涵盖稳定币风险、资产分析和DeFi安全话题。免费阅读，对理解协议风险很有价值。"
+		},
+		"4": {
+			"question": "LlamaRisk与Gauntlet有什么不同？",
+			"answer": "两者都做DeFi风险工作。Gauntlet专注于基于模拟的参数优化。LlamaRisk做定性资产分析和研究。不同的方法——许多协议同时使用两者。"
+		},
+		"5": {
+			"question": "可以聘请LlamaRisk吗？",
+			"answer": "LlamaRisk接受协议风险顾问的委托。联系他们获取定制分析。他们的大部分研究是通过治理拨款为主要DAO完成的。"
+		}
+	},
+	"cta": {
+		"ready": "准备好理解DeFi风险了吗？",
+		"button": "阅读LlamaRisk",
+		"note": "独立风险分析"
+	}
+}

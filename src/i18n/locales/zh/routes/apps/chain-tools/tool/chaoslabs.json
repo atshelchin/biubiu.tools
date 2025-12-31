@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Chaos Labs - DeFi风险模拟",
+		"description": "Chaos Labs为DeFi协议提供风险模拟和参数优化。基于代理的建模使协议更安全、更高效。",
+		"keywords": "Chaos Labs, DeFi风险, 模拟, 参数优化, Aave, GMX, 风险管理"
+	},
+	"overview": "Chaos Labs是一个DeFi风险模拟平台，帮助协议优化参数和管理风险。他们的基于代理模拟在复杂市场条件下建模，以找到安全配置。\n\nChaos Labs与包括Aave、GMX、dYdX和Uniswap在内的主要协议合作。他们提供参数建议、风险仪表板和持续监控。他们的模型帮助防止清算级联和破产。\n\n在该领域快速增长，Chaos Labs筹集了大量资金以扩展其模拟能力。他们正在成为DeFi风险基础设施的关键参与者，与Gauntlet并驾齐驱。",
+	"features": {
+		"1": {
+			"title": "基于代理模拟",
+			"description": "复杂建模"
+		},
+		"2": {
+			"title": "参数优化",
+			"description": "安全+高效"
+		},
+		"3": {
+			"title": "风险仪表板",
+			"description": "实时监控"
+		},
+		"4": {
+			"title": "预言机",
+			"description": "风险预言机"
+		},
+		"5": {
+			"title": "主要协议",
+			"description": "顶级DeFi客户"
+		},
+		"6": {
+			"title": "研究",
+			"description": "发布分析"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "协议团队",
+			"description": "风险优化"
+		},
+		"2": {
+			"title": "治理",
+			"description": "参数决策"
+		},
+		"3": {
+			"title": "监控",
+			"description": "风险仪表板"
+		},
+		"4": {
+			"title": "研究",
+			"description": "学习模型"
+		},
+		"5": {
+			"title": "尽职调查",
+			"description": "协议评估"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Chaos Labs做什么？",
+			"answer": "Chaos Labs模拟DeFi协议在各种市场条件下的行为。他们推荐参数、监控风险，并帮助协议避免破产。把它想象成DeFi的压力测试。"
+		},
+		"2": {
+			"question": "哪些协议使用Chaos Labs？",
+			"answer": "主要协议包括Aave、GMX、dYdX、Uniswap等。他们正在快速扩大客户基础。查看治理论坛了解他们的建议。"
+		},
+		"3": {
+			"question": "Chaos Labs vs Gauntlet？",
+			"answer": "两者做类似的工作——DeFi风险模拟和参数优化。Gauntlet更成熟；Chaos Labs增长迅速。他们竞争协议关系。两者都受到尊重。"
+		},
+		"4": {
+			"question": "可以使用他们的工具吗？",
+			"answer": "Chaos Labs主要直接与协议合作。一些风险仪表板是公开的。他们的研究和建议发布在治理论坛上。不是面向消费者的产品。"
+		},
+		"5": {
+			"question": "什么是风险预言机？",
+			"answer": "Chaos Labs正在开发链上风险预言机——提供风险参数的智能合约。协议可以根据市场条件自动调整设置。创新的基础设施。"
+		}
+	},
+	"cta": {
+		"ready": "准备好风险模拟了吗？",
+		"button": "探索Chaos Labs",
+		"note": "DeFi风险模拟"
+	}
+}

@@ -172,6 +172,18 @@ import { axelarDetail } from './axelar';
 import { multichainDetail } from './multichain';
 import { debridgeDetail } from './debridge';
 import { superbridgeDetail } from './superbridge';
+import { trailofbitsDetail } from './trailofbits';
+import { slitherDetail } from './slither';
+import { mythrilDetail } from './mythril';
+import { spearbitDetail } from './spearbit';
+import { code4renaDetail } from './code4rena';
+import { sherlockDetail } from './sherlock';
+import { nexusmutualDetail } from './nexusmutual';
+import { insuraceDetail } from './insurace';
+import { llamariskDetail } from './llamarisk';
+import { gauntletDetail } from './gauntlet';
+import { chaoslabsDetail } from './chaoslabs';
+import { wagmiDetail } from './wagmi';
 
 /**
  * All tool details mapped by tool ID
@@ -340,7 +352,19 @@ export const toolDetails: Record<string, ToolDetail> = {
 	axelar: axelarDetail,
 	multichain: multichainDetail,
 	debridge: debridgeDetail,
-	superbridge: superbridgeDetail
+	superbridge: superbridgeDetail,
+	trailofbits: trailofbitsDetail,
+	slither: slitherDetail,
+	mythril: mythrilDetail,
+	spearbit: spearbitDetail,
+	code4rena: code4renaDetail,
+	sherlock: sherlockDetail,
+	nexusmutual: nexusmutualDetail,
+	insurace: insuraceDetail,
+	llamarisk: llamariskDetail,
+	gauntlet: gauntletDetail,
+	chaoslabs: chaoslabsDetail,
+	wagmi: wagmiDetail
 };
 
 /**

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "wagmi - React以太坊Hooks",
+		"description": "wagmi为以太坊开发提供React hooks。连接钱包、读取合约、发送交易，使用类型安全、直观的API。",
+		"keywords": "wagmi, React hooks, 以太坊, Web3开发, viem, 钱包连接, 智能合约"
+	},
+	"overview": "wagmi是现代以太坊开发的React库。它提供钱包连接、合约交互和区块链数据的hooks——全部采用TypeScript优先设计和出色的开发体验。\n\n构建在viem（现代ethers.js替代方案）之上，wagmi提供类型安全的合约交互、自动请求去重和内置缓存。这是大多数新React dApp使用的Web3功能库。\n\nwagmi与RainbowKit等钱包连接器无缝集成，支持所有主流钱包。API直观：useAccount用于连接，useContractRead用于查询，usePrepareContractWrite用于交易。",
+	"features": {
+		"1": {
+			"title": "React Hooks",
+			"description": "直观API"
+		},
+		"2": {
+			"title": "TypeScript优先",
+			"description": "类型安全合约"
+		},
+		"3": {
+			"title": "基于Viem",
+			"description": "现代基础"
+		},
+		"4": {
+			"title": "钱包支持",
+			"description": "所有主流钱包"
+		},
+		"5": {
+			"title": "缓存",
+			"description": "优化请求"
+		},
+		"6": {
+			"title": "RainbowKit",
+			"description": "顶级UI"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "dApp开发",
+			"description": "构建React dApp"
+		},
+		"2": {
+			"title": "钱包连接",
+			"description": "多钱包支持"
+		},
+		"3": {
+			"title": "合约交互",
+			"description": "读取和写入"
+		},
+		"4": {
+			"title": "交易管理",
+			"description": "发送和追踪"
+		},
+		"5": {
+			"title": "区块链数据",
+			"description": "余额、ENS等"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "wagmi是什么？",
+			"answer": "wagmi是以太坊的React库。它提供useAccount、useBalance、useContractRead和usePrepareContractWrite等hooks。可以把它想象成为React应用添加Web3的标准方式。"
+		},
+		"2": {
+			"question": "wagmi vs ethers.js？",
+			"answer": "wagmi是构建在viem上的React特定hooks。ethers.js是通用库。对于React dApp，wagmi更好——hooks、缓存、TypeScript支持。ethers.js可以在任何地方使用但缺少React集成。"
+		},
+		"3": {
+			"question": "viem是什么？",
+			"answer": "viem是现代ethers.js替代方案——wagmi构建在其上的底层以太坊库。更小、更快、更模块化、更好的TypeScript。wagmi在viem之上提供React层。"
+		},
+		"4": {
+			"question": "如何开始？",
+			"answer": "安装wagmi并配置提供者。使用useAccount进行钱包连接，useContractRead进行查询。wagmi.sh的文档有出色的教程。大多数新React dApp从这里开始。"
+		},
+		"5": {
+			"question": "RainbowKit是什么？",
+			"answer": "RainbowKit是为wagmi构建的钱包连接UI库。开箱即用的漂亮连接按钮和钱包模态框。wagmi处理逻辑，RainbowKit处理UI。它们完美配合。"
+		}
+	},
+	"cta": {
+		"ready": "准备好用wagmi构建了吗？",
+		"button": "开始使用",
+		"note": "以太坊React hooks"
+	}
+}

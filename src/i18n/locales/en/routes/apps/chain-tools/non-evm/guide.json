@@ -1,0 +1,150 @@
+{
+	"title": "Non-EVM Blockchains Complete Guide",
+	"subtitle": "Explore Alternative Blockchain Architectures Beyond Ethereum",
+
+	"sections": {
+		"intro": {
+			"title": "Beyond EVM: The Alternative Blockchain Universe",
+			"content": "<p>While Ethereum and its EVM-compatible chains dominate the smart contract landscape, a diverse ecosystem of non-EVM blockchains has emerged, each offering unique architectural innovations and trade-offs.</p><p>Non-EVM blockchains aren't just different—they often fundamentally rethink how blockchains should work. <strong>Solana</strong> pioneered parallel transaction execution and achieved 50,000+ TPS. <strong>Cosmos</strong> created the Internet of Blockchains with IBC, enabling sovereign app-chains to communicate seamlessly. <strong>Sui and Aptos</strong> introduced object-centric programming models with the Move language, offering better safety guarantees than Solidity.</p><p>This guide explores the major non-EVM ecosystems, their unique features, development paradigms, and when you might choose them over EVM chains.</p>"
+		},
+
+		"solana": {
+			"title": "Solana: High-Performance Execution",
+			"content": "<p>Solana represents one of the most ambitious attempts to build a high-performance blockchain from scratch. Instead of accepting the sequential transaction model that limits most chains, Solana's architecture enables parallel execution and consistently achieves thousands of transactions per second.</p>",
+			"architecture": {
+				"title": "Solana's Architecture Innovations",
+				"content": "<p><strong>Proof of History (PoH):</strong> Solana's breakthrough innovation is PoH—a cryptographic clock that proves time has passed between events. This eliminates the need for nodes to communicate about time, dramatically reducing consensus overhead.</p><p><strong>Parallel Execution:</strong> Solana requires transactions to specify which accounts they'll read/write in advance. This enables the Sealevel runtime to execute non-conflicting transactions in parallel across multiple cores.</p><p><strong>Gulf Stream:</strong> Transactions are forwarded to upcoming validators before the current block is finalized, reducing confirmation time to 400ms.</p><p><strong>Turbine:</strong> Block propagation protocol that breaks data into smaller packets, similar to BitTorrent, enabling efficient distribution to thousands of validators.</p><p><strong>The Trade-off:</strong> Solana's performance comes at the cost of higher hardware requirements (validators need powerful machines) and occasional network congestion during extreme load.</p>"
+			},
+			"development": {
+				"title": "Building on Solana",
+				"content": "<p>Solana programs (smart contracts) are written in <strong>Rust</strong> or <strong>C/C++</strong> and compiled to BPF bytecode. The development model differs significantly from EVM:</p><p><strong>Account Model:</strong> Everything in Solana is an account—programs (immutable code), data accounts (mutable state), and system accounts. Programs are stateless; they operate on data accounts passed to them.</p><p><strong>Rent Model:</strong> Accounts must maintain a minimum balance (rent) proportional to their data size, or be \"rent-exempt\" with 2+ years of rent prepaid.</p><p><strong>Program Derived Addresses (PDAs):</strong> Deterministic addresses derived from program ID and seeds, enabling programs to \"own\" accounts without private keys.</p><p><strong>Development Tools:</strong></p><ul><li><strong>Anchor:</strong> Solana's Hardhat equivalent—framework for building programs</li><li><strong>Solana CLI:</strong> Command-line tool for deployment and interaction</li><li><strong>Phantom/Solflare:</strong> Wallet browsers for testing dApps</li></ul>"
+			},
+			"ecosystem": {
+				"title": "Solana Ecosystem Highlights",
+				"content": "<p><strong>DeFi:</strong></p><ul><li><strong>Jupiter:</strong> Leading DEX aggregator routing trades across all Solana AMMs</li><li><strong>Raydium:</strong> First AMM on Solana, integrated with OpenBook orderbook</li><li><strong>Drift Protocol:</strong> Advanced perpetuals platform with 100x leverage</li><li><strong>Marinade Finance:</strong> Liquid staking protocol (stake SOL, receive mSOL)</li></ul><p><strong>NFTs:</strong></p><ul><li><strong>Magic Eden:</strong> Largest Solana NFT marketplace (now multi-chain)</li><li><strong>Tensor:</strong> Pro NFT trading platform with advanced features</li></ul><p><strong>Infrastructure:</strong></p><ul><li><strong>Helius:</strong> Premium RPC nodes and developer APIs</li><li><strong>GenesysGo:</strong> High-performance RPC and data infrastructure</li></ul><p><strong>Why Developers Choose Solana:</strong> Low fees ($0.00025/tx), fast finality (400ms), composability within single transaction, growing ecosystem.</p>"
+			}
+		},
+
+		"cosmos": {
+			"title": "Cosmos: The Internet of Blockchains",
+			"content": "<p>Cosmos takes a fundamentally different approach from monolithic blockchains. Instead of building a single general-purpose chain, Cosmos provides tools to build <strong>application-specific blockchains</strong> that can communicate trustlessly via IBC (Inter-Blockchain Communication).</p>",
+			"ibc": {
+				"title": "IBC: Trustless Interchain Communication",
+				"content": "<p>IBC is the TCP/IP of blockchain—a standardized protocol for chains to send messages and tokens to each other without bridges or wrapped assets.</p><p><strong>How IBC Works:</strong></p><ol><li>Source chain locks tokens and emits a commitment proof</li><li>Relayers (anyone can run them) observe the proof and submit it to destination chain</li><li>Destination chain verifies the proof using light client of source chain</li><li>If valid, tokens are minted/unlocked on destination chain</li></ol><p><strong>IBC vs Bridges:</strong> Traditional bridges use trusted validators or multisigs. IBC uses light clients—mathematical verification instead of social trust. When you transfer ATOM from Cosmos Hub to Osmosis via IBC, you're getting <strong>native ATOM</strong>, not wrapped tokens.</p><p><strong>IBC Capabilities:</strong></p><ul><li><strong>Token transfers:</strong> Move any token between IBC-enabled chains</li><li><strong>Interchain accounts:</strong> Control accounts on other chains</li><li><strong>Interchain queries:</strong> Read state from other chains</li><li><strong>Interchain security:</strong> Share validator sets across chains</li></ul>"
+			},
+			"appchains": {
+				"title": "Application-Specific Blockchains",
+				"content": "<p>In Cosmos, each major application runs its own blockchain with custom rules, instead of competing for resources on a shared chain.</p><p><strong>Benefits of App-Chains:</strong></p><ul><li><strong>Sovereignty:</strong> Control your own governance, token economics, upgrades</li><li><strong>Performance:</strong> All block space is yours—no competition</li><li><strong>Customization:</strong> Modify consensus, state machine, execution as needed</li><li><strong>Sustainability:</strong> Capture MEV and fees instead of paying rent to L1</li></ul><p><strong>Notable App-Chains:</strong></p><ul><li><strong>Osmosis:</strong> DEX chain with custom AMM logic in the protocol</li><li><strong>dYdX V4:</strong> Orderbook derivatives exchange with custom matching engine</li><li><strong>Injective:</strong> Trading-optimized chain with on-chain orderbook</li><li><strong>Celestia:</strong> Modular data availability for rollups</li></ul><p><strong>Cosmos SDK:</strong> Building a chain is surprisingly simple with Cosmos SDK—a modular framework providing consensus (CometBFT), staking, governance, and IBC out-of-the-box. Developers add custom modules for app logic.</p>"
+			},
+			"staking": {
+				"title": "Cosmos Staking Model",
+				"content": "<p>Most Cosmos chains use <strong>delegated Proof-of-Stake</strong> with similar characteristics:</p><p><strong>Validator Selection:</strong> Typically 100-175 validators (chain-dependent), chosen by stake weight. Token holders delegate to validators who secure the network.</p><p><strong>Staking Rewards:</strong> 7-20% APR depending on chain inflation and staking ratio. Rewards come from inflation + transaction fees.</p><p><strong>Unbonding Period:</strong> When you unstake, tokens are locked for 14-21 days (varies by chain). This prevents \"nothing at stake\" attacks.</p><p><strong>Slashing:</strong> Validators can be slashed (lose stake) for:</p><ul><li><strong>Double-signing:</strong> Signing conflicting blocks (5-10% slash)</li><li><strong>Downtime:</strong> Being offline too long (0.01-1% slash)</li></ul><p><strong>Liquid Staking:</strong> Protocols like <strong>Stride</strong> let you stake while maintaining liquidity. Stake ATOM → receive stATOM → use stATOM in DeFi while earning staking rewards.</p>"
+			}
+		},
+
+		"move_chains": {
+			"title": "Move-Based Chains: Sui and Aptos",
+			"content": "<p>Sui and Aptos emerged from Meta's abandoned Diem (Libra) project, both using the <strong>Move programming language</strong>—designed from scratch for secure asset management and parallel execution.</p>",
+			"sui": {
+				"title": "Sui: Object-Centric Blockchain",
+				"content": "<p>Sui's architecture centers on <strong>objects</strong> rather than accounts. Every asset and piece of state is an object with a unique ID, ownership, and type.</p><p><strong>Object Ownership Models:</strong></p><ul><li><strong>Owned objects:</strong> Controlled by a single address (most common)</li><li><strong>Shared objects:</strong> Can be modified by multiple parties (requires consensus)</li><li><strong>Immutable objects:</strong> Read-only, no consensus needed</li></ul><p><strong>Parallel Execution:</strong> Transactions touching independent owned objects execute in parallel without consensus. Only transactions touching shared objects require ordering.</p><p><strong>Example:</strong> 10,000 users transferring owned NFTs to different addresses = all execute in parallel. 10,000 users trading on a shared orderbook = sequential processing needed.</p><p><strong>Move on Sui:</strong> Sui's Move dialect emphasizes objects. Every function takes objects as parameters, modifies them, and returns updated versions. The compiler proves memory safety and prevents common bugs (double-spending, reentrancy).</p><p><strong>Ecosystem:</strong></p><ul><li><strong>Turbos Finance:</strong> Concentrated liquidity DEX (Uniswap V3 style)</li><li><strong>Cetus Protocol:</strong> Major AMM with liquidity pools</li><li><strong>Sui Wallet:</strong> Official browser wallet</li></ul>"
+			},
+			"aptos": {
+				"title": "Aptos: Parallel Execution Powerhouse",
+				"content": "<p>Aptos shares Move language with Sui but takes a different architectural approach, focusing on maximum parallel transaction execution through <strong>Block-STM</strong>.</p><p><strong>Block-STM:</strong> Optimistic parallel execution engine. Transactions are executed speculatively in parallel, then validated. If conflicts are detected (transaction B read data that transaction A modified), conflicting transactions re-execute with correct ordering.</p><p><strong>Result:</strong> Aptos achieved 160,000+ TPS in controlled tests by intelligently parallelizing execution without requiring developers to specify dependencies upfront.</p><p><strong>Account Model:</strong> Unlike Sui's objects, Aptos uses an account-centric model similar to Ethereum, but with Move's safety guarantees.</p><p><strong>Move on Aptos:</strong></p><ul><li><strong>Resources:</strong> Assets that can't be copied or dropped, only moved</li><li><strong>Modules:</strong> Smart contract code stored in accounts</li><li><strong>No reentrancy:</strong> Language design prevents reentrancy attacks</li><li><strong>Formal verification:</strong> Move prover can mathematically verify contract properties</li></ul><p><strong>Ecosystem:</strong></p><ul><li><strong>LiquidSwap:</strong> Leading AMM on Aptos</li><li><strong>Petra Wallet:</strong> Official Aptos wallet</li><li><strong>Panora:</strong> Cross-chain DEX aggregator</li></ul>"
+			}
+		},
+
+		"bitcoin_ecosystem": {
+			"title": "Bitcoin Ecosystem: Beyond Digital Gold",
+			"content": "<p>Bitcoin's role is evolving beyond store-of-value. While Bitcoin's base layer remains conservative (by design), new protocols and layers are unlocking programmability and scalability.</p>",
+			"ordinals": {
+				"title": "Ordinals and Bitcoin NFTs",
+				"content": "<p><strong>Ordinals Theory:</strong> A numbering scheme for individual satoshis (smallest Bitcoin unit). Each sat can be tracked across transactions, creating \"digital artifacts\" by inscribing data directly on the Bitcoin blockchain.</p><p><strong>Inscriptions:</strong> Similar to NFTs, inscriptions store data (images, text, code) in Bitcoin transaction witness data. Unlike NFTs on Ethereum (which store URLs), inscriptions contain the <strong>actual data</strong> on Bitcoin's blockchain.</p><p><strong>BRC-20:</strong> Experimental token standard using Ordinals inscriptions. Not smart contracts—just JSON data inscribed that indexers interpret as token balances.</p><p><strong>Controversy:</strong> Ordinals sparked debate in Bitcoin community. Critics argue they bloat the blockchain. Supporters note they increase miner revenue and demonstrate Bitcoin's programmability.</p>"
+			},
+			"lightning": {
+				"title": "Lightning Network: Bitcoin's Payment Layer",
+				"content": "<p>Lightning Network is Bitcoin's Layer 2 for fast, cheap payments. Instead of recording every transaction on-chain, Lightning uses <strong>payment channels</strong>.</p><p><strong>How Payment Channels Work:</strong></p><ol><li>Two parties open a channel by locking Bitcoin in a multisig</li><li>They can transact unlimited times off-chain, updating balances</li><li>Either party can close the channel, publishing final state on-chain</li></ol><p><strong>Routing:</strong> Don't have a direct channel to someone? Lightning routes payments through intermediary nodes. If A→B→C channels exist, A can pay C via B.</p><p><strong>Use Cases:</strong></p><ul><li><strong>Micropayments:</strong> Stream sats for content, tips, pay-per-API-call</li><li><strong>Instant settlement:</strong> Payments confirm in milliseconds vs 10+ minutes on-chain</li><li><strong>Privacy:</strong> Intermediate nodes don't know payment source/destination</li></ul><p><strong>Adoption:</strong> 5,000+ Bitcoin in Lightning channels, used by Strike, Cash App, and El Salvador's Chivo wallet.</p>"
+			},
+			"bitcoin_l2s": {
+				"title": "Bitcoin L2s: Smart Contracts on Bitcoin",
+				"content": "<p><strong>Stacks:</strong> Layer 2 that brings smart contracts to Bitcoin while settling on Bitcoin's L1 for security.</p><ul><li><strong>Clarity Language:</strong> Decidable smart contract language (you can predict execution before running)</li><li><strong>Proof of Transfer:</strong> Miners commit Bitcoin to mine Stacks blocks</li><li><strong>Bitcoin finality:</strong> Stacks transactions settle on Bitcoin</li></ul><p><strong>Rootstock (RSK):</strong> EVM-compatible sidechain secured by Bitcoin miners via merge-mining.</p><ul><li><strong>Write Solidity, deploy on Bitcoin-secured chain</strong></li><li><strong>2-way peg:</strong> Lock BTC, receive RBTC 1:1</li><li><strong>Merge-mining:</strong> Bitcoin miners can mine RSK simultaneously at minimal extra cost</li></ul><p><strong>Future Developments:</strong> BitVM (Bitcoin Virtual Machine), Ark protocol (improved payment pools), and Taproot Assets (token issuance) are expanding Bitcoin's capabilities.</p>"
+			}
+		},
+
+		"ton": {
+			"title": "TON: The Telegram Blockchain",
+			"content": "<p>TON (The Open Network) was originally developed by Telegram before being handed to the community. It's designed for <strong>mass adoption</strong> through Telegram's 800M+ user base.</p><p><strong>Architecture:</strong></p><ul><li><strong>Infinite Sharding:</strong> TON can split into 2^60 shardchains, each processing transactions in parallel</li><li><strong>Instant finality:</strong> 5-second block time with immediate confirmation</li><li><strong>Workchains:</strong> Heterogeneous blockchain architecture—different workchains can have different rules</li></ul><p><strong>Telegram Integration:</strong></p><ul><li><strong>TON Wallets in Telegram:</strong> Non-custodial wallets built into Telegram</li><li><strong>Username NFTs:</strong> Own your @username as an NFT</li><li><strong>Telegram bots:</strong> Accept TON payments, distribute tokens, launch mini-apps</li></ul><p><strong>Development:</strong></p><ul><li><strong>FunC language:</strong> Low-level language for TON smart contracts</li><li><strong>Tact language:</strong> Higher-level, type-safe alternative to FunC</li></ul><p><strong>Ecosystem:</strong></p><ul><li><strong>STON.fi & DeDust:</strong> Leading DEXs</li><li><strong>Tonkeeper:</strong> Popular non-custodial wallet</li><li><strong>TON DNS:</strong> Decentralized domain names (.ton)</li></ul><p><strong>Use Case:</strong> If you're building a consumer app targeting Telegram users, TON offers unmatched distribution.</p>"
+		},
+
+		"near_protocol": {
+			"title": "NEAR Protocol: Sharded Layer 1",
+			"content": "<p>NEAR Protocol implements <strong>Nightshade sharding</strong>—splitting the network into multiple parallel shards that process transactions concurrently.</p><p><strong>Nightshade Sharding:</strong></p><ul><li>Validators are assigned to validate specific shards</li><li>Shards produce \"chunks\" that are combined into blocks</li><li>Cross-shard messages enable shard communication</li><li>Dynamic resharding adjusts capacity based on usage</li></ul><p><strong>Developer Experience:</strong></p><ul><li><strong>Rust &amp; AssemblyScript:</strong> Write contracts in familiar languages</li><li><strong>Human-readable accounts:</strong> alice.near instead of 0x123...</li><li><strong>Progressive security:</strong> Limited access keys for apps (can't drain your wallet)</li></ul><p><strong>NEAR Features:</strong></p><ul><li><strong>Rainbow Bridge:</strong> Trustless Ethereum-NEAR bridge</li><li><strong>Aurora:</strong> EVM compatible layer on NEAR</li><li><strong>BOS (Blockchain Operating System):</strong> Composable frontend components</li></ul><p><strong>Ecosystem:</strong></p><ul><li><strong>Ref Finance:</strong> Multi-pool AMM DEX</li><li><strong>Burrow:</strong> Lending/borrowing protocol</li><li><strong>Paras:</strong> NFT marketplace</li></ul>"
+		},
+
+		"polkadot_substrate": {
+			"title": "Polkadot: Shared Security via Parachains",
+			"content": "<p>Polkadot's architecture features a <strong>Relay Chain</strong> providing security to multiple <strong>parachains</strong> that can have completely different functionality.</p><p><strong>How It Works:</strong></p><ul><li><strong>Relay Chain:</strong> Central chain validating parachain state transitions</li><li><strong>Parachains:</strong> Independent chains with own logic, secured by Relay Chain</li><li><strong>Collators:</strong> Produce parachain blocks</li><li><strong>Validators:</strong> Validate all parachain blocks and provide security</li></ul><p><strong>Parachain Slots:</strong> Limited number of slots auctioned via candle auction. Projects lock DOT for 96 weeks to win a slot. This creates strong economic alignment.</p><p><strong>Substrate Framework:</strong> Build a blockchain in <strong>weeks, not years</strong>. Substrate provides modular components (consensus, networking, database) that you assemble like LEGO blocks.</p><p><strong>Cross-chain messaging (XCM):</strong> Parachains communicate via standardized message format—similar to IBC but more programmable.</p><p><strong>Notable Parachains:</strong></p><ul><li><strong>Acala:</strong> DeFi hub with DEX and stablecoin</li><li><strong>Moonbeam:</strong> EVM-compatible smart contract platform</li><li><strong>Astar:</strong> Multi-VM supporting EVM + WASM</li></ul><p><strong>Kusama:</strong> Polkadot's \"canary network\"—experimental features launch here first with real economic value.</p>"
+		},
+
+		"choosing_chain": {
+			"title": "Choosing the Right Non-EVM Chain",
+			"content": "<p>With so many alternatives, how do you choose? Consider these factors based on your use case.</p>",
+			"performance": {
+				"title": "Performance Requirements",
+				"content": "<p><strong>Need extreme throughput?</strong> <br>→ <strong>Solana</strong> or <strong>Sui</strong> (50,000+ TPS, parallel execution)</p><p><strong>Need instant finality?</strong> <br>→ <strong>TON</strong> (5 seconds) or <strong>Solana</strong> (400ms)</p><p><strong>Building a high-frequency trading app?</strong> <br>→ <strong>Injective</strong> (Cosmos) or <strong>Drift</strong> (Solana)</p><p><strong>Need consistent, predictable performance?</strong> <br>→ <strong>Cosmos app-chain</strong> (no competition for blockspace)</p><p><strong>Scaling strategy:</strong></p><ul><li><strong>Vertical scaling:</strong> Solana, Sui, Aptos (faster single chain)</li><li><strong>Horizontal scaling:</strong> NEAR, TON (sharding), Polkadot (parachains)</li><li><strong>Application-specific:</strong> Cosmos (dedicated chain per app)</li></ul>"
+			},
+			"developer_experience": {
+				"title": "Developer Experience",
+				"content": "<p><strong>Coming from Web2 with Rust experience?</strong> <br>→ <strong>Solana</strong> or <strong>NEAR</strong> (native Rust development)</p><p><strong>Want maximum security guarantees?</strong> <br>→ <strong>Move chains</strong> (Sui/Aptos) (formal verification, no reentrancy)</p><p><strong>Need to build a custom blockchain?</strong> <br>→ <strong>Cosmos SDK</strong> or <strong>Substrate</strong> (modular frameworks)</p><p><strong>Targeting Telegram users?</strong> <br>→ <strong>TON</strong> (built-in distribution to 800M users)</p><p><strong>Want familiar EVM tooling?</strong> <br>→ <strong>Aurora</strong> (NEAR), <strong>Moonbeam</strong> (Polkadot), <strong>RSK</strong> (Bitcoin)</p><p><strong>Learning curve:</strong></p><ul><li><strong>Easiest:</strong> Cosmos SDK (Go), NEAR (Rust/AS), TON bots (JavaScript)</li><li><strong>Medium:</strong> Solana (Rust + new paradigms), Substrate (Rust + blockchain architecture)</li><li><strong>Hardest:</strong> Move (new language + new paradigms), Polkadot parachains (complex architecture)</li></ul>"
+			},
+			"ecosystem_maturity": {
+				"title": "Ecosystem Maturity",
+				"content": "<p><strong>Most Mature Ecosystems:</strong></p><ul><li><strong>Solana:</strong> Extensive DeFi, established NFT market, robust infrastructure</li><li><strong>Cosmos:</strong> 50+ IBC-connected chains, proven app-chain model</li><li><strong>Polkadot:</strong> 40+ parachains, mature tooling</li></ul><p><strong>Rapidly Growing:</strong></p><ul><li><strong>Sui &amp; Aptos:</strong> Strong VC backing, growing developer activity</li><li><strong>TON:</strong> Explosive growth through Telegram integration</li></ul><p><strong>Niche/Specialized:</strong></p><ul><li><strong>Bitcoin L2s:</strong> Early stage but unique security model</li><li><strong>NEAR:</strong> Solid tech, smaller ecosystem</li></ul><p><strong>Red Flags:</strong></p><ul><li>No active developers or commits</li><li>Centralized validator sets</li><li>Unrealistic performance claims (benchmark vs real-world)</li><li>Lack of developer documentation</li></ul><p><strong>The Multi-Chain Future:</strong> Don't think \"EVM vs non-EVM\" or \"Solana vs Cosmos.\" The future is multi-chain. Build where your users are, and use bridges (LayerZero, Wormhole, Axelar) to connect ecosystems.</p>"
+			}
+		}
+	},
+
+	"glossary": {
+		"non_evm": {
+			"term": "Non-EVM",
+			"definition": "Blockchains that don't use the Ethereum Virtual Machine. They have different architectures, programming models, and often different performance characteristics than Ethereum and its L2s."
+		},
+		"parallel_execution": {
+			"term": "Parallel Execution",
+			"definition": "Processing multiple transactions simultaneously instead of sequentially. Chains like Solana, Sui, and Aptos can execute thousands of non-conflicting transactions in parallel across CPU cores."
+		},
+		"ibc": {
+			"term": "IBC (Inter-Blockchain Communication)",
+			"definition": "A protocol for trustless communication between blockchains in the Cosmos ecosystem. Uses light clients for verification instead of trusted bridges."
+		},
+		"app_chain": {
+			"term": "App-Chain",
+			"definition": "An application-specific blockchain optimized for a single use case (DEX, derivatives, gaming). Common in Cosmos where each major app runs its own sovereign chain."
+		},
+		"validator": {
+			"term": "Validator",
+			"definition": "A node that participates in consensus by proposing and validating blocks. In Proof-of-Stake systems, validators are chosen based on their stake amount."
+		},
+		"ordinals": {
+			"term": "Ordinals",
+			"definition": "A protocol for numbering individual satoshis (smallest Bitcoin unit), enabling NFT-like \"inscriptions\" to be created directly on Bitcoin's blockchain."
+		},
+		"inscription": {
+			"term": "Inscription",
+			"definition": "Data (images, text, code) permanently stored on Bitcoin's blockchain using the Ordinals protocol. Unlike NFTs, inscriptions contain the actual data on-chain."
+		},
+		"sharding": {
+			"term": "Sharding",
+			"definition": "Splitting a blockchain into multiple parallel chains (shards) that process transactions concurrently. Used by NEAR (Nightshade) and TON (infinite sharding) for horizontal scaling."
+		},
+		"parachain": {
+			"term": "Parachain",
+			"definition": "An independent blockchain in the Polkadot ecosystem that shares security with the Relay Chain. Parachains can have completely different functionality while benefiting from shared validators."
+		},
+		"account_abstraction": {
+			"term": "Account Abstraction",
+			"definition": "Flexible account models allowing programmable accounts, social recovery, gas payment in any token, and other UX improvements. Native to Aptos and Sui."
+		}
+	}
+}
