@@ -1,149 +1,149 @@
 {
 	"category_seo": {
-		"title": "Crypto Exchanges (CEX) - Trading Platforms | BiuBiu Tools",
-		"description": "Centralized cryptocurrency exchanges for trading. Compare exchange features, security, fees, and supported assets.",
-		"keywords": "",
+		"title": "암호화폐 거래소 (CEX) - 트레이딩 플랫폼 | BiuBiu Tools",
+		"description": "트레이딩을 위한 중앙화 암호화폐 거래소. 거래소 기능, 보안, 수수료 및 지원 자산을 비교하세요.",
+		"keywords": "암호화폐 거래소, cex, 트레이딩 플랫폼, 바이낸스, 코인베이스, 암호화폐 거래",
 		"faqs": [
 			{
-				"question": "Which exchanges are safest?",
-				"answer": "Coinbase and Kraken are well-regulated in the US. Binance has the most liquidity globally. Look for proof of reserves, regulatory compliance, and security track record."
+				"question": "가장 안전한 거래소는 무엇인가요?",
+				"answer": "Coinbase와 Kraken은 미국에서 잘 규제됩니다. Binance는 글로벌 유동성이 가장 큽니다. 준비금 증명, 규정 준수, 보안 실적을 확인하세요."
 			},
 			{
-				"question": "CEX vs DEX - which should I use?",
-				"answer": "CEX for fiat on/off ramps, advanced trading, and beginner-friendliness. DEX for self-custody, permissionless trading, and access to more tokens. Many use both."
+				"question": "CEX vs DEX - 어떤 것을 사용해야 하나요?",
+				"answer": "법정화폐 온/오프램프, 고급 트레이딩, 초보자 친화성은 CEX. 자기 보관, 무허가 트레이딩, 더 많은 토큰 접근은 DEX. 많은 사람들이 둘 다 사용합니다."
 			},
 			{
-				"question": "How do I secure my exchange account?",
-				"answer": "Enable 2FA (preferably hardware key), use unique passwords, whitelist withdrawal addresses, enable withdrawal delays, and don't keep large amounts on exchanges long-term."
+				"question": "거래소 계정을 어떻게 보호하나요?",
+				"answer": "2FA(가급적 하드웨어 키) 활성화, 고유한 비밀번호 사용, 출금 주소 화이트리스트 등록, 출금 지연 활성화, 장기간 거래소에 대량 자금을 보관하지 마세요."
 			}
 		]
 	},
 	"tools": {
+		"binance_cex": {
+			"description": "거래량 기준 세계 최대 암호화폐 거래소, 포괄적인 현물, 선물, 마진 거래 제공"
+		},
+		"coinbase_cex": {
+			"description": "미국 규제 거래소이자 나스닥 상장 기업, 보안과 초보자 친화적 인터페이스로 유명"
+		},
+		"okx_cex": {
+			"description": "현물, 파생상품, Web3 지갑을 제공하는 글로벌 거래소, 강력한 파생상품 거래량"
+		},
+		"bybit_cex": {
+			"description": "무기한 계약과 고레버리지 거래로 알려진 파생상품 중심 거래소"
+		},
+		"kraken_cex": {
+			"description": "준비금 증명과 강력한 규제 준수를 갖춘 보안 중심 미국 거래소"
+		},
+		"bitget_cex": {
+			"description": "카피 트레이딩 기능과 파생상품으로 알려진 거래소, 글로벌 입지 확대 중"
+		},
+		"kucoin_cex": {
+			"description": "광범위한 알트코인 상장, 트레이딩 봇, 수익 상품을 보유한 거래소"
+		},
+		"gateio_cex": {
+			"description": "조기 알트코인 상장, 스타트업 프로젝트, 포괄적인 거래 옵션을 특징으로 하는 거래소"
+		},
+		"htx_cex": {
+			"description": "주요 아시아 거래소(구 Huobi), 현물, 파생상품, 기관 서비스 제공"
+		},
+		"mexc_cex": {
+			"description": "빠른 신규 토큰 상장과 광범위한 알트코인 선택으로 알려진 거래소"
+		},
+		"deribit_cex": {
+			"description": "기관 및 전문 트레이더를 위한 선도적인 암호화폐 옵션 및 선물 거래소"
+		},
+		"bitfinex_cex": {
+			"description": "마진 거래, 대출 시장, 전문 거래 도구로 알려진 거래소"
+		},
+		"bitmex_cex": {
+			"description": "암호화폐 무기한 스왑의 선구자, 고레버리지 파생상품 거래 제공"
+		},
+		"upbit_cex": {
+			"description": "KRW 페어와 김치 프리미엄 기회로 알려진 한국 선도 거래소"
+		},
+		"bithumb_cex": {
+			"description": "강력한 현지 시장 입지와 KRW 거래 페어를 보유한 한국 주요 거래소"
+		},
+		"bitflyer_cex": {
+			"description": "일본 최대 거래소, 규제를 받으며 현지 금융법 준수"
+		},
+		"coincheck_cex": {
+			"description": "간단한 인터페이스와 NFT 마켓플레이스 통합을 갖춘 일본 거래소"
+		},
+		"wazirx_cex": {
+			"description": "P2P 거래와 INR 지원을 갖춘 인도 선도 거래소"
+		},
+		"bitstamp_cex": {
+			"description": "유럽에서 가장 오래된 거래소 중 하나, 규제 준수와 신뢰성으로 유명"
+		},
+		"lbank_cex": {
+			"description": "조기 알트코인 상장, 런치패드, 스테이킹 상품을 보유한 거래소"
+		},
+		"backpack_cex": {
+			"description": "두바이 라이선스를 보유한 Mad Lads 팀의 솔라나 네이티브 규제 거래소"
+		},
+		"hyperliquid_cex": {
+			"description": "온체인 오더북을 갖춘 고성능 분산형 무기한 거래소"
+		},
+		"cube_cex": {
+			"description": "CEX 성능과 MPC 기반 자기 보관을 결합한 하이브리드 거래소"
+		},
+		"bullish_cex": {
+			"description": "Block.one 지원의 기관급 거래소, 하이브리드 오더북"
+		},
+		"hashkey_cex": {
+			"description": "아시아에서 규제된 암호화폐 거래를 위한 홍콩 라이선스 거래소"
+		},
+		"osl_cex": {
+			"description": "기관을 위한 홍콩 라이선스 거래소 및 디지털 자산 플랫폼"
+		},
+		"coingecko_exchanges": {
+			"description": "신뢰 점수, 거래량, 거래 페어별 거래소 순위 및 상세 분석"
+		},
+		"cmc_exchanges": {
+			"description": "CoinMarketCap의 거래량, 유동성 점수, 거래 데이터별 거래소 순위"
+		},
+		"cryptorank_exchanges": {
+			"description": "거래량 데이터, 수수료 구조, 시장 분석을 통한 거래소 비교"
+		},
+		"kaiko_data": {
+			"description": "API 접근과 분석을 제공하는 기관급 시장 데이터 제공업체"
+		},
 		"ccdata": {
-			"description": "기관을 위한 시장 지수 및 데이터"
+			"description": "기관 암호화폐 분석을 위한 시장 데이터 및 지수 제공업체"
 		},
-		"binance-cex": {
-			"description": "Binance - Tool"
+		"coinbase_prime": {
+			"description": "프라임 브로커리지와 커스터디 서비스를 제공하는 기관 거래 플랫폼"
 		},
-		"coinbase-cex": {
-			"description": "Coinbase - Tool"
+		"binance_institutional": {
+			"description": "VIP 거래, OTC 데스크, 커스터디 솔루션을 포함한 기관 서비스"
 		},
-		"okx-cex": {
-			"description": "OKX - Tool"
+		"galaxy_trading": {
+			"description": "OTC, 파생상품, 대출 서비스를 제공하는 기관 거래 데스크"
 		},
-		"bybit-cex": {
-			"description": "Bybit - Tool"
+		"cumberland_trading": {
+			"description": "기관 OTC 거래와 마켓 메이킹을 제공하는 DRW 자회사"
 		},
-		"kraken-cex": {
-			"description": "Kraken - Tool"
+		"moonpay_ramp": {
+			"description": "카드와 은행 이체를 통해 법정화폐에서 암호화폐 구매를 가능하게 하는 온램프"
 		},
-		"bitget-cex": {
-			"description": "Bitget - Tool"
+		"transak_ramp": {
+			"description": "광범위한 통화 지원과 dApps에 쉬운 통합을 제공하는 글로벌 법정화폐 온램프"
 		},
-		"kucoin-cex": {
-			"description": "KuCoin - Tool"
+		"ramp_network": {
+			"description": "앱 내 원활한 암호화폐 구매를 위한 규정 준수 온/오프램프 SDK"
 		},
-		"gateio-cex": {
-			"description": "Gate.io - Tool"
+		"banxa_ramp": {
+			"description": "법정화폐에서 암호화폐 거래를 위한 규제된 결제 인프라"
 		},
-		"htx-cex": {
-			"description": "HTX (Huobi) - Tool"
+		"paxful_p2p": {
+			"description": "기프트 카드를 포함한 300개 이상의 결제 수단으로 비트코인을 구매할 수 있는 P2P 마켓플레이스"
 		},
-		"mexc-cex": {
-			"description": "MEXC - Tool"
+		"localbitcoins_p2p": {
+			"description": "지역 구매자와 판매자를 연결하는 선구적인 P2P 비트코인 마켓플레이스"
 		},
-		"deribit-cex": {
-			"description": "Deribit - Tool"
-		},
-		"bitfinex-cex": {
-			"description": "Bitfinex - Tool"
-		},
-		"bitmex-cex": {
-			"description": "BitMEX - Tool"
-		},
-		"upbit-cex": {
-			"description": "Upbit - Tool"
-		},
-		"bithumb-cex": {
-			"description": "Bithumb - Tool"
-		},
-		"bitflyer-cex": {
-			"description": "bitFlyer - Tool"
-		},
-		"coincheck-cex": {
-			"description": "Coincheck - Tool"
-		},
-		"wazirx-cex": {
-			"description": "WazirX - Tool"
-		},
-		"bitstamp-cex": {
-			"description": "Bitstamp - Tool"
-		},
-		"lbank-cex": {
-			"description": "LBank - Tool"
-		},
-		"backpack-cex": {
-			"description": "Backpack Exchange - Tool"
-		},
-		"hyperliquid-cex": {
-			"description": "Hyperliquid - Tool"
-		},
-		"cube-cex": {
-			"description": "Cube Exchange - Tool"
-		},
-		"bullish-cex": {
-			"description": "Bullish - Tool"
-		},
-		"hashkey-cex": {
-			"description": "HashKey Exchange - Tool"
-		},
-		"osl-cex": {
-			"description": "OSL - Tool"
-		},
-		"coingecko-exchanges": {
-			"description": "CoinGecko Exchanges - Tool"
-		},
-		"cmc-exchanges": {
-			"description": "CMC Exchange Ranking - Tool"
-		},
-		"cryptorank-exchanges": {
-			"description": "CryptoRank Exchanges - Tool"
-		},
-		"kaiko-data": {
-			"description": "Kaiko - Tool"
-		},
-		"coinbase-prime": {
-			"description": "Coinbase Prime - Tool"
-		},
-		"binance-institutional": {
-			"description": "Binance Institutional - Tool"
-		},
-		"galaxy-trading": {
-			"description": "Galaxy Trading - Tool"
-		},
-		"cumberland-trading": {
-			"description": "Cumberland - Tool"
-		},
-		"moonpay-ramp": {
-			"description": "MoonPay - Tool"
-		},
-		"transak-ramp": {
-			"description": "Transak - Tool"
-		},
-		"ramp-network": {
-			"description": "Ramp Network - Tool"
-		},
-		"banxa-ramp": {
-			"description": "Banxa - Tool"
-		},
-		"paxful-p2p": {
-			"description": "Paxful - Tool"
-		},
-		"localbitcoins-p2p": {
-			"description": "LocalBitcoins - Tool"
-		},
-		"noones-p2p": {
-			"description": "Noones - Tool"
+		"noones_p2p": {
+			"description": "소셜 기능을 갖춘 신흥 시장 중심 P2P 거래 플랫폼"
 		}
 	}
 }

@@ -1,148 +1,149 @@
 {
 	"category_seo": {
-		"title": "加密交易所（CEX）- 交易平台 | BiuBiu Tools",
-		"description": "用于交易的中心化加密货币交易所。比较交易所功能、安全性、费用和支持的资产。",
+		"title": "Crypto Exchanges (CEX) - Trading Platforms | BiuBiu Tools",
+		"description": "Centralized cryptocurrency exchanges for trading. Compare exchange features, security, fees, and supported assets.",
+		"keywords": "crypto exchanges, cex, trading platforms, binance, coinbase, cryptocurrency trading",
 		"faqs": [
 			{
-				"question": "哪些交易所最安全？",
-				"answer": "Coinbase 和 Kraken 在美国受到良好监管。Binance 全球流动性最大。寻找储备证明、合规性和安全记录。"
+				"question": "Which exchanges are the safest?",
+				"answer": "Coinbase and Kraken are well-regulated in the US. Binance has the largest global liquidity. Look for proof of reserves, compliance, and security track record."
 			},
 			{
-				"question": "CEX 还是 DEX - 应该使用哪个？",
-				"answer": "CEX 用于法币出入金、高级交易和新手友好。DEX 用于自托管、无许可交易和访问更多代币。许多人两者都用。"
+				"question": "CEX or DEX - which should I use?",
+				"answer": "CEX for fiat on/off ramps, advanced trading, and beginner-friendliness. DEX for self-custody, permissionless trading, and access to more tokens. Many use both."
 			},
 			{
-				"question": "如何保护我的交易所账户？",
-				"answer": "启用 2FA（最好是硬件密钥），使用唯一密码，白名单提款地址，启用提款延迟，不要长期在交易所存放大量资金。"
+				"question": "How do I protect my exchange account?",
+				"answer": "Enable 2FA (preferably hardware key), use unique passwords, whitelist withdrawal addresses, enable withdrawal delays, and don't store large amounts on exchanges long-term."
 			}
 		]
 	},
 	"tools": {
+		"binance_cex": {
+			"description": "World's largest crypto exchange by volume with comprehensive spot, futures, and margin trading"
+		},
+		"coinbase_cex": {
+			"description": "US-regulated exchange and NASDAQ-listed company, known for security and beginner-friendly interface"
+		},
+		"okx_cex": {
+			"description": "Global exchange offering spot, derivatives, and Web3 wallet with strong derivatives volume"
+		},
+		"bybit_cex": {
+			"description": "Derivatives-focused exchange known for perpetual contracts and high leverage trading"
+		},
+		"kraken_cex": {
+			"description": "Security-focused US exchange with proof of reserves and strong regulatory compliance"
+		},
+		"bitget_cex": {
+			"description": "Exchange known for copy trading feature and derivatives with growing global presence"
+		},
+		"kucoin_cex": {
+			"description": "Exchange with extensive altcoin listings, trading bots, and earning products"
+		},
+		"gateio_cex": {
+			"description": "Exchange featuring early altcoin listings, startup projects, and comprehensive trading options"
+		},
+		"htx_cex": {
+			"description": "Major Asian exchange (formerly Huobi) with spot, derivatives, and institutional services"
+		},
+		"mexc_cex": {
+			"description": "Exchange known for fast new token listings and extensive altcoin selection"
+		},
+		"deribit_cex": {
+			"description": "Leading crypto options and futures exchange for institutional and professional traders"
+		},
+		"bitfinex_cex": {
+			"description": "Exchange known for margin trading, lending markets, and professional trading tools"
+		},
+		"bitmex_cex": {
+			"description": "Pioneer of crypto perpetual swaps with high leverage derivatives trading"
+		},
+		"upbit_cex": {
+			"description": "Leading Korean exchange known for KRW pairs and kimchi premium opportunities"
+		},
+		"bithumb_cex": {
+			"description": "Major Korean exchange with strong local market presence and KRW trading pairs"
+		},
+		"bitflyer_cex": {
+			"description": "Largest Japanese exchange, regulated and compliant with local financial laws"
+		},
+		"coincheck_cex": {
+			"description": "Japanese exchange with simple interface and NFT marketplace integration"
+		},
+		"wazirx_cex": {
+			"description": "Leading Indian exchange with P2P trading and INR support"
+		},
+		"bitstamp_cex": {
+			"description": "One of the oldest exchanges in Europe, known for regulatory compliance and reliability"
+		},
+		"lbank_cex": {
+			"description": "Exchange with early altcoin listings, launchpad, and staking products"
+		},
+		"backpack_cex": {
+			"description": "Solana-native regulated exchange from the Mad Lads team with Dubai license"
+		},
+		"hyperliquid_cex": {
+			"description": "High-performance decentralized perpetuals exchange with on-chain order book"
+		},
+		"cube_cex": {
+			"description": "Hybrid exchange combining CEX performance with MPC-based self-custody"
+		},
+		"bullish_cex": {
+			"description": "Institutional-grade exchange backed by Block.one with hybrid order book"
+		},
+		"hashkey_cex": {
+			"description": "Hong Kong licensed exchange for regulated crypto trading in Asia"
+		},
+		"osl_cex": {
+			"description": "Hong Kong licensed exchange and digital asset platform for institutions"
+		},
+		"coingecko_exchanges": {
+			"description": "Exchange rankings by trust score, volume, and trading pairs with detailed analytics"
+		},
+		"cmc_exchanges": {
+			"description": "CoinMarketCap exchange rankings by volume, liquidity score, and trading data"
+		},
+		"cryptorank_exchanges": {
+			"description": "Exchange comparison with volume data, fee structures, and market analysis"
+		},
+		"kaiko_data": {
+			"description": "Institutional-grade market data provider with API access and analytics"
+		},
 		"ccdata": {
-			"description": "机构市场指数和数据"
+			"description": "Market data and indices provider for institutional crypto analysis"
 		},
-		"binance-cex": {
-			"description": "Binance - Tool"
+		"coinbase_prime": {
+			"description": "Institutional trading platform with prime brokerage and custody services"
 		},
-		"coinbase-cex": {
-			"description": "Coinbase - Tool"
+		"binance_institutional": {
+			"description": "Institutional services including VIP trading, OTC desk, and custody solutions"
 		},
-		"okx-cex": {
-			"description": "OKX - Tool"
+		"galaxy_trading": {
+			"description": "Institutional trading desk offering OTC, derivatives, and lending services"
 		},
-		"bybit-cex": {
-			"description": "Bybit - Tool"
+		"cumberland_trading": {
+			"description": "DRW subsidiary providing institutional OTC trading and market making"
 		},
-		"kraken-cex": {
-			"description": "Kraken - Tool"
+		"moonpay_ramp": {
+			"description": "Crypto on-ramp enabling fiat to crypto purchases via card and bank transfers"
 		},
-		"bitget-cex": {
-			"description": "Bitget - Tool"
+		"transak_ramp": {
+			"description": "Global fiat on-ramp with wide currency support and easy integration for dApps"
 		},
-		"kucoin-cex": {
-			"description": "KuCoin - Tool"
+		"ramp_network": {
+			"description": "Compliant on/off-ramp SDK for seamless crypto purchases in apps"
 		},
-		"gateio-cex": {
-			"description": "Gate.io - Tool"
+		"banxa_ramp": {
+			"description": "Regulated payment infrastructure for fiat-to-crypto transactions"
 		},
-		"htx-cex": {
-			"description": "HTX (Huobi) - Tool"
+		"paxful_p2p": {
+			"description": "P2P marketplace for buying Bitcoin with 300+ payment methods including gift cards"
 		},
-		"mexc-cex": {
-			"description": "MEXC - Tool"
+		"localbitcoins_p2p": {
+			"description": "Pioneer P2P Bitcoin marketplace connecting local buyers and sellers"
 		},
-		"deribit-cex": {
-			"description": "Deribit - Tool"
-		},
-		"bitfinex-cex": {
-			"description": "Bitfinex - Tool"
-		},
-		"bitmex-cex": {
-			"description": "BitMEX - Tool"
-		},
-		"upbit-cex": {
-			"description": "Upbit - Tool"
-		},
-		"bithumb-cex": {
-			"description": "Bithumb - Tool"
-		},
-		"bitflyer-cex": {
-			"description": "bitFlyer - Tool"
-		},
-		"coincheck-cex": {
-			"description": "Coincheck - Tool"
-		},
-		"wazirx-cex": {
-			"description": "WazirX - Tool"
-		},
-		"bitstamp-cex": {
-			"description": "Bitstamp - Tool"
-		},
-		"lbank-cex": {
-			"description": "LBank - Tool"
-		},
-		"backpack-cex": {
-			"description": "Backpack Exchange - Tool"
-		},
-		"hyperliquid-cex": {
-			"description": "Hyperliquid - Tool"
-		},
-		"cube-cex": {
-			"description": "Cube Exchange - Tool"
-		},
-		"bullish-cex": {
-			"description": "Bullish - Tool"
-		},
-		"hashkey-cex": {
-			"description": "HashKey Exchange - Tool"
-		},
-		"osl-cex": {
-			"description": "OSL - Tool"
-		},
-		"coingecko-exchanges": {
-			"description": "CoinGecko Exchanges - Tool"
-		},
-		"cmc-exchanges": {
-			"description": "CMC Exchange Ranking - Tool"
-		},
-		"cryptorank-exchanges": {
-			"description": "CryptoRank Exchanges - Tool"
-		},
-		"kaiko-data": {
-			"description": "Kaiko - Tool"
-		},
-		"coinbase-prime": {
-			"description": "Coinbase Prime - Tool"
-		},
-		"binance-institutional": {
-			"description": "Binance Institutional - Tool"
-		},
-		"galaxy-trading": {
-			"description": "Galaxy Trading - Tool"
-		},
-		"cumberland-trading": {
-			"description": "Cumberland - Tool"
-		},
-		"moonpay-ramp": {
-			"description": "MoonPay - Tool"
-		},
-		"transak-ramp": {
-			"description": "Transak - Tool"
-		},
-		"ramp-network": {
-			"description": "Ramp Network - Tool"
-		},
-		"banxa-ramp": {
-			"description": "Banxa - Tool"
-		},
-		"paxful-p2p": {
-			"description": "Paxful - Tool"
-		},
-		"localbitcoins-p2p": {
-			"description": "LocalBitcoins - Tool"
-		},
-		"noones-p2p": {
-			"description": "Noones - Tool"
+		"noones_p2p": {
+			"description": "P2P trading platform focused on emerging markets with social features"
 		}
 	}
 }

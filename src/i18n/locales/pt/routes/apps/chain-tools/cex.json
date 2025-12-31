@@ -19,131 +19,131 @@
 		]
 	},
 	"tools": {
+		"binance_cex": {
+			"description": "Maior exchange de criptomoedas do mundo por volume com trading spot, futuros e margem completo"
+		},
+		"coinbase_cex": {
+			"description": "Exchange regulado nos EUA e empresa listada na NASDAQ, conhecido por segurança e interface amigável"
+		},
+		"okx_cex": {
+			"description": "Exchange global oferecendo spot, derivativos e carteira Web3 com forte volume de derivativos"
+		},
+		"bybit_cex": {
+			"description": "Exchange focado em derivativos conhecido por contratos perpétuos e trading de alta alavancagem"
+		},
+		"kraken_cex": {
+			"description": "Exchange americano focado em segurança com prova de reservas e forte conformidade regulatória"
+		},
+		"bitget_cex": {
+			"description": "Exchange conhecido por função de copy trading e derivativos com presença global crescente"
+		},
+		"kucoin_cex": {
+			"description": "Exchange com extensas listagens de altcoins, bots de trading e produtos de rendimento"
+		},
+		"gateio_cex": {
+			"description": "Exchange com listagens antecipadas de altcoins, projetos startup e opções de trading completas"
+		},
+		"htx_cex": {
+			"description": "Principal exchange asiático (anteriormente Huobi) com spot, derivativos e serviços institucionais"
+		},
+		"mexc_cex": {
+			"description": "Exchange conhecido por listagens rápidas de novos tokens e extensa seleção de altcoins"
+		},
+		"deribit_cex": {
+			"description": "Exchange líder de opções e futuros cripto para traders institucionais e profissionais"
+		},
+		"bitfinex_cex": {
+			"description": "Exchange conhecido por trading de margem, mercados de empréstimos e ferramentas de trading profissional"
+		},
+		"bitmex_cex": {
+			"description": "Pioneiro de swaps perpétuos cripto com trading de derivativos de alta alavancagem"
+		},
+		"upbit_cex": {
+			"description": "Exchange coreano líder conhecido por pares KRW e oportunidades de kimchi premium"
+		},
+		"bithumb_cex": {
+			"description": "Principal exchange coreano com forte presença no mercado local e pares de trading KRW"
+		},
+		"bitflyer_cex": {
+			"description": "Maior exchange japonês, regulado e em conformidade com leis financeiras locais"
+		},
+		"coincheck_cex": {
+			"description": "Exchange japonês com interface simples e integração de marketplace NFT"
+		},
+		"wazirx_cex": {
+			"description": "Exchange indiano líder com trading P2P e suporte INR"
+		},
+		"bitstamp_cex": {
+			"description": "Um dos exchanges mais antigos da Europa, conhecido por conformidade regulatória e confiabilidade"
+		},
+		"lbank_cex": {
+			"description": "Exchange com listagens antecipadas de altcoins, launchpad e produtos de staking"
+		},
+		"backpack_cex": {
+			"description": "Exchange regulado nativo de Solana da equipe Mad Lads com licença de Dubai"
+		},
+		"hyperliquid_cex": {
+			"description": "Exchange de perpétuos descentralizado de alto desempenho com livro de ordens on-chain"
+		},
+		"cube_cex": {
+			"description": "Exchange híbrido combinando desempenho CEX com autocustódia baseada em MPC"
+		},
+		"bullish_cex": {
+			"description": "Exchange de grau institucional apoiado pela Block.one com livro de ordens híbrido"
+		},
+		"hashkey_cex": {
+			"description": "Exchange licenciado em Hong Kong para trading cripto regulado na Ásia"
+		},
+		"osl_cex": {
+			"description": "Exchange licenciado em Hong Kong e plataforma de ativos digitais para instituições"
+		},
+		"coingecko_exchanges": {
+			"description": "Rankings de exchanges por pontuação de confiança, volume e pares de trading com análise detalhada"
+		},
+		"cmc_exchanges": {
+			"description": "Rankings de exchanges do CoinMarketCap por volume, pontuação de liquidez e dados de trading"
+		},
+		"cryptorank_exchanges": {
+			"description": "Comparação de exchanges com dados de volume, estruturas de taxas e análise de mercado"
+		},
+		"kaiko_data": {
+			"description": "Provedor de dados de mercado de grau institucional com acesso API e análises"
+		},
 		"ccdata": {
-			"description": "Market indices and data for institutions"
+			"description": "Provedor de dados de mercado e índices para análise cripto institucional"
 		},
-		"binance-cex": {
-			"description": "Binance - Tool"
+		"coinbase_prime": {
+			"description": "Plataforma de trading institucional com serviços de prime brokerage e custódia"
 		},
-		"coinbase-cex": {
-			"description": "Coinbase - Tool"
+		"binance_institutional": {
+			"description": "Serviços institucionais incluindo trading VIP, mesa OTC e soluções de custódia"
 		},
-		"okx-cex": {
-			"description": "OKX - Tool"
+		"galaxy_trading": {
+			"description": "Mesa de trading institucional oferecendo serviços OTC, derivativos e empréstimos"
 		},
-		"bybit-cex": {
-			"description": "Bybit - Tool"
+		"cumberland_trading": {
+			"description": "Subsidiária da DRW fornecendo trading OTC institucional e market making"
 		},
-		"kraken-cex": {
-			"description": "Kraken - Tool"
+		"moonpay_ramp": {
+			"description": "On-ramp cripto permitindo compras fiat para cripto via cartão e transferências bancárias"
 		},
-		"bitget-cex": {
-			"description": "Bitget - Tool"
+		"transak_ramp": {
+			"description": "On-ramp fiat global com amplo suporte de moedas e fácil integração para dApps"
 		},
-		"kucoin-cex": {
-			"description": "KuCoin - Tool"
+		"ramp_network": {
+			"description": "SDK de on/off-ramp compatível para compras cripto sem fricção em apps"
 		},
-		"gateio-cex": {
-			"description": "Gate.io - Tool"
+		"banxa_ramp": {
+			"description": "Infraestrutura de pagamentos regulada para transações fiat-para-cripto"
 		},
-		"htx-cex": {
-			"description": "HTX (Huobi) - Tool"
+		"paxful_p2p": {
+			"description": "Marketplace P2P para comprar Bitcoin com 300+ métodos de pagamento incluindo gift cards"
 		},
-		"mexc-cex": {
-			"description": "MEXC - Tool"
+		"localbitcoins_p2p": {
+			"description": "Marketplace P2P pioneiro de Bitcoin conectando compradores e vendedores locais"
 		},
-		"deribit-cex": {
-			"description": "Deribit - Tool"
-		},
-		"bitfinex-cex": {
-			"description": "Bitfinex - Tool"
-		},
-		"bitmex-cex": {
-			"description": "BitMEX - Tool"
-		},
-		"upbit-cex": {
-			"description": "Upbit - Tool"
-		},
-		"bithumb-cex": {
-			"description": "Bithumb - Tool"
-		},
-		"bitflyer-cex": {
-			"description": "bitFlyer - Tool"
-		},
-		"coincheck-cex": {
-			"description": "Coincheck - Tool"
-		},
-		"wazirx-cex": {
-			"description": "WazirX - Tool"
-		},
-		"bitstamp-cex": {
-			"description": "Bitstamp - Tool"
-		},
-		"lbank-cex": {
-			"description": "LBank - Tool"
-		},
-		"backpack-cex": {
-			"description": "Backpack Exchange - Tool"
-		},
-		"hyperliquid-cex": {
-			"description": "Hyperliquid - Tool"
-		},
-		"cube-cex": {
-			"description": "Cube Exchange - Tool"
-		},
-		"bullish-cex": {
-			"description": "Bullish - Tool"
-		},
-		"hashkey-cex": {
-			"description": "HashKey Exchange - Tool"
-		},
-		"osl-cex": {
-			"description": "OSL - Tool"
-		},
-		"coingecko-exchanges": {
-			"description": "CoinGecko Exchanges - Tool"
-		},
-		"cmc-exchanges": {
-			"description": "CMC Exchange Ranking - Tool"
-		},
-		"cryptorank-exchanges": {
-			"description": "CryptoRank Exchanges - Tool"
-		},
-		"kaiko-data": {
-			"description": "Kaiko - Tool"
-		},
-		"coinbase-prime": {
-			"description": "Coinbase Prime - Tool"
-		},
-		"binance-institutional": {
-			"description": "Binance Institutional - Tool"
-		},
-		"galaxy-trading": {
-			"description": "Galaxy Trading - Tool"
-		},
-		"cumberland-trading": {
-			"description": "Cumberland - Tool"
-		},
-		"moonpay-ramp": {
-			"description": "MoonPay - Tool"
-		},
-		"transak-ramp": {
-			"description": "Transak - Tool"
-		},
-		"ramp-network": {
-			"description": "Ramp Network - Tool"
-		},
-		"banxa-ramp": {
-			"description": "Banxa - Tool"
-		},
-		"paxful-p2p": {
-			"description": "Paxful - Tool"
-		},
-		"localbitcoins-p2p": {
-			"description": "LocalBitcoins - Tool"
-		},
-		"noones-p2p": {
-			"description": "Noones - Tool"
+		"noones_p2p": {
+			"description": "Plataforma de trading P2P focada em mercados emergentes com recursos sociais"
 		}
 	}
 }

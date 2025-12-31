@@ -2,6 +2,7 @@
 	"category_seo": {
 		"title": "Sàn Giao Dịch Crypto (CEX) - Nền Tảng Giao Dịch | BiuBiu Tools",
 		"description": "Sàn giao dịch tiền điện tử tập trung để giao dịch. So sánh tính năng sàn, bảo mật, phí và tài sản được hỗ trợ.",
+		"keywords": "sàn crypto, cex, binance, coinbase, nền tảng giao dịch crypto",
 		"faqs": [
 			{
 				"question": "Sàn giao dịch nào an toàn nhất?",
@@ -18,131 +19,131 @@
 		]
 	},
 	"tools": {
+		"binance_cex": {
+			"description": "Sàn crypto lớn nhất thế giới theo khối lượng với giao dịch spot, futures và margin toàn diện"
+		},
+		"coinbase_cex": {
+			"description": "Sàn được quản lý tại Mỹ và niêm yết NASDAQ, nổi tiếng về bảo mật và giao diện thân thiện"
+		},
+		"okx_cex": {
+			"description": "Sàn toàn cầu cung cấp spot, phái sinh và ví Web3 với khối lượng phái sinh mạnh"
+		},
+		"bybit_cex": {
+			"description": "Sàn tập trung phái sinh nổi tiếng với hợp đồng perpetual và giao dịch đòn bẩy cao"
+		},
+		"kraken_cex": {
+			"description": "Sàn Mỹ tập trung bảo mật với bằng chứng dự trữ và tuân thủ quy định mạnh"
+		},
+		"bitget_cex": {
+			"description": "Sàn nổi tiếng với tính năng copy trading và phái sinh, mở rộng toàn cầu"
+		},
+		"kucoin_cex": {
+			"description": "Sàn với danh sách altcoin rộng lớn, bot giao dịch và sản phẩm lợi suất"
+		},
+		"gateio_cex": {
+			"description": "Sàn với niêm yết altcoin sớm, dự án startup và tùy chọn giao dịch toàn diện"
+		},
+		"htx_cex": {
+			"description": "Sàn châu Á lớn (trước đây là Huobi) với spot, phái sinh và dịch vụ tổ chức"
+		},
+		"mexc_cex": {
+			"description": "Sàn nổi tiếng với niêm yết token mới nhanh chóng và lựa chọn altcoin rộng lớn"
+		},
+		"deribit_cex": {
+			"description": "Sàn quyền chọn và futures crypto hàng đầu cho nhà giao dịch tổ chức và chuyên nghiệp"
+		},
+		"bitfinex_cex": {
+			"description": "Sàn nổi tiếng với giao dịch margin, thị trường cho vay và công cụ giao dịch chuyên nghiệp"
+		},
+		"bitmex_cex": {
+			"description": "Tiên phong trong perpetual swap crypto với giao dịch phái sinh đòn bẩy cao"
+		},
+		"upbit_cex": {
+			"description": "Sàn hàng đầu Hàn Quốc nổi tiếng với cặp KRW và cơ hội kimchi premium"
+		},
+		"bithumb_cex": {
+			"description": "Sàn lớn Hàn Quốc với hiện diện thị trường địa phương mạnh và cặp giao dịch KRW"
+		},
+		"bitflyer_cex": {
+			"description": "Sàn lớn nhất Nhật Bản, được quản lý và tuân thủ luật tài chính địa phương"
+		},
+		"coincheck_cex": {
+			"description": "Sàn Nhật Bản với giao diện đơn giản và tích hợp marketplace NFT"
+		},
+		"wazirx_cex": {
+			"description": "Sàn hàng đầu Ấn Độ với giao dịch P2P và hỗ trợ INR"
+		},
+		"bitstamp_cex": {
+			"description": "Một trong những sàn lâu đời nhất châu Âu, nổi tiếng về tuân thủ quy định và độ tin cậy"
+		},
+		"lbank_cex": {
+			"description": "Sàn với niêm yết altcoin sớm, launchpad và sản phẩm staking"
+		},
+		"backpack_cex": {
+			"description": "Sàn Solana-native được quản lý từ đội Mad Lads với giấy phép Dubai"
+		},
+		"hyperliquid_cex": {
+			"description": "Sàn perpetual phi tập trung hiệu suất cao với sổ lệnh on-chain"
+		},
+		"cube_cex": {
+			"description": "Sàn lai kết hợp hiệu suất CEX với tự quản dựa trên MPC"
+		},
+		"bullish_cex": {
+			"description": "Sàn cấp tổ chức được Block.one hỗ trợ với sổ lệnh lai"
+		},
+		"hashkey_cex": {
+			"description": "Sàn có giấy phép Hong Kong cho giao dịch crypto được quản lý tại châu Á"
+		},
+		"osl_cex": {
+			"description": "Sàn có giấy phép Hong Kong và nền tảng tài sản số cho tổ chức"
+		},
+		"coingecko_exchanges": {
+			"description": "Xếp hạng sàn theo điểm tin cậy, khối lượng và cặp giao dịch với phân tích chi tiết"
+		},
+		"cmc_exchanges": {
+			"description": "Xếp hạng sàn CoinMarketCap theo khối lượng, điểm thanh khoản và dữ liệu giao dịch"
+		},
+		"cryptorank_exchanges": {
+			"description": "So sánh sàn với dữ liệu khối lượng, cấu trúc phí và phân tích thị trường"
+		},
+		"kaiko_data": {
+			"description": "Nhà cung cấp dữ liệu thị trường cấp tổ chức với truy cập API và phân tích"
+		},
 		"ccdata": {
-			"description": "Chỉ số thị trường và dữ liệu cho tổ chức"
+			"description": "Nhà cung cấp chỉ số và dữ liệu thị trường cho phân tích crypto tổ chức"
 		},
-		"binance-cex": {
-			"description": "Binance - Tool"
+		"coinbase_prime": {
+			"description": "Nền tảng giao dịch tổ chức với dịch vụ môi giới chính và lưu ký"
 		},
-		"coinbase-cex": {
-			"description": "Coinbase - Tool"
+		"binance_institutional": {
+			"description": "Dịch vụ tổ chức bao gồm giao dịch VIP, bàn OTC và giải pháp lưu ký"
 		},
-		"okx-cex": {
-			"description": "OKX - Tool"
+		"galaxy_trading": {
+			"description": "Bàn giao dịch tổ chức cung cấp dịch vụ OTC, phái sinh và cho vay"
 		},
-		"bybit-cex": {
-			"description": "Bybit - Tool"
+		"cumberland_trading": {
+			"description": "Công ty con của DRW cung cấp giao dịch OTC tổ chức và tạo lập thị trường"
 		},
-		"kraken-cex": {
-			"description": "Kraken - Tool"
+		"moonpay_ramp": {
+			"description": "On-ramp crypto cho phép mua fiat sang crypto qua thẻ và chuyển khoản"
 		},
-		"bitget-cex": {
-			"description": "Bitget - Tool"
+		"transak_ramp": {
+			"description": "On-ramp fiat toàn cầu với hỗ trợ tiền tệ rộng và tích hợp dễ dàng cho dApps"
 		},
-		"kucoin-cex": {
-			"description": "KuCoin - Tool"
+		"ramp_network": {
+			"description": "SDK on/off-ramp tuân thủ cho mua crypto không ma sát trong ứng dụng"
 		},
-		"gateio-cex": {
-			"description": "Gate.io - Tool"
+		"banxa_ramp": {
+			"description": "Hạ tầng thanh toán được quản lý cho giao dịch fiat sang crypto"
 		},
-		"htx-cex": {
-			"description": "HTX (Huobi) - Tool"
+		"paxful_p2p": {
+			"description": "Marketplace P2P để mua Bitcoin với 300+ phương thức thanh toán bao gồm thẻ quà tặng"
 		},
-		"mexc-cex": {
-			"description": "MEXC - Tool"
+		"localbitcoins_p2p": {
+			"description": "Marketplace P2P Bitcoin tiên phong kết nối người mua và bán địa phương"
 		},
-		"deribit-cex": {
-			"description": "Deribit - Tool"
-		},
-		"bitfinex-cex": {
-			"description": "Bitfinex - Tool"
-		},
-		"bitmex-cex": {
-			"description": "BitMEX - Tool"
-		},
-		"upbit-cex": {
-			"description": "Upbit - Tool"
-		},
-		"bithumb-cex": {
-			"description": "Bithumb - Tool"
-		},
-		"bitflyer-cex": {
-			"description": "bitFlyer - Tool"
-		},
-		"coincheck-cex": {
-			"description": "Coincheck - Tool"
-		},
-		"wazirx-cex": {
-			"description": "WazirX - Tool"
-		},
-		"bitstamp-cex": {
-			"description": "Bitstamp - Tool"
-		},
-		"lbank-cex": {
-			"description": "LBank - Tool"
-		},
-		"backpack-cex": {
-			"description": "Backpack Exchange - Tool"
-		},
-		"hyperliquid-cex": {
-			"description": "Hyperliquid - Tool"
-		},
-		"cube-cex": {
-			"description": "Cube Exchange - Tool"
-		},
-		"bullish-cex": {
-			"description": "Bullish - Tool"
-		},
-		"hashkey-cex": {
-			"description": "HashKey Exchange - Tool"
-		},
-		"osl-cex": {
-			"description": "OSL - Tool"
-		},
-		"coingecko-exchanges": {
-			"description": "CoinGecko Exchanges - Tool"
-		},
-		"cmc-exchanges": {
-			"description": "CMC Exchange Ranking - Tool"
-		},
-		"cryptorank-exchanges": {
-			"description": "CryptoRank Exchanges - Tool"
-		},
-		"kaiko-data": {
-			"description": "Kaiko - Tool"
-		},
-		"coinbase-prime": {
-			"description": "Coinbase Prime - Tool"
-		},
-		"binance-institutional": {
-			"description": "Binance Institutional - Tool"
-		},
-		"galaxy-trading": {
-			"description": "Galaxy Trading - Tool"
-		},
-		"cumberland-trading": {
-			"description": "Cumberland - Tool"
-		},
-		"moonpay-ramp": {
-			"description": "MoonPay - Tool"
-		},
-		"transak-ramp": {
-			"description": "Transak - Tool"
-		},
-		"ramp-network": {
-			"description": "Ramp Network - Tool"
-		},
-		"banxa-ramp": {
-			"description": "Banxa - Tool"
-		},
-		"paxful-p2p": {
-			"description": "Paxful - Tool"
-		},
-		"localbitcoins-p2p": {
-			"description": "LocalBitcoins - Tool"
-		},
-		"noones-p2p": {
-			"description": "Noones - Tool"
+		"noones_p2p": {
+			"description": "Nền tảng giao dịch P2P tập trung thị trường mới nổi với tính năng xã hội"
 		}
 	}
 }

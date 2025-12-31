@@ -2,7 +2,7 @@
 	"category_seo": {
 		"title": "Kripto Borsaları (CEX) - İşlem Platformları | BiuBiu Tools",
 		"description": "İşlem için merkezi kripto borsaları. Borsa özelliklerini, güvenliği, ücretleri ve desteklenen varlıkları karşılaştırın.",
-		"keywords": "kripto borsaları, binance, coinbase, işlem platformları",
+		"keywords": "kripto borsaları, cex, binance, coinbase, işlem platformları",
 		"faqs": [
 			{
 				"question": "Hangi borsalar en güvenlidir?",
@@ -19,131 +19,131 @@
 		]
 	},
 	"tools": {
+		"binance_cex": {
+			"description": "Kapsamlı spot, vadeli işlem ve marjin ticareti ile hacim bazında dünyanın en büyük kripto borsası"
+		},
+		"coinbase_cex": {
+			"description": "ABD düzenlemeli borsa ve NASDAQ'ta işlem gören şirket, güvenlik ve başlangıç dostu arayüzüyle tanınır"
+		},
+		"okx_cex": {
+			"description": "Spot, türev ve Web3 cüzdanı sunan küresel borsa, güçlü türev hacmi"
+		},
+		"bybit_cex": {
+			"description": "Süresiz sözleşmeler ve yüksek kaldıraçlı ticaretle tanınan türev odaklı borsa"
+		},
+		"kraken_cex": {
+			"description": "Rezerv kanıtı ve güçlü düzenleyici uyumla güvenlik odaklı ABD borsası"
+		},
+		"bitget_cex": {
+			"description": "Kopya ticaret özelliği ve türevlerle tanınan borsa, büyüyen küresel varlık"
+		},
+		"kucoin_cex": {
+			"description": "Kapsamlı altcoin listelemeleri, ticaret botları ve kazanç ürünleri olan borsa"
+		},
+		"gateio_cex": {
+			"description": "Erken altcoin listelemeleri, startup projeleri ve kapsamlı ticaret seçenekleri sunan borsa"
+		},
+		"htx_cex": {
+			"description": "Spot, türev ve kurumsal hizmetler sunan büyük Asya borsası (eski adıyla Huobi)"
+		},
+		"mexc_cex": {
+			"description": "Hızlı yeni token listelemeleri ve geniş altcoin seçimiyle tanınan borsa"
+		},
+		"deribit_cex": {
+			"description": "Kurumsal ve profesyonel yatırımcılar için önde gelen kripto opsiyon ve vadeli işlem borsası"
+		},
+		"bitfinex_cex": {
+			"description": "Marjin ticareti, borç verme piyasaları ve profesyonel ticaret araçlarıyla tanınan borsa"
+		},
+		"bitmex_cex": {
+			"description": "Yüksek kaldıraçlı türev ticareti ile kripto süresiz swap'ların öncüsü"
+		},
+		"upbit_cex": {
+			"description": "KRW çiftleri ve kimchi primi fırsatlarıyla tanınan önde gelen Kore borsası"
+		},
+		"bithumb_cex": {
+			"description": "Güçlü yerel pazar varlığı ve KRW ticaret çiftleri ile büyük Kore borsası"
+		},
+		"bitflyer_cex": {
+			"description": "Japonya'nın en büyük borsası, düzenlenmiş ve yerel finansal yasalara uygun"
+		},
+		"coincheck_cex": {
+			"description": "Basit arayüz ve NFT pazaryeri entegrasyonu olan Japon borsası"
+		},
+		"wazirx_cex": {
+			"description": "P2P ticareti ve INR desteği olan önde gelen Hindistan borsası"
+		},
+		"bitstamp_cex": {
+			"description": "Avrupa'nın en eski borsalarından biri, düzenleyici uyum ve güvenilirlikle tanınır"
+		},
+		"lbank_cex": {
+			"description": "Erken altcoin listelemeleri, launchpad ve staking ürünleri olan borsa"
+		},
+		"backpack_cex": {
+			"description": "Dubai lisansı ile Mad Lads ekibinden Solana-native düzenlenmiş borsa"
+		},
+		"hyperliquid_cex": {
+			"description": "Zincir üstü emir defteri ile yüksek performanslı merkeziyetsiz süresiz borsa"
+		},
+		"cube_cex": {
+			"description": "CEX performansını MPC tabanlı kendi saklama ile birleştiren hibrit borsa"
+		},
+		"bullish_cex": {
+			"description": "Hibrit emir defteri ile Block.one destekli kurumsal düzeyde borsa"
+		},
+		"hashkey_cex": {
+			"description": "Asya'da düzenlenmiş kripto ticareti için Hong Kong lisanslı borsa"
+		},
+		"osl_cex": {
+			"description": "Kurumlar için Hong Kong lisanslı borsa ve dijital varlık platformu"
+		},
+		"coingecko_exchanges": {
+			"description": "Güven puanı, hacim ve ticaret çiftlerine göre detaylı analizli borsa sıralamaları"
+		},
+		"cmc_exchanges": {
+			"description": "CoinMarketCap'ın hacim, likidite puanı ve ticaret verilerine göre borsa sıralamaları"
+		},
+		"cryptorank_exchanges": {
+			"description": "Hacim verileri, ücret yapıları ve piyasa analiziyle borsa karşılaştırması"
+		},
+		"kaiko_data": {
+			"description": "API erişimi ve analizlerle kurumsal düzeyde piyasa veri sağlayıcısı"
+		},
 		"ccdata": {
-			"description": "Market indices ve data için institutiüzerindes"
+			"description": "Kurumsal kripto analizi için piyasa verileri ve endeks sağlayıcısı"
 		},
-		"binance-cex": {
-			"description": "Binance - Tool"
+		"coinbase_prime": {
+			"description": "Prime aracılık ve saklama hizmetleri sunan kurumsal ticaret platformu"
 		},
-		"coinbase-cex": {
-			"description": "Coinbase - Tool"
+		"binance_institutional": {
+			"description": "VIP ticareti, OTC masası ve saklama çözümleri dahil kurumsal hizmetler"
 		},
-		"okx-cex": {
-			"description": "OKX - Tool"
+		"galaxy_trading": {
+			"description": "OTC, türev ve borç verme hizmetleri sunan kurumsal ticaret masası"
 		},
-		"bybit-cex": {
-			"description": "Bybit - Tool"
+		"cumberland_trading": {
+			"description": "Kurumsal OTC ticareti ve piyasa yapıcılığı sağlayan DRW yan kuruluşu"
 		},
-		"kraken-cex": {
-			"description": "Kraken - Tool"
+		"moonpay_ramp": {
+			"description": "Kart ve banka transferi ile fiat'tan kripto satın almayı sağlayan on-ramp"
 		},
-		"bitget-cex": {
-			"description": "Bitget - Tool"
+		"transak_ramp": {
+			"description": "Geniş para birimi desteği ve dApps için kolay entegrasyon sunan küresel fiat on-ramp"
 		},
-		"kucoin-cex": {
-			"description": "KuCoin - Tool"
+		"ramp_network": {
+			"description": "Uygulamalarda sorunsuz kripto satın alımları için uyumlu on/off-ramp SDK"
 		},
-		"gateio-cex": {
-			"description": "Gate.io - Tool"
+		"banxa_ramp": {
+			"description": "Fiat-kripto işlemleri için düzenlenmiş ödeme altyapısı"
 		},
-		"htx-cex": {
-			"description": "HTX (Huobi) - Tool"
+		"paxful_p2p": {
+			"description": "Hediye kartları dahil 300'den fazla ödeme yöntemiyle Bitcoin satın almak için P2P pazaryeri"
 		},
-		"mexc-cex": {
-			"description": "MEXC - Tool"
+		"localbitcoins_p2p": {
+			"description": "Yerel alıcı ve satıcıları birbirine bağlayan öncü P2P Bitcoin pazaryeri"
 		},
-		"deribit-cex": {
-			"description": "Deribit - Tool"
-		},
-		"bitfinex-cex": {
-			"description": "Bitfinex - Tool"
-		},
-		"bitmex-cex": {
-			"description": "BitMEX - Tool"
-		},
-		"upbit-cex": {
-			"description": "Upbit - Tool"
-		},
-		"bithumb-cex": {
-			"description": "Bithumb - Tool"
-		},
-		"bitflyer-cex": {
-			"description": "bitFlyer - Tool"
-		},
-		"coincheck-cex": {
-			"description": "Coincheck - Tool"
-		},
-		"wazirx-cex": {
-			"description": "WazirX - Tool"
-		},
-		"bitstamp-cex": {
-			"description": "Bitstamp - Tool"
-		},
-		"lbank-cex": {
-			"description": "LBank - Tool"
-		},
-		"backpack-cex": {
-			"description": "Backpack Exchange - Tool"
-		},
-		"hyperliquid-cex": {
-			"description": "Hyperliquid - Tool"
-		},
-		"cube-cex": {
-			"description": "Cube Exchange - Tool"
-		},
-		"bullish-cex": {
-			"description": "Bullish - Tool"
-		},
-		"hashkey-cex": {
-			"description": "HashKey Exchange - Tool"
-		},
-		"osl-cex": {
-			"description": "OSL - Tool"
-		},
-		"coingecko-exchanges": {
-			"description": "CoinGecko Exchanges - Tool"
-		},
-		"cmc-exchanges": {
-			"description": "CMC Exchange Ranking - Tool"
-		},
-		"cryptorank-exchanges": {
-			"description": "CryptoRank Exchanges - Tool"
-		},
-		"kaiko-data": {
-			"description": "Kaiko - Tool"
-		},
-		"coinbase-prime": {
-			"description": "Coinbase Prime - Tool"
-		},
-		"binance-institutional": {
-			"description": "Binance Institutional - Tool"
-		},
-		"galaxy-trading": {
-			"description": "Galaxy Trading - Tool"
-		},
-		"cumberland-trading": {
-			"description": "Cumberland - Tool"
-		},
-		"moonpay-ramp": {
-			"description": "MoonPay - Tool"
-		},
-		"transak-ramp": {
-			"description": "Transak - Tool"
-		},
-		"ramp-network": {
-			"description": "Ramp Network - Tool"
-		},
-		"banxa-ramp": {
-			"description": "Banxa - Tool"
-		},
-		"paxful-p2p": {
-			"description": "Paxful - Tool"
-		},
-		"localbitcoins-p2p": {
-			"description": "LocalBitcoins - Tool"
-		},
-		"noones-p2p": {
-			"description": "Noones - Tool"
+		"noones_p2p": {
+			"description": "Sosyal özelliklerle gelişmekte olan pazarlara odaklanan P2P ticaret platformu"
 		}
 	}
 }

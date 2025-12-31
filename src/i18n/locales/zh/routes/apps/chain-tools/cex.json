@@ -2,6 +2,7 @@
 	"category_seo": {
 		"title": "加密交易所（CEX）- 交易平台 | BiuBiu Tools",
 		"description": "用于交易的中心化加密货币交易所。比较交易所功能、安全性、费用和支持的资产。",
+		"keywords": "加密交易所, cex, 交易平台, 币安, coinbase, 加密货币交易",
 		"faqs": [
 			{
 				"question": "哪些交易所最安全？",
@@ -18,131 +19,131 @@
 		]
 	},
 	"tools": {
+		"binance_cex": {
+			"description": "全球交易量最大的加密交易所，提供全面的现货、期货和保证金交易"
+		},
+		"coinbase_cex": {
+			"description": "美国监管的交易所，纳斯达克上市公司，以安全性和新手友好界面著称"
+		},
+		"okx_cex": {
+			"description": "全球交易所，提供现货、衍生品和 Web3 钱包，衍生品交易量强劲"
+		},
+		"bybit_cex": {
+			"description": "专注衍生品的交易所，以永续合约和高杠杆交易著称"
+		},
+		"kraken_cex": {
+			"description": "注重安全的美国交易所，具有储备证明和强大的监管合规性"
+		},
+		"bitget_cex": {
+			"description": "以跟单交易功能和衍生品著称的交易所，全球影响力不断增长"
+		},
+		"kucoin_cex": {
+			"description": "拥有丰富山寨币上架、交易机器人和理财产品的交易所"
+		},
+		"gateio_cex": {
+			"description": "以早期山寨币上架、初创项目和全面交易选项著称的交易所"
+		},
+		"htx_cex": {
+			"description": "主要亚洲交易所（原火币），提供现货、衍生品和机构服务"
+		},
+		"mexc_cex": {
+			"description": "以快速新币上架和丰富山寨币选择著称的交易所"
+		},
+		"deribit_cex": {
+			"description": "面向机构和专业交易者的领先加密期权和期货交易所"
+		},
+		"bitfinex_cex": {
+			"description": "以保证金交易、借贷市场和专业交易工具著称的交易所"
+		},
+		"bitmex_cex": {
+			"description": "加密永续合约的先驱，提供高杠杆衍生品交易"
+		},
+		"upbit_cex": {
+			"description": "韩国领先交易所，以韩元交易对和泡菜溢价机会著称"
+		},
+		"bithumb_cex": {
+			"description": "韩国主要交易所，在当地市场有强大影响力和韩元交易对"
+		},
+		"bitflyer_cex": {
+			"description": "日本最大的交易所，受监管并符合当地金融法规"
+		},
+		"coincheck_cex": {
+			"description": "日本交易所，界面简洁并集成 NFT 市场"
+		},
+		"wazirx_cex": {
+			"description": "印度领先交易所，支持 P2P 交易和印度卢比"
+		},
+		"bitstamp_cex": {
+			"description": "欧洲最古老的交易所之一，以监管合规和可靠性著称"
+		},
+		"lbank_cex": {
+			"description": "提供早期山寨币上架、Launchpad 和质押产品的交易所"
+		},
+		"backpack_cex": {
+			"description": "来自 Mad Lads 团队的 Solana 原生监管交易所，持有迪拜牌照"
+		},
+		"hyperliquid_cex": {
+			"description": "高性能去中心化永续交易所，采用链上订单簿"
+		},
+		"cube_cex": {
+			"description": "结合 CEX 性能和 MPC 自托管的混合交易所"
+		},
+		"bullish_cex": {
+			"description": "Block.one 支持的机构级交易所，采用混合订单簿"
+		},
+		"hashkey_cex": {
+			"description": "香港持牌交易所，提供亚洲地区合规加密交易"
+		},
+		"osl_cex": {
+			"description": "香港持牌交易所和面向机构的数字资产平台"
+		},
+		"coingecko_exchanges": {
+			"description": "按信任评分、交易量和交易对排名的交易所详细分析"
+		},
+		"cmc_exchanges": {
+			"description": "CoinMarketCap 按交易量、流动性评分和交易数据排名的交易所"
+		},
+		"cryptorank_exchanges": {
+			"description": "提供交易量数据、费率结构和市场分析的交易所比较"
+		},
+		"kaiko_data": {
+			"description": "机构级市场数据提供商，提供 API 访问和分析"
+		},
 		"ccdata": {
-			"description": "机构市场指数和数据"
+			"description": "面向机构加密分析的市场数据和指数提供商"
 		},
-		"binance-cex": {
-			"description": "Binance - Tool"
+		"coinbase_prime": {
+			"description": "机构交易平台，提供主经纪商和托管服务"
 		},
-		"coinbase-cex": {
-			"description": "Coinbase - Tool"
+		"binance_institutional": {
+			"description": "机构服务，包括 VIP 交易、OTC 柜台和托管解决方案"
 		},
-		"okx-cex": {
-			"description": "OKX - Tool"
+		"galaxy_trading": {
+			"description": "机构交易柜台，提供 OTC、衍生品和借贷服务"
 		},
-		"bybit-cex": {
-			"description": "Bybit - Tool"
+		"cumberland_trading": {
+			"description": "DRW 子公司，提供机构 OTC 交易和做市服务"
 		},
-		"kraken-cex": {
-			"description": "Kraken - Tool"
+		"moonpay_ramp": {
+			"description": "加密入金通道，支持通过银行卡和银行转账购买加密货币"
 		},
-		"bitget-cex": {
-			"description": "Bitget - Tool"
+		"transak_ramp": {
+			"description": "全球法币入金通道，支持多种货币，易于与 dApp 集成"
 		},
-		"kucoin-cex": {
-			"description": "KuCoin - Tool"
+		"ramp_network": {
+			"description": "合规的出入金 SDK，实现应用内无缝加密购买"
 		},
-		"gateio-cex": {
-			"description": "Gate.io - Tool"
+		"banxa_ramp": {
+			"description": "受监管的法币转加密支付基础设施"
 		},
-		"htx-cex": {
-			"description": "HTX (Huobi) - Tool"
+		"paxful_p2p": {
+			"description": "P2P 市场，支持 300+ 种支付方式购买比特币，包括礼品卡"
 		},
-		"mexc-cex": {
-			"description": "MEXC - Tool"
+		"localbitcoins_p2p": {
+			"description": "连接本地买卖双方的先驱 P2P 比特币市场"
 		},
-		"deribit-cex": {
-			"description": "Deribit - Tool"
-		},
-		"bitfinex-cex": {
-			"description": "Bitfinex - Tool"
-		},
-		"bitmex-cex": {
-			"description": "BitMEX - Tool"
-		},
-		"upbit-cex": {
-			"description": "Upbit - Tool"
-		},
-		"bithumb-cex": {
-			"description": "Bithumb - Tool"
-		},
-		"bitflyer-cex": {
-			"description": "bitFlyer - Tool"
-		},
-		"coincheck-cex": {
-			"description": "Coincheck - Tool"
-		},
-		"wazirx-cex": {
-			"description": "WazirX - Tool"
-		},
-		"bitstamp-cex": {
-			"description": "Bitstamp - Tool"
-		},
-		"lbank-cex": {
-			"description": "LBank - Tool"
-		},
-		"backpack-cex": {
-			"description": "Backpack Exchange - Tool"
-		},
-		"hyperliquid-cex": {
-			"description": "Hyperliquid - Tool"
-		},
-		"cube-cex": {
-			"description": "Cube Exchange - Tool"
-		},
-		"bullish-cex": {
-			"description": "Bullish - Tool"
-		},
-		"hashkey-cex": {
-			"description": "HashKey Exchange - Tool"
-		},
-		"osl-cex": {
-			"description": "OSL - Tool"
-		},
-		"coingecko-exchanges": {
-			"description": "CoinGecko Exchanges - Tool"
-		},
-		"cmc-exchanges": {
-			"description": "CMC Exchange Ranking - Tool"
-		},
-		"cryptorank-exchanges": {
-			"description": "CryptoRank Exchanges - Tool"
-		},
-		"kaiko-data": {
-			"description": "Kaiko - Tool"
-		},
-		"coinbase-prime": {
-			"description": "Coinbase Prime - Tool"
-		},
-		"binance-institutional": {
-			"description": "Binance Institutional - Tool"
-		},
-		"galaxy-trading": {
-			"description": "Galaxy Trading - Tool"
-		},
-		"cumberland-trading": {
-			"description": "Cumberland - Tool"
-		},
-		"moonpay-ramp": {
-			"description": "MoonPay - Tool"
-		},
-		"transak-ramp": {
-			"description": "Transak - Tool"
-		},
-		"ramp-network": {
-			"description": "Ramp Network - Tool"
-		},
-		"banxa-ramp": {
-			"description": "Banxa - Tool"
-		},
-		"paxful-p2p": {
-			"description": "Paxful - Tool"
-		},
-		"localbitcoins-p2p": {
-			"description": "LocalBitcoins - Tool"
-		},
-		"noones-p2p": {
-			"description": "Noones - Tool"
+		"noones_p2p": {
+			"description": "专注新兴市场的 P2P 交易平台，具有社交功能"
 		}
 	}
 }

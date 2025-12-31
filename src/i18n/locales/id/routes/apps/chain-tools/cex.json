@@ -2,6 +2,7 @@
 	"category_seo": {
 		"title": "Exchange Kripto (CEX) - Platform Trading | BiuBiu Tools",
 		"description": "Exchange cryptocurrency terpusat untuk trading. Bandingkan fitur exchange, keamanan, biaya, dan aset yang didukung.",
+		"keywords": "exchange kripto, cex, binance, coinbase, platform trading kripto",
 		"faqs": [
 			{
 				"question": "Exchange mana yang paling aman?",
@@ -18,131 +19,131 @@
 		]
 	},
 	"tools": {
+		"binance_cex": {
+			"description": "Exchange crypto terbesar di dunia berdasarkan volume dengan trading spot, futures, dan margin komprehensif"
+		},
+		"coinbase_cex": {
+			"description": "Exchange teregulasi AS dan perusahaan terdaftar NASDAQ, dikenal dengan keamanan dan antarmuka ramah pemula"
+		},
+		"okx_cex": {
+			"description": "Exchange global yang menawarkan spot, derivatif, dan wallet Web3 dengan volume derivatif kuat"
+		},
+		"bybit_cex": {
+			"description": "Exchange fokus derivatif yang dikenal dengan kontrak perpetual dan trading leverage tinggi"
+		},
+		"kraken_cex": {
+			"description": "Exchange AS fokus keamanan dengan proof of reserves dan kepatuhan regulasi yang kuat"
+		},
+		"bitget_cex": {
+			"description": "Exchange yang dikenal dengan fitur copy trading dan derivatif dengan kehadiran global yang berkembang"
+		},
+		"kucoin_cex": {
+			"description": "Exchange dengan listing altcoin ekstensif, bot trading, dan produk yield"
+		},
+		"gateio_cex": {
+			"description": "Exchange dengan listing altcoin awal, proyek startup, dan opsi trading komprehensif"
+		},
+		"htx_cex": {
+			"description": "Exchange Asia utama (sebelumnya Huobi) dengan spot, derivatif, dan layanan institusional"
+		},
+		"mexc_cex": {
+			"description": "Exchange yang dikenal dengan listing token baru cepat dan pilihan altcoin ekstensif"
+		},
+		"deribit_cex": {
+			"description": "Exchange opsi dan futures crypto terkemuka untuk trader institusional dan profesional"
+		},
+		"bitfinex_cex": {
+			"description": "Exchange yang dikenal dengan margin trading, pasar lending, dan tools trading profesional"
+		},
+		"bitmex_cex": {
+			"description": "Pionir perpetual swap crypto dengan trading derivatif leverage tinggi"
+		},
+		"upbit_cex": {
+			"description": "Exchange terkemuka Korea yang dikenal dengan pair KRW dan peluang kimchi premium"
+		},
+		"bithumb_cex": {
+			"description": "Exchange utama Korea dengan kehadiran pasar lokal kuat dan pair trading KRW"
+		},
+		"bitflyer_cex": {
+			"description": "Exchange terbesar Jepang, teregulasi dan sesuai dengan hukum keuangan lokal"
+		},
+		"coincheck_cex": {
+			"description": "Exchange Jepang dengan antarmuka sederhana dan integrasi marketplace NFT"
+		},
+		"wazirx_cex": {
+			"description": "Exchange terkemuka India dengan trading P2P dan dukungan INR"
+		},
+		"bitstamp_cex": {
+			"description": "Salah satu exchange tertua di Eropa, dikenal dengan kepatuhan regulasi dan keandalan"
+		},
+		"lbank_cex": {
+			"description": "Exchange dengan listing altcoin awal, launchpad, dan produk staking"
+		},
+		"backpack_cex": {
+			"description": "Exchange teregulasi Solana-native dari tim Mad Lads dengan lisensi Dubai"
+		},
+		"hyperliquid_cex": {
+			"description": "Exchange perpetual terdesentralisasi performa tinggi dengan order book on-chain"
+		},
+		"cube_cex": {
+			"description": "Exchange hybrid yang menggabungkan performa CEX dengan self-custody berbasis MPC"
+		},
+		"bullish_cex": {
+			"description": "Exchange grade institusional didukung Block.one dengan order book hybrid"
+		},
+		"hashkey_cex": {
+			"description": "Exchange berlisensi Hong Kong untuk trading crypto teregulasi di Asia"
+		},
+		"osl_cex": {
+			"description": "Exchange berlisensi Hong Kong dan platform aset digital untuk institusi"
+		},
+		"coingecko_exchanges": {
+			"description": "Peringkat exchange berdasarkan trust score, volume, dan pair trading dengan analisis detail"
+		},
+		"cmc_exchanges": {
+			"description": "Peringkat exchange CoinMarketCap berdasarkan volume, skor likuiditas, dan data trading"
+		},
+		"cryptorank_exchanges": {
+			"description": "Perbandingan exchange dengan data volume, struktur biaya, dan analisis pasar"
+		},
+		"kaiko_data": {
+			"description": "Penyedia data pasar grade institusional dengan akses API dan analitik"
+		},
 		"ccdata": {
-			"description": "Indeks pasar dan data untuk institusi"
+			"description": "Penyedia indeks dan data pasar untuk analisis crypto institusional"
 		},
-		"binance-cex": {
-			"description": "Binance - Tool"
+		"coinbase_prime": {
+			"description": "Platform trading institusional dengan layanan prime brokerage dan kustodi"
 		},
-		"coinbase-cex": {
-			"description": "Coinbase - Tool"
+		"binance_institutional": {
+			"description": "Layanan institusional termasuk trading VIP, meja OTC, dan solusi kustodi"
 		},
-		"okx-cex": {
-			"description": "OKX - Tool"
+		"galaxy_trading": {
+			"description": "Meja trading institusional yang menawarkan layanan OTC, derivatif, dan lending"
 		},
-		"bybit-cex": {
-			"description": "Bybit - Tool"
+		"cumberland_trading": {
+			"description": "Anak perusahaan DRW yang menyediakan trading OTC institusional dan market making"
 		},
-		"kraken-cex": {
-			"description": "Kraken - Tool"
+		"moonpay_ramp": {
+			"description": "On-ramp crypto yang memungkinkan pembelian fiat ke crypto via kartu dan transfer bank"
 		},
-		"bitget-cex": {
-			"description": "Bitget - Tool"
+		"transak_ramp": {
+			"description": "On-ramp fiat global dengan dukungan mata uang luas dan integrasi mudah untuk dApps"
 		},
-		"kucoin-cex": {
-			"description": "KuCoin - Tool"
+		"ramp_network": {
+			"description": "SDK on/off-ramp yang sesuai untuk pembelian crypto tanpa hambatan di aplikasi"
 		},
-		"gateio-cex": {
-			"description": "Gate.io - Tool"
+		"banxa_ramp": {
+			"description": "Infrastruktur pembayaran teregulasi untuk transaksi fiat ke crypto"
 		},
-		"htx-cex": {
-			"description": "HTX (Huobi) - Tool"
+		"paxful_p2p": {
+			"description": "Marketplace P2P untuk membeli Bitcoin dengan 300+ metode pembayaran termasuk gift card"
 		},
-		"mexc-cex": {
-			"description": "MEXC - Tool"
+		"localbitcoins_p2p": {
+			"description": "Marketplace P2P Bitcoin pionir yang menghubungkan pembeli dan penjual lokal"
 		},
-		"deribit-cex": {
-			"description": "Deribit - Tool"
-		},
-		"bitfinex-cex": {
-			"description": "Bitfinex - Tool"
-		},
-		"bitmex-cex": {
-			"description": "BitMEX - Tool"
-		},
-		"upbit-cex": {
-			"description": "Upbit - Tool"
-		},
-		"bithumb-cex": {
-			"description": "Bithumb - Tool"
-		},
-		"bitflyer-cex": {
-			"description": "bitFlyer - Tool"
-		},
-		"coincheck-cex": {
-			"description": "Coincheck - Tool"
-		},
-		"wazirx-cex": {
-			"description": "WazirX - Tool"
-		},
-		"bitstamp-cex": {
-			"description": "Bitstamp - Tool"
-		},
-		"lbank-cex": {
-			"description": "LBank - Tool"
-		},
-		"backpack-cex": {
-			"description": "Backpack Exchange - Tool"
-		},
-		"hyperliquid-cex": {
-			"description": "Hyperliquid - Tool"
-		},
-		"cube-cex": {
-			"description": "Cube Exchange - Tool"
-		},
-		"bullish-cex": {
-			"description": "Bullish - Tool"
-		},
-		"hashkey-cex": {
-			"description": "HashKey Exchange - Tool"
-		},
-		"osl-cex": {
-			"description": "OSL - Tool"
-		},
-		"coingecko-exchanges": {
-			"description": "CoinGecko Exchanges - Tool"
-		},
-		"cmc-exchanges": {
-			"description": "CMC Exchange Ranking - Tool"
-		},
-		"cryptorank-exchanges": {
-			"description": "CryptoRank Exchanges - Tool"
-		},
-		"kaiko-data": {
-			"description": "Kaiko - Tool"
-		},
-		"coinbase-prime": {
-			"description": "Coinbase Prime - Tool"
-		},
-		"binance-institutional": {
-			"description": "Binance Institutional - Tool"
-		},
-		"galaxy-trading": {
-			"description": "Galaxy Trading - Tool"
-		},
-		"cumberland-trading": {
-			"description": "Cumberland - Tool"
-		},
-		"moonpay-ramp": {
-			"description": "MoonPay - Tool"
-		},
-		"transak-ramp": {
-			"description": "Transak - Tool"
-		},
-		"ramp-network": {
-			"description": "Ramp Network - Tool"
-		},
-		"banxa-ramp": {
-			"description": "Banxa - Tool"
-		},
-		"paxful-p2p": {
-			"description": "Paxful - Tool"
-		},
-		"localbitcoins-p2p": {
-			"description": "LocalBitcoins - Tool"
-		},
-		"noones-p2p": {
-			"description": "Noones - Tool"
+		"noones_p2p": {
+			"description": "Platform trading P2P fokus pasar berkembang dengan fitur sosial"
 		}
 	}
 }

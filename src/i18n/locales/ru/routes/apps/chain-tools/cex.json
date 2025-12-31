@@ -2,7 +2,7 @@
 	"category_seo": {
 		"title": "Криптовалютные биржи (CEX) - Торговые платформы | BiuBiu Tools",
 		"description": "Централизованные криптовалютные биржи для торговли. Сравните функции бирж, безопасность, комиссии и поддерживаемые активы.",
-		"keywords": "криптобиржи, binance, coinbase, торговые платформы",
+		"keywords": "криптобиржи, cex, binance, coinbase, торговые платформы",
 		"faqs": [
 			{
 				"question": "Какие биржи самые безопасные?",
@@ -19,131 +19,131 @@
 		]
 	},
 	"tools": {
+		"binance_cex": {
+			"description": "Крупнейшая криптобиржа мира по объему с полным спотовым, фьючерсным и маржинальным трейдингом"
+		},
+		"coinbase_cex": {
+			"description": "Регулируемая биржа США и компания на NASDAQ, известная безопасностью и дружественным интерфейсом"
+		},
+		"okx_cex": {
+			"description": "Глобальная биржа, предлагающая спот, деривативы и Web3 кошелек с сильным объемом деривативов"
+		},
+		"bybit_cex": {
+			"description": "Биржа, ориентированная на деривативы, известная бессрочными контрактами и высоким плечом"
+		},
+		"kraken_cex": {
+			"description": "Американская биржа с фокусом на безопасность, доказательством резервов и строгим регулированием"
+		},
+		"bitget_cex": {
+			"description": "Биржа, известная функцией копи-трейдинга и деривативами с растущим глобальным присутствием"
+		},
+		"kucoin_cex": {
+			"description": "Биржа с обширными листингами альткоинов, торговыми ботами и продуктами доходности"
+		},
+		"gateio_cex": {
+			"description": "Биржа с ранними листингами альткоинов, стартап-проектами и полными торговыми опциями"
+		},
+		"htx_cex": {
+			"description": "Крупная азиатская биржа (бывший Huobi) со спотом, деривативами и институциональными услугами"
+		},
+		"mexc_cex": {
+			"description": "Биржа, известная быстрыми листингами новых токенов и обширным выбором альткоинов"
+		},
+		"deribit_cex": {
+			"description": "Ведущая криптобиржа опционов и фьючерсов для институциональных и профессиональных трейдеров"
+		},
+		"bitfinex_cex": {
+			"description": "Биржа, известная маржинальной торговлей, рынками кредитования и профессиональными инструментами"
+		},
+		"bitmex_cex": {
+			"description": "Пионер криптовалютных бессрочных свопов с высоким плечом для деривативов"
+		},
+		"upbit_cex": {
+			"description": "Ведущая корейская биржа, известная парами KRW и возможностями кимчи-премиума"
+		},
+		"bithumb_cex": {
+			"description": "Крупная корейская биржа с сильным присутствием на местном рынке и парами KRW"
+		},
+		"bitflyer_cex": {
+			"description": "Крупнейшая японская биржа, регулируемая и соответствующая местным финансовым законам"
+		},
+		"coincheck_cex": {
+			"description": "Японская биржа с простым интерфейсом и интеграцией NFT-маркетплейса"
+		},
+		"wazirx_cex": {
+			"description": "Ведущая индийская биржа с P2P-торговлей и поддержкой INR"
+		},
+		"bitstamp_cex": {
+			"description": "Одна из старейших бирж Европы, известная соответствием регулированию и надежностью"
+		},
+		"lbank_cex": {
+			"description": "Биржа с ранними листингами альткоинов, лаунчпадом и стейкинг-продуктами"
+		},
+		"backpack_cex": {
+			"description": "Регулируемая Solana-native биржа от команды Mad Lads с лицензией Дубая"
+		},
+		"hyperliquid_cex": {
+			"description": "Высокопроизводительная децентрализованная биржа бессрочных с он-чейн ордербуком"
+		},
+		"cube_cex": {
+			"description": "Гибридная биржа, сочетающая производительность CEX с MPC-самохранением"
+		},
+		"bullish_cex": {
+			"description": "Институциональная биржа при поддержке Block.one с гибридным ордербуком"
+		},
+		"hashkey_cex": {
+			"description": "Биржа с лицензией Гонконга для регулируемой криптоторговли в Азии"
+		},
+		"osl_cex": {
+			"description": "Биржа с лицензией Гонконга и платформа цифровых активов для институций"
+		},
+		"coingecko_exchanges": {
+			"description": "Рейтинги бирж по trust score, объему и парам с детальной аналитикой"
+		},
+		"cmc_exchanges": {
+			"description": "Рейтинги бирж CoinMarketCap по объему, ликвидности и торговым данным"
+		},
+		"cryptorank_exchanges": {
+			"description": "Сравнение бирж с данными объема, структурой комиссий и анализом рынка"
+		},
+		"kaiko_data": {
+			"description": "Институциональный провайдер рыночных данных с API-доступом и аналитикой"
+		},
 		"ccdata": {
-			"description": "Рыночные индексы и данные для институций"
+			"description": "Провайдер рыночных данных и индексов для институционального криптоанализа"
 		},
-		"binance-cex": {
-			"description": "Binance - Tool"
+		"coinbase_prime": {
+			"description": "Институциональная торговая платформа с прайм-брокерскими и кастодиальными услугами"
 		},
-		"coinbase-cex": {
-			"description": "Coinbase - Tool"
+		"binance_institutional": {
+			"description": "Институциональные услуги включая VIP-трейдинг, OTC-деск и кастодиальные решения"
 		},
-		"okx-cex": {
-			"description": "OKX - Tool"
+		"galaxy_trading": {
+			"description": "Институциональный торговый деск с OTC, деривативами и кредитными услугами"
 		},
-		"bybit-cex": {
-			"description": "Bybit - Tool"
+		"cumberland_trading": {
+			"description": "Дочерняя компания DRW, предоставляющая институциональный OTC-трейдинг и маркетмейкинг"
 		},
-		"kraken-cex": {
-			"description": "Kraken - Tool"
+		"moonpay_ramp": {
+			"description": "Крипто он-рамп для покупки криптовалюты за фиат картой и банковским переводом"
 		},
-		"bitget-cex": {
-			"description": "Bitget - Tool"
+		"transak_ramp": {
+			"description": "Глобальный фиат он-рамп с широкой поддержкой валют и легкой интеграцией для dApps"
 		},
-		"kucoin-cex": {
-			"description": "KuCoin - Tool"
+		"ramp_network": {
+			"description": "Комплаентный он/офф-рамп SDK для бесшовных криптопокупок в приложениях"
 		},
-		"gateio-cex": {
-			"description": "Gate.io - Tool"
+		"banxa_ramp": {
+			"description": "Регулируемая платежная инфраструктура для фиат-крипто транзакций"
 		},
-		"htx-cex": {
-			"description": "HTX (Huobi) - Tool"
+		"paxful_p2p": {
+			"description": "P2P-маркетплейс для покупки Bitcoin с 300+ способами оплаты включая подарочные карты"
 		},
-		"mexc-cex": {
-			"description": "MEXC - Tool"
+		"localbitcoins_p2p": {
+			"description": "Пионерский P2P Bitcoin-маркетплейс, соединяющий местных покупателей и продавцов"
 		},
-		"deribit-cex": {
-			"description": "Deribit - Tool"
-		},
-		"bitfinex-cex": {
-			"description": "Bitfinex - Tool"
-		},
-		"bitmex-cex": {
-			"description": "BitMEX - Tool"
-		},
-		"upbit-cex": {
-			"description": "Upbit - Tool"
-		},
-		"bithumb-cex": {
-			"description": "Bithumb - Tool"
-		},
-		"bitflyer-cex": {
-			"description": "bitFlyer - Tool"
-		},
-		"coincheck-cex": {
-			"description": "Coincheck - Tool"
-		},
-		"wazirx-cex": {
-			"description": "WazirX - Tool"
-		},
-		"bitstamp-cex": {
-			"description": "Bitstamp - Tool"
-		},
-		"lbank-cex": {
-			"description": "LBank - Tool"
-		},
-		"backpack-cex": {
-			"description": "Backpack Exchange - Tool"
-		},
-		"hyperliquid-cex": {
-			"description": "Hyperliquid - Tool"
-		},
-		"cube-cex": {
-			"description": "Cube Exchange - Tool"
-		},
-		"bullish-cex": {
-			"description": "Bullish - Tool"
-		},
-		"hashkey-cex": {
-			"description": "HashKey Exchange - Tool"
-		},
-		"osl-cex": {
-			"description": "OSL - Tool"
-		},
-		"coingecko-exchanges": {
-			"description": "CoinGecko Exchanges - Tool"
-		},
-		"cmc-exchanges": {
-			"description": "CMC Exchange Ranking - Tool"
-		},
-		"cryptorank-exchanges": {
-			"description": "CryptoRank Exchanges - Tool"
-		},
-		"kaiko-data": {
-			"description": "Kaiko - Tool"
-		},
-		"coinbase-prime": {
-			"description": "Coinbase Prime - Tool"
-		},
-		"binance-institutional": {
-			"description": "Binance Institutional - Tool"
-		},
-		"galaxy-trading": {
-			"description": "Galaxy Trading - Tool"
-		},
-		"cumberland-trading": {
-			"description": "Cumberland - Tool"
-		},
-		"moonpay-ramp": {
-			"description": "MoonPay - Tool"
-		},
-		"transak-ramp": {
-			"description": "Transak - Tool"
-		},
-		"ramp-network": {
-			"description": "Ramp Network - Tool"
-		},
-		"banxa-ramp": {
-			"description": "Banxa - Tool"
-		},
-		"paxful-p2p": {
-			"description": "Paxful - Tool"
-		},
-		"localbitcoins-p2p": {
-			"description": "LocalBitcoins - Tool"
-		},
-		"noones-p2p": {
-			"description": "Noones - Tool"
+		"noones_p2p": {
+			"description": "P2P-торговая платформа для развивающихся рынков с социальными функциями"
 		}
 	}
 }

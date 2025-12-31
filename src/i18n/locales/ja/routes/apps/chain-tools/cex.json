@@ -2,7 +2,7 @@
 	"category_seo": {
 		"title": "暗号資産取引所（CEX）- トレーディングプラットフォーム | BiuBiu Tools",
 		"description": "トレーディング用の中央集権型暗号資産取引所。取引所の機能、セキュリティ、手数料、サポートされている資産を比較。",
-		"keywords": "",
+		"keywords": "暗号資産取引所, cex, トレーディングプラットフォーム, バイナンス, コインベース, 仮想通貨取引",
 		"faqs": [
 			{
 				"question": "最も安全な取引所はどれですか？",
@@ -19,131 +19,131 @@
 		]
 	},
 	"tools": {
+		"binance_cex": {
+			"description": "取引量世界最大の暗号資産取引所、包括的な現物、先物、証拠金取引を提供"
+		},
+		"coinbase_cex": {
+			"description": "米国規制の取引所でNASDAQ上場企業、セキュリティと初心者向けインターフェースで知られる"
+		},
+		"okx_cex": {
+			"description": "現物、デリバティブ、Web3ウォレットを提供するグローバル取引所、デリバティブ取引量が強い"
+		},
+		"bybit_cex": {
+			"description": "永続契約とハイレバレッジ取引で知られるデリバティブ特化取引所"
+		},
+		"kraken_cex": {
+			"description": "準備金証明と強力な規制コンプライアンスを持つセキュリティ重視の米国取引所"
+		},
+		"bitget_cex": {
+			"description": "コピートレード機能とデリバティブで知られる取引所、グローバルプレゼンス拡大中"
+		},
+		"kucoin_cex": {
+			"description": "豊富なアルトコイン上場、トレーディングボット、収益商品を持つ取引所"
+		},
+		"gateio_cex": {
+			"description": "早期アルトコイン上場、スタートアッププロジェクト、包括的な取引オプションを特徴とする取引所"
+		},
+		"htx_cex": {
+			"description": "主要アジア取引所（旧Huobi）、現物、デリバティブ、機関投資家サービスを提供"
+		},
+		"mexc_cex": {
+			"description": "迅速な新トークン上場と豊富なアルトコイン選択で知られる取引所"
+		},
+		"deribit_cex": {
+			"description": "機関投資家とプロトレーダー向けの主要暗号資産オプション・先物取引所"
+		},
+		"bitfinex_cex": {
+			"description": "証拠金取引、レンディングマーケット、プロ向け取引ツールで知られる取引所"
+		},
+		"bitmex_cex": {
+			"description": "暗号資産永続スワップのパイオニア、ハイレバレッジデリバティブ取引を提供"
+		},
+		"upbit_cex": {
+			"description": "韓国主要取引所、KRWペアとキムチプレミアム機会で知られる"
+		},
+		"bithumb_cex": {
+			"description": "韓国主要取引所、強いローカル市場プレゼンスとKRW取引ペア"
+		},
+		"bitflyer_cex": {
+			"description": "日本最大の取引所、規制を受け国内金融法に準拠"
+		},
+		"coincheck_cex": {
+			"description": "シンプルなインターフェースとNFTマーケットプレイス統合を持つ日本の取引所"
+		},
+		"wazirx_cex": {
+			"description": "P2P取引とINRサポートを持つインド主要取引所"
+		},
+		"bitstamp_cex": {
+			"description": "ヨーロッパ最古の取引所の一つ、規制コンプライアンスと信頼性で知られる"
+		},
+		"lbank_cex": {
+			"description": "早期アルトコイン上場、ローンチパッド、ステーキング商品を持つ取引所"
+		},
+		"backpack_cex": {
+			"description": "Mad Ladsチームによるドバイライセンス取得のSolanaネイティブ規制取引所"
+		},
+		"hyperliquid_cex": {
+			"description": "オンチェーンオーダーブックを持つ高性能分散型永続取引所"
+		},
+		"cube_cex": {
+			"description": "CEXパフォーマンスとMPCベース自己保管を組み合わせたハイブリッド取引所"
+		},
+		"bullish_cex": {
+			"description": "Block.one支援の機関投資家向け取引所、ハイブリッドオーダーブック"
+		},
+		"hashkey_cex": {
+			"description": "アジアでの規制暗号資産取引のための香港ライセンス取引所"
+		},
+		"osl_cex": {
+			"description": "機関投資家向け香港ライセンス取引所とデジタル資産プラットフォーム"
+		},
+		"coingecko_exchanges": {
+			"description": "信頼スコア、取引量、取引ペアによる取引所ランキングと詳細分析"
+		},
+		"cmc_exchanges": {
+			"description": "CoinMarketCapの取引量、流動性スコア、取引データによる取引所ランキング"
+		},
+		"cryptorank_exchanges": {
+			"description": "取引量データ、手数料体系、市場分析による取引所比較"
+		},
+		"kaiko_data": {
+			"description": "APIアクセスと分析を提供する機関投資家向け市場データプロバイダー"
+		},
 		"ccdata": {
-			"description": "機関向け市場インデックスとデータ"
+			"description": "機関投資家向け暗号資産分析のための市場データとインデックスプロバイダー"
 		},
-		"binance-cex": {
-			"description": "Binance - Tool"
+		"coinbase_prime": {
+			"description": "プライムブローカレッジとカストディサービスを提供する機関投資家向け取引プラットフォーム"
 		},
-		"coinbase-cex": {
-			"description": "Coinbase - Tool"
+		"binance_institutional": {
+			"description": "VIP取引、OTCデスク、カストディソリューションを含む機関投資家サービス"
 		},
-		"okx-cex": {
-			"description": "OKX - Tool"
+		"galaxy_trading": {
+			"description": "OTC、デリバティブ、レンディングサービスを提供する機関投資家向け取引デスク"
 		},
-		"bybit-cex": {
-			"description": "Bybit - Tool"
+		"cumberland_trading": {
+			"description": "機関投資家向けOTC取引とマーケットメイキングを提供するDRW子会社"
 		},
-		"kraken-cex": {
-			"description": "Kraken - Tool"
+		"moonpay_ramp": {
+			"description": "カードと銀行振込による法定通貨から暗号資産への購入を可能にするオンランプ"
 		},
-		"bitget-cex": {
-			"description": "Bitget - Tool"
+		"transak_ramp": {
+			"description": "幅広い通貨サポートとdAppsへの簡単な統合を持つグローバル法定通貨オンランプ"
 		},
-		"kucoin-cex": {
-			"description": "KuCoin - Tool"
+		"ramp_network": {
+			"description": "アプリ内でのシームレスな暗号資産購入のためのコンプライアントなオン/オフランプSDK"
 		},
-		"gateio-cex": {
-			"description": "Gate.io - Tool"
+		"banxa_ramp": {
+			"description": "法定通貨から暗号資産への取引のための規制された決済インフラ"
 		},
-		"htx-cex": {
-			"description": "HTX (Huobi) - Tool"
+		"paxful_p2p": {
+			"description": "ギフトカードを含む300以上の支払い方法でビットコインを購入できるP2Pマーケットプレイス"
 		},
-		"mexc-cex": {
-			"description": "MEXC - Tool"
+		"localbitcoins_p2p": {
+			"description": "ローカルの買い手と売り手をつなぐパイオニアP2Pビットコインマーケットプレイス"
 		},
-		"deribit-cex": {
-			"description": "Deribit - Tool"
-		},
-		"bitfinex-cex": {
-			"description": "Bitfinex - Tool"
-		},
-		"bitmex-cex": {
-			"description": "BitMEX - Tool"
-		},
-		"upbit-cex": {
-			"description": "Upbit - Tool"
-		},
-		"bithumb-cex": {
-			"description": "Bithumb - Tool"
-		},
-		"bitflyer-cex": {
-			"description": "bitFlyer - Tool"
-		},
-		"coincheck-cex": {
-			"description": "Coincheck - Tool"
-		},
-		"wazirx-cex": {
-			"description": "WazirX - Tool"
-		},
-		"bitstamp-cex": {
-			"description": "Bitstamp - Tool"
-		},
-		"lbank-cex": {
-			"description": "LBank - Tool"
-		},
-		"backpack-cex": {
-			"description": "Backpack Exchange - Tool"
-		},
-		"hyperliquid-cex": {
-			"description": "Hyperliquid - Tool"
-		},
-		"cube-cex": {
-			"description": "Cube Exchange - Tool"
-		},
-		"bullish-cex": {
-			"description": "Bullish - Tool"
-		},
-		"hashkey-cex": {
-			"description": "HashKey Exchange - Tool"
-		},
-		"osl-cex": {
-			"description": "OSL - Tool"
-		},
-		"coingecko-exchanges": {
-			"description": "CoinGecko Exchanges - Tool"
-		},
-		"cmc-exchanges": {
-			"description": "CMC Exchange Ranking - Tool"
-		},
-		"cryptorank-exchanges": {
-			"description": "CryptoRank Exchanges - Tool"
-		},
-		"kaiko-data": {
-			"description": "Kaiko - Tool"
-		},
-		"coinbase-prime": {
-			"description": "Coinbase Prime - Tool"
-		},
-		"binance-institutional": {
-			"description": "Binance Institutional - Tool"
-		},
-		"galaxy-trading": {
-			"description": "Galaxy Trading - Tool"
-		},
-		"cumberland-trading": {
-			"description": "Cumberland - Tool"
-		},
-		"moonpay-ramp": {
-			"description": "MoonPay - Tool"
-		},
-		"transak-ramp": {
-			"description": "Transak - Tool"
-		},
-		"ramp-network": {
-			"description": "Ramp Network - Tool"
-		},
-		"banxa-ramp": {
-			"description": "Banxa - Tool"
-		},
-		"paxful-p2p": {
-			"description": "Paxful - Tool"
-		},
-		"localbitcoins-p2p": {
-			"description": "LocalBitcoins - Tool"
-		},
-		"noones-p2p": {
-			"description": "Noones - Tool"
+		"noones_p2p": {
+			"description": "ソーシャル機能を持つ新興市場向けP2P取引プラットフォーム"
 		}
 	}
 }
