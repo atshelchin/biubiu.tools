@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Trader Joe - Avalanche's Leading DEX",
+		"description": "Trader Joe is the top DEX on Avalanche featuring Liquidity Book with concentrated liquidity. Trade, farm, and earn JOE tokens.",
+		"keywords": "Trader Joe, JOE token, Avalanche DEX, Liquidity Book, concentrated liquidity, DeFi"
+	},
+	"overview": "Trader Joe is the largest decentralized exchange on Avalanche, known for its innovative Liquidity Book AMM. Unlike traditional AMMs, Liquidity Book uses discrete bins for concentrated liquidity, improving capital efficiency.\n\nThe platform offers trading, farming, lending, and launchpad features. JOE token powers the ecosystem through staking (sJOE, rJOE, veJOE) with various utilities and rewards.\n\nTrader Joe has expanded beyond Avalanche to Arbitrum and BNB Chain, bringing its Liquidity Book innovation to multiple ecosystems while maintaining strong presence on its home chain.",
+	"features": {
+		"1": {
+			"title": "Liquidity Book",
+			"description": "Concentrated liquidity with price bins"
+		},
+		"2": {
+			"title": "Multi-Chain",
+			"description": "Avalanche, Arbitrum, BNB Chain"
+		},
+		"3": {
+			"title": "JOE Staking",
+			"description": "sJOE, rJOE, veJOE options"
+		},
+		"4": {
+			"title": "Lending",
+			"description": "Banker Joe lending protocol"
+		},
+		"5": {
+			"title": "Launchpad",
+			"description": "Rocket Joe for new projects"
+		},
+		"6": {
+			"title": "Auto-Pools",
+			"description": "Managed LP strategies"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Trading",
+			"description": "Swap with concentrated liquidity"
+		},
+		"2": {
+			"title": "Liquidity Provision",
+			"description": "LP with Liquidity Book bins"
+		},
+		"3": {
+			"title": "JOE Staking",
+			"description": "Stake for rewards and perks"
+		},
+		"4": {
+			"title": "Farming",
+			"description": "Earn JOE on LP positions"
+		},
+		"5": {
+			"title": "Lending",
+			"description": "Borrow and lend on Banker Joe"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Liquidity Book?",
+			"answer": "Liquidity Book is Trader Joe's concentrated liquidity AMM. Instead of continuous curves, liquidity is placed in discrete price 'bins.' LPs earn fees only when their bins are active. This improves capital efficiency vs traditional AMMs."
+		},
+		"2": {
+			"question": "What's the difference between sJOE, rJOE, and veJOE?",
+			"answer": "sJOE is staked JOE earning platform fees in stablecoins. rJOE earns rewards and gives Rocket Joe launchpad access. veJOE is vote-escrowed for boosted farming and governance. Different use cases for different goals."
+		},
+		"3": {
+			"question": "Is Trader Joe only on Avalanche?",
+			"answer": "No, Trader Joe has expanded to Arbitrum and BNB Chain. The Liquidity Book DEX is available on all three chains. Some features like Banker Joe lending are Avalanche-specific."
+		},
+		"4": {
+			"question": "How does Liquidity Book compare to Uniswap V3?",
+			"answer": "Both offer concentrated liquidity. Liquidity Book uses discrete bins vs Uniswap's custom ranges. Bins are simpler to manage and can be more gas-efficient. Trade-offs exist—try both and compare."
+		},
+		"5": {
+			"question": "Is Trader Joe safe?",
+			"answer": "Trader Joe is audited and battle-tested since 2021 with significant TVL. It's the leading DEX on Avalanche. Standard DeFi risks apply—impermanent loss, smart contract risk. The team is active and responsive."
+		}
+	},
+	"cta": {
+		"ready": "Ready to trade on Avalanche?",
+		"button": "Explore Trader Joe",
+		"note": "Avalanche's top DEX"
+	}
+}

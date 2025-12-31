@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Maverick Protocol - Dynamic AMM",
+		"description": "Maverick Protocol features dynamic concentrated liquidity that follows price movements. Trade with MAV token across multiple chains.",
+		"keywords": "Maverick, MAV token, dynamic AMM, concentrated liquidity, Base DEX, zkSync DEX"
+	},
+	"overview": "Maverick Protocol is an innovative AMM featuring dynamic concentrated liquidity. Unlike static concentrated liquidity where LPs must manually rebalance, Maverick's liquidity can automatically follow price movements.\n\nThe protocol offers multiple movement modes for LP positions, allowing sophisticated liquidity strategies. This creates more capital-efficient markets with tighter spreads for traders.\n\nMaverick is deployed on Ethereum, Base, zkSync, and BNB Chain. The MAV token provides governance and incentive alignment through veMAV staking.",
+	"features": {
+		"1": {
+			"title": "Dynamic Liquidity",
+			"description": "LP positions that follow price"
+		},
+		"2": {
+			"title": "Movement Modes",
+			"description": "Multiple LP strategy options"
+		},
+		"3": {
+			"title": "Multi-Chain",
+			"description": "Ethereum, Base, zkSync, BNB"
+		},
+		"4": {
+			"title": "MAV Token",
+			"description": "Governance and staking"
+		},
+		"5": {
+			"title": "Boosted Pools",
+			"description": "Incentivized liquidity pools"
+		},
+		"6": {
+			"title": "Capital Efficiency",
+			"description": "Concentrated liquidity innovation"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Efficient Trading",
+			"description": "Trade with tight spreads"
+		},
+		"2": {
+			"title": "Dynamic LP",
+			"description": "Provide liquidity that moves"
+		},
+		"3": {
+			"title": "Passive LP",
+			"description": "Set and forget with movement modes"
+		},
+		"4": {
+			"title": "MAV Staking",
+			"description": "Stake for veMAV governance"
+		},
+		"5": {
+			"title": "Boosted Farming",
+			"description": "Earn extra rewards in boosted pools"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What makes Maverick different from Uniswap V3?",
+			"answer": "Uniswap V3 concentrated liquidity is static—you set a range and it stays there. Maverick's dynamic liquidity can automatically move with price. This reduces the need for constant rebalancing and maintains capital efficiency."
+		},
+		"2": {
+			"question": "What are movement modes?",
+			"answer": "Movement modes define how your liquidity moves with price. Options include: Mode Right (follows price up), Mode Left (follows price down), Mode Both (follows both directions), and Static (like traditional concentrated liquidity)."
+		},
+		"3": {
+			"question": "What is MAV token used for?",
+			"answer": "MAV is Maverick's governance token. Stake MAV for veMAV to vote on protocol decisions and direct incentives. veMAV holders can boost their LP rewards and participate in gauge voting."
+		},
+		"4": {
+			"question": "Which chains is Maverick on?",
+			"answer": "Maverick is deployed on Ethereum mainnet, Base, zkSync Era, and BNB Chain. The same dynamic AMM technology is available across all supported chains."
+		},
+		"5": {
+			"question": "Is Maverick safe?",
+			"answer": "Maverick is audited and backed by notable investors including Founders Fund. The protocol has processed significant volume since launch. Standard AMM risks apply, plus additional complexity from dynamic positions."
+		}
+	},
+	"cta": {
+		"ready": "Ready for dynamic liquidity?",
+		"button": "Explore Maverick",
+		"note": "Next-gen concentrated liquidity"
+	}
+}

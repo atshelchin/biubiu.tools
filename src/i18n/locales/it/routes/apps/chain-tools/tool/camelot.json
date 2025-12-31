@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Camelot - Arbitrum Native DEX",
+		"description": "Camelot is Arbitrum's native DEX with custom pool types and Nitro pools. Trade and earn with GRAIL and xGRAIL tokens.",
+		"keywords": "Camelot, GRAIL, xGRAIL, Arbitrum DEX, Nitro pools, concentrated liquidity, DeFi"
+	},
+	"overview": "Camelot is the native decentralized exchange of Arbitrum, designed as the ecosystem's liquidity hub. It features multiple pool types including concentrated liquidity (V3), volatile, and stable pools.\n\nThe platform's unique Nitro pools allow protocols to bootstrap liquidity with customized incentive mechanisms. xGRAIL, the escrowed version of GRAIL, provides governance and boosted yields.\n\nCamelot has become central to Arbitrum's DeFi ecosystem, hosting liquidity for many native projects and providing launchpad services through its partnerships.",
+	"features": {
+		"1": {
+			"title": "Multiple Pool Types",
+			"description": "V3, volatile, and stable AMMs"
+		},
+		"2": {
+			"title": "Nitro Pools",
+			"description": "Custom incentive mechanisms"
+		},
+		"3": {
+			"title": "xGRAIL System",
+			"description": "Escrowed tokens for governance"
+		},
+		"4": {
+			"title": "Arbitrum Native",
+			"description": "Built for the Arbitrum ecosystem"
+		},
+		"5": {
+			"title": "Launchpad",
+			"description": "Round Table for new projects"
+		},
+		"6": {
+			"title": "Dividends",
+			"description": "Protocol revenue sharing"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Trading on Arbitrum",
+			"description": "Swap with multiple AMM types"
+		},
+		"2": {
+			"title": "Concentrated LP",
+			"description": "Provide V3-style liquidity"
+		},
+		"3": {
+			"title": "Nitro Farming",
+			"description": "Earn boosted rewards in Nitro pools"
+		},
+		"4": {
+			"title": "xGRAIL Staking",
+			"description": "Lock for governance and dividends"
+		},
+		"5": {
+			"title": "Project Launch",
+			"description": "Bootstrap liquidity for new tokens"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What are Nitro pools?",
+			"answer": "Nitro pools are Camelot's customizable incentive pools. Projects can create pools with specific requirements (lock duration, position size) and rewards. This allows precise liquidity bootstrapping beyond standard farming."
+		},
+		"2": {
+			"question": "What's the difference between GRAIL and xGRAIL?",
+			"answer": "GRAIL is the liquid governance token. xGRAIL is escrowed GRAIL that provides boosted yields, governance voting, and dividend rights. xGRAIL has vesting periods to convert back to GRAIL, encouraging long-term alignment."
+		},
+		"3": {
+			"question": "How do Camelot dividends work?",
+			"answer": "xGRAIL holders receive dividends from protocol fees. A portion of trading fees and other revenue is distributed to xGRAIL stakers. This creates real yield from actual protocol usage."
+		},
+		"4": {
+			"question": "Camelot vs Uniswap on Arbitrum?",
+			"answer": "Camelot is Arbitrum-native with ecosystem focus and xGRAIL incentives. Uniswap is the established leader with deeper liquidity on major pairs. Camelot often has better rates for Arbitrum-native tokens."
+		},
+		"5": {
+			"question": "Is Camelot safe?",
+			"answer": "Camelot is audited and has significant TVL on Arbitrum. It's been operating since 2022 without major incidents. Standard DEX risks apply. The xGRAIL mechanism is well-tested."
+		}
+	},
+	"cta": {
+		"ready": "Ready to explore Arbitrum DeFi?",
+		"button": "Explore Camelot",
+		"note": "Arbitrum's liquidity hub"
+	}
+}

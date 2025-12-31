@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Velodrome - Optimism's Native DEX",
+		"description": "Velodrome is the leading DEX on Optimism using ve(3,3) tokenomics. Trade, provide liquidity, and vote for emissions with VELO.",
+		"keywords": "Velodrome, VELO, Optimism DEX, ve(3,3), liquidity, DeFi, Optimism"
+	},
+	"overview": "Velodrome is the native DEX of the Optimism network, designed as the liquidity layer for the ecosystem. Using ve(3,3) tokenomics pioneered by Solidly, Velodrome aligns incentives between traders, LPs, and protocols.\n\nThe platform combines both stable and volatile pools with a voting mechanism where veVELO holders direct emissions to their preferred pools. This creates efficient liquidity routing and sustainable yields.\n\nVelodrome has become the largest DEX on Optimism by TVL, and its model was later adopted by Aerodrome on Base. It serves as the primary trading venue for the Optimism ecosystem.",
+	"features": {
+		"1": {
+			"title": "ve(3,3) Model",
+			"description": "Vote-escrow tokenomics for sustainable yields"
+		},
+		"2": {
+			"title": "Optimism Native",
+			"description": "Built specifically for Optimism"
+		},
+		"3": {
+			"title": "Dual Pool Types",
+			"description": "Stable and volatile AMM pools"
+		},
+		"4": {
+			"title": "Emission Voting",
+			"description": "veVELO holders direct rewards"
+		},
+		"5": {
+			"title": "Bribe System",
+			"description": "Protocols pay for emission votes"
+		},
+		"6": {
+			"title": "Low Fees",
+			"description": "Optimized for L2 efficiency"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Trading on Optimism",
+			"description": "Swap tokens with low fees"
+		},
+		"2": {
+			"title": "Liquidity Provision",
+			"description": "Earn VELO emissions as LP"
+		},
+		"3": {
+			"title": "Vote-Escrow Staking",
+			"description": "Lock VELO for veVELO power"
+		},
+		"4": {
+			"title": "Bribe Earning",
+			"description": "Earn bribes by voting strategically"
+		},
+		"5": {
+			"title": "Protocol Liquidity",
+			"description": "Bootstrap liquidity for projects"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is ve(3,3)?",
+			"answer": "ve(3,3) combines Curve's vote-escrow (ve) model with Olympus's (3,3) game theory. Users lock VELO for veVELO to vote on emissions. The longer you lock, the more voting power. This creates aligned incentives for long-term holders."
+		},
+		"2": {
+			"question": "How do I earn on Velodrome?",
+			"answer": "LPs earn VELO emissions from pools. veVELO holders earn trading fees and bribes from pools they vote for. You can also provide bribes to attract votes to your preferred pools. Multiple earning strategies exist."
+		},
+		"3": {
+			"question": "What are bribes?",
+			"answer": "Bribes are incentives paid by protocols to veVELO voters. Protocols want emissions directed to their pools for liquidity. They pay bribes to attract votes. veVELO holders earn these bribes on top of trading fees."
+		},
+		"4": {
+			"question": "Velodrome vs Aerodrome?",
+			"answer": "Velodrome is on Optimism; Aerodrome is its fork on Base. Same ve(3,3) model, different chains. Aerodrome has grown larger due to Base's ecosystem growth. Choose based on which chain you're using."
+		},
+		"5": {
+			"question": "Is Velodrome safe?",
+			"answer": "Velodrome is audited and is the largest DEX on Optimism with significant TVL. The code is battle-tested. ve(3,3) mechanics are proven. Standard AMM risks apply—impermanent loss and smart contract risk."
+		}
+	},
+	"cta": {
+		"ready": "Ready to trade on Optimism?",
+		"button": "Explore Velodrome",
+		"note": "Optimism's liquidity layer"
+	}
+}
