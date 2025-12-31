@@ -1,154 +1,155 @@
 {
 	"category_seo": {
-		"title": "Quy Định Crypto - Tài Nguyên Pháp Lý & Tuân Thủ | BiuBiu Tools",
-		"description": "Cập nhật thông tin về quy định crypto toàn cầu. Cập nhật SEC, MiCA, phát triển quy định toàn cầu và tài nguyên tuân thủ.",
+		"title": "Quy định Crypto - Chính sách Toàn cầu và Tài nguyên Tuân thủ | BiuBiu Tools",
+		"description": "Cập nhật về quy định crypto toàn cầu. Truy cập các cơ quan quản lý từ SEC, MiCA, FATF và hơn 40 khu vực pháp lý, cùng với các công cụ tuân thủ AML/KYC.",
+		"keywords": "quy định crypto, SEC crypto, MiCA EU, quy tắc di chuyển FATF, tuân thủ crypto, AML KYC crypto",
 		"faqs": [
 			{
-				"question": "Crypto được quy định như thế nào?",
-				"answer": "Quy định khác nhau theo quốc gia. Mỹ có SEC (chứng khoán) và CFTC (hàng hóa). EU có MiCA. Một số quốc gia cấm crypto, những nước khác chấp nhận. Bối cảnh đang phát triển nhanh chóng."
+				"question": "Crypto được quản lý như thế nào trên toàn cầu?",
+				"answer": "Quy định thay đổi theo khu vực pháp lý. Mỹ có SEC (chứng khoán) và CFTC (hàng hóa). EU đã triển khai MiCA cho các quy tắc crypto toàn diện. Châu Á có các cách tiếp cận đa dạng từ chế độ VASP của Hong Kong đến các sàn giao dịch đăng ký của Nhật Bản. FATF thiết lập các tiêu chuẩn AML toàn cầu."
 			},
 			{
-				"question": "Stablecoin có đang được quy định không?",
-				"answer": "Có, stablecoin đối mặt với quy định ngày càng tăng. MiCA ở EU yêu cầu dự trữ và cấp phép. Mỹ đang làm việc về luật stablecoin. Kỳ vọng nhiều yêu cầu hơn cho nhà phát hành."
+				"question": "MiCA là gì và tại sao quan trọng?",
+				"answer": "MiCA (Thị trường Tài sản Crypto) là khung pháp lý crypto toàn diện của EU có hiệu lực từ 2024. Nó yêu cầu cấp phép cho các nhà cung cấp dịch vụ crypto, dự trữ cho stablecoin và bảo vệ người tiêu dùng. Nó đang trở thành tiêu chuẩn toàn cầu cho quy định crypto."
 			},
 			{
-				"question": "Làm thế nào để tuân thủ?",
-				"answer": "Giữ hồ sơ tất cả giao dịch, hiểu quy tắc khu vực pháp lý của bạn, sử dụng sàn tuân thủ và tham khảo các chuyên gia pháp lý và thuế am hiểu crypto."
+				"question": "Làm thế nào để tuân thủ các quy định crypto?",
+				"answer": "Sử dụng các công cụ tuân thủ cho AML/KYC, triển khai giải pháp quy tắc di chuyển, duy trì hồ sơ giao dịch, làm việc với các sàn giao dịch được cấp phép và tham vấn các chuyên gia pháp lý chuyên về crypto cho các yêu cầu cụ thể của khu vực pháp lý của bạn."
 			}
 		]
 	},
 	"tools": {
-		"sec-crypto": {
-			"description": "SEC (US) - Tool"
+		"sec_crypto": {
+			"description": "Giám sát tài sản kỹ thuật số của SEC Hoa Kỳ, các hành động thực thi và hướng dẫn quy định cho chứng khoán crypto"
 		},
-		"cftc-crypto": {
-			"description": "CFTC (US) - Tool"
+		"cftc_crypto": {
+			"description": "Ủy ban Giao dịch Hàng hóa Tương lai Hoa Kỳ quản lý các sản phẩm phái sinh crypto, hợp đồng tương lai Bitcoin và thị trường hàng hóa kỹ thuật số"
 		},
-		"fincen-crypto": {
-			"description": "FinCEN (US) - Tool"
+		"fincen_crypto": {
+			"description": "Mạng lưới Thực thi Tội phạm Tài chính Hoa Kỳ cung cấp hướng dẫn và quy định AML/KYC cho các doanh nghiệp crypto"
 		},
-		"occ-crypto": {
-			"description": "OCC (US) - Tool"
+		"occ_crypto": {
+			"description": "Văn phòng Kiểm soát Tiền tệ Hoa Kỳ giám sát lưu ký crypto ngân hàng và các hoạt động stablecoin"
 		},
-		"fed-crypto": {
-			"description": "Federal Reserve - Tool"
+		"fed_crypto": {
+			"description": "Nghiên cứu và chính sách của Cục Dự trữ Liên bang về CBDC, stablecoin và rủi ro crypto của ngành ngân hàng"
 		},
-		"nydfs-crypto": {
-			"description": "NYDFS BitLicense - Tool"
+		"nydfs_crypto": {
+			"description": "Chế độ BitLicense của Sở Dịch vụ Tài chính Bang New York, khung cấp phép crypto cấp bang đầu tiên của Hoa Kỳ"
 		},
-		"mica-eu": {
-			"description": "MiCA (EU) - Tool"
+		"mica_eu": {
+			"description": "Quy định Thị trường Tài sản Crypto của EU - khung pháp lý toàn diện cho các nhà cung cấp dịch vụ crypto và nhà phát hành stablecoin"
 		},
-		"esma-crypto": {
-			"description": "ESMA (EU) - Tool"
+		"esma_crypto": {
+			"description": "Cơ quan Chứng khoán và Thị trường Châu Âu triển khai MiCA và giám sát các nhà cung cấp dịch vụ tài sản crypto trong EU"
 		},
-		"eba-crypto": {
-			"description": "EBA (EU) - Tool"
+		"eba_crypto": {
+			"description": "Cơ quan Ngân hàng Châu Âu cung cấp các tiêu chuẩn thận trọng cho các nhà cung cấp dịch vụ tài sản crypto và nhà phát hành stablecoin"
 		},
-		"fca-crypto": {
-			"description": "FCA (UK) - Tool"
+		"fca_crypto": {
+			"description": "Chế độ đăng ký crypto của Cơ quan Quản lý Tài chính Anh và các quy tắc bảo vệ người tiêu dùng cho tiếp thị crypto"
 		},
-		"bafin-crypto": {
-			"description": "BaFin (Germany) - Tool"
+		"bafin_crypto": {
+			"description": "Cơ quan Giám sát Tài chính Liên bang Đức cấp phép dịch vụ lưu ký và giao dịch crypto theo luật Đức"
 		},
-		"amf-crypto": {
-			"description": "AMF (France) - Tool"
+		"amf_crypto": {
+			"description": "Cơ quan Thị trường Tài chính Pháp đăng ký PSAN/DASP cho các nhà cung cấp dịch vụ crypto hoạt động tại Pháp"
 		},
-		"finma-crypto": {
-			"description": "FINMA (Switzerland) - Tool"
+		"finma_crypto": {
+			"description": "Cơ quan Giám sát Thị trường Tài chính Thụy Sĩ hướng dẫn cấp phép ngân hàng crypto tại Crypto Valley Thụy Sĩ"
 		},
-		"hkma-crypto": {
-			"description": "HKMA (Hong Kong) - Tool"
+		"hkma_crypto": {
+			"description": "Cơ quan Tiền tệ Hồng Kông giám sát quy định stablecoin và các hoạt động crypto của ngành ngân hàng"
 		},
-		"sfc-hk": {
-			"description": "SFC (Hong Kong) - Tool"
+		"sfc_hk": {
+			"description": "Ủy ban Chứng khoán và Hợp đồng Tương lai Hồng Kông chế độ cấp phép VASP cho các sàn giao dịch crypto và nền tảng giao dịch"
 		},
-		"mas-crypto": {
-			"description": "MAS (Singapore) - Tool"
+		"mas_crypto": {
+			"description": "Cơ quan Tiền tệ Singapore cấp phép Đạo luật Dịch vụ Thanh toán cho các dịch vụ token thanh toán kỹ thuật số"
 		},
-		"jfsa-crypto": {
-			"description": "JFSA (Japan) - Tool"
+		"jfsa_crypto": {
+			"description": "Cơ quan Dịch vụ Tài chính Nhật Bản hệ thống đăng ký sàn giao dịch crypto, một trong những khung pháp lý đầu tiên trên toàn cầu"
 		},
-		"fsc-korea": {
-			"description": "FSC (South Korea) - Tool"
+		"fsc_korea": {
+			"description": "Ủy ban Dịch vụ Tài chính Hàn Quốc đăng ký VASP và yêu cầu triển khai quy tắc di chuyển"
 		},
-		"asic-crypto": {
-			"description": "ASIC (Australia) - Tool"
+		"asic_crypto": {
+			"description": "Ủy ban Chứng khoán và Đầu tư Úc tham vấn cấp phép crypto và hướng dẫn bảo vệ người tiêu dùng"
 		},
-		"rbi-crypto": {
-			"description": "RBI (India) - Tool"
+		"rbi_crypto": {
+			"description": "Ngân hàng Dự trữ Ấn Độ phát triển CBDC, thí điểm rupee kỹ thuật số và hướng dẫn crypto cho ngành ngân hàng"
 		},
-		"vara-dubai": {
-			"description": "VARA (Dubai) - Tool"
+		"vara_dubai": {
+			"description": "Cơ quan Quản lý Tài sản Ảo Dubai - khung cấp phép VASP toàn diện cho tiểu vương quốc"
 		},
-		"adgm-crypto": {
-			"description": "ADGM (Abu Dhabi) - Tool"
+		"adgm_crypto": {
+			"description": "Khung Thị trường Toàn cầu Abu Dhabi cho tài sản kỹ thuật số bao gồm sandbox quy định cho đổi mới crypto"
 		},
-		"sama-crypto": {
-			"description": "SAMA (Saudi Arabia) - Tool"
+		"sama_crypto": {
+			"description": "Cơ quan Tiền tệ Ả Rập Saudi nghiên cứu CBDC và sáng kiến tiền tệ kỹ thuật số xuyên biên giới Project Aber"
 		},
-		"sarb-crypto": {
-			"description": "SARB (South Africa) - Tool"
+		"sarb_crypto": {
+			"description": "Ngân hàng Dự trữ Nam Phi khung các nhà cung cấp dịch vụ tài sản crypto và các quy tắc của cơ quan quản lý hành vi ngành tài chính"
 		},
-		"csa-crypto": {
-			"description": "CSA (Canada) - Tool"
+		"csa_crypto": {
+			"description": "Quản trị viên Chứng khoán Canada đăng ký nền tảng giao dịch crypto và hướng dẫn luật chứng khoán"
 		},
-		"cnbv-crypto": {
-			"description": "CNBV (Mexico) - Tool"
+		"cnbv_crypto": {
+			"description": "Ủy ban Ngân hàng và Chứng khoán Quốc gia Mexico triển khai luật fintech và chế độ sandbox"
 		},
-		"bcra-crypto": {
-			"description": "BCRA (Argentina) - Tool"
+		"bcra_crypto": {
+			"description": "Ngân hàng Trung ương Argentina hạn chế ngân hàng crypto và ảnh hưởng kiểm soát ngoại hối"
 		},
-		"cvm-brazil": {
-			"description": "CVM (Brazil) - Tool"
+		"cvm_brazil": {
+			"description": "Ủy ban Chứng khoán Brazil khung tài sản crypto và hướng dẫn token hóa"
 		},
-		"fatf-crypto": {
-			"description": "FATF - Tool"
+		"fatf_crypto": {
+			"description": "Lực lượng Đặc nhiệm Hành động Tài chính các tiêu chuẩn AML/CFT toàn cầu bao gồm quy tắc di chuyển cho VASP"
 		},
-		"bis-crypto": {
-			"description": "BIS - Tool"
+		"bis_crypto": {
+			"description": "Ngân hàng Thanh toán Quốc tế nghiên cứu ngân hàng trung ương về CBDC, stablecoin và rủi ro crypto"
 		},
-		"fsb-crypto": {
-			"description": "FSB - Tool"
+		"fsb_crypto": {
+			"description": "Hội đồng Ổn định Tài chính khuyến nghị toàn cầu cho quy định tài sản crypto và giám sát stablecoin"
 		},
-		"iosco-crypto": {
-			"description": "IOSCO - Tool"
+		"iosco_crypto": {
+			"description": "Tổ chức Quốc tế các Ủy ban Chứng khoán các tiêu chuẩn cho quy định thị trường tài sản crypto"
 		},
-		"coinbase-legal": {
-			"description": "Coinbase Legal Hub - Tool"
+		"coinbase_legal": {
+			"description": "Trung tâm pháp lý và chính sách Coinbase với tài nguyên về quy định crypto, vận động và hướng dẫn tuân thủ"
 		},
-		"a16z-policy": {
-			"description": "a16z Policy Hub - Tool"
+		"a16z_policy": {
+			"description": "Nghiên cứu chính sách crypto Andreessen Horowitz, đề xuất quy định và sáng kiến vận động web3"
 		},
-		"blockchain-association": {
-			"description": "Blockchain Association - Tool"
+		"blockchain_association": {
+			"description": "Hiệp hội thương mại ngành crypto Hoa Kỳ đại diện và vận động cho đổi mới blockchain tại Washington"
 		},
-		"coin-center": {
-			"description": "Coin Center - Tool"
+		"coin_center": {
+			"description": "Trung tâm nghiên cứu và vận động phi lợi nhuận tập trung vào các vấn đề chính sách tiền mã hóa"
 		},
-		"atlanticcouncil-cbdc": {
-			"description": "CBDC Tracker - Tool"
+		"atlanticcouncil_cbdc": {
+			"description": "Bộ theo dõi CBDC toàn cầu Atlantic Council giám sát sự phát triển tiền tệ kỹ thuật số ngân hàng trung ương trên toàn thế giới"
 		},
-		"global-crypto-map": {
-			"description": "Global Crypto Regulation Map - Tool"
+		"global_crypto_map": {
+			"description": "Bản đồ tương tác hiển thị trạng thái quy định tiền mã hóa theo quốc gia với chi tiết phân loại pháp lý"
 		},
-		"chainalysis-compliance": {
-			"description": "Chainalysis - Tool"
+		"chainalysis_compliance": {
+			"description": "Phân tích blockchain doanh nghiệp cho tuân thủ, điều tra và giám sát giao dịch AML"
 		},
-		"elliptic-compliance": {
-			"description": "Elliptic - Tool"
+		"elliptic_compliance": {
+			"description": "Nền tảng tuân thủ crypto cho sàng lọc AML, giám sát giao dịch và báo cáo quy định"
 		},
-		"trm-labs": {
-			"description": "TRM Labs - Tool"
+		"trm_labs": {
+			"description": "Tình báo blockchain cho điều tra tội phạm tài chính, tuân thủ và quản lý rủi ro"
 		},
-		"merkle-science": {
-			"description": "Merkle Science - Tool"
+		"merkle_science": {
+			"description": "Nền tảng rủi ro và tình báo crypto cho tuân thủ, điều tra và báo cáo quy định tại Châu Á"
 		},
-		"notabene-travel": {
-			"description": "Notabene - Tool"
+		"notabene_travel": {
+			"description": "Nền tảng tuân thủ quy tắc di chuyển cho phép chia sẻ thông tin VASP-tới-VASP an toàn cho các giao dịch"
 		},
-		"sumsub-kyc": {
-			"description": "Sumsub - Tool"
+		"sumsub_kyc": {
+			"description": "Nền tảng xác minh danh tính và tuân thủ KYC/AML cho các sàn giao dịch crypto và dịch vụ tài chính"
 		}
 	}
 }

@@ -1,154 +1,155 @@
 {
 	"category_seo": {
-		"title": "Regulasi Kripto - Sumber Daya Legal & Kepatuhan | BiuBiu Tools",
-		"description": "Tetap terinformasi tentang regulasi kripto di seluruh dunia. Update SEC, MiCA, perkembangan regulasi global, dan sumber daya kepatuhan.",
+		"title": "Regulasi Crypto - Kebijakan Global dan Sumber Daya Kepatuhan | BiuBiu Tools",
+		"description": "Tetap terinformasi tentang regulasi crypto di seluruh dunia. Akses badan regulator dari SEC, MiCA, FATF dan lebih dari 40 yurisdiksi, plus alat kepatuhan AML/KYC.",
+		"keywords": "regulasi crypto, SEC crypto, MiCA UE, aturan perjalanan FATF, kepatuhan crypto, AML KYC crypto",
 		"faqs": [
 			{
-				"question": "Bagaimana kripto diatur?",
-				"answer": "Regulasi bervariasi menurut negara. AS memiliki SEC (sekuritas) dan CFTC (komoditas). EU memiliki MiCA. Beberapa negara melarang kripto, yang lain merangkulnya. Lanskap berkembang pesat."
+				"question": "Bagaimana crypto diregulasi secara global?",
+				"answer": "Regulasi bervariasi menurut yurisdiksi. AS memiliki SEC (sekuritas) dan CFTC (komoditas). UE telah menerapkan MiCA untuk aturan crypto yang komprehensif. Asia memiliki berbagai pendekatan dari rezim VASP Hong Kong hingga bursa terdaftar Jepang. FATF menetapkan standar AML global."
 			},
 			{
-				"question": "Apakah stablecoin sedang diatur?",
-				"answer": "Ya, stablecoin menghadapi regulasi yang meningkat. MiCA di EU memerlukan cadangan dan lisensi. AS sedang mengerjakan legislasi stablecoin. Harapkan lebih banyak persyaratan untuk penerbit."
+				"question": "Apa itu MiCA dan mengapa penting?",
+				"answer": "MiCA (Markets in Crypto-Assets) adalah kerangka regulasi crypto komprehensif UE yang berlaku sejak 2024. Ini memerlukan lisensi untuk penyedia layanan crypto, cadangan untuk stablecoin, dan perlindungan konsumen. Ini menjadi tolok ukur global untuk regulasi crypto."
 			},
 			{
-				"question": "Bagaimana cara tetap patuh?",
-				"answer": "Simpan catatan semua transaksi, pahami aturan yurisdiksi Anda, gunakan exchange yang patuh, dan konsultasikan dengan profesional legal dan pajak yang paham kripto."
+				"question": "Bagaimana cara mematuhi regulasi crypto?",
+				"answer": "Gunakan alat kepatuhan untuk AML/KYC, terapkan solusi aturan perjalanan, pertahankan catatan transaksi, bekerja dengan bursa berlisensi, dan konsultasikan dengan profesional hukum yang mengkhususkan diri dalam crypto untuk persyaratan spesifik yurisdiksi Anda."
 			}
 		]
 	},
 	"tools": {
-		"sec-crypto": {
-			"description": "SEC (US) - Tool"
+		"sec_crypto": {
+			"description": "Pengawasan aset digital SEC AS, tindakan penegakan, dan panduan regulasi untuk sekuritas crypto"
 		},
-		"cftc-crypto": {
-			"description": "CFTC (US) - Tool"
+		"cftc_crypto": {
+			"description": "Komisi Perdagangan Berjangka Komoditas AS yang mengatur derivatif crypto, futures Bitcoin, dan pasar komoditas digital"
 		},
-		"fincen-crypto": {
-			"description": "FinCEN (US) - Tool"
+		"fincen_crypto": {
+			"description": "Jaringan Penegakan Kejahatan Keuangan AS yang menyediakan panduan dan regulasi AML/KYC untuk bisnis crypto"
 		},
-		"occ-crypto": {
-			"description": "OCC (US) - Tool"
+		"occ_crypto": {
+			"description": "Kantor Pengawas Mata Uang AS yang mengawasi kustodi crypto perbankan dan aktivitas stablecoin"
 		},
-		"fed-crypto": {
-			"description": "Federal Reserve - Tool"
+		"fed_crypto": {
+			"description": "Penelitian dan kebijakan Federal Reserve tentang CBDC, stablecoin, dan eksposur crypto sektor perbankan"
 		},
-		"nydfs-crypto": {
-			"description": "NYDFS BitLicense - Tool"
+		"nydfs_crypto": {
+			"description": "Rezim BitLicense Departemen Layanan Keuangan Negara Bagian New York, kerangka lisensi crypto tingkat negara bagian pertama di AS"
 		},
-		"mica-eu": {
-			"description": "MiCA (EU) - Tool"
+		"mica_eu": {
+			"description": "Regulasi Markets in Crypto-Assets UE - kerangka komprehensif untuk penyedia layanan crypto dan penerbit stablecoin"
 		},
-		"esma-crypto": {
-			"description": "ESMA (EU) - Tool"
+		"esma_crypto": {
+			"description": "Otoritas Sekuritas dan Pasar Eropa yang menerapkan MiCA dan mengawasi penyedia layanan aset crypto di UE"
 		},
-		"eba-crypto": {
-			"description": "EBA (EU) - Tool"
+		"eba_crypto": {
+			"description": "Otoritas Perbankan Eropa yang menyediakan standar kehati-hatian untuk penyedia layanan aset crypto dan penerbit stablecoin"
 		},
-		"fca-crypto": {
-			"description": "FCA (UK) - Tool"
+		"fca_crypto": {
+			"description": "Rezim registrasi crypto Otoritas Perilaku Keuangan Inggris dan aturan perlindungan konsumen untuk pemasaran crypto"
 		},
-		"bafin-crypto": {
-			"description": "BaFin (Germany) - Tool"
+		"bafin_crypto": {
+			"description": "Otoritas Pengawas Keuangan Federal Jerman yang melisensikan layanan kustodi dan perdagangan crypto di bawah hukum Jerman"
 		},
-		"amf-crypto": {
-			"description": "AMF (France) - Tool"
+		"amf_crypto": {
+			"description": "Otoritas Pasar Keuangan Prancis registrasi PSAN/DASP untuk penyedia layanan crypto yang beroperasi di Prancis"
 		},
-		"finma-crypto": {
-			"description": "FINMA (Switzerland) - Tool"
+		"finma_crypto": {
+			"description": "Otoritas Pengawas Pasar Keuangan Swiss yang memandu lisensi perbankan crypto di Crypto Valley Swiss"
 		},
-		"hkma-crypto": {
-			"description": "HKMA (Hong Kong) - Tool"
+		"hkma_crypto": {
+			"description": "Otoritas Moneter Hong Kong yang mengawasi regulasi stablecoin dan aktivitas crypto sektor perbankan"
 		},
-		"sfc-hk": {
-			"description": "SFC (Hong Kong) - Tool"
+		"sfc_hk": {
+			"description": "Komisi Sekuritas dan Futures Hong Kong rezim lisensi VASP untuk bursa crypto dan platform perdagangan"
 		},
-		"mas-crypto": {
-			"description": "MAS (Singapore) - Tool"
+		"mas_crypto": {
+			"description": "Otoritas Moneter Singapura lisensi Undang-Undang Layanan Pembayaran untuk layanan token pembayaran digital"
 		},
-		"jfsa-crypto": {
-			"description": "JFSA (Japan) - Tool"
+		"jfsa_crypto": {
+			"description": "Badan Layanan Keuangan Jepang sistem registrasi bursa crypto, salah satu kerangka regulasi pertama secara global"
 		},
-		"fsc-korea": {
-			"description": "FSC (South Korea) - Tool"
+		"fsc_korea": {
+			"description": "Komisi Layanan Keuangan Korea Selatan registrasi VASP dan persyaratan implementasi aturan perjalanan"
 		},
-		"asic-crypto": {
-			"description": "ASIC (Australia) - Tool"
+		"asic_crypto": {
+			"description": "Komisi Sekuritas dan Investasi Australia konsultasi lisensi crypto dan panduan perlindungan konsumen"
 		},
-		"rbi-crypto": {
-			"description": "RBI (India) - Tool"
+		"rbi_crypto": {
+			"description": "Bank Cadangan India pengembangan CBDC, pilot rupee digital, dan panduan crypto sektor perbankan"
 		},
-		"vara-dubai": {
-			"description": "VARA (Dubai) - Tool"
+		"vara_dubai": {
+			"description": "Otoritas Regulasi Aset Virtual Dubai - kerangka lisensi VASP komprehensif untuk emirat"
 		},
-		"adgm-crypto": {
-			"description": "ADGM (Abu Dhabi) - Tool"
+		"adgm_crypto": {
+			"description": "Kerangka Abu Dhabi Global Market untuk aset digital termasuk sandbox regulasi untuk inovasi crypto"
 		},
-		"sama-crypto": {
-			"description": "SAMA (Saudi Arabia) - Tool"
+		"sama_crypto": {
+			"description": "Otoritas Moneter Arab Saudi penelitian CBDC dan inisiatif mata uang digital lintas batas Project Aber"
 		},
-		"sarb-crypto": {
-			"description": "SARB (South Africa) - Tool"
+		"sarb_crypto": {
+			"description": "Bank Cadangan Afrika Selatan kerangka penyedia layanan aset crypto dan aturan otoritas perilaku sektor keuangan"
 		},
-		"csa-crypto": {
-			"description": "CSA (Canada) - Tool"
+		"csa_crypto": {
+			"description": "Administrator Sekuritas Kanada registrasi platform perdagangan crypto dan panduan hukum sekuritas"
 		},
-		"cnbv-crypto": {
-			"description": "CNBV (Mexico) - Tool"
+		"cnbv_crypto": {
+			"description": "Komisi Perbankan dan Sekuritas Nasional Meksiko implementasi undang-undang fintech dan rezim sandbox"
 		},
-		"bcra-crypto": {
-			"description": "BCRA (Argentina) - Tool"
+		"bcra_crypto": {
+			"description": "Bank Sentral Argentina pembatasan perbankan crypto dan implikasi kontrol devisa"
 		},
-		"cvm-brazil": {
-			"description": "CVM (Brazil) - Tool"
+		"cvm_brazil": {
+			"description": "Komisi Sekuritas dan Bursa Brasil kerangka aset crypto dan pedoman tokenisasi"
 		},
-		"fatf-crypto": {
-			"description": "FATF - Tool"
+		"fatf_crypto": {
+			"description": "Satuan Tugas Aksi Keuangan standar AML/CFT global termasuk aturan perjalanan untuk VASP"
 		},
-		"bis-crypto": {
-			"description": "BIS - Tool"
+		"bis_crypto": {
+			"description": "Bank for International Settlements penelitian bank sentral tentang CBDC, stablecoin, dan risiko crypto"
 		},
-		"fsb-crypto": {
-			"description": "FSB - Tool"
+		"fsb_crypto": {
+			"description": "Dewan Stabilitas Keuangan rekomendasi global untuk regulasi aset crypto dan pengawasan stablecoin"
 		},
-		"iosco-crypto": {
-			"description": "IOSCO - Tool"
+		"iosco_crypto": {
+			"description": "Organisasi Internasional Komisi Sekuritas standar untuk regulasi pasar aset crypto"
 		},
-		"coinbase-legal": {
-			"description": "Coinbase Legal Hub - Tool"
+		"coinbase_legal": {
+			"description": "Hub hukum dan kebijakan Coinbase dengan sumber daya tentang regulasi crypto, advokasi, dan panduan kepatuhan"
 		},
-		"a16z-policy": {
-			"description": "a16z Policy Hub - Tool"
+		"a16z_policy": {
+			"description": "Penelitian kebijakan crypto Andreessen Horowitz, proposal regulasi, dan inisiatif advokasi web3"
 		},
-		"blockchain-association": {
-			"description": "Blockchain Association - Tool"
+		"blockchain_association": {
+			"description": "Asosiasi perdagangan industri crypto AS yang mewakili dan mengadvokasi inovasi blockchain di Washington"
 		},
-		"coin-center": {
-			"description": "Coin Center - Tool"
+		"coin_center": {
+			"description": "Pusat penelitian dan advokasi nirlaba yang berfokus pada masalah kebijakan cryptocurrency"
 		},
-		"atlanticcouncil-cbdc": {
-			"description": "CBDC Tracker - Tool"
+		"atlanticcouncil_cbdc": {
+			"description": "Pelacak CBDC global Atlantic Council yang memantau perkembangan mata uang digital bank sentral di seluruh dunia"
 		},
-		"global-crypto-map": {
-			"description": "Global Crypto Regulation Map - Tool"
+		"global_crypto_map": {
+			"description": "Peta interaktif yang menunjukkan status regulasi cryptocurrency berdasarkan negara dengan detail klasifikasi hukum"
 		},
-		"chainalysis-compliance": {
-			"description": "Chainalysis - Tool"
+		"chainalysis_compliance": {
+			"description": "Analitik blockchain enterprise untuk kepatuhan, investigasi, dan pemantauan transaksi AML"
 		},
-		"elliptic-compliance": {
-			"description": "Elliptic - Tool"
+		"elliptic_compliance": {
+			"description": "Platform kepatuhan crypto untuk penyaringan AML, pemantauan transaksi, dan pelaporan regulasi"
 		},
-		"trm-labs": {
-			"description": "TRM Labs - Tool"
+		"trm_labs": {
+			"description": "Intelijen blockchain untuk investigasi kejahatan keuangan, kepatuhan, dan manajemen risiko"
 		},
-		"merkle-science": {
-			"description": "Merkle Science - Tool"
+		"merkle_science": {
+			"description": "Platform risiko dan intelijen crypto untuk kepatuhan, investigasi, dan pelaporan regulasi di Asia"
 		},
-		"notabene-travel": {
-			"description": "Notabene - Tool"
+		"notabene_travel": {
+			"description": "Platform kepatuhan aturan perjalanan yang memungkinkan berbagi informasi VASP-ke-VASP yang aman untuk transaksi"
 		},
-		"sumsub-kyc": {
-			"description": "Sumsub - Tool"
+		"sumsub_kyc": {
+			"description": "Platform verifikasi identitas dan kepatuhan KYC/AML untuk bursa crypto dan layanan keuangan"
 		}
 	}
 }

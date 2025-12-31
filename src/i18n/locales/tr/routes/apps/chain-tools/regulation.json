@@ -1,155 +1,155 @@
 {
 	"category_seo": {
-		"title": "Kripto Düzenlemesi - Yasal ve Uyumluluk Kaynakları | BiuBiu Tools",
-		"description": "Dünya çapında kripto düzenlemesi hakkında bilgi sahibi olun. SEC güncellemeleri, MiCA, küresel düzenleyici gelişmeler ve uyumluluk kaynakları.",
-		"keywords": "kripto düzenlemesi, kripto yasaları, uyumluluk, sec kripto",
+		"title": "Kripto Düzenlemesi - Küresel Politikalar ve Uyumluluk Kaynakları | BiuBiu Tools",
+		"description": "Dünya çapında kripto düzenlemesi hakkında bilgi edinin. SEC, MiCA, FATF ve 40'tan fazla yargı bölgesinden düzenleyici kuruluşlara ve AML/KYC uyumluluk araçlarına erişin.",
+		"keywords": "kripto düzenlemesi, SEC kripto, MiCA AB, FATF seyahat kuralı, kripto uyumluluk, AML KYC kripto",
 		"faqs": [
 			{
-				"question": "Kripto nasıl düzenlenir?",
-				"answer": "Düzenleme ülkeye göre değişir. ABD'de SEC (menkul kıymetler) ve CFTC (emtialar) vardır. AB'de MiCA vardır. Bazı ülkeler kriptoyu yasaklar, diğerleri benimser. Manzara hızla gelişiyor."
+				"question": "Kripto küresel olarak nasıl düzenlenir?",
+				"answer": "Düzenleme yargı bölgesine göre değişir. ABD'de SEC (menkul kıymetler) ve CFTC (emtialar) vardır. AB kapsamlı kripto kuralları için MiCA'yı uyguladı. Asya'da Hong Kong'un VASP rejiminden Japonya'nın kayıtlı borsalarına kadar çeşitli yaklaşımlar var. FATF küresel AML standartlarını belirler."
 			},
 			{
-				"question": "Stablecoin'ler düzenleniyor mu?",
-				"answer": "Evet, stablecoin'ler artan düzenlemeyle karşı karşıya. AB'deki MiCA rezervler ve lisanslama gerektirir. ABD stablecoin mevzuatı üzerinde çalışıyor. İhraççılar için daha fazla gereklilik bekleyin."
+				"question": "MiCA nedir ve neden önemli?",
+				"answer": "MiCA (Kripto Varlık Piyasaları) 2024'te yürürlüğe giren AB'nin kapsamlı kripto düzenleme çerçevesidir. Kripto hizmet sağlayıcıları için lisans, stablecoin'ler için rezervler ve tüketici korumaları gerektirir. Kripto düzenlemesi için küresel bir referans noktası haline geliyor."
 			},
 			{
-				"question": "Nasıl uyumlu kalırım?",
-				"answer": "Tüm işlemlerin kayıtlarını tutun, yargı bölgenizin kurallarını anlayın, uyumlu borsaları kullanın ve kripto konusunda bilgili hukuk ve vergi uzmanlarına danışın."
+				"question": "Kripto düzenlemelerine nasıl uyum sağlarım?",
+				"answer": "AML/KYC için uyumluluk araçları kullanın, seyahat kuralı çözümleri uygulayın, işlem kayıtlarını tutun, lisanslı borsalarla çalışın ve yargı bölgenizin özel gereksinimleri için kripto konusunda uzmanlaşmış hukuk profesyonellerine danışın."
 			}
 		]
 	},
 	"tools": {
-		"sec-crypto": {
-			"description": "SEC (US) - Tool"
+		"sec_crypto": {
+			"description": "ABD Menkul Kıymetler ve Borsa Komisyonu'nun dijital varlık gözetimi, yaptırım eylemleri ve kripto menkul kıymetler için düzenleyici rehberlik"
 		},
-		"cftc-crypto": {
-			"description": "CFTC (US) - Tool"
+		"cftc_crypto": {
+			"description": "Kripto türevleri, Bitcoin vadeli işlemleri ve dijital emtia piyasalarını düzenleyen ABD Emtia Vadeli İşlemler Ticaret Komisyonu"
 		},
-		"fincen-crypto": {
-			"description": "FinCEN (US) - Tool"
+		"fincen_crypto": {
+			"description": "Kripto işletmeler için AML/KYC rehberliği ve düzenlemeleri sağlayan ABD Mali Suçları Uygulama Ağı"
 		},
-		"occ-crypto": {
-			"description": "OCC (US) - Tool"
+		"occ_crypto": {
+			"description": "Banka kripto saklama ve stablecoin faaliyetlerini denetleyen ABD Para Birimi Denetçisi Ofisi"
 		},
-		"fed-crypto": {
-			"description": "Federal Reserve - Tool"
+		"fed_crypto": {
+			"description": "CBDC'ler, stablecoin'ler ve bankacılık sektörü kripto maruziyeti hakkında Federal Rezerv araştırması ve politikası"
 		},
-		"nydfs-crypto": {
-			"description": "NYDFS BitLicense - Tool"
+		"nydfs_crypto": {
+			"description": "ABD'nin ilk eyalet kripto lisans çerçevesi olan New York Eyaleti Mali Hizmetler Departmanı BitLicense rejimi"
 		},
-		"mica-eu": {
-			"description": "MiCA (EU) - Tool"
+		"mica_eu": {
+			"description": "AB Kripto Varlık Piyasaları düzenlemesi - kripto hizmet sağlayıcıları ve stablecoin ihraççıları için kapsamlı çerçeve"
 		},
-		"esma-crypto": {
-			"description": "ESMA (EU) - Tool"
+		"esma_crypto": {
+			"description": "MiCA'yı uygulayan ve AB'deki kripto varlık hizmet sağlayıcılarını denetleyen Avrupa Menkul Kıymetler ve Piyasalar Otoritesi"
 		},
-		"eba-crypto": {
-			"description": "EBA (EU) - Tool"
+		"eba_crypto": {
+			"description": "Kripto varlık hizmet sağlayıcıları ve stablecoin ihraççıları için ihtiyatlılık standartları sağlayan Avrupa Bankacılık Otoritesi"
 		},
-		"fca-crypto": {
-			"description": "FCA (UK) - Tool"
+		"fca_crypto": {
+			"description": "İngiltere Mali Davranış Otoritesi kripto kayıt rejimi ve kripto pazarlaması için tüketici koruma kuralları"
 		},
-		"bafin-crypto": {
-			"description": "BaFin (Germany) - Tool"
+		"bafin_crypto": {
+			"description": "Alman yasaları altında kripto saklama ve ticaret hizmetlerini lisanslayan Almanya Federal Mali Denetim Otoritesi"
 		},
-		"amf-crypto": {
-			"description": "AMF (France) - Tool"
+		"amf_crypto": {
+			"description": "Fransa'da faaliyet gösteren kripto hizmet sağlayıcıları için PSAN/DASP kaydı yapan Fransa Mali Piyasalar Otoritesi"
 		},
-		"finma-crypto": {
-			"description": "FINMA (Switzerland) - Tool"
+		"finma_crypto": {
+			"description": "İsviçre'nin Kripto Vadisi'nde kripto bankacılık lisanslamayı yönlendiren İsviçre Mali Piyasa Denetleme Otoritesi"
 		},
-		"hkma-crypto": {
-			"description": "HKMA (Hong Kong) - Tool"
+		"hkma_crypto": {
+			"description": "Stablecoin düzenlemesini ve bankacılık sektörü kripto faaliyetlerini denetleyen Hong Kong Para Otoritesi"
 		},
-		"sfc-hk": {
-			"description": "SFC (Hong Kong) - Tool"
+		"sfc_hk": {
+			"description": "Kripto borsaları ve ticaret platformları için VASP lisans rejimini yürüten Hong Kong Menkul Kıymetler ve Vadeli İşlemler Komisyonu"
 		},
-		"mas-crypto": {
-			"description": "MAS (Singapore) - Tool"
+		"mas_crypto": {
+			"description": "Dijital ödeme token hizmetleri için Ödeme Hizmetleri Yasası lisanslaması yapan Singapur Para Otoritesi"
 		},
-		"jfsa-crypto": {
-			"description": "JFSA (Japan) - Tool"
+		"jfsa_crypto": {
+			"description": "Küresel olarak ilk düzenleyici çerçevelerden biri olan Japonya Mali Hizmetler Ajansı kripto borsa kayıt sistemi"
 		},
-		"fsc-korea": {
-			"description": "FSC (South Korea) - Tool"
+		"fsc_korea": {
+			"description": "Güney Kore Mali Hizmetler Komisyonu VASP kaydı ve seyahat kuralı uygulama gereksinimleri"
 		},
-		"asic-crypto": {
-			"description": "ASIC (Australia) - Tool"
+		"asic_crypto": {
+			"description": "Avustralya Menkul Kıymetler ve Yatırımlar Komisyonu kripto lisans danışmanlığı ve tüketici koruma rehberliği"
 		},
-		"rbi-crypto": {
-			"description": "RBI (India) - Tool"
+		"rbi_crypto": {
+			"description": "Hindistan Rezerv Bankası CBDC geliştirme, dijital rupi pilotu ve bankacılık sektörü kripto rehberliği"
 		},
-		"vara-dubai": {
-			"description": "VARA (Dubai) - Tool"
+		"vara_dubai": {
+			"description": "Dubai Sanal Varlık Düzenleme Otoritesi - emirlik için kapsamlı VASP lisans çerçevesi"
 		},
-		"adgm-crypto": {
-			"description": "ADGM (Abu Dhabi) - Tool"
+		"adgm_crypto": {
+			"description": "Kripto inovasyonu için düzenleyici sandbox dahil Abu Dabi Küresel Pazar dijital varlık çerçevesi"
 		},
-		"sama-crypto": {
-			"description": "SAMA (Saudi Arabia) - Tool"
+		"sama_crypto": {
+			"description": "Suudi Arabistan Para Otoritesi CBDC araştırması ve Proje Aber sınır ötesi dijital para birimi girişimi"
 		},
-		"sarb-crypto": {
-			"description": "SARB (South Africa) - Tool"
+		"sarb_crypto": {
+			"description": "Güney Afrika Rezerv Bankası kripto varlık hizmet sağlayıcı çerçevesi ve mali sektör davranış otoritesi kuralları"
 		},
-		"csa-crypto": {
-			"description": "CSA (Canada) - Tool"
+		"csa_crypto": {
+			"description": "Kanada Menkul Kıymetler Yöneticileri kripto ticaret platformu kaydı ve menkul kıymetler hukuku rehberliği"
 		},
-		"cnbv-crypto": {
-			"description": "CNBV (Mexico) - Tool"
+		"cnbv_crypto": {
+			"description": "Meksika Ulusal Bankacılık ve Menkul Kıymetler Komisyonu fintech yasası uygulaması ve sandbox rejimi"
 		},
-		"bcra-crypto": {
-			"description": "BCRA (Argentina) - Tool"
+		"bcra_crypto": {
+			"description": "Arjantin Merkez Bankası kripto bankacılık kısıtlamaları ve döviz kontrol etkileri"
 		},
-		"cvm-brazil": {
-			"description": "CVM (Brazil) - Tool"
+		"cvm_brazil": {
+			"description": "Brezilya Menkul Kıymetler ve Borsa Komisyonu kripto varlık çerçevesi ve tokenizasyon yönergeleri"
 		},
-		"fatf-crypto": {
-			"description": "FATF - Tool"
+		"fatf_crypto": {
+			"description": "VASP'lar için seyahat kuralı dahil Mali Eylem Görev Gücü küresel AML/CFT standartları"
 		},
-		"bis-crypto": {
-			"description": "BIS - Tool"
+		"bis_crypto": {
+			"description": "CBDC'ler, stablecoin'ler ve kripto riskleri hakkında Uluslararası Ödemeler Bankası merkez bankası araştırması"
 		},
-		"fsb-crypto": {
-			"description": "FSB - Tool"
+		"fsb_crypto": {
+			"description": "Kripto varlık düzenlemesi ve stablecoin gözetimi için Mali İstikrar Kurulu küresel tavsiyeleri"
 		},
-		"iosco-crypto": {
-			"description": "IOSCO - Tool"
+		"iosco_crypto": {
+			"description": "Kripto varlık piyasaları düzenlemesi için Uluslararası Menkul Kıymetler Komisyonları Örgütü standartları"
 		},
-		"coinbase-legal": {
-			"description": "Coinbase Legal Hub - Tool"
+		"coinbase_legal": {
+			"description": "Kripto düzenlemesi, savunuculuk ve uyumluluk rehberliği kaynakları ile Coinbase hukuk ve politika merkezi"
 		},
-		"a16z-policy": {
-			"description": "a16z Policy Hub - Tool"
+		"a16z_policy": {
+			"description": "Andreessen Horowitz kripto politika araştırması, düzenleyici teklifler ve web3 savunuculuk girişimleri"
 		},
-		"blockchain-association": {
-			"description": "Blockchain Association - Tool"
+		"blockchain_association": {
+			"description": "Washington'da blockchain inovasyonunu temsil eden ve savunan ABD kripto sektörü ticaret birliği"
 		},
-		"coin-center": {
-			"description": "Coin Center - Tool"
+		"coin_center": {
+			"description": "Kripto para politika konularına odaklanan kar amacı gütmeyen araştırma ve savunuculuk merkezi"
 		},
-		"atlanticcouncil-cbdc": {
-			"description": "CBDC Tracker - Tool"
+		"atlanticcouncil_cbdc": {
+			"description": "Dünya çapında merkez bankası dijital para birimi gelişimini izleyen Atlantic Council küresel CBDC takipçisi"
 		},
-		"global-crypto-map": {
-			"description": "Global Crypto Regulation Map - Tool"
+		"global_crypto_map": {
+			"description": "Yasal sınıflandırma detayları ile ülkelere göre kripto para düzenleme durumunu gösteren etkileşimli harita"
 		},
-		"chainalysis-compliance": {
-			"description": "Chainalysis - Tool"
+		"chainalysis_compliance": {
+			"description": "Uyumluluk, soruşturma ve AML işlem izleme için kurumsal blockchain analizi"
 		},
-		"elliptic-compliance": {
-			"description": "Elliptic - Tool"
+		"elliptic_compliance": {
+			"description": "AML taraması, işlem izleme ve düzenleyici raporlama için kripto uyumluluk platformu"
 		},
-		"trm-labs": {
-			"description": "TRM Labs - Tool"
+		"trm_labs": {
+			"description": "Mali suç soruşturması, uyumluluk ve risk yönetimi için blockchain istihbaratı"
 		},
-		"merkle-science": {
-			"description": "Merkle Science - Tool"
+		"merkle_science": {
+			"description": "Asya'da uyumluluk, soruşturma ve düzenleyici raporlama için kripto risk ve istihbarat platformu"
 		},
-		"notabene-travel": {
-			"description": "Notabene - Tool"
+		"notabene_travel": {
+			"description": "İşlemler için güvenli VASP'tan VASP'a bilgi paylaşımını sağlayan seyahat kuralı uyumluluk platformu"
 		},
-		"sumsub-kyc": {
-			"description": "Sumsub - Tool"
+		"sumsub_kyc": {
+			"description": "Kripto borsaları ve mali hizmetler için kimlik doğrulama ve KYC/AML uyumluluk platformu"
 		}
 	}
 }

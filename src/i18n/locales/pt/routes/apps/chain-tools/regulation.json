@@ -1,155 +1,155 @@
 {
 	"category_seo": {
-		"title": "Regulação Cripto - Conformidade e Notícias Legais Blockchain | BiuBiu Tools",
-		"description": "Mantenha-se atualizado com regulação cripto, desenvolvimentos de conformidade, notícias legais e estruturas regulatórias de blockchain por jurisdição.",
-		"keywords": "regulacao cripto, conformidade blockchain, leis cripto, regulacao legal, noticias regulatorias",
+		"title": "Regulação Cripto - Políticas Globais e Recursos de Conformidade | BiuBiu Tools",
+		"description": "Mantenha-se informado sobre regulação cripto mundial. Acesse órgãos reguladores da SEC, MiCA, FATF e mais de 40 jurisdições, além de ferramentas de conformidade AML/KYC.",
+		"keywords": "regulação cripto, SEC cripto, MiCA UE, regra de viagem FATF, conformidade cripto, AML KYC cripto",
 		"faqs": [
 			{
-				"question": "Como a cripto é regulada?",
-				"answer": "A regulação cripto varia globalmente: EUA trata a maioria como valores (SEC) ou commodities (CFTC), a UE implementa MiCA, alguns países proíbem cripto completamente, outros a abraçam. As áreas reguladas incluem valores/commodities, AML/KYC, impostos, proteção ao consumidor e stablecoins."
+				"question": "Como cripto é regulado globalmente?",
+				"answer": "A regulação varia por jurisdição. Os EUA têm SEC (valores) e CFTC (commodities). A UE implementou MiCA para regras cripto abrangentes. A Ásia tem diversas abordagens, desde o regime VASP de Hong Kong até as exchanges registradas do Japão. O FATF define padrões AML globais."
 			},
 			{
-				"question": "Preciso reportar transações cripto?",
-				"answer": "Na maioria das jurisdições, sim. As transações cripto frequentemente são eventos tributáveis (ganhos de capital), os exchanges reportam a autoridades fiscais e as regulações AML requerem KYC. Consulte profissionais fiscais locais - as leis cripto evoluem rapidamente e as penalidades por não conformidade podem ser severas."
+				"question": "O que é MiCA e por que importa?",
+				"answer": "MiCA (Mercados de Criptoativos) é o framework de regulação cripto abrangente da UE em vigor desde 2024. Exige licenciamento para provedores de serviços cripto, reservas para stablecoins e proteções ao consumidor. Está se tornando referência global para regulação cripto."
 			},
 			{
-				"question": "Como me mantenho atualizado com regulação?",
-				"answer": "Siga publicações de direito cripto, monitore anúncios de agências regulatórias (SEC, CFTC, FCA), junte-se a comunidades de conformidade cripto, inscreva-se em newsletters legais (The Block Regulatory, CoinDesk Policy) e consulte assessores legais familiarizados com cripto."
+				"question": "Como manter conformidade com regulações cripto?",
+				"answer": "Use ferramentas de conformidade para AML/KYC, implemente soluções de regra de viagem, mantenha registros de transações, trabalhe com exchanges licenciadas e consulte profissionais jurídicos especializados em cripto para requisitos específicos da sua jurisdição."
 			}
 		]
 	},
 	"tools": {
-		"sec-crypto": {
-			"description": "SEC (US) - Tool"
+		"sec_crypto": {
+			"description": "Supervisão de ativos digitais da SEC dos EUA, ações de fiscalização e orientação regulatória para valores cripto"
 		},
-		"cftc-crypto": {
-			"description": "CFTC (US) - Tool"
+		"cftc_crypto": {
+			"description": "Comissão de Comércio de Futuros de Commodities dos EUA regulando derivativos cripto, futuros de Bitcoin e mercados de commodities digitais"
 		},
-		"fincen-crypto": {
-			"description": "FinCEN (US) - Tool"
+		"fincen_crypto": {
+			"description": "Rede de Combate a Crimes Financeiros dos EUA fornecendo orientação e regulamentos AML/KYC para negócios cripto"
 		},
-		"occ-crypto": {
-			"description": "OCC (US) - Tool"
+		"occ_crypto": {
+			"description": "Escritório do Controlador da Moeda dos EUA supervisionando custódia cripto bancária e atividades de stablecoins"
 		},
-		"fed-crypto": {
-			"description": "Federal Reserve - Tool"
+		"fed_crypto": {
+			"description": "Pesquisa e política do Federal Reserve sobre CBDCs, stablecoins e exposição cripto do setor bancário"
 		},
-		"nydfs-crypto": {
-			"description": "NYDFS BitLicense - Tool"
+		"nydfs_crypto": {
+			"description": "Regime BitLicense do Departamento de Serviços Financeiros de Nova York, primeiro framework de licenciamento cripto estadual dos EUA"
 		},
-		"mica-eu": {
-			"description": "MiCA (EU) - Tool"
+		"mica_eu": {
+			"description": "Regulação de Mercados de Criptoativos da UE - framework abrangente para provedores de serviços cripto e emissores de stablecoins"
 		},
-		"esma-crypto": {
-			"description": "ESMA (EU) - Tool"
+		"esma_crypto": {
+			"description": "Autoridade Europeia de Valores Mobiliários e Mercados implementando MiCA e supervisionando provedores de serviços de criptoativos na UE"
 		},
-		"eba-crypto": {
-			"description": "EBA (EU) - Tool"
+		"eba_crypto": {
+			"description": "Autoridade Bancária Europeia fornecendo padrões prudenciais para provedores de serviços de criptoativos e emissores de stablecoins"
 		},
-		"fca-crypto": {
-			"description": "FCA (UK) - Tool"
+		"fca_crypto": {
+			"description": "Regime de registro cripto da Autoridade de Conduta Financeira do Reino Unido e regras de proteção ao consumidor para marketing cripto"
 		},
-		"bafin-crypto": {
-			"description": "BaFin (Germany) - Tool"
+		"bafin_crypto": {
+			"description": "Autoridade Federal de Supervisão Financeira da Alemanha licenciando serviços de custódia e negociação cripto sob lei alemã"
 		},
-		"amf-crypto": {
-			"description": "AMF (France) - Tool"
+		"amf_crypto": {
+			"description": "Autoridade de Mercados Financeiros da França registro PSAN/DASP para provedores de serviços cripto operando na França"
 		},
-		"finma-crypto": {
-			"description": "FINMA (Switzerland) - Tool"
+		"finma_crypto": {
+			"description": "Autoridade Supervisora de Mercados Financeiros da Suíça orientando licenciamento de bancos cripto no Crypto Valley suíço"
 		},
-		"hkma-crypto": {
-			"description": "HKMA (Hong Kong) - Tool"
+		"hkma_crypto": {
+			"description": "Autoridade Monetária de Hong Kong supervisionando regulação de stablecoins e atividades cripto do setor bancário"
 		},
-		"sfc-hk": {
-			"description": "SFC (Hong Kong) - Tool"
+		"sfc_hk": {
+			"description": "Comissão de Valores e Futuros de Hong Kong regime de licenciamento VASP para exchanges cripto e plataformas de negociação"
 		},
-		"mas-crypto": {
-			"description": "MAS (Singapore) - Tool"
+		"mas_crypto": {
+			"description": "Autoridade Monetária de Singapura licenciamento da Lei de Serviços de Pagamento para serviços de tokens de pagamento digital"
 		},
-		"jfsa-crypto": {
-			"description": "JFSA (Japan) - Tool"
+		"jfsa_crypto": {
+			"description": "Agência de Serviços Financeiros do Japão sistema de registro de exchanges cripto, um dos primeiros frameworks regulatórios globalmente"
 		},
-		"fsc-korea": {
-			"description": "FSC (South Korea) - Tool"
+		"fsc_korea": {
+			"description": "Comissão de Serviços Financeiros da Coreia do Sul registro VASP e requisitos de implementação de regra de viagem"
 		},
-		"asic-crypto": {
-			"description": "ASIC (Australia) - Tool"
+		"asic_crypto": {
+			"description": "Comissão Australiana de Valores e Investimentos consulta de licenciamento cripto e orientação de proteção ao consumidor"
 		},
-		"rbi-crypto": {
-			"description": "RBI (India) - Tool"
+		"rbi_crypto": {
+			"description": "Banco de Reserva da Índia desenvolvimento de CBDC, piloto de rupia digital e orientação cripto do setor bancário"
 		},
-		"vara-dubai": {
-			"description": "VARA (Dubai) - Tool"
+		"vara_dubai": {
+			"description": "Autoridade Reguladora de Ativos Virtuais de Dubai - framework abrangente de licenciamento VASP para o emirado"
 		},
-		"adgm-crypto": {
-			"description": "ADGM (Abu Dhabi) - Tool"
+		"adgm_crypto": {
+			"description": "Framework do Mercado Global de Abu Dhabi para ativos digitais incluindo sandbox regulatório para inovação cripto"
 		},
-		"sama-crypto": {
-			"description": "SAMA (Saudi Arabia) - Tool"
+		"sama_crypto": {
+			"description": "Autoridade Monetária da Arábia Saudita pesquisa de CBDC e iniciativa de moeda digital transfronteiriça Projeto Aber"
 		},
-		"sarb-crypto": {
-			"description": "SARB (South Africa) - Tool"
+		"sarb_crypto": {
+			"description": "Banco de Reserva da África do Sul framework de provedores de serviços de criptoativos e regras de autoridade de conduta do setor financeiro"
 		},
-		"csa-crypto": {
-			"description": "CSA (Canada) - Tool"
+		"csa_crypto": {
+			"description": "Administradores de Valores Mobiliários Canadenses registro de plataformas de negociação cripto e orientação de lei de valores"
 		},
-		"cnbv-crypto": {
-			"description": "CNBV (Mexico) - Tool"
+		"cnbv_crypto": {
+			"description": "Comissão Nacional Bancária e de Valores do México implementação de lei fintech e regime sandbox"
 		},
-		"bcra-crypto": {
-			"description": "BCRA (Argentina) - Tool"
+		"bcra_crypto": {
+			"description": "Banco Central da Argentina restrições bancárias cripto e implicações de controle de câmbio"
 		},
-		"cvm-brazil": {
-			"description": "CVM (Brazil) - Tool"
+		"cvm_brazil": {
+			"description": "Comissão de Valores Mobiliários do Brasil framework de criptoativos e diretrizes de tokenização"
 		},
-		"fatf-crypto": {
-			"description": "FATF - Tool"
+		"fatf_crypto": {
+			"description": "Força-Tarefa de Ação Financeira padrões globais AML/CFT incluindo a regra de viagem para VASPs"
 		},
-		"bis-crypto": {
-			"description": "BIS - Tool"
+		"bis_crypto": {
+			"description": "Banco de Compensações Internacionais pesquisa de bancos centrais sobre CBDCs, stablecoins e riscos cripto"
 		},
-		"fsb-crypto": {
-			"description": "FSB - Tool"
+		"fsb_crypto": {
+			"description": "Conselho de Estabilidade Financeira recomendações globais para regulação de criptoativos e supervisão de stablecoins"
 		},
-		"iosco-crypto": {
-			"description": "IOSCO - Tool"
+		"iosco_crypto": {
+			"description": "Organização Internacional de Comissões de Valores padrões para regulação de mercados de criptoativos"
 		},
-		"coinbase-legal": {
-			"description": "Coinbase Legal Hub - Tool"
+		"coinbase_legal": {
+			"description": "Hub jurídico e de políticas da Coinbase com recursos sobre regulação cripto, advocacy e orientação de conformidade"
 		},
-		"a16z-policy": {
-			"description": "a16z Policy Hub - Tool"
+		"a16z_policy": {
+			"description": "Pesquisa de políticas cripto da Andreessen Horowitz, propostas regulatórias e iniciativas de advocacy web3"
 		},
-		"blockchain-association": {
-			"description": "Blockchain Association - Tool"
+		"blockchain_association": {
+			"description": "Associação comercial da indústria cripto dos EUA representando e defendendo inovação blockchain em Washington"
 		},
-		"coin-center": {
-			"description": "Coin Center - Tool"
+		"coin_center": {
+			"description": "Centro de pesquisa e advocacy sem fins lucrativos focado em questões de política de criptomoedas"
 		},
-		"atlanticcouncil-cbdc": {
-			"description": "CBDC Tracker - Tool"
+		"atlanticcouncil_cbdc": {
+			"description": "Rastreador global de CBDC do Atlantic Council monitorando desenvolvimento de moedas digitais de bancos centrais mundialmente"
 		},
-		"global-crypto-map": {
-			"description": "Global Crypto Regulation Map - Tool"
+		"global_crypto_map": {
+			"description": "Mapa interativo mostrando status de regulação de criptomoedas por país com detalhes de classificação legal"
 		},
-		"chainalysis-compliance": {
-			"description": "Chainalysis - Tool"
+		"chainalysis_compliance": {
+			"description": "Análise blockchain empresarial para conformidade, investigação e monitoramento de transações AML"
 		},
-		"elliptic-compliance": {
-			"description": "Elliptic - Tool"
+		"elliptic_compliance": {
+			"description": "Plataforma de conformidade cripto para triagem AML, monitoramento de transações e relatórios regulatórios"
 		},
-		"trm-labs": {
-			"description": "TRM Labs - Tool"
+		"trm_labs": {
+			"description": "Inteligência blockchain para investigação de crimes financeiros, conformidade e gestão de riscos"
 		},
-		"merkle-science": {
-			"description": "Merkle Science - Tool"
+		"merkle_science": {
+			"description": "Plataforma de risco e inteligência cripto para conformidade, investigação e relatórios regulatórios na Ásia"
 		},
-		"notabene-travel": {
-			"description": "Notabene - Tool"
+		"notabene_travel": {
+			"description": "Plataforma de conformidade de regra de viagem habilitando compartilhamento seguro de informações VASP-para-VASP para transações"
 		},
-		"sumsub-kyc": {
-			"description": "Sumsub - Tool"
+		"sumsub_kyc": {
+			"description": "Plataforma de verificação de identidade e conformidade KYC/AML para exchanges cripto e serviços financeiros"
 		}
 	}
 }

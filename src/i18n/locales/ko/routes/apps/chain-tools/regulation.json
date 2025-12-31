@@ -1,155 +1,155 @@
 {
 	"category_seo": {
-		"title": "Crypto Regulation - Legal & Compliance Resources | BiuBiu Tools",
-		"description": "Stay informed on crypto regulation worldwide. SEC updates, MiCA, global regulatory developments, and compliance resources.",
-		"keywords": "",
+		"title": "암호화폐 규제 - 글로벌 정책 및 컴플라이언스 리소스 | BiuBiu Tools",
+		"description": "전 세계 암호화폐 규제 정보를 파악하세요. SEC, MiCA, FATF 및 40개 이상 관할권의 규제 기관과 AML/KYC 컴플라이언스 도구에 접근하세요.",
+		"keywords": "암호화폐 규제, SEC 암호화폐, MiCA EU, FATF 트래블룰, 암호화폐 컴플라이언스, AML KYC 암호화폐",
 		"faqs": [
 			{
-				"question": "How is crypto regulated?",
-				"answer": "Regulation varies by country. US has SEC (securities) and CFTC (commodities). EU has MiCA. Some countries ban crypto, others embrace it. The landscape is evolving rapidly."
+				"question": "암호화폐는 글로벌하게 어떻게 규제되나요?",
+				"answer": "규제는 관할권마다 다릅니다. 미국에는 SEC(증권)와 CFTC(상품)가 있습니다. EU는 포괄적인 암호화폐 규칙을 위해 MiCA를 시행했습니다. 아시아는 홍콩의 VASP 체제부터 일본의 등록 거래소까지 다양한 접근 방식이 있습니다. FATF가 글로벌 AML 기준을 설정합니다."
 			},
 			{
-				"question": "Are stablecoins being regulated?",
-				"answer": "Yes, stablecoins face increasing regulation. MiCA in EU requires reserves and licensing. US is working on stablecoin legislation. Expect more requirements for issuers."
+				"question": "MiCA란 무엇이며 왜 중요한가요?",
+				"answer": "MiCA(암호자산시장)는 2024년에 발효된 EU의 포괄적인 암호화폐 규제 프레임워크입니다. 암호화폐 서비스 제공자 라이선스, 스테이블코인 준비금, 소비자 보호를 요구합니다. 암호화폐 규제의 글로벌 벤치마크가 되고 있습니다."
 			},
 			{
-				"question": "How do I stay compliant?",
-				"answer": "Keep records of all transactions, understand your jurisdiction's rules, use compliant exchanges, and consult crypto-savvy legal and tax professionals."
+				"question": "암호화폐 규제를 준수하려면 어떻게 해야 하나요?",
+				"answer": "AML/KYC 컴플라이언스 도구를 사용하고, 트래블룰 솔루션을 구현하고, 거래 기록을 유지하고, 라이선스를 가진 거래소와 협력하고, 관할권의 특정 요구사항에 대해 암호화폐 전문 법률 전문가와 상담하세요."
 			}
 		]
 	},
 	"tools": {
-		"sec-crypto": {
-			"description": "SEC (US) - Tool"
+		"sec_crypto": {
+			"description": "미국 증권거래위원회의 디지털 자산 감독, 집행 조치 및 암호화폐 증권 규제 지침"
 		},
-		"cftc-crypto": {
-			"description": "CFTC (US) - Tool"
+		"cftc_crypto": {
+			"description": "암호화폐 파생상품, 비트코인 선물 및 디지털 상품 시장을 규제하는 미국 상품선물거래위원회"
 		},
-		"fincen-crypto": {
-			"description": "FinCEN (US) - Tool"
+		"fincen_crypto": {
+			"description": "암호화폐 비즈니스를 위한 AML/KYC 지침 및 규정을 제공하는 미국 금융범죄단속네트워크"
 		},
-		"occ-crypto": {
-			"description": "OCC (US) - Tool"
+		"occ_crypto": {
+			"description": "은행 암호화폐 수탁 및 스테이블코인 활동을 감독하는 미국 통화감독청"
 		},
-		"fed-crypto": {
-			"description": "Federal Reserve - Tool"
+		"fed_crypto": {
+			"description": "CBDC, 스테이블코인 및 은행 부문 암호화폐 노출에 대한 연방준비제도 연구 및 정책"
 		},
-		"nydfs-crypto": {
-			"description": "NYDFS BitLicense - Tool"
+		"nydfs_crypto": {
+			"description": "미국 최초의 주 암호화폐 라이선스 프레임워크인 뉴욕주 금융서비스부 BitLicense 체제"
 		},
-		"mica-eu": {
-			"description": "MiCA (EU) - Tool"
+		"mica_eu": {
+			"description": "EU 암호자산시장 규정 - 암호화폐 서비스 제공자 및 스테이블코인 발행자를 위한 포괄적 프레임워크"
 		},
-		"esma-crypto": {
-			"description": "ESMA (EU) - Tool"
+		"esma_crypto": {
+			"description": "MiCA를 시행하고 EU의 암호자산 서비스 제공자를 감독하는 유럽증권시장감독청"
 		},
-		"eba-crypto": {
-			"description": "EBA (EU) - Tool"
+		"eba_crypto": {
+			"description": "암호자산 서비스 제공자 및 스테이블코인 발행자를 위한 건전성 기준을 제공하는 유럽은행감독청"
 		},
-		"fca-crypto": {
-			"description": "FCA (UK) - Tool"
+		"fca_crypto": {
+			"description": "영국 금융행위감독청 암호화폐 등록 체제 및 암호화폐 마케팅 소비자 보호 규칙"
 		},
-		"bafin-crypto": {
-			"description": "BaFin (Germany) - Tool"
+		"bafin_crypto": {
+			"description": "독일법에 따라 암호화폐 수탁 및 거래 서비스를 라이선스하는 독일 연방금융감독청"
 		},
-		"amf-crypto": {
-			"description": "AMF (France) - Tool"
+		"amf_crypto": {
+			"description": "프랑스에서 운영하는 암호화폐 서비스 제공자를 위한 PSAN/DASP 등록을 담당하는 프랑스 금융시장청"
 		},
-		"finma-crypto": {
-			"description": "FINMA (Switzerland) - Tool"
+		"finma_crypto": {
+			"description": "스위스 크립토밸리에서 암호화폐 은행 라이선스를 안내하는 스위스 금융시장감독청"
 		},
-		"hkma-crypto": {
-			"description": "HKMA (Hong Kong) - Tool"
+		"hkma_crypto": {
+			"description": "스테이블코인 규제 및 은행 부문 암호화폐 활동을 감독하는 홍콩금융관리국"
 		},
-		"sfc-hk": {
-			"description": "SFC (Hong Kong) - Tool"
+		"sfc_hk": {
+			"description": "암호화폐 거래소 및 거래 플랫폼을 위한 VASP 라이선스 체제를 담당하는 홍콩증권선물위원회"
 		},
-		"mas-crypto": {
-			"description": "MAS (Singapore) - Tool"
+		"mas_crypto": {
+			"description": "디지털 결제 토큰 서비스를 위한 결제서비스법 라이선스를 담당하는 싱가포르 통화청"
 		},
-		"jfsa-crypto": {
-			"description": "JFSA (Japan) - Tool"
+		"jfsa_crypto": {
+			"description": "글로벌 최초 규제 프레임워크 중 하나인 일본 금융청 암호화폐 거래소 등록 시스템"
 		},
-		"fsc-korea": {
-			"description": "FSC (South Korea) - Tool"
+		"fsc_korea": {
+			"description": "한국 금융위원회 VASP 등록 및 트래블룰 시행 요구사항"
 		},
-		"asic-crypto": {
-			"description": "ASIC (Australia) - Tool"
+		"asic_crypto": {
+			"description": "호주 증권투자위원회 암호화폐 라이선스 협의 및 소비자 보호 지침"
 		},
-		"rbi-crypto": {
-			"description": "RBI (India) - Tool"
+		"rbi_crypto": {
+			"description": "인도중앙은행 CBDC 개발, 디지털 루피 파일럿 및 은행 부문 암호화폐 지침"
 		},
-		"vara-dubai": {
-			"description": "VARA (Dubai) - Tool"
+		"vara_dubai": {
+			"description": "두바이 가상자산규제청 - 에미리트를 위한 포괄적 VASP 라이선스 프레임워크"
 		},
-		"adgm-crypto": {
-			"description": "ADGM (Abu Dhabi) - Tool"
+		"adgm_crypto": {
+			"description": "암호화폐 혁신을 위한 규제 샌드박스를 포함한 아부다비 글로벌마켓 디지털 자산 프레임워크"
 		},
-		"sama-crypto": {
-			"description": "SAMA (Saudi Arabia) - Tool"
+		"sama_crypto": {
+			"description": "사우디아라비아 통화청 CBDC 연구 및 프로젝트 Aber 국경 간 디지털 통화 이니셔티브"
 		},
-		"sarb-crypto": {
-			"description": "SARB (South Africa) - Tool"
+		"sarb_crypto": {
+			"description": "남아프리카공화국 준비은행 암호자산 서비스 제공자 프레임워크 및 금융부문 행위감독청 규칙"
 		},
-		"csa-crypto": {
-			"description": "CSA (Canada) - Tool"
+		"csa_crypto": {
+			"description": "캐나다 증권관리자 암호화폐 거래 플랫폼 등록 및 증권법 지침"
 		},
-		"cnbv-crypto": {
-			"description": "CNBV (Mexico) - Tool"
+		"cnbv_crypto": {
+			"description": "멕시코 국가은행증권위원회 핀테크법 시행 및 샌드박스 체제"
 		},
-		"bcra-crypto": {
-			"description": "BCRA (Argentina) - Tool"
+		"bcra_crypto": {
+			"description": "아르헨티나 중앙은행 암호화폐 은행 제한 및 외환 통제 영향"
 		},
-		"cvm-brazil": {
-			"description": "CVM (Brazil) - Tool"
+		"cvm_brazil": {
+			"description": "브라질 증권거래위원회 암호자산 프레임워크 및 토큰화 지침"
 		},
-		"fatf-crypto": {
-			"description": "FATF - Tool"
+		"fatf_crypto": {
+			"description": "VASP 트래블룰을 포함한 금융활동작업반 글로벌 AML/CFT 기준"
 		},
-		"bis-crypto": {
-			"description": "BIS - Tool"
+		"bis_crypto": {
+			"description": "CBDC, 스테이블코인 및 암호화폐 위험에 대한 국제결제은행 중앙은행 연구"
 		},
-		"fsb-crypto": {
-			"description": "FSB - Tool"
+		"fsb_crypto": {
+			"description": "암호자산 규제 및 스테이블코인 감독을 위한 금융안정위원회 글로벌 권고"
 		},
-		"iosco-crypto": {
-			"description": "IOSCO - Tool"
+		"iosco_crypto": {
+			"description": "암호자산 시장 규제를 위한 국제증권감독기구 기준"
 		},
-		"coinbase-legal": {
-			"description": "Coinbase Legal Hub - Tool"
+		"coinbase_legal": {
+			"description": "암호화폐 규제, 옹호 및 컴플라이언스 지침에 대한 리소스가 있는 Coinbase 법률 및 정책 허브"
 		},
-		"a16z-policy": {
-			"description": "a16z Policy Hub - Tool"
+		"a16z_policy": {
+			"description": "Andreessen Horowitz 암호화폐 정책 연구, 규제 제안 및 web3 옹호 이니셔티브"
 		},
-		"blockchain-association": {
-			"description": "Blockchain Association - Tool"
+		"blockchain_association": {
+			"description": "워싱턴에서 블록체인 혁신을 대표하고 옹호하는 미국 암호화폐 산업 협회"
 		},
-		"coin-center": {
-			"description": "Coin Center - Tool"
+		"coin_center": {
+			"description": "암호화폐 정책 문제에 초점을 맞춘 비영리 연구 및 옹호 센터"
 		},
-		"atlanticcouncil-cbdc": {
-			"description": "CBDC Tracker - Tool"
+		"atlanticcouncil_cbdc": {
+			"description": "전 세계 중앙은행 디지털 통화 개발을 모니터링하는 애틀랜틱 카운슬 글로벌 CBDC 트래커"
 		},
-		"global-crypto-map": {
-			"description": "Global Crypto Regulation Map - Tool"
+		"global_crypto_map": {
+			"description": "법적 분류 세부사항이 있는 국가별 암호화폐 규제 현황을 보여주는 인터랙티브 지도"
 		},
-		"chainalysis-compliance": {
-			"description": "Chainalysis - Tool"
+		"chainalysis_compliance": {
+			"description": "컴플라이언스, 조사 및 AML 거래 모니터링을 위한 엔터프라이즈 블록체인 분석"
 		},
-		"elliptic-compliance": {
-			"description": "Elliptic - Tool"
+		"elliptic_compliance": {
+			"description": "AML 스크리닝, 거래 모니터링 및 규제 보고를 위한 암호화폐 컴플라이언스 플랫폼"
 		},
-		"trm-labs": {
-			"description": "TRM Labs - Tool"
+		"trm_labs": {
+			"description": "금융 범죄 조사, 컴플라이언스 및 리스크 관리를 위한 블록체인 인텔리전스"
 		},
-		"merkle-science": {
-			"description": "Merkle Science - Tool"
+		"merkle_science": {
+			"description": "아시아에서 컴플라이언스, 조사 및 규제 보고를 위한 암호화폐 리스크 및 인텔리전스 플랫폼"
 		},
-		"notabene-travel": {
-			"description": "Notabene - Tool"
+		"notabene_travel": {
+			"description": "거래를 위한 안전한 VASP 간 정보 공유를 가능하게 하는 트래블룰 컴플라이언스 플랫폼"
 		},
-		"sumsub-kyc": {
-			"description": "Sumsub - Tool"
+		"sumsub_kyc": {
+			"description": "암호화폐 거래소 및 금융 서비스를 위한 신원 확인 및 KYC/AML 컴플라이언스 플랫폼"
 		}
 	}
 }
