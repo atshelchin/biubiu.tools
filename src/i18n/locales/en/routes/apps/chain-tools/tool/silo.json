@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Silo Finance - Isolated Lending Markets",
+		"description": "Silo Finance offers isolated lending markets for any token. Borrow and lend with contained risk on Arbitrum and Ethereum.",
+		"keywords": "Silo Finance, SILO token, isolated lending, Arbitrum lending, permissionless markets"
+	},
+	"overview": "Silo Finance is a lending protocol with isolated markets, where each lending market only contains two assets—a base asset (like ETH) and a quote asset. This isolates risk so issues with one token don't affect others.\n\nThe protocol allows permissionless market creation, meaning anyone can create a lending market for any token. This enables long-tail assets to have lending markets without risking the entire protocol.\n\nSilo is deployed on Ethereum and Arbitrum, with the SILO token providing governance and incentives for liquidity providers.",
+	"features": {
+		"1": {
+			"title": "Isolated Markets",
+			"description": "Risk contained per market"
+		},
+		"2": {
+			"title": "Permissionless",
+			"description": "Anyone can create markets"
+		},
+		"3": {
+			"title": "Long-Tail Assets",
+			"description": "Lending for any token"
+		},
+		"4": {
+			"title": "SILO Token",
+			"description": "Governance and incentives"
+		},
+		"5": {
+			"title": "Multi-Chain",
+			"description": "Ethereum and Arbitrum"
+		},
+		"6": {
+			"title": "Bridge Assets",
+			"description": "ETH/USDC as base assets"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Long-Tail Lending",
+			"description": "Borrow against obscure tokens"
+		},
+		"2": {
+			"title": "Market Creation",
+			"description": "Create lending for new tokens"
+		},
+		"3": {
+			"title": "Risk Management",
+			"description": "Isolated exposure per asset"
+		},
+		"4": {
+			"title": "Yield Farming",
+			"description": "Earn SILO rewards"
+		},
+		"5": {
+			"title": "Governance",
+			"description": "Vote on protocol decisions"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What makes Silo different from Aave?",
+			"answer": "Aave has shared pools where all assets share risk—one bad asset can affect all. Silo isolates each market (e.g., ETH-XYZ is separate from ETH-ABC). This enables listing riskier assets without systemic risk."
+		},
+		"2": {
+			"question": "How do isolated markets work?",
+			"answer": "Each Silo market contains only two assets: a base asset (ETH or stablecoin) and one other token. If the other token has issues, only that market is affected. The base asset bridges liquidity across markets."
+		},
+		"3": {
+			"question": "Can anyone create a Silo market?",
+			"answer": "Yes, Silo is permissionless. Anyone can create a lending market for any ERC-20 token. The market starts with the creator's liquidity. This enables lending for tokens not listed on major protocols."
+		},
+		"4": {
+			"question": "What is the SILO token?",
+			"answer": "SILO is the governance token. It's used for voting on protocol decisions and can be staked for rewards. SILO emissions incentivize liquidity in various markets."
+		},
+		"5": {
+			"question": "Is Silo safe?",
+			"answer": "Silo is audited and the isolated market design reduces systemic risk. However, individual markets can have issues with their specific tokens. Always assess the risk of the specific market you're using."
+		}
+	},
+	"cta": {
+		"ready": "Ready for isolated lending?",
+		"button": "Explore Silo",
+		"note": "Risk-isolated markets"
+	}
+}

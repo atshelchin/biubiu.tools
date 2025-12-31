@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Moonwell - Base & Optimism Lending",
+		"description": "Moonwell is a leading lending protocol on Base and Optimism. Borrow and lend with WELL token rewards on L2s.",
+		"keywords": "Moonwell, WELL token, Base lending, Optimism lending, L2 DeFi, money market"
+	},
+	"overview": "Moonwell is a lending protocol originally built for Moonbeam that has expanded to become a major player on Base and Optimism. It offers straightforward borrowing and lending with competitive rates.\n\nThe protocol distributes WELL tokens to lenders and borrowers as additional incentives. Moonwell focuses on user experience and safety, with a clean interface and conservative risk parameters.\n\nWith Base's ecosystem growth, Moonwell has become one of the largest lending protocols on the chain, serving as essential infrastructure for L2 DeFi.",
+	"features": {
+		"1": {
+			"title": "Multi-L2",
+			"description": "Base, Optimism, Moonbeam"
+		},
+		"2": {
+			"title": "WELL Token",
+			"description": "Governance and reward incentives"
+		},
+		"3": {
+			"title": "Clean UX",
+			"description": "Simple, intuitive interface"
+		},
+		"4": {
+			"title": "Safety Focus",
+			"description": "Conservative risk parameters"
+		},
+		"5": {
+			"title": "Compound Fork",
+			"description": "Battle-tested mechanics"
+		},
+		"6": {
+			"title": "veWELL",
+			"description": "Vote-escrowed governance"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Base Lending",
+			"description": "Borrow and lend on Base"
+		},
+		"2": {
+			"title": "Optimism Lending",
+			"description": "Access liquidity on Optimism"
+		},
+		"3": {
+			"title": "WELL Farming",
+			"description": "Earn WELL through usage"
+		},
+		"4": {
+			"title": "Collateralized Borrowing",
+			"description": "Borrow against crypto holdings"
+		},
+		"5": {
+			"title": "veWELL Staking",
+			"description": "Lock for governance power"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Which chains is Moonwell on?",
+			"answer": "Moonwell is deployed on Base, Optimism, and Moonbeam. The largest deployment is on Base, where it's one of the leading lending protocols. Each chain has its own liquidity pools."
+		},
+		"2": {
+			"question": "What is WELL token?",
+			"answer": "WELL is Moonwell's native token used for governance and incentives. Lenders and borrowers earn WELL rewards. WELL can be locked as veWELL for boosted rewards and voting power on emission allocation."
+		},
+		"3": {
+			"question": "How does Moonwell compare to Aave?",
+			"answer": "Moonwell is simpler and more focused on L2s like Base. Aave is larger and more established. Moonwell often has higher WELL incentives on supported chains. Both use similar lending mechanics."
+		},
+		"4": {
+			"question": "Is Moonwell safe?",
+			"answer": "Moonwell is audited and uses conservative risk parameters. It's a Compound fork with proven mechanics. The team prioritizes security. Standard lending risks apply—liquidation and smart contract risk."
+		},
+		"5": {
+			"question": "Why use Moonwell on Base?",
+			"answer": "Moonwell is one of the largest and most established lending protocols on Base. It offers competitive rates, WELL incentives, and deep liquidity for Base assets. Good first choice for Base lending needs."
+		}
+	},
+	"cta": {
+		"ready": "Ready to lend on L2?",
+		"button": "Explore Moonwell",
+		"note": "Base & Optimism lending"
+	}
+}
