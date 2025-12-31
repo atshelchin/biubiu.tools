@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Dynamic - 企业级Web3认证",
+		"description": "Dynamic是企业级Web3认证平台。嵌入式钱包、用户管理和面向生产应用的高级功能。",
+		"keywords": "Dynamic, Web3认证, 企业级, 嵌入式钱包, 用户管理, NFT门控"
+	},
+	"overview": "Dynamic是企业级Web3认证平台。他们提供嵌入式钱包、多链支持和面向严肃dApp的高级用户管理。\n\n除了简单的钱包连接，Dynamic还提供用户仪表板、钱包链接、NFT门控和分析。他们专注于完整的用户生命周期，而不仅仅是登录。\n\nDynamic在构建生产应用的公司中很受欢迎。强调安全、合规和企业功能。对于需要基础认证以上功能的团队是个好选择。",
+	"features": {
+		"1": {
+			"title": "嵌入式钱包",
+			"description": "托管密钥"
+		},
+		"2": {
+			"title": "社交登录",
+			"description": "邮箱、OAuth"
+		},
+		"3": {
+			"title": "用户管理",
+			"description": "仪表板"
+		},
+		"4": {
+			"title": "多链",
+			"description": "EVM和Solana"
+		},
+		"5": {
+			"title": "NFT门控",
+			"description": "代币访问"
+		},
+		"6": {
+			"title": "分析",
+			"description": "用户洞察"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "企业应用",
+			"description": "生产级"
+		},
+		"2": {
+			"title": "用户引导",
+			"description": "流畅流程"
+		},
+		"3": {
+			"title": "访问控制",
+			"description": "代币门控"
+		},
+		"4": {
+			"title": "多链",
+			"description": "跨链认证"
+		},
+		"5": {
+			"title": "合规",
+			"description": "企业需求"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Dynamic是什么？",
+			"answer": "Dynamic是企业级Web3认证。嵌入式钱包、社交登录、用户管理和分析。不仅仅是钱包连接——完整的用户生命周期管理。"
+		},
+		"2": {
+			"question": "Dynamic vs Privy？",
+			"answer": "两者都提供嵌入式钱包和社交登录。Dynamic有更强的企业功能——用户管理仪表板、分析、合规工具。Privy更简单，面向开发者。"
+		},
+		"3": {
+			"question": "支持哪些链？",
+			"answer": "EVM链（以太坊、Polygon、Arbitrum等）和Solana。他们支持跨多个生态系统的钱包连接和嵌入式钱包。查看文档了解完整列表。"
+		},
+		"4": {
+			"question": "什么是NFT门控？",
+			"answer": "根据NFT/代币持有控制访问。用户必须持有特定代币才能访问功能。Dynamic提供内置门控规则。常用于会员和访问控制。"
+		},
+		"5": {
+			"question": "企业功能？",
+			"answer": "用户管理仪表板、分析、合规工具、SSO和优先支持。专为构建有真实业务需求的生产应用的公司设计。"
+		}
+	},
+	"cta": {
+		"ready": "准备好使用企业级认证了吗？",
+		"button": "探索Dynamic",
+		"note": "企业级Web3认证"
+	}
+}

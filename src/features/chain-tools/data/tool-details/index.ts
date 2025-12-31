@@ -196,6 +196,18 @@ import { thirdwebDetail } from './thirdweb';
 import { sourcifyDetail } from './sourcify';
 import { holeskyDetail } from './holesky';
 import { sepoliaDetail } from './sepolia';
+import { zerodevDetail } from './zerodev';
+import { pimlicoDetail } from './pimlico';
+import { stackupDetail } from './stackup';
+import { privyDetail } from './privy';
+import { dynamicDetail } from './dynamic';
+import { web3authDetail } from './web3auth';
+import { particleDetail } from './particle';
+import { turnkeyDetail } from './turnkey';
+import { capsuleDetail } from './capsule';
+import { portalDetail } from './portal';
+import { reownDetail } from './reown';
+import { litDetail } from './lit';
 
 /**
  * All tool details mapped by tool ID
@@ -388,7 +400,19 @@ export const toolDetails: Record<string, ToolDetail> = {
 	thirdweb: thirdwebDetail,
 	sourcify: sourcifyDetail,
 	holesky: holeskyDetail,
-	sepolia: sepoliaDetail
+	sepolia: sepoliaDetail,
+	zerodev: zerodevDetail,
+	pimlico: pimlicoDetail,
+	stackup: stackupDetail,
+	privy: privyDetail,
+	dynamic: dynamicDetail,
+	web3auth: web3authDetail,
+	particle: particleDetail,
+	turnkey: turnkeyDetail,
+	capsule: capsuleDetail,
+	portal: portalDetail,
+	reown: reownDetail,
+	lit: litDetail
 };
 
 /**

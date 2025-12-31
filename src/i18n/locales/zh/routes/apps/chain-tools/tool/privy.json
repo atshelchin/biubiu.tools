@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Privy - Web3认证",
+		"description": "Privy是Web3认证库。社交登录、嵌入式钱包和面向主流用户的渐进式Web3采用。",
+		"keywords": "Privy, Web3认证, 嵌入式钱包, 社交登录, 钱包连接, 用户引导"
+	},
+	"overview": "Privy是Web3认证库。他们让通过邮箱、社交登录或钱包来引导用户变得简单——并可选择创建嵌入式钱包以获得无缝体验。\n\n该库处理钱包连接的复杂性，同时支持渐进式Web3采用。用户可以从邮箱开始，稍后链接自托管钱包。最佳的用户引导体验。\n\nPrivy在需要主流友好认证的消费者应用中很受欢迎。支持嵌入式钱包（Privy管理密钥）或外部钱包（MetaMask等）。适用于任何用例。",
+	"features": {
+		"1": {
+			"title": "社交登录",
+			"description": "邮箱、Google等"
+		},
+		"2": {
+			"title": "嵌入式钱包",
+			"description": "无需助记词"
+		},
+		"3": {
+			"title": "外部钱包",
+			"description": "支持MetaMask"
+		},
+		"4": {
+			"title": "渐进式Web3",
+			"description": "逐步采用"
+		},
+		"5": {
+			"title": "React SDK",
+			"description": "易于集成"
+		},
+		"6": {
+			"title": "多链",
+			"description": "多个网络"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "消费者应用",
+			"description": "主流体验"
+		},
+		"2": {
+			"title": "用户引导",
+			"description": "邮箱注册"
+		},
+		"3": {
+			"title": "游戏",
+			"description": "无摩擦"
+		},
+		"4": {
+			"title": "NFT应用",
+			"description": "简易铸造"
+		},
+		"5": {
+			"title": "混合认证",
+			"description": "Web2 + Web3"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Privy是什么？",
+			"answer": "Privy是Web3认证。用户用邮箱、Google或Twitter登录——Privy可以自动创建嵌入式钱包。或者用户连接现有钱包。连接Web2和Web3体验。"
+		},
+		"2": {
+			"question": "什么是嵌入式钱包？",
+			"answer": "Privy可以为通过邮箱/社交登录的用户创建钱包。无需助记词——Privy保护密钥。用户如果想要自托管可以稍后导出。非常适合引导新用户。"
+		},
+		"3": {
+			"question": "Privy vs RainbowKit？",
+			"answer": "RainbowKit是钱包连接UI——用户必须有钱包。Privy处理完整认证，包括为没有钱包的用户创建嵌入式钱包。不同的用例。"
+		},
+		"4": {
+			"question": "Privy安全吗？",
+			"answer": "Privy使用安全密钥管理（HSM、MPC）来处理嵌入式钱包。用户可以链接多种认证方式用于恢复。安全是他们产品的核心——他们处理真实价值。"
+		},
+		"5": {
+			"question": "定价？",
+			"answer": "开发和小型应用有免费层。生产定价基于月活跃用户。大规模应用有企业计划。查看他们的定价页面了解当前费率。"
+		}
+	},
+	"cta": {
+		"ready": "准备好简易用户引导了吗？",
+		"button": "试用Privy",
+		"note": "Web3认证"
+	}
+}

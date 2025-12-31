@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "ZeroDev - 账户抽象SDK",
+		"description": "ZeroDev是领先的账户抽象SDK。构建具有免Gas交易、会话密钥和通行密钥认证的智能账户。",
+		"keywords": "ZeroDev, 账户抽象, ERC-4337, 智能账户, 免Gas, 会话密钥, 通行密钥"
+	},
+	"overview": "ZeroDev是领先的账户抽象SDK。他们让构建ERC-4337智能账户变得简单——实现免Gas交易、批量操作和可编程钱包。\n\nZeroDev提供Kernel，一个开发者可以自定义的模块化智能账户。他们的SDK处理打包器、支付主和用户操作的复杂性。专注于你的应用，而非AA基础设施。\n\n关键功能包括会话密钥（委托权限）、通行密钥认证和Gas赞助。ZeroDev正在推动下一代用户友好型dApp，实现无感钱包体验。",
+	"features": {
+		"1": {
+			"title": "智能账户",
+			"description": "ERC-4337"
+		},
+		"2": {
+			"title": "免Gas交易",
+			"description": "赞助Gas"
+		},
+		"3": {
+			"title": "会话密钥",
+			"description": "委托权限"
+		},
+		"4": {
+			"title": "通行密钥",
+			"description": "生物识别认证"
+		},
+		"5": {
+			"title": "模块化",
+			"description": "Kernel账户"
+		},
+		"6": {
+			"title": "多链",
+			"description": "多个网络"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "免Gas dApp",
+			"description": "赞助用户Gas"
+		},
+		"2": {
+			"title": "游戏",
+			"description": "会话密钥"
+		},
+		"3": {
+			"title": "用户引导",
+			"description": "无需助记词"
+		},
+		"4": {
+			"title": "批量交易",
+			"description": "多调用"
+		},
+		"5": {
+			"title": "社交登录",
+			"description": "Web2体验"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "ZeroDev是什么？",
+			"answer": "ZeroDev是基于ERC-4337构建的账户抽象SDK。它让你创建具有免Gas交易、会话密钥和通行密钥登录功能的智能合约钱包。让dApp感觉像普通应用。"
+		},
+		"2": {
+			"question": "什么是账户抽象？",
+			"answer": "账户抽象(AA)用智能合约钱包替代EOA。实现Gas赞助、批量交易、社交恢复和可编程安全。ERC-4337是标准；ZeroDev实现它。"
+		},
+		"3": {
+			"question": "什么是会话密钥？",
+			"answer": "会话密钥让用户向应用授予有限权限——比如\"为这个游戏批准最多10 USDC\"。用户不需要签署每笔交易。为区块链应用实现类游戏的用户体验。"
+		},
+		"4": {
+			"question": "通行密钥如何工作？",
+			"answer": "用户使用Face ID或指纹而不是助记词进行认证。ZeroDev使用通行密钥保护智能账户。主流用户不再需要12个单词。"
+		},
+		"5": {
+			"question": "ZeroDev免费吗？",
+			"answer": "他们有慷慨的免费层用于开发和小型应用。生产使用有付费层。Gas赞助成本取决于你的支付主设置。"
+		}
+	},
+	"cta": {
+		"ready": "准备好使用账户抽象了吗？",
+		"button": "开始构建",
+		"note": "智能账户SDK"
+	}
+}

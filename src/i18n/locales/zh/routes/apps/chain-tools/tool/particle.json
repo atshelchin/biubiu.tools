@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Particle Network - 链抽象",
+		"description": "Particle Network提供链抽象的通用账户。跨链统一余额、Gas和身份。",
+		"keywords": "Particle Network, 链抽象, 通用账户, 跨链, AA, 账户抽象"
+	},
+	"overview": "Particle Network正在构建链抽象层，用于跨多链统一用户体验。他们的通用账户提供跨链统一余额、单地址、通用Gas。\n\n愿景是消除用户在多链间切换的复杂性。无需再担心应该使用哪条链或如何支付Gas——Particle在幕后处理。以用户为中心的多链体验。\n\nParticle同时构建智能钱包即服务SDK。团队可以集成社交登录、嵌入式钱包和AA功能。链抽象和钱包基础设施整合在一个产品中。",
+	"features": {
+		"1": {
+			"title": "通用账户",
+			"description": "跨链统一"
+		},
+		"2": {
+			"title": "链抽象",
+			"description": "统一体验"
+		},
+		"3": {
+			"title": "通用Gas",
+			"description": "任何代币支付"
+		},
+		"4": {
+			"title": "智能钱包",
+			"description": "AA即服务"
+		},
+		"5": {
+			"title": "社交登录",
+			"description": "邮箱、社交"
+		},
+		"6": {
+			"title": "多链",
+			"description": "跨链原生"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "跨链应用",
+			"description": "统一体验"
+		},
+		"2": {
+			"title": "消费者应用",
+			"description": "简单引导"
+		},
+		"3": {
+			"title": "游戏",
+			"description": "无缝钱包"
+		},
+		"4": {
+			"title": "DeFi应用",
+			"description": "跨链余额"
+		},
+		"5": {
+			"title": "钱包开发者",
+			"description": "基础设施"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是链抽象？",
+			"answer": "链抽象向用户隐藏多链复杂性。无需切换网络、桥接资产或担心哪条链有你的代币。用户看到统一余额，交易自动路由。"
+		},
+		"2": {
+			"question": "什么是通用账户？",
+			"answer": "通用账户跨链提供统一体验。一个地址、跨链余额、任何链上的代币支付Gas。用户无需思考多链——只需使用应用。"
+		},
+		"3": {
+			"question": "Particle vs其他AA？",
+			"answer": "Particle专注于链抽象——跨链统一体验。其他AA提供商可能只专注于单链。Particle SDK包含智能钱包+链抽象整合。"
+		},
+		"4": {
+			"question": "如何工作？",
+			"answer": "Particle使用其网络协调跨链交易。你的通用账户跨链同步。当你发起交易时，Particle路由到正确链并处理Gas。"
+		},
+		"5": {
+			"question": "这安全吗？",
+			"answer": "Particle在安全模型上投入大量精力。通用账户使用智能合约基础设施。审查他们的架构和审计——链抽象增加了复杂性但也带来便利。"
+		}
+	},
+	"cta": {
+		"ready": "准备好统一跨链体验了吗？",
+		"button": "探索Particle",
+		"note": "链抽象网络"
+	}
+}

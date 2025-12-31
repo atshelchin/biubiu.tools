@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Lit Protocol - 去中心化密钥管理",
+		"description": "Lit Protocol提供去中心化密钥管理和可编程PKP。条件访问控制、分布式签名和跨链身份。",
+		"keywords": "Lit Protocol, PKP, 密钥管理, 去中心化, 条件访问, 分布式签名"
+	},
+	"overview": "Lit Protocol是去中心化密钥管理网络。它提供可编程密钥对（PKP）可以根据任意条件签署交易——持有NFT、达到时间戳、自定义逻辑。\n\n网络使用门限加密——密钥份额分布在节点间。签名需要多个节点协调。真正去中心化的密钥管理。\n\nLit支持条件加密（只有满足条件时才能解密内容）、跨链签名和可编程权限。对代币门控、自动化和复杂访问控制非常有用。",
+	"features": {
+		"1": {
+			"title": "PKP",
+			"description": "可编程密钥"
+		},
+		"2": {
+			"title": "去中心化",
+			"description": "分布式节点"
+		},
+		"3": {
+			"title": "条件访问",
+			"description": "可编程规则"
+		},
+		"4": {
+			"title": "门限加密",
+			"description": "分割密钥"
+		},
+		"5": {
+			"title": "跨链",
+			"description": "多链签名"
+		},
+		"6": {
+			"title": "加密",
+			"description": "条件解密"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "代币门控",
+			"description": "NFT访问"
+		},
+		"2": {
+			"title": "自动化",
+			"description": "条件操作"
+		},
+		"3": {
+			"title": "跨链",
+			"description": "统一签名器"
+		},
+		"4": {
+			"title": "DAO",
+			"description": "可编程权限"
+		},
+		"5": {
+			"title": "DeFi",
+			"description": "条件交易"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Lit Protocol是什么？",
+			"answer": "Lit是去中心化密钥管理。创建可以基于任意条件签名的密钥——NFT所有权、时间锁、自定义逻辑。密钥份额分布在节点间。去中心化可编程签名器。"
+		},
+		"2": {
+			"question": "什么是PKP？",
+			"answer": "可编程密钥对是由Lit网络管理的密钥。你定义何时可以签名的条件。例如：只有持有特定NFT才能用这个密钥签名。可编程访问控制。"
+		},
+		"3": {
+			"question": "Lit vs MPC钱包？",
+			"answer": "两者都使用分布式密钥份额。MPC钱包专注于用户钱包。Lit专注于可编程条件——任何逻辑都可以控制签名权限。不同的用例。"
+		},
+		"4": {
+			"question": "条件加密？",
+			"answer": "用Lit加密内容，只有满足条件时才能解密。示例：持有NFT才能解密文件。代币门控内容、时间锁揭示、条件访问。"
+		},
+		"5": {
+			"question": "安全模型？",
+			"answer": "Lit使用门限加密。密钥份额分布在独立节点。签名需要多数份额协调。没有单点故障。审查他们的文档了解技术架构。"
+		}
+	},
+	"cta": {
+		"ready": "准备好可编程密钥了吗？",
+		"button": "探索Lit Protocol",
+		"note": "去中心化密钥管理"
+	}
+}

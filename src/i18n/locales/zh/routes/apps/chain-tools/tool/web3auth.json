@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Web3Auth - MPC钱包基础设施",
+		"description": "Web3Auth使用MPC实现安全的社交登录钱包。通过邮箱、Google和社交认证的非托管嵌入式钱包。",
+		"keywords": "Web3Auth, MPC, 社交登录, 嵌入式钱包, 非托管, Web3引导"
+	},
+	"overview": "Web3Auth是使用MPC（多方计算）进行密钥管理的钱包基础设施提供商。用户使用社交账户登录即可获得钱包——无需助记词，无需扩展程序。\n\n该技术将私钥分割给多方，因此没有单一实体拥有完整访问权限。这在保持非托管原则的同时实现了社交登录的安全性。\n\nWeb3Auth支持多链并与流行框架集成。他们提供即插即用解决方案和可定制SDK。是主流消费者应用的热门选择。",
+	"features": {
+		"1": {
+			"title": "MPC安全",
+			"description": "分割密钥管理"
+		},
+		"2": {
+			"title": "社交登录",
+			"description": "Google、Twitter等"
+		},
+		"3": {
+			"title": "非托管",
+			"description": "用户控制"
+		},
+		"4": {
+			"title": "多链",
+			"description": "EVM、Solana等"
+		},
+		"5": {
+			"title": "可定制",
+			"description": "白标"
+		},
+		"6": {
+			"title": "插件系统",
+			"description": "可扩展"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "消费者应用",
+			"description": "大规模采用"
+		},
+		"2": {
+			"title": "游戏",
+			"description": "无缝钱包"
+		},
+		"3": {
+			"title": "企业",
+			"description": "白标"
+		},
+		"4": {
+			"title": "移动应用",
+			"description": "原生SDK"
+		},
+		"5": {
+			"title": "多链",
+			"description": "跨生态系统"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Web3Auth是什么？",
+			"answer": "Web3Auth使用MPC提供钱包基础设施。用户使用社交账户（Google、Twitter）登录自动获得钱包。密钥被分割，没有任何一方拥有完全控制权。非托管社交登录。"
+		},
+		"2": {
+			"question": "MPC是什么？",
+			"answer": "多方计算将私钥分割给多方。即使一方被入侵，密钥仍然安全。Web3Auth使用此技术实现无需助记词的社交登录。"
+		},
+		"3": {
+			"question": "真的是非托管吗？",
+			"answer": "是的，在MPC模型中。Web3Auth从未拥有你的完整密钥——只有密钥份额。你通过社交登录控制最终密钥。社交登录体验的真正非托管。"
+		},
+		"4": {
+			"question": "Web3Auth vs Privy？",
+			"answer": "两者都提供社交登录钱包。Web3Auth使用MPC进行密钥管理；Privy使用不同方法。Web3Auth更可定制；Privy集成更简单。两者都很可靠。"
+		},
+		"5": {
+			"question": "支持哪些链？",
+			"answer": "广泛支持：以太坊、Polygon、Solana等。他们支持大多数主要L1和L2。查看文档了解当前链支持和特定功能。"
+		}
+	},
+	"cta": {
+		"ready": "准备好使用社交登录了吗？",
+		"button": "试用Web3Auth",
+		"note": "MPC钱包基础设施"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Pimlico - ERC-4337基础设施",
+		"description": "Pimlico提供ERC-4337打包器和支付主。支持规模化账户抽象的生产级基础设施。",
+		"keywords": "Pimlico, ERC-4337, 打包器, 支付主, 账户抽象, Gas赞助"
+	},
+	"overview": "Pimlico提供ERC-4337基础设施——驱动账户抽象的打包器和支付主。他们是让智能账户可靠规模化运行的后端。\n\n他们的打包器聚合用户操作并提交到网络。他们的支付主实现Gas赞助——你为用户支付Gas。对AA驱动的dApp来说是关键基础设施。\n\nPimlico专注于可靠性和性能。他们支持多个链并处理打包、Gas估算和内存池管理的复杂性。是让AA成为可能的管道。",
+	"features": {
+		"1": {
+			"title": "打包器",
+			"description": "用户操作聚合"
+		},
+		"2": {
+			"title": "支付主",
+			"description": "Gas赞助"
+		},
+		"3": {
+			"title": "多链",
+			"description": "多个网络"
+		},
+		"4": {
+			"title": "可靠",
+			"description": "生产级"
+		},
+		"5": {
+			"title": "无许可",
+			"description": "开放SDK"
+		},
+		"6": {
+			"title": "Alto打包器",
+			"description": "开源"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "AA基础设施",
+			"description": "后端服务"
+		},
+		"2": {
+			"title": "Gas赞助",
+			"description": "支付用户Gas"
+		},
+		"3": {
+			"title": "打包服务",
+			"description": "用户操作提交"
+		},
+		"4": {
+			"title": "多链AA",
+			"description": "跨链"
+		},
+		"5": {
+			"title": "生产应用",
+			"description": "可靠基础设施"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Pimlico是什么？",
+			"answer": "Pimlico提供ERC-4337基础设施——打包器和支付主。打包器聚合并提交用户操作。支付主赞助Gas。他们是让账户抽象工作的后端。"
+		},
+		"2": {
+			"question": "什么是打包器？",
+			"answer": "在ERC-4337中，打包器收集多个用户的用户操作，打包成一笔交易，然后提交到网络。Pimlico运行可靠的打包器，你不需要自己运行。"
+		},
+		"3": {
+			"question": "什么是支付主？",
+			"answer": "支付主为用户支付Gas。你存入资金、设置策略，Pimlico的支付主为符合条件的交易支付Gas。为用户实现免Gas体验。"
+		},
+		"4": {
+			"question": "Pimlico vs ZeroDev？",
+			"answer": "ZeroDev是更高层的构建智能账户的SDK。Pimlico提供基础设施（打包器/支付主）。你可以将Pimlico的基础设施与ZeroDev的SDK一起使用——它们相互补充。"
+		},
+		"5": {
+			"question": "有免费层吗？",
+			"answer": "有，Pimlico有用于开发和测试的免费层。生产使用需要付费计划。根据打包器调用和支付主使用量定价。"
+		}
+	},
+	"cta": {
+		"ready": "准备好使用AA基础设施了吗？",
+		"button": "开始使用",
+		"note": "打包器和支付主"
+	}
+}

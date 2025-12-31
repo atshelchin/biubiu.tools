@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Portal - MPC钱包基础设施",
+		"description": "Portal提供MPC钱包基础设施，用于安全密钥管理。企业级、合规就绪的嵌入式钱包SDK。",
+		"keywords": "Portal, MPC, 钱包基础设施, 密钥管理, 企业, 嵌入式钱包"
+	},
+	"overview": "Portal是面向企业的MPC钱包基础设施。他们专注于合规就绪的安全密钥管理——构建需要严肃安全性的应用的团队。\n\n他们的MPC技术分割密钥，因此没有单一方拥有完全访问权。适用于需要SOC 2合规、审计日志和企业级安全的环境。\n\nPortal提供嵌入式钱包SDK和密钥管理API。被金融科技应用、交易所和需要银行级加密基础设施的企业使用。",
+	"features": {
+		"1": {
+			"title": "MPC安全",
+			"description": "分割密钥"
+		},
+		"2": {
+			"title": "企业级",
+			"description": "SOC 2合规"
+		},
+		"3": {
+			"title": "嵌入式钱包",
+			"description": "SDK就绪"
+		},
+		"4": {
+			"title": "审计日志",
+			"description": "合规追踪"
+		},
+		"5": {
+			"title": "多链",
+			"description": "跨链支持"
+		},
+		"6": {
+			"title": "恢复",
+			"description": "安全备份"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "金融科技",
+			"description": "合规钱包"
+		},
+		"2": {
+			"title": "交易所",
+			"description": "安全密钥"
+		},
+		"3": {
+			"title": "企业",
+			"description": "公司钱包"
+		},
+		"4": {
+			"title": "银行",
+			"description": "加密服务"
+		},
+		"5": {
+			"title": "托管",
+			"description": "资产保护"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Portal是什么？",
+			"answer": "Portal提供企业MPC钱包基础设施。他们处理密钥管理——安全生成、分割存储、签名。专为需要合规和严肃安全的公司设计。"
+		},
+		"2": {
+			"question": "什么是MPC？",
+			"answer": "多方计算将私钥分割给多方。签名需要多个份额协调。单点故障不会泄露密钥。比传统密钥存储更安全。"
+		},
+		"3": {
+			"question": "Portal vs Fireblocks？",
+			"answer": "两者都是企业MPC。Fireblocks更成熟，全套托管服务。Portal专注于可嵌入基础设施。Fireblocks用于完整托管解决方案；Portal用于构建自己的产品。"
+		},
+		"4": {
+			"question": "合规功能？",
+			"answer": "Portal设计为企业就绪。SOC 2合规、完整审计日志、访问控制、策略管理。满足需要监管遵从的公司需求。"
+		},
+		"5": {
+			"question": "定价？",
+			"answer": "企业定价——直接联系Portal。费用基于钱包数量、交易和功能。开发有免费层。生产需要付费计划。"
+		}
+	},
+	"cta": {
+		"ready": "准备好企业MPC基础设施了吗？",
+		"button": "探索Portal",
+		"note": "MPC钱包基础设施"
+	}
+}

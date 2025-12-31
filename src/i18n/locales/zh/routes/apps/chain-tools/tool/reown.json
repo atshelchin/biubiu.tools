@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Reown - WalletConnect协议",
+		"description": "Reown（WalletConnect）提供连接钱包到dApp的协议。通用钱包连接与AppKit UI。",
+		"keywords": "Reown, WalletConnect, 钱包连接, AppKit, Web3Modal, dApp协议"
+	},
+	"overview": "Reown（原WalletConnect）提供连接钱包到dApp的协议。他们的标准使任何钱包可以连接到任何应用——通用钱包连接层。\n\nWalletConnect v2引入了多链支持、会话管理和改进的安全性。这是大多数移动钱包和许多dApp用于远程钱包连接的标准。\n\nReown还提供AppKit（原Web3Modal），支持WalletConnect和许多其他连接方式的钱包连接UI。协议背后的公司现在提供全栈解决方案。",
+	"features": {
+		"1": {
+			"title": "WalletConnect",
+			"description": "连接协议"
+		},
+		"2": {
+			"title": "多链",
+			"description": "跨链会话"
+		},
+		"3": {
+			"title": "AppKit",
+			"description": "连接UI"
+		},
+		"4": {
+			"title": "移动支持",
+			"description": "原生钱包"
+		},
+		"5": {
+			"title": "标准协议",
+			"description": "通用"
+		},
+		"6": {
+			"title": "会话管理",
+			"description": "持久连接"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "dApp连接",
+			"description": "钱包链接"
+		},
+		"2": {
+			"title": "移动钱包",
+			"description": "远程签名"
+		},
+		"3": {
+			"title": "多链",
+			"description": "跨链dApp"
+		},
+		"4": {
+			"title": "钱包开发者",
+			"description": "协议支持"
+		},
+		"5": {
+			"title": "dApp开发者",
+			"description": "AppKit UI"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Reown是什么？",
+			"answer": "Reown（原WalletConnect）提供连接钱包到dApp的协议。当你用移动钱包扫描二维码时，那就是WalletConnect。他们还提供AppKit作为连接UI。"
+		},
+		"2": {
+			"question": "什么是WalletConnect？",
+			"answer": "WalletConnect是钱包-dApp连接的开放协议。它跨钱包和应用工作——一个通用标准。V2支持多链和改进的安全性。"
+		},
+		"3": {
+			"question": "什么是AppKit？",
+			"answer": "AppKit（原Web3Modal）是钱包连接UI组件。支持WalletConnect、注入式钱包等。在dApp中连接钱包的即插即用解决方案。"
+		},
+		"4": {
+			"question": "WalletConnect免费吗？",
+			"answer": "协议是免费和开源的。Reown为中继服务器提供云服务。有免费层；生产有付费层。AppKit有类似模式。"
+		},
+		"5": {
+			"question": "为什么改名？",
+			"answer": "WalletConnect Inc变成Reown以反映超越协议的扩展产品。WalletConnect协议保持名称；Reown是提供完整解决方案的公司。"
+		}
+	},
+	"cta": {
+		"ready": "准备好连接钱包了吗？",
+		"button": "探索Reown",
+		"note": "钱包连接协议"
+	}
+}

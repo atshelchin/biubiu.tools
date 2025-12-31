@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Stackup - 简单账户抽象",
+		"description": "Stackup提供专注于简单性的账户抽象基础设施。ERC-4337的打包器和支付主服务。",
+		"keywords": "Stackup, ERC-4337, 账户抽象, 打包器, 支付主, 简单AA"
+	},
+	"overview": "Stackup提供专注于简单性的账户抽象基础设施。他们的打包器和支付主服务让所有开发者都能使用ERC-4337。\n\n主要产品包括托管打包器、验证支付主和用户友好的仪表板。Stackup强调开发者体验——无需深入了解ERC-4337就能快速让AA工作。\n\n他们还通过开源工具和教育内容为AA生态系统做贡献。对于想要简单AA集成而不要复杂性的团队来说是个好选择。",
+	"features": {
+		"1": {
+			"title": "打包器API",
+			"description": "托管服务"
+		},
+		"2": {
+			"title": "支付主",
+			"description": "Gas赞助"
+		},
+		"3": {
+			"title": "仪表板",
+			"description": "简易管理"
+		},
+		"4": {
+			"title": "多链",
+			"description": "多个网络"
+		},
+		"5": {
+			"title": "简单SDK",
+			"description": "易于集成"
+		},
+		"6": {
+			"title": "开源",
+			"description": "社区工具"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "快速AA设置",
+			"description": "快速集成"
+		},
+		"2": {
+			"title": "Gas赞助",
+			"description": "免Gas应用"
+		},
+		"3": {
+			"title": "打包服务",
+			"description": "可靠后端"
+		},
+		"4": {
+			"title": "学习AA",
+			"description": "简单起步"
+		},
+		"5": {
+			"title": "生产应用",
+			"description": "可扩展基础设施"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Stackup是什么？",
+			"answer": "Stackup提供ERC-4337打包器和支付主服务。他们专注于简单——易用的API、好的文档和管理仪表板。无需深入专业知识就能使用AA。"
+		},
+		"2": {
+			"question": "Stackup有什么不同？",
+			"answer": "Stackup强调开发者体验和简单性。当其他人专注于高级功能时，Stackup优先考虑快速入门。适合账户抽象新手团队。"
+		},
+		"3": {
+			"question": "支持哪些链？",
+			"answer": "多个EVM链，包括以太坊、Polygon、Arbitrum、Optimism等。查看他们的文档了解当前列表。他们根据需求添加新链。"
+		},
+		"4": {
+			"question": "有文档吗？",
+			"answer": "有，Stackup有全面的文档和教程。他们投入教育——是学习ERC-4337的好起点。他们的指南在实现的同时解释概念。"
+		},
+		"5": {
+			"question": "定价模式？",
+			"answer": "开发免费层。生产定价基于打包器操作和支付主使用量。网站上有透明的定价。与其他AA提供商有竞争力。"
+		}
+	},
+	"cta": {
+		"ready": "准备好开始使用AA了吗？",
+		"button": "试用Stackup",
+		"note": "简单AA基础设施"
+	}
+}

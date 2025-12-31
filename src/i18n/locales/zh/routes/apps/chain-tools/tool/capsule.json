@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Capsule - 可嵌入密钥管理",
+		"description": "Capsule为应用程序提供可嵌入的密钥管理。MPC钱包、社交恢复和白标签签名器基础设施。",
+		"keywords": "Capsule, MPC, 密钥管理, 嵌入式钱包, 社交恢复, 签名器"
+	},
+	"overview": "Capsule提供可嵌入的密钥管理SDK。应用程序将Capsule集成用于安全密钥生成、存储和签名——无需用户管理助记词。\n\nCapsule使用MPC（多方计算）——密钥被分割，没有单一方拥有完整密钥。他们还提供社交恢复和多设备同步。真正的非托管与便捷性。\n\n与现有AA提供商良好配合。你可以使用Capsule进行密钥管理和ZeroDev或Pimlico进行账户抽象。模块化方法——为每个层选择最佳工具。",
+	"features": {
+		"1": {
+			"title": "MPC安全",
+			"description": "分割密钥"
+		},
+		"2": {
+			"title": "社交恢复",
+			"description": "无需助记词"
+		},
+		"3": {
+			"title": "白标签",
+			"description": "可嵌入SDK"
+		},
+		"4": {
+			"title": "多设备",
+			"description": "跨设备同步"
+		},
+		"5": {
+			"title": "非托管",
+			"description": "用户控制"
+		},
+		"6": {
+			"title": "AA就绪",
+			"description": "与AA集成"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "消费者应用",
+			"description": "简单钱包"
+		},
+		"2": {
+			"title": "企业",
+			"description": "白标签"
+		},
+		"3": {
+			"title": "AA应用",
+			"description": "签名器后端"
+		},
+		"4": {
+			"title": "游戏",
+			"description": "无摩擦"
+		},
+		"5": {
+			"title": "托管",
+			"description": "安全密钥"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Capsule是什么？",
+			"answer": "Capsule为应用提供密钥管理基础设施。他们处理安全密钥生成、MPC存储和签名。应用嵌入他们的SDK——用户获得无需助记词的钱包体验。"
+		},
+		"2": {
+			"question": "MPC如何工作？",
+			"answer": "多方计算将密钥分割给多方。签名需要多个份额——没有单点故障。即使一方被攻破，密钥也是安全的。非托管MPC。"
+		},
+		"3": {
+			"question": "Capsule vs Web3Auth？",
+			"answer": "两者都提供密钥管理。Web3Auth使用社交登录；Capsule专注于MPC基础设施。Capsule可能对企业需求更灵活。比较两者的具体用例。"
+		},
+		"4": {
+			"question": "这是托管吗？",
+			"answer": "不是——Capsule使用MPC，所以他们从未拥有完整密钥。用户控制其份额。这是真正的非托管，同时消除了助记词管理的摩擦。"
+		},
+		"5": {
+			"question": "定价如何？",
+			"answer": "Capsule有开发免费层。生产定价基于月活跃钱包。大应用有企业计划。联系他们获取当前费率。"
+		}
+	},
+	"cta": {
+		"ready": "准备好嵌入式密钥管理了吗？",
+		"button": "试用Capsule",
+		"note": "MPC密钥基础设施"
+	}
+}
