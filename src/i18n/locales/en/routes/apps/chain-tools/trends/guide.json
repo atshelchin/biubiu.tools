@@ -1,0 +1,227 @@
+{
+	"title": "Crypto Trends Complete Guide",
+	"subtitle": "Master Alpha Discovery and Trend Identification in Web3",
+
+	"sections": {
+		"intro": {
+			"title": "Introduction to Trend Tracking",
+			"content": "<p>In crypto, information moves fast—and those who spot trends early capture the alpha. While most traders react to news after prices pump, successful investors identify opportunities before the crowd arrives.</p><p>This guide will teach you how to track on-chain activity, social sentiment, market dynamics, and whale behavior to discover trends before they explode. You'll learn to build a systematic approach for finding alpha, not just chasing pumps.</p><p>Unlike traditional markets where information is controlled by institutions, crypto is transparent—every transaction is recorded on-chain. The challenge isn't getting data; it's knowing what data matters and how to interpret it.</p>"
+		},
+
+		"on_chain_signals": {
+			"title": "On-Chain Signals: Following the Money",
+			"content": "<p>On-chain data doesn't lie. While social media hype can be manufactured and price can be manipulated, blockchain data shows what's actually happening—where capital is flowing, who's deploying contracts, and which protocols are gaining real traction.</p>",
+
+			"tvl_movements": {
+				"title": "TVL Movements: Capital Migration",
+				"content": "<p>Total Value Locked (TVL) represents actual capital committed to protocols. Rising TVL indicates growing confidence; falling TVL suggests capital flight.</p><p><strong>What to watch:</strong></p><ul><li><strong>Sudden TVL spikes:</strong> 20%+ growth in 24 hours often precedes price pumps</li><li><strong>Sustained growth:</strong> Consistent TVL increases over weeks signal genuine adoption</li><li><strong>TVL vs Price:</strong> When TVL grows faster than token price, the protocol is undervalued</li><li><strong>Cross-protocol comparison:</strong> Capital rotating between similar protocols shows sector strength</li></ul><p><strong>Real example:</strong> In June 2023, Curve's TVL suddenly spiked from $3B to $4B as users anticipated the crvUSD launch. Those watching TVL could position before the announcement.</p><p><strong>Tools:</strong> Use DefiLlama to track TVL across all chains and protocols. Set up Dune Analytics queries to track TVL changes hourly instead of daily for faster signals.</p>"
+			},
+
+			"gas_patterns": {
+				"title": "Gas Usage Patterns: Network Activity",
+				"content": "<p>Gas consumption reveals real usage. When users pay high fees to interact with a contract, they expect significant returns.</p><p><strong>Key signals:</strong></p><ul><li><strong>Gas wars:</strong> Multiple users competing to interact with a contract (often NFT mints or token launches)</li><li><strong>Sustained high gas:</strong> Protocols consistently consuming high gas are seeing real adoption</li><li><strong>Gas by contract type:</strong> Rising DEX gas = DeFi season; rising NFT marketplace gas = NFT season</li></ul><p><strong>Alpha strategy:</strong> Monitor which contracts are consuming the most gas on Ethereum mainnet. New contracts entering the top 10 gas consumers often represent emerging trends.</p>"
+			},
+
+			"contract_deployments": {
+				"title": "New Contract Deployments: Innovation Tracking",
+				"content": "<p>New contracts, especially from known developers, often signal new opportunities or evolving narratives.</p><p><strong>What to monitor:</strong></p><ul><li><strong>Deployer address:</strong> Contracts from addresses that previously deployed successful projects</li><li><strong>Similar code:</strong> Forks or iterations of popular protocols (Uniswap V3 forks, staking contract variants)</li><li><strong>Multi-chain deployments:</strong> Protocols deploying to multiple chains simultaneously show serious ambition</li></ul><p><strong>Alpha move:</strong> Track deployer addresses of successful protocols. When they deploy new contracts, investigate immediately before public announcements.</p>"
+			},
+
+			"unique_addresses": {
+				"title": "Unique Address Growth: User Adoption",
+				"content": "<p>More unique addresses interacting with a protocol = growing user base. But watch for wash trading and sybil attacks inflating numbers.</p><p><strong>Quality metrics:</strong></p><ul><li><strong>New vs Returning:</strong> High returning user % shows sticky product-market fit</li><li><strong>Address distribution:</strong> Growth across many small addresses > growth from a few whales</li><li><strong>Transaction patterns:</strong> Diverse transaction types (not just token transfers) indicate real usage</li></ul><p><strong>Red flag:</strong> Sudden spike in addresses all with similar transaction amounts/timing = likely bot activity or airdrop farming.</p>"
+			}
+		},
+
+		"social_signals": {
+			"title": "Social Signals: Measuring Attention",
+			"content": "<p>Social data shows where attention is flowing—and attention often precedes capital. But social signals are easily gamed, so they work best when combined with on-chain data.</p>",
+
+			"twitter_mentions": {
+				"title": "Twitter/X Mentions: Community Buzz",
+				"content": "<p>Twitter is crypto's town square. Tracking mentions, sentiment, and influential accounts reveals narrative momentum.</p><p><strong>Key metrics:</strong></p><ul><li><strong>Mention velocity:</strong> Rate of increase in mentions (not absolute count)</li><li><strong>Influencer attention:</strong> When accounts with 100K+ followers start mentioning a project</li><li><strong>Sentiment ratio:</strong> Positive vs negative mentions (watch for sentiment shifts)</li><li><strong>Unique users:</strong> 1,000 unique accounts mentioning > 100 accounts spamming</li></ul><p><strong>Alpha strategy:</strong> Set alerts for when small-cap projects (<$100M market cap) get mentioned by tier-1 influencers. This often precedes 24-48 hours of upward price action as their followers FOMO in.</p><p><strong>Warning:</strong> Paid shilling is rampant. Cross-verify Twitter buzz with on-chain data before acting.</p>"
+			},
+
+			"discord_activity": {
+				"title": "Discord Activity: Community Health",
+				"content": "<p>Discord shows community engagement depth—how active are the actual users, not just holders hoping for pumps?</p><p><strong>Quality indicators:</strong></p><ul><li><strong>Message velocity in technical channels:</strong> Active developer/builder channels > meme channels</li><li><strong>Questions from new users:</strong> Growing question volume = growing adoption</li><li><strong>Team responsiveness:</strong> Active, technical responses from team members</li><li><strong>Community-created content:</strong> Users building tools, guides, and resources</li></ul><p><strong>Red flags:</strong> Only price discussion, team never online, mods deleting critical questions.</p>"
+			},
+
+			"github_commits": {
+				"title": "GitHub Commits: Development Activity",
+				"content": "<p>Code commits show whether a project is actively building or coasting on hype.</p><p><strong>What to track:</strong></p><ul><li><strong>Commit frequency:</strong> Consistent commits > sporadic bursts</li><li><strong>Contributor growth:</strong> More developers joining = growing ecosystem</li><li><strong>Code quality:</strong> Well-documented, tested code > rushed commits</li><li><strong>Issue resolution speed:</strong> How fast are bugs fixed and features shipped?</li></ul><p><strong>Alpha insight:</strong> Major code changes (especially new features or integrations) often get deployed to testnet weeks before mainnet. Watching GitHub can give you advance notice of catalysts.</p><p><strong>Tools:</strong> Track repo activity using GitHub's Insights tab. Some protocols publish development dashboards showing commit velocity.</p>"
+			},
+
+			"google_trends": {
+				"title": "Google Trends: Mainstream Interest",
+				"content": "<p>Google Trends reveals when crypto narratives break into mainstream consciousness.</p><p><strong>How to use it:</strong></p><ul><li><strong>Search volume spikes:</strong> When non-crypto people start searching, expect retail FOMO</li><li><strong>Geographic data:</strong> Which countries are searching? New markets entering can drive growth</li><li><strong>Related queries:</strong> What else are people searching? Shows how narratives evolve</li><li><strong>Timing:</strong> Google Trends often lags on-chain signals by 1-2 weeks—useful for timing exits</li></ul><p><strong>Strategy:</strong> When on-chain data shows accumulation but Google Trends is quiet, you're early. When both are rising, you're mid-trend. When Google Trends peaks but on-chain shows distribution, it's time to exit.</p>"
+			}
+		},
+
+		"market_signals": {
+			"title": "Market Signals: Price Discovery",
+			"content": "<p>Market data shows how price is reacting to on-chain and social signals. Volume, exchange flows, and derivatives data reveal whether price moves are sustainable or likely to reverse.</p>",
+
+			"volume_spikes": {
+				"title": "Volume Spikes: Conviction Moves",
+				"content": "<p>Volume confirms price moves. Price up on low volume = weak rally. Price up on high volume = strong trend.</p><p><strong>Key patterns:</strong></p><ul><li><strong>Volume breakout:</strong> When volume exceeds 2x average, the move is likely to continue</li><li><strong>Volume divergence:</strong> Price making new highs but volume declining = exhaustion</li><li><strong>Exchange vs DEX volume:</strong> Rising DEX volume % = decentralization trend</li><li><strong>Buy vs Sell volume:</strong> Track taker buy/sell ratio for directional bias</li></ul><p><strong>Advanced move:</strong> Compare spot volume to derivatives volume. When derivatives volume far exceeds spot, the move is likely leverage-driven and prone to liquidation cascades.</p>"
+			},
+
+			"exchange_flows": {
+				"title": "Exchange Flows: Supply Dynamics",
+				"content": "<p>Tracking tokens flowing into and out of exchanges reveals accumulation and distribution patterns.</p><p><strong>Bullish signals:</strong></p><ul><li><strong>Net outflow:</strong> More tokens leaving exchanges = holders withdrawing to cold storage (long-term bullish)</li><li><strong>Whale withdrawals:</strong> Large wallets removing tokens from exchanges</li><li><strong>Stablecoin inflows:</strong> USDC/USDT flowing into exchanges = dry powder ready to buy</li></ul><p><strong>Bearish signals:</strong></p><ul><li><strong>Net inflow:</strong> Tokens flowing to exchanges = preparation to sell</li><li><strong>Whale deposits:</strong> Large wallets depositing to exchanges (often precedes dumps)</li><li><strong>Stablecoin outflows:</strong> Capital leaving exchanges</li></ul><p><strong>Tools:</strong> Glassnode and CryptoQuant provide exchange flow data. Nansen tracks labeled wallet flows for higher conviction.</p>"
+			},
+
+			"funding_rates": {
+				"title": "Funding Rates: Leverage Sentiment",
+				"content": "<p>Funding rates show how much leverage traders are using and which direction they're betting.</p><p><strong>How it works:</strong> Positive funding = longs pay shorts (bullish bias). Negative funding = shorts pay longs (bearish bias).</p><p><strong>Trading the extremes:</strong></p><ul><li><strong>Funding >0.1% (high):</strong> Overleveraged longs, expect liquidations and pullbacks</li><li><strong>Funding <-0.05% (negative):</strong> Overleveraged shorts, expect short squeezes</li><li><strong>Funding near 0:</strong> Balanced market, sustainable moves</li></ul><p><strong>Alpha strategy:</strong> When on-chain shows accumulation but funding is negative (shorts piling in), it's a high-conviction long setup. Shorts will get squeezed as price rises.</p>"
+			},
+
+			"open_interest": {
+				"title": "Open Interest: Leverage Buildup",
+				"content": "<p>Open Interest (OI) tracks the total value of outstanding derivatives positions. Rising OI = more leverage entering the market.</p><p><strong>Key patterns:</strong></p><ul><li><strong>Price up + OI up:</strong> Strong trend with new money entering (continuation likely)</li><li><strong>Price up + OI down:</strong> Short covering rally (may reverse soon)</li><li><strong>Price down + OI up:</strong> New shorts entering (continuation likely)</li><li><strong>Price down + OI down:</strong> Long liquidations (may find support soon)</li></ul><p><strong>Liquidation zones:</strong> Use OI data to identify where large liquidations clusters exist. These act as magnets—price often moves to liquidate overleveraged positions.</p>"
+			}
+		},
+
+		"whale_watching": {
+			"title": "Whale Watching: Following Smart Money",
+			"content": "<p>Whales—wallets holding significant value—often have better information and longer time horizons than retail. Tracking their moves can provide high-conviction signals.</p>",
+
+			"identifying_whales": {
+				"title": "Identifying Whales: Who to Follow",
+				"content": "<p>Not all whales are smart money. Some are exchanges, some are dormant, some trade poorly. You want to follow <strong>smart money</strong>—wallets with proven track records.</p><p><strong>Whale categories:</strong></p><ul><li><strong>Smart Money:</strong> Wallets that consistently enter early and exit near tops</li><li><strong>Fresh Whales:</strong> New wallets accumulating significant positions (often insiders)</li><li><strong>VC/Fund wallets:</strong> Known investment funds (tagged by Nansen/Arkham)</li><li><strong>Founder/Team wallets:</strong> Project insiders (their sells often signal tops)</li></ul><p><strong>How to find them:</strong></p><ul><li>Use Nansen's 'Smart Money' label to find wallets with strong historical performance</li><li>Use Arkham to identify wallets belonging to known entities (VCs, hedge funds)</li><li>Track top holders on Etherscan, then analyze their transaction history</li></ul><p><strong>Key insight:</strong> Follow wallets, not just individual trades. A single trade might be noise; a pattern of accumulation is a signal.</p>"
+			},
+
+			"smart_money": {
+				"title": "Smart Money Movements: Early Signals",
+				"content": "<p>Smart money often accumulates before public catalysts and distributes before tops. Tracking their moves gives you advance warning.</p><p><strong>Bullish smart money signals:</strong></p><ul><li><strong>Accumulation:</strong> Smart money wallets consistently buying dips over days/weeks</li><li><strong>Position building:</strong> Multiple smart money wallets entering the same token</li><li><strong>Long-term transfers:</strong> Tokens moved to cold storage (not trading wallets)</li></ul><p><strong>Bearish smart money signals:</strong></p><ul><li><strong>Distribution:</strong> Smart money selling into strength</li><li><strong>Exchange deposits:</strong> Transferring tokens to exchanges (preparation to sell)</li><li><strong>Cluster exits:</strong> Multiple smart money wallets exiting within days</li></ul><p><strong>Real example:</strong> In early 2024, smart money wallets accumulated heavily in AI crypto tokens 2-3 weeks before the ChatGPT/AI narrative exploded. Those watching smart money could position early.</p>"
+			},
+
+			"accumulation_patterns": {
+				"title": "Accumulation vs Distribution Patterns",
+				"content": "<p>Accumulation is when whales quietly build positions. Distribution is when they sell into retail FOMO. Recognizing these patterns is crucial.</p><p><strong>Accumulation signals:</strong></p><ul><li>Price stable or slowly grinding up</li><li>Whale buy orders split across many small transactions (avoiding detection)</li><li>Increasing holder count among large addresses</li><li>Low social media hype despite on-chain accumulation</li></ul><p><strong>Distribution signals:</strong></p><ul><li>Price pumping rapidly on news</li><li>Whale sell orders during high volume periods</li><li>Decreasing whale holdings while retail holdings increase</li><li>Peak social media hype and mainstream media coverage</li></ul><p><strong>Strategy:</strong> Accumulate when whales accumulate (low hype). Distribute when whales distribute (high hype). Don't do what retail does—follow the smart money instead.</p>"
+			}
+		},
+
+		"narrative_tracking": {
+			"title": "Narrative Tracking: Riding Thematic Waves",
+			"content": "<p>Crypto moves in narrative cycles. AI, RWA, restaking, DePIN—understanding which narratives are emerging and which are exhausted is essential for alpha.</p>",
+
+			"identifying_narratives": {
+				"title": "Identifying Emerging Narratives",
+				"content": "<p>Narratives don't appear overnight—they build slowly, then explode. Catching them early is where alpha lives.</p><p><strong>Early narrative signals:</strong></p><ul><li><strong>Research reports:</strong> When Messari, Delphi, or Bankless publish deep-dives on a topic</li><li><strong>Developer activity:</strong> Multiple teams building in the same category</li><li><strong>VC interest:</strong> New funds forming focused on specific sectors</li><li><strong>Conference themes:</strong> What topics dominate crypto conferences?</li><li><strong>Regulatory clarity:</strong> When regulations clarify, capital flows in</li></ul><p><strong>Recent narrative examples:</strong></p><ul><li><strong>AI x Crypto (2024):</strong> ChatGPT launch → AI crypto tokens pump</li><li><strong>RWA (2023-2024):</strong> BlackRock tokenization → RWA narrative explodes</li><li><strong>Restaking (2024):</strong> EigenLayer mainnet → restaking narrative dominates</li><li><strong>DePIN (2023-2024):</strong> Helium success → physical infrastructure tokens trend</li></ul><p><strong>Alpha move:</strong> Read research reports from top firms. When multiple firms publish on the same theme within weeks, that narrative is about to explode.</p>"
+			},
+
+			"sector_rotation": {
+				"title": "Sector Rotation: Capital Flow Between Narratives",
+				"content": "<p>Capital rotates between sectors in predictable patterns. Identify where we are in the rotation to position ahead of flows.</p><p><strong>Typical rotation pattern:</strong></p><ol><li><strong>BTC leads:</strong> Bull markets start with Bitcoin rallying</li><li><strong>ETH follows:</strong> Then Ethereum outperforms as DeFi revives</li><li><strong>Large caps pump:</strong> Top 20 tokens rally as institutions enter</li><li><strong>Mid caps rotate:</strong> Capital flows to proven but smaller projects</li><li><strong>Narrative plays:</strong> Thematic rotations (AI, gaming, DeFi, etc.)</li><li><strong>Small caps mania:</strong> Late-stage FOMO into micro caps</li><li><strong>Meme coin season:</strong> Peak degeneracy, cycle top approaching</li></ol><p><strong>Using DefiLlama:</strong> Track TVL by category. When one sector significantly outperforms, it's either a great entry (if early) or nearing exhaustion (if late). Compare to previous cycles.</p>"
+			},
+
+			"cycle_stages": {
+				"title": "Market Cycle Stages: Timing Matters",
+				"content": "<p>Different strategies work in different cycle stages. Know where you are to avoid getting caught.</p><p><strong>Early Bull (Accumulation):</strong></p><ul><li>Smart money accumulating</li><li>Low social media activity</li><li>Fundamentals improving but price suppressed</li><li><strong>Strategy:</strong> Build positions in quality projects</li></ul><p><strong>Mid Bull (Awareness):</strong></p><ul><li>Price trending up consistently</li><li>Mainstream media starting coverage</li><li>New users entering the space</li><li><strong>Strategy:</strong> Hold winners, add on dips</li></ul><p><strong>Late Bull (Euphoria):</strong></p><ul><li>Parabolic price moves</li><li>Everyone talking about crypto</li><li>Quality doesn't matter, everything pumps</li><li><strong>Strategy:</strong> Start taking profits, reduce risk</li></ul><p><strong>Bear (Distribution/Despair):</strong></p><ul><li>Prolonged downtrend</li><li>Negative news dominates</li><li>Social media goes quiet</li><li><strong>Strategy:</strong> DCA into quality, build for next cycle</li></ul><p><strong>Indicator:</strong> Track Bitcoin's halving cycle. Historically, bulls peak 12-18 months post-halving.</p>"
+			}
+		},
+
+		"tools_dashboards": {
+			"title": "Tools & Dashboards: Your Alpha Arsenal",
+			"content": "<p>Having the right tools is essential. Here's how to use the most powerful platforms for trend discovery.</p>",
+
+			"dune_analytics": {
+				"title": "Dune Analytics: Custom On-Chain Queries",
+				"content": "<p>Dune lets you query blockchain data using SQL. It's the most powerful tool for custom analysis.</p><p><strong>Key use cases:</strong></p><ul><li><strong>Protocol metrics:</strong> Track any protocol's users, volume, revenue over time</li><li><strong>Wallet analysis:</strong> Identify what tokens/protocols specific wallets interact with</li><li><strong>Comparative analysis:</strong> Compare metrics across competing protocols</li><li><strong>Custom alerts:</strong> Set up queries that run periodically and alert you to changes</li></ul><p><strong>Getting started:</strong></p><ol><li>Browse existing dashboards to find relevant queries</li><li>Fork queries and modify them for your needs</li><li>Learn basic SQL to create custom queries</li><li>Share dashboards to get community feedback</li></ol><p><strong>Alpha dashboards to follow:</strong> Token Terminal, DefiLlama, and Protocol Revenue dashboards show which protocols are generating real revenue (not just TVL).</p>"
+			},
+
+			"nansen": {
+				"title": "Nansen: Smart Money Tracking",
+				"content": "<p>Nansen labels wallets and tracks smart money movements. It's the best tool for whale watching.</p><p><strong>Key features:</strong></p><ul><li><strong>Smart Money:</strong> Pre-labeled wallets with strong track records</li><li><strong>Token God Mode:</strong> Complete token holder analysis and flows</li><li><strong>Wallet Profiler:</strong> Analyze any wallet's full history</li><li><strong>NFT Paradise:</strong> Track NFT whale movements</li><li><strong>Alerts:</strong> Get notified when smart money moves</li></ul><p><strong>Alpha strategies:</strong></p><ul><li>Track which tokens Smart Money is accumulating</li><li>Monitor when funds/VCs receive token unlocks (potential dumps)</li><li>Watch DEX trades from smart money for new tokens</li><li>Identify wallet clusters (coordinated accumulation)</li></ul><p><strong>Cost:</strong> Nansen is expensive ($150-$1,800/month). Worth it for serious traders with capital to deploy.</p>"
+			},
+
+			"defillama": {
+				"title": "DefiLlama: DeFi Overview Dashboard",
+				"content": "<p>DefiLlama aggregates TVL, volume, fees, and revenue across all DeFi protocols. Best for macro trend tracking.</p><p><strong>Key sections:</strong></p><ul><li><strong>Chains:</strong> Which blockchains are growing TVL?</li><li><strong>Protocols:</strong> Compare protocols within categories</li><li><strong>Yields:</strong> Find highest yield opportunities</li><li><strong>Stablecoins:</strong> Track stablecoin market share</li><li><strong>Fees/Revenue:</strong> Which protocols generate real cash flow?</li></ul><p><strong>Alpha moves:</strong></p><ul><li>Sort by 7d TVL change to find surging protocols</li><li>Compare protocol revenue to market cap (undervalued = high revenue/low MC)</li><li>Track which chains are gaining TVL share (ecosystem rotation)</li><li>Monitor stablecoin dominance (USDT down + USDC up = institutional money entering)</li></ul><p><strong>It's free:</strong> DefiLlama is completely free and community-run. No excuses not to use it.</p>"
+			},
+
+			"arkham": {
+				"title": "Arkham Intelligence: Entity Tracking",
+				"content": "<p>Arkham uses AI to identify who owns which wallets—VCs, funds, founders, exchanges. Best for tracking known entities.</p><p><strong>Key features:</strong></p><ul><li><strong>Entity labels:</strong> Know which wallets belong to Jump Trading, a16z, Binance, etc.</li><li><strong>Entity pages:</strong> See complete portfolio and transaction history for entities</li><li><strong>Alerts:</strong> Get notified when specific entities make moves</li><li><strong>Flow visualization:</strong> See token flows between entities</li></ul><p><strong>Alpha use cases:</strong></p><ul><li>Track when VCs receive unlock tokens (sell pressure incoming)</li><li>Monitor exchange cold wallet flows (large deposits = potential OTC deals)</li><li>Identify when funds are accumulating new tokens before announcements</li><li>See when founders/team wallets start selling (red flag)</li></ul><p><strong>Bounties:</strong> Arkham runs a bounty program—you can earn crypto by correctly labeling new wallets.</p>"
+			}
+		},
+
+		"alpha_system": {
+			"title": "Building Your Alpha System",
+			"content": "<p>Raw data is useless without a system to process it. Here's how to build a repeatable process for discovering and acting on alpha.</p>",
+
+			"creating_alerts": {
+				"title": "Creating Effective Alerts",
+				"content": "<p>You can't watch everything 24/7. Set up alerts to notify you when opportunities appear.</p><p><strong>Alert types to set up:</strong></p><ul><li><strong>Whale movements:</strong> When smart money wallets make large transactions</li><li><strong>TVL changes:</strong> When protocol TVL moves >20% in 24h</li><li><strong>Volume spikes:</strong> When token volume exceeds 3x average</li><li><strong>Social mentions:</strong> When tier-1 influencers mention small caps</li><li><strong>GitHub activity:</strong> When monitored repos push major updates</li><li><strong>Exchange flows:</strong> Large exchange outflows (accumulation signal)</li></ul><p><strong>Tools for alerts:</strong></p><ul><li>Nansen Alerts (smart money tracking)</li><li>Dune query alerts (custom on-chain metrics)</li><li>Twitter lists + notifications (influencer tracking)</li><li>Discord webhooks (community activity)</li><li>Telegram bots (multi-source aggregation)</li></ul><p><strong>Key principle:</strong> Start with few, high-signal alerts. Too many alerts = noise = you ignore them all.</p>"
+			},
+
+			"combining_signals": {
+				"title": "Combining Multiple Signals",
+				"content": "<p>Single signals are often noise. High-conviction opportunities show multiple confirming signals.</p><p><strong>The multi-signal framework:</strong></p><p><strong>Tier 1 Opportunity (All signals align):</strong></p><ul><li>Smart money accumulating (on-chain)</li><li>TVL growing consistently (fundamentals)</li><li>Social mentions accelerating (awareness)</li><li>Positive funding + rising OI (market structure)</li><li>Emerging narrative fit (macro theme)</li></ul><p><strong>Tier 2 Opportunity (Most signals align):</strong></p><ul><li>3-4 of the above signals present</li><li>Some contradicting data (maybe high funding = overleveraged)</li></ul><p><strong>Tier 3 (Weak/Speculative):</strong></p><ul><li>Only 1-2 signals</li><li>High risk, small position sizing</li></ul><p><strong>Example workflow:</strong></p><ol><li>Alert triggers: DEX volume spike on unknown token</li><li>Check Dune: Is TVL growing? User count increasing?</li><li>Check Nansen: Any smart money involved?</li><li>Check Twitter: Is there growing mention velocity?</li><li>Check narrative: Does it fit a current theme?</li><li>If 4+ signals confirm → Tier 1 → larger position</li></ol>"
+			},
+
+			"avoiding_fomo": {
+				"title": "Avoiding FOMO: Discipline Systems",
+				"content": "<p>The biggest enemy of alpha is FOMO—buying after something already pumped just because everyone is talking about it.</p><p><strong>Anti-FOMO rules:</strong></p><ul><li><strong>Never buy on >20% green days:</strong> If it pumped hard, you're late. Wait for pullback.</li><li><strong>Never buy trending on Twitter:</strong> If it's trending, retail FOMO is already in. Smart money is exiting.</li><li><strong>Check the chart first:</strong> Is it at ATH? Near resistance? You're probably late.</li><li><strong>Set entry criteria:</strong> Only buy when 3+ of your signals confirm, regardless of FOMO</li><li><strong>Use limit orders:</strong> Set your entry price and walk away. Don't market buy.</li></ul><p><strong>FOMO checklist (If yes, don't buy):</strong></p><ul><li>Did you hear about it from someone who isn't deep in crypto?</li><li>Is mainstream media covering it?</li><li>Has it pumped >50% in the last week?</li><li>Are your group chats spamming it?</li><li>Do you feel urgent pressure to buy now?</li></ul><p><strong>Remember:</strong> There's always another opportunity. Missing a pump is better than buying the top.</p>"
+			},
+
+			"backtesting": {
+				"title": "Backtesting Your Strategy",
+				"content": "<p>You can't improve what you don't measure. Backtest your signal combinations to see what actually works.</p><p><strong>How to backtest in crypto:</strong></p><ol><li><strong>Define your signals:</strong> Exactly what criteria must be met for entry?</li><li><strong>Gather historical data:</strong> Use Dune to pull historical on-chain data</li><li><strong>Simulate entries:</strong> When did your signals trigger in the past?</li><li><strong>Calculate returns:</strong> What would returns be if you followed your system?</li><li><strong>Refine:</strong> Adjust signal thresholds and test again</li></ol><p><strong>Example backtest:</strong></p><p><em>Hypothesis: Tokens with smart money accumulation + TVL growth >30% in 30d outperform.</em></p><ul><li>Pull list of all tokens meeting criteria in 2023</li><li>Calculate their 30d, 60d, 90d returns post-signal</li><li>Compare to market average returns</li><li>If strategy alpha is positive and consistent, deploy real capital</li></ul><p><strong>Free tools:</strong> Dune Analytics can run these backtests using historical on-chain data. Many community members share backtest dashboards.</p><p><strong>Final insight:</strong> Paper trade your system for a month before deploying real capital. Prove it works, then scale up.</p>"
+			}
+		}
+	},
+
+	"glossary": {
+		"alpha": {
+			"term": "Alpha",
+			"definition": "Excess returns above the market average. Finding alpha means identifying opportunities before the broader market, capturing outsized gains. In crypto, alpha often comes from information asymmetry—knowing something before others do."
+		},
+		"tvl": {
+			"term": "TVL (Total Value Locked)",
+			"definition": "The total value of crypto assets deposited in a DeFi protocol. Rising TVL indicates growing adoption and user confidence. Falling TVL suggests capital flight. Critical metric for assessing protocol health."
+		},
+		"smart_money": {
+			"term": "Smart Money",
+			"definition": "Wallets with proven track records of profitable trading and early position-building. Includes VCs, hedge funds, and successful whales. Tracking smart money movements provides high-conviction signals for trend identification."
+		},
+		"whale": {
+			"term": "Whale",
+			"definition": "A wallet holding a significant amount of a token or total crypto value. Whales can move markets with large trades. Not all whales are smart money—some are exchanges, dormant accounts, or poor traders."
+		},
+		"accumulation": {
+			"term": "Accumulation",
+			"definition": "The process of large holders quietly building positions over time, usually at relatively stable prices. Accumulation typically occurs before major price moves as informed investors position ahead of catalysts."
+		},
+		"distribution": {
+			"term": "Distribution",
+			"definition": "The process of large holders selling their positions, often during high prices and retail FOMO. Distribution typically marks local or cycle tops. Smart money distributes to late-arriving retail buyers."
+		},
+		"narrative": {
+			"term": "Narrative",
+			"definition": "A thematic story that drives capital allocation in crypto markets. Examples: 'AI x Crypto', 'Real World Assets', 'Restaking'. Narratives attract attention and capital, often leading to sector-wide pumps regardless of individual project fundamentals."
+		},
+		"sector_rotation": {
+			"term": "Sector Rotation",
+			"definition": "The movement of capital from one crypto sector to another as trends evolve. Capital typically rotates from BTC → ETH → large caps → thematic plays → small caps → memes during bull markets."
+		},
+		"funding_rate": {
+			"term": "Funding Rate",
+			"definition": "Periodic payment between long and short traders in perpetual futures. Positive funding means longs pay shorts (bullish bias). Negative funding means shorts pay longs (bearish bias). Extreme funding rates often precede reversals."
+		},
+		"open_interest": {
+			"term": "Open Interest",
+			"definition": "The total value of outstanding derivative positions (futures/options). Rising OI indicates new leverage entering. Falling OI indicates position closing. Used with price to determine trend strength and potential liquidation zones."
+		},
+		"on_chain_metrics": {
+			"term": "On-Chain Metrics",
+			"definition": "Data derived from blockchain transactions: TVL, unique addresses, transaction volume, gas usage, whale movements. On-chain metrics show actual usage and can't be faked, making them high-signal for trend identification."
+		},
+		"social_signals": {
+			"term": "Social Signals",
+			"definition": "Metrics measuring attention and sentiment: Twitter mentions, Discord activity, Google Trends. Social signals show where attention is flowing. Most useful when combined with on-chain data to confirm narratives with actual usage."
+		}
+	}
+}
