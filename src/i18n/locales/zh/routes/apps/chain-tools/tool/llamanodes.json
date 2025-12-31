@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Llama Nodes - 隐私优先RPC",
+		"description": "Llama Nodes为以太坊提供注重隐私的RPC端点。无日志、无追踪——免费可靠的区块链访问。",
+		"keywords": "Llama Nodes, RPC, 隐私, 以太坊, DefiLlama, 无日志RPC, 区块链基础设施"
+	},
+	"overview": "Llama Nodes为以太坊提供注重隐私的RPC端点。他们不记录用户数据或IP地址——这是与大多数RPC提供商的关键区别。\n\n该服务对大多数用户免费，有慷慨的速率限制。由DefiLlama背后的Llama Corp团队构建，他们理解DeFi用户对隐私和可靠性的需求。\n\nLlama Nodes特别受到想要无监控RPC访问的用户欢迎。基本访问无需注册。一种令人耳目一新的简单区块链基础设施方法。",
+	"features": {
+		"1": {
+			"title": "隐私优先",
+			"description": "无日志"
+		},
+		"2": {
+			"title": "免费",
+			"description": "慷慨限制"
+		},
+		"3": {
+			"title": "无需注册",
+			"description": "即时访问"
+		},
+		"4": {
+			"title": "可靠",
+			"description": "良好正常运行时间"
+		},
+		"5": {
+			"title": "DefiLlama团队",
+			"description": "可信构建者"
+		},
+		"6": {
+			"title": "简单",
+			"description": "无复杂性"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "隐私",
+			"description": "无日志RPC"
+		},
+		"2": {
+			"title": "免费访问",
+			"description": "无成本"
+		},
+		"3": {
+			"title": "快速设置",
+			"description": "即时使用"
+		},
+		"4": {
+			"title": "钱包配置",
+			"description": "自定义RPC"
+		},
+		"5": {
+			"title": "开发",
+			"description": "测试"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Llama Nodes是什么？",
+			"answer": "Llama Nodes是注重隐私的以太坊RPC提供商。他们不记录用户数据或IP地址。免费使用，有慷慨的速率限制。由DefiLlama团队构建。"
+		},
+		"2": {
+			"question": "为什么RPC隐私重要？",
+			"answer": "RPC提供商在交易上链前就能看到。他们可以追踪你的钱包、审查交易或出售数据。Llama Nodes承诺不记录——你的活动保持私密。"
+		},
+		"3": {
+			"question": "真的免费吗？",
+			"answer": "是的。Llama Nodes对正常使用免费，有慷慨的速率限制。他们通过其他Llama Corp产品资助。没有高级层——每个人获得相同服务。"
+		},
+		"4": {
+			"question": "支持哪些链？",
+			"answer": "主要是以太坊。查看他们的网站了解当前链支持。他们注重质量而非数量——为支持的链提供可靠服务，而不是到处覆盖但质量平庸。"
+		},
+		"5": {
+			"question": "如何使用？",
+			"answer": "只需在钱包或dApp中使用他们的RPC URL。无需注册、无需API密钥。eth.llamarpc.com用于以太坊。添加到MetaMask或直接在代码中使用。"
+		}
+	},
+	"cta": {
+		"ready": "准备好使用私密RPC了吗？",
+		"button": "使用Llama Nodes",
+		"note": "隐私优先RPC"
+	}
+}

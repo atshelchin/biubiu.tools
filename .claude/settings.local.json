@@ -55,7 +55,8 @@
       "Bash(npx tsc:*)",
       "Bash(npm run lint:*)",
       "Bash(npm run format:*)",
-      "Bash(npm run check:*)"
+      "Bash(npm run check:*)",
+      "Bash(bun build:*)"
     ],
     "deny": [],
     "ask": []

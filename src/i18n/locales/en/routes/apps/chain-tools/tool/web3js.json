@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "web3.js - Original Ethereum JavaScript Library",
+		"description": "web3.js is the original JavaScript library for Ethereum. Battle-tested with extensive documentation, created by the Ethereum Foundation.",
+		"keywords": "web3.js, JavaScript, Ethereum, Web3 development, blockchain library, smart contracts, dApp"
+	},
+	"overview": "web3.js is the original JavaScript library for Ethereum. Created by the Ethereum Foundation, it's been the standard library for years and powers countless dApps and tools.\n\nThe library handles everything: wallet connections, contract interactions, transactions, and Ethereum data. It's battle-tested with extensive documentation and community examples.\n\nWhile newer alternatives like viem exist, web3.js remains widely used. Version 4.x brought TypeScript improvements and modern updates. Many tutorials and existing codebases use web3.js.",
+	"features": {
+		"1": {
+			"title": "Battle-Tested",
+			"description": "Years of production"
+		},
+		"2": {
+			"title": "Full Featured",
+			"description": "Complete Ethereum API"
+		},
+		"3": {
+			"title": "TypeScript",
+			"description": "v4.x support"
+		},
+		"4": {
+			"title": "EF Maintained",
+			"description": "Foundation backed"
+		},
+		"5": {
+			"title": "Documentation",
+			"description": "Extensive docs"
+		},
+		"6": {
+			"title": "Community",
+			"description": "Large ecosystem"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "dApp Development",
+			"description": "Ethereum apps"
+		},
+		"2": {
+			"title": "Contract Interaction",
+			"description": "Read and write"
+		},
+		"3": {
+			"title": "Legacy Projects",
+			"description": "Existing codebases"
+		},
+		"4": {
+			"title": "Learning",
+			"description": "Many tutorials"
+		},
+		"5": {
+			"title": "Node.js",
+			"description": "Backend development"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is web3.js?",
+			"answer": "web3.js is the original JavaScript Ethereum library by the Ethereum Foundation. It provides APIs for everything Ethereum: accounts, contracts, transactions, and more. The standard library for years."
+		},
+		"2": {
+			"question": "web3.js vs ethers.js vs viem?",
+			"answer": "web3.js is oldest and most documented. ethers.js became popular for cleaner API. viem is newest with best TypeScript. All work—choose based on project needs and team familiarity."
+		},
+		"3": {
+			"question": "Should I use web3.js for new projects?",
+			"answer": "For new projects, viem/ethers are often preferred for better DX. web3.js is fine if you're familiar with it or maintaining existing code. The 4.x version improved significantly."
+		},
+		"4": {
+			"question": "Is web3.js still maintained?",
+			"answer": "Yes. The Ethereum Foundation and ChainSafe maintain it actively. Version 4.x brought major improvements including better TypeScript. It's not abandoned—just has newer competitors."
+		},
+		"5": {
+			"question": "How do I learn web3.js?",
+			"answer": "Official docs at docs.web3js.org. Many tutorials exist since it's been around longest. Start with connecting to Ethereum, then contracts. Plenty of Stack Overflow answers available."
+		}
+	},
+	"cta": {
+		"ready": "Ready to use web3.js?",
+		"button": "View Documentation",
+		"note": "Original Ethereum library"
+	}
+}

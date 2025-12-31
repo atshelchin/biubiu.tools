@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Sherlock - Protocolo de Seguridad + Cobertura",
+		"description": "Sherlock combina concursos de auditoría con cobertura de contratos inteligentes. Auditorías de seguridad con protección integrada contra exploits para protocolos DeFi.",
+		"keywords": "Sherlock, concurso de auditoría, cobertura de contratos inteligentes, seguros DeFi, auditoría de seguridad, protección contra exploits"
+	},
+	"overview": "Sherlock combina auditorías de seguridad competitivas con cobertura de contratos inteligentes. Los protocolos son auditados por investigadores de seguridad que compiten, luego cubiertos contra exploits. Si los bugs pasan desapercibidos, Sherlock paga.\n\nEsta alineación de incentivos es única. Los auditores (Watsons) están motivados a encontrar todo porque Sherlock asume el riesgo residual. La cobertura es suscrita por stakers que ganan rendimiento por asumir riesgo de protocolos.\n\nSherlock ha auditado protocolos importantes y pagado reclamaciones cuando ocurrieron exploits. La combinación de auditoría + cobertura crea seguridad integral que las auditorías o seguros independientes no pueden igualar.",
+	"features": {
+		"1": {
+			"title": "Concursos de Auditoría",
+			"description": "Seguridad competitiva"
+		},
+		"2": {
+			"title": "Cobertura de Exploits",
+			"description": "Respaldo de seguros"
+		},
+		"3": {
+			"title": "Red de Watsons",
+			"description": "Auditores top"
+		},
+		"4": {
+			"title": "Incentivos Alineados",
+			"description": "Auditores + cobertura"
+		},
+		"5": {
+			"title": "Rendimiento por Staking",
+			"description": "Suscribir riesgo"
+		},
+		"6": {
+			"title": "Reclamaciones Pagadas",
+			"description": "Cobertura comprobada"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Auditoría de Protocolo",
+			"description": "Competitiva + cobertura"
+		},
+		"2": {
+			"title": "Caza de Bugs",
+			"description": "Ganar como Watson"
+		},
+		"3": {
+			"title": "Suscripción",
+			"description": "Stake para rendimiento"
+		},
+		"4": {
+			"title": "Gestión de Riesgos",
+			"description": "Cobertura para usuarios"
+		},
+		"5": {
+			"title": "Pre-Lanzamiento",
+			"description": "Seguridad + seguros"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Cómo se diferencia Sherlock de Code4rena?",
+			"answer": "Ambos ejecutan auditorías competitivas. Sherlock añade cobertura de exploits—si los auditores pasan por alto bugs, Sherlock paga reclamaciones. Esto alinea mejor los incentivos. Code4rena es solo auditoría. Diferentes compromisos de riesgo/costo."
+		},
+		"2": {
+			"question": "¿Cómo funciona la cobertura?",
+			"answer": "Los protocolos pagan primas por cobertura. Si son explotados debido a bugs en código auditado, Sherlock paga. Las cantidades y términos de cobertura se negocian. Los stakers proporcionan el capital respaldando la cobertura."
+		},
+		"3": {
+			"question": "¿Cómo me convierto en Watson?",
+			"answer": "Aplica a través de Sherlock. Pasa su proceso de evaluación. Una vez aprobado, compite en concursos. Los Watsons son generalmente más evaluados que los wardens de Code4rena—barrera más alta, calidad curada."
+		},
+		"4": {
+			"question": "¿Qué rendimientos pueden ganar los stakers?",
+			"answer": "Los rendimientos de stakers varían con la demanda de protocolos y el riesgo. Consulta las tasas actuales en Sherlock. Estás suscribiendo riesgo de protocolos—si ocurren exploits, los stakers toman pérdidas. Retornos ajustados al riesgo."
+		},
+		"5": {
+			"question": "¿Sherlock ha pagado reclamaciones?",
+			"answer": "Sí. Sherlock ha pagado reclamaciones por exploits en protocolos cubiertos. Esto prueba que la cobertura funciona. La combinación de skin-in-the-game y pagos reales construye confianza."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para auditoría + cobertura?",
+		"button": "Explorar Sherlock",
+		"note": "Seguridad con respaldo"
+	}
+}

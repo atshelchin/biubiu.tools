@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "RainbowKit - Beautiful Wallet Connection UI",
+		"description": "RainbowKit is the best-in-class wallet connection UI for React dApps. Built for wagmi with beautiful, accessible connect button and wallet modal.",
+		"keywords": "RainbowKit, wallet connection, React, wagmi, Web3 UI, connect wallet, dApp development"
+	},
+	"overview": "RainbowKit is the best-in-class wallet connection UI for React dApps. Built for wagmi, it provides a beautiful, accessible connect button and wallet modal with zero configuration.\n\nJust wrap your app and get a polished wallet connection experience. Supports all major wallets, handles connection states, and looks great on mobile. The team behind Rainbow wallet maintains it.\n\nRainbowKit + wagmi is the standard stack for new React dApps. Custom themes, wallet customization, and enterprise features available. It's what you see on most modern dApps.",
+	"features": {
+		"1": {
+			"title": "Beautiful UI",
+			"description": "Polished design"
+		},
+		"2": {
+			"title": "All Wallets",
+			"description": "Major wallets supported"
+		},
+		"3": {
+			"title": "wagmi Integration",
+			"description": "Works seamlessly"
+		},
+		"4": {
+			"title": "Customizable",
+			"description": "Themes and options"
+		},
+		"5": {
+			"title": "Mobile Ready",
+			"description": "Responsive design"
+		},
+		"6": {
+			"title": "Accessible",
+			"description": "A11y compliant"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "dApp Development",
+			"description": "Wallet connection"
+		},
+		"2": {
+			"title": "Quick Setup",
+			"description": "Zero config start"
+		},
+		"3": {
+			"title": "Custom Branding",
+			"description": "Theme matching"
+		},
+		"4": {
+			"title": "Multi-Wallet",
+			"description": "Support all wallets"
+		},
+		"5": {
+			"title": "Mobile dApps",
+			"description": "Mobile-first"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is RainbowKit?",
+			"answer": "RainbowKit is a React library for wallet connection UI. It gives you a connect button, wallet selection modal, and connection management out of the box. Built to work with wagmi hooks."
+		},
+		"2": {
+			"question": "Which wallets are supported?",
+			"answer": "All major wallets: MetaMask, Coinbase Wallet, WalletConnect, Rainbow, and many more. Custom wallet lists are configurable. New wallets added regularly."
+		},
+		"3": {
+			"question": "Do I need wagmi?",
+			"answer": "Yes, RainbowKit is built specifically for wagmi. It handles the UI layer while wagmi handles the logic. They're designed to work together—most projects use both."
+		},
+		"4": {
+			"question": "Can I customize the look?",
+			"answer": "Yes. RainbowKit has built-in themes (light, dark, midnight) and supports custom themes. Colors, fonts, and border radius are all configurable to match your brand."
+		},
+		"5": {
+			"question": "Is it free?",
+			"answer": "Yes, RainbowKit is free and open source. Enterprise features like custom branding and priority support are available separately. Most projects use the free version."
+		}
+	},
+	"cta": {
+		"ready": "Ready to add wallet connection?",
+		"button": "Install RainbowKit",
+		"note": "Beautiful wallet UI"
+	}
+}

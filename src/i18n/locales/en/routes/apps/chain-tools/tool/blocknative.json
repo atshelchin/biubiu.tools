@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Blocknative - Mempool Monitoring & Web3-Onboard",
+		"description": "Blocknative provides mempool monitoring and transaction management tools. Pre-chain data, gas estimation, and Web3-Onboard wallet connection.",
+		"keywords": "Blocknative, mempool, Web3-Onboard, gas estimation, transaction simulation, MEV, blockchain infrastructure"
+	},
+	"overview": "Blocknative provides mempool monitoring and transaction management tools. They specialize in pre-chain data—seeing and understanding transactions before they're confirmed.\n\nTheir products include mempool explorers, transaction simulation, and gas estimation APIs. Critical infrastructure for traders, MEV searchers, and anyone needing transaction visibility.\n\nBlocknative also offers Web3-onboard, a popular wallet connection library. The company bridges traditional infrastructure with blockchain-specific needs like mempool access.",
+	"features": {
+		"1": {
+			"title": "Mempool Access",
+			"description": "Pre-chain data"
+		},
+		"2": {
+			"title": "Transaction Simulation",
+			"description": "Preview outcomes"
+		},
+		"3": {
+			"title": "Gas Estimation",
+			"description": "Accurate pricing"
+		},
+		"4": {
+			"title": "Web3-Onboard",
+			"description": "Wallet connection"
+		},
+		"5": {
+			"title": "Notifications",
+			"description": "TX monitoring"
+		},
+		"6": {
+			"title": "API Access",
+			"description": "Developer tools"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "MEV",
+			"description": "Transaction monitoring"
+		},
+		"2": {
+			"title": "Trading",
+			"description": "Pre-chain visibility"
+		},
+		"3": {
+			"title": "Gas Optimization",
+			"description": "Better estimates"
+		},
+		"4": {
+			"title": "dApp Development",
+			"description": "TX management"
+		},
+		"5": {
+			"title": "Wallet Integration",
+			"description": "Web3-onboard"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Blocknative?",
+			"answer": "Blocknative provides mempool infrastructure—access to pending transactions before confirmation. They offer APIs for gas estimation, transaction simulation, and mempool monitoring. Also maintain Web3-onboard."
+		},
+		"2": {
+			"question": "What is mempool monitoring?",
+			"answer": "The mempool contains pending transactions. Seeing them enables: predicting gas prices, simulating outcomes, detecting MEV opportunities. Blocknative streams this data in real-time."
+		},
+		"3": {
+			"question": "What is Web3-Onboard?",
+			"answer": "Web3-Onboard is Blocknative's wallet connection library. Similar to RainbowKit but framework-agnostic. Supports 35+ wallets, hardware wallets, and account abstraction. Popular alternative."
+		},
+		"4": {
+			"question": "Who uses Blocknative?",
+			"answer": "MEV searchers, trading protocols, DeFi apps needing gas estimates, and anyone wanting pre-chain visibility. Aave, Balancer, and many others use their infrastructure."
+		},
+		"5": {
+			"question": "Is there a free tier?",
+			"answer": "Some products have free tiers with limits. Serious usage requires paid plans. Contact sales for enterprise needs. Web3-Onboard is open source and free."
+		}
+	},
+	"cta": {
+		"ready": "Ready for mempool access?",
+		"button": "Explore Blocknative",
+		"note": "Mempool infrastructure"
+	}
+}

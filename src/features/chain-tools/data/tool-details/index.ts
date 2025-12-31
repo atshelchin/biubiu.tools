@@ -184,6 +184,18 @@ import { llamariskDetail } from './llamarisk';
 import { gauntletDetail } from './gauntlet';
 import { chaoslabsDetail } from './chaoslabs';
 import { wagmiDetail } from './wagmi';
+import { viemDetail } from './viem';
+import { rainbowkitDetail } from './rainbowkit';
+import { web3jsDetail } from './web3js';
+import { remixDetail } from './remix';
+import { ankrDetail } from './ankr';
+import { llamanodesDetail } from './llamanodes';
+import { poktDetail } from './pokt';
+import { blocknativeDetail } from './blocknative';
+import { thirdwebDetail } from './thirdweb';
+import { sourcifyDetail } from './sourcify';
+import { holeskyDetail } from './holesky';
+import { sepoliaDetail } from './sepolia';
 
 /**
  * All tool details mapped by tool ID
@@ -364,7 +376,19 @@ export const toolDetails: Record<string, ToolDetail> = {
 	llamarisk: llamariskDetail,
 	gauntlet: gauntletDetail,
 	chaoslabs: chaoslabsDetail,
-	wagmi: wagmiDetail
+	wagmi: wagmiDetail,
+	viem: viemDetail,
+	rainbowkit: rainbowkitDetail,
+	web3js: web3jsDetail,
+	remix: remixDetail,
+	ankr: ankrDetail,
+	llamanodes: llamanodesDetail,
+	pokt: poktDetail,
+	blocknative: blocknativeDetail,
+	thirdweb: thirdwebDetail,
+	sourcify: sourcifyDetail,
+	holesky: holeskyDetail,
+	sepolia: sepoliaDetail
 };
 
 /**

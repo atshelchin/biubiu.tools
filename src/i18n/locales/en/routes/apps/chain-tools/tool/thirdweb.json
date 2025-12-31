@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "thirdweb - Complete Web3 Development Platform",
+		"description": "thirdweb is the complete Web3 development platform. SDKs, smart contracts, infrastructure, and tools to build dApps without complexity.",
+		"keywords": "thirdweb, Web3 development, smart contracts, NFT, SDK, dApp development, blockchain platform"
+	},
+	"overview": "thirdweb is the complete Web3 development platform. They provide SDKs, smart contracts, infrastructure, and tools to build dApps without worrying about blockchain complexity.\n\nTheir pre-built contracts cover NFTs, tokens, marketplaces, and more—deploy with one click. SDKs for React, Unity, and mobile make integration simple. Infrastructure handles wallets, storage, and RPC.\n\nthirdweb abstracts complexity for developers. Instead of learning every blockchain detail, use their APIs. Popular for NFT projects, games, and rapid development. Strong focus on developer experience.",
+	"features": {
+		"1": {
+			"title": "Pre-built Contracts",
+			"description": "One-click deploy"
+		},
+		"2": {
+			"title": "Multi-Platform SDKs",
+			"description": "React, Unity, Mobile"
+		},
+		"3": {
+			"title": "Wallet Infrastructure",
+			"description": "Embedded wallets"
+		},
+		"4": {
+			"title": "Storage",
+			"description": "IPFS integration"
+		},
+		"5": {
+			"title": "Dashboard",
+			"description": "Manage everything"
+		},
+		"6": {
+			"title": "Multi-Chain",
+			"description": "700+ chains"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "NFT Projects",
+			"description": "Minting and sales"
+		},
+		"2": {
+			"title": "Web3 Games",
+			"description": "Unity SDK"
+		},
+		"3": {
+			"title": "Token Launches",
+			"description": "Easy deployment"
+		},
+		"4": {
+			"title": "Rapid Development",
+			"description": "Quick prototypes"
+		},
+		"5": {
+			"title": "Mobile dApps",
+			"description": "Mobile SDKs"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is thirdweb?",
+			"answer": "thirdweb is a Web3 development platform. Pre-built contracts, SDKs, and infrastructure to build dApps fast. Less blockchain complexity—focus on your product instead."
+		},
+		"2": {
+			"question": "What can I build with thirdweb?",
+			"answer": "NFT collections, token drops, marketplaces, gaming items, DAOs—anything with blockchain needs. Their contracts and SDKs cover common use cases. Custom contracts also supported."
+		},
+		"3": {
+			"question": "Is thirdweb free?",
+			"answer": "Core tools are free. No fees on their contracts. Paid features for advanced needs like embedded wallets, higher limits, and enterprise support. Generous free tier for most projects."
+		},
+		"4": {
+			"question": "thirdweb vs building from scratch?",
+			"answer": "thirdweb trades flexibility for speed. Great for common patterns and rapid development. Complex custom logic might need raw development. Many start with thirdweb then customize."
+		},
+		"5": {
+			"question": "Which platforms are supported?",
+			"answer": "React, Next.js, Unity, Unreal, React Native, and more. TypeScript SDK for backend. Comprehensive platform coverage—unusual for Web3 tools. Check docs for full list."
+		}
+	},
+	"cta": {
+		"ready": "Ready to build faster?",
+		"button": "Start with thirdweb",
+		"note": "Complete Web3 platform"
+	}
+}

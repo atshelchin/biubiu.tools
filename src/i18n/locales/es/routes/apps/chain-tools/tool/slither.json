@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Slither - Analizador Estático de Solidity",
+		"description": "Slither es la herramienta líder de análisis estático para Solidity. Detecta vulnerabilidades, malas prácticas y problemas de código en tus contratos inteligentes.",
+		"keywords": "Slither, analizador Solidity, análisis estático, seguridad de contratos inteligentes, detección de vulnerabilidades, Trail of Bits"
+	},
+	"overview": "Slither es el framework de análisis estático estándar de la industria para contratos inteligentes en Solidity. Creado por Trail of Bits, detecta vulnerabilidades, problemas de calidad de código y oportunidades de optimización en segundos.\n\nSlither incluye más de 90 detectores de vulnerabilidades cubriendo reentrada, control de acceso, problemas aritméticos y más. Se integra con Foundry, Hardhat y otras herramientas de desarrollo. Ejecútalo en pipelines CI/CD para seguridad continua.\n\nMás allá de la detección, Slither proporciona características de comprensión de código: grafos de herencia, resúmenes de funciones y análisis de dependencia de datos. Es una herramienta esencial para cualquier desarrollador o auditor de Solidity.",
+	"features": {
+		"1": {
+			"title": "90+ Detectores",
+			"description": "Cobertura completa"
+		},
+		"2": {
+			"title": "Análisis Rápido",
+			"description": "Segundos, no minutos"
+		},
+		"3": {
+			"title": "Integración CI/CD",
+			"description": "Automatiza seguridad"
+		},
+		"4": {
+			"title": "Comprensión de Código",
+			"description": "Grafos y resúmenes"
+		},
+		"5": {
+			"title": "Código Abierto",
+			"description": "Gratis para todos"
+		},
+		"6": {
+			"title": "Extensible",
+			"description": "Detectores personalizados"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Verificación Pre-Auditoría",
+			"description": "Encontrar problemas temprano"
+		},
+		"2": {
+			"title": "Pipeline CI/CD",
+			"description": "Seguridad continua"
+		},
+		"3": {
+			"title": "Revisión de Código",
+			"description": "Entender codebases"
+		},
+		"4": {
+			"title": "Auditoría",
+			"description": "Herramienta del auditor"
+		},
+		"5": {
+			"title": "Aprendizaje",
+			"description": "Entender vulnerabilidades"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Cómo instalo Slither?",
+			"answer": "Instala vía pip: `pip3 install slither-analyzer`. Luego ejecuta `slither .` en el directorio de tu proyecto. Funciona con Foundry, Hardhat y archivos Solidity independientes. Documentación detallada en GitHub."
+		},
+		"2": {
+			"question": "¿Qué vulnerabilidades detecta Slither?",
+			"answer": "Slither detecta reentrada, problemas de control de acceso, bugs aritméticos, variables sin inicializar, delegatecall peligroso y más de 80 tipos de problemas. Los categoriza por severidad: alto, medio, bajo, informativo."
+		},
+		"3": {
+			"question": "¿Slither es suficiente para seguridad?",
+			"answer": "Slither es esencial pero no suficiente. Detecta problemas comunes pero no puede encontrar todos los bugs—especialmente errores lógicos complejos. Úsalo junto con fuzzing (Echidna), verificación formal y auditorías manuales."
+		},
+		"4": {
+			"question": "¿Cómo usarlo con Foundry/Hardhat?",
+			"answer": "Slither auto-detecta tu framework. Solo ejecuta `slither .` en la raíz de tu proyecto. Para Foundry, lee foundry.toml. Para Hardhat, usa hardhat.config.js. Funciona de inmediato."
+		},
+		"5": {
+			"question": "¿Puedo escribir detectores personalizados?",
+			"answer": "Sí. Slither es extensible—escribe scripts Python para detectores personalizados. Útil para patrones específicos del proyecto o verificaciones de seguridad internas. Consulta la documentación de plugins para ejemplos."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para analizar tus contratos?",
+		"button": "Obtener Slither",
+		"note": "Análisis estático gratuito"
+	}
+}

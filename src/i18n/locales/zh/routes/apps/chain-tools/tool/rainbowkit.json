@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "RainbowKit - 精美钱包连接UI",
+		"description": "RainbowKit是React dApp最佳钱包连接UI。为wagmi构建，提供精美、无障碍的连接按钮和钱包模态框。",
+		"keywords": "RainbowKit, 钱包连接, React, wagmi, Web3 UI, 连接钱包, dApp开发"
+	},
+	"overview": "RainbowKit是React dApp最佳的钱包连接UI。为wagmi构建，提供精美、无障碍的连接按钮和钱包模态框，零配置即可使用。\n\n只需包装你的应用，就能获得精致的钱包连接体验。支持所有主流钱包，处理连接状态，在移动端也很美观。由Rainbow钱包团队维护。\n\nRainbowKit + wagmi是新React dApp的标准栈。提供自定义主题、钱包定制和企业功能。这是你在大多数现代dApp中看到的。",
+	"features": {
+		"1": {
+			"title": "精美UI",
+			"description": "精致设计"
+		},
+		"2": {
+			"title": "全部钱包",
+			"description": "支持主流钱包"
+		},
+		"3": {
+			"title": "wagmi集成",
+			"description": "无缝配合"
+		},
+		"4": {
+			"title": "可定制",
+			"description": "主题和选项"
+		},
+		"5": {
+			"title": "移动适配",
+			"description": "响应式设计"
+		},
+		"6": {
+			"title": "无障碍",
+			"description": "A11y合规"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "dApp开发",
+			"description": "钱包连接"
+		},
+		"2": {
+			"title": "快速设置",
+			"description": "零配置启动"
+		},
+		"3": {
+			"title": "品牌定制",
+			"description": "主题匹配"
+		},
+		"4": {
+			"title": "多钱包",
+			"description": "支持所有钱包"
+		},
+		"5": {
+			"title": "移动dApp",
+			"description": "移动优先"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "RainbowKit是什么？",
+			"answer": "RainbowKit是钱包连接UI的React库。它提供开箱即用的连接按钮、钱包选择模态框和连接管理。专为与wagmi hooks配合而构建。"
+		},
+		"2": {
+			"question": "支持哪些钱包？",
+			"answer": "所有主流钱包：MetaMask、Coinbase Wallet、WalletConnect、Rainbow等。可配置自定义钱包列表。定期添加新钱包。"
+		},
+		"3": {
+			"question": "需要wagmi吗？",
+			"answer": "是的，RainbowKit专门为wagmi构建。它处理UI层，wagmi处理逻辑。它们被设计为协同工作——大多数项目同时使用两者。"
+		},
+		"4": {
+			"question": "可以自定义外观吗？",
+			"answer": "可以。RainbowKit有内置主题（light、dark、midnight），支持自定义主题。颜色、字体和圆角都可以配置以匹配你的品牌。"
+		},
+		"5": {
+			"question": "免费吗？",
+			"answer": "是的，RainbowKit免费开源。企业功能如自定义品牌和优先支持需单独付费。大多数项目使用免费版本。"
+		}
+	},
+	"cta": {
+		"ready": "准备好添加钱包连接了吗？",
+		"button": "安装RainbowKit",
+		"note": "精美钱包UI"
+	}
+}

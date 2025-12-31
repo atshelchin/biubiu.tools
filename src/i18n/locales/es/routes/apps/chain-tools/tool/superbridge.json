@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Superbridge - Puente Nativo L2",
+		"description": "Superbridge proporciona la forma más simple de hacer puente a cadenas OP Stack. Bridging nativo para Base, Optimism, Zora, Mode y otros L2s.",
+		"keywords": "Superbridge, puente OP Stack, puente Base, puente nativo, puente L2, optimistic rollup"
+	},
+	"overview": "Superbridge es la forma más fácil de hacer puente de activos hacia y desde L2s de OP Stack. Proporciona una interfaz limpia para bridging nativo a Base, Optimism, Zora, Mode y otras cadenas construidas sobre el stack de Optimism.\n\nLos puentes nativos usan los contratos oficiales de puente del rollup—la forma más segura de hacer puente. Superbridge hace estos puentes oficiales accesibles con una interfaz amigable. Sin protocolos de terceros, solo transferencias directas L1↔L2.\n\nEl compromiso es velocidad: los puentes nativos tienen períodos de espera (especialmente para retiros) debido a la finalidad del rollup. Pero para usuarios conscientes de la seguridad dispuestos a esperar, Superbridge ofrece la opción de bridging más segura para las cadenas soportadas.",
+	"features": {
+		"1": {
+			"title": "Nativo OP Stack",
+			"description": "Contratos oficiales de puente"
+		},
+		"2": {
+			"title": "UI Simple",
+			"description": "Interfaz amigable"
+		},
+		"3": {
+			"title": "Múltiples L2s",
+			"description": "Base, OP, Zora, Mode"
+		},
+		"4": {
+			"title": "Más Seguro",
+			"description": "Sin riesgo de terceros"
+		},
+		"5": {
+			"title": "Depósitos Rápidos",
+			"description": "Rápido hacia L2"
+		},
+		"6": {
+			"title": "Retiros Lentos",
+			"description": "Período de desafío de 7 días"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Bridging Seguro",
+			"description": "Supuestos de confianza mínimos"
+		},
+		"2": {
+			"title": "Primer Depósito",
+			"description": "Financiamiento inicial L2"
+		},
+		"3": {
+			"title": "Cantidades Grandes",
+			"description": "Vale la pena esperar"
+		},
+		"4": {
+			"title": "Holding a Largo Plazo",
+			"description": "Sin sensibilidad de tiempo"
+		},
+		"5": {
+			"title": "L2s OP Stack",
+			"description": "Acceso al puente oficial"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Por qué usar puentes nativos?",
+			"answer": "Los puentes nativos usan contratos oficiales del rollup—la seguridad del L2 en sí. Sin supuestos de confianza extra. Los puentes de terceros son más rápidos pero introducen riesgos adicionales. Para cantidades grandes o enfoque en seguridad, nativo es mejor."
+		},
+		"2": {
+			"question": "¿Cuánto tardan los depósitos?",
+			"answer": "Los depósitos a L2 son rápidos—usualmente 10-20 minutos después de la confirmación en L1. Estás añadiendo fondos al rollup, que procesa rápidamente. Son los retiros los que tardan más."
+		},
+		"3": {
+			"question": "¿Por qué los retiros tardan 7 días?",
+			"answer": "Los rollups optimistas asumen que las transacciones son válidas a menos que se impugnen. El período de desafío de 7 días permite que cualquiera pruebe fraude si es necesario. Este modelo de seguridad requiere el período de espera. Es una característica, no un bug."
+		},
+		"4": {
+			"question": "¿Qué L2s soporta Superbridge?",
+			"answer": "Superbridge soporta cadenas OP Stack: Base, Optimism, Zora, Mode, Fraxtal y otros. Todas comparten la misma arquitectura de puente nativo. Las cadenas no-OP Stack no están soportadas."
+		},
+		"5": {
+			"question": "¿Puedo acelerar los retiros?",
+			"answer": "Puentes de terceros como Across o Hop ofrecen retiros más rápidos adelantando liquidez. Pero añaden supuestos de confianza. Si necesitas velocidad, úsalos. Si la seguridad importa más, espera los 7 días."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para bridging L2 seguro?",
+		"button": "Usar Superbridge",
+		"note": "Puente nativo OP Stack"
+	}
+}

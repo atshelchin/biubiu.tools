@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Sourcify - 去中心化合约验证",
+		"description": "Sourcify是去中心化智能合约验证服务。验证源代码与字节码匹配，永久存储在IPFS上。",
+		"keywords": "Sourcify, 合约验证, 智能合约, IPFS, 去中心化验证, 以太坊"
+	},
+	"overview": "Sourcify是去中心化智能合约验证服务。它验证部署的字节码与源代码匹配，使任何人都能阅读和信任智能合约。\n\n与Etherscan验证不同，Sourcify是开源和去中心化的。它将验证的源代码存储在IPFS上，使其永久可用。该服务支持完全匹配和部分匹配。\n\nSourcify集成到区块浏览器和开发工具中。验证一次，到处可用。对于智能合约透明度至关重要，是无信任合约交互的基础。",
+	"features": {
+		"1": {
+			"title": "去中心化",
+			"description": "IPFS存储"
+		},
+		"2": {
+			"title": "开源",
+			"description": "透明过程"
+		},
+		"3": {
+			"title": "多链",
+			"description": "EVM网络"
+		},
+		"4": {
+			"title": "完全匹配",
+			"description": "精确验证"
+		},
+		"5": {
+			"title": "部分匹配",
+			"description": "字节码匹配"
+		},
+		"6": {
+			"title": "API访问",
+			"description": "开发者集成"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "合约验证",
+			"description": "证明源代码"
+		},
+		"2": {
+			"title": "透明度",
+			"description": "开源合约"
+		},
+		"3": {
+			"title": "工具集成",
+			"description": "添加到你的工具"
+		},
+		"4": {
+			"title": "去中心化存储",
+			"description": "IPFS永久性"
+		},
+		"5": {
+			"title": "多链项目",
+			"description": "一次验证"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Sourcify是什么？",
+			"answer": "Sourcify是智能合约源代码验证。它确认部署的字节码与你声称的源代码匹配。开源去中心化——在IPFS上存储验证的代码。"
+		},
+		"2": {
+			"question": "Sourcify vs Etherscan验证？",
+			"answer": "Etherscan是中心化的，特定于链。Sourcify是去中心化的，存储在IPFS上，跨链工作。验证一次，到处可用。两者都有价值——Sourcify更开放。"
+		},
+		"3": {
+			"question": "什么是完全匹配vs部分匹配？",
+			"answer": "完全匹配：完全相同的编译器设置和元数据。部分匹配：字节码匹配但元数据不同。完全匹配证明精确源代码；部分匹配证明功能等效。"
+		},
+		"4": {
+			"question": "如何用Sourcify验证？",
+			"answer": "使用他们的Web界面、API或集成工具（Hardhat、Foundry插件）。上传源文件和元数据。如果文件与部署的字节码匹配，验证是自动的。"
+		},
+		"5": {
+			"question": "为什么去中心化验证重要？",
+			"answer": "中心化验证可能被审查或宕机。Sourcify存储在IPFS上——永久且抗审查。真正的智能合约信任透明度。"
+		}
+	},
+	"cta": {
+		"ready": "准备好验证合约了吗？",
+		"button": "使用Sourcify",
+		"note": "去中心化验证"
+	}
+}

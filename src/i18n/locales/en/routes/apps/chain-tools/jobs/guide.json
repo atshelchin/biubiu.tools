@@ -1,0 +1,181 @@
+{
+	"title": "Web3 Career & Recruitment Guide",
+	"subtitle": "Complete guide for job seekers and recruiters in the blockchain industry",
+
+	"sections": {
+		"intro": {
+			"title": "Understanding the Web3 Job Market",
+			"content": "<p>The Web3 job market is unlike any traditional tech sector. With <strong>over 90% of crypto companies operating remotely-first</strong>, roles often come with token compensation, and the line between employee and contributor is increasingly blurred.</p><p>Since 2020, Web3 hiring has exploded. Even during the 2022-2023 bear market, <strong>companies continued to hire top talent</strong>, recognizing that infrastructure built during downturns powers the next bull run. Major protocols like Uniswap, Aave, and Coinbase have teams distributed across 50+ countries.</p><p>Whether you're a developer looking to build the future of finance, a marketer wanting to join the revolution, or a recruiter seeking to hire the best talent, this guide will navigate you through the unique landscape of Web3 careers.</p>"
+		},
+
+		"job_categories": {
+			"title": "Job Categories in Web3",
+			"content": "<p>Web3 offers diverse opportunities beyond just coding. From technical roles building protocols to non-technical positions growing communities, there's a place for every skill set.</p>",
+			"developer_roles": {
+				"title": "Developer Roles",
+				"content": "<p><strong>Smart Contract Developer (Solidity/Rust/Vyper):</strong> Build and audit decentralized protocols. Typically $120K-$300K+ base salary. High demand, especially for security-focused developers who understand DeFi primitives, upgradeable contracts, and gas optimization.</p><p><strong>Frontend Developer (React/Vue/Svelte + Web3):</strong> Create dApp interfaces using libraries like ethers.js, viem, wagmi. Must understand wallet connections, transaction signing, and blockchain state management. $100K-$200K+ range.</p><p><strong>Backend/Infrastructure Developer:</strong> Build indexers, APIs, node infrastructure, and off-chain systems. Skills include TypeScript/Go/Rust, GraphQL (The Graph), database design for blockchain data. $110K-$220K+.</p><p><strong>Protocol Engineer:</strong> Work on core blockchain infrastructure (L1s, L2s, consensus). Requires deep understanding of distributed systems, cryptography, and performance optimization. Often $150K-$400K+ at top protocols.</p><p><strong>Security Engineer/Auditor:</strong> Find vulnerabilities in smart contracts and protocols. Can earn $200K-$500K+ in salary, plus millions in bug bounties. Highly specialized and in extreme demand.</p>"
+			},
+			"non_dev_roles": {
+				"title": "Non-Technical Roles",
+				"content": "<p><strong>Developer Relations (DevRel):</strong> Educate developers on using protocols, create documentation, speak at conferences. Typically $90K-$180K. Requires technical knowledge and communication skills.</p><p><strong>Community Manager:</strong> Build and nurture Discord/Telegram communities, organize events, moderate discussions. $60K-$120K. Critical for protocol growth and user retention.</p><p><strong>Marketing & Growth:</strong> Drive user acquisition, manage campaigns, partnerships, and content strategy. Web3 marketing is unique - no Google ads, focus on Twitter, Discord, and grassroots community building. $80K-$160K+.</p><p><strong>Business Development:</strong> Forge partnerships, integrations, and strategic relationships. Requires understanding of protocol mechanics and ecosystem dynamics. $100K-$200K+ with performance bonuses.</p><p><strong>Product Manager:</strong> Define roadmaps, prioritize features, coordinate teams. Must understand both user needs and technical constraints of blockchain. $120K-$220K+.</p><p><strong>Designer (UI/UX):</strong> Create intuitive interfaces for complex DeFi protocols. Understanding of wallet interactions and transaction flows essential. $80K-$160K+.</p><p><strong>Legal/Compliance:</strong> Navigate regulatory landscape, token distributions, DAO structures. Cryptocurrency law experience highly valued. $150K-$300K+ for experienced counsel.</p>"
+			}
+		},
+
+		"skills": {
+			"title": "Skills in High Demand",
+			"content": "<p>Web3 rewards T-shaped professionals: deep expertise in one area with broad understanding of the ecosystem.</p>",
+			"technical_skills": {
+				"title": "Technical Skills",
+				"content": "<p><strong>Blockchain Development:</strong></p><ul><li><strong>Solidity:</strong> The dominant smart contract language. Master ERC standards, upgradeability patterns, gas optimization, and security best practices.</li><li><strong>Rust:</strong> For Solana, NEAR, and performance-critical Ethereum tooling. Steep learning curve but extremely high demand.</li><li><strong>TypeScript/JavaScript:</strong> Frontend development with React + Web3 libraries. Understanding async patterns and wallet integration.</li><li><strong>Testing & Security:</strong> Hardhat, Foundry, fuzzing, formal verification basics. Security mindset is non-negotiable.</li></ul><p><strong>Infrastructure & Tools:</strong></p><ul><li>IPFS, The Graph, Chainlink oracles</li><li>Node operation and RPC providers (Infura, Alchemy)</li><li>Database design for indexing blockchain data</li><li>DevOps: Docker, CI/CD, monitoring systems</li></ul><p><strong>Cryptography Basics:</strong> Understanding signatures, hashing, zero-knowledge proofs (at least conceptually) increasingly important.</p>"
+			},
+			"soft_skills": {
+				"title": "Soft Skills & Remote Work",
+				"content": "<p><strong>Async Communication:</strong> Most Web3 teams work asynchronously across time zones. Ability to write clear documentation, async updates, and self-manage is crucial.</p><p><strong>Public Building:</strong> Web3 rewards building in public. Share your learning, contribute to discussions, help others. Your online presence matters more than traditional credentials.</p><p><strong>Adaptability:</strong> The space evolves rapidly. What's cutting-edge today might be obsolete in 6 months. Continuous learning isn't optional - it's the job.</p><p><strong>Community Navigation:</strong> Success often comes from being active in Discord servers, Twitter spaces, and governance forums. Networking happens online, not at corporate mixers.</p><p><strong>Ownership Mindset:</strong> Web3 values initiative and autonomy. You're expected to identify problems and solve them without extensive hand-holding.</p>"
+			}
+		},
+
+		"finding_jobs": {
+			"title": "Finding Web3 Jobs",
+			"content": "<p>Web3 hiring happens differently. Traditional job boards are supplemented by Twitter threads, Discord announcements, and protocol governance forums.</p>",
+			"job_boards": {
+				"title": "Job Boards & Platforms",
+				"content": "<p><strong>Crypto Jobs List:</strong> The oldest and most comprehensive Web3 job board. Covers everything from early-stage startups to established protocols. Free to browse, companies pay to post.</p><p><strong>Web3 Career:</strong> Curated positions with quality control. Less volume but higher signal. Features remote-first roles across all functions.</p><p><strong>AngelList:</strong> Strong for startups, including crypto companies. Can filter by equity, salary, and company stage. Good for early-stage opportunities with significant upside.</p><p><strong>LinkedIn:</strong> Traditional but increasingly relevant as larger companies enter crypto. Useful for established firms like Coinbase, Kraken, or consulting firms building Web3 practices.</p><p><strong>Protocol-Specific:</strong> Many protocols post directly on their websites, Discord, or governance forums. Check /careers channels in protocol Discords.</p>"
+			},
+			"networking": {
+				"title": "Networking & Community",
+				"content": "<p><strong>Twitter:</strong> The primary networking hub for Web3. Follow developers, founders, and researchers in your area of interest. Engage thoughtfully with their content. Many hires happen via DMs after someone notices your contributions.</p><p><strong>Discord Communities:</strong> Join protocol servers and be genuinely helpful. Answer questions, contribute ideas, report bugs. Maintainers notice active community members.</p><p><strong>Conferences & Events:</strong> ETHDenver, Devcon, and regional events are networking goldmines. Conversations at side events often lead to opportunities.</p><p><strong>GitHub Contributions:</strong> Contributing to open-source Web3 projects is the best resume. Protocol teams watch their contributors and often recruit from them.</p><p><strong>Recommendation:</strong> Most Web3 hires come through referrals. Build genuine relationships, not transactional networking.</p>"
+			},
+			"dao_contributor": {
+				"title": "DAO Contributor Path",
+				"content": "<p>An increasingly popular route is starting as a DAO contributor before joining full-time:</p><p><strong>Dework:</strong> Task management for DAOs. Find bounties matching your skills, complete tasks, build reputation. Some contributors earn $5K-$20K monthly in bounties before transitioning to core roles.</p><p><strong>Layer3:</strong> Complete quests and earn credentials. Protocols notice active participants and recruit from their most engaged community members.</p><p><strong>Gitcoin:</strong> Contribute to grant-funded projects. Build relationships with project maintainers who may hire for their protocols.</p><p><strong>Governance Participation:</strong> Active governance participants (thoughtful forum posts, proposals) get noticed. Shows domain knowledge and communication skills.</p><p><strong>Benefits:</strong> Try before you buy. Test working with a team before committing. Build a portfolio of work. Often leads to full-time offers.</p>"
+			}
+		},
+
+		"building_profile": {
+			"title": "Building Your Web3 Profile",
+			"content": "<p>Traditional resumes matter less in Web3. Your on-chain reputation, GitHub contributions, and public building speak louder.</p>",
+			"portfolio": {
+				"title": "Portfolio & Public Work",
+				"content": "<p><strong>GitHub Profile:</strong> Your primary resume. Pin your best repositories. Include:</p><ul><li>Smart contracts with comprehensive tests and documentation</li><li>DeFi protocol forks or original implementations</li><li>Web3 frontends demonstrating wallet integration</li><li>Contributions to known protocols (even documentation)</li></ul><p><strong>Personal Website/Blog:</strong> Write about what you're learning. Explain complex concepts simply. Document your building journey. Share failure and learnings.</p><p><strong>Deployed Projects:</strong> Mainnet deployments (even small ones) demonstrate you can ship. Include audit reports if available. Link to your contracts on Etherscan with verified source code.</p><p><strong>Video Demos:</strong> Loom videos walking through your code or products. Helps recruiters quickly understand your work.</p>"
+			},
+			"contributions": {
+				"title": "Open Source Contributions",
+				"content": "<p><strong>Start Small:</strong> Fix typos in documentation, add examples to READMEs, improve error messages. Build familiarity with the codebase.</p><p><strong>Good First Issues:</strong> Many projects tag beginner-friendly issues. Tackle these to learn the contribution process.</p><p><strong>Focus on Impact:</strong> One meaningful contribution to a major protocol (Uniswap, Aave, Safe) carries more weight than dozens of trivial PRs.</p><p><strong>Communicate Well:</strong> Write clear PR descriptions, respond promptly to feedback, follow contribution guidelines. Maintainers remember contributors who make their lives easier.</p><p><strong>Target Strategic Projects:</strong> Contribute to protocols where you'd like to work. It's the best interview.</p>"
+			},
+			"hackathons": {
+				"title": "Hackathons & Competitions",
+				"content": "<p><strong>ETHGlobal Hackathons:</strong> Monthly events with $50K-$200K in prizes. Great for networking and rapid learning. Winners often get recruited by sponsor protocols.</p><p><strong>Buildspace:</strong> 6-week cohort-based learning programs. Build projects, get feedback, join a community. Many graduates find jobs through the network.</p><p><strong>Bounties & Competitions:</strong> Security competitions (Code4rena, Sherlock) and ecosystem bounties. Demonstrate skills while earning.</p><p><strong>Benefits Beyond Winning:</strong></p><ul><li>Rapid skill development under time pressure</li><li>Meet potential cofounders and colleagues</li><li>Get feedback from judges (often protocol founders)</li><li>Portfolio pieces showing you can ship under constraints</li></ul>"
+			}
+		},
+
+		"interview_process": {
+			"title": "The Web3 Interview Process",
+			"content": "<p>Web3 interviews emphasize practical skills over algorithmic puzzles. Expect real code reviews and architectural discussions.</p>",
+			"technical_interviews": {
+				"title": "Technical Interviews",
+				"content": "<p><strong>Smart Contract Interviews:</strong></p><ul><li>Live coding: Implement an ERC-20 or simple DeFi primitive</li><li>Code review: Spot vulnerabilities in provided contracts</li><li>Architecture discussion: Design a lending protocol or DEX</li><li>Security focus: Explain reentrancy, oracle manipulation, access control</li></ul><p><strong>Frontend Interviews:</strong></p><ul><li>Build a wallet connection modal from scratch</li><li>Implement transaction signing and error handling</li><li>Display and format blockchain data efficiently</li><li>Discuss React patterns for managing Web3 state</li></ul><p><strong>Take-Home Projects:</strong> Common. Expect 4-8 hours of work:</p><ul><li>Smart contract with tests and deployment script</li><li>Frontend integration with a real protocol</li><li>Security audit of a small protocol</li></ul><p><strong>Key Difference from Web2:</strong> Less emphasis on algorithmic complexity, more on domain knowledge, security awareness, and practical building.</p>"
+			},
+			"culture_fit": {
+				"title": "Culture & Values Fit",
+				"content": "<p><strong>Decentralization Philosophy:</strong> Understand and align with the project's vision. Some teams are decentralization maximalists, others more pragmatic. Know where you stand.</p><p><strong>Remote-First Culture:</strong> Demonstrate ability to work asynchronously. Share examples of managing distributed collaboration.</p><p><strong>Community-First Mindset:</strong> Web3 projects serve communities, not just users. Show understanding of governance, token holder alignment, and community building.</p><p><strong>Transparency:</strong> Expect to discuss your crypto beliefs openly. Some companies care deeply about alignment with crypto values vs. just tech opportunity.</p><p><strong>Questions to Ask:</strong></p><ul><li>How do you balance decentralization with execution speed?</li><li>What's your token distribution and vesting schedule?</li><li>How does governance work in practice?</li><li>What's your security approach and incident response?</li><li>How do you measure success beyond TVL or token price?</li></ul>"
+			},
+			"compensation": {
+				"title": "Compensation & Token Packages",
+				"content": "<p><strong>Salary Ranges (2025):</strong> Typically competitive with top Web2, sometimes higher:</p><ul><li>Junior Smart Contract Dev: $100K-$150K</li><li>Senior Protocol Engineer: $180K-$350K</li><li>Lead/Principal: $300K-$500K+</li><li>Non-technical roles: Generally 70-90% of equivalent dev salaries</li></ul><p><strong>Token Compensation:</strong> The big differentiator:</p><ul><li>Early employees at successful protocols can see 10-100x on tokens</li><li>Typical allocation: 0.1%-2% of token supply for early hires</li><li>Vesting: Usually 4 years with 1-year cliff</li><li>Liquid vs. locked: Understand what you can sell and when</li></ul><p><strong>Negotiation Tips:</strong></p><ul><li>Understand the fully diluted valuation (FDV), not just token amount</li><li>Ask about future dilution from treasury, team allocations</li><li>Request vesting to be in tokens, not $ equivalent (upside potential)</li><li>Consider early exercise options for tax optimization</li><li>Compare total compensation assuming different token outcomes</li></ul><p><strong>Red Flags:</strong></p><ul><li>Majority of comp in unvested tokens with unclear timeline</li><li>Refusal to discuss tokenomics transparently</li><li>Uncompetitive base salary justified by 'massive token upside'</li></ul>"
+			}
+		},
+
+		"for_recruiters": {
+			"title": "For Recruiters & Hiring Managers",
+			"content": "<p>Recruiting in Web3 requires understanding the unique dynamics of a talent market where the best candidates often have multiple offers and significant crypto wealth.</p>",
+			"finding_talent": {
+				"title": "Where to Find Talent",
+				"content": "<p><strong>GitHub:</strong> Search for developers who've contributed to major protocols. Look at:</p><ul><li>Contributions to Uniswap, Aave, Safe, Compound forks</li><li>Security researchers with audit findings</li><li>Active open-source maintainers in Web3 tools</li></ul><p><strong>Twitter:</strong> Many top talents are active on Twitter. Look for:</p><ul><li>Developers sharing building threads</li><li>Security researchers posting vulnerability analyses</li><li>Community members with deep protocol knowledge</li></ul><p><strong>Protocol Communities:</strong> Your competitors' Discord servers are talent pools. Active, knowledgeable community members are potential hires.</p><p><strong>Hackathon Winners:</strong> ETHGlobal, Gitcoin hackathons. Recent winners show current skills and motivation.</p><p><strong>DAO Contributors:</strong> People actively contributing to DAOs (Dework, Layer3) demonstrate initiative and Web3 alignment.</p><p><strong>Audit Firms:</strong> Security auditors considering new opportunities. They deeply understand protocol security.</p>"
+			},
+			"evaluating_candidates": {
+				"title": "Evaluating Web3 Candidates",
+				"content": "<p><strong>Beyond the Resume:</strong></p><ul><li><strong>On-Chain Work:</strong> Review deployed contracts, transaction history, protocol interactions. Do they actually use DeFi, or just build it?</li><li><strong>Community Reputation:</strong> Ask around in relevant Discord/Telegram groups. Web3 is small - reputations precede people.</li><li><strong>GitHub Quality:</strong> Don't just count commits. Review code quality, test coverage, documentation thoroughness.</li><li><strong>Security Consciousness:</strong> For any blockchain role, security awareness is essential. Ask about past security learnings.</li></ul><p><strong>Red Flags:</strong></p><ul><li>Can't explain basic concepts (EVM, gas, signatures) for technical roles</li><li>No public work or contributions to point to</li><li>Overly focused on token price speculation vs. technology</li><li>Unable to discuss security considerations in their code</li><li>No evidence of continuous learning in fast-moving space</li></ul><p><strong>Green Flags:</strong></p><ul><li>Active in Web3 communities with helpful contributions</li><li>Has learned from failures/hacks and can articulate lessons</li><li>Demonstrates curiosity about your protocol specifically</li><li>Balances idealism about decentralization with pragmatism</li><li>Strong communication skills for remote/async environment</li></ul>"
+			},
+			"competitive_offers": {
+				"title": "Making Competitive Offers",
+				"content": "<p><strong>Understand Your Competition:</strong> Top candidates often choose between:</p><ul><li>Established protocols (stable, proven token value)</li><li>New startups (higher risk, higher upside)</li><li>Freelancing/contributing to multiple DAOs (flexibility, variety)</li><li>Building their own protocol (ultimate upside)</li></ul><p><strong>Differentiate Beyond Money:</strong></p><ul><li><strong>Impact:</strong> What unique problems will they solve? Ownership of a major feature/protocol area.</li><li><strong>Learning:</strong> Access to top talent they can learn from. Exposure to novel problems.</li><li><strong>Visibility:</strong> Opportunity to build reputation - open-source work, conference talks, protocol notoriety.</li><li><strong>Culture:</strong> Exceptional team, interesting async discussions, governance participation.</li><li><strong>Mission:</strong> Many care deeply about what they're building toward - credible path to decentralization matters.</li></ul><p><strong>Token Package Structure:</strong></p><ul><li>Be transparent about tokenomics, vesting, and dilution</li><li>Consider cliff-less vesting or shorter cliffs (6 months) for senior hires</li><li>Offer early exercise options where possible</li><li>Explain your token launch timeline and liquidity plans</li></ul><p><strong>Move Quickly:</strong> Top candidates get multiple offers weekly. Your process should be:</p><ul><li>First response within 24 hours</li><li>Technical interview within 3-5 days</li><li>Offer within 1 week of final interview</li><li>Expect short decision windows (candidates often have deadlines)</li></ul>"
+			}
+		},
+
+		"remote_work": {
+			"title": "Thriving in Remote-First Web3",
+			"content": "<p>Over 90% of Web3 companies are remote-first or fully remote. Success requires adapting to asynchronous, distributed collaboration.</p>",
+			"async_communication": {
+				"title": "Async Communication",
+				"content": "<p><strong>Written Communication is Your Superpower:</strong> In remote Web3, your writing is your presence:</p><ul><li><strong>Clear Updates:</strong> Daily or weekly async updates on what you shipped, blockers, and next steps. No one chasing you for status.</li><li><strong>Detailed Documentation:</strong> Write docs as if explaining to your future self in 6 months. Include context, not just what but why.</li><li><strong>Thoughtful Async Discussions:</strong> Discord/Telegram threads require clear, complete thoughts. Avoid back-and-forth that could be one message.</li></ul><p><strong>Tools of the Trade:</strong></p><ul><li><strong>Discord/Telegram:</strong> Primary communication. Organize thoughts before posting, use threads effectively.</li><li><strong>Notion/GitHub:</strong> Documentation, RFCs, technical specs. Assume async readers.</li><li><strong>Loom:</strong> Video recordings for complex explanations. Faster than writing, easier than scheduling calls.</li></ul><p><strong>Best Practices:</strong></p><ul><li>Bias toward over-communication vs. under</li><li>Respect time zones - don't expect immediate responses</li><li>Make decisions explicitly and document them</li><li>Default to public channels for transparency</li></ul>"
+			},
+			"time_zones": {
+				"title": "Managing Time Zones",
+				"content": "<p><strong>Global Teams:</strong> Common for teams to span 12+ time zones. This means:</p><ul><li>No single meeting time works for everyone</li><li>Recorded meetings are standard, not exceptional</li><li>Real-time overlap might be 0-4 hours daily</li></ul><p><strong>Strategies for Success:</strong></p><ul><li><strong>Core Hours:</strong> Many teams designate 2-4 hour windows for overlap</li><li><strong>Rotation:</strong> Rotate meeting times so pain is shared</li><li><strong>Async-First Meetings:</strong> Use meetings for discussion, not information sharing. Share context beforehand.</li><li><strong>Follow the Sun:</strong> Use timezone distribution as advantage - 24-hour development cycles, faster iteration.</li></ul><p><strong>Work-Life Balance:</strong></p><ul><li>Set boundaries - just because someone messages at 2am your time doesn't mean you respond</li><li>Use status indicators and communication of your working hours</li><li>Don't let guilt about timezones cause burnout</li></ul>"
+			},
+			"dao_models": {
+				"title": "DAO Contributor Models",
+				"content": "<p><strong>Beyond Traditional Employment:</strong> Many Web3 workers contribute to multiple DAOs rather than single full-time roles:</p><p><strong>Contributor Archetypes:</strong></p><ul><li><strong>Core Contributor:</strong> Full-time equivalent, often with salary + tokens. Similar to traditional employment.</li><li><strong>Part-Time Contributor:</strong> 10-20 hours/week for one protocol while doing other work.</li><li><strong>Multi-DAO:</strong> Contributing to 3-5 DAOs simultaneously at 5-10 hours each. Diversified income and risk.</li><li><strong>Bounty Hunter:</strong> Task-based work across many protocols. High flexibility, variable income.</li></ul><p><strong>Coordination Platforms:</strong></p><ul><li><strong>Dework:</strong> Task management, bounties, contributor reputation. Many DAOs use this for coordinating work.</li><li><strong>Coordinape:</strong> Peer rewards and recognition. DAOs use this to distribute contributor rewards based on peer voting.</li><li><strong>Guild Systems:</strong> Some DAOs organize into guilds (Dev Guild, Marketing Guild) with internal coordinators.</li></ul><p><strong>Pros of DAO Contribution:</strong></p><ul><li>Flexibility and autonomy</li><li>Exposure to multiple projects and teams</li><li>Diversified token exposure</li><li>Build broad network across ecosystem</li></ul><p><strong>Cons:</strong></p><ul><li>Variable income and lack of benefits</li><li>Context switching overhead</li><li>Less deep expertise in single protocol</li><li>Governance overhead and politics</li></ul>"
+			}
+		}
+	},
+
+	"glossary": {
+		"smart_contract_developer": {
+			"term": "Smart Contract Developer",
+			"definition": "Developer specializing in writing, testing, and deploying smart contracts, typically in Solidity, Rust, or Vyper. Responsible for protocol logic, security, and gas optimization."
+		},
+		"defi_developer": {
+			"term": "DeFi Developer",
+			"definition": "Blockchain developer focused on decentralized finance protocols - DEXs, lending markets, derivatives, yield farming. Requires understanding of financial primitives and economic security."
+		},
+		"frontend_developer": {
+			"term": "Frontend Developer",
+			"definition": "Web developer building user interfaces for dApps using Web3 libraries like ethers.js, viem, and wagmi. Handles wallet integration, transaction signing, and blockchain state management."
+		},
+		"full_stack": {
+			"term": "Full-Stack Web3 Developer",
+			"definition": "Developer capable of building both smart contracts and frontends, plus backend indexers and APIs. Understands the entire stack from blockchain to browser."
+		},
+		"devrel": {
+			"term": "Developer Relations (DevRel)",
+			"definition": "Role focused on educating external developers on using a protocol or platform. Creates documentation, tutorials, speaks at events, and supports developer community."
+		},
+		"community_manager": {
+			"term": "Community Manager",
+			"definition": "Person responsible for building and nurturing protocol communities on Discord, Telegram, Twitter. Moderates discussions, organizes events, and serves as bridge between users and team."
+		},
+		"tokenomics": {
+			"term": "Tokenomics",
+			"definition": "Economic design of a cryptocurrency token - supply, distribution, inflation, utility, and incentive mechanisms. Critical for protocol sustainability and value capture."
+		},
+		"vesting": {
+			"term": "Vesting",
+			"definition": "Gradual release of tokens over time, typically 2-4 years. Aligns long-term incentives by preventing employees from selling all tokens immediately after grant."
+		},
+		"cliff": {
+			"term": "Cliff",
+			"definition": "Initial period (often 1 year) before any tokens vest. If you leave before the cliff, you receive no tokens. After the cliff, vesting continues monthly/quarterly."
+		},
+		"remote_first": {
+			"term": "Remote-First",
+			"definition": "Company culture designed around remote work as the default, not an exception. All processes, communication, and decisions optimized for distributed teams."
+		},
+		"async": {
+			"term": "Async (Asynchronous)",
+			"definition": "Communication and work that doesn't require real-time presence. Messages, documentation, and updates consumed on each person's schedule across time zones."
+		},
+		"contributor": {
+			"term": "Contributor",
+			"definition": "Someone contributing to a DAO or protocol, often with more flexibility than traditional employment. Can be full-time core contributor or part-time participant."
+		},
+		"bounty": {
+			"term": "Bounty",
+			"definition": "Task-based reward for specific work - fixing bugs, building features, creating content. Common in DAOs as alternative to traditional employment."
+		},
+		"hackathon": {
+			"term": "Hackathon",
+			"definition": "Time-limited event (usually 24-72 hours) where developers build projects for prizes. Major networking and learning opportunity, often leads to jobs or funding."
+		}
+	}
+}

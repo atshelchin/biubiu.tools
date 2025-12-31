@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Ankr - 去中心化Web3基础设施",
+		"description": "Ankr为Web3提供去中心化RPC基础设施。分布式节点网络在45+链上提供可靠的区块链访问。",
+		"keywords": "Ankr, RPC, 去中心化基础设施, Web3, 区块链节点, 质押, 多链"
+	},
+	"overview": "Ankr为Web3提供去中心化RPC基础设施。他们的分布式节点网络在45+链上以有竞争力的价格提供可靠的区块链访问。\n\n与中心化提供商不同，Ankr的网络分布在独立的节点运营商中。这提高了可靠性和抗审查性。有免费层用于测试，付费计划用于生产。\n\nAnkr还提供质押服务、AppChains和游戏SDK。他们定位为超越RPC的综合Web3基础设施。对于需要可靠端点的多链项目是个好选择。",
+	"features": {
+		"1": {
+			"title": "去中心化",
+			"description": "分布式节点"
+		},
+		"2": {
+			"title": "45+链",
+			"description": "多链支持"
+		},
+		"3": {
+			"title": "价格有竞争力",
+			"description": "性价比高"
+		},
+		"4": {
+			"title": "免费层",
+			"description": "可用于测试"
+		},
+		"5": {
+			"title": "质押",
+			"description": "流动性质押"
+		},
+		"6": {
+			"title": "游戏SDK",
+			"description": "游戏开发"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "dApp后端",
+			"description": "RPC端点"
+		},
+		"2": {
+			"title": "多链",
+			"description": "跨链应用"
+		},
+		"3": {
+			"title": "成本节约",
+			"description": "更低RPC成本"
+		},
+		"4": {
+			"title": "去中心化",
+			"description": "无单点故障"
+		},
+		"5": {
+			"title": "游戏开发",
+			"description": "游戏SDK"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Ankr是什么？",
+			"answer": "Ankr提供去中心化RPC基础设施——分布在独立运营商中的区块链节点访问。还提供质押、AppChains和游戏工具。综合Web3基础设施。"
+		},
+		"2": {
+			"question": "Ankr vs Alchemy/Infura？",
+			"answer": "Ankr更去中心化（分布式节点vs中心化）。通常更便宜。支持更多链。Alchemy/Infura有更多开发工具和调试功能。根据需求选择。"
+		},
+		"3": {
+			"question": "有免费层吗？",
+			"answer": "有。公共RPC端点免费但有速率限制。适合测试和小型项目。付费计划提供更高吞吐量、专用节点和高级功能。"
+		},
+		"4": {
+			"question": "支持哪些链？",
+			"answer": "45+链，包括以太坊、BSC、Polygon、Arbitrum、Optimism、Avalanche等。L1和L2覆盖良好。查看文档了解完整列表和特定链功能。"
+		},
+		"5": {
+			"question": "Ankr质押是什么？",
+			"answer": "Ankr为各种链提供流动性质押代币。质押ETH获得ankrETH。在保持流动性的同时获得质押收益。类似于Lido但有多链选项。"
+		}
+	},
+	"cta": {
+		"ready": "准备好使用去中心化RPC了吗？",
+		"button": "试用Ankr",
+		"note": "分布式基础设施"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Remix IDE - 浏览器Solidity开发环境",
+		"description": "Remix是基于浏览器的Solidity开发IDE。无需安装即可编写、编译、调试和部署智能合约。",
+		"keywords": "Remix IDE, Solidity, 智能合约, 浏览器IDE, 以太坊开发, 合约部署"
+	},
+	"overview": "Remix是基于浏览器的Solidity开发IDE。无需安装——打开remix.ethereum.org即可立即开始编写智能合约。非常适合学习和快速原型开发。\n\n该IDE包含Solidity编译器、调试器、静态分析和部署工具。连接钱包可以直接部署到任何网络。插件进一步扩展功能。\n\nRemix是大多数人编写第一个智能合约的地方。用于教程、工作坊和快速测试。虽然正式项目在本地使用Foundry/Hardhat，但Remix对于学习和实验仍然非常宝贵。",
+	"features": {
+		"1": {
+			"title": "浏览器运行",
+			"description": "无需安装"
+		},
+		"2": {
+			"title": "编译器",
+			"description": "内置Solidity"
+		},
+		"3": {
+			"title": "调试器",
+			"description": "逐步执行代码"
+		},
+		"4": {
+			"title": "部署工具",
+			"description": "直接部署"
+		},
+		"5": {
+			"title": "插件",
+			"description": "可扩展"
+		},
+		"6": {
+			"title": "免费",
+			"description": "开源"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "学习",
+			"description": "第一个智能合约"
+		},
+		"2": {
+			"title": "原型开发",
+			"description": "快速实验"
+		},
+		"3": {
+			"title": "调试",
+			"description": "交易分析"
+		},
+		"4": {
+			"title": "工作坊",
+			"description": "教学工具"
+		},
+		"5": {
+			"title": "快速部署",
+			"description": "快速发布"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Remix是什么？",
+			"answer": "Remix是Solidity智能合约的浏览器IDE。它包含编译器、调试器和部署工具。打开remix.ethereum.org立即开始编码——无需设置。"
+		},
+		"2": {
+			"question": "应该用Remix还是Hardhat/Foundry？",
+			"answer": "Remix用于学习和快速原型开发——零设置。Hardhat/Foundry用于正式项目——更好的测试、版本控制、团队工作流。许多人用Remix做实验，本地工具做生产。"
+		},
+		"3": {
+			"question": "可以从Remix部署吗？",
+			"answer": "可以。连接MetaMask或其他钱包，直接部署到任何EVM网络。非常适合测试网和快速主网部署。生产环境考虑使用部署脚本以确保可复现性。"
+		},
+		"4": {
+			"question": "代码会保存吗？",
+			"answer": "默认情况下，代码在浏览器存储中——可能丢失。使用带GitHub集成的工作区或定期下载文件。重要工作使用带版本控制的本地IDE。"
+		},
+		"5": {
+			"question": "Remix插件是什么？",
+			"answer": "插件扩展Remix功能：Slither用于安全分析，Sourcify用于验证，IPFS用于存储。插件系统使Remix高度可定制。查看插件管理器。"
+		}
+	},
+	"cta": {
+		"ready": "准备好编写智能合约了吗？",
+		"button": "打开Remix",
+		"note": "浏览器IDE"
+	}
+}

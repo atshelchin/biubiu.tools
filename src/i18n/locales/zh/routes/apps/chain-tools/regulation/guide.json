@@ -1,0 +1,177 @@
+{
+	"title": "加密货币监管：全球合规完整指南",
+	"subtitle": "导航不断演变的全球加密货币监管格局",
+
+	"sections": {
+		"intro": {
+			"title": "为什么加密货币监管很重要",
+			"content": "<p>加密货币监管不再是一个遥远的担忧——它正在全球范围内重塑我们与数字资产的互动方式。从美国 SEC 的执法行动到欧盟全面的 MiCA 框架,全球监管机构正在制定影响加密货币各个方面的规则:交易、托管、DeFi 协议、NFT,甚至自托管钱包。</p><p>了解监管不仅仅是企业的事——个人用户面临税务义务、报告要求,以及如果不了解情况可能面临的法律风险。无论你是在中心化交易所交易、使用 DeFi 协议,还是仅仅持有加密货币,监管合规都会影响你。</p><p>本指南提供了全球监管格局的全面概述,解释了霍威测试和旅行规则等关键概念,涵盖了各司法管辖区的税务影响,并提供了保持合规的实用策略。最后,你将不仅了解规则<strong>是什么</strong>,还将了解它们<strong>为什么</strong>存在以及<strong>如何</strong>成功应对。</p>"
+		},
+
+		"global_overview": {
+			"title": "全球监管格局",
+			"content": "<p>加密货币监管因司法管辖区而异。一些国家以明确的框架拥抱创新,而另一些国家则实施全面禁令。了解主要监管方法有助于你应对合规要求,并就在哪里运营或交易做出明智的决定。</p>",
+			"united_states": {
+				"title": "美国:多机构方法",
+				"content": "<p>美国拥有复杂、分散的监管框架,多个机构声称对加密货币的不同方面拥有管辖权。</p><p><strong>SEC(证券交易委员会):</strong></p><ul><li><strong>管辖权:</strong>监管被视为证券的加密资产</li><li><strong>霍威测试:</strong>根据投资金钱、共同企业、利润预期和他人努力来确定代币是否为证券</li><li><strong>执法:</strong>已对数百个未经注册证券发行的项目提起诉讼</li><li><strong>近期行动:</strong>针对 Ripple 的诉讼(有利和解)、Coinbase、Kraken、Binance.US</li></ul><p><strong>CFTC(商品期货交易委员会):</strong></p><ul><li><strong>管辖权:</strong>监管加密商品(比特币、以太坊)和衍生品</li><li><strong>执法:</strong>专注于欺诈、操纵和未注册衍生品交易所</li><li><strong>立场:</strong>普遍被视为比 SEC 更友好</li></ul><p><strong>FinCEN(金融犯罪执法网络):</strong></p><ul><li><strong>AML/KYC 要求:</strong>加密货币企业必须注册为货币服务企业(MSB)</li><li><strong>旅行规则:</strong>要求交易所共享超过 3,000 美元交易的客户信息</li><li><strong>报告:</strong>可疑活动报告(SAR)和货币交易报告(CTR)</li></ul><p><strong>州级监管:</strong></p><ul><li><strong>纽约 BitLicense:</strong>严格的许可制度,高合规成本</li><li><strong>怀俄明:</strong>加密友好法律,包括特殊目的存托机构(SPDI)</li><li><strong>货币传输许可:</strong>大多数州要求加密货币企业获得</li></ul><p><strong>主要挑战:</strong></p><ul><li>监管不确定性——大多数代币缺乏明确分类</li><li>机构立场冲突(SEC vs. CFTC)</li><li>通过监管执法而非明确规则制定</li><li>稳定币立法在国会待决</li></ul>"
+			},
+			"european_union": {
+				"title": "欧盟:MiCA 框架",
+				"content": "<p>欧盟采用了全面方法,推出了加密资产市场(MiCA),这是世界上第一个完整的加密货币监管框架。</p><p><strong>MiCA(加密资产市场)法规:</strong></p><ul><li><strong>生效时间:</strong>2024 年 6 月(分阶段实施)</li><li><strong>范围:</strong>涵盖加密资产服务提供商(CASP)、稳定币发行人和交易平台</li><li><strong>许可:</strong>欧盟范围内通行——一个成员国的许可在整个欧盟有效</li><li><strong>消费者保护:</strong>披露要求、市场滥用规则、托管义务</li></ul><p><strong>主要条款:</strong></p><ul><li><strong>稳定币:</strong>电子货币代币(EMT)和资产参考代币(ART)需要授权和储备</li><li><strong>CASP:</strong>必须获得授权,遵循审慎规则并提供透明度</li><li><strong>市场滥用:</strong>禁止内幕交易和操纵</li><li><strong>环境:</strong>披露共识机制的能源消耗</li></ul><p><strong>影响:</strong></p><ul><li>为合规项目创造监管确定性</li><li>设定全球标准(其他司法管辖区复制 MiCA)</li><li>进入门槛更高但更具合法性</li><li>由于合规成本,一些项目可能退出欧盟市场</li></ul><p><strong>成员国实施:</strong></p><ul><li><strong>德国(BaFin):</strong>加密托管许可已建立</li><li><strong>法国(AMF):</strong>服务提供商的 PSAN 注册制度</li><li><strong>荷兰(DNB/AFM):</strong>CASP 的注册和监督</li></ul><p><strong>相关框架:</strong></p><ul><li><strong>资金转移法规(TFR):</strong>加密货币交易的旅行规则</li><li><strong>AMLD6:</strong>涵盖加密货币的反洗钱指令</li><li><strong>DLT 试点制度:</strong>代币化证券的沙盒</li></ul>"
+			},
+			"asia_pacific": {
+				"title": "亚太地区:多样化方法",
+				"content": "<p>亚洲拥有最多样化的监管格局,从高度支持的制度到全面禁令。</p><p><strong>新加坡(MAS - 新加坡金融管理局):</strong></p><ul><li><strong>支付服务法:</strong>数字支付代币(DPT)服务需要许可</li><li><strong>方法:</strong>明确规则,创新友好但强有力的 AML/CFT 执法</li><li><strong>稳定币:</strong>稳定币监管新框架(储备要求)</li><li><strong>地位:</strong>亚洲领先的加密货币中心</li></ul><p><strong>香港(SFC 和 HKMA):</strong></p><ul><li><strong>VASP 许可:</strong>交易所的虚拟资产服务提供商制度</li><li><strong>零售准入:</strong>现在允许许可代币的零售交易</li><li><strong>稳定币:</strong>HKMA 正在开发监管框架</li><li><strong>战略:</strong>定位为 Web3 中心与新加坡竞争</li></ul><p><strong>日本(JFSA - 金融服务厅):</strong></p><ul><li><strong>历史:</strong>第一个监管加密货币交易所的主要司法管辖区(2017)</li><li><strong>交易所注册:</strong>严格要求,定期检查</li><li><strong>稳定币:</strong>最近的框架允许银行发行稳定币</li><li><strong>方法:</strong>在 Mt. Gox 崩溃后专注于消费者保护</li></ul><p><strong>韩国(FSC):</strong></p><ul><li><strong>VASP 注册:</strong>在韩国运营的交易所必须注册</li><li><strong>旅行规则:</strong>对超过 100 万韩元(约 750 美元)的交易实施</li><li><strong>实名账户:</strong>法币入金需要银行账户</li><li><strong>近期:</strong>对 DeFi 和 NFT 的审查日益严格</li></ul><p><strong>阿联酋(迪拜 VARA 和阿布扎比 ADGM):</strong></p><ul><li><strong>迪拜 VARA:</strong>全面的 VASP 框架,加密友好</li><li><strong>ADGM:</strong>具有数字资产法规的金融自由区</li><li><strong>战略:</strong>通过明确规则和税收优惠吸引加密货币企业</li></ul><p><strong>澳大利亚(ASIC):</strong></p><ul><li><strong>许可:</strong>关于加密特定许可制度的咨询</li><li><strong>当前:</strong>在现有金融服务法律下运营</li><li><strong>重点:</strong>消费者保护和托管要求</li></ul><p><strong>印度(RBI):</strong></p><ul><li><strong>不断演变的立场:</strong>以前敌对,现在正在开发框架</li><li><strong>税收:</strong>加密收益 30% 税,转账 1% TDS</li><li><strong>CBDC:</strong>数字卢比试点已启动</li></ul>"
+			}
+		},
+
+		"key_concepts": {
+			"title": "关键监管概念",
+			"content": "<p>了解基本监管概念有助于你应对合规要求并评估各司法管辖区的法律风险。</p>",
+			"securities_vs_commodities": {
+				"title": "证券与商品分类",
+				"content": "<p>最重要的监管问题之一是加密资产是证券、商品还是其他东西。这种分类决定了哪个监管机构拥有管辖权以及适用哪些规则。</p><p><strong>证券(美国 SEC 管辖):</strong></p><ul><li><strong>霍威测试:</strong>来自 1946 年最高法院案例的四部分测试<ol><li>投资金钱</li><li>在共同企业中</li><li>期望获得利润</li><li>来自他人的努力</li></ol></li><li><strong>如果全部满足:</strong>它是证券,需要 SEC 注册或豁免</li><li><strong>大多数代币:</strong>在筹款阶段有被归类为证券的风险</li></ul><p><strong>证券分析示例:</strong></p><ul><li><strong>启动前代币销售:</strong>几乎肯定是证券(投资者期望从团队努力中获利)</li><li><strong>充分去中心化:</strong>可能不再是证券(没有可识别的群体,其努力推动价值)</li><li><strong>比特币/以太坊:</strong>SEC 已表示这些已充分去中心化,不是证券</li></ul><p><strong>商品(美国 CFTC 管辖):</strong></p><ul><li><strong>定义:</strong>可以交易的商品、物品、服务、权利、利益</li><li><strong>CFTC 观点:</strong>比特币和许多加密资产是商品</li><li><strong>CFTC 管辖权:</strong>欺诈、操纵和衍生品交易</li><li><strong>更宽松的监管:</strong>商品面临的限制少于证券</li></ul><p><strong>MiCA 下的欧盟分类:</strong></p><ul><li><strong>电子货币代币(EMT):</strong>与法定货币挂钩的稳定币</li><li><strong>资产参考代币(ART):</strong>由一篮子资产支持的稳定币</li><li><strong>效用代币:</strong>提供对平台上商品/服务的访问</li><li><strong>证券代币:</strong>属于现有 MiFID II 框架,不属于 MiCA</li></ul><p><strong>实际影响:</strong></p><ul><li><strong>证券需要:</strong>注册、披露、投资者保护、交易限制</li><li><strong>商品允许:</strong>更灵活的交易,更少的披露要求</li><li><strong>大多数项目的目标:</strong>商品或效用代币分类以避免证券法</li></ul>"
+			},
+			"token_classification": {
+				"title": "代币分类和生命周期",
+				"content": "<p>代币的监管状态可能会随时间变化,基于其去中心化程度和营销方式。</p><p><strong>效用代币:</strong></p><ul><li><strong>定义:</strong>提供对产品或服务访问的代币</li><li><strong>监管状态:</strong>如果确实功能性且网络已运行,可能避免证券分类</li><li><strong>示例:</strong>FIL(Filecoin 存储)、BAT(Brave 浏览器奖励)</li><li><strong>风险:</strong>通常在效用存在之前营销,造成证券问题</li></ul><p><strong>治理代币:</strong></p><ul><li><strong>定义:</strong>授予协议治理投票权的代币</li><li><strong>监管灰色地带:</strong>如果持有者期望从治理参与中获利,可能是证券</li><li><strong>安全港:</strong>纯粹治理(无费用分享)可能不是证券</li><li><strong>示例:</strong>UNI、AAVE、COMP</li></ul><p><strong>稳定币:</strong></p><ul><li><strong>法币支持:</strong>可能被监管为电子货币或支付工具</li><li><strong>算法型:</strong>监管不确定性,一些司法管辖区考虑禁止</li><li><strong>MiCA 分类:</strong>EMT(法币支持)和 ART(资产支持)具有特定要求</li><li><strong>储备要求:</strong>必须持有 1:1 储备在安全、流动资产中</li></ul><p><strong>NFT(非同质化代币):</strong></p><ul><li><strong>一般观点:</strong>如果确实独特且可收藏,大多数 NFT 不是证券</li><li><strong>碎片化 NFT:</strong>如果所有权被分割成可替代份额,可能是证券</li><li><strong>NFT 基金/指数:</strong>根据美国法律可能是证券</li><li><strong>效用 NFT:</strong>提供访问或福利可能有不同待遇</li></ul><p><strong>去中心化之路:</strong></p><ul><li><strong>初始启动:</strong>通常是中心化的、团队驱动的(可能是证券)</li><li><strong>渐进式去中心化:</strong>逐渐将控制权分配给社区</li><li><strong>充分去中心化:</strong>没有单一方的努力推动价值(可能退出证券状态)</li><li><strong>因素:</strong>代币分配、治理参与、开发贡献者、基础设施</li></ul>"
+			},
+			"defi_regulation": {
+				"title": "DeFi 监管挑战",
+				"content": "<p>去中心化金融由于其无许可性质和缺乏中心化运营商而提出了独特的监管挑战。</p><p><strong>DeFi 的监管问题:</strong></p><ul><li><strong>谁负责?</strong>协议开发者、DAO、代币持有者、前端运营商?</li><li><strong>代码可以被监管吗?</strong>智能合约是开源的,一旦部署就无法停止</li><li><strong>证券法:</strong>流动性池代币是证券吗?收益农业呢?</li><li><strong>AML/KYC:</strong>当没有中心方时如何实施?</li></ul><p><strong>美国对 DeFi 的方法:</strong></p><ul><li><strong>SEC 执法:</strong>针对 DeFi 协议的开发者和 DAO</li><li><strong>Uniswap 调查:</strong>SEC 正在审查 UNI 是否为证券</li><li><strong>CFTC 行动:</strong>针对 DeFi 衍生品平台的执法(Ooki DAO 案例)</li><li><strong>Tornado Cash 制裁:</strong>OFAC 制裁智能合约地址,引发宪法问题</li></ul><p><strong>MiCA 下的欧盟 DeFi:</strong></p><ul><li><strong>范围:</strong>MiCA 适用于「服务提供商」,而非纯协议</li><li><strong>前端运营商:</strong>如果提供访问可能需要 CASP 许可</li><li><strong>代币发行人:</strong>DeFi 治理代币可能需要合规</li><li><strong>实施:</strong>仍由成员国确定</li></ul><p><strong>DeFi 合规策略:</strong></p><ul><li><strong>渐进式去中心化:</strong>从中心化开始,逐渐移交控制权</li><li><strong>地理限制:</strong>阻止来自高度监管司法管辖区的访问</li><li><strong>仅治理代币:</strong>避免费用分享以降低证券风险</li><li><strong>免责声明:</strong>明确沟通协议不是投资建议</li><li><strong>漏洞赏金和审计:</strong>展示对安全的承诺</li></ul><p><strong>新兴的 DeFi 法规:</strong></p><ul><li><strong>DeFi 旅行规则:</strong>一些司法管辖区探索将其应用于非托管平台的方法</li><li><strong>前端许可:</strong>要求 UI 访问 KYC,同时协议保持无许可</li><li><strong>稳定币储备:</strong>影响使用稳定币的 DeFi 协议的法规</li><li><strong>验证者要求:</strong>对质押和验证服务的潜在义务</li></ul>"
+			}
+		},
+
+		"compliance_requirements": {
+			"title": "用户和企业的合规要求",
+			"content": "<p>无论你是个人用户还是运营加密货币业务,了解合规要求都有助于你避免法律问题并保持良好状态。</p>",
+			"kyc_aml": {
+				"title": "KYC/AML 义务",
+				"content": "<p>了解你的客户(KYC)和反洗钱(AML)要求是全球加密货币监管的基石。</p><p><strong>KYC(了解你的客户):</strong></p><ul><li><strong>目的:</strong>验证用户身份以防止欺诈和洗钱</li><li><strong>要求:</strong><ul><li>完整法定姓名</li><li>出生日期</li><li>居住地址</li><li>政府签发的身份证(护照、驾照)</li><li>地址证明(水电费账单、银行对账单)</li><li>自拍或视频验证</li></ul></li><li><strong>增强 KYC:</strong>用于高风险客户或大额交易(资金来源、财富来源)</li></ul><p><strong>AML(反洗钱):</strong></p><ul><li><strong>客户尽职调查(CDD):</strong>持续监控客户交易</li><li><strong>交易监控:</strong>自动化系统标记可疑模式</li><li><strong>制裁筛查:</strong>对照 OFAC、联合国、欧盟制裁名单检查</li><li><strong>可疑活动报告(SAR):</strong>检测到异常活动时提交报告</li></ul><p><strong>谁必须合规:</strong></p><ul><li><strong>中心化交易所:</strong>几乎所有司法管辖区都需要完整的 KYC/AML</li><li><strong>托管钱包提供商:</strong>通常需要实施 KYC/AML</li><li><strong>加密 ATM:</strong>越来越多地受到 KYC 要求的约束</li><li><strong>OTC 柜台:</strong>必须验证大型交易者</li><li><strong>DeFi 协议:</strong>监管不确定性,但一些司法管辖区推动前端 KYC</li></ul><p><strong>地区差异:</strong></p><ul><li><strong>美国(FinCEN):</strong>加密货币企业必须注册为 MSB,实施完整的 AML 计划</li><li><strong>欧盟(AMLD5/6):</strong>加密服务提供商受与银行相同的 AML 规则约束</li><li><strong>新加坡(MAS):</strong>DPT 服务提供商必须遵守 AML/CFT 要求</li><li><strong>香港(SFC):</strong>VASP 被许可方必须遵循严格的 AML 程序</li></ul><p><strong>合规工具和解决方案:</strong></p><ul><li><strong>Chainalysis:</strong>用于交易监控和调查的区块链分析</li><li><strong>Elliptic:</strong>钱包筛查和制裁合规</li><li><strong>TRM Labs:</strong>风险评估和合规平台</li><li><strong>Sumsub:</strong>身份验证和 KYC 自动化</li><li><strong>Merkle Science:</strong>亚太市场的 AML 合规</li></ul><p><strong>对个人用户:</strong></p><ul><li>使用中心化交易所时期望 KYC</li><li>保留大额购买/销售的文档</li><li>准备好解释加密持有的来源</li><li>了解隐私和合规通常冲突</li></ul>"
+			},
+			"travel_rule": {
+				"title": "旅行规则",
+				"content": "<p>旅行规则要求虚拟资产服务提供商(VASP)在处理超过特定阈值的交易时共享客户信息。</p><p><strong>什么是旅行规则?</strong></p><ul><li><strong>起源:</strong>FATF 建议 16(最初针对银行,2019 年扩展到加密货币)</li><li><strong>要求:</strong>当 VASP 处理交易时,必须共享:<ul><li>发起人姓名和地址</li><li>受益人姓名和地址</li><li>交易金额</li><li>发起人账户或钱包地址</li></ul></li><li><strong>阈值:</strong>因司法管辖区而异(通常为 1,000 美元或等值)</li></ul><p><strong>实施挑战:</strong></p><ul><li><strong>技术:</strong>没有 VASP 间通信的标准协议</li><li><strong>隐私:</strong>跨境共享个人数据引发 GDPR 和隐私问题</li><li><strong>互操作性:</strong>不同的 VASP 使用不同的系统</li><li><strong>非托管钱包:</strong>不清楚规则如何适用于自托管交易</li></ul><p><strong>地区实施:</strong></p><ul><li><strong>美国(FinCEN):</strong>记录保存 3,000 美元阈值,可疑交易更低</li><li><strong>欧盟(资金转移法规):</strong>无阈值——所有交易必须共享信息</li><li><strong>新加坡(MAS):</strong>1,500 新元(约 1,100 美元)阈值</li><li><strong>日本(JFSA):</strong>严格实施并有详细指南</li><li><strong>韩国:</strong>100 万韩元(约 750 美元)阈值</li></ul><p><strong>旅行规则解决方案:</strong></p><ul><li><strong>Notabene:</strong>用于安全 VASP 间数据传输的领先旅行规则平台</li><li><strong>Sygna Bridge:</strong>旅行规则的合规协议</li><li><strong>Shyft Network:</strong>VASP 通信的信任框架</li><li><strong>OpenVASP:</strong>旅行规则合规的开放协议</li></ul><p><strong>对隐私的影响:</strong></p><ul><li><strong>匿名性降低:</strong>交易所之间的交易不再私密</li><li><strong>自托管解决方法:</strong>提取到个人钱包避免旅行规则</li><li><strong>非托管钱包提案:</strong>一些司法管辖区考虑将规则扩展到自托管</li><li><strong>隐私币:</strong>由于合规困难,越来越多地从交易所下架</li></ul><p><strong>未来发展:</strong></p><ul><li><strong>扩大范围:</strong>可能包括 DeFi、NFT 平台和其他服务</li><li><strong>降低阈值:</strong>一些司法管辖区完全取消阈值</li><li><strong>自托管限制:</strong>欧盟和美国提出的限制非托管钱包转账的规则</li></ul>"
+			},
+			"reporting_requirements": {
+				"title": "报告和披露要求",
+				"content": "<p>加密货币用户和企业面临各种报告义务,具体取决于司法管辖区和活动级别。</p><p><strong>对企业:</strong></p><ul><li><strong>货币服务企业(MSB)注册:</strong>在美国和许多司法管辖区是必需的</li><li><strong>可疑活动报告(SAR):</strong>在检测到潜在洗钱或欺诈时提交</li><li><strong>货币交易报告(CTR):</strong>超过 10,000 美元的现金交易需要(美国)</li><li><strong>大额交易报告:</strong>根据司法管辖区有不同的阈值</li><li><strong>受益所有权报告:</strong>披露实体的最终所有者</li></ul><p><strong>对个人 - 美国:</strong></p><ul><li><strong>FBAR(外国银行账户报告):</strong><ul><li>如果外国加密账户超过 10,000 美元则需要</li><li>4 月 15 日到期(自动延期至 10 月)</li><li>不提交的处罚很严重</li></ul></li><li><strong>表格 8949:</strong>报告每笔加密销售/交易以计算资本利得</li><li><strong>附表 C:</strong>用于作为业务的挖矿或交易</li><li><strong>表格 1040 加密问题:</strong>必须回答你是否接收、出售或交换虚拟货币</li></ul><p><strong>对个人 - 欧盟:</strong></p><ul><li><strong>DAC8(行政合作指令):</strong><ul><li>加密平台必须向税务机关报告用户交易</li><li>2026 年生效(涵盖 2025 年交易)</li><li>成员国之间的自动信息交换</li></ul></li><li><strong>国家报告:</strong>因成员国而异(一些要求申报持有)</li></ul><p><strong>对个人 - 其他司法管辖区:</strong></p><ul><li><strong>英国:</strong>在自我评估税务申报中报告</li><li><strong>澳大利亚:</strong>在税务申报中申报,myTax 自动导入一些交易所数据</li><li><strong>加拿大:</strong>在 T1 申报中报告,区分业务与资本利得</li><li><strong>新加坡:</strong>如果作为业务交易则报告(资本利得不征税)</li></ul><p><strong>报告内容:</strong></p><ul><li>获得和处置日期</li><li>加密货币类型</li><li>数量</li><li>交易时的当地货币价值</li><li>目的(投资、业务、个人使用)</li><li>对企业:客户信息、交易详情</li></ul><p><strong>记录保存最佳实践:</strong></p><ul><li>保留所有交易所的详细交易历史</li><li>保存钱包地址和交易哈希</li><li>记录每次购买的成本基础</li><li>追踪你自己钱包之间的转账</li><li>至少保存记录 6-7 年(因司法管辖区而异)</li><li>使用加密税务软件自动追踪</li></ul>"
+			}
+		},
+
+		"tax_implications": {
+			"title": "加密货币税务影响",
+			"content": "<p>税收是加密货币合规中最复杂的方面之一。几乎所有司法管辖区都以某种形式对加密货币征税,规则差异很大。</p>",
+			"capital_gains": {
+				"title": "资本利得税",
+				"content": "<p>在大多数司法管辖区,出售或交易加密货币会触发任何利润的资本利得税。</p><p><strong>资本利得如何运作:</strong></p><ul><li><strong>成本基础:</strong>你为加密货币支付的价格(包括费用)</li><li><strong>收益:</strong>你出售它的价格(减去费用)</li><li><strong>资本利得/损失:</strong>收益 - 成本基础</li></ul><p><strong>美国:</strong></p><ul><li><strong>短期:</strong>持有 <1 年,作为普通收入征税(10-37%)</li><li><strong>长期:</strong>持有 >1 年,优惠税率(根据收入为 0%、15% 或 20%)</li><li><strong>应税事件:</strong><ul><li>将加密货币出售为法币</li><li>将一种加密货币交易为另一种</li><li>使用加密货币购买商品/服务</li><li>从分叉/空投接收加密货币(如果你有控制权)</li></ul></li><li><strong>成本基础方法:</strong>FIFO(先进先出)、LIFO、特定识别、HIFO</li></ul><p><strong>欧盟:</strong></p><ul><li><strong>因成员国而异:</strong><ul><li><strong>德国:</strong>持有 >1 年免税,否则收入税</li><li><strong>葡萄牙:</strong>个人无资本利得税(截至 2024 年)</li><li><strong>法国:</strong>加密收益 30% 统一税(PFU)</li><li><strong>荷兰:</strong>对假定收益征收财富税(非实际)</li></ul></li><li><strong>加密到加密:</strong>大多数国家视为应税事件</li></ul><p><strong>英国:</strong></p><ul><li><strong>资本利得税:</strong>根据收入为 10% 或 20%(2024 年超过 £12,300 免税额)</li><li><strong>当日规则:</strong>当日买卖的股份使用当日成本基础</li><li><strong>床和早餐:</strong>30 天规则以防止洗售</li></ul><p><strong>其他司法管辖区:</strong></p><ul><li><strong>新加坡:</strong>无资本利得税(除非作为业务交易)</li><li><strong>瑞士:</strong>私人投资者不对资本利得征税(适用财富税)</li><li><strong>澳大利亚:</strong>持有 >12 个月可获得 50% CGT 折扣</li><li><strong>加拿大:</strong>50% 的资本利得计入收入</li><li><strong>日本:</strong>加密利润的累进税最高达 55%</li></ul><p><strong>税收损失收割:</strong></p><ul><li>出售亏损头寸以抵消收益</li><li>美国:加密货币没有洗售规则(尚未),可以立即回购</li><li>一些国家对损失扣除有限制</li></ul>"
+			},
+			"income_tax": {
+				"title": "作为收入的加密货币",
+				"content": "<p>作为支付、挖矿奖励、质押奖励或收益接收的加密货币通常被视为普通收入。</p><p><strong>加密收入类型:</strong></p><ul><li><strong>挖矿:</strong>接收时挖出币的公允市值</li><li><strong>质押奖励:</strong>接收代币时的价值(美国)或出售时(一些司法管辖区)</li><li><strong>工资/付款:</strong>接收时的公允市值</li><li><strong>空投:</strong>接收时的价值(如果你有支配和控制权)</li><li><strong>推荐奖金:</strong>接收时奖金的价值</li><li><strong>收益农业/流动性挖矿:</strong>接收代币的价值</li></ul><p><strong>美国处理:</strong></p><ul><li><strong>普通收入:</strong>所有加密收入按常规收入税率征税(10-37%)</li><li><strong>自雇税:</strong>作为业务的挖矿和质押可能产生额外的 15.3% SE 税</li><li><strong>成本基础:</strong>收入价值成为未来资本利得计算的成本基础</li><li><strong>表格 1099:</strong>交易所可能为超过 600 美元的收入开具</li></ul><p><strong>挖矿特定规则:</strong></p><ul><li><strong>爱好与业务:</strong><ul><li><strong>爱好:</strong>收入应纳税,费用扣除有限</li><li><strong>业务:</strong>全额费用扣除,但须缴纳 SE 税</li></ul></li><li><strong>可扣除费用:</strong>硬件、电费、矿池费用、互联网、空间租金</li><li><strong>折旧:</strong>挖矿设备可以折旧</li></ul><p><strong>质押奖励辩论:</strong></p><ul><li><strong>IRS 立场:</strong>奖励在接收时是收入</li><li><strong>纳税人挑战:</strong>一些人认为在出售前不是收入(像种植农作物)</li><li><strong>Jarrett 案:</strong>夫妇获得退款,认为质押奖励在出售前不是收入;IRS 没有反驳</li><li><strong>当前状态:</strong>IRS 没有发布明确指南;大多数税务专家建议报告为收入</li></ul><p><strong>国际差异:</strong></p><ul><li><strong>英国:</strong>挖矿/质押被视为收入(杂项收入或交易收入)</li><li><strong>德国:</strong>挖矿是业务收入;质押奖励将持有期延长至 10 年以获得免税状态</li><li><strong>新加坡:</strong>作为业务的挖矿/交易是应纳税收入</li><li><strong>葡萄牙:</strong>专业挖矿应纳税;临时挖矿可能免税</li></ul>"
+			},
+			"defi_transactions": {
+				"title": "DeFi 税务处理",
+				"content": "<p>DeFi 交易产生了许多司法管辖区尚未明确解决的复杂税务场景。</p><p><strong>常见 DeFi 税务问题:</strong></p><ul><li><strong>交换代币:</strong>在 Uniswap 上的交换是应税事件吗?在大多数司法管辖区<strong>是</strong>(处置一种资产,获得另一种)</li><li><strong>提供流动性:</strong>存入流动性池应纳税吗?<ul><li><strong>美国观点:</strong>可能应纳税,因为将代币处置为 LP 代币</li><li><strong>替代观点:</strong>直到 LP 代币赎回才应纳税(类似于同类交换)</li><li><strong>最安全的方法:</strong>报告为应税事件</li></ul></li><li><strong>无常损失:</strong>可以申报为损失吗?<ul><li>棘手——只有在从池中提取时才实现</li><li>可能抵消费用收入的收益</li></ul></li><li><strong>借贷平台:</strong>存入 Aave 或 Compound 应纳税吗?<ul><li>存款:可能不应纳税(类似于银行存款)</li><li>接收 aTokens/cTokens:可能是应纳税交换</li><li>赚取的利息:接收时作为收入应纳税</li></ul></li></ul><p><strong>收益农业复杂性:</strong></p><ul><li><strong>多代币奖励:</strong>接收的每个代币都是公允市值的收入</li><li><strong>自动复利:</strong>每次复利可能产生应税事件</li><li><strong>代币索赔:</strong>索赔时的收入(即使未出售)</li><li><strong>锁定奖励:</strong>时间问题——可索赔时还是解锁时?</li></ul><p><strong>NFT 税务处理:</strong></p><ul><li><strong>购买 NFT:</strong>不应纳税,但用加密货币支付是(处置加密货币)</li><li><strong>出售 NFT:</strong>销售的资本利得</li><li><strong>创建/铸造 NFT:</strong>出售前不应纳税</li><li><strong>NFT 版税:</strong>接收时的收入</li><li><strong>成本基础:</strong>购买价格加上 gas 费用</li></ul><p><strong>Gas 费用和交易成本:</strong></p><ul><li><strong>增加成本基础:</strong>出售时减少资本利得</li><li><strong>业务费用:</strong>如果运营加密货币业务,gas 费用是可扣除费用</li><li><strong>失败的交易:</strong>Gas 仍然支付,可以申报为损失或费用</li></ul><p><strong>跨链桥:</strong></p><ul><li><strong>包装代币:</strong>BTC → WBTC 应纳税吗?<ul><li><strong>IRS 不明确:</strong>技术上是不同的代币,可能应纳税</li><li><strong>风险:</strong>为安全起见,视为应纳税</li></ul></li><li><strong>将 ETH 桥接到 L2:</strong>可能不应纳税(相同代币,不同链)</li></ul><p><strong>DeFi 的记录保存:</strong></p><ul><li>追踪所有交换、LP 存款/提取、借贷、收益</li><li>从钱包导出交易历史(MetaMask、Rabby 等)</li><li>使用支持 DeFi 的工具:Koinly、CoinTracker、ZenLedger、TokenTax</li><li>保存合约地址和交易哈希</li><li>记录每笔交易时的公允市值</li></ul><p><strong>简化与特定识别:</strong></p><ul><li><strong>FIFO(先进先出):</strong>假设最早购买的代币首先出售</li><li><strong>LIFO(后进先出):</strong>假设最近购买的代币首先出售</li><li><strong>HIFO(最高进先出):</strong>使用最高成本基础最小化收益</li><li><strong>特定 ID:</strong>识别出售的确切代币(需要详细记录)</li></ul>"
+			}
+		},
+
+		"custody_implications": {
+			"title": "自托管与托管服务",
+			"content": "<p>你存储加密货币的地方除了安全考虑外,还具有重要的法律和监管影响。</p>",
+			"self_custody": {
+				"title": "自托管法律影响",
+				"content": "<p>自托管意味着你控制你的私钥——「不是你的钥匙,不是你的币」。这提供了最大的主权,但也带来了法律考虑。</p><p><strong>优势:</strong></p><ul><li><strong>真正的所有权:</strong>你拥有完全控制权,没有交易对手风险</li><li><strong>隐私:</strong>来自你钱包的交易不需要身份验证</li><li><strong>抗审查:</strong>没有人可以冻结你的资金或阻止交易</li><li><strong>无 KYC:</strong>可以使用 DeFi 协议而不透露身份</li></ul><p><strong>法律考虑:</strong></p><ul><li><strong>仍然应纳税:</strong>自托管不免除你的税务义务</li><li><strong>报告要求:</strong>一些司法管辖区要求披露持有(例如法国)</li><li><strong>遗产规划:</strong>如果你发生意外,你需要一个让继承人访问资金的计划</li><li><strong>法律发现:</strong>法院可以命令你披露和交出自托管资产</li></ul><p><strong>关于自托管的拟议限制:</strong></p><ul><li><strong>欧盟非托管钱包规则(推迟):</strong>将要求对超过 €1,000 的自托管转账进行验证</li><li><strong>FinCEN 拟议规则(2020,待决):</strong>将要求报告超过 10,000 美元的自托管交易</li><li><strong>理由:</strong>防止洗钱和恐怖主义融资</li><li><strong>批评:</strong>侵犯隐私,难以执行,惩罚合法用户</li></ul><p><strong>自托管最佳实践:</strong></p><ul><li>对重要持仓使用硬件钱包(Ledger、Trezor)</li><li>使用金属备份或多签名解决方案保护助记词</li><li>有继承计划(考虑 Casa 等服务或加密说明)</li><li>保留存入钱包的记录(以建立成本基础)</li><li>注意大额转账可能触发交易所报告</li></ul><p><strong>机构自托管:</strong></p><ul><li>银行和机构越来越多地提供合格托管</li><li>银行托管加密货币的监管批准(美国 OCC 2020 年解释)</li><li>机构级解决方案:Fireblocks、Copper、Anchorage Digital</li></ul>"
+			},
+			"custodial_services": {
+				"title": "托管服务和法律保护",
+				"content": "<p>使用托管服务意味着第三方持有你的加密货币。这既有保护也有风险。</p><p><strong>托管服务类型:</strong></p><ul><li><strong>中心化交易所:</strong>Coinbase、Kraken、Binance(为你持有密钥)</li><li><strong>合格托管人:</strong>被授权托管加密货币的受监管实体(Coinbase Custody、Anchorage)</li><li><strong>经纪自营商:</strong>现在提供加密货币的传统经纪商(Fidelity、Robinhood)</li><li><strong>ETF 托管人:</strong>持有比特币/以太坊 ETF 加密货币的机构</li></ul><p><strong>监管保护(美国):</strong></p><ul><li><strong>合格托管:</strong>投资顾问必须对客户资产使用合格托管人</li><li><strong>破产保护:</strong>不清楚交易所持有的加密货币是客户财产还是破产财产的一部分</li><li><strong>FDIC 保险:</strong>不涵盖加密货币(常见误解)</li><li><strong>私人保险:</strong>一些托管人携带保险,但覆盖范围有限</li></ul><p><strong>各司法管辖区的托管法规:</strong></p><ul><li><strong>美国:</strong><ul><li>需要州货币传输许可或信托章程</li><li>纽约 BitLicense 用于纽约的托管服务</li><li>OCC 允许国家银行提供加密托管</li></ul></li><li><strong>欧盟(MiCA):</strong><ul><li>加密托管是受监管的 CASP 活动</li><li>必须隔离客户资产</li><li>保险或资本要求</li></ul></li><li><strong>德国:</strong><ul><li>加密托管需要 BaFin 许可</li><li>严格的资本和组织要求</li></ul></li><li><strong>新加坡:</strong><ul><li>支付服务法下的 DPT 托管服务</li><li>必须实施保障措施并隔离客户资产</li></ul></li></ul><p><strong>托管服务的风险:</strong></p><ul><li><strong>交易对手风险:</strong>交易所可能破产(FTX、Mt. Gox、Celsius)</li><li><strong>黑客攻击:</strong>交易所是黑客的高价值目标</li><li><strong>监管行动:</strong>政府可以扣押交易所资产或冻结账户</li><li><strong>服务条款:</strong>交易所可以更改规则、冻结账户或下架资产</li></ul><p><strong>何时使用托管服务:</strong></p><ul><li><strong>活跃交易:</strong>执行更快,比进出自托管更容易</li><li><strong>机构客户:</strong>可能需要合格托管人才能符合监管合规</li><li><strong>易用性:</strong>对初学者更简单,如果忘记密码有恢复选项</li><li><strong>税务报告:</strong>托管人提供税表(美国的 1099)</li></ul><p><strong>混合方法:</strong></p><ul><li>在交易所保留交易资金</li><li>将长期持有转移到自托管</li><li>使用交易所进行法币入/出金</li><li>定期将资金从交易所扫到冷存储</li></ul>"
+			}
+		},
+
+		"staying_compliant": {
+			"title": "保持合规的实用策略",
+			"content": "<p>合规不必令人不知所措。通过正确的工具和习惯,你可以站在法律的正确一边,同时享受加密货币的好处。</p>",
+			"tracking_tools": {
+				"title": "交易追踪工具",
+				"content": "<p>自动化工具使追踪交易和计算税款比手动电子表格容易得多。</p><p><strong>领先的加密税务软件:</strong></p><ul><li><strong>Koinly:</strong><ul><li>支持 700+ 交易所、钱包和 DeFi 协议</li><li>通过 API 或 CSV 自动导入</li><li>处理复杂场景:DeFi、NFT、保证金交易</li><li>为 100+ 个国家生成税务报告</li><li>定价:免费预览,$49-$279/年用于报告</li></ul></li><li><strong>CoinTracker:</strong><ul><li>实时投资组合追踪 + 税务计算</li><li>支持主要 DeFi 协议和 NFT</li><li>与 TurboTax 合作无缝申报</li><li>定价:< 25 笔交易免费,$59-$2,999/年</li></ul></li><li><strong>TaxBit:</strong><ul><li>企业级(主要交易所用于 1099)</li><li>个人消费者产品</li><li>强大的 DeFi 支持</li><li>定价:简单免费,复杂付费计划</li></ul></li><li><strong>ZenLedger:</strong><ul><li>与 TurboTax、TaxAct、H&R Block 集成</li><li>审计跟踪和记录保存功能</li><li>支持 DeFi 和 NFT</li><li>定价:$49-$399/年</li></ul></li></ul><p><strong>区块链分析(用于企业):</strong></p><ul><li><strong>Chainalysis:</strong>企业 AML 合规、交易监控、调查</li><li><strong>Elliptic:</strong>钱包筛查、制裁合规、风险评分</li><li><strong>TRM Labs:</strong>风险情报平台、监管报告</li><li><strong>Merkle Science:</strong>专注于亚洲的合规和分析</li></ul><p><strong>这些工具的功能:</strong></p><ul><li>从交易所和钱包自动导入交易</li><li>使用你首选的会计方法计算成本基础</li><li>识别应税事件(销售、交易、收入)</li><li>为你的司法管辖区生成税表和报告</li><li>处理复杂场景(DeFi、质押、空投)</li><li>提供审计跟踪文档</li></ul><p><strong>选择工具:</strong></p><ul><li>检查它是否支持你的交易所和钱包</li><li>验证它处理你司法管辖区的税收规则</li><li>如果你使用协议,测试 DeFi 支持</li><li>考虑你是否需要投资组合追踪或仅税务</li><li>根据你的交易量比较定价</li></ul>"
+			},
+			"record_keeping": {
+				"title": "记录保存最佳实践",
+				"content": "<p>良好的记录是你在税务审计中的最佳防御,对准确报告至关重要。</p><p><strong>保留内容:</strong></p><ul><li><strong>交易所记录:</strong><ul><li>交易历史(CSV 导出)</li><li>交易确认</li><li>存款和提款记录</li><li>质押和赚取计划记录</li></ul></li><li><strong>钱包记录:</strong><ul><li>你拥有的地址</li><li>存款/提款的交易哈希</li><li>DeFi 互动记录(交换、LP、借贷)</li><li>NFT 购买收据和销售</li></ul></li><li><strong>成本基础文档:</strong><ul><li>显示支付价格的购买收据</li><li>获得日期和时间</li><li>支付的费用(交易所费用、网络费用)</li><li>资金来源(银行转账记录)</li></ul></li><li><strong>收入文档:</strong><ul><li>矿池支付</li><li>质押奖励记录</li><li>空投通知和价值</li><li>收到的商品/服务付款</li></ul></li></ul><p><strong>保留记录多长时间:</strong></p><ul><li><strong>美国 IRS:</strong>申报后 3 年(如果大量少报则 7 年)</li><li><strong>英国 HMRC:</strong>6 年</li><li><strong>加拿大 CRA:</strong>6 年</li><li><strong>澳大利亚 ATO:</strong>5 年</li><li><strong>最佳实践:</strong>永久保留(存储便宜,内心平静很有价值)</li></ul><p><strong>备份策略:</strong></p><ul><li>定期从交易所下载 CSV 导出(以防交易所关闭)</li><li>备份到云存储(Google Drive、Dropbox)</li><li>外部硬盘上的本地加密备份</li><li>打印关键文档以形成纸质记录</li><li>使用税务软件维护永久记录</li></ul><p><strong>组织记录:</strong></p><ul><li><strong>按年份:</strong>每个税年的文件夹</li><li><strong>按类别:</strong>交易、质押、挖矿、DeFi、NFT</li><li><strong>电子表格:</strong>包含日期、金额、价值的所有交易主日志</li><li><strong>钱包映射:</strong>记录你拥有的钱包及其用途</li></ul><p><strong>要避免的常见错误:</strong></p><ul><li>在交易所删除旧记录之前忘记导出数据</li><li>不追踪你自己钱包之间的转账(如果没有记录看起来应纳税)</li><li>当交易所关闭或被黑时丢失记录</li><li>不记录空投或小额收入事件</li><li>混合个人和业务交易而没有明确记录</li></ul>"
+			},
+			"legal_resources": {
+				"title": "法律资源和专业帮助",
+				"content": "<p>虽然工具有助于追踪,但复杂情况可能需要专业的法律或税务建议。</p><p><strong>何时咨询专业人士:</strong></p><ul><li>大额持有或高交易量</li><li>运营加密货币业务(挖矿、交易、开发)</li><li>收到税务通知或审计</li><li>复杂的 DeFi 策略(收益农业、套利)</li><li>国际税务问题(外籍人士、多个司法管辖区)</li><li>大量加密持有的遗产规划</li></ul><p><strong>寻找加密专业人士:</strong></p><ul><li><strong>CPA 和税务律师:</strong>寻找加密特定经验</li><li><strong>目录:</strong>CoinTracker 税务专业网络、Koinly 的 CPA 目录</li><li><strong>加密法律事务所:</strong>Anderson Kill、Perkins Coie、Cooley(用于企业)</li><li><strong>加密 CPA:</strong>Gordon Law Group、Camuso CPA、Crypto Tax Girl</li></ul><p><strong>教育资源:</strong></p><ul><li><strong>Coin Center:</strong>非营利研究和政策倡导<ul><li>关于加密法律和政策的出版物</li><li>监管分析和评论</li></ul></li><li><strong>Blockchain Association:</strong>美国行业贸易团体<ul><li>政策文件和倡导</li><li>监管更新和指导</li></ul></li><li><strong>a16z Crypto Policy Hub:</strong><ul><li>关于加密监管的研究论文</li><li>监管提案和框架</li></ul></li><li><strong>Coinbase Legal Hub:</strong><ul><li>用户合规资源</li><li>监管新闻和更新</li></ul></li></ul><p><strong>保持信息灵通:</strong></p><ul><li><strong>Twitter/X:</strong>关注监管机构(SEC、CFTC)、律师、政策专家</li><li><strong>通讯:</strong>The Block Policy、Coinbase Policy Newsletter</li><li><strong>播客:</strong>Unchained(Laura Shin)、The Breakdown(NLW)</li><li><strong>监管网站:</strong>订阅 SEC、CFTC、FinCEN 更新</li></ul><p><strong>倡导和参与:</strong></p><ul><li>加入行业协会(Blockchain Association、Chamber of Digital Commerce)</li><li>参与拟议法规的公开评论期</li><li>支持加密友好的政治候选人</li><li>教育政策制定者(给代表的信)</li></ul><p><strong>要避免的危险信号:</strong></p><ul><li>承诺「法律漏洞」以避免所有加密税的税务专业人士</li><li>建议干脆不报告加密货币(非法且有风险)</li><li>使用不受监管的离岸交易所「隐藏」税务机关</li><li>不熟悉加密货币而给出通用建议的专业人士</li></ul>"
+			}
+		},
+
+		"future_outlook": {
+			"title": "加密监管的未来",
+			"content": "<p>加密监管正在快速发展。了解新兴趋势有助于你为可能影响你持有和活动的变化做好准备。</p>",
+			"emerging_regulations": {
+				"title": "新兴监管趋势",
+				"content": "<p>全球范围内即将出现几个重大监管发展。</p><p><strong>稳定币监管:</strong></p><ul><li><strong>美国立法待决:</strong>多项法案创建稳定币的联邦框架</li><li><strong>储备要求:</strong>与高质量流动资产 1:1 支持</li><li><strong>发行人许可:</strong>稳定币发行人必须是受监管实体(银行或有章程的非银行)</li><li><strong>赎回权:</strong>用户必须能够以面值赎回</li><li><strong>算法稳定币:</strong>可能面临限制或禁令(欧盟 MiCA 禁止无支持的稳定币)</li></ul><p><strong>DeFi 监管尝试:</strong></p><ul><li><strong>识别负责方:</strong>谁对自主协议负责?</li><li><strong>前端监管:</strong>要求 UI 访问 KYC,同时保持协议无许可</li><li><strong>DAO 责任:</strong>将 DAO 视为一般合伙企业(使代币持有者承担责任)</li><li><strong>智能合约披露:</strong>要求审计和风险披露</li></ul><p><strong>气候和能源法规:</strong></p><ul><li><strong>欧盟:</strong>MiCA 中的能源消耗披露要求</li><li><strong>挖矿限制:</strong>一些司法管辖区禁止或限制 PoW 挖矿</li><li><strong>绿色加密激励:</strong>对 PoS 和低能耗链的优惠待遇</li></ul><p><strong>全球协调:</strong></p><ul><li><strong>FSB(金融稳定委员会):</strong>协调国际加密监管</li><li><strong>FATF:</strong>扩大加密货币的 AML/CFT 指南</li><li><strong>IOSCO:</strong>加密资产的证券监管机构协调</li><li><strong>目标:</strong>防止监管套利并创建一致的全球标准</li></ul>"
+			},
+			"cbdcs": {
+				"title": "中央银行数字货币(CBDC)",
+				"content": "<p>超过 130 个国家正在探索 CBDC——政府发行的数字货币,可能重塑货币并与私人加密货币竞争。</p><p><strong>什么是 CBDC?</strong></p><ul><li><strong>定义:</strong>中央银行发行的法定货币的数字形式</li><li><strong>中心化:</strong>与比特币不同,由政府控制</li><li><strong>可编程:</strong>可以执行政策(到期日期、使用限制)</li><li><strong>账户与代币:</strong>基于账户(如银行账户)或基于代币(如现金)</li></ul><p><strong>主要 CBDC 发展:</strong></p><ul><li><strong>中国(数字人民币/e-CNY):</strong><ul><li>最先进,2.6 亿+ 钱包</li><li>在多个城市试点,用于政府工资</li><li>旨在国内使用和跨境贸易</li><li>隐私问题——政府可以追踪所有交易</li></ul></li><li><strong>欧盟(数字欧元):</strong><ul><li>ECB 准备启动(预计 2025-2028)</li><li>专注于隐私保护和离线功能</li><li>旨在补充现金,而非取代现金</li><li>持有限制以防止银行去中介化</li></ul></li><li><strong>美国(数字美元):</strong><ul><li>美联储研究正在进行,没有启动的具体计划</li><li>由于隐私和政府过度干预的担忧而受到政治反对</li><li><strong>批发 CBDC(银行间)比零售更有可能</li></ul></li><li><strong>印度(数字卢比):</strong><ul><li>2022 年 12 月启动试点</li><li>专注于金融包容和汇款</li></ul></li></ul><p><strong>对加密货币的影响:</strong></p><ul><li><strong>竞争:</strong>CBDC 与稳定币竞争支付</li><li><strong>监管:</strong>政府可能限制私人稳定币以促进 CBDC 采用</li><li><strong>隐私侵蚀:</strong>CBDC 实现完全交易监控</li><li><strong>可编程货币:</strong>政府可以限制你可以购买的内容或强加到期日期</li><li><strong>比特币的角色:</strong>可能加强抗审查、私密加密货币的理由</li></ul><p><strong>资源:</strong></p><ul><li><strong>Atlantic Council CBDC Tracker:</strong>全球 CBDC 发展的交互式地图</li><li><strong>BIS(国际清算银行):</strong>关于 CBDC 设计的研究和报告</li></ul>"
+			},
+			"defi_trends": {
+				"title": "DeFi 监管趋势",
+				"content": "<p>DeFi 提出了最具挑战性的监管问题。预计未来几年会有重大发展。</p><p><strong>新兴的监管方法:</strong></p><ul><li><strong>前端监管:</strong><ul><li>要求访问 DeFi UI 的 KYC</li><li>保持底层协议无许可</li><li>示例:Uniswap Labs 可能要求界面 KYC,但合约保持开放</li></ul></li><li><strong>DAO 法律地位:</strong><ul><li>拟议框架赋予 DAO 法律实体地位</li><li>限制不积极治理的代币持有者的责任</li><li>目前,DAO 有被视为一般合伙企业的风险(无限责任)</li></ul></li><li><strong>开发者责任:</strong><ul><li>关于协议开发者是否应对代码使用方式负责的辩论</li><li>Tornado Cash 案例:开发者因构建隐私工具而被捕</li><li>未决问题:发布代码是受保护的言论吗?</li></ul></li></ul><p><strong>合规 DeFi 策略:</strong></p><ul><li><strong>地理限制:</strong>从前端阻止美国/欧盟用户</li><li><strong>去中心化前端:</strong>IPFS 托管,无单一控制点</li><li><strong>有限的 DAO 治理:</strong>不要让代币持有者控制日常运营</li><li><strong>嵌入式合规:</strong>将 KYC/AML 构建到智能合约中(许可 DeFi)</li></ul><p><strong>许可 DeFi:</strong></p><ul><li><strong>定义:</strong>具有身份验证和访问控制的 DeFi 协议</li><li><strong>用例:</strong><ul><li>机构 DeFi(银行、基金)</li><li>受监管的稳定币和代币化证券</li><li>合规要求的司法管辖区</li></ul></li><li><strong>示例:</strong>Aave Arc(许可)、Compound Treasury、Maple Finance</li><li><strong>权衡:</strong>合规与无许可</li></ul><p><strong>可能的未来场景:</strong></p><ul><li><strong>分叉市场:</strong><ul><li>用于机构和受监管活动的合规、KYC'd DeFi</li><li>离岸或在加密友好司法管辖区的无许可 DeFi</li><li>用户根据需求和风险承受能力进行选择</li></ul></li><li><strong>协议级合规:</strong><ul><li>智能合约与去中心化身份(DID)集成</li><li>零知识证明在不透露身份的情况下实现 KYC</li><li>选择性披露允许在不牺牲隐私的情况下合规</li></ul></li><li><strong>监管沙盒:</strong><ul><li>司法管辖区为 DeFi 实验创建安全空间</li><li>测试新模式的限时豁免</li><li>示例:英国 FCA 沙盒、新加坡 MAS 沙盒</li></ul></li></ul><p><strong>需要关注的内容:</strong></p><ul><li>SEC/CFTC 针对 DeFi 协议的执法行动</li><li>美国关于 DeFi 的立法(可能在稳定币法案通过后)</li><li>欧盟实施 MiCA 的 DeFi 条款</li><li>定义开发者和 DAO 责任的法院案例</li></ul>"
+			}
+		}
+	},
+
+	"glossary": {
+		"kyc": {
+			"term": "KYC(了解你的客户)",
+			"definition": "金融法规要求的身份验证流程,用于确认用户身份并防止欺诈、洗钱和恐怖主义融资。"
+		},
+		"aml": {
+			"term": "AML(反洗钱)",
+			"definition": "旨在防止犯罪分子将非法获得的资金伪装成合法收入的法规和程序。包括交易监控、可疑活动报告和制裁筛查。"
+		},
+		"securities": {
+			"term": "证券",
+			"definition": "代表所有权(股票)、债务(债券)或所有权权利的金融工具。在加密货币中,由霍威测试确定:在共同企业中投资金钱,期望从他人努力中获利。"
+		},
+		"commodities": {
+			"term": "商品",
+			"definition": "可互换和可交易的基本商品或资产。CFTC 监管像比特币和以太坊这样的加密商品,它们面临比证券更宽松的监管。"
+		},
+		"mica": {
+			"term": "MiCA(加密资产市场)",
+			"definition": "欧盟针对加密资产的综合监管框架,涵盖服务提供商、稳定币和市场行为。2024 年生效,它创建了世界上第一个完整的加密监管制度。"
+		},
+		"travel_rule": {
+			"term": "旅行规则",
+			"definition": "FATF 建议 16,要求虚拟资产服务提供商(VASP)共享超过特定阈值(通常为 1,000 美元)的交易的发起人和受益人信息。"
+		},
+		"fatf": {
+			"term": "FATF(金融行动特别工作组)",
+			"definition": "制定反洗钱和反恐怖融资全球标准的国际组织,包括加密资产和 VASP 的指南。"
+		},
+		"capital_gains": {
+			"term": "资本利得税",
+			"definition": "对出售资产获得的利润征税,价格高于你支付的价格。在加密货币中,当出售为法币、交易为其他加密货币或使用加密货币购买商品/服务时触发。"
+		},
+		"cost_basis": {
+			"term": "成本基础",
+			"definition": "资产的原始价值或购买价格,用于计算资本利得。对于加密货币,包括购买价格加上费用。方法包括 FIFO、LIFO、HIFO 和特定识别。"
+		},
+		"vasp": {
+			"term": "VASP(虚拟资产服务提供商)",
+			"definition": "FATF 对进行加密活动的企业的术语:交易所、钱包提供商、转账服务。VASP 必须遵守 AML/KYC 要求和旅行规则。"
+		},
+		"stablecoin_regulation": {
+			"term": "稳定币监管",
+			"definition": "新兴的监管框架,要求稳定币发行人维持储备、获得许可并提供赎回权。欧盟 MiCA 区分电子货币代币(EMT)和资产参考代币(ART)。"
+		},
+		"defi_regulation": {
+			"term": "DeFi 监管",
+			"definition": "针对去中心化金融协议不断发展的监管方法。挑战包括识别负责方、将传统规则应用于自主代码,以及平衡创新与消费者保护。"
+		}
+	}
+}

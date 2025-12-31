@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "wagmi - React Hooks para Ethereum",
+		"description": "wagmi proporciona React hooks para desarrollo Ethereum. Conecta wallets, lee contratos, envía transacciones con APIs type-safe e intuitivas.",
+		"keywords": "wagmi, React hooks, Ethereum, desarrollo Web3, viem, conexión de wallet, contratos inteligentes"
+	},
+	"overview": "wagmi es la biblioteca React moderna para desarrollo Ethereum. Proporciona hooks para conexión de wallets, interacción con contratos y datos blockchain—todo con diseño TypeScript-first y excelente experiencia de desarrollador.\n\nConstruido sobre viem (la alternativa moderna a ethers.js), wagmi ofrece interacciones con contratos type-safe, deduplicación automática de solicitudes y caché incorporado. Es lo que la mayoría de las nuevas dApps React usan para funcionalidad Web3.\n\nwagmi se integra perfectamente con conectores de wallet como RainbowKit y soporta todas las wallets principales. La API es intuitiva: useAccount para conexión, useContractRead para consultas, usePrepareContractWrite para transacciones.",
+	"features": {
+		"1": {
+			"title": "React Hooks",
+			"description": "API intuitiva"
+		},
+		"2": {
+			"title": "TypeScript-First",
+			"description": "Contratos type-safe"
+		},
+		"3": {
+			"title": "Construido sobre Viem",
+			"description": "Fundación moderna"
+		},
+		"4": {
+			"title": "Soporte de Wallets",
+			"description": "Todas las wallets principales"
+		},
+		"5": {
+			"title": "Caché",
+			"description": "Solicitudes optimizadas"
+		},
+		"6": {
+			"title": "RainbowKit",
+			"description": "UI de primera clase"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Desarrollo dApp",
+			"description": "Construir dApps React"
+		},
+		"2": {
+			"title": "Conexión de Wallet",
+			"description": "Soporte multi-wallet"
+		},
+		"3": {
+			"title": "Interacción con Contratos",
+			"description": "Leer y escribir"
+		},
+		"4": {
+			"title": "Gestión de Transacciones",
+			"description": "Enviar y rastrear"
+		},
+		"5": {
+			"title": "Datos Blockchain",
+			"description": "Balances, ENS, etc."
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué es wagmi?",
+			"answer": "wagmi es una biblioteca React para Ethereum. Proporciona hooks como useAccount, useBalance, useContractRead y usePrepareContractWrite. Piensa en ello como la forma estándar de añadir Web3 a apps React."
+		},
+		"2": {
+			"question": "¿wagmi vs ethers.js?",
+			"answer": "wagmi son hooks específicos de React construidos sobre viem. ethers.js es una biblioteca de propósito general. Para dApps React, wagmi es mejor—hooks, caché, soporte TypeScript. ethers.js funciona en cualquier lugar pero carece de integración React."
+		},
+		"3": {
+			"question": "¿Qué es viem?",
+			"answer": "viem es la alternativa moderna a ethers.js—la biblioteca Ethereum de bajo nivel sobre la que wagmi se construye. Más pequeña, más rápida, más modular, mejor TypeScript. wagmi proporciona la capa React sobre viem."
+		},
+		"4": {
+			"question": "¿Cómo empiezo?",
+			"answer": "Instala wagmi y configura providers. Usa useAccount para conexión de wallet, useContractRead para consultas. Los docs en wagmi.sh tienen excelentes tutoriales. La mayoría de las nuevas dApps React empiezan aquí."
+		},
+		"5": {
+			"question": "¿Qué es RainbowKit?",
+			"answer": "RainbowKit es una biblioteca UI de conexión de wallet construida para wagmi. Botón de conexión hermoso y modal de wallet listo para usar. wagmi maneja la lógica, RainbowKit maneja la UI. Funcionan juntos perfectamente."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para construir con wagmi?",
+		"button": "Comenzar",
+		"note": "React hooks para Ethereum"
+	}
+}

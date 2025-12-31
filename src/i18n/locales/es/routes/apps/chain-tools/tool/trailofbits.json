@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Trail of Bits - Investigación y Auditoría de Seguridad",
+		"description": "Trail of Bits es una firma líder de investigación de seguridad. Auditorías de contratos inteligentes, herramientas de seguridad como Slither y Echidna, e investigación de seguridad blockchain de vanguardia.",
+		"keywords": "Trail of Bits, auditoría de seguridad, Slither, Echidna, seguridad de contratos inteligentes, seguridad blockchain"
+	},
+	"overview": "Trail of Bits es una de las firmas de investigación de seguridad más respetadas en el espacio blockchain. Han auditado protocolos importantes incluyendo Ethereum 2.0, Compound, MakerDAO y cientos de otros.\n\nMás allá de las auditorías, Trail of Bits crea herramientas de seguridad de código abierto esenciales. Slither es el analizador estático de referencia para Solidity. Echidna proporciona fuzzing basado en propiedades. Manticore hace ejecución simbólica. Estas herramientas son usadas por desarrolladores en todo el mundo.\n\nSu investigación avanza toda la industria. Trail of Bits publica análisis de seguridad detallados, desarrolla nuevas metodologías de testing y entrena investigadores de seguridad. Son fundamentales para la seguridad blockchain.",
+	"features": {
+		"1": {
+			"title": "Auditorías de Seguridad",
+			"description": "Revisión experta de código"
+		},
+		"2": {
+			"title": "Slither",
+			"description": "Analizador estático"
+		},
+		"3": {
+			"title": "Echidna",
+			"description": "Fuzzer basado en propiedades"
+		},
+		"4": {
+			"title": "Investigación",
+			"description": "Seguridad de vanguardia"
+		},
+		"5": {
+			"title": "Formación",
+			"description": "Educación en seguridad"
+		},
+		"6": {
+			"title": "Código Abierto",
+			"description": "Herramientas gratis para todos"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Auditorías de Protocolo",
+			"description": "Seguridad pre-lanzamiento"
+		},
+		"2": {
+			"title": "Uso de Herramientas",
+			"description": "Slither en CI/CD"
+		},
+		"3": {
+			"title": "Fuzzing",
+			"description": "Testing con Echidna"
+		},
+		"4": {
+			"title": "Investigación",
+			"description": "Aprender de publicaciones"
+		},
+		"5": {
+			"title": "Formación",
+			"description": "Bootcamps de seguridad"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Por qué es conocido Trail of Bits?",
+			"answer": "Trail of Bits es conocido por auditorías de seguridad de alta calidad, herramientas de código abierto (Slither, Echidna, Manticore) e investigación de seguridad. Han auditado protocolos importantes y sus herramientas son estándares de la industria."
+		},
+		"2": {
+			"question": "¿Cuánto cuesta una auditoría?",
+			"answer": "Las auditorías de Trail of Bits tienen precios premium, típicamente $200K+ para revisiones completas. Son selectivos con los proyectos. Para proyectos en etapas tempranas, usa sus herramientas gratuitas y considera otros auditores primero."
+		},
+		"3": {
+			"question": "¿Qué es Slither?",
+			"answer": "Slither es una herramienta de análisis estático para Solidity. Detecta vulnerabilidades, problemas de calidad de código y genera reportes. Ejecútalo en cualquier proyecto Solidity—es gratis y detecta bugs comunes antes del despliegue."
+		},
+		"4": {
+			"question": "¿Qué es Echidna?",
+			"answer": "Echidna es un fuzzer basado en propiedades para contratos inteligentes. Defines propiedades que siempre deben cumplirse; Echidna intenta romperlas con entradas aleatorias. Encuentra casos extremos que el testing manual pasa por alto."
+		},
+		"5": {
+			"question": "¿Puedo usar sus herramientas gratis?",
+			"answer": "Sí. Slither, Echidna, Manticore y otras herramientas de Trail of Bits son de código abierto. Úsalas en tu flujo de desarrollo. Son esenciales para cualquier desarrollo serio de contratos inteligentes."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para seguridad de clase mundial?",
+		"button": "Explorar Trail of Bits",
+		"note": "Líder en investigación de seguridad"
+	}
+}

@@ -36,8 +36,7 @@ export const cexGuide: CategoryGuide = {
 				{
 					id: 'how-they-work',
 					titleKey: 'routes/apps/chain-tools/cex/guide.sections.cex_basics.how_they_work.title',
-					contentKey:
-						'routes/apps/chain-tools/cex/guide.sections.cex_basics.how_they_work.content',
+					contentKey: 'routes/apps/chain-tools/cex/guide.sections.cex_basics.how_they_work.content',
 					toolMentions: [{ toolId: 'binance' }, { toolId: 'kraken' }]
 				},
 				{
@@ -120,8 +119,7 @@ export const cexGuide: CategoryGuide = {
 				{
 					id: 'two-factor-auth',
 					titleKey: 'routes/apps/chain-tools/cex/guide.sections.security.two_factor_auth.title',
-					contentKey:
-						'routes/apps/chain-tools/cex/guide.sections.security.two_factor_auth.content'
+					contentKey: 'routes/apps/chain-tools/cex/guide.sections.security.two_factor_auth.content'
 				},
 				{
 					id: 'withdrawal-whitelist',
@@ -195,7 +193,8 @@ export const cexGuide: CategoryGuide = {
 					caseStudies: [
 						{
 							id: 'mt-gox',
-							titleKey: 'routes/apps/chain-tools/cex/guide.sections.risks.exchange_hacks.case_mtgox.title',
+							titleKey:
+								'routes/apps/chain-tools/cex/guide.sections.risks.exchange_hacks.case_mtgox.title',
 							descriptionKey:
 								'routes/apps/chain-tools/cex/guide.sections.risks.exchange_hacks.case_mtgox.description',
 							date: '2014-02-24',
@@ -207,8 +206,7 @@ export const cexGuide: CategoryGuide = {
 				{
 					id: 'counterparty-risk',
 					titleKey: 'routes/apps/chain-tools/cex/guide.sections.risks.counterparty_risk.title',
-					contentKey:
-						'routes/apps/chain-tools/cex/guide.sections.risks.counterparty_risk.content',
+					contentKey: 'routes/apps/chain-tools/cex/guide.sections.risks.counterparty_risk.content',
 					caseStudies: [
 						{
 							id: 'ftx-collapse',
@@ -225,8 +223,7 @@ export const cexGuide: CategoryGuide = {
 				{
 					id: 'regulatory-risk',
 					titleKey: 'routes/apps/chain-tools/cex/guide.sections.risks.regulatory_risk.title',
-					contentKey:
-						'routes/apps/chain-tools/cex/guide.sections.risks.regulatory_risk.content'
+					contentKey: 'routes/apps/chain-tools/cex/guide.sections.risks.regulatory_risk.content'
 				}
 			]
 		},
@@ -239,8 +236,7 @@ export const cexGuide: CategoryGuide = {
 			subsections: [
 				{
 					id: 'getting-started',
-					titleKey:
-						'routes/apps/chain-tools/cex/guide.sections.api_trading.getting_started.title',
+					titleKey: 'routes/apps/chain-tools/cex/guide.sections.api_trading.getting_started.title',
 					contentKey:
 						'routes/apps/chain-tools/cex/guide.sections.api_trading.getting_started.content',
 					toolMentions: [{ toolId: 'binance' }, { toolId: 'coinbase' }]
@@ -248,13 +244,11 @@ export const cexGuide: CategoryGuide = {
 				{
 					id: 'rate-limits',
 					titleKey: 'routes/apps/chain-tools/cex/guide.sections.api_trading.rate_limits.title',
-					contentKey:
-						'routes/apps/chain-tools/cex/guide.sections.api_trading.rate_limits.content'
+					contentKey: 'routes/apps/chain-tools/cex/guide.sections.api_trading.rate_limits.content'
 				},
 				{
 					id: 'best-practices',
-					titleKey:
-						'routes/apps/chain-tools/cex/guide.sections.api_trading.best_practices.title',
+					titleKey: 'routes/apps/chain-tools/cex/guide.sections.api_trading.best_practices.title',
 					contentKey:
 						'routes/apps/chain-tools/cex/guide.sections.api_trading.best_practices.content'
 				}

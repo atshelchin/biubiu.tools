@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Remix IDE - Browser-Based Solidity Development",
+		"description": "Remix is the browser-based IDE for Solidity development. Write, compile, debug, and deploy smart contracts without installation.",
+		"keywords": "Remix IDE, Solidity, smart contracts, browser IDE, Ethereum development, contract deployment"
+	},
+	"overview": "Remix is the browser-based IDE for Solidity development. No installation needed—open remix.ethereum.org and start writing smart contracts immediately. Perfect for learning and quick prototyping.\n\nThe IDE includes a Solidity compiler, debugger, static analysis, and deployment tools. Connect your wallet to deploy directly to any network. Plugins extend functionality further.\n\nRemix is how most people write their first smart contract. Used in tutorials, workshops, and for quick tests. While serious projects use Foundry/Hardhat locally, Remix remains invaluable for learning and experimentation.",
+	"features": {
+		"1": {
+			"title": "Browser-Based",
+			"description": "No installation"
+		},
+		"2": {
+			"title": "Compiler",
+			"description": "Built-in Solidity"
+		},
+		"3": {
+			"title": "Debugger",
+			"description": "Step through code"
+		},
+		"4": {
+			"title": "Deploy Tools",
+			"description": "Direct deployment"
+		},
+		"5": {
+			"title": "Plugins",
+			"description": "Extensible"
+		},
+		"6": {
+			"title": "Free",
+			"description": "Open source"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Learning",
+			"description": "First smart contracts"
+		},
+		"2": {
+			"title": "Prototyping",
+			"description": "Quick experiments"
+		},
+		"3": {
+			"title": "Debugging",
+			"description": "Transaction analysis"
+		},
+		"4": {
+			"title": "Workshops",
+			"description": "Teaching tool"
+		},
+		"5": {
+			"title": "Quick Deploy",
+			"description": "Fast deployment"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Remix?",
+			"answer": "Remix is a browser-based IDE for Solidity smart contracts. It includes compiler, debugger, and deployment tools. Open remix.ethereum.org and start coding immediately—no setup required."
+		},
+		"2": {
+			"question": "Should I use Remix or Hardhat/Foundry?",
+			"answer": "Remix for learning and quick prototyping—zero setup. Hardhat/Foundry for serious projects—better testing, version control, team workflows. Many use Remix for experiments, local tools for production."
+		},
+		"3": {
+			"question": "Can I deploy from Remix?",
+			"answer": "Yes. Connect MetaMask or other wallets and deploy to any EVM network directly. Great for testnets and quick mainnet deploys. For production, consider deployment scripts for reproducibility."
+		},
+		"4": {
+			"question": "Is my code saved?",
+			"answer": "By default, code is in browser storage—can be lost. Use workspaces with GitHub integration or download files regularly. For important work, use local IDE with version control."
+		},
+		"5": {
+			"question": "What are Remix plugins?",
+			"answer": "Plugins extend Remix functionality: Slither for security analysis, Sourcify for verification, IPFS for storage. The plugin system makes Remix highly customizable. Check the plugin manager."
+		}
+	},
+	"cta": {
+		"ready": "Ready to write smart contracts?",
+		"button": "Open Remix",
+		"note": "Browser-based IDE"
+	}
+}

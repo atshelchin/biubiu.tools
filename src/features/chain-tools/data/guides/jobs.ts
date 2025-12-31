@@ -60,8 +60,7 @@ export const jobsGuide: CategoryGuide = {
 				{
 					id: 'technical-skills',
 					titleKey: 'routes/apps/chain-tools/jobs/guide.sections.skills.technical_skills.title',
-					contentKey:
-						'routes/apps/chain-tools/jobs/guide.sections.skills.technical_skills.content'
+					contentKey: 'routes/apps/chain-tools/jobs/guide.sections.skills.technical_skills.content'
 				},
 				{
 					id: 'soft-skills',
@@ -79,10 +78,8 @@ export const jobsGuide: CategoryGuide = {
 			subsections: [
 				{
 					id: 'job-boards',
-					titleKey:
-						'routes/apps/chain-tools/jobs/guide.sections.finding_jobs.job_boards.title',
-					contentKey:
-						'routes/apps/chain-tools/jobs/guide.sections.finding_jobs.job_boards.content',
+					titleKey: 'routes/apps/chain-tools/jobs/guide.sections.finding_jobs.job_boards.title',
+					contentKey: 'routes/apps/chain-tools/jobs/guide.sections.finding_jobs.job_boards.content',
 					toolMentions: [
 						{ toolId: 'crypto-jobs', context: 'comprehensive listings' },
 						{ toolId: 'web3-career', context: 'curated positions' },
@@ -91,10 +88,8 @@ export const jobsGuide: CategoryGuide = {
 				},
 				{
 					id: 'networking',
-					titleKey:
-						'routes/apps/chain-tools/jobs/guide.sections.finding_jobs.networking.title',
-					contentKey:
-						'routes/apps/chain-tools/jobs/guide.sections.finding_jobs.networking.content',
+					titleKey: 'routes/apps/chain-tools/jobs/guide.sections.finding_jobs.networking.title',
+					contentKey: 'routes/apps/chain-tools/jobs/guide.sections.finding_jobs.networking.content',
 					toolMentions: [
 						{ toolId: 'linkedin', context: 'professional network' },
 						{ toolId: 'twitter', context: 'Web3 community hub' }
@@ -123,8 +118,7 @@ export const jobsGuide: CategoryGuide = {
 			subsections: [
 				{
 					id: 'portfolio',
-					titleKey:
-						'routes/apps/chain-tools/jobs/guide.sections.building_profile.portfolio.title',
+					titleKey: 'routes/apps/chain-tools/jobs/guide.sections.building_profile.portfolio.title',
 					contentKey:
 						'routes/apps/chain-tools/jobs/guide.sections.building_profile.portfolio.content',
 					toolMentions: [
@@ -141,8 +135,7 @@ export const jobsGuide: CategoryGuide = {
 				},
 				{
 					id: 'hackathons',
-					titleKey:
-						'routes/apps/chain-tools/jobs/guide.sections.building_profile.hackathons.title',
+					titleKey: 'routes/apps/chain-tools/jobs/guide.sections.building_profile.hackathons.title',
 					contentKey:
 						'routes/apps/chain-tools/jobs/guide.sections.building_profile.hackathons.content'
 				}
@@ -229,14 +222,12 @@ export const jobsGuide: CategoryGuide = {
 				{
 					id: 'time-zones',
 					titleKey: 'routes/apps/chain-tools/jobs/guide.sections.remote_work.time_zones.title',
-					contentKey:
-						'routes/apps/chain-tools/jobs/guide.sections.remote_work.time_zones.content'
+					contentKey: 'routes/apps/chain-tools/jobs/guide.sections.remote_work.time_zones.content'
 				},
 				{
 					id: 'dao-models',
 					titleKey: 'routes/apps/chain-tools/jobs/guide.sections.remote_work.dao_models.title',
-					contentKey:
-						'routes/apps/chain-tools/jobs/guide.sections.remote_work.dao_models.content'
+					contentKey: 'routes/apps/chain-tools/jobs/guide.sections.remote_work.dao_models.content'
 				}
 			]
 		}

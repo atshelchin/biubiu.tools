@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Sepolia - Ethereum Application Testnet",
+		"description": "Sepolia is Ethereum's primary testnet for application development. Stable, well-supported network for testing smart contracts and dApps.",
+		"keywords": "Sepolia, testnet, Ethereum, smart contracts, dApp testing, test ETH, development"
+	},
+	"overview": "Sepolia is Ethereum's primary testnet for application development. It's the recommended network for testing smart contracts and dApps before mainnet deployment.\n\nThe testnet is stable, well-supported by tools, and has consistent block times. Major wallets, block explorers, and development frameworks all support Sepolia. Get test ETH from faucets.\n\nFor most dApp developers, Sepolia is the right choice. It mirrors mainnet behavior reliably. Holesky exists for staking tests; Sepolia is for everything else.",
+	"features": {
+		"1": {
+			"title": "Application Testing",
+			"description": "dApp development"
+		},
+		"2": {
+			"title": "Stable Network",
+			"description": "Reliable uptime"
+		},
+		"3": {
+			"title": "Tool Support",
+			"description": "All major tools"
+		},
+		"4": {
+			"title": "Free ETH",
+			"description": "Faucet available"
+		},
+		"5": {
+			"title": "Mainnet Parity",
+			"description": "Same behavior"
+		},
+		"6": {
+			"title": "EF Maintained",
+			"description": "Official testnet"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Smart Contract Testing",
+			"description": "Deploy and test"
+		},
+		"2": {
+			"title": "dApp Development",
+			"description": "Frontend testing"
+		},
+		"3": {
+			"title": "Integration Testing",
+			"description": "End-to-end tests"
+		},
+		"4": {
+			"title": "Learning",
+			"description": "Practice development"
+		},
+		"5": {
+			"title": "CI/CD",
+			"description": "Automated testing"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Sepolia?",
+			"answer": "Sepolia is Ethereum's recommended testnet for dApp development. Deploy contracts, test frontend integration, and verify behavior before mainnet. Stable and well-supported."
+		},
+		"2": {
+			"question": "How do I get Sepolia ETH?",
+			"answer": "Use faucets—Alchemy, Infura, and others offer Sepolia faucets. Some require Alchemy account or mainnet balance proof. Check the Ethereum docs for current working faucets."
+		},
+		"3": {
+			"question": "Sepolia vs Goerli?",
+			"answer": "Goerli is deprecated. Sepolia is the current recommended testnet for applications. Migrate any Goerli projects to Sepolia. Same tooling, just different network."
+		},
+		"4": {
+			"question": "Which tools support Sepolia?",
+			"answer": "All major tools: MetaMask, Hardhat, Foundry, Etherscan, Alchemy, Infura. Sepolia is the standard testnet—expect full support from any Ethereum tool."
+		},
+		"5": {
+			"question": "Is Sepolia reliable?",
+			"answer": "Yes. Sepolia is stable with consistent block times. Maintained by the Ethereum Foundation and client teams. Suitable for serious testing and CI/CD pipelines."
+		}
+	},
+	"cta": {
+		"ready": "Ready to test on Sepolia?",
+		"button": "Get Test ETH",
+		"note": "Ethereum application testnet"
+	}
+}

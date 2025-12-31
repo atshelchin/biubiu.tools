@@ -228,8 +228,7 @@ export const trendsGuide: CategoryGuide = {
 				},
 				{
 					id: 'nansen',
-					titleKey:
-						'routes/apps/chain-tools/trends/guide.sections.tools_dashboards.nansen.title',
+					titleKey: 'routes/apps/chain-tools/trends/guide.sections.tools_dashboards.nansen.title',
 					contentKey:
 						'routes/apps/chain-tools/trends/guide.sections.tools_dashboards.nansen.content',
 					toolMentions: [{ toolId: 'nansen' }]
@@ -244,8 +243,7 @@ export const trendsGuide: CategoryGuide = {
 				},
 				{
 					id: 'arkham',
-					titleKey:
-						'routes/apps/chain-tools/trends/guide.sections.tools_dashboards.arkham.title',
+					titleKey: 'routes/apps/chain-tools/trends/guide.sections.tools_dashboards.arkham.title',
 					contentKey:
 						'routes/apps/chain-tools/trends/guide.sections.tools_dashboards.arkham.content',
 					toolMentions: [{ toolId: 'arkham' }]
@@ -282,8 +280,7 @@ export const trendsGuide: CategoryGuide = {
 				},
 				{
 					id: 'backtesting',
-					titleKey:
-						'routes/apps/chain-tools/trends/guide.sections.alpha_system.backtesting.title',
+					titleKey: 'routes/apps/chain-tools/trends/guide.sections.alpha_system.backtesting.title',
 					contentKey:
 						'routes/apps/chain-tools/trends/guide.sections.alpha_system.backtesting.content',
 					toolMentions: [{ toolId: 'dune' }]
@@ -351,8 +348,7 @@ export const trendsGuide: CategoryGuide = {
 		{
 			id: 'on-chain-metrics',
 			termKey: 'routes/apps/chain-tools/trends/guide.glossary.on_chain_metrics.term',
-			definitionKey:
-				'routes/apps/chain-tools/trends/guide.glossary.on_chain_metrics.definition',
+			definitionKey: 'routes/apps/chain-tools/trends/guide.glossary.on_chain_metrics.definition',
 			relatedToolIds: ['dune', 'nansen']
 		},
 		{

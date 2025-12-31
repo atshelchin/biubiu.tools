@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "web3.js - 原始以太坊JavaScript库",
+		"description": "web3.js是以太坊原始JavaScript库。由以太坊基金会创建，经过多年生产验证，有丰富的文档。",
+		"keywords": "web3.js, JavaScript, 以太坊, Web3开发, 区块链库, 智能合约, dApp"
+	},
+	"overview": "web3.js是以太坊原始JavaScript库。由以太坊基金会创建，多年来一直是标准库，驱动无数dApp和工具。\n\n该库处理一切：钱包连接、合约交互、交易和以太坊数据。经过多年生产验证，有丰富的文档和社区示例。\n\n虽然存在viem等更新的替代方案，web3.js仍被广泛使用。4.x版本带来了TypeScript改进和现代更新。许多教程和现有代码库使用web3.js。",
+	"features": {
+		"1": {
+			"title": "久经考验",
+			"description": "多年生产验证"
+		},
+		"2": {
+			"title": "功能完整",
+			"description": "完整以太坊API"
+		},
+		"3": {
+			"title": "TypeScript",
+			"description": "v4.x支持"
+		},
+		"4": {
+			"title": "EF维护",
+			"description": "基金会支持"
+		},
+		"5": {
+			"title": "文档",
+			"description": "丰富文档"
+		},
+		"6": {
+			"title": "社区",
+			"description": "大型生态"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "dApp开发",
+			"description": "以太坊应用"
+		},
+		"2": {
+			"title": "合约交互",
+			"description": "读取和写入"
+		},
+		"3": {
+			"title": "遗留项目",
+			"description": "现有代码库"
+		},
+		"4": {
+			"title": "学习",
+			"description": "丰富教程"
+		},
+		"5": {
+			"title": "Node.js",
+			"description": "后端开发"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "web3.js是什么？",
+			"answer": "web3.js是以太坊基金会的原始JavaScript以太坊库。它为以太坊的一切提供API：账户、合约、交易等。多年来的标准库。"
+		},
+		"2": {
+			"question": "web3.js vs ethers.js vs viem？",
+			"answer": "web3.js最老，文档最多。ethers.js因更清晰的API而流行。viem最新，TypeScript最好。都能用——根据项目需求和团队熟悉度选择。"
+		},
+		"3": {
+			"question": "新项目应该使用web3.js吗？",
+			"answer": "对于新项目，通常推荐viem/ethers以获得更好的开发体验。如果你熟悉web3.js或维护现有代码，它也没问题。4.x版本有显著改进。"
+		},
+		"4": {
+			"question": "web3.js还在维护吗？",
+			"answer": "是的。以太坊基金会和ChainSafe积极维护。4.x版本带来了重大改进，包括更好的TypeScript。它没有被放弃——只是有了更新的竞争者。"
+		},
+		"5": {
+			"question": "如何学习web3.js？",
+			"answer": "官方文档在docs.web3js.org。由于存在时间最长，有许多教程。从连接以太坊开始，然后是合约。Stack Overflow上有大量答案。"
+		}
+	},
+	"cta": {
+		"ready": "准备好使用web3.js了吗？",
+		"button": "查看文档",
+		"note": "原始以太坊库"
+	}
+}

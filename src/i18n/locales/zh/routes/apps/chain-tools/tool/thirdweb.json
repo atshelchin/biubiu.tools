@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "thirdweb - 完整Web3开发平台",
+		"description": "thirdweb是完整的Web3开发平台。SDK、智能合约、基础设施和工具，无需复杂性即可构建dApp。",
+		"keywords": "thirdweb, Web3开发, 智能合约, NFT, SDK, dApp开发, 区块链平台"
+	},
+	"overview": "thirdweb是完整的Web3开发平台。他们提供SDK、智能合约、基础设施和工具，无需担心区块链复杂性即可构建dApp。\n\n他们的预构建合约涵盖NFT、代币、市场等——一键部署。React、Unity和移动SDK使集成变得简单。基础设施处理钱包、存储和RPC。\n\nthirdweb为开发者抽象复杂性。不用学习每个区块链细节，直接使用他们的API。在NFT项目、游戏和快速开发中很受欢迎。强调开发者体验。",
+	"features": {
+		"1": {
+			"title": "预构建合约",
+			"description": "一键部署"
+		},
+		"2": {
+			"title": "多平台SDK",
+			"description": "React, Unity, 移动端"
+		},
+		"3": {
+			"title": "钱包基础设施",
+			"description": "嵌入式钱包"
+		},
+		"4": {
+			"title": "存储",
+			"description": "IPFS集成"
+		},
+		"5": {
+			"title": "仪表板",
+			"description": "管理一切"
+		},
+		"6": {
+			"title": "多链",
+			"description": "700+链"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "NFT项目",
+			"description": "铸造和销售"
+		},
+		"2": {
+			"title": "Web3游戏",
+			"description": "Unity SDK"
+		},
+		"3": {
+			"title": "代币发行",
+			"description": "简单部署"
+		},
+		"4": {
+			"title": "快速开发",
+			"description": "快速原型"
+		},
+		"5": {
+			"title": "移动dApp",
+			"description": "移动SDK"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "thirdweb是什么？",
+			"answer": "thirdweb是Web3开发平台。预构建合约、SDK和基础设施，快速构建dApp。减少区块链复杂性——专注于你的产品。"
+		},
+		"2": {
+			"question": "可以用thirdweb构建什么？",
+			"answer": "NFT收藏、代币空投、市场、游戏物品、DAO——任何有区块链需求的东西。他们的合约和SDK覆盖常见用例。也支持自定义合约。"
+		},
+		"3": {
+			"question": "thirdweb免费吗？",
+			"answer": "核心工具免费。他们的合约没有费用。高级需求如嵌入式钱包、更高限制和企业支持需付费。大多数项目的免费层很慷慨。"
+		},
+		"4": {
+			"question": "thirdweb vs 从头构建？",
+			"answer": "thirdweb用灵活性换速度。非常适合常见模式和快速开发。复杂的自定义逻辑可能需要原生开发。许多人从thirdweb开始然后定制。"
+		},
+		"5": {
+			"question": "支持哪些平台？",
+			"answer": "React、Next.js、Unity、Unreal、React Native等。TypeScript SDK用于后端。全面的平台覆盖——这在Web3工具中很少见。查看文档了解完整列表。"
+		}
+	},
+	"cta": {
+		"ready": "准备好更快构建了吗？",
+		"button": "开始使用thirdweb",
+		"note": "完整Web3平台"
+	}
+}

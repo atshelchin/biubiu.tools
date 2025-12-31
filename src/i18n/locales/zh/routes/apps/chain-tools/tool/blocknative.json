@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Blocknative - 内存池监控与Web3-Onboard",
+		"description": "Blocknative提供内存池监控和交易管理工具。链前数据、Gas估算和Web3-Onboard钱包连接。",
+		"keywords": "Blocknative, 内存池, Web3-Onboard, Gas估算, 交易模拟, MEV, 区块链基础设施"
+	},
+	"overview": "Blocknative提供内存池监控和交易管理工具。他们专注于链前数据——在交易确认前查看和理解交易。\n\n他们的产品包括内存池浏览器、交易模拟和Gas估算API。对交易员、MEV搜索者和任何需要交易可见性的人来说是关键基础设施。\n\nBlocknative还提供Web3-onboard，一个流行的钱包连接库。该公司将传统基础设施与内存池访问等区块链特定需求相连接。",
+	"features": {
+		"1": {
+			"title": "内存池访问",
+			"description": "链前数据"
+		},
+		"2": {
+			"title": "交易模拟",
+			"description": "预览结果"
+		},
+		"3": {
+			"title": "Gas估算",
+			"description": "准确定价"
+		},
+		"4": {
+			"title": "Web3-Onboard",
+			"description": "钱包连接"
+		},
+		"5": {
+			"title": "通知",
+			"description": "交易监控"
+		},
+		"6": {
+			"title": "API访问",
+			"description": "开发者工具"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "MEV",
+			"description": "交易监控"
+		},
+		"2": {
+			"title": "交易",
+			"description": "链前可见性"
+		},
+		"3": {
+			"title": "Gas优化",
+			"description": "更好估算"
+		},
+		"4": {
+			"title": "dApp开发",
+			"description": "交易管理"
+		},
+		"5": {
+			"title": "钱包集成",
+			"description": "Web3-onboard"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Blocknative是什么？",
+			"answer": "Blocknative提供内存池基础设施——在确认前访问待处理交易。他们提供Gas估算、交易模拟和内存池监控的API。还维护Web3-onboard。"
+		},
+		"2": {
+			"question": "什么是内存池监控？",
+			"answer": "内存池包含待处理交易。看到它们可以：预测Gas价格、模拟结果、检测MEV机会。Blocknative实时流式传输这些数据。"
+		},
+		"3": {
+			"question": "Web3-Onboard是什么？",
+			"answer": "Web3-Onboard是Blocknative的钱包连接库。类似RainbowKit但框架无关。支持35+钱包、硬件钱包和账户抽象。流行的替代方案。"
+		},
+		"4": {
+			"question": "谁使用Blocknative？",
+			"answer": "MEV搜索者、交易协议、需要Gas估算的DeFi应用，以及任何需要链前可见性的人。Aave、Balancer等许多项目使用他们的基础设施。"
+		},
+		"5": {
+			"question": "有免费层吗？",
+			"answer": "一些产品有限制的免费层。严肃使用需要付费计划。企业需求联系销售。Web3-Onboard是开源免费的。"
+		}
+	},
+	"cta": {
+		"ready": "准备好访问内存池了吗？",
+		"button": "探索Blocknative",
+		"note": "内存池基础设施"
+	}
+}

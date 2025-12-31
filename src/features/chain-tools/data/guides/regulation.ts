@@ -240,8 +240,7 @@ export const regulationGuide: CategoryGuide = {
 				},
 				{
 					id: 'cbdcs',
-					titleKey:
-						'routes/apps/chain-tools/regulation/guide.sections.future_outlook.cbdcs.title',
+					titleKey: 'routes/apps/chain-tools/regulation/guide.sections.future_outlook.cbdcs.title',
 					contentKey:
 						'routes/apps/chain-tools/regulation/guide.sections.future_outlook.cbdcs.content',
 					toolMentions: [
@@ -330,8 +329,7 @@ export const regulationGuide: CategoryGuide = {
 		{
 			id: 'defi-regulation',
 			termKey: 'routes/apps/chain-tools/regulation/guide.glossary.defi_regulation.term',
-			definitionKey:
-				'routes/apps/chain-tools/regulation/guide.glossary.defi_regulation.definition'
+			definitionKey: 'routes/apps/chain-tools/regulation/guide.glossary.defi_regulation.definition'
 		}
 	],
 

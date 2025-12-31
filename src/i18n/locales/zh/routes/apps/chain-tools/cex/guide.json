@@ -1,0 +1,190 @@
+{
+	"title": "CEX 完全指南",
+	"subtitle": "从基础到高级交易全面了解中心化交易所",
+
+	"sections": {
+		"intro": {
+			"title": "中心化交易所简介",
+			"content": "<p>中心化交易所（CEX）是传统金融与加密货币世界之间的主要门户。与完全在链上运行的去中心化交易所（DEX）不同,CEX 像传统证券交易所一样运作——由中央机构管理订单簿、托管和交易基础设施。</p><p>在这份完整指南中,你将学习中心化交易所如何运作、它们与 DEX 的区别、提供哪些功能,最重要的是——如何安全地使用它们。我们将涵盖从基础现货交易到高级功能(如保证金交易和 API 集成)的所有内容,以及从 Mt. Gox 和 FTX 等重大交易所失败案例中汲取的关键教训。</p>"
+		},
+		"cex_basics": {
+			"title": "CEX 基础知识",
+			"content": "<p>理解中心化交易所的运作方式对于任何进入加密市场的人来说都至关重要。尽管加密行业提倡去中心化,但 CEX 仍然是交易加密货币最流行的方式,因为它们具有流动性、速度和易用性。</p>",
+			"how_they_work": {
+				"title": "中心化交易所的运作原理",
+				"content": "<p>当你使用 CEX 时,你并不是直接在区块链上交易。相反:</p><ol><li><strong>充值:</strong>你将加密货币或法币发送到交易所</li><li><strong>内部账本:</strong>交易所在其内部数据库中为你的账户充值</li><li><strong>交易:</strong>当你交易时,交易所更新其数据库中的余额——不会发生链上交易</li><li><strong>提现:</strong>只有在你提现时才会发生真正的区块链交易</li></ol><p>这种架构实现了即时交易和高吞吐量,但意味着你需要信任交易所安全地保管你的资金并兑现提现请求。</p><p><strong>托管模式:</strong> CEX 使用热钱包(连接互联网以便快速提现)和冷钱包(离线存储以确保安全)的组合。Binance 和 Kraken 等主要交易所通常将 95% 以上的资金保存在冷存储中。</p>"
+			},
+			"order_books": {
+				"title": "理解订单簿",
+				"content": "<p>CEX 使用订单簿来匹配买家和卖家,就像传统证券交易所一样。订单簿显示交易对的所有买单(买价)和卖单(卖价)。</p><p><strong>订单簿结构:</strong></p><ul><li><strong>买方:</strong>从最高到最低价格排列的买单</li><li><strong>卖方:</strong>从最低到最高价格排列的卖单</li><li><strong>价差:</strong>最高买价和最低卖价之间的差额</li></ul><p><strong>订单类型:</strong></p><ul><li><strong>市价单:</strong>立即以最佳可用价格执行(你是「吃单者」)</li><li><strong>限价单:</strong>仅在你指定的价格或更好的价格执行(如果不立即匹配,你是「挂单者」)</li><li><strong>止损单:</strong>当价格达到你的止损价时触发的市价单</li><li><strong>止损限价单:</strong>当价格达到你的止损价时触发的限价单</li></ul><p><strong>示例:</strong>如果 BTC/USDT 显示买价为 42,000 美元,卖价为 42,010 美元,则价差为 10 美元。市价买单将以 42,010 美元执行(你支付卖价)。42,000 美元的限价买单将添加到买方并等待卖家。</p>"
+			},
+			"trading_fees": {
+				"title": "交易费用详解",
+				"content": "<p>CEX 费用在不同平台之间差异很大,通常按挂单者/吃单者费用结构收取:</p><p><strong>挂单者 vs 吃单者:</strong></p><ul><li><strong>挂单者:</strong>通过放置不立即执行的限价单来增加流动性(通常收取 0.02-0.10% 费用)</li><li><strong>吃单者:</strong>通过放置立即匹配的市价单或限价单来移除流动性(通常收取 0.04-0.15% 费用)</li></ul><p><strong>费用比较(大致范围):</strong></p><ul><li><strong>Binance:</strong> 0.10% 吃单 / 0.10% 挂单(使用 BNB 为 0.075%/0.075%)</li><li><strong>Coinbase Pro:</strong> 0.40% 吃单 / 0.60% 挂单(随交易量递减)</li><li><strong>Kraken:</strong> 0.26% 吃单 / 0.16% 挂单</li><li><strong>OKX:</strong> 0.08% 吃单 / 0.08% 挂单</li></ul><p><strong>费用优化:</strong></p><ul><li>尽可能使用限价单而不是市价单(费用更低)</li><li>持有交易所原生代币(Binance 上的 BNB、OKX 上的 OKB)以获得费用折扣</li><li>增加交易量以获得更低费用的 VIP 等级</li></ul><p><strong>隐藏成本:</strong>注意充值/提现费用,这可能很高。一些交易所对比特币提现收取 0.0005 BTC(在 BTC 价格为 4 万美元时约 20 美元)。</p>"
+			}
+		},
+		"cex_vs_dex": {
+			"title": "CEX vs DEX:全面比较",
+			"content": "<p>理解中心化和去中心化交易所之间的权衡对于制定有效的交易策略至关重要。许多成功的交易者同时使用两者:CEX 用于高流动性和高级功能,DEX 用于隐私和自我托管。</p>",
+			"liquidity_speed": {
+				"title": "流动性和交易速度",
+				"content": "<p><strong>CEX 优势:</strong></p><ul><li><strong>深度流动性:</strong>主要 CEX 每日交易量达数十亿美元,能够以最小滑点进行大额交易</li><li><strong>即时执行:</strong>链下匹配意味着交易在毫秒内执行</li><li><strong>高级订单类型:</strong>止损、跟踪止损、OCO(一个取消另一个)订单</li><li><strong>高吞吐量:</strong>每秒可处理数百万笔订单</li></ul><p><strong>DEX 的权衡:</strong></p><ul><li><strong>有限流动性:</strong>即使是主要 DEX 交易对的流动性通常也比 CEX 少 10-100 倍</li><li><strong>区块链速度:</strong>交易受区块时间限制(以太坊上 12 秒,其他链上更快)</li><li><strong>Gas 成本:</strong>每笔交易都需要链上交易费用</li></ul><p><strong>何时使用 CEX:</strong>大额交易、频繁交易、保证金/期货、高波动期间交易</p><p><strong>何时使用 DEX:</strong>隐私需求、新代币发行、小额交易、需要自我托管时</p>"
+			},
+			"custody": {
+				"title": "托管和控制权",
+				"content": "<p>这是 CEX 和 DEX 之间的根本区别:</p><p><strong>CEX(托管式):</strong></p><ul><li>交易所控制你的私钥</li><li>你信任他们保护你的资金并兑现提现</li><li>交易更快,账户恢复更容易</li><li>面临交易所黑客攻击、破产或提现限制的风险</li><li>必须遵守 KYC/AML 法规</li></ul><p><strong>DEX(非托管式):</strong></p><ul><li>你通过钱包控制自己的私钥</li><li>无需信任——智能合约强制执行交易</li><li>完全隐私(无 KYC)</li><li>丢失私钥的风险,无恢复选项</li><li>智能合约漏洞风险</li></ul><p><strong>「不是你的密钥,就不是你的币」原则:</strong></p><p>这句加密货币格言突出了 CEX 风险:当交易所控制你的私钥时,你依赖于他们的偿付能力和诚信。2022 年 FTX 的崩溃戏剧性地证明了这一点——尽管用户认为他们的资金是安全的,但他们却失去了数十亿美元的访问权限。</p><p><strong>最佳实践:</strong>使用 CEX 进行活跃交易,但对于长期持有则提现到自我托管。许多交易者遵循这样的规则:永远不要在交易所保留超过你正在积极交易的金额。</p>"
+			},
+			"privacy_kyc": {
+				"title": "隐私和 KYC 要求",
+				"content": "<p><strong>CEX 现实:</strong>大多数受监管的交易所需要广泛的 KYC(了解你的客户):</p><ul><li>政府签发的身份证验证</li><li>地址证明(水电费账单、银行对账单)</li><li>自拍验证</li><li>资金来源文件(用于大额存款)</li></ul><p>这些信息由交易所存储,可能与政府机构共享。一些交易所经历过数据泄露,暴露了客户的 KYC 信息。</p><p><strong>为什么存在 KYC:</strong></p><ul><li><strong>监管合规:</strong>反洗钱(AML)和反恐融资(CTF)法律</li><li><strong>税务报告:</strong>许多司法管辖区的交易所必须向税务机关报告用户活动</li><li><strong>合法性:</strong>KYC 帮助交易所合法运营并与银行合作</li></ul><p><strong>DEX 替代方案:</strong>DEX 通常不需要 KYC——你连接钱包并交易。你的隐私仅受区块链透明度的限制(可以通过隐私工具增强)。</p><p><strong>混合选项:</strong>一些 CEX 在没有完整 KYC 的情况下提供有限功能(通常是小额提现限额)。P2P 平台还能够在没有中心化 KYC 的情况下实现法币到加密货币的兑换。</p>"
+			}
+		},
+		"choosing_exchange": {
+			"title": "选择合适的交易所",
+			"content": "<p>有数百个 CEX 可供选择,选择合适的交易所对于安全性和交易成功都至关重要。「最佳」交易所取决于你的位置、交易风格和风险承受能力。</p>",
+			"security_reputation": {
+				"title": "安全性和声誉",
+				"content": "<p>这应该是你的首要考虑因素。历史表明,即使是主要交易所也可能发生灾难性失败。</p><p><strong>安全指标:</strong></p><ul><li><strong>储备金证明:</strong>交易所是否公开证明他们持有客户资金?(Kraken 和其他交易所发布经审计的证明)</li><li><strong>保险基金:</strong>一些交易所维护保险基金以弥补损失(Binance SAFU 基金)</li><li><strong>安全记录:</strong>交易所是否被黑客攻击过?他们如何应对?</li><li><strong>冷存储百分比:</strong>有多少百分比的资金处于离线存储中?</li><li><strong>监管合规:</strong>交易所是否获得许可和监管?(Coinbase 是上市公司,受到严格监管)</li></ul><p><strong>警告信号:</strong></p><ul><li>匿名团队或所有权不明确</li><li>不切实际的促销或收益</li><li>提现问题或延迟</li><li>客户支持声誉差</li><li>没有发布储备金证明</li></ul><p><strong>具有强大记录的成熟交易所:</strong></p><ul><li><strong>Kraken:</strong>成立于 2011 年,从未被黑客攻击,强大的安全文化</li><li><strong>Coinbase:</strong>上市公司(COIN),受到严格监管,出色的安全性</li><li><strong>Binance:</strong>交易量最大,SAFU 基金,但在某些地区面临监管挑战</li></ul>"
+			},
+			"jurisdiction": {
+				"title": "司法管辖区和监管考虑",
+				"content": "<p>交易所的所在地影响他们可以为你提供的服务以及你拥有的法律保护。</p><p><strong>美国交易者:</strong></p><ul><li>必须使用符合美国法规的交易所(Coinbase、Kraken、Gemini)</li><li>Binance.US 提供的功能与全球 Binance 相比有限</li><li>由于证券法问题,许多山寨币不可用</li></ul><p><strong>欧洲交易者:</strong></p><ul><li>MiCA 法规在整个欧盟范围内标准化规则</li><li>强大的消费者保护</li><li>可以访问大多数主要交易所</li></ul><p><strong>亚洲交易者:</strong></p><ul><li>更多选择,包括衍生品和更高杠杆</li><li>OKX、Bybit、HTX 在亚洲很受欢迎</li><li>监管环境因国家而异</li></ul><p><strong>重要考虑因素:</strong></p><ul><li><strong>法币出入金:</strong>你能用当地货币充值/提现吗?</li><li><strong>银行关系:</strong>交易所能接受来自你所在国家的银行转账吗?</li><li><strong>法律追索权:</strong>如果有争议会发生什么?离岸交易所提供的法律保护有限</li></ul>"
+			},
+			"assets_features": {
+				"title": "支持的资产和功能",
+				"content": "<p>不同的交易所在不同领域表现出色:</p><p><strong>资产选择:</strong></p><ul><li><strong>Binance:</strong> 350+ 种加密货币,大多数山寨币可用</li><li><strong>Coinbase:</strong>约 250 种资产,专注于经过审查的合规代币</li><li><strong>Kraken:</strong> 200+ 种资产,强大的法币交易对</li><li><strong>OKX:</strong> 300+ 种资产,强大的 DeFi 代币选择</li></ul><p><strong>交易功能:</strong></p><ul><li><strong>现货交易:</strong>所有主要交易所</li><li><strong>保证金交易:</strong> Binance、OKX、Kraken(在大多数地区的 Coinbase 上不可用)</li><li><strong>期货/衍生品:</strong> Binance(最大)、OKX、Bybit(杠杆高达 125 倍)</li><li><strong>质押/理财:</strong>大多数交易所提供质押和借贷产品</li><li><strong>API 交易:</strong>所有主要交易所;质量各不相同</li></ul><p><strong>用户界面:</strong></p><ul><li><strong>初学者:</strong> Coinbase(简单)、Binance Lite 模式</li><li><strong>高级用户:</strong> Binance、OKX(专业交易视图)</li><li><strong>API 交易者:</strong> Binance(最佳文档)、Coinbase(可靠的基础设施)</li></ul>"
+			}
+		},
+		"security": {
+			"title": "安全最佳实践",
+			"content": "<p>即使在最安全的交易所,你的账户安全性也仅取决于你的做法。遵循这些基本安全措施来保护你的资金。</p>",
+			"two_factor_auth": {
+				"title": "双因素认证(2FA)",
+				"content": "<p>2FA 对于任何认真的交易者来说都是必须的。它在密码之外添加了第二个验证步骤。</p><p><strong>2FA 类型:</strong></p><ul><li><strong>验证器应用(最佳):</strong> Google Authenticator、Authy、1Password<br/>✅ 安全——代码在你的设备上本地生成<br/>✅ 离线工作<br/>✅ 防钓鱼</li><li><strong>短信(避免):</strong>通过短信发送的代码<br/>❌ 容易受到 SIM 卡交换攻击<br/>❌ 容易受到 SS7 漏洞利用<br/>❌ 不推荐用于高价值账户</li><li><strong>硬件密钥(最佳):</strong> YubiKey、Titan Security Key<br/>✅ 最安全的选项<br/>✅ 防钓鱼<br/>❌ 可能丢失(保留备份!)</li></ul><p><strong>设置最佳实践:</strong></p><ol><li>使用验证器应用或硬件密钥,从不使用短信</li><li>将备份代码保存在安全位置(密码管理器或实体保险库)</li><li>在登录和提现时都启用 2FA</li><li>为电子邮件和交易所使用不同的 2FA(攻击者通常首先针对电子邮件)</li></ol><p><strong>警告:</strong>如果你在没有备份代码的情况下失去对 2FA 设备的访问权限,账户恢复可能需要数周时间,并需要进行广泛的身份验证。</p>"
+			},
+			"withdrawal_whitelist": {
+				"title": "提现地址白名单",
+				"content": "<p>提现白名单是大多数交易所提供的一项未被充分利用但功能强大的安全功能。</p><p><strong>工作原理:</strong></p><ol><li>你指定一个已批准的提现地址列表</li><li>任何提现到非白名单地址都会被阻止</li><li>添加新地址需要 2FA,通常还需要 24-48 小时的延迟</li></ol><p><strong>为什么这很重要:</strong></p><p>如果攻击者入侵你的账户(钓鱼、密码泄露等),提现白名单可以防止他们窃取你的资金——他们无法在你注意到之前添加他们的地址并提现。</p><p><strong>设置示例(Binance):</strong></p><ol><li>转到安全设置 → 地址管理</li><li>启用「提现白名单」</li><li>添加你信任的钱包地址</li><li>现在只有这些地址可以接收提现</li></ol><p><strong>最佳实践:</strong>即使看起来不方便,也要启用此功能。添加新地址时的时间延迟是一项功能,而不是错误——它让你有时间注意并阻止未经授权的更改。</p>"
+			},
+			"api_keys": {
+				"title": "API 密钥安全",
+				"content": "<p>如果你使用交易机器人或 API 访问,保护你的 API 密钥至关重要。</p><p><strong>密钥权限:</strong>仅授予必要的权限:</p><ul><li><strong>只读:</strong>查看余额和订单(对于跟踪是安全的)</li><li><strong>交易:</strong>下单和取消订单(机器人所需)</li><li><strong>提现:</strong>❌ 除非绝对必要,否则永远不要启用</li></ul><p><strong>API 安全最佳实践:</strong></p><ol><li><strong>IP 白名单:</strong>将 API 访问限制为特定 IP 地址</li><li><strong>分离密钥:</strong>为不同目的使用不同的密钥(一个用于交易机器人,一个用于投资组合跟踪)</li><li><strong>定期轮换:</strong>定期更改 API 密钥</li><li><strong>密钥存储:</strong>永远不要将 API 密钥提交到 GitHub 或分享它们</li><li><strong>监控活动:</strong>定期查看 API 使用日志</li></ol><p><strong>警告:</strong>泄露的具有提现权限的 API 密钥可能导致资金完全损失。像存储私钥一样存储它们——在加密的密码管理器或环境变量中,永远不要以纯文本形式存储。</p>"
+			},
+			"cold_storage": {
+				"title": "不要把所有东西都放在交易所",
+				"content": "<p>最安全的加密货币是你控制的加密货币。遵循「热钱包 vs 冷存储」策略:</p><p><strong>热钱包(交易所):</strong></p><ul><li>只保留你正在积极交易的资金</li><li>方便快速访问</li><li>风险更高——面临交易所黑客攻击和破产</li></ul><p><strong>冷存储(自我托管):</strong></p><ul><li>硬件钱包(Ledger、Trezor)或纸钱包</li><li>完全离线——免疫远程黑客攻击</li><li>用于长期持有</li></ul><p><strong>推荐策略:</strong></p><ul><li>20% 在交易所用于活跃交易</li><li>80% 在冷存储中用于长期持有</li><li>每周或每月提现到冷存储</li></ul><p><strong>FTX 的教训:</strong></p><p>2022 年 11 月,FTX 是世界第二大交易所。几天之内,它崩溃了,数十亿客户资金被锁定或丢失。为了方便而将资金保留在交易所的用户无限期失去了访问权限。那些提现到自我托管的人没有受到影响。</p><p><strong>规则:</strong>如果你不积极交易它,它就不应该在交易所上。</p>"
+			}
+		},
+		"trading_features": {
+			"title": "CEX 交易功能",
+			"content": "<p>现代中心化交易所提供的远不止基本的现货交易。理解这些功能可以增强你的交易策略——但如果使用不当,也会显著增加风险。</p>",
+			"spot_trading": {
+				"title": "现货交易",
+				"content": "<p>现货交易是最简单、最安全的加密货币交易方式:你以当前市场价格买卖资产以立即交割。</p><p><strong>现货交易的工作原理:</strong></p><ol><li>你充值资金(加密货币或法币)</li><li>下买单或卖单</li><li>如果匹配,资产立即记入你的账户</li><li>你完全拥有该资产——没有杠杆,没有清算风险</li></ol><p><strong>订单类型:</strong></p><ul><li><strong>市价单:</strong>立即以最佳可用价格执行<br/>✅ 快速执行<br/>❌ 大额订单的价格滑点</li><li><strong>限价单:</strong>仅在你指定的价格或更好的价格执行<br/>✅ 价格控制<br/>❌ 如果价格未达到你的限价,可能无法成交</li><li><strong>止损单:</strong>当价格达到你的止损点时变为市价单<br/>✅ 限制持仓损失<br/>❌ 可能在闪崩时触发</li></ul><p><strong>最适合:</strong>长期投资、初学者、任何对杠杆不适应的人</p>"
+			},
+			"margin_trading": {
+				"title": "保证金交易",
+				"content": "<p>保证金交易让你从交易所借入资金以增加头寸规模,放大收益和损失。</p><p><strong>保证金交易的工作原理:</strong></p><ol><li>你存入抵押品(例如 1 BTC)</li><li>交易所借给你额外的资金(例如 3 倍杠杆时为 2 BTC)</li><li>你现在可以用总共 3 BTC 进行交易</li><li>你按小时支付借入资金的利息</li><li>如果你的头寸亏损且抵押品低于维持保证金,你将被清算</li></ol><p><strong>杠杆水平:</strong></p><ul><li><strong>3-5 倍:</strong>保守杠杆,清算风险较低</li><li><strong>10 倍:</strong>高风险——10% 的不利变动 = 清算</li><li><strong>20 倍以上:</strong>极其危险——5% 的变动可能清算你</li></ul><p><strong>交易示例:</strong></p><p>你有 10,000 美元,相信 BTC 将从 40,000 美元上涨到 44,000 美元(10% 涨幅)。</p><ul><li><strong>现货(无杠杆):</strong> 10% 价格上涨 = 1,000 美元利润</li><li><strong>5 倍杠杆:</strong> 10% 价格上涨 = 5,000 美元利润(50% 回报)<br/>但是:10% 价格下跌 = -5,000 美元(你需要 15,000 美元抵押品,所以你会在约 -8% 时被清算)</li></ul><p><strong>风险:</strong></p><ul><li>清算可能在闪崩期间发生,即使价格恢复</li><li>利息费用持续累积</li><li>情绪加剧——杠杆使恐慌性抛售更有可能</li></ul><p><strong>可用于:</strong> Binance、OKX、Kraken、Bybit(在大多数地区的 Coinbase 上不可用)</p>"
+			},
+			"futures_derivatives": {
+				"title": "期货和衍生品",
+				"content": "<p>期货让你押注资产的未来价格而无需拥有它。CEX 期货通常是永续合约——它们不会到期。</p><p><strong>永续期货详解:</strong></p><ul><li>交易 BTC 而无需实际持有 BTC</li><li>做多(押注价格上涨)或做空(押注价格下跌)</li><li>在某些交易所杠杆高达 125 倍</li><li>资金费率机制使永续价格接近现货价格</li></ul><p><strong>资金费率:</strong></p><p>每 8 小时,交易者根据永续价格和现货价格之间的差额支付/接收资金:</p><ul><li>正资金(永续 > 现货):做多方支付做空方</li><li>负资金(永续 < 现货):做空方支付做多方</li><li>通常每 8 小时 0.01-0.1%(每天 0.03-0.3%)</li></ul><p><strong>为什么交易期货:</strong></p><ul><li>做空:从价格下跌中获利</li><li>对冲:用空头期货保护现货持仓</li><li>资本效率:无需持有标的资产</li><li>税收优化:在某些司法管辖区有不同的税收待遇</li></ul><p><strong>极端风险警告:</strong></p><p>高杠杆期货是大多数散户交易者亏损的地方。在 100 倍杠杆下,1% 的不利价格变动 = 100% 损失(清算)。许多交易所显示 70-80% 的期货交易者亏损。</p><p><strong>负责任交易的用例:</strong></p><ul><li>对冲现货头寸(而非投机)</li><li>低杠杆(3-5 倍)且严格止损</li><li>基于扎实技术分析的短期交易</li></ul>"
+			},
+			"earn_products": {
+				"title": "质押和理财产品",
+				"content": "<p>大多数 CEX 提供收益产品,让你从闲置的加密货币持有中赚取被动收入。</p><p><strong>质押:</strong></p><ul><li>通过参与权益证明网络赚取奖励</li><li>典型收益:根据资产 3-15% 年化收益</li><li>可能有锁定期(7-90 天)</li><li>示例:ETH 质押(3-4%)、SOL(5-7%)、DOT(10-15%)</li></ul><p><strong>活期理财:</strong></p><ul><li>将你的加密货币借给保证金交易者</li><li>无锁定——随时提现</li><li>收益低于锁定质押(通常为 1-5%)</li></ul><p><strong>定期理财:</strong></p><ul><li>锁定资金固定期限(30/60/90 天)</li><li>更高收益(稳定币 5-10%+)</li><li>不能提前提现,否则会受到处罚</li></ul><p><strong>DeFi 集成:</strong></p><p>一些交易所提供 DeFi 收益产品(Binance Liquid Swap、OKX Earn)。这些通常是重新包装的 DeFi 协议——与直接使用 DeFi 具有相同的风险加上交易所交易对手风险。</p><p><strong>风险考虑:</strong></p><ul><li>你借给交易所——取决于他们的偿付能力</li><li>收益不保证——利率波动</li><li>在交易所破产中,理财产品可能被视为无担保贷款</li><li>税收影响因司法管辖区而异</li></ul><p><strong>最佳实践:</strong>只质押你愿意留在交易所的金额。对于大额持仓,考虑运行自己的验证器或直接使用 DeFi 协议。</p>"
+			}
+		},
+		"risks": {
+			"title": "CEX 风险和历史失败案例",
+			"content": "<p>中心化交易所的历史充满了惊人的失败。理解这些案例不是为了制造恐慌——而是为了从模式中学习并做出明智的决策。</p>",
+			"exchange_hacks": {
+				"title": "交易所黑客攻击和安全漏洞",
+				"content": "<p>即使是最大的交易所也曾被黑客攻击。以下是主要事件:</p><p><strong>重大交易所黑客攻击:</strong></p><ul><li><strong>Coincheck(2018):</strong> 5.3 亿美元被盗——当时最大的加密货币黑客攻击</li><li><strong>Binance(2019):</strong> 4000 万美元通过钓鱼被盗——由 SAFU 基金承保,用户获得赔偿</li><li><strong>KuCoin(2020):</strong> 2.8 亿美元被盗——大部分通过区块链跟踪追回</li><li><strong>Poly Network(2021):</strong> 6 亿美元被盗——黑客在社区压力下归还资金</li></ul><p><strong>常见攻击途径:</strong></p><ul><li>热钱包入侵(私钥被访问)</li><li>员工社会工程和内部威胁</li><li>智能合约漏洞(针对类 DEX 功能)</li><li>API 漏洞利用</li></ul><p><strong>如何保护自己:</strong></p><ul><li>选择具有强大安全记录的交易所</li><li>使用具有保险基金的交易所(Binance SAFU、Coinbase 保险)</li><li>不要在任何交易所保留大量资金</li><li>监控交易所新闻——如果看到危险信号就提现</li></ul>",
+				"case_mtgox": {
+					"title": "案例研究:Mt. Gox(2014)",
+					"description": "Mt. Gox 曾经是世界上最大的比特币交易所,处理 70% 的所有 BTC 交易。2014 年 2 月,它突然暂停提现并申请破产,透露 850,000 BTC(当时约 4.5 亿美元,今天价值 300 亿美元以上)在数年间被盗。CEO 声称盗窃是由于交易可塑性漏洞,但证据表明管理不善和可能的内部盗窃。用户只收回了一小部分持有资产,破产案至今仍在继续。Mt. Gox 崩溃是加密货币关于交易所托管风险的第一次重大警醒。"
+				}
+			},
+			"counterparty_risk": {
+				"title": "交易对手风险和破产",
+				"content": "<p>即使没有被黑客攻击,交易所也可能因管理不善、欺诈或市场状况而失败。</p><p><strong>交易所如何失败:</strong></p><ul><li><strong>部分准备金:</strong>交易所在未披露的情况下借出或投资客户存款</li><li><strong>混合资金:</strong>将客户资金与公司运营资金混合</li><li><strong>风险投资:</strong>使用客户资金进行投机交易或贷款</li><li><strong>挤兑:</strong>大量提现超过可用流动性</li></ul><p><strong>警告信号:</strong></p><ul><li>提现延迟或限制</li><li>缺少储备金证明</li><li>不切实际的收益产品(类似庞氏骗局)</li><li>监管问题或银行问题</li><li>领导层变动或辞职</li><li>熊市期间的激进扩张</li></ul>",
+				"case_ftx": {
+					"title": "案例研究:FTX 崩溃(2022)",
+					"description": "FTX 是世界第二大交易所,在 2022 年 1 月估值为 320 亿美元。2022 年 11 月,它在不到一周内崩溃。调查显示,FTX 已将数十亿客户资金借给姐妹公司 Alameda Research 进行风险交易。当 Alameda 的头寸失败时,FTX 无法兑现提现。创始人 Sam Bankman-Fried 被逮捕并被指控欺诈。估计有 80 亿美元以上的客户资金丢失或锁定在破产中。FTX 崩溃是加密货币最大的金融失败,证明了即使是有名人代言和主要投资者支持的「声誉良好」的交易所也可能是欺诈性的。关键教训:储备金证明和透明度不是可选的——它们是必不可少的。"
+				}
+			},
+			"regulatory_risk": {
+				"title": "监管和司法管辖区风险",
+				"content": "<p>政府法规对 CEX 用户构成了一个经常被忽视的风险。</p><p><strong>监管风险类型:</strong></p><ul><li><strong>交易所关闭:</strong>政府禁止或限制某些地区的交易所运营</li><li><strong>资产下架:</strong>由于证券法问题,交易所被迫移除某些代币</li><li><strong>提现限制:</strong>政府可以要求交易所冻结账户</li><li><strong>税务报告:</strong>交易所需要向税务机关报告用户活动</li><li><strong>资本管制:</strong>对法币提现或加密货币提现的限制</li></ul><p><strong>真实案例:</strong></p><ul><li><strong>中国(2017):</strong>禁止国内交易所——用户在关闭前有有限时间提现资金</li><li><strong>美国(2023):</strong> SEC 对 Binance 和 Coinbase 提起关于未注册证券的诉讼——可能迫使许多代币下架</li><li><strong>印度(持续):</strong>监管状态不确定——交易所在灰色地带运营,存在突然变化的风险</li></ul><p><strong>缓解策略:</strong></p><ul><li>使用在你所在司法管辖区获得许可的交易所</li><li>在多个交易所和司法管辖区分散投资</li><li>将大部分资金保存在自我托管中</li><li>随时了解监管发展</li><li>制定备用计划(P2P 平台、DEX),以防你的主要交易所不可用</li></ul><p><strong>双刃剑:</strong></p><p>更多监管通常意味着更多安全和用户保护——但也意味着更多监控、限制和政府过度干预的可能性。根据你的优先事项选择你的平衡点。</p>"
+			}
+		},
+		"api_trading": {
+			"title": "API 交易",
+			"content": "<p>所有主要交易所都提供 API(应用程序编程接口),让你以编程方式进行交易。这实现了算法交易、投资组合管理工具和自动化策略。</p>",
+			"getting_started": {
+				"title": "API 交易入门",
+				"content": "<p>交易所 API 通常有两种形式:</p><p><strong>REST API:</strong></p><ul><li>用于下单、查看余额等的标准 HTTP 请求</li><li>请求 → 响应模型</li><li>适用于:下单、账户管理、历史数据</li></ul><p><strong>WebSocket API:</strong></p><ul><li>实时流数据(订单簿更新、交易执行)</li><li>持久连接</li><li>适用于:市场数据、订单簿深度、实时警报</li></ul><p><strong>设置 API 访问:</strong></p><ol><li>在交易所设置中生成 API 密钥</li><li>设置权限(读取、交易,永不提现)</li><li>白名单你的 IP 地址</li><li>安全存储 API 密钥(环境变量,不是硬编码)</li><li>首先用小额测试</li></ol><p><strong>常见用例:</strong></p><ul><li><strong>投资组合跟踪:</strong>汇总跨交易所的余额</li><li><strong>套利机器人:</strong>利用交易所之间的价格差异</li><li><strong>做市:</strong>提供流动性并赚取价差</li><li><strong>网格交易:</strong>在区间内自动低买高卖</li><li><strong>警报系统:</strong>获得价格波动或订单成交的通知</li></ul><p><strong>API 质量比较:</strong></p><ul><li><strong>Binance:</strong>最全面,出色的文档,高速率限制</li><li><strong>Coinbase:</strong>非常稳定可靠,速率限制较低</li><li><strong>Kraken:</strong>良好的文档,合理的速率限制</li><li><strong>OKX:</strong>全面,适合衍生品</li></ul>"
+			},
+			"rate_limits": {
+				"title": "理解速率限制",
+				"content": "<p>所有交易所都施加速率限制以防止 API 滥用。超过这些限制会导致临时禁令。</p><p><strong>典型速率限制类型:</strong></p><ul><li><strong>请求权重:</strong>不同端点具有不同的「权重」计入你的限制</li><li><strong>订单限制:</strong>每秒/每分钟最大订单数</li><li><strong>IP 限制:</strong>每个 IP 地址的限制</li><li><strong>UID 限制:</strong>每个用户账户的限制</li></ul><p><strong>Binance 示例:</strong></p><ul><li>每个 IP 每分钟 1200 权重</li><li>每个账户每 10 秒 50 个订单</li><li>每个账户每天 160,000 权重</li></ul><p><strong>避免速率限制问题:</strong></p><ul><li>在本地缓存数据而不是重复请求</li><li>使用 WebSocket 获取实时数据而不是 REST 轮询</li><li>对重试实施指数退避</li><li>尽可能批量操作</li><li>监控你的权重使用情况</li><li>为高频策略使用多个账户或 IP(检查交易所 ToS)</li></ul><p><strong>速率限制响应:</strong></p><p>当你达到速率限制时,交易所通常返回 HTTP 429(请求过多)和 Retry-After 标头。尊重这一点——继续发送垃圾请求可能导致 IP 禁令。</p>"
+			},
+			"best_practices": {
+				"title": "API 交易最佳实践",
+				"content": "<p><strong>安全性:</strong></p><ul><li>除非绝对必要,否则永远不要启用提现权限</li><li>在所有 API 密钥上使用 IP 白名单</li><li>定期轮换 API 密钥(每月或每季度)</li><li>为不同目的使用单独的 API 密钥</li><li>在环境变量或密钥管理器中存储密钥,永远不要在代码中</li><li>监控 API 活动日志以检测未经授权的使用</li></ul><p><strong>错误处理:</strong></p><ul><li>实施具有指数退避的重试逻辑</li><li>优雅地处理网络故障</li><li>验证响应——不要假设成功</li><li>记录所有错误以进行调试</li><li>为关键故障设置警报(下单错误、连接丢失)</li></ul><p><strong>订单管理:</strong></p><ul><li>下单后始终检查订单状态</li><li>使用客户订单 ID 跟踪你的订单</li><li>实施订单超时——取消陈旧订单</li><li>在代码中设置最大订单大小限制</li><li>首先在测试网或最小金额上测试所有策略</li></ul><p><strong>测试:</strong></p><ul><li>如果可用,使用交易所测试网/沙盒</li><li>从只读 API 密钥开始进行数据收集</li><li>在放大之前用小额测试</li><li>在最初几天手动监控交易</li><li>保留所有 API 交互的详细日志</li></ul><p><strong>常见陷阱:</strong></p><ul><li>不处理速率限制 → 临时禁令</li><li>硬编码 API 密钥 → 密钥泄露</li><li>没有错误处理 → 机器人在关键时刻崩溃</li><li>余额检查不足 → 订单被拒绝</li><li>不考虑费用 → 无利可图的交易</li><li>时间戳同步问题 → 认证失败</li></ul><p><strong>推荐库:</strong></p><ul><li>Python: ccxt(支持 100+ 交易所)、python-binance</li><li>JavaScript: ccxt、node-binance-api</li><li>Go: go-binance</li></ul>"
+			}
+		}
+	},
+
+	"glossary": {
+		"order_book": {
+			"term": "订单簿",
+			"definition": "交易对的买卖订单实时列表,按价格级别组织。显示市场深度和流动性。"
+		},
+		"market_maker": {
+			"term": "做市商",
+			"definition": "通过同时下买入和卖出限价单来提供流动性的交易者或公司,从买卖价差中获利。"
+		},
+		"taker_fee": {
+			"term": "吃单手续费",
+			"definition": "当你下单立即匹配并执行现有订单簿中的订单时收取的费用,移除流动性。"
+		},
+		"maker_fee": {
+			"term": "挂单手续费",
+			"definition": "当你下不立即执行的限价单,为订单簿增加流动性时收取的费用。通常低于吃单费用。"
+		},
+		"spread": {
+			"term": "价差",
+			"definition": "最高买价和最低卖价之间的差额。较窄的价差表示更好的流动性。"
+		},
+		"slippage": {
+			"term": "滑点",
+			"definition": "预期交易价格与实际执行价格之间的差异,特别是在大额市价单上。在低流动性市场中更高。"
+		},
+		"margin": {
+			"term": "保证金",
+			"definition": "用于增加头寸规模的借入资金。保证金交易放大收益和损失,并带有清算风险。"
+		},
+		"liquidation": {
+			"term": "清算",
+			"definition": "当抵押品价值低于维持保证金要求时强制平仓杠杆头寸。防止负余额。"
+		},
+		"kyc": {
+			"term": "KYC(了解你的客户)",
+			"definition": "受监管交易所要求的身份验证流程。通常包括身份证验证、地址证明,有时还包括资金来源。"
+		},
+		"aml": {
+			"term": "AML(反洗钱)",
+			"definition": "要求交易所监控和报告可疑活动以防止洗钱和恐怖主义融资的法规。"
+		},
+		"cold_wallet": {
+			"term": "冷钱包",
+			"definition": "完全离线且未连接到互联网的加密货币存储。最安全的存储方法,被交易所用于大部分资金。"
+		},
+		"hot_wallet": {
+			"term": "热钱包",
+			"definition": "交易所用于快速提现和运营需求的联网加密货币钱包。比冷存储更方便但不太安全。"
+		}
+	}
+}

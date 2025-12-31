@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Pocket Network - Decentralized RPC Protocol",
+		"description": "Pocket Network (POKT) is the decentralized RPC protocol. Node operators stake POKT to serve requests, creating permissionless infrastructure.",
+		"keywords": "Pocket Network, POKT, decentralized RPC, blockchain infrastructure, node operators, Web3"
+	},
+	"overview": "Pocket Network (POKT) is the decentralized RPC protocol. Node operators stake POKT tokens to serve RPC requests, creating a permissionless, censorship-resistant infrastructure layer.\n\nUnlike centralized providers, Pocket has no single point of failure. Thousands of nodes compete to serve requests. The protocol automatically routes to available nodes and handles failover.\n\nPOKT token holders can stake to earn rewards for running nodes or delegate to existing operators. The network serves billions of relays monthly across multiple chains. True Web3 infrastructure.",
+	"features": {
+		"1": {
+			"title": "Decentralized",
+			"description": "Thousands of nodes"
+		},
+		"2": {
+			"title": "Permissionless",
+			"description": "Anyone can run"
+		},
+		"3": {
+			"title": "POKT Token",
+			"description": "Stake to earn"
+		},
+		"4": {
+			"title": "Multi-Chain",
+			"description": "Many networks"
+		},
+		"5": {
+			"title": "Censorship Resistant",
+			"description": "No single point"
+		},
+		"6": {
+			"title": "High Volume",
+			"description": "Billions of relays"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "dApp Infrastructure",
+			"description": "Decentralized RPC"
+		},
+		"2": {
+			"title": "Node Operation",
+			"description": "Run and earn"
+		},
+		"3": {
+			"title": "Staking",
+			"description": "Delegate POKT"
+		},
+		"4": {
+			"title": "Censorship Resistance",
+			"description": "Unstoppable access"
+		},
+		"5": {
+			"title": "Multi-Chain Apps",
+			"description": "Cross-chain RPC"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Pocket Network?",
+			"answer": "Pocket Network is decentralized RPC infrastructure. Node operators stake POKT to serve blockchain data. Apps pay POKT for access. It's like Uber for blockchain nodes—permissionless and distributed."
+		},
+		"2": {
+			"question": "How is it different from Alchemy?",
+			"answer": "Alchemy is a company running centralized servers. Pocket is a protocol with independent node operators. More censorship resistant but potentially variable quality. Different trust models."
+		},
+		"3": {
+			"question": "How do I use Pocket?",
+			"answer": "Use the Pocket Portal for easy access—sign up and get endpoints. For direct protocol access, stake POKT tokens. Many projects use Pocket through aggregators like Ankr."
+		},
+		"4": {
+			"question": "Can I run a node?",
+			"answer": "Yes. Stake minimum POKT (amount varies), run node software, and earn rewards for serving requests. Technical requirements exist. Many delegate instead of running personally."
+		},
+		"5": {
+			"question": "Which chains are supported?",
+			"answer": "Ethereum, Polygon, BSC, Harmony, and many more. Coverage depends on node operator support. Major chains have good coverage; smaller chains may have less."
+		}
+	},
+	"cta": {
+		"ready": "Ready for decentralized RPC?",
+		"button": "Explore Pocket",
+		"note": "Decentralized infrastructure"
+	}
+}

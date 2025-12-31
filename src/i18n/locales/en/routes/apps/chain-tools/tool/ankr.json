@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Ankr - Decentralized Web3 Infrastructure",
+		"description": "Ankr provides decentralized RPC infrastructure for Web3. Distributed node network offers reliable blockchain access across 45+ chains.",
+		"keywords": "Ankr, RPC, decentralized infrastructure, Web3, blockchain nodes, staking, multi-chain"
+	},
+	"overview": "Ankr provides decentralized RPC infrastructure for Web3. Their distributed node network offers reliable blockchain access across 45+ chains at competitive prices.\n\nUnlike centralized providers, Ankr's network is distributed across independent node operators. This improves reliability and censorship resistance. Free tier available for testing, paid plans for production.\n\nAnkr also offers staking services, AppChains, and gaming SDKs. They're positioned as comprehensive Web3 infrastructure beyond just RPC. Good option for multi-chain projects needing reliable endpoints.",
+	"features": {
+		"1": {
+			"title": "Decentralized",
+			"description": "Distributed nodes"
+		},
+		"2": {
+			"title": "45+ Chains",
+			"description": "Multi-chain support"
+		},
+		"3": {
+			"title": "Competitive Pricing",
+			"description": "Cost effective"
+		},
+		"4": {
+			"title": "Free Tier",
+			"description": "Testing available"
+		},
+		"5": {
+			"title": "Staking",
+			"description": "Liquid staking"
+		},
+		"6": {
+			"title": "Gaming SDK",
+			"description": "Game development"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "dApp Backend",
+			"description": "RPC endpoints"
+		},
+		"2": {
+			"title": "Multi-Chain",
+			"description": "Cross-chain apps"
+		},
+		"3": {
+			"title": "Cost Savings",
+			"description": "Lower RPC costs"
+		},
+		"4": {
+			"title": "Decentralization",
+			"description": "No single point"
+		},
+		"5": {
+			"title": "Game Development",
+			"description": "Gaming SDKs"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Ankr?",
+			"answer": "Ankr provides decentralized RPC infrastructure—blockchain node access distributed across independent operators. Also offers staking, AppChains, and gaming tools. Comprehensive Web3 infrastructure."
+		},
+		"2": {
+			"question": "Ankr vs Alchemy/Infura?",
+			"answer": "Ankr is more decentralized (distributed nodes vs centralized). Often cheaper. Supports more chains. Alchemy/Infura have more dev tools and debugging features. Choose based on needs."
+		},
+		"3": {
+			"question": "Is there a free tier?",
+			"answer": "Yes. Public RPC endpoints are free with rate limits. Good for testing and small projects. Paid plans for higher throughput, dedicated nodes, and premium features."
+		},
+		"4": {
+			"question": "What chains are supported?",
+			"answer": "45+ chains including Ethereum, BSC, Polygon, Arbitrum, Optimism, Avalanche, and more. Good L1 and L2 coverage. Check their docs for full list and specific chain features."
+		},
+		"5": {
+			"question": "What is Ankr Staking?",
+			"answer": "Ankr offers liquid staking tokens for various chains. Stake ETH and get ankrETH. Provides staking yield while maintaining liquidity. Similar to Lido but with multi-chain options."
+		}
+	},
+	"cta": {
+		"ready": "Ready for decentralized RPC?",
+		"button": "Try Ankr",
+		"note": "Distributed infrastructure"
+	}
+}

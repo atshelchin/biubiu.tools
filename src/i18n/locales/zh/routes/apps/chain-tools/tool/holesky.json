@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Holesky - 以太坊质押测试网",
+		"description": "Holesky是以太坊主要的质押和基础设施测试网络。大量ETH供应用于测试质押场景。",
+		"keywords": "Holesky, 测试网, 以太坊, 质押, 验证者, 测试ETH, 基础设施测试"
+	},
+	"overview": "Holesky是以太坊主要的质押和基础设施测试网络。2023年启动以取代Goerli，它有更大的ETH供应用于测试质押场景。\n\n该测试网镜像以太坊主网的共识和执行。这是质押协议、验证者和基础设施在主网部署前测试的地方。对权益证明开发至关重要。\n\nHolesky水龙头提供免费测试ETH。网络由客户端团队和以太坊基金会维护。对于应用程序测试，Sepolia也可用——Holesky专注于质押和验证者。",
+	"features": {
+		"1": {
+			"title": "质押测试网",
+			"description": "PoS测试"
+		},
+		"2": {
+			"title": "大量ETH供应",
+			"description": "充足测试ETH"
+		},
+		"3": {
+			"title": "主网镜像",
+			"description": "相同共识"
+		},
+		"4": {
+			"title": "验证者测试",
+			"description": "基础设施开发"
+		},
+		"5": {
+			"title": "免费水龙头",
+			"description": "可获取测试ETH"
+		},
+		"6": {
+			"title": "EF维护",
+			"description": "官方测试网"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "质押开发",
+			"description": "PoS协议"
+		},
+		"2": {
+			"title": "验证者测试",
+			"description": "节点运营商"
+		},
+		"3": {
+			"title": "基础设施",
+			"description": "客户端测试"
+		},
+		"4": {
+			"title": "协议测试",
+			"description": "新功能"
+		},
+		"5": {
+			"title": "学习",
+			"description": "练习质押"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Holesky是什么？",
+			"answer": "Holesky是以太坊的质押和基础设施测试网络。2023年取代Goerli。有充足的测试ETH用于质押场景。验证者和协议在主网前测试的地方。"
+		},
+		"2": {
+			"question": "Holesky vs Sepolia？",
+			"answer": "Holesky用于质押/验证者/基础设施测试——有大量ETH用于质押。Sepolia用于应用测试——更稳定，资源消耗更少。根据测试需求选择。"
+		},
+		"3": {
+			"question": "如何获取Holesky ETH？",
+			"answer": "使用水龙头——PoW水龙头、质押水龙头或社区水龙头。Holesky的ETH比Goerli多得多。查看以太坊文档了解当前水龙头链接。"
+		},
+		"4": {
+			"question": "为什么取代Goerli？",
+			"answer": "Goerli ETH供应有限，使质押测试困难。Holesky有16亿测试ETH——足够大规模质押测试。专为以太坊PoS时代而建。"
+		},
+		"5": {
+			"question": "可以在Holesky测试应用吗？",
+			"answer": "可以，但Sepolia通常更适合应用测试。Holesky针对质押测试优化。对于智能合约开发，两者都可用——Sepolia可能更方便。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在Holesky测试了吗？",
+		"button": "获取测试ETH",
+		"note": "以太坊质押测试网"
+	}
+}

@@ -1,0 +1,181 @@
+{
+	"title": "Web3求职与招聘完全指南",
+	"subtitle": "区块链行业求职者和招聘者的完整指南",
+
+	"sections": {
+		"intro": {
+			"title": "了解 Web3 就业市场",
+			"content": "<p>Web3 就业市场与传统科技行业截然不同。<strong>超过 90% 的加密公司采用远程优先</strong>的工作模式，职位往往包含代币薪酬，员工和贡献者之间的界限日益模糊。</p><p>自 2020 年以来，Web3 招聘呈爆炸式增长。即使在 2022-2023 年的熊市期间，<strong>公司仍然继续招聘顶尖人才</strong>，他们认识到在低谷期建设的基础设施将推动下一轮牛市。Uniswap、Aave 和 Coinbase 等主要协议的团队分布在 50 多个国家。</p><p>无论你是希望构建金融未来的开发者、想要加入革命的营销人员，还是寻求招聘最佳人才的招聘者，本指南都将带你了解 Web3 职业的独特格局。</p>"
+		},
+
+		"job_categories": {
+			"title": "Web3 职位类别",
+			"content": "<p>Web3 提供的机会不仅限于编码。从构建协议的技术角色到发展社区的非技术职位，每种技能都有用武之地。</p>",
+			"developer_roles": {
+				"title": "开发者角色",
+				"content": "<p><strong>智能合约开发者（Solidity/Rust/Vyper）：</strong>构建和审计去中心化协议。通常基础薪资为 12 万至 30 万美元以上。需求量大，尤其是了解 DeFi 基础组件、可升级合约和 Gas 优化的安全导向开发者。</p><p><strong>前端开发者（React/Vue/Svelte + Web3）：</strong>使用 ethers.js、viem、wagmi 等库创建 dApp 界面。必须了解钱包连接、交易签名和区块链状态管理。薪资范围 10 万至 20 万美元以上。</p><p><strong>后端/基础设施开发者：</strong>构建索引器、API、节点基础设施和链下系统。技能包括 TypeScript/Go/Rust、GraphQL（The Graph）、区块链数据的数据库设计。薪资 11 万至 22 万美元以上。</p><p><strong>协议工程师：</strong>在核心区块链基础设施（L1、L2、共识）上工作。需要深入了解分布式系统、密码学和性能优化。在顶级协议中通常为 15 万至 40 万美元以上。</p><p><strong>安全工程师/审计员：</strong>发现智能合约和协议中的漏洞。薪资可达 20 万至 50 万美元以上，外加数百万美元的漏洞赏金。高度专业化，需求极高。</p>"
+			},
+			"non_dev_roles": {
+				"title": "非技术角色",
+				"content": "<p><strong>开发者关系（DevRel）：</strong>教育开发者如何使用协议，创建文档，在会议上演讲。通常为 9 万至 18 万美元。需要技术知识和沟通技能。</p><p><strong>社区经理：</strong>建设和培育 Discord/Telegram 社区，组织活动，主持讨论。薪资 6 万至 12 万美元。对协议增长和用户留存至关重要。</p><p><strong>营销与增长：</strong>推动用户获取，管理活动、合作伙伴关系和内容策略。Web3 营销独特——没有谷歌广告，专注于 Twitter、Discord 和草根社区建设。薪资 8 万至 16 万美元以上。</p><p><strong>商务拓展：</strong>建立合作伙伴关系、集成和战略关系。需要了解协议机制和生态系统动态。薪资 10 万至 20 万美元以上，外加绩效奖金。</p><p><strong>产品经理：</strong>定义路线图、确定功能优先级、协调团队。必须了解用户需求和区块链的技术限制。薪资 12 万至 22 万美元以上。</p><p><strong>设计师（UI/UX）：</strong>为复杂的 DeFi 协议创建直观界面。了解钱包交互和交易流程至关重要。薪资 8 万至 16 万美元以上。</p><p><strong>法务/合规：</strong>应对监管环境、代币分配、DAO 结构。加密货币法律经验备受重视。有经验的法律顾问薪资 15 万至 30 万美元以上。</p>"
+			}
+		},
+
+		"skills": {
+			"title": "高需求技能",
+			"content": "<p>Web3 奖励 T 型专业人士：在一个领域有深厚专业知识，对生态系统有广泛了解。</p>",
+			"technical_skills": {
+				"title": "技术技能",
+				"content": "<p><strong>区块链开发：</strong></p><ul><li><strong>Solidity：</strong>主流的智能合约语言。掌握 ERC 标准、可升级性模式、Gas 优化和安全最佳实践。</li><li><strong>Rust：</strong>用于 Solana、NEAR 和性能关键的以太坊工具。学习曲线陡峭，但需求极高。</li><li><strong>TypeScript/JavaScript：</strong>使用 React + Web3 库进行前端开发。理解异步模式和钱包集成。</li><li><strong>测试与安全：</strong>Hardhat、Foundry、模糊测试、形式化验证基础。安全意识不可或缺。</li></ul><p><strong>基础设施与工具：</strong></p><ul><li>IPFS、The Graph、Chainlink 预言机</li><li>节点操作和 RPC 提供商（Infura、Alchemy）</li><li>用于索引区块链数据的数据库设计</li><li>DevOps：Docker、CI/CD、监控系统</li></ul><p><strong>密码学基础：</strong>了解签名、哈希、零知识证明（至少是概念上的）日益重要。</p>"
+			},
+			"soft_skills": {
+				"title": "软技能与远程办公",
+				"content": "<p><strong>异步沟通：</strong>大多数 Web3 团队跨时区异步工作。编写清晰文档、异步更新和自我管理的能力至关重要。</p><p><strong>公开建设：</strong>Web3 奖励公开建设。分享你的学习过程，参与讨论，帮助他人。你的在线形象比传统资历更重要。</p><p><strong>适应性：</strong>这个领域发展迅速。今天的前沿技术可能在 6 个月后就过时了。持续学习不是可选的——这就是工作的一部分。</p><p><strong>社区导航：</strong>成功往往来自活跃于 Discord 服务器、Twitter Spaces 和治理论坛。网络建设发生在线上，而不是在公司聚会上。</p><p><strong>主人翁心态：</strong>Web3 重视主动性和自主性。你需要自己识别问题并解决它们，而不需要大量的指导。</p>"
+			}
+		},
+
+		"finding_jobs": {
+			"title": "寻找 Web3 工作",
+			"content": "<p>Web3 招聘方式不同。传统招聘网站之外，还有 Twitter 帖子、Discord 公告和协议治理论坛。</p>",
+			"job_boards": {
+				"title": "招聘网站与平台",
+				"content": "<p><strong>Crypto Jobs List：</strong>历史最悠久、最全面的 Web3 招聘网站。涵盖从早期初创公司到成熟协议的所有内容。免费浏览，公司付费发布。</p><p><strong>Web3 Career：</strong>经过质量控制的精选职位。数量较少但信号更强。主打远程优先的各类职能角色。</p><p><strong>AngelList：</strong>对初创公司很友好，包括加密公司。可以按股权、薪资和公司阶段筛选。适合寻找具有重大增长潜力的早期机会。</p><p><strong>LinkedIn：</strong>传统但随着更多大公司进入加密领域日益相关。适合 Coinbase、Kraken 等成熟公司或建立 Web3 业务的咨询公司。</p><p><strong>协议专属：</strong>许多协议直接在其网站、Discord 或治理论坛上发布职位。查看协议 Discord 中的 /careers 频道。</p>"
+			},
+			"networking": {
+				"title": "社交网络与社区",
+				"content": "<p><strong>Twitter：</strong>Web3 的主要社交网络中心。关注你感兴趣领域的开发者、创始人和研究人员。深思熟虑地参与他们的内容。许多招聘是在有人注意到你的贡献后通过私信发生的。</p><p><strong>Discord 社区：</strong>加入协议服务器并真诚地提供帮助。回答问题、贡献想法、报告错误。维护者会注意到活跃的社区成员。</p><p><strong>会议与活动：</strong>ETHDenver、Devcon 和地区性活动是社交网络的金矿。在边会上的对话往往会带来机会。</p><p><strong>GitHub 贡献：</strong>为开源 Web3 项目做贡献是最好的简历。协议团队会关注他们的贡献者，并经常从中招聘。</p><p><strong>推荐：</strong>大多数 Web3 招聘来自推荐。建立真诚的关系，而不是交易性社交。</p>"
+			},
+			"dao_contributor": {
+				"title": "DAO 贡献者路径",
+				"content": "<p>一个日益流行的途径是先成为 DAO 贡献者，然后再全职加入：</p><p><strong>Dework：</strong>DAO 的任务管理。找到与你技能匹配的赏金任务，完成任务，建立声誉。一些贡献者在转为核心角色之前每月通过赏金赚取 5000 至 20000 美元。</p><p><strong>Layer3：</strong>完成任务并获得凭证。协议会注意到活跃的参与者，并从最投入的社区成员中招聘。</p><p><strong>Gitcoin：</strong>为资助项目做贡献。与可能为其协议招聘的项目维护者建立关系。</p><p><strong>治理参与：</strong>活跃的治理参与者（深思熟虑的论坛帖子、提案）会被注意到。展示了领域知识和沟通技能。</p><p><strong>好处：</strong>先试后买。在承诺之前测试与团队的合作。建立工作组合。通常会带来全职工作机会。</p>"
+			}
+		},
+
+		"building_profile": {
+			"title": "建立你的 Web3 档案",
+			"content": "<p>传统简历在 Web3 中不太重要。你的链上声誉、GitHub 贡献和公开建设更有说服力。</p>",
+			"portfolio": {
+				"title": "作品集与公开工作",
+				"content": "<p><strong>GitHub 个人资料：</strong>你的主要简历。置顶你最好的仓库。包括：</p><ul><li>具有全面测试和文档的智能合约</li><li>DeFi 协议分叉或原创实现</li><li>展示钱包集成的 Web3 前端</li><li>对知名协议的贡献（即使是文档）</li></ul><p><strong>个人网站/博客：</strong>写下你正在学习的内容。简单地解释复杂概念。记录你的建设历程。分享失败和学习经验。</p><p><strong>已部署的项目：</strong>主网部署（即使是小项目）展示了你的交付能力。如果有的话，包括审计报告。在 Etherscan 上链接到你的合约并验证源代码。</p><p><strong>视频演示：</strong>使用 Loom 录制视频介绍你的代码或产品。帮助招聘者快速了解你的工作。</p>"
+			},
+			"contributions": {
+				"title": "开源贡献",
+				"content": "<p><strong>从小处开始：</strong>修复文档中的拼写错误，在 README 中添加示例，改进错误消息。熟悉代码库。</p><p><strong>新手友好的问题：</strong>许多项目会标记新手友好的问题。解决这些问题以学习贡献流程。</p><p><strong>关注影响：</strong>对主要协议（Uniswap、Aave、Safe）的一个有意义的贡献比几十个琐碎的 PR 更有分量。</p><p><strong>良好沟通：</strong>编写清晰的 PR 描述，及时回应反馈，遵循贡献指南。维护者会记住让他们生活更轻松的贡献者。</p><p><strong>针对战略项目：</strong>为你想工作的协议做贡献。这是最好的面试。</p>"
+			},
+			"hackathons": {
+				"title": "黑客松与竞赛",
+				"content": "<p><strong>ETHGlobal 黑客松：</strong>每月活动，奖金 5 万至 20 万美元。非常适合社交和快速学习。获胜者经常被赞助商协议招聘。</p><p><strong>Buildspace：</strong>为期 6 周的基于队列的学习计划。构建项目，获得反馈，加入社区。许多毕业生通过该网络找到工作。</p><p><strong>赏金与竞赛：</strong>安全竞赛（Code4rena、Sherlock）和生态系统赏金。在赚钱的同时展示技能。</p><p><strong>获胜之外的好处：</strong></p><ul><li>在时间压力下快速提升技能</li><li>结识潜在的联合创始人和同事</li><li>从评委（通常是协议创始人）那里获得反馈</li><li>作品集作品展示你能在约束下交付</li></ul>"
+			}
+		},
+
+		"interview_process": {
+			"title": "Web3 面试流程",
+			"content": "<p>Web3 面试强调实用技能而非算法难题。期待真实的代码审查和架构讨论。</p>",
+			"technical_interviews": {
+				"title": "技术面试",
+				"content": "<p><strong>智能合约面试：</strong></p><ul><li>实时编码：实现 ERC-20 或简单的 DeFi 基础组件</li><li>代码审查：发现提供的合约中的漏洞</li><li>架构讨论：设计借贷协议或 DEX</li><li>安全重点：解释重入、预言机操纵、访问控制</li></ul><p><strong>前端面试：</strong></p><ul><li>从头构建钱包连接模态框</li><li>实现交易签名和错误处理</li><li>高效地显示和格式化区块链数据</li><li>讨论管理 Web3 状态的 React 模式</li></ul><p><strong>带回家项目：</strong>很常见。预计 4-8 小时的工作：</p><ul><li>带测试和部署脚本的智能合约</li><li>与真实协议的前端集成</li><li>小型协议的安全审计</li></ul><p><strong>与 Web2 的关键区别：</strong>较少强调算法复杂性，更多关注领域知识、安全意识和实际建设。</p>"
+			},
+			"culture_fit": {
+				"title": "文化与价值观契合",
+				"content": "<p><strong>去中心化理念：</strong>理解并认同项目的愿景。一些团队是去中心化极端主义者，其他团队更务实。了解你的立场。</p><p><strong>远程优先文化：</strong>展示异步工作的能力。分享管理分布式协作的例子。</p><p><strong>社区优先心态：</strong>Web3 项目服务于社区，而不仅仅是用户。展示对治理、代币持有者对齐和社区建设的理解。</p><p><strong>透明度：</strong>期待公开讨论你的加密信念。一些公司非常关心与加密价值观的一致性，而不仅仅是技术机会。</p><p><strong>要问的问题：</strong></p><ul><li>你们如何平衡去中心化与执行速度？</li><li>你们的代币分配和归属时间表是什么？</li><li>治理在实践中如何运作？</li><li>你们的安全方法和事件响应是什么？</li><li>除了 TVL 或代币价格，你们如何衡量成功？</li></ul>"
+			},
+			"compensation": {
+				"title": "薪酬与代币包",
+				"content": "<p><strong>薪资范围（2025）：</strong>通常与顶级 Web2 公司竞争，有时更高：</p><ul><li>初级智能合约开发者：10 万至 15 万美元</li><li>高级协议工程师：18 万至 35 万美元</li><li>首席/主体工程师：30 万至 50 万美元以上</li><li>非技术角色：通常为同等开发者薪资的 70-90%</li></ul><p><strong>代币薪酬：</strong>最大的差异化因素：</p><ul><li>成功协议的早期员工可以看到代币的 10-100 倍回报</li><li>典型分配：早期员工获得代币供应量的 0.1%-2%</li><li>归属期：通常为 4 年，1 年锁定期</li><li>流动性与锁定：了解你何时可以出售</li></ul><p><strong>谈判技巧：</strong></p><ul><li>了解完全稀释估值（FDV），而不仅仅是代币数量</li><li>询问财库、团队分配的未来稀释情况</li><li>要求以代币而非美元等值归属（增长潜力）</li><li>考虑提前行权选项以优化税收</li><li>在假设不同代币结果的情况下比较总薪酬</li></ul><p><strong>危险信号：</strong></p><ul><li>大部分薪酬是未归属代币，时间表不明确</li><li>拒绝透明讨论代币经济学</li><li>用「巨大的代币上涨空间」来证明不具竞争力的基本工资</li></ul>"
+			}
+		},
+
+		"for_recruiters": {
+			"title": "给招聘者与招聘经理",
+			"content": "<p>在 Web3 招聘需要了解人才市场的独特动态，最好的候选人通常有多个 offer，并拥有大量的加密财富。</p>",
+			"finding_talent": {
+				"title": "在哪里寻找人才",
+				"content": "<p><strong>GitHub：</strong>搜索为主要协议做出贡献的开发者。查看：</p><ul><li>对 Uniswap、Aave、Safe、Compound 分叉的贡献</li><li>有审计发现的安全研究人员</li><li>Web3 工具中活跃的开源维护者</li></ul><p><strong>Twitter：</strong>许多顶尖人才在 Twitter 上很活跃。寻找：</p><ul><li>分享建设帖子的开发者</li><li>发布漏洞分析的安全研究人员</li><li>具有深厚协议知识的社区成员</li></ul><p><strong>协议社区：</strong>你的竞争对手的 Discord 服务器就是人才库。活跃、知识渊博的社区成员是潜在的招聘对象。</p><p><strong>黑客松获胜者：</strong>ETHGlobal、Gitcoin 黑客松。最近的获胜者展示了当前的技能和动力。</p><p><strong>DAO 贡献者：</strong>积极为 DAO（Dework、Layer3）做贡献的人展示了主动性和 Web3 认同。</p><p><strong>审计公司：</strong>考虑新机会的安全审计员。他们深刻理解协议安全。</p>"
+			},
+			"evaluating_candidates": {
+				"title": "评估 Web3 候选人",
+				"content": "<p><strong>简历之外：</strong></p><ul><li><strong>链上工作：</strong>审查已部署的合约、交易历史、协议交互。他们实际使用 DeFi，还是只是构建它？</li><li><strong>社区声誉：</strong>在相关的 Discord/Telegram 群组中打听。Web3 很小——声誉先于人。</li><li><strong>GitHub 质量：</strong>不只是计算提交次数。审查代码质量、测试覆盖率、文档完整性。</li><li><strong>安全意识：</strong>对于任何区块链角色，安全意识都是必不可少的。询问过去的安全学习经验。</li></ul><p><strong>危险信号：</strong></p><ul><li>无法解释技术角色的基本概念（EVM、Gas、签名）</li><li>没有可以指出的公开工作或贡献</li><li>过度关注代币价格投机而非技术</li><li>无法讨论其代码中的安全考虑</li><li>在快速发展的领域中没有持续学习的证据</li></ul><p><strong>好的信号：</strong></p><ul><li>在 Web3 社区中活跃并提供有用的贡献</li><li>从失败/黑客事件中学习并能阐述教训</li><li>展示对你的协议的特别好奇心</li><li>在去中心化理想主义和务实主义之间取得平衡</li><li>远程/异步环境下强大的沟通技能</li></ul>"
+			},
+			"competitive_offers": {
+				"title": "提供有竞争力的 Offer",
+				"content": "<p><strong>了解你的竞争：</strong>顶尖候选人通常在以下选项中选择：</p><ul><li>成熟的协议（稳定、经过验证的代币价值）</li><li>新的初创公司（更高风险、更高回报）</li><li>自由职业/为多个 DAO 做贡献（灵活性、多样性）</li><li>构建自己的协议（终极回报）</li></ul><p><strong>金钱之外的差异化：</strong></p><ul><li><strong>影响力：</strong>他们将解决什么独特的问题？拥有主要功能/协议领域。</li><li><strong>学习：</strong>接触可以向其学习的顶尖人才。接触新颖问题。</li><li><strong>可见性：</strong>建立声誉的机会——开源工作、会议演讲、协议知名度。</li><li><strong>文化：</strong>优秀的团队、有趣的异步讨论、治理参与。</li><li><strong>使命：</strong>许多人非常关心他们正在构建的未来——通往去中心化的可信路径很重要。</li></ul><p><strong>代币包结构：</strong></p><ul><li>对代币经济学、归属期和稀释保持透明</li><li>考虑对高级员工采用无锁定期或更短的锁定期（6 个月）</li><li>在可能的情况下提供提前行权选项</li><li>解释你的代币发布时间表和流动性计划</li></ul><p><strong>快速行动：</strong>顶尖候选人每周都会收到多个 offer。你的流程应该是：</p><ul><li>24 小时内首次回应</li><li>3-5 天内技术面试</li><li>最终面试后 1 周内发出 offer</li><li>预期短决策窗口（候选人通常有截止日期）</li></ul>"
+			}
+		},
+
+		"remote_work": {
+			"title": "在远程优先的 Web3 中蓬勃发展",
+			"content": "<p>超过 90% 的 Web3 公司是远程优先或完全远程。成功需要适应异步、分布式协作。</p>",
+			"async_communication": {
+				"title": "异步沟通",
+				"content": "<p><strong>书面沟通是你的超能力：</strong>在远程 Web3 中，你的写作就是你的存在：</p><ul><li><strong>清晰的更新：</strong>每日或每周异步更新你交付的内容、阻碍因素和下一步。没有人追着你要状态。</li><li><strong>详细的文档：</strong>写文档时就像在向 6 个月后的自己解释一样。包括上下文，不仅仅是做什么，还有为什么。</li><li><strong>深思熟虑的异步讨论：</strong>Discord/Telegram 帖子需要清晰、完整的想法。避免可以通过一条消息解决的来回沟通。</li></ul><p><strong>工具：</strong></p><ul><li><strong>Discord/Telegram：</strong>主要沟通方式。发帖前整理思路，有效使用帖子功能。</li><li><strong>Notion/GitHub：</strong>文档、RFC、技术规范。假设异步读者。</li><li><strong>Loom：</strong>用于复杂解释的视频录制。比写作快，比安排电话会议容易。</li></ul><p><strong>最佳实践：</strong></p><ul><li>倾向于过度沟通而非沟通不足</li><li>尊重时区——不要期待立即回复</li><li>明确做出决策并记录下来</li><li>默认使用公开频道以保持透明</li></ul>"
+			},
+			"time_zones": {
+				"title": "管理时区",
+				"content": "<p><strong>全球团队：</strong>团队跨越 12 个以上时区很常见。这意味着：</p><ul><li>没有一个会议时间适合所有人</li><li>录制会议是标准做法，而不是例外</li><li>实时重叠可能每天只有 0-4 小时</li></ul><p><strong>成功策略：</strong></p><ul><li><strong>核心时间：</strong>许多团队指定 2-4 小时的重叠窗口</li><li><strong>轮换：</strong>轮换会议时间，让痛苦共同承担</li><li><strong>异步优先的会议：</strong>使用会议进行讨论，而不是信息共享。事先分享上下文。</li><li><strong>跟随太阳：</strong>利用时区分布作为优势——24 小时开发周期，更快的迭代。</li></ul><p><strong>工作与生活的平衡：</strong></p><ul><li>设定界限——仅仅因为有人在你时区的凌晨 2 点发消息并不意味着你要回复</li><li>使用状态指示器并沟通你的工作时间</li><li>不要让时区的内疚导致倦怠</li></ul>"
+			},
+			"dao_models": {
+				"title": "DAO 贡献者模式",
+				"content": "<p><strong>超越传统雇佣：</strong>许多 Web3 工作者为多个 DAO 做贡献，而不是单一全职角色：</p><p><strong>贡献者原型：</strong></p><ul><li><strong>核心贡献者：</strong>全职等效，通常有薪水 + 代币。类似于传统雇佣。</li><li><strong>兼职贡献者：</strong>每周为一个协议工作 10-20 小时，同时做其他工作。</li><li><strong>多 DAO：</strong>同时为 3-5 个 DAO 做贡献，每个 5-10 小时。分散的收入和风险。</li><li><strong>赏金猎人：</strong>跨多个协议的基于任务的工作。高度灵活，收入可变。</li></ul><p><strong>协调平台：</strong></p><ul><li><strong>Dework：</strong>任务管理、赏金、贡献者声誉。许多 DAO 使用它来协调工作。</li><li><strong>Coordinape：</strong>同行奖励和认可。DAO 使用它根据同行投票分配贡献者奖励。</li><li><strong>公会系统：</strong>一些 DAO 组织成公会（开发公会、营销公会），有内部协调员。</li></ul><p><strong>DAO 贡献的优点：</strong></p><ul><li>灵活性和自主性</li><li>接触多个项目和团队</li><li>分散的代币风险</li><li>在生态系统中建立广泛的网络</li></ul><p><strong>缺点：</strong></p><ul><li>可变收入和缺乏福利</li><li>上下文切换开销</li><li>在单个协议中缺乏深度专业知识</li><li>治理开销和政治</li></ul>"
+			}
+		}
+	},
+
+	"glossary": {
+		"smart_contract_developer": {
+			"term": "智能合约开发者",
+			"definition": "专门从事编写、测试和部署智能合约的开发者，通常使用 Solidity、Rust 或 Vyper。负责协议逻辑、安全性和 Gas 优化。"
+		},
+		"defi_developer": {
+			"term": "DeFi 开发者",
+			"definition": "专注于去中心化金融协议的区块链开发者——DEX、借贷市场、衍生品、收益农场。需要了解金融基础组件和经济安全。"
+		},
+		"frontend_developer": {
+			"term": "前端开发者",
+			"definition": "使用 Web3 库（如 ethers.js、viem 和 wagmi）为 dApp 构建用户界面的 Web 开发者。处理钱包集成、交易签名和区块链状态管理。"
+		},
+		"full_stack": {
+			"term": "全栈 Web3 开发者",
+			"definition": "能够构建智能合约和前端，以及后端索引器和 API 的开发者。了解从区块链到浏览器的整个技术栈。"
+		},
+		"devrel": {
+			"term": "开发者关系（DevRel）",
+			"definition": "专注于教育外部开发者如何使用协议或平台的角色。创建文档、教程、在活动中演讲，并支持开发者社区。"
+		},
+		"community_manager": {
+			"term": "社区经理",
+			"definition": "负责在 Discord、Telegram、Twitter 上建设和培育协议社区的人。主持讨论、组织活动，并作为用户和团队之间的桥梁。"
+		},
+		"tokenomics": {
+			"term": "代币经济学",
+			"definition": "加密货币代币的经济设计——供应、分配、通胀、效用和激励机制。对协议可持续性和价值捕获至关重要。"
+		},
+		"vesting": {
+			"term": "归属期",
+			"definition": "代币随时间逐渐释放，通常为 2-4 年。通过防止员工在授予后立即出售所有代币来对齐长期激励。"
+		},
+		"cliff": {
+			"term": "锁定期",
+			"definition": "任何代币归属之前的初始期限（通常为 1 年）。如果你在锁定期之前离开，你不会收到任何代币。锁定期之后，归属继续按月/季度进行。"
+		},
+		"remote_first": {
+			"term": "远程优先",
+			"definition": "围绕远程工作作为默认设计的公司文化，而不是例外。所有流程、沟通和决策都为分布式团队优化。"
+		},
+		"async": {
+			"term": "异步",
+			"definition": "不需要实时在场的沟通和工作。消息、文档和更新在每个人的时间表上跨时区消费。"
+		},
+		"contributor": {
+			"term": "贡献者",
+			"definition": "为 DAO 或协议做贡献的人，通常比传统雇佣更灵活。可以是全职核心贡献者或兼职参与者。"
+		},
+		"bounty": {
+			"term": "赏金",
+			"definition": "针对特定工作的基于任务的奖励——修复错误、构建功能、创建内容。在 DAO 中作为传统雇佣的替代方案很常见。"
+		},
+		"hackathon": {
+			"term": "黑客松",
+			"definition": "有时间限制的活动（通常为 24-72 小时），开发者为奖金构建项目。主要的社交和学习机会，通常会带来工作或资金。"
+		}
+	}
+}

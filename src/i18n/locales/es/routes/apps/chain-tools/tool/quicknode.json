@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "QuickNode - Infraestructura Blockchain",
+		"description": "QuickNode proporciona infraestructura de nodos blockchain rápida y confiable. Accede a más de 25 cadenas a través de endpoints RPC gestionados y APIs.",
+		"keywords": "QuickNode, nodos RPC, API blockchain, infraestructura de nodos, desarrollo Web3, multicadena"
+	},
+	"overview": "QuickNode es un proveedor líder de infraestructura blockchain que ofrece servicios de nodos gestionados en más de 25 cadenas. En lugar de ejecutar tus propios nodos, usa los endpoints RPC confiables de QuickNode para tus dApps.\n\nQuickNode enfatiza velocidad y confiabilidad con infraestructura distribuida globalmente. Su marketplace ofrece complementos como APIs mejoradas, herramientas NFT y analíticas. Las características empresariales incluyen nodos dedicados y SLAs.\n\nMás allá del RPC básico, QuickNode proporciona streams para datos en tiempo real, funciones para cómputo serverless y varias herramientas para desarrollo Web3. Es una plataforma de infraestructura completa.",
+	"features": {
+		"1": {
+			"title": "25+ Cadenas",
+			"description": "Amplio soporte blockchain"
+		},
+		"2": {
+			"title": "RPC Rápido",
+			"description": "Endpoints de baja latencia"
+		},
+		"3": {
+			"title": "Streams",
+			"description": "Datos blockchain en tiempo real"
+		},
+		"4": {
+			"title": "Functions",
+			"description": "Cómputo serverless"
+		},
+		"5": {
+			"title": "Marketplace de Add-Ons",
+			"description": "Funcionalidad extendida"
+		},
+		"6": {
+			"title": "Grado Empresarial",
+			"description": "Nodos dedicados, SLAs"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Desarrollo dApp",
+			"description": "RPC para aplicaciones"
+		},
+		"2": {
+			"title": "Apps Multi-Cadena",
+			"description": "Un proveedor, muchas cadenas"
+		},
+		"3": {
+			"title": "Datos en Tiempo Real",
+			"description": "Stream de eventos blockchain"
+		},
+		"4": {
+			"title": "Herramientas NFT",
+			"description": "APIs NFT y metadatos"
+		},
+		"5": {
+			"title": "Empresarial",
+			"description": "Infraestructura de producción"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "¿Qué cadenas soporta QuickNode?",
+			"answer": "QuickNode soporta más de 25 cadenas incluyendo Ethereum, Polygon, Solana, Arbitrum, Optimism, BSC, Avalanche y más. La cobertura es amplia para cadenas EVM e incluye cadenas principales no-EVM."
+		},
+		"2": {
+			"question": "¿QuickNode vs Alchemy vs Infura?",
+			"answer": "Todos son proveedores RPC principales. QuickNode enfatiza velocidad y cobertura de cadenas. Alchemy lidera en herramientas para desarrolladores. Infura es el original, confiable para Ethereum. Los precios y características varían—compara para tus necesidades."
+		},
+		"3": {
+			"question": "¿Qué son los Streams?",
+			"answer": "Streams te envían datos blockchain en tiempo real vía webhooks. En lugar de hacer polling por nuevos bloques/eventos, los datos llegan instantáneamente. Útil para indexación, notificaciones y aplicaciones en tiempo real."
+		},
+		"4": {
+			"question": "¿Qué son las Functions?",
+			"answer": "Functions te permiten ejecutar código serverless activado por eventos blockchain. Escribe JavaScript que se ejecuta cuando ocurren transacciones. Es como AWS Lambda para Web3—cómputo sin gestionar servidores."
+		},
+		"5": {
+			"question": "¿Hay tier gratuito?",
+			"answer": "QuickNode ofrece un tier gratuito con solicitudes limitadas. Bueno para desarrollo y pruebas. Las apps en producción típicamente necesitan planes de pago. Planes empresariales disponibles para usuarios de alto volumen con SLAs."
+		}
+	},
+	"cta": {
+		"ready": "¿Listo para infraestructura blockchain rápida?",
+		"button": "Explorar QuickNode",
+		"note": "Proveedor de nodos multi-cadena"
+	}
+}

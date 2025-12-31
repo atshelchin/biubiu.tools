@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Pocket Network - 去中心化RPC协议",
+		"description": "Pocket Network (POKT)是去中心化RPC协议。节点运营商质押POKT来服务请求，创建无许可基础设施。",
+		"keywords": "Pocket Network, POKT, 去中心化RPC, 区块链基础设施, 节点运营商, Web3"
+	},
+	"overview": "Pocket Network (POKT)是去中心化RPC协议。节点运营商质押POKT代币来服务RPC请求，创建无许可、抗审查的基础设施层。\n\n与中心化提供商不同，Pocket没有单点故障。数千个节点竞争服务请求。协议自动路由到可用节点并处理故障转移。\n\nPOKT代币持有者可以质押来运行节点赚取奖励，或委托给现有运营商。网络每月跨多链服务数十亿次中继。真正的Web3基础设施。",
+	"features": {
+		"1": {
+			"title": "去中心化",
+			"description": "数千个节点"
+		},
+		"2": {
+			"title": "无许可",
+			"description": "任何人可运行"
+		},
+		"3": {
+			"title": "POKT代币",
+			"description": "质押赚取"
+		},
+		"4": {
+			"title": "多链",
+			"description": "多个网络"
+		},
+		"5": {
+			"title": "抗审查",
+			"description": "无单点故障"
+		},
+		"6": {
+			"title": "高容量",
+			"description": "数十亿次中继"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "dApp基础设施",
+			"description": "去中心化RPC"
+		},
+		"2": {
+			"title": "节点运营",
+			"description": "运行并赚取"
+		},
+		"3": {
+			"title": "质押",
+			"description": "委托POKT"
+		},
+		"4": {
+			"title": "抗审查",
+			"description": "不可阻挡的访问"
+		},
+		"5": {
+			"title": "多链应用",
+			"description": "跨链RPC"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Pocket Network是什么？",
+			"answer": "Pocket Network是去中心化RPC基础设施。节点运营商质押POKT来服务区块链数据。应用支付POKT获取访问。就像区块链节点的Uber——无许可且分布式。"
+		},
+		"2": {
+			"question": "与Alchemy有什么不同？",
+			"answer": "Alchemy是运行中心化服务器的公司。Pocket是有独立节点运营商的协议。更抗审查但质量可能有差异。不同的信任模型。"
+		},
+		"3": {
+			"question": "如何使用Pocket？",
+			"answer": "使用Pocket Portal方便访问——注册并获取端点。直接协议访问需质押POKT代币。许多项目通过Ankr等聚合器使用Pocket。"
+		},
+		"4": {
+			"question": "可以运行节点吗？",
+			"answer": "可以。质押最低POKT（金额不同），运行节点软件，服务请求赚取奖励。有技术要求。许多人选择委托而非亲自运行。"
+		},
+		"5": {
+			"question": "支持哪些链？",
+			"answer": "以太坊、Polygon、BSC、Harmony等。覆盖取决于节点运营商支持。主要链覆盖良好；较小的链可能较少。"
+		}
+	},
+	"cta": {
+		"ready": "准备好使用去中心化RPC了吗？",
+		"button": "探索Pocket",
+		"note": "去中心化基础设施"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Sourcify - Decentralized Contract Verification",
+		"description": "Sourcify is the decentralized smart contract verification service. Verify source code matches bytecode, stored permanently on IPFS.",
+		"keywords": "Sourcify, contract verification, smart contracts, IPFS, decentralized verification, Ethereum"
+	},
+	"overview": "Sourcify is the decentralized smart contract verification service. It verifies that deployed bytecode matches source code, enabling anyone to read and trust smart contracts.\n\nUnlike Etherscan verification, Sourcify is open source and decentralized. It stores verified sources on IPFS, making them permanently available. The service supports full and partial matching.\n\nSourcify is integrated into block explorers and development tools. Verify once, available everywhere. Critical infrastructure for smart contract transparency and the foundation for trustless contract interaction.",
+	"features": {
+		"1": {
+			"title": "Decentralized",
+			"description": "IPFS storage"
+		},
+		"2": {
+			"title": "Open Source",
+			"description": "Transparent process"
+		},
+		"3": {
+			"title": "Multi-Chain",
+			"description": "EVM networks"
+		},
+		"4": {
+			"title": "Full Match",
+			"description": "Exact verification"
+		},
+		"5": {
+			"title": "Partial Match",
+			"description": "Bytecode matching"
+		},
+		"6": {
+			"title": "API Access",
+			"description": "Developer integration"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Contract Verification",
+			"description": "Prove source code"
+		},
+		"2": {
+			"title": "Transparency",
+			"description": "Open source contracts"
+		},
+		"3": {
+			"title": "Tool Integration",
+			"description": "Add to your tools"
+		},
+		"4": {
+			"title": "Decentralized Storage",
+			"description": "IPFS permanence"
+		},
+		"5": {
+			"title": "Multi-Chain Projects",
+			"description": "One verification"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Sourcify?",
+			"answer": "Sourcify is smart contract source code verification. It confirms deployed bytecode matches the source code you claim. Open source and decentralized—stores verified code on IPFS."
+		},
+		"2": {
+			"question": "Sourcify vs Etherscan verification?",
+			"answer": "Etherscan is centralized and chain-specific. Sourcify is decentralized, stores on IPFS, and works across chains. Verify once, available everywhere. Both are valuable—Sourcify is more open."
+		},
+		"3": {
+			"question": "What is full vs partial match?",
+			"answer": "Full match: exact same compiler settings and metadata. Partial match: bytecode matches but metadata differs. Full match proves exact source; partial proves functional equivalence."
+		},
+		"4": {
+			"question": "How do I verify with Sourcify?",
+			"answer": "Use their web interface, API, or integrated tools (Hardhat, Foundry plugins). Upload source files and metadata. Verification is automatic if files match deployed bytecode."
+		},
+		"5": {
+			"question": "Why is decentralized verification important?",
+			"answer": "Centralized verification can be censored or go down. Sourcify stores on IPFS—permanent and censorship-resistant. True transparency for smart contract trust."
+		}
+	},
+	"cta": {
+		"ready": "Ready to verify contracts?",
+		"button": "Use Sourcify",
+		"note": "Decentralized verification"
+	}
+}

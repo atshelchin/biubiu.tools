@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "viem - 现代TypeScript以太坊库",
+		"description": "viem是现代以太坊TypeScript接口。比ethers.js更小、更快、更模块化，具有一流的TypeScript支持。",
+		"keywords": "viem, TypeScript, 以太坊, Web3开发, wagmi, 智能合约, 区块链库"
+	},
+	"overview": "viem是现代以太坊的TypeScript接口。它是驱动wagmi的底层库——比ethers.js更小、更快、更模块化，具有一流的TypeScript支持。\n\n由wagmi团队构建，viem提供以太坊开发所需的一切：钱包交互、合约调用、交易处理和编码/解码。API直观且支持tree-shaking。\n\nviem正在成为新TypeScript以太坊项目的默认选择。比传统库更好的包体积、更严格的类型和更清晰的抽象。",
+	"features": {
+		"1": {
+			"title": "TypeScript优先",
+			"description": "严格类型"
+		},
+		"2": {
+			"title": "模块化",
+			"description": "支持Tree-shaking"
+		},
+		"3": {
+			"title": "小体积",
+			"description": "最小化尺寸"
+		},
+		"4": {
+			"title": "快速",
+			"description": "优化性能"
+		},
+		"5": {
+			"title": "现代API",
+			"description": "清晰抽象"
+		},
+		"6": {
+			"title": "wagmi基础",
+			"description": "驱动wagmi"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "dApp开发",
+			"description": "以太坊应用"
+		},
+		"2": {
+			"title": "合约交互",
+			"description": "读取和写入"
+		},
+		"3": {
+			"title": "交易处理",
+			"description": "发送和追踪"
+		},
+		"4": {
+			"title": "数据编码",
+			"description": "ABI编码"
+		},
+		"5": {
+			"title": "钱包集成",
+			"description": "连接钱包"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "viem是什么？",
+			"answer": "viem是以太坊的底层TypeScript库。它处理合约调用、交易、编码和钱包连接。可以把它想象成ethers.js的现代替代品，具有更好的TypeScript和更小的包体积。"
+		},
+		"2": {
+			"question": "viem vs ethers.js？",
+			"answer": "viem更小（35kb vs 120kb+），TypeScript更严格，更模块化。ethers.js历史更长，在线示例更多。对于新项目，通常推荐viem。有迁移指南。"
+		},
+		"3": {
+			"question": "viem vs wagmi？",
+			"answer": "viem是底层以太坊库。wagmi在viem之上构建React hooks。React应用使用wagmi，非React项目或自定义需求直接使用viem。它们协同工作。"
+		},
+		"4": {
+			"question": "如何从ethers迁移？",
+			"answer": "viem文档中有迁移指南。大多数概念直接对应——providers变成clients，Contract变成getContract。API相似但更清晰。可以渐进式迁移。"
+		},
+		"5": {
+			"question": "viem可以用于生产吗？",
+			"answer": "可以。viem通过wagmi驱动主要dApp。由经验丰富的开发者维护，有全面的测试覆盖。生产使用广泛且在增长。"
+		}
+	},
+	"cta": {
+		"ready": "准备好使用viem了吗？",
+		"button": "开始使用",
+		"note": "现代以太坊库"
+	}
+}

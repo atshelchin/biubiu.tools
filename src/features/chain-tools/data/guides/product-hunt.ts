@@ -309,8 +309,7 @@ export const productHuntGuide: CategoryGuide = {
 		{
 			id: 'points-system',
 			termKey: 'routes/apps/chain-tools/product-hunt/guide.glossary.points_system.term',
-			definitionKey:
-				'routes/apps/chain-tools/product-hunt/guide.glossary.points_system.definition'
+			definitionKey: 'routes/apps/chain-tools/product-hunt/guide.glossary.points_system.definition'
 		},
 		{
 			id: 'waitlist',
@@ -325,8 +324,7 @@ export const productHuntGuide: CategoryGuide = {
 		{
 			id: 'growth-hacking',
 			termKey: 'routes/apps/chain-tools/product-hunt/guide.glossary.growth_hacking.term',
-			definitionKey:
-				'routes/apps/chain-tools/product-hunt/guide.glossary.growth_hacking.definition'
+			definitionKey: 'routes/apps/chain-tools/product-hunt/guide.glossary.growth_hacking.definition'
 		},
 		{
 			id: 'rug-pull',
@@ -336,8 +334,7 @@ export const productHuntGuide: CategoryGuide = {
 		{
 			id: 'due-diligence',
 			termKey: 'routes/apps/chain-tools/product-hunt/guide.glossary.due_diligence.term',
-			definitionKey:
-				'routes/apps/chain-tools/product-hunt/guide.glossary.due_diligence.definition'
+			definitionKey: 'routes/apps/chain-tools/product-hunt/guide.glossary.due_diligence.definition'
 		}
 	],
 

@@ -1,0 +1,162 @@
+{
+	"title": "Guía Completa de Identidad Descentralizada",
+	"subtitle": "Domina la Identidad Web3 desde ENS hasta Credenciales Zero-Knowledge",
+
+	"sections": {
+		"intro": {
+			"title": "Introducción a la Identidad Descentralizada",
+			"content": "<p>La identidad descentralizada (DID) representa un cambio fundamental en cómo gestionamos nuestras identidades digitales en línea. En lugar de depender de plataformas centralizadas como Google, Facebook o bases de datos gubernamentales para verificar quién eres, la identidad descentralizada te da propiedad y control completos sobre tus datos de identidad.</p><p>En esta guía completa, aprenderás cómo funciona la identidad descentralizada, desde servicios de nombres simples como ENS hasta credenciales avanzadas que preservan la privacidad usando pruebas zero-knowledge. Exploraremos casos de uso del mundo real, desde transacciones cripto más fáciles hasta airdrops resistentes a Sybil y gobernanza de DAOs.</p>"
+		},
+		"why_decentralized_identity": {
+			"title": "Por Qué Importa la Identidad Descentralizada",
+			"content": "<p>La identidad digital tradicional está rota. Cada sitio web tiene su propio sistema de usuario/contraseña. Los logins sociales dan a los gigantes tecnológicos control sobre tu acceso. Las IDs gubernamentales filtran tus datos personales. Web3 ofrece una mejor manera—una identidad que verdaderamente posees.</p>",
+			"ownership": {
+				"title": "Identidad Auto-Soberana",
+				"content": "<p><strong>Identidad Web2:</strong> Facebook, Google y los gobiernos poseen tus datos de identidad. Pueden eliminar tu cuenta, negar acceso o filtrar tu información.</p><p><strong>Identidad Web3:</strong> Controlas tu identidad a través de claves criptográficas. Ninguna plataforma puede quitártela, censurarla o acceder a ella sin tu permiso.</p><p><strong>Control:</strong> Decides qué información compartir, con quién y por cuánto tiempo. Revoca el acceso en cualquier momento.</p><p><strong>Portabilidad:</strong> Tu identidad funciona en todas las apps Web3. Un login, plataformas ilimitadas.</p><p><strong>Privacidad:</strong> Con pruebas zero-knowledge, puedes probar hechos sobre ti mismo (como edad o ciudadanía) sin revelar los datos subyacentes.</p>"
+			},
+			"portability": {
+				"title": "Identidad Multi-Plataforma",
+				"content": "<p>Imagina tener una identidad que funciona en todas partes. Tu nombre ENS se convierte en tu:</p><ul><li><strong>Dirección de pago:</strong> Envía cripto a alice.eth en lugar de 0x742d...</li><li><strong>Perfil social:</strong> Tu handle en Lens, Farcaster y otros protocolos sociales</li><li><strong>Credencial de login:</strong> Inicia sesión en dApps sin contraseñas</li><li><strong>Reputación:</strong> Tu historial on-chain te sigue a través de plataformas</li></ul><p>Esto no es solo conveniente—cambia fundamentalmente las dinámicas de poder. Las plataformas compiten por servirte, porque puedes irte sin perder tu identidad, seguidores o reputación.</p>"
+			}
+		},
+		"naming_services": {
+			"title": "Servicios de Nombres Blockchain",
+			"content": "<p>Los servicios de nombres son la base de la identidad descentralizada. Reemplazan direcciones criptográficas largas con nombres legibles por humanos, haciendo cripto tan fácil de usar como apps tradicionales.</p>",
+			"ens": {
+				"title": "ENS: El DNS del Internet del Valor",
+				"content": "<p>Ethereum Name Service (ENS) es el sistema de nombres blockchain más establecido. Funciona como DNS para internet, pero descentralizado y resistente a la censura.</p><p><strong>Cómo funciona ENS:</strong></p><ol><li>Registra un dominio .eth (ej., alice.eth)</li><li>Vinculalo a tu dirección de Ethereum, otras direcciones cripto, perfiles sociales e incluso sitios web</li><li>Cualquiera puede enviarte cripto o contactarte usando tu nombre .eth</li></ol><p><strong>Características de ENS:</strong></p><ul><li><strong>Multi-cadena:</strong> Un nombre ENS puede resolver a direcciones en Ethereum, Bitcoin, Dogecoin y 100+ otras cadenas</li><li><strong>Perfiles ricos:</strong> Agrega avatar, handle de Twitter, email, sitio web y registros personalizados</li><li><strong>Subdominios:</strong> Crea pay.alice.eth, vault.alice.eth, etc.</li><li><strong>Programable:</strong> Los contratos inteligentes pueden poseer nombres e implementar lógica personalizada</li></ul><p><strong>Ejemplo real:</strong> vitalik.eth es el nombre ENS de Vitalik Buterin. Resuelve a su dirección de Ethereum (0xd8dA...), su Twitter (@VitalikButerin), y muestra su avatar. Cualquiera puede enviarle ETH simplemente escribiendo vitalik.eth.</p>"
+			},
+			"multi_chain": {
+				"title": "Servicios de Nombres Multi-Cadena",
+				"content": "<p>A medida que cripto se expande más allá de Ethereum, los servicios de nombres han evolucionado para soportar múltiples ecosistemas:</p><p><strong>Unstoppable Domains:</strong> Dominios basados en NFT (.crypto, .nft, .wallet) que posees para siempre—sin tarifas de renovación. Funcionan como direcciones de wallet, alojamiento de sitios web y credenciales de login a través de múltiples cadenas.</p><p><strong>SPACE ID:</strong> El servicio de nombres principal para BNB Chain, Arbitrum y otras redes. Ofrecen dominios .bnb, .arb y están construyendo un servicio de nombres universal a través de cadenas.</p><p><strong>Base Name Service (BNS):</strong> Servicio de nombres L2 de Coinbase ofreciendo dominios .base. Profundamente integrado con productos de Coinbase y el ecosistema Base.</p><p><strong>.bit:</strong> Servicio de nombres agnóstico a cadenas potenciado por Nervos. Funciona con cualquier blockchain y cualquier wallet. Incluso puedes usar tu nombre .bit para iniciar sesión en apps Web2.</p><p><strong>Bonfida SNS:</strong> Servicio de nombres de Solana. Los dominios .sol son la identidad estándar en Solana, similar a ENS en Ethereum.</p>"
+			},
+			"lens_handles": {
+				"title": "Handles de Protocolos Sociales",
+				"content": "<p>Más allá de los nombres de dominio, los protocolos sociales descentralizados usan handles como identificadores primarios:</p><p><strong>Lens Protocol:</strong> @alice.lens es tanto tu handle social como un NFT que posees. Incluye tus publicaciones, seguidores y grafo social—todo portable entre apps de Lens.</p><p><strong>Farcaster:</strong> Usa handles .farcaster que controlas. Tu identidad y conexiones sociales son tuyas, no de la app.</p><p>Estos handles representan un nuevo paradigma: <strong>tu identidad social es un activo que posees</strong>, no un perfil alquilado de una plataforma.</p>"
+			}
+		},
+		"credentials_attestations": {
+			"title": "Credenciales y Attestations",
+			"content": "<p>Las credenciales y attestations te permiten probar hechos sobre ti mismo de manera verificable y a prueba de manipulaciones. Piensa en ellas como certificados digitales que cualquiera puede verificar pero nadie puede falsificar.</p>",
+			"proof_of_humanity": {
+				"title": "Prueba de Humanidad",
+				"content": "<p>Uno de los mayores desafíos de cripto es el ataque Sybil—una persona creando miles de identidades falsas. Los sistemas de prueba de humanidad verifican que eres un humano único sin revelar quién eres.</p><p><strong>Worldcoin:</strong> Usa escaneos biométricos de iris para crear una identidad única. Pruebas que eres humano escaneando tus ojos con un dispositivo Orb. Esto genera un World ID—prueba criptográfica de tu unicidad sin vincular a tu identidad real.</p><p><strong>Gitcoin Passport:</strong> Agrega verificaciones de identidad de múltiples fuentes (Twitter, Discord, Google, actividad on-chain, etc.). Cuantos más \"stamps\" coleccionas, mayor es tu puntuación de humanidad. Sin punto único de falla.</p><p><strong>BrightID:</strong> Usa verificación de grafo social. Pruebas que eres único conectándote con otros humanos verificados en videollamadas. Descentralizado, que preserva privacidad y gratuito.</p><p><strong>Por qué importa:</strong> La prueba de humanidad permite airdrops justos, gobernanza de una-persona-un-voto y previene manipulación por bots de sistemas descentralizados.</p>"
+			},
+			"attestation_systems": {
+				"title": "Sistemas de Attestation On-Chain",
+				"content": "<p>Las attestations son declaraciones firmadas sobre algo o alguien. Son como firmas digitales que verifican hechos.</p><p><strong>Ethereum Attestation Service (EAS):</strong> Un protocolo universal de attestation en Ethereum, Base, Optimism y Arbitrum. Cualquiera puede crear esquemas de attestation personalizados (plantillas) y emitir attestations verificables.</p><p><strong>Ejemplos de casos de uso:</strong></p><ul><li>Una universidad emite una attestation de diploma a tu dirección</li><li>Un DAO certifica que completaste una bounty</li><li>Un proveedor de KYC certifica que pasaste verificación (sin revelar tus datos personales)</li><li>Un organizador de eventos certifica que asististe a una conferencia</li></ul><p><strong>Verax:</strong> Registro de attestation de Linea. Similar a EAS pero optimizado para la red de Linea con tarifas más bajas y mejor rendimiento.</p><p>Las attestations son componibles—las dApps pueden verificar tus attestations para otorgar acceso, distribuir recompensas o verificar credenciales sin confiar en bases de datos centralizadas.</p>"
+			},
+			"verifiable_credentials": {
+				"title": "Credenciales Verificables",
+				"content": "<p>Las credenciales verificables (VCs) son credenciales digitales a prueba de manipulación que almacenas y controlas. A diferencia de las attestations almacenadas on-chain, las VCs pueden almacenarse en tu wallet y compartirse selectivamente.</p><p><strong>Disco:</strong> Tu \"mochila de datos\" para coleccionar y gestionar credenciales. Las credenciales pueden representar habilidades, logros, membresías o cualquier afirmación verificable. Las compartes cuando es necesario sin exponer todo.</p><p><strong>Civic:</strong> Se enfoca en verificación de identidad y cumplimiento. Ofrecen credenciales KYC/AML que prueban que pasaste verificación sin revelar tu información personal a cada dApp.</p><p><strong>El flujo de trabajo:</strong></p><ol><li>El emisor crea una credencial y la firma criptográficamente</li><li>La almacenas en tu wallet (como la mochila de datos de Disco)</li><li>Cuando una dApp necesita prueba, presentas la credencial</li><li>La dApp verifica la firma y comprueba que no ha sido revocada</li></ol><p>Así es como puedes probar que tienes más de 18 años, eres inversor acreditado o ciudadano estadounidense <strong>sin revelar tu ID, fecha de nacimiento o detalles personales</strong>.</p>"
+			}
+		},
+		"reputation_systems": {
+			"title": "Sistemas de Reputación",
+			"content": "<p>En Web3, tu reputación es transparente y portable. Todo lo que haces on-chain contribuye a tu puntuación de reputación, que te sigue a través de todas las plataformas.</p>",
+			"on_chain_reputation": {
+				"title": "Puntuaciones de Reputación On-Chain",
+				"content": "<p>A diferencia de las puntuaciones de crédito Web2 que no puedes ver ni controlar, la reputación Web3 es transparente, verificable y componible.</p><p><strong>DegenScore:</strong> Analiza tu actividad en Ethereum para calcular una puntuación de reputación. Los factores incluyen historial de transacciones, uso de DeFi, holdings de NFT y comportamiento on-chain. Un DegenScore alto señala que eres un usuario cripto experimentado, calificándote para airdrops exclusivos y oportunidades.</p><p><strong>Nomis:</strong> Protocolo de reputación multi-cadena. Analiza tu actividad en Ethereum, Polygon, BNB Chain y más para crear una puntuación de reputación integral. Mintea tu puntuación como una insignia on-chain que prueba tu credibilidad.</p><p><strong>Talent Protocol:</strong> Enfocado en reputación de constructores. Si eres desarrollador, diseñador o creador, tu puntuación Talent refleja tus contribuciones a Web3. Usado por proyectos para encontrar contribuyentes de calidad y por constructores para mostrar su trabajo.</p><p><strong>Por qué importa la reputación:</strong></p><ul><li>Mejores tasas de préstamo basadas en historial crediticio on-chain</li><li>Acceso a comunidades y oportunidades exclusivas</li><li>Distribución justa de airdrops (usuarios establecidos reciben más)</li><li>Señal de confianza para colaboraciones y contrataciones</li></ul>"
+			},
+			"poaps_badges": {
+				"title": "POAPs e Insignias Digitales",
+				"content": "<p>Las insignias y POAPs (Proof of Attendance Protocol) son credenciales coleccionables que representan tus experiencias y logros.</p><p><strong>POAP:</strong> La prueba de asistencia original. Los organizadores de eventos crean insignias NFT únicas para asistentes. ¿Asististe a una conferencia? Obtén un POAP. ¿Participaste en una votación de gobernanza? Obtén un POAP. Tu colección de POAPs es tu currículum Web3.</p><p><strong>Galxe:</strong> Plataforma de credenciales y campañas. Los proyectos crean quests y campañas, y ganas credenciales on-chain (OATs) por completarlas. Usado intensivamente para construcción de comunidad y calificación para airdrops.</p><p><strong>Layer3:</strong> Plataforma de credenciales learn-to-earn. Completa quests para aprender sobre protocolos y gana credenciales verificables. Los proyectos usan Layer3 para educar y onboardear usuarios mientras distribuyen credenciales para futuros airdrops.</p><p><strong>Ejemplo real:</strong> Muchos proyectos usan asistencia POAP + completar quests de Galxe + conteo mínimo de transacciones como criterios para airdrops. Tus insignias prueban que eres un miembro real de la comunidad, no un bot.</p>"
+			},
+			"soulbound_tokens": {
+				"title": "Soulbound Tokens (SBTs)",
+				"content": "<p>Los Soulbound Tokens son NFTs no transferibles—permanentemente vinculados a tu wallet. A diferencia de los NFTs regulares que puedes vender, los SBTs representan credenciales que no deberían ser transferibles.</p><p><strong>Otterspace:</strong> Crea insignias no transferibles para DAOs y comunidades. Los casos de uso incluyen insignias de membresía, asignaciones de roles y reconocimiento de logros. Como no pueden transferirse, verdaderamente te representan a <em>ti</em>, no a quien compró el token.</p><p><strong>¿Por qué soulbound?</strong></p><ul><li><strong>Logro genuino:</strong> No puedes comprar el diploma o registro de asistencia de alguien más</li><li><strong>Reputación confiable:</strong> Las puntuaciones de reputación pierden significado si son intercambiables</li><li><strong>Derechos de gobernanza:</strong> Poder de voto basado en contribución, no capital</li><li><strong>Membresía comunitaria:</strong> Prueba que ganaste tu lugar</li></ul><p>Vitalik Buterin propuso los SBTs como la base para la \"Sociedad Descentralizada\" (DeSoc)—donde la reputación, credenciales y relaciones sociales forman la base de la confianza en línea.</p>"
+			}
+		},
+		"privacy_preserving_identity": {
+			"title": "Identidad que Preserva la Privacidad",
+			"content": "<p>El sistema de identidad definitivo te permite probar cosas sobre ti mismo sin revelar los datos subyacentes. Aquí es donde las pruebas zero-knowledge (ZK) revolucionan la identidad.</p>",
+			"zk_identity": {
+				"title": "Identidad Zero-Knowledge",
+				"content": "<p>Las pruebas zero-knowledge te permiten probar que una declaración es verdadera sin revelar ninguna información más allá de la verdad de la declaración misma.</p><p><strong>Ejemplo:</strong> Probar que tienes más de 21 años sin revelar tu fecha de nacimiento, número de ID, o incluso tu edad exacta. El verificador solo aprende un bit de información: VERDADERO (tienes más de 21) o FALSO (no lo tienes).</p><p><strong>Polygon ID:</strong> Una infraestructura de identidad nativa ZK. Los emisores crean credenciales, las almacenas en tu wallet, y puedes probar afirmaciones sobre ti mismo con pruebas zero-knowledge. El verificador nunca ve tus credenciales reales.</p><p><strong>Privado ID (iden3):</strong> El protocolo de código abierto detrás de Polygon ID y otros sistemas de identidad ZK. Implementa el estándar DID de W3C con capacidades de prueba zero-knowledge.</p><p><strong>zkPass:</strong> Te permite generar pruebas zero-knowledge sobre tus datos privados (como saldo bancario, puntuación crediticia o seguidores en redes sociales) sin exponer los datos crudos. Útil para probar elegibilidad sin doxxearte.</p>"
+			},
+			"selective_disclosure": {
+				"title": "Divulgación Selectiva",
+				"content": "<p>La divulgación selectiva significa revelar solo la información específica necesaria, nada más.</p><p><strong>KYC tradicional:</strong> Envías tu pasaporte, licencia de conducir, estados de cuenta bancarios y facturas de servicios. La plataforma ve todo—tu nombre completo, dirección, foto, fecha de nacimiento, números de ID.</p><p><strong>Divulgación selectiva basada en ZK:</strong> Solo pruebas lo que se requiere. ¿Verificando edad? Prueba que tienes más de 18. ¿Verificando ciudadanía? Prueba que eres ciudadano estadounidense. La plataforma no aprende nada más.</p><p><strong>Sismo Protocol:</strong> Crea Insignias ZK que agregan tus datos (nombres ENS, POAPs, holdings de tokens, etc.) y te permiten probar membresía en grupos sin revelar tu dirección. Ejemplo: Probar que eres un usuario temprano de Ethereum sin vincular tu identidad a tu wallet real.</p><p><strong>Holonym:</strong> Prueba de personalidad privacy-first. Verificas tu identidad una vez, luego pruebas hechos sobre ti mismo (como humano único, ciudadano del país X, mayor de Y años) con pruebas zero-knowledge en cada dApp.</p>"
+			},
+			"zk_kyc": {
+				"title": "ZK-KYC: Verificación que Cumple con Privacidad",
+				"content": "<p>Las regulaciones a menudo requieren verificación Know Your Customer (KYC). El KYC tradicional significa enviar documentos a empresas centralizadas. ZK-KYC ofrece una mejor manera.</p><p><strong>Cómo funciona ZK-KYC:</strong></p><ol><li>Verifica tu identidad una vez con un emisor de confianza (gobierno, banco o proveedor KYC)</li><li>Recibe una credencial criptográfica</li><li>Genera pruebas zero-knowledge sobre tu credencial cuando sea necesario</li><li>Las dApps verifican la prueba sin ver tu información personal</li></ol><p><strong>Beneficios:</strong></p><ul><li>Verificar una vez, usar en todas partes—sin KYC repetido</li><li>Exposición mínima de datos—prueba solo lo que se requiere</li><li>Responsabilidad reducida de la plataforma—nunca almacenan tus datos sensibles</li><li>Privacidad del usuario—las plataformas no pueden rastrearte a través de servicios</li></ul><p>Este es el futuro del cumplimiento regulatorio en Web3—preservando privacidad pero cumpliendo.</p>"
+			}
+		},
+		"identity_aggregation": {
+			"title": "Agregación de Identidad",
+			"content": "<p>La mayoría de las personas tienen múltiples wallets e identidades a través de Web2 y Web3. La agregación de identidad combina estas en una identidad unificada que controlas.</p>",
+			"linking_identities": {
+				"title": "Vinculando Web2 y Web3",
+				"content": "<p>Tu identidad abarca múltiples plataformas: Twitter, Discord, GitHub, dirección de Ethereum, dirección de Solana, etc. Los oráculos de identidad y agregadores vinculan estos juntos.</p><p><strong>Clique Protocol:</strong> Un oráculo de identidad que verifica y vincula tus identidades Web2 (redes sociales, email) con tus direcciones Web3. Las dApps pueden consultar Clique para ver tus cuentas sociales verificadas sin requerir logins separados.</p><p><strong>Casos de uso:</strong></p><ul><li><strong>Airdrops:</strong> Los proyectos distribuyen tokens a seguidores de Twitter verificando vínculos Twitter-a-wallet</li><li><strong>Acceso restringido:</strong> DAOs otorgan acceso basado en contribuciones de GitHub o roles de Discord</li><li><strong>Reputación:</strong> Agregar tu prueba social Web2 con actividad on-chain para reputación integral</li></ul><p>El objetivo es una identidad unificada—un lugar para gestionar todas tus credenciales y conexiones a través de internet.</p>"
+			},
+			"cross_chain": {
+				"title": "Identidad Cross-Chain",
+				"content": "<p>Web3 es multi-cadena. Tu identidad de Ethereum, NFTs de Solana, credenciales de Base e insignias de Polygon deberían funcionar juntos.</p><p><strong>Rarimo:</strong> Protocolo de identidad cross-chain que hace las credenciales portables a través de blockchains. Emite una attestation en Ethereum, verifícala en Polygon. Tu reputación te sigue a todas partes.</p><p><strong>Desafíos:</strong></p><ul><li>Diferentes cadenas usan diferentes estándares criptográficos</li><li>Verificar attestations cross-chain requiere bridges u oráculos</li><li>Consideraciones de privacidad al vincular direcciones a través de cadenas</li></ul><p><strong>Visión futura:</strong> Una identidad descentralizada que funciona a través de todas las cadenas, hace puente entre Web2 y Web3, y mantiene privacidad a través de pruebas zero-knowledge.</p>"
+			}
+		},
+		"use_cases": {
+			"title": "Casos de Uso del Mundo Real",
+			"content": "<p>La identidad descentralizada no es solo teórica—está resolviendo problemas reales hoy. Así es como la gente realmente la usa.</p>",
+			"web3_login": {
+				"title": "Login Web3: Sign-In with Ethereum",
+				"content": "<p>¿Cansado de recordar contraseñas? El login Web3 te permite iniciar sesión en apps usando tu wallet.</p><p><strong>SpruceID (SIWE):</strong> El estándar para Sign-In with Ethereum. En lugar de usuario/contraseña, firmas un mensaje con tu wallet. La app verifica la firma y te inicia sesión. Sin contraseña que olvidar o filtrar.</p><p><strong>Cómo funciona:</strong></p><ol><li>Haz clic en \"Sign in with Ethereum\" en un sitio web</li><li>Conecta tu wallet (MetaMask, Rainbow, etc.)</li><li>Firma un mensaje probando que posees la dirección</li><li>Estás logueado—la app conoce tu dirección y puede cargar tus datos</li></ol><p><strong>Beneficios:</strong></p><ul><li>Sin contraseñas que recordar o almacenar</li><li>Sin email requerido (privacidad mejorada)</li><li>Funciona en todas las apps habilitadas para SIWE</li><li>Tu wallet controla el acceso—revoca desconectando</li></ul><p>Esto se está volviendo estándar para apps Web3. Muchas apps Web2 también lo están adoptando como opción de login alternativa.</p>"
+			},
+			"airdrops": {
+				"title": "Airdrops Resistentes a Sybil",
+				"content": "<p>Los airdrops son una forma popular de distribuir tokens. Pero sin verificación de identidad, la gente crea miles de wallets para farmear airdrops. La resistencia Sybil resuelve esto.</p><p><strong>Gitcoin Passport:</strong> La herramienta de resistencia Sybil más popular. Los proyectos establecen una puntuación mínima de Passport para calificar para airdrops. Como es difícil falsificar stamps (Twitter verificado, GitHub, actividad on-chain real), los farmers se filtran.</p><p><strong>Galxe Passport:</strong> Concepto similar. Completa verificaciones para construir tu puntuación de Galxe Passport. Los proyectos usan esta puntuación para asegurar que solo usuarios reales obtengan airdrops.</p><p><strong>Ejemplos reales:</strong></p><ul><li>El airdrop de Optimism usó actividad on-chain + attestations para filtrar Sybils</li><li>Arbitrum usó conteo de transacciones + criterios basados en tiempo</li><li>zkSync probablemente usará Gitcoin Passport o herramientas similares</li></ul><p><strong>Resultado:</strong> Airdrops más justos donde los tokens van a usuarios reales, no ejércitos de bots. La verificación de identidad hace Web3 más equitativo.</p>"
+			},
+			"governance": {
+				"title": "Gobernanza DAO y Control de Acceso",
+				"content": "<p>Las DAOs necesitan gestionar membresía, roles y permisos. Los sistemas de identidad hacen esto posible.</p><p><strong>Guild.xyz:</strong> Control de acceso con token-gating. Crea guilds donde la entrada requiere tokens específicos, NFTs, credenciales o attestations. Usos comunes:</p><ul><li>Roles de Discord basados en holdings de tokens</li><li>Canales privados para holders de insignias</li><li>Membresía escalonada basada en puntuación de reputación</li><li>Acceso a herramientas basado en credenciales verificadas</li></ul><p><strong>Flujo de trabajo ejemplo:</strong></p><ol><li>DAO crea un Guild con requisito de entrada: tener 100+ tokens DAO <em>o</em> tener una insignia de contribuidor core</li><li>Los miembros conectan wallet y verifican credenciales</li><li>Guild automáticamente otorga roles de Discord y acceso</li><li>Si vendes tokens o pierdes credenciales, el acceso se revoca</li></ol><p><strong>Más allá del control de acceso:</strong> La identidad permite votación de una-persona-un-voto (usando prueba de humanidad), votación ponderada (usando puntuaciones de reputación) y delegación (asignando tu poder de voto a expertos de confianza).</p>"
+			},
+			"social_networks": {
+				"title": "Redes Sociales Descentralizadas",
+				"content": "<p>Las redes sociales descentralizadas usan la identidad como su base. Tu identidad, contenido y grafo social son activos que posees.</p><p><strong>Lens Protocol:</strong> Tu handle @alice.lens es un NFT. Cada publicación, comentario y relación de seguidor se almacena on-chain. Puedes usar cualquier app de Lens (Lenster, Orb, Hey) y tu identidad/contenido te sigue. Si no te gusta una app, cambias—no pierdes tus seguidores.</p><p><strong>Farcaster:</strong> Modelo similar con handles .farcaster. Tu grafo social es tuyo, las apps compiten para proporcionar la mejor interfaz.</p><p><strong>Por qué esto importa:</strong></p><ul><li><strong>Independencia de plataforma:</strong> Twitter puede banearte y lo pierdes todo. Lens no puede—posees tu handle.</li><li><strong>Monetización de creadores:</strong> Tokeniza tu contenido, permite a los fans coleccionar tus publicaciones como NFTs</li><li><strong>Reputación portable:</strong> Tu conteo de seguidores y prueba social se mueve contigo</li><li><strong>Elección algorítmica:</strong> Las apps usan diferentes algoritmos pero muestran tu grafo social unificado</li></ul><p>La identidad descentralizada hace posibles las redes sociales Web3. Sin ella, solo recrearíamos la centralización de Twitter.</p>"
+			}
+		}
+	},
+
+	"glossary": {
+		"ens": {
+			"term": "ENS (Ethereum Name Service)",
+			"definition": "Servicio de nombres blockchain que mapea nombres legibles por humanos (como alice.eth) a direcciones de Ethereum, otras direcciones cripto y metadata. El equivalente descentralizado de DNS."
+		},
+		"did": {
+			"term": "DID (Identificador Descentralizado)",
+			"definition": "Un identificador globalmente único que permite identidad digital verificable y descentralizada. Los DIDs son controlados por el propietario de la identidad, no por registros centralizados."
+		},
+		"soulbound_token": {
+			"term": "Soulbound Token (SBT)",
+			"definition": "Un NFT no transferible permanentemente vinculado a una wallet. Usado para credenciales, logros y reputación que no deberían ser intercambiables."
+		},
+		"attestation": {
+			"term": "Attestation",
+			"definition": "Una declaración firmada criptográficamente que verifica una afirmación o hecho. Las attestations pueden almacenarse on-chain para verificación pública."
+		},
+		"credential": {
+			"term": "Credencial Verificable",
+			"definition": "Una credencial digital a prueba de manipulación que puede verificarse criptográficamente. Almacenada por el propietario y presentada selectivamente para probar afirmaciones."
+		},
+		"reputation_score": {
+			"term": "Puntuación de Reputación",
+			"definition": "Una medida cuantificada de la confiabilidad de una dirección basada en actividad on-chain, credenciales y prueba social. Usada para airdrops, tasas de préstamo y control de acceso."
+		},
+		"poap": {
+			"term": "POAP (Proof of Attendance Protocol)",
+			"definition": "Insignias NFT que prueban asistencia a eventos o participación en actividades. Los POAPs forman un registro verificable de tus experiencias."
+		},
+		"proof_of_humanity": {
+			"term": "Prueba de Humanidad",
+			"definition": "Verificación de que una dirección es controlada por un humano único, no un bot o cuenta duplicada. Crítico para resistencia Sybil en airdrops y gobernanza."
+		},
+		"kyc": {
+			"term": "KYC (Know Your Customer)",
+			"definition": "Proceso de verificación de identidad para cumplir con regulaciones. ZK-KYC permite verificación mientras preserva privacidad a través de pruebas zero-knowledge."
+		},
+		"self_sovereign_identity": {
+			"term": "Identidad Auto-Soberana",
+			"definition": "Un modelo de identidad donde los individuos tienen propiedad y control total sobre sus datos de identidad. Ninguna autoridad central puede revocar o controlar tu identidad."
+		}
+	}
+}

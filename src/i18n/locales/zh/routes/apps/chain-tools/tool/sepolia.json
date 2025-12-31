@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Sepolia - 以太坊应用测试网",
+		"description": "Sepolia是以太坊主要的应用开发测试网络。稳定、工具支持良好，用于测试智能合约和dApp。",
+		"keywords": "Sepolia, 测试网, 以太坊, 智能合约, dApp测试, 测试ETH, 开发"
+	},
+	"overview": "Sepolia是以太坊主要的应用开发测试网络。它是在主网部署前测试智能合约和dApp的推荐网络。\n\n该测试网稳定，工具支持良好，区块时间一致。主要钱包、区块浏览器和开发框架都支持Sepolia。从水龙头获取测试ETH。\n\n对于大多数dApp开发者，Sepolia是正确选择。它可靠地镜像主网行为。Holesky用于质押测试；Sepolia用于其他一切。",
+	"features": {
+		"1": {
+			"title": "应用测试",
+			"description": "dApp开发"
+		},
+		"2": {
+			"title": "稳定网络",
+			"description": "可靠运行时间"
+		},
+		"3": {
+			"title": "工具支持",
+			"description": "所有主要工具"
+		},
+		"4": {
+			"title": "免费ETH",
+			"description": "可用水龙头"
+		},
+		"5": {
+			"title": "主网对等",
+			"description": "相同行为"
+		},
+		"6": {
+			"title": "EF维护",
+			"description": "官方测试网"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "智能合约测试",
+			"description": "部署和测试"
+		},
+		"2": {
+			"title": "dApp开发",
+			"description": "前端测试"
+		},
+		"3": {
+			"title": "集成测试",
+			"description": "端到端测试"
+		},
+		"4": {
+			"title": "学习",
+			"description": "练习开发"
+		},
+		"5": {
+			"title": "CI/CD",
+			"description": "自动化测试"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Sepolia是什么？",
+			"answer": "Sepolia是以太坊推荐的dApp开发测试网络。部署合约、测试前端集成、在主网前验证行为。稳定且支持良好。"
+		},
+		"2": {
+			"question": "如何获取Sepolia ETH？",
+			"answer": "使用水龙头——Alchemy、Infura等提供Sepolia水龙头。有些需要Alchemy账户或主网余额证明。查看以太坊文档了解当前可用水龙头。"
+		},
+		"3": {
+			"question": "Sepolia vs Goerli？",
+			"answer": "Goerli已弃用。Sepolia是当前推荐的应用测试网络。将任何Goerli项目迁移到Sepolia。相同工具，只是不同网络。"
+		},
+		"4": {
+			"question": "哪些工具支持Sepolia？",
+			"answer": "所有主要工具：MetaMask、Hardhat、Foundry、Etherscan、Alchemy、Infura。Sepolia是标准测试网——期望任何以太坊工具都完全支持。"
+		},
+		"5": {
+			"question": "Sepolia可靠吗？",
+			"answer": "是的。Sepolia稳定，区块时间一致。由以太坊基金会和客户端团队维护。适合严肃测试和CI/CD流水线。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在Sepolia测试了吗？",
+		"button": "获取测试ETH",
+		"note": "以太坊应用测试网"
+	}
+}
