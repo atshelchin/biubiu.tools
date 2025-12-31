@@ -12,15 +12,15 @@
 			"content": "在深入具体工具和技术之前，了解区块链分析的基础概念很重要。本节涵盖链上分析的重要性、可用数据类型以及关键指标。",
 			"why_analytics": {
 				"title": "为什么链上分析很重要",
-				"content": "链上分析提供了传统市场不存在的透明度。每笔交易、智能合约交互和代币转账都被永久记录且可公开验证。这实现了：**验证而非信任** - 你可以验证任何关于协议活动、代币持有或交易历史的声明；**早期信号检测** - 通过观察聪明钱动向在趋势成为主流前发现；**风险评估** - 评估协议健康、代币分布和潜在风险；**Alpha 生成** - 通过分析巨鲸行为、流动性流向和市场结构寻找交易机会。"
+				"content": "链上分析提供了传统市场不存在的透明度。每笔交易、智能合约交互和代币转账都被永久记录且可公开验证。这实现了：<br/><strong>验证而非信任</strong> - 你可以验证任何关于协议活动、代币持有或交易历史的声明；<br/><strong>早期信号检测</strong> - 通过观察聪明钱动向在趋势成为主流前发现；<br/><strong>风险评估</strong> - 评估协议健康、代币分布和潜在风险；<br/><strong>Alpha 生成</strong> - 通过分析巨鲸行为、流动性流向和市场结构寻找交易机会。"
 			},
 			"data_types": {
 				"title": "链上数据类型",
-				"content": "区块链数据有多种形式：**交易数据** 包括每笔交易的发送者、接收者、金额、Gas 和时间戳；**事件日志** 由智能合约发出，包含应用特定数据如交换、存款和转账；**状态数据** 代表所有账户和智能合约的当前状态；**区块数据** 包括区块级信息如提议者、MEV 提取和最终性；**解码数据** 使用 ABI 和交易解码将原始十六进制数据转换为人类可读格式。"
+				"content": "区块链数据有多种形式：<br/><strong>交易数据</strong> 包括每笔交易的发送者、接收者、金额、Gas 和时间戳；<br/><strong>事件日志</strong> 由智能合约发出，包含应用特定数据如交换、存款和转账；<br/><strong>状态数据</strong> 代表所有账户和智能合约的当前状态；<br/><strong>区块数据</strong> 包括区块级信息如提议者、MEV 提取和最终性；<br/><strong>解码数据</strong> 使用 ABI 和交易解码将原始十六进制数据转换为人类可读格式。"
 			},
 			"key_metrics": {
 				"title": "关键指标追踪",
-				"content": "不同用例需要不同指标：**TVL（锁定总价值）** 衡量存入协议的资产总值；**协议收入** 显示协议从费用中赚取多少；**活跃地址** 表示用户参与度和增长；**交易数量** 反映网络使用情况；**Gas 消耗** 显示哪些协议和活动驱动需求；**代币流通速度** 衡量代币换手频率。"
+				"content": "不同用例需要不同指标：<br/><strong>TVL（锁定总价值）</strong> 衡量存入协议的资产总值；<br/><strong>协议收入</strong> 显示协议从费用中赚取多少；<br/><strong>活跃地址</strong> 表示用户参与度和增长；<br/><strong>交易数量</strong> 反映网络使用情况；<br/><strong>Gas 消耗</strong> 显示哪些协议和活动驱动需求；<br/><strong>代币流通速度</strong> 衡量代币换手频率。"
 			}
 		},
 		"defi_analytics": {
@@ -28,15 +28,15 @@
 			"content": "DeFi 协议生成丰富的链上数据，可用于理解市场动态、评估协议健康和寻找收益机会。",
 			"tvl_analysis": {
 				"title": "TVL 分析",
-				"content": "锁定总价值（TVL）是 DeFi 中使用最广泛的指标，但需要谨慎解读。关键考虑因素包括：**重复计算** - 同一美元在不同协议间移动时可能被多次计算；**代币价格敏感性** - TVL 随代币价格变化，不仅仅是存款；**跨链比较** - 不同链有不同的定义和方法论；**质量重于数量** - 高 TVL 并不总意味着健康的协议。DefiLlama 已成为 TVL 追踪的行业标准，提供跨链和协议的一致方法论。"
+				"content": "锁定总价值（TVL）是 DeFi 中使用最广泛的指标，但需要谨慎解读。关键考虑因素包括：<br/><strong>重复计算</strong> - 同一美元在不同协议间移动时可能被多次计算；<br/><strong>代币价格敏感性</strong> - TVL 随代币价格变化，不仅仅是存款；<br/><strong>跨链比较</strong> - 不同链有不同的定义和方法论；<br/><strong>质量重于数量</strong> - 高 TVL 并不总意味着健康的协议。DefiLlama 已成为 TVL 追踪的行业标准，提供跨链和协议的一致方法论。"
 			},
 			"protocol_metrics": {
 				"title": "协议指标",
-				"content": "除 TVL 外，老练的投资者还分析：**收入** - 协议实际赚取的费用；**收入与 TVL 比率** - 资本利用效率；**代币持有者收入** - 费用中多少流向代币持有者；**市销率和市盈率** - 应用于协议的传统估值指标；**用户指标** - DAU、MAU、留存和用户增长；**开发者活动** - GitHub 提交、贡献者数量和生态发展。"
+				"content": "除 TVL 外，老练的投资者还分析：<br/><strong>收入</strong> - 协议实际赚取的费用；<br/><strong>收入与 TVL 比率</strong> - 资本利用效率；<br/><strong>代币持有者收入</strong> - 费用中多少流向代币持有者；<br/><strong>市销率和市盈率</strong> - 应用于协议的传统估值指标；<br/><strong>用户指标</strong> - DAU、MAU、留存和用户增长；<br/><strong>开发者活动</strong> - GitHub 提交、贡献者数量和生态发展。"
 			},
 			"yield_analysis": {
 				"title": "收益分析",
-				"content": "收益耕作需要理解：**APY vs APR** - APY 复利，APR 不复利；**可持续与不可持续收益** - 代币排放膨胀 APY 但稀释持有者；**无常损失** - 流动性提供的隐藏成本；**风险调整收益** - 更高收益通常意味着更高风险。DeFiLlama Yields 提供跨协议和链的全面收益数据。"
+				"content": "收益耕作需要理解：<br/><strong>APY vs APR</strong> - APY 复利，APR 不复利；<br/><strong>可持续与不可持续收益</strong> - 代币排放膨胀 APY 但稀释持有者；<br/><strong>无常损失</strong> - 流动性提供的隐藏成本；<br/><strong>风险调整收益</strong> - 更高收益通常意味着更高风险。DeFiLlama Yields 提供跨协议和链的全面收益数据。"
 			}
 		},
 		"wallet_tracking": {
@@ -44,15 +44,15 @@
 			"content": "追踪有影响力钱包的活动可以提供有价值的市场洞察和交易信号。",
 			"smart_money": {
 				"title": "聪明钱分析",
-				"content": "聪明钱指有盈利交易记录的钱包。分析平台通过以下方式识别聪明钱：**历史表现** - 持续在上涨前买入、下跌前卖出的钱包；**行动速度** - 成功项目的早期参与者；**信息优势** - 似乎有内部消息的钱包；**基金钱包** - 已知的 VC 和机构地址。Nansen 开创了聪明钱标签，而 Arkham 专注于实体识别和钱包聚类。"
+				"content": "聪明钱指有盈利交易记录的钱包。分析平台通过以下方式识别聪明钱：<br/><strong>历史表现</strong> - 持续在上涨前买入、下跌前卖出的钱包；<br/><strong>行动速度</strong> - 成功项目的早期参与者；<br/><strong>信息优势</strong> - 似乎有内部消息的钱包；<br/><strong>基金钱包</strong> - 已知的 VC 和机构地址。Nansen 开创了聪明钱标签，而 Arkham 专注于实体识别和钱包聚类。"
 			},
 			"whale_watching": {
 				"title": "巨鲸观察",
-				"content": "巨鲸是持有大量资产的持有者，其行动可以影响市场。关键信号包括：**大额转账** - 与交易所之间的移动通常预示价格行动；**积累模式** - 巨鲸在下跌时买入可能表示底部；**分发模式** - 巨鲸逐渐卖出可能表示顶部；**新巨鲸进入** - 新的大买家可能表示机构兴趣。Whale Alert 为跨链大额转账提供实时通知。"
+				"content": "巨鲸是持有大量资产的持有者，其行动可以影响市场。关键信号包括：<br/><strong>大额转账</strong> - 与交易所之间的移动通常预示价格行动；<br/><strong>积累模式</strong> - 巨鲸在下跌时买入可能表示底部；<br/><strong>分发模式</strong> - 巨鲸逐渐卖出可能表示顶部；<br/><strong>新巨鲸进入</strong> - 新的大买家可能表示机构兴趣。Whale Alert 为跨链大额转账提供实时通知。"
 			},
 			"holder_distribution": {
 				"title": "持有者分布",
-				"content": "分析代币在持有者间的分布揭示重要信息：**集中风险** - 如果少数钱包持有大部分代币，它们可以操纵价格；**持有者增长** - 持有者数量增加表明有机采用；**持有者行为** - 持有者在积累还是分发？；**关联钱包** - 聚类分析可以揭示许多\"持有者\"实际上是同一实体。Bubblemaps 可视化代币分布和钱包关联。"
+				"content": "分析代币在持有者间的分布揭示重要信息：<br/><strong>集中风险</strong> - 如果少数钱包持有大部分代币，它们可以操纵价格；<br/><strong>持有者增长</strong> - 持有者数量增加表明有机采用；<br/><strong>持有者行为</strong> - 持有者在积累还是分发？；<br/><strong>关联钱包</strong> - 聚类分析可以揭示许多\"持有者\"实际上是同一实体。Bubblemaps 可视化代币分布和钱包关联。"
 			}
 		},
 		"trading_analytics": {
@@ -60,15 +60,15 @@
 			"content": "去中心化交易所生成丰富的交易数据，可用于分析市场洞察和交易机会。",
 			"dex_analysis": {
 				"title": "DEX 分析",
-				"content": "DEX 分析的关键指标包括：**交易量** - 跨交易对的总交易量；**流动性** - 订单簿或流动性池深度；**价格影响** - 交易对价格的影响程度；**费用收入** - 流动性提供者赚取的收入；**市场份额** - 哪些 DEX 在每条链上占主导。DEX Screener 为所有主要链上的去中心化交易对提供实时图表和分析。"
+				"content": "DEX 分析的关键指标包括：<br/><strong>交易量</strong> - 跨交易对的总交易量；<br/><strong>流动性</strong> - 订单簿或流动性池深度；<br/><strong>价格影响</strong> - 交易对价格的影响程度；<br/><strong>费用收入</strong> - 流动性提供者赚取的收入；<br/><strong>市场份额</strong> - 哪些 DEX 在每条链上占主导。DEX Screener 为所有主要链上的去中心化交易对提供实时图表和分析。"
 			},
 			"token_discovery": {
 				"title": "代币发现",
-				"content": "早期发现新代币需要监控：**新交易对创建** - 代币首次可交易时；**初始流动性** - 发布时提供了多少流动性；**早期交易模式** - 最初几小时的积累与分发；**社交信号** - 社区增长和参与度；**合约分析** - 检查蜜罐、税收和其他风险。"
+				"content": "早期发现新代币需要监控：<br/><strong>新交易对创建</strong> - 代币首次可交易时；<br/><strong>初始流动性</strong> - 发布时提供了多少流动性；<br/><strong>早期交易模式</strong> - 最初几小时的积累与分发；<br/><strong>社交信号</strong> - 社区增长和参与度；<br/><strong>合约分析</strong> - 检查蜜罐、税收和其他风险。"
 			},
 			"derivatives": {
 				"title": "衍生品分析",
-				"content": "链上衍生品（永续合约、期权）需要不同的分析：**未平仓合约** - 未结算头寸的总价值；**资金费率** - 多头或空头支付的溢价；**清算价格** - 大额头寸被清算的价格；**期权流** - 大额期权交易可能表示知情押注。Laevitas 专门从事加密衍生品分析。"
+				"content": "链上衍生品（永续合约、期权）需要不同的分析：<br/><strong>未平仓合约</strong> - 未结算头寸的总价值；<br/><strong>资金费率</strong> - 多头或空头支付的溢价；<br/><strong>清算价格</strong> - 大额头寸被清算的价格；<br/><strong>期权流</strong> - 大额期权交易可能表示知情押注。Laevitas 专门从事加密衍生品分析。"
 			}
 		},
 		"onchain_analytics": {
@@ -76,15 +76,15 @@
 			"content": "理解网络级指标有助于洞察区块链健康状况和市场周期。",
 			"network_metrics": {
 				"title": "网络指标",
-				"content": "核心网络健康指标包括：**算力/质押率** - 网络安全性；**活跃地址** - 每日独立交易地址；**交易数量** - 整体网络使用情况；**费用收入** - 区块空间需求；**区块生产** - 网络性能和可靠性。Glassnode 提供比特币和以太坊的全面链上指标。"
+				"content": "核心网络健康指标包括：<br/><strong>算力/质押率</strong> - 网络安全性；<br/><strong>活跃地址</strong> - 每日独立交易地址；<br/><strong>交易数量</strong> - 整体网络使用情况；<br/><strong>费用收入</strong> - 区块空间需求；<br/><strong>区块生产</strong> - 网络性能和可靠性。Glassnode 提供比特币和以太坊的全面链上指标。"
 			},
 			"eth_specific": {
 				"title": "以太坊特定分析",
-				"content": "以太坊的独特特性使专业分析成为可能：**ETH 销毁率** - 通过 EIP-1559 销毁了多少 ETH；**质押指标** - 验证者数量、质押比率、提款队列；**Layer 2 采用** - 活动转移到 Rollup；**Gas 价格动态** - 网络拥堵和需求。Ultrasound.money 追踪 ETH 供应变化和销毁指标。"
+				"content": "以太坊的独特特性使专业分析成为可能：<br/><strong>ETH 销毁率</strong> - 通过 EIP-1559 销毁了多少 ETH；<br/><strong>质押指标</strong> - 验证者数量、质押比率、提款队列；<br/><strong>Layer 2 采用</strong> - 活动转移到 Rollup；<br/><strong>Gas 价格动态</strong> - 网络拥堵和需求。Ultrasound.money 追踪 ETH 供应变化和销毁指标。"
 			},
 			"l2_analytics": {
 				"title": "Layer 2 分析",
-				"content": "随着活动转移到 L2，新指标变得重要：**L2 TVL** - 每个 L2 锁定的价值；**批次提交** - 向 L1 发布数据的频率和成本；**排序器收入** - L2 运营商赚取多少；**跨 L2 流动** - L2 之间的资金移动；**风险评估** - 每个 L2 的成熟度和去中心化程度。L2Beat 是 L2 分析和风险评估的权威来源。"
+				"content": "随着活动转移到 L2，新指标变得重要：<br/><strong>L2 TVL</strong> - 每个 L2 锁定的价值；<br/><strong>批次提交</strong> - 向 L1 发布数据的频率和成本；<br/><strong>排序器收入</strong> - L2 运营商赚取多少；<br/><strong>跨 L2 流动</strong> - L2 之间的资金移动；<br/><strong>风险评估</strong> - 每个 L2 的成熟度和去中心化程度。L2Beat 是 L2 分析和风险评估的权威来源。"
 			}
 		},
 		"sql_analytics": {
@@ -92,15 +92,15 @@
 			"content": "基于 SQL 的分析平台为研究人员和分析师提供自定义分析和仪表板创建能力。",
 			"dune_intro": {
 				"title": "Dune Analytics",
-				"content": "Dune 已成为区块链数据分析的标准，提供：**解码表** - 智能合约事件和函数的可查询表；**社区查询** - 数千个可学习和分叉的公开查询；**可视化** - 仪表板的图表、表格和计数器；**实时数据** - 持续更新的区块链数据；**Spellbook** - 常见分析需求的精选表。学习 Dune SQL 打开了无限分析可能性。"
+				"content": "Dune 已成为区块链数据分析的标准，提供：<br/><strong>解码表</strong> - 智能合约事件和函数的可查询表；<br/><strong>社区查询</strong> - 数千个可学习和分叉的公开查询；<br/><strong>可视化</strong> - 仪表板的图表、表格和计数器；<br/><strong>实时数据</strong> - 持续更新的区块链数据；<br/><strong>Spellbook</strong> - 常见分析需求的精选表。学习 Dune SQL 打开了无限分析可能性。"
 			},
 			"other_platforms": {
 				"title": "其他 SQL 平台",
-				"content": "Dune 的替代品包括：**Flipside Crypto** - 提供赏金计划和类似 SQL 界面；**Footprint Analytics** - 拖放式仪表板的无代码选项；**Nansen Query** - 将 SQL 与 Nansen 标签数据结合；**BigQuery 公共数据集** - Google 的免费区块链数据。每个平台有不同的优势、数据覆盖和定价模式。"
+				"content": "Dune 的替代品包括：<br/><strong>Flipside Crypto</strong> - 提供赏金计划和类似 SQL 界面；<br/><strong>Footprint Analytics</strong> - 拖放式仪表板的无代码选项；<br/><strong>Nansen Query</strong> - 将 SQL 与 Nansen 标签数据结合；<br/><strong>BigQuery 公共数据集</strong> - Google 的免费区块链数据。每个平台有不同的优势、数据覆盖和定价模式。"
 			},
 			"building_dashboards": {
 				"title": "构建仪表板",
-				"content": "有效的仪表板应该：**讲述故事** - 引导查看者了解关键洞察；**自动更新** - 使用参数化查询获取实时数据；**可分享** - 嵌入报告和社交媒体；**可维护** - 记录查询并使用清晰命名。最佳实践包括从现有仪表板开始、理解数据模型、并根据已知值验证结果。"
+				"content": "有效的仪表板应该：<br/><strong>讲述故事</strong> - 引导查看者了解关键洞察；<br/><strong>自动更新</strong> - 使用参数化查询获取实时数据；<br/><strong>可分享</strong> - 嵌入报告和社交媒体；<br/><strong>可维护</strong> - 记录查询并使用清晰命名。最佳实践包括从现有仪表板开始、理解数据模型、并根据已知值验证结果。"
 			}
 		},
 		"data_infrastructure": {
@@ -108,15 +108,15 @@
 			"content": "理解区块链数据背后的基础设施有助于选择正确的工具和构建自定义解决方案。",
 			"indexing": {
 				"title": "区块链索引",
-				"content": "索引将原始区块链数据转换为可查询格式。The Graph 开创了去中心化索引：**子图** - 特定协议的自定义索引架构；**GraphQL API** - 灵活的查询接口；**去中心化网络** - 索引者竞争提供数据；**策展** - 表明哪些子图有价值。许多协议依赖子图满足前端数据需求。"
+				"content": "索引将原始区块链数据转换为可查询格式。The Graph 开创了去中心化索引：<br/><strong>子图</strong> - 特定协议的自定义索引架构；<br/><strong>GraphQL API</strong> - 灵活的查询接口；<br/><strong>去中心化网络</strong> - 索引者竞争提供数据；<br/><strong>策展</strong> - 表明哪些子图有价值。许多协议依赖子图满足前端数据需求。"
 			},
 			"data_providers": {
 				"title": "数据提供商",
-				"content": "各种提供商以不同格式提供区块链数据：**Allium** - 高可靠性的实时解码数据；**Bitquery** - 多链 GraphQL API；**Covalent** - 跨链统一 API；**Moralis** - 开发者友好的 API；**QuickNode** - 带数据功能的节点提供商。选择取决于用例、所需链和延迟要求。"
+				"content": "各种提供商以不同格式提供区块链数据：<br/><strong>Allium</strong> - 高可靠性的实时解码数据；<br/><strong>Bitquery</strong> - 多链 GraphQL API；<br/><strong>Covalent</strong> - 跨链统一 API；<br/><strong>Moralis</strong> - 开发者友好的 API；<br/><strong>QuickNode</strong> - 带数据功能的节点提供商。选择取决于用例、所需链和延迟要求。"
 			},
 			"enterprise": {
 				"title": "企业数据",
-				"content": "机构用户通常需要：**历史数据** - 用于回测的完整链历史；**高可靠性** - SLA 和冗余；**合规功能** - 审计跟踪和访问控制；**定制数据源** - 定制数据产品。Kaiko 和 Amberdata 以机构级数据产品服务这一市场。"
+				"content": "机构用户通常需要：<br/><strong>历史数据</strong> - 用于回测的完整链历史；<br/><strong>高可靠性</strong> - SLA 和冗余；<br/><strong>合规功能</strong> - 审计跟踪和访问控制；<br/><strong>定制数据源</strong> - 定制数据产品。Kaiko 和 Amberdata 以机构级数据产品服务这一市场。"
 			}
 		},
 		"research": {
@@ -124,15 +124,15 @@
 			"content": "分析工具支持对协议和代币的深入研究和尽职调查。",
 			"protocol_research": {
 				"title": "协议研究",
-				"content": "全面的协议研究包括：**代币经济学分析** - 供应、分布、归属、通胀；**智能合约审查** - 安全性、可升级性、管理员控制；**团队和投资者研究** - 背景、过往记录、利益冲突；**竞争分析** - 协议与替代品的比较；**社区健康** - Discord/Telegram 活动、治理参与。Messari 提供研究报告和协议档案。"
+				"content": "全面的协议研究包括：<br/><strong>代币经济学分析</strong> - 供应、分布、归属、通胀；<br/><strong>智能合约审查</strong> - 安全性、可升级性、管理员控制；<br/><strong>团队和投资者研究</strong> - 背景、过往记录、利益冲突；<br/><strong>竞争分析</strong> - 协议与替代品的比较；<br/><strong>社区健康</strong> - Discord/Telegram 活动、治理参与。Messari 提供研究报告和协议档案。"
 			},
 			"token_analysis": {
 				"title": "代币分析",
-				"content": "代币级研究应涵盖：**链上指标** - 持有者数量、转账活动、集中度；**市场指标** - 交易量、流动性、交易所上市；**社交指标** - 提及、情绪、KOL 活动；**开发指标** - 提交、发布、开发者活动；**比较指标** - 指标与同类的比较。CoinGecko 提供全面的代币数据，而 IntoTheBlock 提供链上信号。"
+				"content": "代币级研究应涵盖：<br/><strong>链上指标</strong> - 持有者数量、转账活动、集中度；<br/><strong>市场指标</strong> - 交易量、流动性、交易所上市；<br/><strong>社交指标</strong> - 提及、情绪、KOL 活动；<br/><strong>开发指标</strong> - 提交、发布、开发者活动；<br/><strong>比较指标</strong> - 指标与同类的比较。CoinGecko 提供全面的代币数据，而 IntoTheBlock 提供链上信号。"
 			},
 			"risk_assessment": {
 				"title": "风险评估",
-				"content": "风险评估包括：**智能合约风险** - 审计状态、漏洞赏金、被攻击历史；**交易对手风险** - 中心化程度、托管、预言机依赖；**市场风险** - 流动性、波动性、相关性；**监管风险** - 管辖权、合规性、法律地位；**团队风险** - 匿名性、过往记录、激励对齐。结合多个数据源提供全面的风险画面。"
+				"content": "风险评估包括：<br/><strong>智能合约风险</strong> - 审计状态、漏洞赏金、被攻击历史；<br/><strong>交易对手风险</strong> - 中心化程度、托管、预言机依赖；<br/><strong>市场风险</strong> - 流动性、波动性、相关性；<br/><strong>监管风险</strong> - 管辖权、合规性、法律地位；<br/><strong>团队风险</strong> - 匿名性、过往记录、激励对齐。结合多个数据源提供全面的风险画面。"
 			}
 		}
 	},
