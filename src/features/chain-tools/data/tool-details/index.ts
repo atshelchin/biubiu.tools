@@ -142,6 +142,12 @@ import { lyraDetail } from './lyra';
 import { dopexDetail } from './dopex';
 import { sommelierDetail } from './sommelier';
 import { harvestDetail } from './harvest';
+import { x2y2Detail } from './x2y2';
+import { looksrareDetail } from './looksrare';
+import { sudoswapDetail } from './sudoswap';
+import { nftxDetail } from './nftx';
+import { immutableDetail } from './immutable';
+import { axieDetail } from './axie';
 
 /**
  * All tool details mapped by tool ID
@@ -280,7 +286,13 @@ export const toolDetails: Record<string, ToolDetail> = {
 	lyra: lyraDetail,
 	dopex: dopexDetail,
 	sommelier: sommelierDetail,
-	harvest: harvestDetail
+	harvest: harvestDetail,
+	x2y2: x2y2Detail,
+	looksrare: looksrareDetail,
+	sudoswap: sudoswapDetail,
+	nftx: nftxDetail,
+	immutable: immutableDetail,
+	axie: axieDetail
 };
 
 /**

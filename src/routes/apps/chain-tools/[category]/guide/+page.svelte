@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { useI18n } from '@shelchin/i18n';
 	import { Clock, ExternalLink, ChevronRight, BookOpen } from '@lucide/svelte';
+	import { marked } from 'marked';
 	import SeoHead from '$lib/components/seo-head.svelte';
 	import type { PageData } from './$types';
 	import type { GuideSection, CaseStudy } from '@/features/chain-tools/types';
@@ -9,9 +10,21 @@
 
 	const i18n = useI18n();
 
+	// Configure marked for GFM tables
+	marked.setOptions({
+		gfm: true,
+		breaks: true
+	});
+
 	// Get translated text
 	function t(key: string): string {
 		return i18n.t(key as never) || key;
+	}
+
+	// Parse markdown content to HTML
+	function md(key: string): string {
+		const content = t(key);
+		return marked.parse(content) as string;
 	}
 
 	// Build table of contents from sections
@@ -147,8 +160,8 @@
 			{#each data.guide.sections as section (section.id)}
 				<section id={section.id} class="content-section">
 					<h2 class="section-title">{t(section.titleKey)}</h2>
-					<div class="section-content">
-						{@html t(section.contentKey)}
+					<div class="section-content markdown-content">
+						{@html md(section.contentKey)}
 					</div>
 
 					<!-- Tool mentions - only show if at least one tool exists -->
@@ -174,8 +187,8 @@
 						{#each section.subsections as subsection (subsection.id)}
 							<div id={subsection.id} class="subsection">
 								<h3 class="subsection-title">{t(subsection.titleKey)}</h3>
-								<div class="subsection-content">
-									{@html t(subsection.contentKey)}
+								<div class="subsection-content markdown-content">
+									{@html md(subsection.contentKey)}
 								</div>
 
 								<!-- Subsection tool mentions - only show if at least one tool exists -->
@@ -480,6 +493,62 @@
 
 	.section-content :global(li) {
 		margin-bottom: var(--space-2);
+	}
+
+	/* Markdown tables */
+	.markdown-content :global(table) {
+		width: 100%;
+		border-collapse: collapse;
+		margin: var(--space-4) 0;
+		font-size: var(--text-sm);
+		overflow-x: auto;
+		display: block;
+	}
+
+	.markdown-content :global(thead) {
+		background: var(--color-panel-2);
+	}
+
+	.markdown-content :global(th),
+	.markdown-content :global(td) {
+		padding: var(--space-2) var(--space-3);
+		border: 1px solid var(--color-panel-border-1);
+		text-align: left;
+	}
+
+	.markdown-content :global(th) {
+		font-weight: var(--font-semibold);
+		color: var(--color-heading-2);
+	}
+
+	.markdown-content :global(tr:nth-child(even)) {
+		background: var(--color-panel-2);
+	}
+
+	.markdown-content :global(tr:hover) {
+		background: var(--color-panel-3);
+	}
+
+	/* Markdown code blocks */
+	.markdown-content :global(code) {
+		background: var(--color-panel-2);
+		padding: 0.125em 0.375em;
+		border-radius: var(--radius-sm);
+		font-family: monospace;
+		font-size: 0.9em;
+	}
+
+	.markdown-content :global(pre) {
+		background: var(--color-panel-2);
+		padding: var(--space-3);
+		border-radius: var(--radius-md);
+		overflow-x: auto;
+		margin: var(--space-4) 0;
+	}
+
+	.markdown-content :global(pre code) {
+		background: none;
+		padding: 0;
 	}
 
 	/* Subsections */

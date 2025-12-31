@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "NFTX - NFT 流动性协议",
+		"description": "NFTX 通过金库代币实现 NFT 流动性。存入 NFT 以铸造可在 DEX 上交易的同质化代币。",
+		"keywords": "NFTX, vTokens, NFT 流动性, NFT 金库, 地板永续, NFT DeFi"
+	},
+	"overview": "NFTX 通过将 NFT 代币化为同质化金库代币（vTokens）为 NFT 创造流动性。将 NFT 存入金库并收到代表该收藏中 1 个 NFT 的 vToken。\n\nvTokens 是 ERC-20 代币，可在 Uniswap 等 DEX 上以深度流动性交易。这使得通过交换而非等待市场订单即可即时买卖地板 NFT。\n\nNFTX 金库可用于收益农业、作为抵押品，或在不持有特定 NFT 的情况下获得地板价格敞口。它将 NFT 桥接到更广泛的 DeFi。",
+	"features": {
+		"1": {
+			"title": "NFT 金库",
+			"description": "将 NFT 代币化为 vTokens"
+		},
+		"2": {
+			"title": "DEX 流动性",
+			"description": "在 Uniswap/Sushi 上交易"
+		},
+		"3": {
+			"title": "即时交易",
+			"description": "即时交换 NFT"
+		},
+		"4": {
+			"title": "收益农业",
+			"description": "LP vTokens 获得收益"
+		},
+		"5": {
+			"title": "地板敞口",
+			"description": "无需特定 NFT 追踪地板"
+		},
+		"6": {
+			"title": "NFT 赎回",
+			"description": "用 vTokens 赎回 NFT"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "即时出售",
+			"description": "立即将 NFT 换成 ETH"
+		},
+		"2": {
+			"title": "地板交易",
+			"description": "以代币形式交易地板敞口"
+		},
+		"3": {
+			"title": "流动性提供",
+			"description": "LP vToken 交易对赚取费用"
+		},
+		"4": {
+			"title": "NFT 指数敞口",
+			"description": "持有收藏品敞口"
+		},
+		"5": {
+			"title": "套利",
+			"description": "在 NFTX 和市场间套利"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 vTokens？",
+			"answer": "vTokens 是由金库中 NFT 1:1 支持的同质化 ERC-20 代币。如果您存入一个 CryptoPunk，您会得到 1 个 PUNK 代币。该 PUNK 代币可赎回金库中的任何 Punk。vTokens 在 DEX 上交易。"
+		},
+		"2": {
+			"question": "定价如何确定？",
+			"answer": "vToken 价格由 DEX 市场（供需）设定。它大致追踪地板价，因为 1 vToken = 1 地板 NFT。套利者保持价格一致——如果 vToken 便宜，他们买入并赎回 NFT。"
+		},
+		"3": {
+			"question": "稀有 NFT 怎么办？",
+			"answer": "NFTX 最适合地板/商品 NFT。稀有物品不应放入金库，因为您会得到通用 vToken。一些金库有资格要求。高级功能让您可以付费定向特定 NFT。"
+		},
+		"4": {
+			"question": "我能取回我确切的 NFT 吗？",
+			"answer": "标准赎回给您金库中的随机 NFT。NFTX V3 引入了定向赎回，您可以支付额外费用选择特定 NFT。这使得交易特定物品成为可能。"
+		},
+		"5": {
+			"question": "NFTX 安全吗？",
+			"answer": "NFTX 经过审计，自 2021 年以来运营。它使用标准 ERC-20 和金库模式。风险包括智能合约漏洞和流动性风险。该协议已可靠地处理了大量交易量。"
+		}
+	},
+	"cta": {
+		"ready": "准备好获得 NFT 流动性了吗？",
+		"button": "探索 NFTX",
+		"note": "NFT 的同质化代币"
+	}
+}

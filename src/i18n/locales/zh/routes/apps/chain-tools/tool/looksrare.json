@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "LooksRare - NFT 市场",
+		"description": "LooksRare 是社区优先的 NFT 市场，奖励交易者和质押者。交易 NFT 并赚取 LOOKS 代币。",
+		"keywords": "LooksRare, LOOKS 代币, NFT 市场, NFT 交易, 质押奖励, 社区市场"
+	},
+	"overview": "LooksRare 作为 OpenSea 的社区拥有替代品推出，用 LOOKS 代币奖励用户的交易活动。该平台在 NFT 市场中开创了交易奖励模式。\n\nLOOKS 质押者赚取 100% 的平台交易费用，在代币持有者和平台成功之间创造强大的一致性。这种模式吸引了大量交易量。\n\nLooksRare 已发展出跨市场聚合、YOLO 游戏等功能。它仍然是 NFT 市场生态系统中的重要参与者。",
+	"features": {
+		"1": {
+			"title": "交易奖励",
+			"description": "交易赚取 LOOKS"
+		},
+		"2": {
+			"title": "100% 费用分享",
+			"description": "质押者获得所有平台费用"
+		},
+		"3": {
+			"title": "LOOKS 代币",
+			"description": "治理和奖励"
+		},
+		"4": {
+			"title": "聚合",
+			"description": "跨市场交易"
+		},
+		"5": {
+			"title": "收藏品报价",
+			"description": "对收藏品出价"
+		},
+		"6": {
+			"title": "YOLO 游戏",
+			"description": "基于 NFT 的游戏"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "NFT 交易",
+			"description": "买卖 NFT"
+		},
+		"2": {
+			"title": "LOOKS 质押",
+			"description": "赚取平台费用"
+		},
+		"3": {
+			"title": "聚合交易",
+			"description": "跨平台最佳价格"
+		},
+		"4": {
+			"title": "收藏品扫货",
+			"description": "批量购买地板 NFT"
+		},
+		"5": {
+			"title": "YOLO 游戏",
+			"description": "在游戏中赢取 NFT"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 LOOKS 代币？",
+			"answer": "LOOKS 是 LooksRare 的原生代币。通过交易赚取，可质押以赚取 WETH 形式的平台费用。LOOKS 还提供对协议决策的治理权。"
+		},
+		"2": {
+			"question": "费用分享如何运作？",
+			"answer": "LooksRare 收取 2% 的平台费用。100% 给 LOOKS 质押者作为 WETH。这与 X2Y2 分享部分费用不同。质押回报取决于平台交易量。"
+		},
+		"3": {
+			"question": "什么是聚合？",
+			"answer": "LooksRare 聚合来自多个市场的列表，包括 OpenSea、Blur 和 X2Y2。您可以在一个界面中找到并购买跨平台最优价格的 NFT。"
+		},
+		"4": {
+			"question": "什么是 YOLO？",
+			"answer": "YOLO 是一个游戏化功能，用户可以将 NFT 投入抽奖式游戏。赢家获得池中所有 NFT。它增加了标准交易之外的娱乐价值。"
+		},
+		"5": {
+			"question": "LooksRare 安全吗？",
+			"answer": "LooksRare 经过审计，自 2022 年 1 月以来运营。它使用标准 NFT 市场合约。该平台已处理数十亿交易量。一如既往，交易前请验证。"
+		}
+	},
+	"cta": {
+		"ready": "准备好交易并赚取了吗？",
+		"button": "探索 LooksRare",
+		"note": "交易 NFT，赚取 LOOKS"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Sudoswap - NFT AMM",
+		"description": "Sudoswap 是 NFT 自动做市商。使用绑定曲线即时交易 NFT，无版税且流动性深厚。",
+		"keywords": "Sudoswap, SUDO 代币, NFT AMM, 绑定曲线, NFT 流动性, 即时交易"
+	},
+	"overview": "Sudoswap 通过为 NFT 引入 AMM 模型彻底改变了 NFT 交易。sudoswap 使用绑定曲线进行即时买卖并保证流动性，而不是订单簿式的列表。\n\n流动性提供者使用自动定价 NFT 的绑定曲线创建池。随着 NFT 被买卖，价格沿曲线调整。这使得无需等待匹配订单即可即时交易。\n\nSudoswap V2 增加了 ERC-1155 支持、用于基于特征定价的属性池和 SUDO 治理代币等功能。",
+	"features": {
+		"1": {
+			"title": "NFT AMM",
+			"description": "绑定曲线定价"
+		},
+		"2": {
+			"title": "即时交易",
+			"description": "无需等待买家"
+		},
+		"3": {
+			"title": "零版税",
+			"description": "无创作者版税"
+		},
+		"4": {
+			"title": "LP 池",
+			"description": "提供 NFT 流动性"
+		},
+		"5": {
+			"title": "SUDO 代币",
+			"description": "治理代币"
+		},
+		"6": {
+			"title": "属性池",
+			"description": "基于特征的定价"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "即时出售",
+			"description": "立即出售 NFT"
+		},
+		"2": {
+			"title": "LP 提供",
+			"description": "从交易价差中赚取"
+		},
+		"3": {
+			"title": "收藏品交易",
+			"description": "交易类同质化 NFT"
+		},
+		"4": {
+			"title": "套利",
+			"description": "池间套利"
+		},
+		"5": {
+			"title": "地板交易",
+			"description": "快速地板翻转"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "NFT AMM 如何工作？",
+			"answer": "Sudoswap 池持有 NFT 和 ETH 以及绑定曲线。曲线设定价格——购买 NFT 提高价格，出售降低价格。LP 赚取价差。这就像 Uniswap 但用于 NFT。"
+		},
+		"2": {
+			"question": "什么是绑定曲线？",
+			"answer": "绑定曲线是基于供应确定价格的数学公式。线性曲线按固定金额改变每笔交易的价格。指数曲线按百分比变化。LP 选择他们的曲线类型。"
+		},
+		"3": {
+			"question": "为什么没有版税？",
+			"answer": "Sudoswap 在协议层面不强制执行创作者版税。这吸引了寻求避免版税的交易者。版税辩论在 NFT 领域持续进行——sudoswap 选择了对交易者友好的经济模式。"
+		},
+		"4": {
+			"question": "什么是属性池？",
+			"answer": "属性池让您为特定特征创建流动性池。您可以只池化僵尸 Punk 而不是池化任何 Punk。这使得基于特征的定价和流动性成为可能。"
+		},
+		"5": {
+			"question": "sudoswap 安全吗？",
+			"answer": "Sudoswap 经过审计，自 2022 年以来处理了大量交易量。AMM 模型比传统市场更简单。标准 DeFi 风险适用——智能合约、池不平衡。该协议一直可靠。"
+		}
+	},
+	"cta": {
+		"ready": "准备好即时 NFT 交易了吗？",
+		"button": "探索 Sudoswap",
+		"note": "NFT 的 AMM"
+	}
+}

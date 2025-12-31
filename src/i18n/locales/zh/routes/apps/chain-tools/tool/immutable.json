@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Immutable - Web3 游戏平台",
+		"description": "Immutable 为 Web3 游戏提供基础设施，具有免 gas NFT 交易。在 ImmutableX 和 Immutable zkEVM 上构建和玩游戏。",
+		"keywords": "Immutable, IMX 代币, ImmutableX, zkEVM, Web3 游戏, 免 gas NFT"
+	},
+	"overview": "Immutable 是 Web3 游戏的领先平台，为 NFT 铸造、交易和游戏开发提供基础设施。它运营两个网络：ImmutableX（StarkEx rollup）和 Immutable zkEVM。\n\nImmutableX 提供免 gas 的 NFT 铸造和交易，非常适合需要频繁交易的游戏。Gods Unchained 和 Illuvium 等主要游戏都建立在 Immutable 上。\n\nIMX 代币为生态系统提供质押、治理和支付协议费用的能力。Immutable 得到了重大资金支持并与主要游戏工作室建立了合作伙伴关系。",
+	"features": {
+		"1": {
+			"title": "免 gas NFT",
+			"description": "铸造/交易零 gas"
+		},
+		"2": {
+			"title": "两个网络",
+			"description": "ImmutableX 和 zkEVM"
+		},
+		"3": {
+			"title": "游戏焦点",
+			"description": "为游戏开发者构建"
+		},
+		"4": {
+			"title": "IMX 代币",
+			"description": "治理和质押"
+		},
+		"5": {
+			"title": "即时交易",
+			"description": "快速交易最终性"
+		},
+		"6": {
+			"title": "开发者工具",
+			"description": "游戏 SDK 和 API"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "游戏 NFT",
+			"description": "交易游戏内物品"
+		},
+		"2": {
+			"title": "游戏开发",
+			"description": "构建 Web3 游戏"
+		},
+		"3": {
+			"title": "NFT 交易",
+			"description": "免 gas 市场"
+		},
+		"4": {
+			"title": "IMX 质押",
+			"description": "赚取协议奖励"
+		},
+		"5": {
+			"title": "收藏品创建",
+			"description": "发布 NFT 收藏品"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "交易如何免 gas？",
+			"answer": "ImmutableX 使用 StarkEx，一种批量处理交易的 ZK-rollup。用户在链下签署交易，Immutable 将它们批量发送到以太坊。平台补贴 gas 成本。用户交易零 gas。"
+		},
+		"2": {
+			"question": "ImmutableX vs Immutable zkEVM？",
+			"answer": "ImmutableX 是原始的基于 StarkEx 的网络——快速但需要自定义集成。Immutable zkEVM 是 EVM 兼容的，让开发者直接部署以太坊代码。两者都是由以太坊保护的 L2。"
+		},
+		"3": {
+			"question": "Immutable 上有什么游戏？",
+			"answer": "主要游戏包括 Gods Unchained（卡牌游戏）、Illuvium（RPG）、Guild of Guardians（手机 RPG）等。Immutable 与 GameStop、迪士尼和传统游戏工作室有合作伙伴关系。"
+		},
+		"4": {
+			"question": "IMX 代币用于什么？",
+			"answer": "IMX 用于质押（赚取协议费用）、治理投票和支付平台费用。Immutable 上的游戏通常有 IMX 集成。它是整个生态系统的实用代币。"
+		},
+		"5": {
+			"question": "Immutable 安全吗？",
+			"answer": "Immutable 得到主要投资者支持，自 2018 年以来运营。ImmutableX 使用经过验证的 StarkEx 技术。zkEVM 较新但 EVM 兼容。两者都继承以太坊安全性。成熟的平台。"
+		}
+	},
+	"cta": {
+		"ready": "准备好 Web3 游戏了吗？",
+		"button": "探索 Immutable",
+		"note": "免 gas 游戏 NFT"
+	}
+}
