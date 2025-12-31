@@ -2,7 +2,7 @@
 	"category_seo": {
 		"title": "ステーブルコイン - USDC、USDT、DAIなど | BiuBiu Tools",
 		"description": "ステーブルコインとそのユースケースを学ぶ。DeFiと決済のための法定通貨担保、アルゴリズム、分散型ステーブルコイン。",
-		"keywords": "",
+		"keywords": "ステーブルコイン, usdc, usdt, dai, frax, 暗号ステーブルコイン, defi",
 		"faqs": [
 			{
 				"question": "ステーブルコインとは何ですか？",
@@ -19,140 +19,140 @@
 		]
 	},
 	"tools": {
+		"usdt_tether": {
+			"description": "時価総額最大のステーブルコイン、USD担保でマルチチェーン対応"
+		},
+		"usdc_circle": {
+			"description": "Circleの規制された米ドルステーブルコイン、完全準備金担保と透明性"
+		},
+		"dai_makerdao": {
+			"description": "MakerDAOが管理する分散型暗号資産担保ステーブルコイン"
+		},
 		"frax": {
 			"description": "部分担保付き分数アルゴリズムステーブルコイン"
 		},
+		"usde_ethena": {
+			"description": "ステークETH担保でデルタニュートラル戦略を使用する合成ドル"
+		},
+		"usdd_tron": {
+			"description": "TRXとBTCに担保されたTronネットワーク上の超過担保ステーブルコイン"
+		},
 		"tusd": {
-			"description": "規制と監査を受けたUSD担保ステーブルコイン"
+			"description": "規制と監査を受けたUSD担保ステーブルコイン、リアルタイム証明付き"
+		},
+		"busd_paxos": {
+			"description": "Paxos発行のUSDステーブルコイン、以前Binanceと提携"
+		},
+		"pyusd_paypal": {
+			"description": "PayPalエコシステム内の支払いと送金のためのPayPalのUSDステーブルコイン"
+		},
+		"gusd_gemini": {
+			"description": "Gemini取引所が発行するニューヨーク規制のドルステーブルコイン"
+		},
+		"usdp_paxos": {
+			"description": "NYDFSに規制されたPax Dollar、月次準備金証明付き"
+		},
+		"sdai_spark": {
+			"description": "DSR（DAI貯蓄金利）を自動的に獲得するイールド型DAI"
+		},
+		"susde_ethena": {
+			"description": "Ethenaのデルタニュートラル戦略からイールドを獲得するステークUSDe"
 		},
 		"sfrax": {
-			"description": "FraxプロトコルからイールドFinを獲得するステーキングFRAX"
+			"description": "Fraxプロトコルからイールドを獲得するステーキングFRAX"
+		},
+		"eurs_stasis": {
+			"description": "欧州銀行のユーロで1:1で担保されたユーロペッグステーブルコイン"
+		},
+		"eurc_circle": {
+			"description": "USDCと同じコンプライアンス基準を持つCircleのユーロステーブルコイン"
+		},
+		"eurt_tether": {
+			"description": "欧州市場向けのTetherのユーロペッグステーブルコイン"
+		},
+		"xsgd_straitsx": {
+			"description": "アジア市場向けにMASに規制されたシンガポールドルステーブルコイン"
+		},
+		"lusd_liquity": {
+			"description": "不変のスマートコントラクトとガバナンスなしの分散型ETH担保ステーブルコイン"
+		},
+		"susd_synthetix": {
+			"description": "Synthetixプロトコル内のSNXステーカーに担保された合成USDステーブルコイン"
+		},
+		"rai_reflexer": {
+			"description": "変動目標価格を持つ非ペッグ安定資産、ETH担保でガバナンス最小化"
+		},
+		"mim_abracadabra": {
+			"description": "利息生成トークンを担保として使用して発行されるステーブルコイン"
+		},
+		"crvusd_curve": {
+			"description": "ソフト清算と資本効率改善のためにLLAMMAを使用するCurveのステーブルコイン"
+		},
+		"gho_aave": {
+			"description": "預けた資産に対して発行されるAaveの超過担保ステーブルコイン"
+		},
+		"defillama_stablecoins": {
+			"description": "時価総額、ペッグ乖離、チェーン分布を追跡する包括的なステーブルコイン分析"
+		},
+		"coingecko_stablecoins": {
+			"description": "CoinGeckoでのステーブルコインランキング、市場データ、ペッグ監視"
 		},
 		"fdusd": {
-			"description": "First Digital USD (FDUSD) - ステーブルコイン"
+			"description": "Binance取引所で広く使用されている香港発行のUSDステーブルコイン"
+		},
+		"usual_usd0": {
+			"description": "米国債からイールドを獲得するRWA担保ステーブルコイン"
+		},
+		"mountain_usdm": {
+			"description": "米国債に担保されたイールド型ステーブルコイン、毎日リベース"
+		},
+		"ageur_angle": {
+			"description": "複数の発行メカニズムを持つAngle Protocolの分散型ユーロステーブルコイン"
+		},
+		"mkusd_prisma": {
+			"description": "Prisma Financeの流動性ステーキングトークンに担保されたステーブルコイン"
+		},
+		"ultra_usd": {
+			"description": "強化されたコンプライアンス機能を持つ機関グレードUSDステーブルコイン"
+		},
+		"dola_inverse": {
+			"description": "Fedメカニズムを持つInverse Financeレンディングプロトコルのステーブルコイン"
+		},
+		"hai_reflexer": {
+			"description": "変動目標価格を持つRAIにインスパイアされたOptimismネイティブステーブルコイン"
+		},
+		"usdk_okx": {
+			"description": "準備金に担保され定期的に監査されるOKX発行USDステーブルコイン"
+		},
+		"zusd_zeta": {
+			"description": "クロスチェーン送金のためのZetaChainのネイティブオムニチェーンステーブルコイン"
+		},
+		"bob_stablecoin": {
+			"description": "クロスチェーン使用のために設計されたオプティミスティック・マルチ担保ステーブルコイン"
+		},
+		"usdx_kava": {
+			"description": "Kavaブロックチェーン上のCosmos ネイティブ担保ステーブルコイン"
+		},
+		"isc_interest": {
+			"description": "Interest ProtocolのSuiネイティブ超過担保ステーブルコイン"
+		},
+		"cusd_celo": {
+			"description": "モバイルファースト新興市場向けに設計されたCeloのUSDステーブルコイン"
+		},
+		"ceur_celo": {
+			"description": "モバイルでの欧州決済のためのCeloのユーロステーブルコイン"
 		},
 		"flexusd": {
-			"description": "flexUSD - ステーブルコイン"
+			"description": "自動的にイールドを獲得する利息生成ステーブルコイン"
 		},
-		"usdt-tether": {
-			"description": "Tether (USDT) - Tool"
+		"alusd_alchemix": {
+			"description": "預けた担保からのイールドで債務が返済される自己返済型ステーブルコイン"
 		},
-		"usdc-circle": {
-			"description": "USD Coin (USDC) - Tool"
+		"usd_plus": {
+			"description": "Overnight Financeのデルタニュートラルイールド型ステーブルコイン"
 		},
-		"dai-makerdao": {
-			"description": "DAI (MakerDAO) - Tool"
-		},
-		"usde-ethena": {
-			"description": "USDe (Ethena) - Tool"
-		},
-		"usdd-tron": {
-			"description": "USDD (Tron) - Tool"
-		},
-		"busd-paxos": {
-			"description": "Binance USD (BUSD) - Tool"
-		},
-		"pyusd-paypal": {
-			"description": "PayPal USD (PYUSD) - Tool"
-		},
-		"gusd-gemini": {
-			"description": "Gemini Dollar (GUSD) - Tool"
-		},
-		"usdp-paxos": {
-			"description": "Pax Dollar (USDP) - Tool"
-		},
-		"sdai-spark": {
-			"description": "sDAI (Spark) - Tool"
-		},
-		"susde-ethena": {
-			"description": "sUSDe (Ethena) - Tool"
-		},
-		"eurs-stasis": {
-			"description": "STASIS EURO (EURS) - Tool"
-		},
-		"eurc-circle": {
-			"description": "Euro Coin (EURC) - Tool"
-		},
-		"eurt-tether": {
-			"description": "Tether EURt - Tool"
-		},
-		"xsgd-straitsx": {
-			"description": "XSGD (StraitsX) - Tool"
-		},
-		"lusd-liquity": {
-			"description": "LUSD (Liquity) - Tool"
-		},
-		"susd-synthetix": {
-			"description": "sUSD (Synthetix) - Tool"
-		},
-		"rai-reflexer": {
-			"description": "RAI (Reflexer) - Tool"
-		},
-		"mim-abracadabra": {
-			"description": "MIM (Abracadabra) - Tool"
-		},
-		"crvusd-curve": {
-			"description": "crvUSD (Curve) - Tool"
-		},
-		"gho-aave": {
-			"description": "GHO (Aave) - Tool"
-		},
-		"defillama-stablecoins": {
-			"description": "DeFiLlama Stablecoins - Tool"
-		},
-		"coingecko-stablecoins": {
-			"description": "CoinGecko Stablecoins - Tool"
-		},
-		"usual-usd0": {
-			"description": "USD0 (Usual) - Tool"
-		},
-		"mountain-usdm": {
-			"description": "USDM (Mountain) - Tool"
-		},
-		"ageur-angle": {
-			"description": "EURA (Angle) - Tool"
-		},
-		"mkusd-prisma": {
-			"description": "mkUSD (Prisma) - Tool"
-		},
-		"ultra-usd": {
-			"description": "Ultra USDu - Tool"
-		},
-		"dola-inverse": {
-			"description": "DOLA (Inverse) - Tool"
-		},
-		"hai-reflexer": {
-			"description": "HAI (Let - Tool"
-		},
-		"usdk-okx": {
-			"description": "USDK (OKX) - Tool"
-		},
-		"zusd-zeta": {
-			"description": "ZUSD (Zeta) - Tool"
-		},
-		"bob-stablecoin": {
-			"description": "BOB - Tool"
-		},
-		"usdx-kava": {
-			"description": "USDX (Kava) - Tool"
-		},
-		"isc-interest": {
-			"description": "ISC (Interest) - Tool"
-		},
-		"cusd-celo": {
-			"description": "cUSD (Celo) - Tool"
-		},
-		"ceur-celo": {
-			"description": "cEUR (Celo) - Tool"
-		},
-		"alusd-alchemix": {
-			"description": "alUSD (Alchemix) - Tool"
-		},
-		"usd-plus": {
-			"description": "USD+ (Overnight) - Tool"
-		},
-		"ust-wormhole": {
-			"description": "UST (Wormhole) - Tool"
+		"ust_wormhole": {
+			"description": "Wormhole経由でブリッジされたラップUSTトークン（歴史的 - Terra崩壊）"
 		}
 	}
 }

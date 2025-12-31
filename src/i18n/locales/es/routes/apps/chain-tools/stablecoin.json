@@ -6,153 +6,153 @@
 		"faqs": [
 			{
 				"question": "¿Qué son las stablecoins?",
-				"answer": "Las stablecoins son criptomonedas diseñadas para mantener valor estable, usualmente vinculadas 1:1 a monedas fiat como el USD. Proveen la velocidad y beneficios de cripto sin volatilidad de precios, haciéndolas ideales para pagos y comercio DeFi."
+				"answer": "Las stablecoins son criptomonedas diseñadas para mantener valor estable, usualmente vinculadas 1:1 a monedas fiat como el USD. Proveen la velocidad y beneficios de cripto sin volatilidad de precios."
 			},
 			{
 				"question": "¿USDT vs USDC vs DAI?",
-				"answer": "USDT (Tether) es la stablecoin más grande pero menos transparente. USDC (Circle) es regulada en EE.UU. con auditorías regulares. DAI (MakerDAO) es descentralizada, respaldada por cripto y gobernada por DAO. Cada una tiene diferentes niveles de confianza/descentralización."
+				"answer": "USDT (Tether) es la stablecoin más grande pero menos transparente. USDC (Circle) es regulada en EE.UU. con auditorías regulares. DAI (MakerDAO) es descentralizada y gobernada por DAO."
 			},
 			{
 				"question": "¿Las stablecoins son seguras?",
-				"answer": "El riesgo depende del tipo: las stablecoins centralizadas enfrentan riesgo de contraparte y regulatorio. Las stablecoins descentralizadas enfrentan riesgos de contratos inteligentes y colateralización. Las stablecoins algorítmicas han mostrado ser propensas a colapsos (ver UST/LUNA)."
+				"answer": "El riesgo depende del tipo: las centralizadas enfrentan riesgo de contraparte y regulatorio. Las descentralizadas enfrentan riesgos de contratos inteligentes. Las algorítmicas han mostrado ser propensas a colapsos."
 			}
 		]
 	},
 	"tools": {
+		"usdt_tether": {
+			"description": "Stablecoin más grande por capitalización, respaldada por USD con amplio soporte multicadena"
+		},
+		"usdc_circle": {
+			"description": "Stablecoin de dólar regulada de Circle con respaldo total de reservas y transparencia"
+		},
+		"dai_makerdao": {
+			"description": "Stablecoin descentralizada colateralizada por cripto gobernada por MakerDAO"
+		},
 		"frax": {
 			"description": "Stablecoin fraccional-algorítmica con colateralización parcial"
 		},
+		"usde_ethena": {
+			"description": "Dólar sintético usando estrategias delta-neutral con colateral de ETH stakeado"
+		},
+		"usdd_tron": {
+			"description": "Stablecoin sobre-colateralizada en red Tron respaldada por TRX y BTC"
+		},
 		"tusd": {
-			"description": "Stablecoin respaldada por USD regulada y auditada"
+			"description": "Stablecoin respaldada por USD regulada y auditada con atestaciones en tiempo real"
+		},
+		"busd_paxos": {
+			"description": "Stablecoin USD emitida por Paxos, anteriormente asociada con Binance"
+		},
+		"pyusd_paypal": {
+			"description": "Stablecoin USD de PayPal para pagos y transferencias dentro del ecosistema PayPal"
+		},
+		"gusd_gemini": {
+			"description": "Stablecoin de dólar regulada en Nueva York emitida por exchange Gemini"
+		},
+		"usdp_paxos": {
+			"description": "Pax Dollar regulado por NYDFS con atestaciones mensuales de reservas"
+		},
+		"sdai_spark": {
+			"description": "DAI con rendimiento que gana DSR (Tasa de Ahorro DAI) automáticamente"
+		},
+		"susde_ethena": {
+			"description": "USDe stakeado ganando rendimiento de la estrategia delta-neutral de Ethena"
 		},
 		"sfrax": {
 			"description": "FRAX stakeado ganando rendimiento del protocolo Frax"
 		},
+		"eurs_stasis": {
+			"description": "Stablecoin vinculada al euro respaldada 1:1 por euros en bancos europeos"
+		},
+		"eurc_circle": {
+			"description": "Stablecoin euro de Circle con los mismos estándares de cumplimiento que USDC"
+		},
+		"eurt_tether": {
+			"description": "Stablecoin de Tether vinculada al euro para mercados europeos"
+		},
+		"xsgd_straitsx": {
+			"description": "Stablecoin de dólar singapurense regulada por MAS para mercados asiáticos"
+		},
+		"lusd_liquity": {
+			"description": "Stablecoin descentralizada respaldada por ETH con contratos inteligentes inmutables y sin gobernanza"
+		},
+		"susd_synthetix": {
+			"description": "Stablecoin USD sintética respaldada por stakers SNX en protocolo Synthetix"
+		},
+		"rai_reflexer": {
+			"description": "Activo estable no vinculado con precio objetivo flotante, respaldado por ETH y gobernanza minimizada"
+		},
+		"mim_abracadabra": {
+			"description": "Stablecoin acuñada usando tokens que generan intereses como colateral"
+		},
+		"crvusd_curve": {
+			"description": "Stablecoin de Curve usando LLAMMA para liquidaciones suaves y mayor eficiencia de capital"
+		},
+		"gho_aave": {
+			"description": "Stablecoin sobre-colateralizada de Aave acuñada contra activos depositados"
+		},
+		"defillama_stablecoins": {
+			"description": "Análisis integral de stablecoins rastreando cap de mercado, desviación de peg y distribución por cadena"
+		},
+		"coingecko_stablecoins": {
+			"description": "Rankings de stablecoins, datos de mercado y monitoreo de peg en CoinGecko"
+		},
 		"fdusd": {
-			"description": "Stablecoin First Digital USD regulada en Hong Kong"
+			"description": "Stablecoin USD emitida en Hong Kong ampliamente usada en exchange Binance"
+		},
+		"usual_usd0": {
+			"description": "Stablecoin respaldada por RWA ganando rendimiento de bonos del Tesoro de EE.UU."
+		},
+		"mountain_usdm": {
+			"description": "Stablecoin con rendimiento respaldada por bonos del Tesoro de EE.UU. con rebase diario"
+		},
+		"ageur_angle": {
+			"description": "Stablecoin euro descentralizada de Angle Protocol con múltiples mecanismos de acuñación"
+		},
+		"mkusd_prisma": {
+			"description": "Stablecoin respaldada por tokens de staking líquido en Prisma Finance"
+		},
+		"ultra_usd": {
+			"description": "Stablecoin USD de grado institucional con características de cumplimiento mejoradas"
+		},
+		"dola_inverse": {
+			"description": "Stablecoin del protocolo de préstamos de Inverse Finance con mecanismo Fed"
+		},
+		"hai_reflexer": {
+			"description": "Stablecoin nativa de Optimism inspirada en RAI con precio objetivo flotante"
+		},
+		"usdk_okx": {
+			"description": "Stablecoin USD emitida por OKX respaldada por reservas y auditada regularmente"
+		},
+		"zusd_zeta": {
+			"description": "Stablecoin omnichain nativa de ZetaChain para transferencias cross-chain"
+		},
+		"bob_stablecoin": {
+			"description": "Stablecoin multi-colateral optimista diseñada para uso cross-chain"
+		},
+		"usdx_kava": {
+			"description": "Stablecoin colateralizada nativa de Cosmos en blockchain Kava"
+		},
+		"isc_interest": {
+			"description": "Stablecoin sobre-colateralizada nativa de Sui de Interest Protocol"
+		},
+		"cusd_celo": {
+			"description": "Stablecoin USD de Celo diseñada para mercados emergentes mobile-first"
+		},
+		"ceur_celo": {
+			"description": "Stablecoin euro de Celo para pagos europeos en móvil"
 		},
 		"flexusd": {
-			"description": "Stablecoin descentralizada sobre-colateralizada"
+			"description": "Stablecoin con intereses que gana rendimiento automáticamente"
 		},
-		"usdt-tether": {
-			"description": "Tether (USDT) - Tool"
+		"alusd_alchemix": {
+			"description": "Stablecoin auto-repagable donde la deuda se paga con rendimiento del colateral depositado"
 		},
-		"usdc-circle": {
-			"description": "USD Coin (USDC) - Tool"
+		"usd_plus": {
+			"description": "Stablecoin con rendimiento delta-neutral de Overnight Finance"
 		},
-		"dai-makerdao": {
-			"description": "DAI (MakerDAO) - Tool"
-		},
-		"usde-ethena": {
-			"description": "USDe (Ethena) - Tool"
-		},
-		"usdd-tron": {
-			"description": "USDD (Tron) - Tool"
-		},
-		"busd-paxos": {
-			"description": "Binance USD (BUSD) - Tool"
-		},
-		"pyusd-paypal": {
-			"description": "PayPal USD (PYUSD) - Tool"
-		},
-		"gusd-gemini": {
-			"description": "Gemini Dollar (GUSD) - Tool"
-		},
-		"usdp-paxos": {
-			"description": "Pax Dollar (USDP) - Tool"
-		},
-		"sdai-spark": {
-			"description": "sDAI (Spark) - Tool"
-		},
-		"susde-ethena": {
-			"description": "sUSDe (Ethena) - Tool"
-		},
-		"eurs-stasis": {
-			"description": "STASIS EURO (EURS) - Tool"
-		},
-		"eurc-circle": {
-			"description": "Euro Coin (EURC) - Tool"
-		},
-		"eurt-tether": {
-			"description": "Tether EURt - Tool"
-		},
-		"xsgd-straitsx": {
-			"description": "XSGD (StraitsX) - Tool"
-		},
-		"lusd-liquity": {
-			"description": "LUSD (Liquity) - Tool"
-		},
-		"susd-synthetix": {
-			"description": "sUSD (Synthetix) - Tool"
-		},
-		"rai-reflexer": {
-			"description": "RAI (Reflexer) - Tool"
-		},
-		"mim-abracadabra": {
-			"description": "MIM (Abracadabra) - Tool"
-		},
-		"crvusd-curve": {
-			"description": "crvUSD (Curve) - Tool"
-		},
-		"gho-aave": {
-			"description": "GHO (Aave) - Tool"
-		},
-		"defillama-stablecoins": {
-			"description": "DeFiLlama Stablecoins - Tool"
-		},
-		"coingecko-stablecoins": {
-			"description": "CoinGecko Stablecoins - Tool"
-		},
-		"usual-usd0": {
-			"description": "USD0 (Usual) - Tool"
-		},
-		"mountain-usdm": {
-			"description": "USDM (Mountain) - Tool"
-		},
-		"ageur-angle": {
-			"description": "EURA (Angle) - Tool"
-		},
-		"mkusd-prisma": {
-			"description": "mkUSD (Prisma) - Tool"
-		},
-		"ultra-usd": {
-			"description": "Ultra USDu - Tool"
-		},
-		"dola-inverse": {
-			"description": "DOLA (Inverse) - Tool"
-		},
-		"hai-reflexer": {
-			"description": "HAI (Let - Tool"
-		},
-		"usdk-okx": {
-			"description": "USDK (OKX) - Tool"
-		},
-		"zusd-zeta": {
-			"description": "ZUSD (Zeta) - Tool"
-		},
-		"bob-stablecoin": {
-			"description": "BOB - Tool"
-		},
-		"usdx-kava": {
-			"description": "USDX (Kava) - Tool"
-		},
-		"isc-interest": {
-			"description": "ISC (Interest) - Tool"
-		},
-		"cusd-celo": {
-			"description": "cUSD (Celo) - Tool"
-		},
-		"ceur-celo": {
-			"description": "cEUR (Celo) - Tool"
-		},
-		"alusd-alchemix": {
-			"description": "alUSD (Alchemix) - Tool"
-		},
-		"usd-plus": {
-			"description": "USD+ (Overnight) - Tool"
-		},
-		"ust-wormhole": {
-			"description": "UST (Wormhole) - Tool"
+		"ust_wormhole": {
+			"description": "Tokens UST envueltos puenteados vía Wormhole (histórico - colapso de Terra)"
 		}
 	}
 }

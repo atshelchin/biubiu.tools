@@ -24,139 +24,139 @@
 	},
 	"tools": {
 		"frax": {
-			"description": "Fractional-algorithmic stablecoin avec partial collateralization"
+			"description": "Stablecoin fractionnaire-algorithmique avec collatéralisation partielle et mécanisme de peg dynamique"
 		},
 		"tusd": {
-			"description": "Regulated et audited USD-backed stablecoin"
+			"description": "Stablecoin réglementé et audité adossé à l'USD avec attestations de réserves en temps réel"
 		},
 		"sfrax": {
-			"description": "Staked FRAX earning rendement de Frax protocole"
+			"description": "FRAX staké générant des rendements des opérations du protocole Frax"
 		},
 		"fdusd": {
-			"description": "First Digital USD (FDUSD) - Stablecoin"
+			"description": "Stablecoin USD de First Digital avec support multi-chaîne et conformité réglementaire"
 		},
 		"flexusd": {
-			"description": "flexUSD - Stablecoin"
+			"description": "Stablecoin générateur d'intérêts sur Bitcoin Cash et autres blockchains"
 		},
-		"usdt-tether": {
-			"description": "Tether (USDT) - Tool"
+		"usdt_tether": {
+			"description": "Plus grand stablecoin par capitalisation, adossé à l'USD avec large support multi-chaîne"
 		},
-		"usdc-circle": {
-			"description": "USD Coin (USDC) - Tool"
+		"usdc_circle": {
+			"description": "Stablecoin dollar US réglementé de Circle avec soutien complet des réserves et transparence"
 		},
-		"dai-makerdao": {
-			"description": "DAI (MakerDAO) - Tool"
+		"dai_makerdao": {
+			"description": "Stablecoin décentralisé collatéralisé par crypto gouverné par MakerDAO"
 		},
-		"usde-ethena": {
-			"description": "USDe (Ethena) - Tool"
+		"usde_ethena": {
+			"description": "Dollar synthétique d'Ethena utilisant une couverture delta-neutre pour la stabilité du peg"
 		},
-		"usdd-tron": {
-			"description": "USDD (Tron) - Tool"
+		"usdd_tron": {
+			"description": "Stablecoin décentralisé surcollatéralisé sur la blockchain Tron"
 		},
-		"busd-paxos": {
-			"description": "Binance USD (BUSD) - Tool"
+		"busd_paxos": {
+			"description": "Stablecoin réglementé approuvé par NYDFS émis par Paxos (en cours de retrait)"
 		},
-		"pyusd-paypal": {
-			"description": "PayPal USD (PYUSD) - Tool"
+		"pyusd_paypal": {
+			"description": "Stablecoin de PayPal pour les paiements et transferts sur les plateformes supportées"
 		},
-		"gusd-gemini": {
-			"description": "Gemini Dollar (GUSD) - Tool"
+		"gusd_gemini": {
+			"description": "Stablecoin réglementé de Gemini avec attestations mensuelles et approbation NYDFS"
 		},
-		"usdp-paxos": {
-			"description": "Pax Dollar (USDP) - Tool"
+		"usdp_paxos": {
+			"description": "Pax Dollar réglementé avec soutien complet des réserves et supervision réglementaire"
 		},
-		"sdai-spark": {
-			"description": "sDAI (Spark) - Tool"
+		"sdai_spark": {
+			"description": "DAI staké gagnant automatiquement le taux d'épargne DAI"
 		},
-		"susde-ethena": {
-			"description": "sUSDe (Ethena) - Tool"
+		"susde_ethena": {
+			"description": "USDe staké générant des rendements des opérations du protocole Ethena"
 		},
-		"eurs-stasis": {
-			"description": "STASIS EURO (EURS) - Tool"
+		"eurs_stasis": {
+			"description": "Stablecoin arrimé à l'Euro de STASIS avec réserves vérifiées en Europe"
 		},
-		"eurc-circle": {
-			"description": "Euro Coin (EURC) - Tool"
+		"eurc_circle": {
+			"description": "Stablecoin Euro réglementé de Circle avec soutien complet des réserves"
 		},
-		"eurt-tether": {
-			"description": "Tether EURt - Tool"
+		"eurt_tether": {
+			"description": "Stablecoin arrimé à l'Euro de Tether pour les marchés et trading européens"
 		},
-		"xsgd-straitsx": {
-			"description": "XSGD (StraitsX) - Tool"
+		"xsgd_straitsx": {
+			"description": "Stablecoin dollar singapourien avec licence MAS et attestations complètes"
 		},
-		"lusd-liquity": {
-			"description": "LUSD (Liquity) - Tool"
+		"lusd_liquity": {
+			"description": "Stablecoin décentralisé garanti uniquement par ETH avec gouvernance minimale"
 		},
-		"susd-synthetix": {
-			"description": "sUSD (Synthetix) - Tool"
+		"susd_synthetix": {
+			"description": "Stablecoin synthétique de l'écosystème Synthetix pour le trading de dérivés"
 		},
-		"rai-reflexer": {
-			"description": "RAI (Reflexer) - Tool"
+		"rai_reflexer": {
+			"description": "Stablecoin non arrimé avec taux de change flottant pour une vraie décentralisation"
 		},
-		"mim-abracadabra": {
-			"description": "MIM (Abracadabra) - Tool"
+		"mim_abracadabra": {
+			"description": "Magic Internet Money minté contre des actifs générateurs de rendement en collatéral"
 		},
-		"crvusd-curve": {
-			"description": "crvUSD (Curve) - Tool"
+		"crvusd_curve": {
+			"description": "Stablecoin natif de Curve Finance avec algorithme LLAMMA pour liquidation douce"
 		},
-		"gho-aave": {
-			"description": "GHO (Aave) - Tool"
+		"gho_aave": {
+			"description": "Stablecoin natif décentralisé surcollatéralisé du protocole Aave"
 		},
-		"defillama-stablecoins": {
-			"description": "DeFiLlama Stablecoins - Tool"
+		"defillama_stablecoins": {
+			"description": "Tableau de bord stablecoins suivant capitalisation, dominance et métriques de peg"
 		},
-		"coingecko-stablecoins": {
-			"description": "CoinGecko Stablecoins - Tool"
+		"coingecko_stablecoins": {
+			"description": "Classement stablecoins par capitalisation avec volume et données de trading"
 		},
-		"usual-usd0": {
-			"description": "USD0 (Usual) - Tool"
+		"usual_usd0": {
+			"description": "Stablecoin générateur de rendement adossé aux RWA avec soutien du trésor"
 		},
-		"mountain-usdm": {
-			"description": "USDM (Mountain) - Tool"
+		"mountain_usdm": {
+			"description": "Stablecoin générateur de rendement adossé aux bons du Trésor US à court terme"
 		},
-		"ageur-angle": {
-			"description": "EURA (Angle) - Tool"
+		"ageur_angle": {
+			"description": "Stablecoin Euro décentralisé du protocole Angle avec conception surcollatéralisée"
 		},
-		"mkusd-prisma": {
-			"description": "mkUSD (Prisma) - Tool"
+		"mkusd_prisma": {
+			"description": "Stablecoin minté contre des dérivés de staking liquide sur Prisma Finance"
 		},
-		"ultra-usd": {
-			"description": "Ultra USDu - Tool"
+		"ultra_usd": {
+			"description": "Stablecoin USD natif sur la plateforme de jeux et divertissement Ultra"
 		},
-		"dola-inverse": {
-			"description": "DOLA (Inverse) - Tool"
+		"dola_inverse": {
+			"description": "Stablecoin décentralisé d'Inverse Finance pour l'écosystème de produits de rendement"
 		},
-		"hai-reflexer": {
-			"description": "HAI (Let - Tool"
+		"hai_reflexer": {
+			"description": "Stablecoin multi-collatéral exploitant le système RAI de Reflexer sur OP Mainnet"
 		},
-		"usdk-okx": {
-			"description": "USDK (OKX) - Tool"
+		"usdk_okx": {
+			"description": "Stablecoin adossé à l'USD d'OKX avec conformité réglementaire"
 		},
-		"zusd-zeta": {
-			"description": "ZUSD (Zeta) - Tool"
+		"zusd_zeta": {
+			"description": "Stablecoin natif de l'écosystème Zeta Markets et protocole DeFi"
 		},
-		"bob-stablecoin": {
-			"description": "BOB - Tool"
+		"bob_stablecoin": {
+			"description": "Stablecoin multi-collatéral optimisé pour la stabilité avec actifs de soutien diversifiés"
 		},
-		"usdx-kava": {
-			"description": "USDX (Kava) - Tool"
+		"usdx_kava": {
+			"description": "Stablecoin décentralisé minté contre des cryptos sur la plateforme DeFi Kava"
 		},
-		"isc-interest": {
-			"description": "ISC (Interest) - Tool"
+		"isc_interest": {
+			"description": "Stablecoin du protocole Interest avec conception surcollatéralisée"
 		},
-		"cusd-celo": {
-			"description": "cUSD (Celo) - Tool"
+		"cusd_celo": {
+			"description": "Stablecoin dollar natif sur la blockchain Celo orientée mobile"
 		},
-		"ceur-celo": {
-			"description": "cEUR (Celo) - Tool"
+		"ceur_celo": {
+			"description": "Stablecoin Euro natif dans l'écosystème blockchain Celo"
 		},
-		"alusd-alchemix": {
-			"description": "alUSD (Alchemix) - Tool"
+		"alusd_alchemix": {
+			"description": "Stablecoin auto-remboursable soutenu par les rendements des dépôts utilisateurs"
 		},
-		"usd-plus": {
-			"description": "USD+ (Overnight) - Tool"
+		"usd_plus": {
+			"description": "Stablecoin générateur de rendement avec rebase quotidien des stratégies DeFi"
 		},
-		"ust-wormhole": {
-			"description": "UST (Wormhole) - Tool"
+		"ust_wormhole": {
+			"description": "UST legacy ponté via Wormhole (token historique, plus arrimé)"
 		}
 	}
 }

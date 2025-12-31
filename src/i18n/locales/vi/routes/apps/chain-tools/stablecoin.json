@@ -1,157 +1,162 @@
 {
 	"category_seo": {
-		"title": "Stablecoin - USDC, USDT, DAI & Hơn Thế | BiuBiu Tools",
-		"description": "Tìm hiểu về stablecoin và các trường hợp sử dụng của chúng. Stablecoin được hỗ trợ bởi fiat, thuật toán và phi tập trung cho DeFi và thanh toán.",
+		"title": "Stablecoin - Tiền Điện Tử Neo Giá USD và EUR | BiuBiu Tools",
+		"description": "Khám phá stablecoin và các trường hợp sử dụng. So sánh USDT, USDC, DAI và các loại tiền điện tử giá ổn định khác.",
+		"keywords": "stablecoin, usdt, usdc, dai, tiền điện tử giá ổn định",
 		"faqs": [
 			{
 				"question": "Stablecoin là gì?",
-				"answer": "Stablecoin là tiền mã hóa được neo giữ với các tài sản ổn định như USD. Các loại bao gồm được hỗ trợ bởi fiat (USDC, USDT), được hỗ trợ bởi crypto (DAI) và stablecoin thuật toán."
+				"answer": "Stablecoin là tiền điện tử được thiết kế để duy trì giá trị ổn định, thường neo 1:1 với tiền pháp định như đô la Mỹ. Stablecoin mang lại lợi ích của crypto mà không có biến động giá."
 			},
 			{
-				"question": "Stablecoin nào an toàn nhất?",
-				"answer": "USDC được quản lý chặt chẽ và minh bạch. USDT có thanh khoản cao nhất nhưng ít minh bạch hơn. DAI là phi tập trung nhưng có rủi ro hợp đồng thông minh. Đa dạng hóa là khôn ngoan."
+				"question": "Có những loại stablecoin nào?",
+				"answer": "Các loại chính bao gồm: được bảo đảm bằng fiat (USDT, USDC), được bảo đảm bằng crypto (DAI), thuật toán và được bảo đảm bằng hàng hóa. Mỗi loại có cơ chế và hồ sơ rủi ro khác nhau."
 			},
 			{
-				"question": "Chuyện gì đã xảy ra với UST?",
-				"answer": "UST là một stablecoin thuật toán đã sụp đổ vào tháng 5 năm 2022, mất peg và gây ra hơn 40 tỷ USD thiệt hại. Nó làm nổi bật rủi ro của thiết kế thuật toán không có tài sản thế chấp thích hợp."
+				"question": "Stablecoin có an toàn không?",
+				"answer": "Độ an toàn của stablecoin khác nhau. Stablecoin được bảo đảm bằng fiat phụ thuộc vào tổ chức phát hành duy trì dự trữ. Crypto stablecoin phụ thuộc vào thế chấp quá mức. Luôn nghiên cứu cơ chế bảo đảm và kiểm toán."
+			},
+			{
+				"question": "Tại sao nên sử dụng stablecoin?",
+				"answer": "Stablecoin hữu ích để: giao dịch mà không rời khỏi crypto, gửi thanh toán xuyên biên giới, tạo lợi suất qua DeFi, bảo vệ khỏi biến động và truy cập dịch vụ tài chính mà không cần tài khoản ngân hàng truyền thống."
 			}
 		]
 	},
 	"tools": {
 		"frax": {
-			"description": "Stablecoin thuật toán phân số với thế chấp một phần"
+			"description": "Stablecoin thuật toán phân đoạn với thế chấp một phần và cơ chế neo động"
 		},
 		"tusd": {
-			"description": "Stablecoin được hỗ trợ USD được quản lý và kiểm toán"
+			"description": "Stablecoin được quản lý và kiểm toán, bảo đảm bằng USD với chứng nhận dự trữ thời gian thực"
 		},
 		"sfrax": {
-			"description": "FRAX được stake kiếm lợi suất từ giao thức Frax"
+			"description": "FRAX được stake kiếm lợi suất từ hoạt động giao thức Frax"
 		},
 		"fdusd": {
-			"description": "Stablecoin USD được quản lý"
+			"description": "Stablecoin USD của First Digital với hỗ trợ đa chuỗi và tuân thủ quy định"
 		},
 		"flexusd": {
-			"description": "Stablecoin linh hoạt"
+			"description": "Stablecoin sinh lãi trên Bitcoin Cash và các blockchain khác"
 		},
-		"usdt-tether": {
-			"description": "Tether (USDT) - Tool"
+		"usdt_tether": {
+			"description": "Stablecoin lớn nhất theo vốn hóa, bảo đảm bằng USD với hỗ trợ đa chuỗi rộng rãi"
 		},
-		"usdc-circle": {
-			"description": "USD Coin (USDC) - Tool"
+		"usdc_circle": {
+			"description": "Stablecoin đô la Mỹ được quản lý của Circle với bảo đảm dự trữ đầy đủ và minh bạch"
 		},
-		"dai-makerdao": {
-			"description": "DAI (MakerDAO) - Tool"
+		"dai_makerdao": {
+			"description": "Stablecoin phi tập trung được thế chấp bằng crypto, quản trị bởi MakerDAO"
 		},
-		"usde-ethena": {
-			"description": "USDe (Ethena) - Tool"
+		"usde_ethena": {
+			"description": "Đô la tổng hợp của Ethena sử dụng phòng hộ delta-neutral để ổn định neo giá"
 		},
-		"usdd-tron": {
-			"description": "USDD (Tron) - Tool"
+		"usdd_tron": {
+			"description": "Stablecoin phi tập trung thế chấp quá mức trên blockchain Tron"
 		},
-		"busd-paxos": {
-			"description": "Binance USD (BUSD) - Tool"
+		"busd_paxos": {
+			"description": "Stablecoin được quản lý, phê duyệt bởi NYDFS, phát hành bởi Paxos (đang ngừng)"
 		},
-		"pyusd-paypal": {
-			"description": "PayPal USD (PYUSD) - Tool"
+		"pyusd_paypal": {
+			"description": "Stablecoin của PayPal cho thanh toán và chuyển khoản trên các nền tảng được hỗ trợ"
 		},
-		"gusd-gemini": {
-			"description": "Gemini Dollar (GUSD) - Tool"
+		"gusd_gemini": {
+			"description": "Stablecoin được quản lý của Gemini với chứng nhận hàng tháng và phê duyệt NYDFS"
 		},
-		"usdp-paxos": {
-			"description": "Pax Dollar (USDP) - Tool"
+		"usdp_paxos": {
+			"description": "Pax Dollar được quản lý với bảo đảm dự trữ đầy đủ và giám sát quy định"
 		},
-		"sdai-spark": {
-			"description": "sDAI (Spark) - Tool"
+		"sdai_spark": {
+			"description": "DAI được stake tự động kiếm lãi suất tiết kiệm DAI"
 		},
-		"susde-ethena": {
-			"description": "sUSDe (Ethena) - Tool"
+		"susde_ethena": {
+			"description": "USDe được stake kiếm lợi suất từ hoạt động giao thức Ethena"
 		},
-		"eurs-stasis": {
-			"description": "STASIS EURO (EURS) - Tool"
+		"eurs_stasis": {
+			"description": "Stablecoin neo Euro của STASIS với dự trữ được xác minh tại châu Âu"
 		},
-		"eurc-circle": {
-			"description": "Euro Coin (EURC) - Tool"
+		"eurc_circle": {
+			"description": "Stablecoin Euro được quản lý của Circle với bảo đảm dự trữ đầy đủ"
 		},
-		"eurt-tether": {
-			"description": "Tether EURt - Tool"
+		"eurt_tether": {
+			"description": "Stablecoin neo Euro của Tether cho thị trường và giao dịch châu Âu"
 		},
-		"xsgd-straitsx": {
-			"description": "XSGD (StraitsX) - Tool"
+		"xsgd_straitsx": {
+			"description": "Stablecoin đô la Singapore với giấy phép MAS và chứng nhận đầy đủ"
 		},
-		"lusd-liquity": {
-			"description": "LUSD (Liquity) - Tool"
+		"lusd_liquity": {
+			"description": "Stablecoin phi tập trung chỉ bảo đảm bằng ETH với quản trị tối thiểu"
 		},
-		"susd-synthetix": {
-			"description": "sUSD (Synthetix) - Tool"
+		"susd_synthetix": {
+			"description": "Stablecoin tổng hợp của hệ sinh thái Synthetix cho giao dịch phái sinh"
 		},
-		"rai-reflexer": {
-			"description": "RAI (Reflexer) - Tool"
+		"rai_reflexer": {
+			"description": "Stablecoin không neo với tỷ giá thả nổi cho phi tập trung thực sự"
 		},
-		"mim-abracadabra": {
-			"description": "MIM (Abracadabra) - Tool"
+		"mim_abracadabra": {
+			"description": "Magic Internet Money được đúc từ tài sản sinh lãi làm thế chấp"
 		},
-		"crvusd-curve": {
-			"description": "crvUSD (Curve) - Tool"
+		"crvusd_curve": {
+			"description": "Stablecoin gốc của Curve Finance với thuật toán LLAMMA cho thanh lý mềm"
 		},
-		"gho-aave": {
-			"description": "GHO (Aave) - Tool"
+		"gho_aave": {
+			"description": "Stablecoin gốc phi tập trung thế chấp quá mức của giao thức Aave"
 		},
-		"defillama-stablecoins": {
-			"description": "DeFiLlama Stablecoins - Tool"
+		"defillama_stablecoins": {
+			"description": "Bảng điều khiển stablecoin theo dõi vốn hóa, thống trị và chỉ số neo giá"
 		},
-		"coingecko-stablecoins": {
-			"description": "CoinGecko Stablecoins - Tool"
+		"coingecko_stablecoins": {
+			"description": "Xếp hạng stablecoin theo vốn hóa với khối lượng và dữ liệu giao dịch"
 		},
-		"usual-usd0": {
-			"description": "USD0 (Usual) - Tool"
+		"usual_usd0": {
+			"description": "Stablecoin sinh lãi bảo đảm bằng RWA với hỗ trợ trái phiếu kho bạc"
 		},
-		"mountain-usdm": {
-			"description": "USDM (Mountain) - Tool"
+		"mountain_usdm": {
+			"description": "Stablecoin sinh lãi bảo đảm bằng trái phiếu kho bạc Mỹ ngắn hạn"
 		},
-		"ageur-angle": {
-			"description": "EURA (Angle) - Tool"
+		"ageur_angle": {
+			"description": "Stablecoin Euro phi tập trung của giao thức Angle với thiết kế thế chấp quá mức"
 		},
-		"mkusd-prisma": {
-			"description": "mkUSD (Prisma) - Tool"
+		"mkusd_prisma": {
+			"description": "Stablecoin đúc từ phái sinh liquid staking trên Prisma Finance"
 		},
-		"ultra-usd": {
-			"description": "Ultra USDu - Tool"
+		"ultra_usd": {
+			"description": "Stablecoin USD gốc trên nền tảng gaming và giải trí Ultra"
 		},
-		"dola-inverse": {
-			"description": "DOLA (Inverse) - Tool"
+		"dola_inverse": {
+			"description": "Stablecoin phi tập trung của Inverse Finance cho hệ sinh thái sản phẩm lợi suất"
 		},
-		"hai-reflexer": {
-			"description": "HAI (Let - Tool"
+		"hai_reflexer": {
+			"description": "Stablecoin đa thế chấp tận dụng hệ thống RAI của Reflexer trên OP Mainnet"
 		},
-		"usdk-okx": {
-			"description": "USDK (OKX) - Tool"
+		"usdk_okx": {
+			"description": "Stablecoin bảo đảm bằng USD của OKX với tuân thủ quy định"
 		},
-		"zusd-zeta": {
-			"description": "ZUSD (Zeta) - Tool"
+		"zusd_zeta": {
+			"description": "Stablecoin gốc của hệ sinh thái Zeta Markets và giao thức DeFi"
 		},
-		"bob-stablecoin": {
-			"description": "BOB - Tool"
+		"bob_stablecoin": {
+			"description": "Stablecoin đa thế chấp tối ưu hóa cho ổn định với các tài sản bảo đảm đa dạng"
 		},
-		"usdx-kava": {
-			"description": "USDX (Kava) - Tool"
+		"usdx_kava": {
+			"description": "Stablecoin phi tập trung đúc từ crypto trên nền tảng Kava DeFi"
 		},
-		"isc-interest": {
-			"description": "ISC (Interest) - Tool"
+		"isc_interest": {
+			"description": "Stablecoin từ giao thức Interest với thiết kế thế chấp quá mức"
 		},
-		"cusd-celo": {
-			"description": "cUSD (Celo) - Tool"
+		"cusd_celo": {
+			"description": "Stablecoin đô la gốc trên blockchain Celo ưu tiên di động"
 		},
-		"ceur-celo": {
-			"description": "cEUR (Celo) - Tool"
+		"ceur_celo": {
+			"description": "Stablecoin Euro gốc trong hệ sinh thái blockchain Celo"
 		},
-		"alusd-alchemix": {
-			"description": "alUSD (Alchemix) - Tool"
+		"alusd_alchemix": {
+			"description": "Stablecoin tự trả nợ bảo đảm bằng lợi suất từ tiền gửi người dùng"
 		},
-		"usd-plus": {
-			"description": "USD+ (Overnight) - Tool"
+		"usd_plus": {
+			"description": "Stablecoin sinh lãi với rebase hàng ngày từ chiến lược DeFi"
 		},
-		"ust-wormhole": {
-			"description": "UST (Wormhole) - Tool"
+		"ust_wormhole": {
+			"description": "UST cũ được bridge qua Wormhole (token lịch sử, không còn neo giá)"
 		}
 	}
 }

@@ -1,158 +1,162 @@
 {
 	"category_seo": {
-		"title": "Стейблкоины - USDC, USDT, DAI и другие | BiuBiu Tools",
-		"description": "Узнайте о стейблкоинах и их применении. Стейблкоины, обеспеченные фиатом, алгоритмические и децентрализованные стейблкоины для DeFi и платежей.",
-		"keywords": "стейблкоины, usdc, usdt, dai, обеспеченные фиатом криптовалюты",
+		"title": "Стейблкоины - Криптовалюты, Привязанные к Доллару и Евро | BiuBiu Tools",
+		"description": "Изучите стейблкоины и их применение. Сравните USDT, USDC, DAI и другие криптовалюты со стабильной ценой.",
+		"keywords": "стейблкоины, usdt, usdc, dai, криптовалюты со стабильной ценой",
 		"faqs": [
 			{
-				"question": "Что такое стейблкоины?",
-				"answer": "Стейблкоины — это криптовалюты, привязанные к стабильным активам, таким как USD. Типы включают обеспеченные фиатом (USDC, USDT), обеспеченные криптовалютой (DAI) и алгоритмические стейблкоины."
+				"question": "Что такое стейблкоин?",
+				"answer": "Стейблкоин — это криптовалюта, предназначенная для поддержания стабильной стоимости, обычно привязанная 1:1 к фиатным валютам, таким как доллар США. Стейблкоины предлагают преимущества криптовалют без ценовой волатильности."
 			},
 			{
-				"question": "Какой стейблкоин самый безопасный?",
-				"answer": "USDC высоко регулируется и прозрачен. USDT имеет наибольшую ликвидность, но меньшую прозрачность. DAI децентрализован, но имеет риск смарт-контрактов. Диверсификация разумна."
+				"question": "Какие типы стейблкоинов существуют?",
+				"answer": "Основные типы включают: обеспеченные фиатом (USDT, USDC), обеспеченные криптовалютой (DAI), алгоритмические и обеспеченные товарами. Каждый тип имеет разные механизмы и профили риска."
 			},
 			{
-				"question": "Что случилось с UST?",
-				"answer": "UST был алгоритмическим стейблкоином, который рухнул в мае 2022 года, потеряв привязку и вызвав потери более $40 млрд. Это подчеркнуло риски алгоритмических дизайнов без надлежащего обеспечения."
+				"question": "Безопасны ли стейблкоины?",
+				"answer": "Безопасность стейблкоинов различается. Обеспеченные фиатом стейблкоины зависят от поддержания резервов эмитентом. Крипто-стейблкоины зависят от избыточного обеспечения. Всегда исследуйте механизмы обеспечения и аудиты."
+			},
+			{
+				"question": "Зачем использовать стейблкоины?",
+				"answer": "Стейблкоины полезны для: торговли без выхода из криптовалют, отправки трансграничных платежей, получения доходности через DeFi, защиты от волатильности и доступа к финансовым услугам без традиционных банковских счетов."
 			}
 		]
 	},
 	"tools": {
 		"frax": {
-			"description": "Дробно-алгоритмический стейблкоин с частичным обеспечением"
-		},
-		"fdusd": {
-			"description": "Стейблкоин First Digital USD, обеспеченный фиатом"
-		},
-		"flexusd": {
-			"description": "Гибкий децентрализованный стейблкоин"
-		},
-		"sfrax": {
-			"description": "Застейканный FRAX, приносящий доходность из протокола Frax"
+			"description": "Дробно-алгоритмический стейблкоин с частичным обеспечением и динамическим механизмом привязки"
 		},
 		"tusd": {
-			"description": "Регулируемый и аудированный стейблкоин, обеспеченный USD"
+			"description": "Регулируемый и аудированный стейблкоин, обеспеченный USD, с аттестациями резервов в реальном времени"
 		},
-		"usdt-tether": {
-			"description": "Tether (USDT) - Tool"
+		"sfrax": {
+			"description": "Стейкнутый FRAX, приносящий доход от операций протокола Frax"
 		},
-		"usdc-circle": {
-			"description": "USD Coin (USDC) - Tool"
+		"fdusd": {
+			"description": "USD стейблкоин First Digital с мультичейн поддержкой и соответствием нормативам"
 		},
-		"dai-makerdao": {
-			"description": "DAI (MakerDAO) - Tool"
+		"flexusd": {
+			"description": "Процентный стейблкоин на Bitcoin Cash и других блокчейнах"
 		},
-		"usde-ethena": {
-			"description": "USDe (Ethena) - Tool"
+		"usdt_tether": {
+			"description": "Крупнейший стейблкоин по капитализации, обеспеченный USD с широкой мультичейн поддержкой"
 		},
-		"usdd-tron": {
-			"description": "USDD (Tron) - Tool"
+		"usdc_circle": {
+			"description": "Регулируемый долларовый стейблкоин от Circle с полным резервным обеспечением и прозрачностью"
 		},
-		"busd-paxos": {
-			"description": "Binance USD (BUSD) - Tool"
+		"dai_makerdao": {
+			"description": "Децентрализованный крипто-обеспеченный стейблкоин под управлением MakerDAO"
 		},
-		"pyusd-paypal": {
-			"description": "PayPal USD (PYUSD) - Tool"
+		"usde_ethena": {
+			"description": "Синтетический доллар Ethena, использующий дельта-нейтральное хеджирование для стабильности привязки"
 		},
-		"gusd-gemini": {
-			"description": "Gemini Dollar (GUSD) - Tool"
+		"usdd_tron": {
+			"description": "Децентрализованный избыточно обеспеченный стейблкоин на блокчейне Tron"
 		},
-		"usdp-paxos": {
-			"description": "Pax Dollar (USDP) - Tool"
+		"busd_paxos": {
+			"description": "Регулируемый NYDFS-одобренный стейблкоин, выпущенный Paxos (прекращается)"
 		},
-		"sdai-spark": {
-			"description": "sDAI (Spark) - Tool"
+		"pyusd_paypal": {
+			"description": "Стейблкоин PayPal для платежей и переводов на поддерживаемых платформах"
 		},
-		"susde-ethena": {
-			"description": "sUSDe (Ethena) - Tool"
+		"gusd_gemini": {
+			"description": "Регулируемый стейблкоин Gemini с ежемесячными аттестациями и одобрением NYDFS"
 		},
-		"eurs-stasis": {
-			"description": "STASIS EURO (EURS) - Tool"
+		"usdp_paxos": {
+			"description": "Регулируемый Pax Dollar с полным резервным обеспечением и надзором регулятора"
 		},
-		"eurc-circle": {
-			"description": "Euro Coin (EURC) - Tool"
+		"sdai_spark": {
+			"description": "Стейкнутый DAI, автоматически зарабатывающий по ставке накопления DAI"
 		},
-		"eurt-tether": {
-			"description": "Tether EURt - Tool"
+		"susde_ethena": {
+			"description": "Стейкнутый USDe, приносящий доход от операций протокола Ethena"
 		},
-		"xsgd-straitsx": {
-			"description": "XSGD (StraitsX) - Tool"
+		"eurs_stasis": {
+			"description": "Евро-привязанный стейблкоин STASIS с верифицированными резервами в Европе"
 		},
-		"lusd-liquity": {
-			"description": "LUSD (Liquity) - Tool"
+		"eurc_circle": {
+			"description": "Регулируемый евро стейблкоин от Circle с полным резервным обеспечением"
 		},
-		"susd-synthetix": {
-			"description": "sUSD (Synthetix) - Tool"
+		"eurt_tether": {
+			"description": "Евро-привязанный стейблкоин Tether для европейских рынков и торговли"
 		},
-		"rai-reflexer": {
-			"description": "RAI (Reflexer) - Tool"
+		"xsgd_straitsx": {
+			"description": "Сингапурский долларовый стейблкоин с лицензией MAS и полными аттестациями"
 		},
-		"mim-abracadabra": {
-			"description": "MIM (Abracadabra) - Tool"
+		"lusd_liquity": {
+			"description": "Децентрализованный стейблкоин, обеспеченный только ETH, с минимальным управлением"
 		},
-		"crvusd-curve": {
-			"description": "crvUSD (Curve) - Tool"
+		"susd_synthetix": {
+			"description": "Синтетический стейблкоин экосистемы Synthetix для торговли деривативами"
 		},
-		"gho-aave": {
-			"description": "GHO (Aave) - Tool"
+		"rai_reflexer": {
+			"description": "Непривязанный стейблкоин с плавающим обменным курсом для истинной децентрализации"
 		},
-		"defillama-stablecoins": {
-			"description": "DeFiLlama Stablecoins - Tool"
+		"mim_abracadabra": {
+			"description": "Magic Internet Money, минтящийся против доходных активов в качестве обеспечения"
 		},
-		"coingecko-stablecoins": {
-			"description": "CoinGecko Stablecoins - Tool"
+		"crvusd_curve": {
+			"description": "Нативный стейблкоин Curve Finance с алгоритмом LLAMMA для мягкой ликвидации"
 		},
-		"usual-usd0": {
-			"description": "USD0 (Usual) - Tool"
+		"gho_aave": {
+			"description": "Децентрализованный избыточно обеспеченный нативный стейблкоин протокола Aave"
 		},
-		"mountain-usdm": {
-			"description": "USDM (Mountain) - Tool"
+		"defillama_stablecoins": {
+			"description": "Панель стейблкоинов, отслеживающая капитализацию, доминирование и метрики привязки"
 		},
-		"ageur-angle": {
-			"description": "EURA (Angle) - Tool"
+		"coingecko_stablecoins": {
+			"description": "Рейтинг стейблкоинов по капитализации с объемом и торговыми данными"
 		},
-		"mkusd-prisma": {
-			"description": "mkUSD (Prisma) - Tool"
+		"usual_usd0": {
+			"description": "RWA-обеспеченный доходный стейблкоин с поддержкой казначейскими облигациями"
 		},
-		"ultra-usd": {
-			"description": "Ultra USDu - Tool"
+		"mountain_usdm": {
+			"description": "Доходный стейблкоин, обеспеченный краткосрочными казначейскими векселями США"
 		},
-		"dola-inverse": {
-			"description": "DOLA (Inverse) - Tool"
+		"ageur_angle": {
+			"description": "Децентрализованный евро стейблкоин протокола Angle с избыточным обеспечением"
 		},
-		"hai-reflexer": {
-			"description": "HAI (Let - Tool"
+		"mkusd_prisma": {
+			"description": "Стейблкоин, минтящийся против деривативов ликвидного стейкинга на Prisma Finance"
 		},
-		"usdk-okx": {
-			"description": "USDK (OKX) - Tool"
+		"ultra_usd": {
+			"description": "Нативный USD стейблкоин на игровой и развлекательной платформе Ultra"
 		},
-		"zusd-zeta": {
-			"description": "ZUSD (Zeta) - Tool"
+		"dola_inverse": {
+			"description": "Децентрализованный стейблкоин Inverse Finance для экосистемы доходных продуктов"
 		},
-		"bob-stablecoin": {
-			"description": "BOB - Tool"
+		"hai_reflexer": {
+			"description": "Мультиобеспечительный стейблкоин на основе системы RAI от Reflexer на OP Mainnet"
 		},
-		"usdx-kava": {
-			"description": "USDX (Kava) - Tool"
+		"usdk_okx": {
+			"description": "USD-обеспеченный стейблкоин OKX с соответствием нормативным требованиям"
 		},
-		"isc-interest": {
-			"description": "ISC (Interest) - Tool"
+		"zusd_zeta": {
+			"description": "Нативный стейблкоин экосистемы Zeta Markets и DeFi протокола"
 		},
-		"cusd-celo": {
-			"description": "cUSD (Celo) - Tool"
+		"bob_stablecoin": {
+			"description": "Мультиобеспечительный стейблкоин, оптимизированный для стабильности с разнообразными активами поддержки"
 		},
-		"ceur-celo": {
-			"description": "cEUR (Celo) - Tool"
+		"usdx_kava": {
+			"description": "Децентрализованный стейблкоин, минтящийся против криптовалют на платформе Kava DeFi"
 		},
-		"alusd-alchemix": {
-			"description": "alUSD (Alchemix) - Tool"
+		"isc_interest": {
+			"description": "Стейблкоин протокола Interest с избыточно обеспеченным дизайном"
 		},
-		"usd-plus": {
-			"description": "USD+ (Overnight) - Tool"
+		"cusd_celo": {
+			"description": "Нативный долларовый стейблкоин на мобильно-ориентированном блокчейне Celo"
 		},
-		"ust-wormhole": {
-			"description": "UST (Wormhole) - Tool"
+		"ceur_celo": {
+			"description": "Нативный евро стейблкоин в экосистеме блокчейна Celo"
+		},
+		"alusd_alchemix": {
+			"description": "Самопогашающийся стейблкоин, обеспеченный доходностью депозитов пользователей"
+		},
+		"usd_plus": {
+			"description": "Доходный стейблкоин с ежедневным ребейзом от DeFi стратегий"
+		},
+		"ust_wormhole": {
+			"description": "Устаревший UST, переведенный через Wormhole (исторический токен, больше не привязан)"
 		}
 	}
 }

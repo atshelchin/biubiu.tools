@@ -2,7 +2,7 @@
 	"category_seo": {
 		"title": "Stablecoin'ler - USDC, USDT, DAI ve Daha Fazlası | BiuBiu Tools",
 		"description": "Stablecoin'ler ve kullanım durumları hakkında bilgi edinin. DeFi ve ödemeler için fiat destekli, algoritmik ve merkezi olmayan stablecoin'ler.",
-		"keywords": "stablecoin'ler, usdc, usdt, dai, fiat destekli kripto",
+		"keywords": "stablecoin'ler, usdc, usdt, dai, frax, kripto stablecoin'ler, defi",
 		"faqs": [
 			{
 				"question": "Stablecoin'ler nelerdir?",
@@ -19,140 +19,140 @@
 		]
 	},
 	"tools": {
+		"usdt_tether": {
+			"description": "Piyasa değerine göre en büyük stablecoin, USD destekli ve kapsamlı çoklu zincir desteği"
+		},
+		"usdc_circle": {
+			"description": "Circle'ın düzenlenmiş ABD doları stablecoin'i, tam rezerv desteği ve şeffaflık"
+		},
+		"dai_makerdao": {
+			"description": "MakerDAO tarafından yönetilen merkezi olmayan kripto teminatlı stablecoin"
+		},
 		"frax": {
 			"description": "Kısmi teminatlandırma ile kesirli-algoritmik stablecoin"
 		},
-		"fdusd": {
-			"description": "First Digital USD (FDUSD) - Stablecoin"
+		"usde_ethena": {
+			"description": "Stake edilmiş ETH teminatı ile delta-nötr stratejiler kullanan sentetik dolar"
 		},
-		"flexusd": {
-			"description": "flexUSD - Stablecoin"
-		},
-		"sfrax": {
-			"description": "Staked FRAX earning yield from Frax protokol"
+		"usdd_tron": {
+			"description": "TRX ve BTC ile desteklenen Tron ağında aşırı teminatlı stablecoin"
 		},
 		"tusd": {
-			"description": "Regulated ve audited USD-backed stablecoin"
+			"description": "Gerçek zamanlı kanıtlarla düzenlenmiş ve denetlenmiş USD destekli stablecoin"
 		},
-		"usdt-tether": {
-			"description": "Tether (USDT) - Tool"
+		"busd_paxos": {
+			"description": "Paxos tarafından çıkarılan USD stablecoin, daha önce Binance ortağı"
 		},
-		"usdc-circle": {
-			"description": "USD Coin (USDC) - Tool"
+		"pyusd_paypal": {
+			"description": "PayPal ekosisteminde ödemeler ve transferler için PayPal'ın USD stablecoin'i"
 		},
-		"dai-makerdao": {
-			"description": "DAI (MakerDAO) - Tool"
+		"gusd_gemini": {
+			"description": "Gemini borsası tarafından çıkarılan New York düzenlemeli dolar stablecoin"
 		},
-		"usde-ethena": {
-			"description": "USDe (Ethena) - Tool"
+		"usdp_paxos": {
+			"description": "NYDFS tarafından düzenlenen Pax Dollar, aylık rezerv kanıtları"
 		},
-		"usdd-tron": {
-			"description": "USDD (Tron) - Tool"
+		"sdai_spark": {
+			"description": "DSR'yi (DAI Tasarruf Oranı) otomatik olarak kazanan getirili DAI"
 		},
-		"busd-paxos": {
-			"description": "Binance USD (BUSD) - Tool"
+		"susde_ethena": {
+			"description": "Ethena'nın delta-nötr stratejisinden getiri kazanan stake edilmiş USDe"
 		},
-		"pyusd-paypal": {
-			"description": "PayPal USD (PYUSD) - Tool"
+		"sfrax": {
+			"description": "Frax protokolünden getiri kazanan stake edilmiş FRAX"
 		},
-		"gusd-gemini": {
-			"description": "Gemini Dollar (GUSD) - Tool"
+		"eurs_stasis": {
+			"description": "Avrupa bankalarındaki euro ile 1:1 desteklenen euro sabitli stablecoin"
 		},
-		"usdp-paxos": {
-			"description": "Pax Dollar (USDP) - Tool"
+		"eurc_circle": {
+			"description": "USDC ile aynı uyum standartlarına sahip Circle'ın euro stablecoin'i"
 		},
-		"sdai-spark": {
-			"description": "sDAI (Spark) - Tool"
+		"eurt_tether": {
+			"description": "Avrupa pazarları için Tether'in euro sabitli stablecoin'i"
 		},
-		"susde-ethena": {
-			"description": "sUSDe (Ethena) - Tool"
+		"xsgd_straitsx": {
+			"description": "Asya pazarları için MAS tarafından düzenlenen Singapur doları stablecoin"
 		},
-		"eurs-stasis": {
-			"description": "STASIS EURO (EURS) - Tool"
+		"lusd_liquity": {
+			"description": "Değiştirilemez akıllı sözleşmeler ve yönetişim olmadan merkezi olmayan ETH destekli stablecoin"
 		},
-		"eurc-circle": {
-			"description": "Euro Coin (EURC) - Tool"
+		"susd_synthetix": {
+			"description": "Synthetix protokolündeki SNX stake edenlerce desteklenen sentetik USD stablecoin"
 		},
-		"eurt-tether": {
-			"description": "Tether EURt - Tool"
+		"rai_reflexer": {
+			"description": "Değişken hedef fiyatlı, ETH destekli ve yönetişimi minimize edilmiş sabitleme dışı kararlı varlık"
 		},
-		"xsgd-straitsx": {
-			"description": "XSGD (StraitsX) - Tool"
+		"mim_abracadabra": {
+			"description": "Faiz getiren tokenları teminat olarak kullanarak basılan stablecoin"
 		},
-		"lusd-liquity": {
-			"description": "LUSD (Liquity) - Tool"
+		"crvusd_curve": {
+			"description": "Yumuşak tasfiyeler ve geliştirilmiş sermaye verimliliği için LLAMMA kullanan Curve'ün stablecoin'i"
 		},
-		"susd-synthetix": {
-			"description": "sUSD (Synthetix) - Tool"
+		"gho_aave": {
+			"description": "Yatırılan varlıklara karşı basılan Aave'nin aşırı teminatlı stablecoin'i"
 		},
-		"rai-reflexer": {
-			"description": "RAI (Reflexer) - Tool"
+		"defillama_stablecoins": {
+			"description": "Piyasa değeri, sabitleme sapması ve zincir dağılımını izleyen kapsamlı stablecoin analizi"
 		},
-		"mim-abracadabra": {
-			"description": "MIM (Abracadabra) - Tool"
+		"coingecko_stablecoins": {
+			"description": "CoinGecko'da stablecoin sıralamaları, piyasa verileri ve sabitleme izleme"
 		},
-		"crvusd-curve": {
-			"description": "crvUSD (Curve) - Tool"
+		"fdusd": {
+			"description": "Binance borsasında yaygın olarak kullanılan Hong Kong merkezli USD stablecoin"
 		},
-		"gho-aave": {
-			"description": "GHO (Aave) - Tool"
+		"usual_usd0": {
+			"description": "ABD Hazine bonolarından getiri kazanan RWA destekli stablecoin"
 		},
-		"defillama-stablecoins": {
-			"description": "DeFiLlama Stablecoins - Tool"
+		"mountain_usdm": {
+			"description": "ABD Hazineleriyle desteklenen günlük yeniden bazlandırmalı getirili stablecoin"
 		},
-		"coingecko-stablecoins": {
-			"description": "CoinGecko Stablecoins - Tool"
+		"ageur_angle": {
+			"description": "Birden fazla basım mekanizmasına sahip Angle Protocol'ün merkezi olmayan euro stablecoin'i"
 		},
-		"usual-usd0": {
-			"description": "USD0 (Usual) - Tool"
+		"mkusd_prisma": {
+			"description": "Prisma Finance'de likit stake tokenlarıyla desteklenen stablecoin"
 		},
-		"mountain-usdm": {
-			"description": "USDM (Mountain) - Tool"
+		"ultra_usd": {
+			"description": "Geliştirilmiş uyum özellikleriyle kurumsal düzeyde USD stablecoin"
 		},
-		"ageur-angle": {
-			"description": "EURA (Angle) - Tool"
+		"dola_inverse": {
+			"description": "Fed mekanizmasına sahip Inverse Finance borç verme protokolünün stablecoin'i"
 		},
-		"mkusd-prisma": {
-			"description": "mkUSD (Prisma) - Tool"
+		"hai_reflexer": {
+			"description": "Değişken hedef fiyatlı RAI'den ilham alan Optimism yerel stablecoin"
 		},
-		"ultra-usd": {
-			"description": "Ultra USDu - Tool"
+		"usdk_okx": {
+			"description": "Rezervlerle desteklenen ve düzenli olarak denetlenen OKX tarafından çıkarılan USD stablecoin"
 		},
-		"dola-inverse": {
-			"description": "DOLA (Inverse) - Tool"
+		"zusd_zeta": {
+			"description": "Zincirler arası transferler için ZetaChain'in yerel omnichain stablecoin'i"
 		},
-		"hai-reflexer": {
-			"description": "HAI (Let - Tool"
+		"bob_stablecoin": {
+			"description": "Zincirler arası kullanım için tasarlanmış iyimser çoklu teminatlı stablecoin"
 		},
-		"usdk-okx": {
-			"description": "USDK (OKX) - Tool"
+		"usdx_kava": {
+			"description": "Kava blok zincirinde Cosmos yerel teminatlı stablecoin"
 		},
-		"zusd-zeta": {
-			"description": "ZUSD (Zeta) - Tool"
+		"isc_interest": {
+			"description": "Interest Protocol'ün Sui yerel aşırı teminatlı stablecoin'i"
 		},
-		"bob-stablecoin": {
-			"description": "BOB - Tool"
+		"cusd_celo": {
+			"description": "Mobil öncelikli gelişmekte olan pazarlar için tasarlanmış Celo'nun USD stablecoin'i"
 		},
-		"usdx-kava": {
-			"description": "USDX (Kava) - Tool"
+		"ceur_celo": {
+			"description": "Mobil Avrupa ödemeleri için Celo'nun euro stablecoin'i"
 		},
-		"isc-interest": {
-			"description": "ISC (Interest) - Tool"
+		"flexusd": {
+			"description": "Otomatik olarak getiri kazanan faiz getiren stablecoin"
 		},
-		"cusd-celo": {
-			"description": "cUSD (Celo) - Tool"
+		"alusd_alchemix": {
+			"description": "Yatırılan teminattan elde edilen getiriyle borcun ödendiği kendi kendini ödeyen stablecoin"
 		},
-		"ceur-celo": {
-			"description": "cEUR (Celo) - Tool"
+		"usd_plus": {
+			"description": "Overnight Finance'in delta-nötr getirili stablecoin'i"
 		},
-		"alusd-alchemix": {
-			"description": "alUSD (Alchemix) - Tool"
-		},
-		"usd-plus": {
-			"description": "USD+ (Overnight) - Tool"
-		},
-		"ust-wormhole": {
-			"description": "UST (Wormhole) - Tool"
+		"ust_wormhole": {
+			"description": "Wormhole üzerinden köprülenen sarılmış UST tokenları (tarihsel - Terra çöküşü)"
 		}
 	}
 }

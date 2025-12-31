@@ -1,158 +1,158 @@
 {
 	"category_seo": {
-		"title": "Stablecoins - USDC, USDT, DAI & More | BiuBiu Tools",
-		"description": "Learn about stablecoins and their use cases. Fiat-backed, algorithmic, and decentralized stablecoins for DeFi and payments.",
-		"keywords": "",
+		"title": "스테이블코인 - USDC, USDT, DAI 등 | BiuBiu Tools",
+		"description": "스테이블코인과 사용 사례를 알아보세요. DeFi와 결제를 위한 법정화폐 담보, 알고리즘, 분산형 스테이블코인.",
+		"keywords": "스테이블코인, usdc, usdt, dai, frax, 암호화폐 스테이블코인, defi",
 		"faqs": [
 			{
-				"question": "What are stablecoins?",
-				"answer": "Stablecoins are cryptocurrencies pegged to stable assets like USD. Types include fiat-backed (USDC, USDT), crypto-backed (DAI), and algorithmic stablecoins."
+				"question": "스테이블코인이란 무엇인가요?",
+				"answer": "스테이블코인은 USD와 같은 안정적인 자산에 페그된 암호화폐입니다. 유형에는 법정화폐 담보(USDC, USDT), 암호화폐 담보(DAI), 알고리즘 스테이블코인이 있습니다."
 			},
 			{
-				"question": "Which stablecoin is safest?",
-				"answer": "USDC is highly regulated and transparent. USDT has the most liquidity but less transparency. DAI is decentralized but has smart contract risk. Diversification is wise."
+				"question": "가장 안전한 스테이블코인은 무엇인가요?",
+				"answer": "USDC는 높은 규제를 받고 투명합니다. USDT는 유동성이 가장 높지만 투명성이 낮습니다. DAI는 분산형이지만 스마트 컨트랙트 리스크가 있습니다. 분산 투자가 현명합니다."
 			},
 			{
-				"question": "What happened to UST?",
-				"answer": "UST was an algorithmic stablecoin that collapsed in May 2022, losing its peg and causing $40B+ in losses. It highlighted the risks of algorithmic designs without proper collateral."
+				"question": "UST에 무슨 일이 있었나요?",
+				"answer": "UST는 2022년 5월에 붕괴된 알고리즘 스테이블코인으로, 페그를 잃고 400억 달러 이상의 손실을 초래했습니다. 적절한 담보 없는 알고리즘 설계의 리스크를 부각시켰습니다."
 			}
 		]
 	},
 	"tools": {
+		"usdt_tether": {
+			"description": "시가총액 최대 스테이블코인, USD 담보로 멀티체인 지원"
+		},
+		"usdc_circle": {
+			"description": "Circle의 규제된 미국 달러 스테이블코인, 완전 준비금 담보와 투명성"
+		},
+		"dai_makerdao": {
+			"description": "MakerDAO가 관리하는 분산형 암호화폐 담보 스테이블코인"
+		},
 		"frax": {
 			"description": "부분 담보화를 갖춘 분수-알고리즘 스테이블코인"
 		},
+		"usde_ethena": {
+			"description": "스테이킹 ETH 담보로 델타 중립 전략을 사용하는 합성 달러"
+		},
+		"usdd_tron": {
+			"description": "TRX와 BTC로 담보된 트론 네트워크의 초과 담보 스테이블코인"
+		},
 		"tusd": {
-			"description": "규제 및 감사된 USD 담보 스테이블코인"
+			"description": "규제 및 감사된 USD 담보 스테이블코인, 실시간 증명"
+		},
+		"busd_paxos": {
+			"description": "Paxos 발행 USD 스테이블코인, 이전 Binance 파트너"
+		},
+		"pyusd_paypal": {
+			"description": "PayPal 생태계 내 결제와 이체를 위한 PayPal의 USD 스테이블코인"
+		},
+		"gusd_gemini": {
+			"description": "Gemini 거래소가 발행한 뉴욕 규제 달러 스테이블코인"
+		},
+		"usdp_paxos": {
+			"description": "NYDFS가 규제하는 Pax Dollar, 월간 준비금 증명"
+		},
+		"sdai_spark": {
+			"description": "DSR(DAI 저축 이자율)을 자동으로 획득하는 이자형 DAI"
+		},
+		"susde_ethena": {
+			"description": "Ethena의 델타 중립 전략에서 이자를 획득하는 스테이킹 USDe"
 		},
 		"sfrax": {
 			"description": "Frax 프로토콜에서 수익을 얻는 스테이킹된 FRAX"
 		},
+		"eurs_stasis": {
+			"description": "유럽 은행의 유로로 1:1 담보된 유로 페그 스테이블코인"
+		},
+		"eurc_circle": {
+			"description": "USDC와 동일한 컴플라이언스 기준을 가진 Circle의 유로 스테이블코인"
+		},
+		"eurt_tether": {
+			"description": "유럽 시장을 위한 Tether의 유로 페그 스테이블코인"
+		},
+		"xsgd_straitsx": {
+			"description": "아시아 시장을 위해 MAS가 규제하는 싱가포르 달러 스테이블코인"
+		},
+		"lusd_liquity": {
+			"description": "불변 스마트 컨트랙트와 거버넌스 없는 분산형 ETH 담보 스테이블코인"
+		},
+		"susd_synthetix": {
+			"description": "Synthetix 프로토콜 내 SNX 스테이커가 담보하는 합성 USD 스테이블코인"
+		},
+		"rai_reflexer": {
+			"description": "변동 목표 가격을 가진 비페그 안정 자산, ETH 담보 및 거버넌스 최소화"
+		},
+		"mim_abracadabra": {
+			"description": "이자 생성 토큰을 담보로 사용하여 발행되는 스테이블코인"
+		},
+		"crvusd_curve": {
+			"description": "소프트 청산과 자본 효율성 개선을 위해 LLAMMA를 사용하는 Curve의 스테이블코인"
+		},
+		"gho_aave": {
+			"description": "예치된 자산에 대해 발행되는 Aave의 초과 담보 스테이블코인"
+		},
+		"defillama_stablecoins": {
+			"description": "시가총액, 페그 이탈, 체인 분포를 추적하는 포괄적인 스테이블코인 분석"
+		},
+		"coingecko_stablecoins": {
+			"description": "CoinGecko의 스테이블코인 순위, 시장 데이터, 페그 모니터링"
+		},
 		"fdusd": {
-			"description": "First Digital USD 스테이블코인"
+			"description": "Binance 거래소에서 널리 사용되는 홍콩 발행 USD 스테이블코인"
+		},
+		"usual_usd0": {
+			"description": "미국 국채에서 이자를 획득하는 RWA 담보 스테이블코인"
+		},
+		"mountain_usdm": {
+			"description": "미국 국채로 담보된 이자형 스테이블코인, 일일 리베이스"
+		},
+		"ageur_angle": {
+			"description": "다양한 발행 메커니즘을 가진 Angle Protocol의 분산형 유로 스테이블코인"
+		},
+		"mkusd_prisma": {
+			"description": "Prisma Finance의 유동성 스테이킹 토큰으로 담보된 스테이블코인"
+		},
+		"ultra_usd": {
+			"description": "강화된 컴플라이언스 기능을 가진 기관급 USD 스테이블코인"
+		},
+		"dola_inverse": {
+			"description": "Fed 메커니즘을 가진 Inverse Finance 대출 프로토콜의 스테이블코인"
+		},
+		"hai_reflexer": {
+			"description": "변동 목표 가격을 가진 RAI에서 영감받은 Optimism 네이티브 스테이블코인"
+		},
+		"usdk_okx": {
+			"description": "준비금으로 담보되고 정기적으로 감사받는 OKX 발행 USD 스테이블코인"
+		},
+		"zusd_zeta": {
+			"description": "크로스체인 이체를 위한 ZetaChain의 네이티브 옴니체인 스테이블코인"
+		},
+		"bob_stablecoin": {
+			"description": "크로스체인 사용을 위해 설계된 옵티미스틱 멀티 담보 스테이블코인"
+		},
+		"usdx_kava": {
+			"description": "Kava 블록체인의 Cosmos 네이티브 담보 스테이블코인"
+		},
+		"isc_interest": {
+			"description": "Interest Protocol의 Sui 네이티브 초과 담보 스테이블코인"
+		},
+		"cusd_celo": {
+			"description": "모바일 우선 신흥 시장을 위해 설계된 Celo의 USD 스테이블코인"
+		},
+		"ceur_celo": {
+			"description": "모바일 유럽 결제를 위한 Celo의 유로 스테이블코인"
 		},
 		"flexusd": {
-			"description": "유연한 USD 스테이블코인"
+			"description": "자동으로 이자를 획득하는 이자 생성 스테이블코인"
 		},
-		"usdt-tether": {
-			"description": "Tether (USDT) - Tool"
+		"alusd_alchemix": {
+			"description": "예치된 담보의 이자로 부채가 상환되는 자기 상환형 스테이블코인"
 		},
-		"usdc-circle": {
-			"description": "USD Coin (USDC) - Tool"
+		"usd_plus": {
+			"description": "Overnight Finance의 델타 중립 이자형 스테이블코인"
 		},
-		"dai-makerdao": {
-			"description": "DAI (MakerDAO) - Tool"
-		},
-		"usde-ethena": {
-			"description": "USDe (Ethena) - Tool"
-		},
-		"usdd-tron": {
-			"description": "USDD (Tron) - Tool"
-		},
-		"busd-paxos": {
-			"description": "Binance USD (BUSD) - Tool"
-		},
-		"pyusd-paypal": {
-			"description": "PayPal USD (PYUSD) - Tool"
-		},
-		"gusd-gemini": {
-			"description": "Gemini Dollar (GUSD) - Tool"
-		},
-		"usdp-paxos": {
-			"description": "Pax Dollar (USDP) - Tool"
-		},
-		"sdai-spark": {
-			"description": "sDAI (Spark) - Tool"
-		},
-		"susde-ethena": {
-			"description": "sUSDe (Ethena) - Tool"
-		},
-		"eurs-stasis": {
-			"description": "STASIS EURO (EURS) - Tool"
-		},
-		"eurc-circle": {
-			"description": "Euro Coin (EURC) - Tool"
-		},
-		"eurt-tether": {
-			"description": "Tether EURt - Tool"
-		},
-		"xsgd-straitsx": {
-			"description": "XSGD (StraitsX) - Tool"
-		},
-		"lusd-liquity": {
-			"description": "LUSD (Liquity) - Tool"
-		},
-		"susd-synthetix": {
-			"description": "sUSD (Synthetix) - Tool"
-		},
-		"rai-reflexer": {
-			"description": "RAI (Reflexer) - Tool"
-		},
-		"mim-abracadabra": {
-			"description": "MIM (Abracadabra) - Tool"
-		},
-		"crvusd-curve": {
-			"description": "crvUSD (Curve) - Tool"
-		},
-		"gho-aave": {
-			"description": "GHO (Aave) - Tool"
-		},
-		"defillama-stablecoins": {
-			"description": "DeFiLlama Stablecoins - Tool"
-		},
-		"coingecko-stablecoins": {
-			"description": "CoinGecko Stablecoins - Tool"
-		},
-		"usual-usd0": {
-			"description": "USD0 (Usual) - Tool"
-		},
-		"mountain-usdm": {
-			"description": "USDM (Mountain) - Tool"
-		},
-		"ageur-angle": {
-			"description": "EURA (Angle) - Tool"
-		},
-		"mkusd-prisma": {
-			"description": "mkUSD (Prisma) - Tool"
-		},
-		"ultra-usd": {
-			"description": "Ultra USDu - Tool"
-		},
-		"dola-inverse": {
-			"description": "DOLA (Inverse) - Tool"
-		},
-		"hai-reflexer": {
-			"description": "HAI (Let - Tool"
-		},
-		"usdk-okx": {
-			"description": "USDK (OKX) - Tool"
-		},
-		"zusd-zeta": {
-			"description": "ZUSD (Zeta) - Tool"
-		},
-		"bob-stablecoin": {
-			"description": "BOB - Tool"
-		},
-		"usdx-kava": {
-			"description": "USDX (Kava) - Tool"
-		},
-		"isc-interest": {
-			"description": "ISC (Interest) - Tool"
-		},
-		"cusd-celo": {
-			"description": "cUSD (Celo) - Tool"
-		},
-		"ceur-celo": {
-			"description": "cEUR (Celo) - Tool"
-		},
-		"alusd-alchemix": {
-			"description": "alUSD (Alchemix) - Tool"
-		},
-		"usd-plus": {
-			"description": "USD+ (Overnight) - Tool"
-		},
-		"ust-wormhole": {
-			"description": "UST (Wormhole) - Tool"
+		"ust_wormhole": {
+			"description": "Wormhole을 통해 브릿지된 래핑 UST 토큰 (역사적 - Terra 붕괴)"
 		}
 	}
 }

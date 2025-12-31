@@ -1,157 +1,162 @@
 {
 	"category_seo": {
-		"title": "Stablecoin - USDC, USDT, DAI & Lainnya | BiuBiu Tools",
-		"description": "Pelajari tentang stablecoin dan kasus penggunaannya. Stablecoin yang didukung fiat, algoritmik, dan terdesentralisasi untuk DeFi dan pembayaran.",
+		"title": "Stablecoin - Kripto yang Dipatok ke USD dan EUR | BiuBiu Tools",
+		"description": "Jelajahi stablecoin dan kasus penggunaannya. Bandingkan USDT, USDC, DAI dan kripto harga stabil lainnya.",
+		"keywords": "stablecoin, usdt, usdc, dai, kripto harga stabil",
 		"faqs": [
 			{
 				"question": "Apa itu stablecoin?",
-				"answer": "Stablecoin adalah cryptocurrency yang dipatok ke aset stabil seperti USD. Jenisnya termasuk yang didukung fiat (USDC, USDT), didukung kripto (DAI), dan stablecoin algoritmik."
+				"answer": "Stablecoin adalah kripto yang dirancang untuk mempertahankan nilai stabil, biasanya dipatok 1:1 ke mata uang fiat seperti dolar AS. Stablecoin menawarkan manfaat kripto tanpa volatilitas harga."
 			},
 			{
-				"question": "Stablecoin mana yang paling aman?",
-				"answer": "USDC sangat diatur dan transparan. USDT memiliki likuiditas paling banyak tetapi transparansi lebih rendah. DAI terdesentralisasi tetapi memiliki risiko smart contract. Diversifikasi adalah bijaksana."
+				"question": "Jenis stablecoin apa yang ada?",
+				"answer": "Jenis utama termasuk: dijamin fiat (USDT, USDC), dijamin kripto (DAI), algoritmik, dan dijamin komoditas. Setiap jenis memiliki mekanisme dan profil risiko berbeda."
 			},
 			{
-				"question": "Apa yang terjadi pada UST?",
-				"answer": "UST adalah stablecoin algoritmik yang kolaps pada Mei 2022, kehilangan patokannya dan menyebabkan kerugian $40B+. Ini menyoroti risiko desain algoritmik tanpa kolateral yang tepat."
+				"question": "Apakah stablecoin aman?",
+				"answer": "Keamanan stablecoin bervariasi. Stablecoin dijamin fiat bergantung pada penerbit mempertahankan cadangan. Crypto stablecoin bergantung pada over-collateralization. Selalu riset mekanisme jaminan dan audit."
+			},
+			{
+				"question": "Mengapa menggunakan stablecoin?",
+				"answer": "Stablecoin berguna untuk: trading tanpa keluar dari kripto, mengirim pembayaran lintas batas, menghasilkan yield melalui DeFi, melindungi dari volatilitas, dan mengakses layanan keuangan tanpa rekening bank tradisional."
 			}
 		]
 	},
 	"tools": {
 		"frax": {
-			"description": "Stablecoin algoritma fraksional dengan kolateralisasi parsial"
+			"description": "Stablecoin algoritmik fraksional dengan kolateralisasi parsial dan mekanisme peg dinamis"
 		},
 		"tusd": {
-			"description": "Stablecoin yang didukung USD yang diregulasi dan diaudit"
+			"description": "Stablecoin teregulasi dan teraudit yang dijamin USD dengan atestasi cadangan real-time"
 		},
 		"sfrax": {
-			"description": "FRAX yang distake menghasilkan yield dari protokol Frax"
+			"description": "FRAX yang di-stake menghasilkan yield dari operasi protokol Frax"
 		},
 		"fdusd": {
-			"description": "Stablecoin First Digital USD yang diregulasi"
+			"description": "Stablecoin USD First Digital dengan dukungan multi-chain dan kepatuhan regulasi"
 		},
 		"flexusd": {
-			"description": "Stablecoin yang didukung aset dunia nyata"
+			"description": "Stablecoin berbunga di Bitcoin Cash dan blockchain lainnya"
 		},
-		"usdt-tether": {
-			"description": "Tether (USDT) - Tool"
+		"usdt_tether": {
+			"description": "Stablecoin terbesar berdasarkan market cap, dijamin USD dengan dukungan multi-chain luas"
 		},
-		"usdc-circle": {
-			"description": "USD Coin (USDC) - Tool"
+		"usdc_circle": {
+			"description": "Stablecoin dolar AS teregulasi dari Circle dengan dukungan cadangan penuh dan transparansi"
 		},
-		"dai-makerdao": {
-			"description": "DAI (MakerDAO) - Tool"
+		"dai_makerdao": {
+			"description": "Stablecoin terdesentralisasi yang dijamin kripto, dikelola oleh MakerDAO"
 		},
-		"usde-ethena": {
-			"description": "USDe (Ethena) - Tool"
+		"usde_ethena": {
+			"description": "Dolar sintetis Ethena menggunakan hedging delta-neutral untuk stabilitas peg"
 		},
-		"usdd-tron": {
-			"description": "USDD (Tron) - Tool"
+		"usdd_tron": {
+			"description": "Stablecoin terdesentralisasi over-collateralized di blockchain Tron"
 		},
-		"busd-paxos": {
-			"description": "Binance USD (BUSD) - Tool"
+		"busd_paxos": {
+			"description": "Stablecoin teregulasi yang disetujui NYDFS, diterbitkan oleh Paxos (dihentikan)"
 		},
-		"pyusd-paypal": {
-			"description": "PayPal USD (PYUSD) - Tool"
+		"pyusd_paypal": {
+			"description": "Stablecoin PayPal untuk pembayaran dan transfer di platform yang didukung"
 		},
-		"gusd-gemini": {
-			"description": "Gemini Dollar (GUSD) - Tool"
+		"gusd_gemini": {
+			"description": "Stablecoin teregulasi Gemini dengan atestasi bulanan dan persetujuan NYDFS"
 		},
-		"usdp-paxos": {
-			"description": "Pax Dollar (USDP) - Tool"
+		"usdp_paxos": {
+			"description": "Pax Dollar teregulasi dengan dukungan cadangan penuh dan pengawasan regulasi"
 		},
-		"sdai-spark": {
-			"description": "sDAI (Spark) - Tool"
+		"sdai_spark": {
+			"description": "DAI yang di-stake otomatis menghasilkan tingkat tabungan DAI"
 		},
-		"susde-ethena": {
-			"description": "sUSDe (Ethena) - Tool"
+		"susde_ethena": {
+			"description": "USDe yang di-stake menghasilkan yield dari operasi protokol Ethena"
 		},
-		"eurs-stasis": {
-			"description": "STASIS EURO (EURS) - Tool"
+		"eurs_stasis": {
+			"description": "Stablecoin dipatok Euro dari STASIS dengan cadangan terverifikasi di Eropa"
 		},
-		"eurc-circle": {
-			"description": "Euro Coin (EURC) - Tool"
+		"eurc_circle": {
+			"description": "Stablecoin Euro teregulasi dari Circle dengan dukungan cadangan penuh"
 		},
-		"eurt-tether": {
-			"description": "Tether EURt - Tool"
+		"eurt_tether": {
+			"description": "Stablecoin dipatok Euro dari Tether untuk pasar dan trading Eropa"
 		},
-		"xsgd-straitsx": {
-			"description": "XSGD (StraitsX) - Tool"
+		"xsgd_straitsx": {
+			"description": "Stablecoin dolar Singapura dengan lisensi MAS dan atestasi penuh"
 		},
-		"lusd-liquity": {
-			"description": "LUSD (Liquity) - Tool"
+		"lusd_liquity": {
+			"description": "Stablecoin terdesentralisasi hanya dijamin ETH dengan governance minimal"
 		},
-		"susd-synthetix": {
-			"description": "sUSD (Synthetix) - Tool"
+		"susd_synthetix": {
+			"description": "Stablecoin sintetis ekosistem Synthetix untuk trading derivatif"
 		},
-		"rai-reflexer": {
-			"description": "RAI (Reflexer) - Tool"
+		"rai_reflexer": {
+			"description": "Stablecoin tidak dipatok dengan kurs mengambang untuk desentralisasi sejati"
 		},
-		"mim-abracadabra": {
-			"description": "MIM (Abracadabra) - Tool"
+		"mim_abracadabra": {
+			"description": "Magic Internet Money yang di-mint dari aset yield-bearing sebagai jaminan"
 		},
-		"crvusd-curve": {
-			"description": "crvUSD (Curve) - Tool"
+		"crvusd_curve": {
+			"description": "Stablecoin native Curve Finance dengan algoritma LLAMMA untuk likuidasi lunak"
 		},
-		"gho-aave": {
-			"description": "GHO (Aave) - Tool"
+		"gho_aave": {
+			"description": "Stablecoin native terdesentralisasi over-collateralized dari protokol Aave"
 		},
-		"defillama-stablecoins": {
-			"description": "DeFiLlama Stablecoins - Tool"
+		"defillama_stablecoins": {
+			"description": "Dashboard stablecoin melacak market cap, dominasi, dan metrik peg"
 		},
-		"coingecko-stablecoins": {
-			"description": "CoinGecko Stablecoins - Tool"
+		"coingecko_stablecoins": {
+			"description": "Peringkat stablecoin berdasarkan market cap dengan volume dan data trading"
 		},
-		"usual-usd0": {
-			"description": "USD0 (Usual) - Tool"
+		"usual_usd0": {
+			"description": "Stablecoin yield-bearing dijamin RWA dengan dukungan treasury"
 		},
-		"mountain-usdm": {
-			"description": "USDM (Mountain) - Tool"
+		"mountain_usdm": {
+			"description": "Stablecoin yield-bearing dijamin T-Bills AS jangka pendek"
 		},
-		"ageur-angle": {
-			"description": "EURA (Angle) - Tool"
+		"ageur_angle": {
+			"description": "Stablecoin Euro terdesentralisasi dari protokol Angle dengan desain over-collateralized"
 		},
-		"mkusd-prisma": {
-			"description": "mkUSD (Prisma) - Tool"
+		"mkusd_prisma": {
+			"description": "Stablecoin di-mint dari derivatif liquid staking di Prisma Finance"
 		},
-		"ultra-usd": {
-			"description": "Ultra USDu - Tool"
+		"ultra_usd": {
+			"description": "Stablecoin USD native di platform gaming dan hiburan Ultra"
 		},
-		"dola-inverse": {
-			"description": "DOLA (Inverse) - Tool"
+		"dola_inverse": {
+			"description": "Stablecoin terdesentralisasi Inverse Finance untuk ekosistem produk yield"
 		},
-		"hai-reflexer": {
-			"description": "HAI (Let - Tool"
+		"hai_reflexer": {
+			"description": "Stablecoin multi-jaminan memanfaatkan sistem RAI Reflexer di OP Mainnet"
 		},
-		"usdk-okx": {
-			"description": "USDK (OKX) - Tool"
+		"usdk_okx": {
+			"description": "Stablecoin dijamin USD dari OKX dengan kepatuhan regulasi"
 		},
-		"zusd-zeta": {
-			"description": "ZUSD (Zeta) - Tool"
+		"zusd_zeta": {
+			"description": "Stablecoin native ekosistem Zeta Markets dan protokol DeFi"
 		},
-		"bob-stablecoin": {
-			"description": "BOB - Tool"
+		"bob_stablecoin": {
+			"description": "Stablecoin multi-jaminan dioptimalkan untuk stabilitas dengan aset backing beragam"
 		},
-		"usdx-kava": {
-			"description": "USDX (Kava) - Tool"
+		"usdx_kava": {
+			"description": "Stablecoin terdesentralisasi di-mint dari kripto di platform Kava DeFi"
 		},
-		"isc-interest": {
-			"description": "ISC (Interest) - Tool"
+		"isc_interest": {
+			"description": "Stablecoin dari protokol Interest dengan desain over-collateralized"
 		},
-		"cusd-celo": {
-			"description": "cUSD (Celo) - Tool"
+		"cusd_celo": {
+			"description": "Stablecoin dolar native di blockchain Celo yang mobile-first"
 		},
-		"ceur-celo": {
-			"description": "cEUR (Celo) - Tool"
+		"ceur_celo": {
+			"description": "Stablecoin Euro native di ekosistem blockchain Celo"
 		},
-		"alusd-alchemix": {
-			"description": "alUSD (Alchemix) - Tool"
+		"alusd_alchemix": {
+			"description": "Stablecoin self-repaying dijamin yield dari deposit pengguna"
 		},
-		"usd-plus": {
-			"description": "USD+ (Overnight) - Tool"
+		"usd_plus": {
+			"description": "Stablecoin yield-bearing dengan rebase harian dari strategi DeFi"
 		},
-		"ust-wormhole": {
-			"description": "UST (Wormhole) - Tool"
+		"ust_wormhole": {
+			"description": "UST legacy yang di-bridge melalui Wormhole (token historis, tidak lagi dipatok)"
 		}
 	}
 }

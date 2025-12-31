@@ -2,6 +2,7 @@
 	"category_seo": {
 		"title": "稳定币 - USDC、USDT、DAI 等 | BiuBiu Tools",
 		"description": "了解稳定币及其用例。法币支持、算法和去中心化稳定币，用于 DeFi 和支付。",
+		"keywords": "稳定币, usdc, usdt, dai, frax, 加密稳定币, defi",
 		"faqs": [
 			{
 				"question": "什么是稳定币？",
@@ -18,140 +19,140 @@
 		]
 	},
 	"tools": {
+		"usdt_tether": {
+			"description": "市值最大的稳定币，美元支持，支持多链"
+		},
+		"usdc_circle": {
+			"description": "Circle 发行的受监管美元稳定币，完全储备支持且透明"
+		},
+		"dai_makerdao": {
+			"description": "由 MakerDAO 治理的去中心化加密抵押稳定币"
+		},
 		"frax": {
 			"description": "部分抵押的分数算法稳定币"
 		},
+		"usde_ethena": {
+			"description": "使用质押 ETH 抵押品的 Delta 中性策略合成美元"
+		},
+		"usdd_tron": {
+			"description": "Tron 网络上由 TRX 和 BTC 支持的超额抵押稳定币"
+		},
 		"tusd": {
-			"description": "受监管且经过审计的美元稳定币"
+			"description": "受监管且经过审计的美元稳定币，具有实时证明"
+		},
+		"busd_paxos": {
+			"description": "Paxos 发行的美元稳定币，曾与 Binance 合作"
+		},
+		"pyusd_paypal": {
+			"description": "PayPal 的美元稳定币，用于 PayPal 生态系统内的支付和转账"
+		},
+		"gusd_gemini": {
+			"description": "纽约监管的美元稳定币，由 Gemini 交易所发行"
+		},
+		"usdp_paxos": {
+			"description": "由 NYDFS 监管的 Pax Dollar，每月储备证明"
+		},
+		"sdai_spark": {
+			"description": "自动赚取 DSR（DAI 存款利率）的收益型 DAI"
+		},
+		"susde_ethena": {
+			"description": "从 Ethena Delta 中性策略中赚取收益的质押 USDe"
 		},
 		"sfrax": {
 			"description": "在 Frax 协议中质押赚取收益的 FRAX"
 		},
+		"eurs_stasis": {
+			"description": "与欧元 1:1 挂钩的稳定币，由欧洲银行中的欧元支持"
+		},
+		"eurc_circle": {
+			"description": "Circle 的欧元稳定币，与 USDC 相同的合规标准"
+		},
+		"eurt_tether": {
+			"description": "Tether 的欧元挂钩稳定币，面向欧洲市场"
+		},
+		"xsgd_straitsx": {
+			"description": "新加坡元稳定币，受 MAS 监管，面向亚洲市场"
+		},
+		"lusd_liquity": {
+			"description": "去中心化 ETH 支持稳定币，不可变智能合约，无治理"
+		},
+		"susd_synthetix": {
+			"description": "由 Synthetix 协议中 SNX 质押者支持的合成美元稳定币"
+		},
+		"rai_reflexer": {
+			"description": "非挂钩稳定资产，浮动目标价格，ETH 支持，治理最小化"
+		},
+		"mim_abracadabra": {
+			"description": "使用生息代币作为抵押品铸造的稳定币"
+		},
+		"crvusd_curve": {
+			"description": "Curve 的稳定币，使用 LLAMMA 实现软清算和改进的资本效率"
+		},
+		"gho_aave": {
+			"description": "Aave 的超额抵押稳定币，以存入资产铸造"
+		},
+		"defillama_stablecoins": {
+			"description": "综合稳定币分析，跟踪市值、脱钩偏差和链分布"
+		},
+		"coingecko_stablecoins": {
+			"description": "CoinGecko 上的稳定币排名、市场数据和脱钩监控"
+		},
 		"fdusd": {
-			"description": "First Digital USD (FDUSD) - 稳定币"
+			"description": "香港发行的美元稳定币，广泛用于 Binance 交易所"
+		},
+		"usual_usd0": {
+			"description": "由 RWA 支持的稳定币，从美国国债中赚取收益"
+		},
+		"mountain_usdm": {
+			"description": "由美国国债支持的收益型稳定币，每日 rebase"
+		},
+		"ageur_angle": {
+			"description": "来自 Angle 协议的去中心化欧元稳定币，多种铸造机制"
+		},
+		"mkusd_prisma": {
+			"description": "由 Prisma Finance 上的流动性质押代币支持的稳定币"
+		},
+		"ultra_usd": {
+			"description": "机构级美元稳定币，具有增强的合规功能"
+		},
+		"dola_inverse": {
+			"description": "来自 Inverse Finance 借贷协议的稳定币，具有 Fed 机制"
+		},
+		"hai_reflexer": {
+			"description": "受 RAI 启发的 Optimism 原生稳定币，浮动目标价格"
+		},
+		"usdk_okx": {
+			"description": "OKX 发行的美元稳定币，由储备支持，定期审计"
+		},
+		"zusd_zeta": {
+			"description": "ZetaChain 的原生全链稳定币，用于跨链转账"
+		},
+		"bob_stablecoin": {
+			"description": "为跨链使用设计的乐观多抵押品稳定币"
+		},
+		"usdx_kava": {
+			"description": "Kava 区块链上的 Cosmos 原生抵押稳定币"
+		},
+		"isc_interest": {
+			"description": "来自 Interest Protocol 的 Sui 原生超额抵押稳定币"
+		},
+		"cusd_celo": {
+			"description": "Celo 的美元稳定币，为移动优先的新兴市场设计"
+		},
+		"ceur_celo": {
+			"description": "Celo 的欧元稳定币，用于移动端欧洲支付"
 		},
 		"flexusd": {
-			"description": "flexUSD - 稳定币"
+			"description": "自动赚取收益的生息稳定币"
 		},
-		"usdt-tether": {
-			"description": "Tether (USDT) - Tool"
+		"alusd_alchemix": {
+			"description": "自偿还稳定币，债务由存入抵押品的收益偿还"
 		},
-		"usdc-circle": {
-			"description": "USD Coin (USDC) - Tool"
+		"usd_plus": {
+			"description": "来自 Overnight Finance 的 Delta 中性收益型稳定币"
 		},
-		"dai-makerdao": {
-			"description": "DAI (MakerDAO) - Tool"
-		},
-		"usde-ethena": {
-			"description": "USDe (Ethena) - Tool"
-		},
-		"usdd-tron": {
-			"description": "USDD (Tron) - Tool"
-		},
-		"busd-paxos": {
-			"description": "Binance USD (BUSD) - Tool"
-		},
-		"pyusd-paypal": {
-			"description": "PayPal USD (PYUSD) - Tool"
-		},
-		"gusd-gemini": {
-			"description": "Gemini Dollar (GUSD) - Tool"
-		},
-		"usdp-paxos": {
-			"description": "Pax Dollar (USDP) - Tool"
-		},
-		"sdai-spark": {
-			"description": "sDAI (Spark) - Tool"
-		},
-		"susde-ethena": {
-			"description": "sUSDe (Ethena) - Tool"
-		},
-		"eurs-stasis": {
-			"description": "STASIS EURO (EURS) - Tool"
-		},
-		"eurc-circle": {
-			"description": "Euro Coin (EURC) - Tool"
-		},
-		"eurt-tether": {
-			"description": "Tether EURt - Tool"
-		},
-		"xsgd-straitsx": {
-			"description": "XSGD (StraitsX) - Tool"
-		},
-		"lusd-liquity": {
-			"description": "LUSD (Liquity) - Tool"
-		},
-		"susd-synthetix": {
-			"description": "sUSD (Synthetix) - Tool"
-		},
-		"rai-reflexer": {
-			"description": "RAI (Reflexer) - Tool"
-		},
-		"mim-abracadabra": {
-			"description": "MIM (Abracadabra) - Tool"
-		},
-		"crvusd-curve": {
-			"description": "crvUSD (Curve) - Tool"
-		},
-		"gho-aave": {
-			"description": "GHO (Aave) - Tool"
-		},
-		"defillama-stablecoins": {
-			"description": "DeFiLlama Stablecoins - Tool"
-		},
-		"coingecko-stablecoins": {
-			"description": "CoinGecko Stablecoins - Tool"
-		},
-		"usual-usd0": {
-			"description": "USD0 (Usual) - Tool"
-		},
-		"mountain-usdm": {
-			"description": "USDM (Mountain) - Tool"
-		},
-		"ageur-angle": {
-			"description": "EURA (Angle) - Tool"
-		},
-		"mkusd-prisma": {
-			"description": "mkUSD (Prisma) - Tool"
-		},
-		"ultra-usd": {
-			"description": "Ultra USDu - Tool"
-		},
-		"dola-inverse": {
-			"description": "DOLA (Inverse) - Tool"
-		},
-		"hai-reflexer": {
-			"description": "HAI (Let - Tool"
-		},
-		"usdk-okx": {
-			"description": "USDK (OKX) - Tool"
-		},
-		"zusd-zeta": {
-			"description": "ZUSD (Zeta) - Tool"
-		},
-		"bob-stablecoin": {
-			"description": "BOB - Tool"
-		},
-		"usdx-kava": {
-			"description": "USDX (Kava) - Tool"
-		},
-		"isc-interest": {
-			"description": "ISC (Interest) - Tool"
-		},
-		"cusd-celo": {
-			"description": "cUSD (Celo) - Tool"
-		},
-		"ceur-celo": {
-			"description": "cEUR (Celo) - Tool"
-		},
-		"alusd-alchemix": {
-			"description": "alUSD (Alchemix) - Tool"
-		},
-		"usd-plus": {
-			"description": "USD+ (Overnight) - Tool"
-		},
-		"ust-wormhole": {
-			"description": "UST (Wormhole) - Tool"
+		"ust_wormhole": {
+			"description": "通过 Wormhole 桥接的包装 UST 代币（历史 - Terra 崩溃）"
 		}
 	}
 }
