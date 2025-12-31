@@ -1,0 +1,182 @@
+{
+	"title": "预言机完整指南",
+	"subtitle": "从基础到安全全面掌握区块链预言机",
+
+	"sections": {
+		"intro": {
+			"title": "区块链预言机简介",
+			"content": "<p>预言机是智能合约与现实世界之间的桥梁。它们解决了区块链技术的一个基本限制:智能合约无法访问其网络外部的数据。没有预言机,DeFi 将无法存在——没有价格数据源,没有随机性,无法连接传统系统。</p><p>在这份综合指南中,您将学习预言机的工作原理,理解不同的预言机架构,探索主要的预言机提供商,最重要的是——理解可能决定协议成败的安全考虑。我们将介绍预言机攻击的真实案例以及如何防范它们。</p>"
+		},
+		"oracle_problem": {
+			"title": "预言机问题",
+			"content": "<p>要理解为什么预言机至关重要,您需要了解它们所解决的根本限制:区块链在设计上是隔离的系统。</p>",
+			"blockchain_isolation": {
+				"title": "为什么区块链无法访问外部数据",
+				"content": "<p>区块链通过让所有节点验证并对每笔交易达成一致来实现共识。这需要完全的确定性——每个节点在处理交易时必须得到相同的结果。</p><p>如果智能合约可以向外部 API 发起 HTTP 请求,不同的节点可能会得到不同的响应(由于网络延迟、API 变化或服务器问题)。这将破坏共识。</p><p><strong>示例:</strong> 如果 DeFi 借贷协议试图从 API 获取 ETH 价格,节点 A 可能获得 $2,000,而节点 B 获得 $2,001。节点会在是否应该清算某个仓位上产生分歧,从而破坏区块链。</p><p>这就是为什么区块链故意与外部数据源隔离。预言机通过以可验证、适合共识的方式将外部数据引入链上来解决这个问题。</p>"
+			},
+			"why_oracles_matter": {
+				"title": "为什么预言机很重要",
+				"content": "<p>预言机解锁了整个类别的区块链应用:</p><ul><li><strong>DeFi 协议:</strong> 需要准确的价格数据源用于借贷、交易、衍生品和清算</li><li><strong>预测市场:</strong> 需要真实世界的事件结果来结算赌注</li><li><strong>保险协议:</strong> 需要参数化触发器(如航班延误数据、天气条件)</li><li><strong>游戏和 NFT:</strong> 需要可验证的随机性来确保公平结果</li><li><strong>跨链应用:</strong> 需要验证其他区块链上的事件</li><li><strong>真实世界资产(RWA)代币化:</strong> 需要链下资产估值和托管验证</li></ul><p>没有可靠的预言机,这些应用要么无法运作,要么容易受到操纵。预言机通常是 DeFi 协议中最关键——也是最脆弱的——组件。</p>"
+			}
+		},
+		"oracle_types": {
+			"title": "预言机类型和架构",
+			"content": "<p>并非所有预言机都是一样的。不同的用例需要不同的预言机设计,每种设计在成本、延迟、安全性和去中心化方面都有独特的权衡。</p>",
+			"push_vs_pull": {
+				"title": "推送式与拉取式预言机",
+				"content": "<p><strong>推送式预言机(链上更新):</strong></p><p>推送式预言机以固定间隔(心跳)或当价格偏差达到阈值时持续更新链上价格数据。数据存储在任何人都可以读取的智能合约中。</p><p><strong>优点:</strong></p><ul><li>始终在链上可用——读取时无延迟</li><li>Gas 成本由所有用户分摊</li><li>集成简单——只需从合约读取</li></ul><p><strong>缺点:</strong></p><ul><li>价格稳定期间更新频率较低(成本优化)</li><li>高波动期间可能无法反映实时价格</li><li>整体网络 Gas 消耗较高</li></ul><p><strong>示例:</strong> Chainlink 数据源每个心跳周期(1 小时)或价格偏差 >0.5% 时更新 ETH/USD 价格。</p><br/><p><strong>拉取式预言机(按需更新):</strong></p><p>拉取式预言机提供链下签名的价格数据。用户获取最新价格并随其交易提交。预言机合约验证签名并处理数据。</p><p><strong>优点:</strong></p><ul><li>超低延迟——价格每 400ms 更新一次</li><li>Gas 高效——只在需要新数据时付费</li><li>非常适合高频交易和精确清算</li></ul><p><strong>缺点:</strong></p><ul><li>用户需支付提交价格更新的 Gas</li><li>集成稍微复杂一些</li><li>需要链下基础设施来获取签名价格</li></ul><p><strong>示例:</strong> Pyth Network 通过拉取架构提供亚秒级价格更新。</p>"
+			},
+			"centralized_vs_decentralized": {
+				"title": "中心化与去中心化预言机",
+				"content": "<p><strong>中心化预言机:</strong></p><p>单一实体或可信方提供数据。这是最简单的架构,但会产生单点故障。</p><p><strong>风险:</strong></p><ul><li>单点故障——如果预言机失败,协议就会崩溃</li><li>操纵风险——预言机提供商可能提供虚假数据</li><li>审查风险——预言机可能拒绝为某些协议提供服务</li></ul><p>大多数生产环境的 DeFi 协议因这些风险而避免使用中心化预言机。</p><br/><p><strong>去中心化预言机网络(DON):</strong></p><p>多个独立的节点运营商获取并聚合数据。最终的链上值通常是所有提交的中位数,使操纵变得困难。</p><p><strong>Chainlink DON 的工作原理:</strong></p><ol><li>多个独立节点从不同交易所获取价格</li><li>每个节点提交其观察到的价格</li><li>计算中位数值并写入链上</li><li>节点通过质押和罚没获得经济激励</li></ol><p><strong>安全属性:</strong></p><ul><li>需要大多数节点串通才能操纵</li><li>地理和基础设施多样性防止相关故障</li><li>经济激励使节点行为与诚实报告保持一致</li></ul><p><strong>权衡:</strong> 比中心化预言机更昂贵和复杂,但提供高价值 DeFi 所需的安全保证。</p>"
+			},
+			"optimistic_oracles": {
+				"title": "乐观预言机",
+				"content": "<p>乐观预言机使用受乐观 rollup 启发的争议机制。数据被假定为正确,除非在争议窗口内受到质疑。</p><p><strong>UMA 乐观预言机的工作原理:</strong></p><ol><li><strong>提议:</strong> 任何人都可以对数据请求提出答案(如\"ETH 是否达到 $3000?\")。他们需要发布保证金。</li><li><strong>争议窗口:</strong> 在一段时间内(通常 2 小时),任何人都可以通过发布反保证金来争议提议</li><li><strong>解决:</strong> 如果没有争议,提议被接受。如果有争议,问题提交给 UMA 的 DVM(数据验证机制),由代币持有者投票</li><li><strong>结算:</strong> 正确方获得保证金,不诚实方失去保证金</li></ol><p><strong>优势:</strong></p><ul><li>极其灵活——可以回答任何是非问题或提供任何数据类型</li><li>正常运行时成本低(无争议)</li><li>支持复杂用例,如 KPI 期权和保险参数</li></ul><p><strong>权衡:</strong></p><ul><li>最终性较慢(需要争议期)</li><li>不适合实时价格数据源</li><li>争议需要人工治理</li></ul><p>乐观预言机擅长提供获取成本高或具有主观性的数据,如\"航班是否延误?\"或\"协议 X 在日期 Y 的 TVL 是多少?\"</p>"
+			}
+		},
+		"price_feeds": {
+			"title": "价格数据源:DeFi 的核心",
+			"content": "<p>价格数据源是 DeFi 最关键的预言机服务。几乎每个借贷协议、DEX、衍生品平台和稳定币都依赖于准确的价格数据。被破坏的价格数据源可能会抽干整个协议。</p>",
+			"how_price_feeds_work": {
+				"title": "价格数据源的工作原理",
+				"content": "<p>价格数据源聚合来自多个来源的价格数据,以产生单一、可靠的链上价格。</p><p><strong>典型价格数据源架构:</strong></p><ol><li><strong>数据源:</strong> 预言机节点从多个交易所(Binance、Coinbase、Kraken 等)获取价格</li><li><strong>聚合:</strong> 每个节点计算所有来源的成交量加权中位数价格</li><li><strong>链上报告:</strong> 节点将其计算的价格提交给聚合器合约</li><li><strong>最终计算:</strong> 聚合器取所有节点提交的中位数</li><li><strong>发布:</strong> 最终价格写入价格数据源合约</li></ol><p><strong>为什么使用中位数?</strong></p><p>使用中位数而不是平均值使系统能够抵抗异常值。即使某些节点或交易所报告错误价格,只要大多数(>50%)节点是诚实的,中位数仍然准确。</p><p><strong>Chainlink ETH/USD 数据源示例:</strong></p><ul><li>21 个独立节点运营商</li><li>每个从 7+ 个交易所获取数据</li><li>价格偏差 >0.5% 或每 1 小时(心跳)时更新</li><li>21 次提交的中位数成为官方价格</li></ul>"
+			},
+			"heartbeat_deviation": {
+				"title": "心跳和偏差阈值",
+				"content": "<p>价格数据源使用两种机制来确定何时更新:</p><p><strong>1. 心跳(基于时间):</strong></p><p>更新之间的最大时间间隔,无论价格变动如何。确保即使在稳定市场中数据也保持新鲜。</p><ul><li>ETH/USD:1 小时心跳</li><li>稳定币对:24 小时心跳(价格稳定)</li><li>波动性山寨币:30 分钟心跳</li></ul><p><strong>2. 偏差阈值(基于价格):</strong></p><p>当价格相对于上次链上值变动一定百分比时触发更新。</p><ul><li>主要资产(ETH、BTC):0.5% 偏差</li><li>稳定币:0.25% 偏差</li><li>长尾资产:1-2% 偏差</li></ul><p><strong>示例场景:</strong></p><p>ETH/USD 数据源,1% 偏差,1 小时心跳:</p><ul><li>上次更新:下午 1:00 的 $2,000</li><li>价格在下午 1:30 变为 $2,015 → 不更新(< 1% 偏差)</li><li>价格在下午 1:45 变为 $2,025 → 触发更新(> 1% 偏差)</li><li>如果价格保持在 $2,015,将在下午 2:00 触发更新(心跳)</li></ul><p><strong>关键考虑:</strong> 在极端波动期间,链上价格可能滞后于实时价格达到偏差阈值。协议必须实施安全机制来处理这种情况。</p>"
+			},
+			"safety_checks": {
+				"title": "实施安全的价格数据源消费",
+				"content": "<p>仅从预言机读取价格是不够的。协议必须实施安全检查以防止被利用。</p><p><strong>基本安全检查:</strong></p><p><strong>1. 过期检查:</strong></p><p>验证价格数据是最新的。如果预言机节点离线或 Gas 价格过高无法更新,可能会出现过期数据。</p><p><code>require(block.timestamp - priceTimestamp < MAX_DELAY, \"Stale price\");</code></p><p><strong>2. 熔断器:</strong></p><p>如果价格在短时间内超出合理范围,暂停操作。</p><p><code>require(abs(newPrice - oldPrice) / oldPrice < 0.10, \"Price changed >10%\");</code></p><p><strong>3. 合理性边界:</strong></p><p>拒绝超出合理范围的价格(例如,ETH 永远不应该是 $0 或 $100 万)。</p><p><code>require(price > MIN_PRICE && price < MAX_PRICE, \"Price out of bounds\");</code></p><p><strong>4. 多预言机验证:</strong></p><p>比较来自多个预言机的价格。如果它们显著偏离,说明出了问题。</p><p><code>require(abs(chainlinkPrice - pythPrice) / chainlinkPrice < 0.05, \"Oracle mismatch\");</code></p><p><strong>真实案例:</strong></p><p>Compound Finance 在读取 Chainlink 价格时实施了所有这些检查。在 2020 年 3 月的崩盘期间,当预言机更新滞后于市场价格时,他们的熔断器防止了灾难性的清算。</p>"
+			}
+		},
+		"randomness": {
+			"title": "可验证随机性(VRF)",
+			"content": "<p>在确定性区块链上生成随机数是矛盾的。然而,随机性对于游戏、NFT、彩票和公平协议机制至关重要。这就是可验证随机函数(VRF)发挥作用的地方。</p>",
+			"blockchain_randomness_problem": {
+				"title": "为什么区块链随机性很难",
+				"content": "<p><strong>幼稚的方法(全部失败):</strong></p><p><strong>1. 区块哈希作为随机性:</strong></p><p><code>uint256 random = uint256(blockhash(block.number - 1));</code></p><p><strong>失败原因:</strong> 矿工可以通过选择性地不发布区块来操纵区块哈希。对于高价值结果,矿工有动机继续挖矿直到获得有利的哈希。</p><p><strong>2. 用户提供的种子:</strong></p><p><code>function getRandom(uint256 userSeed) returns (uint256)</code></p><p><strong>失败原因:</strong> 用户可以在链下模拟结果,只在获得有利结果时提交交易。</p><p><strong>3. 未来区块哈希:</strong></p><p><code>uint256 random = uint256(blockhash(block.number + 10));</code></p><p><strong>失败原因:</strong> 区块 N+10 的区块提议者可以操纵其区块哈希(参见 #1)。此外,如果在最终性之前知道结果,用户可以抢先交易。</p><p><strong>要求:</strong></p><p>安全的区块链随机性必须是:</p><ul><li><strong>不可预测:</strong> 任何一方都无法在承诺前预测结果</li><li><strong>不可偏置:</strong> 任何一方都无法在承诺后影响结果</li><li><strong>可验证:</strong> 任何人都可以验证随机性是否正确生成</li><li><strong>抗审查:</strong> 任何一方都无法阻止随机性交付</li></ul><p>这正是 VRF 提供的功能。</p>"
+			},
+			"vrf_explained": {
+				"title": "VRF 的工作原理",
+				"content": "<p>可验证随机函数(VRF)是一种密码学原语,它生成一个随机数以及证明它是正确生成的证明。</p><p><strong>Chainlink VRF 流程:</strong></p><ol><li><strong>请求:</strong> 您的合约请求随机性并支付 LINK 代币</li><li><strong>区块承诺:</strong> 请求承诺到未来的区块哈希(在请求时不可预测)</li><li><strong>链下计算:</strong> 预言机节点使用其私钥 + 承诺的区块哈希生成随机数</li><li><strong>密码学证明:</strong> 节点生成证明,证明随机数是从区块哈希 + 其私钥正确计算的</li><li><strong>链上验证:</strong> VRF 协调器合约使用节点的公钥验证证明</li><li><strong>交付:</strong> 如果证明有效,随机数交付给您的合约</li></ol><p><strong>为什么这有效:</strong></p><ul><li>预言机在做出承诺时无法预测区块哈希</li><li>预言机无法在不破坏证明的情况下更改其私钥</li><li>任何人都可以验证随机性是否正确计算</li><li>预言机无法偏置结果(可罚没的质押确保诚实)</li></ul><p><strong>安全模型:</strong></p><p>VRF 安全性假设预言机节点无法预测未来的区块哈希,也不会与区块提议者串通。在足够的经济安全性(节点质押)下,这个假设在现实威胁模型中成立。</p>"
+			},
+			"vrf_use_cases": {
+				"title": "VRF 用例",
+				"content": "<p><strong>1. NFT 揭示和稀有度:</strong></p><p>生成不可预测的特征分配。示例:Art Blocks 生成艺术、Bored Ape Yacht Club 特征分布。</p><p><strong>2. 彩票和抽奖:</strong></p><p>无损彩票(PoolTogether)和 NFT 抽奖中的公平获胜者选择。</p><p><strong>3. 游戏:</strong></p><p>区块链游戏中的随机事件——战利品掉落、暴击、配对。</p><p><strong>4. 协议机制:</strong></p><ul><li>PoS 中的随机验证者选择</li><li>欺诈证明的随机抽样</li><li>随机化的 keeper 轮换</li></ul><p><strong>5. 空投:</strong></p><p>从符合条件的参与者中公平随机选择获胜者。</p><p><strong>最佳实践:</strong></p><p>每当随机性影响经济结果或公平性时,都应使用 VRF。对于低风险随机性(如装饰性选择),更便宜但不太安全的方法可能是可接受的。</p>"
+			}
+		},
+		"cross_chain_messaging": {
+			"title": "跨链消息传递",
+			"content": "<p>随着区块链生态系统分散在数十条链上,安全验证和响应其他链上事件的能力变得至关重要。这就是建立在预言机基础设施上的跨链消息传递协议发挥作用的地方。</p>",
+			"ccip_overview": {
+				"title": "CCIP 的工作原理",
+				"content": "<p>Chainlink 跨链互操作性协议(CCIP)支持安全的跨链消息传递和代币转移。</p><p><strong>CCIP 架构:</strong></p><ol><li><strong>提交:</strong> 在源链上,用户通过 CCIP 路由器发送消息</li><li><strong>证明:</strong> 去中心化预言机网络观察并证明消息</li><li><strong>风险管理:</strong> 辅助验证网络独立验证</li><li><strong>执行:</strong> 在目标链上,消息被交付和执行</li></ol><p><strong>关键特性:</strong></p><p><strong>可编程代币转移:</strong> 发送带有在目标链上执行操作指令的代币。</p><p>示例:从以太坊发送 USDC 到 Arbitrum 并自动存入 Aave。</p><p><strong>任意消息传递:</strong> 跨链发送任何数据,不仅仅是代币。</p><p>示例:基于链 A 的价格数据源在链 B 上触发清算。</p><p><strong>纵深防御:</strong></p><ul><li>多个独立的预言机网络验证消息</li><li>风险管理网络可以暂停可疑交易</li><li>速率限制防止被破坏时的快速资金流失</li></ul><p><strong>用例:</strong></p><ul><li>跨链借贷(链 A 的抵押品,链 B 的借款)</li><li>跨多条链的统一流动性池</li><li>跨链治理(在链 A 投票,在链 B 执行)</li><li>具有共享状态的多链 dApp</li></ul>"
+			},
+			"messaging_vs_bridges": {
+				"title": "跨链消息传递与桥接",
+				"content": "<p><strong>传统桥接:</strong></p><p>在源链上锁定代币,在目标链上铸造包装代币。简单但:</p><ul><li>创建具有不同流动性/可组合性的包装资产</li><li>锁定资金的大蜜罐吸引黑客(桥接被盗 $20 亿+)</li><li>通常是中心化或弱安全的</li></ul><p><strong>基于预言机的消息传递:</strong></p><p>跨链验证事件,无需在桥接合约中锁定大量资金。</p><ul><li>没有锁定资金的大蜜罐</li><li>可以实现原生资产转移(在源链销毁,在目标链铸造)</li><li>继承经过实战考验的预言机网络的安全性</li><li>支持通用消息传递,不仅仅是代币转移</li></ul><p><strong>权衡:</strong> 基于预言机的方法可能有稍高的延迟(需要多次确认),但通常比特定于桥接的解决方案更安全。</p><p><strong>未来:</strong> 随着协议采用像 CCIP 这样的预言机安全消息传递标准,原生跨链消息传递可能会取代大多数代币桥接。</p>"
+			}
+		},
+		"oracle_providers": {
+			"title": "预言机提供商比较",
+			"content": "<p>为您的协议选择正确的预言机至关重要。不同的提供商有不同的优势、安全模型和支持的功能。</p>",
+			"chainlink": {
+				"title": "Chainlink:行业标准",
+				"content": "<p>Chainlink 是最大且使用最广泛的预言机网络,保护着 DeFi 中超过 $750 亿的 TVL。</p><p><strong>产品:</strong></p><ul><li><strong>数据源:</strong> 15+ 条链上的 1000+ 个价格数据源</li><li><strong>VRF:</strong> 用于游戏和 NFT 的可验证随机性</li><li><strong>自动化:</strong> 用于协议维护的去中心化 keeper 网络</li><li><strong>CCIP:</strong> 跨链消息传递和代币转移</li><li><strong>Functions:</strong> 将智能合约连接到任何 API</li><li><strong>储备证明:</strong> 验证包装资产的抵押品支持</li></ul><p><strong>安全模型:</strong></p><ul><li>100+ 专业节点运营商的去中心化网络</li><li><strong>质押 v0.2:</strong> 通过可罚没质押的经济安全性(2024 年启动)</li><li>显式质押允许单个数据源选择加入加密经济安全性</li><li>信誉系统跟踪节点多年的表现</li></ul><p><strong>最适合:</strong> 需要最大安全性和可靠性的成熟 DeFi 协议。如果您正在构建一个将持有 >$1000 万 TVL 的协议,Chainlink 是默认选择。</p><p><strong>考虑:</strong> 比替代方案更昂贵。价格数据源针对主要资产进行了优化;长尾资产可能有更宽的偏差阈值。</p>"
+			},
+			"pyth": {
+				"title": "Pyth Network:超低延迟",
+				"content": "<p>Pyth Network 提供高频价格数据源,由主要交易公司提供的第一方数据驱动,具有亚秒级更新。</p><p><strong>关键特性:</strong></p><ul><li><strong>400ms 更新:</strong> 价格每秒更新 2-3 次</li><li><strong>拉取式预言机模型:</strong> 用户在需要时获取并提交价格(Gas 高效)</li><li><strong>第一方数据:</strong> 价格直接来自做市商和交易所(Jane Street、Jump、Binance、OKX)</li><li><strong>95+ 区块链:</strong> 最广泛的链支持,包括 Solana、EVM 链、Cosmos、Sui、Aptos</li><li><strong>450+ 价格数据源:</strong> 包括股票、外汇、大宗商品、加密货币</li></ul><p><strong>安全模型:</strong></p><ul><li>50+ 第一方数据提供商质押其声誉</li><li>聚合置信区间显示数据质量</li><li>Wormhole 集成用于跨链消息验证</li></ul><p><strong>最适合:</strong> 高频交易、精确清算、衍生品、永续合约。在 Solana 上流行,亚秒级更新最重要。</p><p><strong>考虑:</strong> 拉取模型要求用户提交价格更新(每笔交易额外的 Gas 成本)。第一方数据模型意味着比基于 DON 的预言机更少的独立验证点。</p>"
+			},
+			"uma": {
+				"title": "UMA:灵活数据的乐观预言机",
+				"content": "<p>UMA 的乐观预言机可以通过基于争议的机制回答任何问题或提供任何数据类型。</p><p><strong>工作原理:</strong></p><p>任何人都可以提出答案。如果在 2 小时内未被争议,则被接受。争议提交给 UMA 代币持有者投票。</p><p><strong>独特用例:</strong></p><ul><li><strong>KPI 期权:</strong> 基于达到协议里程碑支付的代币期权</li><li><strong>保险:</strong> 基于任意条件的参数化保险</li><li><strong>长尾资产:</strong> 对于传统预言机来说太小的资产的价格数据源</li><li><strong>主观数据:</strong> 需要人工判断的问题</li></ul><p><strong>示例:</strong></p><ul><li>\"Uniswap TVL 在 2024 年第四季度是否超过 $100 亿?\"</li><li>\"本月 Arbitrum 上是否发生了桥接攻击?\"</li><li>\"TOKEN_X 的 90 天平均价格是多少?\"</li></ul><p><strong>最适合:</strong> 非价格预言机需求、保险产品、合成资产,或需要灵活数据类型且不需要专用价格数据源的任何应用。</p><p><strong>考虑:</strong> 2 小时争议期意味着不适合实时价格数据源。依赖 UMA 代币价值的经济安全性进行争议解决。</p>"
+			},
+			"band": {
+				"title": "Band Protocol:Cosmos 原生预言机",
+				"content": "<p>Band Protocol 是建立在 Cosmos SDK 上的跨链预言机,为 30+ 个区块链提供数据。</p><p><strong>特性:</strong></p><ul><li>200+ 支持的数据源</li><li>自定义预言机脚本(定义自己的数据源和聚合)</li><li>IBC 集成,原生支持 Cosmos 生态系统</li><li>BandChain 验证者质押 BAND 代币(加密经济安全性)</li></ul><p><strong>最适合:</strong> Cosmos 生态系统项目,或需要自定义数据聚合逻辑的项目。</p><p><strong>考虑:</strong> 与 Chainlink 相比,节点集较小,保护的 TVL 较低。最适合 Cosmos 原生应用。</p>"
+			},
+			"api3": {
+				"title": "API3:第一方预言机",
+				"content": "<p>API3 将智能合约直接连接到 API 提供商,无需中间预言机节点。</p><p><strong>架构:</strong></p><ul><li><strong>Airnodes:</strong> 由 API 提供商自己运行的第一方预言机节点</li><li><strong>dAPIs:</strong> 从多个 Airnodes 聚合的托管数据源</li><li><strong>OEV 网络:</strong> 允许协议拍卖预言机更新权以捕获 MEV</li></ul><p><strong>理念:</strong></p><p>为什么要信任预言机节点作为中间人?让数据提供商直接签名并交付数据。</p><p><strong>最适合:</strong> 想要直接 API 集成的项目,或希望从自己的清算中捕获 OEV(预言机可提取价值)的协议。</p><p><strong>考虑:</strong> 第一方模型要求 API 提供商运行基础设施。网络效应小于已建立的预言机网络。</p>"
+			},
+			"tellor": {
+				"title": "Tellor:任何数据的无需许可预言机",
+				"content": "<p>Tellor 是一个无需许可、抗审查的预言机,任何人都可以成为数据报告者。</p><p><strong>特性:</strong></p><ul><li><strong>无需许可:</strong> 任何人都可以质押 TRB 并提交数据</li><li><strong>争议机制:</strong> 不正确的数据可以在窗口期内被争议</li><li><strong>灵活:</strong> 可以按需报告任何数据类型</li><li><strong>抗审查:</strong> 没有中心化节点来审查数据</li></ul><p><strong>最适合:</strong> 长尾资产、小众数据类型,或优先考虑抗审查而非更新频率的项目。</p><p><strong>考虑:</strong> 更新频率取决于报告者激励。对于不太受欢迎的数据,可能比推送式预言机的更新频率低。</p>"
+			},
+			"redstone": {
+				"title": "RedStone:LST 和 DeFi 的模块化预言机",
+				"content": "<p>RedStone 提供专门针对流动性质押代币和 DeFi 原语优化的预言机基础设施。</p><p><strong>特性:</strong></p><ul><li><strong>模块化设计:</strong> 三种预言机模型(Core、Classic、X)适用于不同用例</li><li><strong>LST 专注:</strong> stETH、rETH、cbETH 的专用高精度数据源</li><li><strong>EVM+ 支持:</strong> 覆盖新兴链和 L2</li><li><strong>数据打包:</strong> 高效的链上数据交付降低 Gas 成本</li></ul><p><strong>最适合:</strong> 流动性质押衍生品、新的 L2 和链、需要成本优化的预言机交付的项目。</p><p><strong>考虑:</strong> 与 Chainlink/Pyth 相比,预言机网络较新,实战测试较少。生态系统不断增长但规模较小。</p>"
+			}
+		},
+		"security": {
+			"title": "预言机安全和最佳实践",
+			"content": "<p>预言机攻击已导致数亿美元的损失。理解攻击向量和缓解策略对于构建安全协议至关重要。</p>",
+			"oracle_manipulation": {
+				"title": "预言机操纵攻击",
+				"content": "<p>预言机操纵发生在攻击者人为影响预言机价格数据源以利用 DeFi 协议时。</p><p><strong>攻击向量 1:现货价格操纵</strong></p><p>攻击者操纵预言机读取的底层价格源。</p><p><strong>示例:基于 DEX 的预言机操纵</strong></p><ol><li>协议使用 Uniswap 现货价格作为预言机(不要这样做!)</li><li>攻击者获得 10,000 ETH 的闪电贷</li><li>在 Uniswap 中将所有 ETH 兑换为 DAI,人为推高 DAI 价格</li><li>使用膨胀的 DAI 作为抵押品从协议借入最大资产</li><li>用借入的资产偿还闪电贷</li><li>价格恢复正常,协议留下坏账</li></ol><p><strong>为什么 DEX 现货价格危险:</strong></p><ul><li>可以在单笔交易中被操纵</li><li>无经济成本(使用闪电贷)</li><li>在低流动性对上特别脆弱</li></ul><p><strong>除非实施具有足够窗口的 TWAP(时间加权平均价格),否则永远不要使用 DEX 现货价格作为预言机。</strong></p>",
+				"case_mango": {
+					"title": "Mango Markets 攻击(2022 年 10 月)",
+					"description": "攻击者通过在低流动性的永续市场上交易大量 MNGO 代币来操纵价格,导致预言机报告膨胀的价格。使用膨胀的 MNGO 作为抵押品从 Mango 的金库借入 $1.1 亿。预言机正确报告了市场价格,但这些价格是被人为操纵的。这突出了预言机数据源流动性深度要求的重要性。"
+				}
+			},
+			"mitigation_strategies": {
+				"title": "预言机攻击缓解策略",
+				"content": "<p><strong>1. 使用去中心化预言机网络</strong></p><p>DON 从多个来源聚合,使操纵成本高昂。</p><p>操纵成本:必须同时操纵大多数数据源。</p><p><strong>2. 实施时间加权平均价格(TWAP)</strong></p><p>在时间窗口内(例如 30 分钟)平均价格。使闪电贷操纵成为不可能。</p><p><code>TWAP = ∑(price_i × duration_i) / total_duration</code></p><p>攻击者需要在整个 TWAP 窗口内维持操纵价格——成本极高。</p><p><strong>3. 成交量和流动性检查</strong></p><p>只接受具有足够流动性深度的来源的价格。</p><p>示例:要求报告价格 2% 范围内有 $1000 万流动性。</p><p><strong>4. 多预言机验证</strong></p><p>比较来自多个独立预言机的价格。如果它们显著偏离,暂停操作。</p><p><code>if (abs(chainlinkPrice - pythPrice) / chainlinkPrice > 0.05) revert(\"Oracle mismatch\");</code></p><p><strong>5. 熔断器</strong></p><p>如果价格超出预期波动范围,暂停协议。</p><p>示例:如果 ETH 在 1 小时内变动 >20%,则暂停。</p><p><strong>6. 抵押系数调整</strong></p><p>对依赖预言机的仓位使用保守的抵押系数(LTV 比率)。</p><p>示例:如果预言机有 1% 的偏差阈值,将 LTV 限制为 70% 而不是 80%。</p>"
+			},
+			"multi_oracle_approach": {
+				"title": "多预言机策略",
+				"content": "<p>使用多个预言机提供了防御预言机故障和操纵的纵深防御。</p><p><strong>实施模式:</strong></p><p><strong>1. 主要 + 备用:</strong></p><p>使用主要预言机(例如 Chainlink)。如果它未通过过期检查,则回退到次要预言机(例如 Pyth)。</p><p><strong>2. 价格平均:</strong></p><p>平均来自多个预言机的价格。更能抵抗单个预言机被破坏。</p><p><code>price = (chainlinkPrice + pythPrice + bandPrice) / 3</code></p><p><strong>3. 价格边界:</strong></p><p>使用一个预言机作为主要,其他预言机验证它在合理范围内。</p><p><code>require(pythPrice * 0.95 < chainlinkPrice < pythPrice * 1.05)</code></p><p><strong>4. 熔断器:</strong></p><p>如果预言机显著不一致,则暂停(表明至少一个预言机存在问题)。</p><p><strong>权衡考虑:</strong></p><ul><li><strong>成本:</strong> 多个预言机 = 多个费用/Gas 成本</li><li><strong>延迟:</strong> 必须等待所有预言机更新</li><li><strong>复杂性:</strong> 更多失败模式需要处理</li><li><strong>相关性:</strong> 确保预言机使用独立的数据源</li></ul><p>对于高价值协议(>$1 亿 TVL),多预言机方法值得其成本。</p>"
+			},
+			"implementation_best_practices": {
+				"title": "实施最佳实践",
+				"content": "<p><strong>消费预言机数据时的基本检查:</strong></p><p><strong>1. 验证数据新鲜度:</strong></p><p><code>require(block.timestamp - updatedAt <= heartbeat + 60, \"Stale price\");</code></p><p><strong>2. 合理性检查价格:</strong></p><p><code>require(price > 0 && price < MAX_SANE_PRICE, \"Invalid price\");</code></p><p><strong>3. 检查轮次完整性:</strong></p><p><code>require(answeredInRound >= roundId, \"Stale round\");</code></p><p><strong>4. 验证非零地址:</strong></p><p><code>require(oracle != address(0), \"Invalid oracle\");</code></p><p><strong>5. 优雅降级:</strong></p><p>为预言机故障制定计划。选项:</p><ul><li>暂停协议(最安全,但影响 UX)</li><li>回退到次要预言机</li><li>以保守参数继续(较低 LTV,更高保证金)</li></ul><p><strong>6. 监控和警报:</strong></p><ul><li>监控预言机更新频率</li><li>价格跳变 >X% 时发出警报</li><li>预言机过期时发出警报</li><li>监控预言机合约升级</li></ul><p><strong>7. 测试预言机故障场景:</strong></p><p>在测试中,模拟:</p><ul><li>预言机返回 0</li><li>预言机返回过期数据</li><li>预言机价格瞬间跳变 50%</li><li>预言机合约被暂停</li><li>预言机调用回滚</li></ul><p><strong>安全实施示例:</strong></p><p><code>function getPrice() public view returns (uint256) {<br/>  (uint80 roundId, int256 answer, , uint256 updatedAt, uint80 answeredInRound) = priceFeed.latestRoundData();<br/>  <br/>  require(answer > 0, \"Invalid price\");<br/>  require(updatedAt > 0, \"Invalid timestamp\");<br/>  require(answeredInRound >= roundId, \"Stale round\");<br/>  require(block.timestamp - updatedAt <= HEARTBEAT + GRACE_PERIOD, \"Stale price\");<br/>  <br/>  uint256 price = uint256(answer);<br/>  require(price >= MIN_PRICE && price <= MAX_PRICE, \"Price out of bounds\");<br/>  <br/>  return price;<br/>}</code></p>"
+			}
+		}
+	},
+
+	"glossary": {
+		"oracle": {
+			"term": "预言机",
+			"definition": "一种以可验证方式将外部数据引入区块链的服务。预言机解决了智能合约由于共识要求而无法访问链下数据或进行 API 调用的问题。"
+		},
+		"price_feed": {
+			"term": "价格数据源",
+			"definition": "一种持续在链上提供资产当前价格的预言机服务。对于 DeFi 协议确定抵押品价值、执行清算和为资产定价至关重要。"
+		},
+		"vrf": {
+			"term": "VRF(可验证随机函数)",
+			"definition": "一种在链上生成可证明随机数的密码学函数。随机性可以被任何人验证,确保它没有被预言机或请求者操纵。"
+		},
+		"heartbeat": {
+			"term": "心跳",
+			"definition": "无论价格变动如何,预言机更新之间的最大时间间隔。确保即使在价格稳定期间数据也保持新鲜。示例:1 小时心跳意味着至少每小时更新一次价格。"
+		},
+		"deviation_threshold": {
+			"term": "偏差阈值",
+			"definition": "触发预言机更新的价格变动百分比。示例:0.5% 的偏差阈值意味着当价格相对于上次链上值变动 0.5% 时,预言机会更新。"
+		},
+		"twap": {
+			"term": "TWAP(时间加权平均价格)",
+			"definition": "在一段时间内平均的价格,按每个价格持续的时间加权。能够抵抗闪电贷操纵,因为攻击者必须在整个平均窗口内维持操纵价格。"
+		},
+		"oracle_manipulation": {
+			"term": "预言机操纵",
+			"definition": "恶意行为者人为影响预言机价格数据源以利用 DeFi 协议的攻击。可能涉及操纵底层价格源或破坏预言机基础设施。"
+		},
+		"data_freshness": {
+			"term": "数据新鲜度",
+			"definition": "预言机数据的最新程度。在网络拥堵、预言机停机或未满足更新条件时可能会出现过期数据。协议应拒绝过期数据以防止被利用。"
+		},
+		"schelling_point": {
+			"term": "谢林点",
+			"definition": "在没有沟通的情况下,人们倾向于选择的解决方案,因为它看起来自然或明显。用于预言机争议解决,代币持有者投票选择'明显正确'的答案。"
+		},
+		"multi_oracle": {
+			"term": "多预言机",
+			"definition": "使用多个独立的预言机提供商来验证数据。提供冗余并增加攻击成本,因为攻击者必须同时破坏多个系统。"
+		}
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "POAP - Proof of Attendance Protocol",
+		"description": "POAP creates digital collectibles for life's moments. Mint NFT badges for events, achievements, and experiences on Gnosis Chain.",
+		"keywords": "POAP, proof of attendance, event NFTs, badges, Gnosis Chain, collectibles"
+	},
+	"overview": "POAP (Proof of Attendance Protocol) creates NFT badges that prove you were at an event or participated in an experience. These 'POAPs' have become the digital equivalent of event wristbands or stamps in a passport.\n\nPOAPs are minted on Gnosis Chain (formerly xDai) for free claiming, making them accessible for events of any size. They've been adopted by conferences, DAOs, communities, and brands worldwide.\n\nBeyond simple attendance, POAPs serve as building blocks for reputation, community membership, and access control. Your POAP collection tells the story of your journey through Web3.",
+	"features": {
+		"1": {
+			"title": "Event Badges",
+			"description": "Prove attendance NFTs"
+		},
+		"2": {
+			"title": "Free Minting",
+			"description": "Gnosis Chain = no gas"
+		},
+		"3": {
+			"title": "Easy Distribution",
+			"description": "Links, QR codes, claims"
+		},
+		"4": {
+			"title": "Collectible Gallery",
+			"description": "Display your journey"
+		},
+		"5": {
+			"title": "Token Gating",
+			"description": "Access based on POAPs"
+		},
+		"6": {
+			"title": "Developer API",
+			"description": "Build POAP integrations"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Event Attendance",
+			"description": "Badge for being there"
+		},
+		"2": {
+			"title": "Community Building",
+			"description": "Reward participation"
+		},
+		"3": {
+			"title": "Access Control",
+			"description": "Gate by POAP ownership"
+		},
+		"4": {
+			"title": "Achievement Badges",
+			"description": "Recognize accomplishments"
+		},
+		"5": {
+			"title": "Memory Collection",
+			"description": "Digital scrapbook"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What can POAPs be used for?",
+			"answer": "POAPs prove attendance and participation. They're used for: community reputation, event memories, access to exclusive content, airdrop eligibility, voting rights, and more. They're composable building blocks."
+		},
+		"2": {
+			"question": "Why are POAPs free?",
+			"answer": "POAPs mint on Gnosis Chain which has very low fees. POAP covers these minimal costs. This makes POAPs accessible for any event size. The focus is adoption, not monetization."
+		},
+		"3": {
+			"question": "How do I get POAPs?",
+			"answer": "Event organizers distribute claim links, QR codes, or secret words. Some POAPs auto-drop to attendees. Check your wallet at poap.xyz or use the POAP app. They also appear in wallet apps."
+		},
+		"4": {
+			"question": "Can I create POAPs?",
+			"answer": "Yes, apply at poap.xyz to create POAPs for your events. There's a review process to maintain quality. You'll need to describe your event and distribution method. It's free to create."
+		},
+		"5": {
+			"question": "Are POAPs valuable?",
+			"answer": "POAPs aren't meant to be traded—they're soulbound-ish. Some have secondary value from historic events. Their real value is reputation, access, and memories. Don't treat them as investments."
+		}
+	},
+	"cta": {
+		"ready": "Ready to collect moments?",
+		"button": "Explore POAP",
+		"note": "Badges for life's moments"
+	}
+}

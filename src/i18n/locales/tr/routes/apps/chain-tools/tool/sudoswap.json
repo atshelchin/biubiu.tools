@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Sudoswap - NFT AMM",
+		"description": "Sudoswap is an NFT automated market maker. Trade NFTs instantly using bonding curves with no royalties and deep liquidity.",
+		"keywords": "Sudoswap, SUDO token, NFT AMM, bonding curve, NFT liquidity, instant trading"
+	},
+	"overview": "Sudoswap revolutionized NFT trading by introducing an AMM model for NFTs. Instead of orderbook-style listings, sudoswap uses bonding curves for instant buys and sells with guaranteed liquidity.\n\nLiquidity providers create pools with bonding curves that automatically price NFTs. As NFTs are bought/sold, prices adjust along the curve. This enables instant trades without waiting for matching orders.\n\nSudoswap V2 added features like ERC-1155 support, property pools for trait-based pricing, and the SUDO governance token.",
+	"features": {
+		"1": {
+			"title": "NFT AMM",
+			"description": "Bonding curve pricing"
+		},
+		"2": {
+			"title": "Instant Trades",
+			"description": "No waiting for buyers"
+		},
+		"3": {
+			"title": "Zero Royalties",
+			"description": "No creator royalties"
+		},
+		"4": {
+			"title": "LP Pools",
+			"description": "Provide NFT liquidity"
+		},
+		"5": {
+			"title": "SUDO Token",
+			"description": "Governance token"
+		},
+		"6": {
+			"title": "Property Pools",
+			"description": "Trait-based pricing"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Instant Selling",
+			"description": "Sell NFTs immediately"
+		},
+		"2": {
+			"title": "LP Provision",
+			"description": "Earn from trading spreads"
+		},
+		"3": {
+			"title": "Collection Trading",
+			"description": "Trade fungible-like NFTs"
+		},
+		"4": {
+			"title": "Arbitrage",
+			"description": "Arb between pools"
+		},
+		"5": {
+			"title": "Floor Trading",
+			"description": "Quick floor flipping"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How does the NFT AMM work?",
+			"answer": "Sudoswap pools hold NFTs and ETH with a bonding curve. The curve sets prices—buying NFTs increases price, selling decreases it. LPs earn the spread. It's like Uniswap but for NFTs."
+		},
+		"2": {
+			"question": "What are bonding curves?",
+			"answer": "Bonding curves are mathematical formulas that determine price based on supply. Linear curves change price by fixed amounts per trade. Exponential curves change by percentages. LPs choose their curve type."
+		},
+		"3": {
+			"question": "Why no royalties?",
+			"answer": "Sudoswap doesn't enforce creator royalties at the protocol level. This attracted traders seeking to avoid royalties. The royalty debate is ongoing in NFT space—sudoswap chose trader-friendly economics."
+		},
+		"4": {
+			"question": "What are property pools?",
+			"answer": "Property pools let you create liquidity pools for specific traits. Instead of pooling any Punk, you could pool only Zombie Punks. This enables trait-specific pricing and liquidity."
+		},
+		"5": {
+			"question": "Is sudoswap safe?",
+			"answer": "Sudoswap is audited and has processed significant volume since 2022. The AMM model is simpler than traditional marketplaces. Standard DeFi risks apply—smart contracts, pool imbalance. The protocol has been reliable."
+		}
+	},
+	"cta": {
+		"ready": "Ready for instant NFT trading?",
+		"button": "Explore Sudoswap",
+		"note": "AMM for NFTs"
+	}
+}

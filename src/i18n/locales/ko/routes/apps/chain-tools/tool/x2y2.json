@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "X2Y2 - NFT Marketplace",
+		"description": "X2Y2 is a community-owned NFT marketplace with low fees and trading rewards. Buy, sell, and earn X2Y2 tokens on every trade.",
+		"keywords": "X2Y2, NFT marketplace, X2Y2 token, NFT trading, low fees, trading rewards"
+	},
+	"overview": "X2Y2 is a decentralized NFT marketplace that emerged as a community-focused alternative to OpenSea. It features lower trading fees and distributes platform revenue to token stakers.\n\nThe marketplace rewards active traders with X2Y2 tokens, creating incentives for trading activity. Users can stake X2Y2 to earn a share of platform fees.\n\nX2Y2 supports Ethereum NFTs with features like bulk listings, offers, and collection bids. It has attracted volume through its rewards program and competitive fee structure.",
+	"features": {
+		"1": {
+			"title": "Low Fees",
+			"description": "Competitive marketplace fees"
+		},
+		"2": {
+			"title": "Trading Rewards",
+			"description": "Earn X2Y2 on trades"
+		},
+		"3": {
+			"title": "Revenue Sharing",
+			"description": "Stakers earn platform fees"
+		},
+		"4": {
+			"title": "Bulk Actions",
+			"description": "List and buy in bulk"
+		},
+		"5": {
+			"title": "Collection Bids",
+			"description": "Bid on any item in collection"
+		},
+		"6": {
+			"title": "NFT Loans",
+			"description": "Borrow against NFTs"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "NFT Trading",
+			"description": "Buy and sell NFTs"
+		},
+		"2": {
+			"title": "Trading Rewards",
+			"description": "Earn while trading"
+		},
+		"3": {
+			"title": "X2Y2 Staking",
+			"description": "Earn platform revenue"
+		},
+		"4": {
+			"title": "Collection Offers",
+			"description": "Sweep floor or bid on traits"
+		},
+		"5": {
+			"title": "NFT Lending",
+			"description": "Get loans against NFTs"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What are X2Y2 fees?",
+			"answer": "X2Y2 charges 0.5% marketplace fee, lower than OpenSea's 2.5%. Creator royalties are optional on X2Y2. The low fees attracted traders, especially for high-volume activity."
+		},
+		"2": {
+			"question": "How do trading rewards work?",
+			"answer": "When you buy or sell NFTs on X2Y2, you earn X2Y2 tokens proportional to trading volume. This bootstrapped liquidity by incentivizing trading. Rewards have decreased over time as the platform matured."
+		},
+		"3": {
+			"question": "What is X2Y2 staking?",
+			"answer": "Stake X2Y2 tokens to earn a share of platform trading fees. Fees are distributed in WETH. This aligns token holder incentives with platform success. APY varies based on trading volume."
+		},
+		"4": {
+			"question": "How does X2Y2 compare to OpenSea?",
+			"answer": "X2Y2 has lower fees, trading rewards, and revenue sharing. OpenSea has more liquidity and brand recognition. X2Y2 is more trader-friendly with incentives. OpenSea better for casual users."
+		},
+		"5": {
+			"question": "Is X2Y2 safe?",
+			"answer": "X2Y2 is audited and has operated since 2022. It uses standard marketplace contracts. As with any platform, verify listings carefully. The platform has processed significant volume without major security issues."
+		}
+	},
+	"cta": {
+		"ready": "Ready to trade NFTs?",
+		"button": "Explore X2Y2",
+		"note": "Community-owned NFT marketplace"
+	}
+}

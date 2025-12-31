@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "LooksRare - NFT Marketplace",
+		"description": "LooksRare is a community-first NFT marketplace rewarding traders and stakers. Trade NFTs and earn LOOKS tokens.",
+		"keywords": "LooksRare, LOOKS token, NFT marketplace, NFT trading, staking rewards, community marketplace"
+	},
+	"overview": "LooksRare launched as a community-owned alternative to OpenSea, rewarding users with LOOKS tokens for trading activity. The platform pioneered the trading rewards model in NFT marketplaces.\n\nLOOKS stakers earn 100% of platform trading fees, creating strong alignment between token holders and platform success. This model attracted significant trading volume.\n\nLooksRare has evolved with features like aggregation across marketplaces, YOLO games, and more. It remains a significant player in the NFT marketplace ecosystem.",
+	"features": {
+		"1": {
+			"title": "Trading Rewards",
+			"description": "Earn LOOKS for trading"
+		},
+		"2": {
+			"title": "100% Fee Sharing",
+			"description": "Stakers get all platform fees"
+		},
+		"3": {
+			"title": "LOOKS Token",
+			"description": "Governance and rewards"
+		},
+		"4": {
+			"title": "Aggregation",
+			"description": "Trade across marketplaces"
+		},
+		"5": {
+			"title": "Collection Offers",
+			"description": "Bid on collections"
+		},
+		"6": {
+			"title": "YOLO Games",
+			"description": "NFT-based games"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "NFT Trading",
+			"description": "Buy and sell NFTs"
+		},
+		"2": {
+			"title": "LOOKS Staking",
+			"description": "Earn platform fees"
+		},
+		"3": {
+			"title": "Aggregated Trading",
+			"description": "Best prices across platforms"
+		},
+		"4": {
+			"title": "Collection Sweeping",
+			"description": "Bulk buy floor NFTs"
+		},
+		"5": {
+			"title": "YOLO Gaming",
+			"description": "Win NFTs in games"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is LOOKS token?",
+			"answer": "LOOKS is LooksRare's native token. It's earned through trading and can be staked to earn platform fees in WETH. LOOKS also provides governance rights over protocol decisions."
+		},
+		"2": {
+			"question": "How does fee sharing work?",
+			"answer": "LooksRare charges 2% platform fee. 100% of this goes to LOOKS stakers as WETH. This is different from X2Y2 which shares partial fees. Staking returns depend on platform volume."
+		},
+		"3": {
+			"question": "What is aggregation?",
+			"answer": "LooksRare aggregates listings from multiple marketplaces including OpenSea, Blur, and X2Y2. You can find and buy the best-priced NFTs across platforms in one interface."
+		},
+		"4": {
+			"question": "What is YOLO?",
+			"answer": "YOLO is a gamified feature where users can enter NFTs into pot-style games. Winners take all NFTs in the pot. It adds entertainment value beyond standard trading."
+		},
+		"5": {
+			"question": "Is LooksRare safe?",
+			"answer": "LooksRare is audited and has operated since January 2022. It uses standard NFT marketplace contracts. The platform has processed billions in volume. As always, verify before trading."
+		}
+	},
+	"cta": {
+		"ready": "Ready to trade and earn?",
+		"button": "Explore LooksRare",
+		"note": "Trade NFTs, earn LOOKS"
+	}
+}

@@ -1,0 +1,154 @@
+{
+	"title": "Restaking Complete Guide",
+	"subtitle": "Master EigenLayer Restaking and Liquid Restaking Tokens",
+
+	"sections": {
+		"intro": {
+			"title": "Introduction to Restaking",
+			"content": "<p>Restaking is one of the most innovative developments in Ethereum's staking ecosystem. Introduced by EigenLayer, restaking allows you to reuse your staked ETH to secure additional networks and services, earning extra rewards beyond standard staking yields.</p><p>In this comprehensive guide, you'll learn what restaking is, how it works through EigenLayer's protocol, the role of Actively Validated Services (AVS), and how liquid restaking tokens (LRTs) are making participation more accessible. We'll cover practical strategies, yield opportunities, and critical risk factors you need to understand.</p>"
+		},
+		"why_restaking": {
+			"title": "Why Restaking Matters",
+			"content": "<p>Traditional Ethereum staking secures the Ethereum network and earns you around 3-4% APR. But what if you could use that same staked ETH to secure additional services and earn more rewards?</p><p>That's the core innovation of restaking. Instead of your staked ETH only securing Ethereum, it can be 'restaked' to provide economic security for multiple services simultaneously. This creates a concept called <strong>shared security</strong>—new protocols can leverage Ethereum's existing security instead of bootstrapping their own validator sets from scratch.</p><p><strong>Benefits for participants:</strong></p><ul><li>Higher yields: Earn both ETH staking rewards + AVS rewards</li><li>Capital efficiency: One stake secures multiple services</li><li>Support emerging protocols: Help new services launch with robust security</li></ul><p><strong>Benefits for protocols:</strong></p><ul><li>Inherit Ethereum's security from day one</li><li>Lower costs than building independent validator networks</li><li>Faster time to market with proven security guarantees</li></ul>"
+		},
+		"how_it_works": {
+			"title": "How Restaking Works",
+			"content": "<p>Understanding restaking requires learning about three key concepts: EigenLayer's protocol design, Actively Validated Services (AVS), and the roles participants can take.</p>",
+			"eigenlayer_model": {
+				"title": "The EigenLayer Model",
+				"content": "<p>EigenLayer is the foundational protocol that enables restaking on Ethereum. It works through a system of smart contracts that coordinate between stakers, operators, and AVS.</p><p><strong>Core components:</strong></p><ul><li><strong>EigenPods:</strong> Smart contracts that manage your Ethereum validator's stake proof. When you natively restake, you point your validator's withdrawal credentials to an EigenPod</li><li><strong>Strategy Contracts:</strong> Manage different types of restaked assets (native ETH, liquid staking tokens like stETH)</li><li><strong>Delegation Manager:</strong> Handles the relationship between delegators (stakers) and operators</li><li><strong>Slasher:</strong> Enforces penalties for operator misbehavior across AVS</li></ul><p>The key innovation is that EigenLayer sits between Ethereum validators and new services, creating a marketplace for shared security.</p>"
+			},
+			"avs": {
+				"title": "Actively Validated Services (AVS)",
+				"content": "<p>AVS are the services and protocols that utilize restaked ETH for their security. Think of them as customers of EigenLayer's shared security marketplace.</p><p>An AVS defines specific validation tasks that operators must perform. These could be:</p><ul><li>Running oracle nodes to provide price feeds</li><li>Operating bridge validators to secure cross-chain transfers</li><li>Validating off-chain computation results</li><li>Running consensus for a rollup or sidechain</li><li>Providing data availability guarantees</li></ul><p>Each AVS sets its own requirements, rewards, and slashing conditions. Operators choose which AVS to support based on their infrastructure capabilities and risk tolerance.</p>"
+			},
+			"roles": {
+				"title": "Operators vs Delegators",
+				"content": "<p>There are two primary ways to participate in restaking:</p><p><strong>Operators:</strong></p><ul><li>Run the actual infrastructure (validator nodes, AVS-specific software)</li><li>Register with EigenLayer and opt into specific AVS</li><li>Accept delegated stake from other users</li><li>Earn commissions on rewards from delegated stake</li><li>Subject to slashing if they misbehave or go offline</li><li>Requires technical expertise and reliable infrastructure</li></ul><p><strong>Delegators:</strong></p><ul><li>Stake or restake ETH without running infrastructure</li><li>Choose operators to delegate their stake to</li><li>Earn rewards minus operator commission (typically 5-10%)</li><li>Share slashing risk with chosen operator</li><li>Can be done through native restaking or liquid restaking tokens</li><li>Accessible to anyone with ETH</li></ul><p>Most users will be delegators, choosing trusted operators to handle the technical work while earning rewards on their restaked ETH.</p>"
+			}
+		},
+		"avs_ecosystem": {
+			"title": "The AVS Ecosystem",
+			"content": "<p>The AVS ecosystem is rapidly growing as protocols recognize the benefits of shared security. Let's explore the types of services being built and real examples.</p>",
+			"types_of_avs": {
+				"title": "Types of AVS",
+				"content": "<p>AVS can be categorized by the type of service they provide:</p><p><strong>1. Oracle Networks</strong><br/>Decentralized price feeds and real-world data providers. Restaking provides economic security for data accuracy.</p><p><strong>2. Bridges and Interoperability</strong><br/>Cross-chain bridges use restaked ETH to secure asset transfers between blockchains.</p><p><strong>3. Data Availability Layers</strong><br/>Protocols that guarantee rollup data is available and retrievable. Critical for rollup security.</p><p><strong>4. Sequencers</strong><br/>Decentralized sequencers for rollups, replacing centralized operators with restaked security.</p><p><strong>5. Coprocessors</strong><br/>Off-chain computation engines that execute complex operations, verified through restaking.</p><p><strong>6. Keeper Networks</strong><br/>Automated services that trigger on-chain actions (liquidations, rebases, etc.) secured by restaking.</p>"
+			},
+			"examples": {
+				"title": "Notable AVS Examples",
+				"content": "<p><strong>EigenDA:</strong> EigenLayer's own data availability solution. One of the first AVS to launch, providing cheap and scalable data availability for rollups.</p><p><strong>AltLayer:</strong> Restaked rollups that use EigenLayer for enhanced security and fast finality.</p><p><strong>Espresso:</strong> Shared sequencer for rollups, preventing MEV and censorship through decentralization.</p><p><strong>Lagrange:</strong> ZK coprocessor for provable computation over large datasets.</p><p><strong>Witness Chain:</strong> Decentralized physical infrastructure network coordination.</p><p>As of late 2024, dozens of AVS are in development or testing phases. The ecosystem is expected to grow significantly throughout 2025 as AVS rewards begin flowing to restakers.</p>"
+			}
+		},
+		"participation": {
+			"title": "How to Participate in Restaking",
+			"content": "<p>There are multiple ways to participate in restaking, each with different requirements, risks, and potential rewards. Choose based on your technical capabilities and capital size.</p>",
+			"native_restaking": {
+				"title": "Native Restaking",
+				"content": "<p>Native restaking involves using your Ethereum validator's stake directly with EigenLayer.</p><p><strong>Requirements:</strong></p><ul><li>32 ETH minimum (standard validator requirement)</li><li>Running an Ethereum validator node</li><li>Technical knowledge to configure EigenPod</li><li>Setting withdrawal credentials to your EigenPod address</li></ul><p><strong>Process:</strong></p><ol><li>Deploy an EigenPod through EigenLayer</li><li>Point your validator's withdrawal credentials to the EigenPod</li><li>Register as an operator or delegate to an existing operator</li><li>Opt into specific AVS (if operating) or let your operator manage it</li><li>Start earning both ETH staking + AVS rewards</li></ol><p><strong>Advantages:</strong> Maximum control, no intermediary risk, highest potential yield<br/><strong>Disadvantages:</strong> High technical barrier, 32 ETH minimum, illiquid until withdrawal</p>"
+			},
+			"lrt_restaking": {
+				"title": "Liquid Restaking via LRTs",
+				"content": "<p>Liquid restaking tokens (LRTs) let you participate without running validators or meeting the 32 ETH minimum.</p><p><strong>How it works:</strong></p><ol><li>Deposit ETH (or LSTs like stETH) into a liquid restaking protocol</li><li>Receive LRT tokens (eETH, ezETH, pufETH, etc.)</li><li>The protocol handles native restaking or LST restaking behind the scenes</li><li>Your LRT accrues both staking and restaking rewards</li><li>Use your LRT in DeFi while still earning restaking yield</li></ol><p><strong>Popular LRT protocols:</strong></p><ul><li><strong>Ether.fi (eETH):</strong> Decentralized, focuses on node operator distribution</li><li><strong>Renzo (ezETH):</strong> Multi-chain strategy, integrated with major DeFi protocols</li><li><strong>Puffer (pufETH):</strong> Anti-slashing technology, focuses on solo staker friendliness</li><li><strong>Kelp DAO (rsETH):</strong> Multi-asset restaking supporting various LSTs</li><li><strong>Swell (rswETH):</strong> Combines liquid staking + restaking</li></ul><p><strong>Advantages:</strong> Low barrier to entry, liquid position, DeFi composability<br/><strong>Disadvantages:</strong> Smart contract risk, depends on protocol's operator choices</p>"
+			},
+			"delegating": {
+				"title": "Choosing Operators for Delegation",
+				"content": "<p>Whether you're natively restaking or using LRTs, understanding operator selection is crucial for maximizing returns and minimizing risks.</p><p><strong>Factors to evaluate:</strong></p><ul><li><strong>Uptime history:</strong> Check operator performance metrics on EigenLayer</li><li><strong>Commission rate:</strong> Typically 5-10%, lower isn't always better if uptime suffers</li><li><strong>AVS participation:</strong> Which services are they validating? More AVS = more reward potential</li><li><strong>Team reputation:</strong> Established operators with proven track records preferred</li><li><strong>Stake distribution:</strong> Avoid over-concentrated operators to reduce systemic risk</li><li><strong>Slashing history:</strong> Has this operator ever been slashed?</li></ul><p>Most LRT protocols handle operator selection automatically, but understanding their strategies helps you choose the right LRT.</p>"
+			}
+		},
+		"liquid_restaking_tokens": {
+			"title": "Liquid Restaking Tokens Deep Dive",
+			"content": "<p>LRTs are revolutionizing restaking accessibility, much like liquid staking tokens (LSTs) did for Ethereum staking. Let's explore why they matter and how to use them effectively.</p>",
+			"benefits": {
+				"title": "Why Use Liquid Restaking Tokens?",
+				"content": "<p><strong>1. Capital Efficiency</strong><br/>Your ETH earns staking yield + restaking rewards + DeFi yields simultaneously. Deploy your LRT as collateral in lending markets, provide liquidity on DEXs, or participate in yield strategies—all while maintaining restaking exposure.</p><p><strong>2. Lower Barriers</strong><br/>No 32 ETH minimum, no node operation, no technical complexity. Anyone can participate with any amount.</p><p><strong>3. Liquidity</strong><br/>Unlike native restaking, LRTs can be traded instantly. Exit positions without waiting for validator withdrawals.</p><p><strong>4. Diversification</strong><br/>Most LRT protocols delegate across multiple operators and opt into multiple AVS, spreading risk automatically.</p><p><strong>5. Auto-Compounding</strong><br/>Many LRTs automatically reinvest rewards, compounding your returns without manual intervention.</p>"
+			},
+			"major_lrts": {
+				"title": "Comparing Major LRTs",
+				"content": "<p><strong>Ether.fi (eETH)</strong><br/>TVL: ~$10B+ (largest LRT protocol)<br/>Strategy: Wide operator distribution, Operation Solo Staker program supporting independent validators<br/>Unique feature: Liquid staking + restaking in one token<br/>DeFi integration: Excellent (Pendle, Curve, Aave support)</p><p><strong>Renzo (ezETH)</strong><br/>TVL: ~$3B+<br/>Strategy: Active AVS selection, multi-chain deployment<br/>Unique feature: Strong institutional partnerships<br/>DeFi integration: Very good (available on Arbitrum, Base, BNB Chain)</p><p><strong>Puffer (pufETH)</strong><br/>TVL: ~$2B+<br/>Strategy: Anti-slashing technology using secure-signer<br/>Unique feature: Validator tickets (no-loss lottery for node operation)<br/>DeFi integration: Growing (focus on Ethereum mainnet)</p><p><strong>Kelp DAO (rsETH)</strong><br/>TVL: ~$1B+<br/>Strategy: Accepts multiple LSTs (stETH, rETH, cbETH, etc.)<br/>Unique feature: LRT aggregator model<br/>DeFi integration: Good (multi-chain presence)</p><p><strong>Swell (rswETH)</strong><br/>TVL: ~$1.5B+<br/>Strategy: Restaked version of existing swETH liquid staking token<br/>Unique feature: Pearl rewards program<br/>DeFi integration: Moderate</p><p><em>Note: TVL figures are approximate and change frequently. Always verify current metrics before investing.</em></p>"
+			},
+			"using_lrts": {
+				"title": "Strategies for Using LRTs",
+				"content": "<p><strong>Hold for Yield</strong><br/>Simplest strategy: Hold your LRT and earn base staking + restaking rewards. Expected combined APR: 4-8% depending on AVS reward activations.</p><p><strong>Leverage on Lending Markets</strong><br/>Deposit LRT as collateral on Aave, borrow stablecoins or ETH, use borrowed funds to acquire more LRT. Amplify returns but accept liquidation risk.</p><p><strong>Liquidity Provision</strong><br/>Provide LRT/ETH or LRT/stablecoin liquidity on Curve or Balancer. Earn trading fees + LRT yield + potential liquidity mining rewards.</p><p><strong>Pendle Fixed Yield</strong><br/>Split your LRT into principal token (PT) and yield token (YT). Sell YT to lock in guaranteed fixed yield, or buy YT to speculate on high future yields.</p><p><strong>Points Farming</strong><br/>Many LRT protocols offer points programs that may convert to token airdrops. Compare point earning rates across protocols and strategies.</p><p><strong>Risk-Managed Approach</strong><br/>Diversify across multiple LRTs (25% each in 4 different protocols) to reduce protocol-specific risks while maintaining restaking exposure.</p>"
+			}
+		},
+		"yield_opportunities": {
+			"title": "Yield Opportunities in Restaking",
+			"content": "<p>Understanding the yield stack is crucial for evaluating restaking opportunities and comparing them to alternatives.</p>",
+			"staking_yield": {
+				"title": "Base Staking Yield",
+				"content": "<p>All restaking starts with Ethereum staking yield as the foundation:</p><ul><li><strong>Consensus rewards:</strong> ~3-4% APR from proposing and attesting to blocks</li><li><strong>Execution rewards:</strong> Variable, depends on network activity and MEV</li><li><strong>Combined:</strong> Typically 3.5-4.5% APR</li></ul><p>This yield accrues automatically to all staked ETH, including restaked positions.</p>"
+			},
+			"restaking_rewards": {
+				"title": "Additional Restaking Rewards",
+				"content": "<p>Restaking adds an extra yield layer on top of base staking:</p><p><strong>AVS Fees</strong><br/>Some AVS charge fees for their services (like EigenDA charging rollups for data availability). A portion flows to restakers securing the AVS.</p><p><strong>AVS Token Emissions</strong><br/>Many AVS will issue their own tokens and distribute them to restakers. This is the expected primary source of restaking rewards in the near term.</p><p><strong>Expected Combined APR:</strong> Base staking (3.5-4.5%) + AVS rewards (estimated 1-5% initially, potentially higher during token launches) = 5-10% total APR</p><p><strong>Important:</strong> AVS rewards are not yet fully active across the ecosystem. Early 2025 is expected to see significant AVS reward launches. Current yields are primarily from points programs and staking.</p>"
+			},
+			"defi_strategies": {
+				"title": "DeFi Yield Strategies with LRTs",
+				"content": "<p>LRT holders can stack additional yields through DeFi participation:</p><p><strong>Lending Protocol Deposits</strong><br/>Supply LRTs on Aave or similar platforms. Current supply APR: 1-3% (low because it's new collateral). As adoption grows, borrow demand may increase rates.</p><p><strong>Curve Liquidity Provision</strong><br/>Provide liquidity to LRT/ETH pools. Earn 3-8% from trading fees + CRV emissions + potential protocol incentives.</p><p><strong>Pendle Yield Trading</strong><br/>Advanced strategy: Trade future yield through Pendle's YT tokens. When you believe AVS rewards will activate soon, buy underpriced YT tokens to capture the yield spike.</p><p><strong>Leveraged Restaking</strong><br/>Deposit LRT → Borrow ETH → Buy more LRT → Repeat. Can achieve 1.5-3x leverage. High risk: If LRT depegs or yield doesn't cover borrow costs, positions can be liquidated.</p><p><strong>Example Stacked Yield:</strong><br/>eETH base yield: 4%<br/>AVS rewards (estimated): 2%<br/>Curve LP trading fees: 3%<br/>CRV emissions: 2%<br/>Protocol incentives: 3%<br/>Total: ~14% APR (not accounting for IL or risk)</p><p><em>Always understand the risks before pursuing high-yield strategies. Higher yields generally mean higher complexity and risk.</em></p>"
+			}
+		},
+		"risks": {
+			"title": "Risks and Safety Considerations",
+			"content": "<p>Restaking introduces new risks beyond standard Ethereum staking. Understanding and mitigating these risks is essential for safe participation.</p>",
+			"slashing_risk": {
+				"title": "Slashing Risk",
+				"content": "<p>Slashing is the most significant risk unique to restaking. While Ethereum validators can only be slashed for Ethereum consensus violations, restaked positions can be slashed for:</p><ul><li><strong>Ethereum consensus violations:</strong> Double signing, surround voting (traditional slashing)</li><li><strong>AVS-specific violations:</strong> Each AVS defines its own slashing conditions</li><li><strong>Operator failures:</strong> Extended downtime, incorrect computations, censorship</li></ul><p><strong>Slashing severity:</strong></p><ul><li>Most AVS are launching with conservative slashing (0.5-2% penalties initially)</li><li>Ethereum consensus slashing can be severe (up to entire 32 ETH in extreme cases)</li><li>Multiple simultaneous slashes can compound</li></ul><p><strong>Mitigation:</strong></p><ul><li>Choose operators with perfect slashing history and high uptime</li><li>Start by delegating to operators participating in fewer AVS</li><li>Diversify across multiple operators if possible</li><li>Monitor operator performance regularly</li><li>For native restakers: understand each AVS's slashing conditions before opting in</li></ul>"
+			},
+			"smart_contract_risk": {
+				"title": "Smart Contract and Protocol Risk",
+				"content": "<p>Restaking involves multiple layers of smart contracts, each introducing potential vulnerabilities:</p><p><strong>EigenLayer Core Contracts</strong><br/>The foundation of the ecosystem. Extensively audited but still carries risk. A core contract exploit could affect all restakers.</p><p><strong>LRT Protocol Contracts</strong><br/>Each LRT protocol has its own contract system. Newer protocols may have undiscovered vulnerabilities.</p><p><strong>AVS Contracts</strong><br/>Each AVS deploys contracts for validation logic and reward distribution. Bugs here could affect their restakers.</p><p><strong>Integration Risks</strong><br/>Using LRTs in DeFi adds more contract layers (Curve pools, Aave markets, etc.), compounding risk.</p><p><strong>Mitigation:</strong></p><ul><li>Stick to audited protocols with long track records</li><li>Diversify across multiple LRT protocols</li><li>Start with smaller positions until protocols prove themselves</li><li>Check if protocols have insurance coverage (Nexus Mutual, InsurAce)</li><li>Review audit reports before depositing significant amounts</li></ul>"
+			},
+			"liquidity_risk": {
+				"title": "Liquidity and Depeg Risk",
+				"content": "<p>LRTs represent claims on restaked assets but can trade at premiums or discounts to their underlying value:</p><p><strong>Depeg Scenarios:</strong></p><ul><li><strong>Mass exit demand:</strong> If many holders want to exit simultaneously, LRT may trade below net asset value</li><li><strong>Operator slashing:</strong> Large slashing events reduce underlying value</li><li><strong>Smart contract concerns:</strong> Perceived risks can cause temporary depegs</li><li><strong>Liquidity crises:</strong> Low DEX liquidity can cause price volatility</li></ul><p><strong>Withdrawal mechanics:</strong></p><ul><li>Most LRTs don't offer instant redemptions at face value</li><li>Withdrawal queues may take 7+ days during normal conditions</li><li>During stress, queues could extend longer</li><li>This creates arbitrage opportunities but also exit friction</li></ul><p><strong>Mitigation:</strong></p><ul><li>Maintain exit liquidity on DEXs by providing to LRT/ETH pools</li><li>Don't overleverage LRT positions you might need to exit quickly</li><li>Diversify across LRTs with different withdrawal mechanisms</li><li>Understand each protocol's withdrawal process before entering</li><li>Monitor LRT/ETH price ratios for significant deviations</li></ul>"
+			},
+			"mitigation": {
+				"title": "Risk Mitigation Best Practices",
+				"content": "<p>Follow these principles to participate in restaking more safely:</p><p><strong>1. Start Small</strong><br/>Begin with 5-10% of your ETH position. As you gain confidence and protocols prove themselves, consider increasing exposure.</p><p><strong>2. Diversify</strong><br/>Don't put all your restaking into one LRT protocol or under one operator. Spread across 2-4 different approaches.</p><p><strong>3. Research Operators</strong><br/>If choosing native restaking or a protocol that lets you select operators, thoroughly vet their history, infrastructure, and team.</p><p><strong>4. Monitor Regularly</strong><br/>Set up alerts for large depegs, check operator performance monthly, stay informed about AVS launches and changes.</p><p><strong>5. Understand AVS</strong><br/>Before your funds back a new AVS (directly or through an LRT protocol), understand what it does, its slashing conditions, and its security model.</p><p><strong>6. Plan Your Exit</strong><br/>Know how to exit your position before entering. Understand withdrawal times, liquidity sources, and potential costs.</p><p><strong>7. Yield Reality Check</strong><br/>If advertised yields seem too high (>20% APR on what should be conservative strategies), understand where that yield comes from and what risks enable it.</p><p><strong>8. Keep Learning</strong><br/>The restaking ecosystem is evolving rapidly. Stay updated on new AVS launches, protocol updates, and emerging risks.</p>"
+			}
+		}
+	},
+
+	"glossary": {
+		"restaking": {
+			"term": "Restaking",
+			"definition": "The process of reusing already-staked ETH to provide economic security for additional protocols and services beyond Ethereum itself, enabled by EigenLayer."
+		},
+		"avs": {
+			"term": "AVS (Actively Validated Service)",
+			"definition": "A protocol or service that uses restaked ETH for its security. AVS pay rewards to restakers in exchange for economic security guarantees."
+		},
+		"operator": {
+			"term": "Operator",
+			"definition": "An entity that runs the technical infrastructure for validators and AVS nodes. Operators accept delegated stake and earn commissions while taking on slashing risk."
+		},
+		"delegator": {
+			"term": "Delegator",
+			"definition": "A user who stakes or restakes ETH by delegating it to an operator rather than running infrastructure themselves. Delegators earn rewards minus operator commission."
+		},
+		"slashing": {
+			"term": "Slashing",
+			"definition": "The penalty mechanism where staked ETH is partially or fully burned for validator misbehavior, including both Ethereum consensus violations and AVS-specific failures."
+		},
+		"lrt": {
+			"term": "LRT (Liquid Restaking Token)",
+			"definition": "A token representing restaked ETH that can be freely traded and used in DeFi while still earning restaking rewards. Examples: eETH, ezETH, pufETH."
+		},
+		"eigenpod": {
+			"term": "EigenPod",
+			"definition": "A smart contract deployed by EigenLayer users that manages their validator's stake proofs and withdrawal credentials for native restaking."
+		},
+		"shared_security": {
+			"term": "Shared Security",
+			"definition": "The concept where multiple protocols share the same economic security base (restaked ETH) instead of each building independent validator sets."
+		},
+		"delegation": {
+			"term": "Delegation",
+			"definition": "The act of assigning your stake to an operator who will run the required infrastructure on your behalf in exchange for a commission."
+		},
+		"withdrawal": {
+			"term": "Withdrawal (Restaking)",
+			"definition": "The process of exiting restaking positions and retrieving your ETH. May involve queues, delays, and partial unstaking from multiple AVS."
+		}
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Lens Protocol - Decentralized Social Graph",
+		"description": "Lens Protocol is a decentralized social graph built on Polygon. Own your social identity and content across Web3 applications.",
+		"keywords": "Lens Protocol, social graph, Web3 social, decentralized social, Polygon, content ownership"
+	},
+	"overview": "Lens Protocol is a decentralized social graph that lets users own their social identity and content. Built by the Aave team on Polygon, Lens provides the infrastructure for Web3 social applications.\n\nYour Lens profile is an NFT that you control. Followers, content, and interactions are stored on-chain, portable across any app built on Lens. This breaks the lock-in of traditional social platforms.\n\nLens has grown a vibrant ecosystem of social apps including Lenster, Orb, and Hey. Content creators can monetize directly through collect modules without platform intermediaries.",
+	"features": {
+		"1": {
+			"title": "Profile NFTs",
+			"description": "Own your social identity"
+		},
+		"2": {
+			"title": "Portable Graph",
+			"description": "Followers across all apps"
+		},
+		"3": {
+			"title": "Content Ownership",
+			"description": "Own what you create"
+		},
+		"4": {
+			"title": "Collect Modules",
+			"description": "Monetize content directly"
+		},
+		"5": {
+			"title": "Polygon Native",
+			"description": "Low-cost social actions"
+		},
+		"6": {
+			"title": "Open Ecosystem",
+			"description": "Many apps, one graph"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Social Posting",
+			"description": "Share content you own"
+		},
+		"2": {
+			"title": "Creator Monetization",
+			"description": "Sell content as collects"
+		},
+		"3": {
+			"title": "Building Audience",
+			"description": "Portable follower base"
+		},
+		"4": {
+			"title": "App Development",
+			"description": "Build on Lens graph"
+		},
+		"5": {
+			"title": "Community",
+			"description": "Join Web3 social communities"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is a social graph?",
+			"answer": "A social graph is the network of connections between users—followers, friends, interactions. On Twitter, this is owned by Twitter. On Lens, you own it as an NFT, portable to any Lens app."
+		},
+		"2": {
+			"question": "How does Lens differ from Twitter?",
+			"answer": "Twitter owns your data and followers. Lens stores them on-chain as your property. You can use any Lens app with the same profile. No platform can ban you or delete your content. You monetize directly."
+		},
+		"3": {
+			"question": "What are Lens apps?",
+			"answer": "Many apps are built on Lens: Lenster (Twitter-like), Hey (social), Orb (mobile), Buttrfly (cross-posting), and more. All share the same social graph—followers on one work on all."
+		},
+		"4": {
+			"question": "What are collect modules?",
+			"answer": "Collect modules let followers 'collect' your posts as NFTs. You set a price and they pay directly to you. It's native content monetization without platform fees or algorithms deciding who sees it."
+		},
+		"5": {
+			"question": "Is Lens free to use?",
+			"answer": "Lens profiles were initially free but limited. Now profiles require purchasing or receiving from existing holders. Posting costs minimal Polygon gas. Some apps sponsor gas for users."
+		}
+	},
+	"cta": {
+		"ready": "Ready to own your social identity?",
+		"button": "Explore Lens",
+		"note": "Web3 social graph"
+	}
+}

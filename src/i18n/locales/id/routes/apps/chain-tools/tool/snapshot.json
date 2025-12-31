@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Snapshot - Decentralized Governance",
+		"description": "Snapshot enables gas-free DAO voting. Create proposals and vote using tokens without spending gas on Ethereum.",
+		"keywords": "Snapshot, DAO voting, governance, gas-free voting, proposals, Web3 governance"
+	},
+	"overview": "Snapshot revolutionized DAO governance by enabling gas-free voting. Instead of expensive on-chain transactions, Snapshot uses signed messages that are verified off-chain but cryptographically secure.\n\nNearly every major DAO uses Snapshot for governance. Create a space, set voting strategies, and let token holders vote on proposals without any gas costs. Results can trigger on-chain execution via tools like SafeSnap.\n\nSnapshot's flexibility supports various voting mechanisms: token-weighted, quadratic, NFT-based, and more. It's become the default governance layer for Web3 organizations.",
+	"features": {
+		"1": {
+			"title": "Gas-Free Voting",
+			"description": "Sign, don't transact"
+		},
+		"2": {
+			"title": "Custom Strategies",
+			"description": "Flexible voting power"
+		},
+		"3": {
+			"title": "DAO Spaces",
+			"description": "Your governance hub"
+		},
+		"4": {
+			"title": "On-Chain Execution",
+			"description": "SafeSnap integration"
+		},
+		"5": {
+			"title": "Delegation",
+			"description": "Delegate your vote"
+		},
+		"6": {
+			"title": "Multi-Voting",
+			"description": "Various mechanisms"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DAO Governance",
+			"description": "Vote on proposals"
+		},
+		"2": {
+			"title": "Create Proposals",
+			"description": "Submit ideas for vote"
+		},
+		"3": {
+			"title": "Run a DAO",
+			"description": "Set up governance"
+		},
+		"4": {
+			"title": "Delegation",
+			"description": "Delegate voting power"
+		},
+		"5": {
+			"title": "Signal Voting",
+			"description": "Gauge community sentiment"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How is voting gas-free?",
+			"answer": "Snapshot uses signed messages (EIP-712) instead of transactions. Your wallet signs a vote, Snapshot stores it on IPFS. No blockchain transaction needed. The signature proves you voted with your tokens."
+		},
+		"2": {
+			"question": "Are Snapshot votes binding?",
+			"answer": "By default, Snapshot votes are 'signaling'—someone must execute results manually. SafeSnap integration can make votes automatically execute on-chain. Many DAOs treat Snapshot results as binding by social contract."
+		},
+		"3": {
+			"question": "What are voting strategies?",
+			"answer": "Strategies define voting power. Token-weighted uses token balance. Quadratic uses square root. NFT-based counts NFTs. You can combine strategies. Custom strategies can use any on-chain data."
+		},
+		"4": {
+			"question": "How do I create a DAO space?",
+			"answer": "Go to snapshot.org and create a space. Configure voting strategies, set admins, customize appearance. You'll need a connected wallet. Any project can create a space for their community."
+		},
+		"5": {
+			"question": "Is Snapshot decentralized?",
+			"answer": "Votes are stored on IPFS and verifiable. The frontend is centralized but votes can be verified independently. It's 'sufficiently decentralized'—not fully trustless but practical and widely trusted."
+		}
+	},
+	"cta": {
+		"ready": "Ready to govern?",
+		"button": "Explore Snapshot",
+		"note": "Gas-free DAO voting"
+	}
+}

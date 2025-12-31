@@ -12,6 +12,7 @@ import { explorerGuide } from './explorer';
 import { infraGuide } from './infra';
 import { l2Guide } from './l2';
 import { nftGuide } from './nft';
+import { oracleGuide } from './oracle';
 import { securityGuide } from './security';
 import { stablecoinGuide } from './stablecoin';
 import { walletGuide } from './wallet';
@@ -27,6 +28,7 @@ export const categoryGuides: Partial<Record<CategoryId, CategoryGuide>> = {
 	infra: infraGuide,
 	l2: l2Guide,
 	nft: nftGuide,
+	oracle: oracleGuide,
 	security: securityGuide,
 	stablecoin: stablecoinGuide,
 	wallet: walletGuide

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Farcaster - Decentralized Social Network",
+		"description": "Farcaster is a sufficiently decentralized social network. Build social apps with Frames on the crypto-native Twitter alternative.",
+		"keywords": "Farcaster, Warpcast, Frames, decentralized social, crypto Twitter, Web3 social"
+	},
+	"overview": "Farcaster is a sufficiently decentralized social protocol that's become the home of crypto Twitter. Unlike fully on-chain solutions, Farcaster uses a hybrid architecture for practical social experiences.\n\nThe main client Warpcast feels like Twitter but for crypto natives. Farcaster Frames revolutionized the space by enabling interactive mini-apps within posts—polls, mints, games, transactions.\n\nFarcaster has attracted significant crypto community attention with viral Frames campaigns and organic growth. It's backed by major funding and positioned as the leading crypto social platform.",
+	"features": {
+		"1": {
+			"title": "Frames",
+			"description": "Interactive apps in posts"
+		},
+		"2": {
+			"title": "Warpcast",
+			"description": "Main client app"
+		},
+		"3": {
+			"title": "Sufficiently Decentralized",
+			"description": "Practical hybrid model"
+		},
+		"4": {
+			"title": "Channels",
+			"description": "Topic-based communities"
+		},
+		"5": {
+			"title": "Identity",
+			"description": "Crypto-native identity"
+		},
+		"6": {
+			"title": "Open Protocol",
+			"description": "Build your own client"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Crypto Social",
+			"description": "Connect with crypto community"
+		},
+		"2": {
+			"title": "Frames Development",
+			"description": "Build interactive experiences"
+		},
+		"3": {
+			"title": "Community Building",
+			"description": "Create channels"
+		},
+		"4": {
+			"title": "Marketing",
+			"description": "Viral Frame campaigns"
+		},
+		"5": {
+			"title": "Identity",
+			"description": "Build reputation"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What are Frames?",
+			"answer": "Frames are interactive mini-apps that live inside Farcaster posts. Click a Frame to vote in polls, mint NFTs, play games, or make transactions. They went viral and defined Farcaster's unique value."
+		},
+		"2": {
+			"question": "What is sufficiently decentralized?",
+			"answer": "Farcaster isn't fully on-chain—that would be too slow. It uses hubs (servers) that sync data. Anyone can run a hub. Identity is on Optimism. It's decentralized enough that no single party controls it."
+		},
+		"3": {
+			"question": "How is Farcaster different from Lens?",
+			"answer": "Lens is fully on-chain on Polygon. Farcaster uses hybrid architecture for better UX. Farcaster has Frames, Lens has collect modules. Farcaster feels more like Twitter, Lens more like a protocol."
+		},
+		"4": {
+			"question": "What is Warpcast?",
+			"answer": "Warpcast is the main Farcaster client, built by the core team. It's where most users are. Other clients exist (Supercast, etc.) but Warpcast is dominant. Think Twitter app for Farcaster protocol."
+		},
+		"5": {
+			"question": "Does Farcaster cost money?",
+			"answer": "Farcaster has yearly storage fees (currently ~$5/year in ETH). This prevents spam and funds infrastructure. The fee is minimal but creates some barrier versus free platforms."
+		}
+	},
+	"cta": {
+		"ready": "Ready to join crypto social?",
+		"button": "Explore Farcaster",
+		"note": "Home of Frames"
+	}
+}

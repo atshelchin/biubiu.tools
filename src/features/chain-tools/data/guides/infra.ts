@@ -102,7 +102,7 @@ export const infraGuide: CategoryGuide = {
 					contentKey:
 						'routes/apps/chain-tools/infra/guide.sections.data_apis.indexing_querying.content',
 					toolMentions: [
-						{ toolId: 'thegraph', context: 'decentralized indexing' },
+						{ toolId: 'the-graph', context: 'decentralized indexing' },
 						{ toolId: 'moralis', context: 'ready-made APIs' }
 					]
 				},
@@ -274,7 +274,7 @@ export const infraGuide: CategoryGuide = {
 		'alchemy',
 		'infura',
 		'quicknode',
-		'thegraph',
+		'the-graph',
 		'moralis',
 		'ipfs',
 		'arweave',

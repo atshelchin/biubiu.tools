@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Immutable - Web3 Gaming Platform",
+		"description": "Immutable provides infrastructure for Web3 gaming with gas-free NFT trading. Build and play games on ImmutableX and Immutable zkEVM.",
+		"keywords": "Immutable, IMX token, ImmutableX, zkEVM, Web3 gaming, gas-free NFTs"
+	},
+	"overview": "Immutable is the leading platform for Web3 gaming, providing infrastructure for NFT minting, trading, and game development. It operates two networks: ImmutableX (StarkEx rollup) and Immutable zkEVM.\n\nImmutableX offers gas-free minting and trading of NFTs, making it ideal for gaming where frequent transactions are needed. Major games like Gods Unchained and Illuvium are built on Immutable.\n\nThe IMX token powers the ecosystem for staking, governance, and paying protocol fees. Immutable is backed by significant funding and partnerships with major gaming studios.",
+	"features": {
+		"1": {
+			"title": "Gas-Free NFTs",
+			"description": "Zero gas for minting/trading"
+		},
+		"2": {
+			"title": "Two Networks",
+			"description": "ImmutableX and zkEVM"
+		},
+		"3": {
+			"title": "Gaming Focus",
+			"description": "Built for game developers"
+		},
+		"4": {
+			"title": "IMX Token",
+			"description": "Governance and staking"
+		},
+		"5": {
+			"title": "Instant Trades",
+			"description": "Fast transaction finality"
+		},
+		"6": {
+			"title": "Developer Tools",
+			"description": "SDKs and APIs for games"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Gaming NFTs",
+			"description": "Trade in-game items"
+		},
+		"2": {
+			"title": "Game Development",
+			"description": "Build Web3 games"
+		},
+		"3": {
+			"title": "NFT Trading",
+			"description": "Gas-free marketplace"
+		},
+		"4": {
+			"title": "IMX Staking",
+			"description": "Earn protocol rewards"
+		},
+		"5": {
+			"title": "Collection Creation",
+			"description": "Launch NFT collections"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How is trading gas-free?",
+			"answer": "ImmutableX uses StarkEx, a ZK-rollup that batches transactions. Users sign trades off-chain, and Immutable batches them to Ethereum. The platform subsidizes gas costs. Users pay zero gas for trades."
+		},
+		"2": {
+			"question": "ImmutableX vs Immutable zkEVM?",
+			"answer": "ImmutableX is the original StarkEx-based network—fast but needs custom integration. Immutable zkEVM is EVM-compatible, letting devs deploy Ethereum code directly. Both are L2s secured by Ethereum."
+		},
+		"3": {
+			"question": "What games are on Immutable?",
+			"answer": "Major games include Gods Unchained (card game), Illuvium (RPG), Guild of Guardians (mobile RPG), and many others. Immutable has partnerships with GameStop, Disney, and traditional gaming studios."
+		},
+		"4": {
+			"question": "What is IMX token for?",
+			"answer": "IMX is used for staking (earn protocol fees), governance voting, and paying platform fees. Games on Immutable often have IMX integrations. It's the utility token for the entire ecosystem."
+		},
+		"5": {
+			"question": "Is Immutable safe?",
+			"answer": "Immutable is backed by major investors and has operated since 2018. ImmutableX uses proven StarkEx technology. The zkEVM is newer but EVM-compatible. Both inherit Ethereum security. Well-established platform."
+		}
+	},
+	"cta": {
+		"ready": "Ready for Web3 gaming?",
+		"button": "Explore Immutable",
+		"note": "Gas-free gaming NFTs"
+	}
+}

@@ -88,7 +88,7 @@
 
 <!-- Guide Banner -->
 {#if hasGuide}
-	<a href="/apps/chain-tools/{data.categoryId}/guide" target="_blank" class="guide-banner">
+	<a href="/apps/chain-tools/{data.categoryId}/guide" class="guide-banner">
 		<div class="guide-banner-content">
 			<div class="guide-banner-icon">
 				<BookOpen class="icon" />

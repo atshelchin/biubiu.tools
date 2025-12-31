@@ -1,0 +1,157 @@
+{
+	"title": "MEV Complete Guide",
+	"subtitle": "Master Maximal Extractable Value from Basics to Advanced Strategies",
+	"estimated_read_time": "18 min",
+
+	"sections": {
+		"intro": {
+			"title": "Introduction to MEV",
+			"content": "<p>MEV (Maximal Extractable Value), formerly known as Miner Extractable Value, represents the profit that can be extracted from reordering, inserting, or censoring transactions within blocks. This is one of the most sophisticated and impactful phenomena in blockchain technology.</p><p>Since Ethereum's launch, over $600 million in MEV has been extracted from users. Understanding MEV is crucial whether you're a trader trying to protect yourself or an advanced user looking to capture opportunities. This guide will teach you how MEV works, how to protect yourself, and how professional searchers profit from it.</p>"
+		},
+
+		"mev_types": {
+			"title": "Types of MEV",
+			"content": "<p>MEV manifests in several forms, from benign to harmful. Understanding these types helps you recognize when you're being extracted from and how to protect yourself.</p>",
+			"frontrunning": {
+				"title": "Frontrunning",
+				"content": "<p>Frontrunning occurs when a searcher sees a pending transaction in the mempool and places their own transaction ahead of it by paying higher gas fees.</p><p><strong>Example:</strong> You submit a large buy order for a token. A bot sees your transaction, quickly buys before you, then sells immediately after your purchase executes at the higher price. The bot profits from the price movement your trade created.</p><p><strong>Impact on users:</strong> You receive fewer tokens than expected due to price slippage. The frontrunner essentially taxes your trade.</p><p><strong>Real case:</strong> In 2020, a single bot frontran over $100,000 worth of trades in one day on Uniswap, making ~$20,000 profit.</p>"
+			},
+			"sandwich_attacks": {
+				"title": "Sandwich Attacks",
+				"content": "<p>Sandwich attacks are a sophisticated form of frontrunning where the attacker places transactions both before and after the victim's transaction—hence 'sandwiching' them.</p><p><strong>How it works:</strong></p><ol><li>Victim submits a trade to buy Token A</li><li>Attacker frontruns by buying Token A first (price goes up)</li><li>Victim's trade executes at the inflated price</li><li>Attacker backruns by selling Token A (profits from the price difference)</li></ol><p><strong>Example numbers:</strong> You try to buy $10,000 worth of ETH on Uniswap. A sandwich bot:<br/>1. Buys $50,000 of ETH right before you (pushing price up 0.5%)<br/>2. Your trade executes at the inflated price<br/>3. Bot sells immediately after (taking ~$250 profit from you)</p><p>Sandwich attacks are the most common and harmful form of MEV for regular users, accounting for over $500 million in extracted value.</p>"
+			},
+			"arbitrage": {
+				"title": "Arbitrage",
+				"content": "<p>Arbitrage MEV involves profiting from price differences across different exchanges or pools. Unlike frontrunning, arbitrage is generally considered beneficial as it helps maintain price consistency across markets.</p><p><strong>Cross-DEX arbitrage:</strong> When ETH is $2,000 on Uniswap but $2,005 on SushiSwap, arbitrageurs buy on Uniswap and sell on SushiSwap, profiting $5 per ETH while bringing prices back in line.</p><p><strong>Triangle arbitrage:</strong> Exploiting price inefficiencies across three or more trading pairs. For example: ETH → USDC → DAI → ETH, if the circular rate is profitable.</p><p><strong>Statistical arbitrage:</strong> Using historical patterns and correlations to predict short-term price movements and profit from temporary mispricings.</p><p>Arbitrage bots are the most active participants in MEV, executing thousands of transactions daily and keeping DeFi markets efficient.</p>"
+			},
+			"liquidations": {
+				"title": "Liquidations",
+				"content": "<p>In lending protocols, when a borrower's collateral value falls below the liquidation threshold, liquidators can repay the debt and receive collateral at a discount (typically 5-15%).</p><p><strong>The race:</strong> During market crashes, thousands of positions become liquidatable simultaneously. Liquidators compete to capture these opportunities, often paying extremely high gas fees ($1,000+) to win.</p><p><strong>Example from March 2020 crash:</strong> When ETH dropped 30% in one day, over $8 million in liquidations occurred on Compound alone. Some liquidators made over $100,000 in a single transaction.</p><p><strong>Why liquidations matter:</strong> They're essential for protocol health—without liquidators, lending protocols would become insolvent. This is 'good MEV' that protects the ecosystem.</p>"
+			},
+			"backrunning": {
+				"title": "Backrunning",
+				"content": "<p>Backrunning involves placing a transaction immediately after another transaction to capitalize on the state changes it creates.</p><p><strong>Common scenario:</strong> A large trade on a DEX creates a price discrepancy. Backrunners immediately arbitrage this discrepancy against other DEXs or pools.</p><p><strong>Example:</strong> Someone swaps $1M USDC for ETH on Uniswap, moving the price from $2,000 to $2,003. A backrunner immediately buys ETH on Curve (still $2,000) and sells on Uniswap ($2,003), profiting from the 3-second price difference.</p><p><strong>Impact:</strong> Unlike frontrunning, backrunning doesn't directly harm users—it actually helps restore market efficiency after large trades. It's considered neutral or positive MEV.</p>"
+			}
+		},
+
+		"mev_supply_chain": {
+			"title": "The MEV Supply Chain",
+			"content": "<p>After Ethereum's merge to Proof of Stake, MEV extraction evolved into a sophisticated multi-layered system called the MEV supply chain. Understanding this structure is crucial for comprehending modern MEV.</p>",
+			"searchers": {
+				"title": "Searchers",
+				"content": "<p>Searchers are the bottom layer—individuals or bots that identify MEV opportunities and create transaction bundles to capture them.</p><p><strong>What searchers do:</strong></p><ul><li>Monitor the mempool for profitable opportunities</li><li>Run simulations to test if transactions will be profitable</li><li>Create transaction bundles with precise ordering</li><li>Submit bundles to builders with bid prices</li></ul><p><strong>Types of searchers:</strong></p><ul><li><strong>Arbitrage bots:</strong> Find and exploit price differences (most common)</li><li><strong>Liquidation bots:</strong> Monitor lending protocols for liquidation opportunities</li><li><strong>Sandwich bots:</strong> Extract value from user trades (most controversial)</li><li><strong>NFT snipers:</strong> Frontrun NFT purchases and sales</li></ul><p><strong>Competition:</strong> Thousands of searchers compete for the same opportunities. Success requires fast execution, low latency, and sophisticated algorithms.</p>"
+			},
+			"builders": {
+				"title": "Builders",
+				"content": "<p>Builders receive bundles from multiple searchers and assemble them into complete blocks, maximizing total value.</p><p><strong>Builder responsibilities:</strong></p><ul><li>Receive bundles from searchers</li><li>Simulate bundles to verify profitability</li><li>Order transactions to maximize MEV extraction</li><li>Fill remaining space with mempool transactions</li><li>Submit completed blocks to relays</li></ul><p><strong>Major builders:</strong></p><ul><li><strong>Flashbots Builder:</strong> Largest builder, ~30-40% market share</li><li><strong>Beaverbuild:</strong> Independent builder, ~15-20% share</li><li><strong>Titan:</strong> High-performance builder, ~10-15% share</li></ul><p><strong>Builder revenue:</strong> Builders keep a portion of MEV (typically 10-30%) and pass the rest to validators. Top builders process hundreds of millions in MEV annually.</p><p><strong>Block value distribution:</strong> A typical block might contain: $10,000 in MEV (captured by searchers) + $5,000 in priority fees + $2,000 in base fees (burned).</p>"
+			},
+			"validators": {
+				"title": "Validators",
+				"content": "<p>Validators are Ethereum's block proposers who ultimately decide which block gets included in the chain. Post-merge, validators earn revenue from both staking rewards and MEV.</p><p><strong>Traditional validator revenue (pre-PBS):</strong></p><ul><li>Consensus rewards: ~4-5% APR from staking</li><li>Execution rewards: Priority fees from transactions</li><li>MEV: Captured by building blocks themselves (required technical expertise)</li></ul><p><strong>Modern validator revenue (with MEV-Boost):</strong></p><ul><li>Consensus rewards: Same 4-5% APR</li><li>Block bids: Builders bid to provide the most profitable block</li><li>MEV sharing: Validators receive 70-90% of MEV value from builders</li></ul><p><strong>Impact:</strong> By running MEV-Boost, validators increased their revenue by 50-200% compared to building blocks themselves. Over 95% of validators now use MEV-Boost.</p>"
+			},
+			"block_production": {
+				"title": "Block Production Flow",
+				"content": "<p>The modern block production process involves multiple steps across different actors, creating a market-based system for block space.</p><p><strong>Step-by-step flow:</strong></p><ol><li><strong>Users submit transactions</strong> to the public mempool</li><li><strong>Searchers identify opportunities</strong> and create bundles</li><li><strong>Searchers submit bundles</strong> to builders with bid prices</li><li><strong>Builders construct blocks</strong> by combining profitable bundles</li><li><strong>Builders submit blocks</strong> to relays along with their bid</li><li><strong>Relays validate blocks</strong> and forward winning bid to validators</li><li><strong>Validators choose the highest bid</strong> and propose that block</li><li><strong>Block is added to chain</strong> and MEV is distributed</li></ol><p><strong>Timing:</strong> This entire process happens in ~1-2 seconds before each 12-second slot. Latency is critical—delays of even 100ms can mean losing opportunities.</p><p><strong>Revenue split example:</strong> From a $100,000 MEV opportunity:<br/>- Searcher keeps: $60,000 (60%)<br/>- Builder keeps: $10,000 (10%)<br/>- Validator receives: $30,000 (30%)<br/>- Total extracted from users: $100,000</p>"
+			}
+		},
+
+		"protection": {
+			"title": "Protecting Yourself from MEV",
+			"content": "<p>As a regular user, you can't eliminate MEV exposure entirely, but you can significantly reduce it using protection tools and best practices.</p>",
+			"flashbots": {
+				"title": "Flashbots Protect RPC",
+				"content": "<p>Flashbots Protect is a free RPC endpoint that sends your transactions directly to Flashbots builders instead of the public mempool, protecting you from frontrunning and sandwich attacks.</p><p><strong>How to use:</strong></p><ol><li>Add Flashbots Protect RPC to your wallet (MetaMask, Rabby, etc.)</li><li>RPC URL: https://rpc.flashbots.net</li><li>Your transactions bypass the public mempool</li><li>Flashbots builders include your transaction without frontrunning</li></ol><p><strong>Benefits:</strong></p><ul><li>No frontrunning or sandwich attacks</li><li>Failed transactions don't cost gas</li><li>You may receive MEV rebates through MEV-Share</li></ul><p><strong>Trade-offs:</strong></p><ul><li>Slightly slower inclusion (6-12 seconds vs 3-6 seconds)</li><li>Relies on Flashbots builder market share (~40%)</li><li>Not 100% guaranteed inclusion</li></ul><p><strong>When to use:</strong> Large trades, token swaps, NFT purchases—anything where MEV extraction could cost you more than a few dollars.</p>"
+			},
+			"mev_blocker": {
+				"title": "MEV Blocker (CoW Swap)",
+				"content": "<p>MEV Blocker is a comprehensive solution from CoW Protocol that not only protects you from MEV but also shares extracted MEV back with you.</p><p><strong>Key features:</strong></p><ul><li><strong>Batch auctions:</strong> CoW Swap batches trades together, eliminating MEV opportunities</li><li><strong>Solver competition:</strong> Multiple professional traders compete to find best execution</li><li><strong>MEV rebates:</strong> If MEV is extracted, you get up to 90% back</li><li><strong>Better prices:</strong> Often beats regular DEX prices due to solver competition</li></ul><p><strong>How it works:</strong></p><ol><li>You submit an order to CoW Swap</li><li>Order goes into a batch with other orders (not public mempool)</li><li>Solvers compete to execute your trade at the best price</li><li>Trades settle on-chain in a single transaction</li><li>Any MEV extracted is shared back with users</li></ol><p><strong>Statistics:</strong> CoW Swap users have saved over $300 million from MEV compared to traditional DEXs. Average savings: 0.1-0.3% per trade.</p>"
+			},
+			"private_transactions": {
+				"title": "Private Transactions & Best Practices",
+				"content": "<p>Beyond dedicated tools, you can protect yourself through behavioral changes and smart transaction design.</p><p><strong>Best practices to avoid MEV:</strong></p><ul><li><strong>Use wider slippage tolerances wisely:</strong> Too tight = transaction fails, too loose = more MEV extraction. For stablecoins: 0.1-0.3%, for volatile pairs: 0.5-1%</li><li><strong>Split large trades:</strong> Instead of one $100k swap, do 5x $20k swaps over time</li><li><strong>Trade during low volatility:</strong> MEV bots are less active when markets are calm</li><li><strong>Use limit orders:</strong> CoW Swap and 1inch limit orders avoid mempool exposure</li><li><strong>Time your transactions:</strong> Avoid major news events and high-volume periods</li></ul><p><strong>Advanced protection:</strong></p><ul><li><strong>Private mempools:</strong> Services like Eden Network offer private transaction submission</li><li><strong>Account abstraction:</strong> New wallet standards that enable batching and conditional execution</li><li><strong>L2 solutions:</strong> Arbitrum, Optimism have different MEV dynamics (usually less extraction)</li></ul><p><strong>Cost-benefit analysis:</strong> For trades under $1,000, MEV protection may cost more in slower execution than you'd save. Focus protection on larger trades.</p>"
+			}
+		},
+
+		"profit_opportunities": {
+			"title": "MEV Profit Opportunities",
+			"content": "<p>While protecting yourself from MEV is important, understanding how to capture MEV can be lucrative for technical users. This is an advanced topic requiring programming skills, capital, and risk tolerance.</p>",
+			"become_searcher": {
+				"title": "Becoming a Searcher",
+				"content": "<p>MEV searching is highly competitive but potentially profitable. Success requires combining technical skills, market understanding, and capital.</p><p><strong>Requirements:</strong></p><ul><li><strong>Programming skills:</strong> Solidity, JavaScript/TypeScript, Python</li><li><strong>Infrastructure:</strong> Fast servers, low-latency connections, archive nodes</li><li><strong>Capital:</strong> $10,000-$100,000+ for profitable opportunities</li><li><strong>Gas fees:</strong> Be prepared to pay $100-$1,000+ in failed transaction costs while learning</li></ul><p><strong>Common strategies for beginners:</strong></p><ul><li><strong>Liquidation hunting:</strong> Monitor lending protocols for undercollateralized positions</li><li><strong>Cross-DEX arbitrage:</strong> Find price differences between exchanges</li><li><strong>Long-tail token arbitrage:</strong> Less competition than ETH/USDC pairs</li><li><strong>NFT sniping:</strong> Identify mispriced NFT listings</li></ul><p><strong>Reality check:</strong> Most beginning searchers lose money. The field is dominated by well-funded teams with years of experience. Start with paper trading (simulations) before risking real capital.</p><p><strong>Learning path:</strong></p><ol><li>Study existing MEV transactions on Etherscan</li><li>Use Flashbots' MEV-Inspect to analyze historical MEV</li><li>Build simulations in a test environment</li><li>Start with small capital and simple strategies</li><li>Join communities like Flashbots Discord for support</li></ol>"
+			},
+			"tools_needed": {
+				"title": "Tools and Infrastructure",
+				"content": "<p>Successful MEV searching requires a sophisticated technology stack and deep market understanding.</p><p><strong>Essential tools:</strong></p><ul><li><strong>Ethereum node:</strong> Archive node for historical data, full node for current state</li><li><strong>Mempool monitoring:</strong> Direct connections to nodes, mempool streaming services</li><li><strong>Simulation environment:</strong> Tenderly, Hardhat, or custom fork testing</li><li><strong>Bundle submission:</strong> Flashbots Relay API, MEV-Boost integration</li><li><strong>Analytics:</strong> EigenPhi, MEV-Explore, ZeroMEV for research</li></ul><p><strong>Infrastructure costs:</strong></p><ul><li>Archive node: $500-$2,000/month</li><li>Low-latency server: $200-$500/month</li><li>Mempool services: $100-$1,000/month</li><li>Total: $800-$3,500/month minimum</li></ul><p><strong>Software stack example:</strong></p><ul><li><strong>Backend:</strong> TypeScript with ethers.js or web3.py</li><li><strong>Simulation:</strong> Tenderly for pre-flight checks</li><li><strong>Monitoring:</strong> Custom websocket connections to multiple nodes</li><li><strong>Database:</strong> PostgreSQL for opportunity tracking</li><li><strong>Alerting:</strong> Real-time notifications for profitable opportunities</li></ul><p><strong>Open-source resources:</strong></p><ul><li>Flashbots searcher examples on GitHub</li><li>MEV-inspect for analyzing opportunities</li><li>Artemis framework for building MEV bots</li></ul><p><strong>Expected returns:</strong> Successful searchers can make $1,000-$10,000/day, but 90% of attempts fail. Competition is fierce and constantly evolving.</p>"
+			}
+		},
+
+		"post_merge_mev": {
+			"title": "Post-Merge MEV Landscape",
+			"content": "<p>Ethereum's merge to Proof of Stake in September 2022 fundamentally changed MEV dynamics, introducing new infrastructure and opportunities.</p>",
+			"pbs": {
+				"title": "Proposer-Builder Separation (PBS)",
+				"content": "<p>PBS is the architectural innovation that separated block building from block proposing, creating a competitive market for MEV extraction.</p><p><strong>Why PBS was needed:</strong> Before PBS, validators had to build blocks themselves to capture MEV. This created centralization pressure—sophisticated operators with MEV expertise earned much more than home stakers.</p><p><strong>How PBS works:</strong></p><ul><li>Builders specialize in MEV extraction and block construction</li><li>Builders compete to offer validators the highest block bids</li><li>Validators simply choose the best bid—no technical MEV expertise needed</li><li>This democratizes MEV revenue across all validators</li></ul><p><strong>Impact on decentralization:</strong> PBS prevented a scenario where only large, sophisticated operators could profitably validate. Now, even a solo home staker earns similar MEV revenue to large institutions.</p><p><strong>Current PBS market:</strong></p><ul><li>~95% of validators use MEV-Boost (PBS middleware)</li><li>~20 active builders compete for blocks</li><li>Average block value: $40,000-$80,000 (including MEV)</li><li>Validators earn 50-200% more than without PBS</li></ul><p><strong>Centralization concerns:</strong> While PBS democratized validator MEV, it concentrated power in builders. The top 3 builders control ~60% of blocks.</p>"
+			},
+			"mev_boost": {
+				"title": "MEV-Boost: The PBS Implementation",
+				"content": "<p>MEV-Boost is the practical implementation of PBS, acting as middleware between validators and the block builder market.</p><p><strong>Architecture:</strong></p><ul><li><strong>Validator:</strong> Runs consensus client + MEV-Boost sidecar</li><li><strong>MEV-Boost:</strong> Connects to multiple relays</li><li><strong>Relays:</strong> Trusted intermediaries between builders and validators</li><li><strong>Builders:</strong> Construct blocks and submit to relays</li></ul><p><strong>How it works each slot:</strong></p><ol><li>Validator asks MEV-Boost for the best block bid (1-2 seconds before slot)</li><li>MEV-Boost queries all connected relays simultaneously</li><li>Relays return block bids from builders (header only, not full block)</li><li>MEV-Boost returns highest bid to validator</li><li>Validator signs and returns signature</li><li>Relay releases full block to validator</li><li>Validator proposes block to network</li></ol><p><strong>Why relays exist:</strong> Builders don't trust validators not to steal their blocks, and validators don't trust builders to pay. Relays act as trusted escrow, ensuring atomic exchange.</p><p><strong>Relay diversity:</strong> Validators should connect to multiple relays for redundancy:<br/>- Flashbots Relay<br/>- Bloxroute Max Profit<br/>- Ultra Sound Relay<br/>- Agnostic Relay<br/>- Eden Network Relay</p><p><strong>Performance monitoring:</strong> Use mevboost.pics to track your validator's MEV-Boost performance and ensure you're capturing maximum value.</p>"
+			}
+		},
+
+		"ethical_considerations": {
+			"title": "Ethics and Future of MEV",
+			"content": "<p>MEV raises fundamental questions about fairness, censorship, and the future of blockchain networks. Understanding these issues is crucial for anyone involved in MEV.</p>",
+			"censorship": {
+				"title": "Censorship and OFAC Compliance",
+				"content": "<p>One of the most controversial aspects of modern MEV infrastructure is transaction censorship, particularly related to OFAC (Office of Foreign Assets Control) sanctions.</p><p><strong>The issue:</strong> Some builders and relays censor transactions from OFAC-sanctioned addresses (like Tornado Cash). This conflicts with Ethereum's credible neutrality ethos.</p><p><strong>Current state:</strong></p><ul><li>~50% of blocks are built by OFAC-compliant builders who censor transactions</li><li>Censored transactions typically get included in next non-censoring block</li><li>Average delay: 12-36 seconds (1-3 blocks)</li></ul><p><strong>Arguments for censorship:</strong></p><ul><li>Legal compliance required for US-based entities</li><li>Reduces regulatory risk for the industry</li><li>Censored transactions still eventually get included</li></ul><p><strong>Arguments against:</strong></p><ul><li>Violates Ethereum's neutrality and censorship resistance</li><li>Creates two classes of transactions</li><li>Slippery slope—what else might be censored?</li><li>Weakens Ethereum's core value proposition</li></ul><p><strong>Monitoring:</strong> MEV Watch tracks censorship rates in real-time, showing which builders/relays censor and how it affects users.</p><p><strong>Solutions being explored:</strong></p><ul><li>Encrypted mempools where builders can't see transaction details</li><li>Threshold encryption revealing txs only after commitment</li><li>Inclusion lists forcing validators to include certain transactions</li></ul>"
+			},
+			"fairness": {
+				"title": "Fairness and the Future",
+				"content": "<p>The MEV landscape continues to evolve, with new solutions aiming to make extraction fairer and more transparent.</p><p><strong>MEV-Share:</strong> Flashbots' solution for sharing MEV with transaction originators. When your transaction creates MEV opportunities, you receive a portion of the profits. Early results show users receiving 10-40% of MEV back.</p><p><strong>SUAVE (Single Unified Auction for Value Expression):</strong> Flashbots' vision for a decentralized MEV marketplace. Instead of Ethereum-specific infrastructure, SUAVE would be a cross-chain platform where any blockchain can plug in for optimal MEV extraction and distribution.</p><p><strong>Order Flow Auctions (OFAs):</strong> Wallets and frontends auctioning user transaction flow to the highest bidder, sharing profits with users. Projects like UniswapX implement OFA principles.</p><p><strong>Fair sequencing:</strong> Research into provably fair transaction ordering that eliminates certain MEV types while preserving the beneficial forms (like arbitrage and liquidations).</p><p><strong>The philosophical debate:</strong> Is MEV theft or a legitimate market dynamic? Arguments on both sides:<br/><br/><strong>MEV as harmful:</strong><br/>- Users pay a hidden tax on every transaction<br/>- Creates perverse incentives for validators<br/>- Complexity favors sophisticated actors over regular users<br/><br/><strong>MEV as neutral/beneficial:</strong><br/>- Arbitrage keeps markets efficient<br/>- Liquidations protect protocol solvency<br/>- Better to have transparent MEV than hidden manipulation<br/>- Competition among searchers minimizes extraction</p><p><strong>The future:</strong> Most experts believe some MEV is unavoidable and even beneficial, but the goal should be:<br/>1. Minimize harmful extraction (frontrunning, sandwiching)<br/>2. Maximize beneficial extraction (arbitrage, liquidations)<br/>3. Redistribute extracted value fairly to transaction originators<br/>4. Maintain decentralization and censorship resistance</p><p><strong>Your role:</strong> Whether you're a user, searcher, or validator, understanding MEV helps you navigate crypto more successfully and advocate for fairer systems.</p>"
+			}
+		}
+	},
+
+	"glossary": {
+		"mev": {
+			"term": "MEV (Maximal Extractable Value)",
+			"definition": "The maximum value that can be extracted from block production beyond standard rewards, by reordering, inserting, or censoring transactions. Originally called 'Miner Extractable Value' but renamed after Ethereum's merge to Proof of Stake."
+		},
+		"searcher": {
+			"term": "Searcher",
+			"definition": "An individual or bot that identifies MEV opportunities in the mempool and creates transaction bundles to capture them. Searchers compete to find and extract value from arbitrage, liquidations, and other opportunities."
+		},
+		"builder": {
+			"term": "Builder",
+			"definition": "An entity that receives bundles from searchers and assembles them into complete blocks, optimizing for maximum MEV extraction. Builders bid to have validators propose their blocks."
+		},
+		"validator": {
+			"term": "Validator",
+			"definition": "A Proof of Stake participant who proposes blocks and validates transactions. Validators receive consensus rewards plus MEV revenue from builders through the PBS system."
+		},
+		"frontrunning": {
+			"term": "Frontrunning",
+			"definition": "The practice of seeing a pending transaction and placing your own transaction ahead of it (by paying higher gas fees) to profit from the price movement it will cause."
+		},
+		"sandwich_attack": {
+			"term": "Sandwich Attack",
+			"definition": "A two-part MEV attack where the attacker places one transaction before and one after the victim's transaction, profiting from the price movement. The victim is 'sandwiched' between the attacker's trades."
+		},
+		"backrunning": {
+			"term": "Backrunning",
+			"definition": "Placing a transaction immediately after another transaction to profit from the state changes it creates, typically through arbitrage. Unlike frontrunning, backrunning doesn't directly harm the original transaction."
+		},
+		"pga": {
+			"term": "PGA (Priority Gas Auction)",
+			"definition": "When multiple searchers compete for the same MEV opportunity by continuously raising gas prices to outbid each other. Can result in gas wars where the winner pays extreme fees."
+		},
+		"bundle": {
+			"term": "Bundle",
+			"definition": "A group of transactions submitted together with specific ordering requirements. Bundles are atomic—they either all execute in order or none execute. Used by searchers to capture MEV opportunities without mempool exposure."
+		},
+		"slot": {
+			"term": "Slot",
+			"definition": "A 12-second interval in Ethereum's Proof of Stake consensus where one validator is randomly selected to propose a block. Slots are the fundamental time unit in Ethereum's consensus layer."
+		}
+	}
+}

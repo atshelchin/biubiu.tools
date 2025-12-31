@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "NFTX - NFT Liquidity Protocol",
+		"description": "NFTX enables NFT liquidity through vault tokens. Deposit NFTs to mint fungible tokens tradeable on DEXs.",
+		"keywords": "NFTX, vTokens, NFT liquidity, NFT vaults, floor perpetuals, NFT DeFi"
+	},
+	"overview": "NFTX creates liquidity for NFTs by tokenizing them into fungible vault tokens (vTokens). Deposit an NFT into a vault and receive a vToken that represents 1 NFT from that collection.\n\nvTokens are ERC-20 tokens tradeable on DEXs like Uniswap with deep liquidity. This enables instant buying/selling of floor NFTs through swaps rather than waiting for marketplace orders.\n\nNFTX vaults can be used for yield farming, as collateral, or for floor price exposure without holding specific NFTs. It bridges NFTs into broader DeFi.",
+	"features": {
+		"1": {
+			"title": "NFT Vaults",
+			"description": "Tokenize NFTs into vTokens"
+		},
+		"2": {
+			"title": "DEX Liquidity",
+			"description": "Trade on Uniswap/Sushi"
+		},
+		"3": {
+			"title": "Instant Trades",
+			"description": "Swap NFTs instantly"
+		},
+		"4": {
+			"title": "Yield Farming",
+			"description": "LP vTokens for yield"
+		},
+		"5": {
+			"title": "Floor Exposure",
+			"description": "Track floor without specific NFT"
+		},
+		"6": {
+			"title": "NFT Redemption",
+			"description": "Redeem vTokens for NFTs"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Instant Selling",
+			"description": "Swap NFT for ETH immediately"
+		},
+		"2": {
+			"title": "Floor Trading",
+			"description": "Trade floor exposure as tokens"
+		},
+		"3": {
+			"title": "Liquidity Provision",
+			"description": "LP vToken pairs for fees"
+		},
+		"4": {
+			"title": "NFT Index Exposure",
+			"description": "Hold collection exposure"
+		},
+		"5": {
+			"title": "Arbitrage",
+			"description": "Arb between NFTX and marketplaces"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What are vTokens?",
+			"answer": "vTokens are fungible ERC-20 tokens backed 1:1 by NFTs in a vault. If you deposit a CryptoPunk, you get 1 PUNK token. That PUNK token is redeemable for any Punk in the vault. vTokens trade on DEXs."
+		},
+		"2": {
+			"question": "How is pricing determined?",
+			"answer": "vToken price is set by DEX markets (supply and demand). It roughly tracks floor price since 1 vToken = 1 floor NFT. Arbitrageurs keep prices aligned—if vToken is cheap, they buy and redeem for NFT."
+		},
+		"3": {
+			"question": "What about rare NFTs?",
+			"answer": "NFTX is best for floor/commodity NFTs. Rare items shouldn't go in vaults since you get a generic vToken. Some vaults have eligibility requirements. Premium features let you target specific NFTs for a fee."
+		},
+		"4": {
+			"question": "Can I get my exact NFT back?",
+			"answer": "Standard redemption gives you a random NFT from the vault. NFTX V3 introduced targeted redemption where you can pick a specific NFT for an additional fee. This enables trading specific items."
+		},
+		"5": {
+			"question": "Is NFTX safe?",
+			"answer": "NFTX is audited and has operated since 2021. It uses standard ERC-20 and vault patterns. Risks include smart contract bugs and liquidity risks. The protocol has processed significant volume reliably."
+		}
+	},
+	"cta": {
+		"ready": "Ready for NFT liquidity?",
+		"button": "Explore NFTX",
+		"note": "Fungible tokens for NFTs"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Gitcoin - Public Goods Funding",
+		"description": "Gitcoin funds open source and public goods through quadratic funding grants. Support builders and earn Gitcoin Passport for identity.",
+		"keywords": "Gitcoin, GTC token, quadratic funding, grants, public goods, Gitcoin Passport"
+	},
+	"overview": "Gitcoin pioneered quadratic funding for public goods in crypto. Through Gitcoin Grants, community donations are matched using a formula that amplifies projects with broad support over whale donors.\n\nBeyond grants, Gitcoin developed Passport—a decentralized identity system that aggregates credentials to prove you're a unique human. Passport is used for sybil resistance across Web3.\n\nThe GTC token governs the Gitcoin DAO which manages the grants program. Gitcoin has distributed over $50M to open source projects and public goods builders.",
+	"features": {
+		"1": {
+			"title": "Quadratic Funding",
+			"description": "Democratic grant matching"
+		},
+		"2": {
+			"title": "Gitcoin Passport",
+			"description": "Decentralized identity"
+		},
+		"3": {
+			"title": "GTC Token",
+			"description": "Governance token"
+		},
+		"4": {
+			"title": "Grants Stack",
+			"description": "Run your own rounds"
+		},
+		"5": {
+			"title": "Allo Protocol",
+			"description": "Capital allocation infra"
+		},
+		"6": {
+			"title": "Public Goods",
+			"description": "Fund open source"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Donate to Grants",
+			"description": "Support public goods"
+		},
+		"2": {
+			"title": "Apply for Funding",
+			"description": "Get grant for your project"
+		},
+		"3": {
+			"title": "Build Passport",
+			"description": "Prove unique identity"
+		},
+		"4": {
+			"title": "Run Grant Rounds",
+			"description": "Organize funding"
+		},
+		"5": {
+			"title": "GTC Governance",
+			"description": "Vote on decisions"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is quadratic funding?",
+			"answer": "Quadratic funding matches donations based on number of contributors, not amount. 100 people giving $1 gets more matching than 1 person giving $100. It democratizes funding by amplifying broad support."
+		},
+		"2": {
+			"question": "What is Gitcoin Passport?",
+			"answer": "Passport aggregates identity stamps (Twitter, ENS, POAPs, etc.) into a score. Higher scores mean more likely to be a unique human. Apps use Passport for sybil resistance. It's become widely adopted."
+		},
+		"3": {
+			"question": "How do grant rounds work?",
+			"answer": "Gitcoin runs quarterly rounds with matching pools. Projects apply, community donates, quadratic formula distributes matching. Ecosystem partners also run rounds using Gitcoin's Grants Stack."
+		},
+		"4": {
+			"question": "What is Allo Protocol?",
+			"answer": "Allo is Gitcoin's capital allocation protocol. It's the infrastructure for running grant rounds, streaming payments, and other funding mechanisms. Other platforms can build on Allo."
+		},
+		"5": {
+			"question": "What is GTC used for?",
+			"answer": "GTC governs Gitcoin DAO. Holders vote on grant round parameters, treasury allocation, and protocol decisions. GTC staking may be added for additional utility. It's primarily a governance token."
+		}
+	},
+	"cta": {
+		"ready": "Ready to fund public goods?",
+		"button": "Explore Gitcoin",
+		"note": "Quadratic funding pioneer"
+	}
+}

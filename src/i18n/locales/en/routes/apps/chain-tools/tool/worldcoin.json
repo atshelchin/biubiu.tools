@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Worldcoin - Global Identity Protocol",
+		"description": "Worldcoin provides proof-of-personhood through World ID. Verify you're human while preserving privacy using zero-knowledge proofs.",
+		"keywords": "Worldcoin, World ID, WLD token, proof of personhood, Orb, biometric identity"
+	},
+	"overview": "Worldcoin is building a global identity and financial network. Its core innovation is World ID—a privacy-preserving proof that you're a unique human, verified through iris scans at Orb devices.\n\nWorld ID uses zero-knowledge proofs so apps can verify you're human without knowing who you are. This enables sybil-resistant airdrops, voting, and services while protecting privacy.\n\nThe WLD token is distributed to verified humans as a form of universal basic income experiment. Worldcoin runs on its own L2 (World Chain) built on Optimism technology.",
+	"features": {
+		"1": {
+			"title": "World ID",
+			"description": "Proof of personhood"
+		},
+		"2": {
+			"title": "Orb Verification",
+			"description": "Iris-based uniqueness"
+		},
+		"3": {
+			"title": "Zero-Knowledge",
+			"description": "Privacy-preserving proofs"
+		},
+		"4": {
+			"title": "WLD Token",
+			"description": "UBI-style distribution"
+		},
+		"5": {
+			"title": "World Chain",
+			"description": "Dedicated L2"
+		},
+		"6": {
+			"title": "World App",
+			"description": "Wallet and identity app"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Sybil Resistance",
+			"description": "One person, one account"
+		},
+		"2": {
+			"title": "Fair Airdrops",
+			"description": "One claim per human"
+		},
+		"3": {
+			"title": "WLD Claims",
+			"description": "Receive token grants"
+		},
+		"4": {
+			"title": "App Integration",
+			"description": "Add human verification"
+		},
+		"5": {
+			"title": "Voting",
+			"description": "Sybil-resistant governance"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is proof of personhood?",
+			"answer": "Proof of personhood verifies you're a unique human without revealing identity. World ID uses iris scans to create a unique hash. Apps verify you haven't registered twice. It solves the sybil problem."
+		},
+		"2": {
+			"question": "Is iris scanning safe?",
+			"answer": "Worldcoin claims iris images are deleted after creating the hash. The hash can't reverse to your iris. Privacy concerns remain valid—you're trusting their process. Regulatory scrutiny varies by country."
+		},
+		"3": {
+			"question": "What is World Chain?",
+			"answer": "World Chain is Worldcoin's L2 blockchain built on Optimism stack. It prioritizes verified humans for block space. Designed for identity-based applications. Launched in 2024."
+		},
+		"4": {
+			"question": "How do I get WLD tokens?",
+			"answer": "Get verified at an Orb (physical device in many cities). Once verified, claim WLD grants through World App. Grants are distributed periodically. Availability varies by jurisdiction."
+		},
+		"5": {
+			"question": "What are the controversies?",
+			"answer": "Concerns include: biometric data collection, Sam Altman (OpenAI) involvement, developing country targeting, centralized Orb hardware. Also regulatory challenges in various countries. Research thoroughly."
+		}
+	},
+	"cta": {
+		"ready": "Ready to verify your humanity?",
+		"button": "Explore Worldcoin",
+		"note": "Global identity protocol"
+	}
+}
