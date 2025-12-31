@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Manta Pacific - Modular L2 for ZK Applications",
+		"description": "Manta Pacific is a modular L2 designed for ZK applications. Low fees, fast transactions, and native ZK tooling for developers.",
+		"keywords": "Manta Pacific, Manta Network, ZK L2, modular blockchain, MANTA token, Layer 2"
+	},
+	"overview": "Manta Pacific is a modular Layer 2 designed specifically for ZK (zero-knowledge) applications. Built on the OP Stack with Celestia for data availability, Manta offers ultra-low fees while maintaining Ethereum security.\n\nThe network distinguishes itself through Universal Circuits—reusable ZK circuits that developers can integrate into applications without deep cryptography expertise. This makes building privacy-preserving and ZK-powered applications accessible to all developers.\n\nManta has attracted significant capital and ecosystem growth since mainnet launch in 2023. The MANTA token powers the network for gas, staking, and governance.",
+	"features": {
+		"1": {
+			"title": "Modular Architecture",
+			"description": "OP Stack + Celestia for optimal performance and cost"
+		},
+		"2": {
+			"title": "Universal Circuits",
+			"description": "Reusable ZK building blocks for developers"
+		},
+		"3": {
+			"title": "Ultra-Low Fees",
+			"description": "Transaction costs under $0.01"
+		},
+		"4": {
+			"title": "EVM Compatible",
+			"description": "Deploy existing Ethereum contracts easily"
+		},
+		"5": {
+			"title": "zkSBT Support",
+			"description": "Native support for ZK soulbound tokens"
+		},
+		"6": {
+			"title": "Fast Finality",
+			"description": "Quick confirmation times for transactions"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "ZK Applications",
+			"description": "Build privacy-preserving dApps with Universal Circuits"
+		},
+		"2": {
+			"title": "DeFi Protocols",
+			"description": "Deploy DeFi with low fees and ZK features"
+		},
+		"3": {
+			"title": "Identity Solutions",
+			"description": "Create ZK-based identity and credential systems"
+		},
+		"4": {
+			"title": "Gaming",
+			"description": "Build games with private state and low costs"
+		},
+		"5": {
+			"title": "NFT Platforms",
+			"description": "Launch NFT projects with minimal gas costs"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is MANTA token?",
+			"answer": "MANTA is Manta Network's native token used for gas fees, staking, and governance. It powers both Manta Pacific (L2) and Manta Atlantic (L1). MANTA can be staked to earn network rewards and participate in governance."
+		},
+		"2": {
+			"question": "Is Manta Pacific safe?",
+			"answer": "Manta Pacific inherits security from Ethereum through its optimistic rollup design. The team has undergone audits and has significant VC backing. As a newer L2, exercise normal caution with fund amounts."
+		},
+		"3": {
+			"question": "How do I bridge to Manta Pacific?",
+			"answer": "Use the official Manta Bridge at pacific.manta.network or third-party bridges like Stargate and Orbiter. Bridging is straightforward and typically takes a few minutes from Ethereum or other supported chains."
+		},
+		"4": {
+			"question": "What are Universal Circuits?",
+			"answer": "Universal Circuits are pre-built ZK circuits that developers can use without understanding complex cryptography. They enable ZK features like private transactions, anonymous credentials, and verifiable computation with simple API calls."
+		},
+		"5": {
+			"question": "Manta Pacific vs Manta Atlantic: What's the difference?",
+			"answer": "Manta Pacific is an Ethereum L2 (OP Stack) for general ZK applications. Manta Atlantic is a Polkadot parachain focused on privacy. Most DeFi activity happens on Pacific. Atlantic is more specialized for Polkadot ecosystem."
+		}
+	},
+	"cta": {
+		"ready": "Ready to build on Manta?",
+		"button": "Explore Manta",
+		"note": "Modular L2 for ZK apps"
+	}
+}
