@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Morpho - 优化的 DeFi 借贷",
+		"description": "Morpho 是通过点对点匹配出借人和借款人来优化利率的借贷协议。比传统资金池更好的利率。",
+		"keywords": "Morpho, DeFi 借贷, MORPHO 代币, P2P 借贷, 利率优化, 以太坊"
+	},
+	"overview": "Morpho 是一个 DeFi 借贷协议，改进了 Aave 和 Compound 等传统借贷池。通过在可能时点对点匹配出借人和借款人，Morpho 为双方提供更好的利率。\n\nMorpho 最初作为 Aave 和 Compound 之上的优化层，自动路由用户以获得最佳利率。通过 Morpho Blue，它演变为一个独立的原语，实现无需许可的市场创建。\n\nMorpho Blue 允许任何人使用任何抵押品和贷款资产、自定义参数和预言机创建借贷市场。这种模块化方法吸引了大量 TVL 和机构兴趣。",
+	"features": {
+		"1": {
+			"title": "利率优化",
+			"description": "通过 P2P 匹配获得更好的利率"
+		},
+		"2": {
+			"title": "Morpho Blue",
+			"description": "无需许可的市场创建"
+		},
+		"3": {
+			"title": "资本高效",
+			"description": "更高利用率，更好回报"
+		},
+		"4": {
+			"title": "不可变",
+			"description": "核心合约无法升级"
+		},
+		"5": {
+			"title": "灵活市场",
+			"description": "任何资产对配合自定义参数"
+		},
+		"6": {
+			"title": "风险隔离",
+			"description": "每个市场独立"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "优化借贷",
+			"description": "获得比资金池借贷更好的利率"
+		},
+		"2": {
+			"title": "高效借款",
+			"description": "支付更低的贷款利率"
+		},
+		"3": {
+			"title": "自定义市场",
+			"description": "为任何资产对创建市场"
+		},
+		"4": {
+			"title": "金库管理",
+			"description": "在 Morpho 上构建借贷策略"
+		},
+		"5": {
+			"title": "机构 DeFi",
+			"description": "为机构提供风险隔离市场"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 MORPHO 代币？",
+			"answer": "MORPHO 是 Morpho 协议的治理代币。代币持有者可以对协议参数和国库分配进行投票。MORPHO 通过各种激励计划分发给协议用户。"
+		},
+		"2": {
+			"question": "Morpho 如何改善利率？",
+			"answer": "传统借贷池在供应和借款利率之间有价差。Morpho 在可能时直接匹配出借人和借款人（P2P），消除价差。未匹配的用户退回底层资金池，所以利率永远不会更差。"
+		},
+		"3": {
+			"question": "什么是 Morpho Blue？",
+			"answer": "Morpho Blue 是无需许可借贷市场创建的原语。与 Aave/Compound 的精选资产不同，任何人都可以使用任何抵押品、贷款资产、预言机和参数创建 Morpho Blue 市场。市场隔离用于风险管理。"
+		},
+		"4": {
+			"question": "Morpho 安全吗？",
+			"answer": "Morpho 的核心合约是不可变的（无法升级），降低治理风险。协议经过广泛审计。Morpho Blue 市场是隔离的，所以一个市场的问题不影响其他市场。存款前始终验证市场参数。"
+		},
+		"5": {
+			"question": "Morpho 与 Aave 应该用哪个？",
+			"answer": "在 Aave/Compound 之上使用 Morpho 优化器可能获得更好的利率，同时具有相同的底层安全性。使用 Morpho Blue 访问更多资产对或如果你想要不可变、隔离的市场。Aave 提供更多功能如闪电贷和更广的市场。"
+		}
+	},
+	"cta": {
+		"ready": "准备好优化你的利率了吗？",
+		"button": "探索 Morpho",
+		"note": "优化的 DeFi 借贷"
+	}
+}

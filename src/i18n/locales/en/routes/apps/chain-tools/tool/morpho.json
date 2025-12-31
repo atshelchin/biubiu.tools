@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Morpho - Optimized DeFi Lending",
+		"description": "Morpho is a lending protocol that optimizes rates by matching lenders and borrowers peer-to-peer. Better rates than traditional pools.",
+		"keywords": "Morpho, DeFi lending, MORPHO token, P2P lending, rate optimization, Ethereum"
+	},
+	"overview": "Morpho is a DeFi lending protocol that improves upon traditional lending pools like Aave and Compound. By matching lenders and borrowers peer-to-peer when possible, Morpho provides better rates for both sides.\n\nMorpho started as an optimizer layer on top of Aave and Compound, automatically routing users to get the best rates. With Morpho Blue, it evolved into a standalone primitive enabling permissionless market creation.\n\nMorpho Blue allows anyone to create lending markets with any collateral and loan assets, custom parameters, and oracles. This modular approach has attracted significant TVL and institutional interest.",
+	"features": {
+		"1": {
+			"title": "Rate Optimization",
+			"description": "Better rates through P2P matching"
+		},
+		"2": {
+			"title": "Morpho Blue",
+			"description": "Permissionless market creation"
+		},
+		"3": {
+			"title": "Capital Efficient",
+			"description": "Higher utilization, better returns"
+		},
+		"4": {
+			"title": "Immutable",
+			"description": "Core contracts cannot be upgraded"
+		},
+		"5": {
+			"title": "Flexible Markets",
+			"description": "Any asset pair with custom parameters"
+		},
+		"6": {
+			"title": "Risk Isolation",
+			"description": "Each market is independent"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Optimized Lending",
+			"description": "Earn better rates than pool lending"
+		},
+		"2": {
+			"title": "Efficient Borrowing",
+			"description": "Pay lower rates on loans"
+		},
+		"3": {
+			"title": "Custom Markets",
+			"description": "Create markets for any asset pair"
+		},
+		"4": {
+			"title": "Vault Management",
+			"description": "Build lending strategies on Morpho"
+		},
+		"5": {
+			"title": "Institutional DeFi",
+			"description": "Risk-isolated markets for institutions"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is MORPHO token?",
+			"answer": "MORPHO is the governance token for the Morpho protocol. Token holders can vote on protocol parameters and treasury allocation. MORPHO is distributed to users of the protocol through various incentive programs."
+		},
+		"2": {
+			"question": "How does Morpho improve rates?",
+			"answer": "Traditional lending pools have a spread between supply and borrow rates. Morpho matches lenders and borrowers directly (P2P) when possible, eliminating the spread. Unmatched users fall back to the underlying pool, so rates are never worse."
+		},
+		"3": {
+			"question": "What is Morpho Blue?",
+			"answer": "Morpho Blue is a primitive for permissionless lending market creation. Unlike Aave/Compound with curated assets, anyone can create a Morpho Blue market with any collateral, loan asset, oracle, and parameters. Markets are isolated for risk management."
+		},
+		"4": {
+			"question": "Is Morpho safe?",
+			"answer": "Morpho's core contracts are immutable (can't be upgraded), reducing governance risk. The protocol has been extensively audited. Morpho Blue markets are isolated, so issues in one market don't affect others. Always verify market parameters before depositing."
+		},
+		"5": {
+			"question": "Morpho vs Aave: Which should I use?",
+			"answer": "Use Morpho Optimizers on top of Aave/Compound for potentially better rates with same underlying security. Use Morpho Blue for access to more asset pairs or if you want immutable, isolated markets. Aave offers more features like flash loans and a broader market."
+		}
+	},
+	"cta": {
+		"ready": "Ready to optimize your rates?",
+		"button": "Explore Morpho",
+		"note": "Optimized DeFi lending"
+	}
+}

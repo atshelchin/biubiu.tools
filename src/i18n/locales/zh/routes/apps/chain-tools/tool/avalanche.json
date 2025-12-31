@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Avalanche - 极速 L1 平台",
+		"description": "Avalanche 是具有亚秒级确认的高速 Layer 1 平台。在 AVAX 生态系统中构建自定义区块链（子网）。",
+		"keywords": "Avalanche, AVAX, Layer 1, 子网, 快速区块链, DeFi"
+	},
+	"overview": "Avalanche 是以速度和子网架构著称的 Layer 1 区块链平台。由 Ava Labs 于 2020 年构建，Avalanche 通过其独特的共识机制实现亚秒级确认，同时保持去中心化。\n\n该平台由三条链组成：用于资产的 X 链、用于智能合约的 C 链（EVM 兼容）以及用于平台协调的 P 链。这种多链架构实现高吞吐量而不会拥堵。\n\nAvalanche 子网允许任何人使用自己的规则、验证者和代币经济学启动自定义区块链。主要机构和游戏公司已为专门用例启动了子网。",
+	"features": {
+		"1": {
+			"title": "亚秒级确认",
+			"description": "交易在 1 秒内确认"
+		},
+		"2": {
+			"title": "子网",
+			"description": "轻松启动自定义区块链"
+		},
+		"3": {
+			"title": "EVM 兼容",
+			"description": "C 链支持以太坊 dApps"
+		},
+		"4": {
+			"title": "多链",
+			"description": "针对不同用例的专用链"
+		},
+		"5": {
+			"title": "低费用",
+			"description": "C 链上交易实惠"
+		},
+		"6": {
+			"title": "机构级",
+			"description": "企业合作伙伴关系和采用"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi 交易",
+			"description": "快速 DEX 和借贷协议"
+		},
+		"2": {
+			"title": "游戏子网",
+			"description": "用于游戏的自定义区块链"
+		},
+		"3": {
+			"title": "企业链",
+			"description": "私有或许可子网"
+		},
+		"4": {
+			"title": "NFT 平台",
+			"description": "低成本 NFT 铸造和交易"
+		},
+		"5": {
+			"title": "跨链应用",
+			"description": "多子网应用"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 AVAX 代币？",
+			"answer": "AVAX 是用于 Gas 费用、质押和子网安全的原生代币。验证者质押 AVAX 以保护主网络。AVAX 还用于治理，并作为整个生态系统的基础货币。"
+		},
+		"2": {
+			"question": "什么是 Avalanche 子网？",
+			"answer": "子网是基于 Avalanche 基础设施构建的自定义区块链。它们可以有自己的规则、共识和虚拟机。子网与主网共享安全性，同时为游戏、DeFi 或企业用例提供定制。"
+		},
+		"3": {
+			"question": "Avalanche 与以太坊哪个更好？",
+			"answer": "Avalanche 提供更快的确认（亚秒级 vs 12+ 秒）和更低的费用。以太坊有更大的生态系统和更强的去中心化。Avalanche C 链兼容 EVM，所以 dApps 可以在两者上运行。它们服务于不同的需求。"
+		},
+		"4": {
+			"question": "如何使用 Avalanche？",
+			"answer": "将 Avalanche C 链添加到 MetaMask（或使用 Core 钱包）。使用 Avalanche Bridge 或第三方桥接资产。使用 Trader Joe 等 DEX、在 Aave 上借贷，并通过官方门户探索生态系统。"
+		},
+		"5": {
+			"question": "Avalanche 安全吗？",
+			"answer": "Avalanche 使用新颖的共识机制（Snowman/Avalanche 共识），以概率方式但非常快速地实现最终确认。有数千个验证者和多年运营经验，久经考验。每个子网可以有额外的安全措施。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在 Avalanche 上构建了吗？",
+		"button": "探索 Avalanche",
+		"note": "亚秒级确认平台"
+	}
+}

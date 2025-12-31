@@ -1,190 +1,188 @@
 {
-	"title": "NFT Complete Guide: From Collecting to Creating",
-	"subtitle": "Master the NFT ecosystem - marketplaces, trading strategies, NFT-Fi, and multi-chain opportunities",
-
+	"title": "NFT 完全指南：从收藏到创作",
+	"subtitle": "掌握 NFT 生态系统 - 交易市场、交易策略、NFT-Fi 和多链机会",
 	"sections": {
 		"intro": {
-			"title": "Understanding NFTs",
-			"content": "<p>NFTs (Non-Fungible Tokens) are unique digital assets that represent ownership of items like art, music, collectibles, and virtual real estate on the blockchain. Unlike cryptocurrencies where each token is identical, every NFT is unique and cannot be replaced with something else.</p><p>The NFT market has evolved dramatically since the 2021 boom. While trading volumes have normalized, the technology has matured with better infrastructure, more sophisticated trading tools, and new financial primitives like NFT lending and fractionalization.</p><p>This guide covers everything from buying your first NFT to advanced trading strategies and creating your own collections.</p>"
+			"title": "理解 NFT",
+			"content": "<p>NFT（非同质化代币）是代表独特数字资产所有权的区块链凭证，可以是艺术品、音乐、收藏品或虚拟房地产。与每个代币都相同的加密货币不同，每个 NFT 都是独一无二的，不可替代。</p><p>自 2021 年热潮以来，NFT 市场已经发生了显著变化。虽然交易量已经正常化，但技术已经成熟，拥有更好的基础设施、更复杂的交易工具，以及 NFT 借贷和碎片化等新的金融基础设施。</p><p>本指南涵盖从购买第一个 NFT 到高级交易策略和创建自己的收藏品的所有内容。</p>"
 		},
-
 		"nft_standards": {
-			"title": "NFT Technical Standards",
-			"content": "<p>Understanding the technical foundations helps you make better decisions as a collector or creator.</p>",
+			"title": "NFT 技术标准",
+			"content": "<p>理解技术基础有助于你作为收藏家或创作者做出更好的决策。</p>",
 			"erc721": {
-				"title": "ERC-721: The Original NFT Standard",
-				"content": "<p>ERC-721 is the original NFT standard on Ethereum. Each token has a unique ID and is completely distinct from every other token in the collection.</p><p><strong>Key characteristics:</strong></p><ul><li>Each token is unique with its own token ID</li><li>Tokens cannot be divided - you own the whole NFT or nothing</li><li>Most PFP collections and 1/1 art use ERC-721</li><li>Gas-intensive for batch operations</li></ul>"
+				"title": "ERC-721：原始 NFT 标准",
+				"content": "<p>ERC-721 是以太坊上的原始 NFT 标准。每个代币都有唯一的 ID，与集合中的其他代币完全不同。</p><p><strong>主要特点：</strong></p><ul><li>每个代币都是唯一的，有自己的 token ID</li><li>代币不能分割 - 你要么拥有整个 NFT，要么什么都没有</li><li>大多数 PFP 系列和 1/1 艺术品使用 ERC-721</li><li>批量操作时 Gas 消耗较高</li></ul>"
 			},
 			"erc1155": {
-				"title": "ERC-1155: Semi-Fungible Tokens",
-				"content": "<p>ERC-1155 allows for both fungible and non-fungible tokens in a single contract. It's more gas-efficient for collections with multiple editions.</p><p><strong>Common uses:</strong></p><ul><li>Gaming items with multiple copies</li><li>Edition-based art (e.g., 100 copies of the same piece)</li><li>Membership passes and tickets</li><li>In-game currencies alongside unique items</li></ul>"
+				"title": "ERC-1155：半同质化代币",
+				"content": "<p>ERC-1155 允许在单个合约中同时存在同质化和非同质化代币。对于多版本集合更省 Gas。</p><p><strong>常见用途：</strong></p><ul><li>有多个副本的游戏物品</li><li>版本艺术品（例如，同一作品的 100 个副本）</li><li>会员通行证和门票</li><li>游戏内货币与独特物品并存</li></ul>"
 			},
 			"metadata": {
-				"title": "Metadata & Storage",
-				"content": "<p>The image/media isn't stored on-chain - it's too expensive. NFTs contain metadata pointing to the actual content.</p><p><strong>Storage options:</strong></p><ul><li><strong>IPFS:</strong> Decentralized, content-addressed storage. Most common for quality projects.</li><li><strong>Arweave:</strong> Permanent storage with one-time payment. Growing in popularity.</li><li><strong>On-chain:</strong> SVGs or small data stored directly. Most decentralized but limited.</li><li><strong>Centralized servers:</strong> Cheapest but risky - if the server goes down, your NFT image is gone.</li></ul><p><strong>Always check:</strong> Where is the metadata hosted? IPFS/Arweave is preferred over centralized hosting.</p>"
+				"title": "元数据与存储",
+				"content": "<p>图片/媒体不会存储在链上 - 那太贵了。NFT 包含指向实际内容的元数据。</p><p><strong>存储选项：</strong></p><ul><li><strong>IPFS：</strong> 去中心化、内容寻址存储。高质量项目最常用。</li><li><strong>Arweave：</strong> 一次性付款的永久存储。越来越受欢迎。</li><li><strong>链上存储：</strong> SVG 或小数据直接存储。最去中心化但有限制。</li><li><strong>中心化服务器：</strong> 最便宜但有风险 - 如果服务器关闭，你的 NFT 图片就没了。</li></ul><p><strong>务必检查：</strong> 元数据托管在哪里？IPFS/Arweave 优于中心化托管。</p>"
 			}
 		},
-
 		"marketplaces": {
-			"title": "NFT Marketplaces",
-			"content": "<p>Choosing the right marketplace depends on your goals - casual collecting, professional trading, or artistic curation.</p>",
+			"title": "NFT 交易市场",
+			"content": "<p>选择合适的市场取决于你的目标 - 休闲收藏、专业交易还是艺术策展。</p>",
 			"general_marketplaces": {
-				"title": "General Marketplaces",
-				"content": "<p><strong>OpenSea</strong> remains the most accessible marketplace for beginners. It supports multiple chains, has the largest user base, and offers simple buying/selling experiences.</p><p><strong>Blur</strong> has become the choice for professional traders. Features include:</p><ul><li>Zero marketplace fees</li><li>Bid pools for efficient floor trading</li><li>Portfolio analytics and P&L tracking</li><li>Blend lending protocol integration</li></ul><p><strong>Magic Eden</strong> excels in multi-chain support, especially for Solana and Bitcoin Ordinals.</p>"
+				"title": "综合市场",
+				"content": "<p><strong>OpenSea</strong> 仍然是对新手最友好的市场。它支持多条链，拥有最大的用户群，提供简单的买卖体验。</p><p><strong>Blur</strong> 已成为专业交易者的首选。功能包括：</p><ul><li>零市场费用</li><li>高效地板交易的竞价池</li><li>投资组合分析和盈亏追踪</li><li>Blend 借贷协议集成</li></ul><p><strong>Magic Eden</strong> 在多链支持方面表现出色，尤其是 Solana 和比特币 Ordinals。</p>"
 			},
 			"specialized_marketplaces": {
-				"title": "Specialized & Curated Platforms",
-				"content": "<p><strong>Foundation</strong> focuses on curated digital art with invitation-only creator access. Auctions create exciting price discovery moments.</p><p><strong>Zora</strong> pioneered the \"hyperstructure\" model - free minting with no platform fees. Ideal for artists who want to maximize their earnings.</p><p><strong>Sound.xyz</strong> is the leading platform for music NFTs, enabling artists to release songs as collectible editions with unique perks for collectors.</p>"
+				"title": "专业与策展平台",
+				"content": "<p><strong>Foundation</strong> 专注于策展数字艺术，创作者需要邀请才能入驻。拍卖创造了令人兴奋的价格发现时刻。</p><p><strong>Zora</strong> 开创了「超结构」模式 - 免费铸造，无平台费用。非常适合希望最大化收益的艺术家。</p><p><strong>Sound.xyz</strong> 是音乐 NFT 的领先平台，使艺术家能够将歌曲作为可收藏版本发布，为收藏家提供独特权益。</p>"
 			},
 			"aggregators": {
-				"title": "Aggregators",
-				"content": "<p>Aggregators pull listings from multiple marketplaces, ensuring you get the best prices.</p><p><strong>Gem (now OpenSea Pro)</strong> allows bulk buying across marketplaces in a single transaction, saving gas and ensuring you sweep efficiently.</p><p><strong>Reservoir</strong> provides the infrastructure layer - their API powers many NFT applications and aggregates liquidity from all major marketplaces.</p>"
+				"title": "聚合器",
+				"content": "<p>聚合器从多个市场拉取列表，确保你获得最佳价格。</p><p><strong>Gem（现 OpenSea Pro）</strong> 允许在单笔交易中跨市场批量购买，节省 Gas 并确保高效扫货。</p><p><strong>Reservoir</strong> 提供基础设施层 - 他们的 API 为许多 NFT 应用提供支持，并聚合所有主要市场的流动性。</p>"
 			}
 		},
-
 		"collecting": {
-			"title": "Collecting NFTs",
-			"content": "<p>Successful collecting requires research, timing, and understanding market dynamics.</p>",
+			"title": "收藏 NFT",
+			"content": "<p>成功的收藏需要研究、时机把握和对市场动态的理解。</p>",
 			"finding_projects": {
-				"title": "Finding Promising Projects",
-				"content": "<p><strong>Discovery sources:</strong></p><ul><li><strong>icy.tools:</strong> Real-time trending mints and whale activity</li><li><strong>mint.fun:</strong> Curated free mints and trending collections</li><li><strong>Twitter/X:</strong> Still the primary social layer for NFT discourse</li><li><strong>Discord servers:</strong> Alpha groups and project communities</li></ul><p><strong>What to look for:</strong></p><ul><li>Team credibility and track record</li><li>Art quality and uniqueness</li><li>Community engagement and growth</li><li>Utility and roadmap realism</li></ul>"
+				"title": "发现有潜力的项目",
+				"content": "<p><strong>发现渠道：</strong></p><ul><li><strong>icy.tools：</strong> 实时热门铸造和巨鲸活动</li><li><strong>mint.fun：</strong> 策展免费铸造和热门收藏</li><li><strong>Twitter/X：</strong> 仍然是 NFT 讨论的主要社交层</li><li><strong>Discord 服务器：</strong> Alpha 群组和项目社区</li></ul><p><strong>需要关注的点：</strong></p><ul><li>团队信誉和过往记录</li><li>艺术质量和独特性</li><li>社区参与度和增长</li><li>实用性和路线图可行性</li></ul>"
 			},
 			"due_diligence": {
-				"title": "Due Diligence",
-				"content": "<p><strong>Before buying, always check:</strong></p><ul><li><strong>Contract verification:</strong> Is the contract verified on Etherscan?</li><li><strong>Holder distribution:</strong> Are tokens spread across many wallets or concentrated?</li><li><strong>Trading history:</strong> Is there organic volume or wash trading?</li><li><strong>Royalty settings:</strong> Are creator royalties enforced?</li><li><strong>Metadata storage:</strong> Where are images hosted?</li></ul><p>Use analytics tools to understand rarity distribution and fair pricing before placing bids.</p>"
+				"title": "尽职调查",
+				"content": "<p><strong>购买前务必检查：</strong></p><ul><li><strong>合约验证：</strong> 合约是否在 Etherscan 上验证？</li><li><strong>持有者分布：</strong> 代币是分散在多个钱包还是集中？</li><li><strong>交易历史：</strong> 是有机交易量还是刷单？</li><li><strong>版税设置：</strong> 创作者版税是否强制执行？</li><li><strong>元数据存储：</strong> 图片托管在哪里？</li></ul><p>使用分析工具了解稀有度分布和合理定价，然后再出价。</p>"
 			},
 			"minting_strategies": {
-				"title": "Minting Strategies",
-				"content": "<p><strong>Getting on allowlists:</strong></p><ul><li>Join Discord early and be genuinely active</li><li>Follow and engage with the team on Twitter</li><li>Use platforms like PREMINT to register for raffles</li><li>Hold related NFTs that might grant access</li></ul><p><strong>Public mint tips:</strong></p><ul><li>Prepare transactions in advance</li><li>Use priority gas during competitive mints</li><li>Have backup wallets ready</li><li>Never click links from DMs - always verify official minting sites</li></ul>"
+				"title": "铸造策略",
+				"content": "<p><strong>获取白名单：</strong></p><ul><li>尽早加入 Discord 并真正活跃</li><li>在 Twitter 上关注并与团队互动</li><li>使用 PREMINT 等平台注册抽奖</li><li>持有可能获得访问权的相关 NFT</li></ul><p><strong>公售技巧：</strong></p><ul><li>提前准备交易</li><li>在竞争激烈的铸造中使用优先 Gas</li><li>准备好备用钱包</li><li>永远不要点击私信中的链接 - 始终验证官方铸造网站</li></ul>"
 			}
 		},
-
 		"creating": {
-			"title": "Creating NFTs",
-			"content": "<p>Whether you're an artist launching a collection or a developer building NFT infrastructure, understanding creation tools is essential.</p>",
+			"title": "创作 NFT",
+			"content": "<p>无论你是发布收藏品的艺术家还是构建 NFT 基础设施的开发者，理解创作工具都很重要。</p>",
 			"minting_options": {
-				"title": "Minting Platforms",
-				"content": "<p><strong>Manifold</strong> is the gold standard for creators who want their own smart contracts. Features include:</p><ul><li>Own your smart contract completely</li><li>Advanced mint mechanics (claim pages, burns, etc.)</li><li>Extensive app ecosystem</li><li>Multi-chain deployment</li></ul><p><strong>Zora</strong> offers free minting with protocol rewards for creators. The Zora Network (L2) makes minting nearly free.</p><p><strong>Highlight</strong> provides a streamlined experience for multi-chain drops with built-in minting pages.</p>"
+				"title": "铸造平台",
+				"content": "<p><strong>Manifold</strong> 是希望拥有自己智能合约的创作者的黄金标准。功能包括：</p><ul><li>完全拥有你的智能合约</li><li>高级铸造机制（领取页面、销毁等）</li><li>广泛的应用生态系统</li><li>多链部署</li></ul><p><strong>Zora</strong> 提供免费铸造，并为创作者提供协议奖励。Zora Network（L2）使铸造几乎免费。</p><p><strong>Highlight</strong> 提供多链投放的流畅体验，内置铸造页面。</p>"
 			},
 			"collection_launch": {
-				"title": "Launching a Collection",
-				"content": "<p><strong>Generative art collections</strong> require:</p><ul><li>Layer-based artwork (traits with variations)</li><li>Rarity configuration</li><li>Metadata generation</li></ul><p>Tools like <strong>Bueno</strong> simplify this process with no-code generators.</p><p><strong>Transient Labs</strong> offers advanced mechanics for creators who want unique drops - like \"The Doppelganger\" burn-to-change contracts.</p><p><strong>Launch checklist:</strong></p><ol><li>Audit your contract (at minimum, use verified templates)</li><li>Test on testnet thoroughly</li><li>Prepare reveal if applicable</li><li>Set up minting site and verify URLs</li><li>Plan community communication</li></ol>"
+				"title": "发布收藏品",
+				"content": "<p><strong>生成艺术收藏品</strong> 需要：</p><ul><li>基于图层的艺术作品（带变体的特征）</li><li>稀有度配置</li><li>元数据生成</li></ul><p><strong>Bueno</strong> 等工具通过无代码生成器简化这一过程。</p><p><strong>Transient Labs</strong> 为希望独特投放的创作者提供高级机制 - 如「The Doppelganger」销毁换装合约。</p><p><strong>发布清单：</strong></p><ol><li>审计你的合约（至少使用经过验证的模板）</li><li>在测试网彻底测试</li><li>如适用，准备揭示</li><li>设置铸造网站并验证 URL</li><li>规划社区沟通</li></ol>"
 			},
 			"royalties": {
-				"title": "Understanding Royalties",
-				"content": "<p>Creator royalties were historically 5-10% of secondary sales, but enforcement has changed dramatically.</p><p><strong>Current landscape:</strong></p><ul><li><strong>OpenSea:</strong> Enforces royalties for new collections using Operator Filter</li><li><strong>Blur:</strong> Optional royalties - collectors choose to pay</li><li><strong>Magic Eden:</strong> Variable enforcement by chain</li></ul><p><strong>Strategies for creators:</strong></p><ul><li>Focus on mint price rather than royalty income</li><li>Build utility that incentivizes marketplace loyalty</li><li>Consider staking/burning mechanisms for holder engagement</li></ul>"
+				"title": "理解版税",
+				"content": "<p>创作者版税历史上是二次销售的 5-10%，但执行方式已经发生了巨大变化。</p><p><strong>当前格局：</strong></p><ul><li><strong>OpenSea：</strong> 对使用 Operator Filter 的新收藏品强制执行版税</li><li><strong>Blur：</strong> 可选版税 - 收藏者选择是否支付</li><li><strong>Magic Eden：</strong> 按链变化的执行方式</li></ul><p><strong>创作者策略：</strong></p><ul><li>关注铸造价格而非版税收入</li><li>构建激励市场忠诚度的实用性</li><li>考虑质押/销毁机制以提高持有者参与度</li></ul>"
 			}
 		},
-
 		"nft_fi": {
-			"title": "NFT-Fi: NFT Financialization",
-			"content": "<p>NFT-Fi unlocks liquidity from your NFT holdings without selling. This is a rapidly evolving space with significant opportunities and risks.</p>",
+			"title": "NFT-Fi：NFT 金融化",
+			"content": "<p>NFT-Fi 让你无需出售即可从 NFT 持有中释放流动性。这是一个快速发展的领域，充满机遇和风险。</p>",
 			"nft_lending": {
-				"title": "NFT Lending",
-				"content": "<p>Use your NFTs as collateral to borrow ETH or stablecoins.</p><p><strong>NFTfi</strong> operates a peer-to-peer model where lenders set their own terms. Rates vary based on collection and loan parameters.</p><p><strong>Arcade</strong> enables loans against wrapped bundles of NFTs, improving capital efficiency.</p><p><strong>Unlockd</strong> offers instant liquidity with oracle-based pricing, similar to Aave for NFTs.</p><p><strong>Risks to understand:</strong></p><ul><li>Liquidation if floor drops below loan value</li><li>Smart contract risks</li><li>Loss of your NFT if you default</li></ul>"
+				"title": "NFT 借贷",
+				"content": "<p>使用你的 NFT 作为抵押品借入 ETH 或稳定币。</p><p><strong>NFTfi</strong> 采用点对点模式，贷方设定自己的条款。利率因收藏品和贷款参数而异。</p><p><strong>Arcade</strong> 允许对打包的 NFT 进行贷款，提高资本效率。</p><p><strong>Unlockd</strong> 提供基于预言机定价的即时流动性，类似于 NFT 的 Aave。</p><p><strong>需要了解的风险：</strong></p><ul><li>如果地板价跌破贷款价值会被清算</li><li>智能合约风险</li><li>如果违约会失去你的 NFT</li></ul>"
 			},
 			"fractionalization": {
-				"title": "Fractionalization",
-				"content": "<p>Fractionalization divides an NFT into tradeable tokens, enabling shared ownership of expensive assets.</p><p><strong>NFTX</strong> creates vault tokens backed by collections. Each vault token represents fractional ownership of the floor.</p><p><strong>Floor Protocol</strong> creates \"micro-tokens\" (μTokens) that can be traded on DEXs.</p><p><strong>Tessera</strong> (formerly Fractional) enables collective ownership with governance for high-value pieces.</p><p><strong>Use cases:</strong></p><ul><li>Gain exposure to expensive collections</li><li>Diversify across multiple collections with limited capital</li><li>Create liquidity for otherwise illiquid assets</li></ul>"
+				"title": "碎片化",
+				"content": "<p>碎片化将 NFT 分割成可交易的代币，实现对昂贵资产的共同所有权。</p><p><strong>NFTX</strong> 创建由收藏品支持的金库代币。每个金库代币代表对地板的部分所有权。</p><p><strong>Floor Protocol</strong> 创建可在 DEX 上交易的「微代币」（μTokens）。</p><p><strong>Tessera</strong>（前身 Fractional）为高价值作品启用带治理的集体所有权。</p><p><strong>用例：</strong></p><ul><li>获得昂贵收藏品的敞口</li><li>用有限资本分散投资多个收藏品</li><li>为原本缺乏流动性的资产创造流动性</li></ul>"
 			},
 			"nft_amm": {
-				"title": "NFT AMMs",
-				"content": "<p>Automated Market Makers for NFTs enable instant buying and selling at algorithmic prices.</p><p><strong>Sudoswap</strong> pioneered the bonding curve model for NFTs:</p><ul><li>Create buy/sell pools for collections</li><li>Earn trading fees as a liquidity provider</li><li>Instant liquidity without counterparty</li></ul><p><strong>Caviar</strong> focuses on floor price liquidity, enabling deep order books for popular collections.</p><p><strong>Tradeoffs:</strong></p><ul><li>Better liquidity vs. potentially lower prices than marketplace listings</li><li>LP positions can suffer impermanent loss</li></ul>"
+				"title": "NFT AMM",
+				"content": "<p>NFT 自动做市商以算法价格实现即时买卖。</p><p><strong>Sudoswap</strong> 开创了 NFT 的联合曲线模式：</p><ul><li>为收藏品创建买卖池</li><li>作为流动性提供者赚取交易费用</li><li>无需对手方的即时流动性</li></ul><p><strong>Caviar</strong> 专注于地板价流动性，为热门收藏品提供深度订单簿。</p><p><strong>权衡：</strong></p><ul><li>更好的流动性 vs 可能比市场挂单价格更低</li><li>LP 头寸可能遭受无常损失</li></ul>"
 			}
 		},
-
 		"trading": {
-			"title": "Trading Strategies",
-			"content": "<p>NFT trading ranges from casual flipping to sophisticated market making. Understanding different strategies helps you find your edge.</p>",
+			"title": "交易策略",
+			"content": "<p>NFT 交易从休闲翻转到复杂的做市都有。了解不同策略有助于找到你的优势。</p>",
 			"floor_trading": {
-				"title": "Floor Trading",
-				"content": "<p>Floor trading focuses on buying at or near the floor price and selling as the floor rises.</p><p><strong>Key tactics:</strong></p><ul><li>Bid slightly below floor for patient accumulation</li><li>Sweep floors during market dips</li><li>List above your purchase price during green candles</li></ul><p><strong>Tools:</strong> Blur's bidding interface allows you to place collection-wide bids that automatically execute at floor prices.</p><p><strong>Risks:</strong> Floors can drop significantly, leaving you holding bags. Always size positions appropriately.</p>"
+				"title": "地板交易",
+				"content": "<p>地板交易专注于以接近地板价购买，并在地板上涨时卖出。</p><p><strong>关键策略：</strong></p><ul><li>略低于地板出价以耐心累积</li><li>在市场下跌时扫地板</li><li>在绿色蜡烛时以高于购买价格挂单</li></ul><p><strong>工具：</strong> Blur 的竞价界面允许你下全集合竞价，在地板价自动执行。</p><p><strong>风险：</strong> 地板可能大幅下跌，让你持有亏损头寸。始终适当控制仓位大小。</p>"
 			},
 			"trait_sniping": {
-				"title": "Trait Sniping",
-				"content": "<p>Trait sniping involves identifying undervalued NFTs based on rare or desirable traits.</p><p><strong>Strategy:</strong></p><ol><li>Understand which traits the market values</li><li>Use rarity tools to find mispriced listings</li><li>Set up alerts for specific trait combinations</li><li>Act quickly - good deals don't last</li></ol><p>Analytics tools provide trait floor prices, helping you identify when rare traits are listed near common floors.</p>"
+				"title": "特征狙击",
+				"content": "<p>特征狙击涉及根据稀有或受欢迎的特征识别被低估的 NFT。</p><p><strong>策略：</strong></p><ol><li>了解市场重视哪些特征</li><li>使用稀有度工具找到定价过低的挂单</li><li>为特定特征组合设置提醒</li><li>快速行动 - 好的交易不会持续太久</li></ol><p>分析工具提供特征地板价，帮助你识别稀有特征何时以接近普通地板的价格挂出。</p>"
 			},
 			"flipping": {
-				"title": "Mint Flipping & Airdrops",
-				"content": "<p>Flipping involves minting new projects and selling quickly for profit.</p><p><strong>Success factors:</strong></p><ul><li>Getting on allowlists for hyped projects</li><li>Understanding market sentiment</li><li>Timing your sells correctly</li><li>Managing gas costs</li></ul><p><strong>Airdrops:</strong> Holding certain NFTs can qualify you for airdrops. The Blur airdrop rewarded active traders with significant BLUR allocations, with some earning thousands of dollars based on their trading activity.</p>"
+				"title": "铸造翻转与空投",
+				"content": "<p>翻转涉及铸造新项目并快速出售获利。</p><p><strong>成功因素：</strong></p><ul><li>获得热门项目的白名单</li><li>理解市场情绪</li><li>正确把握卖出时机</li><li>管理 Gas 成本</li></ul><p><strong>空投：</strong> 持有某些 NFT 可以让你有资格获得空投。Blur 空投奖励了活跃交易者大量的 BLUR 分配，一些人根据他们的交易活动赚取了数千美元。</p>",
+				"case_blur": {
+					"title": "Blur 第二季空投",
+					"description": "Blur 第二季空投根据交易者的交易量、竞价活动和平台忠诚度进行奖励。一些交易者获得了价值数千美元的大量 BLUR 分配。"
+				}
 			}
 		},
-
 		"security": {
-			"title": "Security Best Practices",
-			"content": "<p>NFT scams are sophisticated and can drain your entire collection in seconds. Security is non-negotiable.</p>",
+			"title": "安全最佳实践",
+			"content": "<p>NFT 骗局很复杂，可以在几秒钟内掏空你的整个收藏。安全是不可妥协的。</p>",
 			"wallet_security": {
-				"title": "Wallet Security",
-				"content": "<p><strong>Essential practices:</strong></p><ul><li>Use hardware wallets for valuable collections</li><li>Keep a separate \"hot wallet\" for minting and daily use</li><li>Never share your seed phrase - EVER</li></ul><p><strong>Delegation tools</strong> like Delegate.cash and Warm.xyz allow you to interact with dApps using a hot wallet while keeping NFTs in cold storage.</p><p>How it works: Your cold wallet delegates permissions to a hot wallet, proving ownership without exposing your main holdings.</p>"
+				"title": "钱包安全",
+				"content": "<p><strong>基本做法：</strong></p><ul><li>为有价值的收藏品使用硬件钱包</li><li>保留单独的「热钱包」用于铸造和日常使用</li><li>永远不要分享你的助记词 - 永远不要</li></ul><p><strong>委托工具</strong> 如 Delegate.cash 和 Warm.xyz 允许你使用热钱包与 dApp 交互，同时将 NFT 保存在冷存储中。</p><p>工作原理：你的冷钱包向热钱包授权，证明所有权而不暴露你的主要持有。</p>"
 			},
 			"scam_prevention": {
-				"title": "Avoiding Scams",
-				"content": "<p><strong>Common scam types:</strong></p><ul><li><strong>Phishing sites:</strong> Fake marketplace links that drain wallets</li><li><strong>Discord hacks:</strong> Compromised servers posting fake mint links</li><li><strong>Malicious signatures:</strong> Approvals that allow draining</li><li><strong>Fake collections:</strong> Copies of popular projects with similar names</li></ul><p><strong>Prevention:</strong></p><ul><li>Bookmark official sites - never click links from DMs</li><li>Use transaction simulation tools before signing</li><li>Revoke old approvals regularly</li><li>Verify collection contracts on Etherscan</li></ul><p>In April 2022, the BAYC Instagram was hacked, posting a fake airdrop link that stole approximately $3M worth of NFTs from users who connected their wallets.</p>"
+				"title": "避免骗局",
+				"content": "<p><strong>常见骗局类型：</strong></p><ul><li><strong>钓鱼网站：</strong> 掏空钱包的假市场链接</li><li><strong>Discord 黑客攻击：</strong> 发布假铸造链接的被入侵服务器</li><li><strong>恶意签名：</strong> 允许掏空的授权</li><li><strong>假收藏品：</strong> 名称相似的热门项目副本</li></ul><p><strong>预防措施：</strong></p><ul><li>收藏官方网站 - 永远不要点击私信链接</li><li>签名前使用交易模拟工具</li><li>定期撤销旧授权</li><li>在 Etherscan 上验证收藏品合约</li></ul><p>2022 年 4 月，BAYC Instagram 被黑客入侵，发布了一个假空投链接，从连接钱包的用户那里盗取了约 300 万美元的 NFT。</p>",
+				"case_bayc": {
+					"title": "BAYC Instagram 被黑事件",
+					"description": "2022 年 4 月，Bored Ape Yacht Club 官方 Instagram 账号遭到入侵。黑客发布了一个虚假的空投链接，从连接钱包的用户那里盗取了约 300 万美元的 NFT。"
+				}
 			},
 			"verification": {
-				"title": "Verification & Token Gating",
-				"content": "<p><strong>Tokenproof</strong> enables secure verification of NFT ownership for events and perks without connecting your main wallet.</p><p><strong>Best practices for projects:</strong></p><ul><li>Use established verification tools rather than custom solutions</li><li>Don't require wallet connections for basic information</li><li>Implement proper access control for holders-only content</li></ul>"
+				"title": "验证与代币门控",
+				"content": "<p><strong>Tokenproof</strong> 可以安全验证 NFT 所有权用于活动和权益，而无需连接你的主钱包。</p><p><strong>项目最佳实践：</strong></p><ul><li>使用成熟的验证工具而非自定义解决方案</li><li>基本信息不要求钱包连接</li><li>为持有者专属内容实施适当的访问控制</li></ul>"
 			}
 		},
-
 		"multi_chain": {
-			"title": "Multi-Chain NFTs",
-			"content": "<p>NFTs exist on many blockchains beyond Ethereum, each with unique characteristics and communities.</p>",
+			"title": "多链 NFT",
+			"content": "<p>NFT 存在于以太坊以外的许多区块链上，每条链都有独特的特点和社区。</p>",
 			"solana_nfts": {
-				"title": "Solana NFTs",
-				"content": "<p>Solana offers near-instant transactions and sub-cent fees, making it popular for gaming and high-frequency trading.</p><p><strong>Ecosystem highlights:</strong></p><ul><li>Strong gaming and PFP communities</li><li>Compressed NFTs for mass distribution</li><li>Active trading on Tensor and Magic Eden</li></ul><p><strong>Tensor</strong> is the leading Solana marketplace with AMM pools and professional trading features. It's essentially Blur for Solana.</p>"
+				"title": "Solana NFT",
+				"content": "<p>Solana 提供近乎即时的交易和低于 1 美分的费用，使其在游戏和高频交易中很受欢迎。</p><p><strong>生态亮点：</strong></p><ul><li>强大的游戏和 PFP 社区</li><li>用于大规模分发的压缩 NFT</li><li>在 Tensor 和 Magic Eden 上活跃交易</li></ul><p><strong>Tensor</strong> 是领先的 Solana 市场，具有 AMM 池和专业交易功能。它本质上是 Solana 的 Blur。</p>"
 			},
 			"bitcoin_ordinals": {
-				"title": "Bitcoin Ordinals",
-				"content": "<p>Ordinals inscribe data directly on Bitcoin satoshis, creating truly immutable NFTs on the most secure blockchain.</p><p><strong>Key concepts:</strong></p><ul><li><strong>Inscriptions:</strong> Content stored on-chain in witness data</li><li><strong>Ordinal theory:</strong> Tracking individual satoshis</li><li><strong>Runes:</strong> Bitcoin-native token standard</li></ul><p>Trade Ordinals on specialized marketplaces like Ordinals Market and Magic Eden's Bitcoin section.</p><p><strong>Note:</strong> Bitcoin NFT infrastructure is less mature - expect higher fees and slower confirmations compared to Ethereum.</p>"
+				"title": "比特币 Ordinals",
+				"content": "<p>Ordinals 直接在比特币聪上铭刻数据，在最安全的区块链上创建真正不可变的 NFT。</p><p><strong>关键概念：</strong></p><ul><li><strong>铭文：</strong> 存储在见证数据中的链上内容</li><li><strong>序数理论：</strong> 追踪单个聪</li><li><strong>符文：</strong> 比特币原生代币标准</li></ul><p>在 Ordinals Market 和 Magic Eden 的比特币专区等专业市场交易 Ordinals。</p><p><strong>注意：</strong> 比特币 NFT 基础设施不太成熟 - 与以太坊相比，预计费用更高，确认更慢。</p>"
 			},
 			"l2_nfts": {
-				"title": "Layer 2 NFTs",
-				"content": "<p>L2s like Base, Arbitrum, and Optimism offer Ethereum security with lower fees.</p><p><strong>Advantages:</strong></p><ul><li>Much lower minting and trading fees</li><li>Same wallet and addresses as mainnet</li><li>Growing ecosystems and airdrops</li></ul><p><strong>Decent</strong> enables cross-chain minting, allowing collectors to pay on any chain while receiving NFTs on their preferred network.</p><p>Many new collections are launching on L2s exclusively to reduce costs for both creators and collectors.</p>"
+				"title": "Layer 2 NFT",
+				"content": "<p>Base、Arbitrum 和 Optimism 等 L2 以更低的费用提供以太坊安全性。</p><p><strong>优势：</strong></p><ul><li>更低的铸造和交易费用</li><li>与主网相同的钱包和地址</li><li>不断增长的生态系统和空投</li></ul><p><strong>Decent</strong> 支持跨链铸造，允许收藏者在任何链上付款，同时在他们首选的网络上接收 NFT。</p><p>许多新收藏品专门在 L2 上发布，以降低创作者和收藏者的成本。</p>"
 			}
 		}
 	},
-
 	"glossary": {
 		"floor_price": {
-			"term": "Floor Price",
-			"definition": "The lowest listed price for any NFT in a collection. A key metric for evaluating collection value and market sentiment."
+			"term": "地板价",
+			"definition": "收藏品中任何 NFT 的最低挂单价格。评估收藏品价值和市场情绪的关键指标。"
 		},
 		"rarity": {
-			"term": "Rarity",
-			"definition": "How uncommon specific traits are within a collection. Rare traits typically command premium prices over floor."
+			"term": "稀有度",
+			"definition": "收藏品中特定特征的稀有程度。稀有特征通常比地板价溢价。"
 		},
 		"mint": {
-			"term": "Mint",
-			"definition": "The process of creating a new NFT on the blockchain. The first time an NFT is purchased from the creator."
+			"term": "铸造",
+			"definition": "在区块链上创建新 NFT 的过程。从创作者处首次购买 NFT。"
 		},
 		"allowlist": {
-			"term": "Allowlist (Whitelist)",
-			"definition": "A list of wallet addresses granted early or guaranteed access to mint an NFT collection, often at a lower price."
+			"term": "白名单",
+			"definition": "被授予早期或保证铸造 NFT 收藏品访问权的钱包地址列表，通常价格更低。"
 		},
 		"airdrop": {
-			"term": "Airdrop",
-			"definition": "Free distribution of NFTs to holders of other NFTs or tokens, often used as rewards or to expand communities."
+			"term": "空投",
+			"definition": "向其他 NFT 或代币持有者免费分发 NFT，通常用作奖励或扩展社区。"
 		},
 		"royalties": {
-			"term": "Royalties",
-			"definition": "Percentage of secondary sales paid to the original creator. Typically 2.5-10% but enforcement varies by marketplace."
+			"term": "版税",
+			"definition": "支付给原创作者的二次销售百分比。通常为 2.5-10%，但执行因市场而异。"
 		},
 		"pfp": {
-			"term": "PFP (Profile Picture)",
-			"definition": "A category of NFTs designed to be used as social media profile pictures. Examples include BAYC, CryptoPunks, and Azuki."
+			"term": "PFP（头像）",
+			"definition": "设计用作社交媒体头像的 NFT 类别。例如 BAYC、CryptoPunks 和 Azuki。"
 		},
 		"reveal": {
-			"term": "Reveal",
-			"definition": "When a collection's actual artwork is shown. Many projects launch with placeholder images and reveal later to build anticipation."
+			"term": "揭示",
+			"definition": "展示收藏品实际艺术作品的时刻。许多项目以占位符图片启动，稍后揭示以建立期待。"
 		},
 		"sweep": {
-			"term": "Sweep",
-			"definition": "Buying multiple NFTs at or near the floor price in quick succession, often to accumulate a position or raise the floor."
+			"term": "扫货",
+			"definition": "快速连续购买多个接近地板价的 NFT，通常是为了累积头寸或抬高地板。"
 		},
 		"ordinals": {
-			"term": "Ordinals",
-			"definition": "Bitcoin NFTs created by inscribing data onto individual satoshis. Permanently stored on the Bitcoin blockchain."
+			"term": "Ordinals（序数）",
+			"definition": "通过在单个聪上铭刻数据创建的比特币 NFT。永久存储在比特币区块链上。"
 		}
 	}
 }

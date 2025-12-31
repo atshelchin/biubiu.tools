@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Taiko - Type-1 zkEVM",
+		"description": "Taiko 是去中心化的、以太坊等效的 zkEVM Rollup。最兼容的 zkEVM，具有无需许可的证明。",
+		"keywords": "Taiko, zkEVM, Type-1, 以太坊 Rollup, TAIKO 代币, ZK L2"
+	},
+	"overview": "Taiko 是最以太坊等效的 zkEVM，被分类为 Type-1。这意味着现有的以太坊智能合约、工具和基础设施无需任何修改即可在 Taiko 上工作——真正的 1:1 兼容性。\n\n于 2024 年推出，Taiko 通过去中心化脱颖而出。与其他使用中心化证明者的 zkEVM 不同，Taiko 使用无需许可的证明，任何人都可以成为证明者。这创建了证明生成的竞争市场。\n\nTaiko 还引入了 Based Rollups——一种让以太坊验证者对交易排序的设计，进一步去中心化网络。该项目完全开源且由社区驱动。",
+	"features": {
+		"1": {
+			"title": "Type-1 zkEVM",
+			"description": "完全以太坊等效，无需修改"
+		},
+		"2": {
+			"title": "无需许可证明",
+			"description": "任何人都可以成为证明者"
+		},
+		"3": {
+			"title": "Based Rollup",
+			"description": "以太坊验证者对交易排序"
+		},
+		"4": {
+			"title": "开源",
+			"description": "完全透明和可审计的代码库"
+		},
+		"5": {
+			"title": "低费用",
+			"description": "交易成本远低于以太坊"
+		},
+		"6": {
+			"title": "去中心化",
+			"description": "无单点故障或控制"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "以太坊 dApp 迁移",
+			"description": "零修改部署现有 dApps"
+		},
+		"2": {
+			"title": "DeFi 协议",
+			"description": "以以太坊安全性运行 DeFi"
+		},
+		"3": {
+			"title": "证明服务",
+			"description": "运行证明者并赚取奖励"
+		},
+		"4": {
+			"title": "企业应用",
+			"description": "在去中心化、抗审查的 L2 上构建"
+		},
+		"5": {
+			"title": "NFT 平台",
+			"description": "以低费用启动 NFT 项目"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 TAIKO 代币？",
+			"answer": "TAIKO 是网络的原生代币，用于治理和证明者激励。证明者质押 TAIKO 并通过生成有效证明赚取奖励。代币持有者参与有关协议的治理决策。"
+		},
+		"2": {
+			"question": "Type-1 zkEVM 有什么特别之处？",
+			"answer": "Type-1 意味着完美的以太坊兼容性——相同的字节码、相同的工具、完全一样。其他 zkEVM（Type-2、3、4）为了 ZK 效率做出权衡。Type-1 优先考虑兼容性而非速度，使迁移无缝。"
+		},
+		"3": {
+			"question": "Taiko 是去中心化的吗？",
+			"answer": "是的，比大多数 L2 更去中心化。Taiko 使用无需许可的证明（任何人都可以证明）和基于以太坊的排序（以太坊验证者排序）。没有中心化排序器或特权证明者集，使其成为最去中心化的 Rollup 之一。"
+		},
+		"4": {
+			"question": "如何桥接到 Taiko？",
+			"answer": "使用 bridge.taiko.xyz 官方 Taiko Bridge 或 Orbiter 等第三方桥。桥接简单直接，通常需要几分钟。MetaMask 与 Taiko 无缝配合。"
+		},
+		"5": {
+			"question": "我可以运行 Taiko 证明者吗？",
+			"answer": "是的，证明是无需许可的。你需要能够生成 ZK 证明的硬件（高 CPU/GPU）和用于质押的 TAIKO 代币。证明者竞争提交证明并赚取奖励。参见 Taiko 文档了解硬件要求。"
+		}
+	},
+	"cta": {
+		"ready": "准备好体验真正的以太坊等效了吗？",
+		"button": "探索 Taiko",
+		"note": "Type-1 zkEVM"
+	}
+}

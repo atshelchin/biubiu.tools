@@ -88,6 +88,18 @@ import { mantaDetail } from './manta';
 import { mantleDetail } from './mantle';
 import { modeDetail } from './mode';
 import { seiDetail } from './sei';
+import { blastDetail } from './blast';
+import { taikoDetail } from './taiko';
+import { starknetDetail } from './starknet';
+import { suiDetail } from './sui';
+import { aptosDetail } from './aptos';
+import { nearDetail } from './near';
+import { avalancheDetail } from './avalanche';
+import { fantomDetail } from './fantom';
+import { bnbchainDetail } from './bnbchain';
+import { solanaDetail } from './solana';
+import { morphoDetail } from './morpho';
+import { sparkDetail } from './spark';
 
 /**
  * All tool details mapped by tool ID
@@ -172,7 +184,19 @@ export const toolDetails: Record<string, ToolDetail> = {
 	manta: mantaDetail,
 	mantle: mantleDetail,
 	mode: modeDetail,
-	sei: seiDetail
+	sei: seiDetail,
+	blast: blastDetail,
+	taiko: taikoDetail,
+	starknet: starknetDetail,
+	sui: suiDetail,
+	aptos: aptosDetail,
+	near: nearDetail,
+	avalanche: avalancheDetail,
+	fantom: fantomDetail,
+	bnbchain: bnbchainDetail,
+	solana: solanaDetail,
+	morpho: morphoDetail,
+	spark: sparkDetail
 };
 
 /**

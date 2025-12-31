@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Starknet - 使用 Cairo 的 ZK Rollup",
+		"description": "Starknet 是使用 STARK 证明和 Cairo 语言的无需许可 ZK Rollup。最高安全性与创新技术。",
+		"keywords": "Starknet, STARK 证明, Cairo, ZK Rollup, STRK 代币, StarkWare"
+	},
+	"overview": "Starknet 是一个无需许可的 ZK Rollup，使用 STARK 证明——一种不需要可信设置的零知识证明。由 ZK 技术先驱 StarkWare 构建，Starknet 优先考虑安全性和可扩展性。\n\n与 EVM 兼容的 Rollup 不同，Starknet 使用 Cairo，一种专为可证明计算设计的自定义编程语言。虽然这意味着开发者需要学习曲线，但 Cairo 实现了 EVM 链上不可能的功能。\n\n凭借主要 DeFi 协议、游戏项目和创新应用，Starknet 建立了独特的生态系统。网络由 STARK 证明保护，提供抗量子安全性。",
+	"features": {
+		"1": {
+			"title": "STARK 证明",
+			"description": "无需可信设置，抗量子安全"
+		},
+		"2": {
+			"title": "Cairo 语言",
+			"description": "专为可证明计算构建"
+		},
+		"3": {
+			"title": "账户抽象",
+			"description": "原生智能合约钱包"
+		},
+		"4": {
+			"title": "Volition",
+			"description": "在 L1 和链下数据之间选择"
+		},
+		"5": {
+			"title": "并行执行",
+			"description": "交易同时处理"
+		},
+		"6": {
+			"title": "递归证明",
+			"description": "证明的证明实现无限扩展"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi 协议",
+			"description": "使用 Cairo 功能构建高级 DeFi"
+		},
+		"2": {
+			"title": "游戏",
+			"description": "具有复杂逻辑的链上游戏"
+		},
+		"3": {
+			"title": "AI 应用",
+			"description": "可验证的链上 AI 推理"
+		},
+		"4": {
+			"title": "身份解决方案",
+			"description": "隐私保护的身份系统"
+		},
+		"5": {
+			"title": "企业应用",
+			"description": "高安全性企业解决方案"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 STRK 代币？",
+			"answer": "STRK 是 Starknet 的原生代币，用于 Gas 费用、质押和治理。STRK 已空投给早期用户和质押者。它用于支付交易，并将在去中心化排序启动后用于质押。"
+		},
+		"2": {
+			"question": "为什么用 Cairo 而不是 Solidity？",
+			"answer": "Cairo 专为 ZK 证明设计。虽然 Solidity 可以适配 ZK（zkEVM），但 Cairo 能实现更高效的证明和 EVM 中不可能的功能。权衡是学习曲线，但 Cairo 1.0 使其更加开发者友好。"
+		},
+		"3": {
+			"question": "Starknet 安全吗？",
+			"answer": "非常安全。STARK 证明提供无需可信设置的数学安全性，意味着不可能有被破坏的仪式。STARKs 还具有抗量子性。StarkWare 在这项技术上有多年生产经验。"
+		},
+		"4": {
+			"question": "如何桥接到 Starknet？",
+			"answer": "使用 starkgate.starknet.io 官方 Starknet Bridge 或 Orbiter、LayerSwap 等桥。你需要 Argent X 或 Braavos 等 Starknet 钱包。从以太坊桥接大约需要 15 分钟。"
+		},
+		"5": {
+			"question": "Starknet 上的账户抽象是什么？",
+			"answer": "每个 Starknet 账户都是智能合约，而不仅仅是 EOA。这实现了社交恢复、会话密钥、多签和用任何代币支付 Gas 等功能。这是原生的——不像以太坊上的 ERC-4337 是附加功能。"
+		}
+	},
+	"cta": {
+		"ready": "准备好用 Cairo 构建了吗？",
+		"button": "探索 Starknet",
+		"note": "STARK 驱动的 Rollup"
+	}
+}

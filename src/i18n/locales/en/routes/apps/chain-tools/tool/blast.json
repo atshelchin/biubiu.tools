@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Blast - L2 with Native Yield",
+		"description": "Blast is the only Ethereum L2 with native yield for ETH and stablecoins. Earn yield automatically while using DeFi.",
+		"keywords": "Blast, Ethereum L2, native yield, BLAST token, OP Stack, yield L2"
+	},
+	"overview": "Blast is a unique Ethereum Layer 2 that offers native yield on ETH and stablecoins. Launched in 2024, Blast automatically earns yield from ETH staking and T-Bill protocols, passing these returns to users and dApps.\n\nUnlike other L2s where your ETH just sits idle, Blast's ETH earns ~4% yield automatically. Stablecoins bridged to Blast earn ~5% from T-Bill backed protocols. This native yield makes Blast attractive for both users and developers building yield-aware applications.\n\nBacked by Paradigm and launched by the Blur team, Blast quickly attracted billions in TVL through its points program and airdrop campaigns.",
+	"features": {
+		"1": {
+			"title": "Native ETH Yield",
+			"description": "ETH earns ~4% automatically from staking"
+		},
+		"2": {
+			"title": "Stablecoin Yield",
+			"description": "USDB earns ~5% from T-Bill protocols"
+		},
+		"3": {
+			"title": "Gas Revenue Sharing",
+			"description": "Developers earn from gas fees their apps generate"
+		},
+		"4": {
+			"title": "OP Stack",
+			"description": "Built on proven Optimism technology"
+		},
+		"5": {
+			"title": "Auto-Rebasing",
+			"description": "Yield compounds automatically in wallet"
+		},
+		"6": {
+			"title": "Points Program",
+			"description": "Earn Blast points for ecosystem participation"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Yield-Aware DeFi",
+			"description": "Build DeFi that leverages native yield"
+		},
+		"2": {
+			"title": "Passive Earning",
+			"description": "Earn yield while holding ETH and stables"
+		},
+		"3": {
+			"title": "NFT Projects",
+			"description": "Launch NFTs where holders earn yield"
+		},
+		"4": {
+			"title": "Gaming",
+			"description": "Build games with built-in player rewards"
+		},
+		"5": {
+			"title": "DeFi Trading",
+			"description": "Trade on DEXs while assets earn yield"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How does Blast native yield work?",
+			"answer": "ETH bridged to Blast is staked via Lido to earn staking rewards. Stablecoins are deposited in MakerDAO's T-Bill protocol. The yield is passed to users automatically through rebasing—your balance grows without claiming."
+		},
+		"2": {
+			"question": "What is the BLAST token?",
+			"answer": "BLAST is the network's native governance token distributed via airdrop to users and developers based on points earned. BLAST can be used for governance voting and may have future utility in the ecosystem."
+		},
+		"3": {
+			"question": "Is Blast safe?",
+			"answer": "Blast is built on the OP Stack used by Optimism and Base. The yield strategies use battle-tested protocols like Lido and MakerDAO. However, as a newer L2 with novel yield mechanics, exercise appropriate caution."
+		},
+		"4": {
+			"question": "How do I bridge to Blast?",
+			"answer": "Use the official Blast Bridge at blast.io or third-party bridges. Note that bridging to Blast means your ETH will be staked—this is how yield is generated. Withdrawals may take time depending on the bridge used."
+		},
+		"5": {
+			"question": "What is USDB?",
+			"answer": "USDB is Blast's native stablecoin that earns yield from T-Bill protocols. When you bridge USDC or USDT to Blast, it converts to USDB which auto-rebases with yield. You can bridge back to get your stablecoin plus earned yield."
+		}
+	},
+	"cta": {
+		"ready": "Ready to earn while you use?",
+		"button": "Explore Blast",
+		"note": "L2 with native yield"
+	}
+}

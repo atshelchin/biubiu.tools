@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Aptos - 可扩展 Layer 1 区块链",
+		"description": "Aptos 是使用 Move 语言和并行执行的 Layer 1 区块链。由前 Meta 工程师构建，注重可扩展性和安全性。",
+		"keywords": "Aptos, APT 代币, Move 语言, Layer 1, Aptos Labs, 可扩展区块链"
+	},
+	"overview": "Aptos 是由 Aptos Labs 构建的 Layer 1 区块链，由为 Diem 开发 Move 语言的前 Meta 工程师创立。Aptos 将 Move 的安全保证与创新共识相结合，实现高吞吐量。\n\n网络使用 Block-STM，一个可以同时处理交易同时保持正确顺序的并行执行引擎。这实现了高 TPS 而不牺牲去中心化。\n\n凭借主要交易所上市、战略合作伙伴关系和大量资金，Aptos 吸引了构建 DeFi、游戏和社交应用的开发者。生态系统继续增长，出现了独特的 Move 原生应用。",
+	"features": {
+		"1": {
+			"title": "Move 语言",
+			"description": "面向资源的安全编程"
+		},
+		"2": {
+			"title": "Block-STM",
+			"description": "并行交易执行引擎"
+		},
+		"3": {
+			"title": "快速确认",
+			"description": "亚秒级交易确认"
+		},
+		"4": {
+			"title": "模块化设计",
+			"description": "无需硬分叉即可升级"
+		},
+		"5": {
+			"title": "BFT 共识",
+			"description": "AptosBFT 实现安全和性能"
+		},
+		"6": {
+			"title": "账户模型",
+			"description": "带资源的灵活账户结构"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi 协议",
+			"description": "利用 Move 安全性构建安全 DeFi"
+		},
+		"2": {
+			"title": "游戏",
+			"description": "高性能区块链游戏"
+		},
+		"3": {
+			"title": "NFT 平台",
+			"description": "具有链上逻辑的可组合 NFT"
+		},
+		"4": {
+			"title": "社交应用",
+			"description": "可扩展的社交和内容平台"
+		},
+		"5": {
+			"title": "企业",
+			"description": "企业区块链解决方案"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 APT 代币？",
+			"answer": "APT 是 Aptos 用于 Gas 费用、质押和治理的原生代币。验证者质押 APT 以保护网络。APT 用于交易费用和协议升级的治理投票。"
+		},
+		"2": {
+			"question": "Aptos 与 Sui 有什么区别？",
+			"answer": "两者都使用 Move 并由前 Meta 工程师创立。Aptos 使用基于账户的模型（像以太坊），而 Sui 使用基于对象的模型。两者都有并行执行但方法不同。Aptos 更注重企业，Sui 更注重消费者应用。"
+		},
+		"3": {
+			"question": "Aptos 安全吗？",
+			"answer": "Move 语言提供强大的安全保证——资源不能被意外复制或丢失。网络已经过多次审计。Aptos 还具有链上治理功能，可在没有争议性硬分叉的情况下进行升级。"
+		},
+		"4": {
+			"question": "如何使用 Aptos？",
+			"answer": "安装 Aptos 钱包如 Petra、Martian 或 Pontem。在 Binance 或 Coinbase 等交易所购买 APT。通过 Liquidswap（DEX）、Topaz（NFT）和其他 dApps 探索生态系统。"
+		},
+		"5": {
+			"question": "Block-STM 有什么特别之处？",
+			"answer": "Block-STM 通过乐观处理交易并检测冲突来实现并行交易执行。与顺序处理不同，它可以充分利用多核处理器，在保持正确性的同时实现高吞吐量。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在 Aptos 上构建了吗？",
+		"button": "探索 Aptos",
+		"note": "可扩展的 Move L1"
+	}
+}

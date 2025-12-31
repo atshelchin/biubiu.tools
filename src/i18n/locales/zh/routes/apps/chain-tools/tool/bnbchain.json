@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "BNB Chain - 币安区块链生态系统",
+		"description": "BNB Chain 是币安的区块链生态系统，BNB 智能链（BSC）用于 DeFi。高吞吐量、低费用、庞大生态系统。",
+		"keywords": "BNB Chain, BSC, 币安, BNB 代币, 智能链, DeFi"
+	},
+	"overview": "BNB Chain 是币安的区块链生态系统，以 BNB 智能链（BSC）为核心——一个以低费用和高速著称的 EVM 兼容网络。于 2020 年推出，BSC 迅速成为最大的 DeFi 生态系统之一。\n\n该生态系统包括用于治理和质押的 BNB 信标链、用于智能合约的 BSC，以及用于更低费用的 opBNB（L2）。有币安的支持，BNB Chain 拥有巨大的流动性和用户基础。\n\nBNB Chain 托管 PancakeSwap、Venus 和数百个其他协议。其低费用使新用户易于使用，尽管更中心化的验证者集是一个权衡。",
+	"features": {
+		"1": {
+			"title": "低交易费用",
+			"description": "比以太坊主网便宜得多"
+		},
+		"2": {
+			"title": "EVM 兼容",
+			"description": "轻松部署以太坊 dApps"
+		},
+		"3": {
+			"title": "高吞吐量",
+			"description": "快速出块和交易处理"
+		},
+		"4": {
+			"title": "opBNB L2",
+			"description": "超低费用的二层网络"
+		},
+		"5": {
+			"title": "币安集成",
+			"description": "从币安交易所直接桥接"
+		},
+		"6": {
+			"title": "庞大生态系统",
+			"description": "数百个 dApps 和数十亿 TVL"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi 交易",
+			"description": "使用 PancakeSwap 和其他 DEX"
+		},
+		"2": {
+			"title": "收益耕作",
+			"description": "实惠的耕作机会"
+		},
+		"3": {
+			"title": "NFT 交易",
+			"description": "低成本 NFT 市场活动"
+		},
+		"4": {
+			"title": "GameFi",
+			"description": "BNB Chain 上的众多区块链游戏"
+		},
+		"5": {
+			"title": "新用户入门",
+			"description": "加密新手的低费用"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 BNB 代币？",
+			"answer": "BNB 是 BNB Chain 和币安交易所的 Gas 费用原生代币。BNB 用于质押、治理，并从币安生态系统获得实用性，包括交易费用折扣。它是市值最大的加密货币之一。"
+		},
+		"2": {
+			"question": "BNB Chain 是去中心化的吗？",
+			"answer": "BNB Chain 的验证者比以太坊少（约 21 个活跃），使其更加中心化。币安有很大影响力。权衡是更快、更便宜的交易。对于优先考虑去中心化的用户，其他链可能更可取。"
+		},
+		"3": {
+			"question": "什么是 opBNB？",
+			"answer": "opBNB 是 BNB Chain 使用 OP Stack 技术（像 Optimism）的二层网络。它提供比 BSC 更低的费用，同时继承其安全性。对于需要非常便宜交易的应用使用 opBNB。"
+		},
+		"4": {
+			"question": "如何桥接到 BNB Chain？",
+			"answer": "从币安直接提取到 BSC，或使用 Stargate 和 Celer 等桥。最简单的方法是币安提款，因为不需要桥接。对于去中心化选项，跨链桥效果很好。"
+		},
+		"5": {
+			"question": "BNB Chain 与以太坊应该用哪个？",
+			"answer": "BNB Chain 提供更低的费用和更快的交易，但更中心化。以太坊有更好的去中心化和更大的生态系统。很多人两者都用——以太坊用于高价值 DeFi，BNB Chain 用于小额交易和实验。"
+		}
+	},
+	"cta": {
+		"ready": "准备好使用 BNB Chain 了吗？",
+		"button": "探索 BNB Chain",
+		"note": "币安的 DeFi 生态系统"
+	}
+}

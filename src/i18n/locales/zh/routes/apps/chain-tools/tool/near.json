@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "NEAR Protocol - 分片 Layer 1",
+		"description": "NEAR 是为可用性设计的分片 Layer 1 区块链。人类可读账户、低费用、开发者友好。",
+		"keywords": "NEAR Protocol, NEAR 代币, 分片, Layer 1, Nightshade, 区块链"
+	},
+	"overview": "NEAR Protocol 是一个使用分片（Nightshade）实现可扩展性同时保持安全性的 Layer 1 区块链。成立于 2020 年，NEAR 专注于开发者和用户体验，具有人类可读账户等功能。\n\nNEAR 账户使用像 'alice.near' 这样的名称，而不是长十六进制地址。网络支持元交易，应用可以为用户支付 Gas，跨合约调用实现复杂的可组合性。\n\n通过 Aurora（EVM 兼容层），NEAR 提供原生 NEAR 开发和以太坊兼容性。生态系统涵盖 DeFi、NFT、游戏，并正在扩展 AI 集成。",
+	"features": {
+		"1": {
+			"title": "Nightshade 分片",
+			"description": "动态分片实现可扩展性"
+		},
+		"2": {
+			"title": "人类可读账户",
+			"description": "使用 'alice.near' 这样的名称"
+		},
+		"3": {
+			"title": "低费用",
+			"description": "交易成本仅几分之一美分"
+		},
+		"4": {
+			"title": "Aurora EVM",
+			"description": "以太坊兼容层"
+		},
+		"5": {
+			"title": "元交易",
+			"description": "应用可赞助用户 Gas 费用"
+		},
+		"6": {
+			"title": "快速确认",
+			"description": "1-2 秒交易确认"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi",
+			"description": "以低费用和快速确认构建 DeFi"
+		},
+		"2": {
+			"title": "NFT 平台",
+			"description": "经济实惠的 NFT 铸造和交易"
+		},
+		"3": {
+			"title": "游戏",
+			"description": "具有优秀用户体验的区块链游戏"
+		},
+		"4": {
+			"title": "社交应用",
+			"description": "易于入门的社交平台"
+		},
+		"5": {
+			"title": "AI 集成",
+			"description": "AI 代理和去中心化 AI"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 NEAR 代币？",
+			"answer": "NEAR 是用于 Gas 费用、质押和存储的原生代币。验证者质押 NEAR 以保护网络。NEAR 还用于支付账户创建和链上数据存储。"
+		},
+		"2": {
+			"question": "NEAR 分片如何工作？",
+			"answer": "Nightshade 分片将网络分成同时处理交易的并行分片。验证者被分配到分片，但可以跨分片验证。系统根据需要通过添加更多分片来扩展。"
+		},
+		"3": {
+			"question": "什么是 Aurora？",
+			"answer": "Aurora 是运行在 NEAR 上的 EVM，提供以太坊兼容性。开发者可以在 Aurora 上部署 Solidity 合约。用户可以使用 MetaMask。Aurora 继承了 NEAR 的速度和低费用，同时支持以太坊 dApps。"
+		},
+		"4": {
+			"question": "如何创建 NEAR 账户？",
+			"answer": "在 wallet.near.org 创建账户或使用 HERE、Meteor 或 Sender 等钱包。NEAR 账户是人类可读的（yourname.near）并需要少量存款用于存储。一些应用提供免费账户创建。"
+		},
+		"5": {
+			"question": "NEAR 对开发者友好吗？",
+			"answer": "NEAR 非常开发者友好。使用 Rust 或 JavaScript（使用 NEAR SDK）编写合约。人类可读账户、简单测试和良好文档使开发顺畅。资助计划和生态系统支持也很强。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在 NEAR 上构建了吗？",
+		"button": "探索 NEAR",
+		"note": "注重可用性的分片 L1"
+	}
+}

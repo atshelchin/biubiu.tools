@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Starknet - ZK Rollup with Cairo",
+		"description": "Starknet is a permissionless ZK rollup using STARK proofs and Cairo language. Maximum security with innovative technology.",
+		"keywords": "Starknet, STARK proofs, Cairo, ZK rollup, STRK token, StarkWare"
+	},
+	"overview": "Starknet is a permissionless ZK rollup that uses STARK proofs—a type of zero-knowledge proof that doesn't require a trusted setup. Built by StarkWare, pioneers in ZK technology, Starknet prioritizes security and scalability.\n\nUnlike EVM-compatible rollups, Starknet uses Cairo, a custom programming language designed for provable computation. While this means a learning curve for developers, Cairo enables capabilities impossible on EVM chains.\n\nWith major DeFi protocols, gaming projects, and innovative applications, Starknet has built a unique ecosystem. The network is secured by STARK proofs, providing quantum-resistant security.",
+	"features": {
+		"1": {
+			"title": "STARK Proofs",
+			"description": "No trusted setup, quantum-resistant security"
+		},
+		"2": {
+			"title": "Cairo Language",
+			"description": "Purpose-built for provable computation"
+		},
+		"3": {
+			"title": "Account Abstraction",
+			"description": "Native smart contract wallets"
+		},
+		"4": {
+			"title": "Volition",
+			"description": "Choose between L1 and off-chain data"
+		},
+		"5": {
+			"title": "Parallel Execution",
+			"description": "Transactions processed simultaneously"
+		},
+		"6": {
+			"title": "Recursive Proofs",
+			"description": "Proofs of proofs for unlimited scaling"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi Protocols",
+			"description": "Build advanced DeFi with Cairo capabilities"
+		},
+		"2": {
+			"title": "Gaming",
+			"description": "On-chain games with complex logic"
+		},
+		"3": {
+			"title": "AI Applications",
+			"description": "Verifiable AI inference on-chain"
+		},
+		"4": {
+			"title": "Identity Solutions",
+			"description": "Privacy-preserving identity systems"
+		},
+		"5": {
+			"title": "Enterprise Apps",
+			"description": "High-security enterprise solutions"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is STRK token?",
+			"answer": "STRK is Starknet's native token used for gas fees, staking, and governance. STRK was airdropped to early users and stakers. It's used to pay for transactions and will be used for staking once decentralized sequencing launches."
+		},
+		"2": {
+			"question": "Why use Cairo instead of Solidity?",
+			"answer": "Cairo is designed specifically for ZK proofs. While Solidity can be adapted for ZK (zkEVM), Cairo enables more efficient proofs and capabilities impossible in EVM. The tradeoff is a learning curve, but Cairo 1.0 made it much more developer-friendly."
+		},
+		"3": {
+			"question": "Is Starknet secure?",
+			"answer": "Very secure. STARK proofs provide mathematical security without trusted setup, meaning no possibility of compromised ceremony. STARKs are also quantum-resistant. StarkWare has years of production experience with this technology."
+		},
+		"4": {
+			"question": "How do I bridge to Starknet?",
+			"answer": "Use the official Starknet Bridge at starkgate.starknet.io or bridges like Orbiter and LayerSwap. You'll need a Starknet wallet like Argent X or Braavos. Bridging from Ethereum takes about 15 minutes."
+		},
+		"5": {
+			"question": "What is Account Abstraction on Starknet?",
+			"answer": "Every Starknet account is a smart contract, not just an EOA. This enables features like social recovery, session keys, multi-sig, and paying gas in any token. It's native—not an add-on like ERC-4337 on Ethereum."
+		}
+	},
+	"cta": {
+		"ready": "Ready to build with Cairo?",
+		"button": "Explore Starknet",
+		"note": "STARK-powered rollup"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Fantom - 基于 DAG 的快速区块链",
+		"description": "Fantom 是使用 DAG 技术的高性能 Layer 1。为 DeFi 应用提供快速、低成本的交易。",
+		"keywords": "Fantom, FTM, Layer 1, DAG, Opera, Sonic, DeFi"
+	},
+	"overview": "Fantom 是使用名为 Lachesis 的 DAG 共识机制实现高速和低成本的 Layer 1 区块链。成立于 2018 年，Fantom 因其快速确认和 EVM 兼容性在 DeFi 繁荣期间广受欢迎。\n\nFantom Opera 网络可以每秒处理数千笔交易，确认时间 1 秒。其低费用使其在收益耕作和 DeFi 实验中很受欢迎。\n\nFantom 正通过 Sonic 进化，这是作为新网络发布的重大升级，性能增强。生态系统包括主要 DeFi 协议，并拥有强大的开发者工具。",
+	"features": {
+		"1": {
+			"title": "DAG 共识",
+			"description": "Lachesis 提供快速异步确认"
+		},
+		"2": {
+			"title": "1 秒确认",
+			"description": "近乎即时的交易确认"
+		},
+		"3": {
+			"title": "低费用",
+			"description": "交易成本仅几分之一美分"
+		},
+		"4": {
+			"title": "EVM 兼容",
+			"description": "完全支持 Solidity 和以太坊工具"
+		},
+		"5": {
+			"title": "Sonic 升级",
+			"description": "性能改进的下一代网络"
+		},
+		"6": {
+			"title": "强大的 DeFi",
+			"description": "丰富的 DeFi 协议生态系统"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi 交易",
+			"description": "快速便宜的 DEX 交易"
+		},
+		"2": {
+			"title": "收益耕作",
+			"description": "实惠的耕作，快速收获"
+		},
+		"3": {
+			"title": "dApp 开发",
+			"description": "构建以太坊兼容的 dApps"
+		},
+		"4": {
+			"title": "NFT 项目",
+			"description": "低成本 NFT 铸造"
+		},
+		"5": {
+			"title": "支付",
+			"description": "快速、便宜的支付结算"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 FTM 代币？",
+			"answer": "FTM 是 Fantom 用于 Gas 费用、质押和治理的原生代币。验证者质押 FTM 以保护网络。在 Sonic 上，将有一个新的 S 代币，FTM 持有者可以按 1:1 比例迁移。"
+		},
+		"2": {
+			"question": "什么是 Fantom Sonic？",
+			"answer": "Sonic 是 Fantom 作为新网络发布的重大升级。它具有新的虚拟机、改进的共识和更好的开发者工具。当前 Fantom 用户可以桥接到 Sonic，FTM 按 1:1 转换为 S 代币。"
+		},
+		"3": {
+			"question": "Fantom 安全吗？",
+			"answer": "Fantom 自 2019 年以来运营，高峰期 TVL 达数十亿。DAG 共识经过充分测试。不过要注意 Sonic 是新的。在新网络上从较小金额开始。"
+		},
+		"4": {
+			"question": "如何使用 Fantom？",
+			"answer": "将 Fantom Opera 网络添加到 MetaMask。使用 SpookySwap 桥、Multichain 或中心化交易所桥接资产。通过 SpookySwap（DEX）、Beethoven X 和其他协议探索 DeFi。"
+		},
+		"5": {
+			"question": "为什么选择 Fantom 而不是其他 L1？",
+			"answer": "Fantom 提供亚秒级确认和非常低的费用。其 DAG 架构很好地处理高吞吐量。通过 Sonic，它将有更好的性能。对于寻求速度和低成本的 DeFi 用户是很好的选择。"
+		}
+	},
+	"cta": {
+		"ready": "准备好使用 Fantom 了吗？",
+		"button": "探索 Fantom",
+		"note": "基于 DAG 的快速 L1"
+	}
+}

@@ -1,13 +1,11 @@
 {
 	"title": "NFT Complete Guide: From Collecting to Creating",
 	"subtitle": "Master the NFT ecosystem - marketplaces, trading strategies, NFT-Fi, and multi-chain opportunities",
-
 	"sections": {
 		"intro": {
 			"title": "Understanding NFTs",
 			"content": "<p>NFTs (Non-Fungible Tokens) are unique digital assets that represent ownership of items like art, music, collectibles, and virtual real estate on the blockchain. Unlike cryptocurrencies where each token is identical, every NFT is unique and cannot be replaced with something else.</p><p>The NFT market has evolved dramatically since the 2021 boom. While trading volumes have normalized, the technology has matured with better infrastructure, more sophisticated trading tools, and new financial primitives like NFT lending and fractionalization.</p><p>This guide covers everything from buying your first NFT to advanced trading strategies and creating your own collections.</p>"
 		},
-
 		"nft_standards": {
 			"title": "NFT Technical Standards",
 			"content": "<p>Understanding the technical foundations helps you make better decisions as a collector or creator.</p>",
@@ -24,7 +22,6 @@
 				"content": "<p>The image/media isn't stored on-chain - it's too expensive. NFTs contain metadata pointing to the actual content.</p><p><strong>Storage options:</strong></p><ul><li><strong>IPFS:</strong> Decentralized, content-addressed storage. Most common for quality projects.</li><li><strong>Arweave:</strong> Permanent storage with one-time payment. Growing in popularity.</li><li><strong>On-chain:</strong> SVGs or small data stored directly. Most decentralized but limited.</li><li><strong>Centralized servers:</strong> Cheapest but risky - if the server goes down, your NFT image is gone.</li></ul><p><strong>Always check:</strong> Where is the metadata hosted? IPFS/Arweave is preferred over centralized hosting.</p>"
 			}
 		},
-
 		"marketplaces": {
 			"title": "NFT Marketplaces",
 			"content": "<p>Choosing the right marketplace depends on your goals - casual collecting, professional trading, or artistic curation.</p>",
@@ -41,7 +38,6 @@
 				"content": "<p>Aggregators pull listings from multiple marketplaces, ensuring you get the best prices.</p><p><strong>Gem (now OpenSea Pro)</strong> allows bulk buying across marketplaces in a single transaction, saving gas and ensuring you sweep efficiently.</p><p><strong>Reservoir</strong> provides the infrastructure layer - their API powers many NFT applications and aggregates liquidity from all major marketplaces.</p>"
 			}
 		},
-
 		"collecting": {
 			"title": "Collecting NFTs",
 			"content": "<p>Successful collecting requires research, timing, and understanding market dynamics.</p>",
@@ -58,7 +54,6 @@
 				"content": "<p><strong>Getting on allowlists:</strong></p><ul><li>Join Discord early and be genuinely active</li><li>Follow and engage with the team on Twitter</li><li>Use platforms like PREMINT to register for raffles</li><li>Hold related NFTs that might grant access</li></ul><p><strong>Public mint tips:</strong></p><ul><li>Prepare transactions in advance</li><li>Use priority gas during competitive mints</li><li>Have backup wallets ready</li><li>Never click links from DMs - always verify official minting sites</li></ul>"
 			}
 		},
-
 		"creating": {
 			"title": "Creating NFTs",
 			"content": "<p>Whether you're an artist launching a collection or a developer building NFT infrastructure, understanding creation tools is essential.</p>",
@@ -75,7 +70,6 @@
 				"content": "<p>Creator royalties were historically 5-10% of secondary sales, but enforcement has changed dramatically.</p><p><strong>Current landscape:</strong></p><ul><li><strong>OpenSea:</strong> Enforces royalties for new collections using Operator Filter</li><li><strong>Blur:</strong> Optional royalties - collectors choose to pay</li><li><strong>Magic Eden:</strong> Variable enforcement by chain</li></ul><p><strong>Strategies for creators:</strong></p><ul><li>Focus on mint price rather than royalty income</li><li>Build utility that incentivizes marketplace loyalty</li><li>Consider staking/burning mechanisms for holder engagement</li></ul>"
 			}
 		},
-
 		"nft_fi": {
 			"title": "NFT-Fi: NFT Financialization",
 			"content": "<p>NFT-Fi unlocks liquidity from your NFT holdings without selling. This is a rapidly evolving space with significant opportunities and risks.</p>",
@@ -92,7 +86,6 @@
 				"content": "<p>Automated Market Makers for NFTs enable instant buying and selling at algorithmic prices.</p><p><strong>Sudoswap</strong> pioneered the bonding curve model for NFTs:</p><ul><li>Create buy/sell pools for collections</li><li>Earn trading fees as a liquidity provider</li><li>Instant liquidity without counterparty</li></ul><p><strong>Caviar</strong> focuses on floor price liquidity, enabling deep order books for popular collections.</p><p><strong>Tradeoffs:</strong></p><ul><li>Better liquidity vs. potentially lower prices than marketplace listings</li><li>LP positions can suffer impermanent loss</li></ul>"
 			}
 		},
-
 		"trading": {
 			"title": "Trading Strategies",
 			"content": "<p>NFT trading ranges from casual flipping to sophisticated market making. Understanding different strategies helps you find your edge.</p>",
@@ -106,10 +99,13 @@
 			},
 			"flipping": {
 				"title": "Mint Flipping & Airdrops",
-				"content": "<p>Flipping involves minting new projects and selling quickly for profit.</p><p><strong>Success factors:</strong></p><ul><li>Getting on allowlists for hyped projects</li><li>Understanding market sentiment</li><li>Timing your sells correctly</li><li>Managing gas costs</li></ul><p><strong>Airdrops:</strong> Holding certain NFTs can qualify you for airdrops. The Blur airdrop rewarded active traders with significant BLUR allocations, with some earning thousands of dollars based on their trading activity.</p>"
+				"content": "<p>Flipping involves minting new projects and selling quickly for profit.</p><p><strong>Success factors:</strong></p><ul><li>Getting on allowlists for hyped projects</li><li>Understanding market sentiment</li><li>Timing your sells correctly</li><li>Managing gas costs</li></ul><p><strong>Airdrops:</strong> Holding certain NFTs can qualify you for airdrops. The Blur airdrop rewarded active traders with significant BLUR allocations, with some earning thousands of dollars based on their trading activity.</p>",
+				"case_blur": {
+					"title": "Blur Season 2 Airdrop",
+					"description": "The Blur Season 2 airdrop rewarded active traders based on their trading volume, bidding activity, and loyalty to the platform. Traders who consistently bid on collections and maintained high activity levels received larger token allocations."
+				}
 			}
 		},
-
 		"security": {
 			"title": "Security Best Practices",
 			"content": "<p>NFT scams are sophisticated and can drain your entire collection in seconds. Security is non-negotiable.</p>",
@@ -119,14 +115,17 @@
 			},
 			"scam_prevention": {
 				"title": "Avoiding Scams",
-				"content": "<p><strong>Common scam types:</strong></p><ul><li><strong>Phishing sites:</strong> Fake marketplace links that drain wallets</li><li><strong>Discord hacks:</strong> Compromised servers posting fake mint links</li><li><strong>Malicious signatures:</strong> Approvals that allow draining</li><li><strong>Fake collections:</strong> Copies of popular projects with similar names</li></ul><p><strong>Prevention:</strong></p><ul><li>Bookmark official sites - never click links from DMs</li><li>Use transaction simulation tools before signing</li><li>Revoke old approvals regularly</li><li>Verify collection contracts on Etherscan</li></ul><p>In April 2022, the BAYC Instagram was hacked, posting a fake airdrop link that stole approximately $3M worth of NFTs from users who connected their wallets.</p>"
+				"content": "<p><strong>Common scam types:</strong></p><ul><li><strong>Phishing sites:</strong> Fake marketplace links that drain wallets</li><li><strong>Discord hacks:</strong> Compromised servers posting fake mint links</li><li><strong>Malicious signatures:</strong> Approvals that allow draining</li><li><strong>Fake collections:</strong> Copies of popular projects with similar names</li></ul><p><strong>Prevention:</strong></p><ul><li>Bookmark official sites - never click links from DMs</li><li>Use transaction simulation tools before signing</li><li>Revoke old approvals regularly</li><li>Verify collection contracts on Etherscan</li></ul><p>In April 2022, the BAYC Instagram was hacked, posting a fake airdrop link that stole approximately $3M worth of NFTs from users who connected their wallets.</p>",
+				"case_bayc": {
+					"title": "BAYC Instagram Hack",
+					"description": "In April 2022, the Bored Ape Yacht Club official Instagram account was compromised. Hackers posted a fake airdrop link that led to a phishing site, resulting in approximately $3 million worth of NFTs being stolen from users who connected their wallets."
+				}
 			},
 			"verification": {
 				"title": "Verification & Token Gating",
 				"content": "<p><strong>Tokenproof</strong> enables secure verification of NFT ownership for events and perks without connecting your main wallet.</p><p><strong>Best practices for projects:</strong></p><ul><li>Use established verification tools rather than custom solutions</li><li>Don't require wallet connections for basic information</li><li>Implement proper access control for holders-only content</li></ul>"
 			}
 		},
-
 		"multi_chain": {
 			"title": "Multi-Chain NFTs",
 			"content": "<p>NFTs exist on many blockchains beyond Ethereum, each with unique characteristics and communities.</p>",
@@ -144,7 +143,6 @@
 			}
 		}
 	},
-
 	"glossary": {
 		"floor_price": {
 			"term": "Floor Price",

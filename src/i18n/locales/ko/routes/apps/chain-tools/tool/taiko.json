@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Taiko - Type-1 zkEVM",
+		"description": "Taiko is a decentralized, Ethereum-equivalent zkEVM rollup. The most compatible zkEVM with permissionless proving.",
+		"keywords": "Taiko, zkEVM, Type-1, Ethereum rollup, TAIKO token, ZK L2"
+	},
+	"overview": "Taiko is the most Ethereum-equivalent zkEVM, classified as Type-1. This means existing Ethereum smart contracts, tools, and infrastructure work on Taiko without any modifications—true 1:1 compatibility.\n\nLaunched in 2024, Taiko distinguishes itself through decentralization. Unlike other zkEVMs with centralized provers, Taiko uses permissionless proving where anyone can become a prover. This creates a competitive market for proof generation.\n\nTaiko also introduced Based Rollups—a design where Ethereum validators sequence transactions, further decentralizing the network. The project is fully open source and community-driven.",
+	"features": {
+		"1": {
+			"title": "Type-1 zkEVM",
+			"description": "Complete Ethereum equivalence, no modifications needed"
+		},
+		"2": {
+			"title": "Permissionless Proving",
+			"description": "Anyone can become a prover"
+		},
+		"3": {
+			"title": "Based Rollup",
+			"description": "Ethereum validators sequence transactions"
+		},
+		"4": {
+			"title": "Open Source",
+			"description": "Fully transparent and auditable codebase"
+		},
+		"5": {
+			"title": "Low Fees",
+			"description": "Transaction costs well below Ethereum"
+		},
+		"6": {
+			"title": "Decentralized",
+			"description": "No single points of failure or control"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Ethereum dApp Migration",
+			"description": "Deploy existing dApps with zero changes"
+		},
+		"2": {
+			"title": "DeFi Protocols",
+			"description": "Run DeFi with Ethereum security"
+		},
+		"3": {
+			"title": "Proving Services",
+			"description": "Run a prover and earn rewards"
+		},
+		"4": {
+			"title": "Enterprise Apps",
+			"description": "Build on decentralized, censorship-resistant L2"
+		},
+		"5": {
+			"title": "NFT Platforms",
+			"description": "Launch NFT projects with low fees"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is TAIKO token?",
+			"answer": "TAIKO is the network's native token used for governance and prover incentives. Provers stake TAIKO and earn rewards for generating valid proofs. Token holders participate in governance decisions about the protocol."
+		},
+		"2": {
+			"question": "What makes Type-1 zkEVM special?",
+			"answer": "Type-1 means perfect Ethereum compatibility—same bytecode, same tools, same everything. Other zkEVMs (Type-2, 3, 4) make tradeoffs for ZK efficiency. Type-1 prioritizes compatibility over speed, making migration seamless."
+		},
+		"3": {
+			"question": "Is Taiko decentralized?",
+			"answer": "Yes, more than most L2s. Taiko uses permissionless proving (anyone can prove) and based sequencing (Ethereum validators sequence). There's no centralized sequencer or privileged prover set, making it one of the most decentralized rollups."
+		},
+		"4": {
+			"question": "How do I bridge to Taiko?",
+			"answer": "Use the official Taiko Bridge at bridge.taiko.xyz or third-party bridges like Orbiter. Bridging is straightforward and typically takes a few minutes. MetaMask works seamlessly with Taiko."
+		},
+		"5": {
+			"question": "Can I run a Taiko prover?",
+			"answer": "Yes, proving is permissionless. You need hardware capable of generating ZK proofs (high CPU/GPU) and TAIKO tokens for staking. Provers compete to submit proofs and earn rewards. See Taiko docs for hardware requirements."
+		}
+	},
+	"cta": {
+		"ready": "Ready for true Ethereum equivalence?",
+		"button": "Explore Taiko",
+		"note": "Type-1 zkEVM"
+	}
+}

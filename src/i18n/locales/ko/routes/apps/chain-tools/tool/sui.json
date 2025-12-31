@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Sui - Move-based Layer 1",
+		"description": "Sui is a high-performance Layer 1 blockchain using the Move language. Built by ex-Meta engineers for speed and developer experience.",
+		"keywords": "Sui Network, SUI token, Move language, Layer 1, Mysten Labs, fast blockchain"
+	},
+	"overview": "Sui is a Layer 1 blockchain built by Mysten Labs, founded by former Meta engineers who worked on the Diem/Libra project. Sui uses the Move programming language and a novel consensus mechanism for high throughput.\n\nSui's key innovation is object-centric data model and parallel transaction execution. Simple transactions (like transfers) can be processed instantly without full consensus, while complex transactions use the DAG-based Narwhal/Bullshark consensus.\n\nWith strong backing from investors and a focus on mainstream adoption, Sui targets gaming, social, and consumer applications. The network achieved mainnet in 2023 and has seen rapid ecosystem growth.",
+	"features": {
+		"1": {
+			"title": "Move Language",
+			"description": "Safe, expressive smart contract language"
+		},
+		"2": {
+			"title": "Parallel Execution",
+			"description": "Transactions processed simultaneously"
+		},
+		"3": {
+			"title": "Sub-Second Finality",
+			"description": "Near-instant transaction confirmation"
+		},
+		"4": {
+			"title": "Object-Centric Model",
+			"description": "Assets as first-class objects"
+		},
+		"5": {
+			"title": "Sponsored Transactions",
+			"description": "Apps can pay gas for users"
+		},
+		"6": {
+			"title": "zkLogin",
+			"description": "Login with Google, Facebook, Apple"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Gaming",
+			"description": "Build high-performance blockchain games"
+		},
+		"2": {
+			"title": "NFTs",
+			"description": "Dynamic NFTs with on-chain logic"
+		},
+		"3": {
+			"title": "DeFi",
+			"description": "Fast DEXs and lending protocols"
+		},
+		"4": {
+			"title": "Social Apps",
+			"description": "Scalable social and creator platforms"
+		},
+		"5": {
+			"title": "Consumer Apps",
+			"description": "Mass-market apps with web2-like UX"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is SUI token?",
+			"answer": "SUI is the native token for gas fees, staking, and governance. SUI is staked to validators to secure the network and earn rewards. It's also used to pay for transactions and storage on the network."
+		},
+		"2": {
+			"question": "Sui vs Solana: Which is better?",
+			"answer": "Both are high-performance L1s. Sui uses Move (safer) vs Solana's Rust. Sui has instant simple transactions vs Solana's fast but not instant. Solana has a larger ecosystem. Sui has better developer experience for many use cases."
+		},
+		"3": {
+			"question": "What is the Move language?",
+			"answer": "Move is a smart contract language originally developed for Meta's Diem. It focuses on safety with features like linear types (preventing asset duplication) and formal verification. It's used by Sui, Aptos, and Movement."
+		},
+		"4": {
+			"question": "How do I start using Sui?",
+			"answer": "Install a Sui wallet like Sui Wallet, Suiet, or Ethos. Bridge assets using Wormhole or buy SUI on exchanges. Explore the ecosystem through apps like Cetus (DEX), Turbos (perps), and Bluefin."
+		},
+		"5": {
+			"question": "What is zkLogin?",
+			"answer": "zkLogin lets users create Sui accounts using OAuth providers (Google, Facebook, Apple) without managing private keys. ZK proofs ensure privacy—the OAuth provider can't link activity to accounts. It enables web2-like onboarding."
+		}
+	},
+	"cta": {
+		"ready": "Ready to build on Sui?",
+		"button": "Explore Sui",
+		"note": "Move-powered L1"
+	}
+}

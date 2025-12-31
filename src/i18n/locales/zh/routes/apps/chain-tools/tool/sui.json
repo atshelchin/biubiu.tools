@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Sui - 基于 Move 的 Layer 1",
+		"description": "Sui 是使用 Move 语言的高性能 Layer 1 区块链。由前 Meta 工程师构建，注重速度和开发者体验。",
+		"keywords": "Sui Network, SUI 代币, Move 语言, Layer 1, Mysten Labs, 快速区块链"
+	},
+	"overview": "Sui 是由 Mysten Labs 构建的 Layer 1 区块链，由曾参与 Diem/Libra 项目的前 Meta 工程师创立。Sui 使用 Move 编程语言和新颖的共识机制实现高吞吐量。\n\nSui 的关键创新是以对象为中心的数据模型和并行交易执行。简单交易（如转账）可以无需完整共识即可即时处理，而复杂交易使用基于 DAG 的 Narwhal/Bullshark 共识。\n\n凭借投资者的强力支持和对主流采用的关注，Sui 目标是游戏、社交和消费者应用。网络于 2023 年实现主网，生态系统快速增长。",
+	"features": {
+		"1": {
+			"title": "Move 语言",
+			"description": "安全、富有表现力的智能合约语言"
+		},
+		"2": {
+			"title": "并行执行",
+			"description": "交易同时处理"
+		},
+		"3": {
+			"title": "亚秒级确认",
+			"description": "近乎即时的交易确认"
+		},
+		"4": {
+			"title": "以对象为中心模型",
+			"description": "资产作为一等对象"
+		},
+		"5": {
+			"title": "赞助交易",
+			"description": "应用可为用户支付 Gas"
+		},
+		"6": {
+			"title": "zkLogin",
+			"description": "使用 Google、Facebook、Apple 登录"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "游戏",
+			"description": "构建高性能区块链游戏"
+		},
+		"2": {
+			"title": "NFT",
+			"description": "具有链上逻辑的动态 NFT"
+		},
+		"3": {
+			"title": "DeFi",
+			"description": "快速 DEX 和借贷协议"
+		},
+		"4": {
+			"title": "社交应用",
+			"description": "可扩展的社交和创作者平台"
+		},
+		"5": {
+			"title": "消费者应用",
+			"description": "具有 Web2 级体验的大众市场应用"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 SUI 代币？",
+			"answer": "SUI 是用于 Gas 费用、质押和治理的原生代币。SUI 质押给验证者以保护网络并赚取奖励。它还用于支付网络上的交易和存储。"
+		},
+		"2": {
+			"question": "Sui 与 Solana 哪个更好？",
+			"answer": "两者都是高性能 L1。Sui 使用 Move（更安全）vs Solana 的 Rust。Sui 有即时简单交易 vs Solana 的快速但非即时。Solana 生态系统更大。对于许多用例，Sui 有更好的开发者体验。"
+		},
+		"3": {
+			"question": "什么是 Move 语言？",
+			"answer": "Move 是最初为 Meta 的 Diem 开发的智能合约语言。它专注于安全性，具有线性类型（防止资产复制）和形式验证等功能。Sui、Aptos 和 Movement 都使用它。"
+		},
+		"4": {
+			"question": "如何开始使用 Sui？",
+			"answer": "安装 Sui 钱包如 Sui Wallet、Suiet 或 Ethos。使用 Wormhole 桥接资产或在交易所购买 SUI。通过 Cetus（DEX）、Turbos（永续合约）和 Bluefin 等应用探索生态系统。"
+		},
+		"5": {
+			"question": "什么是 zkLogin？",
+			"answer": "zkLogin 让用户使用 OAuth 提供商（Google、Facebook、Apple）创建 Sui 账户，无需管理私钥。ZK 证明确保隐私——OAuth 提供商无法将活动与账户关联。它实现了 Web2 级别的入门体验。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在 Sui 上构建了吗？",
+		"button": "探索 Sui",
+		"note": "Move 驱动的 L1"
+	}
+}

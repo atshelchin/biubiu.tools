@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "NEAR Protocol - Sharded Layer 1",
+		"description": "NEAR is a sharded Layer 1 blockchain designed for usability. Human-readable accounts, low fees, and developer-friendly.",
+		"keywords": "NEAR Protocol, NEAR token, sharding, Layer 1, Nightshade, blockchain"
+	},
+	"overview": "NEAR Protocol is a Layer 1 blockchain that uses sharding (Nightshade) to achieve scalability while maintaining security. Founded in 2020, NEAR focuses on developer and user experience with features like human-readable accounts.\n\nNEAR accounts use names like 'alice.near' instead of long hex addresses. The network supports meta-transactions where apps can pay gas for users, and cross-contract calls enable complex composability.\n\nWith Aurora (EVM compatibility layer), NEAR provides both native NEAR development and Ethereum compatibility. The ecosystem spans DeFi, NFTs, gaming, and is expanding with AI integrations.",
+	"features": {
+		"1": {
+			"title": "Nightshade Sharding",
+			"description": "Dynamic sharding for scalability"
+		},
+		"2": {
+			"title": "Human-Readable Accounts",
+			"description": "Use names like 'alice.near'"
+		},
+		"3": {
+			"title": "Low Fees",
+			"description": "Transactions cost fractions of a cent"
+		},
+		"4": {
+			"title": "Aurora EVM",
+			"description": "Ethereum compatibility layer"
+		},
+		"5": {
+			"title": "Meta Transactions",
+			"description": "Apps can sponsor user gas fees"
+		},
+		"6": {
+			"title": "Fast Finality",
+			"description": "1-2 second transaction confirmation"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi",
+			"description": "Build DeFi with low fees and fast finality"
+		},
+		"2": {
+			"title": "NFT Platforms",
+			"description": "Affordable NFT minting and trading"
+		},
+		"3": {
+			"title": "Gaming",
+			"description": "Blockchain games with great UX"
+		},
+		"4": {
+			"title": "Social Apps",
+			"description": "Social platforms with easy onboarding"
+		},
+		"5": {
+			"title": "AI Integration",
+			"description": "AI agents and decentralized AI"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is NEAR token?",
+			"answer": "NEAR is the native token for gas fees, staking, and storage. Validators stake NEAR to secure the network. NEAR is also used to pay for account creation and data storage on-chain."
+		},
+		"2": {
+			"question": "How does NEAR sharding work?",
+			"answer": "Nightshade sharding splits the network into parallel shards that process transactions simultaneously. Validators are assigned to shards but can validate across shards. The system scales by adding more shards as needed."
+		},
+		"3": {
+			"question": "What is Aurora?",
+			"answer": "Aurora is an EVM running on NEAR that provides Ethereum compatibility. Developers can deploy Solidity contracts on Aurora. Users can use MetaMask. Aurora inherits NEAR's speed and low fees while supporting Ethereum dApps."
+		},
+		"4": {
+			"question": "How do I create a NEAR account?",
+			"answer": "Create an account at wallet.near.org or use wallets like HERE, Meteor, or Sender. NEAR accounts are human-readable (yourname.near) and require a small deposit for storage. Some apps offer free account creation."
+		},
+		"5": {
+			"question": "Is NEAR good for developers?",
+			"answer": "NEAR is very developer-friendly. Write contracts in Rust or JavaScript (using NEAR SDK). Human-readable accounts, easy testing, and good documentation make development smooth. The grants program and ecosystem support are also strong."
+		}
+	},
+	"cta": {
+		"ready": "Ready to build on NEAR?",
+		"button": "Explore NEAR",
+		"note": "Sharded L1 for usability"
+	}
+}

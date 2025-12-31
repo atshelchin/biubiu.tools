@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Aptos - Scalable Layer 1 Blockchain",
+		"description": "Aptos is a Layer 1 blockchain using Move language and parallel execution. Built by ex-Meta engineers for scalability and safety.",
+		"keywords": "Aptos, APT token, Move language, Layer 1, Aptos Labs, scalable blockchain"
+	},
+	"overview": "Aptos is a Layer 1 blockchain built by Aptos Labs, founded by former Meta engineers who developed the Move language for Diem. Aptos combines Move's safety guarantees with innovative consensus for high throughput.\n\nThe network uses Block-STM, a parallel execution engine that can process transactions simultaneously while maintaining correct ordering. This enables high TPS without sacrificing decentralization.\n\nWith major exchange listings, strategic partnerships, and significant funding, Aptos has attracted developers building DeFi, gaming, and social applications. The ecosystem continues to grow with unique Move-native applications.",
+	"features": {
+		"1": {
+			"title": "Move Language",
+			"description": "Resource-oriented safe programming"
+		},
+		"2": {
+			"title": "Block-STM",
+			"description": "Parallel transaction execution engine"
+		},
+		"3": {
+			"title": "Fast Finality",
+			"description": "Sub-second transaction confirmation"
+		},
+		"4": {
+			"title": "Modular Design",
+			"description": "Upgradeable without hard forks"
+		},
+		"5": {
+			"title": "BFT Consensus",
+			"description": "AptosBFT for security and performance"
+		},
+		"6": {
+			"title": "Account Model",
+			"description": "Flexible account structure with resources"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi Protocols",
+			"description": "Build secure DeFi with Move safety"
+		},
+		"2": {
+			"title": "Gaming",
+			"description": "High-performance blockchain games"
+		},
+		"3": {
+			"title": "NFT Platforms",
+			"description": "Composable NFTs with on-chain logic"
+		},
+		"4": {
+			"title": "Social Apps",
+			"description": "Scalable social and content platforms"
+		},
+		"5": {
+			"title": "Enterprise",
+			"description": "Enterprise blockchain solutions"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is APT token?",
+			"answer": "APT is Aptos's native token for gas fees, staking, and governance. Validators stake APT to secure the network. APT is used for transaction fees and governance votes on protocol upgrades."
+		},
+		"2": {
+			"question": "Aptos vs Sui: What's the difference?",
+			"answer": "Both use Move and were founded by ex-Meta engineers. Aptos uses account-based model (like Ethereum) while Sui uses object-based model. Both have parallel execution but different approaches. Aptos focuses more on enterprise, Sui on consumer apps."
+		},
+		"3": {
+			"question": "Is Aptos safe?",
+			"answer": "Move language provides strong safety guarantees—resources can't be copied or lost accidentally. The network has undergone multiple audits. Aptos also features on-chain governance for upgrades without contentious hard forks."
+		},
+		"4": {
+			"question": "How do I use Aptos?",
+			"answer": "Install an Aptos wallet like Petra, Martian, or Pontem. Buy APT from exchanges like Binance or Coinbase. Explore the ecosystem through Liquidswap (DEX), Topaz (NFTs), and other dApps."
+		},
+		"5": {
+			"question": "What makes Block-STM special?",
+			"answer": "Block-STM enables parallel transaction execution by optimistically processing transactions and detecting conflicts. Unlike sequential processing, it can utilize multi-core processors fully, achieving high throughput while maintaining correctness."
+		}
+	},
+	"cta": {
+		"ready": "Ready to build on Aptos?",
+		"button": "Explore Aptos",
+		"note": "Scalable Move L1"
+	}
+}

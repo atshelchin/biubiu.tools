@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Spark - MakerDAO 的借贷协议",
+		"description": "Spark 是 MakerDAO 的借贷协议，提供 DAI 借款和储蓄。与 Maker 生态系统原生集成，利率有竞争力。",
+		"keywords": "Spark, Spark Protocol, DAI, MakerDAO, DeFi 借贷, sDAI"
+	},
+	"overview": "Spark 是 Phoenix Labs 作为 MakerDAO 生态系统的一部分构建的借贷协议。它提供各种抵押品的借款，并与 DAI 和 Dai 储蓄利率（DSR）原生集成。\n\nSpark 使用 Aave V3 分叉作为基础，但与 Maker 深度集成。用户可以以 Maker 稳定费率获取 DAI，通常比市场利率更有竞争力。sDAI 储蓄产品提供来自 Maker DSR 的收益。\n\n随着 MakerDAO 演变为 Sky，Spark 继续作为关键借贷场所。它支持 ETH、stETH 和各种 LST 等主要抵押品，由 SubDAO 治理。",
+	"features": {
+		"1": {
+			"title": "原生 DAI 集成",
+			"description": "以 Maker 稳定费率借入 DAI"
+		},
+		"2": {
+			"title": "sDAI 储蓄",
+			"description": "在 DAI 存款上赚取 DSR 收益"
+		},
+		"3": {
+			"title": "LST 抵押品",
+			"description": "使用 stETH、rETH 和其他 LST"
+		},
+		"4": {
+			"title": "有竞争力的利率",
+			"description": "Maker 补贴的借款利率"
+		},
+		"5": {
+			"title": "Aave V3 基础",
+			"description": "久经考验的借贷机制"
+		},
+		"6": {
+			"title": "Maker 生态系统",
+			"description": "最大 DeFi 协议的一部分"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DAI 借款",
+			"description": "以有竞争力的利率借入 DAI"
+		},
+		"2": {
+			"title": "DAI 储蓄",
+			"description": "存入 DAI，收到带收益的 sDAI"
+		},
+		"3": {
+			"title": "杠杆质押",
+			"description": "循环 LST 以放大收益"
+		},
+		"4": {
+			"title": "LST 借贷",
+			"description": "借出或借入流动性质押代币"
+		},
+		"5": {
+			"title": "稳定币策略",
+			"description": "优化稳定币收益"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 sDAI？",
+			"answer": "sDAI（储蓄 DAI）是存入 Spark 储蓄合约的 DAI。它赚取 MakerDAO 治理设定的 DSR（Dai 储蓄利率）。sDAI 自动复利，可在 DeFi 中使用同时赚取收益。对 DAI 的汇率随时间增加。"
+		},
+		"2": {
+			"question": "Spark 与 MakerDAO 有什么关系？",
+			"answer": "Spark 由 Phoenix Labs 构建，是 MakerDAO 的 SubDAO。它与 Maker 深度集成——DAI 借款底层使用 Maker 金库，sDAI 赚取 DSR。Spark 是 Maker DeFi 借贷策略的核心部分。"
+		},
+		"3": {
+			"question": "为什么在 Spark 借款而不是 Aave？",
+			"answer": "Spark 以 Maker 稳定费率提供 DAI，可能低于 Aave 市场利率。如果你特别需要 DAI 并有 LST 抵押品，Spark 利率通常更好。Aave 有更多市场和其他用例的功能。"
+		},
+		"4": {
+			"question": "Spark 安全吗？",
+			"answer": "Spark 基于经过广泛审计的 Aave V3 代码构建。由 Spark SubDAO 治理，受 MakerDAO 监督。支持 sDAI 的 DSR 来自 Maker，最古老的 DeFi 协议之一。标准智能合约风险适用。"
+		},
+		"5": {
+			"question": "我可以在 Spark 上使用什么抵押品？",
+			"answer": "Spark 支持 ETH、WETH、wstETH、rETH、sDAI、USDC、USDT 和其他资产。LST 抵押品是专长——你可以高效地借入质押 ETH 衍生品。查看 Spark 应用了解当前支持的资产和利率。"
+		}
+	},
+	"cta": {
+		"ready": "准备好使用 Spark 了吗？",
+		"button": "探索 Spark",
+		"note": "MakerDAO 的借贷协议"
+	}
+}

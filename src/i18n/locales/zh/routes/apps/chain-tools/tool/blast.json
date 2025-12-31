@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Blast - 原生收益 L2",
+		"description": "Blast 是唯一为 ETH 和稳定币提供原生收益的以太坊 L2。使用 DeFi 时自动赚取收益。",
+		"keywords": "Blast, 以太坊 L2, 原生收益, BLAST 代币, OP Stack, 收益 L2"
+	},
+	"overview": "Blast 是一个独特的以太坊二层网络，为 ETH 和稳定币提供原生收益。于 2024 年推出，Blast 通过 ETH 质押和国债协议自动赚取收益，将这些回报传递给用户和 dApps。\n\n与其他 L2 上 ETH 只是闲置不同，Blast 上的 ETH 自动赚取约 4% 收益。桥接到 Blast 的稳定币从国债支持的协议中赚取约 5%。这种原生收益使 Blast 对用户和构建收益感知应用的开发者都很有吸引力。\n\n由 Paradigm 支持并由 Blur 团队推出，Blast 通过积分计划和空投活动迅速吸引了数十亿 TVL。",
+	"features": {
+		"1": {
+			"title": "原生 ETH 收益",
+			"description": "ETH 从质押中自动赚取约 4%"
+		},
+		"2": {
+			"title": "稳定币收益",
+			"description": "USDB 从国债协议中赚取约 5%"
+		},
+		"3": {
+			"title": "Gas 收入分享",
+			"description": "开发者从应用产生的 Gas 费用中获利"
+		},
+		"4": {
+			"title": "OP Stack",
+			"description": "基于成熟的 Optimism 技术构建"
+		},
+		"5": {
+			"title": "自动 Rebase",
+			"description": "收益在钱包中自动复利"
+		},
+		"6": {
+			"title": "积分计划",
+			"description": "通过生态系统参与赚取 Blast 积分"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "收益感知 DeFi",
+			"description": "构建利用原生收益的 DeFi"
+		},
+		"2": {
+			"title": "被动赚取",
+			"description": "持有 ETH 和稳定币时赚取收益"
+		},
+		"3": {
+			"title": "NFT 项目",
+			"description": "发行持有者可赚取收益的 NFT"
+		},
+		"4": {
+			"title": "游戏",
+			"description": "构建带内置玩家奖励的游戏"
+		},
+		"5": {
+			"title": "DeFi 交易",
+			"description": "在 DEX 上交易同时资产赚取收益"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Blast 原生收益如何运作？",
+			"answer": "桥接到 Blast 的 ETH 通过 Lido 质押以赚取质押奖励。稳定币存入 MakerDAO 的国债协议。收益通过 Rebase 自动传递给用户——你的余额无需领取即可增长。"
+		},
+		"2": {
+			"question": "什么是 BLAST 代币？",
+			"answer": "BLAST 是网络的原生治理代币，根据获得的积分空投给用户和开发者。BLAST 可用于治理投票，未来可能在生态系统中有更多用途。"
+		},
+		"3": {
+			"question": "Blast 安全吗？",
+			"answer": "Blast 基于 Optimism 和 Base 使用的 OP Stack 构建。收益策略使用 Lido 和 MakerDAO 等久经考验的协议。不过作为具有新颖收益机制的较新 L2，需要保持适当谨慎。"
+		},
+		"4": {
+			"question": "如何桥接到 Blast？",
+			"answer": "使用 blast.io 官方 Blast Bridge 或第三方桥。注意桥接到 Blast 意味着你的 ETH 将被质押——这是收益产生的方式。提款可能需要时间，取决于使用的桥。"
+		},
+		"5": {
+			"question": "什么是 USDB？",
+			"answer": "USDB 是 Blast 的原生稳定币，从国债协议中赚取收益。当你将 USDC 或 USDT 桥接到 Blast 时，它会转换为带收益自动 Rebase 的 USDB。你可以桥接回来获得稳定币加上赚取的收益。"
+		}
+	},
+	"cta": {
+		"ready": "准备好边用边赚了吗？",
+		"button": "探索 Blast",
+		"note": "带原生收益的 L2"
+	}
+}

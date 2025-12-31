@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "BNB Chain - Binance's Blockchain Ecosystem",
+		"description": "BNB Chain is Binance's blockchain ecosystem with BNB Smart Chain (BSC) for DeFi. High throughput, low fees, massive ecosystem.",
+		"keywords": "BNB Chain, BSC, Binance, BNB token, Smart Chain, DeFi"
+	},
+	"overview": "BNB Chain is Binance's blockchain ecosystem, anchored by BNB Smart Chain (BSC)—an EVM-compatible network known for low fees and high speed. Launched in 2020, BSC quickly became one of the largest DeFi ecosystems.\n\nThe ecosystem includes BNB Beacon Chain for governance and staking, BSC for smart contracts, and opBNB (an L2) for even lower fees. With Binance's backing, BNB Chain has massive liquidity and user base.\n\nBNB Chain hosts PancakeSwap, Venus, and hundreds of other protocols. Its low fees make it accessible for new users, though the more centralized validator set is a tradeoff.",
+	"features": {
+		"1": {
+			"title": "Low Transaction Fees",
+			"description": "Much cheaper than Ethereum mainnet"
+		},
+		"2": {
+			"title": "EVM Compatible",
+			"description": "Deploy Ethereum dApps easily"
+		},
+		"3": {
+			"title": "High Throughput",
+			"description": "Fast block times and transaction processing"
+		},
+		"4": {
+			"title": "opBNB L2",
+			"description": "Layer 2 for ultra-low fees"
+		},
+		"5": {
+			"title": "Binance Integration",
+			"description": "Direct bridge from Binance exchange"
+		},
+		"6": {
+			"title": "Massive Ecosystem",
+			"description": "Hundreds of dApps and billions in TVL"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi Trading",
+			"description": "Use PancakeSwap and other DEXs"
+		},
+		"2": {
+			"title": "Yield Farming",
+			"description": "Affordable farming opportunities"
+		},
+		"3": {
+			"title": "NFT Trading",
+			"description": "Low-cost NFT marketplace activity"
+		},
+		"4": {
+			"title": "GameFi",
+			"description": "Many blockchain games on BNB Chain"
+		},
+		"5": {
+			"title": "New User Onboarding",
+			"description": "Low fees for crypto beginners"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is BNB token?",
+			"answer": "BNB is the native token for gas fees on BNB Chain and Binance exchange. BNB is used for staking, governance, and receives utility from Binance ecosystem including trading fee discounts. It's one of the largest cryptocurrencies by market cap."
+		},
+		"2": {
+			"question": "Is BNB Chain decentralized?",
+			"answer": "BNB Chain has fewer validators (~21 active) than Ethereum, making it more centralized. Binance has significant influence. The tradeoff is faster, cheaper transactions. For users prioritizing decentralization, other chains may be preferable."
+		},
+		"3": {
+			"question": "What is opBNB?",
+			"answer": "opBNB is BNB Chain's Layer 2 using OP Stack technology (like Optimism). It offers even lower fees than BSC while inheriting its security. Use opBNB for applications requiring very cheap transactions."
+		},
+		"4": {
+			"question": "How do I bridge to BNB Chain?",
+			"answer": "Withdraw directly from Binance to BSC, or use bridges like Stargate and Celer. The easiest method is Binance withdrawal since there's no bridge needed. For decentralized options, cross-chain bridges work well."
+		},
+		"5": {
+			"question": "BNB Chain vs Ethereum: Which should I use?",
+			"answer": "BNB Chain offers lower fees and faster transactions but is more centralized. Ethereum has better decentralization and larger ecosystem. Many use both—Ethereum for high-value DeFi, BNB Chain for smaller trades and experimentation."
+		}
+	},
+	"cta": {
+		"ready": "Ready to use BNB Chain?",
+		"button": "Explore BNB Chain",
+		"note": "Binance's DeFi ecosystem"
+	}
+}
