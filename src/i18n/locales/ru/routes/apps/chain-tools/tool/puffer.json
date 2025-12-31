@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Puffer Finance - Native Liquid Restaking",
+		"description": "Puffer Finance offers pufETH with native restaking and anti-slashing technology. Secure restaking with Secure-Signer protection.",
+		"keywords": "Puffer Finance, pufETH, liquid restaking, anti-slashing, PUFFER token, EigenLayer"
+	},
+	"overview": "Puffer Finance is a native liquid restaking protocol that issues pufETH. What sets Puffer apart is its anti-slashing technology using Secure-Signer, which reduces validator slashing risk through hardware security.\n\nPuffer enables native restaking where ETH is staked and restaked in one step, maximizing capital efficiency. The protocol is backed by significant VC funding and Ethereum Foundation support.\n\nWith the PUFFER token and growing TVL, Puffer has established itself as a leading LRT protocol with a focus on security and decentralization.",
+	"features": {
+		"1": {
+			"title": "pufETH Token",
+			"description": "Liquid restaking token with native restaking"
+		},
+		"2": {
+			"title": "Secure-Signer",
+			"description": "Anti-slashing technology for validators"
+		},
+		"3": {
+			"title": "Native Restaking",
+			"description": "Stake and restake in one transaction"
+		},
+		"4": {
+			"title": "PUFFER Token",
+			"description": "Governance and utility token"
+		},
+		"5": {
+			"title": "Low Barrier",
+			"description": "Validators can start with less ETH"
+		},
+		"6": {
+			"title": "EF Support",
+			"description": "Backed by Ethereum Foundation grant"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Native Restaking",
+			"description": "Stake ETH with automatic restaking"
+		},
+		"2": {
+			"title": "Secure Validation",
+			"description": "Run validators with slashing protection"
+		},
+		"3": {
+			"title": "DeFi Integration",
+			"description": "Use pufETH in lending and DEXs"
+		},
+		"4": {
+			"title": "Points Farming",
+			"description": "Earn Puffer points for rewards"
+		},
+		"5": {
+			"title": "Leveraged Strategies",
+			"description": "Loop pufETH for amplified yield"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is pufETH?",
+			"answer": "pufETH is Puffer's liquid restaking token. It represents ETH that is both staked (earning consensus rewards) and restaked on EigenLayer (earning restaking rewards). pufETH can be used in DeFi while earning these rewards."
+		},
+		"2": {
+			"question": "What is Secure-Signer?",
+			"answer": "Secure-Signer is Puffer's anti-slashing technology that uses secure enclaves (TEE) to prevent validators from signing slashable messages. This significantly reduces slashing risk and enables running validators with less collateral."
+		},
+		"3": {
+			"question": "What is PUFFER token?",
+			"answer": "PUFFER is Puffer Finance's governance token distributed via airdrop. It's used for governance decisions and may have future utility. Users earn PUFFER through points accumulation."
+		},
+		"4": {
+			"question": "Is Puffer safe?",
+			"answer": "Puffer has unique security features (Secure-Signer) that reduce slashing risk. The protocol has been audited and is backed by EF grants. Standard risks include smart contract risk and EigenLayer risks. The anti-slashing tech is a significant safety feature."
+		},
+		"5": {
+			"question": "How do I get pufETH?",
+			"answer": "Deposit ETH or stETH on Puffer's website to mint pufETH. You can also buy pufETH on DEXs. Minting directly earns you Puffer points. pufETH can then be used across DeFi protocols."
+		}
+	},
+	"cta": {
+		"ready": "Ready for secure restaking?",
+		"button": "Explore Puffer",
+		"note": "Native liquid restaking"
+	}
+}

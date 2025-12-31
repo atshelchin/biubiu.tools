@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Pyth Network - Real-Time Oracle",
+		"description": "Pyth Network provides high-fidelity financial data to DeFi. First-party data from major exchanges with sub-second updates.",
+		"keywords": "Pyth, oracle, price feeds, DeFi data, PYTH token, financial data"
+	},
+	"overview": "Pyth Network is a decentralized oracle providing real-time financial data to smart contracts. Unlike traditional oracles, Pyth sources data directly from first-party providers—major exchanges, market makers, and trading firms.\n\nPyth offers sub-second price updates with confidence intervals, making it suitable for high-frequency DeFi applications. The network supports 400+ price feeds across crypto, equities, forex, and commodities.\n\nOriginally built on Solana, Pyth now serves 50+ blockchains through cross-chain messaging. It powers major protocols including GMX, Synthetix, and many derivatives platforms.",
+	"features": {
+		"1": {
+			"title": "First-Party Data",
+			"description": "Direct from exchanges and market makers"
+		},
+		"2": {
+			"title": "Sub-Second Updates",
+			"description": "High-frequency price feeds"
+		},
+		"3": {
+			"title": "Confidence Intervals",
+			"description": "Price uncertainty quantified"
+		},
+		"4": {
+			"title": "400+ Price Feeds",
+			"description": "Crypto, stocks, forex, commodities"
+		},
+		"5": {
+			"title": "Cross-Chain",
+			"description": "Available on 50+ blockchains"
+		},
+		"6": {
+			"title": "Pull-Based",
+			"description": "On-demand updates save gas"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi Pricing",
+			"description": "Power DEXs and lending protocols"
+		},
+		"2": {
+			"title": "Derivatives",
+			"description": "Price perpetuals and options"
+		},
+		"3": {
+			"title": "Liquidations",
+			"description": "Accurate prices for collateral"
+		},
+		"4": {
+			"title": "Cross-Chain Apps",
+			"description": "Consistent prices across chains"
+		},
+		"5": {
+			"title": "TradFi Integration",
+			"description": "Stock and forex data on-chain"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is PYTH token?",
+			"answer": "PYTH is the governance token for Pyth Network. Token holders can stake PYTH to participate in governance and earn rewards. PYTH was airdropped to users of protocols powered by Pyth data across multiple chains."
+		},
+		"2": {
+			"question": "How is Pyth different from Chainlink?",
+			"answer": "Pyth uses first-party data (direct from exchanges) vs Chainlink's third-party aggregation. Pyth offers sub-second updates vs Chainlink's periodic. Pyth is pull-based (on-demand), Chainlink is push-based. Both are widely used for different needs."
+		},
+		"3": {
+			"question": "What is pull-based oracle?",
+			"answer": "Pull-based means prices are updated on-chain only when requested, saving gas. Pyth stores prices off-chain and users/protocols pull the latest price when needed. This enables sub-second freshness without constant on-chain updates."
+		},
+		"4": {
+			"question": "Is Pyth reliable?",
+			"answer": "Pyth sources data from major institutions like Jane Street, CBOE, and Binance. The network has processed billions in DeFi volume. Confidence intervals show data quality. It's battle-tested across major protocols."
+		},
+		"5": {
+			"question": "How do I use Pyth data?",
+			"answer": "For users: protocols using Pyth handle it automatically. For developers: integrate Pyth SDK, fetch price updates, and submit them with transactions. Documentation provides examples for all supported chains."
+		}
+	},
+	"cta": {
+		"ready": "Ready to use real-time data?",
+		"button": "Explore Pyth",
+		"note": "High-fidelity oracle"
+	}
+}

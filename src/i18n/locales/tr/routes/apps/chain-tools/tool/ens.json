@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "ENS - Ethereum Name Service",
+		"description": "ENS provides human-readable names for Ethereum addresses. Replace 0x addresses with .eth names for easy sending and identity.",
+		"keywords": "ENS, Ethereum Name Service, .eth, domain names, Web3 identity, crypto names"
+	},
+	"overview": "ENS (Ethereum Name Service) is the decentralized naming system for Ethereum and Web3. Instead of long hex addresses, ENS lets you use human-readable names like 'alice.eth' for wallets, websites, and more.\n\nLaunched in 2017, ENS has become the standard for Web3 identity. Over 2 million names have been registered. ENS names can point to wallet addresses, content hashes, and other blockchain data.\n\nENS is governed by the ENS DAO with the ENS token. The protocol is deeply integrated into wallets, dApps, and the broader Ethereum ecosystem.",
+	"features": {
+		"1": {
+			"title": "Human-Readable Names",
+			"description": "Replace 0x addresses with .eth names"
+		},
+		"2": {
+			"title": "Decentralized",
+			"description": "No central authority controls names"
+		},
+		"3": {
+			"title": "Multi-Coin Support",
+			"description": "One name for all your crypto addresses"
+		},
+		"4": {
+			"title": "Website Hosting",
+			"description": "Host decentralized websites"
+		},
+		"5": {
+			"title": "Profile Records",
+			"description": "Add social links, avatar, bio"
+		},
+		"6": {
+			"title": "DAO Governed",
+			"description": "Community-owned protocol"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Easy Payments",
+			"description": "Send to alice.eth instead of 0x..."
+		},
+		"2": {
+			"title": "Web3 Identity",
+			"description": "Your .eth name as digital identity"
+		},
+		"3": {
+			"title": "Decentralized Websites",
+			"description": "Host sites on IPFS with .eth"
+		},
+		"4": {
+			"title": "Multi-Chain Receiving",
+			"description": "One name for ETH, BTC, SOL, etc."
+		},
+		"5": {
+			"title": "Social Profile",
+			"description": "Link socials and build reputation"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How much does an ENS name cost?",
+			"answer": "ENS names cost $5/year for 5+ character names, $160/year for 4-character names, and $640/year for 3-character names. You also pay gas fees for registration. Names are registered in ETH based on current exchange rates."
+		},
+		"2": {
+			"question": "What is ENS token?",
+			"answer": "ENS is the governance token for the ENS DAO. Token holders vote on protocol upgrades, treasury allocation, and governance matters. ENS was airdropped to early users and .eth name holders in 2021."
+		},
+		"3": {
+			"question": "Can I sell my ENS name?",
+			"answer": "Yes, ENS names are NFTs (ERC-721) that can be traded on marketplaces like OpenSea. Popular names have sold for significant amounts. You can transfer or sell your name at any time while it's registered to you."
+		},
+		"4": {
+			"question": "What happens when my ENS name expires?",
+			"answer": "After expiry, there's a 90-day grace period where you can still renew. After that, the name goes into a temporary premium auction, then becomes available for anyone to register. Set up auto-renewal or calendar reminders."
+		},
+		"5": {
+			"question": "Do ENS names work on other chains?",
+			"answer": "ENS can store addresses for any cryptocurrency (BTC, SOL, etc.). Users can send to yourname.eth on any supported chain. ENS is expanding to L2s with ENS on L2 initiatives for cheaper registration and management."
+		}
+	},
+	"cta": {
+		"ready": "Ready to claim your .eth name?",
+		"button": "Explore ENS",
+		"note": "Your Web3 identity"
+	}
+}

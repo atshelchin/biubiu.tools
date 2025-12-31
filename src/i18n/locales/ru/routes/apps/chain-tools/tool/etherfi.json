@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Ether.fi - Non-Custodial Liquid Staking",
+		"description": "Ether.fi is a non-custodial staking protocol offering eETH and weETH. Keep your keys while earning staking and restaking rewards.",
+		"keywords": "Ether.fi, eETH, weETH, liquid staking, restaking, ETHFI token"
+	},
+	"overview": "Ether.fi is a decentralized, non-custodial liquid staking and restaking protocol. Users stake ETH while retaining control of their keys—a unique feature in the staking landscape.\n\nThe protocol issues eETH (rebasing) and weETH (wrapped, non-rebasing) tokens that earn both regular staking rewards and EigenLayer restaking rewards. Ether.fi has become one of the largest liquid restaking protocols.\n\nWith the ETHFI token and strong DeFi integrations, Ether.fi offers a complete staking solution. The protocol is expanding with Scroll partnership and its own L2 ambitions.",
+	"features": {
+		"1": {
+			"title": "Non-Custodial",
+			"description": "Stakers retain control of their keys"
+		},
+		"2": {
+			"title": "eETH & weETH",
+			"description": "Rebasing and wrapped token options"
+		},
+		"3": {
+			"title": "Native Restaking",
+			"description": "Automatic EigenLayer integration"
+		},
+		"4": {
+			"title": "ETHFI Token",
+			"description": "Governance and utility token"
+		},
+		"5": {
+			"title": "DeFi Integration",
+			"description": "weETH widely supported in DeFi"
+		},
+		"6": {
+			"title": "Solo Staker Support",
+			"description": "Run your own validator with eETH"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Liquid Staking",
+			"description": "Stake ETH and receive eETH"
+		},
+		"2": {
+			"title": "Restaking Rewards",
+			"description": "Earn EigenLayer rewards automatically"
+		},
+		"3": {
+			"title": "DeFi Collateral",
+			"description": "Use weETH in lending protocols"
+		},
+		"4": {
+			"title": "Solo Staking",
+			"description": "Operate validators non-custodially"
+		},
+		"5": {
+			"title": "Yield Strategies",
+			"description": "Stack yields with weETH in DeFi"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What's the difference between eETH and weETH?",
+			"answer": "eETH is rebasing—your balance increases as rewards accrue. weETH is wrapped eETH that doesn't rebase—its value vs ETH increases instead. weETH is better for DeFi (no rebasing issues). Both represent the same underlying position."
+		},
+		"2": {
+			"question": "What is ETHFI token?",
+			"answer": "ETHFI is Ether.fi's governance token distributed via airdrop. It's used for governance voting and has utility in the protocol. ETHFI can be earned through loyalty points and various programs."
+		},
+		"3": {
+			"question": "How is Ether.fi non-custodial?",
+			"answer": "Unlike most staking protocols, Ether.fi uses a unique design where stakers control their withdrawal keys. Even if Ether.fi disappears, you can still withdraw. This is achieved through distributed key generation."
+		},
+		"4": {
+			"question": "Is Ether.fi safe?",
+			"answer": "Ether.fi has been extensively audited and manages billions in TVL. The non-custodial design reduces protocol risk. Standard risks include smart contract risk and EigenLayer slashing risk. It's one of the more battle-tested LRT protocols."
+		},
+		"5": {
+			"question": "Ether.fi vs Lido: Which should I use?",
+			"answer": "Lido is established and widely integrated but no native restaking. Ether.fi offers restaking rewards plus non-custodial design. weETH earns more yield but has restaking risk. Use Lido for simplicity, Ether.fi for maximized yield."
+		}
+	},
+	"cta": {
+		"ready": "Ready to stake with Ether.fi?",
+		"button": "Explore Ether.fi",
+		"note": "Non-custodial liquid staking"
+	}
+}

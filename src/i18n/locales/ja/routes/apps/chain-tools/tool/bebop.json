@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Bebop - Intent-Based DEX Aggregator",
+		"description": "Bebop is an intent-based trading platform by Wintermute offering gasless swaps and MEV protection. Trade with professional market making.",
+		"keywords": "Bebop, DEX aggregator, intent-based trading, gasless swaps, Wintermute, MEV protection"
+	},
+	"overview": "Bebop is an intent-based trading platform developed by Wintermute, one of the largest crypto market makers. Instead of routing through AMMs, Bebop matches orders with professional market makers for better pricing.\n\nThe platform offers gasless trading where users sign messages instead of transactions, and Bebop handles execution. This provides MEV protection and often better prices than traditional DEX aggregators.\n\nWith multi-token swaps, limit orders, and institutional-grade liquidity, Bebop represents the next evolution of DEX trading focused on execution quality.",
+	"features": {
+		"1": {
+			"title": "Intent-Based Trading",
+			"description": "Sign intents, not transactions"
+		},
+		"2": {
+			"title": "Wintermute Liquidity",
+			"description": "Access to professional market making"
+		},
+		"3": {
+			"title": "Gasless Swaps",
+			"description": "No gas fees for traders"
+		},
+		"4": {
+			"title": "MEV Protection",
+			"description": "Protected from sandwich attacks"
+		},
+		"5": {
+			"title": "Multi-Token Swaps",
+			"description": "Swap multiple tokens at once"
+		},
+		"6": {
+			"title": "Limit Orders",
+			"description": "Set your target price"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Better Execution",
+			"description": "Get competitive quotes from market makers"
+		},
+		"2": {
+			"title": "Gasless Trading",
+			"description": "Trade without paying gas"
+		},
+		"3": {
+			"title": "Large Trades",
+			"description": "Execute size with minimal slippage"
+		},
+		"4": {
+			"title": "Multi-Token Rebalancing",
+			"description": "Swap many tokens in one transaction"
+		},
+		"5": {
+			"title": "Safe Trading",
+			"description": "Avoid MEV and front-running"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How is Bebop different from 1inch?",
+			"answer": "1inch routes through on-chain AMMs. Bebop uses intent-based trading where professional market makers (primarily Wintermute) quote prices off-chain. This often results in better prices, gasless execution, and MEV protection. Think of it as OTC trading made accessible."
+		},
+		"2": {
+			"question": "Who is Wintermute?",
+			"answer": "Wintermute is one of the largest cryptocurrency market makers, trading billions daily. They provide liquidity to exchanges and DeFi protocols. Bebop is their retail-facing product that gives regular users access to institutional liquidity."
+		},
+		"3": {
+			"question": "How are gasless swaps possible?",
+			"answer": "You sign a message (intent) authorizing the trade. Bebop's settlement contract executes the swap and pays gas on your behalf. The gas cost is factored into the quote. This means you can trade even with zero ETH for gas."
+		},
+		"4": {
+			"question": "Is Bebop safe?",
+			"answer": "Bebop is built by Wintermute, a reputable market maker. Contracts are audited. The intent-based system means you only authorize specific trades. However, you're trusting Wintermute as counterparty rather than trustless AMMs."
+		},
+		"5": {
+			"question": "What chains does Bebop support?",
+			"answer": "Bebop supports Ethereum, Arbitrum, Polygon, BNB Chain, Optimism, and other major chains. The multi-chain support continues to expand. Check their app for the current list."
+		}
+	},
+	"cta": {
+		"ready": "Ready for better execution?",
+		"button": "Explore Bebop",
+		"note": "Intent-based trading"
+	}
+}

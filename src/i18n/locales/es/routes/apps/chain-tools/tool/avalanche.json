@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Avalanche - Blazingly Fast L1 Platform",
+		"description": "Avalanche is a high-speed Layer 1 platform with sub-second finality. Build custom blockchains (Subnets) with the AVAX ecosystem.",
+		"keywords": "Avalanche, AVAX, Layer 1, Subnets, fast blockchain, DeFi"
+	},
+	"overview": "Avalanche is a Layer 1 blockchain platform known for its speed and subnet architecture. Built by Ava Labs in 2020, Avalanche achieves sub-second finality while maintaining decentralization through its unique consensus mechanism.\n\nThe platform consists of three chains: X-Chain for assets, C-Chain (EVM-compatible) for smart contracts, and P-Chain for platform coordination. This multi-chain architecture enables high throughput without congestion.\n\nAvalanche Subnets allow anyone to launch custom blockchains with their own rules, validators, and token economics. Major institutions and gaming companies have launched subnets for specialized use cases.",
+	"features": {
+		"1": {
+			"title": "Sub-Second Finality",
+			"description": "Transactions confirm in under 1 second"
+		},
+		"2": {
+			"title": "Subnets",
+			"description": "Launch custom blockchains easily"
+		},
+		"3": {
+			"title": "EVM Compatible",
+			"description": "C-Chain supports Ethereum dApps"
+		},
+		"4": {
+			"title": "Multi-Chain",
+			"description": "Specialized chains for different use cases"
+		},
+		"5": {
+			"title": "Low Fees",
+			"description": "Affordable transactions on C-Chain"
+		},
+		"6": {
+			"title": "Institutional Grade",
+			"description": "Enterprise partnerships and adoption"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi Trading",
+			"description": "Fast DEXs and lending protocols"
+		},
+		"2": {
+			"title": "Gaming Subnets",
+			"description": "Custom blockchains for gaming"
+		},
+		"3": {
+			"title": "Enterprise Chains",
+			"description": "Private or permissioned subnets"
+		},
+		"4": {
+			"title": "NFT Platforms",
+			"description": "Low-cost NFT minting and trading"
+		},
+		"5": {
+			"title": "Cross-Chain Apps",
+			"description": "Multi-subnet applications"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is AVAX token?",
+			"answer": "AVAX is the native token for gas fees, staking, and subnet security. Validators stake AVAX to secure the primary network. AVAX is also used for governance and as the base currency across the ecosystem."
+		},
+		"2": {
+			"question": "What are Avalanche Subnets?",
+			"answer": "Subnets are custom blockchains built on Avalanche infrastructure. They can have their own rules, consensus, and VMs. Subnets share security with the primary network while offering customization for gaming, DeFi, or enterprise use cases."
+		},
+		"3": {
+			"question": "Avalanche vs Ethereum: Which is better?",
+			"answer": "Avalanche offers faster finality (sub-second vs 12+ seconds) and lower fees. Ethereum has a larger ecosystem and stronger decentralization. Avalanche C-Chain is EVM-compatible, so dApps can run on both. They serve different needs."
+		},
+		"4": {
+			"question": "How do I use Avalanche?",
+			"answer": "Add Avalanche C-Chain to MetaMask (or use Core wallet). Bridge assets using Avalanche Bridge or third-party bridges. Use DEXs like Trader Joe, lending on Aave, and explore the ecosystem through the official portal."
+		},
+		"5": {
+			"question": "Is Avalanche secure?",
+			"answer": "Avalanche uses a novel consensus mechanism (Snowman/Avalanche consensus) that achieves finality probabilistically but very quickly. With thousands of validators and years of operation, it's battle-tested. Each subnet can have additional security measures."
+		}
+	},
+	"cta": {
+		"ready": "Ready to build on Avalanche?",
+		"button": "Explore Avalanche",
+		"note": "Sub-second finality platform"
+	}
+}

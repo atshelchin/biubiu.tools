@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Spark - MakerDAO's Lending Protocol",
+		"description": "Spark is MakerDAO's lending protocol offering DAI borrowing and savings. Native integration with Maker ecosystem and competitive rates.",
+		"keywords": "Spark, Spark Protocol, DAI, MakerDAO, DeFi lending, sDAI"
+	},
+	"overview": "Spark is a lending protocol built by Phoenix Labs as part of the MakerDAO ecosystem. It offers borrowing against various collaterals with native DAI integration and the Dai Savings Rate (DSR).\n\nSpark uses an Aave V3 fork as its base but is deeply integrated with Maker. Users can access DAI at the Maker stability fee rates, often more competitive than market rates. The sDAI savings product offers yield from Maker's DSR.\n\nAs MakerDAO evolves into Sky, Spark continues as a key lending venue. It supports major collaterals like ETH, stETH, and various LSTs, with SubDAO governance.",
+	"features": {
+		"1": {
+			"title": "Native DAI Integration",
+			"description": "Borrow DAI at Maker stability fee rates"
+		},
+		"2": {
+			"title": "sDAI Savings",
+			"description": "Earn DSR yield on DAI deposits"
+		},
+		"3": {
+			"title": "LST Collateral",
+			"description": "Use stETH, rETH, and other LSTs"
+		},
+		"4": {
+			"title": "Competitive Rates",
+			"description": "Maker-subsidized borrowing rates"
+		},
+		"5": {
+			"title": "Aave V3 Base",
+			"description": "Battle-tested lending mechanics"
+		},
+		"6": {
+			"title": "Maker Ecosystem",
+			"description": "Part of the largest DeFi protocol"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DAI Borrowing",
+			"description": "Borrow DAI at competitive rates"
+		},
+		"2": {
+			"title": "DAI Savings",
+			"description": "Deposit DAI, receive sDAI with yield"
+		},
+		"3": {
+			"title": "Leveraged Staking",
+			"description": "Loop LSTs for amplified yield"
+		},
+		"4": {
+			"title": "LST Lending",
+			"description": "Lend or borrow against liquid staking tokens"
+		},
+		"5": {
+			"title": "Stablecoin Strategy",
+			"description": "Optimize stablecoin yields"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is sDAI?",
+			"answer": "sDAI (Savings DAI) is DAI deposited in Spark's savings contract. It earns the DSR (Dai Savings Rate) set by MakerDAO governance. sDAI auto-compounds and can be used in DeFi while earning yield. Exchange rate to DAI increases over time."
+		},
+		"2": {
+			"question": "How is Spark related to MakerDAO?",
+			"answer": "Spark is built by Phoenix Labs, a SubDAO of MakerDAO. It's deeply integrated with Maker—DAI borrowing uses Maker vaults under the hood, and sDAI earns the DSR. Spark is a core part of Maker's strategy for DeFi lending."
+		},
+		"3": {
+			"question": "Why borrow on Spark vs Aave?",
+			"answer": "Spark offers DAI at Maker stability fee rates, which can be lower than Aave market rates. If you specifically need DAI and have LST collateral, Spark rates are often better. Aave has more markets and features for other use cases."
+		},
+		"4": {
+			"question": "Is Spark safe?",
+			"answer": "Spark is built on Aave V3 code, which is extensively audited. It's governed by Spark SubDAO with MakerDAO oversight. The DSR backing sDAI comes from Maker, one of the oldest DeFi protocols. Standard smart contract risks apply."
+		},
+		"5": {
+			"question": "What collateral can I use on Spark?",
+			"answer": "Spark supports ETH, WETH, wstETH, rETH, sDAI, USDC, USDT, and other assets. LST collateral is a specialty—you can borrow against staked ETH derivatives efficiently. Check the Spark app for current supported assets and rates."
+		}
+	},
+	"cta": {
+		"ready": "Ready to use Spark?",
+		"button": "Explore Spark",
+		"note": "MakerDAO's lending protocol"
+	}
+}

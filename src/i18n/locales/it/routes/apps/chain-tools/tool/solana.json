@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Solana - High Performance Blockchain",
+		"description": "Solana is one of the fastest blockchains with 400ms block times. Low fees, high throughput, and vibrant DeFi/NFT ecosystem.",
+		"keywords": "Solana, SOL, high performance, fast blockchain, DeFi, NFT"
+	},
+	"overview": "Solana is a high-performance Layer 1 blockchain designed for speed and scale. With 400ms block times and fees under a cent, Solana has become a major hub for DeFi, NFTs, and consumer applications.\n\nThe network uses Proof of History (PoH) combined with Proof of Stake for consensus. This unique approach enables parallel transaction processing and high throughput without sacrificing decentralization.\n\nSolana's ecosystem exploded in 2024 with memecoins, DeFi innovation (Jupiter, Marinade), and growing institutional adoption. It's home to major NFT marketplaces, gaming projects, and DePIN applications.",
+	"features": {
+		"1": {
+			"title": "400ms Block Time",
+			"description": "Near-instant transaction processing"
+		},
+		"2": {
+			"title": "Sub-Cent Fees",
+			"description": "Extremely affordable transactions"
+		},
+		"3": {
+			"title": "Proof of History",
+			"description": "Novel consensus for high throughput"
+		},
+		"4": {
+			"title": "Parallel Execution",
+			"description": "Sealevel runtime for scalability"
+		},
+		"5": {
+			"title": "Rich Ecosystem",
+			"description": "Major DeFi, NFT, and gaming apps"
+		},
+		"6": {
+			"title": "State Compression",
+			"description": "Affordable NFT minting at scale"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi Trading",
+			"description": "Use Jupiter, Raydium, and other DEXs"
+		},
+		"2": {
+			"title": "NFT Trading",
+			"description": "Buy and sell on Magic Eden, Tensor"
+		},
+		"3": {
+			"title": "Liquid Staking",
+			"description": "Stake SOL via Marinade, Jito"
+		},
+		"4": {
+			"title": "Gaming",
+			"description": "Play blockchain games like Star Atlas"
+		},
+		"5": {
+			"title": "DePIN",
+			"description": "Participate in Helium, Render, etc."
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is SOL token?",
+			"answer": "SOL is Solana's native token for gas fees, staking, and rent (account storage). Validators stake SOL to secure the network. SOL is used for all transactions and is one of the top cryptocurrencies by market cap."
+		},
+		"2": {
+			"question": "Is Solana reliable?",
+			"answer": "Solana experienced outages in 2021-2022 but has been stable since major upgrades. The network now handles billions in daily volume reliably. The Firedancer client (by Jump) adds redundancy. Always have backup plans for critical operations."
+		},
+		"3": {
+			"question": "Solana vs Ethereum: Which is better?",
+			"answer": "Solana is faster and cheaper but uses a different programming model (Rust). Ethereum has more developers and stronger decentralization. Many projects deploy on both. Solana excels for high-frequency trading and consumer apps."
+		},
+		"4": {
+			"question": "How do I get started with Solana?",
+			"answer": "Install Phantom or Solflare wallet. Buy SOL on exchanges and withdraw to your wallet. Explore DeFi through Jupiter (DEX aggregator), stake via Marinade, and browse NFTs on Magic Eden or Tensor."
+		},
+		"5": {
+			"question": "What is Firedancer?",
+			"answer": "Firedancer is a new Solana validator client built by Jump Crypto. It aims to dramatically increase throughput (1M+ TPS target) and add network resilience. Having multiple clients makes Solana more robust against bugs."
+		}
+	},
+	"cta": {
+		"ready": "Ready to use Solana?",
+		"button": "Explore Solana",
+		"note": "High-speed blockchain"
+	}
+}

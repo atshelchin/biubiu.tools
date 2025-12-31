@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Ondo Finance - Tokenized Real World Assets",
+		"description": "Ondo Finance brings tokenized treasuries and bonds on-chain. Access institutional-grade RWA yield through OUSG and USDY.",
+		"keywords": "Ondo, OUSG, USDY, RWA, tokenized treasuries, real world assets"
+	},
+	"overview": "Ondo Finance is a leader in tokenizing real-world assets (RWA), bringing US Treasuries and other institutional products on-chain. Founded in 2021, Ondo has become one of the largest RWA protocols.\n\nOUSG (Ondo US Government Bond) provides tokenized exposure to short-term US Treasuries. USDY (US Dollar Yield) offers a yield-bearing stablecoin backed by Treasuries. Both products bring TradFi yields to DeFi.\n\nOndo bridges institutional finance and DeFi, working with BlackRock's BUIDL fund and major DeFi protocols. The protocol is available to qualified investors globally.",
+	"features": {
+		"1": {
+			"title": "Tokenized Treasuries",
+			"description": "OUSG backed by US government bonds"
+		},
+		"2": {
+			"title": "Yield Stablecoin",
+			"description": "USDY earns Treasury yield"
+		},
+		"3": {
+			"title": "Institutional Grade",
+			"description": "Regulated, compliant products"
+		},
+		"4": {
+			"title": "DeFi Integration",
+			"description": "Use RWA tokens in DeFi protocols"
+		},
+		"5": {
+			"title": "Multi-Chain",
+			"description": "Available on multiple blockchains"
+		},
+		"6": {
+			"title": "BlackRock Partnership",
+			"description": "Integration with BUIDL fund"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Treasury Exposure",
+			"description": "Hold tokenized US Treasuries"
+		},
+		"2": {
+			"title": "Yield Earning",
+			"description": "Earn Treasury rates on-chain"
+		},
+		"3": {
+			"title": "DeFi Collateral",
+			"description": "Use OUSG/USDY as collateral"
+		},
+		"4": {
+			"title": "Institutional Allocation",
+			"description": "On-chain Treasury allocation"
+		},
+		"5": {
+			"title": "Stablecoin Alternative",
+			"description": "Yield-bearing dollar holdings"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is OUSG?",
+			"answer": "OUSG (Ondo US Government Bond) is a tokenized fund invested in short-term US Treasuries. It provides exposure to Treasury yields on-chain. OUSG is available to qualified purchasers and can be used in DeFi protocols."
+		},
+		"2": {
+			"question": "What is USDY?",
+			"answer": "USDY (US Dollar Yield) is a tokenized note backed by short-term Treasuries. Unlike OUSG, USDY is designed as a yield-bearing stablecoin that accrues value daily. It's more accessible than OUSG for general users."
+		},
+		"3": {
+			"question": "Who can use Ondo?",
+			"answer": "OUSG requires qualified purchaser status (US) or equivalent. USDY has fewer restrictions but may have jurisdictional limitations. KYC is required. Check Ondo's documentation for your jurisdiction's requirements."
+		},
+		"4": {
+			"question": "Is Ondo safe?",
+			"answer": "Ondo products are backed by actual US Treasuries held by qualified custodians. The protocol is regulated and audited. Risks include smart contract risk, regulatory changes, and Treasury market risk. It's institutional-grade infrastructure."
+		},
+		"5": {
+			"question": "How does Ondo compare to traditional Treasury ETFs?",
+			"answer": "Ondo offers similar Treasury exposure but on-chain. Benefits: 24/7 trading, DeFi composability, programmable. Trade-offs: KYC required, smart contract risk. Yields are comparable to traditional Treasury products minus protocol fees."
+		}
+	},
+	"cta": {
+		"ready": "Ready for RWA yields?",
+		"button": "Explore Ondo",
+		"note": "Tokenized treasuries"
+	}
+}

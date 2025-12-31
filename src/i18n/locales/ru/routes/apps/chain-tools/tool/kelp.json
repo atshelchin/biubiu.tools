@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Kelp DAO - Liquid Restaking Protocol",
+		"description": "Kelp DAO offers rsETH, a liquid restaking token for EigenLayer. Earn restaking rewards while maintaining liquidity.",
+		"keywords": "Kelp DAO, rsETH, liquid restaking, EigenLayer, LRT, DeFi"
+	},
+	"overview": "Kelp DAO is a liquid restaking protocol that issues rsETH—a token representing ETH restaked on EigenLayer. This allows users to earn restaking rewards while keeping their assets liquid for DeFi.\n\nrsETH simplifies restaking by handling operator selection, AVS management, and reward distribution. Users deposit LSTs (stETH, ETHx, etc.) and receive rsETH that can be used across DeFi.\n\nKelp has grown to become one of the largest liquid restaking protocols, with rsETH integrated across major DeFi platforms for lending, trading, and yield strategies.",
+	"features": {
+		"1": {
+			"title": "rsETH Token",
+			"description": "Liquid restaking token for EigenLayer"
+		},
+		"2": {
+			"title": "Multi-LST Support",
+			"description": "Accept stETH, ETHx, and more"
+		},
+		"3": {
+			"title": "DeFi Integration",
+			"description": "Use rsETH across DeFi protocols"
+		},
+		"4": {
+			"title": "Managed Restaking",
+			"description": "Kelp handles operator selection"
+		},
+		"5": {
+			"title": "Reward Aggregation",
+			"description": "Earn staking + restaking rewards"
+		},
+		"6": {
+			"title": "Kelp Miles",
+			"description": "Earn points for ecosystem participation"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Liquid Restaking",
+			"description": "Restake while maintaining liquidity"
+		},
+		"2": {
+			"title": "DeFi Collateral",
+			"description": "Use rsETH as collateral in lending"
+		},
+		"3": {
+			"title": "Yield Stacking",
+			"description": "Combine restaking with DeFi yields"
+		},
+		"4": {
+			"title": "Points Farming",
+			"description": "Earn EigenLayer + Kelp points"
+		},
+		"5": {
+			"title": "Simplified Restaking",
+			"description": "Restake without managing operators"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is rsETH?",
+			"answer": "rsETH is Kelp's liquid restaking token. It represents ETH restaked on EigenLayer through Kelp. rsETH earns restaking rewards and can be used in DeFi. The value of rsETH increases relative to ETH as rewards accrue."
+		},
+		"2": {
+			"question": "How does Kelp differ from Ether.fi?",
+			"answer": "Both offer liquid restaking. Kelp accepts multiple LSTs (stETH, ETHx, etc.) while Ether.fi uses native ETH. Kelp issues rsETH; Ether.fi issues eETH. Both integrate with EigenLayer. Choose based on which token you prefer to deposit."
+		},
+		"3": {
+			"question": "What are Kelp Miles?",
+			"answer": "Kelp Miles are points earned by holding rsETH and participating in Kelp ecosystem. Miles likely convert to KELP tokens when launched. Earn more miles by depositing larger amounts and using rsETH in DeFi."
+		},
+		"4": {
+			"question": "Is rsETH safe?",
+			"answer": "rsETH inherits risks from underlying LSTs, EigenLayer restaking, and Kelp smart contracts. Kelp has been audited. Restaking adds slashing risk from AVS validation. Consider these layered risks when depositing."
+		},
+		"5": {
+			"question": "How do I get rsETH?",
+			"answer": "Deposit supported LSTs (stETH, ETHx, sfrxETH) on Kelp's website to mint rsETH. You can also buy rsETH on DEXs like Curve or Balancer. Minting directly earns you Kelp Miles."
+		}
+	},
+	"cta": {
+		"ready": "Ready to earn with rsETH?",
+		"button": "Explore Kelp",
+		"note": "Liquid restaking protocol"
+	}
+}

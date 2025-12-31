@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Ethena - Synthetic Dollar Protocol",
+		"description": "Ethena is a synthetic dollar protocol offering USDe stablecoin with high yield. Delta-neutral strategy backed by staked ETH.",
+		"keywords": "Ethena, USDe, synthetic dollar, sUSDe, yield stablecoin, DeFi"
+	},
+	"overview": "Ethena is a synthetic dollar protocol that issues USDe—a crypto-native stablecoin backed by delta-neutral positions. Launched in 2024, Ethena quickly became one of the largest stablecoin protocols by TVL.\n\nUSDe maintains its peg through a delta-neutral strategy: staked ETH (stETH) is used as collateral while short perpetual futures hedge price exposure. This generates yield from both staking rewards and funding rates.\n\nsUSDe (staked USDe) offers one of the highest yields in DeFi, attracting billions in deposits. The protocol has integrated with major DeFi platforms and launched on multiple chains.",
+	"features": {
+		"1": {
+			"title": "Synthetic Dollar",
+			"description": "USDe maintains $1 peg via delta-neutral"
+		},
+		"2": {
+			"title": "High Yield",
+			"description": "sUSDe earns from staking + funding rates"
+		},
+		"3": {
+			"title": "Delta-Neutral",
+			"description": "Long stETH, short perps hedge strategy"
+		},
+		"4": {
+			"title": "Crypto-Native",
+			"description": "No traditional banking dependencies"
+		},
+		"5": {
+			"title": "Multi-Chain",
+			"description": "Available on Ethereum and L2s"
+		},
+		"6": {
+			"title": "DeFi Integrated",
+			"description": "Widely supported across protocols"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Yield Earning",
+			"description": "Stake USDe for high sUSDe yield"
+		},
+		"2": {
+			"title": "Stablecoin Holdings",
+			"description": "Hold USDe as crypto-native dollar"
+		},
+		"3": {
+			"title": "DeFi Collateral",
+			"description": "Use sUSDe as collateral in lending"
+		},
+		"4": {
+			"title": "Yield Strategies",
+			"description": "Build strategies on sUSDe yield"
+		},
+		"5": {
+			"title": "Liquidity Provision",
+			"description": "Provide liquidity in USDe pairs"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How does USDe maintain its peg?",
+			"answer": "USDe uses delta-neutral positioning: for every $1 of stETH collateral, there's $1 short in ETH perpetual futures. This hedges price risk while earning yield from both staking and funding. Arbitrageurs maintain the peg through minting/redeeming."
+		},
+		"2": {
+			"question": "What are the risks of Ethena?",
+			"answer": "Key risks include: negative funding rates (when shorts pay longs), smart contract risk, liquidation risk in extreme scenarios, and centralized exchange counterparty risk. The yield compensates for these risks but they should be understood."
+		},
+		"3": {
+			"question": "What is sUSDe?",
+			"answer": "sUSDe is staked USDe that earns yield from the protocol's delta-neutral strategy. When you stake USDe, you receive sUSDe which increases in value relative to USDe over time. Unstaking converts sUSDe back to USDe plus earned yield."
+		},
+		"4": {
+			"question": "How is Ethena different from USDC?",
+			"answer": "USDC is backed by bank deposits and T-bills, requiring banking relationships. USDe is crypto-native, backed by on-chain assets and derivatives. USDe offers yield through sUSDe while USDC doesn't. USDe has different risks (funding rates vs bank risk)."
+		},
+		"5": {
+			"question": "Is Ethena sustainable?",
+			"answer": "Yield comes from real sources: ETH staking (~3-4%) and perpetual funding rates (variable, often positive). In bull markets, funding is typically positive. Sustainability depends on market conditions. The protocol has reserves for negative funding periods."
+		}
+	},
+	"cta": {
+		"ready": "Ready to earn with Ethena?",
+		"button": "Explore Ethena",
+		"note": "Synthetic dollar with yield"
+	}
+}

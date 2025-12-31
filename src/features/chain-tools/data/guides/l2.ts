@@ -134,8 +134,7 @@ export const l2Guide: CategoryGuide = {
 				{
 					id: 'getting-started',
 					titleKey: 'routes/apps/chain-tools/l2/guide.sections.using_l2s.getting_started.title',
-					contentKey:
-						'routes/apps/chain-tools/l2/guide.sections.using_l2s.getting_started.content',
+					contentKey: 'routes/apps/chain-tools/l2/guide.sections.using_l2s.getting_started.content',
 					toolMentions: [{ toolId: 'chainlist-l2', context: 'add networks' }]
 				},
 				{
@@ -221,8 +220,7 @@ export const l2Guide: CategoryGuide = {
 				{
 					id: 'data-availability',
 					titleKey: 'routes/apps/chain-tools/l2/guide.sections.advanced.data_availability.title',
-					contentKey:
-						'routes/apps/chain-tools/l2/guide.sections.advanced.data_availability.content'
+					contentKey: 'routes/apps/chain-tools/l2/guide.sections.advanced.data_availability.content'
 				},
 				{
 					id: 'sequencer-decentralization',

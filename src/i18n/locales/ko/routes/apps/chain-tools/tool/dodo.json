@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "DODO - PMM DEX with Custom Liquidity",
+		"description": "DODO uses Proactive Market Making (PMM) for capital-efficient trading. Create custom pools and access professional market making.",
+		"keywords": "DODO, PMM, Proactive Market Making, DEX, DODO token, liquidity provision, DeFi"
+	},
+	"overview": "DODO is a DEX powered by its Proactive Market Making (PMM) algorithm, which provides more capital-efficient liquidity than traditional AMMs. PMM actively adjusts prices based on market conditions.\n\nThe platform allows anyone to create custom liquidity pools with flexible parameters, ideal for token launches and concentrated liquidity strategies. DODO also offers crowdpooling for fair token launches.\n\nWith the DODO token for governance and fee sharing, plus integration across major chains, DODO serves as both a trading venue and liquidity infrastructure.",
+	"features": {
+		"1": {
+			"title": "PMM Algorithm",
+			"description": "Proactive market making for efficiency"
+		},
+		"2": {
+			"title": "Custom Pools",
+			"description": "Create pools with flexible parameters"
+		},
+		"3": {
+			"title": "Crowdpooling",
+			"description": "Fair token launch mechanism"
+		},
+		"4": {
+			"title": "DODO Token",
+			"description": "Governance and vDODO staking"
+		},
+		"5": {
+			"title": "Multi-Chain",
+			"description": "Ethereum, BSC, Arbitrum, and more"
+		},
+		"6": {
+			"title": "Professional MM",
+			"description": "Access market maker strategies"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Efficient Trading",
+			"description": "Trade with PMM's tight spreads"
+		},
+		"2": {
+			"title": "Pool Creation",
+			"description": "Launch custom liquidity pools"
+		},
+		"3": {
+			"title": "Token Launches",
+			"description": "Use crowdpooling for fair IDOs"
+		},
+		"4": {
+			"title": "LP Strategies",
+			"description": "Provide concentrated liquidity"
+		},
+		"5": {
+			"title": "vDODO Staking",
+			"description": "Stake for rewards and governance"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Proactive Market Making (PMM)?",
+			"answer": "PMM is DODO's unique algorithm that concentrates liquidity near the market price, updating proactively. Unlike constant product AMMs, PMM provides better capital efficiency and lower slippage. It mimics professional market making strategies."
+		},
+		"2": {
+			"question": "How is DODO different from Uniswap?",
+			"answer": "Uniswap uses x*y=k formula spreading liquidity across all prices. DODO's PMM concentrates liquidity where it's needed, reducing slippage. DODO also allows customizable pool parameters and single-sided liquidity provision."
+		},
+		"3": {
+			"question": "What is Crowdpooling?",
+			"answer": "Crowdpooling is DODO's fair launch mechanism. It prevents bot manipulation and front-running during token launches. Participants can claim their allocation after the pool ends, with liquidity automatically added to DODO."
+		},
+		"4": {
+			"question": "What is vDODO?",
+			"answer": "vDODO is the staked version of DODO tokens. By staking DODO for vDODO, you get voting rights, share of trading fees, and membership rewards. Longer lock-ups can provide higher rewards."
+		},
+		"5": {
+			"question": "Is DODO safe?",
+			"answer": "DODO has been operating since 2020 and is audited by multiple firms. It's used by many protocols for liquidity. Standard DeFi risks apply. The PMM model has proven itself but understand any new pool's parameters before LPing."
+		}
+	},
+	"cta": {
+		"ready": "Ready to explore PMM trading?",
+		"button": "Explore DODO",
+		"note": "Proactive market making DEX"
+	}
+}

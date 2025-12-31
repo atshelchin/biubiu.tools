@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Renzo - Liquid Restaking Made Easy",
+		"description": "Renzo is a liquid restaking protocol issuing ezETH. Simplify EigenLayer restaking with automated strategy management.",
+		"keywords": "Renzo, ezETH, liquid restaking, EigenLayer, LRT, REZ token"
+	},
+	"overview": "Renzo is a liquid restaking protocol that simplifies participation in EigenLayer by issuing ezETH—a liquid restaking token. Users deposit ETH or LSTs and receive ezETH that earns restaking rewards.\n\nRenzo handles the complexity of EigenLayer: selecting operators, choosing AVS (Actively Validated Services), and managing rewards. This makes restaking accessible without deep technical knowledge.\n\nWith the REZ token launched via airdrop, Renzo has established governance and is expanding to multiple chains. ezETH is widely integrated across DeFi for additional yield opportunities.",
+	"features": {
+		"1": {
+			"title": "ezETH Token",
+			"description": "Liquid restaking token for EigenLayer"
+		},
+		"2": {
+			"title": "Automated Strategy",
+			"description": "Renzo manages operator and AVS selection"
+		},
+		"3": {
+			"title": "Multi-Chain",
+			"description": "Available on Ethereum and L2s"
+		},
+		"4": {
+			"title": "REZ Governance",
+			"description": "Community-driven protocol governance"
+		},
+		"5": {
+			"title": "DeFi Compatible",
+			"description": "Use ezETH across lending and DEXs"
+		},
+		"6": {
+			"title": "Native ETH Support",
+			"description": "Deposit ETH directly without LST"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Liquid Restaking",
+			"description": "Earn restaking rewards with liquidity"
+		},
+		"2": {
+			"title": "DeFi Strategies",
+			"description": "Use ezETH in lending and yield"
+		},
+		"3": {
+			"title": "L2 Restaking",
+			"description": "Restake from Arbitrum, Base, etc."
+		},
+		"4": {
+			"title": "Governance",
+			"description": "Vote on protocol decisions with REZ"
+		},
+		"5": {
+			"title": "Leveraged Restaking",
+			"description": "Loop ezETH for amplified yield"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is ezETH?",
+			"answer": "ezETH is Renzo's liquid restaking token representing ETH restaked on EigenLayer. It earns staking rewards plus EigenLayer restaking rewards. ezETH can be used in DeFi while continuing to earn these rewards."
+		},
+		"2": {
+			"question": "What is REZ token?",
+			"answer": "REZ is Renzo's governance token distributed via airdrop to early users and ezETH holders. REZ is used for protocol governance and may have additional utility. You can earn REZ through Renzo points."
+		},
+		"3": {
+			"question": "How do I get ezETH?",
+			"answer": "Deposit ETH, stETH, or wBETH on Renzo's app to mint ezETH. You can also deposit on L2s like Arbitrum or Base. Alternatively, buy ezETH on DEXs. Minting directly earns you Renzo points."
+		},
+		"4": {
+			"question": "Is Renzo safe?",
+			"answer": "Renzo has been audited and manages billions in TVL. Risks include smart contract risk, EigenLayer slashing risk, and operator risk. Renzo diversifies across operators to reduce single-operator risk. Always understand restaking risks."
+		},
+		"5": {
+			"question": "Renzo vs Ether.fi: Which is better?",
+			"answer": "Both are leading LRT protocols. Renzo offers multi-chain deposits and automated strategy. Ether.fi has larger TVL and its own L2 (Scroll partnership). Both have tokens (REZ vs ETHFI). Try both based on your preferences."
+		}
+	},
+	"cta": {
+		"ready": "Ready to restake with Renzo?",
+		"button": "Explore Renzo",
+		"note": "Liquid restaking made easy"
+	}
+}

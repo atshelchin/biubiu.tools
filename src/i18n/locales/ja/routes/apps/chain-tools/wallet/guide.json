@@ -1,0 +1,192 @@
+{
+	"title": "Crypto Wallet Guide: From Basics to Advanced Security",
+	"subtitle": "Master wallet security, understand account abstraction, and protect your digital assets",
+	"sections": {
+		"intro": {
+			"title": "Understanding Crypto Wallets",
+			"content": "<p>A cryptocurrency wallet is your gateway to the blockchain world. Unlike traditional wallets that store money, crypto wallets store the cryptographic keys that prove ownership of your digital assets. The assets themselves live on the blockchain.</p><p>Choosing the right wallet—and using it correctly—is one of the most important decisions you'll make in crypto. A single mistake with your private keys can mean permanent loss of funds.</p><p>This guide covers everything from basic wallet concepts to advanced topics like Account Abstraction and institutional custody solutions.</p>"
+		},
+		"wallet_basics": {
+			"title": "Wallet Fundamentals",
+			"content": "<p>Before using any wallet, you need to understand the core concepts that make crypto ownership work.</p>",
+			"keys_addresses": {
+				"title": "Keys and Addresses",
+				"content": "<p><strong>Private Key:</strong> A 256-bit random number that proves ownership. Anyone with your private key controls your assets. Never share it.</p><p><strong>Public Key:</strong> Derived from your private key using cryptography. Can be shared freely.</p><p><strong>Address:</strong> A shortened, human-readable version of your public key (e.g., 0x1234...abcd). This is what you share to receive funds.</p><p><strong>The relationship:</strong></p><ul><li>Private key → Public key → Address</li><li>You can always derive the public key from the private key</li><li>You cannot derive the private key from the public key (that's the security)</li></ul>"
+			},
+			"seed_phrases": {
+				"title": "Seed Phrases (Recovery Phrases)",
+				"content": "<p>A seed phrase (also called recovery phrase or mnemonic) is a human-readable representation of your private key.</p><p><strong>How it works:</strong></p><ul><li>12 or 24 words from a standardized list (BIP-39)</li><li>Can regenerate all your wallet's private keys</li><li>Write it down on paper—never store digitally</li></ul><p><strong>Critical rules:</strong></p><ul><li>Never enter your seed phrase on any website</li><li>Never share it with anyone, including \"support\"</li><li>Store it in a fireproof, waterproof location</li><li>Consider using metal backup plates</li></ul><p>If someone asks for your seed phrase, it's always a scam.</p>"
+			},
+			"custodial_vs_non": {
+				"title": "Custodial vs Non-Custodial",
+				"content": "<p><strong>Non-custodial (Self-custody):</strong></p><ul><li>You control your private keys</li><li>No third party can freeze or seize your funds</li><li>You're responsible for security and backup</li><li>Examples: MetaMask, Ledger, Rabby</li></ul><p><strong>Custodial:</strong></p><ul><li>A third party holds your keys</li><li>Easier to recover if you lose access</li><li>You trust the custodian with your assets</li><li>Examples: Coinbase account, Binance account</li></ul><p><strong>The saying:</strong> \"Not your keys, not your coins.\"</p><p>For significant holdings, self-custody is strongly recommended. Exchange hacks and bankruptcies have lost billions of user funds.</p>"
+			}
+		},
+		"wallet_types": {
+			"title": "Types of Wallets",
+			"content": "<p>Different wallets serve different needs. Understanding the tradeoffs helps you choose the right tool.</p>",
+			"hot_wallets": {
+				"title": "Hot Wallets",
+				"content": "<p>Hot wallets are connected to the internet, making them convenient but more vulnerable.</p><p><strong>Browser Extensions:</strong></p><ul><li><strong>MetaMask:</strong> The most popular, works with almost everything</li><li><strong>Rabby:</strong> Security-focused with transaction previews and risk alerts</li><li><strong>Frame:</strong> Desktop app with strong hardware wallet integration</li></ul><p><strong>Mobile Wallets:</strong></p><ul><li><strong>Rainbow:</strong> Beautiful UX, great for NFTs</li><li><strong>Coinbase Wallet:</strong> Easy onboarding, connects to Coinbase</li><li><strong>Trust Wallet:</strong> Multi-chain support</li></ul><p><strong>Best for:</strong> Daily transactions, small amounts, DeFi interactions</p><p><strong>Not recommended for:</strong> Large holdings you're not actively using</p>"
+			},
+			"cold_wallets": {
+				"title": "Cold Wallets (Hardware Wallets)",
+				"content": "<p>Cold wallets keep your private keys offline, providing the highest security for significant holdings.</p><p><strong>How they work:</strong></p><ol><li>Private keys are generated and stored on the device</li><li>Keys never leave the device, even when signing transactions</li><li>You approve transactions by physically pressing buttons</li></ol><p><strong>Popular options:</strong></p><ul><li><strong>Ledger:</strong> Nano X, Nano S Plus - Most popular, Bluetooth support</li><li><strong>Trezor:</strong> Model T, Safe 3 - Open source firmware</li><li><strong>Keystone:</strong> Air-gapped (uses QR codes, no USB/Bluetooth)</li></ul><p><strong>Best practices:</strong></p><ul><li>Buy only from official sources (never used or from Amazon)</li><li>Set up in a private location</li><li>Use with a separate \"hot wallet\" computer account</li><li>Consider a passphrase for additional security</li></ul>"
+			},
+			"smart_wallets": {
+				"title": "Smart Wallets (Contract Wallets)",
+				"content": "<p>Smart wallets are deployed as smart contracts, enabling features impossible with regular wallets.</p><p><strong>Key features:</strong></p><ul><li><strong>Multisig:</strong> Require multiple signatures (e.g., 2-of-3)</li><li><strong>Social recovery:</strong> Trusted contacts can help recover access</li><li><strong>Spending limits:</strong> Daily transaction caps</li><li><strong>Session keys:</strong> Limited permissions for specific apps</li></ul><p><strong>Popular options:</strong></p><ul><li><strong>Safe (Gnosis Safe):</strong> The gold standard for multisig, used by most DAOs</li><li><strong>Argent:</strong> Social recovery wallet with guardians</li><li><strong>Ambire:</strong> Email login with gasless transactions</li></ul><p><strong>Trade-offs:</strong></p><ul><li>Higher gas costs for transactions</li><li>More complex setup</li><li>Exceptional security when configured properly</li></ul>"
+			},
+			"multichain_wallets": {
+				"title": "Multi-Chain Wallets",
+				"content": "<p>Different blockchains use different address formats and signing schemes. Multi-chain wallets handle this complexity.</p><p><strong>EVM-compatible chains:</strong> One wallet works across Ethereum, Polygon, Arbitrum, etc.</p><p><strong>Non-EVM chains need specific wallets:</strong></p><ul><li><strong>Phantom:</strong> Solana, Ethereum, Polygon, Bitcoin</li><li><strong>Keplr:</strong> Cosmos ecosystem (Osmosis, Celestia, dYdX)</li><li><strong>OKX Wallet:</strong> 80+ chains including Bitcoin, TON, Tron</li></ul><p><strong>Considerations:</strong></p><ul><li>One seed phrase can often generate addresses for multiple chains</li><li>Always verify you're on the correct network before transacting</li><li>Some chains have different address formats that look similar but aren't</li></ul>"
+			}
+		},
+		"getting_started": {
+			"title": "Setting Up Your First Wallet",
+			"content": "<p>Ready to get started? Here's how to set up your first wallet safely.</p>",
+			"first_wallet": {
+				"title": "Step-by-Step Setup",
+				"content": "<p><strong>Recommended first wallet:</strong> Rabby (browser extension) for its security features and transaction previews.</p><p><strong>Setup process:</strong></p><ol><li>Download only from the official website (rabby.io)</li><li>Create a new wallet and set a strong password</li><li>Write down your 12-word seed phrase on paper</li><li>Verify the seed phrase when prompted</li><li>Store the seed phrase securely (not on your computer)</li></ol><p><strong>Important:</strong></p><ul><li>Never screenshot your seed phrase</li><li>Never store it in cloud storage, notes apps, or email</li><li>Test recovery before depositing significant funds</li></ul>"
+			},
+			"backup_recovery": {
+				"title": "Backup and Recovery",
+				"content": "<p><strong>The 3-2-1 backup rule:</strong></p><ul><li>3 copies of your seed phrase</li><li>2 different storage types (paper + metal)</li><li>1 copy in a different physical location</li></ul><p><strong>Testing recovery:</strong></p><ol><li>Write down your seed phrase</li><li>Uninstall the wallet</li><li>Reinstall and use \"Import existing wallet\"</li><li>Enter your seed phrase</li><li>Verify your accounts and balances appear</li></ol><p><strong>Metal backup options:</strong></p><ul><li>Cryptosteel Capsule</li><li>Billfodl</li><li>DIY stamped steel washers</li></ul><p>Paper burns and fades. Metal survives fires and floods.</p>"
+			},
+			"connecting_dapps": {
+				"title": "Connecting to dApps",
+				"content": "<p>When you interact with DeFi protocols or NFT marketplaces, you \"connect\" your wallet.</p><p><strong>What connecting does:</strong></p><ul><li>Shares your public address (not your private key)</li><li>Allows the site to request transaction signatures</li><li>You still approve every transaction</li></ul><p><strong>Safety tips:</strong></p><ul><li>Verify you're on the real website (bookmark trusted sites)</li><li>Check what you're signing before approving</li><li>Revoke permissions for sites you no longer use</li><li>Use a separate wallet for risky experiments</li></ul><p><strong>WalletConnect:</strong> A protocol that lets you connect to dApps using QR codes or deep links. Useful for using desktop dApps with mobile wallets.</p>"
+			}
+		},
+		"portfolio": {
+			"title": "Portfolio Management",
+			"content": "<p>As you accumulate assets across wallets and chains, tracking becomes essential.</p>",
+			"tracking_assets": {
+				"title": "Portfolio Trackers",
+				"content": "<p>Portfolio trackers aggregate your holdings across wallets and chains into a single view.</p><p><strong>Top options:</strong></p><ul><li><strong>DeBank:</strong> The most comprehensive DeFi portfolio tracker. Shows positions, health factors, protocol interactions, and historical data.</li><li><strong>Zapper:</strong> Clean interface with NFT display and transaction history</li><li><strong>Zerion:</strong> Combines a wallet with portfolio tracking</li></ul><p><strong>What they track:</strong></p><ul><li>Token balances across chains</li><li>DeFi positions (lending, LP tokens, staking)</li><li>NFT collections</li><li>Transaction history</li><li>Net worth over time</li></ul><p>These services are read-only—they can't move your funds.</p>"
+			},
+			"batch_operations": {
+				"title": "Batch Operations",
+				"content": "<p>Managing multiple wallets or distributing tokens to many addresses? Batch tools save time and gas.</p><p><strong>Common batch operations:</strong></p><ul><li><strong>Wallet Sweep:</strong> Consolidate assets from multiple wallets into one</li><li><strong>One-to-Many Transfer:</strong> Distribute tokens to many recipients in one transaction</li><li><strong>Balance Scanner:</strong> Check balances across multiple addresses at once</li></ul><p><strong>Use cases:</strong></p><ul><li>Airdrop distribution</li><li>Consolidating old wallets</li><li>Team payroll</li><li>NFT minting to multiple addresses</li></ul><p>Always test with small amounts first.</p>"
+			}
+		},
+		"security": {
+			"title": "Wallet Security",
+			"content": "<p>Crypto is a high-stakes environment. Understanding threats helps you protect your assets.</p>",
+			"common_threats": {
+				"title": "Common Threats",
+				"content": "<p><strong>Phishing:</strong></p><ul><li>Fake websites that look identical to real ones</li><li>Often promoted through ads, DMs, or search results</li><li>Always verify URLs carefully</li></ul><p><strong>Malicious approvals:</strong></p><ul><li>Signing a transaction that gives unlimited access to your tokens</li><li>Attacker can drain your wallet later</li><li>Always check what you're approving</li></ul><p><strong>Seed phrase theft:</strong></p><ul><li>Fake wallet apps that steal your seed phrase</li><li>Support scams asking you to \"verify\" your phrase</li><li>Clipboard malware that replaces copied addresses</li></ul><p><strong>SIM swaps:</strong></p><ul><li>Attacker takes over your phone number</li><li>Can bypass SMS 2FA</li><li>Use hardware keys instead of SMS</li></ul>"
+			},
+			"security_practices": {
+				"title": "Security Best Practices",
+				"content": "<p><strong>Essential habits:</strong></p><ul><li>Use a hardware wallet for significant holdings</li><li>Never share your seed phrase with anyone</li><li>Bookmark sites you use regularly</li><li>Use a separate browser profile for crypto</li><li>Enable transaction simulation (Rabby has this built-in)</li></ul><p><strong>Approval hygiene:</strong></p><ul><li>Regularly review and revoke token approvals</li><li>Use Revoke.cash to audit your approvals</li><li>Prefer limited approvals over unlimited when possible</li></ul><p><strong>Hot/cold strategy:</strong></p><ul><li>Keep day-to-day funds in a hot wallet</li><li>Keep long-term holdings in cold storage</li><li>Never connect cold storage to random sites</li></ul>"
+			},
+			"wallet_drains": {
+				"title": "Wallet Drain Attacks",
+				"content": "<p>Wallet drains happen when attackers trick users into signing malicious transactions.</p>",
+				"case_ledger": {
+					"title": "Ledger Connect Kit Hack ($600K)",
+					"description": "In December 2023, an attacker compromised Ledger's Connect Kit library, which is used by many dApps. The malicious code injected a wallet drainer into websites using the library. Users who connected their wallets and signed transactions during the attack had funds stolen. This highlighted the risks of supply chain attacks and the importance of verifying what you're signing."
+				}
+			},
+			"multisig": {
+				"title": "Multi-Signature Security",
+				"content": "<p>Multisig requires multiple keys to authorize transactions—like requiring multiple signatures on a check.</p><p><strong>Common configurations:</strong></p><ul><li><strong>2-of-3:</strong> Any 2 of 3 keyholders must sign</li><li><strong>3-of-5:</strong> Any 3 of 5 must sign</li><li><strong>2-of-2:</strong> Both must sign (no redundancy)</li></ul><p><strong>Benefits:</strong></p><ul><li>No single point of failure</li><li>Protects against key compromise</li><li>Enables team/DAO treasury management</li></ul><p><strong>Best practices:</strong></p><ul><li>Use Safe (Gnosis Safe) - the most battle-tested option</li><li>Distribute keys geographically</li><li>Use hardware wallets for each signer</li><li>Document the recovery process</li></ul><p><strong>For Solana:</strong> Use Squads for multisig functionality.</p>"
+			}
+		},
+		"account_abstraction": {
+			"title": "Account Abstraction",
+			"content": "<p>Account Abstraction (AA) is a paradigm shift in how Ethereum accounts work, enabling powerful new features.</p>",
+			"what_is_aa": {
+				"title": "What is Account Abstraction?",
+				"content": "<p>Traditional Ethereum accounts (EOAs) have fixed rules: one private key, must pay gas in ETH, same signature scheme forever.</p><p><strong>Account Abstraction allows:</strong></p><ul><li>Custom validation logic (any signature scheme)</li><li>Sponsored transactions (someone else pays gas)</li><li>Batched transactions (multiple actions in one)</li><li>Session keys (limited permissions for specific apps)</li><li>Social recovery without changing your address</li></ul><p>Think of it as programmable account rules instead of hardcoded ones.</p>"
+			},
+			"erc_4337": {
+				"title": "ERC-4337 Explained",
+				"content": "<p>ERC-4337 brings Account Abstraction to Ethereum without changing the protocol.</p><p><strong>Key components:</strong></p><ul><li><strong>Smart Account:</strong> Your wallet as a smart contract</li><li><strong>UserOperation:</strong> A new transaction type for smart accounts</li><li><strong>Bundler:</strong> Collects UserOperations and submits them on-chain</li><li><strong>Paymaster:</strong> Optional contract that sponsors gas fees</li><li><strong>EntryPoint:</strong> The central contract that processes everything</li></ul><p><strong>Infrastructure providers:</strong></p><ul><li><strong>Pimlico:</strong> Bundler and Paymaster infrastructure</li><li><strong>Stackup:</strong> SDK and bundler services</li><li><strong>Biconomy:</strong> Complete AA SDK with gasless options</li></ul>"
+			},
+			"aa_wallets": {
+				"title": "AA-Powered Wallets",
+				"content": "<p>Several projects are building the next generation of wallets using Account Abstraction.</p><p><strong>Developer-focused:</strong></p><ul><li><strong>ZeroDev:</strong> Modular smart accounts with Kernel</li><li><strong>Alchemy Account Kit:</strong> Complete AA infrastructure</li><li><strong>Biconomy:</strong> Gasless transactions and social login</li></ul><p><strong>Consumer wallets:</strong></p><ul><li><strong>Soul Wallet:</strong> Native ERC-4337 wallet</li><li><strong>Obvious:</strong> Smart wallet with social recovery</li><li><strong>Candide:</strong> Open source smart wallet</li></ul><p><strong>What this enables:</strong></p><ul><li>Email/social login (no seed phrases!)</li><li>Gas paid in any token (or sponsored)</li><li>Automated strategies without signing each tx</li><li>Recovery via trusted contacts</li></ul>"
+			},
+			"embedded_wallets": {
+				"title": "Embedded Wallets",
+				"content": "<p>Embedded wallets let apps create wallets for users without requiring a browser extension or app download.</p><p><strong>How it works:</strong></p><ol><li>User logs in with email, social, or phone</li><li>Wallet is created in the background</li><li>Private keys are sharded and distributed (MPC)</li><li>User interacts with the app without knowing it's \"crypto\"</li></ol><p><strong>Providers:</strong></p><ul><li><strong>Privy:</strong> Social login with progressive onboarding</li><li><strong>Dynamic:</strong> Multi-wallet authentication</li><li><strong>Web3Auth:</strong> MPC-based key management</li><li><strong>Particle Network:</strong> Complete Wallet-as-a-Service</li></ul><p><strong>Trade-offs:</strong></p><ul><li>Easier onboarding vs. less user control</li><li>Some still allow export of keys</li><li>Trust in the provider's key management</li></ul>"
+			}
+		},
+		"advanced": {
+			"title": "Advanced Topics",
+			"content": "<p>For power users and those managing significant assets.</p>",
+			"hd_wallets": {
+				"title": "HD Wallets & Derivation Paths",
+				"content": "<p>Hierarchical Deterministic (HD) wallets generate unlimited addresses from a single seed phrase.</p><p><strong>How it works:</strong></p><ul><li>One seed → infinite private keys</li><li>Uses a tree structure with numbered branches</li><li>Same seed + same path = same key</li></ul><p><strong>Derivation paths (BIP-44):</strong></p><p><code>m / purpose' / coin_type' / account' / change / index</code></p><ul><li>Ethereum: m/44'/60'/0'/0/0</li><li>Bitcoin: m/44'/0'/0'/0/0</li><li>Ledger Live uses different paths than MetaMask</li></ul><p><strong>Why this matters:</strong></p><ul><li>Same seed can show different addresses in different wallets</li><li>When recovering, use the same derivation path</li><li>Document which path you used</li></ul>"
+			},
+			"hardware_best": {
+				"title": "Hardware Wallet Deep Dive",
+				"content": "<p>Getting the most security from your hardware wallet.</p><p><strong>Initial setup:</strong></p><ul><li>Buy only from official sources</li><li>Check for tamper-evident packaging</li><li>Update firmware before first use</li><li>Generate seed on the device (don't import)</li></ul><p><strong>Passphrase (25th word):</strong></p><ul><li>Creates a completely separate set of accounts</li><li>Provides plausible deniability</li><li>If you forget it, those funds are gone</li><li>Store passphrase separately from seed</li></ul><p><strong>Air-gapped setups:</strong></p><ul><li>Keystone uses QR codes—no USB or Bluetooth</li><li>Maximum isolation from online threats</li><li>More complex but highest security</li></ul><p><strong>Connecting to dApps:</strong></p><ul><li>Use Rabby or Frame as the front-end</li><li>Transaction details shown on device screen</li><li>Verify details on device before signing</li></ul>"
+			},
+			"institutional": {
+				"title": "Institutional Custody",
+				"content": "<p>Organizations managing large amounts need enterprise-grade solutions.</p><p><strong>Requirements:</strong></p><ul><li>Multi-user access with role-based permissions</li><li>Approval workflows (multiple signers)</li><li>Insurance coverage</li><li>Regulatory compliance (SOC 2, etc.)</li><li>Integration with accounting systems</li></ul><p><strong>Options:</strong></p><ul><li><strong>Fireblocks:</strong> MPC-based custody, most popular for institutions</li><li><strong>BitGo:</strong> Multisig custody with insurance</li><li><strong>Anchorage:</strong> Regulated digital asset bank</li><li><strong>Copper:</strong> European institutional custody</li></ul><p><strong>MPC vs Multisig:</strong></p><ul><li>MPC: Key shards distributed, never fully assembled</li><li>Multisig: Multiple complete keys required</li><li>Both provide threshold security</li></ul>"
+			}
+		}
+	},
+	"glossary": {
+		"private_key": {
+			"term": "Private Key",
+			"definition": "A 256-bit random number that controls access to your crypto assets. Anyone with your private key has full control of your funds. Never share it with anyone."
+		},
+		"public_key": {
+			"term": "Public Key",
+			"definition": "Derived from your private key using cryptography. Can be shared publicly. Used to verify that transactions were signed by the corresponding private key."
+		},
+		"seed_phrase": {
+			"term": "Seed Phrase",
+			"definition": "A 12 or 24-word phrase that represents your private key in human-readable form. Used to backup and recover wallets. Also called recovery phrase or mnemonic."
+		},
+		"hd_wallet": {
+			"term": "HD Wallet",
+			"definition": "Hierarchical Deterministic wallet. Generates unlimited addresses from a single seed phrase using a tree structure and derivation paths."
+		},
+		"hot_wallet": {
+			"term": "Hot Wallet",
+			"definition": "A wallet connected to the internet (browser extension, mobile app). Convenient for daily use but more vulnerable to hacks. Keep only small amounts here."
+		},
+		"cold_wallet": {
+			"term": "Cold Wallet",
+			"definition": "A wallet that keeps private keys offline (hardware wallet, paper wallet). Maximum security for long-term storage. Keys never touch the internet."
+		},
+		"multisig": {
+			"term": "Multisig",
+			"definition": "Multi-signature wallet requiring multiple keys to authorize transactions (e.g., 2-of-3). Eliminates single points of failure and enables team management."
+		},
+		"smart_wallet": {
+			"term": "Smart Wallet",
+			"definition": "A wallet deployed as a smart contract, enabling features like social recovery, spending limits, and session keys that aren't possible with regular wallets."
+		},
+		"account_abstraction": {
+			"term": "Account Abstraction",
+			"definition": "A paradigm allowing smart contracts to be used as accounts, enabling custom validation logic, sponsored transactions, and programmable security rules."
+		},
+		"eoa": {
+			"term": "EOA",
+			"definition": "Externally Owned Account. A traditional Ethereum account controlled by a private key, as opposed to a smart contract account."
+		},
+		"bundler": {
+			"term": "Bundler",
+			"definition": "In ERC-4337, a service that collects UserOperations from smart accounts and submits them on-chain in batches. Part of the Account Abstraction infrastructure."
+		},
+		"paymaster": {
+			"term": "Paymaster",
+			"definition": "A smart contract that sponsors gas fees for users in ERC-4337. Enables gasless transactions where users don't need ETH to interact with dApps."
+		},
+		"token_approval": {
+			"term": "Token Approval",
+			"definition": "Permission you grant to a smart contract to spend your tokens. Unlimited approvals are risky—if the contract is compromised, your tokens can be stolen."
+		},
+		"social_recovery": {
+			"term": "Social Recovery",
+			"definition": "A wallet recovery method where trusted contacts (guardians) can help restore access if you lose your keys. No single guardian can access your funds alone."
+		}
+	}
+}

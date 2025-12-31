@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "ParaSwap - DEX Aggregator with PSP Token",
+		"description": "ParaSwap aggregates DEX liquidity for best swap rates. Earn PSP tokens and access gasless trading with ParaSwap Delta.",
+		"keywords": "ParaSwap, DEX aggregator, PSP token, gasless swaps, DeFi trading, multi-chain"
+	},
+	"overview": "ParaSwap is a DEX aggregator that finds the best rates across decentralized exchanges. By splitting orders across multiple DEXs and liquidity sources, ParaSwap optimizes for price and gas efficiency.\n\nThe platform features ParaSwap Delta for gasless trading through intent-based orders, competing with CoW Swap and Bebop. Users can earn PSP tokens through staking and trading.\n\nWith support for multiple chains and a focus on developer APIs, ParaSwap serves both retail traders and protocols needing aggregation infrastructure.",
+	"features": {
+		"1": {
+			"title": "Multi-DEX Routing",
+			"description": "Split orders for best prices"
+		},
+		"2": {
+			"title": "ParaSwap Delta",
+			"description": "Gasless intent-based trading"
+		},
+		"3": {
+			"title": "PSP Token",
+			"description": "Governance and fee sharing"
+		},
+		"4": {
+			"title": "Multi-Chain",
+			"description": "Ethereum, Polygon, BSC, and more"
+		},
+		"5": {
+			"title": "API Access",
+			"description": "Developer-friendly integration"
+		},
+		"6": {
+			"title": "Limit Orders",
+			"description": "Set target prices for trades"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Best Rate Trading",
+			"description": "Get optimal prices across DEXs"
+		},
+		"2": {
+			"title": "Gasless Swaps",
+			"description": "Trade with ParaSwap Delta"
+		},
+		"3": {
+			"title": "Protocol Integration",
+			"description": "Use API for your dApp"
+		},
+		"4": {
+			"title": "PSP Staking",
+			"description": "Stake for fee discounts"
+		},
+		"5": {
+			"title": "Cross-Chain Trading",
+			"description": "Swap on multiple networks"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How does ParaSwap find the best rate?",
+			"answer": "ParaSwap's algorithm queries dozens of DEXs and liquidity sources simultaneously. It considers splitting orders across multiple sources, factoring in gas costs. The result is often better than trading on any single DEX."
+		},
+		"2": {
+			"question": "What is ParaSwap Delta?",
+			"answer": "Delta is ParaSwap's gasless trading mode using intent-based orders. Instead of submitting transactions, you sign an order that market makers fill. This provides MEV protection and no upfront gas costs."
+		},
+		"3": {
+			"question": "What is PSP token used for?",
+			"answer": "PSP is ParaSwap's governance token. Staking PSP unlocks fee discounts and voting rights. Social stakers (long-term stakers) get better rewards. PSP may also receive protocol revenue sharing."
+		},
+		"4": {
+			"question": "ParaSwap vs 1inch: Which is better?",
+			"answer": "Both are top DEX aggregators with similar coverage. 1inch has larger market share and more liquidity sources. ParaSwap has PSP token incentives and Delta for gasless trades. Try both and compare quotes for your specific trades."
+		},
+		"5": {
+			"question": "Is ParaSwap safe?",
+			"answer": "ParaSwap has been operating since 2019 with billions in volume processed. Contracts are audited. It's a non-custodial aggregator—you're trading through smart contracts. Standard DEX risks apply."
+		}
+	},
+	"cta": {
+		"ready": "Ready to find the best rates?",
+		"button": "Explore ParaSwap",
+		"note": "DEX aggregation with PSP"
+	}
+}

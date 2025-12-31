@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Hyperliquid - High Performance Perp DEX",
+		"description": "Hyperliquid is a perpetual futures DEX with CEX-level performance. On-chain order book, sub-second latency, up to 50x leverage.",
+		"keywords": "Hyperliquid, perpetual futures, perp DEX, HYPE, order book, derivatives"
+	},
+	"overview": "Hyperliquid is a perpetual futures exchange built on its own L1 blockchain, offering CEX-like performance in a decentralized setting. With sub-second latency and an on-chain order book, it rivals centralized exchanges.\n\nThe platform supports up to 50x leverage on major crypto pairs, with deep liquidity and tight spreads. Its own HyperBFT consensus enables high throughput without compromising decentralization.\n\nHyperliquid has attracted significant volume and TVL, competing directly with centralized derivatives exchanges. The HYPE token airdrop rewarded early users and created one of the largest community distributions.",
+	"features": {
+		"1": {
+			"title": "On-Chain Order Book",
+			"description": "Full order book on L1 blockchain"
+		},
+		"2": {
+			"title": "Sub-Second Latency",
+			"description": "CEX-level execution speed"
+		},
+		"3": {
+			"title": "Up to 50x Leverage",
+			"description": "High leverage on major pairs"
+		},
+		"4": {
+			"title": "Own L1",
+			"description": "Purpose-built HyperBFT chain"
+		},
+		"5": {
+			"title": "Deep Liquidity",
+			"description": "Tight spreads, minimal slippage"
+		},
+		"6": {
+			"title": "Self-Custody",
+			"description": "Non-custodial trading"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Perpetual Trading",
+			"description": "Trade perps with high leverage"
+		},
+		"2": {
+			"title": "Hedging",
+			"description": "Hedge spot positions on-chain"
+		},
+		"3": {
+			"title": "Arbitrage",
+			"description": "Arb between CEX and DEX"
+		},
+		"4": {
+			"title": "Market Making",
+			"description": "Provide liquidity on order book"
+		},
+		"5": {
+			"title": "Speculation",
+			"description": "Leveraged directional bets"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is HYPE token?",
+			"answer": "HYPE is Hyperliquid's native token distributed via one of the largest airdrops in crypto history. It's used for staking, governance, and may have future utility on the platform. The airdrop rewarded active traders based on their activity."
+		},
+		"2": {
+			"question": "How is Hyperliquid so fast?",
+			"answer": "Hyperliquid built its own L1 optimized for trading. HyperBFT consensus, purpose-built for order matching, achieves sub-second finality. The entire order book runs on-chain with optimizations impossible on general-purpose chains."
+		},
+		"3": {
+			"question": "Is Hyperliquid safe?",
+			"answer": "Hyperliquid is non-custodial—you control your keys. The L1 has operated reliably with billions in volume. Risks include smart contract risk, liquidation risk with leverage, and the newness of the protocol. Start with smaller positions."
+		},
+		"4": {
+			"question": "How do I start trading on Hyperliquid?",
+			"answer": "Connect your wallet (MetaMask, etc.), deposit USDC to Hyperliquid L1 via their bridge, and start trading. The interface is similar to centralized exchanges. No KYC required for trading."
+		},
+		"5": {
+			"question": "Hyperliquid vs dYdX: Which is better?",
+			"answer": "Both are leading perp DEXs. Hyperliquid has faster execution and launched on its own L1. dYdX is more established with longer track record. Hyperliquid's HYPE airdrop created strong community. Try both to see which suits your trading style."
+		}
+	},
+	"cta": {
+		"ready": "Ready for high-speed perps?",
+		"button": "Explore Hyperliquid",
+		"note": "CEX-speed perp DEX"
+	}
+}

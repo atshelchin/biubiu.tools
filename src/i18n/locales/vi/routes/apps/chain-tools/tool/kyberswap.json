@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "KyberSwap - Multi-Chain DEX Aggregator",
+		"description": "KyberSwap is a DEX aggregator with concentrated liquidity pools. Trade across 15+ chains with KNC token rewards.",
+		"keywords": "KyberSwap, Kyber Network, KNC token, DEX aggregator, concentrated liquidity, multi-chain DEX"
+	},
+	"overview": "KyberSwap is one of the longest-running DEX protocols, operating since 2017. It combines DEX aggregation with its own concentrated liquidity pools (KyberSwap Elastic) for comprehensive trading.\n\nThe aggregator routes through 100+ liquidity sources across 15+ chains, finding optimal paths for any trade. KyberSwap Elastic allows LPs to provide concentrated liquidity similar to Uniswap V3.\n\nWith the KNC token for governance and liquidity mining rewards, KyberSwap offers both trading and earning opportunities across the multi-chain ecosystem.",
+	"features": {
+		"1": {
+			"title": "Wide Chain Support",
+			"description": "15+ chains including Ethereum, Arbitrum, Polygon"
+		},
+		"2": {
+			"title": "100+ DEXs Aggregated",
+			"description": "Routes through major liquidity sources"
+		},
+		"3": {
+			"title": "KyberSwap Elastic",
+			"description": "Concentrated liquidity pools"
+		},
+		"4": {
+			"title": "KNC Token",
+			"description": "Governance and staking rewards"
+		},
+		"5": {
+			"title": "Limit Orders",
+			"description": "Set target prices on any chain"
+		},
+		"6": {
+			"title": "Earning Programs",
+			"description": "Liquidity mining and farming"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Multi-Chain Trading",
+			"description": "Swap on any supported chain"
+		},
+		"2": {
+			"title": "Best Rate Finding",
+			"description": "Compare across 100+ sources"
+		},
+		"3": {
+			"title": "Concentrated LP",
+			"description": "Earn fees with capital efficiency"
+		},
+		"4": {
+			"title": "Limit Orders",
+			"description": "Automated limit order execution"
+		},
+		"5": {
+			"title": "KNC Staking",
+			"description": "Stake for governance and rewards"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is KyberSwap Elastic?",
+			"answer": "KyberSwap Elastic is their concentrated liquidity DEX, similar to Uniswap V3. LPs set price ranges for more capital-efficient positions. It offers additional features like auto-compounding and customizable fee tiers."
+		},
+		"2": {
+			"question": "What happened in the KyberSwap exploit?",
+			"answer": "In November 2023, KyberSwap Elastic was exploited for ~$50M. The team has been working on compensation and rebuilding. This highlights the risks in DeFi. Check their current status before using elastic pools."
+		},
+		"3": {
+			"question": "What is KNC token?",
+			"answer": "KNC is Kyber Network's governance token. It's used for voting on protocol decisions, staking for rewards, and liquidity mining. KNC has been around since 2017, making it one of the oldest DeFi tokens."
+		},
+		"4": {
+			"question": "KyberSwap vs 1inch: Which has better rates?",
+			"answer": "Both aggregate many sources. 1inch often has more liquidity sources on Ethereum. KyberSwap has strong multi-chain presence. For any specific trade, compare both. Results vary by chain and pair."
+		},
+		"5": {
+			"question": "Which chains does KyberSwap support?",
+			"answer": "KyberSwap supports 15+ chains including Ethereum, Arbitrum, Optimism, Polygon, BSC, Avalanche, Fantom, and more. It's one of the most widely deployed DEX aggregators."
+		}
+	},
+	"cta": {
+		"ready": "Ready to trade across chains?",
+		"button": "Explore KyberSwap",
+		"note": "Multi-chain DEX aggregator"
+	}
+}

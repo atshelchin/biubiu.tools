@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Fantom - Fast DAG-based Blockchain",
+		"description": "Fantom is a high-performance Layer 1 using DAG technology. Fast, low-cost transactions for DeFi applications.",
+		"keywords": "Fantom, FTM, Layer 1, DAG, Opera, Sonic, DeFi"
+	},
+	"overview": "Fantom is a Layer 1 blockchain that uses a DAG-based consensus mechanism called Lachesis for high speed and low costs. Founded in 2018, Fantom gained popularity during the DeFi boom for its fast finality and EVM compatibility.\n\nThe Fantom Opera network can process thousands of transactions per second with 1-second finality. Its low fees made it popular for yield farming and DeFi experimentation.\n\nFantom is evolving with Sonic, a major upgrade launching as a new network with enhanced performance. The ecosystem includes major DeFi protocols and has strong developer tools.",
+	"features": {
+		"1": {
+			"title": "DAG Consensus",
+			"description": "Lachesis provides fast asynchronous finality"
+		},
+		"2": {
+			"title": "1-Second Finality",
+			"description": "Near-instant transaction confirmation"
+		},
+		"3": {
+			"title": "Low Fees",
+			"description": "Transactions cost fractions of a cent"
+		},
+		"4": {
+			"title": "EVM Compatible",
+			"description": "Full Solidity and Ethereum tooling support"
+		},
+		"5": {
+			"title": "Sonic Upgrade",
+			"description": "Next-gen network with improved performance"
+		},
+		"6": {
+			"title": "Strong DeFi",
+			"description": "Rich ecosystem of DeFi protocols"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi Trading",
+			"description": "Fast and cheap DEX trades"
+		},
+		"2": {
+			"title": "Yield Farming",
+			"description": "Affordable farming with quick harvests"
+		},
+		"3": {
+			"title": "dApp Development",
+			"description": "Build Ethereum-compatible dApps"
+		},
+		"4": {
+			"title": "NFT Projects",
+			"description": "Low-cost NFT minting"
+		},
+		"5": {
+			"title": "Payments",
+			"description": "Fast, cheap payment settlement"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is FTM token?",
+			"answer": "FTM is Fantom's native token for gas fees, staking, and governance. Validators stake FTM to secure the network. On Sonic, there will be a new S token that FTM holders can migrate to at 1:1 ratio."
+		},
+		"2": {
+			"question": "What is Fantom Sonic?",
+			"answer": "Sonic is Fantom's major upgrade launching as a new network. It features a new virtual machine, improved consensus, and better developer tools. Current Fantom users can bridge to Sonic, and FTM converts to S token 1:1."
+		},
+		"3": {
+			"question": "Is Fantom safe?",
+			"answer": "Fantom has operated since 2019 with billions in TVL at its peak. The DAG consensus is well-tested. However, always use audited protocols and be aware that Sonic is new. Start with smaller amounts on new networks."
+		},
+		"4": {
+			"question": "How do I use Fantom?",
+			"answer": "Add Fantom Opera network to MetaMask. Bridge assets using SpookySwap bridge, Multichain, or centralized exchanges. Explore DeFi through SpookySwap (DEX), Beethoven X, and other protocols."
+		},
+		"5": {
+			"question": "Why choose Fantom over other L1s?",
+			"answer": "Fantom offers sub-second finality and very low fees. Its DAG architecture handles high throughput well. With Sonic, it will have even better performance. Good choice for DeFi users seeking speed and low costs."
+		}
+	},
+	"cta": {
+		"ready": "Ready to use Fantom?",
+		"button": "Explore Fantom",
+		"note": "Fast DAG-based L1"
+	}
+}

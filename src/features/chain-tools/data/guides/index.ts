@@ -3,6 +3,7 @@
  * Export all category guide data
  */
 import type { CategoryGuide, CategoryId } from '../../types';
+import { analyticsGuide } from './analytics';
 import { bridgeGuide } from './bridge';
 import { defiGuide } from './defi';
 import { l2Guide } from './l2';
@@ -12,6 +13,7 @@ import { walletGuide } from './wallet';
 
 // Map of all available guides
 export const categoryGuides: Partial<Record<CategoryId, CategoryGuide>> = {
+	analytics: analyticsGuide,
 	bridge: bridgeGuide,
 	defi: defiGuide,
 	l2: l2Guide,

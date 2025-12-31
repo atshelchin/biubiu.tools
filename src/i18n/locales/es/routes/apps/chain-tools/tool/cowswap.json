@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "CoW Swap - MEV-Protected DEX Aggregator",
+		"description": "CoW Swap uses batch auctions for MEV protection and Coincidence of Wants matching. Trade with protection from sandwich attacks.",
+		"keywords": "CoW Swap, CoW Protocol, MEV protection, batch auctions, DEX aggregator, COW token"
+	},
+	"overview": "CoW Swap is a DEX aggregator that protects traders from MEV (Miner Extractable Value) through batch auctions. Instead of instant execution, orders are collected and settled together, eliminating front-running opportunities.\n\nThe protocol's unique Coincidence of Wants (CoW) system matches traders directly when possible, providing peer-to-peer settlement without AMM fees. When direct matching isn't possible, solvers compete to find the best execution.\n\nWith the COW token for governance and solver incentives, CoW Swap has become the go-to choice for MEV-conscious traders seeking fair execution.",
+	"features": {
+		"1": {
+			"title": "Batch Auctions",
+			"description": "Orders settled in batches for MEV protection"
+		},
+		"2": {
+			"title": "Coincidence of Wants",
+			"description": "Direct peer-to-peer matching"
+		},
+		"3": {
+			"title": "Solver Competition",
+			"description": "Solvers compete for best execution"
+		},
+		"4": {
+			"title": "Gasless Trading",
+			"description": "Sign orders, solvers pay gas"
+		},
+		"5": {
+			"title": "COW Token",
+			"description": "Governance and solver incentives"
+		},
+		"6": {
+			"title": "MEV Blocker",
+			"description": "Built-in front-running protection"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "MEV-Protected Trading",
+			"description": "Trade without front-running fear"
+		},
+		"2": {
+			"title": "Gasless Swaps",
+			"description": "Trade without paying gas upfront"
+		},
+		"3": {
+			"title": "Large Orders",
+			"description": "Execute size with batch protection"
+		},
+		"4": {
+			"title": "Solver Integration",
+			"description": "Become a solver for rewards"
+		},
+		"5": {
+			"title": "DAO Governance",
+			"description": "Vote on protocol with COW"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How does CoW Swap protect from MEV?",
+			"answer": "Traditional DEXs execute instantly, allowing bots to front-run. CoW Swap collects orders into batches, then solvers compete to find optimal settlement. Since all batch orders execute at the same price, there's no front-running opportunity."
+		},
+		"2": {
+			"question": "What is Coincidence of Wants?",
+			"answer": "When two traders want opposite sides (one selling ETH for USDC, another buying ETH with USDC), CoW matches them directly. This P2P settlement avoids AMM fees and slippage. It's like finding a direct trade partner automatically."
+		},
+		"3": {
+			"question": "What are solvers?",
+			"answer": "Solvers are specialized actors who compete to execute CoW Swap batches. They find the best routes across DEXs and settle orders. Solvers stake COW tokens and earn fees for winning batches. Anyone can become a solver."
+		},
+		"4": {
+			"question": "Is CoW Swap slower than other DEXs?",
+			"answer": "Yes, batch auctions take 1-2 minutes vs instant. This delay enables MEV protection. For most trades, the better execution outweighs the wait. If you need instant execution, use traditional DEXs."
+		},
+		"5": {
+			"question": "What is the COW token?",
+			"answer": "COW is the governance token for CoW Protocol. It's used for voting on protocol upgrades, solver staking, and fee discounts. COW was distributed via airdrop to early users and can be earned through various programs."
+		}
+	},
+	"cta": {
+		"ready": "Ready for MEV-protected trading?",
+		"button": "Explore CoW Swap",
+		"note": "Batch auctions for fair execution"
+	}
+}

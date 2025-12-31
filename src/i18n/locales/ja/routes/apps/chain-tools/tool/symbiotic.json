@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Symbiotic - Modular Restaking Protocol",
+		"description": "Symbiotic is a permissionless restaking protocol with modular design. Flexible security for any network with customizable parameters.",
+		"keywords": "Symbiotic, restaking, modular security, DeFi, Ethereum, staking"
+	},
+	"overview": "Symbiotic is a permissionless restaking protocol offering modular, flexible shared security. Backed by Lido co-founders and Paradigm, Symbiotic takes a different approach to restaking than EigenLayer.\n\nThe protocol is designed to be maximally flexible—any asset can be used as collateral, any network can use Symbiotic for security, and parameters are fully customizable. This modularity attracts projects wanting tailored security solutions.\n\nSymbiotic launched in 2024 and quickly attracted significant deposits. Its permissionless design means anyone can create vaults and operators can join without approval.",
+	"features": {
+		"1": {
+			"title": "Modular Design",
+			"description": "Flexible, customizable security parameters"
+		},
+		"2": {
+			"title": "Multi-Asset",
+			"description": "Any asset can be collateral"
+		},
+		"3": {
+			"title": "Permissionless",
+			"description": "No approval needed to participate"
+		},
+		"4": {
+			"title": "Immutable Core",
+			"description": "Core contracts are non-upgradeable"
+		},
+		"5": {
+			"title": "Flexible Slashing",
+			"description": "Networks define their own slashing rules"
+		},
+		"6": {
+			"title": "Lido Backed",
+			"description": "Founded by Lido co-founders"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Restaking",
+			"description": "Restake LSTs for additional yield"
+		},
+		"2": {
+			"title": "Network Security",
+			"description": "Secure new networks with shared security"
+		},
+		"3": {
+			"title": "Operator Services",
+			"description": "Run operators for multiple networks"
+		},
+		"4": {
+			"title": "Vault Creation",
+			"description": "Create custom restaking vaults"
+		},
+		"5": {
+			"title": "Points Farming",
+			"description": "Earn Symbiotic points for potential airdrop"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How is Symbiotic different from EigenLayer?",
+			"answer": "Symbiotic is more modular and permissionless. Any asset can be collateral (not just ETH/LSTs). Networks define their own slashing parameters. Core contracts are immutable. EigenLayer is more opinionated; Symbiotic is maximally flexible."
+		},
+		"2": {
+			"question": "Does Symbiotic have a token?",
+			"answer": "Symbiotic hasn't launched a token yet but is expected to. Users earn Symbiotic points for deposits, which may convert to tokens. The protocol raised funding from top VCs, suggesting a token launch is likely."
+		},
+		"3": {
+			"question": "What assets can I restake on Symbiotic?",
+			"answer": "Symbiotic accepts various assets including stETH, wstETH, cbETH, and other LSTs. The protocol is designed to support any ERC-20 token as collateral. Check the app for currently supported assets."
+		},
+		"4": {
+			"question": "Is Symbiotic safe?",
+			"answer": "Symbiotic's core contracts are immutable (can't be upgraded), reducing governance risk. The protocol has been audited. However, restaking adds additional slashing risk on top of regular staking. Understand the risks of the networks you're securing."
+		},
+		"5": {
+			"question": "What are Symbiotic points?",
+			"answer": "Points are earned by depositing assets into Symbiotic. They likely represent future token allocation. Points accumulate over time while assets are deposited. Larger deposits and longer durations earn more points."
+		}
+	},
+	"cta": {
+		"ready": "Ready to restake with Symbiotic?",
+		"button": "Explore Symbiotic",
+		"note": "Modular restaking protocol"
+	}
+}

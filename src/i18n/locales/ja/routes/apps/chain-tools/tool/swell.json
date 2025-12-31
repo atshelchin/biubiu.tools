@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Swell Network - Liquid Staking & Restaking",
+		"description": "Swell Network offers swETH for liquid staking and rswETH for restaking. Complete staking solution with DeFi integration.",
+		"keywords": "Swell Network, swETH, rswETH, liquid staking, restaking, SWELL token"
+	},
+	"overview": "Swell Network is a liquid staking and restaking protocol offering both swETH (liquid staking token) and rswETH (liquid restaking token). This dual-product approach gives users flexibility in their staking strategy.\n\nswETH provides simple liquid staking rewards, while rswETH adds EigenLayer restaking for additional yield. Both tokens are integrated across major DeFi protocols.\n\nSwell has announced its own L2 rollup powered by restaking, positioning itself as more than just a staking protocol. The SWELL token is expected to launch for governance.",
+	"features": {
+		"1": {
+			"title": "Dual Products",
+			"description": "swETH for staking, rswETH for restaking"
+		},
+		"2": {
+			"title": "Swell L2",
+			"description": "Upcoming rollup secured by restaking"
+		},
+		"3": {
+			"title": "DeFi Native",
+			"description": "Deep integration across protocols"
+		},
+		"4": {
+			"title": "Pearls Program",
+			"description": "Earn points for ecosystem participation"
+		},
+		"5": {
+			"title": "Non-Custodial",
+			"description": "Decentralized validator set"
+		},
+		"6": {
+			"title": "Multi-Strategy",
+			"description": "Choose your risk/reward profile"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Liquid Staking",
+			"description": "Stake ETH, receive swETH"
+		},
+		"2": {
+			"title": "Liquid Restaking",
+			"description": "Restake for extra yield with rswETH"
+		},
+		"3": {
+			"title": "DeFi Strategies",
+			"description": "Use swETH/rswETH in lending"
+		},
+		"4": {
+			"title": "Points Farming",
+			"description": "Earn Pearls for SWELL airdrop"
+		},
+		"5": {
+			"title": "L2 Participation",
+			"description": "Prepare for Swell L2 launch"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What's the difference between swETH and rswETH?",
+			"answer": "swETH is a simple liquid staking token earning consensus rewards. rswETH is a liquid restaking token earning both staking AND EigenLayer restaking rewards. rswETH has higher yield but additional restaking risk."
+		},
+		"2": {
+			"question": "What is Swell L2?",
+			"answer": "Swell is building its own Layer 2 rollup secured by restaking. rswETH holders will help secure this L2. This creates additional utility for Swell's restaking products and potential rewards for participants."
+		},
+		"3": {
+			"question": "What are Pearls?",
+			"answer": "Pearls are Swell's points program. Earn Pearls by holding swETH or rswETH and using them in DeFi. Pearls are expected to convert to SWELL tokens when the token launches. More Pearls = larger airdrop."
+		},
+		"4": {
+			"question": "Is Swell safe?",
+			"answer": "Swell has been audited and runs a decentralized validator set. swETH has only staking risk. rswETH adds EigenLayer restaking risk. The protocol has operated reliably with significant TVL. Standard smart contract risks apply."
+		},
+		"5": {
+			"question": "Should I choose swETH or rswETH?",
+			"answer": "Choose swETH if you want simple staking with lower risk. Choose rswETH if you want maximum yield and are comfortable with restaking risks. You can also split between both for diversification."
+		}
+	},
+	"cta": {
+		"ready": "Ready to stake with Swell?",
+		"button": "Explore Swell",
+		"note": "Liquid staking & restaking"
+	}
+}

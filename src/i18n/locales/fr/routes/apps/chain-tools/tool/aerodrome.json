@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Aerodrome - Base's Liquidity Hub",
+		"description": "Aerodrome is the leading DEX on Base, using ve(3,3) tokenomics. Trade, provide liquidity, and earn AERO rewards.",
+		"keywords": "Aerodrome, AERO, Base DEX, ve(3,3), liquidity, AMM"
+	},
+	"overview": "Aerodrome is the central liquidity hub of Base, Coinbase's L2 network. Forked from Velodrome on Optimism, Aerodrome uses ve(3,3) tokenomics to incentivize deep liquidity through vote-escrowed governance.\n\nThe protocol has become the dominant DEX on Base, processing significant volume and TVL. AERO token holders can lock tokens for veAERO to vote on emissions and earn trading fees from chosen pools.\n\nAerodrome's success on Base has made it a model for L2 liquidity bootstrapping. The ve(3,3) model aligns incentives between traders, LPs, and token holders.",
+	"features": {
+		"1": {
+			"title": "ve(3,3) Tokenomics",
+			"description": "Vote-escrowed governance for emissions"
+		},
+		"2": {
+			"title": "Base Native",
+			"description": "Built for Coinbase's L2 ecosystem"
+		},
+		"3": {
+			"title": "Deep Liquidity",
+			"description": "Largest liquidity pools on Base"
+		},
+		"4": {
+			"title": "Fee Sharing",
+			"description": "veAERO holders earn trading fees"
+		},
+		"5": {
+			"title": "Bribes Market",
+			"description": "Protocols incentivize votes for liquidity"
+		},
+		"6": {
+			"title": "Multiple Pool Types",
+			"description": "Stable and volatile pair AMMs"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Trading on Base",
+			"description": "Swap tokens with best Base liquidity"
+		},
+		"2": {
+			"title": "Liquidity Provision",
+			"description": "Earn AERO rewards as LP"
+		},
+		"3": {
+			"title": "veAERO Voting",
+			"description": "Lock AERO, vote, earn fees"
+		},
+		"4": {
+			"title": "Protocol Liquidity",
+			"description": "Bootstrap liquidity for new tokens"
+		},
+		"5": {
+			"title": "Yield Strategies",
+			"description": "Build strategies on AERO emissions"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is AERO token?",
+			"answer": "AERO is Aerodrome's governance and utility token. It's emitted to liquidity providers as rewards. Users can lock AERO for veAERO (up to 4 years) to vote on emissions allocation and earn 100% of trading fees from chosen pools."
+		},
+		"2": {
+			"question": "How does ve(3,3) work?",
+			"answer": "ve(3,3) combines vote-escrow (ve) with (3,3) game theory. Lock AERO for veAERO, vote on which pools receive emissions, and earn fees from those pools. The system incentivizes long-term locking and creates competition for emissions."
+		},
+		"3": {
+			"question": "How do I earn on Aerodrome?",
+			"answer": "Three main ways: 1) Provide liquidity to earn AERO emissions, 2) Lock AERO for veAERO to earn trading fees and bribes, 3) Trade AERO token. LPs earn from emissions, veAERO holders earn from fees and protocol bribes."
+		},
+		"4": {
+			"question": "What are bribes?",
+			"answer": "Protocols pay bribes to veAERO voters to direct emissions to their pools. If a protocol wants more liquidity, they bribe voters. Bribes are an additional income source for veAERO holders on top of trading fees."
+		},
+		"5": {
+			"question": "Aerodrome vs Uniswap on Base: Which is better?",
+			"answer": "Aerodrome has deeper liquidity for many Base pairs due to emissions incentives. Uniswap has brand recognition and v3 concentrated liquidity. For most Base trading, Aerodrome offers better rates. Use a DEX aggregator to compare."
+		}
+	},
+	"cta": {
+		"ready": "Ready to trade on Aerodrome?",
+		"button": "Explore Aerodrome",
+		"note": "Base's liquidity hub"
+	}
+}

@@ -41,7 +41,8 @@ export const walletGuide: CategoryGuide = {
 				},
 				{
 					id: 'seed-phrases',
-					titleKey: 'routes/apps/chain-tools/wallet/guide.sections.wallet_basics.seed_phrases.title',
+					titleKey:
+						'routes/apps/chain-tools/wallet/guide.sections.wallet_basics.seed_phrases.title',
 					contentKey:
 						'routes/apps/chain-tools/wallet/guide.sections.wallet_basics.seed_phrases.content',
 					toolMentions: [{ toolId: 'biubiu-wallet-generator', context: 'generate HD wallets' }]

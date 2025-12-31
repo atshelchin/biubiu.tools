@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Odos - Smart Order Routing DEX Aggregator",
+		"description": "Odos uses patented smart order routing to find the best swap paths. Trade with multi-token inputs and optimized execution.",
+		"keywords": "Odos, DEX aggregator, smart order routing, multi-token swap, DeFi trading, gas optimization"
+	},
+	"overview": "Odos is a DEX aggregator known for its advanced smart order routing algorithm. Using patented technology, Odos explores more possible paths than typical aggregators, often finding better rates.\n\nA unique feature is multi-input swaps—you can trade multiple tokens into one in a single transaction. This is ideal for portfolio rebalancing or consolidating dust.\n\nOdos has grown rapidly with strong multi-chain support and a loyalty program. The platform focuses on execution quality and gas efficiency for all trade sizes.",
+	"features": {
+		"1": {
+			"title": "Smart Order Routing",
+			"description": "Patented algorithm for optimal paths"
+		},
+		"2": {
+			"title": "Multi-Input Swaps",
+			"description": "Trade multiple tokens at once"
+		},
+		"3": {
+			"title": "500+ Liquidity Sources",
+			"description": "Wide DEX coverage"
+		},
+		"4": {
+			"title": "Gas Optimization",
+			"description": "Efficient transaction batching"
+		},
+		"5": {
+			"title": "Loyalty Program",
+			"description": "Earn rewards for trading"
+		},
+		"6": {
+			"title": "Multi-Chain",
+			"description": "Ethereum, Arbitrum, Base, and more"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Best Rate Trading",
+			"description": "Find optimal swap paths"
+		},
+		"2": {
+			"title": "Portfolio Consolidation",
+			"description": "Swap many tokens to one"
+		},
+		"3": {
+			"title": "Large Trades",
+			"description": "Execute size with smart routing"
+		},
+		"4": {
+			"title": "Dust Cleanup",
+			"description": "Consolidate small balances"
+		},
+		"5": {
+			"title": "Rewards Earning",
+			"description": "Accumulate loyalty points"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "How is Odos different from 1inch?",
+			"answer": "Odos uses a patented routing algorithm that explores more path combinations. Key unique feature is multi-input swaps—trading multiple tokens into one. Users often report competitive or better rates, especially for complex swaps."
+		},
+		"2": {
+			"question": "What are multi-input swaps?",
+			"answer": "Multi-input swaps let you trade several tokens into one in a single transaction. For example, swap ETH + USDC + LINK all into WBTC. This saves gas vs multiple separate swaps and is great for rebalancing."
+		},
+		"3": {
+			"question": "Does Odos have a token?",
+			"answer": "As of now, Odos doesn't have a token but has a loyalty program. Points accumulate based on trading activity. This suggests a potential future token, but nothing is confirmed. Points may convert to rewards."
+		},
+		"4": {
+			"question": "Is Odos safe?",
+			"answer": "Odos contracts are audited and have processed significant volume. It's a non-custodial aggregator—you trade through smart contracts. Standard DEX risks apply. The team is doxxed and backed by investors."
+		},
+		"5": {
+			"question": "Which chains does Odos support?",
+			"answer": "Odos supports Ethereum, Arbitrum, Optimism, Base, Polygon, Avalanche, BSC, and more. Chain support continues to expand. Check their app for the current full list."
+		}
+	},
+	"cta": {
+		"ready": "Ready for smarter routing?",
+		"button": "Explore Odos",
+		"note": "Advanced DEX aggregation"
+	}
+}
