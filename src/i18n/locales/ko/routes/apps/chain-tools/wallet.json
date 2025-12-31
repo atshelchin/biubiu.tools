@@ -324,6 +324,9 @@
 		},
 		"bitgo_wallet": {
 			"description": "멀티시그 및 보험이 있는 기관 커스터디"
+		},
+		"biubiu_one_to_many": {
+			"description": "Batch transfer to multiple addresses"
 		}
 	}
 }

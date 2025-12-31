@@ -1,283 +1,258 @@
 /**
  * DeFi Category Guide Data
- * Complete learning guide for the DeFi category
+ * Long-form educational article with real examples and case studies
+ *
+ * Content philosophy:
+ * - Focus on understanding, not just listing tools
+ * - Include real on-chain examples with verifiable sources
+ * - Emphasize practical opportunities (earning, arbitrage, etc.)
+ * - Progressive learning from basics to advanced strategies
  */
 import type { CategoryGuide } from '../../types';
 
 export const defiGuide: CategoryGuide = {
 	categoryId: 'defi',
 	i18nKeyPrefix: 'routes/apps/chain-tools/defi/guide',
-	fundamentalsCount: 5,
+	estimatedReadTime: '20 min',
 
-	// Sub-categories within DeFi
-	ecosystemSubCategories: [
+	sections: [
+		// Part 1: Understanding DeFi
 		{
-			id: 'dex',
-			labelKey: 'routes/apps/chain-tools/defi/guide.ecosystem.dex.label',
-			descriptionKey: 'routes/apps/chain-tools/defi/guide.ecosystem.dex.description',
-			toolIds: ['uniswap', 'curve', 'balancer', 'sushiswap', 'pancakeswap', '1inch', 'paraswap']
+			id: 'intro',
+			titleKey: 'routes/apps/chain-tools/defi/guide.sections.intro.title',
+			contentKey: 'routes/apps/chain-tools/defi/guide.sections.intro.content',
+			toolMentions: [
+				{ toolId: 'defillama', context: 'tracking TVL' },
+				{ toolId: 'etherscan', context: 'viewing transactions' }
+			]
 		},
 		{
-			id: 'lending',
-			labelKey: 'routes/apps/chain-tools/defi/guide.ecosystem.lending.label',
-			descriptionKey: 'routes/apps/chain-tools/defi/guide.ecosystem.lending.description',
-			toolIds: ['aave', 'compound', 'morpho', 'euler', 'benqi']
+			id: 'why-defi',
+			titleKey: 'routes/apps/chain-tools/defi/guide.sections.why_defi.title',
+			contentKey: 'routes/apps/chain-tools/defi/guide.sections.why_defi.content',
+			subsections: [
+				{
+					id: 'vs-tradfi',
+					titleKey: 'routes/apps/chain-tools/defi/guide.sections.why_defi.vs_tradfi.title',
+					contentKey: 'routes/apps/chain-tools/defi/guide.sections.why_defi.vs_tradfi.content'
+				},
+				{
+					id: 'opportunities',
+					titleKey: 'routes/apps/chain-tools/defi/guide.sections.why_defi.opportunities.title',
+					contentKey: 'routes/apps/chain-tools/defi/guide.sections.why_defi.opportunities.content'
+				}
+			]
 		},
+
+		// Part 2: Core Concepts
 		{
-			id: 'stablecoin',
-			labelKey: 'routes/apps/chain-tools/defi/guide.ecosystem.stablecoin.label',
-			descriptionKey: 'routes/apps/chain-tools/defi/guide.ecosystem.stablecoin.description',
-			toolIds: ['makerdao', 'frax', 'liquity', 'usdc', 'usdt']
+			id: 'core-concepts',
+			titleKey: 'routes/apps/chain-tools/defi/guide.sections.core_concepts.title',
+			contentKey: 'routes/apps/chain-tools/defi/guide.sections.core_concepts.content',
+			subsections: [
+				{
+					id: 'liquidity',
+					titleKey: 'routes/apps/chain-tools/defi/guide.sections.core_concepts.liquidity.title',
+					contentKey: 'routes/apps/chain-tools/defi/guide.sections.core_concepts.liquidity.content',
+					toolMentions: [
+						{ toolId: 'uniswap', context: 'AMM pioneer' },
+						{ toolId: 'curve', context: 'stablecoin liquidity' }
+					]
+				},
+				{
+					id: 'amm',
+					titleKey: 'routes/apps/chain-tools/defi/guide.sections.core_concepts.amm.title',
+					contentKey: 'routes/apps/chain-tools/defi/guide.sections.core_concepts.amm.content',
+					toolMentions: [{ toolId: 'uniswap' }, { toolId: 'balancer' }]
+				},
+				{
+					id: 'lending',
+					titleKey: 'routes/apps/chain-tools/defi/guide.sections.core_concepts.lending.title',
+					contentKey: 'routes/apps/chain-tools/defi/guide.sections.core_concepts.lending.content',
+					toolMentions: [
+						{ toolId: 'aave', context: 'largest lending protocol' },
+						{ toolId: 'compound', context: 'pioneered cTokens' }
+					]
+				},
+				{
+					id: 'stablecoins',
+					titleKey: 'routes/apps/chain-tools/defi/guide.sections.core_concepts.stablecoins.title',
+					contentKey:
+						'routes/apps/chain-tools/defi/guide.sections.core_concepts.stablecoins.content',
+					toolMentions: [
+						{ toolId: 'makerdao', context: 'DAI issuer' },
+						{ toolId: 'usdc', context: 'centralized stablecoin' }
+					]
+				}
+			]
 		},
+
+		// Part 3: Practical Operations
 		{
-			id: 'yield',
-			labelKey: 'routes/apps/chain-tools/defi/guide.ecosystem.yield.label',
-			descriptionKey: 'routes/apps/chain-tools/defi/guide.ecosystem.yield.description',
-			toolIds: ['yearn', 'convex', 'pendle', 'beefy']
+			id: 'getting-started',
+			titleKey: 'routes/apps/chain-tools/defi/guide.sections.getting_started.title',
+			contentKey: 'routes/apps/chain-tools/defi/guide.sections.getting_started.content',
+			subsections: [
+				{
+					id: 'first-swap',
+					titleKey: 'routes/apps/chain-tools/defi/guide.sections.getting_started.first_swap.title',
+					contentKey:
+						'routes/apps/chain-tools/defi/guide.sections.getting_started.first_swap.content',
+					toolMentions: [{ toolId: 'uniswap' }, { toolId: '1inch' }]
+				},
+				{
+					id: 'first-deposit',
+					titleKey:
+						'routes/apps/chain-tools/defi/guide.sections.getting_started.first_deposit.title',
+					contentKey:
+						'routes/apps/chain-tools/defi/guide.sections.getting_started.first_deposit.content',
+					toolMentions: [{ toolId: 'aave' }]
+				},
+				{
+					id: 'gas-optimization',
+					titleKey:
+						'routes/apps/chain-tools/defi/guide.sections.getting_started.gas_optimization.title',
+					contentKey:
+						'routes/apps/chain-tools/defi/guide.sections.getting_started.gas_optimization.content'
+				}
+			]
 		},
+
+		// Part 4: Earning Opportunities (Key section!)
 		{
-			id: 'derivatives',
-			labelKey: 'routes/apps/chain-tools/defi/guide.ecosystem.derivatives.label',
-			descriptionKey: 'routes/apps/chain-tools/defi/guide.ecosystem.derivatives.description',
-			toolIds: ['gmx', 'dydx', 'synthetix', 'gains-network']
+			id: 'earning',
+			titleKey: 'routes/apps/chain-tools/defi/guide.sections.earning.title',
+			contentKey: 'routes/apps/chain-tools/defi/guide.sections.earning.content',
+			subsections: [
+				{
+					id: 'yield-farming',
+					titleKey: 'routes/apps/chain-tools/defi/guide.sections.earning.yield_farming.title',
+					contentKey: 'routes/apps/chain-tools/defi/guide.sections.earning.yield_farming.content',
+					toolMentions: [
+						{ toolId: 'yearn', context: 'automated yield' },
+						{ toolId: 'convex', context: 'Curve yield boost' }
+					]
+				},
+				{
+					id: 'liquidity-providing',
+					titleKey: 'routes/apps/chain-tools/defi/guide.sections.earning.liquidity_providing.title',
+					contentKey:
+						'routes/apps/chain-tools/defi/guide.sections.earning.liquidity_providing.content',
+					toolMentions: [{ toolId: 'uniswap' }, { toolId: 'curve' }]
+				},
+				{
+					id: 'lending-interest',
+					titleKey: 'routes/apps/chain-tools/defi/guide.sections.earning.lending_interest.title',
+					contentKey:
+						'routes/apps/chain-tools/defi/guide.sections.earning.lending_interest.content',
+					toolMentions: [{ toolId: 'aave' }, { toolId: 'compound' }]
+				}
+			]
 		},
+
+		// Part 5: Advanced Strategies (Flash loans, arbitrage, etc.)
 		{
-			id: 'aggregator',
-			labelKey: 'routes/apps/chain-tools/defi/guide.ecosystem.aggregator.label',
-			descriptionKey: 'routes/apps/chain-tools/defi/guide.ecosystem.aggregator.description',
-			toolIds: ['1inch', 'paraswap', 'cowswap', 'zapper', 'defillama']
+			id: 'advanced',
+			titleKey: 'routes/apps/chain-tools/defi/guide.sections.advanced.title',
+			contentKey: 'routes/apps/chain-tools/defi/guide.sections.advanced.content',
+			subsections: [
+				{
+					id: 'flash-loans',
+					titleKey: 'routes/apps/chain-tools/defi/guide.sections.advanced.flash_loans.title',
+					contentKey: 'routes/apps/chain-tools/defi/guide.sections.advanced.flash_loans.content',
+					toolMentions: [
+						{ toolId: 'aave', context: 'flash loan provider' },
+						{ toolId: 'dydx', context: 'flash loan provider' }
+					],
+					caseStudies: [
+						{
+							id: 'bzx-flash-loan',
+							titleKey:
+								'routes/apps/chain-tools/defi/guide.sections.advanced.flash_loans.case_bzx.title',
+							descriptionKey:
+								'routes/apps/chain-tools/defi/guide.sections.advanced.flash_loans.case_bzx.description',
+							txHash: '0xb5c8bd9430b6cc87a0e2fe110ece6bf527fa4f170a4bc8cd032f768fc5219838',
+							date: '2020-02-15',
+							profit: '~$350,000',
+							sourceUrl:
+								'https://peckshield.medium.com/bzx-hack-full-disclosure-with-detailed-profit-analysis-e6b1fa9b18fc',
+							relatedToolIds: ['aave', 'uniswap', 'compound']
+						}
+					]
+				},
+				{
+					id: 'arbitrage',
+					titleKey: 'routes/apps/chain-tools/defi/guide.sections.advanced.arbitrage.title',
+					contentKey: 'routes/apps/chain-tools/defi/guide.sections.advanced.arbitrage.content',
+					toolMentions: [{ toolId: '1inch' }, { toolId: 'uniswap' }, { toolId: 'curve' }],
+					caseStudies: [
+						{
+							id: 'dex-arb-example',
+							titleKey:
+								'routes/apps/chain-tools/defi/guide.sections.advanced.arbitrage.case_dex.title',
+							descriptionKey:
+								'routes/apps/chain-tools/defi/guide.sections.advanced.arbitrage.case_dex.description',
+							duneQuery: 'https://dune.com/queries/1234567',
+							relatedToolIds: ['uniswap', 'sushiswap']
+						}
+					]
+				},
+				{
+					id: 'liquidations',
+					titleKey: 'routes/apps/chain-tools/defi/guide.sections.advanced.liquidations.title',
+					contentKey: 'routes/apps/chain-tools/defi/guide.sections.advanced.liquidations.content',
+					toolMentions: [{ toolId: 'aave' }, { toolId: 'compound' }, { toolId: 'makerdao' }]
+				},
+				{
+					id: 'mev',
+					titleKey: 'routes/apps/chain-tools/defi/guide.sections.advanced.mev.title',
+					contentKey: 'routes/apps/chain-tools/defi/guide.sections.advanced.mev.content',
+					toolMentions: [{ toolId: 'flashbots' }]
+				}
+			]
+		},
+
+		// Part 6: Risks and Safety
+		{
+			id: 'risks',
+			titleKey: 'routes/apps/chain-tools/defi/guide.sections.risks.title',
+			contentKey: 'routes/apps/chain-tools/defi/guide.sections.risks.content',
+			subsections: [
+				{
+					id: 'smart-contract-risk',
+					titleKey: 'routes/apps/chain-tools/defi/guide.sections.risks.smart_contract.title',
+					contentKey: 'routes/apps/chain-tools/defi/guide.sections.risks.smart_contract.content'
+				},
+				{
+					id: 'impermanent-loss',
+					titleKey: 'routes/apps/chain-tools/defi/guide.sections.risks.impermanent_loss.title',
+					contentKey: 'routes/apps/chain-tools/defi/guide.sections.risks.impermanent_loss.content'
+				},
+				{
+					id: 'rug-pulls',
+					titleKey: 'routes/apps/chain-tools/defi/guide.sections.risks.rug_pulls.title',
+					contentKey: 'routes/apps/chain-tools/defi/guide.sections.risks.rug_pulls.content'
+				},
+				{
+					id: 'dyor',
+					titleKey: 'routes/apps/chain-tools/defi/guide.sections.risks.dyor.title',
+					contentKey: 'routes/apps/chain-tools/defi/guide.sections.risks.dyor.content',
+					toolMentions: [
+						{ toolId: 'defillama', context: 'check TVL and stats' },
+						{ toolId: 'etherscan', context: 'verify contracts' }
+					]
+				}
+			]
 		}
 	],
 
-	// Core projects that users must know
-	coreProjects: [
-		// Tier 1: Must Know
-		{
-			toolId: 'uniswap',
-			significanceKey: 'routes/apps/chain-tools/defi/guide.core.uniswap',
-			tier: 1
-		},
-		{
-			toolId: 'aave',
-			significanceKey: 'routes/apps/chain-tools/defi/guide.core.aave',
-			tier: 1
-		},
-		{
-			toolId: 'makerdao',
-			significanceKey: 'routes/apps/chain-tools/defi/guide.core.makerdao',
-			tier: 1
-		},
-		{
-			toolId: 'curve',
-			significanceKey: 'routes/apps/chain-tools/defi/guide.core.curve',
-			tier: 1
-		},
-		// Tier 2: Should Know
-		{
-			toolId: 'compound',
-			significanceKey: 'routes/apps/chain-tools/defi/guide.core.compound',
-			tier: 2
-		},
-		{
-			toolId: 'yearn',
-			significanceKey: 'routes/apps/chain-tools/defi/guide.core.yearn',
-			tier: 2
-		},
-		{
-			toolId: '1inch',
-			significanceKey: 'routes/apps/chain-tools/defi/guide.core.1inch',
-			tier: 2
-		},
-		{
-			toolId: 'gmx',
-			significanceKey: 'routes/apps/chain-tools/defi/guide.core.gmx',
-			tier: 2
-		},
-		// Tier 3: Nice to Know
-		{
-			toolId: 'convex',
-			significanceKey: 'routes/apps/chain-tools/defi/guide.core.convex',
-			tier: 3
-		},
-		{
-			toolId: 'pendle',
-			significanceKey: 'routes/apps/chain-tools/defi/guide.core.pendle',
-			tier: 3
-		}
-	],
-
-	// Learning path with phases
-	learningPath: [
-		{
-			id: 'phase-1',
-			titleKey: 'routes/apps/chain-tools/defi/guide.learning.phase1.title',
-			descriptionKey: 'routes/apps/chain-tools/defi/guide.learning.phase1.description',
-			estimatedDays: '3-5',
-			tasks: [
-				{
-					id: 'task-1-1',
-					actionKey: 'routes/apps/chain-tools/defi/guide.learning.phase1.task1',
-					type: 'read',
-					link: '/apps/chain-tools/defi/guide/fundamentals'
-				},
-				{
-					id: 'task-1-2',
-					actionKey: 'routes/apps/chain-tools/defi/guide.learning.phase1.task2',
-					type: 'read',
-					link: '/apps/chain-tools/defi/guide/ecosystem'
-				},
-				{
-					id: 'task-1-3',
-					actionKey: 'routes/apps/chain-tools/defi/guide.learning.phase1.task3',
-					type: 'practice',
-					toolId: 'uniswap'
-				},
-				{
-					id: 'task-1-4',
-					actionKey: 'routes/apps/chain-tools/defi/guide.learning.phase1.task4',
-					type: 'research',
-					toolId: 'uniswap'
-				},
-				{
-					id: 'task-1-5',
-					actionKey: 'routes/apps/chain-tools/defi/guide.learning.phase1.task5',
-					type: 'research',
-					toolId: 'aave'
-				},
-				{
-					id: 'task-1-6',
-					actionKey: 'routes/apps/chain-tools/defi/guide.learning.phase1.task6',
-					type: 'quiz',
-					link: '/apps/chain-tools/defi/guide/quiz?difficulty=beginner'
-				}
-			],
-			coreToolIds: ['uniswap', 'aave', 'usdc']
-		},
-		{
-			id: 'phase-2',
-			titleKey: 'routes/apps/chain-tools/defi/guide.learning.phase2.title',
-			descriptionKey: 'routes/apps/chain-tools/defi/guide.learning.phase2.description',
-			estimatedDays: '7-10',
-			tasks: [
-				{
-					id: 'task-2-1',
-					actionKey: 'routes/apps/chain-tools/defi/guide.learning.phase2.task1',
-					type: 'research',
-					toolId: 'uniswap'
-				},
-				{
-					id: 'task-2-2',
-					actionKey: 'routes/apps/chain-tools/defi/guide.learning.phase2.task2',
-					type: 'research',
-					toolId: 'curve'
-				},
-				{
-					id: 'task-2-3',
-					actionKey: 'routes/apps/chain-tools/defi/guide.learning.phase2.task3',
-					type: 'research',
-					toolId: '1inch'
-				},
-				{
-					id: 'task-2-4',
-					actionKey: 'routes/apps/chain-tools/defi/guide.learning.phase2.task4',
-					type: 'research',
-					toolId: 'compound'
-				},
-				{
-					id: 'task-2-5',
-					actionKey: 'routes/apps/chain-tools/defi/guide.learning.phase2.task5',
-					type: 'read',
-					link: '/apps/chain-tools/defi/guide/glossary'
-				},
-				{
-					id: 'task-2-6',
-					actionKey: 'routes/apps/chain-tools/defi/guide.learning.phase2.task6',
-					type: 'research',
-					toolId: 'makerdao'
-				},
-				{
-					id: 'task-2-7',
-					actionKey: 'routes/apps/chain-tools/defi/guide.learning.phase2.task7',
-					type: 'quiz',
-					link: '/apps/chain-tools/defi/guide/quiz?difficulty=intermediate'
-				}
-			],
-			coreToolIds: ['curve', '1inch', 'compound', 'makerdao', 'dydx']
-		},
-		{
-			id: 'phase-3',
-			titleKey: 'routes/apps/chain-tools/defi/guide.learning.phase3.title',
-			descriptionKey: 'routes/apps/chain-tools/defi/guide.learning.phase3.description',
-			estimatedDays: '5-7',
-			tasks: [
-				{
-					id: 'task-3-1',
-					actionKey: 'routes/apps/chain-tools/defi/guide.learning.phase3.task1',
-					type: 'research',
-					toolId: 'yearn'
-				},
-				{
-					id: 'task-3-2',
-					actionKey: 'routes/apps/chain-tools/defi/guide.learning.phase3.task2',
-					type: 'research',
-					toolId: 'convex'
-				},
-				{
-					id: 'task-3-3',
-					actionKey: 'routes/apps/chain-tools/defi/guide.learning.phase3.task3',
-					type: 'research',
-					toolId: 'gmx'
-				},
-				{
-					id: 'task-3-4',
-					actionKey: 'routes/apps/chain-tools/defi/guide.learning.phase3.task4',
-					type: 'read',
-					link: '/apps/chain-tools/defi/guide/glossary'
-				},
-				{
-					id: 'task-3-5',
-					actionKey: 'routes/apps/chain-tools/defi/guide.learning.phase3.task5',
-					type: 'read',
-					link: '/apps/chain-tools/defi/guide/ecosystem'
-				}
-			],
-			coreToolIds: ['yearn', 'convex', 'gmx', 'dydx']
-		},
-		{
-			id: 'phase-4',
-			titleKey: 'routes/apps/chain-tools/defi/guide.learning.phase4.title',
-			descriptionKey: 'routes/apps/chain-tools/defi/guide.learning.phase4.description',
-			estimatedDays: 'Ongoing',
-			tasks: [
-				{
-					id: 'task-4-1',
-					actionKey: 'routes/apps/chain-tools/defi/guide.learning.phase4.task1',
-					type: 'research'
-				},
-				{
-					id: 'task-4-2',
-					actionKey: 'routes/apps/chain-tools/defi/guide.learning.phase4.task2',
-					type: 'practice'
-				},
-				{
-					id: 'task-4-3',
-					actionKey: 'routes/apps/chain-tools/defi/guide.learning.phase4.task3',
-					type: 'quiz',
-					link: '/apps/chain-tools/defi/guide/quiz?difficulty=expert'
-				}
-			],
-			coreToolIds: []
-		}
-	],
-
-	// Glossary terms
+	// Glossary for quick reference
 	glossary: [
 		{
 			id: 'amm',
 			termKey: 'routes/apps/chain-tools/defi/guide.glossary.amm.term',
 			definitionKey: 'routes/apps/chain-tools/defi/guide.glossary.amm.definition',
-			relatedToolIds: ['uniswap', 'curve', 'balancer'],
-			relatedTermIds: ['liquidity-pool', 'slippage']
+			relatedToolIds: ['uniswap', 'curve', 'balancer']
 		},
 		{
 			id: 'tvl',
@@ -289,15 +264,13 @@ export const defiGuide: CategoryGuide = {
 			id: 'liquidity-pool',
 			termKey: 'routes/apps/chain-tools/defi/guide.glossary.liquidity_pool.term',
 			definitionKey: 'routes/apps/chain-tools/defi/guide.glossary.liquidity_pool.definition',
-			relatedToolIds: ['uniswap', 'curve'],
-			relatedTermIds: ['amm', 'impermanent-loss']
+			relatedToolIds: ['uniswap', 'curve']
 		},
 		{
 			id: 'impermanent-loss',
 			termKey: 'routes/apps/chain-tools/defi/guide.glossary.impermanent_loss.term',
 			definitionKey: 'routes/apps/chain-tools/defi/guide.glossary.impermanent_loss.definition',
-			relatedToolIds: ['uniswap'],
-			relatedTermIds: ['liquidity-pool', 'amm']
+			relatedToolIds: ['uniswap']
 		},
 		{
 			id: 'flash-loan',
@@ -315,240 +288,44 @@ export const defiGuide: CategoryGuide = {
 			id: 'liquidation',
 			termKey: 'routes/apps/chain-tools/defi/guide.glossary.liquidation.term',
 			definitionKey: 'routes/apps/chain-tools/defi/guide.glossary.liquidation.definition',
-			relatedToolIds: ['aave', 'compound', 'makerdao'],
-			relatedTermIds: ['collateral', 'health-factor']
-		},
-		{
-			id: 'health-factor',
-			termKey: 'routes/apps/chain-tools/defi/guide.glossary.health_factor.term',
-			definitionKey: 'routes/apps/chain-tools/defi/guide.glossary.health_factor.definition',
-			relatedToolIds: ['aave'],
-			relatedTermIds: ['liquidation', 'collateral']
+			relatedToolIds: ['aave', 'compound', 'makerdao']
 		},
 		{
 			id: 'apy',
 			termKey: 'routes/apps/chain-tools/defi/guide.glossary.apy.term',
-			definitionKey: 'routes/apps/chain-tools/defi/guide.glossary.apy.definition',
-			relatedTermIds: ['apr']
-		},
-		{
-			id: 'apr',
-			termKey: 'routes/apps/chain-tools/defi/guide.glossary.apr.term',
-			definitionKey: 'routes/apps/chain-tools/defi/guide.glossary.apr.definition',
-			relatedTermIds: ['apy']
+			definitionKey: 'routes/apps/chain-tools/defi/guide.glossary.apy.definition'
 		},
 		{
 			id: 'slippage',
 			termKey: 'routes/apps/chain-tools/defi/guide.glossary.slippage.term',
 			definitionKey: 'routes/apps/chain-tools/defi/guide.glossary.slippage.definition',
-			relatedToolIds: ['uniswap', '1inch'],
-			relatedTermIds: ['amm']
+			relatedToolIds: ['uniswap', '1inch']
 		},
 		{
 			id: 'yield-farming',
 			termKey: 'routes/apps/chain-tools/defi/guide.glossary.yield_farming.term',
 			definitionKey: 'routes/apps/chain-tools/defi/guide.glossary.yield_farming.definition',
-			relatedToolIds: ['yearn', 'convex'],
-			relatedTermIds: ['apy', 'liquidity-pool']
+			relatedToolIds: ['yearn', 'convex']
 		},
 		{
-			id: 'governance-token',
-			termKey: 'routes/apps/chain-tools/defi/guide.glossary.governance_token.term',
-			definitionKey: 'routes/apps/chain-tools/defi/guide.glossary.governance_token.definition',
-			relatedToolIds: ['uniswap', 'aave', 'compound']
-		},
-		{
-			id: 'cdp',
-			termKey: 'routes/apps/chain-tools/defi/guide.glossary.cdp.term',
-			definitionKey: 'routes/apps/chain-tools/defi/guide.glossary.cdp.definition',
-			relatedToolIds: ['makerdao'],
-			relatedTermIds: ['collateral']
-		},
-		{
-			id: 'oracle',
-			termKey: 'routes/apps/chain-tools/defi/guide.glossary.oracle.term',
-			definitionKey: 'routes/apps/chain-tools/defi/guide.glossary.oracle.definition',
-			relatedToolIds: ['chainlink']
+			id: 'mev',
+			termKey: 'routes/apps/chain-tools/defi/guide.glossary.mev.term',
+			definitionKey: 'routes/apps/chain-tools/defi/guide.glossary.mev.definition',
+			relatedToolIds: ['flashbots']
 		}
 	],
 
-	// Tool relations for ecosystem graph
-	relations: [
-		// Fork relations
-		{ sourceId: 'uniswap', targetId: 'sushiswap', type: 'fork' },
-		{ sourceId: 'compound', targetId: 'benqi', type: 'fork' },
-		// Competition
-		{ sourceId: 'aave', targetId: 'compound', type: 'competitor' },
-		{ sourceId: 'uniswap', targetId: 'curve', type: 'competitor' },
-		{ sourceId: 'gmx', targetId: 'dydx', type: 'competitor' },
-		// Dependencies
-		{ sourceId: 'yearn', targetId: 'curve', type: 'depends_on' },
-		{ sourceId: 'convex', targetId: 'curve', type: 'built_on' },
-		{ sourceId: 'aave', targetId: 'chainlink', type: 'depends_on' },
-		{ sourceId: 'makerdao', targetId: 'chainlink', type: 'depends_on' },
-		// Integrations
-		{ sourceId: '1inch', targetId: 'uniswap', type: 'integrates' },
-		{ sourceId: '1inch', targetId: 'curve', type: 'integrates' },
-		{ sourceId: '1inch', targetId: 'sushiswap', type: 'integrates' }
+	// Featured tools shown in sidebar/footer
+	featuredToolIds: [
+		'uniswap',
+		'aave',
+		'curve',
+		'makerdao',
+		'1inch',
+		'yearn',
+		'compound',
+		'defillama'
 	],
-
-	// Quiz questions
-	quiz: {
-		categoryId: 'defi',
-		questions: [
-			// Beginner questions
-			{
-				id: 'q1',
-				type: 'single_choice',
-				difficulty: 'beginner',
-				questionKey: 'routes/apps/chain-tools/defi/guide.quiz.q1.question',
-				optionKeys: [
-					'routes/apps/chain-tools/defi/guide.quiz.q1.option1',
-					'routes/apps/chain-tools/defi/guide.quiz.q1.option2',
-					'routes/apps/chain-tools/defi/guide.quiz.q1.option3',
-					'routes/apps/chain-tools/defi/guide.quiz.q1.option4'
-				],
-				correctAnswers: [0],
-				explanationKey: 'routes/apps/chain-tools/defi/guide.quiz.q1.explanation',
-				relatedToolIds: ['uniswap', 'curve'],
-				tags: ['dex', 'amm', 'basics']
-			},
-			{
-				id: 'q2',
-				type: 'single_choice',
-				difficulty: 'beginner',
-				questionKey: 'routes/apps/chain-tools/defi/guide.quiz.q2.question',
-				optionKeys: [
-					'routes/apps/chain-tools/defi/guide.quiz.q2.option1',
-					'routes/apps/chain-tools/defi/guide.quiz.q2.option2',
-					'routes/apps/chain-tools/defi/guide.quiz.q2.option3',
-					'routes/apps/chain-tools/defi/guide.quiz.q2.option4'
-				],
-				correctAnswers: [1],
-				explanationKey: 'routes/apps/chain-tools/defi/guide.quiz.q2.explanation',
-				relatedToolIds: ['defillama'],
-				tags: ['metrics', 'basics']
-			},
-			{
-				id: 'q3',
-				type: 'true_false',
-				difficulty: 'beginner',
-				questionKey: 'routes/apps/chain-tools/defi/guide.quiz.q3.question',
-				optionKeys: [
-					'routes/apps/chain-tools/defi/guide.quiz.q3.option1',
-					'routes/apps/chain-tools/defi/guide.quiz.q3.option2'
-				],
-				correctAnswers: [0],
-				explanationKey: 'routes/apps/chain-tools/defi/guide.quiz.q3.explanation',
-				relatedToolIds: ['aave'],
-				tags: ['lending', 'flash-loan']
-			},
-			// Intermediate questions
-			{
-				id: 'q4',
-				type: 'single_choice',
-				difficulty: 'intermediate',
-				questionKey: 'routes/apps/chain-tools/defi/guide.quiz.q4.question',
-				optionKeys: [
-					'routes/apps/chain-tools/defi/guide.quiz.q4.option1',
-					'routes/apps/chain-tools/defi/guide.quiz.q4.option2',
-					'routes/apps/chain-tools/defi/guide.quiz.q4.option3',
-					'routes/apps/chain-tools/defi/guide.quiz.q4.option4'
-				],
-				correctAnswers: [2],
-				explanationKey: 'routes/apps/chain-tools/defi/guide.quiz.q4.explanation',
-				relatedToolIds: ['curve'],
-				tags: ['dex', 'stablecoin', 'curve']
-			},
-			{
-				id: 'q5',
-				type: 'single_choice',
-				difficulty: 'intermediate',
-				questionKey: 'routes/apps/chain-tools/defi/guide.quiz.q5.question',
-				optionKeys: [
-					'routes/apps/chain-tools/defi/guide.quiz.q5.option1',
-					'routes/apps/chain-tools/defi/guide.quiz.q5.option2',
-					'routes/apps/chain-tools/defi/guide.quiz.q5.option3',
-					'routes/apps/chain-tools/defi/guide.quiz.q5.option4'
-				],
-				correctAnswers: [1],
-				explanationKey: 'routes/apps/chain-tools/defi/guide.quiz.q5.explanation',
-				relatedToolIds: ['uniswap'],
-				tags: ['dex', 'uniswap', 'v3']
-			},
-			{
-				id: 'q6',
-				type: 'multiple_choice',
-				difficulty: 'intermediate',
-				questionKey: 'routes/apps/chain-tools/defi/guide.quiz.q6.question',
-				optionKeys: [
-					'routes/apps/chain-tools/defi/guide.quiz.q6.option1',
-					'routes/apps/chain-tools/defi/guide.quiz.q6.option2',
-					'routes/apps/chain-tools/defi/guide.quiz.q6.option3',
-					'routes/apps/chain-tools/defi/guide.quiz.q6.option4'
-				],
-				correctAnswers: [0, 2, 3],
-				explanationKey: 'routes/apps/chain-tools/defi/guide.quiz.q6.explanation',
-				relatedToolIds: ['usdc', 'makerdao', 'frax'],
-				tags: ['stablecoin']
-			},
-			// Expert questions
-			{
-				id: 'q7',
-				type: 'single_choice',
-				difficulty: 'expert',
-				questionKey: 'routes/apps/chain-tools/defi/guide.quiz.q7.question',
-				optionKeys: [
-					'routes/apps/chain-tools/defi/guide.quiz.q7.option1',
-					'routes/apps/chain-tools/defi/guide.quiz.q7.option2',
-					'routes/apps/chain-tools/defi/guide.quiz.q7.option3',
-					'routes/apps/chain-tools/defi/guide.quiz.q7.option4'
-				],
-				correctAnswers: [2],
-				explanationKey: 'routes/apps/chain-tools/defi/guide.quiz.q7.explanation',
-				relatedToolIds: ['convex', 'curve'],
-				tags: ['yield', 'curve-wars']
-			},
-			{
-				id: 'q8',
-				type: 'single_choice',
-				difficulty: 'expert',
-				questionKey: 'routes/apps/chain-tools/defi/guide.quiz.q8.question',
-				optionKeys: [
-					'routes/apps/chain-tools/defi/guide.quiz.q8.option1',
-					'routes/apps/chain-tools/defi/guide.quiz.q8.option2',
-					'routes/apps/chain-tools/defi/guide.quiz.q8.option3',
-					'routes/apps/chain-tools/defi/guide.quiz.q8.option4'
-				],
-				correctAnswers: [0],
-				explanationKey: 'routes/apps/chain-tools/defi/guide.quiz.q8.explanation',
-				relatedToolIds: ['uniswap'],
-				tags: ['amm', 'math', 'impermanent-loss']
-			}
-		],
-		achievements: [
-			{
-				minScore: 0.9,
-				titleKey: 'routes/apps/chain-tools/defi/guide.quiz.achievement.master',
-				badge: '🏆'
-			},
-			{
-				minScore: 0.7,
-				titleKey: 'routes/apps/chain-tools/defi/guide.quiz.achievement.advanced',
-				badge: '⭐'
-			},
-			{
-				minScore: 0.5,
-				titleKey: 'routes/apps/chain-tools/defi/guide.quiz.achievement.intermediate',
-				badge: '📚'
-			},
-			{
-				minScore: 0,
-				titleKey: 'routes/apps/chain-tools/defi/guide.quiz.achievement.beginner',
-				badge: '🌱'
-			}
-		]
-	},
 
 	lastUpdated: '2024-12-31'
 };

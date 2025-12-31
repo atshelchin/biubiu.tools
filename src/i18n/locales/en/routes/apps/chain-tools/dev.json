@@ -106,97 +106,106 @@
 			"description": "企业级NFT基础设施API"
 		},
 		"moralis": {
-			"description": "Moralis - Developer tool"
+			"description": "Web3 API for NFT and DeFi"
 		},
 		"circom": {
-			"description": "Circom - Developer tool"
+			"description": "Zero-knowledge circuit compiler"
 		},
 		"protostar": {
-			"description": "Protostar - Developer tool"
+			"description": "StarkNet testing and toolchain"
 		},
 		"starkli": {
-			"description": "Starkli - Developer tool"
+			"description": "StarkNet CLI deployment tool"
 		},
 		"biubiu_contract_deployer": {
-			"description": "Contract Deployer - Tool"
+			"description": "Deploy contracts with CREATE2 deterministically"
 		},
 		"biubiu_token_deployer": {
-			"description": "Token Deployer - Tool"
+			"description": "Create and deploy ERC20 tokens"
 		},
 		"biubiu_events_scanner": {
-			"description": "Events Scanner - Tool"
+			"description": "Scan and analyze smart contract events"
 		},
 		"biubiu_chainlist": {
-			"description": "Chainlist - Tool"
+			"description": "Add EVM networks to wallet easily"
 		},
 		"abi_ninja": {
-			"description": "ABI Ninja - Tool"
+			"description": "Interact with contracts using ABI"
 		},
 		"ethereum_signature_db": {
-			"description": "4byte.directory - Tool"
+			"description": "Function selector and signature lookup"
 		},
 		"ethers_js": {
-			"description": "Ethers.js - Tool"
+			"description": "JavaScript Web3 library and SDK"
 		},
 		"solidity_lang": {
-			"description": "Solidity Docs - Tool"
+			"description": "Official Solidity language documentation"
 		},
 		"evm_codes": {
-			"description": "EVM Codes - Tool"
+			"description": "EVM opcodes reference and playground"
 		},
 		"chainlink": {
-			"description": "Chainlink - Tool"
+			"description": "Oracle with price feeds and automation"
 		},
 		"the_graph": {
-			"description": "The Graph - Tool"
+			"description": "GraphQL blockchain data indexer"
 		},
 		"scaffold_eth": {
-			"description": "Scaffold-ETH - Tool"
+			"description": "Rapid prototyping starter framework"
 		},
 		"create_eth_app": {
-			"description": "Create Eth App - Tool"
+			"description": "React Ethereum boilerplate CLI"
 		},
 		"cookbook_dev": {
-			"description": "Cookbook.dev - Tool"
+			"description": "Smart contract template registry"
 		},
 		"solidity_by_example": {
-			"description": "Solidity by Example - Tool"
+			"description": "Learn Solidity with code examples"
 		},
 		"speedrun_ethereum": {
-			"description": "SpeedRunEthereum - Tool"
+			"description": "Solidity learning challenges and quests"
 		},
 		"eth_build": {
-			"description": "ETH.Build - Tool"
+			"description": "Visual sandbox for learning Ethereum"
 		},
 		"crypto_zombies": {
-			"description": "CryptoZombies - Tool"
+			"description": "Gamified Solidity tutorial"
 		},
 		"atlas_ide": {
-			"description": "Atlas - Tool"
+			"description": "Cloud IDE for zk development"
 		},
 		"paper_xyz": {
-			"description": "Paper - Tool"
+			"description": "NFT checkout and fiat minting"
 		},
 		"anchor_lang": {
-			"description": "Anchor - Tool"
+			"description": "Solana Rust program framework"
 		},
 		"move_lang": {
-			"description": "Move Language - Tool"
+			"description": "Sui and Aptos smart contract language"
 		},
 		"cairo_lang": {
-			"description": "Cairo - Tool"
+			"description": "StarkNet provable zk language"
 		},
 		"noir_lang": {
-			"description": "Noir - Tool"
+			"description": "Aztec privacy-focused zk circuits"
 		},
 		"huff_lang": {
-			"description": "Huff - Tool"
+			"description": "Low-level gas-optimized EVM assembly"
 		},
 		"vyper_lang": {
-			"description": "Vyper - Tool"
+			"description": "Python-like secure EVM smart contracts"
 		},
 		"fe_lang": {
-			"description": "Fe - Tool"
+			"description": "Rust-like safe EVM smart contracts"
+		},
+		"4byte": {
+			"description": "Function signature database for decoding"
+		},
+		"ethers": {
+			"description": "Modern TypeScript Ethereum library"
+		},
+		"solidity": {
+			"description": "Official Solidity documentation"
 		}
 	}
 }

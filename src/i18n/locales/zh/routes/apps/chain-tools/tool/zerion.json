@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Zerion - Web3 钱包与投资组合追踪器",
+		"description": "一体化加密钱包和 DeFi 仪表板。使用 Zerion 的智能钱包跨链交易、追踪和管理你的投资组合。",
+		"keywords": "Zerion, Web3 钱包, DeFi 投资组合, 多链钱包, 加密追踪器, 智能钱包"
+	},
+	"overview": "Zerion 是一个 Web3 智能钱包和投资组合追踪器，将非托管钱包与全面的 DeFi 仪表板功能相结合。支持 14+ 链，Zerion 提供统一的界面来管理你的整个链上投资组合。\n\n由 Evgeny Yurtaev 和 Alexey Bashlykov 于 2017 年创立，Zerion 从 DeFi 仪表板起步，发展成为完整的钱包解决方案。Zerion 钱包具有智能账户功能、支持链上的无 Gas 交易和内置兑换聚合。\n\nZerion 在移动体验方面表现出色，提供最好的 iOS 和 Android 加密钱包应用之一。该平台提供实时投资组合追踪、详细的交易历史和跨链原生代币兑换。",
+	"features": {
+		"1": {
+			"title": "智能钱包",
+			"description": "支持无 Gas 交易和社交恢复的自托管钱包"
+		},
+		"2": {
+			"title": "多链支持",
+			"description": "原生支持 14+ EVM 链，自动检测"
+		},
+		"3": {
+			"title": "投资组合分析",
+			"description": "追踪表现、盈亏和历史价值"
+		},
+		"4": {
+			"title": "内置 DEX 聚合器",
+			"description": "跨链兑换代币，获得最佳价格路由"
+		},
+		"5": {
+			"title": "NFT 画廊",
+			"description": "查看和管理带元数据的 NFT 收藏品"
+		},
+		"6": {
+			"title": "DeFi 仓位追踪",
+			"description": "自动检测 LP、借贷和质押仓位"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "日常钱包",
+			"description": "作为交易和 DeFi 的主要加密钱包使用"
+		},
+		"2": {
+			"title": "投资组合追踪",
+			"description": "监控跨链所有持仓和仓位"
+		},
+		"3": {
+			"title": "代币兑换",
+			"description": "以聚合最佳价格交易代币"
+		},
+		"4": {
+			"title": "NFT 管理",
+			"description": "查看、发送和整理 NFT 收藏品"
+		},
+		"5": {
+			"title": "DeFi 监控",
+			"description": "追踪 LP 仓位、收益和 DeFi 投资"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Zerion 钱包安全吗？",
+			"answer": "是的，Zerion 钱包是非托管的——你控制你的私钥。钱包使用行业标准安全实践，包括加密存储和生物识别认证。Zerion 永远无法访问你的密钥。钱包已通过审计，被数百万用户使用。"
+		},
+		"2": {
+			"question": "Zerion 是免费的吗？",
+			"answer": "是的，Zerion 的投资组合追踪和钱包功能是免费使用的。兑换有小额费用（通常 0.5%）用于资助开发。没有订阅费或隐藏收费。计划推出高级功能，但核心功能将保持免费。"
+		},
+		"3": {
+			"question": "Zerion vs MetaMask：我应该用哪个？",
+			"answer": "Zerion 提供更好的用户体验，内置投资组合追踪、原生多链支持和优秀的移动应用。MetaMask 有更广泛的 dApp 兼容性且更成熟。许多用户两者都有——MetaMask 用于最大兼容性，Zerion 用于日常使用和投资组合管理。"
+		},
+		"4": {
+			"question": "我可以导入现有钱包吗？",
+			"answer": "可以，你可以使用助记词、私钥导入现有钱包，或连接硬件钱包（Ledger、Trezor）。Zerion 将自动显示你所有的资产和仓位。你也可以直接在 Zerion 中创建新钱包，带有安全备份选项。"
+		},
+		"5": {
+			"question": "Zerion 有代币吗？",
+			"answer": "Zerion 为活跃用户提供 DNA 奖励，但还没有可交易的代币。DNA 通过平台使用获得，可能有未来的用途。没有确认的代币发行——警惕声称出售 Zerion 代币的骗局。"
+		}
+	},
+	"cta": {
+		"ready": "准备使用更智能的钱包？",
+		"button": "打开 Zerion",
+		"note": "Web3 智能钱包"
+	}
+}

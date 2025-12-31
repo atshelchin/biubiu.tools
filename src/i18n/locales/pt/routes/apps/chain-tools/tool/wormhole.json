@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Wormhole - Cross-Chain Messaging Protocol | Connect 30+ Blockchains",
+		"description": "Discover Wormhole, the generic message passing protocol connecting 30+ chains. Bridge tokens, NFTs, and build cross-chain dApps with Wormhole's Guardian network.",
+		"keywords": "Wormhole, W token, cross-chain, bridge, messaging, Guardian, Solana, EVM, Cosmos, Sui, Aptos"
+	},
+	"overview": "Wormhole is a generic message passing protocol that connects over 30 blockchain networks, enabling seamless cross-chain communication and asset transfers. Originally launched in 2020 as a bridge for Solana, Wormhole has evolved into a comprehensive interoperability layer supporting EVM chains, Solana, Cosmos, Sui, Aptos, and more.\n\nAt its core, Wormhole uses a Guardian network—a set of 19 validators including Jump Crypto, Staked, and Figment—who observe and verify cross-chain messages. When a message is sent from one chain, Guardians independently verify it and sign a Verifiable Action Approval (VAA), which can then be submitted to the destination chain. This architecture enables not just token transfers, but arbitrary message passing for complex cross-chain applications.\n\nWormhole's infrastructure has processed over $40 billion in volume and facilitated millions of cross-chain transactions. In 2024, the W token was launched, introducing governance and staking to the protocol. Despite experiencing a major exploit in 2022 (which was fully reimbursed by Jump Crypto), Wormhole has become a critical piece of multi-chain infrastructure, powering applications like Portal Bridge, Mayan Finance, and many others.",
+	"features": {
+		"1": {
+			"title": "Cross-Chain Messaging",
+			"description": "Send arbitrary messages and data between 30+ supported blockchain networks"
+		},
+		"2": {
+			"title": "Guardian Network",
+			"description": "19 independent validators secure cross-chain messages through consensus"
+		},
+		"3": {
+			"title": "Token Bridge",
+			"description": "Transfer tokens between chains with wrapped asset creation and management"
+		},
+		"4": {
+			"title": "NFT Bridge",
+			"description": "Move NFTs across chains while maintaining metadata and provenance"
+		},
+		"5": {
+			"title": "Multi-Ecosystem Support",
+			"description": "Connects EVM, Solana, Cosmos, Sui, Aptos, and other blockchain ecosystems"
+		},
+		"6": {
+			"title": "W Token Governance",
+			"description": "Participate in protocol governance and earn rewards through W token staking"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Token Bridging",
+			"description": "Transfer tokens between different blockchain networks seamlessly"
+		},
+		"2": {
+			"title": "Cross-Chain dApps",
+			"description": "Build applications that interact with multiple blockchains simultaneously"
+		},
+		"3": {
+			"title": "Multi-Chain Governance",
+			"description": "Enable governance votes and decisions across multiple blockchain networks"
+		},
+		"4": {
+			"title": "NFT Transfers",
+			"description": "Move NFT collections between chains to access different marketplaces and communities"
+		},
+		"5": {
+			"title": "Generic Messaging",
+			"description": "Send custom data and instructions between chains for complex cross-chain logic"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Wormhole and how does it work?",
+			"answer": "Wormhole is a generic message passing protocol that enables communication between different blockchains. It works through a Guardian network of 19 validators who observe messages on source chains and create signed Verifiable Action Approvals (VAAs). These VAAs can be submitted to destination chains to execute the cross-chain action. This architecture supports not just token transfers, but any type of cross-chain message or data transfer."
+		},
+		"2": {
+			"question": "How do Guardians secure the network?",
+			"answer": "Guardians are independent validators run by reputable organizations like Jump Crypto, Staked, and Figment. Each Guardian independently observes blockchain events and signs VAAs when consensus is reached (13 of 19 signatures required). This decentralized validation model prevents any single entity from controlling cross-chain messages, and the diversity of Guardian operators provides security through distribution."
+		},
+		"3": {
+			"question": "What happened in the 2022 exploit and is Wormhole safe now?",
+			"answer": "In February 2022, Wormhole suffered a $325 million exploit due to a signature verification bug in the Solana contract. Jump Crypto immediately reimbursed all affected users, and the vulnerability was patched within hours. Since then, Wormhole has undergone extensive security audits, implemented multiple additional security layers, and has processed billions in volume without incident. The protocol is now considered battle-tested and secure."
+		},
+		"4": {
+			"question": "Which chains does Wormhole connect?",
+			"answer": "Wormhole connects over 30 chains across multiple ecosystems: EVM chains (Ethereum, BSC, Polygon, Avalanche, Arbitrum, Optimism, Base, etc.), Solana, Cosmos chains (Osmosis, Injective, etc.), Sui, Aptos, Near, Algorand, and more. This makes it one of the most comprehensive interoperability protocols available, enabling communication across diverse blockchain architectures."
+		},
+		"5": {
+			"question": "What is the W token used for?",
+			"answer": "W is Wormhole's governance and utility token launched in 2024. W token holders can participate in protocol governance, voting on upgrades, Guardian set changes, and treasury decisions. The token also enables staking, where users can stake W to help secure the network and earn rewards. Additionally, W may be used for protocol fees and incentivizing cross-chain activity in the future."
+		}
+	},
+	"cta": {
+		"ready": "Ready to go cross-chain?",
+		"button": "Open Wormhole",
+		"note": "The generic message passing protocol"
+	}
+}

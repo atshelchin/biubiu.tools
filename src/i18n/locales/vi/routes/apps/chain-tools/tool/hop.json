@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Hop Protocol - Fast L2 Native Token Bridge | Instant Rollup Transfers",
+		"description": "Discover Hop Protocol, the L2 native token bridge enabling fast, low-cost transfers between Ethereum rollups. Uses hTokens and Bonder network for instant liquidity.",
+		"keywords": "Hop Protocol, HOP, bridge, L2, rollup, hToken, Bonder, cross-chain, Ethereum"
+	},
+	"overview": "Hop Protocol is an L2 native token bridge designed specifically for fast, low-cost transfers between Ethereum rollups and sidechains. Founded in 2021, Hop pioneered a unique architecture using hTokens (Hop-bridged tokens) and a Bonder network to enable near-instant transfers without waiting for rollup finality.\n\nUnlike traditional bridges that wait for rollup withdrawals (7 days on Optimistic Rollups), Hop uses Automated Market Makers (AMMs) on each rollup with a special hToken. When you bridge, you swap for hToken on the source chain, the Bonders move liquidity, and you swap hToken for the native token on the destination. This enables transfers in minutes instead of days.\n\nThe Bonder network consists of specialized nodes that front the liquidity for cross-rollup transfers. Bonders stake HOP tokens and earn fees for providing instant liquidity. HOP token holders can participate as Bonders or in governance decisions about supported chains, fees, and protocol upgrades. With over $1 billion bridged and support for major L2s, Hop has become essential infrastructure for the L2 ecosystem.",
+	"features": {
+		"1": {
+			"title": "Fast L2 Bridging",
+			"description": "Transfer tokens between L2s in minutes without waiting for rollup finality"
+		},
+		"2": {
+			"title": "hToken System",
+			"description": "Canonical hToken bridges enable instant swaps across all supported chains"
+		},
+		"3": {
+			"title": "Bonder Network",
+			"description": "Decentralized liquidity providers front capital for instant transfers"
+		},
+		"4": {
+			"title": "Multi-Rollup Support",
+			"description": "Connect Ethereum, Arbitrum, Optimism, Polygon, Gnosis, and Base"
+		},
+		"5": {
+			"title": "Low Fees",
+			"description": "Minimize costs with efficient L2-to-L2 transfers and optimized gas usage"
+		},
+		"6": {
+			"title": "HOP Governance",
+			"description": "HOP token holders govern protocol parameters, fees, and new chain additions"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "L2 to L2 Transfers",
+			"description": "Move assets between rollups without going through Ethereum mainnet"
+		},
+		"2": {
+			"title": "Quick Withdrawals",
+			"description": "Exit rollups to mainnet or other L2s in minutes instead of 7-day wait"
+		},
+		"3": {
+			"title": "Token Bridging",
+			"description": "Bridge USDC, ETH, DAI, and other tokens across the L2 ecosystem"
+		},
+		"4": {
+			"title": "DeFi Composability",
+			"description": "Access DeFi protocols on multiple L2s with seamless asset movement"
+		},
+		"5": {
+			"title": "Multi-L2 Management",
+			"description": "Efficiently manage portfolios across different rollups and sidechains"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Hop Protocol and how does it work?",
+			"answer": "Hop Protocol is an L2 native bridge that enables fast transfers between Ethereum rollups. It works by using hTokens (bridged tokens) and AMMs on each chain. When you bridge, you swap your token for hToken on the source chain, Bonders facilitate the cross-chain transfer, and you swap hToken back to the native token on the destination. This avoids waiting for rollup finality (7 days on Optimistic Rollups)."
+		},
+		"2": {
+			"question": "What are hTokens?",
+			"answer": "hTokens are Hop's canonical bridged tokens that exist on every supported chain. For example, hUSDC exists on Ethereum, Arbitrum, Optimism, and Polygon. These hTokens can be instantly swapped for native tokens using AMMs on each chain. The hToken system creates a unified liquidity layer across all rollups, enabling fast transfers."
+		},
+		"3": {
+			"question": "What is a Bonder and how do they work?",
+			"answer": "Bonders are specialized nodes that provide instant liquidity for cross-chain transfers. They stake HOP tokens and front capital to users, earning fees in return. When you bridge, a Bonder on the destination chain provides you with tokens immediately, then later rebalances their liquidity by claiming the funds from the source chain. This mechanism enables instant transfers without waiting."
+		},
+		"4": {
+			"question": "What chains does Hop support?",
+			"answer": "Hop supports Ethereum mainnet and major L2s/sidechains including Arbitrum, Optimism, Polygon, Gnosis Chain, and Base. Supported tokens include ETH, USDC, USDT, DAI, MATIC, and others. The protocol continuously adds new chains and tokens based on community governance decisions."
+		},
+		"5": {
+			"question": "How fast are Hop transfers?",
+			"answer": "Hop transfers typically complete in 5-15 minutes, depending on network congestion and Bonder availability. This is dramatically faster than native rollup bridges which require 7 days for Optimistic Rollup withdrawals or 3-12 hours for ZK Rollup proof generation. L2-to-L2 transfers are even faster, often completing in under 5 minutes."
+		}
+	},
+	"cta": {
+		"ready": "Ready to bridge across L2s?",
+		"button": "Open Hop Protocol",
+		"note": "Fast L2 native token bridge"
+	}
+}

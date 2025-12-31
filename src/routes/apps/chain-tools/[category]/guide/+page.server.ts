@@ -48,9 +48,9 @@ export const load: PageServerLoad = async ({ params, url }) => {
 		category: serializedCategory,
 		tools: serializedTools,
 		meta: {
-			title: `${category.labelKey} Guide - Master the ${categoryId.toUpperCase()} Ecosystem`,
-			description: `Comprehensive guide to ${categoryId}: fundamentals, ecosystem map, learning path, and quiz. Includes ${categoryTools.length}+ tools.`,
-			keywords: `${categoryId}, ${categoryId} guide, ${categoryId} tutorial, ${categoryId} learning, web3, crypto`,
+			title: `${categoryId.toUpperCase()} Complete Guide - From Basics to Advanced Strategies`,
+			description: `Master ${categoryId} with our comprehensive guide. Learn core concepts, discover earning opportunities, and explore real case studies. ${guide.estimatedReadTime} read.`,
+			keywords: `${categoryId}, ${categoryId} guide, ${categoryId} tutorial, ${categoryId} earning, ${categoryId} arbitrage, web3, crypto, defi`,
 			canonical: `${url.origin}/apps/chain-tools/${categoryId}/guide`,
 			type: 'website',
 			image: '/og-chain-tools.png',
@@ -59,16 +59,17 @@ export const load: PageServerLoad = async ({ params, url }) => {
 		structuredData: [
 			{
 				'@context': 'https://schema.org',
-				'@type': 'Course',
-				name: `${categoryId.toUpperCase()} Complete Guide`,
-				description: `Learn ${categoryId} from beginner to expert with our comprehensive guide.`,
-				provider: {
+				'@type': 'Article',
+				headline: `${categoryId.toUpperCase()} Complete Guide`,
+				description: `Comprehensive guide to ${categoryId} with real examples and case studies.`,
+				author: {
 					'@type': 'Organization',
 					name: 'BiuBiu Tools'
 				},
-				hasCourseInstance: {
-					'@type': 'CourseInstance',
-					courseMode: 'online'
+				dateModified: guide.lastUpdated,
+				publisher: {
+					'@type': 'Organization',
+					name: 'BiuBiu Tools'
 				}
 			},
 			{

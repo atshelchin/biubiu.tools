@@ -39,6 +39,31 @@ import { alchemyDetail } from './alchemy';
 import { etherscanDetail } from './etherscan';
 import { thegraphDetail } from './thegraph';
 import { safeDetail } from './safe';
+import { acrossDetail } from './across';
+import { arbitrumDetail } from './arbitrum';
+import { baseDetail } from './base';
+import { blurDetail } from './blur';
+import { certikDetail } from './certik';
+import { foundryDetail } from './foundry';
+import { hardhatDetail } from './hardhat';
+import { hopDetail } from './hop';
+import { immunefiDetail } from './immunefi';
+import { infuraDetail } from './infura';
+import { openzeppelinDetail } from './openzeppelin';
+import { optimismDetail } from './optimism';
+import { rainbowDetail } from './rainbow';
+import { revokeDetail } from './revoke';
+import { scrollDetail } from './scroll';
+import { stargateDetail } from './stargate';
+import { tenderlyDetail } from './tenderly';
+import { wormholeDetail } from './wormhole';
+import { zksyncDetail } from './zksync';
+import { coingeckoDetail } from './coingecko';
+import { defillamaDetail } from './defillama';
+import { zapperDetail } from './zapper';
+import { zerionDetail } from './zerion';
+import { rabbyDetail } from './rabby';
+import { debankDetail } from './debank';
 
 /**
  * All tool details mapped by tool ID
@@ -74,7 +99,32 @@ export const toolDetails: Record<string, ToolDetail> = {
 	alchemy: alchemyDetail,
 	etherscan: etherscanDetail,
 	thegraph: thegraphDetail,
-	safe: safeDetail
+	safe: safeDetail,
+	across: acrossDetail,
+	arbitrum: arbitrumDetail,
+	base: baseDetail,
+	blur: blurDetail,
+	certik: certikDetail,
+	foundry: foundryDetail,
+	hardhat: hardhatDetail,
+	hop: hopDetail,
+	immunefi: immunefiDetail,
+	infura: infuraDetail,
+	openzeppelin: openzeppelinDetail,
+	optimism: optimismDetail,
+	rainbow: rainbowDetail,
+	revoke: revokeDetail,
+	scroll: scrollDetail,
+	stargate: stargateDetail,
+	tenderly: tenderlyDetail,
+	wormhole: wormholeDetail,
+	zksync: zksyncDetail,
+	coingecko: coingeckoDetail,
+	defillama: defillamaDetail,
+	zapper: zapperDetail,
+	zerion: zerionDetail,
+	rabby: rabbyDetail,
+	debank: debankDetail
 };
 
 /**

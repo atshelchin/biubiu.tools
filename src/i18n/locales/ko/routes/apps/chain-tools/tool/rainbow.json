@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Rainbow - Beautiful Ethereum Wallet | NFTs, DeFi & Multi-Chain",
+		"description": "Explore Rainbow, the fun and simple Ethereum wallet with a beautiful UI. Showcase NFTs, earn Rainbow Points, and access DeFi across multiple chains.",
+		"keywords": "Rainbow, Ethereum wallet, NFT wallet, mobile wallet, Rainbow Points, Web3, ENS, multi-chain"
+	},
+	"overview": "Rainbow is a fun, simple, and secure Ethereum wallet that makes crypto accessible through beautiful design. Created by Rainbow in 2019, it has raised over $18M in funding and gained popularity for its gorgeous interface, NFT-first approach, and user-friendly experience.\n\nAvailable on iOS and Android, Rainbow provides a mobile-first experience with features like NFT galleries, ENS integration, token swaps, and multi-chain support. The wallet stands out with its unique Rainbow Points system that rewards users for engagement, and its focus on making Web3 fun rather than intimidating.\n\nRainbow supports Ethereum, Polygon, Arbitrum, Optimism, Base, and other EVM chains. The wallet integrates with popular DeFi protocols and NFT marketplaces, allowing users to manage their digital assets with style. With its emphasis on design, ease of use, and community engagement, Rainbow has become the wallet of choice for NFT collectors and users who value aesthetics alongside functionality.",
+	"features": {
+		"1": {
+			"title": "Beautiful Design",
+			"description": "Stunning interface with colorful gradients, smooth animations, and intuitive UX"
+		},
+		"2": {
+			"title": "NFT Gallery",
+			"description": "Showcase your NFT collection with a beautiful, Instagram-like gallery view"
+		},
+		"3": {
+			"title": "Multi-Chain Support",
+			"description": "Access Ethereum, Polygon, Arbitrum, Optimism, Base, and other EVM networks"
+		},
+		"4": {
+			"title": "ENS Integration",
+			"description": "Use ENS names, set custom avatars, and browse the .eth directory"
+		},
+		"5": {
+			"title": "In-App Swaps",
+			"description": "Swap tokens with the best rates from DEX aggregators like 0x"
+		},
+		"6": {
+			"title": "Rainbow Points",
+			"description": "Earn points for wallet activity and engagement with potential future rewards"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Collect NFTs",
+			"description": "View and manage NFT collections across chains with beautiful gallery displays"
+		},
+		"2": {
+			"title": "Browse ENS",
+			"description": "Explore ENS profiles, set custom avatars, and use .eth names everywhere"
+		},
+		"3": {
+			"title": "Token Swaps",
+			"description": "Trade tokens with competitive rates and low fees across supported networks"
+		},
+		"4": {
+			"title": "dApp Interaction",
+			"description": "Connect to DeFi protocols, NFT marketplaces, and Web3 apps with WalletConnect"
+		},
+		"5": {
+			"title": "Portfolio Tracking",
+			"description": "Monitor token balances, NFTs, and portfolio performance across multiple chains"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Rainbow and what makes it different?",
+			"answer": "Rainbow is a mobile Ethereum wallet focused on beautiful design and user experience. Unlike traditional crypto wallets that prioritize features over aesthetics, Rainbow combines functionality with stunning visuals—colorful gradients, smooth animations, and an Instagram-like NFT gallery. It's designed to make Web3 fun and accessible, particularly appealing to NFT collectors and users who appreciate good design."
+		},
+		"2": {
+			"question": "Is Rainbow available on iOS and Android?",
+			"answer": "Yes, Rainbow is available on both iOS (iPhone) and Android platforms. The wallet is primarily mobile-focused, providing a native app experience optimized for smartphones. There's also a browser extension for desktop users, though the mobile app remains the primary platform with the fullest feature set."
+		},
+		"3": {
+			"question": "Which chains does Rainbow support?",
+			"answer": "Rainbow supports Ethereum mainnet and multiple Layer 2 networks including Polygon, Arbitrum, Optimism, Base, Zora, Blast, and other EVM-compatible chains. You can easily switch between networks, view assets across all chains in one unified interface, and interact with dApps on any supported network."
+		},
+		"4": {
+			"question": "What are Rainbow Points and how do I earn them?",
+			"answer": "Rainbow Points is a gamification system that rewards users for wallet activity and engagement. You earn points by performing actions like making swaps, collecting NFTs, using ENS, referring friends, and daily check-ins. While points don't currently have monetary value, they may unlock future rewards, airdrops, or exclusive features. The leaderboard creates friendly competition among users."
+		},
+		"5": {
+			"question": "How do I connect Rainbow to dApps?",
+			"answer": "Rainbow uses WalletConnect to securely connect with dApps. When visiting a dApp on your computer, click 'Connect Wallet' and select 'WalletConnect,' then scan the QR code with Rainbow's built-in scanner. For mobile dApps, tap 'Connect Wallet' and select Rainbow from the list. The connection is secure and allows you to approve transactions directly from your phone."
+		}
+	},
+	"cta": {
+		"ready": "Ready to explore Web3 in style?",
+		"button": "Open Rainbow",
+		"note": "The beautiful Ethereum wallet for NFTs and DeFi"
+	}
+}

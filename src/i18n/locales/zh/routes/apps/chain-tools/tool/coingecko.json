@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "CoinGecko - 加密货币价格、图表与市场数据",
+		"description": "使用 CoinGecko 追踪 15,000+ 加密货币。获取实时价格、市值排名、交易量和全面的加密数据。",
+		"keywords": "CoinGecko, 加密货币价格, 市值, 加密数据, 代币追踪, 加密图表"
+	},
+	"overview": "CoinGecko 是全球最大的加密货币数据聚合平台之一，追踪 1,000+ 交易所上的 15,000+ 代币。由 TM Lee 和 Bobby Ong 于 2014 年创立，CoinGecko 率先提供了超越价格和市值的全面加密指标。\n\n该平台提供详细数据，包括交易量、流动性、开发者活动、社区统计和链上指标。CoinGecko 的信任评分系统帮助用户识别可靠的交易所，其广泛的 API 服务于数百万开发者和应用程序。\n\n与竞争对手不同，CoinGecko 保持独立和自力更生，在排名和数据方面保持客观性。该平台还通过 CoinGecko Learn 提供教育内容，并发布业内广泛使用的季度加密报告。",
+	"features": {
+		"1": {
+			"title": "追踪 15,000+ 代币",
+			"description": "全面覆盖所有主流和小众链上的加密货币"
+		},
+		"2": {
+			"title": "交易所信任评分",
+			"description": "通过流动性、安全性和交易量分析评估交易所可靠性"
+		},
+		"3": {
+			"title": "开发者活动指标",
+			"description": "追踪 GitHub 提交、贡献者和开发进度"
+		},
+		"4": {
+			"title": "链上指标",
+			"description": "访问交易数量、活跃地址和网络统计数据"
+		},
+		"5": {
+			"title": "免费 API 访问",
+			"description": "为开发者和应用程序提供慷慨的免费 API 层级"
+		},
+		"6": {
+			"title": "投资组合追踪器",
+			"description": "追踪你跨钱包的加密持仓和盈亏"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "价格研究",
+			"description": "比较各交易所价格并追踪历史表现"
+		},
+		"2": {
+			"title": "代币发现",
+			"description": "按类别、链或趋势指标发现新代币"
+		},
+		"3": {
+			"title": "交易所选择",
+			"description": "使用信任评分和交易量数据选择可靠交易所"
+		},
+		"4": {
+			"title": "开发者集成",
+			"description": "使用加密价格和市场数据 API 驱动应用程序"
+		},
+		"5": {
+			"title": "市场分析",
+			"description": "研究市场趋势、主导地位和板块表现"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "CoinGecko 是免费的吗？",
+			"answer": "是的，CoinGecko 对普通用户完全免费。该平台提供慷慨的免费 API 层级（最高 30 次调用/分钟）和用于更高限制的高级 API 计划。网站本身没有付费功能——所有价格、市场和代币数据都可免费访问。"
+		},
+		"2": {
+			"question": "CoinGecko 与 CoinMarketCap 有何不同？",
+			"answer": "虽然两者都追踪加密价格，但 CoinGecko 提供更全面的指标，包括开发者活动、社区统计和流动性评分。CoinGecko 保持独立（自力更生），而 CMC 被币安收购。许多用户更喜欢 CoinGecko 在交易所排名和代币上架方面更中立的立场。"
+		},
+		"3": {
+			"question": "CoinGecko 的数据准确吗？",
+			"answer": "CoinGecko 使用 API 从 1,000+ 交易所聚合数据。价格准确性取决于交易所数据质量。对于主要代币，价格高度准确。对于上架交易所较少的小代币，可能存在轻微差异。信任评分有助于识别可靠的数据源。"
+		},
+		"4": {
+			"question": "我可以在我的项目中使用 CoinGecko 的 API 吗？",
+			"answer": "可以。CoinGecko 提供免费 API（30 次调用/分钟）满足基本需求，Demo 层级（500 次调用/分钟），以及用于生产的付费 Pro 计划。API 提供价格数据、市场数据、交易所数据等。文档可在 docs.coingecko.com 获取。"
+		},
+		"5": {
+			"question": "什么是 CoinGecko Candy？",
+			"answer": "CoinGecko Candy 是一个奖励计划，用户通过每日签到获得 'candies'。这些糖果可以兑换 NFT、商品和合作伙伴奖励。这是一个游戏化功能，鼓励每日平台使用——不是加密货币或代币。"
+		}
+	},
+	"cta": {
+		"ready": "准备探索加密市场？",
+		"button": "打开 CoinGecko",
+		"note": "免费加密货币数据平台"
+	}
+}

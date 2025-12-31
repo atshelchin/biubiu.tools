@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Zerion - Web3 Wallet & Portfolio Tracker",
+		"description": "All-in-one crypto wallet and DeFi dashboard. Trade, track, and manage your portfolio across chains with Zerion's smart wallet.",
+		"keywords": "Zerion, Web3 wallet, DeFi portfolio, multi-chain wallet, crypto tracker, smart wallet"
+	},
+	"overview": "Zerion is a Web3 smart wallet and portfolio tracker that combines a non-custodial wallet with comprehensive DeFi dashboard features. Supporting 14+ chains, Zerion provides a unified interface for managing your entire on-chain portfolio.\n\nFounded in 2017 by Evgeny Yurtaev and Alexey Bashlykov, Zerion started as a DeFi dashboard and evolved into a full wallet solution. The Zerion Wallet features smart account capabilities, gasless transactions on supported chains, and built-in swap aggregation.\n\nZerion excels in mobile experience, offering one of the best iOS and Android crypto wallet apps. The platform provides real-time portfolio tracking, detailed transaction history, and native token swapping across chains.",
+	"features": {
+		"1": {
+			"title": "Smart Wallet",
+			"description": "Self-custody wallet with gasless transactions and social recovery"
+		},
+		"2": {
+			"title": "Multi-Chain Support",
+			"description": "Native support for 14+ EVM chains with automatic detection"
+		},
+		"3": {
+			"title": "Portfolio Analytics",
+			"description": "Track performance, P&L, and historical value over time"
+		},
+		"4": {
+			"title": "Built-in DEX Aggregator",
+			"description": "Swap tokens across chains with best rate routing"
+		},
+		"5": {
+			"title": "NFT Gallery",
+			"description": "View and manage NFT collections with metadata"
+		},
+		"6": {
+			"title": "DeFi Position Tracking",
+			"description": "Automatic detection of LP, lending, and staking positions"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Daily Wallet",
+			"description": "Use as primary crypto wallet for transactions and DeFi"
+		},
+		"2": {
+			"title": "Portfolio Tracking",
+			"description": "Monitor all holdings and positions across chains"
+		},
+		"3": {
+			"title": "Token Swapping",
+			"description": "Trade tokens with aggregated best rates"
+		},
+		"4": {
+			"title": "NFT Management",
+			"description": "View, send, and organize NFT collections"
+		},
+		"5": {
+			"title": "DeFi Monitoring",
+			"description": "Track LP positions, yields, and DeFi investments"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Is Zerion Wallet safe?",
+			"answer": "Yes, Zerion Wallet is non-custodial—you control your private keys. The wallet uses industry-standard security practices including encrypted storage and biometric authentication. Zerion never has access to your keys. The wallet has been audited and is used by millions of users."
+		},
+		"2": {
+			"question": "Is Zerion free?",
+			"answer": "Yes, Zerion is free to use for portfolio tracking and wallet features. There's a small fee on swaps (typically 0.5%) which funds development. There are no subscription fees or hidden charges. Premium features are planned but core functionality will remain free."
+		},
+		"3": {
+			"question": "Zerion vs MetaMask: Which should I use?",
+			"answer": "Zerion offers a better user experience with built-in portfolio tracking, native multi-chain support, and superior mobile apps. MetaMask has broader dApp compatibility and is more established. Many users have both—MetaMask for maximum compatibility, Zerion for daily use and portfolio management."
+		},
+		"4": {
+			"question": "Can I import my existing wallet?",
+			"answer": "Yes, you can import existing wallets using seed phrase, private key, or connect hardware wallets (Ledger, Trezor). Zerion will automatically display all your assets and positions. You can also create a new wallet directly in Zerion with secure backup options."
+		},
+		"5": {
+			"question": "Does Zerion have a token?",
+			"answer": "Zerion has DNA rewards for active users but no tradeable token yet. DNA is earned through platform usage and may have future utility. There's no confirmed token launch—be wary of scams claiming to sell Zerion tokens."
+		}
+	},
+	"cta": {
+		"ready": "Ready for a smarter wallet?",
+		"button": "Open Zerion",
+		"note": "Web3 smart wallet"
+	}
+}

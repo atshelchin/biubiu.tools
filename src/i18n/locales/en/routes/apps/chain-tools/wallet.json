@@ -324,6 +324,9 @@
 		},
 		"bitgo_wallet": {
 			"description": "Institutional custody with multi-sig and insurance"
+		},
+		"biubiu_one_to_many": {
+			"description": "Batch transfer to multiple addresses"
 		}
 	}
 }

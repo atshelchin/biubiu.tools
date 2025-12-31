@@ -67,55 +67,55 @@
 			"description": "带有争议机制和质押的无许可预言机"
 		},
 		"blockpi": {
-			"description": "BlockPI - Infrastructure provider"
+			"description": "Multi-chain distributed RPC infrastructure"
 		},
 		"nodereal": {
-			"description": "NodeReal - Infrastructure provider"
+			"description": "BNB Chain RPC and API infrastructure"
 		},
 		"blast_api": {
-			"description": "Blast API - Tool"
+			"description": "Fast decentralized RPC API service"
 		},
 		"tenderly_node": {
-			"description": "Tenderly Node - Tool"
+			"description": "RPC node with simulation infrastructure"
 		},
 		"public_node": {
-			"description": "PublicNode - Tool"
+			"description": "Free public RPC infrastructure service"
 		},
 		"helius_rpc": {
-			"description": "Helius - Tool"
+			"description": "Solana RPC webhooks and API service"
 		},
 		"triton_rpc": {
-			"description": "Triton - Tool"
+			"description": "Solana enterprise RPC and Geyser service"
 		},
 		"syndica_rpc": {
-			"description": "Syndica - Tool"
+			"description": "Solana RPC and Chainstream infrastructure"
 		},
 		"lava_network": {
-			"description": "Lava Network - Tool"
+			"description": "Decentralized multi-chain RPC aggregator"
 		},
 		"erpc_network": {
-			"description": "eRPC - Tool"
+			"description": "Fault-tolerant RPC load balancer with caching"
 		},
 		"thirdweb_rpc": {
-			"description": "thirdweb RPC - Tool"
+			"description": "Free reliable multi-chain RPC service"
 		},
 		"tatum_rpc": {
-			"description": "Tatum - Tool"
+			"description": "Multi-chain API SDK infrastructure platform"
 		},
 		"chainstack_rpc": {
-			"description": "Chainstack - Tool"
+			"description": "Enterprise multi-chain nodes and RPC"
 		},
 		"push_protocol": {
-			"description": "Push Protocol - Tool"
+			"description": "Web3-native messaging and notifications"
 		},
 		"xmtp": {
-			"description": "XMTP - Tool"
+			"description": "E2E encrypted wallet-to-wallet messaging"
 		},
 		"flashbots_protect": {
-			"description": "Flashbots Protect - Tool"
+			"description": "MEV protection privacy RPC service"
 		},
 		"mev_blocker": {
-			"description": "MEV Blocker - Tool"
+			"description": "MEV protection RPC with rebates"
 		}
 	}
 }

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Hardhat - Ethereum Development Framework | Smart Contract Development",
+		"description": "Explore Hardhat, the leading JavaScript/TypeScript Ethereum development framework. Build, test, and debug smart contracts with local blockchain, plugins, and powerful developer tools.",
+		"keywords": "Hardhat, Ethereum development, smart contract testing, Hardhat Network, blockchain development, Solidity, JavaScript, TypeScript"
+	},
+	"overview": "Hardhat is a professional Ethereum development environment built for JavaScript and TypeScript developers. Created by Nomic Foundation in 2019, it has become the industry standard for smart contract development, used by major protocols including Uniswap, Aave, Compound, and OpenSea.\n\nHardhat provides a complete local blockchain (Hardhat Network) that simulates Ethereum, allowing developers to deploy contracts, run tests, and debug code without spending real ETH. The framework includes console.log debugging for Solidity—a revolutionary feature that brings traditional debugging to smart contracts. Its extensive plugin ecosystem adds features like gas reporting, contract verification, and integration with testing frameworks.\n\nThe platform excels at mainnet forking, allowing developers to test against real blockchain state locally. This is crucial for DeFi development where contracts interact with existing protocols. Hardhat's TypeScript support, strong testing capabilities, and excellent documentation make it the first choice for professional teams. The framework is battle-tested, powering billions of dollars in deployed smart contracts.",
+	"features": {
+		"1": {
+			"title": "Hardhat Network",
+			"description": "Built-in local blockchain with EVM simulation, perfect for development and testing"
+		},
+		"2": {
+			"title": "TypeScript Support",
+			"description": "First-class TypeScript integration for type-safe smart contract development"
+		},
+		"3": {
+			"title": "Plugin Ecosystem",
+			"description": "Extensive plugin system for gas reporting, verification, deployments, and more"
+		},
+		"4": {
+			"title": "Console.log Debugging",
+			"description": "Revolutionary console.log support in Solidity for easier debugging"
+		},
+		"5": {
+			"title": "Mainnet Forking",
+			"description": "Fork Ethereum mainnet locally to test against real blockchain state"
+		},
+		"6": {
+			"title": "Gas Reporting",
+			"description": "Detailed gas usage reports to optimize smart contract efficiency"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Smart Contract Development",
+			"description": "Build and compile Solidity contracts with powerful development tools"
+		},
+		"2": {
+			"title": "Testing",
+			"description": "Write comprehensive test suites using JavaScript/TypeScript and Mocha/Chai"
+		},
+		"3": {
+			"title": "Local Development",
+			"description": "Develop and iterate quickly with local blockchain and instant feedback"
+		},
+		"4": {
+			"title": "Mainnet Forking",
+			"description": "Test DeFi integrations by forking mainnet state for realistic testing"
+		},
+		"5": {
+			"title": "CI/CD Integration",
+			"description": "Integrate automated testing and deployment into continuous integration pipelines"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Hardhat and why is it popular?",
+			"answer": "Hardhat is an Ethereum development framework for JavaScript/TypeScript developers. It's popular because it provides a complete development environment: local blockchain (Hardhat Network), testing framework, deployment tools, and a powerful plugin ecosystem. Unlike older tools, Hardhat offers console.log debugging in Solidity, making smart contract debugging much easier. It's used by most major DeFi protocols and has become the industry standard."
+		},
+		"2": {
+			"question": "Hardhat vs Foundry - which should I use?",
+			"answer": "Hardhat uses JavaScript/TypeScript for tests and scripts, making it familiar for web developers. It has a larger plugin ecosystem and better documentation. Foundry uses Solidity for tests, is much faster, and appeals to developers who prefer writing everything in one language. Choose Hardhat if you're comfortable with JS/TS and want extensive tooling. Choose Foundry if you prioritize speed and want to write tests in Solidity."
+		},
+		"3": {
+			"question": "How do I use Hardhat plugins?",
+			"answer": "Install plugins via npm (e.g., 'npm install --save-dev @nomicfoundation/hardhat-ethers'), then import them in hardhat.config.js with 'require(\"@nomicfoundation/hardhat-ethers\")'. Popular plugins include hardhat-ethers (ethers.js integration), hardhat-gas-reporter (gas analysis), hardhat-contract-sizer (contract size checking), and @nomicfoundation/hardhat-verify (contract verification). The plugin system extends Hardhat's capabilities extensively."
+		},
+		"4": {
+			"question": "What is Hardhat Network and how does it work?",
+			"answer": "Hardhat Network is a local Ethereum network designed for development, bundled with Hardhat. It runs on your machine, simulates the EVM, and provides instant mining (no waiting for blocks). You can fork mainnet to test against real state, use console.log in Solidity, and get detailed error messages. It's much faster than testnets and doesn't require real ETH, making it perfect for rapid development and testing."
+		},
+		"5": {
+			"question": "How do I debug smart contracts with Hardhat?",
+			"answer": "Hardhat revolutionized debugging with console.log support in Solidity. Import 'hardhat/console.sol' in your contract and use console.log() like in JavaScript. Hardhat also provides detailed stack traces for failed transactions, showing exactly where and why errors occurred. For deeper debugging, use Hardhat's built-in debugger or integrate with tools like Tenderly for transaction simulation and debugging."
+		}
+	},
+	"cta": {
+		"ready": "Ready to build on Ethereum?",
+		"button": "Open Hardhat Docs",
+		"note": "Industry standard development framework"
+	}
+}

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Tenderly - Web3 Development Platform | Transaction Debugging & Simulation",
+		"description": "Explore Tenderly, the all-in-one Web3 development platform. Debug transactions, simulate smart contracts, monitor protocols, and automate actions with Virtual TestNets.",
+		"keywords": "Tenderly, Web3 development, transaction debugging, smart contract simulation, Virtual TestNets, blockchain monitoring, Web3 Actions"
+	},
+	"overview": "Tenderly is the all-in-one Web3 development platform that revolutionizes how developers build, test, and monitor blockchain applications. Founded in 2018, Tenderly has become essential infrastructure for major protocols including Aave, Compound, Chainlink, and The Graph.\n\nThe platform's Transaction Simulator allows developers to preview transaction outcomes before sending them on-chain, catching errors and estimating gas costs. The advanced Debugger provides visual stack traces, state changes, and gas profiling for failed transactions—making it trivial to diagnose issues that would otherwise take hours. Virtual TestNets offer unlimited forks of mainnet with instant mining, perfect for testing complex DeFi integrations without spending real funds.\n\nTenderly's Monitoring & Alerts system tracks smart contracts in real-time, sending notifications via email, Slack, or Discord when specific events occur. Web3 Actions enables serverless functions that respond to on-chain events, allowing developers to automate complex workflows like liquidations, arbitrage, or governance participation. The platform supports all major EVM chains and processes millions of transactions daily, providing production-grade infrastructure for Web3 teams.",
+	"features": {
+		"1": {
+			"title": "Transaction Simulator",
+			"description": "Preview transaction outcomes, state changes, and gas costs before sending on-chain"
+		},
+		"2": {
+			"title": "Debugger",
+			"description": "Visual debugging with stack traces, state changes, and detailed gas profiling"
+		},
+		"3": {
+			"title": "Virtual TestNets",
+			"description": "Unlimited mainnet forks with instant mining for realistic testing environments"
+		},
+		"4": {
+			"title": "Monitoring & Alerts",
+			"description": "Real-time smart contract monitoring with customizable alerts via email, Slack, Discord"
+		},
+		"5": {
+			"title": "Web3 Actions",
+			"description": "Serverless functions that respond to on-chain events for workflow automation"
+		},
+		"6": {
+			"title": "Fork Mainnet",
+			"description": "Clone production state locally or in cloud to test against real protocol data"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Debug Failed Transactions",
+			"description": "Diagnose why transactions fail with visual stack traces and state inspection"
+		},
+		"2": {
+			"title": "Simulate Before Sending",
+			"description": "Test transaction outcomes and gas costs before broadcasting to mainnet"
+		},
+		"3": {
+			"title": "Monitor Protocols",
+			"description": "Track smart contract events and get instant alerts for critical changes"
+		},
+		"4": {
+			"title": "Automate Actions",
+			"description": "Build serverless bots for liquidations, arbitrage, or governance automation"
+		},
+		"5": {
+			"title": "Test on Forks",
+			"description": "Develop and test against real mainnet state without spending actual ETH"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Tenderly and why is it essential for Web3 development?",
+			"answer": "Tenderly is a development platform that solves blockchain's debugging problem. Unlike traditional software, smart contracts are deployed to an immutable blockchain where errors can't be easily debugged. Tenderly provides transaction simulation, visual debugging, monitoring, and testing infrastructure. It's essential because it dramatically reduces development time—what might take hours to debug manually takes minutes with Tenderly's visual tools."
+		},
+		"2": {
+			"question": "What is transaction simulation and how does it work?",
+			"answer": "Transaction simulation runs your transaction against a fork of the current blockchain state without actually broadcasting it. Tenderly executes the transaction, shows you exactly what will happen (state changes, events, gas costs), and whether it will succeed or fail. This is crucial for complex DeFi operations where you want to verify outcomes before spending real gas. You can simulate any transaction using Tenderly's Simulator before sending it."
+		},
+		"3": {
+			"question": "What are Virtual TestNets and how do they differ from public testnets?",
+			"answer": "Virtual TestNets are private forks of mainnet that you can spawn instantly. Unlike public testnets (Goerli, Sepolia), Virtual TestNets have real mainnet state and data—perfect for testing DeFi integrations. They offer unlimited ETH, instant mining (no waiting for blocks), and complete control. Public testnets have unreliable faucets and different state; Virtual TestNets let you test against production data risk-free."
+		},
+		"4": {
+			"question": "How does Tenderly debugging work for failed transactions?",
+			"answer": "When a transaction fails, Tenderly's Debugger shows a visual stack trace of exactly where it failed and why. You can step through each function call, see state changes at each step, inspect variables, and understand gas usage. It highlights the exact line in your Solidity code that caused the revert. This is far superior to cryptic revert messages on block explorers."
+		},
+		"5": {
+			"question": "Is Tenderly free or paid? What are the pricing tiers?",
+			"answer": "Tenderly offers a free tier with essential features: debugging public transactions, limited simulations, and basic monitoring. Paid plans (Developer, Team, Enterprise) provide higher simulation limits, Virtual TestNets, Web3 Actions, collaboration features, and priority support. Many indie developers use the free tier; teams building production dApps typically need paid plans for Virtual TestNets and automation."
+		}
+	},
+	"cta": {
+		"ready": "Ready to supercharge your Web3 development?",
+		"button": "Open Tenderly",
+		"note": "All-in-one development platform for Web3"
+	}
+}

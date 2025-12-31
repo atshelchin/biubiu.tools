@@ -272,4 +272,175 @@ describe('Chain Tools i18n Completeness', () => {
 
 		expect(true).toBe(true);
 	});
+
+	it('should check translations against English baseline and generate report', () => {
+		const OTHER_LANGUAGES = LANGUAGES.filter((l) => l !== BASE_LANG);
+		const missingFromEnglish: Array<{
+			language: string;
+			file: string;
+			key: string;
+			parentKey?: string;
+		}> = [];
+
+		// Get all English JSON files in chain-tools directory
+		const enChainToolsDir = path.join(LOCALES_DIR, BASE_LANG, CHAIN_TOOLS_I18N_PATH);
+
+		if (!fs.existsSync(enChainToolsDir)) {
+			console.log('English chain-tools directory not found');
+			expect(true).toBe(true);
+			return;
+		}
+
+		/**
+		 * Recursively get all keys from an object with their paths
+		 */
+		function getAllKeys(obj: unknown, prefix = ''): string[] {
+			const keys: string[] = [];
+			if (obj && typeof obj === 'object' && !Array.isArray(obj)) {
+				for (const [key, value] of Object.entries(obj)) {
+					const fullKey = prefix ? `${prefix}.${key}` : key;
+					keys.push(fullKey);
+					if (value && typeof value === 'object' && !Array.isArray(value)) {
+						keys.push(...getAllKeys(value, fullKey));
+					}
+				}
+			}
+			return keys;
+		}
+
+		/**
+		 * Recursively scan directory for JSON files
+		 */
+		function scanDirectory(dir: string, relativePath = ''): string[] {
+			const files: string[] = [];
+			const entries = fs.readdirSync(dir, { withFileTypes: true });
+
+			for (const entry of entries) {
+				const entryRelPath = relativePath ? `${relativePath}/${entry.name}` : entry.name;
+				if (entry.isDirectory()) {
+					files.push(...scanDirectory(path.join(dir, entry.name), entryRelPath));
+				} else if (entry.name.endsWith('.json')) {
+					files.push(entryRelPath);
+				}
+			}
+			return files;
+		}
+
+		// Get all JSON files from English directory
+		const enJsonFiles = scanDirectory(enChainToolsDir);
+
+		for (const jsonFile of enJsonFiles) {
+			const enFilePath = path.join(enChainToolsDir, jsonFile);
+
+			let enContent: Record<string, unknown>;
+			try {
+				enContent = JSON.parse(fs.readFileSync(enFilePath, 'utf-8'));
+			} catch {
+				console.log(`Failed to parse English file: ${jsonFile}`);
+				continue;
+			}
+
+			const enKeys = getAllKeys(enContent);
+
+			// Check each other language
+			for (const lang of OTHER_LANGUAGES) {
+				const langFilePath = path.join(LOCALES_DIR, lang, CHAIN_TOOLS_I18N_PATH, jsonFile);
+
+				if (!fs.existsSync(langFilePath)) {
+					// Entire file is missing
+					missingFromEnglish.push({
+						language: lang,
+						file: jsonFile,
+						key: '*',
+						parentKey: 'FILE_MISSING'
+					});
+					continue;
+				}
+
+				let langContent: Record<string, unknown>;
+				try {
+					langContent = JSON.parse(fs.readFileSync(langFilePath, 'utf-8'));
+				} catch {
+					missingFromEnglish.push({
+						language: lang,
+						file: jsonFile,
+						key: '*',
+						parentKey: 'PARSE_ERROR'
+					});
+					continue;
+				}
+
+				const langKeys = new Set(getAllKeys(langContent));
+
+				// Find keys in English but not in this language
+				for (const enKey of enKeys) {
+					if (!langKeys.has(enKey)) {
+						missingFromEnglish.push({
+							language: lang,
+							file: jsonFile,
+							key: enKey
+						});
+					}
+				}
+			}
+		}
+
+		// Sort by language, then file, then key
+		missingFromEnglish.sort((a, b) => {
+			if (a.language !== b.language) return a.language.localeCompare(b.language);
+			if (a.file !== b.file) return a.file.localeCompare(b.file);
+			return a.key.localeCompare(b.key);
+		});
+
+		// Generate report
+		const reportLines = missingFromEnglish.map((m) => {
+			if (m.parentKey === 'FILE_MISSING') {
+				return `${m.language}\t${m.file}\t[FILE_MISSING]`;
+			} else if (m.parentKey === 'PARSE_ERROR') {
+				return `${m.language}\t${m.file}\t[PARSE_ERROR]`;
+			}
+			return `${m.language}\t${m.file}\t${m.key}`;
+		});
+
+		// Write to file
+		const reportPath = path.resolve(__dirname, '../../..', 'i18n-vs-english-report.txt');
+		const header = `# i18n Missing Keys vs English Baseline
+# Generated: ${new Date().toISOString()}
+# Base language: ${BASE_LANG}
+# Checked languages: ${OTHER_LANGUAGES.join(', ')}
+# Total missing: ${missingFromEnglish.length}
+# Format: language\\tfile\\tkey
+#
+`;
+		fs.writeFileSync(reportPath, header + reportLines.join('\n') + '\n');
+
+		// Print summary
+		console.log(`\n=== i18n vs English Baseline Report ===`);
+		console.log(`File: ${reportPath}`);
+		console.log(`Total missing keys: ${missingFromEnglish.length}`);
+
+		// Summary by language
+		const byLang: Record<string, number> = {};
+		for (const m of missingFromEnglish) {
+			byLang[m.language] = (byLang[m.language] || 0) + 1;
+		}
+
+		console.log(`\nBy language:`);
+		for (const [lang, count] of Object.entries(byLang).sort((a, b) => b[1] - a[1])) {
+			console.log(`  ${lang}: ${count} missing`);
+		}
+
+		// Preview first 30 lines
+		if (reportLines.length > 0) {
+			console.log(`\nPreview (first 30 entries):`);
+			console.log('language\tfile\tkey');
+			console.log('--------\t----\t---');
+			reportLines.slice(0, 30).forEach((line) => console.log(line));
+			if (reportLines.length > 30) {
+				console.log(`... and ${reportLines.length - 30} more (see ${reportPath})`);
+			}
+		}
+
+		expect(true).toBe(true);
+	});
 });

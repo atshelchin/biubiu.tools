@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Rabby Wallet - Security-First DeFi Browser Wallet",
+		"description": "The smoothest DeFi wallet with transaction pre-signing and security alerts. Built by DeBank for safe DeFi interactions.",
+		"keywords": "Rabby Wallet, DeFi wallet, transaction security, browser wallet, DeBank, crypto wallet"
+	},
+	"overview": "Rabby is a security-focused browser wallet designed specifically for DeFi users. Built by the DeBank team, Rabby prioritizes transaction safety with features like pre-signing previews, phishing detection, and risk alerts.\n\nUnlike traditional wallets, Rabby shows you exactly what will happen before you sign. The wallet simulates transactions and displays asset changes, helping users avoid scams and mistakes. It also auto-detects the correct chain, eliminating wrong-network errors.\n\nRabby supports multi-chain DeFi with seamless switching between networks. The wallet integrates with hardware wallets (Ledger, Trezor, GridPlus) and offers full EVM chain coverage. Its open-source codebase allows community verification of security practices.",
+	"features": {
+		"1": {
+			"title": "Transaction Pre-Signing",
+			"description": "Preview exact asset changes before signing any transaction"
+		},
+		"2": {
+			"title": "Scam Detection",
+			"description": "Automatic alerts for phishing sites and risky contracts"
+		},
+		"3": {
+			"title": "Auto Chain Detection",
+			"description": "Automatically switch to the correct network for dApps"
+		},
+		"4": {
+			"title": "Risk Assessment",
+			"description": "Contract risk scores based on audits, age, and history"
+		},
+		"5": {
+			"title": "Hardware Wallet Support",
+			"description": "Native support for Ledger, Trezor, and GridPlus"
+		},
+		"6": {
+			"title": "Multi-Wallet Management",
+			"description": "Manage multiple wallets and addresses in one interface"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Safe DeFi Trading",
+			"description": "Interact with DeFi protocols with transaction previews"
+		},
+		"2": {
+			"title": "Phishing Protection",
+			"description": "Avoid scam sites with automatic detection and warnings"
+		},
+		"3": {
+			"title": "Multi-Chain DeFi",
+			"description": "Switch between chains seamlessly for cross-chain DeFi"
+		},
+		"4": {
+			"title": "NFT Minting",
+			"description": "Safely mint NFTs with contract risk assessments"
+		},
+		"5": {
+			"title": "Hardware Wallet Use",
+			"description": "Use cold storage with full DeFi compatibility"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Is Rabby safe to use?",
+			"answer": "Yes, Rabby is one of the safest browser wallets available. It's built by DeBank, a reputable team, and is fully open source. The transaction pre-signing feature actually makes it safer than most wallets—you see exactly what you're signing before approval. It's been audited and used by millions of DeFi users."
+		},
+		"2": {
+			"question": "Rabby vs MetaMask: Which is better?",
+			"answer": "Rabby offers superior security features (pre-signing, scam detection) and auto-chain switching. MetaMask has broader dApp compatibility and mobile apps. Many DeFi power users prefer Rabby for its safety features while keeping MetaMask as backup. Both can be installed simultaneously."
+		},
+		"3": {
+			"question": "Is Rabby free?",
+			"answer": "Yes, Rabby is completely free with no fees or premium tiers. The wallet is funded by DeBank and serves as a way to bring users into the DeBank ecosystem. There are no hidden charges or transaction fees beyond standard network gas."
+		},
+		"4": {
+			"question": "Can I import my MetaMask wallet?",
+			"answer": "Yes, you can import your MetaMask wallet using your seed phrase or private key. Rabby will recognize all your accounts and assets. You can use both wallets simultaneously with the same addresses—they don't conflict."
+		},
+		"5": {
+			"question": "What makes Rabby's transaction preview special?",
+			"answer": "Unlike MetaMask which shows raw transaction data, Rabby simulates the transaction and shows you exactly what tokens will leave and enter your wallet. This catches approval scams, wrong amounts, and contract issues before you sign. It's like seeing the future of your transaction."
+		}
+	},
+	"cta": {
+		"ready": "Ready for safer DeFi?",
+		"button": "Install Rabby",
+		"note": "Security-first browser wallet"
+	}
+}

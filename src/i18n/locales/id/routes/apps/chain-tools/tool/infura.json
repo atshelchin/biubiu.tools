@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Infura - Ethereum & Multi-Chain Node Infrastructure | Web3 APIs",
+		"description": "Explore Infura, the original Ethereum node infrastructure provider. Powers MetaMask and thousands of dApps with reliable RPC access and IPFS hosting.",
+		"keywords": "Infura, Ethereum API, blockchain node, MetaMask infrastructure, IPFS gateway, Web3 RPC, multi-chain API"
+	},
+	"overview": "Infura is the original Ethereum node infrastructure provider, founded in 2016 as one of the first services to eliminate the need for developers to run their own blockchain nodes. Now a ConsenSys product, Infura powers MetaMask—the world's most popular Web3 wallet—and thousands of other dApps across the ecosystem.\n\nThe platform provides reliable RPC access to Ethereum, Polygon, Arbitrum, Optimism, and other major chains. Beyond basic node access, Infura offers IPFS gateway services for decentralized storage, archive data access for historical blockchain queries, and enterprise-grade SLAs. With 99.9% uptime and global infrastructure, Infura processes billions of requests daily.\n\nAs part of ConsenSys, Infura integrates seamlessly with MetaMask and other ConsenSys products. The platform pioneered the blockchain-as-a-service model that most Web3 developers now take for granted. Their free tier supports indie developers while enterprise plans serve major protocols and institutions. Infura's infrastructure has been battle-tested through multiple bull markets and network upgrades, making it one of the most trusted providers in the space.",
+	"features": {
+		"1": {
+			"title": "Ethereum RPC",
+			"description": "Original and most reliable Ethereum node access with archive data support"
+		},
+		"2": {
+			"title": "Multi-Chain Support",
+			"description": "RPC access to Ethereum, Polygon, Arbitrum, Optimism, and other major chains"
+		},
+		"3": {
+			"title": "IPFS Gateway",
+			"description": "Decentralized storage access with reliable IPFS pinning and retrieval"
+		},
+		"4": {
+			"title": "Archive Data",
+			"description": "Full historical blockchain data access for complex queries and analysis"
+		},
+		"5": {
+			"title": "High Availability",
+			"description": "99.9% uptime SLA with global infrastructure and automatic failover"
+		},
+		"6": {
+			"title": "MetaMask Integration",
+			"description": "Native integration with MetaMask and seamless ConsenSys ecosystem compatibility"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "dApp Backend",
+			"description": "Power decentralized applications with reliable blockchain data access"
+		},
+		"2": {
+			"title": "Smart Contract Interaction",
+			"description": "Read and write blockchain data for contract-based applications"
+		},
+		"3": {
+			"title": "IPFS Hosting",
+			"description": "Store and retrieve decentralized content for NFTs and Web3 apps"
+		},
+		"4": {
+			"title": "Enterprise Infrastructure",
+			"description": "Build production blockchain services with enterprise SLAs and support"
+		},
+		"5": {
+			"title": "Wallet Backends",
+			"description": "Provide blockchain access for wallet applications and browser extensions"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Infura and why is it important?",
+			"answer": "Infura is the original blockchain node infrastructure provider, founded in 2016 to eliminate the need for developers to run their own Ethereum nodes. Running nodes requires significant resources (storage, bandwidth, DevOps). Infura pioneered the blockchain-as-a-service model that made Web3 development accessible. It now powers MetaMask and thousands of dApps, processing billions of requests daily."
+		},
+		"2": {
+			"question": "How is Infura related to MetaMask?",
+			"answer": "Both Infura and MetaMask are ConsenSys products. MetaMask uses Infura as its default RPC provider, meaning most MetaMask users connect to Ethereum through Infura's infrastructure. This integration provides MetaMask users with reliable node access without requiring them to run their own nodes. Developers can also use Infura directly for their dApps."
+		},
+		"3": {
+			"question": "Which chains does Infura support?",
+			"answer": "Infura supports Ethereum (mainnet and testnets), Polygon, Arbitrum, Optimism, Palm, Filecoin, and other major chains. Each chain includes full RPC access, and Ethereum includes archive node capabilities for historical queries. They also provide IPFS gateway services for decentralized storage. Check their documentation for the complete list of supported networks."
+		},
+		"4": {
+			"question": "What are Infura's free tier limits?",
+			"answer": "Infura offers a free tier with 100,000 requests per day (3 million per month) and 10 requests per second. This is generous for indie projects and testing. Paid plans (Developer, Team, Growth, Enterprise) provide higher limits, dedicated support, and SLA guarantees. Many projects start free and upgrade as they scale."
+		},
+		"5": {
+			"question": "How does Infura compare to Alchemy?",
+			"answer": "Both provide reliable node infrastructure with similar core features. Infura pioneered the space (2016) and powers MetaMask, giving it broader user reach. Alchemy (2017) focuses more on developer experience with enhanced APIs, SDKs, and tools. Infura emphasizes stability and ConsenSys ecosystem integration. Both are trusted by major projects; choice often depends on specific features needed and existing tooling."
+		}
+	},
+	"cta": {
+		"ready": "Ready to build with Infura?",
+		"button": "Open Infura",
+		"note": "The original Ethereum infrastructure provider"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Rabby 钱包 - 安全至上的 DeFi 浏览器钱包",
+		"description": "具有交易预签名和安全警报的最流畅 DeFi 钱包。由 DeBank 打造，实现安全的 DeFi 交互。",
+		"keywords": "Rabby 钱包, DeFi 钱包, 交易安全, 浏览器钱包, DeBank, 加密钱包"
+	},
+	"overview": "Rabby 是一款专为 DeFi 用户设计的安全至上的浏览器钱包。由 DeBank 团队打造，Rabby 优先考虑交易安全，具有预签名预览、钓鱼检测和风险警报等功能。\n\n与传统钱包不同，Rabby 在你签名之前就显示将会发生什么。钱包模拟交易并显示资产变化，帮助用户避免骗局和错误。它还自动检测正确的链，消除错误网络错误。\n\nRabby 支持多链 DeFi，可在网络之间无缝切换。钱包与硬件钱包（Ledger、Trezor、GridPlus）集成，提供完整的 EVM 链覆盖。其开源代码库允许社区验证安全实践。",
+	"features": {
+		"1": {
+			"title": "交易预签名",
+			"description": "在签署任何交易之前预览确切的资产变化"
+		},
+		"2": {
+			"title": "骗局检测",
+			"description": "自动警报钓鱼网站和风险合约"
+		},
+		"3": {
+			"title": "自动链检测",
+			"description": "自动切换到 dApp 的正确网络"
+		},
+		"4": {
+			"title": "风险评估",
+			"description": "基于审计、年龄和历史的合约风险评分"
+		},
+		"5": {
+			"title": "硬件钱包支持",
+			"description": "原生支持 Ledger、Trezor 和 GridPlus"
+		},
+		"6": {
+			"title": "多钱包管理",
+			"description": "在一个界面中管理多个钱包和地址"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "安全 DeFi 交易",
+			"description": "通过交易预览与 DeFi 协议交互"
+		},
+		"2": {
+			"title": "钓鱼防护",
+			"description": "通过自动检测和警告避免诈骗网站"
+		},
+		"3": {
+			"title": "多链 DeFi",
+			"description": "无缝切换链进行跨链 DeFi"
+		},
+		"4": {
+			"title": "NFT 铸造",
+			"description": "通过合约风险评估安全铸造 NFT"
+		},
+		"5": {
+			"title": "硬件钱包使用",
+			"description": "使用冷存储并保持完整的 DeFi 兼容性"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "使用 Rabby 安全吗？",
+			"answer": "是的，Rabby 是现有最安全的浏览器钱包之一。它由信誉良好的 DeBank 团队打造，完全开源。交易预签名功能实际上使它比大多数钱包更安全——你在批准之前就能看到你正在签署什么。它已通过审计，被数百万 DeFi 用户使用。"
+		},
+		"2": {
+			"question": "Rabby vs MetaMask：哪个更好？",
+			"answer": "Rabby 提供卓越的安全功能（预签名、骗局检测）和自动链切换。MetaMask 有更广泛的 dApp 兼容性和移动应用。许多 DeFi 高级用户因其安全功能更喜欢 Rabby，同时保留 MetaMask 作为备用。两者可以同时安装。"
+		},
+		"3": {
+			"question": "Rabby 是免费的吗？",
+			"answer": "是的，Rabby 完全免费，没有费用或高级层级。钱包由 DeBank 资助，作为将用户引入 DeBank 生态系统的方式。除了标准网络 Gas 外，没有隐藏收费或交易费用。"
+		},
+		"4": {
+			"question": "我可以导入我的 MetaMask 钱包吗？",
+			"answer": "可以，你可以使用助记词或私钥导入你的 MetaMask 钱包。Rabby 将识别你所有的账户和资产。你可以同时使用两个钱包和相同的地址——它们不冲突。"
+		},
+		"5": {
+			"question": "Rabby 的交易预览有什么特别之处？",
+			"answer": "与显示原始交易数据的 MetaMask 不同，Rabby 模拟交易并准确显示哪些代币将离开和进入你的钱包。这在签名之前捕获授权骗局、错误金额和合约问题。就像看到你交易的未来。"
+		}
+	},
+	"cta": {
+		"ready": "准备更安全的 DeFi？",
+		"button": "安装 Rabby",
+		"note": "安全至上的浏览器钱包"
+	}
+}

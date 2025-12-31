@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Zapper - DeFi 投资组合仪表板与 NFT 追踪器",
+		"description": "使用 Zapper 管理你的 DeFi 投资组合。在一个统一的仪表板中追踪 30+ 链上的代币、NFT 和 DeFi 仓位。",
+		"keywords": "Zapper, DeFi 仪表板, 投资组合追踪器, NFT 追踪器, 多链, Web3"
+	},
+	"overview": "Zapper 是领先的 Web3 投资组合管理平台，将你的整个链上资产聚合到一个仪表板中。支持 30+ 链，Zapper 自动检测并显示代币、NFT、DeFi 仓位和交易历史。\n\n2019 年通过 DeFiZap 和 DeFiSnap 合并成立，Zapper 率先提出了用单笔交易 'zap' 进入复杂 DeFi 仓位的概念。该平台已发展成为一个全面的 Web3 社交层，允许用户关注钱包、分享投资组合并通过任务获得奖励。\n\nZapper 服务于从初学者到专业交易者的数百万用户。该平台通过 XP、季节性奖励和 NFT 空投使 DeFi 游戏化。其 Zapper 协议在支持的链上实现无 Gas 交易和改进的用户体验。",
+	"features": {
+		"1": {
+			"title": "多链追踪",
+			"description": "自动聚合 30+ EVM 链上的投资组合"
+		},
+		"2": {
+			"title": "DeFi 仓位检测",
+			"description": "识别并估值跨协议的 LP 仓位、借贷、质押"
+		},
+		"3": {
+			"title": "NFT 投资组合",
+			"description": "显示和估值 NFT 收藏品，追踪地板价"
+		},
+		"4": {
+			"title": "社交功能",
+			"description": "关注钱包、分享投资组合，发现他人持仓"
+		},
+		"5": {
+			"title": "任务系统",
+			"description": "完成链上任务赚取 XP 和季节性奖励"
+		},
+		"6": {
+			"title": "兑换 & 桥接",
+			"description": "在应用内交易代币和跨链桥接资产"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "投资组合追踪",
+			"description": "在一个地方查看所有加密资产和 DeFi 仓位"
+		},
+		"2": {
+			"title": "钱包关注",
+			"description": "关注和分析聪明钱或朋友的钱包"
+		},
+		"3": {
+			"title": "NFT 管理",
+			"description": "追踪 NFT 收藏品、地板价和稀有度"
+		},
+		"4": {
+			"title": "DeFi 发现",
+			"description": "通过趋势发现新协议和机会"
+		},
+		"5": {
+			"title": "交易历史",
+			"description": "查看完整的链上历史用于税务或研究"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "连接钱包到 Zapper 安全吗？",
+			"answer": "是的，当你连接钱包进行查看时，Zapper 只请求只读访问权限。平台从不要求私钥或助记词。对于交易（兑换、桥接），你需要单独签署每笔交易。Zapper 是最受信任的 DeFi 仪表板之一，被数百万人使用。"
+		},
+		"2": {
+			"question": "Zapper 是免费的吗？",
+			"answer": "是的，Zapper 的投资组合追踪、钱包关注和大多数功能都是免费的。兑换和桥接有小额费用（通常 0.5-1%）用于资助开发。可能会引入高级分析等高级功能，但核心功能保持免费。"
+		},
+		"3": {
+			"question": "什么是 Zapper XP？",
+			"answer": "Zapper XP 是平台的游戏化系统。你通过完成任务（链上操作）、每日签到和参与来获得 XP。XP 解锁季节性奖励，包括 NFT 空投和独家功能。这是一种奖励活跃用户并使 DeFi 更有趣的方式。"
+		},
+		"4": {
+			"question": "Zapper 如何检测我的 DeFi 仓位？",
+			"answer": "Zapper 与 300+ DeFi 协议保持集成。当你连接钱包时，它会扫描你的地址跨所有支持的协议，找到 LP 仓位、借贷仓位、质押和其他 DeFi 活动。估值使用当前市场价格计算。"
+		},
+		"5": {
+			"question": "Zapper vs Zerion：哪个更好？",
+			"answer": "两者都是优秀的投资组合仪表板。Zapper 有更好的游戏化（XP、任务）、社交功能和更广泛的协议覆盖。Zerion 有更简洁的移动应用和原生钱包。许多用户两者都有。试试每个，看看你更喜欢哪个界面——两者都提供免费的投资组合追踪。"
+		}
+	},
+	"cta": {
+		"ready": "准备管理你的 Web3 投资组合？",
+		"button": "打开 Zapper",
+		"note": "免费 DeFi 仪表板"
+	}
+}

@@ -25,58 +25,58 @@
 			"description": "First-party oracle with Airnode for direct API data delivery"
 		},
 		"chainlink_data_feeds": {
-			"description": "Chainlink Data Feeds - Tool"
+			"description": "Real-time price feed oracle dashboard"
 		},
 		"pyth_network": {
-			"description": "Pyth Network - Tool"
+			"description": "High-frequency oracle for Solana price feeds"
 		},
 		"pyth_price_feeds": {
-			"description": "Pyth Price Feeds - Tool"
+			"description": "Price feed dashboard and oracle explorer"
 		},
 		"band_protocol": {
-			"description": "Band Protocol - Tool"
+			"description": "Cross-chain oracle on Cosmos with data"
 		},
 		"dia_data": {
-			"description": "DIA Data - Tool"
+			"description": "Open-source oracle with NFT oracle for DeFi"
 		},
 		"tellor": {
-			"description": "Tellor - Tool"
+			"description": "Decentralized permissionless oracle with staking"
 		},
 		"uma_protocol": {
-			"description": "UMA Protocol - Tool"
+			"description": "Optimistic oracle with dispute for synthetics"
 		},
 		"redstone_oracles": {
-			"description": "RedStone Oracles - Tool"
+			"description": "Modular oracle for LSTs and DeFi"
 		},
 		"chronicle_labs": {
-			"description": "Chronicle Labs - Tool"
+			"description": "Scalable oracle by Maker for DeFi"
 		},
 		"umbrella_network": {
-			"description": "Umbrella Network - Tool"
+			"description": "Layer2 scalable oracle for community"
 		},
 		"flux_protocol": {
-			"description": "Flux Protocol - Tool"
+			"description": "Cross-chain oracle for NEAR and scalable"
 		},
 		"supra_oracles": {
-			"description": "Supra Oracles - Tool"
+			"description": "Fast oracle with VRF and DORA"
 		},
 		"chainlink_vrf": {
-			"description": "Chainlink VRF - Tool"
+			"description": "Verifiable randomness for gaming and NFT"
 		},
 		"chainlink_automation": {
-			"description": "Chainlink Automation - Tool"
+			"description": "Smart contract automation keeper with triggers"
 		},
 		"chainlink_ccip": {
-			"description": "Chainlink CCIP - Tool"
+			"description": "Cross-chain messaging and interoperability bridge"
 		},
 		"chainlink_functions": {
-			"description": "Chainlink Functions - Tool"
+			"description": "Serverless API compute for Web2 data"
 		},
 		"defillama_oracles": {
-			"description": "DeFiLlama Oracles - Tool"
+			"description": "Oracle analytics tracking TVS and data"
 		},
 		"oracle_dao": {
-			"description": "Oracle DAO - Tool"
+			"description": "Oracle governance with security and standards"
 		}
 	}
 }

@@ -47,7 +47,9 @@
       "Bash(do echo \"Checking $file...\")",
       "Bash(for file in src/i18n/locales/vi/routes/apps/chain-tools/tool/{aave,1inch,curve,lido,gmx}.json)",
       "Bash(for file in compound maker eigenlayer pendle dydx)",
-      "Bash(do python3 -m json.tool /Users/shelchin/ai-repo2025/biubiu.tools/src/i18n/locales/es/routes/apps/chain-tools/tool/$file.json)"
+      "Bash(do python3 -m json.tool /Users/shelchin/ai-repo2025/biubiu.tools/src/i18n/locales/es/routes/apps/chain-tools/tool/$file.json)",
+      "Bash(do if ! grep -q ^$tool$ /tmp/existing_tools.txt)",
+      "Bash(then echo $tool fi done)"
     ],
     "deny": [],
     "ask": []

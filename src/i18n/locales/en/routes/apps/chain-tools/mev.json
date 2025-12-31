@@ -31,52 +31,52 @@
 			"description": "Single Unified Auction for Value Expression - future of MEV"
 		},
 		"flashbots_protect": {
-			"description": "Flashbots Protect - Tool"
+			"description": "MEV protection with Flashbots private transactions"
 		},
 		"mev_blocker": {
-			"description": "MEV Blocker - Tool"
+			"description": "CoW-powered MEV protection for private transactions"
 		},
 		"cow_mev_protection": {
-			"description": "CoW Protocol MEV Protection - Tool"
+			"description": "Batch auction MEV protection by CoW"
 		},
 		"merkle_private_pool": {
-			"description": "Merkle Private Pool - Tool"
+			"description": "Private pool MEV protection by Merkle"
 		},
 		"flashbots_builder": {
-			"description": "Flashbots Builder - Tool"
+			"description": "Flashbots block builder for PBS infrastructure"
 		},
 		"titan_builder": {
-			"description": "Titan Builder - Tool"
+			"description": "PBS block builder for Ethereum MEV"
 		},
 		"rsync_builder": {
-			"description": "rsync Builder - Tool"
+			"description": "PBS block building infrastructure for MEV"
 		},
 		"flashbots_transparency": {
-			"description": "Flashbots Transparency Dashboard - Tool"
+			"description": "Flashbots MEV analytics and transparency data"
 		},
 		"mev_explore": {
-			"description": "MEV-Explore - Tool"
+			"description": "MEV analytics explorer with transaction data"
 		},
 		"eigenphi_mev": {
-			"description": "EigenPhi MEV - Tool"
+			"description": "MEV analytics tracking for DeFi protocols"
 		},
 		"mev_watch": {
-			"description": "MEV Watch - Tool"
+			"description": "MEV censorship and OFAC compliance analytics"
 		},
 		"mevboost_pics": {
-			"description": "mevboost.pics - Tool"
+			"description": "MEV-Boost analytics and visualization dashboard"
 		},
 		"mev_boost": {
-			"description": "MEV-Boost - Tool"
+			"description": "PBS infrastructure for validators and MEV"
 		},
 		"mev_share": {
-			"description": "MEV-Share - Tool"
+			"description": "MEV redistribution protocol by Flashbots"
 		},
 		"jito_mev": {
-			"description": "Jito MEV - Tool"
+			"description": "Solana MEV infrastructure with tips"
 		},
 		"jito_bundles": {
-			"description": "Jito Bundles - Tool"
+			"description": "Solana MEV bundles for searchers"
 		}
 	}
 }

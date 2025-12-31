@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Revoke.cash - Token Approval Management | Check & Revoke Approvals",
+		"description": "Explore Revoke.cash, the essential tool for managing token approvals. Check and revoke unlimited approvals to protect your crypto assets across multiple chains.",
+		"keywords": "Revoke.cash, token approvals, revoke approvals, approval management, wallet security, crypto security, unlimited approvals, multi-chain"
+	},
+	"overview": "Revoke.cash is a free, open-source tool designed to help users manage token approvals across multiple blockchain networks. Created by independent developer Rosco Kalis in 2021, Revoke.cash has become the go-to solution for checking and revoking risky token approvals that could expose users to asset theft.\n\nWhen you interact with DeFi protocols, you often grant token approvals that allow smart contracts to spend your tokens. Many dApps request unlimited approvals for convenience, meaning they can withdraw any amount at any time. While legitimate protocols won't abuse this, if a protocol gets hacked or turns malicious, attackers can drain approved tokens from your wallet.\n\nRevoke.cash provides a simple interface to view all your active approvals across supported chains, identifies risky unlimited approvals, and allows you to revoke them with one click. The tool shows approval history, risk scores based on contract behavior, and integrates with popular wallets. There's also a browser extension that alerts you to dangerous approval requests in real-time.\n\nWith support for Ethereum, Polygon, BSC, Arbitrum, Optimism, and dozens of other EVM chains, Revoke.cash has become an essential security tool for anyone active in DeFi. Regular approval audits are considered a security best practice, similar to changing passwords periodically.",
+	"features": {
+		"1": {
+			"title": "Approval Management",
+			"description": "View and revoke all token approvals in one place across your wallets"
+		},
+		"2": {
+			"title": "Multi-Chain Support",
+			"description": "Works on 60+ EVM chains including Ethereum, Polygon, BSC, Arbitrum, and more"
+		},
+		"3": {
+			"title": "Approval History",
+			"description": "Track when approvals were granted and identify outdated permissions"
+		},
+		"4": {
+			"title": "Risk Scoring",
+			"description": "Highlights risky approvals based on contract behavior and known exploits"
+		},
+		"5": {
+			"title": "Browser Extension",
+			"description": "Real-time alerts when signing dangerous approval transactions"
+		},
+		"6": {
+			"title": "Free to Use",
+			"description": "Completely free tool with no subscription or hidden fees (you only pay gas)"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Revoke Risky Approvals",
+			"description": "Remove unlimited approvals from old or suspicious contracts"
+		},
+		"2": {
+			"title": "Security Hygiene",
+			"description": "Regularly audit approvals as part of wallet security maintenance"
+		},
+		"3": {
+			"title": "Post-Hack Cleanup",
+			"description": "Immediately revoke all approvals after interacting with a compromised protocol"
+		},
+		"4": {
+			"title": "Approval Monitoring",
+			"description": "Track approval activity and get alerts for new permissions granted"
+		},
+		"5": {
+			"title": "Wallet Security Audit",
+			"description": "Review all permissions before storing significant assets in a wallet"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What are token approvals and why should I revoke them?",
+			"answer": "Token approvals give smart contracts permission to spend your tokens. When you use Uniswap, Aave, etc., you approve the protocol to move tokens on your behalf. Most dApps request unlimited approvals for convenience. This means even after you're done using a protocol, it can still access your tokens. If the protocol gets hacked or turns malicious, attackers can drain approved tokens. Revoking removes these permissions, protecting your assets."
+		},
+		"2": {
+			"question": "How do I use Revoke.cash?",
+			"answer": "Go to revoke.cash, connect your wallet (MetaMask, WalletConnect, etc.), and select the blockchain network. Revoke.cash scans your address and displays all active token approvals. You'll see the spender address, approved token, and allowance amount (often 'Unlimited'). Click 'Revoke' on any approval to remove it. This submits a transaction that resets the approval to zero. You'll pay a small gas fee for each revocation."
+		},
+		"3": {
+			"question": "Which chains does Revoke.cash support?",
+			"answer": "Revoke.cash supports 60+ EVM-compatible chains including Ethereum, Polygon, BSC, Arbitrum, Optimism, Avalanche, Fantom, Gnosis Chain, and many L2s and sidechains. If a chain is EVM-compatible and has a block explorer, it's likely supported. Non-EVM chains like Solana or Bitcoin are not supported as they use different approval mechanisms."
+		},
+		"4": {
+			"question": "Is Revoke.cash free? What are the costs?",
+			"answer": "Revoke.cash is completely free to use—there are no subscription fees or hidden costs. However, revoking approvals requires sending blockchain transactions, so you pay network gas fees. On Ethereum mainnet, gas can be expensive during peak times. Consider revoking on L2s like Arbitrum or Polygon for cheaper fees. The tool itself charges nothing; you're just paying the network."
+		},
+		"5": {
+			"question": "How does Revoke.cash protect my wallet in real-time?",
+			"answer": "The Revoke.cash browser extension monitors approval transactions as you interact with dApps. When you're about to sign a token approval, it analyzes the request and warns you if it's risky (e.g., unlimited approval to an unknown contract). You can approve it anyway or reject based on the warning. This helps prevent granting dangerous permissions in the first place, complementing the main dashboard for revoking existing approvals."
+		}
+	},
+	"cta": {
+		"ready": "Ready to secure your approvals?",
+		"button": "Check Your Approvals",
+		"note": "Free tool for managing token approvals"
+	}
+}

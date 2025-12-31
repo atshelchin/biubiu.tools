@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "DefiLlama - DeFi TVL Analytics & Protocol Comparison",
+		"description": "Track Total Value Locked across all DeFi protocols with DefiLlama. Compare yields, analyze bridges, and explore the complete DeFi ecosystem.",
+		"keywords": "DefiLlama, DeFi TVL, Total Value Locked, DeFi analytics, protocol comparison, yield farming"
+	},
+	"overview": "DefiLlama is the largest DeFi analytics platform, tracking Total Value Locked (TVL) across 2,000+ protocols on 200+ chains. Created by 0xLlama as an open-source project, it has become the industry standard for DeFi data.\n\nThe platform provides comprehensive analytics including protocol TVL, yields, stablecoin stats, bridge flows, and DEX volumes. All data is transparent, with methodology and code publicly available on GitHub. DefiLlama's API is freely accessible, powering countless DeFi applications and dashboards.\n\nWhat sets DefiLlama apart is its commitment to accuracy and neutrality. The team actively maintains adapters for each protocol, ensuring data consistency. The platform accepts no ads or paid listings, maintaining independence through community contributions and grants.",
+	"features": {
+		"1": {
+			"title": "2,000+ Protocols Tracked",
+			"description": "Comprehensive TVL data across DeFi protocols on all major chains"
+		},
+		"2": {
+			"title": "Yield Aggregation",
+			"description": "Compare APY/APR across pools with risk-adjusted rankings"
+		},
+		"3": {
+			"title": "Bridge Analytics",
+			"description": "Track bridge volumes, flows, and security comparisons"
+		},
+		"4": {
+			"title": "DEX Volume Tracking",
+			"description": "Monitor trading volumes across decentralized exchanges"
+		},
+		"5": {
+			"title": "Stablecoin Dashboard",
+			"description": "Analyze stablecoin market caps, flows, and depegging events"
+		},
+		"6": {
+			"title": "Open Source & Free API",
+			"description": "All code and data freely accessible for developers"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Protocol Research",
+			"description": "Compare TVL, growth trends, and chain distribution of protocols"
+		},
+		"2": {
+			"title": "Yield Hunting",
+			"description": "Find best yields across chains with risk-adjusted returns"
+		},
+		"3": {
+			"title": "Chain Analysis",
+			"description": "Track DeFi ecosystem growth across different blockchains"
+		},
+		"4": {
+			"title": "Bridge Selection",
+			"description": "Choose bridges based on volume, fees, and security"
+		},
+		"5": {
+			"title": "Market Intelligence",
+			"description": "Monitor DeFi trends, capital flows, and sector performance"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is TVL and why does it matter?",
+			"answer": "Total Value Locked (TVL) represents the total assets deposited in a DeFi protocol. It's a key metric for measuring protocol adoption and trust. Higher TVL generally indicates more user confidence. However, TVL should be considered alongside other metrics like revenue, users, and security history."
+		},
+		"2": {
+			"question": "Is DefiLlama's data accurate?",
+			"answer": "DefiLlama maintains individual adapters for each protocol, reading data directly from smart contracts. The methodology is open source and auditable. Data accuracy is high for major protocols, though some smaller protocols may have delays. The team actively fixes discrepancies reported by the community."
+		},
+		"3": {
+			"question": "Is DefiLlama free?",
+			"answer": "Yes, completely free. DefiLlama is an open-source public good funded by grants. There are no paid features, no ads, and no paywall. The API is also free and unlimited. This independence allows neutral, unbiased data presentation."
+		},
+		"4": {
+			"question": "How do I add my protocol to DefiLlama?",
+			"answer": "Anyone can add protocols by submitting a PR to the DefiLlama adapters GitHub repo. You need to write a JavaScript adapter that fetches TVL from your smart contracts. The team reviews submissions for accuracy. Instructions are in the repo's README."
+		},
+		"5": {
+			"question": "What is LlamaSwap?",
+			"answer": "LlamaSwap is DefiLlama's DEX aggregator that finds the best swap rates across multiple DEXs. It's completely free with no fees or tokens. The aggregator compares routes from various DEX aggregators to ensure you get the best price for your trades."
+		}
+	},
+	"cta": {
+		"ready": "Ready to explore DeFi analytics?",
+		"button": "Open DefiLlama",
+		"note": "Free open-source DeFi data"
+	}
+}

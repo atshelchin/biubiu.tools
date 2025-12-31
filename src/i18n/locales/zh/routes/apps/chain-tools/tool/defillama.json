@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "DefiLlama - DeFi TVL 分析与协议对比",
+		"description": "使用 DefiLlama 追踪所有 DeFi 协议的总锁仓价值。比较收益、分析桥接，探索完整的 DeFi 生态系统。",
+		"keywords": "DefiLlama, DeFi TVL, 总锁仓价值, DeFi 分析, 协议对比, 收益农场"
+	},
+	"overview": "DefiLlama 是最大的 DeFi 分析平台，追踪 200+ 链上 2,000+ 协议的总锁仓价值（TVL）。由 0xLlama 创建的开源项目，已成为 DeFi 数据的行业标准。\n\n该平台提供全面的分析，包括协议 TVL、收益、稳定币统计、桥接流量和 DEX 交易量。所有数据透明公开，方法论和代码在 GitHub 上公开可用。DefiLlama 的 API 可免费访问，为无数 DeFi 应用程序和仪表板提供支持。\n\nDefiLlama 的独特之处在于其对准确性和中立性的承诺。团队积极维护每个协议的适配器，确保数据一致性。该平台不接受广告或付费上架，通过社区贡献和资助保持独立。",
+	"features": {
+		"1": {
+			"title": "追踪 2,000+ 协议",
+			"description": "所有主要链上 DeFi 协议的全面 TVL 数据"
+		},
+		"2": {
+			"title": "收益聚合",
+			"description": "使用风险调整排名比较各池子的 APY/APR"
+		},
+		"3": {
+			"title": "桥接分析",
+			"description": "追踪桥接交易量、流向和安全对比"
+		},
+		"4": {
+			"title": "DEX 交易量追踪",
+			"description": "监控去中心化交易所的交易量"
+		},
+		"5": {
+			"title": "稳定币仪表板",
+			"description": "分析稳定币市值、流向和脱锚事件"
+		},
+		"6": {
+			"title": "开源 & 免费 API",
+			"description": "所有代码和数据对开发者免费开放"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "协议研究",
+			"description": "比较协议的 TVL、增长趋势和链分布"
+		},
+		"2": {
+			"title": "收益挖掘",
+			"description": "寻找跨链最佳收益和风险调整回报"
+		},
+		"3": {
+			"title": "链分析",
+			"description": "追踪不同区块链上的 DeFi 生态系统增长"
+		},
+		"4": {
+			"title": "桥接选择",
+			"description": "根据交易量、费用和安全性选择桥接"
+		},
+		"5": {
+			"title": "市场情报",
+			"description": "监控 DeFi 趋势、资金流向和板块表现"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 TVL，为什么它很重要？",
+			"answer": "总锁仓价值（TVL）代表存入 DeFi 协议的总资产。它是衡量协议采用率和信任度的关键指标。较高的 TVL 通常表示更多的用户信心。然而，TVL 应与收入、用户和安全历史等其他指标一起考虑。"
+		},
+		"2": {
+			"question": "DefiLlama 的数据准确吗？",
+			"answer": "DefiLlama 为每个协议维护单独的适配器，直接从智能合约读取数据。方法论是开源且可审计的。主要协议的数据准确性很高，尽管一些较小的协议可能存在延迟。团队积极修复社区报告的差异。"
+		},
+		"3": {
+			"question": "DefiLlama 是免费的吗？",
+			"answer": "是的，完全免费。DefiLlama 是一个由资助支持的开源公共产品。没有付费功能、广告或付费墙。API 也是免费且无限制的。这种独立性使得数据展示中立、无偏见。"
+		},
+		"4": {
+			"question": "如何将我的协议添加到 DefiLlama？",
+			"answer": "任何人都可以通过向 DefiLlama 适配器 GitHub 仓库提交 PR 来添加协议。你需要编写一个 JavaScript 适配器，从智能合约获取 TVL。团队会审查提交的准确性。说明在仓库的 README 中。"
+		},
+		"5": {
+			"question": "什么是 LlamaSwap？",
+			"answer": "LlamaSwap 是 DefiLlama 的 DEX 聚合器，在多个 DEX 中找到最佳兑换率。完全免费，无费用或代币。聚合器比较各种 DEX 聚合器的路由，确保你的交易获得最佳价格。"
+		}
+	},
+	"cta": {
+		"ready": "准备探索 DeFi 分析？",
+		"button": "打开 DefiLlama",
+		"note": "免费开源 DeFi 数据"
+	}
+}

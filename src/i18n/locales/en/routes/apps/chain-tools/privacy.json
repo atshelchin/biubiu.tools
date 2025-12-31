@@ -34,49 +34,52 @@
 			"description": "Zero-knowledge protocol for anonymous voting and signaling"
 		},
 		"zcash": {
-			"description": "Zcash - Tool"
+			"description": "Privacy cryptocurrency using zk-SNARKs for shielded transactions"
 		},
 		"secret_network": {
-			"description": "Secret Network - Tool"
+			"description": "Privacy-preserving blockchain with encrypted smart contracts using TEE"
 		},
 		"oasis_network": {
-			"description": "Oasis Network - Tool"
+			"description": "Privacy-enabled blockchain with confidential computing and TEE technology"
 		},
 		"mina_protocol": {
-			"description": "Mina Protocol - Tool"
+			"description": "Succinct blockchain using zero-knowledge proofs with lightweight nodes"
 		},
 		"iron_fish": {
-			"description": "Iron Fish - Tool"
+			"description": "Privacy-focused blockchain with encrypted transactions using zk-SNARKs"
 		},
 		"aztec_connect": {
-			"description": "Aztec - Tool"
+			"description": "Privacy-focused zero-knowledge rollup on Ethereum for DeFi"
 		},
 		"railgun": {
-			"description": "Railgun - Tool"
+			"description": "Privacy protocol enabling shielded DeFi transactions with zk-SNARKs"
 		},
 		"umbra_cash": {
-			"description": "Umbra - Tool"
+			"description": "Stealth address protocol for private payments on Ethereum"
 		},
 		"nocturne": {
-			"description": "Nocturne - Tool"
+			"description": "Privacy-preserving account abstraction protocol using zero-knowledge proofs"
 		},
 		"frame_privacy": {
-			"description": "Frame - Tool"
+			"description": "Privacy-focused desktop wallet with hardware wallet support"
 		},
 		"brave_wallet": {
-			"description": "Brave Wallet - Tool"
+			"description": "Privacy-focused browser integrated wallet supporting multi-chain assets"
 		},
 		"cake_wallet": {
-			"description": "Cake Wallet - Tool"
+			"description": "Privacy-focused mobile wallet for Monero and Bitcoin"
 		},
 		"tornado_cash_classic": {
-			"description": "Privacy Pools - Tool"
+			"description": "Privacy mixer with zero-knowledge proofs and compliance features"
 		},
 		"zk_email": {
-			"description": "ZK Email - Tool"
+			"description": "Zero-knowledge email verification protocol for privacy-preserving proofs"
 		},
 		"worldcoin_privacy": {
-			"description": "World ID - Tool"
+			"description": "Privacy-preserving biometric identity verification using zero-knowledge proofs"
+		},
+		"privacy_pools": {
+			"description": "Privacy-preserving compliance protocol"
 		}
 	}
 }

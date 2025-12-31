@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Arbitrum One - Leading Ethereum L2 Solution | Layer 2 Tool Review",
+		"description": "Discover Arbitrum One, the largest Ethereum Layer 2 by TVL. Learn about optimistic rollups, Nitro upgrade, Stylus VM, ARB governance, and how to scale your dApps efficiently.",
+		"keywords": "Arbitrum, L2, Layer 2, optimistic rollup, Ethereum scaling, ARB token, Nitro, Stylus, Orbit, DeFi"
+	},
+	"overview": "Arbitrum One is the leading Ethereum Layer 2 scaling solution, using optimistic rollup technology to provide faster and cheaper transactions while maintaining Ethereum's security guarantees. Launched in August 2021 by Offchain Labs, Arbitrum has grown to become the largest L2 by Total Value Locked (TVL), hosting a vibrant ecosystem of DeFi protocols, NFT marketplaces, and decentralized applications.\n\nThe platform's Nitro upgrade in August 2022 brought significant improvements to transaction throughput and cost efficiency, using a Go-based architecture that's fully compatible with the Ethereum Virtual Machine (EVM). This means developers can deploy their existing Solidity smart contracts without any modifications, making migration seamless.\n\nArbitrum's ecosystem has expanded beyond just a single chain. The ARB governance token enables community-driven decision making, while Stylus introduces support for smart contracts written in Rust, C++, and other languages. Arbitrum Orbit allows developers to create custom L3 chains with configurable features, perfect for application-specific rollups. With over $10 billion in TVL and hundreds of dApps, Arbitrum has proven itself as the go-to solution for scaling Ethereum applications.",
+	"features": {
+		"1": {
+			"title": "Optimistic Rollup Technology",
+			"description": "Processes transactions off-chain with fraud proofs for security, achieving 10-40x lower gas fees than Ethereum mainnet"
+		},
+		"2": {
+			"title": "Nitro Architecture",
+			"description": "Advanced tech stack built with Go and WebAssembly, delivering superior performance and full EVM compatibility"
+		},
+		"3": {
+			"title": "Stylus Multi-Language Support",
+			"description": "Write smart contracts in Rust, C++, or any language that compiles to WASM, expanding developer possibilities"
+		},
+		"4": {
+			"title": "ARB Token Governance",
+			"description": "Community-driven governance with ARB token holders voting on protocol upgrades and treasury decisions"
+		},
+		"5": {
+			"title": "Arbitrum Orbit for L3 Chains",
+			"description": "Launch your own customizable Layer 3 chain with dedicated throughput and tailored gas tokens"
+		},
+		"6": {
+			"title": "Highest L2 TVL",
+			"description": "Over $10B in Total Value Locked with 400+ dApps including Uniswap, GMX, Aave, and Curve"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi Protocol Scaling",
+			"description": "Deploy or use lending, DEX, and derivatives platforms with dramatically reduced transaction costs"
+		},
+		"2": {
+			"title": "NFT Marketplaces",
+			"description": "Mint, trade, and transfer NFTs at a fraction of Ethereum mainnet costs while maintaining security"
+		},
+		"3": {
+			"title": "Gaming and Metaverse",
+			"description": "Build blockchain games with frequent transactions enabled by Arbitrum's low fees and fast finality"
+		},
+		"4": {
+			"title": "Low-Cost Token Swaps",
+			"description": "Trade tokens on popular DEXs like Uniswap and Camelot with minimal slippage and low fees"
+		},
+		"5": {
+			"title": "dApp Deployment",
+			"description": "Migrate existing Ethereum dApps or build new ones with no code changes required thanks to full EVM compatibility"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Arbitrum One and how does it work?",
+			"answer": "Arbitrum One is an Ethereum Layer 2 using optimistic rollup technology. It bundles transactions off-chain, executes them efficiently, and posts compressed data to Ethereum. Security is maintained through fraud proofs - if someone submits an invalid transaction, validators can challenge it during a dispute period. This approach achieves 10-40x lower fees while inheriting Ethereum's security."
+		},
+		"2": {
+			"question": "How does optimistic rollup differ from other scaling solutions?",
+			"answer": "Optimistic rollups assume transactions are valid by default (hence 'optimistic') and only verify if challenged, unlike ZK-rollups that generate validity proofs for every batch. This makes optimistic rollups easier to implement with full EVM compatibility but requires a withdrawal delay (about 7 days) for security. Arbitrum offers the best of both worlds - EVM compatibility with good performance."
+		},
+		"3": {
+			"question": "What is Stylus and why is it important?",
+			"answer": "Stylus is Arbitrum's groundbreaking feature that allows smart contracts to be written in Rust, C++, or any WebAssembly-compatible language alongside Solidity. This opens blockchain development to millions of developers familiar with traditional programming languages, enables performance optimizations impossible in Solidity, and reduces gas costs by up to 10x for compute-heavy operations."
+		},
+		"4": {
+			"question": "How do I bridge assets to Arbitrum One?",
+			"answer": "You can bridge assets from Ethereum to Arbitrum using the official Arbitrum Bridge (bridge.arbitrum.io) or third-party bridges like Synapse, Hop Protocol, or Across. The official bridge takes about 10-15 minutes for deposits. For withdrawals back to Ethereum, there's a 7-day challenge period for security. Third-party bridges can be faster but may charge higher fees."
+		},
+		"5": {
+			"question": "What is the ARB token used for?",
+			"answer": "ARB is Arbitrum's governance token launched in March 2023. Holders can vote on protocol upgrades, treasury allocation, and ecosystem initiatives through the Arbitrum DAO. While ARB doesn't directly reduce fees, it gives the community control over the protocol's future, including decisions about fee structures, protocol upgrades, and grant programs. The DAO controls a substantial treasury to fund ecosystem growth."
+		}
+	},
+	"cta": {
+		"ready": "Ready to scale on Arbitrum?",
+		"button": "Visit Arbitrum",
+		"note": "10-40x lower fees with Ethereum security"
+	}
+}

@@ -1,0 +1,87 @@
+{
+	"_meta": {
+		"title": "Across Protocol - Fast Intent-Based Cross-Chain Bridge",
+		"description": "Intent-based bridge with 1-2 minute transfers, lowest fees, and UMA oracle security across 15+ chains"
+	},
+	"seo": {
+		"title": "Across Protocol - Fastest Cross-Chain Bridge with Lowest Fees | BIU BIU",
+		"description": "Across Protocol offers intent-based bridging with 1-2 minute transfer times and optimized fees. Bridge assets across Ethereum, Arbitrum, Optimism, Base, zkSync and 10+ more chains securely.",
+		"keywords": "Across Protocol, cross-chain bridge, intent-based bridge, fast bridge, low fee bridge, UMA oracle, L2 bridge, multi-chain bridge, crypto bridge"
+	},
+	"overview": "Across Protocol is an intent-based cross-chain bridge that uses UMA's optimistic oracle for security. It's known for having the fastest bridging times (1-2 minutes) and lowest fees in the industry. The protocol uses a network of relayers who fulfill user intents instantly, then get reimbursed through the optimistic oracle system. This architecture enables fast, capital-efficient bridging across Ethereum, Arbitrum, Optimism, Polygon, Base, zkSync, Linea and over 15 chains.",
+	"features": {
+		"1": {
+			"title": "Lightning Fast Bridging",
+			"description": "Get your assets in 1-2 minutes thanks to the intent-based architecture. Relayers fulfill transfers instantly, making Across the fastest bridge available."
+		},
+		"2": {
+			"title": "Lowest Fees",
+			"description": "Optimized relayer network competition and capital efficiency result in the lowest bridging fees across all major chains."
+		},
+		"3": {
+			"title": "Intent-Based Architecture",
+			"description": "Users express intent to bridge, relayers compete to fulfill it instantly. This separates execution from settlement for maximum speed and efficiency."
+		},
+		"4": {
+			"title": "UMA Oracle Security",
+			"description": "Secured by UMA's optimistic oracle system which verifies all cross-chain transfers. Relayers are incentivized to act honestly or face disputes."
+		},
+		"5": {
+			"title": "Multi-Chain Support",
+			"description": "Bridge across 15+ chains including Ethereum mainnet, Arbitrum, Optimism, Polygon, Base, zkSync, Linea, Scroll and more."
+		},
+		"6": {
+			"title": "Professional Relayer Network",
+			"description": "Network of professional relayers ensure liquidity and fast fulfillment 24/7 across all supported chains."
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Fast Cross-Chain Transfers",
+			"description": "Move assets between chains in 1-2 minutes instead of waiting hours for traditional bridges. Perfect when you need quick access to funds on another chain."
+		},
+		"2": {
+			"title": "L2 to L2 Bridging",
+			"description": "Bridge directly between Layer 2 networks like Arbitrum, Optimism, Base without going through Ethereum mainnet, saving time and fees."
+		},
+		"3": {
+			"title": "Arbitrage & Trading",
+			"description": "Take advantage of cross-chain arbitrage opportunities with fast bridging that won't miss the window. Essential for active traders."
+		},
+		"4": {
+			"title": "DeFi Composability",
+			"description": "Quickly move assets to participate in DeFi opportunities across different chains. Bridge to where the yields are highest."
+		},
+		"5": {
+			"title": "Multi-Chain Portfolio",
+			"description": "Manage assets across multiple chains efficiently. Rebalance your portfolio quickly as market conditions change."
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Across Protocol?",
+			"answer": "Across Protocol is an intent-based cross-chain bridge that enables fast and cheap asset transfers between blockchains. Instead of traditional lock-and-mint bridging, users express an intent to bridge, and a network of relayers fulfills that intent instantly. The relayers are then reimbursed through UMA's optimistic oracle, which verifies the transfer. This architecture enables 1-2 minute bridging times with the lowest fees in the industry."
+		},
+		"2": {
+			"question": "How does intent-based bridging work?",
+			"answer": "Intent-based bridging separates execution from settlement. When you want to bridge, you create an intent expressing your desire to move assets. Relayers monitor these intents and compete to fulfill them instantly by providing you assets on the destination chain. The relayers then get reimbursed by submitting proof to UMA's optimistic oracle on the source chain. This approach eliminates waiting for cross-chain messages and enables instant transfers."
+		},
+		"3": {
+			"question": "What chains does Across support?",
+			"answer": "Across supports over 15 chains including Ethereum mainnet, Arbitrum, Optimism, Polygon, Base, zkSync Era, Linea, Scroll, Polygon zkEVM, Boba Network, and more. The protocol focuses on supporting the most actively used chains with the best liquidity. New chains are regularly added based on demand and security assessments."
+		},
+		"4": {
+			"question": "How are Across fees calculated?",
+			"answer": "Across fees consist of two parts: a relayer fee (competitive rate set by relayers, typically 0.05-0.2%) and an LP fee (small percentage that goes to liquidity providers, usually around 0.03%). The total fee is typically much lower than other bridges due to the capital-efficient intent-based architecture. Fees vary slightly based on route and market conditions."
+		},
+		"5": {
+			"question": "Is Across Protocol secure?",
+			"answer": "Yes, Across is secured by UMA's battle-tested optimistic oracle system. All relayer reimbursements must be verified by the oracle before being processed. If a relayer submits fraudulent proof, anyone can dispute it and the relayer loses their bond. The protocol has been audited by leading security firms and has processed billions in volume without security incidents. Additionally, relayers must stake capital, aligning their incentives with honest behavior."
+		}
+	},
+	"cta": {
+		"ready": "Ready to bridge?",
+		"button": "Open Across Protocol",
+		"note": "Experience the fastest cross-chain bridging with lowest fees"
+	}
+}

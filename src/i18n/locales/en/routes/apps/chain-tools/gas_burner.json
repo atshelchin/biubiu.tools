@@ -31,76 +31,76 @@
 			"description": "实时区块链可视化"
 		},
 		"ultrasound_money": {
-			"description": "ultrasound.money - Tool"
+			"description": "ETH burn tracker and supply analytics"
 		},
 		"etherscan_gastracker": {
-			"description": "Etherscan Gas Tracker - Tool"
+			"description": "Real-time gas price tracker and gwei monitor"
 		},
 		"blocknative_gas": {
-			"description": "Blocknative Gas Estimator - Tool"
+			"description": "Mempool-based gas price prediction and estimation"
 		},
 		"ethgas_watch": {
-			"description": "ETH Gas.watch - Tool"
+			"description": "Gas price alerts and notification tracker"
 		},
 		"uniswap_gas": {
-			"description": "Uniswap (Top Gas Burner) - Tool"
+			"description": "Leading DEX and top gas consumer"
 		},
 		"opensea_gas": {
-			"description": "OpenSea (NFT Gas Leader) - Tool"
+			"description": "NFT marketplace with highest gas usage"
 		},
 		"blur_gas": {
-			"description": "Blur (NFT Trading Gas) - Tool"
+			"description": "High-volume NFT trading marketplace"
 		},
 		"tether_gas": {
-			"description": "Tether (USDT Transfers) - Tool"
+			"description": "USDT stablecoin with high transfer volume"
 		},
 		"1inch_gas": {
-			"description": "1inch (Aggregator Gas) - Tool"
+			"description": "DEX aggregator with routing gas costs"
 		},
 		"metamask_swap_gas": {
-			"description": "MetaMask Swaps - Tool"
+			"description": "Wallet swap aggregator with high gas"
 		},
 		"flashbots_gas": {
-			"description": "Flashbots (MEV Gas) - Tool"
+			"description": "MEV bundle and private transaction network"
 		},
 		"banana_gun_gas": {
-			"description": "Banana Gun - Tool"
+			"description": "Telegram sniper bot with high gas usage"
 		},
 		"maestro_gas": {
-			"description": "Maestro Bot - Tool"
+			"description": "Multi-chain trading bot via Telegram"
 		},
 		"unibot_gas": {
-			"description": "Unibot - Tool"
+			"description": "Telegram trading bot with copy trading"
 		},
 		"across_gas": {
-			"description": "Across Protocol - Tool"
+			"description": "Fast optimistic cross-chain bridge protocol"
 		},
 		"stargate_gas": {
-			"description": "Stargate Finance - Tool"
+			"description": "LayerZero omnichain liquidity bridge"
 		},
 		"l2beat_gas": {
-			"description": "L2BEAT Activity - Tool"
+			"description": "L2 activity and TPS analytics tracker"
 		},
 		"rollup_codes": {
-			"description": "Rollup.codes - Tool"
+			"description": "L2 opcode and gas comparison tool"
 		},
 		"flashbots_protect": {
-			"description": "Flashbots Protect - Tool"
+			"description": "MEV protection RPC with gas refunds"
 		},
 		"evm_gas_profiler": {
-			"description": "Tenderly Gas Profiler - Tool"
+			"description": "Gas profiler and simulation debug tool"
 		},
 		"etherscan_charts": {
-			"description": "Etherscan Gas Charts - Tool"
+			"description": "Historical gas price charts and analytics"
 		},
 		"dune_gas": {
-			"description": "Dune Gas Dashboards - Tool"
+			"description": "Custom SQL gas analytics dashboards"
 		},
 		"parsec_gas": {
-			"description": "Parsec Finance - Tool"
+			"description": "DeFi analytics and gas monitoring platform"
 		},
 		"rated_network": {
-			"description": "Rated Network - Tool"
+			"description": "Validator efficiency and staking analytics"
 		}
 	}
 }

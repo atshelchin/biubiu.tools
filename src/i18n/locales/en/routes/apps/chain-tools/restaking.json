@@ -58,40 +58,40 @@
 			"description": "ZK coprocessor for historical blockchain data"
 		},
 		"renzo_protocol": {
-			"description": "Renzo (ezETH) - Tool"
+			"description": "Liquid restaking token ezETH for EigenLayer restaking"
 		},
 		"puffer_finance": {
-			"description": "Puffer Finance (pufETH) - Tool"
+			"description": "Liquid restaking with pufETH featuring anti-slashing technology"
 		},
 		"kelp_dao": {
-			"description": "Kelp DAO (rsETH) - Tool"
+			"description": "Liquid restaking protocol with rsETH token for EigenLayer"
 		},
 		"swell_restaking": {
-			"description": "Swell (rswETH) - Tool"
+			"description": "Liquid restaking protocol with rswETH token for yield"
 		},
 		"hyperlane_avs": {
-			"description": "Hyperlane - Tool"
+			"description": "Cross-chain messaging AVS for interoperability and communication"
 		},
 		"omni_avs": {
-			"description": "Omni Network - Tool"
+			"description": "Cross-chain interoperability AVS for rollup communication"
 		},
 		"witness_chain": {
-			"description": "Witness Chain - Tool"
+			"description": "Watchtower AVS providing security monitoring and diligence"
 		},
 		"altlayer_avs": {
-			"description": "AltLayer MACH - Tool"
+			"description": "Fast finality AVS for rollup using MACH technology"
 		},
 		"eigenlayer_app": {
-			"description": "EigenLayer App - Tool"
+			"description": "Official EigenLayer staking and delegation dashboard interface"
 		},
 		"dune_eigenlayer": {
-			"description": "EigenLayer Dune Dashboard - Tool"
+			"description": "EigenLayer analytics dashboard tracking TVL and restaking data"
 		},
 		"defillama_restaking": {
-			"description": "DeFiLlama Restaking - Tool"
+			"description": "Liquid restaking analytics tracking TVL across LRT protocols"
 		},
 		"rated_restaking": {
-			"description": "Rated Restaking - Tool"
+			"description": "Restaking operator performance rating and analytics platform"
 		}
 	}
 }

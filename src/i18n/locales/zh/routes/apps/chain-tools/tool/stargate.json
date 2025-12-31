@@ -1,101 +1,87 @@
 {
 	"_meta": {
-		"title": "Stargate Finance - 全链流动性传输协议",
-		"description": "Stargate Finance 是基于 LayerZero 构建的全链流动性传输协议。通过统一流动性池实现跨链原生资产转移和即时确定性完成。"
+		"title": "Stargate Finance - Omnichain Liquidity Transport Protocol",
+		"description": "Omnichain liquidity transport protocol built on LayerZero. Enables native asset transfers with unified liquidity pools and instant guaranteed finality."
 	},
 	"seo": {
-		"title": "Stargate Finance - 全链流动性传输协议 | 跨链桥",
-		"description": "Stargate Finance 通过统一流动性池实现无缝跨链资产转移。基于 LayerZero 构建,支持原生资产桥接和即时确定性完成。",
-		"keywords": "Stargate Finance, 全链桥, LayerZero, 跨链流动性, 统一流动性, STG代币, 原生资产转移, 跨链DeFi"
+		"title": "Stargate Finance - Omnichain Liquidity Transport Protocol | Cross-Chain Bridge",
+		"description": "Stargate Finance enables seamless cross-chain asset transfers with unified liquidity pools. Built on LayerZero for native asset bridging with instant guaranteed finality.",
+		"keywords": "Stargate Finance, omnichain bridge, LayerZero, cross-chain liquidity, unified liquidity, STG token, native asset transfer, cross-chain DeFi"
 	},
-	"overview": {
-		"title": "关于 Stargate Finance",
-		"description": "Stargate Finance 是基于 LayerZero 构建的完全可组合流动性传输协议。它使用统一流动性池在多个区块链之间实现原生资产转移。该协议具有即时保证完成性,并通过 Delta 算法实现最优资本效率。STG 代币为治理提供动力,并为生态系统提供流动性激励。",
-		"website_label": "官方网站",
-		"whitepaper_label": "技术文档"
-	},
+	"overview": "Stargate Finance is a fully composable liquidity transport protocol built on LayerZero. It enables native asset transfers across multiple blockchains using unified liquidity pools. The protocol features instant guaranteed finality and a delta algorithm for optimal capital efficiency. STG token powers governance and provides liquidity incentives for the ecosystem.",
 	"features": {
-		"title": "主要特性",
-		"items": {
-			"feature_1": {
-				"title": "统一流动性",
-				"description": "所有链共享单一流动性池,实现最大资本效率和降低滑点。"
-			},
-			"feature_2": {
-				"title": "原生资产转移",
-				"description": "无需包装代币即可转移原生资产,在跨链过程中保持资产纯度。"
-			},
-			"feature_3": {
-				"title": "即时保证完成",
-				"description": "保证目标链上的交易完成,无回退可能性。"
-			},
-			"feature_4": {
-				"title": "Delta 算法",
-				"description": "智能再平衡算法,优化跨链流动性分配。"
-			},
-			"feature_5": {
-				"title": "STG 质押奖励",
-				"description": "通过质押 STG 代币并参与协议治理来赚取奖励。"
-			},
-			"feature_6": {
-				"title": "全链可组合性",
-				"description": "与其他协议无缝集成,实现复杂的跨链 DeFi 操作。"
-			}
+		"1": {
+			"title": "Unified Liquidity",
+			"description": "Single liquidity pool shared across all chains for maximum capital efficiency and reduced slippage."
+		},
+		"2": {
+			"title": "Native Asset Transfers",
+			"description": "Transfer native assets without wrapped tokens, maintaining asset purity across chains."
+		},
+		"3": {
+			"title": "Instant Guaranteed Finality",
+			"description": "Guaranteed transaction completion at destination chain with no revert possibility."
+		},
+		"4": {
+			"title": "Delta Algorithm",
+			"description": "Intelligent rebalancing algorithm that optimizes liquidity distribution across chains."
+		},
+		"5": {
+			"title": "STG Staking Rewards",
+			"description": "Earn rewards by staking STG tokens and participating in protocol governance."
+		},
+		"6": {
+			"title": "Omnichain Composability",
+			"description": "Seamlessly integrate with other protocols for complex cross-chain DeFi operations."
 		}
 	},
 	"use_cases": {
-		"title": "使用场景",
-		"items": {
-			"use_case_1": {
-				"title": "跨链交换",
-				"description": "在不同区块链之间交换资产,享受统一流动性和最小滑点。"
-			},
-			"use_case_2": {
-				"title": "全链 DeFi",
-				"description": "无需管理包装代币即可访问多链上的 DeFi 协议。"
-			},
-			"use_case_3": {
-				"title": "提供流动性",
-				"description": "提供流动性以赚取手续费和来自跨链交易的 STG 奖励。"
-			},
-			"use_case_4": {
-				"title": "桥接聚合",
-				"description": "将 Stargate 集成到 dApp 中,实现无缝跨链用户体验。"
-			},
-			"use_case_5": {
-				"title": "原生资产桥接",
-				"description": "在链之间移动原生资产,同时保持其原始形式。"
-			}
+		"1": {
+			"title": "Cross-Chain Swaps",
+			"description": "Swap assets between different blockchains with unified liquidity and minimal slippage."
+		},
+		"2": {
+			"title": "Omnichain DeFi",
+			"description": "Access DeFi protocols across multiple chains without managing wrapped tokens."
+		},
+		"3": {
+			"title": "Liquidity Provision",
+			"description": "Provide liquidity to earn fees and STG rewards from cross-chain transactions."
+		},
+		"4": {
+			"title": "Bridge Aggregation",
+			"description": "Integrate Stargate into dApps for seamless cross-chain user experiences."
+		},
+		"5": {
+			"title": "Native Asset Bridging",
+			"description": "Move native assets between chains while maintaining their original form."
 		}
 	},
 	"faqs": {
-		"title": "常见问题",
-		"items": {
-			"faq_1": {
-				"question": "什么是 Stargate Finance?",
-				"answer": "Stargate Finance 是基于 LayerZero 构建的完全可组合流动性传输协议。它使用统一流动性池让用户在多个区块链之间转移原生资产,具有即时保证完成性,并通过 Delta 算法实现最优资本效率。"
-			},
-			"faq_2": {
-				"question": "统一流动性如何工作?",
-				"answer": "Stargate 在所有支持的链上使用单一共享流动性池。这种统一方法通过允许流动性提供者同时服务多条路由来最大化资本效率,与传统桥接设计中每条链隔离池相比,减少了碎片化和滑点。"
-			},
-			"faq_3": {
-				"question": "STG 代币用于什么?",
-				"answer": "STG 是 Stargate 的治理和实用代币。它用于协议治理投票、赚取质押奖励、获得流动性提供激励以及参与协议决策。STG 持有者可以质押代币以赚取协议费用和奖励份额。"
-			},
-			"faq_4": {
-				"question": "Stargate 支持哪些链?",
-				"answer": "Stargate 支持多个 EVM 和非 EVM 链,包括以太坊、BNB Chain、Avalanche、Polygon、Arbitrum、Optimism、Fantom、Metis 等。该协议通过 LayerZero 的全链基础设施持续扩展到更多链。"
-			},
-			"faq_5": {
-				"question": "Stargate 与 LayerZero 有什么关系?",
-				"answer": "Stargate 构建在 LayerZero 的全链消息传递协议之上。LayerZero 为安全的跨链通信提供底层基础设施,而 Stargate 在其之上实现流动性传输层。两者都由 LayerZero Labs 开发。"
-			}
+		"1": {
+			"question": "What is Stargate Finance?",
+			"answer": "Stargate Finance is a fully composable liquidity transport protocol built on LayerZero. It enables users to transfer native assets across multiple blockchains using unified liquidity pools, with instant guaranteed finality and optimal capital efficiency through its delta algorithm."
+		},
+		"2": {
+			"question": "How does unified liquidity work?",
+			"answer": "Stargate uses a single shared liquidity pool across all supported chains. This unified approach maximizes capital efficiency by allowing liquidity providers to serve multiple routes simultaneously, reducing fragmentation and slippage compared to traditional bridge designs with isolated pools per chain."
+		},
+		"3": {
+			"question": "What is the STG token used for?",
+			"answer": "STG is Stargate's governance and utility token. It's used for protocol governance voting, earning staking rewards, receiving liquidity provision incentives, and participating in protocol decision-making. STG holders can stake their tokens to earn a share of protocol fees and rewards."
+		},
+		"4": {
+			"question": "Which chains does Stargate support?",
+			"answer": "Stargate supports multiple EVM and non-EVM chains including Ethereum, BNB Chain, Avalanche, Polygon, Arbitrum, Optimism, Fantom, Metis, and more. The protocol continues to expand to additional chains through LayerZero's omnichain infrastructure."
+		},
+		"5": {
+			"question": "How is Stargate related to LayerZero?",
+			"answer": "Stargate is built on top of LayerZero's omnichain messaging protocol. LayerZero provides the underlying infrastructure for secure cross-chain communication, while Stargate implements the liquidity transport layer on top of it. Both are developed by LayerZero Labs."
 		}
 	},
 	"cta": {
-		"title": "开始使用 Stargate Finance",
-		"description": "体验统一流动性和即时保证完成的无缝全链资产转移。",
-		"button": "访问 Stargate Finance"
+		"ready": "Ready to go omnichain?",
+		"button": "Open Stargate Finance",
+		"note": "Experience seamless cross-chain liquidity"
 	}
 }

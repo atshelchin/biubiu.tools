@@ -61,73 +61,73 @@
 			"description": "On-chain payment splitting protocol"
 		},
 		"nowpayments": {
-			"description": "NOWPayments - Crypto payment solution"
+			"description": "Multichain merchant checkout API for payments"
 		},
 		"monerium": {
-			"description": "Monerium - Crypto payment solution"
+			"description": "EURE IBAN fiat regulated payment gateway"
 		},
 		"wyre": {
-			"description": "Wyre - Crypto payment solution"
+			"description": "Fiat API on-ramp with compliance"
 		},
 		"banxa": {
-			"description": "Banxa - Crypto payment solution"
+			"description": "Global fiat on-ramp and off-ramp gateway"
 		},
 		"simplex": {
-			"description": "Simplex - Crypto payment solution"
+			"description": "Instant fiat on-ramp with card payments"
 		},
 		"sardine": {
-			"description": "Sardine - Crypto payment solution"
+			"description": "Fraud prevention on-ramp with KYC compliance"
 		},
 		"coinflow": {
-			"description": "Coinflow - Crypto payment solution"
+			"description": "Solana NFT checkout and payments"
 		},
 		"llamapay": {
-			"description": "LlamaPay - Crypto payment solution"
+			"description": "Token streaming for payroll and treasury"
 		},
 		"parcel": {
-			"description": "Parcel - Crypto payment solution"
+			"description": "Gnosis Safe treasury payroll with batching"
 		},
 		"poko_pay": {
-			"description": "Poko - Tool"
+			"description": "Emerging markets local fiat onramp"
 		},
 		"coinbase_commerce": {
-			"description": "Coinbase Commerce - Tool"
+			"description": "Crypto checkout for ecommerce merchants"
 		},
 		"sphere_pay": {
-			"description": "Sphere - Tool"
+			"description": "Solana merchant payments with API"
 		},
 		"helio_pay": {
-			"description": "Helio - Tool"
+			"description": "Solana checkout with links and subscriptions"
 		},
 		"request_network": {
-			"description": "Request Network - Tool"
+			"description": "Crypto invoicing for B2B and accounting"
 		},
 		"zebec_pay": {
-			"description": "Zebec - Tool"
+			"description": "Solana streaming continuous payroll"
 		},
 		"mean_finance": {
-			"description": "Mean Finance - Tool"
+			"description": "DCA streaming with multichain treasury"
 		},
 		"utopia_labs": {
-			"description": "Utopia Labs - Tool"
+			"description": "DAO payroll and treasury operations"
 		},
 		"utila_pay": {
-			"description": "Utila - Tool"
+			"description": "Business treasury with payroll and invoices"
 		},
 		"gnosis_pay": {
-			"description": "Gnosis Pay - Tool"
+			"description": "Self-custody Visa card for spending"
 		},
 		"gnosis_card": {
-			"description": "Gnosis Card - Tool"
+			"description": "DeFi Visa card for spending"
 		},
 		"slash_fi": {
-			"description": "Slash - Tool"
+			"description": "Stablecoin merchant checkout for payments"
 		},
 		"alchemy_pay": {
-			"description": "Alchemy Pay - Tool"
+			"description": "Global hybrid fiat payment gateway"
 		},
 		"hedgey": {
-			"description": "Hedgey - Tool"
+			"description": "Token vesting with lockups and streaming"
 		}
 	}
 }

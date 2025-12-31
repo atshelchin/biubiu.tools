@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"seo": {
+		"title": "OpenZeppelin - Smart Contract Security & Development Tools | Blockchain Security",
+		"description": "Explore OpenZeppelin, the industry standard for secure smart contract development. Learn about Contracts library, Defender platform, upgradeable contracts, and professional security audits.",
+		"keywords": "OpenZeppelin, smart contracts, security, audit, Defender, upgradeable contracts, ERC20, ERC721, ERC1155, Solidity, blockchain development"
+	},
+	"overview": "OpenZeppelin is the gold standard for smart contract security and development in the blockchain industry. Founded in 2015, OpenZeppelin has become synonymous with secure smart contract development, providing battle-tested libraries, security tools, and audit services that power the world's leading blockchain projects.\n\nThe OpenZeppelin Contracts library is the most widely used framework for building secure smart contracts, with over 10,000 projects depending on it. Major protocols like Compound, Aave, Coinbase, and countless others rely on OpenZeppelin's implementations of token standards (ERC20, ERC721, ERC1155), access control, and upgradeable contracts.\n\nBeyond the open-source library, OpenZeppelin offers Defender, a comprehensive platform for automating smart contract operations, monitoring security, and managing on-chain infrastructure. Their security audit services have reviewed billions of dollars in smart contract value, making them one of the most trusted names in blockchain security.",
+	"features": {
+		"1": {
+			"title": "Contracts Library",
+			"description": "Battle-tested, modular smart contract components for ERC20, ERC721, ERC1155, governance, and access control - used by thousands of projects"
+		},
+		"2": {
+			"title": "Defender Platform",
+			"description": "Automate contract operations, monitor transactions, manage access control, and respond to security threats in real-time"
+		},
+		"3": {
+			"title": "Upgradeable Contracts",
+			"description": "Deploy smart contracts that can be upgraded to fix bugs or add features while preserving state and address"
+		},
+		"4": {
+			"title": "Access Control",
+			"description": "Robust role-based access control systems with multi-signature support and time-lock mechanisms"
+		},
+		"5": {
+			"title": "Security Audits",
+			"description": "Professional smart contract audits from the team that has reviewed billions in protocol value"
+		},
+		"6": {
+			"title": "Governance Tools",
+			"description": "Complete governance frameworks including token voting, proposal systems, and timelock controllers"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Token Deployment (ERC20/721/1155)",
+			"description": "Launch secure tokens with standard-compliant implementations that have been tested by thousands of projects"
+		},
+		"2": {
+			"title": "Upgradeable Contracts",
+			"description": "Build smart contracts that can be upgraded post-deployment while maintaining state and user trust"
+		},
+		"3": {
+			"title": "Access Control Implementation",
+			"description": "Implement multi-signature wallets, role-based permissions, and secure admin functions in your contracts"
+		},
+		"4": {
+			"title": "Operations Automation",
+			"description": "Use Defender to automate contract interactions, monitor events, and manage infrastructure without custom backend code"
+		},
+		"5": {
+			"title": "Security Audits",
+			"description": "Get professional security reviews before launching high-value protocols to identify vulnerabilities"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is OpenZeppelin and why is it important?",
+			"answer": "OpenZeppelin provides the most trusted libraries and tools for smart contract development. Their code is used by virtually every major DeFi protocol because it's been extensively audited, battle-tested, and follows best security practices. Using OpenZeppelin reduces the risk of smart contract vulnerabilities that could lead to hacks."
+		},
+		"2": {
+			"question": "What are OpenZeppelin Contracts?",
+			"answer": "OpenZeppelin Contracts is an open-source library of reusable smart contract components written in Solidity. It includes implementations of token standards (ERC20, ERC721, ERC1155), access control mechanisms, upgradeable contract patterns, and security utilities. These contracts are modular, allowing developers to inherit and combine them as needed."
+		},
+		"3": {
+			"question": "What is OpenZeppelin Defender?",
+			"answer": "Defender is a security platform for automating and monitoring smart contract operations. It includes features like automated transaction execution (Relayers), security monitoring (Sentinels), access control management, and incident response tools. It's designed to help teams operate smart contracts securely without building custom infrastructure."
+		},
+		"4": {
+			"question": "Are OpenZeppelin Contracts free to use?",
+			"answer": "Yes, OpenZeppelin Contracts is completely free and open source under the MIT License. You can use, modify, and deploy these contracts in commercial projects without any fees. Defender has both free and paid tiers, while audit services are priced based on project scope."
+		},
+		"5": {
+			"question": "How can I get my smart contract audited by OpenZeppelin?",
+			"answer": "You can request an audit through the OpenZeppelin website. The process typically involves sharing your contract code and documentation, after which they'll provide a quote based on complexity and timeline. Audits can take several weeks and are recommended for any protocol handling significant value or user funds."
+		}
+	},
+	"cta": {
+		"ready": "Ready to build secure smart contracts?",
+		"button": "Visit OpenZeppelin",
+		"note": "Trusted by the world's leading blockchain projects"
+	}
+}

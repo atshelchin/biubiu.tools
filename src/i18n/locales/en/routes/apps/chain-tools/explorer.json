@@ -82,46 +82,46 @@
 			"description": "任意合约ABI获取工具"
 		},
 		"nearblocks": {
-			"description": "NearBlocks - Block explorer"
+			"description": "NEAR protocol analytics and token explorer"
 		},
 		"blockchair": {
-			"description": "Blockchair - Block explorer"
+			"description": "Multi-chain privacy-focused analytics explorer"
 		},
 		"avascan": {
-			"description": "AvaScan - Block explorer"
+			"description": "Avalanche subnets and validator explorer"
 		},
 		"tronscan": {
-			"description": "TronScan - Block explorer"
+			"description": "Tron TRC20 and staking explorer"
 		},
 		"cardanoscan": {
-			"description": "Cardanoscan - Block explorer"
+			"description": "Cardano staking and token explorer"
 		},
 		"viewblock": {
-			"description": "ViewBlock - Block explorer"
+			"description": "Multi-chain explorer for Zilliqa THORChain"
 		},
 		"suiscan": {
-			"description": "SuiScan - Block explorer"
+			"description": "Sui Move objects explorer"
 		},
 		"optimistic_scan": {
-			"description": "Optimistic Etherscan - Tool"
+			"description": "Optimism L2 transaction explorer"
 		},
 		"zksync_explorer": {
-			"description": "zkSync Explorer - Tool"
+			"description": "zkSync zk-rollup transaction explorer"
 		},
 		"solscan": {
-			"description": "Solscan - Tool"
+			"description": "Solana analytics and token explorer"
 		},
 		"mintscan": {
-			"description": "Mintscan - Tool"
+			"description": "Cosmos IBC and staking explorer"
 		},
 		"tonscan": {
-			"description": "TONScan - Tool"
+			"description": "TON jettons and NFT explorer"
 		},
 		"evm_explorer": {
-			"description": "EVM Explorer - Tool"
+			"description": "Unified multi-chain EVM explorer"
 		},
 		"samczsun_explorer": {
-			"description": "sam.wtf - Tool"
+			"description": "Transaction tracer and debugger analysis"
 		}
 	}
 }

@@ -15,7 +15,8 @@
 				"question": "如果我的钱包被盗怎么办？",
 				"answer": "立即将剩余资产转移到新的安全钱包，撤销所有代币授权，检查哪些交易耗尽了你的资金，向相关平台报告事件，并将被盗地址标记在 Etherscan 等区块浏览器上。"
 			}
-		]
+		],
+		"keywords": "web3 security, smart contract audit, revoke approvals, transaction simulation, defi security"
 	},
 	"tools": {
 		"revoke": {

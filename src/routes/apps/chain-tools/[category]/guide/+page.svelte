@@ -1,84 +1,67 @@
 <script lang="ts">
 	import { useI18n } from '@shelchin/i18n';
-	import {
-		BookOpen,
-		Map,
-		Route,
-		BookA,
-		CircleHelp,
-		ChartBar,
-		ChevronRight,
-		Star,
-		CheckCircle2,
-		Clock
-	} from '@lucide/svelte';
+	import { Clock, ExternalLink, ChevronRight, BookOpen } from '@lucide/svelte';
 	import SeoHead from '$lib/components/seo-head.svelte';
-	import { useGuideProgress } from '@/features/chain-tools/composables/use-guide-progress.svelte';
 	import type { PageData } from './$types';
+	import type { GuideSection, CaseStudy } from '@/features/chain-tools/types';
 
 	let { data }: { data: PageData } = $props();
 
 	const i18n = useI18n();
-	const progress = useGuideProgress(data.guide.categoryId);
 
-	// Calculate total tasks
-	const totalTasks = $derived(
-		data.guide.learningPath.reduce((acc, phase) => acc + phase.tasks.length, 0)
-	);
-	const totalSections = $derived(data.guide.fundamentalsCount);
-	const totalTools = $derived(data.tools.length);
+	// Get translated text
+	function t(key: string): string {
+		return i18n.t(key as never) || key;
+	}
 
-	// Overall progress percentage
-	const overallProgress = $derived(
-		progress.calculateOverallProgress(totalSections, totalTools, totalTasks)
-	);
+	// Build table of contents from sections
+	interface TocItem {
+		id: string;
+		title: string;
+		level: number;
+		children?: TocItem[];
+	}
 
-	// Base path for guide pages
-	const basePath = $derived(`/apps/chain-tools/${data.guide.categoryId}/guide`);
+	function buildToc(sections: GuideSection[]): TocItem[] {
+		return sections.map((section) => ({
+			id: section.id,
+			title: t(section.titleKey),
+			level: 1,
+			children: section.subsections?.map((sub) => ({
+				id: sub.id,
+				title: t(sub.titleKey),
+				level: 2
+			}))
+		}));
+	}
 
-	// Navigation items
-	const navItems = [
-		{
-			id: 'fundamentals',
-			icon: BookOpen,
-			labelKey: 'navigation.fundamentals',
-			href: `${basePath}/fundamentals`,
-			count: data.guide.fundamentalsCount
-		},
-		{
-			id: 'ecosystem',
-			icon: Map,
-			labelKey: 'navigation.ecosystem',
-			href: `${basePath}/ecosystem`,
-			count: data.guide.ecosystemSubCategories.length
-		},
-		{
-			id: 'learning-path',
-			icon: Route,
-			labelKey: 'navigation.learning_path',
-			href: `${basePath}/learning-path`,
-			count: data.guide.learningPath.length
-		},
-		{
-			id: 'glossary',
-			icon: BookA,
-			labelKey: 'navigation.glossary',
-			href: `${basePath}/glossary`,
-			count: data.guide.glossary.length
-		},
-		{
-			id: 'quiz',
-			icon: CircleHelp,
-			labelKey: 'navigation.quiz',
-			href: `${basePath}/quiz`,
-			count: data.guide.quiz.questions.length
+	const toc = $derived(buildToc(data.guide.sections));
+
+	// Scroll to section
+	function scrollToSection(id: string) {
+		const element = document.getElementById(id);
+		if (element) {
+			element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 		}
-	];
+	}
 
-	// Get localized text
-	function t(key: string, params?: Record<string, unknown>): string {
-		const fullKey = `${data.guide.i18nKeyPrefix}.${key}`;
-		return i18n.t(fullKey as never, params as never) || key;
+	// Get tool by ID
+	function getTool(toolId: string) {
+		return data.tools.find((tool) => tool.id === toolId);
+	}
+
+	// Render case study source link
+	function getCaseStudyLink(caseStudy: CaseStudy): string | undefined {
+		if (caseStudy.txHash) {
+			return `https://etherscan.io/tx/${caseStudy.txHash}`;
+		}
+		if (caseStudy.duneQuery) {
+			return caseStudy.duneQuery;
+		}
+		if (caseStudy.sourceUrl) {
+			return caseStudy.sourceUrl;
+		}
+		return undefined;
 	}
 </script>
 
@@ -93,452 +76,590 @@
 	structuredData={data.structuredData}
 />
 
-<div class="guide-page">
+<article class="guide-article">
 	<!-- Header -->
-	<header class="guide-header">
-		<div class="header-content">
-			<h1 class="title">{t('title')}</h1>
-			<p class="subtitle">{t('subtitle')}</p>
-		</div>
+	<header class="article-header">
+		<a href="/apps/chain-tools/{data.guide.categoryId}" class="back-link">
+			← {t('routes/apps/chain-tools.back_to_tools')}
+		</a>
 
-		<!-- Progress Card -->
-		<div class="progress-card">
-			<div class="progress-header">
-				<ChartBar class="progress-icon" />
-				<span class="progress-label">{t('progress.overall')}</span>
-			</div>
-			<div class="progress-bar-container">
-				<div class="progress-bar" style="width: {overallProgress}%"></div>
-			</div>
-			<div class="progress-text">{overallProgress}%</div>
+		<h1 class="article-title">{t(`${data.guide.i18nKeyPrefix}.title`)}</h1>
+		<p class="article-subtitle">{t(`${data.guide.i18nKeyPrefix}.subtitle`)}</p>
+
+		<div class="article-meta">
+			<span class="read-time">
+				<Clock class="meta-icon" />
+				{data.guide.estimatedReadTime}
+			</span>
+			<span class="last-updated">
+				{t('routes/apps/chain-tools.last_updated')}: {data.guide.lastUpdated}
+			</span>
 		</div>
 	</header>
 
-	<!-- Introduction -->
-	<section class="intro-section">
-		<p class="intro-text">{t('intro')}</p>
-	</section>
-
-	<!-- Stats -->
-	<section class="stats-section">
-		<div class="stat-item">
-			<span class="stat-value">{data.tools.length}</span>
-			<span class="stat-label">{t('stats.tools_count', { count: data.tools.length })}</span>
-		</div>
-		<div class="stat-item">
-			<span class="stat-value">{data.guide.ecosystemSubCategories.length}</span>
-			<span class="stat-label"
-				>{t('stats.sub_categories', { count: data.guide.ecosystemSubCategories.length })}</span
-			>
-		</div>
-		<div class="stat-item">
-			<span class="stat-value">{data.guide.learningPath.length}</span>
-			<span class="stat-label"
-				>{t('stats.learning_phases', { count: data.guide.learningPath.length })}</span
-			>
-		</div>
-		<div class="stat-item">
-			<span class="stat-value">{data.guide.quiz.questions.length}</span>
-			<span class="stat-label"
-				>{t('stats.quiz_questions', { count: data.guide.quiz.questions.length })}</span
-			>
-		</div>
-	</section>
-
-	<!-- Navigation Cards -->
-	<section class="nav-section">
-		<div class="nav-grid">
-			{#each navItems as item (item.id)}
-				<a href={item.href} class="nav-card">
-					<div class="nav-card-icon">
-						<item.icon class="icon" />
-					</div>
-					<div class="nav-card-content">
-						<h3 class="nav-card-title">{t(item.labelKey)}</h3>
-						<span class="nav-card-count">{item.count} items</span>
-					</div>
-					<ChevronRight class="nav-card-arrow" />
-				</a>
-			{/each}
-		</div>
-	</section>
-
-	<!-- Core Projects Preview -->
-	<section class="core-projects-section">
-		<h2 class="section-title">{t('core.title')}</h2>
-		<p class="section-description">{t('core.description')}</p>
-
-		<div class="tier-groups">
-			<!-- Tier 1: Must Know -->
-			<div class="tier-group">
-				<div class="tier-header">
-					<Star class="tier-icon tier-1" />
-					<span class="tier-label">{t('core.tier1')}</span>
-				</div>
-				<div class="tier-tools">
-					{#each data.guide.coreProjects.filter((p) => p.tier === 1) as project (project.toolId)}
-						{@const tool = data.tools.find((t) => t.id === project.toolId)}
-						{#if tool}
-							<a href="/apps/chain-tools/tool/{tool.id}" class="core-tool-card">
-								<div class="tool-name">{tool.name}</div>
-								<div class="tool-significance">{t(`core.${project.toolId}`)}</div>
-								{#if progress.getToolStatus(tool.id) === 'mastered'}
-									<CheckCircle2 class="mastered-icon" />
-								{/if}
-							</a>
-						{/if}
+	<div class="article-layout">
+		<!-- Table of Contents (Sidebar) -->
+		<aside class="toc-sidebar">
+			<nav class="toc">
+				<h2 class="toc-title">{t('routes/apps/chain-tools.table_of_contents')}</h2>
+				<ul class="toc-list">
+					{#each toc as item (item.id)}
+						<li class="toc-item">
+							<button class="toc-link" onclick={() => scrollToSection(item.id)}>
+								{item.title}
+							</button>
+							{#if item.children && item.children.length > 0}
+								<ul class="toc-sublist">
+									{#each item.children as child (child.id)}
+										<li class="toc-subitem">
+											<button class="toc-sublink" onclick={() => scrollToSection(child.id)}>
+												{child.title}
+											</button>
+										</li>
+									{/each}
+								</ul>
+							{/if}
+						</li>
 					{/each}
-				</div>
-			</div>
+					<li class="toc-item">
+						<button class="toc-link" onclick={() => scrollToSection('glossary')}>
+							{t('routes/apps/chain-tools.glossary')}
+						</button>
+					</li>
+				</ul>
+			</nav>
+		</aside>
 
-			<!-- Tier 2: Should Know -->
-			<div class="tier-group">
-				<div class="tier-header">
-					<Star class="tier-icon tier-2" />
-					<span class="tier-label">{t('core.tier2')}</span>
-				</div>
-				<div class="tier-tools">
-					{#each data.guide.coreProjects.filter((p) => p.tier === 2) as project (project.toolId)}
-						{@const tool = data.tools.find((t) => t.id === project.toolId)}
-						{#if tool}
-							<a href="/apps/chain-tools/tool/{tool.id}" class="core-tool-card">
-								<div class="tool-name">{tool.name}</div>
-								<div class="tool-significance">{t(`core.${project.toolId}`)}</div>
-								{#if progress.getToolStatus(tool.id) === 'mastered'}
-									<CheckCircle2 class="mastered-icon" />
-								{/if}
-							</a>
-						{/if}
-					{/each}
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Quick Start Learning Path -->
-	<section class="quick-start-section">
-		<h2 class="section-title">{t('learning.title')}</h2>
-		<p class="section-description">{t('learning.description')}</p>
-
-		<div class="phases-preview">
-			{#each data.guide.learningPath.slice(0, 2) as phase, index (phase.id)}
-				{@const completedInPhase = phase.tasks.filter((task) =>
-					progress.isTaskCompleted(task.id)
-				).length}
-				<div
-					class="phase-card"
-					class:current={index === progress.progress.learningPathProgress.currentPhase}
-				>
-					<div class="phase-header">
-						<span class="phase-number">Phase {index + 1}</span>
-						<span class="phase-time">
-							<Clock class="time-icon" />
-							{phase.estimatedDays} days
-						</span>
+		<!-- Main Content -->
+		<div class="article-content">
+			{#each data.guide.sections as section (section.id)}
+				<section id={section.id} class="content-section">
+					<h2 class="section-title">{t(section.titleKey)}</h2>
+					<div class="section-content">
+						{@html t(section.contentKey)}
 					</div>
-					<h3 class="phase-title">{t(`learning.phase${index + 1}.title`)}</h3>
-					<p class="phase-description">{t(`learning.phase${index + 1}.description`)}</p>
-					<div class="phase-progress">
-						<div class="phase-progress-bar">
-							<div
-								class="phase-progress-fill"
-								style="width: {(completedInPhase / phase.tasks.length) * 100}%"
-							></div>
+
+					<!-- Tool mentions -->
+					{#if section.toolMentions && section.toolMentions.length > 0}
+						<div class="tool-mentions">
+							<span class="tool-mentions-label">{t('routes/apps/chain-tools.related_tools')}:</span>
+							{#each section.toolMentions as mention (mention.toolId)}
+								{@const tool = getTool(mention.toolId)}
+								{#if tool}
+									<a href="/apps/chain-tools/tool/{tool.id}" class="tool-chip">
+										{tool.name}
+										{#if mention.context}
+											<span class="tool-context">({mention.context})</span>
+										{/if}
+									</a>
+								{/if}
+							{/each}
 						</div>
-						<span class="phase-progress-text">{completedInPhase}/{phase.tasks.length} tasks</span>
-					</div>
-				</div>
+					{/if}
+
+					<!-- Subsections -->
+					{#if section.subsections}
+						{#each section.subsections as subsection (subsection.id)}
+							<div id={subsection.id} class="subsection">
+								<h3 class="subsection-title">{t(subsection.titleKey)}</h3>
+								<div class="subsection-content">
+									{@html t(subsection.contentKey)}
+								</div>
+
+								<!-- Subsection tool mentions -->
+								{#if subsection.toolMentions && subsection.toolMentions.length > 0}
+									<div class="tool-mentions">
+										<span class="tool-mentions-label"
+											>{t('routes/apps/chain-tools.related_tools')}:</span
+										>
+										{#each subsection.toolMentions as mention (mention.toolId)}
+											{@const tool = getTool(mention.toolId)}
+											{#if tool}
+												<a href="/apps/chain-tools/tool/{tool.id}" class="tool-chip">
+													{tool.name}
+												</a>
+											{/if}
+										{/each}
+									</div>
+								{/if}
+
+								<!-- Case studies -->
+								{#if subsection.caseStudies && subsection.caseStudies.length > 0}
+									<div class="case-studies">
+										{#each subsection.caseStudies as caseStudy (caseStudy.id)}
+											<div class="case-study">
+												<div class="case-study-header">
+													<h4 class="case-study-title">{t(caseStudy.titleKey)}</h4>
+													{#if caseStudy.profit}
+														<span class="case-study-profit">{caseStudy.profit}</span>
+													{/if}
+												</div>
+												<p class="case-study-description">{t(caseStudy.descriptionKey)}</p>
+												{#if caseStudy.date}
+													<span class="case-study-date">{caseStudy.date}</span>
+												{/if}
+												{@const link = getCaseStudyLink(caseStudy)}
+												{#if link}
+													<a href={link} target="_blank" rel="noopener" class="case-study-link">
+														{t('routes/apps/chain-tools.view_source')}
+														<ExternalLink class="link-icon" />
+													</a>
+												{/if}
+											</div>
+										{/each}
+									</div>
+								{/if}
+							</div>
+						{/each}
+					{/if}
+
+					<!-- Section case studies (if at section level) -->
+					{#if section.caseStudies && section.caseStudies.length > 0}
+						<div class="case-studies">
+							{#each section.caseStudies as caseStudy (caseStudy.id)}
+								<div class="case-study">
+									<div class="case-study-header">
+										<h4 class="case-study-title">{t(caseStudy.titleKey)}</h4>
+										{#if caseStudy.profit}
+											<span class="case-study-profit">{caseStudy.profit}</span>
+										{/if}
+									</div>
+									<p class="case-study-description">{t(caseStudy.descriptionKey)}</p>
+									{@const link = getCaseStudyLink(caseStudy)}
+									{#if link}
+										<a href={link} target="_blank" rel="noopener" class="case-study-link">
+											{t('routes/apps/chain-tools.view_source')}
+											<ExternalLink class="link-icon" />
+										</a>
+									{/if}
+								</div>
+							{/each}
+						</div>
+					{/if}
+				</section>
 			{/each}
-		</div>
 
-		<a href="{basePath}/learning-path" class="view-all-link">
-			{t('common.view_all')}
-			<ChevronRight class="link-arrow" />
-		</a>
-	</section>
+			<!-- Glossary Section -->
+			<section id="glossary" class="content-section glossary-section">
+				<h2 class="section-title">{t('routes/apps/chain-tools.glossary')}</h2>
+				<div class="glossary-grid">
+					{#each data.guide.glossary as term (term.id)}
+						<div class="glossary-item" id={`term-${term.id}`}>
+							<dt class="glossary-term">{t(term.termKey)}</dt>
+							<dd class="glossary-definition">{t(term.definitionKey)}</dd>
+							{#if term.relatedToolIds && term.relatedToolIds.length > 0}
+								<div class="glossary-tools">
+									{#each term.relatedToolIds as toolId (toolId)}
+										{@const tool = getTool(toolId)}
+										{#if tool}
+											<a href="/apps/chain-tools/tool/{tool.id}" class="tool-chip small">
+												{tool.name}
+											</a>
+										{/if}
+									{/each}
+								</div>
+							{/if}
+						</div>
+					{/each}
+				</div>
+			</section>
 
-	<!-- Quiz CTA -->
-	<section class="quiz-cta-section">
-		<div class="quiz-cta-content">
-			<CircleHelp class="quiz-cta-icon" />
-			<div class="quiz-cta-text">
-				<h3>{t('quiz.title')}</h3>
-				<p>{t('quiz.description')}</p>
+			<!-- Featured Tools -->
+			<section class="featured-tools-section">
+				<h2 class="section-title">{t('routes/apps/chain-tools.featured_tools')}</h2>
+				<div class="featured-tools-grid">
+					{#each data.guide.featuredToolIds as toolId (toolId)}
+						{@const tool = getTool(toolId)}
+						{#if tool}
+							<a href="/apps/chain-tools/tool/{tool.id}" class="featured-tool-card">
+								<span class="featured-tool-name">{tool.name}</span>
+								<ChevronRight class="featured-tool-arrow" />
+							</a>
+						{/if}
+					{/each}
+				</div>
+			</section>
+
+			<!-- Back to category -->
+			<div class="article-footer">
+				<a href="/apps/chain-tools/{data.guide.categoryId}" class="back-link-footer">
+					<BookOpen class="footer-icon" />
+					{t('routes/apps/chain-tools.explore_more_tools')}
+				</a>
 			</div>
 		</div>
-		<div class="quiz-cta-actions">
-			<a href="{basePath}/quiz?difficulty=beginner" class="quiz-btn beginner"
-				>{t('quiz.beginner')}</a
-			>
-			<a href="{basePath}/quiz?difficulty=intermediate" class="quiz-btn intermediate"
-				>{t('quiz.intermediate')}</a
-			>
-			<a href="{basePath}/quiz?difficulty=expert" class="quiz-btn expert">{t('quiz.expert')}</a>
-		</div>
-	</section>
-
-	<!-- Back to Tools -->
-	<div class="back-link">
-		<a href="/apps/chain-tools/{data.guide.categoryId}">← Back to {data.category.labelKey} Tools</a>
 	</div>
-</div>
+</article>
 
 <style>
-	.guide-page {
-		max-width: 1000px;
+	.guide-article {
+		max-width: 1200px;
 		margin: 0 auto;
 		padding: var(--space-6);
 	}
 
 	/* Header */
-	.guide-header {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-		gap: var(--space-6);
+	.article-header {
 		margin-bottom: var(--space-8);
-		flex-wrap: wrap;
+		padding-bottom: var(--space-6);
+		border-bottom: 1px solid var(--color-panel-border-1);
 	}
 
-	.header-content {
-		flex: 1;
-		min-width: 280px;
+	.back-link {
+		display: inline-block;
+		font-size: var(--text-sm);
+		color: var(--color-description-3);
+		text-decoration: none;
+		margin-bottom: var(--space-4);
 	}
 
-	.title {
-		font-size: var(--text-3xl);
-		font-weight: var(--font-bold);
-		color: var(--color-heading-1);
-		margin-bottom: var(--space-2);
-	}
-
-	.subtitle {
-		font-size: var(--text-lg);
-		color: var(--color-description-2);
-	}
-
-	.progress-card {
-		background: var(--color-panel-2);
-		border: 1px solid var(--color-panel-border-1);
-		border-radius: var(--radius-lg);
-		padding: var(--space-4);
-		min-width: 200px;
-	}
-
-	.progress-header {
-		display: flex;
-		align-items: center;
-		gap: var(--space-2);
-		margin-bottom: var(--space-3);
-	}
-
-	.progress-header :global(.progress-icon) {
-		width: 20px;
-		height: 20px;
+	.back-link:hover {
 		color: #3b82f6;
 	}
 
-	.progress-label {
+	.article-title {
+		font-size: var(--text-3xl);
+		font-weight: var(--font-bold);
+		color: var(--color-heading-1);
+		margin-bottom: var(--space-3);
+		line-height: 1.2;
+	}
+
+	.article-subtitle {
+		font-size: var(--text-lg);
+		color: var(--color-description-2);
+		margin-bottom: var(--space-4);
+	}
+
+	.article-meta {
+		display: flex;
+		gap: var(--space-4);
 		font-size: var(--text-sm);
-		font-weight: var(--font-medium);
-		color: var(--color-heading-2);
+		color: var(--color-description-3);
 	}
 
-	.progress-bar-container {
-		height: 8px;
-		background: var(--color-panel-3);
-		border-radius: var(--radius-full);
-		overflow: hidden;
-		margin-bottom: var(--space-2);
-	}
-
-	.progress-bar {
-		height: 100%;
-		background: linear-gradient(90deg, #3b82f6, #60a5fa);
-		border-radius: var(--radius-full);
-		transition: width 0.3s ease;
-	}
-
-	.progress-text {
-		font-size: var(--text-2xl);
-		font-weight: var(--font-bold);
-		color: var(--color-heading-1);
-		text-align: center;
-	}
-
-	/* Intro */
-	.intro-section {
-		margin-bottom: var(--space-8);
-	}
-
-	.intro-text {
-		font-size: var(--text-base);
-		color: var(--color-description-2);
-		line-height: 1.7;
-	}
-
-	/* Stats */
-	.stats-section {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: var(--space-4);
-		margin-bottom: var(--space-10);
-	}
-
-	.stat-item {
-		text-align: center;
-		padding: var(--space-4);
-		background: var(--color-panel-3);
-		border: 1px solid var(--color-panel-border-2);
-		border-radius: var(--radius-md);
-	}
-
-	.stat-value {
-		display: block;
-		font-size: var(--text-2xl);
-		font-weight: var(--font-bold);
-		color: var(--color-heading-1);
-	}
-
-	.stat-label {
-		font-size: var(--text-xs);
-		color: var(--color-description-2);
-	}
-
-	/* Navigation Cards */
-	.nav-section {
-		margin-bottom: var(--space-10);
-	}
-
-	.nav-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-		gap: var(--space-4);
-	}
-
-	.nav-card {
+	.read-time {
 		display: flex;
 		align-items: center;
-		gap: var(--space-4);
-		padding: var(--space-4);
+		gap: var(--space-1);
+	}
+
+	.read-time :global(.meta-icon) {
+		width: 16px;
+		height: 16px;
+	}
+
+	/* Layout */
+	.article-layout {
+		display: grid;
+		grid-template-columns: 240px 1fr;
+		gap: var(--space-8);
+	}
+
+	/* Table of Contents */
+	.toc-sidebar {
+		position: sticky;
+		top: var(--space-6);
+		height: fit-content;
+	}
+
+	.toc {
 		background: var(--color-panel-2);
 		border: 1px solid var(--color-panel-border-1);
 		border-radius: var(--radius-lg);
+		padding: var(--space-4);
+	}
+
+	.toc-title {
+		font-size: var(--text-sm);
+		font-weight: var(--font-semibold);
+		color: var(--color-heading-2);
+		margin-bottom: var(--space-3);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.toc-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.toc-item {
+		margin-bottom: var(--space-2);
+	}
+
+	.toc-link {
+		display: block;
+		width: 100%;
+		text-align: left;
+		background: none;
+		border: none;
+		padding: var(--space-1) 0;
+		font-size: var(--text-sm);
+		color: var(--color-description-2);
+		cursor: pointer;
+	}
+
+	.toc-link:hover {
+		color: #3b82f6;
+	}
+
+	.toc-sublist {
+		list-style: none;
+		padding-left: var(--space-3);
+		margin-top: var(--space-1);
+	}
+
+	.toc-subitem {
+		margin-bottom: var(--space-1);
+	}
+
+	.toc-sublink {
+		display: block;
+		width: 100%;
+		text-align: left;
+		background: none;
+		border: none;
+		padding: var(--space-1) 0;
+		font-size: var(--text-xs);
+		color: var(--color-description-3);
+		cursor: pointer;
+	}
+
+	.toc-sublink:hover {
+		color: #3b82f6;
+	}
+
+	/* Content */
+	.article-content {
+		min-width: 0;
+	}
+
+	.content-section {
+		margin-bottom: var(--space-10);
+		scroll-margin-top: var(--space-6);
+	}
+
+	.section-title {
+		font-size: var(--text-2xl);
+		font-weight: var(--font-bold);
+		color: var(--color-heading-1);
+		margin-bottom: var(--space-4);
+		padding-bottom: var(--space-2);
+		border-bottom: 2px solid var(--color-panel-border-1);
+	}
+
+	.section-content {
+		font-size: var(--text-base);
+		color: var(--color-description-1);
+		line-height: 1.8;
+	}
+
+	.section-content :global(p) {
+		margin-bottom: var(--space-4);
+	}
+
+	.section-content :global(ul),
+	.section-content :global(ol) {
+		margin-bottom: var(--space-4);
+		padding-left: var(--space-6);
+	}
+
+	.section-content :global(li) {
+		margin-bottom: var(--space-2);
+	}
+
+	/* Subsections */
+	.subsection {
+		margin-top: var(--space-6);
+		scroll-margin-top: var(--space-6);
+	}
+
+	.subsection-title {
+		font-size: var(--text-xl);
+		font-weight: var(--font-semibold);
+		color: var(--color-heading-2);
+		margin-bottom: var(--space-3);
+	}
+
+	.subsection-content {
+		font-size: var(--text-base);
+		color: var(--color-description-1);
+		line-height: 1.8;
+	}
+
+	/* Tool mentions */
+	.tool-mentions {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: var(--space-2);
+		margin-top: var(--space-4);
+		padding: var(--space-3);
+		background: var(--color-panel-2);
+		border-radius: var(--radius-md);
+	}
+
+	.tool-mentions-label {
+		font-size: var(--text-sm);
+		color: var(--color-description-3);
+	}
+
+	.tool-chip {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--space-1);
+		padding: var(--space-1) var(--space-3);
+		background: var(--color-panel-3);
+		border: 1px solid var(--color-panel-border-1);
+		border-radius: var(--radius-full);
+		font-size: var(--text-sm);
+		color: var(--color-heading-2);
 		text-decoration: none;
 		transition: all 0.2s ease;
 	}
 
-	.nav-card:hover {
-		background: var(--color-panel-3);
+	.tool-chip:hover {
 		border-color: #3b82f6;
-		transform: translateY(-2px);
-	}
-
-	.nav-card-icon {
-		width: 48px;
-		height: 48px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background: var(--color-panel-3);
-		border-radius: var(--radius-md);
-	}
-
-	.nav-card-icon :global(.icon) {
-		width: 24px;
-		height: 24px;
 		color: #3b82f6;
 	}
 
-	.nav-card-content {
-		flex: 1;
+	.tool-chip.small {
+		padding: var(--space-1) var(--space-2);
+		font-size: var(--text-xs);
 	}
 
-	.nav-card-title {
+	.tool-context {
+		font-size: var(--text-xs);
+		color: var(--color-description-3);
+	}
+
+	/* Case studies */
+	.case-studies {
+		margin-top: var(--space-6);
+	}
+
+	.case-study {
+		padding: var(--space-4);
+		background: linear-gradient(135deg, var(--color-panel-2), var(--color-panel-3));
+		border: 1px solid var(--color-panel-border-1);
+		border-left: 4px solid #f59e0b;
+		border-radius: var(--radius-md);
+		margin-bottom: var(--space-4);
+	}
+
+	.case-study-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: var(--space-2);
+	}
+
+	.case-study-title {
 		font-size: var(--text-base);
+		font-weight: var(--font-semibold);
+		color: var(--color-heading-1);
+	}
+
+	.case-study-profit {
+		font-size: var(--text-sm);
+		font-weight: var(--font-bold);
+		color: #10b981;
+		background: rgba(16, 185, 129, 0.1);
+		padding: var(--space-1) var(--space-2);
+		border-radius: var(--radius-sm);
+	}
+
+	.case-study-description {
+		font-size: var(--text-sm);
+		color: var(--color-description-2);
+		line-height: 1.6;
+		margin-bottom: var(--space-2);
+	}
+
+	.case-study-date {
+		font-size: var(--text-xs);
+		color: var(--color-description-3);
+	}
+
+	.case-study-link {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--space-1);
+		font-size: var(--text-sm);
+		color: #3b82f6;
+		text-decoration: none;
+		margin-top: var(--space-2);
+	}
+
+	.case-study-link:hover {
+		text-decoration: underline;
+	}
+
+	.case-study-link :global(.link-icon) {
+		width: 14px;
+		height: 14px;
+	}
+
+	/* Glossary */
+	.glossary-section {
+		background: var(--color-panel-2);
+		border-radius: var(--radius-lg);
+		padding: var(--space-6);
+	}
+
+	.glossary-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		gap: var(--space-4);
+	}
+
+	.glossary-item {
+		padding: var(--space-3);
+		background: var(--color-panel-1);
+		border: 1px solid var(--color-panel-border-1);
+		border-radius: var(--radius-md);
+	}
+
+	.glossary-term {
 		font-weight: var(--font-semibold);
 		color: var(--color-heading-2);
 		margin-bottom: var(--space-1);
 	}
 
-	.nav-card-count {
+	.glossary-definition {
 		font-size: var(--text-sm);
-		color: var(--color-description-3);
+		color: var(--color-description-2);
+		line-height: 1.5;
 	}
 
-	.nav-card :global(.nav-card-arrow) {
-		width: 20px;
-		height: 20px;
-		color: var(--color-description-3);
-	}
-
-	/* Sections */
-	.section-title {
-		font-size: var(--text-xl);
-		font-weight: var(--font-bold);
-		color: var(--color-heading-1);
-		margin-bottom: var(--space-2);
-	}
-
-	.section-description {
-		font-size: var(--text-sm);
-		color: var(--color-description-3);
-		margin-bottom: var(--space-6);
-	}
-
-	/* Core Projects */
-	.core-projects-section {
-		margin-bottom: var(--space-10);
-	}
-
-	.tier-groups {
+	.glossary-tools {
 		display: flex;
-		flex-direction: column;
-		gap: var(--space-6);
+		flex-wrap: wrap;
+		gap: var(--space-1);
+		margin-top: var(--space-2);
 	}
 
-	.tier-group {
+	/* Featured tools */
+	.featured-tools-section {
+		margin-top: var(--space-10);
+		padding: var(--space-6);
 		background: var(--color-panel-2);
-		border: 1px solid var(--color-panel-border-1);
 		border-radius: var(--radius-lg);
-		padding: var(--space-4);
 	}
 
-	.tier-header {
-		display: flex;
-		align-items: center;
-		gap: var(--space-2);
-		margin-bottom: var(--space-4);
-	}
-
-	.tier-header :global(.tier-icon) {
-		width: 20px;
-		height: 20px;
-	}
-
-	.tier-header :global(.tier-1) {
-		color: #f59e0b;
-	}
-
-	.tier-header :global(.tier-2) {
-		color: #6b7280;
-	}
-
-	.tier-label {
-		font-size: var(--text-sm);
-		font-weight: var(--font-semibold);
-		color: var(--color-heading-2);
-	}
-
-	.tier-tools {
+	.featured-tools-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
 		gap: var(--space-3);
 	}
 
-	.core-tool-card {
-		position: relative;
-		padding: var(--space-3);
+	.featured-tool-card {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: var(--space-3) var(--space-4);
 		background: var(--color-panel-1);
 		border: 1px solid var(--color-panel-border-1);
 		border-radius: var(--radius-md);
@@ -546,243 +667,88 @@
 		transition: all 0.2s ease;
 	}
 
-	.core-tool-card:hover {
+	.featured-tool-card:hover {
 		border-color: #3b82f6;
-	}
-
-	.tool-name {
-		font-weight: var(--font-semibold);
-		color: var(--color-heading-2);
-		margin-bottom: var(--space-1);
-	}
-
-	.tool-significance {
-		font-size: var(--text-xs);
-		color: var(--color-description-3);
-		line-height: 1.4;
-	}
-
-	.core-tool-card :global(.mastered-icon) {
-		position: absolute;
-		top: var(--space-2);
-		right: var(--space-2);
-		width: 16px;
-		height: 16px;
-		color: #10b981;
-	}
-
-	/* Quick Start */
-	.quick-start-section {
-		margin-bottom: var(--space-10);
-	}
-
-	.phases-preview {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-		gap: var(--space-4);
-		margin-bottom: var(--space-4);
-	}
-
-	.phase-card {
-		padding: var(--space-4);
-		background: var(--color-panel-2);
-		border: 1px solid var(--color-panel-border-1);
-		border-radius: var(--radius-lg);
-	}
-
-	.phase-card.current {
-		border-color: #3b82f6;
-	}
-
-	.phase-header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: var(--space-2);
-	}
-
-	.phase-number {
-		font-size: var(--text-xs);
-		font-weight: var(--font-semibold);
-		color: #3b82f6;
-		text-transform: uppercase;
-	}
-
-	.phase-time {
-		display: flex;
-		align-items: center;
-		gap: var(--space-1);
-		font-size: var(--text-xs);
-		color: var(--color-description-3);
-	}
-
-	.phase-time :global(.time-icon) {
-		width: 12px;
-		height: 12px;
-	}
-
-	.phase-title {
-		font-size: var(--text-base);
-		font-weight: var(--font-semibold);
-		color: var(--color-heading-2);
-		margin-bottom: var(--space-2);
-	}
-
-	.phase-description {
-		font-size: var(--text-sm);
-		color: var(--color-description-3);
-		margin-bottom: var(--space-3);
-	}
-
-	.phase-progress {
-		display: flex;
-		align-items: center;
-		gap: var(--space-2);
-	}
-
-	.phase-progress-bar {
-		flex: 1;
-		height: 6px;
-		background: var(--color-panel-3);
-		border-radius: var(--radius-full);
-		overflow: hidden;
-	}
-
-	.phase-progress-fill {
-		height: 100%;
-		background: #3b82f6;
-		border-radius: var(--radius-full);
-	}
-
-	.phase-progress-text {
-		font-size: var(--text-xs);
-		color: var(--color-description-3);
-		white-space: nowrap;
-	}
-
-	.view-all-link {
-		display: inline-flex;
-		align-items: center;
-		gap: var(--space-1);
-		font-size: var(--text-sm);
-		font-weight: var(--font-medium);
-		color: #2563eb;
-		text-decoration: none;
-	}
-
-	.view-all-link:hover {
-		text-decoration: underline;
-	}
-
-	.view-all-link :global(.link-arrow) {
-		width: 16px;
-		height: 16px;
-	}
-
-	/* Quiz CTA */
-	.quiz-cta-section {
-		background: linear-gradient(135deg, var(--color-panel-2), var(--color-panel-3));
-		border: 1px solid var(--color-panel-border-1);
-		border-radius: var(--radius-lg);
-		padding: var(--space-6);
-		margin-bottom: var(--space-8);
-	}
-
-	.quiz-cta-content {
-		display: flex;
-		align-items: center;
-		gap: var(--space-4);
-		margin-bottom: var(--space-4);
-	}
-
-	.quiz-cta-content :global(.quiz-cta-icon) {
-		width: 48px;
-		height: 48px;
-		color: #3b82f6;
-	}
-
-	.quiz-cta-text h3 {
-		font-size: var(--text-lg);
-		font-weight: var(--font-semibold);
-		color: var(--color-heading-1);
-		margin-bottom: var(--space-1);
-	}
-
-	.quiz-cta-text p {
-		font-size: var(--text-sm);
-		color: var(--color-description-2);
-	}
-
-	.quiz-cta-actions {
-		display: flex;
-		gap: var(--space-3);
-		flex-wrap: wrap;
-	}
-
-	.quiz-btn {
-		padding: var(--space-2) var(--space-4);
-		font-size: var(--text-sm);
-		font-weight: var(--font-medium);
-		border-radius: var(--radius-md);
-		text-decoration: none;
-		transition: all 0.2s ease;
-	}
-
-	.quiz-btn.beginner {
-		background: #10b981;
-		color: white;
-	}
-
-	.quiz-btn.intermediate {
-		background: #f59e0b;
-		color: white;
-	}
-
-	.quiz-btn.expert {
-		background: #ef4444;
-		color: white;
-	}
-
-	.quiz-btn:hover {
 		transform: translateY(-2px);
-		opacity: 0.9;
 	}
 
-	/* Back Link */
-	.back-link {
+	.featured-tool-name {
+		font-weight: var(--font-medium);
+		color: var(--color-heading-2);
+	}
+
+	.featured-tool-card :global(.featured-tool-arrow) {
+		width: 16px;
+		height: 16px;
+		color: var(--color-description-3);
+	}
+
+	/* Footer */
+	.article-footer {
+		margin-top: var(--space-10);
+		padding-top: var(--space-6);
+		border-top: 1px solid var(--color-panel-border-1);
 		text-align: center;
 	}
 
-	.back-link a {
-		font-size: var(--text-sm);
-		color: var(--color-description-3);
+	.back-link-footer {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--space-2);
+		padding: var(--space-3) var(--space-6);
+		background: #3b82f6;
+		color: white;
+		border-radius: var(--radius-md);
 		text-decoration: none;
+		font-weight: var(--font-medium);
+		transition: all 0.2s ease;
 	}
 
-	.back-link a:hover {
-		color: #2563eb;
+	.back-link-footer:hover {
+		background: #2563eb;
+		transform: translateY(-2px);
+	}
+
+	.back-link-footer :global(.footer-icon) {
+		width: 20px;
+		height: 20px;
 	}
 
 	/* Mobile */
-	@media (max-width: 768px) {
-		.guide-page {
+	@media (max-width: 900px) {
+		.article-layout {
+			grid-template-columns: 1fr;
+		}
+
+		.toc-sidebar {
+			position: relative;
+			top: 0;
+		}
+
+		.toc {
+			margin-bottom: var(--space-6);
+		}
+	}
+
+	@media (max-width: 640px) {
+		.guide-article {
 			padding: var(--space-4);
 		}
 
-		.guide-header {
-			flex-direction: column;
-		}
-
-		.progress-card {
-			width: 100%;
-		}
-
-		.stats-section {
-			grid-template-columns: repeat(2, 1fr);
-		}
-
-		.title {
+		.article-title {
 			font-size: var(--text-2xl);
+		}
+
+		.section-title {
+			font-size: var(--text-xl);
+		}
+
+		.glossary-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.featured-tools-grid {
+			grid-template-columns: 1fr 1fr;
 		}
 	}
 </style>

@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Scroll - EVM-Equivalent ZK Rollup | Layer 2 Tool Review",
+		"description": "Discover Scroll, the EVM-equivalent ZK rollup for Ethereum. Learn about bytecode-level compatibility, community-driven development, Session Marks rewards, and how to deploy existing smart contracts with zero modifications.",
+		"keywords": "Scroll, ZK rollup, Layer 2, EVM equivalent, bytecode compatible, Session Marks, Ethereum scaling, zkEVM"
+	},
+	"overview": "Scroll is an EVM-equivalent Layer 2 scaling solution that brings the power of zero-knowledge (ZK) rollup technology to Ethereum while maintaining perfect compatibility with existing tools and contracts. Launched in mainnet in October 2023, Scroll has distinguished itself through its commitment to bytecode-level EVM equivalence, allowing developers to deploy any existing Solidity or Vyper contract without modifications.\n\nWhat makes Scroll unique is its community-first approach. Built by researchers from the Ethereum Foundation and academia, Scroll contributes heavily to ZK-EVM research as a public good, with many innovations being open-sourced for the broader ecosystem. The project emphasizes decentralization and security, implementing a multi-proof system and working toward a decentralized sequencer.\n\nScroll's Session Marks program rewards users for ecosystem participation, tracking on-chain activity across DeFi, NFTs, and social interactions. While not officially confirmed as an airdrop mechanism, Session Marks signal future rewards for active community members. With growing TVL, thriving DeFi ecosystem, and strong focus on EVM equivalence, Scroll represents a practical approach to ZK scaling that prioritizes developer experience and ecosystem compatibility.",
+	"features": {
+		"1": {
+			"title": "EVM Equivalence",
+			"description": "Perfect bytecode-level compatibility with Ethereum, allowing deployment of any existing smart contract without code modifications or special tooling"
+		},
+		"2": {
+			"title": "zkEVM Technology",
+			"description": "Uses zero-knowledge proofs to guarantee transaction validity with instant finality and maximum security inherited from Ethereum"
+		},
+		"3": {
+			"title": "Developer-Friendly",
+			"description": "Works seamlessly with all existing Ethereum development tools like Hardhat, Foundry, Remix, and standard Web3 libraries"
+		},
+		"4": {
+			"title": "Low Transaction Fees",
+			"description": "Achieves 50-100x lower gas fees compared to Ethereum mainnet through efficient ZK proof generation and batching"
+		},
+		"5": {
+			"title": "Session Marks Rewards",
+			"description": "Earn Session Marks by participating in the ecosystem, with marks tracking DeFi activity, NFT interactions, and community engagement"
+		},
+		"6": {
+			"title": "Community-Driven Development",
+			"description": "Open-source ZK research and development with active contributions to Ethereum's ZK ecosystem as a public good"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi Applications",
+			"description": "Deploy lending protocols, DEXs, and yield farms with ZK security and low fees while maintaining full Ethereum compatibility"
+		},
+		"2": {
+			"title": "Migrate Existing Contracts",
+			"description": "Port existing Ethereum dApps to Scroll with zero code changes, simply redeploy your bytecode and enjoy lower fees"
+		},
+		"3": {
+			"title": "Low-Cost Token Transfers",
+			"description": "Send and receive tokens with instant finality and minimal fees, ideal for payments, remittances, and everyday transactions"
+		},
+		"4": {
+			"title": "Earn Session Marks",
+			"description": "Participate in Scroll's DeFi ecosystem, bridge assets, trade on DEXs, and engage with the community to accumulate Session Marks"
+		},
+		"5": {
+			"title": "ZK Ecosystem Building",
+			"description": "Leverage Scroll's open-source ZK innovations to build advanced privacy-preserving applications and contribute to ZK research"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Scroll and how does it work?",
+			"answer": "Scroll is an Ethereum Layer 2 using ZK rollup technology with EVM equivalence. It executes transactions off-chain in an environment that perfectly mirrors Ethereum's execution layer at the bytecode level. After execution, Scroll generates zero-knowledge proofs (zkSNARKs) that mathematically guarantee transaction validity. These compact proofs are submitted to Ethereum, allowing anyone to verify correctness without re-executing transactions. This provides instant finality, lower fees, and maximum security while maintaining perfect compatibility with all existing Ethereum contracts and tools."
+		},
+		"2": {
+			"question": "How is Scroll different from other ZK rollups?",
+			"answer": "Scroll's key differentiator is its focus on EVM equivalence rather than just EVM compatibility. While some ZK rollups require custom compilers or have limitations on certain opcodes, Scroll supports the Ethereum Virtual Machine at the bytecode level, meaning any contract that works on Ethereum works on Scroll with zero modifications. This is achieved through innovative ZK circuit design that can prove EVM execution directly. Additionally, Scroll emphasizes open-source research and community-driven development, contributing many innovations back to the Ethereum ecosystem as public goods."
+		},
+		"3": {
+			"question": "What are Session Marks and how do I earn them?",
+			"answer": "Session Marks are Scroll's loyalty program that tracks your on-chain activity and ecosystem participation. You earn marks by bridging assets to Scroll, using DeFi protocols (swapping, lending, providing liquidity), minting or trading NFTs, and participating in community governance. Different activities earn different mark weights based on their value to the ecosystem. While Scroll hasn't officially confirmed marks will convert to token airdrops, they clearly signal which users are actively contributing to the network. Check your marks on the Scroll Sessions dashboard."
+		},
+		"4": {
+			"question": "How do I bridge assets to Scroll?",
+			"answer": "You can bridge assets to Scroll through multiple methods: (1) Official Scroll Bridge at scroll.io/bridge for direct bridging from Ethereum mainnet, (2) Third-party bridges like Orbiter Finance, Owlto, or LayerZero for cross-chain transfers from other L2s, or (3) Centralized exchanges that support direct Scroll deposits/withdrawals. The official bridge uses ZK proofs for security with a withdrawal delay, while third-party bridges offer faster transfers through liquidity pools. Always verify bridge addresses and start with small amounts to test."
+		},
+		"5": {
+			"question": "How does Scroll compare to zkSync and Starknet?",
+			"answer": "All three are ZK rollups but with different approaches. Scroll prioritizes EVM equivalence, allowing perfect bytecode compatibility with zero code changes required. zkSync Era focuses on EVM compatibility with added features like native account abstraction, but may require some contract modifications. Starknet uses a different VM (Cairo) entirely, requiring complete contract rewrites but offering potential performance advantages. For developers wanting to deploy existing contracts unchanged, Scroll is the easiest choice. For new projects wanting cutting-edge features, zkSync or Starknet might offer more innovation. Scroll's advantage is its seamless developer experience and perfect Ethereum compatibility."
+		}
+	},
+	"cta": {
+		"ready": "Ready to build on EVM-equivalent ZK?",
+		"button": "Visit Scroll",
+		"note": "Perfect Ethereum compatibility with ZK security"
+	}
+}

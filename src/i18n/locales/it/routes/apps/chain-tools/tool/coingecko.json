@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "CoinGecko - Cryptocurrency Prices, Charts & Market Data",
+		"description": "Track 15,000+ cryptocurrencies with CoinGecko. Get real-time prices, market cap rankings, trading volume, and comprehensive crypto data.",
+		"keywords": "CoinGecko, crypto prices, market cap, cryptocurrency data, token tracking, crypto charts"
+	},
+	"overview": "CoinGecko is one of the world's largest cryptocurrency data aggregators, tracking over 15,000 tokens across 1,000+ exchanges. Founded in 2014 by TM Lee and Bobby Ong, CoinGecko pioneered comprehensive crypto metrics beyond just price and market cap.\n\nThe platform provides detailed data including trading volume, liquidity, developer activity, community stats, and on-chain metrics. CoinGecko's trust score system helps users identify reliable exchanges, while its extensive API serves millions of developers and applications.\n\nUnlike competitors, CoinGecko remains independent and bootstrapped, maintaining objectivity in its rankings and data. The platform also offers educational content through CoinGecko Learn and publishes quarterly crypto reports used widely in the industry.",
+	"features": {
+		"1": {
+			"title": "15,000+ Tokens Tracked",
+			"description": "Comprehensive coverage of cryptocurrencies across all major and minor chains"
+		},
+		"2": {
+			"title": "Exchange Trust Score",
+			"description": "Evaluate exchange reliability with liquidity, security, and volume analysis"
+		},
+		"3": {
+			"title": "Developer Activity Metrics",
+			"description": "Track GitHub commits, contributors, and development progress"
+		},
+		"4": {
+			"title": "On-Chain Metrics",
+			"description": "Access transaction counts, active addresses, and network statistics"
+		},
+		"5": {
+			"title": "Free API Access",
+			"description": "Generous free tier API for developers and applications"
+		},
+		"6": {
+			"title": "Portfolio Tracker",
+			"description": "Track your crypto holdings and P&L across wallets"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Price Research",
+			"description": "Compare prices across exchanges and track historical performance"
+		},
+		"2": {
+			"title": "Token Discovery",
+			"description": "Find new tokens by category, chain, or trending metrics"
+		},
+		"3": {
+			"title": "Exchange Selection",
+			"description": "Choose reliable exchanges using trust scores and volume data"
+		},
+		"4": {
+			"title": "Developer Integration",
+			"description": "Power applications with crypto price and market data API"
+		},
+		"5": {
+			"title": "Market Analysis",
+			"description": "Research market trends, dominance, and sector performance"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Is CoinGecko free to use?",
+			"answer": "Yes, CoinGecko is completely free for regular users. The platform offers a generous free API tier (up to 30 calls/minute) and premium API plans for higher limits. There are no paywalled features on the website itself—all price, market, and token data is freely accessible."
+		},
+		"2": {
+			"question": "How does CoinGecko differ from CoinMarketCap?",
+			"answer": "While both track crypto prices, CoinGecko offers more comprehensive metrics including developer activity, community stats, and liquidity scores. CoinGecko remains independent (bootstrapped) while CMC was acquired by Binance. Many users prefer CoinGecko's more neutral stance on exchange rankings and token listings."
+		},
+		"3": {
+			"question": "How accurate is CoinGecko's data?",
+			"answer": "CoinGecko aggregates data from 1,000+ exchanges using their APIs. Price accuracy depends on exchange data quality. For major tokens, prices are highly accurate. For smaller tokens on fewer exchanges, there may be slight discrepancies. The Trust Score helps identify reliable data sources."
+		},
+		"4": {
+			"question": "Can I use CoinGecko's API for my project?",
+			"answer": "Yes. CoinGecko offers a free API with 30 calls/minute for basic needs, a Demo tier (500 calls/minute), and paid Pro plans for production use. The API provides price data, market data, exchange data, and more. Documentation is available at docs.coingecko.com."
+		},
+		"5": {
+			"question": "What is CoinGecko Candy?",
+			"answer": "CoinGecko Candy is a rewards program where users earn 'candies' for daily check-ins. These candies can be redeemed for NFTs, merchandise, and partner rewards. It's a gamification feature to encourage daily platform usage—not a cryptocurrency or token."
+		}
+	},
+	"cta": {
+		"ready": "Ready to explore crypto markets?",
+		"button": "Open CoinGecko",
+		"note": "Free cryptocurrency data platform"
+	}
+}

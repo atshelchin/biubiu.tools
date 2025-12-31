@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "DeBank - Web3 Portfolio Tracker & Social Platform",
+		"description": "Track crypto portfolios, follow wallets, and discover DeFi with DeBank. The most comprehensive Web3 asset tracker with social features.",
+		"keywords": "DeBank, portfolio tracker, DeFi dashboard, wallet tracking, Web3 social, crypto analytics"
+	},
+	"overview": "DeBank is the leading Web3 portfolio tracker and social platform, providing comprehensive asset tracking across 100+ chains. Founded in 2019, DeBank has become the go-to platform for viewing any wallet's complete DeFi presence.\n\nThe platform excels at detecting DeFi positions across 1,800+ protocols, including obscure LP positions, lending, staking, and locked tokens that other trackers miss. DeBank's social layer allows users to follow wallets, share portfolios, and discover what notable addresses are holding.\n\nDeBank also builds Rabby Wallet, bringing its security-first philosophy to browser-based DeFi. The platform serves both retail users and whales, with features ranging from simple portfolio viewing to advanced analytics and wallet scoring.",
+	"features": {
+		"1": {
+			"title": "100+ Chains Supported",
+			"description": "Track assets across virtually every EVM chain"
+		},
+		"2": {
+			"title": "1,800+ Protocol Detection",
+			"description": "Recognize DeFi positions across protocols automatically"
+		},
+		"3": {
+			"title": "Web3 Social",
+			"description": "Follow wallets, share portfolios, and discover trends"
+		},
+		"4": {
+			"title": "Wallet Ranking",
+			"description": "See top wallets by assets, NFTs, and activity"
+		},
+		"5": {
+			"title": "Transaction History",
+			"description": "Complete decoded transaction history with labels"
+		},
+		"6": {
+			"title": "Token Approval Management",
+			"description": "View and revoke risky token approvals"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Portfolio Tracking",
+			"description": "View complete DeFi positions across all chains"
+		},
+		"2": {
+			"title": "Whale Watching",
+			"description": "Follow notable wallets and track their moves"
+		},
+		"3": {
+			"title": "Due Diligence",
+			"description": "Research any wallet's holdings and history"
+		},
+		"4": {
+			"title": "Security Audit",
+			"description": "Check and revoke dangerous token approvals"
+		},
+		"5": {
+			"title": "Social Discovery",
+			"description": "Find trending tokens and protocols through social"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Is DeBank safe to use?",
+			"answer": "Yes, DeBank is read-only for portfolio viewing—it never asks for private keys or wallet signatures for tracking. When using the optional Web3 ID features, you sign messages (not transactions) for verification. DeBank is used by millions and is one of the most trusted DeFi platforms."
+		},
+		"2": {
+			"question": "Is DeBank free?",
+			"answer": "Yes, DeBank is free for all portfolio tracking features. The platform monetizes through premium Web3 ID features, which are optional. Core functionality—viewing any wallet, tracking DeFi positions, following addresses—is completely free."
+		},
+		"3": {
+			"question": "How does DeBank detect DeFi positions?",
+			"answer": "DeBank maintains integrations with 1,800+ protocols, directly reading smart contract states. This allows detection of LP positions, lending, staking, vesting, and locked tokens across supported chains. The team continuously adds new protocol support."
+		},
+		"4": {
+			"question": "What is Web3 ID?",
+			"answer": "Web3 ID is DeBank's social identity layer. It lets you create a profile, follow others, and build reputation. Features include a verified profile, social feed, and premium badges. It's optional—you can use DeBank fully without creating a Web3 ID."
+		},
+		"5": {
+			"question": "DeBank vs Zapper: Which is better?",
+			"answer": "DeBank has superior protocol coverage (1,800+ vs 300+) and better social features. Zapper has gamification (XP, quests) and built-in swapping. DeBank is better for comprehensive portfolio viewing; Zapper is better for DeFi interactions. Many users have both."
+		}
+	},
+	"cta": {
+		"ready": "Ready to track any wallet?",
+		"button": "Open DeBank",
+		"note": "Comprehensive portfolio tracker"
+	}
+}

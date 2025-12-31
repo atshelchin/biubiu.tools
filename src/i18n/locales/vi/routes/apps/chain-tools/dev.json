@@ -197,6 +197,15 @@
 		},
 		"fe_lang": {
 			"description": "Fe - Tool"
+		},
+		"4byte": {
+			"description": "Function signature database for decoding"
+		},
+		"ethers": {
+			"description": "Modern TypeScript Ethereum library"
+		},
+		"solidity": {
+			"description": "Official Solidity documentation"
 		}
 	}
 }

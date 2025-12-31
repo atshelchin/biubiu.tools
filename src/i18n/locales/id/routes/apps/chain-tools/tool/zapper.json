@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Zapper - DeFi Portfolio Dashboard & NFT Tracker",
+		"description": "Manage your DeFi portfolio with Zapper. Track tokens, NFTs, and DeFi positions across 30+ chains in one unified dashboard.",
+		"keywords": "Zapper, DeFi dashboard, portfolio tracker, NFT tracker, multi-chain, Web3"
+	},
+	"overview": "Zapper is a leading Web3 portfolio management platform that aggregates your entire on-chain presence into one dashboard. Supporting 30+ chains, Zapper automatically detects and displays tokens, NFTs, DeFi positions, and transaction history.\n\nFounded in 2019 through a merger of DeFiZap and DeFiSnap, Zapper pioneered the concept of 'zapping' into complex DeFi positions with single transactions. The platform has evolved into a comprehensive Web3 social layer, allowing users to follow wallets, share portfolios, and earn rewards through quests.\n\nZapper serves millions of users from beginners to power traders. The platform gamifies DeFi with XP, seasonal rewards, and NFT drops. Its Zapper Protocol enables gasless transactions and improved UX across supported chains.",
+	"features": {
+		"1": {
+			"title": "Multi-Chain Tracking",
+			"description": "Aggregate portfolio across 30+ EVM chains automatically"
+		},
+		"2": {
+			"title": "DeFi Position Detection",
+			"description": "Recognize and value LP positions, lending, staking across protocols"
+		},
+		"3": {
+			"title": "NFT Portfolio",
+			"description": "Display and value NFT collections with floor price tracking"
+		},
+		"4": {
+			"title": "Social Features",
+			"description": "Follow wallets, share portfolios, and discover what others hold"
+		},
+		"5": {
+			"title": "Quest System",
+			"description": "Complete on-chain quests to earn XP and seasonal rewards"
+		},
+		"6": {
+			"title": "Swap & Bridge",
+			"description": "Trade tokens and bridge assets across chains within the app"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Portfolio Tracking",
+			"description": "View all your crypto assets and DeFi positions in one place"
+		},
+		"2": {
+			"title": "Wallet Watching",
+			"description": "Follow and analyze smart money or friend wallets"
+		},
+		"3": {
+			"title": "NFT Management",
+			"description": "Track NFT collections, floor prices, and rarity"
+		},
+		"4": {
+			"title": "DeFi Discovery",
+			"description": "Find new protocols and opportunities through trends"
+		},
+		"5": {
+			"title": "Transaction History",
+			"description": "Review complete on-chain history for taxes or research"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Is Zapper safe to connect my wallet?",
+			"answer": "Yes, Zapper only requests read-only access when you connect your wallet for viewing. The platform never asks for private keys or seed phrases. For transactions (swaps, bridges), you sign each transaction individually. Zapper is one of the most trusted DeFi dashboards, used by millions."
+		},
+		"2": {
+			"question": "Is Zapper free?",
+			"answer": "Yes, Zapper is free to use for portfolio tracking, wallet watching, and most features. There are small fees on swaps and bridges (typically 0.5-1%) which fund development. Premium features like advanced analytics may be introduced but core functionality remains free."
+		},
+		"3": {
+			"question": "What is Zapper XP?",
+			"answer": "Zapper XP is the platform's gamification system. You earn XP by completing quests (on-chain actions), daily check-ins, and participation. XP unlocks seasonal rewards including NFT drops and exclusive features. It's a way to reward active users and make DeFi more engaging."
+		},
+		"4": {
+			"question": "How does Zapper detect my DeFi positions?",
+			"answer": "Zapper maintains integrations with 300+ DeFi protocols. When you connect a wallet, it scans your address across all supported protocols to find LP positions, lending positions, staking, and other DeFi activities. The valuations are calculated using current market prices."
+		},
+		"5": {
+			"question": "Zapper vs Zerion: Which is better?",
+			"answer": "Both are excellent portfolio dashboards. Zapper has better gamification (XP, quests), social features, and broader protocol coverage. Zerion has a cleaner mobile app and native wallet. Many users have both. Try each and see which interface you prefer—both offer free portfolio tracking."
+		}
+	},
+	"cta": {
+		"ready": "Ready to manage your Web3 portfolio?",
+		"button": "Open Zapper",
+		"note": "Free DeFi dashboard"
+	}
+}

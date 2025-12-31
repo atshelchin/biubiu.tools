@@ -88,40 +88,40 @@
 			"description": "deBridge流动性网络跨链"
 		},
 		"layerswap": {
-			"description": "Layerswap - Cross-chain bridge"
+			"description": "Bridge from CEX to L2 networks"
 		},
 		"li_fi": {
-			"description": "LI.FI - Tool"
+			"description": "Multi-chain bridge aggregator with swap"
 		},
 		"circle_cctp": {
-			"description": "Circle CCTP - Tool"
+			"description": "Native USDC cross-chain transfer protocol"
 		},
 		"debridge_dln": {
-			"description": "deBridge DLN - Tool"
+			"description": "Cross-chain trading with limit orders"
 		},
 		"meson_finance": {
-			"description": "Meson - Tool"
+			"description": "Fast low-fee stablecoin bridge"
 		},
 		"router_protocol": {
-			"description": "Router Protocol - Tool"
+			"description": "Cross-chain intent-based omnichain bridge"
 		},
 		"nitro_bridge": {
-			"description": "Nitro Bridge - Tool"
+			"description": "Intent-based fast cross-chain bridge"
 		},
 		"portal_bridge_wormhole": {
-			"description": "Portal Bridge - Tool"
+			"description": "Wormhole cross-chain NFT and token bridge"
 		},
 		"celer_im": {
-			"description": "Celer IM - Tool"
+			"description": "Cross-chain messaging for dApps"
 		},
 		"multichain_anycall": {
-			"description": "Multichain AnyCall - Tool"
+			"description": "Cross-chain messaging for contracts"
 		},
 		"hyperlane_bridge": {
-			"description": "Hyperlane - Tool"
+			"description": "Permissionless modular messaging bridge"
 		},
 		"connext_amarok": {
-			"description": "Connext Amarok - Tool"
+			"description": "Trust-minimized modular cross-chain messaging"
 		}
 	}
 }

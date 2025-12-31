@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"seo": {
+		"title": "zkSync Era - ZK Rollup L2 with Account Abstraction | Layer 2 Tool Review",
+		"description": "Discover zkSync Era, the leading ZK rollup Layer 2 solution. Learn about native account abstraction, zkEVM compatibility, ZK Stack hyperchains, and how to build secure, scalable dApps with ZK technology.",
+		"keywords": "zkSync, ZK rollup, Layer 2, account abstraction, zkEVM, ZK Stack, hyperchains, Ethereum scaling, ZK token"
+	},
+	"overview": "zkSync Era is a leading Ethereum Layer 2 scaling solution built on zero-knowledge (ZK) rollup technology, offering superior security and scalability compared to optimistic rollups. Developed by Matter Labs and launched in March 2023, zkSync Era has quickly become a major player in the L2 ecosystem, with billions in Total Value Locked (TVL) and a thriving developer community.\n\nWhat sets zkSync Era apart is its native account abstraction support, enabling user-friendly features like gasless transactions, social recovery, and customizable transaction logic. The zkEVM ensures full compatibility with Ethereum smart contracts, allowing developers to deploy existing Solidity code with minimal changes while benefiting from ZK-proof security.\n\nThe zkSync ecosystem extends beyond a single chain with ZK Stack, a modular framework for building custom ZK-powered hyperchains. These application-specific rollups can be configured for different use cases while maintaining security through ZK proofs. The ZK token, launched in June 2024, enables decentralized governance, allowing the community to guide protocol development. With instant finality, low fees, and cutting-edge ZK technology, zkSync Era represents the future of Ethereum scaling.",
+	"features": {
+		"1": {
+			"title": "ZK Rollup Security",
+			"description": "Uses zero-knowledge proofs to guarantee transaction validity without fraud proof delays, providing instant finality and maximum security"
+		},
+		"2": {
+			"title": "Native Account Abstraction",
+			"description": "Built-in support for smart contract wallets, enabling gasless transactions, social recovery, and flexible authentication methods"
+		},
+		"3": {
+			"title": "zkEVM Compatibility",
+			"description": "Deploy existing Solidity smart contracts with near-perfect EVM compatibility, making migration seamless for developers"
+		},
+		"4": {
+			"title": "ZK Stack for Hyperchains",
+			"description": "Launch custom ZK-powered Layer 3 chains with shared security and liquidity, perfect for application-specific use cases"
+		},
+		"5": {
+			"title": "Low Transaction Fees",
+			"description": "Achieve 50-100x lower gas fees compared to Ethereum mainnet through efficient ZK proof batching"
+		},
+		"6": {
+			"title": "Fast Finality",
+			"description": "Instant transaction finality without waiting periods, unlike optimistic rollups which require 7-day challenge windows"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi Applications",
+			"description": "Deploy lending protocols, DEXs, and yield farms with maximum security and low fees powered by ZK technology"
+		},
+		"2": {
+			"title": "Account Abstraction dApps",
+			"description": "Build user-friendly applications with gasless transactions, session keys, and social recovery for mainstream adoption"
+		},
+		"3": {
+			"title": "Token Transfers",
+			"description": "Send and receive tokens with instant finality and minimal fees, ideal for payments and remittances"
+		},
+		"4": {
+			"title": "NFT Ecosystems",
+			"description": "Create, trade, and manage NFTs with provable scarcity and authenticity backed by ZK proofs"
+		},
+		"5": {
+			"title": "Hyperchain Deployment",
+			"description": "Launch application-specific ZK rollups using ZK Stack for gaming, social platforms, or enterprise solutions"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is zkSync Era and how does it work?",
+			"answer": "zkSync Era is an Ethereum Layer 2 using ZK rollup technology. It executes transactions off-chain, then generates zero-knowledge proofs (called SNARK proofs) that mathematically guarantee transaction validity. These compact proofs are submitted to Ethereum, allowing anyone to verify correctness without re-executing transactions. This approach provides instant finality, lower fees than optimistic rollups, and maximum security inherited from Ethereum."
+		},
+		"2": {
+			"question": "How is zkSync different from optimistic rollups like Arbitrum?",
+			"answer": "The key difference is security mechanism. zkSync uses zero-knowledge proofs to guarantee validity upfront, while optimistic rollups assume validity and rely on fraud proofs if challenged. This means zkSync has instant finality (no 7-day withdrawal delay), stronger security guarantees, and potentially lower fees at scale. However, ZK technology is more complex to implement, which is why zkSync focused heavily on EVM compatibility to make developer adoption seamless."
+		},
+		"3": {
+			"question": "What is account abstraction and why does it matter?",
+			"answer": "Account abstraction treats all accounts as smart contracts, enabling features impossible with traditional externally-owned accounts (EOAs). On zkSync Era, this means users can enjoy gasless transactions (sponsors pay fees), social recovery (trusted contacts help recover accounts), batch transactions (multiple operations in one), and flexible authentication (biometrics, passkeys). This dramatically improves user experience, making Web3 accessible to mainstream users unfamiliar with seed phrases and gas fees."
+		},
+		"4": {
+			"question": "What is ZK Stack and how can I use it?",
+			"answer": "ZK Stack is Matter Labs' open-source framework for building custom ZK-powered hyperchains (Layer 3s or sovereign L2s). It allows you to create application-specific rollups with configurable features like custom gas tokens, permissioned access, or specialized execution environments. All ZK Stack chains share security through ZK proofs and can tap into shared liquidity. This is ideal for gaming studios, enterprises, or DAOs wanting dedicated throughput without sacrificing security."
+		},
+		"5": {
+			"question": "What is the ZK token used for?",
+			"answer": "ZK is zkSync's governance token launched in June 2024 via the largest airdrop in crypto history. Token holders can vote on protocol upgrades, treasury allocation, and ecosystem development through on-chain governance. While ZK doesn't directly pay for gas (ETH is used), it gives the community control over zkSync's evolution, including decisions about fee structures, ZK Stack development, and grant programs. The token distribution emphasizes community ownership with significant allocations to users and developers."
+		}
+	},
+	"cta": {
+		"ready": "Ready to build with ZK technology?",
+		"button": "Visit zkSync Era",
+		"note": "ZK rollup security with instant finality"
+	}
+}

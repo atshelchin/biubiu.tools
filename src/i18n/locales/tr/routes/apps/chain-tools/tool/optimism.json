@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇬🇧",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Optimism - Ethereum Layer 2 Scaling Solution | L2 Tool Review",
+		"description": "Discover Optimism, an Ethereum Layer 2 using OP Stack. Learn about Superchain vision, OP governance, RetroPGF public goods funding, and how Base, Mode, and Zora are built on OP Stack.",
+		"keywords": "Optimism, OP Stack, Layer 2, L2, Ethereum scaling, Superchain, OP token, RetroPGF, Base, Mode, rollup"
+	},
+	"overview": "Optimism is a Layer 2 scaling solution for Ethereum that uses optimistic rollup technology to dramatically reduce transaction costs while maintaining Ethereum's security guarantees. Founded in 2019 by Jinglan Wang, Karl Floersch, and Kevin Ho (now operating as OP Labs), Optimism has evolved beyond being just a single L2 chain into the foundation for the \"Superchain\" - a vision of interconnected L2 networks sharing security and liquidity.\n\nAt the heart of Optimism is the OP Stack, a standardized, open-source development framework that makes it easy to launch new L2 chains. Major networks like Base (by Coinbase), Mode, and Zora are all built using the OP Stack, creating a growing ecosystem of interoperable chains that benefit from shared infrastructure and security.\n\nOptimism stands out not just for its technology but for its commitment to public goods funding through RetroPGF (Retroactive Public Goods Funding), where the OP community allocates millions of dollars to reward projects that have already provided value to the ecosystem. With the OP token governing protocol upgrades and fund allocation, Optimism represents a unique blend of technical excellence and progressive crypto governance.",
+	"features": {
+		"1": {
+			"title": "OP Stack Framework",
+			"description": "Open-source, modular framework for building L2 chains - powers Base, Mode, Zora and enables anyone to launch their own L2"
+		},
+		"2": {
+			"title": "Superchain Vision",
+			"description": "Network of interoperable L2s sharing security, governance, and upgrades - creating a unified scaling ecosystem for Ethereum"
+		},
+		"3": {
+			"title": "OP Token Governance",
+			"description": "Decentralized governance through OP token - community controls protocol upgrades, treasury allocation, and RetroPGF programs"
+		},
+		"4": {
+			"title": "RetroPGF Public Goods Funding",
+			"description": "Innovative model that rewards projects retroactively based on impact - millions distributed to open-source developers and public goods"
+		},
+		"5": {
+			"title": "Bedrock Upgrade",
+			"description": "Latest architecture reduces fees by 40-50%, improves node performance, and enhances compatibility with Ethereum tooling"
+		},
+		"6": {
+			"title": "Fault Proofs System",
+			"description": "Decentralized dispute resolution that allows anyone to challenge invalid transactions - removing trust assumptions from bridges"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "DeFi Applications",
+			"description": "Deploy or use DeFi protocols with significantly lower transaction costs while maintaining Ethereum security"
+		},
+		"2": {
+			"title": "NFT Minting and Trading",
+			"description": "Create, buy, and sell NFTs with minimal gas fees - popular for generative art and PFP collections"
+		},
+		"3": {
+			"title": "Gaming and Social Apps",
+			"description": "Build on-chain games and social applications that require frequent transactions without prohibitive costs"
+		},
+		"4": {
+			"title": "Low-Cost Transactions",
+			"description": "Make transfers, swaps, and interactions for cents instead of dollars - bringing crypto usability to everyday use"
+		},
+		"5": {
+			"title": "Superchain Development",
+			"description": "Launch your own L2 using OP Stack, inheriting security and benefiting from shared liquidity across the Superchain"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Optimism and how does it work?",
+			"answer": "Optimism is an Ethereum Layer 2 that uses optimistic rollup technology. It bundles hundreds of transactions together, processes them off-chain, and posts the results to Ethereum. Transactions are assumed valid (\"optimistic\") unless challenged during a dispute window, allowing for much lower fees while inheriting Ethereum's security."
+		},
+		"2": {
+			"question": "What is OP Stack and the Superchain?",
+			"answer": "OP Stack is an open-source framework for building L2 chains. The Superchain is a vision where multiple L2s (like Optimism, Base, Mode) built with OP Stack can communicate and share security seamlessly. Think of it as creating a network of specialized chains that work together as one unified ecosystem."
+		},
+		"3": {
+			"question": "What is the Superchain and how does it work?",
+			"answer": "The Superchain is a network of L2 chains built on OP Stack that share standardized communication protocols, security assumptions, and governance. Instead of isolated L2s competing, the Superchain enables them to interoperate - allowing assets and messages to move freely between chains while benefiting from collective security and upgrades."
+		},
+		"4": {
+			"question": "How does RetroPGF work?",
+			"answer": "RetroPGF (Retroactive Public Goods Funding) is Optimism's innovative approach to funding ecosystem development. Instead of upfront grants, projects are rewarded after they've demonstrated real impact. Community members vote on which projects provided the most value, and OP tokens are distributed accordingly - aligning incentives around actual results."
+		},
+		"5": {
+			"question": "What is the OP token used for?",
+			"answer": "The OP token serves governance functions - holders can vote on protocol upgrades, treasury spending, and RetroPGF allocations. It also plays a role in the Superchain governance, helping coordinate upgrades and standards across all OP Stack chains. Currently, OP is not used for gas fees (ETH is used instead)."
+		}
+	},
+	"cta": {
+		"ready": "Ready to explore the Superchain?",
+		"button": "Visit Optimism",
+		"note": "Ethereum security, L2 speed - your gateway to the Superchain"
+	}
+}

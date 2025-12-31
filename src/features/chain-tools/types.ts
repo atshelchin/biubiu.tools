@@ -172,192 +172,82 @@ export interface ToolDetailPageData {
 }
 
 // ============================================================================
-// Category Guide System Types
+// Category Guide System Types (Simplified - Long-form Article)
 // ============================================================================
 
 /**
- * Tool relation types for ecosystem visualization
+ * Tool mention within article content
+ * For embedding tool links naturally in the text
  */
-export type ToolRelationType =
-	| 'fork' // SushiSwap fork of Uniswap
-	| 'competitor' // Aave vs Compound
-	| 'depends_on' // Yearn depends on Curve
-	| 'integrates' // 1inch integrates Uniswap
-	| 'built_on' // Convex built on Curve
-	| 'same_ecosystem'; // Same team/ecosystem
-
-/**
- * Relation between two tools
- */
-export interface ToolRelation {
-	sourceId: string;
-	targetId: string;
-	type: ToolRelationType;
-	descriptionKey?: string; // i18n key for relation description
-}
-
-/**
- * Sub-category within a main category
- * e.g., "DEX", "Lending", "Stablecoin" within DeFi
- */
-export interface SubCategory {
-	id: string;
-	labelKey: string; // i18n key
-	descriptionKey: string; // i18n key
-	toolIds: string[]; // Tools in this sub-category
-}
-
-/**
- * Core project with additional context for learning
- */
-export interface CoreProject {
+export interface ToolMention {
 	toolId: string;
-	significanceKey: string; // i18n key: why this project matters
-	tier: 1 | 2 | 3; // 1 = must know, 2 = should know, 3 = nice to know
+	context?: string; // Optional context for why this tool is mentioned
 }
 
 /**
- * Learning task in a phase
+ * Case study with real on-chain evidence
+ * All case studies must have verifiable sources
  */
-export interface LearningTask {
-	id: string;
-	actionKey: string; // i18n key: what to do
-	type: 'read' | 'research' | 'practice' | 'quiz';
-	toolId?: string; // Related tool (optional)
-	link?: string; // External link (optional)
-}
-
-/**
- * Learning phase in the learning path
- */
-export interface LearningPhase {
+export interface CaseStudy {
 	id: string;
 	titleKey: string; // i18n key
 	descriptionKey: string; // i18n key
-	estimatedDays: string; // e.g., "3-5 days"
-	tasks: LearningTask[];
-	coreToolIds: string[]; // Key tools for this phase
+	// Verifiable sources (at least one required)
+	txHash?: string; // Etherscan transaction hash
+	duneQuery?: string; // Dune Analytics query URL
+	sourceUrl?: string; // External article/source URL
+	// Context
+	date?: string; // When this happened
+	profit?: string; // Profit amount if applicable
+	relatedToolIds?: string[];
 }
 
 /**
- * Glossary term
+ * Article section for structured long-form content
+ */
+export interface GuideSection {
+	id: string;
+	titleKey: string; // i18n key
+	contentKey: string; // i18n key for main content (markdown supported)
+	// Optional enhancements
+	toolMentions?: ToolMention[]; // Tools to highlight in this section
+	caseStudies?: CaseStudy[]; // Real examples with sources
+	subsections?: GuideSection[]; // Nested sections for ToC
+}
+
+/**
+ * Glossary term (kept for quick reference at article end)
  */
 export interface GlossaryTerm {
 	id: string;
 	termKey: string; // i18n key for term name
 	definitionKey: string; // i18n key for definition
 	relatedToolIds?: string[];
-	relatedTermIds?: string[];
 }
 
 /**
- * Quiz question types
- */
-export type QuizQuestionType =
-	| 'single_choice'
-	| 'multiple_choice'
-	| 'true_false'
-	| 'matching'
-	| 'ordering';
-
-/**
- * Quiz question
- */
-export interface QuizQuestion {
-	id: string;
-	type: QuizQuestionType;
-	difficulty: 'beginner' | 'intermediate' | 'expert';
-	questionKey: string; // i18n key
-	optionKeys: string[]; // i18n keys for options
-	correctAnswers: number[]; // Indices of correct options
-	explanationKey: string; // i18n key
-	relatedToolIds?: string[];
-	tags: string[]; // For categorizing scores
-}
-
-/**
- * Quiz achievement level
- */
-export interface QuizAchievement {
-	minScore: number; // Minimum percentage (0-1)
-	titleKey: string; // i18n key
-	badge: string; // Emoji or icon identifier
-}
-
-/**
- * Complete quiz data for a category
- */
-export interface CategoryQuiz {
-	categoryId: CategoryId;
-	questions: QuizQuestion[];
-	achievements: QuizAchievement[];
-}
-
-/**
- * Complete guide data for a category
- * All text content uses i18n keys
+ * Simplified category guide - long-form article format
+ * Focus on quality content with real examples
  */
 export interface CategoryGuide {
 	categoryId: CategoryId;
 
 	// i18n key prefix for this guide
-	// e.g., 'routes/apps/chain-tools/guide/defi'
+	// e.g., 'routes/apps/chain-tools/defi/guide'
 	i18nKeyPrefix: string;
 
-	// Content structure (counts for rendering)
-	fundamentalsCount: number; // Number of fundamental sections
-	ecosystemSubCategories: SubCategory[];
-	coreProjects: CoreProject[];
-	learningPath: LearningPhase[];
+	// Article structure
+	sections: GuideSection[];
+
+	// Quick reference glossary (displayed at end)
 	glossary: GlossaryTerm[];
 
-	// Tool relations for ecosystem graph
-	relations: ToolRelation[];
-
-	// Quiz
-	quiz: CategoryQuiz;
+	// Featured tools for this category (shown in sidebar/footer)
+	featuredToolIds: string[];
 
 	// Metadata
 	lastUpdated: string;
-}
-
-/**
- * User's progress for a category (stored in localStorage)
- */
-export interface UserCategoryProgress {
-	categoryId: CategoryId;
-
-	// Reading progress
-	readSections: string[]; // Section IDs that have been read
-
-	// Tool status
-	toolStatus: Record<string, 'viewed' | 'learning' | 'mastered' | 'bookmarked'>;
-
-	// Quiz attempts
-	quizAttempts: {
-		difficulty: 'beginner' | 'intermediate' | 'expert';
-		score: number;
-		totalQuestions: number;
-		wrongQuestionIds: string[];
-		timestamp: number;
-	}[];
-
-	// Learning path progress
-	learningPathProgress: {
-		currentPhase: number;
-		completedTaskIds: string[];
-	};
-
-	// Best achievement
-	bestAchievement?: {
-		titleKey: string;
-		badge: string;
-		score: number;
-	};
-
-	// Timestamps
-	lastVisited: number;
-	startedAt: number;
+	estimatedReadTime: string; // e.g., "15 min read"
 }
 
 /**

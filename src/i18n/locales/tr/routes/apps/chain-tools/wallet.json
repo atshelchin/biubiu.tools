@@ -324,6 +324,9 @@
 		},
 		"bitgo_wallet": {
 			"description": "Çoklu imza ve sigortayla kurumsal saklama"
+		},
+		"biubiu_one_to_many": {
+			"description": "Batch transfer to multiple addresses"
 		}
 	}
 }

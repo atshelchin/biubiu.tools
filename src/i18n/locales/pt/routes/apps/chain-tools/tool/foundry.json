@@ -1,0 +1,90 @@
+{
+	"_meta": {
+		"name": "English",
+		"englishName": "English",
+		"direction": "ltr",
+		"flag": "🇺🇸",
+		"code": "en"
+	},
+	"seo": {
+		"title": "Foundry - Blazing Fast Ethereum Development Toolkit | Rust-Based Framework",
+		"description": "Explore Foundry, the blazing fast Rust-based Ethereum development toolkit. Includes Forge for Solidity testing, Cast CLI tools, Anvil local node, and Chisel REPL for rapid smart contract development.",
+		"keywords": "Foundry, Forge, Cast, Anvil, Chisel, Ethereum development, Rust, Solidity testing, smart contracts, fuzzing, gas optimization"
+	},
+	"overview": "Foundry is a blazing fast, portable, and modular toolkit for Ethereum application development written in Rust. Created by Paradigm in 2021, Foundry has rapidly gained adoption among developers who prioritize speed and prefer writing tests in Solidity rather than JavaScript.\n\nFoundry consists of four powerful tools: Forge (testing framework that executes tests in Solidity), Cast (Swiss Army knife for interacting with EVM smart contracts), Anvil (local Ethereum node), and Chisel (fast Solidity REPL). The framework is known for being extremely fast—tests that take minutes in Hardhat run in seconds with Foundry. This speed comes from Rust's performance and parallel test execution.\n\nWhat makes Foundry unique is writing tests directly in Solidity. This means developers work in one language throughout their development cycle, making the workflow more seamless. The built-in fuzzing capabilities test edge cases automatically, and detailed gas reports help optimize contracts. Foundry has become the go-to choice for developers who want maximum speed and control, used by teams building high-performance DeFi protocols and infrastructure.",
+	"features": {
+		"1": {
+			"title": "Forge Testing Framework",
+			"description": "Write smart contract tests in Solidity with parallel execution and blazing fast performance"
+		},
+		"2": {
+			"title": "Cast CLI Tools",
+			"description": "Swiss Army knife for Ethereum - call contracts, send transactions, retrieve data from CLI"
+		},
+		"3": {
+			"title": "Anvil Local Node",
+			"description": "Fast local Ethereum node with instant mining and mainnet forking capabilities"
+		},
+		"4": {
+			"title": "Chisel Solidity REPL",
+			"description": "Interactive Solidity shell for rapid prototyping and testing code snippets"
+		},
+		"5": {
+			"title": "Built-in Fuzzing",
+			"description": "Automatic property-based testing that generates random inputs to find edge cases"
+		},
+		"6": {
+			"title": "Gas Snapshots",
+			"description": "Track gas usage over time and catch regressions with detailed gas reporting"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Smart Contract Testing",
+			"description": "Write comprehensive test suites in Solidity with fast execution and parallel testing"
+		},
+		"2": {
+			"title": "Fuzzing & Property Testing",
+			"description": "Discover edge cases and vulnerabilities with built-in fuzzing capabilities"
+		},
+		"3": {
+			"title": "Script-Based Deployment",
+			"description": "Deploy contracts using Solidity scripts for reproducible and version-controlled deployments"
+		},
+		"4": {
+			"title": "Gas Optimization",
+			"description": "Analyze and optimize gas usage with detailed reports and snapshots"
+		},
+		"5": {
+			"title": "Protocol Development",
+			"description": "Build high-performance DeFi protocols with fast iteration cycles and powerful testing"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is Foundry and why is it so fast?",
+			"answer": "Foundry is a Rust-based Ethereum development toolkit that includes Forge (testing), Cast (CLI tools), Anvil (local node), and Chisel (REPL). It's extremely fast because it's written in Rust, runs tests in parallel, and doesn't need to bridge between JavaScript and EVM. Tests that take minutes in other frameworks run in seconds with Foundry. The framework lets you write tests in Solidity, keeping everything in one language."
+		},
+		"2": {
+			"question": "Foundry vs Hardhat - which should I choose?",
+			"answer": "Choose Foundry if you prioritize speed, prefer writing tests in Solidity, and want powerful built-in fuzzing. It's ideal for developers comfortable with command-line tools and those building performance-critical protocols. Choose Hardhat if you prefer JavaScript/TypeScript for tests, need a larger plugin ecosystem, or want more extensive documentation. Many teams use both: Hardhat for development and deployment, Foundry for testing."
+		},
+		"3": {
+			"question": "What is Forge and how do I use it for testing?",
+			"answer": "Forge is Foundry's testing framework. You write tests in Solidity using 'forge-std' library. Test files go in the 'test/' directory, and test functions start with 'test'. Run tests with 'forge test'. Forge supports fuzzing (test functions with parameters get random inputs), gas reporting, and parallel execution. It also provides cheatcodes like 'vm.prank()' to simulate different callers and 'vm.expectRevert()' to test failure cases."
+		},
+		"4": {
+			"question": "What is Cast and what can I do with it?",
+			"answer": "Cast is Foundry's command-line tool for interacting with Ethereum. You can call contract functions ('cast call'), send transactions ('cast send'), convert between formats ('cast --to-hex'), retrieve blockchain data ('cast block'), and much more. It's like having ethers.js or web3.js as a CLI tool. Cast is incredibly useful for quick contract interactions, debugging, and scripting without writing JavaScript code."
+		},
+		"5": {
+			"question": "How do I install and get started with Foundry?",
+			"answer": "Install Foundry with 'curl -L https://foundry.paradigm.xyz | bash' then run 'foundryup'. Create a new project with 'forge init my-project'. This creates a project structure with 'src/' (contracts), 'test/' (tests), and 'script/' (deployment scripts). Run tests with 'forge test' and build with 'forge build'. The Foundry Book (book.getfoundry.sh) has comprehensive documentation and tutorials for getting started."
+		}
+	},
+	"cta": {
+		"ready": "Ready for blazing fast development?",
+		"button": "Open Foundry Docs",
+		"note": "Rust-based Ethereum toolkit"
+	}
+}
