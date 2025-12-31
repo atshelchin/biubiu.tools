@@ -8,6 +8,10 @@
 
 	const i18n = useI18n();
 
+	// Base paths for absolute links
+	const basePath = $derived(`/apps/chain-tools/${data.guide.categoryId}/guide`);
+	const toolPath = '/apps/chain-tools/tool';
+
 	// Search state
 	let searchQuery = $state('');
 
@@ -75,7 +79,7 @@
 <div class="glossary-page">
 	<!-- Header -->
 	<header class="page-header">
-		<a href=".." class="back-link">
+		<a href={basePath} class="back-link">
 			<ChevronLeft class="back-icon" />
 			<span>Back to Guide</span>
 		</a>
@@ -145,7 +149,7 @@
 													{#each term.relatedToolIds as toolId (toolId)}
 														{@const tool = getToolById(toolId)}
 														{#if tool}
-															<a href="../../tool/{tool.id}" class="related-link tool">
+															<a href="{toolPath}/{tool.id}" class="related-link tool">
 																{tool.name}
 															</a>
 														{/if}
@@ -194,11 +198,11 @@
 
 	<!-- Navigation -->
 	<div class="page-nav">
-		<a href="learning-path" class="nav-link prev">
+		<a href="{basePath}/learning-path" class="nav-link prev">
 			<ChevronLeft class="nav-icon" />
 			<span>Learning Path</span>
 		</a>
-		<a href="quiz" class="nav-link next">
+		<a href="{basePath}/quiz" class="nav-link next">
 			<span>Take the Quiz</span>
 			<ChevronLeft class="nav-icon rotate" />
 		</a>
@@ -228,7 +232,7 @@
 	}
 
 	.back-link:hover {
-		color: var(--color-accent);
+		color: #3b82f6;
 	}
 
 	.back-link :global(.back-icon) {
@@ -245,7 +249,7 @@
 	.header-content :global(.header-icon) {
 		width: 48px;
 		height: 48px;
-		color: var(--color-accent);
+		color: #3b82f6;
 	}
 
 	.title {
@@ -295,7 +299,7 @@
 
 	.search-input:focus {
 		outline: none;
-		border-color: var(--color-accent);
+		border-color: #3b82f6;
 	}
 
 	.search-input::placeholder {
@@ -336,7 +340,7 @@
 
 	.letter-link:hover {
 		background: var(--color-panel-3);
-		color: var(--color-accent);
+		color: #3b82f6;
 	}
 
 	/* Content */
@@ -357,10 +361,10 @@
 	.letter-heading {
 		font-size: var(--text-2xl);
 		font-weight: var(--font-bold);
-		color: var(--color-accent);
+		color: #3b82f6;
 		margin-bottom: var(--space-4);
 		padding-bottom: var(--space-2);
-		border-bottom: 2px solid var(--color-accent);
+		border-bottom: 2px solid #3b82f6;
 	}
 
 	.terms-in-letter {
@@ -378,7 +382,7 @@
 	}
 
 	.term-card.active {
-		border-color: var(--color-accent);
+		border-color: #3b82f6;
 	}
 
 	.term-header {
@@ -451,15 +455,15 @@
 	.related-link.tool {
 		background: var(--color-panel-1);
 		border: 1px solid var(--color-panel-border-1);
-		color: var(--color-accent);
+		color: #3b82f6;
 	}
 
 	.related-link.tool:hover {
-		border-color: var(--color-accent);
+		border-color: #3b82f6;
 	}
 
 	.related-link.term {
-		background: var(--color-accent);
+		background: #3b82f6;
 		border: none;
 		color: white;
 		cursor: pointer;
@@ -500,7 +504,7 @@
 	}
 
 	.nav-link:hover {
-		border-color: var(--color-accent);
+		border-color: #3b82f6;
 		color: var(--color-heading-2);
 	}
 

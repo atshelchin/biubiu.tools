@@ -24,6 +24,10 @@
 	const i18n = useI18n();
 	const progress = useGuideProgress(data.guide.categoryId);
 
+	// Base paths for absolute links
+	const basePath = $derived(`/apps/chain-tools/${data.guide.categoryId}/guide`);
+	const toolPath = '/apps/chain-tools/tool';
+
 	// Expanded phases state
 	const expandedPhases = new SvelteSet([data.guide.learningPath[0]?.id ?? '']);
 
@@ -133,7 +137,7 @@
 <div class="learning-path-page">
 	<!-- Header -->
 	<header class="page-header">
-		<a href=".." class="back-link">
+		<a href={basePath} class="back-link">
 			<ChevronLeft class="back-icon" />
 			<span>Back to Guide</span>
 		</a>
@@ -215,7 +219,7 @@
 									{#each phase.coreToolIds as toolId (toolId)}
 										{@const tool = getToolById(toolId)}
 										{#if tool}
-											<a href="../../tool/{tool.id}" class="tool-link">
+											<a href="{toolPath}/{tool.id}" class="tool-link">
 												{tool.name}
 												<ExternalLink class="link-icon" />
 											</a>
@@ -250,8 +254,13 @@
 										<p class="task-action">
 											{t(`learning.phase${phaseIndex + 1}.task${phase.tasks.indexOf(task) + 1}`)}
 										</p>
-										{#if relatedTool}
-											<a href="../../tool/{relatedTool.id}" class="task-tool">
+										{#if task.link}
+											<a href={task.link} class="task-link">
+												→ Go to resource
+												<ExternalLink class="link-icon-small" />
+											</a>
+										{:else if relatedTool}
+											<a href="{toolPath}/{relatedTool.id}" class="task-tool">
 												→ {relatedTool.name}
 											</a>
 										{/if}
@@ -267,11 +276,11 @@
 
 	<!-- Navigation -->
 	<div class="page-nav">
-		<a href="ecosystem" class="nav-link prev">
+		<a href="{basePath}/ecosystem" class="nav-link prev">
 			<ChevronLeft class="nav-icon" />
 			<span>Ecosystem</span>
 		</a>
-		<a href="glossary" class="nav-link next">
+		<a href="{basePath}/glossary" class="nav-link next">
 			<span>Glossary</span>
 			<ChevronLeft class="nav-icon rotate" />
 		</a>
@@ -301,7 +310,7 @@
 	}
 
 	.back-link:hover {
-		color: var(--color-accent);
+		color: #2563eb;
 	}
 
 	.back-link :global(.back-icon) {
@@ -318,7 +327,7 @@
 	.header-content :global(.header-icon) {
 		width: 48px;
 		height: 48px;
-		color: var(--color-accent);
+		color: #3b82f6;
 	}
 
 	.title {
@@ -358,7 +367,7 @@
 	.progress-percentage {
 		font-size: var(--text-2xl);
 		font-weight: var(--font-bold);
-		color: var(--color-accent);
+		color: #3b82f6;
 	}
 
 	.progress-bar-container {
@@ -371,7 +380,7 @@
 
 	.progress-bar {
 		height: 100%;
-		background: linear-gradient(90deg, var(--color-accent), #10b981);
+		background: linear-gradient(90deg, #3b82f6, #10b981);
 		border-radius: var(--radius-full);
 		transition: width 0.3s ease;
 	}
@@ -404,7 +413,7 @@
 	}
 
 	.phase-card.expanded {
-		border-color: var(--color-accent);
+		border-color: #3b82f6;
 	}
 
 	.phase-header {
@@ -499,7 +508,7 @@
 
 	.mini-bar-fill {
 		height: 100%;
-		background: var(--color-accent);
+		background: #3b82f6;
 		border-radius: var(--radius-full);
 	}
 
@@ -552,16 +561,20 @@
 		align-items: center;
 		gap: var(--space-1);
 		padding: var(--space-1) var(--space-3);
-		background: var(--color-panel-1);
-		border: 1px solid var(--color-panel-border-1);
+		background: var(--color-panel-3);
+		border: 1px solid var(--color-panel-border-2);
 		border-radius: var(--radius-md);
 		font-size: var(--text-sm);
-		color: var(--color-accent);
+		color: var(--color-heading-2);
 		text-decoration: none;
+		font-weight: var(--font-medium);
+		transition: all 0.2s ease;
 	}
 
 	.tool-link:hover {
-		border-color: var(--color-accent);
+		background: #3b82f6;
+		border-color: #3b82f6;
+		color: #fff;
 	}
 
 	.tool-link :global(.link-icon) {
@@ -600,11 +613,15 @@
 	.task-checkbox :global(.check-icon) {
 		width: 24px;
 		height: 24px;
-		color: var(--color-panel-border-1);
+		color: var(--color-description-3);
 	}
 
 	.task-checkbox :global(.check-icon.completed) {
 		color: #10b981;
+	}
+
+	.task-checkbox:hover :global(.check-icon) {
+		color: #3b82f6;
 	}
 
 	.task-content {
@@ -626,23 +643,23 @@
 	}
 
 	.task-type[data-type='read'] {
-		background: #dbeafe;
-		color: #1d4ed8;
+		background: #3b82f6;
+		color: #fff;
 	}
 
 	.task-type[data-type='research'] {
-		background: #fef3c7;
-		color: #b45309;
+		background: #f59e0b;
+		color: #fff;
 	}
 
 	.task-type[data-type='practice'] {
-		background: #d1fae5;
-		color: #047857;
+		background: #10b981;
+		color: #fff;
 	}
 
 	.task-type[data-type='quiz'] {
-		background: #fae8ff;
-		color: #a21caf;
+		background: #a855f7;
+		color: #fff;
 	}
 
 	.task-type :global(.type-icon) {
@@ -656,14 +673,26 @@
 		margin-bottom: var(--space-1);
 	}
 
-	.task-tool {
+	.task-tool,
+	.task-link {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--space-1);
 		font-size: var(--text-sm);
-		color: var(--color-accent);
+		color: #2563eb;
 		text-decoration: none;
+		font-weight: var(--font-medium);
 	}
 
-	.task-tool:hover {
+	.task-tool:hover,
+	.task-link:hover {
+		color: #1d4ed8;
 		text-decoration: underline;
+	}
+
+	.task-link :global(.link-icon-small) {
+		width: 12px;
+		height: 12px;
 	}
 
 	/* Navigation */
@@ -690,7 +719,7 @@
 	}
 
 	.nav-link:hover {
-		border-color: var(--color-accent);
+		border-color: #3b82f6;
 		color: var(--color-heading-2);
 	}
 

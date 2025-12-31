@@ -21,6 +21,10 @@
 	const i18n = useI18n();
 	const progress = useGuideProgress(data.guide.categoryId);
 
+	// Base paths for absolute links
+	const basePath = $derived(`/apps/chain-tools/${data.guide.categoryId}/guide`);
+	const toolPath = '/apps/chain-tools/tool';
+
 	// Quiz state
 	type QuizState = 'select' | 'quiz' | 'results';
 	let quizState = $state<QuizState>(data.initialDifficulty ? 'quiz' : 'select');
@@ -229,7 +233,7 @@
 <div class="quiz-page">
 	<!-- Header -->
 	<header class="page-header">
-		<a href=".." class="back-link">
+		<a href={basePath} class="back-link">
 			<ChevronLeft class="back-icon" />
 			<span>Back to Guide</span>
 		</a>
@@ -376,7 +380,7 @@
 										{#each question.relatedToolIds as toolId (toolId)}
 											{@const tool = getToolById(toolId)}
 											{#if tool}
-												<a href="../../tool/{tool.id}" class="related-tool">
+												<a href="{toolPath}/{tool.id}" class="related-tool">
 													{tool.name}
 													<ExternalLink class="tool-icon" />
 												</a>
@@ -447,7 +451,7 @@
 							{#each wrongQuestions() as question (question.id)}
 								<li class="weak-area">
 									<span class="weak-topic">{question.tags[0]}</span>
-									<a href="glossary" class="review-link">Review</a>
+									<a href="{basePath}/glossary" class="review-link">Review</a>
 								</li>
 							{/each}
 						</ul>
@@ -470,11 +474,11 @@
 	<!-- Navigation (only in selection state) -->
 	{#if quizState === 'select'}
 		<div class="page-nav">
-			<a href="glossary" class="nav-link prev">
+			<a href="{basePath}/glossary" class="nav-link prev">
 				<ChevronLeft class="nav-icon" />
 				<span>Glossary</span>
 			</a>
-			<a href=".." class="nav-link next">
+			<a href={basePath} class="nav-link next">
 				<span>Back to Guide</span>
 				<ChevronLeft class="nav-icon rotate" />
 			</a>
@@ -505,7 +509,7 @@
 	}
 
 	.back-link:hover {
-		color: var(--color-accent);
+		color: #3b82f6;
 	}
 
 	.back-link :global(.back-icon) {
@@ -522,7 +526,7 @@
 	.header-content :global(.header-icon) {
 		width: 48px;
 		height: 48px;
-		color: var(--color-accent);
+		color: #3b82f6;
 	}
 
 	.title {
@@ -637,7 +641,7 @@
 
 	.attempt-score {
 		font-weight: var(--font-medium);
-		color: var(--color-accent);
+		color: #3b82f6;
 	}
 
 	.attempt-date {
@@ -687,7 +691,7 @@
 
 	.progress-fill {
 		height: 100%;
-		background: var(--color-accent);
+		background: #3b82f6;
 		border-radius: var(--radius-full);
 		transition: width 0.3s ease;
 	}
@@ -741,11 +745,11 @@
 	}
 
 	.option-btn:hover:not(:disabled) {
-		border-color: var(--color-accent);
+		border-color: #3b82f6;
 	}
 
 	.option-btn.selected {
-		border-color: var(--color-accent);
+		border-color: #3b82f6;
 		background: var(--color-panel-2);
 	}
 
@@ -775,7 +779,7 @@
 	}
 
 	.option-btn.selected .option-marker {
-		background: var(--color-accent);
+		background: #3b82f6;
 	}
 
 	.option-btn.selected .marker-letter {
@@ -858,12 +862,12 @@
 		border: 1px solid var(--color-panel-border-1);
 		border-radius: var(--radius-md);
 		font-size: var(--text-sm);
-		color: var(--color-accent);
+		color: #3b82f6;
 		text-decoration: none;
 	}
 
 	.related-tool:hover {
-		border-color: var(--color-accent);
+		border-color: #3b82f6;
 	}
 
 	.related-tool :global(.tool-icon) {
@@ -893,7 +897,7 @@
 	}
 
 	.nav-btn:hover:not(:disabled) {
-		border-color: var(--color-accent);
+		border-color: #3b82f6;
 		color: var(--color-heading-2);
 	}
 
@@ -903,13 +907,13 @@
 	}
 
 	.nav-btn.primary {
-		background: var(--color-accent);
-		border-color: var(--color-accent);
+		background: #3b82f6;
+		border-color: #3b82f6;
 		color: white;
 	}
 
 	.nav-btn.primary:hover:not(:disabled) {
-		background: var(--color-accent-hover);
+		background: #60a5fa;
 	}
 
 	.nav-btn :global(.nav-icon) {
@@ -956,7 +960,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: linear-gradient(135deg, var(--color-accent), #10b981);
+		background: linear-gradient(135deg, #3b82f6, #10b981);
 		border-radius: var(--radius-full);
 	}
 
@@ -1026,7 +1030,7 @@
 
 	.review-link {
 		font-size: var(--text-sm);
-		color: var(--color-accent);
+		color: #3b82f6;
 		text-decoration: none;
 	}
 
@@ -1055,13 +1059,13 @@
 	}
 
 	.action-btn.retry {
-		background: var(--color-accent);
+		background: #3b82f6;
 		border: none;
 		color: white;
 	}
 
 	.action-btn.retry:hover {
-		background: var(--color-accent-hover);
+		background: #60a5fa;
 	}
 
 	.action-btn.secondary {
@@ -1071,7 +1075,7 @@
 	}
 
 	.action-btn.secondary:hover {
-		border-color: var(--color-accent);
+		border-color: #3b82f6;
 		color: var(--color-heading-2);
 	}
 
@@ -1104,7 +1108,7 @@
 	}
 
 	.nav-link:hover {
-		border-color: var(--color-accent);
+		border-color: #3b82f6;
 		color: var(--color-heading-2);
 	}
 

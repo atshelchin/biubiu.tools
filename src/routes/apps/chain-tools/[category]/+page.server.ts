@@ -28,7 +28,7 @@ export const load: PageServerLoad = (event) => {
 
 	// Get category-specific SEO data
 	const categoryName = t(category.labelKey as keyof TranslationKeys);
-	const categoryKey = categoryId.replace(/-/g, '_');
+	const categoryKey = categoryId;
 
 	// Try to get category-specific SEO, fallback to generic
 	// Namespace: routes/apps/chain-tools/{category}.json contains category_seo and tools

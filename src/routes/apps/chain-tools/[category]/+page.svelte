@@ -1,11 +1,12 @@
 <script lang="ts">
 	import { useI18n } from '@shelchin/i18n';
-	import { FolderOpen } from '@lucide/svelte';
+	import { FolderOpen, BookOpen, ChevronRight } from '@lucide/svelte';
 	import ExternalToolCard from '@/features/chain-tools/components/external-tool-card.svelte';
 	import SeoHead from '$lib/components/seo-head.svelte';
 	import Faqs from '$lib/components/ui/faqs.svelte';
 	import Pagination from '$lib/components/ui/pagination.svelte';
 	import { allTools as toolsData } from '@/features/chain-tools/data/tools';
+	import { getCategoryGuide } from '@/features/chain-tools/data/guides';
 	import type { ExternalTool } from '@/features/chain-tools/types';
 	import type { PageData } from './$types';
 
@@ -69,6 +70,9 @@
 		last: i18n.t('common.pagination.last' as never, { defaultValue: 'Last' }),
 		page: i18n.t('common.pagination.page' as never, { defaultValue: 'Page' })
 	});
+
+	// Check if guide exists for this category
+	const hasGuide = $derived(Boolean(getCategoryGuide(data.categoryId)));
 </script>
 
 <SeoHead
@@ -81,6 +85,31 @@
 	locale={data.meta.locale}
 	structuredData={data.structuredData}
 />
+
+<!-- Guide Banner -->
+{#if hasGuide}
+	<a href="/apps/chain-tools/{data.categoryId}/guide" class="guide-banner">
+		<div class="guide-banner-content">
+			<div class="guide-banner-icon">
+				<BookOpen class="icon" />
+			</div>
+			<div class="guide-banner-text">
+				<h3 class="guide-banner-title">
+					{i18n.t('routes/apps/chain-tools.guide_banner_title' as never, {
+						defaultValue: 'Learn {category}',
+						category: data.categoryId.toUpperCase()
+					})}
+				</h3>
+				<p class="guide-banner-description">
+					{i18n.t('routes/apps/chain-tools.guide_banner_description' as never, {
+						defaultValue: 'Complete guide with tutorials, glossary, and quizzes'
+					})}
+				</p>
+			</div>
+		</div>
+		<ChevronRight class="guide-banner-arrow" />
+	</a>
+{/if}
 
 <!-- Tools Grid -->
 {#if filteredTools.length > 0}
@@ -145,6 +174,75 @@
 {/if}
 
 <style>
+	/* Guide Banner */
+	.guide-banner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--space-4);
+		padding: var(--space-4) var(--space-5);
+		margin-bottom: var(--space-6);
+		background: linear-gradient(135deg, var(--color-panel-2), var(--color-panel-3));
+		border: 1px solid var(--color-panel-border-1);
+		border-radius: var(--radius-lg);
+		text-decoration: none;
+		transition: all 0.2s ease;
+	}
+
+	.guide-banner:hover {
+		border-color: var(--color-accent);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	}
+
+	.guide-banner-content {
+		display: flex;
+		align-items: center;
+		gap: var(--space-4);
+	}
+
+	.guide-banner-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 48px;
+		height: 48px;
+		background: var(--color-accent);
+		border-radius: var(--radius-md);
+		flex-shrink: 0;
+	}
+
+	.guide-banner-icon :global(.icon) {
+		width: 24px;
+		height: 24px;
+		color: var(--color-heading-2);
+	}
+
+	.guide-banner-title {
+		font-size: var(--text-base);
+		font-weight: var(--font-semibold);
+		color: var(--color-heading-1);
+		margin-bottom: var(--space-1);
+	}
+
+	.guide-banner-description {
+		font-size: var(--text-sm);
+		color: var(--color-description-2);
+	}
+
+	.guide-banner :global(.guide-banner-arrow) {
+		width: 24px;
+		height: 24px;
+		color: var(--color-description-3);
+		flex-shrink: 0;
+		transition: transform 0.2s ease;
+	}
+
+	.guide-banner:hover :global(.guide-banner-arrow) {
+		color: var(--color-accent);
+		transform: translateX(4px);
+	}
+
 	/* Grid */
 	.tools-grid {
 		display: grid;

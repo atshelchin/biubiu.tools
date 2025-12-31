@@ -10,6 +10,9 @@
 	const i18n = useI18n();
 	const progress = useGuideProgress(data.guide.categoryId);
 
+	// Base paths for absolute links
+	const basePath = $derived(`/apps/chain-tools/${data.guide.categoryId}/guide`);
+
 	// Section IDs based on fundamentalsCount
 	const sectionIds = $derived(
 		Array.from({ length: data.guide.fundamentalsCount }, (_, i) => `section${i + 1}`)
@@ -73,7 +76,7 @@
 <div class="fundamentals-page">
 	<!-- Header -->
 	<header class="page-header">
-		<a href=".." class="back-link">
+		<a href={basePath} class="back-link">
 			<ChevronLeft class="back-icon" />
 			<span>Back to Guide</span>
 		</a>
@@ -161,7 +164,7 @@
 								<ChevronRight class="nav-icon" />
 							</button>
 						{:else}
-							<a href="../ecosystem" class="nav-btn next complete">
+							<a href="{basePath}/ecosystem" class="nav-btn next complete">
 								<span>Continue to Ecosystem</span>
 								<ChevronRight class="nav-icon" />
 							</a>
@@ -225,7 +228,7 @@
 	}
 
 	.back-link:hover {
-		color: var(--color-accent);
+		color: #3b82f6;
 	}
 
 	.back-link :global(.back-icon) {
@@ -242,7 +245,7 @@
 	.header-content :global(.header-icon) {
 		width: 48px;
 		height: 48px;
-		color: var(--color-accent);
+		color: #3b82f6;
 	}
 
 	.title {
@@ -274,8 +277,8 @@
 	}
 
 	.step {
-		width: 32px;
-		height: 32px;
+		width: 48px;
+		height: 48px;
 		border-radius: var(--radius-full);
 		border: 2px solid var(--color-panel-border-1);
 		background: var(--color-panel-1);
@@ -284,15 +287,16 @@
 		justify-content: center;
 		cursor: pointer;
 		transition: all 0.2s ease;
+		padding: 2px;
 	}
 
 	.step:hover {
-		border-color: var(--color-accent);
+		border-color: #3b82f6;
 	}
 
 	.step.active {
-		border-color: var(--color-accent);
-		background: var(--color-accent);
+		border-color: #3b82f6;
+		background: #3b82f6;
 	}
 
 	.step.active .step-number {
@@ -305,8 +309,6 @@
 	}
 
 	.step :global(.step-check) {
-		width: 16px;
-		height: 16px;
 		color: white;
 	}
 
@@ -380,7 +382,7 @@
 	}
 
 	.toc-item.active {
-		background: var(--color-accent);
+		background: #3b82f6;
 	}
 
 	.toc-item.active .toc-text,
@@ -518,18 +520,18 @@
 
 	.nav-btn:hover {
 		background: var(--color-panel-2);
-		border-color: var(--color-accent);
+		border-color: #3b82f6;
 		color: var(--color-heading-2);
 	}
 
 	.nav-btn.complete {
-		background: var(--color-accent);
-		border-color: var(--color-accent);
+		background: #3b82f6;
+		border-color: #3b82f6;
 		color: white;
 	}
 
 	.nav-btn.complete:hover {
-		background: var(--color-accent-hover);
+		background: #60a5fa;
 	}
 
 	.nav-btn :global(.nav-icon) {

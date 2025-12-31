@@ -10,6 +10,10 @@
 	const i18n = useI18n();
 	const progress = useGuideProgress(data.guide.categoryId);
 
+	// Base paths for absolute links
+	const basePath = $derived(`/apps/chain-tools/${data.guide.categoryId}/guide`);
+	const toolPath = '/apps/chain-tools/tool';
+
 	// Active sub-category filter
 	let activeSubCategory = $state<string | null>(null);
 
@@ -82,7 +86,7 @@
 <div class="ecosystem-page">
 	<!-- Header -->
 	<header class="page-header">
-		<a href=".." class="back-link">
+		<a href={basePath} class="back-link">
 			<ChevronLeft class="back-icon" />
 			<span>Back to Guide</span>
 		</a>
@@ -135,7 +139,7 @@
 						{#each subCat.toolIds as toolId (toolId)}
 							{@const tool = getToolById(toolId)}
 							{#if tool}
-								<a href="../../tool/{tool.id}" class="tool-chip">
+								<a href="{toolPath}/{tool.id}" class="tool-chip">
 									<span class="tool-chip-name">{tool.name}</span>
 									<ExternalLink class="tool-chip-icon" />
 								</a>
@@ -162,7 +166,7 @@
 				{#if sourceToolData && targetToolData}
 					<div class="relation-card">
 						<div class="relation-source">
-							<a href="../../tool/{sourceToolData.id}" class="relation-tool">
+							<a href="{toolPath}/{sourceToolData.id}" class="relation-tool">
 								{sourceToolData.name}
 							</a>
 						</div>
@@ -171,7 +175,7 @@
 							<span class="relation-type">{getRelationLabel(relation.type)}</span>
 						</div>
 						<div class="relation-target">
-							<a href="../../tool/{targetToolData.id}" class="relation-tool">
+							<a href="{toolPath}/{targetToolData.id}" class="relation-tool">
 								{targetToolData.name}
 							</a>
 						</div>
@@ -193,7 +197,7 @@
 		<div class="tools-grid">
 			{#each filteredTools() as tool (tool.id)}
 				<a
-					href="../../tool/{tool.id}"
+					href="{toolPath}/{tool.id}"
 					class="tool-card"
 					onclick={() => progress.setToolStatus(tool.id, 'viewed')}
 				>
@@ -217,11 +221,11 @@
 
 	<!-- Navigation -->
 	<div class="page-nav">
-		<a href="fundamentals" class="nav-link prev">
+		<a href="{basePath}/fundamentals" class="nav-link prev">
 			<ChevronLeft class="nav-icon" />
 			<span>Fundamentals</span>
 		</a>
-		<a href="learning-path" class="nav-link next">
+		<a href="{basePath}/learning-path" class="nav-link next">
 			<span>Learning Path</span>
 			<ChevronLeft class="nav-icon rotate" />
 		</a>
@@ -251,7 +255,7 @@
 	}
 
 	.back-link:hover {
-		color: var(--color-accent);
+		color: #3b82f6;
 	}
 
 	.back-link :global(.back-icon) {
@@ -268,7 +272,7 @@
 	.header-content :global(.header-icon) {
 		width: 48px;
 		height: 48px;
-		color: var(--color-accent);
+		color: #3b82f6;
 	}
 
 	.title {
@@ -311,8 +315,8 @@
 	}
 
 	.subcategory-tab.active {
-		background: var(--color-accent);
-		border-color: var(--color-accent);
+		background: #3b82f6;
+		border-color: #3b82f6;
 		color: white;
 	}
 
@@ -333,7 +337,7 @@
 	}
 
 	.subcategory-card.expanded {
-		border-color: var(--color-accent);
+		border-color: #3b82f6;
 	}
 
 	.subcategory-header {
@@ -392,7 +396,7 @@
 	}
 
 	.tool-chip:hover {
-		border-color: var(--color-accent);
+		border-color: #3b82f6;
 		color: var(--color-heading-2);
 	}
 
@@ -443,7 +447,7 @@
 	.relation-tool {
 		font-size: var(--text-sm);
 		font-weight: var(--font-medium);
-		color: var(--color-accent);
+		color: #3b82f6;
 		text-decoration: none;
 	}
 
@@ -491,7 +495,7 @@
 	}
 
 	.tool-card:hover {
-		border-color: var(--color-accent);
+		border-color: #3b82f6;
 		transform: translateY(-2px);
 	}
 
@@ -567,7 +571,7 @@
 	}
 
 	.nav-link:hover {
-		border-color: var(--color-accent);
+		border-color: #3b82f6;
 		color: var(--color-heading-2);
 	}
 

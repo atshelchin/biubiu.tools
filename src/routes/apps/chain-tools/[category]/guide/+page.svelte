@@ -33,41 +33,44 @@
 		progress.calculateOverallProgress(totalSections, totalTools, totalTasks)
 	);
 
+	// Base path for guide pages
+	const basePath = $derived(`/apps/chain-tools/${data.guide.categoryId}/guide`);
+
 	// Navigation items
 	const navItems = [
 		{
 			id: 'fundamentals',
 			icon: BookOpen,
 			labelKey: 'navigation.fundamentals',
-			href: `guide/fundamentals`,
+			href: `${basePath}/fundamentals`,
 			count: data.guide.fundamentalsCount
 		},
 		{
 			id: 'ecosystem',
 			icon: Map,
 			labelKey: 'navigation.ecosystem',
-			href: `guide/ecosystem`,
+			href: `${basePath}/ecosystem`,
 			count: data.guide.ecosystemSubCategories.length
 		},
 		{
 			id: 'learning-path',
 			icon: Route,
 			labelKey: 'navigation.learning_path',
-			href: `guide/learning-path`,
+			href: `${basePath}/learning-path`,
 			count: data.guide.learningPath.length
 		},
 		{
 			id: 'glossary',
 			icon: BookA,
 			labelKey: 'navigation.glossary',
-			href: `guide/glossary`,
+			href: `${basePath}/glossary`,
 			count: data.guide.glossary.length
 		},
 		{
 			id: 'quiz',
 			icon: CircleHelp,
 			labelKey: 'navigation.quiz',
-			href: `guide/quiz`,
+			href: `${basePath}/quiz`,
 			count: data.guide.quiz.questions.length
 		}
 	];
@@ -176,7 +179,7 @@
 					{#each data.guide.coreProjects.filter((p) => p.tier === 1) as project (project.toolId)}
 						{@const tool = data.tools.find((t) => t.id === project.toolId)}
 						{#if tool}
-							<a href="../tool/{tool.id}" class="core-tool-card">
+							<a href="/apps/chain-tools/tool/{tool.id}" class="core-tool-card">
 								<div class="tool-name">{tool.name}</div>
 								<div class="tool-significance">{t(`core.${project.toolId}`)}</div>
 								{#if progress.getToolStatus(tool.id) === 'mastered'}
@@ -198,7 +201,7 @@
 					{#each data.guide.coreProjects.filter((p) => p.tier === 2) as project (project.toolId)}
 						{@const tool = data.tools.find((t) => t.id === project.toolId)}
 						{#if tool}
-							<a href="../tool/{tool.id}" class="core-tool-card">
+							<a href="/apps/chain-tools/tool/{tool.id}" class="core-tool-card">
 								<div class="tool-name">{tool.name}</div>
 								<div class="tool-significance">{t(`core.${project.toolId}`)}</div>
 								{#if progress.getToolStatus(tool.id) === 'mastered'}
@@ -248,7 +251,7 @@
 			{/each}
 		</div>
 
-		<a href="guide/learning-path" class="view-all-link">
+		<a href="{basePath}/learning-path" class="view-all-link">
 			{t('common.view_all')}
 			<ChevronRight class="link-arrow" />
 		</a>
@@ -264,17 +267,19 @@
 			</div>
 		</div>
 		<div class="quiz-cta-actions">
-			<a href="guide/quiz?difficulty=beginner" class="quiz-btn beginner">{t('quiz.beginner')}</a>
-			<a href="guide/quiz?difficulty=intermediate" class="quiz-btn intermediate"
+			<a href="{basePath}/quiz?difficulty=beginner" class="quiz-btn beginner"
+				>{t('quiz.beginner')}</a
+			>
+			<a href="{basePath}/quiz?difficulty=intermediate" class="quiz-btn intermediate"
 				>{t('quiz.intermediate')}</a
 			>
-			<a href="guide/quiz?difficulty=expert" class="quiz-btn expert">{t('quiz.expert')}</a>
+			<a href="{basePath}/quiz?difficulty=expert" class="quiz-btn expert">{t('quiz.expert')}</a>
 		</div>
 	</section>
 
 	<!-- Back to Tools -->
 	<div class="back-link">
-		<a href="..">← Back to {data.category.labelKey} Tools</a>
+		<a href="/apps/chain-tools/{data.guide.categoryId}">← Back to {data.category.labelKey} Tools</a>
 	</div>
 </div>
 
@@ -330,7 +335,7 @@
 	.progress-header :global(.progress-icon) {
 		width: 20px;
 		height: 20px;
-		color: var(--color-accent);
+		color: #3b82f6;
 	}
 
 	.progress-label {
@@ -349,7 +354,7 @@
 
 	.progress-bar {
 		height: 100%;
-		background: linear-gradient(90deg, var(--color-accent), var(--color-accent-hover));
+		background: linear-gradient(90deg, #3b82f6, #60a5fa);
 		border-radius: var(--radius-full);
 		transition: width 0.3s ease;
 	}
@@ -383,8 +388,8 @@
 	.stat-item {
 		text-align: center;
 		padding: var(--space-4);
-		background: var(--color-panel-2);
-		border: 1px solid var(--color-panel-border-1);
+		background: var(--color-panel-3);
+		border: 1px solid var(--color-panel-border-2);
 		border-radius: var(--radius-md);
 	}
 
@@ -392,12 +397,12 @@
 		display: block;
 		font-size: var(--text-2xl);
 		font-weight: var(--font-bold);
-		color: var(--color-accent);
+		color: var(--color-heading-1);
 	}
 
 	.stat-label {
 		font-size: var(--text-xs);
-		color: var(--color-description-3);
+		color: var(--color-description-2);
 	}
 
 	/* Navigation Cards */
@@ -425,7 +430,7 @@
 
 	.nav-card:hover {
 		background: var(--color-panel-3);
-		border-color: var(--color-accent);
+		border-color: #3b82f6;
 		transform: translateY(-2px);
 	}
 
@@ -442,7 +447,7 @@
 	.nav-card-icon :global(.icon) {
 		width: 24px;
 		height: 24px;
-		color: var(--color-accent);
+		color: #3b82f6;
 	}
 
 	.nav-card-content {
@@ -542,7 +547,7 @@
 	}
 
 	.core-tool-card:hover {
-		border-color: var(--color-accent);
+		border-color: #3b82f6;
 	}
 
 	.tool-name {
@@ -586,7 +591,7 @@
 	}
 
 	.phase-card.current {
-		border-color: var(--color-accent);
+		border-color: #3b82f6;
 	}
 
 	.phase-header {
@@ -599,7 +604,7 @@
 	.phase-number {
 		font-size: var(--text-xs);
 		font-weight: var(--font-semibold);
-		color: var(--color-accent);
+		color: #3b82f6;
 		text-transform: uppercase;
 	}
 
@@ -645,7 +650,7 @@
 
 	.phase-progress-fill {
 		height: 100%;
-		background: var(--color-accent);
+		background: #3b82f6;
 		border-radius: var(--radius-full);
 	}
 
@@ -661,7 +666,7 @@
 		gap: var(--space-1);
 		font-size: var(--text-sm);
 		font-weight: var(--font-medium);
-		color: var(--color-accent);
+		color: #2563eb;
 		text-decoration: none;
 	}
 
@@ -693,7 +698,7 @@
 	.quiz-cta-content :global(.quiz-cta-icon) {
 		width: 48px;
 		height: 48px;
-		color: var(--color-accent);
+		color: #3b82f6;
 	}
 
 	.quiz-cta-text h3 {
@@ -755,7 +760,7 @@
 	}
 
 	.back-link a:hover {
-		color: var(--color-accent);
+		color: #2563eb;
 	}
 
 	/* Mobile */
