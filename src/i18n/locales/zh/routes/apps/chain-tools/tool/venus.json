@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Venus Protocol - BNB Chain 借贷",
+		"description": "Venus Protocol 是 BNB Chain 上领先的借贷平台。借贷并使用 XVS 治理铸造 VAI 稳定币。",
+		"keywords": "Venus Protocol, XVS, VAI, BNB Chain 借贷, BSC DeFi, 货币市场"
+	},
+	"overview": "Venus Protocol 是 BNB Chain（原 BSC）上的主导借贷平台。它结合了借贷的货币市场协议与 VAI——一种由加密抵押品支持的去中心化稳定币。\n\n该协议支持广泛的资产进行借贷，XVS 代币驱动治理和奖励分配。Venus 经过多个版本的演进改进了安全性和效率。\n\n作为 BNB Chain 的主要借贷场所，Venus 处理大量交易量，是生态系统 DeFi 活动的核心基础设施。",
+	"features": {
+		"1": {
+			"title": "BNB Chain 原生",
+			"description": "BNB Chain 上的主要借贷"
+		},
+		"2": {
+			"title": "VAI 稳定币",
+			"description": "用抵押品铸造稳定币"
+		},
+		"3": {
+			"title": "XVS 治理",
+			"description": "对协议决策投票"
+		},
+		"4": {
+			"title": "隔离池",
+			"description": "风险隔离的借贷市场"
+		},
+		"5": {
+			"title": "广泛资产支持",
+			"description": "支持多种代币"
+		},
+		"6": {
+			"title": "低费用",
+			"description": "BNB Chain 便宜的交易"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "借贷",
+			"description": "在存款上赚取利息"
+		},
+		"2": {
+			"title": "借款",
+			"description": "用抵押品借款"
+		},
+		"3": {
+			"title": "VAI 铸造",
+			"description": "从加密货币创建稳定币"
+		},
+		"4": {
+			"title": "XVS 质押",
+			"description": "质押获得奖励和治理"
+		},
+		"5": {
+			"title": "杠杆收益",
+			"description": "循环仓位获得更高 APY"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 VAI？",
+			"answer": "VAI 是 Venus 的去中心化稳定币，类似于 MakerDAO 的 DAI。您可以通过在 Venus 上存入抵押品来铸造 VAI。VAI 旨在保持 1 美元挂钩。"
+		},
+		"2": {
+			"question": "什么是 XVS 代币？",
+			"answer": "XVS 是 Venus 的治理代币。XVS 持有者对协议参数、新资产上市和风险参数进行投票。在金库中质押 XVS 可赚取奖励并增强借贷激励。"
+		},
+		"3": {
+			"question": "什么是隔离池？",
+			"answer": "隔离池是具有独立风险的单独借贷市场。如果隔离池中的某个资产出现问题，不会影响主池。这允许 Venus 安全地上市风险较高的资产。"
+		},
+		"4": {
+			"question": "Venus 安全吗？",
+			"answer": "Venus 自 2020 年以来经过审计和实战检验。它经历过过去的事件但在 V4 中显著改进了安全性。它是 BNB Chain 上的主要借贷协议。"
+		},
+		"5": {
+			"question": "Venus vs Aave：应该用哪个？",
+			"answer": "Venus 是 BNB Chain 原生的，有 XVS 激励和 VAI 稳定币。Aave 更成熟但不太专注 BNB。对于具有原生代币奖励的 BNB Chain 借贷，Venus 是主要选择。"
+		}
+	},
+	"cta": {
+		"ready": "准备好使用 Venus 了吗？",
+		"button": "探索 Venus",
+		"note": "BNB Chain 的借贷中心"
+	}
+}

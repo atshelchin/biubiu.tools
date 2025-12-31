@@ -124,6 +124,18 @@ import { camelotDetail } from './camelot';
 import { spookyswapDetail } from './spookyswap';
 import { quickswapDetail } from './quickswap';
 import { maverickDetail } from './maverick';
+import { radiantDetail } from './radiant';
+import { benqiDetail } from './benqi';
+import { venusDetail } from './venus';
+import { moonwellDetail } from './moonwell';
+import { siloDetail } from './silo';
+import { fluidDetail } from './fluid';
+import { vertexDetail } from './vertex';
+import { gainsDetail } from './gains';
+import { perpetualDetail } from './perpetual';
+import { kwentaDetail } from './kwenta';
+import { levelDetail } from './level';
+import { muxDetail } from './mux';
 
 /**
  * All tool details mapped by tool ID
@@ -244,7 +256,19 @@ export const toolDetails: Record<string, ToolDetail> = {
 	camelot: camelotDetail,
 	spookyswap: spookyswapDetail,
 	quickswap: quickswapDetail,
-	maverick: maverickDetail
+	maverick: maverickDetail,
+	radiant: radiantDetail,
+	benqi: benqiDetail,
+	venus: venusDetail,
+	moonwell: moonwellDetail,
+	silo: siloDetail,
+	fluid: fluidDetail,
+	vertex: vertexDetail,
+	gains: gainsDetail,
+	perpetual: perpetualDetail,
+	kwenta: kwentaDetail,
+	level: levelDetail,
+	mux: muxDetail
 };
 
 /**

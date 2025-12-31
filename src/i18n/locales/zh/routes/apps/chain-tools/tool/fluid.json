@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Fluid - 统一流动性协议",
+		"description": "Instadapp 的 Fluid 统一借贷和 DEX 流动性。使用资本高效的统一池借贷和交易。",
+		"keywords": "Fluid, Instadapp, 统一流动性, 借贷, DEX, 资本效率"
+	},
+	"overview": "Fluid 是 Instadapp 的下一代 DeFi 协议，统一借贷和 DEX 流动性。不是借贷和交易的单独池，Fluid 将它们结合以实现最大资本效率。\n\nFluid 上的债务头寸可以同时作为 DEX 流动性，借入的资产在使用的同时产生交易费用。这创造了比传统协议显著更高的资本效率。\n\nFluid 旨在成为 DeFi 的流动性层，实现有竞争力利率的借贷和来自统一池的深度交易流动性。",
+	"features": {
+		"1": {
+			"title": "统一流动性",
+			"description": "借贷 + DEX 在一个池中"
+		},
+		"2": {
+			"title": "智能债务",
+			"description": "债务赚取交易费用"
+		},
+		"3": {
+			"title": "资本效率",
+			"description": "更高的利用率"
+		},
+		"4": {
+			"title": "Instadapp 支持",
+			"description": "来自成熟的 DeFi 团队"
+		},
+		"5": {
+			"title": "有竞争力的利率",
+			"description": "高效的借贷成本"
+		},
+		"6": {
+			"title": "DEX 聚合",
+			"description": "集成的交换路由"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "高效借款",
+			"description": "以有竞争力的利率借款"
+		},
+		"2": {
+			"title": "借贷",
+			"description": "从借贷 + 交易费用赚取"
+		},
+		"3": {
+			"title": "智能债务头寸",
+			"description": "产生收益的债务"
+		},
+		"4": {
+			"title": "交易",
+			"description": "使用深度流动性交换"
+		},
+		"5": {
+			"title": "杠杆",
+			"description": "高效的杠杆头寸"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是统一流动性？",
+			"answer": "传统 DeFi 将借贷流动性（Aave）与交易流动性（Uniswap）分开。Fluid 将它们结合——相同的流动性服务于两个目的。这意味着更高的利用率和更好的利率。"
+		},
+		"2": {
+			"question": "智能债务如何工作？",
+			"answer": "当您在 Fluid 上借款时，您的债务头寸可以作为 DEX 的流动性。如果交易者与您的债务交换，您赚取交易费用。您的债务有效地为您工作而不仅仅是花费利息。"
+		},
+		"3": {
+			"question": "谁在 Fluid 背后？",
+			"answer": "Fluid 由 Instadapp 构建，这是自 2018 年以来成熟的 DeFi 团队。他们之前构建了数十亿 TVL 使用的智能钱包基础设施。Fluid 是他们的旗舰协议。"
+		},
+		"4": {
+			"question": "这与 Morpho 有何不同？",
+			"answer": "Morpho 通过 P2P 匹配优化借贷利率。Fluid 完全统一借贷与 DEX 流动性。两者都提高资本效率但通过不同机制。Fluid 的方法更新颖。"
+		},
+		"5": {
+			"question": "Fluid 安全吗？",
+			"answer": "Fluid 经过审计，由经验丰富的 Instadapp 团队构建。统一设计是创新的，比传统模型经过的实战检验更少。相应地考虑这个较新协议的风险。"
+		}
+	},
+	"cta": {
+		"ready": "准备好使用统一流动性了吗？",
+		"button": "探索 Fluid",
+		"note": "下一代 DeFi 效率"
+	}
+}

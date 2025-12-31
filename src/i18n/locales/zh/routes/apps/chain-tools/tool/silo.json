@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Silo Finance - 隔离借贷市场",
+		"description": "Silo Finance 为任何代币提供隔离借贷市场。在 Arbitrum 和以太坊上以隔离风险借贷。",
+		"keywords": "Silo Finance, SILO 代币, 隔离借贷, Arbitrum 借贷, 无许可市场"
+	},
+	"overview": "Silo Finance 是一个具有隔离市场的借贷协议，每个借贷市场只包含两种资产——一种基础资产（如 ETH）和一种报价资产。这隔离了风险，一个代币的问题不会影响其他代币。\n\n该协议允许无许可创建市场，任何人都可以为任何代币创建借贷市场。这使得长尾资产可以拥有借贷市场而不会危及整个协议。\n\nSilo 部署在以太坊和 Arbitrum 上，SILO 代币为流动性提供者提供治理和激励。",
+	"features": {
+		"1": {
+			"title": "隔离市场",
+			"description": "风险按市场隔离"
+		},
+		"2": {
+			"title": "无许可",
+			"description": "任何人都可以创建市场"
+		},
+		"3": {
+			"title": "长尾资产",
+			"description": "任何代币的借贷"
+		},
+		"4": {
+			"title": "SILO 代币",
+			"description": "治理和激励"
+		},
+		"5": {
+			"title": "多链",
+			"description": "以太坊和 Arbitrum"
+		},
+		"6": {
+			"title": "桥接资产",
+			"description": "ETH/USDC 作为基础资产"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "长尾借贷",
+			"description": "用冷门代币借款"
+		},
+		"2": {
+			"title": "市场创建",
+			"description": "为新代币创建借贷"
+		},
+		"3": {
+			"title": "风险管理",
+			"description": "每个资产隔离敞口"
+		},
+		"4": {
+			"title": "收益农场",
+			"description": "赚取 SILO 奖励"
+		},
+		"5": {
+			"title": "治理",
+			"description": "对协议决策投票"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Silo 与 Aave 有何不同？",
+			"answer": "Aave 有共享池，所有资产共享风险——一个坏资产可以影响所有。Silo 隔离每个市场（如 ETH-XYZ 与 ETH-ABC 分开）。这使得可以上市风险较高的资产而没有系统性风险。"
+		},
+		"2": {
+			"question": "隔离市场如何工作？",
+			"answer": "每个 Silo 市场只包含两种资产：基础资产（ETH 或稳定币）和另一种代币。如果另一种代币出现问题，只有那个市场受影响。基础资产在市场间桥接流动性。"
+		},
+		"3": {
+			"question": "任何人都可以创建 Silo 市场吗？",
+			"answer": "是的，Silo 是无许可的。任何人都可以为任何 ERC-20 代币创建借贷市场。市场从创建者的流动性开始。这使得主要协议未上市的代币也能借贷。"
+		},
+		"4": {
+			"question": "什么是 SILO 代币？",
+			"answer": "SILO 是治理代币。它用于对协议决策投票，可以质押获得奖励。SILO 排放激励各种市场的流动性。"
+		},
+		"5": {
+			"question": "Silo 安全吗？",
+			"answer": "Silo 经过审计，隔离市场设计减少了系统性风险。但是，单个市场可能会因其特定代币出现问题。始终评估您使用的特定市场的风险。"
+		}
+	},
+	"cta": {
+		"ready": "准备好隔离借贷了吗？",
+		"button": "探索 Silo",
+		"note": "风险隔离的市场"
+	}
+}

@@ -33,22 +33,19 @@ export const explorerGuide: CategoryGuide = {
 			subsections: [
 				{
 					id: 'what-is-explorer',
-					titleKey:
-						'routes/apps/chain-tools/explorer/guide.sections.explorer_basics.what_is.title',
+					titleKey: 'routes/apps/chain-tools/explorer/guide.sections.explorer_basics.what_is.title',
 					contentKey:
 						'routes/apps/chain-tools/explorer/guide.sections.explorer_basics.what_is.content'
 				},
 				{
 					id: 'why-use-explorers',
-					titleKey:
-						'routes/apps/chain-tools/explorer/guide.sections.explorer_basics.why_use.title',
+					titleKey: 'routes/apps/chain-tools/explorer/guide.sections.explorer_basics.why_use.title',
 					contentKey:
 						'routes/apps/chain-tools/explorer/guide.sections.explorer_basics.why_use.content'
 				},
 				{
 					id: 'explorer-anatomy',
-					titleKey:
-						'routes/apps/chain-tools/explorer/guide.sections.explorer_basics.anatomy.title',
+					titleKey: 'routes/apps/chain-tools/explorer/guide.sections.explorer_basics.anatomy.title',
 					contentKey:
 						'routes/apps/chain-tools/explorer/guide.sections.explorer_basics.anatomy.content',
 					toolMentions: [{ toolId: 'etherscan', context: 'UI walkthrough' }]
@@ -64,21 +61,17 @@ export const explorerGuide: CategoryGuide = {
 			subsections: [
 				{
 					id: 'reading-transactions',
-					titleKey:
-						'routes/apps/chain-tools/explorer/guide.sections.transactions.reading.title',
-					contentKey:
-						'routes/apps/chain-tools/explorer/guide.sections.transactions.reading.content'
+					titleKey: 'routes/apps/chain-tools/explorer/guide.sections.transactions.reading.title',
+					contentKey: 'routes/apps/chain-tools/explorer/guide.sections.transactions.reading.content'
 				},
 				{
 					id: 'tx-status',
 					titleKey: 'routes/apps/chain-tools/explorer/guide.sections.transactions.status.title',
-					contentKey:
-						'routes/apps/chain-tools/explorer/guide.sections.transactions.status.content'
+					contentKey: 'routes/apps/chain-tools/explorer/guide.sections.transactions.status.content'
 				},
 				{
 					id: 'internal-transactions',
-					titleKey:
-						'routes/apps/chain-tools/explorer/guide.sections.transactions.internal.title',
+					titleKey: 'routes/apps/chain-tools/explorer/guide.sections.transactions.internal.title',
 					contentKey:
 						'routes/apps/chain-tools/explorer/guide.sections.transactions.internal.content',
 					toolMentions: [{ toolId: 'samczsun-tx', context: 'detailed trace analysis' }]
@@ -86,8 +79,7 @@ export const explorerGuide: CategoryGuide = {
 				{
 					id: 'event-logs',
 					titleKey: 'routes/apps/chain-tools/explorer/guide.sections.transactions.logs.title',
-					contentKey:
-						'routes/apps/chain-tools/explorer/guide.sections.transactions.logs.content'
+					contentKey: 'routes/apps/chain-tools/explorer/guide.sections.transactions.logs.content'
 				}
 			]
 		},
@@ -101,13 +93,11 @@ export const explorerGuide: CategoryGuide = {
 				{
 					id: 'eoa-vs-contract',
 					titleKey: 'routes/apps/chain-tools/explorer/guide.sections.addresses.eoa_vs.title',
-					contentKey:
-						'routes/apps/chain-tools/explorer/guide.sections.addresses.eoa_vs.content'
+					contentKey: 'routes/apps/chain-tools/explorer/guide.sections.addresses.eoa_vs.content'
 				},
 				{
 					id: 'contract-verification',
-					titleKey:
-						'routes/apps/chain-tools/explorer/guide.sections.addresses.verification.title',
+					titleKey: 'routes/apps/chain-tools/explorer/guide.sections.addresses.verification.title',
 					contentKey:
 						'routes/apps/chain-tools/explorer/guide.sections.addresses.verification.content',
 					toolMentions: [
@@ -117,16 +107,13 @@ export const explorerGuide: CategoryGuide = {
 				},
 				{
 					id: 'read-write-contract',
-					titleKey:
-						'routes/apps/chain-tools/explorer/guide.sections.addresses.read_write.title',
-					contentKey:
-						'routes/apps/chain-tools/explorer/guide.sections.addresses.read_write.content'
+					titleKey: 'routes/apps/chain-tools/explorer/guide.sections.addresses.read_write.title',
+					contentKey: 'routes/apps/chain-tools/explorer/guide.sections.addresses.read_write.content'
 				},
 				{
 					id: 'token-tracking',
 					titleKey: 'routes/apps/chain-tools/explorer/guide.sections.addresses.tokens.title',
-					contentKey:
-						'routes/apps/chain-tools/explorer/guide.sections.addresses.tokens.content'
+					contentKey: 'routes/apps/chain-tools/explorer/guide.sections.addresses.tokens.content'
 				}
 			]
 		},
@@ -177,8 +164,7 @@ export const explorerGuide: CategoryGuide = {
 				},
 				{
 					id: 'non-evm',
-					titleKey:
-						'routes/apps/chain-tools/explorer/guide.sections.explorer_types.non_evm.title',
+					titleKey: 'routes/apps/chain-tools/explorer/guide.sections.explorer_types.non_evm.title',
 					contentKey:
 						'routes/apps/chain-tools/explorer/guide.sections.explorer_types.non_evm.content',
 					toolMentions: [
@@ -202,8 +188,7 @@ export const explorerGuide: CategoryGuide = {
 			subsections: [
 				{
 					id: 'tx-tracers',
-					titleKey:
-						'routes/apps/chain-tools/explorer/guide.sections.advanced_tools.tracers.title',
+					titleKey: 'routes/apps/chain-tools/explorer/guide.sections.advanced_tools.tracers.title',
 					contentKey:
 						'routes/apps/chain-tools/explorer/guide.sections.advanced_tools.tracers.content',
 					toolMentions: [
@@ -213,8 +198,7 @@ export const explorerGuide: CategoryGuide = {
 				},
 				{
 					id: 'abi-decoders',
-					titleKey:
-						'routes/apps/chain-tools/explorer/guide.sections.advanced_tools.decoders.title',
+					titleKey: 'routes/apps/chain-tools/explorer/guide.sections.advanced_tools.decoders.title',
 					contentKey:
 						'routes/apps/chain-tools/explorer/guide.sections.advanced_tools.decoders.content',
 					toolMentions: [{ toolId: 'anyabi', context: 'ABI lookup' }]
@@ -238,30 +222,23 @@ export const explorerGuide: CategoryGuide = {
 			subsections: [
 				{
 					id: 'tracking-deposits',
-					titleKey:
-						'routes/apps/chain-tools/explorer/guide.sections.use_cases.tracking.title',
-					contentKey:
-						'routes/apps/chain-tools/explorer/guide.sections.use_cases.tracking.content'
+					titleKey: 'routes/apps/chain-tools/explorer/guide.sections.use_cases.tracking.title',
+					contentKey: 'routes/apps/chain-tools/explorer/guide.sections.use_cases.tracking.content'
 				},
 				{
 					id: 'debugging-failed',
-					titleKey:
-						'routes/apps/chain-tools/explorer/guide.sections.use_cases.debugging.title',
-					contentKey:
-						'routes/apps/chain-tools/explorer/guide.sections.use_cases.debugging.content'
+					titleKey: 'routes/apps/chain-tools/explorer/guide.sections.use_cases.debugging.title',
+					contentKey: 'routes/apps/chain-tools/explorer/guide.sections.use_cases.debugging.content'
 				},
 				{
 					id: 'verifying-contracts',
-					titleKey:
-						'routes/apps/chain-tools/explorer/guide.sections.use_cases.verifying.title',
-					contentKey:
-						'routes/apps/chain-tools/explorer/guide.sections.use_cases.verifying.content'
+					titleKey: 'routes/apps/chain-tools/explorer/guide.sections.use_cases.verifying.title',
+					contentKey: 'routes/apps/chain-tools/explorer/guide.sections.use_cases.verifying.content'
 				},
 				{
 					id: 'whale-watching',
 					titleKey: 'routes/apps/chain-tools/explorer/guide.sections.use_cases.whales.title',
-					contentKey:
-						'routes/apps/chain-tools/explorer/guide.sections.use_cases.whales.content'
+					contentKey: 'routes/apps/chain-tools/explorer/guide.sections.use_cases.whales.content'
 				}
 			]
 		},
@@ -274,23 +251,20 @@ export const explorerGuide: CategoryGuide = {
 			subsections: [
 				{
 					id: 'etherscan-api',
-					titleKey:
-						'routes/apps/chain-tools/explorer/guide.sections.api_usage.etherscan_api.title',
+					titleKey: 'routes/apps/chain-tools/explorer/guide.sections.api_usage.etherscan_api.title',
 					contentKey:
 						'routes/apps/chain-tools/explorer/guide.sections.api_usage.etherscan_api.content',
 					toolMentions: [{ toolId: 'etherscan', context: 'API access' }]
 				},
 				{
 					id: 'rate-limits',
-					titleKey:
-						'routes/apps/chain-tools/explorer/guide.sections.api_usage.rate_limits.title',
+					titleKey: 'routes/apps/chain-tools/explorer/guide.sections.api_usage.rate_limits.title',
 					contentKey:
 						'routes/apps/chain-tools/explorer/guide.sections.api_usage.rate_limits.content'
 				},
 				{
 					id: 'alternatives',
-					titleKey:
-						'routes/apps/chain-tools/explorer/guide.sections.api_usage.alternatives.title',
+					titleKey: 'routes/apps/chain-tools/explorer/guide.sections.api_usage.alternatives.title',
 					contentKey:
 						'routes/apps/chain-tools/explorer/guide.sections.api_usage.alternatives.content',
 					toolMentions: [
@@ -344,8 +318,7 @@ export const explorerGuide: CategoryGuide = {
 		{
 			id: 'verified-contract',
 			termKey: 'routes/apps/chain-tools/explorer/guide.glossary.verified_contract.term',
-			definitionKey:
-				'routes/apps/chain-tools/explorer/guide.glossary.verified_contract.definition',
+			definitionKey: 'routes/apps/chain-tools/explorer/guide.glossary.verified_contract.definition',
 			relatedToolIds: ['etherscan', 'sourcify']
 		},
 		{
@@ -356,8 +329,7 @@ export const explorerGuide: CategoryGuide = {
 		{
 			id: 'contract-address',
 			termKey: 'routes/apps/chain-tools/explorer/guide.glossary.contract_address.term',
-			definitionKey:
-				'routes/apps/chain-tools/explorer/guide.glossary.contract_address.definition'
+			definitionKey: 'routes/apps/chain-tools/explorer/guide.glossary.contract_address.definition'
 		},
 		{
 			id: 'trace',

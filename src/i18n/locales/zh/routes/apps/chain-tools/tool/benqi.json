@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "BENQI - Avalanche 借贷和流动性质押",
+		"description": "BENQI 是 Avalanche 领先的借贷协议，具有 sAVAX 流动性质押。在 Avalanche 上借款、贷款和质押 AVAX。",
+		"keywords": "BENQI, QI 代币, sAVAX, Avalanche 借贷, 流动性质押, DeFi"
+	},
+	"overview": "BENQI 是 Avalanche 的原生借贷和流动性质押协议。它提供 Compound 风格的货币市场（BENQI Lending）和 AVAX 流动性质押（BENQI Liquid Staking）。\n\n用户可以存入资产赚取利息，用抵押品借款，或质押 AVAX 获得 sAVAX——一种可在 Avalanche DeFi 中使用的流动性质押代币。QI 代币治理协议。\n\nBENQI 已成为 Avalanche 上的主要借贷场所，与生态系统深度集成，并拥有最大的 AVAX 流动性质押解决方案。",
+	"features": {
+		"1": {
+			"title": "借贷协议",
+			"description": "在 Avalanche 上借贷"
+		},
+		"2": {
+			"title": "sAVAX 质押",
+			"description": "AVAX 流动性质押"
+		},
+		"3": {
+			"title": "QI 代币",
+			"description": "治理和奖励"
+		},
+		"4": {
+			"title": "Avalanche 原生",
+			"description": "为 Avalanche 生态系统构建"
+		},
+		"5": {
+			"title": "veQI",
+			"description": "投票托管 QI 获得增强"
+		},
+		"6": {
+			"title": "DeFi 集成",
+			"description": "sAVAX 在 Avalanche 中广泛使用"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "借贷",
+			"description": "存入资产赚取利息"
+		},
+		"2": {
+			"title": "借款",
+			"description": "用抵押品借款"
+		},
+		"3": {
+			"title": "AVAX 质押",
+			"description": "质押 AVAX 获得 sAVAX"
+		},
+		"4": {
+			"title": "杠杆质押",
+			"description": "循环 sAVAX 放大收益"
+		},
+		"5": {
+			"title": "veQI 治理",
+			"description": "锁定 QI 获得增强奖励"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 sAVAX？",
+			"answer": "sAVAX 是 BENQI 的 AVAX 流动性质押代币。当您质押 AVAX 时，您收到赚取质押奖励的 sAVAX。sAVAX 可在 DeFi 中使用——作为抵押品、LP 等——同时仍赚取质押收益。"
+		},
+		"2": {
+			"question": "BENQI 借贷如何工作？",
+			"answer": "BENQI Lending 类似于 Compound。存入资产赚取利息。您的存款可用作抵押品借入其他资产。利率根据利用率调整。QI 排放提供额外收益。"
+		},
+		"3": {
+			"question": "什么是 veQI？",
+			"answer": "veQI 是通过锁定 QI 代币获得的投票托管 QI。veQI 持有者可以增强 QI 奖励，对定向排放的 gauge 权重投票，并参与治理。"
+		},
+		"4": {
+			"question": "BENQI 安全吗？",
+			"answer": "BENQI 经过审计，自 2021 年以来作为 Avalanche 的主要借贷协议运营。它管理着可观的 TVL。标准 DeFi 风险适用。sAVAX 增加了质押风险。"
+		},
+		"5": {
+			"question": "BENQI vs Avalanche 上的 Aave？",
+			"answer": "两者都在 Avalanche 上提供借贷。BENQI 是 Avalanche 原生的，有 QI 奖励和 sAVAX 集成。Aave 是成熟的领导者但不太专注 Avalanche。"
+		}
+	},
+	"cta": {
+		"ready": "准备好使用 BENQI 了吗？",
+		"button": "探索 BENQI",
+		"note": "Avalanche 的流动性中心"
+	}
+}

@@ -1,0 +1,196 @@
+{
+	"title": "Complete Guide to Blockchain Explorers",
+	"subtitle": "Your Window into the Blockchain - How to Read, Analyze, and Debug On-Chain Activity",
+	"meta": {
+		"title": "Complete Guide to Blockchain Explorers | On-Chain Analysis",
+		"description": "Master blockchain explorers to analyze transactions, verify contracts, and track addresses. Learn Etherscan, Blockscout, and advanced debugging tools."
+	},
+	"hero": {
+		"title": "Complete Guide to Blockchain Explorers",
+		"subtitle": "Your Window into the Blockchain - How to Read, Analyze, and Debug On-Chain Activity"
+	},
+	"sections": {
+		"intro": {
+			"title": "Introduction: Why Block Explorers Matter",
+			"content": "Block explorers are the windows into the blockchain - they allow anyone to view and verify every transaction, address, and smart contract on a public ledger. Unlike traditional banking where your bank holds your data, blockchain explorers provide universal access to transaction history, making the blockchain truly transparent.<br/><br/>Whether you're a trader tracking a deposit, a developer debugging a failed transaction, or an analyst investigating whale movements, understanding how to use block explorers is essential. This guide will take you from basic navigation to advanced debugging techniques used by security researchers."
+		},
+		"explorer_basics": {
+			"title": "Understanding Block Explorers",
+			"content": "Block explorers index blockchain data and present it in a searchable, human-readable format. They run nodes that sync with the network and store all historical data.",
+			"what_is": {
+				"title": "What Is a Block Explorer?",
+				"content": "<strong>Definition</strong>: A block explorer is a web-based tool that indexes and displays blockchain data including blocks, transactions, addresses, and smart contracts.<br/><br/><strong>How They Work</strong>: Explorers run full nodes that sync with the blockchain network. They parse every block, extract transaction data, decode smart contract interactions, and store everything in searchable databases.<br/><br/><strong>Key Insight</strong>: The data shown on explorers is the same data stored on every full node - explorers just make it accessible without running your own node."
+			},
+			"why_use": {
+				"title": "Why Use Block Explorers?",
+				"content": "<strong>Transaction Verification</strong>: Confirm that your transaction was included in a block and see exactly what happened<br/><br/><strong>Address Tracking</strong>: Monitor any wallet's complete transaction history, token balances, and activity<br/><br/><strong>Contract Interaction</strong>: Read and write to smart contracts directly, view source code, and understand protocols<br/><br/><strong>Debugging</strong>: Diagnose why transactions failed, trace internal calls, and analyze gas usage<br/><br/><strong>Research</strong>: Investigate protocols, track team wallets, and verify project claims"
+			},
+			"anatomy": {
+				"title": "Anatomy of a Block Explorer",
+				"content": "<strong>Search Bar</strong>: Enter transaction hashes, addresses, block numbers, token names, or ENS names<br/><br/><strong>Transaction View</strong>: Shows sender, receiver, value, gas, status, and decoded input data<br/><br/><strong>Address View</strong>: Displays balance, transaction history, token holdings, and internal transactions<br/><br/><strong>Block View</strong>: Lists all transactions in a block, miner/validator, block reward, and gas used<br/><br/><strong>Contract Tab</strong>: Source code, ABI, read/write functions, and event logs (for verified contracts)"
+			}
+		},
+		"transactions": {
+			"title": "Transaction Analysis",
+			"content": "Understanding transactions is fundamental to using block explorers. Every on-chain action - from simple transfers to complex DeFi operations - is recorded as a transaction.",
+			"reading": {
+				"title": "Reading Transaction Details",
+				"content": "<strong>Transaction Hash</strong>: Unique 66-character identifier (0x + 64 hex chars) - share this to reference any transaction<br/><br/><strong>From/To</strong>: Sender address and recipient (address or contract)<br/><br/><strong>Value</strong>: Native token amount transferred (ETH, BNB, MATIC, etc.)<br/><br/><strong>Gas Price & Gas Used</strong>: Fee paid = Gas Used × Gas Price. Higher priority = higher gas price<br/><br/><strong>Input Data</strong>: Encoded function call for contract interactions - explorers decode this if the contract is verified<br/><br/><strong>Block Number</strong>: Which block included this transaction - determines finality"
+			},
+			"status": {
+				"title": "Transaction Status",
+				"content": "<strong>Success</strong>: Transaction executed completely - state changes applied<br/><br/><strong>Failed</strong>: Transaction reverted - gas was consumed but state unchanged. Common reasons:<br/>- Insufficient balance or allowance<br/>- Slippage too low (price moved)<br/>- Contract logic rejected the call<br/>- Out of gas<br/><br/><strong>Pending</strong>: Transaction submitted but not yet included in a block. May be stuck due to low gas or nonce issues<br/><br/><strong>Dropped</strong>: Transaction removed from mempool (usually replaced or expired)"
+			},
+			"internal": {
+				"title": "Internal Transactions",
+				"content": "<strong>What Are Internal Transactions?</strong>: When a smart contract calls another contract or sends ETH, these are internal transactions. They don't have their own transaction hash but are part of the parent transaction.<br/><br/><strong>Why They Matter</strong>: A single swap on Uniswap may trigger dozens of internal transactions as tokens move between contracts. Understanding internal transactions reveals what actually happened.<br/><br/><strong>Viewing Internal Transactions</strong>: Click the \"Internal Transactions\" tab on Etherscan. For detailed call traces, use specialized tools like samczsun's transaction tracer."
+			},
+			"logs": {
+				"title": "Event Logs",
+				"content": "<strong>What Are Event Logs?</strong>: Smart contracts emit events to record what happened. Events are indexed for efficient querying and don't affect contract state.<br/><br/><strong>Common Events</strong>:<br/>- <code>Transfer(from, to, amount)</code> - ERC20/ERC721 transfers<br/>- <code>Approval(owner, spender, amount)</code> - Token approvals<br/>- <code>Swap(sender, amount0In, amount1In, amount0Out, amount1Out, to)</code> - DEX swaps<br/><br/><strong>Reading Logs</strong>: The \"Logs\" tab shows all events emitted. Topics are indexed parameters (searchable), data contains non-indexed parameters."
+			}
+		},
+		"addresses": {
+			"title": "Address & Contract Analysis",
+			"content": "Every address on the blockchain is either an EOA (externally owned account) controlled by a private key, or a smart contract containing code.",
+			"eoa_vs": {
+				"title": "EOA vs Contract Addresses",
+				"content": "<strong>EOA (Externally Owned Account)</strong>:<br/>- Controlled by a private key<br/>- Can initiate transactions<br/>- Has no code associated<br/>- Examples: Your MetaMask wallet, exchange hot wallets<br/><br/><strong>Contract Address</strong>:<br/>- Contains bytecode that executes<br/>- Cannot initiate transactions (only respond)<br/>- Created by deploying code<br/>- Examples: Uniswap Router, USDC token contract<br/><br/><strong>How to Tell</strong>: On Etherscan, contracts show a \"Contract\" tab with code. EOAs only show transaction history."
+			},
+			"verification": {
+				"title": "Contract Verification",
+				"content": "<strong>Why Verification Matters</strong>: Verified contracts show human-readable source code. Unverified contracts only show raw bytecode - impossible to understand without decompiling.<br/><br/><strong>Verification Process</strong>: Developers submit their source code and compiler settings. The explorer compiles it and checks if the bytecode matches what's deployed.<br/><br/><strong>Trust Implications</strong>: Verified code can be audited and understood. Unverified contracts are black boxes - interact with extreme caution.<br/><br/><strong>Alternative: Sourcify</strong>: Decentralized contract verification that stores source code on IPFS, not dependent on centralized services."
+			},
+			"read_write": {
+				"title": "Read & Write Contract",
+				"content": "<strong>Read Contract</strong>: Call view/pure functions that return data without changing state. Free (no gas required).<br/>- Check token balances<br/>- View protocol parameters<br/>- Query prices or rates<br/><br/><strong>Write Contract</strong>: Execute state-changing functions. Requires wallet connection and gas payment.<br/>- Claim rewards<br/>- Emergency withdrawals<br/>- Direct protocol interaction<br/><br/><strong>Pro Tip</strong>: Use \"Read as Proxy\" and \"Write as Proxy\" for upgradeable contracts (those using proxy patterns)."
+			},
+			"tokens": {
+				"title": "Token Tracking",
+				"content": "<strong>Token Balances</strong>: View all ERC20, ERC721, and ERC1155 tokens held by any address<br/><br/><strong>Token Transfers</strong>: Complete history of token movements in/out of the address<br/><br/><strong>Token Analytics</strong>:<br/>- Holder count and distribution<br/>- Total supply and circulating supply<br/>- Recent transfers and volume<br/><br/><strong>NFT View</strong>: For NFT contracts, explorers show collection metadata, individual token images, and ownership history"
+			}
+		},
+		"explorer_types": {
+			"title": "Types of Block Explorers",
+			"content": "Different explorers serve different purposes and networks. Understanding the landscape helps you choose the right tool for your needs.",
+			"etherscan": {
+				"title": "Etherscan & Chain-Specific Explorers",
+				"content": "<strong>Etherscan Family</strong>: The gold standard for EVM chain exploration. Etherscan operates explorers for multiple chains:<br/>- <strong>Etherscan</strong>: Ethereum mainnet<br/>- <strong>Arbiscan</strong>: Arbitrum One<br/>- <strong>Optimistic Etherscan</strong>: Optimism<br/>- <strong>Basescan</strong>: Base<br/>- <strong>PolygonScan</strong>: Polygon PoS<br/>- <strong>BscScan</strong>: BNB Chain<br/><br/><strong>Consistent Interface</strong>: Same features and UI across all chains - learn one, use all<br/><br/><strong>Premium Features</strong>: API access, advanced analytics, address labels, token verification"
+			},
+			"open_source": {
+				"title": "Open-Source Explorers",
+				"content": "<strong>Why Open Source Matters</strong>: Open-source explorers can be self-hosted, modified, and are not dependent on a single company. Critical for decentralization.<br/><br/><strong>Blockscout</strong>: Most widely used open-source explorer. Used by Optimism, Gnosis Chain, and hundreds of other networks. Features:<br/>- Full source code on GitHub<br/>- Self-hostable<br/>- Active development community<br/>- Advanced smart contract interaction<br/><br/><strong>Routescan</strong>: Unified interface for multiple chains with focus on cross-chain analytics"
+			},
+			"multi_chain": {
+				"title": "Multi-Chain Explorers",
+				"content": "<strong>Unified Search</strong>: Multi-chain explorers let you search across multiple blockchains simultaneously<br/><br/><strong>Blockchair</strong>: Supports 40+ blockchains including Bitcoin, Ethereum, and many altchains. Features privacy mode to prevent address tracking.<br/><br/><strong>OKLink</strong>: OKX's multi-chain explorer with institutional-grade analytics and API<br/><br/><strong>EVMExplorer</strong>: Focused on EVM chains with unified interface across all compatible networks<br/><br/><strong>Use Case</strong>: Tracking cross-chain activity, comparing metrics across chains, or when you don't know which chain a transaction is on"
+			},
+			"non_evm": {
+				"title": "Non-EVM Chain Explorers",
+				"content": "<strong>Different Architectures</strong>: Non-EVM chains have fundamentally different data structures requiring specialized explorers<br/><br/><strong>Solana (Solscan)</strong>: Programs instead of contracts, parallel transaction processing, unique account model<br/><br/><strong>Cosmos (Mintscan)</strong>: IBC transfers, validator sets, governance proposals, staking info<br/><br/><strong>NEAR (Nearblocks)</strong>: Sharded architecture, human-readable account names, access keys<br/><br/><strong>TON (TONScan)</strong>: Workchains, jettons (tokens), TON DNS names<br/><br/><strong>Tron (TronScan)</strong>: Energy/bandwidth system, TRC20 tokens, Super Representatives<br/><br/><strong>Sui (SuiScan)</strong>: Object-centric model, Move language, parallel execution<br/><br/><strong>Cardano (CardanoScan)</strong>: UTxO model, native tokens, stake pools"
+			}
+		},
+		"advanced_tools": {
+			"title": "Advanced Analysis Tools",
+			"content": "Beyond basic explorers, specialized tools exist for deep transaction analysis and debugging.",
+			"tracers": {
+				"title": "Transaction Tracers",
+				"content": "<strong>What Is Transaction Tracing?</strong>: Tracing replays a transaction step-by-step, showing every opcode execution, internal call, and state change.<br/><br/><strong>samczsun's Transaction Tracer</strong>: Built by renowned security researcher @samczsun. Shows complete call hierarchy, storage reads/writes, and event emissions. Essential for understanding complex DeFi transactions.<br/><br/><strong>Tenderly</strong>: Full debugging platform with transaction simulation, tracing, and alerting. Allows forking mainnet state for testing.<br/><br/><strong>Use Cases</strong>:<br/>- Debugging failed transactions<br/>- Understanding exploit mechanics<br/>- Analyzing MEV bundle execution<br/>- Protocol research"
+			},
+			"decoders": {
+				"title": "ABI Decoders",
+				"content": "<strong>The ABI Problem</strong>: Transaction input data is encoded bytes. Without the ABI (Application Binary Interface), you can't understand what function was called.<br/><br/><strong>AnyABI</strong>: Aggregates ABIs from multiple sources (Etherscan, Sourcify, 4byte.directory). Even decodes transactions for unverified contracts using function signature databases.<br/><br/><strong>4byte.directory</strong>: Database of function signatures. The first 4 bytes of calldata identify the function - this database maps them to human-readable names.<br/><br/><strong>Pro Tip</strong>: If a contract isn't verified but you have a similar verified contract, you can often decode the transaction using that ABI."
+			},
+			"human_readable": {
+				"title": "Human-Readable Explorers",
+				"content": "<strong>Making Blockchain Social</strong>: Some explorers focus on translating complex transactions into plain English.<br/><br/><strong>Once Upon</strong>: Transforms transactions into social media-style posts. Instead of showing raw data, it describes what happened: \"vitalik.eth bought 10 ETH worth of USDC on Uniswap\".<br/><br/><strong>Benefits</strong>:<br/>- Accessible to non-technical users<br/>- Quick understanding of activity<br/>- Social sharing of transactions<br/><br/><strong>Limitations</strong>: May oversimplify complex transactions. Use traditional explorers for detailed analysis."
+			}
+		},
+		"use_cases": {
+			"title": "Practical Use Cases",
+			"content": "Real-world scenarios where block explorers are essential tools.",
+			"tracking": {
+				"title": "Tracking Deposits & Withdrawals",
+				"content": "<strong>Exchange Deposits</strong>:<br/>1. Copy your deposit address from the exchange<br/>2. Paste into explorer and watch for incoming transactions<br/>3. Check confirmations required by exchange<br/>4. Transaction appears in exchange once confirmed<br/><br/><strong>Withdrawal Verification</strong>:<br/>1. Exchange provides withdrawal transaction hash<br/>2. Search hash on explorer to verify it was broadcast<br/>3. Monitor confirmations until finalized<br/>4. Verify destination address received funds<br/><br/><strong>Pro Tip</strong>: Bookmark your exchange's hot wallet addresses to monitor overall exchange activity"
+			},
+			"debugging": {
+				"title": "Debugging Failed Transactions",
+				"content": "<strong>Step 1: Find the Error</strong><br/>On the transaction page, look for the revert reason. Common errors:<br/>- \"UniswapV2: INSUFFICIENT_OUTPUT_AMOUNT\" = Slippage exceeded<br/>- \"ERC20: transfer amount exceeds balance\" = Insufficient tokens<br/>- \"execution reverted\" = Generic failure, check trace<br/><br/><strong>Step 2: Analyze the Trace</strong><br/>Use the \"State\" tab or a tracer to see exactly where execution failed.<br/><br/><strong>Step 3: Common Fixes</strong><br/>- Increase slippage tolerance<br/>- Approve tokens before swap<br/>- Check token balances<br/>- Verify contract address is correct<br/>- Ensure sufficient gas limit"
+			},
+			"verifying": {
+				"title": "Verifying Projects & Contracts",
+				"content": "<strong>Before Interacting with Any Project</strong>:<br/><br/><strong>1. Check Contract Verification</strong><br/>- Is the source code verified? Unverified = red flag<br/>- Does the code match what they claim?<br/><br/><strong>2. Review Contract Activity</strong><br/>- How old is the contract?<br/>- Transaction volume and patterns<br/>- Any suspicious large withdrawals?<br/><br/><strong>3. Check the Team</strong><br/>- Look up deployer address<br/>- What other contracts have they deployed?<br/>- Any connection to known entities?<br/><br/><strong>4. Token Analysis</strong><br/>- Is liquidity locked?<br/>- Token distribution (concentrated holdings = risk)<br/>- Honeypot detection"
+			},
+			"whales": {
+				"title": "Whale Watching & Research",
+				"content": "<strong>Finding Whale Wallets</strong>:<br/>- Check top holders on token pages<br/>- Monitor large transfers in real-time<br/>- Track labeled addresses (exchanges, funds, known individuals)<br/><br/><strong>Analyzing Whale Behavior</strong>:<br/>- What tokens are they accumulating?<br/>- DeFi protocols they're using<br/>- Transaction patterns and timing<br/><br/><strong>Research Applications</strong>:<br/>- Alpha discovery: What are smart money traders buying?<br/>- Risk assessment: Are insiders dumping?<br/>- Market intelligence: Exchange inflow/outflow trends<br/><br/><strong>Tools</strong>: Combine explorer data with analytics platforms like Nansen, Arkham, or DeBank for labeled address insights"
+			}
+		},
+		"api_usage": {
+			"title": "API & Developer Usage",
+			"content": "Block explorer APIs enable programmatic access to blockchain data for building applications, analytics tools, and automated monitoring.",
+			"etherscan_api": {
+				"title": "Etherscan API",
+				"content": "<strong>Capabilities</strong>:<br/>- Account balances and transaction history<br/>- Contract ABIs and source code<br/>- Token information and transfers<br/>- Gas price oracle<br/>- Block and transaction data<br/><br/><strong>Rate Limits</strong>:<br/>- Free tier: 5 calls/second<br/>- Pro: Up to 20 calls/second<br/>- Enterprise: Custom limits<br/><br/><strong>API Key</strong>: Required for all endpoints. Register free at etherscan.io<br/><br/><strong>Example Use Cases</strong>:<br/>- Portfolio trackers<br/>- Tax reporting tools<br/>- Automated alerts<br/>- DeFi dashboards"
+			},
+			"rate_limits": {
+				"title": "Handling Rate Limits",
+				"content": "<strong>Rate Limit Strategies</strong>:<br/><br/><strong>1. Caching</strong><br/>- Cache responses that don't change often<br/>- Store historical data locally<br/>- Use TTL appropriate to data type<br/><br/><strong>2. Batching</strong><br/>- Combine multiple requests where possible<br/>- Use multi-address endpoints<br/>- Aggregate queries efficiently<br/><br/><strong>3. Fallbacks</strong><br/>- Use multiple explorers' APIs<br/>- Switch between Etherscan, Blockscout, etc.<br/>- Implement exponential backoff<br/><br/><strong>4. Consider Alternatives</strong><br/>- Run your own node for heavy usage<br/>- Use The Graph for custom queries<br/>- Consider paid RPC providers"
+			},
+			"alternatives": {
+				"title": "API Alternatives",
+				"content": "<strong>Blockscout API</strong>:<br/>- Open-source, self-hostable<br/>- GraphQL and REST endpoints<br/>- No registration required for public instances<br/><br/><strong>The Graph</strong>:<br/>- Decentralized indexing protocol<br/>- Custom subgraphs for any protocol<br/>- GraphQL queries<br/>- Used by major DeFi protocols<br/><br/><strong>Direct RPC</strong>:<br/>- Query nodes directly<br/>- Full control over data access<br/>- Requires more technical setup<br/>- Providers: Infura, Alchemy, QuickNode<br/><br/><strong>Choosing the Right Option</strong>:<br/>- Simple queries: Explorer APIs<br/>- Complex/custom: The Graph<br/>- Real-time/historical: Direct RPC<br/>- High volume: Self-hosted infrastructure"
+			}
+		}
+	},
+	"glossary": {
+		"tx_hash": {
+			"term": "Transaction Hash (TxHash)",
+			"definition": "A unique 66-character hexadecimal identifier for a transaction, created by hashing the transaction data. Used to reference and track specific transactions."
+		},
+		"block_number": {
+			"term": "Block Number",
+			"definition": "Sequential number assigned to each block on the blockchain. Higher numbers mean more recent blocks. Used to reference when transactions occurred."
+		},
+		"gas_used": {
+			"term": "Gas Used",
+			"definition": "The actual amount of computational work consumed by a transaction. Multiplied by gas price to determine the transaction fee."
+		},
+		"nonce": {
+			"term": "Nonce",
+			"definition": "Sequential counter for each address starting from 0. Ensures transactions are processed in order and prevents replay attacks."
+		},
+		"internal_tx": {
+			"term": "Internal Transaction",
+			"definition": "Transactions triggered by smart contract execution within a parent transaction. They don't have their own transaction hash but can be traced."
+		},
+		"event_log": {
+			"term": "Event Log",
+			"definition": "Data emitted by smart contracts during execution. Events are indexed for efficient querying and used to track contract activity."
+		},
+		"abi": {
+			"term": "ABI (Application Binary Interface)",
+			"definition": "JSON description of a smart contract's functions, events, and data types. Required to encode/decode transaction data and interact with contracts."
+		},
+		"verified_contract": {
+			"term": "Verified Contract",
+			"definition": "A smart contract whose source code has been verified to match its deployed bytecode. Enables code review and direct contract interaction."
+		},
+		"eoa": {
+			"term": "EOA (Externally Owned Account)",
+			"definition": "A regular wallet address controlled by a private key, as opposed to a smart contract. EOAs can initiate transactions."
+		},
+		"contract_address": {
+			"term": "Contract Address",
+			"definition": "An address containing smart contract code. Created when a contract is deployed. Cannot initiate transactions but can execute code when called."
+		},
+		"trace": {
+			"term": "Transaction Trace",
+			"definition": "Step-by-step replay of transaction execution showing all internal calls, state changes, and events. Essential for debugging and analysis."
+		},
+		"revert": {
+			"term": "Revert",
+			"definition": "When a transaction fails and all state changes are undone. Gas is still consumed but the intended action doesn't occur. Often includes an error message."
+		}
+	}
+}

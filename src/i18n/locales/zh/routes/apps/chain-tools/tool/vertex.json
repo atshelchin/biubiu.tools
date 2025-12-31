@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Vertex Protocol - Arbitrum 混合交易所",
+		"description": "Vertex Protocol 结合订单簿和 AMM 在 Arbitrum 上进行现货和永续合约交易。享受低费用和深度流动性。",
+		"keywords": "Vertex Protocol, VRTX, Arbitrum DEX, 永续合约, 订单簿, 混合交易所"
+	},
+	"overview": "Vertex Protocol 是一个混合去中心化交易所，结合订单簿和 AMM 用于现货和永续合约交易。基于 Arbitrum 构建，提供类似 CEX 的交易体验同时保持 DeFi 自托管。\n\n混合模型通过结合限价单和 AMM 池提供深度流动性。Vertex 提供交叉保证金，允许头寸共享抵押品以提高资本效率。\n\n凭借快速执行、低费用和统一的交易体验，Vertex 已成为 Arbitrum 上与成熟协议竞争的主要永续合约交易场所。",
+	"features": {
+		"1": {
+			"title": "混合订单簿+AMM",
+			"description": "两种流动性模型的最佳结合"
+		},
+		"2": {
+			"title": "交叉保证金",
+			"description": "头寸间共享抵押品"
+		},
+		"3": {
+			"title": "现货+永续",
+			"description": "在一个平台交易两者"
+		},
+		"4": {
+			"title": "低费用",
+			"description": "有竞争力的交易成本"
+		},
+		"5": {
+			"title": "VRTX 代币",
+			"description": "治理和奖励"
+		},
+		"6": {
+			"title": "快速结算",
+			"description": "Arbitrum 速度+排序器"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "永续合约交易",
+			"description": "带杠杆交易加密货币永续合约"
+		},
+		"2": {
+			"title": "现货交易",
+			"description": "在订单簿上交换代币"
+		},
+		"3": {
+			"title": "交叉保证金头寸",
+			"description": "高效的抵押品使用"
+		},
+		"4": {
+			"title": "VRTX 质押",
+			"description": "质押获得费用返还"
+		},
+		"5": {
+			"title": "做市",
+			"description": "提供限价单流动性"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是混合 DEX？",
+			"answer": "Vertex 结合订单簿（像 CEX）和 AMM（像 Uniswap）。限价单和 AMM 流动性合并到一个池中。交易以任一来源的最佳价格执行。这提供了比单独使用任一模型更深的流动性。"
+		},
+		"2": {
+			"question": "什么是交叉保证金？",
+			"answer": "交叉保证金让多个头寸共享抵押品。不是每个头寸单独保证金，而是整个账户支持所有交易。这更具资本效率——一个头寸的利润可以抵消另一个的损失。"
+		},
+		"3": {
+			"question": "VRTX 代币有什么用？",
+			"answer": "VRTX 是 Vertex 的治理和实用代币。质押 VRTX 提供费用返还和协议奖励。VRTX 持有者参与有关协议参数和开发的治理决策。"
+		},
+		"4": {
+			"question": "Vertex 与 GMX 相比如何？",
+			"answer": "GMX 使用基于预言机的模型和 GLP 流动性。Vertex 使用混合订单簿。GMX 没有价格影响，Vertex 有传统滑点。Vertex 也提供现货交易。两者都是 Arbitrum 主要的永续合约场所。"
+		},
+		"5": {
+			"question": "Vertex 安全吗？",
+			"answer": "Vertex 经过审计，自 2023 年以来在 Arbitrum 上运营。它是非托管的——您控制自己的资金。标准的永续合约交易风险适用：清算、资金费率、智能合约风险。使用适当的仓位规模。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在 Vertex 交易了吗？",
+		"button": "探索 Vertex",
+		"note": "Arbitrum 上的混合永续合约"
+	}
+}

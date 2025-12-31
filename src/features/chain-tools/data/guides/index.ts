@@ -6,6 +6,7 @@ import type { CategoryGuide, CategoryId } from '../../types';
 import { analyticsGuide } from './analytics';
 import { bridgeGuide } from './bridge';
 import { defiGuide } from './defi';
+import { explorerGuide } from './explorer';
 import { l2Guide } from './l2';
 import { nftGuide } from './nft';
 import { securityGuide } from './security';
@@ -16,6 +17,7 @@ export const categoryGuides: Partial<Record<CategoryId, CategoryGuide>> = {
 	analytics: analyticsGuide,
 	bridge: bridgeGuide,
 	defi: defiGuide,
+	explorer: explorerGuide,
 	l2: l2Guide,
 	nft: nftGuide,
 	security: securityGuide,

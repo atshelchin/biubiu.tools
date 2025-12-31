@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Kwenta - Synthetix 永续合约交易",
+		"description": "Kwenta 是 Synthetix 永续合约期货的首选前端。使用 Optimism 上的 Synthetix 流动性进行零滑点交易。",
+		"keywords": "Kwenta, KWENTA 代币, Synthetix 永续合约, 零滑点, Optimism 交易"
+	},
+	"overview": "Kwenta 是 Synthetix 永续合约期货的领先交易界面。基于 Optimism 构建，使用 Synthetix 的 sUSD 流动性提供零滑点永续合约交易。\n\n由于交易以预言机价格针对 Synthetix 债务池执行，无论头寸大小都没有滑点。这使 Kwenta 对于在其他地方会面临显著滑点的大额交易具有吸引力。\n\nKWENTA 代币治理平台并提供质押奖励。Kwenta 已为重视执行质量和大头寸能力的交易者开辟了一个利基市场。",
+	"features": {
+		"1": {
+			"title": "零滑点",
+			"description": "基于预言机执行"
+		},
+		"2": {
+			"title": "Synthetix 驱动",
+			"description": "基于 Synthetix 流动性构建"
+		},
+		"3": {
+			"title": "深度流动性",
+			"description": "支持大额头寸"
+		},
+		"4": {
+			"title": "KWENTA 代币",
+			"description": "治理和奖励"
+		},
+		"5": {
+			"title": "Optimism 原生",
+			"description": "低成本 L2 交易"
+		},
+		"6": {
+			"title": "高级订单",
+			"description": "限价单、止损、止盈"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "大额头寸交易",
+			"description": "交易大额无滑点"
+		},
+		"2": {
+			"title": "永续合约期货",
+			"description": "杠杆加密货币交易"
+		},
+		"3": {
+			"title": "KWENTA 质押",
+			"description": "赚取交易费用返还"
+		},
+		"4": {
+			"title": "对冲",
+			"description": "无滑点成本对冲"
+		},
+		"5": {
+			"title": "Synthetix 集成",
+			"description": "Synthetix 生态系统的一部分"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "零滑点如何工作？",
+			"answer": "Kwenta 使用 Synthetix 基于预言机的系统。交易以 Chainlink 预言机价格执行，而不是针对订单簿或 AMM。Synthetix 债务池吸收所有头寸。这意味着没有滑点但有动态资金费率。"
+		},
+		"2": {
+			"question": "与 Synthetix 的关系是什么？",
+			"answer": "Kwenta 建立在 Synthetix 永续合约基础设施之上。Synthetix 提供流动性和结算层。Kwenta 是交易界面。它们是独立的协议但深度集成。"
+		},
+		"3": {
+			"question": "什么是 KWENTA 代币？",
+			"answer": "KWENTA 是治理代币。质押 KWENTA 可获得交易费用返还并赚取质押奖励。KWENTA 持有者治理前端协议，而 Synthetix 治理底层基础设施。"
+		},
+		"4": {
+			"question": "Kwenta 与 GMX 相比如何？",
+			"answer": "两者都通过预言机提供零/低滑点。GMX 使用 GLP 池，Kwenta 使用 Synthetix 债务池。GMX 是多链的，Kwenta 专注于 Optimism。Kwenta 对大额头寸更专业。"
+		},
+		"5": {
+			"question": "Kwenta 安全吗？",
+			"answer": "Kwenta 继承了 Synthetix 久经考验的基础设施。两个协议都经过审计。风险包括预言机故障、Synthetix 债务池问题和标准杠杆风险。Synthetix 自 2018 年以来运营。"
+		}
+	},
+	"cta": {
+		"ready": "准备好零滑点交易了吗？",
+		"button": "探索 Kwenta",
+		"note": "Synthetix 永续合约前端"
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Gains Network (gTrade) - 杠杆交易",
+		"description": "Gains Network 在 Polygon 和 Arbitrum 上提供加密货币、外汇和股票的杠杆交易。在 gTrade 上最高可使用 150 倍杠杆交易。",
+		"keywords": "Gains Network, gTrade, GNS, 杠杆交易, 外汇 DeFi, 合成资产"
+	},
+	"overview": "Gains Network 运营 gTrade，一个支持加密货币、外汇、股票和大宗商品的去中心化杠杆交易平台。它在各种资产类别上提供高达 150 倍的杠杆。\n\n与传统永续合约 DEX 不同，gTrade 使用合成架构，交易针对 DAI 金库结算。这使得可以交易链上不存在的资产，如外汇对和股票指数。\n\nGNS 代币驱动生态系统，质押者赚取平台费用。Gains 通过提供其他 DeFi 平台不可用的独特资产类别而显著增长。",
+	"features": {
+		"1": {
+			"title": "多资产交易",
+			"description": "加密货币、外汇、股票、大宗商品"
+		},
+		"2": {
+			"title": "高杠杆",
+			"description": "某些交易对最高 150 倍"
+		},
+		"3": {
+			"title": "合成架构",
+			"description": "交易任何资产类别"
+		},
+		"4": {
+			"title": "GNS 质押",
+			"description": "赚取平台费用"
+		},
+		"5": {
+			"title": "多链",
+			"description": "Polygon 和 Arbitrum"
+		},
+		"6": {
+			"title": "基于预言机",
+			"description": "Chainlink 价格馈送"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "外汇交易",
+			"description": "交易 EUR/USD、GBP/JPY 等"
+		},
+		"2": {
+			"title": "加密杠杆",
+			"description": "高杠杆加密货币头寸"
+		},
+		"3": {
+			"title": "股票指数",
+			"description": "交易 SPY、QQQ 合成资产"
+		},
+		"4": {
+			"title": "GNS 收益",
+			"description": "质押 GNS 获得费用分成"
+		},
+		"5": {
+			"title": "DAI 金库",
+			"description": "提供流动性，赚取费用"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "如何在区块链上交易外汇？",
+			"answer": "gTrade 使用 Chainlink 预言机获取真实世界价格。当您开立外汇交易时，您不是购买实际欧元——您是开立跟踪 EUR/USD 价格的合成头寸。利润和损失以 DAI 结算。"
+		},
+		"2": {
+			"question": "什么是 DAI 金库？",
+			"answer": "DAI 金库是所有交易的对手方。交易者的损失进入金库，利润来自金库。金库存款人赚取交易费用加上交易者损失（减去利润）。它是平台的流动性层。"
+		},
+		"3": {
+			"question": "什么是 GNS 代币？",
+			"answer": "GNS 是治理和质押代币。质押 GNS 可赚取平台交易费用份额。GNS 质押者按其质押比例获得 DAI 奖励。GNS 还具有治理功能。"
+		},
+		"4": {
+			"question": "为什么使用 gTrade 而不是外汇经纪商？",
+			"answer": "gTrade 是无需许可的——无 KYC，随时交易。资金自托管。透明的链上执行。某些交易对可用更高杠杆。但是，传统经纪商的外汇点差更紧。"
+		},
+		"5": {
+			"question": "gTrade 安全吗？",
+			"answer": "gTrade 自 2021 年以来经过审计和实战检验。合成交易存在预言机风险——如果价格馈送错误，交易结算会不正确。高杠杆放大清算风险。金库存款人面临交易者盈利风险。"
+		}
+	},
+	"cta": {
+		"ready": "准备好交易多种资产类别了吗？",
+		"button": "探索 gTrade",
+		"note": "链上加密货币、外汇和股票"
+	}
+}

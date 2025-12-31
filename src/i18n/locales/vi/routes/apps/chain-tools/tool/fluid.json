@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Fluid - Unified Liquidity Protocol",
+		"description": "Fluid by Instadapp unifies lending and DEX liquidity. Borrow, lend, and trade with capital-efficient unified pools.",
+		"keywords": "Fluid, Instadapp, unified liquidity, lending, DEX, capital efficiency"
+	},
+	"overview": "Fluid is Instadapp's next-generation DeFi protocol that unifies lending and DEX liquidity. Instead of separate pools for lending and trading, Fluid combines them for maximum capital efficiency.\n\nDebt positions on Fluid can simultaneously serve as DEX liquidity, meaning borrowed assets generate trading fees while being used. This creates significantly higher capital efficiency than traditional protocols.\n\nFluid is designed to be the liquidity layer for DeFi, enabling both borrowing at competitive rates and deep trading liquidity from unified pools.",
+	"features": {
+		"1": {
+			"title": "Unified Liquidity",
+			"description": "Lending + DEX in one pool"
+		},
+		"2": {
+			"title": "Smart Debt",
+			"description": "Debt earns trading fees"
+		},
+		"3": {
+			"title": "Capital Efficiency",
+			"description": "Higher utilization rates"
+		},
+		"4": {
+			"title": "Instadapp Backed",
+			"description": "From established DeFi team"
+		},
+		"5": {
+			"title": "Competitive Rates",
+			"description": "Efficient borrowing costs"
+		},
+		"6": {
+			"title": "DEX Aggregation",
+			"description": "Integrated swap routing"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Efficient Borrowing",
+			"description": "Borrow at competitive rates"
+		},
+		"2": {
+			"title": "Lending",
+			"description": "Earn from lending + trading fees"
+		},
+		"3": {
+			"title": "Smart Debt Positions",
+			"description": "Debt that generates yield"
+		},
+		"4": {
+			"title": "Trading",
+			"description": "Swap with deep liquidity"
+		},
+		"5": {
+			"title": "Leverage",
+			"description": "Efficient leveraged positions"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is unified liquidity?",
+			"answer": "Traditional DeFi separates lending liquidity (Aave) from trading liquidity (Uniswap). Fluid combines them—the same liquidity serves both purposes. This means higher utilization and better rates for everyone."
+		},
+		"2": {
+			"question": "How does Smart Debt work?",
+			"answer": "When you borrow on Fluid, your debt position can act as liquidity for the DEX. If traders swap against your debt, you earn trading fees. Your debt effectively works for you instead of just costing interest."
+		},
+		"3": {
+			"question": "Who is behind Fluid?",
+			"answer": "Fluid is built by Instadapp, a well-established DeFi team since 2018. They previously built smart wallet infrastructure used by billions in TVL. Fluid is their flagship protocol."
+		},
+		"4": {
+			"question": "How is this different from Morpho?",
+			"answer": "Morpho optimizes lending rates through P2P matching. Fluid unifies lending with DEX liquidity entirely. Both improve capital efficiency but through different mechanisms. Fluid's approach is more novel."
+		},
+		"5": {
+			"question": "Is Fluid safe?",
+			"answer": "Fluid is audited and built by the experienced Instadapp team. The unified design is innovative and less battle-tested than traditional models. Consider this newer protocol's risks accordingly."
+		}
+	},
+	"cta": {
+		"ready": "Ready for unified liquidity?",
+		"button": "Explore Fluid",
+		"note": "Next-gen DeFi efficiency"
+	}
+}

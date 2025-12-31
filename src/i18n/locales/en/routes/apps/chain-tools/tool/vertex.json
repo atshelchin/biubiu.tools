@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Vertex Protocol - Hybrid DEX on Arbitrum",
+		"description": "Vertex Protocol combines orderbook and AMM for spot and perpetuals trading on Arbitrum. Trade with low fees and deep liquidity.",
+		"keywords": "Vertex Protocol, VRTX, Arbitrum DEX, perpetuals, orderbook, hybrid exchange"
+	},
+	"overview": "Vertex Protocol is a hybrid decentralized exchange combining an orderbook with an AMM for both spot and perpetual trading. Built on Arbitrum, it offers CEX-like trading experience with DeFi self-custody.\n\nThe hybrid model provides deep liquidity by combining limit orders with AMM pools. Vertex offers cross-margining, allowing positions to share collateral for capital efficiency.\n\nWith fast execution, low fees, and a unified trading experience, Vertex has become a major perpetuals venue on Arbitrum competing with established protocols.",
+	"features": {
+		"1": {
+			"title": "Hybrid Orderbook+AMM",
+			"description": "Best of both liquidity models"
+		},
+		"2": {
+			"title": "Cross-Margin",
+			"description": "Shared collateral across positions"
+		},
+		"3": {
+			"title": "Spot + Perpetuals",
+			"description": "Trade both in one venue"
+		},
+		"4": {
+			"title": "Low Fees",
+			"description": "Competitive trading costs"
+		},
+		"5": {
+			"title": "VRTX Token",
+			"description": "Governance and rewards"
+		},
+		"6": {
+			"title": "Fast Settlement",
+			"description": "Arbitrum speed + sequencer"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Perpetual Trading",
+			"description": "Trade crypto perpetuals with leverage"
+		},
+		"2": {
+			"title": "Spot Trading",
+			"description": "Swap tokens on orderbook"
+		},
+		"3": {
+			"title": "Cross-Margin Positions",
+			"description": "Efficient collateral usage"
+		},
+		"4": {
+			"title": "VRTX Staking",
+			"description": "Stake for fee rebates"
+		},
+		"5": {
+			"title": "Market Making",
+			"description": "Provide limit order liquidity"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is a hybrid DEX?",
+			"answer": "Vertex combines an orderbook (like CEX) with an AMM (like Uniswap). Limit orders and AMM liquidity are merged into one pool. Trades execute against the best price from either source. This provides deeper liquidity than either alone."
+		},
+		"2": {
+			"question": "What is cross-margining?",
+			"answer": "Cross-margin lets multiple positions share collateral. Instead of separate margin per position, your whole account backs all trades. This is more capital efficient—profits from one position can offset losses in another."
+		},
+		"3": {
+			"question": "What is VRTX token?",
+			"answer": "VRTX is Vertex's governance and utility token. Staking VRTX provides fee rebates and protocol rewards. VRTX holders participate in governance decisions about protocol parameters and development."
+		},
+		"4": {
+			"question": "How does Vertex compare to GMX?",
+			"answer": "GMX uses an oracle-based model with GLP liquidity. Vertex uses a hybrid orderbook. GMX has zero price impact, Vertex has traditional slippage. Vertex offers spot trading too. Both are major Arbitrum perpetuals venues."
+		},
+		"5": {
+			"question": "Is Vertex safe?",
+			"answer": "Vertex is audited and has operated on Arbitrum since 2023. It's non-custodial—you control your funds. Standard perpetual trading risks apply: liquidation, funding rates, smart contract risk. Use appropriate position sizing."
+		}
+	},
+	"cta": {
+		"ready": "Ready to trade on Vertex?",
+		"button": "Explore Vertex",
+		"note": "Hybrid perpetuals on Arbitrum"
+	}
+}

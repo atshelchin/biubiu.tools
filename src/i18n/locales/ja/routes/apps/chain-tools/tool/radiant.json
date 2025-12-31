@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Radiant Capital - Cross-Chain Lending",
+		"description": "Radiant Capital is a cross-chain lending protocol using LayerZero. Borrow and lend across Arbitrum, BNB Chain, and Ethereum.",
+		"keywords": "Radiant Capital, RDNT, cross-chain lending, LayerZero, Arbitrum, DeFi lending"
+	},
+	"overview": "Radiant Capital is an omnichain lending protocol that enables borrowing and lending across multiple chains using LayerZero technology. Users can deposit on one chain and borrow on another.\n\nThe protocol uses a dynamic liquidity (dLP) model where users must lock RDNT-ETH LP tokens to earn full emissions. This creates sustainable tokenomics by aligning incentives between lenders and protocol stakeholders.\n\nRadiant has deployed on Arbitrum, BNB Chain, and Ethereum, aiming to become the primary cross-chain money market in DeFi.",
+	"features": {
+		"1": {
+			"title": "Cross-Chain Lending",
+			"description": "Borrow across chains via LayerZero"
+		},
+		"2": {
+			"title": "Dynamic Liquidity",
+			"description": "dLP locking for full emissions"
+		},
+		"3": {
+			"title": "Multi-Chain",
+			"description": "Arbitrum, BNB Chain, Ethereum"
+		},
+		"4": {
+			"title": "RDNT Token",
+			"description": "Governance and emission rewards"
+		},
+		"5": {
+			"title": "Aave Fork",
+			"description": "Battle-tested lending mechanics"
+		},
+		"6": {
+			"title": "Real Yield",
+			"description": "Platform fees to dLP lockers"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Cross-Chain Borrowing",
+			"description": "Deposit on Arbitrum, borrow on BNB"
+		},
+		"2": {
+			"title": "dLP Locking",
+			"description": "Lock LP for boosted RDNT rewards"
+		},
+		"3": {
+			"title": "Lending",
+			"description": "Earn interest on deposits"
+		},
+		"4": {
+			"title": "Leveraged Farming",
+			"description": "Loop deposits for yield"
+		},
+		"5": {
+			"title": "Fee Earning",
+			"description": "Earn protocol fees as dLP locker"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is dLP (dynamic liquidity)?",
+			"answer": "dLP requires users to lock RDNT-ETH LP tokens worth at least 5% of their deposits to earn RDNT emissions. This ensures liquidity for the RDNT token and aligns user incentives with protocol health. Without dLP, you only earn base interest."
+		},
+		"2": {
+			"question": "How does cross-chain lending work?",
+			"answer": "Radiant uses LayerZero for cross-chain messaging. Your collateral on one chain can enable borrowing on another. The protocol manages risk across chains. This enables capital efficiency without bridging."
+		},
+		"3": {
+			"question": "What happened with the Radiant hack?",
+			"answer": "In October 2024, Radiant suffered a significant exploit (~$50M) through compromised private keys. The team is working on recovery and security improvements. Always check current status and security measures before using."
+		},
+		"4": {
+			"question": "How do I earn on Radiant?",
+			"answer": "Deposit assets to earn interest plus RDNT emissions (if dLP eligible). Lock RDNT-ETH LP as dLP to boost emissions and earn protocol fees. The longer you lock, the higher your boost multiplier."
+		},
+		"5": {
+			"question": "Is Radiant safe after the exploit?",
+			"answer": "Post-exploit, Radiant has implemented additional security measures. However, the hack demonstrated private key risks. Monitor official channels for security updates. Consider the risks carefully before depositing."
+		}
+	},
+	"cta": {
+		"ready": "Ready for cross-chain lending?",
+		"button": "Explore Radiant",
+		"note": "Check security status first"
+	}
+}

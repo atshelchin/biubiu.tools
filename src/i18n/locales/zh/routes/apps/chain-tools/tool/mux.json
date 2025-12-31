@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "MUX Protocol - 永续合约聚合器",
+		"description": "MUX Protocol 聚合跨链永续合约 DEX 流动性。通过统一的杠杆交易界面获得最佳执行。",
+		"keywords": "MUX Protocol, MCB 代币, 永续合约聚合器, 跨链杠杆, DeFi 衍生品"
+	},
+	"overview": "MUX Protocol 是一个去中心化的永续合约交易聚合器和交易所。它聚合多个永续合约 DEX 的流动性，为杠杆交易提供最优执行。\n\n除了聚合之外，MUX 还使用 GMX 风格模型运营自己的永续合约交易所（MUXLP）。该协议是多链的，在 Arbitrum、BNB Chain、Optimism、Avalanche 和 Fantom 上运营。\n\nMCB 代币治理协议，而 MUXLP 提供流动性并赚取交易费用。MUX 为 DeFi 领域的永续合约交易提供统一界面。",
+	"features": {
+		"1": {
+			"title": "永续合约聚合",
+			"description": "跨 DEX 最佳执行"
+		},
+		"2": {
+			"title": "多链",
+			"description": "支持 5+ 条链"
+		},
+		"3": {
+			"title": "MUXLP 池",
+			"description": "原生流动性池"
+		},
+		"4": {
+			"title": "MCB 治理",
+			"description": "协议治理代币"
+		},
+		"5": {
+			"title": "高达 100 倍杠杆",
+			"description": "高杠杆选项"
+		},
+		"6": {
+			"title": "统一界面",
+			"description": "所有永续合约 DEX 一个 UI"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "聚合交易",
+			"description": "跨平台最佳价格"
+		},
+		"2": {
+			"title": "原生永续合约",
+			"description": "在 MUXLP 池上交易"
+		},
+		"3": {
+			"title": "MUXLP 提供",
+			"description": "赚取交易费用"
+		},
+		"4": {
+			"title": "跨链交易",
+			"description": "在多条链上交易"
+		},
+		"5": {
+			"title": "MCB 质押",
+			"description": "治理和奖励"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是永续合约聚合？",
+			"answer": "MUX 将交易路由到最佳的永续合约 DEX。如果 GMX 对您的头寸有比 dYdX 更好的费率，MUX 就路由到那里。它自动跨平台优化执行。"
+		},
+		"2": {
+			"question": "什么是 MUXLP？",
+			"answer": "MUXLP 是 MUX 的原生流动性池，类似于 GMX 的 GLP。流动性提供者存入资产并赚取交易费用。MUXLP 作为 MUX 原生永续合约交易所上交易者的对手方。"
+		},
+		"3": {
+			"question": "MUX 支持哪些链？",
+			"answer": "MUX 在 Arbitrum、BNB Chain、Optimism、Avalanche 和 Fantom 上运营。聚合和原生 MUXLP 池在多条链上都可用。Arbitrum 是主要链。"
+		},
+		"4": {
+			"question": "MCB vs MUX 代币？",
+			"answer": "MCB 是 MUX 协议的治理代币。MUXLP 是代表池份额的流动性提供者代币。MCB 持有者治理协议；MUXLP 持有者赚取交易费用。"
+		},
+		"5": {
+			"question": "MUX Protocol 安全吗？",
+			"answer": "MUX 经过审计，自 2021 年以来运营（原名 MCDEX）。聚合器增加了智能合约复杂性。原生交易使用经过验证的 GMX 风格机制。多链扩大了攻击面。请自行研究。"
+		}
+	},
+	"cta": {
+		"ready": "准备好聚合永续合约交易了吗？",
+		"button": "探索 MUX",
+		"note": "永续合约 DEX 聚合器"
+	}
+}

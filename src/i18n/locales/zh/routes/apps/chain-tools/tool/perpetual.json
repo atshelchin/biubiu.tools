@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Perpetual Protocol - vAMM 永续合约",
+		"description": "Perpetual Protocol 在 Optimism 上开创虚拟 AMM 永续合约交易。无需对手方和保证流动性交易加密货币永续合约。",
+		"keywords": "Perpetual Protocol, PERP 代币, vAMM, Optimism 永续合约, 去中心化衍生品"
+	},
+	"overview": "Perpetual Protocol 开创了用于去中心化永续合约交易的虚拟 AMM（vAMM）模型。与传统订单簿或流动性池不同，vAMM 使用数学曲线来保证流动性。\n\n基于 Optimism 构建，Perpetual Protocol 提供低成本的永续合约交易，无对手方风险。vAMM 确保交易始终执行，尽管较大头寸会有较高滑点。\n\nPERP 代币治理协议并可质押获得奖励。Perpetual Protocol 是最早成功的去中心化永续合约交易所之一。",
+	"features": {
+		"1": {
+			"title": "vAMM 模型",
+			"description": "永续合约的虚拟 AMM"
+		},
+		"2": {
+			"title": "保证流动性",
+			"description": "交易始终执行"
+		},
+		"3": {
+			"title": "无对手方",
+			"description": "与协议交易"
+		},
+		"4": {
+			"title": "Optimism 原生",
+			"description": "低费用，快速执行"
+		},
+		"5": {
+			"title": "PERP 代币",
+			"description": "治理和质押"
+		},
+		"6": {
+			"title": "交叉保证金",
+			"description": "高效的资本使用"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "永续合约交易",
+			"description": "带杠杆交易加密货币"
+		},
+		"2": {
+			"title": "对冲",
+			"description": "对冲现货头寸"
+		},
+		"3": {
+			"title": "PERP 质押",
+			"description": "质押获得协议奖励"
+		},
+		"4": {
+			"title": "投机",
+			"description": "杠杆方向性押注"
+		},
+		"5": {
+			"title": "套利",
+			"description": "与其他平台套利"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 vAMM？",
+			"answer": "虚拟 AMM 使用 AMM 绑定曲线数学但池中没有真实代币。它是永续合约的定价机制。曲线决定进入/退出价格。不需要流动性提供者——协议本身是对手方。"
+		},
+		"2": {
+			"question": "这与 GMX 有何不同？",
+			"answer": "GMX 使用预言机价格和 GLP 流动性池。Perpetual 使用 vAMM 数学定价。GMX 没有价格影响，Perp 根据头寸大小有滑点。不同的权衡——GMX 需要 LP，Perp 需要健康的资金费率。"
+		},
+		"3": {
+			"question": "PERP 代币有什么用？",
+			"answer": "PERP 是治理和实用代币。质押 PERP 可获得协议收入分成。PERP 持有者对协议参数进行投票。该代币从平台交易活动中获取价值。"
+		},
+		"4": {
+			"question": "为什么基于 Optimism 构建？",
+			"answer": "Optimism 提供衍生品交易所需的低费用和快速确认。EVM 兼容性使迁移变得容易。Optimism 日益增长的 DeFi 生态系统提供了良好的协同效应。"
+		},
+		"5": {
+			"question": "Perpetual Protocol 安全吗？",
+			"answer": "Perpetual Protocol 经过审计，自 2020 年以来运营——最古老的永续合约 DEX 之一。vAMM 模型新颖，与传统模型有不同风险。标准杠杆风险适用。请彻底研究。"
+		}
+	},
+	"cta": {
+		"ready": "准备好交易永续合约了吗？",
+		"button": "探索 Perpetual",
+		"note": "链上永续合约的先驱"
+	}
+}

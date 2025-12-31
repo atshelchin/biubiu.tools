@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "BENQI - Avalanche Lending & Liquid Staking",
+		"description": "BENQI is Avalanche's leading lending protocol with sAVAX liquid staking. Borrow, lend, and stake AVAX on Avalanche.",
+		"keywords": "BENQI, QI token, sAVAX, Avalanche lending, liquid staking, DeFi"
+	},
+	"overview": "BENQI is Avalanche's native lending and liquid staking protocol. It offers both a Compound-style money market (BENQI Lending) and liquid staking for AVAX (BENQI Liquid Staking).\n\nUsers can deposit assets to earn interest, borrow against collateral, or stake AVAX for sAVAX—a liquid staking token usable across Avalanche DeFi. The QI token governs the protocol.\n\nBENQI has become the primary lending venue on Avalanche, with deep integration across the ecosystem and the largest AVAX liquid staking solution.",
+	"features": {
+		"1": {
+			"title": "Lending Protocol",
+			"description": "Borrow and lend on Avalanche"
+		},
+		"2": {
+			"title": "sAVAX Staking",
+			"description": "Liquid staking for AVAX"
+		},
+		"3": {
+			"title": "QI Token",
+			"description": "Governance and rewards"
+		},
+		"4": {
+			"title": "Avalanche Native",
+			"description": "Built for Avalanche ecosystem"
+		},
+		"5": {
+			"title": "veQI",
+			"description": "Vote-escrowed QI for boosts"
+		},
+		"6": {
+			"title": "DeFi Integration",
+			"description": "sAVAX used across Avalanche"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Lending",
+			"description": "Deposit assets to earn interest"
+		},
+		"2": {
+			"title": "Borrowing",
+			"description": "Borrow against collateral"
+		},
+		"3": {
+			"title": "AVAX Staking",
+			"description": "Stake AVAX for sAVAX"
+		},
+		"4": {
+			"title": "Leveraged Staking",
+			"description": "Loop sAVAX for amplified yield"
+		},
+		"5": {
+			"title": "veQI Governance",
+			"description": "Lock QI for boosted rewards"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is sAVAX?",
+			"answer": "sAVAX is BENQI's liquid staking token for AVAX. When you stake AVAX, you receive sAVAX that earns staking rewards. sAVAX can be used in DeFi—as collateral, in LPs, etc.—while still earning staking yield."
+		},
+		"2": {
+			"question": "How does BENQI lending work?",
+			"answer": "BENQI Lending is similar to Compound. Deposit assets to earn interest. Your deposits can be used as collateral to borrow other assets. Interest rates adjust based on utilization. QI emissions provide additional yield."
+		},
+		"3": {
+			"question": "What is veQI?",
+			"answer": "veQI is vote-escrowed QI obtained by locking QI tokens. veQI holders can boost their QI rewards, vote on gauge weights directing emissions, and participate in governance. Longer locks give more voting power."
+		},
+		"4": {
+			"question": "Is BENQI safe?",
+			"answer": "BENQI is audited and has operated since 2021 as Avalanche's main lending protocol. It manages significant TVL. Standard DeFi risks apply—liquidation risk, smart contract risk. sAVAX adds staking risk."
+		},
+		"5": {
+			"question": "BENQI vs Aave on Avalanche?",
+			"answer": "Both offer lending on Avalanche. BENQI is Avalanche-native with QI rewards and sAVAX integration. Aave is the established leader but less Avalanche-specific. BENQI often has higher incentives for Avalanche assets."
+		}
+	},
+	"cta": {
+		"ready": "Ready to use BENQI?",
+		"button": "Explore BENQI",
+		"note": "Avalanche's liquidity hub"
+	}
+}

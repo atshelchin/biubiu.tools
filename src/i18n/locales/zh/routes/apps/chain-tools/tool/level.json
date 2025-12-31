@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Level Finance - 多链永续合约",
+		"description": "Level Finance 在 BNB Chain 和 Arbitrum 上提供杠杆永续合约交易。使用 LLP 流动性最高可达 50 倍杠杆交易。",
+		"keywords": "Level Finance, LVL 代币, LLP, BNB 永续合约, 杠杆交易"
+	},
+	"overview": "Level Finance 是一个在 BNB Chain 和 Arbitrum 上运营的去中心化永续合约交易所。它使用 GMX 风格的模型，流动性提供者在 LLP 池中质押以赚取交易费用。\n\n交易者可以在主要加密资产上获得高达 50 倍的杠杆，基于预言机的定价提供低滑点。该平台具有分层忠诚度计划，奖励活跃交易者更好的费率。\n\nLVL 代币治理协议，通过质押和回购获取价值。Level 已成为 BNB Chain 上重要的永续合约交易场所。",
+	"features": {
+		"1": {
+			"title": "多链",
+			"description": "BNB Chain 和 Arbitrum"
+		},
+		"2": {
+			"title": "LLP 流动性",
+			"description": "GMX 风格的流动性池"
+		},
+		"3": {
+			"title": "高达 50 倍杠杆",
+			"description": "高杠杆交易"
+		},
+		"4": {
+			"title": "忠诚度计划",
+			"description": "分层费用折扣"
+		},
+		"5": {
+			"title": "LVL 代币",
+			"description": "治理和质押"
+		},
+		"6": {
+			"title": "预言机定价",
+			"description": "低滑点执行"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "永续合约交易",
+			"description": "杠杆加密货币头寸"
+		},
+		"2": {
+			"title": "LLP 提供",
+			"description": "作为流动性提供者赚取费用"
+		},
+		"3": {
+			"title": "LVL 质押",
+			"description": "质押获得协议奖励"
+		},
+		"4": {
+			"title": "忠诚度挖矿",
+			"description": "交易获得等级升级"
+		},
+		"5": {
+			"title": "BNB Chain DeFi",
+			"description": "主要的 BSC 永续合约场所"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 LLP？",
+			"answer": "LLP（Level 流动性池）是 Level 的流动性层。LLP 持有者提供作为交易者对手方的资产。作为回报，LLP 赚取交易费用。类似于 GMX 的 GLP，但在不同的链上。"
+		},
+		"2": {
+			"question": "什么是忠诚度计划？",
+			"answer": "Level 有一个分层系统，交易量赚取忠诚度积分。更高的等级获得更好的费率和其他福利。它激励活跃交易并创造用户粘性。"
+		},
+		"3": {
+			"question": "什么是 LVL 代币？",
+			"answer": "LVL 是治理和实用代币。质押 LVL 可获得协议收入分成。Level 还使用费用进行 LVL 回购。LVL 持有者参与治理决策。"
+		},
+		"4": {
+			"question": "Level 与 GMX 相比如何？",
+			"answer": "类似的机制——流动性池、预言机定价。Level 有 GMX 没有的忠诚度计划。Level 主要在 BNB Chain 上，而 GMX 在 Arbitrum/Avalanche。GMX 有更多 TVL 和更长的记录。"
+		},
+		"5": {
+			"question": "Level Finance 安全吗？",
+			"answer": "Level 经过审计，自 2022 年以来运营。它使用经过验证的 GMX 风格机制。标准永续合约风险适用——清算、预言机风险、LP 风险。对较新协议请自行研究。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在 Level 交易了吗？",
+		"button": "探索 Level",
+		"note": "BNB Chain 永续合约领导者"
+	}
+}

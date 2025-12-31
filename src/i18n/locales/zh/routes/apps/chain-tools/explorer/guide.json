@@ -1,0 +1,196 @@
+{
+	"title": "区块链浏览器完全指南",
+	"subtitle": "区块链之窗 - 如何阅读、分析和调试链上活动",
+	"meta": {
+		"title": "区块链浏览器完全指南 | 链上数据分析",
+		"description": "掌握区块链浏览器，学会分析交易、验证合约、追踪地址。详解 Etherscan、Blockscout 等工具的使用技巧。"
+	},
+	"hero": {
+		"title": "区块链浏览器完全指南",
+		"subtitle": "透视区块链的窗口 - 如何阅读、分析和调试链上活动"
+	},
+	"sections": {
+		"intro": {
+			"title": "引言：为什么区块链浏览器如此重要",
+			"content": "区块链浏览器是透视区块链的窗口 - 它让任何人都能查看和验证公共账本上的每一笔交易、地址和智能合约。与传统银行由银行保管你的数据不同，区块链浏览器提供了对交易历史的通用访问，让区块链真正透明。<br/><br/>无论你是追踪充值的交易员、调试失败交易的开发者，还是调查巨鲸动向的分析师，掌握区块链浏览器的使用方法都是必备技能。本指南将带你从基础导航到安全研究员使用的高级调试技术。"
+		},
+		"explorer_basics": {
+			"title": "理解区块链浏览器",
+			"content": "区块链浏览器索引区块链数据，并以可搜索、易于阅读的格式呈现。它们运行与网络同步的节点，存储所有历史数据。",
+			"what_is": {
+				"title": "什么是区块链浏览器？",
+				"content": "<strong>定义</strong>：区块链浏览器是一个基于网页的工具，用于索引和显示区块链数据，包括区块、交易、地址和智能合约。<br/><br/><strong>工作原理</strong>：浏览器运行与区块链网络同步的全节点。它们解析每个区块，提取交易数据，解码智能合约交互，并将所有内容存储在可搜索的数据库中。<br/><br/><strong>关键洞察</strong>：浏览器显示的数据与每个全节点存储的数据相同 - 浏览器只是让你无需运行自己的节点就能访问这些数据。"
+			},
+			"why_use": {
+				"title": "为什么使用区块链浏览器？",
+				"content": "<strong>交易验证</strong>：确认你的交易已被包含在区块中，并查看具体发生了什么<br/><br/><strong>地址追踪</strong>：监控任何钱包的完整交易历史、代币余额和活动<br/><br/><strong>合约交互</strong>：直接读写智能合约，查看源代码，理解协议<br/><br/><strong>调试</strong>：诊断交易失败原因，追踪内部调用，分析 Gas 使用<br/><br/><strong>研究</strong>：调查协议，追踪团队钱包，验证项目声明"
+			},
+			"anatomy": {
+				"title": "区块链浏览器的结构",
+				"content": "<strong>搜索栏</strong>：输入交易哈希、地址、区块号、代币名称或 ENS 域名<br/><br/><strong>交易视图</strong>：显示发送方、接收方、金额、Gas、状态和解码后的输入数据<br/><br/><strong>地址视图</strong>：显示余额、交易历史、代币持有和内部交易<br/><br/><strong>区块视图</strong>：列出区块中的所有交易、矿工/验证者、区块奖励和 Gas 使用量<br/><br/><strong>合约标签页</strong>：源代码、ABI、读/写函数和事件日志（针对已验证合约）"
+			}
+		},
+		"transactions": {
+			"title": "交易分析",
+			"content": "理解交易是使用区块链浏览器的基础。每一个链上操作 - 从简单转账到复杂的 DeFi 操作 - 都记录为一笔交易。",
+			"reading": {
+				"title": "阅读交易详情",
+				"content": "<strong>交易哈希</strong>：唯一的66字符标识符（0x + 64个十六进制字符）- 分享此哈希可引用任何交易<br/><br/><strong>From/To</strong>：发送方地址和接收方（地址或合约）<br/><br/><strong>Value</strong>：转移的原生代币数量（ETH、BNB、MATIC 等）<br/><br/><strong>Gas Price 和 Gas Used</strong>：支付的费用 = Gas Used × Gas Price。优先级越高 = Gas Price 越高<br/><br/><strong>Input Data</strong>：合约交互的编码函数调用 - 如果合约已验证，浏览器会解码显示<br/><br/><strong>Block Number</strong>：包含此交易的区块 - 决定最终性"
+			},
+			"status": {
+				"title": "交易状态",
+				"content": "<strong>成功（Success）</strong>：交易完全执行 - 状态变更已应用<br/><br/><strong>失败（Failed）</strong>：交易回滚 - Gas 被消耗但状态未改变。常见原因：<br/>- 余额或授权额度不足<br/>- 滑点过低（价格变动）<br/>- 合约逻辑拒绝调用<br/>- Gas 耗尽<br/><br/><strong>待处理（Pending）</strong>：交易已提交但尚未被包含在区块中。可能因 Gas 过低或 nonce 问题而卡住<br/><br/><strong>已丢弃（Dropped）</strong>：交易从内存池中移除（通常被替换或过期）"
+			},
+			"internal": {
+				"title": "内部交易",
+				"content": "<strong>什么是内部交易？</strong>：当智能合约调用另一个合约或发送 ETH 时，这些就是内部交易。它们没有自己的交易哈希，但属于父交易的一部分。<br/><br/><strong>为什么重要</strong>：在 Uniswap 上的一次交换可能触发数十个内部交易，代币在合约之间移动。理解内部交易可以揭示实际发生了什么。<br/><br/><strong>查看内部交易</strong>：在 Etherscan 上点击「Internal Transactions」标签。对于详细的调用追踪，使用 samczsun 的交易追踪器等专业工具。"
+			},
+			"logs": {
+				"title": "事件日志",
+				"content": "<strong>什么是事件日志？</strong>：智能合约发出事件来记录发生了什么。事件被索引以便高效查询，不影响合约状态。<br/><br/><strong>常见事件</strong>：<br/>- <code>Transfer(from, to, amount)</code> - ERC20/ERC721 转账<br/>- <code>Approval(owner, spender, amount)</code> - 代币授权<br/>- <code>Swap(sender, amount0In, amount1In, amount0Out, amount1Out, to)</code> - DEX 交换<br/><br/><strong>阅读日志</strong>：「Logs」标签显示所有发出的事件。Topics 是索引参数（可搜索），Data 包含非索引参数。"
+			}
+		},
+		"addresses": {
+			"title": "地址与合约分析",
+			"content": "区块链上的每个地址要么是由私钥控制的 EOA（外部拥有账户），要么是包含代码的智能合约。",
+			"eoa_vs": {
+				"title": "EOA 与合约地址",
+				"content": "<strong>EOA（外部拥有账户）</strong>：<br/>- 由私钥控制<br/>- 可以发起交易<br/>- 没有关联代码<br/>- 示例：你的 MetaMask 钱包、交易所热钱包<br/><br/><strong>合约地址</strong>：<br/>- 包含执行的字节码<br/>- 不能发起交易（只能响应）<br/>- 通过部署代码创建<br/>- 示例：Uniswap Router、USDC 代币合约<br/><br/><strong>如何区分</strong>：在 Etherscan 上，合约显示带有代码的「Contract」标签。EOA 只显示交易历史。"
+			},
+			"verification": {
+				"title": "合约验证",
+				"content": "<strong>为什么验证重要</strong>：已验证的合约显示人类可读的源代码。未验证的合约只显示原始字节码 - 不反编译就无法理解。<br/><br/><strong>验证过程</strong>：开发者提交源代码和编译器设置。浏览器编译并检查字节码是否与已部署的匹配。<br/><br/><strong>信任含义</strong>：已验证的代码可以被审计和理解。未验证的合约是黑盒 - 交互时要格外小心。<br/><br/><strong>替代方案：Sourcify</strong>：去中心化的合约验证，将源代码存储在 IPFS 上，不依赖中心化服务。"
+			},
+			"read_write": {
+				"title": "读取和写入合约",
+				"content": "<strong>Read Contract</strong>：调用返回数据但不改变状态的 view/pure 函数。免费（不需要 Gas）。<br/>- 查看代币余额<br/>- 查看协议参数<br/>- 查询价格或费率<br/><br/><strong>Write Contract</strong>：执行改变状态的函数。需要连接钱包并支付 Gas。<br/>- 领取奖励<br/>- 紧急提款<br/>- 直接协议交互<br/><br/><strong>专业提示</strong>：对于可升级合约（使用代理模式的），使用「Read as Proxy」和「Write as Proxy」。"
+			},
+			"tokens": {
+				"title": "代币追踪",
+				"content": "<strong>代币余额</strong>：查看任何地址持有的所有 ERC20、ERC721 和 ERC1155 代币<br/><br/><strong>代币转账</strong>：地址的代币进出完整历史<br/><br/><strong>代币分析</strong>：<br/>- 持有者数量和分布<br/>- 总供应量和流通供应量<br/>- 最近转账和交易量<br/><br/><strong>NFT 视图</strong>：对于 NFT 合约，浏览器显示收藏元数据、单个代币图片和所有权历史"
+			}
+		},
+		"explorer_types": {
+			"title": "区块链浏览器的类型",
+			"content": "不同的浏览器服务于不同的目的和网络。了解这个生态系统有助于你为需求选择正确的工具。",
+			"etherscan": {
+				"title": "Etherscan 和链专属浏览器",
+				"content": "<strong>Etherscan 系列</strong>：EVM 链探索的黄金标准。Etherscan 为多条链运营浏览器：<br/>- <strong>Etherscan</strong>：以太坊主网<br/>- <strong>Arbiscan</strong>：Arbitrum One<br/>- <strong>Optimistic Etherscan</strong>：Optimism<br/>- <strong>Basescan</strong>：Base<br/>- <strong>PolygonScan</strong>：Polygon PoS<br/>- <strong>BscScan</strong>：BNB Chain<br/><br/><strong>统一界面</strong>：所有链相同的功能和 UI - 学会一个，通用所有<br/><br/><strong>高级功能</strong>：API 访问、高级分析、地址标签、代币验证"
+			},
+			"open_source": {
+				"title": "开源浏览器",
+				"content": "<strong>为什么开源重要</strong>：开源浏览器可以自托管、修改，不依赖单一公司。对去中心化至关重要。<br/><br/><strong>Blockscout</strong>：使用最广泛的开源浏览器。被 Optimism、Gnosis Chain 和数百个其他网络使用。特点：<br/>- GitHub 上的完整源代码<br/>- 可自托管<br/>- 活跃的开发社区<br/>- 高级智能合约交互<br/><br/><strong>Routescan</strong>：专注于跨链分析的多链统一界面"
+			},
+			"multi_chain": {
+				"title": "多链浏览器",
+				"content": "<strong>统一搜索</strong>：多链浏览器让你可以同时在多个区块链上搜索<br/><br/><strong>Blockchair</strong>：支持 40 多条区块链，包括 Bitcoin、Ethereum 和许多山寨链。具有隐私模式防止地址追踪。<br/><br/><strong>OKLink</strong>：OKX 的多链浏览器，提供机构级分析和 API<br/><br/><strong>EVMExplorer</strong>：专注于 EVM 链，在所有兼容网络上提供统一界面<br/><br/><strong>使用场景</strong>：追踪跨链活动、比较不同链的指标，或当你不知道交易在哪条链上时"
+			},
+			"non_evm": {
+				"title": "非 EVM 链浏览器",
+				"content": "<strong>不同架构</strong>：非 EVM 链具有根本不同的数据结构，需要专门的浏览器<br/><br/><strong>Solana（Solscan）</strong>：程序而非合约，并行交易处理，独特的账户模型<br/><br/><strong>Cosmos（Mintscan）</strong>：IBC 转账，验证者集合，治理提案，质押信息<br/><br/><strong>NEAR（Nearblocks）</strong>：分片架构，人类可读账户名，访问密钥<br/><br/><strong>TON（TONScan）</strong>：工作链，jettons（代币），TON DNS 域名<br/><br/><strong>Tron（TronScan）</strong>：能量/带宽系统，TRC20 代币，超级代表<br/><br/><strong>Sui（SuiScan）</strong>：以对象为中心的模型，Move 语言，并行执行<br/><br/><strong>Cardano（CardanoScan）</strong>：UTxO 模型，原生代币，质押池"
+			}
+		},
+		"advanced_tools": {
+			"title": "高级分析工具",
+			"content": "除了基础浏览器，还有专门用于深度交易分析和调试的工具。",
+			"tracers": {
+				"title": "交易追踪器",
+				"content": "<strong>什么是交易追踪？</strong>：追踪逐步重放交易，显示每个操作码执行、内部调用和状态变化。<br/><br/><strong>samczsun 的交易追踪器</strong>：由著名安全研究员 @samczsun 构建。显示完整的调用层次结构、存储读写和事件发射。理解复杂 DeFi 交易的必备工具。<br/><br/><strong>Tenderly</strong>：完整的调试平台，提供交易模拟、追踪和告警。允许 fork 主网状态进行测试。<br/><br/><strong>使用场景</strong>：<br/>- 调试失败交易<br/>- 理解攻击机制<br/>- 分析 MEV bundle 执行<br/>- 协议研究"
+			},
+			"decoders": {
+				"title": "ABI 解码器",
+				"content": "<strong>ABI 问题</strong>：交易输入数据是编码的字节。没有 ABI（应用二进制接口），你无法理解调用了什么函数。<br/><br/><strong>AnyABI</strong>：从多个来源（Etherscan、Sourcify、4byte.directory）聚合 ABI。即使是未验证合约的交易，也能使用函数签名数据库解码。<br/><br/><strong>4byte.directory</strong>：函数签名数据库。calldata 的前 4 个字节标识函数 - 这个数据库将它们映射为人类可读的名称。<br/><br/><strong>专业提示</strong>：如果合约未验证但你有类似的已验证合约，通常可以使用那个 ABI 来解码交易。"
+			},
+			"human_readable": {
+				"title": "人类可读浏览器",
+				"content": "<strong>让区块链社交化</strong>：一些浏览器专注于将复杂交易翻译成通俗语言。<br/><br/><strong>Once Upon</strong>：将交易转化为社交媒体风格的帖子。不显示原始数据，而是描述发生了什么：「vitalik.eth 在 Uniswap 上用 10 ETH 购买了 USDC」。<br/><br/><strong>优点</strong>：<br/>- 对非技术用户友好<br/>- 快速理解活动<br/>- 社交分享交易<br/><br/><strong>局限性</strong>：可能过度简化复杂交易。详细分析仍需使用传统浏览器。"
+			}
+		},
+		"use_cases": {
+			"title": "实际使用场景",
+			"content": "区块链浏览器是必备工具的真实场景。",
+			"tracking": {
+				"title": "追踪充值和提现",
+				"content": "<strong>交易所充值</strong>：<br/>1. 从交易所复制你的充值地址<br/>2. 粘贴到浏览器中，观察入账交易<br/>3. 检查交易所要求的确认数<br/>4. 确认后交易出现在交易所<br/><br/><strong>提现验证</strong>：<br/>1. 交易所提供提现交易哈希<br/>2. 在浏览器中搜索哈希验证已广播<br/>3. 监控确认直到最终确定<br/>4. 验证目标地址收到资金<br/><br/><strong>专业提示</strong>：收藏交易所的热钱包地址以监控整体交易所活动"
+			},
+			"debugging": {
+				"title": "调试失败交易",
+				"content": "<strong>第一步：找到错误</strong><br/>在交易页面，查找回滚原因。常见错误：<br/>- 「UniswapV2: INSUFFICIENT_OUTPUT_AMOUNT」= 滑点超限<br/>- 「ERC20: transfer amount exceeds balance」= 代币不足<br/>- 「execution reverted」= 通用失败，检查追踪<br/><br/><strong>第二步：分析追踪</strong><br/>使用「State」标签或追踪器查看执行失败的确切位置。<br/><br/><strong>第三步：常见修复</strong><br/>- 增加滑点容忍度<br/>- 在交换前授权代币<br/>- 检查代币余额<br/>- 验证合约地址正确<br/>- 确保足够的 Gas Limit"
+			},
+			"verifying": {
+				"title": "验证项目和合约",
+				"content": "<strong>与任何项目交互前</strong>：<br/><br/><strong>1. 检查合约验证</strong><br/>- 源代码是否已验证？未验证 = 警告信号<br/>- 代码是否与声称的匹配？<br/><br/><strong>2. 审查合约活动</strong><br/>- 合约有多久了？<br/>- 交易量和模式<br/>- 是否有可疑的大额提现？<br/><br/><strong>3. 检查团队</strong><br/>- 查找部署者地址<br/>- 他们还部署了哪些合约？<br/>- 与已知实体有任何联系吗？<br/><br/><strong>4. 代币分析</strong><br/>- 流动性是否锁定？<br/>- 代币分布（集中持有 = 风险）<br/>- 蜜罐检测"
+			},
+			"whales": {
+				"title": "巨鲸观察与研究",
+				"content": "<strong>发现巨鲸钱包</strong>：<br/>- 在代币页面检查顶级持有者<br/>- 实时监控大额转账<br/>- 追踪标记的地址（交易所、基金、知名个人）<br/><br/><strong>分析巨鲸行为</strong>：<br/>- 他们正在积累哪些代币？<br/>- 使用的 DeFi 协议<br/>- 交易模式和时间<br/><br/><strong>研究应用</strong>：<br/>- Alpha 发现：聪明钱在买什么？<br/>- 风险评估：内部人是否在抛售？<br/>- 市场情报：交易所流入/流出趋势<br/><br/><strong>工具</strong>：结合浏览器数据与 Nansen、Arkham 或 DeBank 等分析平台获取标记地址洞察"
+			}
+		},
+		"api_usage": {
+			"title": "API 与开发者使用",
+			"content": "区块链浏览器 API 支持编程访问区块链数据，用于构建应用、分析工具和自动监控。",
+			"etherscan_api": {
+				"title": "Etherscan API",
+				"content": "<strong>功能</strong>：<br/>- 账户余额和交易历史<br/>- 合约 ABI 和源代码<br/>- 代币信息和转账<br/>- Gas 价格预言机<br/>- 区块和交易数据<br/><br/><strong>速率限制</strong>：<br/>- 免费层：5 次调用/秒<br/>- Pro：最多 20 次调用/秒<br/>- 企业：自定义限制<br/><br/><strong>API Key</strong>：所有端点都需要。在 etherscan.io 免费注册<br/><br/><strong>示例用例</strong>：<br/>- 投资组合追踪器<br/>- 税务报告工具<br/>- 自动告警<br/>- DeFi 仪表板"
+			},
+			"rate_limits": {
+				"title": "处理速率限制",
+				"content": "<strong>速率限制策略</strong>：<br/><br/><strong>1. 缓存</strong><br/>- 缓存不经常变化的响应<br/>- 本地存储历史数据<br/>- 根据数据类型使用适当的 TTL<br/><br/><strong>2. 批处理</strong><br/>- 尽可能合并多个请求<br/>- 使用多地址端点<br/>- 高效聚合查询<br/><br/><strong>3. 备用方案</strong><br/>- 使用多个浏览器的 API<br/>- 在 Etherscan、Blockscout 等之间切换<br/>- 实现指数退避<br/><br/><strong>4. 考虑替代方案</strong><br/>- 高使用量时运行自己的节点<br/>- 使用 The Graph 进行自定义查询<br/>- 考虑付费 RPC 提供商"
+			},
+			"alternatives": {
+				"title": "API 替代方案",
+				"content": "<strong>Blockscout API</strong>：<br/>- 开源，可自托管<br/>- GraphQL 和 REST 端点<br/>- 公共实例无需注册<br/><br/><strong>The Graph</strong>：<br/>- 去中心化索引协议<br/>- 任何协议的自定义 subgraph<br/>- GraphQL 查询<br/>- 主要 DeFi 协议使用<br/><br/><strong>直接 RPC</strong>：<br/>- 直接查询节点<br/>- 完全控制数据访问<br/>- 需要更多技术设置<br/>- 提供商：Infura、Alchemy、QuickNode<br/><br/><strong>选择正确的选项</strong>：<br/>- 简单查询：浏览器 API<br/>- 复杂/自定义：The Graph<br/>- 实时/历史：直接 RPC<br/>- 高容量：自托管基础设施"
+			}
+		}
+	},
+	"glossary": {
+		"tx_hash": {
+			"term": "交易哈希（TxHash）",
+			"definition": "交易的唯一 66 字符十六进制标识符，通过哈希交易数据创建。用于引用和追踪特定交易。"
+		},
+		"block_number": {
+			"term": "区块号",
+			"definition": "分配给区块链上每个区块的顺序编号。数字越高表示区块越新。用于引用交易发生的时间。"
+		},
+		"gas_used": {
+			"term": "Gas 使用量",
+			"definition": "交易消耗的实际计算工作量。乘以 Gas 价格得出交易费用。"
+		},
+		"nonce": {
+			"term": "Nonce",
+			"definition": "每个地址从 0 开始的顺序计数器。确保交易按顺序处理并防止重放攻击。"
+		},
+		"internal_tx": {
+			"term": "内部交易",
+			"definition": "在父交易中由智能合约执行触发的交易。它们没有自己的交易哈希，但可以被追踪。"
+		},
+		"event_log": {
+			"term": "事件日志",
+			"definition": "智能合约在执行期间发出的数据。事件被索引以便高效查询，用于追踪合约活动。"
+		},
+		"abi": {
+			"term": "ABI（应用二进制接口）",
+			"definition": "智能合约函数、事件和数据类型的 JSON 描述。需要它来编码/解码交易数据和与合约交互。"
+		},
+		"verified_contract": {
+			"term": "已验证合约",
+			"definition": "源代码已被验证与其部署字节码匹配的智能合约。使代码审查和直接合约交互成为可能。"
+		},
+		"eoa": {
+			"term": "EOA（外部拥有账户）",
+			"definition": "由私钥控制的普通钱包地址，与智能合约相对。EOA 可以发起交易。"
+		},
+		"contract_address": {
+			"term": "合约地址",
+			"definition": "包含智能合约代码的地址。在部署合约时创建。不能发起交易，但在被调用时可以执行代码。"
+		},
+		"trace": {
+			"term": "交易追踪",
+			"definition": "逐步重放交易执行，显示所有内部调用、状态变化和事件。调试和分析的必备工具。"
+		},
+		"revert": {
+			"term": "回滚（Revert）",
+			"definition": "当交易失败且所有状态变化被撤销时。Gas 仍被消耗但预期操作没有发生。通常包含错误消息。"
+		}
+	}
+}

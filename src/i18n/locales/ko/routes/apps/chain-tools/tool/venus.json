@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Venus Protocol - BNB Chain Lending",
+		"description": "Venus Protocol is the leading lending platform on BNB Chain. Borrow, lend, and mint VAI stablecoin with XVS governance.",
+		"keywords": "Venus Protocol, XVS, VAI, BNB Chain lending, BSC DeFi, money market"
+	},
+	"overview": "Venus Protocol is the dominant lending platform on BNB Chain (formerly BSC). It combines a money market protocol for borrowing and lending with VAI, a decentralized stablecoin backed by crypto collateral.\n\nThe protocol supports a wide range of assets for lending and borrowing, with XVS token powering governance and reward distribution. Venus has evolved through multiple versions improving security and efficiency.\n\nAs BNB Chain's primary lending venue, Venus handles significant volume and serves as core infrastructure for the ecosystem's DeFi activities.",
+	"features": {
+		"1": {
+			"title": "BNB Chain Native",
+			"description": "Primary lending on BNB Chain"
+		},
+		"2": {
+			"title": "VAI Stablecoin",
+			"description": "Mint stablecoin against collateral"
+		},
+		"3": {
+			"title": "XVS Governance",
+			"description": "Vote on protocol decisions"
+		},
+		"4": {
+			"title": "Isolated Pools",
+			"description": "Risk-isolated lending markets"
+		},
+		"5": {
+			"title": "Wide Asset Support",
+			"description": "Many tokens supported"
+		},
+		"6": {
+			"title": "Low Fees",
+			"description": "BNB Chain's cheap transactions"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Lending",
+			"description": "Earn interest on deposits"
+		},
+		"2": {
+			"title": "Borrowing",
+			"description": "Borrow against collateral"
+		},
+		"3": {
+			"title": "VAI Minting",
+			"description": "Create stablecoin from crypto"
+		},
+		"4": {
+			"title": "XVS Staking",
+			"description": "Stake for rewards and governance"
+		},
+		"5": {
+			"title": "Leveraged Yield",
+			"description": "Loop positions for higher APY"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "What is VAI?",
+			"answer": "VAI is Venus's decentralized stablecoin, similar to MakerDAO's DAI. You can mint VAI by depositing collateral on Venus. VAI is meant to maintain a $1 peg. It can be used across BNB Chain DeFi."
+		},
+		"2": {
+			"question": "What is XVS token?",
+			"answer": "XVS is Venus's governance token. XVS holders vote on protocol parameters, new asset listings, and risk parameters. Staking XVS in the vault earns rewards and boosts lending/borrowing incentives."
+		},
+		"3": {
+			"question": "What are Isolated Pools?",
+			"answer": "Isolated Pools are separate lending markets with contained risk. If an asset in an isolated pool has issues, it doesn't affect the main pool. This allows Venus to list riskier assets safely."
+		},
+		"4": {
+			"question": "Is Venus safe?",
+			"answer": "Venus is audited and battle-tested since 2020. It has experienced past incidents but improved security significantly in V4. It's the main lending protocol on BNB Chain. Standard DeFi risks apply."
+		},
+		"5": {
+			"question": "Venus vs Aave: Which should I use?",
+			"answer": "Venus is BNB Chain native with XVS incentives and VAI stablecoin. Aave is more established but less BNB-focused. For BNB Chain lending with native token rewards, Venus is the primary choice."
+		}
+	},
+	"cta": {
+		"ready": "Ready to use Venus?",
+		"button": "Explore Venus",
+		"note": "BNB Chain's lending hub"
+	}
+}

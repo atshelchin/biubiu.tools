@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Radiant Capital - 跨链借贷",
+		"description": "Radiant Capital 是使用 LayerZero 的跨链借贷协议。在 Arbitrum、BNB Chain 和以太坊之间借贷。",
+		"keywords": "Radiant Capital, RDNT, 跨链借贷, LayerZero, Arbitrum, DeFi 借贷"
+	},
+	"overview": "Radiant Capital 是一个全链借贷协议，使用 LayerZero 技术实现跨多链借贷。用户可以在一条链上存款并在另一条链上借款。\n\n该协议使用动态流动性（dLP）模型，用户必须锁定 RDNT-ETH LP 代币才能获得完整排放。这通过协调贷方和协议利益相关者之间的激励来创造可持续的代币经济学。\n\nRadiant 已部署在 Arbitrum、BNB Chain 和以太坊上，旨在成为 DeFi 中主要的跨链货币市场。",
+	"features": {
+		"1": {
+			"title": "跨链借贷",
+			"description": "通过 LayerZero 跨链借款"
+		},
+		"2": {
+			"title": "动态流动性",
+			"description": "dLP 锁定获得完整排放"
+		},
+		"3": {
+			"title": "多链",
+			"description": "Arbitrum、BNB Chain、以太坊"
+		},
+		"4": {
+			"title": "RDNT 代币",
+			"description": "治理和排放奖励"
+		},
+		"5": {
+			"title": "Aave 分叉",
+			"description": "经过实战检验的借贷机制"
+		},
+		"6": {
+			"title": "真实收益",
+			"description": "平台费用给 dLP 锁定者"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "跨链借款",
+			"description": "在 Arbitrum 存款，在 BNB 借款"
+		},
+		"2": {
+			"title": "dLP 锁定",
+			"description": "锁定 LP 获得增强 RDNT 奖励"
+		},
+		"3": {
+			"title": "借贷",
+			"description": "在存款上赚取利息"
+		},
+		"4": {
+			"title": "杠杆农场",
+			"description": "循环存款获得收益"
+		},
+		"5": {
+			"title": "费用赚取",
+			"description": "作为 dLP 锁定者赚取协议费用"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "什么是 dLP（动态流动性）？",
+			"answer": "dLP 要求用户锁定价值至少为其存款 5% 的 RDNT-ETH LP 代币才能获得 RDNT 排放。这确保了 RDNT 代币的流动性并使用户激励与协议健康保持一致。"
+		},
+		"2": {
+			"question": "跨链借贷如何工作？",
+			"answer": "Radiant 使用 LayerZero 进行跨链消息传递。您在一条链上的抵押品可以在另一条链上借款。协议管理跨链风险。这实现了资本效率而无需桥接。"
+		},
+		"3": {
+			"question": "Radiant 黑客事件是什么？",
+			"answer": "2024 年 10 月，Radiant 遭受了重大漏洞（约 5000 万美元），通过泄露的私钥。团队正在进行恢复和安全改进。使用前请检查当前状态和安全措施。"
+		},
+		"4": {
+			"question": "如何在 Radiant 上赚取收益？",
+			"answer": "存入资产赚取利息加上 RDNT 排放（如果有 dLP 资格）。锁定 RDNT-ETH LP 作为 dLP 以增强排放并赚取协议费用。"
+		},
+		"5": {
+			"question": "漏洞后 Radiant 安全吗？",
+			"answer": "漏洞后，Radiant 实施了额外的安全措施。然而，黑客事件展示了私钥风险。请监控官方渠道了解安全更新。存款前仔细考虑风险。"
+		}
+	},
+	"cta": {
+		"ready": "准备好跨链借贷了吗？",
+		"button": "探索 Radiant",
+		"note": "请先检查安全状态"
+	}
+}

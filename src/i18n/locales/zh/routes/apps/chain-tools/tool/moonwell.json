@@ -1,0 +1,83 @@
+{
+	"seo": {
+		"title": "Moonwell - Base 和 Optimism 借贷",
+		"description": "Moonwell 是 Base 和 Optimism 上领先的借贷协议。在 L2 上使用 WELL 代币奖励进行借贷。",
+		"keywords": "Moonwell, WELL 代币, Base 借贷, Optimism 借贷, L2 DeFi, 货币市场"
+	},
+	"overview": "Moonwell 是一个最初为 Moonbeam 构建的借贷协议，已扩展成为 Base 和 Optimism 上的主要参与者。它提供简单的借贷和有竞争力的利率。\n\n该协议向贷方和借方分发 WELL 代币作为额外激励。Moonwell 专注于用户体验和安全性，具有简洁的界面和保守的风险参数。\n\n随着 Base 生态系统的增长，Moonwell 已成为该链上最大的借贷协议之一，是 L2 DeFi 的重要基础设施。",
+	"features": {
+		"1": {
+			"title": "多 L2",
+			"description": "Base、Optimism、Moonbeam"
+		},
+		"2": {
+			"title": "WELL 代币",
+			"description": "治理和奖励激励"
+		},
+		"3": {
+			"title": "简洁 UX",
+			"description": "简单直观的界面"
+		},
+		"4": {
+			"title": "安全专注",
+			"description": "保守的风险参数"
+		},
+		"5": {
+			"title": "Compound 分叉",
+			"description": "经过实战检验的机制"
+		},
+		"6": {
+			"title": "veWELL",
+			"description": "投票托管治理"
+		}
+	},
+	"use_cases": {
+		"1": {
+			"title": "Base 借贷",
+			"description": "在 Base 上借贷"
+		},
+		"2": {
+			"title": "Optimism 借贷",
+			"description": "在 Optimism 上获取流动性"
+		},
+		"3": {
+			"title": "WELL 农场",
+			"description": "通过使用赚取 WELL"
+		},
+		"4": {
+			"title": "抵押借款",
+			"description": "用加密持有借款"
+		},
+		"5": {
+			"title": "veWELL 质押",
+			"description": "锁定获得治理权力"
+		}
+	},
+	"faqs": {
+		"1": {
+			"question": "Moonwell 在哪些链上？",
+			"answer": "Moonwell 部署在 Base、Optimism 和 Moonbeam 上。最大的部署在 Base，是领先的借贷协议之一。每条链有自己的流动性池。"
+		},
+		"2": {
+			"question": "什么是 WELL 代币？",
+			"answer": "WELL 是 Moonwell 用于治理和激励的原生代币。贷方和借方赚取 WELL 奖励。WELL 可以锁定为 veWELL 以获得增强奖励和排放分配的投票权。"
+		},
+		"3": {
+			"question": "Moonwell 与 Aave 相比如何？",
+			"answer": "Moonwell 更简单，更专注于 Base 等 L2。Aave 更大更成熟。Moonwell 在支持的链上通常有更高的 WELL 激励。两者使用类似的借贷机制。"
+		},
+		"4": {
+			"question": "Moonwell 安全吗？",
+			"answer": "Moonwell 经过审计并使用保守的风险参数。它是具有经验证机制的 Compound 分叉。团队优先考虑安全性。标准借贷风险适用。"
+		},
+		"5": {
+			"question": "为什么在 Base 上使用 Moonwell？",
+			"answer": "Moonwell 是 Base 上最大和最成熟的借贷协议之一。它提供有竞争力的利率、WELL 激励和 Base 资产的深度流动性。是 Base 借贷需求的良好首选。"
+		}
+	},
+	"cta": {
+		"ready": "准备好在 L2 上借贷了吗？",
+		"button": "探索 Moonwell",
+		"note": "Base 和 Optimism 借贷"
+	}
+}
