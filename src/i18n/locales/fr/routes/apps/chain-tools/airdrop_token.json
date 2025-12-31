@@ -1,168 +1,164 @@
 {
 	"category_seo": {
-		"title": "Airdrops Crypto - Distributions Gratuites de Tokens | BiuBiu Tools",
-		"description": "Trouvez les derniers airdrops crypto et distributions gratuites de tokens. Participez aux événements airdrop et gagnez des cryptomonnaies gratuites.",
-		"keywords": "airdrops crypto, tokens gratuits, événements airdrop, distributions de tokens",
+		"title": "Airdrops Crypto - Distribution de Tokens et Éligibilité | BiuBiu Tools",
+		"description": "Suivez et réclamez des airdrops crypto. Trouvez des opportunités d'airdrop, vérifiez l'éligibilité et apprenez les stratégies de farming d'airdrops.",
+		"keywords": "airdrops crypto, distribution de tokens, éligibilité airdrops, crypto gratuite, farming airdrops",
 		"faqs": [
 			{
 				"question": "Qu'est-ce qu'un airdrop crypto ?",
-				"answer": "Un airdrop est une distribution gratuite de tokens aux détenteurs de portefeuilles. Les projets utilisent les airdrops pour le marketing, récompenser les utilisateurs précoces, distribuer la gouvernance ou construire l'engagement communautaire."
+				"answer": "Les airdrops sont des distributions gratuites de tokens aux utilisateurs précoces, détenteurs ou membres de la communauté. Ils sont utilisés pour décentraliser la propriété, récompenser les utilisateurs et créer une notoriété pour les nouveaux projets."
 			},
 			{
-				"question": "Comment participer aux airdrops ?",
-				"answer": "Pour participer : suivez les annonces d'airdrops, complétez les tâches requises (utiliser la dApp, détenir des tokens spécifiques, rejoindre les réseaux sociaux), connectez votre portefeuille et réclamez les tokens pendant la période d'airdrop."
+				"question": "Comment me qualifier pour les airdrops ?",
+				"answer": "Utilisez les protocoles tôt, maintenez une activité dans le temps, participez aux testnets, détenez des tokens/NFTs pertinents et interagissez avec les communautés. La détection Sybil est courante - la qualité compte plus que la quantité."
 			},
 			{
-				"question": "Les airdrops sont-ils sûrs ?",
-				"answer": "Les airdrops légitimes sont sûrs, mais attention aux escroqueries. Ne partagez jamais vos clés privées, méfiez-vous des airdrops non sollicités et vérifiez toujours l'authenticité du projet via les canaux officiels."
-			},
-			{
-				"question": "Les tokens airdrop ont-ils de la valeur ?",
-				"answer": "La valeur varie énormément. Certains airdrops deviennent très précieux (Uniswap, ENS), d'autres sans valeur. La valeur dépend de l'utilité du projet, de l'adoption et des conditions du marché."
+				"question": "Les airdrops sont-ils imposables ?",
+				"answer": "Dans la plupart des juridictions, les airdrops sont imposables comme revenus à la réception et gains en capital à la vente. Conservez des registres de la juste valeur marchande au moment de l'airdrop. Consultez un professionnel fiscal."
 			}
 		]
 	},
 	"tools": {
+		"airdrop_uni": {
+			"description": "Airdrop légendaire d'Uniswap - 400 UNI aux utilisateurs DEX précoces, établissant la norme pour les distributions de tokens DeFi"
+		},
+		"airdrop_ens": {
+			"description": "Airdrop du token de gouvernance ENS aux détenteurs de domaines - récompensant les premiers adopteurs d'Ethereum Name Service"
+		},
+		"airdrop_dydx": {
+			"description": "Airdrop de la plateforme de trading perpétuel dYdX - récompensant les traders selon le volume et l'activité"
+		},
+		"airdrop_1inch": {
+			"description": "Airdrop de l'agrégateur DEX 1inch - distribué aux utilisateurs ayant fait des swaps via l'agrégateur"
+		},
+		"airdrop_ldo": {
+			"description": "Token de gouvernance Lido DAO - récompensant les utilisateurs précoces de liquid staking et les détenteurs de stETH"
+		},
+		"airdrop_op": {
+			"description": "Airdrop Optimism L2 - récompensant les utilisateurs précoces du bridge, votants DAO et utilisateurs actifs d'Ethereum"
+		},
+		"airdrop_arb": {
+			"description": "Airdrop Arbitrum L2 - le plus grand airdrop L2 récompensant les utilisateurs du bridge et les participants de l'écosystème"
+		},
+		"airdrop_blur": {
+			"description": "Airdrop de la marketplace NFT Blur - récompensant les traders professionnels avec un système de points de fidélité"
+		},
+		"airdrop_strk": {
+			"description": "Programme de provision Starknet - airdrop zk-rollup aux utilisateurs précoces et contributeurs de l'écosystème"
+		},
+		"airdrop_zk": {
+			"description": "Airdrop zkSync Era - récompensant les utilisateurs précoces du bridge et les participants à l'activité mainnet"
+		},
+		"airdrop_jup": {
+			"description": "Airdrop de l'agrégateur Jupiter - le plus grand airdrop DEX de Solana aux utilisateurs de swap"
+		},
+		"airdrop_w": {
+			"description": "Airdrop du bridge cross-chain Wormhole - récompensant les utilisateurs du bridge sur plusieurs chaînes"
+		},
+		"airdrop_ena": {
+			"description": "Airdrop du protocole dollar synthétique Ethena - récompensant les détenteurs de shards et les premiers minteurs USDe"
+		},
+		"airdrop_eigen": {
+			"description": "Airdrop du protocole de restaking EigenLayer - récompensant les premiers restakers et gagnants de points"
+		},
+		"airdrop_pyth": {
+			"description": "Airdrop de l'oracle Pyth Network - distribué aux utilisateurs DeFi sur plus de 27 blockchains"
+		},
+		"airdrop_tnsr": {
+			"description": "Airdrop de la marketplace NFT Tensor - récompensant les traders NFT Solana avec des points de saison"
+		},
+		"airdrop_kmno": {
+			"description": "Airdrop Kamino Finance - protocole DeFi Solana récompensant les fournisseurs de liquidité et utilisateurs"
+		},
+		"airdrop_parcl": {
+			"description": "Airdrop de trading immobilier Parcl - protocole Solana pour le trading immobilier synthétique"
+		},
+		"airdrop_wen": {
+			"description": "Airdrop du token meme WEN - les détenteurs du NFT poème Jupiter ont reçu des tokens WEN gratuits"
+		},
+		"airdrop_omni": {
+			"description": "Airdrop d'interopérabilité Omni Network - récompensant les restakers EigenLayer et utilisateurs testnet"
+		},
+		"airdrop_alt": {
+			"description": "Airdrop rollup-as-a-service AltLayer - récompensant les restakers et participants de l'écosystème"
+		},
+		"airdrop_manta": {
+			"description": "Airdrop L2 modulaire Manta Pacific - récompensant les utilisateurs du bridge et participants New Paradigm"
+		},
+		"airdrop_dym": {
+			"description": "Airdrop du hub RollApp Dymension - distribué aux stakers Cosmos et premiers rollers genesis"
+		},
+		"airdrop_zetachain": {
+			"description": "Airdrop omnichain ZetaChain - récompensant les participants testnet et premiers utilisateurs mainnet"
+		},
+		"airdrop_ethfi": {
+			"description": "Airdrop liquid restaking Ether.fi - récompensant les détenteurs eETH et gagnants de points de fidélité"
+		},
+		"airdrop_renzo": {
+			"description": "Airdrop du protocole de restaking Renzo - distribué aux détenteurs ezETH et gagnants de points"
+		},
+		"airdrop_puffer": {
+			"description": "Airdrop potentiel Puffer Finance - protocole liquid restaking avec système de points pufETH"
+		},
+		"airdrop_kelp": {
+			"description": "Airdrop potentiel Kelp DAO - liquid restaking rsETH avec récompenses Kelp Miles"
+		},
+		"airdrop_swell": {
+			"description": "Airdrop potentiel Swell Network - liquid staking avec programme de points pearl"
+		},
+		"airdrop_cow": {
+			"description": "Airdrop protection MEV CoW Protocol - récompensant les utilisateurs de trading batch auction"
+		},
+		"airdrop_hop": {
+			"description": "Airdrop bridge L2 Hop Protocol - récompensant les premiers utilisateurs du bridge cross-L2"
+		},
+		"airdrop_safe": {
+			"description": "Airdrop wallet multisig Safe - distribué aux utilisateurs Safe et participants de l'écosystème"
+		},
+		"airdrop_matic_pol": {
+			"description": "Migration token Polygon MATIC vers POL - mise à niveau 1:1 vers le nouveau token natif"
+		},
 		"earndrop": {
-			"description": "Vérifiez votre éligibilité pour les airdrops à venir et passés"
+			"description": "Vérificateur d'éligibilité airdrops multi-protocoles - vérifiez la qualification pour plusieurs airdrops"
 		},
-		"airdrop-uni": {
-			"description": "UNI Airdrop (2020) - Tool"
+		"defillama_airdrops": {
+			"description": "Tracker d'airdrops DeFiLlama - liste complète des distributions de tokens actives et à venir"
 		},
-		"airdrop-ens": {
-			"description": "ENS Airdrop (2021) - Tool"
+		"airdrop_alert": {
+			"description": "Actualités et notifications Airdrop Alert - restez informé des nouvelles opportunités d'airdrop"
 		},
-		"airdrop-dydx": {
-			"description": "dYdX Airdrop (2021) - Tool"
+		"airdrops_io": {
+			"description": "Agrégateur Airdrops.io - liste curatée d'airdrops légitimes avec guides"
 		},
-		"airdrop-1inch": {
-			"description": "1inch Airdrop (2020) - Tool"
+		"airdrop_farmer": {
+			"description": "Plateforme de quêtes Layer3 - complétez des quêtes on-chain pour gagner des récompenses et airdrops potentiels"
 		},
-		"airdrop-ldo": {
-			"description": "LDO Airdrop (2022) - Tool"
+		"galxe_campaigns": {
+			"description": "Campagnes de credentials Web3 Galxe - gagnez des NFTs et points pour des airdrops potentiels"
 		},
-		"airdrop-op": {
-			"description": "OP Airdrop (2022) - Tool"
+		"rabbithole_quests": {
+			"description": "Plateforme learn-to-earn RabbitHole - complétez des quêtes pour apprendre DeFi et gagner des récompenses"
 		},
-		"airdrop-arb": {
-			"description": "ARB Airdrop (2023) - Tool"
+		"zealy_quests": {
+			"description": "Plateforme de quêtes communautaires Zealy - complétez des tâches sociales et on-chain pour des récompenses de projets"
 		},
-		"airdrop-blur": {
-			"description": "BLUR Airdrop (2023) - Tool"
+		"potential_scroll": {
+			"description": "Airdrop potentiel Scroll zkEVM - utilisez le L2 et participez à l'écosystème"
 		},
-		"airdrop-strk": {
-			"description": "STRK Airdrop (2024) - Tool"
+		"potential_linea": {
+			"description": "Airdrop potentiel Linea zkEVM - L2 ConsenSys avec programme de points Voyage"
 		},
-		"airdrop-zk": {
-			"description": "ZK Airdrop (2024) - Tool"
+		"potential_blast": {
+			"description": "Airdrop yield natif Blast L2 - récompensant les premiers déposants et utilisateurs de l'écosystème"
 		},
-		"airdrop-jup": {
-			"description": "JUP Airdrop (2024) - Tool"
+		"potential_berachain": {
+			"description": "Airdrop potentiel Berachain - L1 proof-of-liquidity avec participation testnet"
 		},
-		"airdrop-w": {
-			"description": "W Airdrop (Wormhole 2024) - Tool"
+		"potential_monad": {
+			"description": "Airdrop potentiel Monad - L1 EVM haute performance actuellement en développement"
 		},
-		"airdrop-ena": {
-			"description": "ENA Airdrop (2024) - Tool"
-		},
-		"airdrop-eigen": {
-			"description": "EIGEN Airdrop (2024) - Tool"
-		},
-		"airdrop-pyth": {
-			"description": "PYTH Airdrop (2023) - Tool"
-		},
-		"airdrop-tnsr": {
-			"description": "TNSR Airdrop (2024) - Tool"
-		},
-		"airdrop-kmno": {
-			"description": "KMNO Airdrop (2024) - Tool"
-		},
-		"airdrop-parcl": {
-			"description": "PARCL Airdrop (2024) - Tool"
-		},
-		"airdrop-wen": {
-			"description": "WEN Airdrop (2024) - Tool"
-		},
-		"airdrop-omni": {
-			"description": "OMNI Airdrop (2024) - Tool"
-		},
-		"airdrop-alt": {
-			"description": "ALT Airdrop (2024) - Tool"
-		},
-		"airdrop-manta": {
-			"description": "MANTA Airdrop (2024) - Tool"
-		},
-		"airdrop-dym": {
-			"description": "DYM Airdrop (2024) - Tool"
-		},
-		"airdrop-zetachain": {
-			"description": "ZETA Airdrop (2024) - Tool"
-		},
-		"airdrop-ethfi": {
-			"description": "ETHFI Airdrop (2024) - Tool"
-		},
-		"airdrop-renzo": {
-			"description": "REZ Airdrop (2024) - Tool"
-		},
-		"airdrop-puffer": {
-			"description": "PUFFER (Potential) - Tool"
-		},
-		"airdrop-kelp": {
-			"description": "KELP (Potential) - Tool"
-		},
-		"airdrop-swell": {
-			"description": "SWELL (Potential) - Tool"
-		},
-		"airdrop-cow": {
-			"description": "COW Airdrop (2022) - Tool"
-		},
-		"airdrop-hop": {
-			"description": "HOP Airdrop (2022) - Tool"
-		},
-		"airdrop-safe": {
-			"description": "SAFE Airdrop (2022) - Tool"
-		},
-		"airdrop-matic-pol": {
-			"description": "MATIC/POL Migration - Tool"
-		},
-		"defillama-airdrops": {
-			"description": "DeFiLlama Airdrops - Tool"
-		},
-		"airdrop-alert": {
-			"description": "Airdrop Alert - Tool"
-		},
-		"airdrops-io": {
-			"description": "Airdrops.io - Tool"
-		},
-		"airdrop-farmer": {
-			"description": "Layer3 Quests - Tool"
-		},
-		"galxe-campaigns": {
-			"description": "Galxe Campaigns - Tool"
-		},
-		"rabbithole-quests": {
-			"description": "RabbitHole - Tool"
-		},
-		"zealy-quests": {
-			"description": "Zealy - Tool"
-		},
-		"potential-scroll": {
-			"description": "Scroll (Potential) - Tool"
-		},
-		"potential-linea": {
-			"description": "Linea (Potential) - Tool"
-		},
-		"potential-blast": {
-			"description": "BLAST (Launched) - Tool"
-		},
-		"potential-berachain": {
-			"description": "Berachain (Potential) - Tool"
-		},
-		"potential-monad": {
-			"description": "Monad (Potential) - Tool"
-		},
-		"potential-fuel": {
-			"description": "Fuel (Potential) - Tool"
+		"potential_fuel": {
+			"description": "Airdrop potentiel Fuel Network - couche d'exécution modulaire avec testnet beta"
 		}
 	}
 }

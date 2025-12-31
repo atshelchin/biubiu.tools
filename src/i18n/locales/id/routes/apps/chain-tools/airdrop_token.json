@@ -1,163 +1,164 @@
 {
 	"category_seo": {
-		"title": "Airdrop Kripto - Distribusi Token & Kelayakan | BiuBiu Tools",
-		"description": "Lacak dan klaim airdrop kripto. Temukan peluang airdrop, periksa kelayakan, dan pelajari strategi airdrop farming.",
+		"title": "Airdrop Crypto - Distribusi Token & Kelayakan | BiuBiu Tools",
+		"description": "Lacak dan klaim airdrop crypto. Temukan peluang airdrop, periksa kelayakan dan pelajari strategi farming airdrop.",
+		"keywords": "airdrop crypto, distribusi token, kelayakan airdrop, crypto gratis, farming airdrop",
 		"faqs": [
 			{
-				"question": "Apa itu airdrop kripto?",
-				"answer": "Airdrop adalah distribusi token gratis kepada pengguna awal, pemegang, atau anggota komunitas. Mereka digunakan untuk mendesentralisasi kepemilikan, memberi reward pengguna, dan menciptakan kesadaran untuk proyek baru."
+				"question": "Apa itu airdrop crypto?",
+				"answer": "Airdrop adalah distribusi token gratis kepada pengguna awal, pemegang atau anggota komunitas. Digunakan untuk mendesentralisasi kepemilikan, memberi hadiah kepada pengguna dan menciptakan kesadaran untuk proyek baru."
 			},
 			{
 				"question": "Bagaimana cara memenuhi syarat untuk airdrop?",
-				"answer": "Gunakan protokol lebih awal, pertahankan aktivitas dari waktu ke waktu, berpartisipasi dalam testnet, pegang token/NFT yang relevan, dan libatkan dengan komunitas. Deteksi Sybil adalah umum - kualitas lebih penting daripada kuantitas."
+				"answer": "Gunakan protokol lebih awal, pertahankan aktivitas dari waktu ke waktu, berpartisipasi di testnet, pegang token/NFT yang relevan dan berinteraksi dengan komunitas. Deteksi Sybil umum terjadi - kualitas lebih penting daripada kuantitas."
 			},
 			{
-				"question": "Apakah airdrop kena pajak?",
-				"answer": "Di sebagian besar yurisdiksi, airdrop kena pajak sebagai pendapatan saat diterima dan capital gain saat dijual. Simpan catatan nilai pasar wajar pada saat airdrop. Konsultasikan dengan profesional pajak."
+				"question": "Apakah airdrop dikenakan pajak?",
+				"answer": "Di sebagian besar yurisdiksi, airdrop dikenakan pajak sebagai pendapatan saat diterima dan capital gain saat dijual. Simpan catatan nilai pasar wajar pada saat airdrop. Konsultasikan dengan profesional pajak."
 			}
 		]
 	},
 	"tools": {
+		"airdrop_uni": {
+			"description": "Airdrop legendaris Uniswap - 400 UNI untuk pengguna DEX awal, menetapkan standar untuk distribusi token DeFi"
+		},
+		"airdrop_ens": {
+			"description": "Airdrop token governance ENS ke pemegang domain - memberi hadiah kepada pengadopsi awal Ethereum Name Service"
+		},
+		"airdrop_dydx": {
+			"description": "Airdrop platform trading perpetual dYdX - memberi hadiah trader berdasarkan volume dan aktivitas"
+		},
+		"airdrop_1inch": {
+			"description": "Airdrop aggregator DEX 1inch - didistribusikan ke pengguna yang melakukan swap melalui aggregator"
+		},
+		"airdrop_ldo": {
+			"description": "Token governance Lido DAO - memberi hadiah pengguna liquid staking awal dan pemegang stETH"
+		},
+		"airdrop_op": {
+			"description": "Airdrop Optimism L2 - memberi hadiah pengguna bridge awal, pemilih DAO dan pengguna Ethereum aktif"
+		},
+		"airdrop_arb": {
+			"description": "Airdrop Arbitrum L2 - airdrop L2 terbesar memberi hadiah pengguna bridge dan peserta ekosistem"
+		},
+		"airdrop_blur": {
+			"description": "Airdrop marketplace NFT Blur - memberi hadiah trader profesional dengan sistem poin loyalitas"
+		},
+		"airdrop_strk": {
+			"description": "Program penyediaan Starknet - airdrop zk-rollup ke pengguna awal dan kontributor ekosistem"
+		},
+		"airdrop_zk": {
+			"description": "Airdrop zkSync Era - memberi hadiah pengguna bridge awal dan peserta aktivitas mainnet"
+		},
+		"airdrop_jup": {
+			"description": "Airdrop aggregator Jupiter - airdrop DEX terbesar Solana ke pengguna swap"
+		},
+		"airdrop_w": {
+			"description": "Airdrop bridge cross-chain Wormhole - memberi hadiah pengguna bridge di berbagai chain"
+		},
+		"airdrop_ena": {
+			"description": "Airdrop protokol dolar sintetis Ethena - memberi hadiah pemegang shard dan minter USDe awal"
+		},
+		"airdrop_eigen": {
+			"description": "Airdrop protokol restaking EigenLayer - memberi hadiah restaker awal dan pengumpul poin"
+		},
+		"airdrop_pyth": {
+			"description": "Airdrop oracle Pyth Network - didistribusikan ke pengguna DeFi di lebih dari 27 blockchain"
+		},
+		"airdrop_tnsr": {
+			"description": "Airdrop marketplace NFT Tensor - memberi hadiah trader NFT Solana dengan poin musim"
+		},
+		"airdrop_kmno": {
+			"description": "Airdrop Kamino Finance - protokol DeFi Solana memberi hadiah penyedia likuiditas dan pengguna"
+		},
+		"airdrop_parcl": {
+			"description": "Airdrop trading real estate Parcl - protokol Solana untuk trading real estate sintetis"
+		},
+		"airdrop_wen": {
+			"description": "Airdrop token meme WEN - pemegang NFT puisi Jupiter menerima token WEN gratis"
+		},
+		"airdrop_omni": {
+			"description": "Airdrop interoperabilitas Omni Network - memberi hadiah restaker EigenLayer dan pengguna testnet"
+		},
+		"airdrop_alt": {
+			"description": "Airdrop rollup-as-a-service AltLayer - memberi hadiah restaker dan peserta ekosistem"
+		},
+		"airdrop_manta": {
+			"description": "Airdrop L2 modular Manta Pacific - memberi hadiah pengguna bridge dan peserta New Paradigm"
+		},
+		"airdrop_dym": {
+			"description": "Airdrop hub RollApp Dymension - didistribusikan ke staker Cosmos dan roller genesis awal"
+		},
+		"airdrop_zetachain": {
+			"description": "Airdrop omnichain ZetaChain - memberi hadiah peserta testnet dan pengguna mainnet awal"
+		},
+		"airdrop_ethfi": {
+			"description": "Airdrop liquid restaking Ether.fi - memberi hadiah pemegang eETH dan pengumpul poin loyalitas"
+		},
+		"airdrop_renzo": {
+			"description": "Airdrop protokol restaking Renzo - didistribusikan ke pemegang ezETH dan pengumpul poin"
+		},
+		"airdrop_puffer": {
+			"description": "Potensi airdrop Puffer Finance - protokol liquid restaking dengan sistem poin pufETH"
+		},
+		"airdrop_kelp": {
+			"description": "Potensi airdrop Kelp DAO - liquid restaking rsETH dengan hadiah Kelp Miles"
+		},
+		"airdrop_swell": {
+			"description": "Potensi airdrop Swell Network - liquid staking dengan program poin pearl"
+		},
+		"airdrop_cow": {
+			"description": "Airdrop perlindungan MEV CoW Protocol - memberi hadiah pengguna trading batch auction"
+		},
+		"airdrop_hop": {
+			"description": "Airdrop bridge L2 Hop Protocol - memberi hadiah pengguna bridge cross-L2 awal"
+		},
+		"airdrop_safe": {
+			"description": "Airdrop wallet multisig Safe - didistribusikan ke pengguna Safe dan peserta ekosistem"
+		},
+		"airdrop_matic_pol": {
+			"description": "Migrasi token Polygon MATIC ke POL - upgrade 1:1 ke token native baru"
+		},
 		"earndrop": {
-			"description": "Periksa kelayakan Anda untuk berbagai airdrop yang akan datang dan masa lalu"
+			"description": "Pemeriksa kelayakan airdrop multi-protokol - verifikasi kualifikasi untuk berbagai airdrop"
 		},
-		"airdrop-uni": {
-			"description": "UNI Airdrop (2020) - Tool"
+		"defillama_airdrops": {
+			"description": "Pelacak airdrop DeFiLlama - daftar lengkap distribusi token yang akan datang dan aktif"
 		},
-		"airdrop-ens": {
-			"description": "ENS Airdrop (2021) - Tool"
+		"airdrop_alert": {
+			"description": "Berita dan notifikasi Airdrop Alert - tetap update tentang peluang airdrop baru"
 		},
-		"airdrop-dydx": {
-			"description": "dYdX Airdrop (2021) - Tool"
+		"airdrops_io": {
+			"description": "Aggregator Airdrops.io - daftar airdrop legit yang dikurasi dengan panduan"
 		},
-		"airdrop-1inch": {
-			"description": "1inch Airdrop (2020) - Tool"
+		"airdrop_farmer": {
+			"description": "Platform quest Layer3 - selesaikan quest on-chain untuk mendapatkan hadiah dan potensi airdrop"
 		},
-		"airdrop-ldo": {
-			"description": "LDO Airdrop (2022) - Tool"
+		"galxe_campaigns": {
+			"description": "Kampanye kredensial Web3 Galxe - dapatkan NFT dan poin untuk potensi airdrop"
 		},
-		"airdrop-op": {
-			"description": "OP Airdrop (2022) - Tool"
+		"rabbithole_quests": {
+			"description": "Platform learn-to-earn RabbitHole - selesaikan quest untuk belajar DeFi dan mendapatkan hadiah"
 		},
-		"airdrop-arb": {
-			"description": "ARB Airdrop (2023) - Tool"
+		"zealy_quests": {
+			"description": "Platform quest komunitas Zealy - selesaikan tugas sosial dan on-chain untuk hadiah proyek"
 		},
-		"airdrop-blur": {
-			"description": "BLUR Airdrop (2023) - Tool"
+		"potential_scroll": {
+			"description": "Potensi airdrop Scroll zkEVM - gunakan L2 dan berpartisipasi dalam ekosistem"
 		},
-		"airdrop-strk": {
-			"description": "STRK Airdrop (2024) - Tool"
+		"potential_linea": {
+			"description": "Potensi airdrop Linea zkEVM - L2 ConsenSys dengan program poin Voyage"
 		},
-		"airdrop-zk": {
-			"description": "ZK Airdrop (2024) - Tool"
+		"potential_blast": {
+			"description": "Airdrop yield native Blast L2 - memberi hadiah depositor awal dan pengguna ekosistem"
 		},
-		"airdrop-jup": {
-			"description": "JUP Airdrop (2024) - Tool"
+		"potential_berachain": {
+			"description": "Potensi airdrop Berachain - L1 proof-of-liquidity dengan partisipasi testnet"
 		},
-		"airdrop-w": {
-			"description": "W Airdrop (Wormhole 2024) - Tool"
+		"potential_monad": {
+			"description": "Potensi airdrop Monad - L1 EVM performa tinggi yang sedang dalam pengembangan"
 		},
-		"airdrop-ena": {
-			"description": "ENA Airdrop (2024) - Tool"
-		},
-		"airdrop-eigen": {
-			"description": "EIGEN Airdrop (2024) - Tool"
-		},
-		"airdrop-pyth": {
-			"description": "PYTH Airdrop (2023) - Tool"
-		},
-		"airdrop-tnsr": {
-			"description": "TNSR Airdrop (2024) - Tool"
-		},
-		"airdrop-kmno": {
-			"description": "KMNO Airdrop (2024) - Tool"
-		},
-		"airdrop-parcl": {
-			"description": "PARCL Airdrop (2024) - Tool"
-		},
-		"airdrop-wen": {
-			"description": "WEN Airdrop (2024) - Tool"
-		},
-		"airdrop-omni": {
-			"description": "OMNI Airdrop (2024) - Tool"
-		},
-		"airdrop-alt": {
-			"description": "ALT Airdrop (2024) - Tool"
-		},
-		"airdrop-manta": {
-			"description": "MANTA Airdrop (2024) - Tool"
-		},
-		"airdrop-dym": {
-			"description": "DYM Airdrop (2024) - Tool"
-		},
-		"airdrop-zetachain": {
-			"description": "ZETA Airdrop (2024) - Tool"
-		},
-		"airdrop-ethfi": {
-			"description": "ETHFI Airdrop (2024) - Tool"
-		},
-		"airdrop-renzo": {
-			"description": "REZ Airdrop (2024) - Tool"
-		},
-		"airdrop-puffer": {
-			"description": "PUFFER (Potential) - Tool"
-		},
-		"airdrop-kelp": {
-			"description": "KELP (Potential) - Tool"
-		},
-		"airdrop-swell": {
-			"description": "SWELL (Potential) - Tool"
-		},
-		"airdrop-cow": {
-			"description": "COW Airdrop (2022) - Tool"
-		},
-		"airdrop-hop": {
-			"description": "HOP Airdrop (2022) - Tool"
-		},
-		"airdrop-safe": {
-			"description": "SAFE Airdrop (2022) - Tool"
-		},
-		"airdrop-matic-pol": {
-			"description": "MATIC/POL Migration - Tool"
-		},
-		"defillama-airdrops": {
-			"description": "DeFiLlama Airdrops - Tool"
-		},
-		"airdrop-alert": {
-			"description": "Airdrop Alert - Tool"
-		},
-		"airdrops-io": {
-			"description": "Airdrops.io - Tool"
-		},
-		"airdrop-farmer": {
-			"description": "Layer3 Quests - Tool"
-		},
-		"galxe-campaigns": {
-			"description": "Galxe Campaigns - Tool"
-		},
-		"rabbithole-quests": {
-			"description": "RabbitHole - Tool"
-		},
-		"zealy-quests": {
-			"description": "Zealy - Tool"
-		},
-		"potential-scroll": {
-			"description": "Scroll (Potential) - Tool"
-		},
-		"potential-linea": {
-			"description": "Linea (Potential) - Tool"
-		},
-		"potential-blast": {
-			"description": "BLAST (Launched) - Tool"
-		},
-		"potential-berachain": {
-			"description": "Berachain (Potential) - Tool"
-		},
-		"potential-monad": {
-			"description": "Monad (Potential) - Tool"
-		},
-		"potential-fuel": {
-			"description": "Fuel (Potential) - Tool"
+		"potential_fuel": {
+			"description": "Potensi airdrop Fuel Network - layer eksekusi modular dengan testnet beta"
 		}
 	}
 }

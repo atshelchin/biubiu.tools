@@ -2,14 +2,14 @@
 	"category_seo": {
 		"title": "Криптоаирдропы - Распределение токенов и право на участие | BiuBiu Tools",
 		"description": "Отслеживайте и получайте криптоаирдропы. Находите возможности аирдропов, проверяйте право на участие и изучайте стратегии фарминга аирдропов.",
-		"keywords": "криптоаирдропы, бесплатные токены, право на аирдропы, фарминг аирдропов",
+		"keywords": "криптоаирдропы, распределение токенов, право на аирдропы, бесплатные криптовалюты, фарминг аирдропов",
 		"faqs": [
 			{
 				"question": "Что такое криптоаирдропы?",
 				"answer": "Аирдропы — это бесплатные распределения токенов ранним пользователям, держателям или членам сообщества. Они используются для децентрализации владения, вознаграждения пользователей и создания осведомленности о новых проектах."
 			},
 			{
-				"question": "Как квалифицироваться для аирдропов?",
+				"question": "Как получить право на аирдропы?",
 				"answer": "Используйте протоколы рано, поддерживайте активность со временем, участвуйте в тестнетах, владейте соответствующими токенами/NFT и взаимодействуйте с сообществами. Обнаружение сибилов распространено — качество важнее количества."
 			},
 			{
@@ -19,146 +19,146 @@
 		]
 	},
 	"tools": {
+		"airdrop_uni": {
+			"description": "Легендарный аирдроп Uniswap - 400 UNI ранним пользователям DEX, установивший стандарт для распределения токенов DeFi"
+		},
+		"airdrop_ens": {
+			"description": "Аирдроп токена управления ENS владельцам доменов - награждение ранних пользователей Ethereum Name Service"
+		},
+		"airdrop_dydx": {
+			"description": "Аирдроп платформы бессрочной торговли dYdX - награждение трейдеров на основе объема и активности"
+		},
+		"airdrop_1inch": {
+			"description": "Аирдроп агрегатора DEX 1inch - распределение пользователям, совершавшим свопы через агрегатор"
+		},
+		"airdrop_ldo": {
+			"description": "Токен управления Lido DAO - награждение ранних пользователей ликвидного стейкинга и держателей stETH"
+		},
+		"airdrop_op": {
+			"description": "Аирдроп Optimism L2 - награждение ранних пользователей моста, голосующих DAO и активных пользователей Ethereum"
+		},
+		"airdrop_arb": {
+			"description": "Аирдроп Arbitrum L2 - крупнейший аирдроп L2, награждающий пользователей моста и участников экосистемы"
+		},
+		"airdrop_blur": {
+			"description": "Аирдроп NFT-маркетплейса Blur - награждение профессиональных трейдеров системой очков лояльности"
+		},
+		"airdrop_strk": {
+			"description": "Программа обеспечения Starknet - аирдроп zk-rollup ранним пользователям и контрибьюторам экосистемы"
+		},
+		"airdrop_zk": {
+			"description": "Аирдроп zkSync Era - награждение ранних пользователей моста и участников активности мейннета"
+		},
+		"airdrop_jup": {
+			"description": "Аирдроп агрегатора Jupiter - крупнейший DEX-аирдроп Solana для пользователей свопов"
+		},
+		"airdrop_w": {
+			"description": "Аирдроп кроссчейн-моста Wormhole - награждение пользователей моста на нескольких сетях"
+		},
+		"airdrop_ena": {
+			"description": "Аирдроп протокола синтетического доллара Ethena - награждение держателей шардов и ранних минтеров USDe"
+		},
+		"airdrop_eigen": {
+			"description": "Аирдроп протокола рестейкинга EigenLayer - награждение ранних рестейкеров и получателей очков"
+		},
+		"airdrop_pyth": {
+			"description": "Аирдроп оракула Pyth Network - распределение пользователям DeFi на более чем 27 блокчейнах"
+		},
+		"airdrop_tnsr": {
+			"description": "Аирдроп NFT-маркетплейса Tensor - награждение NFT-трейдеров Solana сезонными очками"
+		},
+		"airdrop_kmno": {
+			"description": "Аирдроп Kamino Finance - DeFi-протокол Solana, награждающий поставщиков ликвидности и пользователей"
+		},
+		"airdrop_parcl": {
+			"description": "Аирдроп торговли недвижимостью Parcl - протокол Solana для синтетической торговли недвижимостью"
+		},
+		"airdrop_wen": {
+			"description": "Аирдроп мем-токена WEN - держатели NFT-стихотворения Jupiter получили бесплатные токены WEN"
+		},
+		"airdrop_omni": {
+			"description": "Аирдроп интероперабельности Omni Network - награждение рестейкеров EigenLayer и пользователей тестнета"
+		},
+		"airdrop_alt": {
+			"description": "Аирдроп rollup-as-a-service AltLayer - награждение рестейкеров и участников экосистемы"
+		},
+		"airdrop_manta": {
+			"description": "Аирдроп модульного L2 Manta Pacific - награждение пользователей моста и участников New Paradigm"
+		},
+		"airdrop_dym": {
+			"description": "Аирдроп хаба RollApp Dymension - распределение стейкерам Cosmos и ранним genesis-роллерам"
+		},
+		"airdrop_zetachain": {
+			"description": "Омничейн-аирдроп ZetaChain - награждение участников тестнета и ранних пользователей мейннета"
+		},
+		"airdrop_ethfi": {
+			"description": "Аирдроп ликвидного рестейкинга Ether.fi - награждение держателей eETH и получателей очков лояльности"
+		},
+		"airdrop_renzo": {
+			"description": "Аирдроп протокола рестейкинга Renzo - распределение держателям ezETH и получателям очков"
+		},
+		"airdrop_puffer": {
+			"description": "Потенциальный аирдроп Puffer Finance - протокол ликвидного рестейкинга с системой очков pufETH"
+		},
+		"airdrop_kelp": {
+			"description": "Потенциальный аирдроп Kelp DAO - ликвидный рестейкинг rsETH с наградами Kelp Miles"
+		},
+		"airdrop_swell": {
+			"description": "Потенциальный аирдроп Swell Network - ликвидный стейкинг с программой очков pearl"
+		},
+		"airdrop_cow": {
+			"description": "Аирдроп защиты от MEV CoW Protocol - награждение пользователей пакетной аукционной торговли"
+		},
+		"airdrop_hop": {
+			"description": "Аирдроп моста L2 Hop Protocol - награждение ранних пользователей кросс-L2 моста"
+		},
+		"airdrop_safe": {
+			"description": "Аирдроп мультисиг-кошелька Safe - распределение пользователям Safe и участникам экосистемы"
+		},
+		"airdrop_matic_pol": {
+			"description": "Миграция токена Polygon MATIC в POL - обновление 1:1 до нового нативного токена"
+		},
 		"earndrop": {
-			"description": "Проверьте свое право на участие в нескольких предстоящих и прошлых аирдропах"
+			"description": "Мультипротокольный проверщик права на аирдропы - проверка квалификации для нескольких аирдропов"
 		},
-		"airdrop-uni": {
-			"description": "UNI Airdrop (2020) - Tool"
+		"defillama_airdrops": {
+			"description": "Трекер аирдропов DeFiLlama - полный список предстоящих и активных распределений токенов"
 		},
-		"airdrop-ens": {
-			"description": "ENS Airdrop (2021) - Tool"
+		"airdrop_alert": {
+			"description": "Новости и уведомления Airdrop Alert - будьте в курсе новых возможностей аирдропов"
 		},
-		"airdrop-dydx": {
-			"description": "dYdX Airdrop (2021) - Tool"
+		"airdrops_io": {
+			"description": "Агрегатор Airdrops.io - курируемый список легитимных аирдропов с руководствами"
 		},
-		"airdrop-1inch": {
-			"description": "1inch Airdrop (2020) - Tool"
+		"airdrop_farmer": {
+			"description": "Платформа квестов Layer3 - выполняйте ончейн-квесты для получения наград и потенциальных аирдропов"
 		},
-		"airdrop-ldo": {
-			"description": "LDO Airdrop (2022) - Tool"
+		"galxe_campaigns": {
+			"description": "Кампании Web3-учетных данных Galxe - зарабатывайте NFT и очки для потенциальных аирдропов"
 		},
-		"airdrop-op": {
-			"description": "OP Airdrop (2022) - Tool"
+		"rabbithole_quests": {
+			"description": "Платформа learn-to-earn RabbitHole - выполняйте квесты для изучения DeFi и получения наград"
 		},
-		"airdrop-arb": {
-			"description": "ARB Airdrop (2023) - Tool"
+		"zealy_quests": {
+			"description": "Платформа комьюнити-квестов Zealy - выполняйте социальные и ончейн-задачи для наград проектов"
 		},
-		"airdrop-blur": {
-			"description": "BLUR Airdrop (2023) - Tool"
+		"potential_scroll": {
+			"description": "Потенциальный аирдроп Scroll zkEVM - используйте L2 и участвуйте в экосистеме"
 		},
-		"airdrop-strk": {
-			"description": "STRK Airdrop (2024) - Tool"
+		"potential_linea": {
+			"description": "Потенциальный аирдроп Linea zkEVM - L2 от ConsenSys с программой очков Voyage"
 		},
-		"airdrop-zk": {
-			"description": "ZK Airdrop (2024) - Tool"
+		"potential_blast": {
+			"description": "Аирдроп нативной доходности Blast L2 - награждение ранних вкладчиков и пользователей экосистемы"
 		},
-		"airdrop-jup": {
-			"description": "JUP Airdrop (2024) - Tool"
+		"potential_berachain": {
+			"description": "Потенциальный аирдроп Berachain - L1 proof-of-liquidity с участием в тестнете"
 		},
-		"airdrop-w": {
-			"description": "W Airdrop (Wormhole 2024) - Tool"
+		"potential_monad": {
+			"description": "Потенциальный аирдроп Monad - высокопроизводительный EVM L1, находящийся в разработке"
 		},
-		"airdrop-ena": {
-			"description": "ENA Airdrop (2024) - Tool"
-		},
-		"airdrop-eigen": {
-			"description": "EIGEN Airdrop (2024) - Tool"
-		},
-		"airdrop-pyth": {
-			"description": "PYTH Airdrop (2023) - Tool"
-		},
-		"airdrop-tnsr": {
-			"description": "TNSR Airdrop (2024) - Tool"
-		},
-		"airdrop-kmno": {
-			"description": "KMNO Airdrop (2024) - Tool"
-		},
-		"airdrop-parcl": {
-			"description": "PARCL Airdrop (2024) - Tool"
-		},
-		"airdrop-wen": {
-			"description": "WEN Airdrop (2024) - Tool"
-		},
-		"airdrop-omni": {
-			"description": "OMNI Airdrop (2024) - Tool"
-		},
-		"airdrop-alt": {
-			"description": "ALT Airdrop (2024) - Tool"
-		},
-		"airdrop-manta": {
-			"description": "MANTA Airdrop (2024) - Tool"
-		},
-		"airdrop-dym": {
-			"description": "DYM Airdrop (2024) - Tool"
-		},
-		"airdrop-zetachain": {
-			"description": "ZETA Airdrop (2024) - Tool"
-		},
-		"airdrop-ethfi": {
-			"description": "ETHFI Airdrop (2024) - Tool"
-		},
-		"airdrop-renzo": {
-			"description": "REZ Airdrop (2024) - Tool"
-		},
-		"airdrop-puffer": {
-			"description": "PUFFER (Potential) - Tool"
-		},
-		"airdrop-kelp": {
-			"description": "KELP (Potential) - Tool"
-		},
-		"airdrop-swell": {
-			"description": "SWELL (Potential) - Tool"
-		},
-		"airdrop-cow": {
-			"description": "COW Airdrop (2022) - Tool"
-		},
-		"airdrop-hop": {
-			"description": "HOP Airdrop (2022) - Tool"
-		},
-		"airdrop-safe": {
-			"description": "SAFE Airdrop (2022) - Tool"
-		},
-		"airdrop-matic-pol": {
-			"description": "MATIC/POL Migration - Tool"
-		},
-		"defillama-airdrops": {
-			"description": "DeFiLlama Airdrops - Tool"
-		},
-		"airdrop-alert": {
-			"description": "Airdrop Alert - Tool"
-		},
-		"airdrops-io": {
-			"description": "Airdrops.io - Tool"
-		},
-		"airdrop-farmer": {
-			"description": "Layer3 Quests - Tool"
-		},
-		"galxe-campaigns": {
-			"description": "Galxe Campaigns - Tool"
-		},
-		"rabbithole-quests": {
-			"description": "RabbitHole - Tool"
-		},
-		"zealy-quests": {
-			"description": "Zealy - Tool"
-		},
-		"potential-scroll": {
-			"description": "Scroll (Potential) - Tool"
-		},
-		"potential-linea": {
-			"description": "Linea (Potential) - Tool"
-		},
-		"potential-blast": {
-			"description": "BLAST (Launched) - Tool"
-		},
-		"potential-berachain": {
-			"description": "Berachain (Potential) - Tool"
-		},
-		"potential-monad": {
-			"description": "Monad (Potential) - Tool"
-		},
-		"potential-fuel": {
-			"description": "Fuel (Potential) - Tool"
+		"potential_fuel": {
+			"description": "Потенциальный аирдроп Fuel Network - модульный уровень исполнения с бета-тестнетом"
 		}
 	}
 }
