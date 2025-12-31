@@ -37,6 +37,10 @@ import { stablecoinGuide } from './stablecoin';
 import { trendsGuide } from './trends';
 import { walletGuide } from './wallet';
 import { web3TeamsGuide } from './web3-teams';
+import { airdropTokenGuide } from './airdrop-token';
+import { daoTokenGuide } from './dao-token';
+import { legendaryTokenGuide } from './legendary-token';
+import { whaleAddressGuide } from './whale-address';
 
 // Map of all available guides
 export const categoryGuides: Partial<Record<CategoryId, CategoryGuide>> = {
@@ -73,8 +77,11 @@ export const categoryGuides: Partial<Record<CategoryId, CategoryGuide>> = {
 	stablecoin: stablecoinGuide,
 	trends: trendsGuide,
 	wallet: walletGuide,
-	'web3-teams': web3TeamsGuide
-	// Add more guides as they are created
+	'web3-teams': web3TeamsGuide,
+	'airdrop-token': airdropTokenGuide,
+	'dao-token': daoTokenGuide,
+	'legendary-token': legendaryTokenGuide,
+	'whale-address': whaleAddressGuide
 };
 
 /**

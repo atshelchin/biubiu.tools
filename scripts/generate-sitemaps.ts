@@ -20,6 +20,7 @@ import { join } from 'path';
 import rawChains from '../static/rpcs.json';
 import { categories } from '../src/features/chain-tools/data/categories';
 import { getToolIdsWithDetailPages } from '../src/features/chain-tools/data/tool-details';
+import { getGuideCategoryIds } from '../src/features/chain-tools/data/guides';
 import { allAddresses, allNames } from '../src/features/address/data/index';
 import { localeMetas } from '../src/i18n/i18n.svelte';
 
@@ -340,6 +341,22 @@ function generateToolsSitemap(): string {
 		}
 	}
 
+	// Category guide pages
+	const guideCategoryIds = getGuideCategoryIds();
+	for (const categoryId of guideCategoryIds) {
+		const path = `/apps/chain-tools/${categoryId}/guide`;
+
+		// Main route
+		urls.push(generateUrl(path, { priority: 0.7, changefreq: 'weekly', baseRoute: path }));
+
+		// Localized routes
+		for (const locale of SUPPORTED_LOCALES) {
+			urls.push(
+				generateUrl(`/${locale}${path}`, { priority: 0.6, changefreq: 'weekly', baseRoute: path })
+			);
+		}
+	}
+
 	// Tool detail pages
 	const toolIds = getToolIdsWithDetailPages();
 	for (const toolId of toolIds) {
@@ -406,12 +423,13 @@ function main() {
 
 	// Generate tools sitemap
 	const toolDetailIds = getToolIdsWithDetailPages();
+	const guideCategoryIds = getGuideCategoryIds();
 	console.log('🔧 Generating sitemap-tools.xml...');
 	const toolsSitemap = generateToolsSitemap();
 	writeFileSync(join(OUTPUT_DIR, 'sitemap-tools.xml'), toolsSitemap);
 	sitemapFiles.push('sitemap-tools.xml');
 	console.log(
-		`   ✓ ${categories.length} tool categories + ${toolDetailIds.length} tool detail pages indexed`
+		`   ✓ ${categories.length} tool categories + ${guideCategoryIds.length} guide pages + ${toolDetailIds.length} tool detail pages indexed`
 	);
 
 	// Generate sitemap index
@@ -423,8 +441,8 @@ function main() {
 	// Summary
 	console.log('\n✅ All sitemaps generated successfully!');
 	console.log('\nFiles created in /static:');
-	console.log('  - sitemap.xml (index)');
-	sitemapFiles.forEach((f) => console.log(`  - ${f}`));
+	console.log(`  - sitemap.xml (index)  ${SITE}/sitemap.xml`);
+	sitemapFiles.forEach((f) => console.log(`  - ${f}  ${SITE}/${f}`));
 
 	// Stats
 	const totalUrls =
